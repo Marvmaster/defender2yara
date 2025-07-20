@@ -20,6 +20,7 @@ rule Worm_Win32_Gokil_A_2147619429_0
         $x_1_6 = "Cinta.doc.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_5_*))) or
             (all of ($x*))

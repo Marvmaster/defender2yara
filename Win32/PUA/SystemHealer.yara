@@ -19,6 +19,7 @@ rule PUA_Win32_SystemHealer_224906_0
         $x_10_5 = "\\wininit.ini" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

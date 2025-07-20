@@ -17,6 +17,7 @@ rule Trojan_Win64_Pinchloader_A_2147891457_0
         $x_1_2 = {22 e1 0e 76 4a 22 e1 26 76 52 05 07 19 08 22 dd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_Pinchloader_B_2147891458_0
         $x_1_3 = {2e 64 6c 6c 00 6f 6b 67 6f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

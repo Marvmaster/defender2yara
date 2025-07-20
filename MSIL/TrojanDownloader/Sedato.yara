@@ -25,6 +25,7 @@ rule TrojanDownloader_MSIL_Sedato_ARA_2147836263_0
         $x_1_10 = "get_Assembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

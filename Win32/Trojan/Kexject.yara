@@ -22,6 +22,7 @@ rule Trojan_Win32_Kexject_A_2147649569_0
         $x_1_8 = {54 45 4d 50 5c 6b 65 36 34 [0-16] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

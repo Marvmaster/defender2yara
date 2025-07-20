@@ -18,6 +18,7 @@ rule Worm_Win32_Agent_2147565723_0
         $x_1_4 = {43 3a 5c 00 44 3a 5c 00 45 3a 5c 00 46 3a 5c 00 47 3a 5c 00 48 3a 5c 00 6b 3a 5c 00 52 3a 5c 00 53 3a 5c 00 54 3a 5c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Worm_Win32_Agent_2147565723_1
         $x_1_8 = "writeln(f2,$$$$+sc[24]+$$$);$)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Worm_Win32_Agent_CC_2147583769_0
         $x_1_6 = "msnworm.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -101,6 +104,7 @@ rule Worm_Win32_Agent_N_2147592582_0
         $x_1_9 = "Software\\Microsoft\\Internet Account Manager\\Accounts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +156,7 @@ rule Worm_Win32_Agent_T_2147594812_0
         $x_100_32 = ".baby" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_100_*) and 10 of ($x_1_*))) or
             (all of ($x*))
@@ -184,6 +189,7 @@ rule Worm_Win32_Agent_AB_2147595755_0
         $x_1_10 = "Windows Vista Ultimate SP3 2007 Crack.zip.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -212,6 +218,7 @@ rule Worm_Win32_Agent_AC_2147596354_0
         $x_1_6 = "User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -243,6 +250,7 @@ rule Worm_Win32_Agent_AD_2147596428_0
         $x_1_9 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -281,6 +289,7 @@ rule Worm_Win32_Agent_DA_2147600031_0
         $x_1_16 = "www.kaspersky.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*) and 4 of ($x_10_*))) or
@@ -313,6 +322,7 @@ rule Worm_Win32_Agent_DV_2147600504_0
         $x_1_9 = "Sending payload1...finish" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -339,6 +349,7 @@ rule Worm_Win32_Agent_U_2147607881_0
         $x_1_7 = {5c c4 cf c4 fe ca d0 b9 ab ce f1 d4 b1 cc e1 d7 ca b5 c8 bc b6 b1 ea d7 bc 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_2_*))) or
             (all of ($x*))

@@ -20,6 +20,7 @@ rule TrojanProxy_MSIL_Segyroxb_A_2147706907_0
         $x_1_6 = {6d 61 74 61 72 6e 61 76 00 4d 79 50 68 2e 4d 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_8_*) and 1 of ($x_1_*))) or

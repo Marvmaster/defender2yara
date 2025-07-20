@@ -18,6 +18,7 @@ rule Ransom_Win32_Ryzerlo_YAA_2147900112_0
         $x_1_3 = {89 d8 31 f0 80 07 53 31 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

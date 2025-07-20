@@ -17,6 +17,7 @@ rule Trojan_Linux_SSHDoor_D_2147846544_0
         $x_1_2 = {41 80 3c 24 58 0f 85 ?? ?? ?? ?? 0f 1f 44 00 00 e8 0b eb ff ff 0f b7 c8 b8 4f ec c4 4e f7 e1 b8 34 00 00 00 c1 ea 04 0f af d0 29 d1 89 ca ?? ?? ?? ?? ?? ?? 83 fa 19 0f 4f c1 41 88 04 24 49 83 ec 01 4c 39 e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Linux_SSHDoor_C_2147914066_0
         $x_1_2 = {53 31 c9 ba 01 00 00 00 31 f6 48 89 fb 48 83 ec 10 64 48 8b 04 25 28 00 00 00 48 89 44 24 08 31 c0 e8 0a fc ff ff 31 d2 85 c0 48 0f 45 d3 48 8b 4c 24 08 64 48 33 0c 25 28 00 00 00 75 09 48 83 c4 10 48 89 d0 5b c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Linux_SSHDoor_F_2147926258_0
         $x_1_3 = {11 0f 7d 60 9c 7c 0c df 03 ab ae 60 87 ff e6 65 84 ba ac 3a 80 0f e9 44 6d 77 cf 38 39 0f 30 20 fe 0f 4e 88 e0 09 19 d1 78 85 6a 4e c2 ba e3 ad c6 1b ef b7 06 1e 20 cf 09 fd 94 19 68 f6 c5 b9 9c 40 5c c0 09 3e 55 cc 0a 83 56 33 66 0f 47 01 75 0f 26 21 67 69 b1 b0 a8 94 8f f5 c8 87 e4 de 93 1c 2a 9e 07 fd 51 ee 11 e3 ad 70 0e af fe ec 84 14 d2 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 

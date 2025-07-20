@@ -20,6 +20,7 @@ rule Trojan_MSIL_Blackshades_AEY_2147831839_0
         $x_1_5 = "anaga" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

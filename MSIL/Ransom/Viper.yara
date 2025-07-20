@@ -19,6 +19,7 @@ rule Ransom_MSIL_Viper_MK_2147807984_0
         $x_1_4 = "Send $500 in BitCoins to this address:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Trojan_Win32_Plainker_A_2147765459_0
         $x_1_7 = "ipconfig /flushdns & exit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -55,6 +56,7 @@ rule Trojan_Win32_Plainker_B_2147765460_0
         $x_1_8 = "Default.aspx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule Ransom_Win64_Anatova_A_2147733266_0
         $x_1_2 = "ka%pv%JK@%OUB%CLI@%JKI\\%hd}%755ng%qj%a" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

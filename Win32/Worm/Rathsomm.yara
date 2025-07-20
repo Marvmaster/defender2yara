@@ -23,6 +23,7 @@ rule Worm_Win32_Rathsomm_A_2147625716_0
         $x_1_9 = "%sautorun.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

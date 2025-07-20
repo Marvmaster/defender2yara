@@ -16,6 +16,7 @@ rule Trojan_Win32_LokibotCrypt_J_2147763943_0
         $x_1_1 = {8b 5d fc 8a 1c 03 80 f3 ?? 8b ca 03 c8 73 05 e8 ?? ?? ?? ?? 88 19 80 31 ?? 40 4e 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_LokibotCrypt_RK_2147764691_0
         $x_1_11 = {8a 45 f6 32 45 f5 88 01 83 e8 00 8a 55 f7 8b c1 e8 [0-31] 88 01 [0-31] 46 43 4f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_LokibotCrypt_MR_2147772805_0
         $x_1_1 = {3b c7 7c c3 41 00 69 [0-5] 89 [0-5] 89 [0-5] 81 [0-9] 8b [0-5] 03 [0-5] 40 89 [0-5] 8a [0-5] 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Win32_LokibotCrypt_MS_2147772806_0
         $x_1_1 = {30 01 42 3b [0-3] 8b [0-3] 8d ?? ?? 55 8b ec ?? a1 [0-16] a3 [0-4] 81 [0-6] 8b [0-3] 01 [0-5] 0f [0-6] 25 [0-8] c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_Win32_LokibotCrypt_2147772811_0
         $x_1_1 = {30 04 0a 41 3b ce 55 8b ec ?? a1 [0-16] a3 [0-4] 81 [0-6] 8b [0-3] 01 [0-5] 0f [0-6] 25 [0-8] c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_Win32_LokibotCrypt_MU_2147772871_0
         $x_1_2 = {55 8b ec 51 [0-4] 53 b8 [0-4] 8b [0-5] 01 [0-2] 01 [0-2] 8b [0-2] 8a [0-2] 8b [0-5] 88 [0-5] c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule Trojan_Win32_LokibotCrypt_MV_2147775377_0
         $x_1_1 = {8b 45 08 30 [0-2] 83 [0-2] 46 3b f7 a1 [0-4] 69 [0-5] 05 [0-4] a3 [0-4] 0f [0-6] 81 [0-5] 81 [0-9] 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule Trojan_Win32_LokibotCrypt_KM_2147776127_0
         $x_1_2 = {30 04 3b 83 7d ?? 19 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

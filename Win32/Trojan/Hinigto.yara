@@ -20,6 +20,7 @@ rule Trojan_Win32_Hinigto_A_2147652522_0
         $x_1_6 = {5a 58 85 ff 75 0c 85 d2 74 03 ff 4a f8 e8 ?? ?? ff ff 5a 5f 5e 5b 58 8d 24 94 ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

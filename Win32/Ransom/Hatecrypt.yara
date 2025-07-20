@@ -22,6 +22,7 @@ rule Ransom_Win32_Hatecrypt_2147725276_0
         $x_2_8 = "deathnote.lnk\" del \"C:\\TEMP\\afolder\\deathnote.lnk\"" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

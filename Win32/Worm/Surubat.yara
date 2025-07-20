@@ -43,6 +43,7 @@ rule Worm_Win32_Surubat_A_2147575114_0
         $x_1_29 = "NICK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 20 of ($x_1_*))) or
             ((2 of ($x_2_*) and 18 of ($x_1_*))) or

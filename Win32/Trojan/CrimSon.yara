@@ -19,6 +19,7 @@ rule Trojan_Win32_CrimSon_J_2147753064_0
         $x_1_4 = {02 72 b9 00 00 70 17 8d ?? 00 00 01 0a 06 16 1f 7c 9d 06 6f 61 00 00 0a 16 9a 7d 0d 00 00 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

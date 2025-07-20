@@ -43,6 +43,7 @@ rule Trojan_Win32_Wopla_Y_2147582704_0
         $x_1_28 = "sc_log.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((23 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))

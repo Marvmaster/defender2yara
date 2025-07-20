@@ -23,6 +23,7 @@ rule Backdoor_Win32_DarkRAT_AR_2147744028_0
         $x_10_8 = "Select * From AntiVirusProduct" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_10_*) and 2 of ($x_1_*))) or

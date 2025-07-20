@@ -27,6 +27,7 @@ rule PWS_Win32_Jaqusim_A_2147601469_0
         $x_1_13 = "msngirisLoginSuccess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 9 of ($x_1_*))) or
             ((2 of ($x_2_*) and 7 of ($x_1_*))) or

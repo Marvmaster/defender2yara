@@ -19,6 +19,7 @@ rule Ransom_Win64_Megazord_SA_2147899925_0
         $x_1_4 = "\\Users\\Public\\C:\\$RECYCLE.BIN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

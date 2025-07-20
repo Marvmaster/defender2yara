@@ -16,6 +16,7 @@ rule Trojan_Win32_Fugrafa_RPY_2147888910_0
         $x_1_1 = {99 f7 f9 6a 00 89 85 ac fd ff ff 8b c3 99 f7 fe 0f af 8d ac fd ff ff 89 85 b0 fd ff ff 0f af b5 b0 fd ff ff 2b f9 8b c7 99 2b de 2b c2 d1 f8 89 85 a0 fd ff ff 8b c3 99 2b c2 d1 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Fugrafa_GN_2147896247_0
         $x_4_1 = {8a 04 0e 32 04 1a 43 88 01 8b 45 e8 3b df 72 ed}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Fugrafa_KAA_2147900776_0
         $x_1_3 = "dry.fitbrought" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

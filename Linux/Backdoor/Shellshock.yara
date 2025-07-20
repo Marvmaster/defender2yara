@@ -17,6 +17,7 @@ rule Backdoor_Linux_Shellshock_A_2147689306_0
         $x_1_3 = {67 61 79 66 67 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 

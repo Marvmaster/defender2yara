@@ -20,6 +20,7 @@ rule Ransom_Win32_Maoloa_KA_2147741806_0
         $x_1_6 = "C:\\ids.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

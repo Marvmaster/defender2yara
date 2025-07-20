@@ -26,6 +26,7 @@ rule Trojan_Win32_Konus_SG_2147779259_0
         $x_10_11 = "\\Google\\Chrome\\User Data\\Default\\" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_10_*) and 2 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_10_*) and 3 of ($x_5_*))) or
@@ -62,6 +63,7 @@ rule Trojan_Win32_Konus_SH_2147779260_0
         $x_10_10 = "explorer.exe" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_30_*) and 3 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_30_*) and 4 of ($x_10_*))) or

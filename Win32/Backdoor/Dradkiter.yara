@@ -22,6 +22,7 @@ rule Backdoor_Win32_Dradkiter_A_2147706507_0
         $x_1_8 = "#EOF DARKCOMET DATA --" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 5 of ($x_1_*))) or
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or

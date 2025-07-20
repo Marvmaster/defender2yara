@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_NanoCoreRAT_A_2147837508_0
         $x_2_3 = {06 8e 69 28 ?? 00 00 0a 02 06 28 ?? 00 00 0a 7d ?? 00 00 04 2a 1a 00 02 28 ?? 00 00 0a 02 28 ?? 00 00 06 02 72 ?? 00 00 70 28 ?? 00 00 06 0a 06 16}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

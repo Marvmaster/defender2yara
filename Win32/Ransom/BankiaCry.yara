@@ -21,6 +21,7 @@ rule Ransom_Win32_BankiaCry_AJY_2147772931_0
         $x_1_6 = "SELECT SystemSKUNumber from Win32_ComputerSystem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

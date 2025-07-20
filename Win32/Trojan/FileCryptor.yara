@@ -19,6 +19,7 @@ rule Trojan_Win32_FileCryptor_BL_2147763697_0
         $x_10_4 = {30 04 3e 89 75 80 b8 01 00 00 00 83 f0 04 83 6d 80 01 8b 75 80 3b f3 7d e2}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Trojan_Win32_FileCryptor_MS_2147771949_0
         $x_1_2 = {55 8b ec 51 a1 [0-4] 69 [0-5] a3 [0-4] c7 [0-6] 81 [0-6] 8b [0-3] 01 [0-20] 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

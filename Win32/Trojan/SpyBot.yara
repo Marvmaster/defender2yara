@@ -16,6 +16,7 @@ rule Trojan_Win32_SpyBot_G_2147749132_0
         $x_1_1 = {33 d2 8d 0c 1f 8b c7 f7 75 18 8b 45 14 8a 04 02 32 04 0e 47 88 01 3b 7d 0c 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_SpyBot_MR_2147753114_0
         $x_1_4 = "nddeapi.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -64,6 +66,7 @@ rule Trojan_Win32_SpyBot_DSK_2147753368_0
         $x_2_1 = {8b 45 e4 03 45 fc 8b 4d ?? 8a 00 32 04 11 8b 4d e4 03 4d fc 88 01 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win32_SpyBot_BZ_2147768568_0
         $x_1_7 = "madCodeHook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

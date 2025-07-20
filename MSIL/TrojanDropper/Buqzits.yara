@@ -17,6 +17,7 @@ rule TrojanDropper_MSIL_Buqzits_A_2147629855_0
         $x_1_3 = "FUCK@I@OWN@THIS@SHIZ!@" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_MSIL_Fabookie_AMAD_2147892938_0
         $x_5_1 = {0a 25 18 6f ?? 00 00 0a 25 18 6f ?? 00 00 0a 25 72 ?? 01 00 70 28 ?? 00 00 0a 6f ?? 00 00 0a 6f ?? 00 00 0a 06 16 06 8e 69 6f ?? 00 00 0a 0b}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

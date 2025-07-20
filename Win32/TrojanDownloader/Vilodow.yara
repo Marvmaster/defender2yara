@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Vilodow_A_2147722729_0
         $x_1_7 = {2e 76 62 73 [0-4] 53 69 6c 65 6e 74 3d 31 [0-4] 4f 76 65 72 77 72 69 74 65 3d 31 [0-4] 55 70 64 61 74 65 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

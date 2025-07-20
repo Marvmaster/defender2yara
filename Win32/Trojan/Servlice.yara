@@ -18,6 +18,7 @@ rule Trojan_Win32_Servlice_A_2147681145_0
         $x_1_4 = {6e 65 74 73 68 20 66 69 72 65 77 61 6c 6c 20 61 64 64 20 61 6c 6c 6f 77 65 64 70 72 6f 67 72 61 6d 20 31 2e 65 78 65 20 31 20 45 4e 41 42 4c 45 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

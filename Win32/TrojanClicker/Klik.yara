@@ -19,6 +19,7 @@ rule TrojanClicker_Win32_Klik_2147615376_0
         $x_1_5 = "Klikat ne budem! Uze est" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_1_*))) or
             (all of ($x*))

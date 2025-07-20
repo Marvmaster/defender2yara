@@ -16,6 +16,7 @@ rule TrojanDownloader_Win64_RookIE_A_2147852085_0
         $x_2_1 = {4c 8d 8c 24 60 04 00 00 41 b8 ff 03 00 00 48 8d 54 24 30 48 8b cf ff 15 ?? 40 01 00 44 8b 84 24 60 04 00 00 48 8d 54 24 30 48 63 cb 48 03 ce e8 ?? 38 00 00 8b 84 24 60 04 00 00 03 d8 85 c0 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win64_RookIE_B_2147889535_0
         $x_2_4 = "oss-cn-hangzhou.aliyuncs.com" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

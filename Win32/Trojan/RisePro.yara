@@ -17,6 +17,7 @@ rule Trojan_Win32_RisePro_CCDY_2147896436_0
         $x_1_2 = {8a 45 08 34}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_RisePro_AMAB_2147897524_0
         $x_2_1 = {69 4c 9d 00 91 e9 d1 5b 8b c1 c1 e8 18 33 c1 69 c8 91 e9 d1 5b 89 4c 24 28 85 d2 75 ?? f6 c3 01 74 ?? 8d 47 fd 3b d8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_RisePro_GNF_2147897701_0
         $x_10_1 = {32 cb d0 c1 80 c1 01 80 f1 3e 80 c1 04 f6 d9 32 d9 8d 4c 0c 08 88 11 8d 64 24 08}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win32_RisePro_CCEU_2147897764_0
         $x_1_1 = {8b 45 f8 8b 4d fc 89 85 ?? fe ff ff 8d [0-5] 89 8d ?? fe ff ff c5 fe 6f 85 ?? fe ff ff c5 fd ef [0-5] 50 c5 fd 7f [0-5] 57 c5 f8 77 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +105,7 @@ rule Trojan_Win32_RisePro_CCHF_2147901795_0
         $x_1_1 = {83 c4 08 8b 15 ?? ?? ?? ?? 32 c8 8b 3d ?? ?? ?? ?? 88 4d e8 3b d7 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +127,7 @@ rule Trojan_Win32_RisePro_KAA_2147902107_0
         $x_1_1 = {83 c4 08 8b 15 ?? ?? ?? ?? 32 c8 8b 3d ?? ?? ?? ?? 88 4d dc 3b d7 73 21}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +154,7 @@ rule Trojan_Win32_RisePro_EM_2147902581_0
         $x_1_6 = "EP_CheckUpStartupPasswordHashString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +203,7 @@ rule Trojan_Win32_RisePro_KAB_2147903840_0
         $x_1_3 = "hqnhakjac" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +226,7 @@ rule Trojan_Win32_RisePro_RP_2147904789_0
         $x_1_2 = "StealerClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -245,6 +254,7 @@ rule Trojan_Win32_RisePro_RP_2147904789_1
         $x_1_7 = "Ansgar Becker, see gpl.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -270,6 +280,7 @@ rule Trojan_Win32_RisePro_RP_2147904789_2
         $x_1_5 = {04 64 a0 59 40 05 ce 0a 40 05 ce 0a 40 05 ce 0a 1b 6d cd 0b 51 05 ce 0a 1b 6d cb 0b e0 05 ce 0a 95 68 ca 0b 52 05 ce 0a 95 68 cd 0b 57 05 ce 0a 95 68 cb 0b 35 05 ce 0a 1b 6d ca 0b 55 05 ce 0a 1b 6d cf 0b 53 05 ce 0a 40 05 cf 0a 94 05 ce 0a db 6b c7 0b 41 05 ce 0a db 6b 31 0a 41 05 ce 0a db 6b cc 0b 41 05 ce 0a 52 69 63 68 40 05 ce 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +309,7 @@ rule Trojan_Win32_RisePro_RP_2147904789_3
         $x_10_8 = {6a 99 1d e4 2e f8 73 b7 2e f8 73 b7 2e f8 73 b7 65 80 70 b6 25 f8 73 b7 65 80 76 b6 ee f8 73 b7 65 80 74 b6 2f f8 73 b7 ec 79 8e b7 2a f8 73 b7 ec 79 77 b6 3d f8 73 b7 ec 79 70 b6 34 f8 73 b7 ec 79 76 b6 75 f8 73 b7 65 80 77 b6 36 f8 73 b7 65 80 75 b6 2f f8 73 b7 65 80 72 b6 35 f8 73 b7 2e f8 72 b7 0e f9 73 b7 dd 7a 7a b6 32 f8 73 b7 dd 7a 8c b7 2f f8 73 b7 2e f8 e4 b7 2f f8 73 b7 dd 7a 71 b6 2f f8 73 b7 52 69 63 68 2e f8 73 b7}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -334,6 +346,7 @@ rule Trojan_Win32_RisePro_RP_2147904789_4
         $x_1_12 = "filezilla.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 3 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 4 of ($x_5_*))) or
@@ -365,6 +378,7 @@ rule Trojan_Win32_RisePro_HNS_2147904848_0
         $x_1_4 = {46 00 69 00 6c 00 65 00 6e 00 61 00 6d 00 65 00 00 00 6f 00 66 00 66 00 44 00 65 00 66 00 2e 00 65 00 78 00 65 00 00 00 00 00 2e 00 07 00 01 00 50 00 72 00 6f 00 64 00 75 00 63 00 74 00 4e 00 61 00 6d 00 65 00 00 00 00 00 6f 00 66 00 66 00 44 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -388,6 +402,7 @@ rule Trojan_Win32_RisePro_EC_2147905670_0
         $x_1_3 = "Make sure that this file is not being used by another program" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +427,7 @@ rule Trojan_Win32_RisePro_EC_2147905670_1
         $x_2_4 = {20 20 20 00 20 20 20 20 00 50 06 00 00 10 00 00 00 d6 02 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 88 03 00 00 00 60 06 00 00 04 00 00 00 e6 02 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0 2e 69 64 61 74 61 20 20 00 10 00 00 00 70 06 00 00 02 00 00 00 ea 02 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0 20 20 20 20 20 20 20 20}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -433,6 +449,7 @@ rule Trojan_Win32_RisePro_GPB_2147907052_0
         $x_1_1 = {ff 01 8d 48 ?? 30 4c 05 ?? 40 83 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -454,6 +471,7 @@ rule Trojan_Win32_RisePro_YAB_2147908346_0
         $x_1_1 = {0b f3 ff 45 ?? 66 0f a4 c3 ?? 0f b7 3c 0f 0f c9 80 e1 0a 0f b7 df d3 c9 66 d3 f9 8b c8 f9 c1 e9 0b f6 c7 3e 66 85 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -475,6 +493,7 @@ rule Trojan_Win32_RisePro_LZ_2147927193_0
         $x_2_1 = {20 20 20 00 20 20 20 20 00 50 06 00 00 10 00 00 00 ae 03 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 38 83 00 00 00 60 06 00 00 3c 00 00 00 be 03 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Virus_Win32_Dervec_A_2147653002_0
         $x_1_3 = {83 f8 03 74 1f 83 f8 02 74 1a fe c3 80 fb 47 7e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             (all of ($x*))

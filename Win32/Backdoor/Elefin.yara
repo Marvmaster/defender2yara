@@ -17,6 +17,7 @@ rule Backdoor_Win32_Elefin_A_2147656517_0
         $x_1_3 = {5c 00 77 00 69 00 6e 00 75 00 61 00 64 00 33 00 32 00 2e 00 64 00 6c 00 6c 00 00 00 5c 00 77 00 69 00 6e 00 75 00 61 00 64 00 36 00 34 00 2e 00 64 00 6c 00 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

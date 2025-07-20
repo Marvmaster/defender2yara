@@ -17,6 +17,7 @@ rule Backdoor_Win32_Ocivat_A_2147687826_0
         $x_2_3 = {50 72 6f 78 79 2d 41 75 74 68 65 6e 74 69 63 61 74 65 3a 20 42 41 53 49 43 00 00 00 2e 76 76 74 00 00 00 00 2e 69 6e 69 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

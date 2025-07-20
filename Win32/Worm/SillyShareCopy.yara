@@ -21,6 +21,7 @@ rule Worm_Win32_SillyShareCopy_A_2147595756_0
         $x_1_7 = "DisableWindowsUpdateAccess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Worm_Win32_SillyShareCopy_B_2147595873_0
         $x_1_10 = "MICROSOFT\\WINDOWS\\CURRENTVERSION\\RUN" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Worm_Win32_SillyShareCopy_C_2147596558_0
         $x_1_8 = "AutoRun.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -107,6 +110,7 @@ rule Worm_Win32_SillyShareCopy_D_2147597367_0
         $x_1_11 = {2e 73 6d 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 3 of ($x_8_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -135,6 +139,7 @@ rule Worm_Win32_SillyShareCopy_E_2147597688_0
         $x_1_6 = "[Autorun]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -161,6 +166,7 @@ rule Worm_Win32_SillyShareCopy_F_2147598418_0
         $x_1_4 = "downurl=http:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -190,6 +196,7 @@ rule Worm_Win32_SillyShareCopy_G_2147598451_0
         $x_5_7 = "CreateRemoteThread" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -220,6 +227,7 @@ rule Worm_Win32_SillyShareCopy_H_2147598714_0
         $x_1_8 = "GetLogicalDriveStringsA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -245,6 +253,7 @@ rule Worm_Win32_SillyShareCopy_I_2147598715_0
         $x_1_6 = "Screen: %d*%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -269,6 +278,7 @@ rule Worm_Win32_SillyShareCopy_J_2147598717_0
         $x_1_5 = "ren C:\\WINDOWS\\explorer.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -292,6 +302,7 @@ rule Worm_Win32_SillyShareCopy_K_2147598894_0
         $x_1_4 = {00 3a 5c 61 75 74 6f 72 75 6e 2e 69 6e 66 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +329,7 @@ rule Worm_Win32_SillyShareCopy_L_2147598895_0
         $x_5_7 = "SearchTreeForFile" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -344,6 +356,7 @@ rule Worm_Win32_SillyShareCopy_N_2147598896_0
         $x_1_7 = "Autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -370,6 +383,7 @@ rule Worm_Win32_SillyShareCopy_O_2147599145_0
         $x_1_7 = ":\\UFO.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -398,6 +412,7 @@ rule Worm_Win32_SillyShareCopy_P_2147599146_0
         $x_1_9 = "GetSystemDirectoryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -428,6 +443,7 @@ rule Worm_Win32_SillyShareCopy_Q_2147599147_0
         $x_5_11 = "open=" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 3 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -455,6 +471,7 @@ rule Worm_Win32_SillyShareCopy_R_2147599148_0
         $x_1_5 = "Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -480,6 +497,7 @@ rule Worm_Win32_SillyShareCopy_S_2147602567_0
         $x_1_6 = "\\Windows\\CurrentVersion\\Run\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -509,6 +527,7 @@ rule Worm_Win32_SillyShareCopy_T_2147607565_0
         $x_1_6 = "run,%comspec% /c tskill iexplorer,,hide useerrorlevel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -534,6 +553,7 @@ rule Worm_Win32_SillyShareCopy_U_2147608147_0
         $x_1_6 = "shutdown -s -f" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -565,6 +585,7 @@ rule Worm_Win32_SillyShareCopy_V_2147608407_0
         $x_1_8 = "raradded" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -594,6 +615,7 @@ rule Worm_Win32_SillyShareCopy_W_2147608411_0
         $x_1_6 = "MonitorMission" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -617,6 +639,7 @@ rule Worm_Win32_SillyShareCopy_AK_2147633111_0
         $x_1_4 = "DisableTaskMgr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -643,6 +666,7 @@ rule Worm_Win32_SillyShareCopy_AL_2147633396_0
         $x_1_4 = "ShowSuperHidden" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -672,6 +696,7 @@ rule Worm_Win32_SillyShareCopy_AQ_2147657444_0
         $x_1_6 = "spersk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -699,6 +724,7 @@ rule Worm_Win32_SillyShareCopy_AS_2147666949_0
         $x_1_8 = "ICQSpreader" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

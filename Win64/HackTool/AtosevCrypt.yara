@@ -17,6 +17,7 @@ rule HackTool_Win64_AtosevCrypt_SI_2147773414_0
         $x_2_2 = {48 8b d0 48 8b cf ff 15 ?? ?? 00 00 48 85 c0 74 ?? 48 8b c8 ff 15 ?? ?? 00 00 48 8b d5 48 8b cf 4c 8b f0 ff 15 ?? ?? 00 00 8b e8 4d 85 f6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win32_CoreWarrior_DA_2147915896_0
         $x_1_5 = "CONNECT_ONLY is required!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

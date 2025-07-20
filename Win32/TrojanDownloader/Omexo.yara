@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Omexo_A_2147626894_0
         $x_1_2 = {0f b6 14 08 88 54 24 03 80 74 24 03 ?? c0 4c 24 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_Omexo_B_2147631675_0
         $x_1_3 = {3d 31 04 00 00 75 1b 6a 00 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

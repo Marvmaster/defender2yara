@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_DefaultTab_207033_0
         $x_1_4 = "set_home_page_on_update" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule BrowserModifier_Win32_DefaultTab_207033_1
         $x_1_4 = "Global\\Default_Tab_Search_Results_ServiceReady" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

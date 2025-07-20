@@ -21,6 +21,7 @@ rule TrojanDownloader_MSIL_Golomak_A_2147697257_0
         $x_1_7 = "Mak.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

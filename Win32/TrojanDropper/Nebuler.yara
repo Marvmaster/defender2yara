@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Nebuler_A_2147625555_0
         $x_1_1 = {0f b6 91 00 50 40 00 33 d0 8b 85 ?? ?? ?? ff 88 90 00 50 40 00 8d 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDropper_Win32_Nebuler_B_2147630356_0
         $x_2_4 = {ff ff 2a cb 80 14 75 0f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -61,6 +63,7 @@ rule TrojanDropper_Win32_Nebuler_C_2147631748_0
         $x_1_1 = {81 bd 6c 6a fe ff 00 98 00 00 73 29 8b 85 6c 6a fe ff 0f b6 ?? ?? ?? ?? ?? ?? 8b 95 6c 6a fe ff 0f b6 82 00 60 40 00 33 c1 8b 8d 6c 6a fe ff 88 81 00 60 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule TrojanDropper_Win32_Nebuler_D_2147632359_0
         $x_4_6 = {8b 51 08 ff d2 89 45 ?? 8b 45 08 05 ?? ?? ?? ?? 50 8b 4d ?? 51 8b 55 08 8b 42 04 ff d0}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or
             ((3 of ($x_4_*))) or
@@ -119,6 +123,7 @@ rule TrojanDropper_Win32_Nebuler_E_2147633742_0
         $x_1_10 = {0f b6 82 00 70 40 00 33 c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_9_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Trubsil_A_2147682600_0
         $x_1_4 = "username=%s&passwd=%s&lang=&option=com_login&task=login&return=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Backdoor_Win32_Trubsil_B_2147682668_0
         $x_5_8 = "Silent_Bruter" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_10_*) and 2 of ($x_5_*))) or
             ((1 of ($x_100_*) and 3 of ($x_10_*))) or
@@ -80,6 +82,7 @@ rule Backdoor_Win32_Trubsil_C_2147688571_0
         $x_1_6 = "{domaincut}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Ader_ARA_2147837236_0
         $x_2_1 = {11 04 06 09 06 09 8e 69 5d 91 08 06 91 61 d2 9c 06 17 58 0a 06 08 8e 69 32 e6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_MSIL_Ader_ARA_2147837236_1
         $x_2_1 = {06 09 06 09 8e 69 5d 91 08 06 91 61 d2 6f ?? ?? ?? 0a 06 17 58 0a 06 08 8e 69 32 e2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule TrojanDownloader_MSIL_Ader_ARA_2147837236_2
         $x_2_1 = {16 0d 2b 15 00 06 08 07 09 91 06 08 91 61 28 ?? ?? ?? 0a 9c 00 09 17 58 0d 09 07 8e 69 fe 04 13 05 11 05 2d df 00 08 17 58 0c 08 06 8e 69 fe 04 13 05 11 05 2d c9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule TrojanDownloader_MSIL_Ader_ARA_2147837236_3
         $x_2_3 = "QzpcXFdpbmRvd3NcXE1pY3Jvc29mdC5ORVRcXEZyYW1ld29ya1xcdjQuMC4zMDMxOVxcUmVnQXNtLmV4ZQ==" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule TrojanDownloader_MSIL_Ader_ABHK_2147838441_0
         $x_1_4 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +131,7 @@ rule TrojanDownloader_MSIL_Ader_ARAF_2147839172_0
         $x_2_1 = {09 08 11 04 08 8e 69 5d 91 07 11 04 91 61 d2 6f ?? ?? ?? 0a 11 04 13 05 11 05 17 58 13 04 11 04 07 8e 69 32 db}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +153,7 @@ rule TrojanDownloader_MSIL_Ader_ARAG_2147839814_0
         $x_5_1 = {09 06 11 04 06 8e 69 5d 91 08 11 04 91 61 d2 6f ?? ?? ?? 0a 11 04 17 58 13 04 11 04 08 8e 69}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +175,7 @@ rule TrojanDownloader_MSIL_Ader_ARAA_2147840192_0
         $x_2_1 = {06 03 11 06 91 07 11 06 07 8e 69 5d 91 61 08 61 d2 6f ?? ?? ?? 0a 00 00 11 06 17 58 13 06 11 06 03 8e 69 fe 04 13 07 11 07 2d d4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +197,7 @@ rule TrojanDownloader_MSIL_Ader_ARAX_2147840696_0
         $x_5_1 = {09 17 58 0d 09 20 00 01 00 00 5d 0d 11 05 11 09 09 94 58 13 05 11 05 20 00 01 00 00 5d 13 05 11 09 09 94 13 07 11 09 09 11 09 11 05 94 9e 11 09 11 05 11 07 9e 11 09 11 09 09 94 11 09 11 05 94 58 20 00 01 00 00 5d 94 13 06 11 0a 11 04 07 11 04 91 11 06 61 d2 9c 11 04 17 58 13 04 11 04 07 8e 69 16 2d b7 32 99}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +219,7 @@ rule TrojanDownloader_MSIL_Ader_ARAQ_2147840698_0
         $x_5_1 = {09 11 04 18 5b 07 11 04 18 6f 15 00 00 0a 1f 10 28 16 00 00 0a 9c 11 04 18 58 13 04 11 04 08 32 df}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +244,7 @@ rule TrojanDownloader_MSIL_Ader_ABNI_2147843709_0
         $x_1_4 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -255,6 +266,7 @@ rule TrojanDownloader_MSIL_Ader_ARZ_2147845923_0
         $x_5_1 = {09 11 04 18 5b 07 11 04 18 6f 16 00 00 0a 1f 10 28 17 00 00 0a 9c 11 04 18 58 13 04 11 04 08 32 df}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +288,7 @@ rule TrojanDownloader_MSIL_Ader_ARBE_2147845924_0
         $x_5_1 = {06 09 11 04 09 8e 69 5d 91 08 11 04 91 61 d2 6f ?? ?? ?? 0a 11 04 17 58 13 04 11 04 08 8e 69 32 df}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +312,7 @@ rule TrojanDownloader_MSIL_Ader_ABSB_2147846498_0
         $x_1_3 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +335,7 @@ rule TrojanDownloader_MSIL_Ader_CSTY_2147846590_0
         $x_1_2 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 31 00 32 00 33 00 63 00 72 00 61 00 63 00 6b 00 66 00 69 00 6e 00 64 00 65 00 72 00 2e 00 63 00 6f 00 6d 00 2f 00 31 00 32 00 33 00 63 00 72 00 61 00 63 00 6b 00 66 00 69 00 6e 00 64 00 65 00 72 00 2e 00 63 00 6f 00 6d 00 2f 00 6a 00 64 00 66 00 68 00 65 00 72 00 2f 00 70 00 61 00 6e 00 65 00 6c 00 2f 00 75 00 70 00 6c 00 6f 00 61 00 64 00 73 00 2f 00 [0-31] 2e 00 70 00 6e 00 67 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -343,6 +358,7 @@ rule TrojanDownloader_MSIL_Ader_ARBC_2147846652_0
         $x_5_2 = "https://www.fintran.site/fl/968" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -367,6 +383,7 @@ rule TrojanDownloader_MSIL_Ader_CXFW_2147850811_0
         $x_1_4 = "N'utilisez pas de paks modifi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -392,6 +409,7 @@ rule TrojanDownloader_MSIL_Ader_PAN_2147888527_0
         $x_1_5 = "mciSendCommandA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -414,6 +432,7 @@ rule TrojanDownloader_MSIL_Ader_ABIT_2147896472_0
         $x_1_2 = "Uwzosefjkpcvtowkk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -435,6 +454,7 @@ rule TrojanDownloader_MSIL_Ader_ARC_2147899493_0
         $x_5_1 = {06 09 11 04 09 8e 69 5d 91 08 11 04 91 61 d2 6f 2b 00 00 0a 11 04 17 58 13 04 11 04 08 8e 69 32 df}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -456,6 +476,7 @@ rule TrojanDownloader_MSIL_Ader_SS_2147917075_0
         $x_5_1 = {04 05 8e 69 42 ?? ?? ?? 00 04 38 ?? ?? ?? 00 05 8e 69 0a 03 05 16 06 6f 1a 00 00 0a 26 02 05 16 06 28 28 00 00 06 04 06 59 10 02 04 16 42 ce ff ff ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -479,6 +500,7 @@ rule TrojanDownloader_MSIL_Ader_MBWE_2147927870_0
         $x_1_3 = "Installer_sharp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -502,6 +524,7 @@ rule TrojanDownloader_MSIL_Ader_ASQA_2147938547_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -523,6 +546,7 @@ rule TrojanDownloader_MSIL_Ader_ADXA_2147944262_0
         $x_5_1 = {08 91 02 08 07 5d 6f ?? 00 00 0a 61 d2 9c 16 2d e9 1a 2c e6 08 17 58 0c 08 03 8e 69 32 dc 06 2a 03 2b c0 0a 2b c6 02 2b c5 6f ?? 00 00 0a 2b c0 0b 2b bf 0c 2b bf 06 2b c3 08 2b c2 03 2b c1}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -546,6 +570,7 @@ rule TrojanDownloader_MSIL_Ader_AQXA_2147944636_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

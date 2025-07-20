@@ -16,6 +16,7 @@ rule Trojan_Win64_SmallTiger_A_2147916853_0
         $x_1_1 = {80 3c 11 00 75 eb 48 8b 4c 24 ?? 33 d2 48 f7 f1 48 8b c2 48 8b 4c 24 ?? 0f b6 14 01 48 8d 8c 24 ?? ?? ?? ?? e8 ?? ?? ?? ?? eb 12}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

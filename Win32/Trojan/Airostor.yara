@@ -17,6 +17,7 @@ rule Trojan_Win32_Airostor_A_2147626863_0
         $x_1_3 = "tongji/g.asp?mac=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Airostor_B_2147627910_0
         $x_1_6 = "benjo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

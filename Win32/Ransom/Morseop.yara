@@ -21,6 +21,7 @@ rule Ransom_Win32_Morseop_PA_2147762640_0
         $x_1_6 = "Cynet Ransom Protection(DON'T DELETE)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Trolex_A_2147830884_0
         $x_1_3 = "/create /sc MINUTE /mo 3 /tn" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

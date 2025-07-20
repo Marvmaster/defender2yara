@@ -18,6 +18,7 @@ rule VirTool_Win64_Komrat_A_2147832712_0
         $x_1_3 = {52 8b 45 10 50 8b 4d 0c 51 8b 55 fc 52 8b 45 08 50 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

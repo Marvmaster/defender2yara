@@ -18,6 +18,7 @@ rule Trojan_MSIL_Xtob_A_2147656035_0
         $x_1_3 = {6f 06 00 00 0a 73 07 00 00 0a 0a 73 08 00 00 0a 0b 28 09 00 00 0a 0c 38 47 00 00 00 06 1f 20 6f 0a 00 00 0a 6f 0b 00 00 0a 08 06 1f 10 6f 0a 00 00 0a 6f 0c 00 00 0a 07 08 6f 0d 00 00 0a 17 73 0e 00 00 0a 0d 09 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Macanscab_A_2147639539_0
         $x_1_3 = "svsinit.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

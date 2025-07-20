@@ -17,6 +17,7 @@ rule Trojan_Win64_NitrogenLdr_GA_2147932554_0
         $x_1_2 = {48 8b 8c 24 [0-13] 33 c8 8b c1 48 63 4c 24 ?? 48 8b 94 24 ?? ?? ?? ?? 88 04 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

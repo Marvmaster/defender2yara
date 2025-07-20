@@ -20,6 +20,7 @@ rule TrojanDownloader_Win64_Blouiroet_SK_2147902957_0
         $x_1_5 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

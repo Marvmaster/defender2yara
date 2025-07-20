@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Gadusteal_2147627592_0
         $x_1_7 = "FtpPutFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

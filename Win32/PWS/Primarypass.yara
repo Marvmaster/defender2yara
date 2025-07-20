@@ -17,6 +17,7 @@ rule PWS_Win32_Primarypass_A_2147714377_0
         $x_1_3 = {56 56 68 e2 d4 ea d4 56 e8 ?? ?? ?? ?? 6a 04 68 00 10 00 00 57 56 ff d0 8b d8 85 db 74 38}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule PWS_Win32_Primarypass_A_2147714377_1
         $x_1_5 = "FROM moz_logins" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

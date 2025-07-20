@@ -16,6 +16,7 @@ rule Backdoor_MSIL_SharpAdmin_RDA_2147892223_0
         $x_2_1 = {17 8d 10 00 00 01 25 16 11 06 a2 6f 14 00 00 0a 26 11 05}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

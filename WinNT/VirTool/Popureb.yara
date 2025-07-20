@@ -18,6 +18,7 @@ rule VirTool_WinNT_Popureb_A_2147645944_0
         $x_2_4 = {83 fa 2a 75 10 8b 45 ?? c7 40 0c 40 00 00 00 8b 4d ?? c6 01 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -43,6 +44,7 @@ rule VirTool_WinNT_Popureb_B_2147650485_0
         $x_1_2 = "HookAtapiStartIO, NULL == RealDisk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

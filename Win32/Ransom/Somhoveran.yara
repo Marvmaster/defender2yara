@@ -22,6 +22,7 @@ rule Ransom_Win32_Somhoveran_A_2147678661_0
         $x_20_8 = "NoManageMyComputerVerb" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 2 of ($x_30_*) and 3 of ($x_20_*))) or
             ((1 of ($x_100_*) and 2 of ($x_30_*) and 3 of ($x_20_*))) or
@@ -54,6 +55,7 @@ rule Ransom_Win32_Somhoveran_B_2147695432_0
         $x_1_5 = "Warning! Windows Blocked!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +81,7 @@ rule Ransom_Win32_Somhoveran_C_2147697335_0
         $x_1_6 = {be 3c 00 00 00 99 f7 fe 89 55 f8 8b c1 be 3c 00 00 00 99 f7 fe be 3c 00 00 00 99 f7 fe 89 55 fc 8b c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -104,6 +107,7 @@ rule Ransom_Win32_Somhoveran_D_2147733494_0
         $x_1_5 = "You are locked by" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

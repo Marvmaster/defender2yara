@@ -19,6 +19,7 @@ rule Misleading_Win32_PerfectOptimizer_143135_0
         $x_1_5 = "IsValidSN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Misleading_Win32_PerfectOptimizer_143135_1
         $x_1_5 = "FConfigFullScanItems" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Misleading_Win32_PerfectOptimizer_143135_2
         $x_1_3 = "Miracle Technologies" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Misleading_Win32_PerfectOptimizer_143135_3
         $x_1_4 = "Sure you want to cancel Downloading?" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule Misleading_Win32_PerfectOptimizer_143135_4
         $x_1_19 = "?__CleanWinTemp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 10 of ($x_1_*))) or
             ((1 of ($x_20_*) and 1 of ($x_5_*) and 5 of ($x_1_*))) or
@@ -196,6 +201,7 @@ rule Misleading_Win32_PerfectOptimizer_143135_5
         $x_1_47 = "MMI_IEREPAIR" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (40 of ($x*))
 }
 
@@ -224,6 +230,7 @@ rule Misleading_Win32_PerfectOptimizer_143135_6
         $x_1_9 = "btn_FullScan_Normal" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

@@ -17,6 +17,7 @@ rule Trojan_Win64_HuiLoader_A_2147852041_0
         $x_2_2 = {2b c2 48 63 c8 0f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule SoftwareBundler_Win32_FileTour_222749_0
         $x_1_4 = "http://%s/v_install?sid=16045&start=1&guid=$__GUID&sig=$__SIG&ovr=$__OVR&browser=$__BROWSER&label=%s&aux=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

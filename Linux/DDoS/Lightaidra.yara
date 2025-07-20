@@ -26,6 +26,7 @@ rule DDoS_Linux_Lightaidra_2147717463_0
         $x_1_12 = "dreambox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (11 of ($x*))
 }
 
@@ -54,6 +55,7 @@ rule DDoS_Linux_Lightaidra_2147717463_1
         $x_2_9 = {00 63 69 73 63 6f 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((5 of ($x_2_*))) or
             ((1 of ($x_4_*) and 3 of ($x_2_*))) or
@@ -84,6 +86,7 @@ rule DDoS_Linux_Lightaidra_YA_2147741057_0
         $x_1_5 = "botkiller" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -108,6 +111,7 @@ rule DDoS_Linux_Lightaidra_B_2147762564_0
         $x_1_4 = "BOT JOINED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -137,6 +141,7 @@ rule DDoS_Linux_Lightaidra_C_2147763061_0
         $x_1_9 = "tcpraw" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -165,6 +170,7 @@ rule DDoS_Linux_Lightaidra_D_2147763294_0
         $x_1_4 = "root1234" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Trojan_Win32_Telject_A_2147690028_0
         $x_5_8 = "PInG     3.3.3.255 -w     2000   -n 1" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_5_*))) or

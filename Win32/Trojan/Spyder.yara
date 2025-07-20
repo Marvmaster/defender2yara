@@ -17,6 +17,7 @@ rule Trojan_Win32_Spyder_LKV_2147897410_0
         $x_1_2 = {8a 84 0d e0 df ff ff 88 04 0f 83 c1 01 83 d2 00 75 05 83 f9 0e 72 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

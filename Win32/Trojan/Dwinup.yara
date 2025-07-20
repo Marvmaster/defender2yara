@@ -19,6 +19,7 @@ rule Trojan_Win32_Dwinup_A_2147627175_0
         $x_1_5 = "Default_Page_URL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

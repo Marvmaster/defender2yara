@@ -17,6 +17,7 @@ rule MonitoringTool_Win32_TektonIt_222279_0
         $x_1_3 = "b2b2etempfile" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule MonitoringTool_Win32_TektonIt_222279_1
         $x_1_2 = {b8 10 80 40 00 a3 ?? ?? ?? ?? b8 30 80 40 00 a3 ?? ?? ?? ?? b8 ?? ?? 40 00 a3 ?? ?? ?? ?? b8 10 14 40 00 a3 ?? ?? ?? ?? a0 60 80 40 00 a2 ?? ?? ?? ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

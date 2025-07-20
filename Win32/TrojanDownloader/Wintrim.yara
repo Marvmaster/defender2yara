@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Wintrim_A_90453_0
         $x_1_8 = "XORFile2File : " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule TrojanDownloader_Win32_Wintrim_BX_141431_0
         $x_1_11 = {26 64 6c 5f 73 74 61 74 75 73 63 6f 64 65 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -84,6 +86,7 @@ rule TrojanDownloader_Win32_Wintrim_BY_143220_0
         $x_1_6 = {c6 45 d4 25 c6 45 d5 30 c6 45 d6 38 c6 45 d7 58 c6 45 d8 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -108,6 +111,7 @@ rule TrojanDownloader_Win32_Wintrim_BZ_144247_0
         $x_1_2 = {df e0 f6 c4 40 75 ?? d9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +137,7 @@ rule TrojanDownloader_Win32_Wintrim_CA_144980_0
         $x_10_6 = {df e0 f6 c4 40 75}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*))) or

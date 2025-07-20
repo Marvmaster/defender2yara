@@ -18,6 +18,7 @@ rule Trojan_Win32_Lokijan_A_2147818120_0
         $x_2_4 = {68 00 1a 40 00 e8 ?? ?? ff ff a3 ?? ?? 40 00 6a ?? 68 ?? 1a 40 00 e8 ?? ?? ff ff a3 ?? ?? 40 00 6a ?? 68 ?? 1a 40 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_TurtleSyr_A_2147781990_0
         $x_1_3 = "Could Not Write To Remote Process" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

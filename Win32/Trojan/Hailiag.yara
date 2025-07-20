@@ -17,6 +17,7 @@ rule Trojan_Win32_Hailiag_A_2147622834_0
         $x_1_3 = {68 01 02 00 00 55 ff d6 6a 00 6a 00 68 02 02 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -44,6 +45,7 @@ rule Trojan_Win32_Hailiag_B_2147622835_0
         $x_1_4 = "/hailiang.asp?action=install&ver=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

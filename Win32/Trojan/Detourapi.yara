@@ -16,6 +16,7 @@ rule Trojan_Win32_Detourapi_A_2147624638_0
         $x_1_2 = {ac 08 c0 74 07 34 9b 90 aa 90 e2 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

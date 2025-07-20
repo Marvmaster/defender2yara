@@ -18,6 +18,7 @@ rule Trojan_Win32_Uascape_A_2147708128_0
         $x_10_4 = "$$\\wininit.ini" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -26,6 +26,7 @@ rule Trojan_MSIL_Torwofun_A_2147693623_0
         $x_1_12 = "DRIVERS\\BDEnhanceBoost.sys" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_4_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -59,6 +60,7 @@ rule Trojan_MSIL_Torwofun_B_2147693727_0
         $x_1_6 = "DRIVERS\\BDMWrench_x64.sys" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

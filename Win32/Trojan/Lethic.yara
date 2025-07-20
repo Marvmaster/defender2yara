@@ -20,6 +20,7 @@ rule Trojan_Win32_Lethic_C_2147619786_0
         $x_5_6 = {68 af 04 00 00 8b 85 ?? ?? ff ff 8b 88 58 01 00 00 ff d1 66 89 85 ?? ?? ff ff 66 c7 85 ?? ?? ff ff 02 00 6a 10}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -48,6 +49,7 @@ rule Trojan_Win32_Lethic_B_2147628286_0
         $x_1_4 = {8d 8c 01 f8 00 00 00 89 4d f8 68 ?? ?? ?? ?? 8b 55 f8 52 e8 ?? ?? ?? ?? 85 c0 74 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -74,6 +76,7 @@ rule Trojan_Win32_Lethic_H_2147647288_0
         $x_1_3 = {89 85 58 fd ff ff 33 c9 75 cb 8b 95 44 fd ff ff 81 c2 c8 11 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Trojan_Win32_Lethic_I_2147684646_0
         $x_1_2 = {8b 55 08 8b 82 ?? 01 00 00 ff d0 3d 33 27 00 00 75 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Trojan_Win32_Lethic_K_2147690742_0
         $x_1_2 = {51 68 11 11 11 11 8b 55 ?? 52 8b 85 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 8b 4d ?? 51 68 22 22 22 22 8b 55 ?? 52 8b 85 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 8b 4d ?? 51 68 33 33 33 33}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_Win32_Lethic_L_2147691450_0
         $x_1_3 = {51 68 11 11 11 11 8b 55 ?? 52 8b 85 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 8b 4d ?? 51 68 22 22 22 22 8b 55 ?? 52 8b 85 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 8b 4d ?? 51 68 33 33 33 33}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_Win32_Lethic_N_2147721322_0
         $x_3_7 = {c6 40 05 51 33 c0 50 50 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 50 50 b8 ?? ?? ?? ?? ff d0 61 68 ?? ?? ?? ?? c3}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -232,6 +239,7 @@ rule Trojan_Win32_Lethic_O_2147722621_0
         $x_1_7 = "55274-640-2673064-23950" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -257,6 +265,7 @@ rule Trojan_Win32_Lethic_Q_2147723892_0
         $x_1_2 = {8b 4d fc d1 e9 8b 55 fc 83 e2 01 a1 ?? ?? ?? ?? 8b 80 ?? ?? ?? ?? 0f af c2 33 c8 89 4d fc eb d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -280,6 +289,7 @@ rule Trojan_Win32_Lethic_R_2147726622_0
         $x_1_3 = {8b c1 c1 e0 19 33 c1 c1 e0 02 33 c1 c1 e0 02 33 c1 03 c0 33 c1 03 c0 33 c1 25 ?? ?? ?? ?? d1 e9 0b c1 a3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -301,6 +311,7 @@ rule Trojan_Win32_Lethic_EC_2147892925_0
         $x_5_1 = {0f b6 11 01 d0 88 c7 8a 26 80 cc 01 88 d8 f6 e4 88 c4 8a 06 28 e0 88 01 88 f9 88 d8 d2 e0 00 c7 88 3e}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -322,6 +333,7 @@ rule Trojan_Win32_Lethic_C_2147907103_0
         $x_2_1 = {4c 8b 07 41 0a c9 41 0f c0 cf 8a 4f ?? 45 0f bf f8 66 41 81 f7}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

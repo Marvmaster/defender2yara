@@ -25,6 +25,7 @@ rule Trojan_MacOS_Dazzlespy_A_2147811312_0
         $x_1_10 = "/pangu/create_source/poke/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

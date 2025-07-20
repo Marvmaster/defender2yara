@@ -20,6 +20,7 @@ rule BrowserModifier_Win32_Procesemes_B_140688_0
         $x_1_6 = {8b d7 83 e2 01 c1 e2 02 6a 04 59 2b ca d2 e0 08 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule BrowserModifier_Win32_Procesemes_C_140689_0
         $x_1_6 = "onlinesexzone.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

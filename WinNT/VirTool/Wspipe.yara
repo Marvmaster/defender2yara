@@ -20,6 +20,7 @@ rule VirTool_WinNT_Wspipe_A_2147575682_0
         $x_3_6 = "{09e76a33-92ea-407e-a05a-fbf3833bc492}" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_6_*) and 1 of ($x_3_*))) or
             ((4 of ($x_6_*))) or

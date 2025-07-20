@@ -17,6 +17,7 @@ rule Trojan_MSIL_Dinvoke_GPA_2147902300_0
         $x_5_2 = {e2 05 52 00 34 00 67 00 e7 05 52 00 34 00 67 00 d4 05 40 00 39 00 54 00 cf 05 42 00 31 00 76}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

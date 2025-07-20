@@ -21,6 +21,7 @@ rule HackTool_Win64_Herpaderping_B_2147830335_0
         $x_5_7 = "-u,--do-not-flush-file" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*))) or
             ((3 of ($x_10_*))) or

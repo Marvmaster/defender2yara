@@ -19,6 +19,7 @@ rule Ransom_Win32_Lockbit_SA_2147750588_0
         $x_1_4 = "encrypted files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -47,6 +48,7 @@ rule Ransom_Win32_Lockbit_AA_2147785223_0
         $x_1_4 = "Lockbit\\shell\\Open\\Command" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_Win32_Lockbit_SB_2147787086_0
         $x_10_4 = {47 c6 84 24 ?? 00 00 00 44 c6 84 24 ?? 00 00 00 49 c6 84 24 ?? 00 00 00 50 c6 84 24 ?? 00 00 00 4c c6 84 24 ?? 00 00 00 55 c6 84 24 ?? 00 00 00 53 c6 84 24 ?? 00 00 00 0e c6 84 24 ?? 00 00 00 44 c6 84 24 ?? 00 00 00 4c c6 84 24 ?? 00 00 00 4c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Ransom_Win32_Lockbit_HA_2147844400_0
         $x_1_1 = {89 5a 01 66 c7 42 05 c1 c0 88 4a 07 c6 42 08 35 89 42 09 66 c7 42 0d ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Ransom_Win32_Lockbit_AC_2147845570_0
         $x_1_2 = {6a 7f 8b f3 5f 8a 84 ?? 69 ff ff ff 0f b6 c0 6a ?? 59 2b c8 6b c1 ?? 99 f7 ff 8d 04 17 99 f7 ff 88 94 ?? 69 ff ff ff 46 83 fe 16 8a 84 ?? 69 ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule Ransom_Win32_Lockbit_RPA_2147849412_0
         $x_1_1 = {8a 54 0d 00 02 d3 8a 5c 15 00 8a 54 1d 00 8a 54 15 00 fe c2 8a 44 15 00 30 07 8a 54 1d 00 86 54 0d 00 88 54 1d 00 fe c1 47 4e 85 f6 75 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule Ransom_Win32_Lockbit_AK_2147897364_0
         $x_1_2 = {6a 00 6a 00 6a 00 6a 00 6a 00 68 02 10 04 00 ff d0 8b f0 85 f6 0f 84 7c 01 00 00 8b 40 40 c1 e8 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Ransom_Win32_Lockbit_DY_2147909067_0
         $x_1_1 = {8a 44 1d f8 30 04 3e 8d 45 f8 50 43 e8 ?? ?? ?? ?? 59 3b d8 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +209,7 @@ rule Ransom_Win32_Lockbit_SS_2147909068_0
         $x_1_4 = "InternetOpenUrlW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +236,7 @@ rule Ransom_Win32_Lockbit_NIT_2147932224_0
         $x_1_6 = "Reyonpharm_hacked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

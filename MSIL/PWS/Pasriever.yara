@@ -21,6 +21,7 @@ rule PWS_MSIL_Pasriever_A_2147723075_0
         $x_1_7 = "FirefoxRetriever" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Machime_A_2147627118_0
         $x_1_3 = {67 00 65 00 74 00 70 00 6f 00 72 00 74 00 2e 00 32 00 32 00 38 00 38 00 2e 00 6f 00 72 00 67 00 00 00 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

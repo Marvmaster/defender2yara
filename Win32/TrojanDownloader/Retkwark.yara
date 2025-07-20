@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Retkwark_A_2147705852_0
         $x_1_5 = "ar_to.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*))) or

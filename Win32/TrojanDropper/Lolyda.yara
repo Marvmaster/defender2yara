@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Lolyda_B_2147624561_0
         $x_1_3 = "$$$$______$$$$" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDropper_Win32_Lolyda_D_2147629675_0
         $x_1_3 = {2d 20 05 00 00 8d 8d ?? ?? ?? ?? 50 68 20 05 00 00 8d 95 ?? ?? ?? ?? 51 52 e8 [0-15] 90 [0-15] 8d 85 ?? ?? ?? ?? 68 20 05 00 00 8d 8d ?? ?? ?? ?? 50 51 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanDropper_Win32_Lolyda_F_2147630503_0
         $x_1_2 = {83 7d 0c 00 75 1f 8b 7d fc 8b 55 08 8b df 2b d3 83 ea 05 89 55 f8 b0 e9 aa}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

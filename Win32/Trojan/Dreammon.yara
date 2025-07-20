@@ -21,6 +21,7 @@ rule Trojan_Win32_Dreammon_B_126581_0
         $x_1_6 = {69 6e 69 2e 6f 66 66 69 63 65 32 30 30 35 75 70 64 61 74 65 73 2e 6e 65 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule Trojan_Win32_Dreammon_C_128404_0
         $x_1_6 = "ini.msnmessengerupdate.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -79,6 +81,7 @@ rule Trojan_Win32_Dreammon_D_157673_0
         $x_1_7 = {73 6d 61 72 74 2f 73 6d 61 72 74 6d 61 69 6e 2e 70 68 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             ((3 of ($x_5_*))) or

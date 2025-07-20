@@ -26,6 +26,7 @@ rule TrojanDownloader_Win32_Ogimant_2147688526_0
         $x_2_12 = "after_move_file.txt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

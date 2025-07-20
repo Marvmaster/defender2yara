@@ -19,6 +19,7 @@ rule VirTool_Win64_LzDump_A_2147839547_0
         $x_1_4 = {48 c7 44 24 30 00 00 00 00 48 c7 44 24 28 00 00 00 00 48 c7 44 24 20 00 00 00 00 41 b9 02 00 00 00 4c 8b 85 28 01 00 00 8b 55 64 48 8b 8d 68 01 00 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Ransom_MSIL_Flyterper_A_2147717254_0
         $x_10_3 = "AES_Encrypt" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win64_SpyBoy_SA_2147849894_0
         $x_1_4 = "C:\\Users\\anash\\source\\repos\\zan\\x64\\Debug\\zan.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win64_SpyBoy_EC_2147919989_0
         $x_1_8 = "ZmnIoCreateFileBypassFilters" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_AntiStealer_A_2147893388_0
         $x_2_4 = "User-Agent: %s" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

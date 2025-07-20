@@ -35,6 +35,7 @@ rule Spammer_Win32_Nuwar_D_2147595779_0
         $x_3_21 = "/adload.php" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 9 of ($x_2_*))) or
             ((2 of ($x_3_*) and 7 of ($x_2_*))) or
@@ -112,6 +113,7 @@ rule Spammer_Win32_Nuwar_C_2147595780_0
         $x_3_23 = {52 50 3e 81 3e 2e 74 65 78 74 44 3e 81 3e 43 4f 44 45 74 3b 3e 81 3e 2e 64 61 74}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -153,6 +155,7 @@ rule Spammer_Win32_Nuwar_A_2147595781_0
         $x_3_3 = "taskdir;adir;" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*))) or
             (all of ($x*))
@@ -178,6 +181,7 @@ rule Spammer_Win32_Nuwar_B_2147595782_0
         $x_1_3 = {53 6d 74 70 53 65 72 76 65 72 3a 3a 77 6f 72 6b 65 72 2c 20 63 6f 6e 6e 65 63 74 69 6f 6e 20 69 73 20 63 6c 6f 73 65 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +211,7 @@ rule Spammer_Win32_Nuwar_A_2147595784_0
         $x_1_10 = "250 Hello, pleased to meet you" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 7 of ($x_1_*))) or
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or

@@ -18,6 +18,7 @@ rule Trojan_Win32_WingoObfus_AC_2147900579_0
         $x_1_3 = "dat.exe.gif.htm.jpg.mjs.pdf.png.svg.tmp.t" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

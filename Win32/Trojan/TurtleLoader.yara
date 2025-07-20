@@ -16,6 +16,7 @@ rule Trojan_Win32_TurtleLoader_CS_2147779045_0
         $x_1_1 = {0c 4b 8b 58 1c 01 d3 8b 04 8b 01 d0 89 44 24 24 5b 5b 61 59 5a 51 ff e0 58 5f 5a 8b 12 eb 86 5d 68 6e 65 74 00 68 77 69 6e 69 54 68 4c 77 26 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_TurtleLoader_RPN_2147828100_0
         $x_1_1 = {7d 1a 89 c8 99 f7 ff 8b 45 10 8a 04 10 8b 55 08 32 04 0a 88 04 0a 88 04 0b 41 eb e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_TurtleLoader_R_2147832786_0
         $x_1_3 = {8a 04 31 2c 2a 34 2a 04 2a 88 04 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_TurtleLoader_PEL_2147848406_0
         $x_1_3 = "[+] Decrypt the PE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_Win32_TurtleLoader_DCG_2147893683_0
         $x_1_3 = "C:\\Windows\\data.bin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_Win32_TurtleLoader_DCH_2147893757_0
         $x_1_5 = {80 e1 3f c1 e1 02 8a 5d ?? 80 e3 30 81 e3 ff 00 00 00 c1 eb 04 02 cb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -155,6 +161,7 @@ rule Trojan_Win32_TurtleLoader_PAL_2147909463_0
         $x_1_4 = "Replace with your payload file" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_Win32_TurtleLoader_Q_2147935844_0
         $x_1_3 = "Failed to load and execute shellcode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

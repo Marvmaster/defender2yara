@@ -27,6 +27,7 @@ rule Ransom_Win32_Snatch_PA_2147746186_0
         $x_1_12 = "main.encryptFile.func" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Ransom_Win32_Snatch_SA_2147763584_0
         $x_1_5 = "Go build ID:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +82,7 @@ rule Ransom_Win32_Snatch_MK_2147772876_0
         $x_1_8 = ".encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +110,7 @@ rule Ransom_Win32_Snatch_MK_2147772876_1
         $x_1_7 = "ransomware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -133,6 +137,7 @@ rule Ransom_Win32_Snatch_MA_2147847718_0
         $x_1_6 = "ENCRYPTED-FILES-ALL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

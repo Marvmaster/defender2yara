@@ -18,6 +18,7 @@ rule Trojan_MSIL_Glupteba_MBID_2147889024_0
         $x_1_3 = "4f34-af18-dcba3d14f7d2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_GoelExaram_B_2147805873_0
         $x_1_5 = "attackevals.mitre-engenuity.org/exaramel-windows/files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

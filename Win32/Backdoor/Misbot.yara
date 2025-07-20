@@ -18,6 +18,7 @@ rule Backdoor_Win32_Misbot_A_2147663871_0
         $x_1_4 = {44 44 6f 53 20 74 68 72 65 61 64 20 74 65 72 6d 69 6e 61 74 69 6e 67 21 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

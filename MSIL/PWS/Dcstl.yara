@@ -23,6 +23,7 @@ rule PWS_MSIL_Dcstl_GG_2147755910_0
         $x_1_8 = "\\Local Storage\\leveldb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -51,6 +52,7 @@ rule PWS_MSIL_Dcstl_GA_2147755911_0
         $x_1_5 = "\\LDISCORD\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -81,6 +83,7 @@ rule PWS_MSIL_Dcstl_GB_2147755912_0
         $x_1_6 = "NetworkCredential" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -111,6 +114,7 @@ rule PWS_MSIL_Dcstl_GD_2147755913_0
         $x_1_7 = "mfa\\.[\\w-]{84}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -137,6 +141,7 @@ rule PWS_MSIL_Dcstl_PDA_2147827838_0
         $x_1_3 = {31 0d 11 04 28 ?? ?? ?? 0a 16 28 ?? ?? ?? 0a 72 ?? ?? ?? 70 20 ?? ?? ?? 00 73 ?? ?? ?? 0a 13 05 11 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +164,7 @@ rule PWS_MSIL_Dcstl_PDC_2147827839_0
         $x_2_2 = {0a 26 08 7e ?? ?? ?? 04 72 ?? ?? ?? 70 08 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 26 07 17 58 0b 07 06 8e 69 32 bd}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +187,7 @@ rule PWS_MSIL_Dcstl_PDF_2147827841_0
         $x_1_2 = {13 05 07 28 ?? ?? ?? 0a 13 06 11 05 28 ?? ?? ?? 0a 09 6f ?? ?? ?? 0a 16 28 ?? ?? ?? 0a 09 6f ?? ?? ?? 0a 8e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +212,7 @@ rule PWS_MSIL_Dcstl_PDG_2147827842_0
         $x_1_4 = {04 0a 06 2c 32 00 7e ?? ?? ?? 04 73 ?? ?? ?? 06 0b 07 72 ?? ?? ?? 70 ?? ?? ?? 00 06 72 ?? ?? ?? 70 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 6f ?? ?? ?? 06 26 00 38 ?? ?? ?? 00 00 72 ?? ?? ?? 70 28 ?? ?? ?? 06 0c 08 28 ?? ?? ?? 0a 13 0f 11 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -228,6 +236,7 @@ rule PWS_MSIL_Dcstl_PDK_2147827843_0
         $x_1_3 = {06 07 9a 6f ?? ?? ?? 0a 07 17 58 0b 07 06 8e 69 32 ee}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +260,7 @@ rule PWS_MSIL_Dcstl_PDM_2147827844_0
         $x_1_3 = {06 00 06 72 ?? ?? ?? 70 02 16 9a 72 ?? ?? ?? 70 28 ?? ?? ?? 0a 6f ?? ?? ?? 06 00 00 de 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +286,7 @@ rule PWS_MSIL_Dcstl_ABN_2147828469_0
         $x_1_5 = "discordValues" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +309,7 @@ rule PWS_MSIL_Dcstl_PDB_2147830861_0
         $x_1_2 = {f6 c5 cc 67 6a 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +333,7 @@ rule PWS_MSIL_Dcstl_PDH_2147830862_0
         $x_1_3 = {0a 0b 07 6f ?? ?? ?? 0a 0c 08 0d 2b 00 09 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -344,6 +357,7 @@ rule PWS_MSIL_Dcstl_PDJ_2147830863_0
         $x_1_3 = {2c 02 2b 2f 16 72 ?? ?? ?? 70 d0 ?? ?? ?? 02 28 ?? ?? ?? 0a 17 8d ?? ?? ?? 01 25 16 16 14 28 ?? ?? ?? 0a a2 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 80 ?? ?? ?? 04 7e ?? ?? ?? 04 7b ?? ?? ?? 0a 7e ?? ?? ?? 04 7e ?? ?? ?? 04 2c 02 2b 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -367,6 +381,7 @@ rule PWS_MSIL_Dcstl_PDO_2147830864_0
         $x_1_3 = {0a 26 72 01 ?? ?? ?? 02 7b ?? ?? ?? 04 72 ?? ?? ?? 70 28 ?? ?? ?? 0a 02 7b ?? ?? ?? 04 72 ?? ?? ?? 70 28 ?? ?? ?? 0a 28 ?? ?? ?? 06 00 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -390,6 +405,7 @@ rule PWS_MSIL_Dcstl_PDQ_2147830865_0
         $x_1_3 = {06 0a 06 72 ?? ?? ?? 70 6f ?? ?? ?? 06 00 06 72 ?? ?? ?? 70 6f ?? ?? ?? 06 00 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -413,6 +429,7 @@ rule PWS_MSIL_Dcstl_PDR_2147830866_0
         $x_1_3 = {25 2d 17 26 7e ?? ?? ?? 04 fe ?? ?? ?? ?? 06 73 ?? ?? ?? 0a 25 80 ?? ?? ?? 04 73 ?? ?? ?? 0a 0b 07 6f ?? ?? ?? 0a 00 07 1a 6f 2a 00 00 0a 00 00 06 17 58 0a 06 7e 0c 00 00 04 fe 02 16 fe 01 0c 08 2d b7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -436,6 +453,7 @@ rule PWS_MSIL_Dcstl_PDU_2147830867_0
         $x_1_3 = {48 8b c4 48 ?? ?? ?? 48 ?? ?? ?? 48 ?? ?? ?? 48 ?? ?? ?? 41 56 48 ?? ?? ?? 00 00 00 48 8d 48 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -460,6 +478,7 @@ rule PWS_MSIL_Dcstl_PDV_2147830868_0
         $x_1_4 = {13 1e 12 1e 28 ?? ?? ?? 0a a2 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 00 72 ?? ?? ?? 70 28 23}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -482,6 +501,7 @@ rule PWS_MSIL_Dcstl_PDT_2147831350_0
         $x_1_2 = {0a 06 72 14 ?? ?? ?? 04 6f ?? ?? ?? 0a 00 06 72 ?? ?? ?? 70 03 6f ?? ?? ?? 0a 00 06 72 ?? ?? ?? 70 05 6f ?? ?? ?? 0a 00 73 ?? ?? ?? 0a 02 06 28 ?? ?? ?? 0a 26 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -506,6 +526,7 @@ rule PWS_MSIL_Dcstl_ABR_2147832743_0
         $x_1_4 = "DBTest.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -528,6 +549,7 @@ rule PWS_MSIL_Dcstl_PDW_2147836138_0
         $x_1_2 = {0a 13 04 08 28 ?? ?? ?? 0a 13 05 11 04 11 05 16 11 05 8e 69 73 ?? ?? ?? 0a 72 ?? ?? ?? 70 06 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -551,6 +573,7 @@ rule PWS_MSIL_Dcstl_PDX_2147844890_0
         $x_1_3 = {2c 02 17 2a 28 ?? ?? ?? 0a 72 ?? ?? ?? 70 28 ?? ?? ?? 0a 2c 38 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

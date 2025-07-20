@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Blortios_C_2147651021_0
         $x_1_6 = "VbPQRSTU+ABCDEFGc2/5678fghijstu01Mkl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Blortios_E_2147656381_0
         $x_1_3 = "VbPQRSTU+ABCDEFGc2/5678fghijstu01Mkl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

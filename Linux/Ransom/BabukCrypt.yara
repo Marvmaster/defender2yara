@@ -18,6 +18,7 @@ rule Ransom_Linux_BabukCrypt_PA_2147786328_0
         $x_1_3 = "/path/to/be/encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Linux_BabukCrypt_PB_2147787446_0
         $x_1_5 = "/sys/kernel/mm/transparent_hugepage/hpage_pmd_size" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

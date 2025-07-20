@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Trotoawny_2147633894_0
         $x_1_3 = {68 74 74 70 3a 2f 2f 6d 6f 64 72 69 74 65 2e 69 6e 66 6f 2f [0-6] 2f [0-6] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

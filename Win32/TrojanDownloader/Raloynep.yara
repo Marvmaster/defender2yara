@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Raloynep_A_2147690876_0
         $x_1_6 = {2a 75 75 66 69 75 7a 78 3a 39 21 26 76 22 32 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or

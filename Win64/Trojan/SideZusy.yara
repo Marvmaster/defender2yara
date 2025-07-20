@@ -17,6 +17,7 @@ rule Trojan_Win64_SideZusy_YAC_2147928258_0
         $x_10_2 = {32 c3 48 8d 3f 48 8d 3f 02 c3 48 8d 3f 32 c3 e9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

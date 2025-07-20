@@ -19,6 +19,7 @@ rule VirTool_Win64_Poxetz_A_2147844668_0
         $x_1_4 = {ba 00 10 00 00 48 c7 c1 ff ff ff ff 48 8b 05 5c 89 00 00 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

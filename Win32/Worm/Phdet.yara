@@ -17,6 +17,7 @@ rule Worm_Win32_Phdet_A_2147658349_0
         $x_1_3 = "LdrProc\" & VbCrLf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

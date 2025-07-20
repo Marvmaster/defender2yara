@@ -17,6 +17,7 @@ rule Trojan_MSIL_Dorifel_ADF_2147847996_0
         $x_1_2 = "VeSiJxjxSoS" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Dorifel_SP_2147892567_0
         $x_1_2 = "tmp9482.tmp.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_MSIL_Dorifel_AA_2147896080_0
         $x_3_6 = "get_IsAlive" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_MSIL_Dorifel_EM_2147927564_0
         $x_1_7 = "CheckIsInsideTeamDungeonDay" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

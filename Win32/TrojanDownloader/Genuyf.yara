@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Genuyf_A_2147627076_0
         $x_1_2 = {81 c4 e8 fd ff ff 33 c0 89 ?? ?? 6a 00 6a 00 6a 00 6a 00 68 ?? ?? 40 00 e8 ?? ?? 00 00 0b c0 0f 84 ?? 00 00 00 89 ?? ?? 6a 04 ff 75 ?? 6a 02 ff 75 ?? e8 ?? ?? 00 00 6a 04 ff 75 ?? 6a 06 ff 75 ?? e8 ?? ?? 00 00 6a 00 68 00 00 20 00 6a 00 6a 00 ff 75 ?? ff 75 ?? e8 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Fakeav_DWNO_2147797369_0
         $x_1_1 = {8a d0 c0 c2 04 8a c2 24 0f bb e1 4a 40 00 d7 a2 44 4e 40 00 c0 c2 04 8a c2 24 0f d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

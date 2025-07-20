@@ -18,6 +18,7 @@ rule Trojan_Win32_StartPage_ZK_2147716525_0
         $x_1_3 = "wzjujumao_cb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_StartPage_ZM_2147717248_0
         $x_1_4 = "SYSTEM\\CurrentControlSet\\Services\\hpcnt110" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_StartPage_MX_2147720563_0
         $x_10_6 = {0f af c0 0f b7 c0 99 6a ?? 59 f7 f9 8b 45 ?? 83 c2 ?? 66 89 14 78 8b c3 8b d6}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -99,6 +102,7 @@ rule Trojan_Win32_StartPage_MY_2147722507_0
         $x_1_6 = "\\Internet Explorer.lnk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule Trojan_Win32_StartPage_PVQ_2147724603_0
         $x_1_7 = "schtasks /Create /ST" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +155,7 @@ rule Trojan_Win32_StartPage_PVP_2147724666_0
         $x_1_4 = {53 74 61 72 74 20 50 61 67 65 00 00 53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 49 6e 74 65 72 6e 65 74 20 45 78 70 6c 6f 72 65 72 5c 4d 61 69 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +202,7 @@ rule Trojan_Win32_StartPage_PVV_2147728908_0
         $x_1_3 = {8a 94 0d fc fe ff ff 30 ?? ?? ?? ?? ?? 41 81 f9 00 01 00 00 7c 02 33 c9 40 3d ?? ?? ?? ?? 7c e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +226,7 @@ rule Trojan_Win32_StartPage_PVW_2147729418_0
         $x_1_3 = "For Each browser In browsersArr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule DDoS_Linux_Flushot_A_2147817854_0
         $x_2_3 = "usage:./flushot [Spoofed IP] [Destination IP] [of FLushot to Send]" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 

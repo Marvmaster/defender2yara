@@ -16,6 +16,7 @@ rule Trojan_Win64_DarkLoader_A_2147895763_0
         $x_2_1 = {48 8b 4c dc 60 48 8d 95 e0 ?? 00 00 4c 8b c7 ff 15 ?? ?? 00 00 85 c0 0f 88 ?? ?? ?? ?? 48 83 c7 06 48 ff c3 48 83}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

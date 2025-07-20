@@ -20,6 +20,7 @@ rule Trojan_MSIL_PassSteal_A_2147768515_0
         $x_1_5 = "QXBwRGF0YQ==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

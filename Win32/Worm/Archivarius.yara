@@ -25,6 +25,7 @@ rule Worm_Win32_Archivarius_2147602078_0
         $x_10_11 = {83 c9 ff 83 ca ff e8 01 00 00 00 c3 6a 00 52 51 b2 04 66 8b}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 2 of ($x_10_*) and 5 of ($x_3_*))) or
             ((3 of ($x_100_*) and 3 of ($x_10_*) and 1 of ($x_3_*))) or

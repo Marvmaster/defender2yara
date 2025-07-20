@@ -20,6 +20,7 @@ rule Worm_Win32_Mydoom_PA_2147741207_0
         $x_1_5 = "autostart_bot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Worm_Win32_Mydoom_PB_2147741305_0
         $x_1_4 = "biscanwormmark" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

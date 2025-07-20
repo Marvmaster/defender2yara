@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Kutaki_MK_2147761541_0
         $x_1_7 = "mufuckr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule TrojanSpy_Win32_Kutaki_M_2147812649_0
         $x_3_7 = "mufuckr" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule TrojanSpy_Win32_Kutaki_EC_2147842270_0
         $x_1_8 = "SHDocVwCtl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule TrojanSpy_Win32_Kutaki_SK_2147850742_0
         $x_1_5 = "mufuckr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Worm_Win32_Verst_B_2147632872_0
         $x_1_7 = "srtserv" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Worm_Win32_Verst_A_2147632981_0
         $x_1_12 = "http://eda.ru/data" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_2_*) and 4 of ($x_1_*))) or
             ((7 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -80,6 +82,7 @@ rule Worm_Win32_Verst_A_2147633930_0
         $x_1_4 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

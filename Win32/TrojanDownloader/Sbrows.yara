@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Sbrows_A_2147628965_0
         $x_1_4 = {3a 5c 50 72 6f 67 72 61 6d 20 46 69 6c 65 73 5c 73 62 72 6f 77 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

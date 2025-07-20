@@ -18,6 +18,7 @@ rule Trojan_Win32_Taloc_B_2147691670_0
         $x_1_4 = "Accept-Language: zh-cn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Taloc_D_2147693938_0
         $x_1_6 = {52 75 6e 5c [0-4] 77 69 6e 64 69 72 [0-4] 5c 53 79 73 74 65 6d 33 32 5c 64 72 69 76 65 72 73 5c 65 74 63 5c 68 6f 73 74 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Taloc_F_2147697431_0
         $x_1_4 = "XC4uLi5cVGVtcG9yYXJ5RmlsZQ==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_Win32_Taloc_G_2147697614_0
         $x_1_8 = {73 79 73 74 6f 6d 00 61 77 65 6b 68 73 67 00 35 39 36 32 35 37 44 44 39 33 46 33 30 39 35 36 41 30 35 37 41 32 39 46 33 41 39 39}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

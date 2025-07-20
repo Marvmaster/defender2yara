@@ -23,6 +23,7 @@ rule Backdoor_Win32_Floxif_A_2147723496_0
         $x_1_8 = {c7 45 e8 29 de 9f 00 e8 ?? ?? ff ff e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Backdoor_Win32_Floxif_B_2147723528_0
         $x_2_5 = {c7 00 03 00 00 00 50 8d 46 60 6a 00 50 ff 76 20 ff 52 14 fe 46 62}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -76,6 +78,7 @@ rule Backdoor_Win32_Floxif_2147837904_0
         $x_1_3 = {53 00 4f 00 46 00 54 00 57 00 41 00 52 00 45 00 5c 00 4d ?? ?? ?? 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00 5c 00 57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 5c 00 43 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

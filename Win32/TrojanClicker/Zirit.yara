@@ -24,6 +24,7 @@ rule TrojanClicker_Win32_Zirit_B_2147600927_0
         $x_20_10 = {83 fe ff 74 4b 8d 44 24 10 50 56 ff 15 ?? ?? ?? 10 6a 00 83 c0 da 6a 00 50 56 ff 15 ?? ?? ?? 10 8d 4c 24 0c 6a 00 51 6a 26 68 60 64 00 10 56 ff 15}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 1 of ($x_10_*) and 1 of ($x_4_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_20_*) and 1 of ($x_10_*) and 1 of ($x_4_*) and 3 of ($x_2_*))) or
@@ -56,6 +57,7 @@ rule TrojanClicker_Win32_Zirit_C_2147601208_0
         $x_100_8 = {53 83 c0 da 53 50 56 ff 15 ?? ?? ?? 10 8d ?? ?? ?? 53 51 6a 26 68 ?? ?? ?? 10 56 ff 15 ?? ?? ?? 10}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +83,7 @@ rule TrojanClicker_Win32_Zirit_J_2147602250_0
         $x_1_6 = {8b f0 83 fe ff 74 ?? 8d 44 24 10 50 56 ff 15 ?? ?? ?? 10 [0-2] 83 c0 da [0-2] 50 56 ff 15 ?? ?? ?? 10 8d 4c 24 0c [0-2] 51 6a 26 68 ?? ?? ?? 10 56 ff 15 ?? ?? ?? 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -112,6 +115,7 @@ rule TrojanClicker_Win32_Zirit_X_2147603283_0
         $x_100_12 = {6a 01 68 00 00 00 80 68 [0-14] ff 15 ?? ?? 00 10 8b f0 83 fe ff 74 ?? 8d 44 24 10 50 56 ff 15 ?? ?? 00 10 [0-2] 83 c0 da [0-2] 50 56 ff 15 ?? ?? 00 10 8d 4c 24 0c [0-2] 51 6a 26 68 ?? ?? 00 10 56 ff 15 ?? ?? 00 10 85 c0 74}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_30_*) and 7 of ($x_3_*))) or
             (all of ($x*))
@@ -136,6 +140,7 @@ rule TrojanClicker_Win32_Zirit_Y_2147606945_0
         $x_1_2 = {76 23 0f b6 c0 53 89 45 08 8b 45 08 33 d2 bb ff 00 00 00 f7 f3 32 54 31 01 88 14 31 41 ff 45 08 3b cf 72 e5 5b 80 64 3e ff 00 6a 3b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -168,6 +173,7 @@ rule TrojanClicker_Win32_Zirit_Z_2147608915_0
         $x_20_13 = {8b f0 83 fe ff 74 [0-24] 83 c0 da}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 9 of ($x_3_*))) or
             (all of ($x*))
@@ -195,6 +201,7 @@ rule TrojanClicker_Win32_Zirit_D_2147642410_0
         $x_2_5 = "execfile" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

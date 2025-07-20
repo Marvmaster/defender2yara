@@ -23,6 +23,7 @@ rule Ransom_Win32_Pagongcrypt_A_2147711700_0
         $x_2_9 = {2e 65 6e 63 [0-8] 5c 4d 69 63 72 6f 73 6f 66 74 5c 43 72 79 70 74 6f [0-8] 2f 54 72 61 6e 73 61 63 74 69 6f 6e 2e 70 68 70}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

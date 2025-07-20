@@ -22,6 +22,7 @@ rule SoftwareBundler_Win32_Chindo_205265_0
         $x_1_8 = {4f 70 65 6e 20 ?? ?? ?? ?? ?? ?? ?? 2f ?? ?? ?? ?? 2e 63 73 73 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_5_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -50,6 +51,7 @@ rule SoftwareBundler_Win32_Chindo_205265_1
         $x_1_5 = "Tencent\\QQBrowser\\uninst.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule SoftwareBundler_Win32_Chindo_205265_2
         $x_1_5 = "::CreateMutexA(i 0, i 0, t \"1\") i .r1 ?e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule SoftwareBundler_Win32_Chindo_205265_3
         $x_1_7 = {5c 69 2e 72 61 72 00 fd 8f 80 00 2f 73 69 6c 65 6e 74 00 67 65 74 00 31 3a 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule SoftwareBundler_Win32_Chindo_205265_4
         $x_1_8 = "aHR0cDovL3NvZnRwaG90b" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +157,7 @@ rule SoftwareBundler_Win32_Chindo_205265_5
         $x_1_6 = {68 74 74 70 3a 2f 2f 77 2e 78 2e 62 61 69 64 75 2e 63 6f 6d 2f 67 6f 2f (6d 69|66 75) 2f 32 30 31 2f 31 32 30 32 30 30 30 ?? (30|2d|39) (30|2d|39)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or

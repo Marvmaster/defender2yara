@@ -17,6 +17,7 @@ rule Trojan_Win32_Aujil_A_2147645098_0
         $x_1_3 = {a5 6a 0f 66 a5 53 6a ff a4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

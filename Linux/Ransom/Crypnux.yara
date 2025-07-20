@@ -19,6 +19,7 @@ rule Ransom_Linux_Crypnux_A_2147707485_0
         $x_1_5 = {52 45 41 44 4d 45 5f 46 4f 52 5f 44 45 43 52 59 50 54 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

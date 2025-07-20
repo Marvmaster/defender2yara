@@ -16,6 +16,7 @@ rule TrojanDownloader_Win64_TwoDash_A_2147926517_0
         $x_100_1 = {69 c9 fd 43 03 00 81 c1 c3 9e 26 00 8b c1 c1 e8 18 30 82 ?? ?? ?? ?? 42 81 fa ?? ?? ?? ?? 72}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

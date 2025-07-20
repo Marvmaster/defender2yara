@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Phabeload_A_2147708346_0
         $x_1_4 = {ba 00 01 80 00 b8 ?? ?? ?? ?? 0f 45 c2 50 53 53 53 ff 75 ?? 68 ?? ?? ?? ?? 51 ff 15 ?? ?? ?? ?? 8b f0 85 f6 0f 84 ?? ?? ?? ?? 38 5d ff 74 16 6a 04 8d 45 ?? c7 45 ?? 00 33 00 00 50 6a 1f 56 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 1 of ($x_1_*))) or
             ((2 of ($x_8_*))) or

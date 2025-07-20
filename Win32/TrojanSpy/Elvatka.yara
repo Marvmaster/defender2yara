@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Elvatka_A_2147689961_0
         $x_1_6 = {25 00 73 00 5c 00 75 00 70 00 64 00 61 00 74 00 65 00 25 00 64 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanSpy_Win32_Elvatka_B_2147690235_0
         $x_1_4 = "du.phistar.pw" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

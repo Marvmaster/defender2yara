@@ -43,6 +43,7 @@ rule Worm_Win32_Wowstealer_A_2147576398_0
         $x_1_29 = "Blizzard Entertainment,pls kindly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (24 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Zirit_D_2147601430_0
         $x_2_4 = {4b 62 64 00 4d 6f 6e 00 57 69 6e 00 53 79 73}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or
             ((2 of ($x_4_*))) or
@@ -51,6 +52,7 @@ rule TrojanDropper_Win32_Zirit_D_2147601430_1
         $x_1_10 = "AppEvents\\Schemes\\Apps\\Explorer\\Navigating" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((1 of ($x_4_*) and 4 of ($x_1_*))) or
@@ -80,6 +82,7 @@ rule TrojanDropper_Win32_Zirit_K_2147602651_0
         $x_1_4 = {8b 55 ac 83 c2 28 8b 02 03 45 a4 ff 75 10 ff 75 0c ff 75 08 ff d0 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

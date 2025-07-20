@@ -16,6 +16,7 @@ rule Trojan_Win32_mint_RDD_2147852971_0
         $x_2_1 = {89 c1 ba 57 41 0e 98 89 c8 f7 ea 8d 04 0a c1 f8 08 89 c2 89 c8 c1 f8 1f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

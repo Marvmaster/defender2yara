@@ -19,6 +19,7 @@ rule Trojan_Win32_Witkinat_A_2147630727_0
         $x_2_5 = {8d 04 0f 33 d2 f7 f5 8a 82 ?? ?? ?? ?? 8a 13 32 c2 88 03 47 43 4e 75 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

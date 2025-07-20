@@ -16,6 +16,7 @@ rule Worm_Win32_Bainoc_B_2147636016_0
         $x_1_2 = "Infect PenDriver:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

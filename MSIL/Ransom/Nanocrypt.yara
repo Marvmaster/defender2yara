@@ -25,6 +25,7 @@ rule Ransom_MSIL_Nanocrypt_YAC_2147938647_0
         $x_1_10 = "CREATED FOR FUN" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

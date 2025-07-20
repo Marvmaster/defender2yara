@@ -17,6 +17,7 @@ rule TrojanDropper_AndroidOS_Penguin_A_2147830599_0
         $x_1_2 = {39 1c 01 9a 08 9b ff f7 af ff 07 1e 07 d1 2b 68 28 1c 5b 6c 98 47 27 60 67 60 38 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

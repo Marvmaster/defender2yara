@@ -37,6 +37,7 @@ rule Worm_Win32_Bankim_A_2147582744_0
         $x_1_23 = "GetWindowTextA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_2_*) and 11 of ($x_1_*))) or
             ((8 of ($x_2_*) and 9 of ($x_1_*))) or

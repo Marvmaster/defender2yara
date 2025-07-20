@@ -17,6 +17,7 @@ rule Trojan_Win32_Phonzy_GVA_2147936970_0
         $x_2_2 = {32 c3 04 5d ba 4d 12 81 73 f9 d0 c0 2c 92 0f 9c c6 d0 c8 f8 f6 d8 66 0f b3 f2 fe ca d3 da 2c e2 66 f7 d2 32 d8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

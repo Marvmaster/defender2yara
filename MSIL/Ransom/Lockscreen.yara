@@ -18,6 +18,7 @@ rule Ransom_MSIL_Lockscreen_2147682527_0
         $x_1_4 = "ElmerLock" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

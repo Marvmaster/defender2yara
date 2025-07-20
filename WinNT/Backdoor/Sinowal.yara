@@ -18,6 +18,7 @@ rule Backdoor_WinNT_Sinowal_A_2147621412_0
         $x_1_4 = {8b 40 10 03 c7 eb 02 33 c0 3b c6 74 ?? ff 75 08 ff 75 ?? 57 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

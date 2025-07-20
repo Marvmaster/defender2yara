@@ -21,6 +21,7 @@ rule Trojan_Win32_Acbot_A_2147653744_0
         $x_1_7 = "OrderedFriendsList.init" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Trojan_Win32_Acbot_B_2147654321_0
         $x_1_5 = "SmartSniff" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

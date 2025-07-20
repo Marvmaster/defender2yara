@@ -20,6 +20,7 @@ rule Trojan_Win32_Cecapix_A_2147625346_0
         $x_1_6 = "capurl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

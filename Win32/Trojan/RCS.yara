@@ -24,6 +24,7 @@ rule Trojan_Win32_RCS_A_2147696715_0
         $x_2_10 = "nc-7-8dv.cfg" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

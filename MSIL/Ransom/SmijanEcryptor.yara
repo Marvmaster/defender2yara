@@ -22,6 +22,7 @@ rule Ransom_MSIL_SmijanEcryptor_PAA_2147785417_0
         $x_3_7 = "handshake.php" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_3_*))) or
             ((4 of ($x_10_*))) or

@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Apost_CA_2147838315_0
         $x_1_6 = "SelfDelete=\"1\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

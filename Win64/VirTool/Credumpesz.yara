@@ -19,6 +19,7 @@ rule VirTool_Win64_Credumpesz_A_2147922941_0
         $x_1_4 = {48 8b 44 24 38 ?? ?? ?? ?? ?? 48 8b 4c 24 30 41 b9 10 00 00 00 48 c7 44 24 28 00 00 00 00 33 d2 48 89 44 24 44 c7 44 24 40 01 00 00 00 c7 44 24 4c 02 00 00 00 48 c7 44 24 20 00 00 00 00 ?? ?? ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

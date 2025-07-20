@@ -20,6 +20,7 @@ rule Trojan_Win32_Dulkit_A_2147654263_0
         $x_1_6 = {41 70 70 45 76 65 6e 74 73 5c 53 63 68 65 6d 65 73 5c 41 70 70 73 5c 45 78 70 6c 6f 72 65 72 5c 4e 61 76 69 67 61 74 69 6e 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Dulkit_B_2147654520_0
         $x_1_3 = {ce eb e5 e3 5c 44 65 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

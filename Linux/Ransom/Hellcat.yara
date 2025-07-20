@@ -20,6 +20,7 @@ rule Ransom_Linux_Hellcat_A_2147926020_0
         $x_1_5 = "b_skip_some_file" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

@@ -20,6 +20,7 @@ rule Backdoor_Win32_Nivdort_A_2147707845_0
         $x_1_5 = {31 37 32 2e 31 36 2e 33 32 2e 31 34 36 00 00 00 00 73 74 75 62 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

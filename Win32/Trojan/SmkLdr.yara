@@ -22,6 +22,7 @@ rule Trojan_Win32_SmkLdr_H_2147753912_0
         $x_1_7 = "src=\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Trojan_Win32_SmkLdr_B_2147762897_0
         $x_1_2 = {66 01 08 8d 40 02 66 39 18 75 f0 05 00 b9 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Trojan_Win32_SmkLdr_A_2147762999_0
         $x_1_4 = {5a eb 0c 03 ca 68 00 80 00 00 6a 00 57 ff 11 8b c6 5a 5e 5f 59 5b 5d ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -96,6 +99,7 @@ rule Trojan_Win32_SmkLdr_E_2147763089_0
         $x_1_2 = {5a eb 0c 03 ca 68 00 80 00 00 6a 00 57 ff 11 8b c6 5a 5e 5f 59 5b 5d ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

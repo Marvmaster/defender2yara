@@ -16,6 +16,7 @@ rule Trojan_Win32_Shella_GVA_2147946471_0
         $x_1_1 = {89 55 c8 0f be 45 ee 8b 4d b0 33 c8 89 4d b0 8a 55 ef 88 95 40 ff ff ff 80 bd 40 ff ff ff 00 74 1b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

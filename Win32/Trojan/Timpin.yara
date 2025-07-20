@@ -21,6 +21,7 @@ rule Trojan_Win32_Timpin_2147616243_0
         $x_1_7 = {00 66 69 6c 65 6e 61 6d 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_VBokinfi_A_2147717851_0
         $x_1_4 = {63 00 65 00 74 00 2e 00 65 00 78 00 65 00 [0-16] 5c 00 43 00 65 00 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

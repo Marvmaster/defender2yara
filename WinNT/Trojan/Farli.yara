@@ -25,6 +25,7 @@ rule Trojan_WinNT_Farli_C_2147599144_0
         $x_5_10 = "ZwCreateFile" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 7 of ($x_2_*))) or
             ((3 of ($x_5_*) and 4 of ($x_2_*))) or

@@ -16,6 +16,7 @@ rule Trojan_MSIL_TeslaCrypt_VN_2147758684_0
         $x_1_1 = {00 5d 91 61 d2 81 0e 00 00 01 00 07 17 13 ?? 20 ?? ?? ?? ?? 20 ?? ?? ?? ?? 20 ?? ?? ?? ?? 61 20 ?? ?? ?? ?? 40 ?? ?? ?? 00 20 ?? ?? ?? 00 13 ?? 20 ?? ?? ?? ?? 58 00 58 0b 07 02 8e 69 fe ?? 0d 09 2d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_TeslaCrypt_VN_2147758684_1
         $x_1_2 = {01 0a 19 8d ?? ?? ?? 01 25 16 72 ?? ?? ?? 70 a2 25 17 7e ?? ?? ?? 04 a2 25 18 7e ?? ?? ?? 04 a2 0a 06 28 ?? ?? ?? 0a [0-64] 73 ?? ?? ?? 06 0b 2b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_MSIL_TeslaCrypt_IN_2147760998_0
         $x_1_14 = "never let yourself be defeated" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +104,7 @@ rule Trojan_MSIL_TeslaCrypt_IP_2147760999_0
         $x_7_9 = "Sparta.dll" wide //weight: 7
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_7_*) and 7 of ($x_1_*))) or
             ((2 of ($x_7_*))) or
@@ -128,6 +132,7 @@ rule Trojan_MSIL_TeslaCrypt_A_2147761081_0
         $x_1_3 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule Trojan_MSIL_TeslaCrypt_C_2147761916_0
         $x_1_3 = {73 65 74 5f 4b 65 79 00 73 65 74 5f 49 56 00 43 72 65 61 74 65 44 65 63 72 79 70 74 6f 72 00 57 72 69 74 65 00 43 6c 6f 73 65 00 54 6f 41 72 72 61 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +181,7 @@ rule Trojan_MSIL_TeslaCrypt_D_2147761917_0
         $x_1_4 = "Aphrodite.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

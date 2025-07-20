@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_BBSwift_A_2147711139_0
         $x_1_8 = "echo exit | \"%s\" -S / as sysdba @%s >" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule TrojanSpy_Win32_BBSwift_B_2147711140_0
         $x_1_7 = {32 38 43 3a 20 53 74 61 74 65 6d 65 6e 74 20 4e 75 6d 62 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

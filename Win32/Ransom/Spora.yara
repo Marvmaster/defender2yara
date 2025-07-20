@@ -25,6 +25,7 @@ rule Ransom_Win32_Spora_A_2147719448_0
         $x_2_11 = {2e 00 37 00 7a 00 00 00 2e 00 72 00 61 00 72 00 00 00 00 00 2e 00 7a 00 69 00 70 00 00 00 00 00 2e 00 74 00 69 00 66 00 66 00 00 00 2e 00 6a 00 70 00 65 00 67 00 00 00 2e 00 6a 00 70 00 67 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -94,6 +95,7 @@ rule Ransom_Win32_Spora_B_2147721499_0
         $x_1_1 = "<hta:application windowstate=\"minimize\"/><script>new ActiveXObject(\"WScript.Shell\").Run(\"cmd /c \\\"\\\"\"+window.l" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +130,7 @@ rule Ransom_Win32_Spora_B_2147721499_1
         $x_2_15 = {68 00 02 00 00 ff 15 ?? ?? ?? ?? 46 83 fe 20 72 ?? eb 07 c7 45 fc 01 00 00 00 ff 75 ?? ff d7 53 ff d7}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -202,6 +205,7 @@ rule Ransom_Win32_Spora_C_2147727889_0
         $x_1_3 = {00 01 89 14 8d ?? ?? 00 01 89 0d ?? ?? 00 01 8b 0c 85 ?? ?? 00 01 03 ca 81 e1 ff 00 00 00 a3 ?? ?? 00 01 8a 04 8d ?? ?? 00 01 5e c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +231,7 @@ rule Ransom_Win32_Spora_MA_2147847383_0
         $x_1_5 = "_Encryption_Mode:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

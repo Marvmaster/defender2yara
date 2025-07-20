@@ -19,6 +19,7 @@ rule Ransom_Win32_Rapid_A_2147730079_0
         $x_1_4 = "/c vssadmin.exe Delete Shadows /All /Quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win32_Rapid_PB_2147787567_0
         $x_1_6 = "\\noputana.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

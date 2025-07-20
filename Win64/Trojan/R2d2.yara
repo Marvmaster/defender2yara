@@ -23,6 +23,7 @@ rule Trojan_Win64_R2d2_A_2147651145_0
         $x_1_9 = {bb 10 00 00 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))

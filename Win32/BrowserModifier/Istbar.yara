@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Istbar_F_7457_0
         $x_1_4 = "546333sdfgsdfgfgdfsgsdfgsdfg6" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*))) or
             (all of ($x*))
@@ -91,6 +92,7 @@ rule BrowserModifier_Win32_Istbar_F_7457_1
         $n_300_51 = "Echo Bienvenue sur ToolbarShooter" ascii //weight: -300
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_2_*) and 16 of ($x_1_*))) or
@@ -259,6 +261,7 @@ rule BrowserModifier_Win32_Istbar_D_14817_0
         $x_1_8 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -283,6 +286,7 @@ rule BrowserModifier_Win32_Istbar_D_14817_1
         $x_1_5 = {53 65 61 72 63 68 53 69 74 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -306,6 +310,7 @@ rule BrowserModifier_Win32_Istbar_D_14817_2
         $x_1_4 = "SOFTWARE\\SideFind\\History" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -345,6 +350,7 @@ rule BrowserModifier_Win32_Istbar_C_15569_0
         $x_1_20 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -376,6 +382,7 @@ rule BrowserModifier_Win32_Istbar_C_15569_1
         $x_2_6 = "CLNAME" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_3_*) and 2 of ($x_2_*))) or

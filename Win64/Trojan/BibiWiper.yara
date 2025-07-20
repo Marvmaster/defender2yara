@@ -23,6 +23,7 @@ rule Trojan_Win64_BibiWiper_CCDD_2147894442_0
         $x_1_8 = "on delbaneyrevocer }tluafed{ tes/ tidedcb c/ exe.dmc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

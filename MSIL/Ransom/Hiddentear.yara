@@ -22,6 +22,7 @@ rule Ransom_MSIL_Hiddentear_PA_2147765379_0
         $x_1_7 = "volvo.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_MSIL_Hiddentear_DA_2147765426_0
         $x_1_4 = "http://i.imgur.com/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

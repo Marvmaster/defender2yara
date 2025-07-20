@@ -18,6 +18,7 @@ rule Ransom_MSIL_ArcbornCrypt_PA_2147808179_0
         $x_1_3 = {5c 41 72 63 61 6e 65 2d 52 65 62 6f 72 6e 5c [0-16] 5c 41 72 63 61 6e 65 2d 52 65 62 6f 72 6e 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

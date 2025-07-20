@@ -21,6 +21,7 @@ rule HackTool_Win32_Uflooder_A_2147711062_0
         $x_1_6 = "Random CC Attack" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule HackTool_Win32_Uflooder_B_2147711064_0
         $x_1_5 = "Established Attack" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

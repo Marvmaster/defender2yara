@@ -21,6 +21,7 @@ rule Trojan_Win32_Spy_BYF_2147782382_0
         $x_1_6 = "Credit Cards" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Spy_Zbot_2147794451_0
         $x_1_1 = {8b 55 08 03 55 f8 8a 02 88 45 fc 8b 4d 0c 03 4d ec 33 d2 8a 11 8b 45 fc 25 ff 00 00 00 33 d0 8b 4d 0c 03 4d ec 88 11}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Spy_RPM_2147797355_0
         $x_1_1 = {74 14 8b f2 8b c8 2b f0 8b d7 8a 1c 0e 32 5d 0c 88 19 41 4a 75 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_Spy_Casbaneiro_2147946058_0
         $x_1_1 = {8b 45 0c 83 e8 02 74 21 2d 10 01 00 00 75 23 8b 45 14 50 8b 45 10 50 8b 45 0c 50 8b 45 08 50 ?? ?? ?? ?? ?? 89 45 fc eb 28 6a 00 ?? ?? ?? ?? ?? eb 1a 8b 45 14 50 8b 45 10 50 8b 45 0c 50 8b 45 08 50 ?? ?? ?? ?? ?? 89 45 fc eb 05 33 c0 89 45 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

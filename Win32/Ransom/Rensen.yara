@@ -19,6 +19,7 @@ rule Ransom_Win32_Rensen_A_2147720854_0
         $x_100_4 = "TH12 Process Status" wide //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule HackTool_MSIL_DiscordStealz_A_2147925003_0
         $x_1_5 = "files_client_to_server" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Hardy_A_2147626507_0
         $x_5_4 = {55 52 4c 44 6f 77 6e 6c 6f 61 64 54 6f 46 69 6c 65 41 00 00 d0 2d 40 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Noratops_A_2147693816_0
         $x_1_6 = "unknown compression method" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule TrojanDropper_Win32_Noratops_A_2147693816_1
         $x_1_5 = "%PDF-1." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule TrojanDropper_Win32_Noratops_B_2147723364_0
         $x_1_7 = "INFO" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

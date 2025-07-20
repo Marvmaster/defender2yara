@@ -18,6 +18,7 @@ rule Trojan_MSIL_ZeusSpoofer_RDA_2147903221_0
         $x_1_3 = "Nemesis-45777" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win32_TurlaCarbonCryptoPP_2147849686_0
         $x_1_7 = "C:\\Program Files\\Windows NT\\history.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

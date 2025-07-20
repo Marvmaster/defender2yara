@@ -18,6 +18,7 @@ rule Trojan_Win32_Floganix_A_2147624524_0
         $x_1_4 = "firehfxtiez" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

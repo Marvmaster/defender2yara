@@ -19,6 +19,7 @@ rule DDoS_Win32_Nitol_A_2147644209_0
         $x_1_5 = {6e 65 78 25 64 00 00 00 6e 65 74 73 76 63 73 00 53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 20 4e 54 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 53 76 63 68 6f 73 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule DDoS_Win32_Nitol_B_2147649615_0
         $x_1_12 = {83 c0 03 33 d2 0f af c6 f7 74 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule DDoS_Win32_Nitol_C_2147660363_0
         $x_1_6 = {25 75 20 4d 42 [0-4] 25 75 20 4d 48 7a [0-4] 7e 4d 48 7a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule DDoS_Win32_Nitol_D_2147664034_0
         $x_1_3 = {33 d2 8a 11 03 c2 8b c8 25 ff ff 00 00 c1 e9 10 03 c8 8b c1 c1 e8 10 03 c1 f7 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule DDoS_Win32_Nitol_A_2147681432_0
         $x_1_4 = {25 75 20 4d 42 [0-4] 25 75 20 4d 48 7a [0-4] 7e 4d 48 7a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -147,6 +152,7 @@ rule DDoS_Win32_Nitol_G_2147691772_0
         $x_1_4 = {33 d2 8a 11 03 c2 8b c8 25 ff ff 00 00 c1 e9 10 03 c8 8b c1 c1 e8 10 03 c1 f7 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +177,7 @@ rule DDoS_Win32_Nitol_H_2147691913_0
         $x_1_5 = "cmd /c %s vb \"%s\" lpk.dll|find /i \"lpk.dll\"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -193,6 +200,7 @@ rule DDoS_Win32_Nitol_I_2147696328_0
         $x_1_3 = "tr0j4n" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +226,7 @@ rule DDoS_Win32_Nitol_J_2147705502_0
         $x_3_6 = "ddos.hackxk.com" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -246,6 +255,7 @@ rule DDoS_Win32_Nitol_K_2147706578_0
         $x_3_4 = "33921035.f3322.org" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_3_*))) or
@@ -274,6 +284,7 @@ rule DDoS_Win32_Nitol_M_2147719006_0
         $x_1_4 = {8b 4d 08 8a 14 11 32 94 45 ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 25 ?? ?? ?? ?? 8b 4d 08 88 14 01 66 8b 55 fc 66 83 c2 01 66 89 55 fc e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +310,7 @@ rule DDoS_Win32_Nitol_L_2147719154_0
         $x_1_5 = {53 59 53 54 45 4d 5c 43 75 72 72 65 6e 74 43 6f 6e 74 00 00 72 6f 6c 53 65 74 5c 53 65 72 76 69 63 65 73 5c 00 00 00 00 44 65 73 63 72 69 70 74 69 6f 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -334,6 +346,7 @@ rule DDoS_Win32_Nitol_L_2147720040_0
         $x_1_16 = {8a 4c 04 1c 80 f1 ?? 88 8c 04 ?? ?? 00 00 40 83 f8 10 72 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -411,6 +424,7 @@ rule DDoS_Win32_Nitol_N_2147722552_0
         $x_1_5 = {0f b6 0c 85 ?? ?? ?? ?? 28 4c 05 e8 0f b6 14 85 ?? ?? ?? ?? 0f b6 0c 85 ?? ?? ?? ?? 28 54 05 e9 28 4c 05 ea 0f b6 14 85 ?? ?? ?? ?? 0f b6 0c 85 ?? ?? ?? ?? 28 54 05 eb 28 4c 05 ec 83 c0 05 83 f8 14 7c bc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -436,6 +450,7 @@ rule DDoS_Win32_Nitol_P_2147725201_0
         $x_1_5 = "Windows Help System Myss" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -465,6 +480,7 @@ rule DDoS_Win32_Nitol_Q_2147725590_0
         $x_1_6 = "Referer: http://%s%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

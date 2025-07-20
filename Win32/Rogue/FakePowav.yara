@@ -17,6 +17,7 @@ rule Rogue_Win32_FakePowav_129024_0
         $x_1_3 = "1F2D9C47-6AC9-4872-AACC-E1CD494F040C" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Rogue_Win32_FakePowav_129024_1
         $x_1_3 = "b6681c49-c882-4484-b59e-329f6fc5a3b7" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -70,6 +72,7 @@ rule Rogue_Win32_FakePowav_129024_2
         $x_1_9 = "support@eurekalog.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Rogue_Win32_FakePowav_129024_3
         $x_1_10 = "Power-Antivirus-2009" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -123,6 +127,7 @@ rule Rogue_Win32_FakePowav_129024_4
         $x_1_2 = "HowToBuy.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule Rogue_Win32_FakePowav_129024_5
         $x_2_3 = "softwares required for virus" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -170,6 +176,7 @@ rule Rogue_Win32_FakePowav_129024_6
         $x_1_3 = {57 41 52 4e 49 4e 47 5f 56 49 52 55 53 5f 44 45 54 45 43 54 45 44 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -193,6 +200,7 @@ rule Rogue_Win32_FakePowav_129024_7
         $x_1_1 = {eb eb 5f 5e 5b e8 ?? ?? ?? ?? 00 ff ff ff ff 20 00 00 00 38 33 32 31 37 32 41 30 41 43 39 45 46 32 37 35 35 44 41 46 44 30 35 45 37 37 45 33 35 41 32 34 00 00 00 00 ff ff ff ff 0a 00 00 00 2d 75 6e 69 6e 73 74 61 6c 6c 00 00 ff ff ff ff 0a 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -215,6 +223,7 @@ rule Rogue_Win32_FakePowav_129024_8
         $x_2_3 = {8b f0 6a 00 6a 1a 56 6a 00 e8 ?? ?? ff ff 8d 45 f8 8b d6 e8 ?? ?? fe ff 8b 45 f8 8d 55 fc e8 ?? ?? fe ff 8b 55 fc 8b c3 b9 ?? ?? ?? ?? e8 ?? ?? fe ff 8b c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -240,6 +249,7 @@ rule Rogue_Win32_FakePowav_129024_9
         $x_1_6 = "Installing System Protector..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -268,6 +278,7 @@ rule Rogue_Win32_FakePowav_129024_10
         $x_4_5 = {75 02 b3 01 84 db 75 ?? 6a 10 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 00 e8}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
@@ -296,6 +307,7 @@ rule Rogue_Win32_FakePowav_129024_11
         $x_1_4 = {2f 63 68 65 63 6b 75 70 64 61 74 65 2e 70 68 70 3f 78 3d 31 32 33 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -326,6 +338,7 @@ rule Rogue_Win32_FakePowav_129024_12
         $x_2_7 = {c7 06 f4 00 00 00 33 c0 89 46 08 33 c0 89 46 0c 6a 02 a1 ?? ?? ?? ?? 50 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -357,6 +370,7 @@ rule Rogue_Win32_FakePowav_129024_13
         $x_4_5 = {6a 00 6a 1a 53 6a 00 e8 ?? ?? ?? ?? 8d 45 ?? 8b d3 e8 ?? ?? ?? ?? 8b 45 ?? 8d 55 ?? e8 ?? ?? ?? ?? 8b 55 ?? 8d 45 ?? b9 ?? ?? ?? ?? e8 ?? ?? ?? ?? 6a 01 8b 45 ?? e8 ?? ?? ?? ?? 50 e8}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*))) or
             (all of ($x*))
@@ -390,6 +404,7 @@ rule Rogue_Win32_FakePowav_129024_14
         $x_6_11 = {8a 04 10 32 c8 51 8b c7 e8 ?? ?? ?? ?? 5a 88 14 18 43 4e 75}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -426,6 +441,7 @@ rule Rogue_Win32_FakePowav_129024_15
         $x_1_9 = {7b 43 34 41 43 37 34 32 33 2d 30 31 37 43 2d 34 37 45 41 2d 39 32 31 39 2d 30 30 44 34 31 39 32 43 37 44 37 36 7d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -17,6 +17,7 @@ rule Trojan_Win32_ArchiveLock_A_2147684573_0
         $x_1_3 = {5c 73 76 63 66 6e 6d 61 69 6e 73 74 76 65 73 74 76 73 5c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_ArchiveLock_B_2147684574_0
         $x_1_3 = {68 a0 bb 0d 00 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 68 00 00 00 00 e8 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

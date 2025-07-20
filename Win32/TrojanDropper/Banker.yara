@@ -24,6 +24,7 @@ rule TrojanDropper_Win32_Banker_C_2147639957_0
         $x_1_10 = {68 6f 74 6d 61 69 6c 2e 63 6f 6d 2e 62 72 [0-5] 3e 3e [0-32] 5c 73 79 73 74 65 6d 33 32 5c 64 72 69 76 65 72 73 5c 65 74 63 5c 68 6f 73 74 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule TrojanDropper_Win32_Banker_E_2147645540_0
         $x_1_3 = "#@C@#:\\@sy#s@@#tea@#m\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule TrojanDropper_Win32_Banker_O_2147732007_0
         $x_1_5 = "TimeRemain.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

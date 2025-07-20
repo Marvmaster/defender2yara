@@ -18,6 +18,7 @@ rule VirTool_Win32_Vetibuz_A_2147833349_0
         $x_1_3 = "virus" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule VirTool_Win32_Vetibuz_B_2147833350_0
         $x_1_3 = {61 70 69 2e [0-5] 67 69 74 68 [0-3] 75 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

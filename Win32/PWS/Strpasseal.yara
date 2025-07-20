@@ -18,6 +18,7 @@ rule PWS_Win32_Strpasseal_E_2147647626_0
         $x_1_4 = {be f3 4b 70 ed 33 db 68 6e 10 cf 9f 89 75 c8 c7 45 cc 8c f8 6f 8b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

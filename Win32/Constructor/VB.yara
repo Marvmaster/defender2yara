@@ -17,6 +17,7 @@ rule Constructor_Win32_VB_K_2147641189_0
         $x_4_3 = "\\EXE Joiner.vbp" wide //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

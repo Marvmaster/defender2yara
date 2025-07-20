@@ -16,6 +16,7 @@ rule Backdoor_Win32_Goobie_A_2147630911_0
         $x_1_2 = {e8 6e ce c2 b9 ed 7b dd 51 b8 b9 d9 4e 05 b4 bc b8 ff 00 a3 db b9 8f 5b fd 0f a1 75 3c cb c7 4e c9 cc cb 14 8a 9d 8f 8d ae 95 57 0c f5 03 5a f6 b9 8d a5 d5 d7 5d 7f f6 ce c4 df 54 1d 66 6e 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

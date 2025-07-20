@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Otlard_A_2147624261_0
         $x_1_3 = "%c%c%c%04x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule TrojanDropper_Win32_Otlard_B_2147631472_0
         $x_1_3 = {40 f7 45 fc 00 80 00 00 74 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -67,6 +69,7 @@ rule TrojanDropper_Win32_Otlard_D_2147647623_0
         $x_1_3 = {0f 31 69 d0 05 84 08 08 42 0b c1 b8 ff ff 00 00 f7 e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

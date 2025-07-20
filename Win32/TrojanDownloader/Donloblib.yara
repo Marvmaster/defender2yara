@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Donloblib_EM_2147898409_0
         $x_10_4 = "193.243.147.143/upd.php" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
             ((2 of ($x_10_*))) or

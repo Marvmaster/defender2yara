@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Sinresby_A_2147651562_0
         $x_1_3 = "BlackMoon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Sinresby_B_2147707554_0
         $x_1_3 = {62 6c 61 63 6b 6d 6f 6f 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

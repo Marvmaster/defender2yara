@@ -19,6 +19,7 @@ rule VirTool_Win64_Havokiz_C_2147833816_0
         $x_1_4 = {8b 50 40 4c 8b 40 34 48 89 d1 49 8b 14 d0 48 85 d2 ?? ?? ff c1 89 48 40 ?? ?? c7 40 40 00 00 00 00 49 8b 10 ?? ?? 31 d2 ff c9 ?? ?? 4c 8b 60 34 31 ff 89 f8 49 83 3c c4 00 ?? ?? ff c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule VirTool_Win64_Havokiz_D_2147833817_0
         $x_1_4 = {48 83 ec 10 48 89 d9 48 8b 59 10 ff 61 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule VirTool_Win64_Havokiz_2147841136_0
         $x_7_2 = {48 ff c1 3e 66 3b 19 75 ef 48 31 c0 66 8b 41 3c 48 01 c8 48 31 db 66 81 c3 50 45 3e 66 3b 18 75 d7 48 89 c8 c3}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule VirTool_Win64_Havokiz_Z_2147841480_0
         $x_7_1 = {48 ff c1 3e 66 3b 19 75 ef 48 31 c0 66 8b 41 ?? 48 01 c8 48 31 db 66 81 c3 ?? ?? 3e 66 3b 18 75 d7 48 89 c8 c3}  //weight: 7, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule VirTool_Win64_Havokiz_E_2147894333_0
         $x_1_4 = {48 89 74 24 78 48 ?? ?? ?? ?? 45 31 c0 48 89 d9 c7 44 24 28 40 00 00 00 48 ?? ?? ?? ?? 49 89 f1 c7 44 24 20 00 30 00 00 e8 ?? ?? ?? ?? 85 c0 0f 88 df 00 00 00 4c 8b 4c 24 78 48 8b 54 24 70 49 89 f8 48 89 d9 48 c7 44 24 20 00 00 00 00 e8 ?? ?? ?? ?? 85 c0 0f 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

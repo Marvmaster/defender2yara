@@ -17,6 +17,7 @@ rule Trojan_MSIL_RaspberryRobin_MBEX_2147896691_0
         $x_1_2 = "tractPMAORI" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_RaspberryRobin_MBEY_2147896692_0
         $x_1_2 = {20 b6 0b 00 00 95 5f 7e 37 00 00 04 20 19 0f 00 00 95 61 59 13 3b 38 b8 00 00 00 11 3b 7e 37 00 00 04 20 bb 02 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_MSIL_RaspberryRobin_MBEZ_2147896693_0
         $x_1_5 = {61 76 69 66 73 6f 66 74 59 50 6f 77 47 57 4a 00 64 6e 73 6d 6b 57 69 6e 64 6f 77 54 44 49}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

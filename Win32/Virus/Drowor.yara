@@ -18,6 +18,7 @@ rule Virus_Win32_Drowor_B_2147600983_0
         $x_1_4 = {89 42 0c c7 42 08 00 60 00 00 b8 60 00 00 00 05 71 03 00 00 03 05 ?? ?? ?? ?? 89 42 10 8d 02 8d 0d ?? ?? ?? ?? 51 8b 09 89 08 59 83 c1 04 8b 09 89 48 04 c7 42 24 e0 00 00 e0 8b 46 14 03 46 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

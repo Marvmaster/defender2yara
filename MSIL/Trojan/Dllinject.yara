@@ -20,6 +20,7 @@ rule Trojan_MSIL_Dllinject_KB_2147758159_0
         $x_1_6 = "krnl_Load" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Trojan_MSIL_Dllinject_CA_2147807565_0
         $x_1_10 = "Download it from http://bit.ly/cretributions" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

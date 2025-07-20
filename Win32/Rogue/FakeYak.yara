@@ -17,6 +17,7 @@ rule Rogue_Win32_FakeYak_149015_0
         $x_1_3 = "YaKrevedko" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Rogue_Win32_FakeYak_149015_1
         $x_1_3 = "YaKrevedko" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Rogue_Win32_FakeYak_149015_2
         $x_1_2 = {69 64 3d 25 73 26 68 61 73 68 3d 00 50 4f 53 54 [0-5] 2f [0-5] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Rogue_Win32_FakeYak_149015_3
         $x_2_3 = {ff 4c 24 18 0f 85 15 ff ff ff 38 5c 24 0f 74 10 68 e0 93 04 00 ff 15}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -109,6 +113,7 @@ rule Rogue_Win32_FakeYak_149015_4
         $x_1_4 = "/compatibilityapplied" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Rogue_Win32_FakeYak_149015_5
         $x_1_5 = "StatsServer2=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -158,6 +164,7 @@ rule Rogue_Win32_FakeYak_149015_6
         $x_2_6 = {56 69 72 74 c7 85 ?? ?? ?? ?? 75 61 6c 50 c7 85 ?? ?? ?? ?? 72 6f 74 65 66 c7 ?? ?? ?? ?? ff 63 74 88 9d ?? ?? ?? ?? ff d6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -190,6 +197,7 @@ rule Rogue_Win32_FakeYak_149015_7
         $x_1_9 = "Software\\Antimalware Doctor Inc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

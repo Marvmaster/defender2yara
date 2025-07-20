@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_ModernLoader_AML_2147849917_0
         $x_1_3 = "Virtual machine execution is not allowed" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

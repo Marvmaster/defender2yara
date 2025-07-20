@@ -17,6 +17,7 @@ rule VirTool_Win32_Admipesz_A_2147907212_0
         $x_1_2 = {8b 45 ec 89 04 24 ?? ?? ?? ?? ?? ?? ?? ?? 8b 45 e0 89 54 24 14 8b 55 ec 89 54 24 10 c7 44 24 0c 01 00 00 00 c7 44 24 08 00 00 00 00 8b 55 f0 89 54 24 04 89 04 24 ?? ?? ?? ?? ?? 83 ec 18 89 45 e4 83 7d e4 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

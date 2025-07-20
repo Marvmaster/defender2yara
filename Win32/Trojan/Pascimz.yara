@@ -18,6 +18,7 @@ rule Trojan_Win32_Pascimz_A_2147624021_0
         $x_1_4 = {00 1c 1c 18 52 47 47 1f 1f 1f 46 0b 01 05 46 12 07 1a 46 07 1a 0f 47 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

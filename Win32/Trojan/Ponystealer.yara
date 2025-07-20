@@ -17,6 +17,7 @@ rule Trojan_Win32_Ponystealer_RC_2147898498_0
         $x_1_2 = "candida poofter foredoom burble prangs pleading genealog" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Ponystealer_MBXS_2147919376_0
         $x_1_1 = {11 51 00 18 f9 37 01 20 ff ff ff 08 00 00 00 01 00 00 00 02 00 00 00 e9 00 00 00 60 10 51 00 d4 0e 51 00 e0 11 40 00 78 00 00 00 83 00 00 00 8d 00 00 00 8e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Ponystealer_SOB_2147935951_0
         $x_2_4 = "Tapsamlinger1" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

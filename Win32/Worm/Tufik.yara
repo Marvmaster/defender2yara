@@ -19,6 +19,7 @@ rule Worm_Win32_Tufik_A_2147545393_0
         $x_1_5 = "Program Files\\Microsoft Visual Studio\\VB98\\lhw\\XDD\\XDD" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

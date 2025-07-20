@@ -20,6 +20,7 @@ rule TrojanDropper_MSIL_ISMAgent_A_2147727320_0
         $x_1_5 = "cmd /c schtasks /query /tn TimeUpdate > NUL 2>&1 || schtasks /create /sc minute /mo 0003 /tn TimeUpdate /tr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +61,7 @@ rule TrojanDropper_MSIL_ISMAgent_A_2147727320_1
         $x_1_20 = "C:\\Users\\Ross\\Documents\\Visual Studio 2015\\Projects\\Win32Project1\\Release\\Win32Project1.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

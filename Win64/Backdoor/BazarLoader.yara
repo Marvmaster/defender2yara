@@ -17,6 +17,7 @@ rule Backdoor_Win64_BazarLoader_STB_2147767124_0
         $x_1_3 = {48 8b 00 48 b9 00 00 00 00 ff ff ff ff 48 8b 40 30 48 23 c1 48 89 ?? ?? ?? 48 8b ?? ?? ?? 8b 40 08 48 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

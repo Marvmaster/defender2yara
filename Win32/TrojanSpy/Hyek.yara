@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Hyek_A_2147650546_0
         $x_1_2 = {64 79 62 61 72 74 65 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 53 79 73 41 64 6d 69 6e 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

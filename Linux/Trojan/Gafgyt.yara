@@ -19,6 +19,7 @@ rule Trojan_Linux_Gafgyt_AC_2147764403_0
         $x_1_4 = "attack_methods.c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Linux_Gafgyt_A_2147788201_0
         $x_1_5 = "MASSMURDER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Linux_Gafgyt_B_2147788202_0
         $x_1_8 = "cncinput" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Trojan_Linux_Gafgyt_C_2147788203_0
         $x_1_10 = "billybobbot.com/crawler" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

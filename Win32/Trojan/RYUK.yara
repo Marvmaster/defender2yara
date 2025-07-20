@@ -17,6 +17,7 @@ rule Trojan_Win32_RYUK_DSK_2147753508_0
         $x_2_2 = "juvinehisivihohicefogavo" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

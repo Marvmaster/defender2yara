@@ -45,6 +45,7 @@ rule Backdoor_Win32_Kbotrep_A_2147719285_0
         $x_1_31 = {8a 44 0a 14 30 81 ?? ?? ?? ?? 41 83 f9 10 72 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

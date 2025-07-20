@@ -18,6 +18,7 @@ rule VirTool_Win32_Preinjesz_A_2147907209_0
         $x_1_3 = {83 ec 14 8b 45 ec c7 44 24 18 00 00 00 00 c7 44 24 14 00 00 00 00 c7 44 24 10 00 00 00 00 89 44 24 0c c7 44 24 08 00 00 00 00 c7 44 24 04 00 00 00 00 8b 45 f0 89 04 24 ?? ?? ?? ?? ?? 83 ec 1c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

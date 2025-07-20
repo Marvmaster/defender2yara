@@ -19,6 +19,7 @@ rule HackTool_Linux_Bangsyn_A_2147824980_0
         $x_1_4 = "santong syn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

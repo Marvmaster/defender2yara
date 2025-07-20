@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Quireap_A_2147705496_0
         $x_1_5 = "\\setup.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or

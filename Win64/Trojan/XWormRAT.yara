@@ -18,6 +18,7 @@ rule Trojan_Win64_XWormRAT_A_2147891366_0
         $x_2_3 = "ioutil.TempDir" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_XWormRAT_B_2147898584_0
         $x_2_1 = {44 0f b6 44 0a 22 41 c1 e0 10 44 0f b7 4c 0a 20 45 01 c8 41 81 c0 00 00 00 84 44 33 84 10 ?? ?? ?? ?? 44 89 44 14 50 48 83 c2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

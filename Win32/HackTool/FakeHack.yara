@@ -19,6 +19,7 @@ rule HackTool_Win32_FakeHack_2147708852_0
         $x_1_5 = {50 00 72 00 6f 00 64 00 75 00 63 00 74 00 4e 00 61 00 6d 00 65 00 00 00 00 00 57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 41 00 70 00 70 00 6c 00 69 00 63 00 61 00 74 00 69 00 6f 00 6e 00 31 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

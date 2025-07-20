@@ -16,6 +16,7 @@ rule TrojanDownloader_Win64_Sliver_GA_2147931947_0
         $x_1_1 = {45 0f 57 ff 4c 8b 35 ca 5d 54 00 65 4d 8b 36 4d 8b 36 48 8b 44 24 08 48 83 c4 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

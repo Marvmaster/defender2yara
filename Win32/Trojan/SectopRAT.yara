@@ -17,6 +17,7 @@ rule Trojan_Win32_SectopRAT_DA_2147916431_0
         $x_1_2 = {33 d2 c7 44 24 ?? ?? ?? ?? ?? 8b c6 8d 0c 1e f7 74 24 ?? 03 d7 8a 44 14 ?? 32 04 29 46 88 01 81 fe 00 36 0d 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

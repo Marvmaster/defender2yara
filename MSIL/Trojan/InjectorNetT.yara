@@ -16,6 +16,7 @@ rule Trojan_MSIL_InjectorNetT_AGHA_2147929009_0
         $x_5_1 = {59 91 61 03 08 20 0a 02 00 00 58 20 09 02 00 00 59 1e 59 1e 58 03 8e 69 5d 1f 09 58 1f 0d 58 1f 16 59 91 59 20 fa 00 00 00 58 1c 58 20 00 01 00 00 5d d2 9c 08 17 58 0c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_InjectorNetT_AMHA_2147929152_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_InjectorNetT_APHA_2147929225_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_MSIL_InjectorNetT_AJLA_2147933548_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_MSIL_InjectorNetT_ADSA_2147940055_0
         $x_5_1 = {72 94 07 00 70 38 77 00 00 00 38 7c 00 00 00 72 c6 07 00 70 38 78 00 00 00 38 7d 00 00 00 16 2d ee 38 7b 00 00 00 38 80 00 00 00 08 06 6f ?? ?? 00 0a 08 07 6f ?? ?? 00 0a 08 6f ?? ?? 00 0a 0d 2b 10 2b 11 16 2b 11 8e 69 6f ?? ?? 00 0a 13 04 de 26 09 2b ed 02 2b ec 02 2b ec}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Trojan_MSIL_InjectorNetT_AAXA_2147944198_0
         $x_1_5 = "Q3JlYXRlUHJvY2Vzc0E=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

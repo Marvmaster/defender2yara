@@ -17,6 +17,7 @@ rule PWS_Win32_Magovel_A_2147625554_0
         $x_1_3 = {26 76 65 72 3d 04 00 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

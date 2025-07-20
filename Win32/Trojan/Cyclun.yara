@@ -17,6 +17,7 @@ rule Trojan_Win32_Cyclun_ECP_2147940177_0
         $x_5_2 = {8d 4b 01 f7 e6 33 db 46 c1 ea 02 8d 04 92 3b f8 0f 45 d9 81 fe}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

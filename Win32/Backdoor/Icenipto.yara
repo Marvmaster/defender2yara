@@ -19,6 +19,7 @@ rule Backdoor_Win32_Icenipto_A_2147624363_0
         $x_1_5 = {52 00 45 00 53 00 45 00 54 00 00 00 1c 00 00 00 5c 00 56 00 69 00 64 00 65 00 6f 00 43 00 61 00 72 00 64 00 2e 00 65 00 78 00 65 00 00 00 00 00 0e 00 00 00 45 00 78 00 65 00 63 00 75 00 74 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -15,6 +15,7 @@ rule Trojan_MSIL_BlackFus_A_2147739943_0
         $x_1_1 = {08 1f 20 2f ?? 07 08 18 5b 03 08 18 6f ?? ?? ?? ?? 1f 10 28 ?? ?? ?? ?? 9c 2b ?? 08 18 5b 1f 10 59 0d 06 09 03 08 18 6f ?? ?? ?? ?? 1f 10 28 ?? ?? ?? ?? 07 09 07 8e 69 5d 91 61 d2 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

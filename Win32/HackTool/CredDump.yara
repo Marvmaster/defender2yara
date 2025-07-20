@@ -18,6 +18,7 @@ rule HackTool_Win32_CredDump_A_2147741713_0
         $x_1_4 = "%s\\Microsoft\\Credentials\\%s\\credentials" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

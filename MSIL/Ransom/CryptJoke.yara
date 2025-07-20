@@ -19,6 +19,7 @@ rule Ransom_MSIL_CryptJoke_A_2147721824_0
         $x_1_4 = "*.crypted" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_MSIL_CryptJoke_B_2147723217_0
         $x_1_4 = "click me to decrypt your files" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win64_Tasker_CI_2147839270_0
         $x_10_1 = {8b 06 eb 02 38 64 44 8b 5e 04 eb ?? ?? 41 b8 ?? ?? ?? ?? eb ?? ?? ?? 41 bc ?? ?? ?? ?? eb ?? ?? ?? 4c 8b 36 eb ?? ?? 41 81 f4 ?? ?? ?? ?? 71}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_Tasker_KAA_2147900006_0
         $x_5_1 = {49 89 f3 41 8b 03 49 ba ?? ?? ?? ?? ?? ?? ?? ?? 48 8d 76 18 48 83 ee 14 eb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win64_Tasker_KK_2147944058_0
         $x_7_3 = "cmd/Cschtasks/Create/SCONLOGON/TN/TR/RLHIGHEST/F" ascii //weight: 7
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Bladabindi_J_2147740903_0
         $x_1_4 = "/c ping 0 -n 2 & del \"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_Bladabindi_BA_2147757501_0
         $x_1_8 = "Chilblain.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_Win32_Bladabindi_JR_2147758299_0
         $x_1_6 = "ExecutionPolicy bypass" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_Win32_Bladabindi_MAK_2147781411_0
         $x_1_6 = "Microsoft.NET\\Framework\\v4.0.30319\\aspnet_compiler.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule Trojan_Win32_Bladabindi_BC_2147784163_0
         $x_1_8 = "Spunsningerne4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +153,7 @@ rule Trojan_Win32_Bladabindi_RPL_2147819256_0
         $x_1_1 = {39 d2 74 01 ?? 31 32 81 c3 ?? ?? ?? ?? 81 eb ?? ?? ?? ?? 81 c2 04 00 00 00 81 c3 ?? ?? ?? ?? 39 ca 75 dd c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +175,7 @@ rule Trojan_Win32_Bladabindi_RPT_2147824247_0
         $x_1_1 = {31 1e 21 d2 21 d2 81 c6 04 00 00 00 ba ?? ?? ?? ?? 4f 39 ce 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +197,7 @@ rule Trojan_Win32_Bladabindi_RPU_2147824415_0
         $x_1_1 = {f7 7d e0 03 4d 08 8a 11 01 c6 03 75 08 ff 4d ec 8a 06 88 16 88 01 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -213,6 +221,7 @@ rule Trojan_Win32_Bladabindi_ARAC_2147847410_0
         $x_2_3 = ")FU'AQ0MV+HQ'@L" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +243,7 @@ rule Trojan_Win32_Bladabindi_RPX_2147849726_0
         $x_1_1 = {00 04 78 ff 24 03 00 0d 1c 00 04 00 fc c8 1b 05 00 04 72 ff 04 74 ff 05 00 00 24 01 00 0d 14 00 02 00 08 74 ff 0d b8 00 06 00 6b 72 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_AutoProxy_GJL_2147848101_0
         $x_1_4 = "/baijiahei/exe.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

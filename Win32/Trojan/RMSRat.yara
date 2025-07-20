@@ -17,6 +17,7 @@ rule Trojan_Win32_RMSRat_A_2147897078_0
         $x_2_2 = {0f b6 c9 0f b6 c3 0f af c8 8b 44 24 ?? 02 0c 28 32 d1 8b c8 41 88 14 33 89 4c 24}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

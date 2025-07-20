@@ -18,6 +18,7 @@ rule Trojan_MSIL_Gomspol_A_2147690188_0
         $x_1_4 = "useast.wafflepool.com:3331 -u" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Meicater_A_2147709859_0
         $x_1_2 = {31 c0 3b 85 ?? ?? ?? ?? 8d 14 08 74 ?? 31 14 83 40 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

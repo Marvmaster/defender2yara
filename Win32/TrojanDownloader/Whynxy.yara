@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Whynxy_A_2147600671_0
         $x_1_7 = "name=\"datei\";" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

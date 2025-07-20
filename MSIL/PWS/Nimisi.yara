@@ -18,6 +18,7 @@ rule PWS_MSIL_Nimisi_A_2147691554_0
         $x_1_4 = {26 00 75 00 72 00 6c 00 3d 00 00 0d 26 00 75 00 73 00 65 00 72 00 3d 00 00 0d 26 00 70 00 61 00 73 00 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

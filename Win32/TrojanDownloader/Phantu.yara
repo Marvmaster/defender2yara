@@ -39,6 +39,7 @@ rule TrojanDownloader_Win32_Phantu_A_2147581724_0
         $x_1_24 = "pop vis..............." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (20 of ($x*))
 }
 
@@ -63,6 +64,7 @@ rule TrojanDownloader_Win32_Phantu_B_2147641939_0
         $x_2_4 = "\\popper.vbp" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

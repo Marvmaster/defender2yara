@@ -25,6 +25,7 @@ rule TrojanDropper_MSIL_CryptInject_EKD_2147748486_0
         $x_1_10 = "shutdown" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

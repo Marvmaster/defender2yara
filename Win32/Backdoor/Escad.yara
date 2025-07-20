@@ -16,6 +16,7 @@ rule Backdoor_Win32_Escad_E_2147706488_0
         $x_1_1 = {78 56 34 12 55 55 ?? f2 78 56 34 12 [0-32] ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Backdoor_Win32_Escad_E_2147706488_1
         $x_1_1 = {78 56 34 12 55 55 ?? f2 78 56 34 12 [0-32] ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Backdoor_Win32_Escad_G_2147706489_0
         $x_1_3 = {6d 63 75 2e 69 6e 66 [0-5] 52 65 67 69 73 74 65 72 [0-16] 6d 63 75 2e 64 6c 6c [0-16] 72 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Backdoor_Win32_Escad_G_2147706489_1
         $x_1_3 = {6d 63 75 2e 69 6e 66 [0-5] 52 65 67 69 73 74 65 72 [0-16] 6d 63 75 2e 64 6c 6c [0-16] 72 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Backdoor_Win32_Escad_H_2147706490_0
         $x_1_2 = "%sd.e%sc \"%s > %s\" 2>&1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +132,7 @@ rule Backdoor_Win32_Escad_H_2147706490_1
         $x_1_2 = "%sd.e%sc \"%s > %s\" 2>&1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +155,7 @@ rule Backdoor_Win32_Escad_J_2147706491_0
         $x_1_2 = "HaHaHa_%d%d%d%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +178,7 @@ rule Backdoor_Win32_Escad_J_2147706491_1
         $x_1_2 = "HaHaHa_%d%d%d%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -194,6 +202,7 @@ rule Backdoor_Win32_Escad_J_2147706491_2
         $x_1_3 = "skmsvxd.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -218,6 +227,7 @@ rule Backdoor_Win32_Escad_J_2147706491_3
         $x_1_1 = {2e 00 78 00 6c 00 73 00 [0-6] 2e 00 77 00 72 00 69 00 [0-6] 2e 00 77 00 70 00 78 00 [0-6] 2e 00 77 00 70 00 64 00 [0-6] 2e 00 64 00 6f 00 63 00 6d 00 [0-6] 2e 00 64 00 6f 00 63 00 78 00 [0-6] 2e 00 64 00 6f 00 63 00 [0-6] 2e 00 63 00 61 00 62 00 [0-32] 25 00 63 00 3a 00 5c 00 [0-16] 5c 00 5c 00 2e 00 5c 00 50 00 68 00 79 00 73 00 69 00 63 00 61 00 6c 00 44 00 72 00 69 00 76 00 65 00 25 00 64 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -242,6 +252,7 @@ rule Backdoor_Win32_Escad_J_2147706491_4
         $x_1_4 = {44 65 6c 65 74 65 55 72 6c 43 61 63 68 65 45 6e 74 72 79 41 [0-5] 68 74 74 70 3a 2f 2f [0-96] 2e 65 78 65 [0-32] 53 74 61 72 74 49 6e 73 74 61 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -263,6 +274,7 @@ rule Backdoor_Win32_Escad_K_2147706492_0
         $x_1_1 = "%smd.e%sc \"%s > %s\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -284,6 +296,7 @@ rule Backdoor_Win32_Escad_K_2147706492_1
         $x_1_1 = "%smd.e%sc \"%s > %s\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -310,6 +323,7 @@ rule Backdoor_Win32_Escad_L_2147706493_0
         $x_1_6 = {73 63 63 62 61 73 65 2e 64 65 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -339,6 +353,7 @@ rule Backdoor_Win32_Escad_L_2147706493_1
         $x_1_9 = {52 2e 20 65 2e 67 51 75 2e 2e 65 20 72 79 56 2e 61 6c 2e 75 65 45 20 78 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -373,6 +388,7 @@ rule Backdoor_Win32_Escad_L_2147706493_2
         $x_1_9 = {52 2e 20 65 2e 67 51 75 2e 2e 65 20 72 79 56 2e 61 6c 2e 75 65 45 20 78 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -400,6 +416,7 @@ rule Backdoor_Win32_Escad_M_2147706494_0
         $x_1_2 = "*****[Listen Port %d] -" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -422,6 +439,7 @@ rule Backdoor_Win32_Escad_M_2147706494_1
         $x_1_2 = "*****[Listen Port %d] -" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -445,6 +463,7 @@ rule Backdoor_Win32_Escad_N_2147706495_0
         $x_1_3 = {0f b6 03 3c 2e 74 09 3c 20 74 05 88 07 48 ff c7 48 ff c3 80 3b 00 75 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -468,6 +487,7 @@ rule Backdoor_Win32_Escad_N_2147706495_1
         $x_1_3 = {0f b6 03 3c 2e 74 09 3c 20 74 05 88 07 48 ff c7 48 ff c3 80 3b 00 75 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -491,6 +511,7 @@ rule Backdoor_Win32_Escad_O_2147706496_0
         $x_1_3 = "=== %04d.%02d.%02d %02d:%02d:%02d ===" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -517,6 +538,7 @@ rule Backdoor_Win32_Escad_O_2147706496_1
         $x_1_3 = "=== %04d.%02d.%02d %02d:%02d:%02d ===" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -545,6 +567,7 @@ rule Backdoor_Win32_Escad_P_2147706497_0
         $x_1_5 = "%s%s.sys" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -574,6 +597,7 @@ rule Backdoor_Win32_Escad_P_2147706497_1
         $x_1_5 = "%s%s.sys" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -600,6 +624,7 @@ rule Backdoor_Win32_Escad_Q_2147706498_0
         $x_1_2 = {63 6d 64 2e 65 78 65 20 2f 63 20 [0-16] 2e 65 78 65 20 2f 6e 6f 64 65 3a 22 25 73 22 20 2f 75 73 65 72 3a 22 25 73 22 20 2f 70 61 73 73 77 6f 72 64 3a 22 25 73 22 20 50 52 4f 43 45 53 53 20 43 41 4c 4c 20 43 52 45 41 54 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -627,6 +652,7 @@ rule Backdoor_Win32_Escad_R_2147706499_0
         $x_1_7 = {6b 65 72 6e c7 ?? ?? 6c 33 32 2e c7 ?? ?? 64 6c 6c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -650,6 +676,7 @@ rule Backdoor_Win32_Escad_F_2147706523_0
         $x_1_3 = {25 73 5c 66 78 25 69 25 69 2e 62 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -674,6 +701,7 @@ rule Backdoor_Win32_Escad_F_2147706523_1
         $x_1_4 = {5f 71 75 69 74 00 00 00 5f 65 78 65 00 00 00 00 5f 70 75 74 00 00 00 00 5f 67 6f 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -699,6 +727,7 @@ rule Backdoor_Win32_Escad_F_2147706523_2
         $x_1_5 = {d0 f9 ff ff 92 e0 7c a3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -726,6 +755,7 @@ rule Backdoor_Win32_Escad_D_2147706526_0
         $x_2_3 = {5f 65 78 65 00 00 00 00 5f 70 75 74 00 00 00 00 5f 71 75 69 74 00 00 00 5f 67 6f 74 00 00 00 00 5f 67 65 74 00 00 00 00 5f 64 65 6c 00 00 00 00 5f 64 69 72}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -750,6 +780,7 @@ rule Backdoor_Win32_Escad_A_2147706529_0
         $x_2_4 = {47 6c 6f 62 61 6c 5c 57 69 6e 64 6f 77 73 55 70 64 61 74 65 54 72 61 63 69 6e 67 25 64 2e 25 64 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -779,6 +810,7 @@ rule Backdoor_Win32_Escad_AB_2147707532_0
         $x_1_4 = "cmd.exe /c net stop termservice /y" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -803,6 +835,7 @@ rule Backdoor_Win32_Escad_AA_2147707533_0
         $x_1_4 = {69 67 66 78 74 72 61 79 65 78 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -827,6 +860,7 @@ rule Backdoor_Win32_Escad_AC_2147707534_0
         $x_5_4 = {8a 0c 18 80 f1 63 88 0c 18 8b 4d 00 40 3b c1 72 ef}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or
             (all of ($x*))
@@ -854,6 +888,7 @@ rule Backdoor_Win32_Escad_AD_2147707536_0
         $x_1_4 = {25 73 64 2e 65 25 73 63 20 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -879,6 +914,7 @@ rule Backdoor_Win32_Escad_S_2147707754_0
         $x_1_5 = {64 65 6c 20 22 [0-16] 69 66 20 65 78 69 73 74 20 22}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -906,6 +942,7 @@ rule Backdoor_Win32_Escad_S_2147707754_1
         $x_1_3 = "%smd.ex%sc \"%s > %s\" 2>&1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

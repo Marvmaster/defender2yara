@@ -18,6 +18,7 @@ rule Trojan_MSIL_PheonixStealer_A_2147897772_0
         $x_1_3 = "GetTypes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

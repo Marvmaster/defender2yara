@@ -17,6 +17,7 @@ rule TrojanDownloader_Win64_Carberp_A_2147725009_0
         $x_1_2 = {76 6e 63 64 6c 6c 36 34 2e 64 6c 6c 00 56 6e 63 53 74 61 72 74 53 65 72 76 65 72 00 56 6e 63 53 74 6f 70 53 65 72 76 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

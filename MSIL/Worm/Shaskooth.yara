@@ -19,6 +19,7 @@ rule Worm_MSIL_Shaskooth_A_2147643302_0
         $x_1_5 = {45 73 74 61 41 63 74 69 76 6f 45 6c 76 69 72 75 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

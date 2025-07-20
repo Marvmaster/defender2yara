@@ -27,6 +27,7 @@ rule VirTool_MSIL_PoshC2_B_2147779403_0
         $x_1_13 = {72 00 75 00 6e 00 2d 00 [0-6] 2d 00 62 00 61 00 63 00 6b 00 67 00 72 00 6f 00 75 00 6e 00 64 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -56,6 +57,7 @@ rule VirTool_MSIL_PoshC2_C_2147779432_0
         $x_1_10 = {48 31 c0 ac 41 c1 c9 0d 41 01 c1 38 e0 75 f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +81,7 @@ rule VirTool_MSIL_PoshC2_D_2147779433_0
         $x_1_4 = "\\PoshC2_DLLS\\DotNet2JS\\DotNet2JS\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule VirTool_MSIL_PoshC2_D_2147779433_1
         $x_1_4 = "\\PoshC2_DLLs\\SharpRunner\\SharpRunner\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

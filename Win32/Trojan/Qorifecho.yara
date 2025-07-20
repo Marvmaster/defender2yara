@@ -20,6 +20,7 @@ rule Trojan_Win32_Qorifecho_A_2147705990_0
         $x_1_6 = {e9 b9 00 00 00 8b c3 c7 00 02 00 00 00 c7 40 04 01 00 00 00 c7 40 08 02 00 00 00 33 d2 89 50 0c b8 01 00 00 00 e9 94 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

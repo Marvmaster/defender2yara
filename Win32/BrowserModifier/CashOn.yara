@@ -22,6 +22,7 @@ rule BrowserModifier_Win32_CashOn_17747_0
         $x_1_8 = "GetWindowsDirectoryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule BrowserModifier_Win32_CashOn_17747_1
         $x_2_3 = "ncserv*.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule BrowserModifier_Win32_CashOn_17747_2
         $x_3_5 = "http://www.cashon.co.kr/search/search.php" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -93,6 +96,7 @@ rule BrowserModifier_Win32_CashOn_17747_3
         $x_3_2 = "http://smart.linkprice.com/sem/overture_sponsor_search.php?maxcnt=&js=2&type=" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule BrowserModifier_Win32_CashOn_17747_4
         $x_2_5 = "Dispatch interface for cashbho ObjectW" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -147,6 +152,7 @@ rule BrowserModifier_Win32_CashOn_17747_5
         $x_2_7 = "CashonMediaHoon" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -178,6 +184,7 @@ rule BrowserModifier_Win32_CashOn_17747_6
         $x_4_8 = "http://www.cashon.co.kr/app/uninstall.php?" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or

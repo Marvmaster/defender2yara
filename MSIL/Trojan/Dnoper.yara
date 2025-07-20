@@ -21,6 +21,7 @@ rule Trojan_MSIL_Dnoper_R_2147831285_0
         $x_1_6 = "$87b43f01-0b5e-49b6-8de4-7563e84fd71e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_MSIL_Dnoper_AL_2147841498_0
         $x_1_3 = "c:\\Windows\\module.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Trojan_MSIL_Dnoper_EC_2147841684_0
         $x_1_7 = "AesCryptoServiceProvider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_MSIL_Dnoper_CXRJK_2147847841_0
         $x_1_1 = {07 28 1e 00 00 0a 0a 1f 1a 28 1f 00 00 0a 72 ?? d3 07 70 28 1d 00 00 0a 0c 08 06 28 20 00 00 0a 72 ?? d3 07 70 72 ?? d3 07 70 08 72 ?? d3 07 70 28 21 00 00 0a 28 22 00 00 0a 26 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_MSIL_Dnoper_ADN_2147851655_0
         $x_1_1 = {a2 25 17 08 a2 25 18 72 e7 0e 00 70 a2 25 19 02 7b 12 00 00 04 a2 25 1a 72 17 0f 00 70 a2 28 28 00 00 0a 13 04 09 11 04 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule Trojan_MSIL_Dnoper_ADN_2147851655_1
         $x_1_1 = {0a 00 16 28 ?? 00 00 0a 00 28 ?? 00 00 0a 72 ?? 00 00 70 28 ?? 00 00 0a 0a 06 28 ?? 00 00 06 28 ?? 00 00 0a 00 7e ?? 00 00 0a 72 ?? 00 00 70 17 6f ?? 00 00 0a 0b 00 07 72 ?? 00 00 70 06 6f ?? 00 00 0a 00 00 de 10 07 14 fe 01 0c 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -158,6 +164,7 @@ rule Trojan_MSIL_Dnoper_ADN_2147851655_2
         $x_1_4 = "GetFolderPath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +190,7 @@ rule Trojan_MSIL_Dnoper_EM_2147894245_0
         $x_1_5 = "SpotifyStartupTask" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +213,7 @@ rule Trojan_MSIL_Dnoper_MBFG_2147897264_0
         $x_1_2 = {74 65 44 65 63 72 79 70 74 6f 72 00 65 58 5a 48 46 46 53 71 6e 63 00 6f 53 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -226,6 +235,7 @@ rule Trojan_MSIL_Dnoper_NA_2147903266_0
         $x_5_1 = {02 03 02 4b 03 04 61 05 61 58 0e 07 0e 04 95 58 ?? ?? 08 00 04 0e 06 17 59 95 58 0e 05 28 e7 0d 00 06 58 54 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -247,6 +257,7 @@ rule Trojan_MSIL_Dnoper_NB_2147903267_0
         $x_5_1 = {02 03 02 4b 03 04 61 05 61 58 0e 07 0e 04 95 58 7e b4 08 00 04 0e 06 17 59 95 58 0e 05 28 ?? 0d 00 06 58 54 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +279,7 @@ rule Trojan_MSIL_Dnoper_NC_2147903268_0
         $x_5_1 = {02 03 02 4b 03 04 61 05 61 58 0e 07 0e 04 95 58 7e a2 08 00 04 0e 06 17 59 95 58 0e 05 28 ?? 0d 00 06 58 54 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -289,6 +301,7 @@ rule Trojan_MSIL_Dnoper_NE_2147903269_0
         $x_5_1 = {02 03 02 4b 03 04 61 05 61 58 0e 07 0e 04 95 58 7e ?? 08 00 04 0e 06 17 59 95 58 0e 05 28 e7 0d 00 06 58 54 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -310,6 +323,7 @@ rule Trojan_MSIL_Dnoper_NF_2147904306_0
         $x_5_1 = {02 03 02 4b 03 04 61 05 61 58 0e 07 0e 04 95 58 7e ?? 08 00 04 0e 06 17 59 95 58 0e 05 28 c9 0d 00 06 58 54 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -331,6 +345,7 @@ rule Trojan_MSIL_Dnoper_NF_2147904306_1
         $x_5_1 = {02 03 02 4b 03 04 61 05 61 58 0e 07 0e 04 95 58 7e a3 08 00 04 0e 06 17 59 95 58 0e 05 28 ?? 0d 00 06 58 54 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -356,6 +371,7 @@ rule Trojan_MSIL_Dnoper_NG_2147906172_0
         $x_1_5 = "Antivirus" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -378,6 +394,7 @@ rule Trojan_MSIL_Dnoper_NH_2147909512_0
         $x_2_2 = "System.Security.Cryptography.AesCryptoServiceProvider" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -404,6 +421,7 @@ rule Trojan_MSIL_Dnoper_PAFS_2147922992_0
         $x_1_6 = {43 00 3a 00 5c 00 55 00 73 00 65 00 72 00 73 00 5c 00 [0-20] 5c 00 44 00 6f 00 63 00 75 00 6d 00 65 00 6e 00 74 00 73 00 5c 00 [0-20] 2e 00 62 00 61 00 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -425,6 +443,7 @@ rule Trojan_MSIL_Dnoper_AMV_2147925328_0
         $x_1_1 = {01 0d 09 6f ?? 00 00 0a 72 ?? 00 00 70 28 ?? 00 00 0a 39 ?? 00 00 00 09 14 14 6f ?? 00 00 0a 26 08 17 58 0c 08 07 8e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -449,6 +468,7 @@ rule Trojan_MSIL_Dnoper_ABGA_2147928188_0
         $x_1_4 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -472,6 +492,7 @@ rule Trojan_MSIL_Dnoper_ARGA_2147928544_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -493,6 +514,7 @@ rule Trojan_MSIL_Dnoper_SVCB_2147931185_0
         $x_4_1 = {2b 1f 2b 20 08 07 6f ?? 00 00 0a 08 6f ?? 00 00 0a 02 16 02 8e 69 6f ?? 00 00 0a 0d de 1a 08 2b df 06 2b de 6f ?? 00 00 0a 2b d9}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -516,6 +538,7 @@ rule Trojan_MSIL_Dnoper_ND_2147931476_0
         $x_1_3 = "Kimya_De" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -542,6 +565,7 @@ rule Trojan_MSIL_Dnoper_AYA_2147935288_0
         $x_1_6 = "Classes\\ms-settings\\shell\\open\\command" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -565,6 +589,7 @@ rule Trojan_MSIL_Dnoper_SYVO_2147936303_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -588,6 +613,7 @@ rule Trojan_MSIL_Dnoper_PGD_2147936337_0
         $x_2_3 = "PDF downloaded and saved to:" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -611,6 +637,7 @@ rule Trojan_MSIL_Dnoper_AMJA_2147937049_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

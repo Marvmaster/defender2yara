@@ -20,6 +20,7 @@ rule Ransom_Win32_Zeoticus_PA_2147771268_0
         $x_1_5 = "%s /node:\"%ws\" /user:\"%ws\" /password:\"%ws\"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Win32_Zeoticus_RZ_2147775547_0
         $x_1_6 = "%s%x%x%x%x.zeoticus2" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Ransom_Win32_BeastRansom_YAA_2147889522_0
         $x_10_2 = {03 ca 33 d9 c1 c3 10 03 c3 89 45 ?? 33 c2 8b 55 ?? c1 c0 0c 03 d6 03 c8 33 d9 89 4d ac}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

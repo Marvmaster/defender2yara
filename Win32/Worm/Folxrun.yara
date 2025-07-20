@@ -19,6 +19,7 @@ rule Worm_Win32_Folxrun_A_2147694809_0
         $x_1_5 = "msfold" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

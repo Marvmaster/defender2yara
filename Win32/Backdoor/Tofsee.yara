@@ -22,6 +22,7 @@ rule Backdoor_Win32_Tofsee_A_2147595467_0
         $x_2_8 = {6f 6d 61 69 6e 3d 00 00 0d 0a 4c 6f 63 61 74 69}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -64,6 +65,7 @@ rule Backdoor_Win32_Tofsee_B_2147597508_0
         $x_1_19 = ".twitter.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +86,7 @@ rule Backdoor_Win32_Tofsee_B_2147597508_1
         $x_1_1 = {8d 85 58 ff ff ff 50 ff 75 f4 be ?? ?? ?? 00 89 5d b0 89 5d b4 89 75 a8 89 5d ac ff 15 ?? ?? 40 00 85 c0 0f 8c ?? 02 00 00 53 8d 45 b0 50 56 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +109,7 @@ rule Backdoor_Win32_Tofsee_B_2147597509_0
         $x_1_2 = {74 1a 83 ce ff 8d 0c 06 8a 8c 0d e0 fe ff ff 80 f1 c5 48 88 8c 06 ?? ?? 40 00 75 e9 33 c0 89 45 fc 8d 45 f8 50 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -136,6 +140,7 @@ rule Backdoor_Win32_Tofsee_C_2147598309_0
         $x_1_11 = "autorun.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +164,7 @@ rule Backdoor_Win32_Tofsee_E_2147602530_0
         $x_1_4 = {5c 25 69 25 69 25 69 32 6c 64 2e 65 78 65 00 00 25 64 00 00 53 4f 46 54 57}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -184,6 +190,7 @@ rule Backdoor_Win32_Tofsee_F_2147603588_0
         $x_1_6 = {68 74 74 70 25 73 3a 2f 2f 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -214,6 +221,7 @@ rule Backdoor_Win32_Tofsee_B_2147609678_0
         $x_1_6 = {68 74 74 70 25 73 3a 2f 2f 25 73 25 73 25 73 25 73 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -244,6 +252,7 @@ rule Backdoor_Win32_Tofsee_I_2147621082_0
         $x_1_6 = {83 f8 0e 7d 1e 0f b6 80 ?? ?? ?? ?? 83 e8 00 74 36 48 74 29 48 74 1c 48 74 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -268,6 +277,7 @@ rule Backdoor_Win32_Tofsee_J_2147625810_0
         $x_1_1 = {50 00 32 00 50 00 48 00 45 00 4c 00 50 00 2e 00 49 00 43 00 4f 00 09 00 53 00 48 00 49 00 54 00 2e 00 53 00 48 00 49 00 54 00 28 00 00 00 10 00 00 00 20 00 00 00 01 00 04 00 00 00 00 00 c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00 00 80 80 00 80 00 00 00 80 00 80 00 80 80 00 00 c0 c0 c0 00 80 80 80 00 00 00 ff 00 00 ff 00 00 00 ff ff 00 ff 00 00 00 ff 00 ff 00 ff ff 00 00 ff ff ff 00 11 11 10 00 00 01 11 11 11 10 0b bb bb b0 01 11 11 0b bb bb bb bb b0 11 10 bb bb b0 0b bb bb 01 10 bb bb 0f f0 bb bb 01 0b bb b0 ff ff 0b bb b0 0b bb 00 ff ff 00 bb b0 0b bb bb 0f f0 bb bb b0 0b bb bb 0f f0 bb bb b0 0b bb bb 0f f0 bb bb b0 0b bb bb 0f f0 bb bb b0 10 bb bb 0f f0 bb bb 01 10 bb bb 00 00 bb bb 01 11 0b bb bb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -294,6 +304,7 @@ rule Backdoor_Win32_Tofsee_T_2147683703_0
         $x_1_7 = "%FROM_EMAIL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -328,6 +339,7 @@ rule Backdoor_Win32_Tofsee_A_2147689643_0
         $x_1_14 = {00 66 62 72 69 64 67 00 70 6c 67 5f 69 6e 69 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -349,6 +361,7 @@ rule Backdoor_Win32_Tofsee_BD_2147749096_0
         $x_1_1 = {8b f7 c1 ee 05 03 74 24 ?? 03 ?? 03 ?? 33 ?? 81 3d ?? ?? ?? ?? 72 07 00 00 75 1b 00 56 ff 15 ?? ?? ?? ?? 8b ?? 24 ?? 8b ?? 24 ?? 89 35 ?? ?? ?? ?? 89 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -371,6 +384,7 @@ rule Backdoor_Win32_Tofsee_BD_2147749096_1
         $x_1_2 = {30 06 83 6c 24 ?? 01 8b 44 24 ?? 85 c0 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -394,6 +408,7 @@ rule Backdoor_Win32_Tofsee_BS_2147750357_0
         $x_1_3 = {8b fd d3 e7 8b f5 c1 ee 05 03 74 24 28 03 7c 24 2c 03 c5 33 f8 81 3d ?? ?? ?? ?? b4 11 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -419,6 +434,7 @@ rule Backdoor_Win32_Tofsee_KM_2147751761_0
         $x_1_1 = {55 8b ec 51 a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 83 c0 7b 89 45 fc b8 f9 cd 03 00 01 45 fc 83 6d fc 7b 8b 45 fc 8a 04 08 88 04 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -440,6 +456,7 @@ rule Backdoor_Win32_Tofsee_KM_2147751761_1
         $x_1_1 = {d3 e2 89 5c 24 ?? 89 54 24 ?? 8b 44 24 ?? ?? 44 24 0c 8b 44 24 ?? ?? 44 24 0c 8b 44 24 ?? 8b 0d ?? ?? ?? ?? 03 c6 81 f9 72 05 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +478,7 @@ rule Backdoor_Win32_Tofsee_BC_2147752178_0
         $x_1_1 = {8b cb 03 d3 c1 e9 05 03 8d ?? ?? ?? ?? 89 85 ?? ?? ?? ?? 89 95 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 31 85 ?? ?? ?? ?? 81 3d ?? ?? ?? ?? 72 07 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -482,6 +500,7 @@ rule Backdoor_Win32_Tofsee_MML_2147752798_0
         $x_1_1 = {8a 86 38 bf 82 00 30 04 2f 83 6c 24 ?? 01 8b 7c 24 ?? 85 ff 0f 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -503,6 +522,7 @@ rule Backdoor_Win32_Tofsee_RS_2147753475_0
         $x_1_1 = {e8 1b fe ff ff 30 04 3e b8 01 00 00 00 29 44 24 ?? 8b 74 24 ?? 85 f6 79}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -525,6 +545,7 @@ rule Backdoor_Win32_Tofsee_KMG_2147773170_0
         $x_1_2 = {81 fb 85 02 00 00 75 ?? ff b5 ?? ?? ?? ?? 57 57 ff 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 30 04 31 83 fb 19 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -550,6 +571,7 @@ rule Backdoor_Win32_Tofsee_MAK_2147810900_0
         $x_1_5 = {30 08 0f b6 10 8b ca c1 e9 [0-1] c0 e2 [0-1] 0a ca 88 08 80 f1 [0-1] 40 3b c6 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -573,6 +595,7 @@ rule Backdoor_Win32_Tofsee_BK_2147827126_0
         $x_1_3 = {81 ff 6e 27 87 01 7f 0d 47 81 ff f6 ea 2b 33 0f 8c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -596,6 +619,7 @@ rule Backdoor_Win32_Tofsee_KAA_2147900934_0
         $x_1_3 = "tudizukedi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -617,6 +641,7 @@ rule Backdoor_Win32_Tofsee_AMAF_2147901103_0
         $x_1_1 = {8b 45 ec 31 45 fc 33 55 fc 89 55 d4 8b 45 d4 83 45 f8 64 29 45 f8 83 6d f8 64 8b 55 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -640,6 +665,7 @@ rule Backdoor_Win32_Tofsee_KAD_2147924323_0
         $x_5_3 = {7d fc 00 74 21 8b 55 18 f7 da 1a d2 80 e2 e0 80 c2 70 8b 45 fc 88 10 8b 4d fc 83 c1}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -661,6 +687,7 @@ rule Backdoor_Win32_Tofsee_GNQ_2147938459_0
         $x_10_1 = {d3 ea 89 55 ?? 8b 45 ?? 03 45 ?? 89 45 ?? 8b 4d ?? 33 4d ?? 89 4d ?? 81 3d ?? ?? ?? ?? c1 10 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -682,6 +709,7 @@ rule Backdoor_Win32_Tofsee_GNR_2147938460_0
         $x_10_1 = {00 ff 30 e8 e4 6e 00 00 83 ec ?? c6 04 24 ?? 8d 1d ?? ?? ?? ?? 81 eb ?? ?? ?? ?? 53 8d 15 ?? ?? ?? ?? 81 ea ?? ?? ?? ?? 52}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

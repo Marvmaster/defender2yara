@@ -35,6 +35,7 @@ rule Trojan_MSIL_MassLoader_2147771178_0
         $x_1_20 = "Shell" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +96,7 @@ rule Trojan_MSIL_MassLoader_2147771178_1
         $x_1_40 = "{11111-22222-20001-00002}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

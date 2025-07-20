@@ -21,6 +21,7 @@ rule Trojan_Win32_Scelp_A_2147619278_0
         $x_1_7 = {5f 00 6b 00 61 00 73 00 70 00 65 00 72 00 73 00 6b 00 79 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

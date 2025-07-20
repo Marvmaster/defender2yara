@@ -21,6 +21,7 @@ rule PWS_Win32_Emotet_E_2147690658_0
         $x_10_7 = {b8 1f 85 eb 51 f7 64 24 ?? c1 ea 05 83 fa 02 74 07 b8 02 00 00 00 eb 11 56 8b 35 ?? ?? ?? ?? ff d6 57 ff d6 53 ff d6 33 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule PWS_Win32_Emotet_F_2147693399_0
         $x_1_6 = {33 d2 6a 64 59 f7 f1 83 f8 02 74 05 6a 02 58 eb 11 56 8b 35 ?? ?? ?? ?? ff d6 53 ff d6 57 ff d6 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -77,6 +79,7 @@ rule PWS_Win32_Emotet_G_2147695012_0
         $x_1_6 = "ComSpec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

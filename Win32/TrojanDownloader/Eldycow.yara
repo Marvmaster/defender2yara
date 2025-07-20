@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Eldycow_A_2147597318_0
         $x_1_3 = {39 df 76 f2 5b c6 07 e9 89 57 01 50 54 6a 40 68 00 10 00 00 ff 75 08 ff 93 ?? ?? 00 00 59 09 c0 74 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win64_HumbleAbode_A_2147918432_0
         $x_1_3 = "/askForCome/%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win64_HumbleAbode_B_2147918433_0
         $x_1_2 = "SetHandleInformation g_hChildStd_IN_Wr failed!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

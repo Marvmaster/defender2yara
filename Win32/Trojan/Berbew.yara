@@ -17,6 +17,7 @@ rule Trojan_Win32_Berbew_A_2147895944_0
         $x_1_2 = {81 eb 16 45 00 00 81 eb 64 20 00 00 81 f3 7c 27 00 00 81 eb 92 69 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Berbew_AB_2147895945_0
         $x_1_2 = {81 f3 b9 27 00 00 81 c3 7a 44 00 00 89 d8 29 d8 89 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Berbew_RPY_2147898900_0
         $x_1_1 = {89 45 f8 8b 45 f4 8b 00 89 45 fc 89 d9 31 d9 89 cb 83 c0 44 8b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

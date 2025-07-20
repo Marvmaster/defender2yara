@@ -20,6 +20,7 @@ rule TrojanDownloader_MSIL_ClipBanker_SK_2147753086_0
         $x_5_5 = "\\DesktopService\\Windows Desktop Service.exe" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule TrojanDownloader_MSIL_ClipBanker_RDA_2147837811_0
         $x_1_4 = "hments/927290247853772820/1031768209126342705/868" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

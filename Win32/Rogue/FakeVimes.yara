@@ -22,6 +22,7 @@ rule Rogue_Win32_FakeVimes_141340_0
         $x_1_8 = "get_install_filephpindexphp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -50,6 +51,7 @@ rule Rogue_Win32_FakeVimes_141340_1
         $x_1_5 = "Virus Doctor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Rogue_Win32_FakeVimes_141340_2
         $x_1_6 = "UPDATE_ALERT_NAG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Rogue_Win32_FakeVimes_141340_3
         $x_2_8 = "controller=microinstaller&abbr=%s" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -150,6 +154,7 @@ rule Rogue_Win32_FakeVimes_141340_4
         $x_1_24 = {d1 e0 03 42 24 03 45 0c 66 8b 00 [0-32] 25 ff ff 00 00 c1 e0 02 03 42 1c [0-9] 03 45 0c [0-9] 8b 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((5 of ($x_1_*))) or

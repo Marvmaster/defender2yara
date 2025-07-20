@@ -17,6 +17,7 @@ rule TrojanDropper_MSIL_Scorp_ARA_2147848468_0
         $x_2_2 = "Test.lnk" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

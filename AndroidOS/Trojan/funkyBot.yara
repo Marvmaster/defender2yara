@@ -50,6 +50,7 @@ rule Trojan_AndroidOS_funkyBot_B_2147744226_0
         $x_2_7 = {80 b5 6f 46 8a b0 13 46 8c 46 86 46 09 90 08 91 07 92 08 98 02 93 cd f8 04 c0 cd f8 00 e0 ff f7 12 e8 06 90 51 20 07 f8 11 0c 08 98 40 08 04 90 04 98 08 99 88 42 03 d9 ff e7 08 98 04 90 ff e7 00 20 03 90 ff e7 03 98 08 99 88 42 19 d2 ff e7 03 98 04 99 88 42 09 d2 ff e7 09 98 03 99 40 5c 17 f8 11 2c 50 40 06 9a 50 54 05 e0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

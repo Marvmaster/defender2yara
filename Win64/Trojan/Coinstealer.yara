@@ -19,6 +19,7 @@ rule Trojan_Win64_Coinstealer_PAGF_2147929749_0
         $x_1_4 = "&trustwalletFile=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

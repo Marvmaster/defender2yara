@@ -21,6 +21,7 @@ rule BrowserModifier_Win32_SearchExtender_15296_0
         $x_7_7 = {29 2e 64 6c 6c 00 44 6c 6c 49 6e 73 74 61 6c 6c 00}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_7_*) and 1 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((3 of ($x_7_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

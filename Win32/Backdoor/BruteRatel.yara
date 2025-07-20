@@ -17,6 +17,7 @@ rule Backdoor_Win32_BruteRatel_MA_2147832892_0
         $x_1_2 = {31 c0 80 fb b8 75 2d 80 7a 05 e8 75 27 80 7a 06 03 75 21 80 7a 0d 8b 75 1b 80 7a 0e d4 75 15 0f b6 42 02 c1 e0 08 89 c3 0f b6 42 01 09 d8 01 c8 eb 02 31 c0 5b 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule Trojan_Win32_Webnavi_A_2147642062_0
         $x_1_10 = "http://d.laiyiba.com/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win32_Webnavi_C_2147644380_0
         $x_1_5 = "quickl~1\\lntern~1.lnk /p everyone:r >nul 1>nul" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

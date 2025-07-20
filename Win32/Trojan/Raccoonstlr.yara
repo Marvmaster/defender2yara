@@ -17,6 +17,7 @@ rule Trojan_Win32_Raccoonstlr_GG_2147759127_0
         $x_1_2 = {55 8b ec 51 a1 [0-4] 8b 15 [0-4] 89 45 [0-2] b8 [0-4] 01 45 [0-2] 8b 45 [0-2] 8a 04 [0-2] 88 04 [0-2] c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

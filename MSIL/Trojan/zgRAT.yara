@@ -17,6 +17,7 @@ rule Trojan_MSIL_zgRAT_ABSA_2147846497_0
         $x_1_2 = "_007Stub.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_zgRAT_MBFN_2147898427_0
         $x_1_1 = {11 07 07 1f 16 5d 91 13 0e 11 0d 11 0e 61 13 0f 11 0f 11 0c 59 13 10 08 11 06 11 10 11 05 5d d2 9c 07 17 58 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_MSIL_zgRAT_AE_2147905971_0
         $x_2_1 = {03 04 20 00 01 00 00 0e 04 50 74 ?? 00 00 01 0e 04 50 28 ?? 00 00 0a 28 ?? ?? 00 06 05 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_MSIL_zgRAT_AE_2147905971_1
         $x_2_3 = "bb16ec941e714ae3d2b837c89603471b" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

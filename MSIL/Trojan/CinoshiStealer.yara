@@ -18,6 +18,7 @@ rule Trojan_MSIL_CinoshiStealer_A_2147843841_0
         $x_2_3 = "CreditCardsNotFound" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_CinoshiStealer_B_2147843844_0
         $x_2_3 = "CreditCardsNotFound" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_MSIL_CinoshiStealer_C_2147847407_0
         $x_1_2 = "RegDeleteKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

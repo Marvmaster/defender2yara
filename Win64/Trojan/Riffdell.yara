@@ -20,6 +20,7 @@ rule Trojan_Win64_Riffdell_2147912111_0
         $x_10_6 = "e3d7a8ee-4fe3-470f-a62f-074e8e360082" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

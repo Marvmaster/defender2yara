@@ -18,6 +18,7 @@ rule Trojan_Win32_Gamafeshi_A_2147723944_0
         $x_10_4 = {04 cd ab 34 12 75}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

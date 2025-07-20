@@ -25,6 +25,7 @@ rule PWS_Win32_Mifeng_A_2147596391_0
         $x_2_10 = "/ryabcdefg/mf6db/index.asp?eve=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

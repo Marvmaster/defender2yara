@@ -22,6 +22,7 @@ rule Trojan_MacOS_HiddenRisk_A_2147927316_0
         $x_1_7 = {48 29 c4 58 49 89 f6 49 89 fc 48 8b 05 ec 2d 00 00 48 8b 00 48 89 45 d0 48 8d 3d 3f 2a 00 00 48 8d 9d c8 d3 ff ff 48 89 de 31 d2 e8 ba 23 00 00 48 8b 43 08 48 8b 30 ?? ?? ?? ?? ?? ?? ?? e8 8e 0a 00 00 48 89 df e8 a5 23 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (2 of ($x*))
 }
 

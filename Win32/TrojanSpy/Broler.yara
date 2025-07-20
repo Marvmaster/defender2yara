@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Broler_A_2147750705_0
         $x_5_4 = "RSDS" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule TrojanSpy_Win32_Broler_B_2147750706_0
         $x_1_3 = "winlogin.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule TrojanSpy_Win32_Broler_C_2147750707_0
         $x_1_9 = "C:\\Users\\Frank\\Documents\\Visual Studio 2010\\Projects\\avenger\\Release\\avenger.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule TrojanSpy_Win32_Broler_G_2147750708_0
         $x_1_4 = "SOFTWARE\\360Safe\\Liveup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -126,6 +130,7 @@ rule TrojanSpy_Win32_Broler_H_2147750709_0
         $x_1_4 = "taskmgt.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +152,7 @@ rule TrojanSpy_Win32_Broler_RC_2147752197_0
         $x_1_1 = {2b fe c7 45 ?? ?? ?? ?? ?? 6a ?? 6a ?? 6a ?? e8 ?? ?? ?? ?? 8b 45 ?? 32 04 37 6a ?? 6a ?? 6a ?? 88 06 e8 ?? ?? ?? ?? 8b 45 ?? 6a ?? c1 e0 ?? 6a ?? 89 45 ?? 6a ?? e8 ?? ?? ?? ?? 8b 45 ?? 6a ?? c1 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

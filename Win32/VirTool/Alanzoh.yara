@@ -16,6 +16,7 @@ rule VirTool_Win32_Alanzoh_D_2147832000_0
         $x_1_2 = {c7 44 24 48 0c 00 00 00 c7 44 24 50 01 00 00 00 c7 44 24 4c 00 00 00 00 c7 44 24 44 00 00 00 00 c7 44 24 40 00 00 00 00 8d ?? ?? ?? 8d ?? ?? ?? 8d ?? ?? ?? 6a 00 51 50 56 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule VirTool_Win32_Alanzoh_E_2147832004_0
         $x_1_4 = {8b 44 24 20 83 ec 18 8d 4c ?? ?? 89 4c 24 14 0f 28 05 f0 d3 ?? ?? 0f 11 44 24 04 89 04 24 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule VirTool_Win32_Alanzoh_F_2147832006_0
         $x_1_6 = {83 c4 04 01 e0 05 28 05 00 00 8b 4c 24 14 83 c1 05 50 6a 1e 51 e8 ?? ?? ?? ?? 83 c4 0c 57 e8 ?? ?? ?? ?? 83 c4 04 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

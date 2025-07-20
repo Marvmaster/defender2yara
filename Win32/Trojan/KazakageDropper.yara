@@ -16,6 +16,7 @@ rule Trojan_Win32_KazakageDropper_SCP_2147942174_0
         $x_2_1 = {68 8c 8e 40 00 e8 ?? ?? ?? ?? 00 00 00 00 00 00 30 00 00 00 40 00 00 00 00 00 00 00 0c 07}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

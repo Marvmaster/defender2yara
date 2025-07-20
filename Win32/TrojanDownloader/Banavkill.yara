@@ -28,6 +28,7 @@ rule TrojanDownloader_Win32_Banavkill_A_2147723761_0
         $x_1_14 = "08167BEB60FC65DE74EC5ABA43CE3550C83237333525213FD057FA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

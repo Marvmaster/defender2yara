@@ -19,6 +19,7 @@ rule Trojan_Win32_Trickbot_A_2147719709_0
         $x_1_5 = "Legend.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Trickbot_2147723014_0
         $x_1_2 = {55 8b ec 8b 45 0c 81 ec 6c ?? 00 00 56 8b 75 08 57 3d 11 01 00 00 0f 87 e6 01 00 00 0f 84 7a 01 00 00 8b c8 49 74 3e 49 74 29 83 e9 0d 0f 85 ec 01 00 00 8d 45 94 50 56 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Trickbot_N_2147727583_0
         $x_1_4 = "hukmnjufewgjoghuigohvbtysoghgty" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_Trickbot_O_2147728174_0
         $x_1_5 = {25 00 73 00 5c 00 41 00 44 00 4d 00 49 00 4e 00 24 00 5c 00 [0-10] 73 00 76 00 63 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_Win32_Trickbot_PA_2147730788_0
         $x_1_1 = {c1 e0 02 01 d0 c1 e0 03 03 45 d4 8b 40 0c 89 c2 03 55 dc 8b 45 cc 89 cb 89 d7 89 de 89 c1 f3 a4 66 ff 45 e6 66 8b 45 e6 66 3b 45 da 0f 92 c0 84 c0 75 97 8b 45 e0 83 e8 80 89 45 c8 8b 45 e0 8b 50 28 8b 45 dc 01 d0 89 45 c4 8b 45 c4 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +134,7 @@ rule Trojan_Win32_Trickbot_Z_2147730878_0
         $x_2_3 = {6a 44 e8 4c 01 00 00 6a 50 88 01 e8 43 01 00 00 6a 53 88 41 01 e8 39 01 00 00 6a 54}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +159,7 @@ rule Trojan_Win32_Trickbot_V_2147733313_0
         $x_4_5 = {75 39 2d 63 2a 4a 6e 54 2b 69 58 42 78 73 50 00 7a 6b 6d 73 39 4f 44 64 75 21 76 76 4d 35 54 51 34 44 78 45 00 46 67 78 71 77 61 4b 4c 6f 2e 7a 6f 70}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -178,6 +185,7 @@ rule Trojan_Win32_Trickbot_W_2147733314_0
         $x_1_2 = "AtxetnoCeriuqcAtpyrC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +206,7 @@ rule Trojan_Win32_Trickbot_AA_2147733914_0
         $x_1_1 = {43 3a 5c 55 73 65 72 73 5c 55 73 65 72 5c 44 6f 63 75 6d 65 6e 74 73 5c 56 69 73 75 61 6c 20 53 74 75 64 69 6f 20 32 30 30 38 5c 50 72 6f 6a 65 63 74 73 5c 53 74 75 70 69 64 20 57 69 6e 64 69 6f 77 73 20 44 65 66 65 6e 64 65 72 5c 52 65 6c 65 61 73 65 5c [0-32] 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +230,7 @@ rule Trojan_Win32_Trickbot_PB_2147734504_0
         $x_1_3 = {8a 00 88 c1 8b 45 ?? 8b 9c ?? ?? ?? ?? ?? 8b 45 ?? 8b 84 ?? ?? ?? ?? ?? 01 d8 25 ff 00 00 80 85 c0 79 ?? 48 0d 00 ff ff ff 40 8b 84 ?? ?? ?? ?? ?? 31 c8 88 02 ff 45 ?? 8b 45 ?? 3b 45 ?? 0f 92 c0 84 c0 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -243,6 +253,7 @@ rule Trojan_Win32_Trickbot_PB_2147734504_1
         $x_1_2 = {43 00 3a 00 5c 00 50 00 72 00 6f 00 67 00 72 00 61 00 6d 00 44 00 61 00 74 00 61 00 5c 00 [0-64] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -265,6 +276,7 @@ rule Trojan_Win32_Trickbot_SD_2147735574_0
         $x_1_2 = {89 14 24 ff d0 8b 45 c4 c7 04 24 ?? ?? ?? ?? ff d0 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +298,7 @@ rule Trojan_Win32_Trickbot_SX_2147739687_0
         $x_1_1 = {57 8b 4d 00 8b fb 8b 51 0c 8b 59 14 2b d3 03 d6 66 0f b6 0a 8b d9 2b cf 66 85 c9 7d ?? 81 c1 00 01 00 00 46 88 0a 3b f0 7e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -307,6 +320,7 @@ rule Trojan_Win32_Trickbot_SX_2147739687_1
         $x_1_1 = {8b 45 f4 8b 55 0c 8d 1c 02 8b 45 f4 8b 55 0c 01 d0 8a 00 89 c6 8b 45 08 89 04 24 e8 ?? ?? ?? ?? 89 45 e4 8b 45 f4 ba 00 00 00 00 f7 75 e4 89 d1 89 ca 8b 45 08 01 d0 8a 00 31 f0 88 03 ff 45 f4 8b 45 f4 3b 45 10 0f 95 c0 84 c0 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -330,6 +344,7 @@ rule Trojan_Win32_Trickbot_A_2147739743_0
         $x_1_3 = {8b c1 33 d2 f7 f7 41 8a 82 ?? ?? ?? 00 30 44 31 ff 81 f9 ?? ?? 00 00 75 e7 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -353,6 +368,7 @@ rule Trojan_Win32_Trickbot_A_2147739743_1
         $x_1_3 = {51 8b c6 8b 00 46 8b 0f 33 c8 8b c1 88 07 47 4b 58 8b c8 75 06 58 2b f0 50 8b d8 49 75 e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -379,6 +395,7 @@ rule Trojan_Win32_Trickbot_A_2147739743_2
         $x_1_2 = {ff 20 c6 85 ?? ?? ?? ?? 53 c6 85 ?? ?? ?? ?? 65 c6 85 ?? ?? ?? ?? 74 c6 85 ?? ?? ?? ?? 2d c6 85 ?? ?? ?? ?? 4d c6 85 ?? ?? ?? ?? 70 c6 85 ?? ?? ?? ?? 50 c6 85 ?? ?? ?? ?? 72 c6 85 ?? ?? ?? ?? 65 c6 85 ?? ?? ?? ?? 66 c6 85 ?? ?? ?? ?? 65 c6 85 ?? ?? ?? ?? 72 c6 85 ?? ?? ?? ?? 65 c6 85 ?? ?? ?? ?? 6e c6 85 ?? ?? ?? ?? 63 c6 85 ?? ?? ?? ?? 65 c6 85 ?? ?? ?? ?? 20 c6 85 ?? ?? ?? ?? 2d c6 85 ?? ?? ?? ?? 44 c6 85 ?? ?? ?? ?? 69 c6 85 ?? ?? ?? ?? 73 c6 85 ?? ?? ?? ?? 61 c6 85 ?? ?? ?? ?? 62 c6 85 ?? ?? ?? ?? 6c c6 85 ?? ?? ?? ?? 65 c6 85 ?? ?? ?? ?? 52 c6 85 ?? ?? ?? ?? 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -400,6 +417,7 @@ rule Trojan_Win32_Trickbot_GG_2147741117_0
         $x_1_1 = {8b 45 0c 8d 0c 06 33 d2 8b c6 f7 75 14 8b 45 08 8a 04 02 30 01 46 3b 75 10 75 e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -420,6 +438,7 @@ rule Trojan_Win32_Trickbot_GB_2147741192_0
         $x_1_1 = {54 68 65 20 74 72 69 63 6b 5c 59 61 6e 64 65 78 44 69 73 6b 5c 50 72 6f 6a 65 63 74 73 5c 42 6f 74 5c 42 6f 74 5f 28 31 30 30 36 29 5f 30 38 2e 31 32 2e 32 30 31 36 5c 42 6f 74 5c 47 65 74 53 79 73 74 65 6d 49 6e 66 6f 5f 73 6f 6c 75 74 69 6f 6e 5c [0-6] 5c 52 65 6c 65 61 73 65 5c 47 65 74 53 79 73 74 65 6d 49 6e 66 6f 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -441,6 +460,7 @@ rule Trojan_Win32_Trickbot_GS_2147741461_0
         $x_1_1 = {53 8b 5c 24 0c 55 56 8b 74 24 18 33 d2 8b c1 bd [0-4] f7 f5 8a 04 1a 30 04 31 41 3b cf 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -462,6 +482,7 @@ rule Trojan_Win32_Trickbot_GH_2147741462_0
         $x_1_1 = {e9 d0 2a 00 00 55 8b ec 81 ec 90 04 00 00 b8 70 00 00 00 66 89 45 94 b9 61 00 00 00 66 89 4d 96 ba 79 00 00 00 66 89 55 98 b8 6c 00 00 00 66 89 45 9a b9 6f 00 00 00 66 89 4d 9c ba 61 00 00 00 66 89 55 9e b8 64 00 00 00 66 89 45 a0 b9 2e 00 00 00 66 89 4d a2 ba 65 00 00 00 66 89 55 a4 b8 78 00 00 00 66 89 45 a6 b9 65 00 00 00 66 89 4d a8 33 d2 66 89 55 aa b8 73 00 00 00 66 89 45 c4 b9 61 00 00 00 66 89 4d c6 ba 6d 00 00 00 66 89 55 c8 b8 70 00 00 00 66 89 45 ca b9 6c 00 00 00 66 89 4d cc ba 65 00 00 00 66 89 55 ce b8 2e 00 00 00 66 89 45 d0 b9 65 00 00 00 66 89 4d d2 ba 78 00 00 00 66 89 55 d4 b8 65 00 00 00 66 89 45 d6 33 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -483,6 +504,7 @@ rule Trojan_Win32_Trickbot_GH_2147741462_1
         $x_1_1 = {f7 e9 c1 fa ?? 8b c2 c1 e8 ?? 03 c2 [0-10] 8a ?? ?? 30 ?? 31 41 3b cf 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -505,6 +527,7 @@ rule Trojan_Win32_Trickbot_GH_2147741462_2
         $x_1_2 = "StruoNosW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -526,6 +549,7 @@ rule Trojan_Win32_Trickbot_GK_2147741463_0
         $x_1_1 = {8b d0 81 e2 [0-4] 79 ?? 4a 83 ca e0 42 8a 14 3a 30 14 08 40 3b c6 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -547,6 +571,7 @@ rule Trojan_Win32_Trickbot_GU_2147741464_0
         $x_1_1 = {56 8b 74 24 ?? b8 ?? ?? ?? ?? f7 e1 8b c1 2b c2 [0-10] 8b d1 2b d0 8a 04 1a 30 04 31 83 c1 01 3b cf 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -569,6 +594,7 @@ rule Trojan_Win32_Trickbot_PI_2147741571_0
         $x_1_3 = {5c 50 72 6f 6a 65 63 74 5f 30 31 5c [0-16] 5c 7a 47 63 72 76 6a 4a 6d 4f 58 78 66 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -594,6 +620,7 @@ rule Trojan_Win32_Trickbot_RA_2147741578_0
         $x_1_3 = {51 8b c6 8b 00 46 8b 0f 33 c8 8b c1 88 07 47 4b 58 8b c8 75 06 58 2b f0 50 8b d8 49 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -619,6 +646,7 @@ rule Trojan_Win32_Trickbot_B_2147741634_0
         $x_1_5 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -641,6 +669,7 @@ rule Trojan_Win32_Trickbot_B_2147741634_1
         $x_1_2 = {0f b6 f0 8a 44 24 1e 0f b6 f8 89 f8 31 f0 88 44 24 1e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -662,6 +691,7 @@ rule Trojan_Win32_Trickbot_GR_2147741744_0
         $x_1_1 = {8b 73 0c 03 f7 8b ea 3b e9 76 [0-7] 8b 44 24 14 83 78 18 ?? 72 ?? 83 c0 ?? 8b 00 eb ?? 83 c0 ?? 8a 0c 28 30 0e 8b 43 10 2b 43 0c 47 3b f8 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -685,6 +715,7 @@ rule Trojan_Win32_Trickbot_GR_2147741744_1
         $x_1_3 = {61 00 66 c7 [0-2] 73 00 66 c7 [0-2] 77 00 66 c7 [0-2] 68 00 66 c7 [0-2] 6f 00 66 c7 [0-2] 6f 00 66 c7 [0-2] 6b 00 66 c7 [0-2] 2e 00 66 c7 [0-2] 64 00 66 c7 [0-2] 6c 00 66 c7 [0-2] 6c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -713,6 +744,7 @@ rule Trojan_Win32_Trickbot_C_2147741800_0
         $x_1_5 = "Player.bmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -734,6 +766,7 @@ rule Trojan_Win32_Trickbot_C_2147741800_1
         $x_1_1 = {83 ef 01 89 5d e0 01 fb 8b 7d e0 0f af fb 83 e7 01 83 ff 00 0f 94 c3 80 e3 01 88 5d ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -756,6 +789,7 @@ rule Trojan_Win32_Trickbot_PA_2147741871_0
         $x_1_2 = "C:\\ProgramData\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -777,6 +811,7 @@ rule Trojan_Win32_Trickbot_PA_2147741962_0
         $x_1_1 = {6a 40 68 00 10 00 00 68 60 11 00 00 6a 00 ff d3 68 60 11 00 00 68 ?? ?? ?? 00 50 e8 ?? ?? ff ff 8d 54 24 0c 52 56 6a 10 68 ?? ?? ?? ?? ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -799,6 +834,7 @@ rule Trojan_Win32_Trickbot_PI_2147741966_0
         $x_1_2 = "\\CustomToolTipPlusDemo.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -821,6 +857,7 @@ rule Trojan_Win32_Trickbot_PI_2147741966_1
         $x_1_2 = "___CPPdebugHook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -843,6 +880,7 @@ rule Trojan_Win32_Trickbot_D_2147742052_0
         $x_1_2 = "LoperNutW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -865,6 +903,7 @@ rule Trojan_Win32_Trickbot_D_2147742052_1
         $x_1_2 = {55 8b ec 8b 45 08 0f af 45 08 2d ?? ?? ?? ?? 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -891,6 +930,7 @@ rule Trojan_Win32_Trickbot_E_2147742060_0
         $x_1_6 = {8b ff c7 05 ?? ?? ?? 00 00 00 00 00 01 05 ?? ?? ?? 00 8b ff 8b 15 ?? ?? ?? 00 a1 ?? ?? ?? 00 89 02 5f 5d c3 4f 00 b8 ?? ?? ?? 00 a1 ?? ?? ?? 00 33 c1 8b ff c7 05 ?? ?? ?? 00 00 00 00 00 01 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -911,6 +951,7 @@ rule Trojan_Win32_Trickbot_AR_2147742070_0
         $x_1_1 = "c:\\Users\\User\\Desktop\\commap\\ctlcomm\\Release\\ctlcomm.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -933,6 +974,7 @@ rule Trojan_Win32_Trickbot_AG_2147742098_0
         $x_1_2 = {56 57 51 8b 74 24 ?? 8b 7c 24 ?? 8b 4c 24 ?? f3 a4 59 5f 5e c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -954,6 +996,7 @@ rule Trojan_Win32_Trickbot_BS_2147742130_0
         $x_1_1 = {88 16 8d 84 3d ?? ?? ?? ?? 0f b6 d3 88 18 0f b6 06 03 c2 8b f1 99 f7 fe 8b 45 14 8a 94 15 ?? ?? ?? ?? 30 10 40 ff 4d 0c 89 45 14 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -975,6 +1018,7 @@ rule Trojan_Win32_Trickbot_BS_2147742130_1
         $x_1_1 = {6a 00 ff d6 8b 45 fc 0f b6 4d 17 0f b6 84 05 ?? ?? ?? ?? 03 c1 8b cb 99 f7 f9 8b 45 08 8a 8c 15 ?? ?? ?? ?? 30 08 40 ff 4d f8 89 45 08 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -996,6 +1040,7 @@ rule Trojan_Win32_Trickbot_BS_2147742130_2
         $x_1_1 = {8b c7 8b 51 ?? 8b 79 ?? 2b d7 03 d6 66 0f b6 0a 8b f9 2b c8 66 85 c9 7d ?? 81 c1 00 01 00 00 8b 85 ?? ?? ?? ?? 88 0a 03 f0 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1018,6 +1063,7 @@ rule Trojan_Win32_Trickbot_BS_2147742130_3
         $x_1_2 = {03 d7 8a 1a 88 19 88 02 0f b6 01 0f b6 0a 03 c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1039,6 +1085,7 @@ rule Trojan_Win32_Trickbot_BS_2147742130_4
         $x_1_1 = {03 c2 99 f7 f9 8b 4c 24 ?? 33 c0 8a 04 0a 8b 54 24 ?? 0f be 0c 3a 51 50 e8 ?? ?? ?? ?? 88 07 8b 44 24 ?? 83 c4 10 47 48 89 44 24 ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1060,6 +1107,7 @@ rule Trojan_Win32_Trickbot_BS_2147742130_5
         $x_1_1 = {3b d8 72 10 ff 15 ?? ?? ?? ?? eb 08 ff 15 ?? ?? ?? ?? 8b d8 8b ?? ff 15 ?? ?? ?? ?? 8b [0-20] b8 01 00 00 00 03 c1 [0-6] 89 85 54 ff ff ff 8b ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1081,6 +1129,7 @@ rule Trojan_Win32_Trickbot_BS_2147742130_6
         $x_1_1 = {2b da 3b d8 72 ?? ff 15 ?? ?? ?? ?? eb ?? ff 15 ?? ?? ?? ?? 8b d8 8b ce ff 15 ?? ?? ?? ?? 8b 0f 8b b5 ?? ?? ?? ?? 8b 51 ?? 8b 8d ?? ?? ?? ?? 88 04 1a b8 01 00 00 00 03 c1 0f 80 ?? ?? ?? ?? 89 85 ?? ?? ?? ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1103,6 +1152,7 @@ rule Trojan_Win32_Trickbot_BS_2147742130_7
         $x_1_2 = {50 68 00 00 f0 3f 6a 00 68 ?? ?? ?? ?? 51 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1124,6 +1174,7 @@ rule Trojan_Win32_Trickbot_BS_2147742130_8
         $x_1_1 = {8b de 2b da 3b d8 72 ?? ff 15 ?? ?? ?? ?? 8b c3 eb ?? ff 15 ?? ?? ?? ?? 8b 0f 8b 51 ?? 66 0f b6 1c 02 2b 5d ?? 66 85 db 7d ?? 81 c3 00 01 00 00 85 c9 74 ?? 66 83 39 01 75 1c 8b 51 ?? 8b 41 ?? 2b f2 3b f0 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1146,6 +1197,7 @@ rule Trojan_Win32_Trickbot_BS_2147742130_9
         $x_1_2 = "___CPPdebugHook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1171,6 +1223,7 @@ rule Trojan_Win32_Trickbot_SA_2147742134_0
         $x_1_5 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1196,6 +1249,7 @@ rule Trojan_Win32_Trickbot_SA_2147742134_1
         $x_1_5 = "CAZxGEU34OCFBBKCQJhWUE#$_SVRR[SQZx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1220,6 +1274,7 @@ rule Trojan_Win32_Trickbot_F_2147742228_0
         $x_2_4 = {89 45 fc 8b 0d ?? ?? ?? 00 03 0d ?? ?? ?? 00 0f b6 11 8b 45 fc 0f b6 08 03 ca 8b 55 fc 88 0a 8b e5 5d c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1249,6 +1304,7 @@ rule Trojan_Win32_Trickbot_G_2147742232_0
         $x_1_5 = "CWinApp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1271,6 +1327,7 @@ rule Trojan_Win32_Trickbot_G_2147742232_1
         $x_10_2 = "KVt7qO2<wzb%(K10$d1oz5!8wyY#t6^ZqFqP0yNtBYC$<hwQLFIQ9zxP4sHo?q%U<0#paLGI<^fSC%*" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1293,6 +1350,7 @@ rule Trojan_Win32_Trickbot_SP_2147742343_0
         $x_1_2 = {8b 45 08 03 30 8b 4d 08 89 31 8b 55 08 8b 02 2d [0-3] 00 00 8b 4d 08 89 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1314,6 +1372,7 @@ rule Trojan_Win32_Trickbot_NG_2147742423_0
         $x_1_1 = {f7 e6 c1 ea ?? 8b c2 c1 e0 ?? 03 c2 03 c0 8b de 2b d8 8b 44 24 ?? 03 fe 3b [0-29] 8a 0c 18 30 0f 8b 45 ?? 2b 45 ?? 46 3b f0 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1335,6 +1394,7 @@ rule Trojan_Win32_Trickbot_EG_2147742424_0
         $x_1_1 = {99 f7 fd 89 d1 8b 7c 94 ?? 8d 04 1f 99 f7 fd 89 d3 8b 44 ?? ?? 89 44 ?? ?? 89 fa 0f b6 c2 89 44 ?? ?? 03 44 ?? ?? 99 f7 fd 8b 44 ?? ?? 8b 54 ?? ?? 30 04 32 46 81 fe ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1356,6 +1416,7 @@ rule Trojan_Win32_Trickbot_EG_2147742424_1
         $x_1_1 = {6b c0 25 83 c0 56 99 6a 7f 59 f7 f9 88 55 ?? 33 c0 40 d1 e0 0f b6 80 ?? ?? ?? ?? 6b c0 25 83 c0 56 99 6a 7f 59 f7 f9 88 55 ?? 33 c0 40 6b c0 03 0f b6 80 ?? ?? ?? ?? 6b c0 25 83 c0 56 99 6a 7f 59 f7 f9 88 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1378,6 +1439,7 @@ rule Trojan_Win32_Trickbot_EG_2147742424_2
         $x_1_2 = {8b 55 ec 83 c2 01 89 55 ec 8b 45 ec 3b 45 fc 0f 8d ?? ?? ?? ?? 8b 4d f0 03 4d ec 0f be 11 81 f2 e0 00 00 00 88 55 e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1400,6 +1462,7 @@ rule Trojan_Win32_Trickbot_EG_2147742424_3
         $x_1_2 = {57 0f af 35 ?? ?? ?? ?? 8b f9 8b c1 c1 e7 05 2b f9 2b c6 c1 e7 03 8b d0 8b df 8b 7c ?? ?? c1 e2 06 8b 54 ?? ?? 2b d3 8d 1c ?? 8d 2c ?? 8b 5c 3a ?? 03 dd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1421,6 +1484,7 @@ rule Trojan_Win32_Trickbot_SG_2147742425_0
         $x_1_1 = {83 78 18 10 72 ?? 83 c0 04 8b 00 eb ?? 83 c0 04 8a 04 38 30 06 8b 45 ?? 2b 45 ?? 43 3b d8 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1443,6 +1507,7 @@ rule Trojan_Win32_Trickbot_SR_2147742482_0
         $x_1_2 = {8b 55 fc 03 15 ?? ?? ?? ?? 8b 45 08 03 10 8b 4d 08 89 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1464,6 +1529,7 @@ rule Trojan_Win32_Trickbot_HG_2147742544_0
         $x_1_1 = {8b 44 24 14 [0-9] 3b 78 14 [0-17] 83 c0 04 8b 00 eb ?? 83 c0 04 8a ?? ?? 30 ?? 8b [0-9] 3b ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1485,6 +1551,7 @@ rule Trojan_Win32_Trickbot_KG_2147742605_0
         $x_1_1 = {8b 45 fc 33 d2 b9 [0-4] f7 f1 [0-80] 0f be [0-2] 8b 55 ?? 0f be ?? 33 ?? 8b 4d ?? 88 ?? e9 a0 00 8b 45 fc 83 c0 01 89 45 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1506,6 +1573,7 @@ rule Trojan_Win32_Trickbot_UG_2147742650_0
         $x_1_1 = {53 8b ce e8 [0-4] 8b ?? ?? ?? 8b f8 8b ?? 83 e0 ?? 50 e8 [0-4] 8a ?? 30 ?? 8b ?? ?? 2b ?? ?? 43 3b ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1527,6 +1595,7 @@ rule Trojan_Win32_Trickbot_BA_2147742797_0
         $x_1_1 = {03 c1 8b cb 99 f7 f9 8b 4d ?? 8b 75 ?? 0f be 0c 31 51 0f b6 04 3a 50 e8 ?? ?? ?? ?? 83 c4 10 88 06 46 ff 4d ?? 89 75 ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1549,6 +1618,7 @@ rule Trojan_Win32_Trickbot_BA_2147742797_1
         $x_1_2 = {6a 00 6a 00 ff 15 ?? ?? ?? ?? 8b 44 24 10 8d 0c 06 33 d2 6a 14 8b c6 5b f7 f3 8b 44 24 0c 8a 04 02 30 01 46 3b 74 24 14 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1570,6 +1640,7 @@ rule Trojan_Win32_Trickbot_BA_2147742797_2
         $x_1_1 = {2b c8 33 c0 8a 04 11 8d 3c 11 89 85 ?? ?? ?? ?? db 85 ?? ?? ?? ?? dc 65 ?? dc 15 ?? ?? ?? ?? df e0 f6 c4 01 74 ?? dc 05 ?? ?? ?? ?? 83 ec 08 dd 1c 24 ff 15 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 88 07 01 4d ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1594,6 +1665,7 @@ rule Trojan_Win32_Trickbot_PC_2147742877_0
         $x_1_4 = {43 00 3a 00 5c 00 50 00 72 00 6f 00 67 00 72 00 61 00 6d 00 44 00 61 00 74 00 61 00 5c 00 [0-64] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -1619,6 +1691,7 @@ rule Trojan_Win32_Trickbot_MG_2147742913_0
         $x_1_1 = {56 8b 74 24 ?? 55 53 8b 5c 24 ?? 8b ?? 33 ?? bd [0-4] f7 f5 8a ?? ?? 8a ?? ?? 32 ?? 88 ?? ?? 41 3b cf 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1640,6 +1713,7 @@ rule Trojan_Win32_Trickbot_RG_2147742914_0
         $x_1_1 = {33 c9 39 4c ?? ?? 74 ?? 56 8b ?? ?? ?? 8b 74 ?? ?? 8b d1 03 c1 83 ?? ?? 8a ?? ?? 30 ?? 41 3b 4c ?? ?? 75 ?? 5e c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1661,6 +1735,7 @@ rule Trojan_Win32_Trickbot_DG_2147742916_0
         $x_1_1 = {33 c0 8a 02 8b 4d ?? 03 4d ?? 81 e1 ?? ?? ?? ?? 33 d2 8a 94 ?? ?? ?? ?? ?? 33 c2 8b 4d ?? 03 4d ?? 88 01 e9 a4 00 83 c2 01 89 55 ?? 8b 45 ?? 3b 45 ?? 0f 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1682,6 +1757,7 @@ rule Trojan_Win32_Trickbot_SM_2147742978_0
         $x_1_1 = {5b 53 51 8b c6 46 8b 00 8b 0f 33 c1 88 07 47 4b 58 8b c8 75 06 58 2b f0 50 8b d8 49 75 e4 59 58 59 5e 5f 5b c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1703,6 +1779,7 @@ rule Trojan_Win32_Trickbot_RB_2147743034_0
         $x_1_1 = {8b 4c 24 0c 53 57 8b 7c 24 10 8a 1c 08 8b d0 83 e2 1f 8a 14 3a 32 da 88 1c 08 40 3b c6 75 eb 5f 5b 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1726,6 +1803,7 @@ rule Trojan_Win32_Trickbot_J_2147743246_0
         $x_1_3 = {68 00 04 00 00 8d [0-9] ff 15 [0-32] ff 15 ?? ?? ?? ?? 85 c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -1760,6 +1838,7 @@ rule Trojan_Win32_Trickbot_WG_2147743291_0
         $x_1_10 = "{001677D0-FD16-11CE-ABC4-02608C9E7553}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -1781,6 +1860,7 @@ rule Trojan_Win32_Trickbot_IG_2147743326_0
         $x_1_1 = {8b 55 08 03 55 [0-8] 8b 4d ?? 03 4d [0-20] 33 ?? 8b ?? ?? 03 ?? ?? 88 ?? e9 9b 00 8b 55 ?? 83 c2 01 89 55 ?? 8b 45 ?? 3b 45 [0-10] 83 c1 01 81 e1 ?? ?? ?? ?? 89 4d ?? 8b 55 [0-12] 89 45 ?? 8b 4d ?? 03 4d ?? 81 e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1802,6 +1882,7 @@ rule Trojan_Win32_Trickbot_FG_2147743437_0
         $x_1_1 = {03 c2 99 f7 ?? 8a 44 ?? ?? 8a ?? ?? 32 ?? 8b ?? ?? ?? ?? ?? ?? 88 ?? ?? 47 3b f8 72 59 00 8d [0-2] 99 b9 ?? ?? ?? ?? f7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1824,6 +1905,7 @@ rule Trojan_Win32_Trickbot_JG_2147743438_0
         $x_1_2 = {41 3b cd 7c ?? 5f 5e 64 00 7e ?? 8b 9c ?? ?? ?? ?? ?? 8b 7c ?? ?? 8b 74 ?? ?? 46 81 e6 ?? ?? ?? ?? 0f b6 ?? ?? ?? 03 ?? 81 e7 ?? ?? ?? ?? 0f b6 ?? ?? ?? 88 44 ?? ?? 02 ?? 0f b6 ?? 88 54 ?? ?? 8a 54 ?? ?? 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1846,6 +1928,7 @@ rule Trojan_Win32_Trickbot_PD_2147743868_0
         $x_1_2 = {52 6a 40 68 04 2e 00 00 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 8b 45 ec 50 6a 01 b9 ?? ?? ?? ?? ff d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1868,6 +1951,7 @@ rule Trojan_Win32_Trickbot_PE_2147744244_0
         $x_20_2 = {8b 04 24 89 45 ?? 83 c4 04 8b 55 ?? 8b 12 8d bd ?? ?? ff ff 8b 75 ?? 83 c6 04 b9 31 00 00 00 8b 1e 31 d3 89 1f b8 04 00 00 00 01 c6 01 c7 49 83 f9 00 75 ?? 8b 45 ?? 66 31 c0 66 bb 4d 5a 66 39 18 74}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1890,6 +1974,7 @@ rule Trojan_Win32_Trickbot_PF_2147744394_0
         $x_1_2 = {8b 45 d4 8b 95 ?? ?? ?? ?? 8b 5d ?? 8b 48 0c 66 0f b6 04 11 66 8b cb 66 83 c1 05 66 99 0f 80 ?? ?? ?? ?? 66 f7 f9 66 8b ca 8b 16 8b 42 0c 8b 95 ?? ?? ?? ?? 66 0f b6 04 10 33 c8 ff 15 ?? ?? ?? ?? 8b 0e 8b 51 0c 88 04 3a b8 01 00 00 00 66 03 c3 bf 02 00 00 00 0f 80}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1912,6 +1997,7 @@ rule Trojan_Win32_Trickbot_PG_2147744457_0
         $x_1_2 = {c7 45 ac 5a 50 53 5a c7 45 b0 65 62 62 64 c7 45 b4 64 4a 63 4c c7 45 b8 76 74 66 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1933,6 +2019,7 @@ rule Trojan_Win32_Trickbot_BZ_2147744599_0
         $x_1_1 = {8b 55 08 03 55 ec 33 c0 8a 02 8b 4d fc 03 4d f8 81 e1 ff 00 00 00 33 d2 8a 94 0d e4 fe ff ff 33 c2 8b 4d 08 03 4d ec 88 01 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1954,6 +2041,7 @@ rule Trojan_Win32_Trickbot_BZ_2147744599_1
         $x_1_1 = {8b 0e 8b c3 8b 51 0c 8b 59 14 2b d3 03 d7 66 0f b6 0a 8b d9 2b c8 66 85 c9 7d 06 81 c1 00 01 00 00 8b 85 30 ff ff ff 88 0a 03 f8 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1976,6 +2064,7 @@ rule Trojan_Win32_Trickbot_SU_2147744747_0
         $x_1_2 = {8b 17 2b d3 89 17 89 79 08 5f 5e 5d 5b 59}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1998,6 +2087,7 @@ rule Trojan_Win32_Trickbot_RL_2147745123_0
         $x_2_2 = {31 c8 89 d1 c1 e1 ?? c1 f9 ?? 81 e1 ?? ?? ?? ?? 31 c8 c1 e2 ?? c1 fa ?? 81 e2 ?? ?? ?? ?? 31 d0 0f b6 53 ?? 43 85 d2 0f 85 ?? ?? ?? ?? f7 d0 5b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2021,6 +2111,7 @@ rule Trojan_Win32_Trickbot_SJ_2147745434_0
         $x_1_3 = "secret_controller MFC Application" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2044,6 +2135,7 @@ rule Trojan_Win32_Trickbot_M_2147745530_0
         $x_1_3 = "HttpOpenRequestW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2066,6 +2158,7 @@ rule Trojan_Win32_Trickbot_GI_2147745749_0
         $x_1_2 = {b9 6b 00 00 00 66 89 8d 6c ff ff ff ba 65 00 00 00 66 89 95 6e ff ff ff b8 72 00 00 00 66 89 85 70 ff ff ff b9 6e 00 00 00 66 89 8d 72 ff ff ff ba 65 00 00 00 66 89 95 74 ff ff ff b8 6c 00 00 00 66 89 85 76 ff ff ff b9 33 00 00 00 66 89 8d 78 ff ff ff ba 32 00 00 00 66 89 95 7a ff ff ff b8 2e 00 00 00 66 89 85 7c ff ff ff b9 64 00 00 00 66 89 8d 7e ff ff ff ba 6c 00 00 00 66 89 55 80 b8 6c 00 00 00 66 89 45 82 33 c9 66 89 4d 84}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2089,6 +2182,7 @@ rule Trojan_Win32_Trickbot_C_2147745771_0
         $x_1_3 = "HttpOpenRequestW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2111,6 +2205,7 @@ rule Trojan_Win32_Trickbot_D_2147747973_0
         $x_1_2 = "~%AE#psRBKXnhQeol$lT*w$Ui5Gam?XQn7$jesP1@aXT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2134,6 +2229,7 @@ rule Trojan_Win32_Trickbot_E_2147747974_0
         $x_1_3 = {6a 00 8d 45 cc c7 45 cc 00 00 00 00 50 51 56 ff 75 c8 ff 15 1c e0 40 00 8b 4d d8 8b f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2156,6 +2252,7 @@ rule Trojan_Win32_Trickbot_PH_2147748069_0
         $x_1_2 = {8b 74 24 10 8a 2c 16 88 2c 1e 88 0c 16 c7 44 24 50 ?? ?? ?? ?? 0f b6 14 1e 8b 7c 24 04 01 fa 88 d1 0f b6 d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2177,6 +2274,7 @@ rule Trojan_Win32_Trickbot_F_2147748072_0
         $x_1_1 = {45 33 c9 81 e5 ?? ?? ?? ?? 33 c0 8a 4c 2c 10 03 d9 81 e3 ?? ?? ?? ?? 8a 44 1c 10 88 44 2c 10 02 c1 25 ff 00 00 00 88 4c 1c 10 8a 0c 32 8a 44 04 10 32 c8 88 0c 32 42 3b d7 7c c5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2198,6 +2296,7 @@ rule Trojan_Win32_Trickbot_RD_2147748117_0
         $x_2_1 = {8b 9c 24 4c 01 00 00 8d 54 04 14 33 c0 8a 02 8a 1c 1e 03 d8 03 d9 81 e3 ff 00 00 00 8b cb 8a 5c 0c 14 88 1a 88 44 0c 14 8d 46 01 99 f7 bc 24 50 01 00 00 8b 44 24 10 40 3d 2b 01 00 00 89 44 24 10 8b f2 7c bb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2222,6 +2321,7 @@ rule Trojan_Win32_Trickbot_RND_2147748475_0
         $x_2_4 = "cuKuoiolzZlOhpgGcded" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -2247,6 +2347,7 @@ rule Trojan_Win32_Trickbot_CF_2147748507_0
         $x_1_1 = {2b d6 8b 75 ?? 8d 04 0a 66 8b 14 5e 66 03 14 7e 66 83 e2 0f 79 ?? 66 4a 66 83 ca f0 66 42 0f bf d2 8a 14 56 30 10 b8 01 00 00 00 03 c8 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2271,6 +2372,7 @@ rule Trojan_Win32_Trickbot_ARN_2147748522_0
         $x_1_4 = "Please enter the name of the file you want to send:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -2299,6 +2401,7 @@ rule Trojan_Win32_Trickbot_RS_2147748619_0
         $x_1_4 = "Open this document" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2324,6 +2427,7 @@ rule Trojan_Win32_Trickbot_VSK_2147748660_0
         $x_2_5 = "i4JVRErO5FctMVeL6kf2agCBY6JBhu" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2349,6 +2453,7 @@ rule Trojan_Win32_Trickbot_VSK_2147748660_1
         $x_2_5 = {8b 4c 24 70 8b 54 24 18 89 35 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 8b f7 c1 ee 05 03 74 24 64 03 d9 03 d7 33 da 81 3d ?? ?? ?? ?? 72 07 00 00 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2373,6 +2478,7 @@ rule Trojan_Win32_Trickbot_GP_2147749081_0
         $x_1_4 = {51 3d 00 10 00 00 8d [0-5] 81 e9 00 10 00 00 2d 00 10 00 00 85 01 3d 00 10 00 00 [0-4] 8b c4 85 01 [0-4] 8b [0-4] 50 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2394,6 +2500,7 @@ rule Trojan_Win32_Trickbot_DHA_2147749135_0
         $x_1_1 = {8d 76 00 8b b5 ?? ?? ?? ?? 89 c8 31 d2 f7 76 f4 0f b6 04 16 30 04 0b 83 c1 01 39 f9 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2416,6 +2523,7 @@ rule Trojan_Win32_Trickbot_DHB_2147749136_0
         $x_1_2 = {83 c4 0c 6a 00 6a 40 68 00 30 00 00 50 6a 00 55 ff d3 8b 4c 24 ?? 8b 54 24 ?? 51 8b f0 52 56 ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2437,6 +2545,7 @@ rule Trojan_Win32_Trickbot_MIB_2147749324_0
         $x_1_1 = {bf e0 07 00 00 6a 40 68 00 30 00 00 57 56 ff 75 ?? 89 45 ?? 2b df ff 55 ?? 57 8b 7d ?? 89 45 ?? 8d 0c 1f 51 50 ff 55 ?? 83 c4 0c 56 6a 40 68 00 30 00 00 53 56 ff 75 ?? ff 55 ?? 8b f0 53 57 56 ff 55 ?? 83 c4 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2458,6 +2567,7 @@ rule Trojan_Win32_Trickbot_MIL_2147749326_0
         $x_1_1 = {33 d2 8b c1 bf 29 00 00 00 f7 f7 8b 7c 24 0c 8a 04 39 8a 54 14 44 32 c2 88 04 39 41 81 f9 e0 07 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2478,6 +2588,7 @@ rule Trojan_Win32_Trickbot_CRYP_2147750234_0
         $x_1_1 = {68 00 10 00 00 [0-2] 59 [0-2] 52 e2 fd [0-3] 8b ec [0-2] 05 ?? ?? ?? ?? 68 f1 ff 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2499,6 +2610,7 @@ rule Trojan_Win32_Trickbot_H_2147750315_0
         $x_1_1 = {6a 00 ff d6 8b 4c 24 14 33 c0 8a 44 3c 18 81 e1 ff 00 00 00 03 c1 b9 ?? ?? ?? ?? 99 f7 f9 8a 45 00 8a 54 14 18 32 c2 88 45 00 8b 44 24 10 45 48 89 44 24 10 0f 85 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2520,6 +2632,7 @@ rule Trojan_Win32_Trickbot_SRV_2147750726_0
         $x_1_1 = {bf e0 07 00 00 6a 40 68 00 30 00 00 ?? ?? ?? ?? ?? ?? ?? ?? 2b df ff 55 ?? ?? ?? ?? ?? ?? ?? ?? 8d 0c 1f ?? ?? ff 55 ?? 83 c4 0c ?? 6a 40 68 00 30 00 00 ?? ?? ff 75 ?? ff 55 ?? 8b f0 ?? ?? ?? ff 55 ?? 8d 45 ?? 6a ?? ?? ?? ?? ff 55 ?? 83 c4 1c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2541,6 +2654,7 @@ rule Trojan_Win32_Trickbot_KMG_2147751545_0
         $x_1_1 = {03 c6 99 f7 f9 0f b6 04 2b 8b f2 8a 14 2e 88 14 2b 88 04 2e 0f b6 0c 2e 0f b6 04 2b 03 c1 99 b9 ?? ?? ?? ?? f7 f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2562,6 +2676,7 @@ rule Trojan_Win32_Trickbot_KMG_2147751545_1
         $x_1_1 = {c0 ec 02 80 e4 0f 0a e1 8b 4c 24 ?? 88 64 24 ?? 88 44 24 ?? 88 47 ?? 0f b7 44 24 ?? 66 89 07 83 44 24 08 03 8b 44 24 ?? 40 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2584,6 +2699,7 @@ rule Trojan_Win32_Trickbot_KMG_2147751545_2
         $x_1_2 = "8Bhf1AQAb88M@rw" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2606,6 +2722,7 @@ rule Trojan_Win32_Trickbot_KMG_2147751545_3
         $x_1_2 = "odq@)d5V0f%R1&P" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2628,6 +2745,7 @@ rule Trojan_Win32_Trickbot_KMG_2147751545_4
         $x_1_2 = "z1>g>aUfQ+7hc9>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2649,6 +2767,7 @@ rule Trojan_Win32_Trickbot_KMG_2147751545_5
         $x_1_1 = {50 c7 45 8c 00 01 00 00 c7 45 ?? 02 00 00 00 ff 15 ?? ?? ?? ?? 8b d0 8d 4d ?? ff 15 ?? ?? ?? ?? 8d 4d ?? 51 ff 15 ?? ?? ?? ?? 8b 56 ?? 8b 4e ?? 2b d1 88 04 1a 8b 85 ?? ?? ?? ?? 03 d8 e9 ?? ?? ?? ?? 68 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2672,6 +2791,7 @@ rule Trojan_Win32_Trickbot_KMG_2147751545_6
         $x_1_3 = "b)X!QMBJI_xTAvJ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2695,6 +2815,7 @@ rule Trojan_Win32_Trickbot_KMG_2147751545_7
         $x_1_3 = "Stup windows defender hahah" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2720,6 +2841,7 @@ rule Trojan_Win32_Trickbot_ACN_2147751662_0
         $x_1_5 = "https://www.wentspend.ru/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2745,6 +2867,7 @@ rule Trojan_Win32_Trickbot_AN_2147751739_0
         $x_1_1 = {57 6a 12 8b 45 04 83 c0 18 5b 8b f0 53 51 8b 0f 8b 06 33 c1 88 07 46 47 4b 58 8b c8 75 06 58 2b f0 50 8b d8 49 75 e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2766,6 +2889,7 @@ rule Trojan_Win32_Trickbot_AN_2147751739_1
         $x_1_1 = {8b 09 89 4e 08 8b 54 3a fc 8b fa 2b f9 89 7e 0c 76 1b 33 ff 33 f6 46 83 ff ?? 7f 0b 8a 1c 38 03 fe 30 19 03 ce eb 02 33 ff 3b ca 72 ea 5f 5b 5e 33 c0 c2 04 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2789,6 +2913,7 @@ rule Trojan_Win32_Trickbot_VDP_2147751744_0
         $x_2_3 = "505VSU2mj6wal6eR3aDcm" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2810,6 +2935,7 @@ rule Trojan_Win32_Trickbot_AK_2147751805_0
         $x_1_1 = {33 d2 8b c1 f7 75 0c 8a 5c 0c 50 0f b6 c3 41 0f b6 14 3a 03 d6 03 c2 33 d2 be e2 ?? ?? ?? f7 f6 8b f2 8a 44 34 50 88 44 0c 4f 88 5c 34 50 81 f9 e2 00 72 ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2837,6 +2963,7 @@ rule Trojan_Win32_Trickbot_AK_2147751805_1
         $x_1_7 = "186.71.150.23" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2860,6 +2987,7 @@ rule Trojan_Win32_Trickbot_KDP_2147752426_0
         $x_2_3 = {58 5b b8 01 00 00 00 d1 e0 c6 44 05 e4 ?? 50 53}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2916,6 +3044,7 @@ rule Trojan_Win32_Trickbot_MST_2147752450_0
         $x_1_4 = "DHtmlEditDemo.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2938,6 +3067,7 @@ rule Trojan_Win32_Trickbot_KSP_2147752508_0
         $x_2_2 = {8b c6 f7 f3 8b 44 24 ?? 8a 04 02 30 01 46 3b 74 24 ?? 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2961,6 +3091,7 @@ rule Trojan_Win32_Trickbot_SS_2147752770_0
         $x_10_4 = {58 68 00 00 ?? ?? ?? ?? ?? ?? ?? 00 00 50 e9 ?? ?? ?? 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? 83 ?? f4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             ((1 of ($x_20_*) and 1 of ($x_10_*))) or
@@ -3043,6 +3174,7 @@ rule Trojan_Win32_Trickbot_DDE_2147752785_0
         $x_1_1 = {8b 4c 24 14 8b 54 24 18 8b c1 8b f2 f7 d0 f7 d6 5f 0b c6 5e 0b ca 5d 23 c1 5b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3064,6 +3196,7 @@ rule Trojan_Win32_Trickbot_DHC_2147752827_0
         $x_1_1 = {8b 45 0c 8b 55 08 89 d1 09 c1 8b 45 0c 8b 55 08 21 d0 f7 d0 21 c8 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3085,6 +3218,7 @@ rule Trojan_Win32_Trickbot_DHD_2147753009_0
         $x_1_1 = {8b 4c 24 1c 8b 54 24 20 8b c1 8b f2 f7 d0 f7 d6 83 c4 ?? 0b c6 0b ca 23 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3106,6 +3240,7 @@ rule Trojan_Win32_Trickbot_DHE_2147753010_0
         $x_1_1 = {33 d2 8d 0c 07 8b c7 f7 75 ?? 8b 45 ?? 8a 04 50 30 01 [0-3] 3b 7d ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3127,6 +3262,7 @@ rule Trojan_Win32_Trickbot_DHF_2147753011_0
         $x_1_1 = {6a 40 68 00 30 00 00 ff 75 b0 53 ff 55 c4 ff 75 b0 89 45 d0 ff 75 ac 50 e8 ?? ?? ?? ?? 57 6a ?? 68 ?? ?? ?? ?? ff 75 a8 56 ff 55 d0 83 c4 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3148,6 +3284,7 @@ rule Trojan_Win32_Trickbot_KSV_2147753108_0
         $x_2_1 = {6a 0c 59 33 d2 8b c6 f7 f1 c7 04 24 ?? ?? ?? ?? 8a 82 ?? ?? ?? ?? 30 86 ?? ?? ?? ?? e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3171,6 +3308,7 @@ rule Trojan_Win32_Trickbot_MMB_2147753155_0
         $x_1_3 = "aKERNEL32.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3193,6 +3331,7 @@ rule Trojan_Win32_Trickbot_ME_2147753181_0
         $x_1_3 = {6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 6a 01 8d [0-16] ff 15 ?? ?? ?? ?? 85 c0 74 23 6a 00 6a 02 68 00 00 00 a0 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3217,6 +3356,7 @@ rule Trojan_Win32_Trickbot_SV_2147753314_0
         $x_2_4 = "bRS8yYQ0APq9xfzC" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -3242,6 +3382,7 @@ rule Trojan_Win32_Trickbot_RB_2147753357_0
         $x_1_1 = {55 8b ec 81 ec 14 02 00 00 c7 45 f8 00 00 00 00 c7 85 28 fe ff ff 00 00 00 00 c7 85 2c fe ff ff 00 00 00 00 c7 85 ec fd ff ff 4c 00 00 00 b8 6b 00 00 00 66 89 85 f0 fd ff ff b9 65 00 00 00 66 89 8d f2 fd ff ff ba 72 00 00 00 66 89 95 f4 fd ff ff b8 6e 00 00 00 66 89 85 f6 fd ff ff b9 65 00 00 00 66 89 8d f8 fd ff ff ba 6c 00 00 00 66 89 95 fa fd ff ff b8 33 00 00 00 66 89 85 fc fd ff ff b9 32 00 00 00 66 89 8d fe fd ff ff ba 2e 00 00 00 66 89 95 00 fe ff ff b8 64 00 00 00 66 89 85 02 fe ff ff b9 6c 00 00 00 66 89 8d 04 fe ff ff ba 6c 00 00 00 66 89 95 06 fe ff ff 33 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3263,6 +3404,7 @@ rule Trojan_Win32_Trickbot_RC_2147753358_0
         $x_1_1 = {8d 4b 01 b8 ?? ?? ?? ?? f7 e9 c1 fa ?? 89 d3 89 c8 c1 f8 ?? 29 c3 69 db ?? ?? ?? ?? 29 d9 89 cb 89 cf 03 7c 24 ?? 0f b6 0f 01 f1 b8 ?? ?? ?? ?? f7 e9 89 d6 c1 fe ?? 89 c8 c1 f8 ?? 29 c6 69 f6 ?? ?? ?? ?? 29 f1 89 ce 89 c8 03 44 24 ?? 89 44 24 ?? 89 44 24 ?? 89 3c 24 e8 ?? ?? ?? ?? 0f b6 17 8b 44 24 ?? 0f b6 00 01 d0 8b 54 24 ?? 0f b6 04 02 89 ef 03 7c 24 ?? 8b 54 24 ?? 0f be 14 2a 89 54 24 ?? 89 04 24 e8 ?? ?? ?? ?? 88 07 83 c5 ?? 3b 6c 24 ?? 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3284,6 +3426,7 @@ rule Trojan_Win32_Trickbot_KM_2147753359_0
         $x_2_1 = {f6 d2 f6 d1 0a d1 22 d3 83 c4 0c 88 10 40 ff 4d ?? 89 45 ?? 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3307,6 +3450,7 @@ rule Trojan_Win32_Trickbot_KM_2147753359_1
         $x_1_3 = "fC0)GvTWSjm*yEB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3328,6 +3472,7 @@ rule Trojan_Win32_Trickbot_DHH_2147753452_0
         $x_1_1 = {83 c4 10 6a 0a 68 ?? ?? ?? ?? 53 8b e8 ff 54 24 ?? 8b f0 56 53 ff 54 24 ?? 56 53 89 44 24 ?? ff 54 24 ?? 8b 4c 24 ?? 51 89 44 24 ?? ff 54 24 ?? 8b 94 24 ?? ?? ?? ?? 53 52 89 44 24 ?? 8b 44 24 ?? 68 00 30 00 00 50 53 ff d5 50 ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3350,6 +3495,7 @@ rule Trojan_Win32_Trickbot_KRP_2147753509_0
         $x_2_2 = "XWFTPHFMWOMZQGISZZZBCDIAQQJTRLDGCOCRCORHMMJKTRWYAJHRDVUTOFCYYMUKL" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3372,6 +3518,7 @@ rule Trojan_Win32_Trickbot_SK_2147753721_0
         $x_2_2 = {8b fa 8d 84 3d ?? ?? ff ff 8a 10 88 16 88 18 0f b6 06 0f b6 d3 03 c2 99 8b f1 f7 fe 8b 85 ?? ?? ff ff 8a 94 15 ?? ?? ff ff 30 10 40 83 bd ?? ?? ff ff 00 89 85 ?? ?? ff ff 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3394,6 +3541,7 @@ rule Trojan_Win32_Trickbot_SK_2147753721_1
         $x_2_2 = {51 8b c6 46 8b 0f 8b 00 33 c8 58 88 0f 47 4b 8b c8 75 06 58 2b f0 50 8b d8 49 75 e4 59 58 59 5e 5f 5b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3415,6 +3563,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_0
         $x_1_1 = {8a 03 83 c4 0c 8a 54 14 ?? 32 c2 88 03 43 4d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3436,6 +3585,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_1
         $x_1_1 = {99 b9 42 1a 00 00 f7 f9 0f b6 94 15 ?? ?? ?? ?? 30 53 ff 83 7d 0c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3457,6 +3607,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_2
         $x_1_1 = {99 f7 f9 8b 45 ?? 8a 8c 15 ?? ?? ?? ?? 30 08 40 ff 4d 0c 89 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3478,6 +3629,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_3
         $x_1_1 = {f7 f9 8b 85 ?? ?? ?? ?? 40 83 c4 04 89 85 ?? ?? ?? ?? 0f b6 94 15 ?? ?? ?? ?? 30 50 ff 83 bd ?? ?? ?? ?? 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3499,6 +3651,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_4
         $x_1_1 = {f7 f9 8b 44 24 ?? 8a 18 83 c4 0c 8a 54 14 ?? 32 da 88 18 40 89 44 24 ?? ff 4c 24 ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3520,6 +3673,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_5
         $x_1_1 = {03 c1 99 b9 55 02 00 00 f7 f9 8b 44 24 ?? 40 83 c4 38 89 44 24 ?? 0f b6 54 14 ?? 30 50 ff 83 bc 24 84 02 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3542,6 +3696,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_6
         $x_1_2 = "MCdM1Aw|2SaG2rdGzyI3U7$K%vetuiV" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3564,6 +3719,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_7
         $x_1_2 = {33 c0 3b f3 7e ?? 8b 4c 24 ?? 8d 4c 31 ?? ?? 8a 11 88 ?? ?? ?? ?? ?? 83 c0 01 83 e9 01 3b c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3586,6 +3742,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_8
         $x_1_2 = "yKatBbgDwU6xylhQmVhFPesy6dLOzLvdV" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3608,6 +3765,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_9
         $x_1_2 = "gABupaeV9zawahoREO5222Vf31A6N7iPAE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3630,6 +3788,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_10
         $x_1_2 = {6a 40 8b b4 24 4c 01 00 00 56 50 e8 ?? ?? ?? ?? 8b 4c 24 ?? 81 e1 ff ff 00 00 81 f9 4d 5a 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3652,6 +3811,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_11
         $x_1_2 = {f7 f9 0f b6 94 15 ?? ?? ?? ?? 30 53 ff 83 7d ?? 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3674,6 +3834,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_12
         $x_1_2 = "4TvFPAD6TxMyX6zgXakbMQtQulYSTGmhqy4q" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3696,6 +3857,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_13
         $x_1_2 = "zswKNF4gnd10OtJkfSu5rcjlJFvrrlTcWxqwUCy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3718,6 +3880,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_14
         $x_1_2 = "3UVoZP1MhvJpXtWhXvbOB5HrW2MuN0iWH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3740,6 +3903,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_15
         $x_1_2 = "LlLRNM?PPvEzd{drWlwS?9g~XbPcbB1~oK9" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3765,6 +3929,7 @@ rule Trojan_Win32_Trickbot_MX_2147753739_16
         $x_1_5 = "Release" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3786,6 +3951,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_0
         $x_1_1 = {8b 45 0c 8b 4d ?? 8b 55 ?? 03 c1 8a 14 32 30 10 41 3b 4d ?? 89 4d ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3807,6 +3973,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_1
         $x_1_1 = {8a 04 18 f6 d0 88 45 ?? 3b d9 73 ?? eb ?? 8a 45 ?? 8a cb 2a 4d ?? 32 0b 32 c8 88 0b 03 df 85 f6 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3828,6 +3995,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_2
         $x_1_1 = {03 c1 33 c9 f7 35 ?? ?? ?? ?? 33 c0 8b 44 24 ?? 8a 0c 38 8a 14 32 32 ca 88 0c 38 8b 4c 24 ?? 40 3b c1 89 44 24 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3849,6 +4017,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_3
         $x_1_1 = {03 c8 0f b6 04 37 89 55 ?? 0f b6 d3 03 c2 33 d2 f7 35 ?? ?? ?? ?? 8a 04 32 30 01 ff 45 ?? 8b 45 ?? 3b 45 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3870,6 +4039,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_4
         $x_1_1 = {8b 45 fc 8b 08 8b 55 ?? 8b 02 8b 55 ?? 8b 75 ?? 8a 0c 0a 32 0c 06 8b 55 ?? 8b 02 8b 55 ?? 88 0c 02 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3891,6 +4061,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_5
         $x_1_1 = {8b 55 0c 8a 0c 32 f6 d1 8b c6 3b f7 73 ?? 8a d0 2a d3 32 10 32 d1 88 10 03 45 ?? 3b c7 72 ?? 46 ff 4d ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3912,6 +4083,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_6
         $x_1_1 = {8b 08 8b 55 ?? 8b 02 8b 55 ?? 0f b6 04 02 8b 55 ?? 0f b6 0c 0a 33 c8 8b 55 ?? 8b 02 8b 55 ?? 88 0c 02 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3933,6 +4105,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_7
         $x_1_1 = {8a 0c 32 f6 d1 8b c6 3b f7 73 ?? 8a d0 2a d3 32 10 32 d1 88 10 03 45 ?? 3b c7 72 ?? 8b 55 ?? 46 ff 4d ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3954,6 +4127,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_8
         $x_1_1 = {33 c0 3b df 7e ?? 8b 4c 24 ?? 8d 4c 19 ?? 8a 11 88 ?? ?? ?? ?? ?? 40 49 3b c3 7c ?? 8d 43 01 c6 83 ?? ?? ?? ?? 00 83 f8 3e 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3975,6 +4149,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_9
         $x_1_1 = {8b fa 8a 04 0f 88 04 0e 88 1c 0f 0f b6 04 0e 0f b6 d3 03 c2 33 d2 f7 35 ?? ?? ?? ?? 8b 44 24 ?? 8a 14 0a 30 54 28 ?? 3b 6c 24 1c 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3996,6 +4171,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_10
         $x_1_1 = {33 d2 0f b6 04 37 03 c1 f7 35 ?? ?? ?? ?? 8b da ff 15 ?? ?? ?? ?? 8b 45 ?? 8b 4d ?? 8a 14 33 03 c1 30 10 41 3b 4d ?? 89 4d ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4017,6 +4193,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_11
         $x_1_1 = {8a 0c 02 f6 d1 3b c6 73 ?? 8a d0 2a 55 ?? 32 10 32 d1 88 10 03 c7 3b c6 72 ?? 8b 45 ?? 40 ff 4d ?? 89 45 ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4038,6 +4215,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_12
         $x_1_1 = {8a 04 0a f6 d0 88 45 ?? 8b d9 3b 4d ?? 73 ?? eb ?? 8a 45 ?? 8a cb 2a 4d ?? be 23 00 00 00 32 0b 32 c8 88 0b 6a 14 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4059,6 +4237,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_13
         $x_1_1 = {8a 0c 32 f6 d1 8b c6 3b f7 73 ?? eb ?? 8d 49 00 8a d0 2a d3 32 10 32 d1 88 10 03 45 ?? 3b c7 72 ?? 8b 55 ?? 46 ff 4d ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4080,6 +4259,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_14
         $x_2_1 = {99 b9 14 02 00 00 f7 f9 8a 5d 00 8b 44 24 ?? 83 c0 f0 c7 84 24 ?? ?? ?? ?? ff ff ff ff 8d 48 ?? 8a 54 14 18 32 da 88 5d 00 45 83 ca ff f0 0f c1 11 4a 85 d2 7f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4101,6 +4281,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_15
         $x_1_1 = {33 d2 f7 35 ?? ?? ?? ?? 89 55 ?? 8b 45 ?? 8b 08 8b 55 ?? 8b 02 8b 55 ?? 8b 75 ?? 8a 0c 0a 32 0c 06 8b 55 ?? 8b 02 8b 55 ?? 88 0c 02 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4123,6 +4304,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_16
         $x_1_2 = {8a 14 3a 30 14 08 8b 4c 24 ?? 40 3b c1 89 44 24 ?? 0f 82 76}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4144,6 +4326,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_17
         $x_1_1 = {0f bf fa 3b bd ?? ?? ?? ?? 7f ?? 8b 41 ?? 8b 51 ?? 2b c2 33 d2 8a 14 38 03 c7 89 85 ?? ?? ?? ?? 8b 45 ?? 8a 14 02 8b 85 ?? ?? ?? ?? 88 10 8b 85 ?? ?? ?? ?? 03 f8 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4166,6 +4349,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_18
         $x_1_2 = "qbwC+<F$z@Iv3p_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4187,6 +4371,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_19
         $x_1_1 = {33 c0 8a 04 37 81 e1 ff 00 00 00 03 c1 f7 35 ?? ?? ?? ?? 89 54 24 ?? ff 15 ?? ?? ?? ?? 8b 54 24 ?? 8b 44 24 ?? 8a 0c 32 8a 14 28 32 d1 88 14 28 8b 44 24 ?? 45 3b e8 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4208,6 +4393,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_20
         $x_1_1 = {03 c1 f7 35 ?? ?? ?? ?? 8b ea ff 15 ?? ?? ?? ?? 85 c0 74 ?? ff 15 ?? ?? ?? ?? 8a 14 2e 8b 44 24 ?? 8b 6c 24 ?? 8a 0c 28 32 ca 88 0c 28 8b 4c 24 ?? 40 3b c1 89 44 24 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4229,6 +4415,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_21
         $x_1_1 = {8b fa 8b 54 24 ?? 81 e2 ff 00 00 00 8a 04 0f 88 04 0e 33 c0 88 1c 0f 8a 04 0e 03 c2 33 d2 f7 35 ?? ?? ?? ?? 8b 44 24 ?? 8a 1c 28 8a 14 0a 32 da 88 1c 28 8b 44 24 ?? 45 3b e8 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4251,6 +4438,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_22
         $x_1_2 = "1C$IyqzH*QM9vHL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4273,6 +4461,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_23
         $x_1_2 = "RCrBKco!#boDL0D" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4294,6 +4483,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_24
         $x_1_1 = {8a 04 11 99 f7 fb 8d 45 ?? 50 8b da ff 15 ?? ?? ?? ?? 8a 0c 30 32 d9 8d 4d ?? 51 ff 15 ?? ?? ?? ?? 8d 4d ?? 88 1c 30 ff 15 ?? ?? ?? ?? 8b 4d ?? 8b 1d ?? ?? ?? ?? b8 01 00 00 00 03 c8 89 4d ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4316,6 +4506,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_25
         $x_1_2 = {03 c1 8a 14 1a 30 10 41 3b 4d ?? 89 4d ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4337,6 +4528,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_26
         $x_1_1 = {8b f0 81 fb 00 01 00 00 72 ?? ff 15 ?? ?? ?? ?? 8b 0f 8b 51 ?? 8b 4d ?? 8a 04 32 8b 75 ?? 88 04 19 b8 01 00 00 00 03 c3 0f 80 ?? ?? ?? ?? 8b d8 eb ?? 8b 17 52 6a 01 ff 15 ?? ?? ?? ?? 66 83 c6 02 89 85 ?? ?? ?? ?? 0f 80}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4359,6 +4551,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_27
         $x_1_2 = "EFoqekkkBCegArbgrmGrmgtGGmka" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4382,6 +4575,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_28
         $x_1_3 = "H$I<JREJ+w1#M+H" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4403,6 +4597,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_29
         $x_1_1 = {8a 04 11 99 f7 fb 8d 45 ?? 50 8b da ff 15 ?? ?? ?? ?? 8b 4e ?? 8b 56 ?? 2b ca 8a 14 08 32 da 8d 55 ?? 52 ff 15 ?? ?? ?? ?? 8b 4e ?? 8b 56 ?? 2b ca 88 1c 08 8d 4d ?? ff 15 ?? ?? ?? ?? 8b 4d ?? 8b 1d ?? ?? ?? ?? b8 01 00 00 00 03 c8 8b 45 ?? 89 4d ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4425,6 +4620,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_30
         $x_1_2 = "i9j21?tGOV)RwAp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4447,6 +4643,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_31
         $x_1_2 = {0f bf c9 3b 4d ?? 7f ?? 8b 16 8b 42 ?? 8b 7a ?? 2b c7 33 d2 8a 14 08 8d 3c 08 8b 45 ?? 8a 14 02 8b 45 ?? 88 17 03 c8 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4471,6 +4668,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_32
         $x_1_4 = "amuNxEcollAlautriV" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4495,6 +4693,7 @@ rule Trojan_Win32_Trickbot_GKM_2147753743_33
         $x_1_4 = "faqxszurbvyfwocwnyrvlsbpuhxbhtfacyaznrptsjb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -4523,6 +4722,7 @@ rule Trojan_Win32_Trickbot_ZZ_2147753822_0
         $x_1_4 = {8d 40 00 00 00 00 [0-32] 05 8b ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4547,6 +4747,7 @@ rule Trojan_Win32_Trickbot_DHI_2147753913_0
         $x_1_1 = {6a 00 ff d5 33 d2 8b c6 b9 [0-4] f7 f1 8a 04 3e 8a 14 1a 32 c2 88 04 3e 8b 44 24 [0-4] 46 3b f0 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4571,6 +4772,7 @@ rule Trojan_Win32_Trickbot_DHJ_2147753923_0
         $x_1_4 = "VirtualAllocExNuma" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4592,6 +4794,7 @@ rule Trojan_Win32_Trickbot_MXI_2147754277_0
         $x_1_1 = {b9 00 01 00 00 99 f7 f9 8b 45 ?? 8a 8c 15 ?? ?? ?? ?? 30 08 40 ff 4d 0c 89 45 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4614,6 +4817,7 @@ rule Trojan_Win32_Trickbot_VC_2147754698_0
         $x_1_2 = {8a 1c 38 30 19 03 ce 03 fe 3b ca 83 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4638,6 +4842,7 @@ rule Trojan_Win32_Trickbot_PVH_2147754721_0
         $x_1_4 = "5P1DHC2Q4AXCK1WGPMZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4660,6 +4865,7 @@ rule Trojan_Win32_Trickbot_DHK_2147754788_0
         $x_1_2 = "ubcv4m46cyAWtOPFJ8dsHDmyjNZduBj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4681,6 +4887,7 @@ rule Trojan_Win32_Trickbot_PVM_2147754945_0
         $x_2_1 = {8a 5e 3e 03 c2 80 e2 80 32 d3 8a 18 32 da 88 18}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4703,6 +4910,7 @@ rule Trojan_Win32_Trickbot_PVI_2147755420_0
         $x_2_2 = {58 5b 6a 04 68 00 30 00 00 68 00 e1 f5 05 6a 00 ff 15 ?? ?? ?? ?? 8b c8 50 53}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4727,6 +4935,7 @@ rule Trojan_Win32_Trickbot_PVJ_2147755421_0
         $x_1_4 = {58 5b 6a 04 68 00 30 00 00 68 00 e1 f5 05 6a 00 ff 15 ?? ?? ?? ?? 89 45 f0 50 53}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -4753,6 +4962,7 @@ rule Trojan_Win32_Trickbot_DHL_2147755512_0
         $x_1_2 = "OwcRJEC2g5NJ9wbOmJnUO5nK1LWXpbbndxlN4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4774,6 +4984,7 @@ rule Trojan_Win32_Trickbot_RLK_2147755526_0
         $x_1_1 = {c1 e1 04 03 4d e4 8d 14 33 33 c1 33 c2 6a 00 2b f8 81 c3 47 86 c8 61 ff 15 ?? ?? ?? ?? ff 4d ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4796,6 +5007,7 @@ rule Trojan_Win32_Trickbot_RA_2147755643_0
         $x_1_2 = {8a 8c 15 c0 f6 ff ff 30 08 40 83 [0-31] 0f 2f 00 0f b6 07 [0-10] 99 [0-10] f7 f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4818,6 +5030,7 @@ rule Trojan_Win32_Trickbot_MS_2147755658_0
         $x_1_2 = "MOfH?6M42F252loLt0N~7?COsSwyith8HYnnP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4840,6 +5053,7 @@ rule Trojan_Win32_Trickbot_PVL_2147755673_0
         $x_2_2 = {58 5b 6a 04 68 00 30 00 00 68 00 e1 f5 05 6a 00 ff 15 ?? ?? ?? ?? 89 45 e4 50 53}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4862,6 +5076,7 @@ rule Trojan_Win32_Trickbot_DHN_2147755897_0
         $x_1_2 = "2SubaWAaRzfGeY9mW2gThA7TDyNpVLzf6" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4886,6 +5101,7 @@ rule Trojan_Win32_Trickbot_DL_2147756290_0
         $x_1_4 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -4911,6 +5127,7 @@ rule Trojan_Win32_Trickbot_DSA_2147756470_0
         $x_2_1 = {55 8b ec b8 18 2c 00 00 e8 ?? ?? ?? ?? a1 ?? ?? ?? ?? 33 c5 89 45 fc c6 85 fc d3 ff ff ?? c6 85 fd d3 ff ff ?? c6 85 fe d3 ff ff ?? c6 85 ff d3 ff ff ?? c6 85 00 d4 ff ff ?? c6 85 01 d4 ff ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4933,6 +5150,7 @@ rule Trojan_Win32_Trickbot_PVB_2147756471_0
         $x_2_2 = {55 8b ec 83 ec 18 c7 45 fc 00 00 00 00 c7 45 ec 00 00 00 00 c7 45 f0 ?? ?? ?? ?? c7 45 fc 00 00 00 00 eb ?? 8b 45 fc 83 c0 01 89 45 fc 81 7d fc ff 2b 00 00 0f 8d ?? ?? ?? ?? 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 83 c4 04 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 83 c4 04 68 ?? ?? ?? ?? e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4955,6 +5173,7 @@ rule Trojan_Win32_Trickbot_DSB_2147756525_0
         $x_1_2 = "14BEFAWKU1XCQMIYMOF" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4976,6 +5195,7 @@ rule Trojan_Win32_Trickbot_SH_2147756598_0
         $x_1_2 = {ff 76 04 ff 36 ff 56 0c ff 76 04 ff 56 14 ff 36 ff 56 14 89 7e 04 89 3e 57 ff 56 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4998,6 +5218,7 @@ rule Trojan_Win32_Trickbot_DSC_2147756797_0
         $x_1_2 = "ZXpMZX4S+r8pPYVOPX8pnBq0ZXG4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5019,6 +5240,7 @@ rule Trojan_Win32_Trickbot_DHO_2147756892_0
         $x_1_1 = {8b 44 24 14 53 8d 34 07 ff 15 ?? ?? ?? ?? 59 33 d2 8b c8 8b c7 f7 f1 8a 04 53 30 06 [0-4] 3b 7c 24 ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5042,6 +5264,7 @@ rule Trojan_Win32_Trickbot_STZ_2147757064_0
         $x_1_4 = "VirtualAllocExNuma" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5065,6 +5288,7 @@ rule Trojan_Win32_Trickbot_STX_2147757065_0
         $x_1_4 = "VirtualAllocExNuma" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5086,6 +5310,7 @@ rule Trojan_Win32_Trickbot_NBM_2147757074_0
         $x_1_1 = {e8 00 00 00 00 58 89 c3 05 3a 05 00 00 81 c3 ?? ?? ?? ?? 68 01 00 00 00 68 05 00 00 00 53 68 45 77 62 30 50 e8 04 00 00 00 83 c4 14 c3 83 ec 48 83 64 24 18 00 b9 4c 77 26 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5108,6 +5333,7 @@ rule Trojan_Win32_Trickbot_DHP_2147757566_0
         $x_1_2 = "MCdM1Aw|2SaG2rdGzyI3U7$K%vetuiV" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5129,6 +5355,7 @@ rule Trojan_Win32_Trickbot_DSE_2147757620_0
         $x_1_1 = {8b 84 24 90 02 00 00 0f b6 cb 8a 1c 07 8a 54 0c 1c 32 da 88 1c 07 8b 84 24 94 02 00 00 47 3b f8 0f 8c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5150,6 +5377,7 @@ rule Trojan_Win32_Trickbot_DSF_2147758117_0
         $x_1_1 = {8b 45 f4 33 d2 b9 0c 00 00 00 f7 f1 8b 45 e8 0f be 0c 10 8b 55 f4 0f b6 82 ?? ?? ?? ?? 33 c1 8b 4d f4 88 81 ?? ?? ?? ?? 81 7d f4 04 2c 00 00 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5171,6 +5399,7 @@ rule Trojan_Win32_Trickbot_DSG_2147758452_0
         $x_1_1 = {8b 45 f4 33 d2 b9 0c 00 00 00 f7 f1 8b 45 e8 0f be 0c 10 8b 55 f4 0f b6 82 ?? ?? ?? ?? 33 c1 8b 4d f4 88 81 ?? ?? ?? ?? 81 7d f4 04 2a 00 00 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5192,6 +5421,7 @@ rule Trojan_Win32_Trickbot_DSH_2147758649_0
         $x_1_1 = {8b 85 e4 d5 ff ff 33 d2 b9 [0-4] f7 f1 8b 45 f8 0f be 0c 10 8b 95 e4 d5 ff ff 0f b6 84 15 e8 d5 ff ff 33 c1 8b 8d e4 d5 ff ff 88 84 0d e8 d5 ff ff 81 bd e4 d5 ff ff 04 2a 00 00 73 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5216,6 +5446,7 @@ rule Trojan_Win32_Trickbot_AR_2147758688_0
         $x_10_4 = "c:\\Users\\Mr.Anderson\\Documents\\Visual Studio 2008\\Projects\\Anderson\\Release\\Anderson.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
@@ -5246,6 +5477,7 @@ rule Trojan_Win32_Trickbot_AR_2147758688_1
         $x_5_6 = "ESTR_PASS_" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_5_*))) or
             ((3 of ($x_10_*))) or
@@ -5271,6 +5503,7 @@ rule Trojan_Win32_Trickbot_DSI_2147758757_0
         $x_1_1 = {f7 f1 8b 45 ?? 0f be 0c 10 8b 55 ?? 0f b6 82 ?? ?? ?? ?? 33 c1 8b 4d ?? 88 81 ?? ?? ?? ?? 81 7d ?? 04 2a 00 00 73 0a 00 8b 45 ?? 33 d2 b9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5292,6 +5525,7 @@ rule Trojan_Win32_Trickbot_DSJ_2147758758_0
         $x_1_1 = {f7 f1 8b 85 ?? ?? ?? ?? 0f be 0c 10 8b 55 ?? 0f b6 84 15 ?? ?? ?? ?? 33 c1 8b 4d ?? 88 84 0d ?? ?? ?? ?? 81 7d ?? 04 2a 00 00 73 0a 00 8b 45 ?? 33 d2 b9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5313,6 +5547,7 @@ rule Trojan_Win32_Trickbot_EM_2147759496_0
         $x_1_1 = {ba 08 00 00 00 6b c2 00 8b 4d fc 8b 55 f4 8b 49 24 2b 0c 02 03 4d fc 89 4d d8 ba 08 00 00 00 6b c2 00 8b 4d fc 8b 55 f4 8b 49 1c 2b 0c 02 03 4d fc 89 4d d4 ba 08 00 00 00 6b c2 00 8b 4d fc 8b 55 f4 8b 49 20 2b 0c 02 03 4d fc 89 4d e0 c7 45 ec 00 00 00 00 8b 55 fc 8b 42 18 89 45 f0 8b 4d f0 d1 e9 89 4d f8 8b 55 f0 83 c2 01 89 55 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5334,6 +5569,7 @@ rule Trojan_Win32_Trickbot_EM_2147759496_1
         $x_1_1 = {0f be c8 81 e1 ?? ?? ?? ?? 8b c1 c1 e8 03 83 e1 07 8d 14 30 b0 01 d2 e0 8d 7f 01 08 02 8a 07 84 c0 75 dd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5359,6 +5595,7 @@ rule Trojan_Win32_Trickbot_AVI_2147759665_0
         $x_1_5 = "CLSID\\{ADB880A6-D8FF-11CF-9377-00AA003B7A11}\\InprocServer32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5385,6 +5622,7 @@ rule Trojan_Win32_Trickbot_NI_2147759923_0
         $x_1_6 = "DllUnregisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5410,6 +5648,7 @@ rule Trojan_Win32_Trickbot_VP_2147760013_0
         $x_1_5 = "Splines" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5431,6 +5670,7 @@ rule Trojan_Win32_Trickbot_RB1_2147760016_0
         $x_1_1 = {56 53 57 8b ?? ?? ?? 8b ?? ?? 8b ?? 8b ?? ?? 83 ?? ?? c1 ?? ?? 8b ?? 2b ?? f7 ?? 8b ?? 89 ?? ?? 8b ?? ?? ?? 8b ?? 2b ?? 89 ?? ?? 76 ?? 33 ?? 33 ?? 46 81 ?? ?? ?? ?? ?? 7f ?? 8a ?? ?? 03 ?? 30 ?? 03 ?? eb ?? 33 ?? 3b ?? 72 ?? 5f 5b 5e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5453,6 +5693,7 @@ rule Trojan_Win32_Trickbot_DHQ_2147760232_0
         $x_1_2 = "IZxRiP8o0flkPQesvqX2jioOd8CR2V" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5479,6 +5720,7 @@ rule Trojan_Win32_Trickbot_PSB_2147760438_0
         $x_10_6 = "FlushFileBuffers" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -5504,6 +5746,7 @@ rule Trojan_Win32_Trickbot_DHR_2147760665_0
         $x_1_2 = "43I2s1UfEx9IihpOp25rTODaBRkdTu~rQzNJAGl5V" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5525,6 +5768,7 @@ rule Trojan_Win32_Trickbot_MB_2147761209_0
         $x_1_1 = {33 d2 8b c1 f7 f7 8a 5c 0c ?? 0f b6 c3 41 0f b6 14 2a 03 d6 03 c2 33 d2 be ?? ?? ?? ?? f7 f6 8b f2 8a 44 34 ?? 88 44 0c ?? 88 5c 34 ?? 81 f9 01 72 cb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5547,6 +5791,7 @@ rule Trojan_Win32_Trickbot_DHS_2147761342_0
         $x_1_2 = "tRYQigaa0rjaoM2Lb4aO1iGSDrFLvP0ALFHN0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5569,6 +5814,7 @@ rule Trojan_Win32_Trickbot_DHT_2147761506_0
         $x_1_2 = "1%OB{xLuJ}O$d~Cd#vT}Pmd~rW5$?0JR2U1hq0Z1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5590,6 +5836,7 @@ rule Trojan_Win32_Trickbot_RAS_2147762230_0
         $x_2_1 = {81 ca 00 ff ff ff 42 8a 4c 14 ?? 8b 54 24 ?? 8a 1c 3a 8b 44 24 ?? 32 cb 88 0f 47 48 89 44 24}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5611,6 +5858,7 @@ rule Trojan_Win32_Trickbot_AV_2147763196_0
         $x_1_1 = {8b 18 0f b6 04 0f 0f b6 d2 03 c2 33 d2 f7 35 ?? ?? ?? ?? 8a 04 0a 8b 54 24 1c 32 04 13 8b 54 24 2c 88 04 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5635,6 +5883,7 @@ rule Trojan_Win32_Trickbot_ART_2147763648_0
         $x_1_4 = "\\AD:\\mp3_sharebox_0\\Developing\\Visual Basic Projects\\MP3 ShareBox\\MP3 ShareBox.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -5666,6 +5915,7 @@ rule Trojan_Win32_Trickbot_PD_2147766621_0
         $x_1_12 = {68 14 28 22 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_9_*) and 1 of ($x_1_*))) or
@@ -5691,6 +5941,7 @@ rule Trojan_Win32_Trickbot_ZZ_2147766670_0
         $x_1_1 = {33 c0 68 1e 03 00 00 59 50 e2 fd 8b c7 57 8b ec 05 f9 24 00 00 89 45 04 8b c6 89 45 20 68 f0 ff 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5723,6 +5974,7 @@ rule Trojan_Win32_Trickbot_ZZ_2147766670_1
         $x_1_13 = {43 6f 6e 74 72 6f 6c 00 3f 44 4c 4c 43 6f 6e 74 72 6f 6c 40 [0-64] 00 3f 44 4c 4c 46 72 65 65 42 75 66 66 65 72 40 [0-16] 00 3f 44 4c 4c 52 65 6c 65 61 73 65 40 [0-16] 00 3f 44 4c 4c 53 74 61 72 74 40 [0-64] 00 46 72 65 65 42 75 66 66 65 72 00 52 65 6c 65 61 73 65 00 53 74 61 72 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5743,6 +5995,7 @@ rule Trojan_Win32_Trickbot_ZY_2147766672_0
         $x_1_1 = {8b 45 fc 3b 45 f8 73 25 8b 45 0c 0f b6 00 66 0f be d0 8b 45 fc 66 89 10 8b 45 0c 0f b6 00 84 c0 74 0a 83 45 fc 02 83 45 0c 01 eb d4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5766,6 +6019,7 @@ rule Trojan_Win32_Trickbot_ZB_2147766676_0
         $x_3_4 = {2e 64 6c 6c 00 43 6f 6e 74 72 6f 6c 00 46 72 65 65 42 75 66 66 65 72 00 52 65 6c 65 61 73 65 00 53 74 61 72 74}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
             (all of ($x*))
@@ -5792,6 +6046,7 @@ rule Trojan_Win32_Trickbot_STM_2147766681_0
         $x_1_4 = "WebInject build" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5815,6 +6070,7 @@ rule Trojan_Win32_Trickbot_STN_2147766683_0
         $x_1_4 = "WebInject build" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5838,6 +6094,7 @@ rule Trojan_Win32_Trickbot_STO_2147766685_0
         $x_1_4 = "ScanSend()" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5862,6 +6119,7 @@ rule Trojan_Win32_Trickbot_STP_2147766687_0
         $x_1_4 = "nltest /domain_trusts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5884,6 +6142,7 @@ rule Trojan_Win32_Trickbot_STQ_2147766689_0
         $x_1_2 = {b1 31 c7 85 ec fd ff ff 31 45 54 42 c7 85 f0 fd ff ff 45 6e 55 41 33 c0 c7 85 f4 fd ff ff 5e 42 45 00 30 8c 05 ed fd ff ff 40 83 f8 0a 73 08 8a 8d ec fd ff ff eb eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5906,6 +6165,7 @@ rule Trojan_Win32_Trickbot_STR_2147766691_0
         $x_1_2 = {03 d8 89 5d f0 83 c7 06 83 ff 08 7c 48 83 ef 08 8b cf 8b 5d f0 d3 eb 8b cf b8 01 00 00 00 d3 e0 50 8b 45 f0 5a 8b ca 99 f7 f9 89 55 f0 81 e3 ff 00 00 80 79 08 4b 81 cb 00 ff ff ff 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5928,6 +6188,7 @@ rule Trojan_Win32_Trickbot_STS_2147766693_0
         $x_1_2 = {c6 45 bd 71 c6 45 be 18 c6 45 bf 4f c6 45 c0 28 c6 45 c1 7a c6 45 c2 04 c6 45 c3 14 c6 45 c4 39 c6 45 c5 52 c6 45 c6 79 c6 45 c7 38 c6 45 c8 05 c6 45 c9 52 c6 45 ca 21 c6 45 cb 45 c6 45 cc 42 c6 45 cd 1b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5952,6 +6213,7 @@ rule Trojan_Win32_Trickbot_STT_2147766695_0
         $x_1_4 = "PlzqY8cAR0jA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -5977,6 +6239,7 @@ rule Trojan_Win32_Trickbot_STU_2147766697_0
         $x_1_1 = {3c 6d 6f 64 75 6c 65 63 6f 6e 66 69 67 3e [0-4] 3c 6e 65 65 64 69 6e 66 6f 20 6e 61 6d 65 3d 22 69 64 22 2f 3e [0-4] 3c 61 75 74 6f 63 6f 6e 66 3e [0-4] 3c 63 6f 6e 66 20 63 74 6c 3d 22 73 72 76 22 20 66 69 6c 65 3d 22 73 72 76 22 20 70 65 72 69 6f 64 3d 22 36 30 22 2f 3e [0-4] 3c 2f 61 75 74 6f 63 6f 6e 66 3e [0-4] 3c 2f 6d 6f 64 75 6c 65 63 6f 6e 66 69 67 3e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6005,6 +6268,7 @@ rule Trojan_Win32_Trickbot_AAA_2147766699_0
         $x_1_9 = {57 61 6e 74 52 65 6c 65 ?? 73 65 00 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -6028,6 +6292,7 @@ rule Trojan_Win32_Trickbot_V_2147766706_0
         $x_1_3 = {56 43 32 30 58 43 30 30 55 8b ec 83 ec 08 53 56 57 55 fc ff 75 10 e8 27 de fc ff 83 c4 04 8b 5d 0c 8b 45 08 f7 40 04 06 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -6051,6 +6316,7 @@ rule Trojan_Win32_Trickbot_PN_2147766717_0
         $x_1_3 = "rdpscan.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6081,6 +6347,7 @@ rule Trojan_Win32_Trickbot_B_2147766720_0
         $x_1_10 = "[INJECT] inject_via_remotethread_wow64" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -6105,6 +6372,7 @@ rule Trojan_Win32_Trickbot_SV_2147766737_0
         $x_1_4 = "Release" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6136,6 +6404,7 @@ rule Trojan_Win32_Trickbot_AAB_2147766743_0
         $x_1_12 = {2e 64 6c 6c 00 41 62 6f 75 74 44 69 61 6c 6f 67 50 ?? 6f 63 00 43 6f 6e 74 72 6f 6c 00 44 6c 6c 52 65 67 69 73 74 65 72 53 65 72 76 65 72 00 44 6c 6c ?? 6e 72 65 67 69 73 74 65 72 53 65 72 76 65 72 00 46 72 65 65 42 75 66 66 65 72 00 4a 4e 49 5f 4f 6e 4c 6f 61 64 00 4a 4e 49 5f 4f 6e 55 6e 6c 6f 61 64 00 52 65 6c 65 61 73 65 00 53 74 61 72 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6158,6 +6427,7 @@ rule Trojan_Win32_Trickbot_ZC_2147766745_0
         $x_2_3 = {b8 ab aa aa 2a 8b [0-5] 2b cf f7 e9 c1 fa 02 8b c2 c1 e8 1f 03 c2 3b f0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6180,6 +6450,7 @@ rule Trojan_Win32_Trickbot_ZD_2147766748_0
         $x_2_3 = {c6 44 24 4c 44 53 c6 44 24 51 59 33 db c6 44 24 52 44 8b d3 8a 44 24 40 88 5c 24 53}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6210,6 +6481,7 @@ rule Trojan_Win32_Trickbot_AT_2147766777_0
         $x_1_11 = "/%s/%s/5/%s/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -6237,6 +6509,7 @@ rule Trojan_Win32_Trickbot_BM_2147767736_0
         $x_1_2 = "\\WindowsSDK7-Samples-master\\WindowsSDK7-Samples-master\\com\\administration\\spy\\Win32\\Release\\ComSpy.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6258,6 +6531,7 @@ rule Trojan_Win32_Trickbot_STB_2147767962_0
         $x_1_2 = {53 68 6f 77 54 69 6d 65 36 34 2e 65 78 65 00 44 6c 6c 52 65 67 69 73 74 65 72 53 65 72 76 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6304,6 +6578,7 @@ rule Trojan_Win32_Trickbot_AA_2147770390_0
         $x_1_2 = "This is a PE executable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6326,6 +6601,7 @@ rule Trojan_Win32_Trickbot_AA_2147770390_1
         $x_1_2 = {8a 0c 32 8b 7c 24 1c 30 0c 38 40 3b 44 24 20 89 44 24 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6347,6 +6623,7 @@ rule Trojan_Win32_Trickbot_RM_2147776224_0
         $x_1_1 = {99 f7 fb 8b 75 ?? 8b c1 8a 1c 31 80 c2 4f 32 da 47 88 1c 31 b9 05 00 00 00 99 f7 f9 89 7d ?? 85 d2 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6368,6 +6645,7 @@ rule Trojan_Win32_Trickbot_RM_2147776224_1
         $x_1_1 = {03 e8 8d 44 6d ?? 2b d0 a1 ?? ?? ?? ?? 8b d8 0f af d8 8b c1 03 c2 8a 14 03 8b 44 24 ?? 8a 18 32 da 8b 54 24 ?? 88 18 8b 44 24 ?? 40 3b c2 89 44 24 ?? 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6390,6 +6668,7 @@ rule Trojan_Win32_Trickbot_RM_2147776224_2
         $x_1_2 = "DHKW%a)TEPwx%Kxav!QxrYAwtSBQjnNS@?hJFINLPbbvm7CN!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6413,6 +6692,7 @@ rule Trojan_Win32_Trickbot_RM_2147776224_3
         $x_1_3 = "6IhN9GDr#aK+asK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6438,6 +6718,7 @@ rule Trojan_Win32_Trickbot_RM_2147776224_4
         $x_1_5 = "SetWindowsHookExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6460,6 +6741,7 @@ rule Trojan_Win32_Trickbot_RM_2147776224_5
         $x_1_2 = "x4NLsgxS#*JwG9__hTI!koRqc67eLd7d)hHOrXlHL8TX+yq>2Oyw95iFMCyI>Uy+LprZ(!li)Is+KRPwIZzz_3Dun?f4ZUq_?V" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6490,6 +6772,7 @@ rule Trojan_Win32_Trickbot_RM_2147776224_6
         $x_1_10 = "UnhookWindowsHookEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6511,6 +6794,7 @@ rule Trojan_Win32_Trickbot_RTA_2147777011_0
         $x_1_1 = {99 bf ab 05 00 00 f7 ff 80 c2 3d 85 f6 76 ?? 8a 01 32 c2 02 c2 88 01 83 c1 01 83 ee 01 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6533,6 +6817,7 @@ rule Trojan_Win32_Trickbot_RTA_2147777011_1
         $x_1_2 = "j<C*1rX&E59IqC2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6555,6 +6840,7 @@ rule Trojan_Win32_Trickbot_RTA_2147777011_2
         $x_1_2 = "y3fp#<IN6ZpA^)T" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6576,6 +6862,7 @@ rule Trojan_Win32_Trickbot_RF_2147777854_0
         $x_1_1 = {8b df 2b da 3b d9 72 ?? ff 15 ?? ?? ?? ?? eb ?? ff 15 ?? ?? ?? ?? 8b d8 8d 45 ?? 50 ff 15 ?? ?? ?? ?? 8b 0e 8b 51 0c 88 04 1a b8 01 00 00 00 03 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6597,6 +6884,7 @@ rule Trojan_Win32_Trickbot_RF_2147777854_1
         $x_1_1 = {33 d2 f7 35 ?? ?? ?? ?? 8d 45 ?? 0f af 05 ?? ?? ?? ?? 03 ea 03 c5 8b 6c 24 ?? 8a 14 08 8b 44 24 ?? 8a 1c 28 32 da 8b 54 24 ?? 88 1c 28 40 3b c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6618,6 +6906,7 @@ rule Trojan_Win32_Trickbot_RTH_2147777879_0
         $x_1_1 = {33 d0 8b 4d ?? 2b 4d ?? 0f b6 c1 83 ?? 20 33 d0 8b 4d ?? 88 11 8b 55 ?? 03 55 ?? 89 55 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6640,6 +6929,7 @@ rule Trojan_Win32_Trickbot_RTH_2147777879_1
         $x_1_2 = "8E15Ast2R)t1ZBM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6663,6 +6953,7 @@ rule Trojan_Win32_Trickbot_RTH_2147777879_2
         $x_1_3 = "FWSe8&OO1oB3oCXF@+6Uiw&1HzKR)(3n7fqPQcFqUZ7erO6" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -6707,6 +6998,7 @@ rule Trojan_Win32_Trickbot_RTH_2147777879_3
         $x_1_21 = "GetMonitorInfoA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -6733,6 +7025,7 @@ rule Trojan_Win32_Trickbot_RFA_2147777938_0
         $x_1_2 = "ZM?JgElb*Rha!+Z" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6757,6 +7050,7 @@ rule Trojan_Win32_Trickbot_RTC_2147778671_0
         $x_5_4 = "msuyDCYjF&IQ4EY" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -6782,6 +7076,7 @@ rule Trojan_Win32_Trickbot_RW_2147778722_0
         $x_1_1 = {03 c1 8b 4d ?? 8b 09 8a 0c 39 02 0d ?? ?? ?? ?? 30 08 8b 0d ?? ?? ?? ?? 0f af 0d ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? ff 45 ?? 8b c6 2b c1 6b c0 70 03 45 ?? 39 45 ?? 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6808,6 +7103,7 @@ rule Trojan_Win32_Trickbot_RW_2147778722_1
         $x_1_6 = "GetMonitorInfoA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -6833,6 +7129,7 @@ rule Trojan_Win32_Trickbot_RW_2147778722_2
         $x_1_2 = "#a)F&SPfcEgrGtFc4trjy5Js57!wMAlsL?0dlJAG5>bSGrbK7@u3saXllteQ1^*qjW*5Hz&DVPPi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6855,6 +7152,7 @@ rule Trojan_Win32_Trickbot_RW_2147778722_3
         $x_1_2 = "1P+3FN?fe(EAiBbIV%qTj%Aj_LcB&s2pK9yYh#rIH<mIM&bX*m!^(p&ul^Q#*9>xBgam)3dYyHo^Du$F>z" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6882,6 +7180,7 @@ rule Trojan_Win32_Trickbot_RW_2147778722_4
         $x_1_7 = "4l2a%8XzeOb8VG(" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -6907,6 +7206,7 @@ rule Trojan_Win32_Trickbot_VIS_2147780971_0
         $x_1_1 = {8b 45 0c 8b 4d f8 8a 14 33 03 c1 83 c4 0c 30 10 41 3b 4d 10 89 4d f8 72 9f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6928,6 +7228,7 @@ rule Trojan_Win32_Trickbot_VIS_2147780971_1
         $x_1_1 = {8a 04 2e 88 04 33 88 0c 2e 0f b6 04 33 0f b6 c9 03 c1 33 d2 f7 35 ?? ?? ?? ?? 33 c9 33 c0 8b 44 24 10 8a 0c 38 8a 14 32 32 ca 88 0c 38 8b 4c 24 20 40 3b c1 89 44 24 10 72 a3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6952,6 +7253,7 @@ rule Trojan_Win32_Trickbot_M_2147783204_0
         $x_1_4 = "Hey, I miss?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6974,6 +7276,7 @@ rule Trojan_Win32_Trickbot_Z_2147783779_0
         $x_1_2 = {c1 eb 18 83 e3 3f 8b c3 8b cb d1 e8 23 ce 0f b6 c0 23 c6 c1 e1 05 c1 e0 04 0b c8 8b c3 c1 e8 02 0f b6 c0 23 c6 c1 e0 03 0b c8 8b c3 c1 e8 03 0f b6 c0 23 c6 c1 e0 02 0b c8 8b c3 c1 e8 04 0f b6 c0 23 c6 0b c8 c1 eb 05 0f b6 c3 23 c6 03 c0 5f 0b c8 39 35 60 71 2b 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6996,6 +7299,7 @@ rule Trojan_Win32_Trickbot_EC_2147784097_0
         $x_1_2 = {8d 46 01 33 d2 f7 35 ?? ?? ?? ?? 8b f2 33 d2 8a 1c 0e 8b c3 88 5c 24 ?? 25 ff 00 00 00 03 c7 f7 35 ?? ?? ?? ?? 8b fa 8b 54 24 14 81 e2 ff 00 00 00 8a 04 0f 88 04 0e 33 c0 88 1c 0f 8a 04 0e 03 c2 33 d2 f7 35 28 81 01 10 a1 ?? ?? ?? ?? 2b d0 8b 44 24 ?? 8a 14 0a 8a 1c 28 32 da 88 1c 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7018,6 +7322,7 @@ rule Trojan_Win32_Trickbot_EE_2147787340_0
         $x_1_2 = {6a e0 33 d2 58 f7 f1 3b 45 ?? ?? ?? ?? ?? ?? ?? ?? c7 00 0c 00 00 00 33 c0 5d c3 0f af 4d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7040,6 +7345,7 @@ rule Trojan_Win32_Trickbot_EF_2147787341_0
         $x_1_2 = {8a 1e 8b 7d ?? 0f be 14 30 0f b6 c3 03 fa 33 d2 03 c7 f7 f1 8b 45 ?? 8a 0c 10 88 0e 88 1c 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7061,6 +7367,7 @@ rule Trojan_Win32_Trickbot_EF_2147787341_1
         $x_1_1 = {6b c0 2f 83 c0 47 99 6a 7f 59 f7 f9 88 55 ?? 33 c0 40 6b c0 03 0f b6 80 ?? ?? ?? ?? 6b c0 2f 83 c0 47 99 6a 7f 59 f7 f9 88 55 ?? 33 c0 40 c1 e0 02 0f b6 80 ?? ?? ?? ?? 6b c0 2f 83 c0 47 99 6a 7f 59 f7 f9 88 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7082,6 +7389,7 @@ rule Trojan_Win32_Trickbot_EH_2147787342_0
         $x_1_1 = {0f af d5 0f af d8 0f af d5 2b da 33 d2 8a 14 0f 83 eb 02 0f af d8 33 c0 8a 04 0e 03 c2 33 d2 f7 35 ?? ?? ?? ?? 8b 44 24 ?? 03 da 2b dd 8b 2d ?? ?? ?? ?? 03 dd 8a 14 0b 8a 18 32 da 8b 54 24 ?? 88 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7103,6 +7411,7 @@ rule Trojan_Win32_Trickbot_EH_2147787342_1
         $x_1_1 = {c1 e1 06 2b c1 89 45 ?? 8b 55 ?? 8b 45 ?? 03 42 ?? 8b 0d ?? ?? ?? ?? 69 c9 f8 00 00 00 2b c1 8b 15 ?? ?? ?? ?? 69 d2 f8 00 00 00 2b c2 8b 0d ?? ?? ?? ?? 69 c9 f8 00 00 00 03 c1 89 45 ?? 8b 55 ?? 8b 42 ?? 03 05 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 0f af 0d ?? ?? ?? ?? 2b c1 89 45 f0 8b 55 ?? 03 55 ?? ?? ?? ?? ?? ?? 6b c0 28 03 d0 8b 0d ?? ?? ?? ?? 0f af 0d ?? ?? ?? ?? 6b c9 28 2b d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7126,6 +7435,7 @@ rule Trojan_Win32_Trickbot_AO_2147788125_0
         $x_1_3 = {0c 8b c5 b9 ?? 00 00 00 c1 e1 02 2b c1 8b 00 89 45 ?? 6a ?? 59 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7152,6 +7462,7 @@ rule Trojan_Win32_Trickbot_AP_2147788126_0
         $x_1_6 = "CreateObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7174,6 +7485,7 @@ rule Trojan_Win32_Trickbot_CI_2147788494_0
         $x_1_2 = {b3 05 8b f2 8a 15 ?? ?? ?? ?? 8a c2 f6 e9 8b 0d ?? ?? ?? ?? 02 c1 f6 eb 8a d8 8a c2 8a d3 8b 1d ?? ?? ?? ?? fe c0 f6 eb 2a d0 2b fb 80 c2 02 8d 2c 89 8a c2 8a 54 24 ?? f6 e9 02 c2 8b 15 ?? ?? ?? ?? 0f af fa 03 fd 2b fb 83 c7 02 0f af f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7196,6 +7508,7 @@ rule Trojan_Win32_Trickbot_CK_2147788942_0
         $x_1_2 = {33 db 8a e0 c0 e8 02 2a 5c 24 ?? c0 e4 06 2a dc 8a 64 24 ?? f6 db 88 5c 24 ?? 8a f8 80 f7 30 22 f8 88 64 24 ?? c0 e4 04 8a c7 8a dc 80 e7 3c 80 cc 03 f6 d0 f6 d3 0a d8 24 03 0a f8 f6 d3 8a 44 24 ?? 32 e7 0a dc 88 5c 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7218,6 +7531,7 @@ rule Trojan_Win32_Trickbot_CL_2147788967_0
         $x_1_2 = {8b 45 08 03 45 fc 8a 4d fc 88 08 8b 45 fc 33 d2 f7 75 10 8b 45 f4 03 45 fc 8b 4d 0c 8a 14 11 88 10 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7244,6 +7558,7 @@ rule Trojan_Win32_Trickbot_CM_2147789026_0
         $x_1_6 = {6a 40 68 00 10 00 00 [0-6] 6a 00 ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7266,6 +7581,7 @@ rule Trojan_Win32_Trickbot_CM_2147789026_1
         $x_1_2 = {8a 19 0f be 14 08 8b c3 03 f2 25 ff 00 00 00 33 d2 03 c6 f7 f7 8b f2 8a 04 2e 88 01 8b 15 [0-18] 03 c2 8b 15 ?? ?? ?? ?? 03 c2 8d 14 ?? 8b c6 2b c2 88 1c 28 8b 44 24 ?? 8b 3d ?? ?? ?? ?? 40 41 3b c7 89 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7291,6 +7607,7 @@ rule Trojan_Win32_Trickbot_AZ_2147789179_0
         $x_1_5 = "hello heaven" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7316,6 +7633,7 @@ rule Trojan_Win32_Trickbot_CJ_2147794362_0
         $x_1_5 = "003wntczMGclFHx!B#kMi+i" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7338,6 +7656,7 @@ rule Trojan_Win32_Trickbot_CJ_2147794362_1
         $x_1_2 = {03 d0 8b 0d ?? ?? ?? ?? 0f af 0d ?? ?? ?? ?? 03 d1 a1 ?? ?? ?? ?? 0f af 05 ?? ?? ?? ?? 03 d0 8b 0d ?? ?? ?? ?? 0f af 0d ?? ?? ?? ?? 03 d1 a1 ?? ?? ?? ?? 0f af 05 ?? ?? ?? ?? 03 d0 8b 0d ?? ?? ?? ?? 0f af 0d ?? ?? ?? ?? 03 4d 08 8a 45 fc 88 04 11 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7360,6 +7679,7 @@ rule Trojan_Win32_Trickbot_EK_2147794509_0
         $x_1_2 = {69 c0 f8 00 00 00 03 d0 8b 0d ?? ?? ?? ?? 0f af 0d ?? ?? ?? ?? 69 c9 f8 00 00 00 03 d1 a1 ?? ?? ?? ?? 0f af 05 ?? ?? ?? ?? 69 c0 f8 00 00 00 03 d0 8b 0d ?? ?? ?? ?? 0f af 0d ?? ?? ?? ?? 69 c9 f8 00 00 00 03 d1 89 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7381,6 +7701,7 @@ rule Trojan_Win32_Trickbot_HD_2147795727_0
         $x_1_1 = {03 45 f8 03 c2 0f b6 14 33 89 45 08 8b 45 fc 0f b6 04 30 03 c2 33 d2 f7 35 ?? ?? ?? ?? 58 2b 05 ?? ?? ?? ?? 0f af c1 0f af c1 48 0f af c1 03 fa 03 c7 8a 0c 30 8b 45 08 30 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7402,6 +7723,7 @@ rule Trojan_Win32_Trickbot_EV_2147796149_0
         $x_1_1 = {c1 e0 02 2b d0 03 d3 88 0c 32 8b 2d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b cd 0f af cd 8b d1 0f af 0d ?? ?? ?? ?? 2b d0 0f af d5 8d 04 42 2b 05 ?? ?? ?? ?? 03 44 24 10 8b 54 24 20 03 c2 0f b6 14 37 89 44 24 14 0f b6 04 33 03 c2 33 d2 f7 35 ?? ?? ?? ?? 8b 44 24 14 41 0f af cd 8b 2d ?? ?? ?? ?? 2b d1 03 d5 8a 0c 32 8a 10 32 d1 8b 4c 24 24 88 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7424,6 +7746,7 @@ rule Trojan_Win32_Trickbot_BF_2147796248_0
         $x_1_2 = {2b d1 8b c1 0f af d1 0f af c1 0f af d1 8d 2c f6 89 44 24 24 2b d5 8b 2d ?? ?? ?? ?? 03 54 24 14 03 c5 d1 e0 8b 6c 24 10 2b c6 0f be 14 1a 8d 04 43 03 ea 33 d2 0f b6 04 38}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7445,6 +7768,7 @@ rule Trojan_Win32_Trickbot_FA_2147796831_0
         $x_1_1 = {8d 41 01 b9 4b 40 00 00 f7 f1 bb 4b 40 00 00 8b ca 0f b6 04 31 33 d2 03 c7 bf 4b 40 00 00 f7 f7 8b fa 8b 55 f8 8a 14 0a 8a 04 37 88 04 31 88 14 37 0f b6 04 31 0f b6 d2 03 c2 33 d2 f7 f3 8b 45 fc 40 89 45 fc 2b 15 ?? ?? ?? ?? 2b 15 ?? ?? ?? ?? 2b 15 ?? ?? ?? ?? 03 55 f4 8a 1c 32 8b 55 f0 30 5c 02 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7467,6 +7791,7 @@ rule Trojan_Win32_Trickbot_FB_2147796832_0
         $x_1_2 = {81 ea 21 87 22 ee 83 ea 01 81 c2 21 87 22 ee 0f af c2 83 e0 01 83 f8 00 0f 94 c3 83 f9 0a 0f 9c c7 88 d8 34 ff 88 fc 80 f4 ff b1 01 80 f1 01 88 c5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7488,6 +7813,7 @@ rule Trojan_Win32_Trickbot_FD_2147796925_0
         $x_1_1 = {6b db 11 89 86 c0 05 00 00 29 d8 8b 9e c0 05 00 00 81 eb 61 47 ea e3 01 d8 8b 9e c0 05 00 00 29 c3 81 eb 06 0a 6d 5a 83 eb d5 81 c3 06 0a 6d 5a 8b 86 c0 05 00 00 2d 61 47 ea e3 01 c3 89 d8 89 96 bc 05 00 00 99 bb 7f 00 00 00 f7 fb 88 17 8b 96 20 06 00 00 8a 52 01 88 96 8b 06 00 00 89 be 84 06 00 00 0f b6 96 8b 06 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7511,6 +7837,7 @@ rule Trojan_Win32_Trickbot_FC_2147797017_0
         $x_1_3 = {89 c2 81 c2 e2 47 3e 9e 83 ea 01 81 ea e2 47 3e 9e 0f af c2 83 e0 01 83 f8 00 0f 94 c0 83 f9 0a 0f 9c c4 88 c1 20 e1 30 e0 08 c1 f6 c1 01 ba 3c 3b fb 29 be 0b 74 9a 3c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7532,6 +7859,7 @@ rule Trojan_Win32_Trickbot_GD_2147799296_0
         $x_10_1 = {0f b6 08 0f b6 55 ?? 33 ca 8b 45 ?? 2b 45 ?? 0f b6 d0 81 e2 e0 00 00 00 33 ca 8b 45 ?? 88 08 8b 4d ?? 03 4d ?? 89 4d ?? eb 3c 00 8b 55 ?? 3b 55 ?? 73}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7553,6 +7881,7 @@ rule Trojan_Win32_Trickbot_AB_2147799488_0
         $x_1_1 = {0b c8 88 4d [0-8] e8 ?? ?? ?? ?? 83 c4 ?? 0f b6 55 ?? 0f b6 45 ?? 33 c2 88 45 [0-8] e8 ?? ?? ?? ?? 83 c4 ?? 8a 4d ?? 80 c1 ?? 88 4d ?? 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 83 c4 ?? 8b 55 ?? 8a 45 ?? 88 02 70 00 0f b6 45 ?? 0f b6 4d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7574,6 +7903,7 @@ rule Trojan_Win32_Trickbot_GGL_2147806115_0
         $x_10_1 = {04 70 30 3f a0 ?? ?? ?? ?? 23 22 c4 00 30 0d ?? ?? ?? ?? e6 8c 02 e4 6d 12 11 48 38 21 40 73 bc}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7597,6 +7927,7 @@ rule Trojan_Win32_Trickbot_2147807557_0
         $x_1_2 = "bijaweed.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7620,6 +7951,7 @@ rule Trojan_Win32_Trickbot_GML_2147807959_0
         $x_5_3 = {83 c3 01 8b 03 41 38 d0 75 f6}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7641,6 +7973,7 @@ rule Trojan_Win32_Trickbot_AT_2147819740_0
         $x_2_1 = {6a 0a 33 d2 5b f7 f3 8b 45 08 8a 54 0a 04 30 54 08 0e 40 3b 07 89 45 08 72 e6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7662,6 +7995,7 @@ rule Trojan_Win32_Trickbot_MA_2147834234_0
         $x_10_1 = {8b 14 03 83 c3 04 8b 46 2c 0f af 56 54 05 0e 19 07 00 09 46 18 8b 46 70 8b 8e 94 00 00 00 88 14 01 ff 46 70 8b 46 20}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7683,6 +8017,7 @@ rule Trojan_Win32_Trickbot_RPP_2147840362_0
         $x_1_1 = {6a 01 53 53 6a 00 ff d6 6a 00 53 53 6a 00 ff d6 33 d2 8b c7 6a 64 59 f7 f1 8a 44 14 18 30 04 2f 47 81 ff 00 d0 07 00 7c d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7704,6 +8039,7 @@ rule Trojan_Win32_Trickbot_ASER_2147900219_0
         $x_2_1 = {05 00 00 80 34 1e ?? 68 ?? ?? ?? 00 e8 ?? ?? ?? 00 80 04 1e ?? 68 ?? ?? ?? 00 e8 ?? ?? ?? 00 80 04 1e ?? 83 c4 40 68 ?? ?? ?? 00 e8 ?? ?? ?? 00 80 04 1e ?? 83 c4 04 46 3b f7 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7726,6 +8062,7 @@ rule Trojan_Win32_Trickbot_ASES_2147900220_0
         $x_1_2 = "Z81xbyuAua" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7748,6 +8085,7 @@ rule Trojan_Win32_Trickbot_ASET_2147900235_0
         $x_1_2 = "Z81xbyuAua" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7769,6 +8107,7 @@ rule Trojan_Win32_Trickbot_MKV_2147929220_0
         $x_5_1 = {30 c8 8b 4d f0 88 01 8b 45 ?? 0f b6 00 8b 4d ?? fe c0 88 01 8b 45 ?? 0f b6 00 8b 4d d4 88 01 8b 45 ?? 8b 45 d0 8b 45 d0 8b 45 d0 b8 49 d2 18 71 e9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

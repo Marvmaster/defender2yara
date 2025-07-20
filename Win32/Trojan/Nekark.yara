@@ -17,6 +17,7 @@ rule Trojan_Win32_Nekark_GPA_2147895463_0
         $x_2_2 = "JABoAG0ARwB1AFgA" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Nekark_NK_2147915401_0
         $x_1_2 = "Illkjmuueghu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Nekark_NK_2147915401_1
         $x_2_2 = {e8 8f 01 00 00 8b f8 59 85 ff 74 59 c7 07 ?? ?? 00 00 83 c7 08 85 ff 74 4c 33 c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_Nekark_MBV_2147938050_0
         $x_2_2 = "DO YOU WANT TO EXECUTE THIS MALWARE" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

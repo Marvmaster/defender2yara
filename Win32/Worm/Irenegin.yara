@@ -22,6 +22,7 @@ rule Worm_Win32_Irenegin_A_2147615825_0
         $x_1_8 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))

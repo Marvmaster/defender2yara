@@ -21,6 +21,7 @@ rule Ransom_Win32_Mendusa_A_2147744241_0
         $x_1_6 = "wbadmin DELETE SYSTEMSTATEBACKUP -deleteOldest" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

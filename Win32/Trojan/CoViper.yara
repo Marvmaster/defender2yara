@@ -16,6 +16,7 @@ rule Trojan_Win32_CoViper_RDA_2147896828_0
         $x_2_1 = {88 85 77 fe ff ff 0f b7 95 2c fd ff ff 0f b6 85 23 fe ff ff 33 c2 88 85 23 fe ff ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -15,6 +15,7 @@ rule VirTool_WinNT_Pitou_A_2147688428_0
         $x_1_1 = {9c 56 57 50 53 51 52 e8 ?? ?? ?? ?? 8f 46 08 8f 46 04 8f 46 0c 8f 06 8f 46 1c 8f 46 18 8f 46 20 58 3b 05 80 54 47 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule VirTool_WinNT_Pitou_B_2147688430_0
         $x_1_3 = {66 c1 c1 08 0f b7 c9 81 e9 ?? ?? ?? ?? 0f 84 ?? ?? ?? ?? 83 e9 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

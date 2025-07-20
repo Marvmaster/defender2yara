@@ -20,6 +20,7 @@ rule Trojan_Win32_Miner_M_2147821695_0
         $x_1_5 = "taskkill /F /IM chrome.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

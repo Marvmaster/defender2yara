@@ -16,6 +16,7 @@ rule Trojan_WinNT_Necurs_A_162163_0
         $x_1_2 = {83 65 fc 00 8b 75 fc 8b 4d 08 8b 45 f8 f7 de 1b f6 81 e6 f3 ff ff 3f 81 c6 0d 00 00 c0 32 d2 89 71 18 89 41 1c ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

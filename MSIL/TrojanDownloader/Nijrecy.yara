@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_Nijrecy_A_2147637636_0
         $x_1_3 = "[##]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

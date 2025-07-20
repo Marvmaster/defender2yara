@@ -17,6 +17,7 @@ rule Trojan_Win32_Stealerium_AO_2147840219_0
         $x_2_2 = {13 1e 2a ee 49 84 3a c9 33 8a 61 a5 17 cc 10 bf 0e 15 53 9c b6 97 8c d5 98 84 e2 29 24 38}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Backdoor_Win32_Ecltys_A_2147656933_0
         $x_1_2 = {00 5c 5c 2e 5c 70 69 70 65 5c 73 73 6e 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

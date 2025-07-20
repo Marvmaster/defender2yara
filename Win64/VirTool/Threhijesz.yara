@@ -18,6 +18,7 @@ rule VirTool_Win64_Threhijesz_A_2147918374_0
         $x_1_3 = {48 8b 85 10 04 00 00 48 8b d6 83 e2 01 c7 44 24 60 0b 00 10 00 48 8b ce 48 d1 e9 48 ff c8 48 23 c8 48 8b 85 08 04 00 00 48 8b 0c c8 4c 8b 34 d1 49 8b ce [0-18] 49 8b ce}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

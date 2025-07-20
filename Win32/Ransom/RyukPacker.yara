@@ -26,6 +26,7 @@ rule Ransom_Win32_RyukPacker_2147775361_0
         $x_1_11 = "GetUserNames" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

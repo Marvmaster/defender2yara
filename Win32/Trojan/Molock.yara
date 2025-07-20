@@ -19,6 +19,7 @@ rule Trojan_Win32_Molock_B_2147716334_0
         $x_1_5 = "5F99C1642A2F4e03850721B4F5D7C3F8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

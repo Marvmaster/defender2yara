@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Cerber_A_2147710747_0
         $x_1_7 = {50 65 72 6e 67 72 43 65 62 70 72 66 66 4e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule TrojanDownloader_Win32_Cerber_A_2147711326_0
         $x_1_6 = "winmgr.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or

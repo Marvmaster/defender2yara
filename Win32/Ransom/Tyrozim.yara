@@ -17,6 +17,7 @@ rule Ransom_Win32_Tyrozim_A_2147726242_0
         $x_1_3 = {81 fb 41 75 74 68 0f 95 c0 89 c6 81 fa 65 6e 74 69 0f 95 c0 09 c6 81 f9 63 41 4d 44 0f 95 c0 09 c6 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

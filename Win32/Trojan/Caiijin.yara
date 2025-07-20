@@ -18,6 +18,7 @@ rule Trojan_Win32_Caiijin_17727_0
         $x_1_4 = "12365484-96a1-6974-3269-123555124655" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Caiijin_17727_1
         $x_1_4 = "bhobhobbbad" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

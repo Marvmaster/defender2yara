@@ -16,6 +16,7 @@ rule Trojan_MSIL_Webshell_AW_2147846437_0
         $x_1_1 = {13 05 11 05 02 6f 16 00 00 0a 6f 4c 00 00 0a 26 11 05 11 04 6f 4c 00 00 0a 26 11 05 09 6f 4c 00 00 0a 26 11 05 6f 4d 00 00 0a 26 11 04 6f 4e 00 00 0a 13 06 02 6f 16 00 00 0a 6f 4f 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Webshell_AW_2147846437_1
         $x_1_3 = "payload" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_Webshell_AB_2147850013_0
         $x_5_2 = {28 10 00 00 0a 28 10 00 00 0a 28 10 00 00 0a 72 ?? ?? ?? ?? 28 11 00 00 0a 6f 12 00 00 0a 28 11 00 00 0a 6f 12 00 00 0a 28 11 00 00 0a 6f 12 00 00 0a 0a 72 ?? ?? ?? ?? 0b 73 13 00 00 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_MSIL_Webshell_RPZ_2147888263_0
         $x_1_8 = "tools/download.ashx" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule Trojan_MSIL_Webshell_RPX_2147888806_0
         $x_1_9 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +151,7 @@ rule Trojan_MSIL_Webshell_MBER_2147895850_0
         $x_1_8 = {7e 00 2f 00 43 00 6f 00 6d 00 6d 00 6f 00 6e 00 2f 00 69 00 61 00 62 00 78 00 65 00 64 00 74 00 6c 00 74 00 74 00 65 00 78 00 2e 00 61 00 73 00 70 00 78 00 00 03 6b 00 00 21 38 00 65 00 64 00 62 00 32 00 33 00 31 00 36 00 30 00 64 00 31 00 35 00 37 00 31 00 61 00 30 00 00 03 55 00 00 35 7e 00 2f 00 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -170,6 +176,7 @@ rule Trojan_MSIL_Webshell_AMAF_2147900795_0
         $x_1_1 = {0a 25 16 9a 74 ?? 00 00 01 fe ?? ?? ?? 25 17 9a 74 ?? 00 00 01 fe ?? ?? ?? 25 19 9a 17 28 ?? 00 00 0a 0b 26 28 ?? 00 00 0a 26 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +198,7 @@ rule Trojan_MSIL_Webshell_SPDO_2147908218_0
         $x_1_1 = {03 17 8d 50 00 00 01 0d 09 16 1f 2c 9d 09 6f ?? ?? ?? 0a 0a 16 0b 2b 25}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +226,7 @@ rule Trojan_MSIL_Webshell_VG_2147922486_0
         $x_1_7 = "d0079d9c035490ee" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -246,6 +255,7 @@ rule Trojan_MSIL_Webshell_GV_2147922487_0
         $x_1_8 = "Login.aspx" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -270,6 +280,7 @@ rule Trojan_MSIL_Webshell_AMI_2147922623_0
         $x_1_1 = {70 0a 02 6f ?? 00 00 0a 6f ?? 00 00 0a 02 6f ?? 00 00 0a 6f ?? 00 00 0a 6f ?? 00 00 0a 6f ?? 00 00 0a 0b 28 ?? 00 00 0a 06 6f ?? 00 00 0a 0c 73 ?? 00 00 0a 08 08 6f ?? 00 00 0a 07 16 02 6f 0e 00 00 0a 6f ?? 00 00 0a 6f ?? 00 00 0a 6f ?? 00 00 0a 0d 02 6f ?? 00 00 0a 6f ?? 00 00 0a 72 ?? 00 00 70 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -292,6 +303,7 @@ rule Trojan_MSIL_Webshell_MBWA_2147926109_0
         $x_1_2 = "202cb962ac59075b" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -313,6 +325,7 @@ rule Trojan_MSIL_Webshell_EAAU_2147929830_0
         $x_5_1 = {00 11 0b 11 0c 11 0d 6f 92 00 00 0a 6f 23 00 00 0a 72 19 16 00 70 28 24 00 00 0a 6f 93 00 00 0a 26 00 11 0d 17 58 13 0d 11 0d 11 0c 6f 94 00 00 0a fe 04 13 10 11 10 2d c7}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -335,6 +348,7 @@ rule Trojan_MSIL_Webshell_MBS_2147934926_0
         $x_1_2 = {17 59 11 20 20 72 06 00 00 95 5f 11 20 20 9e 0d 00 00 95 61 58 80 1b 00 00 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -356,6 +370,7 @@ rule Trojan_MSIL_Webshell_MBT_2147934981_0
         $x_1_1 = {17 59 11 20 20 30 0e 00 00 95 5f 11 20 20 ef 05 00 00 95 61 59}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -384,6 +399,7 @@ rule Trojan_MSIL_Webshell_AWB_2147944502_0
         $x_1_8 = "Process Kill Success" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -418,6 +434,7 @@ rule Trojan_MSIL_Webshell_GVA_2147946063_0
         $x_1_14 = "grenhy" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

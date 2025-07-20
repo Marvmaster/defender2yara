@@ -16,6 +16,7 @@ rule PWS_Win32_Waimup_A_2147613010_0
         $x_1_2 = {6a 02 6a 00 68 ef fe ff ff 53 e8 ?? ?? ?? ?? 8d 45 ?? e8 ?? ?? ?? ?? 6a 00 68 fc cd 40 00 68 11 01 00 00 a1 ?? ?? ?? ?? 50 53 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

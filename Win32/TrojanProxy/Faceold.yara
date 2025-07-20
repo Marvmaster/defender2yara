@@ -25,6 +25,7 @@ rule TrojanProxy_Win32_Faceold_A_2147630501_0
         $x_1_10 = "5e7e8100" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

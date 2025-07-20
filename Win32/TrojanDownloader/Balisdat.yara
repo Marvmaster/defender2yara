@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Balisdat_A_2147639508_0
         $x_1_4 = {68 74 74 70 3a 2f 2f [0-48] 2e 67 69 66 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Balisdat_B_2147652410_0
         $x_1_6 = {3a 5c 77 69 6e 5f 68 73 74 2e 65 78 65 [0-5] 68 74 74 70 3a 2f 2f [0-37] 2f 77 69 6e 5f 68 73 74 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

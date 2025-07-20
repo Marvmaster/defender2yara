@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Karnos_A_2147661314_0
         $x_1_3 = {62 69 6e 67 2e 63 6f 6d 00 00 00 00 67 6f 6f 67 6c 65 00 00 73 6f 67 6f 75 2e 63 6f 6d 00 00 00 73 6f 73 6f 2e 63 6f 6d 00 00 00 00 62 61 69 64 75 2e 63 6f 6d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanSpy_Win32_Karnos_B_2147686817_0
         $x_1_5 = {74 61 6f 6a 69 6e 2e 63 6f 6d 2f 70 6c 75 67 69 6e 2f 61 63 63 65 70 74 2f 73 65 61 72 63 68 6c 6f 67 [0-16] 64 61 74 61 3d 25 73 00 7b 22 68 6f 73 74 22 3a 25 75 2c [0-32] 22 6b 65 79 22 3a 22 25 73 22 2c 20 22 69 65 6e 61 6d 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

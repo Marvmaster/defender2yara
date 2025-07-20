@@ -21,6 +21,7 @@ rule Trojan_Win32_SalatStealer_KAT_2147946544_0
         $x_1_6 = "salat/main" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

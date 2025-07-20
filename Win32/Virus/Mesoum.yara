@@ -16,6 +16,7 @@ rule Virus_Win32_Mesoum_2147616159_0
         $x_1_2 = {31 14 24 54 ff d0 59 59 61 e8 00 00 00 00 59 81 ?? ?? ?? ff ff 8b 11 ff d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

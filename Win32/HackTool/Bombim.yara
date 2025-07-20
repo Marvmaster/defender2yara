@@ -18,6 +18,7 @@ rule HackTool_Win32_Bombim_B_2147710302_0
         $x_1_3 = {ba e4 d5 a8 b5 c4 c4 da c8 dd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

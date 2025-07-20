@@ -46,6 +46,7 @@ rule VirTool_WinNT_Protmin_A_2147572410_0
         $x_16_31 = {8b 45 08 c7 06 70 00 00 00 c7 46 04 ?? ?? 01 00 c7 46 08 ?? ?? 01 00 c7 46 0c ?? ?? 01 00 c7 46 10 ?? ?? 01 00 c7 46 14 ?? ?? 01 00 c7 46 18 ?? ?? 01 00 c7 46 1c ?? ?? 01 00 c7 46 20 ?? ?? 01 00 c7 46 24 ?? ?? 01 00 c7 46 28}  //weight: 16, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_3_*) and 10 of ($x_2_*))) or
             ((6 of ($x_3_*) and 9 of ($x_2_*))) or
@@ -590,6 +591,7 @@ rule VirTool_WinNT_Protmin_B_2147572770_0
         $x_10_21 = {8b 55 cc 83 c2 01 89 55 cc 8b 45 dc 8b 4d cc 3b 48 18 73 68 8b 55 cc 8b 45 d8 0f bf 0c 50 89 4d c8 8b 55 e0 2b 55 e8 8b 45 c8 8b 4d d0 39 14 81 72 14 8b 55 e0 03 55 e4 2b 55 e8}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_7_*) and 2 of ($x_5_*) and 1 of ($x_4_*) and 7 of ($x_2_*))) or
             ((1 of ($x_7_*) and 3 of ($x_5_*) and 7 of ($x_2_*))) or
@@ -768,6 +770,7 @@ rule VirTool_WinNT_Protmin_C_2147593595_0
         $x_10_8 = {f2 ae f7 d1 83 c1 08 51 6a 01 ff [0-5] 8b f0 33 c0 3b f0 74 61 8b 7c 24 0c 53 50 50 50 bb [0-5] 50 53 89 3e ff 15 [0-5] c1 ef 02 81 e7 ff 00 00 00 8d 56 08 6a 00 53}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_5_*))) or
             ((1 of ($x_10_*) and 4 of ($x_5_*))) or

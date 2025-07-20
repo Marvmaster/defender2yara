@@ -19,6 +19,7 @@ rule Ransom_Win32_Mamona_CCJX_2147938504_0
         $x_1_4 = "CHECK README." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win32_Mamona_DA_2147941222_0
         $x_5_3 = ".HAES" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

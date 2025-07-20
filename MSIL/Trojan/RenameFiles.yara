@@ -17,6 +17,7 @@ rule Trojan_MSIL_RenameFiles_AYA_2147922985_0
         $x_1_2 = "$2d4dbd13-c3da-4242-8142-73f7cffb5d70" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_RenameFiles_AYB_2147922986_0
         $x_1_5 = "ChangeFileExtensions" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

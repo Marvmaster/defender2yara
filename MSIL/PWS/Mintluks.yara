@@ -18,6 +18,7 @@ rule PWS_MSIL_Mintluks_A_2147707664_0
         $x_5_4 = {02 91 20 3f ff ff ff 5f 1f 18 62 0a 06 7e ?? ?? ?? ?? 02 17 58 91 1f 10 62 60 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule PWS_MSIL_Mintluks_B_2147726628_0
         $x_1_4 = "DelMe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

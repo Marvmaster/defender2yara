@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Tunahlp_A_2147648826_0
         $x_1_4 = {b0 d6 3e 38 b1 1b 8a f7 cc 8d 40 77 4a 41 e8 d4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

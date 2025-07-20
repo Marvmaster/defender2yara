@@ -21,6 +21,7 @@ rule Trojan_Win32_MantisGulf_A_2147945679_0
         $x_1_6 = {5b 21 21 5d 20 41 6e 20 65 72 72 6f 72 20 6f 63 63 75 72 72 65 64 20 77 68 69 6c 65 20 65 73 74 61 62 6c 69 73 68 69 6e 67 20 74 68 65 20 63 6f 6e 6e 65 63 74 69 6f 6e 3a 20 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_Win32_MantisGulf_B_2147945680_0
         $x_1_10 = {2d 00 75 00 6e 00 63 00 5f 00 61 00 75 00 74 00 68 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 7 of ($x_1_*))) or
             (all of ($x*))

@@ -21,6 +21,7 @@ rule HackTool_Win32_Oylecann_A_2147641076_0
         $x_1_7 = "LOIC.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

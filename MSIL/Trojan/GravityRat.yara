@@ -32,6 +32,7 @@ rule Trojan_MSIL_GravityRat_K_2147769686_0
         $x_5_17 = "SELECT * FROM AntiVirusProduct" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

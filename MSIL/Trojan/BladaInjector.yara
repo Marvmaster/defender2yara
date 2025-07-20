@@ -18,6 +18,7 @@ rule Trojan_MSIL_BladaInjector_2147743188_0
         $x_1_3 = {61 03 61 0a 10 00 02 20 ?? ?? ?? ?? 61 03 61 0a 7e 03 00 00 04 0c 08 74 ?? 00 00 1b 25 06 93 0b 06 18 58 93 07 61 0b 17 13 0e 38 7d ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

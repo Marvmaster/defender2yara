@@ -19,6 +19,7 @@ rule Trojan_Win32_Crysche_A_2147607556_0
         $x_1_5 = {2a d5 8b 14 ab a2 ce 11 b1 1f 00 aa 00 53 05 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

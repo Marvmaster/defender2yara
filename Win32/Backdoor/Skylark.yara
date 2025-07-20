@@ -17,6 +17,7 @@ rule Backdoor_Win32_Skylark_A_2147643370_0
         $x_4_3 = "SkylarkCfg" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

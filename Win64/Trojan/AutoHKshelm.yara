@@ -22,6 +22,7 @@ rule Trojan_Win64_AutoHKshelm_RB_2147844085_0
         $x_1_7 = "FileRemoveDir, %AppData%\\PerfLogs\\PerfLogs, 1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

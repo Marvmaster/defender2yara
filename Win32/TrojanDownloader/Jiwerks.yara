@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Jiwerks_A_2147649756_0
         $x_1_3 = "DllMian" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Jiwerks_B_2147654617_0
         $x_1_3 = {3a 2f 2f 36 34 2e 31 32 30 2e 31 38 39 2e 37 30 3a 38 30 38 30 2f 00 00 31 32 33 34 35 36 00 00 ff ff ff ff ?? 00 00 00 [0-60] 2e 65 78 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule TrojanDownloader_Win32_Jiwerks_C_2147658598_0
         $x_1_7 = {61 3d 6f 26 76 3d 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_50_*) and 1 of ($x_1_*))) or
             ((4 of ($x_50_*))) or

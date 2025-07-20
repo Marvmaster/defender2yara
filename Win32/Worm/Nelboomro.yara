@@ -18,6 +18,7 @@ rule Worm_Win32_Nelboomro_B_2147644393_0
         $x_1_4 = {7e 21 81 38 45 78 69 74 75 08 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

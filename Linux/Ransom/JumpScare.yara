@@ -18,6 +18,7 @@ rule Ransom_Linux_JumpScare_A_2147833447_0
         $x_1_4 = "/How To Restore Your Files.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

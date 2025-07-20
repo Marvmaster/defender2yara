@@ -23,6 +23,7 @@ rule Trojan_Win32_AtlantidaStealer_GXA_2147902938_0
         $x_1_8 = "CyanoWallet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

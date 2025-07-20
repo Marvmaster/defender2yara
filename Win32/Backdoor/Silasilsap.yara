@@ -28,6 +28,7 @@ rule Backdoor_Win32_Silasilsap_STE_2147778825_0
         $x_1_14 = "windows.immersiveshell.serviceprovider.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

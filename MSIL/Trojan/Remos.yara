@@ -16,6 +16,7 @@ rule Trojan_MSIL_Remos_AMBA_2147900548_0
         $x_1_1 = {08 11 06 1f 16 5d 91 13 0c 07 11 0a 91 11 07 58 13 0d 11 0b 11 0c 61 13 0e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

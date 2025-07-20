@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Noubule_A_2147626993_0
         $x_1_2 = "%s?mac=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))

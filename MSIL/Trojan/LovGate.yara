@@ -26,6 +26,7 @@ rule Trojan_MSIL_LovGate_KWZ_2147796923_0
         $x_1_11 = "PowerShell" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

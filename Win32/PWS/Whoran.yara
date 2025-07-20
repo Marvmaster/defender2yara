@@ -25,6 +25,7 @@ rule PWS_Win32_Whoran_A_2147583265_0
         $x_1_11 = "&pcname=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
             ((1 of ($x_8_*) and 2 of ($x_1_*))) or

@@ -25,6 +25,7 @@ rule Trojan_MSIL_AxoLocker_AC_2147833581_0
         $x_1_10 = "Wait for my response" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Virus_Win32_Ramnit_2147642440_0
         $x_1_3 = {8b f8 c6 07 2d 47 6a 04 57 ff b5 ?? ?? ff ff 8d 83 64 a7 01 20 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Virus_Win32_Ramnit_EC_2147908291_0
         $x_1_3 = "Srv.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

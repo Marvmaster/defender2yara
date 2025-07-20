@@ -21,6 +21,7 @@ rule Ransom_MSIL_KarmaLock_A_2147718315_0
         $x_1_7 = {57 69 6e 64 6f 77 73 54 75 6e 65 55 70 2e 52 65 73 6f 75 72 63 65 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

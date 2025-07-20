@@ -26,6 +26,7 @@ rule Trojan_Win32_VBKeyLoggerSpy_A_2147754161_0
         $x_1_11 = "]eteleD[" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -57,6 +58,7 @@ rule Trojan_Win32_VBKeyLoggerSpy_B_2147754162_0
         $x_1_11 = "[Delete]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +87,7 @@ rule Trojan_Win32_VBKeyLoggerSpy_RA_2147772780_0
         $x_1_8 = "\\h2.htm" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

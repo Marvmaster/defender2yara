@@ -19,6 +19,7 @@ rule Trojan_Win32_Parsky_A_2147719747_0
         $x_1_4 = {00 26 61 63 63 3d 37 23 23 23 23 23 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Parsky_B_2147726020_0
         $x_2_8 = "info/checkmailp.php" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 2 of ($x_2_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*))) or

@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Ursnif_A_2147573558_0
         $x_1_5 = ".onion/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule TrojanSpy_Win32_Ursnif_B_2147573559_0
         $x_1_5 = {c6 04 03 00 83 7e 10 04 72 ?? 8b 46 ?? 31 03 8b 45 ?? 8b 4d ?? 89 18 8b 46 10 89 01 8b 44 24 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule TrojanSpy_Win32_Ursnif_C_2147573560_0
         $x_1_5 = {c6 04 07 00 83 7e 10 04 72 ?? 8b 46 04 31 07 8b 45 ?? 8b 4d ?? 89 38 8b 46 10 89 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule TrojanSpy_Win32_Ursnif_2147573851_0
         $x_1_5 = {0f 20 c0 25 ff ff fe ff 0f 22 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule TrojanSpy_Win32_Ursnif_D_2147598585_0
         $x_1_1 = {6a 00 e8 85 ff ff ff 8b 4d 0c 83 e9 04 03 4d 08 39 01 75 ?? 8b 55 08 ff 32 8f 45 fc 8b 45 fc 83 c0 10 50 6a 40 8d 87 ?? 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule TrojanSpy_Win32_Ursnif_E_2147605688_0
         $x_1_8 = "options.cgi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -178,6 +184,7 @@ rule TrojanSpy_Win32_Ursnif_F_2147609037_0
         $x_1_10 = {4e 45 57 4f 50 54 53 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -206,6 +213,7 @@ rule TrojanSpy_Win32_Ursnif_G_2147618903_0
         $x_1_1 = {81 78 01 2f 75 70 64 74 09 40 80 78 04 00 75 f0 eb 36 83 c0 06 50 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +241,7 @@ rule TrojanSpy_Win32_Ursnif_D_2147620175_0
         $x_1_8 = "ShellExec_RunDLL \"cmd\" /c start /min powershell iex(" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -262,6 +271,7 @@ rule TrojanSpy_Win32_Ursnif_I_2147630378_0
         $x_1_5 = {53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 49 6e 65 74 44 61 74 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -287,6 +297,7 @@ rule TrojanSpy_Win32_Ursnif_J_2147642198_0
         $x_2_5 = {33 ff 5b 89 01 66 89 ?? ?? 33 d2 69 c0 ?? ?? ?? ?? 05 ?? ?? ?? ?? 88 44 15 ?? 42 83 fa 08 72 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -322,6 +333,7 @@ rule TrojanSpy_Win32_Ursnif_FY_2147647940_0
         $x_1_13 = "legislationname.co.cc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 6 of ($x_1_*))) or
             ((5 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -367,6 +379,7 @@ rule TrojanSpy_Win32_Ursnif_K_2147651192_0
         $x_1_16 = {2f 75 70 64 20 25 6c 75 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -393,6 +406,7 @@ rule TrojanSpy_Win32_Ursnif_FX_2147653931_0
         $x_1_2 = {2f 73 64 20 25 6c 75 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -419,6 +433,7 @@ rule TrojanSpy_Win32_Ursnif_L_2147657143_0
         $x_1_6 = {2f 55 50 44 00 00 00 00 2f 73 64 20 25 6c 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -445,6 +460,7 @@ rule TrojanSpy_Win32_Ursnif_M_2147679126_0
         $x_1_6 = "/it %lu /ge %s /gp %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -467,6 +483,7 @@ rule TrojanSpy_Win32_Ursnif_HB_2147679563_0
         $x_1_3 = {ff 75 08 6a 00 68 00 04 00 00 ff 15 ?? ?? ?? ?? 8b f0 85 f6 74 ?? 8d 45 fc 50 56 ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -492,6 +509,7 @@ rule TrojanSpy_Win32_Ursnif_O_2147684316_0
         $x_1_5 = {5b 72 65 71 75 65 73 74 5d 0a 74 79 70 65 3d 61 73 6b 5f 63 61 6d 70 61 69 67 6e 0a 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -527,6 +545,7 @@ rule TrojanSpy_Win32_Ursnif_P_2147686733_0
         $x_1_11 = {ff 45 f8 33 d1 8a 4d f8 33 d6 d3 ca 8b 4d ec 89 17 83 c7 04 ff 4d f4 75 de}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -558,6 +577,7 @@ rule TrojanSpy_Win32_Ursnif_Q_2147688303_0
         $x_1_11 = "&computer=%s&os=%d.%d&latency=%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -588,6 +608,7 @@ rule TrojanSpy_Win32_Ursnif_HJ_2147691513_0
         $x_1_6 = {49 6e 73 74 61 6c 6c 00 5c 2a 2e 2a 00 5c 2a 2e 65 78 65 00 5c 2a 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -612,6 +633,7 @@ rule TrojanSpy_Win32_Ursnif_R_2147691723_0
         $x_1_4 = {43 8a cb d3 c0 33 c6 33 45 0c 8b f0 89 32 83 c2 04 ff 4d 08 75 d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -636,6 +658,7 @@ rule TrojanSpy_Win32_Ursnif_HM_2147692427_0
         $x_1_5 = "cmd /C \"ipconfig -all > %s\"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -661,6 +684,7 @@ rule TrojanSpy_Win32_Ursnif_HM_2147692427_1
         $x_1_6 = {5c 00 63 00 5f 00 31 00 32 00 35 00 32 00 2e 00 6e 00 6c 00 73 00 00 00 43 00 72 00 65 00 61 00 74 00 65 00 50 00 72 00 6f 00 63 00 65 00 73 00 73 00 4e 00 6f 00 74 00 69 00 66 00 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -688,6 +712,7 @@ rule TrojanSpy_Win32_Ursnif_S_2147692932_0
         $x_1_7 = "/C \"copy \"%s\" \"%s\" /y && \"%s\"\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -719,6 +744,7 @@ rule TrojanSpy_Win32_Ursnif_HN_2147706511_0
         $x_1_12 = {66 81 f9 4a 32 74 12 83 c6 10 0f b7 0e 66 85 c9 75 ee 66 81 3e 4a 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -742,6 +768,7 @@ rule TrojanSpy_Win32_Ursnif_HP_2147707864_0
         $x_1_4 = {44 3a 28 44 3b 4f 49 43 49 3b 47 41 3b 3b 3b 42 47 29 28 44 3b 4f 49 43 49 3b 47 41 3b 3b 3b 41 4e 29 28 41 3b 4f 49 43 49 3b 47 41 3b 3b 3b 41 55 29 28 41 3b 4f 49 43 49 3b 47 41 3b 3b 3b 42 41 29 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -764,6 +791,7 @@ rule TrojanSpy_Win32_Ursnif_HS_2147717064_0
         $x_1_3 = {8b 31 8d 51 08 8b 0a 83 c1 01 81 e1 fe 00 00 00 ff 34 ca e2 fb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -789,6 +817,7 @@ rule TrojanSpy_Win32_Ursnif_HT_2147718052_0
         $x_1_3 = "MemoryCallEntryPoint -> %d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -813,6 +842,7 @@ rule TrojanSpy_Win32_Ursnif_HV_2147718769_0
         $x_1_4 = {8b 10 3b 55 ?? 75 0a 8b 50 04 3b 55 ?? 75 02 8b d8 83 c0 28 49 74 04 85 db 74 e5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -840,6 +870,7 @@ rule TrojanSpy_Win32_Ursnif_HW_2147720564_0
         $x_2_4 = {8b 16 85 d2 89 55 ?? 74 19 ff 45 ?? 8a 4d ?? 33 d7 8b 7d ?? 33 d0 d3 ca 89 16 83 c6 ?? ff 4d ?? 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -865,6 +896,7 @@ rule TrojanSpy_Win32_Ursnif_HX_2147723946_0
         $x_1_3 = {68 d0 04 00 00 33 f6 8d 85 10 fb ff ff 56 50 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 7b 0c 68 00 01 00 00 68 01 2b 00 10 89 45 f8 8d 8f 18 02 00 00 c7 85 40 fb ff ff 03 00 10 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -892,6 +924,7 @@ rule TrojanSpy_Win32_Ursnif_HY_2147723949_0
         $x_1_4 = {68 c8 04 00 00 50 89 44 24 28 89 44 24 2c 8d 44 24 30 50 83 cb ff c7 44 24 28 eb fe cc cc e8 ?? ?? ?? ?? 83 c4 0c e8 ?? ?? ?? ?? 8b f0 8d 44 24 08 50 ff 37}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -915,6 +948,7 @@ rule TrojanSpy_Win32_Ursnif_HX_2147723963_0
         $x_1_3 = {8b 10 3b 55 ?? 75 0a 8b 50 04 3b 55 ?? 75 02 8b d8 83 c0 28 49 74 04 85 db 74 e5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -939,6 +973,7 @@ rule TrojanSpy_Win32_Ursnif_HX_2147723963_1
         $x_1_4 = {8b 08 69 c9 ?? ?? ?? ?? 03 ce 88 4c 3a 08 47 89 08 83 ff 08 72 ea}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -962,6 +997,7 @@ rule TrojanSpy_Win32_Ursnif_IB_2147723990_0
         $x_1_3 = {8a 0e 0f b6 d0 0f b6 c9 33 d1 83 e2 0f c1 e8 04 33 04 95 ?? ?? ?? ?? c1 e9 04 8b d0 83 e2 0f 4f 33 ca c1 e8 04 46 33 04 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1074,6 +1110,7 @@ rule TrojanSpy_Win32_Ursnif_IC_2147732336_0
         $x_1_3 = {0f ba 26 1d 73 13 0f ba 26 1f 0f 92 c2 f6 da 1b d2 83 e2 20 83 c2 20 eb 1b 0f ba 26 1e 73 12 0f ba 26 1f 0f 92 c2 f6 da 1b d2 83 e2 02 42 42 eb 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1099,6 +1136,7 @@ rule TrojanSpy_Win32_Ursnif_IC_2147732336_1
         $x_1_5 = {2b ca 2b ce 81 c1 ?? ?? ?? ?? 8b 41 04 2b 41 0c 03 01 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1124,6 +1162,7 @@ rule TrojanSpy_Win32_Ursnif_ID_2147732338_0
         $x_1_2 = "c:\\Capital\\Desert\\Let\\fell\\Cool\\Soil\\ThirdThin.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1147,6 +1186,7 @@ rule TrojanSpy_Win32_Ursnif_IF_2147732525_0
         $x_1_3 = {50 8b 45 08 ff 30 81 f3 20 62 6c 73 ff 75 ?? 03 df 03 5d ?? 89 5d ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1169,6 +1209,7 @@ rule TrojanSpy_Win32_Ursnif_IC_2147732815_0
         $x_1_3 = "overthese.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1192,6 +1233,7 @@ rule TrojanSpy_Win32_Ursnif_IC_2147732815_1
         $x_1_4 = "version=%u&soft=%u&user=%08x%08x%08x%08x&server=%u&id=%u&type=%u&name=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1215,6 +1257,7 @@ rule TrojanSpy_Win32_Ursnif_A_2147733143_0
         $x_1_3 = "version=%u&soft=%u&user=%08x%08x%08x%08x&server=%u&id=%u&type=%u&name=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1239,6 +1282,7 @@ rule TrojanSpy_Win32_Ursnif_B_2147733144_0
         $x_1_4 = "PK11_GetInternalKeySlot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*))) or
             (all of ($x*))
@@ -1264,6 +1308,7 @@ rule TrojanSpy_Win32_Ursnif_KC_2147734977_0
         $x_1_2 = "version=%u&soft=%u&user=%08x%08x%08x%08x&server=%u&id=%u&type=%u&name=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1288,6 +1333,7 @@ rule TrojanSpy_Win32_Ursnif_KD_2147735821_0
         $x_1_4 = {8a cb d3 c8 8b d7 50 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 43 81 c7 00 10 00 00 3b de 72 e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1312,6 +1358,7 @@ rule TrojanSpy_Win32_Ursnif_PA_2147739903_0
         $x_1_4 = {83 7d f8 00 75 62 0f ba 26 1d 73 16 0f ba 26 1f 0f 92 c0 0f b6 c0 f7 d8 1b c0 83 e0 20 83 c0 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1334,6 +1381,7 @@ rule TrojanSpy_Win32_Ursnif_BM_2147741574_0
         $x_1_2 = {c1 ea 07 83 e2 01 03 f6 8d 04 42 8b 51 0c 85 d2 89 71 08 8d 72 ff 89 71 0c 75 10 8b 11 0f b6 32 83 c2 01 89 71 08 89 11 89 79 0c 8b 51 08 8b f2 c1 ee 07 83 e6 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1357,6 +1405,7 @@ rule TrojanSpy_Win32_Ursnif_V_2147741678_0
         $x_1_3 = "c:\\Every\\black\\Suggest\\Once\\Soundiron.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1382,6 +1431,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_0
         $x_1_1 = {89 75 70 b8 3b 2d 0b 00 01 45 70 8b 45 7c 8b 55 70 8a 14 02 88 14 01 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1404,6 +1454,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_1
         $x_1_2 = {b8 bb df 9f 03 f7 a5 a8 fe ff ff 8b 85 a8 fe ff ff b8 ed 2b b0 26 f7 a5 28 ff ff ff 8b 85 28 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1425,6 +1476,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_2
         $x_1_1 = {81 c2 8c a6 44 01 2b c8 89 15 ?? ?? ?? ?? 2b cb 03 f1 8b 4c 24 10 89 11 8b ce 2b c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1446,6 +1498,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_3
         $x_1_1 = {81 c1 1c 4f 8d 01 03 ff 81 7c 24 1c 8d c7 00 00 89 4c 24 14 89 0d ?? ?? ?? ?? 89 08 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1467,6 +1520,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_4
         $x_1_1 = {05 20 da 0f 01 a3 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 03 4d e8 8b 15 ?? ?? ?? ?? 89 91 7d e2 ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1488,6 +1542,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_5
         $x_1_1 = {2b d1 2b 55 d8 66 89 55 b0 8b 45 b0 0f af 45 a4 0f b7 4d c4 2b c1 88 45 [0-20] 2b c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1509,6 +1564,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_6
         $x_1_1 = {8b 7c 24 10 03 d0 8b 44 24 14 05 20 6b 00 01 89 44 24 14 a3 ?? ?? ?? ?? 89 07 39 15 ?? ?? ?? ?? 77 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1530,6 +1586,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_7
         $x_1_1 = {89 0e 8b f3 6b c8 51 2b f1 8b 4c 24 0c 2b c8 81 c6 9b 54 00 00 8d 81 ?? ?? ?? ?? 8b 4c 24 10 83 c1 04 89 4c 24 10 81 f9 ?? ?? ?? ?? 8b 4c 24 14 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1552,6 +1609,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_8
         $x_1_2 = {2b ef 03 e9 8b fd 8b 6c 24 10 81 c3 64 66 01 01 89 5d 00 [0-11] 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1573,6 +1631,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_9
         $x_1_1 = {05 00 50 0a 00 89 85 04 ff ff ff 8b 85 60 ff ff ff 03 45 c4 0f b7 4d cc 03 c1 66 89 85 ?? ?? ?? ?? 8b 45 9c 03 45 ec 03 45 e4 89 45 c8 83 65 ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1595,6 +1654,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_10
         $x_1_2 = {8b f9 2b fd 05 5c 03 0d 01 83 c7 08 ff 4c 24 18 89 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1616,6 +1676,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_11
         $x_1_1 = {69 c0 e8 5d 00 00 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 83 e9 52 2b 0d ?? ?? ?? ?? 03 4d ?? 89 4d ?? 8b 15 ?? ?? ?? ?? 83 ea 52 2b 15 ?? ?? ?? ?? 03 55 f4 89 55 f4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1638,6 +1699,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_12
         $x_1_2 = {83 44 24 10 04 81 c5 ?? ?? ?? ?? 81 7c 24 10 28 1c 00 00 89 28 0f b7 c1 8d 7c 10 06 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1659,6 +1721,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_13
         $x_1_1 = {81 c1 e0 2c 70 01 89 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 03 55 f4 a1 ?? ?? ?? ?? 89 82 77 df ff ff 8b 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 8d 84 0a 8d 7c fe ff a3 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 3b 0d ?? ?? ?? ?? 77}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1681,6 +1744,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_14
         $x_2_2 = {39 55 b0 73 40 a1 ?? ?? ?? 00 89 45 80 b8 f9 cd 03 00 01 45 80 83 7d b0 00 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1702,6 +1766,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_15
         $x_1_1 = {2b c8 89 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 81 c2 a4 56 02 01 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 03 45 f8 8b 0d ?? ?? ?? ?? 89 88 99 e7 ff ff 8b 55 fc 03 15 ?? ?? ?? ?? 03 55 fc 89 15 ?? ?? ?? ?? b8 04 00 00 00 6b c8 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1725,6 +1790,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_16
         $x_1_3 = {0f b7 ef 8b c5 6b c0 2d 8d 4c 1a 43 8b 5c 24 14 8b 1b 03 c6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1748,6 +1814,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_17
         $x_1_3 = {89 0a 0f b6 0d ?? ?? ?? ?? 81 f9 c5 6e 02 00 0f b7 c0 89 44 24 10 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1772,6 +1839,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_18
         $x_1_4 = {81 c6 24 a9 91 01 8d 84 10 f9 82 fe ff 89 b4 39 64 da ff ff 8d 4c 00 04 8b e9 2b eb 83 c7 04 8d 44 28 c9 81 ff 6c 26 00 00 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1798,6 +1866,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_19
         $x_1_6 = {8b 54 24 10 05 c4 d1 01 01 89 02 81 3d ?? ?? ?? ?? 67 07 00 00 a3 ?? ?? ?? ?? 0f b6 c3 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1822,6 +1891,7 @@ rule TrojanSpy_Win32_Ursnif_AR_2147749986_20
         $x_2_4 = {58 4f 62 6a 65 63 74 28 27 57 53 63 72 69 70 74 2e 53 68 65 6c 6c 27 29 3b 20 65 76 61 6c 28 09 00 2e 52 65 67 52 65 61 64 28 27 48 4b 45 59 5f 43 55 52 52 45 4e 54 5f 55 53 45 52 5c 5c 5c 5c 53 6f 66 74 77 61 72 65 5c 5c 5c 5c 41 70 70 6c 69 63 61 74 69 6f 6e 43 6f 6e 74 61 69 6e 65 72 5c 5c 5c 5c 41 70 70 73 77 36 34 5c 5c 5c 5c 53 65 72 76 65 72 55 72 6c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1843,6 +1913,7 @@ rule TrojanSpy_Win32_Ursnif_AV_2147750595_0
         $x_1_1 = {81 c2 c4 8a 61 01 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 03 45 ec 8b 0d ?? ?? ?? ?? 89 88 dd e3 ff ff 8b 15 ?? ?? ?? ?? 03 15 ?? ?? ?? ?? 81 fa b5 02 00 00 75 2b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1867,6 +1938,7 @@ rule TrojanSpy_Win32_Ursnif_AV_2147750595_1
         $x_1_4 = {81 c2 80 e7 bf 01 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 03 45 e4 8b 0d ?? ?? ?? ?? 89 88 ee e1 ff ff 0f b7 55 e8 6b d2 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1890,6 +1962,7 @@ rule TrojanSpy_Win32_Ursnif_AV_2147750595_2
         $x_1_3 = {05 84 5d c2 01 89 03 66 8b 1d ?? ?? ?? ?? a3 ?? ?? ?? ?? 8b c6 69 c0 5b 5a 00 00 03 c8 0f b7 05 ?? ?? ?? ?? 3d ef 9d 0a 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1913,6 +1986,7 @@ rule TrojanSpy_Win32_Ursnif_ANN_2147751437_0
         $x_1_3 = {81 c7 0c b5 84 01 0f b7 d2 89 bc 18 5e e0 ff ff 0f b7 c2 83 c3 04 81 fb b2 20 00 00 8d 44 28 ff 89 5c 24 10 0f 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1934,6 +2008,7 @@ rule TrojanSpy_Win32_Ursnif_ARR_2147751438_0
         $x_1_1 = {81 c2 30 07 97 01 89 94 30 84 dd ff ff a1 ?? ?? ?? ?? 0f b7 f9 2b c7 83 c6 04 83 e8 17 81 fe 7c 23 00 00 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1956,6 +2031,7 @@ rule TrojanSpy_Win32_Ursnif_BS_2147751756_0
         $x_1_2 = {83 ea 15 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 03 45 ?? 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 2b 0d ?? ?? ?? ?? 89 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1977,6 +2053,7 @@ rule TrojanSpy_Win32_Ursnif_AA_2147752568_0
         $x_1_1 = {05 60 c2 2e 02 a3 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 03 4d e4 8b 15 ?? ?? ?? ?? 89 91 25 ef ff ff 8b 45 ec 69 c0 f5 1b 00 00 0f b7 4d e8 0f af c1 66 89 45 e8 0f b7 55 e8 6b d2 39 03 15 ?? ?? ?? ?? 8b 45 ec 2b c2 89 45 ec e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1998,6 +2075,7 @@ rule TrojanSpy_Win32_Ursnif_ARV_2147752648_0
         $x_1_1 = {8b 6c 24 10 81 c3 7c 3e 3d 01 89 9c 2f 1c d9 ff ff 0f b7 3d ?? ?? ?? ?? 89 1d ?? ?? ?? ?? 8d 44 08 fd 3b f9 77}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2022,6 +2100,7 @@ rule TrojanSpy_Win32_Ursnif_RA_2147756501_0
         $x_1_4 = {81 f9 00 01 00 00 0f 4f 00 8a 86 ?? ?? ?? ?? 88 81 01 75 [0-47] 8b 0d ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? 41 88 9e 01 89 0d 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2044,6 +2123,7 @@ rule TrojanSpy_Win32_Ursnif_KMG_2147773316_0
         $x_1_2 = {03 c1 ff 45 ?? 8d 4d ?? 8b f0 e8 ?? ?? ?? ?? 8b fe 33 f6 46 eb ?? 8b 45 ?? 8b 4d ?? 8a 00 ff 45 ?? ff 45 ?? 88 01 33 f6 83 7d ?? 00 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2074,6 +2154,7 @@ rule TrojanSpy_Win32_Ursnif_RT_2147777694_0
         $x_1_10 = "SMTP Password" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -2098,6 +2179,7 @@ rule TrojanSpy_Win32_Ursnif_GKM_2147779424_0
         $x_1_1 = {03 c1 88 45 ?? 8b 15 ?? ?? ?? ?? 81 c2 d8 2e 0c 01 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 03 45 ?? 8b 0d ?? ?? ?? ?? 89 88 ?? ?? ?? ?? 0f b6 55 ?? 83 ea 07 2b 15 ?? ?? ?? ?? 66 89 55 ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2119,6 +2201,7 @@ rule TrojanSpy_Win32_Ursnif_GKM_2147779424_1
         $x_1_1 = {05 68 21 03 01 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 03 45 ?? 8b 0d ?? ?? ?? ?? 89 88 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 83 e9 14 8b 35 ?? ?? ?? ?? 83 de 00 a1 ?? ?? ?? ?? 33 d2 03 c8 13 f2 0f b6 45 ?? 99 03 c1 13 d6 88 45 ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2140,6 +2223,7 @@ rule TrojanSpy_Win32_Ursnif_GKM_2147779424_2
         $x_1_1 = {0f b6 c3 2b 44 24 ?? 03 c6 89 44 24 ?? a3 ?? ?? ?? ?? 8b 5c 24 ?? 83 44 24 ?? 04 89 44 24 ?? 8b 44 24 ?? 05 b0 93 06 01 89 03 a3 ?? ?? ?? ?? 0f b6 c1 6b d8 36 66 a1 ?? ?? ?? ?? 02 1d ?? ?? ?? ?? 83 6c 24 ?? 01 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2161,6 +2245,7 @@ rule TrojanSpy_Win32_Ursnif_GKM_2147779424_3
         $x_1_1 = {0f b6 c9 6b c9 34 2a d9 8a ca f6 d8 c0 e1 06 02 ca 2a c1 02 d8 8b 44 24 ?? 05 70 80 06 01 a3 ?? ?? ?? ?? 89 84 3d ?? ?? ?? ?? 83 c7 04 8b 15 ?? ?? ?? ?? 0f b6 c3 66 83 e8 1c 66 03 c2 0f b7 c8 89 4c 24 ?? 81 ff 63 19 00 00 73 ?? a1 ?? ?? ?? ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2187,6 +2272,7 @@ rule TrojanSpy_Win32_Ursnif_DB_2147786789_0
         $x_3_6 = "GetSystemDirectoryW" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

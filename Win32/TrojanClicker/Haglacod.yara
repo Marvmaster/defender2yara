@@ -18,6 +18,7 @@ rule TrojanClicker_Win32_Haglacod_A_2147687577_0
         $x_1_4 = {ba 27 02 00 00 8b 86 f8 02 00 00 e8 ?? ?? ?? ?? 8d 55 fc b8 1a 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

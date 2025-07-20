@@ -37,6 +37,7 @@ rule VirTool_MSIL_Lore_AD_2147742672_0
         $x_1_22 = "%MeltName%" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +94,7 @@ rule VirTool_MSIL_Lore_AD_2147742672_1
         $x_50_36 = "{11111-22222-50001-00002}" wide //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +120,7 @@ rule VirTool_MSIL_Lore_2147749242_0
         $x_1_5 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +147,7 @@ rule VirTool_MSIL_Lore_2147749242_1
         $x_1_6 = "$c4099e4c-59be-485d-b0bf-34dea2ad6b4b" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +174,7 @@ rule VirTool_MSIL_Lore_2147749242_2
         $x_1_6 = "tempuri.org/CoreDB.xsd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +203,7 @@ rule VirTool_MSIL_Lore_2147749242_3
         $x_1_8 = "System.Security.Policy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +231,7 @@ rule VirTool_MSIL_Lore_2147749242_4
         $x_1_7 = "Unhook.g.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -252,6 +259,7 @@ rule VirTool_MSIL_Lore_2147749242_5
         $x_1_7 = "ZImBOZX.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -287,6 +295,7 @@ rule VirTool_MSIL_Lore_2147749242_6
         $x_1_15 = "System.Threading" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -313,6 +322,7 @@ rule VirTool_MSIL_Lore_2147749242_7
         $x_1_6 = "Deserialize.VMDetector.dec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -347,6 +357,7 @@ rule VirTool_MSIL_Lore_2147749242_8
         $x_1_14 = "get_Height" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -379,6 +390,7 @@ rule VirTool_MSIL_Lore_2147749242_9
         $x_1_12 = "In$J$ct0r" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -417,6 +429,7 @@ rule VirTool_MSIL_Lore_2147749242_10
         $x_1_18 = "Invoke" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -450,6 +463,7 @@ rule VirTool_MSIL_Lore_2147749242_11
         $x_1_13 = "PhotoDirector_2.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -486,6 +500,7 @@ rule VirTool_MSIL_Lore_2147749242_12
         $x_1_16 = ".Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -520,6 +535,7 @@ rule VirTool_MSIL_Lore_2147749242_13
         $x_1_14 = "Invoke" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -553,6 +569,7 @@ rule VirTool_MSIL_Lore_2147749242_14
         $x_1_13 = "Lo!ad" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -591,6 +608,7 @@ rule VirTool_MSIL_Lore_2147749242_15
         $x_1_18 = "Antheia" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -629,6 +647,7 @@ rule VirTool_MSIL_Lore_2147749242_16
         $x_1_18 = "CoreProperty" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -666,6 +685,7 @@ rule VirTool_MSIL_Lore_2147749242_17
         $x_1_17 = ".Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -696,6 +716,7 @@ rule VirTool_MSIL_Lore_2147749242_18
         $x_1_10 = "DebuggerBrowsableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -733,6 +754,7 @@ rule VirTool_MSIL_Lore_2147749242_19
         $x_1_17 = ".Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -773,6 +795,7 @@ rule VirTool_MSIL_Lore_2147749242_20
         $x_1_20 = ".Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -815,6 +838,7 @@ rule VirTool_MSIL_Lore_2147749242_21
         $x_1_22 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -855,6 +879,7 @@ rule VirTool_MSIL_Lore_2147749242_22
         $x_1_20 = "System.Reflection.Emit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -896,6 +921,7 @@ rule VirTool_MSIL_Lore_2147749242_23
         $x_1_21 = "get_B" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -938,6 +964,7 @@ rule VirTool_MSIL_Lore_2147749242_24
         $x_1_22 = "System.Threading" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (21 of ($x*))
 }
 
@@ -979,6 +1006,7 @@ rule VirTool_MSIL_Lore_2147749242_25
         $x_1_21 = "projectname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1022,6 +1050,7 @@ rule VirTool_MSIL_Lore_2147749242_26
         $x_1_23 = "My.Settings" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1071,6 +1100,7 @@ rule VirTool_MSIL_Lore_2147749242_27
         $x_1_29 = "dead codeT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1122,6 +1152,7 @@ rule VirTool_MSIL_Lore_2147749242_28
         $x_1_31 = "StripAfterObfuscation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1162,6 +1193,7 @@ rule VirTool_MSIL_Lore_2147749242_29
         $x_10_20 = "CreateDecryptor" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

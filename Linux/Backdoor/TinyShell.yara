@@ -17,6 +17,7 @@ rule Backdoor_Linux_TinyShell_A_2147945641_0
         $x_1_2 = "icmp[4:2] == 0xaa56" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

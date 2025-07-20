@@ -17,6 +17,7 @@ rule Trojan_Win32_Delwin_F_2147636462_0
         $x_1_3 = "assoc .mp3=batfile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

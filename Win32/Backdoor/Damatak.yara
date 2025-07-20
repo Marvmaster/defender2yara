@@ -21,6 +21,7 @@ rule Backdoor_Win32_Damatak_A_2147719635_0
         $x_1_7 = {8b 4f 10 33 c0 85 c9 74 09 80 34 30 a1 40 3b c1 72 f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

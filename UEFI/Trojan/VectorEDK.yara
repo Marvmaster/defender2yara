@@ -17,6 +17,7 @@ rule Trojan_UEFI_VectorEDK_RKL_2147765712_0
         $x_1_3 = {45 33 c9 4c 8d 05 ?? ?? ?? ?? ba 10 00 00 00 b9 00 02 00 00 48 8b 05 ?? ?? ?? ?? ff ?? 70 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_UEFI_VectorEDK_D_2147765713_0
         $x_1_7 = ".sraw" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

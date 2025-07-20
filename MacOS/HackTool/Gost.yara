@@ -20,6 +20,7 @@ rule HackTool_MacOS_Gost_A_2147921857_0
         $x_1_5 = "gost.sshRemoteForwardConnector" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule HackTool_MacOS_Gost_B_2147943309_0
         $x_1_4 = "go-gost/relay.NewPrivateTunnelID" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (3 of ($x*))
 }
 

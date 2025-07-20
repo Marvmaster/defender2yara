@@ -19,6 +19,7 @@ rule Worm_MSIL_Glemops_A_2147650198_0
         $x_1_4 = "Hadeskey SE : Stealer (FireFox)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

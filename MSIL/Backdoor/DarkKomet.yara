@@ -19,6 +19,7 @@ rule Backdoor_MSIL_DarkKomet_KA_2147851486_0
         $x_1_4 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

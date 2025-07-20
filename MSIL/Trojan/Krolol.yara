@@ -24,6 +24,7 @@ rule Trojan_MSIL_Krolol_A_2147682620_0
         $x_1_10 = "\\tmp.tmp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_MSIL_FakeAV_SG_2147908719_0
         $x_1_4 = "DisableAntiSpyware" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

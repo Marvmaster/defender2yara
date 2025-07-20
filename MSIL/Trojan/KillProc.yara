@@ -18,6 +18,7 @@ rule Trojan_MSIL_KillProc_SK_2147895742_0
         $x_2_3 = "Payload.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_KillProc_SWK_2147925454_0
         $x_2_2 = {00 73 3c 00 00 0a 0a 06 6f 3d 00 00 0a 00 2b 07 28 ?? 00 00 0a 00 00 06 6f ?? 00 00 0a 02 20 e8 03 00 00 d8 6a fe 04 0b 07 2d e5 06 6f ?? 00 00 0a 00 00 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_MSIL_KillProc_MA_2147926202_0
         $x_1_3 = "MinhaLiistaas" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

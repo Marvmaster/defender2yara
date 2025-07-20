@@ -22,6 +22,7 @@ rule PWS_Win32_Behz_A_2147605129_0
         $x_1_8 = "Behzad-PS is Best Password Sender For :" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or

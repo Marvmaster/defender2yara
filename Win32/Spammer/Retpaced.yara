@@ -18,6 +18,7 @@ rule Spammer_Win32_Retpaced_A_2147690857_0
         $x_6_4 = "http://popall.com/lin/bbs.htm?code=talking&mode=1" wide //weight: 6
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Spammer_Win32_Retpaced_B_2147693898_0
         $x_1_3 = {43 00 3a 00 5c 00 57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 5c 00 [0-16] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_UrsnifCrypt_SK_2147756429_0
         $x_2_2 = {53 56 57 6a 09 8b f8 33 db 5e 8b 07 8b ce 83 e1 01 c1 e1 03 d3 e0 83 c7 04 03 d8 4e 85 f6 74 12 56 ff 74 24 14 ff 15 ?? ?? ?? ?? 3d 02 01 00 00 74 d8 5f 5e 8b c3 5b c2 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

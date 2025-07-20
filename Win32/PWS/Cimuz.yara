@@ -20,6 +20,7 @@ rule PWS_Win32_Cimuz_C_2147595272_0
         $x_2_6 = {c6 85 00 ff ff ff 50 c6 85 fc ef ff ff 7a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 3 of ($x_2_*))) or
@@ -48,6 +49,7 @@ rule PWS_Win32_Cimuz_E_2147606492_0
         $x_1_5 = {99 5b f7 fb 30 14 (31|39) 41 3b (cf|ce) 72 f0 04 00 8b c1 6a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule PWS_Win32_Cimuz_I_2147611165_0
         $x_1_4 = {52 54 5f 44 4c 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -97,6 +100,7 @@ rule PWS_Win32_Cimuz_J_2147611499_0
         $x_2_4 = {73 67 64 60 6c 6d 2c 67 68 6c 01}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -126,6 +130,7 @@ rule PWS_Win32_Cimuz_M_2147633337_0
         $x_1_5 = "5e7e8100" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -154,6 +159,7 @@ rule PWS_Win32_Cimuz_N_2147637322_0
         $x_2_5 = "Internet Explorer account data" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -183,6 +189,7 @@ rule PWS_Win32_Cimuz_O_2147638306_0
         $x_2_5 = "IE:Password-Protected sites" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -396,6 +403,7 @@ rule PWS_Win32_Cimuz_A_2147806787_0
         $n_100_188 = {68 74 74 70 [0-1] 3a 2f 2f 77 77 77 2e 67 74 6f 70 61 6c 61 2e 63 6f 6d 2f}  //weight: -100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((13 of ($x_1_*))) or
@@ -466,6 +474,7 @@ rule PWS_Win32_Cimuz_B_2147806853_0
         $n_5_7 = "OCXPLAY.VPlayerPropPage.1" ascii //weight: -5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (3 of ($x*))
 }
@@ -491,6 +500,7 @@ rule PWS_Win32_Cimuz_A_2147806864_0
         $x_1_3 = {81 7e 04 02 01 00 00 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -517,6 +527,7 @@ rule PWS_Win32_Cimuz_D_2147806866_0
         $x_1_4 = "GetWindowsDirectoryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))

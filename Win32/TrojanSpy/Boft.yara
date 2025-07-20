@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Boft_A_2147683185_0
         $x_1_4 = "88B5519142E81915" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

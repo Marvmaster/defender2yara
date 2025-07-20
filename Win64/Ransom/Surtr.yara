@@ -18,6 +18,7 @@ rule Ransom_Win64_Surtr_BH_2147838050_0
         $x_1_3 = "C:\\ProgramData\\Service\\SURTR_README.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

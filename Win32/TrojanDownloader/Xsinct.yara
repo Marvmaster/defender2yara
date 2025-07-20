@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Xsinct_2147620891_0
         $x_1_5 = {2f 00 6e 00 65 00 77 00 2e 00 65 00 78 00 65 00 00 00 68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

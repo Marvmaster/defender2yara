@@ -17,6 +17,7 @@ rule Trojan_Win32_RBot_AHB_2147946220_0
         $x_2_2 = "IAMNOTHING" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

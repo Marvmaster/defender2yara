@@ -16,6 +16,7 @@ rule Trojan_Win32_Bigapext_A_2147684111_0
         $x_1_2 = {67 65 74 78 65 6d 70 6c 32 33 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

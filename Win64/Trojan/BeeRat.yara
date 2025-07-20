@@ -20,6 +20,7 @@ rule Trojan_Win64_BeeRat_DA_2147934014_0
         $x_1_5 = "telegram-bot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

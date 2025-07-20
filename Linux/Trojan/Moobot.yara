@@ -16,6 +16,7 @@ rule Trojan_Linux_Moobot_B_2147817651_0
         $x_3_2 = "Self Rep Fucking NeTiS and Thisity" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Linux_Moobot_D_2147817652_0
         $x_2_4 = "qE6MGAbI" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

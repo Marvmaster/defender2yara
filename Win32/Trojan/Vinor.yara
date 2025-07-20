@@ -19,6 +19,7 @@ rule Trojan_Win32_Vinor_A_2147696893_0
         $x_1_5 = "blog.naver.com/PostView.nhn" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

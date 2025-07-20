@@ -22,6 +22,7 @@ rule Trojan_Win32_Balrok_DW_2147891468_0
         $x_1_7 = "Call Of Duty no cd crack.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

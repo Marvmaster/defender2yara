@@ -24,6 +24,7 @@ rule Trojan_Win32_Valcaryx_A_2147710824_0
         $x_1_10 = "popupwndrestart" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_3_*) and 5 of ($x_1_*))) or
@@ -61,6 +62,7 @@ rule Trojan_Win32_Valcaryx_B_2147718542_0
         $x_1_5 = "\\Temp\\qibing" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

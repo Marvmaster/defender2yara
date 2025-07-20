@@ -19,6 +19,7 @@ rule Trojan_Win32_Affpach_A_2147657301_0
         $x_1_5 = {26 63 68 3d 35 26 62 61 72 3d 26 77 64 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

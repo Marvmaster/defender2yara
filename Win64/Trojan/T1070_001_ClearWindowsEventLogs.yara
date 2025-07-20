@@ -15,6 +15,7 @@ rule Trojan_Win64_T1070_001_ClearWindowsEventLogs_A_2147846079_0
         $x_10_1 = "event::clear" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

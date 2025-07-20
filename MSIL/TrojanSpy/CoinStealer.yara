@@ -18,6 +18,7 @@ rule TrojanSpy_MSIL_CoinStealer_C_2147725084_0
         $x_1_3 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

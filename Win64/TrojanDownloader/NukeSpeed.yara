@@ -17,6 +17,7 @@ rule TrojanDownloader_Win64_NukeSpeed_F_2147926527_0
         $x_1_2 = {c1 ea 16 69 ca 80 96 98 00 ba 10 00 00 00 2b f9 81 ff 40 42 0f 00 8d 8f 40 42 0f 00 0f 43 cf 89 48 38 8d 4a 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

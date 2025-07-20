@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Snabif_A_2147610596_0
         $x_1_5 = {f3 a5 66 a5 a4 b9 06 00 00 00 be ?? ?? 40 00 8d bd ?? ?? ff ff f3 a5 66 a5 a4 b9 06 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

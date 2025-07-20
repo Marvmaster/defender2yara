@@ -20,6 +20,7 @@ rule Ransom_Win32_Lorenz_MAK_2147799136_0
         $x_1_5 = {68 74 74 70 3a 2f 2f 6c 6f 72 65 6e 7a [0-53] 2e 6f 6e 69 6f 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win32_Lorenz_TW_2147840657_0
         $x_1_4 = "157.90.147.28" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Ransom_Win32_Lorenz_HN_2147840658_0
         $x_1_4 = "-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Ransom_Win32_Lorenz_YAA_2147915965_0
         $x_1_5 = "Do not attempt to decrypt data using third party software" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

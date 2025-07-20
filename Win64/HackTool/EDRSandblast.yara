@@ -17,6 +17,7 @@ rule HackTool_Win64_EDRSandblast_E_2147910973_0
         $x_1_3 = "[!] Couldn't allocate memory to enumerate the drivers in Kernel callbacks" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule HackTool_Win64_EDRSandblast_F_2147912417_0
         $x_1_4 = "[*] '%s' service cannot accept control messages at this time, waiting..." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule HackTool_Win64_EDRSandblast_G_2147928024_0
         $x_1_3 = "[-] Downloading offsets from the internet failed !" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

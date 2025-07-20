@@ -18,6 +18,7 @@ rule Trojan_MSIL_Badur_GNF_2147900128_0
         $x_1_3 = "s4.sondevs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Badur_PTFI_2147900532_0
         $x_2_1 = {72 a3 00 00 70 73 11 00 00 0a 28 ?? 00 00 0a 72 f7 00 00 70 28 ?? 00 00 0a 6f 14 00 00 0a 00 2b 01}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

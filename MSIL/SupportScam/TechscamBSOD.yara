@@ -22,6 +22,7 @@ rule SupportScam_MSIL_TechscamBSOD_A_2147717717_0
         $x_1_8 = {24 66 35 64 30 61 36 62 66 2d 32 31 63 30 2d 34 38 64 63 2d 39 31 30 63 2d 65 39 31 31 62 66 34 36 34 36 62 30 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

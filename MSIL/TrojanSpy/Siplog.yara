@@ -21,6 +21,7 @@ rule TrojanSpy_MSIL_Siplog_A_2147710223_0
         $x_1_7 = {00 43 4c 49 50 42 4f 41 52 44 5f 4d 4f 4e 49 54 4f 52 49 4e 47 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 4 of ($x_2_*))) or
@@ -66,6 +67,7 @@ rule TrojanSpy_MSIL_Siplog_B_2147718384_0
         $x_1_22 = "get_LastLoginFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 4 of ($x_1_*))) or
             ((5 of ($x_2_*) and 2 of ($x_1_*))) or

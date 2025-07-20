@@ -17,6 +17,7 @@ rule Trojan_Win32_Swomanso_AA_2147758678_0
         $x_1_2 = {89 7d e4 83 e7 00 0b 7d e8 83 e2 00 09 fa 8b 7d e4 d3 c2 23 d3 ac 0a c2 88 07 47 ff 4d f8 75 b9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

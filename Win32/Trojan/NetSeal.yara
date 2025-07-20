@@ -18,6 +18,7 @@ rule Trojan_Win32_NetSeal_A_2147740584_0
         $x_1_3 = "BgIAAAAiAABEU1MxAAQAAKVlurdZMaHy" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

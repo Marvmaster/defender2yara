@@ -17,6 +17,7 @@ rule Trojan_Win32_Lipti_A_2147639305_0
         $x_1_3 = {8a 44 24 08 0f b6 c0 69 c0 01 01 01 01 8b d1 53 57 8b 7c 24 0c c1 e9 02 f3 ab}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

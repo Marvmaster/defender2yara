@@ -18,6 +18,7 @@ rule VirTool_Win32_Threqesz_A_2147908298_0
         $x_1_3 = {8b e5 5d c3 57 [0-16] 83 c4 08 ?? ?? ?? ?? ?? ?? b9 39 00 00 00 f3 a5 ?? ?? ?? ?? ?? ?? 68 28 23 40 00 8b f0 ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

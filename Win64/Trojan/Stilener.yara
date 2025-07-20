@@ -18,6 +18,7 @@ rule Trojan_Win64_Stilener_A_2147920401_0
         $x_1_4 = {48 8b 9c 24 88 03 00 ?? 48 89 c1 48 8b bc 24 80 00 00 00 31 f6 45 31 c0 4d 89 c1 48 8b 84 24 b8 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

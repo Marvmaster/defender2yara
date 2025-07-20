@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Bleyr_A_2147660469_0
         $x_1_6 = {00 6e 65 77 64 65 73 6b 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

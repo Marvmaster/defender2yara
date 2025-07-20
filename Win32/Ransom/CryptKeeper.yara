@@ -18,6 +18,7 @@ rule Ransom_Win32_CryptKeeper_A_2147685410_0
         $x_1_4 = {2f 65 2e 70 68 70 3f 69 64 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

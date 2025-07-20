@@ -19,6 +19,7 @@ rule Trojan_Win32_Vrodirb_B_2147654078_0
         $x_1_5 = "usp10.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

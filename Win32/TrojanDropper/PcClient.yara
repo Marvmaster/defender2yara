@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_PcClient_A_2147646029_0
         $x_1_2 = {8b 54 24 30 8b 0c 3e 03 f7 8b e9 2b 6a 1c 8d 42 1c 83 c4 18 3b 6a 38 73 ?? 8b 28 8b 54 24 1c 8b 44 24 30 2b cd 03 ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

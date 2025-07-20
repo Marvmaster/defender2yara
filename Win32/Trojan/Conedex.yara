@@ -16,6 +16,7 @@ rule Trojan_Win32_Conedex_A_2147651958_0
         $x_1_2 = "<dat><jst>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Conedex_B_2147653733_0
         $x_1_2 = "<dat><jst>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win32_Conedex_C_2147653734_0
         $x_1_2 = "<dat><jst>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

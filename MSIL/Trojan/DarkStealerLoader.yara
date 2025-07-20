@@ -60,6 +60,7 @@ rule Trojan_MSIL_DarkStealerLoader_2147765437_0
         $x_50_45 = "{11111-22222-50001-00002}" wide //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +126,7 @@ rule Trojan_MSIL_DarkStealerLoader_2147765437_1
         $x_50_45 = "{11111-22222-40001-00002}" wide //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +192,7 @@ rule Trojan_MSIL_DarkStealerLoader_2147765437_2
         $x_50_45 = "{11111-22222-40001-00002}" wide //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

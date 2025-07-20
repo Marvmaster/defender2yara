@@ -19,6 +19,7 @@ rule BrowserModifier_Win32_Suchspur_17670_0
         $x_1_5 = "1hp=steudf/ar" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -19,6 +19,7 @@ rule HackTool_Win32_Cardatpc_A_2147696826_0
         $x_1_4 = {2d 2d 66 6f 72 63 65 6c 6f 61 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule HackTool_Win32_Cardatpc_B_2147696827_0
         $x_1_6 = "\\\\.\\pipe\\lsassp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

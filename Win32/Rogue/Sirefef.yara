@@ -23,6 +23,7 @@ rule Rogue_Win32_Sirefef_153998_0
         $x_2_9 = {68 63 6e 63 74 33 c0 8b cb e8 90 01 04 6a 02 89 90 01 02 85 c0 58 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

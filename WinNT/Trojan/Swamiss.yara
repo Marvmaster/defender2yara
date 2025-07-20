@@ -16,6 +16,7 @@ rule Trojan_WinNT_Swamiss_A_2147641406_0
         $x_1_2 = {8a 01 6a 1a 3c 61 5f 0f be c0 7c 0b 83 e8 4a 99 f7 ff 80 c2 61 eb 09 83 e8 2a 99 f7 ff 80 c2 41 88 11 41 80 39 00 75 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

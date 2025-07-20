@@ -21,6 +21,7 @@ rule Trojan_MSIL_KillMBR_AW_2147816702_0
         $x_3_6 = "GDI_payloads" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_MSIL_KillMBR_RPH_2147817198_0
         $x_1_6 = "lpBuffer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Trojan_MSIL_KillMBR_SV_2147819192_0
         $x_1_9 = "Hecker.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_MSIL_KillMBR_ARA_2147837128_0
         $x_2_3 = "\\\\.\\PhysicalDrive0" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +127,7 @@ rule Trojan_MSIL_KillMBR_ARA_2147837128_1
         $x_1_4 = "\\\\.\\PhysicalDrive0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +153,7 @@ rule Trojan_MSIL_KillMBR_ARA_2147837128_2
         $x_2_5 = "TakeOwnerShipOfFile" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +176,7 @@ rule Trojan_MSIL_KillMBR_ARA_2147837128_3
         $x_2_2 = "\\\\.\\PhysicalDrive0" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -194,6 +201,7 @@ rule Trojan_MSIL_KillMBR_ARA_2147837128_4
         $x_2_4 = "IsWindowsDefenderInstalled" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +226,7 @@ rule Trojan_MSIL_KillMBR_ARA_2147837128_5
         $x_2_4 = "LogonUI will be overwritten" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -246,6 +255,7 @@ rule Trojan_MSIL_KillMBR_ARA_2147837128_6
         $x_2_8 = "/k reg delete HKCR /f" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -269,6 +279,7 @@ rule Trojan_MSIL_KillMBR_GEK_2147841020_0
         $x_1_3 = "ToString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -294,6 +305,7 @@ rule Trojan_MSIL_KillMBR_ARAQ_2147850734_0
         $x_2_5 = "MBR Overwritten, Victim rebooted" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +333,7 @@ rule Trojan_MSIL_KillMBR_ARAQ_2147850734_1
         $x_2_7 = "cmd.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -342,6 +355,7 @@ rule Trojan_MSIL_KillMBR_RDA_2147851693_0
         $x_2_1 = {19 16 7e 1e 00 00 0a 28 ?? ?? ?? ?? 0b 07 06 20 00 80 00 00 12 02 7e 1e 00 00 0a 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -366,6 +380,7 @@ rule Trojan_MSIL_KillMBR_ARAU_2147851980_0
         $x_1_4 = "DisableRegistryTools" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -391,6 +406,7 @@ rule Trojan_MSIL_KillMBR_ARAU_2147851980_1
         $x_2_5 = "\\\\.\\PhysicalDrive0" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_2_*))) or
             ((1 of ($x_6_*) and 2 of ($x_2_*))) or
@@ -422,6 +438,7 @@ rule Trojan_MSIL_KillMBR_ARBE_2147889375_0
         $x_2_5 = "select * from Win32_ComputerSystem" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -443,6 +460,7 @@ rule Trojan_MSIL_KillMBR_PSXF_2147890471_0
         $x_2_1 = {8d 11 00 00 01 0a 72 01 00 00 70 20 00 00 00 10 19 7e 0f 00 00 0a 19 16 7e 0f 00 00 0a 28 ?? 00 00 06 0b 07 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -465,6 +483,7 @@ rule Trojan_MSIL_KillMBR_ARBF_2147891510_0
         $x_2_2 = "You must give us 10$ LTC at the following address: Lbomb9d7n7hNnqNAB65HVgrk5pCzG759h5" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -490,6 +509,7 @@ rule Trojan_MSIL_KillMBR_ARBH_2147891511_0
         $x_2_5 = "?Where am I" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -511,6 +531,7 @@ rule Trojan_MSIL_KillMBR_PTBE_2147895559_0
         $x_2_1 = {72 52 01 00 70 20 00 02 00 00 13 0a 12 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 00 72 6c 01 00 70 08 28 ?? 00 00 0a 00 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -535,6 +556,7 @@ rule Trojan_MSIL_KillMBR_ARBC_2147899608_0
         $x_2_4 = "\\\\.\\PhysicalDrive0" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -558,6 +580,7 @@ rule Trojan_MSIL_KillMBR_ARAS_2147899610_0
         $x_2_3 = "\\Release\\YPD.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -581,6 +604,7 @@ rule Trojan_MSIL_KillMBR_ARAS_2147899610_1
         $x_2_3 = "mbr_destroy" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -602,6 +626,7 @@ rule Trojan_MSIL_KillMBR_RDD_2147904131_0
         $x_2_1 = {11 05 08 16 08 8e 69 6f ?? ?? ?? ?? 11 07 17 58 13 07}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -623,6 +648,7 @@ rule Trojan_MSIL_KillMBR_RDE_2147904301_0
         $x_2_1 = {0c 09 08 28 17 00 00 0a 0d 00 11 04 17 58 13 04}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -645,6 +671,7 @@ rule Trojan_MSIL_KillMBR_HNA_2147908514_0
         $x_1_2 = {50 72 6f 67 72 61 6d 00 53 79 73 74 65 6d 00 6c 70 4e 75 6d 62 65 72 4f 66 42 79 74 65 73 57 72 69 74 74 65 6e 00 4d 61 69 6e 00 53 79 73 74 65 6d 2e 52 65 66 6c 65 63 74 69 6f 6e 00 64 77 43 72 65 61 74 69 6f 6e 44 69 73 70 6f 73 69 74 69 6f 6e 00 5a 65 72 6f 00 6c 70 42 75 66 66 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -668,6 +695,7 @@ rule Trojan_MSIL_KillMBR_NK_2147912384_0
         $x_1_3 = "geometry dash auto bot for extreme demons" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -692,6 +720,7 @@ rule Trojan_MSIL_KillMBR_NK_2147912384_1
         $x_1_4 = "MBR_Overwriter.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -717,6 +746,7 @@ rule Trojan_MSIL_KillMBR_NK_2147912384_2
         $x_1_5 = "gdi_malware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -745,6 +775,7 @@ rule Trojan_MSIL_KillMBR_NK_2147912384_3
         $x_1_8 = "why you run this i gived you 2 warning's and your pc got destroyed in less than 10 seconds" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -768,6 +799,7 @@ rule Trojan_MSIL_KillMBR_NM_2147917956_0
         $x_1_3 = "/k reg delete hklm /f" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -794,6 +826,7 @@ rule Trojan_MSIL_KillMBR_NM_2147917956_1
         $x_1_6 = "$78c5bfcc-6917-41a5-a37a-b4b053a7e9dc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -818,6 +851,7 @@ rule Trojan_MSIL_KillMBR_NR_2147917958_0
         $x_1_4 = "d2d520e1-9bda-4a87-bf5a-5e8175a2eb4d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -839,6 +873,7 @@ rule Trojan_MSIL_KillMBR_ARAX_2147923238_0
         $x_2_1 = {07 06 07 8e 69 6f ?? ?? ?? 0a 8f ?? ?? ?? 01 28 ?? ?? ?? 0a 0c 09 08 28 ?? ?? ?? 0a 0d 11 04 17 58 13 04 11 04 1f 0e 32 d7}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -862,6 +897,7 @@ rule Trojan_MSIL_KillMBR_ARAX_2147923238_1
         $x_2_3 = "MBR has been successfully overwritten" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -886,6 +922,7 @@ rule Trojan_MSIL_KillMBR_ARAX_2147923238_2
         $x_2_4 = "\\legjong.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -911,6 +948,7 @@ rule Trojan_MSIL_KillMBR_ARAX_2147923238_3
         $x_1_5 = "GetMBRData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -935,6 +973,7 @@ rule Trojan_MSIL_KillMBR_PAGH_2147932409_0
         $x_2_4 = "Your System has been hacked" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -961,6 +1000,7 @@ rule Trojan_MSIL_KillMBR_PARX_2147935008_0
         $x_1_6 = "get_PrimaryScreen" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -984,6 +1024,7 @@ rule Trojan_MSIL_KillMBR_ARAZ_2147937113_0
         $x_2_3 = "MbrOverwriter" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1005,6 +1046,7 @@ rule Trojan_MSIL_KillMBR_EAZE_2147940172_0
         $x_5_1 = {06 07 02 07 6f 0a 00 00 0a 20 ff 00 00 00 5f d2 9c 07 17 58 0b 07 20 aa ae 01 00 32 e3}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1031,6 +1073,7 @@ rule Trojan_MSIL_KillMBR_BR_2147941218_0
         $x_1_6 = "/k reg delete HKCR /f" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1056,6 +1099,7 @@ rule Trojan_MSIL_KillMBR_EAB_2147941298_0
         $x_5_1 = {00 09 11 05 11 05 1f 0a 11 05 1f 17 62 11 05 1c 63 60 11 05 20 80 00 00 00 61 60 11 05 1b 62 11 05 1d 63 60 5f 5a 5a d2 9c 00 11 05 17 58 13 05 11 05 09 8e 69 fe 04 13 06 11 06 2d c3}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1077,6 +1121,7 @@ rule Trojan_MSIL_KillMBR_EHB_2147941301_0
         $x_5_1 = {00 06 07 02 07 6f 2a 00 00 0a 20 ff 00 00 00 5f d2 9c 00 07 17 58 0b 07 20 00 5e 01 00 fe 04 0c 08 2d dd}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1098,6 +1143,7 @@ rule Trojan_MSIL_KillMBR_EHM_2147941304_0
         $x_2_1 = {11 20 f8 2f 14 00 8d 15 00 00 01 0a 16 0b 2b 15 06 07 02 07 6f 19 00 00 0a 20 00 01 00 00 5d d2 9c 07 17 58 0b 07 20 f8 2f 14 00 32 e3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1119,6 +1165,7 @@ rule Trojan_MSIL_KillMBR_EUA_2147941315_0
         $x_2_1 = {58 08 09 07 16 1f ec 11 05 58 20 84 75 98 00 ?? ?? ?? ?? ?? 26 07 16 1f ec 11 05 58 08 09 07 16 1f 14 11 04 58 20 84 75 98 00 ?? ?? ?? ?? ?? 26}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1140,6 +1187,7 @@ rule Trojan_MSIL_KillMBR_EXO_2147942196_0
         $x_2_1 = {00 06 07 02 07 ?? ?? ?? ?? ?? 20 ff 00 00 00 5f d2 9c 00 07 17 58 0b 07 20 6a 77 78 00 fe 04 0c 08 2d dd}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

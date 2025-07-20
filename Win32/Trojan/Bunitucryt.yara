@@ -16,6 +16,7 @@ rule Trojan_Win32_Bunitucryt_RM_2147805652_0
         $x_1_1 = {2d 00 10 00 00 83 c0 04 3c 00 [0-32] 31 [0-18] 04 [0-18] 04 01 45 ?? 8b [0-5] 3b [0-5] 72 [0-5] 8b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

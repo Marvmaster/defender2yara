@@ -25,6 +25,7 @@ rule Ransom_Win64_Rook_GA_2147927842_0
         $x_1_10 = "key.pub" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

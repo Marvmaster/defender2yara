@@ -18,6 +18,7 @@ rule VirTool_Win64_Novelodesz_A_2147895155_0
         $x_1_3 = {48 8b 84 24 88 01 00 00 48 89 84 24 70 01 00 00 48 8b 45 00 48 89 84 24 80 00 00 00 b9 4b 00 00 00 e8 ?? ?? ?? ?? 48 89 c6 0f 28 05 eb 61 02 00 0f 11 00 48 b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

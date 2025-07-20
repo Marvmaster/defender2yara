@@ -20,6 +20,7 @@ rule VirTool_Win64_Injecz_A_2147838739_0
         $x_1_5 = {48 8b 4c 24 40 48 89 08 44 0f 11 78 08 48 8b 54 24 48 48 89 50 18 44 0f 11 78 20 48 c7 40 30 00 00 00 00 48 8b 15 18 97 2c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule VirTool_Win64_Injecz_B_2147838740_0
         $x_1_4 = {48 8b 8c 24 80 00 00 00 48 89 08 44 0f 11 78 08 48 8b 54 24 58 48 89 50 18 48 8b 54 24 48 48 89 50 20 44 0f 11 78 28 48 8b 15 81 c6 0d 00 48 89 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

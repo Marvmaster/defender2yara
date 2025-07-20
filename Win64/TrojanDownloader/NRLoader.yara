@@ -17,6 +17,7 @@ rule TrojanDownloader_Win64_NRLoader_A_2147889164_0
         $x_2_2 = "NightRustClient" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

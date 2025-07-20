@@ -18,6 +18,7 @@ rule PWS_Win32_Jauxeer_A_2147604726_0
         $x_1_4 = "rundll32.exe %s s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule PWS_Win32_Jauxeer_A_2147604726_1
         $x_1_12 = "f=%s&m=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_1_*))) or
             ((1 of ($x_2_*) and 7 of ($x_1_*))) or

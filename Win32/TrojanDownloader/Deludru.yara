@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Deludru_2147617659_0
         $x_1_6 = {00 4e 7a 50 77 62 71 77 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))

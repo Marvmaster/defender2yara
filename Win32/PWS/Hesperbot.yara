@@ -23,6 +23,7 @@ rule PWS_Win32_Hesperbot_A_2147683068_0
         $x_3_9 = "MachineGuid" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 4 of ($x_3_*))) or
             (all of ($x*))

@@ -23,6 +23,7 @@ rule Trojan_MSIL_StealerBot_B_2147944220_0
         $x_1_9 = {06 08 1f 20 58 8f ?? ?? ?? ?? 25 47 06 08 1f 20 5d 91 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 7 of ($x_1_*))) or
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or

@@ -28,6 +28,7 @@ rule TrojanDownloader_Win32_Satray_B_2147598878_0
         $x_100_14 = {81 ec 0c 01 00 00 a1 a0 b0 00 10 53 56 57 89 84 24 14 01 00 00 8d 44 24 0c 50 68 3f 00 0f 00 6a 00 68 08 92 00 10 68 02 00 00 80 ff 15 ?? ?? ?? ?? 85 c0 8b 1d ?? ?? ?? ?? 8b 3d ?? ?? ?? ?? 75 1b 8b 4c 24 0c 6a 00 6a 00 6a 01 6a 00 68 e0 91 00 10 51 ff d3}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

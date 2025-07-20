@@ -22,6 +22,7 @@ rule Trojan_Win32_Drolnux_DA_2147779329_0
         $x_1_7 = "aHR0cDovL2IzLmdlLnR0L2dldHQvNVhidFp2YjIvbnNzMy5nej9pbmRleD0x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Drolnux_RF_2147888287_0
         $x_1_1 = {ff 8b 44 24 20 09 c0 0f 85 72 01 00 00 8b 43 3c 8d 74 24 3c c7 44 24 08 02 00 00 00 31 ff 89 74 24 0c 01 d8 89 c6 89 44 24 1c 8b 40 54 89 1c 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

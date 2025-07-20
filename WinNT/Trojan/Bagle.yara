@@ -16,6 +16,7 @@ rule Trojan_WinNT_Bagle_2147596564_0
         $x_1_2 = {80 36 33 46 49 0b c9 75 f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_WinNT_Bagle_B_2147602456_0
         $x_1_3 = {83 7d e4 08 73 2c 8b 45 e4 ff 34 85 ?? ?? ?? ?? ff 75 e0 ff 15 ?? ?? ?? ?? 59 59 85 c0 75 0e b8 22 00 00 c0 83 4d fc ff e9 ?? 00 00 00 ff 45 e4 eb ce}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_WinNT_Bagle_C_2147624936_0
         $x_1_4 = "SOFTWARE\\Microsoft\\Windows\\Security Center\\Svc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -88,6 +91,7 @@ rule Trojan_WinNT_Bagle_D_2147624937_0
         $x_1_1 = {3a 5c 57 49 4e 00 72 75 6e 64 6c 6c 33 32 2e 65 78 65 00 5c 5c 2e 5c 00 53 6f 66 74 77 61 72 65 5c 62 69 73 6f 66 74 00 53 59 53 54 45 4d 5c 43 75 72 72 65 6e 74 43 6f 6e 74 72 6f 6c 53 65 74 5c 43 6f 6e 74 72 6f 6c 5c 53 61 66 65 42 6f 6f 74 00 53}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

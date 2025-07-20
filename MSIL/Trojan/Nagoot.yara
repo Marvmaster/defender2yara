@@ -15,6 +15,7 @@ rule Trojan_MSIL_Nagoot_A_2147707908_0
         $x_1_1 = {91 07 1b 58 06 8e 69 58 1f 1f 5f 63 20 ff 00 00 00 5f d2 61 d2 81 ?? ?? ?? ?? 07 17 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Nagoot_B_2147712307_0
         $x_1_4 = {02 03 61 0c 08 1f 11 5a 1f 1b 5b 0c 07 1d 08 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Backdoor_Win32_Crysan_ARAZ_2147929779_0
         $x_2_1 = {67 69 6e 65 20 53 68 69 65 6c 64 65 6e 20 76 32 2e 34 2e 30 2e 30 00 eb 25}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

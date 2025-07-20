@@ -20,6 +20,7 @@ rule Trojan_Win32_Pimon_A_2147665949_0
         $x_1_6 = {62 00 6b 00 5f 00 61 00 6e 00 30 00 30 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

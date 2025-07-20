@@ -21,6 +21,7 @@ rule Trojan_Win32_MadKlog_A_2147730057_0
         $x_1_6 = "Exe is not in appdata" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

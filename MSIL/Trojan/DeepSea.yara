@@ -18,6 +18,7 @@ rule Trojan_MSIL_DeepSea_MCF_2147946376_0
         $x_1_3 = {57 bf b6 29 09 1e 00 00 00 fa 01 33 00 16 00 00 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

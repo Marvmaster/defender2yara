@@ -20,6 +20,7 @@ rule Backdoor_MacOS_X_SabPab_A_2147656115_0
         $x_6_6 = {f7 e9 d1 fa 89 c8 c1 f8 1f}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_6_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_6_*) and 3 of ($x_2_*))) or

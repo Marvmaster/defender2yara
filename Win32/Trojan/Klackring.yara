@@ -19,6 +19,7 @@ rule Trojan_Win32_Klackring_A_2147773229_0
         $x_1_4 = {71 15 05 7c c7 84 24 ?? ?? ?? ?? 53 21 28 09 c7 84 24 ?? ?? ?? ?? 2c 10 35 99 c7 84 24 ?? ?? ?? ?? 7c 4f 58 8e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Klackring_B_2147773269_0
         $x_1_2 = {6b 49 a3 8d c7 ?? ?? d8 dd 21 2b c7 ?? ?? 38 59 bb bf c7 ?? ?? 06 c0 33 c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

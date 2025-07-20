@@ -18,6 +18,7 @@ rule PWS_MSIL_Pasdael_A_2147686425_0
         $x_1_4 = {02 72 01 00 00 70 72 05 00 00 70 6f ?? ?? ?? ?? 10 00 02 72 09 00 00 70 72 0d 00 00 70 6f ?? ?? ?? ?? 10 00 02 72 11 00 00 70 72 15 00 00 70 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win32_Starcedor_C_2147601236_0
         $x_1_6 = {56 69 72 74 75 61 6c 50 72 6f 74 65 63 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

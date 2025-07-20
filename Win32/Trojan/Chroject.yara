@@ -19,6 +19,7 @@ rule Trojan_Win32_Chroject_B_2147689398_0
         $x_1_5 = {76 6d 69 63 65 78 63 68 61 6e 67 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Chroject_D_2147689957_0
         $x_1_7 = {43 68 61 72 67 65 72 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -78,6 +80,7 @@ rule Trojan_Win32_Chroject_E_2147690031_0
         $x_2_7 = {ff d3 85 c0 74 ?? 81 7c 24 14 80 00 00 00 75 ?? 6a 00 6a 00 55 57 6a 00 6a 00 56 c7 05 ?? ?? ?? ?? 0b 00 00 00 ff 15 ?? ?? ?? ?? 8b d8 ff 15 ?? ?? ?? ?? 85 db 74 ?? 68 88 13 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

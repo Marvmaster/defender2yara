@@ -25,6 +25,7 @@ rule Virus_Win32_Evaman_2147555597_0
         $x_1_11 = "DnsQuery_A" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

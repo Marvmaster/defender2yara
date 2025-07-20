@@ -18,6 +18,7 @@ rule Trojan_Win64_Bazarcrypt_GA_2147765882_0
         $x_1_3 = "LoadResource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_Bazarcrypt_GB_2147765883_0
         $x_1_3 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win64_Bazarcrypt_GC_2147765884_0
         $x_1_4 = "LoadResource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win64_Bazarcrypt_GD_2147765952_0
         $x_1_3 = "LoadResource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_Win64_Bazarcrypt_GW_2147766036_0
         $x_1_4 = "CryptEncrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Bootcorrupt_E_2147727459_0
         $x_1_4 = "\\\\.\\PHYSICALDRIVE%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

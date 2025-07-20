@@ -17,6 +17,7 @@ rule VirTool_WinNT_Nedsym_A_2147605134_0
         $x_1_2 = "HidePort" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule VirTool_WinNT_Nedsym_B_2147605135_0
         $x_1_1 = {85 f6 74 85 eb 19 3b 5d 1c 75 09 c7 45 2c 06 00 00 80 eb 0b 6a 00 57 ff 75 30 e8 e2 fd ff ff 5f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule VirTool_WinNT_Nedsym_C_2147605136_0
         $x_1_1 = {50 ff d3 83 c4 0c 85 c0 74 61 83 7d 08 05 75 5b ba ?? ?? 01 00 6a 10 59 33 c0 8b fa f3 ab 8b fa 6a 01 8d 46 38}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule VirTool_WinNT_Nedsym_D_2147605137_0
         $x_1_3 = "\\Device\\KernelExec" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule VirTool_WinNT_Nedsym_E_2147614135_0
         $x_1_2 = {8b 3d 08 10 01 00 68 00 40 01 00 8d 45 f4 33 db 50 89 5d fc ff d7 8b 75 08 8d 45 fc 50 53 53 6a 22 8d 45 f4 50 53 56 ff 15 30 10 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +131,7 @@ rule VirTool_WinNT_Nedsym_F_2147614136_0
         $x_1_2 = {68 1c 07 01 00 8d 4d d4 51 ff 15 9c 08 01 00 8d 55 e0 52 6a 00 68 00 01 00 00 68 20 04 00 00 8d 45 f8 50 6a 00 8b 4d 08 51 ff 15 a4 08 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +155,7 @@ rule VirTool_WinNT_Nedsym_G_2147680223_0
         $x_1_3 = {8b 48 08 c1 e1 02 51 ff 30 53 ff 15 2c 20 01 00 a3 ?? ?? ?? ?? 3b c3 75 07 b8 01 00 00 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

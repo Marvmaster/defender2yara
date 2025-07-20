@@ -31,6 +31,7 @@ rule Trojan_MSIL_RemDownloader_2147771822_0
         $x_1_16 = "trump2020" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

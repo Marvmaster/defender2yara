@@ -21,6 +21,7 @@ rule HackTool_Win32_LSADump_2147796128_0
         $x_1_6 = "Ask LSA Server to retrieve SAM/AD entries (normal, patch on the fly or inject)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

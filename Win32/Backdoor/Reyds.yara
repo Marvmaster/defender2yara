@@ -20,6 +20,7 @@ rule Backdoor_Win32_Reyds_A_2147652083_0
         $x_1_6 = "XHFHGEBD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

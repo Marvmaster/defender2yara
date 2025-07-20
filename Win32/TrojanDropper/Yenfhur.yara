@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Yenfhur_A_2147639530_0
         $x_1_2 = "ressigname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

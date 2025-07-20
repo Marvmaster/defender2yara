@@ -21,6 +21,7 @@ rule Backdoor_Win32_NetThief_2147493819_0
         $x_1_7 = "consoleTakeOverDesktop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Backdoor_Win32_NetThief_2147493819_1
         $x_1_5 = "Nethief is testing...!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -76,6 +78,7 @@ rule Backdoor_Win32_NetThief_2147493819_2
         $x_1_9 = "consoleGetResult_LoginCentralServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

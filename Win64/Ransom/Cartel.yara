@@ -17,6 +17,7 @@ rule Ransom_Win64_Cartel_AA_2147822381_0
         $x_1_2 = "/c vssadmin.exe Delete Shadows /All /Quiet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Win64_Cartel_SA_2147838821_0
         $x_1_4 = "vssadmin.exe delete shadows /all /quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Ransom_Win64_Cartel_MK_2147839475_0
         $x_1_1 = {f7 f9 8b c2 48 98 48 8b ?? ?? ?? ?? ?? ?? 48 23 ?? ?? ?? 48 8b c1 48 8b ?? ?? ?? ?? ?? ?? 48 8b ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? 48 33 c8 48 8b c1 8b 8c 24 ?? ?? ?? ?? 8b 94 24 ?? ?? ?? ?? 03 d1 8b ca 48 63 c9 48 8b 94 24 ?? ?? ?? ?? 48 89 ?? ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

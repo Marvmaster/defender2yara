@@ -22,6 +22,7 @@ rule Trojan_MSIL_Rozena_MA_2147827122_0
         $x_1_7 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_MSIL_Rozena_APA_2147833819_0
         $x_1_2 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_MSIL_Rozena_AVHI_2147836988_0
         $x_1_6 = "ResumeThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_MSIL_Rozena_SPQ_2147837218_0
         $x_4_1 = {11 06 17 58 13 06 18 13 08 2b 0d 11 06 11 08 5d 2c 0c 11 08 17 58 13 08 11 08 11 06 31 ed 11 08 11 06 33 06 11 07 17 58 13 07 11 07 11 05 32 d0}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Trojan_MSIL_Rozena_AE_2147837449_0
         $x_1_5 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_MSIL_Rozena_SPA_2147842634_0
         $x_1_2 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Trojan_MSIL_Rozena_AZR_2147844462_0
         $x_1_1 = {0c 16 13 37 2b 15 00 08 11 37 07 11 37 93 28 15 00 00 0a 9c 00 11 37 17 58 13 37 11 37 08 8e 69 fe 04 13 38 11 38 2d de}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -182,6 +189,7 @@ rule Trojan_MSIL_Rozena_AZR_2147844462_1
         $x_1_3 = "Z:\\visualstudio\\OSEP\\DropperMsfstaged\\obj\\x64\\Debug\\DropperMsfstaged.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -208,6 +216,7 @@ rule Trojan_MSIL_Rozena_PSJS_2147844534_0
         $x_1_6 = "|myself.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +239,7 @@ rule Trojan_MSIL_Rozena_NR_2147845588_0
         $x_1_2 = "OffensiveSharp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -252,6 +262,7 @@ rule Trojan_MSIL_Rozena_NR_2147845588_1
         $x_1_2 = "CSharpLoaderAESkey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -274,6 +285,7 @@ rule Trojan_MSIL_Rozena_NR_2147845588_2
         $x_1_2 = "EvasionSuite.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -296,6 +308,7 @@ rule Trojan_MSIL_Rozena_NR_2147845588_3
         $x_1_2 = "hasnainwins" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -319,6 +332,7 @@ rule Trojan_MSIL_Rozena_NR_2147845588_4
         $x_1_3 = "shanekhantaun9" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -355,6 +369,7 @@ rule Trojan_MSIL_Rozena_RPQ_2147846024_0
         $x_1_16 = "<InverseQ>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -377,6 +392,7 @@ rule Trojan_MSIL_Rozena_NRE_2147846192_0
         $x_1_2 = "lpStartAddress" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -398,6 +414,7 @@ rule Trojan_MSIL_Rozena_ARZ_2147846523_0
         $x_1_1 = {72 01 00 00 70 0a 28 01 00 00 0a 16 9a 28 02 00 00 0a 06 28 03 00 00 0a 39 00 00 00 00 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -419,6 +436,7 @@ rule Trojan_MSIL_Rozena_ARZ_2147846523_1
         $x_2_1 = {16 13 16 2b 15 07 11 16 07 11 16 91 20 fa 00 00 00 61 d2 9c 11 16 17 58 13 16 11 16 07 8e 69 32 e4}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -440,6 +458,7 @@ rule Trojan_MSIL_Rozena_ARZ_2147846523_2
         $x_1_1 = {0b 16 13 06 2b 18 07 11 06 07 11 06 91 1f 22 61 20 ff 00 00 00 5f d2 9c 11 06 17 58 13 06 11 06 07 8e 69 32 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +480,7 @@ rule Trojan_MSIL_Rozena_ARZ_2147846523_3
         $x_1_1 = {0c 06 16 08 07 28 ?? ?? ?? 0a 7e 02 00 00 0a 16 08 7e 02 00 00 0a 16 7e 02 00 00 0a 28 ?? ?? ?? 06 0d 09 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -482,6 +502,7 @@ rule Trojan_MSIL_Rozena_ARZ_2147846523_4
         $x_1_1 = {0c 07 16 08 6e 28 ?? ?? ?? 0a 07 8e 69 28 ?? ?? ?? 0a 00 7e 0c 00 00 0a 0d 16 13 04 7e 0c 00 00 0a 13 05 16 16 08 11 05 16 12 04 28 ?? ?? ?? 06 0d 09 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -503,6 +524,7 @@ rule Trojan_MSIL_Rozena_ARZ_2147846523_5
         $x_1_1 = {0c 16 08 8e 69 7e ?? 00 00 04 7e ?? 00 00 04 28 ?? 00 00 06 0d 08 16 09 6e 28 ?? 00 00 0a 08 8e 69 28 ?? 00 00 0a 16 16 09 07 16}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -525,6 +547,7 @@ rule Trojan_MSIL_Rozena_ARZ_2147846523_6
         $x_1_2 = "Desktop\\code\\Encryption\\Encryption\\obj\\x64\\Release\\Encryption.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -548,6 +571,7 @@ rule Trojan_MSIL_Rozena_ARZ_2147846523_7
         $x_1_3 = "HKEY_CURRENT_USER\\Software\\LoyeinDBServiceAPI" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -576,6 +600,7 @@ rule Trojan_MSIL_Rozena_GIF_2147846645_0
         $x_1_8 = "zzxtraction" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -598,6 +623,7 @@ rule Trojan_MSIL_Rozena_SPC_2147847782_0
         $x_1_2 = "anti-virus.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -620,6 +646,7 @@ rule Trojan_MSIL_Rozena_SPCS_2147847822_0
         $x_1_2 = "csharp_runner.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -645,6 +672,7 @@ rule Trojan_MSIL_Rozena_EN_2147849717_0
         $x_1_5 = "HttpSessionState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -666,6 +694,7 @@ rule Trojan_MSIL_Rozena_PSRM_2147850749_0
         $x_2_1 = {00 72 01 00 00 70 0a 73 0f 00 00 0a 0b 14 0c 00 07 06 6f 10 00 00 0a 0c 00 de 1c 13 06 00 72 49 00 00 70 11 06 6f 11 00 00 0a 28 12 00 00 0a 28 13 00 00 0a 00 de 53}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -687,6 +716,7 @@ rule Trojan_MSIL_Rozena_RDC_2147851446_0
         $x_2_1 = {07 11 04 07 11 04 91 20 ff 00 00 00 61 1f 11 58 d2 9c 11 04 17 58 13 04 11 04 07 8e 69}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -708,6 +738,7 @@ rule Trojan_MSIL_Rozena_PSTC_2147851566_0
         $x_2_1 = {35 00 00 0a 6f ?? 00 00 0a d0 04 00 00 02 28 ?? 00 00 0a 6f ?? 00 00 0a 6f ?? 00 00 0a 74 04 00 00 02 13 04 2b 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -729,6 +760,7 @@ rule Trojan_MSIL_Rozena_RDB_2147851686_0
         $x_2_1 = {7e 09 00 00 0a 06 8e 69 6a 28 0a 00 00 0a 7e 03 00 00 04 7e 04 00 00 04 28 01 00 00 06 0b 06 16 07 06 8e 69 28 0b 00 00 0a 00 7e 09 00 00 0a 0c 7e 09 00 00 0a 7e 0c 00 00 0a 07 7e 09 00 00 0a 16 12 02 28 02 00 00 06 0d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -751,6 +783,7 @@ rule Trojan_MSIL_Rozena_SPXD_2147851695_0
         $x_3_2 = "192.168.45.237" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -772,6 +805,7 @@ rule Trojan_MSIL_Rozena_PSTV_2147852142_0
         $x_2_1 = {03 28 0f 00 00 0a 0b 16 0c 2b 17 07 08 9a 0a 02 17 58 10 00 02 17 31 06 06 6f 10 00 00 0a 08}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -793,6 +827,7 @@ rule Trojan_MSIL_Rozena_PSUH_2147852523_0
         $x_2_1 = {72 01 00 00 70 28 ?? 00 00 0a 0a 7e 14 00 00 0a 06 8e 69 20 00 10 00 00 1f 40 28 ?? 00 00 06 0b 06 16 07 06 8e 69}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -815,6 +850,7 @@ rule Trojan_MSIL_Rozena_NRZ_2147852936_0
         $x_5_2 = {28 01 00 00 06 0d 07 16 09 08 28 ?? 00 00 0a 7e ?? 00 00 0a 16 09 7e ?? 00 00 0a 16 7e ?? 00 00 0a 28 ?? 00 00 06}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -836,6 +872,7 @@ rule Trojan_MSIL_Rozena_CXJP_2147888597_0
         $x_1_1 = {09 11 0b 09 11 0b 91 18 59 20 ?? ?? ?? ?? 5f d2 9c 00 11 0b 17 58 13 0b 11 0b 09 8e 69 fe 04 13 0c 11 0c 2d da}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -857,6 +894,7 @@ rule Trojan_MSIL_Rozena_AT_2147888605_0
         $x_1_1 = {16 13 07 2b 36 09 11 07 07 11 07 91 1f 42 61 d2 9c 09 11 07 07 11 07 91 1f 43 61 d2 9c 09 11 07 07 11 07 91 1f 44 61 d2 9c 09 11 07 07 11 07 91 1f 45 61 d2 9c 11 07 1a 58 13 07 11 07 08 32 c5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -878,6 +916,7 @@ rule Trojan_MSIL_Rozena_AP_2147888613_0
         $x_1_1 = {16 13 06 16 13 17 2b 4d 16 13 18 2b 3c 08 11 18 11 17 6f ?? ?? ?? 0a 13 19 7e 04 00 00 04 11 19 12 1a 6f ?? ?? ?? 0a 2c 0e 11 05 11 06 25 17 58 13 06 11 1a 9d 2b 0c 11 05 11 06 25 17 58 13 06 1f 30 9d 11 18 17 58 13 18 11 18 11 04 32 be}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -899,6 +938,7 @@ rule Trojan_MSIL_Rozena_AN_2147888784_0
         $x_1_1 = {0b 16 13 04 2b 18 07 11 04 07 11 04 91 1f 11 59 20 ff 00 00 00 5f d2 9c 11 04 17 58 13 04 11 04 07 8e 69 32 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -920,6 +960,7 @@ rule Trojan_MSIL_Rozena_AR_2147888800_0
         $x_1_1 = {0a 06 20 ff 01 0f 00 28 ?? ?? ?? 06 72 39 00 00 70 0b 25 15 19 16 07 14 14 14 14 14 14 28 ?? ?? ?? 06 26 16 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -941,6 +982,7 @@ rule Trojan_MSIL_Rozena_GP_2147888818_0
         $x_5_1 = {08 09 02 09 02 09 91 03 09 07 5d 91 61 d2 25 13 04 9c 11 04 9c 09 17 58 0d 09 06}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -962,6 +1004,7 @@ rule Trojan_MSIL_Rozena_CXJQ_2147888916_0
         $x_1_1 = {0b 16 0c 16 06 8e 69 20 ?? ?? ?? ?? 1f 40 28 ?? ?? ?? ?? 0d 06 16 09 6e 28 ?? ?? ?? ?? 06 8e 69 28 ?? ?? ?? ?? 00 7e ?? ?? ?? ?? 13 04 16 16 09 11 04 16 12 02 28 ?? ?? ?? ?? 0b 07 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -983,6 +1026,7 @@ rule Trojan_MSIL_Rozena_CXJR_2147888917_0
         $x_1_1 = {03 06 03 8e 69 5d 91 61 d2 81 ?? ?? ?? ?? 00 06 17 58 0a 06 02 8e 69 fe 04 0c 08 2d d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1004,6 +1048,7 @@ rule Trojan_MSIL_Rozena_PSWS_2147890092_0
         $x_2_1 = {13 04 20 c5 00 00 00 28 ?? 00 00 0a 13 05 1c 13 06 11 04 8e 69 8d 1d 00 00 01 13 07 16 13 0b 2b 22}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1025,6 +1070,7 @@ rule Trojan_MSIL_Rozena_SPDI_2147890124_0
         $x_4_1 = {72 01 00 00 70 0a 06 28 ?? ?? ?? 0a 0b 72 d4 04 00 70 0c 28 ?? ?? ?? 0a 08 6f ?? ?? ?? 0a 0d 07 09 28 ?? ?? ?? 06 13 04 16 11 04 8e 69 7e 01 00 00 04 7e 02 00 00 04 28 ?? ?? ?? 06 13 05 11 04 16 11 05}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1046,6 +1092,7 @@ rule Trojan_MSIL_Rozena_AC_2147892100_0
         $x_1_1 = {0b 07 8e 69 0c 07 8e 69 8d ?? ?? ?? 01 0d 16 13 07 2b 17 09 11 07 07 11 07 91 18 59 20 ff 00 00 00 5f d2 9c 11 07 17 58 13 07 11 07 07 8e 69 32 e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1067,6 +1114,7 @@ rule Trojan_MSIL_Rozena_SPAP_2147892265_0
         $x_3_1 = {16 16 11 04 08 16 12 01 28 ?? ?? ?? 06 0a 06 15 28 ?? ?? ?? 06 26 2b 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1089,6 +1137,7 @@ rule Trojan_MSIL_Rozena_NRO_2147892286_0
         $x_1_2 = "CalistirmaFonksiyonu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1111,6 +1160,7 @@ rule Trojan_MSIL_Rozena_NRO_2147892286_1
         $x_1_2 = "MailSlotWithTest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1132,6 +1182,7 @@ rule Trojan_MSIL_Rozena_ARE_2147892634_0
         $x_1_1 = {0b 06 16 07 06 8e 69 28 ?? 00 00 0a 00 7e ?? 00 00 0a 0c 7e ?? 00 00 0a 7e ?? 00 00 0a 07 7e ?? 00 00 0a 16 12 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1153,6 +1204,7 @@ rule Trojan_MSIL_Rozena_KAA_2147892847_0
         $x_5_1 = {00 08 11 17 08 11 17 91 20 ?? 00 00 00 61 d2 9c 00 11 17 17 58 13 17 11 17 08 8e 69 fe 04 13 18 11 18 2d dc}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1174,6 +1226,7 @@ rule Trojan_MSIL_Rozena_SPT_2147893935_0
         $x_3_1 = {7e 13 00 00 0a 0d 16 13 04 16 08 8e 69 20 ?? ?? ?? 00 1f 40 28 ?? ?? ?? 06 13 05 08 16 11 05 6e 28 ?? ?? ?? 0a 08 8e 69}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1195,6 +1248,7 @@ rule Trojan_MSIL_Rozena_SSVP_2147893936_0
         $x_3_1 = {07 11 06 07 11 06 91 1e 59 20 ?? ?? ?? 00 5f d2 9c 11 06 17 58 13 06 11 06 07 8e 69 32 e2}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1216,6 +1270,7 @@ rule Trojan_MSIL_Rozena_SK_2147894987_0
         $x_2_1 = {02 06 8f 01 00 00 01 25 47 03 06 03 8e 69 5d 91 61 d2 52 06 17 58 0a 06 02 8e 69 3f e0 ff ff ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1237,6 +1292,7 @@ rule Trojan_MSIL_Rozena_CCDP_2147895219_0
         $x_1_1 = {09 08 8e 69 33 02 16 0d 07 11 06 06 11 06 91 08 09 93 28 ?? ?? ?? ?? 61 d2 9c 09 17 58 0d 11 06 17 58 13 06 11 06 06 8e 69 32 d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1258,6 +1314,7 @@ rule Trojan_MSIL_Rozena_SPQL_2147895366_0
         $x_2_1 = {07 11 05 07 11 05 91 18 59 20 ?? ?? ?? 00 5f d2 9c 11 05 17 58 13 05 11 05 07 8e 69}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1279,6 +1336,7 @@ rule Trojan_MSIL_Rozena_SPQB_2147895373_0
         $x_2_1 = {07 11 06 9a 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 13 07 08 11 06 11 07 9c 00 11 06 17 58 13 06 11 06 07 8e 69 fe 04 13 08 11 08 2d d5}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1300,6 +1358,7 @@ rule Trojan_MSIL_Rozena_SPQI_2147895485_0
         $x_4_1 = {11 09 11 0a 9a 13 0b 00 7e ?? ?? ?? 04 11 08 11 0b 72 ?? ?? ?? 70 72 ?? ?? ?? 70 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a 9c 11 08 17 58 13 08 00 11 0a 17 58 13 0a 11 0a 11 09 8e 69 32 c3}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1321,6 +1380,7 @@ rule Trojan_MSIL_Rozena_SPQA_2147895630_0
         $x_4_1 = {fe 0c 28 01 00 00 fe 0c 29 01 00 00 9a fe 0e 2a 01 00 00 00 7e ?? ?? ?? 04 11 c3 fe 0c 2a 01 00 00 72 ?? ?? ?? 70 72 ?? ?? ?? 70 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a 9c 11 c3 17 58 13 c3 00 fe 0c 29 01 00 00 17 58 fe 0e 29 01 00 00 fe 0c 29 01 00 00 fe 0c 28 01 00 00 8e 69 32 a3}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1342,6 +1402,7 @@ rule Trojan_MSIL_Rozena_SPQN_2147895918_0
         $x_2_1 = {11 0a 11 0b 9a 13 0c 00 7e ?? ?? ?? 04 11 09 11 0c 72 ?? ?? ?? 70 72 ?? ?? ?? 70 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a 9c 11 09 17 58 13 09 00 11 0b 17 58 13 0b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1363,6 +1424,7 @@ rule Trojan_MSIL_Rozena_PTCB_2147896768_0
         $x_2_1 = {07 6f 0c 00 00 0a 26 07 6f 0d 00 00 0a 02 6f 0e 00 00 0a 07 6f 0d 00 00 0a 6f 0f 00 00 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1385,6 +1447,7 @@ rule Trojan_MSIL_Rozena_MBFN_2147898449_0
         $x_1_2 = {30 00 78 00 38 00 45 00 2c 00 30 00 78 00 38 00 38 00 2c 00 30 00 78 00 35 00 37 00 2c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1411,6 +1474,7 @@ rule Trojan_MSIL_Rozena_MBFO_2147898465_0
         $x_1_6 = "Byte8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1433,6 +1497,7 @@ rule Trojan_MSIL_Rozena_ARA_2147899457_0
         $x_2_2 = "ShellcodeRunner_evasion.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1455,6 +1520,7 @@ rule Trojan_MSIL_Rozena_ARA_2147899457_1
         $x_2_2 = "://jcxjg.fun/test/de_shellcode" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1477,6 +1543,7 @@ rule Trojan_MSIL_Rozena_ARA_2147899457_2
         $x_1_2 = "InvokeShellcodecurrentProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1500,6 +1567,7 @@ rule Trojan_MSIL_Rozena_ARA_2147899457_3
         $x_1_3 = "CreateThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1524,6 +1592,7 @@ rule Trojan_MSIL_Rozena_ARA_2147899457_4
         $x_1_4 = "WaitForSingleObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1547,6 +1616,7 @@ rule Trojan_MSIL_Rozena_ARA_2147899457_5
         $x_2_3 = "Windows Defender" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1568,6 +1638,7 @@ rule Trojan_MSIL_Rozena_SXP_2147899993_0
         $x_4_1 = {08 11 09 08 11 09 91 18 59 20 ?? ?? ?? 00 5f d2 9c 00 11 09 17 58 13 09 11 09 08 8e 69 fe 04 13 0a 11 0a 2d da}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1590,6 +1661,7 @@ rule Trojan_MSIL_Rozena_AAAY_2147900083_0
         $x_2_2 = {07 09 06 5a 08 58 02 08 06 5a 09 58 91 9c 09 17 58 0d 09 06 32 ea}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1611,6 +1683,7 @@ rule Trojan_MSIL_Rozena_SXXP_2147901116_0
         $x_4_1 = {07 08 06 08 93 28 ?? ?? ?? 0a 9c 00 08 17 58 0c 08 07 8e 69 fe 04 0d 09 3a ca fc ff ff}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1635,6 +1708,7 @@ rule Trojan_MSIL_Rozena_NBL_2147901469_0
         $x_1_4 = "avbypass.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1656,6 +1730,7 @@ rule Trojan_MSIL_Rozena_EEAA_2147902786_0
         $x_5_1 = {06 08 06 08 91 1b 58 20 ff 00 00 00 5f d2 9c 08 17 58 0c 08 06 8e 69 3f}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1677,6 +1752,7 @@ rule Trojan_MSIL_Rozena_SPYU_2147902889_0
         $x_4_1 = {06 8e 69 20 ?? ?? ?? 00 1f 40 28 ?? ?? ?? 06 13 05 11 05}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1699,6 +1775,7 @@ rule Trojan_MSIL_Rozena_ERAA_2147903180_0
         $x_5_2 = {16 0c 2b 0d 07 08 06 08 91 03 61 d2 9c 08 17 58 0c 08 06 8e 69 32 ed}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1720,6 +1797,7 @@ rule Trojan_MSIL_Rozena_FGAA_2147903194_0
         $x_5_1 = {0b 07 06 6f ?? 00 00 0a 16 73 ?? 00 00 0a 0c 73 ?? 00 00 0a 0d 20 00 04 00 00 8d ?? 00 00 01 13 04 2b 0b 09 11 04 16 11 05 6f ?? 00 00 0a 08 11 04 16 11 04 8e 69 6f ?? 00 00 0a 25 13 05 16 30 e2 09 6f ?? 00 00 0a 13 06 de 28}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1741,6 +1819,7 @@ rule Trojan_MSIL_Rozena_FIAA_2147903196_0
         $x_5_1 = {0a 16 06 8e 69 7e ?? 00 00 04 7e ?? 00 00 04 28 ?? 00 00 06 0c 06 16 08 6e 28 ?? 00 00 0a 06 8e 69 28 ?? 00 00 0a 7e ?? 00 00 0a 26 16 0d 7e ?? 00 00 0a 13 04 16 16 08 11 04 16 12 03 28 ?? 00 00 06 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1762,6 +1841,7 @@ rule Trojan_MSIL_Rozena_FJAA_2147903197_0
         $x_5_1 = {25 8e 69 0c 7e ?? 00 00 0a 20 00 10 00 00 20 00 30 00 00 1f 40 28 ?? 00 00 06 0d 16 09 08 28 ?? 00 00 0a 7e ?? 00 00 0a 16 09 7e ?? 00 00 0a 16 7e ?? 00 00 0a 28 ?? 00 00 06 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1783,6 +1863,7 @@ rule Trojan_MSIL_Rozena_SPYX_2147903234_0
         $x_4_1 = {8e 69 0b 7e ?? ?? ?? 0a 20 00 10 00 00 20 00 30 00 00 1f 40 28 ?? ?? ?? 06 0c 06 16 08}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1804,6 +1885,7 @@ rule Trojan_MSIL_Rozena_SPZY_2147903695_0
         $x_4_1 = {09 8e 69 13 04 7e ?? ?? ?? 0a 20 ?? ?? ?? 00 20 ?? ?? ?? 00 1f 40 28 ?? ?? ?? 06 13 05 09}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1825,6 +1907,7 @@ rule Trojan_MSIL_Rozena_SPPX_2147905127_0
         $x_2_1 = {07 11 07 91 08 61 d2 9c 11 07 17 58 13 07}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1846,6 +1929,7 @@ rule Trojan_MSIL_Rozena_HYAA_2147905245_0
         $x_5_1 = {07 11 05 07 11 05 91 1f 41 61 20 ff 00 00 00 5f d2 9c 11 05 17 58 13 05 11 05 07 8e 69 32 d0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1867,6 +1951,7 @@ rule Trojan_MSIL_Rozena_KAC_2147906222_0
         $x_1_1 = {09 06 5d 94 59 20 00 01 00 00 58 20 00 01 00 00 5d 13 ?? 08 09 11 ?? d2 9c 00 09 17 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1888,6 +1973,7 @@ rule Trojan_MSIL_Rozena_KAD_2147906223_0
         $x_1_1 = {0d 06 07 08 03 58 09 59 1f 1a 5d 09 58 d1 9d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1912,6 +1998,7 @@ rule Trojan_MSIL_Rozena_HNS_2147906408_0
         $x_2_4 = {52 65 61 64 50 72 6f 63 65 73 73 4d 65 6d 6f 72 79 00 57 72 69 74 65 50 72 6f 63 65 73 73 4d 65 6d 6f 72 79 00 6c 70 43 75 72 72 65 6e 74 44 69 72 65 63 74 6f 72 79 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1939,6 +2026,7 @@ rule Trojan_MSIL_Rozena_HNS_2147906408_1
         $x_2_7 = {00 57 61 69 74 46 6f 72 53 69 6e 67 6c 65 4f 62 6a 65 63 74 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_2_*))) or
             ((2 of ($x_10_*))) or
@@ -1969,6 +2057,7 @@ rule Trojan_MSIL_Rozena_HNS_2147906408_2
         $x_2_6 = {53 79 73 74 65 6d 2e 52 75 6e 74 69 6d 65 2e 49 6e 74 65 72 6f 70 53 65 72 76 69 63 65 73 00 44 6c 6c 49 6d 70 6f 72 74 41 74 74 72 69 62 75 74 65 00 6b 65 72 6e 65 6c 33 32 2e 64 6c 6c 00 6d 73 76 63 72 74 2e 64 6c 6c 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 1 of ($x_2_*))) or
             ((2 of ($x_8_*))) or
@@ -1995,6 +2084,7 @@ rule Trojan_MSIL_Rozena_JSAA_2147906611_0
         $x_5_1 = {0a 13 07 7e ?? 00 00 0a 11 07 8e 69 20 00 10 00 00 1f 40 28 ?? 00 00 06 13 08 11 07 16 11 08 11 07 8e 69 28 ?? 00 00 0a 11 08 11 07 8e 69 1f 20 12 09 28 ?? 00 00 06 26 7e ?? 00 00 0a 26 16 13 0a 7e ?? 00 00 0a 16 11 08 7e ?? 00 00 0a 16 12 0a 28 ?? 00 00 06 15 28 ?? 00 00 06 26 de 0c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2020,6 +2110,7 @@ rule Trojan_MSIL_Rozena_HNE_2147907538_0
         $x_1_5 = {00 6c 70 53 74 61 72 74 41 64 64 72 65 73 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2044,6 +2135,7 @@ rule Trojan_MSIL_Rozena_HNF_2147907920_0
         $x_1_4 = {00 4d 45 4d 5f 43 4f 4d 4d 49 54 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2065,6 +2157,7 @@ rule Trojan_MSIL_Rozena_HNG_2147908587_0
         $x_1_1 = {56 00 69 00 72 00 74 00 75 00 61 00 6c 00 41 00 6c 00 6c 00 6f 00 63 00 45 00 78 00 00 25 57 00 72 00 69 00 74 00 65 00 50 00 72 00 6f 00 63 00 65 00 73 00 73 00 4d 00 65 00 6d 00 6f 00 72 00 79 00 00 23 52 00 65 00 61 00 64 00 50 00 72 00 6f 00 63 00 65 00 73 00 73 00 4d 00 65 00 6d 00 6f 00 72 00 79 00 00 0b 6e 00 74 00 64 00 6c 00 6c 00 00 29 5a 00 77 00 55 00 6e 00 6d 00 61 00 70 00 56 00 69 00 65 00 77 00 4f 00 66 00 53 00 65 00 63 00 74 00 69 00 6f 00 6e 00 00 1d 43 00 72 00 65 00 61 00 74 00 65 00 50 00 72 00 6f 00 63 00 65 00 73 00 73 00 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2087,6 +2180,7 @@ rule Trojan_MSIL_Rozena_N_2147908736_0
         $x_1_2 = "Spotifys.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2108,6 +2202,7 @@ rule Trojan_MSIL_Rozena_RP_2147915841_0
         $x_1_1 = {08 11 0a 08 11 0a 91 11 04 11 0a 1f 20 5d 91 61 d2 9c 08 11 0a 08 11 0a 91 09 11 0a 1f 20 5d 91 61 d2 9c 11 0a 13 0b 11 0b 17 58 13 0a 11 0a 08 8e 69 32 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2130,6 +2225,7 @@ rule Trojan_MSIL_Rozena_NK_2147917955_0
         $x_1_2 = "av_bypass.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2152,6 +2248,7 @@ rule Trojan_MSIL_Rozena_NL_2147917957_0
         $x_2_2 = {0a 20 d0 07 00 00 28 04 00 00 06 28 10 00 00 0a 13 05 12 05 06 28 11 00 00 0a 13 06 12 06 28 12 00 00 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2174,6 +2271,7 @@ rule Trojan_MSIL_Rozena_NL_2147917957_1
         $x_1_2 = "$ad4e3dd4-3a9b-4db7-a181-50c6e63eecb3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2196,6 +2294,7 @@ rule Trojan_MSIL_Rozena_NA_2147918311_0
         $x_2_2 = {01 13 07 11 06 11 07 16 11 07 8e 69 6f ?? 00 00 0a 26 09 11 07 28 ?? 00 00 0a de 1b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2217,6 +2316,7 @@ rule Trojan_MSIL_Rozena_KAH_2147918659_0
         $x_5_1 = {06 11 15 06 11 15 91 20 ?? 00 00 00 61 d2 9c 11 15 17 58 13 15 11 15 06 8e 69}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2238,6 +2338,7 @@ rule Trojan_MSIL_Rozena_KAU_2147919515_0
         $x_5_1 = {06 11 15 06 11 15 91 1f 1a 61 d2 9c 11 15 17 58 13 15 11 15 06 8e 69}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2260,6 +2361,7 @@ rule Trojan_MSIL_Rozena_KAF_2147919568_0
         $x_1_2 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2282,6 +2384,7 @@ rule Trojan_MSIL_Rozena_KAG_2147919569_0
         $x_1_2 = "XORDecrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2305,6 +2408,7 @@ rule Trojan_MSIL_Rozena_NN_2147920282_0
         $x_1_3 = "$612590aa-af68-41e6-8ce2-e831f7fe4ccc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2326,6 +2430,7 @@ rule Trojan_MSIL_Rozena_SPAN_2147920486_0
         $x_1_1 = {0b 07 06 6f ?? ?? ?? 0a 0c 16 08 8e 69 20 00 10 00 00 1f 40 28 ?? ?? ?? 06 0d 16 13 04 08 16 09 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2347,6 +2452,7 @@ rule Trojan_MSIL_Rozena_SHPF_2147920488_0
         $x_1_1 = {0b 07 8e 69 0c 7e ?? ?? ?? 0a 08 20 00 30 00 00 1f 40 28 ?? ?? ?? 06 0d 16 13 06 2b 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2368,6 +2474,7 @@ rule Trojan_MSIL_Rozena_SPRA_2147921752_0
         $x_1_1 = {09 1d 59 0d 07 11 0a 91 13 0b 11 0b 11 05 61 13 0c 11 04 09 58 13 04 07 11 0a 11 0c d2 9c 00 11 0a 17 58 13 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2390,6 +2497,7 @@ rule Trojan_MSIL_Rozena_KAI_2147921796_0
         $x_1_2 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2413,6 +2521,7 @@ rule Trojan_MSIL_Rozena_NE_2147923055_0
         $x_1_3 = "AES_encrypt.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2436,6 +2545,7 @@ rule Trojan_MSIL_Rozena_NG_2147923056_0
         $x_1_3 = "ShellcodeExecutor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2457,6 +2567,7 @@ rule Trojan_MSIL_Rozena_SMDA_2147923088_0
         $x_3_1 = {11 05 11 06 11 05 11 06 91 1f 7a 61 d2 9c 11 06 17 58 13 06 11 06 11 05 8e 69 3f e1 ff ff ff}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2478,6 +2589,7 @@ rule Trojan_MSIL_Rozena_SPDT_2147924277_0
         $x_3_1 = {0a 06 8e 69 0b 7e ?? ?? ?? 0a 07 20 00 10 00 00 1f 40 28 ?? ?? ?? 06 0c 06 16 08 07}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2499,6 +2611,7 @@ rule Trojan_MSIL_Rozena_SBDF_2147924278_0
         $x_5_1 = {0d 16 09 8e 69 7e 01 00 00 04 7e 02 00 00 04 28 ?? 00 00 06 13 04 09 16 11 04 6e 28 ?? 00 00 0a 09 8e 69}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2521,6 +2634,7 @@ rule Trojan_MSIL_Rozena_NT_2147924507_0
         $x_2_2 = {11 06 11 05 8e 69 1f 20 12 07 28 02 00 00 06 26 16 13 08 16 16 11 06 7e 1a 00 00 0a 16 12 08 28 03 00 00 06}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2542,6 +2656,7 @@ rule Trojan_MSIL_Rozena_SCXF_2147927416_0
         $x_4_1 = {07 11 06 94 0d 08 09 06 11 06 91 9c 11 06 17 58 13 06 11 06 07 8e 69 32 e7}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2564,6 +2679,7 @@ rule Trojan_MSIL_Rozena_GNT_2147932095_0
         $x_5_2 = {11 05 8e 69 20 00 10 00 00 1a 28 ?? ?? ?? 06 13 06 11 05 16 11 06 11 05 8e 69 28}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2586,6 +2702,7 @@ rule Trojan_MSIL_Rozena_NIT_2147932227_0
         $x_1_2 = {7e 03 00 00 04 2d 11 14 fe 06 0a 00 00 06 73 02 00 00 0a 80 03 00 00 04 7e 03 00 00 04 28 ?? 00 00 0a 74 02 00 00 01 28 ?? 00 00 0a 73 05 00 00 0a 0a 06 02 6f ?? 00 00 0a 0b 07 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2607,6 +2724,7 @@ rule Trojan_MSIL_Rozena_SVJI_2147932397_0
         $x_4_1 = {02 8e 69 20 00 10 00 00 1a 28 ?? 00 00 06 0a 20 30 75 00 00 28 ?? 00 00 0a 02 16 06 02 8e 69 28 ?? 00 00 0a 20 30 75 00 00 28 ?? 00 00 0a 06 02 8e 69 20 00 10 00 00 1f 20}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2635,6 +2753,7 @@ rule Trojan_MSIL_Rozena_CCJR_2147934174_0
         $x_1_8 = {43 72 65 61 74 65 54 68 72 65 61 64 28 30 2c 30 2c 24 [0-15] 2c 30 2c 30 2c 30 29 3b 66 6f 72 20 28 3b 3b 29 7b 53 74 61 72 74 2d 73 6c 65 65 70 20 36 30 7d 3b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -2660,6 +2779,7 @@ rule Trojan_MSIL_Rozena_EAJ_2147941306_0
         $x_2_1 = {08 02 07 02 8e 69 5d 91 58 06 07 91 58 20 ff 00 00 00 5f 0c 06 07 08 28 04 00 00 06 07 17 58 0b 07 20 00 01 00 00 32 d8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2681,6 +2801,7 @@ rule Trojan_MSIL_Rozena_GAF_2147945455_0
         $x_1_1 = {08 61 d2 13 0a 11 0a 18 59 20 ff 00 00 00 5f d2 13 0a 07 11 09 11 0a 9c 11 09 17 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2702,6 +2823,7 @@ rule Trojan_MSIL_Rozena_ECM_2147946271_0
         $x_2_1 = {06 09 06 09 91 18 59 20 ff 00 00 00 5f d2 9c 09 17 58 0d 09 06 8e 69 32 e7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

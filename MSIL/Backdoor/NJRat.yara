@@ -19,6 +19,7 @@ rule Backdoor_MSIL_NJRat_A_2147717112_0
         $x_1_4 = {20 c8 00 00 00 da b4 6f 2b 00 00 0a ?? 17 d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Backdoor_MSIL_NJRat_A_2147717112_1
         $x_1_8 = "cmd.exe /k ping 0 & del" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -77,6 +79,7 @@ rule Backdoor_MSIL_NJRat_A_2147731388_0
         $x_1_6 = "cmd.exe /k ping 0 & del" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

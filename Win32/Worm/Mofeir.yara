@@ -20,6 +20,7 @@ rule Worm_Win32_Mofeir_P_2147571815_0
         $n_5_6 = "arunusb.hlp" ascii //weight: -5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

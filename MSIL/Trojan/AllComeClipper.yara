@@ -19,6 +19,7 @@ rule Trojan_MSIL_AllComeClipper_A_2147836287_0
         $x_1_4 = "ToInteger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_AllComeClipper_B_2147837082_0
         $x_2_1 = {04 03 8e 69 14 14 17 28 ?? 00 00 06 d6 13 05 11 05 04 5f 13 06 03 11 04 03 8e 69 14 14 17 28 ?? 00 00 06 91 13 07 06}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

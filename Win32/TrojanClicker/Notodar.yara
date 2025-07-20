@@ -23,6 +23,7 @@ rule TrojanClicker_Win32_Notodar_A_2147689835_0
         $x_1_9 = {74 0d 8b 08 8d 55 cc 52 50 ff 51 24 8b 45 ec 39 7d d8 7f 46 39 5d d4 75 41 39 5d d0 75 3c 39 5d cc 75 37 c6 45 fc 01 3b c3 74 06 8b 08 50 ff 51 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

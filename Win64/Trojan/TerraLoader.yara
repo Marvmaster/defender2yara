@@ -16,6 +16,7 @@ rule Trojan_Win64_TerraLoader_A_2147889170_0
         $x_2_1 = {0f be 0f 48 8d 7f ?? c1 cb ?? ff c2 03 d9 48 63 ca 48 3b c8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

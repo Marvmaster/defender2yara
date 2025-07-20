@@ -20,6 +20,7 @@ rule Trojan_Win64_Kriskynote_A_2147708106_0
         $x_1_5 = {8a 04 31 34 36 8a d0 80 e2 0f c0 e2 04 c0 e8 04 02 d0 88 14 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

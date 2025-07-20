@@ -16,6 +16,7 @@ rule Backdoor_Win64_Vankul_ZA_2147837245_0
         $x_1_2 = "VK_LOADER_DEBUG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win64_Vankul_A_2147839437_0
         $x_1_5 = {ff d6 48 8d 87 44 6d 00 00 48 8d 4d 48 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

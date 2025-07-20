@@ -17,6 +17,7 @@ rule Backdoor_Linux_Tigrbot_A_2147684904_0
         $x_1_3 = {2b 38 36 31 35 30 35 33 35 39 33 34 38 30 00 00 44 45 34 36 42 35 35 45 44 46 43 38 46 42 39 35 46 45 31 32 33 32 42 39 36 41 36 31 31 46 42 36 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

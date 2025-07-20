@@ -21,6 +21,7 @@ rule Backdoor_Win32_Sacto_A_2147696329_0
         $x_5_6 = "POST http://%ws:%d/%d%s%dHTTP/1.1" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_2_*))) or
             ((3 of ($x_5_*))) or
@@ -51,6 +52,7 @@ rule Backdoor_Win32_Sacto_B_2147718978_0
         $x_2_6 = "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_5_*))) or
@@ -80,6 +82,7 @@ rule Backdoor_Win32_Sacto_C_2147718979_0
         $x_2_5 = "/%d%s%d" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*))) or
             (all of ($x*))
@@ -108,6 +111,7 @@ rule Backdoor_Win32_Sacto_D_2147718980_0
         $x_2_5 = "/%d%s%d" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*))) or
             (all of ($x*))

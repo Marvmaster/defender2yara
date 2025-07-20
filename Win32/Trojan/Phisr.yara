@@ -19,6 +19,7 @@ rule Trojan_Win32_Phisr_A_2147682714_0
         $x_1_5 = "(([0-9]\\0?){15,16}[D=]\\0?(?:0\\0?([7-9]\\0?)|([1-4]\\0?[0-9]\\0?))" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -15,6 +15,7 @@ rule SoftwareBundler_Win32_Stallmonitz_225956_0
         $x_1_1 = "www.cooctdlfast.com/download.php?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule SoftwareBundler_Win32_Stallmonitz_225956_1
         $x_1_2 = "http://www.ntdlzone.com/download.php?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -57,6 +59,7 @@ rule SoftwareBundler_Win32_Stallmonitz_225956_2
         $x_1_2 = "/CBURL=http://www.coapr13south.com/download.php?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +81,7 @@ rule SoftwareBundler_Win32_Stallmonitz_225956_3
         $x_1_2 = "runwait data\\bgb.exe /CBURL=http://www.cooctdlfast.com/download.php?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +104,7 @@ rule SoftwareBundler_Win32_Stallmonitz_225956_4
         $x_1_3 = "/CBURL=http://www.cojulyfastdl.com/download.php?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -127,6 +132,7 @@ rule SoftwareBundler_Win32_Stallmonitz_225956_5
         $x_1_5 = "http://www.cosept14water.com/download.php?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

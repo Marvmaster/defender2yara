@@ -22,6 +22,7 @@ rule Trojan_MacOS_Tored_B_2147745413_0
         $x_5_7 = "keyloger started" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_7_*))) or
@@ -49,6 +50,7 @@ rule Trojan_MacOS_Tored_A_2147750317_0
         $x_1_3 = "keyloger started" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

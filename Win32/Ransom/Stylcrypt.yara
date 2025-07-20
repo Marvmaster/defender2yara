@@ -20,6 +20,7 @@ rule Ransom_Win32_Stylcrypt_A_2147726360_0
         $x_2_6 = "About .Stinger unlocking instructions.txt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

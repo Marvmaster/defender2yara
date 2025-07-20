@@ -20,6 +20,7 @@ rule Worm_Win32_Rutv_A_2147625210_0
         $x_1_6 = "http://odnoklassniki.ru/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

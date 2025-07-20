@@ -22,6 +22,7 @@ rule VirTool_Win32_Patpoopy_A_2147740949_0
         $x_1_8 = "pupy.manager" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule VirTool_Win32_Patpoopy_A_2147740949_1
         $x_1_8 = "network.lib.streams.PupySocketStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

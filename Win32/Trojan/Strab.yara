@@ -17,6 +17,7 @@ rule Trojan_Win32_Strab_CC_2147815679_0
         $x_2_2 = {81 f9 4a 79 02 0f 7f 0d 41 81 f9 b2 78 6c 6d 0f 8c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Strab_CD_2147815761_0
         $x_2_2 = {81 f9 4a 79 02 0f 7f 0d 41 81 f9 b2 97 76 67 0f 8c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Strab_CE_2147817455_0
         $x_2_2 = {3d 60 4b da 26 7f 0c 40 3d b6 ad 81 5b 0f 8c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Strab_CA_2147837739_0
         $x_5_1 = {0f b6 74 24 10 0f b6 4c 24 1b 8b 54 24 28 0f af f1 8b 4c 24 2c b9 08 03 4a 59 2b ca f7 d6 f7 d1 33 f1 8b 0d ?? ?? ?? ?? 2b 0d ?? ?? ?? ?? f7 d6 0f af f1 89 35 ?? ?? ?? ?? 48 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_Win32_Strab_SP_2147839349_0
         $x_7_1 = {8b 55 f8 83 c2 01 89 55 f8 83 7d f8 04 7d 1e 8b 45 f8 0f b6 4c 05 f4 51 8d 55 8c 52 8b 4d e0 e8 ?? ?? ?? ?? 8b 4d f8 88 44 0d f4 eb d3}  //weight: 7, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +130,7 @@ rule Trojan_Win32_Strab_GCW_2147840109_0
         $x_1_2 = "\\Users\\Public\\Desktop\\error.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +152,7 @@ rule Trojan_Win32_Strab_RF_2147840151_0
         $x_2_1 = {83 f2 4e 88 95 37 ff ff ff 0f b7 05 ?? ?? ?? ?? 99 05 5b 0f d8 99 81 d2 54 73 0e 00 a3 ?? ?? ?? ?? 8b 45 c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -167,6 +174,7 @@ rule Trojan_Win32_Strab_RF_2147840151_1
         $x_1_1 = {8b 55 fc 8b 45 fc 33 d0 89 55 fc 8b 55 fc 8b f3 85 d2 74 03 8b 75 fc 8b 45 fc 99 f7 fe 8b 55 fc bf 05 00 00 00 0f af c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -188,6 +196,7 @@ rule Trojan_Win32_Strab_GFE_2147841665_0
         $x_10_1 = {8b 54 24 58 f6 ea 8a c8 8b 44 24 50 32 0d ?? ?? ?? ?? 2c 2a f6 2d ?? ?? ?? ?? f6 ac 24 ?? ?? ?? ?? 02 c8 88 4c 24 50 e9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -209,6 +218,7 @@ rule Trojan_Win32_Strab_CPR_2147843455_0
         $x_5_1 = {8a 14 30 8b c6 83 e0 ?? 8a 88 ?? ?? ?? ?? 32 ca 0f b6 da 8d 04 19 8b 4d d0 88 04 31 ba ?? ?? ?? ?? b9 ?? ?? ?? ?? e8 ?? ?? ?? ?? 50 e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +240,7 @@ rule Trojan_Win32_Strab_GHN_2147845123_0
         $x_10_1 = {1b c0 83 c0 01 8b 0d ?? ?? ?? ?? f7 d1 0f af c1 0f bf 55 98 33 95 ?? ?? ?? ?? f7 da 1b d2 83 c2 01 2b c2 a2 ?? ?? ?? ?? a1 ?? ?? ?? ?? 33 c9 05 ?? ?? ?? ?? 81 d1}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +262,7 @@ rule Trojan_Win32_Strab_GJU_2147850647_0
         $x_10_1 = {0f b6 8c 3d ?? ?? ?? ?? 03 ca 0f b6 c1 8b 4d 08 8a 84 05 ?? ?? ?? ?? 30 04 0e 46 3b 75 0c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -273,6 +285,7 @@ rule Trojan_Win32_Strab_GNG_2147851011_0
         $x_1_2 = "JKbtgdfd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -294,6 +307,7 @@ rule Trojan_Win32_Strab_GMP_2147892339_0
         $x_10_1 = {c0 c8 03 32 86 ?? ?? ?? ?? 88 81 ?? ?? ?? ?? 8d 46 01 99 41 f7 fb 8b f2 81 f9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -315,6 +329,7 @@ rule Trojan_Win32_Strab_GPA_2147892997_0
         $x_4_1 = {c0 c8 03 32 83 ?? ?? ?? ?? 88 81 00 40 ?? ?? 8d 43 01 6a 0d 5b 99 f7 fb 41 8b da 3b ce 72 db}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -336,6 +351,7 @@ rule Trojan_Win32_Strab_GMX_2147893422_0
         $x_10_1 = {33 c9 8a 81 ?? ?? ?? ?? c0 c8 03 32 83 ?? ?? ?? ?? 88 81 ?? ?? ?? ?? 8d 43 01 6a 0d 99 5e f7 fe 41 b8 ?? ?? ?? ?? 8b da 3b c8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -357,6 +373,7 @@ rule Trojan_Win32_Strab_GMZ_2147893497_0
         $x_10_1 = {f7 ef 8a 86 ?? ?? ?? ?? c0 c0 ?? 32 81 ?? ?? ?? ?? 88 86 ?? ?? ?? ?? 89 d0 c1 e8 ?? c1 fa ?? 01 c2 8d 04 52 8d 04 82 f7 d8 01 c1 41 46}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -378,6 +395,7 @@ rule Trojan_Win32_Strab_AMAB_2147895950_0
         $x_1_1 = {99 f7 fb 8a 81 ?? ?? ?? ?? c0 c8 03 32 82 ?? ?? ?? ?? 88 81 ?? ?? ?? ?? 8d 42 01 99 83 c1 03 f7 fb 8b f2 81 f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -399,6 +417,7 @@ rule Trojan_Win32_Strab_AMBC_2147896568_0
         $x_1_1 = {8b ff 8a 81 ?? ?? ?? ?? c0 c8 03 32 86 ?? ?? ?? ?? 41 88 81 ?? ?? ?? ?? 8d 46 01 99 f7 fb 8b f2 81 f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -420,6 +439,7 @@ rule Trojan_Win32_Strab_CCEH_2147897089_0
         $x_1_1 = {8a 02 88 45 fe 0f b6 4d ff c1 f9 ?? 0f b6 55 ff c1 e2 ?? 0b ca 0f b6 45 fe 33 c8 8b 55 f8 88 8a ?? ?? ?? ?? 8b 45 f0 83 c0 ?? 99 b9 ?? ?? ?? ?? f7 f9 89 55 f0 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -441,6 +461,7 @@ rule Trojan_Win32_Strab_SPR_2147898786_0
         $x_4_1 = {8a 04 0f c0 c8 03 32 83 ?? ?? ?? ?? 88 04 0f 8d 43 01 bb ?? ?? ?? ?? 99 f7 fb 41 8b da 3b ce 72 df}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -462,6 +483,7 @@ rule Trojan_Win32_Strab_AMBI_2147900116_0
         $x_5_1 = {09 c8 0f b6 4d ?? 31 c8 88 c1 8b 45 ?? 88 0c 05}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -483,6 +505,7 @@ rule Trojan_Win32_Strab_AMBI_2147900116_1
         $x_5_1 = {f7 fe 0f b6 81 ?? ?? ?? ?? c0 c8 03 32 82 ?? ?? ?? ?? 88 81 ?? ?? ?? ?? 8d 42 01 99 f7 fe}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -504,6 +527,7 @@ rule Trojan_Win32_Strab_SPRJ_2147901320_0
         $x_4_1 = {d1 e8 c1 e1 07 46 0b c8 03 cf 03 d1 0f be 3e 8b c2 85 ff 75}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -525,6 +549,7 @@ rule Trojan_Win32_Strab_SPXP_2147902489_0
         $x_5_1 = {6a 00 6a 00 ff d5 e8 ?? ?? ?? ?? 30 04 1e 46 3b f7 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -614,6 +639,7 @@ rule Trojan_Win32_Strab_GPF_2147904984_0
         $x_2_2 = "forcereaction.xyz/pin.php?pe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -904,6 +930,7 @@ rule Trojan_Win32_Strab_SPDB_2147908221_0
         $x_5_1 = {69 d2 fd 43 03 00 81 c2 c3 9e 26 00 89 15 ?? ?? ?? ?? 8a 0d ?? ?? ?? ?? 30 0c 30 83 ff 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -925,6 +952,7 @@ rule Trojan_Win32_Strab_GPJ_2147908512_0
         $x_1_1 = {8d a4 24 00 00 00 00 8b 0d ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 30 14 1e 83 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1500,6 +1528,7 @@ rule Trojan_Win32_Strab_EALC_2147934424_0
         $x_5_1 = {0f af c0 0f b7 d7 03 ce 8a 54 55 ec 30 11 47 99 2b c2 d1 f8 46 3b f3 72}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

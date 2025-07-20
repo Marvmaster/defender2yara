@@ -20,6 +20,7 @@ rule Trojan_Win32_Plyromt_2147783681_0
         $x_1_5 = "web.send" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

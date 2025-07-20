@@ -19,6 +19,7 @@ rule Trojan_Win32_Gedanjo_A_2147627635_0
         $x_1_5 = "facepizza.cn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

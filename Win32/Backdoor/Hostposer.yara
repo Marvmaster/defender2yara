@@ -16,6 +16,7 @@ rule Backdoor_Win32_Hostposer_A_2147655260_0
         $x_1_2 = {8b 55 e0 66 81 e3 ff 00 8b f8 89 55 84 c7 85 7c ff ff ff 08 00 00 00 79 09 66 4b 66 81 cb 00 ff 66 43 0f bf c3 8d 4d bc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

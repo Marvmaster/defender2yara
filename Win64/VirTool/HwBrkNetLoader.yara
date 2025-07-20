@@ -17,6 +17,7 @@ rule VirTool_Win64_HwBrkNetLoader_A_2147931567_0
         $x_1_3 = {49 89 80 98 00 00 00 33 c0 49 89 40 78 b8 ff ff ff ff 48 8b 5c 24 30 48 83 c4 20 5f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

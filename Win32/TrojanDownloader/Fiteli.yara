@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Fiteli_A_2147607516_0
         $x_1_2 = {e9 80 00 00 00 8d 55 e4 8d 8d e0 fb ff ff e8 ?? ?? ff ff 85 c0 74 6e ba 01 00 00 00 8b 8d e0 fb ff ff e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

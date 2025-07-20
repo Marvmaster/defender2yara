@@ -28,6 +28,7 @@ rule PWS_Win32_QQShou_2147566902_0
         $n_15_14 = "PolicyManage.dll" ascii //weight: -15
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((7 of ($x_1_*))) or

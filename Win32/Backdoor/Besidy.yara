@@ -27,6 +27,7 @@ rule Backdoor_Win32_Besidy_A_2147725147_0
         $x_1_12 = {00 00 44 00 6f 00 77 00 6e 00 6c 00 6f 00 61 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

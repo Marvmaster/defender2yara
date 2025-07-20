@@ -28,6 +28,7 @@ rule Virus_Win32_Tuareg_2147573931_0
         $x_1_14 = {8a c2 04 58 aa e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

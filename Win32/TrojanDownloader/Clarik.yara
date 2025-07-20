@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Clarik_A_2147671590_0
         $x_1_8 = {5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))

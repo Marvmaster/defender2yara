@@ -18,6 +18,7 @@ rule Trojan_Win32_Captiya_A_2147601411_0
         $x_5_4 = {8d 40 00 55 8b ec 6a 00 53 56 8b f2 8b d8 33 c0 55 68 ?? ?? ?? ?? 64 ff 30 64 89 20 53 68 ?? ?? ?? ?? 8d 45 fc 50 e8 ?? ?? ff ff 8b 45 fc 50 68 ?? ?? ?? ?? 56 e8 ?? ?? ff ff 33 c0 5a 59 59 64 89 10 68 ?? ?? ?? ?? 8d 45 fc e8 ?? ?? f9 ff c3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

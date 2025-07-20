@@ -27,6 +27,7 @@ rule Trojan_Win32_Simplese_2147494471_0
         $x_2_13 = "fake operating system" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or

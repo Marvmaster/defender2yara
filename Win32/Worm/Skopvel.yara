@@ -21,6 +21,7 @@ rule Worm_Win32_Skopvel_A_2147641204_0
         $x_1_6 = "logdata=Downloaded payload" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

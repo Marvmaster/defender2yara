@@ -15,6 +15,7 @@ rule TrojanDownloader_Win32_Grecls_A_2147599153_0
         $x_1_1 = {b9 04 00 00 00 33 d2 8b 03 e8 ?? ?? ff ff 8b 85 ?? ff ff ff ba ?? ?? 10 00 e8 ?? ?? ff ff 75 7a 8d 8d ?? ff ff ff ba 01 00 00 00 b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

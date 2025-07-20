@@ -33,6 +33,7 @@ rule TrojanSpy_MSIL_Formbook_MK_2147771479_0
         $x_1_18 = "ToInt32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

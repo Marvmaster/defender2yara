@@ -18,6 +18,7 @@ rule Virus_Win32_Android_HNA_2147925580_0
         $x_1_3 = {c6 00 02 ff 36 68 ?? ?? ?? ?? 8b c3 33 d2 52 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

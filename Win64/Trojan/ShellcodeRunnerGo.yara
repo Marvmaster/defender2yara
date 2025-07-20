@@ -22,6 +22,7 @@ rule Trojan_Win64_ShellcodeRunnerGo_A_2147922805_0
         $x_1_7 = {41 0f b6 44 24 17 89 c1 83 e0 1f 48 89 c3 48 0f ba e8 07 ?? 48 8b b4 24 d8 01 00 00 f6 c1 20 48 0f 44 d8 eb 07 31 db 45 31 e4 31 f6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_MSIL_ModiRat_AMO_2147939415_0
         $x_3_2 = "myhousecam.ddns.net" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

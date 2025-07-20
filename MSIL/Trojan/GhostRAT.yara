@@ -17,6 +17,7 @@ rule Trojan_MSIL_GhostRAT_NG_2147923059_0
         $x_2_2 = {11 08 6f 86 00 00 0a d4 8d 64 00 00 01 13 09 11 08 11 09 16 11 09 8e 69 6f 87 00 00 0a 26 08 11 09 28 88 00 00 0a de 18}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

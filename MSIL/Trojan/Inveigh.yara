@@ -22,6 +22,7 @@ rule Trojan_MSIL_Inveigh_DA_2147916768_0
         $x_1_7 = "HTTPS listener" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

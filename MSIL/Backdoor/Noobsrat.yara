@@ -23,6 +23,7 @@ rule Backdoor_MSIL_Noobsrat_A_2147686117_0
         $x_1_9 = "Sending Logs..." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

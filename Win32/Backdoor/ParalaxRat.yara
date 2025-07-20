@@ -18,6 +18,7 @@ rule Backdoor_Win32_ParalaxRat_STB_2147776250_0
         $x_2_4 = {3d 40 1f 00 00 7c ee 42 81 fa b0 8f 06 00 7c e3 c7 45 d0 [0-10] c7 45 d4 ?? ?? ?? ?? c7 45 d8 ?? ?? ?? ?? c7 45 dc}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -50,6 +51,7 @@ rule Backdoor_Win32_ParalaxRat_STC_2147776251_0
         $x_2_9 = "DeleteFile(Wscript.ScriptFullName)" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -80,6 +82,7 @@ rule Backdoor_Win32_ParalaxRat_STD_2147777266_0
         $x_1_6 = "KEYLOG: " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -109,6 +112,7 @@ rule Backdoor_Win32_ParalaxRat_STD_2147777266_1
         $x_1_10 = "usb_spread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -131,6 +135,7 @@ rule Backdoor_Win32_ParalaxRat_DM_2147786459_0
         $x_10_2 = {c6 46 24 00 8a cb 80 e1 01 74 16 8a 4d 0c 80 c9 01 0f b6 c1 8b ce 50 8d 44 24 13}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +158,7 @@ rule Backdoor_Win32_ParalaxRat_Q_2147812254_0
         $x_5_2 = {8b 55 08 33 c0 8b 4d 0c c7 44 8a 0c 02 00 00 00 ff 42 04 40 89 44 8a 0c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

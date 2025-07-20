@@ -16,6 +16,7 @@ rule DDoS_Win32_Dufeva_A_2147653385_0
         $x_1_2 = {b8 67 66 66 66 f7 e9 c1 fa 02 8b ?? c1 ?? 1f 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Backdoor_MacOS_MechBot_A1_2147745843_0
         $x_1_4 = "./randfiles/randsignoff.e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

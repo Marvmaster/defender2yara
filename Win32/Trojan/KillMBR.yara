@@ -22,6 +22,7 @@ rule Trojan_Win32_KillMBR_AR_2147752363_0
         $x_4_7 = "All of your files have been encrypted" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_4_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_4_*))) or
@@ -50,6 +51,7 @@ rule Trojan_Win32_KillMBR_MB_2147753493_0
         $x_1_4 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_Win32_KillMBR_MAK_2147787295_0
         $x_1_4 = "Payload" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +104,7 @@ rule Trojan_Win32_KillMBR_MAK_2147787295_1
         $x_1_7 = "failed to overwrite boot data" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -133,6 +137,7 @@ rule Trojan_Win32_KillMBR_RPN_2147819351_0
         $x_1_12 = "GetTickCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +162,7 @@ rule Trojan_Win32_KillMBR_BD_2147822256_0
         $x_2_4 = "Something has gone wrong!" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -182,6 +188,7 @@ rule Trojan_Win32_KillMBR_BM_2147823576_0
         $x_1_5 = "KillMbr.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -208,6 +215,7 @@ rule Trojan_Win32_KillMBR_BN_2147823577_0
         $x_1_6 = "Write MBR OK!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -235,6 +243,7 @@ rule Trojan_Win32_KillMBR_AC_2147833231_0
         $x_2_7 = "\\Release\\Overwrite.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -260,6 +269,7 @@ rule Trojan_Win32_KillMBR_AK_2147833244_0
         $x_1_5 = "Last Warning- You pressed [Yes] to the first warning, but why did you" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -281,6 +291,7 @@ rule Trojan_Win32_KillMBR_ARA_2147837287_0
         $x_2_1 = {8b c1 99 f7 fe 8a f8 8b c1 99 8a df f7 ff 8b 45 ec fe cb 02 55 e4 41 32 d3 0a d7 8b 5d e0 88 10 83 c0 04 89 45 ec 3b cb 7c d6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -303,6 +314,7 @@ rule Trojan_Win32_KillMBR_ARA_2147837287_1
         $x_2_2 = "\\\\.\\PhysicalDrive0" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -328,6 +340,7 @@ rule Trojan_Win32_KillMBR_ARA_2147837287_2
         $x_2_5 = "\\\\.\\PhysicalDrive0" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +364,7 @@ rule Trojan_Win32_KillMBR_ARA_2147837287_3
         $x_2_3 = "Reset disk system" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -378,6 +392,7 @@ rule Trojan_Win32_KillMBR_ARA_2147837287_4
         $x_2_7 = "\\\\.\\Harddisk0Partition" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -406,6 +421,7 @@ rule Trojan_Win32_KillMBR_PAAF_2147850037_0
         $x_1_8 = "Are you sure? It will overwrite the MBR, continue?" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -428,6 +444,7 @@ rule Trojan_Win32_KillMBR_AD_2147851381_0
         $x_2_2 = "\\.\\PHYSICALDRIVE0" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -453,6 +470,7 @@ rule Trojan_Win32_KillMBR_ASAE_2147888716_0
         $x_1_5 = "This is the last warning! The creator is not responsible for any damage made using this malware! Still execute it?" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -477,6 +495,7 @@ rule Trojan_Win32_KillMBR_ASAF_2147888918_0
         $x_1_4 = "PHYSICALDRIVE0" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -500,6 +519,7 @@ rule Trojan_Win32_KillMBR_MA_2147894694_0
         $x_2_3 = "Nyan Cat..." ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -521,6 +541,7 @@ rule Trojan_Win32_KillMBR_AE_2147895129_0
         $x_2_1 = {55 89 e5 83 ec 38 c7 44 24 18 00 00 00 00 c7 44 24 14 00 00 00 00 c7 44 24 10 03 00 00 00 c7 44 24 0c 00 00 00 00 c7 44 24 08 03 00 00 00 c7 44 24 04 00 00 00 10 c7 04 24 00 40 40 00 a1 ?? 61 40 00 ff d0 83 ec 1c 89 45 f4 c7 44 24 10 00 00 00 00 8d 45 f0 89 44 24 0c c7 44 24 08 00 02 00 00 c7 44 24 04 40 40 40 00 8b 45 f4 89 04 24 a1 5c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -543,6 +564,7 @@ rule Trojan_Win32_KillMBR_GPA_2147895467_0
         $x_2_2 = "SarcomAI L3.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -567,6 +589,7 @@ rule Trojan_Win32_KillMBR_EM_2147896086_0
         $x_2_4 = "C:\\ProgramData\\log.txt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -590,6 +613,7 @@ rule Trojan_Win32_KillMBR_RDB_2147903900_0
         $x_1_3 = "IT HURTS REALLY YOUR REAL PC!!!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -611,6 +635,7 @@ rule Trojan_Win32_KillMBR_RDC_2147904044_0
         $x_2_1 = {6a 00 8b f0 8d 45 fc 50 68 00 80 00 00 68 ?? ?? ?? ?? 56 ff d3 56}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -632,6 +657,7 @@ rule Trojan_Win32_KillMBR_CCHT_2147904393_0
         $x_1_1 = {6a 00 6a 00 6a 03 6a 00 6a 03 68 00 00 00 10 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b f0 6a 00 8d 45 fc 50 68 00 28 00 00 68 ?? ?? ?? ?? 56 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -653,6 +679,7 @@ rule Trojan_Win32_KillMBR_AKM_2147905249_0
         $x_1_1 = {b9 00 ca 9a 3b 8b c7 8b bc 24 ?? ?? ?? ?? f7 e1 ba 00 ca 9a 3b 8b c8 8b 44 24 ?? f7 e2 03 ca 03 f0 8b 84 24 ?? ?? ?? ?? 13 c1 89 b4 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -680,6 +707,7 @@ rule Trojan_Win32_KillMBR_NM_2147917175_0
         $x_1_7 = "your computer have a lock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -704,6 +732,7 @@ rule Trojan_Win32_KillMBR_NM_2147917175_1
         $x_1_4 = "if you dont want to destroy your pc PRESS NO AND DELETE IT FASTLY!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -729,6 +758,7 @@ rule Trojan_Win32_KillMBR_EA_2147927334_0
         $x_3_5 = "reg add HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System /v HideFastUserSwitching /t REG_DWORD /d 1 /f" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -753,6 +783,7 @@ rule Trojan_Win32_KillMBR_ARAZ_2147928457_0
         $x_2_4 = "\\\\.\\PhysicalDrive0" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -776,6 +807,7 @@ rule Trojan_Win32_KillMBR_ARAZ_2147928457_1
         $x_2_3 = "\\\\.\\PhysicalDrive0" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -801,6 +833,7 @@ rule Trojan_Win32_KillMBR_PAGD_2147931024_0
         $x_2_5 = "If you run this app your computer will be destroyed" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -822,6 +855,7 @@ rule Trojan_Win32_KillMBR_EAIJ_2147934441_0
         $x_5_1 = {8b d0 c1 ea 0b 80 e2 06 32 d0 8a ca c0 e2 02 02 ca 02 c9 88 8c 05 f8 f3 fa ff 40 3d fe 0b 05 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -843,6 +877,7 @@ rule Trojan_Win32_KillMBR_EANI_2147936243_0
         $x_5_1 = {c1 ea 04 0a 95 ?? ?? ?? ?? 32 da 8b 95 ?? ?? ?? ?? 88 9c 15 ?? ?? ?? ?? 42 89 95 ?? ?? ?? ?? 81 fa 10 09 05 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -864,6 +899,7 @@ rule Trojan_Win32_KillMBR_EANH_2147938600_0
         $x_5_1 = {0f be d2 0f af d1 88 94 05 f8 59 f1 ff 40 3d 00 a6 0e 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -885,6 +921,7 @@ rule Trojan_Win32_KillMBR_EAUQ_2147939537_0
         $x_5_1 = {8a c3 c0 e0 05 0a d0 88 94 1d ?? ?? ?? ?? 43 81 fb 80 a9 03 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -906,6 +943,7 @@ rule Trojan_Win32_KillMBR_EABR_2147940168_0
         $x_5_1 = {ca 88 8c 05 78 56 fc ff 40 3d 80 a9 03 00 72}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -927,6 +965,7 @@ rule Trojan_Win32_KillMBR_EAN_2147941308_0
         $x_2_1 = {0f be d2 0f af d1 88 94 05 ?? ?? ?? ?? 40 3d 00 53 07 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -948,6 +987,7 @@ rule Trojan_Win32_KillMBR_EIV_2147941309_0
         $x_2_1 = {f7 f6 24 80 88 84 0d ?? ?? ?? ?? 41 81 f9 80 a9 03 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -969,6 +1009,7 @@ rule Trojan_Win32_KillMBR_EYB_2147941311_0
         $x_2_1 = {0a d0 88 94 1d ?? ?? ?? ?? 43 81 fb 80 a9 03 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -990,6 +1031,7 @@ rule Trojan_Win32_KillMBR_ENII_2147942195_0
         $x_2_1 = {01 d0 0f b6 00 89 c2 8b 45 e8 89 d1 31 c1 8b 55 f0 8b 45 f4 01 d0 89 ca 88 10 83 45 f4 01 8b 45 f4 3b 45 ec}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

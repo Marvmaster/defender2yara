@@ -18,6 +18,7 @@ rule Ransom_Win32_CaesarCrypt_PA_2147915504_0
         $x_2_3 = "We Are Caesar. We Operate a Ransomware Operation!" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule MonitoringTool_MSIL_Traqes_201914_0
         $x_1_10 = {00 70 61 72 73 65 43 4d 44 4b 45 59 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

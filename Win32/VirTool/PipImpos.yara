@@ -21,6 +21,7 @@ rule VirTool_Win32_PipImpos_A_2147788329_0
         $x_1_6 = {64 a3 00 00 00 00 89 55 bc 89 4d ac 33 ff 89 7d a8 33 c0 89 45 b0 89 45 a4 33 db 89 5d a0 89 45 b8 33 f6 89 75 b4 c7 45 e0 04 00 00 00 89 45 fc 8d ?? ?? 50 56 56 8d ?? ?? 50 51 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

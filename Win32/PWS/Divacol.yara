@@ -16,6 +16,7 @@ rule PWS_Win32_Divacol_A_2147647510_0
         $x_1_2 = {44 4f 4d 41 49 4e 20 3d [0-16] 50 41 53 53 57 4f 52 44 20 3d [0-16] 4e 41 4d 45 20 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

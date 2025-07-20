@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Induiba_A_2147626581_0
         $x_1_4 = "baidu.info/Files/default.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

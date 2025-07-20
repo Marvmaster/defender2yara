@@ -20,6 +20,7 @@ rule Worm_Win32_Dumpy_B_2147681135_0
         $x_1_6 = {a7 50 f4 4c f4 41 f4 59 a7 42 f4 59 a7 42 f4 34 f4 55 a7 47 f4 41 f4 4d f4 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Worm_Win32_Sirmiras_A_2147611221_0
         $x_1_5 = {43 3a 5c 57 49 4e 44 4f 57 53 5c 72 65 61 6c 70 6c 61 79 65 72 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

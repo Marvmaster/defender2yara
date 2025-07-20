@@ -21,6 +21,7 @@ rule TrojanDownloader_MSIL_DiscordStealer_PAP_2147888528_0
         $x_1_6 = "Spoofing Diskdrive!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_MSIL_DiscordStealer_PAX_2147899473_0
         $x_1_3 = "GetExportedTypes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Refpron_A_2147624375_0
         $x_2_3 = {68 e8 03 00 00 ff d6 53 53 53 53 57 ff 15 ?? ?? ?? 10 85 c0 74 ea 55 ff d6 55 ff d6 55 ff d6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

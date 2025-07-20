@@ -16,6 +16,7 @@ rule Trojan_Win32_Polyransom_SG_2147907024_0
         $x_2_1 = {e9 00 00 00 00 32 c2 88 07 ?? ?? ?? ?? ?? ?? 83 f9 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

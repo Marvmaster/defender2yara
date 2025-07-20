@@ -31,6 +31,7 @@ rule Worm_Win32_Theals_2147573663_0
         $x_1_16 = "(x) 2005 Z0MBiE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_1_*))) or
             ((1 of ($x_2_*) and 9 of ($x_1_*))) or

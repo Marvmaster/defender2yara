@@ -19,6 +19,7 @@ rule Ransom_MSIL_Avalon_DA_2147781637_0
         $x_1_4 = ".avalon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

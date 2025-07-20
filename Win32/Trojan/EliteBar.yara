@@ -18,6 +18,7 @@ rule Trojan_Win32_EliteBar_2147570322_0
         $x_1_4 = "EliteToolBar Dynamic Link Library" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule PWS_Win32_Verweli_A_2147631363_0
         $x_1_4 = "Wj3eYCtWeEt8jqHUhCm0Vg==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

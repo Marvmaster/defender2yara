@@ -18,6 +18,7 @@ rule MonitoringTool_Win32_UltimateKeylogger_150665_0
         $x_1_4 = {00 75 6b 66 72 65 65 2e 63 66 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule MonitoringTool_Win32_UltimateKeylogger_150665_1
         $x_1_2 = "KeyHook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule MonitoringTool_Win32_UltimateKeylogger_150665_2
         $x_1_6 = "KRyLack Keylogger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

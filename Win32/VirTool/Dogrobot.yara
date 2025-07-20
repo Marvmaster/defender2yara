@@ -17,6 +17,7 @@ rule VirTool_Win32_Dogrobot_L_2147624366_0
         $x_1_2 = {66 c7 45 ee 5c 00 66 c7 45 f0 61 00 66 c7 45 f2 74 00 66 c7 45 f4 61 00 66 c7 45 f6 70 00 66 c7 45 f8 69 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

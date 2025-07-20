@@ -17,6 +17,7 @@ rule TrojanDownloader_Linux_LuaBot_A_2147798899_0
         $x_1_2 = {00 00 01 1b 00 00 77 b7 00 00 01 23 41 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

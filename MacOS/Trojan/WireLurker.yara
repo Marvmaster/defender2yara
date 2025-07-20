@@ -19,6 +19,7 @@ rule Trojan_MacOS_WireLurker_B_2147748739_0
         $x_1_4 = "/tmp/AddressBook.sqlitedb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MacOS_WireLurker_C_2147749024_0
         $x_1_4 = "/usr/bin/stty5.11.pl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_MacOS_WireLurker_D_2147750961_0
         $x_1_6 = "com.apple.appstore.PluginHelper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 

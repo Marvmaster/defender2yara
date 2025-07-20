@@ -19,6 +19,7 @@ rule Backdoor_Win32_Bitsto_A_2147679641_0
         $x_1_5 = {8a 0c 2a 8b c2 2b c6 8b fd 42 88 4c 18 ff 83 c9 ff 33 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

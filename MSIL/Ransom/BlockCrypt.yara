@@ -18,6 +18,7 @@ rule Ransom_MSIL_BlockCrypt_PB_2147795315_0
         $x_2_3 = {07 08 07 08 93 ?? 61 d1 9d 06 07 08 93 28 ?? ?? ?? ?? 28 ?? ?? ?? ?? 0a 00 08 17 58 0c 08 07 8e 69 fe ?? 0d 09 2d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_MSIL_BlockCrypt_PD_2147798748_0
         $x_1_6 = {52 00 65 00 61 00 64 00 4d 00 65 00 21 00 [0-16] 2e 00 74 00 78 00 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

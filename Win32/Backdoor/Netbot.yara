@@ -32,6 +32,7 @@ rule Backdoor_Win32_Netbot_C_2147600978_0
         $x_1_18 = "EXPLORER.EXE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -59,6 +60,7 @@ rule Backdoor_Win32_Netbot_D_2147656818_0
         $x_1_5 = {4b 69 6c 6c 20 59 6f 75 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

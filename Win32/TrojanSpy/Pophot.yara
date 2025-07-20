@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Pophot_A_2147598355_0
         $x_1_3 = {c6 03 47 c6 43 01 65 c6 43 02 74 c6 43 03 57 c6 43 04 69 c6 43 05 6e c6 43 06 64 c6 43 07 6f c6 43 08 77 c6 43 09 54 c6 43 0a 68 c6 43 0b 72 c6 43 0c 65 c6 43 0d 61 c6 43 0e 64 c6 43 0f 50 c6 43 10 72 c6 43 11 6f c6 43 12 63 c6 43 13 65 c6 43 14 73 c6 43 15 73 c6 43 16 49 c6 43 17 64 c6 43 18 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanSpy_Win32_Pophot_D_2147600416_0
         $x_1_5 = "cj.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
@@ -74,6 +76,7 @@ rule TrojanSpy_Win32_Pophot_F_2147601066_0
         $x_1_8 = "cj.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +104,7 @@ rule TrojanSpy_Win32_Pophot_G_2147601102_0
         $x_10_8 = ".lnk" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -127,6 +131,7 @@ rule TrojanSpy_Win32_Pophot_H_2147601263_0
         $x_1_4 = {7a 73 6d 73 63 63 00 00 ff ff ff ff 0b 00 00 00 5c 75 70 64 61 74 65 2e 65 78 65 00 ff ff ff ff 07 00 00 00 6d 79 63 63 33 32 2e 00 ff ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule TrojanSpy_Win32_Pophot_H_2147601264_0
         $x_1_4 = {8b d8 8b 45 f4 50 8d 45 bc 50 b9 ?? ?? ?? ?? ba ?? ?? ?? ?? b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 6a 02 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 33 d2 52 50 8b c3 99}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +184,7 @@ rule TrojanSpy_Win32_Pophot_K_2147601792_0
         $x_1_7 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +209,7 @@ rule TrojanSpy_Win32_Pophot_K_2147602104_0
         $x_1_5 = "dll_hitpop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -228,6 +236,7 @@ rule TrojanSpy_Win32_Pophot_K_2147602104_1
         $x_1_4 = {6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 00 00 ff ff ff ff 10 00 00 00 65 6e 74 56 65 72 73 69 6f 6e 5c 50 6f 6c 69 63 00 00 00 00 ff ff ff ff 10 00 00 00 69 65 73 5c 45 78 70 6c 6f 72 65 72 5c 72 75 6e 00 00 00 00 ff ff ff ff 0b 00 00 00 6d 79 77 65 68 69 74 2e 69 6e 69 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

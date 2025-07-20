@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_PSWSteal_A_2147728045_0
         $x_1_2 = {68 74 74 70 73 3a 2f 2f 63 68 65 63 6b 61 6e 64 73 77 69 74 63 68 2e 63 6f 6d 2f 61 66 69 6c 65 2f [0-32] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_PSWSteal_B_2147728212_0
         $x_1_2 = "URLDownloadToFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule TrojanDownloader_Win32_PSWSteal_D_2147729974_0
         $x_1_2 = "RegWrite, REG_SZ, HKCU\\TigerTrade" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

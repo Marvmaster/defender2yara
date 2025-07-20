@@ -22,6 +22,7 @@ rule Trojan_Win32_Megcor_SA_2147744197_0
         $x_1_7 = "echo echo ************************************************************************** >>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

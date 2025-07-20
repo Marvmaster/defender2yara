@@ -25,6 +25,7 @@ rule Trojan_Win32_Autohk_MA_2147808970_0
         $x_1_10 = "URLDownloadToFile" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule PWS_Win32_Vidar_YA_2147731350_0
         $x_1_4 = "SELECT name_on_card, expiration_month, expiration_year, card_number_encrypted FROM credit_cards" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule PWS_Win32_Vidar_YB_2147733749_0
         $x_1_4 = "*wallet*.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule PWS_Win32_Vidar_YC_2147739814_0
         $x_1_4 = "Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows Messaging Subsystem\\Profiles\\Outlook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule PWS_Win32_Vidar_A_2147742694_0
         $x_50_9 = {43 61 72 64 3a [0-32] 4e 61 6d 65 3a [0-32] 50 61 73 73 77 6f 72 64 3a}  //weight: 50, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_50_*) and 4 of ($x_1_*))) or
             ((3 of ($x_50_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or

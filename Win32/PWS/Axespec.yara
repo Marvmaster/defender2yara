@@ -17,6 +17,7 @@ rule PWS_Win32_Axespec_B_2147632522_0
         $x_1_3 = "WINNT_7467B293DE9D" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule PWS_Win32_Axespec_A_2147636065_0
         $x_1_7 = "cmd.exe /c \"%s\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -74,6 +76,7 @@ rule PWS_Win32_Axespec_A_2147636065_1
         $x_1_9 = {4d 00 6f 00 7a 00 69 00 6c 00 6c 00 61 00 5c 00 46 00 69 00 72 00 65 00 66 00 6f 00 78 00 5c 00 50 00 72 00 6f 00 66 00 69 00 6c 00 65 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

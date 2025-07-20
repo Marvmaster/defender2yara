@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Pointfree_125526_0
         $x_1_4 = ".php?IL_NO=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule BrowserModifier_Win32_Pointfree_125526_1
         $x_1_4 = "RecoveryExeName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule BrowserModifier_Win32_Pointfree_125526_2
         $x_1_7 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Browser Helper Objects" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or

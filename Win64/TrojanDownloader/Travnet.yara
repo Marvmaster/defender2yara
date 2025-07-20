@@ -31,6 +31,7 @@ rule TrojanDownloader_Win64_Travnet_2147763328_0
         $x_1_16 = "memset" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (15 of ($x*))
 }
 

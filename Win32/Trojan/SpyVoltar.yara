@@ -17,6 +17,7 @@ rule Trojan_Win32_SpyVoltar_PACN_2147900456_0
         $x_1_2 = {68 bd 01 00 00 68 bd 01 00 00 6a 22 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_SpyVoltar_ASV_2147916951_0
         $x_1_1 = {8a 71 ff 8a 11 66 33 54 45 84 66 c1 c2 08 66 89 14 47 40 3b c6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_SpyVoltar_EM_2147917648_0
         $x_1_8 = "%APPDATA%\\omsecor.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_SpyVoltar_KAA_2147937898_0
         $x_2_2 = {99 b9 b0 04 00 00 f7 f9 83 c2 64}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule PWS_Win32_Nekoti_A_2147634137_0
         $x_1_3 = "HTTP/1.0 200 OK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

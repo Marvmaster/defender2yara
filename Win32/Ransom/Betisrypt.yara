@@ -35,6 +35,7 @@ rule Ransom_Win32_Betisrypt_A_2147720933_0
         $x_2_21 = {b8 42 4d 00 00 66 89 45 dc 0f 11 45 c8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -69,6 +70,7 @@ rule Ransom_Win32_Betisrypt_B_2147721637_0
         $x_10_7 = "nocturnalnocturnalnocturnalnocturnal" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +101,7 @@ rule Ransom_Win32_Betisrypt_B_2147721637_1
         $x_2_11 = {83 fe 02 7d 05 83 f8 02 74 17 83 f8 03 74 0a 83 f8 02 74 05 83 f8 04 75 08 8d 46 41}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -200,6 +203,7 @@ rule Ransom_Win32_Betisrypt_D_2147723553_0
         $x_1_12 = {6a 01 56 53 ff 15 ?? ?? ?? ?? 8b 45 24 83 f8 10 72 42 8b 4d 10 40 3d 00 10 00 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

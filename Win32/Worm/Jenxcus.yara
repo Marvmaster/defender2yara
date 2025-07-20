@@ -18,6 +18,7 @@ rule Worm_Win32_Jenxcus_A_2147683070_0
         $x_1_4 = "or,/c del %temp%\\*.vbs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Worm_Win32_Jenxcus_B_2147683170_0
         $x_1_3 = ".regwrite \"HKEY_LOCAL_MACHINE\\software\\\" & split (installname,\".\")(0)  & \"\\\",  usbspreading, \"REG_SZ\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Worm_Win32_Jenxcus_N_2147686431_0
         $x_1_4 = {df d5 e9 72 07 b0 7b ae 8c 2e 01 8f c5 d8 ee a6 a2 ba f9 95 34 60 65 39 69 ee e1 e1 eb d9 fe 2b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))

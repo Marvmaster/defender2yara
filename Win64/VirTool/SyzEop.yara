@@ -18,6 +18,7 @@ rule VirTool_Win64_SyzEop_A_2147838157_0
         $x_1_3 = {48 8b 45 48 48 8b 00 48 c7 44 24 38 00 00 00 00 48 8d ?? ?? ?? ?? ?? 48 89 4c 24 30 48 8b 8d e8 00 00 00 48 89 4c 24 28 48 c7 44 24 20 00 00 00 00 45 33 c9 4c 8b 45 68 48 8b 95 88 00 00 00 48 8b 4d 48}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

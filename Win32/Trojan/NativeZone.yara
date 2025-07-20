@@ -20,6 +20,7 @@ rule Trojan_Win32_NativeZone_A_2147781393_0
         $x_2_5 = {68 04 01 00 00 ?? ?? ?? ?? ?? ?? ?? 6a 00 50 e8 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 50 6a 00 6a 00 6a 1a 6a 00 ff 15 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 50 ?? ?? ?? ?? ?? ?? ?? ?? ?? 68 04 01 00 00 50 e8 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 83 f8 ff 74 ?? a8 10 75 ?? 6a 44 ?? ?? ?? ?? 0f 57 c0 6a 00 50}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule Trojan_Win32_NativeZone_B_2147781664_0
         $x_1_1 = {cc b8 01 00 00 00 c2 0c 00 cc cc cc cc cc cc cc cc b8 0c 00 00 00 c3 cc cc cc cc cc cc cc cc cc cc 55 8b ec 83 ec 34 a1 00 30 01 10 33 c5 89 45 fc 56 57 b9 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_NativeZone_C_2147781730_0
         $x_1_3 = {43 3a 5c 55 73 65 72 73 5c 64 65 76 5c 44 65 73 6b 74 6f 70 5c eb 82 98 ed 83 80 eb 82 98 ea b2 8c 20 ed 95 98 eb 8b a4 5c 44 6c 6c ?? 5c 78 ?? ?? 5c 52 65 6c 65 61 73 65 5c 44 6c 6c ?? 2e 70 64 62 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Win32_NativeZone_D_2147781813_0
         $x_1_1 = {4d 8b f7 49 8b dd 4d 2b f5 bf 02 00 00 00 0f 1f 84 00 00 00 00 00 4d 8d 04 1e 4c 8b ce 48 8b d3 48 8d 4c 24 38 e8 ?? ?? ?? ?? 48 83 c3 10 48 83 ef 01 75 e2 48 8b ce e8 ?? ?? ?? ?? 41 0f 10 07 48 8b 44 24 20 0f 11 45 00 41 0f 10 4f 10 0f 11 4d 10 48 83 c5 20 49 83 ec 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_Win32_NativeZone_E_2147788505_0
         $x_1_6 = {87 14 24 52 8b d6 5a 87 54 24 04 87 14 ?? 52 8b d7 5a c3 52 8b d6 5a 90 66 9d 31 08 f7 e6 ba 2d eb 38 ef}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -140,6 +145,7 @@ rule Trojan_Win32_NativeZone_I_2147816922_0
         $x_100_1 = {48 b8 30 be 7c 96 b5 04 c7 6e 48 ba 73 26 05 46 9e ac 17 f2}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

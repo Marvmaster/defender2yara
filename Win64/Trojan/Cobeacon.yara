@@ -16,6 +16,7 @@ rule Trojan_Win64_Cobeacon_ARA_2147925943_0
         $x_2_1 = {33 d2 48 8b c1 49 f7 f1 42 0f b6 04 12 42 30 04 01 48 ff c1 48 3b cf 72 e7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_Cobeacon_ARAZ_2147929328_0
         $x_2_1 = {0f b6 c0 44 0f b6 44 05 10 45 30 43 ff 83 c6 ff 75 c1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win64_Cobeacon_MBWJ_2147942275_0
         $x_1_2 = {65 78 74 00 00 00 37 aa 03 00 00 10 00 00 00 ac 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

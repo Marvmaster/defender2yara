@@ -19,6 +19,7 @@ rule HackTool_Win64_ITuneByPass_MBWK_2147929492_0
         $x_1_4 = {2f 75 73 72 2f 6c 6f 63 61 6c 2f 67 6f 2f 73 72 63 2f 72 75 6e 74 69 6d 65 2f [0-47] 2e 67 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

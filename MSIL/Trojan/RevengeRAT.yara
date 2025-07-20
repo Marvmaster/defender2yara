@@ -22,6 +22,7 @@ rule Trojan_MSIL_RevengeRAT_DA_2147773113_0
         $x_1_7 = "DictionaryEntry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_MSIL_RevengeRAT_DC_2147783083_0
         $x_1_4 = "Convert" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_MSIL_RevengeRAT_DB_2147783520_0
         $x_1_4 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_MSIL_RevengeRAT_DD_2147845630_0
         $x_1_1 = {20 20 4e 00 00 28 ?? ?? ?? 0a 00 20 20 4e 00 00 28 ?? ?? ?? 0a 00 20 20 4e 00 00 28 ?? ?? ?? 0a 00 20 20 4e 00 00 28 ?? ?? ?? 0a 00 72 ?? ?? ?? 70 17 8d ?? ?? ?? 01 25 16 1f 2d 9d 28 ?? ?? ?? 0a 17 9a 6f ?? ?? ?? 0a 72 ?? ?? ?? 70 17 8d ?? ?? ?? 01 25 16 1f 2d 9d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_MSIL_RevengeRAT_A_2147848600_0
         $x_2_1 = {11 09 14 1a 8d ?? 00 00 01 13 07 11 07 16 28 ?? 00 00 06 6f ?? 00 00 0a a2 11 07 17 72 ?? 00 00 70 a2 11 07 18 11 01 a2 11 07 19 16 8c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule Trojan_MSIL_RevengeRAT_B_2147849721_0
         $x_2_3 = "volcfrltSAeXKoSqkxPRHXwokwkK" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Trojan_MSIL_RevengeRAT_NRR_2147891692_0
         $x_1_2 = "AesOnuyeGa" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +185,7 @@ rule Trojan_MSIL_RevengeRAT_D_2147895563_0
         $x_2_1 = {00 00 01 25 16 09 74 ?? 00 00 01 a2 25 13 07 14 14 17 8d ?? 00 00 01 25 16 17 9c 25}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -199,6 +207,7 @@ rule Trojan_MSIL_RevengeRAT_PTIZ_2147903206_0
         $x_2_1 = {d0 1a 00 00 04 28 ?? 00 00 0a 28 ?? 00 00 06 28 ?? 04 00 06 80 19 00 00 04 7e 19 00 00 04 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -224,6 +233,7 @@ rule Trojan_MSIL_RevengeRAT_E_2147904612_0
         $x_2_5 = "C:\\Windows\\SysWOW64\\cmd.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -246,6 +256,7 @@ rule Trojan_MSIL_RevengeRAT_NR_2147933075_0
         $x_2_2 = {7b 40 08 00 04 13 0d 11 0d 2c 08 11 0d 6f 42 13 00 06 00 17 0a de 3d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

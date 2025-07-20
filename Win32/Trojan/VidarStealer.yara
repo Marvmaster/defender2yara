@@ -16,6 +16,7 @@ rule Trojan_Win32_VidarStealer_RS_2147773579_0
         $x_1_1 = {33 c4 89 84 24 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 41 81 e1 ff 00 00 00 8a 91 ?? ?? ?? ?? 0f b6 c2 03 05 ?? ?? ?? ?? 53 25 ff 00 00 00 81 3d ?? ?? ?? ?? fd 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_VidarStealer_RF_2147779643_0
         $x_1_1 = {33 f6 8b e9 85 ff 0f 8e ?? ?? ?? ?? 53 e8 ?? ?? ?? ?? 30 04 2e 81 ff 49 06 00 00 0f 85 ?? ?? ?? ?? 83 64 24 ?? 00 81 6c 24 ?? f4 ca bb 26 c1 e0 17 81 44 24 ?? 7e 2b 83 22 81 f3 da 61 0c 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_VidarStealer_RMA_2147779789_0
         $x_1_8 = "GetStartupInfoW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -92,6 +95,7 @@ rule Trojan_Win32_VidarStealer_XD_2147820407_0
         $x_1_4 = "passwords.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Win32_VidarStealer_UA_2147824208_0
         $x_10_1 = {8b c7 0f 43 4d ?? 33 d2 f7 75 ?? 8b 45 ?? 8a 0c 0a 32 0c 38 88 4d ?? 3b 5e ?? ?? ?? 88 0b ff 46}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_Win32_VidarStealer_A_2147905378_0
         $x_2_5 = "L6mYLxEeCXPWWBDM954HxXPtrLam6bkDVlKyA4iDEt6szELoQFYrqXVJ4d3S3jID" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_Win32_VidarStealer_B_2147905457_0
         $x_2_2 = {8a 04 0a 8b 15 ?? ?? ?? ?? 88 04 0a 41 3b 0d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

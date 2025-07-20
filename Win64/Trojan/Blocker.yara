@@ -18,6 +18,7 @@ rule Trojan_Win64_Blocker_DAO_2147851988_0
         $x_1_3 = "brbconfig.tmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

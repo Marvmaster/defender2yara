@@ -21,6 +21,7 @@ rule Trojan_Win64_Dizzyvoid_C_2147814877_0
         $x_1_6 = "jfkdjveujvpdfjgd34=-321" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win64_Dizzyvoid_D_2147814878_0
         $x_1_6 = "apr_brigade_create" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_Win64_Dizzyvoid_E_2147814879_0
         $x_1_6 = "9&mNF8^K3iFUtsp4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Trojan_Win64_Dizzyvoid_F_2147814880_0
         $x_1_4 = "StartWork" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

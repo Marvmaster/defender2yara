@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Istuni_265835_0
         $x_2_4 = "Firefox window with style 0x96000000 captured (Add extension dialog window)" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))

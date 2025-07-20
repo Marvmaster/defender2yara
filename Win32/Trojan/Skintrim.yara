@@ -17,6 +17,7 @@ rule Trojan_Win32_Skintrim_A_2147600597_0
         $x_1_2 = {e9 cc 01 00 00 8d 8c 24 2c 01 00 00 68 ?? ?? ?? ?? 51 ff d6 83 c4 08 89 44 24 10 85 c0 74 3e b9 41 00 00 00 33 c0 8d 7c 24 24 8d 54 24 24 f3 ab 68 04 01 00 00 52 aa ff 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Skintrim_B_2147609864_0
         $x_1_6 = {4a 75 f7 89 0f 00 8b ?? 2b ?? (ba|be|bf) ?? ?? ?? ?? 8a ?? ?? 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -71,6 +73,7 @@ rule Trojan_Win32_Skintrim_E_2147622438_0
         $x_1_5 = "Do you want to send this software to a friend" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -100,6 +103,7 @@ rule Trojan_Win32_Skintrim_F_2147622496_0
         $x_3_7 = {7c 6f 53 8a 06 84 c0 74 5d 3c 2a 74 59 46 80 3e 00 74 53 8a 0e 50 88 4d 08 46}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -127,6 +131,7 @@ rule Trojan_Win32_Skintrim_H_2147626203_0
         $x_1_2 = {ff ff 31 c6 85 ?? ?? ff ff 36 c6 85 ?? ?? ff ff 36 c6 85 ?? ?? ff ff 39 c6 85 ?? ?? ff ff 37 c6 85 ?? ?? ff ff 35 c6 85 ?? ?? ff ff 32 c6 85 ?? ?? ff ff 37 c6 85 ?? ?? ff ff 30 c6 85 ?? ?? ff ff 32 c6 85 ?? ?? ff ff 39 c6 85 ?? ?? ff ff 30 c6 85 ?? ?? ff ff 33 c6 85 ?? ?? ff ff 34}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

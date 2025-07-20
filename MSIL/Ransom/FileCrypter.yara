@@ -19,6 +19,7 @@ rule Ransom_MSIL_FileCrypter_MK_2147762086_0
         $x_1_4 = "$83a98c11-59b8-4cb5-8163-bcb9560c9c70" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_MSIL_FileCrypter_MK_2147762086_1
         $x_1_6 = "https://ylhsakxusnjablzqytnsdmrrpt0.000webhostapp.com/ramsom.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Ransom_MSIL_FileCrypter_MK_2147762086_2
         $x_1_12 = ".AMJIXIUS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -108,6 +111,7 @@ rule Ransom_MSIL_FileCrypter_MK_2147762086_3
         $x_1_11 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +139,7 @@ rule Ransom_MSIL_FileCrypter_MK_2147762086_4
         $x_1_7 = "SELECT * FROM Win32_OperatingSystem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +167,7 @@ rule Ransom_MSIL_FileCrypter_NB_2147765546_0
         $x_1_7 = "All Your Files Transfered To Hackers Remote Server" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +195,7 @@ rule Ransom_MSIL_FileCrypter_MA_2147766792_0
         $x_1_7 = "Rasomware2._0.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +226,7 @@ rule Ransom_MSIL_FileCrypter_ABS_2147827395_0
         $x_1_10 = "DecryptDirectory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -242,6 +250,7 @@ rule Ransom_MSIL_FileCrypter_MBCT_2147846570_0
         $x_1_3 = "RANSOMWARE3._0" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

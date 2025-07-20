@@ -19,6 +19,7 @@ rule Ransom_Win64_FileCryptor_C_2147750119_0
         $x_1_4 = "Decrypting your files now!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win64_FileCryptor_X_2147771994_0
         $x_1_5 = "Encryption Completed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_Win64_FileCryptor_MAK_2147796007_0
         $x_1_6 = "Lazy instance has previously been poisoned" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Ransom_Win64_FileCryptor_PR_2147815323_0
         $x_1_2 = "_encrypt_file" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

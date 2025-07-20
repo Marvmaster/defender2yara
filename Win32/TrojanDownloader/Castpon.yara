@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Castpon_A_2147711065_0
         $x_1_4 = {2d 64 65 6c 65 74 65 3d 00 00 00 2d 69 20 2d 61 64 64 3d 00 00 00 00 4d 6f 7a 69 6c 6c 61 2f 34 2e 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

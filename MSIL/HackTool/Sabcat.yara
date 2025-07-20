@@ -21,6 +21,7 @@ rule HackTool_MSIL_Sabcat_A_2147726438_0
         $x_1_6 = {43 68 65 63 6b 41 6e 64 45 64 69 74 48 6f 73 74 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

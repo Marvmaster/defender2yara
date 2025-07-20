@@ -16,6 +16,7 @@ rule Trojan_Win64_ShellCodeRunner_ASR_2147907975_0
         $x_1_1 = {49 8b c2 0f b7 00 41 8b c8 c1 c9 08 41 ff c1 03 c8 41 8b c1 49 03 c2 44 33 c1 44 38 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_ShellCodeRunner_NS_2147914182_0
         $x_2_2 = {45 84 ff 75 e2 3b 7c 24 40 75 07 41 8b 1c b6 49 03 da 49 ff c0 4c 3b c5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win64_ShellCodeRunner_NS_2147914182_1
         $x_3_2 = {45 0f 57 ff 4c 8b 35 d0 5b 4e ?? 65 4d 8b 36 4d 8b 36 48 8b 44 24 ?? 48 8b 6c 24 38}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win64_ShellCodeRunner_NS_2147914182_2
         $x_3_2 = {48 8d 05 d2 13 02 00 89 74 24 68 48 89 45 80 48 8d 05 b3 13 02 00 48 89 45 88 c7 44 24 78 ?? ?? ?? ?? e8 a2 f9 ff ff}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_Win64_ShellCodeRunner_AB_2147921615_0
         $x_1_1 = {71 64 59 20 ef cf 79 da b8 1a ee 34 84 e7 33 2a 98 1c 78 94 73 50 62 dd 43 44 44 3a 90 63 7e 12 6f 4d 87 8b 51 32 2b db 8a 2d 8e 21 23 ef d6 7e af 07 5e 87 7f f5 48 65 18 12 b0 1e 6e 86 e0 8c 77 e0 55 8c c5 07 45 53 8d d5 8d 37 ce b5 72 54 69 98 4c e7 ac 49 ed 35 5b 17 e9 09 7d bc 56 47 c2 17 ce d2 5a 4f d0 9b c8 5f 25 91 09 b8 13 27 7e e4 82 cb 4d 4c 75 58 74 c2 82 df 7f 98 dd 84 57 f5 52 a7 ba bc 31 cf 67 25 64 28 9c 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +130,7 @@ rule Trojan_Win64_ShellCodeRunner_AMG_2147922441_0
         $x_1_2 = "WPCThdExRsFSngObjQIfpGD" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +155,7 @@ rule Trojan_Win64_ShellCodeRunner_VG_2147924831_0
         $x_1_4 = "Langfang Alkem Material Technology Co., Ltd.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +177,7 @@ rule Trojan_Win64_ShellCodeRunner_ZZ_2147925131_0
         $x_1_1 = {48 85 c0 48 89 c3 0f 84 45 01 00 00 49 89 c4 48 89 c5 66 0f ef c0 48 01 be 80 20 00 00 49 c1 fc 15 0f 29 40 10 48 c1 fd 0c 48 89 78 08 48 c7 00 01 00 00 00 41 0f b6 c4 4c 8d 2c c6 49 8b 95 a8 20 00 00 48 85 d2 75 14 eb 4a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -192,6 +200,7 @@ rule Trojan_Win64_ShellCodeRunner_ZZ_2147925131_1
         $x_1_2 = {49 89 dc 4c 8b bc 24 b8 00 00 00 49 31 cc 4c 8b 8c 24 90 00 00 00 4c 89 e0 4c 89 de 4d 89 da 4c 31 da 4c 8b b4 24 98 00 00 00 4c 89 df 48 31 de 48 31 d0 4c 8b 84 24 90 00 00 00 49 31 ca 4d 31 ef 48 89 44 24 28 48 33 84 24 a8 00 00 00 4d 31 f9 4d 31 ce 4c 31 cb 4c 31 cf 48 89 5c 24 20 4c 89 d3 4d 31 f2 48 89 7c 24 30 48 89 cf 48 8b 4c 24 28 49 31 c5 4c 89 74 24 70 4c 8b b4 24 90 00 00 00 48 31 c7 48 89 f0 49 31 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +228,7 @@ rule Trojan_Win64_ShellCodeRunner_GB_2147925374_0
         $x_1_7 = "shellcode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -240,6 +250,7 @@ rule Trojan_Win64_ShellCodeRunner_GPKL_2147927073_0
         $x_1_1 = {55 80 74 24 ?? 57 80 74 24 ?? 59 80 74 24 ?? 5b 80 74 24 ?? 5d 80 74 24 ?? 5f 80 74 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -271,6 +282,7 @@ rule Trojan_Win64_ShellCodeRunner_GC_2147929369_0
         $x_1_11 = "LazyDLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -297,6 +309,7 @@ rule Trojan_Win64_ShellCodeRunner_RPH_2147931390_0
         $x_1_6 = {68 74 74 70 73 3a 2f 2f [0-144] 2e 74 78 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -322,6 +335,7 @@ rule Trojan_Win64_ShellCodeRunner_MX_2147939134_0
         $x_1_1 = {12 01 00 4c 8b c7 48 8b d3 8b 08 e8 ?? 9a ff ff 8b d8 e8 61 05 00 00 84 c0 74 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -343,6 +357,7 @@ rule Trojan_Win64_ShellCodeRunner_GZN_2147944522_0
         $x_10_1 = {c6 44 24 30 4c c6 44 24 31 6f c6 44 24 32 61 c6 44 24 33 64 c6 44 24 34 4c c6 44 24 35 69 c6 44 24 36 62 c6 44 24 37 72 c6 44 24 38 61 c6 44 24 39 72 c6 44 24 3a 79 c6 44 24 3b 41 c6 44 24 3c 00 c6 44 24 40 47 c6 44 24 41 65 c6 44 24 42 74 c6 44 24 43 50 c6 44 24 44 72 c6 44 24 45 6f c6 44 24 46 63 c6 44 24 47 41 c6 44 24 48 64 c6 44 24 49 64 c6 44 24 4a 72 c6 44 24 4b 65 c6 44 24 4c 73 c6 44 24 4d 73 c6 44 24 4e 00 c6 44 24 28 57 c6 44 24 29 69 c6 44 24 2a 6e c6 44 24 2b 45 c6 44 24 2c 78 c6 44 24 2d 65 c6 44 24 2e 63}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -367,6 +382,7 @@ rule Trojan_Win64_ShellCodeRunner_KKB_2147946090_0
         $x_2_4 = {48 89 84 24 87 00 00 00 48 b8 41 64 64 72 65 73 73 00 48 89 84 24 8e 00 00 00 c7 84 24 81 00 00 00 ?? ?? ?? ?? 66 c7 84 24 85 00 00 00 70 00 48 b8 45 78 69 74 50 72 6f 63 48 89 44 24 75 c7 44 24 7d ?? ?? ?? ?? 48 b8 57 73 32 5f 33 32 2e 64 48 89 44 24 6a c7 44 24 71 ?? ?? ?? ?? 48 b8 57 53 41}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_10_*))) or

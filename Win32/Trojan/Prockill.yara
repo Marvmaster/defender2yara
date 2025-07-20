@@ -29,6 +29,7 @@ rule Trojan_Win32_Prockill_GA_2147773590_0
         $x_1_14 = "panda" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 

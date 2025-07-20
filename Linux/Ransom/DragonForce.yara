@@ -20,6 +20,7 @@ rule Ransom_Linux_DragonForce_A_2147946606_0
         $x_1_5 = "logger_encryption.cpp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

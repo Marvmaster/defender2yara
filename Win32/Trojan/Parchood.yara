@@ -16,6 +16,7 @@ rule Trojan_Win32_Parchood_A_2147641316_0
         $x_1_2 = {10 ab 49 75 f6 c7 05 00 ?? 00 10 70 02 00 00 c2 04 00 05 00 f7 25 04 ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Parchood_B_2147647956_0
         $x_1_2 = {f4 eb 06 04 34 00 ff ff 53 50 68 02 00 00 80 ff 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

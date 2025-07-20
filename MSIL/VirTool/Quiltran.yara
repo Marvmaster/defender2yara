@@ -26,6 +26,7 @@ rule VirTool_MSIL_Quiltran_A_2147733866_0
         $x_1_12 = {44 00 45 00 42 00 55 00 47 00 [0-4] 4d 00 61 00 69 00 6e 00 2e 00 70 00 79 00 [0-4] 45 00 78 00 65 00 63 00 75 00 74 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -56,6 +57,7 @@ rule VirTool_MSIL_Quiltran_B_2147742003_0
         $x_1_11 = {48 45 58 50 53 4b 00 55 52 4c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -88,6 +90,7 @@ rule VirTool_MSIL_Quiltran_D_2147742674_0
         $x_1_13 = "Guid.NewGuid().ToString(\"n\").Substring(0, 8)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +221,7 @@ rule VirTool_MSIL_Quiltran_H_2147751405_0
         $x_1_9 = "[*] Attempting HTTP POST to {0}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

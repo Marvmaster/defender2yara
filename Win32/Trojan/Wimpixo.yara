@@ -23,6 +23,7 @@ rule Trojan_Win32_Wimpixo_A_2147616038_0
         $x_1_8 = {8b 56 3c 66 81 7c 32 14 e0 00 8d 04 32 74 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -50,6 +51,7 @@ rule Trojan_Win32_Wimpixo_B_2147623181_0
         $x_1_2 = {68 67 e0 22 00 8b 45 08 50 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_Wimpixo_A_2147633465_0
         $x_1_3 = {53 59 53 54 45 4d 5c 43 75 72 72 65 6e 74 43 6f 6e 74 72 6f 6c 53 65 74 5c 53 65 72 76 69 63 65 73 5c 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_Win32_Wimpixo_E_2147638595_0
         $x_5_3 = {66 c7 44 24 ?? d4 07 66 89 44 24 ?? 66 89 44 24 ?? 66 c7 44 24 ?? 0d 00 66 c7 44 24 ?? 0c 00 66 c7 44 24 ?? 1e 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

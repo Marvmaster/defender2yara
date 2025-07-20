@@ -16,6 +16,7 @@ rule Trojan_Win32_PCRat_RDA_2147839480_0
         $x_2_1 = {66 89 44 24 12 8b 47 0c 6a 10 8b 08 8d 44 24 14 50 8b 11 8b 4e 08 51 89 54 24 20 ff 15 a0 20 40 00 83 f8 ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_PCRat_RPZ_2147845787_0
         $x_1_2 = "112.213.117.42:1150" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

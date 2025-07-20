@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Bzub_IP_2147601115_0
         $x_1_2 = {00 6e 65 74 5f 69 6e 73 6c 6c 00 00 00 5c 69 70 76 36 6d 6f 6e 6c 2e 64 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

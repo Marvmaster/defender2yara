@@ -19,6 +19,7 @@ rule Ransom_Win32_Distrack_A_2147746205_0
         $x_1_4 = "/u /c sc start soydsk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

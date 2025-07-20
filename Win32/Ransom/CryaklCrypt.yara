@@ -21,6 +21,7 @@ rule Ransom_Win32_CryaklCrypt_PA_2147778709_0
         $x_1_6 = "bin:com:exe:bat:png:bmp:dat:log:ini:dll:sys:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Ransom_Win32_CryaklCrypt_PB_2147779019_0
         $x_1_6 = "bin:com:exe:bat:png:bmp:dat:log:ini:dll:sys:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Ransom_Win32_CryaklCrypt_PC_2147780771_0
         $x_1_4 = "log:dat:bmp:png:bat:exe:com:bin:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Ransom_Win32_CryaklCrypt_PD_2147781869_0
         $x_1_4 = "bcdedit /set {default} recoveryenabled No" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

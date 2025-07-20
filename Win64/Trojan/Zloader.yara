@@ -17,6 +17,7 @@ rule Trojan_Win64_Zloader_GPB_2147901156_0
         $x_2_2 = {4d c1 a6 38 72 88 23 3f 72 c8 20 3f 62 78 45 38 de 19 78 30 ea cc 80 33 ca 19 df 3c 95 b0 03 32}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

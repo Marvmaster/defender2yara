@@ -20,6 +20,7 @@ rule Trojan_Linux_Xorddos_A_2147793901_0
         $x_1_5 = "update-rc.d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Linux_Xorddos_AA_2147817653_0
         $x_2_3 = "cp /lib/libudev.so /lib/libudev.so.6" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

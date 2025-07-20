@@ -16,6 +16,7 @@ rule Trojan_Win32_Vidsrs_A_2147600523_0
         $x_1_2 = {c6 01 68 8d 83 ?? ?? 00 00 89 41 01 c6 41 05 c3 b9 44 00 00 00 31 c0 8d bd ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

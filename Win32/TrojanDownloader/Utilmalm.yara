@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Utilmalm_A_2147718299_0
         $x_1_5 = {50 e8 00 00 00 00 58 05 ff 00 00 00 05 0e 01 00 00 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

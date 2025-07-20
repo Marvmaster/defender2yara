@@ -18,6 +18,7 @@ rule Backdoor_Win64_Repezor_A_2147684971_0
         $x_1_4 = {3d 00 06 00 00 7f ?? 74 ?? 81 ea 00 05 00 00 74 ?? ff ca 74 ?? ff ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

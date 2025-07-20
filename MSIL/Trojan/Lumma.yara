@@ -18,6 +18,7 @@ rule Trojan_MSIL_Lumma_RDB_2147899041_0
         $x_1_3 = "=/*-T=y=p=e=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_Lumma_MBXT_2147920901_0
         $x_1_3 = "382cfefa9adf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

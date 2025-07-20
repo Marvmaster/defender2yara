@@ -18,6 +18,7 @@ rule TrojanSpy_MSIL_JSSLoader_B_2147814190_0
         $x_1_4 = {6c 00 6f 00 67 00 69 00 63 00 61 00 6c 00 20 00 64 00 72 00 69 00 76 00 65 00 73 00 22 00 3a 00 20 00 22 00 00 21 22 ?? 73 00 79 00 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

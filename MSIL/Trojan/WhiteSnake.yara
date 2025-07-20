@@ -16,6 +16,7 @@ rule Trojan_MSIL_WhiteSnake_PA_2147845557_0
         $x_1_1 = {fe 0c 00 00 fe 09 00 00 fe 0c 01 00 6f ?? ?? ?? 0a fe 09 01 00 fe 09 02 00 28 ?? ?? ?? 0a fe 0c 01 00 fe 09 01 00 fe 09 02 00 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 5d 6f ?? ?? ?? 0a 61 d1 fe 0e 02 00 fe 0d 02 00 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a fe 0e 00 00 fe 0c 01 00 20 01 00 00 00 58 fe 0e 01 00 fe 0c 01 00 fe 09 00 00 6f ?? ?? ?? 0a 3f 8e ff ff ff fe}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_WhiteSnake_PA_2147845557_1
         $x_1_1 = {72 01 00 00 70 28 ?? ?? ?? ?? fe 09 01 00 fe 0c 02 00 fe 0c 01 00 5d 6f ?? ?? ?? ?? fe 0e 03 00 72 01 00 00 70 28 ?? ?? ?? ?? fe 0c 00 00 fe 09 00 00 fe 0c 02 00 6f ?? ?? ?? ?? fe 0c 03 00 61 d1 fe 0e 04 00 fe 0d 04 00 28 ?? ?? ?? ?? 28 ?? ?? ?? ?? fe 0e 00 00 72 01 00 00 70 28 ?? ?? ?? ?? fe 0c 02 00 20 01 00 00 00 58 fe 0e 02 00 fe 0c 02 00 fe 09 00 00 6f ?? ?? ?? ?? 3f 7f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_MSIL_WhiteSnake_PB_2147845558_0
         $x_1_9 = "Foxmail" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_MSIL_WhiteSnake_MA_2147846957_0
         $x_1_4 = "_bvT3uckhLx10s.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_MSIL_WhiteSnake_GAI_2147847065_0
         $x_2_2 = "pornhub.com" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_MSIL_WhiteSnake_AWI_2147847582_0
         $x_1_1 = {fe 09 01 00 fe 0c 02 00 fe 0c 01 00 5d 6f ?? ?? ?? 0a fe 0e 03 00 fe 0c 00 00 fe 09 00 00 fe 0c 02 00 6f ?? ?? ?? 0a fe 0c 03 00 61 d1 fe 0e 04 00 fe 0d 04 00 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule Trojan_MSIL_WhiteSnake_MBEA_2147848647_0
         $x_1_1 = {72 7e 46 00 70 28 ?? 00 00 06 28 ?? 00 00 0a 00 28 ?? 00 00 06 00 00 00 11 05 16 fe 01 13 07 11 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +182,7 @@ rule Trojan_MSIL_WhiteSnake_PC_2147849068_0
         $x_1_1 = {fe 09 00 00 fe 0c 02 00 6f ?? ?? ?? ?? fe 0e 03 00 72 ?? ?? ?? ?? 28 ?? ?? ?? ?? fe 0c 00 00 fe 0c 02 00 fe 0c 00 00 6f ?? ?? ?? ?? 5d 6f ?? ?? ?? ?? fe 0e 04 00 fe 0c 01 00 fe 0c 03 00 fe 0c 04 00 61 d1 fe 0e 05 00 fe 0d 05 00 28 ?? ?? ?? ?? 28 ?? ?? ?? ?? fe 0e 01 00 fe 0c 02 00 20 01 00 00 00 58 fe 0e 02 00 fe 0c 02 00 fe 09 00 00 6f ?? ?? ?? ?? 3f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +204,7 @@ rule Trojan_MSIL_WhiteSnake_DH_2147852522_0
         $x_1_1 = {fe 0c 07 00 20 00 01 00 00 5d fe 0e 02 00 fe 0c 04 00 fe 0c 02 00 94 fe 0c 03 00 58 20 00 01 00 00 5d fe 0e 03 00 fe 0c 04 00 fe 0c 02 00 94 fe 0e 01 00 fe 0c 04 00 fe 0c 02 00 fe 0c 04 00 fe 0c 03 00 94 9e fe 0c 04 00 fe 0c 03 00 fe 0c 01 00 9e fe 0c 00 00 fe 09 00 00 fe 0c 07 00 ?? ?? ?? ?? ?? fe 0c 04 00 fe 0c 04 00 fe 0c 02 00 94 fe 0c 04 00 fe 0c 03 00 94 58 20 00 01 00 00 5d 94 61 d1 ?? ?? ?? ?? ?? 26 fe 0c 07 00 20 01 00 00 00 58 fe 0e 07 00 fe 0c 07 00 fe 09 00 00 ?? ?? ?? ?? ?? 3f 57 ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +227,7 @@ rule Trojan_MSIL_WhiteSnake_RZ_2147889338_0
         $x_1_2 = {09 06 08 94 58 07 08 94 58 20 00 01 00 00 5d 0d 06 08 94 13 0a 06 08 06 09 94 9e 06 09 11 0a 9e 00 08 17 58 0c 08 20 00 01 00 00 fe 04 13 0b 11 0b 3a c9 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -240,6 +250,7 @@ rule Trojan_MSIL_WhiteSnake_MBJX_2147893001_0
         $x_1_2 = "93d0-e3183ff2a26d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -261,6 +272,7 @@ rule Trojan_MSIL_WhiteSnake_RDA_2147894065_0
         $x_2_1 = {fe 0c 04 00 fe 0c 04 00 fe 0c 02 00 94 fe 0c 04 00 fe 0c 03 00 94 58 20 00 01 00 00 5d 94 61 d1 fe 0e 09 00 fe 0d 09 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -285,6 +297,7 @@ rule Trojan_MSIL_WhiteSnake_RDB_2147895317_0
         $x_1_4 = "RmStartSession" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -306,6 +319,7 @@ rule Trojan_MSIL_WhiteSnake_KAA_2147910956_0
         $x_1_1 = {02 11 0a 91 11 00 11 0c 91 61 d2 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -328,6 +342,7 @@ rule Trojan_MSIL_WhiteSnake_AWS_2147925686_0
         $x_2_2 = {06 11 07 91 58 07 11 07 91 58 20 ff 00 00 00 5f 0d 06 11 07 91 13 08 06 11 07 06 09 91 9c 06 09 11 08 9c 00 11 07 17 58 13 07 11 07 20 00 01 00 00 fe 04 13 09}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

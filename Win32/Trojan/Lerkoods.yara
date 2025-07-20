@@ -17,6 +17,7 @@ rule Trojan_Win32_Lerkoods_A_2147653118_0
         $x_1_3 = {4b 65 72 6e 65 6c 33 32 62 69 74 73 2e 64 6c 6c 00 45 6e 64 48 6f 6f 6b 73 00 53 74 61 72 74 48 6f 6f 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

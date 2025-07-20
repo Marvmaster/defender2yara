@@ -17,6 +17,7 @@ rule Trojan_MSIL_SolarMarker_AD_2147787060_0
         $x_1_2 = "93e69b15-f4db-4aca-9738-e3bbdce3fec1.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_SolarMarker_ZZ_2147793456_0
         $x_5_2 = {16 1f 64 9d 11 ?? 17 1f 6e 9d 11 ?? 18 1f 73 9d 11}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_SolarMarker_NYH_2147828198_0
         $x_1_3 = {57 dd 02 28 09 0e 00 00 00 fa 25 33 00 16 00 00 01 00 00 00 17 05 00 00 1d 00 00 00 1a 00 00 00 42 02 00 00 53 00 00 00 6b 07 00 00 05 00 00 00 24 00 00 00 01 00 00 00 01 00 00 00 c1 00 00 00 51}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_MSIL_SolarMarker_AVN_2147887402_0
         $x_1_1 = {16 13 0c 2b 53 00 11 08 17 58 07 5d 13 08 11 09 11 07 11 08 94 58 07 5d 13 09 11 07 11 08 94 13 0a 11 07 11 08 11 07 11 09 94 9e 11 07 11 09 11 0a 9e 11 07 11 07 11 08 94 11 07 11 09 94 58 07 5d 94 13 0d 11 0b 11 0c 02 11 0c 91 11 0d 61 d2 9c 00 11 0c 17 58 13 0c 11 0c 02 8e 69 fe 04 13 0f 11 0f 2d a0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_MSIL_SolarMarker_AG_2147891588_0
         $x_1_1 = {0d 16 13 04 2b 17 09 11 04 08 17 20 ?? 00 00 00 6f ?? 00 00 0a d2 9c 11 04 17 58 13 04 11 04 09 8e 69 17 59 fe 04 13 10 11 10 2d da}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +129,7 @@ rule Trojan_MSIL_SolarMarker_AS_2147893462_0
         $x_1_1 = {0a 00 07 6f ?? 00 00 0a 00 03 7b ?? 00 00 04 8e 69 06 8e 69 58 8d ?? 00 00 01 0c 16 0d 2b 3a 00 09 03 7b ?? 00 00 04 8e 69 fe 04 16 fe 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +151,7 @@ rule Trojan_MSIL_SolarMarker_ASM_2147894352_0
         $x_1_1 = {16 0c 2b 3a 00 08 03 7b ?? ?? ?? 04 8e 69 fe 04 16 fe 01 13 08 11 08 2d 0f 00 07 08 03 7b ?? ?? ?? 04 08 91 9c 00 2b 11 00 07 08 06 08 03 7b ?? ?? ?? 04 8e 69 59 91}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +179,7 @@ rule Trojan_MSIL_SolarMarker_MA_2147896792_0
         $x_1_7 = "NotifyEndApplication" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

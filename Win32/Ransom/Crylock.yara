@@ -19,6 +19,7 @@ rule Ransom_Win32_Crylock_PAA_2147785418_0
         $x_1_4 = "how_to_decrypt.hta" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanSpy_MSIL_Stealer_2147753972_0
         $x_1_4 = "http://107.173.191.123/swift/Fepviueeh_Djesbqqi.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule TrojanSpy_MSIL_Stealer_MA_2147811261_0
         $x_1_14 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +88,7 @@ rule TrojanSpy_MSIL_Stealer_MC_2147811459_0
         $x_1_13 = "PowerShell" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +118,7 @@ rule TrojanSpy_MSIL_Stealer_MD_2147811766_0
         $x_1_9 = "Credential_Form" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +147,7 @@ rule TrojanSpy_MSIL_Stealer_MH_2147814213_0
         $x_1_8 = "ts_Transaction" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +179,7 @@ rule TrojanSpy_MSIL_Stealer_MI_2147815333_0
         $x_1_11 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +208,7 @@ rule TrojanSpy_MSIL_Stealer_MK_2147816214_0
         $x_1_8 = "base64EncodedData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +239,7 @@ rule TrojanSpy_MSIL_Stealer_ML_2147817737_0
         $x_1_10 = "NetworkCredential" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -258,6 +266,7 @@ rule TrojanSpy_MSIL_Stealer_MN_2147819713_0
         $x_1_6 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -284,6 +293,7 @@ rule TrojanSpy_MSIL_Stealer_RK_2147819843_0
         $x_1_6 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -305,6 +315,7 @@ rule TrojanSpy_MSIL_Stealer_SL_2147914438_0
         $x_2_1 = {07 72 a5 00 00 70 6f 19 00 00 0a 6f 1a 00 00 0a 0d 09 08 6f 1b 00 00 0a 08 6f 0c 00 00 0a 0a dd 0d 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -327,6 +338,7 @@ rule TrojanSpy_MSIL_Stealer_SM_2147914440_0
         $x_2_2 = "imageclass.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -349,6 +361,7 @@ rule TrojanSpy_MSIL_Stealer_SO_2147914441_0
         $x_2_2 = "imageclass.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -370,6 +383,7 @@ rule TrojanSpy_MSIL_Stealer_SN_2147914442_0
         $x_2_1 = {02 7b 38 00 00 04 06 07 03 6f 40 00 00 0a 0c 08 2c 0f 07 08 58 0b 03 08 59 fe 0b 01 00 03 16 30 df}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -392,6 +406,7 @@ rule TrojanSpy_MSIL_Stealer_SP_2147917680_0
         $x_2_2 = "Shroud.Properties.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -414,6 +429,7 @@ rule TrojanSpy_MSIL_Stealer_SQ_2147918589_0
         $x_2_2 = "$5302f5a7-7100-4f7a-a26b-7ba1af8623d8" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -437,6 +453,7 @@ rule TrojanSpy_MSIL_Stealer_PQ_2147919303_0
         $x_1_3 = "GZipStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -458,6 +475,7 @@ rule TrojanSpy_MSIL_Stealer_SSF_2147925317_0
         $x_1_1 = {28 2c 00 00 0a 73 2d 00 00 0a 20 f4 01 00 00 28 ?? ?? ?? 06 25 26 28 2e 00 00 0a 25 26 6f 2f 00 00 0a 25 26 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -479,6 +497,7 @@ rule TrojanSpy_MSIL_Stealer_SU_2147925574_0
         $x_2_1 = {02 7b 0a 00 00 04 11 09 11 0b 58 91 08 11 0b 91 2e 05 16 13 0a 2b 0d 11 0b 17 58 13 0b 11 0b 08 8e 69 32 dc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -502,6 +521,7 @@ rule TrojanSpy_MSIL_Stealer_SU_2147925574_1
         $x_2_3 = "Ubakacupikucorod" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -529,6 +549,7 @@ rule TrojanSpy_MSIL_Stealer_PTQ_2147928684_0
         $x_1_7 = "Telegram" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -554,6 +575,7 @@ rule TrojanSpy_MSIL_Stealer_SV_2147936259_0
         $x_1_5 = "ghhhh.ps1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

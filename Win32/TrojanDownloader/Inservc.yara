@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Inservc_A_2147601828_0
         $x_1_5 = {7e f0 83 c4 f8 8b 95 ?? ?? ff ff 52 53 e8 ?? ?? 00 00 89 c2 83 c4 10 85 d2 0f 84 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Inservc_A_2147602387_0
         $x_1_7 = {74 63 70 00 68 74 74 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

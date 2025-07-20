@@ -16,6 +16,7 @@ rule Trojan_Win64_Crypmodadv_ASG_2147895394_0
         $x_5_1 = "XIIDoN9tKbCc1keiWnJs/_ClLItMgHPdmlm5kA8wm/wlZ95oh4HImE7JGTuWLY/hUuSDgsK6clPzACY61zK" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

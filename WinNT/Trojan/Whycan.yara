@@ -19,6 +19,7 @@ rule Trojan_WinNT_Whycan_A_2147687016_0
         $x_1_5 = {0f b7 07 b9 6e 6b 00 00 66 3b c1 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

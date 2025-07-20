@@ -18,6 +18,7 @@ rule HackTool_MacOS_Chisel_A_2147839848_0
         $x_1_3 = "main.generatePidFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule HackTool_MacOS_Chisel_B_2147893467_0
         $x_1_4 = "chiselclientclosed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule HackTool_MacOS_Chisel_C_2147921860_0
         $x_1_4 = "main.generatePidFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -91,6 +94,7 @@ rule HackTool_MacOS_Chisel_E_2147923774_0
         $x_1_2 = {45 0f b6 44 07 79 45 0f b6 4c 07 7a 45 0f b6 54 07 7b 45 0f b6 5c 07 7c 41 0f b6 5c 07 7d 48 8b 35 5e 4a 58 00 48 83 ec 08 48 8d 15 9b ce 56 00 4c 8b 2d 74 af 56 00 31 c0 53 41 53 41 52 41 ff d5 48 83 c4 20 48 89 c7 e8 e0 41 55 00 49 89 c4 4c 89 ff e8 d7 3f 55 00 48 8b 35 c4 4a 58 00 4c 89 e7 41 ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule HackTool_MacOS_Chisel_F_2147923944_0
         $x_1_4 = "client.NewClient.Password.func1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (3 of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule HackTool_MacOS_Chisel_D_2147924460_0
         $x_1_3 = "/chisel/client" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule HackTool_MacOS_Chisel_G_2147929992_0
         $x_1_5 = "/jpillora/requestlog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -186,6 +193,7 @@ rule HackTool_MacOS_Chisel_H_2147933405_0
         $x_1_3 = "(*waitGroup).DoneAll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

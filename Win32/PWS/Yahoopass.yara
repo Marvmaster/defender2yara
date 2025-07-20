@@ -22,6 +22,7 @@ rule PWS_Win32_Yahoopass_E_2147605654_0
         $x_1_8 = "CIEPasswords" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule PWS_Win32_Yahoopass_F_2147605655_0
         $x_1_12 = "YTopWindow" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +88,7 @@ rule PWS_Win32_Yahoopass_G_2147607810_0
         $x_1_14 = "YLoginWnd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +113,7 @@ rule PWS_Win32_Yahoopass_H_2147614088_0
         $x_2_5 = {68 00 00 00 40 05 60 01 00 00 50 ff 15 ac 10 80 67 8b d8 83 fb ff 74 4e 39 75 f0 74 42 56 8d 45 0c 50 ff 75 e8 e8 bb 03 00 00 8b 35 58 10 80 67 59 40 50 ff 75 e8 53 ff d6 8b 7d ec 2b 7d f0 68 40 12 80 67 57 ff 75 f0 e8 61 11 00 00 83 c4 0c 6a 00 8d 45 0c 50 57 ff 75 f0 53 ff d6 33 f6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -134,6 +138,7 @@ rule PWS_Win32_Yahoopass_J_2147624525_0
         $x_1_5 = "VicMst IP System :" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

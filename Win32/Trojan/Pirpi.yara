@@ -16,6 +16,7 @@ rule Trojan_Win32_Pirpi_A_2147628906_0
         $x_1_2 = {74 2a 68 01 00 00 7f e8 ?? ?? ?? ?? 39 85 ?? ?? ?? ?? 74 18 81 bd ?? ?? ?? ?? bd 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Pirpi_B_2147628907_0
         $x_1_6 = {6d 73 6e 74 6c 6d 2e 74 6d 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -66,6 +68,7 @@ rule Trojan_Win32_Pirpi_F_2147634392_0
         $x_1_2 = {81 f9 0f 27 00 00 7e 23 b8 ad 8b db 68 f7 e9 c1 fa 0c 8b c2 c1 e8 1f 03 d0 8b c1 8b fa b9 10 27 00 00 99 f7 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Win32_Pirpi_G_2147639910_0
         $x_1_4 = {81 bd 00 f5 ff ff 00 10 00 00 73 14 8b 95 f0 f6 ff ff 52 ff 15 ?? ?? ?? ?? 33 c0 e9 ?? ?? 00 00 6a 00 6a 00 68 00 08 00 00 8b 85 f0 f6 ff ff 50 ff 15 ?? ?? ?? ?? b9 00 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_Win32_Pirpi_A_2147644971_0
         $x_2_6 = {6a 04 50 56 ff d5 83 c7 04 4b 75 cf 1b 00 3d ?? ?? ?? ?? 74 09 35 01}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -140,6 +145,7 @@ rule Trojan_Win32_Pirpi_N_2147656939_0
         $x_1_2 = {8b 74 24 0c 85 f6 74 19 33 c0 85 f6 7e 13 8a 54 24 10 53 8a 1c 08 32 da 88 1c 08 40 3b c6 7c f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +168,7 @@ rule Trojan_Win32_Pirpi_J_2147696136_0
         $x_1_2 = {8b d8 83 fb ff 74 ?? 8d 84 24 98 00 00 00 50 53 e8 ?? ?? ?? ?? 85 c0 74 ?? 8b 35 ?? ?? ?? ?? 8d 4c 24 10 8d 54 24 0c 51 52 6a 4d e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

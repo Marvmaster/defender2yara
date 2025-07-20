@@ -17,6 +17,7 @@ rule Ransom_MacOS_X_Ratatonilly_A_2147722467_0
         $x_2_3 = {80 3c 0b 5f 0f 85 c1 01 00 00 48 b9 00 00 00 00 fe ff ff ff 48 01 c1 48 c1 f9 20 80 3c 0b 45 0f 85 a6 01 00 00 48 b9 00 00 00 00 fd ff ff ff 48 01 c1 48 c1 f9 20 80 3c 0b 4d 0f 85 8b 01 00 00 48 b9 00 00 00 00 fc ff ff ff 48 01 c1 48 c1 f9 20 80 3c 0b 44}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

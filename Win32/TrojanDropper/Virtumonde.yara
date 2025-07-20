@@ -39,6 +39,7 @@ rule TrojanDropper_Win32_Virtumonde_A_2147800887_0
         $x_1_25 = "salan_ssmutant" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 20 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_50_*) and 21 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -71,6 +72,7 @@ rule TrojanDropper_Win32_Virtumonde_A_2147800887_1
         $x_1_9 = {2e 62 61 6b 00 00 00 00 2e 62 61 6b 32 00 00 00 2e 62 61 6b 31 00 00 00 2e 69 6e 69 32 00 00 00 2e 74 6d 70 32 00 00 00 2e 74 6d 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             ((5 of ($x_2_*))) or

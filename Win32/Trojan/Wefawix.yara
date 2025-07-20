@@ -17,6 +17,7 @@ rule Trojan_Win32_Wefawix_A_2147636904_0
         $x_1_3 = {ba ff 00 00 00 89 d1 83 c4 0c 99 f7 f9 0f be d2 68 00 20 03 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

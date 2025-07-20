@@ -20,6 +20,7 @@ rule Trojan_Win64_Skoppy_B_2147941823_0
         $x_8_5 = "cmd /c schtasks /create /tn \"CleanSyslogTask\" /tr \"rundll32 %s,s\"" ascii //weight: 8
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or
             ((2 of ($x_4_*))) or

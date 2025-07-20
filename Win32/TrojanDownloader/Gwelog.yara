@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Gwelog_A_2147652050_0
         $x_1_7 = "google.com.tr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

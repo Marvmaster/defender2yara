@@ -20,6 +20,7 @@ rule Trojan_Win32_Trex_A_2147717532_0
         $x_1_6 = ".ENCRYPTED" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

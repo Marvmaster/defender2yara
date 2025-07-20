@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Batund_A_2147666204_0
         $x_1_3 = "\\Domains\\com.br\\*.bradesco\" /v \"http\" /t REG_DWORD /d \"0x00000002\" /f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

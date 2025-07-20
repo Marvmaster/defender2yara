@@ -18,6 +18,7 @@ rule Backdoor_AndroidOS_Moavt_A_2147826655_0
         $x_1_3 = {6c 65 70 68 6f 6e 79 2f 63 61 72 72 69 65 72 73 00 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

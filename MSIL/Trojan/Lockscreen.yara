@@ -20,6 +20,7 @@ rule Trojan_MSIL_Lockscreen_C_2147712469_0
         $x_1_5 = {50 6f 77 65 72 65 64 42 79 41 74 74 72 69 62 75 74 65 00 53 6d 61 72 74 41 73 73 65 6d 62 6c 79 2e 41 74 74 72 69 62 75 74 65 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_Lockscreen_2147731668_0
         $x_1_4 = "Lock Type Meaning: Unbreakable Lock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_MSIL_Lockscreen_SOP_2147923708_0
         $x_1_1 = {7e 13 00 00 04 6f 87 00 00 0a 1d 28 88 00 00 0a 72 ?? ?? ?? 70 28 89 00 00 0a 17 28 8a 00 00 0a 00 1d 28 88 00 00 0a 72 ?? ?? ?? 70 28 89 00 00 0a 19 73 8b 00 00 0a 80 15 00 00 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_MSIL_Lockscreen_PAE_2147924247_0
         $x_1_4 = "Microsoft\\Windows\\Start Menu\\Programs\\Startup" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_MSIL_Lockscreen_PDR_2147940942_0
         $x_1_4 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_MSIL_Lockscreen_PAHI_2147946359_0
         $x_1_6 = "Failed to write to MBR" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

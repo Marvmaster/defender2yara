@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Awavs_A_2147688737_0
         $x_1_4 = {63 66 67 00 62 6f 74 6e 65 74 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

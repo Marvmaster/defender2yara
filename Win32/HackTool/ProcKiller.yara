@@ -24,6 +24,7 @@ rule HackTool_Win32_ProcKiller_B_2147648473_0
         $x_1_10 = {6a 00 6a 00 6a 12 8b 45 08 50 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

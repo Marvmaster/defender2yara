@@ -21,6 +21,7 @@ rule Trojan_Win32_Moftamarel_B_2147805722_0
         $x_1_7 = "?startOutlook@@YAHXZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_4_*) and 1 of ($x_1_*))) or

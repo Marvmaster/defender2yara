@@ -27,6 +27,7 @@ rule Trojan_Win32_Dexter_EC_2147892108_0
         $x_1_12 = "SELECT * FROM Win32_MemoryArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

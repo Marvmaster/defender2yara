@@ -16,6 +16,7 @@ rule Trojan_Win32_Zesy_RDA_2147842397_0
         $x_2_1 = {8b 45 c8 8b 08 c1 e9 08 89 4d b4 8b 4d cc 33 4d b4 8b 45 d4 33 d2 f7 75 ac 8b 45 08 03 0c 90 89 4d cc 8b 0d ?? ?? ?? ?? 33 d2 89 4d 80 89 55 84}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

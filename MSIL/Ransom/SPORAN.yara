@@ -18,6 +18,7 @@ rule Ransom_MSIL_SPORAN_DA_2147853297_0
         $x_1_3 = "vssadmin.exe Delete Shadows /All /Quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

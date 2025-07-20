@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Zegost_B_2147692234_0
         $x_1_5 = "net user Administrator /fullname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win32_Zegost_C_2147696596_0
         $x_1_2 = {50 51 c6 44 24 ?? 4b c6 44 24 ?? 6f c6 44 24 ?? 74 c6 44 24 ?? 68 c6 44 24 ?? 65 c6 44 24 ?? 72 c6 44 24 ?? 35 c6 44 24 ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule TrojanDownloader_Win32_Zegost_H_2147697473_0
         $x_1_2 = {fe ff ff 4e c6 85 ?? fe ff ff 65 c6 85 ?? fe ff ff 74 c6 85 ?? fe ff ff 53 c6 85 ?? fe ff ff 79 c6 85 ?? fe ff ff 73 c6 85 ?? fe ff ff 74 c6 85 ?? fe ff ff 32 c6 85 ?? fe ff ff 2e c6 85 ?? fe ff ff 64 c6 85 ?? fe ff ff 6c c6 85 ?? fe ff ff 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule TrojanDownloader_Win32_Zegost_D_2147709831_0
         $x_1_2 = {8b 57 50 8b 47 34 6a 04 68 00 20 00 00 52 50 ff d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule TrojanDownloader_Win32_Zegost_E_2147714367_0
         $x_1_3 = {4b c6 44 24 ?? 52 c6 44 24 ?? 4e c6 44 24 ?? 4c c6 44 24 ?? 33 c6 44 24 ?? 32 c6 44 24 ?? 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -130,6 +135,7 @@ rule TrojanDownloader_Win32_Zegost_ARA_2147851452_0
         $x_2_1 = {8b 4c 24 08 8a 14 08 80 c2 7a 88 14 08 8b 4c 24 08 8a 14 08 80 f2 59 88 14 08 40 3b c6 7c e1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

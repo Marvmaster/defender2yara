@@ -16,6 +16,7 @@ rule Trojan_Win32_Neurevt_A_2147679945_0
         $x_1_2 = "%d|%s|%s|%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Neurevt_B_2147685422_0
         $x_1_2 = {11 8a f8 82 c7 45 ?? 9b 1c 37 d2 c7 45 ?? aa d8 9b 4d c7 45 ?? 64 b9 cc c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Neurevt_A_2147685718_0
         $x_1_9 = {57 44 53 74 61 74 75 73 00 00 00 00 57 44 45 6e 61 62 6c 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_1_*))) or
             ((2 of ($x_50_*))) or
@@ -92,6 +95,7 @@ rule Trojan_Win32_Neurevt_C_2147689100_0
         $x_1_3 = {8a 4d fc 30 0c 18 40 3b c7 72 f5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_Win32_Neurevt_F_2147711710_0
         $x_1_3 = "QCDRunMode.Connection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Eqtonex_F_2147720969_0
         $x_1_3 = {53 65 48 8b 04 25 38 00 00 00 48 8b 40 04 48 c1 e8 0c 48 c1 e0 0c 48 8b 18 66 81 fb 4d 5a 74 08 48 2d 00 10 00 00 eb ee 5b c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -56,6 +57,7 @@ rule Trojan_Win32_Eqtonex_G_2147721994_0
         $x_6_19 = {68 b8 0b 00 00 ff d6 68 bd 01 00 00 8d 44 24 0c 6a 01 50 e8 ?? ?? ?? ?? 83 c4 0c 85 c0 75 1f 68 b8 0b 00 00 ff d6 8d 4c 24 08 68 bd 01 00 00 51 e8 ?? ?? ?? ?? 83 c4 08 47 83 ff 05 7c c2}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -85,6 +87,7 @@ rule Trojan_Win32_Eqtonex_A_2147726376_0
         $x_1_2 = "prkMtx" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +110,7 @@ rule Trojan_Win32_Eqtonex_B_2147726377_0
         $x_1_3 = "\\??\\%s\\%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule Trojan_Win32_Eqtonex_C_2147726379_0
         $x_1_1 = {6d 61 69 6e 57 72 61 70 70 65 72 [0-32] 5f 73 65 74 56 61 6c 69 64 61 74 65 [0-32] 5f 73 65 74 50 72 6f 63 65 73 73 [0-32] 5f 73 65 74 49 44 [0-32] 5f 64 65 6c 65 74 65 [0-32] 5f 63 72 65 61 74 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +153,7 @@ rule Trojan_Win32_Eqtonex_D_2147726380_0
         $x_1_2 = "10c67c6f8ff73eb12e2f96318b878835e3513aae" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +175,7 @@ rule Trojan_Win32_Eqtonex_E_2147726381_0
         $x_1_2 = "f3e5259c1024c871792e73dd9632909eb795b902" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +203,7 @@ rule Trojan_Win32_Eqtonex_SA_2147778359_0
         $x_1_7 = "UnRsQWRqdXN0UHJpdmlsZWdl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +226,7 @@ rule Trojan_Win32_Eqtonex_RPF_2147836273_0
         $x_1_2 = {89 c2 89 c5 c1 ea 1c c1 ed 1e 83 e5 01 83 e2 02 01 ea 89 c5 c1 ed 1f 8d 54 55 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

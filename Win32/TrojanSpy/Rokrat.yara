@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Rokrat_PA_2147772777_0
         $x_1_3 = "&folder_id=&file_id=&parent_token=&parent_service_id=&service_action_id=&state=%s&doconsen" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

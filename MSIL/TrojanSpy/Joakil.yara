@@ -20,6 +20,7 @@ rule TrojanSpy_MSIL_Joakil_A_2147692195_0
         $x_1_6 = "HKEY_CURRENT_USER\\software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule TrojanSpy_MSIL_Joakil_B_2147705612_0
         $x_1_6 = "<br>BankLabel:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

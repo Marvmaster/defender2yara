@@ -20,6 +20,7 @@ rule Ransom_MSIL_WannaScream_AYA_2147929768_0
         $x_1_5 = "DecryptionTool.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

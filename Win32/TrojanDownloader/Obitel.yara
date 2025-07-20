@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Obitel_A_2147609622_0
         $x_1_6 = {53 55 56 57 33 ed 55 55 55 68 ?? ?? ?? ?? 55 55 ff 15 ?? ?? 40 00 8b ?? ?? ?? ?? ?? 55 8b f0 56 68 ?? ?? ?? ?? ff d7 8b ?? ?? ?? ?? ?? 55 68 ec 00 00 00 ff d3 55 56 68 ?? ?? ?? ?? ff d7 56 ff 15 ?? ?? 40 00 6a 01 6a ff ff d3 5f 5e 5d 33 c0 5b c2 10 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanDownloader_Win32_Obitel_A_2147611049_0
         $x_3_7 = {8b 08 50 ff 51 1c 85 c0 7c 4d eb 17 8d 86 ?? ?? 00 00 8b 08 83 f9 01 74 05 83 f9 02 75 1e}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -78,6 +80,7 @@ rule TrojanDownloader_Win32_Obitel_B_2147611050_0
         $x_1_6 = "\\userinit.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -103,6 +106,7 @@ rule TrojanDownloader_Win32_Obitel_C_2147611125_0
         $x_1_3 = {3f 68 61 73 68 3d 00 00 68 74 74 70 3a 2f 2f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule TrojanDownloader_Win32_Obitel_B_2147611718_0
         $x_1_4 = "QueueUserAPC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule TrojanDownloader_Win32_Obitel_C_2147621292_0
         $x_1_4 = {8a 02 83 f0 00 3d cc 00 00 00 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -177,6 +183,7 @@ rule TrojanDownloader_Win32_Obitel_D_2147622846_0
         $x_1_3 = {e8 52 0c 00 00 85 c0 74 28 8d 94 24 24 01 00 00 68 0c 83 41 00 52 e8 ec 1d 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -199,6 +206,7 @@ rule TrojanDownloader_Win32_Obitel_E_2147622880_0
         $x_1_3 = {e8 52 0c 00 00 85 c0 74 28 8d 94 24 24 01 00 00 68 30 83 41 00 52 e8 4c 20 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +230,7 @@ rule TrojanDownloader_Win32_Obitel_D_2147622881_0
         $x_1_3 = {e8 52 0c 00 00 85 c0 74 28 8d 94 24 24 01 00 00 68 ?? ?? 41 00 52 e8 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

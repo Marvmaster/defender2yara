@@ -17,6 +17,7 @@ rule Trojan_Win64_Malgentzc_A_2147920877_0
         $x_1_2 = {48 89 4c 24 20 45 8b ce 41 b8 08 00 00 00 49 8b d4 48 8b 08 ff 15 ?? ?? ?? ?? 41 ff c7 48 83 c7 08 49 63 c7 48 3b c3 41 bc 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

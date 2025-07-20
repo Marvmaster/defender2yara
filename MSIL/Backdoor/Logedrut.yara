@@ -22,6 +22,7 @@ rule Backdoor_MSIL_Logedrut_A_2147695288_0
         $x_2_8 = "&startpos=" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_16_*) and 6 of ($x_2_*))) or
             (all of ($x*))

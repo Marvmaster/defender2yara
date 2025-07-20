@@ -18,6 +18,7 @@ rule Backdoor_Win32_Remosh_A_2147637473_0
         $x_1_3 = {83 c4 10 84 c0 74 5c 81 7e 0c 68 57 24 13 75 53 8b 46 03 85 c0 0f 86 93 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Worm_Win32_YahLover_A_2147582959_0
         $x_2_8 = "taskkill /im a" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or

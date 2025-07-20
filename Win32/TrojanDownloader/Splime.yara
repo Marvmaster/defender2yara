@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Splime_A_2147710228_0
         $x_1_3 = {00 63 6d 64 20 2f 63 20 22 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

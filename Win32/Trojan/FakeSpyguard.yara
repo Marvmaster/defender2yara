@@ -16,6 +16,7 @@ rule Trojan_Win32_FakeSpyguard_132927_0
         $x_1_2 = {50 72 6f 6a 65 63 74 31 2e 64 6c 6c 00 53 65 74 48 6f 6f 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_FakeSpyguard_132927_1
         $x_1_4 = "http://%domain%/update.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -68,6 +70,7 @@ rule Trojan_Win32_FakeSpyguard_132927_2
         $x_1_7 = "\\Application Data\\Microsoft\\Protect\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_Win32_FakeSpyguard_132927_3
         $x_2_9 = "/update/?action=get_base&base=1" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -124,6 +128,7 @@ rule Trojan_Win32_FakeSpyguard_132927_4
         $x_1_4 = {53 70 79 77 61 72 65 20 47 75 61 72 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -152,6 +157,7 @@ rule Trojan_Win32_FakeSpyguard_132927_5
         $x_1_5 = "rtime.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -179,6 +185,7 @@ rule Trojan_Win32_FakeSpyguard_132927_6
         $x_1_5 = "/?track_id=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -206,6 +213,7 @@ rule Trojan_Win32_FakeSpyguard_132927_7
         $x_3_5 = {68 dc 05 00 00 e8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 6a 00 6a 00 68 03 04 00 00 50 e8 ?? ?? ?? ?? eb}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -236,6 +244,7 @@ rule Trojan_Win32_FakeSpyguard_132927_8
         $x_1_7 = {53 69 73 74 65 6d 4b 65 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -265,6 +274,7 @@ rule Trojan_Win32_FakeSpyguard_132927_9
         $x_1_5 = "Note: Windows has detected an unregistered version of '" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -292,6 +302,7 @@ rule Trojan_Win32_FakeSpyguard_132927_10
         $x_1_8 = "Downloader.MDW\\Trojan" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -324,6 +335,7 @@ rule Trojan_Win32_FakeSpyguard_132927_11
         $x_1_9 = {53 70 79 77 61 72 65 20 47 75 61 72 64 20 32 30 [0-2] 20 69 6e 73 74 61 6c 6c 61 74 69 6f 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

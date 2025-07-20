@@ -23,6 +23,7 @@ rule TrojanDropper_Win32_Matcash_2147804044_0
         $x_1_9 = {53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 49 6e 74 65 72 6e 65 74 20 45 78 70 6c 6f 72 65 72 5c 4d 61 69 6e 00 00 00 2e 45 58 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

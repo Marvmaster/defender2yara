@@ -19,6 +19,7 @@ rule BrowserModifier_Win32_Troboxi_A_176175_0
         $x_1_5 = "user_pref(\"keyword.URL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -46,6 +47,7 @@ rule BrowserModifier_Win32_Troboxi_196738_0
         $x_100_4 = {59 50 6a 01 6a 00 8d 45 d8 50 e8 ?? ?? 00 00 59 50 ff 75 a8 ff 15 ?? ?? 40 00 ff 75 a8 ff 15 ?? ?? 40 00 5f 5e 5b c9 c3}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_5_*))) or
             ((1 of ($x_100_*) and 1 of ($x_10_*))) or

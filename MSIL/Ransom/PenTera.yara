@@ -18,6 +18,7 @@ rule Ransom_MSIL_PenTera_F_2147830438_0
         $x_1_3 = "Ransomware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

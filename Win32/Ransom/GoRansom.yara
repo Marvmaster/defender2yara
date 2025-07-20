@@ -20,6 +20,7 @@ rule Ransom_Win32_GoRansom_G_2147744749_0
         $x_1_5 = "Run the ransomware in the command line with one argument, decrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

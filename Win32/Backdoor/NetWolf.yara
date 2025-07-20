@@ -19,6 +19,7 @@ rule Backdoor_Win32_NetWolf_A_2147641102_0
         $x_1_5 = {2d 73 65 74 20 48 74 74 70 50 72 6f 78 79 09 69 70 20 70 6f 72 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

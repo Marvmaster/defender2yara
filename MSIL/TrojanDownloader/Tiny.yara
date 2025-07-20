@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Tiny_AEE_2147742460_0
         $x_1_1 = {57 15 a2 09 09 0e 00 00 00 fa 25 33 00 16 00 00 01 00 00 00 1a 00 00 00 07 00 00 00 05 00 00 00 11 00 00 00 03 00 00 00 24 00 00 00 2a 00 00 00 0c 00 00 00 02 00 00 00 05 00 00 00 05 00 00 00 08 00 00 00 01 00 00 00 03 00 00 00 02 00 00 00 03 00 00 00 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_MSIL_Tiny_PA_2147754592_0
         $x_1_4 = "Lime-Dropper-1.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanDownloader_MSIL_Tiny_PB_2147755591_0
         $x_1_3 = {00 20 00 0c 00 00 28 0e 00 00 0a 00 06 02 6f 0f 00 00 0a 0b de}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule TrojanDownloader_MSIL_Tiny_GM_2147757416_0
         $x_1_4 = "powershell" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule TrojanDownloader_MSIL_Tiny_PE_2147761465_0
         $x_1_4 = "fud.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule TrojanDownloader_MSIL_Tiny_A_2147767661_0
         $x_1_4 = "Split" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule TrojanDownloader_MSIL_Tiny_AP_2147780095_0
         $x_3_5 = "DownloadData" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_3_*))) or
             ((1 of ($x_10_*) and 2 of ($x_3_*))) or
@@ -190,6 +197,7 @@ rule TrojanDownloader_MSIL_Tiny_RC_2147781326_0
         $x_3_5 = "webClient" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +224,7 @@ rule TrojanDownloader_MSIL_Tiny_RD_2147781330_0
         $x_4_6 = "ProcessStartInfo" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -245,6 +254,7 @@ rule TrojanDownloader_MSIL_Tiny_AMP_2147781620_0
         $x_3_9 = "GetDirectoryName" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +278,7 @@ rule TrojanDownloader_MSIL_Tiny_AL_2147788953_0
         $x_3_3 = "powershell.exe" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +310,7 @@ rule TrojanDownloader_MSIL_Tiny_HJKL_2147793618_0
         $x_1_11 = "GetHashCode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -329,6 +341,7 @@ rule TrojanDownloader_MSIL_Tiny_MA_2147808547_0
         $x_1_10 = "D:\\CodingGuy Backup2\\repos\\DROPPER\\DROPPER\\obj\\Release\\d.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -353,6 +366,7 @@ rule TrojanDownloader_MSIL_Tiny_RK_2147819138_0
         $x_1_4 = "WriteAllBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -375,6 +389,7 @@ rule TrojanDownloader_MSIL_Tiny_ARA_2147837237_0
         $x_1_2 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -396,6 +411,7 @@ rule TrojanDownloader_MSIL_Tiny_ARAQ_2147838169_0
         $x_2_1 = {1a 2c 2b 11 04 09 11 05 09 8e 69 5d 91 08 11 05 91 61 d2 6f ?? ?? ?? 0a 11 05 17 58 13 05 11 05 08 8e 69 32 db}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -419,6 +435,7 @@ rule TrojanDownloader_MSIL_Tiny_NTD_2147838208_0
         $x_1_3 = "ProcessWindowStyle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -443,6 +460,7 @@ rule TrojanDownloader_MSIL_Tiny_RDA_2147839951_0
         $x_1_4 = "MSEInstall Package" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -464,6 +482,7 @@ rule TrojanDownloader_MSIL_Tiny_ATY_2147841822_0
         $x_1_1 = {0a 16 0b 2b 22 00 06 6f 17 00 00 0a 07 9a 6f 18 00 00 0a 14 14 6f 19 00 00 0a 2c 02 de 0e de 03 26 de 00 07 17 58 0b 07 1f 0a 32 d9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -485,6 +504,7 @@ rule TrojanDownloader_MSIL_Tiny_ATY_2147841822_1
         $x_1_1 = {07 09 11 04 6f ?? ?? ?? 0a 8c 01 00 00 01 28 ?? ?? ?? 0a 13 05 11 05 28 ?? ?? ?? 06 39 03 00 00 00 11 05 2a 11 04 17 58 13 04 11 04 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -506,6 +526,7 @@ rule TrojanDownloader_MSIL_Tiny_ATY_2147841822_2
         $x_2_1 = {0c 16 0d 2b 3b 00 08 13 04 16 13 05 11 04 12 05 28 ?? ?? ?? 0a 00 08 07 09 18 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 de 0d 11 05 2c 08 11 04 28 ?? ?? ?? 0a 00 dc 00 09 18 58 0d 09 07 6f ?? ?? ?? 0a fe 04 13 06 11 06 2d b6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -528,6 +549,7 @@ rule TrojanDownloader_MSIL_Tiny_ABVO_2147846882_0
         $x_1_2 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -549,6 +571,7 @@ rule TrojanDownloader_MSIL_Tiny_AT_2147847843_0
         $x_1_1 = {73 03 00 00 0a 0a 06 6f 04 00 00 0a 72 01 00 00 70 6f 05 00 00 0a 06 6f 04 00 00 0a 72 11 00 00 70 6f 06 00 00 0a 06 6f 04 00 00 0a 17 6f 07 00 00 0a 06 6f 04 00 00 0a 17 6f 08 00 00 0a 06 6f 09 00 00 0a 26 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -571,6 +594,7 @@ rule TrojanDownloader_MSIL_Tiny_AT_2147847843_1
         $x_1_2 = "WindowsSetupManger\\obj\\Debug\\WindowsSetupManger.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -593,6 +617,7 @@ rule TrojanDownloader_MSIL_Tiny_AT_2147847843_2
         $x_1_2 = "de-CH-pleasenorun" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -616,6 +641,7 @@ rule TrojanDownloader_MSIL_Tiny_PAAH_2147850039_0
         $x_1_3 = "WScript.echo('da');" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -638,6 +664,7 @@ rule TrojanDownloader_MSIL_Tiny_PAAI_2147850040_0
         $x_1_2 = "C:\\systemfat.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -660,6 +687,7 @@ rule TrojanDownloader_MSIL_Tiny_ARAF_2147850733_0
         $x_2_2 = "\\Njrat\\obj\\Debug\\Njrat.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -681,6 +709,7 @@ rule TrojanDownloader_MSIL_Tiny_ATN_2147892031_0
         $x_1_1 = {a2 08 1f 2a 1f ?? 8c 07 00 00 01 a2 08 1f 2b 1f ?? 8c 07 00 00 01 a2 08 1f 2c 1f ?? 8c 07 00 00 01 a2 08 1f 2d 1f ?? 8c 07 00 00 01 a2 08 1f 2e 1f ?? 8c 07 00 00 01 a2 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -703,6 +732,7 @@ rule TrojanDownloader_MSIL_Tiny_ATN_2147892031_1
         $x_1_2 = "pycsharp\\pycsharp\\obj\\Release\\pycsharp.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -731,6 +761,7 @@ rule TrojanDownloader_MSIL_Tiny_APB_2147896069_0
         $x_4_8 = "discord" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 6 of ($x_4_*))) or
             ((2 of ($x_5_*) and 5 of ($x_4_*))) or
@@ -760,6 +791,7 @@ rule TrojanDownloader_MSIL_Tiny_KA_2147896225_0
         $x_1_5 = "WriteAllBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -782,6 +814,7 @@ rule TrojanDownloader_MSIL_Tiny_MVD_2147901311_0
         $x_1_2 = "allstarprivate.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -807,6 +840,7 @@ rule TrojanDownloader_MSIL_Tiny_MVE_2147901633_0
         $x_5_5 = "dawnloedkla.exe" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -832,6 +866,7 @@ rule TrojanDownloader_MSIL_Tiny_SGC_2147901816_0
         $x_1_1 = {1f 1c 28 11 00 00 0a 72 e5 09 00 70 28 12 00 00 0a 28 04 00 00 06 00 09 28 15 00 00 0a 26 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -855,6 +890,7 @@ rule TrojanDownloader_MSIL_Tiny_SGB_2147901818_0
         $x_1_3 = "catlak" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -876,6 +912,7 @@ rule TrojanDownloader_MSIL_Tiny_SGD_2147901901_0
         $x_2_1 = {00 11 04 28 01 00 00 06 02 28 02 00 00 06 00 00 2b 02}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -897,6 +934,7 @@ rule TrojanDownloader_MSIL_Tiny_MVG_2147902178_0
         $x_1_1 = {73 03 00 00 0a 72 01 00 00 70 28 04 00 00 0a 28 05 00 00 0a 72 31 00 00 70 6f 06 00 00 0a 72 53 00 00 70 6f 07 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -918,6 +956,7 @@ rule TrojanDownloader_MSIL_Tiny_MVH_2147902179_0
         $x_1_1 = {06 72 01 00 00 70 72 71 00 00 70 6f 04 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -940,6 +979,7 @@ rule TrojanDownloader_MSIL_Tiny_MVF_2147902433_0
         $x_1_2 = "Sliver_stager.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

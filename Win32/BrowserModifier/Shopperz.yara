@@ -17,6 +17,7 @@ rule BrowserModifier_Win32_Shopperz_223248_0
         $x_1_3 = "21EAF666-26B3-4a3c-ABD0-CA2F5A326744" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule BrowserModifier_Win32_Shopperz_223248_1
         $x_1_5 = {43 3a 5c 77 6f 72 6b 5c 73 68 6f 70 70 65 72 7a [0-64] 49 6e 50 72 6f 67 72 65 73 73 5c 43 6f 6d 70 6f 6e 65 6e 74 73 5c 42 69 6e 61 72 69 65 73 5c 52 65 6c 65 61 73 65 5c 45 78 74 65 6e 73 69 6f 6e 02 00 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

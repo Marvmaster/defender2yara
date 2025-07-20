@@ -24,6 +24,7 @@ rule Ransom_Win32_SnatchGolang_NVR_2147746191_0
         $x_1_9 = "/root/go/src/snatch/dirs.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

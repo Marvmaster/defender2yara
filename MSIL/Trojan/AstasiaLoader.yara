@@ -18,6 +18,7 @@ rule Trojan_MSIL_AstasiaLoader_PA_2147853113_0
         $x_3_3 = {07 1f 1c 28 ?? 00 00 0a 72 ?? ?? ?? ?? 28 ?? 00 00 0a 6f ?? 00 00 0a 20 d0 07 00 00 28 ?? 00 00 0a 1f 1c 28 ?? 00 00 0a 72 ?? ?? ?? ?? 28}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

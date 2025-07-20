@@ -19,6 +19,7 @@ rule Trojan_Win32_Supfurfit_A_2147638516_0
         $x_1_5 = "ftp -s:c:\\windows\\transfer.txt ftp.webcindario.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

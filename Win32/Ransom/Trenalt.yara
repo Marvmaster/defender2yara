@@ -19,6 +19,7 @@ rule Ransom_Win32_Trenalt_A_2147690908_0
         $x_1_5 = {43 80 fb 7b 75 9d 33 c0 5a 59 59 64 89 10 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

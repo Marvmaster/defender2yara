@@ -25,6 +25,7 @@ rule Backdoor_Win32_Coroxy_A_2147766831_0
         $x_1_11 = "GET /tor/rendezvous2/%s HTTP/1.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or
@@ -55,6 +56,7 @@ rule Backdoor_Win32_Coroxy_B_2147778287_0
         $x_1_5 = "HOST1:23.133.6.39" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -86,6 +88,7 @@ rule Backdoor_Win32_Coroxy_E_2147821146_0
         $x_2_9 = {8b 08 8b 51 08 50 ff d2 8b 45 f8 8b 08 8b 51 08 50 ff d2 8b 45 fc 8b 08 8b 51 08 50 ff d2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_5_*) and 1 of ($x_2_*))) or
             ((1 of ($x_10_*) and 4 of ($x_5_*))) or
@@ -121,6 +124,7 @@ rule Backdoor_Win32_Coroxy_F_2147821148_0
         $x_1_9 = {eb 0a c7 85 ?? ?? ff ff ?? ?? 00 10 68 20 bf 02 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -142,6 +146,7 @@ rule Backdoor_Win32_Coroxy_ZA_2147843877_0
         $x_2_1 = {8b 1a 03 1d ?? ?? ?? ?? 2b d8 e8 ?? ?? ?? ?? 03 d8 a1 ?? ?? ?? ?? 89 18 e8 ?? ?? ?? ?? 8b 1d ?? ?? ?? ?? 03 1d ?? ?? ?? ?? 81 eb ?? ?? ?? ?? 03 1d ?? ?? ?? ?? 2b d8 e8 ?? ?? ?? ?? 03 d8 a1 ?? ?? ?? ?? 31 18 83 05 ?? ?? ?? ?? 04 83 05 ?? ?? ?? ?? 04 a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 0f 82}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +168,7 @@ rule Backdoor_Win32_Coroxy_CA_2147900393_0
         $x_1_1 = {67 8b 55 10 88 02 8a 07 30 02 ff 45 10 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -184,6 +190,7 @@ rule Backdoor_Win32_Coroxy_CCHU_2147904692_0
         $x_1_1 = {8b 55 cc 03 55 ac 03 55 e8 2b d0 8b 45 d8 31 10 83 45 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +212,7 @@ rule Backdoor_Win32_Coroxy_FT_2147910134_0
         $x_1_1 = {8b 00 89 45 ?? 8b 45 ?? 83 c0 ?? 89 45 ?? 33 c0 89 45 ?? 8b 45 ?? 89 45 ?? 8b 45 ?? 83 e8 ?? 89 45 ?? c7 45 ?? ?? ?? ?? ?? c7 45 ?? ?? ?? ?? ?? 33 c0 89 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

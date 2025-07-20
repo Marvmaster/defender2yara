@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Kucf_A_2147679526_0
         $x_1_4 = {6c 6f 67 2e 68 74 6d 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

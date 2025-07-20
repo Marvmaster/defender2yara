@@ -19,6 +19,7 @@ rule Ransom_Win32_Crysis_DA_2147730469_0
         $x_1_4 = "vssadmin delete shadows /all /quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Ransom_Win32_Crysis_PA_2147733944_0
         $x_1_12 = {80 e3 c0 0a da 8a d0 d2 e2 88 5c 3e ?? 8b 5c 24 ?? c0 e0 06 0a 44 24 ?? 80 e2 c0 0a 54 24 ?? 83 c5 04 88 54 3e ?? 88 04 3e 46 3b 2b 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Ransom_Win32_Crysis_PB_2147750231_0
         $x_1_2 = {69 c9 fd 43 03 00 89 0d ?? ?? ?? ?? 81 05 ?? ?? ?? ?? c3 9e 26 00 81 3d ?? ?? ?? ?? a5 02 00 00 8b 35 ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Ransom_Win32_Crysis_CX_2147753837_0
         $x_1_2 = {55 8b ec 51 89 4d fc 8b 45 fc 8b 00 03 45 08 c9 c2 04 00 55 8b ec 51 51 89 4d f8 ff 75 08 e8 6d 30 00 00 59}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule Ransom_Win32_Crysis_A_2147762504_0
         $x_1_3 = {8b 45 0c 03 45 ?? 0f b6 08 0f b6 55 ?? 0f b6 45 ?? 03 d0 0f b6 d2 8b 45 ?? 0f b6 14 10 33 ca 8b 45 ?? 03 45 ?? 88 08 8b 4d ?? 03 4d ?? 0f b6 11 85 d2 75 ?? 8b 45 ?? 83 c0 ?? 89 45 ?? eb ?? c7 45 ?? ?? ?? ?? ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule Ransom_Win32_Crysis_MK_2147775739_0
         $x_1_6 = "Total Encrypted Files :" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

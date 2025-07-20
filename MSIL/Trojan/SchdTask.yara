@@ -22,6 +22,7 @@ rule Trojan_MSIL_SchdTask_YA_2147733650_0
         $x_5_7 = "AvailableCount" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule Trojan_MSIL_SchdTask_YB_2147733651_0
         $x_2_4 = "Delete Ex:" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -19,6 +19,7 @@ rule TrojanProxy_Win32_Koobface_H_2147803962_0
         $x_1_4 = "adD \"hkLm\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -51,6 +52,7 @@ rule TrojanProxy_Win32_Koobface_I_2147803963_0
         $x_1_9 = {40 00 33 c0 83 ?? ?? ?? 0f 95 c0 48 83 e0 ?? 83 c0 ?? 69 c0 ?? ?? ?? ?? 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -90,6 +92,7 @@ rule TrojanProxy_Win32_Koobface_A_2147803994_0
         $x_1_14 = {c6 45 fc d5 c6 45 fd ae}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -132,6 +135,7 @@ rule TrojanProxy_Win32_Koobface_B_2147803998_0
         $x_1_5 = "IGYMAS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -162,6 +166,7 @@ rule TrojanProxy_Win32_Koobface_C_2147803999_0
         $x_1_10 = {59 75 0f 47 83 c6 32 3b 7c 24 14 7c e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -191,6 +196,7 @@ rule TrojanProxy_Win32_Koobface_F_2147804001_0
         $x_1_4 = {73 66 78 2e 64 6c 6c 00 53 65 72 76 69 63 65 4d 61 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -214,6 +220,7 @@ rule TrojanProxy_Win32_Koobface_G_2147804002_0
         $x_1_3 = {00 50 4e 50 5f 54 44 49 00 7a 6f 6e 65 6c 6f 67 00 7a 6f 6e 65 6c 61 62 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -237,6 +244,7 @@ rule TrojanProxy_Win32_Koobface_J_2147804006_0
         $x_1_3 = "/url?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -264,6 +272,7 @@ rule TrojanProxy_Win32_Koobface_K_2147804008_0
         $x_1_3 = "/url?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -291,6 +300,7 @@ rule TrojanProxy_Win32_Koobface_L_2147804010_0
         $x_1_3 = "/url?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -318,6 +328,7 @@ rule TrojanProxy_Win32_Koobface_M_2147804011_0
         $x_1_3 = "/url?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -345,6 +356,7 @@ rule TrojanProxy_Win32_Koobface_N_2147804012_0
         $x_1_3 = {6a 04 58 39 45 08 a3 ?? ?? ?? ?? 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -369,6 +381,7 @@ rule TrojanProxy_Win32_Koobface_O_2147804013_0
         $x_1_4 = "btw_oko.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -392,6 +405,7 @@ rule TrojanProxy_Win32_Koobface_P_2147804017_0
         $x_1_3 = {50 44 52 56 2e 64 6c 6c 00 (53 65 72 76 69 63 65 4d 61 69|3f 6e 66 5f 61 64 64 52 75)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -422,6 +436,7 @@ rule TrojanProxy_Win32_Koobface_D_2147804025_0
         $x_1_10 = "search.mdn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -449,6 +464,7 @@ rule TrojanProxy_Win32_Koobface_E_2147804041_0
         $x_1_4 = {73 65 61 72 63 68 66 6f 72 3d 00 00 3f 71 75 65 72 79 3d 00 26 71 75 65 72 79 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -471,6 +487,7 @@ rule TrojanProxy_Win32_Koobface_Q_2147804140_0
         $x_1_2 = {75 11 ff 15 ?? ?? ?? ?? 3d e5 03 00 00 0f 85 ?? ?? ?? ?? 68 ff 00 00 00 68 30 75 00 00 8d 45 ?? 53 50 6a 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_CbatStrike_A_2147754337_0
         $x_1_2 = {c7 44 24 28 00 00 00 00 c7 44 24 20 40 00 00 00 41 b9 00 30 00 00 44 8b c5 33 d2 41 ff d4 48 8b f8 44 8b cd 4c 8b c0 48 8b d6 48 8b 0d ?? ?? ?? ?? 41 ff d5 ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

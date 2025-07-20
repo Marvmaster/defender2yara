@@ -17,6 +17,7 @@ rule Virus_Win32_Chiton_A_2147606623_0
         $x_1_2 = {68 72 75 67 3e 68 20 3c 53 68 68 72 67 62 21 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

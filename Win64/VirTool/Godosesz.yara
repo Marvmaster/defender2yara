@@ -28,6 +28,7 @@ rule VirTool_Win64_Godosesz_A_2147904476_0
         $x_1_13 = "addConn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

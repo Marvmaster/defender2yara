@@ -19,6 +19,7 @@ rule Ransom_Win32_Sagecrypt_A_2147723930_0
         $x_10_4 = {7a 68 00 61 72 00 65 6e 00 64 65 00 65 73 00 66 61 00 66 72 00 69 74 00 6b 72 00 6e 6c 00 70 74 00 68 69 00 76 69 00 74 72 00 6d 73 00 6e 6f}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +59,7 @@ rule Ransom_Win32_Sagecrypt_A_2147723930_1
         $x_1_19 = {00 6c 6e 67 22 20 3a 20 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -146,6 +148,7 @@ rule Ransom_Win32_Sagecrypt_YAA_2147911300_0
         $x_1_1 = {8b 5c 24 34 03 c1 8a 0c 13 8b 54 24 2c 32 c8 85 d2 74 0d 8b 54 24 ?? 88 0c 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

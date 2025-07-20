@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Fakr_A_2147647790_0
         $n_5_6 = "addendum\\sidebar\\" ascii //weight: -5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_5_*) and 1 of ($x_4_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or

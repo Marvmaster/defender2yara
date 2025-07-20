@@ -16,6 +16,7 @@ rule Trojan_Win32_Mint_GNA_2147890164_0
         $x_4_1 = {49 81 c9 00 ff ff ff 41 8b 45 08 03 85 c8 fb ff ff 0f b6 10 33 94 8d e0 fb ff ff 8b 45 08 03 85 c8 fb ff ff 88 10 e9}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Mint_GN_2147896245_0
         $x_4_1 = {03 f9 8b 4d f8 81 45 f8 47 86 c8 61 8b c6 c1 e8 05 03 45 e8 03 ce 33 f9 33 f8 2b df ff 4d f4}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Mint_NBL_2147896418_0
         $x_1_4 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Mint_SPDB_2147907936_0
         $x_1_1 = {31 c0 eb 15 6a 04 68 00 10 00 00 57 56 ff 15 88 67 41 00 85 c0 74 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_Win32_Mint_AC_2147939488_0
         $x_1_1 = {33 c0 89 08 50 45 43 6f 6d 70 61 63 74 32 00 00 4c 6a 00 8b 4f 0e a3 00 4c 6a 00 8b 09 62 8b 5d 40 e1 6d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +130,7 @@ rule Trojan_Win32_Mint_AE_2147944971_0
         $x_1_2 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +152,7 @@ rule Trojan_Win32_Mint_AF_2147944993_0
         $x_1_1 = {66 89 8d 58 8b fa ff c6 85 4c ff ff ff 55 c6 85 4d ff ff ff 8b c6 85 4e ff ff ff ec c6 85 4f ff ff ff 8b c6 85 50 ff ff ff 55 c6 85 51 ff ff ff 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

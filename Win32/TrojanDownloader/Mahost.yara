@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Mahost_A_2147662099_0
         $x_1_5 = "Le fichier taskhost.exe vient d'" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Mimail_A_2147647702_0
         $x_1_4 = {47 00 45 00 54 00 00 00 47 00 45 00 54 00 00 00 50 00 4f 00 53 00 54 00 00 00 00 00 50 00 4f 00 53 00 54 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

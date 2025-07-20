@@ -17,6 +17,7 @@ rule Trojan_Win32_ScarletFlash_GMC_2147891939_0
         $x_1_2 = "HWCYlEZnDYkNj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

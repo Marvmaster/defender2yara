@@ -20,6 +20,7 @@ rule Trojan_Win32_Marte_CAMP_2147847490_0
         $x_1_5 = "PegHYsViuwmHKeVERgy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_Marte_AABY_2147849187_0
         $x_1_7 = "oioaidfjaoeighauehg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_Marte_CCAL_2147890125_0
         $x_1_5 = "7tSjP2q1NZzi7yuS" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_Win32_Marte_AMR_2147892968_0
         $x_1_1 = {80 b0 80 a8 41 00 1c 40 3d 04 30 07 00 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_Win32_Marte_CCHZ_2147905382_0
         $x_1_1 = {6a 40 68 00 10 00 00 68 70 02 00 00 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule Trojan_Win32_Catchman_2147735902_0
         $x_1_9 = "going ahead of whatwhere" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

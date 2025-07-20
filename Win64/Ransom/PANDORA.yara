@@ -17,6 +17,7 @@ rule Ransom_Win64_PANDORA_REL_2147815562_0
         $n_100_2 = "usage: rsa_verify_pss <key_file> <filename>" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }

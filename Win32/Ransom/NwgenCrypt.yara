@@ -18,6 +18,7 @@ rule Ransom_Win32_NwgenCrypt_PA_2147813958_0
         $x_1_3 = "\\How To Restore Your Files.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

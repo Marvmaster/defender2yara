@@ -17,6 +17,7 @@ rule Trojan_WinNT_Sirefef_A_142987_0
         $x_1_3 = "GET /search?q=%S HTTP/1.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_WinNT_Sirefef_A_142987_1
         $x_1_4 = "__max++" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -106,6 +108,7 @@ rule Trojan_WinNT_Sirefef_B_142988_0
         $x_1_2 = {33 db 8b d3 fe c3 8a 04 33 02 d0 8a 24 32 88 24 33 02 e0 88 04 32 0f b6 c4 8a 04 30 30 07 47 e2 e3 05 00 b9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +155,7 @@ rule Trojan_WinNT_Sirefef_A_142990_0
         $x_1_5 = "delete apc %" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +205,7 @@ rule Trojan_WinNT_Sirefef_B_142993_0
         $x_1_4 = "\\\\?\\globalroot\\Device\\__max++>\\%08X.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -246,6 +251,7 @@ rule Trojan_WinNT_Sirefef_C_147967_0
         $x_1_2 = {68 7e 44 c5 a7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -287,6 +293,7 @@ rule Trojan_WinNT_Sirefef_D_148104_0
         $x_1_1 = {7c 1c 6a 62 68 ?? ?? ?? ?? 6a 01 6a 00 68 ?? ?? ?? ?? ff 74 24 20 ff d6 ff 74 24 0c ff d7 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -330,6 +337,7 @@ rule Trojan_WinNT_Sirefef_C_155383_0
         $x_1_3 = {68 56 01 00 c0 ff 75 fc ff 15 ?? ?? ?? ?? ff 75 fc ff 15 ?? ?? ?? ?? 8b 75 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -378,6 +386,7 @@ rule Trojan_WinNT_Sirefef_G_163871_0
         $x_1_6 = "USB storage device" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -432,6 +441,7 @@ rule Trojan_WinNT_Sirefef_I_166223_0
         $x_1_2 = {b9 ff ff 00 00 66 89 4e 38 8b 4f 24 89 4e 24 8b 4f 28 89 4e 28 8b 4f 2c 89 4e 2c 8b 4f 30 89 4e 30 0f b7 4f 2c 8b 57 28 2b d1 0f b7 4f 24 83 c4 0c ff 75 0c 03 d1 89 56 30 ff 75 08 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -456,6 +466,7 @@ rule Trojan_WinNT_Sirefef_I_166223_1
         $x_3_5 = {8b 43 3c 8b 6c 18 78 03 eb 8b 4d 18 8b 75 20 8b 55 24 03 d3 03 f3 ad 60 8d 34 03 33 ff 8b c7 b9 3f 00 01 00 0f b6 c0 03 c7 f7 e1}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -529,6 +540,7 @@ rule Trojan_WinNT_Sirefef_J_167505_0
         $x_1_3 = {8b 54 24 2c 8b 4c 24 30 8b 44 24 3c 89 56 0c 8b 54 24 34 89 4e 14 89 46 10 89 56 2c a1 ?? ?? ?? ?? 8b 40 14 8b 50 2c 89 51 2c 8b 50 30 8b 7c 24 30 89 57 30 8b 50 24 89 51 24 8b 40 28 89 41 28 8b 4c 24 44 51 56 ff 54 24 3c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -573,6 +585,7 @@ rule Trojan_WinNT_Sirefef_N_173466_0
         $x_1_3 = {8b 7d 08 8b f0 83 e6 1f 66 0f be b6 ?? ?? ?? ?? 0f ac d0 05 66 89 34 4f c1 ea 05 8b f1 49 85 f6 75 de}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

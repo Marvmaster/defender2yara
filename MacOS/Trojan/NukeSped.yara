@@ -18,6 +18,7 @@ rule Trojan_MacOS_NukeSped_A_2147744584_0
         $x_1_3 = {89 ce 83 e6 0f 42 8a 14 06 30 14 0f 48 ff c1 48 39 c8 75 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MacOS_NukeSped_B_2147744636_0
         $x_1_4 = {0f 10 0c 13 0f 10 54 13 10 0f 10 5c 13 20 0f 10 64 13 30 0f 57 c8 0f 57 d0 0f 11 0c 13 0f 11 54 13 10 0f 57 d8 0f 57 e0 0f 11 5c 13 20 0f 11 64 13 30 48 83 c2 40 48 83 c6 02 75 c4 eb 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_MacOS_NukeSped_C_2147745798_0
         $x_1_7 = {be ff 01 00 00 48 89 df e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 83 38 02 75 da 81 3b cf fa ed fe 75 d2 49 89 1e 31 c0 48 83 c4 08 5b 41 5c 41 5d 41 5e 41 5f 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -99,6 +102,7 @@ rule Trojan_MacOS_NukeSped_D_2147756370_0
         $x_1_4 = "kupay_updater_mac_new" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule Trojan_MacOS_NukeSped_D_2147756370_1
         $x_2_7 = "sctemarkets.com/net.php" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -156,6 +161,7 @@ rule Trojan_MacOS_NukeSped_E_2147775406_0
         $x_1_5 = "curl_easy_getinfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -184,6 +190,7 @@ rule Trojan_MacOS_NukeSped_F_2147775470_0
         $x_2_4 = "://23.152.0.101:8080" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

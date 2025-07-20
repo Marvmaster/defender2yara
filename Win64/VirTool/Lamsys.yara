@@ -16,6 +16,7 @@ rule VirTool_Win64_Lamsys_A_2147929110_0
         $x_1_2 = {4d 33 d2 48 8b c1 4c 8b d0 33 c0 3b ?? ?? ?? ?? ?? 74 11 ff c0 eb f4 33 c0 48 33 c9 49 c1 e2 02 49 c1 e0 02 ff 25 39 3a 00 00 4d 33 d2 4c 89 15 2f 3a 00 00 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

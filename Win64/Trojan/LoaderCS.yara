@@ -17,6 +17,7 @@ rule Trojan_Win64_LoaderCS_ZZ_2147778499_0
         $x_1_3 = {2d 35 19 00 00 89 44 ?? ?? 41 b9 00 30 00 00 44 8b ?? ?? ?? 33 d2 48 8b ?? ?? ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

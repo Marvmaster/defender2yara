@@ -19,6 +19,7 @@ rule VirTool_Win32_Refledelesz_A_2147910500_0
         $x_1_4 = {c7 84 24 54 01 00 00 00 00 00 00 89 84 24 68 01 00 00 50 ?? ?? ?? ?? ?? ?? ?? 50 ff 74 9c 20 ?? ?? ?? ?? ?? ?? 85 c0 ?? ?? ?? ?? ?? ?? 8b 84 24 68 01 00 00 43 83 c0 06 89 84 24 68 01 00 00 83 fb 4d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

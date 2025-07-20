@@ -17,6 +17,7 @@ rule Trojan_Win32_Necurs_A_162154_0
         $x_1_3 = {35 de c0 ad de 89 45 ?? ff 15 ?? ?? ?? ?? 33 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Necurs_A_179055_0
         $x_1_9 = {4b 00 50 00 72 00 6f 00 63 00 65 00 73 00 73 00 48 00 61 00 63 00 6b 00 65 00 72 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -73,6 +75,7 @@ rule Trojan_Win32_Necurs_A_179055_1
         $x_1_3 = {3d 35 8e f8 1f 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_Win32_Necurs_A_179055_2
         $x_1_3 = {35 de c0 ad de 89 45 ?? ff 15 ?? ?? ?? ?? 33 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -162,6 +166,7 @@ rule Trojan_Win32_Necurs_H_235940_0
         $x_1_22 = "%08x %swhen %s at %p" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

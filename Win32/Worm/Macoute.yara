@@ -20,6 +20,7 @@ rule Worm_Win32_Macoute_A_2147686162_0
         $x_1_6 = {89 e0 c6 44 ?? ?? 5a c6 44 ?? ?? 45 c6 44 ?? ?? 5c c6 44 ?? ?? 1f c6 44 ?? ?? 18 c6 44 ?? ?? 1a c6 44 ?? ?? 1a c6 44 ?? ?? 13 c6 44 ?? ?? 2a 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -26,6 +26,7 @@ rule Trojan_Win32_Goriadu_AA_2147635927_0
         $x_1_11 = {62 72 75 64 6f 2e 64 61 74 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_Goriadu_C_2147638077_0
         $x_3_4 = "SYSTEM\\CurrentControlSet\\Services\\WinSock2\\speednet_sph" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or

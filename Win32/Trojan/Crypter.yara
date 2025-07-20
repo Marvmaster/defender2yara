@@ -16,6 +16,7 @@ rule Trojan_Win32_Crypter_DC_2147797975_0
         $x_1_1 = {19 03 00 e9 30 00 04 00 00 de 39 00 00 e9 00 4b 06 00 e9 9e 00 02 00 00 28 eb 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

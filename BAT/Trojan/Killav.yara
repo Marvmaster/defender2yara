@@ -15,6 +15,7 @@ rule Trojan_BAT_Killav_W_155910_0
         $x_1_1 = "%%bullshit%%mpf%%_%l%sars%%qsk%%pg56%%msn%%f% %q%%.%%w%%rma%%g6f%%avp_club%&%ten%%/%%ram%%x%%b%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_Win32_NefiCrypt_PA_2147759765_0
         $x_1_3 = "don't rename your file" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

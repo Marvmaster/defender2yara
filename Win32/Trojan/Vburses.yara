@@ -17,6 +17,7 @@ rule Trojan_Win32_Vburses_PL_2147636490_0
         $x_1_3 = "rem Author: Munga Bunga - from Australia, the land full of retarded Australian" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -26,6 +26,7 @@ rule Trojan_Win32_Qhost_R_2147582937_0
         $x_1_12 = "lppathname.biz" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 6 of ($x_1_*))) or
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
@@ -56,6 +57,7 @@ rule Trojan_Win32_Qhost_A_2147600494_0
         $x_1_4 = {2e 31 09 75 70 64 61 74 65 37 2e 6a 69 61 6e 67 6d 69 6e 2e 63 6f 6d 00 0a 31 32 37 2e 30 2e 30 2e 31 09 75 70 64 61 74 65 2e 72 69 73 69 6e 67 2e 63 6f 6d 2e 63 6e 00 0a 31 32 37 2e 30 2e 30 2e 31 09 72 65 67 2e 72 69 73 69 6e 67 2e 63 6f 6d 2e 63 6e 00 00 00 00 0a 31 32 37 2e 30 2e 30 2e 31 09 6b 76 75 70 2e 6a 69 61 6e 67 6d 69 6e 2e 63 6f 6d 00 00 00 00 0a 31 32 37 2e 30 2e 30 2e 31 09 73 63 61 6e 2e 6b 69 6e 67 73 6f 66 74 2e 63 6f 6d 00 00 00 00 0a 31 32 37 2e 30 2e 30 2e 31 09 75 70 2e 72 69 73 69 6e 67 2e 63 6f 6d 2e 63 6e 00 0a 31 32 37 2e 30 2e 30 2e 31 09 66}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -83,6 +85,7 @@ rule Trojan_Win32_Qhost_IW_2147602351_0
         $x_1_8 = "viabcp.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))
@@ -114,6 +117,7 @@ rule Trojan_Win32_Qhost_JA_2147605107_0
         $x_1_9 = "CreateProcessA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +141,7 @@ rule Trojan_Win32_Qhost_CB_2147608978_0
         $x_1_4 = "ShellExecuteExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +164,7 @@ rule Trojan_Win32_Qhost_AM_2147612702_0
         $x_1_3 = {44 6e 73 46 6c 75 73 68 52 65 73 6f 6c 76 65 72 43 61 63 68 65 00 44 4e 53 41 50 49 2e 64 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -182,6 +188,7 @@ rule Trojan_Win32_Qhost_BB_2147616545_0
         $x_1_4 = "\\d3dx9_37.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -220,6 +227,7 @@ rule Trojan_Win32_Qhost_AQ_2147619226_0
         $x_1_15 = "yahoo.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 10 of ($x_1_*))) or
             (all of ($x*))
@@ -249,6 +257,7 @@ rule Trojan_Win32_Qhost_AR_2147619323_0
         $x_1_7 = "iXato\\PharOlniNe\\Proyecto1.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -273,6 +282,7 @@ rule Trojan_Win32_Qhost_AV_2147622778_0
         $x_1_5 = "strFileURL = \"http://116.37.147.205/hit.php\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -296,6 +306,7 @@ rule Trojan_Win32_Qhost_AW_2147622982_0
         $x_1_4 = "echo 189.201.65.65 http://bbva.com >> %windir%\\system32\\drivers\\etc\\hosts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +332,7 @@ rule Trojan_Win32_Qhost_AY_2147624627_0
         $x_1_6 = {6f 64 6e 6f 6b 6c 61 73 [0-1] 6e 69 6b 69 2e 72 75 [0-2] 3e 3e [0-2] 25 77 69 6e 64 69 72 25 5c 73 79 73 74 65 6d 33 32 5c 64 72 69 76 65 72 73 5c 65 74 63 5c 68 6f 73 74 73 30 00 [0-36] 65 63 68 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -348,6 +360,7 @@ rule Trojan_Win32_Qhost_AZ_2147624785_0
         $x_1_5 = {32 00 30 00 33 00 2e 00 31 00 37 00 31 00 2e 00 32 00 33 00 36 00 2e 00 32 00 31 00 35 00 [0-16] 77 00 77 00 77 00 2e 00 7a 00 74 00 67 00 61 00 6d 00 65 00 2e 00 63 00 6f 00 6d 00 2e 00 63 00 6e 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -372,6 +385,7 @@ rule Trojan_Win32_Qhost_BC_2147624856_0
         $x_1_2 = "echo ren %%windir%%\\system32\\drivers\\etc\\hosts1 hosts >> %windir%\\windstart.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -393,6 +407,7 @@ rule Trojan_Win32_Qhost_CC_2147628743_0
         $x_1_2 = {64 72 69 76 65 72 73 5c 65 74 63 5c 68 6f 73 74 73 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -413,6 +428,7 @@ rule Trojan_Win32_Qhost_BT_2147629457_0
         $x_1_1 = {76 6b 6f 6e 74 61 6b 74 65 2e 72 75 20 3e 3e 20 25 77 69 6e 64 69 72 25 5c 73 79 73 74 65 6d 33 32 5c 64 72 69 76 65 72 73 5c 65 74 63 5c 68 6f 73 74 73 0d 0a 65 63 68 6f 20 03 00 2e 03 00 2e 03 00 2e 03 00 20 77 77 76 6b (2e 63|6f 6e 74 61 6b 74 65 2e) 20 3e 3e 20 25 77 69 6e 64 69 72 25 5c 73 79 73 74 65 6d 33 32 5c 64 72 69 76 65 72 73 5c 65 74 63 5c 68 6f 73 74 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -435,6 +451,7 @@ rule Trojan_Win32_Qhost_CF_2147631728_0
         $x_1_3 = {64 65 6c 65 74 65 2e 62 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -456,6 +473,7 @@ rule Trojan_Win32_Qhost_CI_2147632778_0
         $x_1_2 = {20 73 65 61 72 63 68 2e 79 61 68 6f 6f 2e 63 6f 6d 0d 0a 03 00 2e 03 00 2e 03 00 2e 03 00 20 75 73 2e 73 65 61 72 63 68 2e 79 61 68 6f 6f 2e 63 6f 6d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -479,6 +497,7 @@ rule Trojan_Win32_Qhost_CJ_2147632923_0
         $x_1_4 = "DownloadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -506,6 +525,7 @@ rule Trojan_Win32_Qhost_CL_2147633323_0
         $x_1_4 = "echo \"%WINDIR%\\system32\\drivers\\etc\\hosts\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -529,6 +549,7 @@ rule Trojan_Win32_Qhost_CX_2147637301_0
         $x_1_4 = "echo del /f /q *.scr >>  ~result.cmd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -557,6 +578,7 @@ rule Trojan_Win32_Qhost_DJ_2147639298_0
         $x_1_4 = {42 3b d0 7e 94 8b 4d fc 5f 5e 33 cd 8d 85 fc fb ff ff 5b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -583,6 +605,7 @@ rule Trojan_Win32_Qhost_DL_2147639987_0
         $x_1_4 = "troy_bez_mail.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -605,6 +628,7 @@ rule Trojan_Win32_Qhost_DP_2147640616_0
         $x_2_3 = "tmp\\VKGuest.bat" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -628,6 +652,7 @@ rule Trojan_Win32_Qhost_DT_2147641802_0
         $x_1_4 = {33 d2 f7 75 08 83 fa 09 76 05 80 c2 57 eb 03 80 c2 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -652,6 +677,7 @@ rule Trojan_Win32_Qhost_DW_2147642064_0
         $x_1_5 = "127.0.0.1 d.360safe.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -679,6 +705,7 @@ rule Trojan_Win32_Qhost_DX_2147642340_0
         $x_1_4 = "echo 127.0.0.1 localhost >> %windir%%drapka%h" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -704,6 +731,7 @@ rule Trojan_Win32_Qhost_EJ_2147645373_0
         $x_1_6 = "copy system_rem.exe \"%windir%\" /Y /B" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -725,6 +753,7 @@ rule Trojan_Win32_Qhost_EM_2147645609_0
         $x_1_2 = {73 65 74 20 6a 69 3d 68 0d 0a 73 65 74 20 7a 69 3d 6e 0d 0a 65 63 25 6a 69 25 6f 20 39 31 2e 31 39 33 2e 31 39 34 2e 31 31 37 20 77 77 77 2e 76 6b 6f 25 7a 69 25 74 61 6b 74 65 2e 72 75 20 3e 3e 20 25 77 69 6e 64 69 72 25 5c 73 79 73 74 65 6d 33 32 5c 64 72 69 76 65 72 73 5c 65 74 63 5c 25 6a 69 25 6f 73 74 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -746,6 +775,7 @@ rule Trojan_Win32_Qhost_EN_2147645625_0
         $x_1_2 = "echo 178.63.9.124 facebook.com >> %systemroot%\\system32\\drivers\\etc\\hosts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -768,6 +798,7 @@ rule Trojan_Win32_Qhost_ET_2147647027_0
         $x_1_3 = {36 39 2e 31 36 33 2e 34 30 2e 31 31 31 20 20 20 68 74 74 70 3a 2f 2f 70 72 6f 76 69 6e 63 69 61 6c 2e 63 6f 6d 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -789,6 +820,7 @@ rule Trojan_Win32_Qhost_EU_2147647270_0
         $x_1_2 = {2e 72 75 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -810,6 +842,7 @@ rule Trojan_Win32_Qhost_EY_2147647604_0
         $x_1_2 = "Windows\\System32\\drivers\\winlogon.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -831,6 +864,7 @@ rule Trojan_Win32_Qhost_FD_2147647881_0
         $x_1_2 = {65 78 65 00 68 74 74 70 3a 2f 2f 71 76 63 2e 63 6f 6d 2f 63 67 65 6e 2f 63 64 69 2e 6a 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -858,6 +892,7 @@ rule Trojan_Win32_Qhost_FH_2147648394_0
         $x_1_8 = "97.253.19.9" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -885,6 +920,7 @@ rule Trojan_Win32_Qhost_F_2147648833_0
         $x_1_3 = {63 3a 5c 57 49 4e 44 4f 57 53 5c 73 79 73 74 65 6d 33 32 5c 64 72 69 76 65 72 73 5c 65 74 63 5c 68 6f 73 74 73 2e 73 79 73 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -909,6 +945,7 @@ rule Trojan_Win32_Qhost_FL_2147649001_0
         $x_1_5 = {74 73 6b 69 6c 6c 20 74 61 73 6b 6d 67 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -932,6 +969,7 @@ rule Trojan_Win32_Qhost_FM_2147649057_0
         $x_1_4 = "attrib +S +H +R" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -954,6 +992,7 @@ rule Trojan_Win32_Qhost_FR_2147649727_0
         $x_1_3 = "%://youtube.is-lost.org/nohup/total_visitas.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -976,6 +1015,7 @@ rule Trojan_Win32_Qhost_FY_2147651128_0
         $x_1_3 = {76 6b 6f 6e 74 61 6b 74 65 2e 72 75 [0-16] ff ff ff ff ?? ?? ?? ?? [0-60] [0-48] 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1000,6 +1040,7 @@ rule Trojan_Win32_Qhost_FZ_2147651219_0
         $x_1_5 = "91.217.153.7" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1025,6 +1066,7 @@ rule Trojan_Win32_Qhost_GH_2147652122_0
         $x_1_6 = "\\checkexp.vbs\")" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1051,6 +1093,7 @@ rule Trojan_Win32_Qhost_GJ_2147652943_0
         $x_1_3 = "system32\\drivers\\etc\\hosts\"\" /Y && attrib +H" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1082,6 +1125,7 @@ rule Trojan_Win32_Qhost_GL_2147653366_0
         $x_1_9 = "198.106.49.76" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -1103,6 +1147,7 @@ rule Trojan_Win32_Qhost_GM_2147653639_0
         $x_1_2 = "echo 184.82.146.86 https://baneco.com.bo >> %windir%\\system32\\drivers\\etc\\hosts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1128,6 +1173,7 @@ rule Trojan_Win32_Qhost_GP_2147655783_0
         $x_1_6 = "74.208.223.147 www.servertanitimi.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1158,6 +1204,7 @@ rule Trojan_Win32_Qhost_GR_2147656175_0
         $x_1_8 = "santandersantiago.cl >>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1182,6 +1229,7 @@ rule Trojan_Win32_Qhost_GT_2147656518_0
         $x_1_2 = {83 ec 04 89 c2 c7 44 24 10 00 00 00 00 8d 45 f8 89 44 24 0c 89 54 24 08 a1 ?? ?? ?? ?? 89 44 24 04 8b 45 fc 89 04 24 e8 ?? ?? ?? ?? 83 ec 14 a1 ?? ?? ?? ?? 89 04 24 e8 ?? ?? ?? ?? 83 ec 04 89 c2 c7 44 24 10 00 00 00 00 8d 45 f8 89 44 24 0c 89 54 24 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1216,6 +1264,7 @@ rule Trojan_Win32_Qhost_HB_2147662554_0
         $x_10_15 = "127.0.0.1       gms.ahnlab.com" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 11 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -1243,6 +1292,7 @@ rule Trojan_Win32_Qhost_IF_2147683607_0
         $x_3_4 = "tfen flash player y" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1270,6 +1320,7 @@ rule Trojan_Win32_Qhost_PA_2147751625_0
         $x_1_7 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1298,6 +1349,7 @@ rule Trojan_Win32_Qhost_EC_2147914609_0
         $x_1_8 = "DisableSR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1320,6 +1372,7 @@ rule Trojan_Win32_Qhost_17871_0
         $x_1_3 = {5d c3 54 61 73 6b 62 61 72 43 72 65 61 74 65 64 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

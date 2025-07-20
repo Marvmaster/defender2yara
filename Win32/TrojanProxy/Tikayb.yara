@@ -17,6 +17,7 @@ rule TrojanProxy_Win32_Tikayb_A_2147628274_0
         $x_1_3 = {c6 44 24 2c 05 c6 44 24 2d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

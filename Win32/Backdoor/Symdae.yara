@@ -16,6 +16,7 @@ rule Backdoor_Win32_Symdae_A_2147650814_0
         $x_1_2 = {68 a0 bb 0d 00 ff 15 ?? ?? ?? ?? b8 6e 3a 00 10 c3 33 db 89 5d fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

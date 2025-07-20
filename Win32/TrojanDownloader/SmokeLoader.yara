@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_SmokeLoader_ARA_2147834299_0
         $x_2_5 = "ruzoxotozipad" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_SmokeLoader_Z_2147943407_0
         $x_1_2 = {68 b8 33 41 00 ff 15 30 30 41 00 89 45 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

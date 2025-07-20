@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Medbluk_A_2147687859_0
         $x_1_4 = {8b 47 44 8b 4c 24 1c 33 c3 85 c9 74 04 8b 31 eb 02 33 f6 0f c8 33 c6 8b 74 24 20 89 06 85 c9 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

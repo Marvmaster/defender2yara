@@ -21,6 +21,7 @@ rule VirTool_Win32_Mader_C_2147598527_0
         $x_1_7 = {2e 65 78 65 00 00 00 00 5a 77 45 6e 75 6d 65 72 61 74 65 4b 65 79 00 00 5a 77 45 6e 75 6d 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule PWS_Win32_Beomok_A_2147621665_0
         $x_1_5 = {88 1c 0f 7c c2 83 a1 00 01 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

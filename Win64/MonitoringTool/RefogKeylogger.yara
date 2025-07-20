@@ -16,6 +16,7 @@ rule MonitoringTool_Win64_RefogKeylogger_205590_0
         $x_1_2 = "MUTEX_PROGRAMM_RUNNING:MPK64_LOADER" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule MonitoringTool_Win64_RefogKeylogger_205590_1
         $x_4_6 = "<Ymsg Command=\"6\"" wide //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))

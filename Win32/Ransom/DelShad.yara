@@ -19,6 +19,7 @@ rule Ransom_Win32_DelShad_2147752507_0
         $x_1_4 = "how to recover.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win32_DelShad_DB_2147772995_0
         $x_1_6 = "@protonmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -74,6 +76,7 @@ rule Ransom_Win32_DelShad_SC_2147774145_0
         $x_1_6 = "CryptAcquireContextA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

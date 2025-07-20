@@ -19,6 +19,7 @@ rule Trojan_Win32_Pstoxci_A_2147745455_0
         $x_1_4 = "?^-([^: ]+)[ :]?([^:]*)$?True?$TRUE?False?$FALSE?out-string?stream?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

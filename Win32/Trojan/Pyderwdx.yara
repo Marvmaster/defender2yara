@@ -20,6 +20,7 @@ rule Trojan_Win32_Pyderwdx_2147796127_0
         $x_1_5 = "Mozilla/5.0 (Windows; U; MSIE 9.0; WIndows NT 9.0; en-US))" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

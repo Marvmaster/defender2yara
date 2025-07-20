@@ -21,6 +21,7 @@ rule Backdoor_Win32_Sharke_A_2147600324_0
         $x_1_7 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Backdoor_Win32_Sharke_B_2147600325_0
         $x_1_8 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +85,7 @@ rule Backdoor_Win32_Sharke_D_2147601597_0
         $x_1_16 = "wscript.shell" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (13 of ($x*))
 }
 
@@ -112,6 +115,7 @@ rule Backdoor_Win32_Sharke_E_2147602671_0
         $x_1_10 = "capGetDriverDescriptionA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -139,6 +143,7 @@ rule Backdoor_Win32_Sharke_F_2147603406_0
         $x_1_8 = "iLyBk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -170,6 +175,7 @@ rule Backdoor_Win32_Sharke_C_2147608397_0
         $x_1_9 = "C:\\shark.update" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -195,6 +201,7 @@ rule Backdoor_Win32_Sharke_L_2147609151_0
         $x_3_6 = "X:\\sharK 3\\Cli" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_3_*))) or

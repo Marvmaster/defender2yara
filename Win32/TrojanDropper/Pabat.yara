@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Pabat_A_2147643132_0
         $x_1_2 = {6d 73 67 20 2a 20 4c 4f 4c 0d 0a 73 68 75 74 64 6f 77 6e 20 2d 73 20 2d 74 20 31 30 30 20 2d 63 20 22 56 49 52 55 53}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

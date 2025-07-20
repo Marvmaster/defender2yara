@@ -17,6 +17,7 @@ rule TrojanProxy_Win32_Treizt_A_2147649864_0
         $x_1_3 = {6a 04 8d 4d ?? 51 68 80 00 00 00 68 ff ff 00 00 50 ff 15 ?? ?? ?? ?? 8b 8e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

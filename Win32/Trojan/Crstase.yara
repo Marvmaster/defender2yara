@@ -18,6 +18,7 @@ rule Trojan_Win32_Crstase_RS_2147833666_0
         $x_1_3 = "@.rep31" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

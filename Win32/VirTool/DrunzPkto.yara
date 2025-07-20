@@ -20,6 +20,7 @@ rule VirTool_Win32_DrunzPkto_A_2147773360_0
         $x_1_5 = {6a 00 6a 00 57 6a 00 6a 00 56 ff 15 ?? ?? ?? ?? 85 c0 75 38 50 56 ff 15 ?? ?? ?? ?? 68 e8 03 00 00 56 ff 15 ?? ?? ?? ?? 56 8b 35 50 50 00 10 ff ?? ff 75 e8 ff ?? 5f 5e b8 0e 00 00 00 5b 8b 4d fc 33 cd e8 ?? ?? ?? ?? 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

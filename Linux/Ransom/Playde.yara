@@ -18,6 +18,7 @@ rule Ransom_Linux_Playde_A_2147919805_0
         $x_1_3 = {48 8b 45 f8 48 89 d6 48 89 c7 e8 27 59 00 00 48 8b 45 f8 ?? ?? ?? ?? ?? ?? ?? 48 89 c7 e8 ea 57 00 00 48 8b 45 c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

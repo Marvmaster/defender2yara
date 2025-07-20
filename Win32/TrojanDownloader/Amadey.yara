@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Amadey_GUC_2147833541_0
         $x_1_2 = "Amadey\\Release\\Amadey.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Amadey_GDS_2147839868_0
         $x_1_2 = "Amadey\\Release\\Amadey.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanDownloader_Win32_Amadey_PACJ_2147898117_0
         $x_1_1 = {8b c1 99 6a 28 5e f7 fe 8a 82 ?? ?? ?? ?? 32 81 ?? ?? ?? ?? 8b 54 24 10 88 04 11 41 3b 4c 24 14 72 de}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule TrojanDownloader_Win32_Amadey_PACK_2147898118_0
         $x_1_1 = {33 d2 32 cb 23 d2 d0 c1 f6 d1 66 c1 ea ec 13 d2 8d 94 d2 ?? ?? ?? ?? fe c1 52 80 f1 03 80 c2 86 32 d9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule TrojanDownloader_Win32_Amadey_PACQ_2147898823_0
         $x_1_2 = {8a 44 0c 2c 34 8a 88 84 0c f0 00 00 00 41 3b ca 7c ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule TrojanSpy_MSIL_Golroted_A_2147648535_0
         $x_1_11 = {68 00 6f 00 6c 00 64 00 65 00 72 00 6d 00 61 00 69 00 6c 00 2e 00 74 00 78 00 74 00 ?? ?? ?? 53 00 6f 00 75 00 72 00 63 00 65 00 3a 00 7b 00 34 00 7d 00 7b 00 34 00 7d 00 7b 00 30 00 7d 00 7b 00 35 00 7d 00 48 00 6f 00 73 00 74 00 3a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule TrojanSpy_MSIL_Golroted_B_2147686566_0
         $x_1_6 = "svhost.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -84,6 +86,7 @@ rule TrojanSpy_MSIL_Golroted_B_2147686566_1
         $x_1_15 = "Stealers Enabled:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -154,6 +157,7 @@ rule TrojanSpy_MSIL_Golroted_C_2147693097_0
         $x_1_14 = {09 11 2a 09 11 2a 91 08 11 29 91 11 2a 1a 5d 1d 5f 62 d2 61 09 11 2a 17 da 91 61 20 ?? ?? ?? ?? 5d b4 9c 11 2a 17 d6 13 2a 11 2a 11 3d 3e ?? ?? ?? ?? 11 29 17 d6 13 29 11 29 17 3e ?? ?? ?? ?? 09 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

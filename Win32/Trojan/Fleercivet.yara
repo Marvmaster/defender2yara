@@ -18,6 +18,7 @@ rule Trojan_Win32_Fleercivet_A_2147688790_0
         $x_1_4 = "%s\\@system2.att" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Fleercivet_B_2147688918_0
         $x_1_2 = {74 61 73 6b 68 6f 73 74 65 78 2e 65 78 65 00 00 5f 4d 41 49 4e 5f 50 52 4f 43 45 53 53 5f 00 00 53 00 6b 00 79 00 70 00 65 00 55 00 70 00 64 00 61 00 74 00 65 00 72 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Fleercivet_D_2147690018_0
         $x_1_9 = {69 70 63 62 33 3d 00 00 74 69 6d 65 75 70 3d 00 64 6e 75 70 31 3d 00 00 64 6e 65 31 3d 00 00 00 63 6c 5f 75 72 6c 31 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_16_*))) or
@@ -95,6 +98,7 @@ rule Trojan_Win32_Fleercivet_E_2147690591_0
         $x_1_5 = {69 70 63 62 33 3d 00 00 74 69 6d 65 75 70 3d 00 64 6e 75 70 31 3d 00 00 64 6e 65 31 3d 00 00 00 63 6c 5f 75 72 6c 31 3d 00 00 00 00 74 69 6d 65 5f 73 69 74 65 31 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -123,6 +127,7 @@ rule Trojan_Win32_Fleercivet_F_2147717919_0
         $x_1_5 = {25 00 73 00 5c 00 40 00 73 00 79 00 73 00 74 00 65 00 6d 00 2e 00 74 00 65 00 6d 00 70 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))

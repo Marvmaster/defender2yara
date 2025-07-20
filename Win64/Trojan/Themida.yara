@@ -16,6 +16,7 @@ rule Trojan_Win64_Themida_BK_2147809804_0
         $x_1_1 = {99 1c bf b4 7a 30 03 85 d1 3e 70 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

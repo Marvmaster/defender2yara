@@ -25,6 +25,7 @@ rule Trojan_MSIL_Screenlock_Adv_2147728910_0
         $x_1_11 = "Hours Left" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*) and 2 of ($x_1_*))) or
             ((1 of ($x_8_*) and 1 of ($x_4_*) and 2 of ($x_1_*))) or

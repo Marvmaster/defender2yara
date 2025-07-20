@@ -18,6 +18,7 @@ rule TrojanSpy_MSIL_Yubaceds_A_2147642239_0
         $x_1_4 = "decay_sub_project." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Ransom_Win32_Troldesh_A_2147691978_0
         $x_1_3 = {28 a8 b0 3a 98 c4 1c ab a3 a0 11 cb 17 31 62 59 44 3a c8 b0 3d ba ac c3 aa 4d 35 47 48 35 31 43 34 44 36 39 4b 35 4c 32 43 31 56 34 46 37 53 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Win32_Troldesh_A_2147691978_1
         $x_1_7 = "--ignore-missing-torrc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_Win32_Troldesh_B_2147708428_0
         $x_1_8 = {43 6c 69 65 6e 74 20 53 65 72 76 65 72 20 52 75 6e 74 69 6d 65 20 53 75 62 73 79 73 74 65 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Ransom_Win32_Troldesh_C_2147712194_0
         $x_1_6 = "vssadmin delete shadows /all /quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Ransom_Win32_Troldesh_C_2147712194_1
         $x_1_3 = "*\\AD:\\Downloads\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -195,6 +200,7 @@ rule Ransom_Win32_Troldesh_E_2147720809_0
         $x_3_30 = {c6 45 fc 04 8b 06 51 8b ce ff 50 04 57 50 8d 45 ?? 50 c6 45 fc 05}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -291,6 +297,7 @@ rule Ransom_Win32_Troldesh_AE_2147735452_0
         $x_1_2 = {8b 11 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 e8 01 a3 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 83 c2 01 a1 ?? ?? ?? ?? 8b ff 8b ca a3 ?? ?? ?? ?? 31 0d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b ff c7 05 ?? ?? ?? ?? 00 00 00 00 8b ff 01 05 ?? ?? ?? ?? 8b ff 8b 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

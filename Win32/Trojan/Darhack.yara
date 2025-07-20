@@ -18,6 +18,7 @@ rule Trojan_Win32_Darhack_A_2147656608_0
         $x_1_4 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

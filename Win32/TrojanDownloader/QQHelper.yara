@@ -34,6 +34,7 @@ rule TrojanDownloader_Win32_QQHelper_A_2147803771_0
         $n_50_19 = "tvguide.pps.tv" wide //weight: -50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((15 of ($x_1_*))) or
@@ -67,6 +68,7 @@ rule TrojanDownloader_Win32_QQHelper_RB_2147803791_0
         $x_1_7 = "\\temp.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -103,6 +105,7 @@ rule TrojanDownloader_Win32_QQHelper_C_2147803806_0
         $x_1_11 = "http://setup4.tqzn.com/barbindsoft/barsetup.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -124,6 +127,7 @@ rule TrojanDownloader_Win32_QQHelper_D_2147803807_0
         $x_1_1 = {64 a1 00 00 00 00 50 64 89 25 00 00 00 00 83 ec 20 a1 ?? ?? ?? 10 8b 0d ?? ?? ?? 10 33 c4 53 55 56 33 db 83 f9 04 89 44 24 28 57 75 08 33 c9 89 0d ?? ?? ?? 10 8b 7c 24 40 33 f6 8a 04 3e 3c 61 7c 1e 3c 7a 7f 1a 8b e9 69 ed 01 04 00 00 0f be d0 8a 92 ?? ?? ?? 10 88 94 2e ?? ?? ?? 10 eb 31 3c 41 7c 1e 3c 5a 7f 1a 8b e9 69 ed 01 04 00 00 0f be d0 8a 92 ?? ?? ?? 10 88 94 2e ?? ?? ?? 10 eb 0f 8b d1 69 d2 01 04 00 00 88 84 32 ?? ?? ?? 10 3a c3 74 09 46 81 fe 00 04 00 00 7c 9d c7 44 24 28 0f 00 00 00 89 5c 24 24 88 5c 24 14 6a ?? 68 ?? ?? ?? 10 8d 4c 24 18 89 5c 24 40 e8 ?? ?? ?? ff 8b 0d ?? ?? ?? 10 8b c1 69 c0 01 04 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +149,7 @@ rule TrojanDownloader_Win32_QQHelper_E_2147803808_0
         $x_1_1 = {55 8b ec 83 ec 20 a1 ?? ?? ?? 10 33 c5 89 45 fc a1 ?? ?? ?? 10 83 f8 04 75 07 33 c0 a3 ?? ?? ?? 10 56 57 33 f6 8b 4d 08 8a 0c 0e 80 f9 61 7c 1f 80 f9 7a 7f 1a 0f be d1 8a 92 ?? ?? ?? 10 8b f8 69 ff 01 04 00 00 88 94 37 ?? ?? ?? 10 eb 24 80 f9 41 7c 10 80 f9 5a 7f 0b 0f be d1 8a 92 ?? ?? ?? 10 eb da 8b d0 69 d2 01 04 00 00 88 8c 32 ?? ?? ?? 10 84 c9 74 09 46 81 fe 00 04 00 00 7c a5 68 ?? ?? ?? 10 8d 4d e0 e8 ?? ?? ?? ?? a1 ?? ?? ?? 10 69 c0 01 04 00 00 ff 05 ?? ?? ?? 10 6a ?? c6 84 30 ?? ?? ?? ?? ?? 6a ?? 8d 4d e0 8d b0 ?? ?? ?? 10 e8 ?? ?? ?? ?? 8b 4d fc 5f 8b c6 33 cd 5e e8 ?? ?? ?? ?? c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +171,7 @@ rule TrojanDownloader_Win32_QQHelper_F_2147803809_0
         $x_1_1 = {55 8b ec 83 ec 20 a1 ?? ?? ?? 00 89 45 fc a1 ?? ?? ?? 00 83 f8 04 75 07 33 c0 a3 ?? ?? ?? 00 56 57 33 f6 8b 4d 08 8a 0c 0e 80 f9 61 7c 1f 80 f9 7a 7f 1a 0f be d1 8a 92 ?? ?? ?? 00 8b f8 69 ff 01 04 00 00 88 94 37 ?? ?? ?? 00 eb 24 80 f9 41 7c 10 80 f9 5a 7f 0b 0f be d1 8a 92 ?? ?? ?? 00 eb da 8b d0 69 d2 01 04 00 00 88 8c 32 ?? ?? ?? 00 84 c9 74 09 46 81 fe 00 04 00 00 7c a5 68 ?? ?? ?? 00 8d 4d e0 e8 ?? ?? ?? ?? a1 ?? ?? ?? 00 69 c0 01 04 00 00 ff 05 ?? ?? ?? 00 6a ?? c6 84 30 ?? ?? ?? ?? ?? 6a ?? 8d 4d e0 8d b0 ?? ?? ?? 00 e8 ?? ?? ?? ?? 8b 4d fc 5f 8b c6 5e e8 ?? ?? ?? 00 c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +193,7 @@ rule TrojanDownloader_Win32_QQHelper_G_2147803810_0
         $x_1_1 = {55 8b ec 83 ec 20 a1 ?? ?? ?? 10 33 c5 89 45 fc a1 ?? ?? ?? 10 83 f8 04 75 07 33 c0 a3 ?? ?? ?? 10 56 57 33 f6 8b 4d 08 8d 14 0e 8a 0a 80 f9 61 7c 10 80 f9 7a 7f 0b 0f be c9 8a 89 ?? ?? ?? 10 eb 13 80 f9 41 7c 0e 80 f9 5a 7f 09 0f be c9 8a 89 ?? ?? ?? 10 8b f8 69 ff 01 04 00 00 88 8c 37 ?? ?? ?? 10 80 3a 00 74 09 46 81 fe 00 04 00 00 7c b3 68 ?? ?? ?? 10 8d 4d e0 e8 ?? ?? ?? ?? a1 ?? ?? ?? 10 69 c0 01 04 00 00 ff 05 ?? ?? ?? 10 6a ?? c6 84 30 ?? ?? ?? ?? ?? 6a ?? 8d 4d e0 8d b0 ?? ?? ?? 10 e8 ?? ?? ?? ?? 8b 4d fc 5f 8b c6 33 cd 5e e8 ?? ?? ?? ?? c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -208,6 +215,7 @@ rule TrojanDownloader_Win32_QQHelper_H_2147803811_0
         $x_1_1 = {64 a1 00 00 00 00 50 64 89 25 00 00 00 00 83 ec 20 a1 ?? ?? ?? 10 8b 0d ?? ?? ?? 10 33 c4 53 56 33 db 83 f9 04 89 44 24 24 57 75 08 33 c9 89 0d ?? ?? ?? 10 8b 54 24 3c 33 f6 8a 04 16 3c 61 7c 0f 3c 7a 7f 0b 0f be c0 8a 80 ?? ?? ?? 10 eb 11 3c 41 7c 0d 3c 5a 7f 09 0f be c0 8a 80 ?? ?? ?? 10 8b f9 69 ff 01 04 00 00 88 84 37 ?? ?? ?? 10 38 1c 16 74 09 46 81 fe 00 04 00 00 7c bc c7 44 24 24 ?? 00 00 00 89 5c 24 20 88 5c 24 10 6a ?? 68 ?? ?? ?? 10 8d 4c 24 14 89 5c 24 3c e8 ?? ?? ?? ?? 8b 0d ?? ?? ?? 10 8b c1 69 c0 01 04 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +242,7 @@ rule TrojanDownloader_Win32_QQHelper_O_2147803833_0
         $x_1_7 = "DownTemp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -261,6 +270,7 @@ rule TrojanDownloader_Win32_QQHelper_T_2147803894_0
         $x_1_5 = "Score" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -292,6 +302,7 @@ rule TrojanDownloader_Win32_QQHelper_D_2147803921_0
         $x_1_9 = "CreateServiceA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +329,7 @@ rule TrojanDownloader_Win32_QQHelper_KA_2147803924_0
         $x_1_7 = {71 71 68 65 6c 70 65 72 2e 63 6f 6d 2f 62 69 6e 64 73 6f 66 74 2f 62 69 6e 64 73 65 74 75 70 [0-8] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -351,6 +363,7 @@ rule TrojanDownloader_Win32_QQHelper_Q_2147803953_0
         $x_1_11 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +386,7 @@ rule TrojanDownloader_Win32_QQHelper_RE_2147803960_0
         $x_2_3 = "/kkkk/mminstall.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 1 of ($x_2_*))) or
             (all of ($x*))

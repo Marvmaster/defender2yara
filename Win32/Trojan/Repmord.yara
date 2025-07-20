@@ -17,6 +17,7 @@ rule Trojan_Win32_Repmord_A_2147690843_0
         $x_1_3 = "GPU\\run.vbs\" /RL HIGHEST" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

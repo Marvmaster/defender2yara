@@ -17,6 +17,7 @@ rule Trojan_Win32_Ninunarch_B_2147681215_0
         $x_1_3 = "http://zipfilez.ru/payarch/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Ninunarch_G_2147681238_0
         $x_1_5 = "sms911_clicked()" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -73,6 +75,7 @@ rule Trojan_Win32_Ninunarch_N_2147681239_0
         $x_1_10 = "fileid>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -98,6 +101,7 @@ rule Trojan_Win32_Ninunarch_O_2147681241_0
         $x_1_3 = "Rapidshare-Vip.Net" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_Win32_Ninunarch_R_2147681242_0
         $x_1_2 = {89 3b 8b 08 ff 51 6c 8b fe 89 7d f4 85 ff 74 1e 8b 07 89 45 f8 66 c7 45 e0 2c 00 ba 03 00 00 00 8b 45 f4 8b 08 ff 51 fc 66 c7 45 e0 20 00 8b 55 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Trojan_Win32_Ninunarch_S_2147681243_0
         $x_1_3 = "07F7E5F0-7E2E-495a-B28A-B5E5E52559C2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_Win32_Ninunarch_H_2147681244_0
         $x_3_3 = "on_editAnswerCodeSecond_textChanged(QString)" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule Trojan_Win32_Ninunarch_I_2147681245_0
         $x_4_5 = {73 6d 73 74 65 78 74 3d 22 [0-5] 22 20 73 6d 73 6e 75 6d 3d 22}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_3_*))) or
             ((3 of ($x_4_*))) or
@@ -217,6 +225,7 @@ rule Trojan_Win32_Ninunarch_T_2147681246_0
         $x_1_7 = "archive-sx.net/pass_check" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -240,6 +249,7 @@ rule Trojan_Win32_Ninunarch_K_2147681247_0
         $x_1_4 = "QFtpDTP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -266,6 +276,7 @@ rule Trojan_Win32_Ninunarch_L_2147681248_0
         $x_1_4 = "QFtpDTP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -291,6 +302,7 @@ rule Trojan_Win32_Ninunarch_M_2147681249_0
         $x_1_3 = "kernel32::CreateMutexA(i 0, i 0, t \"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -313,6 +325,7 @@ rule Trojan_Win32_Ninunarch_Q_2147681250_0
         $x_1_3 = "3e4/3e4/do3e4wn3e4lo3e4a3e4ds3e4up3e4po3e4rt3e4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -342,6 +355,7 @@ rule Trojan_Win32_Ninunarch_P_2147681251_0
         $x_1_7 = {fd 95 80 5c 7a 69 70 73 6d 61 72 74 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -365,6 +379,7 @@ rule Trojan_Win32_Ninunarch_J_2147681252_0
         $x_10_4 = {73 77 69 64 65 72 6d 61 6c 34 2e 6e 6f 72 61 2d 3e fd 95 80 5c 73 77 69 64 65 72 6d 61 6c ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? fd 95 80 5c 61 72 63 68 73 74 61 72 74 2e 65 78 65}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

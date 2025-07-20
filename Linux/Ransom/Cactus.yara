@@ -17,6 +17,7 @@ rule Ransom_Linux_Cactus_A_2147914722_0
         $x_1_2 = {8b 45 b4 48 98 48 03 85 98 fe ff ff ba 05 00 00 00 be 00 00 00 00 48 89 c7 e8 f8 11 00 00 83 45 b4 01 8b 05 18 a9 34 00 39 45 b4 0f 9c c0 84 c0 75 ce}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Ransom_Linux_Cactus_B_2147922769_0
         $x_1_2 = "cAcTuS.readme.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

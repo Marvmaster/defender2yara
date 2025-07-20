@@ -18,6 +18,7 @@ rule Trojan_Win32_Dopdekaf_A_2147828703_0
         $x_1_4 = {7e 8a 00 00 04 18 9a 20 e1 04 00 00 95 5a 7e 8a 00 00 04 18 9a 20 92 0f 00 00 95 58 59 81 0f 00 00 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

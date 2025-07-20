@@ -17,6 +17,7 @@ rule PWS_Win32_Piskitoy_A_2147668119_0
         $x_2_3 = {43 3a 5c 5c 57 49 4e 44 4f 57 53 5c 5c 73 79 73 74 65 6d 33 32 5c 5c 43 61 74 52 6f 6f 74 32 5c 5c 7b 08 00 2d 04 00 2d 04 00 2d 04 00 2d 0c 00 7d 5c 5c 73 79 73 63 6f 6e 66 69 67 2e 64 62}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

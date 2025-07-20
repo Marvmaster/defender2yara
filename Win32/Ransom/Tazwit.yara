@@ -20,6 +20,7 @@ rule Ransom_Win32_Tazwit_A_2147708395_0
         $x_1_6 = {2e 77 34 7a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

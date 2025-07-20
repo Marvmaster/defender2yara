@@ -17,6 +17,7 @@ rule Backdoor_Win32_Brewer_A_2147605085_0
         $x_1_3 = {2f 43 20 25 73 00 63 6d 64 2e 65 78 65 00 72 61 6e 0d 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Ransom_Win32_WannaSmile_GK_2147853345_0
         $x_1_2 = "MyEncrypter2.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

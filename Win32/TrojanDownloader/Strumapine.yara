@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Strumapine_A_2147706738_0
         $x_1_3 = {88 14 01 48 83 f8 ff 75 e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win32_Strumapine_B_2147714796_0
         $x_1_4 = {4d 00 69 00 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00 5c 00 50 00 69 00 6e 00 5f 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Vtimrun_B_2147625055_0
         $x_1_6 = {41 64 64 41 63 63 65 73 73 41 6c 6c 6f 77 65 64 41 63 65 45 78 [0-7] 5c 44 72 69 76 65 72 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule TrojanDropper_Win32_Vtimrun_C_2147630826_0
         $x_1_2 = {40 65 63 68 6f [0-5] 6f 66 66 0d 0a 3a 74 72 79 [0-7] 64 65 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

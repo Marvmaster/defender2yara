@@ -18,6 +18,7 @@ rule Trojan_Linux_Dnsamp_A_2147784137_0
         $x_2_3 = "dosset.dtdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

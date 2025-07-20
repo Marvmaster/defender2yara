@@ -19,6 +19,7 @@ rule Trojan_Win32_Yangxiay_A_2147617141_0
         $x_10_5 = {3c 69 66 72 61 6d 65 20 73 72 63 3d 22 00 22 00 20 77 69 64 74 68 3d 22 30 22 00 20 68 65 69 67 68 74 3d 22 30 22 00 20 66 72 61 6d 65 62 6f 72 64 65 72 3d 22 00 30 22 3e 3c 2f 69 66 72 61 6d 65 3e}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule Trojan_Win32_Yangxiay_A_2147617142_0
         $x_1_3 = "KeServiceDescriptorTable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

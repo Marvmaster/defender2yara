@@ -18,6 +18,7 @@ rule HackTool_Win32_KeyGen_VI_2147744901_0
         $x_1_3 = "%dir%\\gatherosstate.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule HackTool_Win32_KeyGen_A_2147832750_0
         $x_1_4 = "DECRYPTION_ID.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

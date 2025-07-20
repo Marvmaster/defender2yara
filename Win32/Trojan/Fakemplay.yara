@@ -17,6 +17,7 @@ rule Trojan_Win32_Fakemplay_A_2147647762_0
         $x_1_3 = "IsWebConnected" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

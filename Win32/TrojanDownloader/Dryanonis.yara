@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Dryanonis_A_2147716799_0
         $x_1_7 = "27782487352029393203940616439801290394905726728894780585510153937" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or

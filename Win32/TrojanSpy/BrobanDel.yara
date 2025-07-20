@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_BrobanDel_A_2147690445_0
         $x_1_6 = "people.live.com/export?canary=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule TrojanSpy_Win32_BrobanDel_A_2147690445_1
         $x_1_7 = "()+parseInt(_0x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule TrojanSpy_Win32_BrobanDel_A_2147690445_2
         $x_1_7 = {66 00 69 00 72 00 65 00 66 00 6f 00 78 00 2e 00 65 00 78 00 65 00 [0-16] 69 00 6e 00 74 00 65 00 72 00 6e 00 65 00 74 00 20 00 65 00 78 00 70 00 6c 00 6f 00 72 00 65 00 72 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule TrojanSpy_Win32_BrobanDel_B_2147694821_0
         $x_1_3 = "XHg3M1x4NzNceDZDXHgyRFx4NzBceDcyXHg2Rlx4NzhceDc5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

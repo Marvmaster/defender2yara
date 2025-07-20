@@ -18,6 +18,7 @@ rule MonitoringTool_Win32_AdvancedKeylogger_17071_0
         $x_1_4 = ".com/xpadvancedkeylogger/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule MonitoringTool_Win32_AdvancedKeylogger_17071_1
         $x_8_3 = "PRODUCED BY ADVANCED KEYLOGGER LOG PARSER" ascii //weight: 8
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

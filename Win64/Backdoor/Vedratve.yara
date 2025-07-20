@@ -21,6 +21,7 @@ rule Backdoor_Win64_Vedratve_A_2147725627_0
         $x_1_6 = {80 7c 19 d9 84 75 29 80 7c 19 de 48 75 22 80 7c 19 df 8d 75 1b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 4 of ($x_1_*))) or
             ((1 of ($x_8_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -55,6 +56,7 @@ rule Backdoor_Win64_Vedratve_A_2147725627_1
         $x_1_10 = {5b 6e 64 31 32 33 5d 0d 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_4_*) and 5 of ($x_2_*) and 1 of ($x_1_*))) or

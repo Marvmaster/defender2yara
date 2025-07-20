@@ -26,6 +26,7 @@ rule Trojan_Win64_GoldMax_A_2147775899_0
         $x_1_11 = {6d 61 69 6e 2e 66 61 6c 73 65 5f 72 65 71 ?? 65 73 74 69 6e 67 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

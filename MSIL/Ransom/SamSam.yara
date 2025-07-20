@@ -16,6 +16,7 @@ rule Ransom_MSIL_SamSam_A_2147731337_0
         $x_1_2 = "1HbJu2kL4xDNK1L9YUDkJnqh3yiC119YM2" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

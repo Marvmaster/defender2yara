@@ -19,6 +19,7 @@ rule Ransom_Win32_KKKryptoLocker_A_2147722804_0
         $x_100_4 = "C:\\Users\\Jared\\Desktop\\ransomware\\KKKryptoLocker\\KKKryptoLocker\\obj\\Debug\\KKKryptoLocker.pdb" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

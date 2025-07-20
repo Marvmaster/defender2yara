@@ -19,6 +19,7 @@ rule Worm_MSIL_Autosipoc_A_2147645821_0
         $x_1_5 = "Folder.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

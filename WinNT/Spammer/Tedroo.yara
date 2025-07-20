@@ -20,6 +20,7 @@ rule Spammer_WinNT_Tedroo_A_2147632554_0
         $x_1_6 = "@@FROM_EMAIL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Spammer_WinNT_Tedroo_A_2147632715_0
         $x_1_4 = "id=%s&smtp=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

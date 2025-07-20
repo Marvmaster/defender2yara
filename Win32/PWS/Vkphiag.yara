@@ -17,6 +17,7 @@ rule PWS_Win32_Vkphiag_A_2147697336_0
         $x_1_3 = {5f 65 6e 63 72 79 70 74 65 64 00 [0-32] 2e 65 78 65 [0-32] 68 74 74 70 3a 2f 2f [0-9] 2e [0-9] 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

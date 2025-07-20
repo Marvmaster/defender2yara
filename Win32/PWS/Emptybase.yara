@@ -19,6 +19,7 @@ rule PWS_Win32_Emptybase_A_2147605139_0
         $x_1_5 = {67 65 74 5f 75 72 6c 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -45,6 +46,7 @@ rule PWS_Win32_Emptybase_B_2147630658_0
         $x_1_3 = {55 70 64 61 74 65 00 00 53 74 6f 70 00 00 00 00 41 63 74 69 76 61 74 65 00 00 00 00 45 78 65 63 75 74 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

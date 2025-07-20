@@ -18,6 +18,7 @@ rule Backdoor_Win32_Sharat_A_2147648107_0
         $x_2_3 = {2e 25 64 0a 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Krikun_A_2147609860_0
         $x_1_7 = {83 f8 08 77 08 8b 51 18 0f b6 32 eb 19 8b 51 18 83 f8 10 77 05 0f b7 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

@@ -17,6 +17,7 @@ rule Trojan_Win64_Mekotio_MCH_2147928189_0
         $x_1_2 = "Injectmoduleconseito" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

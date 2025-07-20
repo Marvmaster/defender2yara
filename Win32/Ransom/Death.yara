@@ -21,6 +21,7 @@ rule Ransom_Win32_Death_PA_2147746184_0
         $x_1_6 = "%s.wctc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Win32_Death_DA_2147766214_0
         $x_1_5 = "HelloKittyMutex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Ransom_Win32_Death_DB_2147767074_0
         $x_1_7 = "taskkill.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

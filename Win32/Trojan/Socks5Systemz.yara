@@ -18,6 +18,7 @@ rule Trojan_Win32_Socks5Systemz_ASO_2147907011_0
         $x_1_3 = {c7 44 24 48 24 00 00 00 89 74 24 4c c7 44 24 64 0f 00 00 00 c7 44 24 60 00 00 00 00 c6 44 24 50 00 c7 44 24 3c f4 81 02 10 8d 44 24 3c c7 44 24 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

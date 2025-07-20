@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Pumba_F_2147705705_0
         $x_1_5 = "C:\\arquivos de programas\\Scpad" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

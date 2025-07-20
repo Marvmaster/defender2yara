@@ -19,6 +19,7 @@ rule MonitoringTool_MSIL_Auxlogger_204840_0
         $x_1_5 = {06 02 08 6f ?? 00 00 0a 28 ?? 00 00 0a 1b 58 28 ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 0a 08 17 58 0c 08 09 31 d9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

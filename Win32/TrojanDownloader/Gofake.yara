@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Gofake_A_2147690056_0
         $x_1_3 = {c1 e9 1f 01 c8 d1 f8 03 45 08 0f b6 00 88 02 8b 45 f4 83 c0 01 89 c2 03 55 f0 8b 45 f4 89 c1 c1 e9 1f 01 c8 d1 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

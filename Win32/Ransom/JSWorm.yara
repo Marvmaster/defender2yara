@@ -19,6 +19,7 @@ rule Ransom_Win32_JSWorm_A_2147742172_0
         $x_1_4 = "/c vssadmin.exe delete shadows /all /quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Win32_JSWorm_B_2147742173_0
         $x_1_4 = "ID-RANSOMWARE, IT'S JUST THE BEGINING OF SOMETHING NEW..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

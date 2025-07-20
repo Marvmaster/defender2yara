@@ -18,6 +18,7 @@ rule Backdoor_Win32_Pabosp_2147690016_0
         $x_2_4 = "DeleteMyself" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or
             (all of ($x*))

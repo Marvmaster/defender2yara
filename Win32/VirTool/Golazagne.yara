@@ -21,6 +21,7 @@ rule VirTool_Win32_Golazagne_A_2147797322_0
         $x_1_6 = "goLazagne/filesystem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

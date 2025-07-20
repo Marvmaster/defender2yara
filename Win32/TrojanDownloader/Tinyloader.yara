@@ -15,6 +15,7 @@ rule TrojanDownloader_Win32_Tinyloader_A_2147707607_0
         $x_1_1 = {89 13 3d ac 04 00 00 73 08 83 c0 04 83 c3 04 eb e9 29 c3 31 c0 [0-15] 31 ?? 81 3b c3 c3 c3 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule TrojanDownloader_Win32_Tinyloader_D_2147708890_0
         $x_1_2 = {e8 08 00 00 00 63 6f 6e 6e 65 63 74 00 ff 75 48 ff 55 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

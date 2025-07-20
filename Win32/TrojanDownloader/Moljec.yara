@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Moljec_A_2147720007_0
         $x_1_5 = {8b c1 83 e0 07 8a 04 30 30 04 31 41 3b ca 72 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

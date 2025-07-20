@@ -21,6 +21,7 @@ rule HackTool_Win64_Modeflick_A_2147741909_0
         $x_1_7 = "71C6E74D-0F28-11D8-A82A-00065B84435C" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 1 of ($x_1_*))) or
             ((3 of ($x_50_*))) or

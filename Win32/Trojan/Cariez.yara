@@ -17,6 +17,7 @@ rule Trojan_Win32_Cariez_A_2147627426_0
         $x_1_3 = {6a 00 8d 04 40 8d 04 80 8d 04 80 8d 04 80 8d 04 80 8d 04 80 c1 e0 05 50 68 00 10 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

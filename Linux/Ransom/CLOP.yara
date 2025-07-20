@@ -20,6 +20,7 @@ rule Ransom_Linux_CLOP_A_2147840860_0
         $x_1_5 = {8b 45 a0 25 00 f0 00 00 3d 00 40 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

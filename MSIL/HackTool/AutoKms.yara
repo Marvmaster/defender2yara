@@ -17,6 +17,7 @@ rule HackTool_MSIL_AutoKms_2147711767_0
         $x_2_3 = "cscript //nologo c:\\windows\\system32\\slmgr.vbs" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule HackTool_MSIL_AutoKms_PA2_2147899466_0
         $x_1_4 = "ShutdownMode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

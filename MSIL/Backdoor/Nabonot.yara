@@ -17,6 +17,7 @@ rule Backdoor_MSIL_Nabonot_2147744166_0
         $x_1_2 = {20 c4 8e fb 0e 13 ?? 11 ?? 72 ?? 00 00 70 6f ?? 00 00 0a 13 ?? 11 ?? 20 ?? ?? ?? ?? fe 02 13 ?? 20 ?? ?? ?? ?? 38 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Trojan_Win32_Treden_A_2147614276_0
         $x_1_8 = "explore.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*))) or
             (all of ($x*))

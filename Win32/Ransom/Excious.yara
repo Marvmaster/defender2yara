@@ -20,6 +20,7 @@ rule Ransom_Win32_Excious_A_2147727347_0
         $x_1_5 = "icacls . / grant Everyone : F / T / C / Q" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

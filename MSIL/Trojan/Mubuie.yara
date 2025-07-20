@@ -18,6 +18,7 @@ rule Trojan_MSIL_Mubuie_A_2147696839_0
         $x_1_4 = "6b6b2a92-7ca3-4491-9718-09b1e5e728e0" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

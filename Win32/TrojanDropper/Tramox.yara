@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Tramox_A_2147706728_0
         $x_1_5 = "\\Run /v wuaclt.exe /t" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

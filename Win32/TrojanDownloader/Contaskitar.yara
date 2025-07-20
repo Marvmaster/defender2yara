@@ -27,6 +27,7 @@ rule TrojanDownloader_Win32_Contaskitar_A_2147697665_0
         $x_1_13 = "/cid=117 /hash=fouuf6" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 7 of ($x_1_*))) or
             ((1 of ($x_8_*) and 1 of ($x_2_*) and 7 of ($x_1_*))) or
@@ -63,6 +64,7 @@ rule TrojanDownloader_Win32_Contaskitar_B_2147697670_0
         $x_1_9 = "4AA46D49-459F-4358-B4D1-169048547C23" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*) and 4 of ($x_1_*))) or
             ((3 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or

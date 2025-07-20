@@ -21,6 +21,7 @@ rule Ransom_MSIL_Encruby_2147725763_0
         $x_6_7 = "19S7k3zHphKiYr85T25FnqdxizHcgmjoj1" wide //weight: 6
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_6_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

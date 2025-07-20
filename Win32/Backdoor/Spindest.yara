@@ -17,6 +17,7 @@ rule Backdoor_Win32_Spindest_B_2147686049_0
         $x_1_3 = {2f 25 6c 64 6e 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_Win32_Spindest_C_2147688833_0
         $x_1_3 = "%s SP%d (Build %d)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

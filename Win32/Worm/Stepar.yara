@@ -26,6 +26,7 @@ rule Worm_Win32_Stepar_A_2147601634_0
         $x_1_11 = "Software\\Kazaa\\LocalContent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 8 of ($x_1_*))) or
             ((3 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -61,6 +62,7 @@ rule Worm_Win32_Stepar_B_2147624279_0
         $x_1_11 = "Software\\Kazaa\\LocalContent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 8 of ($x_1_*))) or
             ((3 of ($x_2_*) and 6 of ($x_1_*))) or

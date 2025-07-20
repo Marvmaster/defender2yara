@@ -17,6 +17,7 @@ rule Trojan_Win32_Shellot_YAA_2147906590_0
         $x_1_2 = {8b c1 6a 02 99 5b f7 fb 85 d2 75 ?? 8b 45 ?? 8a 00 ff 45 fc eb ?? 8a 06 46 88 04 39 41}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

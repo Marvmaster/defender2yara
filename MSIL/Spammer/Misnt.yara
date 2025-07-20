@@ -22,6 +22,7 @@ rule Spammer_MSIL_Misnt_A_2147696645_0
         $x_1_8 = "s5list_prod" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))

@@ -16,6 +16,7 @@ rule Ransom_Win32_Cyanmischa_EA_2147939216_0
         $x_5_1 = {8d 34 5a 8a 04 19 88 46 01 8b 3d ?? ?? ?? ?? c6 04 5f 0b 43 81 fb d0 07 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Cyanmischa_MKV_2147946802_0
         $x_1_5 = "cyanmischa decrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

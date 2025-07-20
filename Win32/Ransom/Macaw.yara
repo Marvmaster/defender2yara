@@ -16,6 +16,7 @@ rule Ransom_Win32_Macaw_ZZ_2147796965_0
         $x_100_2 = {8b 4c 24 04 56 8b f0 c1 e8 02 83 e6 03 85 c0 74 0f 57 8b 3a 89 39 83 c1 04 83 c2 04 48 75 f3 5f 85 f6 74 0d 8b c1 2b d1 8a 0c 02 88 08 40 4e 75 f7 8b 44 24 08 5e c2 04 00}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Win32_Macaw_RR_2147797030_0
         $x_1_4 = {52 81 ca 1f 0e f7 7d 51 52 8b 94 14 79 d0 00 82 c7 44 24 18 7c 1d 48 52 c0 b4 24 00 00 00 00 9d b9 5c 7a 43 65 51 f9 81 84 24 10 00 00 00 48 7e 0f 48 59 59 59 8d 64 24 08 9d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

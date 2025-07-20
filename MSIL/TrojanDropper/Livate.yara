@@ -21,6 +21,7 @@ rule TrojanDropper_MSIL_Livate_A_2147682472_0
         $x_1_7 = "MToolLite.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -54,6 +55,7 @@ rule TrojanDropper_MSIL_Livate_B_2147689266_0
         $x_10_14 = {4d 00 43 00 6f 00 6d 00 6d 00 6f 00 6e 00 ?? ?? 75 00 70 00 64 00 61 00 74 00 65 00 69 00 6e 00 66 00 6f 00 2e 00 64 00 61 00 74 00 ?? ?? 5c 00 62 00 28 00 3f 00 3a 00 77 00 77 00 77 00 5c 00 2e 00 29 00 3f 00 28 00 5b 00 5c 00 77 00 5c 00 64 00 5c 00 2e 00 5c 00 2d 00 5d 00 2b 00 28 00 3f 00 3a 00 5c 00 2e 00 5c 00 77 00 7b 00 32 00 2c 00 34 00 7d 00 29 00 7b 00 31 00 2c 00 32 00 7d 00 29 00 5c 00 62 00 ?? ?? 73 00 69 00 74 00 65 00 73 00 2e 00 64 00 61 00 74 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -90,6 +92,7 @@ rule TrojanDropper_MSIL_Livate_B_2147689266_1
         $x_10_14 = "/VersionRequest.ashx?codename={0}&version={1}&uid={2}&country={3}&browser=IE" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 10 of ($x_1_*))) or
             (all of ($x*))

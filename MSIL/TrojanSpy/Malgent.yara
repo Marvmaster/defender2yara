@@ -18,6 +18,7 @@ rule TrojanSpy_MSIL_Malgent_MSG_2147828552_0
         $x_1_3 = "iex ((New-Object net.webclient).DownloadString" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

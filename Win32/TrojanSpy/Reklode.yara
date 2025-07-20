@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Reklode_A_2147688750_0
         $x_1_5 = "User-Agent: Apple TV 5.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

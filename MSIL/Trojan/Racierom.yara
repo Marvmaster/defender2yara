@@ -26,6 +26,7 @@ rule Trojan_MSIL_Racierom_A_2147670265_0
         $x_20_12 = "IFFER_Click" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_50_*) and 4 of ($x_20_*))) or
             ((1 of ($x_70_*) and 4 of ($x_50_*) and 3 of ($x_20_*))) or
@@ -67,6 +68,7 @@ rule Trojan_MSIL_Racierom_B_2147670315_0
         $x_20_11 = "IFFER_Click" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_70_*) and 3 of ($x_50_*) and 1 of ($x_40_*) and 4 of ($x_20_*))) or
             ((1 of ($x_130_*) and 2 of ($x_50_*) and 5 of ($x_20_*))) or
@@ -106,6 +108,7 @@ rule Trojan_MSIL_Racierom_C_2147670390_0
         $x_20_7 = {65 65 66 33 65 00 65 67 73 77}  //weight: 20, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_200_*) and 1 of ($x_100_*) and 2 of ($x_20_*))) or
             (all of ($x*))

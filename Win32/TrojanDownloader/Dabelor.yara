@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Dabelor_A_2147617607_0
         $x_1_3 = {6c 00 00 00 ff ff ff ff 0b 00 00 00 6d 75 73 68 69 6d 75 2e 65 78 65 00 55 8b ec 33 c0 55 68 8c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

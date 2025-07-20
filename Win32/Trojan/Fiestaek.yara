@@ -16,6 +16,7 @@ rule Trojan_Win32_Fiestaek_CCIB_2147909159_0
         $x_1_1 = {8a 10 90 80 ca 60 03 da d1 e3 03 45 10 8a 08 84 c9 e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

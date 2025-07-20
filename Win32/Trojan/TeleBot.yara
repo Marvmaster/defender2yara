@@ -17,6 +17,7 @@ rule Trojan_Win32_TeleBot_SB_2147899921_0
         $x_1_2 = {8b cd 2b cb b8 ?? ?? ?? ?? f7 e9 03 d1 c1 fa ?? 8b c2 c1 e8 ?? 03 c2 3b f0 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule VirTool_Win64_Herpaderping_2147781490_0
         $x_1_4 = {4c 8b cf 49 c1 e9 20 48 89 74 24 28 89 7c 24 20 33 d2 44 8d ?? ?? 48 8b cd ff 15 ?? ?? ?? ?? 48 8b d8 4c 8b f0 48 ff c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

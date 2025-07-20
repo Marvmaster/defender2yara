@@ -23,6 +23,7 @@ rule Trojan_Win32_Zombie_NBJ_2147826899_0
         $x_1_8 = "ShellExecuteExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Zombie_RB_2147896803_0
         $x_1_1 = {00 30 08 57 00 30 22 46 00 d0 f7 19 00 2a 5e 58 77 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_Win32_JRanbt_WT_2147760626_0
         $x_1_3 = "jaemin1508@naver.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

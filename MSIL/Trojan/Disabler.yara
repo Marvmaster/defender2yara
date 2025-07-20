@@ -21,6 +21,7 @@ rule Trojan_MSIL_Disabler_EM_2147847301_0
         $x_1_6 = "RSACryptoServiceProvider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_Disabler_EM_2147847301_1
         $x_2_2 = "offDef.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_MSIL_Disabler_NBL_2147900614_0
         $x_1_4 = "SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_MSIL_Disabler_NN_2147901184_0
         $x_5_1 = {0b 16 0c 2b 18 07 08 18 5b 02 08 18 6f 41 ?? ?? ?? ?? ?? ?? ?? ?? 00 0a 9c 08 18 58 0c 08 06 32 e4 07 0d de 1f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_MSIL_Disabler_GZZ_2147901990_0
         $x_10_1 = {2d 47 06 02 1f 2e 28 ?? ?? ?? 06 12 01 fe 15 0b 00 00 02 25 17 12 01 28 ?? ?? ?? 06 26 25 15 1a 15 14 14 7e 14 00 00 0a 14 14 14 14 28 ?? ?? ?? 06 26 20 d0 07 00 00 28 ?? ?? ?? 0a 28 ?? ?? ?? 06 26 06 28 ?? ?? ?? 06 26 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule Trojan_MSIL_Disabler_ST_2147935953_0
         $x_2_5 = "Invoke-SelfReplication" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +168,7 @@ rule Trojan_MSIL_Disabler_ND_2147939165_0
         $x_1_8 = "DisableTaskMgr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule Trojan_MSIL_Disabler_NITA_2147941842_0
         $x_1_5 = "kill_process" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

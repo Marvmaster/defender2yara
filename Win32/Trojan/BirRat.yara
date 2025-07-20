@@ -31,6 +31,7 @@ rule Trojan_Win32_BirRat_MK_2147780415_0
         $x_1_16 = "Clipboard:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (13 of ($x*))
 }
 

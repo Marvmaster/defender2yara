@@ -20,6 +20,7 @@ rule Trojan_Win32_Bancos_B_2147647197_0
         $x_1_6 = "ContaminaAlt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -63,6 +64,7 @@ rule Trojan_Win32_Bancos_A_2147819812_0
         $x_1_23 = "Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

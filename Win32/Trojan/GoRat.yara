@@ -25,6 +25,7 @@ rule Trojan_Win32_GoRat_DA_2147844252_0
         $x_1_10 = "Spark/client/core.shutdown" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

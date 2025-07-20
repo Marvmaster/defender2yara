@@ -19,6 +19,7 @@ rule Backdoor_Linux_Hydgo_A_2147818618_0
         $x_1_4 = "/tmp/hlog.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

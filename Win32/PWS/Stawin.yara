@@ -18,6 +18,7 @@ rule PWS_Win32_Stawin_C_2147641310_0
         $x_2_4 = "Citibank" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

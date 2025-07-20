@@ -18,6 +18,7 @@ rule Backdoor_Win32_Gaertob_A_2147619071_0
         $x_1_4 = {6e 65 70 65 6e 74 68 65 73 [0-4] 63 75 72 72 65 6e 74 75 73 65 72 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

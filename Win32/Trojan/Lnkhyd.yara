@@ -20,6 +20,7 @@ rule Trojan_Win32_Lnkhyd_A_2147630366_0
         $x_1_6 = {7b 70 66 6d 7d [0-16] 7b 73 74 6d 7d [0-16] 7b 71 6b 6d 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

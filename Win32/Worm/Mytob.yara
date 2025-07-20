@@ -53,6 +53,7 @@ rule Worm_Win32_Mytob_2147573829_0
         $x_3_39 = {4e 49 43 4b 20 25 73 0d 0a 55 53 45 52 20 25 73}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 6 of ($x_1_*))) or
             ((6 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -170,6 +171,7 @@ rule Worm_Win32_Mytob_2147573875_0
         $x_1_1 = {4d 79 52 65 61 6c 4e 61 6d 65 [0-16] 4e 54 53 68 65 6c 6c 20 54 61 73 6b 6d 61 6e 20 53 74 61 72 74 75 70 20 4d 75 74 65 78 [0-16] 5c 74 61 73 6b 6d 67 72 2e 65 78 65 [0-16] 75 73 65 72 33 32 2e 64 6c 6c [0-16] 50 72 6f 67 6d 61 6e [0-16] 50 72 6f 67 72 61 6d 20 4d 61 6e 61 67 65 72 [0-16] 4f 55 54 50 4f 53 54}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -195,6 +197,7 @@ rule Worm_Win32_Mytob_N_2147594715_0
         $x_1_6 = "DownloadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

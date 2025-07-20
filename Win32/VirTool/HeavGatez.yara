@@ -20,6 +20,7 @@ rule VirTool_Win32_HeavGatez_B_2147839556_0
         $x_1_5 = {6a 64 6a 00 8d 85 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 83 c4 0c 8b f4 8d 85 ?? ?? ?? ?? 50 68 04 01 00 00 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

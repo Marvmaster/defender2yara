@@ -19,6 +19,7 @@ rule HackTool_Linux_Ncrack_C_2147799017_0
         $x_2_5 = "fyodor@insecure.org so i can guage support" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -29,6 +29,7 @@ rule Trojan_Win32_PhorpiexLoader_A_2147839987_0
         $x_1_14 = "LoadLibraryW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_BrobanCro_A_2147690446_0
         $x_10_7 = {2e 73 69 63 6f 6f 62 2e 63 6f 6d 2e 62 72 2f [0-8] 76 61 72 20 75 72 6c 64 61 76 65 7a 54 69 74 75 6c 6f}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

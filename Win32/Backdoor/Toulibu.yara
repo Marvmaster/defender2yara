@@ -34,6 +34,7 @@ rule Backdoor_Win32_Toulibu_2147603364_0
         $x_2_20 = "Zombie_GetTypeInfo" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_2_*) and 8 of ($x_1_*))) or
             ((8 of ($x_2_*) and 6 of ($x_1_*))) or

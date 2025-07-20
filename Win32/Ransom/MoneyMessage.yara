@@ -16,6 +16,7 @@ rule Ransom_Win32_MoneyMessage_MK_2147844550_0
         $x_1_1 = {8b c3 99 f7 f9 33 74 d5 ?? 33 7c d5 ?? 8b 95 ?? ?? ?? ?? 8b c2 31 30 8d 40 ?? 31 78 ?? 83 e9 ?? 75 ?? 83 c2 ?? 8d 71 ?? 43 89 95 ?? ?? ?? ?? 83 ad ?? ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Ransom_Win32_MoneyMessage_A_2147844730_0
         $x_1_12 = "crypt_only_these_directories\":" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_1_*))) or
             (all of ($x*))

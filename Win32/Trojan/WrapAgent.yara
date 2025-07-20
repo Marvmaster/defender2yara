@@ -16,6 +16,7 @@ rule Trojan_Win32_WrapAgent_AF_2147768550_0
         $x_1_1 = {0f af c8 89 ?? dc 8d 85 ?? ?? ?? ?? 0f b7 c8 b8 ?? ?? ?? ?? f7 e9 c1 fa ?? 8b fa c1 ef ?? 8b ?? dc 03 c2 03 f8 8b 85 ?? ?? ?? ?? 0f b7 c0 2b f8 2b 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_WrapAgent_AX_2147772098_0
         $x_1_2 = {8d 49 01 f7 e7 c1 ea ?? 8d 04 92 03 c0 2b f8 8b c7 8b fa 04 ?? 88 44 ?? ff 85 ff 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

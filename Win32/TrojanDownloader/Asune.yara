@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Asune_F_2147602652_0
         $x_1_6 = {61 68 72 75 69 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

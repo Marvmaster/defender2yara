@@ -18,6 +18,7 @@ rule Trojan_Win32_Gaboc_A_2147622031_0
         $x_1_4 = {25 73 25 73 26 6d 61 63 68 69 6e 65 6e 61 6d 65 3d 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

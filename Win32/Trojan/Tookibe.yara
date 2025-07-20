@@ -23,6 +23,7 @@ rule Trojan_Win32_Tookibe_A_2147650557_0
         $x_1_9 = {63 00 63 00 6f 00 75 00 6e 00 74 00 73 00 2f 00 53 00 65 00 72 00 76 00 69 00 63 00 65 00 4c 00 6f 00 67 00 69 00 6e 00 3f 00 73 00 65 00 72 00 76 00 69 00 63 00 65 00 3d 00 6f 00 72 00 6b 00 75 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Tookibe_B_2147711074_0
         $x_1_3 = "D:\\Windows.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

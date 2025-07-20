@@ -17,6 +17,7 @@ rule Trojan_Win64_Sdum_HNS_2147904988_0
         $x_2_2 = {c7 45 98 65 00 00 00 48 89 5d a0 0f 57 c0 66 0f 7f 45 b0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_Sdum_RL_2147907833_0
         $x_1_3 = {34 3b 32 71 70 5a 5c 22 70 5a 5c 22 70 5a 5c 22 81 d8 5f 23 79 5a 5c 22 81 d8 58 23 7c 5a 5c 22}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -67,6 +69,7 @@ rule Trojan_Win64_Sdum_RM_2147908196_0
         $x_1_3 = {34 bb 32 71 70 da 5c 22 70 da 5c 22 70 da 5c 22}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -93,6 +96,7 @@ rule Trojan_Win64_Sdum_NRAA_2147911456_0
         $x_1_2 = {28 c0 f1 71 6c a1 9f 22 6c a1 9f 22 6c a1 9f 22}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_Win64_Sdum_RV_2147911598_0
         $x_1_2 = "Instant Verification Tool" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Lespy_A_2147582301_0
         $x_3_5 = "mycloseeventglobaframerl1" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_3_*))) or
             ((2 of ($x_10_*) and 1 of ($x_5_*))) or

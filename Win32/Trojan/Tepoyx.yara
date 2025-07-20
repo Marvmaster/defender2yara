@@ -16,6 +16,7 @@ rule Trojan_Win32_Tepoyx_A_2147657109_0
         $x_1_2 = {83 7e 04 05 72 0c 83 7e 04 05 75 0b 83 7e 08 00 75 05 e8 ?? ?? ?? ?? 83 7e 04 06 72 ?? c7 03 ff ff ff ff 68 ?? ?? ?? ?? 68 08 00 02 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Tepoyx_I_2147691707_0
         $x_1_6 = {75 73 65 72 5f 70 72 65 66 28 22 6e 65 74 77 6f 72 6b 2e 70 72 6f 78 79 2e 61 75 74 6f 63 6f 6e 66 69 67 5f 75 72 6c 22 2c 20 22 00 22 29 3b 0d 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 1 of ($x_4_*) and 2 of ($x_1_*))) or
             ((1 of ($x_8_*) and 2 of ($x_4_*))) or
@@ -67,6 +69,7 @@ rule Trojan_Win32_Tepoyx_J_2147694104_0
         $x_1_3 = "&ver=0000048" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Win32_Tepoyx_K_2147709202_0
         $x_1_3 = "&ilvl=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Sikfoban_A_2147716464_0
         $x_1_8 = "IHJIRIGIPHKITIQIEIGIUIU" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or

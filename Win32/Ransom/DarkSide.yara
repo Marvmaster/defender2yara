@@ -18,6 +18,7 @@ rule Ransom_Win32_DarkSide_G_2147762180_0
         $x_1_3 = "After publication, your data will be available for at least 6 months on our tor cdn servers." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Win32_DarkSide_2147770086_0
         $x_1_5 = "All of your files are encrypted" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Ransom_Win32_DarkSide_DA_2147773523_0
         $x_1_4 = "DO NOT MODIFY or try to RECOVER any files yourself" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Ransom_Win32_DarkSide_DA_2147780888_0
         $x_1_2 = {02 14 1e 02 d0 8a ?? ?? ?? ?? 00 43 88 ?? ?? ?? ?? 00 88 ?? ?? ?? ?? 00 3b df 73 06 fe c1 75 da eb 06 33 db fe c1 75 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Ransom_Win32_DarkSide_MFP_2147787053_0
         $x_1_2 = {88 64 1e fe 02 c2 8b 7d 0c c1 eb 02 8d 14 5b 2b d0 52 89 5d fc 8b 0e 0f b6 d1 0f b6 dd 57 8d bd fc fe ff ff 8a 04 3a 8a 24 3b c1 e9 10 83 c6 04 0f b6 d1 0f b6 cd 8a 1c 3a 8a 3c 39 5f 8a d4 8a f3 c0 e0 02 c0 eb 02 c0 e6 06 c0 e4 04 c0 ea 04 0a fe 0a c2 0a e3 88 07 88 7f 02 88 67 01 ff 4d fc 8d 7f 03 75 af}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Ransom_Win32_DarkSide_ADA_2147850645_0
         $x_1_1 = {02 9a bf 0b 41 00 8a 82 bf 0b 41 00 8a ab be 0b 41 00 88 83 be 0b 41 00 88 aa bf 0b 41 00 02 c5 47 8a 80 be 0b 41 00 fe c2 30 07 fe c9 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Ransom_Win32_DarkSide_ADK_2147851028_0
         $x_1_1 = {0c 73 52 08 02 5b 5b bb 2d 8c 15 30 06 3a 4b 36 34 a3 aa 06 ad d1 1a b6 1b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

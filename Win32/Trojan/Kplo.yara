@@ -18,6 +18,7 @@ rule Trojan_Win32_Kplo_A_2147642545_0
         $x_1_4 = {4c 70 6b 49 6e 69 74 69 61 6c 69 7a 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Kplo_B_2147642703_0
         $x_1_4 = "MemCode_Lpk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

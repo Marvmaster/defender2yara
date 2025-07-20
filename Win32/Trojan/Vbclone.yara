@@ -16,6 +16,7 @@ rule Trojan_Win32_Vbclone_RPX_2147908371_0
         $x_1_1 = {00 f8 64 35 00 00 00 00 00 ff cc 31 00 04 16}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Linux_Prometei_A_2147771319_0
         $x_1_5 = "crontab task.cron" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule Trojan_Linux_Prometei_B_2147893690_0
         $x_1_2 = {43 40 a3 46 f3 4d a7 40 66 64 cb 20 2f d0 f3 bc b3 55 0a 2e 36 5c 68 11 16 93 01 39 c6 52 8e fc bd 60 77 93 f2 08 c3 c6 2a 34 9b 47 35 df 8c 78 2f e7 a0 86 44 cc 3e a4 2b 0d 22 4f 60 83 92 af}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

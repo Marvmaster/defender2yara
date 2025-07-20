@@ -18,6 +18,7 @@ rule Backdoor_Win32_Jabotma_A_2147721772_0
         $x_1_4 = {2f 62 6f 74 6e 65 74 7a 3f 61 3d [0-10] 26 67 75 69 64 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

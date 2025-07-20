@@ -21,6 +21,7 @@ rule Backdoor_Win32_Hecscen_A_2147628243_0
         $x_4_7 = {6a 06 6a 01 6a 02 ff 15 ?? ?? ?? 10 89 85 ?? ?? ff ff 83 bd ?? ?? ff ff ff 75 05 e9 ?? 00 00 00 6a 04 8d 8d ?? ?? ff ff 51 68 06 10 00 00 68 ff ff 00 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or

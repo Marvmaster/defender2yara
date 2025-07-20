@@ -22,6 +22,7 @@ rule TrojanDropper_Win32_Divapad_A_2147624648_0
         $x_2_8 = {66 a5 a4 8b 75 fc 66 89 46 14 66 ff 45 d6 33 c0 40 89 46 16 66 89 46 1a 83 c6 1c 33 c0 8b fe ab}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or

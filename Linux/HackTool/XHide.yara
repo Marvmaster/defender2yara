@@ -18,6 +18,7 @@ rule HackTool_Linux_XHide_A_2147765928_0
         $x_2_3 = {8b 44 24 48 89 44 24 44 83 7c 24 2c 01 7e 56 c7 44 24 08 ff 00 00 00 c7 44 24 04 20 00 00 00 8d 44 24 5c 89 04 24 e8 8d f8 ff ff c6 84 24 5b 01 00 00 00 8b 44 24 50 89 04 24 e8 19 f9 ff ff 89 c2 8b 44 24 50 89 54 24 08 89 44 24 04 8d 44 24 5c 89 04 24 e8 4f f8 ff ff 8b 44 24 24 8d 54 24 5c 89 10 eb 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

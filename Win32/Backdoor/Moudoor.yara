@@ -16,6 +16,7 @@ rule Backdoor_Win32_Moudoor_A_2147652729_0
         $x_1_2 = {c3 33 c9 85 ff 76 1e 8b c1 bd 06 00 00 00 99 f7 fd 8a 04 31 80 c2 ?? 32 c2 88 04 31 41 3b cf 72 e6 8b 6c 24 ?? 8d 44 24 ?? 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_Win32_Moudoor_A_2147652729_1
         $x_1_4 = {68 6f 73 74 2e 65 78 65 00 4d 69 63 72 6f 73 6f 66 74 20 55 70 64 61 74 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -65,6 +67,7 @@ rule Backdoor_Win32_Moudoor_B_2147652730_0
         $x_1_3 = {75 70 2e 62 61 6b 00 00 55 70 64 61 74 65 57 69 6e 64 6f 77 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Backdoor_Win32_Moudoor_B_2147652730_1
         $x_1_3 = {8b fb 83 c9 ff 33 c0 f2 ae f7 d1 49 83 f9 06 0f 86 ?? ?? 00 00 6a 3a 53 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

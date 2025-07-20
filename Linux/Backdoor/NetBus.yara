@@ -19,6 +19,7 @@ rule Backdoor_Linux_NetBus_A_2147829076_0
         $x_1_4 = {31 c0 fc b9 7f 00 00 00 f3 ab 66 ab aa 89 df}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

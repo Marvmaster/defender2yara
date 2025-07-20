@@ -16,6 +16,7 @@ rule Backdoor_Win32_Wakbot_A_2147665902_0
         $x_1_2 = {56 ff 75 ec e8 ?? ?? 00 00 ff 55 (ec)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Backdoor_Win32_Wakbot_B_2147665948_0
         $x_1_3 = {33 ed 83 c0 04 ba 00 00 fc 00 bf 12 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

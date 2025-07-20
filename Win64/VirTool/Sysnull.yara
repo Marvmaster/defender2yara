@@ -16,6 +16,7 @@ rule VirTool_Win64_Sysnull_A_2147941785_0
         $x_1_2 = {48 89 e7 51 4c 89 f9 f3 48 a5 59 49 89 ca 4c 89 e8 48 83 ec 20 41 ff d6 49 83 c4 20 4c 01 e4 5f 5e 41 5c 41 5d 41 5e 41 5f c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

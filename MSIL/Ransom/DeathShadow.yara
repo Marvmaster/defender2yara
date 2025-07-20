@@ -19,6 +19,7 @@ rule Ransom_MSIL_DeathShadow_PA_2147762257_0
         $x_1_4 = "AgileDotNetRT64" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

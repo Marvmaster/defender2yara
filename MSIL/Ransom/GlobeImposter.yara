@@ -23,6 +23,7 @@ rule Ransom_MSIL_GlobeImposter_E_2147920464_0
         $x_1_8 = "Your files are safe! Only modified." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule Trojan_Win32_CBotStealer_A_2147811207_0
         $x_1_11 = "UserName (ComputerName): %wS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

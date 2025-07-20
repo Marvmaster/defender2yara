@@ -38,6 +38,7 @@ rule Trojan_MSIL_MassKeyLoader_2147771173_0
         $x_1_23 = "set_InitialDirectory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule VirTool_Win64_Injeshimesz_A_2147919104_0
         $x_1_5 = {48 89 44 24 40 ?? ?? ?? ?? 48 89 44 24 38 4c 89 74 24 30 4c 89 74 24 28 44 89 74 24 20 45 33 c0 ?? ?? ?? ?? 48 8b 4c 24 68 [0-19] 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule VirTool_Win64_Injeshimesz_B_2147919106_0
         $x_1_5 = {48 89 5c 24 20 56 48 83 ec 70 48 8b 05 6f 17 04 00 48 33 c4 48 89 44 24 68 ?? ?? ?? ?? ?? 48 8b d9 ?? ?? ?? ?? ?? 48 89 44 24 20 ?? ?? ?? ?? ?? 48 83 7b 18 07 4c 8b 43 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

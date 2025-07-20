@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Fraudload_A_2147603240_0
         $x_1_8 = {50 72 61 67 6d 61 3a 20 6e 6f 2d 63 61 63 68 65 0d 25 73 43 61 63 68 65 2d 43 6f 6e 74 72 6f 6c 3a 20 6e 6f 2d 63 61 63 68 65 0d 25 73 0d 25 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule TrojanDownloader_Win32_Fraudload_B_2147603706_0
         $x_1_8 = "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule TrojanDownloader_Win32_Fraudload_A_2147605151_0
         $x_1_7 = "http://download.%s.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule TrojanDownloader_Win32_Fraudload_H_2147642423_0
         $x_1_5 = {4f 70 65 4e 00 47 65 74 54 65 6d 70 50 61 74 68 41 00 50 72 65 73 65 6e 74 00 4e 4f 54 20 46 6f 75 6e 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule TrojanDownloader_Win32_Fraudload_I_2147642426_0
         $x_1_3 = {81 76 08 8b 4e 86 d9 23 d7 fb ff 00 f4 08 e0 65 dc 56 7b 1d fe 3e b9 b9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +152,7 @@ rule TrojanDownloader_Win32_Fraudload_M_2147660249_0
         $x_1_6 = {00 57 61 72 6e 69 6e 67 2d 3e 48 74 74 70 50 6f 73 74 2d 3e 53 65 71 46 6c 61 67 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

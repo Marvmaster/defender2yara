@@ -16,6 +16,7 @@ rule Trojan_Win64_Lummastealer_ZTS_2147941171_0
         $x_5_1 = {01 c1 0f b6 c1 0f b6 84 04 ?? ?? ?? ?? 48 63 4c 24 70 48 8b 54 24 28 30 04 0a 8b 44 24 70 8b 44 24 70 8b 44 24 70 8b 44 24 70 b8 1d 32 cf 80 3d a7 a0 44 e5 0f 8f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

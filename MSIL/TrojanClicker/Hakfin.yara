@@ -18,6 +18,7 @@ rule TrojanClicker_MSIL_Hakfin_A_2147689494_0
         $x_1_4 = {42 72 6f 77 73 65 72 00 42 72 6f 77 73 65 72 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

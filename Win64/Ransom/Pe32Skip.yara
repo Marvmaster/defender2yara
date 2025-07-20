@@ -22,6 +22,7 @@ rule Ransom_Win64_Pe32Skip_YAC_2147933901_0
         $x_10_7 = "lock.pe32Skip" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

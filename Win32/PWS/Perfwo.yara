@@ -21,6 +21,7 @@ rule PWS_Win32_Perfwo_A_2147583596_0
         $x_2_7 = "WriteProcessMemory" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule PWS_Win32_Perfwo_C_2147584524_0
         $x_1_6 = "User-Agent: Mozilla" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule PWS_Win32_Perfwo_D_2147584630_0
         $x_1_7 = "Content-Type: application" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule PWS_Win32_Perfwo_B_2147595040_0
         $x_1_8 = "client.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule PWS_Win32_Perfwo_E_2147597163_0
         $x_1_5 = "GamePatch" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +155,7 @@ rule PWS_Win32_Perfwo_L_2147598742_0
         $x_1_5 = "**__L2spy__**" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +183,7 @@ rule PWS_Win32_Perfwo_M_2147598743_0
         $x_1_8 = {ff ff ff ff 0c 00 00 00 45 58 50 4c 4f 52 45 52 2e 45 58 45 00 00 00 00 ff ff ff ff 0d 00 00 00 77 69 6e 73 6f 63 6b 30 31 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

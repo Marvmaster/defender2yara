@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Dadobra_BM_2147603698_0
         $x_1_3 = {8b f8 8d 45 ec 50 89 7d d0 c6 45 d4 00 8d 55 d0 33 c9 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 45 f8 e8 ?? ?? ?? ?? 85 c0 0f 8e 59 01 00 00 89 45 dc c7 45 e4 01 00 00 00 a1 ?? ?? ?? ?? 8b 00 e8 ?? ?? ?? ?? 8b 45 f8 8b 55 e4 0f b6 44 10 ff 03 c7 b9 ff 00 00 00 99 f7 f9 8b da 3b 75 f0 7d 03 46 eb 05 be 01 00 00 00 8b 45 e8 0f b6 44 30 ff 33 d8 8d 45 cc 50 89 5d d0 c6 45 d4 00 8d 55 d0 33 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Dadobra_BN_2147609243_0
         $x_1_3 = "msapp.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))
@@ -65,6 +67,7 @@ rule TrojanDownloader_Win32_Dadobra_BO_2147609244_0
         $x_1_4 = "SCPNELOG.BIN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -89,6 +92,7 @@ rule TrojanDownloader_Win32_Dadobra_BR_2147626545_0
         $x_1_2 = {68 74 74 70 3a 2f 2f 73 79 64 6c 2e 67 6f 76 2e 63 6e 2f 64 6c 7a 6a 2f 35 2f 35 33 2f 69 6d 67 2f 68 74 74 73 2e 65 78 65 [0-10] 63 6d 64 20 2f 6b 20 63 3a 5c 77 69 6e 64 6f 77 73 5c 68 74 74 73 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule TrojanDownloader_Win32_Dadobra_BS_2147627550_0
         $x_1_6 = "FROGSICE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -19,6 +19,7 @@ rule Trojan_MSIL_BatRunner_CXFW_2147850800_0
         $x_1_4 = "start malware.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Zmem_A_2147739925_0
         $x_1_4 = "GET MLG ANTIVIRUS NEXT TIME" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

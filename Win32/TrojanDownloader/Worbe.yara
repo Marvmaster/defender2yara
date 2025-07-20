@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Worbe_B_2147601404_0
         $x_1_7 = "hujashka.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -47,6 +48,7 @@ rule TrojanDownloader_Win32_Worbe_C_2147610082_0
         $x_1_3 = {62 69 6e 32 68 65 78 6e 65 77 2e 70 68 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

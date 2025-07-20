@@ -22,6 +22,7 @@ rule Trojan_Win32_Autophyte_A_2147724706_0
         $x_1_7 = {c0 0a c0 14 [0-8] 00 88 00 87 [0-8] 00 39 00 38 [0-8] c0 0f c0 05 [0-8] 00 84 00 35 [0-8] c0 07 c0 09 [0-8] c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Autophyte_B_2147724707_0
         $x_1_4 = {0a 88 84 24 ?? ?? ?? ?? c6 ?? ?? ?? ?? ?? ?? 14 88 ?? ?? ?? ?? ?? ?? c6 ?? ?? ?? ?? ?? ?? 88 88 ?? ?? ?? ?? ?? ?? c6 ?? ?? ?? ?? ?? ?? 87 88 ?? ?? ?? ?? ?? ?? c6 ?? ?? ?? ?? ?? ?? 39 88 ?? ?? ?? ?? ?? ?? 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule Trojan_Win32_Autophyte_C_2147724708_0
         $x_1_12 = {ea e3 82 2b 03 00 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -103,6 +106,7 @@ rule Trojan_Win32_Autophyte_D_2147724709_0
         $x_1_1 = {23 8a 7c 8e [0-6] ae 3d b4 3f [0-6] f2 e2 33 24 [0-6] 97 51 34 56}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +129,7 @@ rule Trojan_Win32_Autophyte_E_2147724710_0
         $x_1_2 = {af c6 84 24 [0-4] 3d c6 [0-6] 78 c6 [0-6] 23 c6 [0-6] 4a c6 [0-6] 79 c6 [0-6] 92 c6 [0-6] 81 c6 [0-6] 9d c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -158,6 +163,7 @@ rule Trojan_Win32_Autophyte_F_2147724711_0
         $x_1_13 = {3e 9b ec c9 8f 32 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -191,6 +197,7 @@ rule Trojan_Win32_Autophyte_G_2147724712_0
         $x_1_13 = "ReadFrue" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_5_*))) or
@@ -237,6 +244,7 @@ rule Trojan_Win32_Autophyte_H_2147724713_0
         $x_1_22 = "RpiXdojwpQtwpNaxpA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -276,6 +284,7 @@ rule Trojan_Win32_Autophyte_I_2147724714_0
         $x_1_19 = {69 74 67 68 78 6d 65 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -334,6 +343,7 @@ rule Trojan_Win32_Autophyte_J_2147724715_0
         $x_1_34 = "GteFxltAeerxbfetsA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -388,6 +398,7 @@ rule Trojan_Win32_Autophyte_K_2147724716_0
         $x_1_34 = "Mxdlue32Frijk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -445,6 +456,7 @@ rule Trojan_Win32_Autophyte_L_2147724717_0
         $x_1_33 = "Mlwfov32Frihg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -478,6 +490,7 @@ rule Trojan_Win32_Autophyte_M_2147724718_0
         $x_1_9 = {44 57 53 30 30 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule SoftwareBundler_Win32_Trawlmernib_222303_0
         $x_1_3 = "dl.zvu.com/pinstall/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule SoftwareBundler_Win32_Trawlmernib_222303_1
         $x_1_3 = "vkmusic.ru/VKMUSICsetup.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule SoftwareBundler_Win32_Trawlmernib_222303_2
         $x_1_4 = "pinstall=rambler&campaign_id=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

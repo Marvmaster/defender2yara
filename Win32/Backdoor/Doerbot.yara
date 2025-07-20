@@ -21,6 +21,7 @@ rule Backdoor_Win32_Doerbot_A_2147694458_0
         $x_2_7 = {00 73 61 76 65 72 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 2 of ($x_2_*))) or
             (all of ($x*))
@@ -53,6 +54,7 @@ rule Backdoor_Win32_Doerbot_A_2147694458_1
         $x_2_10 = "|Payment Document" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_2_*))) or
             ((1 of ($x_3_*) and 6 of ($x_2_*))) or

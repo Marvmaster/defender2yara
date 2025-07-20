@@ -20,6 +20,7 @@ rule Trojan_Win32_Msidebar_A_2147651355_0
         $x_1_6 = "Msidebar" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -47,6 +48,7 @@ rule Trojan_Win32_Msidebar_B_2147661722_0
         $x_1_4 = "Msidebar" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_Msidebar_C_2147662270_0
         $x_1_6 = "call_ad_keyword" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Trojan_Win32_Msidebar_C_2147662270_1
         $x_1_11 = "Authorization failed!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
@@ -129,6 +133,7 @@ rule Trojan_Win32_Msidebar_D_2147663233_0
         $x_1_4 = "CompanyName  XP PLUS" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

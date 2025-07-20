@@ -19,6 +19,7 @@ rule Trojan_Win32_Selfdel_B_2147697018_0
         $x_1_5 = {39 9d 6c ff ff ff 0f 84 e8 00 00 00 39 9d 5c ff ff ff 0f 84 dc 00 00 00 38 5d f2 75 0c 38 5d f3 c7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

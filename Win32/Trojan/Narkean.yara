@@ -16,6 +16,7 @@ rule Trojan_Win32_Narkean_A_2147682447_0
         $x_1_2 = {4f 63 65 61 6e 41 72 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule BrowserModifier_Win32_WebEnhancementsMedia_162880_0
         $x_1_8 = {75 08 6a 01 ff 15 ?? ?? ?? ?? 83 7c 24 04 00 74 29 56 6a 00 6a 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule BrowserModifier_Win32_WebEnhancementsMedia_162880_1
         $x_1_8 = {41 72 65 20 79 6f 75 20 73 75 72 65 20 79 6f 75 20 77 61 6e 74 20 74 6f 20 65 78 69 74 20 74 68 65 20 58 76 69 64 20 69 6e 73 74 61 6c 6c 61 74 69 6f 6e 3f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -82,6 +84,7 @@ rule BrowserModifier_Win32_WebEnhancementsMedia_162880_2
         $x_1_11 = "RestrictRun" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_4_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_4_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or

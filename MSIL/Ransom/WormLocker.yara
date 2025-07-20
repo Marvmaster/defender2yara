@@ -19,6 +19,7 @@ rule Ransom_MSIL_WormLocker_DA_2147771535_0
         $x_1_4 = "ransom_voice.vbs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_MSIL_WormLocker_DB_2147772924_0
         $x_1_4 = "cyberware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Ransom_MSIL_WormLocker_DC_2147773123_0
         $x_1_5 = "DisableTaskMgr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Ransom_MSIL_WormLocker_DD_2147787836_0
         $x_1_5 = "Decrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Ransom_MSIL_WormLocker_MX_2147920860_0
         $x_1_4 = "DisableTaskMgr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -142,6 +147,7 @@ rule Ransom_MSIL_WormLocker_AWM_2147939425_0
         $x_1_2 = "Worm_Locker\\obj\\Debug\\Worm_Locker.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

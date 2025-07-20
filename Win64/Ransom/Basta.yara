@@ -16,6 +16,7 @@ rule Ransom_Win64_Basta_MK_2147837078_0
         $x_1_1 = {49 8b 10 40 8a c7 40 8a cf 81 c7 ?? ?? ?? ?? c1 c7 ?? 41 02 04 11 d2 c0 41 88 04 11 49 ff c1 48 83 ee ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Ransom_Win64_Basta_ML_2147837079_0
         $x_1_1 = {49 8b 10 40 8a cf 41 8a 04 12 d2 c8 40 02 c7 69 ff ?? ?? ?? ?? 41 88 04 12 49 ff c2 c1 cf 0d 48 83 ee ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Ransom_Win64_Basta_MN_2147837123_0
         $x_1_1 = {49 8b 10 40 8a cf 41 8a 04 12 40 2a c7 69 ff ?? ?? ?? ?? d2 c0 41 88 04 12 49 ff c2 81 c7 ?? ?? ?? ?? 48 83 ee ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Ransom_Win64_Basta_SAA_2147837152_0
         $x_1_2 = "Disinclinatio impingemen" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +105,7 @@ rule Ransom_Win64_Basta_GG_2147837201_0
         $x_1_1 = {0f be 09 33 c1 88 05 ?? ?? ?? ?? 0f be 44 24 ?? 0f be 0d ?? ?? ?? ?? d3 e0 88 84 24 ?? ?? ?? ?? 48 8b 84 24 ?? ?? ?? ?? 0f be 00 48 8b 8c 24 ?? ?? ?? ?? 0f be 09 0b c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +127,7 @@ rule Ransom_Win64_Basta_WK_2147837202_0
         $x_1_1 = {0b c8 8b c1 89 44 24 ?? 48 8b 44 24 ?? 48 8b 8c 24 ?? ?? ?? ?? 48 33 c8 48 8b c1 48 89 05 ?? ?? ?? ?? 48 8b 44 24 ?? 0f be 00 0f be 4c 24 ?? d3 e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +152,7 @@ rule Ransom_Win64_Basta_SAB_2147837204_0
         $x_1_4 = "onion" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -168,6 +175,7 @@ rule Ransom_Win64_Basta_AB_2147840459_0
         $x_1_2 = "process call create \"powershell -executionpolicy bypass -nop -w hidden %s\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +197,7 @@ rule Ransom_Win64_Basta_TD_2147841844_0
         $x_1_1 = {8b 44 24 20 83 c0 0e 89 44 24 20 48 8b 44 24 70 48 8b 40 10 48 89 44 24 30 48 8b 44 24 30 48 63 40 3c 48 8b 4c 24 70 48 03 41 10 48 89 44 24 38 8b 44 24 20 99 2b c2 d1 f8 89 44 24 20 48 8b 44 24 38 8b 40 28 48 8b 4c 24 70 48 03 41 10 48 89 44 24 40 48 8b 44 24 40 48 83 c4 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +221,7 @@ rule Ransom_Win64_Basta_AD_2147843123_0
         $x_100_3 = {41 0f b7 c2 66 44 89 4d ce 66 83 f0 ?? 66 44 89 4d e6 66 89 45 ca 33 d2 66 89 45 d2 b9 01 00 1f 00 41 0f b7 c2 66 83 f0 ?? 66 89 45 d4 41 0f b7 c2 66 83 f0 ?? 66 89 45 d8 41 0f b7 c2 66 83 f0 ?? 66 89 45 de 41 0f b7 c2 66 83 f0 ?? 66 41 83 f2 ?? 66 89 45 e0 66 44 89 55 e4 ff 15}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +243,7 @@ rule Ransom_Win64_Basta_AA_2147843125_0
         $x_10_2 = {0f 57 c0 33 c0 48 89 45 70 0f 29 85 b0 00 00 00 f2 0f 10 45 70 f2 0f 11 85 c0 00 00 00 48 8d 95 b0 00 00 00 48 8d 4c 24 50 e8 ?? ?? ?? ?? 41 b8 3e 42 00 00 48 8d 15 ?? ?? ?? ?? 48 8d 4c 24 50 e8 ?? ?? ?? ?? 48 8d 4c 24 50 e8 ?? ?? ?? ?? 48 8d 4c 24 58 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -255,6 +266,7 @@ rule Ransom_Win64_Basta_PG_2147843641_0
         $x_1_2 = "VisibleEntry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -277,6 +289,7 @@ rule Ransom_Win64_Basta_PH_2147844289_0
         $x_1_2 = "VisibleEntry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +311,7 @@ rule Ransom_Win64_Basta_PIC_2147847122_0
         $x_1_1 = {41 33 d0 8b 83 ?? ?? ?? ?? 81 f2 ?? ?? ?? ?? 0f af c1 48 63 8b ?? ?? ?? ?? 89 93 ?? ?? ?? ?? 0f b6 93 ?? ?? ?? ?? 44 89 8b ?? ?? ?? ?? 44 2b cf 44 01 4b 64 89 83 0c 01 00 00 41 0f b6 c2 0f af d0 48 8b 83 ?? ?? ?? ?? 88 14 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -319,6 +333,7 @@ rule Ransom_Win64_Basta_AC_2147847398_0
         $x_1_1 = {4c 8b c3 4c 8d 0d [0-6] b8 ?? ?? ?? ?? 4d 8d 40 ?? f7 eb 8b cb ff c3 c1 fa ?? 8b c2 c1 e8 ?? 03 d0 6b c2 ?? 2b c8 48 63 c1 42 0f b6 8c 08 ?? ?? ?? ?? 43 32 8c 08 ?? ?? ?? ?? 48 8b 44 24 ?? 41 88 4c 00 ?? 3b 9c 24 ?? ?? ?? ?? 72 ?? ff 54 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -340,6 +355,7 @@ rule Ransom_Win64_Basta_AF_2147847938_0
         $x_2_1 = {0f af c0 89 43 ?? 8b 43 ?? 35 ?? ?? ?? ?? 01 43 ?? 8b 83 ?? ?? ?? ?? 83 e8 ?? 01 83 ?? ?? ?? ?? 48 8b 83 ?? ?? ?? ?? 44 88 04 01 b8 ?? ?? ?? ?? ff 83 ?? ?? ?? ?? 8b 4b ?? 2b c1 01 43 ?? 8d 81 ?? ?? ?? ?? 01 83 ?? ?? ?? ?? 49 81 f9 ?? ?? ?? ?? 0f 8c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -365,6 +381,7 @@ rule Ransom_Win64_Basta_AN_2147894439_0
         $x_1_5 = "Release\\BullCowGame.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -388,6 +405,7 @@ rule Ransom_Win64_Basta_AG_2147897734_0
         $x_1_3 = "Webcam Sudoku Solver Version" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -409,6 +427,7 @@ rule Ransom_Win64_Basta_YZ_2147900882_0
         $x_1_1 = {4d 8d 40 01 f7 eb c1 fa 02 8b c2 c1 e8 1f 03 d0 8b c3 ff c3 8d 0c d2 03 c9 2b c1 48 63 c8 48 8b 44 ?? ?? 42 0f b6 8c 09 ?? ?? ?? ?? 43 32 8c 08 ?? ?? ?? ?? 41 88 4c 00 ff 3b 9c 24 ?? ?? ?? ?? b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -430,6 +449,7 @@ rule Ransom_Win64_Basta_SG_2147903622_0
         $x_1_1 = {48 8b 03 44 8d 47 ?? 48 8d 0c 07 41 0f b6 04 00 30 01 48 8b 03 0f b6 11 41 30 14 00 41 0f b6 0c 00 48 8b 03 30 0c 07 03 3d ?? ?? ?? ?? 3b 3d ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -452,6 +472,7 @@ rule Ransom_Win64_Basta_GA_2147927356_0
         $x_1_2 = "VisibleEntry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -474,6 +495,7 @@ rule Ransom_Win64_Basta_GB_2147929166_0
         $x_2_2 = "rundll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -496,6 +518,7 @@ rule Ransom_Win64_Basta_ZXZ_2147936969_0
         $x_5_2 = {49 33 c4 48 89 41 28 49 8b 42 20 48 33 41 30 49 33 c5 48 89 41 30 49 8b 42 ?? 49 83 c2 40 48 33 41 38 48 33 c2 4c 89 55 ef 48 83 6d 77 01 48 8d 15 a3 d5 07 00 48 89 41 38 0f 85}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -517,6 +540,7 @@ rule Ransom_Win64_Basta_VZT_2147939872_0
         $x_5_1 = {66 03 d7 0f b7 ff 66 33 d1 0f b7 c2 0f af f8 b8 bf 00 00 00 ff 08 48 8b 44 24 28 44 0f b6 08 0f b6 84 24 ?? ?? ?? ?? 44 0f af c8 b8 0d 37 76 51 41 f7 e1 b8 bf 00 00 00 c1 ea 09 44 69 c2 49 06 00 00 48 8b 15 ?? ?? ?? ?? 45 2b c8 4c 63 00 46 23 0c 82}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

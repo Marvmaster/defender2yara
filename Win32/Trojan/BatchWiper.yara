@@ -20,6 +20,7 @@ rule Trojan_Win32_BatchWiper_MA_2147839832_0
         $x_1_5 = "@echo off" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_Win64_Bodegun_YAA_2147915514_0
         $x_1_4 = "Hacked By NetX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

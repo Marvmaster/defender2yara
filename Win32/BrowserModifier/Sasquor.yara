@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Sasquor_226763_0
         $x_1_4 = "/provide?clients=%s%s','%s')" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule BrowserModifier_Win32_Sasquor_226763_1
         $x_1_2 = {63 6f 72 65 64 6c 6c 2e 64 6c 6c 00 77 75 77 61 6c 61 6c 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule BrowserModifier_Win32_Sasquor_226763_2
         $x_1_2 = "\\amulecustom\\amule\\update\\Release\\update.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule BrowserModifier_Win32_Sasquor_226763_3
         $x_1_4 = "H9K2.TMP" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -114,6 +118,7 @@ rule BrowserModifier_Win32_Sasquor_226763_4
         $x_1_6 = {4d 49 4f 2e 64 6c 6c 00 48 65 6c 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule BrowserModifier_Win32_Sasquor_226763_5
         $x_1_2 = "ooo=%x&miji=%s&modt=%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +168,7 @@ rule BrowserModifier_Win32_Sasquor_226763_6
         $x_1_8 = {54 54 54 2e 64 6c 6c 00 41 6e 61 6c 79 7a 65 43 6f 64 65 00 59 5a 54 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -190,6 +197,7 @@ rule BrowserModifier_Win32_Sasquor_226763_7
         $x_1_9 = {50 00 36 00 34 00 2e 00 64 00 61 00 74 00 00 00 6f 00 44 00 4b 00 00 00 44 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -218,6 +226,7 @@ rule BrowserModifier_Win32_Sasquor_226763_8
         $x_1_9 = {74 00 00 00 6d 00 00 00 70 00 00 00 32 00 00 00 54 00 00 00 4d 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -244,6 +253,7 @@ rule BrowserModifier_Win32_Sasquor_226763_9
         $x_1_7 = {5c 00 69 00 73 00 74 00 61 00 72 00 74 00 73 00 75 00 72 00 66 00 53 00 6f 00 66 00 74 00 77 00 61 00 72 00 65 00 5c 00 69 00 73 00 74 00 61 00 72 00 74 00 73 00 75 00 72 00 66 00 68 00 70 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -274,6 +284,7 @@ rule BrowserModifier_Win32_Sasquor_226763_10
         $x_1_11 = {5c 77 74 73 61 70 69 33 32 5f 78 36 34 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -311,6 +322,7 @@ rule BrowserModifier_Win32_Sasquor_226763_11
         $x_1_18 = {65 78 70 6c 69 62 73 73 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -358,6 +370,7 @@ rule BrowserModifier_Win32_Sasquor_226763_12
         $x_1_23 = {b9 4d 00 00 00 66 89 8d ?? ?? ?? ?? ba 52 00 00 00 66 89 95 ?? ?? ?? ?? b8 54 00 00 00 66 89 85 ?? ?? ?? ?? b9 2e 00 00 00 66 89 8d ?? ?? ?? ?? ba 65 00 00 00 66 89 95 ?? ?? ?? ?? b8 78 00 00 00 66 89 85 ?? ?? ?? ?? b9 65 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -457,6 +470,7 @@ rule BrowserModifier_Win32_Sasquor_226763_13
         $x_1_76 = {75 00 64 00 66 00 72 00 6f 00 6e 00 74 00 2e 00 6e 00 00 00 72 00 73 00 31 00 32 00 6b 00 00 00 70 00 3a 00 2f 00 2f 00 64 00 66 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

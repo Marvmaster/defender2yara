@@ -17,6 +17,7 @@ rule Trojan_Win64_Lotok_GPC_2147902629_0
         $x_5_2 = {48 03 c6 4c 89 6c 24 20 44 8b 44 18 2c 8b 54 18 24 4c 03 c1 48 8b 4c 24 50 49 03 d6 44 8b 4c 18 28}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_Lotok_RW_2147912063_0
         $x_1_2 = "HookWnd64.EXE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win64_Lotok_RZ_2147912507_0
         $x_1_1 = {48 c7 c1 78 56 34 12 48 ff c9 4d 33 c9 48 8b c1 75 f5 48 33 c0 48 8b c3 48 03 c2 90 90 90 49 ff ca 4d 33 db 75 da 48 33 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win64_Lotok_DA_2147924483_0
         $x_1_6 = "PeParserErr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_Win64_Lotok_D_2147925891_0
         $x_4_1 = {48 48 81 ec a0 00 00 00 48 c7 c1 00 00 00 00 48 c7 c2 ?? ac 00 00 49 c7 c0 00 10 00 00 4c 8d 49 40}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Trojan_Win64_Lotok_GTM_2147926237_0
         $x_10_1 = {55 48 89 e5 48 83 ec ?? 85 c0 41 81 f0 ?? ?? ?? ?? b9 ?? ?? ?? ?? 41 81 f1 ?? ?? ?? ?? 41 81 f0 ?? ?? ?? ?? 48 83 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule Trojan_Win64_Lotok_NIT_2147928893_0
         $x_1_8 = "CryptEncrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_Win64_Lotok_PNT_2147935007_0
         $x_3_1 = {41 0f b6 01 49 ff c0 49 ff c1 41 30 40 ff 49 83 ea 01 75}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +209,7 @@ rule Trojan_Win64_Lotok_NC_2147944295_0
         $x_1_4 = "MyAutoStartApp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

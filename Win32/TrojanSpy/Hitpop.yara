@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Hitpop_Z_2147601297_0
         $x_1_7 = "?reg=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule TrojanSpy_Win32_Hitpop_AB_2147601329_0
         $x_1_7 = "Htarget" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -78,6 +80,7 @@ rule TrojanSpy_Win32_Hitpop_AE_2147604881_0
         $x_1_7 = "360tray.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -104,6 +107,7 @@ rule TrojanSpy_Win32_Hitpop_A_2147605193_0
         $x_1_3 = {6d 79 6d 61 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
             (all of ($x*))
@@ -134,6 +138,7 @@ rule TrojanSpy_Win32_Hitpop_B_2147605194_0
         $x_6_7 = {eb 25 6a 10 68 90 01 00 00 68 90 01 00 00 e8 ?? ?? ff ff 83 c0 64 50 68 60 f0 ff ff 6a fe 8b 45 f8 50 e8}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_6_*))) or
@@ -160,6 +165,7 @@ rule TrojanSpy_Win32_Hitpop_C_2147605195_0
         $x_1_2 = {8a 54 3a ff e8 ?? ?? ff ff 8b 45 e0 e8 ?? ?? ff ff 8b 55 f0 0f b6 54 32 ff 33 c2 89 45 f4 8d 45 dc 8b 55 f4 e8 ?? ?? ff ff 8b 55 dc 8b 45 f8 e8 06 e9 ff ff 8b 45 f8 46 4b 75 b4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -183,6 +189,7 @@ rule TrojanSpy_Win32_Hitpop_D_2147605196_0
         $x_3_3 = {68 01 02 00 00 56 e8 ?? ?? ff ff 6a 00 6a 00 68 02 02 00 00 56 e8 ?? ?? ff ff}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -215,6 +222,7 @@ rule TrojanSpy_Win32_Hitpop_AF_2147605504_0
         $x_10_9 = {55 8b ec 33 c0 55 68 ?? ?? ?? ?? 64 ff 30 64 89 20 b8 ?? ?? ?? ?? b9 28 00 00 00 8b 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 33 c0 5a 59 59 64 89 10 68 ?? ?? ?? ?? c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -242,6 +250,7 @@ rule TrojanSpy_Win32_Hitpop_AG_2147607883_0
         $x_2_5 = {06 00 00 00 66 6e 5f 65 78 65 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -273,6 +282,7 @@ rule TrojanSpy_Win32_Hitpop_AH_2147611461_0
         $x_1_9 = "KVXP.kxp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -301,6 +311,7 @@ rule TrojanSpy_Win32_Hitpop_AI_2147617743_0
         $x_1_4 = "8kaka.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))
@@ -328,6 +339,7 @@ rule TrojanSpy_Win32_Hitpop_AJ_2147619590_0
         $x_1_5 = "C:\\WINDOWS\\cc.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -362,6 +374,7 @@ rule TrojanSpy_Win32_Hitpop_AK_2147623437_0
         $x_1_11 = {6a 00 6a 00 8b 45 e4 e8 ?? ?? ff ff 50 8b 45 f4 e8 ?? ?? ff ff 50 6a 00 e8 ?? ?? ff ff 8b 45 e4 50 e8 ?? ?? ff ff 84 c0 75 0b 8b 55 e4 8b 45 f4 e8 ?? ?? ff ff 8b 45 f4 e8 ?? ?? ff ff 8b 45 e4 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -386,6 +399,7 @@ rule TrojanSpy_Win32_Hitpop_AM_2147623607_0
         $x_3_5 = {68 ff 00 00 00 6a 0c 8b 45 f8 50 e8 ?? ?? ff ff 6a 01 6a 0d 68 00 01 00 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

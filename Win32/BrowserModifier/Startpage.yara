@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Startpage_11642_0
         $x_2_4 = {73 65 61 72 63 68 2d 70 69 6e 28 [0-4] 29 2e 64 6c 6c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule BrowserModifier_Win32_Startpage_11642_1
         $x_2_4 = "function go(text) { formWeb.ww.value=text;" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule BrowserModifier_Win32_Startpage_11642_2
         $x_1_4 = "REGEDIT /S IE_HomePage_reset.reg " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule BrowserModifier_Win32_Startpage_A_153120_0
         $x_1_6 = "project.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

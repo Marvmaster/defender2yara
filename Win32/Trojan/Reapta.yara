@@ -17,6 +17,7 @@ rule Trojan_Win32_Reapta_A_2147655960_0
         $x_1_3 = {26 67 5f 73 69 64 3d 00 63 61 70 74 63 68 61 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

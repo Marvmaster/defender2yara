@@ -16,6 +16,7 @@ rule Trojan_Win64_QuasarRAT_A_2147842674_0
         $x_2_1 = {48 89 d9 48 89 c3 31 c0 e8 ?? ?? fa ff 48 89 44 24 68 48 89 4c 24 38 48 89 c7 48 89 de 49 89 c8 e8 ?? ?? fe ff 48 8b 54 24 38 48 39 d0 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_QuasarRAT_D_2147851341_0
         $x_2_2 = "main.DCRYSIS" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win64_QuasarRAT_E_2147901134_0
         $x_2_3 = {44 8b 46 18 48 8d 45 07 48 8b 56 10 45 33 c9 48 8b 4d 17 89 7c 24 48 48 89 44 24 40 48 8b 46 28 44 89 64 24 38 4c 89 64 24 30 c7 44 24 28 10 00 00 00 48 89 44 24 20 ff 15}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Win64_QuasarRAT_DA_2147907653_0
         $x_1_8 = "closesocket" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_Win64_QuasarRAT_PAEY_2147914395_0
         $x_1_5 = "tempting to start ssvchost.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule Trojan_Win64_QuasarRAT_GZF_2147945773_0
         $x_10_1 = {4c 03 f5 45 8b 66 ?? 45 8b 6e ?? 4c 03 e5 41 8b 46 ?? 4c 03 ed 48 03 c5 48 89 44 24 ?? 41 39 7e ?? ?? ?? 66 66 0f 1f 84 00 00 00 00 00 41 8b 0c bc 48 8d 15 ?? ?? ?? ?? 48 03 cd 41 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 85 c0 0f 84 ?? ?? ?? ?? ff c7 41 3b 7e 18}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

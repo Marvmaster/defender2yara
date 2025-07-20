@@ -20,6 +20,7 @@ rule Trojan_Win32_Darkeye_MA_2147822279_0
         $x_1_5 = "barbatif lectrifierons" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

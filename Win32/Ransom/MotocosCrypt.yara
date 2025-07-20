@@ -21,6 +21,7 @@ rule Ransom_Win32_MotocosCrypt_PA_2147782008_0
         $x_1_6 = "vssadmin.exe delete shadows /all /quiet;wmic shadowcopy delete" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             ((3 of ($x_3_*))) or

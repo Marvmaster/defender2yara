@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Shiotob_A_2147647706_0
         $x_1_7 = "-autorun" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule TrojanSpy_Win32_Shiotob_B_2147682887_0
         $x_1_4 = {ba 35 bf a0 be 8b c3 e8 ?? ?? ?? ?? a3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule TrojanSpy_Win32_Shiotob_C_2147690497_0
         $x_2_5 = {6a 00 6a 00 6a 01 6a 00 6a 02 68 00 00 00 40 8d 8d d8 fe ff ff 51 ff 15 ?? ?? ?? ?? 89 45 f0 8b 55 ec 83 ea 1b 81 fa d5 00 00 00 76 17 8b 45 ec 03 05 ?? ?? ?? ?? 0f b7 0d ?? ?? ?? ?? 03 c1 a3 ?? ?? ?? ?? 83 7d f0 ff 74 17 6a 01 6a 00 6a 00 8d 95 d8 fe ff ff 52 6a 00 6a 00 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -102,6 +105,7 @@ rule TrojanSpy_Win32_Shiotob_D_2147726890_0
         $x_5_6 = {83 45 fc 04 81 6d f0 ?? ?? ?? ?? 8b 45 ?? 8b 55 ?? 31 10 ff 45 ?? ff 4d ?? 75 e5}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))

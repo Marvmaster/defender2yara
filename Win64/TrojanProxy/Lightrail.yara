@@ -22,6 +22,7 @@ rule TrojanProxy_Win64_Lightrail_A_2147918698_0
         $x_1_8 = {36 00 00 00 c7 [0-5] 47 00 45 00 c7 [0-5] 54 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

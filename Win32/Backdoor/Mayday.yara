@@ -25,6 +25,7 @@ rule Backdoor_Win32_Mayday_A_2147605124_0
         $x_1_10 = "A1445E6F635CD9CEB84E100D800699990D017C432D3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

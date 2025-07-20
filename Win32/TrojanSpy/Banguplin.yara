@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Banguplin_A_2147706036_0
         $x_1_8 = "6F90EA68F878" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

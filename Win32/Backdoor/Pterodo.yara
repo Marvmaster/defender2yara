@@ -18,6 +18,7 @@ rule Backdoor_Win32_Pterodo_A_2147720203_0
         $x_1_4 = {5c 64 65 76 65 6c 6f 70 5c 72 65 61 64 79 5c [0-80] 5c 77 69 6e 72 65 73 74 6f 72 65 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

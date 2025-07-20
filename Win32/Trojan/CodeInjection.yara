@@ -20,6 +20,7 @@ rule Trojan_Win32_CodeInjection_B_2147796654_0
         $x_1_5 = "NtOpenProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

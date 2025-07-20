@@ -18,6 +18,7 @@ rule HackTool_Win32_PetitPotam_A_2147808757_0
         $x_1_3 = {83 c4 08 b8 04 00 00 00 c1 e0 00 8b 4d 0c 8b 14 01 52 68 b8 4c 4f 00 6a 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule HackTool_Win32_PetitPotam_B_2147809161_0
         $x_1_10 = "topotam" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

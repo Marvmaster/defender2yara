@@ -20,6 +20,7 @@ rule MonitoringTool_Win32_SpyAgent_11555_0
         $x_1_6 = "Log Start  " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule MonitoringTool_Win32_SpyAgent_11555_1
         $x_1_4 = "Client hook " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule MonitoringTool_Win32_SpyAgent_A_127691_0
         $x_1_9 = "GrabSource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -102,6 +105,7 @@ rule MonitoringTool_Win32_SpyAgent_B_127692_0
         $x_1_5 = "_JournalProc@12" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +129,7 @@ rule MonitoringTool_Win32_SpyAgent_D_127698_0
         $x_1_4 = "Content-Type: text/html; name=logs.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

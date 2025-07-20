@@ -16,6 +16,7 @@ rule Trojan_Win32_Starter_H_2147642790_0
         $x_2_2 = "\\dodolook.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_Starter_L_2147651638_0
         $x_2_12 = {1e 21 89 10 ad 10 e2 80 3c 00 46 da ad 20 e2 1b 2c 92 ca}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -78,6 +80,7 @@ rule Trojan_Win32_Starter_P_2147695002_0
         $x_1_5 = {c6 85 2f ff ff ff 61 c6 85 30 ff ff ff 64 c6 85 31 ff ff ff 76}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -150,6 +153,7 @@ rule Trojan_Win32_Starter_ARA_2147890086_0
         $x_2_5 = "Software\\Classes\\Applications\\crashreporter.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +176,7 @@ rule Trojan_Win32_Starter_CCJK_2147921777_0
         $x_6_2 = {c7 44 24 14 01 00 00 00 c7 44 24 10 00 00 00 00 c7 44 24 0c 00 00 00 00 89 44 24 08 c7 44 24 04 00 00 00 00 c7 04 24 00 00 00 00 e8 cc 91 01}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_DiskWriter_SP_2147837091_0
         $x_1_2 = "MBR-MALWARE-EXAMPLES.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

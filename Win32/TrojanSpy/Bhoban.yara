@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Bhoban_A_2147650442_0
         $x_2_7 = "1A4247544C061B424D41" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*))) or
             ((1 of ($x_4_*) and 3 of ($x_2_*))) or
@@ -49,6 +50,7 @@ rule TrojanSpy_Win32_Bhoban_2147659646_0
         $x_1_3 = {8d 49 02 66 39 19 75 f0 3d e0 1e 00 00 75 5f c7 44 3c 1c 01 00 00 80 c7 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -77,6 +79,7 @@ rule TrojanSpy_Win32_Bhoban_B_2147679533_0
         $x_1_5 = {00 61 64 6c 6c 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))

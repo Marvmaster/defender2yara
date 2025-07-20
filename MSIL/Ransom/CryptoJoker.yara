@@ -19,6 +19,7 @@ rule Ransom_MSIL_CryptoJoker_SN_2147768129_0
         $x_1_4 = "jokingwithyou.cryptojoker" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_MSIL_CryptoJoker_PAA_2147782004_0
         $x_1_7 = "\\encKey.crypt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Ransom_MSIL_CryptoJoker_AYA_2147929771_0
         $x_1_7 = "Sometimes suicide is bad... sometimes is good..." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

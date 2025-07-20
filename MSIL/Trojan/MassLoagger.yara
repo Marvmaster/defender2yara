@@ -30,6 +30,7 @@ rule Trojan_MSIL_MassLoagger_AD_2147776977_0
         $x_1_15 = "Visa Master Cardlast_name" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

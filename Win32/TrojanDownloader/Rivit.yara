@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Rivit_A_2147720911_0
         $x_1_3 = "//:ptth'(gnirtsdaolnwod.J$" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

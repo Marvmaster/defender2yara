@@ -19,6 +19,7 @@ rule Trojan_Win32_Garex_2147693314_0
         $x_1_4 = "PythonThreadStop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Barys_GMF_2147888464_0
         $x_1_4 = "hThrehExitTU" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Barys_AMAA_2147892662_0
         $x_1_1 = {8d 48 1e 30 4c 05 d0 48 ff c0 48 83 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Barys_GMA_2147896750_0
         $x_1_5 = "n01YP87cyoG79M" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_Barys_PACS_2147899723_0
         $x_2_1 = {8b 55 08 8b 45 f8 01 d0 0f b6 08 8b 45 f8 83 e0 1f 0f b6 54 05 d8 8b 5d 08 8b 45 f8 01 d8 31 ca 88 10 83 45 f8 01 8b 45 f8 3b 45 0c 72 d2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_Win32_Barys_RB_2147900504_0
         $x_1_1 = {8b 54 24 20 03 54 24 08 8a 6d 00 8a 22 30 e5 88 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Trojan_Win32_Barys_RC_2147900505_0
         $x_1_1 = {8a 6d 00 8a 0e 31 f6 30 cd 88 6d 00 8b 5c 24 04 83 c3 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +156,7 @@ rule Trojan_Win32_Barys_GXV_2147903534_0
         $x_5_2 = {f6 3f 04 d4 20 37 8b 52 e1 35 2f 5d c3 4a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +180,7 @@ rule Trojan_Win32_Barys_GXQ_2147910133_0
         $x_1_3 = "imgui_log.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -200,6 +208,7 @@ rule Trojan_Win32_Barys_MX_2147933715_0
         $x_1_3 = "Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +239,7 @@ rule Trojan_Win32_Barys_NMD_2147936097_0
         $x_2_10 = "somesomeWar_EOF" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +261,7 @@ rule Trojan_Win32_Barys_AB_2147939490_0
         $x_1_1 = {5b b8 13 8d ff ff 80 34 03 b8 40 3d d6 fa ff ff 75 f4 61 e9 76 ?? ff ff 60 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +283,7 @@ rule Trojan_Win32_Barys_AC_2147939492_0
         $x_1_1 = {33 c0 89 08 50 45 43 6f 6d 70 61 63 74 32 00 ee 05 9e 8b c4 b7 67 3c 87 2f 7c e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -293,6 +305,7 @@ rule Trojan_Win32_Barys_PGA_2147940183_0
         $x_10_1 = {8b 45 ec 89 45 ec 8b 4d 10 89 4d f0 ?? ?? 8b 55 f0 83 c2 ?? 89 55 f0 8b 45 10 05 ?? ?? ?? ?? 39 45 f0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -315,6 +328,7 @@ rule Trojan_Win32_Barys_CCJZ_2147943380_0
         $x_3_2 = {8b 85 e4 f7 ff ff 50 8b 8d f0 f7 ff ff 51 ff 15 ?? ?? ?? ?? f7 d8 1b c0 40 88 85 f8 f7 ff ff 83 bd fc f7 ff ff 14 7e ?? c7 85 fc f7 ff ff 00 00 00 00 6a 02 ff 15 ?? ?? ?? ?? 8b 95 fc f7 ff ff 83 c2 01 89 95 fc f7 ff ff e9}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

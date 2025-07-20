@@ -20,6 +20,7 @@ rule HackTool_MacOS_Fscan_A_2147921859_0
         $x_1_5 = "Plugins.SmbGhostScan" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule HackTool_MacOS_Fscan_B_2147922953_0
         $x_1_5 = "GetIsDomainNameServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

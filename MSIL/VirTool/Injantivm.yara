@@ -22,6 +22,7 @@ rule VirTool_MSIL_Injantivm_GG_2147769552_0
         $x_1_7 = "AddInProcess32.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Delsha_C_13631_0
         $x_2_4 = {44 6f 63 73 22 00 00 00 22 4d 79 20 44 6f 63 75 6d 65 6e 74 73 22 00 00 22 70 72 69 6e 74 24 22}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

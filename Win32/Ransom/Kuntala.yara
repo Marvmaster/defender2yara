@@ -24,6 +24,7 @@ rule Ransom_Win32_Kuntala_2147729496_0
         $x_4_10 = ".[notopen@countermail.com].NOT_OPEN" wide //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_2_*))) or
             ((1 of ($x_4_*) and 4 of ($x_2_*))) or

@@ -19,6 +19,7 @@ rule Backdoor_Win32_Matchaldru_D_2147657047_0
         $x_1_5 = {b2 64 b1 25}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_Win32_Matchaldru_E_2147690178_0
         $x_1_4 = {33 d2 8a c3 c0 e8 04 04 41 0f be c8 51}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

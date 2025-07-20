@@ -20,6 +20,7 @@ rule Backdoor_Win32_Hostsrv_A_2147641803_0
         $x_1_6 = "taskmgr.exe,regedit.exe,rstrui.exe,msconfig.exe,avz.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

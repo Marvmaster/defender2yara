@@ -21,6 +21,7 @@ rule HackTool_Linux_BloodHound_A_2147832770_0
         $x_1_6 = "D8xgwECY7CYvx+Y2n4sBz93Jn9JRvxdiyyo8CTfuKaY=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule PWS_MSIL_Parple_A_2147639068_0
         $x_1_3 = {20 f2 03 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule PWS_MSIL_Parple_B_2147639073_0
         $x_1_3 = {06 1f 10 1f 3d 9c 06 1f 11 1f 40 9c 06 1f 12 1f 4b 9c 06 1f 13 1f 51 9c 06 1f 14 1f 63 9c 06 1f 15 1f 6a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

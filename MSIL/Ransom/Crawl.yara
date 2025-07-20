@@ -19,6 +19,7 @@ rule Ransom_MSIL_Crawl_A_2147722654_0
         $x_1_4 = "SOFTWARE\\crawl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

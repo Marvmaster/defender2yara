@@ -19,6 +19,7 @@ rule Trojan_MSIL_MSILZilla_RDA_2147838981_0
         $x_1_4 = "127.0.0.1 a086e0efbad65f0bb.awsglobalaccelerator.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_MSILZilla_RDC_2147841239_0
         $x_1_4 = "aR3nbf8dQp2feLmk31.lSfgApatkdxsVcGcrktoFd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_MSIL_MSILZilla_CXI_2147842131_0
         $x_5_1 = {08 09 18 5b 06 09 18 6f ?? ?? ?? ?? 1f 10 28 1c ?? ?? ?? 9c 09 18 58 0d 09 07 32}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_MSIL_MSILZilla_PSPM_2147848882_0
         $x_2_1 = {6f 07 00 00 0a 07 6f 08 00 00 0a 08 6f 07 00 00 0a 16 6f 09 00 00 0a 08 6f 07 00 00 0a 17 6f 0a 00 00 0a 08 6f 0b 00 00 0a 26 08}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_MSIL_MSILZilla_CCHZ_2147907446_0
         $x_1_1 = {11 0a 11 0c 18 6f ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 0b 11 0c 18 58 13 0c 11 0c 11 0b 31 ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_MSIL_MSILZilla_NITA_2147926332_0
         $x_1_5 = "DNS redirecting has been detected" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Trojan_MSIL_MSILZilla_GKN_2147931265_0
         $x_1_1 = {fe 0c 03 00 3b 30 00 00 00 fe 0c 09 00 fe 0c 05 00 46 fe 0c 13 00 61 52 fe 0c 05 00 20 01 00 00 00 58 fe 0e 05 00 fe 0c 09 00 20 01 00 00 00 58 fe 0e 09 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

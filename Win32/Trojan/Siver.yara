@@ -22,6 +22,7 @@ rule Trojan_Win32_Siver_A_2147629568_0
         $x_1_8 = "ShareInfect.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_OilRig_A_2147747935_0
         $x_1_4 = "schtasks /create /F /ru SYSTEM /sc minute /mo 1 /tn \"\\UpdateTasks\\JavaUpdates\" /tr \"wscript /b \\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

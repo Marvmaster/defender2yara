@@ -21,6 +21,7 @@ rule Backdoor_Win32_Choopla_D_2147746178_0
         $x_1_6 = "CopyFile_And_Directory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

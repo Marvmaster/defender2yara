@@ -18,6 +18,7 @@ rule Ransom_Win32_Zardran_A_2147754147_0
         $x_1_3 = {0f b6 1c 30 6a 00 89 34 24 2b f6 0b 75 ec 8b d6 5e d3 c2 23 d3 ac 0a c2 88 07 47 ff 4d e8 75 c1 6a 00 89 34 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

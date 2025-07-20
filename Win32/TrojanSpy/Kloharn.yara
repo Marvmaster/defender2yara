@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Kloharn_A_2147646123_0
         $x_1_4 = {61 00 74 00 74 00 72 00 69 00 62 00 20 00 64 00 3a 00 5c 00 6c 00 6f 00 67 00 20 00 2b 00 68 00 20 00 2b 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

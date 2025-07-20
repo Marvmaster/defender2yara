@@ -101,6 +101,7 @@ rule Backdoor_Win64_Winnti_A_2147711357_0
         $x_1_32 = {6f 74 68 65 72 6e 61 6d 65 3a 3c 75 6e 73 75 70 70 6f 72 74 65 64 3e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

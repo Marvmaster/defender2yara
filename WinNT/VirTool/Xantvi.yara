@@ -31,6 +31,7 @@ rule VirTool_WinNT_Xantvi_A_2147601376_0
         $x_1_16 = "\\navw32.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 12 of ($x_1_*))) or
             ((2 of ($x_5_*) and 7 of ($x_1_*))) or

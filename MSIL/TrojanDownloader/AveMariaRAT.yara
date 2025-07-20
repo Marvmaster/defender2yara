@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_E_2147827731_0
         $x_1_3 = {00 00 0a 74 1b 00 00 01 ?? ?? 04 26 06 2b ?? 0a 2b fa 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_D_2147828365_0
         $x_1_3 = "CreateInstance" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_F_2147830127_0
         $x_1_1 = {00 59 d2 9c 00 07 17 58 0b 07 7e ?? 00 00 04 8e 69 fe ?? 0c 08 7a 00 20 ?? ?? ?? 00 28 ?? 00 00 0a 00 73 ?? 00 00 0a 0a 06 72 ?? 00 00 70 6f ?? 00 00 0a 80 ?? 00 00 04 16 0b 2b ?? 00 7e ?? 00 00 04 07 7e ?? 00 00 04 07 91 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_G_2147830129_0
         $x_1_6 = "DynamicInvoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_H_2147831385_0
         $x_1_4 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_I_2147831386_0
         $x_2_2 = {0a 0a 1c 2c 08 2b 08 2b 09 2b 0a 2b 0f de 23 06 2b f5 02 2b f4 6f ?? 00 00 0a 2b ef 0b 2b ee}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_M_2147831485_0
         $x_2_2 = {0a 0c 07 06 6f ?? 00 00 0a 0d 09 08 6f ?? 00 00 0a 08 6f ?? 00 00 0a 07 6f ?? 00 00 0a 08 6f ?? 00 00 0a 13 04 de}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_N_2147831845_0
         $x_2_1 = {20 00 01 00 00 38 ?? 00 00 00 38 ?? 00 00 00 20 80 00 00 00 38 ?? 00 00 00 38 ?? 00 00 00 72 ?? ?? ?? 70 38 ?? 00 00 00 7e ?? 00 00 04 20 e8 03 00 00 73 ?? 00 00 0a 0c 07 08 07 6f ?? 00 00 0a 1e 5b 6f ?? 00 00 0a 6f ?? 00 00 0a 1e 2c ?? 07 08 07 6f ?? 00 00 0a 1e 5b 6f ?? 00 00 0a 6f ?? 00 00 0a 07 17 6f ?? 00 00 0a 06 07 6f ?? 00 00 0a 17 73 ?? 00 00 0a 0d 09 02 16 02 8e 69 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +209,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_S_2147837685_0
         $x_1_4 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -226,6 +235,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_X_2147838645_0
         $x_1_5 = "HttpWebRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -249,6 +259,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_Z_2147840916_0
         $x_1_3 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -274,6 +285,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_P_2147844628_0
         $x_1_5 = "GetMethod" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +311,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_J_2147848601_0
         $x_2_5 = "Ljqwisdipifeibytyhqv" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -322,6 +335,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_A_2147849805_0
         $x_2_3 = "qbdnpydk7an8j7mlugwq3b4knuf9ekju" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -344,6 +358,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_K_2147850149_0
         $x_1_2 = "ReadAsByteArrayAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -365,6 +380,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_V_2147852562_0
         $x_2_1 = {06 11 0f 6f ?? 00 00 0a 13 10 12 0f 28 ?? 00 00 0a 28 ?? 00 00 0a 13 11 11 0a 11 10 11 11 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -386,6 +402,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_AE_2147899404_0
         $x_2_1 = {06 08 06 08 91 20 ?? ?? ?? ?? 59 d2 9c 08 17 58 0c 08 06 8e 69}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -408,6 +425,7 @@ rule TrojanDownloader_MSIL_AveMariaRAT_NIT_2147925864_0
         $x_2_2 = {00 28 23 00 00 0a 28 ?? 00 00 0a 72 af 05 00 70 28 ?? 00 00 0a 28 ?? 00 00 0a 0a 06 02 28 ?? 00 00 0a 00 06 73 27 00 00 0a 25 16 6f 28 ?? 00 0a 00 28 ?? 00 00 0a 26 00 de 1b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

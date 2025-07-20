@@ -17,6 +17,7 @@ rule Trojan_Win32_Waldek_A_2147721442_0
         $x_1_2 = {57 8b f8 8b 4f 14 83 f9 10 72 02 8b 07 3d ?? ?? ?? ?? 77 35 83 f9 10 72 04 8b 07 eb 02 8b c7 8b 57 10 03 d0 81 fa ?? ?? ?? ?? 76 1d 83 f9 10 72 04 8b 07 eb 02 8b c7 b9 ?? ?? ?? ?? 2b c8 51 57 8b c3 e8 ?? ?? ?? ?? 5f c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Waldek_VU_2147819668_0
         $x_1_2 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Waldek_GKI_2147849670_0
         $x_10_1 = {0f b6 ca 0f b6 d3 0f af d1 02 14 33 43 32 c2 8b 54 24 ?? 83 fb ?? 7c ?? 88 04 3a 42 89 54 24 ?? 3b d5}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

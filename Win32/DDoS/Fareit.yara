@@ -21,6 +21,7 @@ rule DDoS_Win32_Fareit_A_2147652749_0
         $x_1_6 = "BINSTR00" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -18,6 +18,7 @@ rule PWS_Win32_Trickbot_N_2147766721_0
         $x_1_4 = "mimikatz" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule PWS_Win32_Trickbot_O_2147766722_0
         $x_1_3 = "MTIzNA==; cXdlcg==;" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

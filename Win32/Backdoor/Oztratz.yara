@@ -18,6 +18,7 @@ rule Backdoor_Win32_Oztratz_A_2147710307_0
         $x_1_4 = {8b 1e 81 fb 41 50 33 32 75 ?? 8b 5e 04 83 fb 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_Oztratz_B_2147716336_0
         $x_1_3 = "data.dbf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

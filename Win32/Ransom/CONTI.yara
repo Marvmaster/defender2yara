@@ -19,6 +19,7 @@ rule Ransom_Win32_CONTI_DA_2147768354_0
         $x_1_4 = "https://contirecovery.info" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Ransom_Win32_CONTI_DA_2147768354_1
         $x_1_13 = "net stop wininit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Ransom_Win32_CONTI_DC_2147771290_0
         $x_1_5 = "TOR VERSION :" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

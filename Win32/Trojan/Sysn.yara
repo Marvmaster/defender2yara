@@ -23,6 +23,7 @@ rule Trojan_Win32_Sysn_EB_2147839732_0
         $x_1_8 = "DllFunctionCall" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win32_Sysn_EM_2147900685_0
         $x_1_5 = "Abatage.Mealberr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

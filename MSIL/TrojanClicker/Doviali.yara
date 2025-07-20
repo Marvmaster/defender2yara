@@ -20,6 +20,7 @@ rule TrojanClicker_MSIL_Doviali_A_2147641137_0
         $x_1_6 = "/clicks/splash/cookie_enabled" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

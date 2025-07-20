@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Fosniw_B_2147642016_0
         $x_1_3 = {8b 54 24 10 80 f1 ?? 88 0c ?? ?? 83 ?? 04 [0-4] 3b ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_Win32_Fosniw_C_2147642209_0
         $x_5_5 = "?prj=%s&pid=%s&mac=%s&logdata=MacTryCnt:%d&code=%s&ver=%s" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -65,6 +67,7 @@ rule TrojanDownloader_Win32_Fosniw_D_2147643160_0
         $x_1_2 = "IEKeyword" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule TrojanDownloader_Win32_Fosniw_G_2147655565_0
         $x_1_3 = "?prj=%s&pid=%s&qy=%s&mac=%s&w=%d&h=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

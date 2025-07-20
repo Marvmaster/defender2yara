@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Qibongi_A_2147618351_0
         $x_1_3 = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\iexplore.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Qibongi_B_2147618628_0
         $x_1_3 = {6a 00 68 3f 00 0f 00 6a 00 6a 00 6a 00 68 ?? ?? ?? 00 68 02 00 00 80 e8 ?? 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

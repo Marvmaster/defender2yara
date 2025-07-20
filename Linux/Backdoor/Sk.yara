@@ -19,6 +19,7 @@ rule Backdoor_Linux_Sk_A_2147826659_0
         $x_1_4 = "it: Starting backdoor " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 

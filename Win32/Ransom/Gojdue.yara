@@ -18,6 +18,7 @@ rule Ransom_Win32_Gojdue_A_2147720976_0
         $x_1_4 = "Go build ID" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

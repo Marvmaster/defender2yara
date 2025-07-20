@@ -233,6 +233,7 @@ rule TrojanDropper_AndroidOS_Banker_P_2147794330_0
         $x_1_4 = "dalvik/system/DexClassLoader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

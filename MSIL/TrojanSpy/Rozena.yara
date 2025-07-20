@@ -29,6 +29,7 @@ rule TrojanSpy_MSIL_Rozena_MA_2147809188_0
         $x_1_14 = "set_VirtualKeyCode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

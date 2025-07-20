@@ -17,6 +17,7 @@ rule Trojan_Win32_Hiddentear_Z_2147938581_0
         $x_1_2 = {6f 3d 00 00 0a 13 3f 2b 4e 12 3f 28 3e 00 00 0a 13 40 1f 6e 0d 11 40 28 3f 00 00 0a 13 41 11 41 2c 31 1f 6f 0d 11 40 11}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

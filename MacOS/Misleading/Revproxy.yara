@@ -17,6 +17,7 @@ rule Misleading_MacOS_Revproxy_B_440131_0
         $x_1_2 = {75 42 48 89 44 24 28 48 85 c0 74 21 48 8b 10 48 8b 58 08 0f b6 48 10 0f b6 78 11 48 89 d0 e8 82 15 fa ff 48 8b 6c 24 18 48 83 c4 20 c3 e8 b3 28 fa ff 90 48 89 44 24 08 e8 68 b1 ff ff 48 8b 44 24 08 eb a1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

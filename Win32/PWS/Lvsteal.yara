@@ -29,6 +29,7 @@ rule PWS_Win32_Lvsteal_A_2147760653_0
         $x_1_14 = "Chrome_WidgetWin_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 6 of ($x_1_*))) or
             (all of ($x*))

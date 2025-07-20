@@ -41,6 +41,7 @@ rule Worm_Win32_DuiskBot_2147597620_0
         $x_5_27 = {3a 25 6c 73 00 00 50 61 73 73 70 6f 72 74 2e 4e}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 6 of ($x_1_*))) or
             ((4 of ($x_2_*) and 4 of ($x_1_*))) or

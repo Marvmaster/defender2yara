@@ -20,6 +20,7 @@ rule Backdoor_Win32_Zumamumy_A_2147610841_0
         $x_2_6 = {8b 4d dc 8b 51 0c 8b 85 08 ff ff ff 8b 14 02 8d 8d 40 ff ff ff ff 15 ?? ?? ?? 00 c7 45 fc 05 00 00 00 8b 8d 40 ff ff ff 51 68 ?? ?? ?? 00 ff 15 ?? ?? ?? 00 85 c0 0f 85 d5 05 00 00 c7 45 fc 06 00 00 00 8d 55 c4 52 8b 45 08 8b 08 8b 55 08 52 ff 91 10 07 00 00 89 85 54 ff ff ff 83 bd 54 ff ff ff 00 7d 23 68 10 07 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

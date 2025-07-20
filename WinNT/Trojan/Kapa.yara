@@ -16,6 +16,7 @@ rule Trojan_WinNT_Kapa_A_2147633596_0
         $x_1_2 = "NtQuerySystemInformation" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

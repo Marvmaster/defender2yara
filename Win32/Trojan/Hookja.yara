@@ -17,6 +17,7 @@ rule Trojan_Win32_Hookja_A_2147605973_0
         $x_1_3 = "AppInit_DLLs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

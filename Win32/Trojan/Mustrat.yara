@@ -18,6 +18,7 @@ rule Trojan_Win32_Mustrat_A_2147684943_0
         $x_3_4 = {c7 44 24 10 40 00 00 00 c7 44 24 0c 00 30 00 00 8b 95 ?? ?? ?? ?? 8b 42 50 89 44 24 08 8b 42 34 89 44 24 04 8b 85 ?? ?? ?? ?? 89 04 24 e8}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

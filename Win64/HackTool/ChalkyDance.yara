@@ -16,6 +16,7 @@ rule HackTool_Win64_ChalkyDance_A_2147932406_0
         $x_10_1 = {4c 8b 40 30 ba ?? 00 00 00 b9 40 00 00 00 41 ff d0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_MSIL_Small_CK_2147776157_0
         $x_2_6 = "SizeOfRawData" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_MSIL_Small_AT_2147779309_0
         $x_3_6 = "FromBase64String" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 2 of ($x_3_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_3_*))) or
@@ -79,6 +81,7 @@ rule Trojan_MSIL_Small_CHR_2147780444_0
         $x_3_6 = "Z2k/Server" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_3_*))) or
             ((1 of ($x_10_*) and 2 of ($x_3_*))) or
@@ -112,6 +115,7 @@ rule Trojan_MSIL_Small_GU_2147781328_0
         $x_2_9 = "MemoryStream" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +142,7 @@ rule Trojan_MSIL_Small_FAC_2147781333_0
         $x_4_6 = "DownloadData" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +167,7 @@ rule Trojan_MSIL_Small_GB_2147787405_0
         $x_1_4 = "Rw3n6EZIW3XXSwRLNN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +195,7 @@ rule Trojan_MSIL_Small_BZ_2147793430_0
         $x_1_7 = "FetchFiles" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +221,7 @@ rule Trojan_MSIL_Small_CPP_2147798651_0
         $x_1_5 = "C:\\ProgramData\\Stub.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -237,6 +245,7 @@ rule Trojan_MSIL_Small_FB_2147808806_0
         $x_3_3 = "Cheat" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -262,6 +271,7 @@ rule Trojan_MSIL_Small_EC_2147838537_0
         $x_1_5 = "SymmetricAlgorithm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +296,7 @@ rule Trojan_MSIL_Small_EC_2147838537_1
         $x_1_4 = "HttpServerUtility" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -310,6 +321,7 @@ rule Trojan_MSIL_Small_EC_2147838537_2
         $x_1_4 = "[+] URL/PATH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -335,6 +347,7 @@ rule Trojan_MSIL_Small_EC_2147838537_3
         $x_1_5 = "HttpServerUtility" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -361,6 +374,7 @@ rule Trojan_MSIL_Small_EC_2147838537_4
         $x_1_6 = "PSHostUserInterface" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -382,6 +396,7 @@ rule Trojan_MSIL_Small_EA_2147842760_0
         $x_5_1 = {72 f9 01 00 70 0a 73 34 00 00 0a 0b 73 29 00 00 0a 25 72 e9 00 00 70 6f 2a 00 00 0a 00 25 72 a0 03 00 70 06 72 b6 03 00 70}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -403,6 +418,7 @@ rule Trojan_MSIL_Small_PSKW_2147845494_0
         $x_2_1 = {6f 57 00 00 0a 28 ?? ?? ?? 0a 18 16 15 28 ?? ?? ?? 0a 26 28 06 00 00 06 6f ?? ?? ?? 0a 72 ee 01 00 70 72 32 02 00 70 6f ?? ?? ?? 0a 00 28 06 00 00 06 6f 5a 00 00 0a 72 64 02 00 70 72 a4 02 00 70 6f ?? ?? ?? 0a 00 00 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -428,6 +444,7 @@ rule Trojan_MSIL_Small_EM_2147847284_0
         $x_1_5 = "MicrosoftApi.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -450,6 +467,7 @@ rule Trojan_MSIL_Small_CXRM_2147847847_0
         $x_1_2 = "Owtwhzdlif" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -472,6 +490,7 @@ rule Trojan_MSIL_Small_SPWR_2147889141_0
         $x_1_2 = "discosDuros" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -493,6 +512,7 @@ rule Trojan_MSIL_Small_PTDW_2147898911_0
         $x_2_1 = {de 91 f9 97 47 77 5a 19 3b 90 c6 7b 37 6a 66 df c9 78}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -515,6 +535,7 @@ rule Trojan_MSIL_Small_RKAA_2147915865_0
         $x_2_2 = {0a 13 05 11 05 28 ?? 00 00 06 6f ?? 00 00 0a 74 ?? 00 00 1b 13 06 28 ?? 00 00 0a 72 ?? 00 00 70 7e ?? 00 00 04 28 ?? 00 00 0a 28 ?? 00 00 0a 17 73 ?? 00 00 0a 13 07 11 07 11 06 16 11 06 8e 69 6f ?? 00 00 0a 00 11 07}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -540,6 +561,7 @@ rule Trojan_MSIL_Small_SK_2147918468_0
         $x_1_5 = "INFARCTED LAUNCHER 2K24" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

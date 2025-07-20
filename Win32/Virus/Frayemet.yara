@@ -17,6 +17,7 @@ rule Virus_Win32_Frayemet_A_2147649550_0
         $x_1_2 = "SysInit.pas" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

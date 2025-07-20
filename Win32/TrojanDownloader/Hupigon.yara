@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Hupigon_A_2147627042_0
         $x_1_3 = "http://www.sxbattery.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_Win32_Hupigon_B_2147627044_0
         $x_1_1 = {60 00 10 ff 15 08 50 00 10 8b f8 68 ?? 60 00 10 57 ff 15 04 50 00 10 8b f0 6a 00 6a 00 68 ?? 60 00 10 68 ?? 60 00 10 6a 00 ff d6 83 c4 14 85 c0 74 e7 57 ff 15 00 50 00 10 5f 5e c3 8b 44 24 08 83 f8 01 0f 85 88 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanDownloader_Win32_Hupigon_E_2147654142_0
         $x_1_4 = {8b 8e 68 a4 00 00 83 c4 1c 89 84 8e 28 08 00 00 ff 86 68 a4 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

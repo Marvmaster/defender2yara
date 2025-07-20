@@ -18,6 +18,7 @@ rule Trojan_Win32_BrowserPatch_2147742087_0
         $x_1_3 = {60 8b 45 3c 8b 4c 05 78 03 cd 8b 59 20 03 dd 33 ff 47 8b 34 bb 03 f5 99 0f be 06 3a c4 74 08 c1 ca 07 03 d0 46 eb f1 3b 54 24 1c 75 e4 8b 59 24 03 dd 66 8b 3c 7b 8b 59 1c 03 dd 03 2c bb 64 e8 00 00 00 00 58 83 c0 0c 50 ff d5 e9 c4 58 f4 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Cidox_GNN_2147932766_0
         $x_10_1 = {8a 00 88 45 e4 a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 8a 00 32 45 e4 8b 0d ?? ?? ?? ?? 03 0d ?? ?? ?? ?? 88 01}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

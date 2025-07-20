@@ -18,6 +18,7 @@ rule Backdoor_Win32_Gspy_A_2147651512_0
         $x_1_4 = "screenshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Backdoor_Win32_Gspy_B_2147666754_0
         $x_40_8 = "screenshots_by_request\\screenshot.jpg" wide //weight: 40
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_300_*) and 3 of ($x_40_*))) or
             ((1 of ($x_300_*) and 1 of ($x_100_*) and 1 of ($x_40_*))) or

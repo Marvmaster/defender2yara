@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Complan_2147575172_0
         $x_1_7 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

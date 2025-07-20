@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Noitap_A_2147646047_0
         $x_1_3 = {6a 3f 56 e8 ?? ?? ?? ?? 83 c4 1c bb ?? ?? ?? ?? 85 c0 74 05 bb ?? ?? ?? ?? e8 ?? ?? ?? ?? 50 56 8d 54 24 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

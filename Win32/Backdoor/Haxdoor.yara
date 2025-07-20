@@ -22,6 +22,7 @@ rule Backdoor_Win32_Haxdoor_2147789787_0
         $x_1_8 = "NdisRegisterProtocol" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -57,6 +58,7 @@ rule Backdoor_Win32_Haxdoor_2147789787_1
         $x_1_13 = "PsLookupProcessByProcessId" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*) and 3 of ($x_2_*))) or
@@ -132,6 +134,7 @@ rule Backdoor_Win32_Haxdoor_2147789787_2
         $x_4_43 = {3d 50 72 69 6f 75 4d 6a 00 6a 04 8d 85}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((12 of ($x_1_*))) or
             ((1 of ($x_2_*) and 10 of ($x_1_*))) or
@@ -279,6 +282,7 @@ rule Backdoor_Win32_Haxdoor_2147792327_0
         $x_4_49 = {3d 50 72 69 6f 75 4d 6a 00 6a 04 8d 85}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((12 of ($x_1_*))) or
             ((1 of ($x_2_*) and 10 of ($x_1_*))) or
@@ -382,6 +386,7 @@ rule Backdoor_Win32_Haxdoor_A_2147792385_0
         $x_3_4 = {ba 36 36 36 00 ff d0 61 c9 17 00 8d 86 ?? ?? 40 00 50 ff 96 ?? ?? 40 00 0b c0 74 0d 03 86 ?? ?? 40 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -414,6 +419,7 @@ rule Backdoor_Win32_Haxdoor_B_2147792390_0
         $x_3_8 = {d1 ef 6a 18 56 e8 ?? ?? ?? ?? 83 c6 18 4f 75 f2 ff 35 ?? ?? ?? ?? 81 2c 24 ?? ?? ?? ?? c3}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -446,6 +452,7 @@ rule Backdoor_Win32_Haxdoor_C_2147792393_0
         $x_1_7 = {89 53 be af 9b 4a aa e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -475,6 +482,7 @@ rule Backdoor_Win32_Haxdoor_D_2147792394_0
         $x_1_2 = {75 f2 ff 35 04 10 40 00 81 2c 24 ?? ?? ?? ?? ff 0c 24 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -511,6 +519,7 @@ rule Backdoor_Win32_Haxdoor_BA_2147792420_0
         $x_1_17 = "Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\WinRar.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 4 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))

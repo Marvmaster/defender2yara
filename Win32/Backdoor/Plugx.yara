@@ -26,6 +26,7 @@ rule Backdoor_Win32_Plugx_A_2147657370_0
         $x_2_12 = "TelnetT2" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 5 of ($x_2_*))) or
             ((3 of ($x_5_*) and 3 of ($x_2_*))) or
@@ -63,6 +64,7 @@ rule Backdoor_Win32_Plugx_A_2147657370_1
         $x_1_13 = {5c 00 62 00 75 00 67 00 2e 00 6c 00 6f 00 67 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -91,6 +93,7 @@ rule Backdoor_Win32_Plugx_C_2147663455_0
         $x_1_3 = {6a 40 68 00 10 00 00 68 ?? ?? 00 00 6a 00 ff d3 8b f0 56 68 ?? ?? 00 00 68 ?? ?? 40 00 e8 67 fa ff ff 8b f8 6a 40 68 00 10 00 00 57 6a 00 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -122,6 +125,7 @@ rule Backdoor_Win32_Plugx_H_2147684715_0
         $x_10_12 = {80 3c 07 44 75 ?? 80 7c 07 01 5a 75 ?? 80 7c 07 02 4a 75 ?? 80 7c 07 03 53}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -147,6 +151,7 @@ rule Backdoor_Win32_Plugx_A_2147684941_0
         $x_1_2 = {c6 06 68 b0 ff 88 46 01 88 46 02 88 46 03 88 46 04 c6 46 05 68 b8 ?? ?? ?? ?? 88 46 06 b8 ?? ?? ?? ?? c1 e8 08 88 46 07 b9 ?? ?? ?? ?? c1 e9 10 88 4e 08 ba ?? ?? ?? ?? c1 ea 18 88 56 09 8d 44 24 ?? 50 c6 46 0a c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +175,7 @@ rule Backdoor_Win32_Plugx_I_2147686804_0
         $x_1_4 = {68 00 00 00 80 57 ff 15 ?? ?? 00 10 83 f8 ff 74 2f 56 8d 4d fc 51 53 57 50 ff 15 ?? ?? 00 10 85 c0 74 1d 53 56 57 6a 00 ff 55 ?? 5f 5e 5f 8b 35 ?? ?? 00 10 6a ff ff d6 6a ff ff d6 6a ff ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -208,6 +214,7 @@ rule Backdoor_Win32_Plugx_B_2147686805_0
         $x_1_18 = "LdrLoadShellcode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -285,6 +292,7 @@ rule Backdoor_Win32_Plugx_2147687509_0
         $x_1_2 = {68 2c 20 00 10 8d 04 45 0a 30 00 10 50 ff 15 04 20 00 10 6a 40 68 00 10 00 00 bf 00 00 10 00 57 53 ff 15 08 20 00 10 3b c3 89 45 fc 74 41 53 53 6a 03 53 6a 01 68 00 00 00 80 56 ff 15 0c 20 00 10 83 f8 ff 74 29 53 8d 4d f8 51 57 ff 75 fc 50 ff 15 10 20 00 10 85 c0 74 15 ff 55 fc 8b 35 14 20 00 10 6a ff ff d6 6a ff ff d6 6a ff ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -308,6 +316,7 @@ rule Backdoor_Win32_Plugx_K_2147688609_0
         $x_10_3 = "{B28E0E78-882D-403c-AF4E-BDEC9C8FA37B}" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -332,6 +341,7 @@ rule Backdoor_Win32_Plugx_K_2147688609_1
         $x_1_4 = {8a 4f 01 47 84 c9 75 f8 8b c8 c1 e9 02 8b f2 f3 a5 8b c8 83 e1 03 8d 85 ?? ?? ?? ?? f3 a4 8d 48 01 8a 10 40 84 d2 75 ?? 2b c1 80 ?? ?? ?? ?? ?? ff 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -353,6 +363,7 @@ rule Backdoor_Win32_Plugx_M_2147690074_0
         $x_1_2 = "shellcode.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -377,6 +388,7 @@ rule Backdoor_Win32_Plugx_N_2147691932_0
         $x_1_4 = "Self Process Id:%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -405,6 +417,7 @@ rule Backdoor_Win32_Plugx_O_2147693884_0
         $x_1_8 = {8b 4d f8 8b 41 24 8b 55 fc 8b 49 1c 8d 14 50 8b 45 f4 0f b7 14 02 8d 14 91 8b 34 02 03 f0 eb 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -437,6 +450,7 @@ rule Backdoor_Win32_Plugx_S_2147696304_0
         $x_1_8 = {5b 00 25 00 30 00 2e 00 34 00 64 00 2d 00 25 00 30 00 2e 00 32 00 64 00 2d 00 25 00 30 00 2e 00 32 00 64 00 5d 00 2d 00 5b 00 25 00 30 00 2e 00 32 00 64 00 3a 00 25 00 30 00 2e 00 32 00 64 00 3a 00 25 00 30 00 2e 00 32 00 64 00 5d 00 20 00 65 00 72 00 63 00 6f 00 64 00 65 00 3d 00 25 00 30 00 2e 00 38 00 64 00 20 00 70 00 69 00 64 00 3d 00 25 00 30 00 2e 00 38 00 64 00 20 00 74 00 69 00 64 00 3d 00 25 00 30 00 2e 00 38 00 64 00 20 00 7c 00 7c 00 25 00 25 00 73 00 7c 00 7c 00 25 00 53 00 3d 00 3e 00 25 00 30 00 2e 00 38 00 64 00 20 00 65 00 72 00 69 00 6e 00 66 00 6f 00 3d 00 25 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -459,6 +473,7 @@ rule Backdoor_Win32_Plugx_T_2147697307_0
         $x_1_3 = {4d 00 63 00 55 00 74 00 69 00 6c 00 2e 00 64 00 6c 00 6c 00 2e 00 70 00 69 00 6e 00 67 00 00 00 43 72 65 00 61 74 65 00 46 69 6c 00 65 57 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -487,6 +502,7 @@ rule Backdoor_Win32_Plugx_J_2147707049_0
         $x_1_8 = {53 72 76 43 6f 64 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -512,6 +528,7 @@ rule Backdoor_Win32_Plugx_AC_2147712565_0
         $x_1_3 = "\\work\\plug4.0(shellcode)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -537,6 +554,7 @@ rule Backdoor_Win32_Plugx_L_2147712599_0
         $x_1_5 = "\\\\.\\PIPE\\RUN_AT_SESSION(%d)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -563,6 +581,7 @@ rule Backdoor_Win32_Plugx_L_2147712599_1
         $x_1_6 = {80 7c 38 14 a3 75 07 80 7c 38 19 e8 74 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -587,6 +606,7 @@ rule Backdoor_Win32_Plugx_Z_2147723848_0
         $x_1_5 = {64 3a 5c 77 6f 72 6b 5c 50 6c 75 67 33 2e 30 28 47 66 29 [0-4] 5c 53 68 65 6c 6c 36 5c 52 65 6c 65 61 73 65 5c 53 68 65 6c 6c 36 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -609,6 +629,7 @@ rule Backdoor_Win32_Plugx_AB_2147730069_0
         $x_1_3 = "\\\\.\\pipe\\2[12345678]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

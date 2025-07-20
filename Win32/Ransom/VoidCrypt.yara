@@ -22,6 +22,7 @@ rule Ransom_Win32_VoidCrypt_SK_2147753709_0
         $x_1_7 = "netsh firewall set opmode mode=disable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -52,6 +53,7 @@ rule Ransom_Win32_VoidCrypt_PA_2147767038_0
         $x_1_7 = "!!! Your Files Has Been Encrypted !!!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Ransom_Win32_VoidCrypt_PAA_2147785235_0
         $x_5_5 = "Decrypt-info.txt" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -104,6 +107,7 @@ rule Ransom_Win32_VoidCrypt_PB_2147816454_0
         $x_1_4 = "All Your Files Has Been Encrypted" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +132,7 @@ rule Ransom_Win32_VoidCrypt_PC_2147818151_0
         $x_1_4 = "All your files are encrypted due to security problem with your computer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -33,6 +33,7 @@ rule Trojan_Win32_FoggyBrass_A_2147724719_0
         $x_1_18 = {be 06 00 00 c7 ?? ?? ?? ?? ?? d9 95 06 00 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -59,6 +60,7 @@ rule Trojan_Win32_FoggyBrass_B_2147724720_0
         $x_1_2 = "4s3C5KDMlxiaJ1tObXcQr-eo2G zYA89VfL/qZWI0kNTU\\gyFSdnh7B6_mjHwuPv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

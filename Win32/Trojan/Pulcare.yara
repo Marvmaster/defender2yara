@@ -21,6 +21,7 @@ rule Trojan_Win32_Pulcare_A_2147692228_0
         $x_1_7 = {6f 00 70 00 65 00 6e 00 ?? ?? ?? ?? 2f 00 73 00 20 00 2f 00 75 00 20 00 22 00 25 00 73 00 22 00 ?? ?? ?? ?? 72 00 65 00 67 00 73 00 76 00 72 00 33 00 32 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

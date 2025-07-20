@@ -21,6 +21,7 @@ rule Backdoor_Win32_Unskal_A_2147688510_0
         $x_5_7 = {80 7d b4 55 0f 84 79 06 00 00 80 7d b4 69 75 19 e9 65 06 00 00 c6 45 b4 64 b1 6c e9 87 01 00 00 c6 45 b4 6f e9 5e 06 00 00 80 7d b4 70 7f 52 80 7d b4 6f 0f 8d f3 00 00 00 80 7d b4 63 74 74}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -49,6 +50,7 @@ rule Backdoor_Win32_Unskal_B_2147689412_0
         $x_1_5 = {5c 6e 73 73 6b 72 6e 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Backdoor_Win32_Unskal_C_2147693061_0
         $x_1_7 = "[PrintScreen]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*))) or
             (all of ($x*))
@@ -99,6 +102,7 @@ rule Backdoor_Win32_Unskal_D_2147694030_0
         $x_1_2 = {00 04 75 28 8b 45 fc 33 d2 b9 b0 04 00 00 f7 f1 85 d2 75 05 e8 ?? ?? ?? ?? 6a 64 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

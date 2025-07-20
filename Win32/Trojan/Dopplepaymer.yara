@@ -20,6 +20,7 @@ rule Trojan_Win32_Dopplepaymer_KR_2147761827_0
         $x_1_5 = "IrwhEbzeh.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

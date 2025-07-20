@@ -24,6 +24,7 @@ rule Trojan_Win32_Fraudropper_A_2147796000_0
         $x_1_9 = "2147483648" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

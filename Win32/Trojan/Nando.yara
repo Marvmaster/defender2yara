@@ -23,6 +23,7 @@ rule Trojan_Win32_Nando_A_2147712129_0
         $x_1_8 = "\\Deonan\\Release\\Deonan.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

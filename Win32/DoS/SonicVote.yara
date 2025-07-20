@@ -22,6 +22,7 @@ rule DoS_Win32_SonicVote_A_2147813997_0
         $x_1_7 = "<p>To prove that we have a decryptor send us any encrypted file (less than 650 kbytes) and we'll send you it back being decrypted." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

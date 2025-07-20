@@ -25,6 +25,7 @@ rule Ransom_Win32_DarkAngels_MA_2147901618_0
         $x_1_10 = "files are encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_3_*) and 4 of ($x_1_*))) or
             ((5 of ($x_3_*) and 1 of ($x_1_*))) or

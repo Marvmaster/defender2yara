@@ -22,6 +22,7 @@ rule Spammer_Win32_Sispotat_A_2147706916_0
         $x_1_8 = {2f 61 74 61 63 68 2f 61 74 61 63 68 2e 70 68 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

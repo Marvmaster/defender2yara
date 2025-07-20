@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Eterock_A_2147721503_0
         $x_1_5 = "\\dotnetfx.exe /q:a /c:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

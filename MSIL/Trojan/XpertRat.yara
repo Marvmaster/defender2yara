@@ -23,6 +23,7 @@ rule Trojan_MSIL_XpertRat_MA_2147795094_0
         $x_1_8 = "CallNextHookEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_MSIL_XpertRat_MB_2147796707_0
         $x_1_8 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

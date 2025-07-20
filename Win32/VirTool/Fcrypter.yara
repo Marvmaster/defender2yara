@@ -16,6 +16,7 @@ rule VirTool_Win32_Fcrypter_A_2147605032_0
         $x_1_1 = {68 90 81 3c 24 68 90 83 c4 28 68 74 02 eb ff 68 80 38 90 90 68 83 c0 07 40 68 90 36 8b 03 54 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule VirTool_Win32_Fcrypter_B_2147607453_0
         $x_1_1 = {59 83 74 0c 03 ?? e2 f9 c3 10 00 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 54 68 ?? 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

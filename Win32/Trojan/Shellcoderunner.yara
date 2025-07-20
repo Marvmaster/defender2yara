@@ -16,6 +16,7 @@ rule Trojan_Win32_Shellcoderunner_SCRT_2147939380_0
         $x_2_1 = {5e 5b 8b 4d fc 5f e8 ?? ?? ?? 00 c9 c2 08 00 ff b5 e4 fb ff ff ff 15 ?? ?? ?? 00 57 ff b5 e0 fb ff ff ff 15 ?? ?? ?? 00 53 ff 15 ?? ?? ?? 00 59 33 c0 eb cc}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Shellcoderunner_PGSR_2147944715_0
         $x_5_1 = {41 00 f8 08 41 00 30 22 41 00 18 22 41 00 00 22}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

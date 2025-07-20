@@ -17,6 +17,7 @@ rule Trojan_MSIL_Msilheracles_PGM_2147939899_0
         $x_4_2 = "eOmnWaBTvMCwNFQcwlZASvyEWJR" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_Msilheracles_PGM_2147939899_1
         $x_1_3 = "FD74AFFB3FADC2FF30B30C2053C3169175F48BD3B282B2E7A0FC6E436F39B366" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

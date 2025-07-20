@@ -15,6 +15,7 @@ rule Ransom_Win32_Anunau_A_2147723865_0
         $x_1_1 = {44 00 65 00 76 00 69 00 63 00 65 00 49 00 44 00 00 00 00 00 01 00 00 00 44 69 73 61 62 6c 65 41 6e 74 69 53 70 79 77 61 72 65 00 00 44 69 73 61 62 6c 65 52 6f 75 74 69 6e 65 6c 79 54 61 6b 69 6e 67 41 63 74 69 6f 6e 00 00 00 00 53 4f 46 54}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win32_Anunau_A_2147723865_1
         $x_2_11 = {74 09 c7 45 f0 66 00 00 00 eb 07 c7 45 f0 73 00 00 00 ff 75 f0 ff 35 ?? ?? ?? ?? ff 35 ?? ?? ?? ?? 68}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

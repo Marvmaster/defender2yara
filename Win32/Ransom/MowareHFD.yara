@@ -20,6 +20,7 @@ rule Ransom_Win32_MowareHFD_A_2147722800_0
         $x_100_5 = "MoWare H.F.D.exe" wide //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

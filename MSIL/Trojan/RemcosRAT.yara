@@ -25,6 +25,7 @@ rule Trojan_MSIL_RemcosRAT_RAR_2147795415_0
         $x_1_10 = {00 4d 65 6d 6f 72 79 53 74 72 65 61 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +59,7 @@ rule Trojan_MSIL_RemcosRAT_RAS_2147795416_0
         $x_1_13 = {00 49 6e 76 6f 6b 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +89,7 @@ rule Trojan_MSIL_RemcosRAT_RPB_2147795762_0
         $x_1_9 = {00 43 72 65 61 74 65 44 65 63 72 79 70 74 6f 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +112,7 @@ rule Trojan_MSIL_RemcosRAT_NV_2147820224_0
         $x_1_2 = {0d 16 13 06 2b 1a 00 09 11 06 08 11 06 08 8e 69 5d 91 03 11 06 91 61 d2 9c 00 11 06 17 58 13 06 11 06 03 8e 69 fe 04 13 07 11 07 2d d9 09 13 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +136,7 @@ rule Trojan_MSIL_RemcosRAT_NT_2147820436_0
         $x_1_3 = "SmallestEnclosingCircle.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +164,7 @@ rule Trojan_MSIL_RemcosRAT_AH_2147823787_0
         $x_1_7 = "get_Assembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +189,7 @@ rule Trojan_MSIL_RemcosRAT_NRY_2147840040_0
         $x_1_4 = "Computer Sentinel" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +213,7 @@ rule Trojan_MSIL_RemcosRAT_NRL_2147840170_0
         $x_1_3 = "Jgentidkr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -228,6 +236,7 @@ rule Trojan_MSIL_RemcosRAT_NRQ_2147841599_0
         $x_1_2 = "LkXE.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +260,7 @@ rule Trojan_MSIL_RemcosRAT_NRA_2147842958_0
         $x_1_3 = "Azste" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -273,6 +283,7 @@ rule Trojan_MSIL_RemcosRAT_NRA_2147842958_1
         $x_1_2 = "eZYWwEJRnBprivate" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -295,6 +306,7 @@ rule Trojan_MSIL_RemcosRAT_NR_2147850782_0
         $x_1_2 = "Bnniydtd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -317,6 +329,7 @@ rule Trojan_MSIL_RemcosRAT_NR_2147850782_1
         $x_1_2 = "BHHHG66" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -338,6 +351,7 @@ rule Trojan_MSIL_RemcosRAT_A_2147853202_0
         $x_2_1 = {00 00 0a 09 17 6f ?? 00 00 0a 09 16 6f ?? 00 00 0a 09 0b 07 28 ?? 00 00 0a 0c 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -360,6 +374,7 @@ rule Trojan_MSIL_RemcosRAT_NSA_2147890298_0
         $x_1_2 = "New Quote Order" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -382,6 +397,7 @@ rule Trojan_MSIL_RemcosRAT_NRC_2147890299_0
         $x_1_2 = "RandomMaker.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -404,6 +420,7 @@ rule Trojan_MSIL_RemcosRAT_NRR_2147892111_0
         $x_1_2 = "5Assembled.Program" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -426,6 +443,7 @@ rule Trojan_MSIL_RemcosRAT_NEE_2147892306_0
         $x_1_2 = "Njswpsg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -449,6 +467,7 @@ rule Trojan_MSIL_RemcosRAT_AC_2147900750_0
         $x_1_3 = {d0 0e 00 00 01 28 16 00 00 06 11 02 74 08 00 00 01 6f 09 00 00 0a 28 03 00 00 2b 72 3f 00 00 70 28 17 00 00 06 28 04 00 00 2b 6f 0c 00 00 0a 26}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -470,6 +489,7 @@ rule Trojan_MSIL_RemcosRAT_PD_2147905833_0
         $x_1_1 = {6f 26 00 00 0a 02 0e 04 03 8e 69 6f 27 00 00 0a 0a 06 0b 2b 00 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -501,6 +521,7 @@ rule Trojan_MSIL_RemcosRAT_B_2147912633_0
         $x_2_11 = "i9JrFHxVPzCDUQHTodrH3A==" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_2_*))) or
             ((1 of ($x_20_*))) or
@@ -526,6 +547,7 @@ rule Trojan_MSIL_RemcosRAT_SDRA_2147915637_0
         $x_1_1 = {1f 16 5d 91 13 10 11 06 06 91 11 10 61 13 11 06 18 58 17 59 11 0a 5d 13 12}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -547,6 +569,7 @@ rule Trojan_MSIL_RemcosRAT_SGRG_2147917283_0
         $x_1_1 = {5d 08 58 08 5d 13 09 07 11 09 91 11 06 61 11 08 59 20 00 02 00 00 58 20 00 01 00 00 5d 20 00 04 00 00 58 20 00 02 00 00 5d 13 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -573,6 +596,7 @@ rule Trojan_MSIL_RemcosRAT_C_2147917667_0
         $x_2_6 = "ToCharArray" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -594,6 +618,7 @@ rule Trojan_MSIL_RemcosRAT_SCPF_2147919024_0
         $x_1_1 = {07 09 11 04 6f ?? ?? ?? 0a 13 08 08 12 08 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 11 04 17 58 13 04 00 11 04 07 6f ?? ?? ?? 0a fe 04 13 09 11 09 2d cf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -616,6 +641,7 @@ rule Trojan_MSIL_RemcosRAT_SPRT_2147923820_0
         $x_3_2 = {03 11 06 11 07 11 08 94 91 6f ?? 00 00 0a 00 00 11 08 17 58 13 08 11 08 09 19 28 ?? 00 00 0a fe 04 13 09 11 09}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -637,6 +663,7 @@ rule Trojan_MSIL_RemcosRAT_MEL_2147925578_0
         $x_1_1 = {09 11 0a 07 11 0a 91 11 04 11 0b 95 61 d2 9c 11 0a 17 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -658,6 +685,7 @@ rule Trojan_MSIL_RemcosRAT_SYDF_2147927417_0
         $x_4_1 = {73 27 00 00 0a 13 18 00 11 18 17 6f ?? 00 00 0a 00 11 18 18 6f ?? 00 00 0a 00 11 18 20 00 01 00 00 6f ?? 00 00 0a 00 11 18 20 80 00 00 00 6f ?? 00 00 0a 00 11 18 11 08 11 09 6f ?? 00 00 0a 13 19 00 11 19 03 16 03 8e 69 6f ?? 00 00 0a 0b de 38}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -680,6 +708,7 @@ rule Trojan_MSIL_RemcosRAT_SZJF_2147927544_0
         $x_4_2 = {26 00 03 19 8d ?? 00 00 01 25 16 11 07 16 91 9c 25 17 11 07 17 91 9c 25 18 11 07 18 91 9c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -701,6 +730,7 @@ rule Trojan_MSIL_RemcosRAT_SUPD_2147930729_0
         $x_1_1 = {02 19 8d 84 00 00 01 25 16 0f 01 28 ?? 00 00 0a 9c 25 17 0f 01 28 ?? 00 00 0a 9c 25 18 0f 01 28 ?? 00 00 0a 9c 6f ?? 00 00 0a 00 00 2b 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -724,6 +754,7 @@ rule Trojan_MSIL_RemcosRAT_SFDA_2147936936_0
         $x_1_3 = "GetPixel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -745,6 +776,7 @@ rule Trojan_MSIL_RemcosRAT_WL_2147940241_0
         $x_1_1 = {13 08 07 61 11 08 61 13 09 08 11 07 11 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -768,6 +800,7 @@ rule Trojan_MSIL_RemcosRAT_BSA_2147942407_0
         $x_14_3 = {45 78 65 63 75 74 65 00 70 61 74 68 00 70 61 79 6c 6f 61 64}  //weight: 14, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -789,6 +822,7 @@ rule Trojan_MSIL_RemcosRAT_SF_2147945083_0
         $x_1_1 = {63 d1 13 15 11 1d 11 09 91 13 2a 11 1d 11 09 11 2a 11 22 61 11 1f 19 58 61 11 2b 61 d2 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

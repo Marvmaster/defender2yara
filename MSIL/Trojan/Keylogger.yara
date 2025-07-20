@@ -21,6 +21,7 @@ rule Trojan_MSIL_Keylogger_SC_2147745490_0
         $x_1_6 = "DebuggerNonUserCode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_MSIL_Keylogger_AA_2147748022_0
         $x_1_7 = "SteamService.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_MSIL_Keylogger_VN_2147759331_0
         $x_1_1 = {01 25 16 7e ?? ?? ?? 04 a2 25 17 7e ?? ?? ?? 04 a2 25 18 72 ?? ?? ?? 70 a2 0c 08 6f ?? ?? ?? 0a 26 16 0d 2b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_MSIL_Keylogger_KS_2147761078_0
         $x_1_4 = "EnableBotKiller" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -129,6 +133,7 @@ rule Trojan_MSIL_Keylogger_DA_2147779338_0
         $x_1_13 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -156,6 +161,7 @@ rule Trojan_MSIL_Keylogger_DC_2147779728_0
         $x_1_2 = {20 e7 03 00 00 28 02 00 00 0a 00 00 08 17 58 0c 08 1f 0f fe 04 0d 09 2d e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -182,6 +188,7 @@ rule Trojan_MSIL_Keylogger_AR_2147781318_0
         $x_4_6 = "POST" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 3 of ($x_4_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_4_*))) or
@@ -211,6 +218,7 @@ rule Trojan_MSIL_Keylogger_ADG_2147781329_0
         $x_3_5 = "GetAsyncKeyState" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -240,6 +248,7 @@ rule Trojan_MSIL_Keylogger_ADG_2147781329_1
         $x_3_9 = "MouseEnter" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 4 of ($x_3_*))) or
             ((2 of ($x_4_*) and 3 of ($x_3_*))) or
@@ -272,6 +281,7 @@ rule Trojan_MSIL_Keylogger_FGR_2147781336_0
         $x_3_6 = "spklgr.Licencia.txt" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +309,7 @@ rule Trojan_MSIL_Keylogger_FGR_2147781336_1
         $x_4_7 = "set_Credentials" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -330,6 +341,7 @@ rule Trojan_MSIL_Keylogger_ADQ_2147781338_0
         $x_3_11 = "Hacked" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -359,6 +371,7 @@ rule Trojan_MSIL_Keylogger_ADS_2147781624_0
         $x_3_9 = "MapVirtualKey" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -383,6 +396,7 @@ rule Trojan_MSIL_Keylogger_DD_2147782117_0
         $x_1_4 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -409,6 +423,7 @@ rule Trojan_MSIL_Keylogger_DE_2147787433_0
         $x_1_6 = "thekeydata.log" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -433,6 +448,7 @@ rule Trojan_MSIL_Keylogger_EY_2147788361_0
         $x_1_4 = "khaled0596@gmail.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -460,6 +476,7 @@ rule Trojan_MSIL_Keylogger_AM_2147818868_0
         $x_1_7 = "StartKeylogger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -485,6 +502,7 @@ rule Trojan_MSIL_Keylogger_PA3_2147819059_0
         $x_1_5 = "SERVER=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -512,6 +530,7 @@ rule Trojan_MSIL_Keylogger_ABS_2147829263_0
         $x_1_7 = "get_KeyboardDevice" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -538,6 +557,7 @@ rule Trojan_MSIL_Keylogger_BE_2147829930_0
         $x_1_6 = "Form1_Load" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -560,6 +580,7 @@ rule Trojan_MSIL_Keylogger_NKK_2147838500_0
         $x_1_2 = "CatHack.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -582,6 +603,7 @@ rule Trojan_MSIL_Keylogger_NKL_2147849603_0
         $x_1_2 = "Fx4beta" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -604,6 +626,7 @@ rule Trojan_MSIL_Keylogger_NKL_2147849603_1
         $x_1_2 = "SecureHorizons.g.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -626,6 +649,7 @@ rule Trojan_MSIL_Keylogger_NKL_2147849603_2
         $x_1_2 = "Anarchy.g.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -649,6 +673,7 @@ rule Trojan_MSIL_Keylogger_NKL_2147849603_3
         $x_1_3 = "n0lC45eoWgjOlr_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -675,6 +700,7 @@ rule Trojan_MSIL_Keylogger_CXFW_2147850273_0
         $x_1_6 = "del %tmp%\\sys_data_capture*" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -696,6 +722,7 @@ rule Trojan_MSIL_Keylogger_PSSV_2147851383_0
         $x_2_1 = {11 21 07 16 12 0e 7b 21 00 00 04 28 ?? 00 00 0a 06 72 2f 0f 00 70 28 ?? 00 00 0a 07 6f ?? 00 00 0a 28 ?? 00 00 0a 0a 06}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -717,6 +744,7 @@ rule Trojan_MSIL_Keylogger_PSWO_2147889555_0
         $x_2_1 = {2c 3a 00 04 28 ?? 00 00 0a 0b 07 0d 12 03 fe 16 06 00 00 01 6f ?? 00 00 0a 0c 08 28 ?? 00 00 0a 16 fe 01 13 04 11 04 2c 12 00 7e 05 00 00 04 08 28 ?? 00 00 0a 80 05 00 00 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -747,6 +775,7 @@ rule Trojan_MSIL_Keylogger_AH_2147896075_0
         $x_3_10 = "get_PrimaryScreen" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -770,6 +799,7 @@ rule Trojan_MSIL_Keylogger_ABEK_2147896491_0
         $x_1_3 = "msoklogs.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -794,6 +824,7 @@ rule Trojan_MSIL_Keylogger_ABAS_2147896516_0
         $x_1_4 = "persistence_true" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -815,6 +846,7 @@ rule Trojan_MSIL_Keylogger_NL_2147898266_0
         $x_5_1 = {7e 57 00 00 04 06 7e 56 00 00 04 02 07 6f 28 00 00 0a 7e 27 00 00 04 07 7e 27 00 00 04 8e 69 5d 91 61 28 ca 00 00 06 28 cf 00 00 06 26 07 17 58 0b 07 02}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -837,6 +869,7 @@ rule Trojan_MSIL_Keylogger_AMBF_2147898317_0
         $x_1_2 = {c7 6c 76 b4 f1 16 aa a5 a7 ea 3d 49 aa c1 87 44 77 c0 90 57 7c e7 2d d1 91 4a 80 bc df 69 fe 84 ff 5c 4b e0 49 82 b5 fe ea cd 22 e2 0f a1 9d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -862,6 +895,7 @@ rule Trojan_MSIL_Keylogger_PSA_2147899283_0
         $x_1_5 = "SymmetricAlgorithm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -885,6 +919,7 @@ rule Trojan_MSIL_Keylogger_PSBJ_2147899325_0
         $x_1_3 = "WriteLine" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -907,6 +942,7 @@ rule Trojan_MSIL_Keylogger_DB_2147899385_0
         $x_1_2 = {2d da 16 2d d7 2a 0a 2b ce 03 2b d5 06 2b d4 07 2b d4 6f ?? ?? ?? 0a 2b d4 02 2b d6 06 2b d5 06 2b d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -928,6 +964,7 @@ rule Trojan_MSIL_Keylogger_PTGC_2147900859_0
         $x_2_1 = {7e 32 00 00 04 28 ?? 00 00 06 28 ?? 00 00 0a 2c 0a 11 04 09 6f d2 00 00 0a 2b 6c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -949,6 +986,7 @@ rule Trojan_MSIL_Keylogger_LL_2147901054_0
         $x_5_1 = {02 4b 03 04 61 05 61 58 0e 07 0e 04 e0 95 58 7e 19 01 00 04 0e 06 17 59 e0 95 58 0e 05 28 ac 02 00 06 58 54}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -970,6 +1008,7 @@ rule Trojan_MSIL_Keylogger_SAA_2147927537_0
         $x_1_1 = {7b 01 00 00 04 17 73 17 00 00 0a 13 05 02 7b 01 00 00 04 18 28 10 00 00 0a 00 11 05 02 08 28 04 00 00 06 6f 18 00 00 0a 00 11 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -993,6 +1032,7 @@ rule Trojan_MSIL_Keylogger_AYA_2147930960_0
         $x_1_3 = "persistence_true" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1021,6 +1061,7 @@ rule Trojan_MSIL_Keylogger_AYA_2147930960_1
         $x_1_8 = "SELECT UUID FROM Win32_ComputerSystemProduct" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1046,6 +1087,7 @@ rule Trojan_MSIL_Keylogger_SEW_2147931943_0
         $x_1_5 = "\\GhostBrowser\\User Data\\Default\\Network\\Cookies" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1071,6 +1113,7 @@ rule Trojan_MSIL_Keylogger_AYB_2147935293_0
         $x_1_5 = "keyboardHookProc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1092,6 +1135,7 @@ rule Trojan_MSIL_Keylogger_SWR_2147939427_0
         $x_2_1 = {02 72 ff 02 00 70 08 72 07 03 00 70 28 5f 00 00 0a 11 05 6f 60 00 00 0a 28 7c 00 00 0a 28 7d 00 00 0a 02 7b 0c 00 00 04 72 15 03 00 70 28 73 00 00 0a 73 6a 00 00 0a 6f 25 00 00 06}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1114,6 +1158,7 @@ rule Trojan_MSIL_Keylogger_PGK_2147940783_0
         $x_3_2 = {6d 00 6f 00 6e 00 69 00 74 00 6f 00 72 00 69 00 6e 00 67}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

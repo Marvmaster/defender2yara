@@ -26,6 +26,7 @@ rule Trojan_Win32_Wabot_2147807389_0
         $x_1_10 = "TWarBot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_Win32_Wabot_DW_2147853115_0
         $x_1_5 = {55 a3 32 61 57 78 73 44 46 2a 50 20 2e 20 2e 2e 21 65 50 44 51 44 51 46 44 4f 75 5d 2e 20 20 20 4f 49 6f 32 75 2b 75 54 34 34 37 2e 20 20 20 20 2e 21 73 50 57 64 6c 2b 37 6e 5b 49 61 2e 20 2e 29 47 57 57 67 4f a3 24 4c 47}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Trojan_Win32_Wabot_DX_2147853275_0
         $x_1_5 = {3d 67 59 44 46 53 51 55 67 44 6a 2d 47 6b 4b 35 6f 56 68 46 4a 21 2e 20 22 21 39 6d 2a 4a 61 50 61 a3 3f 2e 20 2e 20 20 20 20 2e 3b 21 4a 61 75 24 55 46 55 2a 61 2a 6e 24 79 31 56 4f 62 7e 2e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule Trojan_Win32_Wabot_GME_2147888137_0
         $x_1_4 = "Gxebk4LheAAqbPPPFPZPZQk$" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +128,7 @@ rule Trojan_Win32_Wabot_GME_2147888137_1
         $x_1_4 = "gYDFSQUgDj-GkK5oVhFJ!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +152,7 @@ rule Trojan_Win32_Wabot_MB_2147896636_0
         $x_1_3 = {35 f0 21 6f 57 18 05 ac d8 27 8b 2a 57 04 f5 ba 34 e7 d0 f6 aa c4 a4 4a 1b bf 02 74 d3 e1 a7 d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +175,7 @@ rule Trojan_Win32_Wabot_MA_2147901377_0
         $x_10_2 = {e4 88 09 4e 5b b7 58 67 7e 1b 7c 33 b6 69 e9 50 b1 94 fe 8a a9 b7 c9 77 23 2d ae e0 b5 eb 55 28 b6 5e 38 1d f4 64 a2 d2 c8 20 0e 86 25 be 34 ad 83 74 26 90 bc 41 50 39 3c 44 50 80 14 ab d4 83}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -192,6 +199,7 @@ rule Trojan_Win32_Wabot_DY_2147908214_0
         $x_1_3 = "Click to break in debugger!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +222,7 @@ rule Trojan_Win32_Wabot_SCP_2147944466_0
         $x_2_2 = {67 56 61 49 6c b2 bb 4e 1a 93 7a 65 bc 9c f4 f5 58 93 78 f5 ce 83 89 7d 32 62 d3 c3 ec 2c b1 b9 69 d2 4c 73 79 bc bb 61 2b 8b eb 1e 0c c9 ae 29 99 c1 3c 76 0e 8c 79 6f 52 62 e1 0b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             ((1 of ($x_3_*))) or

@@ -19,6 +19,7 @@ rule Trojan_Win64_CSInject_AW_2147836669_0
         $x_1_4 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

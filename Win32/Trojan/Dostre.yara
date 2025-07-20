@@ -17,6 +17,7 @@ rule Trojan_Win32_Dostre_CA_2147812212_0
         $x_1_2 = "%s.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

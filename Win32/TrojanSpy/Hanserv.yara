@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Hanserv_A_2147659388_0
         $x_1_6 = {66 65 66 64 61 73 66 64 61 73 66 64 61 71 2e 68 61 6e 6d 61 69 6c 2e 6e 65 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or

@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Eltusk_A_2147624626_0
         $x_1_4 = "st%03i00000.tmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

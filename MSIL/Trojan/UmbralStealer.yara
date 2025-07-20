@@ -18,6 +18,7 @@ rule Trojan_MSIL_UmbralStealer_SG_2147904337_0
         $x_1_3 = "$e823c15a-ddaf-4d1e-a6eb-80645d1ee735" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

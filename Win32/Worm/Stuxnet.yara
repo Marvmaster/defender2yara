@@ -23,6 +23,7 @@ rule Worm_Win32_Stuxnet_A_2147636327_0
         $n_100_9 = {8b 44 24 0c 03 c6 30 08 c1 c9 ?? 8b c1 0f af c1 33 d2 bf ?? ?? ?? ?? f7 f7 8b d1 69 d2 ?? ?? ?? ?? 8d 44 10 01 33 c8 46 3b 74 24 10 72 d2}  //weight: -100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((4 of ($x_1_*))) or
@@ -50,6 +51,7 @@ rule Worm_Win32_Stuxnet_B_2147636328_0
         $x_1_2 = {ff d7 ff d3 50 6a 01 6a 1c 56 ff d7 56 6a 02 6a 06 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

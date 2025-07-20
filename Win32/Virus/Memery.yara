@@ -18,6 +18,7 @@ rule Virus_Win32_Memery_HNS_2147905529_0
         $x_5_3 = {6f 70 65 6e 20 66 69 6c 65 20 65 72 72 6f 72 0a 00 00 00 00 6d 61 6c 6c 6f 63 20 6d 65 6d 65 72 79 20 66 61 69 6c 65 64}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Jubxi_B_2147609018_0
         $x_1_4 = {54 48 49 4e 4b 00 00 00 5c 44 72 69 76 65 72 73 5c 42 65 65 70 2e 73 79 73 00 00 00 5c 5c 2e 5c 4e 42 41 5f 53 4f 46 54}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

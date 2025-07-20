@@ -19,6 +19,7 @@ rule Ransom_Win32_GoCrypt_PAB_2147797720_0
         $x_1_4 = "All your servers and computers are encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

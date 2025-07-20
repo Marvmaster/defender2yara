@@ -23,6 +23,7 @@ rule TrojanDownloader_MSIL_Craxfora_A_2147706108_0
         $x_1_9 = "myKey123" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_5_*))) or
             (all of ($x*))

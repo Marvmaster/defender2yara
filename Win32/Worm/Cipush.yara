@@ -22,6 +22,7 @@ rule Worm_Win32_Cipush_A_2147691085_0
         $x_1_8 = {00 64 00 75 00 6d 00 70 00 65 00 72 00 2e 00 65 00 78 00 65 00 00 [0-79] 00 66 00 61 00 63 00 65 00 62 00 6f 00 6f 00 6b 00 2e 00 63 00 6f 00 6d 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

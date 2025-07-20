@@ -18,6 +18,7 @@ rule Backdoor_Win32_Ananlog_A_2147713072_0
         $x_1_4 = "rem_old_" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Backdoor_Win32_Ananlog_A_2147713072_1
         $x_1_8 = "<!-- Hosting24 Analytics Code -->" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

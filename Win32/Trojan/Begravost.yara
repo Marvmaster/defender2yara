@@ -19,6 +19,7 @@ rule Trojan_Win32_Begravost_B_2147640593_0
         $x_1_5 = "var captcha='" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -46,6 +47,7 @@ rule Trojan_Win32_Begravost_C_2147641656_0
         $x_1_4 = "hrExec=0x" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

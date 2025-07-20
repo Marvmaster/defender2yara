@@ -17,6 +17,7 @@ rule Trojan_Win64_ReverseShell_CCAG_2147889362_0
         $x_1_2 = "159.89.214.31" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_ReverseShell_ARS_2147908374_0
         $x_1_3 = {48 8b 85 b0 13 00 00 48 8b 40 10 89 c1 48 8b 85 b0 13 00 00 48 8b 50 20 48 8b 85 b8 13 00 00 41 89 c8 48 89 c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win64_ReverseShell_YAA_2147916450_0
         $x_1_3 = {c7 85 b0 02 00 00 43 72 65 61 48 8b c8 c7 85 b4 02 00 00 74 65 50 72 48 8b d8 c7 85 b8 02 00 00 6f 63 65 73 66 c7 85 bc 02 00 00 73 57}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win64_ReverseShell_YAB_2147916451_0
         $x_1_3 = "MY2APPREVERSESHELL" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_Win64_ReverseShell_HNB_2147922784_0
         $x_1_2 = {00 54 4d 5f 5f 62 51 38 39 62 61 74 33 68 55 6b 6d 4a 42 34 68 56 68 37 39 62 66 34 77 5f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Trojan_Win64_ReverseShell_PAGI_2147934757_0
         $x_2_2 = "ATTACKER_IP" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule Trojan_Win64_ReverseShell_SX_2147946572_0
         $x_5_4 = "%s_%08X.exe" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_MSIL_Heraclez_A_2147922417_0
         $x_1_2 = {00 54 6f 42 61 73 65 36 34 53 74 72 69 6e 67 00 4a 6f 69 6e 00 49 6e 74 33 32 00 42 6f 6f 6c 65 61 6e 00 49 73 4e 75 6c 6c 4f 72 45 6d 70 74 79 00 4c 6f 61 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule VirTool_Win64_Dumsesesz_A_2147890414_0
         $x_1_4 = {48 8b 44 24 48 44 8b 40 08 33 d2 b9 00 00 00 02 48 8b 44 24 48 ff ?? ?? ?? ?? ?? 48 89 44 24 60 48 83}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

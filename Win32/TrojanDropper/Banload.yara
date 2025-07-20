@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Banload_APK_2147663660_0
         $x_1_5 = "200312311311308232311316311" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanClicker_MSIL_Peadclik_A_2147683555_0
         $x_1_5 = "AddStartup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule PUA_Win32_ProduKey_Lowfi_222289_0
         $x_1_8 = {2f 72 65 6d 6f 74 65 61 6c 6c 64 6f 6d 61 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

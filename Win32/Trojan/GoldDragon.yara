@@ -37,6 +37,7 @@ rule Trojan_Win32_GoldDragon_A_2147725909_0
         $x_1_22 = {00 5c 48 4e 43 5c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 10 of ($x_1_*))) or
             ((2 of ($x_5_*) and 5 of ($x_1_*))) or

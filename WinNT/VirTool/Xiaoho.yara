@@ -18,6 +18,7 @@ rule VirTool_WinNT_Xiaoho_2147630699_0
         $x_1_4 = {56 64 a1 24 c7 45 ?? 01 00 00 8b c7 45 ?? 74 24 08 3b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

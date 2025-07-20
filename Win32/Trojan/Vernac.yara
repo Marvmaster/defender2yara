@@ -25,6 +25,7 @@ rule Trojan_Win32_Vernac_A_2147749513_0
         $x_4_10 = {55 8b 6c 24 18 e8 ?? ?? ?? ?? 8a 4c 33 04 c1 f8 03 32 c8 88 0c 2e 46 3b f7 72 ea 5d}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

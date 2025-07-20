@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_LummaC_CCJC_2147924101_0
         $x_1_1 = {13 04 11 04 09 17 73 ?? ?? ?? ?? 13 05 11 05 02 16 02 8e 69 6f ?? 00 00 0a 11 04 6f ?? 00 00 0a 10 00 de 18 11 05 2c 07 11 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_MSIL_LummaC_CCJN_2147926891_0
         $x_1_6 = "VWoyEkgPh+oToxlPlK7sVw==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanDownloader_MSIL_LummaC_CCJR_2147936690_0
         $x_5_1 = {11 36 11 2c 25 17 58 13 2c 11 18 11 14 91 11 18 11 14 17 58 91 1e 62 60 d1 9d 11 14 18 58 13 14 11 14 11 0b 32 da}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule TrojanDownloader_MSIL_LummaC_CCJS_2147936691_0
         $x_1_3 = "PayloadManager+<FetchPayloadFromNetworkAsync>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

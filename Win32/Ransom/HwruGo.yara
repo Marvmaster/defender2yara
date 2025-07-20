@@ -24,6 +24,7 @@ rule Ransom_Win32_HwruGo_SV_2147767751_0
         $x_1_9 = "So what is you next step ? Contact us for price and get the decryption software" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

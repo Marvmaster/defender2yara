@@ -19,6 +19,7 @@ rule Trojan_Win32_Remcos_SD_2147734492_0
         $x_1_4 = "remcos" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Remcos_SA_2147734757_0
         $x_1_1 = {8b cb 8b c1 83 e0 ?? 8a 44 05 ?? 30 81 ?? ?? ?? ?? 41 81 f9 ?? ?? 00 00 72 ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? b8 02 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Remcos_DL_2147740456_0
         $x_1_1 = {8b ce 2b d6 bf ?? ?? ?? ?? 8d 9b 00 00 00 00 8a 04 0a 34 ?? 88 01 41 4f 75 ?? 8d 4c 24 10 51 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Remcos_DM_2147740482_0
         $x_1_1 = {8a 1c 0a 80 f3 ?? 88 19 83 c1 01 83 ed 01 75 ?? 66 8b 0d ?? ?? ?? ?? 66 3b 0d ?? ?? ?? ?? 5f 5e 5d 5b 7e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_Win32_Remcos_DN_2147740746_0
         $x_1_1 = {f7 da 83 c2 10 33 c9 0f b6 99 00 ?? ?? ?? c1 e3 18 81 f3 00 00 00 ?? c1 eb 18 88 1c 01 41 3b ca 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_Win32_Remcos_2147740987_0
         $x_1_8 = "SHDeleteKeyW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_5_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -159,6 +165,7 @@ rule Trojan_Win32_Remcos_A_2147742123_0
         $x_1_3 = {89 38 47 83 c0 04 81 ff 00 01 00 00 75 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -213,6 +220,7 @@ rule Trojan_Win32_Remcos_PB_2147743130_0
         $x_1_5 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((3 of ($x_5_*))) or
@@ -265,6 +273,7 @@ rule Trojan_Win32_Remcos_DSK_2147743753_0
         $x_2_2 = {8a 54 24 15 33 c9 8a 44 24 17 0a 44 24 13 88 14 3e 8a 54 24 16 89 0d ?? ?? ?? ?? 88 54 3e 01 81 3d ?? ?? ?? ?? d8 01 00 00 88 44 24 17 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -292,6 +301,7 @@ rule Trojan_Win32_Remcos_SE_2147744892_0
         $x_1_8 = "Remcos" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -344,6 +354,7 @@ rule Trojan_Win32_Remcos_RO_2147745739_0
         $x_1_2 = {8a 04 0a 34 ?? 2c ?? 34 ?? 2c ?? 88 01 41 83 ee 01 75 ?? 68 de c0 ad de}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -365,6 +376,7 @@ rule Trojan_Win32_Remcos_RO_2147745739_1
         $x_1_1 = {85 db 66 81 fb ee 00 ff 37 83 ff ?? 66 83 fa ?? 66 81 fa ?? ?? 66 83 fb ?? 85 d2 81 fb ?? ?? ?? ?? 5f 66 81 fb ?? ?? 66 a9 ?? ?? 81 ff ?? ?? ?? ?? 66 3d ?? ?? 66 85 d2 83 f8 ?? 66 85 d2 66 83 ff ?? 31 f7 66 83 fa ?? 66 85 d2 81 fa ?? ?? ?? ?? 83 ff ?? 66 83 f8 ?? 85 c0 89 3c 10 85 c0 85 db}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -386,6 +398,7 @@ rule Trojan_Win32_Remcos_RS_2147747843_0
         $x_1_1 = {81 c7 dc ac 6d 01 89 39 0f b6 15 ?? ?? ?? ?? 89 3d ?? ?? ?? ?? b9 01 00 00 00 3b d5 76 ?? fe 05 ?? ?? ?? ?? 8d 74 2e 2b 83 44 24 10 04 29 4c 24 14 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -407,6 +420,7 @@ rule Trojan_Win32_Remcos_G_2147748026_0
         $x_1_1 = {c6 04 24 65 8b d3 [0-1] 8b fe 03 fa 8a 90 [0-4] [0-2] 32 14 24 88 17 40 40 [0-2] 43 81 fb 66 5e 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -430,6 +444,7 @@ rule Trojan_Win32_Remcos_RVL_2147749830_0
         $x_1_3 = {8b c8 83 e1 03 8a 4c 0d f8 30 88 ?? ?? ?? ?? 40 3d 05 5c 00 00 72 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -451,6 +466,7 @@ rule Trojan_Win32_Remcos_PFD_2147749994_0
         $x_1_1 = {8b 4d 0c 8b 45 f8 8b 14 81 8b 4d fc 33 14 8d ?? ?? ?? ?? 8b 45 08 8b 4d f8 89 14 88 83 7d fc ?? 75 ?? 33 d2 89 55 fc ff 45 f8 ff 45 fc 8b 45 f8 3b 45 10 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -479,6 +495,7 @@ rule Trojan_Win32_Remcos_JFY_2147750725_0
         $x_5_8 = "MeJ63ZW93" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
@@ -505,6 +522,7 @@ rule Trojan_Win32_Remcos_AA_2147750878_0
         $x_1_1 = "zdvT_i1jso3v7MtW0/es.uugu.a//:sptth" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -527,6 +545,7 @@ rule Trojan_Win32_Remcos_AA_2147750878_1
         $x_2_2 = {81 c2 a1 03 00 00 87 d1 29 d3 33 c0 5a 59 59 64 89 10 68 6e 80 46 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -553,6 +572,7 @@ rule Trojan_Win32_Remcos_AA_2147750878_2
         $x_1_6 = "GetCapture" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -574,6 +594,7 @@ rule Trojan_Win32_Remcos_VB_2147751278_0
         $x_1_1 = {d2 02 00 cc d2 02 00 da d2 02 00 e8 d2 02 00 fa d2 02 00 08 d3 02 00 1c d3 02 00 32 d3 02 00 3c d3 02 00 58 d3 02 00 6e d3 02 00 7c d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -606,6 +627,7 @@ rule Trojan_Win32_Remcos_RRR_2147751434_0
         $x_1_12 = {8b 1c 17 81 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 31 f3 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 11 1c 10 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 83 c2 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -629,6 +651,7 @@ rule Trojan_Win32_Remcos_ACJ_2147751748_0
         $x_1_3 = {51 59 51 59 [0-31] ff e0 [0-47] 81 34 08 ?? ?? ?? ?? 90}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -650,6 +673,7 @@ rule Trojan_Win32_Remcos_RGU_2147751786_0
         $x_1_1 = {8b 0c 90 8b 45 14 8b 55 fc 33 0c 90 8b 45 08 8b 55 f8 89 0c 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -671,6 +695,7 @@ rule Trojan_Win32_Remcos_RN_2147753374_0
         $x_1_1 = {8b 04 30 ff 77 ?? 68 ?? ?? ?? ?? 81 04 24 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 81 04 24 ?? ?? ?? ?? ff d0 68 ?? ?? ?? ?? 5a b9 ?? ?? ?? ?? 8b 1c 0a 81 f3 ?? ?? ?? ?? 89 1c 08 83 e9 ?? 7d ?? ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -692,6 +717,7 @@ rule Trojan_Win32_Remcos_RD_2147753376_0
         $x_1_1 = {85 c0 85 c0 83 f6 ?? 8b 1c 0f 66 3d ?? ?? 66 3d ?? ?? 66 3d ?? ?? 83 f6 ?? 83 f6 ?? 66 3d ?? ?? 66 3d ?? ?? 66 3d ?? ?? 31 c3 66 3d ?? ?? 83 f6 ?? 66 3d ?? ?? 83 f6 ?? 85 c0 83 f6 ?? 53 83 f6 ?? 85 c0 66 3d ?? ?? 83 f6 ?? 8f 04 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -713,6 +739,7 @@ rule Trojan_Win32_Remcos_RJ_2147753377_0
         $x_1_1 = {66 85 c0 89 0c 18 85 db 66 85 ff 4b 66 85 c0 85 c9 4b 85 c0 66 85 c0 4b 85 db 85 c9 4b 7d ?? 85 db 85 c9 ff e0 [0-4] 81 f1 ?? ?? ?? ?? 85 c9 66 85 ff c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -735,6 +762,7 @@ rule Trojan_Win32_Remcos_CL_2147753964_0
         $x_1_2 = "tamagochi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -758,6 +786,7 @@ rule Trojan_Win32_Remcos_CZ_2147753965_0
         $x_2_3 = "OpenClipboard" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -779,6 +808,7 @@ rule Trojan_Win32_Remcos_PR_2147754498_0
         $x_1_1 = {5a b9 e0 d4 00 00 8b 1c 0a 81 f3 ?? ?? ?? ?? 89 1c 08 83 e9 ?? 7d ?? ff ?? e2 ?? 99}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -802,6 +832,7 @@ rule Trojan_Win32_Remcos_PI_2147754508_0
         $x_1_3 = {8b c8 8b 44 24 ?? 8b 50 ?? 03 d6 8b 44 24 ?? 8b 40 ?? 03 44 24 ?? e8 da d2 f8 ff 8b 44 24 ?? 8b 40 ?? 03 44 24 ?? 8b 54 24 ?? 89 42 ?? 8b 44 24 ?? 83 c0 ?? 89 44 24 ?? 4b 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -825,6 +856,7 @@ rule Trojan_Win32_Remcos_PVA_2147755703_0
         $x_1_3 = "ZYGMBVCJJWBUZUXPNDHWHDHAZJKUOMKFCVYJCLYWAHQUEZOAU" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -850,6 +882,7 @@ rule Trojan_Win32_Remcos_BA_2147756570_0
         $x_2_1 = {8b 5d 08 8b c6 99 f7 f9 8a 04 1a 8b 55 f8 30 04 16 46 3b f7 7c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -873,6 +906,7 @@ rule Trojan_Win32_Remcos_BA_2147756570_1
         $x_1_3 = {c6 85 74 fe ff ff c6 85 ?? ?? ff ff c6 85 ?? ?? ff ff c6 85 ?? ?? ff ff c6 85 ?? ?? ff ff c6 85 ?? ?? ff ff c6 85 ?? ?? ff ff c6 85 ?? ?? ff ff c6 85 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -896,6 +930,7 @@ rule Trojan_Win32_Remcos_BB_2147756574_0
         $x_1_3 = {2b d0 33 05 ?? ?? ?? ?? c6 44 24 ?? 6e c6 44 24 ?? 32 c6 44 24 ?? 6f c6 44 24 ?? 75 3b c2 7f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -919,6 +954,7 @@ rule Trojan_Win32_Remcos_BC_2147756855_0
         $x_1_3 = {6e c6 44 24 ?? 32 c6 44 24 ?? 6f c6 44 24 ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -941,6 +977,7 @@ rule Trojan_Win32_Remcos_BD_2147757581_0
         $x_1_2 = {83 c0 01 89 45 ?? 8b 4d ?? 3b 4d ?? 7d ?? e8 ?? ?? 00 00 89 45 ?? 8b 4d ?? 03 4d ?? 8a 55 ?? 88 11 83 3d ?? ?? ?? ?? 00 74 ?? 83 3d ?? ?? ?? ?? 00 74 ?? b8 04 00 00 00 d1 e0 c7 80 ?? ?? ?? ?? ?? 00 00 00 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -964,6 +1001,7 @@ rule Trojan_Win32_Remcos_BE_2147757751_0
         $x_2_3 = {55 8b ec 51 a1 ?? ?? ?? ?? 8b 08 8b 15 ?? ?? ?? ?? 8b 04 91 2d ?? ?? ?? 00 89 45 fc 8b 0d ?? ?? ?? ?? 83 c1 01 89 0d ?? ?? ?? ?? 8b 45 fc 8b e5 5d c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -986,6 +1024,7 @@ rule Trojan_Win32_Remcos_DSA_2147760524_0
         $x_1_2 = {69 c0 fd 43 03 00 05 c3 9e 26 00 a3 ?? ?? ?? ?? c1 e8 10 25 ff 7f 00 00 05 00 a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1009,6 +1048,7 @@ rule Trojan_Win32_Remcos_SM_2147763558_0
         $x_1_3 = "3b111b404a0b7c4a0c54571f370c1c53564337041f4017523c0840514d453206075d5c5f271640070c006b525f090a066452560008006550561f0e0461515e01000662515b090c0363575e08166b300f1a454c44" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1030,6 +1070,7 @@ rule Trojan_Win32_Remcos_ACH_2147763919_0
         $x_5_1 = {31 07 8b 07 31 05 ?? ?? ?? ?? a1 00 31 07 6a 04 68 00 10 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1056,6 +1097,7 @@ rule Trojan_Win32_Remcos_ACH_2147763919_1
         $x_1_6 = "C:\\Users\\Yak\\Desktop\\Alt_R66Draw\\T__RCore.pas" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1078,6 +1120,7 @@ rule Trojan_Win32_Remcos_DD_2147772209_0
         $x_1_2 = "\\AppData\\Roaming\\Screenshots\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1100,6 +1143,7 @@ rule Trojan_Win32_Remcos_ZB_2147773172_0
         $x_1_2 = "XE33Mes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1123,6 +1167,7 @@ rule Trojan_Win32_Remcos_ZC_2147773446_0
         $x_1_3 = "XE33Mes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1148,6 +1193,7 @@ rule Trojan_Win32_Remcos_ZF_2147773990_0
         $x_1_2 = {68 3e 50 b3 93 68 ?? ?? ?? ?? ff 15 44 b0 00 10 50 e8 ?? ?? ?? ?? 83 c4 08 89 45 f4 8d ?? ?? ?? 6a 40 68 ?? ?? ?? ?? 68 a0 d6 00 10 ff 55 f4 8b ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 83 c4 04 8b e5 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1172,6 +1218,7 @@ rule Trojan_Win32_Remcos_ZEE_2147774330_0
         $x_1_4 = "C:\\Users\\Public\\Libraries\\TEMP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1197,6 +1244,7 @@ rule Trojan_Win32_Remcos_ZG_2147775612_0
         $x_1_2 = {68 3e 50 b3 93 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 83 c4 08 89 45 f4 8d ?? ?? ?? 6a 40 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 55 f4 8b ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 83 c4 04 8b e5 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1219,6 +1267,7 @@ rule Trojan_Win32_Remcos_ZI_2147775974_0
         $x_1_2 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1240,6 +1289,7 @@ rule Trojan_Win32_Remcos_EA_2147778773_0
         $x_5_1 = {8a 9c 07 49 9e 00 00 88 1c 30 81 f9 8d 00 00 00 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1263,6 +1313,7 @@ rule Trojan_Win32_Remcos_AB_2147781974_0
         $x_3_3 = "kythdigul" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1285,6 +1336,7 @@ rule Trojan_Win32_Remcos_AG_2147782000_0
         $x_1_2 = {30 14 08 05 ff 01 00 00 3b c6 7c ?? 47 81 ff ff 01 00 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1310,6 +1362,7 @@ rule Trojan_Win32_Remcos_B_2147782015_0
         $x_3_5 = "kythdigulf3" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1341,6 +1394,7 @@ rule Trojan_Win32_Remcos_ET_2147784160_0
         $x_1_11 = "%s%s.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 8 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1366,6 +1420,7 @@ rule Trojan_Win32_Remcos_AUT_2147788931_0
         $x_1_1 = {f3 a4 e9 17 03 00 00 81 f9 80 00 00 00 0f 82 ce 01 00 00 57 58 33 c6 a9 0f ?? ?? ?? 75 0e 0f ba 25 ?? ?? ?? ?? 01 0f 82 da 04 00 00 0f ba 25 ?? ?? ?? ?? 00 0f 83 a7 01 00 00 f7 c7 03 ?? ?? ?? 0f 85 b8 01 00 00 f7 c6 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1388,6 +1443,7 @@ rule Trojan_Win32_Remcos_HYTG_2147795827_0
         $x_1_2 = {22 71 81 32 06 14 91}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1411,6 +1467,7 @@ rule Trojan_Win32_Remcos_FS_2147796547_0
         $x_1_3 = {0f b6 7d eb c1 e7 07 89 f0 09 f8 88 45 eb 0f b6 75 eb 89 f0 83 e8 39 88 45 eb 0f b6 75 eb 89 f0 83 f0 59 88 45 eb 8b 75 ec 0f b6 7d eb 89 f8 29 f0 88 45 eb 0f b6 75 eb 89 f0 35 85 00 00 00 88 45 eb 8a 45 eb 8b 75 ec 88 04 35 ?? ?? ?? ?? 8b 45 ec 83 c0 01 89 45 ec e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1438,6 +1495,7 @@ rule Trojan_Win32_Remcos_AD_2147797469_0
         $x_3_7 = "Read Icon List for Delphi 3.0" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1469,6 +1527,7 @@ rule Trojan_Win32_Remcos_GB_2147799397_0
         $x_1_11 = "nSpack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1493,6 +1552,7 @@ rule Trojan_Win32_Remcos_GI_2147805555_0
         $x_1_4 = "RTLConsts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1518,6 +1578,7 @@ rule Trojan_Win32_Remcos_GJ_2147807319_0
         $x_1_5 = {83 04 24 04 0d a1 ?? ?? ?? ?? 0f af 04 24 ?? 81 3d ?? ?? ?? ?? 9e 13 00 00 a3 ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1542,6 +1603,7 @@ rule Trojan_Win32_Remcos_DDL_2147807573_0
         $x_1_1 = {31 00 02 04 d8 09 b0 04 bf 04 ef 01 0b 08 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1568,6 +1630,7 @@ rule Trojan_Win32_Remcos_GP_2147807967_0
         $x_1_6 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1590,6 +1653,7 @@ rule Trojan_Win32_Remcos_SIB_2147808476_0
         $x_1_2 = {ba 01 00 00 00 a1 ?? ?? ?? ?? 8b 38 ff 57 ?? 8b 45 ?? 8b 16 0f b6 7c 10 ?? a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? ba 00 01 00 00 2b d0 52 a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? 5a 92 8b ca 99 f7 f9 03 fa 8b d7 8d 45 ?? e8 ?? ?? ?? ?? 8b 55 08 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? ff 06 ff 4d ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1618,6 +1682,7 @@ rule Trojan_Win32_Remcos_HF_2147811895_0
         $x_1_8 = "Rock Debugger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1640,6 +1705,7 @@ rule Trojan_Win32_Remcos_HL_2147813323_0
         $x_1_2 = "S#q-}=6{)BuEV[GDeZy>~M5D/P&Q}7<" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1665,6 +1731,7 @@ rule Trojan_Win32_Remcos_GS_2147814448_0
         $x_1_5 = "GetClipboardData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1690,6 +1757,7 @@ rule Trojan_Win32_Remcos_GT_2147814449_0
         $x_1_5 = "GetClipboardData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1715,6 +1783,7 @@ rule Trojan_Win32_Remcos_GX_2147814450_0
         $x_1_5 = "GetClipboardData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1739,6 +1808,7 @@ rule Trojan_Win32_Remcos_SIBA_2147815481_0
         $x_1_4 = {ba 01 00 00 00 a1 ?? ?? ?? ?? 8b 38 ff 57 ?? 8b 45 ?? 8b 16 0f b6 7c 10 ff b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? ba 00 01 00 00 2b d0 52 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 5a 92 8b ca 99 f7 f9 03 fa 8b d7 8d 45 ?? e8 ?? ?? ?? ?? 8b 55 07 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? ff 06 ff 4d ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1760,6 +1830,7 @@ rule Trojan_Win32_Remcos_SIBB_2147818113_0
         $x_1_1 = {8b d8 85 db 7e ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? 50 b8 ?? ?? ?? ?? 2b 45 ?? 5a 8b ca 99 f7 f9 8b 45 ?? 8b 0d ?? ?? ?? ?? 0f b6 44 08 ?? 03 d0 8d 45 ?? e8 39 0b fa ?? 8b 55 ?? 8b c6 e8 ?? ?? ?? ?? ff 05 ?? ?? ?? ?? 4b 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1781,6 +1852,7 @@ rule Trojan_Win32_Remcos_MC_2147826399_0
         $x_1_1 = {2a c8 c0 c9 03 02 c8 d0 c1 02 c8 32 c8 2a c8 80 c1 41 c0 c9 03 80 c1 30 80 f1 d3 80 e9 18 88 88 ?? ?? ?? ?? 40 3d 05 4e 00 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1810,6 +1882,7 @@ rule Trojan_Win32_Remcos_ME_2147829584_0
         $x_1_9 = ".itext" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1831,6 +1904,7 @@ rule Trojan_Win32_Remcos_AIO_2147836282_0
         $x_2_1 = {8b 85 2c ff ff ff 2b 84 15 60 fb ff ff 89 85 2c ff ff ff 8b 4d e8 83 e9 01 89 4d e8 8b 95 fc fe ff ff 83 c2 01 89 95 fc fe ff ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1853,6 +1927,7 @@ rule Trojan_Win32_Remcos_RDF_2147839820_0
         $x_2_2 = {8b 95 24 ff ff ff 8b c1 83 e0 1f 8a 80 ?? ?? ?? ?? 30 04 0a 41 3b cf}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1875,6 +1950,7 @@ rule Trojan_Win32_Remcos_AP_2147839854_0
         $x_1_2 = {42 14 b2 90 00 6c 50 c8 b5 2c 5a 12 79 e8 49 6a 77 31 24 e8 f3 7f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1898,6 +1974,7 @@ rule Trojan_Win32_Remcos_RDD_2147839952_0
         $x_1_3 = "sundaymondayt.png" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1919,6 +1996,7 @@ rule Trojan_Win32_Remcos_RPM_2147840233_0
         $x_1_1 = {8b 65 e8 8b 4d c8 88 4d e1 c7 45 fc fe ff ff ff 8b 5d a8 8b 75 bc 8a 45 e0 8b 7d d8 83 bd 14 01 00 00 00 75 03 8a 45 e1 88 04 39}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1941,6 +2019,7 @@ rule Trojan_Win32_Remcos_GFE_2147841664_0
         $x_10_2 = {8a 45 d4 02 d0 8b 45 b4 8b 4d b8 34 ?? f6 ea 88 45 d5}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1962,6 +2041,7 @@ rule Trojan_Win32_Remcos_RPZ_2147845620_0
         $x_1_1 = {00 00 00 31 f1 81 c1 e6 00 00 00 eb 08 28 c8 91 21 28 c8 91 21 81 e9 e6 00 00 00 81 fa ?? ?? ?? ?? 75 08 ab 03 dc f7 ab ?? ?? ?? ?? 0c 10 81 fb ?? ?? ?? ?? 75 08 c0 f9 e4 6c c0 f9 e4 6c 81 fa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1983,6 +2063,7 @@ rule Trojan_Win32_Remcos_RPX_2147845882_0
         $x_1_1 = {8b 45 f4 8b 4d f8 8d 14 30 8b 45 fc d3 ee 8b 4d d0 03 c1 33 c2 03 75 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2004,6 +2085,7 @@ rule Trojan_Win32_Remcos_RPX_2147845882_1
         $x_1_1 = {8b 8d 1c ff ff ff 83 c1 01 89 8d 1c ff ff ff 8b 95 1c ff ff ff 3b 55 0c 73 2d 8b 85 1c ff ff ff 33 d2 f7 75 14 8b 45 10 0f b6 0c 10 8b 55 08 03 95 1c ff ff ff 0f b6 02 2b c1 8b 4d 08 03 8d 1c ff ff ff 88 01 eb b9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2025,6 +2107,7 @@ rule Trojan_Win32_Remcos_RPX_2147845882_2
         $x_1_1 = {5b 0f b6 8d 52 fc ff ff 8b 95 68 f8 ff ff 0f be 02 2b c1 8b 8d 68 f8 ff ff 88 01 eb 95 8b 95 4c f5 ff ff 89 95 20 e6 ff ff 8d 85 18 f3 ff ff 50 8b 8d 18 f3 ff ff 51 8b 95 6c e9 ff ff 52 8b 85 18 fc ff ff 50 ff 95 20 e6 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2046,6 +2129,7 @@ rule Trojan_Win32_Remcos_AN_2147847259_0
         $x_1_1 = {8b 7b 0c 8b ce e8 a5 ff ff ff 8b cb 8b f0 e8 9c ff ff ff 8b 4d fc 33 f0 23 f1 31 34 97 42}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2067,6 +2151,7 @@ rule Trojan_Win32_Remcos_ARC_2147851147_0
         $x_1_1 = {8b 54 24 10 85 d2 76 15 55 a1 ?? ?? ?? ?? 03 f2 50 56 57 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2088,6 +2173,7 @@ rule Trojan_Win32_Remcos_ARM_2147894535_0
         $x_1_1 = {8b 04 8d a0 01 43 00 8b f0 81 e6 ff 00 00 00 c1 e8 08 33 04 b5 a0 05 43 00 41 89 04 8d 9c 05 43 00 3b ca}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2109,6 +2195,7 @@ rule Trojan_Win32_Remcos_ARM_2147894535_1
         $x_1_1 = {86 0e 0a 01 01 b9 6c 01 01 01 67 8a 86 e9 e7 00 00 ba 66 01 01 01 67 8a 8e eb e7 00 00 bb 73 01 01 01 67 8a 96 ed e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2130,6 +2217,7 @@ rule Trojan_Win32_Remcos_ARM_2147894535_2
         $x_1_1 = {8b d8 03 5d a4 6a 00 e8 ?? ?? ?? ?? 2b d8 8b 45 d4 31 18 83 45 ec 04 6a 00 e8 ?? ?? ?? ?? 83 c0 04 01 45 d4 8b 45 ec 3b 45 d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2151,6 +2239,7 @@ rule Trojan_Win32_Remcos_ARM_2147894535_3
         $x_1_1 = {0d 54 5f 5f 33 36 34 37 39 35 33 38 31 39 80 03 00 00 02 00 0d 54 5f 5f 33 36 34 37 39 36 32 35 37 30 84 03 00 00 02 00 0d 54 5f 5f 33}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2172,6 +2261,7 @@ rule Trojan_Win32_Remcos_ARM_2147894535_4
         $x_1_1 = {33 f0 8b 44 24 20 8b d0 03 f7 0b 54 24 24 23 54 24 28 23 44 24 24 0b d0 03 d6 8b 44 24 30 8b 74 24 14 83 c0 20 89 44 24 30 3d 00 01 00 00 8b 44 24 10 89 54 24 2c 89 54 24 34}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2194,6 +2284,7 @@ rule Trojan_Win32_Remcos_ARM_2147894535_5
         $x_1_2 = {03 02 03 f0 c7 45 f8 ?? ?? ?? ?? 8d 45 ec 50 6a 04 8d 45 f8 50 56 ff 75 d4 ff 15 ?? ?? ?? ?? 8b 45 c4 01 45 f8 8d 45 f8 6a 00 6a 04 50 56 ff 75 d4 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2216,6 +2307,7 @@ rule Trojan_Win32_Remcos_MBEP_2147895961_0
         $x_1_2 = {42 61 72 6d 68 6a 65 72 74 69 67 68 65 64 65 72 6e 65 33 00 53 6f 6e 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2237,6 +2329,7 @@ rule Trojan_Win32_Remcos_AGLS_2147895977_0
         $x_1_1 = {8b 55 dc 03 55 b4 8b 45 d4 03 45 b0 8b 4d c0 e8 ?? ?? ?? ?? 8b 45 c0 01 45 b0 8b 45 c0 01 45 b4 8b 45 bc 01 45 b4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2262,6 +2355,7 @@ rule Trojan_Win32_Remcos_EM_2147896367_0
         $x_1_5 = "fso.DeleteFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2283,6 +2377,7 @@ rule Trojan_Win32_Remcos_ARS_2147897142_0
         $x_1_1 = {95 07 49 68 52 05 8c 59 05 f9 36 6a f6 83 79 29 6b 35 48 69 81 35 49}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2304,6 +2399,7 @@ rule Trojan_Win32_Remcos_MA_2147897367_0
         $x_10_1 = {c1 ee 04 89 74 24 ?? 31 ff 8b 74 24 ?? 8b 5d ?? 89 f8 c1 e0 ?? 03 44 24 ?? 31 c9 8a 54 0c 20 32 14 0e 88 14 0b 41 83 f9 ?? 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2326,6 +2422,7 @@ rule Trojan_Win32_Remcos_LKV_2147897409_0
         $x_1_2 = {0f b6 84 35 ?? ?? ff ff 88 84 3d ?? ?? ff ff 8b 85 ?? ?? ff ff 88 84 35 ?? ?? ff ff 47 89 f1 81 ff ?? ?? 00 00 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2351,6 +2448,7 @@ rule Trojan_Win32_Remcos_GV_2147899397_0
         $x_1_5 = "GetClipboardData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2373,6 +2471,7 @@ rule Trojan_Win32_Remcos_ARE_2147900189_0
         $x_1_2 = {8b 45 fc 0f b6 74 18 ff 8b c6 83 c0 df 83 e8 5e 73 1e 8b 45 f8 e8 ?? ?? ?? ?? 8d 44 18 ff 50 8d 46 0e b9 5e 00 00 00 99 f7 f9 83 c2 21 58 88 10 43 4f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2394,6 +2493,7 @@ rule Trojan_Win32_Remcos_ARE_2147900189_1
         $x_1_1 = {89 b5 f8 fb ff ff 89 b5 e8 fb ff ff 89 b5 d8 fb ff ff 89 b5 c8 fb ff ff 89 b5 b8 fb ff ff 89 b5 a8 fb ff ff 89 b5 98 fb ff ff 89 b5 88 fb ff ff 56 89 b5 78 fb ff ff 89 b5 68 fb ff ff 89 b5 58 fb ff ff 89 b5 48 fb ff ff 89 b5 38 fb ff ff 89 b5 28 fb ff ff 89 b5 18 fb ff ff 89 b5 08 fb ff ff 89 b5 f8 fa ff ff 89 b5 e8 fa ff ff 89 b5 d8 fa ff ff 89 b5 c8 fa ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2416,6 +2516,7 @@ rule Trojan_Win32_Remcos_NA_2147902263_0
         $x_5_2 = "jenkins-workspace\\workspace\\client-builder-product\\Build\\Win32\\Release\\utorrent.pdb" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2437,6 +2538,7 @@ rule Trojan_Win32_Remcos_CCHT_2147903461_0
         $x_1_1 = {02 ca 8a 8c 0d ?? ?? ff ff 30 0e e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2458,6 +2560,7 @@ rule Trojan_Win32_Remcos_ACR_2147912692_0
         $x_1_1 = {bb d3 46 1a 08 c1 e8 05 b8 98 ff a6 08 81 f3 77 78 21 23 81 ac 24 84 00 00 00 02 be 8c 45 81 f3 85 ee dc 7d 81 84 24 84 00 00 00 02 be 8c 45 8b 84 24 84 00 00 00 8a 8c 24 0b 01 00 00 08 8c 24 1c 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2480,6 +2583,7 @@ rule Trojan_Win32_Remcos_ARR_2147913822_0
         $x_1_2 = {57 81 f7 bc ba 00 00 81 cf 8c c8 00 00 81 e7 06 6f 01 00 5f 57 57 83 c4 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2523,6 +2627,7 @@ rule Trojan_Win32_Remcos_AER_2147914227_0
         $x_1_1 = {57 56 83 c4 04 81 c7 1a 66 01 00 5f c6 85 2c f6 ff ff 56 c6 85 2d f6 ff ff 69 c6 85 2e f6 ff ff 72 c6 85 2f f6 ff ff 74 c6 85 30 f6 ff ff 75 c6 85 31 f6 ff ff 61 c6 85 32 f6 ff ff 6c c6 85 33 f6 ff ff 50 c6 85 34 f6 ff ff 72 c6 85 35 f6 ff ff 6f c6 85 36 f6 ff ff 74 c6 85 37 f6 ff ff 65 c6 85 38 f6 ff ff 63 c6 85 39 f6 ff ff 74 c6 85 3a f6 ff ff 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2570,6 +2675,7 @@ rule Trojan_Win32_Remcos_AOS_2147916021_0
         $x_1_1 = {84 e5 30 4a 04 03 ee 0a 40 4e 4d 35 43 38 3a 5d bd 05 03 03 03 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2593,6 +2699,7 @@ rule Trojan_Win32_Remcos_KAAW_2147916130_0
         $x_1_3 = "unsped\\akkorderingernes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2644,6 +2751,7 @@ rule Trojan_Win32_Remcos_AREM_2147918614_0
         $x_1_1 = {b9 7c d6 83 58 35 33 34 55 bf 64 d2 8c 02 ?? ?? ?? ?? bf 45 d5 8f 07 37 35 37 56 b8 7b df 8e ?? ?? ?? ?? 50 b8 65 dc 89 51 32 33}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2665,6 +2773,7 @@ rule Trojan_Win32_Remcos_AMR_2147924103_0
         $x_1_1 = {0f b6 44 10 ff 0f b6 c0 33 d2 05 ?? ?? ?? ?? 83 d2 00 8b d0 8d 85 [0-4] e8 ?? ?? ?? ?? 8b 95 01 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? ff 05 ?? ?? ?? ?? 4e 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2687,6 +2796,7 @@ rule Trojan_Win32_Remcos_NR_2147928598_0
         $x_2_2 = {3a 48 3c 5e 50 51 83 c4 04 e8 0b 00 00 00 00 33 3c 3d 50}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2709,6 +2819,7 @@ rule Trojan_Win32_Remcos_NR_2147928598_1
         $x_2_2 = {2b d0 33 95 ?? ?? ff ff 0f af 95 ?? ?? ff ff 69 8d ?? ?? ff ff f1 fe c9 98}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2730,6 +2841,7 @@ rule Trojan_Win32_Remcos_LMV_2147931025_0
         $x_5_1 = {41 83 c4 04 81 eb 9f 9c 00 00 5b 8b 8d ?? ?? ff ff 0f b6 94 0d ?? ?? ff ff 8b 85 ?? ?? ff ff 03 85 ?? ?? ff ff 0f b6 08 33 ca 8b 95 60 f0 ff ff 03 95 d0 fa ff ff 88 0a e9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2751,6 +2863,7 @@ rule Trojan_Win32_Remcos_GPPB_2147931801_0
         $x_1_1 = {0f 1f 00 81 f3 ?? ?? ?? ?? 0f 1f 00 0f 1f 00 0f 1f 00 0f 72 f0 ?? 0f 1f 00 0f 1f 00 0f 1f 00 0f 1f 00 0f 1f 00 0f 1f 00 0f 6f c8 0f 1f 00 0f 1f 00 0f 1f 00 0f 1f 00 0f 1f 00 0f 1f 00 66 0f e8 f6 0f 1f 00 0f 1f 00 0f 1f 00 89 1c 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2777,6 +2890,7 @@ rule Trojan_Win32_Remcos_BSA_2147932044_0
         $x_2_6 = {ff fb ff fd ff fb ff fd ff fb ff fd ff fb ff fd ff fb ff fd ff fb ff fd ff fb ff c1 ff fb fc 3d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2799,6 +2913,7 @@ rule Trojan_Win32_Remcos_ACS_2147934262_0
         $x_2_2 = {c1 ee 03 6a 13 5a 8b cb 33 fe e8 d6 ?? ?? ?? 6a 11 5a 8b cb 8b f0 e8 ca ?? ?? ?? 33 f0 c1 eb 0a 33 f3 8d 6d 04 03 fe 03 7d c4 03 7d e8 83 6c 24 28 01}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2821,6 +2936,7 @@ rule Trojan_Win32_Remcos_CAA_2147935607_0
         $x_4_2 = {83 ec 1c d9 e4 d9 34 24 8b 74 24 0c 83 c6 10 83 c4 1c c3}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2842,6 +2958,7 @@ rule Trojan_Win32_Remcos_AROS_2147938481_0
         $x_2_1 = {59 33 f6 8b f8 56 56 56 6a 01 56 ff 15 ?? ?? ?? ?? 56 68 00 00 00 80 56 56 8b e8 68 b4 d9 46 00 55}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2887,6 +3004,7 @@ rule Trojan_Win32_Remcos_GVC_2147946059_0
         $x_3_2 = {30 94 0e 17 00 00 00 02 94 0e 17 00 00 00 e2 f0}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

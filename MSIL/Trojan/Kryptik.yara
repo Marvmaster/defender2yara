@@ -19,6 +19,7 @@ rule Trojan_MSIL_Kryptik_R_2147742236_0
         $x_2_4 = {08 18 5b 03 08 18 6f ?? ?? ?? ?? 1f 10 28 ?? ?? ?? ?? 9c 2b 22 08 18 5b 1f 10 59 0d 06 09 03 08 18 6f ?? ?? ?? ?? 1f 10 28 ?? ?? ?? ?? 07 09 07 8e 69 5d 91 61 d2 9c 08 18 58 0c 08 03 6f ?? ?? ?? ?? 32 b6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -48,6 +49,7 @@ rule Trojan_MSIL_Kryptik_J_2147742625_0
         $x_3_5 = {01 0d 09 09 47 02 08 1f 10 5d 91 61 d2 52}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -77,6 +79,7 @@ rule Trojan_MSIL_Kryptik_XJ_2147743743_0
         $x_5_5 = {06 de 03 26 de 00 2a 30 00 28 ?? 00 00 06 28 ?? 00 00 0a 28 ?? 00 00 0a 0a 06 28 ?? 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or
@@ -105,6 +108,7 @@ rule Trojan_MSIL_Kryptik_SK_2147744259_0
         $x_1_3 = "courseDATestToolStripMenuItem" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +134,7 @@ rule Trojan_MSIL_Kryptik_SK_2147744259_1
         $x_1_5 = "AnimalGames.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -152,6 +157,7 @@ rule Trojan_MSIL_Kryptik_SK_2147744259_2
         $x_1_2 = "c:\\temp\\Assembly.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +181,7 @@ rule Trojan_MSIL_Kryptik_A_2147744801_0
         $x_1_3 = "tazcImj52" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -199,6 +206,7 @@ rule Trojan_MSIL_Kryptik_CS_2147745368_0
         $x_1_4 = "RazerPanel.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -223,6 +231,7 @@ rule Trojan_MSIL_Kryptik_FI_2147775124_0
         $x_2_4 = "FromBase64" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -248,6 +257,7 @@ rule Trojan_MSIL_Kryptik_FI_2147775124_1
         $x_1_5 = "Ap$p$ex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -269,6 +279,7 @@ rule Trojan_MSIL_Kryptik_FB_2147775125_0
         $x_10_1 = {02 03 11 05 11 0c 28 [0-16] 13 0e 02 11 0d 11 0e 28 [0-4] 13 0f 11 0f 13 10 11 10 2c 2c 09 19 8d [0-4] 25 16 12 0d 28 [0-4] 9c 25 17 12 0d 28 [0-4] 9c 25 18 12 0d 28 [0-13] 11 0c 17 d6 13 0c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -291,6 +302,7 @@ rule Trojan_MSIL_Kryptik_ZE_2147775689_0
         $x_10_2 = {08 09 9a 13 04 00 11 04 28 [0-9] 75 1a ce 41 59 28 [0-4] b7 13 05 06 11 05 28 [0-9] 26 00 09 17 58 0d 09 08 8e 69 32 c8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -313,6 +325,7 @@ rule Trojan_MSIL_Kryptik_ST_2147775913_0
         $x_10_2 = {07 1f 5a fe 02 16 fe 01 2b 01 16 13 04 11 04 2c 1e 07 1f 4d fe 02 16 fe 01 13 05 11 05 2c 08 07 1f 0d d6 0b 00 2b 07 00 07 1f 0d da 0b 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -334,6 +347,7 @@ rule Trojan_MSIL_Kryptik_TB_2147776151_0
         $x_10_1 = {91 06 07 06 8e 69 6a 5d 28 [0-4] 28 [0-4] 91 61 02 07 17 6a 58 20 [0-4] 6a 5d 28 [0-9] 91 59 6a 20 [0-4] 6a 58 20 [0-4] 6a 5d d2 9c ?? 07 17 6a 58 0b 07}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -357,6 +371,7 @@ rule Trojan_MSIL_Kryptik_KI_2147776158_0
         $x_2_3 = "CreateInstance" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -382,6 +397,7 @@ rule Trojan_MSIL_Kryptik_SL_2147776159_0
         $x_2_5 = "TransformFinalBlock" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -421,6 +437,7 @@ rule Trojan_MSIL_Kryptik_ET_2147776188_0
         $x_1_19 = "System.Security" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 17 of ($x_1_*))) or
             (all of ($x*))
@@ -446,6 +463,7 @@ rule Trojan_MSIL_Kryptik_TU_2147776189_0
         $x_10_2 = {69 00 a4 06 2e 06 27 06 54 00 35 06 49 06 4a 04 35 04 45 06 09 54 55 00 0c 20 34 06 46 06 09 54 17 5f}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -470,6 +488,7 @@ rule Trojan_MSIL_Kryptik_TR_2147776190_0
         $x_2_4 = "NewLateBinding" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -493,6 +512,7 @@ rule Trojan_MSIL_Kryptik_UC_2147776230_0
         $x_2_3 = "CreateInstance" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -516,6 +536,7 @@ rule Trojan_MSIL_Kryptik_AS_2147776231_0
         $x_2_3 = "Activator" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -538,6 +559,7 @@ rule Trojan_MSIL_Kryptik_WR_2147776232_0
         $x_10_2 = {9e 11 06 11 07 02 11 07 91 11 05 11 05 08 84 95 11 05 09 84 95 d7 6e 20 [0-4] 6a 5f b7 95 61 86 9c 11 07 17 d6 13 07 11 07 11 0a 31 9b}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -563,6 +585,7 @@ rule Trojan_MSIL_Kryptik_WR_2147776232_1
         $x_1_5 = "StrReverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -588,6 +611,7 @@ rule Trojan_MSIL_Kryptik_UN_2147776470_0
         $x_2_5 = "NewLateBinding" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -610,6 +634,7 @@ rule Trojan_MSIL_Kryptik_UL_2147776471_0
         $x_10_2 = {16 0d 09 2c 1d [0-2] 06 1f 4d fe 02 13 04 11 04 2c 09 [0-2] 06 1f 0d 59 0a [0-2] 2b 07 [0-2] 06 1f 0d 58 0a [0-2] 06 d1 13 05 2b 00 11 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -636,6 +661,7 @@ rule Trojan_MSIL_Kryptik_VC_2147776485_0
         $x_2_6 = "Activator" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_2_*))) or
             ((2 of ($x_10_*))) or
@@ -665,6 +691,7 @@ rule Trojan_MSIL_Kryptik_TF_2147776766_0
         $x_2_5 = "WebResponse" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -689,6 +716,7 @@ rule Trojan_MSIL_Kryptik_UR_2147776767_0
         $x_2_4 = "Activator" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -711,6 +739,7 @@ rule Trojan_MSIL_Kryptik_WA_2147776901_0
         $x_10_2 = {11 05 09 84 11 04 9e 11 06 11 08 03 11 08 91 11 05 11 05 08 84 95 11 05 09 84 95 d7 6e 20 [0-4] 6a 5f b7 95 61 86 9c 11 08 17 d6 13 08 11 08 11 07 31 9b}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -733,6 +762,7 @@ rule Trojan_MSIL_Kryptik_WB_2147776923_0
         $x_10_2 = {2b 33 06 1f 41 32 0a 06 1f 5a fe 02 16 fe 01 2b 01 16 13 63 11 63 2c 1d 00 06 1f 4d fe 02 13 64 11 64 2c 09 00 06 1f 0d 59 0a 00 2b 07}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -755,6 +785,7 @@ rule Trojan_MSIL_Kryptik_VX_2147776924_0
         $x_2_2 = "FromBase64" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -784,6 +815,7 @@ rule Trojan_MSIL_Kryptik_VU_2147776925_0
         $x_2_9 = "CreateDecryptor" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_2_*))) or
             (all of ($x*))
@@ -809,6 +841,7 @@ rule Trojan_MSIL_Kryptik_WO_2147777002_0
         $x_10_2 = {16 0d 09 2c [0-2] 06 1f 4d fe 02 13 04 11 04 2c [0-2] 06 1f 0d 59 0a [0-2] 2b [0-2] 06 1f 0d 58 0a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -834,6 +867,7 @@ rule Trojan_MSIL_Kryptik_WP_2147777003_0
         $x_1_5 = "CreateInstance" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -859,6 +893,7 @@ rule Trojan_MSIL_Kryptik_WF_2147777004_0
         $x_2_5 = "TransformFinalBlock" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_2_*))) or
             ((2 of ($x_10_*))) or
@@ -887,6 +922,7 @@ rule Trojan_MSIL_Kryptik_XG_2147777306_0
         $x_2_4 = {49 00 6e 00 a4 06 c6 06 6f 00 6b 00 65 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -909,6 +945,7 @@ rule Trojan_MSIL_Kryptik_YD_2147777404_0
         $x_10_2 = {11 05 9e 11 07 07 28 [0-4] 03 07 28 [0-4] 91 11 06 11 06 09 84 95 11 06 11 04 84 95 d7 6e 20 [0-4] 6a 5f b7 95 61 86 9c 07 11 08 12 01 28 [0-4] 13 0a 11 0a 2d 8a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -933,6 +970,7 @@ rule Trojan_MSIL_Kryptik_JR_2147777584_0
         $x_2_4 = "Invoke" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -955,6 +993,7 @@ rule Trojan_MSIL_Kryptik_YK_2147777585_0
         $x_10_2 = {9e 09 11 08 03 11 08 91 08 08 11 04 84 95 08 11 05 84 95 d7 6e 20 [0-4] 6a 5f 84 95 61 86 9c 11 08 17 d6 13 08 00 11 08 11 07 fe 02 13 0c 11 0c 2c 04}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -979,6 +1018,7 @@ rule Trojan_MSIL_Kryptik_GJ_2147777586_0
         $x_2_4 = "TransformFinalBlock" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1002,6 +1042,7 @@ rule Trojan_MSIL_Kryptik_YL_2147777587_0
         $x_2_3 = "GetMethod" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1027,6 +1068,7 @@ rule Trojan_MSIL_Kryptik_AAU_2147777920_0
         $x_2_5 = "CreateInstance" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1051,6 +1093,7 @@ rule Trojan_MSIL_Kryptik_AAV_2147778085_0
         $x_2_4 = "CreateInstance" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1076,6 +1119,7 @@ rule Trojan_MSIL_Kryptik_AAX_2147778086_0
         $x_2_5 = "CreateInstance" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1102,6 +1146,7 @@ rule Trojan_MSIL_Kryptik_AAX_2147778086_1
         $x_2_6 = "StrReverse" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1127,6 +1172,7 @@ rule Trojan_MSIL_Kryptik_ABK_2147778087_0
         $x_2_5 = "GetAssemblies" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1157,6 +1203,7 @@ rule Trojan_MSIL_Kryptik_ABY_2147778088_0
         $x_2_10 = "GetMethod" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_2_*))) or
             (all of ($x*))
@@ -1182,6 +1229,7 @@ rule Trojan_MSIL_Kryptik_ABX_2147778089_0
         $x_10_2 = {a2 25 18 72 [0-4] a2 a2 25 0d 14 14 18 8d [0-4] 25 16 17 9c 25 13 04 17 28 [0-4] 26 11 04 16 91 2d 02 2b 09 09 16 9a 28}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1208,6 +1256,7 @@ rule Trojan_MSIL_Kryptik_YJ_2147778850_0
         $x_2_6 = "CallByName" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_2_*))) or
             ((2 of ($x_10_*))) or
@@ -1237,6 +1286,7 @@ rule Trojan_MSIL_Kryptik_XL_2147778865_0
         $x_2_5 = "Assembly" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1265,6 +1315,7 @@ rule Trojan_MSIL_Kryptik_ABDIND_2147805128_0
         $x_1_8 = "IsEverythingDone" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1293,6 +1344,7 @@ rule Trojan_MSIL_Kryptik_ABDINDAI_2147805646_0
         $x_1_8 = "InstantiateImporter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1322,6 +1374,7 @@ rule Trojan_MSIL_Kryptik_ZKNISA_2147805648_0
         $x_1_9 = "HitsPaddle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1353,6 +1406,7 @@ rule Trojan_MSIL_Kryptik_ASMS_2147805649_0
         $x_1_11 = "TetrisGame_KeyUp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1385,6 +1439,7 @@ rule Trojan_MSIL_Kryptik_GILU_2147805867_0
         $x_1_12 = "ObjectHolderListGame_KeyUp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1409,6 +1464,7 @@ rule Trojan_MSIL_Kryptik_NURA_2147805872_0
         $x_1_4 = "ObjectIdentifier" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1437,6 +1493,7 @@ rule Trojan_MSIL_Kryptik_TINK_2147806226_0
         $x_1_8 = "createTokenAuth" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1462,6 +1519,7 @@ rule Trojan_MSIL_Kryptik_FINKT_2147806228_0
         $x_1_5 = "CF3424235665" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1486,6 +1544,7 @@ rule Trojan_MSIL_Kryptik_GINKT_2147806229_0
         $x_1_4 = {00 52 41 57 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1519,6 +1578,7 @@ rule Trojan_MSIL_Kryptik_ITAK_2147806230_0
         $x_1_13 = "xNswzOIepdAFUCjGEJDnKS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1543,6 +1603,7 @@ rule Trojan_MSIL_Kryptik_KTAB_2147806231_0
         $x_2_4 = {00 50 61 79 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1567,6 +1628,7 @@ rule Trojan_MSIL_Kryptik_NAMTIH_2147806232_0
         $x_2_4 = {00 46 75 6b 61 6e 74 75 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1588,6 +1650,7 @@ rule Trojan_MSIL_Kryptik_ZKA_2147807213_0
         $x_10_1 = {72 43 00 00 70 28 ?? ?? ?? 06 0a 72 85 00 00 70 28 ?? ?? ?? 06 0b 06 72 c7 00 00 70 72 09 01 00 70 28 ?? ?? ?? 06 0a 07 72 c7 00 00 70 72 09 01 00 70 28 ?? ?? ?? 06 0b 06}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1609,6 +1672,7 @@ rule Trojan_MSIL_Kryptik_GTSK_2147807216_0
         $x_10_1 = {73 13 00 00 0a 0a 73 14 00 00 0a 0b 73 15 00 00 0a 0c 08 06 08 6f ?? ?? ?? 0a 1e 5b 6f ?? ?? ?? 0a 6f 18 00 00 0a 08 06 08 6f ?? ?? ?? 0a 1e 5b 6f 17 00 00 0a 6f ?? ?? ?? 0a 07 08 6f ?? ?? ?? 0a 17 73 1c 00 00 0a 0d 09 02 16 02 8e 69 6f ?? ?? ?? 0a 09 6f ?? ?? ?? 0a 07 6f ?? ?? ?? 0a 13 04 de 11 26 16 28 20 00 00 0a 16 8d 1b 00 00 01 13 04 de 00 11 04 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1630,6 +1694,7 @@ rule Trojan_MSIL_Kryptik_JTSK_2147807217_0
         $x_10_1 = {72 43 00 00 70 28 ?? ?? ?? 06 0a 72 85 00 00 70 28 ?? ?? ?? 06 0b 06 72 c7 00 00 70 72 29 01 00 70 28 ?? ?? ?? 06 0a 07 72 c7 00 00 70 72 29 01 00 70 28 ?? ?? ?? 06 0b 06 28 ?? ?? ?? 0a 0c 08 72 6b 01 00 70 6f ?? ?? ?? 0a 0d 09 72 8d 01 00 70 6f ?? ?? ?? 0a 13 04 11 04 14 1a 8d 01 00 00 01 13 07 11 07 16 28 03 00 00 0a 6f ?? ?? ?? 0a a2 11 07 17 72 99 01 00 70 a2 11 07 18 07 a2 11 07 19 16 8c 0a 00 00 01 a2 11 07 6f ?? ?? ?? 0a 26 17 13 06 de 13 13 05 11 05 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 16 13 06 de 00 11 06 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1651,6 +1716,7 @@ rule Trojan_MSIL_Kryptik_KSRS_2147807218_0
         $x_10_1 = {25 26 0a 20 83 00 00 00 28 ?? ?? ?? 06 25 26 28 ?? ?? ?? 06 25 26 0b 06 20 c4 00 00 00 28 ?? ?? ?? 06 25 26 20 05 01 00 00 28 ?? ?? ?? 06 25 26 28 ?? ?? ?? 06 25 26 0a 07 20 c4 00 00 00 28 ?? ?? ?? 06 25 26 20 05 01 00 00 28 ?? ?? ?? 06 25 26 28 ?? ?? ?? 06 25 26 0b 06 28 ?? ?? ?? 0a 25 26 0c 08 20 26 01 00 00 28 ?? ?? ?? 06 25 26 6f ?? ?? ?? 0a 25 26 0d 09 20 47 01 00 00 28 ?? ?? ?? 06 25 26 6f ?? ?? ?? 0a 25 26 13 04 11 04 14 1a 28 ?? ?? ?? 06 25 26 13 07 11 07 16 28 ?? ?? ?? 0a 25 26 6f ?? ?? ?? 0a 25 26 a2 11 07 17 72 5b 00 00 70 a2 11 07 18 07 a2 11 07 19 16 8c 06 00 00 01 a2 11 07 6f ?? ?? ?? 0a 25 26 26 28 ?? ?? ?? 06 28 ?? ?? ?? 06 17 13 06 de 15 13 05 11 05 6f ?? ?? ?? 0a 25 26 28 ?? ?? ?? 0a 16 13 06 de 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1672,6 +1738,7 @@ rule Trojan_MSIL_Kryptik_TCKA_2147807219_0
         $x_10_1 = {72 4d 00 00 70 28 ?? ?? ?? 06 0a 72 8f 00 00 70 28 ?? ?? ?? 06 0b 06 72 d1 00 00 70 72 13 01 00 70 28 ?? ?? ?? 06 0a 07 72 d1 00 00 70 72 13 01 00 70 28 ?? ?? ?? 06 0b 06 28 ?? ?? ?? 0a 0c 08 72 35 01 00 70 6f ?? ?? ?? 0a 0d 09 72 57 01 00 70 6f ?? ?? ?? 0a 13 04 11 04 14 1a 8d 01 00 00 01 13 07 11 07 16 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a a2 11 07 17 72 5f 01 00 70 a2 11 07 18 07 a2 11 07 19 16 8c 0d 00 00 01 a2 11 07 6f ?? ?? ?? 0a 26 28 ?? ?? ?? 06 28 ?? ?? ?? 06 28 ?? ?? ?? 06 17 13 06 de 13 13 05 11 05 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 16 13 06 de 00 11 06 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1701,6 +1768,7 @@ rule Trojan_MSIL_Kryptik_YAUD_2147807531_0
         $x_1_9 = {00 78 73 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -1725,6 +1793,7 @@ rule Trojan_MSIL_Kryptik_AUSE_2147807532_0
         $x_10_1 = {73 4c 00 00 0a 0c 73 4d 00 00 0a 0a 08 06 28 ?? ?? ?? 0a 72 eb 2e 00 70 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 08 18 6f ?? ?? ?? 0a 08 6f ?? ?? ?? 0a 0d 02 13 04 09 11 04 16 11 04 8e b7 6f ?? ?? ?? 0a 0b de 0f 25 28 ?? ?? ?? 0a 13 05 28 ?? ?? ?? 0a de 00 07 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1757,6 +1826,7 @@ rule Trojan_MSIL_Kryptik_MC_2147807762_0
         $x_1_12 = "set_CreateNoWindow" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1778,6 +1848,7 @@ rule Trojan_MSIL_Kryptik_GMBH_2147807922_0
         $x_10_1 = {73 13 00 00 0a 0b 73 14 00 00 0a 0c 08 06 08 6f ?? ?? ?? 0a 1e 5b 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 08 06 08 6f ?? ?? ?? 0a 1e 5b 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 07 08 6f ?? ?? ?? 0a 17 73 1b 00 00 0a 0d 09 02 16 02 8e 69 6f ?? ?? ?? 0a 09 6f ?? ?? ?? 0a 07 6f ?? ?? ?? 0a 13 04 de 11 26 16 28 ?? ?? ?? 0a 16 8d 1b 00 00 01 13 04 de 00 11 04 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1802,6 +1873,7 @@ rule Trojan_MSIL_Kryptik_BSDJ_2147808412_0
         $x_2_4 = {00 48 69 74 6c 65 72 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1823,6 +1895,7 @@ rule Trojan_MSIL_Kryptik_HSZL_2147808413_0
         $x_10_1 = {73 1c 00 00 0a 0a 73 1d 00 00 0a 0b 73 1e 00 00 0a 0c 08 06 08 6f ?? ?? ?? 0a 1e 5b 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 08 06 08 6f ?? ?? ?? 0a 1e 5b 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 07 08 6f ?? ?? ?? 0a 17 73 25 00 00 0a 0d 09 02 16 02 8e 69 6f ?? ?? ?? 0a 09 6f ?? ?? ?? 0a 07 6f ?? ?? ?? 0a 13 04 de 11 26 16 28 29 00 00 0a 16 8d 22 00 00 01 13 04 de 00 11 04 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1844,6 +1917,7 @@ rule Trojan_MSIL_Kryptik_ESR_2147808416_0
         $x_10_1 = {d0 5a 00 00 01 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 03 6f ?? ?? ?? 0a 17 8d 17 00 00 01 25 16 d0 01 00 00 1b 28 ?? ?? ?? 0a a2 28 ?? ?? ?? 0a 04 17 8d 10 00 00 01 25 16 02 a2 6f ?? ?? ?? 0a 0a 2b 00 06 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1876,6 +1950,7 @@ rule Trojan_MSIL_Kryptik_ME_2147808840_0
         $x_1_12 = "set_IV" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1907,6 +1982,7 @@ rule Trojan_MSIL_Kryptik_MF_2147808841_0
         $x_1_11 = "GetData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1928,6 +2004,7 @@ rule Trojan_MSIL_Kryptik_TSR_2147809030_0
         $x_10_1 = {d0 51 00 00 01 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 03 6f ?? ?? ?? 0a 17 8d 17 00 00 01 25 16 d0 01 00 00 1b 28 ?? ?? ?? 0a a2 28 ?? ?? ?? 0a 04 17 8d 10 00 00 01 25 16 02 a2 6f ?? ?? ?? 0a 0a 2b 00 06 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1949,6 +2026,7 @@ rule Trojan_MSIL_Kryptik_LTAB_2147809041_0
         $x_10_1 = {73 1a 00 00 0a 0a 73 1b 00 00 0a 0b 73 1c 00 00 0a 0c 08 06 08 6f ?? ?? ?? 0a 1e 5b 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 08 06 08 6f ?? ?? ?? 0a 1e 5b 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 07 08 6f ?? ?? ?? 0a 17 73 23 00 00 0a 0d 09 02 16 02 8e 69 6f ?? ?? ?? 0a 09 6f ?? ?? ?? 0a 07 6f ?? ?? ?? 0a 13 04 de 11}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1970,6 +2048,7 @@ rule Trojan_MSIL_Kryptik_PALLV_2147809042_0
         $x_10_1 = {2b 02 26 16 02 6f ?? ?? ?? 0a d4 8d 25 00 00 01 0a 02 06 16 06 8e 69 6f ?? ?? ?? 0a 26 06 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1995,6 +2074,7 @@ rule Trojan_MSIL_Kryptik_PSA_2147831469_0
         $x_1_5 = "WriteLine" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2027,6 +2107,7 @@ rule Trojan_MSIL_Kryptik_SAMD_2147896139_0
         $x_1_12 = "Se5fs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2052,6 +2133,7 @@ rule Trojan_MSIL_Kryptik_NBL_2147896413_0
         $x_1_2 = {fe 0c 05 00 fe 0c 05 00 5a 6e fe 0c 1d 00 5e 6d fe 0e 05 00 fe 0c 0d 00 fe 0c 0d 00 18 62 61 fe 0e 0d 00 fe 0c 0d 00 fe 0c 34 00 58 fe 0e 0d 00 fe 0c 0d 00 fe 0c 0d 00 1d 64 61 fe 0e 0d 00 fe 0c 0d 00 fe 0c 27 00 58 fe 0e 0d 00 fe 0c 0d 00 fe 0c 0d 00 1f 09 62 61 fe 0e 0d 00 fe 0c 0d 00 fe 0c 05 00 58 fe 0e 0d 00 fe 0c 2f 00 1f 12 62 fe 0c 2f 00 58 fe 0c 34 00 61 fe 0c 0d 00 58 fe 0e 0d 00 fe 0c 0d 00 76 6c 6d 58 13 11 20 15 01 00 00 38 12 d4 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2073,6 +2155,7 @@ rule Trojan_MSIL_Kryptik_PGK_2147939522_0
         $x_5_1 = {72 33 00 00 70 72 35 00 00 70 17 8d ?? 00 00 01 25 16 1f 25 9d 28 ?? 00 00 0a 7e ?? 00 00 04 25 2d 17}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2094,6 +2177,7 @@ rule Trojan_MSIL_Kryptik_PGKR_2147939660_0
         $x_5_1 = {d0 02 00 00 02 28 ?? 00 00 0a 6f ?? 00 00 0a 72 01 00 00 70 72 07 00 00 70 6f ?? 00 00 0a 28 ?? 00 00 06 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2115,6 +2199,7 @@ rule Trojan_MSIL_Kryptik_PGT_2147940190_0
         $x_5_1 = {94 58 20 00 01 00 00 5d 94 fe 0e 0e 00 fe 0c 07 00 fe 0c 0c 00 fe 09 00 00 fe 0c 0c 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2136,6 +2221,7 @@ rule Trojan_MSIL_Kryptik_PGKM_2147946037_0
         $x_5_1 = {02 7b 40 00 00 04 2d 67 02 17 7d 40 00 00 04 02 7b 3f 00 00 04 2d 29 02 73 73 01 00 06 7d 3f 00 00 04 02 7b 3f 00 00 04 1f 13 7d c1 01 00 04 02 7b 3f 00 00 04 02 28 ?? 00 00 0a 7d c2 01 00 04 02 7b 3f 00 00 04 28 ?? ?? 00 06 2d 22}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

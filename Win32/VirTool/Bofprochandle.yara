@@ -20,6 +20,7 @@ rule VirTool_Win32_Bofprochandle_A_2147901306_0
         $x_1_6 = "killit failed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_MSIL_Fakesupport_DA_2147841593_0
         $x_1_5 = "WindowsUpdate.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

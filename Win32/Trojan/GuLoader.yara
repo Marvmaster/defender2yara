@@ -25,6 +25,7 @@ rule Trojan_Win32_GuLoader_GS_2147761303_0
         $x_1_10 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_GuLoader_RG_2147775679_0
         $x_1_4 = "FLuxOil" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_Win32_GuLoader_RG_2147775679_1
         $x_1_4 = "Software\\Spionkameraet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Trojan_Win32_GuLoader_BY_2147786317_0
         $x_1_9 = "Templates\\Enneastylar\\Genoptagelse\\Vasoconstriction.ini" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +128,7 @@ rule Trojan_Win32_GuLoader_SIBB_2147794487_0
         $x_1_2 = {83 f9 00 0f 85 ?? ?? ?? ?? [0-32] 8b 1c 0e [0-32] 89 1c 08 [0-32] bb ?? ?? ?? ?? [0-32] 31 ff [0-32] c7 45 ?? ?? ?? ?? ?? [0-32] 50 [0-32] 5a [0-32] 01 fa [0-32] 8b 32 [0-32] 31 de [0-32] c7 02 ?? ?? ?? ?? [0-32] 01 32 [0-32] 47 [0-32] 47 [0-32] 47 [0-32] [0-32] 47 [0-32] 3b 7d 08 0f 85 ?? ?? ?? ?? [0-32] ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule Trojan_Win32_GuLoader_SIBC_2147794488_0
         $x_1_1 = {8b 2c 17 66 [0-32] [0-32] [0-32] 81 f5 ?? ?? ?? ?? [0-32] [0-32] [0-32] 01 2c 16 [0-32] [0-32] [0-32] 83 da 04 0f 8d ?? ?? ?? ?? [0-32] [0-32] [0-32] ff e6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +172,7 @@ rule Trojan_Win32_GuLoader_SIBD_2147794799_0
         $x_1_1 = {ff d3 3d e5 [0-16] be ?? ?? ?? ?? [0-16] b9 ?? ?? ?? ?? [0-16] bf ?? ?? ?? ?? [0-16] 31 d2 [0-16] 33 14 0e [0-16] 09 14 08 [0-16] 31 3c 08 [0-16] 81 e9 ?? ?? ?? ?? [0-16] 81 c1 ?? ?? ?? ?? [0-16] 41 7d ?? [0-16] ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule Trojan_Win32_GuLoader_SIBE_2147794889_0
         $x_1_1 = {39 08 9c 9d [0-32] 83 c0 ff [0-32] 39 08 9c 9d 75 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? [0-240] 8b 1c 18 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? [0-240] 50 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? [0-240] 50 [0-32] 68 ?? ?? ?? ?? [0-32] 31 c0 [0-32] 50 [0-32] ff d3 [0-32] be ?? ?? ?? ?? [0-32] b9 ?? ?? ?? ?? [0-32] bf ?? ?? ?? ?? [0-32] 31 d2 [0-32] 33 14 0e [0-32] 09 14 08 [0-32] 31 3c 08 [0-32] 81 e9 ?? ?? ?? ?? [0-32] 81 c1 ?? ?? ?? ?? [0-32] 41 7d ?? [0-32] ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -208,6 +216,7 @@ rule Trojan_Win32_GuLoader_SIBF_2147794940_0
         $x_1_1 = {83 f9 00 0f 85 ?? ?? ?? ?? [0-32] 8b 1c 0e [0-32] 89 1c 08 [0-32] bb ?? ?? ?? ?? [0-32] c7 45 ?? ?? ?? ?? ?? [0-32] c7 45 ?? ?? ?? ?? ?? [0-32] 50 [0-32] 5a [0-32] 03 55 06 [0-32] 8b 3a [0-32] 31 df [0-32] c7 02 ?? ?? ?? ?? [0-32] 01 3a [0-32] ff 45 06 [0-32] ff 45 06 [0-32] ff 45 06 [0-32] [0-32] ff 45 06 [0-32] 8b 7d 06 [0-32] 3b 7d 0a 0f 85 ?? ?? ?? ?? [0-32] ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -229,6 +238,7 @@ rule Trojan_Win32_GuLoader_RPK_2147796658_0
         $x_1_1 = {0f ae f0 81 f5 [0-16] 55 [0-16] 59 [0-16] 89 0c 37 [0-16] 4e [0-16] 4e [0-16] 4e [0-16] 4e 7d [0-16] 89 f9 [0-16] 51 [0-16] c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -250,6 +260,7 @@ rule Trojan_Win32_GuLoader_RPK_2147796658_1
         $x_1_1 = {8b 2c 17 f7 c3 [0-32] [0-32] [0-16] 81 f5 [0-32] [0-32] [0-16] 01 2c 10 [0-32] [0-32] [0-32] [0-16] 83 da 04 [0-32] 0f 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -271,6 +282,7 @@ rule Trojan_Win32_GuLoader_RPF_2147798382_0
         $x_1_1 = {8b 34 39 dd [0-16] [0-16] 01 34 3a [0-16] [0-16] 81 34 3a [0-16] [0-16] 83 ef [0-16] [0-16] 83 c7 [0-16] [0-16] 0f 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -292,6 +304,7 @@ rule Trojan_Win32_GuLoader_RPF_2147798382_1
         $x_1_1 = {81 34 24 02 5c 4a ba [0-16] [0-16] [0-16] 8f 04 30 [0-16] [0-16] [0-16] [0-16] 83 de 28 [0-16] [0-16] 83 d6 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +331,7 @@ rule Trojan_Win32_GuLoader_RPA_2147799546_0
         $x_1_6 = "230202021837Z0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -339,6 +353,7 @@ rule Trojan_Win32_GuLoader_RPA_2147799546_1
         $x_1_1 = {ff 34 32 0f [0-16] [0-16] [0-16] [0-16] 81 34 24 [0-16] [0-16] [0-16] [0-16] 8f 04 30 [0-16] [0-16] [0-32] [0-16] [0-16] 83 de [0-16] [0-16] [0-16] 83 d6 [0-16] [0-16] 0f 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -364,6 +379,7 @@ rule Trojan_Win32_GuLoader_RPA_2147799546_2
         $x_1_5 = "Software\\Sisiutl169\\Jesuiterordnens157" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -385,6 +401,7 @@ rule Trojan_Win32_GuLoader_RPB_2147799547_0
         $x_1_1 = {8b 34 39 d9 [0-16] [0-16] 01 34 3a [0-16] [0-16] 81 34 3a [0-16] [0-16] 83 ef [0-16] [0-16] 83 c7 [0-16] [0-16] 0f 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -406,6 +423,7 @@ rule Trojan_Win32_GuLoader_RPC_2147799548_0
         $x_1_1 = {83 c1 00 8b 34 39 [0-16] [0-16] 01 34 3a [0-16] [0-16] 81 34 3a [0-16] [0-16] 83 ef [0-16] [0-16] 83 c7 [0-16] [0-16] 0f 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -429,6 +447,7 @@ rule Trojan_Win32_GuLoader_RPC_2147799548_1
         $x_1_3 = {09 04 31 90 66 0f eb cc eb 3e 9f 91 2d 75 31 31 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -450,6 +469,7 @@ rule Trojan_Win32_GuLoader_RPE_2147805176_0
         $x_1_1 = {0b 1c 3a 83 [0-16] 81 f3 [0-16] 09 1c 38 [0-16] 83 ef [0-16] 81 ff [0-16] 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -471,6 +491,7 @@ rule Trojan_Win32_GuLoader_RPG_2147805177_0
         $x_1_1 = {0b 1c 3a 83 [0-16] 81 f3 [0-16] 09 1c 38 [0-16] 83 ef [0-16] 81 ff [0-16] 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -493,6 +514,7 @@ rule Trojan_Win32_GuLoader_SIBM_2147805726_0
         $x_1_2 = {56 f8 31 ff [0-4] 57 [0-5] ff d0 [0-8] e8 ?? ?? ?? ?? [0-8] 31 ff [0-16] bb ?? ?? ?? ?? [0-8] 81 f3 ?? ?? ?? ?? [0-48] 0b 1c 3a [0-8] 81 f3 ?? ?? ?? ?? [0-8] 09 1c 38 [0-10] 83 c7 04 [0-5] 81 ff ?? ?? ?? ?? 75 ?? [0-7] ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -515,6 +537,7 @@ rule Trojan_Win32_GuLoader_SIBP_2147805727_0
         $x_1_2 = {83 c7 04 83 34 24 ?? 81 ff ?? ?? ?? ?? [0-10] bb ?? ?? ?? ?? [0-10] 81 c3 ?? ?? ?? ?? [0-16] 81 f3 ?? ?? ?? ?? [0-10] 81 c3 ?? ?? ?? ?? [0-16] 0b 1c 3a [0-10] 81 f3 ?? ?? ?? ?? [0-10] 09 1c 38 [0-10] 83 c7 04 83 34 24 ?? 81 ff 01 0f 85 ?? ?? ?? ?? [0-5] ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -540,6 +563,7 @@ rule Trojan_Win32_GuLoader_AD_2147805942_0
         $x_1_5 = "fuzzer.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -566,6 +590,7 @@ rule Trojan_Win32_GuLoader_AD_2147805942_1
         $x_1_6 = "PanelInfo.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -593,6 +618,7 @@ rule Trojan_Win32_GuLoader_AD_2147805942_2
         $x_3_7 = "EVENT_SINK_AddRef" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -619,6 +645,7 @@ rule Trojan_Win32_GuLoader_AD_2147805942_3
         $x_2_6 = "chego\\reverensens" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -646,6 +673,7 @@ rule Trojan_Win32_GuLoader_QW_2147807411_0
         $x_3_7 = "Feathertop" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -672,6 +700,7 @@ rule Trojan_Win32_GuLoader_MB_2147812754_0
         $x_3_6 = "Scripting.FileSystemObject" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -707,6 +736,7 @@ rule Trojan_Win32_GuLoader_MB_2147812754_1
         $x_1_15 = "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\URKOKKENE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -729,6 +759,7 @@ rule Trojan_Win32_GuLoader_MA_2147813002_0
         $x_1_2 = {c4 29 04 03 00 00 00 00 ff cc 31 00 2b b2 2f de ca ed 8e 79 46 9a ec 92 ce c7 a6 62 c2 c9 cb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -756,6 +787,7 @@ rule Trojan_Win32_GuLoader_MA_2147813002_1
         $x_3_7 = "ShellExecuteExW" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -783,6 +815,7 @@ rule Trojan_Win32_GuLoader_MC_2147813003_0
         $x_3_7 = "Concuit" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -818,6 +851,7 @@ rule Trojan_Win32_GuLoader_MC_2147813003_1
         $x_1_15 = "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\SLANDEROUS" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -842,6 +876,7 @@ rule Trojan_Win32_GuLoader_MD_2147813004_0
         $x_3_4 = "readme.txt" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -868,6 +903,7 @@ rule Trojan_Win32_GuLoader_MD_2147813004_1
         $x_1_6 = "Software\\Garantibetalingernes\\Hygienise" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -895,6 +931,7 @@ rule Trojan_Win32_GuLoader_M_2147813007_0
         $x_3_7 = "Classic.png" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -922,6 +959,7 @@ rule Trojan_Win32_GuLoader_N_2147813016_0
         $x_3_7 = "EtwEventEnabled" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -949,6 +987,7 @@ rule Trojan_Win32_GuLoader_NA_2147813311_0
         $x_3_7 = "wininit.ini" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -971,6 +1010,7 @@ rule Trojan_Win32_GuLoader_SIBU_2147813441_0
         $x_1_2 = {aa 81 34 1a ?? ?? ?? ?? [0-64] 43 [0-58] 43 [0-64] 43 [0-48] 43 [0-42] 81 fb ?? ?? ?? ?? [0-48] 0f 85 ?? ?? ?? ?? [0-58] bc 01 ff d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -993,6 +1033,7 @@ rule Trojan_Win32_GuLoader_SIBU1_2147813442_0
         $x_1_2 = {f9 81 34 1a ?? ?? ?? ?? [0-53] 43 [0-48] 43 [0-58] 43 [0-48] 43 [0-58] 81 fb ?? ?? ?? ?? [0-64] 0f 85 ?? ?? ?? ?? 3a 01 81 36 ?? ?? ?? ?? [0-64] 81 2e ?? ?? ?? ?? [0-58] ff d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1015,6 +1056,7 @@ rule Trojan_Win32_GuLoader_SIBU2_2147813444_0
         $x_1_2 = {bb 81 34 1a ?? ?? ?? ?? [0-58] 43 [0-53] 43 [0-53] 43 [0-58] 43 [0-42] 81 fb ?? ?? ?? ?? [0-48] 0f 85 ?? ?? ?? ?? 52 01 81 36 ?? ?? ?? ?? [0-129] 36 ?? ?? ?? ?? [0-255] d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1038,6 +1080,7 @@ rule Trojan_Win32_GuLoader_SIBU3_2147813521_0
         $x_1_3 = {38 06 8b 85 ?? ?? ?? ?? 73 ?? 89 c3 [0-5] c1 e0 ?? 01 d8 0f b6 0e 01 c8 35 ?? ?? ?? ?? 46 88 95 ?? ?? ?? ?? [0-5] 8a 16 [0-5] 80 fa 00 8a 95 06 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1060,6 +1103,7 @@ rule Trojan_Win32_GuLoader_SIBU17_2147814364_0
         $x_1_2 = {ff 34 0f d9 ?? ?? ?? ?? [0-106] 31 04 24 [0-100] 8f 04 0f [0-108] 83 c1 04 [0-80] 81 f9 ?? ?? ?? ?? [0-64] 0f 85 ?? ?? ?? ?? [0-176] ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1082,6 +1126,7 @@ rule Trojan_Win32_GuLoader_SIBU18_2147814365_0
         $x_1_2 = {ff 34 0f d9 ?? ?? ?? ?? [0-106] 31 04 24 [0-106] 8f 04 0f [0-122] 83 c1 04 [0-85] 81 f9 ?? ?? ?? ?? [0-58] 0f 85 ?? ?? ?? ?? [0-106] 57 [0-112] ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1104,6 +1149,7 @@ rule Trojan_Win32_GuLoader_EM_2147815017_0
         $x_5_2 = {8b 47 3c 33 f6 8b 44 38 78 03 c7 8b 48 24 8b 50 20 03 cf 89 4d f8 03 d7 8b 48 1c 03 cf 89 55 fc 89 4d f4 8b 48 18 89 4d 08}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1129,6 +1175,7 @@ rule Trojan_Win32_GuLoader_EM_2147815017_1
         $x_1_5 = "nulpunktsgennemgange\\claywares\\Pagedom" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1154,6 +1201,7 @@ rule Trojan_Win32_GuLoader_EM_2147815017_2
         $x_1_5 = "Siphonostomatous\\Horneddevil.Bil" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1180,6 +1228,7 @@ rule Trojan_Win32_GuLoader_CB_2147815723_0
         $x_3_6 = "DllUnregisterServer" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1212,6 +1261,7 @@ rule Trojan_Win32_GuLoader_CB_2147815723_1
         $x_1_12 = "Pureen\\Netti\\Pyloralgia.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -1238,6 +1288,7 @@ rule Trojan_Win32_GuLoader_AH_2147816513_0
         $x_3_6 = "gdi32::AbortPath (i 0)i.r9" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1264,6 +1315,7 @@ rule Trojan_Win32_GuLoader_AH_2147816513_1
         $x_1_6 = "Plight\\Canonist\\Hastener\\Robbins.Afs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1288,6 +1340,7 @@ rule Trojan_Win32_GuLoader_XTW_2147816561_0
         $x_1_4 = {01 3a 66 0f [0-10] eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1313,6 +1366,7 @@ rule Trojan_Win32_GuLoader_SIBW_2147816657_0
         $x_1_5 = {1b 7a a2 e2 ?? b9 ?? ?? ?? ?? 29 f0 1f 72 ?? 5f 9f ee 38 b3 ?? ?? ?? ?? 65 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1336,6 +1390,7 @@ rule Trojan_Win32_GuLoader_SIBV1_2147816735_0
         $x_1_3 = {83 c6 01 66 [0-10] ff 37 [0-10] 31 34 24 [0-10] 5b [0-10] 3b 5c 24 ?? 75 ?? [0-10] bb ?? ?? ?? ?? [0-10] 83 eb 04 [0-10] ff 34 1f [0-10] 5a [0-10] e8 ?? ?? ?? ?? [0-10] 09 14 18 [0-10] 75 ?? [0-10] ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1359,6 +1414,7 @@ rule Trojan_Win32_GuLoader_SIBM1_2147816745_0
         $x_1_3 = {b8 00 00 00 00 [0-10] 50 [0-106] b8 ?? ?? ?? ?? [0-240] 01 c2 [0-106] ff 12 [0-112] ff 37 [0-10] 5d [0-106] 31 f5 [0-10] 31 2c 10 [0-106] 83 c2 04 [0-10] 83 c7 04 [0-106] 81 fa ?? ?? ?? ?? 0f 85 ?? ?? ?? ?? [0-106] 50 [0-10] c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1381,6 +1437,7 @@ rule Trojan_Win32_GuLoader_SIBM2_2147816746_0
         $x_1_2 = "Variantfunktions" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1404,6 +1461,7 @@ rule Trojan_Win32_GuLoader_SIBM2_2147816746_1
         $x_1_3 = {83 e9 04 eb ?? ?? ?? ?? [0-74] 8b 99 ?? ?? ?? ?? [0-96] 33 5d ?? [0-48] 89 1c 08 [0-96] 83 e9 04 [0-74] 0f 8d ?? ?? ?? ?? [0-128] [0-192] 5b [0-133] 6a 00 [0-90] 6a 00 [0-138] 50 [0-112] 53 [0-106] 6a 00 [0-128] 6a 00 [0-32] ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1426,6 +1484,7 @@ rule Trojan_Win32_GuLoader_SIBM3_2147817234_0
         $x_1_2 = {e0 81 34 17 ?? ?? ?? ?? [0-48] 83 c2 04 [0-48] 81 fa ?? ?? ?? ?? 0f 85 ?? ?? ?? ?? [0-48] ff e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1447,6 +1506,7 @@ rule Trojan_Win32_GuLoader_SIBM12_2147817695_0
         $x_2_1 = {8b 0c 03 66 5a 02 81 f1 ?? ?? ?? ?? 5a 02 89 0c 03 20 02 83 c0 04 10 02 3d ?? ?? ?? ?? [0-112] 0f 85 ?? ?? ?? ?? b0 01 ff d3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1468,6 +1528,7 @@ rule Trojan_Win32_GuLoader_SIBM14_2147817740_0
         $x_1_1 = {8b 0c 03 0f 70 01 80 f1 00 [0-170] 81 f1 ?? ?? ?? ?? 60 02 89 0c 03 c0 01 83 c0 04 aa 01 3d ?? ?? ?? ?? [0-96] 0f 85 ?? ?? ?? ?? ba 01 ff d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1489,6 +1550,7 @@ rule Trojan_Win32_GuLoader_SIBM15_2147817752_0
         $x_1_1 = {89 d2 89 d2 [0-10] 81 ea ?? ?? ?? ?? [0-16] 81 f2 ?? ?? ?? ?? [0-64] 81 ea ?? ?? ?? ?? [0-32] 33 14 31 [0-16] 81 f2 ?? ?? ?? ?? [0-64] 8b 1c 24 [0-10] 01 14 33 [0-16] 83 ee 04 0f 8d ?? ?? ?? ?? [0-10] c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1511,6 +1573,7 @@ rule Trojan_Win32_GuLoader_SIBM16_2147818081_0
         $x_1_2 = {83 c2 04 80 [0-48] 81 fa ?? ?? ?? ?? [0-48] 81 34 17 ?? ?? ?? ?? [0-48] 83 c2 04 [0-48] 81 fa ?? ?? ?? ?? 0f 85 ?? ?? ?? ?? [0-48] ff e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1536,6 +1599,7 @@ rule Trojan_Win32_GuLoader_DA_2147821134_0
         $x_1_5 = "germayne.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1561,6 +1625,7 @@ rule Trojan_Win32_GuLoader_DA_2147821134_1
         $x_1_5 = "Hderkronet237.lnk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1599,6 +1664,7 @@ rule Trojan_Win32_GuLoader_DA_2147821134_2
         $x_1_18 = "bundafstandenes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1628,6 +1694,7 @@ rule Trojan_Win32_GuLoader_BM_2147821231_0
         $x_1_5 = "bulkladninger" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1650,6 +1717,7 @@ rule Trojan_Win32_GuLoader_RPD_2147825089_0
         $x_1_2 = {84 db 31 1c 08 84 db 83 c1 04 d9 e8 eb 51 be 9d e5 65 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1674,6 +1742,7 @@ rule Trojan_Win32_GuLoader_EL_2147826452_0
         $x_1_4 = "Opdateringssiderne166" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1698,6 +1767,7 @@ rule Trojan_Win32_GuLoader_EL_2147826452_1
         $x_1_4 = "Teamworket32" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1725,6 +1795,7 @@ rule Trojan_Win32_GuLoader_AUM_2147826874_0
         $x_1_7 = "Paasttelsens223.ini" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1751,6 +1822,7 @@ rule Trojan_Win32_GuLoader_AYC_2147826884_0
         $x_1_6 = "Fortrngningsmekanisme12.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1776,6 +1848,7 @@ rule Trojan_Win32_GuLoader_AYC_2147826884_1
         $x_1_5 = "Tiltuskninger56.Unb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1801,6 +1874,7 @@ rule Trojan_Win32_GuLoader_AYB_2147827039_0
         $x_1_5 = "%WINDIR%\\Strbet\\Ravnemoderens\\Bryllupsnatten" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1826,6 +1900,7 @@ rule Trojan_Win32_GuLoader_BYG_2147827205_0
         $x_1_5 = "Ungermane95\\Eliderendes\\Karosserierne" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1852,6 +1927,7 @@ rule Trojan_Win32_GuLoader_AYE_2147827644_0
         $x_1_6 = "Detektivarbejders\\Preaggravate\\Feoffee.und" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1877,6 +1953,7 @@ rule Trojan_Win32_GuLoader_ASM_2147833276_0
         $x_1_5 = "Gulvhjderne149\\helsilkes.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1902,6 +1979,7 @@ rule Trojan_Win32_GuLoader_DB_2147833650_0
         $x_1_5 = "Flugtsikreste\\Skabiosernes\\knystet\\Sfrers.Har" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1929,6 +2007,7 @@ rule Trojan_Win32_GuLoader_DD_2147833934_0
         $x_1_7 = "pakkes\\Tilstningsstofs\\Quinologist" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1953,6 +2032,7 @@ rule Trojan_Win32_GuLoader_RSM_2147839634_0
         $x_1_4 = "kundebrevet.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1978,6 +2058,7 @@ rule Trojan_Win32_GuLoader_RSM_2147839634_1
         $x_1_5 = "invigilate havearkitekter.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2004,6 +2085,7 @@ rule Trojan_Win32_GuLoader_DE_2147841539_0
         $x_1_6 = "ejdendes\\Inceration" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2027,6 +2109,7 @@ rule Trojan_Win32_GuLoader_RSP_2147845437_0
         $x_1_3 = "Software\\Vekslendes" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2053,6 +2136,7 @@ rule Trojan_Win32_GuLoader_RSP_2147845437_1
         $x_1_6 = "mellemteksten.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2079,6 +2163,7 @@ rule Trojan_Win32_GuLoader_ME_2147896084_0
         $x_3_6 = "Delete on reboot" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2102,6 +2187,7 @@ rule Trojan_Win32_GuLoader_SUI_2147905166_0
         $x_2_3 = "pulvereous helbredsgrundes discoid" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2127,6 +2213,7 @@ rule Trojan_Win32_GuLoader_SUI_2147905166_1
         $x_1_5 = "afsgningerne takketalernes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2154,6 +2241,7 @@ rule Trojan_Win32_GuLoader_SUI_2147905166_2
         $x_1_7 = "seismometeret rustedes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2178,6 +2266,7 @@ rule Trojan_Win32_GuLoader_AA_2147912666_0
         $x_10_4 = {89 d6 60 0f 31 b8 ?? ?? ?? ?? 04 01 01 01 01 05 35 2d b8 ?? ?? ?? ?? 04 01 01 01 01 05 35 2d b8 ?? ?? ?? ?? 04 01 01 01 01 05 35 2d b8 ?? ?? ?? ?? 0f a2}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -2208,6 +2297,7 @@ rule Trojan_Win32_GuLoader_NG_2147914184_0
         $x_1_6 = "Crackerberry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2235,6 +2325,7 @@ rule Trojan_Win32_GuLoader_NG_2147914184_1
         $x_1_7 = "fraadserierne.rip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2260,6 +2351,7 @@ rule Trojan_Win32_GuLoader_NG_2147914184_2
         $x_1_5 = "besejledes.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2283,6 +2375,7 @@ rule Trojan_Win32_GuLoader_HNA_2147917861_0
         $x_1_3 = {83 e9 30 2c 53 c6 45 d6 04 f6 d8 1b c0 f7 d0 23 c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2309,6 +2402,7 @@ rule Trojan_Win32_GuLoader_NL_2147917959_0
         $x_1_6 = "blommehave" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2336,6 +2430,7 @@ rule Trojan_Win32_GuLoader_RSD_2147919598_0
         $x_1_7 = "subconsulship begramsedes.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2362,6 +2457,7 @@ rule Trojan_Win32_GuLoader_RSH_2147925145_0
         $x_1_6 = "andedammene elektronrret" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2388,6 +2484,7 @@ rule Trojan_Win32_GuLoader_RSI_2147925419_0
         $x_1_6 = "vejningers.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2415,6 +2512,7 @@ rule Trojan_Win32_GuLoader_RSJ_2147925465_0
         $x_1_7 = "regalers.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2441,6 +2539,7 @@ rule Trojan_Win32_GuLoader_RSL_2147925570_0
         $x_1_6 = "kolonialt billedtppet.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2467,6 +2566,7 @@ rule Trojan_Win32_GuLoader_RSN_2147925654_0
         $x_1_6 = "vulgarizer.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2493,6 +2593,7 @@ rule Trojan_Win32_GuLoader_RSB_2147932408_0
         $x_1_6 = "\\hydranths\\Dynamistic.pre" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2519,6 +2620,7 @@ rule Trojan_Win32_GuLoader_RSE_2147932819_0
         $x_1_6 = "unconformity nonimputatively.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2543,6 +2645,7 @@ rule Trojan_Win32_GuLoader_RSF_2147932961_0
         $x_1_4 = "toggler triumvirates.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2570,6 +2673,7 @@ rule Trojan_Win32_GuLoader_RSG_2147932999_0
         $x_1_7 = "genfremstilles dmringer.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2597,6 +2701,7 @@ rule Trojan_Win32_GuLoader_RSK_2147933300_0
         $x_1_7 = "busseronne.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2623,6 +2728,7 @@ rule Trojan_Win32_GuLoader_RSO_2147933773_0
         $x_1_6 = "squilgees.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2649,6 +2755,7 @@ rule Trojan_Win32_GuLoader_RSQ_2147933793_0
         $x_1_6 = "skims trogon skridtkilen" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2675,6 +2782,7 @@ rule Trojan_Win32_GuLoader_RSR_2147934158_0
         $x_1_6 = "antibiotikaforbruget.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2701,6 +2809,7 @@ rule Trojan_Win32_GuLoader_RSS_2147934159_0
         $x_1_6 = "kammerjunkerne.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2725,6 +2834,7 @@ rule Trojan_Win32_GuLoader_RST_2147934167_0
         $x_1_4 = "dovetailwise.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2751,6 +2861,7 @@ rule Trojan_Win32_GuLoader_RSU_2147934241_0
         $x_1_6 = "Flagellants.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2773,6 +2884,7 @@ rule Trojan_Win32_GuLoader_RSV_2147934253_0
         $x_1_2 = "filsti laggards.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2799,6 +2911,7 @@ rule Trojan_Win32_GuLoader_RSW_2147934448_0
         $x_1_6 = "tvangsfuldbyrder.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2825,6 +2938,7 @@ rule Trojan_Win32_GuLoader_RSX_2147934458_0
         $x_1_6 = "nadvergst.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2850,6 +2964,7 @@ rule Trojan_Win32_GuLoader_RSY_2147934560_0
         $x_1_5 = "infeasibilities aquaduct.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2875,6 +2990,7 @@ rule Trojan_Win32_GuLoader_RSZ_2147934598_0
         $x_1_5 = "skinnebusserne" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2903,6 +3019,7 @@ rule Trojan_Win32_GuLoader_SRG_2147934637_0
         $x_1_8 = "\\proctoclysis\\rosetan.fis" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2927,6 +3044,7 @@ rule Trojan_Win32_GuLoader_RBA_2147934680_0
         $x_1_4 = "highcourt.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2954,6 +3072,7 @@ rule Trojan_Win32_GuLoader_RBA_2147934680_1
         $x_1_7 = "stinkbranden" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2979,6 +3098,7 @@ rule Trojan_Win32_GuLoader_RBB_2147934688_0
         $x_1_5 = "grundlovstalens redhandedness.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3005,6 +3125,7 @@ rule Trojan_Win32_GuLoader_RBB_2147934688_1
         $x_1_6 = "vocoded differentieringer.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3030,6 +3151,7 @@ rule Trojan_Win32_GuLoader_RBC_2147934700_0
         $x_1_5 = "registernavnenes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3055,6 +3177,7 @@ rule Trojan_Win32_GuLoader_RBC_2147934700_1
         $x_1_5 = "macrosymbiont.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3078,6 +3201,7 @@ rule Trojan_Win32_GuLoader_RBD_2147934845_0
         $x_1_3 = "byretsdommeres.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3103,6 +3227,7 @@ rule Trojan_Win32_GuLoader_RBD_2147934845_1
         $x_1_5 = "\\spermatia" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3127,6 +3252,7 @@ rule Trojan_Win32_GuLoader_RBE_2147934990_0
         $x_1_4 = "usikkerhedsmomentets dekodningers.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3153,6 +3279,7 @@ rule Trojan_Win32_GuLoader_RBE_2147934990_1
         $x_1_6 = "nedsablingen" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3180,6 +3307,7 @@ rule Trojan_Win32_GuLoader_RBF_2147935104_0
         $x_1_7 = "perishers troopials boraks" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3204,6 +3332,7 @@ rule Trojan_Win32_GuLoader_RBG_2147935278_0
         $x_1_4 = "licans voldelighederne.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3230,6 +3359,7 @@ rule Trojan_Win32_GuLoader_RBH_2147935324_0
         $x_1_6 = "thelmas.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3255,6 +3385,7 @@ rule Trojan_Win32_GuLoader_RBI_2147935332_0
         $x_1_5 = "fiendliness horrorful.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3281,6 +3412,7 @@ rule Trojan_Win32_GuLoader_RBJ_2147935382_0
         $x_1_6 = "semicollegiate.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3305,6 +3437,7 @@ rule Trojan_Win32_GuLoader_RBK_2147935664_0
         $x_1_4 = "dolcan.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3329,6 +3462,7 @@ rule Trojan_Win32_GuLoader_RBL_2147935769_0
         $x_1_4 = "tvangsrutens inversions.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3352,6 +3486,7 @@ rule Trojan_Win32_GuLoader_RBM_2147935856_0
         $x_1_3 = "raavarepris" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3377,6 +3512,7 @@ rule Trojan_Win32_GuLoader_RBN_2147935960_0
         $x_1_5 = "bridgemaking rgningens" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3403,6 +3539,7 @@ rule Trojan_Win32_GuLoader_RBN_2147935960_1
         $x_1_6 = "reproclaim" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3428,6 +3565,7 @@ rule Trojan_Win32_GuLoader_RBO_2147936611_0
         $x_1_5 = "angionoma.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3452,6 +3590,7 @@ rule Trojan_Win32_GuLoader_RBP_2147937067_0
         $x_1_4 = "loudliest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3477,6 +3616,7 @@ rule Trojan_Win32_GuLoader_RBQ_2147937166_0
         $x_1_5 = "stiltifying registertekstens.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3501,6 +3641,7 @@ rule Trojan_Win32_GuLoader_RBR_2147937312_0
         $x_1_4 = "malmsey minimumskravet.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3526,6 +3667,7 @@ rule Trojan_Win32_GuLoader_RBS_2147937378_0
         $x_1_5 = "kulbrinterne aabnemuskels.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3551,6 +3693,7 @@ rule Trojan_Win32_GuLoader_RBT_2147937385_0
         $x_1_5 = "converging antenneforeningerne.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3575,6 +3718,7 @@ rule Trojan_Win32_GuLoader_RBV_2147937567_0
         $x_1_4 = "furcula.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3600,6 +3744,7 @@ rule Trojan_Win32_GuLoader_RBW_2147937709_0
         $x_1_5 = "anvendelsesformaalenes closeout.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3625,6 +3770,7 @@ rule Trojan_Win32_GuLoader_RBX_2147937955_0
         $x_1_5 = "proffesionelle.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3650,6 +3796,7 @@ rule Trojan_Win32_GuLoader_RBY_2147938418_0
         $x_1_5 = "apprizal.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3676,6 +3823,7 @@ rule Trojan_Win32_GuLoader_RBZ_2147938546_0
         $x_1_6 = "anticiperet skrvebelgningens" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3701,6 +3849,7 @@ rule Trojan_Win32_GuLoader_RAA_2147938672_0
         $x_1_5 = "menualternativernes.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3726,6 +3875,7 @@ rule Trojan_Win32_GuLoader_RAB_2147939035_0
         $x_1_5 = "sobe aarsbudgettet.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3752,6 +3902,7 @@ rule Trojan_Win32_GuLoader_RAC_2147939163_0
         $x_1_6 = "%tilst%\\skolingsgrupper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3777,6 +3928,7 @@ rule Trojan_Win32_GuLoader_RAD_2147939278_0
         $x_1_5 = "douping prokuraerne vicentes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3800,6 +3952,7 @@ rule Trojan_Win32_GuLoader_RAE_2147939320_0
         $x_1_3 = "vederheftighederne.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3825,6 +3978,7 @@ rule Trojan_Win32_GuLoader_RAF_2147939795_0
         $x_1_5 = "infold daekker.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3850,6 +4004,7 @@ rule Trojan_Win32_GuLoader_RAF_2147939795_1
         $x_1_5 = "sermoning unionsdannelsers" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3874,6 +4029,7 @@ rule Trojan_Win32_GuLoader_RAG_2147940325_0
         $x_1_4 = "broderparrene.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3900,6 +4056,7 @@ rule Trojan_Win32_GuLoader_RAH_2147940692_0
         $x_1_6 = "dedicerendes sintoism.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3923,6 +4080,7 @@ rule Trojan_Win32_GuLoader_RAI_2147940822_0
         $x_1_3 = "posologic rit.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3948,6 +4106,7 @@ rule Trojan_Win32_GuLoader_RAJ_2147941037_0
         $x_1_5 = "gruffish.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3973,6 +4132,7 @@ rule Trojan_Win32_GuLoader_RAK_2147941227_0
         $x_1_5 = "unhospital hydrologisk.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3998,6 +4158,7 @@ rule Trojan_Win32_GuLoader_RAL_2147941358_0
         $x_1_5 = "rhymemaking piltastens.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4021,6 +4182,7 @@ rule Trojan_Win32_GuLoader_RAM_2147941450_0
         $x_1_3 = "floristic opver.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4045,6 +4207,7 @@ rule Trojan_Win32_GuLoader_RAN_2147942220_0
         $x_1_4 = "magikernes.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4070,6 +4233,7 @@ rule Trojan_Win32_GuLoader_CCJZ_2147942670_0
         $x_1_5 = "\\Vandlidende.Rug" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4094,6 +4258,7 @@ rule Trojan_Win32_GuLoader_RAP_2147942847_0
         $x_1_4 = "amfibietankenes.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -4119,6 +4284,7 @@ rule Trojan_Win32_GuLoader_RAQ_2147942910_0
         $x_1_5 = "misadjust konfigurationsprogram.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4143,6 +4309,7 @@ rule Trojan_Win32_GuLoader_RAR_2147942930_0
         $x_1_4 = "presubmitting klaustrofobi.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4167,6 +4334,7 @@ rule Trojan_Win32_GuLoader_RAS_2147943225_0
         $x_1_4 = "thakurate.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4190,6 +4358,7 @@ rule Trojan_Win32_GuLoader_RAT_2147943599_0
         $x_1_3 = "disaugment thrummed.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4213,6 +4382,7 @@ rule Trojan_Win32_GuLoader_RAU_2147944014_0
         $x_1_3 = "coembedded skaertorsdag arbejdsmiljkonsulent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4239,6 +4409,7 @@ rule Trojan_Win32_GuLoader_RAV_2147944489_0
         $x_1_6 = "\\narrene\\Karteuser125.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4265,6 +4436,7 @@ rule Trojan_Win32_GuLoader_RAW_2147944605_0
         $x_1_6 = "lighedspunkterne.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4291,6 +4463,7 @@ rule Trojan_Win32_GuLoader_RAX_2147944869_0
         $x_1_6 = "korroder" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4316,6 +4489,7 @@ rule Trojan_Win32_GuLoader_RAY_2147945331_0
         $x_1_5 = "alchemister.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4341,6 +4515,7 @@ rule Trojan_Win32_GuLoader_RAZ_2147945774_0
         $x_1_5 = "liggeplads valentino.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

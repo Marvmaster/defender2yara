@@ -18,6 +18,7 @@ rule Backdoor_MSIL_XWorm_GNQ_2147851646_0
         $x_1_3 = "The car is going as fast as it can!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_MSIL_XWorm_MBJR_2147892579_0
         $x_1_2 = "4906-bd89-4b958b0d0c1c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Backdoor_MSIL_XWorm_KAA_2147892848_0
         $x_1_3 = "ShutdownEventHandler" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Backdoor_MSIL_XWorm_PAEW_2147913786_0
         $x_2_2 = "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Backdoor_MSIL_XWorm_GNK_2147917814_0
         $x_5_2 = {11 01 11 06 1f 10 63 d2 6f ?? ?? ?? 0a 20 07 00 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Backdoor_MSIL_XWorm_PAFS_2147923128_0
         $x_2_6 = "shutdown.exe /f /s /t 0" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -158,6 +164,7 @@ rule Backdoor_MSIL_XWorm_PAFT_2147923398_0
         $x_2_5 = "SETDESKWALLPAPER" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +186,7 @@ rule Backdoor_MSIL_XWorm_GTZ_2147935354_0
         $x_10_1 = {11 10 1f 0c 58 28 ?? ?? ?? 06 13 13 02 11 10 1f 10 58 28 ?? ?? ?? 06 13 14 02 11 10 1f 14 58 28 ?? ?? ?? 06 13 15 11 14 16 31 3e 11 14 8d ?? 00 00 01 13 16 02 11 15 11 16 16 11 16 8e 69 28 ?? ?? ?? 0a 7e ?? 00 00 04 12 06 7b ?? 00 00 04 11 0f 11 13 58 11 16 11 16 8e 69 12 04 6f ?? ?? ?? 06 2d 06 73 ?? 00 00 0a 7a 11 10 1f 28 58 13 10 11 12 17 58 13 12 11 12 11 11 32 83}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -200,6 +208,7 @@ rule Backdoor_MSIL_XWorm_AQRA_2147939722_0
         $x_5_1 = {59 1c 58 1b 59 91 61 06 09 20 0f 02 00 00 58 20 0e 02 00 00 59 18 59 18 58 06 8e 69 5d 1f 09 58 1f 0b 58 1f 14 59 91 59 20 fb 00 00 00 58 1a 58 17 58 20 00 01 00 00 5d d2 9c 09 17 58 0d}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

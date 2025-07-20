@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Bewmecky_A_2147626862_0
         $x_1_3 = {ff d3 6a 02 59 3b c1 74 17 8d 56 f8 ff 75 e4 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

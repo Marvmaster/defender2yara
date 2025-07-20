@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Demekaf_A_2147633499_0
         $x_1_2 = {b9 2b 02 00 00 33 c0 8d 7c 24 ?? f3 ab}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

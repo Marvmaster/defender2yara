@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Hormelex_G_2147689128_0
         $x_1_9 = "6F8AAD638EA953C56392B5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule TrojanDownloader_Win32_Hormelex_H_2147693403_0
         $x_1_5 = "6F8AAD638EA953C56392B5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule TrojanDownloader_Win32_Hormelex_I_2147694137_0
         $x_1_3 = "9AB7658DA9518C44FD231333D176" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

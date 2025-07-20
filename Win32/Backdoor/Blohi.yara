@@ -19,6 +19,7 @@ rule Backdoor_Win32_Blohi_A_2147652408_0
         $x_1_4 = "#RemoteA#" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_Win32_Blohi_B_2147655888_0
         $x_1_4 = "RG93bmxvYWQ=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Backdoor_Win32_Blohi_A_2147665126_0
         $x_1_14 = {23 00 49 00 6e 00 66 00 6f 00 72 00 6d 00 61 00 74 00 69 00 6f 00 6e 00 23 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -103,6 +106,7 @@ rule Backdoor_Win32_Blohi_B_2147667185_0
         $x_5_5 = "Internetal IExplore\"" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -132,6 +136,7 @@ rule Backdoor_Win32_Blohi_C_2147667476_0
         $x_1_6 = {53 74 6f 70 43 6c 69 65 6e 74 49 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -159,6 +164,7 @@ rule Backdoor_Win32_Blohi_D_2147678959_0
         $x_1_4 = "\\FirewallPolicy\\StandardProfile\\AuthorizedApplications\\List /v " wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

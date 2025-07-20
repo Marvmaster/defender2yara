@@ -16,6 +16,7 @@ rule Trojan_Win32_Hype_DSK_2147744214_0
         $x_2_1 = {8a 14 1a 88 14 01 8a 8b ?? ?? ?? ?? 84 c9 75 ?? 8b 0d ?? ?? ?? ?? 8a 15 ?? ?? ?? ?? 03 cb 03 c1 30 10 83 3d ?? ?? ?? ?? 03 76}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

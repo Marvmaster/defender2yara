@@ -19,6 +19,7 @@ rule HackTool_MSIL_Amagen_A_2147641075_0
         $x_1_5 = "System.Runtime.CompilerServices" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

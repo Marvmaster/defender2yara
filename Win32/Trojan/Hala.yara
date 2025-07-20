@@ -18,6 +18,7 @@ rule Trojan_Win32_Hala_B_2147595123_0
         $x_1_4 = {63 61 62 61 6c 2e 65 78 65 00 00 00 63 61 62}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

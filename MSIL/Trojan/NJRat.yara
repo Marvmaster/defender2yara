@@ -22,6 +22,7 @@ rule Trojan_MSIL_NJRat_SR_2147756887_0
         $x_1_7 = "#ystem$rive" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_MSIL_NJRat_TW_2147762573_0
         $x_1_7 = "\\KasperSky Lab\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Trojan_MSIL_NJRat_RS_2147837788_0
         $x_5_2 = {7e 0a 00 00 04 6f 2f 00 00 0a 28 14 00 00 06 26 de 10}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_MSIL_NJRat_RS_2147837788_1
         $x_2_2 = {09 17 d6 0d 2b 03 0c 2b d1 09 08 31 02 2b 05 2b cd 0b 2b bc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_MSIL_NJRat_RPZ_2147844311_0
         $x_1_1 = {0c 00 06 1f 0c 58 06 1f 0c 58 4a 17 d6 54 06 1f 10 58 06 1f 0c 58 4a 11 04 8e 69 fe 04 52 06 1f 10 58 46 2d ad}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Trojan_MSIL_NJRat_RPZ_2147844311_1
         $x_1_2 = "(-_-)zzz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -158,6 +164,7 @@ rule Trojan_MSIL_NJRat_ARA_2147892012_0
         $x_2_2 = "\\obj\\Debug\\StubBinder.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -182,6 +189,7 @@ rule Trojan_MSIL_NJRat_ARA_2147892012_1
         $x_2_4 = "stub.Resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

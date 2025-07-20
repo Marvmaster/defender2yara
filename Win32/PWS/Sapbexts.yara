@@ -20,6 +20,7 @@ rule PWS_Win32_Sapbexts_A_2147628244_0
         $x_1_6 = {6e 6f 20 49 50 20 6f 72 20 41 56 50 20 77 6f 72 6b 69 6e 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or

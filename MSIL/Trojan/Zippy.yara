@@ -17,6 +17,7 @@ rule Trojan_MSIL_Zippy_NEAA_2147836650_0
         $x_5_2 = "itself.exe" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

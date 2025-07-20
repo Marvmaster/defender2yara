@@ -18,6 +18,7 @@ rule TrojanClicker_MSIL_Lnkhit_B_2147642115_0
         $x_1_4 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 [0-17] 2e 00 6c 00 69 00 6e 00 6b 00 62 00 75 00 63 00 6b 00 73 00 2e 00 63 00 6f 00 6d 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanClicker_MSIL_Lnkhit_C_2147647647_0
         $x_1_4 = "clicks left" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

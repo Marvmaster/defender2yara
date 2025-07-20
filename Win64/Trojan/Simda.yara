@@ -16,6 +16,7 @@ rule Trojan_Win64_Simda_A_2147650741_0
         $x_1_2 = {66 83 38 4f 75 19 66 83 78 02 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_Simda_B_2147650742_0
         $x_1_2 = {c7 42 2c 57 00 00 00 b8 34 00 00 00 33 ed c6 42 28 f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win64_Simda_EB_2147838536_0
         $x_7_1 = {4c 21 5d 80 49 c7 c1 ea d0 00 00 49 81 c1 87 8c 00 00 4d 89 de 4d 89 e1 4d 11 ce 67 41 81 2f a9 87 70 5f 4c 8b 4d e8}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

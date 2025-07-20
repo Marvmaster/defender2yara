@@ -17,6 +17,7 @@ rule Trojan_Win32_TurtleSimple_A_2147781129_0
         $x_1_2 = "Ready? Go!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Worm_Win32_Dodinsom_A_2147653379_0
         $x_1_3 = {f5 01 00 00 00 c5 f5 02 00 00 00 c5 f5 04 00 00 00 c5 f5 20 00 00 00 c5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

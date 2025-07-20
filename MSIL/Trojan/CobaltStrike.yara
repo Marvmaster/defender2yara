@@ -19,6 +19,7 @@ rule Trojan_MSIL_CobaltStrike_SB_2147781181_0
         $x_1_4 = "0x61, 0x6c, 0x69, 0x63, 0x64, 0x6e" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule Trojan_MSIL_CobaltStrike_STR_2147808926_0
         $x_1_14 = "Convert" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Trojan_MSIL_CobaltStrike_PJ_2147817138_0
         $x_1_2 = {08 94 9e 11 ?? 08 11 ?? 9e 11 ?? 11 ?? 06 94 11 ?? 08 94 58 20 00 01 00 00 5d 94 0d 11 ?? 07 03 07 91 09 61 d2 9c 00 07 17 58 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_MSIL_CobaltStrike_PP_2147817773_0
         $x_1_4 = {5c 53 4c 4e 5c 48 52 4d 5f 53 55 42 5c [0-32] 5c 48 52 4d 5f 53 55 42 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule Trojan_MSIL_CobaltStrike_PC_2147823636_0
         $x_1_1 = {11 07 09 94 58 20 00 01 00 00 5d 94 13 04 11 08 08 ?? 08 91 11 04 61 d2 9c 00 08 17 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +154,7 @@ rule Trojan_MSIL_CobaltStrike_AG_2147824172_0
         $x_1_9 = "Unable to launch application:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +181,7 @@ rule Trojan_MSIL_CobaltStrike_ST_2147827153_0
         $x_1_6 = "SeedData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +203,7 @@ rule Trojan_MSIL_CobaltStrike_SS_2147829969_0
         $x_1_1 = {71 a8 9a b2 71 a8 e2 b2 71 a8 da b2 71 88 aa b2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +226,7 @@ rule Trojan_MSIL_CobaltStrike_ABHM_2147838443_0
         $x_1_2 = "PolicyPlus.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -239,6 +248,7 @@ rule Trojan_MSIL_CobaltStrike_RDC_2147843065_0
         $x_2_1 = {11 0b 91 13 0c 7e ?? ?? ?? ?? 11 0b 11 0c 07 59 d2 9c 06 7e ?? ?? ?? ?? 11 0b 91 6f ?? ?? ?? ?? 11 0b 17 58 13 0b 11 0b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -262,6 +272,7 @@ rule Trojan_MSIL_CobaltStrike_CSZ_2147845016_0
         $x_1_3 = "NativePayload_PE2" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -283,6 +294,7 @@ rule Trojan_MSIL_CobaltStrike_AST_2147845474_0
         $x_1_1 = {73 11 00 00 0a 0c 00 73 12 00 00 0a 0d 00 09 20 00 01 00 00 6f 13 00 00 0a 00 09 20 80 00 00 00 6f 14 00 00 0a 00 04 07 20 e8 03 00 00 73 15 00 00 0a 13 04 09 11 04 09 6f 16 00 00 0a 1e 5b 6f 17 00 00 0a 6f 18 00 00 0a 00 09 11 04 09 6f 19 00 00 0a 1e 5b 6f 17 00 00 0a 6f 1a 00 00 0a 00 09 17 6f 1b 00 00 0a 00 09 18 6f 1c 00 00 0a 00 08 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -305,6 +317,7 @@ rule Trojan_MSIL_CobaltStrike_NCB_2147845664_0
         $x_1_2 = "1yoXqE7" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -328,6 +341,7 @@ rule Trojan_MSIL_CobaltStrike_ZD_2147846516_0
         $x_2_3 = "yZ3VtZW50TGlzdCAiL2MgJGJhdGNoRmlsZSIgLVdhaXQgLVdpbmRvd1N0eWxlIEhpZGRlbg" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +365,7 @@ rule Trojan_MSIL_CobaltStrike_ZG_2147847915_0
         $x_1_3 = "RunScript" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +388,7 @@ rule Trojan_MSIL_CobaltStrike_MAAL_2147848046_0
         $x_1_2 = {16 13 0e 2b 1b 07 11 0e 8f 35 00 00 01 25 47 06 11 0e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -394,6 +410,7 @@ rule Trojan_MSIL_CobaltStrike_MB_2147848083_0
         $x_1_1 = {1f 40 28 02 00 00 06 0b 06 16 07 06 8e 69 28 09 00 00 0a 07 d0 03 00 00 02 28 0a 00 00 0a 28 0b 00 00 0a 75 03 00 00 02 0c 08 6f 0c 00 00 06 26 de 0e 07 16 20 00 80 00 00 28 03 00 00 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -417,6 +434,7 @@ rule Trojan_MSIL_CobaltStrike_MB_2147848083_1
         $x_2_3 = "PoolAndSpaDepot.My.Resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -439,6 +457,7 @@ rule Trojan_MSIL_CobaltStrike_C_2147849813_0
         $x_2_2 = {00 00 0a 0b 07 d4 8d ?? 00 00 01 0c 06 08 16 07 69 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +480,7 @@ rule Trojan_MSIL_CobaltStrike_CXF_2147851173_0
         $x_1_2 = "api.gogleapi.click/file/System/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -482,6 +502,7 @@ rule Trojan_MSIL_CobaltStrike_CXIQ_2147888280_0
         $x_1_1 = {11 06 11 08 8f ?? ?? ?? ?? 25 47 11 07 16 91 61 d2 52 00 11 08 17 58 13 08 11 08 11 06 8e 69 fe 04 13 09 11 09 2d d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -505,6 +526,7 @@ rule Trojan_MSIL_CobaltStrike_AAMI_2147888655_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -526,6 +548,7 @@ rule Trojan_MSIL_CobaltStrike_ACO_2147892466_0
         $x_1_1 = {0d 06 16 09 06 8e 69 28 13 00 00 0a 00 09 16 16 28 03 00 00 06 13 04 11 04 08 7e 12 00 00 0a 28 04 00 00 06 00 08 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -549,6 +572,7 @@ rule Trojan_MSIL_CobaltStrike_MBJP_2147892497_0
         $x_1_3 = "ConsoleApp1.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -571,6 +595,7 @@ rule Trojan_MSIL_CobaltStrike_ASEQ_2147892965_0
         $x_1_2 = {0b 06 07 28 ?? 00 00 06 0c 08 25 13 04 2c 06 11 04 8e 69 2d 05 16 e0 0d 2b 0a 11 04 16 8f ?? 00 00 01 e0 0d 09 28 ?? 00 00 0a 25 08 8e 69 6a 28 ?? 00 00 0a 1f 40 12 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -594,6 +619,7 @@ rule Trojan_MSIL_CobaltStrike_ZL_2147893322_0
         $x_1_3 = "DrawStateA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -618,6 +644,7 @@ rule Trojan_MSIL_CobaltStrike_ZM_2147893336_0
         $x_1_4 = "DecryptAES" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -640,6 +667,7 @@ rule Trojan_MSIL_CobaltStrike_ZQ_2147895301_0
         $x_1_2 = "exclusiveOR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -662,6 +690,7 @@ rule Trojan_MSIL_CobaltStrike_ZQ_2147895301_1
         $x_1_2 = "GEMS\\GEMS\\obj\\Release\\GEMS.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -683,6 +712,7 @@ rule Trojan_MSIL_CobaltStrike_ACR_2147895586_0
         $x_1_1 = {02 8e 69 20 00 30 00 00 1f 40 16 28 ?? 00 00 06 0a 00 02 25 13 05 2c 06 11 05 8e 69 2d 05 16 e0 0b 2b 09 11 05 16}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -706,6 +736,7 @@ rule Trojan_MSIL_CobaltStrike_MBFA_2147896934_0
         $x_1_3 = {67 67 62 63 61 68 65 6a 74 6c 00 44 65 66 6c 61 74 65 53 74 72 65 61 6d 00 43 72 79 70 74 6f 53 74 72 65 61 6d 00 4d 65 6d 6f 72 79 53 74 72 65 61 6d 00 6d 6d 74 6a 68 78 64 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -728,6 +759,7 @@ rule Trojan_MSIL_CobaltStrike_E_2147901003_0
         $x_2_2 = {09 08 17 73 ?? 00 00 0a 13 04 11 04 07 16 07 8e 69 6f ?? 00 00 0a 09 6f ?? 00 00 0a 13 05 de}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -750,6 +782,7 @@ rule Trojan_MSIL_CobaltStrike_MA_2147901378_0
         $x_5_2 = "http://182.92.67.97" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -772,6 +805,7 @@ rule Trojan_MSIL_CobaltStrike_G_2147903552_0
         $x_2_2 = {04 8e 69 b8 20 00 30 00 00 1f 40 28}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -793,6 +827,7 @@ rule Trojan_MSIL_CobaltStrike_H_2147903689_0
         $x_2_1 = {04 16 07 7e ?? 00 00 04 8e 69 28 ?? 00 00 06 07 d0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -814,6 +849,7 @@ rule Trojan_MSIL_CobaltStrike_SPVX_2147904948_0
         $x_5_1 = {0a 00 06 04 6f ?? ?? ?? 0a 00 06 06 6f ?? ?? ?? 0a 06 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 0b 73 28 00 00 0a 0c 00 08 07 17 73 29 00 00 0a 0d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -835,6 +871,7 @@ rule Trojan_MSIL_CobaltStrike_GD_2147911717_0
         $x_1_1 = {8d 28 00 00 01 0b 16 0c 2b 13 07 08 02 08 91 06 08 06 8e 69 5d 91 61 d2 9c 08 17 58 0c 08 02 8e 69 32 e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -857,6 +894,7 @@ rule Trojan_MSIL_CobaltStrike_AI_2147915248_0
         $x_1_2 = "rgZaI" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -878,6 +916,7 @@ rule Trojan_MSIL_CobaltStrike_KAH_2147919574_0
         $x_5_1 = {2b 04 2b 09 de 0d 28 ?? 00 00 06 2b f5 0a 2b f4 26 de ec 2b 01 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -900,6 +939,7 @@ rule Trojan_MSIL_CobaltStrike_NIT_2147925281_0
         $x_2_2 = {18 5b 0b 07 8d 1b 00 00 01 0c 16 0d 2b 1d 02 09 18 5a 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 0a 13 04 08 09 11 04 d2 9c 09 17 58 0d 09 07 32 df}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -921,6 +961,7 @@ rule Trojan_MSIL_CobaltStrike_SPCB_2147927901_0
         $x_4_1 = {03 07 06 5d 6f ?? 00 00 0a d2 61 d2 52 00 07 17 58 0b 07 02 50 8e 69 fe 04 0c 08 2d d8}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -942,6 +983,7 @@ rule Trojan_MSIL_CobaltStrike_SDID_2147932395_0
         $x_1_1 = {25 16 08 a2 25 17 09 8c 11 00 00 01 a2 11 0e 28 ?? 00 00 2b 26 09 11 0e 8e 69 58 0d 14 13 0c 11 08 17 58 13 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -963,6 +1005,7 @@ rule Trojan_MSIL_CobaltStrike_GVA_2147946060_0
         $x_1_1 = {28 7e 07 00 06 0a 02 2d 0c 03 2d 09 07 28 ef 03 00 06 26 2b 11 07 02 03 28 ee 03 00 06 26 2b 06 20 01 40 00 80 0a 06 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

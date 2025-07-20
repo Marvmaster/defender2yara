@@ -26,6 +26,7 @@ rule PWS_Win32_Simda_A_2147645704_0
         $x_1_11 = {69 64 3d 25 73 26 76 65 72 3d ?? ?? ?? ?? ?? 26 75 70 3d 25 75 26 6f 73 3d 25 30 33 75 26 72 69 67 68 74 73 3d 25 73 26 6c 74 69 6d 65 3d 25 73 25 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -54,6 +55,7 @@ rule PWS_Win32_Simda_K_2147650930_0
         $x_1_3 = "slipknot1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule PWS_Win32_Simda_L_2147650977_0
         $x_1_3 = {8a 0c 30 80 f1 62 88 0c 30 40 3b c7 72 f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule PWS_Win32_Simda_AF_2147663891_0
         $x_1_8 = {63 6f 6d 6d 61 6e 64 3d 69 6e 6a 65 63 74 26 64 61 74 61 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -131,6 +135,7 @@ rule PWS_Win32_Simda_F_2147678578_0
         $x_1_3 = "&command=bc_activate&status=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

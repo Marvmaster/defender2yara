@@ -16,6 +16,7 @@ rule Trojan_Win64_Zenpack_EM_2147898411_0
         $x_5_1 = {48 8d 7d c8 f2 ae 48 f7 d1 48 ff c9 48 63 f9 8b c1 99 2b c2 d1 f8 85 c0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule PWS_Win32_Steam_B_2147596575_0
         $x_1_6 = "ShellExecAndWait" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule PWS_Win32_Steam_C_2147596739_0
         $x_1_6 = "F-A7EBProject1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule PWS_Win32_Steam_E_2147604955_0
         $x_1_8 = "RegisterServiceProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule PWS_Win32_Steam_F_2147605150_0
         $x_1_4 = "Cracked_Account_Info.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule PWS_Win32_Steam_I_2147650293_0
         $x_1_4 = "Steam Stealer : Email login" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -142,6 +147,7 @@ rule PWS_Win32_Steam_J_2147688207_0
         $x_1_5 = "\\ssfn*" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule PWS_Win32_Steam_P_2147734237_0
         $x_1_1 = "SteamHook\\new\\SteamGhost\\Release\\Injection.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule PWS_Win32_Steam_Q_2147734903_0
         $x_1_4 = "#mb_critical" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

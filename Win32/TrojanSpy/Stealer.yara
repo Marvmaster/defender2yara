@@ -24,6 +24,7 @@ rule TrojanSpy_Win32_Stealer_B_2147735965_0
         $x_1_9 = "--PARSE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_3_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_3_*) and 3 of ($x_2_*))) or
@@ -50,6 +51,7 @@ rule TrojanSpy_Win32_Stealer_MX_2147754179_0
         $x_1_2 = {81 f3 07 eb dd 13 81 6d ?? 52 ef 6f 62 2d f3 32 05 00 81 6d ?? 68 19 2a 14 81 45 ?? be 08 9a 76 8b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule TrojanSpy_Win32_Stealer_RPR_2147796516_0
         $x_1_1 = {39 d3 0f 8e ?? ff ff ff 35 00 [0-32] 8a 03 [0-16] 88 06 [0-32] 46 [0-32] 81 c3 02 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule TrojanSpy_Win32_Stealer_MC_2147811458_0
         $x_1_4 = "DebugBreak" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule TrojanSpy_Win32_Stealer_MG_2147814038_0
         $x_1_11 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +161,7 @@ rule TrojanSpy_Win32_Stealer_ARA_2147836262_0
         $x_2_10 = "programms.txt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +197,7 @@ rule TrojanSpy_Win32_Stealer_ARA_2147836262_1
         $x_2_15 = "Amurncawencxrdy" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +225,7 @@ rule TrojanSpy_Win32_Stealer_MH_2147901639_0
         $x_1_7 = "TEMP\\7ZipSfx.000" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -242,6 +250,7 @@ rule TrojanSpy_Win32_Stealer_PAGL_2147937077_0
         $x_2_4 = "\\Hijack\\Release\\SPIFilter.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

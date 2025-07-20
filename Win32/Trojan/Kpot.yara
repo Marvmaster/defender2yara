@@ -17,6 +17,7 @@ rule Trojan_Win32_Kpot_PA_2147753219_0
         $x_1_2 = {31 db 8b 04 8a 88 c7 88 e3 c1 e8 10 c1 e3 08 88 c3 89 1c 8a 49 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Kpot_RS_2147754627_0
         $x_1_3 = {c1 e9 05 03 d3 33 c2 03 ce 81 3d ?? ?? ?? ?? 72 07 00 00 c7 05 ?? ?? ?? ?? b4 1a 3a df}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Kpot_RA_2147756685_0
         $x_1_1 = {81 f3 07 eb dd 13 81 6c 24 ?? 52 ef 6f 62 2d ?? ?? ?? ?? 81 6c 24 ?? 68 19 2a 14 81 44 24 ?? be 08 9a 76}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

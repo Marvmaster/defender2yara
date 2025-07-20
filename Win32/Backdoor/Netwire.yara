@@ -28,6 +28,7 @@ rule Backdoor_Win32_Netwire_PA_2147784062_0
         $x_1_13 = "%s\\360Chrome\\Chrome\\User Data\\Default\\Login Data" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 10 of ($x_1_*))) or
             (all of ($x*))
@@ -59,6 +60,7 @@ rule Backdoor_Win32_Netwire_GG_2147795257_0
         $x_1_8 = "200 OK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 5 of ($x_1_*))) or
             (all of ($x*))

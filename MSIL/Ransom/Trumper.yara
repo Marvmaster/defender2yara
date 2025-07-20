@@ -21,6 +21,7 @@ rule Ransom_MSIL_Trumper_DA_2147773128_0
         $x_1_6 = "UH OH!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_MSIL_Trumper_SWG_2147925452_0
         $x_1_3 = "$ab3d0bcb-65e1-488f-91e3-f94aa528cb1a" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

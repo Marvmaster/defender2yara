@@ -17,6 +17,7 @@ rule Trojan_Win64_Foosace_K_2147705793_0
         $x_1_2 = {48 b8 33 32 2e 45 58 45 20 22 48 89 85 ?? ?? ?? ?? 48 b8 52 55 4e 44 4c 4c 33 32}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_Foosace_K_2147705793_1
         $x_1_3 = {b8 f4 ee ee ee eb 14 44 8b 44 24 ?? 48 8b 54 24 ?? 48 8b 4c 24 ?? e8 ?? ?? ?? ?? 48 83 c4 38 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -67,6 +69,7 @@ rule Trojan_Win64_Foosace_K_2147705793_2
         $x_1_3 = {78 02 00 00 33 d2 44 8b c0 48 8b 05 ?? ?? ?? ?? 8d 4a 01 ff 90 10 02 00 00 02 00 ff 90}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

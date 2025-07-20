@@ -22,6 +22,7 @@ rule Worm_Win32_Namepuk_A_2147723694_0
         $x_1_8 = "GoSub \"drvscn\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

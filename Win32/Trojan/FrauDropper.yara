@@ -17,6 +17,7 @@ rule Trojan_Win32_FrauDropper_NF_2147909805_0
         $x_3_2 = {83 ec 0c 0f b7 84 24 ?? ?? ?? ?? 09 c0 66 89 c6 66 89 b4 24}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

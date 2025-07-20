@@ -22,6 +22,7 @@ rule Backdoor_MacOS_X_FlashBack_2147650488_0
         $x_3_8 = {49 ff c4 48 8b 43 10 48 2b 43 08 48 c1 f8 03 48 ba ab aa aa aa}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

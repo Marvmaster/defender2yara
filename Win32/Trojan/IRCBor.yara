@@ -16,6 +16,7 @@ rule Trojan_Win32_IRCBor_LK_2147845455_0
         $x_1_1 = {fe c1 8a 04 19 8a 14 18 88 04 1a 88 14 18 30 07 47 4d 75 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

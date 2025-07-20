@@ -16,6 +16,7 @@ rule Trojan_Win64_Tedy_A_2147828733_0
         $x_1_1 = {66 44 39 65 06 74 39 48 03 fd 8b 47 fc 85 c0 74 21 44 8b 07 44 8b c8 8b 57 f8 4d 03 c7 49 03 d6 4c 89 64 24 20 48 8b cb ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_Tedy_GHN_2147845256_0
         $x_1_2 = "NTI3NTZlNDE3Mw==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win64_Tedy_FG_2147848041_0
         $x_1_1 = {48 63 84 24 a8 00 00 00 0f b6 84 04 98 04 00 00 8b 8c 24 10 01 00 00 c1 e1 03 48 8b 94 24 a0 04 00 00 48 d3 ea 48 8b ca 0f b6 c9 33 c1 48 63 8c 24 a8 00 00 00 88 84 0c a0 67 00 00 eb 87}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win64_Tedy_SPS_2147850797_0
         $x_2_1 = {4c 8d 8d 68 01 00 00 45 33 c0 b2 01 8b cb e8 ?? ?? ?? ?? ff c3 83 fb 24 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +105,7 @@ rule Trojan_Win64_Tedy_QC_2147851552_0
         $x_1_1 = {65 48 8b 04 25 60 00 00 00 44 8b d3 41 be bf e5 f1 78 48 8b 50 18 48 83 c2 10 48 8b 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +127,7 @@ rule Trojan_Win64_Tedy_SPK_2147852473_0
         $x_5_1 = {0f 11 84 24 c0 00 00 00 0f 11 44 24 50 f2 0f 10 05 ?? ?? ?? ?? f2 0f 11 84 24 f0 00 00 00 0f 10 05 ?? ?? ?? ?? 0f 11 8c 24 e0 00 00 00 0f 10 0d ?? ?? ?? ?? 0f 11 84 24 00 01 00 00 0f 10 05 ?? ?? ?? ?? 0f 11 8c 24 10 01 00 00 0f 11 84 24 20 01 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +149,7 @@ rule Trojan_Win64_Tedy_GPB_2147891569_0
         $x_4_1 = {49 89 d8 4c 89 f2 48 89 f9 48 83 c7 02 e8 7e ff ff ff 48 89 f0 31 d2 48 83 c6 01 48 f7 f5 41 0f b6 04 14 30 03 48 83 c3 01 49 39 f5 75 d2}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +171,7 @@ rule Trojan_Win64_Tedy_PABC_2147892091_0
         $x_1_1 = {c7 44 24 68 59 00 66 4d c7 44 24 6c 53 54 5e 55 c7 44 24 70 4d 49 66 49 c7 44 24 74 43 49 4e 5f c7 44 24 78 57 09 08 66 c7 44 24 7c 54 4e 5e 56 c7 45 80 56 14 5e 56 66 c7 45 84 56 3a c7 45 c8 43 72 65 61 c7 45 cc 74 65 46 69 c7 45 d0 6c 65 4d 61 c7 45 d4 70 70 69 6e 66 c7 45 d8 67 41 c6 45 da 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +193,7 @@ rule Trojan_Win64_Tedy_NTD_2147895927_0
         $x_5_1 = {48 63 c3 48 03 c0 49 83 24 c4 00 33 c0 eb db 48 89 5c 24 ?? 48 89 6c 24 ?? 48 89 74 24 ?? 57 48 83 ec 20 bf ?? ?? ?? ?? 48 8d 1d 60 f5 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +216,7 @@ rule Trojan_Win64_Tedy_NTD_2147895927_1
         $x_1_2 = "://ftp.2qk.cn/HD1-2.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +242,7 @@ rule Trojan_Win64_Tedy_NTD_2147895927_2
         $x_1_5 = "pod paczke Lunar Client" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -254,6 +265,7 @@ rule Trojan_Win64_Tedy_RB_2147897550_0
         $x_1_2 = "ibhchocjdb/kfapioijci/fjfkdpkdco/fjfkdpkdco/kbpchiokil.Egcgaefamc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -275,6 +287,7 @@ rule Trojan_Win64_Tedy_EM_2147898412_0
         $x_5_1 = {30 84 0d 18 05 00 00 48 ff c1 48 83 f9 25 72 ed}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -297,6 +310,7 @@ rule Trojan_Win64_Tedy_NT_2147899511_0
         $x_3_2 = {e8 0a 31 00 00 e8 0d 31 00 00 48 8d 2d ?? ?? ?? ?? 48 8d 15 55 00 02 00 41 b8 00 10 00 00 48 89 e9}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -320,6 +334,7 @@ rule Trojan_Win64_Tedy_NT_2147899511_1
         $x_1_3 = "BackDoor.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -342,6 +357,7 @@ rule Trojan_Win64_Tedy_NT_2147899511_2
         $x_1_2 = "ROSHandler" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -367,6 +383,7 @@ rule Trojan_Win64_Tedy_NT_2147899511_3
         $x_1_5 = "vvsk2nJWPd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -389,6 +406,7 @@ rule Trojan_Win64_Tedy_NT_2147899511_4
         $x_1_2 = {45 33 c9 4c 8d 44 24 ?? ba f4 01 00 00 48 8d 4c 24 ?? e8 f4 5b ff ff 48 8d 15 ed 6b 03 00 48 8d 4c 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +430,7 @@ rule Trojan_Win64_Tedy_NT_2147899511_5
         $x_1_3 = "EXPLOIT\\BINARY" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -436,6 +455,7 @@ rule Trojan_Win64_Tedy_NT_2147899511_6
         $x_1_4 = "AARYAN V4X - Sniper Panel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -459,6 +479,7 @@ rule Trojan_Win64_Tedy_NT_2147899511_7
         $x_1_3 = "Attempting to rename file name" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -480,6 +501,7 @@ rule Trojan_Win64_Tedy_AMBE_2147903244_0
         $x_1_1 = {48 63 c8 49 8b c7 48 f7 e1 48 c1 ea 05 48 8d 04 d2 48 c1 e0 02 48 2b c8 42 0f b6 04 21 88 04 1e 48 ff c6 48 83 fe}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -505,6 +527,7 @@ rule Trojan_Win64_Tedy_GPAA_2147905958_0
         $x_1_5 = "de_AesRc4Xor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -529,6 +552,7 @@ rule Trojan_Win64_Tedy_SGA_2147906771_0
         $x_1_4 = "logd64" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -550,6 +574,7 @@ rule Trojan_Win64_Tedy_SMD_2147907280_0
         $x_1_1 = {f7 e9 c1 fa 04 8b c2 c1 e8 ?? 03 d0 0f be c2 6b d0 31 0f b6 c1 ff c1 2a c2 04 39 41 30 40 ff 83 f9 04 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -573,6 +598,7 @@ rule Trojan_Win64_Tedy_HNA_2147908379_0
         $x_1_3 = {4f 70 65 6e 50 72 6f 63 65 73 73 [0-4] 43 72 65 61 74 65 54 6f 6f 6c 68 65 6c 70 33 32 53 6e 61 70 73 68 6f 74 [0-4] 50 72 6f 63 65 73 73 33 32 4e 65 78 74 57 [0-4] 50 72 6f 63 65 73 73 33 32 46 69 72 73 74 57 [0-4] 47 65 74 50 72 6f 63 41 64 64 72 65 73 73 [0-4] 56 69 72 74 75 61 6c 41 6c 6c 6f 63 45 78 [0-4] 43 72 65 61 74 65 52 65 6d 6f 74 65 54 68 72 65 61 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -596,6 +622,7 @@ rule Trojan_Win64_Tedy_RM_2147909344_0
         $x_1_3 = {5c 47 6f 6f 67 6c 65 20 74 72 61 6e 73 6c 61 74 65 20 6d 61 73 74 65 72 5c [0-16] 57 72 61 70 70 65 72 5c 78 36 34}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -617,6 +644,7 @@ rule Trojan_Win64_Tedy_RS_2147909972_0
         $x_1_1 = {48 8b 84 24 00 01 00 00 48 63 40 3c 48 8b 4c 24 48 48 03 c8 48 8b c1 48 63 4c 24 6c 48 6b c9 28 48 8d 84 08 08 01 00 00 48 89 84 24 98 00 00 00 48 8b 84 24 98 00 00 00 8b 40 14 48 8b 8c 24 98 00 00 00 8b 49 10 48 03 c1 48 89 84 24 c8 01 00 00 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -638,6 +666,7 @@ rule Trojan_Win64_Tedy_ATY_2147911512_0
         $x_1_1 = {4c 89 ca 41 8d 0c 18 42 32 4c 00 10 48 c1 fa 08 31 d1 4c 89 ca 49 c1 f9 18 48 c1 fa 10 31 d1 44 31 c9 42 88 4c 00 10 49 ff c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -659,6 +688,7 @@ rule Trojan_Win64_Tedy_ATY_2147911512_1
         $x_1_1 = {48 8b d6 48 89 55 97 41 b8 ?? ?? ?? ?? 4c 89 45 9f 88 55 87 c7 45 a7 ?? ?? ?? ?? b1 14 80 f1 55 48 8d 5b 01 49 3b d0 73 1f 48 8d 42 01 48 89 45 97 48 8d 45 87 49 83 f8 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -680,6 +710,7 @@ rule Trojan_Win64_Tedy_ATY_2147911512_2
         $x_1_1 = {83 c8 05 88 43 40 48 85 d2 0f 84 54 01 00 00 48 83 7a 18 00 0f 84 39 01 00 00 48 8b 42 18 f0 83 00 01 48 8b 4b 30 48 85 c9 74 06 ff 15 c8 7d 01 00 4c 89 e9 e8 24 1d 00 00 48 8b 4b 28 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -703,6 +734,7 @@ rule Trojan_Win64_Tedy_ATY_2147911512_3
         $x_1_3 = {49 2b f6 4b 8b 8c eb 20 32 05 00 49 03 ce 42 8a 04 36 42 88 44 f9 3e ff c7 49 ff c6 48 63 c7 48 3b c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -730,6 +762,7 @@ rule Trojan_Win64_Tedy_GPBX_2147912805_0
         $x_1_7 = "Stop debugging" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -751,6 +784,7 @@ rule Trojan_Win64_Tedy_ATE_2147912968_0
         $x_1_1 = {41 0f b6 08 49 83 c0 01 31 d9 c1 eb 08 0f b6 c9 33 1c 8a 4c 39 c6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -772,6 +806,7 @@ rule Trojan_Win64_Tedy_ZQ_2147913604_0
         $x_1_1 = {0f b6 44 33 ?? 31 f8 88 44 33 ?? 48 89 fa 48 c1 fa ?? 31 d0 48 89 fa 48 c1 fa ?? 31 d0 48 89 fa 48 83 c7 ?? 48 c1 fa ?? 31 d0 88 44 33}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -794,6 +829,7 @@ rule Trojan_Win64_Tedy_ZW_2147913634_0
         $x_1_2 = {41 32 54 04 ?? 49 c1 f9 ?? 31 ca 48 c1 f9 ?? 44 31 ca 31 ca 41 88 54 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -818,6 +854,7 @@ rule Trojan_Win64_Tedy_ZX_2147913649_0
         $x_1_4 = "updater.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -839,6 +876,7 @@ rule Trojan_Win64_Tedy_DA_2147914003_0
         $x_1_1 = {0f b6 00 48 8d 0d ?? ?? ?? ?? 48 8b 54 24 08 0f b6 0c 11 2b c1 05 00 01 00 00 99 81 e2 ff 00 00 00 03 c2 25 ff 00 00 00 2b c2 48 8b 0c 24 48 8b 54 24 28 48 03 d1 48 8b ca 88 01 48 8b 44 24 08 48 ff c0 33 d2 b9 08 00 00 00 48 f7 f1 48 8b c2 48 89 44 24 08 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -863,6 +901,7 @@ rule Trojan_Win64_Tedy_DA_2147914003_1
         $x_1_4 = "d3d11.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -884,6 +923,7 @@ rule Trojan_Win64_Tedy_GP_2147914911_0
         $x_1_1 = {8d 41 aa 30 44 0d a8 48 ff c1 48 83 f9 30 72 f0 c6 45 d9 00 4c 89 7c 24 48 4c 89 7c 24 58 48 c7 44 24 60 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -907,6 +947,7 @@ rule Trojan_Win64_Tedy_GPJ_2147914912_0
         $x_1_3 = "ces.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -931,6 +972,7 @@ rule Trojan_Win64_Tedy_MD_2147915202_0
         $x_1_4 = "DisableTaskMgr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -955,6 +997,7 @@ rule Trojan_Win64_Tedy_NAA_2147915616_0
         $x_1_4 = "D.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -976,6 +1019,7 @@ rule Trojan_Win64_Tedy_RF_2147916602_0
         $x_1_1 = {8d 73 01 0f 1f 40 00 0f 1f 84 00 00 00 00 00 49 8b 14 de 49 8b c5 66 0f 1f 84 00 00 00 00 00 0f b6 0c 02 48 ff c0 41 3a 4c 04 ff 75 1d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -997,6 +1041,7 @@ rule Trojan_Win64_Tedy_DKZ_2147920721_0
         $x_5_1 = {8d 50 4f 30 14 08 48 ff c0 48 83 f8 03 72 f1}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1022,6 +1067,7 @@ rule Trojan_Win64_Tedy_RZ_2147922688_0
         $x_2_5 = {8d 50 7f 30 14 08 48 ff c0 48 83 f8 ?? 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1043,6 +1089,7 @@ rule Trojan_Win64_Tedy_ARA_2147923215_0
         $x_2_1 = {0f b7 54 45 40 48 8b 85 ?? ?? ?? ?? 66 89 94 45 f0 02 00 00 48 83 85}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1064,6 +1111,7 @@ rule Trojan_Win64_Tedy_ARA_2147923215_1
         $x_2_1 = {48 8b 55 10 48 8b 45 f8 48 01 d0 0f b6 00 48 8b 4d 10 48 8b 55 f8 48 01 ca 32 45 f7 88 02 48 83 45 f8 01 48 8b 45 f8 48 3b 45 18 72 d3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1086,6 +1134,7 @@ rule Trojan_Win64_Tedy_ARA_2147923215_2
         $x_2_2 = "\\Microsoft\\Windows\\.winSession" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1108,6 +1157,7 @@ rule Trojan_Win64_Tedy_ARA_2147923215_3
         $x_2_2 = "\\Startup\\MicrosoftDefender.lnk" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1131,6 +1181,7 @@ rule Trojan_Win64_Tedy_ARA_2147923215_4
         $x_1_3 = "Add-MpPreference -ExclusionPath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1158,6 +1209,7 @@ rule Trojan_Win64_Tedy_GA_2147924836_0
         $x_1_7 = "UnknownProduct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1183,6 +1235,7 @@ rule Trojan_Win64_Tedy_GNZ_2147925762_0
         $x_5_2 = {01 c7 31 04 34 a3 ?? ?? ?? ?? ?? ?? ?? ?? 2b 11 2e 9d c8 67 03 ?? 08 e6 13 09}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1205,6 +1258,7 @@ rule Trojan_Win64_Tedy_NM_2147925901_0
         $x_1_2 = {48 81 ff 00 80 00 00 41 bc 00 80 00 00 4c 0f 42 e7 4c 89 f1 4c 89 e2 e8 d4 0c 00 00 c7 44 24 70 00 00 00 00 48 c7 44 24 20 00 00 00 00 4c 89 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1228,6 +1282,7 @@ rule Trojan_Win64_Tedy_BSA_2147926353_0
         $x_1_3 = "\\Release\\CuzPP.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1250,6 +1305,7 @@ rule Trojan_Win64_Tedy_GPK_2147927072_0
         $x_2_2 = "blue_loader_imgui" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1274,6 +1330,7 @@ rule Trojan_Win64_Tedy_AST_2147927312_0
         $x_5_4 = {40 43 2b 20 e4 06 31 93 e8 83 b5 c1 88 0b 15 d0 84 3f 54 01 06 80 52 83 10 23 f8 1c 08 a6 3a 20 0c 2a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1298,6 +1355,7 @@ rule Trojan_Win64_Tedy_ASU_2147927476_0
         $x_5_4 = {33 29 89 24 74 20 c3 45 2b ed}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1320,6 +1378,7 @@ rule Trojan_Win64_Tedy_GB_2147928064_0
         $x_1_2 = "run_exe_from_memory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1341,6 +1400,7 @@ rule Trojan_Win64_Tedy_NIT_2147928292_0
         $x_2_1 = {48 89 74 24 30 eb 0f 44 8b 63 10 4d 03 e6 49 8b f4 4c 89 64 24 30 4c 89 64 24 28 49 8b 04 24 48 85 c0 74 3a 48 b9 00 00 00 00 00 00 00 80 48 85 c1 49 8b cf 0f b7 d0 75 05 4a 8d 54 30 02 ff 15 ca 9e 17 00 48 89 06 48 85 c0 75 08 33 ff 89 7c 24 20 eb 0e 49 83 c4 08 48 83 c6 08 eb a2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1364,6 +1424,7 @@ rule Trojan_Win64_Tedy_GE_2147928375_0
         $x_1_3 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1386,6 +1447,7 @@ rule Trojan_Win64_Tedy_GF_2147928616_0
         $x_1_2 = "execute_python_entrypoint" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1407,6 +1469,7 @@ rule Trojan_Win64_Tedy_GCM_2147928681_0
         $x_10_1 = {0f b6 00 88 45 f6 80 75 f6 aa 48 8b 45 f8 28 45 f6 0f b6 45 f7 30 45 f6 0f b6 45 f6 c1 e0 04 89 c2 0f b6 45 f6 c0 e8 04 09 d0 88 45 f6 f6 55 f6 0f b6 5d f6 48 8b 45 f8 48 89 c2 48 8b 4d 20 e8 28 80}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1429,6 +1492,7 @@ rule Trojan_Win64_Tedy_ARAZ_2147929327_0
         $x_2_2 = {48 83 c1 01 0f b6 04 10 41 30 01 48 39 cb 75 df}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1451,6 +1515,7 @@ rule Trojan_Win64_Tedy_GTR_2147930031_0
         $x_5_2 = {9c ec 28 76 ?? a4 32 44 3a ?? 55 1a 8b}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1472,6 +1537,7 @@ rule Trojan_Win64_Tedy_NOP_2147930766_0
         $x_5_1 = {83 c0 07 31 d2 49 f7 f1 41 8a 04 10 48 8b 14 24 30 04 11 48 8b 44 24 ?? 48 83 c0 05 31 d2 49 f7 f1 48 89 54 24 20 48 8b 04 24 48 ff c0 48 89 44 24 ?? 8b 05 e3 63 68 00 8d 50}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1493,6 +1559,7 @@ rule Trojan_Win64_Tedy_PYZ_2147933401_0
         $x_5_1 = {b8 9d 82 97 53 41 f7 e8 c1 fa 04 8b c2 c1 e8 1f 03 d0 0f be c2 6b c8 31 41 0f b6 c0 2a c1 04 33 41 30 01 41 ff c0 4d 8d 49 01 41 83 f8 21 7c d0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1514,6 +1581,7 @@ rule Trojan_Win64_Tedy_SPD_2147935383_0
         $x_1_1 = {48 85 c9 0f 84 ?? 00 00 00 48 8b 83 00 00 00 00 4c 31 e8 48 89 83 00 00 00 00 48 ff c9 [0-50] e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1535,6 +1603,7 @@ rule Trojan_Win64_Tedy_GVA_2147935955_0
         $x_1_1 = {41 30 44 0e 0b 41 02 44 0e 0b e2 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1556,6 +1625,7 @@ rule Trojan_Win64_Tedy_AB_2147936820_0
         $x_1_1 = {45 89 c3 41 81 f3 ff ff ff ff 41 81 e3 14 d1 28 6f 41 81 e1 ff ff ff ff 44 09 d2 45 09 cb 44 31 da 83 f2 ff 41 89 c1 41 31 d1 41 21 c1 89 c2 83 f2 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1577,6 +1647,7 @@ rule Trojan_Win64_Tedy_GPP_2147938483_0
         $x_1_1 = "source\\repos\\CVE-2024-20656\\Expl\\x64\\Release" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1599,6 +1670,7 @@ rule Trojan_Win64_Tedy_PGT_2147939099_0
         $x_4_2 = {30 01 48 8d 49 01 48 83 eb 01 75 f4}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1620,6 +1692,7 @@ rule Trojan_Win64_Tedy_PGT_2147939099_1
         $x_10_1 = {48 33 c4 48 89 84 24 a0 03 00 00 48 8b da 4c 8b f1 48 89 94 24 c0 00 00 00 45 33 ff 44 89 7c 24 30 0f 57 c0 0f 11 02 4c 89 7a 10 4c 89 7a 18 41 b8 0f 05 00 00 48 8d 15 ?? ?? ?? 00 48 8b cb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1641,6 +1714,7 @@ rule Trojan_Win64_Tedy_AD_2147939495_0
         $x_1_1 = {0f 57 c0 33 c0 0f 11 45 a0 0f 11 45 b0 0f 11 45 c0 0f 11 45 d0 0f 11 45 e0 0f 11 45 f0 0f 11 45 00 4c 89 6d a0 0f 11 45 a8 4c 89 6d b8 48 c7 45 c0 0f 00 00 00 88 45 a8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1663,6 +1737,7 @@ rule Trojan_Win64_Tedy_AH_2147939502_0
         $x_1_2 = "Vixen.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1684,6 +1759,7 @@ rule Trojan_Win64_Tedy_WIV_2147939599_0
         $x_5_1 = {45 2b c6 41 8b c0 c1 e8 18 32 c1 88 85 ?? 02 00 00 41 8b c0 c1 e8 10 32 c1 88 85 ?? 02 00 00 41 8b c0 c1 e8 08 32 c1 88 85 ?? 02 00 00 44 32 c1 44 88 85 43 02 00 00 33 c0 0f 57 c9 f3 0f 7f 8d 50 02 00 00 48 89 85 60 02 00 00 88 4c 24 50 4c 8d 44 24 50 33 d2 48 8d 8d 50 02 00 00 e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1705,6 +1781,7 @@ rule Trojan_Win64_Tedy_ATYE_2147939644_0
         $x_2_1 = {0f b6 03 40 32 c6 88 44 24 30 48 3b bd ?? ?? ?? ?? 74 0e 88 07 48 ff c7 48 89 bd ?? ?? ?? ?? eb 1b 4c 8d 44 24 30 48 8b d7}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1727,6 +1804,7 @@ rule Trojan_Win64_Tedy_ATD_2147939770_0
         $x_2_2 = {48 8d 45 27 48 89 75 27 48 89 44 24 50 48 8d 4d 37 89 74 24 48 45 33 c9 89 74 24 40 45 33 c0 89 74 24 38 b2 01 89 74 24 30 89 74 24 28 89 74 24 20 89 75 37 66 c7 45 3b 00 01}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1748,6 +1826,7 @@ rule Trojan_Win64_Tedy_WL_2147940255_0
         $x_1_1 = {65 48 8b 04 25 60 00 00 00 48 8b 40 10 48 89 05 9f 0d 01 00 31 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1769,6 +1848,7 @@ rule Trojan_Win64_Tedy_STAE_2147940713_0
         $x_2_1 = {89 75 a7 48 8d 1d ba bb 00 00 0f 57 c0 0f 11 45 af 8b d6 48 89 55 bf 41 b8 0f 00 00 00 4c 89 45 c7 88 55 af c7 45 a7 01 00 00 00 b1 3e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1790,6 +1870,7 @@ rule Trojan_Win64_Tedy_STAO_2147940714_0
         $x_2_1 = {48 81 ec e0 06 00 00 0f 29 70 c8 0f 29 78 b8 44 0f 29 40 a8 44 0f 29 48 98 48 8b 05 01 c5 00 00 48 33 c4 48 89 85 90 05 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1811,6 +1892,7 @@ rule Trojan_Win64_Tedy_PGL_2147940784_0
         $x_10_1 = {48 8b 44 24 50 48 3b c5 7d 17 48 05 ?? ?? ?? ?? 48 8d 4c 24 40 48 89 44 24 40}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1834,6 +1916,7 @@ rule Trojan_Win64_Tedy_KK_2147943868_0
         $x_2_3 = "chrome_decrypt_payments.txt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1859,6 +1942,7 @@ rule Trojan_Win64_Tedy_GVD_2147944553_0
         $x_3_5 = "\\Yandex\\YandexBrowser\\User Data" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_30_*) and 2 of ($x_3_*) and 1 of ($x_2_*))) or
             ((1 of ($x_30_*) and 3 of ($x_3_*))) or
@@ -1884,6 +1968,7 @@ rule Trojan_Win64_Tedy_AK_2147945011_0
         $x_1_1 = {41 33 c4 8b f8 0f 57 c0 0f 11 03 48 89 73 10 48 c7 43 18 0f 00 00 00 c6 03 00 c7 44 24 20 01 00 00 00 4c 8b 6c 24 48 4c 8b 7c 24 30 83 f8 0f 74 1a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1906,6 +1991,7 @@ rule Trojan_Win64_Tedy_TMX_2147945109_0
         $x_1_2 = "pintest.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1928,6 +2014,7 @@ rule Trojan_Win64_Tedy_GVB_2147946061_0
         $x_1_2 = {63 64 20 43 3a 5c 57 69 6e 64 6f 77 73 5c 54 65 6d 70 5c 20 26 26 20 [0-16] 2e 65 78 65 20 [0-16] 2e 73 79 73 20 3e 6e 75 6c 20 32 3e 26 31}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1950,6 +2037,7 @@ rule Trojan_Win64_Tedy_ZXU_2147946135_0
         $x_5_2 = "0XYZAXAY" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Resmu_A_2147637440_0
         $x_1_4 = {5c 73 72 65 6e 75 6d 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

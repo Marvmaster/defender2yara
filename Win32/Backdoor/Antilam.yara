@@ -18,6 +18,7 @@ rule Backdoor_Win32_Antilam_U_2147640746_0
         $x_3_4 = "TFRMEXTRAFUN" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

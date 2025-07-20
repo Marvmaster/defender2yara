@@ -18,6 +18,7 @@ rule Trojan_Win32_Sinowal_A_2147593227_0
         $x_1_3 = {4e 54 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Sinowal_B_2147630523_0
         $x_1_5 = {8b 45 fc 0f af 45 fc 83 c0 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -68,6 +70,7 @@ rule Trojan_Win32_Sinowal_GA_2147934059_0
         $x_2_2 = {8a 44 0d b3 32 c1 32 02 34 48 88 44 0d b3 41 83 f9 0d 72 ec}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

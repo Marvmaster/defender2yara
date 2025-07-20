@@ -21,6 +21,7 @@ rule Trojan_Win32_RustzExec_A_2147915429_0
         $x_1_6 = {68 74 74 70 [0-16] 2e 63 72 65 70 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

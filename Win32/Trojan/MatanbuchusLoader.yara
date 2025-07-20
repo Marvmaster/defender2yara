@@ -21,6 +21,7 @@ rule Trojan_Win32_MatanbuchusLoader_AM_2147817425_0
         $x_1_6 = "ct#eauRich\"eau" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_MatanbuchusLoader_MA_2147821998_0
         $x_1_4 = "6001.icl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_MatanbuchusLoader_DF_2147821999_0
         $x_1_7 = "U3W6ihpc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_Win32_MatanbuchusLoader_DG_2147822317_0
         $x_1_7 = "fDNAaPd1ryr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -29,6 +29,7 @@ rule BrowserModifier_Win32_Riccietex_227518_0
         $x_1_15 = "s o g  o u e  x p l  o r e  r ,2 3 4  5 e x  p l o  r e r  ,c h r  o m e  ,j u z  i ,h a o  1 2 3  j u z  i ,f i r  e f o  x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

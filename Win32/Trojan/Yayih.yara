@@ -25,6 +25,7 @@ rule Trojan_Win32_Yayih_A_2147647757_0
         $x_1_11 = {41 70 70 6d 74 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

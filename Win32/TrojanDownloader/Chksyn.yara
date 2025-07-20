@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Chksyn_A_2147601047_0
         $x_1_7 = "ntradldr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -51,6 +52,7 @@ rule TrojanDownloader_Win32_Chksyn_A_2147602232_0
         $x_1_5 = {64 a1 30 00 00 00 0f ?? ?? 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

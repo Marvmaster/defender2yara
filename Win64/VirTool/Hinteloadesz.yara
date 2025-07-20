@@ -18,6 +18,7 @@ rule VirTool_Win64_Hinteloadesz_A_2147906321_0
         $x_1_3 = {48 8b 13 48 8b c8 ?? ?? ?? ?? ?? 48 8b c8 [0-17] 4c 8b 03 33 d2 48 8b c8 ?? ?? ?? ?? ?? ?? 48 8b d8 4c 8b c0 45 85 e4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

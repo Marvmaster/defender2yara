@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Dungacarm_A_2147683765_0
         $x_5_6 = "\\upgrates.exe" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*))) or

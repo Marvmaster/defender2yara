@@ -18,6 +18,7 @@ rule MonitoringTool_Win32_Actmon_7209_0
         $x_1_4 = "WinExec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule MonitoringTool_Win32_Actmon_7209_1
         $x_1_2 = {69 73 34 5f 5f 00 00 00 73 79 73 33 30 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule MonitoringTool_Win32_Actmon_7209_2
         $x_1_7 = "RegisterServiceProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule MonitoringTool_Win32_Actmon_7209_3
         $x_1_6 = "%s\\shell\\printto\\%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule MonitoringTool_Win32_Actmon_7209_4
         $x_1_10 = "Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Network" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -149,6 +154,7 @@ rule MonitoringTool_Win32_Actmon_7209_5
         $x_1_11 = {5c 53 68 61 72 65 64 00 47 6c 6f 62 61 6c 5c 00 3c 44 4f 43 3e 00 00 00 3c 41 50 50 3e 00 00 00 3c 45 58 45 3e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -19,6 +19,7 @@ rule Trojan_Win32_Proxage_A_2147707873_0
         $x_1_4 = "/c del %s > nul" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

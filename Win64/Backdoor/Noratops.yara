@@ -21,6 +21,7 @@ rule Backdoor_Win64_Noratops_A_2147723365_0
         $x_1_6 = "sdrsrv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

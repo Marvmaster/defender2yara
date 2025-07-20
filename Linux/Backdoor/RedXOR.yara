@@ -23,6 +23,7 @@ rule Backdoor_Linux_RedXOR_A_2147777549_0
         $x_1_8 = "get_sys_info" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

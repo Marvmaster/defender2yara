@@ -18,6 +18,7 @@ rule VirTool_Win32_Goodump_2147783673_0
         $x_1_3 = {53 45 4c 45 43 54 [0-32] 61 63 74 69 6f 6e 5f 75 72 6c 2c [0-32] 75 73 65 72 6e 61 6d 65 5f 76 61 6c 75 65 2c [0-32] 70 61 73 73 77 6f 72 64 5f 76 61 6c 75 65 [0-32] 46 52 4f 4d [0-32] 6c 6f 67 69 6e 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

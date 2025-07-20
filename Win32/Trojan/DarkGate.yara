@@ -16,6 +16,7 @@ rule Trojan_Win32_DarkGate_RPX_2147890447_0
         $x_1_1 = {8b 8d c4 f9 ff ff 83 c4 1c ff 71 1c ff 95 ac f9 ff ff 8b 85 c4 f9 ff ff 53 8b 9d b0 f9 ff ff 8b 40 10 83 c0 38 50 ff d3 8b 85 c4 f9 ff ff ff b5 b4 f9 ff ff 8b 40 10 83 c0 40 50 ff d3 68 04 01 00 00 8d 85 e0 f9 ff ff 50 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_DarkGate_EB_2147891227_0
         $x_1_6 = "darkgate.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_DarkGate_A_2147891845_0
         $x_2_2 = {8b d7 32 54 1d ?? f6 d2 88 54}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_DarkGate_ZZ_2147892209_0
         $x_10_7 = "-accepteula -d -u " ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_Win32_DarkGate_B_2147892791_0
         $x_2_1 = {8b 14 24 8a 54 32 ff 8a 4c 1d ff 32 d1 88 54 30 ff 8b c5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_Win32_DarkGate_C_2147892792_0
         $x_2_2 = {8b 06 0f b6 44 05 ?? 31 05 ?? ?? ?? ?? ff 06 4b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule Trojan_Win32_DarkGate_AD_2147892903_0
         $x_100_3 = {8b 44 24 04 [0-16] 8b 14 24 8a 54 32 ff 8a 4c 1d ff 32 d1 88 54 30 ff 8b c5 [0-16] 3b d8 7d 03 43 eb 05 bb 01 00 00 00 46 4f 8b 44 24 04}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -181,6 +188,7 @@ rule Trojan_Win32_DarkGate_MB_2147893048_0
         $x_10_1 = {8d 44 10 ff 50 a1 ?? ?? ?? ?? 8a 44 07 ff 8b 15 ?? ?? ?? ?? 8a 54 16 ff 32 c2 5a 88 02 8b c6 e8 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 7e 08 ff 05 ?? ?? ?? ?? eb 0a c7 05 ?? ?? ?? ?? 01 00 00 00 ff 05 ?? ?? ?? ?? 4b 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +211,7 @@ rule Trojan_Win32_DarkGate_AL_2147893106_0
         $x_1_2 = {88 14 01 8b cb ff 47 ?? 8b 57 ?? 8b 47 ?? c1 e9 ?? 88 0c 02 ff 47 ?? 8b 4f ?? 8b 47 ?? 88 1c 01 8b 4c 24 ?? ff 47 ?? 83 c1 04 89 4c 24 ?? 81 f9 ?? ?? ?? ?? 0f 8c ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -228,6 +237,7 @@ rule Trojan_Win32_DarkGate_SE_2147894359_0
         $x_1_5 = "System\\CurrentControlSet\\Control\\Keyboard Layouts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +261,7 @@ rule Trojan_Win32_DarkGate_CCDC_2147894402_0
         $x_1_3 = "JumpID(\"\",\"%s\")" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +287,7 @@ rule Trojan_Win32_DarkGate_MD_2147894536_0
         $x_1_5 = "AntiStealerByDarkP1xel" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -297,6 +309,7 @@ rule Trojan_Win32_DarkGate_AC_2147895135_0
         $x_2_1 = {8b c7 f7 74 24 ?? 2b d1 8a 44 14 ?? 32 87 ?? ?? ?? ?? 88 04 3e 47}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -349,6 +362,7 @@ rule Trojan_Win32_DarkGate_ZY_2147901964_0
         $x_10_7 = "--_Binder_--" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +387,7 @@ rule Trojan_Win32_DarkGate_EM_2147903536_0
         $x_1_4 = "debugx2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -394,6 +409,7 @@ rule Trojan_Win32_DarkGate_D_2147912988_0
         $x_2_1 = {0f b7 c0 99 f7 fd 83 6c ?? ?? ?? 8b c2 99 f7 ff 8b 7c ?? ?? 31 01 8b 44}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -415,6 +431,7 @@ rule Trojan_Win32_DarkGate_MKV_2147914413_0
         $x_1_1 = {8b cf f7 e7 8b c7 2b c2 d1 e8 03 c2 c1 e8 04 6b c0 13 2b c8 2b ce 8a 44 0c 24 32 87 ?? ?? ?? ?? 88 04 2f 47 81 ff 00 ca 16 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -436,6 +453,7 @@ rule Trojan_Win32_DarkGate_MVV_2147914450_0
         $x_1_1 = {8b 14 07 83 c7 04 8b 86 e8 00 00 00 35 36 67 03 00 29 41 08 8b 9e 80 00 00 00 a1 ?? ?? ?? ?? 0f af da 8b 88 ac 00 00 00 8b 86 ?? ?? ?? ?? 8b d3 c1 ea 10 88 14 01 8b d3 ff 86 ?? ?? ?? ?? 8b 86 c8 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -457,6 +475,7 @@ rule Trojan_Win32_DarkGate_MGV_2147914552_0
         $x_1_1 = {33 c8 69 c1 cb 1d 00 00 b9 ff ff 00 00 2b 44 24 2c 99 f7 fe 8b 54 24 50 66 89 04 7a 8b 44 24 ?? 66 01 08 66 8b 00 0f b7 c8 0f b7 44 7a 0c 8b 54 24 18 3b 04 ca 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -478,6 +497,7 @@ rule Trojan_Win32_DarkGate_MZA_2147914632_0
         $x_1_1 = {8b ce f7 e7 8b c7 2b c2 d1 e8 03 c2 c1 e8 04 03 c0 2b c8 8d 04 cd ?? ?? ?? ?? 2b c1 8d 04 47 8a 44 04 24 32 87 3c 21 6e 00 88 04 2f 47 81 ff 00 d2 16 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -499,6 +519,7 @@ rule Trojan_Win32_DarkGate_WRY_2147914761_0
         $x_1_1 = {8b 48 64 8b 86 88 00 00 00 88 1c 01 a1 ?? ?? ?? ?? ff 40 64 ?? ?? ?? ?? 00 8b 8e d8 00 00 00 2b 88 ac 00 00 00 8b 86 e0 00 00 00 83 f1 f7 2b 86 ?? ?? ?? ?? 01 8e 18 01 00 00 05 6b 62 20 00 0f af 86 84 00 00 00 89 86 84 00 00 00 a1 ?? ?? ?? ?? 48 31 46 14 81 fd e8 d3 01 00 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -520,6 +541,7 @@ rule Trojan_Win32_DarkGate_MVW_2147914854_0
         $x_1_1 = {8b 06 8b 4e 34 2d 4f 38 12 00 0f af 46 54 89 46 54 a1 ?? ?? ?? ?? 88 1c 08 ff 46 34 8b 0d ?? ?? ?? ?? 8b 41 54 2d bc a0 11 00 31 81 80 00 00 00 81 ff e8 14 00 00 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -541,6 +563,7 @@ rule Trojan_Win32_DarkGate_MKD_2147915235_0
         $x_1_1 = {6b c8 0c 83 44 24 14 04 83 44 24 18 08 8b 04 83 0f af 83 e0 0a 00 00 31 81 e8 19 00 00 0f b6 05 ?? ?? ?? ?? 0f b6 4c 37 05 05 98 15 00 00 f7 f1 8b 4c 24 24 88 54 37 05 46 a1 ?? ?? ?? ?? 89 74 24 10 0f b6 04 08 3b f0 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -562,6 +585,7 @@ rule Trojan_Win32_DarkGate_MKF_2147915236_0
         $x_1_1 = {99 f7 f9 8b 4c 24 20 66 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? ff 44 24 3c 0f b7 0c 41 0f b7 04 5f 2b c8 8b 44 24 38 31 88 30 78 00 00 8b 44 24 10 0f b7 35 ?? ?? ?? ?? 0f b7 08 a1 ?? ?? ?? ?? 3b 34 88 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -583,6 +607,7 @@ rule Trojan_Win32_DarkGate_DGZ_2147915610_0
         $x_1_1 = {f7 e6 8b c6 8b cd 2b c2 d1 e8 03 c2 c1 e8 04 6b c0 1b 2b c8 03 ce 8a 44 0c 20 32 86 ?? ?? ?? ?? 46 88 47 ff 81 fe 00 d4 16 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -604,6 +629,7 @@ rule Trojan_Win32_DarkGate_BAN_2147916323_0
         $x_1_1 = {33 d2 f7 75 fc 43 8a 04 32 8b 55 f8 32 04 0a 8b 55 f4 88 01 3b 5d 08 72 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -625,6 +651,7 @@ rule Trojan_Win32_DarkGate_BAY_2147916367_0
         $x_1_1 = {8b ce f7 e7 8b c7 2b c2 d1 e8 03 c2 c1 e8 04 6b c0 13 2b c8 03 cf 8a 44 0c 24 32 87 3c 21 6e 00 88 04 2f 47 81 ff 00 06 33 00 72 cf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -646,6 +673,7 @@ rule Trojan_Win32_DarkGate_JZE_2147917943_0
         $x_5_1 = {8b 0c 02 a1 ?? ?? ?? ?? 33 48 38 8b 80 88 00 00 00 89 0c 02 83 c2 04 a1 ?? ?? ?? ?? 8b 8f a4 00 00 00 2b 48 50 41 0f af 4f 1c 89 4f 1c a1 ?? ?? ?? ?? 01 47 38 81 fa dc 96 17 00 0f 8c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -668,6 +696,7 @@ rule Trojan_Win32_DarkGate_NEQ_2147918309_0
         $x_3_2 = {8b 55 f4 8a 14 32 8b 4d f8 32 14 19 88 14 30 8b 45 f8 e8 ?? ?? ?? ?? 50 8b 45 f8 0f b6 04 18}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -692,6 +721,7 @@ rule Trojan_Win32_DarkGate_ZX_2147920513_0
         $x_10_5 = "||_Binder_||" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -713,6 +743,7 @@ rule Trojan_Win32_DarkGate_BKC_2147923085_0
         $x_5_1 = {99 f7 f9 8b 44 24 04 8a 04 10 8b 14 24 8b 0d a0 f8 5e 00 8a 54 0a ff 32 c2 50 8b 44 24 0c e8 32 e8 f8 ff 8b 15 a0 f8 5e 00 59 88 4c 10 ff}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -734,6 +765,7 @@ rule Trojan_Win32_DarkGate_MRT_2147923550_0
         $x_5_1 = {83 c4 08 8b 55 e4 8b 4d dc 8b 45 d8 03 ca 42 89 55 ?? 8a 04 08 32 45 ef 88 01 3b 55 08 0f 82}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -755,6 +787,7 @@ rule Trojan_Win32_DarkGate_MRM_2147923551_0
         $x_5_1 = {33 d2 8b c6 6a ?? 59 f7 f1 8b 44 24 18 8a 4c 14 1c 32 8e ?? ?? ?? ?? 88 0c 06 46 3b 74 24 ?? 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -776,6 +809,7 @@ rule Trojan_Win32_DarkGate_GGF_2147925632_0
         $x_5_1 = {8b c1 f7 75 e4 8b 45 ?? 8a 14 32 32 14 01 8b c7 83 7f 14 0f 76 ?? 8b 07 88 14 08 41 8b 45 d4 83 f9 27 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -797,6 +831,7 @@ rule Trojan_Win32_DarkGate_MUV_2147926628_0
         $x_5_1 = {8b c1 f7 75 e4 8b 45 d0 8a 14 32 32 ?? 01 8b c7 83 7f 14 0f 76 ?? 8b 07 88 14 08 41 8b 45 d4 83 f9 ?? 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -818,6 +853,7 @@ rule Trojan_Win32_DarkGate_SIP_2147927535_0
         $x_1_1 = {55 68 95 83 40 00 64 ff 30 64 89 20 83 7d fc 00 74 25 8b 45 f8 e8 cf b8 ff ff 50 8d 45 f8 e8 72 ba ff ff 8b d0 8b 45 fc 59}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -839,6 +875,7 @@ rule Trojan_Win32_DarkGate_EAA_2147927864_0
         $x_5_1 = {8b 8e b8 00 00 00 8b 86 84 00 00 00 c1 ea 08 88 14 01}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -861,6 +898,7 @@ rule Trojan_Win32_DarkGate_GC_2147928155_0
         $x_1_2 = {41 89 c8 81 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -882,6 +920,7 @@ rule Trojan_Win32_DarkGate_GC_2147928155_1
         $x_1_1 = {8a c7 f7 a4 9e e9 00 00 00 00 e8 69 07 00 00 0b 6c 63 6c 48 d7 57 ad d2 84 3c 15 62 30 cb 30 f3 30 98 64 84 64 10 64 f1 64 71 29}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -904,6 +943,7 @@ rule Trojan_Win32_DarkGate_GB_2147928416_0
         $x_1_2 = {30 04 0f 41 89 c8 81 f9 [0-4] 76}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -925,6 +965,7 @@ rule Trojan_Win32_DarkGate_TKV_2147928653_0
         $x_5_1 = {f7 f3 8a 04 16 60 f2 0f 5c d4 f2 0f 10 e6 f2 0f 5c fa f2 0f 5c d4 f2 0f 2d c3 66 0f 59 d9 66 0f 14 c0 61 30 04 0f 41 89 c8 81 f9 07 80 17 00 76 cd}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -947,6 +988,7 @@ rule Trojan_Win32_DarkGate_ND_2147928804_0
         $x_1_2 = "34WKSI.aiff" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -968,6 +1010,7 @@ rule Trojan_Win32_DarkGate_SHC_2147929246_0
         $x_1_1 = {64 a1 30 00 00 00 60 89 f9 0f 95 c0 89 f9 85 ff 0f 44 c1 81 e7 ff ff fd ff bb 01 00 00 00 83 e1 08 09 c8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -989,6 +1032,7 @@ rule Trojan_Win32_DarkGate_NNJ_2147929248_0
         $x_5_1 = {8d 0c 07 33 d2 8b c7 f7 75 ?? 47 8a 04 32 8b 55 ?? 32 04 11 88 01 8b 45 b0 8b 8d ?? ?? ff ff 3b 7d ac 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1033,6 +1077,7 @@ rule Trojan_Win32_DarkGate_KKK_2147933438_0
         $x_5_1 = {f7 f3 c5 ed fd d6 c5 e5 fd df c5 ed 67 d2 c5 e5 67 db 8a 04 16 c5 d5 fd ef c5 dd 67 e4 c5 d5 67 ed c5 fd 60 c2 30 04 0f c5 fd 69 f4 c5 fd 61 c4 c5 dd 73 dc 02 c5 f5 73 db ?? c5 e5 69 d7 41 c5 e5 6a dc c5 f5 ef c9 c5 e5 75 db c5 e5 71 f3 07 c4 e3 fd 00 f6 ?? 89 c8 c5 cd 60 e1 c5 cd 68 f1 c5 c5 60 c1 c5 c5 68 f9 81 f9 07 80 17 00 0f 86}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1054,6 +1099,7 @@ rule Trojan_Win32_DarkGate_KKM_2147933439_0
         $x_5_1 = {31 d2 c5 e5 60 dd c5 c5 73 d8 02 c5 fd 69 f4 c5 fd 61 c4 f7 f3 c5 fd 62 c3 c5 e5 6a dc 8a 04 16 c5 e5 67 db c5 dd fd e6 c5 d5 fd ef 30 04 0f c5 e5 60 dd 41 c5 c5 73 d8 ?? 89 c8 81 f9 07 74 17 00 76}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1100,6 +1146,7 @@ rule Trojan_Win32_DarkGate_GD_2147934997_0
         $x_1_1 = {30 04 0f 41 89 c8 81 f9 07 7c 17 00 [0-30] 31 d2 [0-30] f7 f3 [0-30] 8a 04 16 [0-15] 83 c0 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1121,6 +1168,7 @@ rule Trojan_Win32_DarkGate_GE_2147935570_0
         $x_1_1 = {81 f9 07 e4 06 00 [0-50] 31 d2 [0-60] f7 f3 [0-60] 8a 04 16 [0-60] 30 04 0f [0-60] 41 [0-60] 89 c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1142,6 +1190,7 @@ rule Trojan_Win32_DarkGate_EABR_2147936808_0
         $x_5_1 = {8b 86 b8 00 00 00 0f af da 8b d3 c1 ea 08 88 14 01}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1164,6 +1213,7 @@ rule Trojan_Win32_DarkGate_GVA_2147937063_0
         $x_1_2 = {40 8b 4d 08 88 81 00 01 00 00 8b 55 08 0f b6 82 01 01 00 00 8b 4d 08 0f b6 91 00 01 00 00 8b 4d 08 0f b6 14 11 03 c2 25}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

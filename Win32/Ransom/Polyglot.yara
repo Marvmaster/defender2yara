@@ -17,6 +17,7 @@ rule Ransom_Win32_Polyglot_A_2147717609_0
         $x_2_3 = {66 39 4d fa 76 25 66 0f b6 55 f8 8b 45 fc 8b 75 0c 53 8a 18 32 da 32 d9 66 81 e3 ff 00 41 66 89 1e 40 46 46 66 3b 4d fa 72 e8 5b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

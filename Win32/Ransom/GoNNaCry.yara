@@ -19,6 +19,7 @@ rule Ransom_Win32_GoNNaCry_DA_2147763576_0
         $x_1_4 = "GoNNaCry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

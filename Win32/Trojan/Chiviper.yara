@@ -18,6 +18,7 @@ rule Trojan_Win32_Chiviper_C_2147633131_0
         $x_1_4 = "mac=%s&ver=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -44,6 +45,7 @@ rule Trojan_Win32_Chiviper_D_2147633333_0
         $x_1_3 = {77 65 62 73 72 63 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

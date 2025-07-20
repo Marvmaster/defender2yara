@@ -17,6 +17,7 @@ rule Trojan_MSIL_Migaut_PA_2147755294_0
         $x_1_2 = {07 8e 69 8d ?? 00 00 01 0c 7e 02 00 00 04 ?? ?? 00 00 0a 0d 16 13 05 2b 11 08 11 05 07 11 05 91 09 61 d2 9c 11 05 17 58 13 05 11 05 07 8e 69 32 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MacOS_Zako_A_2147744533_0
         $x_1_3 = {63 6f 6d 2e 7a 61 6b 6f 2e [0-7] 2e 70 6b 67 2e 63 6f 6e 66 69 67}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Trosup_A_2147628689_0
         $x_1_3 = {25 73 25 64 [0-8] 55 52 4c 44 6f 77 6e 6c 6f 61 64 54 6f 46 69 6c 65 41 00 00 75 72 6c 6d 6f 6e 2e 64 6c 6c [0-16] 25 64 00 00 5c 55 73 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Ransom_MSIL_Detoxcrypt_A_2147716969_0
         $x_1_8 = "\\Downloads\\Pokemon\\Pokemon.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

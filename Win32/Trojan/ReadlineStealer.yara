@@ -17,6 +17,7 @@ rule Trojan_Win32_ReadlineStealer_GGL_2147805542_0
         $x_10_2 = {11 33 31 58 12 09 56 32 14 76 05 ?? ?? ?? ?? 7b 08}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_ReadlineStealer_BZ_2147816789_0
         $x_1_5 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

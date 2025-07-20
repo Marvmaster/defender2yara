@@ -21,6 +21,7 @@ rule Trojan_MSIL_EvilGDefByp_A_2147903126_0
         $x_10_6 = "Disable WD\\ABC\\ABC\\obj\\Debug\\ABC.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

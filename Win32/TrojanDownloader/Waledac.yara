@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Waledac_C_2147800834_0
         $x_2_6 = {84 c0 75 13 53 ff d7 ff 45 fc 83 7d fc 0a 7c bd}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Waledac_R_2147801476_0
         $x_1_2 = {50 ff 75 f8 e8 ?? ?? ?? ?? 59 59 84 c0 75 13 53 ff d7 ff 45 fc 83 7d fc 0a 7c ?? 32 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule TrojanDownloader_Win32_Waledac_AL_2147802632_0
         $x_1_4 = {74 65 6d 70 00 00 00 00 2e 65 78 65 00 00 00 00 2e 00 00 00 2f [0-48] 2e 65 78 65 [0-4] 47 45 54 20 00 00 00 00 3f 00 00 00 20 48 54 54 50 2f 31 2e 31}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule TrojanDownloader_Win32_Waledac_AJ_2147803952_0
         $x_1_5 = {50 ff d6 e8 ?? ?? ?? ?? 8b c8 33 c0 33 db 88 5d f0 8d 7d f1 ab ab 66 ab aa 6a 0b 8d 45 f0 50 51 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Worm_Win32_Siwdivy_A_2147707624_0
         $x_1_3 = {eb 06 2c 70 30 31 20 00 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

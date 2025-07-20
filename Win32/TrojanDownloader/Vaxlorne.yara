@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Vaxlorne_A_2147598277_0
         $x_1_8 = "_count.html?id=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule TrojanDownloader_Win32_Vaxlorne_B_2147598870_0
         $x_2_6 = "_count.html?id=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_2_*))) or
             (all of ($x*))

@@ -19,6 +19,7 @@ rule DDoS_Linux_Silly_A_2147833153_0
         $x_1_4 = "port %d spoofed as %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Worm_Win32_Bononabeer_A_2147651444_0
         $x_1_4 = {74 79 6f 2e 6d 61 6b 61 6e 61 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

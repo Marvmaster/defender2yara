@@ -18,6 +18,7 @@ rule Worm_Win32_Yoinoir_A_2147655273_0
         $x_1_4 = {55 73 65 41 75 74 6f 50 6c 61 79 3d 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

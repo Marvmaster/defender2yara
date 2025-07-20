@@ -18,6 +18,7 @@ rule Trojan_Win64_Zebracon_B_2147795938_0
         $x_1_3 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

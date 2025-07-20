@@ -19,6 +19,7 @@ rule Trojan_Win32_Korpode_A_2147725782_0
         $x_1_4 = {5c 54 2b 4d 5c 52 65 73 75 6c 74 5c 44 6f 63 50 72 69 6e 74 2e 70 64 62 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

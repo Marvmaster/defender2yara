@@ -26,6 +26,7 @@ rule Trojan_Win32_EmotetCrypt_A_2147762934_0
         $x_1_11 = {8a 04 3b 8a 0c 2f 03 c1 33 d2 f7 35 ?? ?? ?? ?? 8b 4c 24 30 8a 44 24 28 03 d1 8b 4c 24 2c 8a 14 3a 02 d0 8b 44 24 24 32 14 01 40 89 44 24 24 88 50 ff 8b 44 24 20 48 89 44 24 20 0f 85 ?? ?? ff ff 5f 5e 5d 5b 83 c4 08 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_EmotetCrypt_PBQ_2147763494_0
         $x_1_3 = "fGbK>QJPPWu@AaUr_zdgweA8D6K9$>ZBU1cl$j70vJLJ)w6)U(o9c>%Dc)J!R4ORadVBJsD)aM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_Win32_EmotetCrypt_PBR_2147763573_0
         $x_1_5 = "ZLG_(d657IAuISrKGE7<W0y6uP%@@$bo!KFVTcA1qWMHjN%voi1tAw4w5^4M>6!?gU_ijNJNR_xB$@Yv+!mqgG5mdw!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Trojan_Win32_EmotetCrypt_PBS_2147763763_0
         $x_1_3 = "CreateMutexW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_Win32_EmotetCrypt_PBT_2147763944_0
         $x_1_2 = {0f b6 0c 2e 0f b6 c0 03 c1 33 d2 f7 35 ?? ?? ?? ?? 8b 44 24 20 8b da 03 d8 ff 15 ?? ?? ?? ?? 8a 14 33 8a 44 24 28 8b 4c 24 1c 02 d0 8b 44 24 10 32 14 01 88 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Trojan_Win32_EmotetCrypt_PBU_2147763945_0
         $x_1_2 = {0f b6 14 32 0f b6 c0 03 c2 33 d2 f7 f1 8b da 03 5d f0 ff 15 ?? ?? ?? ?? 8a 04 33 02 45 0f 8b 4d ec 32 04 39 88 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_Win32_EmotetCrypt_PBV_2147763946_0
         $x_1_2 = {0f b6 14 37 0f b6 c0 03 c2 33 d2 f7 f1 8b da 03 5c 24 20 ff 15 ?? ?? ?? ?? 8a 0c 33 8b 44 24 14 02 4c 24 28 8b 54 24 1c 32 0c 02 83 c0 01 83 6c 24 10 01 88 48 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -184,6 +191,7 @@ rule Trojan_Win32_EmotetCrypt_PBW_2147764110_0
         $x_1_1 = {0f b6 01 8b 55 f4 03 55 f0 0f b6 0a 03 c1 33 d2 f7 35 ?? ?? ?? ?? 8b 45 1c 0f af 45 1c 03 d0 89 55 e4 8b 4d 08 03 4d ec 0f b6 11 8b 45 f4 03 45 e4 0f b6 08 8b 45 1c 0f af 45 1c 03 c8 33 d1 8b 4d 18 03 4d ec 88 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +213,7 @@ rule Trojan_Win32_EmotetCrypt_PBX_2147764124_0
         $x_1_1 = {8a 14 37 8a 04 2e 02 c1 02 ca 88 44 24 2c 88 0c 2e 8b 4c 24 2c 88 04 37 33 c0 81 e1 ff 00 00 00 8a 04 2e 33 d2 03 c1 f7 35 ?? ?? ?? ?? 8b 44 24 3c 8b da 03 d8 ff 15 ?? ?? ?? ?? 8a 14 33 8a 44 24 2c 8b 4c 24 20 02 d0 8b 44 24 28 32 14 01 88 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +241,7 @@ rule Trojan_Win32_EmotetCrypt_B_2147764178_0
         $x_1_7 = {33 d2 f7 f1 8a 0c 33 02 4d ff 8a 04 32 02 45 ff 88 0c 32 88 04 33 8b ca 0f b6 0c 31 0f b6 c0 03 c1 89 55 f8 33 d2 f7 35 ?? ?? ?? ?? 8b 4d f4 03 55 f0 8a 04 32 02 45 ff 32 04 39 88 07 47 ff 4d 0c 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -254,6 +264,7 @@ rule Trojan_Win32_EmotetCrypt_PBY_2147764204_0
         $x_1_2 = {0f b6 14 37 0f b6 c0 03 c2 33 d2 f7 f1 89 54 24 1c ff 15 ?? ?? ?? ?? 8b 44 24 18 8a 0c 18 8b 54 24 14 32 0c 32 83 c3 01 83 6c 24 24 01 88 4b ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -275,6 +286,7 @@ rule Trojan_Win32_EmotetCrypt_PBZ_2147764210_0
         $x_1_1 = {8a 55 17 02 14 33 88 10 88 0c 33 0f b6 00 0f b6 c9 03 c1 33 d2 f7 35 ?? ?? ?? ?? 8b 4d 1c 03 55 10 8a 04 32 02 45 17 32 04 39 88 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -296,6 +308,7 @@ rule Trojan_Win32_EmotetCrypt_PCA_2147764254_0
         $x_1_1 = {8a 0c 37 8b da 8a 04 33 88 0c 33 88 04 37 0f b6 14 33 0f b6 c0 03 c2 33 d2 f7 35 ?? ?? ?? ?? 89 54 24 1c ff 15 ?? ?? ?? ?? 8b 44 24 10 8a 0c 28 8b 54 24 14 32 0c 32 8b 44 24 20 88 4d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -317,6 +330,7 @@ rule Trojan_Win32_EmotetCrypt_PCB_2147764255_0
         $x_1_1 = {8a 04 0f 02 c3 02 d3 88 14 0f 88 04 29 0f b6 14 0f 0f b6 c0 03 c2 33 d2 f7 f6 8b 74 24 24 46 89 74 24 24 03 54 24 18 0f b6 04 0a 8b 54 24 10 02 c3 32 44 32 ff 83 6c 24 14 01 88 46 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -338,6 +352,7 @@ rule Trojan_Win32_EmotetCrypt_PCC_2147764256_0
         $x_1_1 = {8b 45 1c 0f af 45 1c 03 d0 89 55 ec 8b 4d 08 03 4d e4 0f b6 11 8b 45 f4 03 45 ec 0f b6 08 8b 45 1c 0f af 45 1c 03 c8 33 d1 8b 4d 18 03 4d e4 88 11}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -360,6 +375,7 @@ rule Trojan_Win32_EmotetCrypt_PCD_2147764430_0
         $x_1_2 = {0f b6 0c 1a 33 d2 03 c1 f7 f7 8b f2 ff 15 ?? ?? ?? ?? 8b 4d 18 8b 55 08 0f b6 04 0a 32 04 1e 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -383,6 +399,7 @@ rule Trojan_Win32_EmotetCrypt_PCE_2147764440_0
         $x_1_3 = {ff d3 8b 44 24 24 8b 4c 24 18 0f b6 14 01 8b 4c 24 10 32 14 31 83 c0 01 83 6c 24 14 01 88 50 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -409,6 +426,7 @@ rule Trojan_Win32_EmotetCrypt_PCF_2147764490_0
         $x_1_2 = {0f b6 00 0f b6 d2 03 c2 33 d2 f7 f1 89 55 14 ff 15 ?? ?? ?? ?? 8b 45 0c 8b 4d 14 8a 04 38 32 04 31 88 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -431,6 +449,7 @@ rule Trojan_Win32_EmotetCrypt_PCG_2147764600_0
         $x_1_2 = {0f b6 14 0f 0f b6 c0 03 c2 33 d2 f7 f6 8a 04 0a 8b 54 24 18 32 04 1a 43 88 43 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -454,6 +473,7 @@ rule Trojan_Win32_EmotetCrypt_PCH_2147764695_0
         $x_1_3 = {0f b6 12 0f b6 c0 03 c2 33 d2 f7 f1 8b da ff 15 ?? ?? ?? ?? 8b 45 f4 8a 04 38 32 04 33 88 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -476,6 +496,7 @@ rule Trojan_Win32_EmotetCrypt_AR_2147764750_0
         $x_1_2 = "CSBhvSWCvFRvfCfAoJdoFuAUmK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -499,6 +520,7 @@ rule Trojan_Win32_EmotetCrypt_AR_2147764750_1
         $x_1_3 = "L9gfefdTTRvh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -523,6 +545,7 @@ rule Trojan_Win32_EmotetCrypt_AR_2147764750_2
         $x_1_4 = "B56wrg7Qrxtth" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -551,6 +574,7 @@ rule Trojan_Win32_EmotetCrypt_AR_2147764750_3
         $x_3_4 = "Qyinyhjjbt67" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -577,6 +601,7 @@ rule Trojan_Win32_EmotetCrypt_AR_2147764750_4
         $x_1_3 = "c:\\Users\\Dodo\\Downloads\\WebPageSnapShot\\Release\\WebPageSnapShot.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -604,6 +629,7 @@ rule Trojan_Win32_EmotetCrypt_AR_2147764750_5
         $x_1_4 = "drtffDWEUFEUFUWEGFUYBG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -627,6 +653,7 @@ rule Trojan_Win32_EmotetCrypt_PCI_2147764815_0
         $x_1_3 = {8b 44 24 24 8b 54 24 18 8a 0c 02 32 0c 2f 83 c0 01 83 6c 24 14 01 88 48 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -652,6 +679,7 @@ rule Trojan_Win32_EmotetCrypt_PCK_2147764832_0
         $x_1_1 = {0f b6 04 32 33 d2 0f b6 c9 03 c1 b9 ?? ?? ?? ?? f7 f1 8b 4d 18 2b 15 ?? ?? ?? ?? 03 d7 8a 04 32 8b 55 f8 02 c2 8b 55 08 32 04 0a 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -673,6 +701,7 @@ rule Trojan_Win32_EmotetCrypt_PCL_2147764837_0
         $x_1_1 = {0f b6 14 33 0f b6 c0 03 c2 33 d2 f7 f1 89 54 24 10 [0-20] 8b 44 24 24 8b 4c 24 18 0f b6 14 01 8b 4c 24 10 32 14 31 83 c0 01 83 6c 24 14 01 88 50 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -696,6 +725,7 @@ rule Trojan_Win32_EmotetCrypt_ARK_2147764873_0
         $x_1_3 = {0f b6 13 03 c2 99 b9 e3 03 00 00 f7 f9 a1 ?? ?? ?? ?? 45 0f b6 d2 8a 0c 02 30 4d ff 83 6c 24 14 01 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -723,6 +753,7 @@ rule Trojan_Win32_EmotetCrypt_ARK_2147764873_1
         $x_1_7 = {8a 0c 02 8b 44 24 20 8a 14 03 32 d1 88 14 03 8b 44 24 24 43 3b d8 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -787,6 +818,7 @@ rule Trojan_Win32_EmotetCrypt_ARK_2147764873_2
         $x_1_44 = {8a 14 02 8b 44 24 14 8b 4c 24 1c 30 14 08 40 3b 44 24 20 89 44 24 14 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -848,6 +880,7 @@ rule Trojan_Win32_EmotetCrypt_ARK_2147764873_3
         $x_5_41 = "*FLrY4bO%4Th$J8Gt0z*zKiB)Yb#mGNysUj<>gI0J>xxnPNXTre@<I8bJw1MjL6q8sG7ry9^Ck)r)6Da+ol9@K" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -879,6 +912,7 @@ rule Trojan_Win32_EmotetCrypt_PCM_2147764898_0
         $x_1_2 = {0f b6 0c 0a 03 c1 33 d2 f7 35 ?? ?? ?? ?? 89 55 e4 8b 45 08 03 45 dc 0f b6 00 8b 4d f0 03 4d e4 0f b6 09 33 c1 8b 4d 18 03 4d dc 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -901,6 +935,7 @@ rule Trojan_Win32_EmotetCrypt_PCN_2147764899_0
         $x_1_2 = {0f b6 04 33 03 c2 33 d2 f7 35 ?? ?? ?? ?? 89 54 24 20 ff 15 ?? ?? ?? ?? 8b 44 24 14 8a 0c 28 8b 54 24 20 32 0c 32 8b 44 24 10 88 4d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -926,6 +961,7 @@ rule Trojan_Win32_EmotetCrypt_RK_2147764977_0
         $x_5_5 = {bb 01 00 00 00 33 ff b9 df 25 01 00 50 3b f9 7f}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -958,6 +994,7 @@ rule Trojan_Win32_EmotetCrypt_RK_2147764977_1
         $x_5_12 = {3a 00 00 00 72 00 6f 00 73 00 6f 00 66 00 74 00 5c 00 57 00 69 00 6e 00 64 00 6f 00 77 00 73 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -980,6 +1017,7 @@ rule Trojan_Win32_EmotetCrypt_PA_2147765194_0
         $x_2_2 = {6a 00 50 e8 ?? ?? ?? ?? 8b 4c 24 ?? 8b 44 24 ?? 8b 3d ?? ?? ?? ?? 8b d1 2b 15 ?? ?? ?? ?? 83 c1 01 03 c2 0f b6 54 24 ?? 8a 14 3a 30 10 3b 4c 24 ?? 89 4c 24 ?? 0f 8c ?? ?? ?? ?? 8a 4c 24 ?? 8b 44 24 ?? 8a 54 24 ?? 5f 5e 5d 5b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1002,6 +1040,7 @@ rule Trojan_Win32_EmotetCrypt_PCO_2147765195_0
         $x_1_2 = {0f b6 14 0f 0f b6 c0 03 c2 33 d2 f7 f6 8b 74 24 ?? 83 c6 01 89 74 24 ?? 03 54 24 ?? 0f b6 04 0a 8b 54 24 ?? 02 c3 32 44 32 ff 83 6c 24 ?? 01 88 46 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1024,6 +1063,7 @@ rule Trojan_Win32_EmotetCrypt_PCP_2147765196_0
         $x_1_2 = "CSBhvSWCvFRvfCfAoJdoFuAUmK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1053,6 +1093,7 @@ rule Trojan_Win32_EmotetCrypt_PCP_2147765196_1
         $x_7_9 = "a5JAQscnAG" ascii //weight: 7
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_9_*) and 3 of ($x_7_*))) or
             ((2 of ($x_9_*) and 2 of ($x_7_*))) or
@@ -1097,6 +1138,7 @@ rule Trojan_Win32_EmotetCrypt_C_2147765309_0
         $x_1_13 = {f7 ff 8a 04 0e 0f b6 fa 88 54 24 13 8a 14 0f 88 14 0e 88 04 0f 0f b6 14 0f 0f b6 04 0e 03 c2 99 f7 fb 0f b6 c2 8a 14 08 8b 44 24 18 30 14 28 8b 44 24 1c 45 3b e8 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1119,6 +1161,7 @@ rule Trojan_Win32_EmotetCrypt_PCQ_2147765435_0
         $x_1_2 = {0f b6 11 8b 45 ?? 03 45 e4 0f b6 08 8b 45 1c 0f af 45 1c 03 c8 33 d1 8b 4d ?? 03 4d ?? 88 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1140,6 +1183,7 @@ rule Trojan_Win32_EmotetCrypt_PCR_2147765495_0
         $x_1_1 = {8b 4c 24 30 f7 35 ?? ?? ?? ?? 8b da 03 d9 ff 15 ?? ?? ?? ?? 8a 14 33 8a 44 24 28 8b 4c 24 1c 02 d0 8b 44 24 24 32 14 01 88 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1161,6 +1205,7 @@ rule Trojan_Win32_EmotetCrypt_PCS_2147765610_0
         $x_1_1 = {0f b6 c3 33 d2 8b 5d ?? 0f b6 0c 33 03 c1 b9 ?? ?? ?? ?? f7 f1 8b 4d ?? 0f b6 04 32 8b 55 ?? 32 04 0a 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1183,6 +1228,7 @@ rule Trojan_Win32_EmotetCrypt_PCT_2147765781_0
         $x_1_2 = {0f b6 14 29 0f b6 04 2e 03 c2 99 bb ?? ?? ?? ?? f7 fb 0f b6 c2 8a 14 28 8b 44 24 ?? 30 14 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1204,6 +1250,7 @@ rule Trojan_Win32_EmotetCrypt_PCU_2147765875_0
         $x_1_1 = {0f b6 14 0e 0f b6 04 0f 03 c2 99 bb ?? ?? ?? ?? f7 fb 45 0f b6 c2 8a 0c 08 8b 44 24 ?? 30 4c 28 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1225,6 +1272,7 @@ rule Trojan_Win32_EmotetCrypt_SS_2147765943_0
         $x_1_1 = {03 c1 0f b6 4c 24 11 8a 0c 11 30 08 ff 44 24 14 8b 44 24 14 3b 44 24 20 0f 8c a3 fb ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1246,6 +1294,7 @@ rule Trojan_Win32_EmotetCrypt_PCV_2147765963_0
         $x_1_1 = {0f b6 14 0e 0f b6 04 0f 03 c2 99 b9 ?? ?? ?? ?? f7 f9 88 54 24 ?? ff 15 ?? ?? ?? ?? 0f b6 54 24 ?? a1 ?? ?? ?? ?? 8a 0c 02 8b 44 24 ?? 30 0c 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1267,6 +1316,7 @@ rule Trojan_Win32_EmotetCrypt_PCW_2147766013_0
         $x_1_1 = {0f b6 04 29 0f b6 0c 0f 03 c1 99 b9 ?? ?? ?? ?? f7 f9 88 54 24 11 [0-12] 0f b6 54 24 11 a1 ?? ?? ?? ?? 8a 0c 02 8b 44 24 ?? 30 0c 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1289,6 +1339,7 @@ rule Trojan_Win32_EmotetCrypt_RA_2147766394_0
         $x_2_2 = {8a 14 07 33 c0 8a 01 03 f2 03 c6 be ?? ?? ?? ?? 99 f7 fe [0-31] 81 e6 ff 00 00 00 [0-31] 83 c4 08 99 f7 7c 24 1c 43 81 fb 00 88 54 24 20 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1310,6 +1361,7 @@ rule Trojan_Win32_EmotetCrypt_SD_2147766631_0
         $x_1_1 = {83 c4 08 8b f0 6a ?? 8b ce e8 ?? ?? ?? ?? 8b ce e8 ?? ?? ?? ?? 0f b6 54 24 11 a1 ?? ?? ?? ?? 8a 0c 02 8b 44 24 20 30 0c 28 45 3b 6c 24 24 0f 8c ?? ?? ff ff 8b 44 24 28 8a 54 24 12 8a 4c 24 13 5f 5e 5b 88 10 88 48 01 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1331,6 +1383,7 @@ rule Trojan_Win32_EmotetCrypt_MR_2147766714_0
         $x_1_1 = {8a 0c 02 8b 44 24 ?? 8a 14 03 32 d1 88 14 03 8b 44 24 ?? 43 3b d8 0f 8c 0f 00 8b 54 24 ?? a1 ?? ?? ?? ?? 81 e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1352,6 +1405,7 @@ rule Trojan_Win32_EmotetCrypt_PCX_2147766786_0
         $x_1_1 = {8b 4c 24 1c 8b 15 ?? ?? ?? ?? 8b 44 24 ?? 81 e1 ff 00 00 00 8a 14 11 8b 4c 24 ?? 8a 1c 08 32 da 88 1c 08 8b 4c 24 ?? 40 3b c1 89 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1374,6 +1428,7 @@ rule Trojan_Win32_EmotetCrypt_MS_2147767467_0
         $x_1_2 = {8b 4d e4 03 d9 8b 4d f8 8b c6 c1 e8 05 03 45 e8 03 ce 33 d9 33 d8 c7 05 [0-8] c7 05 [0-8] 89 45 fc 2b fb 8b 45 e0 29 45 f8 83 6d f4 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1395,6 +1450,7 @@ rule Trojan_Win32_EmotetCrypt_GKM_2147767532_0
         $x_1_1 = {99 bd 5f 02 00 00 f7 fd a1 ?? ?? ?? ?? 0f b6 ea 03 c5 88 54 24 ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1416,6 +1472,7 @@ rule Trojan_Win32_EmotetCrypt_GKM_2147767532_1
         $x_1_1 = {0f b6 54 24 ?? 8b 35 ?? ?? ?? ?? 8b 44 24 ?? 8a 14 32 8b [0-3] 30 14 08 40 3b [0-3] 89 44 24 ?? 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1438,6 +1495,7 @@ rule Trojan_Win32_EmotetCrypt_2147767639_0
         $x_1_1 = {8b f0 d3 e0 c1 ee 05 03 74 24 38 03 44 24 2c 89 74 24 10 8b c8 e8 ?? ?? ?? ?? 33 c6 89 44 24 24 89 2d ?? ?? ?? ?? 8b 44 24 24 29 44 24 14 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1461,6 +1519,7 @@ rule Trojan_Win32_EmotetCrypt_MU_2147767705_0
         $x_1_3 = {8b 7d fc 2b fe 81 3d [0-8] 89 7d fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1482,6 +1541,7 @@ rule Trojan_Win32_EmotetCrypt_PCY_2147768383_0
         $x_1_1 = {0f b6 4c 24 ?? 8b 15 ?? ?? ?? ?? 8a 0c 11 8b 44 24 ?? 30 0c 28 45 3b 6c 24 ?? 0f 8c ?? ?? ?? ?? 8b 44 24 ?? 8a 54 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1503,6 +1563,7 @@ rule Trojan_Win32_EmotetCrypt_PCZ_2147768384_0
         $x_1_1 = {8b 54 24 20 8a 0c 32 8b 44 24 10 02 4c 24 30 8b 54 24 24 32 0c 02 40 ff 4c 24 18 88 48 ff 89 44 24 10 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1524,6 +1585,7 @@ rule Trojan_Win32_EmotetCrypt_PDA_2147768452_0
         $x_1_1 = {8b 54 24 20 8a 0c 32 8b 44 24 14 02 4c 24 30 8b 54 24 24 32 0c 02 83 c0 01 83 6c 24 18 01 88 48 ff 89 44 24 14 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1545,6 +1607,7 @@ rule Trojan_Win32_EmotetCrypt_PDA_2147768452_1
         $x_1_1 = {8a 0c 32 8b 44 24 ?? 02 4c 24 ?? 8b 54 24 ?? 32 0c 02 83 c0 01 83 6c 24 ?? 01 88 48 ff 89 44 24 ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1566,6 +1629,7 @@ rule Trojan_Win32_EmotetCrypt_KMG_2147768668_0
         $x_1_1 = {03 c2 99 f7 fb 0f b6 c2 0f b6 14 08 8b 44 24 ?? 30 54 28 ?? 3b 6c 24 ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1587,6 +1651,7 @@ rule Trojan_Win32_EmotetCrypt_KMG_2147768668_1
         $x_1_1 = {0f b6 da 8b 54 24 ?? 0f b6 14 13 8d 0c 2f 03 d6 03 c2 99 be 2b 03 00 00 f7 fe 0f b6 f2 8d 04 2e e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1608,6 +1673,7 @@ rule Trojan_Win32_EmotetCrypt_KMG_2147768668_2
         $x_1_1 = {0f b6 da 8b 54 24 ?? 0f b6 14 13 8d 0c 2f 03 d6 03 c2 99 be 9c 01 00 00 f7 fe 0f b6 f2 8d 04 2e e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1629,6 +1695,7 @@ rule Trojan_Win32_EmotetCrypt_KMG_2147768668_3
         $x_1_1 = {05 8a a5 08 00 03 05 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 31 02 83 05 ?? ?? ?? ?? ?? 83 05 ?? ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1650,6 +1717,7 @@ rule Trojan_Win32_EmotetCrypt_KMG_2147768668_4
         $x_1_1 = {99 bf 24 01 00 00 f7 ff 0f b6 c2 8a 0c 08 8b 45 ?? 30 08 ff 45 ?? 8b 45 ?? 3b 45 ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1671,6 +1739,7 @@ rule Trojan_Win32_EmotetCrypt_KMG_2147768668_5
         $x_1_1 = {03 c2 99 bf 9d 02 00 00 f7 ff 0f b6 c2 8a 0c 08 8b 45 ?? 30 08 ff 45 ?? 8b 45 ?? 3b 45 ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1692,6 +1761,7 @@ rule Trojan_Win32_EmotetCrypt_KMG_2147768668_6
         $x_1_1 = {99 bf 77 02 00 00 f7 ff 8a 04 0e 0f b6 fa 8a 14 37 8d 2c 37 88 14 0e 88 45 00 8d 43 ?? 99 f7 7c 24 ?? 41 81 f9 77 02 00 00 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1715,6 +1785,7 @@ rule Trojan_Win32_EmotetCrypt_KMG_2147768668_7
         $x_1_3 = {0f b6 da 0f b6 93 ?? ?? ?? ?? 8d 0c 2f 03 d6 03 c2 99 be c4 01 00 00 f7 fe 0f b6 f2 8d 04 2e e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1736,6 +1807,7 @@ rule Trojan_Win32_EmotetCrypt_PDB_2147770428_0
         $x_1_1 = {0f b6 01 0f b6 13 03 c2 99 b9 ?? ?? ?? ?? f7 f9 a1 ?? ?? ?? ?? 46 0f b6 d2 8a 0c 02 8b 44 24 ?? 30 4c 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1757,6 +1829,7 @@ rule Trojan_Win32_EmotetCrypt_MV_2147770510_0
         $x_1_1 = {f7 f1 8b 45 08 [0-5] 32 [0-3] 47 3b [0-3] 88 [0-5] 8b [0-5] ff [0-3] 8d [0-3] e8 [0-4] 59 33 [0-3] 8b [0-3] 8b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1778,6 +1851,7 @@ rule Trojan_Win32_EmotetCrypt_PDC_2147771291_0
         $x_1_1 = {0f b6 54 24 ?? a1 ?? ?? ?? ?? 8a 0c 02 8b 44 24 ?? 30 0c 28 45 83 c4 ?? 3b 6c 24 ?? 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1799,6 +1873,7 @@ rule Trojan_Win32_EmotetCrypt_VA_2147771614_0
         $x_1_1 = {ff d0 0f b6 c0 8b ce [0-20] 8b d7 0f b6 4d ?? 47 2b 15 ?? ?? ?? ?? 8a 04 ?? b9 ?? ?? ?? ?? 04 01 01 01 01 30 31 32 33 ?? ?? 8b 45 ?? 3b 7d ?? 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1821,6 +1896,7 @@ rule Trojan_Win32_EmotetCrypt_MZ_2147771696_0
         $x_1_2 = {55 8b ec 83 [0-2] c7 45 [0-5] 8b [0-2] 33 [0-2] 89 [0-2] c7 45 [0-5] c7 45 [0-5] c7 45 [0-5] 8b [0-2] 83 [0-2] 0f [0-3] 8b [0-2] 99 f7 ?? 89}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1844,6 +1920,7 @@ rule Trojan_Win32_EmotetCrypt_D_2147771995_0
         $x_1_3 = {0f b6 14 0f 88 14 0e 88 04 0f 0f b6 14 0f 0f b6 04 0e 03 c2 99 f7 fb 0f b6 c2 0f b6 14 08 30 55 ff 83 6c 24 14 01 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1865,6 +1942,7 @@ rule Trojan_Win32_EmotetCrypt_E_2147772322_0
         $x_1_1 = {8b 4d ec 8b c7 2b 05 ?? ?? ?? ?? 47 03 c8 0f b6 c3 8b 1d ?? ?? ?? ?? 8a 04 18 30 01 8b 4d f4 3b fe 7c ?? 8b 75 08 8a 45 ff 88 06 8a 45 fe 5f 88 46 01 5e 5b 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1886,6 +1964,7 @@ rule Trojan_Win32_EmotetCrypt_KM_2147772361_0
         $x_1_1 = {03 c1 0f b6 4d ?? 8a 0c 11 30 08 ff 45 ?? 8b 45 ?? 3b 45 ?? 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1907,6 +1986,7 @@ rule Trojan_Win32_EmotetCrypt_KM_2147772361_1
         $x_1_1 = {68 29 09 00 00 e8 ?? ?? ?? ?? 83 c4 04 a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 8d 94 01 ?? ?? ?? ?? 2b 15 ?? ?? ?? ?? ?? 15 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 2d 29 09 00 00 a3 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 03 0d ?? ?? ?? ?? 03 0d ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 2b 15 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 72 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1928,6 +2008,7 @@ rule Trojan_Win32_EmotetCrypt_F_2147772397_0
         $x_1_1 = {83 c4 0c 8d 45 e8 ff 75 e8 50 56 6a 00 6a 01 6a 00 ff 75 d4 ff 15 ?? ?? ?? ?? 85 c0 74 1c ff 75 e8 8d 4d ef 56 e8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 50 8d 4d ef e8 ?? ?? ?? ?? ff d0 8b 4d fc 5f 33 cd 33 c0 5e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1950,6 +2031,7 @@ rule Trojan_Win32_EmotetCrypt_PDD_2147772921_0
         $x_1_2 = "LcoKbtNEyJYeCR2WCqZuHxgp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1971,6 +2053,7 @@ rule Trojan_Win32_EmotetCrypt_AV_2147773158_0
         $x_1_1 = {8b 45 08 8b 08 2b ca 8b 55 08 89 0a 5e 8b e5 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1993,6 +2076,7 @@ rule Trojan_Win32_EmotetCrypt_AV_2147773158_1
         $x_2_2 = {8b 45 08 8b 08 2b ca 8b 55 08 89 0a 5e 8b e5 5d c3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2014,6 +2098,7 @@ rule Trojan_Win32_EmotetCrypt_AV_2147773158_2
         $x_1_1 = {0f b6 01 88 02 88 19 0f b6 0a 0f b6 c3 03 c8 0f b6 c1 8a 8d ?? ?? ?? ?? 0f b6 84 05 ?? ?? ?? ?? 30 04 3e 46 81 fe}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2035,6 +2120,7 @@ rule Trojan_Win32_EmotetCrypt_PDE_2147773521_0
         $x_1_1 = {88 0c 3a 33 d2 0f b6 c1 8b ce 0f b6 0c 39 03 c1 f7 35 ?? ?? ?? ?? 8b f2 ff 15 ?? ?? ?? ?? 8b 4d 18 8a 04 0b 32 04 3e 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2062,6 +2148,7 @@ rule Trojan_Win32_EmotetCrypt_PDE_2147773521_1
         $x_1_7 = "comview" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2093,6 +2180,7 @@ rule Trojan_Win32_EmotetCrypt_RR_2147805203_0
         $x_1_11 = "wkfflvfmqa" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2114,6 +2202,7 @@ rule Trojan_Win32_EmotetCrypt_DC_2147805223_0
         $x_1_1 = {8b 4d ec 8d 0c 39 f7 e1 8b cb 8d 7f ?? c1 ea 02 83 c3 06 6b c2 0d 2b c8 0f b6 44 8d ?? 30 47 ff 81 fb 00 34 02 00 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2135,6 +2224,7 @@ rule Trojan_Win32_EmotetCrypt_DD_2147805348_0
         $x_1_1 = {8b 54 24 10 8b 44 24 14 03 c2 8b 54 24 34 0f b6 14 32 89 44 24 1c 8b 44 24 30 0f b6 04 08 03 c2 33 d2 bf ?? ?? ?? ?? f7 f7 8b 7c 24 1c 03 d3 8a 04 2a 30 07 ff 44 24 10 81 7c 24 10 ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2157,6 +2247,7 @@ rule Trojan_Win32_EmotetCrypt_DE_2147805350_0
         $x_1_2 = "nC?Lq4?x_0tySlxQ#5k8CX_N@CUR45R%w1+dZ4*>XT6Rl<ux#6jBM9&?18p46&?(eRF^U^ljvwMnMfI%v)JmKU)+<cS6!voS(" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2178,6 +2269,7 @@ rule Trojan_Win32_EmotetCrypt_DF_2147805537_0
         $x_2_1 = {8a 1c 0e 29 d0 8b 54 24 08 88 1c 0a 01 c1 89 4c 24 1c 8b 44 24 18 35 [0-4] 3d [0-4] 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2203,6 +2295,7 @@ rule Trojan_Win32_EmotetCrypt_DF_2147805537_1
         $x_1_5 = "(^tMK&16v4A2HS!$pqKvCS0AW<vnlnjivRSP6mM1eN2SqnGcS)*mZso7MEWLRwkmkI1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2224,6 +2317,7 @@ rule Trojan_Win32_EmotetCrypt_DG_2147805538_0
         $x_1_1 = {0f b6 14 2a 03 c2 33 d2 89 6c 24 18 bd ?? ?? ?? ?? f7 f5 8b 44 24 44 8b 6c 24 20 83 c5 01 89 6c 24 20 2b 54 24 14 2b 54 24 1c 2b d7 2b d1 03 d6 0f b6 14 02 8b 44 24 3c 30 54 28 ff 81 fd 00 34 02 00 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2246,6 +2340,7 @@ rule Trojan_Win32_EmotetCrypt_DH_2147805539_0
         $x_1_2 = "?D!u?X)krTzdw$anM4p_$bzQ?j7?rEn98An?3+0V>Z@rx1%ppm(VMCs$6kTXkM4n9UaGO^3gLOFIgj<istQICX4+VcVyt+YUU@Q3jGK4Lp9$gWv1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2268,6 +2363,7 @@ rule Trojan_Win32_EmotetCrypt_DJ_2147805735_0
         $x_1_2 = "lEZ4zx89^n^orFIbWKOvbN1Kp4M&%G+77OI^Bna85p8yypN_4Oe#lJbL*Uoq@YZ_FT&Q^_87STI7?hC60A0&d*bMP@?N5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2292,6 +2388,7 @@ rule Trojan_Win32_EmotetCrypt_DK_2147805758_0
         $x_1_4 = "rK0P+XX%@Yap9cdr)HyV<ve7qK6+BEWhQ>^AYp2atJ#NLjszUlL@cdlES_oTnDNwdm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2316,6 +2413,7 @@ rule Trojan_Win32_EmotetCrypt_DM_2147805906_0
         $x_1_4 = "O0!f?czm?9chhum)if$$ZF06ci*@82<3JI?oKbz^4!PcDupvhakIfbVCzJawebI1jyGyjh*lPbev0s1MkaqhSn<Ad))aaS$x4+?C<ct01*<Zit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2337,6 +2435,7 @@ rule Trojan_Win32_EmotetCrypt_DN_2147805907_0
         $x_1_1 = {0f b6 44 8d c4 30 47 02 b8 ?? ?? ?? ?? 8b 4d f4 8d 0c 39 f7 e1 8b cb 8d 7f 04 c1 ea 02 83 c3 04 6b c2 0d 2b c8 0f b6 44 8d c8 30 47 ff 81 fb ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2361,6 +2460,7 @@ rule Trojan_Win32_EmotetCrypt_DO_2147805932_0
         $x_1_4 = "Dl6IXXP5fi#yNy4GFs*YP9eMxYRO$iX4|ZG|D$Ts9f}ab@BgYsWye2#TsLP#q4ew0*vB%l}M*87WY" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -2387,6 +2487,7 @@ rule Trojan_Win32_EmotetCrypt_PCJ_2147899380_0
         $x_1_2 = {8b 44 24 4c 8b 4c 24 34 8a 54 24 4b 8a 30 28 d6 8b 44 24 24 88 34 08 8b 4c 24 34 83 c1 33 89 4c 24 50 8b 74 24 2c 39 f1 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

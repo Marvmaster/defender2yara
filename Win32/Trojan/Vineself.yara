@@ -17,6 +17,7 @@ rule Trojan_Win32_Vineself_A_2147690776_0
         $x_1_3 = "%c%d/%c%d%c%d%c%d/%c%d%c%d%c%d/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

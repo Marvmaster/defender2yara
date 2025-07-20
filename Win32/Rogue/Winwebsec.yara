@@ -18,6 +18,7 @@ rule Rogue_Win32_Winwebsec_133077_0
         $x_1_4 = " Antivirus?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Rogue_Win32_Winwebsec_133077_1
         $x_1_5 = {41 46 46 49 44 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -71,6 +73,7 @@ rule Rogue_Win32_Winwebsec_133077_2
         $x_1_6 = "system32\\ws.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -104,6 +107,7 @@ rule Rogue_Win32_Winwebsec_133077_3
         $x_1_10 = {4d 00 69 00 6e 00 52 00 75 00 6e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -139,6 +143,7 @@ rule Rogue_Win32_Winwebsec_133077_4
         $x_1_10 = "report as confidential and anonymous" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -167,6 +172,7 @@ rule Rogue_Win32_Winwebsec_133077_5
         $x_1_5 = "http://%s/in.php?url=%d&affid=%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +193,7 @@ rule Rogue_Win32_Winwebsec_133077_6
         $x_1_1 = {0f 31 52 81 c2 da d4 a6 67 ba 5a 68 eb cf 8d 1d ?? ?? ?? ?? 58 f7 d6 c1 ef 07 8d 1d ?? ?? ?? ?? bf 5f 9b b8 e3 8d 0d ?? ?? ?? ?? 83 f8 0a 0f 82 ?? ?? ?? ?? e9 d3 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -209,6 +216,7 @@ rule Rogue_Win32_Winwebsec_133077_7
         $x_1_3 = {5c 54 65 6d 70 6f 72 61 72 79 20 49 6e 74 65 72 6e 65 74 20 46 69 6c 65 73 5c 63 6f 6b 70 65 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +241,7 @@ rule Rogue_Win32_Winwebsec_133077_8
         $x_1_5 = {58 8d 24 94 ff e0 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -254,6 +263,7 @@ rule Rogue_Win32_Winwebsec_133077_9
         $x_1_2 = {55 50 58 21 0d 09 08 09 f1 1a 1c 6a 5c ab e5 23}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +286,7 @@ rule Rogue_Win32_Winwebsec_133077_10
         $x_1_3 = "%s%s\\smartprotection.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -301,6 +312,7 @@ rule Rogue_Win32_Winwebsec_133077_11
         $x_1_3 = {6a 00 6a 01 6a 13 e8 ?? ?? ?? ?? 33 c0 55 68 ?? ?? ?? ?? 64 ff 30 64 89 20 0f b6 c3 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -323,6 +335,7 @@ rule Rogue_Win32_Winwebsec_133077_12
         $x_1_3 = {68 00 04 00 00 8d 85 ?? ?? ?? ?? 50 8b 45 ec 50 e8 ?? ?? ?? ?? 83 f8 01 1b db 43 84 db 74 0a 83 7d e8 00 0f 87}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -346,6 +359,7 @@ rule Rogue_Win32_Winwebsec_133077_13
         $x_1_4 = "the latest components.." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -370,6 +384,7 @@ rule Rogue_Win32_Winwebsec_133077_14
         $x_1_2 = {50 6a 01 6a ff 6a 23 ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? 8b 4d 08 51 (e8|ff 15)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -392,6 +407,7 @@ rule Rogue_Win32_Winwebsec_133077_15
         $x_1_3 = {4d 61 6c 77 61 72 65 00 ff ff ff ff 07 00 00 00 53 70 79 77 61 72 65 00 ff ff ff ff 06 00 00 00 41 64 77 61 72 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -417,6 +433,7 @@ rule Rogue_Win32_Winwebsec_133077_16
         $x_1_3 = {58 8d 24 94 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -441,6 +458,7 @@ rule Rogue_Win32_Winwebsec_133077_17
         $x_1_5 = "cmd /C del /F /Q " wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -465,6 +483,7 @@ rule Rogue_Win32_Winwebsec_133077_18
         $x_1_5 = "TFRMBSOD" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -489,6 +508,7 @@ rule Rogue_Win32_Winwebsec_133077_19
         $x_1_5 = {2e 3f 41 56 43 57 41 6c 65 72 74 48 61 72 6d 66 40 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -510,6 +530,7 @@ rule Rogue_Win32_Winwebsec_133077_20
         $x_1_2 = {4c 01 03 00 57 2e 79 4d 00 00 00 00 00 00 00 00 e0 00 03 01 0b 01 09 00 00 90 04 00 00 20 00 00 00 60 06 00 b0 fc 0a 00 00 70 06 00 00 00 0b 00 00 00 40 00 00 10 00 00 00 02 00 00 05 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 00 20 0b 00 00 10 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -532,6 +553,7 @@ rule Rogue_Win32_Winwebsec_133077_21
         $x_4_3 = "explorer \"http://go.winantivirus.com" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -556,6 +578,7 @@ rule Rogue_Win32_Winwebsec_133077_22
         $x_2_5 = "90BF8224-CD63-4081-A4C7" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -584,6 +607,7 @@ rule Rogue_Win32_Winwebsec_133077_23
         $x_8_5 = {b8 01 00 00 00 e8 ?? ?? ?? ?? 8b 45 ?? 8d 55 ?? e8 ?? ?? ?? ?? 8b 45 ?? 50 8d 4d ?? ba ?? ?? ?? ?? b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 55 ?? 58 e8 ?? ?? ?? ?? 75 [0-32] 6a 65 e8}  //weight: 8, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 1 of ($x_2_*))) or
             ((2 of ($x_8_*))) or
@@ -611,6 +635,7 @@ rule Rogue_Win32_Winwebsec_133077_24
         $x_1_4 = {43 00 72 00 79 00 74 00 69 00 63 00 61 00 6c 00 20 00 45 00 72 00 72 00 6f 00 72 00 21 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -636,6 +661,7 @@ rule Rogue_Win32_Winwebsec_133077_25
         $x_1_6 = {81 7d f8 09 10 00 00 0f 84 8a 01 00 00 83 7d f8 42 77 55 83 7d f8 42 0f 84 ea 01 00 00 83 7d f8 33 0f 84 10 02 00 00 83 7d f8 34 0f 84 13 02 00 00 83 7d f8 35}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -666,6 +692,7 @@ rule Rogue_Win32_Winwebsec_133077_26
         $x_1_6 = {2f 64 62 67 2e 70 68 70 3f 61 66 66 69 64 3d 25 73 26 68 3d 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -691,6 +718,7 @@ rule Rogue_Win32_Winwebsec_133077_27
         $x_1_6 = "inspectguide.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -713,6 +741,7 @@ rule Rogue_Win32_Winwebsec_133077_28
         $x_1_3 = {54 00 68 00 69 00 73 00 20 00 66 00 69 00 6c 00 65 00 20 00 6d 00 61 00 79 00 20 00 63 00 6f 00 6e 00 74 00 61 00 69 00 6e 00 20 00 64 00 61 00 67 00 65 00 72 00 6f 00 75 00 73 00 20 00 63 00 6f 00 64 00 65 00 20 00 61 00 6e 00 64 00 20 00 73 00 65 00 72 00 69 00 6f 00 73 00 6c 00 79 00 20 00 64 00 61 00 6d 00 61 00 67 00 65 00 20 00 79 00 6f 00 75 00 72 00 20 00 63 00 6f 00 6d 00 70 00 75 00 74 00 65 00 72 00 2e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -735,6 +764,7 @@ rule Rogue_Win32_Winwebsec_133077_29
         $x_1_3 = {2e 00 62 00 61 00 74 00 [0-20] 3a 00 74 00 72 00 79 00 [0-20] 64 00 65 00 6c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -762,6 +792,7 @@ rule Rogue_Win32_Winwebsec_133077_30
         $x_2_8 = "=IHDRt)=IDATt)=PLTEt)=IENDt)" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -789,6 +820,7 @@ rule Rogue_Win32_Winwebsec_133077_31
         $x_1_4 = {73 00 69 00 6d 00 61 00 67 00 65 00 20 00 69 00 63 00 6f 00 6e 00 3a 00 25 00 75 00 20 00 69 00 63 00 6f 00 6e 00 78 00 3a 00 32 00 36 00 20 00 69 00 63 00 6f 00 6e 00 79 00 3a 00 34 00 36 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -816,6 +848,7 @@ rule Rogue_Win32_Winwebsec_133077_32
         $x_1_8 = {0f b7 52 02 e8 ?? ?? ?? ?? ff 75 ?? 68 ?? ?? ?? ?? 8d 45 ?? ba ?? ?? ?? ?? 0f b7 52 08 e8 ?? ?? ?? ?? ff 75 ?? 8d 45 ?? ba}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -848,6 +881,7 @@ rule Rogue_Win32_Winwebsec_133077_33
         $x_2_13 = {33 f6 8b c6 99 f7 ff 8b 45 ?? 0f b6 04 10 30 03 43 46 49 75 ed}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -884,6 +918,7 @@ rule Rogue_Win32_Winwebsec_133077_34
         $x_5_10 = {0f 77 0f 6f 4d ?? 0f 6f 55 ?? 0f 70 ca 00 0f fc d1 0f ef d1}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -921,6 +956,7 @@ rule Rogue_Win32_Winwebsec_133077_35
         $x_1_11 = {41 00 6c 00 6c 00 20 00 73 00 65 00 74 00 74 00 69 00 6e 00 67 00 73 00 20 00 63 00 68 00 61 00 6e 00 67 00 65 00 73 00 20 00 68 00 61 00 73 00 20 00 62 00 65 00 65 00 6e 00 20 00 64 00 69 00 73 00 63 00 61 00 72 00 64 00 65 00 64 00 2e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -948,6 +984,7 @@ rule Rogue_Win32_Winwebsec_133077_36
         $x_10_8 = {b9 1a 00 00 00 ba 27 00 00 00 e8 ?? ?? ?? ?? b2 01 e8 ?? ?? ?? ?? 8b 55 ?? 8b 12 89 42 38 8b 45 ?? 8b 00 8b 40 38 b2 01 e8 ?? ?? ?? ?? 8b 45 ?? 8b 00 8b 40 1c ba ?? ?? ?? ?? e8 ?? ?? ?? ?? b9 44 00 00 00 ba 27 00 00 00 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 1 of ($x_2_*))) or
             ((1 of ($x_10_*))) or
@@ -979,6 +1016,7 @@ rule Rogue_Win32_Winwebsec_133077_37
         $x_1_8 = "WSAlertSecurity" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -1007,6 +1045,7 @@ rule Rogue_Win32_Winwebsec_133077_38
         $x_1_9 = {74 73 6a 64 ff d7 6a 01 68 00 00 40 84 8d 44 24 ?? 50 8d 84 24 ?? ?? 00 00 50 53 8d 84 24 ?? ?? 00 00 50 68 ?? ?? ?? ?? 55 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1035,6 +1074,7 @@ rule Rogue_Win32_Winwebsec_133077_39
         $x_1_9 = "CDDAC378-D3AA-4945-A78C-353B6BC6494E" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1075,6 +1115,7 @@ rule Rogue_Win32_Winwebsec_133077_40
         $x_1_18 = {25 73 2a 00 25 73 25 73 5c 6c 69 76 65 73 70 2e 65 78 65 00 25 73 25 73 5c 25 73 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1112,6 +1153,7 @@ rule Rogue_Win32_Winwebsec_133077_41
         $x_10_13 = {c7 85 ac fe ff ff 73 72 63 3d c7 85 b0 fe ff ff 22 72 65 73 c7 85 b4 fe ff ff 3a 2f 2f 69 c7 85 b8 fe ff ff 65 66 72 61 c7 85 bc fe ff ff 6d 65 2e 64 c7 85 c0 fe ff ff 6c 6c 2f 72 c7 85 c4 fe ff ff 65 64 5f 73 c7 85 c8 fe ff ff 68 69 65 6c c7 85 cc fe ff ff 64 2e 70 6e}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 6 of ($x_1_*))) or
             ((3 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -1169,6 +1211,7 @@ rule Rogue_Win32_Winwebsec_133077_42
         $x_2_33 = {b9 03 00 00 00 8b 45 e8 e8 ?? ?? ?? ?? 8b 95 ?? ?? ff ff 8d 45 e8 e8 ?? ?? ?? ?? 6a 00 6a 00 6a 00 6a 00 8b 45 e8 e8 ?? ?? ?? ?? 50 8b 45 e0 50 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1231,6 +1274,7 @@ rule Rogue_Win32_Winwebsec_133077_43
         $x_1_31 = "TFRALERTSECURITY" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1293,6 +1337,7 @@ rule Rogue_Win32_Winwebsec_133077_44
         $x_1_38 = {76 62 6f 78 [0-10] 71 65 6d 75 [0-10] 76 6d 77 61 72 65 [0-10] 76 69 72 74 75 61 6c 20 68 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

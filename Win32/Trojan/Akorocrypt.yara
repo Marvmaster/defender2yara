@@ -18,6 +18,7 @@ rule Trojan_Win32_Akorocrypt_B_2147830647_0
         $x_1_3 = {8b c2 33 d2 f7 f1 8a 44 15 ?? 42 30 04 ?? ?? ?? ?? 72 ed}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

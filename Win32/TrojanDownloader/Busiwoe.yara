@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Busiwoe_A_2147625056_0
         $x_1_4 = "APVSVC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

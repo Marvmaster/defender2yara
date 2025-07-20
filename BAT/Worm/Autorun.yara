@@ -20,6 +20,7 @@ rule Worm_BAT_Autorun_Z_2147642628_0
         $x_1_6 = "echo shellexecut=%file%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Worm_BAT_Autorun_AA_2147642635_0
         $x_1_5 = "\\SharedAccess\\Parameters\\FirewallPolicy\\StandardProfile\\AuthorizedApplications\\List\" /v %windir%\\system32\\ftp.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Worm_BAT_Autorun_AB_2147642641_0
         $x_1_5 = "attrib +r +s +h %nam%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

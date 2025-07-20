@@ -20,6 +20,7 @@ rule Trojan_Win64_Spyboy_AA_2147848158_0
         $x_1_5 = "main.EnablePrivilege" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win64_Spyboy_AB_2147848159_0
         $x_2_6 = "\\DosDevices\\ZemanaAntiMalware" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_1_*))) or
             ((1 of ($x_100_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -84,6 +86,7 @@ rule Trojan_Win64_Spyboy_AC_2147850505_0
         $x_1_13 = "symantec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

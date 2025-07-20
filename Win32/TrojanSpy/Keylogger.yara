@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Keylogger_2147494913_0
         $x_1_6 = {55 6e 6b 6f 77 6e 20 55 73 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanSpy_Win32_Keylogger_2147494913_1
         $x_1_5 = {e9 52 02 00 00 83 ff 40 76 1b 83 ff 5b 73 16 6a 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule TrojanSpy_Win32_Keylogger_EJ_2147594710_0
         $x_1_15 = "DLL_GetProjectVersion" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 6 of ($x_5_*) and 1 of ($x_1_*))) or
             ((6 of ($x_10_*) and 1 of ($x_6_*) and 5 of ($x_5_*))) or
@@ -120,6 +123,7 @@ rule TrojanSpy_Win32_Keylogger_EK_2147594711_0
         $x_1_16 = "DLL_GetProjectVersion" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +150,7 @@ rule TrojanSpy_Win32_Keylogger_AQ_2147597966_0
         $x_1_7 = "78E1BDD1-9941-11cf-9756-00AA00C0090" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +175,7 @@ rule TrojanSpy_Win32_Keylogger_EO_2147599846_0
         $x_2_5 = {77 69 6e 73 79 73 62 67 2e 64 6c 6c 00 00 00 00 4d 6f 75 73 65 48 6f 6f 6b 5f 53 74 61 72 74 00 4d 6f 75 73 65 48 6f 6f 6b 5f 53 74 6f 70 00 00 4d 6f 75 73 65 48 6f 6f 6b 5f 47 65 74 44 61 74 61 00 00 00 4d 6f 75 73 65 48 6f 6f 6b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -206,6 +212,7 @@ rule TrojanSpy_Win32_Keylogger_EQ_2147599890_0
         $x_1_13 = "shift" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -231,6 +238,7 @@ rule TrojanSpy_Win32_Keylogger_ER_2147599898_0
         $x_10_6 = {b9 6c df 45 00 ba 7c df 45 00 8b c3 8b 30 ff 56 04 8b c3 e8 7d 5c fa ff 6a ff 8d 45 e8 ba dc 6c 46 00 b9 91 00 00 00 e8 ed 6c fa ff 8d 45 e8 ba 94 df 45 00 e8 3c 6d fa ff 8b 45 e8 e8 f8 6e fa ff 50 68 ac df 45 00 e8 c1 89 fa ff b8 54 df 45 00 e8 e3 6e fa ff 50 e8 d9 89 fa ff}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -262,6 +270,7 @@ rule TrojanSpy_Win32_Keylogger_ES_2147599923_0
         $x_1_12 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -288,6 +297,7 @@ rule TrojanSpy_Win32_Keylogger_ET_2147599927_0
         $x_1_7 = "psmtpinfo->Msg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +322,7 @@ rule TrojanSpy_Win32_Keylogger_EV_2147601438_0
         $x_10_5 = {53 e8 23 a6 ff ff 66 3d 01 80 0f 85 72 08 00 00 8b c3 83 c0 f8 3d d6 00 00 00 0f 87 62 08 00 00 8a 80 68 a8 40 00 ff 24 85 3f a9 40 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -347,6 +358,7 @@ rule TrojanSpy_Win32_Keylogger_EW_2147602136_0
         $x_1_16 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 10 of ($x_1_*))) or
             ((1 of ($x_10_*) and 10 of ($x_1_*))) or
@@ -384,6 +396,7 @@ rule TrojanSpy_Win32_Keylogger_FB_2147605801_0
         $x_1_9 = "vb wininet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +425,7 @@ rule TrojanSpy_Win32_Keylogger_FD_2147610350_0
         $x_1_9 = "capCreateCaptureWindowA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -437,6 +451,7 @@ rule TrojanSpy_Win32_Keylogger_FD_2147610350_1
         $x_1_6 = {50 6f 6c 69 63 69 65 73 5c 4e 65 74 77 6f 72 6b 00 00 4e 6f 43 6c 6f 73 65 00 4e 6f 52 65 63 65 6e 74 44 6f 63 73 48 69 73 74 6f 72 79 00 4e 6f 4e 65 74 43 6f 6e 6e 65 63 74 44 69 73 63 6f 6e 6e 65 63 74 00 00 52 65 73 74 72 69 63 74 52 75 6e 00 4e 6f 44 72 69 76 65 73 00 00 00 00 4e 6f 52 75 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +476,7 @@ rule TrojanSpy_Win32_Keylogger_B_2147620341_0
         $x_1_5 = "%.2d/%.2d/%4d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -490,6 +506,7 @@ rule TrojanSpy_Win32_Keylogger_AR_2147628595_0
         $x_5_10 = {c6 45 c0 47 c6 45 c1 65 88 5d c2 c6 45 c3 41 c6 45 c4 73 c6 45 c5 79 c6 45 c6 6e c6 45 c7 63 c6 45 c8 4b c6 45 c9 65 c6 45 ca 79 c6 45 cb 53 88 5d cc c6 45 cd 61 88 5d ce c6 45 cf 65 c6 45 d0 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -516,6 +533,7 @@ rule TrojanSpy_Win32_Keylogger_O_2147631242_0
         $x_1_3 = "route delete 0.0.0.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -539,6 +557,7 @@ rule TrojanSpy_Win32_Keylogger_AD_2147632898_0
         $x_1_4 = "[Baslat]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -561,6 +580,7 @@ rule TrojanSpy_Win32_Keylogger_AW_2147647344_0
         $x_1_3 = "keystroke spy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -582,6 +602,7 @@ rule TrojanSpy_Win32_Keylogger_AZ_2147648310_0
         $x_1_2 = "keylogger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -609,6 +630,7 @@ rule TrojanSpy_Win32_Keylogger_AZ_2147648310_1
         $x_1_8 = {54 69 62 69 61 43 6c 69 65 6e 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -634,6 +656,7 @@ rule TrojanSpy_Win32_Keylogger_BA_2147648323_0
         $x_1_1 = {5c 64 61 74 61 5c 61 70 70 64 61 74 61 2e 64 6c 6c [0-9] 5c 64 61 74 61 5c 61 70 70 64 61 74 61 2e 64 61 74 [0-9] 5c 6b 65 79 6c 6f 67 67 65 72 2e 64 6c 6c [0-9] 5c 53 45 52 56 49 43 45 53 2e 45 58 45 [0-9] 6f 70 74 69 6f 6e [0-9] 50 72 6f 74 65 63 74 69 6f 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -656,6 +679,7 @@ rule TrojanSpy_Win32_Keylogger_FP_2147652578_0
         $x_1_3 = {5d 00 00 6d 73 69 6e 69 74 00 00 53 4f 46 54 57 41 52 45 5c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -679,6 +703,7 @@ rule TrojanSpy_Win32_Keylogger_FQ_2147653464_0
         $x_1_4 = {03 c6 33 d2 f7 f1 33 c0 8a 82 d8 4d 41 00 33 d2 03 c3 03 d9 f7 74 24 ?? 8b 44 24 ?? 80 c2 ?? 88 54 2e ff 46 3b f7 7e d8 5b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -707,6 +732,7 @@ rule TrojanSpy_Win32_Keylogger_BQ_2147653684_0
         $x_1_5 = "{CTRL+C}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -734,6 +760,7 @@ rule TrojanSpy_Win32_Keylogger_BS_2147653834_0
         $x_1_4 = "run.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -757,6 +784,7 @@ rule TrojanSpy_Win32_Keylogger_BT_2147653836_0
         $x_1_4 = "%2.2d:%2.2d:%2.2d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -778,6 +806,7 @@ rule TrojanSpy_Win32_Keylogger_FR_2147656214_0
         $x_1_2 = {4a 79 05 ba 18 00 00 00 8a 44 ?? ?? 8a 1c 31 32 d8 88 1c 31 41 3b cf 7c e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -800,6 +829,7 @@ rule TrojanSpy_Win32_Keylogger_FR_2147656214_1
         $x_1_3 = {4a 79 05 ba 18 00 00 00 8a 44 ?? ?? 8a 1c 31 32 d8 88 1c 31 41 3b cf 7c e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -830,6 +860,7 @@ rule TrojanSpy_Win32_Keylogger_BW_2147658721_0
         $x_1_11 = "\\Start Menu\\Programs\\Startup\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -857,6 +888,7 @@ rule TrojanSpy_Win32_Keylogger_FW_2147658724_0
         $x_1_5 = {c6 44 24 0c 75 c6 44 24 0f 72 c6 44 24 10 33 c6 44 24 11 32 c6 44 24 12 2e c6 44 24 13 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -881,6 +913,7 @@ rule TrojanSpy_Win32_Keylogger_BX_2147659326_0
         $x_1_5 = "Select * from FirewallProduct" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -909,6 +942,7 @@ rule TrojanSpy_Win32_Keylogger_BY_2147661334_0
         $x_100_9 = "Tcheckwintxt" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 3 of ($x_10_*))) or
@@ -941,6 +975,7 @@ rule TrojanSpy_Win32_Keylogger_CB_2147664496_0
         $x_1_8 = {5c 00 46 00 69 00 6c 00 65 00 5a 00 69 00 6c 00 6c 00 61 00 5c 00 00 00 22 00 00 00 72 00 65 00 63 00 65 00 6e 00 74 00 73 00 65 00 72 00 76 00 65 00 72 00 73 00 2e 00 78 00 6d 00 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -965,6 +1000,7 @@ rule TrojanSpy_Win32_Keylogger_FX_2147678743_0
         $x_1_5 = {83 ec 04 66 3d 01 80 0f 85 df 03 00 00 66 83 bd b2 fd ff ff 26 7e 48 66 83 bd b2 fd ff ff 40 7f 3e 0f bf 85 b2 fd ff ff 89 44 24 08 ?? ?? ?? ?? ?? ?? ?? ?? 8d 85 b8 fe ff ff 89 04 24 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -989,6 +1025,7 @@ rule TrojanSpy_Win32_Keylogger_FY_2147678772_0
         $x_1_5 = "\\svchosts.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1016,6 +1053,7 @@ rule TrojanSpy_Win32_Keylogger_FZ_2147678917_0
         $x_1_5 = {00 00 53 00 65 00 72 00 76 00 65 00 72 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1039,6 +1077,7 @@ rule TrojanSpy_Win32_Keylogger_CC_2147679353_0
         $x_1_4 = {ff ff 08 00 66 81 bd ?? ?? ff ff de 00 0f 8f 11 04 00 00 0f bf 85 ?? ?? ff ff 89 04 24 a1 10 50 40 00 ff d0 83 ec 04 66 3d 01 80 0f 85 df 03 00 00 66 83 bd ?? ?? ff ff 26 7e 48 66 83 bd ?? ?? ff ff 40 7f 3e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1062,6 +1101,7 @@ rule TrojanSpy_Win32_Keylogger_CH_2147687557_0
         $x_1_4 = "logs=update=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1085,6 +1125,7 @@ rule TrojanSpy_Win32_Keylogger_CI_2147689649_0
         $x_1_4 = "[*CLIPBOARD*]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1110,6 +1151,7 @@ rule TrojanSpy_Win32_Keylogger_CN_2147696773_0
         $x_10_6 = {25 73 5c 43 41 4d 5f 25 64 5f 25 30 2e 32 64 5f 25 30 2e 32 64 5f 25 30 2e 32 64 25 30 2e 32 64 25 30 2e 32 64 2e 43 6c 6d 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -1136,6 +1178,7 @@ rule TrojanSpy_Win32_Keylogger_CQ_2147706726_0
         $x_1_4 = {4b 65 79 4c 6f 67 2e 64 6c 6c 00 4f 70 65 72 61 74 65 52 6f 75 74 69 6e 65 57 00 53 74 61 72 74 52 6f 75 74 69 6e 65 57}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1158,6 +1201,7 @@ rule TrojanSpy_Win32_Keylogger_CR_2147707110_0
         $x_1_3 = {4c 4f 47 2e 74 78 74 00 61 2b 00 5b 42 41 43 4b 53 50 41 43 45 5d 00 5b 54 41 42 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1184,6 +1228,7 @@ rule TrojanSpy_Win32_Keylogger_HA_2147720187_0
         $x_1_6 = "KeyboardState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1209,6 +1254,7 @@ rule TrojanSpy_Win32_Keylogger_HC_2147733015_0
         $x_1_5 = "GetAsyncKeyState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1234,6 +1280,7 @@ rule TrojanSpy_Win32_Keylogger_HE_2147733020_0
         $x_1_5 = {00 73 6d 2e 70 73 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1258,6 +1305,7 @@ rule TrojanSpy_Win32_Keylogger_HZ_2147733150_0
         $x_1_4 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1281,6 +1329,7 @@ rule TrojanSpy_Win32_Keylogger_DA_2147739904_0
         $x_1_3 = "WebMonitor Client" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1310,6 +1359,7 @@ rule TrojanSpy_Win32_Keylogger_SS_2147772804_0
         $x_1_9 = "mufuckr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1334,6 +1384,7 @@ rule TrojanSpy_Win32_Keylogger_RT_2147809235_0
         $x_1_4 = "oy7oel014pgx3rnmgo1floytt4o8eghapzuon70fhru0lnlsvl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1356,6 +1407,7 @@ rule TrojanSpy_Win32_Keylogger_ARA_2147899135_0
         $x_2_2 = "\\MmNew.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

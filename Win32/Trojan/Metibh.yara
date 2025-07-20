@@ -21,6 +21,7 @@ rule Trojan_Win32_Metibh_A_2147610399_0
         $x_3_7 = {8d 4c 24 10 6a 01 51 56 ff d7 6a 04 8d 54 24 14 6a 00 52 ff d7 8b 84 24 ?? ?? ?? 00 6a 00 56 50 ff 15 ?? ?? ?? ?? 5f 5b 6a 07 56}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 4 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_3_*) and 3 of ($x_1_*))) or

@@ -19,6 +19,7 @@ rule VirTool_Win32_Dojeloadesz_A_2147917409_0
         $x_1_4 = {6a 00 ff 75 08 [0-22] a1 ec 65 40 00 83 c4 04 99 52 50 [0-16] 83 c4 0c 6a 40 68 00 30 00 00 ff 35 e8 65 40 00 ff 35 ec 65 40 00 ff 15 08 40 40 00 89 44 24 0c 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

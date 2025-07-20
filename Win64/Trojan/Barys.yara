@@ -17,6 +17,7 @@ rule Trojan_Win64_Barys_ABS_2147851292_0
         $x_5_2 = {49 8b d1 49 8b ca e8 ?? ?? ?? ?? b9 b8 0b 00 00 ff 15 ?? ?? ?? ?? 33 c9 ff 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_Barys_RE_2147852055_0
         $x_1_4 = "d\\Desktop\\highbit\\x64\\Release\\direct_bit.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win64_Barys_GME_2147890054_0
         $x_1_3 = "rF5uXRx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win64_Barys_RF_2147894980_0
         $x_1_4 = "P0N*R$T" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Trojan_Win64_Barys_NA_2147901238_0
         $x_1_2 = "gzweox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule Trojan_Win64_Barys_PADD_2147901257_0
         $x_1_2 = "HellsGate.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_Win64_Barys_NBS_2147901419_0
         $x_1_8 = "Bypass - Antiblack : Injected!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +196,7 @@ rule Trojan_Win64_Barys_VI_2147901421_0
         $x_1_9 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +230,7 @@ rule Trojan_Win64_Barys_VX_2147901422_0
         $x_1_13 = "Dump-Fixer.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -244,6 +253,7 @@ rule Trojan_Win64_Barys_NB_2147901865_0
         $x_1_2 = {48 89 f9 48 89 fa ff c8 f2 ae 48 89 e9 ff 15 52 0b 00 00 48 09 c0 74 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +282,7 @@ rule Trojan_Win64_Barys_NB_2147901865_1
         $x_1_8 = "Basilan tus" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -296,6 +307,7 @@ rule Trojan_Win64_Barys_WZ_2147907973_0
         $x_1_4 = "start cmd /C \"color b && title Error && echo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -317,6 +329,7 @@ rule Trojan_Win64_Barys_RM_2147908409_0
         $x_1_1 = {48 8b 7c 24 70 48 89 d9 e8 f1 03 00 00 48 c7 44 24 30 00 00 00 00 c7 44 24 28 00 00 00 00 c7 44 24 20 02 00 00 00 48 89 d9 ba 00 00 00 40 41 b8 02 00 00 00 45 31 c9 ff 15 79 3e 02 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -339,6 +352,7 @@ rule Trojan_Win64_Barys_NE_2147909350_0
         $x_5_2 = {48 39 ca 74 0d 44 8a 04 08 45 30 04 0c 48 ff c1 eb ee}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -364,6 +378,7 @@ rule Trojan_Win64_Barys_EC_2147909913_0
         $x_2_5 = "SAKIB CHEAT.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -386,6 +401,7 @@ rule Trojan_Win64_Barys_RD_2147915509_0
         $x_1_2 = "netsh advfirewall firewall delete rule name=all program=\"%ProgramFiles%\\BlueStacks\\HD-Player.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -408,6 +424,7 @@ rule Trojan_Win64_Barys_GPA_2147918624_0
         $x_3_2 = "src\\misc\\discord.rs" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -429,6 +446,7 @@ rule Trojan_Win64_Barys_TTV_2147931446_0
         $x_5_1 = {44 01 c2 81 c2 00 00 00 8d 42 33 14 30 42 89 94 34 ?? ?? ?? ?? 49 83 c6 04 49 83 fe 43 76 d3 8a 40 44 34 6d 48 8d bc 24 ?? ?? ?? ?? 88 47 44 6a 45 41 5e 4c 89 f1 e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Lisfel_B_2147663481_0
         $x_1_4 = {73 67 65 74 20 65 72 72 30 72 21 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_Lisfel_C_2147663482_0
         $x_1_3 = "wl-cmd\\Release\\dll1.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

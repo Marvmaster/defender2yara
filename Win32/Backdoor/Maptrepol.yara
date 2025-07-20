@@ -19,6 +19,7 @@ rule Backdoor_Win32_Maptrepol_A_2147712221_0
         $x_1_5 = "wndplyr.cab" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

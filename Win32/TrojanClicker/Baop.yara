@@ -22,6 +22,7 @@ rule TrojanClicker_Win32_Baop_A_2147655735_0
         $x_5_8 = {75 00 72 00 6c 00 00 00 3a 00 00 00 68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 77 00 77 00 77 00 2e 00 62 00 61 00 69 00 64 00 75 00 67 00 6f 00 6f 00 67 00 6c 00 65 00 73 00 65 00 6f 00 2e 00 63 00 6f 00 6d 00 00 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 5 of ($x_1_*))) or
             ((3 of ($x_5_*))) or

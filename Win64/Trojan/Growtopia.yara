@@ -20,6 +20,7 @@ rule Trojan_Win64_Growtopia_NG_2147895390_0
         $x_1_5 = "CryptEncrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win64_Growtopia_NGA_2147901532_0
         $x_1_6 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win64_Growtopia_NA_2147901569_0
         $x_1_4 = "Something gone wrong while decoding .dat file!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

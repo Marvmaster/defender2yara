@@ -17,6 +17,7 @@ rule MonitoringTool_Win32_SanmaxiPCManager_149499_0
         $x_1_3 = "Screenshot report." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule MonitoringTool_Win32_SanmaxiPCManager_149499_1
         $x_1_3 = "http://www.key-logger.ws" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

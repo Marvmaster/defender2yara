@@ -18,6 +18,7 @@ rule Trojan_MSIL_Typhon_ATY_2147911866_0
         $x_1_3 = "7b82d83e-61aa-401e-a104-fecc905df99e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

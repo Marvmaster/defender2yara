@@ -19,6 +19,7 @@ rule Trojan_Win64_SilverBasket_B_2147937501_0
         $x_1_4 = {65 4a 00 00 80 00 00 00 10 00 00 00 10 00 00 00 10 00 00 00 e0 00 00 00 e8 03 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_SilverBasket_A_2147938207_0
         $x_1_2 = "C:\\ProgramData\\SkyPDF\\PDUDrv.blf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

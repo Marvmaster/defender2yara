@@ -16,6 +16,7 @@ rule Ransom_Win32_QilinDecryptor_YTD_2147922509_0
         $x_1_1 = {0f b6 5c 10 ff 8b 75 08 30 1c 0e 41 3b 55 d0 73 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

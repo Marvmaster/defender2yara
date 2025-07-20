@@ -16,6 +16,7 @@ rule Ransom_Win64_Conti_ZA_2147814691_0
         $x_10_2 = {43 69 04 81 51 2d 9e cc c1 c0 0f 69 c8 93 35 87 1b 33 f9 c1 c7 0d 81 c7 14 af dd fa 8d 3c bf 49 83 c0 01 75 db}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Ransom_Win64_Conti_GHJ_2147817051_0
         $x_1_1 = {c1 c0 0f 69 c8 93 35 87 1b 33 f9 c1 c7 0d 81 c7 14 af dd fa 8d 3c bf 49 83 c0 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Ransom_Win64_Conti_RPJ_2147827691_0
         $x_1_3 = {c6 45 aa 6b c6 45 ab 65 c6 45 ac 72 c6 45 ad 6e c6 45 ae 65 c6 45 af 6c c6 45 b0 33 c6 45 b1 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Ransom_Win64_Conti_MIO_2147901165_0
         $x_1_1 = {d1 e8 8b c8 81 f1 78 3b f6 82 80 e2 01 0f 44 c8 8b c1 d1 e8 8b d0 81 f2 78 3b f6 82 80 e1 01 0f 44 d0 8b ca d1 e9 8b c1 35 78 3b f6 82 80 e2 ?? 0f 44 c1 49 83 e9 01 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Ransom_Win64_Conti_MX_2147935760_0
         $x_1_5 = "Clear-ComputerRestorePoint -All" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Ransom_Win64_Conti_QZ_2147937596_0
         $x_2_4 = "system_health.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

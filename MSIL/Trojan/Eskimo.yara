@@ -21,6 +21,7 @@ rule Trojan_MSIL_Eskimo_A_2147690474_0
         $x_5_7 = "SteamSteal" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((1 of ($x_6_*) and 2 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Trojan_MSIL_Eskimo_2147694142_0
         $x_1_4 = "get_Item" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

@@ -22,6 +22,7 @@ rule PWS_MSIL_Agentesla_2147754637_0
         $x_1_7 = "FF645E0EC493CB6CFFA5B2FFA15486705589ABFEBD845F753AA9A47B2B1491E7" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win64_NimzLoader_PA_2147779013_0
         $x_2_3 = {48 89 ea 31 db eb [0-4] 40 30 7c 1e ?? 48 8b 16 48 39 da 76 ?? 48 89 f8 48 c1 f8 ?? 30 44 1e ?? 48 8b 16 48 39 d3 0f 83 ?? ?? ?? ?? 48 89 f8 48 c1 f8 ?? 30 44 1e ?? 48 8b 16 48 39 da 76 ?? 48 89 f8 48 83 c7 ?? 48 c1 f8 ?? 30 44 1e ?? 48 83 c3 ?? 48 39 dd 0f 8e ?? ?? ?? ?? 48 8b 16 48 39 d3 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

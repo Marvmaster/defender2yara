@@ -24,6 +24,7 @@ rule Trojan_Win32_Hedonugo_2147930183_0
         $x_1_10 = "DestroyEnv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

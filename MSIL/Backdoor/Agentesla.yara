@@ -35,6 +35,7 @@ rule Backdoor_MSIL_Agentesla_2147755757_0
         $x_20_20 = {52 65 5a 65 72 30 56 ?? 2e 65 78 65}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             (all of ($x*))

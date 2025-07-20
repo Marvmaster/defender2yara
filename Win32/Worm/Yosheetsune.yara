@@ -20,6 +20,7 @@ rule Worm_Win32_Yosheetsune_A_2147595672_0
         $x_1_6 = {44 00 69 00 73 00 61 00 62 00 6c 00 65 00 43 00 4d 00 44 00 00 00 00 00 0e 00 00 00 4e 00 6f 00 43 00 6c 00 6f 00 73 00 65 00 00 00 1c 00 00 00 4e 00 6f 00 43 00 6f 00 6e 00 74 00 72 00 6f 00 6c 00 50 00 61 00 6e 00 65 00 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

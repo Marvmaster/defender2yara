@@ -22,6 +22,7 @@ rule Trojan_Win32_Posevol_A_2147695376_0
         $x_1_8 = "derpos/gateway.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

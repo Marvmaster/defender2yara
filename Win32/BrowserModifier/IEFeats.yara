@@ -21,6 +21,7 @@ rule BrowserModifier_Win32_IEFeats_14938_0
         $x_2_7 = "http://looking-for.cc" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule BrowserModifier_Win32_IEFeats_14938_1
         $x_1_6 = "iefeatsl.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -82,6 +84,7 @@ rule BrowserModifier_Win32_IEFeats_14938_2
         $x_5_9 = "InternetOpenUrlA" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_5_*))) or
             (all of ($x*))

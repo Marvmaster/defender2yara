@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Servstart_A_2147711795_0
         $x_1_3 = {57 ff d6 8b 45 ?? 03 c3 59 8a 08 80 c1 7a 80 f1 59 43 3b 5d ?? 88 08 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win32_Servstart_B_2147712470_0
         $x_1_2 = {3b c6 7c e3 19 00 8b ?? ?? 8a 14 08 80 c2 7a 88 14 08 8b ?? ?? 8a 14 08 80 f2 ?? 88 14 08 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanDownloader_Win32_Servstart_C_2147714338_0
         $x_1_3 = "http://hackbox.f3322.org:808/Consys21.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

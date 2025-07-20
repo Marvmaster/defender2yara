@@ -17,6 +17,7 @@ rule Trojan_Win32_CobaltLoader_SK_2147753758_0
         $x_2_2 = {55 8b ec 51 51 53 56 57 6a 04 be ?? ?? 10 00 68 00 10 00 00 33 db 56 53 ff 15 ?? ?? 00 10 8b f8 3b fb 74 4d 53 53 6a 03 53 6a 01 68 00 00 00 80 68 ?? ?? 00 10 ff 15 ?? ?? 00 10 83 f8 ff 89 45 f8 74 2e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_CobaltLoader_SL_2147753763_0
         $x_1_2 = "CIA.AT28" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_CobaltLoader_A_2147776642_0
         $x_3_3 = {33 c9 c7 85 e4 fd ff ff ?? ?? ?? ?? 85 f6 7e 1c 0f 1f 84 00 00 00 00 00 8b c1 83 e0 03 8a 84 05 e4 fd ff ff 30 04 39 41 3b ce}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

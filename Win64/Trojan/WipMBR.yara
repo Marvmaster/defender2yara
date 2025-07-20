@@ -18,6 +18,7 @@ rule Trojan_Win64_WipMBR_A_2147660573_0
         $x_1_4 = {57 ff d0 3b c3 74 05 88 5d ?? eb ?? 6a 04 68 00 30 00 00 6a 30 53 ff 15 ?? ?? ?? ?? 8b f0 3b f3 74 ?? 8b 45 ?? 89 46 2c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule Trojan_Win64_WipMBR_A_2147660605_0
         $x_1_4 = {15 af 52 f0 a0 ff ca 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

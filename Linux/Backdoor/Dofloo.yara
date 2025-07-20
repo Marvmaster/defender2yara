@@ -21,6 +21,7 @@ rule Backdoor_Linux_Dofloo_A_2147757419_0
         $x_1_6 = "ddos.tf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Backdoor_Linux_Dofloo_A_2147794898_0
         $x_1_6 = "sed -i -e '2 i%s/%s start' /etc/init.d/boot.local" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

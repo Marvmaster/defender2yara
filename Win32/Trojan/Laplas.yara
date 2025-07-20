@@ -16,6 +16,7 @@ rule Trojan_Win32_Laplas_PA_2147845616_0
         $x_1_1 = {8b 44 24 24 89 44 24 1c 8b 44 24 20 01 44 24 1c 8b 4c 24 14 8b c6 d3 e8 8b 4c 24 30 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 44 24 24 8d 44 24 24 e8 ?? ?? ?? ?? 8b 44 24 1c 31 44 24 10 81 3d dc 8b b9 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

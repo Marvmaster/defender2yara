@@ -18,6 +18,7 @@ rule Backdoor_Win32_Snake_F_2147847164_0
         $x_1_3 = "sc %s create %s binPath= \"cmd.exe /c start %%SystemRoot%%\\%s\">>%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_Snake_J_2147847165_0
         $x_1_2 = "sc %s create %s binPath= \"cmd.exe /c start %%SystemRoot%%\\%s\">>%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Backdoor_Win32_Snake_C_2147847166_0
         $x_1_2 = "1dM3uu4j7Fw4sjnb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Backdoor_Win32_Snake_PA_2147847167_0
         $x_1_2 = "1dM3uu4j7Fw4sjnb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule Trojan_Win32_Prestige_SB_2147913040_0
         $x_1_10 = {59 c3 8b 4c 24 0c 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 44 24 0c 5e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

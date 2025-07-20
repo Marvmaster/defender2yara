@@ -17,6 +17,7 @@ rule Worm_Win32_Congdiar_A_2147631497_0
         $x_1_3 = ":\\Autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

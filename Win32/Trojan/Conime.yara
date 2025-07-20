@@ -20,6 +20,7 @@ rule Trojan_Win32_Conime_A_2147683063_0
         $x_1_6 = "?ac=get&u=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule Trojan_Win32_Conime_B_2147683066_0
         $x_1_5 = "select=card&pwdHex=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

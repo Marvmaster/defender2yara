@@ -20,6 +20,7 @@ rule Trojan_Win32_Dreef_A_2147632298_0
         $x_1_6 = {4d 69 63 72 6f 73 6f 66 74 20 57 69 6e 64 6f 77 73 20 4e 54 35 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

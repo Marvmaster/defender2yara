@@ -20,6 +20,7 @@ rule Trojan_Win64_AVTamper_B_2147836774_0
         $x_1_6 = "[-] %s ImpersonatedLoggedOnUser() Return Code: %i" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -46,6 +47,7 @@ rule Trojan_Win64_AVTamper_C_2147903961_0
         $x_1_2 = {63 73 66 61 6c 63 6f 6e 00 63 73 73 68 65 6c 6c 00 63 79 62 65 72 65 61 73 6f 6e 00 63 79 63 6c 6f 72 61 6d 61 00 63 79 6c 61 6e 63 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win64_AVTamper_D_2147904757_0
         $x_1_1 = {66 61 69 6c 65 64 21 0a 00 65 72 ?? 6f 72 20 25 64 0a 00 42 49 4e 41 52 59 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

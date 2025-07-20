@@ -16,6 +16,7 @@ rule Ransom_Win64_Cuba_FS_2147851179_0
         $x_1_1 = {4c 8b 08 41 b8 00 00 02 00 48 8b d3 48 8b c8 41 ff 51 70 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

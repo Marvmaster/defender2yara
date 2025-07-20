@@ -19,6 +19,7 @@ rule Backdoor_Win32_Quicdy_A_2147724930_0
         $x_1_5 = {81 f1 ac 02 00 00 3b c1 75 14 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -29,6 +29,7 @@ rule Trojan_MSIL_BuffyX_2147720052_0
         $x_1_15 = "_out.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 

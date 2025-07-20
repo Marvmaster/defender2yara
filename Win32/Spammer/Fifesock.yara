@@ -23,6 +23,7 @@ rule Spammer_Win32_Fifesock_A_2147644065_0
         $x_1_9 = "\\\\.\\pipe\\facebook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule Spammer_Win32_Fifesock_B_2147644705_0
         $x_1_6 = "%s?act=fb_stat&num=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

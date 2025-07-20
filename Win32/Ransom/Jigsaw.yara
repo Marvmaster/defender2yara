@@ -20,6 +20,7 @@ rule Ransom_Win32_Jigsaw_PA_2147751834_0
         $x_1_5 = "FucktheSystem" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Win32_Jigsaw_SK_2147756580_0
         $x_1_3 = "FucktheSystem" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

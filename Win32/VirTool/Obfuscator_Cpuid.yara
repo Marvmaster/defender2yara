@@ -15,6 +15,7 @@ rule VirTool_Win32_Obfuscator_Cpuid_2147679114_0
         $x_1_1 = {0f a2 3d f6 06 00 00 75 ?? 81 f9 9c e1 00 00 75 ?? 81 fa ff fb eb bf 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

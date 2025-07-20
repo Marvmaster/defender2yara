@@ -17,6 +17,7 @@ rule Backdoor_Win32_Esforsho_A_2147684532_0
         $x_1_3 = {68 e8 03 00 00 ff d3 a1 ?? ?? ?? ?? 85 c0 76 10 69 c0 60 ea 00 00 50 ff d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Jolic_A_2147646466_0
         $x_1_3 = {50 8b c7 e8 ?? ?? ?? ?? 81 7d ?? 6a 6f 62 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

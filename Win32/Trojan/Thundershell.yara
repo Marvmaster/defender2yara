@@ -17,6 +17,7 @@ rule Trojan_Win32_Thundershell_A_2147723564_0
         $x_10_3 = {44 6c 6c 4d 61 69 6e 40 31 32 00 45 78 65 63 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

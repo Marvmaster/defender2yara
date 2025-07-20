@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Injector_A_2147610341_0
         $x_1_7 = {5a eb 0c 03 ca 68 00 80 00 00 6a 00 57 ff 11 8b c6 5a 5e 5f 59 5b 5d ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule TrojanDropper_Win32_Injector_D_2147636738_0
         $x_1_7 = {3a 38 30 38 30 2f 44 6f 77 [0-3] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -78,6 +80,7 @@ rule TrojanDropper_Win32_Injector_F_2147637765_0
         $x_1_5 = "-install \"%s\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -105,6 +108,7 @@ rule TrojanDropper_Win32_Injector_G_2147637954_0
         $x_1_4 = "KPlugin.Section" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -131,6 +135,7 @@ rule TrojanDropper_Win32_Injector_H_2147638433_0
         $x_1_3 = {8b 44 24 28 33 ?? 83 ?? 28 45 66 8b 50 02 3b ?? 7e ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +159,7 @@ rule TrojanDropper_Win32_Injector_I_2147638750_0
         $x_1_4 = {ff 70 50 8b 85 ?? ?? ff ff ff 70 34 ff 75 ?? ff 95}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -181,6 +187,7 @@ rule TrojanDropper_Win32_Injector_A_2147735384_0
         $x_1_3 = ":\\Maz-milocevic4\\FlashGames.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +212,7 @@ rule TrojanDropper_Win32_Injector_AR_2147748551_0
         $x_1_4 = "7?COsSwyith8HYnnP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

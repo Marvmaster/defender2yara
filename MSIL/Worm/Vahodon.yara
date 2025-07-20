@@ -22,6 +22,7 @@ rule Worm_MSIL_Vahodon_A_2147686214_0
         $x_1_8 = {61 6e 74 69 76 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

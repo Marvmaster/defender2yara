@@ -19,6 +19,7 @@ rule Trojan_Win32_SpywareX_CRDB_2147850806_0
         $x_1_4 = "http://94.142.138.97/Up" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_QakbotLoader_2147813748_0
         $x_1_2 = {ac 84 c0 74 ?? 32 d0 c1 c2 ?? eb ?? 8b c2 5e 5a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

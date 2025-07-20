@@ -19,6 +19,7 @@ rule Worm_Win32_Drolnux_C_2147681148_0
         $x_1_5 = "SHDeAthMrLiNuxYwZJk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Worm_Win32_Drolnux_B_2147681149_0
         $x_1_6 = "bilbilal.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

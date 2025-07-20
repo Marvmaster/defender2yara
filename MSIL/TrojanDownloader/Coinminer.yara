@@ -24,6 +24,7 @@ rule TrojanDownloader_MSIL_Coinminer_RS_2147833243_0
         $x_1_9 = "lolMiner" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or

@@ -17,6 +17,7 @@ rule VirTool_MSIL_Darius_B_2147853073_0
         $x_1_3 = {28 70 00 00 06 13 06 07 08 11 04 11 05 11 06 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Trojan_Win32_Spawnt_B_2147634188_0
         $x_10_8 = {83 fb 02 7c 1d 8b 1d ?? ?? ?? ?? 83 fb 06 7f 12 8b 1d ?? ?? ?? ?? 83 fb 05 74 07 b8 01 00 00 00 eb 02 31 c0 21 c0 74}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 2 of ($x_5_*) and 2 of ($x_4_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_4_*) and 2 of ($x_1_*))) or

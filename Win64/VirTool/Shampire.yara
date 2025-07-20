@@ -21,6 +21,7 @@ rule VirTool_Win64_Shampire_F_2147836059_0
         $x_1_6 = "Agent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

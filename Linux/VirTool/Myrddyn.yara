@@ -19,6 +19,7 @@ rule VirTool_Linux_Myrddyn_A_2147821103_0
         $x_1_4 = {48 8b 44 24 30 48 8d 48 08 48 8b 54 24 40 48 89 0c 24 48 89 54 24 08 e8 ?? ?? 00 00 48 8b 44 24 38 48 8b 4c 24 30 48 89 0c 24 48 89 44 24 08 e8 ?? ?? 00 00 e8 cd b3 03 00 48 8b 6c 24 20 48 83 c4 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 

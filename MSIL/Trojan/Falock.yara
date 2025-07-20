@@ -16,6 +16,7 @@ rule Trojan_MSIL_Falock_PRAC_2147932483_0
         $x_3_1 = {5d 91 09 1b 58 08 8e 69 58 1f 1f 5f 63 20 ff 00 00 00 5f d2 61 d2 9c 09 17 58}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

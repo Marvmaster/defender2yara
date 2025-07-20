@@ -25,6 +25,7 @@ rule Worm_Win32_Kebede_A_2147581555_0
         $x_2_10 = "SocketControl" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 7 of ($x_2_*))) or
             ((2 of ($x_5_*) and 1 of ($x_3_*) and 5 of ($x_2_*))) or
@@ -57,6 +58,7 @@ rule Worm_Win32_Kebede_B_2147581556_0
         $x_1_8 = "*.rvzczp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +93,7 @@ rule Worm_Win32_Kebede_C_2147581557_0
         $x_1_14 = ".exe\\PersistentHandler" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (11 of ($x*))
 }
 
@@ -125,6 +128,7 @@ rule Worm_Win32_Kebede_D_2147581558_0
         $x_1_14 = "CreateMutexA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 10 of ($x_1_*))) or
             ((1 of ($x_3_*) and 11 of ($x_1_*))) or

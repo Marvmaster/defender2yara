@@ -18,6 +18,7 @@ rule Ransom_Win32_Chaos_NIT_2147929717_0
         $x_1_3 = {89 44 24 04 e8 f8 f9 ff ff 83 7c 24 08 ff 0f 84 86 01 00 00 8b 44 24 24 8b 0d 50 d1 8c 00 8b 94 24 10 03 00 00 89 0c 24 89 44 24 04 89 54 24 08 e8 1c fa ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Chaos_CCJU_2147935360_0
         $x_1_3 = "encrypt_step" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Ransom_Win32_Chaos_C_2147935687_0
         $x_1_2 = {72 00 65 00 61 00 64 00 6d 00 65 00 2e 00 63 00 68 ?? 61 00 6f 00 73 00 2e 00 74 00 78 00 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Dialer_MA_2147836830_0
         $x_5_2 = {55 54 5d 81 ec b0 01 00 00 53 56 57 6a 24 59 2b c0 8d bd 5c ff ff ff c7 85 58 ff ff ff 94 00 00 00 f3 ab 8d 85 58 ff ff ff 50 ff 15}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Dialer_ADER_2147846135_0
         $x_1_1 = {33 c0 8a 0c 30 80 f1 0a 88 0c 30 40 3d 4e 02 00 00 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Dialer_A_2147850681_0
         $x_2_2 = "thindialer" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_Dialer_SG_2147910970_0
         $x_1_3 = "\\unsizzle.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_Win32_Dialer_SGA_2147910971_0
         $x_1_4 = "GTools32 - InstallMIME" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Trojan_Win32_Dialer_SGB_2147910972_0
         $x_1_3 = "tsr_media" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

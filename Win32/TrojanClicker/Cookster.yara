@@ -22,6 +22,7 @@ rule TrojanClicker_Win32_Cookster_A_2147648962_0
         $x_1_8 = "Client().Sleep('5');" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

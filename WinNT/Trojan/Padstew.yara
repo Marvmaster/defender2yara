@@ -16,6 +16,7 @@ rule Trojan_WinNT_Padstew_A_2147626420_0
         $x_1_2 = {b9 1b 00 00 00 c7 44 88 34 ?? ?? 40 00 49 75 f5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

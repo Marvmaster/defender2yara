@@ -20,6 +20,7 @@ rule Worm_Win32_Moriogu_A_2147596553_0
         $x_5_6 = "multi(0)disk(0)rdisk(0)partition(1)\\Romeo=\"Su PC esta infestada por un virus de ultima generacion\"" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

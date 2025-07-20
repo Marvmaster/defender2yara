@@ -16,6 +16,7 @@ rule TrojanDownloader_Win64_DuckTail_A_2147923739_0
         $x_2_1 = {44 0f be c0 48 8b 44 ?? ?? 48 8b 0c ?? 0f be 14 08 44 31 c2 88 14 08 48 8b 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

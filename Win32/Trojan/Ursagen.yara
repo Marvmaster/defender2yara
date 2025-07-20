@@ -16,6 +16,7 @@ rule Trojan_Win32_Ursagen_A_2147739937_0
         $x_1_2 = {6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 ff 15 ?? ?? ?? ?? 8d 4d f3 51 ff 15 ?? ?? ?? ?? 68 44 d1 43 00 68 a0 f2 4b 00 e8 58 20 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

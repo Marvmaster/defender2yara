@@ -19,6 +19,7 @@ rule Trojan_MacOS_DownloadAgent_A_2147901200_0
         $x_1_5 = {25 40 2e 25 73 25 73 2e 6e 65 74 [0-32] 54 68 65 20 68 61 73 68 65 73 20 61 72 65 20 74 68 65 20 73 61 6d 65 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 

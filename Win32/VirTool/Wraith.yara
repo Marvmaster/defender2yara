@@ -18,6 +18,7 @@ rule VirTool_Win32_Wraith_A_2147758912_0
         $x_1_4 = "\\Driver\\ghostinthelogs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule VirTool_Win32_Wraith_A_2147797323_0
         $x_1_7 = "(*Wraith).Shutdown" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule VirTool_Win32_Wraith_C_2147815955_0
         $x_1_5 = "Wraith).catch" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

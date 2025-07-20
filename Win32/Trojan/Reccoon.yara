@@ -20,6 +20,7 @@ rule Trojan_Win32_Reccoon_A_2147757059_0
         $x_1_6 = "Visocuhu kuzufuwixoXJugemojoveto gerepeveripu zeyuwu xoxegazor navacujexudef duvexiguranunef bisakelunafuhiy" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

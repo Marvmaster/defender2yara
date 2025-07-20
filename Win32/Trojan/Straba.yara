@@ -16,6 +16,7 @@ rule Trojan_Win32_Straba_EH_2147832746_0
         $x_5_1 = {89 20 eb 0a a1 ?? ?? ?? ?? 83 c0 20 ff d0 8d 05 ?? ?? ?? ?? 89 18 89 f0 01 05 ?? ?? ?? ?? 89 ea 89 15 ?? ?? ?? ?? 01 3d ?? ?? ?? ?? eb d6 c3 89 45}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Straba_EH_2147832746_1
         $x_1_5 = "qtreeGSiwas" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Straba_EH_2147832746_2
         $x_1_5 = "Lightblessedhis2b" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_Win32_Straba_MA_2147832768_0
         $x_1_7 = "WaitForSingleObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_Win32_Straba_NE_2147832889_0
         $x_1_6 = "GetCurrentThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Trojan_Win32_Straba_NEA_2147832943_0
         $x_1_2 = {54 52 43 41 47 55 42 2e 44 4c 4c 00 48 76 67 66 63 44 62 68 6e 00 4f 68 62 67 44 63 74 66 00 4a 62 68 75 67 44 66 76 79 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_Win32_Straba_AST_2147832990_0
         $x_1_3 = "GetCurrentThreadId" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule Trojan_Win32_Straba_RA_2147833187_0
         $x_1_1 = {0f b6 09 89 ca 88 d3 ba 01 00 00 00 81 e9 b8 00 00 00 89 d6 89 85 ?? fe ff ff 89 95 ?? fe ff ff 88 9d ?? fe ff ff 89 8d ?? fe ff ff 89 b5 ?? fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +214,7 @@ rule Trojan_Win32_Straba_RB_2147833188_0
         $x_1_1 = {8a 08 88 8d ?? fe ff ff b8 01 00 00 00 b9 01 00 00 00 8a 95 ?? fe ff ff 0f b6 f2 81 ee b8 00 00 00 89 cf 89 85 ?? fe ff ff 89 8d ?? fe ff ff 89 b5 ?? fe ff ff 89 bd ?? fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +236,7 @@ rule Trojan_Win32_Straba_RO_2147833203_0
         $x_1_1 = {8b 75 e8 8a 1c 06 0f b6 fb 01 cf 89 45 dc 31 c9 89 55 d8 89 ca 8b 4d f0 f7 f1 8b 4d ec 0f b6 14 11 01 d7 89 f8 99 8b 7d d8 f7 ff 8a 3c 16 8b 4d dc 88 3c 0e 88 1c 16}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -252,6 +262,7 @@ rule Trojan_Win32_Straba_EB_2147833353_0
         $x_1_5 = "GetCurrentThreadId" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -277,6 +288,7 @@ rule Trojan_Win32_Straba_EB_2147833353_1
         $x_1_5 = "seaI0Qis" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

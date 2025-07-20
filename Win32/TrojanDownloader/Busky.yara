@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Busky_A_2147804020_0
         $x_1_6 = {3b 4d 10 0f [0-8] 8b 55 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

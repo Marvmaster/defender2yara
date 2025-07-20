@@ -15,6 +15,7 @@ rule TrojanDownloader_Win32_Silvpat_A_2147687489_0
         $x_1_1 = {80 3e e9 74 15 b9 ?? ?? ?? ?? 33 db ac 34 22 aa e2 fa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

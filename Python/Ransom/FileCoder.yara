@@ -18,6 +18,7 @@ rule Ransom_Python_FileCoder_AA_2147907225_0
         $x_1_3 = "PyInstaller: pyi_win32_utils_to_utf8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Worm_Win32_Levitiang_A_2147630530_0
         $x_1_8 = "\\downmelt.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

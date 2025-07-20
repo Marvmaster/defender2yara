@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Tnega_ARA_2147894581_0
         $x_2_2 = "aHR0cDovL2R3LjljaWRjLmNuL2J5ZTAwMS5iaW4=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

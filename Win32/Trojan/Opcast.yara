@@ -19,6 +19,7 @@ rule Trojan_Win32_Opcast_SK_2147847483_0
         $x_1_4 = "pWh6G0U6o1N7q0g1D1QHd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

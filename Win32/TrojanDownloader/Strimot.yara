@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Strimot_A_2147706356_0
         $x_1_6 = {61 00 75 00 64 00 69 00 6f 00 72 00 67 00 62 00 2e 00 63 00 6f 00 6d 00 2f 00 69 00 6e 00 73 00 74 00 61 00 6c 00 61 00 01 00 00 2f 00 73 00 65 00 74 00 75 00 70 00 35 00 2e 00 74 00 6d 00 70 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Strimot_B_2147706736_0
         $x_1_4 = "strPasswdToRecover" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

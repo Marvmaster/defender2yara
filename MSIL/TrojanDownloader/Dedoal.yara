@@ -22,6 +22,7 @@ rule TrojanDownloader_MSIL_Dedoal_B_2147696139_0
         $x_1_8 = "MandarAviso" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

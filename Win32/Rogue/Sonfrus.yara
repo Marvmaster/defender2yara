@@ -19,6 +19,7 @@ rule Rogue_Win32_Sonfrus_164812_0
         $x_1_5 = {57 6f 72 6d 2e 42 61 67 67 6c 65 2e 43 50 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

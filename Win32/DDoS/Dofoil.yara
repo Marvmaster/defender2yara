@@ -18,6 +18,7 @@ rule DDoS_Win32_Dofoil_A_2147651353_0
         $x_1_4 = {c7 45 f8 68 02 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))

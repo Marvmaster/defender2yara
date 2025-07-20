@@ -20,6 +20,7 @@ rule VirTool_Win32_Sertoh_A_2147686197_0
         $x_1_6 = {73 65 72 76 65 72 75 72 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

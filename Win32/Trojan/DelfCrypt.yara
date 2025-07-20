@@ -17,6 +17,7 @@ rule Trojan_Win32_DelfCrypt_A_2147657763_0
         $x_1_3 = "Scratchpad synch problem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

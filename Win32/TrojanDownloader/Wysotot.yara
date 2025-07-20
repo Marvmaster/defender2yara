@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Wysotot_A_2147684219_0
         $x_1_3 = "/eGdpSvc.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_Wysotot_B_2147684714_0
         $x_1_3 = "-url \"%s\" -f \"%s\" -exe \"%s\" -hide -uid %d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

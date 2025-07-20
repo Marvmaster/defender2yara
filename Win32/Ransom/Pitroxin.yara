@@ -19,6 +19,7 @@ rule Ransom_Win32_Pitroxin_A_2147726534_0
         $x_5_5 = "1GZCw453MzQr8V2VAgJpRmKBYRDUJ8kzco" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

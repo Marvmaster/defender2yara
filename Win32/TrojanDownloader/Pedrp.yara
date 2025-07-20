@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Pedrp_A_2147654976_0
         $x_1_3 = {ff d0 85 c0 74 0a c7 05 ?? ?? ?? ?? 00 00 00 00 56 8b 35 ?? ?? ?? ?? 57 68 ?? ?? ?? ?? 8b 0e 6a 00 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 00 56 ff 51 54}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_Win32_Pedrp_B_2147657118_0
         $x_1_5 = "Avaliable data:%u bytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

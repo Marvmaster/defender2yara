@@ -18,6 +18,7 @@ rule Spammer_MSIL_Diloanamer_A_2147645366_0
         $x_1_4 = "MSN_Spammer.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

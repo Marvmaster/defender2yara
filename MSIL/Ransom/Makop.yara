@@ -20,6 +20,7 @@ rule Ransom_MSIL_Makop_MAK_2147794936_0
         $x_1_5 = "\\README-" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_MSIL_Makop_XY_2147901546_0
         $x_1_1 = {58 4a 03 8e 69 5d 03 06 1a 58 4a 03 8e 69 5d 91 07 06 1a 58 4a 07 8e 69 5d 91 61 28 2f 00 00 0a 03 06 1a 58 4a 1d 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Ransom_MSIL_Makop_BK_2147931600_0
         $x_1_2 = {03 08 03 8e 69 5d 91 07 08 07 8e 69 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

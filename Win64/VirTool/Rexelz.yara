@@ -19,6 +19,7 @@ rule VirTool_Win64_Rexelz_A_2147908297_0
         $x_1_4 = {c7 85 e0 11 00 00 41 64 76 61 c7 85 e4 11 00 00 70 69 33 32 40 88 bd e8 11 00 00 f3 0f 7f 85 20 13 00 00 66 c7 85 30 13 00 00 32 00 ?? ?? ?? ?? ?? ?? 48 8b c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

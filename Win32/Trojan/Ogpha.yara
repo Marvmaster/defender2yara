@@ -19,6 +19,7 @@ rule Trojan_Win32_Ogpha_A_2147611127_0
         $x_2_5 = {83 7d fc 14 7d 31 83 7d f8 0f 7d 2b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -46,6 +47,7 @@ rule Trojan_Win32_Ogpha_B_2147611157_0
         $x_2_4 = {83 7d fc 05 7d 31 83 7d f8 05 7d 2b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -28,6 +28,7 @@ rule TrojanSpy_Win32_Pexnod_A_2147659463_0
         $x_1_14 = "<body onload=\"document.forms[0].submit();\">" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -55,6 +56,7 @@ rule TrojanSpy_Win32_Pexnod_B_2147678657_0
         $x_1_5 = "body onload=\"document.forms[0].submit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

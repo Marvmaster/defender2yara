@@ -18,6 +18,7 @@ rule Backdoor_MacOS_X_Imuler_A_2147649887_0
         $x_1_4 = {89 c3 ba ab aa aa 2a f7 ea d1 fa 89 d9 c1 f9 1f 29 ca 8d 14 52 c1 e2 02 29 d3 8d 43 01 89 04 24 e8 7e 06 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (3 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Backdoor_MacOS_X_Imuler_C_2147655173_0
         $x_1_9 = "TMP0M34" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (7 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Backdoor_MacOS_X_Imuler_B_2147655211_0
         $x_1_7 = {c1 e8 10 f7 c2 80 80 00 00 0f 44 d0 [0-2] 8d 41 02 [0-2] 0f 45 c1 00 d2 [0-2] 83 d8 03 [0-2] 2f 63 67 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Backdoor_MacOS_X_Imuler_D_2147668083_0
         $x_2_6 = {2f 80 00 2f 40 9e 00 14 2f 89 00 04 41 9e 00 14 99 62 00 01 39 29 00 01}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

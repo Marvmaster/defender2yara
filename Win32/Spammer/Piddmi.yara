@@ -24,6 +24,7 @@ rule Spammer_Win32_Piddmi_A_2147602537_0
         $x_2_9 = "[!MULTIPART!]" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_2_*))) or
             ((3 of ($x_10_*))) or

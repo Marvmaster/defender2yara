@@ -21,6 +21,7 @@ rule Trojan_Win32_Conpro_B_2147622848_0
         $x_1_7 = "no create udp socket!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Trojan_Win32_Conpro_C_2147622849_0
         $x_1_5 = "no configure!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))

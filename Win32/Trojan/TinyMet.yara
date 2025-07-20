@@ -21,6 +21,7 @@ rule Trojan_Win32_TinyMet_2147757889_0
         $x_1_6 = "setting the filename to \"2_host.com_443.exe\" and running it witho" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_TinyMet_MS_2147768105_0
         $x_1_2 = {89 02 5f 5d c3 2d 00 31 0d ?? ?? ?? ?? c7 05 [0-8] a1 ?? ?? ?? ?? 01 05 [0-6] 8b 15 ?? ?? ?? ?? a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -15,6 +15,7 @@ rule SoftwareBundler_Win32_Ogimant_225375_0
         $x_1_1 = {2f 2f 66 6f 72 63 65 73 2e 73 75 6e 73 68 69 6e 65 62 6c 6f 67 2e 72 75 2f 67 65 74 5f 6a 73 6f 6e 3f 73 74 62 3d 34 26 64 69 64 3d ?? ?? ?? ?? ?? ?? ?? (30|31|32|33|34|35|36|37|38|39) (30|31|32|33|34|35|36|37|38|39) 26 65 78 74 5f 70 61 72 74 6e 65 72 5f 69 64 3d 26 66 69 6c 65 5f 69 64 3d ?? ?? ?? ?? ?? ?? ?? (30|31|32|33|34|35|36|37|38|39) (30|31|32|33|34|35|36|37|38|39)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule SoftwareBundler_Win32_Ogimant_225375_1
         $x_1_11 = {26 68 65 61 64 65 72 73 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule SoftwareBundler_Win32_Ogimant_225375_2
         $x_1_6 = {8b 50 28 8b 45 ?? 85 d2 74 ?? 03 55 ?? 74 ?? c7 44 24 08 00 00 00 00 c7 44 24 04 01 00 00 00 8b 4d ?? 89 0c 24 ff d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule SoftwareBundler_Win32_Ogimant_225375_3
         $x_1_10 = "/silent /rfr=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -124,6 +128,7 @@ rule SoftwareBundler_Win32_Ogimant_225375_4
         $x_1_6 = "ping=instpaid&bundle=%addonkey%&s=%success%&wmid=%wmid%&progid=mi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

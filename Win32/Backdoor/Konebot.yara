@@ -25,6 +25,7 @@ rule Backdoor_Win32_Konebot_A_2147626396_0
         $x_1_11 = "USER" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

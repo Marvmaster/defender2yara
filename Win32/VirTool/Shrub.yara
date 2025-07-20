@@ -19,6 +19,7 @@ rule VirTool_Win32_Shrub_A_2147757121_0
         $x_1_4 = "HoleySocks/pkg/holeysocks" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule VirTool_Win32_Shrub_A_2147757121_1
         $x_1_6 = "audibleblink/gorsh/internal/enum.WinPeas" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

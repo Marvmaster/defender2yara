@@ -23,6 +23,7 @@ rule Backdoor_Win32_Schnabrom_GTC_2147836085_0
         $x_1_8 = "FC:\\Windows\\system32\\SHELL32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

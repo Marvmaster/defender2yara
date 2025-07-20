@@ -18,6 +18,7 @@ rule Trojan_MSIL_Gulpix_CXFF_2147851907_0
         $x_1_3 = {ec 10 64 a1 30 00 00 00 53 55 56 8b 40 0c 57 89 4c 24 14 8b 40 14 8b f8 89 44 24 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

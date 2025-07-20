@@ -25,6 +25,7 @@ rule Trojan_Win32_ProcessInjector_A_2147769829_0
         $x_1_11 = "NtResumeThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_ProcessInjector_B_2147769835_0
         $x_1_5 = "MapViewOfFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

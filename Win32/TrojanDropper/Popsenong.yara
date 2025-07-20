@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Popsenong_A_2147640550_0
         $x_1_2 = {4d 6f 64 44 65 6c 65 74 65 4d 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

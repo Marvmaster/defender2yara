@@ -18,6 +18,7 @@ rule Virus_Win32_Cutef_B_2147594930_0
         $x_1_4 = {26 00 00 66 81 38 4d 5a 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Virus_Win32_Cutef_C_2147594931_0
         $x_1_4 = {89 45 4e 8b f8 66 81 3f 4d 5a 0f 85 1d 01 00 00 8b 7f 3c 03 f8 66 81 3f 50 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

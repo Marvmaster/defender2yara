@@ -21,6 +21,7 @@ rule Trojan_MSIL_IronGate_A_2147712341_0
         $x_1_7 = "c:\\Users\\Main\\Desktop\\PackagingModule\\PackagingModule\\obj\\Release\\PackagingModule.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

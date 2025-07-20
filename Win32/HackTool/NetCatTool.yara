@@ -20,6 +20,7 @@ rule HackTool_Win32_NetCatTool_LK_2147843487_0
         $x_1_5 = "inbound program to exec [dangerous!!]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

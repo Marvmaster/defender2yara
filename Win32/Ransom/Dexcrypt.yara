@@ -16,6 +16,7 @@ rule Ransom_Win32_Dexcrypt_2147725773_0
         $x_2_2 = "yao mi ma gei 30 yuan jia qq 2055965068" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Agsurbot_A_2147658017_0
         $x_1_5 = {3c 41 20 69 64 3d 22 70 61 [0-3] 22 20 68 72 65 66 3d 22 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

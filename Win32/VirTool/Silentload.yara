@@ -17,6 +17,7 @@ rule VirTool_Win32_Silentload_A_2147928575_0
         $x_1_3 = {c7 44 24 3c 01 00 00 00 50 6a 04 6a 00 68 ?? ?? ?? ?? ff 74 24 40 ff ?? 85 c0 ?? ?? ?? ?? ?? ?? 6a 04 8d 44 24 40 c7 44 24 40 03 00 00 00 50 6a 04 6a 00 68 ?? ?? ?? ?? ff 74 24 40 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

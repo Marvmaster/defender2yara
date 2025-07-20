@@ -20,6 +20,7 @@ rule Trojan_Win32_Tionas_A_2147690611_0
         $x_4_5 = "78wO13YrJ0cB.dll" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -47,6 +48,7 @@ rule Trojan_Win32_Tionas_B_2147690676_0
         $x_4_3 = "U25FAy93s8.dll" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -75,6 +77,7 @@ rule Trojan_Win32_Tionas_C_2147690947_0
         $x_1_4 = "ict32.msname.org" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

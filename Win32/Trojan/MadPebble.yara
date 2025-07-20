@@ -18,6 +18,7 @@ rule Trojan_Win32_MadPebble_A_2147937187_0
         $x_1_3 = {c7 45 e0 64 00 6c 00 c7 45 e4 6c 00 3b 00 c7 45 e8 2a 00 2e 00 c7 45 ec 65 00 78 00 c7 45 f0 65 00 3b 00 c7 45 f4 2a 00 2e 00 c7 45 f8 73 00 79 00 c7 45 fc 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

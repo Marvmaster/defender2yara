@@ -21,6 +21,7 @@ rule Backdoor_Win32_Rmtsvc_C_2147718014_0
         $x_1_6 = {6a 00 6a 00 56 53 6a 00 6a 00 55 ff 15 ?? ?? ?? ?? 8b d8 85 db 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

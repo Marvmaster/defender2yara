@@ -18,6 +18,7 @@ rule VirTool_Win32_Wovdnut_A_2147793903_0
         $x_1_3 = {68 05 00 00 20 55 89 ?? 89 ?? 04 ff ?? ?? 00 00 00 85 c0 74 33 8b 03 0b 43 04 74 2c 6a 04 68 00 30 00 00 ff 33 ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule VirTool_Win32_Wovdnut_A_2147793903_1
         $x_1_3 = {68 05 00 00 20 55 89 ?? 89 ?? 04 ff ?? ?? 00 00 00 85 c0 74 33 8b 03 0b 43 04 74 2c 6a 04 68 00 30 00 00 ff 33 ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule VirTool_Win32_Wovdnut_A_2147793903_2
         $x_1_3 = {68 05 00 00 20 55 89 ?? 89 ?? 04 ff ?? ?? 00 00 00 85 c0 74 33 8b 03 0b 43 04 74 2c 6a 04 68 00 30 00 00 ff 33 ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule VirTool_Win32_Wovdnut_A_2147793903_3
         $x_1_3 = {68 05 00 00 20 55 89 ?? 89 ?? 04 ff ?? ?? 00 00 00 85 c0 74 33 8b 03 0b 43 04 74 2c 6a 04 68 00 30 00 00 ff 33 ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule VirTool_Win32_Wovdnut_A_2147793903_4
         $x_1_5 = {0f b7 00 66 3d 5a 77 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule VirTool_Win32_Wovdnut_A_2147793903_5
         $x_1_3 = {48 81 ec 40 04 00 00 48 8b da 48 8b f1 48 8b 91 ?? ?? ?? ?? 41 b8 00 30 00 00 33 c9 48 8d 14 55 02 00 00 00 44 8d 49 04 ff 56 48 4c 8b f0 48 85 c0 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule VirTool_Win32_Wovdnut_A_2147793903_6
         $x_1_5 = {0f b7 00 66 3d 5a 77 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +190,7 @@ rule VirTool_Win32_Wovdnut_A_2147793903_7
         $x_1_3 = {8b 52 50 81 c2 00 10 00 00 89 d2 41 b9 40 00 00 00 41 b8 00 30 00 00 b9 00 00 00 00 ff d0 48 89 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +215,7 @@ rule VirTool_Win32_Wovdnut_A_2147793903_8
         $x_1_4 = {48 81 ec 40 04 00 00 48 8b da 48 8b f1 48 8b 91 ?? ?? ?? ?? 41 b8 00 30 00 00 33 c9 48 8d 14 55 02 00 00 00 44 8d 49 04 ff 56 48 4c 8b f0 48 85 c0 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +241,7 @@ rule VirTool_Win32_Wovdnut_A_2147793903_9
         $x_1_5 = {2f cb 3a ab d2 11 9c 40 00 c0 4f a3 0a 3e 22 67 2f cb 3a ab d2 11 9c 40 00 c0 4f a3 0a 3e dc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -460,6 +470,7 @@ rule VirTool_Win32_Wovdnut_B_2147811292_0
         $x_1_5 = "Copying %i bytes of assembly to safe array" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

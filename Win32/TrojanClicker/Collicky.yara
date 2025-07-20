@@ -19,6 +19,7 @@ rule TrojanClicker_Win32_Collicky_A_2147684371_0
         $x_1_5 = {8a 55 e7 80 f2 21 32 c2 88 45 e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

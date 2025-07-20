@@ -22,6 +22,7 @@ rule Backdoor_Win32_Kirts_A_2147711002_0
         $x_1_8 = "obj.run(\"DeviceManager.bat\", 0);" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_20_*) and 3 of ($x_5_*))) or

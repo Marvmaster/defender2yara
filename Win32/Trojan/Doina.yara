@@ -17,6 +17,7 @@ rule Trojan_Win32_Doina_R_2147831286_0
         $x_1_2 = {ac 30 d0 aa c1 ca 08 49 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 85 c9 75 e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Doina_S_2147831787_0
         $x_1_1 = {ac 50 58 32 02 aa 42 49 85 c9 75 ed [0-53] ac 30 d0 aa c1 ca 08 49 85 c9 75 f4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Doina_RPL_2147836945_0
         $x_1_7 = "Ka s p e r S k y" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_Doina_BD_2147837163_0
         $x_2_1 = {85 a1 a4 76 f2 fd ef 4f ae 07 50 d3 13 d2 08 69 fe 78 92 ae c7 51 e5 4a b5 3d 5f 96 3f 88 24 eb 19 c1 3e c5 2f 74 7e 4d a7 76}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_Win32_Doina_MA_2147844441_0
         $x_1_1 = {8b 45 f8 8b 4d 10 8a 09 88 08 8b 45 f8 40 89 45 f8 8b 45 10 40 89 45 10 8b 45 0c 48 89 45 0c eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +134,7 @@ rule Trojan_Win32_Doina_GHJ_2147848006_0
         $x_1_2 = "api.jwhss.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule Trojan_Win32_Doina_EC_2147850524_0
         $x_1_5 = "SimSim.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +185,7 @@ rule Trojan_Win32_Doina_GNX_2147852637_0
         $x_1_4 = "nbbfmEX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +213,7 @@ rule Trojan_Win32_Doina_DW_2147852926_0
         $x_1_7 = "WVKOH!n" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -227,6 +236,7 @@ rule Trojan_Win32_Doina_GME_2147888290_0
         $x_10_2 = {57 8b f8 b8 ?? ?? ?? ?? 48 46 08 9a c7 06 0a bf}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -250,6 +260,7 @@ rule Trojan_Win32_Doina_GME_2147888290_1
         $x_1_3 = "t4SVh0b" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +287,7 @@ rule Trojan_Win32_Doina_EM_2147888611_0
         $x_1_6 = "cmd /c ipconfig /all" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -300,6 +312,7 @@ rule Trojan_Win32_Doina_GMG_2147888776_0
         $x_1_4 = "P.vmp0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -324,6 +337,7 @@ rule Trojan_Win32_Doina_GMH_2147888783_0
         $x_1_4 = ".vmp1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -345,6 +359,7 @@ rule Trojan_Win32_Doina_RPX_2147890034_0
         $x_1_1 = {ff ff ff ff 10 6a 40 68 00 10 00 00 68 ?? ?? ?? 00 6a 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -372,6 +387,7 @@ rule Trojan_Win32_Doina_RPX_2147890034_1
         $x_1_7 = "2345Explorer.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -393,6 +409,7 @@ rule Trojan_Win32_Doina_AD_2147890366_0
         $x_1_1 = {0f b7 44 79 08 8b d0 c7 45 fc 00 30 00 00 81 e2 00 f0 00 00 66 3b 55 fc 74 ?? c7 45 fc 00 a0 00 00 66 3b 55 fc 75 ?? 25 ff 0f 00 00 03 01 01 34 18 47 3b 7d f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -414,6 +431,7 @@ rule Trojan_Win32_Doina_RPY_2147892701_0
         $x_1_1 = {59 85 c0 74 0f 33 c0 50 50 50 50 50 e8 4a 00 00 00 83 c4 14 8b 45 fc 69 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -436,6 +454,7 @@ rule Trojan_Win32_Doina_NA_2147893283_0
         $x_1_2 = "WebM Project VP8 Encoder v0.9.5-2-g755e2a2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -459,6 +478,7 @@ rule Trojan_Win32_Doina_GNU_2147895379_0
         $x_1_3 = ".vmp1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -481,6 +501,7 @@ rule Trojan_Win32_Doina_ASR_2147900737_0
         $x_2_2 = {4e 95 2d 7d 93 96 42 b2 7a 8e 48 5f 83 76 22 34 22 bd 32 c9 25 02 04 b0 76 2b 31 23 1d 22 24 ff e0 86 72 e1 0d 12 b6 cf a3 4a 42 cd}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -503,6 +524,7 @@ rule Trojan_Win32_Doina_ND_2147901319_0
         $x_1_2 = "nJ0MzIuZGxs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -524,6 +546,7 @@ rule Trojan_Win32_Doina_SPD_2147901613_0
         $x_4_1 = {80 f1 56 88 88 ?? ?? ?? ?? 8a 88 ?? ?? ?? ?? 84 c9 74 0e}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -545,6 +568,7 @@ rule Trojan_Win32_Doina_GXZ_2147903337_0
         $x_10_1 = {8b c6 99 f7 7d f8 8b 4d 08 53 6a 01 8d 45 ff 6a 01 50 8a 14 0a 30 55 ff e8 ?? ?? ?? ?? 83 c4 10 46 57 e8 ?? ?? ?? ?? 83 c4 04 85 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -566,6 +590,7 @@ rule Trojan_Win32_Doina_CCIA_2147909157_0
         $x_1_1 = {52 8b 45 f8 8b 48 24 51 8b 55 f8 8b 42 30 50 8b 4d f0 51 ff 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -591,6 +616,7 @@ rule Trojan_Win32_Doina_HNA_2147909711_0
         $x_1_5 = {55 52 4c 44 6f 77 6e 6c 6f 61 64 54 6f 46 69 6c 65 41 00 00 75 72 6c 6d 6f 6e 2e 64 6c 6c [0-5] 44 65 6c 65 74 65 55 72 6c 43 61 63 68 65 45 6e 74 72 79 41 00 00 57 49 4e 49 4e 45 54 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -616,6 +642,7 @@ rule Trojan_Win32_Doina_PADY_2147911302_0
         $x_1_5 = "Got system privileges! Type whoami." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -637,6 +664,7 @@ rule Trojan_Win32_Doina_IH_2147911776_0
         $x_1_1 = {0f b6 84 35 ?? ?? ?? ?? 03 c8 0f b6 c1 8b 8d ?? ?? ?? ?? 0f b6 84 05 ?? ?? ?? ?? 32 44 1a ?? 88 04 11 42 81 fa ?? ?? ?? ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -660,6 +688,7 @@ rule Trojan_Win32_Doina_SG_2147912599_0
         $x_1_3 = {68 74 74 70 3a 2f 2f 31 35 39 2e 37 35 2e 32 33 37 2e 33 39 2f 68 2f [0-15] 2e 68 74 6d 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -681,6 +710,7 @@ rule Trojan_Win32_Doina_GPAX_2147915638_0
         $x_1_1 = {8b 45 e4 83 c0 01 89 45 e4 8b 4d e4 3b 4d f4 7d 18 8b 55 fc 8b 02 33 45 f8 8b 4d fc 89 01 8b 55 fc 83 c2 04 89 55 fc eb d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -708,6 +738,7 @@ rule Trojan_Win32_Doina_YAA_2147920702_0
         $x_1_7 = "UnHookTosBtKbd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -730,6 +761,7 @@ rule Trojan_Win32_Doina_HNL_2147921836_0
         $x_1_2 = {5c 53 79 73 74 65 6d 5c 44 69 73 61 62 6c 65 54 61 73 6b 4d 67 72 [0-32] 45 78 70 6c 6f 72 65 72 2e 65 78 65 20 20 2f 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -752,6 +784,7 @@ rule Trojan_Win32_Doina_MX_2147933716_0
         $x_1_2 = "kstatio.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -773,6 +806,7 @@ rule Trojan_Win32_Doina_MZZ_2147937613_0
         $x_5_1 = {33 c9 83 fa 2c 0f 45 cb 33 db 8a 84 0d ?? ?? ?? ?? 30 04 16 42 8d 41 01 89 95 30 ff ff ff 83 f8 14 0f 4c d8 8b c2 99 3b 95 28 ff ff ff 8b 95 30 ff ff ff 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -794,6 +828,7 @@ rule Trojan_Win32_Doina_PGD_2147939517_0
         $x_5_1 = {66 0f be 06 8b 4d e4 0f b7 d0 3b 4d e8 ?? ?? 83 7d e8 ?? 8d 41 01 89 45 e4 8d 45 d4 0f 43 45 d4 66 89 14 48 33 d2 66 89 54 48}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

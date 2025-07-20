@@ -21,6 +21,7 @@ rule Ransom_MSIL_Freya_RPG_2147830263_0
         $x_1_6 = "YourAttackPath.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

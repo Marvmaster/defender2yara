@@ -19,6 +19,7 @@ rule Backdoor_Win32_Zupdax_A_2147690788_0
         $x_1_4 = {c6 44 24 28 73 c6 44 24 29 65 88 5c 24 2a c6 44 24 2b 76 c6 44 24 2c 65 88 5c 24 2d c6 44 24 2e 2e c6 44 24 2f 64 c6 44 24 30 62 89 44 24 31 66 89 44 24 35 ff d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Backdoor_Win32_Zupdax_B_2147690789_0
         $x_1_6 = "server mythread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

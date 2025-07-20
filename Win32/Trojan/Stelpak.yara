@@ -16,6 +16,7 @@ rule Trojan_Win32_Stelpak_GCN_2147922499_0
         $x_10_1 = {0f b6 84 1c ?? ?? ?? ?? 8b 4c 24 ?? 03 c2 0f b6 c0 89 74 24 ?? 0f b6 84 04 ?? ?? ?? ?? 30 04 39 47 3b 7c 24 ?? 0f 8c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Stelpak_AMU_2147924662_0
         $x_1_1 = {30 04 19 85 f6 74 ?? 6a 01 8b ce e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

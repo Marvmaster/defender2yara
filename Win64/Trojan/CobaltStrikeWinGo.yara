@@ -16,6 +16,7 @@ rule Trojan_Win64_CobaltStrikeWinGo_DY_2147909092_0
         $x_1_1 = {45 88 4c 30 ff 48 ff c1 4c 89 c7 48 39 cb 7e ?? 4c 8d 47 01 44 0f b6 0c 08 44 0f b6 54 24 ?? 45 31 ca 44 0f b6 4c 24 ?? 45 31 d1 4c 39 c2 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

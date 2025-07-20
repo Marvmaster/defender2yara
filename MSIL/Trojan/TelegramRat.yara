@@ -17,6 +17,7 @@ rule Trojan_MSIL_TelegramRat_AUU_2147853366_0
         $x_1_2 = "Get all commands list sorted by alphabet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_TelegramRat_AET_2147853373_0
         $x_1_2 = "Get all commands list sorted by alphabet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

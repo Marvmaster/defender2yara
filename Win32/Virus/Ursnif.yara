@@ -16,6 +16,7 @@ rule Virus_Win32_Ursnif_D_2147692239_0
         $x_1_2 = {8b fa 8b df c1 eb 02 83 e7 03 8b f1 85 db 74 1d 8a 45 0c 8b 16 02 c3 0f b6 c8 8b 45 08 d3 ca 33 d0 2b d3 89 16 83 c6 04 4b 75 e5 eb 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Virus_Win32_Ursnif_A_2147692481_0
         $x_1_6 = {53 74 61 72 74 75 70 41 70 70 72 6f 76 65 64 5c 52 75 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -70,6 +72,7 @@ rule Virus_Win32_Ursnif_A_2147692481_1
         $x_1_5 = {8d 85 dc f3 ff ff 50 68 04 01 00 00 ff 15 ?? ?? ?? ?? 8d 85 e4 fd ff ff 50 6a 00 68 ?? ?? ?? ?? 8d 85 dc f3 ff ff 50 ff 15 ?? ?? ?? ?? 83 ff 01 75 07 ba ?? ?? ?? ?? eb 0a 83 ff 02 75 10 ba ?? ?? ?? ?? 8d 8d e4 fd ff ff e8 ?? ?? ?? ?? 33 c0 50 68 80 00 00 00 6a 02 50 50 8b f0 68 00 00 00 40 8d 85 e4 fd ff ff 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Virus_Win32_Ursnif_B_2147692484_0
         $x_1_6 = {8b c3 2b c6 a9 fe ff ff ff 74 3f 56 ff 15 ?? ?? ?? ?? 83 f8 02 74 05 83 f8 04 75 13 8d 45 f0 50 ff 75 ec ff 75 08 51 56 8b cf e8 ?? ?? ?? ?? 8b 45 fc 8d 73 02 8d 9d ec fd ff ff 2b c6 6a 00 03 c3 5b d1 f8 85 c0 7f 9e eb 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule Virus_Win32_Ursnif_F_2147692535_0
         $x_1_3 = {6a 48 8d b7 00 04 00 00 8b d6 8d 4d b0 e8 a8 03 00 00 51 ff 76 4c 8d 4d b0 ff 76 48 6a 48 5a e8 7e 00 00 00 8b 4d b0 8b 55 b4 8d 45 f8 50 8d 45 fc 81 c1 00 04 00 00 50 03 cf e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule Virus_Win32_Ursnif_C_2147692817_0
         $x_5_5 = "minicheck: %s" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

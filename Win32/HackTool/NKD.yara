@@ -21,6 +21,7 @@ rule HackTool_Win32_NKD_A_2147642141_0
         $x_1_7 = "-style lic loader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

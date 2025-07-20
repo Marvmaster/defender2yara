@@ -16,6 +16,7 @@ rule Trojan_Win64_T1134_005_SidHistoryInjection_A_2147846087_0
         $x_10_2 = "kerberos::golden" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

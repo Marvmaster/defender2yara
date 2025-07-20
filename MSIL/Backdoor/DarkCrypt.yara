@@ -20,6 +20,7 @@ rule Backdoor_MSIL_DarkCrypt_2147750581_0
         $x_1_5 = "set_UserCannotChangePassword" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

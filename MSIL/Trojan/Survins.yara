@@ -23,6 +23,7 @@ rule Trojan_MSIL_Survins_A_2147696411_0
         $x_1_9 = "http://pushcloud.org/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

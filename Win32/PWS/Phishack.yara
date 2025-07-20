@@ -16,6 +16,7 @@ rule PWS_Win32_Phishack_C_2147697471_0
         $x_1_2 = ".soulstream.ru" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

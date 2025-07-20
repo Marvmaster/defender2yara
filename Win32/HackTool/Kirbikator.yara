@@ -23,6 +23,7 @@ rule HackTool_Win32_Kirbikator_2147740618_0
         $x_1_9 = "gentilkiwi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

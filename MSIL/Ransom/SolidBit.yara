@@ -17,6 +17,7 @@ rule Ransom_MSIL_SolidBit_N_2147828494_0
         $x_1_2 = "$0ffa93b9-6bcb-4446-b298-f61986b78462" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Bublik_AP_2147839927_0
         $x_1_2 = {49 32 49 34 00 00 00 ed 94 f3 a7 d1 02 63 4a b3 90 21 98 bb 98 96 b5 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Bublik_GZX_2147907106_0
         $x_5_2 = {66 d3 d1 80 ea 8d 32 da f6 dd 66 ff c9}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Bublik_GZN_2147909743_0
         $x_1_2 = "feZvgPtdvv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Bublik_AYA_2147937394_0
         $x_2_1 = {53 8d 1c 3e 29 f2 8b cb e8 e9 ff ff ff 89 f2 89 f9 e8 e0 ff ff ff 33 c0 09 f6 74 11 8a 14 03 8a 0c 38 88 14 38 88 0c 03 40 39 f0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

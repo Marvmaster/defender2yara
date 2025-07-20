@@ -19,6 +19,7 @@ rule Virus_Win32_Sivis_YAE_2147943237_0
         $x_10_4 = {68 14 00 00 00 68 00 00 00 00 68 b8 56 40 00 e8 fc 0f 00 00 83 c4 ?? 68 00 00 00 00 e8 f5 0f 00 00 a3 bc 56 40 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

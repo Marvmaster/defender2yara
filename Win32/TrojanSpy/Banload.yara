@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Banload_ZEK_2147689283_0
         $x_1_8 = {41 74 75 61 6c 69 7a 61 c3 a7 c3 a3 6f 20 64 65 20 53 65 67 75 72 61 6e c3 a7 61 20 2d 20 48 53 42 43 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule TrojanSpy_Win32_Banload_AAA_2147729975_0
         $x_1_6 = "RGlzcGxheVZlcnNpb24=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

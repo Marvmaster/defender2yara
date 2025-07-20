@@ -18,6 +18,7 @@ rule Backdoor_Win32_FlawedAmmyy_A_2147727848_0
         $x_1_3 = "%s\\Microsoft Help\\wsus.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_Win32_FlawedAmmyy_C_2147741474_0
         $x_1_6 = "C:\\Windows\\System32\\msiexec.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*))) or
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -70,6 +72,7 @@ rule Backdoor_Win32_FlawedAmmyy_GG_2147742094_0
         $x_1_1 = {83 c0 01 89 85 ?? ?? ?? ?? 8b 4d bc c1 e9 ?? 39 8d [0-19] 8b 0c 90 [0-51] 33 95 [0-13] 2d ?? ?? ?? ?? ?? ?? ?? c1 85 ?? ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 33 8d ?? ?? ?? ?? 89 8d ?? ?? ?? ?? 8b 95 ?? ?? ?? ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 89 0c 90 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Backdoor_Win32_FlawedAmmyy_GA_2147742095_0
         $x_1_1 = {8b 45 e4 c1 e8 ?? 39 45 [0-9] 8b 04 8a [0-50] 33 [0-23] c1 85 [0-11] 33 [0-11] 8b 4d ?? 8b ?? ?? ?? ?? ?? ?? ?? ?? 89}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

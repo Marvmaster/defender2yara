@@ -20,6 +20,7 @@ rule Trojan_Win32_Iflar_C_2147623147_0
         $x_1_5 = {53 79 73 74 65 6d 44 65 6c 65 74 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -45,6 +46,7 @@ rule Trojan_Win32_Iflar_18068_0
         $x_1_2 = {50 8d 45 f0 68 ?? ?? ?? 00 50 e8 ?? ?? 01 00 83 c4 14 ff 75 f0 53 6a 01 53 ff 15 ?? ?? ?? 00 83 f8 ff 89 86 ?? 01 00 00 75 08 88 9e ?? 01 00 00 eb 07 c6 86 ?? 01 00 00 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Iflar_18068_1
         $x_1_2 = {50 8d 45 f0 68 ?? ?? ?? 00 50 e8 ?? ?? 01 00 83 c4 14 ff 75 f0 53 6a 01 53 ff 15 ?? ?? ?? 00 83 f8 ff 89 86 ?? (01|02) 00 00 75 08 88 9e ?? 01 00 00 eb 07 c6 86 ?? 01 00 00 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

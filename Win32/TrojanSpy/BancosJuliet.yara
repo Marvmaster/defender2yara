@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_BancosJuliet_2147690992_0
         $x_1_2 = "\\BHOBJ\\flash" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

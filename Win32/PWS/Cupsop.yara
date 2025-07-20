@@ -16,6 +16,7 @@ rule PWS_Win32_Cupsop_A_2147610968_0
         $x_1_2 = {75 5e 80 7e 05 02 75 58 8a 56 0c 8d 46 0c 84 d2 74 4e 33 c9 80 fa 2f 74 07 41 80 3c 08 2f 75 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule PWS_Win32_Cupsop_B_2147611047_0
         $x_4_6 = {c8 cb ce ef 31 b5 c8 bc b6 3a 20 00}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             ((3 of ($x_4_*))) or

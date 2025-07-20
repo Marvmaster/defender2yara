@@ -20,6 +20,7 @@ rule Ransom_MSIL_TankRansom_SK_2147944110_0
         $x_1_5 = "C:/Windows/Warning.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_MSIL_TankRansom_SL_2147944227_0
         $x_2_5 = "/k taskkill /f /im AvastUI.exe && exit" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_MSIL_TankRansom_SM_2147944391_0
         $x_2_5 = "Don't try to kill ransomware - Your PC will burn" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Ransom_MSIL_TankRansom_SN_2147944877_0
         $x_2_5 = "Tanki X Ransomware 2.0\\obj\\Debug\\Tanki X Ransomware 2.0.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

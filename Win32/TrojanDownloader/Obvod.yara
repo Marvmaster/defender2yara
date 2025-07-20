@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Obvod_A_2147610911_0
         $x_1_9 = "http://%s/rjsa/select.php?a=%s&b=%d&c=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -54,6 +55,7 @@ rule TrojanDownloader_Win32_Obvod_C_2147616234_0
         $x_1_9 = "rjsa/select.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -91,6 +93,7 @@ rule TrojanDownloader_Win32_Obvod_D_2147616236_0
         $x_1_11 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 4 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_4_*) and 5 of ($x_2_*))) or
@@ -130,6 +133,7 @@ rule TrojanDownloader_Win32_Obvod_H_2147645986_0
         $x_1_3 = {88 8e 00 01 00 00 88 8e 01 01 00 00 33 ff 8b c1 33 db 99 f7 7c 24 1c 8a 1c 31 8a 04 2a 03 c3 03 c7 25 ff 00 00 00 41 8b f8 81 f9 00 01 00 00 8a 14 37 88 54 31 ff 88 1c 37 7c d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +156,7 @@ rule TrojanDownloader_Win32_Obvod_K_2147655473_0
         $x_1_3 = {88 8e 00 01 00 00 88 8e 01 01 00 00 33 ff 8b c1 33 db 99 f7 7c 24 1c 8a 1c 31 8a 04 2a 03 c3 03 c7 25 ff 00 00 00 41 8b f8 81 f9 00 01 00 00 8a 14 37 88 54 31 ff 88 1c 37 7c d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +180,7 @@ rule TrojanDownloader_Win32_Obvod_M_2147679214_0
         $x_1_4 = {2e 70 68 70 3f 61 3d 25 73 26 62 3d 25 64 26 63 3d 25 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

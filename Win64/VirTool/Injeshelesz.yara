@@ -19,6 +19,7 @@ rule VirTool_Win64_Injeshelesz_A_2147924242_0
         $x_1_4 = {48 8b 0d ba a8 00 00 8b 15 a8 a8 00 00 48 8b 05 7d 68 00 00 49 89 c9 41 89 d0 48 89 c2 [0-18] 48 8b 05 91 a8 00 00 ba ff ff ff ff 48 89 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule PWS_Win32_Smiwil_A_2147629862_0
         $x_2_11 = {66 74 70 20 2d 6e 20 2d 73 3a 74 65 6d 70 [0-4] 2e 72 61 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or

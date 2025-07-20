@@ -18,6 +18,7 @@ rule HackTool_Linux_NetSpy_B_2147893576_0
         $x_1_3 = {48 89 ce 48 8d 05 a9 e8 01 00 e8 a4 ba df ff 48 8d 05 fd e0 03 00 e8 b8 56 df ff 48 89 84 24 e8 00 00 00 48 c7 40 08 04 00 00 00 48 8b 54 24 30 48 89 50 10 83 3d 88 f2 28 00 00 75 0d 48 8b 8c 24 88 01 00 00 48 89 08 eb 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

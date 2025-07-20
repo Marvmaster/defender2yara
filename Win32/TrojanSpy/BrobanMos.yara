@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_BrobanMos_A_2147695243_0
         $x_1_4 = "resources/firefoxext/data/background.jsPK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule Trojan_Win32_Killfiles_A_2147600531_0
         $x_10_10 = "@del C:\\windows\\SYSTEM32\\*.com" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*))) or
             (all of ($x*))
@@ -67,6 +68,7 @@ rule Trojan_Win32_Killfiles_EG_2147605033_0
         $x_20_20 = {55 89 e5 83 ec 08 83 e4 f0 b8 00 00 00 00 83 c0 0f 83 c0 0f c1 e8 04 c1 e0 04 89 45 fc 8b 45 fc e8 ?? ?? 00 00 e8 ?? ?? 00 00 c7 04 24 ?? ?? 40 00 e8 ?? ?? 00 00 c7 04 24 ?? ?? 40 00 e8 ?? ?? 00 00 c7 04 24 ?? ?? 40 00 e8 ?? ?? 00 00 c7 04 24 ?? ?? 40 00}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -94,6 +96,7 @@ rule Trojan_Win32_Killfiles_RZ_2147608090_0
         $x_3_5 = " C-A-R-D-S - I-T-A-" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_3_*))) or
             ((2 of ($x_4_*) and 1 of ($x_3_*))) or
@@ -121,6 +124,7 @@ rule Trojan_Win32_Killfiles_U_2147612081_0
         $x_1_4 = {64 3a 5c 70 72 6f 67 73 5c 67 62 7a 69 6e 68 6f 5c 6f 62 6a 63 68 6b [0-10] 5c 69 33 38 36 5c 44 72 69 76 65 72 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -146,6 +150,7 @@ rule Trojan_Win32_Killfiles_AN_2147627037_0
         $x_1_3 = {6a 00 6a 00 68 00 b0 00 00 53 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +181,7 @@ rule Trojan_Win32_Killfiles_BI_2147627213_0
         $x_2_11 = "Kill.bat" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 7 of ($x_1_*))) or
             ((3 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -201,6 +207,7 @@ rule Trojan_Win32_Killfiles_BI_2147627213_1
         $x_1_2 = {c7 45 fc 1d 00 00 00 8d 4d cc 89 8d 00 ff ff ff c7 85 f8 fe ff ff 08 40 00 00 6a 00 8d 95 f8 fe ff ff 52}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +232,7 @@ rule Trojan_Win32_Killfiles_ET_2147627549_0
         $x_1_5 = {67 00 62 00 70 00 73 00 76 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -247,6 +255,7 @@ rule Trojan_Win32_Killfiles_CG_2147642073_0
         $x_1_3 = "start %windir%\\System32\\rundll32.exe user32.dll, LockWorkStation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -267,6 +276,7 @@ rule Trojan_Win32_Killfiles_CX_2147654578_0
         $x_1_1 = {64 65 6c 20 2f 66 20 2f 73 20 2f 71 20 25 73 79 73 74 65 6d 64 72 69 76 65 25 2a 2e ?? ?? ?? [0-16] 63 6f 6c 6f 72 20 31 66 [0-16] 54 69 74 6c 65 20 d5 e2 ca c7 b2 a1 b6 be 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -289,6 +299,7 @@ rule Trojan_Win32_Killfiles_EE_2147718584_0
         $x_1_3 = {0f 94 c0 84 c0 75 c8 b8 00 00 00 00 c9 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

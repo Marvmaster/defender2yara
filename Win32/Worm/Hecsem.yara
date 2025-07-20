@@ -19,6 +19,7 @@ rule Worm_Win32_Hecsem_A_2147616934_0
         $x_1_4 = {73 6d 63 63 00 00 00 00 6e 6f 74 65 70 61 64 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

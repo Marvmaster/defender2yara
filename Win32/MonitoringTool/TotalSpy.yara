@@ -24,6 +24,7 @@ rule MonitoringTool_Win32_TotalSpy_17559_0
         $x_1_10 = "GetKeyNameTextA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule MonitoringTool_Win32_TotalSpy_17559_1
         $x_1_8 = "Appiyvz&eSly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -81,6 +83,7 @@ rule MonitoringTool_Win32_TotalSpy_17559_2
         $x_1_7 = "Invisible monitoring is starting." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

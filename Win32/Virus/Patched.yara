@@ -16,6 +16,7 @@ rule Virus_Win32_Patched_C_2147612054_0
         $x_1_2 = {66 81 e2 00 f0 81 ea 00 10 00 00 e8 04 00 00 00 e8 00 00 00 83 c4 04 66 81 3a 4d 5a 75 e2 8b c2 03 52 3c 80 3a 50 75 d8 80 7a 01 45 75 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

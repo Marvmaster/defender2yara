@@ -19,6 +19,7 @@ rule Backdoor_Linux_Winnti_A_2147735867_0
         $x_1_4 = "HIDE_THIS_SHELL=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_Linux_Winnti_B_2147735868_0
         $x_1_4 = "socket:[%d]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

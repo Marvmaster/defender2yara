@@ -17,6 +17,7 @@ rule Trojan_Win64_XDRKillRustz_A_2147918681_0
         $x_1_2 = {56 48 83 ec 20 4c 89 c0 48 89 ce 49 81 f9 ff ff ff 7f 41 b8 ff ff ff 7f 4d 0f 42 c1 48 8b 0a 48 89 c2 45 31 c9 ff 15 15 5b 04 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

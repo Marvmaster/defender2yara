@@ -26,6 +26,7 @@ rule Ransom_Win64_Nova_MA_2147850246_0
         $x_1_11 = "The virus has the ability to self-destruct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

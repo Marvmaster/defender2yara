@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Androm_CRXM_2147850226_0
         $x_1_2 = "https://bayanbox.ir/download/999186621158258122/Shellcode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Androm_ARA_2147911040_0
         $x_2_2 = "Shellcode Downloader" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule PWS_Win32_Fignotok_A_2147627036_0
         $x_1_9 = "?action=add&a=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule PWS_Win32_Fignotok_I_2147648734_0
         $x_1_2 = {2c 30 80 eb 30 88 5d ?? b3 0a f6 eb 80 ea 30 02 c2 8a d3 f6 ea c1 e9 02 2a 84 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule PWS_Win32_Fignotok_K_2147655631_0
         $x_1_4 = {8b f0 8d 78 01 c1 e6 02 31 7d f4 89 84 35 f4 fb ff ff 99 f7 7d f8 8b 45 10 0f be 04 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_NjRAT_A_2147917666_0
         $x_2_2 = {f5 00 00 00 00 f5 ff ff ff ff f5 01 00 00 00 f5 00 00 00 00 1b 04 00 80 0c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +80,7 @@ rule Trojan_Win32_NjRAT_SAC_2147943377_0
         $x_1_8 = {54 45 4d 50 5c [0-20] 2e 74 6d 70 5c [0-20] 2e 74 6d 70 5c 65 78 74 64 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             (all of ($x*))

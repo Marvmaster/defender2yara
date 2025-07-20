@@ -16,6 +16,7 @@ rule Ransom_Win64_Donimo_PA_2147845432_0
         $x_1_1 = {49 63 c1 4c 8d 1d ?? ?? ?? ?? 42 8a 04 18 32 04 11 88 02 41 8d 41 01 25 0f 00 00 80 7d ?? ff c8 83 c8 f0 ff c0 48 ff c2 44 8b c8 49 ff ca 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

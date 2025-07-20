@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_WinDots_2147799796_0
         $x_1_6 = "{900F4412-C5F4-4B5C-BF5D-F73D5D458B9B}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

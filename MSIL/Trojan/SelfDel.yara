@@ -18,6 +18,7 @@ rule Trojan_MSIL_SelfDel_SG_2147904338_0
         $x_1_3 = "adsbc.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_SelfDel_SGA_2147907025_0
         $x_1_2 = "Klis.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_MSIL_SelfDel_ND_2147923390_0
         $x_1_4 = "msinfo32.g.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_MSIL_SelfDel_NS_2147928606_0
         $x_1_3 = "newFrontTools.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_MSIL_SelfDel_GTN_2147935811_0
         $x_10_1 = {08 09 91 72 ?? ?? ?? 70 28 ?? ?? ?? 0a 5d 13 04 06 09 72 ?? ?? ?? 70 11 04 28 ?? ?? ?? 0a 9d 09 17 58 0d 09 02 32 d9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

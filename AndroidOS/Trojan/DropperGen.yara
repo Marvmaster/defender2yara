@@ -17,6 +17,7 @@ rule Trojan_AndroidOS_DropperGen_A_2147787316_0
         $x_1_3 = {79 23 03 70 83 70 78 23 c3 70 73 23 03 71 6d 23 43 71 70 23 83 71 67 23 c3 71 76 23 03 72 6b 23 83 72 6a 23 68 22 c3 72 66 23 42 70 03 73 72 22 83 73 62 23 c3 73 80 21 42 72 42 73 04 aa ?? ?? ?? fd 11 20 ?? ?? ?? ec 2d 4c 00 21 11 22 02 90 01 03 ec a8 1c 02 99 04 aa ?? ?? ?? f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

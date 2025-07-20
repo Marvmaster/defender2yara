@@ -17,6 +17,7 @@ rule TrojanDropper_Win64_PermanentWhiteboard_A_2147939637_0
         $x_1_2 = {41 bf 00 28 00 00 41 be ff 03 00 00 41 bc 00 24 00 00 0f b7 d1 41 8d 04 0f 66 41 3b c6 77 ?? 8b fa c1 e7 0a 81 ef 00 00 5f 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

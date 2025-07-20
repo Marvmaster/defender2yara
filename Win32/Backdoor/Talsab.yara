@@ -20,6 +20,7 @@ rule Backdoor_Win32_Talsab_A_2147627796_0
         $x_1_6 = {41 70 70 44 61 74 61 00 [0-10] 46 6f 6e 74 73 00 [0-10] 53 65 6e 64 54 6f 00 [0-10] 52 65 63 65 6e 74 00 [0-10] 46 61 76 6f 72 69 74 65 73 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -48,6 +49,7 @@ rule Backdoor_Win32_Talsab_B_2147627820_0
         $x_2_5 = {5c 53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 45 78 70 6c 6f 72 65 72 5c 53 68 65 6c 6c 20 46 6f 6c 64 65 72 73 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 41 70 70 44 61 74 61 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Backdoor_Win32_Talsab_B_2147637347_0
         $x_1_5 = {7c 44 49 52 23 30 23 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -99,6 +102,7 @@ rule Backdoor_Win32_Talsab_C_2147643217_0
         $x_1_5 = {77 00 00 00 ff ff ff ff 01 00 00 00 61 00 00 00 ff ff ff ff 01 00 00 00 72 00 00 00 ff ff ff ff 01 00 00 00 64 00 00 00 ff ff ff ff 01 00 00 00 6f 00 00 00 ff ff ff ff 01 00 00 00 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -127,6 +131,7 @@ rule Backdoor_Win32_Talsab_E_2147665965_0
         $x_1_6 = "del sys.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +155,7 @@ rule Backdoor_Win32_Talsab_F_2147665966_0
         $x_1_4 = {00 6e 74 6c 64 72 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule Backdoor_Win32_Talsab_G_2147665967_0
         $x_1_3 = {00 6e 74 6c 64 72 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -193,6 +200,7 @@ rule Backdoor_Win32_Talsab_H_2147665968_0
         $x_1_2 = {6e 74 6c 64 72 2e 64 6c 6c 00 00 00 79 6f 6b 6c 61 6d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +224,7 @@ rule Backdoor_Win32_Talsab_D_2147665969_0
         $x_1_4 = {b8 68 58 4d 56 bb 00 00 00 00 b9 0a 00 00 00 ba ?? ?? ?? ?? ed 81 fb 68 58 4d 56 0f 94 45 ff 5b 59 5a 33 c0 5a 59 59 64 89 10 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

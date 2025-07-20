@@ -21,6 +21,7 @@ rule Trojan_MSIL_Dotdo_AA_2147794050_0
         $x_3_6 = "DebuggingModes" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

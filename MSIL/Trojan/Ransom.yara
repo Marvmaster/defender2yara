@@ -18,6 +18,7 @@ rule Trojan_MSIL_Ransom_BSG_2147814416_0
         $x_100_3 = "Ooops, looks like you got the Virus!" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Besometri_2147706572_0
         $x_1_4 = {b8 83 9a 37 2f f7 e9 8b c1 c1 f8 1f c1 fa 0d 2b d0 69 c2 7f ad 00 00 2b c8 75 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

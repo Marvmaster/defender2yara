@@ -20,6 +20,7 @@ rule Trojan_Win32_Iyeclore_A_2147627163_0
         $x_10_5 = {54 65 6e 63 65 6e 74 20 54 72 61 76 65 6c 65 72 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Trojan_Win32_Iyeclore_A_2147627164_0
         $x_1_4 = "frm_IExplcreMain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_Iyeclore_C_2147709404_0
         $x_1_2 = {8b 45 fc 8b 08 ff 51 ?? ba ?? ?? ?? ?? 8b 45 fc 8b 08 ff 51 ?? ba ?? ?? ?? ?? 8b 45 fc 8b 08 ff 51}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_Iyeclore_GMQ_2147892855_0
         $x_1_2 = "$Iexplcre" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

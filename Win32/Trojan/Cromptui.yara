@@ -17,6 +17,7 @@ rule Trojan_Win32_Cromptui_A_2147646264_0
         $x_1_3 = {6a 50 50 55 ff 54 24 70 6a 00 8b c8 6a 00 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Cromptui_B_2147654497_0
         $x_1_10 = "if exist \"C:\\TEMP\\\\adobeupd.exe\" del /q \"C:\\TEMP\\\\adobeupd.exe\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

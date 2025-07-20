@@ -28,6 +28,7 @@ rule Trojan_Win32_Kolweb_L_2147599929_0
         $x_1_14 = "settings.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_20_*) and 7 of ($x_1_*))) or
             ((5 of ($x_20_*))) or
@@ -56,6 +57,7 @@ rule Trojan_Win32_Kolweb_M_2147602549_0
         $x_1_5 = {33 c0 89 45 fc 8b 45 0c 3d fd 00 00 00 7f 25 0f 84 76 01 00 00 83 e8 66 74 3a 83 e8 0b 74 57 2d 89 00 00 00 74 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +85,7 @@ rule Trojan_Win32_Kolweb_P_2147603115_0
         $x_1_8 = "piffile\\shell\\Open\\Command" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +107,7 @@ rule Trojan_Win32_Kolweb_Q_2147623107_0
         $x_1_2 = {83 e8 10 74 ?? 83 e8 10 74 ?? e9 ?? ?? 00 00 33 c0 89 44 24 08 8d 44 24 08 50 68 7f 66 04 40 8b 46 28 50 e8 ?? ?? ff ff 8b d0 8b c6 e8 ?? ?? ff ff 66 c7 04 24 03 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

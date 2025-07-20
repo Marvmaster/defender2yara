@@ -19,6 +19,7 @@ rule TrojanDownloader_MSIL_Vomsaload_A_2147696017_0
         $x_1_5 = "8rKoGXkRG3M88Up/LUywOOX9gGzLhIsSc5ywAFIFc+T9ybdFz66+st9e6OvWcfq5" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

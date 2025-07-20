@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_FlawedAmmyy_A_2147746154_0
         $x_1_4 = {68 74 74 70 3a 2f 2f [0-32] 2f 64 61 74 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Deltdstar_A_2147621579_0
         $x_1_5 = {ff d7 68 bc 20 40 00 53 6a 00 ff 15 60 20 40 00 eb 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

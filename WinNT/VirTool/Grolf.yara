@@ -16,6 +16,7 @@ rule VirTool_WinNT_Grolf_A_2147624839_0
         $x_1_2 = {83 e8 05 89 43 01 c6 03 e9 8b c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

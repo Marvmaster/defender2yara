@@ -21,6 +21,7 @@ rule Ransom_Win32_Cring_AA_2147774327_0
         $x_1_6 = "Finished! :(" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -26,6 +26,7 @@ rule Backdoor_Win32_Tantixbot_2147582344_0
         $x_1_12 = ".sfversion" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_3_*) and 7 of ($x_1_*))) or

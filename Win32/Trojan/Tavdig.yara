@@ -19,6 +19,7 @@ rule Trojan_Win32_Tavdig_Crypt_2147914813_0
         $x_100_4 = "kAiCode" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

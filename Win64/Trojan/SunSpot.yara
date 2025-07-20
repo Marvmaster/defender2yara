@@ -18,6 +18,7 @@ rule Trojan_Win64_SunSpot_A_2147772528_0
         $n_10_3 = {57 6f 72 6c 64 20 6f ?? 20 57 61 72 63 72 61 66 74}  //weight: -10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -41,6 +42,7 @@ rule Trojan_Win64_SunSpot_B_2147772529_0
         $x_1_2 = {7b 35 36 33 33 31 65 34 64 2d 37 36 61 33 2d 30 33 39 30 2d 61 37 ?? 65 2d 35 36 37 61 64 66 35 38 33 36 62 37 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Trojan_Win64_SunSpot_C_2147772530_0
         $x_1_10 = {5b 25 64 5d 20 2b 20 27 25 73 ?? 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

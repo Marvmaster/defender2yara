@@ -18,6 +18,7 @@ rule Trojan_Win32_WinTools_14772_0
         $x_1_4 = "WToolsB.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_WinTools_14772_1
         $x_1_3 = {43 4c 53 49 44 5c 7b 00 ff ff ff ff 01 00 00 00 2d 00 00 00 ff ff ff ff 06 00 00 00 2d 42 32 33 44 2d 00 00 ff ff ff ff 01 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_WinTools_14772_2
         $x_1_5 = "CLSID\\{87067F04-DE4C-4688-BC3C-4FCF39D609E7}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_WinTools_14772_3
         $x_1_3 = "TBPS.exe /installskin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_Win32_WinTools_14772_4
         $x_1_9 = {41 5f 53 5f 56 5f 32 ?? 43 6c 6f 73 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 6 of ($x_1_*))) or
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -144,6 +149,7 @@ rule Trojan_Win32_WinTools_14772_5
         $x_1_7 = "</show_ad>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -178,6 +184,7 @@ rule Trojan_Win32_WinTools_14772_6
         $x_1_11 = "%c_hist%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 4 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_10_*) and 5 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -206,6 +213,7 @@ rule Trojan_Win32_WinTools_14772_7
         $x_1_5 = "Would you like restart your computer to make the change take effect?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -238,6 +246,7 @@ rule Trojan_Win32_WinTools_14772_8
         $x_1_13 = "AdSupportUnbreak" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_3_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*) and 3 of ($x_3_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -287,6 +296,7 @@ rule Trojan_Win32_WinTools_14772_9
         $x_1_5 = {68 74 74 70 3a 2f 2f 64 6f 77 6e 6c 6f 61 64 2e 77 65 62 73 65 61 72 63 68 2e 63 6f 6d 2f 54 62 [0-4] 49 6e 73 74 4c 6f 67 2e 61 73 6d 78 2f 47 65 74 58 4d 4c 3f 54 62 49 64 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -313,6 +323,7 @@ rule Trojan_Win32_WinTools_14772_10
         $x_1_7 = "WINTOOLS END-USER LICENSE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_4_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_4_*) and 1 of ($x_1_*))) or

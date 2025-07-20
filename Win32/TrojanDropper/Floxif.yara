@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Floxif_A_2147683334_0
         $x_1_3 = {68 80 0c 00 00 68 ?? 00 02 10 e8 ?? ?? ff ff 83 c4 08 6a 00 8d 55 f0 52 68 80 0c 00 00 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -17,6 +17,7 @@ rule Trojan_MSIL_ScnabrCrypt_A_2147838562_0
         $x_2_2 = {03 8e 69 8d ?? 00 00 01 13 04 09 11 04 16 11 04 8e 69 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

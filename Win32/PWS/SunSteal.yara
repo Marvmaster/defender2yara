@@ -21,6 +21,7 @@ rule PWS_Win32_SunSteal_A_2147596431_0
         $x_3_7 = "%s?rl=%d&s=%d&u=%s&p=%s&sp=%s&r=%s&l=%d&ml=%d&mh=%d" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

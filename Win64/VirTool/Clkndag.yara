@@ -18,6 +18,7 @@ rule VirTool_Win64_Clkndag_A_2147912949_0
         $x_1_4 = "syscall.GetCurrentProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Uitlotex_A_2147634551_0
         $x_1_5 = {7e 33 bb 01 00 00 00 8d 45 f4 8b 55 fc 0f b6 54 1a ff 2b d3 83 ea 46 e8 ?? ?? ?? ?? 8b 55 f4 8d 45 f8 e8 ?? ?? ?? ?? 8b c7 8b 55 f8 e8 ?? ?? ?? ?? 43 4e 75 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

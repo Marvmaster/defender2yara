@@ -19,6 +19,7 @@ rule Ransom_Win64_BlackLock_GKP_2147943767_0
         $x_1_4 = ".onion/chat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

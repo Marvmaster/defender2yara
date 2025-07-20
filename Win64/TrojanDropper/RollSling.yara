@@ -17,6 +17,7 @@ rule TrojanDropper_Win64_RollSling_A_2147892514_0
         $x_100_2 = "-09C7-886E-II7F-" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

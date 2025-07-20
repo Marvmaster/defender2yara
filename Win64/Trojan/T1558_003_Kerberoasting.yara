@@ -15,6 +15,7 @@ rule Trojan_Win64_T1558_003_Kerberoasting_A_2147846081_0
         $x_10_1 = "kerberos::ask" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Liona_A_2147831846_0
         $x_2_1 = {04 07 91 20 55 03 00 00 59 d2 9c 00 07 17 58 0b 07 7e ?? 00 00 04 8e 69 fe 04 0c 08 2d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

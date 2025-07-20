@@ -17,6 +17,7 @@ rule Trojan_Win32_ProcessHijack_PA_2147743874_0
         $x_1_2 = {b9 41 06 00 00 e8 00 00 00 00 5b 83 c3 10 93 81 30 6b af 89 1d 83 c0 04 e2 f5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_ProcessHijack_GTM_2147939658_0
         $x_5_2 = {8b 45 e4 8b 48 54 8b 45 08 8b 10 8b 45 e4 8b 40 34 89 c3 8b 45 8c c7 44 24 10 00 00 00 00 89 4c 24 0c 89 54 24 08 89 5c 24 04 89 04 24}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

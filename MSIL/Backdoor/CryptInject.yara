@@ -20,6 +20,7 @@ rule Backdoor_MSIL_CryptInject_2147742598_0
         $x_1_5 = "DXOR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Backdoor_MSIL_CryptInject_2147742598_1
         $x_1_4 = {fe 0e 00 00 fe 0c 00 00 20 00 28 ?? 00 00 06 28 ?? 00 00 0a 28 ?? 00 00 0a fe 0e 00 00 fe 0c 00 00 28 ?? 00 00 06 dd 06 00 00 00 26 dd 00 00 00 00 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Ransom_Win32_MedusaLocker_PA_2147744349_0
         $x_1_6 = "MedusaLocker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win32_MedusaLocker_PA_2147744349_1
         $x_1_4 = "vssadmin.exe Delete Shadows /All /Quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_Win32_MedusaLocker_MK_2147763536_0
         $x_1_5 = "wmic.exe SHADOWCOPY /nointeractive" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +109,7 @@ rule Ransom_Win32_MedusaLocker_B_2147764776_0
         $x_1_16 = "Recovery_Instructions.html" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule Ransom_Win32_MedusaLocker_DA_2147767271_0
         $x_1_1 = {8b 8d 1c ff ff ff 83 c1 ?? 89 8d ?? ?? ?? ?? 8b 95 01 3b 95 ?? ?? ?? ?? 74 37 8b 85 01 50 8d 8d ?? ?? ?? ?? e8 50 1c 00 00 8d 8d ?? ?? ?? ?? 51 e8 34 b6 ff ff 83 c4 04 50 8d 4d fb e8 18 86 01 00 8d 8d ?? ?? ?? ?? e8 8d 19 00 00 eb ac}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +155,7 @@ rule Ransom_Win32_MedusaLocker_PB_2147845497_0
         $x_1_3 = {33 d2 8b c1 f7 75 ?? 8a 04 31 81 c2 ?? ?? ?? ?? 32 02 8b 55 ?? 88 04 11 41 8b 75 ?? 3b cf 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +180,7 @@ rule Ransom_Win32_MedusaLocker_AA_2147893941_0
         $x_1_4 = "MEDUSA DECRYPTOR and DECRYPTION KEYs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +208,7 @@ rule Ransom_Win32_MedusaLocker_AA_2147893941_1
         $x_1_7 = "stub_win_x64_encrypter.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -223,6 +231,7 @@ rule Ransom_Win32_MedusaLocker_PC_2147899806_0
         $x_1_2 = {8b c6 8a 0c 31 33 d2 f7 75 ?? 8b 45 ?? 32 8a ?? ?? ?? ?? 88 0c 30 46 8b 4d ?? 3b f7 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -248,6 +257,7 @@ rule Ransom_Win32_MedusaLocker_PD_2147900657_0
         $x_1_5 = "EncryptedExtension\": \".LATCHNETWORK3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

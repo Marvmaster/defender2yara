@@ -19,6 +19,7 @@ rule Trojan_Win32_Avkill_E_2147637568_0
         $x_1_5 = {74 61 73 6b 6b 69 6c 6c 20 2f 66 20 2f 69 6d 20 52 61 76 2e 65 78 65 00 74 61 73 6b 6b 69 6c 6c 20 2f 66 20 2f 69 6d 20 52 61 76 6d 6f 6e 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Avkill_S_2147655155_0
         $x_1_4 = {15 00 00 00 5a 77 53 79 73 74 65 6d 44 65 62 75 67 43 6f 6e 74 72 6f 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_Avkill_A_2147686478_0
         $x_100_7 = {4e 74 43 72 65 61 74 65 50 61 67 69 6e 67 46 69 6c 65 00}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 2 of ($x_10_*))) or
             (all of ($x*))
@@ -104,6 +107,7 @@ rule Trojan_Win32_Avkill_B_2147686479_0
         $x_50_12 = {4d 63 41 66 65 65 00}  //weight: 50, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_10_*))) or
             ((2 of ($x_50_*))) or

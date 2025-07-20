@@ -23,6 +23,7 @@ rule Trojan_Win32_Stecred_A_2147734622_0
         $x_1_9 = "installed_software.browsers" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

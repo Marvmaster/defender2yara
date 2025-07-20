@@ -20,6 +20,7 @@ rule Trojan_Win32_Spyagsafib_R_2147899225_0
         $x_1_5 = "InnoSetupLdrWindow" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

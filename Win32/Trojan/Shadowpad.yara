@@ -16,6 +16,7 @@ rule Trojan_Win32_Shadowpad_AMMF_2147917716_0
         $x_1_1 = {32 c1 88 02 8b c1 e8 ?? ?? ?? ?? 89 45 fc 8b c1 e8 ?? ?? ?? ?? 03 45 fc e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 42 [0-5] 8b c8 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

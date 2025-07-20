@@ -17,6 +17,7 @@ rule Backdoor_Win32_Spycos_D_2147653798_0
         $x_1_3 = {63 6c 69 65 6e 74 65 3d [0-32] 6d 65 6e 73 61 67 65 6d 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_Win32_Spycos_A_2147655451_0
         $x_1_7 = "UKDBe1ZP5sFqt0okCjWgUb3rF6XWR5Ev9pOMvQcQ15w=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Backdoor_Win32_Spycos_B_2147655614_0
         $x_10_8 = {43 83 fb 29 0f 85 79 ff ff ff}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_10_*))) or

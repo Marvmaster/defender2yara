@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Momole_2147723614_0
         $x_1_2 = {02 47 02 66 0f fc ea 0f f8 c4 0f ec eb ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

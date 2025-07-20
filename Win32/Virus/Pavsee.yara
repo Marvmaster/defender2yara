@@ -17,6 +17,7 @@ rule Virus_Win32_Pavsee_A_2147624052_0
         $x_1_2 = {ff ff 66 c7 85 ?? ?? ff ff ?? ?? 66 c7 85 ?? ?? ff ff ?? ?? 66 89 b5 ?? ?? ff ff 8d bd fc ?? ?? ff f3 ab 59 66 c7 85 ?? ?? ff ff 77 00 66 c7 85 ?? ?? ff ff 77 00 66 c7 85 ?? ?? ff ff 77 00 66 89 95 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

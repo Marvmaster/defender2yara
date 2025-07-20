@@ -17,6 +17,7 @@ rule Trojan_Win32_Subsys_A_2147616300_0
         $x_1_2 = {55 8b ec 64 a1 18 00 00 00 8b c8 64 a1 30 00 00 00 39 41 30 75 05 e8 ?? ?? ff ff 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

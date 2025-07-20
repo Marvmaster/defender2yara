@@ -16,6 +16,7 @@ rule Trojan_Win32_McRat_2147816564_0
         $x_1_1 = {2b ce bf 07 07 00 00 8a 14 01 80 f2 [0-1] 88 10 40 4f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

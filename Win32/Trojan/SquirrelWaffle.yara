@@ -23,6 +23,7 @@ rule Trojan_Win32_SquirrelWaffle_ES_2147794051_0
         $x_3_8 = "OutputDebugStringA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_SquirrelWaffle_EM_2147794052_0
         $x_3_6 = "Dll1.pdb" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_SquirrelWaffle_B_2147794258_0
         $x_1_4 = "lazaret.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_Win32_SquirrelWaffle_DA_2147794670_0
         $x_1_5 = "Equalcry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Trojan_Win32_SquirrelWaffle_DB_2147794671_0
         $x_1_2 = {0f b6 cb 66 8b c1 66 03 c0 66 03 c8 8b 44 24 ?? 05 98 89 0b 01 66 2b ce 83 6c 24 ?? 01 89 07 8b 7c 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

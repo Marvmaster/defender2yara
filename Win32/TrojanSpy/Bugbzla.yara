@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Bugbzla_PQ_2147742078_0
         $x_1_2 = "http://www.haibugmm.com/ba/yfctbzla" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Backdoor_MSIL_Nekozillot_A_2147724891_0
         $x_1_4 = "RisingForce2" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

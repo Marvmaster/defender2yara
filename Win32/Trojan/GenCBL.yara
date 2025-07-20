@@ -36,6 +36,7 @@ rule Trojan_Win32_GenCBL_SIB_2147780373_0
         $x_1_21 = "itd_filecount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 15 of ($x_1_*))) or
             ((3 of ($x_20_*))) or
@@ -68,6 +69,7 @@ rule Trojan_Win32_GenCBL_SIBA_2147781940_0
         $x_1_8 = "cmd.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -93,6 +95,7 @@ rule Trojan_Win32_GenCBL_AVY_2147794587_0
         $x_1_5 = "New Jersey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +120,7 @@ rule Trojan_Win32_GenCBL_AYG_2147798771_0
         $x_1_4 = "310924113846Z02100" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +142,7 @@ rule Trojan_Win32_GenCBL_PACU_2147900457_0
         $x_2_1 = {41 f6 d6 68 ac 1c 01 9e 41 80 f6 27 41 d0 ce 41 fe ce 41 80 f6 19 45 32 de 48 81 ee 02 00 00 00 66 44 89 36}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

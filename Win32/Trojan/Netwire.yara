@@ -18,6 +18,7 @@ rule Trojan_Win32_Netwire_PA_2147742474_0
         $x_1_3 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Netwire_PB_2147742631_0
         $x_1_1 = {8a 54 38 03 8a 0c 38 8a 5c 38 01 8a 6c 38 02 88 55 ?? c0 65 ?? ?? 8a 45 ff 24 ?? 0a c8 8a c2 c0 e0 06 80 e2 ?? 88 45 ?? 0a e8 8b 45 ?? c0 e2 ?? 0a d3 88 0c 06 88 54 06 01 83 c6 02 88 2c 06 81 fe ?? ?? 00 00 77 ?? [0-16] 8b 45 ?? 03 7d ?? 46 3b 3d ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Netwire_FW_2147742829_0
         $x_1_1 = {56 33 f6 85 ff 7e ?? 81 ff ?? ?? 00 00 75 ?? [0-4] ff 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 30 04 1e 46 3b f7 7c ?? 5e c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Netwire_PC_2147743343_0
         $x_1_2 = {83 c0 01 89 85 ?? ?? ff ff 83 bd ?? ?? ff ff ?? 73 38 8b 85 ?? ?? ff ff 33 d2 b9 ?? 00 00 00 f7 f1 8b 85 ?? ?? ff ff 0f be 0c 10 8b 95 ?? ?? ff ff 0f b6 84 15 ?? ?? ff ff 33 c1 8b 8d ?? ?? ff ff 88 84 0d ?? ?? ff ff eb 06 00 8b 85 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule Trojan_Win32_Netwire_PR_2147745090_0
         $x_1_2 = {8a 4d fe 8a 5d ff 8a d0 8a c4 34 2c 80 f2 df 80 f1 33 80 f3 35 3c 14 75 0e 80 f9 01 75 09 80 fa e9 75 04 84 db 74 09 8b 45 fc 40 89 45 fc eb d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +131,7 @@ rule Trojan_Win32_Netwire_AA_2147745598_0
         $x_1_2 = {8b c2 8d 8d 08 fd ff ff 83 e0 03 03 ca 83 c2 06 0f b6 44 05 f8 30 01 8d 04 0e 83 e0 03 0f b6 44 05 f8 30 41 01 8d 04 0f 83 e0 03 0f b6 44 05 f8 30 41 02 8d 04 0b 83 e0 03 0f b6 44 05 f8 30 41 03 8b 45 f4 03 c1 83 e0 03 0f b6 44 05 f8 30 41 04 8b 45 f0 03 c1 83 e0 03 0f b6 44 05 f8 30 41 05 81 fa e2 02 00 00 72 97}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_Win32_Netwire_AA_2147745598_1
         $x_1_17 = "Host.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +196,7 @@ rule Trojan_Win32_Netwire_AB_2147746022_0
         $x_1_6 = {0f b6 84 15 b4 f8 ff ff 0f b6 c9 03 c8 0f b6 c1 0f b6 84 05 b4 f8 ff ff 30 84 3d bc f9 ff ff 50 53 83 e8 50 33 d8 03 d8 83 e8 52 83 f3 17 33 d8 8b db 8b d8 83 e8 27 35 b6 00 00 00 33 db 2d b9 00 00 00 83 c0 56 33 db 83 c0 7a 81 c3 fb 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -210,6 +218,7 @@ rule Trojan_Win32_Netwire_GS_2147746100_0
         $x_1_1 = {ff 55 f4 53 8b 5d f8 8b f8 53 57 e8 ?? ?? ff ff 8b 4d 08 33 d2 8b c6 f7 75 0c 8a 04 0a ba ?? ?? 00 00 30 04 37 46 3b f2 72 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -236,6 +245,7 @@ rule Trojan_Win32_Netwire_RG_2147753017_0
         $x_1_6 = "KOuj1n1o1NLptei114" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -261,6 +271,7 @@ rule Trojan_Win32_Netwire_SU_2147753505_0
         $x_1_5 = "GUnnerBing" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -282,6 +293,7 @@ rule Trojan_Win32_Netwire_ZV_2147753838_0
         $x_1_1 = {85 c0 83 f6 00 83 f6 00 ad 83 f6 00 66 3d 6e 36 85 c0 66 3d 4c 41 85 c0 85 c0 66 83 f8 28 8b 1c 0f 66 3d d1 2f 85 c0 83 f6 00 83 f6 00 66 3d a6 bb 83 f6 00 66 3d 8d a0 85 c0 83 f6 00 85 c0 31 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -304,6 +316,7 @@ rule Trojan_Win32_Netwire_V_2147753922_0
         $x_1_2 = {8b c8 83 e1 [0-21] 8a 54 0d [0-21] 30 90 [0-21] 30 90 [0-21] 8b ce 83 e1 [0-21] 8a 4c 0d [0-21] 30 88 [0-21] 88 4d [0-21] 0f b6 55 [0-21] 30 90 [0-21] 8d 4e [0-21] 8d 79 [0-21] 83 e1 [0-21] 0f b6 4c 0d [0-21] 30 88 [0-21] 83 e7 [0-21] 8a 5c 3d [0-21] 30 98 [0-21] 83 c6 [0-21] 83 c0 [0-21] 81 fe [0-21] 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -330,6 +343,7 @@ rule Trojan_Win32_Netwire_VB_2147754010_0
         $x_1_6 = "cvJlEroaUJBAM0gsXk0l7HAEj0g7EXEu144" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +365,7 @@ rule Trojan_Win32_Netwire_B_2147799385_0
         $x_1_1 = {8b 55 08 8b 45 fc 2b 42 0c 6b c8 0c 51 8b 55 08 6b 42 0c 0c 8b 4d 08 03 01 50 8b 55 08 8b 42 0c 83 c0 40 6b c8 0c 8b 55 08 03 0a 51}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +388,7 @@ rule Trojan_Win32_Netwire_P_2147831071_0
         $x_1_2 = {90 8a 01 41 84 c0 75 f9 2b ca 8d 79 0a 81 ff 00 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -456,6 +472,7 @@ rule Trojan_Win32_Netwire_NEAD_2147843343_0
         $x_2_4 = "ConsoleApplication1.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -477,6 +494,7 @@ rule Trojan_Win32_Netwire_NEAE_2147843345_0
         $x_10_1 = {7d 34 40 0f b6 c0 8a 4c 04 10 01 ce 89 f2 0f b6 f2 0f b6 6c 34 10 89 ea 88 54 04 10 8b 54 24 0c 88 4c 34 10 01 e9 0f b6 c9 8a 4c 0c 10 30 0c 17 ff 44 24 0c eb c6}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -498,6 +516,7 @@ rule Trojan_Win32_Netwire_RPY_2147849964_0
         $x_1_1 = {0f b6 c0 31 c2 8b 45 ec 83 c0 0c 8b 00 31 d0 89 45 f0 8b 45 fc c1 e8 18 89 c2 8b 45 10 88 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -519,6 +538,7 @@ rule Trojan_Win32_Netwire_RPZ_2147849965_0
         $x_1_1 = {89 45 e4 8d 4d e4 80 75 e5 42 83 c4 04 80 75 e6 42 34 42 80 75 e7 42 88 45 e4 8b 45 dc 6a 00 6a 04 51 8b 40 04 8d 4d dc ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -542,6 +562,7 @@ rule Trojan_Win32_Netwire_MBHH_2147851613_0
         $x_1_3 = {e9 00 00 00 d4 29 40 00 c0 16 40 00 e8 13 40 00 78 00 00 00 82 00 00 00 8c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

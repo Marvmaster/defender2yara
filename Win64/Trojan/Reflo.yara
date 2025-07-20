@@ -17,6 +17,7 @@ rule Trojan_Win64_Reflo_GMA_2147889330_0
         $x_1_2 = "\\CRYPTOCOIN\\rootkit\\r77-rootkit-master_1.3.0\\r77-rootkit-master\\vs\\x64\\Release\\r77-x64.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_Reflo_NR_2147897387_0
         $x_1_2 = "Bewbodfe!Njdsp!Efwjdft" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win64_Reflo_HNS_2147905607_0
         $x_2_3 = "BQ8jggZci8dcigdaHZiQHZgk" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

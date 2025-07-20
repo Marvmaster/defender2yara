@@ -16,6 +16,7 @@ rule TrojanDropper_MSIL_Stetsorve_A_2147641956_0
         $x_1_2 = {2e 65 78 65 00 5f 4d 61 69 6e 00 43 4f 4c 44}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

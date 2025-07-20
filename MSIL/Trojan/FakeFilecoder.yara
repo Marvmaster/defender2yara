@@ -17,6 +17,7 @@ rule Trojan_MSIL_FakeFilecoder_AJB_2147832250_0
         $x_1_2 = "RemoteProcessKill.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_MSIL_FakeFilecoder_NFA_2147894989_0
         $x_1_8 = "ToBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Fsblock_A_2147669242_0
         $x_1_3 = {6f 70 3d cc d2 d1 3b ?? ?? 3b 6e 75 6d 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Fsblock_A_2147669242_1
         $x_1_3 = {70 69 6e 67 20 20 31 32 37 2e 30 2e 30 2e 31 [0-10] 64 65 6c [0-16] 64 65 6c 20 25 30 [0-5] 2e 62 61 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Fsblock_A_2147669242_2
         $x_1_6 = {6d 72 62 65 6c 79 61 73 68 6e 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or

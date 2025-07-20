@@ -17,6 +17,7 @@ rule Trojan_Win32_Killav_6492_0
         $x_1_3 = "Net Stop mcshield" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win32_Killav_CN_8053_0
         $x_1_12 = "\\svchmst.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             ((5 of ($x_10_*))) or
@@ -76,6 +78,7 @@ rule Trojan_Win32_Killav_CO_22427_0
         $x_1_5 = "\\avgupd.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -109,6 +112,7 @@ rule Trojan_Win32_Killav_KB_114614_0
         $x_1_14 = "watchdog.sys" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +135,7 @@ rule Trojan_Win32_Killav_KE_115672_0
         $x_1_3 = {64 65 6c 20 2f 51 20 22 43 3a 5c 50 72 6f 67 72 61 6d 20 46 69 6c 65 73 5c 43 6f 6d 6d 6f 6e 20 46 69 6c 65 73 5c 53 79 6d 61 6e 74 65 63 20 53 68 61 72 65 64 5c 2a 2e (64|65) 22}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -173,6 +178,7 @@ rule Trojan_Win32_Killav_FB_118717_0
         $x_1_23 = "tskill \"ZONEALARM\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 15 of ($x_1_*))) or
             (all of ($x*))
@@ -200,6 +206,7 @@ rule Trojan_Win32_Killav_EF_123696_0
         $x_1_5 = "OpenProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -231,6 +238,7 @@ rule Trojan_Win32_Killav_D_124866_0
         $x_10_12 = "%registro% \"HKLM\\software\\microsoft\\security center\" /v FirewallDisableNotify /t REG_DWORD /d 4 /f" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -267,6 +275,7 @@ rule Trojan_Win32_Killav_F_125231_0
         $x_1_14 = "symantec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -294,6 +303,7 @@ rule Trojan_Win32_Killav_C_127597_0
         $x_1_4 = {0c 00 00 00 49 43 53 55 50 50 4e 54 2e 45 58 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -324,6 +334,7 @@ rule Trojan_Win32_Killav_CZ_132415_0
         $x_1_11 = "[TAB]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -344,6 +355,7 @@ rule Trojan_Win32_Killav_P_133111_0
         $x_1_1 = {50 51 50 50 50 50 68 04 80 22 00 ff 75 f8 ff 15 ?? ?? ?? ?? 60 b8 01 00 00 00 61 ff ?? ?? e8 ?? ?? ?? ?? 59 50 6a 00 6a 01 ff 15 ?? ?? ?? ?? 6a 00 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -368,6 +380,7 @@ rule Trojan_Win32_Killav_DD_134055_0
         $x_1_5 = {72 61 76 6d 6f 6e 2e 65 78 65 00 00 ff ff ff ff 0b 00 00 00 72 61 76 6d 6f 6e 64 2e 65 78 65 00 ff ff ff ff 0b 00 00 00 72 61 76 74 61 73 6b 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -395,6 +408,7 @@ rule Trojan_Win32_Killav_X_135874_0
         $x_1_8 = "C:\\WINDOWS\\Fonts\\IEXPLORER.EXE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -428,6 +442,7 @@ rule Trojan_Win32_Killav_CK_137139_0
         $x_1_11 = "biaoji" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 6 of ($x_10_*))) or
             ((2 of ($x_100_*))) or
@@ -455,6 +470,7 @@ rule Trojan_Win32_Killav_CL_137140_0
         $x_10_4 = {57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 20 00 4e 00 54 00 5c 00 43 00 75 00 72 00 72 00 65 00 6e 00 74 00 56 00 65 00 72 00 73 00 69 00 6f 00 6e 00 5c 00 49 00 6d 00 61 00 67 00 65 00 20 00 46 00 69 00 6c 00 65 00 20 00 45 00 78 00 65 00 63 00 75 00 74 00 69 00 6f 00 6e 00 20 00 4f 00 70 00 74 00 69 00 6f 00 6e 00 73 00 5c 00 00 00 10 00 00 00 64 00 65 00 62 00 75 00 67 00 67 00 65 00 72 00 00 00 00 00 10 00 00 00 49 00 46 00 45 00 4f 00 46 00 49 00 4c 00 45 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
@@ -482,6 +498,7 @@ rule Trojan_Win32_Killav_CM_137141_0
         $x_10_4 = "DuplicateHandle" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -507,6 +524,7 @@ rule Trojan_Win32_Killav_AO_137983_0
         $x_1_3 = {61 76 70 2e 65 78 65 00 5c 5c 2e 5c 4d 61 67 69 63 52 63 31 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -533,6 +551,7 @@ rule Trojan_Win32_Killav_AV_138058_0
         $x_1_7 = "cmd /c taskkill /im ScanFrm.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -554,6 +573,7 @@ rule Trojan_Win32_Killav_BS_139322_0
         $x_1_2 = {8b 51 04 8d 41 08 89 45 08 89 5d ?? 8d 42 f8 89 5d fc d1 e8 89 45 ?? 74 43}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -580,6 +600,7 @@ rule Trojan_Win32_Killav_BS_139322_1
         $x_1_7 = {6a 00 50 ff d3 68 88 13 00 00 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -603,6 +624,7 @@ rule Trojan_Win32_Killav_BY_140991_0
         $x_1_4 = {8a 08 83 c0 01 84 c9 75 f7 2b c2 3d 8c 00 00 00 0f 87}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -637,6 +659,7 @@ rule Trojan_Win32_Killav_KM_141135_0
         $x_1_15 = "360Safe.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 11 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -664,6 +687,7 @@ rule Trojan_Win32_Killav_DI_141710_0
         $x_1_3 = "%s%dtest.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -686,6 +710,7 @@ rule Trojan_Win32_Killav_DK_142699_0
         $x_1_3 = {6a 00 8d 45 fc 50 6a 04 ff 75 10 6a 04 8d 45 0c 50 68 4b 21 22 00 ff 75 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -708,6 +733,7 @@ rule Trojan_Win32_Killav_DV_144880_0
         $x_1_3 = {41 70 70 44 61 74 61 00 52 6f 61 6d 69 6e 67 00 4d 69 63 72 6f 73 6f 66 74 [0-5] 57 69 6e 64 6f 77 73 00 25 73 5c 25 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -730,6 +756,7 @@ rule Trojan_Win32_Killav_DO_145705_0
         $x_1_3 = {57 72 69 74 65 50 72 6f 63 65 73 73 4d 65 6d 6f 72 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -761,6 +788,7 @@ rule Trojan_Win32_Killav_DP_146341_0
         $x_1_9 = {00 6d 63 61 66 65 65 00 00 6d 63 75 6e 69 6e 73 74 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -800,6 +828,7 @@ rule Trojan_Win32_Killav_DR_146604_0
         $x_1_15 = {00 63 61 6c 6c 6d 73 69 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 9 of ($x_1_*))) or
             ((1 of ($x_4_*) and 7 of ($x_1_*))) or
@@ -840,6 +869,7 @@ rule Trojan_Win32_Killav_DY_148399_0
         $x_2_6 = {75 20 6a 00 68 9b 00 00 00 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? c7 45 c4 00 00 00 00 eb 07}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -864,6 +894,7 @@ rule Trojan_Win32_Killav_EW_148938_0
         $x_1_5 = "taskkill /f /im msseces.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -887,6 +918,7 @@ rule Trojan_Win32_Killav_EI_149490_0
         $x_1_4 = {68 e0 2e 00 00 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 68 10 27 00 00 e8 ?? ?? ?? ?? 6a 00 6a 00 6a 00 68 ?? ?? ?? ?? 6a 00 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -911,6 +943,7 @@ rule Trojan_Win32_Killav_EX_150700_0
         $x_3_5 = {33 d2 f7 f7 bf 19 00 00 00 33 d2 f7 f7 80 c2 61}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -940,6 +973,7 @@ rule Trojan_Win32_Killav_EZ_152274_0
         $x_3_5 = {52 75 6e 64 6c 6c 2e 64 6c 6c 00 62}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -967,6 +1001,7 @@ rule Trojan_Win32_Killav_EY_152276_0
         $x_2_3 = {80 c1 fd 88 8e ?? ?? ?? 10 46}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -990,6 +1025,7 @@ rule Trojan_Win32_Killav_FA_152546_0
         $x_2_4 = {75 09 66 81 7c 30 fe c7 05 74 15}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1018,6 +1054,7 @@ rule Trojan_Win32_Killav_FC_153230_0
         $x_1_6 = "0KVSrvXP.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1044,6 +1081,7 @@ rule Trojan_Win32_Killav_EN_153356_0
         $x_1_3 = {83 c4 04 68 e8 03 00 00 ff d3 47 83 ff 05 7c c9 68 04 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1066,6 +1104,7 @@ rule Trojan_Win32_Killav_EO_153357_0
         $x_1_3 = {68 e8 03 00 00 ff 15 ?? ?? ?? ?? 8d 94 24 ?? ?? ?? ?? 6a 00 52 e8 ?? ?? ?? ?? 83 c4 08 83 f8 ff 74 29 68 04 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1091,6 +1130,7 @@ rule Trojan_Win32_Killav_FC_153379_0
         $x_1_5 = {14 5a 01 10 00 00 00 00 2e 48 00 00 5c 62 72 70 63 73 73 2e 64 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1114,6 +1154,7 @@ rule Trojan_Win32_Killav_FE_153965_0
         $x_1_4 = "tskill /A av*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1139,6 +1180,7 @@ rule Trojan_Win32_Killav_KV_156500_0
         $x_1_6 = "\\\\.\\RiSing2008" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1163,6 +1205,7 @@ rule Trojan_Win32_Killav_FE_157845_0
         $x_1_4 = "frqilj#dys#vwduw@#glvdeohg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1184,6 +1227,7 @@ rule Trojan_Win32_Killav_FM_161469_0
         $x_1_2 = {c6 45 e1 27 c6 45 e2 f6 c6 45 e3 36 c6 45 e4 56 c6 45 e5 37 c6 45 e6 37 c6 45 e7 33 c6 45 e8 23 c6 45 e9 64 c6 45 ea 96 c6 45 eb 27 c6 45 ec 37 c6 45 ed 47 c6 45 ee 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1208,6 +1252,7 @@ rule Trojan_Win32_Killav_FN_163437_0
         $x_2_5 = "%s\\shell\\open\\command" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1232,6 +1277,7 @@ rule Trojan_Win32_Killav_FO_163906_0
         $x_1_5 = "C:\\avub\\Release\\avub.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1264,6 +1310,7 @@ rule Trojan_Win32_Killav_FP_164888_0
         $x_1_8 = "GLP7L6zlR69XSabkStHXR6mkPNXbCG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 5 of ($x_1_*))) or
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or
@@ -1297,6 +1344,7 @@ rule Trojan_Win32_Killav_FS_166887_0
         $x_1_10 = "F4A6E760F0A2E39C3CE29770A" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -1321,6 +1369,7 @@ rule Trojan_Win32_Killav_FV_169974_0
         $x_1_5 = "AVGIDSMonitor.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1349,6 +1398,7 @@ rule Trojan_Win32_Killav_GI_172156_0
         $x_1_9 = "exe.ecivresfpm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -1382,6 +1432,7 @@ rule Trojan_Win32_Killav_GJ_172318_0
         $x_1_14 = "HideFileExt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 12 of ($x_1_*))) or
             ((2 of ($x_3_*) and 9 of ($x_1_*))) or
@@ -1410,6 +1461,7 @@ rule Trojan_Win32_Killav_GL_173031_0
         $x_1_5 = {7c 14 46 33 d2 33 db 8a 1c 10 66 81 f3 ?? ?? 88 1c 11 42 4e 75 ef}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1433,6 +1485,7 @@ rule Trojan_Win32_Killav_GM_173382_0
         $x_1_4 = {54 68 00 04 00 00 8d 44 24 0c 50 56 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1459,6 +1512,7 @@ rule Trojan_Win32_Killav_GO_173648_0
         $x_1_7 = "/v fAllowToGetHelp /t REG_DWORD /d 0x00000001 /f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1483,6 +1537,7 @@ rule Trojan_Win32_Killav_GP_174583_0
         $x_1_5 = "ServiceAfterInstall" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1507,6 +1562,7 @@ rule Trojan_Win32_Killav_AAD_195802_0
         $x_1_5 = "\\restart.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1534,6 +1590,7 @@ rule Trojan_Win32_Killav_AAE_199613_0
         $x_1_8 = "QWx3aWwgU29mdHdhcmU=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1563,6 +1620,7 @@ rule Trojan_Win32_Killav_HB_204306_0
         $x_1_7 = "91.121.55.127" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -1588,6 +1646,7 @@ rule Trojan_Win32_Killav_HF_212903_0
         $x_1_2 = {8b 55 f8 83 c2 01 89 55 f8 b0 6f b0 ff b0 f5 b0 f5 b0 38 b0 70 b0 6f b0 49 b0 c0 b0 89 b0 47}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1610,6 +1669,7 @@ rule Trojan_Win32_Killav_HF_212903_1
         $x_1_3 = {00 00 2d 00 6e 00 65 00 77 00 69 00 6e 00 73 00 74 00 61 00 6e 00 63 00 65 00 20 00 2d 00 6e 00 6f 00 73 00 65 00 74 00 74 00 69 00 6e 00 67 00 73 00 20 00 2d 00 6e 00 6f 00 70 00 6c 00 75 00 67 00 69 00 6e 00 73 00 20 00 2d 00 73 00 20 00 2d 00 70 00 68 00 73 00 76 00 63 00 20 00 2d 00 63 00 20 00 2d 00 63 00 74 00 79 00 70 00 65 00 20 00 73 00 65 00 72 00 76 00 69 00 63 00 65 00 20 00 2d 00 63 00 6f 00 62 00 6a 00 65 00 63 00 74 00 20 00 4d 00 73 00 4d 00 70 00 53 00 76 00 63 00 20 00 2d 00 63 00 61 00 63 00 74 00 69 00 6f 00 6e 00 20 00 64 00 65 00 6c 00 65 00 74 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1633,6 +1693,7 @@ rule Trojan_Win32_Killav_HG_213080_0
         $x_1_4 = "\\Windows Defender\\security.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1654,6 +1715,7 @@ rule Trojan_Win32_Killav_HI_214178_0
         $x_1_2 = {b0 38 b0 b1 b0 85 c7 85 a0 fe ff ff 00 00 00 00 eb 0f 8b 95 a0 fe ff ff 83 c2 01 89 95 a0 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

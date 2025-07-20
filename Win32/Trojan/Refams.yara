@@ -17,6 +17,7 @@ rule Trojan_Win32_Refams_A_2147611814_0
         $x_10_3 = "Can You this is Program File Remove" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

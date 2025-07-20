@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Chexct_A_2147658696_0
         $x_1_2 = {85 c6 44 24 ?? c0 c6 44 24 ?? 75 c6 44 24 ?? ?? c6 44 24 ?? 6a c6 44 24 ?? 0a c6 44 24 ?? 04 c6 44 24 ?? ?? c6 44 24 ?? 81 04 00 c6 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

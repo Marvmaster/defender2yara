@@ -19,6 +19,7 @@ rule Trojan_Win32_Badur_BD_2147752196_0
         $x_1_4 = "\\SystemRoot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Badur_SNN_2147920105_0
         $x_1_1 = {8b 45 f0 85 c0 74 2d 6a 00 50 8d 85 ?? ?? ?? ?? 50 8d 8d 28 ff ff ff 51 e8 d1 06 00 00 8d 55 f0 52 68 00 10 00 00 8d 85 ?? ?? ?? ?? 50 56 ff d7 85 c0 75 cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Badur_EGRP_2147943989_0
         $x_2_1 = {8b 4d bc 8b 55 a4 8b 04 8a 33 45 f8 8b 4d bc 8b 55 cc 89 04 8a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Badur_EDEQ_2147943992_0
         $x_2_1 = {8b 55 c0 8b 45 dc 8b 0c 90 33 4d 80 8b 55 c0 8b 85 50 ff ff ff 89 0c 90}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_Win32_Badur_EDE_2147943994_0
         $x_2_1 = {8b 0c 90 2b 8d 0c ff ff ff 8b 95 64 ff ff ff 8b 45 b4 89 0c 90}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

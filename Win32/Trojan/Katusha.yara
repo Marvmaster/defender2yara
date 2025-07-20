@@ -17,6 +17,7 @@ rule Trojan_Win32_Katusha_BE_2147819298_0
         $x_2_2 = "MxOsTjVeX7B2rF1.Ivo" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Katusha_RPZ_2147824964_0
         $x_1_4 = "bypassModuleObfuscated.bin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

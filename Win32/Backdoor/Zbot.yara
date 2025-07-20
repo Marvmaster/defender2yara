@@ -17,6 +17,7 @@ rule Backdoor_Win32_Zbot_C_2147767371_0
         $x_1_2 = {8a 44 0c 0c 2c ?? 88 44 0c 0c 41 83 f9 ?? 72 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MSIL_CreepyRing_A_2147819076_0
         $x_1_3 = "d#$%$#Ac#$%$#kt#$%$#Y5#$%$#6##$%$#2" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

@@ -19,6 +19,7 @@ rule PWS_Win64_Sinowal_A_2147659341_0
         $x_1_4 = "&itag=ody&q=%s%%2C%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule PWS_Win64_Sinowal_B_2147659658_0
         $x_1_1 = {48 8d 44 24 28 48 8b e1 48 8b 28 48 8b 70 08 48 8b 78 10 48 8b 58 18 41 50 52 48 83 ec ?? 48 c7 c2 01 00 00 00 49 8b c9 48 81 e1 00 00 ff ff 41 ff d1 48 83 c4 ?? 5a 41 58 48 8b ca 48 c7 c2 00 00 00 00 49 8b c0 49 c7 c0 00 80 00 00 49 c7 c1 00 00 00 00 ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule PWS_Win64_Sinowal_C_2147682025_0
         $x_1_1 = {48 8d 44 24 28 48 8b e1 48 8b 58 18 48 8b 70 08 48 8b 28 48 8b 78 10 41 50 52 48 83 ec ?? 48 33 d2 48 ff c2 49 8b c9 48 81 e1 00 00 ff ff 41 ff d1 48 83 c4 ?? 5a 41 58 48 8b ca 48 c7 c2 00 00 00 00 4d 8b d0 49 c7 c1 00 00 00 00 49 c7 c0 00 80 00 00 41 ff e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule PWS_Win64_Sinowal_D_2147682140_0
         $x_1_2 = {66 90 66 66 90 66 83 7a 48 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

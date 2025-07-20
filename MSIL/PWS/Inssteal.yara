@@ -21,6 +21,7 @@ rule PWS_MSIL_Inssteal_A_2147764109_0
         $x_1_6 = "smtp.live.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule VirTool_Win64_Wapinz_A_2147846430_0
         $x_1_4 = {4c 89 74 24 20 41 b9 b2 01 00 00 4d 8b c5 48 8b 54 24 50 48 8b ce ff 15 ?? ?? ?? ?? 85 c0 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

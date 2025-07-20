@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Espy_A_2147603194_0
         $x_1_8 = "If wVersion == 257 then everything is kewl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanSpy_Win32_Espy_B_2147605645_0
         $x_1_6 = ".qmail@" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

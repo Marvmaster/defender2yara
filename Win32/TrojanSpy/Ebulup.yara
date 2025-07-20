@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Ebulup_A_2147706782_0
         $x_1_4 = {8b 4d 08 2b ca 8d 74 02 02 c6 03 09 f3 a4 80 3b 5c 75 17 8d 7c 02 01 80 3f 22 75 0e c6 03 22 8b 4d 08 2b ca 8d 74 02 02 f3 a4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

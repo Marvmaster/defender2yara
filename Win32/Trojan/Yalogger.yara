@@ -19,6 +19,7 @@ rule Trojan_Win32_Yalogger_A_2147667430_0
         $x_1_5 = {66 6c 61 73 68 00 00 00 42 49 4e 00 77 69 6e 6c 67 6f 6e 00 53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*))) or
             (all of ($x*))

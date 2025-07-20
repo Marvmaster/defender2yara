@@ -20,6 +20,7 @@ rule PWS_Win32_AolWinspy_B_2147597959_0
         $x_1_6 = "Write AOL Mail To " wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

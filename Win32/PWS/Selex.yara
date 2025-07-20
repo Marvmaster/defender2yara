@@ -26,6 +26,7 @@ rule PWS_Win32_Selex_A_2147600939_0
         $x_1_12 = "%s\\subject.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 4 of ($x_4_*) and 4 of ($x_1_*))) or
             ((2 of ($x_100_*) and 5 of ($x_4_*))) or

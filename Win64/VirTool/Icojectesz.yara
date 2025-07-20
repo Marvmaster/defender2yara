@@ -18,6 +18,7 @@ rule VirTool_Win64_Icojectesz_A_2147916123_0
         $x_1_3 = {c7 44 24 20 00 00 00 00 45 33 c9 ?? ?? ?? ?? ?? ?? ?? 33 d2 33 c9 ?? ?? ?? ?? ?? ?? 48 83 3d 9e c3 00 00 00 ?? ?? 33 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

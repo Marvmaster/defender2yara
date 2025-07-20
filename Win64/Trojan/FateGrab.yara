@@ -17,6 +17,7 @@ rule Trojan_Win64_FateGrab_FG_2147848040_0
         $x_1_2 = "MimeSource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_FateGrab_JM_2147848517_0
         $x_1_2 = "MsStartup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

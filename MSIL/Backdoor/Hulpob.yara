@@ -19,6 +19,7 @@ rule Backdoor_MSIL_Hulpob_A_2147686237_0
         $x_1_5 = {1f 1d 0f 00 1a 28 ?? 00 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

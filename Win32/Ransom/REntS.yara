@@ -30,6 +30,7 @@ rule Ransom_Win32_REntS_PA_2147751484_0
         $x_1_15 = ".*\\.backup" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +60,7 @@ rule Ransom_Win32_REntS_SIB_2147807751_0
         $x_1_9 = "sqlservr.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             ((3 of ($x_10_*))) or

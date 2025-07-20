@@ -16,6 +16,7 @@ rule Backdoor_Win32_Simda_A_2147645702_0
         $x_1_2 = {4b 85 db 75 ?? bb ?? ?? 00 00 b8 ?? ?? ?? ?? 8b cb ba ?? ?? 00 00 e8 ?? ?? ?? ?? 4b 85 db 75 ?? 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_Simda_A_2147645702_1
         $x_1_5 = "JLgG00C000040000//y00BW000000000G000000000000000" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Backdoor_Win32_Simda_A_2147645703_0
         $x_4_13 = {89 04 8a c7 45 f4 74 30 30 77 b8 ff ff ff ff}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -105,6 +108,7 @@ rule Backdoor_Win32_Simda_B_2147650321_0
         $x_1_4 = {0f b6 54 30 ff 8b cf c1 e9 18 33 54 8c 28 c1 e7 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +136,7 @@ rule Backdoor_Win32_Simda_B_2147650321_1
         $x_1_7 = {68 4a 86 ff 61 e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 6a 40 68 00 30 00 00 57 6a 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -156,6 +161,7 @@ rule Backdoor_Win32_Simda_C_2147650507_0
         $x_1_4 = {8b 75 08 74 15 32 06 0f b6 d0 c1 e8 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -186,6 +192,7 @@ rule Backdoor_Win32_Simda_D_2147651172_0
         $x_2_10 = {00 47 6c 6f 62 61 6c 5c 48 69 67 68 4d 65 6d 6f 72 79 45 76 65 6e 74 5f 25 30 38 78 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 7 of ($x_2_*))) or
             ((2 of ($x_5_*) and 4 of ($x_2_*))) or
@@ -211,6 +218,7 @@ rule Backdoor_Win32_Simda_K_2147653326_0
         $x_1_2 = {60 00 10 8d ?? ?? d8 ff ff 3b ?? 0f 85 ?? ?? 00 00 c7 85 ?? d8 ff ff 0a 00 8d ?? ?? d8 ff ff ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -237,6 +245,7 @@ rule Backdoor_Win32_Simda_AK_2147657661_0
         $x_1_7 = {db 77 3f dc 11 4e 71 e7 f9 6b ac 2c f9 f4 16 71 13 80 10 60 25 2e 2c ea 09 ff a5 bb b0 93 0a 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -262,6 +271,7 @@ rule Backdoor_Win32_Simda_AS_2147684909_0
         $x_1_6 = {5c 5c 2e 5c 50 68 79 73 69 63 61 6c 44 72 69 76 65 25 64 00 5c 5c 2e 5c 49 44 45 32 31 32 30 31 2e 56 58 44 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -285,6 +295,7 @@ rule Backdoor_Win32_Simda_AT_2147684959_0
         $x_1_4 = {6b c0 28 03 85 ?? ?? ff ff 89 85 ?? ?? ff ff 8b 85 ?? ?? ff ff 40 89 45 f8 8b 45 f8 81 38 6e 6c 73 63}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -338,6 +349,7 @@ rule Backdoor_Win32_Simda_ASI_2147921099_0
         $x_1_5 = "EAF799BF-8989-4fe1-9A0D-95CD39DC0214" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -368,6 +380,7 @@ rule Backdoor_Win32_Simda_CCJE_2147922178_0
         $x_5_10 = "software\\microsoft\\windows nt\\currentversion\\winlogon" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

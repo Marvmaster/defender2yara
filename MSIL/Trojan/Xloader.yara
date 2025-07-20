@@ -16,6 +16,7 @@ rule Trojan_MSIL_Xloader_OAW_2147826894_0
         $x_1_1 = {02 02 8e 69 17 59 91 1f 70 61 0b 1f 0b 13 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Virus_Linux_Thebe_2147649741_0
         $x_1_3 = {8b 30 01 fe 8b 16 81 fa 2e 64 74 6f 74 05 e2 e8 31 c0 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

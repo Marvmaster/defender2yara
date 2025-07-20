@@ -17,6 +17,7 @@ rule TrojanDropper_MSIL_AgentTesla_AB_2147850093_0
         $x_5_2 = {72 1b 00 00 70 17 8d 03 00 00 01 0d 09 16 28 27 00 00 0a 72 17 00 00 70 28 28 00 00 0a 7f 08 00 00 04 28 23 00 00 0a 28 29 00 00 0a a2 09}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDropper_MSIL_AgentTesla_ARA_2147892020_0
         $x_2_4 = "WindowsApp3.Resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule TrojanDropper_MSIL_AgentTesla_NGT_2147892260_0
         $x_1_4 = "$666b1ece-7a9e-4b63-a3a1-67d9446f5b00" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule TrojanDropper_MSIL_AgentTesla_AAT_2147923704_0
         $x_5_1 = {11 04 11 07 02 17 8d 03 00 00 01 13 0a 11 0a 16 11 07 8c 16 00 00 01 a2 11 0a 14 28 ?? 00 00 0a 28 ?? 00 00 0a 09 b4 28 ?? 00 00 06 28 ?? 00 00 0a 9c 11 07 17 d6 13 07 11 07 11 0b 3e 48 ff ff ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

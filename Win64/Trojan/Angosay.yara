@@ -26,6 +26,7 @@ rule Trojan_Win64_Angosay_C_2147725779_0
         $x_1_11 = "SetEndOfFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win64_Angosay_D_2147725806_0
         $x_1_2 = "VPJqkd2Sn0uPSmU5BM8Lwg\\ExtractedBundle\\RTM_ImageModRec_1.1.5.0_x64\\RTM_ImageModRec.pdb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

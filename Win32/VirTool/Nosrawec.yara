@@ -16,6 +16,7 @@ rule VirTool_Win32_Nosrawec_A_2147636436_0
         $x_1_2 = {53 63 68 77 61 72 7a 65 20 53 6f 6e 6e 65 20 52 41 54 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

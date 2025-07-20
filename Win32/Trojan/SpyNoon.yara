@@ -23,6 +23,7 @@ rule Trojan_Win32_SpyNoon_RT_2147779978_0
         $x_1_8 = "\\something.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +60,7 @@ rule Trojan_Win32_SpyNoon_RR_2147782805_0
         $x_1_16 = "C:\\TEMP\\whludbgv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +90,7 @@ rule Trojan_Win32_SpyNoon_RRH_2147782912_0
         $x_1_9 = "\\hemlock\\fundamentally\\opera.mdb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +112,7 @@ rule Trojan_Win32_SpyNoon_AA_2147795454_0
         $x_1_1 = {c1 f9 03 0f b6 55 ff c1 e2 05 0b ca 88 4d ff 0f b6 45 ff 05 9e 00 00 00 88 45 ff 0f b6 4d ff 33 4d f8 88 4d ff 0f b6 55 ff c1 fa 06 0f b6 45 ff c1 e0 02 0b d0 88 55 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +135,7 @@ rule Trojan_Win32_SpyNoon_QEJ_2147797677_0
         $x_1_2 = {f7 bd 30 fa ff ff 8a 82 ?? ?? ?? ?? 32 81 ?? ?? ?? ?? 88 84 0d f0 fb ff ff 8d 46 ff 99 f7 bd 30 fa ff ff 8a 82 ?? ?? ?? ?? 32 81 ?? ?? ?? ?? 88 84 0d f1 fb ff ff 8b c6 99 f7 bd 30 fa ff ff 8a 82 ?? ?? ?? ?? 32 86 ?? ?? ?? ?? 83 c6 04 88 84 3d ef fb ff ff 8b c7 99 f7 bd 30 fa ff ff 8a 82 ?? ?? ?? ?? 32 87 ?? ?? ?? ?? 83 c7 04 88 84 0d f3 fb ff ff 83 c1 04 81 fe 02 04 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +167,7 @@ rule Trojan_Win32_SpyNoon_SSM_2147807991_0
         $x_1_11 = "eldjnylbwcsd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +189,7 @@ rule Trojan_Win32_SpyNoon_RPV_2147812917_0
         $x_1_1 = {35 c4 00 00 00 8b 4d f8 03 4d fc 88 01 e9 be fe ff ff 8b 45 f8 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -204,6 +211,7 @@ rule Trojan_Win32_SpyNoon_RPW_2147812918_0
         $x_1_1 = {81 c1 ed 00 00 00 8b 55 f8 03 55 fc 88 0a e9 54 fe ff ff 8b 45 f8 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +233,7 @@ rule Trojan_Win32_SpyNoon_RPX_2147812999_0
         $x_1_1 = {81 c3 82 18 00 00 81 c1 ee 8c 00 00 81 ea ed 1c 01 00 2d 03 51 01 00 ba 7b 4f 01 00 81 e3 85 69 01 00 4a c2 3f e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -247,6 +256,7 @@ rule Trojan_Win32_SpyNoon_RPY_2147813000_0
         $x_1_2 = {6a 00 68 80 00 00 00 6a 03 6a 00 6a 07 68 00 00 00 80}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +278,7 @@ rule Trojan_Win32_SpyNoon_RPS_2147815533_0
         $x_1_1 = {8b 55 f8 03 55 fc 88 0a 8b 45 f8 03 45 fc 8a 08 80 e9 01 8b 55 f8 03 55 fc 88 0a e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -289,6 +300,7 @@ rule Trojan_Win32_SpyNoon_RPO_2147818712_0
         $x_1_1 = {8b 4d f0 80 34 01 ?? 8b 4d f0 80 04 01 ?? 8b 4d f0 80 04 01 ?? 8b 4d f0 80 04 01 ?? 8b 4d f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -314,6 +326,7 @@ rule Trojan_Win32_SpyNoon_RF_2147840926_0
         $x_1_5 = "%localappdata%\\Chroedx765mium\\Useedx765r Data" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -335,6 +348,7 @@ rule Trojan_Win32_SpyNoon_RK_2147843088_0
         $x_1_1 = {8b 44 24 08 85 c0 74 1a 83 c0 fe 85 c0 7c 10 8a 54 08 01 32 14 08 80 f2 78 88 14 08 48 79 f0 80 31 6d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

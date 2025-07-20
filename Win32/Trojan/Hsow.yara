@@ -23,6 +23,7 @@ rule Trojan_Win32_Hsow_A_2147595270_0
         $x_3_8 = {64 65 73 6b 74 6f 70 2e 69 6e 69 00 55 8b ec 81 c4 58 f4 ff ff 57}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 4 of ($x_1_*))) or
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or

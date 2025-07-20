@@ -22,6 +22,7 @@ rule BrowserModifier_Win32_Tango_150863_0
         $x_1_8 = ".?AVCDialogAboutTango@@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

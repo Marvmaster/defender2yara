@@ -19,6 +19,7 @@ rule VirTool_WinNT_Zuten_A_2147600462_0
         $x_1_5 = {4b 65 53 65 72 76 69 63 65 44 65 73 63 72 69 70 74 6f 72 54 61 62 6c 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -46,6 +47,7 @@ rule VirTool_WinNT_Zuten_B_2147600521_0
         $x_1_3 = {c6 45 ea 8d c6 45 eb 45 c6 45 ec 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule VirTool_WinNT_Zuten_C_2147601306_0
         $x_2_8 = {60 e8 00 00 00 00 5f 81 e7 00 ff ff ff 8d 77 ?? eb 09 80 3e ?? 75 03 80 36 ?? 46 80 3e 00 75 f2 8d 77 ?? eb 0c 56 ff 17 eb 01 46 80 3e 00 75 fa 46 66 83 3e 00 75 ee}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*))) or
             (all of ($x*))
@@ -102,6 +105,7 @@ rule VirTool_WinNT_Zuten_D_2147601556_0
         $x_2_6 = {56 56 68 00 04 00 00 08 00 90 90 8b c0 90 8b c0 90}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or

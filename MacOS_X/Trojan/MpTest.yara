@@ -19,6 +19,7 @@ rule Trojan_MacOS_X_MpTest_A_2147646933_0
         $x_1_5 = "dd8b00e9-af86-4617-8e5e-397c242d98b0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

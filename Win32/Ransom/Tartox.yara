@@ -20,6 +20,7 @@ rule Ransom_Win32_Tartox_A_2147706256_0
         $x_1_6 = {50 6c 65 61 73 65 20 50 61 79 20 ?? 20 42 69 74 63 6f 69 6e 20 49 6d 6d 65 64 69 61 74 6c 65 79 20 48 65 61 64 20 4f 76 65 72 20 54 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

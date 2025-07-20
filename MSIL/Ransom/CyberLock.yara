@@ -25,6 +25,7 @@ rule Ransom_MSIL_CyberLock_GVA_2147944681_0
         $x_1_10 = "Please send a screenshot of the payment. We will respond within 5 hours with the decryption key." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

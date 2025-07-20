@@ -19,6 +19,7 @@ rule Ransom_MSIL_Lazagcrypt_2147725312_0
         $x_2_5 = "brc.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Netins_A_2147632269_0
         $x_1_4 = "NetGeter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

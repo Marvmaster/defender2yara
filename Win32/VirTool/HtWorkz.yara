@@ -22,6 +22,7 @@ rule VirTool_Win32_HtWorkz_A_2147808497_0
         $x_1_7 = "xorkey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

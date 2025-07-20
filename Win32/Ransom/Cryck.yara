@@ -19,6 +19,7 @@ rule Ransom_Win32_Cryck_2147740928_0
         $x_1_5 = "It is in your interest to respond as soon as possible to ensure the restoration of your files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

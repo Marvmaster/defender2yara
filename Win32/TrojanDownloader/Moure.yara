@@ -15,6 +15,7 @@ rule TrojanDownloader_Win32_Moure_B_2147663540_0
         $x_1_1 = {73 34 30 30 32 31 31 74 2e 64 6c 6c 00 43 72 6f 6e 45 78 69 65 65 65 6e 66 69 65 57 65 33 33 33 66 73 62 64 45 61 73 64 77 66 73 61 74 61 73 66 67 45 78 57 00 53 74 66 52 75 61 41 72 65 73 64 67 66 68 73 77 63 76 57 33 32 31 45 64 73 33 33 33 6e 71 77 65 71 66 63 77 75 72 5f 72 74 00 53 74 72 66 41 6c 6f 73 64 71 77 68 67 66 77 67 68 61 66 67 6e 69 45 33 33 77 71 72 71 73 64 67 6f 66 74 45 78 57 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_Win32_Moure_C_2147681661_0
         $x_1_3 = {7c 53 59 53 57 4f 57 16 14 7c 53 56 43 48 4f 53 54 0e 45 58 45 00 00 00 7c 53 59 53 54 45 4d 13 12 7c 57 55 41 55 43 4c 54 0e 45 58 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanDownloader_Win32_Moure_A_2147681963_0
         $x_5_7 = {81 78 0d 00 c2 40 00 0f}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -95,6 +98,7 @@ rule TrojanDownloader_Win32_Moure_B_2147684275_0
         $x_10_7 = {8d 50 01 8a 08 40 3a cb 75 ?? 2b c2 3b c3 74 ?? 80 bc 04 9f 00 00 00 5c 74 ?? c6 84 04 a0 00 00 00 5c 40}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -127,6 +131,7 @@ rule TrojanDownloader_Win32_Moure_C_2147689008_0
         $x_1_9 = {00 6d 73 73 65 63 65 73 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 5 of ($x_1_*))) or
             ((2 of ($x_100_*))) or

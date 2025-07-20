@@ -22,6 +22,7 @@ rule Trojan_Win32_AntiFW_GME_2147888207_0
         $x_1_7 = {4c 41 c2 a4 08 16 2a 2e c8 b0 61 43 14 9a 65 ea 87 8b 39 79 e6 74 4c 15 57 d2 d6 df 9b bb b5 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

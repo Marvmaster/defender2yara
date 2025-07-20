@@ -16,6 +16,7 @@ rule PWS_Win32_Pemsepos_A_2147622750_0
         $x_1_2 = {0f b7 44 24 28 03 44 24 40 03 44 24 3c c1 e0 12 33 44 24 10 31 44 24 04 b8 06 00 00 80 0f a2 31 4c 24 04 8b 44 24 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_Win32_HiveCrypt_MP_2147809009_0
         $x_1_3 = {0f b6 ac 24 64 02 00 00 01 eb 88 98 95 00 00 00 0f b6 9c 24 59 04 00 00 0f b6 ac 24 3e 04 00 00 31 eb 88 98 96 00 00 00 0f b6 9c 24 3d 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win32_HiveCrypt_PB_2147828891_0
         $x_1_4 = "path/filepath.WalkDir" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

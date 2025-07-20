@@ -16,6 +16,7 @@ rule Worm_Win32_Methoaf_B_2147641130_0
         $x_1_2 = {6a 5b 8d 4d bc 51 ff 15 ?? ?? ?? ?? 6a 61 8d 55 ac 52 ff 15 ?? ?? ?? ?? 6a 75 8d 45 8c 50 ff 15 ?? ?? ?? ?? 6a 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

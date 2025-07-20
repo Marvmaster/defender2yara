@@ -18,6 +18,7 @@ rule Trojan_Win64_Comebacker_A_2147773228_0
         $x_1_2 = {48 8b 4d e0 ff 55 d8 33 c0 eb 05 b8 fc ff ff ff 4c 8d 9c 24 80 00 00 00 49 8b 5b 10 49 8b 7b 18 49 8b e3 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

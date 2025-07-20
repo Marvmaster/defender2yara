@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Nivdort_A_2147680200_0
         $x_1_4 = {74 3a 8b 4d f0 8b 55 e4 8d 84 0a ?? ?? ?? ?? 33 45 f8 89 45 f8 8b 4d f4 0f be 11 8b 45 e8 0f be 08 33 ca 8b 55 e8 88 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule TrojanSpy_Win32_Nivdort_A_2147680312_0
         $x_1_6 = {89 4d e8 8b 55 fc 8b 02 33 45 f4 8b 4d fc 89 01 8b 55 f0 83 c2 01 89 55 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule TrojanSpy_Win32_Nivdort_E_2147681427_0
         $x_1_5 = {8b 4d 08 89 04 8d ?? ?? 51 00 8b 55 e4 c1 fa 06 69 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule TrojanSpy_Win32_Nivdort_T_2147686048_0
         $x_1_5 = {6a 7e 68 c0 ?? 44 00 e8 ?? ?? ?? ?? 83 c4 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule TrojanSpy_Win32_Nivdort_DB_2147708541_0
         $x_1_7 = {68 10 27 00 00 [0-16] ff 15 ?? ?? 44 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule TrojanSpy_Win32_Nivdort_DH_2147708705_0
         $x_1_4 = "ADRIANCOPILULMINUNESIFLORINSALAM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))
@@ -169,6 +175,7 @@ rule TrojanSpy_Win32_Nivdort_DR_2147711696_0
         $x_1_2 = {c7 41 08 06 00 00 00 c7 41 04 01 00 00 00 c7 01 02 00 00 00 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +197,7 @@ rule TrojanSpy_Win32_Nivdort_DR_2147711696_1
         $x_1_2 = "/index.php?is_p2penv=ZGFuZ2Vsby5hc2VuY2lvQGktbmV0cGVydS5jb20ucGUJ" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -214,6 +222,7 @@ rule TrojanSpy_Win32_Nivdort_EC_2147711770_0
         $x_1_5 = {89 e1 c7 01 1f 04 00 00 ff d0 83 ec 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -240,6 +249,7 @@ rule TrojanSpy_Win32_Nivdort_EJ_2147717223_0
         $x_1_3 = {52 68 00 60 00 00 68 ?? ?? ?? 00 8b 85 ?? ?? ff ff 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

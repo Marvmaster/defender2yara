@@ -19,6 +19,7 @@ rule Backdoor_MSIL_Darkcommet_PAGE_2147929561_0
         $x_2_4 = "SELECT displayName FROM AntivirusProduct" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_MSIL_ZeroLocker_DA_2147770168_0
         $x_1_4 = "ZeroLocker will be now removed from your Computer!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

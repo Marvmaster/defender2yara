@@ -19,6 +19,7 @@ rule VirTool_Win64_Injecdlz_A_2147838743_0
         $x_1_4 = {48 c7 44 24 30 00 00 00 00 c7 44 24 28 00 00 00 00 48 8b 45 28 48 89 44 24 20 4c 8b 8d 88 00 00 00 45 33 c0 33 d2 48 8b 4d 08 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

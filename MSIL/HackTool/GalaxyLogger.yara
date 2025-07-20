@@ -20,6 +20,7 @@ rule HackTool_MSIL_GalaxyLogger_2147692592_0
         $x_1_6 = "GalaxyLogger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule HackTool_MSIL_GalaxyLogger_2147692592_1
         $x_1_9 = "RSelbasiD" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))

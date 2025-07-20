@@ -18,6 +18,7 @@ rule Trojan_Win32_Dembr_A_2147679932_0
         $x_1_4 = "taskkill /F /IM pasvc.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

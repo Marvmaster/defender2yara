@@ -25,6 +25,7 @@ rule Backdoor_Linux_NetWiredRC_A_2147661505_0
         $x_10_11 = "RGI28DQ30QB8Q1F7" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_10_*) and 3 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))

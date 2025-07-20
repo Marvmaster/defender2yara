@@ -17,6 +17,7 @@ rule Trojan_Win32_Famudin_A_2147648611_0
         $x_1_3 = "AudioN function 0x%x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

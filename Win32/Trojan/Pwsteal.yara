@@ -18,6 +18,7 @@ rule Trojan_Win32_Pwsteal_Q_2147714345_0
         $x_1_3 = {6a 6c 66 89 85 ?? fe ff ff 58 6a 77 66 89 85 ?? fe ff ff 58 6a 61 66 89 85 ?? fe ff ff 58 6a 70 66 89 85 ?? fe ff ff 58 6a 69 66 89 85 ?? fe ff ff 58 66 89 85 ?? fe ff ff 33 c0 66 89 85 ?? fe ff ff ab}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

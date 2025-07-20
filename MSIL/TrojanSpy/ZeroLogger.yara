@@ -16,6 +16,7 @@ rule TrojanSpy_MSIL_ZeroLogger_A_2147692588_0
         $x_1_2 = "Zero Logger - You Got Logs!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

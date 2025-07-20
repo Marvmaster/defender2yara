@@ -17,6 +17,7 @@ rule Worm_Win32_Pizbot_2147602676_0
         $x_5_3 = {c7 45 fc 04 00 00 00 6a 00 6a 00 6a 10 8b 45 dc 50 e8 ?? ?? ff ff ff 15 ?? ?? ?? ?? c7 45 f0 00 00 00 00 68 ?? ?? ?? ?? eb 28}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
             ((2 of ($x_10_*))) or

@@ -19,6 +19,7 @@ rule Backdoor_Win32_Funkybase_A_2147710103_0
         $x_1_4 = {c6 44 24 76 72 c6 44 24 77 6f c6 44 24 78 6c c6 44 24 79 3a c6 44 24 7a 20 c6 44 24 7b 6e c6 44 24 7c 6f c6 44 24 7d 2d 88 54 24 7e c6 44 24 7f 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

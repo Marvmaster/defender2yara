@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Posfight_A_2147694092_0
         $x_1_7 = "] Novo Infection" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

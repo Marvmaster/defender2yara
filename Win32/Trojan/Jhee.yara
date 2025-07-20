@@ -19,6 +19,7 @@ rule Trojan_Win32_Jhee_A_2147597210_0
         $x_1_5 = "WinSta0\\Default" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Jhee_G_2147602140_0
         $x_1_6 = {25 0f 00 00 80 79 05 48 83 c8 f0 40 83 c0 05 85 c0 7e 0c 8b f0 68 ?? ?? ?? ?? ff d7 4e 75 f6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_Jhee_2147602359_0
         $x_1_5 = "\\Explorer\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_Jhee_V_2147604770_0
         $x_1_3 = "winio.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -117,6 +121,7 @@ rule Trojan_Win32_Jhee_H_2147616520_0
         $x_1_4 = {68 d0 07 00 00 ff d6 8d 54 24 08 52 57 e8 ?? ?? ?? ff 83 c4 08 85 c0 74 e7 5e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

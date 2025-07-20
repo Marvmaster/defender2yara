@@ -34,6 +34,7 @@ rule TrojanSpy_Win32_Mitune_A_2147597205_0
         $x_1_20 = "SetClipboardData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

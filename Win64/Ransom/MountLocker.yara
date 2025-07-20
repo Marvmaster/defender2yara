@@ -16,6 +16,7 @@ rule Ransom_Win64_MountLocker_A_2147780025_0
         $x_1_2 = "%CLIENT_ID%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win64_MountLocker_A_2147809905_0
         $x_3_6 = "cmd.exe /c start" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Ransom_Win64_MountLocker_RPR_2147809922_0
         $x_1_5 = "CryptEncrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_Win64_Albabat_AC_2147900041_0
         $x_1_3 = "files on your machine have been encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win64_Albabat_YAA_2147900111_0
         $x_1_6 = "decrypt your files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

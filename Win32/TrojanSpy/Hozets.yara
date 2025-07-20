@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Hozets_A_2147619282_0
         $x_1_2 = "10.1.251.125 hymht.h74.1stxy.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

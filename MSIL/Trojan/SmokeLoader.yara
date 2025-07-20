@@ -16,6 +16,7 @@ rule Trojan_MSIL_SmokeLoader_RPM_2147821961_0
         $x_1_1 = {7e 05 00 00 04 20 17 01 00 00 28 af 00 00 06 7e 05 00 00 04 20 17 01 00 00 28 af 00 00 06 28 73 00 00 06 0c 02 28 69 00 00 06 08 02 7e 05 00 00 04 20 17 01 00 00 28 af 00 00 06 28 61 00 00 06 0c 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_SmokeLoader_NEA_2147828313_0
         $x_1_5 = "Bqiai9hPj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_MSIL_SmokeLoader_EA_2147831391_0
         $x_3_2 = "Nvcxtw" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_MSIL_SmokeLoader_GJ_2147834302_0
         $x_1_4 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_MSIL_SmokeLoader_NEAA_2147834394_0
         $x_2_4 = "Basketball" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_MSIL_SmokeLoader_GBI_2147836952_0
         $x_1_2 = "Program_Playing" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule Trojan_MSIL_SmokeLoader_RS_2147837259_0
         $x_5_1 = {11 02 13 04 38 1e 00 00 00 38 45 00 00 00 38 8f 00 00 00 11 01 8e 69 17 da 17 d6 8d 7e 00 00 01 13 02 38 73}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +182,7 @@ rule Trojan_MSIL_SmokeLoader_AM_2147838080_0
         $x_2_1 = {2b 44 2b 45 2b 4a 2b 4b 18 5b 1e 2c 24 8d 2a 00 00 01 2b 42 16 2b 42 2b 1e 2b 41 2b 42 18 5b 2b 41 08 18 6f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -200,6 +208,7 @@ rule Trojan_MSIL_SmokeLoader_GDI_2147839258_0
         $x_1_5 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +234,7 @@ rule Trojan_MSIL_SmokeLoader_GEG_2147840461_0
         $x_1_5 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -247,6 +257,7 @@ rule Trojan_MSIL_SmokeLoader_GFM_2147842978_0
         $x_1_2 = "192.3.27.140" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +279,7 @@ rule Trojan_MSIL_SmokeLoader_GFT_2147843172_0
         $x_10_1 = {06 1d 2d 1c 26 28 ?? ?? ?? 0a 06 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 28 ?? ?? ?? 06 19 2d 06 26 de 09 0a 2b e2 0b 2b f8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -289,6 +301,7 @@ rule Trojan_MSIL_SmokeLoader_RDG_2147847339_0
         $x_2_1 = {08 07 11 07 9a 1f 10 28 ?? 00 00 0a b4 6f ?? 00 00 0a 00 11 07 17 d6 13 07 11 07 11 06}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -310,6 +323,7 @@ rule Trojan_MSIL_SmokeLoader_RDR_2147897741_0
         $x_2_1 = {28 2f 00 00 0a 6f 30 00 00 0a 1f 0a 0d 11 04 6f 31 00 00 0a 13 05 1f 0b 0d 11 05 02 16 02 8e 69}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -331,6 +345,7 @@ rule Trojan_MSIL_SmokeLoader_LL_2147901430_0
         $x_5_1 = {69 58 4a 61 d2 61 d2 52 ?? ?? ?? ?? fe 0c 05 00 ?? ?? ?? ?? ?? 25 47 fe 0c ?? ?? ?? ?? ?? ?? 91 61 d2 52}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -352,6 +367,7 @@ rule Trojan_MSIL_SmokeLoader_LA_2147901433_0
         $x_5_1 = {02 03 02 4b 03 04 61 05 61 58 0e 07 0e 04 95 58 ?? ?? ?? ?? ?? 0e 06 17 59 95 58 0e 05 28 cb 0d ?? ?? 58 54 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +389,7 @@ rule Trojan_MSIL_SmokeLoader_RDAB_2147917072_0
         $x_2_1 = {11 06 11 08 17 73 08 00 00 0a 13 03 20}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -395,6 +412,7 @@ rule Trojan_MSIL_SmokeLoader_ZVT_2147943885_0
         $x_5_2 = {a2 25 18 12 19 28 ?? 00 00 0a 8c 57 00 00 01 a2 25 19 12 19 28 ?? 00 00 0a 8c 57 00 00 01 a2 25 1a 12 19 28 ?? 00 00 0a 8c 57 00 00 01 a2 25 1b 11 04 8c 51 00 00 01 a2 25}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

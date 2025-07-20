@@ -21,6 +21,7 @@ rule HackTool_Win32_Yahooboot_A_2147605800_0
         $x_1_7 = "xpcontrols.ocx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule HackTool_Win32_Yahooboot_B_2147605828_0
         $x_1_6 = "\\Software\\APirate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule HackTool_Win32_Yahooboot_C_2147647581_0
         $x_2_3 = "ModRoomPcks" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule HackTool_Win32_Yahooboot_D_2147650207_0
         $x_2_3 = "Status:Bot Not Loged In" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -27,6 +27,7 @@ rule PWS_MSIL_Polazert_GA_2147793890_0
         $x_1_12 = "logins.json" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

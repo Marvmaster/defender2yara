@@ -17,6 +17,7 @@ rule Trojan_Linux_Pupy_A_2147781114_0
         $x_1_2 = {8b bc 24 18 21 00 00 48 8b 74 24 20 48 8d 15 92 93 00 00 e8 [0-5] 3c ff 75 8b 48 8d 3d 8c 93 00 00 48 8d ac 24 40 10 00 00 e8 [0-5] 48 8d 35 7c 93 00 00 48 89 ef e8 [0-5] 48 85 c0 74 1d e8 [0-5] 48 8d 15 01 8d 00 00 89 c1 be 00 10 00 00 48 89 ef 31 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Linux_Pupy_B_2147821036_0
         $x_1_3 = {48 83 ca ff 48 89 c6 31 c0 fc 48 89 d1 48 89 f7 89 d5 f2 ae 48 f7 d1 48 01 d1 49 39 cf 0f 82 [0-5] 4c 89 f7 e8 [0-5] 4c 89 f7 e8 [0-5] 85 c0 89 c5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Linux_Pupy_C_2147919020_0
         $x_1_5 = "injectSharedLibrary" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

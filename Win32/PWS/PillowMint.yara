@@ -18,6 +18,7 @@ rule PWS_Win32_PillowMint_A_2147769837_0
         $x_1_4 = {c7 85 f0 02 00 00 00 00 00 00 8b 85 f0 02 00 00 48 98 48 3d 89 00 00 00 77 2d 8b 85 f0 02 00 00 48 98 0f b6 84 05 20 02 00 00 83 f0 70 89 c2 8b 85 f0 02 00 00 48 98 88 94 05 90 01 00 00 83 85 f0 02 00 00 01 eb c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

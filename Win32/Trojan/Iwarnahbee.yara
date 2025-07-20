@@ -15,6 +15,7 @@ rule Trojan_Win32_Iwarnahbee_A_2147637367_0
         $x_1_1 = {c7 45 fc 08 00 00 00 6a 49 8d 45 80 50 ff 15 ?? ?? 40 00 6a 20 8d 8d ?? ?? ff ff 51 ff 15 ?? ?? 40 00 6a 57 8d 95 ?? ?? ff ff 52 ff 15 ?? ?? 40 00 6a 61 8d 85 ?? ?? ff ff 50 ff 15 ?? ?? 40 00 6a 6e 8d 8d ?? ?? ff ff 51 ff 15 ?? ?? 40 00 6a 6e 8d 95 ?? ?? ff ff 52}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

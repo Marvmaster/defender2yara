@@ -18,6 +18,7 @@ rule Ransom_Win32_BKRasnom_AA_2147853273_0
         $x_1_3 = "\\SYSTEM32\\chcp.com.hainhc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

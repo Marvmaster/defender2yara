@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Sharke_C_2147601067_0
         $x_1_7 = "ujjlhb|'ng`" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule TrojanDropper_Win32_Sharke_C_2147601067_1
         $x_1_5 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule TrojanDropper_Win32_Sharke_B_2147605044_0
         $x_1_6 = "ujjlhb|'ng`" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

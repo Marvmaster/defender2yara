@@ -21,6 +21,7 @@ rule Trojan_Win64_Alien_EH_2147843310_0
         $x_1_6 = "start C:\\Perform\\Setu64.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win64_Alien_MBFV_2147904965_0
         $x_1_4 = "amscloudhost.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win64_Alien_ARAA_2147905502_0
         $x_2_4 = {48 8d 15 d3 e0 0d 00 48 8b cb e8 cf 54 0c 00 85 c0 74 6a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

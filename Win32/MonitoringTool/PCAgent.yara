@@ -18,6 +18,7 @@ rule MonitoringTool_Win32_PCAgent_9606_0
         $x_1_4 = " PCA Mailer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule MonitoringTool_Win32_PCAgent_9606_1
         $x_1_4 = "PcaCheckVersionChkVAvailable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

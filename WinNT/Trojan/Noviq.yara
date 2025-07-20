@@ -17,6 +17,7 @@ rule Trojan_WinNT_Noviq_A_2147632575_0
         $x_1_3 = {6b c0 28 03 c6 eb ?? ff 74 24 04 8b ce e8 ?? ff ff ff 8b c8 85 c9 74 12 8b 46 3c 48 f7 d0 23 41 14 2b 41 0c 03 44 24 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

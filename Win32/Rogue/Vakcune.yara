@@ -21,6 +21,7 @@ rule Rogue_Win32_Vakcune_165170_0
         $x_2_7 = "Ebiz Network" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

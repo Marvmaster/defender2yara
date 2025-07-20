@@ -17,6 +17,7 @@ rule Trojan_Win32_Malachite_A_2147724735_0
         $x_1_2 = "copy ..\\release\\vir.bin bin\\drop.bin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

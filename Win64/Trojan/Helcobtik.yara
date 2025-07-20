@@ -16,6 +16,7 @@ rule Trojan_Win64_Helcobtik_A_2147946168_0
         $x_1_2 = {b8 a9 74 64 cf [0-16] 66 83 e1 7f 66 89 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win64_Helcobtik_B_2147946363_0
         $x_1_7 = {00 20 20 20 20 61 20 20 20 20 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_1_*))) or
             (all of ($x*))

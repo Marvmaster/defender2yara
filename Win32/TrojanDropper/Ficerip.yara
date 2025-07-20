@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Ficerip_A_2147721011_0
         $x_1_5 = {45 78 65 63 00 50 45 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

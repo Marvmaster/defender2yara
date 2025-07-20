@@ -30,6 +30,7 @@ rule Worm_Win32_Bobax_A_2147582237_0
         $x_1_15 = "PASS %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 13 of ($x_1_*))) or
             ((2 of ($x_2_*) and 11 of ($x_1_*))) or
@@ -71,6 +72,7 @@ rule Worm_Win32_Bobax_B_2147582238_0
         $x_1_17 = "firewall set" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 8 of ($x_1_*))) or
             ((5 of ($x_2_*) and 6 of ($x_1_*))) or

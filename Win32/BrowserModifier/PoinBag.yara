@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_PoinBag_165656_0
         $x_1_4 = "pointbag_shop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule BrowserModifier_Win32_PoinBag_165656_1
         $x_1_7 = "Exetoday" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

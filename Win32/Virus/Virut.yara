@@ -16,6 +16,7 @@ rule Virus_Win32_Virut_2147595183_0
         $x_1_2 = {85 c0 f7 d2 90 0f 84 7e 44 00 00 ba d1 8e a8 3f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Virus_Win32_Virut_AA_2147597702_0
         $x_1_2 = {0f 31 c3 b8 00 10 00 00 33 c9 eb 25 85 c0 75 08 cd 2c 85 c0 79 ed eb 0e 66 8c ca c1 e3 0a 78 e3 73 e1 38 fe 74 dd e8 d5 ff ff ff 91 e8 cf ff ff ff f7 d9 55 03 c1 8b 6c 24 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Virus_Win32_Virut_AI_2147599835_0
         $x_1_2 = {55 b8 00 40 00 00 2b c9 ff 74 24 04 5d f7 d9 81 6c 24 04 ?? ?? ?? ?? 8d 84 01 80 fe ff ff 81 ed 06 10 30 00 85 c0 79 ae}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Virus_Win32_Virut_B_2147601110_0
         $x_1_5 = {55 8b ec e8 ?? 00 00 00 e8 ?? 00 00 00 [0-160] 8b 54 24 10 31 c0 8f 82 b8 00 00 00 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -118,6 +122,7 @@ rule Virus_Win32_Virut_L_2147601321_0
         $x_1_11 = "Where are you, friends? Come! It is time! It's late!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -143,6 +148,7 @@ rule Virus_Win32_Virut_I_2147601323_0
         $x_99_1 = {81 e3 00 f0 ff ff [0-64] 81 7b 4e 54 68 69 73 [0-32] 66 81 38 50 45 [0-16] 8b 50 78 03 d3 8b 72 20 8b 4a 18 03 f3 51 ad [0-8] 81 78 ?? [0-40] [0-4] 81 78 ?? [0-40] 74 05 e2 ?? 59 5d c3 29 0c 24 8b 72 24 59 03 f3 0f b7 04 4e 8b 7a 1c 03 fb 8b 34 87 03 f3 e8 0c 00 00 00 43 6c 6f 73 65 48 61 6e 64 6c 65 00 53 ff d6 89 85 ?? ?? ?? ?? e8 0d 00 00 00 43 72 65 61 74 65 45 76 65 6e 74 41 00 53 ff d6 89 85 ?? ?? ?? ?? e8 0d 00 00 00 47 65 74 4c 61 73 74 45 72 72 6f 72 00 53 ff d6 89 85}  //weight: 99, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +174,7 @@ rule Virus_Win32_Virut_AF_2147601324_0
         $x_1_5 = {c7 43 08 20 20 20 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -192,6 +199,7 @@ rule Virus_Win32_Virut_AI_2147601325_0
         $x_1_4 = {81 3e 50 52 49 56 0f 85 ?? ?? 00 00 83 c6 08 ac 3c 0d 0f 84 ?? ?? 00 00 3c 20 75 ?? ac 3c 3a 0f 85 ?? ?? 00 00 ad 0d 20 20 20 20 3d 21 67 65 74 75 ?? ac 3c 20 75 ?? 81 7e ff 20 68 74 74 75 ?? 81 7e 03 70 3a 2f 2f 75 ?? c6 47 ff 00 0f 31}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -216,6 +224,7 @@ rule Virus_Win32_Virut_C_2147603101_0
         $x_1_4 = {81 7b 4e 54 68 69 73 [0-128] 74 0e [0-128] 03 43 3c [0-128] 66 81 38 50 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -236,6 +245,7 @@ rule Virus_Win32_Virut_AQ_2147605035_0
         $x_1_1 = {fc e8 29 00 00 00 53 b9 a0 0d 00 00 8b da 66 31 10 40 86 d6 40 8d 14 13 e2 f4 5b c3 ?? ?? 5d c3 0f 31 ff 24 24 55 b8 00 80 00 00 33 c9 eb 19 85 c0 75 06 cd 2e 85 c0 79 ec 55 e8 e1 ff ff ff 91 e8 db ff ff ff 83 c4 08 8b 54 24 04 2b c1 87 ea 81 6c 24 04 ?? ?? ?? ?? 2d 80 01 00 00 73 bf 81 ed 06 10 30 00 8d 85 77 10 30 00 66 8b 90 a5 ff ff ff e8 8f ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -260,6 +270,7 @@ rule Virus_Win32_Virut_D_2147605771_0
         $x_1_4 = {e8 27 00 00 00 81 c7 ?? ?? ?? ?? 29 d2 81 ca ?? ?? 00 00 bd ?? 00 00 00 57 8a 07 66 29 e8 86 07 83 c7 01 4a 83 fa 00 75 f0 5f ff e7 5f ff e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -281,6 +292,7 @@ rule Virus_Win32_Virut_AT_2147614201_0
         $x_1_2 = {55 b8 00 40 00 00 2b c9 87 6c 24 04 f7 d1 89 6c 24 04 81 6c 24 04 ?? ?? ?? ?? 8d 84 01 b3 fe ff ff 90 85 c0 79 9f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -309,6 +321,7 @@ rule Virus_Win32_Virut_M_2147623619_0
         $x_1_8 = {81 7e ff 20 68 74 74 0f 85 ?? ?? ?? ?? 81 7e 03 70 3a 2f 2f 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -339,6 +352,7 @@ rule Virus_Win32_Virut_HNC_2147925661_0
         $x_1_3 = {f3 a4 eb 06 c7 06 00 00 00 00 8b 54 24 1c 8b 44 24 18 8b 74 24 10 33 c9 66 8b 4a 04 40 83 c6 0e 3b c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -360,6 +374,7 @@ rule Virus_Win32_Virut_HNE_2147929003_0
         $x_1_1 = {a2 b0 80 f2 cf dc 71 ce 2b 86 68 8f ac 33 78 aa}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

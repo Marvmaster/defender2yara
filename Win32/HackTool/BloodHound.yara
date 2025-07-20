@@ -19,6 +19,7 @@ rule HackTool_Win32_BloodHound_A_2147741560_0
         $x_1_5 = "SharpHound.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Riberow_A_2147611552_0
         $x_1_4 = {69 63 6f 6e 70 6f 70 2e 64 6c 6c 00 43 68 65 63 6b 43 6f 6e 6e 65 63 74 69 6f 6e 41 6e 64 47 65 74 49 50 00 53 77 69 6e 64 6c 65 57 65 62 42 72 6f 77 73 65 72 00 55 73 65 54 68 69 73 43 6f 64 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule Worm_Win32_Stercogs_B_2147601308_0
         $x_1_2 = {41 3a 00 00 46 41 54 00 46 41 54 33 32 00 00 00 25 63 3a 5c 25 73 00 00 5c 5c 3f 5c 25 63 3a 00 25 63 3a 5c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

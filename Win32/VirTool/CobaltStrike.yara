@@ -18,6 +18,7 @@ rule VirTool_Win32_CobaltStrike_A_2147756521_0
         $x_1_4 = {ff 75 f0 68 00 30 00 00 8b 45 f4 ff 70 50 6a 00 ff 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule VirTool_Win32_CobaltStrike_A_2147756521_1
         $x_5_6 = {8b 06 8b 56 04 83 c6 08 85 c0 75 23}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((3 of ($x_5_*))) or
@@ -71,6 +73,7 @@ rule VirTool_Win32_CobaltStrike_A_2147756521_2
         $x_1_5 = {83 7d 9c 40 73 19 0f b6 45 a7 8b 4d 98 03 4d 9c 0f b6 09 33 c8 8b 45 98 03 45 9c 88 08 eb da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule VirTool_Win32_CobaltStrike_A_2147756521_3
         $x_1_5 = {83 7d 9c 40 73 19 0f b6 45 a7 8b 4d 98 03 4d 9c 0f b6 09 33 c8 8b 45 98 03 45 9c 88 08 eb da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule VirTool_Win32_CobaltStrike_A_2147756521_4
         $x_1_5 = {68 58 a4 53 e5 ff d5 50 e9 a8 00 00 00 5a 31 c9 51 51 68 00 b0 04 00 68 00 b0 04 00 6a 01 6a 06 6a 03 52 68 45 70 df d4 ff d5 50 8b 14 24 6a 00 52 68 28 6f 7d e2 ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -142,6 +147,7 @@ rule VirTool_Win32_CobaltStrike_STC_2147767397_0
         $x_1_4 = {68 6e 65 74 00 68 77 69 6e 69 ?? 68 4c 77 26 07 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -168,6 +174,7 @@ rule VirTool_Win32_CobaltStrike_B_2147773432_0
         $x_1_7 = "ReflectiveLoader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +221,7 @@ rule VirTool_Win32_CobaltStrike_C_2147773434_0
         $x_1_27 = {5c 5c 25 73 5c 69 70 63 24 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 22 of ($x_1_*))) or
             ((4 of ($x_10_*) and 12 of ($x_1_*))) or
@@ -241,6 +249,7 @@ rule VirTool_Win32_CobaltStrike_F_2147773438_0
         $x_1_2 = {4d 5a 52 45 e8 00 00 00 00 5b 89 df 55 89 e5 81 c3 ?? ?? ?? ?? ff d3 68 f0 b5 a2 56 68 04 00 00 00 57 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -262,6 +271,7 @@ rule VirTool_Win32_CobaltStrike_G_2147773439_0
         $x_1_2 = {6a 40 68 00 30 00 00 57 6a 00 ff 75 08 ff 15 ?? ?? ?? ?? 8b f0 85 f6 74 ?? 8d 45 fc 50 57 ff 75 f8 56 ff 75 08 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -284,6 +294,7 @@ rule VirTool_Win32_CobaltStrike_H_2147781998_0
         $x_1_3 = "%c%c%c%c%c%c%c%c%cMSSE-%d-server" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -307,6 +318,7 @@ rule VirTool_Win32_CobaltStrike_H_2147781998_1
         $x_1_4 = "%c%c%c%c%c%c%c%c%cMSSE-%d-server" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -329,6 +341,7 @@ rule VirTool_Win32_CobaltStrike_I_2147782908_0
         $x_1_3 = {44 09 30 09 25 30 32 64 2f 25 30 32 64 2f 25 30 32 64 20 25 30 32 64 3a 25 30 32 64 3a 25 30 32 64 09 25 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

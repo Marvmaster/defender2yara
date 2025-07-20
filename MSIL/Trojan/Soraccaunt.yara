@@ -19,6 +19,7 @@ rule Trojan_MSIL_Soraccaunt_A_2147728355_0
         $x_10_5 = "Check Usernames" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

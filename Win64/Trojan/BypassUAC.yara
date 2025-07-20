@@ -22,6 +22,7 @@ rule Trojan_Win64_BypassUAC_NE_2147920713_0
         $x_1_7 = "hentai" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win64_BypassUAC_NE_2147920713_1
         $x_1_6 = "cmd.exe /c start C:\\Windows\\System32\\cmd.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or

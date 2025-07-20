@@ -18,6 +18,7 @@ rule Ransom_Win32_KarmaLocker_PAA_2147795539_0
         $x_1_3 = ":\\aaa_TouchMeNot_.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

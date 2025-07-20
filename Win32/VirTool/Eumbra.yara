@@ -90,6 +90,7 @@ rule VirTool_Win32_Eumbra_A_2147767613_0
         $x_1_5 = {7c d1 e9 3e fe ff ff 0f 1f 40 00 85 d2 0f 85 80 00 00 00 8b 43 04 89 c7 0b 7b 08 0f 85 aa fe ff ff 8b 53 0c 48 83 c3 0c e9 93 fe ff ff 66 0f 1f 44 00 00 41 83 f8 40 0f 85 a7 00 00 00 48 8b 01 41 b8 08 00 00 00 4c 89 ff 48 29 d0 4c 89 fa 4c 01 c8 48 89 45 a8 e8 b8 fb ff ff e9 d3 fe ff ff 0f 1f 00 8b 01 4c 89 ff 49 89 c0 4c 09 f0 45 85 c0 49 0f 49 c0 41 b8 04 00 00 00 48 29 d0 4c 89 fa 4c 01 c8 48 89 45 a8 e8 86 fb ff ff e9 a1 fe ff ff 90 4c 39 e3 0f 83 a9 fd ff ff 49 83 ec 01 4c 8b 2d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

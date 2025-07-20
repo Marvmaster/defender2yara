@@ -17,6 +17,7 @@ rule PWS_Win32_QQGame_D_2147601293_0
         $x_1_3 = {43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 61 70 70 6c 69 63 61 74 69 6f 6e 2f 78 2d 77 77 77 2d 66 6f 72 6d 2d 75 72 6c 65 6e 63 6f 64 65 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule PWS_Win32_QQGame_F_2147614107_0
         $x_3_4 = {6a 04 52 68 4b e1 22 00 50 ff 15 ?? ?? ?? ?? 85 c0 74 10 ff 15 ?? ?? ?? ?? 85 c0 75 06}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

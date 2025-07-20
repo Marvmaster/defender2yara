@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Zolpiq_E_2147645512_0
         $x_1_2 = {80 3b e9 74 0f 8b 44 24 14 c6 03 e9 2b c3 83 e8 05 89 43 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

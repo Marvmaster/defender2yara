@@ -18,6 +18,7 @@ rule TrojanProxy_Win32_Extats_A_2147686399_0
         $x_1_4 = {74 63 70 3a 2f 2f 39 31 2e 32 30 37 2e 37 2e 31 33 34 3a 34 34 33 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

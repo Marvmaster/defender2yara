@@ -18,6 +18,7 @@ rule HackTool_MSIL_HotBrute_A_2147658928_0
         $x_1_4 = "pop3.live.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

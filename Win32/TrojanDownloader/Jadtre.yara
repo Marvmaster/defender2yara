@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Jadtre_A_2147627813_0
         $x_1_3 = {c7 40 fb e9 00 00 00 8b 45 f4 03 45 f8 8b 4d fc 2b c8 8b 45 f4 03 45 f8 89 48 fc 8b 45 f4 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_Jadtre_B_2147652731_0
         $x_1_3 = {68 72 72 f2 e1 ff 75 ?? ff 55 ?? 8d 45 ?? 50 ff 75 ?? ff 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

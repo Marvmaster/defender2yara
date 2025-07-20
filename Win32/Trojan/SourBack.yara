@@ -21,6 +21,7 @@ rule Trojan_Win32_SourBack_A_2147773980_0
         $x_1_6 = {04 24 8d 49 01 88 41 ff 8a 01 84 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

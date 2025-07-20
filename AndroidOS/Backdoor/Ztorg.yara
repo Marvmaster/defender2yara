@@ -17,6 +17,7 @@ rule Backdoor_AndroidOS_Ztorg_B_2147829884_0
         $x_1_2 = {1c 68 3e 4b 79 44 20 1c eb 58 1b 68 05 93 3c 4b eb 58 1b 68 06 93 3b 4b eb 58 1b 68 07 93 3a 4b eb 58 1f 68 ff f7 8f fe 38 4a 39 4b 06 1c 31 1c 7b 44 7a 44 20 1c ff f7 b1 fe 31 1c 02 1c 20 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_AndroidOS_Ztorg_A_2147830760_0
         $x_1_4 = "/data/local/tmp/busybox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

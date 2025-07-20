@@ -19,6 +19,7 @@ rule Trojan_iPhoneOS_AceDeceiver_B_2147750375_0
         $x_1_4 = "aisiweb_wallPaper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_iPhoneOS_AceDeceiver_C_2147759848_0
         $x_1_5 = "com.teiron.ppsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_iPhoneOS_AceDeceiver_D_2147787763_0
         $x_1_4 = "com.teiron.ppsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

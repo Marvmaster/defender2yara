@@ -16,6 +16,7 @@ rule Trojan_Win32_Windigo_DSK_2147741879_0
         $x_3_1 = {8b 45 f4 8b 08 03 ca 8a 51 03 8a da 8a c2 80 e2 f0 c0 e0 06 0a 41 02 80 e3 fc c0 e2 02 0a 11 c0 e3 04 0a 59 01 8d 4d f8 88 14 3e 88 5c 3e 01}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Windigo_MB_2147842390_0
         $x_1_7 = "UPX1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_Windigo_MA_2147842622_0
         $x_1_6 = "UPX1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_Win32_Windigo_MC_2147844001_0
         $x_5_4 = {b4 bf 9e 76 d0 03 9f 76 5a 53 9f 76 27 19 9e 76 c0 50 9d 76 65 de 9e 76 42 f1 9e 76 e3 10 a3 76 cc 8d a0 76 b2 de 9e 76 d7 96 9e 76 1f 91 9f 76}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_Win32_Windigo_GMK_2147891523_0
         $x_10_1 = {d3 e8 8b 4d ?? 03 cf 03 d3 03 45 ?? 81 c3 ?? ?? ?? ?? 33 c1 33 c2 29 45 ?? ff 4d ?? 89 45 ?? 0f 85 ?? ?? ?? ?? 81 3d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Trojan_Win32_Windigo_AMMC_2147905000_0
         $x_2_2 = "ps://planesgold.site/tracker/thank_you.php" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Trojan_Win32_Windigo_AMMD_2147905344_0
         $x_2_1 = {8b c7 d3 e8 03 c6 89 45 ec 33 45 e4 31 45 fc 8b 45 fc 29 45 f4}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +185,7 @@ rule Trojan_Win32_Windigo_AMAE_2147910745_0
         $x_1_1 = {d3 e8 89 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 33 45 ?? 81 3d ?? ?? ?? ?? 03 0b 00 00 89 45 ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

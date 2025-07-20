@@ -34,6 +34,7 @@ rule TrojanSpy_Win32_Batlopma_A_2147706395_0
         $x_2_20 = "94B2BB4EDA68E466E64C4EC1A997B9553AE80B25DA002A9AF80FCC7D" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

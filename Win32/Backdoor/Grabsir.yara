@@ -18,6 +18,7 @@ rule Backdoor_Win32_Grabsir_A_2147718972_0
         $x_1_4 = "abe2869f-9b47-4cd9-a358-c22904dba7f7" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

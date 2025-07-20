@@ -17,6 +17,7 @@ rule Trojan_MSIL_Beyuwa_A_2147695367_0
         $x_1_3 = {62 31 00 62 32 00 62 33}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Beyuwa_A_2147695367_1
         $x_1_6 = "/nig.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_MSIL_Beyuwa_A_2147695367_2
         $x_1_5 = "/refer.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Wlock_A_2147640821_0
         $x_1_4 = "\\Winlogon\" /v Userinit /t REG_SZ /d \"%WINDIR%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

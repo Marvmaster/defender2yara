@@ -19,6 +19,7 @@ rule Trojan_Win32_Spiliwan_A_2147637331_0
         $x_2_5 = "142#142#166#166#137#149#121#125#97#161#" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

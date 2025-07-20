@@ -16,6 +16,7 @@ rule Trojan_Win32_Drwolf_A_2147631243_0
         $x_1_2 = {73 25 5c 73 65 63 69 76 72 65 73 5c 74 65 73 6c 6f 72 74 6e 6f 63 74 6e 65 72 72 75 63 5c 6d 65 74 73 79 73 00 00 00 00 5c 69 6e 73 74 61 6c 6c 2e 74 6d 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

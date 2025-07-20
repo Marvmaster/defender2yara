@@ -21,6 +21,7 @@ rule Rogue_Win32_SpySheriff_15963_0
         $x_1_7 = "Are you sure you wish to cancel setup?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule Rogue_Win32_SpySheriff_15963_1
         $x_1_7 = "Are you sure you wish to cancel setup?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -81,6 +83,7 @@ rule Rogue_Win32_SpySheriff_15963_2
         $x_1_7 = "Are you sure you wish to cancel setup?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -111,6 +114,7 @@ rule Rogue_Win32_SpySheriff_15963_3
         $x_1_7 = "Are you sure you wish to cancel setup?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -141,6 +145,7 @@ rule Rogue_Win32_SpySheriff_15963_4
         $x_1_7 = "Are you sure you wish to cancel setup?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -171,6 +176,7 @@ rule Rogue_Win32_SpySheriff_15963_5
         $x_1_7 = "Spyware scanner and remover. Uninstall.</description>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -195,6 +201,7 @@ rule Rogue_Win32_SpySheriff_15963_6
         $x_1_5 = "http://www.virtrigger.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +228,7 @@ rule Rogue_Win32_SpySheriff_15963_7
         $x_1_7 = "Are you sure you wish to cancel setup?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -256,6 +264,7 @@ rule Rogue_Win32_SpySheriff_15963_8
         $x_1_12 = "http://%s/buy_online.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_35_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_35_*) and 2 of ($x_5_*))) or
@@ -283,6 +292,7 @@ rule Rogue_Win32_SpySheriff_15963_9
         $x_2_4 = {36 39 2e 35 30 2e 31 37 35 2e 31 38 30 00 00 00 47 45 54 20 68 74 74 70 3a 2f 2f 25 73 2f 61 73 67 68 66 64 2e 70 68 70 3f 26 26 75 3d 25 75 26 70 3d 25 75 26 6c 61 6e 67}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -315,6 +325,7 @@ rule Rogue_Win32_SpySheriff_15963_10
         $x_1_13 = "%sCache%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -340,6 +351,7 @@ rule Rogue_Win32_SpySheriff_15963_11
         $x_1_3 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +375,7 @@ rule Rogue_Win32_SpySheriff_15963_12
         $x_1_4 = {36 39 2e 35 30 2e 31 [0-5] 00 00 00 00 47 45 54 20 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -389,6 +402,7 @@ rule Rogue_Win32_SpySheriff_15963_13
         $x_1_7 = ".php?v=%u&d=%u&vs=%u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -415,6 +429,7 @@ rule Rogue_Win32_SpySheriff_15963_14
         $x_1_7 = "Internet connection loss detected. Retry?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -445,6 +460,7 @@ rule Rogue_Win32_SpySheriff_15963_15
         $x_1_7 = "Internet connection loss detected. Retry?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -475,6 +491,7 @@ rule Rogue_Win32_SpySheriff_15963_16
         $x_1_7 = "Internet connection is unavailable." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -505,6 +522,7 @@ rule Rogue_Win32_SpySheriff_15963_17
         $x_1_7 = "Internet connection loss detected. Retry?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -536,6 +554,7 @@ rule Rogue_Win32_SpySheriff_15963_18
         $x_1_8 = "Internet connection loss detected. Retry?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -570,6 +589,7 @@ rule Rogue_Win32_SpySheriff_15963_19
         $x_1_10 = "\\uninstall.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -598,6 +618,7 @@ rule Rogue_Win32_SpySheriff_15963_20
         $x_1_9 = "GetLastActivePopup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -630,6 +651,7 @@ rule Rogue_Win32_SpySheriff_15963_21
         $x_1_8 = "69.50.164.27" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -656,6 +678,7 @@ rule Rogue_Win32_SpySheriff_15963_22
         $x_1_7 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -687,6 +710,7 @@ rule Rogue_Win32_SpySheriff_15963_23
         $x_1_12 = "00002654" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -714,6 +738,7 @@ rule Rogue_Win32_SpySheriff_15963_24
         $x_1_5 = "69.50.175.180" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -742,6 +767,7 @@ rule Rogue_Win32_SpySheriff_15963_25
         $x_1_9 = "69.50.175.181" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -767,6 +793,7 @@ rule Rogue_Win32_SpySheriff_15963_26
         $x_1_6 = {4a 42 30 31 00 00 00 00 4a 42 30 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

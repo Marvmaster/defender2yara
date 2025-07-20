@@ -20,6 +20,7 @@ rule Trojan_Win32_Vbedox_A_2147709741_0
         $x_1_6 = "reg add \"\"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\" /v Adobe /t REG_SZ /d c:\\SystemVolume\\Program\\csrsss.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MSIL_Phoenixrat_NEAA_2147842025_0
         $x_1_3 = "CryptoObfuscator_Output" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_Phoenixrat_NEAB_2147842027_0
         $x_5_2 = "CryptoObfuscator_Output" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_Phoenixrat_NEAC_2147842550_0
         $x_10_1 = {00 00 06 0b 07 6f ?? 00 00 0a 17 da 0c 16 0d 2b 20 7e ?? 00 00 04 07 09 16 6f ?? 00 00 0a 13 04 12 04 28 ?? 00 00 0a 6f ?? 00 00 0a 00 09 17 d6 0d 09 08 31 dc}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

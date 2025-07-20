@@ -224,6 +224,7 @@ rule Trojan_Win32_Gaobot_2147555596_0
         $x_3_210 = ":PhatBNC" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_3_*) and 7 of ($x_1_*))) or

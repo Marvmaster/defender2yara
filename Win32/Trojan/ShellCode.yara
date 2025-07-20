@@ -16,6 +16,7 @@ rule Trojan_Win32_ShellCode_EAYU_2147939208_0
         $x_5_1 = {0f b6 14 10 23 fa 0b f7 0b ce 8b 45 f8 03 45 fc 88 08}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

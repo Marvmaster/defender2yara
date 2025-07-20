@@ -19,6 +19,7 @@ rule VirTool_Win64_Bypecgz_B_2147912623_0
         $x_1_4 = {48 c7 45 08 00 00 00 00 [0-54] ba 20 00 00 00 48 8b c8 ?? ?? ?? ?? ?? ?? 85 c0 ?? ?? ?? ?? ?? ?? ?? ?? 8b d0 [0-18] b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

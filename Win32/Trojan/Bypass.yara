@@ -18,6 +18,7 @@ rule Trojan_Win32_Bypass_D_2147722590_0
         $x_1_3 = "REG DELETE HKCU\\Software\\Classes\\mscfile\\shell\\open\\command" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

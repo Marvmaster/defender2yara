@@ -22,6 +22,7 @@ rule HackTool_MSIL_BloodHound_SA_2147741581_0
         $x_1_8 = "SetSecurityDescriptorBinaryForm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or

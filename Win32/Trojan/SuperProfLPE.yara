@@ -22,6 +22,7 @@ rule Trojan_Win32_SuperProfLPE_A_2147814644_0
         $x_1_7 = {6e 74 75 73 65 72 2e 64 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

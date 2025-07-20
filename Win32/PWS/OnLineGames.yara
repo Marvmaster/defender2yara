@@ -16,6 +16,7 @@ rule PWS_Win32_OnLineGames_2147574537_0
         $x_1_2 = "/data/count.asp?u=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule PWS_Win32_OnLineGames_2147574537_1
         $x_1_3 = "C:\\WINDOWS\\SYSTEM32\\Drivers\\usbKeyInit.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule PWS_Win32_OnLineGames_2147574537_2
         $x_1_2 = "C:\\WINDOWS\\SYSTEM32\\knlExt.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule PWS_Win32_OnLineGames_BJK_2147596323_0
         $x_1_5 = "562452F-FA36-BA4F-892A-FF5FBBAC531" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule PWS_Win32_OnLineGames_BLP_2147596403_0
         $x_1_15 = "MapVirtualKeyA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule PWS_Win32_OnLineGames_COK_2147596476_0
         $x_4_5 = {c7 45 f0 6c 69 6e 6b 50 8d 85 0c ff ff ff 50 c7 45 f4 2e 00 00 00 ff 15 ?? ?? ?? ?? 59 59 5f 5e 5b 85 c0 74 2f 8b 40 05 c7 45 ec 77 6f 72 00 25 ff ff ff 00 c7 45 f0 77 32 69 00 c7 45 f4 7a 68 75 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -171,6 +177,7 @@ rule PWS_Win32_OnLineGames_B_2147596479_0
         $x_1_8 = "scrnsave.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +208,7 @@ rule PWS_Win32_OnLineGames_CPD_2147597270_0
         $x_1_11 = "\\iuoiuo\\sysutils.pas" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -230,6 +238,7 @@ rule PWS_Win32_OnLineGames_E_2147597426_0
         $x_1_7 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -257,6 +266,7 @@ rule PWS_Win32_OnLineGames_E_2147597427_0
         $x_1_8 = "WriteFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -282,6 +292,7 @@ rule PWS_Win32_OnLineGames_CPF_2147597470_0
         $x_1_6 = "HM_POSTWINDOWEXE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -309,6 +320,7 @@ rule PWS_Win32_OnLineGames_CPG_2147597471_0
         $x_1_5 = {00 4a 75 6d 70 4f 66 66}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -335,6 +347,7 @@ rule PWS_Win32_OnLineGames_G_2147597740_0
         $x_10_7 = {55 8b ec 8b 45 0c 53 83 f8 01 0f 85 b9 01 00 00 90 8b d2 8b c0 90 8b d2 90 8b db 90 8b c9 90 90 8b d2 8b c0}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -359,6 +372,7 @@ rule PWS_Win32_OnLineGames_G_2147597742_0
         $x_10_5 = {55 8b ec 81 ec 3c 06 00 00 53 90 8b d2 8b c0 90 8b d2 90 8b db 90 8b c9 90 90 8b d2 8b c0}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -386,6 +400,7 @@ rule PWS_Win32_OnLineGames_CPJ_2147598029_0
         $x_1_8 = {00 48 4f 4f 4b 2e 64 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -416,6 +431,7 @@ rule PWS_Win32_OnLineGames_CPJ_2147598029_1
         $x_3_8 = {41 75 74 6f ?? c7 45 ?? 4c 6f 67 69 c7 45 ?? 6e 2e 64 61 c7 45 ?? 74 00 00 00 c7 45 ?? 72 62 00 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*) and 3 of ($x_3_*))) or
             ((4 of ($x_10_*) and 1 of ($x_3_*))) or
@@ -455,6 +471,7 @@ rule PWS_Win32_OnLineGames_CPK_2147598036_0
         $x_1_15 = {8b d2 8b d2 8b d2 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_20_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -491,6 +508,7 @@ rule PWS_Win32_OnLineGames_CPL_2147598228_0
         $x_1_14 = "HttpOpenRequestA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 11 of ($x_1_*))) or
             (all of ($x*))
@@ -523,6 +541,7 @@ rule PWS_Win32_OnLineGames_CPM_2147598229_0
         $x_1_10 = "OpenProcessToken" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -551,6 +570,7 @@ rule PWS_Win32_OnLineGames_CPN_2147598231_0
         $x_1_9 = "DeleteFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -584,6 +604,7 @@ rule PWS_Win32_OnLineGames_CPS_2147598287_0
         $x_1_11 = "SetWindowsHookExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -608,6 +629,7 @@ rule PWS_Win32_OnLineGames_CPH_2147598465_0
         $x_3_5 = {55 8b ec 81 ec ?? ?? 00 00 53 8b d2 8b c0 90 8b d2 90 8b db 90}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -632,6 +654,7 @@ rule PWS_Win32_OnLineGames_J_2147598504_0
         $x_1_4 = "qqffo.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -663,6 +686,7 @@ rule PWS_Win32_OnLineGames_CPL_2147598561_0
         $x_100_11 = {0b 00 00 00 67 64 64 6a 69 33 32 2e 64 6c 6c 00 48 4d 5f 4d 45 53 53 44 41 4f 4a 41 47 45 57 4c 49 55 4c 49 55 57 44 4c 4c 00 00 00 48 4d 5f 4d 45 53 53 44 41 4f 4a 4c 49 55 4c 49 55 44 4c 4c 00 00 00 00 ff ff ff ff 32 00 00 00}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 8 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -691,6 +715,7 @@ rule PWS_Win32_OnLineGames_CPT_2147598638_0
         $x_1_5 = "SetWindowsHookExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -727,6 +752,7 @@ rule PWS_Win32_OnLineGames_CPV_2147598700_0
         $x_1_14 = "asvzhuzhu32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -758,6 +784,7 @@ rule PWS_Win32_OnLineGames_CPW_2147598701_0
         $x_1_9 = "legend of mir2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -795,6 +822,7 @@ rule PWS_Win32_OnLineGames_CPX_2147598748_0
         $x_1_15 = {8b d2 8b d2 8b d2 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_20_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -825,6 +853,7 @@ rule PWS_Win32_OnLineGames_CPY_2147598749_0
         $x_1_8 = "avdaojian32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -854,6 +883,7 @@ rule PWS_Win32_OnLineGames_CPZ_2147598843_0
         $n_40_7 = {46 00 69 00 6c 00 65 00 44 00 65 00 73 00 63 00 72 00 69 00 70 00 74 00 69 00 6f 00 6e 00 00 00 00 00 4a 00 41 00 56 00 41 00 7b 76 46 96 68 56 00}  //weight: -40, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -881,6 +911,7 @@ rule PWS_Win32_OnLineGames_CQC_2147599226_0
         $x_1_7 = {8b d2 90 8b d2 90 8b d2 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -915,6 +946,7 @@ rule PWS_Win32_OnLineGames_CQD_2147599257_0
         $n_20_10 = "Heuristics engine" wide //weight: -20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -949,6 +981,7 @@ rule PWS_Win32_OnLineGames_CQE_2147599280_0
         $x_1_9 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -980,6 +1013,7 @@ rule PWS_Win32_OnLineGames_CQI_2147599306_0
         $x_1_9 = "FTCCompress.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 3 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_20_*) and 4 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1013,6 +1047,7 @@ rule PWS_Win32_OnLineGames_K_2147599980_0
         $x_1_10 = "password" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1043,6 +1078,7 @@ rule PWS_Win32_OnLineGames_CRP_2147600329_0
         $x_1_11 = "dllcache\\internat.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -1071,6 +1107,7 @@ rule PWS_Win32_OnLineGames_CRQ_2147600442_0
         $x_2_5 = "naixuhz.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1097,6 +1134,7 @@ rule PWS_Win32_OnLineGames_CRS_2147600473_0
         $x_2_6 = {8b c0 8b c0 8b c0 8b c0 90 90 90 90}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*))) or
             (all of ($x*))
@@ -1126,6 +1164,7 @@ rule PWS_Win32_OnLineGames_CRT_2147600475_0
         $x_1_6 = "\\Device\\maspi" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1152,6 +1191,7 @@ rule PWS_Win32_OnLineGames_CRZ_2147600538_0
         $x_1_7 = "=zhengdaqian=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1179,6 +1219,7 @@ rule PWS_Win32_OnLineGames_CRU_2147600652_0
         $x_1_4 = "ObfDereferenceObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1216,6 +1257,7 @@ rule PWS_Win32_OnLineGames_CPA_2147600658_0
         $x_1_17 = "utiemnaw.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 12 of ($x_1_*))) or
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
@@ -1242,6 +1284,7 @@ rule PWS_Win32_OnLineGames_BD_2147600954_0
         $x_1_3 = {c7 45 88 6e 5c 45 78 c7 45 8c 70 6c 6f 72 c7 45 90 65 72 5c 53 c7 45 94 68 65 6c 6c c7 45 98 45 78 65 63 c7 45 9c 75 74 65 48 c7 45 a0 6f 6f 6b 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1278,6 +1321,7 @@ rule PWS_Win32_OnLineGames_BE_2147600956_0
         $x_1_17 = "a=&c=%s&e=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((12 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1304,6 +1348,7 @@ rule PWS_Win32_OnLineGames_BG_2147600960_0
         $x_1_4 = "mibao.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1326,6 +1371,7 @@ rule PWS_Win32_OnLineGames_BG_2147600960_1
         $x_1_3 = {81 fb c8 00 00 00 7e 07 6a 00 e8 ?? ?? ?? ?? 6a 64 e8 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 74 0a ?? ?? ?? ?? ?? ?? ?? ?? 75 03 43 eb ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1352,6 +1398,7 @@ rule PWS_Win32_OnLineGames_BH_2147600962_0
         $x_5_7 = {80 3d d5 4f 55 00 85 0f 85}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -1381,6 +1428,7 @@ rule PWS_Win32_OnLineGames_BI_2147600964_0
         $x_1_6 = "\\userdata\\currentserver.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1405,6 +1453,7 @@ rule PWS_Win32_OnLineGames_BJ_2147600966_0
         $x_1_5 = {b0 2d aa b0 31 aa b0 32 aa aa b0 37 aa b0 2d aa b0 4e aa b0 45 aa b0 57}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1428,6 +1477,7 @@ rule PWS_Win32_OnLineGames_BK_2147601014_0
         $x_1_4 = {68 74 74 70 3a 2f 2f [0-32] 73 3f 25 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1451,6 +1501,7 @@ rule PWS_Win32_OnLineGames_BM_2147601018_0
         $x_1_4 = {53 41 56 45 4f 4b 00 00 75 73 65 72 3d 25 73 26 70 61 73 73 3d 25 73 26 67 61 6d 65 3d 25 73 26 73 65 72 3d 25 73 26 61 63 74 69 6f 6e 3d 75 73 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1476,6 +1527,7 @@ rule PWS_Win32_OnLineGames_CSB_2147601079_0
         $x_1_6 = "del \"%s\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -1506,6 +1558,7 @@ rule PWS_Win32_OnLineGames_CSD_2147601143_0
         $x_100_7 = {8b 44 24 10 6a 00 6a 00 6a 00 6a 00 6a 00 50 6a 01 6a 03 6a 01 68 ff 01 0f 00 57 57 56 ff 15 ?? ?? 00 10 85 c0 75 0c 56 ff 15 ?? ?? 00 10 5f 32 c0 5e c3}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1538,6 +1591,7 @@ rule PWS_Win32_OnLineGames_L_2147601265_0
         $x_1_8 = "SetWindowsHookExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -1567,6 +1621,7 @@ rule PWS_Win32_OnLineGames_BY_2147601401_0
         $x_1_7 = "SOFTWARE\\snda\\Woool" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1600,6 +1655,7 @@ rule PWS_Win32_OnLineGames_BX_2147601403_0
         $x_1_10 = "MapleStory sever" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_3_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1631,6 +1687,7 @@ rule PWS_Win32_OnLineGames_CSF_2147601439_0
         $x_2_5 = "%s?RE=%s&S=%s&A=%s&P=%s&R=%s&RG=%s&RJ=%s&E=%s" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 3 of ($x_2_*))) or
@@ -1658,6 +1715,7 @@ rule PWS_Win32_OnLineGames_BZ_2147601449_0
         $x_1_3 = {50 43 49 4b 20 2d 20 50 61 74 63 68 20 43 6c 69 65 6e 74 00 68 74 74 70 3a 2f 2f 70 61 74 63 68 2e 70 63 69 6b 63 68 69 6e 61 2e 63 6f 6d 2f 70 61 74 63 68 69 6e 66 6f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1684,6 +1742,7 @@ rule PWS_Win32_OnLineGames_M_2147601476_0
         $x_1_6 = "secretQuestionAnswer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1709,6 +1768,7 @@ rule PWS_Win32_OnLineGames_FKM_2147602358_0
         $x_1_3 = "C:\\WINDOWS\\SYSTEM32\\Drivers\\usbKeyInit.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1742,6 +1802,7 @@ rule PWS_Win32_OnLineGames_DI_2147602603_0
         $x_1_14 = "\\Device\\PhysicalMemory" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*) and 9 of ($x_1_*))) or
             (all of ($x*))
@@ -1783,6 +1844,7 @@ rule PWS_Win32_OnLineGames_DI_2147602604_0
         $x_1_19 = "jpff11.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_20_*) and 11 of ($x_1_*))) or
             (all of ($x*))
@@ -1815,6 +1877,7 @@ rule PWS_Win32_OnLineGames_CSK_2147603037_0
         $x_1_10 = "WinExec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1839,6 +1902,7 @@ rule PWS_Win32_OnLineGames_KA_2147603341_0
         $x_1_5 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1866,6 +1930,7 @@ rule PWS_Win32_OnLineGames_CSN_2147604948_0
         $x_1_8 = "WZCSVC" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1895,6 +1960,7 @@ rule PWS_Win32_OnLineGames_CSO_2147604949_0
         $x_1_10 = "POPTANG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1924,6 +1990,7 @@ rule PWS_Win32_OnLineGames_CSS_2147605112_0
         $x_1_10 = {73 65 6e 64 00 00 00 00 77 73 32 5f 33 32 2e 64 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1952,6 +2019,7 @@ rule PWS_Win32_OnLineGames_C_2147605160_0
         $x_1_9 = "HM_MESSW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1980,6 +2048,7 @@ rule PWS_Win32_OnLineGames_ZDF_2147605795_0
         $x_1_6 = "InternetOpenA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
             ((3 of ($x_5_*))) or
@@ -2013,6 +2082,7 @@ rule PWS_Win32_OnLineGames_FKW_2147605824_0
         $x_1_10 = "AdjustTokenPrivileges" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2040,6 +2110,7 @@ rule PWS_Win32_OnLineGames_CST_2147605933_0
         $x_1_8 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2068,6 +2139,7 @@ rule PWS_Win32_OnLineGames_CSU_2147605942_0
         $x_1_9 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2099,6 +2171,7 @@ rule PWS_Win32_OnLineGames_NC_2147605943_0
         $x_1_12 = "xul.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2125,6 +2198,7 @@ rule PWS_Win32_OnLineGames_ND_2147605945_0
         $x_5_7 = {25 25 25 30 32 58 00 00 3b 00 00 00 43 6f 6d 6d 75 6e 69 63 61 74 65 2e 64 6c 6c 00 42 61 73 74 65 72}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2152,6 +2226,7 @@ rule PWS_Win32_OnLineGames_CSV_2147606078_0
         $x_1_8 = "lastGameServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2174,6 +2249,7 @@ rule PWS_Win32_OnLineGames_ZDH_2147606340_0
         $x_1_3 = {5c 6d 70 70 c7 45 ?? 64 73 2e 64 c7 45 ?? 6c 6c 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2195,6 +2271,7 @@ rule PWS_Win32_OnLineGames_ZDI_2147606349_0
         $x_1_2 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2218,6 +2295,7 @@ rule PWS_Win32_OnLineGames_ZDJ_2147606635_0
         $x_1_4 = {f2 ae f7 d1 2b f9 8b f7 8b d9 8b fa 83 c9 ff f2 ae 8b cb 4f c1 e9 02 f3 a5 8b cb 8d ?? 24 ?? 83 e1 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2240,6 +2318,7 @@ rule PWS_Win32_OnLineGames_ZDK_2147606721_0
         $x_1_3 = {74 21 50 6a 00 68 01 04 10 00 ff 15 ?? ?? ?? 00 8b f0 6a 01 56 ff d5 6a 00 56 ff d5 56 ff 15 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2263,6 +2342,7 @@ rule PWS_Win32_OnLineGames_NE_2147606773_0
         $x_1_4 = {48 4d 5f 4d 45 53 53 [0-16] 4c 4c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2283,6 +2363,7 @@ rule PWS_Win32_OnLineGames_ZDL_2147606850_0
         $x_1_1 = {67 6f 74 6f 20 74 72 79 20 [0-16] 69 66 20 65 78 69 73 74 20 25 73 [0-16] 64 65 6c 20 25 73 [0-16] 3a 74 72 79 [0-16] 2e 62 61 74 [0-255] 48 4d 5f 4d 45 53 53 [0-16] 4c 4c [0-80] 2e 73 79 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2309,6 +2390,7 @@ rule PWS_Win32_OnLineGames_ZDN_2147606953_0
         $x_1_7 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -2340,6 +2422,7 @@ rule PWS_Win32_OnLineGames_ZDQ_2147608207_0
         $x_2_6 = {46 72 6f 6d 3a 20 22 3d 3f 67 62 32 33 31 32 3f 42 3f 25 73 3d 3f 3d 22 20 3c 25 73 3e [0-16] 44 41 54 41 [0-7] 52 43 50 54 20 54 4f 3a 20 3c 25 73 3e [0-7] 4d 41 49 4c 20 46 52 4f 4d 3a 20 3c 25 73 3e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_2_*))) or
             ((2 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -2370,6 +2453,7 @@ rule PWS_Win32_OnLineGames_ZDR_2147608221_0
         $x_1_7 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Browser Helper Objects" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2399,6 +2483,7 @@ rule PWS_Win32_OnLineGames_ZDS_2147608837_0
         $x_1_3 = "Registry\\Machine\\SYSTEM\\CurrentControlSet\\Services\\AsyncMac" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2421,6 +2506,7 @@ rule PWS_Win32_OnLineGames_EQ_2147609019_0
         $x_1_3 = {4c 69 75 5f 4d 61 7a 69 4e 7d 6a 51 73 72 58 32 79 64 79 90 4f 71 7d 6e 68 49 6c 32 79 64 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2444,6 +2530,7 @@ rule PWS_Win32_OnLineGames_NG_2147609102_0
         $x_1_4 = "SetWindowsHookExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2466,6 +2553,7 @@ rule PWS_Win32_OnLineGames_NH_2147609245_0
         $x_1_3 = "?act=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2491,6 +2579,7 @@ rule PWS_Win32_OnLineGames_ER_2147609911_0
         $x_1_6 = {2e 72 61 77 64 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2526,6 +2615,7 @@ rule PWS_Win32_OnLineGames_ER_2147609911_1
         $x_1_13 = {8b 00 03 c1 50 e8 ?? ?? ?? ?? [0-2] 85 c0 [0-2] 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2553,6 +2643,7 @@ rule PWS_Win32_OnLineGames_CF_2147609936_0
         $x_1_5 = "TenQQAccount.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2573,6 +2664,7 @@ rule PWS_Win32_OnLineGames_ZDT_2147609990_0
         $x_1_1 = {62 72 61 72 79 41 00 00 47 65 74 50 72 6f 63 41 64 64 72 65 73 73 00 00 52 65 67 43 6c 6f 73 65 4b 65 79 00 00 00 50 61 74 68 54 6f 52 65 67 69 6f 6e 00 00 53 79 73 46 72 65 65 53 74 72 69 6e 67 00 00 00 49 73 4d 65 6e 75 00 00 73 65 6e 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 50 f2 00 00 01 00 00 00 02 00 00 00 02 00 00 00 3c f2 00 00 44 f2 00 00 4c f2 00 00 e8 67 00 00 c0 67 00 00 59 f2 00 00 62 f2 00 00 01 00 00 00 48 6f 6f 6b 2e 64 6c 6c 00 6b 73 48 6f 6f 6b 77 6f 00 74 7a 48 6f 6f 6b 77 6f 00 00 00 e0 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2593,6 +2685,7 @@ rule PWS_Win32_OnLineGames_ZDY_2147610042_0
         $x_1_1 = {35 20 01 00 8d 20 01 00 6b 62 64 68 65 6c 61 35 2e 64 6c 6c 00 41 20 01 00 53 20 01 00 64 20 01 00 3f 41 64 64 48 6f 6f 6b 40 40 59 47 5f 4e 4b 40 5a 00 3f 44 65 6c 48 6f 6f 6b 40 40 59 47 5f 4e 58 5a 00 3f 53 63 61 6e 50 77 64 40 40 59 47 5f 4e 51 41 55 48 57 4e 44 5f 5f 40 40 30 40 5a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2620,6 +2713,7 @@ rule PWS_Win32_OnLineGames_Q_2147610502_0
         $x_1_8 = "&earthworm2=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2649,6 +2743,7 @@ rule PWS_Win32_OnLineGames_CTA_2147610611_0
         $x_1_3 = {33 ff 8d 45 e0 57 50 57 ff 35 ?? ?? ?? ?? c7 45 e0 54 46 72 6d c7 45 e4 50 61 73 73 c7 45 e8 45 74 63 00 89 7d ec c7 45 f0 54 41 32 45 c7 45 f4 64 69 74 00 89 7d f8 ff d6 8b d8 8d 45 f0 57 50 57 53 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2676,6 +2771,7 @@ rule PWS_Win32_OnLineGames_CTB_2147610682_0
         $x_1_8 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2703,6 +2799,7 @@ rule PWS_Win32_OnLineGames_R_2147610925_0
         $x_1_5 = "silver_coin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -2729,6 +2826,7 @@ rule PWS_Win32_OnLineGames_ZFA_2147611282_0
         $x_1_7 = "realmlist.wtf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2751,6 +2849,7 @@ rule PWS_Win32_OnLineGames_U_2147611592_0
         $x_1_3 = {e8 dc 21 00 00 90 90 c7 45 d0 45 78 70 6c 89 5d d4 90 90 c7 45 e0 6f 72 65 72 89 5d e4 90 90 c7 45 f0 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -2778,6 +2877,7 @@ rule PWS_Win32_OnLineGames_GA_2147611734_0
         $x_1_4 = {49 6e 50 72 c7 45 ?? 6f 63 53 65 c7 45 ?? 72 76 65 72 c7 45 ?? 33 32 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2798,6 +2898,7 @@ rule PWS_Win32_OnLineGames_V_2147611783_0
         $x_1_1 = {6a 02 56 6a fc 57 ff d3 8d 45 f8 56 8b 35 ?? ?? ?? ?? 50 8d 45 f4 6a 04 50 57 ff d6 81 7d f4 fe db 43 bd 74 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2823,6 +2924,7 @@ rule PWS_Win32_OnLineGames_W_2147612278_0
         $x_1_6 = "Hook.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2851,6 +2953,7 @@ rule PWS_Win32_OnLineGames_Z_2147612691_0
         $x_1_4 = "KartSvr.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2886,6 +2989,7 @@ rule PWS_Win32_OnLineGames_AE_2147614455_0
         $x_1_16 = "eu.logon.worldofwarcraft.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2914,6 +3018,7 @@ rule PWS_Win32_OnLineGames_AF_2147615083_0
         $x_1_6 = "\\KnownDlls\\KnownDllPath" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2944,6 +3049,7 @@ rule PWS_Win32_OnLineGames_AG_2147616231_0
         $x_1_7 = "cardlee" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2965,6 +3071,7 @@ rule PWS_Win32_OnLineGames_AK_2147616780_0
         $x_1_2 = {8b c8 49 85 c9 72 1e 41 a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 8a 18 80 c3 ?? 80 f3 ?? 80 eb ?? 88 1a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2989,6 +3096,7 @@ rule PWS_Win32_OnLineGames_AL_2147616896_0
         $x_1_5 = "/c  del C:\\myapp.exe > nul" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -3016,6 +3124,7 @@ rule PWS_Win32_OnLineGames_D_2147616900_0
         $x_1_4 = "regsvr32.exe /s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3045,6 +3154,7 @@ rule PWS_Win32_OnLineGames_AN_2147617089_0
         $x_1_10 = "Forthgoner" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 3 of ($x_1_*))) or
             ((4 of ($x_5_*))) or
@@ -3075,6 +3185,7 @@ rule PWS_Win32_OnLineGames_AP_2147617115_0
         $x_1_7 = {c6 04 03 e9 40 8b ca c1 e9 00 80 e1 ff 88 0c 03 40 8b ca c1 e9 08 80 e1 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -3105,6 +3216,7 @@ rule PWS_Win32_OnLineGames_AQ_2147617356_0
         $x_1_6 = {3d 25 64 26 6d 61 63 3d 25 73 26 52 47 31 3d 25 64 26 5a 3d 25 73 3a 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -3136,6 +3248,7 @@ rule PWS_Win32_OnLineGames_AR_2147617386_0
         $x_1_7 = {d5 cc bd a3 b3 a4 b8 e8 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -3166,6 +3279,7 @@ rule PWS_Win32_OnLineGames_NJ_2147617435_0
         $x_1_5 = {33 c0 39 71 08 76 18 8b 4d 08 2b 8d 28 ff ff ff 01 0c 83 8b 0d ?? ?? 01 00 40 3b 41 08 72 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3190,6 +3304,7 @@ rule PWS_Win32_OnLineGames_AX_2147617483_0
         $x_1_5 = "http://%s:%d%s?%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -3215,6 +3330,7 @@ rule PWS_Win32_OnLineGames_AM_2147618165_0
         $x_2_3 = {6a 64 ff d6 e8 ?? ?? ff ff 6a 64 ff d6 e8 ?? ?? ff ff 6a 64 ff d6 eb a6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3242,6 +3358,7 @@ rule PWS_Win32_OnLineGames_AM_2147618165_1
         $x_1_5 = "?act=getmbok&account=%s&mb=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3276,6 +3393,7 @@ rule PWS_Win32_OnLineGames_NL_2147618427_0
         $x_1_15 = "OSTURL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (14 of ($x*))
 }
 
@@ -3302,6 +3420,7 @@ rule PWS_Win32_OnLineGames_NM_2147618624_0
         $x_1_7 = "MIBAO.bmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -3329,6 +3448,7 @@ rule PWS_Win32_OnLineGames_CC_2147618739_0
         $x_2_3 = {00 10 8a 50 02 32 96 ?? ?? ?? ?? 28 d1 88 48 01 8a 48 03}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3353,6 +3473,7 @@ rule PWS_Win32_OnLineGames_GC_2147618745_0
         $x_1_2 = {89 45 94 6a 00 6a 18 8d 45 98 50 6a 00 ff 75 94 e8 ?? ?? 00 00 0b c0 75 72 ff 75 ac 6a 00 68 00 04 00 00 e8 ?? ?? 00 00 0b c0 74 5f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3374,6 +3495,7 @@ rule PWS_Win32_OnLineGames_CE_2147620097_0
         $x_1_2 = {2b f7 89 47 06 83 ee 0a c6 47 0a e9 89 77 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3397,6 +3519,7 @@ rule PWS_Win32_OnLineGames_ET_2147620108_0
         $x_1_4 = {50 61 74 63 68 44 4c 4c 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             (all of ($x*))
@@ -3422,6 +3545,7 @@ rule PWS_Win32_OnLineGames_CJ_2147620355_0
         $x_1_3 = {73 74 6f 70 20 57 6d 64 6d 50 6d 53 4e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3444,6 +3568,7 @@ rule PWS_Win32_OnLineGames_CJ_2147620355_1
         $x_1_3 = {68 b8 0b 00 00 f3 ab ff 15 ?? ?? 40 00 8d ?? ?? ?? 51 68 04 01 00 00 ff 15 ?? ?? 40 00 8d ?? ?? ?? 68 ?? ?? 40 00 52 ff 15 ?? ?? 40 00 8d ?? ?? ?? 50 6a 6b e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3466,6 +3591,7 @@ rule PWS_Win32_OnLineGames_CK_2147621051_0
         $x_1_3 = {6a 1a 2b c1 59 83 c0 0d 99 f7 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3494,6 +3620,7 @@ rule PWS_Win32_OnLineGames_CI_2147621494_0
         $x_1_9 = "(email)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -3522,6 +3649,7 @@ rule PWS_Win32_OnLineGames_CG_2147621794_0
         $x_1_5 = {68 b8 0b 00 00 f3 ab 66 ?? ?? ?? ?? ff 15 ?? ?? 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3544,6 +3672,7 @@ rule PWS_Win32_OnLineGames_CH_2147621976_0
         $x_1_3 = {51 6a 6a e8 5b fc ff ff 83 c4 08 85 c0 5f 5e 5b 74 23 8d 94 ?? ?? ?? ?? 00 52 6a 6b e8 ?? ?? ?? ?? 83 c4 08 85 c0 74 0d 8d ?? ?? ?? 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3566,6 +3695,7 @@ rule PWS_Win32_OnLineGames_CL_2147622115_0
         $x_1_3 = {7e 24 53 56 8b 74 24 18 8b dd 2b de 8a 04 33 55 04 ?? 34 ?? 2c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3590,6 +3720,7 @@ rule PWS_Win32_OnLineGames_CN_2147622430_0
         $x_1_5 = "360Safe.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3612,6 +3743,7 @@ rule PWS_Win32_OnLineGames_FT_2147622736_0
         $x_1_3 = {68 e8 03 00 00 ff 15 ?? ?? 40 00 ff d3 2b 45 ?? 3d 40 77 1b 00 76 ?? ff 35 ?? ?? 40 00 ff 15 ?? ?? 40 00 6a 00 ff 15 ?? ?? 40 00 5f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3638,6 +3770,7 @@ rule PWS_Win32_OnLineGames_CO_2147622755_0
         $x_1_7 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ShellExecuteHooks" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3662,6 +3795,7 @@ rule PWS_Win32_OnLineGames_CP_2147622766_0
         $x_1_5 = "/mb.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3686,6 +3820,7 @@ rule PWS_Win32_OnLineGames_CQ_2147622827_0
         $x_1_5 = "360Safe.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3710,6 +3845,7 @@ rule PWS_Win32_OnLineGames_CR_2147622872_0
         $x_1_5 = "tty3d.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3739,6 +3875,7 @@ rule PWS_Win32_OnLineGames_CS_2147622873_0
         $x_1_7 = "qqfo.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_5_*))) or
             (all of ($x*))
@@ -3774,6 +3911,7 @@ rule PWS_Win32_OnLineGames_ABS_2147622888_0
         $x_1_13 = "userdata\\currentserver.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -3795,6 +3933,7 @@ rule PWS_Win32_OnLineGames_CT_2147622926_0
         $x_1_2 = {68 f4 01 00 00 ff 15 ?? ?? 00 10 bf 00 00 30 00 53 57 be 00 10 40 00 68 ?? ?? 00 10 56 e8 ?? ff ff ff 83 c4 10 83 f8 ff 0f ?? ?? ?? 00 00 03 c6 53 89 45 ?? 57 83 c0 05 68 ?? ?? 00 10 56 a3 ?? ?? 00 10 e8 ?? ff ff ff 83 c4 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3817,6 +3956,7 @@ rule PWS_Win32_OnLineGames_CU_2147622931_0
         $x_1_3 = {85 c9 7c 26 85 c0 7c 22 85 ff 74 1e 83 c1 05 51 68 ?? ?? ?? ?? 55 e8 ?? ?? ff ff 8b 4c ?? ?? 2b c1 83 e8 0a 83 c1 0a 50 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3839,6 +3979,7 @@ rule PWS_Win32_OnLineGames_CV_2147622932_0
         $x_1_3 = {c6 06 e9 55 55 8d 83 ?? ?? ?? ?? 57 8b c8 8b d0 c1 e9 08 88 46 01 88 4e 02 c1 ea 10 c1 e8 18 88 56 03 56 88 46 04 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3863,6 +4004,7 @@ rule PWS_Win32_OnLineGames_EU_2147622939_0
         $x_1_5 = "yx=host&wjm=%s&ss=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3897,6 +4039,7 @@ rule PWS_Win32_OnLineGames_ABF_2147622990_0
         $x_1_12 = "&Name=%s&password=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -3920,6 +4063,7 @@ rule PWS_Win32_OnLineGames_ABE_2147622991_0
         $x_1_4 = "%s(%s-%d)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3947,6 +4091,7 @@ rule PWS_Win32_OnLineGames_ABD_2147622992_0
         $x_1_8 = "Getmb.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3985,6 +4130,7 @@ rule PWS_Win32_OnLineGames_ABH_2147623009_0
         $x_1_19 = "AutoUpdate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4014,6 +4160,7 @@ rule PWS_Win32_OnLineGames_ABG_2147623010_0
         $x_1_10 = "&nickName=%s&lord=%s&Level=%s&Money=%u&goldCoin=%u&YB=%u&" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4037,6 +4184,7 @@ rule PWS_Win32_OnLineGames_ZFG_2147623049_0
         $x_1_4 = {5c 57 69 6e 64 6f 77 73 20 4e 54 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 49 6d 61 67 65 20 46 69 6c 65 20 45 78 65 63 75 74 69 6f 6e 20 4f 70 74 69 6f 6e 73 [0-16] 73 76 63 68 6f 73 74 2e 65 78 65 [0-16] 44 65 62 75 67 67 65 72 [0-16] 5c [0-16] 2e 73 79 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4060,6 +4208,7 @@ rule PWS_Win32_OnLineGames_ABJ_2147623108_0
         $x_1_4 = "?Name=%s&Pass=%s&Zone=%s&Server=%s&Store=%s&Level=%s&MB=%d&Key=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -4085,6 +4234,7 @@ rule PWS_Win32_OnLineGames_ABK_2147623109_0
         $x_1_3 = "?action=&Name=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4107,6 +4257,7 @@ rule PWS_Win32_OnLineGames_CW_2147623130_0
         $x_1_3 = {68 10 27 00 00 ff d5 8b 3d ?? ?? 40 00 8b 1d ?? ?? 40 00 6a 00 56 6a 00 6a 01 ff d3 50 ff d7 68 ?? ?? 40 00 e8 ?? ?? ff ff 8b f0 83 c4 04 85 f6 77 e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4129,6 +4280,7 @@ rule PWS_Win32_OnLineGames_CX_2147623131_0
         $x_1_3 = {b9 09 00 00 00 be ?? ?? 00 10 8d ?? ?? ?? 01 00 00 33 c0 f3 a5 66 a5 a4 b9 0c 00 00 00 bf ?? ?? 00 10 f3 ab 8d ?? ?? ?? 01 00 00 68 ?? ?? 00 10 52 66 ab e8 ?? ?? ff ff 83 c4 40 e8 ?? ?? ff ff a1 ?? ?? 00 10 8b 0d ?? ?? 00 10 8b 15 ?? ?? 00 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4153,6 +4305,7 @@ rule PWS_Win32_OnLineGames_CY_2147623174_0
         $x_1_5 = "action=ok&u=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4176,6 +4329,7 @@ rule PWS_Win32_OnLineGames_EX_2147623177_0
         $x_1_4 = {2e 64 6c 6c 00 53 65 72 76 69 63 65 4d 61 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4198,6 +4352,7 @@ rule PWS_Win32_OnLineGames_CZ_2147623418_0
         $x_1_3 = {7e 24 53 56 8b 74 24 18 8b dd 2b de 8a 04 33 55 04 ?? 34 ?? 2c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4219,6 +4374,7 @@ rule PWS_Win32_OnLineGames_DC_2147623983_0
         $x_1_2 = {0f be 04 37 8a 44 05 ac 88 04 0a ff 15 ?? ?? 40 00 ff 45 fc 39 75 fc 72 bd 60 b8 0c 00 00 00 bb 0c 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4240,6 +4396,7 @@ rule PWS_Win32_OnLineGames_DD_2147623984_0
         $x_1_2 = {3b c3 0f 85 a3 00 00 00 c7 05 ?? ?? 00 10 79 3a 40 00 eb 21}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4261,6 +4418,7 @@ rule PWS_Win32_OnLineGames_HA_2147624031_0
         $x_1_2 = "?Name=%s&password=%s&Zone=%s&Server=%s&bankPass=%s&Level=%s&MB=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4285,6 +4443,7 @@ rule PWS_Win32_OnLineGames_DE_2147624041_0
         $x_1_5 = {8b f8 85 ff 7e 4e bb 01 00 00 00 8b 45 fc 8a 44 18 ff 24 0f 8b 55 ?? 8a 54 32 ff 80 e2 0f 32 c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4307,6 +4466,7 @@ rule PWS_Win32_OnLineGames_DF_2147624225_0
         $x_1_3 = {57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 45 78 70 6c 6f 72 65 72 5c 53 68 65 6c 6c 45 78 65 63 75 74 65 48 6f 6f 6b 73 00 00 00 00 ff ff ff ff 2c 00 00 00 43 4c 53 49 44 5c 7b 39 32 42 31 45 38 31 36 2d 32 43 45 46 2d 34 33 34 35 2d 38 37 34 38 2d 37 36 39 39 43 37 43 39 39 33 35 46 7d 00 00 00 00 ff ff ff ff 0f 00 00 00 5c 49 6e 50 72 6f 63 53 65 72 76 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4331,6 +4491,7 @@ rule PWS_Win32_OnLineGames_DG_2147624226_0
         $x_1_5 = {50 6a 02 e8 ?? ?? ff ff a3 ?? ?? 40 00 6a 00 a1 ?? ?? 40 00 50 b8 ?? ?? 40 00 50 6a 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4356,6 +4517,7 @@ rule PWS_Win32_OnLineGames_DH_2147624389_0
         $x_1_6 = "User-Agent: igameclient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4378,6 +4540,7 @@ rule PWS_Win32_OnLineGames_EL_2147624577_0
         $x_1_3 = "wow.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4400,6 +4563,7 @@ rule PWS_Win32_OnLineGames_ZFI_2147624612_0
         $x_1_3 = {7b 35 46 41 44 43 37 33 43 2d 33 43 45 32 2d 34 37 42 42 2d 42 43 43 36 2d 35 34 35 31 39 33 39 45 33 43 30 41 7d [0-10] 72 65 67 73 76 72 33 32 2e 65 78 65 20 2f 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4423,6 +4587,7 @@ rule PWS_Win32_OnLineGames_EY_2147624744_0
         $x_1_4 = "dri$1vers\\e$1tc\\hos$1ts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -4458,6 +4623,7 @@ rule PWS_Win32_OnLineGames_NW_2147625025_0
         $x_100_13 = {26 73 7a 76 65 72 3d 25 73 [0-21] 26 6d 6f 64 65 3d 25 64 [0-21] 26 76 61 6c 75 65 3d 25 64 [0-21] 26 73 79 73 74 79 70 65 3d 25 64 [0-21] 26 73 7a 6e 61 6d 65 3d 25 73 [0-21] 26 73 7a 70 61 6e 61 6d 65 3d 25 73 [0-21] 26 70 61 6c 65 6e 3d 25 64}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_10_*) and 2 of ($x_5_*))) or
             ((1 of ($x_100_*) and 5 of ($x_10_*))) or
@@ -4485,6 +4651,7 @@ rule PWS_Win32_OnLineGames_FA_2147625252_0
         $x_1_3 = {b0 20 b1 73 88 45 ea}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4512,6 +4679,7 @@ rule PWS_Win32_OnLineGames_FB_2147625361_0
         $x_1_5 = "gameqwerty" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -4536,6 +4704,7 @@ rule PWS_Win32_OnLineGames_E_2147625693_0
         $x_1_1 = {4c 6f 61 64 4c 69 62 72 61 72 79 41 ?? ?? ?? ?? 6c 73 74 72 63 61 74 41 [0-128] 4c 6f 61 64 44 4c 4c 2e 64 6c 6c 00 43 4f 4d 52 65 73 4d 6f 64 75 6c 65 49 6e 73 74 61 6e 63 65 00 73 79 73 47 54 48 2e 43 4f 4d 52 65 73 4d 6f 64 75 6c 65 49 6e 73 74 61 6e 63 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4559,6 +4728,7 @@ rule PWS_Win32_OnLineGames_GD_2147625695_0
         $x_10_4 = {50 56 c7 44 24 18 28 01 ?? ?? e8 ?? ?? ?? ?? 85 c0 0f 84 ?? ?? ?? ?? 8b 3d ?? ?? ?? ?? 8b 2d ?? ?? ?? ?? 8d 4c 24 34 8d 54 24 0c 51 68 ?? ?? ?? ?? 52}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -4589,6 +4759,7 @@ rule PWS_Win32_OnLineGames_FC_2147625927_0
         $x_1_8 = "/mail.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -4613,6 +4784,7 @@ rule PWS_Win32_OnLineGames_FD_2147626141_0
         $x_1_2 = {8a 5c 10 ff 80 eb 7f 8d 45 f8 8b d3 e8 ?? ?? ff ff 8b 55 f8 8b c7 e8 ?? ?? ff ff ff 45 fc 4e 75 d9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4637,6 +4809,7 @@ rule PWS_Win32_OnLineGames_F_2147626711_0
         $x_1_4 = {2e 74 6d 70 00 61 76 70 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4662,6 +4835,7 @@ rule PWS_Win32_OnLineGames_G_2147626712_0
         $x_1_5 = "cgameasdfgh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -4691,6 +4865,7 @@ rule PWS_Win32_OnLineGames_FK_2147626922_0
         $x_2_7 = {bf e8 03 00 00 57 ff d6 57 eb fb 57 68}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -4719,6 +4894,7 @@ rule PWS_Win32_OnLineGames_FL_2147627026_0
         $x_1_3 = {53 65 72 76 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4742,6 +4918,7 @@ rule PWS_Win32_OnLineGames_FM_2147627342_0
         $x_1_4 = {6d 72 74 2e 65 78 65 [0-4] 47 00 6c 00 6f 00 62 00 61 00 6c 00 5c [0-8] 65 00 78 00 70 00 6c 00 6f 00 72 00 65 00 72 00 2e 00 65 00 78 00 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))
@@ -4768,6 +4945,7 @@ rule PWS_Win32_OnLineGames_FR_2147627366_0
         $x_1_4 = "qunithookdll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -4792,6 +4970,7 @@ rule PWS_Win32_OnLineGames_DNF_2147627552_0
         $x_1_2 = {6a 05 ff 15 ?? ?? 40 00 56 6a 00 43 ff d7 85 c0 75 07 83 fb 0a 7c e9 eb 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4813,6 +4992,7 @@ rule PWS_Win32_OnLineGames_DNG_2147627553_0
         $x_1_2 = {6a 06 50 57 56 c6 45 f8 50 c6 45 f9 68 c6 45 fa f9 c6 45 fb e9 c6 45 fc be e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4839,6 +5019,7 @@ rule PWS_Win32_OnLineGames_FU_2147627574_0
         $x_1_7 = {74 10 8b c8 2b f0 8a 54 0e 01 47 41 84 d2 88 11 75 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -4868,6 +5049,7 @@ rule PWS_Win32_OnLineGames_FZ_2147627951_0
         $x_1_4 = "%s?u=%s&m=%s&url=%s&action=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -4894,6 +5076,7 @@ rule PWS_Win32_OnLineGames_BX_2147628357_0
         $x_1_3 = {ff ff ff 8b 55 fc 8b c3 b9 12 8d 40 00 e8 6d b2 ff ff 8b c3 8b d6 e8 b0 b4 ff ff 33 c0 5a 59 59 64 89 10 68 03 8d 40 00 8d 45 fc e8 8f af ff ff c3 e9 b1 a9 ff ff eb f0 5e 5b 59 5d c3 00 00 ff ff ff ff 06 00 00 00 72 6f 2e 64 6c 6c 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4919,6 +5102,7 @@ rule PWS_Win32_OnLineGames_NZ_2147628481_0
         $x_1_6 = {78 00 00 00 65 00 00 00 2e 00 00 00 44 00 00 00 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -4943,6 +5127,7 @@ rule PWS_Win32_OnLineGames_GH_2147628929_0
         $x_1_5 = {63 3a 5c 57 49 4e 44 4f 57 53 5c 64 6e 66 70 61 74 68 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -4970,6 +5155,7 @@ rule PWS_Win32_OnLineGames_GH_2147628930_0
         $x_1_4 = "c:\\WINDOWS\\dnfpath.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4996,6 +5182,7 @@ rule PWS_Win32_OnLineGames_GI_2147629324_0
         $x_1_7 = " __%s_%s_%d__" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -5025,6 +5212,7 @@ rule PWS_Win32_OnLineGames_GL_2147629733_0
         $x_1_5 = {3d 8b ff 0f b6 75 18 81 fb 08 41 81 e1 75 10 83 ea 11}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -5052,6 +5240,7 @@ rule PWS_Win32_OnLineGames_GM_2147629963_0
         $x_2_4 = "hedgepig.dat" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -5078,6 +5267,7 @@ rule PWS_Win32_OnLineGames_GM_2147629963_1
         $x_1_4 = {54 65 73 74 44 6c 6c 2e 64 6c 6c 00 43 4f 4d 52 65 73 4d 6f 64 75 6c 65 49 6e 73 74 61 6e 63 65 00 53 65 74 49 6e 73 65 72 74 48 6f 6f 6b 00 55 6e 49 6e 73 65 72 74 48 6f 6f 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -5100,6 +5290,7 @@ rule PWS_Win32_OnLineGames_ZFJ_2147630038_0
         $x_10_2 = {53 56 57 c6 45 e4 73 c6 45 e5 66 c6 45 e6 63 c6 45 e7 5f c6 45 e8 6f c6 45 e9 73 c6 45 ea 2e c6 45 eb 64 c6 45 ec 6c c6 45 ed 6c 80 65 ee 00 68 04 01 00 00 6a 00 68 c4 45 40 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5122,6 +5313,7 @@ rule PWS_Win32_OnLineGames_ZFJ_2147630038_1
         $x_10_2 = {ff 75 a4 c6 45 ac 25 c6 45 ad 73 c6 45 ae 3f 50 8d 85 a0 fd ff ff 50 c6 45 af 61 c6 45 b0 63 c6 45 b1 74 c6 45 b2 69 c6 45 b3 6f c6 45 b4 6e c6 45 b5 3d c6 45 b6 64 c6 45 b7 72 c6 45 b8 6f c6 45 b9 70 c6 45 ba 6f c6 45 bb 66 c6 45 bc 66 c6 45 bd 26 c6 45 be 75 c6 45 bf 3d c6 45 c0 25 c6 45 c1 73 88 5d c2}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5147,6 +5339,7 @@ rule PWS_Win32_OnLineGames_GP_2147630479_0
         $x_3_6 = {25 50 8d 86 ?? ?? ?? ?? 50 8d 45 ?? 50 8d 85 ?? ?? ?? ?? 50 c6 45 ?? 73 c6 45 ?? 3f c6 45 ?? 61 c6 45 ?? 63 c6 45 ?? 74 c6 45 ?? 69 c6 45 ?? 6f c6 45 ?? 6e c6 45 ?? 3d}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -5174,6 +5367,7 @@ rule PWS_Win32_OnLineGames_GS_2147630892_0
         $x_1_3 = {6a 40 52 ff d5 8b 84 24 9c 00 00 00 6a 00 50 57 ff d3 57 6a 01 8d 8c 24 b4 00 00 00 68 f8 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5196,6 +5390,7 @@ rule PWS_Win32_OnLineGames_GT_2147630924_0
         $x_1_3 = {eb 08 eb 06 aa e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5217,6 +5412,7 @@ rule PWS_Win32_OnLineGames_GU_2147631019_0
         $x_1_2 = "CreateMutexA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5245,6 +5441,7 @@ rule PWS_Win32_OnLineGames_GK_2147631022_0
         $x_1_9 = "IrfanView" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             ((5 of ($x_10_*))) or
@@ -5273,6 +5470,7 @@ rule PWS_Win32_OnLineGames_GU_2147631034_0
         $x_1_4 = "idleprocmutex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5297,6 +5495,7 @@ rule PWS_Win32_OnLineGames_GU_2147631171_0
         $x_1_5 = {79 6f 75 20 61 72 65 20 6b 69 63 6b 65 64 [0-5] 79 6f 75 20 61 72 65 20 70 72 65 70 6f 62 61 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -5320,6 +5519,7 @@ rule PWS_Win32_OnLineGames_GV_2147631198_0
         $x_2_4 = {3d 56 8b 74 24 74 0f 68 e8 03 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -5345,6 +5545,7 @@ rule PWS_Win32_OnLineGames_ZFK_2147632053_0
         $x_1_2 = "%s?action=postmb&u=%s&mb=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5367,6 +5568,7 @@ rule PWS_Win32_OnLineGames_GZ_2147632054_0
         $x_1_3 = "NetBot Attacker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5390,6 +5592,7 @@ rule PWS_Win32_OnLineGames_GZ_2147632054_1
         $x_1_4 = {6c 6f 67 69 6e 6e 61 6d 65 3d 64 66 00 00 00 00 26 73 74 72 50 61 73 73 77 6f 72 64 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5415,6 +5618,7 @@ rule PWS_Win32_OnLineGames_HG_2147632467_0
         $x_1_5 = {26 73 74 72 50 61 73 73 77 6f 72 64 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -5445,6 +5649,7 @@ rule PWS_Win32_OnLineGames_NN_2147632541_0
         $x_2_7 = {25 73 3f 61 63 74 69 6f 6e 3d 74 65 73 74 6c 6f 63 6b 26 75 3d 25 73 [0-37] 25 73 3f 61 63 74 69 6f 6e 3d 67 65 74 70 72 6f 63}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -5473,6 +5678,7 @@ rule PWS_Win32_OnLineGames_ZFL_2147632598_0
         $x_1_4 = {00 5f 5f 25 73 5f 25 64 5f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5495,6 +5701,7 @@ rule PWS_Win32_OnLineGames_ZFL_2147632598_1
         $x_1_3 = {f2 ae f7 d1 49 51 8d 8c 24 ?? ?? ?? ?? 68 ?? ?? 00 10 51 ff 15 ?? ?? 00 10 5f 5e 85 c0 75 0b 68 ?? ?? 00 10 ff 15 ?? ?? 00 10 33 c0 81 c4 08 02 00 00 c2 04 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5529,6 +5736,7 @@ rule PWS_Win32_OnLineGames_HI_2147632711_0
         $x_1_15 = "Accept-Language: zh-cn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 12 of ($x_1_*))) or
             ((3 of ($x_3_*) and 9 of ($x_1_*))) or
@@ -5556,6 +5764,7 @@ rule PWS_Win32_OnLineGames_HJ_2147632804_0
         $x_1_4 = "jdyou.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -5580,6 +5789,7 @@ rule PWS_Win32_OnLineGames_NO_2147632809_0
         $x_1_5 = "%s?action=dropoff&u=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -5613,6 +5823,7 @@ rule PWS_Win32_OnLineGames_HL_2147632875_0
         $x_1_10 = "getp.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 6 of ($x_1_*))) or
             ((1 of ($x_10_*) and 3 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -5642,6 +5853,7 @@ rule PWS_Win32_OnLineGames_HL_2147632875_1
         $x_1_6 = "user:%s pass:%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -5667,6 +5879,7 @@ rule PWS_Win32_OnLineGames_HM_2147632939_0
         $x_1_6 = "&level=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5691,6 +5904,7 @@ rule PWS_Win32_OnLineGames_HS_2147633077_0
         $x_1_5 = "TerminateProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -5713,6 +5927,7 @@ rule PWS_Win32_OnLineGames_HS_2147633077_1
         $x_1_3 = "Super-X" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5736,6 +5951,7 @@ rule PWS_Win32_OnLineGames_HS_2147633077_2
         $x_1_4 = "SuperX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -5762,6 +5978,7 @@ rule PWS_Win32_OnLineGames_KG_2147634343_0
         $x_1_4 = "\\DNF" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5787,6 +6004,7 @@ rule PWS_Win32_OnLineGames_HT_2147634382_0
         $x_1_6 = ".sousuo100.com:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -5816,6 +6034,7 @@ rule PWS_Win32_OnLineGames_HU_2147634459_0
         $x_1_10 = "Host: ilovedxc5.blog.163.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -5841,6 +6060,7 @@ rule PWS_Win32_OnLineGames_HW_2147634545_0
         $x_1_6 = "qq.update.sousuo100.com:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5867,6 +6087,7 @@ rule PWS_Win32_OnLineGames_HX_2147634584_0
         $x_1_6 = "&%s=%s&%s=%s&%s=%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5889,6 +6110,7 @@ rule PWS_Win32_OnLineGames_IB_2147636752_0
         $x_3_3 = {8b 44 24 08 8a da 03 c2 f6 d3 32 18 32 d9 42 3b 54 24 0c 88 18 7c e9}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -5917,6 +6139,7 @@ rule PWS_Win32_OnLineGames_IB_2147636752_1
         $x_2_5 = {83 f8 03 74 05 83 f8 04 75 ?? 68 20 40 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -5943,6 +6166,7 @@ rule PWS_Win32_OnLineGames_IB_2147636752_2
         $x_1_3 = {59 85 c0 59 74 4f 8b 0d ?? ?? ?? ?? 47 81 c5 04 01 00 00 3b f9 7c e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -5968,6 +6192,7 @@ rule PWS_Win32_OnLineGames_IB_2147636752_3
         $x_1_6 = {26 63 61 72 64 70 61 73 73 3d [0-16] 26 63 61 72 64 6e 75 6d 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -5994,6 +6219,7 @@ rule PWS_Win32_OnLineGames_IA_2147636881_0
         $x_1_6 = {b4 f3 c3 f7 c1 fa c8 a8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -6018,6 +6244,7 @@ rule PWS_Win32_OnLineGames_ID_2147637025_0
         $x_1_4 = {71 71 6c 6f 67 69 6e 2e 65 78 65 00 25 73 5c 73 6f 73 6f 2e 62 6d 70 00 25 73 5c 73 6f 73 6f 2e 64 61 74 00 73 35 61 6d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6043,6 +6270,7 @@ rule PWS_Win32_OnLineGames_IE_2147637026_0
         $x_1_5 = {26 78 78 78 78 3d 00 00 26 75 73 65 72 3d 00 00 26 6c 69 6e 65 3d 00 00 26 73 69 67 6e 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -6066,6 +6294,7 @@ rule PWS_Win32_OnLineGames_II_2147637248_0
         $x_1_4 = {64 00 6e 00 66 00 2e 00 61 00 73 00 70 00 00 00 16 00 00 00 6d 00 61 00 69 00 6c 00 2e 00 61 00 73 00 70 00 3f 00 64 00 3d 00 00 00 06 00 00 00 3c 00 23 00 3e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6092,6 +6321,7 @@ rule PWS_Win32_OnLineGames_IJ_2147637249_0
         $x_1_6 = {b5 d8 cf c2 b3 c7 d3 eb d3 c2 ca bf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -6114,6 +6344,7 @@ rule PWS_Win32_OnLineGames_IC_2147637487_0
         $x_1_3 = "%s\\dllcache\\%s_%d.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -6141,6 +6372,7 @@ rule PWS_Win32_OnLineGames_KH_2147637521_0
         $x_1_5 = "WINDOWS\\SYSTEM32\\MSWC.ime" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -6165,6 +6397,7 @@ rule PWS_Win32_OnLineGames_IP_2147637802_0
         $x_1_5 = "/mb.asp?a=postmb&u=%s&mb=%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6189,6 +6422,7 @@ rule PWS_Win32_OnLineGames_KK_2147638078_0
         $x_1_5 = {6a 03 53 6a 01 66 ab 68 00 00 00 80 c6 45 ?? 72 ff 75 08 c6 45 ?? 65 aa c6 45 ?? 61 c6 45 ?? 6c c6 45 ?? 6d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -6214,6 +6448,7 @@ rule PWS_Win32_OnLineGames_IR_2147638141_0
         $x_1_6 = {b4 f3 bb b0 ce f7 d3 ce 20 49 49 20 28 24 52 65 76 69 73 69 6f 6e 3a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -6236,6 +6471,7 @@ rule PWS_Win32_OnLineGames_IS_2147638142_0
         $x_1_3 = {83 c4 f4 83 c4 0c 50 58 5d 33 db 89 5d e4 c6 45 dc 57 c6 45 dd 69 c6 45 de 6e c6 45 df 49 c6 45 e0 6e c6 45 e1 65 c6 45 e2 74 88 5d e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6259,6 +6495,7 @@ rule PWS_Win32_OnLineGames_IT_2147638307_0
         $x_1_4 = "Element Client" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -6284,6 +6521,7 @@ rule PWS_Win32_OnLineGames_IT_2147638307_1
         $x_1_3 = {c6 44 24 2c 6c c6 44 24 2d 7a c6 44 24 2e 67 c6 44 24 2f 2e 88 ?? 24 ?? 88 ?? 24 33 89 ?? 24 3c c6 44 24 18 6c c6 44 24 19 7a c6 44 24 1a 67 c6 44 24 1b 31 c6 44 24 1c 2e 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6306,6 +6544,7 @@ rule PWS_Win32_OnLineGames_IU_2147638366_0
         $x_1_3 = {54 4e 53 48 [0-10] 2d 53 51 59 50 4c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6329,6 +6568,7 @@ rule PWS_Win32_OnLineGames_IV_2147638918_0
         $x_1_4 = {b8 c3 c0 a6 b0 f3 c6 f7 bf c9 d2 d4 c0 a6 b0 f3 c8 ce ba ce d0 ce ca bd b5 c4 ce c4 bc fe a3 ac}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6351,6 +6591,7 @@ rule PWS_Win32_OnLineGames_IW_2147638944_0
         $x_1_3 = {b8 ff 00 00 00 e8 ?? ?? ?? ?? 8b d8 53 68 ff 00 00 00 6a 0d a1 ?? ?? ?? ?? 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6374,6 +6615,7 @@ rule PWS_Win32_OnLineGames_IX_2147639321_0
         $x_1_4 = {26 78 79 33 3d 00 26 78 79 32 3d 00 26 78 79 31 3d 00 26 50 4e 61 6d 65 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6397,6 +6639,7 @@ rule PWS_Win32_OnLineGames_IY_2147639572_0
         $x_1_4 = "http://xuanbbs.net/bbs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6421,6 +6664,7 @@ rule PWS_Win32_OnLineGames_KB_2147639598_0
         $x_1_5 = "U=%s+P=%s+P2=%s+S=MS+A=%s+R=%s+G=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -6446,6 +6690,7 @@ rule PWS_Win32_OnLineGames_IQ_2147639609_0
         $x_2_5 = "/wsidny.asp" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -6470,6 +6715,7 @@ rule PWS_Win32_OnLineGames_KL_2147639886_0
         $x_1_2 = {00 65 39 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6493,6 +6739,7 @@ rule PWS_Win32_OnLineGames_KM_2147639887_0
         $x_1_4 = {00 44 4e 46 63 68 69 6e 61 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6515,6 +6762,7 @@ rule PWS_Win32_OnLineGames_IZ_2147640393_0
         $x_1_3 = {c6 04 3b e9 8b c6 2b c3 83 e8 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6538,6 +6786,7 @@ rule PWS_Win32_OnLineGames_JA_2147640563_0
         $x_1_4 = {6a 5c 8d 85 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 88 58 01 c6 85 ?? ?? ?? ?? 75 c6 85 ?? ?? ?? ?? 73 c6 85 ?? ?? ?? ?? 65 c6 85 ?? ?? ?? ?? 72 c6 85 ?? ?? ?? ?? 64 c6 85 ?? ?? ?? ?? 61 c6 85 ?? ?? ?? ?? 74 c6 85 ?? ?? ?? ?? 61 c6 85 ?? ?? ?? ?? 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -6562,6 +6811,7 @@ rule PWS_Win32_OnLineGames_JB_2147640658_0
         $x_1_5 = "%s/bmp/%s_mibaoka.bmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -6589,6 +6839,7 @@ rule PWS_Win32_OnLineGames_JC_2147640804_0
         $x_2_4 = {6a 40 52 03 f0 56 51 ff 15 ?? ?? ?? ?? 8b 4c 24 1c 8b 44 24 24 83 c1 28 48 89 4c 24 1c 89 44 24 24 75 95 8b 8c 24 5c 02 00 00 8d 54 24 28 52 8b 54 24 10 6a 04 8d 44 24 28 50 83 c1 08 51 52 c7 84 24 cc 01 00 00 07 00 01 00 ff 15 ?? ?? ?? ?? 85 c0 0f 84 5b fe ff ff 8b 44 24 20 8b 8c 24 e8 00 00 00 03 c8 8b 44 24 10 8d 94 24 b8 01 00 00 52 50 89 8c 24 70 02 00 00 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6613,6 +6864,7 @@ rule PWS_Win32_OnLineGames_JD_2147640813_0
         $x_1_5 = "%s&a=%s&u=%s&p=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -6641,6 +6893,7 @@ rule PWS_Win32_OnLineGames_IW_2147640823_0
         $x_1_4 = {06 48 61 63 6b 65 72 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6665,6 +6918,7 @@ rule PWS_Win32_OnLineGames_IY_2147641111_0
         $x_1_4 = "%s?a=%s&s=%s&u=%s&p=%s&js=%s&dj=%s&l=%s&mb=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6691,6 +6945,7 @@ rule PWS_Win32_OnLineGames_IZ_2147641112_0
         $x_1_6 = "D-windowname.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -6719,6 +6974,7 @@ rule PWS_Win32_OnLineGames_JA_2147641113_0
         $x_1_4 = "%hs?u=%hs&p=unknow&c=%hs&ac=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6742,6 +6998,7 @@ rule PWS_Win32_OnLineGames_JF_2147641230_0
         $x_2_4 = "%s?action=setmp&mp=%s&u=%s" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6766,6 +7023,7 @@ rule PWS_Win32_OnLineGames_JB_2147641490_0
         $x_1_4 = "%s%s?c=q&i=%s&s=%s&a=%s&m=%s&t=%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6790,6 +7048,7 @@ rule PWS_Win32_OnLineGames_JC_2147641491_0
         $x_1_4 = {50 56 c6 45 ?? 6d c6 45 ?? 69 c6 45 ?? 62 c6 45 ?? 61 c6 45 ?? 6f c6 45 ?? 2e c6 45 ?? 61 c6 45 ?? 73 c6 45 ?? 70 88 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6814,6 +7073,7 @@ rule PWS_Win32_OnLineGames_JD_2147641492_0
         $x_1_4 = "?a=%s&s=%s&u=%s&p=%s&pin=%s&r=%s&l=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6837,6 +7097,7 @@ rule PWS_Win32_OnLineGames_JJ_2147641494_0
         $x_1_3 = {ff 50 c6 45 ?? 25 c6 45 ?? 73 c6 45 ?? 3f c6 45 ?? 61 c6 45 ?? 63 ?? ?? ?? 74 ?? ?? ?? 69 ?? ?? ?? 6f ?? ?? ?? 6e c6 45 ?? 3d ?? ?? ?? 74 ?? ?? ?? 65 ?? ?? ?? 73 ?? ?? ?? 74 c6 45 ?? 6c c6 45 ?? 6f c6 45 ?? 63 c6 45 ?? 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6861,6 +7122,7 @@ rule PWS_Win32_OnLineGames_JK_2147641495_0
         $x_1_4 = "%s/bmp/%s_mibaoka.bmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6886,6 +7148,7 @@ rule PWS_Win32_OnLineGames_AAC_2147641865_0
         $x_1_6 = "elementclient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -6913,6 +7176,7 @@ rule PWS_Win32_OnLineGames_AAD_2147641868_0
         $x_1_4 = "'cmd /c %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6937,6 +7201,7 @@ rule PWS_Win32_OnLineGames_AAB_2147641870_0
         $x_1_5 = "60safe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -6964,6 +7229,7 @@ rule PWS_Win32_OnLineGames_JH_2147641983_0
         $x_1_4 = {83 f8 0a 0f 83 ?? ?? ?? ?? 8d 85 ?? ?? ?? ?? 50 8d 85 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 59 59 83 25 ?? ?? ?? ?? 00 bb ?? ?? ?? ?? c6 45 ?? 3f c6 45 ?? 64 c6 45 ?? ?? c6 45 ?? 3d c6 45 ?? 25 c6 45 ?? 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -6985,6 +7251,7 @@ rule PWS_Win32_OnLineGames_JI_2147641984_0
         $x_1_2 = {3f 50 8d 85 ?? ?? ?? ?? 50 c6 [0-5] 61 c6 [0-5] 63 c6 [0-5] 74 c6 [0-5] 69 c6 [0-5] 6f c6 [0-5] 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7009,6 +7276,7 @@ rule PWS_Win32_OnLineGames_ZDA_2147642138_0
         $x_1_4 = "?WOWID=%s&WU=%s&WP=%s&Area=%s&SYS=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7032,6 +7300,7 @@ rule PWS_Win32_OnLineGames_JK_2147642290_0
         $x_1_4 = "LoadDll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7056,6 +7325,7 @@ rule PWS_Win32_OnLineGames_ZEA_2147642529_0
         $x_1_4 = "C:\\mxdos.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7081,6 +7351,7 @@ rule PWS_Win32_OnLineGames_ZDX_2147642531_0
         $x_1_5 = "%s%s?c=q&i=%s&s=%s&a=%s&m=%s&t=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -7105,6 +7376,7 @@ rule PWS_Win32_OnLineGames_ZDM_2147642533_0
         $x_1_4 = {3f 61 3d 25 73 26 73 3d b5 da 28 25 64 29 b7 fe 26 75 3d 25 73 26 70 3d 25 73 26 72 3d 25 73 26}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7130,6 +7402,7 @@ rule PWS_Win32_OnLineGames_ZDV_2147642534_0
         $x_1_5 = "?d10=%s&d11=%s&d00=%s&d01=%s&d22=%s&d32=%s&d70=%d&d90=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -7156,6 +7429,7 @@ rule PWS_Win32_OnLineGames_ZED_2147642537_0
         $x_2_6 = "wsidny.asp" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -7182,6 +7456,7 @@ rule PWS_Win32_OnLineGames_JL_2147642591_0
         $x_1_3 = {68 e0 93 04 00 ff 15 ?? ?? ?? ?? 6a 00 ff 15 ?? ?? ?? ?? b9 ff 01 00 00 33 c0 8d bd ?? ?? ?? ?? c6 85 ?? ?? ?? ?? 00 f3 ab}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -7205,6 +7480,7 @@ rule PWS_Win32_OnLineGames_XZA_2147642701_0
         $x_1_4 = "\\ShellNoRoam\\MUICache" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7228,6 +7504,7 @@ rule PWS_Win32_OnLineGames_XZB_2147642702_0
         $x_1_4 = "%s?act=getpos&d10=%s&pos=&d80=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7253,6 +7530,7 @@ rule PWS_Win32_OnLineGames_JN_2147642858_0
         $x_1_5 = {58 6e 56 69 65 77 00 56 69 65 77 65 72 00 50 69 63 61 73 61 00 46 61 73 74 53 74 6f 6e 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7276,6 +7554,7 @@ rule PWS_Win32_OnLineGames_JN_2147642859_0
         $x_1_4 = {6a 00 6a 00 6a 00 68 04 00 00 80 6a 00 68 ?? ?? ?? 00 68 01 03 00 80 6a 00 68 04 00 00 00 68 03 00 00 00 bb 98 06 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7299,6 +7578,7 @@ rule PWS_Win32_OnLineGames_JO_2147642904_0
         $x_1_4 = {81 c7 99 00 00 00 89 7c 24 ?? bf ?? ?? ?? ?? 8b 44 24 ?? 8d 54 24 ?? 6a 00 52 55 50 56 ff d3 4f 75 ed}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -7328,6 +7608,7 @@ rule PWS_Win32_OnLineGames_ZEG_2147643235_0
         $x_1_5 = {26 71 75 3d ?? ?? ?? ?? 26 70 61 73 73 3d 00 00 3f 75 73 65 72 6e 61 6d 65 3d ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 6c 69 6e 2e 61 73 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -7352,6 +7633,7 @@ rule PWS_Win32_OnLineGames_ZEI_2147643237_0
         $x_1_4 = {5f 72 65 67 61 6d 6c 65 5f 25 30 38 64 5f 0d 00 00 67 62 76}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7375,6 +7657,7 @@ rule PWS_Win32_OnLineGames_ZFM_2147643593_0
         $x_1_4 = "del \"%s\" if exist \"%s\" goto delete" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7400,6 +7683,7 @@ rule PWS_Win32_OnLineGames_ZFM_2147643593_1
         $x_1_6 = "SecurityMatrixPinwheelButton" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -7427,6 +7711,7 @@ rule PWS_Win32_OnLineGames_ZFM_2147643593_2
         $x_1_4 = "%s, ServerMain %c%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -7456,6 +7741,7 @@ rule PWS_Win32_OnLineGames_JZ_2147647062_0
         $x_1_7 = "\\dnf.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7478,6 +7764,7 @@ rule PWS_Win32_OnLineGames_KD_2147647119_0
         $x_3_3 = "^$^SerialNum" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7499,6 +7786,7 @@ rule PWS_Win32_OnLineGames_KO_2147647688_0
         $x_1_2 = {68 5c fe ff ff 50 89 45 ?? ff d7 be 18 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7528,6 +7816,7 @@ rule PWS_Win32_OnLineGames_KQ_2147647900_0
         $x_3_10 = {26 6c 6f 67 69 6e 5f 69 6e 66 6f 35 3d 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_3_*) and 1 of ($x_1_*))) or
             ((7 of ($x_3_*))) or
@@ -7554,6 +7843,7 @@ rule PWS_Win32_OnLineGames_KS_2147648022_0
         $x_2_1 = {5b 64 6e 74 5d bc d3 d4 d8 64 6c 6c b3 c9 b9 a6 a3 a1 00 00 5b 64 6e 74 5d bc d3 d4 d8 64 6c 6c [0-16] 72 62 00 00 5c 64 64 72 [0-4] 2e 6f 63 78}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7578,6 +7868,7 @@ rule PWS_Win32_OnLineGames_KU_2147648260_0
         $x_2_5 = {56 57 89 c6 89 d7 89 c8 39 f7 77 13 74 2f c1 f9 02 78 2a f3 a5 89 c1 83 e1 03 f3 a4 5f 5e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -7604,6 +7895,7 @@ rule PWS_Win32_OnLineGames_KV_2147648343_0
         $x_1_3 = "LF-WOOOLDLQ-2010" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7626,6 +7918,7 @@ rule PWS_Win32_OnLineGames_KW_2147648411_0
         $x_2_3 = "Send OK!" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7648,6 +7941,7 @@ rule PWS_Win32_OnLineGames_KX_2147648650_0
         $x_1_3 = {32 0c 02 88 08 40 ff 4d 08 89 45 18 75 ae}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7670,6 +7964,7 @@ rule PWS_Win32_OnLineGames_KY_2147649517_0
         $x_1_3 = {6f 00 76 00 65 00 72 00 [0-10] 49 00 49 00 4f 00 4c 00 53 00 50 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7694,6 +7989,7 @@ rule PWS_Win32_OnLineGames_KY_2147649517_1
         $x_1_5 = "param.aspx?username=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -7725,6 +8021,7 @@ rule PWS_Win32_OnLineGames_KZ_2147649692_0
         $x_1_8 = "DNF.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -7750,6 +8047,7 @@ rule PWS_Win32_OnLineGames_KZ_2147649692_1
         $x_1_2 = {c6 45 e4 6f c6 45 ?? 03 c6 45 ?? 17 c6 45 ?? 1b c6 45 ?? 6d c6 45 ?? 18 c6 45 ?? 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -7773,6 +8071,7 @@ rule PWS_Win32_OnLineGames_LA_2147649693_0
         $x_1_4 = {c6 45 dd 65 c6 45 de 74 c6 45 df 54 c6 45 e0 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -7802,6 +8101,7 @@ rule PWS_Win32_OnLineGames_LB_2147649694_0
         $x_1_7 = {c6 45 a9 72 c6 45 aa 65 c6 45 ab 72 c6 45 ac 2e c6 45 ad 65 c6 45 ae 78}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_10_*))) or
             (all of ($x*))
@@ -7829,6 +8129,7 @@ rule PWS_Win32_OnLineGames_ZFO_2147649890_0
         $x_3_5 = {c6 45 f4 6d c6 45 f5 69 c6 45 f6 62 c6 45 f7 61 c6 45 f8 6f c6 45 f9 2e c6 45 fa 61 c6 45 fb 73 c6 45 fc 70}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -7856,6 +8157,7 @@ rule PWS_Win32_OnLineGames_LC_2147650428_0
         $x_1_4 = {8d 45 fc 57 8b ?? ?? ?? ?? 10 50 6a 40 6a 05 56 ff d7 6a 00 b8 ?? ?? ?? 10 ff 75 fc 2b c6 83 e8 05 c6 06 e9 6a 05 56 89 46 01 ff d7 5f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7880,6 +8182,7 @@ rule PWS_Win32_OnLineGames_LD_2147651151_0
         $x_1_5 = "dNlAuNchEr.exE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7904,6 +8207,7 @@ rule PWS_Win32_OnLineGames_ZFP_2147651491_0
         $x_1_5 = "QQLogin.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -7931,6 +8235,7 @@ rule PWS_Win32_OnLineGames_ZFP_2147651491_1
         $x_1_4 = "%s?s=%s&a=%s&u=%s&p=%s&n=%s&lv=%d&g=%d&y=%d&l=%s&%s=%s&%s=%s&%s=%s&mbh=%d&sg=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -7959,6 +8264,7 @@ rule PWS_Win32_OnLineGames_LI_2147652535_0
         $x_2_5 = {8b 48 34 03 48 28 eb 08 8b 4d ?? 8b 49 28 03 c8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -7985,6 +8291,7 @@ rule PWS_Win32_OnLineGames_LK_2147652792_0
         $x_3_3 = {00 43 4f 4d 53 50 45 43 00 2f 63 20 64 65 6c 20 00 20 3e 20 6e 75 6c 00 00 4f 70 65 6e 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8008,6 +8315,7 @@ rule PWS_Win32_OnLineGames_LM_2147653273_0
         $x_1_4 = {72 65 61 6c 6d 4e 61 6d 65 20 22 00 22}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8031,6 +8339,7 @@ rule PWS_Win32_OnLineGames_LN_2147653279_0
         $x_2_4 = {47 50 6a 00 68 03 00 1f 00 c6 ?? f1 6c c6 ?? f2 6f c6 ?? f3 62 c6 ?? f4 61 c6 ?? f5 6c c6 ?? f6 5c c6 ?? f7 45 c6 ?? f8 6e c6 ?? f9 78}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -8063,6 +8372,7 @@ rule PWS_Win32_OnLineGames_LO_2147653425_0
         $x_1_9 = "Visit\\Noly\\4034\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -8086,6 +8396,7 @@ rule PWS_Win32_OnLineGames_LP_2147653788_0
         $x_1_4 = {50 8d 85 e4 fd ff ff 50 c6 ?? e5 61 c6 ?? e6 63 c6 ?? e7 74 c6 ?? e8 69 c6 ?? e9 6f c6 ?? ea 6e c6 ?? eb 3d c6 ?? ec 70 c6 ?? ed 6c c6 ?? ee 61 c6 ?? ef 79 c6 ?? f0 65 c6 ?? f1 72 c6 ?? f2 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8109,6 +8420,7 @@ rule PWS_Win32_OnLineGames_LQ_2147653816_0
         $x_1_4 = "POST %s?CODE=%s HTTP/1.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8131,6 +8443,7 @@ rule PWS_Win32_OnLineGames_LS_2147654044_0
         $x_1_3 = "yuksuser.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8152,6 +8465,7 @@ rule PWS_Win32_OnLineGames_LT_2147654161_0
         $x_1_2 = {c6 44 24 14 7a c6 44 24 16 69 c6 44 24 17 63 c6 44 24 19 6f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -8173,6 +8487,7 @@ rule PWS_Win32_OnLineGames_LV_2147654709_0
         $x_1_2 = {8b d0 8a 83 ?? ?? ?? ?? 32 d0 8d 45 f4 e8 ?? ?? ?? ?? 8b 55 f4 8b c7 e8 ?? ?? ?? ?? 43 81 e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8195,6 +8510,7 @@ rule PWS_Win32_OnLineGames_ZFQ_2147655041_0
         $x_1_3 = {d5 cb ba c5 25 73 20 20 20 c3 dc c2 eb 25 73 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8223,6 +8539,7 @@ rule PWS_Win32_OnLineGames_MA_2147656704_0
         $x_1_8 = "YB_OnlineClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8244,6 +8561,7 @@ rule PWS_Win32_OnLineGames_LW_2147657254_0
         $x_1_2 = {8d 45 f4 c6 45 f4 6d 50 56 c6 45 f5 69 c6 45 f6 62 c6 45 f7 61 c6 45 f8 6f c6 45 f9 2e c6 45 fa 61 c6 45 fb 73 c6 45 fc 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8265,6 +8583,7 @@ rule PWS_Win32_OnLineGames_ZFU_2147657837_0
         $x_1_2 = "d;]njcbp/kqh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8286,6 +8605,7 @@ rule PWS_Win32_OnLineGames_ZFV_2147657839_0
         $x_1_2 = "edvlflqir1dvs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8308,6 +8628,7 @@ rule PWS_Win32_OnLineGames_MB_2147657965_0
         $x_1_3 = "C:\\FW.FW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8330,6 +8651,7 @@ rule PWS_Win32_OnLineGames_ZFW_2147658120_0
         $x_1_3 = {85 db 74 0a 8a 06 32 c2 88 06 46 4b eb f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8360,6 +8682,7 @@ rule PWS_Win32_OnLineGames_MC_2147658166_0
         $x_1_11 = "happymoney" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -8393,6 +8716,7 @@ rule PWS_Win32_OnLineGames_MM_2147660307_0
         $x_1_5 = "dnfhack.cy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8417,6 +8741,7 @@ rule PWS_Win32_OnLineGames_MO_2147661327_0
         $x_1_5 = {64 33 2f 64 78 32 2f 77 6f 77 2e 61 73 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -8445,6 +8770,7 @@ rule PWS_Win32_OnLineGames_MP_2147661332_0
         $x_1_9 = {53 6f 66 74 77 61 72 65 5c 34 67 61 6d 65 5c 34 47 61 6d 65 4d 61 6e 61 67 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -8480,6 +8806,7 @@ rule PWS_Win32_OnLineGames_MQ_2147661346_0
         $x_1_5 = "yaoyao25" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -8506,6 +8833,7 @@ rule PWS_Win32_OnLineGames_MR_2147662339_0
         $x_1_7 = {25 64 2c 25 64 2c 25 64 2c 25 64 2c 25 64 2c 25 64 00 00 00 50 41 53 56 [0-4] 52 45 54 52}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -8531,6 +8859,7 @@ rule PWS_Win32_OnLineGames_MS_2147667477_0
         $x_1_6 = {b2 5c 8d 4c 24 10 e8 d0 01 00 00 ba ?? ?? ?? ?? 8d 48 01 e8 23 01 00 00 85 c0 0f 84 b8 00 00 00 8b 35 38 10 00 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -8556,6 +8885,7 @@ rule PWS_Win32_OnLineGames_2147668027_0
         $x_1_5 = "Disker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -8582,6 +8912,7 @@ rule PWS_Win32_OnLineGames_MW_2147679123_0
         $x_1_4 = {8a 0e 57 33 ff 88 08 84 c9 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -8605,6 +8936,7 @@ rule PWS_Win32_OnLineGames_MX_2147679160_0
         $x_1_4 = "%99[^,],%d,%d,%d,%d,%d," ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -8628,6 +8960,7 @@ rule PWS_Win32_OnLineGames_MY_2147680237_0
         $x_1_4 = "DIABLO III.EXE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8651,6 +8984,7 @@ rule PWS_Win32_OnLineGames_MZ_2147680340_0
         $x_1_4 = {66 3d 06 00 74 0b 66 3d 05 00 74 05 bd 02 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -8678,6 +9012,7 @@ rule PWS_Win32_OnLineGames_NK_2147683702_0
         $x_1_4 = "XXYHCINDEX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -8703,6 +9038,7 @@ rule PWS_Win32_OnLineGames_NQ_2147687567_0
         $x_1_6 = {36 8b 45 14 a3 ?? ?? ?? ?? 36 8b 45 18 a3 ?? ?? ?? ?? 58 60 e8 ?? ?? ?? ?? 61 61 83 ec 44 56 57 ff 25}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -8729,6 +9065,7 @@ rule PWS_Win32_OnLineGames_NR_2147691694_0
         $x_1_7 = "page_gameid=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8753,6 +9090,7 @@ rule PWS_Win32_OnLineGames_Lowfi_2147697001_0
         $x_1_5 = "KnightOnline.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8778,6 +9116,7 @@ rule PWS_Win32_OnLineGames_NV_2147718013_0
         $x_2_5 = {8a 02 33 c9 8a cf 32 c8 66 0f b6 c0 03 c3 88 0c 16 bb ?? ?? ?? ?? 8d 0c 40 c1 e1 04 2b c8 8d 0c 49 8d 0c 89 8d 0c c9 8d 04 48 2b d8 42 4f 75 d0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -8807,6 +9146,7 @@ rule PWS_Win32_OnLineGames_NZ_2147719742_0
         $x_1_6 = "\"lbBagMoney\">" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
@@ -8838,6 +9178,7 @@ rule PWS_Win32_OnLineGames_NZ_2147719742_1
         $x_1_7 = {53 65 74 48 6f 6f 6b 00 55 6e 48 6f 6f 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
@@ -8866,6 +9207,7 @@ rule PWS_Win32_OnLineGames_ZGB_2147733061_0
         $x_1_4 = "if clipboard contains /tradeoffer/new/?partner=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -8893,6 +9235,7 @@ rule PWS_Win32_OnLineGames_ZGE_2147733082_0
         $x_1_3 = "schtasks /create /tn System\\SystemDone" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

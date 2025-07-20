@@ -17,6 +17,7 @@ rule Backdoor_MSIL_Plupay_A_2147724560_0
         $x_1_2 = "plugandplay.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

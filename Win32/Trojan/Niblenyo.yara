@@ -18,6 +18,7 @@ rule Trojan_Win32_Niblenyo_B_2147610063_0
         $x_1_3 = {83 7d fc 00 0f 86 ?? ?? 00 00 83 3d ?? ?? 40 00 01 1b c0 40 84 c0 0f 85 [0-14] 8b 45 fc e8 ?? ?? ff ff 8b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

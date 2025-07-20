@@ -17,6 +17,7 @@ rule Trojan_Win32_Valak_PA_2147748087_0
         $x_1_2 = {66 29 0c 45 ?? ?? ?? 00 8b df 0f af de 69 db 37 09 00 00 83 e8 01 85 c0 8b f3 7f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -42,6 +43,7 @@ rule Trojan_Win32_Valak_DEA_2147755760_0
         $x_1_1 = {2b c8 0f b7 f1 8b 44 24 1c 81 c2 ?? ?? ?? ?? 83 44 24 14 04 0f b7 ce 89 55 00 8b 6c 24 20 81 c5 ?? ?? ?? ?? 8d 04 41 03 c7 8d 04 41 03 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Valak_DEB_2147755953_0
         $x_1_1 = {8b 54 24 18 81 c1 ?? ?? ?? ?? 8b 44 24 14 05 ?? ?? ?? ?? 89 44 24 14 89 02 8b 54 24 10 0f b7 d2 c1 e2 02 2b d6 a3 ?? ?? ?? ?? 03 d1 8b 4c 24 10 0f b7 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

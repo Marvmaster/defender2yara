@@ -26,6 +26,7 @@ rule TrojanDownloader_Win32_Valfroc_A_2147611154_0
         $x_1_12 = "InternetOpenA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

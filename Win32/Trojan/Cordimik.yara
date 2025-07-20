@@ -16,6 +16,7 @@ rule Trojan_Win32_Cordimik_RPA_2147828655_0
         $x_1_1 = {5b 87 fa 88 10 c1 ea 1c f9 72 01 19 2b d7 f3 1b d6 e8 02 00 00 00 d2 e9 5a f3 1b d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

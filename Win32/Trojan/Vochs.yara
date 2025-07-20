@@ -17,6 +17,7 @@ rule Trojan_Win32_Vochs_A_2147652860_0
         $x_1_3 = {b9 7f 00 00 00 32 c0 f2 ae 4f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

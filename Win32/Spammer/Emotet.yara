@@ -23,6 +23,7 @@ rule Spammer_Win32_Emotet_A_2147690659_0
         $x_10_9 = "my huge entropy for rng.. blah" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule Spammer_Win32_Emotet_B_2147692103_0
         $x_1_4 = "%from_email%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Spammer_Win32_Emotet_C_2147692416_0
         $x_1_5 = "%from_email%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -104,6 +107,7 @@ rule Spammer_Win32_Emotet_D_2147692802_0
         $x_1_8 = "%from_email%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -130,6 +134,7 @@ rule Spammer_Win32_Emotet_F_2147696125_0
         $x_2_3 = {85 c0 74 24 81 be ?? ?? 00 00 c8 00 00 00 75 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -155,6 +160,7 @@ rule Spammer_Win32_Emotet_G_2147696188_0
         $x_1_3 = "<OutgoingLoginName><![CDATA[%s]]>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +185,7 @@ rule Spammer_Win32_Emotet_H_2147697088_0
         $x_1_5 = "<IncomingServer><![CDATA[%s]]></I" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Worm_Win32_Mofksys_A_2147681841_0
         $x_1_6 = "&HA8" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule Worm_Win32_Mofksys_NA_2147743070_0
         $x_1_3 = {3d 13 20 00 00 0f 8f be 00 00 00 0f 84 62 02 00 00 3d ?? ?? 00 00 7f 5e 0f 84 ce 01 00 00 3d ?? 00 00 00 7f 2f 0f 84 09 02 00 00 83 e8 ?? 0f 84 34 01 00 00 83 e8 ?? 0f 84 43 01 00 00 83 e8 ?? 0f 84 ca 01 00 00 83 e8 ?? 0f 84 d9 01 00 00 e9 79 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Worm_Win32_Mofksys_GTN_2147922423_0
         $x_5_2 = {06 36 4d 14 f4 34 41 b4 71 a2 ?? ?? ?? ?? 95 e4 c4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

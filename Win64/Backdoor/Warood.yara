@@ -19,6 +19,7 @@ rule Backdoor_Win64_Warood_A_2147706601_0
         $x_1_5 = "/logo.gif?m=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

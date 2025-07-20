@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Mudrop_L_2147607331_0
         $x_2_2 = {80 38 2a 75 ?? a1 ?? ?? 40 00 03 05 ?? ?? 40 00 40 80 38 36 75 ?? a1 ?? ?? 40 00 03 05 ?? ?? 40 00 83 c0 02 80 38 2a 75 51 a1 ?? ?? 40 00 03 05 ?? ?? 40 00 83 c0 03 80 38 2e 75 3e a1 ?? ?? 40 00 03 05 ?? ?? 40 00 83 c0 04 80 38 65 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))

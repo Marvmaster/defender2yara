@@ -19,6 +19,7 @@ rule TrojanSpy_MSIL_Daculoa_A_2147683508_0
         $x_1_5 = {00 42 6f 00 50 41 53 53 5f 52 45 43 4f 56 45 52 59 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Ransom_Linux_Conti_A_2147819084_0
         $x_1_7 = {48 8b 85 68 ff ff ff 48 8b 48 08 48 ba 0b d7 a3 70 3d 0a d7 a3 48 89 c8 48 f7 ea 48 8d 04 0a 48 89 c2 48 c1 fa 06 48 89 c8 48 c1 f8 3f 48 29 c2 48 89 d0 48 c1 e0 02 48 01 d0 48 01 c0 48 89 45 a8 48 8b 85 68 ff ff ff 48 8b 48 08 48 ba 0b d7 a3 70 3d 0a d7 a3 48 89 c8 48 f7 ea 48 8d 04 0a 48 89 c2 48 c1 fa 06 48 89 c8 48 c1 f8 3f 48 29 c2 48 89 d0 48 c1 e0 02 48 01 d0 48 01 c0 48 89 45 b0 eb 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -50,6 +51,7 @@ rule Ransom_Linux_Conti_B_2147888248_0
         $x_1_4 = {55 48 89 e5 89 7d ec 89 75 e8 8b 45 ec 99 f7 7d e8 89 55 fc 83 7d fc 00 75 05 8b 45 e8 eb 0e 8b 45 e8 89 45 ec 8b 45 fc 89 45 e8 eb dd 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Ransom_Linux_Conti_C_2147904439_0
         $x_1_4 = "The ransomware won't encrypt anything without it" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Ransom_Linux_Conti_D_2147905006_0
         $x_1_4 = "CONTI_README.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

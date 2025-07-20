@@ -24,6 +24,7 @@ rule Backdoor_MSIL_CrimsonRat_A_2147767712_0
         $x_1_9 = {5c 6f 62 6a 5c 44 65 62 75 67 [0-20] 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -61,6 +62,7 @@ rule Backdoor_MSIL_CrimsonRat_B_2147777407_0
         $x_1_14 = "-rupth" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -101,6 +103,7 @@ rule Backdoor_MSIL_CrimsonRat_C_2147778881_0
         $x_1_16 = "rupth" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -146,6 +149,7 @@ rule Backdoor_MSIL_CrimsonRat_D_2147780243_0
         $x_1_21 = "program files (x86)|" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 16 of ($x_1_*))) or
             ((4 of ($x_5_*) and 11 of ($x_1_*))) or
@@ -188,6 +192,7 @@ rule Backdoor_MSIL_CrimsonRat_E_2147782224_0
         $x_1_14 = "$clrcmd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or

@@ -20,6 +20,7 @@ rule Ransom_Win32_Cryak_PA_2147750928_0
         $x_1_5 = "All your documents, databases, backups and other important files have been encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

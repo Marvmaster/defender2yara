@@ -18,6 +18,7 @@ rule Trojan_Win64_Runshellz_A_2147925909_0
         $x_1_3 = {5e 48 89 c1 48 81 c6 8e 9f 06 00 48 c7 c1 86 ac 00 00 8a 16 88 13 48 ff c6 48 ff c3 e2 f4 48 8b d8 ff d3 b9 01 00 00 00 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_MSIL_DiskWriter_EAOZ_2147942197_0
         $x_2_1 = {2b 15 06 07 02 07 ?? ?? ?? ?? ?? 20 00 01 00 00 5d d2 9c 07 17 58 0b 07 20 f8 2f 14 00 32 e3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

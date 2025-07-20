@@ -20,6 +20,7 @@ rule HackTool_Win32_Pdridopoc_A_2147829411_0
         $x_1_6 = "Turn off password protected sharing" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

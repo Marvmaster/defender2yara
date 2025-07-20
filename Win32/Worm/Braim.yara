@@ -21,6 +21,7 @@ rule Worm_Win32_Braim_A_2147598470_0
         $x_10_7 = {01 7d 01 02 03 00 04 11 05 12 21 31 41 06 13 51}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or

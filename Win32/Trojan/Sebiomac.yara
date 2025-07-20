@@ -18,6 +18,7 @@ rule Trojan_Win32_Sebiomac_B_2147621217_0
         $x_2_3 = {c7 04 30 5c 6c 73 61 ba 73 73 2e 65 31 c9 89 54 30 04 66 c7 44 30 08 78 65 c6 44 30 0a 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

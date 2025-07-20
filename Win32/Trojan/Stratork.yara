@@ -19,6 +19,7 @@ rule Trojan_Win32_Stratork_A_2147652435_0
         $x_1_5 = "\\drivers\\texasrangers.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -17,6 +17,7 @@ rule VirTool_Win64_Excheposez_A_2147907207_0
         $x_1_2 = {48 89 7d d7 0f 57 c0 0f 11 45 e7 48 89 7d f7 48 c7 45 ff 0f 00 00 00 40 88 7d e7 0f 11 45 07 48 89 7d 17 48 c7 45 1f 07 00 00 00 66 89 7d 07 ?? ?? ?? ?? ?? ?? ?? ?? bb 01 00 00 00 8b d3 33 c9 ?? ?? ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

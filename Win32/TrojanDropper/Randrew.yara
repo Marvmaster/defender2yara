@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Randrew_B_2147718549_0
         $x_1_2 = "netsh advfirewall firewall add rule name=\"%s\" dir=in action=allow program=\"%s\"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

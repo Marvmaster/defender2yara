@@ -21,6 +21,7 @@ rule Ransom_MSIL_Lockerrip_A_2147717589_0
         $x_1_7 = "criptografia AES 256 BIT Muito forte.Realize o pagamento em:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

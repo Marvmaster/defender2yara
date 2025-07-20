@@ -23,6 +23,7 @@ rule Trojan_Win64_Stealer_O_2147841133_0
         $x_1_8 = "TitanCookies" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win64_Stealer_PADB_2147900956_0
         $x_1_4 = "stealer\\x64\\Release\\stealer.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win64_Stealer_SO_2147902568_0
         $x_2_3 = "GuldenRuche" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win64_Stealer_RP_2147911246_0
         $x_1_2 = "\\ConsoleApplication1.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule Trojan_Win64_Stealer_WZ_2147918410_0
         $x_1_6 = "type:.eq.main.Response" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +153,7 @@ rule Trojan_Win64_Stealer_GD_2147929221_0
         $x_1_10 = "mailto" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +176,7 @@ rule Trojan_Win64_Stealer_SUN_2147934104_0
         $x_1_2 = "/svcstealer/get.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -192,6 +199,7 @@ rule Trojan_Win64_Stealer_MX_2147936682_0
         $x_1_2 = "Runtine Broker.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +222,7 @@ rule Trojan_Win64_Stealer_NS_2147940059_0
         $x_2_2 = {88 4a 06 66 89 42 04 4c 8d ac 24 f8 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -236,6 +245,7 @@ rule Trojan_Win64_Stealer_GVA_2147941530_0
         $x_1_2 = {8b 4c 24 58 43 88 0c 2f 41 ff c7 45 3b fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -263,6 +273,7 @@ rule Trojan_Win64_Stealer_NFA_2147942380_0
         $x_1_7 = "%s\\katz_ontop.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -295,6 +306,7 @@ rule Trojan_Win64_Stealer_NR_2147942888_0
         $x_1_12 = "remote address changed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -316,6 +328,7 @@ rule Trojan_Win64_Stealer_TGZ_2147944028_0
         $x_5_1 = {33 c1 48 8b 8c 24 b8 ab 00 00 66 89 01 8b 84 24 68 1a 00 00 48 8b 8c 24 50 48 00 00 48 8b 49 08 8b 94 24 98 71 00 00 48 8b bc 24 00 e4 00 00 0f b6 04 08 88 04 17 8b 84 24 ?? ?? ?? ?? ff c0 89 84 24 ?? ?? ?? ?? 8b 84 24 54 7e 00 00 8b 8c 24 d8 71 00 00 2b c8 8b c1 89 84 24 a8 71 00 00 8b 84 24 20 9c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -341,6 +354,7 @@ rule Trojan_Win64_Stealer_NK_2147945420_0
         $x_1_5 = "USERPROFILE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +377,7 @@ rule Trojan_Win64_Stealer_NL_2147945529_0
         $x_1_2 = {48 89 c7 48 85 c0 0f 84 e6 00 00 00 48 8b 05 05 63 28 00 48 8d 1c b6 48 c1 e3 03 48 01 d8 48 89 78 20 c7 00 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

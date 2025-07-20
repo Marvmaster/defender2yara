@@ -27,6 +27,7 @@ rule Backdoor_Win32_PowerSpider_N_2147595480_0
         $x_5_12 = "c:\\Program Files\\Tencent" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 8 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -58,6 +59,7 @@ rule Backdoor_Win32_PowerSpider_N_2147603613_0
         $x_1_9 = "power001.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -87,6 +89,7 @@ rule Backdoor_Win32_PowerSpider_C_2147649674_0
         $x_1_10 = {53 4f 46 54 57 41 52 45 5c 43 6c 61 73 73 65 73 5c 53 75 6e 6e 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

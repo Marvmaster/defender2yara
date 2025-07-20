@@ -17,6 +17,7 @@ rule VirTool_Win64_DumpThatLSASS_A_2147911230_0
         $x_3_2 = {8a 01 3a 04 11 75 0c 48 ff c1 49 ff c8 75 f1 48 33 c0 c3}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

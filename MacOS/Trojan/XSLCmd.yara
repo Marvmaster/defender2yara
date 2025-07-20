@@ -20,6 +20,7 @@ rule Trojan_MacOS_XSLCmd_A_2147745116_0
         $x_1_5 = "%s/%04d%02d%02d_%02d%02d_%02d_keys.log" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MSIL_Blocsem_A_2147706781_0
         $x_1_4 = "n|reg add HKLM\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Run /v \"macrosoft\" /d %APPDATA%\\Flash.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

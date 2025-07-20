@@ -67,6 +67,7 @@ rule PWS_Win32_Lineage_A_2147573987_0
         $x_1_52 = "gethostbyname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((18 of ($x_1_*))) or
             ((1 of ($x_2_*) and 16 of ($x_1_*))) or
@@ -136,6 +137,7 @@ rule PWS_Win32_Lineage_B_2147581559_0
         $x_3_13 = {ff 15 a4 10 40 00 53 68 80 00 00 00 6a 02 53 53 8d 85 80 fe ff ff 68 00 00 00 40 50 ff 15 98 10 40 00 83 f8 ff 89 45 fc 75 68 8d 85 80 fe ff ff 56 50 ff 15 50 10 40 00 8d 85 80 fe ff ff 68 ?? 12 40 00 50 e8 ?? 01 00 00 8d 85 80 fe ff ff 68 54 12 40 00 50 e8 ?? 01 00 00 83 c4 10 8d 85 80 fe ff ff 50 ff 15 a4 10 40 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 9 of ($x_1_*))) or
             (all of ($x*))
@@ -162,6 +164,7 @@ rule PWS_Win32_Lineage_CC_2147582221_0
         $x_1_4 = "OpenMutexA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -200,6 +203,7 @@ rule PWS_Win32_Lineage_C_2147583266_0
         $x_1_18 = "GASHLogin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_5_*) and 2 of ($x_2_*) and 6 of ($x_1_*))) or
             ((8 of ($x_5_*) and 3 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -232,6 +236,7 @@ rule PWS_Win32_Lineage_I_2147593205_0
         $x_20_4 = {46 69 6e 64 4e 65 78 74 46 69 6c 65 41 [0-4] 6b 65 72 6e 65 6c 33 32 2e 64 6c 6c [0-4] 46 69 6e 64 4e 65 78 74 46 69 6c 65 57 [0-4] 4e 74 51 75 65 72 79 53 79 73 74 65 6d 49 6e 66 6f 72 6d 61 74 69 6f 6e [0-4] 6e 74 64 6c 6c 2e 64 6c 6c}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_30_*) and 1 of ($x_20_*))) or
             ((3 of ($x_30_*))) or
@@ -275,6 +280,7 @@ rule PWS_Win32_Lineage_K_2147593309_0
         $x_10_19 = "Tencent_Traveler_Main_Window" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_10_*))) or
             ((1 of ($x_20_*) and 7 of ($x_10_*))) or
@@ -313,6 +319,7 @@ rule PWS_Win32_Lineage_L_2147597891_0
         $x_10_10 = "SetWindowsHookExA" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -342,6 +349,7 @@ rule PWS_Win32_Lineage_WI_2147602373_0
         $x_5_6 = "CallNextHookEx" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -369,6 +377,7 @@ rule PWS_Win32_Lineage_SJ_2147603225_0
         $x_1_5 = {5f 53 41 46 5f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -390,6 +399,7 @@ rule PWS_Win32_Lineage_WL_2147608158_0
         $x_1_2 = {55 8b ec 8b 45 08 8b 4d 0c 25 ff 00 00 00 89 4d 0c 89 45 08 50 51 8b 45 08 8b 4d 0c d2 c8 89 45 08 59 58 8a 45 08 5d c2 08 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +422,7 @@ rule PWS_Win32_Lineage_WM_2147609248_0
         $x_1_3 = "c:\\aa.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -435,6 +446,7 @@ rule PWS_Win32_Lineage_CH_2147610864_0
         $n_1_4 = {8b 55 fc e8 ?? ?? ff ff 8b 85 ?? ?? ff ff e8 ?? ?? ff ff 56 57 e8 ?? ?? ff ff 85 c0 75 84 57 e8 ?? ?? ff ff c7 06 16 00 00 00}  //weight: -1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_4_*) and 1 of ($x_3_*))) or
@@ -464,6 +476,7 @@ rule PWS_Win32_Lineage_E_2147616661_0
         $x_1_5 = {73 79 73 74 65 6d 33 32 5c 73 79 73 6a 70 69 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -488,6 +501,7 @@ rule PWS_Win32_Lineage_CK_2147618486_0
         $x_1_5 = "LineAge2Bee.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -515,6 +529,7 @@ rule PWS_Win32_Lineage_CL_2147622140_0
         $x_1_4 = "User-Agent: Mozilla/4.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -541,6 +556,7 @@ rule PWS_Win32_Lineage_EA_2147806851_0
         $x_1_7 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_KeyMarble_2147728575_0
         $x_1_4 = "100.43.153.60" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule PWS_Win32_Donips_A_2147611501_0
         $x_1_6 = {6d 70 72 61 70 69 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

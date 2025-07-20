@@ -30,6 +30,7 @@ rule PWS_MSIL_Agensla_GA_2147780308_0
         $x_1_15 = ".png" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))

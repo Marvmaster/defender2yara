@@ -19,6 +19,7 @@ rule VirTool_Win32_Telzsor_B_2147841303_0
         $x_1_4 = {c7 45 c4 00 00 00 00 c7 45 b8 00 00 00 00 8b f4 68 00 10 02 00 6a 08 8b fc ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

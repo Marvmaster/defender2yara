@@ -18,6 +18,7 @@ rule Ransom_Win32_Lamdelim_A_2147720127_0
         $x_1_4 = "microsoftxyber@hackindex.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Flexty_A_2147651736_0
         $x_1_2 = {0f b6 4e 02 c1 e3 08 b8 ?? ?? ?? ?? c6 06 01 03 d9 8d 50 01 8a 08 40 84 c9 75 f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

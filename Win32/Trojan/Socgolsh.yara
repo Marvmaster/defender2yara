@@ -16,6 +16,7 @@ rule Trojan_Win32_Socgolsh_B_2147851198_0
         $x_1_2 = {66 81 7c 07 01 69 72 75 ?? 66 81 7c 07 03 74 75 75 ?? 81 7c 07 09 6c 6f 63 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule Trojan_Win32_Socgolsh_YAD_2147851673_0
         $x_1_1 = {80 7c 07 01 69 75 ?? 66 81 7c 07 03 74 75 75 ?? 81 7c 07 09 6c 6f 63 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

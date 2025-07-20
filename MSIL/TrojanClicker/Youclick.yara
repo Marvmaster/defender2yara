@@ -19,6 +19,7 @@ rule TrojanClicker_MSIL_Youclick_A_2147690204_0
         $x_1_5 = "/background/IMG/user_agent.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             ((3 of ($x_3_*))) or

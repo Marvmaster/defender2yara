@@ -21,6 +21,7 @@ rule Worm_Win32_Fubalca_A_2147601359_0
         $x_1_7 = "NoDriveTypeAutoRun" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))

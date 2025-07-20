@@ -16,6 +16,7 @@ rule Trojan_MSIL_PureInject_MBAK_2147840357_0
         $x_1_1 = "Qpbjyrrpsxznsfiv" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

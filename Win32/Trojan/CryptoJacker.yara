@@ -29,6 +29,7 @@ rule Trojan_Win32_CryptoJacker_A_2147726232_0
         $x_10_15 = "Z152913748562" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

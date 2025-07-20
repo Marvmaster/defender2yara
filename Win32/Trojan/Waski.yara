@@ -19,6 +19,7 @@ rule Trojan_Win32_Waski_A_2147783780_0
         $x_1_4 = {6a 00 68 ff 00 00 00 68 00 da 55 00 68 18 21 55 00 68 18 21 55 00 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Waski_A_2147783780_1
         $x_1_5 = "kilf.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Waski_E_2147787079_0
         $x_1_2 = {03 75 fc 8b 7d 0c 03 7f 3c 83 c7 14 83 c7 04 8b 7f 18 81 c7 ?? ?? ?? ?? 81 ef 00 20 00 00 03 7d 08 50 8b 45 0c 03 40 3c 83 c0 14 83 c0 04 8b 40 18 05 ?? ?? ?? ?? 2d 00 20 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_Waski_AA_2147793414_0
         $x_10_2 = {03 f0 47 51 33 c0 56 8b c8 ac 41 85 c0 75 fa}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_Win32_Waski_GSB_2147810539_0
         $x_5_3 = {33 c2 33 ff 3b d7 0f 84 ?? ?? ?? ?? 8b d7 e9 19 03 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Trojan_Win32_Waski_GZZ_2147901849_0
         $x_1_6 = "/g11.png" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

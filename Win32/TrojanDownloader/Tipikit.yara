@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Tipikit_A_2147600520_0
         $x_1_5 = "Urlmon.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Tipikit_B_2147600524_0
         $x_1_1 = {2d 41 75 07 e8 ?? ?? ff ff eb 33 e8 ?? ?? ff ff 83 3d ?? ?? 40 00 00 75 00 eb 1a 68 ?? ?? 00 00 07 00 66 81 3d ?? ?? 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule TrojanDownloader_Win32_Tipikit_B_2147604727_0
         $x_10_9 = {68 74 74 70 3a 2f 2f 6d 73 69 65 73 65 74 74 69 6e 67 73 2e 63 6f 6d 2f 63 68 65 63 6b 2f [0-16] 2e 70 68 70 3f 74 73 6b 3d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule TrojanDownloader_Win32_Tipikit_C_2147604766_0
         $x_1_1 = {2d 41 75 07 e8 ?? ?? ff ff eb 2a e8 ?? ?? ff ff eb 1a 68 60 ea 00 00 e8 ?? ?? 00 00 e8 07 00 66 81 3d ?? ?? 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule TrojanDownloader_Win32_Tipikit_D_2147708784_0
         $x_1_2 = {89 45 fc 6a 00 6a 00 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 00 68 ?? ?? ?? ?? a1 ?? ?? ?? ?? ff d0 ff 75 fc 50 a1 ?? ?? ?? ?? ff d0 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

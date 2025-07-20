@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Sminager_G_2147723881_0
         $x_1_1 = {50 61 74 68 3d 25 61 70 70 64 61 74 61 25 5c 6d 73 76 63 0d 0a 53 65 74 75 70 3d 6d 73 76 63 2e 76 62 73 0d 0a 53 69 6c 65 6e 74 3d 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule TrojanDropper_Win32_Sminager_I_2147724556_0
         $x_1_2 = "you agree to use the resources of your PC (CPU and / or graphics card load is possible from 5% to 100%)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

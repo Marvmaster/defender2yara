@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Becontr_A_2147687142_0
         $x_1_6 = {2f 62 74 73 2f 32 33 2e 70 68 70 3f 69 64 3d [0-32] 26 76 69 64 3d [0-32] 26 76 3d [0-32] 26 74 79 70 65 3d [0-32] 26 64 77 6e 6c 64 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

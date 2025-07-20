@@ -21,6 +21,7 @@ rule Virus_MSIL_Grenam_A_2147692600_0
         $x_5_6 = "exec sp_MSforeachtable" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_25_*) and 1 of ($x_5_*))) or
             ((2 of ($x_100_*) and 2 of ($x_25_*))) or

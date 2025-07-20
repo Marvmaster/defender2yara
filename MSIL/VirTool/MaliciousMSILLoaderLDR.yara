@@ -19,6 +19,7 @@ rule VirTool_MSIL_MaliciousMSILLoaderLDR_A_2147695058_0
         $x_1_5 = "93|209|203|198|204|173|214|207|209|203|162" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Yohakest_A_2147680413_0
         $x_1_4 = {33 36 30 30 00 57 69 6e 64 6f 77 73 20 54 61 73 6b 20 4d 61 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

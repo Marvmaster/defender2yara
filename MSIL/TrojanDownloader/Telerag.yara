@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Telerag_A_2147729930_0
         $x_1_3 = "\\CoLoader\\obj\\Release\\CoLoader.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule Worm_Win32_Skuffbot_A_197774_0
         $x_2_11 = {7b 44 4c 7d 3a 20 9b 20 25 73 20 28 25 73 29 20 2d 20 55 70 64 61 74 65 3a 20 25 73}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

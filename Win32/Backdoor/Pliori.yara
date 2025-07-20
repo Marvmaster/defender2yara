@@ -17,6 +17,7 @@ rule Backdoor_Win32_Pliori_A_2147626475_0
         $x_1_3 = {b8 20 4e 00 00 e8 ?? ?? ?? ff e8 ?? ?? ?? ff 8d 45 fc e8 ?? ?? ?? ff 8d 45 fc 50 8d 4d f8 66 ba d2 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule PWS_Win32_QQThief_C_2147631885_0
         $x_1_4 = {44 4e 46 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule PWS_Win32_QQThief_D_2147632387_0
         $x_1_4 = "settellover" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule PWS_Win32_QQThief_E_2147632388_0
         $x_1_4 = "\\sysautorun.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -89,6 +92,7 @@ rule PWS_Win32_QQThief_H_2147649412_0
         $x_1_3 = "\\Tencent\\QQ\\UserDataInfo.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule PWS_Win32_QQThief_I_2147649454_0
         $x_1_4 = "SOFTWARE\\Tencent\\QQ\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule PWS_Win32_QQThief_K_2147678530_0
         $x_1_12 = "rjxod-dwd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -171,6 +177,7 @@ rule PWS_Win32_QQThief_AK_2147745742_0
         $x_1_5 = "/c move \"%s\" \"%s\" > nul" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

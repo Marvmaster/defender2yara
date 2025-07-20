@@ -17,6 +17,7 @@ rule HackTool_Win32_Keygen_2147593794_0
         $x_1_3 = "Generate CD-Key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule HackTool_Win32_Keygen_2147593794_1
         $x_1_4 = "aspr_keys.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -70,6 +72,7 @@ rule HackTool_Win32_Keygen_2147593794_2
         $x_1_5 = "Created By MrGam" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule HackTool_Win32_Keygen_2147593794_3
         $x_1_5 = "http://www.CollakeSoftware.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule HackTool_Win32_Keygen_2147593794_4
         $x_1_3 = "Generate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule HackTool_Win32_Keygen_2147593794_5
         $x_1_3 = "GFX: kR8ViTy/CRO" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +168,7 @@ rule HackTool_Win32_Keygen_2147593794_6
         $x_1_5 = "&Quit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -186,6 +193,7 @@ rule HackTool_Win32_Keygen_2147593794_7
         $x_1_5 = "EaseUS_DRW.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -213,6 +221,7 @@ rule HackTool_Win32_Keygen_2147593794_8
         $x_1_5 = "FCorelDrawX8Activation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -238,6 +247,7 @@ rule HackTool_Win32_Keygen_2147593794_9
         $x_1_6 = "Patch Hosts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -264,6 +274,7 @@ rule HackTool_Win32_Keygen_2147593794_10
         $x_1_7 = "MUSIC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -289,6 +300,7 @@ rule HackTool_Win32_Keygen_2147593794_11
         $x_2_6 = "dup2patcher.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -316,6 +328,7 @@ rule HackTool_Win32_Keygen_2147593794_12
         $x_1_5 = "Nice music composed by " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -340,6 +353,7 @@ rule HackTool_Win32_Keygen_2147743020_0
         $x_1_4 = "orphan package" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -365,6 +379,7 @@ rule HackTool_Win32_Keygen_2147743020_1
         $x_1_5 = "BKT/BRD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -390,6 +405,7 @@ rule HackTool_Win32_Keygen_2147751727_0
         $x_1_5 = "random number generator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -416,6 +432,7 @@ rule HackTool_Win32_Keygen_2147751727_1
         $x_1_6 = "Piriform MultiGen" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -443,6 +460,7 @@ rule HackTool_Win32_Keygen_2147751727_2
         $x_1_7 = "Successfully patched!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -467,6 +485,7 @@ rule HackTool_Win32_Keygen_2147751727_3
         $x_1_4 = "black riders" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -492,6 +511,7 @@ rule HackTool_Win32_Keygen_2147751727_4
         $x_1_5 = "kentpw@norwich.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -523,6 +543,7 @@ rule HackTool_Win32_Keygen_R_2147755645_0
         $x_1_11 = "GenerateLicense" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -544,6 +565,7 @@ rule HackTool_Win32_Keygen_P_2147799585_0
         $x_1_2 = "\\nero8x\\Release\\keygen.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -566,6 +588,7 @@ rule HackTool_Win32_Keygen_K_2147809819_0
         $x_2_3 = "http://www.cobans.net" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -591,6 +614,7 @@ rule HackTool_Win32_Keygen_D_2147809902_0
         $x_1_5 = "GetCPInfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -615,6 +639,7 @@ rule HackTool_Win32_Keygen_DM_2147814645_0
         $x_1_4 = "um on7imm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -638,6 +663,7 @@ rule HackTool_Win32_Keygen_RS_2147899316_0
         $x_1_3 = "activate.adobe.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -662,6 +688,7 @@ rule HackTool_Win32_Keygen_2147903338_0
         $x_1_4 = "HelpKeywordAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

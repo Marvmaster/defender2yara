@@ -22,6 +22,7 @@ rule Ransom_MSIL_ZipRansom_YAA_2147925029_0
         $x_1_7 = "Start-Sleep -Seconds 5; Remove-Item " wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

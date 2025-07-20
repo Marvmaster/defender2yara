@@ -19,6 +19,7 @@ rule Backdoor_Win32_Etumbot_2147707419_0
         $x_1_3 = {66 ab aa c6 85 ?? ?? ff ff 2f c6 85 ?? ?? ff ff 53 c6 85 ?? ?? ff ff 55 c6 85 ?? ?? ff ff 53 c6 85 ?? ?? ff ff 25 c6 85 ?? ?? ff ff 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Backdoor_Win32_Etumbot_B_2147707420_0
         $x_1_6 = {ff ff 6b c6 85 ?? ?? ff ff 62 c6 85 ?? ?? ff ff 37 c6 85 ?? ?? ff ff 31 c6 85 ?? ?? ff ff 32 c6 85 ?? ?? ff ff 37 c6 85 ?? ?? ff ff 31 c6 85 ?? ?? ff ff 2e c6 85 ?? ?? ff ff 6c c6 85 ?? ?? ff ff 6f c6 85 ?? ?? ff ff 67}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Backdoor_Win32_Etumbot_C_2147708493_0
         $x_1_6 = {c7 45 90 4d 6f 7a 69 c7 45 94 6c 6c 61 2f c7 45 98 34 2e 30 20 c7 45 9c 28 63 6f 6d c7 45 a0 70 61 74 69 c7 45 a4 62 6c 65 3b c7 45 a8 20 4d 53 49 c7 45 ac 45 20 37 2e c7 45 b0 30 3b 20 57 c7 45 b4 69 6e 33 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Backdoor_Win32_Etumbot_D_2147708565_0
         $x_1_4 = {fc ff ff 77 6b 73 63 c7 85 ?? fc ff ff 6c 69 76 2e c7 85 ?? fc ff ff 64 6c 6c 00 c7 85 ?? fc ff ff 5c 4c 6f 63 c7 85 ?? fc ff ff 61 74 69 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -123,6 +127,7 @@ rule Backdoor_Win32_Etumbot_E_2147709011_0
         $x_1_8 = {c6 85 90 c7 ff ff 2b c6 85 91 c7 ff ff 4f c6 85 92 c7 ff ff 4b c6 85 93 c7 ff ff 20 c6 85 94 c7 ff ff 43 c6 85 95 c7 ff ff 45 c6 85 96 c7 ff ff 4c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -149,6 +154,7 @@ rule Backdoor_Win32_Etumbot_2147709096_0
         $x_5_6 = {c6 44 24 32 74 88 54 24 33 88 4c 24 34 c6 44 24 35 66 88 5c 24 36 c6 44 24 37 69 c6 44 24 38 6c c6 44 24 3a 64 c6 44 24 3b 21}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -178,6 +184,7 @@ rule Backdoor_Win32_Etumbot_F_2147710101_0
         $x_1_6 = {c6 44 24 34 48 c6 44 24 35 49 c6 44 24 36 44 c6 44 24 37 45 c6 44 24 38 30 c6 44 24 3c 00 88 5c 24 0a c6 44 24 0d 73 88 5c 24 0f c6 44 24 12 73 88 5c 24 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -213,6 +220,7 @@ rule Backdoor_Win32_Etumbot_G_2147710390_0
         $x_1_15 = {c6 45 e4 53 c6 45 e5 68 c6 45 e6 65 c6 45 e7 6c c6 45 e8 6c c6 45 e9 20 c6 45 ea 45 c6 45 eb 78 c6 45 ec 69 c6 45 ed 74 c6 45 ee 65 c6 45 ef 64 c6 45 f0 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

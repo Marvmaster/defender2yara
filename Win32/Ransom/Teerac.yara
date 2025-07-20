@@ -20,6 +20,7 @@ rule Ransom_Win32_Teerac_A_2147686764_0
         $x_1_6 = "racketeer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win32_Teerac_A_2147686764_1
         $x_1_6 = {be 06 00 00 00 f7 f6 66 0f be 92 ?? ?? ?? ?? 66 89 14 4b eb 13 be 14 00 00 00 f7 f6 66 0f be 82 ?? ?? ?? ?? 66 89 04 4b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Ransom_Win32_Teerac_A_2147686764_2
         $x_1_7 = "X:\\racketeer\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -355,6 +358,7 @@ rule Ransom_Win32_Teerac_2147689507_0
         $x_10_2 = {50 58 8b c0 33 d2 8b c0 87 14 24 8b c0 83 c4 04 8b c0}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -386,6 +390,7 @@ rule Ransom_Win32_Teerac_C_2147689813_0
         $x_1_12 = "ycbcra" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -451,6 +456,7 @@ rule Ransom_Win32_Teerac_F_2147694578_0
         $x_1_42 = {6a 09 68 d7 4a 51 2e 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -489,6 +495,7 @@ rule Ransom_Win32_Teerac_H_2147717240_0
         $x_10_4 = "code\\tor\\torr\\libressl-2.3.1\\crypto\\" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -511,6 +518,7 @@ rule Ransom_Win32_Teerac_I_2147717242_0
         $x_10_3 = {8b 4d 08 ff 71 0c 8b 41 04 ff 71 08 8b 11 50 52 ff d7}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -533,6 +541,7 @@ rule Ransom_Win32_Teerac_I_2147717242_1
         $x_10_3 = {8b 4c 24 34 ff 71 0c 8b 41 04 ff 71 08 8b 11 50 52 ff d5}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -555,6 +564,7 @@ rule Ransom_Win32_Teerac_I_2147717242_2
         $x_10_3 = "qwrtpsdfghjklzxcvbn" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -577,6 +587,7 @@ rule Ransom_Win32_Teerac_I_2147717242_3
         $x_10_3 = "qwrtpsdfghjklzxcvbn" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -603,6 +614,7 @@ rule Ransom_Win32_Teerac_J_2147717529_0
         $x_100_7 = {68 10 27 00 00 ff [0-2] ff 75 ?? ff [0-2] 6a 00 ff}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_100_*) and 1 of ($x_10_*))) or
             (all of ($x*))

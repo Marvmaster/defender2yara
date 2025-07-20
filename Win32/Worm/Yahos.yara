@@ -20,6 +20,7 @@ rule Worm_Win32_Yahos_A_2147643965_0
         $x_1_6 = "kil baxmaq" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))

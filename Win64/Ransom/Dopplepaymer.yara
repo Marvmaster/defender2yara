@@ -37,6 +37,7 @@ rule Ransom_Win64_Dopplepaymer_A_2147745780_0
         $x_1_2 = {41 89 c2 ff ca 45 0f b6 08 4d 33 d1 45 0f b6 da 49 ff c0 c1 e8 08 42 33 04 99 83 fa ff 75 e1 4c 89 45 18 f7 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

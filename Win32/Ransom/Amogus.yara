@@ -17,6 +17,7 @@ rule Ransom_Win32_Amogus_PA_2147916254_0
         $x_4_2 = {0f b6 56 01 83 c7 10 83 c6 10 32 53 01 88 57 ?? 8b 4c 24 ?? 0f b6 56 ?? 32 53 02 88 51 02 8b 4c 24 ?? 0f b6 56 ?? 32 53 03 88 51 03 8b 54 24 ?? 0f b6 4e ?? 32 4b 04 88 4a 04}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

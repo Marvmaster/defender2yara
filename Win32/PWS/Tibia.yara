@@ -22,6 +22,7 @@ rule PWS_Win32_Tibia_B_2147599926_0
         $x_1_8 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule PWS_Win32_Tibia_C_2147599931_0
         $x_1_10 = "c:\\x.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule PWS_Win32_Tibia_I_2147602400_0
         $x_1_2 = {8d 55 dc 33 c0 e8 ?? ?? ?? ?? 8b 45 dc e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? b2 01 a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? a3 ?? ?? ?? ?? ba 02 00 00 80 a1 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule PWS_Win32_Tibia_J_2147602536_0
         $x_1_6 = "&level=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -126,6 +130,7 @@ rule PWS_Win32_Tibia_K_2147605198_0
         $x_10_7 = {ba 03 00 00 00 e8 ?? ?? ?? ?? 8b 45 ?? e8 ?? ?? ?? ?? 50 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 00 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -154,6 +159,7 @@ rule PWS_Win32_Tibia_L_2147605534_0
         $x_1_6 = "Tibia.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +184,7 @@ rule PWS_Win32_Tibia_M_2147606350_0
         $x_1_5 = "ShellExecuteExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -208,6 +215,7 @@ rule PWS_Win32_Tibia_N_2147606388_0
         $x_10_11 = {c7 44 24 10 00 00 00 00 c7 44 24 0c 08 00 00 00 c7 44 24 08 ?? 50 40 00 c7 44 24 04 b4 c2 76 00 89 04 24 e8 ?? ?? 00 00 83 ec 14 c7 44 24 10 00 00 00 00 c7 44 24 0c 1e 00 00 00 c7 44 24 08 ?? 50 40 00 c7 44 24 04 94 c2 76 00 a1 ?? ?? 40 00 89 04 24 e8 ?? ?? 00 00 83 ec 14 c7 44 24 10 00 00 00 00 c7 44 24 0c 20 00 00 00 c7 44 24 08 ?? ?? 40 00 c7 44 24 04 e8 3d 76 00 a1 ?? ?? 40 00 89 04 24 e8 ?? ?? 00 00 83 ec 14 c7 44 24 10 00 00 00 00 c7 44 24 0c 04 00 00 00 c7 44 24 08 ?? 50 40 00 c7 44 24 04 60 3b 61 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 9 of ($x_1_*))) or
             (all of ($x*))
@@ -233,6 +241,7 @@ rule PWS_Win32_Tibia_O_2147606390_0
         $x_1_3 = {8b 43 0c c7 00 74 2e 70 68 c7 40 04 70 3f 73 6c 66 c7 40 08 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -258,6 +267,7 @@ rule PWS_Win32_Tibia_P_2147606911_0
         $x_1_6 = {70 72 6f 67 72 61 6d 66 69 6c 65 73 00 25 73 5c 49 6e 74 65 72 6e 65 74 20 45 78 70 6c 6f 72 65 72 5c 00 6c 73 61 73 73 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -290,6 +300,7 @@ rule PWS_Win32_Tibia_Q_2147607544_0
         $x_1_13 = "Gadu-Gadu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -319,6 +330,7 @@ rule PWS_Win32_Tibia_U_2147610191_0
         $x_1_7 = "lsass.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -343,6 +355,7 @@ rule PWS_Win32_Tibia_W_2147612317_0
         $x_1_5 = "SERVER MESSAGE: Bad password or account number. Try again." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -369,6 +382,7 @@ rule PWS_Win32_Tibia_X_2147612319_0
         $x_1_7 = "105.117.98.119.123.37.101.125.104" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -396,6 +410,7 @@ rule PWS_Win32_Tibia_Y_2147612641_0
         $x_1_3 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -421,6 +436,7 @@ rule PWS_Win32_Tibia_V_2147616875_0
         $x_1_5 = "mtpkzXmklegv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -451,6 +467,7 @@ rule PWS_Win32_Tibia_AB_2147617428_0
         $n_10_8 = {53 6f 66 74 77 61 72 65 5c 57 69 73 65 54 6f 70 5c 47 47 4c 6f 67 69 6e 43 6c 69 65 6e 74 00}  //weight: -10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
@@ -480,6 +497,7 @@ rule PWS_Win32_Tibia_AC_2147617429_0
         $x_1_6 = "GetWindowThreadProcessId" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_3_*))) or
@@ -505,6 +523,7 @@ rule PWS_Win32_Tibia_AG_2147621851_0
         $x_1_2 = {81 ec dc 01 00 00 8b 5d 08 89 1c 24 ff 93 60 06 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -532,6 +551,7 @@ rule PWS_Win32_Tibia_AH_2147622319_0
         $x_1_8 = "&nick=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -557,6 +577,7 @@ rule PWS_Win32_Tibia_AI_2147623606_0
         $x_1_3 = {26 70 61 73 73 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -583,6 +604,7 @@ rule PWS_Win32_Tibia_AK_2147624306_0
         $x_1_7 = {0f b6 c0 2d ?? ?? 00 00 85 c0 7d 09 05 ?? ?? 00 00 85 c0 7c f7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
@@ -614,6 +636,7 @@ rule PWS_Win32_Tibia_AL_2147626060_0
         $x_1_6 = {6c 73 61 73 73 2e 65 78 65 00 36 35 00 72 75 6e 61 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -640,6 +663,7 @@ rule PWS_Win32_Tibia_AM_2147627838_0
         $x_1_3 = ")fkdudfwhu@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -663,6 +687,7 @@ rule PWS_Win32_Tibia_AQ_2147630199_0
         $x_1_4 = "getwindowthreadprocessid" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -688,6 +713,7 @@ rule PWS_Win32_Tibia_AR_2147630777_0
         $x_1_3 = {8b 45 f8 50 6a 00 68 ff 0f 1f 00 e8 ?? ?? ?? ?? 8d 55 fc 52 68 ff 00 00 00 8d 95 f9 fe ff ff 52 53 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -711,6 +737,7 @@ rule PWS_Win32_Tibia_AS_2147631201_0
         $x_1_4 = {b3 ff 8d b5 ?? ?? ?? ?? 8d 85 ?? ?? ?? ?? 8a 16 e8 ?? ?? ?? ?? 8b 95 ?? ?? ?? ?? 8b c7 e8 ?? ?? ?? ?? 46 fe cb 75 e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -738,6 +765,7 @@ rule PWS_Win32_Tibia_AT_2147631968_0
         $x_1_8 = "tbi_data" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 6 of ($x_1_*))) or
             ((2 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -765,6 +793,7 @@ rule PWS_Win32_Tibia_AV_2147633339_0
         $x_2_4 = "tbi_readed_data" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -792,6 +821,7 @@ rule PWS_Win32_Tibia_AW_2147635789_0
         $x_2_4 = "Tibia Account Hacked" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -819,6 +849,7 @@ rule PWS_Win32_Tibia_AX_2147636235_0
         $x_1_5 = "IdSMTP1Connected" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -855,6 +886,7 @@ rule PWS_Win32_Tibia_AY_2147637390_0
         $x_10_12 = "&game=tibia&acc=" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             ((6 of ($x_10_*))) or
@@ -881,6 +913,7 @@ rule PWS_Win32_Tibia_AZ_2147640130_0
         $x_1_3 = "InternalGetWindowText" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -903,6 +936,7 @@ rule PWS_Win32_Tibia_BD_2147642453_0
         $x_2_3 = "skill_points_fishing" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -927,6 +961,7 @@ rule PWS_Win32_Tibia_BF_2147646232_0
         $x_1_5 = {ff 0f 1f 00 e8 04 00 50 6a 00 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -952,6 +987,7 @@ rule PWS_Win32_Tibia_BH_2147646562_0
         $x_1_6 = "metin2.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -979,6 +1015,7 @@ rule PWS_Win32_Tibia_BI_2147647305_0
         $x_1_5 = {47 00 65 00 74 00 50 00 72 00 6f 00 64 00 75 00 63 00 74 00 49 00 6e 00 66 00 6f 00 [0-16] 4b 00 45 00 52 00 4e 00 45 00 4c 00 33 00 32 00 2e 00 44 00 4c 00 4c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1003,6 +1040,7 @@ rule PWS_Win32_Tibia_BJ_2147648063_0
         $x_2_5 = {ba 03 00 00 00 e8 ?? ?? ?? ?? 8d 45 fc ba ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 45 fc 80 38 30 75 ?? 6a 0a e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1024,6 +1062,7 @@ rule PWS_Win32_Tibia_BN_2147650876_0
         $x_2_2 = "\\vmreg.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1048,6 +1087,7 @@ rule PWS_Win32_Tibia_BP_2147651416_0
         $x_2_5 = ":labahdel \"\"if EXIST \"\" goto labah" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -1076,6 +1116,7 @@ rule PWS_Win32_Tibia_BR_2147652814_0
         $x_1_5 = {80 3c 2b 43 0f 85 ?? ?? ?? ?? 80 7c 2b 01 68 0f 85 ?? ?? ?? ?? 80 7c 2b 02 61 0f 85 ?? ?? ?? ?? 80 7c 2b 03 72 0f 85 ?? ?? ?? 80 7c 2b 04 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1112,6 +1153,7 @@ rule PWS_Win32_Tibia_BT_2147656282_0
         $x_1_14 = "&tarcza=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1135,6 +1177,7 @@ rule PWS_Win32_Tibia_BU_2147657465_0
         $x_1_4 = "\\informatyka\\rootkit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1160,6 +1203,7 @@ rule PWS_Win32_Tibia_BX_2147659355_0
         $x_1_6 = "dodaj.php?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1185,6 +1229,7 @@ rule PWS_Win32_Tibia_BY_2147659629_0
         $x_3_3 = "\\Windows\\CurrentVersion\\Run" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_3_*))) or
             (all of ($x*))
@@ -1212,6 +1257,7 @@ rule PWS_Win32_Tibia_CA_2147661623_0
         $x_1_5 = "NightMAREK\\Moje dokumenty\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

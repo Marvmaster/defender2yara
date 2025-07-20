@@ -16,6 +16,7 @@ rule Trojan_Win32_Tinukebot_DF_2147798522_0
         $x_10_1 = {03 c8 33 d2 f7 75 14 8b 45 10 8a 04 02 32 04 0b 88 01 50 33 c0}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

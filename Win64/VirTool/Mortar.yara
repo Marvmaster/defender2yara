@@ -20,6 +20,7 @@ rule VirTool_Win64_Mortar_A_2147809913_0
         $x_1_6 = {48 8b 85 d8 fe ff ff 48 3b 85 d0 fd ff ff 0f ?? ?? ?? ?? ?? 48 8b 95 d8 fe ff ff 48 8b 8d 68 fe ff ff e8 ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule VirTool_Win64_Mortar_B_2147819935_0
         $x_1_5 = {48 89 38 48 89 c7 4c 89 6f 08 48 89 f2 48 89 57 10 c7 45 fc 00 00 00 00 48 8d ?? ?? 48 89 44 24 28 44 89 64 24 20 4c 8d ?? ?? ?? ?? ?? 49 89 f9 48 89 d9 e8 ?? ?? ?? ?? 48 89 c3 85 db}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule VirTool_Win64_Mortar_C_2147819936_0
         $x_1_3 = {53 56 48 8d ?? ?? ?? 48 89 cb 40 30 f6 48 c7 44 24 20 00 00 00 00 e8 ?? ?? ?? ?? 48 89 c1 4c 8d ?? ?? ?? 48 89 da 41 b9 10 00 00 00 e8 ?? ?? ?? ?? 85 c0 0f 84 ?? ?? ?? ?? 0f 1f 00 31 d2 41 b2 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

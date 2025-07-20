@@ -21,6 +21,7 @@ rule Trojan_MSIL_SelfDelf_EM_2147900455_0
         $x_1_6 = "Trinity" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -26,6 +26,7 @@ rule Worm_Win32_Taterf_B_2147603086_0
         $x_3_12 = {85 c0 74 15 6a 00 68 41 9c 00 00 68 11 01 00 00 ff 75 08}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -67,6 +68,7 @@ rule Worm_Win32_Taterf_A_2147603444_0
         $x_1_8 = "NoDriveTypeAutoRun" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_7_*) and 2 of ($x_1_*))) or
@@ -98,6 +100,7 @@ rule Worm_Win32_Taterf_B_2147603445_0
         $x_1_1 = {4d 6e 64 6c 6c 2e 64 6c 6c 00 5a 74 47 61 6d 65 5f 49 4e 00 5a 74 47 61 6d 65 5f 4f 55 54 00 00 00 00 00 08 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +124,7 @@ rule Worm_Win32_Taterf_DI_2147628017_0
         $x_2_3 = {b0 65 aa b0 78 aa b0 70 aa b0 6c aa b0 6f aa b0 72 aa b0 65 aa b0 72 aa b0 2e aa b0 65 aa b0 78 aa b0 65 aa 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -148,6 +152,7 @@ rule Worm_Win32_Taterf_DM_2147633114_0
         $x_2_5 = {ff d6 bf ff ff 00 00 23 c7 3d 16 1c 00 00 76 ?? 3d 20 1c 00 00 73 ?? ff 75 14 ff 75 10 ff 75 0c ff 75 0c e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -173,6 +178,7 @@ rule Worm_Win32_Taterf_E_2147654545_0
         $x_1_1 = {8b 85 30 f0 ff ff 8d bc 05 f8 ef ff ff 0f b7 84 05 08 f0 ff ff 8d 77 14 03 c6 89 45 f4 8b 45 10 3b c3 74 05 8b 4e 1c 89 08 ff 76 38 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +202,7 @@ rule Worm_Win32_Taterf_E_2147654545_1
         $x_1_3 = {58 83 38 00 75 1f ff 00 ff 74 24 10 ff 74 24 10 ff 74 24 10 ff 74 24 10 09 00 e8 04 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule TrojanDropper_Win32_Dunik_2147745394_0
         $x_1_8 = "rc4.key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule TrojanDropper_Win32_Dunik_AG_2147843062_0
         $x_1_7 = "CreateFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule TrojanDropper_Win32_Dunik_AG_2147843062_1
         $x_1_6 = "CreateFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

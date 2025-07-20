@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Grameyoon_A_2147649083_0
         $x_1_3 = {41 4c 49 4d 20 61 67 65 6e 74 20 6d 61 6e 61 67 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win32_Grameyoon_B_2147649394_0
         $x_1_4 = {68 61 6e 75 73 00 77 69 6e 73 74 61 30 5c 64 65 66 61 75 6c 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

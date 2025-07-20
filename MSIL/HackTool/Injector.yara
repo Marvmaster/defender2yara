@@ -23,6 +23,7 @@ rule HackTool_MSIL_Injector_2147653802_0
         $x_1_9 = "Starting Engine: DIH Engine" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule HackTool_MSIL_Injector_A_2147707926_0
         $x_1_1 = {07 08 07 8e 69 5d 91 08 06 58 07 8e 69 58 1f 1f 5f 63 20 ff 00 00 00 5f d2 61 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule HackTool_MSIL_Injector_B_2147710059_0
         $x_1_9 = "kFWZyhGVl1WdzVmU" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

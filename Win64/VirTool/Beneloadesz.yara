@@ -18,6 +18,7 @@ rule VirTool_Win64_Beneloadesz_A_2147914836_0
         $x_1_3 = {4c 8b c3 33 d2 48 8b c8 [0-33] 85 c0 ?? ?? ?? ?? ?? ?? 0f b7 5d 70 0f b7 cb 4c 89 7c 24 38 4c 89 7c 24 30 ?? ?? ?? ?? ?? 41 b9 08 00 00 00 4c 89 7c 24 20 [0-19] 85 c0 ?? ?? 4c 39 74 24 38}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win64_AnchorBot_B_2147766835_0
         $x_1_3 = {0f be c8 8b c2 33 c1 42 88 44 0d ?? 4d 03 cf 49 83 f9 ?? 72 e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_AnchorBot_G_2147766880_0
         $x_1_2 = "xwpwpp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Trojan_MSIL_Dordty_G_2147755917_0
         $x_1_8 = "C:\\Projekt Gandalf\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

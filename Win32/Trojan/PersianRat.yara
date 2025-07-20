@@ -23,6 +23,7 @@ rule Trojan_Win32_PersianRat_APR_2147896741_0
         $x_1_8 = "YYou Only Have 3 Days to Submit the payment. After that this window will be closed forever" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win64_CymRun_RDA_2147903486_0
         $x_1_4 = "Using default cnc url" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

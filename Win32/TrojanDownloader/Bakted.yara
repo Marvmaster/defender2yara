@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Bakted_A_2147626436_0
         $x_1_3 = {64 2e 62 61 74 00 00 00 79 61 68 6f 6f 21 00 00 25 73 2c 53 65 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

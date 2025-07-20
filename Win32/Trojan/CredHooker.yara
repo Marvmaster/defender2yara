@@ -21,6 +21,7 @@ rule Trojan_Win32_CredHooker_A_2147769548_0
         $x_1_6 = "ws2_32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

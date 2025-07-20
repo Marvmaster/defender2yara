@@ -16,6 +16,7 @@ rule Trojan_Win32_RustOff_LKA_2147899307_0
         $x_1_1 = {83 f9 27 77 ?? 8b 91 ?? ?? ?? 00 33 14 08 89 94 0c ?? ?? 00 00 83 c1 04 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

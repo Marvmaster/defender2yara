@@ -18,6 +18,7 @@ rule Trojan_Win32_Duppatch_A_2147623652_0
         $x_1_4 = {8b 7f 04 57 68 ?? ?? 40 00 e8 ?? ?? 00 00 83 f8 01 74 1d bf ?? ?? 40 00 b8 02 00 00 00 8b 7f 04 57 68 ?? ?? 40 00 e8 ?? ?? 00 00 83 f8 01 75 36}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

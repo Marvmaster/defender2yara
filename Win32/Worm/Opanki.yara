@@ -19,6 +19,7 @@ rule Worm_Win32_Opanki_2147598002_0
         $x_3_5 = {41 49 4d 5f 49 4d 65 73 73 61 67 65 [0-5] 5f 4f 73 63 61 72 5f 54 72 65 65}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -49,6 +50,7 @@ rule Worm_Win32_Opanki_CW_2147600071_0
         $x_1_7 = {52 ff d7 8b f0 56 ff d3 85 c0 74 ?? 56 ff 15 ?? ?? ?? ?? 3d 99 01 00 00 75 ?? 6a 00 6a 00 68 01 02 00 00 56 ff d5 6a 00 6a 00 68 02 02 00 00 56 ff d5 33 f6 56 ff d3 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

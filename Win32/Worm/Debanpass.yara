@@ -39,6 +39,7 @@ rule Worm_Win32_Debanpass_A_2147604728_0
         $x_1_25 = "Vista" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_100_*) and 18 of ($x_1_*))) or
             (all of ($x*))

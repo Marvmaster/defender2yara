@@ -18,6 +18,7 @@ rule TrojanProxy_MSIL_Mictanort_A_2147696834_0
         $x_1_4 = {09 4d 69 63 72 6f 20 4e 65 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

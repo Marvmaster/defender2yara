@@ -35,6 +35,7 @@ rule PWS_MSIL_ProstoClipper_YA_2147740691_0
         $x_18_20 = "//iplogger.org/" wide //weight: 18
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_18_*) and 4 of ($x_1_*))) or
             (all of ($x*))

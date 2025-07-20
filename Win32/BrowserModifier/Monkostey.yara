@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Monkostey_235975_0
         $x_1_4 = {67 72 69 6c 00 46 69 6e 64 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule BrowserModifier_Win32_Monkostey_235975_1
         $x_1_3 = {ff d7 53 6a 26 bd ?? ?? ?? ?? 55 53 ff d6 68 ?? ?? ?? ?? 55 ff d7 53 6a 23 bd ?? ?? ?? ?? 55 53 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule BrowserModifier_Win32_Monkostey_235975_2
         $x_1_3 = {c7 46 10 04 00 00 00 89 5e 14 89 5e 18 89 5e 1c 89 5e 20 89 5d fc 68 08 02 00 00 8d 46 3c 53 50 c7 ?? ?? ?? ?? 00 88 5e 28 89 5e 2c c7 46 34 e8 03 00 00 89 5e 38 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule BrowserModifier_Win32_Monkostey_235975_3
         $x_2_8 = ".?AVCFindingDiscountApp@@" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -117,6 +121,7 @@ rule BrowserModifier_Win32_Monkostey_235975_4
         $x_10_5 = "SafeSavings\\config.dat" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

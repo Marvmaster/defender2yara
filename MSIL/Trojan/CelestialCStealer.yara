@@ -19,6 +19,7 @@ rule Trojan_MSIL_CelestialCStealer_BSA_2147933920_0
         $x_1_4 = "celestialC.Stealer.Messenger.Discord" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_MSIL_CelestialCStealer_DA_2147942807_0
         $x_1_7 = "ComputerInfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

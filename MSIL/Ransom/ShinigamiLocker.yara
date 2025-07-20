@@ -18,6 +18,7 @@ rule Ransom_MSIL_ShinigamiLocker_A_2147729961_0
         $x_1_4 = "\\rANSOM\\rANSOM\\obj\\Sanyasteakler\\rANSOM.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Ransom_Win32_Fonix_MB_2147766367_0
         $x_1_6 = "Encryption Completed" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

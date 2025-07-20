@@ -21,6 +21,7 @@ rule VirTool_MSIL_AntiVmc_YE_2147741746_0
         $x_1_6 = "newstub.IWshRuntimeLibrary" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule VirTool_MSIL_AntiVmc_YF_2147741747_0
         $x_1_4 = {63 00 6d 00 64 00 2e 00 65 00 78 00 65 00 20 00 2f 00 63 00 20 00 70 00 69 00 6e 00 67 00 20 00 [0-3] 20 00 2d 00 6e 00 20 00 [0-3] 20 00 26 00 20 00 64 00 65 00 6c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Ransom_Linux_Lockton_A_2147919777_0
         $x_1_2 = {48 8d 15 bb 49 00 00 48 89 d1 ba 20 03 00 00 be dc 05 00 00 48 89 c7 e8 c3 b9 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_MSIL_Zmutzy_NT_2147820414_0
         $x_1_6 = "RijndaelManaged" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_MSIL_Zmutzy_NX_2147829496_0
         $x_1_6 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_MSIL_Zmutzy_GPD_2147905963_0
         $x_1_1 = {08 17 58 11 [0-48] 59 20 00 01 00 00 58 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

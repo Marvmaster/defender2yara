@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Abcexp_A_2147607733_0
         $x_1_5 = "DosCommand1NewLine" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

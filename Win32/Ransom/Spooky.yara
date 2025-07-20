@@ -19,6 +19,7 @@ rule Ransom_Win32_Spooky_AC_2147741884_0
         $x_1_5 = "\\Documents\\,\\Downloads\\,\\Desktop\\,\\Favorites\\,\\Pictures\\,\\Music\\,\\Videos\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

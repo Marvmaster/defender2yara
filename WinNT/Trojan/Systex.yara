@@ -18,6 +18,7 @@ rule Trojan_WinNT_Systex_A_2147662102_0
         $x_1_4 = "GREENBROWSER.EXE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_WinNT_Systex_B_2147679150_0
         $x_1_6 = {61 6e 74 69 5f 66 69 6c 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

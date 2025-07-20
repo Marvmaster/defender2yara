@@ -17,6 +17,7 @@ rule Backdoor_Win64_Caspetlod_A_2147782298_0
         $x_1_2 = {45 74 77 45 76 65 6e 74 57 72 69 74 65 00 00 00 73 79 73 74 65 6d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

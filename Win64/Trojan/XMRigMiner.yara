@@ -23,6 +23,7 @@ rule Trojan_Win64_XMRigMiner_GS_2147755627_0
         $x_1_8 = {ff 13 48 83 eb 08 48 39 f3 75 f5 48 8d 0d ?? ?? ?? ?? 48 83 c4 28 5b 5e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or

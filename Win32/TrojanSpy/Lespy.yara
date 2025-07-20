@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Lespy_2147583227_0
         $x_1_5 = "id=%08lX%08lX&ip=%s&title=%s&url=%s&data=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanSpy_Win32_Lespy_A_2147616742_0
         $x_2_4 = "mycloseeventglobaframerl1" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanDownloader_MSIL_Runtk_A_2147697384_0
         $x_2_5 = "DownloadString" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_2_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule TrojanDownloader_MSIL_Runtk_A_2147697624_0
         $x_1_3 = {69 00 6d 00 61 00 67 00 65 00 [0-20] 2e 00 70 00 6e 00 67 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

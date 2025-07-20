@@ -20,6 +20,7 @@ rule TrojanSpy_Win64_Banker_XG_2147723338_0
         $x_2_6 = "inject_after_keyword" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanSpy_Win64_Banker_PADC_2147901396_0
         $x_1_2 = "Elevation:Administrator!new:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

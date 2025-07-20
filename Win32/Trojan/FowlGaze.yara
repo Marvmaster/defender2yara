@@ -17,6 +17,7 @@ rule Trojan_Win32_FowlGaze_A_2147782140_0
         $x_10_2 = {88 8c 05 f8 fe ff ff 0f b6 95 f4 fc ff ff 8b 85 ec fe ff ff 0f b6 8c 05 f8 fe ff ff 33 ca 8b 95 ec fe ff ff 88 8c 15 f8 fe ff ff}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Backdoor_WinNT_Tofsee_A_2147595466_0
         $x_1_6 = "NtWriteFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((1 of ($x_6_*) and 2 of ($x_3_*))) or
@@ -49,6 +50,7 @@ rule Backdoor_WinNT_Tofsee_A_2147601144_0
         $x_1_5 = {48 6f 74 20 69 6e 74 65 72 6e 65 74 20 6f 66 66 65 72 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -77,6 +79,7 @@ rule Backdoor_WinNT_Tofsee_D_2147632400_0
         $x_1_4 = "\\rotcetorp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

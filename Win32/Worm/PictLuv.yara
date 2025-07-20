@@ -23,6 +23,7 @@ rule Worm_Win32_PictLuv_AYA_2147930966_0
         $x_1_8 = "This text file contains some calculations related to speed of net connections, verify it" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

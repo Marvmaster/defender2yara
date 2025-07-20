@@ -18,6 +18,7 @@ rule Ransom_MSIL_LockCrypt_PE_2147808947_0
         $x_1_3 = "\\SCrypt.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

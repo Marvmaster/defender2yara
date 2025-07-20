@@ -18,6 +18,7 @@ rule VirTool_WinNT_Ruf_A_2147626270_0
         $x_1_3 = {e4 64 a8 02 75 fa c3 b8 00 50 00 00 eb 01 48 0b c0 75 fb c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MSIL_ShelahoLoader_A_2147778830_0
         $x_1_3 = "[x] Shellcode buffer is too long!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

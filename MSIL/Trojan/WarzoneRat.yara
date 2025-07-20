@@ -22,6 +22,7 @@ rule Trojan_MSIL_WarzoneRat_DA_2147773117_0
         $x_1_7 = "Javanese Text" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_MSIL_WarzoneRat_DB_2147773118_0
         $x_1_7 = "Race: Gnome" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Trojan_MSIL_WarzoneRat_DC_2147773469_0
         $x_1_7 = "win.png" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule Trojan_MSIL_WarzoneRat_DF_2147773522_0
         $x_1_7 = "MyTest.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +134,7 @@ rule Trojan_MSIL_WarzoneRat_DD_2147777285_0
         $x_1_7 = "get_sako" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +157,7 @@ rule Trojan_MSIL_WarzoneRat_AW_2147893833_0
         $x_1_2 = "Convert bmp extracted from PoP 1 dat files into transparent png sprite sheets" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +179,7 @@ rule Trojan_MSIL_WarzoneRat_AWZ_2147894553_0
         $x_1_1 = {17 0b 2b 23 00 08 17 5f 13 04 08 17 64 0c 11 04 16 fe 03 13 05 11 05 2c 08 08 20 01 a0 00 00 61 0c 00 07 17 58 d2 0b 07 1e fe 02 16 fe 01 13 06 11 06 2d d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -200,6 +207,7 @@ rule Trojan_MSIL_WarzoneRat_DE_2147899382_0
         $x_1_7 = "LoadHint" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_QQSpyspe_A_2147693877_0
         $x_1_7 = "%s\\%s\\db\\msghis.imw" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or

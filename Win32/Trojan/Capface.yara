@@ -24,6 +24,7 @@ rule Trojan_Win32_Capface_A_2147621179_0
         $x_1_10 = "/res.php?key=%s&action=get&id=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -51,6 +52,7 @@ rule Trojan_Win32_Capface_B_2147635798_0
         $x_1_5 = "<iframe src='javascript:top.location=\"ht" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

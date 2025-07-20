@@ -20,6 +20,7 @@ rule Trojan_Win32_Matanbuchus_QW_2147806069_0
         $x_3_5 = "Qm7kljQTRKhBcOve3JPpwE4XOoZcy" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_Matanbuchus_DA_2147918562_0
         $x_1_9 = "curl_easy_setopt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule Trojan_Win32_Matanbuchus_A_2147928558_0
         $x_1_9 = {89 4d ec 8b 55 ec 81 3a 50 45 00 00 74 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_Win32_Matanbuchus_GKN_2147930833_0
         $x_1_1 = {8a 45 ff 64 a1 30 00 00 00 53 56 57 8b 40 0c 8b 40 0c 8b 50 18 8b 4a 3c 8b 4c 11 78 03 ca}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule Trojan_Win32_Matanbuchus_ASJ_2147931599_0
         $x_1_3 = {2b c1 f7 d0 0f b7 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule Trojan_Win32_Matanbuchus_AUJ_2147932418_0
         $x_1_1 = {99 89 85 e8 fe ff ff 89 95 ec fe ff ff b8 56 27 09 00 c7 85 e0 fe ff ff 7e 6a 48 f5 89 85 e4 fe ff ff c7 85 f0 fe ff ff 1b 00 00 00 8b 0d d0 b0 07 10 66 89 4d 9c 33 d2 c7 85 d8 fe ff ff fd 00 00 00 89 95 dc fe ff ff b8 7b 29 0e 00 c7 85 d0 fe ff ff 26 ae 1e 62 89 85 d4 fe ff ff b9 54 3f 00 00 66 89 4d 98}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_Win32_Matanbuchus_MKZ_2147933800_0
         $x_5_1 = {0f b6 c0 99 83 f0 5f b9 01 00 00 00 6b d1 00 88 84 15 28 f8 ff ff 6a 3e e8 ?? ?? ?? ?? 83 c4 04 0f b6 c0 99 83 f0 5f b9 01 00 00 00 c1 e1 00 88 84 0d 28 f8 ff ff 6a 73 e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule Trojan_Win32_Matanbuchus_CCIM_2147946885_0
         $x_1_3 = {0f be d0 8b 45 08 0f be 1c 30 33 da 6a 00 6a 01 8b 4d fc 51 8b 55 f8 52 e8 ?? ?? ?? ?? 8b 4d 08 88 1c 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -209,6 +217,7 @@ rule Trojan_Win32_Matanbuchus_C_2147946897_0
         $x_1_2 = {68 88 01 01 10 8d 8d e0 fe ff ff e8 ?? ?? ?? ?? 68 8c 01 01 10 8d 8d e0 fe ff ff 51 8d 95 c8 fe ff ff 52 e8 ?? ?? ?? ?? 83 c4 0c 68 94 01 01 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

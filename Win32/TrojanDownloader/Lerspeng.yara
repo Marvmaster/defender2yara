@@ -44,6 +44,7 @@ rule TrojanDownloader_Win32_Lerspeng_A_2147686490_0
         $x_1_30 = ".llantascasagrande.com/cussed/kill" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((13 of ($x_1_*))) or
@@ -85,6 +86,7 @@ rule TrojanDownloader_Win32_Lerspeng_B_2147686694_0
         $x_1_4 = {69 c0 01 01 01 01 57 8b 7d 08 c1 e9 02 f3 ab 8b ce 83 e1 03 f3 aa}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_Win32_Royal_A_2147834341_0
         $x_1_6 = "README.TXT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Ransom_Win32_Royal_A_2147834342_0
         $x_1_5 = "README.TXT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Ransom_Win32_Royal_MP_2147834708_0
         $x_1_1 = {0f b6 45 ff 8b 4d 08 03 4d f8 0f b6 11 33 d0 8b 45 08 03 45 f8 88 10 0f b6 4d f0 8b 45 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Ransom_Win32_Royal_ZZ_2147834906_0
         $x_10_3 = {08 02 00 00 00 0f 57 c0 02 00 c7 ?? ?? ?? ?? ?? ?? ?? ?? ?? c7 ?? ff ff ff ff 8d ?? 20 c7 ?? e4 00 00 00 00 0f 11 ?? cc c7 ?? dc 00 00 00 00 83 ?? 01 75 d6}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Ransom_Win32_Royal_C_2147834980_0
         $x_1_6 = "ENCRYPTED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Ransom_Win32_Royal_RPS_2147835038_0
         $x_1_1 = {8b 4d f4 83 c1 01 89 4d f4 8b 55 f4 3b 55 0c 73 27 8b 45 08 03 45 f4 0f b6 08 8b 45 f4 99 be ?? ?? ?? ?? f7 fe 8b 45 fc 0f b6 14 10 33 ca 8b 45 f8 03 45 f4 88 08 eb c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +174,7 @@ rule Ransom_Win32_Royal_RPT_2147835039_0
         $x_1_10 = "CryptAcquireContextW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +198,7 @@ rule Ransom_Win32_Royal_PA_2147835251_0
         $x_10_3 = {85 c0 0f 85 [0-4] 8b 8f [0-4] b8 ab aa aa 2a 8b b7 [0-4] 2b ce ff 45 ?? 83 45 d0 ?? f7 e9 c1 fa 02 8b c2 c1 e8 1f 03 c2 39 45 ?? 8b 45 ?? 72}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +220,7 @@ rule Ransom_Win32_Royal_PAB_2147848669_0
         $x_1_1 = {c1 ea 02 6b c2 0d 8b d6 2b d0 0f b6 44 95 bc 30 47 02 b8 ?? ?? ?? ?? 8b 55 e8 8d 14 17 f7 e2 8d 7f 06 c1 ea 02 6b c2 0d 2b f0 0f b6 44 b5 ?? 30 47 fd 8d 04 1f 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -239,6 +248,7 @@ rule Ransom_Win32_Royal_SA_2147913039_0
         $x_5_8 = "http://royal2xthig3ou5hd7zsliqagy6yygk2cdelaxtni2fyad6dpmpxedid.onion/" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_2_*))) or
             ((2 of ($x_5_*))) or

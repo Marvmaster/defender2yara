@@ -16,6 +16,7 @@ rule Virus_Win32_Mewsei_A_2147690883_0
         $x_1_2 = {f6 d9 30 0c ?? 42 ?? 3b ?? 72 eb 85 c0 74 09 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Virus_Win32_Mewsei_B_2147691384_0
         $x_1_5 = {b6 02 0f b6 19 38 d8 75 1a 84 c0 75 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

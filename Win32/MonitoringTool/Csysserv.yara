@@ -18,6 +18,7 @@ rule MonitoringTool_Win32_Csysserv_133187_0
         $x_1_4 = "SetValuesKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule MonitoringTool_Win32_Csysserv_133187_1
         $x_1_5 = "IEWebGCUSTOM_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -72,6 +74,7 @@ rule MonitoringTool_Win32_Csysserv_133187_2
         $x_1_7 = "MMFSharedData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 3 of ($x_2_*))) or

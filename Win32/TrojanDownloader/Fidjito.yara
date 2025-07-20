@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Fidjito_A_2147649833_0
         $x_1_2 = {83 c4 2c 33 c0 80 b0 ?? ?? ?? ?? ?? 40 83 f8 0f 7c f3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

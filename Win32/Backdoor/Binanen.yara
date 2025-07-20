@@ -19,6 +19,7 @@ rule Backdoor_Win32_Binanen_A_2147646989_0
         $x_1_4 = {53 65 74 20 42 61 63 6b 20 44 61 74 65 74 69 6d 65 20 45 72 72 6f 72 21 00 00 00 30 53 65 74 20 42 61 63 6b 20 44 61 74 65 74 69 6d 65 20 4f 6b 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

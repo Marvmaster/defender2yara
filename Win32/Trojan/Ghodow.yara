@@ -17,6 +17,7 @@ rule Trojan_Win32_Ghodow_A_2147632111_0
         $x_1_3 = {cd 2a 8d 15 ?? ?? ?? ?? cd ee eb 13 68 f4 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Ghodow_A_2147632111_1
         $x_1_8 = {b8 de 45 90 87 0b c0 74 2f 0f b6 d8 0f b6 14 1f 0f b6 0c 1e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -74,6 +76,7 @@ rule Trojan_Win32_Ghodow_B_2147632167_0
         $x_1_6 = {25 73 2f 63 6f 75 6e 74 2e 61 73 70 78 3f 69 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

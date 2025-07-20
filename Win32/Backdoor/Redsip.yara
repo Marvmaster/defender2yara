@@ -19,6 +19,7 @@ rule Backdoor_Win32_Redsip_A_2147653707_0
         $x_1_5 = "ProcFileUpload" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

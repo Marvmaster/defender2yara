@@ -16,6 +16,7 @@ rule Trojan_Win64_Viknok_A_2147680234_0
         $x_1_2 = {eb 11 81 fb ?? ?? 00 00 73 18 b9 64 00 00 00 ff d6 ff c3 e8 ?? ?? ?? ?? 48 8b c8 ff d7 41 3b c7 74 e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

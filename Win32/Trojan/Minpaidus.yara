@@ -16,6 +16,7 @@ rule Trojan_Win32_Minpaidus_B_2147631380_0
         $x_1_2 = {00 48 6f 6f 6b 46 75 6e 63 74 69 6f 6e 00 52 65 64 69 72 65 63 74 4f 70 65 6e 50 72 6f 63 65 73 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

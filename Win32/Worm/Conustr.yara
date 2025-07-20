@@ -18,6 +18,7 @@ rule Worm_Win32_Conustr_A_2147685097_0
         $x_1_4 = {80 3e 63 74 4a 80 fb 02 75 1c 8d 54 24 10 c6 06 01 52 e8 ?? 00 00 00 83 c4 04 f7 d8 1a c0 24 64 fe c8 88 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Loaderz_KO_2147922587_0
         $x_1_2 = {3e 38 b3 38 cb 38 03 39 6b 39 aa 39 b7 39 f1 39 0d 3a 2d 3a 52 3a 7a 3a 95 3a a2 3a a9 3a c8 3a da 3a ee 3a 0b 3b 22 3b 46 3b 58 3b 5d 3b 62 3b 6d 3b 7b 3b a5 3b c0 3b ce 3b d4 3b f0 3b 23 3c 39 3c 3e 3c 46 3c 51 3c 70 3c 83 3c c5 3c ce 3c dd 3c eb 3c fa 3c 29 3d 43 3d 82 3d 9a 3d a9 3d af 3d ca 3d d0 3d db 3d e1 3d f6 3d 04 3e 65 3e c6 3e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Bodime_A_2147632661_0
         $x_1_3 = "winnet.ime" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Bodime_C_2147633493_0
         $x_1_4 = {b1 ea d7 bc ca e4 c8 eb b7 a8 c0 a9 d5 b9 b7 fe ce f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Droma_A_2147719484_0
         $x_1_4 = "\\command.com /c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

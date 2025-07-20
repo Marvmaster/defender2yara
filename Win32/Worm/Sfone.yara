@@ -29,6 +29,7 @@ rule Worm_Win32_Sfone_A_2147609829_0
         $x_1_15 = "IcmpSendEcho" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_1_*))) or
             ((1 of ($x_4_*) and 7 of ($x_1_*))) or
@@ -55,6 +56,7 @@ rule Worm_Win32_Sfone_ECP_2147940178_0
         $x_5_2 = {99 f7 f9 89 14 bb 83 c7 01 89 f8 39 f0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +81,7 @@ rule Worm_Win32_Sfone_BY_2147940707_0
         $x_1_4 = "m4jud9vcs5sj8ir" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

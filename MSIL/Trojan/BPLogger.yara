@@ -17,6 +17,7 @@ rule Trojan_MSIL_BPLogger_AKXA_2147944422_0
         $x_2_2 = {11 02 17 58 13 02 20}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

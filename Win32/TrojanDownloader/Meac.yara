@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Meac_A_2147683082_0
         $x_2_2 = {c7 00 5c 4d 69 63 c7 40 04 4e 73 5c 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

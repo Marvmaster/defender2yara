@@ -23,6 +23,7 @@ rule Trojan_Win32_Clustinex_A_2147682377_0
         $x_1_8 = "yandexbrowser_widgetwin_1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win32_Clustinex_B_2147683374_0
         $x_1_5 = "{34a715a0-6587-11d0-924a-0020afc7ac4d}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_Win32_Clustinex_C_2147683391_0
         $x_1_5 = "program files\\common files\\system\\ole db\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Trojan_Win32_Clustinex_D_2147683471_0
         $x_1_5 = "{34a715a0-6587-11d0-924a-0020afc7ac4d}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

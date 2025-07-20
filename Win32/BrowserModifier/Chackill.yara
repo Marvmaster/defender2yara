@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Chackill_143043_0
         $x_1_4 = "//vg.la/addurl.htm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

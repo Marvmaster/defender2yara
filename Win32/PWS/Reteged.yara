@@ -18,6 +18,7 @@ rule PWS_Win32_Reteged_A_2147639627_0
         $x_1_4 = "&Bank=AliPay&Money=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

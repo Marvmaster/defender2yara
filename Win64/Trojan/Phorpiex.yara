@@ -17,6 +17,7 @@ rule Trojan_Win64_Phorpiex_NP_2147895928_0
         $x_1_2 = "://185.215.113.84/pp.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

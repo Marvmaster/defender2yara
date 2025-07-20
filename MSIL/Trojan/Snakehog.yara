@@ -18,6 +18,7 @@ rule Trojan_MSIL_Snakehog_MBFO_2147899003_0
         $x_1_3 = "de4fuckyou" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

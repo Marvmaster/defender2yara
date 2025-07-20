@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Hookit_A_2147636686_0
         $x_1_4 = {2b fe 6a 05 83 ef 05 56 c6 06 e9 89 7e 01 ff d3 b0 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

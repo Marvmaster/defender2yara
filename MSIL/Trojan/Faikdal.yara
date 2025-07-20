@@ -18,6 +18,7 @@ rule Trojan_MSIL_Faikdal_A_2147712382_0
         $x_1_4 = "savetolog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Trojan_MSIL_Faikdal_A_2147712382_1
         $x_1_4 = "savetolog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -69,6 +71,7 @@ rule Trojan_MSIL_Faikdal_B_2147716105_0
         $x_1_3 = "savetolog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

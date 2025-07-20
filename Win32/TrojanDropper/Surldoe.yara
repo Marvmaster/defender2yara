@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Surldoe_A_2147621055_0
         $n_20_6 = "\\\\.\\SMARTVSD" ascii //weight: -20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (3 of ($x*))
 }

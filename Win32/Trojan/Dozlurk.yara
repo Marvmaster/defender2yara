@@ -19,6 +19,7 @@ rule Trojan_Win32_Dozlurk_A_2147690242_0
         $x_1_5 = {46 6f 72 6d 00 00 00 00 41 53 4d 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

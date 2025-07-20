@@ -30,6 +30,7 @@ rule HackTool_Win32_LaZagne_2147725068_0
         $x_1_16 = ".sysadmin.apachedirectorystudio" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((3 of ($x_2_*) and 5 of ($x_1_*))) or

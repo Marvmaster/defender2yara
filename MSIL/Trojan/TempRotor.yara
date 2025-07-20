@@ -18,6 +18,7 @@ rule Trojan_MSIL_TempRotor_A_2147835388_0
         $x_100_3 = {3d 5d cd c1 f4 53 5d 45 87 02 38 4d 49 45 37 bd}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_TempRotor_E_2147835389_0
         $x_100_1 = {53 65 74 43 6f 6e 66 69 67 00 53 65 6e 64 00 47 65 74 43 6f 6e 66 69 67}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_MSIL_TempRotor_F_2147835390_0
         $x_100_3 = "K.DefaultStorage.bin" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

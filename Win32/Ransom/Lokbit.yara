@@ -19,6 +19,7 @@ rule Ransom_Win32_Lokbit_AA_2147818444_0
         $x_2_4 = {33 c0 40 c1 e0 06 8d 40 f0 64 8b 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

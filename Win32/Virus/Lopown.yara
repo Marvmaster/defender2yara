@@ -20,6 +20,7 @@ rule Virus_Win32_Lopown_A_2147624211_0
         $x_1_5 = {ff 75 10 ff 75 0c ff 56 10 8d 45 10 6a 00 50 ff 75 18 ff 75 14 ff 75 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

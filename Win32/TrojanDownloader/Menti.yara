@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Menti_B_2147658641_0
         $x_1_7 = {59 be f9 93 04 00 33 db 53 53}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

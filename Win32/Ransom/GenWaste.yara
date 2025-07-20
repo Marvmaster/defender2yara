@@ -21,6 +21,7 @@ rule Ransom_Win32_GenWaste_B_2147758065_0
         $x_1_6 = "[begin_key]%S[end_key]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

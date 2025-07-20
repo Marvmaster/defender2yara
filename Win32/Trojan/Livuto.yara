@@ -21,6 +21,7 @@ rule Trojan_Win32_Livuto_2147604930_0
         $x_1_5 = {75 70 64 61 74 65 25 64 2e 63 61 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

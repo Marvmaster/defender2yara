@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Bizdup_2147606613_0
         $x_1_8 = {d7 a2 b2 e1 b1 ed be af b8 e6 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanDownloader_Win32_Bizdup_B_2147617106_0
         $x_1_5 = {4d 53 44 4e 53 76 63 2e 64 6c 6c 00 4d 61 69 6e 74 65 6e 61 6e 63 65 00 53 65 72 76 69 63 65 4d 61 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

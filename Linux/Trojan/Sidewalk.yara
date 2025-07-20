@@ -17,6 +17,7 @@ rule Trojan_Linux_Sidewalk_D_2147935672_0
         $x_1_2 = {53 57 ff 74 24 64 e8 a8 52 ff ff 8b 44 24 68 01 d8 8b 54 24 6c 29 da 89 c3 f7 db 83 e3 03 29 da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

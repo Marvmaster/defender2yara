@@ -18,6 +18,7 @@ rule Backdoor_Win32_Nosrawec_A_2147632080_0
         $x_1_4 = {ff 53 0c 8b d8 85 db 74 3e 6a 00 68 41 1f 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_Win32_Nosrawec_B_2147646018_0
         $x_2_4 = {53 31 00 00 53 32 00 00 53 33 00 00 53 34 00 00 53 35 00 00 53 36 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -70,6 +72,7 @@ rule Backdoor_Win32_Nosrawec_C_2147648897_0
         $x_1_6 = ".ddos" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or

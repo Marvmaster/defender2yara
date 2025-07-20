@@ -20,6 +20,7 @@ rule Backdoor_Win32_KaziBora_A_2147939984_0
         $x_2_5 = {11 88 77 66}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_6_*))) or

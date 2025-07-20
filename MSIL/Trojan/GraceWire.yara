@@ -21,6 +21,7 @@ rule Trojan_MSIL_GraceWire_DA_2147781174_0
         $x_1_6 = "ToString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

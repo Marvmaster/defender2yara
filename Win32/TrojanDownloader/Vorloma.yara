@@ -28,6 +28,7 @@ rule TrojanDownloader_Win32_Vorloma_A_2147655282_0
         $x_5_14 = "wow_addon_delete" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_200_*) and 1 of ($x_20_*) and 2 of ($x_10_*) and 4 of ($x_5_*))) or
             ((2 of ($x_200_*) and 1 of ($x_20_*) and 3 of ($x_10_*) and 2 of ($x_5_*))) or

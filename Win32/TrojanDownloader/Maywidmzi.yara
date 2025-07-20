@@ -25,6 +25,7 @@ rule TrojanDownloader_Win32_Maywidmzi_A_2147711680_0
         $x_1_11 = "ScanDrvType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
             ((1 of ($x_12_*))) or

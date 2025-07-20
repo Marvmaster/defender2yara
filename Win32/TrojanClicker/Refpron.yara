@@ -19,6 +19,7 @@ rule TrojanClicker_Win32_Refpron_A_2147611831_0
         $x_1_5 = {00 00 6f 00 62 00 6a 00 4c 00 69 00 6e 00 6b 00 20 00 69 00 73 00 20 00 6e 00 6f 00 74 00 68 00 69 00 6e 00 67 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -50,6 +51,7 @@ rule TrojanClicker_Win32_Refpron_2147626994_0
         $x_1_8 = {67 00 65 00 74 00 45 00 6c 00 65 00 6d 00 65 00 6e 00 74 00 73 00 42 00 79 00 54 00 61 00 67 00 4e 00 61 00 6d 00 65 00 00 00 00 00 6c 00 65 00 6e 00 67 00 74 00 68 00 00 00 00 00 73 00 72 00 63 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
@@ -79,6 +81,7 @@ rule TrojanClicker_Win32_Refpron_H_2147631419_0
         $x_2_5 = {00 00 73 00 74 00 79 00 6c 00 65 00 2e 00 62 00 65 00 68 00 61 00 76 00 69 00 6f 00 72 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

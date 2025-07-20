@@ -24,6 +24,7 @@ rule Worm_MSIL_Gosoride_A_2147685556_0
         $x_1_10 = "Sender.SendFTP:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

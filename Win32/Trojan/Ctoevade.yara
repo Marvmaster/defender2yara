@@ -16,6 +16,7 @@ rule Trojan_Win32_Ctoevade_G_2147729056_0
         $x_1_2 = {c7 00 47 45 54 20 c7 40 ?? 2f 72 65 73 c7 40 ?? 6f 75 72 63 c7 40 ?? 65 2e 68 74 c7 40 ?? 6d 6c 20 48 c7 40 ?? 54 54 50 2f c7 40 ?? 31 2e 31 0d 66 c7 40 ?? 0a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_AndroidOS_Zniu_C_2147745475_0
         $x_1_4 = "%slocal.ziu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

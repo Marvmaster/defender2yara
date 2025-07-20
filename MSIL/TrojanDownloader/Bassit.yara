@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_Bassit_A_2147696964_0
         $x_1_3 = "\\kakarotto\\Desktop\\new server\\builder\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Truebot_A_2147724324_0
         $x_1_4 = {25 73 67 65 74 2e 70 68 70 3f 6e 61 6d 65 3d 25 78 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

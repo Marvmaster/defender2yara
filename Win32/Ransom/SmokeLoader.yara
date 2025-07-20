@@ -16,6 +16,7 @@ rule Ransom_Win32_SmokeLoader_YBD_2147901036_0
         $x_1_1 = {0f b6 55 ef a1 ?? ?? ?? ?? 03 45 e4 0f be 08 33 ca 8b 15 a0 dd 45 00 03 55 e4 88 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

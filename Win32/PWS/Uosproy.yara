@@ -17,6 +17,7 @@ rule PWS_Win32_Uosproy_A_2147647541_0
         $x_1_3 = "%s?id=%s&mm=%s&level=%d&yyid=%d&biaoq=%s&ver=%s&yyver=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

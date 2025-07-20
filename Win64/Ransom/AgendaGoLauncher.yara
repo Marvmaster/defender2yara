@@ -18,6 +18,7 @@ rule Ransom_Win64_AgendaGoLauncher_MA_2147849492_0
         $x_1_3 = {48 8d 44 24 50 45 33 c9 48 89 44 24 48 48 8d 0d ?? ?? ?? ?? 48 8d 44 24 70 45 33 c0 48 89 44 24 40 33 d2 48 c7 44 24 38 00 00 00 00 48 c7 44 24 30 00 00 00 00 c7 44 24 28 20 00 00 00 c7 44 24 20 00 00 00 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

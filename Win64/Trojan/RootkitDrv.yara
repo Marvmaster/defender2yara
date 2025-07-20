@@ -23,6 +23,7 @@ rule Trojan_Win64_RootkitDrv_RTB_2147796963_0
         $x_1_8 = "ShellExecuteExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -51,6 +52,7 @@ rule Trojan_Win64_RootkitDrv_RTC_2147796964_0
         $x_1_4 = "Q2yd0\\*d0\\*d0\\*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Dalbot_A_2147657849_0
         $x_3_4 = {8a 0f 80 f1 ?? 46 88 08 8b 44 24 1c 3b c6 77 ac 6a 01}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

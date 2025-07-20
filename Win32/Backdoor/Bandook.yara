@@ -21,6 +21,7 @@ rule Backdoor_Win32_Bandook_BM_2147769610_0
         $x_1_6 = "\\SYSTEM\\CurrentControlSet\\Control\\Keyboard Layouts\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

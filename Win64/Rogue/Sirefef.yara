@@ -19,6 +19,7 @@ rule Rogue_Win64_Sirefef_156258_0
         $x_2_5 = {ba 55 61 6f 67 e8 ?? ?? ?? ?? 48 8d 8c 24 ?? ?? ?? ?? ba 19 00 02 00 4c 8b c0 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

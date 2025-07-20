@@ -17,6 +17,7 @@ rule Trojan_Win32_Colste_A_2147688291_0
         $x_1_3 = {41 88 04 32 83 f9 05 72 f1 8b c6 42 8d 78 01 8d 9b 00 00 00 00 8a 08 40 84 c9 75 f9 2b c7 3b d0 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

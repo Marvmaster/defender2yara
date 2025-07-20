@@ -20,6 +20,7 @@ rule Backdoor_MSIL_Crysen_S_2147754512_0
         $x_1_5 = "masterKey can not be null or empty." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +61,7 @@ rule Backdoor_MSIL_Crysen_AD_2147755022_0
         $x_1_20 = "Select * from AntivirusProduct" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

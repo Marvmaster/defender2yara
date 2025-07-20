@@ -23,6 +23,7 @@ rule Worm_Win32_Darby_A_2147489187_0
         $x_1_9 = "Microsoft KeyGenerator-Allmost all microsoft stuff.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -83,6 +84,7 @@ rule Worm_Win32_Darby_2147580882_0
         $x_2_38 = "[Es6)e" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 23 of ($x_1_*))) or
             ((3 of ($x_2_*) and 21 of ($x_1_*))) or

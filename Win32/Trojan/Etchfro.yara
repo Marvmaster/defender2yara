@@ -16,6 +16,7 @@ rule Trojan_Win32_Etchfro_A_2147652351_0
         $x_1_2 = {8a c1 c0 e8 04 c0 e1 04 0a c1 88 02 8a 4a 01 42 84 c9 75 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Etchfro_B_2147652352_0
         $x_1_3 = {f6 ea 30 1c 37 02 c1 47 8a d8 3b 7d 0c 72 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_Etchfro_C_2147652368_0
         $x_1_2 = {8b ce 8a d0 c0 ea 04 c0 e0 04 0a d0 88 11 8a 41 01 41 84 c0 75 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win32_Etchfro_D_2147652369_0
         $x_1_2 = {c6 06 4d c6 46 01 5a 76}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

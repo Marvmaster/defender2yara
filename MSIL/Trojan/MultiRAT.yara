@@ -16,6 +16,7 @@ rule Trojan_MSIL_MultiRAT_RDA_2147900578_0
         $x_2_1 = {07 28 01 00 00 2b 28 02 00 00 2b 28 27 01 00 0a 6f 28 01 00 0a 28 03 00 00 2b 0d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Samll_GM_2147716457_0
         $x_1_3 = "U09GVFdBUkVcXE1pY3Jvc29mdFxcV2luZG93c1xcQ3VycmVudFZlcnNpb25cXFJ1bg==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

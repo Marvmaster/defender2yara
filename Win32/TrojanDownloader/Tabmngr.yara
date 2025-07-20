@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Tabmngr_A_2147596320_0
         $x_1_6 = "InternetCloseHandle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))

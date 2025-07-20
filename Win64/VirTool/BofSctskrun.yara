@@ -20,6 +20,7 @@ rule VirTool_Win64_BofSctskrun_A_2147901302_0
         $x_1_6 = "run task returned" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

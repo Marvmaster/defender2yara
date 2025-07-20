@@ -16,6 +16,7 @@ rule Trojan_MSIL_Banbra_AMAF_2147901598_0
         $x_1_1 = {0a 0c 08 28 ?? 00 00 0a 26 1f ?? 1f ?? 28 ?? 00 00 06 28 ?? 00 00 06 72 ?? ?? 00 70 28 ?? 00 00 0a 0d 08 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

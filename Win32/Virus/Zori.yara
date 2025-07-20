@@ -17,6 +17,7 @@ rule Virus_Win32_Zori_A_2147512351_0
         $x_1_3 = {b9 a4 d7 f7 d7 e9 a3 ba 20 20 20 20 20 20 20 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

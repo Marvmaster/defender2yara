@@ -19,6 +19,7 @@ rule PUA_MSIL_RnsmSim_J_259986_0
         $x_1_4 = "WindowsImpersonationContext" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

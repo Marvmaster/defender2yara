@@ -21,6 +21,7 @@ rule BrowserModifier_Win32_Cashbacksys_18103_0
         $x_1_7 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

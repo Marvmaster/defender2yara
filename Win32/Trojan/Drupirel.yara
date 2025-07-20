@@ -20,6 +20,7 @@ rule Trojan_Win32_Drupirel_A_2147631723_0
         $x_1_6 = "system32\\drivers" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

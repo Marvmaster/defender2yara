@@ -22,6 +22,7 @@ rule Ransom_Win32_Exxroute_A_2147711007_0
         $x_1_8 = {3a 34 34 33 20 48 54 54 50 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -90,6 +91,7 @@ rule Ransom_Win32_Exxroute_B_2147711607_0
         $x_1_9 = {64 65 6c 65 74 65 20 73 68 61 64 6f 77 73 20 2f 61 6c 6c 20 2f 51 75 69 65 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -200,6 +202,7 @@ rule Ransom_Win32_Exxroute_C_2147712383_0
         $x_2_7 = {8b 55 fc 0f b6 54 1a ff 33 d7 88 54 18 ff 43 4e 75 e6 8b 45 f8 8b 55 fc e8 05 05 fe ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -233,6 +236,7 @@ rule Ransom_Win32_Exxroute_D_2147712918_0
         $x_1_10 = {8b 55 fc 0f b7 54 5a fe 33 d7 66 89 54 58 fe 43 4e 75 e5 8b 45 f8 8b 55 fc e8 00 44 fd ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -262,6 +266,7 @@ rule Ransom_Win32_Exxroute_E_2147716179_0
         $x_2_10 = {75 0b 81 7d ?? 00 00 01 00 76 ?? eb 02 7e ?? 6a 00 8d 45 ?? 50 68 00 00 01 00 8d 85 ?? ?? fe ff 50 53 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

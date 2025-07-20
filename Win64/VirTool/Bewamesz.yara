@@ -19,6 +19,7 @@ rule VirTool_Win64_Bewamesz_A_2147921771_0
         $x_1_4 = {48 8b 45 30 48 89 44 24 40 c7 44 24 38 28 00 00 00 c7 44 24 30 cc 01 00 00 c7 44 24 28 14 00 00 00 c7 44 24 20 14 00 00 00 41 b9 00 00 00 50 [0-20] b9 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

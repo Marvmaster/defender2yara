@@ -23,6 +23,7 @@ rule TrojanDropper_Win32_QQpass_CJK_2147581215_0
         $x_1_9 = "if exist \"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -53,6 +54,7 @@ rule TrojanDropper_Win32_QQpass_CJL_2147581216_0
         $x_1_8 = "ea7cuoa" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -83,6 +85,7 @@ rule TrojanDropper_Win32_QQpass_CJM_2147581217_0
         $x_1_8 = "HookOff" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -119,6 +122,7 @@ rule TrojanDropper_Win32_QQpass_CJN_2147581218_0
         $x_2_14 = "MrSoft.sys" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 6 of ($x_1_*))) or
             ((1 of ($x_20_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -171,6 +175,7 @@ rule TrojanDropper_Win32_QQpass_D_2147582400_0
         $x_10_26 = "youmeiyougaocuo" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_5_*) and 3 of ($x_3_*) and 3 of ($x_2_*) and 10 of ($x_1_*))) or
             ((1 of ($x_10_*) and 4 of ($x_5_*) and 2 of ($x_3_*) and 2 of ($x_2_*) and 10 of ($x_1_*))) or
@@ -338,6 +343,7 @@ rule TrojanDropper_Win32_QQpass_A_2147602492_0
         $x_5_48 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 19 of ($x_2_*) and 9 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_3_*) and 17 of ($x_2_*) and 10 of ($x_1_*))) or
@@ -1224,6 +1230,7 @@ rule TrojanDropper_Win32_QQpass_B_2147602505_0
         $x_5_40 = {64 61 74 61 0d 0a 00 00 ff ff ff ff ?? 00 00 00 66 72 6f 6d 3a 20 3c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_5_*) and 20 of ($x_2_*) and 3 of ($x_1_*))) or
             ((5 of ($x_5_*) and 21 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1508,6 +1515,7 @@ rule TrojanDropper_Win32_QQpass_C_2147602526_0
         $x_5_54 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 22 of ($x_2_*) and 15 of ($x_1_*))) or
             ((3 of ($x_3_*) and 20 of ($x_2_*) and 16 of ($x_1_*))) or

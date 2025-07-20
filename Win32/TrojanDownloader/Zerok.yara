@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Zerok_A_2147647985_0
         $x_1_6 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))

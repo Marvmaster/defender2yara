@@ -19,6 +19,7 @@ rule Trojan_Win32_Tuobo_A_2147599422_0
         $x_5_5 = "YouTube Corporation. Todos os direitos" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_2_*))) or

@@ -15,6 +15,7 @@ rule Virus_Win32_Gesteal_A_2147629836_0
         $x_1_1 = {eb 41 68 02 00 00 80 8d 87 d4 d2 ff ff ff 10 85 c0 75 2b 8b 1e 8b 4e 08 85 c9 74 17 85 db}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

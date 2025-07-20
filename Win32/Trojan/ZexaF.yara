@@ -17,6 +17,7 @@ rule Trojan_Win32_ZexaF_NF_2147933073_0
         $x_2_2 = {ff ff 50 8d 45 c0 66 c7 45 d0 22 00 50 8d 85 ?? ?? ff ff 50 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

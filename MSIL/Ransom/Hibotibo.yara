@@ -18,6 +18,7 @@ rule Ransom_MSIL_Hibotibo_AA_2147905575_0
         $x_1_3 = "willing to pay for your files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

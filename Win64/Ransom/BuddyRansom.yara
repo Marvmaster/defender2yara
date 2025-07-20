@@ -17,6 +17,7 @@ rule Ransom_Win64_BuddyRansom_YAA_2147890387_0
         $x_1_2 = {44 31 dd 44 21 d5 41 c1 ca 02 31 dd 01 f5 44 89 e6 c1 c6 05 01 f5 8b 71}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_Win32_WinLock_RDA_2147901839_0
         $x_1_4 = ", im sorry." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Worm_Win32_SillyFDC_2147597664_0
         $x_1_6 = "shellexecute=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule Worm_Win32_SillyFDC_2147597664_1
         $x_2_4 = {53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e 00 6b 72 61 67 00 25 63 3a 5c 61 75 74 6f 72 75 6e 2e 69 6e 66 00 5b 41 75 74 6f 52 75 6e 5d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

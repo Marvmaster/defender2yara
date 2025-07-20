@@ -21,6 +21,7 @@ rule Trojan_Win32_Mapanna_2147603381_0
         $x_1_7 = {c7 85 6c ff ff ff 0b 00 00 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

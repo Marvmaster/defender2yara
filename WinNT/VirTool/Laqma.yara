@@ -18,6 +18,7 @@ rule VirTool_WinNT_Laqma_C_2147598668_0
         $x_1_4 = {eb 08 66 83 38 5c 74 0c 48 48 3b c7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -44,6 +45,7 @@ rule VirTool_WinNT_Laqma_A_2147598672_0
         $x_1_3 = {eb 32 8d 7b 5e be ?? (05|06) 01 00 a5 a5 a5 a5 c7 43 3c 10 00 00 00 fb 83 4d fc ff b8 0f 00 00 c0 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

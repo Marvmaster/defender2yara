@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Fetrog_A_2147691826_0
         $x_1_2 = {68 00 24 89 85 51 c7 44 24 ?? 00 00 00 00 ff 15 ?? ?? ?? ?? 85 c0 74 10 81 7c 24 ?? 00 10 00 00 75 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

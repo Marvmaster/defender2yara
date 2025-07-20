@@ -16,6 +16,7 @@ rule Trojan_Win32_Ceatrg_A_2147664434_0
         $x_1_2 = {6a 00 68 01 20 00 00 56 8b 43 04 50 e8 ?? ?? ?? ?? 85 c0 7e 03 40 75 ?? 8b 43 04 50 e8 ?? ?? ?? ?? 68 88 13 00 00 e8 ?? ?? ?? ?? e9 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

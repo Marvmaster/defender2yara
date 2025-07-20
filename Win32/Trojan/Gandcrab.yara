@@ -16,6 +16,7 @@ rule Trojan_Win32_Gandcrab_AF_2147727324_0
         $x_10_2 = {e8 04 00 00 00 00 00 00 00 58 89 [0-5] 8b 00 85 c0 74 03 c9 ff e0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Gandcrab_S_2147730771_0
         $x_1_4 = "kernel32::CreateFile(p" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Gandcrab_AD_2147740935_0
         $x_1_2 = {0f b6 4c 24 ?? 8b 44 24 ?? 0f b6 54 24 ?? 88 0c 28 0f b6 4c 24 ?? 45 88 14 28 8b 54 24 ?? 45 88 0c 28 83 c3 04 45 3b 1a 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_Gandcrab_GM_2147743722_0
         $x_1_1 = {8b c7 c1 e8 05 03 45 ?? 8b cf c1 e1 04 03 4d ?? 33 c1 8b 4d ?? 81 45 fc ?? ?? ?? ?? 03 cf 33 c1 2b d8 ff 4d ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule Trojan_Win32_Gandcrab_GM_2147743722_1
         $x_1_1 = {0f be 18 e8 ?? ?? ?? ?? 33 d8 8b 4d ?? 03 4d ?? 88 19 eb 14 00 8d 55 ?? 52 6a ?? 6a ?? ff 15 ?? ?? ?? ?? 8b 45 ?? 03 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +131,7 @@ rule Trojan_Win32_Gandcrab_RG_2147745279_0
         $x_1_2 = {03 45 e4 8b 4d d4 03 4d ec 33 c1 8b 4d d4 c1 e9 05 03 4d e8 33 c1 8b 4d f0 2b c8 89 4d f0 81 7d fc 49 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +154,7 @@ rule Trojan_Win32_Gandcrab_PVD_2147747895_0
         $x_2_2 = {8b 45 f8 2b fe 8b 4d dc 05 47 86 c8 61 83 6d f0 01 89 7d f4 89 45 f8 0f 85}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -189,6 +196,7 @@ rule Trojan_Win32_Gandcrab_RB_2147748468_0
         $x_1_21 = "msmpeng.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
@@ -216,6 +224,7 @@ rule Trojan_Win32_Gandcrab_RL_2147748498_0
         $x_1_2 = {69 c9 fd 43 03 00 6a 00 81 c1 c3 9e 26 00 6a 00 89 0d ?? ?? ?? ?? ff d3 8a 15 ?? ?? ?? ?? 30 14 3e 46 3b 75 0c 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -238,6 +247,7 @@ rule Trojan_Win32_Gandcrab_VRD_2147748617_0
         $x_1_2 = {0f be 1c 3e 81 c3 01 10 00 00 e8 ?? ?? ?? ?? fe cb 32 c3 88 04 3e 46 3b f5 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -262,6 +272,7 @@ rule Trojan_Win32_Gandcrab_RPD_2147748747_0
         $x_2_4 = {8a e3 8a c3 80 e3 f0 c0 e0 06 0a 44 3a ?? 80 e4 fc c0 e3 02 0a 1c 3a c0 e4 04 0a 64 3a ?? 83 c7 04 88 1c 31 88 64 31 01 88 44 31 02 83 c1 03 3b 7d 00 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -287,6 +298,7 @@ rule Trojan_Win32_Gandcrab_CS_2147749689_0
         $x_1_1 = {6a 00 6a 00 6a 00 ff 15 [0-2] 60 40 00 a1 ?? f8 40 00 03 85 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 03 8d ?? ?? ?? ?? 8a 89 3d 34 03 00 88 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -309,6 +321,7 @@ rule Trojan_Win32_Gandcrab_JRL_2147749796_0
         $x_1_2 = {00 33 c5 89 45 ?? 69 05 ?? ?? ?? 00 ?? ?? ?? ?? 05 ?? ?? ?? ?? a3 28 00 a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -331,6 +344,7 @@ rule Trojan_Win32_Gandcrab_SGC_2147749797_0
         $x_1_2 = {8b c3 c1 e8 ?? 03 85 ?? ?? ?? ?? 8b cb c1 e1 ?? 03 8d ?? 02 33 c1 8b 8d ?? 02 03 cb 33 c1 2b f8 42 00 8b bd ?? 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -353,6 +367,7 @@ rule Trojan_Win32_Gandcrab_VZD_2147749829_0
         $x_1_2 = {c0 e1 04 0a 4f ?? c0 e2 06 0a 57 ?? 88 04 1e 46 88 0c 1e 8b 4c 24 ?? 46 88 14 1e 83 c5 04 46 3b 29 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -374,6 +389,7 @@ rule Trojan_Win32_Gandcrab_CQS_2147751365_0
         $x_1_1 = {0a 44 3a 02 80 e4 fc c0 e3 ?? 0a 1c 3a c0 e4 ?? 0a 64 3a 01 83 c7 ?? 88 1c 31 88 64 31 01 88 44 31 02 83 c1 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -396,6 +412,7 @@ rule Trojan_Win32_Gandcrab_DHA_2147751928_0
         $x_1_2 = {55 8b ec a1 ?? ?? ?? ?? 69 c0 ?? ?? ?? ?? 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? c1 e8 10 25 ff 7f 00 00 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -418,6 +435,7 @@ rule Trojan_Win32_Gandcrab_RLQ_2147753550_0
         $x_1_2 = {33 c4 89 84 24 00 04 00 00 a1 78 11 41 00 69 c0 fd 43 03 00 8d 0c 24 51 05 c3 9e 26 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -442,6 +460,7 @@ rule Trojan_Win32_Gandcrab_CC_2147812205_0
         $x_1_4 = "GetTickCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -463,6 +482,7 @@ rule Trojan_Win32_Gandcrab_RPI_2147821517_0
         $x_1_1 = {30 03 89 75 cc c1 e3 0c 81 6d cc ?? ?? ?? ?? c1 e3 00 81 45 cc ?? ?? ?? ?? c1 e8 07 81 6d cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

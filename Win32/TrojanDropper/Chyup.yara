@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Chyup_A_2147629805_0
         $x_1_4 = {68 6e 65 74 63 66 67 2e 64 6c 6c 00 0c 00 00 00 0c 00 00 00 ff ff ff ff 72 61 73 61 64 68 6c 70 2e 64 6c 6c 00 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

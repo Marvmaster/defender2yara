@@ -21,6 +21,7 @@ rule Backdoor_Win32_Avrkill_2147607947_0
         $x_1_7 = "202.104.236.66" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_1_*))) or
             (all of ($x*))

@@ -17,6 +17,7 @@ rule Trojan_Win32_Uncrre_A_2147710542_0
         $x_1_3 = {2e 64 6c 6c 00 57 69 6e 33 32 00 57 69 6e 33 32 46 75 6e 63 74 69 6f 6e 73 00 6d 73 63 6f 72 6c 69 62 00 53 79 73 74 65 6d 00 4f 62 6a 65 63 74 00 43 72 65 61 74 65 54 68 72 65 61 64 00 56 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

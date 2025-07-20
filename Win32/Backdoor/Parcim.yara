@@ -22,6 +22,7 @@ rule Backdoor_Win32_Parcim_A_2147681819_0
         $x_1_8 = {6d 5f 44 6c 6c 4e 61 6d 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or

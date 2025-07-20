@@ -16,6 +16,7 @@ rule Trojan_Win32_Ipatre_RPT_2147824245_0
         $x_1_1 = {4e 52 8b 16 4f 8b 07 47 33 d0 46 ff 0c 24 8a c6 46 aa}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

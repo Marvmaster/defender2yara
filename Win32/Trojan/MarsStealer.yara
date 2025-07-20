@@ -17,6 +17,7 @@ rule Trojan_Win32_MarsStealer_MB_2147812648_0
         $x_5_2 = {33 d2 b9 24 00 00 00 f7 f1 8b 85 e4 fe ff ff 8a 8a ?? ?? ?? 00 88 8c 05 f8 fe ff ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_MarsStealer_MB_2147812648_1
         $x_1_7 = "SetKeyboardState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_MarsStealer_MA_2147816621_0
         $x_1_1 = {8b 44 24 14 8b 4c 24 10 c1 e8 05 03 44 24 28 33 cb c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 44 24 18 89 4c 24 10 8b 44 24 18 31 44 24 10 2b 74 24 10 81 c7 ?? ?? ?? ?? 4d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_MarsStealer_MA_2147816621_1
         $x_1_3 = "CreateMutexA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -117,6 +121,7 @@ rule Trojan_Win32_MarsStealer_MC_2147818451_0
         $x_1_5 = "Code encryption pass" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -139,6 +144,7 @@ rule Trojan_Win32_MarsStealer_AMS_2147894232_0
         $x_1_2 = {52 6a 00 6a 00 6a 00 ff 15 ?? ?? ?? ?? 8b f7 c1 ee 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_Win32_MarsStealer_RPY_2147895021_0
         $x_1_1 = {33 f6 8b cf c1 e1 04 03 4c 24 2c 8b c7 c1 e8 05 03 44 24 3c 8d 14 3b 33 ca 89 44 24 1c 89 4c 24 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -182,6 +189,7 @@ rule Trojan_Win32_MarsStealer_RPX_2147895660_0
         $x_1_2 = {8b 44 24 20 31 44 24 10 8b 44 24 10 29 44 24 1c c7 44 24 18 00 00 00 00 8b 44 24 34 01 44 24 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +211,7 @@ rule Trojan_Win32_MarsStealer_RDA_2147899253_0
         $x_2_1 = {8b 45 e0 0f b6 14 37 c1 e2 08 8b 0c b0 46 0f b6 01 32 9c 10 00 7a 42 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -224,6 +233,7 @@ rule Trojan_Win32_MarsStealer_RDB_2147909509_0
         $x_2_1 = {8b 45 ec 89 45 f0 8b 4d e4 8b c7 d3 e8 89 45 f8 8b 45 dc 01 45 f8 8b 45 f8 33 45 f0 31 45 fc 8b 45 fc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

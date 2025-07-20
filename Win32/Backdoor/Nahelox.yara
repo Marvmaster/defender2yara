@@ -19,6 +19,7 @@ rule Backdoor_Win32_Nahelox_A_2147646869_0
         $x_4_5 = {8b 45 f0 50 b8 ?? ?? 4b 00 89 45 f4 c6 45 f8 11 8d 45 f4 50 6a 00 b9 26 27 00 00 b2 01 a1 14 96 4b 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_2_*))) or
             ((2 of ($x_4_*) and 1 of ($x_2_*))) or

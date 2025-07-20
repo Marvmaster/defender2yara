@@ -16,6 +16,7 @@ rule Backdoor_MSIL_SpyGate_DCC_2147752455_0
         $x_1_1 = {1b 11 05 a2 00 11 09 1c 11 08 a2 00 11 09 28 ?? ?? ?? ?? 28 ?? ?? ?? ?? 28 ?? ?? ?? ?? 28 ?? ?? ?? ?? 0b 28 ?? ?? ?? ?? 07 6f ?? ?? ?? ?? 6f ?? ?? ?? ?? 14 14 6f ?? ?? ?? ?? 74 ?? ?? ?? ?? 13 06 00 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Backdoor_MSIL_SpyGate_AAHU_2147851820_0
         $x_1_2 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Backdoor_MSIL_SpyGate_KA_2147852433_0
         $x_1_4 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Backdoor_MSIL_SpyGate_SK_2147936258_0
         $x_2_2 = "58e103f0.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

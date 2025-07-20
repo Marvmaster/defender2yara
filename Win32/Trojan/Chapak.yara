@@ -18,6 +18,7 @@ rule Trojan_Win32_Chapak_C_2147740999_0
         $x_1_4 = "yiyapeli" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Chapak_DSK_2147743508_0
         $x_2_1 = {8a 44 2a 02 88 44 24 11 8a 44 2a 03 8a c8 88 44 24 10 80 e1 f0 c0 e1 02 0a 0c 2a 81 3d ?? ?? ?? ?? e9 05 00 00 88 4c 24 12 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Chapak_GM_2147755831_0
         $x_1_2 = {8b 4d 08 03 8d ?? ?? ?? ?? 8a 95 ?? ?? ?? ?? 88 11 [0-32] 8b 45 ?? 03 85 ?? ?? ?? ?? 8a 8d ?? ?? ?? ?? 88 08 83 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Chapak_DSA_2147759647_0
         $x_1_1 = {bb 87 d5 7c 3a 81 45 f8 8c eb 73 22 8b 4d f8 83 25 ?? ?? ?? ?? 00 8b c7 d3 e0 8b cf c1 e9 05 03 8d 14 fe ff ff 03 85 0c fe ff ff 33 c1 8b 8d 38 fe ff ff 03 cf 33 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_Win32_Chapak_DEA_2147762372_0
         $x_1_5 = "eishfawinoefjf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_Win32_Chapak_DEB_2147762417_0
         $x_1_4 = "layFCiwijajuroz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Trojan_Win32_Chapak_MR_2147774340_0
         $x_1_1 = {8b f7 c1 e6 ?? 81 3d [0-8] [0-2] c1 e8 ?? 89 [0-3] 8b [0-3] 01 [0-5] 8d [0-2] 33 ?? 81 [0-9] c7 [0-9] 31 [0-3] 81 3d [0-8] 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_Win32_Chapak_AHB_2147788265_0
         $x_3_5 = "Wifefollow" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +210,7 @@ rule Trojan_Win32_Chapak_DY_2147820171_0
         $x_1_5 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -223,6 +232,7 @@ rule Trojan_Win32_Chapak_ARAE_2147846441_0
         $x_2_1 = {b8 cd cc cc cc f7 e1 c1 ea 03 8d 04 92 03 c0 8b d1 2b d0 8a 82 30 b4 40 00 30 04 31 41 3b cf 72 df}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -244,6 +254,7 @@ rule Trojan_Win32_Chapak_GPA_2147894385_0
         $x_4_1 = {31 75 fc 2b 7d fc 81 c3 ?? ?? ?? ?? ff 4d ec 89 7d f0 0f 85 fe fe ff ff}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -265,6 +276,7 @@ rule Trojan_Win32_Chapak_GNT_2147895321_0
         $x_10_1 = {fa 1c 77 48 81 ad ?? ?? ?? ?? 44 13 5f 67 35 ?? ?? ?? ?? 81 85 ?? ?? ?? ?? 44 13 5f 67 c1 eb ?? bb ?? ?? ?? ?? 81 ad ?? ?? ?? ?? a4 b5 43 1d 81 85 ?? ?? ?? ?? a4 b5 43 1d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +298,7 @@ rule Trojan_Win32_Chapak_RB_2147900566_0
         $x_1_1 = {55 8b ec 51 c7 45 fc f0 43 03 00 83 45 fc 0d a1 ?? ?? ?? ?? 0f af 45 fc 05 c3 9e 26 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -310,6 +323,7 @@ rule Trojan_Win32_Chapak_RX_2147903571_0
         $x_1_4 = "Historylight" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -331,6 +345,7 @@ rule Trojan_Win32_Chapak_SPDB_2147907618_0
         $x_1_1 = {8b 55 fc 33 db 8b 45 f4 33 d1 03 45 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -352,6 +367,7 @@ rule Trojan_Win32_Chapak_GNN_2147918704_0
         $x_10_1 = {33 c2 33 c1 81 3d ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ee 3d ea f4 89 44 24}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +389,7 @@ rule Trojan_Win32_Chapak_EAEA_2147929615_0
         $x_5_1 = {8b 4d f4 8b 45 f8 8b 55 f0 03 c1 8a 14 02 41 88 10 89 4d f4 3b 0d dc 94 42 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -394,6 +411,7 @@ rule Trojan_Win32_Chapak_EAJW_2147936807_0
         $x_5_1 = {8b 00 33 85 68 ff ff ff 8b 8d 54 ff ff ff 89 01 81 7d f8}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -415,6 +433,7 @@ rule Trojan_Win32_Chapak_EAFR_2147938596_0
         $x_5_1 = {8a 84 01 e1 bf 01 00 8b 15 ?? ?? ?? ?? 88 04 11 41 3b 0d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -436,6 +455,7 @@ rule Trojan_Win32_Chapak_EAFR_2147938596_1
         $x_5_1 = {8a 84 06 e1 bf 01 00 8b 0d ?? ?? ?? ?? 88 04 0e 46 3b 35}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -457,6 +477,7 @@ rule Trojan_Win32_Chapak_EAUM_2147938598_0
         $x_5_1 = {8a 94 01 3b 2d 0b 00 8b 0d ?? ?? ?? ?? 88 14 01}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -479,6 +500,7 @@ rule Trojan_Win32_Chapak_EAAL_2147943997_0
         $x_1_2 = {8b 45 08 8d 0c 07 e8 ?? ?? ?? ?? 30 01 47 3b fb 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

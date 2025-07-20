@@ -22,6 +22,7 @@ rule PWS_Win32_Logsnif_B_2147583505_0
         $x_1_7 = "ProgramFiles" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -69,6 +70,7 @@ rule PWS_Win32_Logsnif_C_2147583506_0
         $x_1_24 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\SharedTaskScheduler" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_10_*) and 7 of ($x_5_*) and 11 of ($x_1_*))) or
             ((1 of ($x_100_*) and 3 of ($x_10_*) and 5 of ($x_5_*) and 11 of ($x_1_*))) or
@@ -101,6 +103,7 @@ rule PWS_Win32_Logsnif_D_2147597299_0
         $x_10_6 = {59 41 2e 54 30 30 4c 42 41 52 00 00 59 61 68 6f 6f 20 54 6f 6f 6c 62 61 72 00 00 00 7b 35 34 43 37 44 31 44 44 2d 34 32 39 36 2d 34 35 31 65 2d 42 37 35 36 2d 31 45 39 34 46 36 36 35 42 34 46 46 7d}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_10_*))) or
             (all of ($x*))

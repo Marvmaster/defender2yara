@@ -17,6 +17,7 @@ rule Ransom_MSIL_LockbitCrypt_SVA_2147840421_0
         $x_1_2 = {72 1a 16 00 70 28 17 00 00 0a 0a 72 30 16 00 70 0b 07 72 6e 16 00 70 28 17 00 00 0a 0b 07 72 23 17 00 70 28 17 00 00 0a 0b 07 72 c6 17 00 70 28 17 00 00 0a 0b 07 72 1a 18 00 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

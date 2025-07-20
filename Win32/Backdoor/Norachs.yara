@@ -37,6 +37,7 @@ rule Backdoor_Win32_Norachs_A_2147577566_0
         $x_2_23 = "=dword:" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_5_*) and 4 of ($x_3_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((7 of ($x_5_*) and 5 of ($x_3_*) and 5 of ($x_1_*))) or
@@ -125,6 +126,7 @@ rule Backdoor_Win32_Norachs_B_2147577965_0
         $x_1_41 = "[Current Window: " wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (25 of ($x*))
 }
 
@@ -177,6 +179,7 @@ rule Backdoor_Win32_Norachs_C_2147581591_0
         $x_1_33 = "DEAD|" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (21 of ($x*))
 }
 
@@ -224,6 +227,7 @@ rule Backdoor_Win32_Norachs_D_2147583034_0
         $x_1_28 = "C*\\AC:\\Documents and Settings\\chris\\Desktop\\Omerta 1.3 Programming\\Server\\Project1.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

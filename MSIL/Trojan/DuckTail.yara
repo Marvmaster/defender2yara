@@ -23,6 +23,7 @@ rule Trojan_MSIL_DuckTail_DB_2147851050_0
         $x_1_8 = "Send telegram" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_MSIL_DuckTail_ADU_2147851631_0
         $x_1_1 = {13 04 16 13 05 38 ?? 00 00 00 11 04 11 05 9a 28 ?? 00 00 0a 13 06 11 06 72 ?? 01 00 70 6f ?? 00 00 0a 2d 0e 11 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_MSIL_DuckTail_ADU_2147851631_1
         $x_1_1 = {0d 2b 42 07 08 28 ?? ?? ?? 2b 1f 10 28 ?? ?? ?? 2b 28 ?? ?? ?? 2b 13 04 07 08 1f 10 58 28 ?? ?? ?? 2b 1f 10 28 ?? ?? ?? 2b 28 ?? ?? ?? 2b 13 05 11 04 11 05 73 1d 00 00 06 09 6f ?? ?? ?? 06 0d 08 1f 20 59 0c 08 16 2f ba}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_MSIL_DuckTail_ADT_2147890537_0
         $x_1_1 = {17 0a 17 7e ?? 00 00 04 6f ?? ?? ?? 06 12 00 73 ?? 00 00 0a 0b 06 2d 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_MSIL_DuckTail_ATL_2147891190_0
         $x_1_1 = {0a 04 1f 0f 28 ?? 00 00 2b 04 8e 69 1f 10 59 1f 0f 59 28 ?? 00 00 2b 28 ?? 00 00 2b 0b 04 04 8e 69 1f 10 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Trojan_MSIL_DuckTail_ADA_2147891196_0
         $x_1_1 = {0c 05 0d 2b 42 07 08 28 ?? 00 00 2b 1f 10 28 ?? 00 00 2b 28 ?? 00 00 2b 13 04 07 08 1f 10 58 28 ?? 00 00 2b 1f 10 28 ?? 00 00 2b 28 ?? 00 00 2b 13 05 11 04 11 05 73 ?? 00 00 06 09 6f ?? 00 00 06 0d 08 1f 20 59 0c 08 16 2f ba}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +156,7 @@ rule Trojan_MSIL_DuckTail_ADI_2147891932_0
         $x_1_2 = "fdoge_ChangeAccVIP.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Dexel_A_2147696739_0
         $x_1_6 = "\\WinDefender.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDropper_Win32_Dexel_B_2147749641_0
         $x_1_3 = "A:E:I:M:Q:U:Y:]:a:e:i:m:q:u:y:}:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Horst_B_2147600535_0
         $x_1_9 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule TrojanDownloader_Win32_Horst_J_2147602379_0
         $x_1_7 = {8b 54 24 10 52 ff 15 ?? ?? ?? ?? 83 f8 ff 75 18 b8 07 00 00 00 8b 8c 24 3c 03 00 00 e8 ?? ?? ?? ?? 5f 5e 5b 8b e5 5d c3 8b 35 ?? ?? ?? ?? ff d6 8b 45 10 85 c0 74 0d 8b 44 24 10 6a ff 50 ff 15 ?? ?? ?? ?? ff d6 8b 8c 24 3c 03 00 00 33 c0 e8 ?? ?? ?? ?? 5f 5e 5b 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule TrojanDownloader_Win32_Horst_K_2147602534_0
         $x_1_2 = {68 04 01 00 00 68 30 ac 40 00 68 ?? ?? 40 00 ff 15 ?? 80 40 00 ff d6 68 ?? ?? 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule TrojanDownloader_Win32_Horst_L_2147608183_0
         $x_10_7 = {6a 00 ff d6 6a 00 ff d6 6a 00 ff d6 6a 00 ff d6 6a 00 ff d6 6a 00 ff d6 6a 00 ff d6 6a 00 ff d6}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule TrojanDownloader_Win32_Horst_M_2147608184_0
         $x_1_3 = "3645FBCD-ECD2-23D0-BAC4-00DE453DEF6B" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +147,7 @@ rule TrojanDownloader_Win32_Horst_O_2147611236_0
         $x_100_5 = "InternetOpenUrlA" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -167,6 +173,7 @@ rule TrojanDownloader_Win32_Horst_V_2147712193_0
         $x_1_3 = {26 72 3d 6a 63 61 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

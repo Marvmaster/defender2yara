@@ -24,6 +24,7 @@ rule Trojan_MSIL_AveMariaRat_ME_2147810509_0
         $x_1_9 = "CodeAccessPermission" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Trojan_MSIL_AveMariaRat_MG_2147811767_0
         $x_1_8 = "PaymentForm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +82,7 @@ rule Trojan_MSIL_AveMariaRat_MF_2147811904_0
         $x_1_8 = "MagicLine4NX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +109,7 @@ rule Trojan_MSIL_AveMariaRat_ML_2147812732_0
         $x_1_6 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +137,7 @@ rule Trojan_MSIL_AveMariaRat_MN_2147812734_0
         $x_1_7 = "Debug" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -167,6 +172,7 @@ rule Trojan_MSIL_AveMariaRat_MR_2147815335_0
         $x_1_14 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +204,7 @@ rule Trojan_MSIL_AveMariaRat_2147819021_0
         $x_1_10 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +226,7 @@ rule Trojan_MSIL_AveMariaRat_YIVF_2147819902_0
         $x_1_1 = {03 8e 69 5d 03 08 03 8e 69 5d 91 07 08 07 8e 69 5d 91 61 28 ?? ?? ?? 0a 03 08 18 58 17 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -245,6 +253,7 @@ rule Trojan_MSIL_AveMariaRat_MX_2147822275_0
         $x_1_6 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -271,6 +280,7 @@ rule Trojan_MSIL_AveMariaRat_MW_2147823655_0
         $x_1_6 = "://2.58.149.2/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -301,6 +311,7 @@ rule Trojan_MSIL_AveMariaRat_MY_2147825199_0
         $x_1_10 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -329,6 +340,7 @@ rule Trojan_MSIL_AveMariaRat_MU_2147901448_0
         $x_1_8 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +375,7 @@ rule Trojan_MSIL_AveMariaRat_MC_2147901835_0
         $x_1_14 = "select cookie_id,count(*) from cookie" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

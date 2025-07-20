@@ -16,6 +16,7 @@ rule Trojan_Win64_EspioLoader_A_2147852353_0
         $x_2_1 = {41 8b c5 f7 74 24 ?? 48 8b 45 ?? 0f be 14 02 41 33 d0 48 8b 4f ?? 4c 8b 47 ?? 49 3b c8 73 ?? 48 8d 41 ?? 48 89 47 ?? 48 8b c7 49 83 f8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

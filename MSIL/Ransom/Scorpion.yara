@@ -20,6 +20,7 @@ rule Ransom_MSIL_Scorpion_MK_2147795783_0
         $x_1_5 = "OOPS YOU HAVE BEEN INFECTED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win32_Dafterdod_E_2147692108_0
         $x_2_6 = "&guid=%s&comment=%s&p=%d&s=%s" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

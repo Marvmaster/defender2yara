@@ -20,6 +20,7 @@ rule Ransom_MSIL_LockyCrypt_PA_2147782021_0
         $x_1_5 = "\\Leen.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_MSIL_LockyCrypt_PB_2147787292_0
         $x_1_3 = "Files has been encrypted with locky" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

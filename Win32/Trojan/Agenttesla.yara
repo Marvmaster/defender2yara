@@ -17,6 +17,7 @@ rule Trojan_Win32_Agenttesla_PGA_2147937132_0
         $x_5_2 = "0402E72656C6F6" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Agenttesla_ZA_2147938092_0
         $x_1_6 = "1.85 (Hash, version 2, native byte-order)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

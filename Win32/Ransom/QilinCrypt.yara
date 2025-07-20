@@ -19,6 +19,7 @@ rule Ransom_Win32_QilinCrypt_PA_2147831637_0
         $x_1_4 = "README-RECOVER-.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_QilinCrypt_PD_2147915672_0
         $x_1_2 = {85 c0 75 12 e8 [0-4] 85 c0 0f 84 [0-4] a3 [0-4] 68 [0-4] 6a 00 50 e8 [0-4] 85 c0 0f 84 [0-4] 31 d2 bf [0-4] bb [0-4] 89 45 [0-4] c7 45 [0-4] 00 c7 45 [0-4] 00 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

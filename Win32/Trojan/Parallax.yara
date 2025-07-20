@@ -17,6 +17,7 @@ rule Trojan_Win32_Parallax_PA_2147750068_0
         $x_1_2 = {56 66 c7 45 ?? 6f 63 66 c7 45 ?? 41 6c 66 c7 45 ?? 72 74 c6 45 ?? 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Parallax_PB_2147750998_0
         $x_1_1 = {8b 45 0c 8b 55 f8 8b 0c 90 8b 5d 14 8b 45 fc 33 0c 83 8b 55 08 8b 45 f8 89 0c 82 8b 15 ?? ?? ?? ?? 3b 15 ?? ?? ?? ?? 8b 4d ?? 49 3b 4d fc 75 07 33 c0 89 45 fc eb 2c 0f be 15 ?? ?? ?? ?? 3b 15 ?? ?? ?? ?? 7f 0a c7 05 ?? ?? ?? ?? ?? 00 00 00 80 3d ?? ?? ?? ?? 00 74 07 80 3d ?? ?? ?? ?? 00 ff 45 fc ff 45 f8 8b 4d f8 3b 4d 10 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Parallax_PC_2147752195_0
         $x_1_4 = {b9 78 00 00 00 b8 23 00 00 00 03 c8 2b c1 83 c1 75 83 c0 12 8b c0 8b c0 8b c0 8b c8 8b c8 8b c9 8b c9 a8 23}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

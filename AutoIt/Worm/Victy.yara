@@ -18,6 +18,7 @@ rule Worm_AutoIt_Victy_A_2147692738_0
         $x_1_4 = "IF $SLOT.InterfaceType = \"USB\" THEN SPREAD ( $MAPVOL , $SLOT.PNPdeviceID )" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule HackTool_Linux_Lazagne_K_2147891676_0
         $x_1_4 = "Cannot side-load external archive %s (code %d)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

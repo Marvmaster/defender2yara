@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Daws_B_2147678566_0
         $x_5_7 = {b8 4d 5a 00 00 8b 9d 54 ff ff ff 0f b7 0b 3b c8 75 1e db 05 ?? ?? ?? ?? 8b 9d 50 ff ff ff 8b 03 e8 ?? ?? ?? ?? de d9 df e0 9e 0f 84 05 00 00 00 e9 ?? ?? ?? ?? 6a 00 31 c0 8b dc 53 89 03 8b c7 50 ff 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))

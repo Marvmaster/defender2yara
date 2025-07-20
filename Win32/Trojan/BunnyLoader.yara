@@ -22,6 +22,7 @@ rule Trojan_Win32_BunnyLoader_RPX_2147892948_0
         $x_1_7 = "John Doe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Trojan_Win32_BunnyLoader_RPX_2147892948_1
         $x_1_8 = "notepad.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Trojan_Win32_BunnyLoader_GDR_2147905572_0
         $x_1_1 = {8a 01 88 04 37 8b c6 88 11 8d 75 ed 0f b6 04 07 03 45 ac 0f b6 c0 0f b6 0c 38 0f be c6 33 c8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Backdoor_Win32_Phdet_D_2147600920_0
         $x_1_6 = "BlackEnergy DDoS Bot;" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Backdoor_Win32_Phdet_A_2147600922_0
         $x_1_10 = "&build_id=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_5_*))) or
@@ -77,6 +79,7 @@ rule Backdoor_Win32_Phdet_G_2147611908_0
         $x_1_4 = "v=%s&id=%s&socks=%d&http=%d&ping=%d&speed=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +104,7 @@ rule Backdoor_Win32_Phdet_B_2147644187_0
         $x_1_4 = {47 65 74 42 6f 74 49 64 65 6e 74 00 50 6c 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule Backdoor_Win32_Phdet_R_2147670385_0
         $x_1_2 = {68 9c 45 6e a0 6a ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +151,7 @@ rule Backdoor_Win32_Phdet_S_2147681684_0
         $x_1_5 = {7b 33 44 35 41 31 36 39 34 2d 43 43 32 43 2d 34 65 65 37 2d 41 33 44 35 2d 41 38 37 39 41 39 45 33 41 36 32 41 7d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -169,6 +175,7 @@ rule Backdoor_Win32_Phdet_T_2147684784_0
         $x_1_4 = {83 78 04 04 74 ?? 81 bd ?? ?? ff ff 70 17 00 00 0f 82 ?? ?? ?? ?? 8b 85 ?? ?? ff ff 83 78 04 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -194,6 +201,7 @@ rule Backdoor_Win32_Phdet_U_2147689625_0
         $x_1_6 = {c7 45 d4 7b 43 44 35 c7 45 d8 36 31 37 33 c7 45 dc 44 2d 31 41 c7 45 e0 37 44 2d 34 c7 45 e4 45 39 39 2d c7 45 e8 38 31 30 39 c7 45 ec 2d 41 37 31 c7 45 f0 42 42 30 34 c7 45 f4 32 36 33 44}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -216,6 +224,7 @@ rule Backdoor_Win32_Phdet_V_2147689626_0
         $x_1_3 = {83 ec 10 c7 45 ec 5a 00 00 00 c7 45 e0 46 00 00 00 c7 45 e8 5a 00 00 00 c7 45 e4 46 00 00 00 6a 01 8d ?? e0 ?? e8 ?? ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -238,6 +247,7 @@ rule Backdoor_Win32_Phdet_W_2147689627_0
         $x_10_3 = {c7 45 e0 70 68 69 63 c7 45 e4 20 50 72 6f c7 45 e8 76 69 64 65 c7 45 ec 72 20 76 31 e9}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -267,6 +277,7 @@ rule Backdoor_Win32_Phdet_X_2147695463_0
         $x_10_9 = "\\Microsoft\\WindSoftware\\Policieet Settings" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             ((4 of ($x_10_*))) or

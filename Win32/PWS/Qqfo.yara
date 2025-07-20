@@ -17,6 +17,7 @@ rule PWS_Win32_Qqfo_A_2147621481_0
         $x_1_3 = {65 6c 65 6d 65 6e 74 63 6c 69 65 6e 74 2e 65 78 65 00 00 00 7a 78}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

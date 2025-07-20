@@ -16,6 +16,7 @@ rule Trojan_Win32_Grandsteal_RPY_2147844310_0
         $x_1_1 = {30 0e b8 03 00 00 00 0f b6 0d ?? ?? ?? ?? 30 4e 01 0f b6 0d ?? ?? ?? ?? 30 4e 02 0f b6 0d ?? ?? ?? ?? 30 4e 03 40 83 f8 05 74 09 8a 0d ?? ?? ?? ?? 30 0c 30 83 f8 07 75 ec a0 ?? ?? ?? ?? 02 c0 30 46 05 5e c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

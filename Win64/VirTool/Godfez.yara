@@ -19,6 +19,7 @@ rule VirTool_Win64_Godfez_A_2147838153_0
         $x_1_4 = {48 8b 54 24 30 48 89 10 48 c7 40 08 00 00 00 00 48 8b 54 24 38 48 89 50 10 48 c7 40 18 02 00 00 00 44 0f 11 78 20 48 c7 40 30 00 00 00 00 48 8b 15 0d 6c 0d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Boonana_A_2147639766_0
         $x_1_3 = {6a 01 f3 a5 6a 02 68 10 01 00 00 68 ff 01 0f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

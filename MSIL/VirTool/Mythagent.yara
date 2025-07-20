@@ -19,6 +19,7 @@ rule VirTool_MSIL_Mythagent_A_2147793998_0
         $x_1_5 = "MythicServerResponse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule VirTool_MSIL_Mythagent_B_2147794104_0
         $x_1_5 = "mythicFileId" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule VirTool_MSIL_Mythagent_B_2147794104_1
         $x_1_9 = "EtwEventWrite" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

@@ -28,6 +28,7 @@ rule Trojan_Win64_AVBurner_RPX_2147835184_0
         $x_10_13 = {41 b9 30 00 00 00 48 89 44 24 20 ba 48 20 00 80 4c 89 65 cf 49 8b cf 4c 89 65 df f3 0f 7f 45 eb 44 89 65 fb 48 89 7d d7 c7 45 e7 04 00 00 00 ff 15}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

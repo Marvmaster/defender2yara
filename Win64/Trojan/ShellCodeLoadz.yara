@@ -17,6 +17,7 @@ rule Trojan_Win64_ShellCodeLoadz_A_2147927945_0
         $x_1_2 = "Shellcode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

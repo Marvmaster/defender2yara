@@ -17,6 +17,7 @@ rule Worm_Win32_Hikjav_A_2147618330_0
         $x_1_3 = "%c:\\RECYCLER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

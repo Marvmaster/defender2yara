@@ -17,6 +17,7 @@ rule Trojan_Win32_Ramtopt_B_2147629417_0
         $x_1_3 = "iCrypt: A problem occured, Please Restart Windows" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

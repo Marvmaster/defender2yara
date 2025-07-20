@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Winsec_A_2147707751_0
         $x_1_4 = "%s /c netsh advfirewall firewall add rule name=\"%s\" dir=in action=allow service=\"%s\" enable=yes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

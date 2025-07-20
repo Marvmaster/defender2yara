@@ -16,6 +16,7 @@ rule Trojan_Win32_ModiLoader_AML_2147888189_0
         $x_1_1 = {c1 c0 10 86 c4 29 f8 80 eb e8 01 f0 89 07 83 c7 05 88 d8 e2 ?? 8d be 00 20 01 00 8b 07 09 c0 74 ?? 8b 5f 04 8d 84 30 14 4e 01 00 01 f3 50 83 c7 08 ff 96 a0 4e 01 00 95 8a 07 47 08 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_ModiLoader_AMO_2147888921_0
         $x_1_1 = {85 c0 7e 1a 8a 93 a4 50 40 00 30 16 46 43 81 e3 07 00 00 80 79 05 4b 83 cb f8 43 48}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win32_ModiLoader_AMR_2147889365_0
         $x_1_1 = {8b d6 8b c3 ff 15 ?? ?? ?? ?? 84 db 75 0d e8 ?? ?? ?? ?? 8b 98 00 00 00 00 eb 0f 80 fb 18 77 0a 33 c0 8a c3 8a 98 38 30 00 10 33 c0 8a c3 8b d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +82,7 @@ rule Trojan_Win32_ModiLoader_AM_2147894743_0
         $x_1_1 = {8d 34 38 8b c1 83 c1 02 99 2b c2 8a 54 0e 08 d1 f8 81 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +104,7 @@ rule Trojan_Win32_ModiLoader_AMBF_2147902385_0
         $x_1_1 = {8b 38 ff 57 0c 8b 85 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 0f b6 44 10 ff 0f b6 c0 33 d2 05 ?? ?? ?? ?? 83 d2 00 8b d0 8d 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +126,7 @@ rule Trojan_Win32_ModiLoader_ML_2147904575_0
         $x_1_1 = {8b 15 e4 2b 61 00 42 8d 44 10 ff 50 a1 e4 2b 61 00 8a 04 07 5a 88 02 ff 05 e4 2b 61 00 4b 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +155,7 @@ rule Trojan_Win32_ModiLoader_GA_2147906550_0
         $x_1_8 = "start /min powershell.exe -inputformat none -outputformat none -NonInteractive -Command \"Add-MpPreference -ExclusionPath 'C:\\Users'\" & exit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +182,7 @@ rule Trojan_Win32_ModiLoader_HNA_2147907786_0
         $x_1_6 = {44 6c 6c 52 65 67 69 73 74 65 72 53 65 72 76 65 72 00 00 00 ff ff ff ff 03 00 00 00 65 61 6d 00 ff ff ff ff 08 00 00 00 73 63 72 65 65 6e 70 73 00 00 00 00 ff ff ff ff 05 00 00 00 73 6d 61 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -202,6 +210,7 @@ rule Trojan_Win32_ModiLoader_ARA_2147909536_0
         $x_2_7 = "\"Add-MpPreference -ExclusionPath 'C:\\Users'\"" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -223,6 +232,7 @@ rule Trojan_Win32_ModiLoader_BAA_2147935613_0
         $x_5_1 = {33 06 29 d8 2d ?? ?? ?? ?? 89 02 83 c6 04 41 8b c1 2b 45 18 0f 85 05}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

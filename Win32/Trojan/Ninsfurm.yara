@@ -21,6 +21,7 @@ rule Trojan_Win32_Ninsfurm_A_2147642652_0
         $x_1_7 = "/q:a /c:\"install /q /l" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

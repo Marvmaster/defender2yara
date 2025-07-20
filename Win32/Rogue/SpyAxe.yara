@@ -20,6 +20,7 @@ rule Rogue_Win32_SpyAxe_16752_0
         $x_1_6 = "InternetCloseHandle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Rogue_Win32_SpyAxe_16752_1
         $x_1_9 = ".com/userguide.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Rogue_Win32_SpyAxe_16752_2
         $x_1_3 = {00 00 78 3a 5c 44 65 76 5f 43 50 50 5c 57 6f 72 6b 5c 56 53 5f 4b 6e 7a 53 74 72 5f 41 64 77 61 72 65 5c 52 65 6c 65 61 73 65 5c 56 53 5f 57 6f 72 6b 31 2e 70 64 62 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Rogue_Win32_SpyAxe_16752_3
         $x_1_8 = "@fuckmyass.com[1].txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 5 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or

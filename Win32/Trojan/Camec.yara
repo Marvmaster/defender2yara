@@ -16,6 +16,7 @@ rule Trojan_Win32_Camec_A_2147637846_0
         $x_1_2 = "78787C696F737C71636375636F627F7F646C4358545F565C5143581E4358532D556D735544585364" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Camec_A_2147637847_0
         $x_1_1 = "60415646595455420D63617C7F7C7574720B7451445110635F45425355" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -57,6 +59,7 @@ rule Trojan_Win32_Camec_B_2147648925_0
         $x_1_1 = "425F5B58525941450F4E5A5541534A4B5C5B54415D5E5F7954405D5F0A5A5B455747405A5F5444504C" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +82,7 @@ rule Trojan_Win32_Camec_B_2147651844_0
         $x_1_2 = "7D7D706C6A787A7574796C7570757071" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +104,7 @@ rule Trojan_Win32_Camec_C_2147652316_0
         $x_1_2 = "C1079317D40411FDC9CF0B16B25F7CAE  673FAC27799C4CCC81564989BC2E7726" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +126,7 @@ rule Trojan_Win32_Camec_D_2147652317_0
         $x_1_2 = "5A445108" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +148,7 @@ rule Trojan_Win32_Camec_E_2147652479_0
         $x_1_2 = "560C69425C5A515942466F" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +169,7 @@ rule Trojan_Win32_Camec_F_2147652809_0
         $x_1_1 = "7D7D706C6A787A7574796C75707570717D7069667B77656270647D6F7A5A55475D465C534569675C5F515D42406977404741565840655041455A585F6A6A44" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +193,7 @@ rule Trojan_Win32_Camec_G_2147652813_0
         $x_1_4 = "627F7E6361766B746E7C5F554A5C425D54456C675E5D5C5A46426C" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -207,6 +216,7 @@ rule Trojan_Win32_Camec_H_2147653914_0
         $x_1_3 = "FIObjectWithSite_SetSite" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +240,7 @@ rule Trojan_Win32_Camec_I_2147653915_0
         $x_1_4 = "E_Giro_Rapido" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -251,6 +262,7 @@ rule Trojan_Win32_Camec_J_2147654968_0
         $x_1_2 = "094251151555595F525B0E1A435F5F504717150B393B0D515840185A530E14515B43515B454612" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -275,6 +287,7 @@ rule Trojan_Win32_Camec_K_2147656355_0
         $x_10_5 = {66 3b f3 0f 8c ?? 00 00 00 66 6b ff 40 66 8b 45 dc 0f 80 ?? 01 00 00 66 03 fe 0f 80 ?? 01 00 00 66 05 06 00 0f 80 ?? 01 00 00 66 3d 08 00 89 45 dc 0f 8c ?? 00 00 00 0f bf f7 8d 55 dc 66 2d 08 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

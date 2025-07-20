@@ -16,6 +16,7 @@ rule Ransom_Win32_BastaPacker_ZB_2147844040_0
         $x_1_1 = {32 d0 c1 c2 08 ac 84 c0 8b c2 5e 5a c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

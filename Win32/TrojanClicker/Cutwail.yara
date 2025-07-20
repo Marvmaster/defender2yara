@@ -20,6 +20,7 @@ rule TrojanClicker_Win32_Cutwail_A_2147601816_0
         $x_1_6 = {3d 45 57 59 42 59 75 01 46 8b c6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

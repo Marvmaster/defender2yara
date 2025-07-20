@@ -16,6 +16,7 @@ rule SoftwareBundler_Win32_ICLoader_222548_0
         $x_1_2 = {75 0b 33 1a ff d3 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule SoftwareBundler_Win32_ICLoader_222548_1
         $x_1_3 = {4d 00 69 00 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00 5c 00 57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 5c 00 43 00 75 00 72 00 72 00 65 00 6e 00 74 00 56 00 65 00 72 00 73 00 69 00 6f 00 6e 00 5c 00 61 00 76 00 61 00 74 00 61 00 72 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule SoftwareBundler_Win32_ICLoader_E_249597_0
         $x_1_2 = "http://megadowl.com/terms-ru.html" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule SoftwareBundler_Win32_ICLoader_I_251750_0
         $x_1_2 = {6a 00 6a 00 6a 00 6a 00 6a 00 ff d6 6a 00 6a 00 6a 00 6a 00 6a 00 ff d6 6a 00 6a 00 6a 00 6a 00 6a 00 ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule SoftwareBundler_Win32_ICLoader_BS_256606_0
         $x_1_3 = {50 72 6f 63 c7 05 ?? ?? ?? ?? 65 73 73 33 c7 05 ?? ?? ?? ?? 32 46 69 72 66 c7 05 ?? ?? ?? ?? 73 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -125,6 +130,7 @@ rule SoftwareBundler_Win32_ICLoader_BM_257372_0
         $x_2_1 = {03 c3 6a 00 6a 00 03 c7 6a 00 6a 00 8a 10 6a 00 6a 00 6a 00 32 d1 6a 00 6a 00 88 10 ff ?? 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 43 ff ?? 81 fb da 04 00 00 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +152,7 @@ rule SoftwareBundler_Win32_ICLoader_BN_258087_0
         $x_1_1 = {8b 4d 14 8a 11 88 15 ?? ?? ?? ?? 8b 45 14 83 c0 01 89 45 14 8b 4d 0c 89 4d f8 ba ?? ?? ?? ?? 03 55 08 8b 45 0c 03 45 08 8b 0d ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? 8a 14 32 88 14 08 8b 45 08 0f be 88 ?? ?? ?? ?? 85 c9 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -167,6 +174,7 @@ rule SoftwareBundler_Win32_ICLoader_BO_258217_0
         $x_1_1 = {83 ee 10 8a 0e bb ?? ?? ?? ?? 88 0d ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 03 d9 03 c8 46 8a 1c 03 88 1c 39 8a 88 ?? ?? ?? ?? 84 c9 75 12 8b 0d ?? ?? ?? ?? 8a 1d ?? ?? ?? ?? 03 c8 03 cf 30 19 39 15 ?? ?? ?? ?? 7e 03 40 eb 01 cf 3d 7d 05 00 00 7e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +197,7 @@ rule SoftwareBundler_Win32_ICLoader_BP_258515_0
         $x_1_2 = {03 d9 03 c8 46 8a 1c 03 88 1c 39 8a 88 ?? ?? ?? ?? 84 c9 75 ?? 8b 0d ?? ?? ?? ?? 8a 1d ?? ?? ?? ?? 03 c8 03 cf 30 19 39 15 ?? ?? ?? ?? 76}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -210,6 +219,7 @@ rule SoftwareBundler_Win32_ICLoader_BQ_258516_0
         $x_1_1 = {03 d0 03 c1 8a 0c 0a 8b 55 0c 88 0c 10 60 8d 05 ?? ?? ?? ?? c1 e0 05 61 8b 45 08 8a 88 ?? ?? ?? ?? 84 c9 75 ?? 60 8d 05 ?? ?? ?? ?? c1 e0 05 61 8b 0d ?? ?? ?? ?? 8b 55 08 8b 45 0c 03 ca 03 c1 8a 0d ?? ?? ?? ?? 30 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +243,7 @@ rule SoftwareBundler_Win32_ICLoader_BR_259094_0
         $x_1_3 = {8b 4d 08 83 c1 01 89 4d ?? eb ?? ff e1 81 7d ?? 04 05 00 00 7e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -254,6 +265,7 @@ rule SoftwareBundler_Win32_ICLoader_BT_259890_0
         $x_1_1 = {03 c8 46 8d 3c 10 8b 45 0c 8a 0c 11 88 0c 07 8a 8a ?? ?? ?? ?? 84 c9 75 ?? 8b 0d ?? ?? ?? ?? 03 ca 03 c1 8a 0d ?? ?? ?? ?? 30 08 83 3d ?? ?? ?? ?? 03 76}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -275,6 +287,7 @@ rule SoftwareBundler_Win32_ICLoader_BU_260148_0
         $x_1_1 = {03 c8 47 8d 34 10 8b 45 0c 8a 0c 11 88 0c 06 8a 8a ?? ?? ?? ?? 84 c9 75 ?? 8b 0d ?? ?? ?? ?? 03 ca 03 c1 8a 0d ?? ?? ?? ?? 30 08 83 3d ?? ?? ?? ?? 03 76}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -296,6 +309,7 @@ rule SoftwareBundler_Win32_ICLoader_DSA_273834_0
         $x_1_1 = {8a 54 24 0c 53 8a 1c 08 32 da 88 1c 08 8b 0d ?? ?? ?? ?? 33 c0 5b 8a 41 01 8b 4c 24 08 0c 03 23 c1 c3 05 00 a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +332,7 @@ rule SoftwareBundler_Win32_ICLoader_SE_279102_0
         $x_1_2 = {33 c9 8b 35 ?? ?? ?? ?? 8b 54 24 ?? 8a 14 0a 8a 1c 06 32 da 41 88 1c 06 40 3d ?? ?? ?? ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

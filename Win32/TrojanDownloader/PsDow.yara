@@ -27,6 +27,7 @@ rule TrojanDownloader_Win32_PsDow_A_2147837686_0
         $x_2_12 = "-EncodedCommand" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule TrojanDownloader_Win32_PsDow_B_2147894235_0
         $x_2_5 = "powershell -ExecutionPolicy Bypass -F" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

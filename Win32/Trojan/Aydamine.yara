@@ -19,6 +19,7 @@ rule Trojan_Win32_Aydamine_A_2147721706_0
         $x_1_5 = "-c 1 -M stratum+tcp://" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

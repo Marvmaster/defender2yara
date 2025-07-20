@@ -18,6 +18,7 @@ rule TrojanSpy_MSIL_Yakbeex_A_2147705993_0
         $x_1_4 = "=notification&machinename=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanSpy_MSIL_Yakbeex_A_2147705993_1
         $x_1_5 = {44 6f 6d 61 69 6e 55 70 44 6f 77 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -106,6 +108,7 @@ rule TrojanSpy_MSIL_Yakbeex_B_2147706521_0
         $x_1_5 = {37 00 65 00 38 00 61 00 35 00 30 00 34 00 38 00 2d 00 63 00 64 00 39 00 30 00 2d 00 34 00 62 00 62 00 64 00 2d 00 62 00 30 00 63 00 38 00 2d 00 35 00 37 00 63 00 39 00 62 00 30 00 65 00 32 00 64 00 61 00 37 00 30 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -131,6 +134,7 @@ rule TrojanSpy_MSIL_Yakbeex_B_2147706521_1
         $x_1_6 = "&keystrokestyped=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

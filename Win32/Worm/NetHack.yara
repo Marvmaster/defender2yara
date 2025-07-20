@@ -22,6 +22,7 @@ rule Worm_Win32_NetHack_A_2147600086_0
         $x_1_8 = "f:\\source\\cg\\cgall\\ide_hackdriver\\objfre_wxp_x86\\i386\\pcidisk.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

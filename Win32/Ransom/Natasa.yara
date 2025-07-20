@@ -36,6 +36,7 @@ rule Ransom_Win32_Natasa_A_2147714806_0
         $x_1_22 = {c6 44 03 fd 01 8b 4d ec c6 44 0b fe 55 8b 55 ec c6 44 13 ff aa}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

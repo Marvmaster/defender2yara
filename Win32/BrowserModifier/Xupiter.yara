@@ -43,6 +43,7 @@ rule BrowserModifier_Win32_Xupiter_12203_0
         $n_300_29 = "EasySync Pro" ascii //weight: -300
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_100_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -17,6 +17,7 @@ rule Trojan_Win32_ColibriLoader_FA_2147895878_0
         $x_2_2 = {30 04 32 42 3b d7 72 ed 8b 7d f0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

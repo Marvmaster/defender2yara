@@ -18,6 +18,7 @@ rule Worm_MSIL_Autorun_E_2147637743_0
         $x_1_4 = {5c 00 66 00 6f 00 74 00 6f 00 73 00 2d 00 70 00 65 00 72 00 73 00 6f 00 6e 00 61 00 6c 00 65 00 73 00 2e 00 65 00 78 00 65 00 ?? ?? 5c 00 70 00 65 00 72 00 73 00 6f 00 6e 00 61 00 6c 00 2d 00 70 00 68 00 6f 00 74 00 6f 00 73 00 2e 00 65 00 78 00 65 00 ?? ?? 5c 00 6d 00 70 00 33 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Worm_MSIL_Autorun_F_2147638394_0
         $x_1_3 = "action=Ouvrir le dossier pour afficher les fichiers" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Worm_MSIL_Autorun_G_2147639482_0
         $x_1_5 = "[autorun]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -92,6 +95,7 @@ rule Worm_MSIL_Autorun_H_2147639650_0
         $x_1_4 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Worm_MSIL_Autorun_I_2147639652_0
         $x_1_3 = "open=.\\Highspeed drivers.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Worm_MSIL_Autorun_J_2147641098_0
         $x_4_3 = "-=-Public Lonely Logger Logs V1.0-=-" wide //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -161,6 +167,7 @@ rule Worm_MSIL_Autorun_O_2147653512_0
         $x_1_6 = "open=autorun.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -188,6 +195,7 @@ rule Worm_MSIL_Autorun_P_2147653518_0
         $x_1_8 = "killed! ADDIO!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -217,6 +225,7 @@ rule Worm_MSIL_Autorun_Q_2147653830_0
         $x_1_10 = "<br> ip : <font" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -243,6 +252,7 @@ rule Worm_MSIL_Autorun_R_2147654074_0
         $x_1_4 = {43 00 3a 00 5c 00 57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 5c 00 53 00 79 00 73 00 74 00 65 00 6d 00 33 00 32 00 5c 00 64 00 72 00 69 00 76 00 65 00 72 00 73 00 5c 00 65 00 74 00 63 00 5c 00 68 00 6f 00 73 00 74 00 73 00 [0-48] 31 00 32 00 37 00 2e 00 30 00 2e 00 30 00 2e 00 31 00 20 00 77 00 77 00 77 00 2e 00 76 00 69 00 72 00 75 00 73 00 74 00 6f 00 74 00 61 00 6c 00 2e 00 63 00 6f 00 6d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -267,6 +277,7 @@ rule Worm_MSIL_Autorun_S_2147655429_0
         $x_1_5 = "Victim Connected!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -294,6 +305,7 @@ rule Worm_MSIL_Autorun_U_2147657930_0
         $x_1_5 = "TargetInstance ISA 'Win32_USBControllerdevice'" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -328,6 +340,7 @@ rule Worm_MSIL_Autorun_V_2147657958_0
         $x_1_12 = "spersk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -356,6 +369,7 @@ rule Worm_MSIL_Autorun_X_2147658404_0
         $x_1_6 = "Flooding:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -383,6 +397,7 @@ rule Worm_MSIL_Autorun_Z_2147658452_0
         $x_1_5 = "\\gammess\\svchost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

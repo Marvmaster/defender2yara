@@ -20,6 +20,7 @@ rule Trojan_Win64_AntiVm_NE_2147915268_0
         $x_1_5 = "regaddHKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System/vConsentPromptBehaviorAdmin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule HackTool_Win32_GameHack_2147712662_0
         $x_1_5 = "PSAPI.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule HackTool_Win32_GameHack_J_2147752398_0
         $x_1_4 = "copy constructor closure" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule HackTool_Win32_GameHack_B_2147755559_0
         $x_1_8 = "ACME_ISTIRAP.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule HackTool_Win32_GameHack_KP_2147756557_0
         $x_1_4 = "WOLFTU_Multihack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule HackTool_Win32_GameHack_MM_2147898343_0
         $x_1_5 = "vvipegn.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

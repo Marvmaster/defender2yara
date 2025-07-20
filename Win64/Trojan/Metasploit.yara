@@ -17,6 +17,7 @@ rule Trojan_Win64_Metasploit_CRTD_2147850034_0
         $x_1_2 = "PAYLOAD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_Metasploit_AMBC_2147903241_0
         $x_2_1 = {0f b6 04 10 44 31 c0 89 c1 8b 45 fc 48 98 48 8d 15 ?? ?? ?? ?? 88 0c 10 83 45 fc 01}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -27,6 +27,7 @@ rule Ransom_Win32_RansomWar_GVA_2147938153_0
         $x_1_12 = "somesomeWar_EOF" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Ceysix_A_2147599410_0
         $x_1_8 = "VirtualProtec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

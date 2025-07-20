@@ -17,6 +17,7 @@ rule Trojan_Win32_Boxter_CA_2147841035_0
         $x_5_2 = "http://9ecc-23-243-99-186.ngrok.io" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Boxter_CB_2147841037_0
         $x_1_4 = "%temp%\\getadmin.vbs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

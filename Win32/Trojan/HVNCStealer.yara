@@ -26,6 +26,7 @@ rule Trojan_Win32_HVNCStealer_RPI_2147834660_0
         $x_1_11 = "--no-sandbox --allow-no-sandbox-job" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

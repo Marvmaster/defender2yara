@@ -17,6 +17,7 @@ rule VirTool_WinNT_Jadtre_2147634076_0
         $x_1_3 = {81 38 8b ff 55 8b 75 ?? 81 78 01 ff 55 8b ec 75 ?? 83 c0 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule VirTool_WinNT_Jadtre_C_2147659822_0
         $x_5_3 = {83 ce ff 68 f6 03 00 00 68 f0 01 00 00 e8 ?? ?? ff ff 3c 01 74 22 ff 75 08 68 76 03 00 00 68 70 01 00 00 e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))

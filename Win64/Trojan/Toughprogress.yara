@@ -24,6 +24,7 @@ rule Trojan_Win64_Toughprogress_A_2147943064_0
         $x_2_10 = "RetpolineV1" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1000_*) and 4 of ($x_2_*))) or
             ((1 of ($x_1000_*) and 1 of ($x_5_*) and 2 of ($x_2_*))) or

@@ -18,6 +18,7 @@ rule Ransom_Win32_MraCrypt_PA_2147808751_0
         $x_1_3 = {5c 4d 52 41 43 5c [0-16] 5c 4d 52 41 43 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

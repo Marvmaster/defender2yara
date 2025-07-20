@@ -19,6 +19,7 @@ rule Trojan_Win32_Krypter_AD_2147795758_0
         $x_1_4 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Krypter_AA_2147795879_0
         $x_1_2 = {55 8b ec 8b 4d ?? 8b 41 ?? 69 c0 ?? ?? ?? ?? 05 ?? ?? ?? ?? 89 41 ?? c1 e8 ?? 25 ?? ?? ?? ?? 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Krypter_AG_2147796977_0
         $x_10_3 = {55 8b ec 51 c7 45 ?? ?? ?? ?? ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 8b 08 03 4d ?? 8b 55 ?? 89 0a 8b e5 5d c2}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win32_Krypter_AB_2147798246_0
         $x_2_1 = {0f b7 d2 81 c2 ?? ?? ?? ?? 66 c1 c2 ?? 0f b7 d2 8b 0c 85 ?? ?? ?? ?? 03 ca 88 8c 05 ?? ?? ?? ?? 40 0f b6 c0 0f b6 b5 ?? ?? ?? ?? 3b c6 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_Win32_Krypter_AB_2147798246_1
         $x_1_3 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +134,7 @@ rule Trojan_Win32_Krypter_AH_2147808166_0
         $x_1_1 = {ac 32 02 aa 42 e2 ?? 61 5d c2 10 00 20 00 60 8b 7d ?? 8b 75 ?? 8b 4d ?? 8b 55 ?? 80 3a ?? 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +159,7 @@ rule Trojan_Win32_Krypter_AEE_2147903120_0
         $x_2_4 = "GlobalAlloc" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*))) or
             (all of ($x*))

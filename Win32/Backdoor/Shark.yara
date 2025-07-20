@@ -16,6 +16,7 @@ rule Backdoor_Win32_Shark_E_2147601296_0
         $x_1_2 = "modUserlandUnhooking" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Backdoor_Win32_Shark_2147605695_0
         $x_1_11 = "ServerX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Backdoor_Win32_Shark_F_2147606493_0
         $x_1_1 = {2e 00 65 00 78 00 65 00 [0-16] 7c 00 7c 00 7c 00 [0-16] 74 00 65 00 6d 00 70 00 [0-24] 2e 00 65 00 78 00 65 00 [0-16] 70 00 34 00 35 00 35 00 77 00 30 00 72 00 64 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_MSIL_Kiangthi_MBCU_2147846731_0
         $x_1_4 = {1e 2d 12 26 26 2b e7 28 73 00 00 06 2b ea 28 34 00 00 0a 2b e9 6f 57 00 00 0a 2b e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

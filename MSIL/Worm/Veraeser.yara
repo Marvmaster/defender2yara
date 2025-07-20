@@ -23,6 +23,7 @@ rule Worm_MSIL_Veraeser_A_2147685559_0
         $x_1_9 = "ftp://31.170.167.92//" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

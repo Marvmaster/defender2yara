@@ -21,6 +21,7 @@ rule Trojan_MSIL_Gemadil_A_2147719431_0
         $x_2_6 = {61 00 76 00 70 00 75 00 69 00 00 00 00 00 61 00 76 00 61 00 73 00 74 00 75 00 69 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Pimdket_A_2147694152_0
         $x_1_3 = {80 bd 31 04 00 00 00 74 18 8d 4c 24 ?? 57 8d 85 2f 03 00 00 51 e8 ?? ?? 00 00 8b 7c 24 ?? 83 c4 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

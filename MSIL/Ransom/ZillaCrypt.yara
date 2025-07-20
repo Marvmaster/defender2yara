@@ -18,6 +18,7 @@ rule Ransom_MSIL_ZillaCrypt_PA_2147808602_0
         $x_1_3 = "Don't Worry Friends, You Can Restore All Your Files!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

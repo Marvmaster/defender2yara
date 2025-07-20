@@ -24,6 +24,7 @@ rule Worm_Win32_Busifom_A_2147639128_0
         $x_1_10 = "?gStealer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

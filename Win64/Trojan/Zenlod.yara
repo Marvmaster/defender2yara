@@ -16,6 +16,7 @@ rule Trojan_Win64_Zenlod_RPX_2147849057_0
         $x_1_1 = {ba c0 0b 00 00 31 c9 41 b8 00 30 00 00 41 b9 40 00 00 00 e8 ?? ?? ?? ?? 48 89 c6 48 85 c0 0f 84 88 11 00 00 0f 28 05 87 88 1e 00 0f 11 06 0f 28 05 8d 88 1e 00 0f 11 46 10 0f 28 05 92 88 1e 00 0f 11 46 20 0f 28 05 97 88 1e 00 0f 11 46 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_Zenlod_NZ_2147899320_0
         $x_5_2 = {eb 14 e8 78 4f 00 00 84 c0 75 09 33 c9 e8 95 24 00 00 eb ea 8a c3 48 83 c4}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

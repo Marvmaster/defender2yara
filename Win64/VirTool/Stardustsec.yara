@@ -16,6 +16,7 @@ rule VirTool_Win64_Stardustsec_A_2147924609_0
         $x_1_2 = {48 8b 04 24 48 83 c0 0b c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

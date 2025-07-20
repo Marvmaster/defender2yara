@@ -18,6 +18,7 @@ rule PWS_Win32_Fonfrep_A_2147659885_0
         $x_2_4 = "C:\\Users\\Owner\\Desktop\\FF\\S\\prjFF.vbp" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

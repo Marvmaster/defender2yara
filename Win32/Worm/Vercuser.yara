@@ -28,6 +28,7 @@ rule Worm_Win32_Vercuser_A_2147679862_0
         $x_5_14 = "%TsDv%\\Passwords.exe" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 4 of ($x_10_*) and 4 of ($x_5_*))) or
             ((2 of ($x_50_*) and 5 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -61,6 +62,7 @@ rule Worm_Win32_Vercuser_B_2147679964_0
         $x_1_6 = "\\000b09274b.exe,\\0cf48.exe,\\61a60\\we83b.exe,\\a-fast.exe,\\amvo.exe,\\ab\\abest.exe," ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -84,6 +86,7 @@ rule Worm_Win32_Vercuser_C_2147679966_0
         $x_1_4 = "DriveGet, RmDrvs, list, REMOVABLE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +116,7 @@ rule Worm_Win32_Vercuser_D_2147681708_0
         $x_20_10 = "%atemp%\\~temp~%ayday%~.tmp" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_50_*) and 1 of ($x_10_*))) or
             ((1 of ($x_100_*) and 4 of ($x_50_*) and 1 of ($x_20_*))) or

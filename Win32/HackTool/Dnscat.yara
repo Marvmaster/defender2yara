@@ -18,6 +18,7 @@ rule HackTool_Win32_Dnscat_A_2147833861_0
         $x_1_4 = "dnscat2.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

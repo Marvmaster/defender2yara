@@ -18,6 +18,7 @@ rule Ransom_Win32_LockedFile_G_2147757237_0
         $x_1_3 = {73 6f 66 74 5f 34 5f 35 5f 02 00 5f 61 64 76 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

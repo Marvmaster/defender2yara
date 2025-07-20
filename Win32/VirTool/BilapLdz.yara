@@ -19,6 +19,7 @@ rule VirTool_Win32_BilapLdz_B_2147841299_0
         $x_1_4 = {6a 00 8d 85 ?? ?? ?? ?? 50 57 56 53 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

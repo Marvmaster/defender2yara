@@ -23,6 +23,7 @@ rule TrojanDropper_Win32_Udslee_A_2147634497_0
         $x_1_8 = {69 65 72 75 68 64 73 6c 6c 65 6f 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

@@ -19,6 +19,7 @@ rule Backdoor_Win32_QakBot_BK_2147729993_0
         $x_1_4 = "ad6af8bd5835d19cc7fdc4c62fdf02a1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Backdoor_Win32_QakBot_BK_2147729993_1
         $x_1_7 = "Bsupported1maxwellprovider3were8v0" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

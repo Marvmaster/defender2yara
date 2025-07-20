@@ -17,6 +17,7 @@ rule Trojan_Win32_Virlock_BS_2147829364_0
         $x_1_2 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Virlock_GMH_2147891348_0
         $x_1_4 = ".vmp1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Virlock_GMH_2147891348_1
         $x_1_4 = "P.vmp0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_Virlock_NV_2147897385_0
         $x_3_2 = {8b fe 33 df 47 2b fb 81 ca ?? ?? ?? ?? f7 da 2b d6 81 f2 ?? ?? ?? ?? c1 ef 10 c1 ca ?? c1 ee 14 e9 6c 01 00 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Win32_Virlock_ARA_2147897708_0
         $x_2_2 = {88 07 90 46 47 49 90 83 f9 00 90 0f 85}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_Win32_Virlock_EC_2147907197_0
         $x_2_2 = {89 07 90 8b f8 8b df 90 e9 34 00 00 00 88 07 42 46 47 90 49 90 83 f9 00 90 e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Trojan_Win32_Virlock_PADQ_2147913608_0
         $x_1_1 = {ba 6e 00 00 00 8a 06 90 32 c2 90 88 07 90 42 46 47 90 49 90 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +181,7 @@ rule Trojan_Win32_Virlock_ARAX_2147945734_0
         $x_2_2 = {88 07 42 90 46 47}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

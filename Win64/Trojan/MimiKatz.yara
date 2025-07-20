@@ -20,6 +20,7 @@ rule Trojan_Win64_MimiKatz_STA_2147775989_0
         $x_10_6 = {49 00 6e 00 74 00 65 00 72 00 6e 00 61 00 6c 00 4e 00 61 00 6d 00 65 00 00 00 50 00 75 00 54 00 54 00 59 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

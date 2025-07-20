@@ -21,6 +21,7 @@ rule Trojan_Win32_TurlaCarbonInstaller_B_2147849796_0
         $x_2_7 = "cheapinfomedical99.net" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -55,6 +56,7 @@ rule Trojan_Win32_TurlaCarbonInstaller_C_2147849797_0
         $x_1_11 = "/IMAGES/3/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 5 of ($x_1_*))) or
             ((5 of ($x_2_*) and 3 of ($x_1_*))) or

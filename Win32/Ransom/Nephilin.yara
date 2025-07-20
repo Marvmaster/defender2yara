@@ -20,6 +20,7 @@ rule Ransom_Win32_Nephilin_A_2147755522_0
         $x_1_5 = "wmic shadowcopy delete" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

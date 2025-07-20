@@ -19,6 +19,7 @@ rule VirTool_WinNT_Neintab_A_2147602326_0
         $x_1_5 = {64 3a 5c 70 72 6f 6a 5c 6e 6b [0-7] 5c 6f 75 74 5c 69 33 38 36 5c 6e 6b 76 32 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_4_*))) or

@@ -19,6 +19,7 @@ rule Trojan_Win64_PasswordStealer_AMQ_2147793333_0
         $x_3_4 = "Ru%cV5%at4rRSe'447CGpt5aat5aav" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_PasswordStealer_BL_2147827423_0
         $x_1_2 = {42 0f b6 04 01 2c ?? 42 88 04 01 48 ff c1 48 83 f9 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

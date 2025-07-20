@@ -17,6 +17,7 @@ rule Trojan_MSIL_KillAV_NA_2147926692_0
         $x_2_2 = {8d 07 00 00 02 13 06 07 12 04 12 05 11 06 12 07 28 05 00 00 06 26 07 17 7e 28 00 00 0a 28 06 00 00 06 26 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

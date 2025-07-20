@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Nonaco_A_2147610774_0
         $x_1_3 = {00 84 1d 00 fc ff ff 43 ff d6 8b d0 8d bd 00 fc ff ff 83 c9 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDropper_Win32_Nonaco_C_2147611854_0
         $x_1_6 = {72 65 25 73 20 22 25 73 22 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -71,6 +73,7 @@ rule TrojanDropper_Win32_Nonaco_D_2147616169_0
         $x_1_5 = {77 62 6c 6f 67 6f 6e 00 25 73 25 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*))) or
@@ -97,6 +100,7 @@ rule TrojanDropper_Win32_Nonaco_G_2147624415_0
         $x_1_3 = {8d 84 24 d8 00 00 00 68 e9 03 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

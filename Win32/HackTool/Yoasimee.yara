@@ -16,6 +16,7 @@ rule HackTool_Win32_Yoasimee_A_2147742170_0
         $x_1_2 = "Admin account with limited token required." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

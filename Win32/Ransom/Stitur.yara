@@ -17,6 +17,7 @@ rule Ransom_Win32_Stitur_A_2147682685_0
         $x_1_3 = "svchost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Win32_Stitur_AB_2147754995_0
         $x_10_4 = "c0f1decb-932f-45c1-8ac9-a39645f68e37" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

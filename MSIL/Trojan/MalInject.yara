@@ -17,6 +17,7 @@ rule Trojan_MSIL_MalInject_B_2147766893_0
         $x_1_2 = {49 6e 76 6f 6b 65 4d 65 6d 62 65 72 00 53 70 65 63 69 61 6c 46 6f 6c 64 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

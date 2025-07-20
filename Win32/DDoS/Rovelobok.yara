@@ -20,6 +20,7 @@ rule DDoS_Win32_Rovelobok_A_2147688154_0
         $x_2_6 = "Java_Updater" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_32_*) and 1 of ($x_8_*) and 2 of ($x_2_*))) or
             ((1 of ($x_32_*) and 1 of ($x_8_*) and 1 of ($x_4_*))) or

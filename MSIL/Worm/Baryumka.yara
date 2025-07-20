@@ -25,6 +25,7 @@ rule Worm_MSIL_Baryumka_A_2147709646_0
         $x_1_11 = "\\upflder\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or

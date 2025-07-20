@@ -16,6 +16,7 @@ rule Trojan_Win32_Boaxxe_B_2147598164_0
         $x_1_2 = {ba 0b 00 00 00 e8 ?? ?? ?? ?? 8d 55 d8 8b 45 ?? e8 ?? ?? ?? ?? ff 75 d8 68 ?? ?? ?? ?? ff 75 ?? 8d 45 ?? ba 03 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Boaxxe_C_2147598866_0
         $x_1_2 = {ba 0b 00 00 00 e8 ?? ?? ?? ?? 8d 55 ?? 8b 45 f4 e8 ?? ?? ?? ?? ff 75 ?? 68 ?? ?? ?? ?? ff 75 dc 8d 45 f4 ba 03 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_Boaxxe_E_2147610500_0
         $x_1_16 = {70 72 6f 78 31 00 00 00 55 8b ec 33 c0 55 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -224,6 +227,7 @@ rule Trojan_Win32_Boaxxe_E_2147610500_1
         $x_1_128 = {00 00 00 68 70 6f 63 35 33 30 33 2e 44 4c 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -247,6 +251,7 @@ rule Trojan_Win32_Boaxxe_F_2147610501_0
         $x_2_4 = {8b 86 cc 00 00 00 89 c2 e8 00 00 00 00 58}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -274,6 +279,7 @@ rule Trojan_Win32_Boaxxe_J_2147616895_0
         $x_1_4 = {8b 4d ec 83 c1 01 89 4d ec 83 7d ec 65 7d 16 6a 03 e8 ?? ?? ?? ?? 83 c4 04 6a 0c e8 ?? ?? ?? ?? 83 c4 04 eb db}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -298,6 +304,7 @@ rule Trojan_Win32_Boaxxe_M_2147648960_0
         $x_1_5 = {73 6d 33 32 77 69 6e 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -324,6 +331,7 @@ rule Trojan_Win32_Boaxxe_R_2147717907_0
         $x_1_3 = {72 02 eb 2a 8b 45 ?? 89 85 ?? ?? ?? ?? 8b 4d ?? 03 8d ?? ?? ?? ?? 8b 55 ?? 03 95 ?? ?? ?? ?? 8a 02 88 01 8b 4d ?? 83 c1 01 89 4d ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

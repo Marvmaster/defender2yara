@@ -24,6 +24,7 @@ rule DoS_Win32_Rencisod_A_2147828606_0
         $x_5_10 = "B01BF3F2A3BE120B105358BB1AB8C510A443C379DA126BBE4DB94A7BF097262E" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or

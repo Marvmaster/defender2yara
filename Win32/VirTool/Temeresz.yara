@@ -18,6 +18,7 @@ rule VirTool_Win32_Temeresz_A_2147890412_0
         $x_1_3 = {85 ff 74 2d ff 15 ?? ?? ?? ?? 85 c0 ?? ?? 8d ?? ?? 51 50 ff 15 ?? ?? ?? ?? 33 c0 39}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

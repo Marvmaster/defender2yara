@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Dabvegi_A_2147628671_0
         $x_1_8 = {53 61 76 65 44 65 6c 65 74 65 53 74 61 72 74 75 70 4b 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule TrojanSpy_Win32_Dabvegi_B_2147664379_0
         $x_1_4 = {80 e1 7f 66 0f b6 c9 66 6b c9 02 0f 80 ?? ?? ?? ?? (34 1b|80) 66 33 ?? 8a ?? 33 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule TrojanSpy_Win32_Dabvegi_D_2147678888_0
         $x_1_3 = {6a 00 68 00 00 00 80 6a 00 6a 00 8b 45 08 8b 08 51 8d 55 b8 52 ff 15 ?? ?? 40 00 50 8b 45 ?? 50 e8 ?? ?? ?? ff 89 45 ac}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

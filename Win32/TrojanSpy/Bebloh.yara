@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Bebloh_A_2147611308_0
         $x_2_7 = {04 48 4b 45 59 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 05 48 48 4f 4f 4b 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
             ((5 of ($x_2_*))) or

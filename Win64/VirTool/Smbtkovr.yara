@@ -17,6 +17,7 @@ rule VirTool_Win64_Smbtkovr_A_2147921628_0
         $x_1_3 = "email._encoded_words" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_NatRat_A_2147752122_0
         $x_1_3 = {2c 20 30 2c 20 46 61 6c 73 65 20 3e 20 25 61 70 70 64 61 74 61 25 5c [0-16] 2e 76 62 5e 73 26 20 77 73 63 72 69 70 74 20 25 61 70 70 64 61 74 61 25 5c [0-16] 2e 76 62 5e 73 26 20 64 65 6c 20 25 61 70 70 64 61 74 61 25 5c [0-16] 2e 76 62 5e 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

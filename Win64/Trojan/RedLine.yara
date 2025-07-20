@@ -16,6 +16,7 @@ rule Trojan_Win64_RedLine_RDDM_2147892582_0
         $x_2_1 = {45 0f b6 ca 46 0f b6 0c 09 44 30 0c 30 48 ff c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_RedLine_ASJ_2147923160_0
         $x_5_1 = {43 0f b6 14 11 41 8a c1 83 e0 0f 0f b6 0c 18 32 ca 43 88 0c 11 4d 85 c9 74 07 41 32 cb 43 88 0c 11 44 0f b6 da 49 83 c1 01 eb}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

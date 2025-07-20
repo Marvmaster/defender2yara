@@ -17,6 +17,7 @@ rule Trojan_Win32_Tapxamy_A_2147730799_0
         $x_10_3 = "Software\\BaymaxPatchTools\\InjectDll" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

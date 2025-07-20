@@ -17,6 +17,7 @@ rule Worm_Win32_Nalki_A_2147623627_0
         $x_1_3 = {ba 28 f3 42 00 8d 4d e8 89 75 e8 89 75 d8 ff 15 10 11 40 00 8d 45 e8 8d 4d d8 50 51 e8 ee 08 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

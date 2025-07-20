@@ -16,6 +16,7 @@ rule Trojan_MacOS_Rustbucket_AP_2147918955_0
         $x_1_2 = "com.apple.pdfViewer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MacOS_Rustbucket_AQ_2147918956_0
         $x_1_2 = "down_update_run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_MacOS_Rustbucket_AR_2147918957_0
         $x_2_4 = {6f 70 65 6e 20 [0-8] 2f 55 73 65 72 73 2f 53 68 61 72 65 64 2f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -84,6 +87,7 @@ rule Trojan_MacOS_Rustbucket_AS_2147918958_0
         $x_1_2 = "7L2UQTVP6F" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_MacOS_Rustbucket_AU_2147919373_0
         $x_1_2 = "CUJH6YKSQY" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

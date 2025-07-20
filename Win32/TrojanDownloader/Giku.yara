@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Giku_A_2147631841_0
         $x_1_3 = {4c 44 31 35 45 39 46 45 38 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win32_Giku_B_2147632957_0
         $x_1_4 = "\\delme%04X.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

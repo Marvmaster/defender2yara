@@ -20,6 +20,7 @@ rule Backdoor_Win64_Ruspble_A_2147826380_0
         $x_1_6 = "SystemFunction036" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

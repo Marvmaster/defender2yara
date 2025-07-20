@@ -19,6 +19,7 @@ rule Trojan_Win32_Zlob_F_2147553766_0
         $x_1_5 = {41 56 5a 69 70 45 6e 63 68 61 6e 63 65 72 2e 43 68 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_Zlob_ZWC_2147597846_0
         $x_1_11 = "internetcrackurla" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 1 of ($x_3_*) and 6 of ($x_1_*))) or
             ((2 of ($x_20_*) and 2 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -86,6 +88,7 @@ rule Trojan_Win32_Zlob_ZWJ_2147598037_0
         $x_1_13 = "Software\\Online Add-on" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -118,6 +121,7 @@ rule Trojan_Win32_Zlob_N_2147598398_0
         $x_100_10 = "PulseEvent" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 6 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -157,6 +161,7 @@ rule Trojan_Win32_Zlob_A_2147599468_0
         $x_100_16 = {89 45 c0 8b 4d c0 83 79 18 08 72 0e 8b 55 c0 8b 42 04 89 85 ?? ?? ff ff eb 0c 8b 4d c0 83 c1 04 89 8d ?? ?? ff ff 6a 00 8d 55 fc 52 6a 00 68 06 00 02 00 6a 00 6a 00 6a 00 8b 85 ?? ?? ff ff 50 68 02 00 00 80 ff 15 04 f0 01 10 6a 00 6a 01 8d 4d e0 e8 ?? ca ff ff 68 ?? 00 02 10 8d 4d c4 51 e8 ?? ?? ff ff}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_20_*) and 11 of ($x_1_*))) or
             (all of ($x*))
@@ -198,6 +203,7 @@ rule Trojan_Win32_Zlob_B_2147600150_0
         $x_1_18 = "ToolbarWindow32" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +227,7 @@ rule Trojan_Win32_Zlob_B_2147600244_0
         $x_1_4 = {66 8b 08 83 c0 02 66 3b ce 75 f5 2b c2 d1 f8 50 8d 94 24 b8 00 00 00 52 8d 8c 24 a0 00 00 00 e8 ?? ?? ff ff 6a 04 68 ?? ?? 01 10 8d 4c 24 4c 89 7c 24 64 89 74 24 60 66 89 74 24 50 e8 ?? ?? ff ff 6a 06 68 ?? ?? 01 10 8d 4c 24 14 89 7c 24 2c 89 74 24 28 66 89 74 24 18 e8 ?? ?? ff ff 6a 02 68 ?? ?? 01 10 8d 4c 24 30 89 7c 24 48 89 74 24 44 66 89 74 24 34 e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -245,6 +252,7 @@ rule Trojan_Win32_Zlob_AML_2147600616_0
         $x_1_5 = "\\InprocServer32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -283,6 +291,7 @@ rule Trojan_Win32_Zlob_C_2147601109_0
         $x_1_18 = "ToolbarWindow32" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +330,7 @@ rule Trojan_Win32_Zlob_D_2147601248_0
         $x_1_18 = "ToolbarWindow32" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -350,6 +360,7 @@ rule Trojan_Win32_Zlob_AD_2147601303_0
         $x_1_10 = {8b 44 24 04 8b 00 8b 00 3d 4d 4f 43 e0 74 18 3d 63 73 6d e0 75 ?? e8 ?? ?? ff ff 83 a0 90 00 00 00 00 e9 ?? ?? 00 00 e8 ?? ?? ff ff 83 b8 90 00 00 00 00 7e ?? e8 ?? ?? ff ff 05 90 00 00 00 ff 08 33 c0 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -375,6 +386,7 @@ rule Trojan_Win32_Zlob_F_2147601622_0
         $n_10_5 = "Skynax" ascii //weight: -10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (1 of ($x*))
 }
@@ -421,6 +433,7 @@ rule Trojan_Win32_Zlob_G_2147601758_0
         $x_1000_25 = {45 6e 63 6f 64 65 50 6f 69 6e 74 65 72 00 00 00 4b 45 52 4e 45 4c 33 32 2e 44 4c 4c 00 00 00 00 44 65 63 6f 64 65 50 6f 69 6e 74 65 72 00 00 00 46 6c 73 46 72 65 65 00 46 6c 73 53 65 74 56 61 6c 75 65 00 46 6c 73 47 65 74 56 61 6c 75 65 00 46 6c 73 41 6c 6c 6f 63 00 00}  //weight: 1000, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1000_*) and 13 of ($x_50_*) and 3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -456,6 +469,7 @@ rule Trojan_Win32_Zlob_H_2147602344_0
         $x_10_12 = "BhoNew.DLL" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -482,6 +496,7 @@ rule Trojan_Win32_Zlob_H_2147602344_1
         $x_10_6 = {45 6e 63 6f 64 65 50 6f 69 6e 74 65 72 00 00 00 4b 45 52 4e 45 4c 33 32 2e 44 4c 4c 00 00 00 00 44 65 63 6f 64 65 50 6f 69 6e 74 65 72 00 00 00 46 6c 73 46 72 65 65 00 46 6c 73 53 65 74 56 61 6c 75 65 00 46 6c 73 47 65 74 56 61 6c 75 65 00 46 6c 73 41 6c 6c 6f 63 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -509,6 +524,7 @@ rule Trojan_Win32_Zlob_I_2147603186_0
         $x_2_4 = {75 06 66 c7 45 ?? ?? 00 0f b7 ?? ?? c1 ?? 04 0f b7 ?? ?? 03 ?? 66 89 ?? ?? e9 ?? ?? ff ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -537,6 +553,7 @@ rule Trojan_Win32_Zlob_J_2147605083_0
         $x_1_5 = {83 e9 57 0f b7 c9 3c ?? 7c 0f 3c ?? 7f 0b 66 0f be d0 66 83 ea ?? 0f b7 ca 3c ?? 7c 0f 3c ?? 7f 0b 66 0f be ?? 66 (2d|83 e9)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -557,6 +574,7 @@ rule Trojan_Win32_Zlob_AK_2147605202_0
         $x_1_1 = {66 0f be 0c 18 66 83 e9 41 0f b7 c9 c1 e7 04 03 f9 83 c0 01 83 f8 04 0f b7 ff 72 e4 83 ca ff 2b 56 14 83 fa 01 77 05 e8 ?? ?? ?? 00 8b 6e 14 83 c5 01 81 fd fe ff ff 7f 76 05 e8 ?? ?? ?? 00 [0-32] 76 56 8b 56 14 81 f7 ?? ?? ?? ?? 0f b7 cf bf 08 00 00 00 39 7e 18 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -580,6 +598,7 @@ rule Trojan_Win32_Zlob_ANE_2147605323_0
         $x_1_4 = {42 68 6f 4e 65 77 2e 44 4c 4c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -603,6 +622,7 @@ rule Trojan_Win32_Zlob_A_2147605726_0
         $x_1_1 = {8b 44 24 10 2b 44 24 08 6a 00 2d 76 01 00 00 99 2b c2 68 76 01 00 00 d1 f8 68 a4 01 00 00 50 8b 44 24 1c 2b 44 24 14 2d a4 01 00 00 99 2b c2 d1 f8 50 6a ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -623,6 +643,7 @@ rule Trojan_Win32_Zlob_D_2147605782_0
         $x_1_1 = {68 76 01 00 00 68 a4 01 00 00 8b 45 f8 2b 45 f0 2d 76 01 00 00 99 2b c2 d1 f8 50 8b 45 f4 2b 45 ec 2d a4 01 00 00 99 2b c2 d1 f8 50 6a ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -643,6 +664,7 @@ rule Trojan_Win32_Zlob_ZXE_2147606861_0
         $x_1_1 = {8b 45 cc 40 89 45 cc 8b 45 cc 3b 45 d0 73 34 8b 8d 48 ff ff ff e8 ?? ?? ff ff 66 89 45 c8 0f b7 45 c8 35 ?? ?? 00 00 50 6a 01 8d 4d d4 e8 70 01 00 00 8b 85 48 ff ff ff 83 c0 04 89 85 48 ff ff ff eb bd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -666,6 +688,7 @@ rule Trojan_Win32_Zlob_ZXG_2147607900_0
         $x_1_4 = "ep=%d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -692,6 +715,7 @@ rule Trojan_Win32_Zlob_L_2147608025_0
         $x_1_6 = "%d.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -716,6 +740,7 @@ rule Trojan_Win32_Zlob_P_2147608755_0
         $x_1_4 = {eb 09 8b 55 ?? 83 c2 01 89 55 ?? 8b 45 ?? 3b 45 ?? 73 2e 8b 4d 0c 51 e8 ?? ?? ff ff 83 c4 04 66 89 45 ?? 0f b7 55 ?? 81 f2 ?? ?? 00 00 52 8d 4d ?? e8 ?? ?? 00 00 8b 45 0c 83 c0 ?? 89 45 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -738,6 +763,7 @@ rule Trojan_Win32_Zlob_G_2147608828_0
         $x_1_3 = "homesecurepage.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -763,6 +789,7 @@ rule Trojan_Win32_Zlob_G_2147608828_1
         $x_1_3 = "homesecurepage.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -789,6 +816,7 @@ rule Trojan_Win32_Zlob_I_2147609452_0
         $x_1_4 = "_AD1CompleteR" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -824,6 +852,7 @@ rule Trojan_Win32_Zlob_AR_2147609756_0
         $x_1_13 = {00 43 6f 6e 66 69 72 6d 49 6e 73 74 61 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*) and 5 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -850,6 +879,7 @@ rule Trojan_Win32_Zlob_AT_2147609929_0
         $x_1_2 = {eb 07 8b 45 c4 40 89 45 c4 8b 45 c4 3b 45 ec 73 (2a|2b) ff 75 0c e8 ?? fe ff ff [0-102] 89 45 c0 0f b7 45 c0 35 ?? ?? 00 00 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -877,6 +907,7 @@ rule Trojan_Win32_Zlob_AU_2147610004_0
         $x_1_8 = {67 65 6f 72 67 69 61 20 6d 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -904,6 +935,7 @@ rule Trojan_Win32_Zlob_U_2147611089_0
         $x_1_5 = {74 6f 6f 6c 69 65 2e 44 4c 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -929,6 +961,7 @@ rule Trojan_Win32_Zlob_AV_2147611291_0
         $x_1_2 = {6a 00 8d 54 24 18 52 6a 04 8d 44 24 1c 50 57 ff d3 85 c0 74 17 83 7c 24 14 04 75 10 8b 4c 24 10 89 4c b5 00 83 c6 01 83 fe 04 7c d4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -950,6 +983,7 @@ rule Trojan_Win32_Zlob_AW_2147611388_0
         $x_1_2 = {75 11 8d 84 24 1c 01 00 00 50 55 ff 54 24 1c 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -970,6 +1004,7 @@ rule Trojan_Win32_Zlob_AZ_2147614208_0
         $x_1_1 = {67 6f 2d 61 76 61 73 74 7f e8 ff cb 21 00 67 61 72 62 61 67 65 77 6f 72 6c 64 23 62 6c 65 00 fe 77 53 9b 61 6f 76 48 61 74 68 13 41 70 70 6c 69 63}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -994,6 +1029,7 @@ rule Trojan_Win32_Zlob_BB_2147616834_0
         $x_3_5 = {6c 75 62 72 69 63 2e 64 6c 6c 00 63 61 6e 74 6f 00 6d 75 74 6f 62 72 6f 6e 63 00 70 65 79 64 65 79 72 61 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -1022,6 +1058,7 @@ rule Trojan_Win32_Zlob_R_2147620491_0
         $x_1_4 = "Delete on reboot: " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1045,6 +1082,7 @@ rule Trojan_Win32_Zlob_S_2147622346_0
         $x_1_3 = {50 47 e8 89 ff ff ff 88 06 8a 07 83 c4 04 46 84 c0 75 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1066,6 +1104,7 @@ rule Trojan_Win32_Zlob_DSK_2147753183_0
         $x_2_1 = {0f b6 c3 03 d0 81 e2 ff 00 00 00 8a 8a ?? ?? ?? ?? 30 0c 37 83 6d fc 01 8b 75 fc 85 f6 7d 05 00 a3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1090,6 +1129,7 @@ rule Trojan_Win32_Zlob_AMJ_114041_0
         $x_1_5 = {2e 64 6c 6c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

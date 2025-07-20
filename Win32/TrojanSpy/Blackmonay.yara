@@ -24,6 +24,7 @@ rule TrojanSpy_Win32_Blackmonay_A_2147650981_0
         $x_1_10 = "1FBA04EE-3024-11D2-8F1F-0000F87ABD16" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 3 of ($x_1_*))) or
             ((5 of ($x_2_*) and 1 of ($x_1_*))) or

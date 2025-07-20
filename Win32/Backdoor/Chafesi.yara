@@ -20,6 +20,7 @@ rule Backdoor_Win32_Chafesi_A_2147619188_0
         $x_1_6 = {6a 38 50 ff d6 8d 8d ?? ?? ff ff 6a 39 51 ff d6 8d 95 ?? ?? ff ff 6a 2b 52 ff d6 8d 85 ?? ?? ff ff 6a 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or

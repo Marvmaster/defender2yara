@@ -22,6 +22,7 @@ rule BrowserModifier_Win32_YokSearch_17663_0
         $x_1_8 = "\\yoksch.htm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule BrowserModifier_Win32_YokSearch_17663_1
         $x_1_5 = "RegCreateKeyExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -84,6 +86,7 @@ rule BrowserModifier_Win32_YokSearch_17663_2
         $x_1_16 = "yokbar.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 

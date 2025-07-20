@@ -17,6 +17,7 @@ rule Trojan_Win32_SelfDel_CL_2147805267_0
         $x_1_2 = {01 ee 66 81 f3 2f ec 01 eb 8b 1b 8b 1b 31 1e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_SelfDel_TC_2147809808_0
         $x_1_4 = "QueryPerformanceCounter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_SelfDel_BR_2147812207_0
         $x_1_4 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_SelfDel_CB_2147814574_0
         $x_2_2 = {2b 55 0c 33 d3 2b 15 [0-4] 83 f2 ?? 89 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_Win32_SelfDel_A_2147828589_0
         $x_1_4 = {83 7d 0c 23 66 c7 45 dc 5c 00 66 c7 45 de 4d 00 66 c7 45 e0 6f 00 66 c7 45 e2 7a 00 66 c7 45 e4 69 00 66 c7 45 e6 6c 00 66 c7 45 e8 6c 00 66 c7 45 ea 61 00 66 89 75 ec 66 c7 45 f0 2e 00 66 c7 45 f2 65 00 66 c7 45 f4 78 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +147,7 @@ rule Trojan_Win32_SelfDel_MA_2147842623_0
         $x_1_11 = "-k DcomLaunch -p" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_Win32_SelfDel_GZA_2147901971_0
         $x_1_2 = "open status d:\\\\edwr\\araf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

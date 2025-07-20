@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Notchod_A_2147599718_0
         $x_1_2 = {68 fa 00 00 00 ff 15 ?? ?? ?? ?? 68 05 01 00 00 6a 40 ff 15 ?? ?? ?? ?? 89 45 fc 68 04 01 00 00 ff 75 fc 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? ff 75 fc 6a 00 6a 00 ff 75 fc ff 15 ?? ?? ?? ?? 6a 00 6a 00 ff 75 fc ff 75 08 6a 00 ff ?? ?? ?? ?? ?? ff 45 f8 0b c0 74 08 83 7d f8 04 73 02 eb a2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

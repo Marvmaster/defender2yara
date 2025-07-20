@@ -23,6 +23,7 @@ rule Trojan_Win32_Allegato_MA_2147841631_0
         $x_1_8 = "GetTickCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_Allegato_MA_2147841631_1
         $x_3_4 = {e0 00 8e 81 0b 01 02 19 00 e8 05 00 00 7c 0e 00 00 00 00 00 38 95 05 00 00 10 00 00 00 00 06 00 00 00 40}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

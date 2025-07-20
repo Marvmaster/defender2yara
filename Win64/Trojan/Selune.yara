@@ -21,6 +21,7 @@ rule Trojan_Win64_Selune_A_2147942874_0
         $x_1_7 = {00 56 42 6f 78 54 72 61 79 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

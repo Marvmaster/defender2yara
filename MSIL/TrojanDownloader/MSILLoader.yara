@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_MSILLoader_CSWF_2147845026_0
         $x_1_3 = "http://maloymez.beget.tech/panel/uploads/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*))) or
             (all of ($x*))

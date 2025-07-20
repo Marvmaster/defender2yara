@@ -17,6 +17,7 @@ rule Trojan_MSIL_Resocks_A_2147767226_0
         $x_2_3 = "PACKET_PROXY_CLIENT_SHUTDOWN" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

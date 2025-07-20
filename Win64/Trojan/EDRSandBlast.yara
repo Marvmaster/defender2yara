@@ -17,6 +17,7 @@ rule Trojan_Win64_EDRSandBlast_YBJ_2147912647_0
         $x_1_2 = {b9 01 00 00 00 ff 15 71 fc 01 00 ff c3 83 fb ff 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

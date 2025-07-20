@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Bodsuds_A_2147623519_0
         $x_1_2 = {68 00 00 00 c0 8d 85 ?? ?? ff ff 50 ff 15 ?? ?? ?? ?? 89 85 ?? ?? ff ff c7 85 ?? ?? ff ff 4d 5a 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

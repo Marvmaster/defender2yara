@@ -16,6 +16,7 @@ rule Trojan_Win32_Wintrim_A_116950_0
         $x_1_1 = {eb 0a 8b 45 ?? 8b 4d ?? 8d (74|7c) (01|08) 04 6a 40 68 00 10 00 00 6a 10 6a 00 ff 55 ?? 8b d8 (83 63|c7 43 0c 00 00) 66 81 (3e|3f) 4d 5a 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Wintrim_H_119006_0
         $x_1_2 = {e9 dd 07 00 00 55 8b ec 83 ec 34 8b 45 08 8b 48 08 33 d2 42 53 8b 58 0c 56 8b f2 d3 e6 8b 48 04 8b 00 57 8b fa d3 e7 89 45 d4 03 c8 b8 00 03 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Wintrim_A_121768_0
         $x_1_10 = {2d 75 6e 69 6e 73 74 61 6c 6c 00 6d 79 6d 75 74 73 67 6c 77 6f 72 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -115,6 +118,7 @@ rule Trojan_Win32_Wintrim_I_128177_0
         $n_100_25 = "Navilog1" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_4_*) and 1 of ($x_3_*) and 2 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -244,6 +248,7 @@ rule Trojan_Win32_Wintrim_D_128261_0
         $x_1_8 = "RemoteDownloadFile error" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -270,6 +275,7 @@ rule Trojan_Win32_Wintrim_F_139210_0
         $x_5_4 = {6d 41 6e 64 4c 6f 61 64 [0-37] 3a 3a [0-65] 70 6d 63}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
@@ -296,6 +302,7 @@ rule Trojan_Win32_Wintrim_G_139256_0
         $x_1_3 = {46 32 5f 00 38 37 34 39 34 61 30 62 61 38 66 38 66 39 34 65 66 64 37 64 65 62 63 61 66 39 31 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

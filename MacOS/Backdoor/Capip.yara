@@ -19,6 +19,7 @@ rule Backdoor_MacOS_Capip_A_2147752405_0
         $x_1_4 = "s8guardian11sendRequest3url6method4body10Foundation4DataVSS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Backdoor_Win32_CobaltStrike_C_2147773461_0
         $x_1_4 = "TortoiseSVN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Backdoor_Win32_CobaltStrike_H_2147781963_0
         $x_2_2 = {8a 0c 55 c8 09 41 00 c0 e1 [0-1] 02 0c 55 c9 09 41 00 88 0c 32 42 81 fa [0-4] 72 e3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Backdoor_Win32_CobaltStrike_HK_2147782177_0
         $x_1_2 = {6a 04 68 00 10 00 00 68 00 30 03 00 6a 00 ff 15 [0-4] 8b f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Backdoor_Win32_CobaltStrike_Z_2147782630_0
         $x_5_2 = {8b fa 89 1c 24 33 f6 85 d2 7e 16 8b cb 8b d8 8b 03 33 d2 f7 f5 41 83 c3 ?? 46 88 51 ff 3b f7 7c ee 8b 04 24 89 2d 44 a0 40 00 83 c4 04 5d 5f 5e}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Backdoor_Win32_CobaltStrike_MXK_2147786274_0
         $x_1_2 = {8b 03 33 d2 f7 f5 41 83 c3 04 46 88 51 ff 3b f7 7c ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Backdoor_Win32_CobaltStrike_MBK_2147807631_0
         $x_1_1 = {33 d2 0f b7 01 33 d2 66 2b 05 [0-4] 33 d2 66 f7 35 [0-4] 33 d2 88 06 33 d2 46 33 d2 43 33 d2 83 c1 02 33 d7 3b da 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +159,7 @@ rule Backdoor_Win32_CobaltStrike_BW_2147815894_0
         $x_1_2 = {ff d0 89 45 fc 8b 45 f0 89 c1 48 8b 05 c5 0a 11 00 ff d0 48 8b 05 fc 09 11 00 ff d0 89 45 f8 8b 45 f8 2b 45 fc 89 45 f4 8b 45 f0 2d e8 03 00 00 39 45 f4 76 07 b8 00 00 00 00 eb 05 b8 01 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

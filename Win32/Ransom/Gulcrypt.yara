@@ -18,6 +18,7 @@ rule Ransom_Win32_Gulcrypt_A_2147688245_0
         $x_1_4 = {00 63 68 69 70 5f 61 6e 64 5f 64 61 6c 65 2e 76 7a 68 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Gulcrypt_A_2147688245_1
         $x_5_4 = {b9 19 00 00 00 bb 01 00 00 00 d3 e3 23 d8 74 2d 80 c1 41 88 0d ?? ?? 40 00 80 e9 41 c7 05 ?? ?? 40 00 3a 5c 2a 2e c6 05 ?? ?? 40 00 2a c6 05 ?? ?? 40 00 00 50 51 e8 ?? ?? ff ff 59 58 49 7d c5}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -72,6 +74,7 @@ rule Ransom_Win32_Gulcrypt_B_2147691452_0
         $x_1_8 = {c7 80 00 30 40 00 5c 2a 2e 2a c6 80 04 30 40 00 00 e8 54 ff ff ff 58 c7 80 ff 2f 40 00 5c 2a 2e 2a c6 80 03 30 40 00 00 e9 67 02 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -101,6 +104,7 @@ rule Ransom_Win32_Gulcrypt_B_2147691452_1
         $x_2_6 = {bb 01 00 00 00 d3 e3 23 d8 74 ?? 80 c1 41 88 0d ?? ?? ?? ?? 80 e9 41 c7 05 ?? ?? ?? ?? 3a 5c 2a 2e [0-1] c6 05 ?? ?? ?? ?? 2a c6 05 ?? ?? ?? ?? 00 50 51 e8 ?? ?? ?? ?? 59 58 49 7d 05 00 b9 ?? 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

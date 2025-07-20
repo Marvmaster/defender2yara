@@ -18,6 +18,7 @@ rule Backdoor_Win32_Pingbed_A_2147629381_0
         $x_1_4 = {4b 69 6c 6c 69 6e 67 20 70 72 6f 63 65 73 73 20 25 73 20 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -43,6 +44,7 @@ rule Backdoor_Win32_Pingbed_B_2147654533_0
         $x_1_2 = {3c 0a 75 0a 80 7d ?? 0d 74 04 c6 01 0d 41 88 01 88 45 00 8b 45 ?? 41 40 89 45 02 3b 45 ?? 72 dc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

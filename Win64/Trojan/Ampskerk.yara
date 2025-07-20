@@ -18,6 +18,7 @@ rule Trojan_Win64_Ampskerk_A_2147682395_0
         $x_1_3 = {48 6f 6f 6b 44 43 2e 64 6c 6c 00 69 00 75 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win64_Ampskerk_B_2147691027_0
         $x_1_8 = "CDLocateCSystem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 4 of ($x_1_*))) or
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or

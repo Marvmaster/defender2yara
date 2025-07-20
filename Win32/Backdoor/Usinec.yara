@@ -16,6 +16,7 @@ rule Backdoor_Win32_Usinec_A_2147651441_0
         $x_1_2 = {6a 00 6a 00 68 1f 00 0f 00 53 a1 ?? ?? ?? ?? 8b 00 ff d0 a3 ?? ?? ?? ?? 83 3d 01 00 74 [0-9] 8b c6 b9 ?? ?? 00 00 8b 15 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Backdoor_Win32_Usinec_B_2147652872_0
         $x_1_3 = "i7\\3RD\\k" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Backdoor_Win32_Usinec_D_2147655453_0
         $x_1_8 = "http://handjobheats.com/xgi-bin/q.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

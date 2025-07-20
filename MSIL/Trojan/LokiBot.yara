@@ -19,6 +19,7 @@ rule Trojan_MSIL_LokiBot_DA_2147778921_0
         $x_1_4 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Trojan_MSIL_LokiBot_DA_2147778921_1
         $x_1_13 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -79,6 +81,7 @@ rule Trojan_MSIL_LokiBot_DB_2147780440_0
         $x_1_3 = "Split" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +111,7 @@ rule Trojan_MSIL_LokiBot_DB_2147780440_1
         $x_1_9 = "Split" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -139,6 +143,7 @@ rule Trojan_MSIL_LokiBot_DB_2147780440_2
         $x_1_7 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -169,6 +174,7 @@ rule Trojan_MSIL_LokiBot_AQE_2147781246_0
         $x_1_6 = "ToInt32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -202,6 +208,7 @@ rule Trojan_MSIL_LokiBot_HDF_2147781886_0
         $x_1_10 = "ThreadAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -228,6 +235,7 @@ rule Trojan_MSIL_LokiBot_DEN_2147811058_0
         $x_3_6 = "DebuggingModes" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -254,6 +262,7 @@ rule Trojan_MSIL_LokiBot_CM_2147813926_0
         $x_3_6 = "MoveGuestDownHallway" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -281,6 +290,7 @@ rule Trojan_MSIL_LokiBot_ER_2147816389_0
         $x_1_7 = "Sleep" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -307,6 +317,7 @@ rule Trojan_MSIL_LokiBot_EQ_2147816484_0
         $x_1_6 = "Another" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -338,6 +349,7 @@ rule Trojan_MSIL_LokiBot_ES_2147817059_0
         $x_1_7 = "get_X" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -368,6 +380,7 @@ rule Trojan_MSIL_LokiBot_ET_2147817291_0
         $x_1_10 = "MemoryStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 8 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -399,6 +412,7 @@ rule Trojan_MSIL_LokiBot_NTX_2147818434_0
         $x_1_7 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -422,6 +436,7 @@ rule Trojan_MSIL_LokiBot_NUX_2147819474_0
         $x_1_3 = "TypingGame.Form1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -447,6 +462,7 @@ rule Trojan_MSIL_LokiBot_FA_2147819726_0
         $x_1_5 = "Xrdehdnwonodqhavci" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -470,6 +486,7 @@ rule Trojan_MSIL_LokiBot_FB_2147819989_0
         $x_1_3 = "get_Assembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -493,6 +510,7 @@ rule Trojan_MSIL_LokiBot_FC_2147819990_0
         $x_1_3 = "get_Assembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -514,6 +532,7 @@ rule Trojan_MSIL_LokiBot_RPC_2147820123_0
         $x_1_1 = {20 16 08 02 00 0c 2b 13 00 06 08 20 00 01 00 00 28 07 00 00 06 0a 00 08 15 58 0c 08 16 fe 04 16 fe 01 0d 09 2d e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -536,6 +555,7 @@ rule Trojan_MSIL_LokiBot_RPC_2147820123_1
         $x_1_2 = "24Y8GYDQ2J6VTJB" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -562,6 +582,7 @@ rule Trojan_MSIL_LokiBot_RPC_2147820123_2
         $x_1_6 = "_0xDEctopl3smic" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -586,6 +607,7 @@ rule Trojan_MSIL_LokiBot_XNFA_2147825479_0
         $x_1_4 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -607,6 +629,7 @@ rule Trojan_MSIL_LokiBot_RPH_2147825661_0
         $x_1_1 = {00 00 11 04 17 58 13 04 11 04 17 fe 04 13 05 11 05 2d b8 06 17 58 0a 00 09 17 58 0d 09 20 00 ?? 01 00 fe 04 13 06 11 06 2d 9b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -628,6 +651,7 @@ rule Trojan_MSIL_LokiBot_RPH_2147825661_1
         $x_1_1 = {07 11 04 9a 13 05 11 05 14 fe 01 13 06 11 06 2c 02 2b 48 11 05 2c 12 11 05 7e 75 00 00 0a 16 28 76 00 00 0a 16 fe 03 2b 01 16 13 07 11 07 2c 2a 08 18 8d 03 00 00 01 25 16 11 04 8c 42 00 00 01 a2 25 17 11 05 28 77 00 00 0a 04 da 8c 42 00 00 01 a2 14 28 78 00 00 0a 00 00 00 11 04 17 d6 13 04 11 04 09 31 9a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -649,6 +673,7 @@ rule Trojan_MSIL_LokiBot_NS_2147825863_0
         $x_1_1 = {04 11 04 02 11 04 02 6f ?? ?? ?? 0a 5d 6f ?? ?? ?? 0a 7e ?? ?? ?? 04 11 04 91 28 ?? ?? ?? 06 9c 11 04 17 58 13 04 11 04 7e ?? ?? ?? 04 8e 69 fe 04 13 05 11 05 2d c5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -670,6 +695,7 @@ rule Trojan_MSIL_LokiBot_RPM_2147825944_0
         $x_1_1 = {09 1b 59 1c 58 0d 09 17 fe 04 13 09 11 09 2d c3 06 17 58 0a 00 08 1a 59 1b 58 0c 08 20 00 c6 00 00 fe 04 13 0a 11 0a 2d a5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -691,6 +717,7 @@ rule Trojan_MSIL_LokiBot_RPM_2147825944_1
         $x_1_1 = {00 00 11 04 17 58 13 04 11 04 17 fe 04 13 05 11 05 2d c0 06 17 58 0a 00 09 17 58 0d 09 20 00 24 01 00 fe 04 13 06 11 06 2d a3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -718,6 +745,7 @@ rule Trojan_MSIL_LokiBot_RPM_2147825944_2
         $x_1_7 = "get_Ticks" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -739,6 +767,7 @@ rule Trojan_MSIL_LokiBot_RPK_2147826151_0
         $x_1_1 = {7e 45 00 00 04 0a 06 28 ad 00 00 0a 7e 45 00 00 04 02 12 02 6f ae 00 00 0a 2c 04 08 0b de 11 02 17 28 a2 00 00 06 0b de 07 06 28 af 00 00 0a dc 07 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -760,6 +789,7 @@ rule Trojan_MSIL_LokiBot_RPL_2147826286_0
         $x_1_1 = {09 1b 59 1c 58 0d 09 17 32 ce 06 17 58 0a 08 1a 59 1b 58 0c 08 20 00 d8 00 00 32 b8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -786,6 +816,7 @@ rule Trojan_MSIL_LokiBot_RPL_2147826286_1
         $x_1_6 = "GetHashCode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -807,6 +838,7 @@ rule Trojan_MSIL_LokiBot_RPS_2147826454_0
         $x_1_1 = {d2 9c 00 09 17 58 0d 09 17 fe 04 13 04 11 04 2d c5 06 17 58 0a 00 08 17 58 0c 08 ?? ?? ?? ?? ?? fe 04 13 05 11 05 2d a9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -832,6 +864,7 @@ rule Trojan_MSIL_LokiBot_RPS_2147826454_1
         $x_1_5 = "GameForSemestr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -853,6 +886,7 @@ rule Trojan_MSIL_LokiBot_RPX_2147826948_0
         $x_1_1 = {00 06 08 0e 04 08 91 07 08 07 8e 69 5d 91 61 d2 9c 00 08 17 58 0c 08 04 8e 69 fe 04 0d 09 2d e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -874,6 +908,7 @@ rule Trojan_MSIL_LokiBot_RPX_2147826948_1
         $x_1_1 = {00 07 11 04 07 8e 69 5d 07 11 04 07 8e 69 5d 91 08 11 04 1f 16 5d ?? ?? 00 00 0a 61 ?? ?? 00 00 0a 07 11 04 17 58 07 8e 69 5d 91 ?? ?? 00 00 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 00 11 04 15 58 13 04 11 04 16 fe 04 16 fe 01 13 05 11 05 2d ac}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -903,6 +938,7 @@ rule Trojan_MSIL_LokiBot_RPX_2147826948_2
         $x_1_9 = "Paretherflen.Tucson" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -926,6 +962,7 @@ rule Trojan_MSIL_LokiBot_NYA_2147827128_0
         $x_1_3 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -948,6 +985,7 @@ rule Trojan_MSIL_LokiBot_RPB_2147827271_0
         $x_1_2 = "MagicUI.GREEN" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -975,6 +1013,7 @@ rule Trojan_MSIL_LokiBot_RPB_2147827271_1
         $x_1_7 = "Infusion" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1004,6 +1043,7 @@ rule Trojan_MSIL_LokiBot_RPB_2147827271_2
         $x_1_9 = "DynamicInvoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1032,6 +1072,7 @@ rule Trojan_MSIL_LokiBot_RPD_2147827335_0
         $x_1_8 = "4576656E74526567697374726174696F6E546F6B656E4C" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1053,6 +1094,7 @@ rule Trojan_MSIL_LokiBot_RPE_2147827336_0
         $x_1_1 = {1f 11 0d 09 18 d8 0d 09 20 a0 86 01 00 fe 02 13 04 11 04 2c 13 09 6c 23 00 00 00 00 00 6a e8 40 5b 28 54 00 00 0a b7 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1075,6 +1117,7 @@ rule Trojan_MSIL_LokiBot_RPE_2147827336_1
         $x_1_2 = "SSQJRSWYIHTWQAX" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1101,6 +1144,7 @@ rule Trojan_MSIL_LokiBot_FD_2147828051_0
         $x_1_6 = "MemoryStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1127,6 +1171,7 @@ rule Trojan_MSIL_LokiBot_FE_2147828052_0
         $x_1_6 = "MemoryStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1153,6 +1198,7 @@ rule Trojan_MSIL_LokiBot_FF_2147828191_0
         $x_1_6 = "MemoryStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1182,6 +1228,7 @@ rule Trojan_MSIL_LokiBot_FG_2147828192_0
         $x_1_9 = "Concat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1207,6 +1254,7 @@ rule Trojan_MSIL_LokiBot_NYT_2147828702_0
         $x_1_5 = "Gmrabnaed.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1235,6 +1283,7 @@ rule Trojan_MSIL_LokiBot_FI_2147829197_0
         $x_1_8 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1265,6 +1314,7 @@ rule Trojan_MSIL_LokiBot_FJ_2147829198_0
         $x_1_6 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1292,6 +1342,7 @@ rule Trojan_MSIL_LokiBot_FL_2147829586_0
         $x_1_7 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1322,6 +1373,7 @@ rule Trojan_MSIL_LokiBot_FM_2147829587_0
         $x_1_6 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1349,6 +1401,7 @@ rule Trojan_MSIL_LokiBot_FN_2147829598_0
         $x_1_7 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1379,6 +1432,7 @@ rule Trojan_MSIL_LokiBot_FP_2147829639_0
         $x_1_6 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1404,6 +1458,7 @@ rule Trojan_MSIL_LokiBot_NXH_2147830115_0
         $x_1_5 = "Rfc2898DeriveBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1425,6 +1480,7 @@ rule Trojan_MSIL_LokiBot_RPV_2147830184_0
         $x_1_1 = {0a 00 1f 11 0d 09 18 5a 0d 09 20 a0 86 01 00 fe 02 13 04 11 04 2c 14 09 6c 23 00 00 00 00 00 6a e8 40 5b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1446,6 +1502,7 @@ rule Trojan_MSIL_LokiBot_RPO_2147830742_0
         $x_1_1 = {00 1f 11 0d 09 18 d8 0d 09 20 a0 86 01 00 fe 02 13 04 11 04 2c 14 09 6c 23 00 00 00 00 00 6a e8 40 5b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1468,6 +1525,7 @@ rule Trojan_MSIL_LokiBot_RPT_2147830953_0
         $x_1_2 = "Ussr is back" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1495,6 +1553,7 @@ rule Trojan_MSIL_LokiBot_RPW_2147831114_0
         $x_1_7 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1518,6 +1577,7 @@ rule Trojan_MSIL_LokiBot_RPF_2147831301_0
         $x_1_3 = "Numb In The End" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1539,6 +1599,7 @@ rule Trojan_MSIL_LokiBot_RPN_2147833025_0
         $x_1_1 = {7e 06 00 00 04 06 28 ?? 00 00 06 d2 9c 09 17 58 0d 09 17 32 cf 06 17 58 0a 08 17 58 0c 08 20 00 4e 01 00 32 bb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1566,6 +1627,7 @@ rule Trojan_MSIL_LokiBot_RDA_2147833130_0
         $x_2_7 = {0a 00 02 16 6f ?? ?? ?? ?? 00 72 ?? ?? ?? ?? 72 ?? ?? ?? ?? 72 ?? ?? ?? ?? 28 38 00 00 0a 28 39 00 00 0a 72 ?? ?? ?? ?? 72 ?? ?? ?? ?? 72 ?? ?? ?? ?? 28 38 00 00 0a 20 00 01 00 00 14 14 18 8d 15 00 00 01 25 16 7e ?? ?? ?? ?? 74 43 00 00 01 a2 25 17 02 7b ?? ?? ?? ?? a2 6f 3a 00 00 0a 26 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1591,6 +1653,7 @@ rule Trojan_MSIL_LokiBot_RDB_2147833131_0
         $x_2_5 = {2a 00 02 74 25 00 00 01 6f 25 00 00 0a 1f 14 9a 13 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1620,6 +1683,7 @@ rule Trojan_MSIL_LokiBot_RDD_2147833133_0
         $x_1_9 = "user32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1642,6 +1706,7 @@ rule Trojan_MSIL_LokiBot_RDE_2147833134_0
         $x_2_2 = {02 06 17 6a 58 02 8e 69 6a 5d d4 91}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1666,6 +1731,7 @@ rule Trojan_MSIL_LokiBot_RDF_2147833881_0
         $x_1_4 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1687,6 +1753,7 @@ rule Trojan_MSIL_LokiBot_RPZ_2147836240_0
         $x_1_1 = {13 06 11 04 28 91 00 00 0a 11 06 28 91 00 00 0a da 04 d6 1f 1a 5d 13 07 07 11 06 28 91 00 00 0a 11 07 d6 28 92 00 00 0a 28 93 00 00 0a 28 94 00 00 0a 0b 00 2b 10 00 07 11 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1708,6 +1775,7 @@ rule Trojan_MSIL_LokiBot_RPZ_2147836240_1
         $x_1_1 = {02 07 02 8e 69 5d 02 07 02 8e 69 5d 91 06 07 1f 16 5d 91 61 28 ab 00 00 0a 02 07 17 58 02 8e 69 5d 91 28 ac 00 00 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 07 15 58 0b 07 16 2f c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1735,6 +1803,7 @@ rule Trojan_MSIL_LokiBot_RPZ_2147836240_2
         $x_1_7 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1756,6 +1825,7 @@ rule Trojan_MSIL_LokiBot_SRPB_2147836551_0
         $x_5_1 = {02 07 02 8e 69 5d 02 07 02 8e 69 5d 91 06 07 1f 16 5d 91 61 28 ?? ?? ?? 0a 02 07 17 58 02 8e 69 5d 91 28 ?? ?? ?? 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 07 15 58 0b 07 16 2f c2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1778,6 +1848,7 @@ rule Trojan_MSIL_LokiBot_CPC_2147840279_0
         $x_1_2 = "AMXWrapper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1801,6 +1872,7 @@ rule Trojan_MSIL_LokiBot_CPD_2147840280_0
         $x_1_3 = "Rnbaccjwl$" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1824,6 +1896,7 @@ rule Trojan_MSIL_LokiBot_CPE_2147840281_0
         $x_1_3 = "CV33112" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1846,6 +1919,7 @@ rule Trojan_MSIL_LokiBot_CPA_2147840293_0
         $x_1_2 = "59.58.1.63" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1868,6 +1942,7 @@ rule Trojan_MSIL_LokiBot_CPB_2147840294_0
         $x_5_2 = {03 28 49 00 00 06 25 26 13 00 38 ?? ?? ?? ?? dd ?? ?? ?? ?? 26 38 ?? ?? ?? ?? 1f 61 6a 03 28 4b 00 00 06 13 00 38}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1889,6 +1964,7 @@ rule Trojan_MSIL_LokiBot_CMM_2147841800_0
         $x_5_1 = {02 08 09 91 28 05 00 00 06 13 04 7e 01 00 00 04 11 04 6f 0d 00 00 0a 09 17 58 0d 09 08 8e 69 17 59 32 dd}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1910,6 +1986,7 @@ rule Trojan_MSIL_LokiBot_CND_2147841801_0
         $x_5_1 = {28 65 02 00 06 72 ?? 0b 00 70 72 ?? 0b 00 70 28 26 02 00 06 17 8d ?? 00 00 01 25 16 1f 2d 9d 28 27 02 00 06 0b}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1932,6 +2009,7 @@ rule Trojan_MSIL_LokiBot_CTT_2147841873_0
         $x_5_2 = {07 19 11 07 5a 6f ?? ?? ?? ?? 13 08 11 08 1f 39 fe 02 13 0a 11 0a 2c 0d 11 08 1f 41 59 1f 0a 58 d1 13 08 2b 08 11 08 1f 30 59 d1 13 08 07 19 11 07 5a 17 58 6f ?? ?? ?? ?? 13 09 11 09 1f 39 fe 02 13 0b 11 0b 2c 0d 11 09 1f 41 59 1f 0a 58 d1 13 09 2b 08 11 09 1f 30 59 d1 13 09 09 11 07 1f 10 11 08 5a 11 09 58 d2 9c 00 11 07 17 58 13 07 11 07 08 fe 04 13 0c 11 0c 2d 84}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1954,6 +2032,7 @@ rule Trojan_MSIL_LokiBot_CLF_2147842129_0
         $x_5_2 = {08 11 05 07 11 05 9a 1f 10 28 ?? ?? ?? ?? d2 9c 00 11 05 17 58 13 05 11 05 07 8e 69 fe 04 13 06 11 06 2d db}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1976,6 +2055,7 @@ rule Trojan_MSIL_LokiBot_CXE_2147842132_0
         $x_5_2 = {11 02 11 05 11 01 11 05 9a 1f 10 28 ?? ?? ?? ?? d2 9c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1998,6 +2078,7 @@ rule Trojan_MSIL_LokiBot_CLO_2147842735_0
         $x_5_2 = {08 11 05 07 11 05 9a 1f 10 28 ?? ?? ?? ?? 9c 00 11 05 17 58 13 05 11 05 07 8e 69 fe 04 13 06 11 06 2d dc}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2019,6 +2100,7 @@ rule Trojan_MSIL_LokiBot_CNDA_2147843332_0
         $x_5_1 = {11 01 2a 00 03 72 ?? ?? ?? ?? 72 ?? ?? ?? ?? 6f ?? ?? ?? ?? 72 ?? ?? ?? ?? 72 ?? ?? ?? ?? 6f ?? ?? ?? ?? 72 ?? ?? ?? ?? 72 ?? ?? ?? ?? 6f ?? ?? ?? ?? 72 ?? ?? ?? ?? 72 ?? ?? ?? ?? 28 ?? ?? ?? ?? 13 02 20 ?? ?? ?? ?? 28 ?? ?? ?? ?? 39 ?? ?? ?? ?? 26 38 ?? ?? ?? ?? 11 02 72 ?? ?? ?? ?? 72 ?? ?? ?? ?? 28 ?? ?? ?? ?? 13 01 38 ?? ?? ?? ?? 38 ?? ?? ?? ?? 20 ?? ?? ?? ?? 28 ?? ?? ?? ?? 39 ?? ?? ?? ?? 26 20}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2040,6 +2122,7 @@ rule Trojan_MSIL_LokiBot_CLQ_2147843365_0
         $x_5_1 = {72 9d 02 00 70 6f ?? ?? ?? ?? 74 ?? ?? ?? ?? 72 ?? ?? ?? ?? 72 ?? ?? ?? ?? 6f ?? ?? ?? ?? 17 8d ?? ?? ?? ?? 25 16 1f 2d 9d 6f ?? ?? ?? ?? 13 04 11 04}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2061,6 +2144,7 @@ rule Trojan_MSIL_LokiBot_CXJ_2147843367_0
         $x_5_1 = {06 72 bc 07 00 70 6f ?? ?? ?? ?? 74 ?? ?? ?? ?? 0c 08 28 ?? ?? ?? ?? 00 07 08 6f ?? ?? ?? ?? 00 07 06 72 ?? ?? ?? ?? 6f ?? ?? ?? ?? 74 ?? ?? ?? ?? 6f ?? ?? ?? ?? 00 07 06 72 ?? ?? ?? ?? 6f ?? ?? ?? ?? 74 ?? ?? ?? ?? 6f ?? ?? ?? ?? 00 07 6f ?? ?? ?? ?? 28 ?? ?? ?? ?? 0d 09 6f ?? ?? ?? ?? 17 9a 6f 86 00 00 0a 17 9a 13 04 11 04 16 8c ?? ?? ?? ?? 7e ?? ?? ?? ?? 13 05 11 05}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2082,6 +2166,7 @@ rule Trojan_MSIL_LokiBot_CMO_2147843452_0
         $x_5_1 = {04 05 5d 91 61 7e 1a 01 00 04 28 5b 02 00 06 03 04 17 58 03 8e 69 5d 91 7e 1b 01 00 04 28 5f 02 00 06 59 11 00 58 11 00 5d d2}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2106,6 +2191,7 @@ rule Trojan_MSIL_LokiBot_CSR_2147843608_0
         $x_1_4 = "System.dll$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2127,6 +2213,7 @@ rule Trojan_MSIL_LokiBot_CSWI_2147844566_0
         $x_5_1 = {0b 07 06 72 ?? ?? ?? ?? 6f ?? ?? ?? ?? 74 ?? ?? ?? ?? 6f ?? ?? ?? ?? 00 07 06 72 ?? ?? ?? ?? 6f ?? ?? ?? ?? 74 ?? ?? ?? ?? 6f ?? ?? ?? ?? 00 07 06 72 ?? ?? ?? ?? 6f ?? ?? ?? ?? 74 ?? ?? ?? ?? 6f ?? ?? ?? ?? 00 02 28 ?? ?? ?? ?? 02 7b ?? ?? ?? ?? 6f ?? ?? ?? ?? 00 02 02 7b ?? ?? ?? ?? 28 ?? ?? ?? ?? 00 07 6f ?? ?? ?? ?? 28}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2148,6 +2235,7 @@ rule Trojan_MSIL_LokiBot_RPY_2147846028_0
         $x_1_1 = {07 11 06 91 11 08 61 07 11 06 17 58 08 5d 91 59 11 09 58 11 09 17 59 5f 13 0a 07 11 06 11 0a d2 9c 00 11 06 17 58 13 06 11 06 08 fe 04 13 0b 11 0b 2d a7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2169,6 +2257,7 @@ rule Trojan_MSIL_LokiBot_RPY_2147846028_1
         $x_1_1 = {00 11 05 09 5d 13 08 11 05 09 5b 13 09 08 11 08 11 09 6f 82 00 00 0a 13 0a 07 12 0a 28 83 00 00 0a 6f 84 00 00 0a 00 11 05 17 58 13 05 00 11 05 09 11 04 5a fe 04 13 0b 11 0b 2d c4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2190,6 +2279,7 @@ rule Trojan_MSIL_LokiBot_RPY_2147846028_2
         $x_1_1 = {13 1d 1f 1e 8d 2a 00 00 01 25 16 72 b0 e3 02 70 a2 25 17 07 a2 25 18 08 a2 25 19 09 a2 25 1a 11 04 a2 25 1b 11 05 a2 25 1c 11 06 a2 25 1d 11 07 a2 25 1e 11 08 a2 25 1f 09 11 09 a2 25 1f 0a 11 0a a2 25 1f 0b 11 0b a2 25 1f 0c 11 0c a2 25 1f 0d 11 0d a2 25 1f 0e 11 0e a2 25 1f 0f 11 0f a2 25 1f 10 11 10 a2 25 1f 11}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2211,6 +2301,7 @@ rule Trojan_MSIL_LokiBot_CXRE_2147847093_0
         $x_1_1 = {16 0a 2b 1c 08 07 06 6f ?? ?? ?? ?? 13 09 11 04 12 09 28 ?? ?? ?? ?? 6f ?? ?? ?? ?? 06 17 58 0a 06 08 6f ?? ?? ?? ?? fe 04 13 06 11 06 2d d5 07 17 58 0b 07 08 6f ?? ?? ?? ?? fe 04 13 07 11 07 2d be}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2232,6 +2323,7 @@ rule Trojan_MSIL_LokiBot_CXRF_2147847158_0
         $x_1_1 = {16 13 05 2b 22 00 07 11 04 11 05 6f ?? ?? ?? ?? 13 06 08 12 06 28 ?? ?? ?? ?? 6f ?? ?? ?? ?? 00 00 11 05 17 58 13 05 11 05 07 6f ?? ?? ?? ?? fe 04 13 07 11 07 2d ce 00 11 04 17 58 13 04 11 04 07 6f ?? ?? ?? ?? fe 04 13 08 11 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2254,6 +2346,7 @@ rule Trojan_MSIL_LokiBot_CXRG_2147847356_0
         $x_1_2 = "https://onedrive.live.com/download?cid=0D0FBFD7EE8A13AB&resid=D0FBFD7EE8A13AB%21189&authkey=AAsuYUuYnYyEKrM" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2279,6 +2372,7 @@ rule Trojan_MSIL_LokiBot_CXRH_2147847457_0
         $x_1_5 = "Google Update" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2300,6 +2394,7 @@ rule Trojan_MSIL_LokiBot_CXRJ_2147847556_0
         $x_1_1 = {16 0b 2b 21 08 06 07 6f ?? ?? ?? ?? 13 0e 12 0e 28 ?? ?? ?? ?? 13 0b 11 05 09 11 0b 9c 09 17 58 0d 07 17 58 0b 07 08 6f ?? ?? ?? ?? fe 04 13 0c 11 0c 2d d0 06 17 58 0a 06 08 6f ?? ?? ?? ?? fe 04 13 0d 11 0d 2d b9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2321,6 +2416,7 @@ rule Trojan_MSIL_LokiBot_SPC_2147848102_0
         $x_1_1 = {2b 1c 2b 21 75 ?? ?? ?? 01 72 ?? ?? ?? 70 2b 1c 2b 21 2b 26 2b 2b 2b 30 14 14 2b 33 26 2a 28 ?? ?? ?? 0a 2b dd 28 08 00 00 06 2b d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2342,6 +2438,7 @@ rule Trojan_MSIL_LokiBot_CXRL_2147848124_0
         $x_1_1 = {11 05 09 5b 13 0b 08 11 0a 11 0b 6f ?? ?? ?? ?? 13 0c 07 11 06 12 0c 28 ?? ?? ?? ?? 9c 11 06 17 58 13 06 11 05 17 58 13 05 00 11 05 09 11 04 5a fe 04 13 0d 11 0d 2d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2363,6 +2460,7 @@ rule Trojan_MSIL_LokiBot_CXIU_2147848127_0
         $x_1_1 = {11 05 09 5d 13 08 11 05 09 5b 13 09 08 11 08 11 09 6f ?? ?? ?? ?? 13 0a 07 11 06 12 0a 28 ?? ?? ?? ?? 9c 11 06 17 58 13 06 11 05 17 58 13 05 00 11 05 09 11 04 5a fe 04 13 0b 11 0b 2d c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2384,6 +2482,7 @@ rule Trojan_MSIL_LokiBot_CXIR_2147848133_0
         $x_1_1 = {11 05 09 5d 13 09 11 05 09 5b 13 0a 08 11 09 11 0a 6f ?? ?? ?? ?? 13 0b 07 11 06 12 0b 28 ?? ?? ?? ?? 9c 11 06 17 58 13 06 11 05 17 58 13 05 11 05 09 11 04 5a 32 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2405,6 +2504,7 @@ rule Trojan_MSIL_LokiBot_CXIS_2147848395_0
         $x_1_1 = {11 05 09 5d 13 08 11 05 09 5b 13 09 08 11 08 11 09 6f ?? ?? ?? ?? 13 0a 07 12 0a 28 ?? ?? ?? ?? 6f ?? ?? ?? ?? 00 11 05 17 58 13 05 00 11 05 09 11 04 5a fe 04 13 0b 11 0b 2d c4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2426,6 +2526,7 @@ rule Trojan_MSIL_LokiBot_CXIT_2147848456_0
         $x_1_1 = {72 5b 00 00 70 0a 06 28 0d 00 00 0a 0b 28 3e 00 00 0a 25 26 07 16 07 8e 69 6f 62 00 00 0a 25 26 0a 28 13 00 00 0a 25 26 06 6f 3f 00 00 0a 25 26 0c 1f 61 6a 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2451,6 +2552,7 @@ rule Trojan_MSIL_LokiBot_CXIW_2147848821_0
         $x_1_5 = "Bwkyzezq%" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2472,6 +2574,7 @@ rule Trojan_MSIL_LokiBot_CXJK_2147849049_0
         $x_1_1 = {08 11 0a 11 09 6f ?? ?? ?? ?? 13 0b 16 13 0c 11 05 11 08 9a 13 0e 11 0e 13 0d 11 0d 72 ?? ?? ?? ?? 28 ?? ?? ?? ?? 2d 1e 11 0d 72 ?? ?? ?? ?? 28 ?? ?? ?? ?? 2d 1b 11 0d 72 ?? ?? ?? ?? 28 ?? ?? ?? ?? 2d 18 2b 21 12 0b 28 ?? ?? ?? ?? 13 0c 2b 16 12 0b 28 ?? ?? ?? ?? 13 0c 2b 0b 12 0b 28 ?? ?? ?? ?? 13 0c 2b 00 07 11 0c 6f ?? ?? ?? ?? 00 00 11 0a 17 58 13 0a 11 0a 09 fe 04 13 0f 11 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2496,6 +2599,7 @@ rule Trojan_MSIL_LokiBot_CXJK_2147849049_1
         $x_1_4 = "0B2B|110B2A|" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2517,6 +2621,7 @@ rule Trojan_MSIL_LokiBot_CXJV_2147849318_0
         $x_1_1 = {11 05 11 08 11 0a 58 11 09 11 0b 58 6f ?? ?? ?? ?? 13 0c 12 0c 28 ?? ?? ?? ?? 13 0d 11 04 11 06 11 0d 9c 11 06 17 58 13 06 00 11 0b 17 58 13 0b 11 0b 17 fe 04 13 0e 11 0e 2d c4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2538,6 +2643,7 @@ rule Trojan_MSIL_LokiBot_ASAU_2147849732_0
         $x_5_1 = {11 04 08 07 6f ?? 00 00 0a 13 0e 16 0d 11 0a 06 9a 13 05 11 05 20 [0-4] 28 ?? 00 00 06 28 ?? 00 00 0a 2d 28 11 05 20 [0-4] 28 ?? 00 00 06 28 ?? 00 00 0a 2d 1f 11 05 20 [0-4] 28 ?? 00 00 06 28 ?? 00 00 0a 2d 16 2b 1c 12 0e 28 ?? 00 00 0a 0d 2b 12 12 0e 28 ?? 00 00 0a 0d 2b 08 12 0e 28 ?? 00 00 0a 0d 11 06 09 6f ?? 00 00 0a 08 17 58 0c 08 11 08 32 85}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2559,6 +2665,7 @@ rule Trojan_MSIL_LokiBot_SE_2147850211_0
         $x_1_1 = {16 13 04 2b 1e 07 09 11 04 6f ?? ?? ?? 0a 13 06 08 12 06 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 11 04 17 58 13 04 11 04 07 6f ?? ?? ?? 0a 32 d8 09 17 58 0d 09 07 6f ?? ?? ?? 0a 32 c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2580,6 +2687,7 @@ rule Trojan_MSIL_LokiBot_RDI_2147851682_0
         $x_2_1 = {09 11 04 11 22 58 11 21 11 23 58 6f ?? ?? ?? ?? 13 24 12 24 28 50 01 00 0a 13 25}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2601,6 +2709,7 @@ rule Trojan_MSIL_LokiBot_CXFF_2147851946_0
         $x_1_1 = {13 05 11 05 17 6f ?? ?? ?? ?? 11 05 08 09 6f ?? ?? ?? ?? 13 06 73 2d 05 00 0a 13 07 11 07 11 06 17 73 ?? ?? ?? ?? 13 08 11 08 07 16 07 8e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2622,6 +2731,7 @@ rule Trojan_MSIL_LokiBot_CXII_2147852179_0
         $x_1_1 = {11 05 11 08 11 04 11 08 18 5a 18 6f ?? ?? ?? ?? 1f 10 28 ?? ?? ?? ?? d2 9c 00 11 08 17 58 13 08 11 08 11 05 8e 69 fe 04 13 09 11 09 2d d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2644,6 +2754,7 @@ rule Trojan_MSIL_LokiBot_CCAV_2147890364_0
         $x_1_2 = "QuanLySoTietKiem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2666,6 +2777,7 @@ rule Trojan_MSIL_LokiBot_CCAW_2147890389_0
         $x_1_2 = {07 11 0a 11 0f 20 00 01 00 00 5d d2 9c 00 11 09 17}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2687,6 +2799,7 @@ rule Trojan_MSIL_LokiBot_CCBI_2147891494_0
         $x_1_1 = {06 03 8e 69 5d 0b 06 04 6f 7c 00 00 0a 5d 0c 03 07 91 0d 04 08 6f ?? ?? ?? ?? 13 04 02 03 06 28 ?? ?? ?? ?? 13 05 02 09 11 04 11 05 28 ?? ?? ?? ?? 13 06 03 07 11 06 20 ?? ?? ?? ?? 5d d2 9c 00 06 17 59 0a 06 16 fe 04 16 fe 01 13 07 11 07 2d ae}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2708,6 +2821,7 @@ rule Trojan_MSIL_LokiBot_SPAD_2147891580_0
         $x_2_1 = {11 04 11 05 9a 13 06 00 11 06 6f ?? ?? ?? 0a 16 fe 01 13 08 11 08 2c 02 2b 34 11 06 72 a9 45 00 70 1f 0c 17 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 13 09 11 09 2c 02 2b 18 11 06 28 ?? ?? ?? 0a d2 13 07 7e 01 00 00 04 11 07 6f ?? ?? ?? 0a 00 00 11 05 17 58 13 05 11 05 11 04 8e 69 32 a4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2729,6 +2843,7 @@ rule Trojan_MSIL_LokiBot_CCBL_2147891581_0
         $x_1_1 = {06 03 8e 69 5d 0b 06 04 6f ?? ?? ?? ?? 5d 0c 03 07 91 0d 04 08 6f ?? ?? ?? ?? 13 04 02 03 06 28 ?? ?? ?? ?? 13 05 02 09 11 04 11 05 28 ?? ?? ?? ?? 13 06 03 07 11 06 20 ?? ?? ?? ?? 5d d2 9c 00 06 17 59 0a 06 16 fe 04 16 fe 01 13 07 11 07 2d ae}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2751,6 +2866,7 @@ rule Trojan_MSIL_LokiBot_ASFO_2147895248_0
         $x_1_2 = "DLPK.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2773,6 +2889,7 @@ rule Trojan_MSIL_LokiBot_MBEH_2147895338_0
         $x_1_2 = "Sudoku.Propertie" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2794,6 +2911,7 @@ rule Trojan_MSIL_LokiBot_MBFL_2147898273_0
         $x_1_1 = {13 0d 07 06 17 58 09 5d 91 13 0e 11 0c 11 0d 61 11 0e 59 20 00 01 00 00 58 13 0f 07 11 06 11 0f 20 00 01 00 00 5d d2 9c 06 17 59 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2817,6 +2935,7 @@ rule Trojan_MSIL_LokiBot_RDK_2147898708_0
         $x_1_3 = "fasMl09Ny4IU1Z20XUqpCzwoBR9cSZAtKClCcY93fy2fSOlbDx2uzlF3xEsCBcfI2sT15UL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2838,6 +2957,7 @@ rule Trojan_MSIL_LokiBot_ARA_2147898777_0
         $x_2_1 = {00 20 00 01 00 00 13 16 09 17 58 13 17 09 11 04 5d 13 18 11 17 11 04 5d 13 19 07 11 19 91 11 16 58 13 1a 07 11 18 91 13 1b 08 09 1f 16 5d 91 13 1c 11 1b 11 1c 61 13 1d 11 1d 11 1a 59 13 1e 07 11 18 11 1e 11 16 5d d2 9c 09 17 58 0d 00 09 11 04 fe 04 13 1f 11 1f 2d a7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2867,6 +2987,7 @@ rule Trojan_MSIL_LokiBot_FK_2147899399_0
         $x_1_9 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2888,6 +3009,7 @@ rule Trojan_MSIL_LokiBot_RDO_2147904419_0
         $x_2_1 = {91 61 28 94 00 00 0a 07 11 05 17 58 07 8e 69 5d 91}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2909,6 +3031,7 @@ rule Trojan_MSIL_LokiBot_RDP_2147905093_0
         $x_2_1 = {6f 17 00 00 0a 02 0e 07 0e 04 8e 69 6f 18 00 00 0a 0a 06 0b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2930,6 +3053,7 @@ rule Trojan_MSIL_LokiBot_RDQ_2147905176_0
         $x_2_1 = {02 6f 2d 00 00 0a 6f 2e 00 00 0a 0a 7e ?? ?? ?? ?? 06 25 0b 6f 2f 00 00 0a 00 07 0c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2951,6 +3075,7 @@ rule Trojan_MSIL_LokiBot_CCID_2147907796_0
         $x_1_1 = {07 08 07 08 91 11 04 08 1f 16 5d 91 61 07 11}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2972,6 +3097,7 @@ rule Trojan_MSIL_LokiBot_CCIE_2147908470_0
         $x_1_1 = {5d 91 61 07 08 17 58 11 ?? 5d 91 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2994,6 +3120,7 @@ rule Trojan_MSIL_LokiBot_SPFM_2147911366_0
         $x_1_2 = {02 07 11 05 91 11 06 61 11 08 28 ?? ?? ?? 06 13 09 11 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3015,6 +3142,7 @@ rule Trojan_MSIL_LokiBot_RDR_2147911867_0
         $x_2_1 = {61 07 11 04 17 58 07 8e 69 5d 91}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3036,6 +3164,7 @@ rule Trojan_MSIL_LokiBot_Y_2147911963_0
         $x_2_1 = {0a 1f 10 28 ?? 00 00 0a 03 07 6f ?? 00 00 0a 61 d1 13 04 12 04 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3057,6 +3186,7 @@ rule Trojan_MSIL_LokiBot_RDS_2147912078_0
         $x_2_1 = {6e 11 4e 20 ff 00 00 00 5f 6a 61 d2 9c 00 11 4a 17 6a 58 13 4a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3078,6 +3208,7 @@ rule Trojan_MSIL_LokiBot_RDT_2147913281_0
         $x_2_1 = {11 07 11 10 11 11 6e 11 14 20 ff 00 00 00 5f 6a 61 d2 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3103,6 +3234,7 @@ rule Trojan_MSIL_LokiBot_Z_2147913493_0
         $x_2_5 = {06 09 06 6f ?? ?? 00 0a 8e 69 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3128,6 +3260,7 @@ rule Trojan_MSIL_LokiBot_X_2147914321_0
         $x_2_5 = {06 1a 58 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3149,6 +3282,7 @@ rule Trojan_MSIL_LokiBot_RDU_2147915053_0
         $x_2_1 = {11 0c 06 91 11 18 61 13 19 11 0c 06 17 58 11 13 5d 91 13 1a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3170,6 +3304,7 @@ rule Trojan_MSIL_LokiBot_SPBF_2147916204_0
         $x_4_1 = {09 59 7e 0e 00 00 04 8e 69 5d 13 0a 02 11 09 91 13 0b 08 18 5d 16 fe 01 13 0c 11 0c 2c 14 00 06 11 09 11 0b 7e 0e 00 00 04 11 0a 91 59 d2 9c 00 2b 12}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3191,6 +3326,7 @@ rule Trojan_MSIL_LokiBot_SML_2147917855_0
         $x_1_1 = {07 11 09 91 11 06 61 11 08 59 20 00 02 00 00 58 13 0a 02 11 0a 28 55 00 00 06 13 0b 02 11 0b 28 56 00 00 06 13 0c 02 11 0c 28 57 00 00 06 13 0d 02 11 0d 28 58 00 00 06 13 0e 07 11 05 11 0e d2 9c 11 05 17 58 13 05 11 05 08 32 88}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3215,6 +3351,7 @@ rule Trojan_MSIL_LokiBot_SML_2147917855_1
         $x_1_4 = "JapaneseTrainer.Properties" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3239,6 +3376,7 @@ rule Trojan_MSIL_LokiBot_SML_2147917855_2
         $x_1_4 = {07 11 09 91 11 06 61 11 08 59 20 00 02 00 00 58 13 0a 02 11 0a 28 55 00 00 06 13 0b 02 11 0b 28 56 00 00 06 13 0c 02 11 0c 28 57 00 00 06 13 0d 02 11 0d 28 58 00 00 06 13 0e 07 11 05 11 0e d2 9c 11 05 17 58 13 05 11 05 08 32 88}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3260,6 +3398,7 @@ rule Trojan_MSIL_LokiBot_SJPF_2147920137_0
         $x_1_1 = {06 11 05 11 06 6f ?? ?? ?? 0a 13 07 08 12 07 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 08 12 07 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 08 12 07 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 07 08 20 ?? ?? ?? 00 28 ?? ?? ?? 06 00 08 6f ?? ?? ?? 0a 00 00 11 06 17 58 13 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3283,6 +3422,7 @@ rule Trojan_MSIL_LokiBot_SK_2147927107_0
         $x_2_3 = "NJnNoi887.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3304,6 +3444,7 @@ rule Trojan_MSIL_LokiBot_SVCB_2147929865_0
         $x_4_1 = {0a 13 04 11 04 09 07 08 6f ?? 00 00 0a 17 73 ?? 00 00 0a 13 05 11 05 06 16 06 8e 69 6f ?? 00 00 0a 73 ?? 00 00 0a 25 11 04 6f ?? 00 00 0a 6f ?? 00 00 0a 13 06}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3325,6 +3466,7 @@ rule Trojan_MSIL_LokiBot_SDGB_2147930834_0
         $x_4_1 = {02 19 8d 3b 00 00 01 25 16 07 1f 10 63 20 ff 00 00 00 5f d2 9c 25 17 07 1e 63 20 ff 00 00 00 5f d2 9c 25 18 07 20 ff 00 00 00 5f d2 9c 6f ?? 01 00 0a 09}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3346,6 +3488,7 @@ rule Trojan_MSIL_LokiBot_ALO_2147931061_0
         $x_1_1 = {8e 69 17 59 0c 2b 19 0b 2b f5 06 07 91 0d 06 07 06 08 91 9c 06 08 09 9c 07 17 58 0b 08 17 59 0c 07 08 32 e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3369,6 +3512,7 @@ rule Trojan_MSIL_LokiBot_NB_2147931426_0
         $x_1_3 = "DE_PAGE.g.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3390,6 +3534,7 @@ rule Trojan_MSIL_LokiBot_ALB_2147931830_0
         $x_5_1 = {09 09 16 1a 09 14 13 16 12 16 11 05 11 04 28 ?? 00 00 06 26 08 02 08 1f 3c d6 6a 1a 6a 28 ?? 00 00 06 d6 13 09 02 11 09 1f 34 d6 6a 1a 6a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3412,6 +3557,7 @@ rule Trojan_MSIL_LokiBot_ALB_2147931830_1
         $x_1_2 = "Student_Housing" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3433,6 +3579,7 @@ rule Trojan_MSIL_LokiBot_AUJ_2147932021_0
         $x_1_1 = {0b 06 20 17 24 b2 32 28 01 00 00 06 0c 12 02 28 10 00 00 0a 74 01 00 00 1b 0d 72 01 00 00 70 09 6f 11 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3457,6 +3604,7 @@ rule Trojan_MSIL_LokiBot_AYA_2147935289_0
         $x_1_4 = "discord.gg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3478,6 +3626,7 @@ rule Trojan_MSIL_LokiBot_AY_2147940958_0
         $x_1_1 = {09 11 05 02 11 05 91 06 61 08 11 04 91 61 b4 9c 1e 13 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3502,6 +3651,7 @@ rule Trojan_MSIL_LokiBot_MBZ_2147942072_0
         $x_1_4 = "PronHub" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

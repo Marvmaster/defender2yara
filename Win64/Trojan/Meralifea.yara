@@ -19,6 +19,7 @@ rule Trojan_Win64_Meralifea_A_2147728404_0
         $x_1_5 = "\\REGISTRY\\Machine\\SYSTEM\\service\\iaStor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win64_Meralifea_A_2147728404_1
         $x_1_10 = "\\NPF-{0179AC45-C226-48e3-A205-DCA79C824051}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -91,6 +93,7 @@ rule Trojan_Win64_Meralifea_A_2147728404_2
         $x_1_18 = "EFI PART" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or

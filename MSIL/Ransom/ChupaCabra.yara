@@ -19,6 +19,7 @@ rule Ransom_MSIL_ChupaCabra_MK_2147782544_0
         $x_1_4 = "http://anubiscloud.xyz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

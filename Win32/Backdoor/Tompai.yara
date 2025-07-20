@@ -20,6 +20,7 @@ rule Backdoor_Win32_Tompai_GTN_2147927313_0
         $x_1_5 = "XlOGtGU" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

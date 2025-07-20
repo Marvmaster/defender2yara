@@ -25,6 +25,7 @@ rule Trojan_Win64_Polazert_GC_2147795260_0
         $x_1_10 = "Vista" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))

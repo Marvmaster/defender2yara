@@ -19,6 +19,7 @@ rule Trojan_MSIL_LimeRat_SBR_2147772915_0
         $x_1_4 = "get_CurrentDomain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_LimeRat_AD_2147945021_0
         $x_1_1 = {05 0e 04 7e 0c 00 00 04 20 24 02 00 00 7e 0c 00 00 04 20 24 02 00 00 91 05 5a 20 de 00 00 00 5f 9c 61 1f 6c 59 06 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

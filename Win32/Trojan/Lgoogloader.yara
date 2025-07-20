@@ -17,6 +17,7 @@ rule Trojan_Win32_Lgoogloader_GFK_2147841956_0
         $x_10_2 = {66 33 c1 8b 4d a8 0f b7 d0 8b 45 ac 66 2b d1 66 8b 4d b8 0f b7 c9}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

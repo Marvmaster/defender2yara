@@ -18,6 +18,7 @@ rule HackTool_MSIL_AutoKMS_I_2147743522_0
         $x_1_3 = "$70f17a4e-cc8c-44a7-99c2-e3a0e2554758" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule HackTool_MSIL_AutoKMS_AB_2147811739_0
         $x_1_6 = "Windows Activated" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

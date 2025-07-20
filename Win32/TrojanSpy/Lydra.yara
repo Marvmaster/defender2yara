@@ -24,6 +24,7 @@ rule TrojanSpy_Win32_Lydra_AC_2147592973_0
         $x_3_10 = "Toolhelp32ReadProcessMemory" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_30_*) and 1 of ($x_20_*) and 3 of ($x_10_*) and 1 of ($x_5_*) and 3 of ($x_3_*))) or
             ((1 of ($x_30_*) and 1 of ($x_20_*) and 3 of ($x_10_*) and 2 of ($x_5_*) and 2 of ($x_3_*))) or
@@ -55,6 +56,7 @@ rule TrojanSpy_Win32_Lydra_A_2147593044_0
         $x_10_7 = "if exist %1 goto" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 3 of ($x_10_*))) or
             (all of ($x*))
@@ -84,6 +86,7 @@ rule TrojanSpy_Win32_Lydra_B_2147593045_0
         $x_10_6 = "smtp.mail.ru" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 3 of ($x_10_*))) or
             (all of ($x*))
@@ -114,6 +117,7 @@ rule TrojanSpy_Win32_Lydra_C_2147594471_0
         $x_2_7 = {76 69 61 75 64 2e 64 6c 6c 00 53 74 61 72 74 49 6e 74 72 75 64 69 6e 67 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((3 of ($x_10_*) and 2 of ($x_3_*))) or

@@ -22,6 +22,7 @@ rule Trojan_MSIL_CryptBot_PSJA_2147844777_0
         $x_1_7 = "SymmetricAlgorithm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_MSIL_CryptBot_PABN_2147893869_0
         $x_1_3 = "OiBCb3QgZGV0ZWN0ZWQgYXMgdmlydXMgLSBTb3JyeSBHb29ieWUgOigoCg==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_MSIL_CryptBot_BL_2147932583_0
         $x_5_1 = {0a 0c 08 07 17 73 ?? ?? 00 0a 0d 2b 11 2b 12 16 2b 12 8e 69 2b 11 2b 16 2b 17 2b 1c de 48 09 2b ec 03 2b eb 03 2b eb 6f ?? 00 00 0a 2b e8 08 2b e7}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

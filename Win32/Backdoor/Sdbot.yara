@@ -28,6 +28,7 @@ rule Backdoor_Win32_Sdbot_2147792325_0
         $n_10_14 = "McAfee Inc. Stinger" wide //weight: -10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -61,6 +62,7 @@ rule Backdoor_Win32_Sdbot_E_2147792337_0
         $x_1_7 = "%s:%d (Length:%d Threads:%d)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -88,6 +90,7 @@ rule Backdoor_Win32_Sdbot_G_2147792343_0
         $x_1_7 = "Mydoom " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -131,6 +134,7 @@ rule Backdoor_Win32_Sdbot_B_2147792346_0
         $x_1_16 = "InternetOpenA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_5_*) and 5 of ($x_1_*))) or
             ((11 of ($x_5_*))) or
@@ -166,6 +170,7 @@ rule Backdoor_Win32_Sdbot_C_2147792347_0
         $x_1_11 = "Keylog ON." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -207,6 +212,7 @@ rule Backdoor_Win32_Sdbot_D_2147792348_0
         $x_1_18 = ": Windows %s [%d.%d, build %d] " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 1 of ($x_5_*) and 9 of ($x_1_*))) or
             ((6 of ($x_10_*) and 2 of ($x_5_*) and 4 of ($x_1_*))) or
@@ -233,6 +239,7 @@ rule Backdoor_Win32_Sdbot_AB_2147792357_0
         $x_100_3 = {25 64 00 00 32 36 30 30 00 00 00 00 44 4c 4c 00 44 4c 4c 00 53 79 73 74 65 6d 73 00 2a 00 00 00 25 64 00 00 32 36 30 30}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             (all of ($x*))

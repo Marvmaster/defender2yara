@@ -16,6 +16,7 @@ rule Trojan_Win32_RenoFloss_B_2147725517_0
         $x_1_1 = {e8 ff ff ff ff ?? ?? ?? ?? ?? ?? ?? 31 ?? 10 03 ?? 10 83 ?? fc 0a 00 90 90 ?? ?? ?? c9 66 b9 ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

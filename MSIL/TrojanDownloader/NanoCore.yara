@@ -29,6 +29,7 @@ rule TrojanDownloader_MSIL_NanoCore_C_2147824441_0
         $x_1_14 = ".bmp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

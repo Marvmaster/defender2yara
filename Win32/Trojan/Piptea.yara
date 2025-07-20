@@ -20,6 +20,7 @@ rule Trojan_Win32_Piptea_A_2147612332_0
         $x_1_6 = {58 0f b6 40 02 85 c0 74 05 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Piptea_C_2147621218_0
         $x_1_4 = {03 48 28 89 4d d0 ff 55 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Piptea_D_2147622137_0
         $x_1_3 = {c7 45 c0 b9 79 37 9e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_Piptea_E_2147622604_0
         $x_1_4 = {03 48 28 89 4d ?? ff 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Win32_Piptea_F_2147623189_0
         $x_2_6 = {68 0c 30 3e 00 6a 01 e8 ?? fb ff ff 83 c4 10 ff 75 ec 68 0c 30 3e 00 ff 75 f8 6a 0a 6a 0a e8 ?? 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -138,6 +143,7 @@ rule Trojan_Win32_Piptea_G_2147627018_0
         $x_1_2 = {83 c6 28 4f 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_Win32_Piptea_H_2147628233_0
         $x_1_6 = {8b 42 34 89 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             ((3 of ($x_3_*))) or
@@ -190,6 +197,7 @@ rule Trojan_Win32_Piptea_A_2147629787_0
         $x_1_3 = {8d 45 f4 50 6a 01 8d 45 ff 50 53 89 7d f4 [0-16] ff 15 ?? ?? ?? ?? 03 75 f4 ff 4d f8 75 ?? 53 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +219,7 @@ rule Trojan_Win32_Piptea_I_2147641175_0
         $x_1_2 = {80 3a 90 74 01 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +242,7 @@ rule Trojan_Win32_Piptea_J_2147646737_0
         $x_1_3 = {8a 06 8a 1f 2a c3 88 06 46 47 84 c0 75 f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

@@ -22,6 +22,7 @@ rule TrojanDownloader_MSIL_Jalapeno_AYB_2147926814_0
         $x_1_7 = "TripleDESCryptoServiceProvider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanDownloader_MSIL_Jalapeno_NIT_2147928359_0
         $x_1_5 = "obj\\Release\\NovaLauncher.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -74,6 +76,7 @@ rule TrojanDownloader_MSIL_Jalapeno_ALK_2147940693_0
         $x_2_4 = "$c97ed578-ee4d-4ba7-8e6c-76d04c741a15" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

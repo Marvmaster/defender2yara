@@ -26,6 +26,7 @@ rule VirTool_Win64_Myrddin_E_2147895387_0
         $x_1_11 = "github.com/Ne0nd0g" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -56,6 +57,7 @@ rule VirTool_Win64_Myrddin_F_2147900127_0
         $x_1_10 = ".ClientConn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

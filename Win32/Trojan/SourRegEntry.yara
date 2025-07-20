@@ -20,6 +20,7 @@ rule Trojan_Win32_SourRegEntry_A_2147773982_0
         $x_1_5 = "\\SystemVolumeInformation.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

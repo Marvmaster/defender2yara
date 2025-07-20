@@ -19,6 +19,7 @@ rule Trojan_Win32_Tevesogu_A_2147657511_0
         $x_1_5 = {6a 00 6a 00 6a 04 6a 00 6a 01 68 00 00 00 40 68 ?? ?? 03 10 68 ?? ?? ?? ?? 6a 16 68 ?? ?? 03 10 8d 4d ec e8 ?? ?? 00 00 8b c8 e8 ?? ?? ff ff 50 ff 15 ?? ?? 03 10 89 45 f8 8d 4d ec e8 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

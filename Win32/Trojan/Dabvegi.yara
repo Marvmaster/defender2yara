@@ -19,6 +19,7 @@ rule Trojan_Win32_Dabvegi_A_2147628669_0
         $x_1_5 = "!nukkhnbA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Trojan_Win32_Dabvegi_A_2147628669_1
         $x_1_5 = "!nukkhnbA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -77,6 +79,7 @@ rule Trojan_Win32_Dabvegi_A_2147628669_2
         $x_1_9 = "ocwom" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Trojan_Win32_Dabvegi_A_2147628669_3
         $x_1_6 = "-[76]-;" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule Trojan_Win32_Dabvegi_A_2147628669_4
         $x_2_5 = {49 6e 74 65 72 6e 65 74 53 74 61 74 65 [0-5] 4e 6f 74 46 69 72 [0-5] 56 46 6f 6c 64 65 72 73}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_2_*))) or
             (all of ($x*))
@@ -152,6 +157,7 @@ rule Trojan_Win32_Dabvegi_D_2147633623_0
         $x_1_4 = "passchar" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -175,6 +181,7 @@ rule Trojan_Win32_Dabvegi_E_2147648234_0
         $x_1_4 = "-[88]-" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

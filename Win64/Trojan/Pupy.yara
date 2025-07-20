@@ -17,6 +17,7 @@ rule Trojan_Win64_Pupy_MA_2147838365_0
         $x_5_2 = {c6 44 24 3f 00 48 8d 54 24 32 45 31 c9 48 b9 66 69 6c 65 2e 78 6c 73 48 89 4c 24 37 4c 8d 44 24 37 31 c9 c7 44 24 32 6f 70 65 6e c6 44 24 36 00 c7 44 24 28 01 00 00 00 48 c7 44 24 20 00 00 00 00 ff d0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

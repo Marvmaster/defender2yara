@@ -17,6 +17,7 @@ rule PWS_Win32_Peerfit_A_2147631231_0
         $x_1_3 = "B4E8D16C26323D4A" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule PWS_Win32_Peerfit_A_2147631232_0
         $x_1_2 = {8b 40 50 50 6a 00 6a ff e8 ?? ?? ?? ?? 8b f0 8b 45 f8 8b 48 54}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

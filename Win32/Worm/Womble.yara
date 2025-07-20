@@ -33,6 +33,7 @@ rule Worm_Win32_Womble_D_2147582734_0
         $x_1_19 = "From: \"%s\" <%s>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (14 of ($x*))
 }
 

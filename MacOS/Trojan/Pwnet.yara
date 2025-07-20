@@ -20,6 +20,7 @@ rule Trojan_MacOS_Pwnet_A_2147745013_0
         $x_1_5 = "LoadMinerEv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Trojan_MacOS_Pwnet_B_2147746257_0
         $x_1_4 = "installMinerEv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_MacOS_Pwnet_C_2147747902_0
         $x_1_3 = "Csgo/Csgo Cheats/Injectors/osxinj-fixed-master/osxinj/mach_inject.c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_MacOS_Pwnet_D_2147748068_0
         $x_1_3 = {8a 85 c7 fe ff ff 34 ff 24 01 0f b6 c8 48 63 d1 48 83 fa 00 0f 84 ?? ?? ?? ?? 48 8d 3d ab 11 00 00 48 8d 35 b0 11 00 00 48 8d 0d 16 12 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule Trojan_MacOS_Pwnet_D_2147748068_1
         $x_1_7 = "please run me as root" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule Trojan_MacOS_Pwnet_E_2147750948_0
         $x_1_4 = {49 6e 6a 65 63 74 6f 72 90 01 02 67 65 74 50 72 6f 63 65 73 73 42 79 4e 61 6d 65 45 50 4b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

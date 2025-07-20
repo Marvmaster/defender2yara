@@ -16,6 +16,7 @@ rule Trojan_Win64_Bastdoor_MKV_2147926600_0
         $x_5_1 = {45 31 ed 48 83 e1 03 74 ?? 66 0f 1f 84 00 00 00 00 00 42 0f b6 54 2c ?? 43 30 14 2c 49 ff c5 4c 39 e9 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

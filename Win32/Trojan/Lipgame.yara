@@ -26,6 +26,7 @@ rule Trojan_Win32_Lipgame_BR_2147574439_0
         $x_1_12 = "Lip%sGame" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

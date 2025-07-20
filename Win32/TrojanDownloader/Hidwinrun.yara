@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Hidwinrun_A_2147607554_0
         $x_1_5 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

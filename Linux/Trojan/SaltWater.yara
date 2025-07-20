@@ -19,6 +19,7 @@ rule Trojan_Linux_SaltWater_A_2147849232_0
         $x_1_4 = "Connected2Vps" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Linux_SaltWater_B_2147849665_0
         $x_1_4 = "gethostbyname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

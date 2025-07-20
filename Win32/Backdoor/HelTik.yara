@@ -19,6 +19,7 @@ rule Backdoor_Win32_HelTik_A_2147695054_0
         $x_1_5 = {49 49 53 43 4d 44 20 45 72 72 6f 72 3a 25 64 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

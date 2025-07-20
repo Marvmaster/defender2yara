@@ -18,6 +18,7 @@ rule Trojan_Win32_Squirelwaffle_PA_2147795977_0
         $x_2_3 = {33 d2 c7 45 dc 00 00 00 00 8b c7 c7 45 e0 ?? 00 00 00 f7 75 30 83 7d 1c ?? 8d 4d ?? 8d 45 ?? c6 45 ?? 00 0f 43 4d ?? 83 7d 34 ?? 0f 43 45 20 8a 04 10 32 04 39 8d 4d cc 0f b6 c0 50 6a 01 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

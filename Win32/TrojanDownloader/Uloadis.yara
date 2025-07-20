@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Uloadis_A_2147610250_0
         $x_1_6 = {66 81 3b 4d 5a 75 ?? 03 43 3c 0f b7 48 14 81 f9 e0 00 00 00 75 ?? 8b d0 83 c2 18 8b ca 81 c1 e0 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or

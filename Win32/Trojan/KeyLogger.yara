@@ -18,6 +18,7 @@ rule Trojan_Win32_KeyLogger_J_2147726022_0
         $x_1_3 = {8d 74 31 fc 8d 7c 39 fc c1 f9 02 78 11 fd f3 a5 89 c1 83 e1 03 83 c6 03 83 c7 03 f3 a4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_KeyLogger_G_2147763532_0
         $x_1_4 = "ClientGetKeyProc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -97,6 +99,7 @@ rule Trojan_Win32_KeyLogger_PAA_2147773919_0
         $x_1_35 = "[ UP ]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((14 of ($x_30_*) and 10 of ($x_1_*))) or
             (all of ($x*))
@@ -128,6 +131,7 @@ rule Trojan_Win32_KeyLogger_Spyrix_2147787872_0
         $x_3_7 = "LastKey" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +163,7 @@ rule Trojan_Win32_KeyLogger_RFS_2147793760_0
         $x_1_11 = "[ArrowL]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -184,6 +189,7 @@ rule Trojan_Win32_KeyLogger_SV_2147818993_0
         $x_1_5 = "<p>[_P.a.s.t.e_]<hr>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +212,7 @@ rule Trojan_Win32_KeyLogger_BE_2147836470_0
         $x_2_2 = {6a 04 68 00 10 00 00 8b 55 f4 52 6a 00 ff 15}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -228,6 +235,7 @@ rule Trojan_Win32_KeyLogger_BE_2147836470_1
         $x_2_2 = {05 4f 9a c3 ec bd 05 f0 3e 8e 3a 4f ad 33 99 66 cf 11 b7 0c 00 aa 00 60 d3 93 46 6f 72}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -249,6 +257,7 @@ rule Trojan_Win32_KeyLogger_BF_2147836584_0
         $x_4_1 = {34 e5 48 88 64 1d be 5a a9 ac af a6 4a be dc 59 e7 53 49 ad 35 70 8c 82 bc 3d 18 0b 96 b5 9b a2 72 ea 49 ad 78}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -271,6 +280,7 @@ rule Trojan_Win32_KeyLogger_BF_2147836584_1
         $x_2_2 = {66 97 57 4b 89 74 09 a7 d3 2d ef 05 c1 40 44 13 01 14 a7 d4 63 b5 1a 5f cc 7a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -293,6 +303,7 @@ rule Trojan_Win32_KeyLogger_BG_2147837295_0
         $x_1_2 = {fe 11 7a 90 a5 08 12 4b ab 76 e5 f0 4d b4 80 30 06 a8 d6 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +329,7 @@ rule Trojan_Win32_KeyLogger_BG_2147837295_1
         $x_1_5 = "C L R  The Log ?" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -339,6 +351,7 @@ rule Trojan_Win32_KeyLogger_BH_2147838503_0
         $x_2_1 = {06 00 5d fb 33 1c 56 08 00 22 f5 01 00 00 00 6c 00 fe 9e 05 06 00 24 07 00 0f 28 03 19 7c fe 08 7c fe 0d a4 00 2f 00 1a 7c fe 00 02 00 0b 04 ec fd fe 7e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -365,6 +378,7 @@ rule Trojan_Win32_KeyLogger_BAB_2147840024_0
         $x_1_6 = "[Scroll Lock]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -393,6 +407,7 @@ rule Trojan_Win32_KeyLogger_ASH_2147896695_0
         $x_1_8 = "schtasks /create /tn \"MyTask\" /tr \"%s\" /sc daily /st 12:00" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -423,6 +438,7 @@ rule Trojan_Win32_KeyLogger_ASI_2147896906_0
         $x_1_5 = {44 4e 5d 00 5b 45 4e 44 5d 00 00 00 5b 48 4f 4d 45 5d 00 00 5b 4c 45 46 54 5d 00 00 5b 52 49 47 48 54 5d 00 5b 44 4f 57 4e 5d 00 00 5b 50 52 49 4e 54 5d 00 5b 50 52 54 20 53 43 5d 00 00 00 00 5b 49 4e 53 45 52 54 5d 00 00 00 00 5b 44 45 4c 45 54 45 5d 00 00 00 00 5b 57 49 4e 20 4b 45 59}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -457,6 +473,7 @@ rule Trojan_Win32_KeyLogger_ASI_2147896906_1
         $x_1_14 = "achibat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -482,6 +499,7 @@ rule Trojan_Win32_KeyLogger_PABZ_2147897093_0
         $x_1_5 = "VrX- Bot ID: %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -504,6 +522,7 @@ rule Trojan_Win32_KeyLogger_AKI_2147898768_0
         $x_1_2 = "Software\\def9b6cd3f2b0c43097dfbc918862b82" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -526,6 +545,7 @@ rule Trojan_Win32_KeyLogger_ASL_2147912340_0
         $x_5_2 = {02 2b bc 53 20 c1 a9 24 66 80 75 66 7a 03 67 e2 cf 73 6b 58 9c c8 ce 9c a5 b2 d2 48 7c f3}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -548,6 +568,7 @@ rule Trojan_Win32_KeyLogger_ASM_2147915755_0
         $x_5_2 = "RLFo2ELugu-RnCpTGpwU/ygKEhI92tHWROKSSmhE9/oVvIRLjSr6olmGkivzY2/RLFo2ELugu-RnCpTGpwU" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -576,6 +597,7 @@ rule Trojan_Win32_KeyLogger_AMAD_2147919142_0
         $x_1_8 = {2d 6c 64 66 6c 61 67 73 3d 22 2d 73 20 2d 77 20 2d 6f 20 [0-30] 2e 65 78 65 20 2d 58 20 27 6d 61 69 6e 2e 42 69 6e 49 44 3d ?? 27 20 2d 58 20 27 6d 61 69 6e 2e 63 6f 70 79 3d [0-5] 27 20 2d 58 20 27 6d 61 69 6e 2e 64 6f 6d 61 69 6e 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -602,6 +624,7 @@ rule Trojan_Win32_KeyLogger_NK_2147925900_0
         $x_1_3 = "ftp=xxxxxxxxxxxxxxx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -630,6 +653,7 @@ rule Trojan_Win32_KeyLogger_NL_2147931491_0
         $x_1_8 = "KABx64" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -651,6 +675,7 @@ rule Trojan_Win32_KeyLogger_EJQQ_2147945211_0
         $x_2_1 = {33 c1 8b 55 08 03 55 fc 88 02 ?? ?? b0 01 8b e5 5d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

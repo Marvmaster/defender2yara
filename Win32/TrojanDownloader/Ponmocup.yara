@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Ponmocup_C_2147804220_0
         $x_1_4 = {3a ca 7d 27 05 d7 3a ff ff 89 85 c8 fe ff ff 0f be f1 33 db 8a 1c 75 ?? ?? ?? ?? 33 d8 88 5c 35 d4 fe c1 88 8d cf fe ff ff eb d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

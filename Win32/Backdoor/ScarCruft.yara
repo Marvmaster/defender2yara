@@ -21,6 +21,7 @@ rule Backdoor_Win32_ScarCruft_A_2147712575_0
         $x_1_6 = {46 61 69 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

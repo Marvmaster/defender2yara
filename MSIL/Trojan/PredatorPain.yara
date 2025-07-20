@@ -16,6 +16,7 @@ rule Trojan_MSIL_PredatorPain_KAA_2147924316_0
         $x_1_1 = {16 0a 1c 13 04 2b b7 0e 04 05 61 1f 77 59 06 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanProxy_Win32_Mediana_2147696873_0
         $x_2_6 = {3c 2e 75 15 80 7c 31 01 45 75 0e 80 7c 31 02 58 75 07 80 7c 31 03 45 74 08}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 4 of ($x_2_*))) or
             ((2 of ($x_4_*) and 2 of ($x_2_*))) or

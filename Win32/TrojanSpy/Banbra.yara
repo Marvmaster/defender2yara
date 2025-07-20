@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Banbra_I_2147618805_0
         $x_1_7 = "Bradesco Net Empresa" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule TrojanSpy_Win32_Banbra_M_2147632446_0
         $x_1_4 = "key.log" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule TrojanSpy_Win32_Banbra_M_2147632446_1
         $x_1_2 = {8a 55 fb 8a 14 17 80 e2 0a 32 c2 33 d2 8a d3 8a 14 16 80 e2 f0 80 e2 f0 02 d0 33 c0 8a c3 8b 4d fc 88 14 01 fe 45 fb [0-16] 33 d2 8a 55 fb 3b c2 ?? 04 c6 45 fb 00 43 fe 4d fa 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule TrojanSpy_Win32_Banbra_AI_2147661600_0
         $x_1_9 = {6d 00 69 00 63 00 61 00 20 00 46 00 65 00 64 00 65 00 72 00 61 00 6c 00 20 00 2d 00 20 00 57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 20 00 49 00 6e 00 74 00 65 00 72 00 6e 00 65 00 74 00 20 00 45 00 78 00 70 00 6c 00 6f 00 72 00 65 00 72 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Tukrina_A_2147724968_0
         $x_2_6 = {22 2c 49 6e 73 74 61 6c 6c 52 6f 75 74 69 6e 65 20 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

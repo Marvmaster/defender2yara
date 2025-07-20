@@ -17,6 +17,7 @@ rule BrowserModifier_Win32_MalPro_223390_0
         $x_1_3 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 64 00 31 00 68 00 78 00 74 00 6c 00 39 00 7a 00 6e 00 71 00 77 00 65 00 6a 00 6a 00 2e 00 63 00 6c 00 6f 00 75 00 64 00 [0-15] 2e 00 6e 00 65 00 74 00 2f 00 61 00 70 00 69 00 2f 00 69 00 6d 00 70 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

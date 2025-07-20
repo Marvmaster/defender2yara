@@ -17,6 +17,7 @@ rule Trojan_Win32_Vidro_A_2147688169_0
         $x_1_2 = {83 f8 05 0f 8c ?? ?? ?? ?? 8b 07 80 38 23 75 ?? 81 78 01 65 6e 63 23}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

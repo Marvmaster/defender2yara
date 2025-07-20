@@ -19,6 +19,7 @@ rule HackTool_Win32_LSASecrets_HF_2147892114_0
         $x_1_5 = "riched20.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

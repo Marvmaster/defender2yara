@@ -17,6 +17,7 @@ rule TrojanSpy_MSIL_Redline_STA_2147786292_0
         $x_1_3 = "FAASD.FAASDscFAASDr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

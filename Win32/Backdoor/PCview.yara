@@ -18,6 +18,7 @@ rule Backdoor_Win32_PCview_A_2147636933_0
         $x_1_4 = "SYSTEM\\CurrentControlSet\\Services\\%s\\Security" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

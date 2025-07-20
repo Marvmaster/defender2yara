@@ -16,6 +16,7 @@ rule Trojan_Win32_ZLoad_AHB_2147946295_0
         $x_2_1 = {89 ca 80 c2 ?? 32 54 0c 04 80 c2 ?? 88 54 0c 04 41 83 f9 ?? 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

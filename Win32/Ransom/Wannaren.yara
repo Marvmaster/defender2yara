@@ -18,6 +18,7 @@ rule Ransom_Win32_Wannaren_A_2147753124_0
         $x_1_4 = {75 50 80 7c ?? ?? 64 75 49 80 7c ?? ?? 6f 75 42 80 7c ?? ?? 62 75 3b 80 7c ?? ?? 65 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

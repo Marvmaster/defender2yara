@@ -17,6 +17,7 @@ rule TrojanClicker_Win32_Yumud_A_2147648472_0
         $x_1_3 = {75 72 6c 00 00 68 74 74 70 3a 2f 2f 00 2f 73 3f 00 2f 62 61 69 64 75 3f 00 3f 71 75 65 72 79 3d 00 2f 00 68 74 74 70 3a 2f 2f 77 77 77 2e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

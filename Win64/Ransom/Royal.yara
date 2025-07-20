@@ -17,6 +17,7 @@ rule Ransom_Win64_Royal_ZZ_2147834986_0
         $x_10_3 = {c7 41 0c 02 00 00 00 0f 57 c0 48 c7 01 ff ff ff ff 48 8d 52 30 89 71 08 48 8d 49 30 0f 11 42 d0 0f 11 42 e0 48 83 e8 01 75 d6}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Ransom_Win64_Royal_MKP_2147835068_0
         $x_1_12 = "BEGIN RSA PRIVATE KEY" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_1_*))) or
             ((1 of ($x_11_*))) or

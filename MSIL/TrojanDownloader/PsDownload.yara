@@ -30,6 +30,7 @@ rule TrojanDownloader_MSIL_PsDownload_MA_2147809050_0
         $x_1_15 = "DownloadString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule TrojanDownloader_MSIL_PsDownload_NZT_2147837416_0
         $x_1_2 = {38 00 39 00 2e 00 33 00 34 00 2e 00 32 00 37 00 2e 00 31 00 36 00 37 00 2f 00 77 00 69 00 72 00 65 00 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule TrojanDownloader_MSIL_PsDownload_CXD_2147842014_0
         $x_5_1 = {28 13 00 00 0a 72 ?? ?? ?? ?? 28 ?? ?? ?? ?? 6f ?? ?? ?? ?? 28 ?? ?? ?? ?? 0b 07 16 07 8e 69 28 ?? ?? ?? ?? 07 0c de}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule TrojanDownloader_MSIL_PsDownload_ABAS_2147849708_0
         $x_1_6 = "GetAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule TrojanDownloader_MSIL_PsDownload_AAIX_2147852360_0
         $x_1_2 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +147,7 @@ rule TrojanDownloader_MSIL_PsDownload_PAK_2147929194_0
         $x_4_1 = {72 01 00 00 70 6f ?? 00 00 0a 06 72 17 00 00 70 6f ?? 00 00 0a 06 17 6f ?? 00 00 0a 06 17 6f ?? 00 00 0a 06 28 ?? 00 00 0a 26}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

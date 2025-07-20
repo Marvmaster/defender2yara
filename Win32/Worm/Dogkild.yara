@@ -18,6 +18,7 @@ rule Worm_Win32_Dogkild_A_2147626198_0
         $x_1_3 = {6a 00 6a 00 6a 08 8d 45 ?? 50 68 14 20 22 00 ff 75 f4 ff 15 ?? ?? ?? ?? 68 d0 07 00 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Worm_Win32_Dogkild_B_2147628789_0
         $x_1_2 = {68 c8 00 00 00 51 68 0c 20 22 00 53 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Worm_Win32_Dogkild_C_2147629581_0
         $x_1_7 = "taskkill.exe /im" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -92,6 +95,7 @@ rule Worm_Win32_Dogkild_D_2147631460_0
         $x_1_4 = "delete RsRavMon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

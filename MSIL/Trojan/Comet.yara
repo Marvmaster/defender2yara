@@ -17,6 +17,7 @@ rule Trojan_MSIL_Comet_MBCD_2147846040_0
         $x_1_2 = {0a 18 59 18 6f ?? 00 00 0a 28 ?? 00 00 0a 13 05 07 11 04 11 05 28 ?? 00 00 06 9c 08 09 58 0c 11 04 17 58 13 04 11 04 06 8e 69 32 a8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_Comet_KAA_2147896400_0
         $x_5_1 = {06 11 07 02 11 07 91 09 61 07 11 04 91 61 9c 07 28 ?? 00 00 0a 11 04 07 8e b7 17 da 33 05 16 13 04 2b 06 11 04 17 d6 13 04 11 07 17 d6 13 07 11 07 11 08 31 cb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

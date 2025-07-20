@@ -19,6 +19,7 @@ rule VirTool_Win64_Remeloadesz_A_2147890413_0
         $x_1_4 = {0f b7 04 24 83 f8 20 ?? ?? 0f b7 04 24 48 8b 4c 24 20 0f b6 04 01 83 f8 0f ?? ?? 0f b7 04 24 48 8b 4c 24 20 0f b6 44 01 01 83 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

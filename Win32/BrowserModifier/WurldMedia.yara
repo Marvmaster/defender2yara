@@ -30,6 +30,7 @@ rule BrowserModifier_Win32_WurldMedia_14729_0
         $x_3_16 = "www.rdxrs.com" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_3_*) and 3 of ($x_2_*) and 7 of ($x_1_*))) or
             ((5 of ($x_3_*) and 2 of ($x_2_*) and 6 of ($x_1_*))) or

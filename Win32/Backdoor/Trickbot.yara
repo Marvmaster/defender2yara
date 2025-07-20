@@ -19,6 +19,7 @@ rule Backdoor_Win32_Trickbot_MAK_2147789465_0
         $x_5_4 = {8b c7 8b 39 8b f7 c1 e8 [0-1] c1 e6 [0-1] 0b f0 89 32 4b 83 c1 [0-1] 83 c2 [0-1] f6 c3 07 75 e4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

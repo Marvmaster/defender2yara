@@ -18,6 +18,7 @@ rule Backdoor_Win32_Kanafiba_A_2147656113_0
         $x_1_4 = {8a 70 cc 50 c7 da 30 16 ae 33 7e fd e1 43 83 d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Backdoor_Win32_DarkEnergy_A_2147724762_0
         $x_1_4 = "},\"plugin_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

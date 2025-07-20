@@ -16,6 +16,7 @@ rule Trojan_Win32_Blocix_A_2147650887_0
         $x_1_2 = {8b 45 0c 85 c0 75 0c 6a 3f 68 ?? ?? ?? ?? e9 ?? ?? 00 00 83 f8 01 75 09 6a 3f 68 ?? ?? ?? ?? eb ?? 83 f8 02 75 ?? 6a 3f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

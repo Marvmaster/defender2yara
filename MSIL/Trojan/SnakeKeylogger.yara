@@ -17,6 +17,7 @@ rule Trojan_MSIL_SnakeKeylogger_MK_2147771840_0
         $x_10_2 = {53 2d 2d 2d 2d 2d 2d 2d 2d 4e 2d 2d 2d 2d 2d 2d 2d 2d 41 2d 2d 2d 2d 2d 2d 2d 2d 4b 2d 2d 2d 2d 2d 2d 2d 2d 45 [0-22] 53 4e 41 4b 45 2d 4b 45 59 4c 4f 47 47 45 52}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_SnakeKeylogger_MK_2147771840_1
         $x_1_6 = "GetClipboardData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_MSIL_SnakeKeylogger_MK_2147771840_2
         $x_2_3 = "TTRDZBWIimjJZrG" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Trojan_MSIL_SnakeKeylogger_DA_2147777831_0
         $x_1_9 = "GetDomain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -121,6 +125,7 @@ rule Trojan_MSIL_SnakeKeylogger_MK1_2147782602_0
         $x_10_3 = "\\Login Data" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +155,7 @@ rule Trojan_MSIL_SnakeKeylogger_DB_2147784153_0
         $x_1_9 = "Discord" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +184,7 @@ rule Trojan_MSIL_SnakeKeylogger_DC_2147784157_0
         $x_1_8 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -209,6 +216,7 @@ rule Trojan_MSIL_SnakeKeylogger_DD_2147784158_0
         $x_1_11 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -243,6 +251,7 @@ rule Trojan_MSIL_SnakeKeylogger_DE_2147784682_0
         $x_1_11 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -273,6 +282,7 @@ rule Trojan_MSIL_SnakeKeylogger_DF_2147784684_0
         $x_1_7 = "Split" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -303,6 +313,7 @@ rule Trojan_MSIL_SnakeKeylogger_DG_2147785190_0
         $x_1_10 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 4 of ($x_1_*))) or
             ((3 of ($x_20_*))) or
@@ -331,6 +342,7 @@ rule Trojan_MSIL_SnakeKeylogger_DH_2147785191_0
         $x_1_4 = "GZipStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -363,6 +375,7 @@ rule Trojan_MSIL_SnakeKeylogger_DI_2147786213_0
         $x_1_9 = "get_Y" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 4 of ($x_1_*))) or
             ((1 of ($x_50_*) and 2 of ($x_20_*))) or
@@ -389,6 +402,7 @@ rule Trojan_MSIL_SnakeKeylogger_DJ_2147786214_0
         $x_1_1 = {70 02 08 18 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 03 07 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 6a 61 d1 28 ?? ?? ?? 0a 13 04 06 11 04 6f ?? ?? ?? 0a 26 07 03 6f ?? ?? ?? 0a 17}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -417,6 +431,7 @@ rule Trojan_MSIL_SnakeKeylogger_DK_2147786217_0
         $x_1_8 = "Convert" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -443,6 +458,7 @@ rule Trojan_MSIL_SnakeKeylogger_DM_2147786438_0
         $x_1_6 = "SunDay" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -475,6 +491,7 @@ rule Trojan_MSIL_SnakeKeylogger_DN_2147786439_0
         $x_1_12 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -508,6 +525,7 @@ rule Trojan_MSIL_SnakeKeylogger_DO_2147786654_0
         $x_1_9 = "get_Y" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -543,6 +561,7 @@ rule Trojan_MSIL_SnakeKeylogger_DP_2147786655_0
         $x_1_12 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -581,6 +600,7 @@ rule Trojan_MSIL_SnakeKeylogger_DQ_2147786760_0
         $x_1_14 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -618,6 +638,7 @@ rule Trojan_MSIL_SnakeKeylogger_DR_2147787202_0
         $x_1_13 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -656,6 +677,7 @@ rule Trojan_MSIL_SnakeKeylogger_DS_2147787203_0
         $x_1_14 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -693,6 +715,7 @@ rule Trojan_MSIL_SnakeKeylogger_DT_2147787435_0
         $x_1_13 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -723,6 +746,7 @@ rule Trojan_MSIL_SnakeKeylogger_DV_2147787833_0
         $x_1_6 = "GZipStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -751,6 +775,7 @@ rule Trojan_MSIL_SnakeKeylogger_DX_2147788238_0
         $x_1_8 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -777,6 +802,7 @@ rule Trojan_MSIL_SnakeKeylogger_DY_2147788239_0
         $x_1_6 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -807,6 +833,7 @@ rule Trojan_MSIL_SnakeKeylogger_DZ_2147788432_0
         $x_1_10 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -834,6 +861,7 @@ rule Trojan_MSIL_SnakeKeylogger_EA_2147788433_0
         $x_1_7 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -861,6 +889,7 @@ rule Trojan_MSIL_SnakeKeylogger_EB_2147788481_0
         $x_1_4 = "DialogsLib" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -886,6 +915,7 @@ rule Trojan_MSIL_SnakeKeylogger_EC_2147788482_0
         $x_1_5 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -912,6 +942,7 @@ rule Trojan_MSIL_SnakeKeylogger_ED_2147789029_0
         $x_1_6 = "X__________X" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_5_*))) or
@@ -940,6 +971,7 @@ rule Trojan_MSIL_SnakeKeylogger_EE_2147789030_0
         $x_1_4 = "X__________X" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -971,6 +1003,7 @@ rule Trojan_MSIL_SnakeKeylogger_EF_2147789031_0
         $x_1_11 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -997,6 +1030,7 @@ rule Trojan_MSIL_SnakeKeylogger_EG_2147789172_0
         $x_1_6 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1023,6 +1057,7 @@ rule Trojan_MSIL_SnakeKeylogger_EH_2147789530_0
         $x_1_6 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1048,6 +1083,7 @@ rule Trojan_MSIL_SnakeKeylogger_EI_2147789531_0
         $x_1_5 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1073,6 +1109,7 @@ rule Trojan_MSIL_SnakeKeylogger_EJ_2147789533_0
         $x_1_5 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1098,6 +1135,7 @@ rule Trojan_MSIL_SnakeKeylogger_EK_2147793076_0
         $x_1_5 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1127,6 +1165,7 @@ rule Trojan_MSIL_SnakeKeylogger_EL_2147793133_0
         $x_1_9 = "get_X" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1158,6 +1197,7 @@ rule Trojan_MSIL_SnakeKeylogger_EM_2147793134_0
         $x_1_11 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1186,6 +1226,7 @@ rule Trojan_MSIL_SnakeKeylogger_EN_2147793310_0
         $x_1_5 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1217,6 +1258,7 @@ rule Trojan_MSIL_SnakeKeylogger_EO_2147793311_0
         $x_1_11 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1255,6 +1297,7 @@ rule Trojan_MSIL_SnakeKeylogger_SST_2147793388_0
         $x_1_15 = "198 Protector V2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1297,6 +1340,7 @@ rule Trojan_MSIL_SnakeKeylogger_SST_2147793388_1
         $x_30_22 = "snake crypted" ascii //weight: 30
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_30_*) and 8 of ($x_1_*))) or
             ((2 of ($x_30_*))) or
@@ -1334,6 +1378,7 @@ rule Trojan_MSIL_SnakeKeylogger_EP_2147793870_0
         $x_1_13 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1360,6 +1405,7 @@ rule Trojan_MSIL_SnakeKeylogger_MA_2147794213_0
         $x_2_2 = {1e 2c 18 2b 18 2b 1d 2b 22 ?? ?? 09 26 12 00 ?? 2d 07 26 de 2a 2b 1b 2b f4 2b 1a 2b f6 28 ?? 00 00 06 2b e1 28 0f 00 00 06 2b dc 28 10 00 00 06 2b d7 0a 2b e2 28 11 00 00 06 2b df 26 de}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1385,6 +1431,7 @@ rule Trojan_MSIL_SnakeKeylogger_MA_2147794213_1
         $x_1_5 = "StrReverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1417,6 +1464,7 @@ rule Trojan_MSIL_SnakeKeylogger_SSTR_2147795089_0
         $x_1_12 = "00360032003800320037003000340034003900300034002F003800380039003900380031" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1444,6 +1492,7 @@ rule Trojan_MSIL_SnakeKeylogger_NJN_2147799510_0
         $x_1_7 = "$d4d36f55-830f-414b-83c3-d7a28d5b65e8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1474,6 +1523,7 @@ rule Trojan_MSIL_SnakeKeylogger_SSU_2147799516_0
         $x_1_10 = "$6e5b9692-f94d-4bd0-b9e7-2852370dedd4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1507,6 +1557,7 @@ rule Trojan_MSIL_SnakeKeylogger_UYT_2147806246_0
         $x_1_13 = "StringBuilder" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1535,6 +1586,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPD_2147814813_0
         $x_1_8 = "Stopwatch" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1556,6 +1608,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPC_2147815368_0
         $x_1_1 = {2c 03 17 2b 03 16 2b 00 2d 03 26 2b 07 28 1a 00 00 0a 2b 00 2a 06 00 20 20 4e 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1582,6 +1635,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPC_2147815368_1
         $x_1_6 = "Binder" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1619,6 +1673,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPC_2147815368_2
         $x_1_17 = "SpecialFolder" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1658,6 +1713,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPS_2147815610_0
         $x_1_19 = "Length" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1686,6 +1742,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPB_2147815870_0
         $x_1_8 = "DynamicInvoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1712,6 +1769,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPB_2147815870_1
         $x_1_6 = "Rftamajnqoqwocdiwfrw.Heasezfvvh" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1738,6 +1796,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPB_2147815870_2
         $x_1_6 = "RC4EncryptDecrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1771,6 +1830,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPB_2147815870_3
         $x_1_13 = "BlockCopy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1797,6 +1857,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPU_2147816518_0
         $x_1_6 = "GetResponseStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1828,6 +1889,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPV_2147816519_0
         $x_1_11 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1861,6 +1923,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPI_2147817288_0
         $x_1_13 = "Skype Technologies S.A." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1891,6 +1954,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPJ_2147817289_0
         $x_1_10 = "MemoryStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 8 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1922,6 +1986,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPM_2147817552_0
         $x_1_7 = "WinPanelCreate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1950,6 +2015,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPM_2147817552_1
         $x_1_8 = "set_IsBackground" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1972,6 +2038,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPY_2147818093_0
         $x_1_2 = {03 04 61 05 59 20 00 01 00 00 58 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1993,6 +2060,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPY_2147818093_1
         $x_1_1 = {16 13 04 2b 1e 07 09 11 04 6f 67 00 00 0a 13 06 08 12 06 28 68 00 00 0a 6f 69 00 00 0a 11 04 17 58 13 04 11 04 07 6f 6a 00 00 0a 32 d8 09 17 58 0d 09 07 6f 6b 00 00 0a 32 c6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2015,6 +2083,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPY_2147818093_2
         $x_1_2 = {13 0f 07 11 0a 11 0f 20 00 01 00 00 5d d2 9c 00 11 09 17 59 13 09 11 09 16 fe 04 16 fe 01 13 10 11 10 2d a9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2036,6 +2105,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPY_2147818093_3
         $x_1_1 = {13 14 11 14 11 13 1f 16 5d 91 13 15 07 11 13 91 11 15 61 13 16 11 13 17 58 08 5d 13 17 07 11 17 91 13 18 11 16 11 18 59 13 19 20 ff 00 00 00 13 1a 11 19 20 00 01 00 00 58 11 1a 5f 13 1b 07 11 13 11 1b d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2057,6 +2127,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPY_2147818093_4
         $x_1_1 = {07 11 05 91 11 07 61 13 08 11 05 17 58 08 5d 13 09 1f 3f 13 11 38 0d fa ff ff 07 11 09 91 13 0a 11 08 11 0a 59 13 0b 20 ff 00 00 00 13 0c 20 ab 00 00 00 13 11 38 ed f9 ff ff 11 0b 20 00 01 00 00 58 11 0c 5f 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2078,6 +2149,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPY_2147818093_5
         $x_1_1 = {00 08 09 6e 08 8e 69 6a 5d d4 91 13 0b 11 04 11 0b 58 11 06 09 95 58 20 ff 00 00 00 5f 13 04 11 06 09 95 13 05 11 06 09 11 06 11 04 95 9e 11 06 11 04 11 05 9e 00 09 17 58 0d 09 20 ff 00 00 00 fe 03 16 fe 01 13 0c 11 0c 2d b5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2113,6 +2185,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPY_2147818093_6
         $x_1_15 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2141,6 +2214,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPZ_2147818094_0
         $x_1_8 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2176,6 +2250,7 @@ rule Trojan_MSIL_SnakeKeylogger_RPZ_2147818094_1
         $x_1_15 = "KeyDetector" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2201,6 +2276,7 @@ rule Trojan_MSIL_SnakeKeylogger_NT_2147818331_0
         $x_1_5 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2227,6 +2303,7 @@ rule Trojan_MSIL_SnakeKeylogger_NHG_2147818586_0
         $x_1_6 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2250,6 +2327,7 @@ rule Trojan_MSIL_SnakeKeylogger_NVB_2147819711_0
         $x_1_3 = "Invisce" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2272,6 +2350,7 @@ rule Trojan_MSIL_SnakeKeylogger_NVD_2147819985_0
         $x_1_2 = {04 5d 91 0a 06 7e ?? ?? ?? 04 03 1f 16 5d 6f ?? ?? ?? 0a 61 0b 07 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2293,6 +2372,7 @@ rule Trojan_MSIL_SnakeKeylogger_NU_2147821132_0
         $x_1_1 = {20 16 70 01 00 0b 2b 1d 00 06 07 23 33 33 33 33 33 e3 6f 40 28 ?? ?? ?? 0a 69 28 ?? ?? ?? 06 0a 00 07 15 58 0b 07 16 fe 04 16 fe 01 0c 08 2d d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2315,6 +2395,7 @@ rule Trojan_MSIL_SnakeKeylogger_NV_2147822308_0
         $x_1_2 = {57 5d a2 c9 09 0b 00 00 00 fa 25 33 00 16 00 00 02 00 00 00 96 00 00 00 45 00 00 00 17 03 00 00 e0 03 00 00 13 04 00 00 2c 01 00 00 56 00 00 00 1a 00 00 00 01 00 00 00 69 00 00 00 02 00 00 00 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2336,6 +2417,7 @@ rule Trojan_MSIL_SnakeKeylogger_NL_2147822316_0
         $x_1_1 = {57 df b6 ff 09 1f 00 00 00 fa 25 33 00 16 00 00 02 00 00 00 a3 00 00 00 3b 00 00 00 fd 00 00 00 cf 03 00 00 87 01 00 00 02 00 00 00 68 01 00 00 05 00 00 00 a2 00 00 00 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2358,6 +2440,7 @@ rule Trojan_MSIL_SnakeKeylogger_NP_2147823615_0
         $x_1_2 = "SASSSSSSSSSSSSSSSSSSSSSS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2380,6 +2463,7 @@ rule Trojan_MSIL_SnakeKeylogger_NS_2147823653_0
         $x_1_2 = {28 05 00 00 0a 03 6f 06 00 00 0a 0a 06 14 28 07 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2405,6 +2489,7 @@ rule Trojan_MSIL_SnakeKeylogger_NS_2147823653_1
         $x_1_5 = "FromBase64CharArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2431,6 +2516,7 @@ rule Trojan_MSIL_SnakeKeylogger_NY_2147825864_0
         $x_1_6 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2453,6 +2539,7 @@ rule Trojan_MSIL_SnakeKeylogger_NYA_2147825865_0
         $x_1_2 = {10 00 00 00 af 00 00 00 1c 00 00 00 b8 00 00 00 01 00 00 00 01 00 00 00 06 00 00 00 0b 00 00 00 0f 00 00 00 37 00 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2489,6 +2576,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABW_2147827399_0
         $x_1_16 = "get_Assembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2513,6 +2601,7 @@ rule Trojan_MSIL_SnakeKeylogger_NEB_2147828116_0
         $x_1_4 = "Lzcwozlgncvnrybvckjtt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2538,6 +2627,7 @@ rule Trojan_MSIL_SnakeKeylogger_NEC_2147828118_0
         $x_1_5 = "Inv0keMember" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2563,6 +2653,7 @@ rule Trojan_MSIL_SnakeKeylogger_NED_2147828119_0
         $x_1_5 = "E*++immerr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2585,6 +2676,7 @@ rule Trojan_MSIL_SnakeKeylogger_NE_2147828123_0
         $x_1_2 = {00 11 03 6f 35 00 00 0a 11 00 16 11 00 8e 69 28 29 00 00 06 13 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2608,6 +2700,7 @@ rule Trojan_MSIL_SnakeKeylogger_NEE_2147828310_0
         $x_1_3 = "sDTRwPLWdPxRSAcfMGXyQnWCSzCpJKHiYHZgNoTmAEZLkDjXrFMNFtQbBEJqYaGeKBLPaiBTNoTdFJKnYjXXG" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2633,6 +2726,7 @@ rule Trojan_MSIL_SnakeKeylogger_NEF_2147828318_0
         $x_1_5 = "C0GKSMKIPA7X8WL" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2658,6 +2752,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABZ_2147828475_0
         $x_1_5 = "FlushFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2684,6 +2779,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABN_2147828763_0
         $x_1_6 = "Shitz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2705,6 +2801,7 @@ rule Trojan_MSIL_SnakeKeylogger_NEG_2147828930_0
         $x_1_1 = {8f 07 00 00 01 25 47 7e 5d 00 00 04 19 11 0e 5f 19 62 1f 1f 5f 63 d2 61 d2 52 17 11 0e 58 13 0e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2726,6 +2823,7 @@ rule Trojan_MSIL_SnakeKeylogger_NEH_2147829564_0
         $x_1_1 = {00 06 07 6f 7e 00 00 0a 6f ?? 00 00 0a 00 07 16 6f ?? 00 00 0a 00 16 0c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2747,6 +2845,7 @@ rule Trojan_MSIL_SnakeKeylogger_NEI_2147829567_0
         $x_1_1 = {00 00 04 1f 0a 6f ?? 00 00 0a 13 04 07 06 11 04 93 6f ?? 00 00 0a 26 00 09 17 58 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2773,6 +2872,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABV_2147829604_0
         $x_1_6 = "VersioningHel.g.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2798,6 +2898,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABT_2147830422_0
         $x_1_5 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2824,6 +2925,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABT_2147830422_1
         $x_1_6 = "Helper_Classes" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2848,6 +2950,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABAD_2147833107_0
         $x_1_4 = "Poker.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2873,6 +2976,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABBI_2147834310_0
         $x_1_5 = "Helper_Classes" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2895,6 +2999,7 @@ rule Trojan_MSIL_SnakeKeylogger_NZB_2147836037_0
         $x_1_2 = "R0539" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2916,6 +3021,7 @@ rule Trojan_MSIL_SnakeKeylogger_RS_2147836246_0
         $x_5_1 = {08 07 11 09 9a 1f 10 28 68 00 00 0a 6f 69 00 00 0a 00 11 09 17 58 13 09 11 09 07 8e 69 fe 04 13 0a 11 0a 2d db}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2938,6 +3044,7 @@ rule Trojan_MSIL_SnakeKeylogger_RS_2147836246_1
         $x_5_2 = {11 06 07 8e 69 fe 04 13 07 11 07 2d 15 11 0a 20 a9 00 00 00 94 20 0c 70 00 00 59 13 09 38 c3 f7 ff ff}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2959,6 +3066,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABEQ_2147836382_0
         $x_5_1 = {02 07 02 8e 69 5d 02 07 02 8e 69 5d 91 06 07 1f 16 5d 91 61 28 ?? ?? ?? 0a 02 07 17 58 02 8e 69 5d 91 28 ?? ?? ?? 0a 59 20 ?? ?? ?? 00 58 20 ?? ?? ?? 00 5d d2 9c 00 07 15 58 0b 07 16 fe 04 16 fe 01 0c 08 2d b9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2984,6 +3092,7 @@ rule Trojan_MSIL_SnakeKeylogger_A_2147837518_0
         $x_1_5 = "GetTypes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3013,6 +3122,7 @@ rule Trojan_MSIL_SnakeKeylogger_A_2147837518_1
         $x_1_9 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3035,6 +3145,7 @@ rule Trojan_MSIL_SnakeKeylogger_B_2147837525_0
         $x_1_2 = "a4c9954c-97d9-4f17-a226-15ea8ddd9331" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3061,6 +3172,7 @@ rule Trojan_MSIL_SnakeKeylogger_B_2147837525_1
         $x_1_6 = "GetTypes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3084,6 +3196,7 @@ rule Trojan_MSIL_SnakeKeylogger_C_2147837529_0
         $x_2_3 = {00 00 01 25 16 1f ?? 9d 6f ?? 01 00 0a 06 00 00 00 04 17 8d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3105,6 +3218,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABFP_2147838438_0
         $x_5_1 = {06 07 02 07 18 5a 18 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a 9c 07 17 58 0b 07 20 ?? ?? ?? 00 fe 04 2d de}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3137,6 +3251,7 @@ rule Trojan_MSIL_SnakeKeylogger_DAA_2147839167_0
         $x_1_12 = "Rollback" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -3163,6 +3278,7 @@ rule Trojan_MSIL_SnakeKeylogger_D_2147839641_0
         $x_2_2 = {8e 69 5d 91 28 ?? 00 00 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3188,6 +3304,7 @@ rule Trojan_MSIL_SnakeKeylogger_MB_2147839831_0
         $x_1_5 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3211,6 +3328,7 @@ rule Trojan_MSIL_SnakeKeylogger_MC_2147839919_0
         $x_5_3 = {57 ff a2 ff 09 0f 00 00 00 fa 25 33 00 16 00 00 02 00 00 00 7e 00 00 00 2b 00 00 00 cc 00 00 00 c7}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3249,6 +3367,7 @@ rule Trojan_MSIL_SnakeKeylogger_DAB_2147840007_0
         $x_1_18 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -3278,6 +3397,7 @@ rule Trojan_MSIL_SnakeKeylogger_MD_2147840366_0
         $x_1_5 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3301,6 +3421,7 @@ rule Trojan_MSIL_SnakeKeylogger_MJ_2147840570_0
         $x_2_3 = "TTRDZBWIimjJZrG" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3325,6 +3446,7 @@ rule Trojan_MSIL_SnakeKeylogger_ML_2147840600_0
         $x_2_4 = "Manager_Jit_BoolToInt.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3349,6 +3471,7 @@ rule Trojan_MSIL_SnakeKeylogger_MP_2147840673_0
         $x_1_4 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3375,6 +3498,7 @@ rule Trojan_MSIL_SnakeKeylogger_MF_2147840706_0
         $x_1_6 = "e9f18a30-57c0-43f0-91b6-0796b6810190" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3400,6 +3524,7 @@ rule Trojan_MSIL_SnakeKeylogger_MH_2147840707_0
         $x_1_5 = "FlushFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -3427,6 +3552,7 @@ rule Trojan_MSIL_SnakeKeylogger_MQ_2147840841_0
         $x_2_3 = "Gotic2.Gotic2" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3450,6 +3576,7 @@ rule Trojan_MSIL_SnakeKeylogger_MG_2147840852_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3471,6 +3598,7 @@ rule Trojan_MSIL_SnakeKeylogger_MI_2147840853_0
         $x_10_1 = {09 11 04 18 5b 07 11 04 18 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a 9c 11 04 18 58 13 04 11 04 08 32 df 09 13 05 de 42}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3497,6 +3625,7 @@ rule Trojan_MSIL_SnakeKeylogger_MO_2147840855_0
         $x_1_6 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3521,6 +3650,7 @@ rule Trojan_MSIL_SnakeKeylogger_MR_2147840990_0
         $x_1_4 = "TryaAgain.Properties" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3542,6 +3672,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPA_2147841203_0
         $x_5_1 = {07 11 04 07 8e 69 5d 02 07 11 04 28 ?? ?? ?? 06 9c 00 11 04 15 58 13 04 11 04 16 fe 04 16 fe 01 13 05 11 05 2d d9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3564,6 +3695,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPAS_2147841204_0
         $x_1_2 = "hkyxDpEhpQxOiEshQCrDp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3588,6 +3720,7 @@ rule Trojan_MSIL_SnakeKeylogger_MS_2147841405_0
         $x_1_4 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3611,6 +3744,7 @@ rule Trojan_MSIL_SnakeKeylogger_NEAB_2147841892_0
         $x_2_3 = "Nude_Photos_" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3642,6 +3776,7 @@ rule Trojan_MSIL_SnakeKeylogger_ME_2147842168_0
         $x_1_11 = "SOFTWARE\\Classes\\Foxmail.url.mailto\\Shell\\open\\command" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3664,6 +3799,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPQS_2147842179_0
         $x_1_2 = {00 28 12 00 00 06 28 01 00 00 2b 28 02 00 00 2b 0a de 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3690,6 +3826,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPAL_2147842180_0
         $x_1_6 = "FEWQFWQFQWRQERQW" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3712,6 +3849,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPRJ_2147842635_0
         $x_1_2 = "WFCubeAttack" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3734,6 +3872,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPRY_2147842969_0
         $x_1_2 = "Windows_Local_Host_Prozess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3757,6 +3896,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPRU_2147842970_0
         $x_1_3 = "resetWonCardsDeckk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3780,6 +3920,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPRP_2147843101_0
         $x_1_3 = "GTA_PASSWORD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3804,6 +3945,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPD_2147843103_0
         $x_1_4 = "runTurnes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3826,6 +3968,7 @@ rule Trojan_MSIL_SnakeKeylogger_2147843131_0
         $x_5_1 = {13 07 11 07 72 cf d5 09 70 6f ?? ?? ?? 0a 13 08 18 8d 03 00 00 01 13 09 11 09 16 72 0f d6 09 70 a2 11 09 17 09 a2 11 09 13 0a 11 08 72 83 d6 09 70 20 00 01 00 00 14 14 11 0a 6f ?? ?? ?? 0a 26 dd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3851,6 +3994,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPCP_2147843137_0
         $x_1_5 = "aDayAtTheRaces" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3876,6 +4020,7 @@ rule Trojan_MSIL_SnakeKeylogger_E_2147843247_0
         $x_2_5 = "Skocko.Properties.Resources" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3897,6 +4042,7 @@ rule Trojan_MSIL_SnakeKeylogger_MU_2147843326_0
         $x_5_1 = {11 06 16 6a 16 6f ?? ?? ?? 0a 26 08 28 ?? ?? ?? 0a 13 07 11 07 72 8b d5 09 70 6f ?? ?? ?? 0a 13 08 18 8d 06 00 00 01 13 09 11 09 16 72 cb d5 09 70 a2 11 09 17 11 05 a2 11 09 13 0a 11 08 72 3f d6 09 70 20 00 01 00 00 14 14 11 0a 6f ?? ?? ?? 0a 26 dd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3919,6 +4065,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPDS_2147843340_0
         $x_1_2 = "get_Marliece_Andrada" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3942,6 +4089,7 @@ rule Trojan_MSIL_SnakeKeylogger_MV_2147843432_0
         $x_2_3 = "Conway_s_Game.Properties" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3963,6 +4111,7 @@ rule Trojan_MSIL_SnakeKeylogger_F_2147843843_0
         $x_2_1 = {06 4a 1a 28 ?? 00 00 0a 0c 00 28 ?? 00 00 0a 28 ?? 00 00 0a 16 07}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3985,6 +4134,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPX_2147843950_0
         $x_1_2 = "get_Marliece_Andrada__40" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4007,6 +4157,7 @@ rule Trojan_MSIL_SnakeKeylogger_G_2147843976_0
         $x_2_2 = {02 11 04 91 07 61 06 09 91 61 13 05 08 11 04 11 05 d2 9c 09}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4030,6 +4181,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPY_2147844278_0
         $x_1_3 = "squeezableFruit_btn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4051,6 +4203,7 @@ rule Trojan_MSIL_SnakeKeylogger_MW_2147844367_0
         $x_1_1 = {25 16 17 8c ?? 00 00 01 a2 25 17 18 8c ?? 00 00 01 a2 25 18 19 8c ?? 00 00 01 a2 25 16 28 ?? ?? ?? 0a 28 ?? ?? ?? 06 74 ?? ?? ?? 1b 6f ?? ?? ?? 0a a2 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4073,6 +4226,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPRN_2147845312_0
         $x_1_2 = "maesMain.CreateDecryptor" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4094,6 +4248,7 @@ rule Trojan_MSIL_SnakeKeylogger_MBDT_2147845539_0
         $x_1_1 = {11 05 11 07 18 6f ?? 00 00 0a 20 03 02 00 00 28 ?? 00 00 0a 13 09 11 06 11 09 8c ?? 00 00 01 6f ?? 00 00 0a 26 11 07 18 58 13 07 00 11 07 11 05 6f ?? 00 00 0a fe 04 13 0a 11 0a 2d c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4119,6 +4274,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPAK_2147845599_0
         $x_1_5 = "MESAJLAR" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4146,6 +4302,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPAF_2147845657_0
         $x_1_7 = "NicoPizzeria" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4168,6 +4325,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPRF_2147845661_0
         $x_1_2 = "IEEE_8025_TokenRing" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4191,6 +4349,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABQS_2147845860_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4213,6 +4372,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABQN_2147845883_0
         $x_2_2 = "107.172.4.169/09/Datiycvj.bmp" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4234,6 +4394,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABRJ_2147845887_0
         $x_5_1 = {07 06 72 df 06 00 70 6f ?? ?? ?? 0a 74 ?? ?? ?? 1b 6f ?? ?? ?? 0a 00 07 06 72 e5 06 00 70 6f ?? ?? ?? 0a 74 ?? ?? ?? 1b 6f ?? ?? ?? 0a 00 07 06 72 eb 06 00 70 6f ?? ?? ?? 0a 74 ?? ?? ?? 1b 6f ?? ?? ?? 0a 00 07 06 72 f1 06 00 70 6f ?? ?? ?? 0a 74 ?? ?? ?? 1b 6f ?? ?? ?? 0a 00 02}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4256,6 +4417,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABSI_2147845965_0
         $x_2_2 = {74 00 72 00 61 00 65 00 6b 00 74 00 6f 00 72}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4278,6 +4440,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABSM_2147845966_0
         $x_1_2 = "BoardGameProject" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4299,6 +4462,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPRE_2147846051_0
         $x_4_1 = {73 15 00 00 0a 0a 02 73 16 00 00 0a 0b 06 07 6f ?? ?? ?? 0a 0c de 0d 06 2c 06}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4321,6 +4485,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABUX_2147846403_0
         $x_1_2 = "quanlycuahang.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4342,6 +4507,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPG_2147846537_0
         $x_1_1 = {07 09 18 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 16 91 13 05 08 11 05 6f ?? ?? ?? 0a 00 09 18 58 0d 00 09 07 6f ?? ?? ?? 0a fe 04 13 06 11 06 2d ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4363,6 +4529,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPAM_2147846662_0
         $x_5_1 = {07 09 18 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 16 91 13 05 08 17 8d ?? ?? ?? 01 25 16 11 05 9c 6f ?? ?? ?? 0a 00 09 18 58 0d 00 09 07 6f ?? ?? ?? 0a fe 04 13 06 11 06 2d c1}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4387,6 +4554,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPL_2147846790_0
         $x_1_4 = "MoodDetector.DataAccess.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4409,6 +4577,7 @@ rule Trojan_MSIL_SnakeKeylogger_MBCY_2147846884_0
         $x_1_2 = "91dcdafa374c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4432,6 +4601,7 @@ rule Trojan_MSIL_SnakeKeylogger_PSP_2147846897_0
         $x_1_3 = "Ezlenkoka" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4454,6 +4624,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPO_2147847385_0
         $x_1_2 = "HoVuQuocTrung" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4476,6 +4647,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPM_2147847459_0
         $x_1_2 = "LakkaPlaylistTool.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4497,6 +4669,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABXP_2147847630_0
         $x_5_1 = {16 0a 2b 3d 16 0b 2b 25 11 06 06 07 6f ?? 00 00 0a 13 1e 12 1e 28 ?? 00 00 0a 13 17 11 0c 11 07 11 17 9c 11 07 17 58 13 07 07 17 58 0b 07 11 06 6f ?? 00 00 0a fe 04 13 18 11 18 2d cb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4518,6 +4691,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPCS_2147848103_0
         $x_3_1 = {11 08 73 5b 00 00 0a 13 07 06 11 07 72 ?? ?? ?? 70 72 ?? ?? ?? 70 6f ?? ?? ?? 0a 7d 33 00 00 04 16 06 7b 33 00 00 04 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 7e 35 00 00 04 25 2d 17}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4540,6 +4714,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPXL_2147848126_0
         $x_1_2 = "Puntos_de_la_pieza" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4563,6 +4738,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABYC_2147848239_0
         $x_1_3 = "SpaceTeam" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4585,6 +4761,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABYI_2147848241_0
         $x_1_2 = "SpaceTeam" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4607,6 +4784,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABYK_2147848455_0
         $x_1_2 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4629,6 +4807,7 @@ rule Trojan_MSIL_SnakeKeylogger_ABYO_2147848553_0
         $x_1_2 = "SpaceTeam" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4650,6 +4829,7 @@ rule Trojan_MSIL_SnakeKeylogger_AABU_2147849165_0
         $x_5_1 = {08 11 0a 11 09 6f ?? 00 00 0a 13 0b 16 13 0c 11 05 11 08 9a 72 b3 02 00 70 28 ?? 00 00 0a 2c 0b 12 0b 28 ?? 00 00 0a 13 0c 2b 36 11 05 11 08 9a 72 b7 02 00 70 28 ?? 00 00 0a 2c 0b 12 0b 28 ?? 00 00 0a 13 0c 2b 1a 11 05 11 08 9a 72 bb 02 00 70 28 ?? 00 00 0a 2c 09 12 0b 28 ?? 00 00 0a 13 0c 07 11 0c 6f ?? 00 00 0a 11 0a 17 58 13 0a 11 0a 09 32 8c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4674,6 +4854,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPAX_2147850043_0
         $x_1_4 = "Luv3CAkRF1eo3OWmM0SQ7g==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4695,6 +4876,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPAT_2147850793_0
         $x_1_1 = {07 08 9a 0d 00 02 09 02 7b ?? ?? ?? 04 09 6f ?? ?? ?? 0a 28 ?? ?? ?? 06 13 04 11 04 16 fe 01 13 05 11 05 2c 06 11 04 13 06 2b 10 00 08 17 58 0c 08 07 8e 69 32 ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4717,6 +4899,7 @@ rule Trojan_MSIL_SnakeKeylogger_SDP_2147850796_0
         $x_1_2 = "QuanLyQuanTS.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4738,6 +4921,7 @@ rule Trojan_MSIL_SnakeKeylogger_SXD_2147850798_0
         $x_2_1 = {73 10 00 00 0a 13 07 11 05 18 5f 2c 03 16 2b 03 17 2b 00 3a 9d 00 00 00 06 6f ?? ?? ?? 0a 11 06 6f ?? ?? ?? 0a 16 73 12 00 00 0a 13 0d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4759,6 +4943,7 @@ rule Trojan_MSIL_SnakeKeylogger_SXC_2147851312_0
         $x_3_1 = {73 09 00 00 0a 72 01 00 00 70 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 0c dd 06 00 00 00 26 dd 00 00 00 00 08 2c cd}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4780,6 +4965,7 @@ rule Trojan_MSIL_SnakeKeylogger_SK_2147851334_0
         $x_2_1 = {11 04 11 07 11 09 58 17 58 17 59 11 08 11 0a 58 17 58 17 59 6f ?? ?? ?? 0a 13 0b 12 0b 28 ?? ?? ?? 0a 13 0c 09 08 11 0c 9c 08 17 58 0c 11 0a 17 58 13 0a 00 11 0a 17 fe 04 13 0d 11 0d 2d c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4801,6 +4987,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPWR_2147889139_0
         $x_4_1 = {2b 1e 11 17 6f ?? ?? ?? 0a 13 3e 11 0d 11 3e 11 22 59 61 13 0d 11 22 19 11 0d 58 1e 63 59 13 22 11 17 6f ?? ?? ?? 06 2d d9 de 0c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4822,6 +5009,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPRT_2147890121_0
         $x_3_1 = {06 07 a3 01 00 00 01 0c 73 ?? ?? ?? 0a 0d 09 72 01 00 00 70 28 ?? ?? ?? 0a 72 33 00 00 70 28 ?? ?? ?? 0a 6f 04 00 00 0a 13 04 14 13 05 38 31 00 00 00 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4843,6 +5031,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPUT_2147890123_0
         $x_4_1 = {72 74 04 00 70 72 78 04 00 70 6f ?? ?? ?? 0a 0d 07 28 ?? ?? ?? 0a 13 04 20 ?? ?? ?? 00 13 05 17 8d ?? ?? ?? 01 25 16 7e 1f 00 00 04 a2 13 06 72 7a 04 00 70 72 47 06 00 70 72 78 04 00 70 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 13 07 11 07}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4864,6 +5053,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPAD_2147891382_0
         $x_2_1 = {06 20 c4 28 00 00 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 20 ab 28 00 00 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 0b 73 ?? ?? ?? 0a 0c 02 28 ?? ?? ?? 06 75 03 00 00 1b 73 ?? ?? ?? 0a 0d 09 07 16 73 0f 00 00 0a 13 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4885,6 +5075,7 @@ rule Trojan_MSIL_SnakeKeylogger_AMAA_2147891900_0
         $x_1_1 = {08 20 00 01 00 00 6f ?? 00 00 0a 08 72 ?? 00 00 70 28 ?? 00 00 0a 6f ?? 00 00 0a 08 72 ?? ?? 00 70 28 ?? 00 00 0a 6f ?? 00 00 0a 08 08 6f ?? 00 00 0a 08 6f ?? 00 00 0a 6f ?? 00 00 0a 0d 73 ?? 00 00 0a 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4910,6 +5101,7 @@ rule Trojan_MSIL_SnakeKeylogger_AMAA_2147891900_1
         $x_1_5 = "HttpClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4931,6 +5123,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPAP_2147891967_0
         $x_1_1 = {06 20 40 f4 c1 53 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 20 3f f4 c1 53 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 13 04 73 f6 00 00 0a 0b 14 fe 06 2a 05 00 06 73 2a 03 00 0a 28 ?? ?? ?? 06 28 ?? ?? ?? 06 75 8b 00 00 1b 73 03 02 00 0a 0c 08 11 04 16 73 2b 03 00 0a 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4952,6 +5145,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPAQ_2147892357_0
         $x_5_1 = {0c 08 11 04 16 73 55 02 00 0a 0d 09 07 6f ?? ?? ?? 0a 07 6f ?? ?? ?? 0a 13 05 de 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4973,6 +5167,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPAI_2147892973_0
         $x_4_1 = {0d 09 07 16 73 ?? ?? ?? 0a 13 04 11 04 08 6f ?? ?? ?? 0a 08 6f ?? ?? ?? 0a 13 05 de 2a}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4994,6 +5189,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPXY_2147893835_0
         $x_4_1 = {06 0b 72 3f 0c 00 70 0c 08 72 8f 0c 00 70 72 67 0a 00 70 6f ?? ?? ?? 0a 0d 07 28 ?? ?? ?? 0a 13 04 20 00 01 00 00 13 05 17 8d 12 00 00 01 25 16 7e 5c 00 00 04 a2 13 06 72 93 0c 00 70 72 60 0e 00 70 72 67 0a 00 70 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 13 07 11 07}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5015,6 +5211,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPQE_2147893890_0
         $x_3_1 = {07 09 07 8e 69 5d 02 07 09 07 8e 69 5d 91 08 09 08 28 ?? ?? ?? 06 5d 28 ?? ?? ?? 06 61 28 ?? ?? ?? 06 07 09 17 58}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5036,6 +5233,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPQM_2147894266_0
         $x_3_1 = {7e 01 00 00 04 6f ?? ?? ?? 0a 05 03 02 8e 69 6f ?? ?? ?? 0a 0a 06 28 ?? ?? ?? 0a 00 06 0b 2b 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5061,6 +5259,7 @@ rule Trojan_MSIL_SnakeKeylogger_CCDV_2147896157_0
         $x_1_5 = "LQvwkMpyUJMpULATAxCZv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5088,6 +5287,7 @@ rule Trojan_MSIL_SnakeKeylogger_GKP_2147896641_0
         $x_1_7 = "DACls.g.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5109,6 +5309,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPQN_2147898282_0
         $x_4_1 = {0b 07 18 6f ?? ?? ?? 0a 00 07 18 6f ?? ?? ?? 0a 00 07 03 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 07 6f ?? ?? ?? 0a 0c 28 ?? ?? ?? 0a 08 06 16 06 8e 69 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 0d 2b 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5136,6 +5337,7 @@ rule Trojan_MSIL_SnakeKeylogger_DL_2147899392_0
         $x_1_7 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -5160,6 +5362,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPJR_2147900806_0
         $x_4_1 = {02 7b 12 00 00 04 07 11 04 08 59 09 11 06 02 7b 12 00 00 04 03 7b 25 00 00 04 11 04 09 11 06 03 6f ?? ?? ?? 06 03 6f ?? ?? ?? 06 00 00 11 06 17 58 13 06 11 06 1a fe 04 13 07 11 07 2d c1}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5181,6 +5384,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPAA_2147900976_0
         $x_5_1 = {11 0c 11 0d 61 13 0f 11 0f 11 0e 59 13 10 07 11 0a 11 10 11 08 5d d2 9c 00 11 07 17 58 13 07 11 07 08 fe 04 13 11 11 11 2d 8b}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5202,6 +5406,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPDX_2147901268_0
         $x_4_1 = {0a 38 72 ff ff ff 0b 38 72 ff ff ff 06 38 73 ff ff ff 28 ?? ?? ?? 2b 38 6e ff ff ff 28 ?? ?? ?? 2b 38 69 ff ff ff 28 ?? ?? ?? 0a 38 64 ff ff ff 02 38 63 ff ff ff}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5223,6 +5428,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPZZ_2147901737_0
         $x_5_1 = {11 04 1f 16 5d 91 61 07 11 07 91 11 05 58 11 05 5d 59 d2 9c 11 04 17 58 13 04}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5244,6 +5450,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPZV_2147901738_0
         $x_5_1 = {06 1f 16 5d 91 13 0c 08 11 05 11 0b 11 0c 61 08 11 0a 91 11 04 58 11 04 5d 59 d2 9c 06 17 58 0a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5265,6 +5472,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPYY_2147901986_0
         $x_10_1 = {5d 59 d2 9c 00 00 11 06 17 58 13 06}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5286,6 +5494,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPYX_2147902064_0
         $x_10_1 = {91 61 08 11 ?? 17 58 20 ?? ?? ?? 00 5d 91 09 58 09 5d 59 d2 9c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5307,6 +5516,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPXXP_2147902084_0
         $x_10_1 = {11 15 91 61 07 11 12 17 58 20 ?? ?? ?? 00 5d 91 08 58 08 5d 59 d2 9c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5328,6 +5538,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPEE_2147902212_0
         $x_4_1 = {91 61 07 06 17 58 20 ?? ?? ?? 00 5d 91 09 58 09 5d 59 d2 9c 06 17 58 0a}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5349,6 +5560,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPPY_2147902268_0
         $x_4_1 = {91 61 07 11 11 20 ?? ?? ?? 00 5d 91 20 ?? ?? ?? 00 58 20 ?? ?? ?? 00 5d 59 d2 9c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5370,6 +5582,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPFE_2147902364_0
         $x_4_1 = {5d 59 d2 9c 00 11 05 17 58 13 05}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5391,6 +5604,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPDV_2147902459_0
         $x_4_1 = {91 61 07 11 0e 20 ?? ?? ?? 00 5d 91 20 ?? ?? ?? 00 58 20 ?? ?? ?? 00 5d 59 d2 9c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5412,6 +5626,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPFF_2147902559_0
         $x_4_1 = {5d 91 59 20 ?? ?? ?? 00 58 13 0a}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5433,6 +5648,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPXB_2147902664_0
         $x_10_1 = {5d 91 61 13 0b 11 0b 08 11 05 17 58 11 04 5d 91 59 20 ?? ?? ?? 00 58 13 0c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5454,6 +5670,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPXZ_2147902694_0
         $x_10_1 = {5d 91 59 20 ?? ?? ?? 00 58 13 0b 07 11 09 11 0b 20 ?? ?? ?? 00 5d d2 9c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5475,6 +5692,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPNN_2147902847_0
         $x_5_1 = {5d 91 61 07 11 04 17 58 09 5d 91 59}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5496,6 +5714,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPVG_2147903228_0
         $x_4_1 = {5d 91 61 07 09 17 58 08 5d 91 59 20 ?? ?? ?? 00 58 20 ?? ?? ?? 00 5d d2 13 06}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5517,6 +5736,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPCZ_2147903406_0
         $x_4_1 = {7e 03 00 00 04 6f ?? ?? ?? 0a 02 0e 04 04 8e 69 6f ?? ?? ?? 0a 0a 06 0b 2b 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5538,6 +5758,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPBP_2147904424_0
         $x_5_1 = {5d 91 61 28 ?? ?? ?? 0a 07 11 ?? 17 58 07 8e 69 5d 91}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5559,6 +5780,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPVX_2147904940_0
         $x_5_1 = {59 20 00 01 00 00 58 20 00 01 00 00 5d 13 ?? 07 11 ?? 11 ?? 6a 5d d4 11}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5580,6 +5802,7 @@ rule Trojan_MSIL_SnakeKeylogger_KAB_2147905523_0
         $x_1_1 = {02 0e 07 0e 04 8e 69 6f ?? 00 00 0a 0a 06 0b 2b 00 07 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5601,6 +5824,7 @@ rule Trojan_MSIL_SnakeKeylogger_SSXP_2147910176_0
         $x_5_1 = {13 0c 18 2c 09 11 0c 11 0a 6f ?? ?? ?? 0a 11 0a 6f ?? ?? ?? 0a 13 07 de 0c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5622,6 +5846,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPXF_2147912150_0
         $x_4_1 = {5d 91 0d 07 08 91 09 61 07 08 17 58 07 8e 69 5d 91}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5643,6 +5868,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPVF_2147912501_0
         $x_2_1 = {07 09 91 11 ?? 61 09 17 58 07 8e 69 5d 13}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5664,6 +5890,7 @@ rule Trojan_MSIL_SnakeKeylogger_AMAC_2147912833_0
         $x_1_1 = {0a 16 0b 2b ?? 00 06 07 7e ?? 00 00 04 07 91 02 07 03 8e 69 5d 91 61 d2 9c 00 07 17 58 0b 07 7e ?? 00 00 04 8e 69 fe ?? 0c 08 2d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5685,6 +5912,7 @@ rule Trojan_MSIL_SnakeKeylogger_MBYX_2147914203_0
         $x_1_1 = {07 06 91 11 ?? 61 06 17 58 11 ?? 5d 13 ?? 07 11 ?? 91}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5706,6 +5934,7 @@ rule Trojan_MSIL_SnakeKeylogger_GPX_2147914243_0
         $x_1_1 = {07 06 91 11 ?? 61 13 ?? 06 17 58 08 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5727,6 +5956,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPLF_2147914424_0
         $x_1_1 = {5d 16 fe 01 13 05 11 05 2c 0c 02 11 04 02 11 04 91 1f 1d 61 b4 9c 11 04 17 d6 13 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5748,6 +5978,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPCK_2147914739_0
         $x_5_1 = {16 0a 2b 19 00 02 06 7e ?? 00 00 04 06 91 04 06 05 8e 69 5d 91 61 d2 9c 00 06 17 58 0a 06 7e ?? 00 00 04 8e 69 fe 04 0b}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5769,6 +6000,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPBF_2147915074_0
         $x_4_1 = {7e 0e 00 00 04 6f ?? 00 00 0a 00 25 7e 0f 00 00 04 6f ?? 00 00 0a 00 0a 06 6f ?? 00 00 0a 0b 07 02 16 02 8e 69 6f ?? 00 00 0a 0c 2b 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5790,6 +6022,7 @@ rule Trojan_MSIL_SnakeKeylogger_SDRA_2147915611_0
         $x_1_1 = {03 06 7e 04 00 00 04 06 91 04 06 04 8e 69 5d 91 61 d2 9c 00 06 17 58 0a 06 7e 04 00 00 04 8e 69 fe 04 0b 07 2d d9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5811,6 +6044,7 @@ rule Trojan_MSIL_SnakeKeylogger_SGRG_2147916099_0
         $x_1_1 = {69 5d 91 13 07 07 11 06 08 5d 08 58 08 5d 91 11 07 61 13 08 11 06 17 58 08 5d 08 58 08 5d 13 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5832,6 +6066,7 @@ rule Trojan_MSIL_SnakeKeylogger_SGRG_2147916099_1
         $x_1_1 = {02 08 7e 04 00 00 04 08 91 03 08 07 8e 69 5d 91 61 d2 9c 00 08 17 58 0c 08 7e 04 00 00 04 8e 69 fe 04 0d 09 2d d9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5853,6 +6088,7 @@ rule Trojan_MSIL_SnakeKeylogger_SOVP_2147916344_0
         $x_1_1 = {09 11 07 91 13 08 11 06 08 58 08 5d 13 09 07 11 09 91 11 08 61 13 0a 11 06 17 58 08 58 08 5d 13 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5874,6 +6110,7 @@ rule Trojan_MSIL_SnakeKeylogger_SJVP_2147916579_0
         $x_1_1 = {d1 13 0e 11 18 11 09 91 13 20 11 18 11 09 11 20 11 28 61 19 11 1c 58 61 11 30 61 d2 9c 17 11 09 58 13 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5895,6 +6132,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPDL_2147917843_0
         $x_1_1 = {04 05 5d 05 58 05 5d 0a 03 06 91 0b 07 0e 04 61 0e 05 59 20 00 02 00 00 58 0c 08 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5916,6 +6154,7 @@ rule Trojan_MSIL_SnakeKeylogger_GPD_2147918272_0
         $x_1_1 = {11 0d 08 5d 13 0e 07 11 0e 91 13 0f 11 06 08 5d 08 58 13 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5939,6 +6178,7 @@ rule Trojan_MSIL_SnakeKeylogger_SML_2147918329_0
         $x_1_3 = {06 07 a3 02 00 00 01 28 05 00 00 06 dd 06 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5962,6 +6202,7 @@ rule Trojan_MSIL_SnakeKeylogger_SML_2147918329_1
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5983,6 +6224,7 @@ rule Trojan_MSIL_SnakeKeylogger_SWDL_2147919404_0
         $x_1_1 = {19 2c 0d 2b 0d 72 01 00 00 70 2b 0d 2b 12 2b 17 de 1b 73 8c 00 00 0a 2b ec 28 ?? ?? ?? 0a 2b ec 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6004,6 +6246,7 @@ rule Trojan_MSIL_SnakeKeylogger_SLPF_2147919405_0
         $x_1_1 = {11 06 11 07 6f ?? ?? ?? 0a 13 08 08 12 08 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 08 6f ?? ?? ?? 0a 20 00 40 01 00 fe 04 13 09 11 09 2c 0e 08 12 08 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 08 6f ?? ?? ?? 0a 20 00 40 01 00 fe 04 13 0a 11 0a 2c 0e 08 12 08 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 00 11 07 17 58 13 07 11 07 07 6f ?? ?? ?? 0a fe 04 13 0b 11 0b 2d 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6025,6 +6268,7 @@ rule Trojan_MSIL_SnakeKeylogger_SLDF_2147919546_0
         $x_1_1 = {06 11 05 11 06 6f ?? ?? ?? 0a 13 07 07 12 07 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 11 0f 20 fb 00 00 00 91 1f 09 5b 13 0e 38 55 fe ff ff 00 07 6f ?? ?? ?? 0a 20 00 40 01 00 fe 04 13 08 11 08 2c 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6057,6 +6301,7 @@ rule Trojan_MSIL_SnakeKeylogger_CZ_2147919845_0
         $x_1_12 = "get_timePasswordChanged" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 3 of ($x_2_*) and 6 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 4 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -6082,6 +6327,7 @@ rule Trojan_MSIL_SnakeKeylogger_SHPF_2147919937_0
         $x_1_1 = {0c 73 22 00 00 0a 0d 09 08 17 73 23 00 00 0a 13 04 11 04 06 16 06 8e 69 6f ?? ?? ?? 0a 09 6f ?? ?? ?? 0a 13 05 dd 29 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6103,6 +6349,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPSG_2147920430_0
         $x_1_1 = {09 11 0d 07 11 0d 91 11 04 11 04 11 07 95 11 04 11 05 95 58 20 ff 00 00 00 5f 95 61 d2 9c 11 0d 17 58 13 0d 11 0d 09 8e 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6127,6 +6374,7 @@ rule Trojan_MSIL_SnakeKeylogger_SIK_2147920481_0
         $x_1_4 = "TextBoxMaskInput.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6148,6 +6396,7 @@ rule Trojan_MSIL_SnakeKeylogger_SVFG_2147920646_0
         $x_1_1 = {58 20 ff 00 00 00 5f 13 20 11 04 11 20 95 d2 13 21 09 11 1f 07 11 1f 91 11 21 61 d2 9c 00 11 1f 17 58 13 1f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6169,6 +6418,7 @@ rule Trojan_MSIL_SnakeKeylogger_PNH_2147920671_0
         $x_10_1 = {00 06 11 05 11 06 6f ?? 00 00 0a 13 07 07 12 07 28 ?? 00 00 0a 6f ?? 00 00 0a 00 07 6f ?? 00 00 0a 20 00 40 01 00 fe 04 13 08 11 08 2c 0e 07 12 07 28 ?? 00 00 0a 6f ?? 00 00 0a 00 07 6f ?? 00 00 0a 20 00 40 01 00 fe 04 13 09 11 09 2c 0e 07 12 07 28 ?? 00 00 0a 6f ?? 00 00 0a 00 00 11 06 17 58 13 06 11 06 06 6f ?? 00 00 0a fe 04 13 0a 11 0a 2d 8c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6190,6 +6440,7 @@ rule Trojan_MSIL_SnakeKeylogger_SJJG_2147920780_0
         $x_1_1 = {2b 51 2b 52 6f ?? ?? ?? 0a 0d 73 1c 00 00 0a 13 04 11 04 09 17 73 1d 00 00 0a 13 05 11 05 02 16 02 8e 69 6f ?? ?? ?? 0a 11 04 6f ?? ?? ?? 0a 10 00 de 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6211,6 +6462,7 @@ rule Trojan_MSIL_SnakeKeylogger_SJQA_2147920781_0
         $x_1_1 = {d1 13 11 11 1d 11 09 91 13 27 11 1d 11 09 11 22 11 27 61 11 1a 19 58 61 11 2f 61 d2 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6232,6 +6484,7 @@ rule Trojan_MSIL_SnakeKeylogger_STSG_2147921749_0
         $x_1_1 = {08 18 fe 04 16 fe 01 13 05 11 05 2c 0e 03 12 00 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 08 19 fe 01 13 06 11 06 2c 0e 03 12 00 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6253,6 +6506,7 @@ rule Trojan_MSIL_SnakeKeylogger_SYRA_2147921758_0
         $x_1_1 = {63 d1 13 11 11 1d 11 09 91 13 27 11 1d 11 09 11 27 11 22 61 19 11 1a 58 61 11 2f 61 d2 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6276,6 +6530,7 @@ rule Trojan_MSIL_SnakeKeylogger_AMD_2147921791_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6297,6 +6552,7 @@ rule Trojan_MSIL_SnakeKeylogger_PPBH_2147921868_0
         $x_10_1 = {00 02 06 7e 04 00 00 04 06 91 05 06 28 ?? ?? ?? 0a 04 6f ?? ?? ?? 0a 8e 69 5d 91 61 d2 9c 00 06 17 58 0a 06 7e 04 00 00 04 8e 69 fe 04 0b 07 2d cf}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6318,6 +6574,7 @@ rule Trojan_MSIL_SnakeKeylogger_SIPF_2147922344_0
         $x_1_1 = {0a 18 5b 8d 25 00 00 01 0a 16 0b 11 06 1f 32 93 20 40 d9 00 00 59 13 05 2b b9 00 06 07 72 3d 04 00 70 03 07 18 5a 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 1a 62 72 3d 04 00 70 03 07 18 5a 17 58 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 60 d2 9c 16 13 05 2b 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6339,6 +6596,7 @@ rule Trojan_MSIL_SnakeKeylogger_SIPA_2147922511_0
         $x_3_1 = {63 d1 13 11 11 1d 11 09 91 13 27 11 1d 11 09 11 27 11 22 61 11 1a 19 58 61 11 2f 61 d2 9c 17 11 09}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6360,6 +6618,7 @@ rule Trojan_MSIL_SnakeKeylogger_KAE_2147922747_0
         $x_1_1 = {03 08 18 5a 6f ?? 00 00 0a 28 ?? 00 00 0a 1a 62 72 ?? ?? ?? ?? 03 08 18 5a 17 58 6f ?? 00 00 0a 28 ?? 00 00 0a 60 d2 9c 00 08 17 58 0c 08 06 8e 69 fe 04 0d 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6381,6 +6640,7 @@ rule Trojan_MSIL_SnakeKeylogger_SDDA_2147922767_0
         $x_3_1 = {08 06 8e 69 5d 91 61 d2 9c 00 08 17 58 0c 08 7e 04 00 00 04 8e 69 fe 04 0d 09 2d d9}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6404,6 +6664,7 @@ rule Trojan_MSIL_SnakeKeylogger_SDDA_2147922767_1
         $x_1_3 = "StorePixelData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6427,6 +6688,7 @@ rule Trojan_MSIL_SnakeKeylogger_SUT_2147923004_0
         $x_1_3 = {06 07 a3 02 00 00 01 28 05 00 00 06 dd 06 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6451,6 +6713,7 @@ rule Trojan_MSIL_SnakeKeylogger_SMI_2147923080_0
         $x_1_4 = "Bitmap" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6475,6 +6738,7 @@ rule Trojan_MSIL_SnakeKeylogger_SMJ_2147923231_0
         $x_1_4 = "GetPixel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6496,6 +6760,7 @@ rule Trojan_MSIL_SnakeKeylogger_PHJH_2147923243_0
         $x_10_1 = {11 1d 11 09 11 22 11 27 61 19 11 1a 58 61 11 2f 61 d2 9c 17 11 09 58 13 09 11 27 13 1a}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6517,6 +6782,7 @@ rule Trojan_MSIL_SnakeKeylogger_PPPV_2147923245_0
         $x_10_1 = {16 0c 2b 19 00 02 08 7e ?? ?? ?? ?? 08 91 03 08 06 8e 69 5d 91 61 d2 9c 00 08 17 58 0c 08 7e ?? ?? ?? ?? 8e 69 fe 04}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6538,6 +6804,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPSB_2147923336_0
         $x_3_1 = {0a 06 06 6f ?? ?? ?? 0a 06 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 0b 73 2c 00 00 0a 0c 08 07 17 73 2d 00 00 0a 0d 09 02 16 02 8e 69 6f ?? ?? ?? 0a 08 6f ?? ?? ?? 0a 13 04 dd 27 00 00 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6559,6 +6826,7 @@ rule Trojan_MSIL_SnakeKeylogger_AMK_2147923391_0
         $x_1_1 = {0b 07 09 11 04 6f ?? 00 00 0a 13 05 73 ?? 00 00 0a 0a 06 11 05 17 73 ?? 00 00 0a 0c 08 [0-20] 8e 69 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6580,6 +6848,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPDT_2147923742_0
         $x_3_1 = {0c 73 22 00 00 0a 0d 09 06 07 6f ?? 00 00 0a 13 04 73 24 00 00 0a 13 05 11 05 11 04 17 73 25 00 00 0a 13 06 11 06 08 16 08 8e 69 6f ?? 00 00 0a 11 05 6f ?? 00 00 0a 13 07}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6604,6 +6873,7 @@ rule Trojan_MSIL_SnakeKeylogger_SMV_2147923974_0
         $x_1_4 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6626,6 +6896,7 @@ rule Trojan_MSIL_SnakeKeylogger_SCCF_2147924428_0
         $x_2_2 = {02 06 07 28 ?? 00 00 06 0c 04 03 6f ?? 00 00 0a 59 0d 09 19}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6647,6 +6918,7 @@ rule Trojan_MSIL_SnakeKeylogger_SKL_2147924445_0
         $x_1_1 = {00 02 06 07 28 aa 00 00 06 0c 04 03 6f a0 00 00 0a 59 0d 09 19 fe 04 16 fe 01 13 04 11 04 2c 2f 00 03 19 8d 7e 00 00 01 25 16 12 02 28 a1 00 00 0a 9c 25 17 12 02 28 a2 00 00 0a 9c 25 18 12 02 28 a3 00 00 0a 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6668,6 +6940,7 @@ rule Trojan_MSIL_SnakeKeylogger_KAG_2147924769_0
         $x_1_1 = {06 07 5a 58 20 00 01 00 00 5e 13 05 04 08 03 08 91 05 09 95 61 d2 9c 1e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6690,6 +6963,7 @@ rule Trojan_MSIL_SnakeKeylogger_SZZF_2147925150_0
         $x_2_2 = {02 06 07 28 ?? 00 00 06 0c 04 03 6f ?? 01 00 0a 59 0d 03 08 09}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6711,6 +6985,7 @@ rule Trojan_MSIL_SnakeKeylogger_MBXZ_2147925819_0
         $x_1_1 = {02 06 07 28 ?? ?? ?? 06 0c 04 03 6f ?? ?? ?? 0a 59 0d 03 08 09 28 ?? ?? ?? 06 00 07 17 58 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6732,6 +7007,7 @@ rule Trojan_MSIL_SnakeKeylogger_SVJA_2147926330_0
         $x_3_1 = {0a 08 08 6f ?? 00 00 0a 08 6f ?? 00 00 0a 6f ?? 00 00 0a 0d 73 ?? 00 00 0a 13 04 11 04 09 17 73 ?? 00 00 0a 13 05 11 05 06 16 06 8e 69 6f ?? 00 00 0a 11 04 6f ?? 00 00 0a 0b}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6754,6 +7030,7 @@ rule Trojan_MSIL_SnakeKeylogger_PPE_2147927163_0
         $x_2_2 = "ainvestinternational.com/ajax/grid/Gothams.hm" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6775,6 +7052,7 @@ rule Trojan_MSIL_SnakeKeylogger_SVPF_2147927414_0
         $x_3_1 = {11 04 06 07 6f ?? 00 00 0a 13 05 16 2d ef 73 ?? 00 00 0a 13 06 11 06 11 05 17 73 ?? 00 00 0a 13 07 1c 2c 1d 11 07 09 16 09 8e 69 6f ?? 00 00 0a 16 2d 0e 11 06 6f ?? 00 00 0a 28 ?? 00 00 0a 13 08 de 27 11 07 2c 07}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6797,6 +7075,7 @@ rule Trojan_MSIL_SnakeKeylogger_SKI_2147927766_0
         $x_1_2 = "$87bc7c54-c779-43c3-b464-aeca864530b8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6818,6 +7097,7 @@ rule Trojan_MSIL_SnakeKeylogger_PKRH_2147928269_0
         $x_10_1 = {00 06 11 09 7e ?? 00 00 04 11 09 91 28 ?? 00 00 0a 28 ?? 00 00 06 6f ?? 00 00 0a 11 09 07 8e 69 5d 91 61 d2 9c 00 11 09 17 58 13 09 11 09 7e ?? 00 00 04 8e 69 fe 04 13 0a 11 0a 2d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6839,6 +7119,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPKA_2147928297_0
         $x_1_1 = {0a 25 17 6f ?? 00 00 0a 25 18 6f ?? 00 00 0a 03 04 6f ?? 00 00 0a 02 16 02 8e 69 6f ?? 00 00 0a 0a de 09 26 28 ?? 00 00 2b 0a de 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6861,6 +7142,7 @@ rule Trojan_MSIL_SnakeKeylogger_MBWH_2147928905_0
         $x_1_2 = {73 00 74 00 65 00 6d 00 2e 00 52 00 65 00 66 00 6c 00 65 00 63 00 74 00 69 00 6f 00 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6882,6 +7164,7 @@ rule Trojan_MSIL_SnakeKeylogger_SZA_2147929237_0
         $x_1_1 = {00 06 11 08 7e 08 00 00 04 11 08 91 28 46 00 00 0a 28 1f 00 00 06 6f 47 00 00 0a 11 08 28 46 00 00 0a 28 1f 00 00 06 6f 47 00 00 0a 8e 69 5d 91 61 d2 9c 00 11 08 17 58 13 08 11 08 7e 08 00 00 04 8e 69 fe 04 13 09 11 09 2d b5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6904,6 +7187,7 @@ rule Trojan_MSIL_SnakeKeylogger_KAK_2147929390_0
         $x_1_2 = {5a 0d 19 8d ?? 00 00 01 25 16 12 06 28 ?? 00 00 0a 9c 25 17 12 06 28 ?? 00 00 0a 9c 25 18 12 06 28 ?? 00 00 0a 9c 13 09 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6926,6 +7210,7 @@ rule Trojan_MSIL_SnakeKeylogger_PLYH_2147929685_0
         $x_5_2 = {25 16 0f 00 28 ?? 00 00 0a 9c 25 17 0f 00 28 ?? 00 00 0a 9c 25 18 0f 00 28 ?? 00 00 0a 9c 0d 2b 00 09 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6948,6 +7233,7 @@ rule Trojan_MSIL_SnakeKeylogger_KAL_2147929773_0
         $x_1_2 = {06 18 5a 0a 19 8d ?? 00 00 01 25 16 0f 00 28 ?? 00 00 0a 9c 25 17 0f 00 28 ?? 00 00 0a 9c 25 18 0f 00 28 ?? 00 00 0a 9c 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6969,6 +7255,7 @@ rule Trojan_MSIL_SnakeKeylogger_SYDF_2147929780_0
         $x_4_1 = {25 16 08 1f 10 63 20 ff 00 00 00 5f d2 9c 25 17 08 1e 63 20 ff 00 00 00 5f d2 9c 25 18 08 20 ff 00 00 00 5f d2 9c 13 04}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6990,6 +7277,7 @@ rule Trojan_MSIL_SnakeKeylogger_SSUB_2147929988_0
         $x_4_1 = {06 08 8f 4d 00 00 01 25 47 04 20 ff 00 00 00 5f d2 61 d2 52 08 17 58 0c 08 06 8e 69 fe 04 0d 09 2d de}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7011,6 +7299,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPRA_2147931996_0
         $x_1_1 = {09 08 06 07 6f ?? 00 00 0a 17 73 ?? 00 00 0a 13 04 11 04 03 16 03 8e 69 6f ?? 00 00 0a 73 ?? 00 00 0a 25 09 6f ?? 00 00 0a 6f ?? 00 00 0a 13 05 de 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7032,6 +7321,7 @@ rule Trojan_MSIL_SnakeKeylogger_SZZ_2147933364_0
         $x_1_1 = {0c 20 00 f6 01 00 0d 20 ef be ad de 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7053,6 +7343,7 @@ rule Trojan_MSIL_SnakeKeylogger_PHH_2147933872_0
         $x_1_1 = {34 00 44 00 35 00 41 00 39 00 3a 00 30 00 33 00 3a 00 3a 00 30 00 34 00 3a 00 3a 00 46 00 46 00 46 00 46 00 3a 00 30 00 42 00 38 00 3a 00 3a 00 3a 00 3a 00 30 00 30 00 34 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 3a 00 30 00 30 00 38 00 3a 00 3a 00 30 00 30 00 45 00 31 00 46 00 42 00 41 00 30 00 45 00 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7084,6 +7375,7 @@ rule Trojan_MSIL_SnakeKeylogger_BN_2147934284_0
         $x_2_11 = "discord\\Local Storage\\leveldb" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 7 of ($x_1_*))) or
             ((3 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -7111,6 +7403,7 @@ rule Trojan_MSIL_SnakeKeylogger_SEDA_2147934365_0
         $x_2_2 = {02 03 04 6f ?? ?? 00 0a 0b 0e 04 05 6f ?? ?? 00 0a 59 0c 07 08 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7134,6 +7427,7 @@ rule Trojan_MSIL_SnakeKeylogger_SLP_2147935151_0
         $x_1_3 = "BdayBuddy.Loading.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7156,6 +7450,7 @@ rule Trojan_MSIL_SnakeKeylogger_HHB_2147935205_0
         $x_2_2 = "Invoke" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7177,6 +7472,7 @@ rule Trojan_MSIL_SnakeKeylogger_SLO_2147935818_0
         $x_1_1 = {0c 20 00 7e 01 00 0d 07 08 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7199,6 +7495,7 @@ rule Trojan_MSIL_SnakeKeylogger_SLO_2147935818_1
         $x_1_2 = "$C285B947-A63D-4FC8-BC17-E9A4F1D782C0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7222,6 +7519,7 @@ rule Trojan_MSIL_SnakeKeylogger_RVA_2147935966_0
         $x_1_3 = "d62f21fa-6585-4032-948b-0f030e94b773" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7243,6 +7541,7 @@ rule Trojan_MSIL_SnakeKeylogger_GNT_2147936227_0
         $x_10_1 = {07 08 72 09 0b 00 70 06 72 09 0b 00 70 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 9d 00 08 17 58 0c 08 02 fe 04 0d 09 2d d5}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7264,6 +7563,7 @@ rule Trojan_MSIL_SnakeKeylogger_PAA_2147936286_0
         $x_2_1 = {00 00 1b 11 0e 8f 05 00 00 01 25 47 11 0e 1f 1f 5a d2 61 d2 52 11 0e 17 58 13 0e 11 0e 11 08 75 ?? 00 00 1b 8e 69 32 d4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7285,6 +7585,7 @@ rule Trojan_MSIL_SnakeKeylogger_SGPZ_2147936302_0
         $x_1_1 = {73 12 00 00 0a 0b 07 72 ?? 00 00 70 73 ?? 00 00 0a 6f ?? 00 00 0a 6f ?? 00 00 0a 0c 73 ?? 00 00 0a 0d 08 09 6f ?? 00 00 0a 09 6f ?? 00 00 0a 0a dd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7306,6 +7607,7 @@ rule Trojan_MSIL_SnakeKeylogger_ZHX_2147937141_0
         $x_10_1 = {01 25 16 0f 00 28 ?? 00 00 0a 9c 25 17 0f 00 28 ?? 00 00 0a 9c 25 18 0f 00 28 ?? 00 00 0a 9c 6f ?? 00 00 0a 00 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7328,6 +7630,7 @@ rule Trojan_MSIL_SnakeKeylogger_EANK_2147937526_0
         $x_5_2 = {11 07 11 07 1f 11 5a 11 07 18 62 61 ?? ?? ?? ?? ?? 60 9e 11 07 17 58 13 07 11 07 06}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7349,6 +7652,7 @@ rule Trojan_MSIL_SnakeKeylogger_SWA_2147937545_0
         $x_2_1 = {00 06 72 9f 00 00 70 03 07 94 8c 36 00 00 01 04 07 94 8c 36 00 00 01 28 ?? 00 00 0a 28 ?? 00 00 0a 0a 00 07 17 58 0b 07 03 16 6f ?? 00 00 0a fe 02 16 fe 01 0c 08 2d c8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7372,6 +7676,7 @@ rule Trojan_MSIL_SnakeKeylogger_SJHA_2147937748_0
         $x_1_3 = "GetPixel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7394,6 +7699,7 @@ rule Trojan_MSIL_SnakeKeylogger_SFDA_2147938389_0
         $x_1_2 = {02 11 05 11 07 6f ?? 00 00 0a 13 08 09 17 58 0d 05 13 0a 11 0a 39 ?? 00 00 00 00 11 04 13 0b 11 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7417,6 +7723,7 @@ rule Trojan_MSIL_SnakeKeylogger_RVB_2147939152_0
         $x_1_3 = "SBMS.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7438,6 +7745,7 @@ rule Trojan_MSIL_SnakeKeylogger_BAA_2147939508_0
         $x_2_1 = {03 11 07 11 08 91 6f 8a 00 00 0a 11 08 17 58 13 08 11 08 11 06 32 e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7459,6 +7767,7 @@ rule Trojan_MSIL_SnakeKeylogger_EAGI_2147939536_0
         $x_5_1 = {25 47 11 0e 1f 1f 5a d2 61 d2 52 11 0e 17 58 13 0e 11 0e 11 08}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7480,6 +7789,7 @@ rule Trojan_MSIL_SnakeKeylogger_PGS_2147940186_0
         $x_10_1 = {0c 20 00 7c 01 00 0d 07 08 09 28 ?? 00 00 06 00 17 8d ?? 00 00 01 25 16 1f 4c 9d 17 8d ?? 00 00 01 25 16 1f 6f 9d 28 ?? 00 00 2b 17 8d ?? 00 00 01 25 16 1f 61 9d 28 ?? 00 00 2b 17 8d ?? 00 00 01 25 16 1f 64 9d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7501,6 +7811,7 @@ rule Trojan_MSIL_SnakeKeylogger_ZHU_2147942086_0
         $x_10_1 = {02 12 02 28 ?? 00 00 0a 12 02 28 ?? 00 00 0a 28 ?? 00 00 06 13 08 04 03 6f ?? 00 00 0a 59 13 09 11 09 19 fe 04 16 fe 01 13 10 11 10 2c 2e 00 03 12 08 28 ?? 00 00 0a 6f ?? 00 00 0a 00 03 12 08 28 ?? 00 00 0a 6f ?? 00 00 0a 00 03 12 08 28 50 00 00 0a 6f ?? 00 00 0a 00 00 2b 58}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7523,6 +7834,7 @@ rule Trojan_MSIL_SnakeKeylogger_SL_2147942284_0
         $x_2_2 = "ParkMaster.Properties.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7545,6 +7857,7 @@ rule Trojan_MSIL_SnakeKeylogger_EJKC_2147943987_0
         $x_1_2 = {08 07 8e 69 5d 13 11 07 11 11 11 0f 11 10 91 9c 03 11 0f 11 10 91 ?? ?? ?? ?? ?? 08 17 58 07 8e 69 5d 0c 11 10 17 58 13 10 11 10 11 0d 32 d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7568,6 +7881,7 @@ rule Trojan_MSIL_SnakeKeylogger_RVC_2147944136_0
         $x_1_3 = "SecureMode.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7591,6 +7905,7 @@ rule Trojan_MSIL_SnakeKeylogger_SPT_2147944909_0
         $x_1_3 = "1.6.1908.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7612,6 +7927,7 @@ rule Trojan_MSIL_SnakeKeylogger_AD_2147945004_0
         $x_1_1 = {01 7d 2f 00 00 04 06 20 48 34 55 0e 5a 20 91 3e c5 e7 61 2b bc 02 03 7d 33 00 00 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7635,6 +7951,7 @@ rule Trojan_MSIL_SnakeKeylogger_STO_2147945503_0
         $x_2_3 = "QLDTDD_FPT.Mainform.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7656,6 +7973,7 @@ rule Trojan_MSIL_SnakeKeylogger_EKER_2147946278_0
         $x_2_1 = {11 31 11 32 91 13 33 03 11 33 ?? ?? ?? ?? ?? 11 32 17 58 13 32 11 32 19 32 e6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7677,6 +7995,7 @@ rule Trojan_MSIL_SnakeKeylogger_EKEQ_2147946279_0
         $x_2_1 = {5f 11 39 fe 01 13 3a 11 3a 13 3b 11 3b 2c 0b 00 03 11 39 ?? ?? ?? ?? ?? 00 00 00 11 37 17 58 13 37 11 37 11 35 8e 69 fe 04 13 3c 11 3c 2d bb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7698,6 +8017,7 @@ rule Trojan_MSIL_SnakeKeylogger_EHGU_2147946281_0
         $x_2_1 = {00 07 08 9a 09 08 17 58 6c 09 6c ?? ?? ?? ?? ?? ?? ?? ?? ?? 5a ?? ?? ?? ?? ?? 03 5a a1 00 09 17 58 0d 09 02 fe 04 13 04 11 04 2d d4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7719,6 +8039,7 @@ rule Trojan_MSIL_SnakeKeylogger_EHFM_2147946282_0
         $x_2_1 = {11 0c 91 11 0c 1e 5a 1f 1f 5f 62 58 0a 00 11 0c 17 58 13 0c 11 0c 03 ?? ?? ?? ?? ?? 8e 69 1a ?? ?? ?? ?? ?? fe 04 13 0d 11 0d 2d cc}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

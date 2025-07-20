@@ -16,6 +16,7 @@ rule Trojan_Win64_Shelma_AT_2147837891_0
         $x_2_1 = {ff c2 48 63 c2 48 8d 4c 24 20 48 03 c8 0f b6 01 41 88 04 38 44 88 09 41 0f b6 0c 38 49 03 c9 0f b6 c1 0f b6 4c 04 20 41 30 0e 49 ff c6 49 83 ea 01 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_Shelma_AS_2147837903_0
         $x_1_2 = {41 39 c0 7e 0d 44 8a 0c 02 44 30 0c 01 48 ff c0 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win64_Shelma_SXO_2147888494_0
         $x_1_1 = {88 45 b2 b8 63 00 00 00 88 45 b3 b8 6f 00 00 00 88 45 b4 b8 64 00 00 00 88 45 b5 b8 65 00 00 00 88 45 b6 b8 66 00 00 00 88 45 b7 b8 6f 00 00 00 88 45 b8 b8 78 00 00 00 88 45 b9 b8 2e 00 00 00 88 45 ba b8 74 00 00 00 88 45 bb b8 61 00 00 00 88 45 bc b8 6f 00 00 00 88 45 bd b8 62 00 00 00 88 45 be b8 61 00 00 00 88 45 bf b8 6f 00 00 00 88 45 c0 b8 2e 00 00 00 88 45 c1 b8 63 00 00 00 88 45 c2 b8 6f 00 00 00 88 45 c3 b8 6d 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win64_Shelma_SPX_2147900232_0
         $x_2_1 = {41 0f b7 04 48 48 ff c1 48 33 c2 48 6b c0 1f 48 03 d0 49 3b c9 7c e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +105,7 @@ rule Trojan_Win64_Shelma_DAS_2147901049_0
         $x_5_1 = {48 39 d0 74 13 48 89 c1 83 e1 1f 8a 4c 0c ?? 41 30 0c 00 48 ff c0 eb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

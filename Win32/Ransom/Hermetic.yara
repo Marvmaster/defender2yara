@@ -16,6 +16,7 @@ rule Ransom_Win32_Hermetic_DC_2147818053_0
         $x_1_1 = {69 13 6d 4e c6 41 8b 43 04 6a 1a 59 81 c2 39 30 00 00 89 13 23 c2 33 d2 f7 f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

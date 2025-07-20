@@ -15,6 +15,7 @@ rule Trojan_MSIL_Pitit_A_2147678855_0
         $x_1_1 = {1d 28 1d 00 00 0a 72 ?? 00 00 70 72 ?? 00 00 70 28 1e 00 00 0a 28 1f 00 00 0a 0a 28 04 00 00 06 6f 20 00 00 0a 02 7b 06 00 00 04 06 6f 21 00 00 0a de}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

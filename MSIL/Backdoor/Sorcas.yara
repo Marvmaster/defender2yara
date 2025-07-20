@@ -21,6 +21,7 @@ rule Backdoor_MSIL_Sorcas_A_2147728362_0
         $x_10_7 = "RunCmd" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

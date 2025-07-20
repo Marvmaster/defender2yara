@@ -20,6 +20,7 @@ rule Trojan_UEFI_MoonBounce_A_2147811012_0
         $x_1_6 = {c3 cc cc e8 ?? ?? ?? ?? 56 48 83 ec 20 48 83 64 24 40 00 48 8b da 4c 8d 44 24 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

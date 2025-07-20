@@ -23,6 +23,7 @@ rule MonitoringTool_Win32_Spector_11498_0
         $x_1_9 = "InactivityTimerProc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -52,6 +53,7 @@ rule MonitoringTool_Win32_Spector_11498_1
         $x_1_7 = "SetFileTimeToKernels_Path" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -77,6 +79,7 @@ rule MonitoringTool_Win32_Spector_11498_2
         $x_3_3 = "CheckDocGMail:CheckDocEmail" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule MonitoringTool_Win32_Spector_11498_3
         $x_1_4 = {53 65 6e 64 4d 65 73 73 61 67 65 00 61 63 74 69 6f 6e 00 00 72 65 71 75 65 73 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule MonitoringTool_Win32_Spector_11498_4
         $x_1_3 = {53 74 61 72 74 52 65 63 6f 72 64 00 53 74 6f 70 52 65 63 6f 72 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule MonitoringTool_Win32_Spector_11498_5
         $x_1_4 = "SYSTEM\\CurrentControlSet\\Services\\EventLog\\Application\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +174,7 @@ rule MonitoringTool_Win32_Spector_11498_6
         $x_1_4 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -195,6 +202,7 @@ rule MonitoringTool_Win32_Spector_11498_7
         $x_1_8 = "stealth" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -226,6 +234,7 @@ rule MonitoringTool_Win32_Spector_11498_8
         $x_1_9 = "webmapibox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 4 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -255,6 +264,7 @@ rule MonitoringTool_Win32_Spector_11498_9
         $x_1_6 = "\\\\.\\pipe\\SpectorLiveLog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

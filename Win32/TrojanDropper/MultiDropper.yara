@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_MultiDropper_AO_2147632093_0
         $x_1_3 = "Brasil" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

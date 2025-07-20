@@ -18,6 +18,7 @@ rule Trojan_Win32_Emurbo_A_2147602887_0
         $x_1_4 = {3f 6b 65 79 3d 00 00 00 ff ff ff ff 06 00 00 00 3f 66 69 6e 64 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

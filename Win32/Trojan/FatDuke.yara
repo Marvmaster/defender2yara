@@ -22,6 +22,7 @@ rule Trojan_Win32_FatDuke_A_2147752030_0
         $x_10_7 = "CategoryIDs contains '0761a70a-00ec-4245-bf3a-aa4fdb14609d'" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

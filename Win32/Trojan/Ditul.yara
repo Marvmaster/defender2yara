@@ -22,6 +22,7 @@ rule Trojan_Win32_Ditul_C_2147597674_0
         $x_1_8 = "elementclient.e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -51,6 +52,7 @@ rule Trojan_Win32_Ditul_B_2147598599_0
         $x_1_7 = "NcEaqfm]zr{fyu`}{zDf{wqgg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

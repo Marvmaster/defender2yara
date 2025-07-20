@@ -20,6 +20,7 @@ rule Ransom_Win32_Skystar_EA_2147853199_0
         $x_1_5 = "myapp.exe.SKYSTARS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

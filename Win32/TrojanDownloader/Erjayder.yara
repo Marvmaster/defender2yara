@@ -15,6 +15,7 @@ rule TrojanDownloader_Win32_Erjayder_A_2147646536_0
         $x_2_1 = {4a 50 45 47 20 45 72 72 6f 72 21 00 [0-32] 2e 65 78 65 [0-16] 68 74 74 70 3a 2f 2f [0-80] 2e 6a 70 67}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

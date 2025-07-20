@@ -16,6 +16,7 @@ rule Trojan_Win64_CobaltStrikeLoader_LK_2147845674_0
         $x_1_1 = {48 8b d8 48 85 c0 74 10 ba e8 03 00 00 48 8b cb ff 15 ?? ?? 00 00 eb f0 48 83 c4 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_CobaltStrikeLoader_LKX_2147846345_0
         $x_1_2 = {d3 ea 80 e2 3f 80 ca 80 41 88 12 4d 8b 13 49 ff c2 4d 89 13 85 c0 7f dc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win64_CobaltStrikeLoader_LKY_2147846771_0
         $x_1_1 = {c1 e8 1f 03 d0 [0-32] 42 8a 8c ?? ?? ?? ?? ?? 43 32 8c ?? ?? ?? ?? ?? 48 8b 85 ?? ?? ?? ?? 41 88 0c ?? 44 03 cf 4c 03 ?? 44 3b 8d ?? ?? 00 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win64_CobaltStrikeLoader_LKZ_2147847069_0
         $x_1_1 = {0f b6 04 1f 30 03 48 ff c3 48 83 e9 01 75 [0-32] 41 b9 04 00 00 00 41 b8 00 10 00 00 49 8d 56 0a 33 c9 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +105,7 @@ rule Trojan_Win64_CobaltStrikeLoader_LKAA_2147848136_0
         $x_1_1 = {46 0f b6 0c 02 [0-32] 41 31 c9 44 88 cb [0-12] 41 88 1c 30 ?? ?? ?? 83 c0 01 89 45 cc e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +129,7 @@ rule Trojan_Win64_CobaltStrikeLoader_LKAB_2147848137_0
         $x_1_3 = "test1\\source\\repos\\download\\x64\\Release\\download.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +152,7 @@ rule Trojan_Win64_CobaltStrikeLoader_LKAL_2147888310_0
         $x_1_2 = "updatesanfor.s3-us-east-1.ossfiles.com/javaListen" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +177,7 @@ rule Trojan_Win64_CobaltStrikeLoader_LKAN_2147888313_0
         $x_1_4 = "PT2MtVR9gr5.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

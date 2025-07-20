@@ -16,6 +16,7 @@ rule Trojan_Win32_Viknok_A_2147680233_0
         $x_1_2 = {eb 11 81 7d fc ?? ?? 00 00 73 14 6a 64 ff 55 ?? ff 45 ?? e8 ?? ?? ?? ?? 50 ff d3 85 c0 74 e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Viknok_B_2147681458_0
         $x_1_2 = {03 c3 8b 70 20 8b 78 1c 8b 50 24 03 f3 03 fb 03 d3 83 78 18 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win32_Viknok_C_2147684863_0
         $x_1_2 = {8b 42 3c 03 c2 8b 78 78 89 45 ?? 85 ff 74 ?? 83 65 ?? 00 03 fa 8b 4f 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_Viknok_D_2147687507_0
         $x_1_6 = {6c 08 0f 4e 74 4f 70 65 6e 46 69 6c 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_Win32_Viknok_2147688096_0
         $x_1_3 = {66 89 87 3a 54 00 00 81 c7 14 54 00 00 66 81 e9 4e 3c 66 81 c1 4e 3c e8 fb 05 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

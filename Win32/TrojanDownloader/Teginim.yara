@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Teginim_A_2147605506_0
         $x_1_4 = "_cls%d.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

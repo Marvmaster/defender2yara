@@ -17,6 +17,7 @@ rule Trojan_Win32_Copak_CJ_2147813584_0
         $x_2_2 = {31 01 41 39 f1 75 e5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Copak_CK_2147813675_0
         $x_2_2 = {31 06 81 c1 [0-4] 29 cf 46 81 e9 [0-4] 81 e9 [0-4] 39 de 75 d8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Copak_CB_2147813743_0
         $x_2_2 = {31 39 01 c2 41 42 89 c2 39 d9 75 dc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_Copak_CC_2147813744_0
         $x_2_2 = {89 c8 31 16 46 39 de 75 e5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_Win32_Copak_CG_2147813929_0
         $x_2_3 = {21 c8 31 3e 81 c6 01 00 00 00 01 c9 39 d6 75 de}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Trojan_Win32_Copak_CH_2147813932_0
         $x_2_2 = {21 df 31 0e 43 09 df 46 4f 29 db 39 d6 75 d9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -150,6 +156,7 @@ rule Trojan_Win32_Copak_CM_2147813955_0
         $x_2_2 = {8b 0c 24 83 c4 04 e8 [0-4] 31 0f 4a 81 c7 01 00 00 00 39 f7 75 de}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -173,6 +180,7 @@ rule Trojan_Win32_Copak_CN_2147814060_0
         $x_2_3 = {31 0a 81 c6 [0-4] 47 42 39 c2 75 d9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -195,6 +203,7 @@ rule Trojan_Win32_Copak_CP_2147814249_0
         $x_2_2 = {31 08 81 ea [0-4] 81 c6 [0-4] 81 c0 01 00 00 00 01 f2 81 ea [0-4] 39 f8 75 d2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -217,6 +226,7 @@ rule Trojan_Win32_Copak_CQ_2147814458_0
         $x_2_2 = {31 16 09 c8 81 c3 [0-4] 81 c6 04 00 00 00 39 fe 75 e7}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -240,6 +250,7 @@ rule Trojan_Win32_Copak_CR_2147814572_0
         $x_2_3 = {31 06 42 29 ca 46 01 d2 39 fe 75 df}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -261,6 +272,7 @@ rule Trojan_Win32_Copak_GP_2147815052_0
         $x_10_1 = {4f 09 cf 31 1e 01 f9 81 c7 ?? ?? ?? ?? 81 c6 ?? ?? ?? ?? 09 c9 81 ef ?? ?? ?? ?? 39 d6 75 d6 b9 ?? ?? ?? ?? 41 c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -282,6 +294,7 @@ rule Trojan_Win32_Copak_GI_2147815239_0
         $x_10_1 = {31 10 49 81 c0 04 00 00 00 81 ee ?? ?? ?? ?? 39 d8 75 e8 81 c7 ?? ?? ?? ?? c3 89 f6 bf}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -303,6 +316,7 @@ rule Trojan_Win32_Copak_GI_2147815239_1
         $x_10_1 = {09 c9 09 d1 39 f0 75 eb c3 ff 74 01 ?? 31 17 81 c7 ?? ?? ?? ?? 01 c0 4e 39 df 75 ec 09 f1 21 f1 c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -324,6 +338,7 @@ rule Trojan_Win32_Copak_CU_2147815325_0
         $x_2_1 = {89 da 31 08 40 39 f0 75 df}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -345,6 +360,7 @@ rule Trojan_Win32_Copak_H_2147815460_0
         $x_10_1 = {29 c9 09 c9 31 32 42 49 89 f9 39 c2 75 e8 01 ff 21 cf c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -366,6 +382,7 @@ rule Trojan_Win32_Copak_P_2147815613_0
         $x_10_1 = {01 d6 81 ea ?? ?? ?? ?? 4e bf ?? ?? ?? ?? 29 f2 e8 ?? ?? ?? ?? 31 38 81 c0 ?? ?? ?? ?? 39 c8 75 e8 29 d2 81 ee ?? ?? ?? ?? c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -387,6 +404,7 @@ rule Trojan_Win32_Copak_S_2147815689_0
         $x_10_1 = {d8 85 40 00 29 d2 e8 ?? ?? ?? ?? 31 1e 81 ea ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 81 c6 ?? ?? ?? ?? 09 c0 81 e8 ?? ?? ?? ?? 39 ce 75 d4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -409,6 +427,7 @@ rule Trojan_Win32_Copak_CX_2147816904_0
         $x_2_2 = {29 c1 81 e8 01 00 00 00 e8 [0-4] 31 1e 81 c0 [0-4] 46 39 fe 75 db}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -431,6 +450,7 @@ rule Trojan_Win32_Copak_CY_2147817235_0
         $x_2_2 = {31 37 29 d0 21 d2 81 c7 04 00 00 00 68 [0-4] 8b 04 24 83 c4 04 01 c2 39 cf 75 de}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -453,6 +473,7 @@ rule Trojan_Win32_Copak_CZ_2147817826_0
         $x_2_2 = {31 0e 21 ff 81 c6 04 00 00 00 39 de 75 ed}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -474,6 +495,7 @@ rule Trojan_Win32_Copak_FL_2147818351_0
         $x_10_1 = {31 10 81 c0 04 00 00 00 09 db 39 f8 75 ed 46 c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -496,6 +518,7 @@ rule Trojan_Win32_Copak_FU_2147818466_0
         $x_10_2 = {29 d2 8b 00 81 ea ?? ?? ?? ?? 81 e0 ff 00 00 00 47 81 ff}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -520,6 +543,7 @@ rule Trojan_Win32_Copak_BB_2147818486_0
         $x_2_4 = {81 c6 01 00 00 00 81 c3 36 d5 b8 e3 21 c9 21 cb 81 fe ec 56 00 01 75 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_3_*))) or
@@ -545,6 +569,7 @@ rule Trojan_Win32_Copak_FV_2147818684_0
         $x_10_1 = {68 d8 85 40 00 58 e8 ?? ?? ?? ?? 01 c9 b9 ?? ?? ?? ?? 31 06 81 c6 ?? ?? ?? ?? 39 d6 75 e2 83 ec 04 89 3c 24 8b 0c 24 83 c4 04}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -569,6 +594,7 @@ rule Trojan_Win32_Copak_BE_2147819293_0
         $x_2_4 = {01 c1 81 c7 01 00 00 00 81 c1 b4 65 11 c1 49 81 ff 38 46 00 01 75 bc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_3_*))) or
@@ -594,6 +620,7 @@ rule Trojan_Win32_Copak_VU_2147819647_0
         $x_10_1 = {21 c0 29 c0 e8 ?? ?? ?? ?? 81 e8 ?? ?? ?? ?? 29 db 31 0e 09 db 46 29 c3 39 d6 75 df 21 db}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -615,6 +642,7 @@ rule Trojan_Win32_Copak_VZ_2147819976_0
         $x_10_1 = {8b 38 f7 d2 f7 d2 81 e7 ?? ?? ?? ?? 4a 09 d3 89 ca 31 3e 42 21 da f7 d2 81 c6 ?? ?? ?? ?? 29 ca 81 eb ?? ?? ?? ?? 21 d9 40 f7 d3 09 c9 81 c2}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -636,6 +664,7 @@ rule Trojan_Win32_Copak_BH_2147820242_0
         $x_2_1 = {39 d2 74 01 ea 31 18 be 92 75 3c 39 81 c2 54 1f b0 10 81 c0 04 00 00 00 01 d2 39 c8 75 e2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -658,6 +687,7 @@ rule Trojan_Win32_Copak_DC_2147821407_0
         $x_1_2 = {29 ff 58 46 89 f6 81 c2 01 00 00 00 01 f7 81 fa 70 a6 00 01 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -682,6 +712,7 @@ rule Trojan_Win32_Copak_DD_2147821577_0
         $x_3_4 = {21 c0 81 e8 a3 be 3d 59 47 89 c0 81 ff 93 6a 00 01 75}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_3_*))) or
@@ -712,6 +743,7 @@ rule Trojan_Win32_Copak_DE_2147821818_0
         $x_3_6 = {29 f0 81 c1 01 00 00 00 81 c6 f6 62 48 ed 01 c6 81 f9 29 48 00 01 75 b1}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -739,6 +771,7 @@ rule Trojan_Win32_Copak_DF_2147821985_0
         $x_1_2 = {52 51 58 29 c8 5f 40 43 21 c9 81 fb 94 12 00 01 75 b2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -760,6 +793,7 @@ rule Trojan_Win32_Copak_DG_2147824237_0
         $x_2_1 = {31 1f 68 5d 37 18 d7 5e 81 c7 04 00 00 00 29 c1 81 ee 02 5f 26 7a 39 d7 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -782,6 +816,7 @@ rule Trojan_Win32_Copak_DH_2147824705_0
         $x_1_2 = {43 01 ff 29 c7 21 ff 81 fb 8f bc 00 01 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -804,6 +839,7 @@ rule Trojan_Win32_Copak_DI_2147826058_0
         $x_1_2 = {89 cf 43 81 e9 f5 13 37 11 01 ff 81 fb ee 8e 00 01 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -825,6 +861,7 @@ rule Trojan_Win32_Copak_B_2147829375_0
         $x_1_1 = {74 01 ea 31 02 81 e9 ?? ?? ?? ?? 81 c2 04 00 00 00 21 d9 41 39 fa 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -847,6 +884,7 @@ rule Trojan_Win32_Copak_GUF_2147833523_0
         $x_10_2 = {31 3e 81 c6 04 00 00 00 49 49 39 c6 75 ed c3 14 40 00 c3 39 c9 74}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -868,6 +906,7 @@ rule Trojan_Win32_Copak_GTF_2147835985_0
         $x_10_1 = {bf d8 85 40 00 81 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 01 c0 31 39 81 c6 ?? ?? ?? ?? 09 c0 81 c1 ?? ?? ?? ?? 81 c0 ?? ?? ?? ?? 39 d1 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -889,6 +928,7 @@ rule Trojan_Win32_Copak_RDA_2147836249_0
         $x_2_1 = {31 30 43 53 5b 40 81 eb 61 0a f8 a1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -911,6 +951,7 @@ rule Trojan_Win32_Copak_RDA_2147836249_1
         $x_2_2 = {93 b6 81 c1 04 00 00 00 39 d9 75 e9 89 f8 c3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -933,6 +974,7 @@ rule Trojan_Win32_Copak_BAG_2147837981_0
         $x_2_2 = {5a 81 c3 f0 87 c6 7d 89 f3 81 c7 01 00 00 00 81 ee 20 f6 88 bc 21 f6 09 db 81 ff 5c 00 00 01 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -955,6 +997,7 @@ rule Trojan_Win32_Copak_DB_2147842261_0
         $x_2_2 = {89 c0 8b 0c 24 83 c4 04 09 c0 09 c3 01 d8 42 01 db 81 fa 4e 80 00 01 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -977,6 +1020,7 @@ rule Trojan_Win32_Copak_DK_2147843782_0
         $x_2_2 = {83 c4 04 21 fe 4f 43 81 ee 01 00 00 00 68 5a bc 21 87 5e 01 ff 81 fb a7 33 00 01 75 b5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -999,6 +1043,7 @@ rule Trojan_Win32_Copak_DL_2147843783_0
         $x_2_2 = {83 ec 04 89 1c 24 5f 8b 0c 24 83 c4 04 bb 2b c1 5e 82 46 21 df 81 c7 01 00 00 00 81 fe 60 06 00 01 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1021,6 +1066,7 @@ rule Trojan_Win32_Copak_DM_2147843819_0
         $x_2_2 = {5a 09 db 81 c7 d3 4e 1e 83 40 01 db 47 47 81 f8 fe e6 00 01 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1043,6 +1089,7 @@ rule Trojan_Win32_Copak_GHC_2147843849_0
         $x_10_2 = {31 19 81 ef ?? ?? ?? ?? 81 c1 ?? ?? ?? ?? 4e 81 c6 ?? ?? ?? ?? 39 c1 75 e2}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1065,6 +1112,7 @@ rule Trojan_Win32_Copak_DN_2147844019_0
         $x_2_2 = {29 d3 81 c2 1d 39 57 7c 8b 04 24 83 c4 04 81 c2 01 00 00 00 21 db 4a 46 89 db 81 fe b5 26 00 01 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1086,6 +1134,7 @@ rule Trojan_Win32_Copak_GHG_2147844051_0
         $x_10_1 = {01 ea 31 3b 81 c0 ?? ?? ?? ?? 81 c3 ?? ?? ?? ?? 40 39 cb 75 e8 c3 c3 81 e9 ?? ?? ?? ?? 81 ea ?? ?? ?? ?? 39 ff 74}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1107,6 +1156,7 @@ rule Trojan_Win32_Copak_GHI_2147844072_0
         $x_10_1 = {31 0f 21 f6 4b 81 c7 ?? ?? ?? ?? 89 db 81 c3 ?? ?? ?? ?? 39 c7 75 ?? 42 81 eb ?? ?? ?? ?? c3 89 d6 7f}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1129,6 +1179,7 @@ rule Trojan_Win32_Copak_DO_2147844090_0
         $x_2_2 = {29 c0 5f 81 c0 12 76 98 2e 46 89 db 68 89 2a b2 d6 8b 04 24 83 c4 04 81 eb 60 c4 30 df 81 fe bf 8d 00 01 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1150,6 +1201,7 @@ rule Trojan_Win32_Copak_MA_2147844097_0
         $x_5_1 = {81 c1 01 00 00 00 01 f9 01 c9 b8 d8 85 40 00 e8 19 00 00 00 31 06 81 c7 01 00 00 00 49 46 21 cf 39 de 75 e6}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1171,6 +1223,7 @@ rule Trojan_Win32_Copak_MB_2147844104_0
         $x_5_1 = {09 c8 68 d8 85 40 00 5a e8 1e 00 00 00 31 13 81 e9 0b 3a 89 5d 43 01 c0 81 c0 01 00 00 00 39 f3 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1192,6 +1245,7 @@ rule Trojan_Win32_Copak_MC_2147844112_0
         $x_5_1 = {83 ec 04 c7 04 24 ?? ?? ?? ?? 8b 3c 24 83 c4 04 81 c3 ?? ?? ?? ?? 01 d9 29 d9 e8 ?? ?? ?? ?? 21 d9 49 81 eb 03 1b 85 47 31 38 81 c1 0f 12 c1 60 40 21 cb 09 cb 39 f0 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1214,6 +1268,7 @@ rule Trojan_Win32_Copak_DP_2147844212_0
         $x_2_2 = {83 c4 04 81 c3 ba fe 0a e5 46 81 ea dc a0 ae 39 68 5f b4 1b 06 5a 01 d2 81 fe c2 5f 00 01 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1235,6 +1290,7 @@ rule Trojan_Win32_Copak_ME_2147844215_0
         $x_5_1 = {41 81 c7 58 54 ed 46 81 ef 1d 7f 5d 19 68 d8 85 40 00 5b 81 e9 c9 15 e4 85 09 f9 e8 16 00 00 00 31 1a 68 4c 27 fc d9 59 42 81 e9 28 ef 66 11 39 f2 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1257,6 +1313,7 @@ rule Trojan_Win32_Copak_DQ_2147844217_0
         $x_2_2 = {8b 3e 4b 09 c8 81 e7 ff 00 00 00 01 c3 f7 d3 21 d8 31 3a 89 d8 41 42 09 db 48 46 81 c1 0a 05 d9 3d 81 c3 34 a9 b3 d4 81 fa b8 af 47 00 0f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1279,6 +1336,7 @@ rule Trojan_Win32_Copak_DR_2147844299_0
         $x_2_2 = {21 d2 01 d1 81 c1 31 6f fc 73 5e 09 ca 29 d2 47 29 d1 4a 09 ca 81 ff 4e cc 00 01 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1300,6 +1358,7 @@ rule Trojan_Win32_Copak_DR_2147844299_1
         $x_5_1 = {f7 d6 81 e2 ff 00 00 00 f7 d0 b8 24 77 f9 44 31 11 81 c0 f1 d6 28 f7 81 c3 67 c7 45 6c 21 de 81 c1 01 00 00 00 89 f3 be 0b a1 0b a8 47 81 eb dd 9c 8a 58 21 c3 09 db 81 f9 b8 af 47 00 0f}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1323,6 +1382,7 @@ rule Trojan_Win32_Copak_MD_2147844368_0
         $x_5_3 = {e0 00 0f 03 0b 01 03 04 c0 78 00 00 00 cc 00 00 20 69 01 00 d8 85}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1344,6 +1404,7 @@ rule Trojan_Win32_Copak_MF_2147844459_0
         $x_5_1 = {81 c1 8f 97 a1 c2 ba d8 85 40 00 09 c9 e8 1f 00 00 00 29 c8 31 13 09 c8 81 c0 34 cd ca 66 81 c3 01 00 00 00 39 fb 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1365,6 +1426,7 @@ rule Trojan_Win32_Copak_GHM_2147844551_0
         $x_10_1 = {89 14 24 8b 14 24 83 c4 04 e8 ?? ?? ?? ?? 01 f2 81 c2 ?? ?? ?? ?? 31 19 81 c1 ?? ?? ?? ?? 39 c1 75 ?? 81 ea}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1386,6 +1448,7 @@ rule Trojan_Win32_Copak_GHN_2147844630_0
         $x_10_1 = {31 31 bf 7f 98 84 7f 42 81 c1 ?? ?? ?? ?? 39 d9 75 e9 09 fa 01 c2 c3 81 ef ?? ?? ?? ?? 96 0d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1407,6 +1470,7 @@ rule Trojan_Win32_Copak_GIA_2147845856_0
         $x_10_1 = {5a 31 38 81 c2 01 00 00 00 21 db 40 01 d3 81 eb ?? ?? ?? ?? 39 c8 75 cd c3 01 db 8d 3c 3e 81 c3 ?? ?? ?? ?? 01 d2 8b 3f}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1429,6 +1493,7 @@ rule Trojan_Win32_Copak_GIB_2147845876_0
         $x_10_2 = {09 df 83 ec 04 c7 04 24 ?? ?? ?? ?? 58 e8 ?? ?? ?? ?? 31 02 81 c2 01 00 00 00 01 db 39 f2 75 ?? 89 df}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1450,6 +1515,7 @@ rule Trojan_Win32_Copak_GIC_2147845955_0
         $x_10_1 = {b8 0d 5d 42 9e 31 1f 47 50 8b 04 24 83 c4 04 89 c1 39 f7 75 dc 81 e9 ?? ?? ?? ?? 89 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1472,6 +1538,7 @@ rule Trojan_Win32_Copak_DS_2147847840_0
         $x_2_2 = {8b 14 24 83 c4 04 8b 34 24 83 c4 04 09 c0 4a 81 e8 24 0e aa b8 47 21 d2 81 ff 4a e1 00 01 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1493,6 +1560,7 @@ rule Trojan_Win32_Copak_GJK_2147847870_0
         $x_10_1 = {81 e9 82 f9 e9 71 31 10 b9 ac b2 04 24 40 46 39 f8 75 ?? 21 c9 c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1514,6 +1582,7 @@ rule Trojan_Win32_Copak_RG_2147848054_0
         $x_1_1 = {31 19 50 8b 04 24 83 c4 04 41 39 f9 75 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1535,6 +1604,7 @@ rule Trojan_Win32_Copak_RH_2147848055_0
         $x_1_1 = {81 fa f4 01 00 00 75 05 ba 00 00 00 00 c3 2b e2 58 68 4e 3f 3e de 5f c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1556,6 +1626,7 @@ rule Trojan_Win32_Copak_GJL_2147848096_0
         $x_10_1 = {83 ec 04 c7 04 24 ?? ?? ?? ?? 5a 01 f8 e8 ?? ?? ?? ?? 01 ff bf ?? ?? ?? ?? 31 11 41 21 ff 83 ec 04 89 3c 24 5f 39 f1}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1577,6 +1648,7 @@ rule Trojan_Win32_Copak_GJM_2147848370_0
         $x_10_1 = {83 ec 04 c7 04 24 ?? ?? ?? ?? c3 09 c9 bb ?? ?? ?? ?? e8 ?? ?? ?? ?? 31 1a 42 81 ef ?? ?? ?? ?? 81 e9 ?? ?? ?? ?? 39 f2}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1601,6 +1673,7 @@ rule Trojan_Win32_Copak_DT_2147848548_0
         $x_5_4 = {31 31 81 e8 aa 5c 98 ac 01 c0 81 c1 01 00 00 00 29 ff 39 d9 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1622,6 +1695,7 @@ rule Trojan_Win32_Copak_GJT_2147848933_0
         $x_10_1 = {31 13 01 f8 21 ff 43 4f 81 c7 ?? ?? ?? ?? 81 c0 ?? ?? ?? ?? 39 f3 75 ?? 21 f8 c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1643,6 +1717,7 @@ rule Trojan_Win32_Copak_GJT_2147848933_1
         $x_10_1 = {56 59 81 c1 ?? ?? ?? ?? 31 1f 47 81 c1 ?? ?? ?? ?? 39 d7 75 ?? c3 81 c6 ?? ?? ?? ?? 8d 1c 03}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1664,6 +1739,7 @@ rule Trojan_Win32_Copak_GJT_2147848933_2
         $x_10_1 = {8b 34 24 83 c4 ?? e8 ?? ?? ?? ?? 81 c3 ?? ?? ?? ?? 83 ec ?? 89 14 24 5a 31 37 21 da 47 81 ea ?? ?? ?? ?? 29 db 39 cf}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1685,6 +1761,7 @@ rule Trojan_Win32_Copak_CRTD_2147849626_0
         $x_1_1 = {40 31 0a 29 c7 09 f8 42 39 f2 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1706,6 +1783,7 @@ rule Trojan_Win32_Copak_A_2147849983_0
         $x_2_1 = {31 1a 42 21 f6 39 ca 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1727,6 +1805,7 @@ rule Trojan_Win32_Copak_RL_2147850570_0
         $x_1_1 = {89 ce 00 81 ea 4b ff c1 d3 c3 01 d7 81 c7 18 ae 63 93 00 00 81 fb f4 01 00 00 75 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1748,6 +1827,7 @@ rule Trojan_Win32_Copak_RM_2147850571_0
         $x_1_1 = {21 d2 09 c9 b9 8f ff 92 9a 01 00 00 75 05 bb 00 00 00 00 40 89 c0 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1769,6 +1849,7 @@ rule Trojan_Win32_Copak_GNB_2147850652_0
         $x_10_1 = {01 d2 09 d2 e8 ?? ?? ?? ?? 42 81 c1 ?? ?? ?? ?? 31 07 47 89 d2 21 c9 39 df}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1790,6 +1871,7 @@ rule Trojan_Win32_Copak_GNE_2147850664_0
         $x_10_1 = {01 c9 21 f9 e8 ?? ?? ?? ?? 01 ff 21 cf 31 13 21 c9 bf ?? ?? ?? ?? 21 f9 43 21 ff 39 c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1811,6 +1893,7 @@ rule Trojan_Win32_Copak_GNI_2147851182_0
         $x_10_1 = {31 1a 81 c2 ?? ?? ?? ?? 68 ?? ?? ?? ?? 5e 81 c0 ?? ?? ?? ?? 39 ca 75 ?? c3 21 c0 29 c6 8d 1c 1f 8b 1b}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1832,6 +1915,7 @@ rule Trojan_Win32_Copak_RC_2147851540_0
         $x_1_1 = {8d 04 03 01 f7 8b 00 89 f7 81 e0 ff 00 00 00 09 f7 43 81 c6 ba 60 9e d3 89 f7 81 fb f4 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1853,6 +1937,7 @@ rule Trojan_Win32_Copak_C_2147852308_0
         $x_2_1 = {31 33 09 c0 42 81 c3 ?? ?? ?? ?? 29 d0 81 e8 ?? ?? ?? ?? 39 fb 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1874,6 +1959,7 @@ rule Trojan_Win32_Copak_KAB_2147852437_0
         $x_10_1 = {8b 08 f7 d6 81 c7 ?? ?? ?? ?? 81 e1 ?? ?? ?? ?? 09 ff 21 f6 31 0a 01 df 89 df 01 f3 42 89 de 21 fe 81 c0 ?? ?? ?? ?? 4f 09 fe 81 fa}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1895,6 +1981,7 @@ rule Trojan_Win32_Copak_AMAB_2147888786_0
         $x_1_1 = {8b 1a f7 d7 09 c9 81 e3 ?? ?? ?? ?? 21 f6 f7 d7 31 18 21 c9 46 01 cf 81 c0 01 00 00 00 29 cf 89 ce 81 c1 ?? ?? ?? ?? 42 01 c9 f7 d6 f7 d6 81 f8 ?? ?? ?? ?? 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1916,6 +2003,7 @@ rule Trojan_Win32_Copak_AMAA_2147890141_0
         $x_5_1 = {8b 3e 81 eb 01 00 00 00 89 da 81 eb ?? ?? ?? ?? 81 e7 ff 00 00 00 21 d1 09 ca 31 38 81 eb ?? ?? ?? ?? f7 d2 40 09 d3 01 d1 09 d2 46 89 d9 81 c2 ?? ?? ?? ?? 29 d3 81 f8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1937,6 +2025,7 @@ rule Trojan_Win32_Copak_GME_2147891305_0
         $x_10_1 = {83 ec 04 c7 04 24 ?? ?? ?? ?? 5f 21 d9 e8 ?? ?? ?? ?? 43 09 d9 31 38 49 40 81 e9 ?? ?? ?? ?? 29 cb 49 39 f0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1958,6 +2047,7 @@ rule Trojan_Win32_Copak_KAE_2147891723_0
         $x_10_1 = {39 ff 74 01 ea 31 02 81 c2 ?? ?? ?? ?? 09 de 39 fa 75 ed}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1979,6 +2069,7 @@ rule Trojan_Win32_Copak_KAH_2147892124_0
         $x_10_1 = {8b 17 81 e9 ?? ?? ?? ?? 4e 21 de 81 e2 ?? ?? ?? ?? 41 89 f3 21 ce 31 10 21 c9 01 db 40 01 f3 29 de 09 de 47 01 f6 29 f3 29 d9 81 f8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2000,6 +2091,7 @@ rule Trojan_Win32_Copak_MBKO_2147894397_0
         $x_1_1 = {83 c6 01 8d 43 01 89 c3 3b 5d bc 76 05 bb 01 00 00 00 b8 ?? ?? ?? ?? 8d 7e 01 ba ?? ?? ?? ?? 8a 44 38 ff 8a 54 1a ff 30 c2 8b 7d c0 8d 04 37 88 10 39 f1 77}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2021,6 +2113,7 @@ rule Trojan_Win32_Copak_SPDT_2147894401_0
         $x_1_1 = {8b 1a 01 c1 21 c0 89 f8 81 e3 ff 00 00 00 41 81 c7 f0 ec 13 20 31 1e 29 f9 81 e8 a9 ed 2c a8 81 c6 01 00 00 00 01 f8 09 c9 f7 d0 42 81 c7 01 00 00 00 21 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2042,6 +2135,7 @@ rule Trojan_Win32_Copak_KAN_2147894423_0
         $x_5_1 = {8b 33 01 d2 89 c2 f7 d0 81 e6 ?? ?? ?? ?? 21 c2 21 ca 81 ea ?? ?? ?? ?? 31 37 41 29 d0 47 48 89 c1 43 21 d1 f7 d2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2063,6 +2157,7 @@ rule Trojan_Win32_Copak_SPDR_2147894625_0
         $x_1_1 = {8b 0c 24 83 c4 04 21 f7 e8 ?? ?? ?? ?? 31 0a 46 4f 42 bf ?? ?? ?? ?? 29 fe 39 da 75 d9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2084,6 +2179,7 @@ rule Trojan_Win32_Copak_SPGT_2147894956_0
         $x_4_1 = {8b 1c 24 83 c4 04 29 c9 e8 ?? ?? ?? ?? 29 cf 31 1a 81 ef ?? ?? ?? ?? 4f 81 c2 01 00 00 00 01 c9 21 cf 39 f2 75}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2105,6 +2201,7 @@ rule Trojan_Win32_Copak_SPGY_2147894959_0
         $x_1_1 = {b9 ca 9f 4c 00 21 c0 01 f0 be 28 ef a9 39 e8 2b 00 00 00 81 c0 b8 0d a0 7a 21 c6 81 ee 53 7e b6 31 31 0a 40 be c4 75 bb 56 29 c0 42 89 c6 81 c6 c4 1c 9e c9 39 fa 75 c8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2127,6 +2224,7 @@ rule Trojan_Win32_Copak_RF_2147895081_0
         $x_1_2 = {09 f6 c3 09 db 21 f3 81 eb f2 ce 6b ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2150,6 +2248,7 @@ rule Trojan_Win32_Copak_RF_2147895081_1
         $x_1_3 = "ZzKHIEoMg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2171,6 +2270,7 @@ rule Trojan_Win32_Copak_GNT_2147895105_0
         $x_10_1 = {31 06 46 42 01 d3 39 fe ?? ?? c3 8d 04 08 21 d3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2192,6 +2292,7 @@ rule Trojan_Win32_Copak_GNT_2147895105_1
         $x_10_1 = {21 c2 29 d2 31 31 b8 ?? ?? ?? ?? 29 c2 81 c1 ?? ?? ?? ?? 39 f9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2213,6 +2314,7 @@ rule Trojan_Win32_Copak_GNU_2147895325_0
         $x_10_1 = {31 3a 81 c2 04 00 00 00 81 c1 ?? ?? ?? ?? 41 39 da ?? ?? 09 c0 41 c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2235,6 +2337,7 @@ rule Trojan_Win32_Copak_AMMA_2147895544_0
         $x_2_2 = {8d 14 0a 81 c3 ?? ?? ?? ?? 47 81 eb ?? ?? ?? ?? 8b 12 09 df 81 eb ?? ?? ?? ?? 29 ff 81 e2 ff 00 00 00 4f 53 5b 83 ec 04 c7 04 24 ?? ?? ?? ?? 5f 81 c1 01 00 00 00 09 db 81 f9 f4 01 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2256,6 +2359,7 @@ rule Trojan_Win32_Copak_KAP_2147895784_0
         $x_5_1 = {8b 01 01 d3 01 de 81 e0 ?? ?? ?? ?? f7 d3 81 ee ?? ?? ?? ?? be ?? ?? ?? ?? 31 07 21 d2 21 db 47 4b 4b 4e 41 01 f6 4a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2277,6 +2381,7 @@ rule Trojan_Win32_Copak_D_2147895869_0
         $x_2_1 = {31 37 47 89 ca 39 c7 0c 00 be ?? ?? ?? ?? 09 d1 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2299,6 +2404,7 @@ rule Trojan_Win32_Copak_E_2147895875_0
         $x_2_2 = {31 03 41 43 21 d2 21 ca 39 f3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2320,6 +2426,7 @@ rule Trojan_Win32_Copak_SPDX_2147895909_0
         $x_1_1 = {8b 1a 40 89 c7 01 c6 81 e3 ff 00 00 00 f7 d6 01 f7 81 ee 62 79 63 11 31 19 81 ef b9 36 73 9d 29 f8 81 e8 1f b4 e4 ce 41 09 f8 09 fe 42 89 c6 89 c7 81 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2341,6 +2448,7 @@ rule Trojan_Win32_Copak_SPDL_2147895920_0
         $x_1_1 = {31 0e 68 90 04 dc f9 8b 1c 24 83 c4 04 81 c6 04 00 00 00 39 fe 75 e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2362,6 +2470,7 @@ rule Trojan_Win32_Copak_RJ_2147895946_0
         $x_1_1 = {81 fa f4 01 00 00 75 05 ba 00 00 00 00 81 c7 01 00 00 00 c3 09 f7 81 c7 01 00 00 00 eb c5 b0 01 df c3 09 fb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2383,6 +2492,7 @@ rule Trojan_Win32_Copak_RK_2147895947_0
         $x_1_1 = {21 df 68 c3 94 1f 9f 5b b9 00 00 00 00 89 d7 c3 89 fa 00 75 05 bb 00 00 00 00 40 89 c0 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2404,6 +2514,7 @@ rule Trojan_Win32_Copak_SPDS_2147896263_0
         $x_1_1 = {ba 14 8a 43 00 46 01 c9 e8 ?? ?? ?? ?? 29 f1 01 f1 31 10 09 f6 40 89 f1 46 81 ee 4f 51 ca 52 39 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2425,6 +2536,7 @@ rule Trojan_Win32_Copak_KAK_2147896277_0
         $x_10_1 = {8b 06 21 ff 29 ca 81 e0 ?? ?? ?? ?? b9 ?? ?? ?? ?? bf ?? ?? ?? ?? 31 03 81 e9 ?? ?? ?? ?? bf ?? ?? ?? ?? 43 81 c7 ?? ?? ?? ?? bf ?? ?? ?? ?? 46 01 d7 81 ef}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2446,6 +2558,7 @@ rule Trojan_Win32_Copak_KAO_2147896427_0
         $x_5_1 = {31 30 01 db 81 c0 ?? ?? ?? ?? 09 fb 09 ff 39 c8 75 dc}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2467,6 +2580,7 @@ rule Trojan_Win32_Copak_KAQ_2147896573_0
         $x_5_1 = {47 21 f8 31 11 29 c0 01 ff 81 ef ?? ?? ?? ?? 81 c1 ?? ?? ?? ?? 09 ff 39 d9 75 d0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2488,6 +2602,7 @@ rule Trojan_Win32_Copak_GMC_2147896854_0
         $x_10_1 = {31 31 4a ba f3 5b 16 11 41 21 d2 81 c0 ?? ?? ?? ?? 39 d9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2509,6 +2624,7 @@ rule Trojan_Win32_Copak_GMC_2147896854_1
         $x_10_1 = {83 ec 04 c7 04 24 ?? ?? ?? ?? 5f 48 29 d0 09 c2 e8 ?? ?? ?? ?? 21 d2 29 d0 21 c2 31 3e}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2530,6 +2646,7 @@ rule Trojan_Win32_Copak_SPDV_2147896914_0
         $x_1_1 = {bf d8 85 40 00 e8 ?? ?? ?? ?? b8 9b e8 34 0f be e8 17 22 f4 31 3a 89 c6 42 56 58 39 da 75 e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2551,6 +2668,7 @@ rule Trojan_Win32_Copak_SPE_2147897621_0
         $x_4_1 = {b8 d8 85 40 00 e8 ?? ?? ?? ?? 09 f6 42 31 03 4e 01 d2 43 01 d2 39 cb 75 e7}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2572,6 +2690,7 @@ rule Trojan_Win32_Copak_SPRR_2147898313_0
         $x_4_1 = {68 14 8a 43 00 5b 01 c0 e8 26 00 00 00 41 41 29 c1 31 1e 48 46 81 e8 01 00 00 00 81 e9 01 00 00 00 51 8b 04 24 83 c4 04 39 d6 75 d4}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2593,6 +2712,7 @@ rule Trojan_Win32_Copak_KAR_2147898641_0
         $x_5_1 = {8b 13 89 ce 29 cf 81 e2 ?? ?? ?? ?? 29 f9 89 fe 46 31 10 29 cf 01 f6 40 47 29 f9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2614,6 +2734,7 @@ rule Trojan_Win32_Copak_ACO_2147898752_0
         $x_1_1 = {0c 48 8b 5a 96 14 dd d9 8f b9 ?? ?? ?? ?? 86 c8 67 80 11 7b af 87 75 4d 83 d9 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2635,6 +2756,7 @@ rule Trojan_Win32_Copak_KAS_2147898824_0
         $x_5_1 = {4f 09 f7 31 03 81 ef ?? ?? ?? ?? 81 c7 ?? ?? ?? ?? 29 f6 43 29 fe 81 c7 01 00 00 00 39 cb 75 ce}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2656,6 +2778,7 @@ rule Trojan_Win32_Copak_GAF_2147899230_0
         $x_10_1 = {21 df 31 08 09 df 09 ff 81 c0 ?? ?? ?? ?? 81 c3 ?? ?? ?? ?? 81 c3 ?? ?? ?? ?? 39 d0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2677,6 +2800,7 @@ rule Trojan_Win32_Copak_GAN_2147899738_0
         $x_10_1 = {01 d6 29 f6 e8 ?? ?? ?? ?? 09 f2 31 39 81 ee ?? ?? ?? ?? 81 ee ?? ?? ?? ?? 81 ea ?? ?? ?? ?? 41 09 d2}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2698,6 +2822,7 @@ rule Trojan_Win32_Copak_KAT_2147899855_0
         $x_5_1 = {31 0b 81 c3 ?? ?? ?? ?? 39 fb 75 ef}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2720,6 +2845,7 @@ rule Trojan_Win32_Copak_NC_2147900113_0
         $x_3_2 = {83 c4 04 e8 28 00 00 00 09 db 89 ca 8b 3c 24 83 c4 ?? 81 eb 01 00 00 00 5e 09 d3 21 db}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2742,6 +2868,7 @@ rule Trojan_Win32_Copak_NC_2147900113_1
         $x_3_2 = {81 ee 45 af a2 a7 81 c3 ?? ?? ?? ?? db 81 c1 01 00 00 00 21 db 89 db 81 f9 f4}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2764,6 +2891,7 @@ rule Trojan_Win32_Copak_NC_2147900113_2
         $x_5_2 = {81 c2 01 00 00 00 81 eb ?? ?? ?? ?? 81 ef 40 6c dd 10 81 fa ?? ?? ?? ?? 75 05 ba 00 00 00 00 09 fb 81 eb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2785,6 +2913,7 @@ rule Trojan_Win32_Copak_GNF_2147900204_0
         $x_10_1 = {31 32 01 d9 81 c2 04 ?? ?? ?? 81 c3 ?? ?? ?? ?? 39 c2}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2806,6 +2935,7 @@ rule Trojan_Win32_Copak_GMA_2147900273_0
         $x_10_1 = {c3 44 81 c2 ?? ?? ?? ?? 31 39 b8 b5 f8 d6 15 41 81 e8 ?? ?? ?? ?? 48 39 f1}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2827,6 +2957,7 @@ rule Trojan_Win32_Copak_CCGJ_2147900379_0
         $x_1_1 = {89 f1 29 f6 31 3a 09 c9 42 09 c9 01 f1 39 da 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2848,6 +2979,7 @@ rule Trojan_Win32_Copak_CCGK_2147900387_0
         $x_1_1 = {29 c0 31 37 01 db 81 c7 ?? ?? ?? ?? 39 d7 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2869,6 +3001,7 @@ rule Trojan_Win32_Copak_RPY_2147900935_0
         $x_1_1 = {31 10 40 21 fe 89 ff 39 d8 75 e2 c3 8d 14 0a 8b 12 47}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2891,6 +3024,7 @@ rule Trojan_Win32_Copak_GMZ_2147901032_0
         $x_5_2 = {29 fe 29 f6 8b 12 21 ff 01 fe}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2912,6 +3046,7 @@ rule Trojan_Win32_Copak_CCHS_2147903235_0
         $x_1_1 = {48 31 19 81 c0 31 ?? ?? ?? ?? 09 ff 81 ef ?? ?? ?? ?? 39 f1 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2933,6 +3068,7 @@ rule Trojan_Win32_Copak_GNW_2147904164_0
         $x_10_1 = {5f 31 0e 81 ef ?? ?? ?? ?? 01 fa 81 c6 ?? ?? ?? ?? 09 fa 81 c2 ?? ?? ?? ?? 39 c6}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2957,6 +3093,7 @@ rule Trojan_Win32_Copak_GPK_2147905960_0
         $x_4_4 = {ba d8 85 40 00 b8 [0-80] 81 e2 ff 00 00 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2978,6 +3115,7 @@ rule Trojan_Win32_Copak_CCIB_2147906108_0
         $x_1_1 = {29 db 09 d2 e8 ?? ?? ?? ?? 31 38 4b 40 29 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2999,6 +3137,7 @@ rule Trojan_Win32_Copak_GPX_2147906747_0
         $x_4_1 = {d8 85 40 00 [0-48] 31 [0-63] ff 00 00 00 [0-95] 81 ?? f4 01 00 00 75 05}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3023,6 +3162,7 @@ rule Trojan_Win32_Copak_GPL_2147910298_0
         $x_4_4 = {68 d8 85 40 00 5f [0-80] 81 e7 ff 00 00 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3044,6 +3184,7 @@ rule Trojan_Win32_Copak_GPA_2147910300_0
         $x_1_1 = {64 8b 5d 00 [0-48] 31 [0-63] ff 00 00 00 [0-95] 81 ?? f4 01 00 00 75 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3065,6 +3206,7 @@ rule Trojan_Win32_Copak_GPAB_2147911295_0
         $x_4_1 = {14 8a 43 00 [0-48] 31 [0-63] ff 00 00 00 [0-95] 81 ?? f4 01 00 00 75 05}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3086,6 +3228,7 @@ rule Trojan_Win32_Copak_GPAC_2147911390_0
         $x_4_1 = {c1 b3 43 00 [0-48] 31 [0-63] ff 00 00 00 [0-95] 81 ?? f4 01 00 00 75 05}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3107,6 +3250,7 @@ rule Trojan_Win32_Copak_AMAX_2147917214_0
         $x_1_1 = {1e b2 47 00 [0-15] 12 b4 47 00 [0-40] 81 ?? ff 00 00 00 [0-20] 31 [0-55] 81 ?? 34 b4 47 00 0f 8c ?? ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3128,6 +3272,7 @@ rule Trojan_Win32_Copak_KAV_2147917474_0
         $x_1_1 = {7c 9a 65 00 [0-20] 70 9c 65 00 [0-40] 81 ?? ff 00 00 00 [0-15] 31 [0-50] 81 ?? 92 9c 65 00 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3150,6 +3295,7 @@ rule Trojan_Win32_Copak_GPAD_2147919411_0
         $x_4_2 = {c1 b3 43 00 [0-48] 31 [0-96] ff 00 00 00 [0-95] 81 ?? f4 01 00 00 75 05}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3171,6 +3317,7 @@ rule Trojan_Win32_Copak_MKZ_2147929699_0
         $x_5_1 = {f7 d1 be de 5a 6f a9 81 c1 01 00 00 00 f7 d6 f7 d6 31 3b 29 ce 41 81 c3 02 00 00 00 81 e9 01 00 00 00 be 40 3e df 8f 81 c1 8f 5d 9f aa 39 d3 0f 8c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3193,6 +3340,7 @@ rule Trojan_Win32_Copak_GPXA_2147930768_0
         $x_1_2 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3214,6 +3362,7 @@ rule Trojan_Win32_Copak_BAA_2147937897_0
         $x_2_1 = {31 3a 29 c1 81 c2 04 00 00 00 01 c9 46 39 da 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3235,6 +3384,7 @@ rule Trojan_Win32_Copak_GPI_2147939820_0
         $x_1_1 = {c7 b3 43 00 [0-16] e8 [0-32] 31 [0-64] 75 [0-64] 81 ?? ff 00 00 00 [0-64] 81 ?? f4 01 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3256,6 +3406,7 @@ rule Trojan_Win32_Copak_GPJ_2147939821_0
         $x_1_1 = {a2 ad 47 00 [0-8] 96 af 47 00 [0-48] 81 ?? ff 00 00 00 [0-32] 31 [0-48] 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3277,6 +3428,7 @@ rule Trojan_Win32_Copak_GPAK_2147940823_0
         $x_4_1 = {68 e0 ea 40 00 [0-32] 31 [0-48] 81 ?? ff 00 00 00 [0-32] f4 01 00 00 75 05}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

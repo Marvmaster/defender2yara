@@ -18,6 +18,7 @@ rule Trojan_MSIL_GenCBL_PACM_2147898717_0
         $x_3_3 = "05d80ab7-efce-468c-a02b-80c27533dd21" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

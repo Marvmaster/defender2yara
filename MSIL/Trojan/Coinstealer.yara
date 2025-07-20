@@ -16,6 +16,7 @@ rule Trojan_MSIL_Coinstealer_KAL_2147903247_0
         $x_1_1 = {2c 02 de 29 06 28 ?? 00 00 06 0b 12 01 28 ?? 00 00 0a 2d 02 de 17 07 06 28 ?? 00 00 06 de 0e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

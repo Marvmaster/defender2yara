@@ -17,6 +17,7 @@ rule Trojan_MSIL_Metasploit_AMBF_2147901828_0
         $x_1_2 = {0a 00 0b 07 6f ?? 00 00 0a 0c 08 06 16 06 8e 69 6f ?? 00 00 0a 0d 28 ?? 00 00 0a 09 6f ?? 00 00 0a 13 05 2b 00 11 05 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

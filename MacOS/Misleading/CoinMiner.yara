@@ -21,6 +21,7 @@ rule Misleading_MacOS_CoinMiner_BA_288863_0
         $x_1_6 = "donate.xmr-stak.net:14441" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Misleading_MacOS_CoinMiner_BC_291959_0
         $x_1_4 = ".config/xmrig.json" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (3 of ($x*))
 }
 

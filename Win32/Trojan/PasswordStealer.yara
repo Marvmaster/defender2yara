@@ -22,6 +22,7 @@ rule Trojan_Win32_PasswordStealer_A_2147743337_0
         $x_1_7 = "\\places.sqlite" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_PasswordStealer_BA_2147757958_0
         $x_1_3 = "name_on_card, expiration_month, expiration_year, card_number_encrypted FROM credit_card" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_Win32_PasswordStealer_KA_2147762991_0
         $x_1_8 = "/c taskkill /im" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -101,6 +104,7 @@ rule Trojan_Win32_PasswordStealer_MA_2147813454_0
         $x_1_8 = "Kcssyka" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

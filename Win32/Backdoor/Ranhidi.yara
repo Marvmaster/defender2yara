@@ -17,6 +17,7 @@ rule Backdoor_Win32_Ranhidi_A_2147682961_0
         $x_1_3 = {8b 54 24 04 33 c0 8a 0a 84 c9 74 19 56 8b f0 c1 ee 1b c1 e0 05 0b f0 0f be c1 8a 4a 01 03 c6 42 84 c9 75 e9 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win64_StealthLoader_RDA_2147931058_0
         $x_2_3 = {4d 8b e0 45 8b f9 48 89 58 c8 48 89 58 d0 8b eb 89 58 08 ff 15}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

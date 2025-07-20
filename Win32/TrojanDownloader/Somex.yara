@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Somex_A_2147625245_0
         $x_1_5 = "pol.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Somex_A_2147625245_1
         $x_1_5 = "CreateServiceA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule TrojanDownloader_Win32_Somex_B_2147664492_0
         $x_1_5 = "OutTimeOfYear" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Legendmir_MA_2147901714_0
         $x_1_3 = {02 06 c1 7f 02 ca d2 17 d1 a3 1d 26 aa 42 a1 0a e6 f3 39 ab 3d b6 d6 3b 8f 3a 14 58 c6 1d 1d 1d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Legendmir_NL_2147903015_0
         $x_3_2 = {ff 15 04 71 40 00 3b c7 74 61 83 05 08 8e 40 00 10 a3 ?? ?? ?? ?? a1 18 8e 40 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Backdoor_Win32_Bustem_A_2147650466_0
         $x_1_5 = "109.230.217.13" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

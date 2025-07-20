@@ -16,6 +16,7 @@ rule Trojan_MSIL_MalLoader_A_2147660312_0
         $x_1_2 = {00 00 0a 0a 20 e8 03 00 00 28 ?? 00 00 0a 06 6f ?? 00 00 0a 16 9a 0b 02 07 04 6f ?? 00 00 0a 7d 02 00 00 04 07 28 ?? 00 00 0a 0c 08 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

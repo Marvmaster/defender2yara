@@ -19,6 +19,7 @@ rule Backdoor_Linux_AnchorBot_B_2147767033_0
         $x_1_4 = "smb2_write_async" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

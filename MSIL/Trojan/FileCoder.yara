@@ -20,6 +20,7 @@ rule Trojan_MSIL_FileCoder_RDA_2147838455_0
         $x_1_5 = "0400f03e-84be-4df9-b931-e9282ab2b5bc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_MSIL_FileCoder_ARAQ_2147850735_0
         $x_2_4 = "Processhacker" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_MSIL_FileCoder_ARAQ_2147850735_1
         $x_2_3 = "Paid but waiting for 1 confirmation" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_MSIL_FileCoder_NFJ_2147890300_0
         $x_1_2 = "SPIF_SWEDWINI" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_MSIL_FileCoder_NF_2147893379_0
         $x_1_2 = "OnyxLocker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_MSIL_FileCoder_NF_2147893379_1
         $x_1_7 = "By closing this window you will lose the possibility to decrypt your files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Trojan_MSIL_FileCoder_NC_2147893380_0
         $x_5_1 = {72 01 00 00 70 72 ?? 00 00 70 28 ?? 00 00 0a 0a 12 00 fe ?? ?? ?? ?? 01 6f ?? 00 00 0a 72 ?? 00 00 70 28 ?? 00 00 0a 28 ?? 00 00 0a 0b 2b 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +188,7 @@ rule Trojan_MSIL_FileCoder_NFF_2147896730_0
         $x_1_2 = "PayOrDie.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +211,7 @@ rule Trojan_MSIL_FileCoder_NFC_2147896731_0
         $x_1_2 = "ML.NET Program" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -226,6 +235,7 @@ rule Trojan_MSIL_FileCoder_ARA_2147901362_0
         $x_2_3 = "You have Been Hack3d" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -247,6 +257,7 @@ rule Trojan_MSIL_FileCoder_ARA_2147901362_1
         $x_2_1 = ":\\Users\\Worm\\source\\repos\\BSOD\\BSOD\\obj\\Debug\\BSOD.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -269,6 +280,7 @@ rule Trojan_MSIL_FileCoder_ARA_2147901362_2
         $x_2_2 = "\\LockBIT\\systemID" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -290,6 +302,7 @@ rule Trojan_MSIL_FileCoder_ARA_2147901362_3
         $x_2_1 = {13 07 11 07 06 08 9a 28 ?? ?? ?? 0a 7d ?? ?? ?? 04 06 08 9a 28 ?? ?? ?? 0a 0d 7e ?? ?? ?? 04 11 07 fe ?? ?? ?? ?? 06 73 ?? ?? ?? 0a 28 ?? ?? ?? 2b 39 ?? ?? ?? ?? 09 72 ?? ?? ?? 70 28 ?? ?? ?? 0a 39 ?? ?? ?? ?? 06 08 9a 73 ?? ?? ?? 0a 13 04 11 04 6f ?? ?? ?? 0a 20 50 c3 10 00 6a 2f 4b 28 ?? ?? ?? 0a 11 04 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 19 5b 28 ?? ?? ?? 06 6f ?? ?? ?? 0a 13 05 06 08 9a 11 05 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 06 08 9a 06 08 9a 72 ?? ?? ?? 70 1a 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 2b 49 28 ?? ?? ?? 0a 11 04 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 19 5b 28 ?? ?? ?? 06 6f ?? ?? ?? 0a 13 06 06 08 9a 11 06 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 06 08 9a 06 08 9a 72 ?? ?? ?? 70 1a 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 07 2c 17 16 0b 02}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -313,6 +326,7 @@ rule Trojan_MSIL_FileCoder_ARAZ_2147909212_0
         $x_2_3 = "CONTI_LOG.txt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -337,6 +351,7 @@ rule Trojan_MSIL_FileCoder_ARAZ_2147909212_1
         $x_2_4 = "Your files will be lost" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -359,6 +374,7 @@ rule Trojan_MSIL_FileCoder_ARAX_2147909496_0
         $x_2_2 = "encrypted files" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -383,6 +399,7 @@ rule Trojan_MSIL_FileCoder_ARAX_2147909496_1
         $x_2_4 = "txtBitcoinAddress" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -410,6 +427,7 @@ rule Trojan_MSIL_FileCoder_ARAX_2147909496_2
         $x_1_7 = "DisableCMD" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -433,6 +451,7 @@ rule Trojan_MSIL_FileCoder_SL_2147909720_0
         $x_1_3 = "$50c49de9-914a-42e8-a9f6-285f7ca8c71e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +480,7 @@ rule Trojan_MSIL_FileCoder_MV_2147911671_0
         $x_10_8 = "projectmars.exe" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -489,6 +509,7 @@ rule Trojan_MSIL_FileCoder_MD_2147911672_0
         $x_1_4 = "encryptedFileExtension" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -510,6 +531,7 @@ rule Trojan_MSIL_FileCoder_MA_2147912700_0
         $x_1_1 = {72 11 00 00 70 28 3a 00 00 06 7e 1e 00 00 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -533,6 +555,7 @@ rule Trojan_MSIL_FileCoder_MH_2147913436_0
         $x_1_3 = "DecryptionKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -558,6 +581,7 @@ rule Trojan_MSIL_FileCoder_MK_2147913699_0
         $x_1_5 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -580,6 +604,7 @@ rule Trojan_MSIL_FileCoder_RP_2147914162_0
         $x_1_2 = {06 1f 42 58 0a 7e ?? ?? ?? ?? 06 1f 35 59 97 29 ?? ?? ?? ?? 7e ?? ?? ?? ?? 06 1f 34 59 97 29 ?? ?? ?? ?? 2c 02 17 2a 16 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -601,6 +626,7 @@ rule Trojan_MSIL_FileCoder_MJ_2147915203_0
         $x_1_1 = {7e 03 00 00 04 7e 02 00 00 04 07 28 07 00 00 06 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -640,6 +666,7 @@ rule Trojan_MSIL_FileCoder_B_2147916191_0
         $x_1_19 = "CreateDirectory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -662,6 +689,7 @@ rule Trojan_MSIL_FileCoder_SM_2147917678_0
         $x_2_2 = "All your files are stolen and encrypted" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -684,6 +712,7 @@ rule Trojan_MSIL_FileCoder_NK_2147920280_0
         $x_1_2 = "windows.old.old" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -707,6 +736,7 @@ rule Trojan_MSIL_FileCoder_DF_2147923701_0
         $x_3_3 = "C:\\Users\\Yannis\\Desktop\\majordom\\client\\major\\majordom\\obj\\Debug\\major.pdb" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -730,6 +760,7 @@ rule Trojan_MSIL_FileCoder_PM_2147928682_0
         $x_1_3 = "Files have been encrypted" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -753,6 +784,7 @@ rule Trojan_MSIL_FileCoder_PN_2147929189_0
         $x_1_3 = "the encryption will be removed" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -777,6 +809,7 @@ rule Trojan_MSIL_FileCoder_PMI_2147929192_0
         $x_1_4 = "your files have been destroyed" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -801,6 +834,7 @@ rule Trojan_MSIL_FileCoder_PMCD_2147929392_0
         $x_1_4 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -823,6 +857,7 @@ rule Trojan_MSIL_FileCoder_PML_2147936649_0
         $x_2_2 = {72 24 07 00 70 28 ?? 00 00 0a 2c 47 11 0d 11 07 72 20 07 00 70 11 06 11 0c 9a 6f ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 09 72 f8 06 00 70 28 3f 00 00 0a 11 0e 72 20 07 00 70 11 0f 72 0e 07 00 70 28 51 00 00 0a 28 52 00 00 0a 11 0d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

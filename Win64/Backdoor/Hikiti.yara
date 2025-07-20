@@ -17,6 +17,7 @@ rule Backdoor_Win64_Hikiti_N_2147693120_0
         $x_1_2 = {c6 44 24 26 ed c6 44 24 27 ed c6 44 24 28 ee c6 44 24 29 e2 c6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_Win64_Hikiti_O_2147693125_0
         $x_1_2 = {48 8b d3 48 8b c8 ff 15 ?? ?? ?? ?? 48 85 c0 74 02 ff d0 48 8b 4d ?? 48 33 cc e8 ?? ?? ?? ?? 48 8b 5c 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

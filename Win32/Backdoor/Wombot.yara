@@ -17,6 +17,7 @@ rule Backdoor_Win32_Wombot_A_2147650360_0
         $x_1_3 = {6d 69 6e 5f 63 61 70 74 63 68 61 73 69 7a 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

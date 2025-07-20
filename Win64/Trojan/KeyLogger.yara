@@ -17,6 +17,7 @@ rule Trojan_Win64_KeyLogger_DB_2147828897_0
         $x_2_2 = {0f b7 01 41 b9 ff ff 00 00 66 f7 d0 66 41 89 04 08 0f b7 01 48 8d 49 02 66 44 3b c8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_KeyLogger_NK_2147927972_0
         $x_2_2 = {48 8b 10 48 8d 4c 24 ?? 4c 8d 4c 24 ?? 41 b8 10 00 00 00 e8 2b 8f ff ff 85 c0 7e 17 0f b7 4c 24 ?? 66 89 4b 18 89 43 14 eb ab}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win64_KeyLogger_NK_2147927972_1
         $x_1_5 = "InternetConnectW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

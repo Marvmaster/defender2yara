@@ -18,6 +18,7 @@ rule PWS_Win32_Banjori_A_2147680026_0
         $x_1_4 = {2e 65 78 65 00 72 75 6e 61 73 00 5c 63 6d 64 2e 65 78 65 00 2f 63 20 73 74 61 72 74 20 22 22 20 22 25 73 22 20 2d 64 65 6c 20 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +79,7 @@ rule PWS_Win32_Banjori_A_2147680026_1
         $x_4_41 = {ba a9 c8 d7 80 b8 a7 50 36 79 8b 4d 10 8b 7d 0c}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

@@ -17,6 +17,7 @@ rule Trojan_Win64_Scar_GMK_2147892258_0
         $x_1_2 = "Global\\M%llu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win64_Scar_NA_2147928373_0
         $x_1_6 = "GetStartupInfoW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

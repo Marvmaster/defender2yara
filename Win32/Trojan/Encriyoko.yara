@@ -18,6 +18,7 @@ rule Trojan_Win32_Encriyoko_A_2147663603_0
         $x_1_4 = {6e 65 70 69 61 2e 64 75 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

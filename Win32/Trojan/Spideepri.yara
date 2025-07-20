@@ -24,6 +24,7 @@ rule Trojan_Win32_Spideepri_A_2147723098_0
         $x_1_10 = "spdfrmon.Gate" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

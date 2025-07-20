@@ -19,6 +19,7 @@ rule TrojanDownloader_MSIL_ArtemisLoader_B_2147831384_0
         $x_1_4 = "GetMethod" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_MSIL_ArtemisLoader_ART_2147832706_0
         $x_1_2 = "dweb.link" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanDownloader_MSIL_ArtemisLoader_SRP_2147836051_0
         $x_1_5 = "Place_Search.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule TrojanDownloader_MSIL_ArtemisLoader_RDC_2147845148_0
         $x_1_4 = "Yewkycsornxiq" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

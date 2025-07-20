@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Olmarik_C_2147651494_0
         $x_1_2 = {8a 04 39 84 c0 74 09 3c 41 74 05 34 41 88 04 39 83 c1 08 3b ce 72 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

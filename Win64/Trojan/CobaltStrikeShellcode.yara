@@ -18,6 +18,7 @@ rule Trojan_Win64_CobaltStrikeShellcode_CC_2147852375_0
         $x_1_3 = {e6 97 a0 e6 b3 95 e4 b8 ba 53 68 65 6c 6c 63 6f 64 65 e5 88 86 e9 85 8d e5 86 85 e5 ad 98 e3 80 82 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

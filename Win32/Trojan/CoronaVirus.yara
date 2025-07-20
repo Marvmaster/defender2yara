@@ -18,6 +18,7 @@ rule Trojan_Win32_CoronaVirus_V_2147751461_0
         $x_1_3 = "cmd /c rd/s /q d:\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

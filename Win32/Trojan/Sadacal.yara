@@ -20,6 +20,7 @@ rule Trojan_Win32_Sadacal_A_2147645423_0
         $x_3_6 = {70 61 79 6d 65 6e 74 00 75 70 6c 6f 61 64 00 00 70 72 6f 63 65 73 73 00 73 74 61 74}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or

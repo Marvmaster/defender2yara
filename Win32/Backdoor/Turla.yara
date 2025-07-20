@@ -18,6 +18,7 @@ rule Backdoor_Win32_Turla_S_2147690040_0
         $x_1_4 = "cryptsp.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Win32_Turla_A_2147691959_0
         $x_1_4 = "no_server_hijack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Backdoor_Win32_Turla_G_2147691960_0
         $x_1_3 = {74 1c ff 36 ff 75 e8 53 53 68 2c 20 22 00 57 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Backdoor_Win32_Turla_H_2147691966_0
         $x_1_2 = {c7 45 b8 2e 64 6f 63 88 5d bc c7 45 d8 2e 70 64 66}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Backdoor_Win32_Turla_I_2147691967_0
         $x_1_2 = "isp=%d cp=%S dbp=%S hmod=0x%08X" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Backdoor_Win32_Turla_K_2147691969_0
         $x_1_2 = "+[%d/24h] %02d.%02d.%04d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +159,7 @@ rule Backdoor_Win32_Turla_B_2147691971_0
         $x_1_2 = {8b 04 24 8b 4c 24 08 83 e9 04 0f 84 ?? ?? ?? ?? 83 e9 01 74 5a 83 e9 01 75 c3 8b 4c 24 0c 83 e9 00 74 36 83 e9 01 74 1b 83 e9 01 75 b0 f7 d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +221,7 @@ rule Backdoor_Win32_Turla_V_2147697645_0
         $x_1_41 = "##dk %S 0x%08x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -245,6 +253,7 @@ rule Backdoor_Win32_Turla_X_2147723278_0
         $x_1_5 = "{531511FA-190D-5D85-8A4A-279F2F592CC7}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -269,6 +278,7 @@ rule Backdoor_Win32_Turla_Y_2147723279_0
         $x_1_4 = "%0024\\explorer.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -293,6 +303,7 @@ rule Backdoor_Win32_Turla_AA_2147731975_0
         $x_1_5 = {01 00 64 6c ?? ?? 2e 64 6c 6c 00 44 6c 6c 4d 61 69 6e [0-5] 00 48 6f 6f 6b 50 72 6f 63}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -318,6 +329,7 @@ rule Backdoor_Win32_Turla_AB_2147735227_0
         $x_1_2 = "dc772b4c-e262-47a7-a956-ac6a2b08f816" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

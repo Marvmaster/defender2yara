@@ -16,6 +16,7 @@ rule Backdoor_Win64_Javik_A_2147661511_0
         $x_1_2 = {44 8a 01 48 8d 41 01 45 84 c0 74 ?? c6 01 00 44 30 41 01 74 08 48 ff c0 44 30 00 75 f8 48 8d 41 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

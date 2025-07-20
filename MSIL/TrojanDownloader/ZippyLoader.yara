@@ -25,6 +25,7 @@ rule TrojanDownloader_MSIL_ZippyLoader_BB_2147830408_0
         $x_1_10 = "$4714d95c-1408-44a8-a503-681878bbe3f4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Maui_RPJ_2147829272_0
         $x_1_1 = {8a 4d 10 33 45 10 d3 ff 03 7d 08 03 45 08 ff 4d f0 8a 0f 88 4d df 8a 08 88 0f 8a 4d df}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

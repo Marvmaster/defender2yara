@@ -17,6 +17,7 @@ rule Trojan_Win32_FakePlayer_A_2147641864_0
         $x_1_3 = "\\MyIEData\\main.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_Win32_FakePlayer_B_2147642528_0
         $x_1_4 = "\\NethomeInfo\\MyIEData\\main.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

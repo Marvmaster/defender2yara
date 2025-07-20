@@ -25,6 +25,7 @@ rule Trojan_Win32_Dialsnif_A_2147573898_0
         $x_1_10 = "ATM0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_3_*) and 3 of ($x_1_*))) or
             ((5 of ($x_3_*))) or
@@ -56,6 +57,7 @@ rule Trojan_Win32_Dialsnif_B_2147573957_0
         $x_1_7 = "CallNextHookEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +136,7 @@ rule Trojan_Win32_Dialsnif_C_2147576979_0
         $x_1_58 = "TerminateProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (49 of ($x*))
 }
 

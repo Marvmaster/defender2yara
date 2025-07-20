@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Clicker_B_2147659439_0
         $x_1_3 = {04 03 4a 45 40 4a 42 34 (04 03 5d 50 59|61 7d 7d 79 33)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

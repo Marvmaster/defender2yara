@@ -15,6 +15,7 @@ rule TrojanProxy_BAT_Banker_G_2147679140_0
         $x_1_1 = ".db\" (start /low /min iexplore.exe \"http://" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

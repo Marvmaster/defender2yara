@@ -19,6 +19,7 @@ rule TrojanSpy_MSIL_Ploutus_A_2147686271_0
         $x_10_4 = {50 6c 6f 75 74 6f 73 2e 65 78 65 00 50 6c 6f 75 74 6f 73 00 6d 73 63 6f 72 6c 69 62 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*))) or
             ((2 of ($x_100_*))) or

@@ -22,6 +22,7 @@ rule Worm_Win32_Wrasp_2147595860_0
         $x_1_8 = {25 30 35 64 25 30 35 64 25 30 33 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             (all of ($x*))

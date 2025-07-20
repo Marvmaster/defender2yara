@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_AsyncRat_CCHB_2147901225_0
         $x_1_1 = {83 c4 08 eb ?? c7 45 e0 ?? ?? ?? ?? c7 45 e4 ?? ?? ?? ?? 8b 55 e4 52 8b 45 e0 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_AsyncRat_CCHD_2147901416_0
         $x_1_2 = "sandbox!!!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule TrojanDownloader_Win32_AsyncRat_CCIQ_2147913736_0
         $x_1_1 = {8b 55 fc 8a 04 82 30 01 8b 4d f8 8b 46 04 41 2b 06 89 4d f8 3b c8 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule TrojanDownloader_Win32_AsyncRat_CCJB_2147915088_0
         $x_1_1 = {8b 16 8b 49 0c 8b 42 0c 8b 55 a4 8a 04 10 8b 55 d4 32 04 1a 8b 55 a0 88 04 11 8b 45 e8 83 c0 01 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +105,7 @@ rule TrojanDownloader_Win32_AsyncRat_G_2147917857_0
         $x_2_1 = {8a 4c 05 c9 32 ca 88 88 ?? ?? ?? ?? 40 83 f8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +130,7 @@ rule TrojanDownloader_Win32_AsyncRat_PA_2147943541_0
         $x_1_4 = "/C powershell -Command \"Add-MpPreference -ExclusionPath" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

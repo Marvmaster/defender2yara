@@ -16,6 +16,7 @@ rule Backdoor_Win32_Pirpi_A_2147628905_0
         $x_1_2 = {75 60 8d 56 07 33 c9 8a 02 3c 30 7c 0f 3c 39 7f 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Backdoor_Win32_Pirpi_C_2147644965_0
         $x_1_2 = {8a 44 04 10 30 44 0e 04 41 3b ca 72 e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Backdoor_Win32_Pirpi_D_2147656938_0
         $x_1_2 = {8d 7c 24 0c f3 a5 8b b4 24 ?? ?? 00 00 85 ed 7e 21 8d 4c 24 0c 53 8a 9c 24 00 00 00 8b c6 2b ce 8b fd 8a 14 01 32 d3 30 10 88 14 01 40 4f 75 f2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Backdoor_Win32_Pirpi_E_2147696137_0
         $x_1_9 = {6a 00 56 57 53 (e8|ff) [0-4] 83 f8 ff 74 ?? 85 c0 74 ?? 2b f0 03 f8 85 f6 75 ?? 8b [0-3] 5f 2b c6 5e 5d 5b c3 (e8|ff 15) [0-4] 3d 4c 27 00 00 74 ?? 5f 5e 5d (33 c0|83) 5b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Backdoor_Win32_Pirpi_G_2147696437_0
         $x_1_5 = {25 73 69 6e 64 65 78 25 32 2e 32 64 5f 25 64 2e 68 74 6d 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -140,6 +145,7 @@ rule Backdoor_Win32_Pirpi_P_2147696749_0
         $x_1_8 = "E* CreateFile(%s) Error(%d)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +180,7 @@ rule Backdoor_Win32_Pirpi_R_2147749676_0
         $x_1_14 = "HideLoadder::_peBuild" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

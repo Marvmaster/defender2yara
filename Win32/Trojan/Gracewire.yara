@@ -17,6 +17,7 @@ rule Trojan_Win32_Gracewire_MB_2147762866_0
         $x_1_2 = {8b 55 e4 83 c2 ?? 89 55 e4 81 7d e4 ?? ?? 00 00 73 16 8b 85 ?? ?? ?? ?? 03 45 e4 8b 4d e4 8a 91 ?? ?? ?? ?? 88 10 eb d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

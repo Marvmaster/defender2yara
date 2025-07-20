@@ -17,6 +17,7 @@ rule Worm_Win32_Waspy_A_2147617380_0
         $x_1_3 = {2e 00 68 00 74 00 6d 00 6c 00 [0-10] 2e 00 74 00 78 00 74 00 [0-10] 2e 00 64 00 6f 00 63 00 [0-10] 2e 00 78 00 6c 00 73 00 [0-10] 2e 00 63 00 70 00 70 00 [0-10] 2e 00 68 00 74 00 6d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

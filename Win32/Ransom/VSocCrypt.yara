@@ -16,6 +16,7 @@ rule Ransom_Win32_VSocCrypt_PA_2147828531_0
         $x_1_1 = {c1 e9 18 88 4b ?? 8b 8d [0-4] 8b c1 c1 e8 08 88 43 ?? 8b c1 c1 e8 10 88 43 ?? 8b c2 c1 e8 08 88 4b ?? c1 e9 18 88 43 ?? 8b c2 88 ?? 3b 8b 4d 14 88 53 ?? c1 e8 10 c1 ea 18 88 43 ?? 88 53 ?? 83 f9 ?? 76}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

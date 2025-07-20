@@ -42,6 +42,7 @@ rule Trojan_Win32_CrystalDoom_A_2147725046_0
         $x_5_27 = {40 3c 00 00 62 80 40 00 80 3c 40 20 03 7c 1c 00 82 40 04 00 62 80 60 00 80 3c 40 20 03 7c 0c 00 82 40 18 00 42 38 1c 00 00 48 80 00 80 3c 00 01 84 60 40 20 02 7c 18 00 80 40 04 00 42 38 c4 ff ff 4b}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
@@ -101,6 +102,7 @@ rule Trojan_Win32_CrystalDoom_B_2147725083_0
         $x_1_34 = "imain.bin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

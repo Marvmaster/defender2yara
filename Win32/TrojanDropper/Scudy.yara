@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Scudy_A_2147629885_0
         $x_1_4 = "KeServiceDescriptorTable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

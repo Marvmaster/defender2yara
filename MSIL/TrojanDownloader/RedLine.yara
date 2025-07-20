@@ -21,6 +21,7 @@ rule TrojanDownloader_MSIL_RedLine_NWS_2147835003_0
         $x_1_6 = "ConfuserEx v1.0.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_MSIL_RedLine_NZT_2147837415_0
         $x_1_3 = "yenilmemezilmem.ravennaback" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule TrojanDownloader_MSIL_RedLine_RDG_2147838224_0
         $x_1_8 = "Invoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule TrojanDownloader_MSIL_RedLine_RDBH_2147844950_0
         $x_1_4 = "LyeM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

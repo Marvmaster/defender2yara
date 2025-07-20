@@ -20,6 +20,7 @@ rule Backdoor_Win32_Prorat_AL_2147596025_0
         $x_1_6 = "/// Outlook AaddresBook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Backdoor_Win32_Prorat_AM_2147596027_0
         $x_1_13 = "Victim name" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or
@@ -81,6 +83,7 @@ rule Backdoor_Win32_Prorat_AN_2147600479_0
         $x_1_4 = "\\ktd32.atm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Backdoor_Win32_Prorat_AM_2147600666_0
         $x_1_2 = {2e 64 6c 6c 00 48 6f 6f 6b 50 72 6f 63 00 49 6e 73 74 61 6c 6c 48 6f 6f 6b 00 52 65 6d 6f 76 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule Backdoor_Win32_Prorat_AZ_2147605018_0
         $x_10_6 = {c1 e9 02 8b fa 8d 54 24 ?? f3 a5 8b c8 33 c0 83 e1 03 f3 a4 83 c9 ff bf ?? ?? ?? ?? f2 ae f7 d1 2b f9 8b f7 8b fa 8b d1 83 c9 ff f2 ae 8b ca 4f c1 e9 02 f3 a5 8b ca 8d 44 24 78 83 e1 03 a3 ?? ?? ?? ?? f3 a4 bf ?? ?? ?? ?? 83 c9 ff 33 c0 8d 54 24 ?? f2 ae f7 d1 2b f9 8b f7 8b fa 8b d1 83 c9 ff f2 ae 8b ca 4f c1 e9 02 f3 a5}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -152,6 +157,7 @@ rule Backdoor_Win32_Prorat_AI_2147640492_0
         $x_2_3 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\policies\\_loadname" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +182,7 @@ rule Backdoor_Win32_Prorat_BY_2147660392_0
         $x_1_5 = "@members.3322.org/dyndns/update?system=dyndns&hostname=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

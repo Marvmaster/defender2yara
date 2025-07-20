@@ -20,6 +20,7 @@ rule Trojan_Win32_Tacpud_A_2147708734_0
         $x_1_6 = {5b 00 52 00 5d 00 7c 00 [0-16] 5b 00 4e 00 5d 00 7c 00 [0-16] 5b 00 44 00 [0-32] 4f 00 70 00 65 00 6e 00 [0-16] 69 00 65 00 78 00 70 00 6c 00 6f 00 72 00 65 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

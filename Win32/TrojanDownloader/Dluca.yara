@@ -41,6 +41,7 @@ rule TrojanDownloader_Win32_Dluca_BF_2147575183_0
         $x_1_27 = "bho/config.asp?g=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (22 of ($x*))
 }
 
@@ -68,6 +69,7 @@ rule TrojanDownloader_Win32_Dluca_DJ_2147595096_0
         $x_1_8 = "c:\\temp\\noname.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +116,7 @@ rule TrojanDownloader_Win32_Dluca_AN_2147601483_0
         $x_1_27 = {8b 46 04 8b ce 50 e8 ?? ?? 00 00 66 85 c0 74 2d 8b 0d ?? ?? 41 00 8b 56 04 51 52 55 55 55 55 68 00 7d 00 00 68 00 7d 00 00 55 53 68 ?? ?? 41 00 55 ff 15 ?? ?? 41 00 89 86 08 03 00 00 8b 86 08 03 00 00 3b c5 74 0b 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +172,7 @@ rule TrojanDownloader_Win32_Dluca_AO_2147604882_0
         $x_1_36 = "www.yahoo.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((20 of ($x_1_*))) or
             ((1 of ($x_5_*) and 15 of ($x_1_*))) or
@@ -208,6 +212,7 @@ rule TrojanDownloader_Win32_Dluca_DM_2147605467_0
         $x_1_13 = "&pin=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

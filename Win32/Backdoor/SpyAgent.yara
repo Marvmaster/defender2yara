@@ -20,6 +20,7 @@ rule Backdoor_Win32_SpyAgent_A_2147611338_0
         $x_1_6 = "SPYAGENT4HASHCIPHER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

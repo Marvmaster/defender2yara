@@ -19,6 +19,7 @@ rule Trojan_MSIL_Tenga_AA_2147783096_0
         $x_1_4 = "apdocroto.gq" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_Tenga_PKZM_2147935010_0
         $x_1_2 = "SvchostController.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

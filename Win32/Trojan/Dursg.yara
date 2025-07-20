@@ -20,6 +20,7 @@ rule Trojan_Win32_Dursg_B_2147616229_0
         $x_1_6 = {63 6d 70 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -49,6 +50,7 @@ rule Trojan_Win32_Dursg_A_2147616230_0
         $x_10_6 = "\\Microsoft\\VSU" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -74,6 +76,7 @@ rule Trojan_Win32_Dursg_C_2147630362_0
         $x_1_3 = {3c 01 74 42 6a 00 68 80 00 00 00 6a 03 6a 00 6a 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Trojan_Win32_Dursg_D_2147631329_0
         $x_1_4 = {6a 00 68 80 00 00 00 6a 03 6a 00 6a 03 68 00 00 00 80 56 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_Win32_Dursg_E_2147632118_0
         $x_1_3 = "request.php?aid=%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -143,6 +148,7 @@ rule Trojan_Win32_Dursg_2147646354_0
         $x_1_2 = {89 85 64 ff ff ff 8b 85 64 ff ff ff 8b 40 02 83 c0 ca 89 85 68 ff ff ff 8b 85 5c ff ff ff f7 d8 03 85 68 ff ff ff 89 85 6c ff ff ff 50 8b 85 6c ff ff ff 89 04 24 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +172,7 @@ rule Trojan_Win32_Dursg_I_2147646653_0
         $x_1_4 = "KillSelf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -189,6 +196,7 @@ rule Trojan_Win32_Dursg_J_2147646854_0
         $x_1_4 = {67 00 6f 00 6f 00 67 00 6c 00 65 00 00 00 00 00 73 00 65 00 61 00 72 00 63 00 68 00 00 00 00 00 79 00 61 00 68 00 6f 00 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -216,6 +224,7 @@ rule Trojan_Win32_Dursg_K_2147656178_0
         $x_1_8 = "getfile=1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

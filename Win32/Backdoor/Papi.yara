@@ -17,6 +17,7 @@ rule Backdoor_Win32_Papi_D_2147619816_0
         $x_1_3 = {80 38 2a 74 22 46 40 4a 75 f6 eb 1b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

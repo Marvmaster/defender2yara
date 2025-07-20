@@ -40,6 +40,7 @@ rule TrojanDropper_AndroidOS_Wroba_C_2147795894_0
         $x_1_4 = "getAssets" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -65,6 +66,7 @@ rule TrojanDropper_AndroidOS_Wroba_D_2147822254_0
         $x_1_5 = "/Volumes/Android/buildbot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -117,6 +119,7 @@ rule TrojanDropper_AndroidOS_Wroba_A_2147828581_0
         $x_1_3 = {47 23 68 3e 4a 01 1c 08 33 db 6f 20 1c 7a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -140,6 +143,7 @@ rule TrojanDropper_AndroidOS_Wroba_F_2147828898_0
         $x_1_3 = {19 f8 0b 10 dd e9 09 02 61 40 90 42 07 f8 b9 1c 04 d2 01 70 09 98 01 30 09 90 03 e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -163,6 +167,7 @@ rule TrojanDropper_AndroidOS_Wroba_H_2147830750_0
         $x_1_3 = {e9 23 44 a9 0a 6b 77 38 3f 01 08 eb 53 01 15 4a c2 00 00 54 33 01 00 39 e8 23 40 f9 08 05 00 91 e8 23 00 f9 21 00 00 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -185,6 +190,7 @@ rule TrojanDropper_AndroidOS_Wroba_G_2147830922_0
         $x_1_2 = {4c 89 f6 ff 90 08 01 00 00 48 89 c3 49 8b 2f 31 c0 4c 89 ff 4c 89 ee 48 89 da 4c 89 64 24 68 4c 89 e1 ff 95 10 01 00 00 49 8b 07 48 8d 35 75 0a 00 00 4c 89 ff ff 90 38 05 00 00 48 89 c1 49 8b 2f 31 c0 4c 89 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 

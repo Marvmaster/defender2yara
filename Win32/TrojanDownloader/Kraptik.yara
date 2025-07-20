@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Kraptik_A_2147630497_0
         $x_1_3 = {68 5e 1e c0 8f 53 68 7c 23 3a bf 52 68 00 00 00 00 ff 15 ?? ?? 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

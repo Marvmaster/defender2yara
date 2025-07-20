@@ -18,6 +18,7 @@ rule Trojan_MSIL_ShellInject_NEAB_2147836980_0
         $x_2_3 = "WriteProcessMemory" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_ShellInject_NEAA_2147838071_0
         $x_3_2 = "/C powershell.exe Add-MpPreference -ExclusionExtension exe; powershell.exe Add-MpPreference -ExclusionExtension dll" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_MSIL_ShellInject_DA_2147941682_0
         $x_1_6 = "A**m*siS**c*a*******n*Buf*f*er" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

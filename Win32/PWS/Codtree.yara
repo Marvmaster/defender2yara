@@ -23,6 +23,7 @@ rule PWS_Win32_Codtree_A_2147624310_0
         $x_2_8 = {c6 06 0d 46 c6 06 0a 46}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -20,6 +20,7 @@ rule Trojan_Linux_EvilGnome_B_2147773046_0
         $x_1_5 = {53 68 6f 6f 74 65 72 49 6d 61 67 65 [0-2] 74 61 6b 65 53 63 72 65 65 6e 73 68 6f 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule VirTool_WinNT_Tridmerc_A_2147607403_0
         $x_1_3 = "C:\\Coding\\drv4srv\\msdirect.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

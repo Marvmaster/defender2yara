@@ -16,6 +16,7 @@ rule Trojan_Win32_Urocflood_A_2147712501_0
         $x_2_2 = {68 39 05 00 00 66 89 46 02 ff ?? ?? ?? ?? 00 68 39 05 00 00 89 46 04 ff ?? ?? ?? ?? 00 68 39 05 00 00 89 46 08 66 c7 46 0c 50 02 ff ?? ?? ?? ?? 00 8b 55 08 66 89 46 0e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

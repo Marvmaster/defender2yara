@@ -21,6 +21,7 @@ rule Ransom_Win32_Pryncisslyn_A_2147720979_0
         $x_2_7 = {64 00 65 00 6c 00 2e 00 62 00 61 00 74 00 [0-6] 2e 00 67 00 72 00 74 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

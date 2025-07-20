@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Vifuls_A_2147685588_0
         $x_2_5 = "htpclt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

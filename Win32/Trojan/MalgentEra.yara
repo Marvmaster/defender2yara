@@ -17,6 +17,7 @@ rule Trojan_Win32_MalgentEra_A_2147919035_0
         $x_1_2 = "eval(" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_MalgentEra_B_2147919036_0
         $x_1_2 = "eval(" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_MalgentEra_D_2147919688_0
         $x_1_2 = {98 c3 06 00 a4 c3 06 00 b0 c3 06 00 bc c3 06 00 ca c3 06 00 d8 c3 06 00 f2 c3 06 00 08 c4 06 00 1e c4 06 00 38 c4 06 00 4e c4 06 00 62 c4 06 00 7e c4 06 00 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

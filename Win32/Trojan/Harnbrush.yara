@@ -22,6 +22,7 @@ rule Trojan_Win32_Harnbrush_A_2147623072_0
         $x_1_8 = "SendMsg At 0_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or

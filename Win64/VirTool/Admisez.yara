@@ -19,6 +19,7 @@ rule VirTool_Win64_Admisez_A_2147847059_0
         $x_1_4 = {4c 89 fa 4c 89 e9 e8 ?? ?? ?? ?? 85 c0 74 17 48 8d ?? ?? ?? ?? ?? 4c 89 e9 e8 ?? ?? ?? ?? 85 c0 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule VirTool_Win64_Admisez_B_2147892463_0
         $x_1_4 = {48 89 c1 e8 ?? ?? ?? ?? 48 ?? ?? ?? ?? 49 89 d8 45 31 c9 ba 01 00 00 00 48 89 44 24 40 48 8b 4c 24 58 48 89 74 24 38 48 c7 44 24 30 00 00 00 00 48 c7 44 24 28 00 00 00 00 c7 44 24 20 00 00 00 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Bredo_PA_2147787566_0
         $x_1_2 = "hahaha.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

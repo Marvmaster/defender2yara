@@ -17,6 +17,7 @@ rule Trojan_MSIL_Blubot_ABL_2147846724_0
         $x_1_2 = "MCBOTALPHA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

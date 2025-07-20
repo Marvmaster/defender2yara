@@ -18,6 +18,7 @@ rule Trojan_Win32_Jinupd_A_2147683422_0
         $x_1_4 = {26 74 32 3d 00 00 00 00 2f 62 3f 74 31 3d 00 00 2f 65 63 68 6f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Jinupd_B_2147683440_0
         $x_10_6 = {4a 00 61 00 76 00 61 00 [0-8] 50 00 6c 00 61 00 74 00 66 00 6f 00 72 00 6d 00 20 00 55 00 70 00 64 00 61 00 74 00 65 00 72 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_5_*))) or
             ((2 of ($x_10_*) and 1 of ($x_5_*))) or

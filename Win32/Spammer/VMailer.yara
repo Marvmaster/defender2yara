@@ -17,6 +17,7 @@ rule Spammer_Win32_VMailer_A_2147645054_0
         $x_1_3 = "sentmails server=%s:%d listid=%u pid=%u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

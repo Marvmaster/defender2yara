@@ -19,6 +19,7 @@ rule Trojan_Win32_Lofumin_A_2147711515_0
         $x_1_5 = "[zapros_logstart_otvet]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

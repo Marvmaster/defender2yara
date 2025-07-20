@@ -16,6 +16,7 @@ rule Trojan_Win32_Redslip_RPX_2147904909_0
         $x_1_1 = {8b 53 f8 39 13 8b 4d e4 0f 4f 13 8d 5b 28 03 53 d4 8d 41 ff 03 c2 33 d2 f7 f1 0f af c1 3b f8 0f 4d c7 8b f8 83 ee 01 75 d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Wirond_A_2147718365_0
         $x_1_4 = {c7 45 e0 6f 00 72 00 c7 45 e4 64 00 30 00 c7 45 e8 31 00 36 00 c7 45 ec 2e 00 65 00 c7 45 f0 78 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule VirTool_Win64_Threadesz_A_2147853080_0
         $x_1_4 = {48 8b e8 48 85 c0 0f 84 16 01 00 00 48 89 5c 24 30 89 5c 24 28 89 5c 24 20 45 33 c9 45 33 c0 33 d2 48 8b c8 ff 15 ?? ?? ?? ?? 44 8b f8 85 c0 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

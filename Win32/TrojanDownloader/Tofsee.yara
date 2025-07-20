@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Tofsee_A_2147679403_0
         $x_1_3 = {57 83 c3 03 6a 3a 53 e8 ?? ?? ?? ?? 8b f8 59 59 85 ff 74 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Tofsee_D_2147680398_0
         $x_1_2 = {3b c3 74 0e c6 40 01 6a c6 40 02 70 c6 40 03 67 eb ?? 8d 85 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

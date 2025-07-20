@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_FnDialer_2147804048_0
         $x_1_1 = {61 74 74 65 72 6e 20 6e 6f 74 20 66 6f 75 6e 64 21 00 46 75 6e 63 74 69 6f 6e 20 6e 6f 74 20 66 6f 75 6e 64 21 00 49 6e 66 6f 00 66 6e 44 69 61 6c 65 72 44 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_MSIL_ArtemisMSILLoader_EM_2147845756_0
         $x_1_5 = "CopyFromScreen" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_MSIL_ArtemisMSILLoader_EH_2147846273_0
         $x_1_6 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

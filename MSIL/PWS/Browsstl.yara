@@ -27,6 +27,7 @@ rule PWS_MSIL_Browsstl_GG_2147773589_0
         $x_1_12 = "get_IsAlive" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (11 of ($x*))
 }
 
@@ -59,6 +60,7 @@ rule PWS_MSIL_Browsstl_GA_2147773924_0
         $x_1_12 = "SELECT host_key, name, path, is_secure, expires_utc, encrypted_value, is_httponly FROM cookies" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

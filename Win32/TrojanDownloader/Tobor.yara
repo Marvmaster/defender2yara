@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Tobor_A_2147643668_0
         $x_1_2 = {3a 5c 00 00 5c 00 00 00 2e 70 69 66}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

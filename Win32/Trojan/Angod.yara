@@ -19,6 +19,7 @@ rule Trojan_Win32_Angod_2147616237_0
         $x_1_5 = "getprotobyname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

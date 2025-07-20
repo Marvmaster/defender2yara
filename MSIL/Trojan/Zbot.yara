@@ -19,6 +19,7 @@ rule Trojan_MSIL_Zbot_ET_2147797385_0
         $x_3_4 = "shellcode" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_MSIL_Zbot_CC_2147811075_0
         $x_1_10 = "InjectCheat_Load" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_MSIL_Zbot_B_2147824014_0
         $x_1_3 = "$06a286a8-630a-4d37-86eb-c7da22220667" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_MSIL_Zbot_AAAE_2147899477_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_MSIL_Zbot_KAA_2147901602_0
         $x_5_1 = {58 0a 06 20 ?? ?? 00 00 58 0a 04 1f 19 64 04 1d 62 60 10 02 06 20 ?? ?? 00 00 58 0a 06 20 ?? ?? 00 00 58 0a 04 03 59}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

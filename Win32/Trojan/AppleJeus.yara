@@ -16,6 +16,7 @@ rule Trojan_Win32_AppleJeus_A_2147935726_0
         $x_3_2 = {c7 44 24 64 68 74 74 70 c7 44 24 68 73 3a 2f 2f c7 44 24 6c 77 77 77 2e c6 44 24 70 63 88 5c 24 71 c7 44 24 72 6c 61 73 6c}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

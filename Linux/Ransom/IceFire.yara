@@ -20,6 +20,7 @@ rule Ransom_Linux_IceFire_A_2147843300_0
         $x_1_5 = {c6 45 a0 29 c6 45 a1 c0 c6 45 a2 f6 c6 45 a3 94 c6 45 a4 fd c6 45 a5 fd c6 45 a6 fd c6 45 a7 fd c6 45 a8 43 c6 45 a9 6f c6 45 aa 6d c6 45 ab 53 c6 45 ac 70 c6 45 ad 65 c6 45 ae 63 c6 45 af 3d c6 45 b0 43 c6 45 b1 3a c6 45 b2 5c c6 45 b3 57 c6 45 b4 69 c6 45 b5 6e c6 45 b6 64 c6 45 b7 6f c6 45 b8 77 c6 45 b9 73 c6 45 ba 5c c6 45 bb 73 c6 45 bc 79 c6 45 bd 73 c6 45 be 74 c6 45 bf 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

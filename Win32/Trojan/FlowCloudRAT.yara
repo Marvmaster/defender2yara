@@ -17,6 +17,7 @@ rule Trojan_Win32_FlowCloudRAT_A_2147892471_0
         $x_2_2 = {6a 00 68 00 00 04 00 ff 15 ?? ?? ?? ?? 6a 00 8b d8 8b 45 fc 50 56 8b 35 0c 20 00 10 50 6a 00 53 ff d6 8b 3d 10 20 00 10 50 ff d7 50 ff 15 ?? ?? ?? ?? 6a 00 ff 75 fc 6a 00 53 ff d6 50 6a 00 ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? ff d7 50 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_FlowCloudRAT_B_2147895340_0
         $x_2_1 = {8b f8 6a 02 6a 00 57 ff d6 57 ff 15 ?? ?? ?? ?? 6a 00 8b d8 6a ?? 57 89 5d fc ff d6 53 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

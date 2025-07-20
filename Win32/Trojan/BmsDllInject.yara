@@ -17,6 +17,7 @@ rule Trojan_Win32_BmsDllInject_A_2147753226_0
         $x_1_2 = "powershell.exe -NoP -NonI -W Hidden -ep Bypass -enc cwBjAGgAdABhAHMAawBzACAALwBjAHIAZQBhAHQAZQAgAC8AcgB1ACAA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

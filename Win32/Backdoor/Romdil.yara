@@ -29,6 +29,7 @@ rule Backdoor_Win32_Romdil_A_2147573343_0
         $x_2_14 = "/SHELL> Running Program berhasil..." wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             ((5 of ($x_2_*))) or

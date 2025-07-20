@@ -25,6 +25,7 @@ rule Ransom_Win32_GandCrab_A_2147725587_0
         $x_5_11 = "nomoreransom.coin" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_5_*))) or
             ((2 of ($x_10_*) and 1 of ($x_5_*))) or
@@ -54,6 +55,7 @@ rule Ransom_Win32_GandCrab_2147725677_0
         $x_1_2 = "important files are encrypted and have the extension" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Ransom_Win32_GandCrab_2147725677_1
         $x_1_1 = {81 ff 9c 19 00 00 7d 04 6a 00 ff d6 e8 ?? fa ff ff 8b 4c 24 0c 30 04 39 83 ef 01 79 e3 ff 15 90 c7 41 00 64 8b 0d 2c 00 00 00 8b 11 5f 5e c7 42 04 01 00 00 00 33 c0 5b 8b e5 5d c2 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Ransom_Win32_GandCrab_2147725677_2
         $x_1_2 = {69 c0 fd 43 03 00 05 c3 9e 26 00 a3 ?? ?? 41 00 c1 e8 10 25 ff 7f 00 00 c3 05 00 a1 ?? ?? 41 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Ransom_Win32_GandCrab_2147725677_3
         $x_1_2 = {69 c0 fd 43 03 00 05 c3 9e 26 00 a3 ?? ?? 41 00 3d fe 44 05 00 75 1f 8d 85 fc fb ff ff 50 ff 15 ?? ?? 41 00 6a 00 68 ?? ?? 41 00 68 ?? ?? 41 00 ff 15 ?? ?? 41 00 0f b7 05 ?? ?? 41 00 8b 4d fc 33 cd 25 ff 7f 00 00 05 00 a1 ?? ?? 41 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Ransom_Win32_GandCrab_2147725677_4
         $x_1_2 = {81 fe 37 0e 00 00 7d 14 6a 00 6a 00 6a 00 6a 00 ff d7 6a 00 6a 00 ff 15 ?? ?? 41 00 0f be 1c 1e e8 7b ff ff ff 32 c3 8b 5d fc 88 04 1e 46 3b 75 f8 7c cd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +183,7 @@ rule Ransom_Win32_GandCrab_E_2147726662_0
         $x_2_21 = "gdcbmuveqjsli57x.onion.to/b93cf40ee63ed066" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -230,6 +237,7 @@ rule Ransom_Win32_GandCrab_AE_2147727082_0
         $x_2_34 = {65 6e 63 72 79 70 74 69 6f 6e 2e 64 6c 6c 00 5f 52 65 66 6c 65 63 74 69 76 65 4c 6f 61 64 65 72 40 30}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -332,6 +340,7 @@ rule Ransom_Win32_GandCrab_AF_2147727371_0
         $x_1_2 = {88 0c 30 46 3b 35 ?? ?? ?? 00 72 cc 19 00 57 57 ff 15 ?? ?? ?? 00 a1 ?? ?? ?? 00 8a 8c 30 ?? ?? 00 00 a1 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -355,6 +364,7 @@ rule Ransom_Win32_GandCrab_AG_2147727546_0
         $x_1_3 = {30 04 2e 83 ee 01 79 e5 5f 5e 5d 59 59 c3 13 00 81 fe ?? ?? 00 00 7d 06 ff 15 ?? ?? ?? 00 e8 b7 fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -377,6 +387,7 @@ rule Ransom_Win32_GandCrab_AH_2147727662_0
         $x_1_2 = {03 45 ec 33 c8 8d 04 3b 33 c8 8b 45 e8 2b f1 b9 01 00 00 00 2b c8 03 d9 83 6d fc 01 75 ae 8b 45 e4 89 78 04 5f 89 30 5e 5b 8b e5 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -399,6 +410,7 @@ rule Ransom_Win32_GandCrab_AI_2147727849_0
         $x_1_2 = {64 a1 2c 00 00 00 8b 00 c7 40 04 01 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -424,6 +436,7 @@ rule Ransom_Win32_GandCrab_AO_2147728367_0
         $x_1_5 = {ac 34 05 aa 49 75 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -447,6 +460,7 @@ rule Ransom_Win32_GandCrab_AU_2147728813_0
         $x_1_3 = {03 45 f0 8b 4d cc 03 4d f0 8a 91 32 09 00 00 88 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))
@@ -471,6 +485,7 @@ rule Ransom_Win32_GandCrab_AV_2147728833_0
         $x_20_2 = {56 6a 64 6a 00 ff 15 ?? ?? ?? ?? 8b f0 68 ?? ?? ?? ?? 56 ff 15 ?? ?? ?? ?? c6 46 ?? ?? 8b c6 5e c3}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -497,6 +512,7 @@ rule Ransom_Win32_GandCrab_2147729207_0
         $x_1_5 = "%s%x%x%x%x.lock" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -523,6 +539,7 @@ rule Ransom_Win32_GandCrab_MCTQX_2147729688_0
         $x_10_7 = "%s.KRAB" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*))) or
             ((1 of ($x_20_*) and 3 of ($x_10_*))) or
@@ -549,6 +566,7 @@ rule Ransom_Win32_GandCrab_AY_2147729750_0
         $x_1_2 = {53 74 61 72 74 2d 50 72 6f 63 65 73 73 20 27 25 74 65 6d 70 25 5c [0-32] 2e 65 78 65 27}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -572,6 +590,7 @@ rule Ransom_Win32_GandCrab_2147729755_0
         $x_1_2 = {55 8b ec 8b c1 c1 e0 04 03 c2 8b d1 03 4d ?? c1 ea 05 03 55 ?? 33 c2 33 c1 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -596,6 +615,7 @@ rule Ransom_Win32_GandCrab_2147729801_0
         $x_1_3 = {8b f0 0f af 35 ?? ?? ?? 00 e8 ?? ?? ?? ff 8d 44 06 01 a3 ?? ?? ?? 00 8b 35 ?? ?? ?? 00 c1 ee 10 e8 ?? ?? ?? ff 23 c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -617,6 +637,7 @@ rule Ransom_Win32_GandCrab_CC_2147730245_0
         $x_1_1 = {8b 55 08 8b 12 8d 3c 02 8a 47 03 8a d0 8a d8 24 f0 02 c0 80 e2 fc 02 c0 0a 07 c0 e2 04 0a 57 01 c0 e3 06 0a 5f 02 88 04 31 8b 45 fc 41 88 14 31 8b 55 0c 41 88 1c 31 83 c0 04 41 89 7d 10 89 45 fc 3b 02 72 bb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -643,6 +664,7 @@ rule Ransom_Win32_GandCrab_BA_2147731312_0
         $x_1_7 = "bitcoin to this address" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -669,6 +691,7 @@ rule Ransom_Win32_GandCrab_BB_2147733493_0
         $x_1_6 = "VirtualProtsct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -694,6 +717,7 @@ rule Ransom_Win32_GandCrab_BG_2147733936_0
         $x_1_2 = "Soza zelo7Pugu yewotunedobedu hixotiwi rozacoye miba tiyupihaloxu" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -717,6 +741,7 @@ rule Ransom_Win32_GandCrab_AD_2147735023_0
         $x_1_3 = "framifomoxavokarunenoyi" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -739,6 +764,7 @@ rule Ransom_Win32_GandCrab_AD_2147735023_1
         $x_1_2 = {c1 e8 1e 35 71 87 fb 3c 00 04 c6 05 ?? ?? ?? ?? 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*))) or
             (all of ($x*))
@@ -764,6 +790,7 @@ rule Ransom_Win32_GandCrab_BG_2147735328_0
         $x_1_2 = {8b 4d 08 8b c1 c1 e0 ?? 89 45 f8 8b 45 0c 01 45 f8 8b c1 c1 e8 ?? 89 45 fc 8b 45 14 01 45 fc 8b 45 10 03 c1 33 45 fc 33 45 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -787,6 +814,7 @@ rule Ransom_Win32_GandCrab_EH_2147735873_0
         $x_1_3 = {8d 43 01 0f b6 d8 8a 94 1d ?? ?? ?? ?? 0f b6 c2 03 c6 0f b6 f0 8a 84 35 ?? ?? ?? ?? 88 84 1d ?? ?? ?? ?? 88 94 35 ?? ?? ?? ?? 0f b6 8c 1d ?? ?? ?? ?? 0f b6 c2 03 c8 8b 45 14 0f b6 c9 8a 8c 0d ?? ?? ?? ?? 30 08 40 89 45 14 83 ef 01 75 b1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -810,6 +838,7 @@ rule Ransom_Win32_GandCrab_AE_2147739974_0
         $x_1_3 = {e4 e7 ad 7a c7 ?? ?? e5 2e cd 5b c7 ?? ?? 9a dc a0 75 c7 ?? ?? 0e a2 2e 55 81 ?? ?? ad 7d d8 77 81 ?? ?? eb 57 f8 5e 81 ?? ?? 0e 1a 61 2a 81 ?? ?? b4 c8 b9 65 81 ?? ?? 0a 73 d7 07 81 ?? ?? ca bb e3 2a a1 ?? ?? ?? ?? a3 ?? ?? ?? ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -831,6 +860,7 @@ rule Ransom_Win32_GandCrab_AF_2147740056_0
         $x_1_1 = {c1 e3 1d 81 ?? ?? 94 4a c6 41 81 ?? ?? 94 4a c6 41 83 ?? ?? 40 8b 55 ?? a1 ?? ?? ?? ?? 8d 4d ?? 51 8b 0d ?? ?? ?? ?? 52 50 51 ff 15 ?? ?? ?? ?? e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -855,6 +885,7 @@ rule Ransom_Win32_GandCrab_2147750006_0
         $x_1_4 = {8b 45 08 8b 00 8b 4d f8 03 c1 8a 08 88 4d ?? 8a 48 ?? 88 4d ?? 8a 48 ?? 0f b6 40 ?? 50 8d 45 ?? 50 8d 45 ?? 50 8d 45 ?? 50 88 4d ?? e8 ?? ?? ?? ?? 8a 45 ?? 83 45 f8 ?? 88 04 3e 8a 45 ?? 83 c4 ?? 46 88 04 3e 8a 45 ?? 46 88 04 3e 8b 45 f8 46 3b 03 72 ac}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -882,6 +913,7 @@ rule Ransom_Win32_GandCrab_A_2147753777_0
         $x_1_7 = "CIA-AsiaPacificStrategy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -916,6 +948,7 @@ rule Ransom_Win32_GandCrab_SK_2147761105_0
         $x_5_14 = "visio.exe" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_30_*) and 4 of ($x_5_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -940,6 +973,7 @@ rule Ransom_Win32_GandCrab_CCAC_2147889041_0
         $x_1_1 = {8b 4d 0c 03 01 8b 55 f8 03 55 f0 33 c2 8b 4d f8 c1 e9 ?? 8b 55 0c 03 4a 04 33 c1 8b 4d e4 2b c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -965,6 +999,7 @@ rule Ransom_Win32_GandCrab_SB_2147889459_0
         $x_1_5 = "bootsect.bak" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -986,6 +1021,7 @@ rule Ransom_Win32_GandCrab_EAXY_2147939209_0
         $x_5_1 = {8a 01 32 c2 02 c2 88 01 8d 49 01 4e}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1007,6 +1043,7 @@ rule Ransom_Win32_GandCrab_AGN_2147940398_0
         $x_1_1 = {33 c9 83 f8 0b 0f 44 c1 0f b6 4c 85 d4 40 30 8a ?? ?? ?? ?? 33 c9 83 f8 0b 0f 44 c1 0f b6 4c 85 d4 40 30 8a ?? ?? ?? ?? 33 c9 83 f8 0b 0f 44 c1 0f b6 4c 85 d4 40 30 8a ?? ?? ?? ?? 33 c9 83 f8 0b 0f 44 c1 83 c2 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

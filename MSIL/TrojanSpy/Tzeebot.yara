@@ -26,6 +26,7 @@ rule TrojanSpy_MSIL_Tzeebot_A_2147679031_0
         $x_10_12 = "TinyZBot" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 7 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_3_*) and 6 of ($x_1_*))) or

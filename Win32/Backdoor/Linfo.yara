@@ -16,6 +16,7 @@ rule Backdoor_Win32_Linfo_A_2147663054_0
         $x_1_2 = {5c 74 70 2e 64 61 74 00 00 00 65 78 46 6f 72 6d 00 00 6c 69 6e 6b 69 6e 66 6f 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Backdoor_Win32_Linfo_A_2147663054_1
         $x_1_3 = {c7 45 e0 4a 53 50 72 c7 45 e4 6f 78 79 2e c7 45 e8 64 6c 6c 00 c7 45 ec 00 00 00 00 8d 75 e0 56 8b 5d b4 8d 93 ?? ?? ?? ?? b8 a4 00 00 00 03 d0 ff 12}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

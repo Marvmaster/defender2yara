@@ -19,6 +19,7 @@ rule Constructor_Win32_Zegost_A_2147705830_0
         $x_1_5 = {43 4d 6f 72 65 44 64 6f 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

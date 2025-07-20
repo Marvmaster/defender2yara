@@ -20,6 +20,7 @@ rule Trojan_Win32_Gedese_YA_2147731881_0
         $x_1_5 = "\"country_code\":\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule Ransom_MSIL_Hayir_SK_2147755811_0
         $x_20_9 = "Your files will delete end of this time" wide //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*) and 1 of ($x_2_*))) or
             ((1 of ($x_20_*) and 2 of ($x_5_*))) or

@@ -17,6 +17,7 @@ rule PWS_MSIL_VB_A_2147633336_0
         $x_1_3 = "***You MUST Be Logged In For This To Work***" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule PWS_MSIL_VB_B_2147638069_0
         $x_2_4 = "AntiSandbox" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -68,6 +70,7 @@ rule PWS_MSIL_VB_C_2147646747_0
         $x_1_4 = "SmtpClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule PWS_MSIL_VB_E_2147653833_0
         $x_1_10 = "(Serial)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -129,6 +133,7 @@ rule PWS_MSIL_VB_F_2147656547_0
         $x_1_10 = "Winamp (Serial)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 8 of ($x_1_*))) or
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or

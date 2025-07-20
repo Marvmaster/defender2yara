@@ -17,6 +17,7 @@ rule VirTool_Win64_UACBypass_B_2147923510_0
         $x_1_3 = {55 48 89 e5 48 83 ec 10 c7 45 fc 60 00 00 00 8b 45 fc 65 ?? ?? ?? 48 89 45 f0 48 8b 45 f0 48 83 c4 10 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

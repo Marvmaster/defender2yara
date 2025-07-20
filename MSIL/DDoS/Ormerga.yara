@@ -21,6 +21,7 @@ rule DDoS_MSIL_Ormerga_A_2147718550_0
         $x_1_6 = "/bot_data/ddos_list/ddos" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or

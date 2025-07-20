@@ -17,6 +17,7 @@ rule Virus_Win32_Phdet_A_2147684800_0
         $x_1_3 = {3d b1 1d 00 00 0f 8f ?? ?? ?? ?? 3d b0 1d 00 00 0f 8d ?? ?? ?? ?? 3d 28 0a 00 00 0f 84 ?? ?? ?? ?? 3d ce 0e 00 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

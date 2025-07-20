@@ -18,6 +18,7 @@ rule Backdoor_Win32_Mestys_A_2147620635_0
         $x_1_4 = "NtQuerySystemInformation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

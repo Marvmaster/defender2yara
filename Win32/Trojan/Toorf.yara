@@ -20,6 +20,7 @@ rule Trojan_Win32_Toorf_A_2147719553_0
         $x_1_5 = {5c 42 6f 74 20 46 72 65 73 68 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Toorf_B_2147719554_0
         $x_2_6 = {5c 42 6f 74 [0-16] 5c 49 73 6d 2e 70 64 62 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

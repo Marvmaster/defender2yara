@@ -18,6 +18,7 @@ rule Trojan_Win32_Pincav_ARA_2147901363_0
         $x_2_3 = {30 58 ff 40 39 d0 75 f8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Pincav_NPC_2147901788_0
         $x_1_2 = "DeleteFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Pincav_AML_2147923108_0
         $x_1_2 = {30 58 ff 40 39 d0 75 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

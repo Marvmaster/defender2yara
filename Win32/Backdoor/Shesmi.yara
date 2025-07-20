@@ -19,6 +19,7 @@ rule Backdoor_Win32_Shesmi_A_2147705985_0
         $x_1_5 = {00 32 30 30 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

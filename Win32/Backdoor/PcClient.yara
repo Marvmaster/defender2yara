@@ -30,6 +30,7 @@ rule Backdoor_Win32_PcClient_Z_2147595874_0
         $x_1_16 = "ImpersonateSelf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (15 of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule Backdoor_Win32_PcClient_AY_2147596028_0
         $x_1_4 = {8a 0c 32 80 f9 30 7c 05 80 f9 39 7e 05 80 f9 2e 75 0e 42}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -92,6 +94,7 @@ rule Backdoor_Win32_PcClient_YX_2147596382_0
         $x_2_17 = {8d 45 fc 50 8d 85 ec dd ff ff 68 00 20 00 00 50 ff 75 08 ff 15 00 93 00 10 85 c0 74 20 39 5d fc 74 1b 8d 45 0c 53 50 8d 85 ec dd ff ff ff 75 fc 89 5d 0c 50 56 ff 15 94 91 00 10 eb c3 56 ff 15 d8 91 00 10 6a 01 5b ff 75 08 ff 15 04 93 00 10 5f 5e ff 75 f0 ff 15 04 93 00 10}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +122,7 @@ rule Backdoor_Win32_PcClient_YX_2147596383_0
         $x_7_8 = {50 ff 15 10 20 40 00 8d 86 70 02 00 00 50 8d 86 fe 07 00 00 50 ff d7 8d 86 fe 07 00 00 68 40 30 40 00 50 ff d7 8d 8d 74 fe ff ff 8d 86 fe 05 00 00 51 50 89 45 08 ff 15 10 20 40 00 68 34 30 40 00 ff 75 08 ff d7 8d 86 70 02 00 00 50 ff 75 08 ff d7 68 2c 30 40 00 ff 75 08 ff d7 8d 86 ec 03 00 00 50 e8 67 fb ff ff}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_7_*))) or
             (all of ($x*))
@@ -149,6 +153,7 @@ rule Backdoor_Win32_PcClient_CU_2147598003_0
         $x_20_7 = "WriteProcessMemory" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 3 of ($x_3_*))) or
             (all of ($x*))
@@ -176,6 +181,7 @@ rule Backdoor_Win32_PcClient_D_2147598521_0
         $x_10_4 = {83 c8 ff eb 1c 68 ?? ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 85 c0 74 03 ?? ff d0 ?? ff 15 ?? ?? ?? ?? 33 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -215,6 +221,7 @@ rule Backdoor_Win32_PcClient_BV_2147598627_0
         $x_1_17 = {68 3f 00 0f 00 6a 00 6a 00 ff 15 ?? ?? ?? ?? 89 85 fc fd ff ff 83 bd fc fd ff ff 00 75 08 83 c8 ff e9 ?? ?? ?? ?? c6 85 00 fe ff ff 00 b9 7f 00 00 00 33 c0 8d bd 01 fe ff ff f3 ab 66 ab aa 68 c8 00 00 00 8d 85 00 fe ff ff 50 90 00 ff 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? 8d 8d 00 fe ff ff 51 ff 15 ?? ?? ?? ?? 8b 55 08 52 8d 85 00 fe ff ff 50 ff 15 ?? ?? ?? ?? 6a 00 6a 00 6a 00 6a 00 6a 00 8d 8d 00 fe ff ff 51 6a 01 6a 02 68 10 01 00 00 68 ff 01 0f 00 8b 55 0c 52 8b 45 08 50 8b ?? ?? ?? ?? 51 ff 15 ?? ?? ?? ?? 89 85 f8 fd ff ff 83 bd f8 fd ff ff 00 74 0d 8b 95 f8 fd ff ff 52 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +250,7 @@ rule Backdoor_Win32_PcClient_BW_2147598675_0
         $x_1_9 = {6a 2c 8d 85 c0 fe ff ff 50 e8 c7 04 00 00 59 59 8b 45 08 8b 8d c8 fe ff ff 89 08 8b 45 08 8b 8d cc fe ff ff 89 48 04 8b 45 08 8b 8d d0 fe ff ff 89 48 08 8b 45 08 8b 8d d4 fe ff ff 89 48 0c 8b 45 08 8b 8d d8 fe ff ff 89 48 10 0f b7 85 e4 fe ff ff 0f b7 8d de fe ff ff 03 c1 0f b7 8d dc fe ff ff 03 c1 0f b7 8d e0 fe ff ff 03 c1 0f b7 8d e8 fe ff ff 03 c1 0f b7 8d e6 fe ff ff 03 c1 0f b7 8d e2 fe ff ff 03 c1 89 45 f0 6a 02 6a 00 8b 45 f0 83 c0 2c 33 c9 2b c8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -278,6 +286,7 @@ rule Backdoor_Win32_PcClient_CE_2147598685_0
         $x_1_16 = {8d 85 fc fe ff ff 68 14 51 00 10 50 89 7d fc ff 15 ?? ?? ?? ?? 59 85 c0 59 74 13 8d 45 fc 50 57 57 68 98 2d 00 10 57 57 ff 15 ?? ?? ?? ?? 6a 01 58 5f 5e 5b c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((14 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -320,6 +329,7 @@ rule Backdoor_Win32_PcClient_CV_2147599339_0
         $x_1_20 = "%SystemRoot%\\System32\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -344,6 +354,7 @@ rule Backdoor_Win32_PcClient_CW_2147599367_0
         $x_1_5 = {ff ff 68 c6 85 ?? ?? ff ff 74 c6 85 ?? ?? ff ff 74 c6 85 ?? ?? ff ff 70 c6 85 ?? ?? ff ff 3a c6 85 ?? ?? ff ff 2f c6 85 ?? ?? ff ff 2f c6 85 ?? ?? ff ff 25 c6 85 ?? ?? ff ff 73 c6 85 ?? ?? ff ff 3a c6 85 ?? ?? ff ff 25 c6 85 ?? ?? ff ff 64 c6 85 ?? ?? ff ff 2f c6 85 ?? ?? ff ff 25 c6 85 ?? ?? ff ff 73 c6 85 ?? ?? ff ff 25 c6 85 ?? ?? ff ff 64 c6 85 ?? ?? ff ff 25 c6 85 ?? ?? ff ff 30 c6 85 ?? ?? ff ff 38 c6 85 ?? ?? ff ff 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -364,6 +375,7 @@ rule Backdoor_Win32_PcClient_ZA_2147599562_0
         $x_1_1 = {5c 73 76 63 68 6f 73 74 2e 65 78 65 00 00 00 00 44 6f 53 65 72 76 69 63 65 00 00 00 6d 79 67 75 69 64 00 00 6d 79 70 61 72 65 6e 74 74 68 72 65 61 64 69 64 00 00 00 00 25 73 3d 00 2e 73 79 73 00 00 00 00 64 72 69 76 65 72 73 5c 00 00 00 00 2e 6b 65 79 00 00 00 00 2e 65 78 65 00 00 00 00 2e 73 63 6f 00 00 00 00 2e 70 72 6f 00 00 00 00 2e 64 6c 6c 00 00 00 00 30 00 00 00 25 73 25 30 38 78 2e 69 6e 69 00 00 47 6c 6f 62 61 6c 5c 70 73 25 30 38 78 00 00 00 5c 00 00 00 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -392,6 +404,7 @@ rule Backdoor_Win32_PcClient_CY_2147599775_0
         $x_1_9 = "\\svchost.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -416,6 +429,7 @@ rule Backdoor_Win32_PcClient_ZB_2147599776_0
         $x_1_2 = {20 31 2e 31 2e 34 33 32 32 29 00 00 68 74 74 70 3a 2f 2f 25 73 3a 25 64 2f 25 73 25 64 25 30 38 64 00 00 00 69 6e 64 65 78 2e 61 73 70 3f 00 00 54 6f 44 6f 00 00 00 00 77 62 00 00 53 56 43 48 4f 53 54 2e 45 58 45 00 72 62 00 00 53 65 44 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -438,6 +452,7 @@ rule Backdoor_Win32_PcClient_ZC_2147599777_0
         $x_1_3 = {68 74 74 70 3a 2f 2f 25 73 3a 25 64 2f 25 73 25 64 25 73 00 69 6e 64 65 78 2e 61 73 70 3f 00 00 25 75 00 00 25 64 4f 45 4d 43 50 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -458,6 +473,7 @@ rule Backdoor_Win32_PcClient_ZD_2147599782_0
         $x_1_1 = {0f b7 c0 83 f8 05 74 3b c6 45 b8 64 c6 45 b9 6d 90 90 90 c6 45 ba 73 c6 45 bb 65 90 c6 45 bc 72 c6 45 bd 76 c6 45 be 65 c6 45 bf 72 c6 45 c0 2e 90 c6 45 c1 64 c6 45 c2 6c c6 45 c3 6c 80 65 c4 00 eb 2e c6 45 b8 72 c6 45 b9 70 90 c6 45 ba 63 c6 45 bb 73 90 c6 45 bc 73 c6 45 bd 2e 90 90 90 c6 45 be 64 c6 45 bf 6c 90 c6 45 c0 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -491,6 +507,7 @@ rule Backdoor_Win32_PcClient_CZ_2147599839_0
         $x_10_14 = {53 56 8b 75 0c 33 db 57 39 9e 08 02 00 00 74 0d 8d 86 00 01 00 00 50 ff 15 ?? ?? 00 10 8d 4d e4 e8 ?? ?? 00 00 8d 86 00 01 00 00 53 68 01 30 00 00 50 8d 4d e4 89 5d fc 89 45 e0 e8 ?? ?? 00 00 85 c0 0f 84 a7 00 00 00 39 9e 08 02 00 00 75 18 8d 4d e4 e8 ?? ?? 00 00 85 c0 76 0c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -521,6 +538,7 @@ rule Backdoor_Win32_PcClient_ZE_2147600140_0
         $x_1_11 = "WS2_32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 8 of ($x_1_*))) or
             ((3 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -555,6 +573,7 @@ rule Backdoor_Win32_PcClient_CI_2147600312_0
         $x_1_11 = "\\svchost.exe -k " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -583,6 +602,7 @@ rule Backdoor_Win32_PcClient_E_2147600672_0
         $x_10_8 = "[%04d-%02d-%02d %02d:%02d:%02d]" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_100_*) and 2 of ($x_10_*))) or
             (all of ($x*))
@@ -606,6 +626,7 @@ rule Backdoor_Win32_PcClient_ZF_2147600981_0
         $x_1_1 = {5c 73 76 63 68 6f 73 74 2e 65 78 65 [0-8] 44 6f 53 65 72 76 69 63 65 [0-6] 75 70 64 61 74 65 65 76 65 6e 74 00 25 73 3d 00 2e 73 79 73 [0-6] 64 72 69 76 65 72 73 5c [0-6] 2e 70 78 79 [0-6] 2e 64 72 76 [0-6] 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -626,6 +647,7 @@ rule Backdoor_Win32_PcClient_ZG_2147600984_0
         $x_1_1 = {5c 73 76 63 68 6f 73 74 2e 65 78 65 [0-8] 44 6f 53 65 72 76 69 63 65 [0-8] 75 70 64 61 74 65 65 76 65 6e 74 [0-6] 25 73 3d [0-6] 2e 53 59 53 [0-6] 64 72 69 76 65 72 73 5c [0-6] 2e 62 78 79 [0-6] 2e 44 52 56 [0-6] 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -651,6 +673,7 @@ rule Backdoor_Win32_PcClient_F_2147601001_0
         $x_5_5 = "C:\\WINDOWS\\system32\\1.exe" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -671,6 +694,7 @@ rule Backdoor_Win32_PcClient_ZH_2147601038_0
         $x_1_1 = {5c 73 76 63 68 6f 73 74 2e 65 78 65 [0-8] 4c 6f 61 64 50 72 6f 66 69 6c 65 [0-6] 2e 73 79 73 [0-8] 64 72 69 76 65 72 73 5c [0-8] 2e 64 72 76 [0-8] 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -702,6 +726,7 @@ rule Backdoor_Win32_PcClient_DC_2147601774_0
         $x_1_12 = "yruawfhk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -734,6 +759,7 @@ rule Backdoor_Win32_PcClient_DE_2147604773_0
         $x_10_10 = {50 8b 45 08 05 ?? ?? 00 00 50 ff 15 ?? ?? 40 00 68 ?? ?? 40 00 8b 45 08 05 ?? ?? 00 00 50 ff 15 ?? ?? 40 00 8d 85 ?? ?? ?? ?? 50 8b 45 08 05 ?? ?? 00 00 50 ff 15 ?? ?? 40 00 68 ?? ?? 40 00 8b 45 08 05 ?? ?? 00 00 50 ff 15 ?? ?? 40 00 8d 85 ?? ?? ?? ?? 50 8b 45 08 05 ?? ?? 00 00 50 ff 15 ?? ?? 40 00 68 ?? ?? 40 00 8b 45 08 05 ?? ?? 00 00 50}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -762,6 +788,7 @@ rule Backdoor_Win32_PcClient_ZI_2147604834_0
         $x_1_6 = {c6 45 e0 25 c6 45 e1 73 c6 45 e2 5c c6 45 e3 25 c6 45 e4 73 c6 45 e5 2e c6 45 e6 65 c6 45 e7 78 c6 45 e8 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -792,6 +819,7 @@ rule Backdoor_Win32_PcClient_DF_2147605026_0
         $x_1_11 = ".pro" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -832,6 +860,7 @@ rule Backdoor_Win32_PcClient_DG_2147605077_0
         $x_1_15 = {b9 ff 00 00 00 33 c0 8d bd ?? ?? ff ff f3 ab 66 ab aa 68 00 04 00 00 8d 85 ?? ?? ff ff 50 6a 00 8b 8d ?? ?? ff ff 51 e8 ?? ?? 00 00 89 85 ?? ?? ff ff 8b 95 ?? ?? ff ff 52 ff 15 ?? ?? 00 10 83 bd ?? ?? ff ff 00 76 49 8d 85 ?? ?? ff ff 50 ff 15 ?? ?? 00 10 83 c4 04 68 ?? ?? 00 10 8d 8d ?? ?? ff ff 51 ff 15 ?? ?? 00 10 83 c4 08 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -861,6 +890,7 @@ rule Backdoor_Win32_PcClient_N_2147608618_0
         $x_1_10 = "mythreadid" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -890,6 +920,7 @@ rule Backdoor_Win32_PcClient_ZK_2147608830_0
         $x_1_7 = "Fuck_Drweb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -926,6 +957,7 @@ rule Backdoor_Win32_PcClient_AC_2147609089_0
         $x_1_10 = {c6 85 a4 fe ff ff 2e c6 85 a5 fe ff ff 64 c6 85 a6 fe ff ff 6c c6 85 a7 fe ff ff 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -958,6 +990,7 @@ rule Backdoor_Win32_PcClient_DH_2147609757_0
         $x_1_6 = "qy001id=%d;qy001guid=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -991,6 +1024,7 @@ rule Backdoor_Win32_PcClient_DI_2147609759_0
         $x_1_10 = "POST /%s HTTP/1.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1022,6 +1056,7 @@ rule Backdoor_Win32_PcClient_T_2147610296_0
         $x_1_4 = "Global\\ps%08x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1053,6 +1088,7 @@ rule Backdoor_Win32_PcClient_DK_2147611915_0
         $x_1_9 = "\\svchost.exe -k " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_10_*))) or
             (all of ($x*))
@@ -1082,6 +1118,7 @@ rule Backdoor_Win32_PcClient_DL_2147614129_0
         $x_1_7 = "thunder5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -1117,6 +1154,7 @@ rule Backdoor_Win32_PcClient_DM_2147616055_0
         $x_1_12 = "FindFicked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_2_*) and 7 of ($x_1_*))) or
             ((2 of ($x_10_*) and 3 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -1146,6 +1184,7 @@ rule Backdoor_Win32_PcClient_ZL_2147617013_0
         $x_1_6 = "Rundll32 %s,RundllUninstall" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1182,6 +1221,7 @@ rule Backdoor_Win32_PcClient_DN_2147618253_0
         $x_1_12 = "SetWindowsHookExW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 8 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1216,6 +1256,7 @@ rule Backdoor_Win32_PcClient_DO_2147618623_0
         $x_1_11 = "openscmanagera" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((6 of ($x_10_*) and 3 of ($x_2_*))) or
@@ -1240,6 +1281,7 @@ rule Backdoor_Win32_PcClient_ZM_2147618750_0
         $x_1_1 = {25 73 3d 00 00 2e 73 79 73 00 00 00 00 64 72 69 76 65 72 73 5c [0-6] 2e 6b 65 79 [0-6] 2e 65 78 65 [0-6] 2e ?? (61|2d|7a) (61|2d|7a) 00 [0-6] 2e ?? (61|2d|7a) (61|2d|7a) 00 [0-6] 2e [0-16] 25 73 25 30 35 78 2e 69 6d 69 [0-6] 47 6c 6f 62 61 6c 5c 70 73 25 30 36 78}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1262,6 +1304,7 @@ rule Backdoor_Win32_PcClient_ZF_2147619232_0
         $x_1_3 = {72 62 00 63 3a 5c 00 5c 53 65 74 75 70 2e 00 77 62 00 63 3a 5c 00 6f 70 65 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1285,6 +1328,7 @@ rule Backdoor_Win32_PcClient_ZN_2147619235_0
         $x_1_4 = {6d 79 67 75 69 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1310,6 +1354,7 @@ rule Backdoor_Win32_PcClient_AH_2147622761_0
         $x_1_3 = {6a 04 68 00 10 00 00 57 56 53 ff 15 ?? ?? ?? ?? 89 45 ?? 3b c6 74 ?? 56 57 ff 75 08 50 53 ff 15 ?? ?? ?? ?? 89 45 ?? 3b c6 74 ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 89 45 ?? 3b c6 74 ?? 56 56 ff 75 ?? 50 56 56 53 ff 15 ?? ?? ?? ?? 89 45 ?? 3b c6 74 ?? 6a ff 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1331,6 +1376,7 @@ rule Backdoor_Win32_PcClient_AI_2147622762_0
         $x_1_2 = {99 6a 1a 59 f7 f9 8b 45 08 03 85 ?? ?? ff ff 88 90 78 02 00 00 8b 45 08 03 85 ?? ?? ff ff 8a 80 78 02 00 00 ?? ?? 8b 4d 08 03 8d ?? ?? ff ff 88 81 78 02 00 00 eb ad}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1357,6 +1403,7 @@ rule Backdoor_Win32_PcClient_DS_2147623529_0
         $x_1_7 = "%02d%04d%02d/%02d%02d%02d/%d.jsp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_6_*) and 2 of ($x_1_*))) or
@@ -1386,6 +1433,7 @@ rule Backdoor_Win32_PcClient_AX_2147623563_0
         $x_3_5 = "%s%s/%s_%d.zip" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((1 of ($x_10_*) and 2 of ($x_3_*))) or
@@ -1418,6 +1466,7 @@ rule Backdoor_Win32_PcClient_DT_2147623612_0
         $x_1_9 = {5c 7e 53 43 6d 64 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1455,6 +1504,7 @@ rule Backdoor_Win32_PcClient_DU_2147623613_0
         $x_1_13 = {25 30 38 78 2e 74 6d 70 [0-21] 25 73 5c 2a 2e 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1483,6 +1533,7 @@ rule Backdoor_Win32_PcClient_BA_2147623641_0
         $x_1_4 = "CallNextHookEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1509,6 +1560,7 @@ rule Backdoor_Win32_PcClient_DV_2147624083_0
         $x_1_7 = {70 61 73 73 [0-7] 6e 61 6d 65 [0-7] 70 6f 72 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1535,6 +1587,7 @@ rule Backdoor_Win32_PcClient_BC_2147624395_0
         $x_1_1 = {33 c0 33 c0 e9 4b 0a 00 00 90 53 76 9b 58 68 ff 00 00 00 8b 45 08 05 42 04 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1556,6 +1609,7 @@ rule Backdoor_Win32_PcClient_BE_2147626295_0
         $x_1_2 = {51 8d 4e 0c 51 0f b7 0e 51 8d 4e ?? 51 ff b6 ?? ?? 00 00 ff b6 ?? ?? 00 00 ff d0 83 c4 18 68 b8 0b 00 00 ff b6 58 03 00 00 ff 15 ?? ?? ?? ?? 3d 02 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1584,6 +1638,7 @@ rule Backdoor_Win32_PcClient_G_2147627028_0
         $x_1_8 = "User-Agent: Mozilla/4.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -1612,6 +1667,7 @@ rule Backdoor_Win32_PcClient_DW_2147627647_0
         $x_1_6 = "Global\\{7EB4B573-1C77-4a33-9CDA-AB3511895AB9}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1633,6 +1689,7 @@ rule Backdoor_Win32_PcClient_BS_2147627925_0
         $x_1_2 = {c6 85 00 fc ff ff 49 c6 85 01 fc ff ff 65 c6 85 02 fc ff ff 78 c6 85 03 fc ff ff 70 c6 85 04 fc ff ff 6c c6 85 05 fc ff ff 6f c6 85 06 fc ff ff 72 c6 85 07 fc ff ff 65 c6 85 08 fc ff ff 2e c6 85 09 fc ff ff 65 c6 85 0a fc ff ff 78 c6 85 0b fc ff ff 65 0f be 8d 00 fe ff ff 83 e9 30 f7 d9 1b c9 83 e1 fb 83 c1 05 51 6a 00 8d 95 01 fe ff ff 52 8d 85 00 fc ff ff 50 6a 00 6a 00 ff 15 ?? ?? ?? ?? 5f 5e 5b 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1667,6 +1724,7 @@ rule Backdoor_Win32_PcClient_DX_2147628148_0
         $x_2_15 = {c7 00 56 45 4e 54 61}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -1710,6 +1768,7 @@ rule Backdoor_Win32_PcClient_BX_2147628762_0
         $x_1_2 = {32 75 00 00 77 ?? 81 7d ?? 32 75 00 00 0f 84 ?? ?? ?? ?? 8b 4d ?? 81 e9 41 1f 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1733,6 +1792,7 @@ rule Backdoor_Win32_PcClient_DY_2147629137_0
         $x_1_4 = {53 65 72 76 65 65 65 44 6f [0-32] 25 73 3d [0-5] 2e 73 79 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1757,6 +1817,7 @@ rule Backdoor_Win32_PcClient_ZP_2147631500_0
         $x_1_5 = "GetWindowTextA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1781,6 +1842,7 @@ rule Backdoor_Win32_PcClient_EB_2147633557_0
         $x_1_2 = {f3 ab 66 ab aa c6 85 ?? ?? ?? ?? 7a c6 85 ?? ?? ?? ?? 2e c6 85 ?? ?? ?? ?? 64 c6 85 ?? ?? ?? ?? 6c c6 85 ?? ?? ?? ?? 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1804,6 +1866,7 @@ rule Backdoor_Win32_PcClient_DZ_2147637764_0
         $x_1_4 = {54 65 72 6d 69 6e 61 6c 20 53 65 72 76 65 72 5c 52 44 50 54 63 70 00 50 6f 72 74 4e 75 6d 62 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1828,6 +1891,7 @@ rule Backdoor_Win32_PcClient_EC_2147637953_0
         $x_1_4 = "%s?mac=%s&i=1&t=%6d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1861,6 +1925,7 @@ rule Backdoor_Win32_PcClient_CM_2147640286_0
         $x_1_11 = "10202=%scom.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1887,6 +1952,7 @@ rule Backdoor_Win32_PcClient_CM_2147640286_1
         $x_1_3 = {76 12 80 3c 38 0d 74 13 47 8b cb 2b cf 83 e9 ?? 3b f9 72 ee 47 3b fb 72 ac eb 3a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1913,6 +1979,7 @@ rule Backdoor_Win32_PcClient_ZR_2147642065_0
         $x_1_7 = "rasphone.pbk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1940,6 +2007,7 @@ rule Backdoor_Win32_PcClient_ZT_2147642274_0
         $x_1_3 = {81 3c 01 12 65 12 76 75 06 39 5c 01 04 74 07 41 3b ca 72 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1966,6 +2034,7 @@ rule Backdoor_Win32_PcClient_ZU_2147642275_0
         $x_1_4 = "C:\\mxdos.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1989,6 +2058,7 @@ rule Backdoor_Win32_PcClient_CN_2147645113_0
         $x_1_1 = {68 75 74 64 6f 77 6e 68 61 6e 67 65 6c 2e 64 6c 6c [0-4] 6c 75 6d 65 49 6e 66 6f 72 6c [0-4] 44 7a 53 65 72 76 69 63 65 [0-4] 53 65 72 76 69 63 65 4d 61 69 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2013,6 +2083,7 @@ rule Backdoor_Win32_PcClient_CP_2147678467_0
         $x_1_5 = {57 69 6e 53 74 61 30 5c 44 65 66 61 75 6c 74 00 63 3a 5c 00 63 6d 64 2e 65 78 65 20 2f 63 20 22 25 73 22 00 6f 70 65 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -2034,6 +2105,7 @@ rule Backdoor_Win32_PcClient_2147789786_0
         $x_1_2 = {81 3e 46 a0 1f 26 5a 95 1e 7a 4e 02 64 10 64 fa 1f 36 ba 0a 90 cf 8d d1 61 1a 72 9a a2 6f 98 1f 7c a4 a3 31 79 63 ab ca a0 49 1a 93 06 a1 07 c8 20 08 0e 62 3b ea 15 27 74 e2 52 d9 84 7c 4b c4 6e 1f ba 01 9e fa 20 80 46 63 41 ba 50 99 35 9e 05 19 41 9b 9a 01 4e 37 2f e8 e0 04 9a ba ab d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2055,6 +2127,7 @@ rule Backdoor_Win32_PcClient_2147789786_1
         $x_1_2 = {ea 8f 57 79 4f 17 af 21 c4 da d9 24 f0 13 06 b7 df 18 66 14 23 e0 6b 58 29 91 5e a4 d8 7e ed 19 96 2c c8 a7 06 e8 80 33 e2 d9 18 e7 1d 1b e0 7e 91 21 99 67 66 b0 44 01 93 0c d6 f0 32 87 90 56 7c f9 05 20 a2 7e e9 c7 6a f8 16 f3 5a 33 c8 57 e0 75 4e 91 cf 77 b8 97 14 ca 12 c8 fe d9 48 f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2076,6 +2149,7 @@ rule Backdoor_Win32_PcClient_2147789786_2
         $x_1_2 = {81 31 2a e2 cf 3f 0c e2 0a e8 70 00 3e e9 b5 10 0a 94 88 3a e0 a8 8c 25 31 89 10 09 1e 2d 25 9c 74 26 24 6a d4 20 00 4c 61 11 34 e1 40 4c a8 f6 49 db c4 64 11 e9 b8 c2 4a aa 09 80 5b 81 60 6f 69 c1 c0 0e b0 21 3c 9e 8c 0f 18 e1 1c 49 49 ec 40 a1 1e 30 41 a4 45 20 c0 5a 28 10 05 66 b9 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2097,6 +2171,7 @@ rule Backdoor_Win32_PcClient_2147789786_3
         $x_1_2 = {81 a3 2b 0d 5f f1 50 ef 1a 3a a2 57 00 3b 40 85 99 03 32 88 18 85 1e be c4 57 d1 86 1d d4 80 c9 d0 41 0c 98 8d 95 30 58 90 90 08 0d b8 ef 67 ad 40 02 6d c5 03 61 55 24 58 83 01 61 c0 12 3d 42 5f 8f 8c 81 ac b9 d5 b8 00 8b a4 d9 12 dd c1 b1 c7 0f 62 bc 44 0d f4 d0 6e 58 c3 52 58 43 17 a8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2118,6 +2193,7 @@ rule Backdoor_Win32_PcClient_2147789786_4
         $x_1_2 = {3e 89 81 03 84 41 b5 54 7d 4e c0 a0 d0 16 21 1b f6 ce 83 f6 35 21 28 e0 4b c0 67 ba 16 65 09 56 4f 54 27 66 19 10 68 ac 16 61 0f 18 20 17 30 61 78 08 82 01 8e 61 08 10 e0 ea a7 cb 72 d0 9e 14 06 3c e1 aa 9d 76 ec 5e 1e ed 6a 4e f6 62 44 27 3a a6 0f a8 19 3e 1b 24 44 13 a3 8c 09 01 ea 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2143,6 +2219,7 @@ rule Backdoor_Win32_PcClient_2147789786_5
         $x_10_6 = {50 72 6f 78 79 53 65 72 76 65 72 00 53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 49 6e 74 65 72 6e 65 74 20 53 65 74 74 69 6e 67 73 00 50 72 6f 78 79 45 6e 61 62 6c 65 00 2e 65 78 65 00 00 00 00 53 4f 46 54 57 41 52 45 5c 43 6c 61 73 73 65 73 5c 48 54 54 50 5c 73 68 65 6c 6c 5c 6f 70 65 6e 5c 63 6f 6d 6d 61 6e 64 00 00 00 00 25 73 3d 00 53 65 44 65 62 75 67 50 72 69 76 69 6c 65 67 65 00 00 00 00 5c 73 76 63 68 6f 73 74 2e 65 78 65 20 2d 6b 20}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -2177,6 +2254,7 @@ rule Backdoor_Win32_PcClient_2147789786_6
         $x_100_12 = {5c 73 76 63 68 6f 73 74 2e 65 78 65 00 00 00 00 44 6f 53 65 72 76 69 63 65 00 00 00 75 70 64 61 74 65 65 76 65 6e 74 00 25 73 3d 00 2e 73 79 73 00 00 00 00 64 72 69 76 65 72 73 5c 00 00 00 00 2e 70 78 79 00 00 00 00 2e 64 72 76 00 00 00 00 2e 64 6c 6c 00}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

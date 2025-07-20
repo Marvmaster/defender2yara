@@ -17,6 +17,7 @@ rule MonitoringTool_Win32_XPCSpyPro_12155_0
         $x_1_3 = {49 4d 6f 6e 2e 64 6c 6c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_AndroidOS_Iop_A_2147823858_0
         $x_1_3 = {00 5f 5a 31 34 5f 5f 67 6e 75 5f 55 6e 77 69 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_AndroidOS_Iop_B_2147824586_0
         $x_1_2 = {00 12 00 08 00 af 00 00 00 3d 18 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_AndroidOS_Iop_C_2147824587_0
         $x_1_2 = {34 00 a2 27 38 02 79 8c 18 00 a2 af 09 f8 20 03 21 38 40 00 24 00 bf 8f 08 00 e0 03 28 00 bd 27 09 00 1c 3c 04 89 9c 27 21 e0 99 03 1c 80 83 8f b8 ff bd 27 bc 23 62 24 03 00 49 88 07 00 48 88 0b 00 47 88 0f 00 46 88 13 00 45 88 17 00 44 88 1b 00 4a 88 10 00 bc af 44 00 bf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 

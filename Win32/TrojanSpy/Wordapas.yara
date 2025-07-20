@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Wordapas_A_2147628134_0
         $x_2_4 = {e9 99 00 00 00 8d 85 ?? ?? ff ff 50 ff d6 83 f8 0d 0f 8e 9b 00 00 00 8d 85 ?? ?? ff ff 50 bf ?? ?? 40 00 ff d6 8d b4 ?? ?? ff ff ff 6a 0b 59 33 c0 f3 a6 75 7d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

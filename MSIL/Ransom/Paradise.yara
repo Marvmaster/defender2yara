@@ -19,6 +19,7 @@ rule Ransom_MSIL_Paradise_PA_2147788115_0
         $x_1_4 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_MSIL_Paradise_APA_2147946837_0
         $x_1_1 = {16 13 05 16 13 06 2b 37 1f 75 8d ?? ?? ?? 01 13 07 16 13 08 2b 15 11 07 11 08 08 11 05 91 9c 11 05 17 58 13 05 11 08 17 58 13 08 11 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

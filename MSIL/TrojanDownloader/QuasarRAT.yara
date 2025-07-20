@@ -26,6 +26,7 @@ rule TrojanDownloader_MSIL_QuasarRAT_A_2147829071_0
         $x_1_11 = "GetMethods" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule TrojanDownloader_MSIL_QuasarRAT_D_2147831383_0
         $x_1_4 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule TrojanDownloader_MSIL_QuasarRAT_G_2147832622_0
         $x_2_2 = {13 06 19 8d ?? 00 00 01 13 ?? 11 ?? 16 28 ?? 00 00 0a 6f ?? 00 00 0a a2 11 ?? 17 7e ?? 00 00 0a a2 11 ?? 18 06 11 06 6f ?? 00 00 0a a2 11 ?? 13 ?? 06 11 04 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule TrojanDownloader_MSIL_QuasarRAT_H_2147834513_0
         $x_1_8 = "GetMethod" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +127,7 @@ rule TrojanDownloader_MSIL_QuasarRAT_RDA_2147842200_0
         $x_1_3 = "c4152aae-46e6-480a-801f-5541f3408fd3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +151,7 @@ rule TrojanDownloader_MSIL_QuasarRAT_I_2147846851_0
         $x_2_3 = {00 00 01 14 14 14 28 ?? 00 00 0a 17 8d ?? 00 00 01 25 16 16 8c ?? 00 00 01 a2 14 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +175,7 @@ rule TrojanDownloader_MSIL_QuasarRAT_K_2147850694_0
         $x_2_3 = {00 00 0a 18 5b 8d ?? 00 00 01 13 02 38}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +204,7 @@ rule TrojanDownloader_MSIL_QuasarRAT_L_2147850863_0
         $x_2_8 = "Jvc29mdFxXaW5kb3dzXFN0YXJ0IE1lbnVcUHJvZ3JhbXNcU3RhcnR1cFx" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +229,7 @@ rule TrojanDownloader_MSIL_QuasarRAT_M_2147904150_0
         $x_2_4 = "C:\\skop\\mckx.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +252,7 @@ rule TrojanDownloader_MSIL_QuasarRAT_ARA_2147916082_0
         $x_2_2 = "DownloadFileAsync" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -265,6 +275,7 @@ rule TrojanDownloader_MSIL_QuasarRAT_RP_2147922556_0
         $x_10_2 = {09 11 04 a3 ?? ?? 00 01 13 05 11 05 6f ?? ?? 00 0a 72 ?? ?? 00 70 28 ?? ?? 00 0a 39 ?? ?? 00 00 02 11 05 08 28 ?? ?? 00 06 11 04 17 58 13 04 11 04 09 8e 69 32 ca}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -290,6 +301,7 @@ rule TrojanDownloader_MSIL_QuasarRAT_SS_2147926173_0
         $x_1_5 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

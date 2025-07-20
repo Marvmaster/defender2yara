@@ -17,6 +17,7 @@ rule Ransom_Win32_Trinity_ATR_2147911406_0
         $x_1_2 = {6a 0a 68 c1 00 00 00 6a 00 ff d7 8b f0 85 f6 0f 84 ?? ?? ?? ?? 56 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

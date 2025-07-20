@@ -26,6 +26,7 @@ rule MonitoringTool_Win32_Rysio_132912_0
         $x_1_12 = "ScreenShot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or

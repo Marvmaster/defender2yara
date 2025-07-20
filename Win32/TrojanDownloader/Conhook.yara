@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_Conhook_AD_2147596491_0
         $x_1_10 = "83.149.75.54/cgi-bin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule TrojanDownloader_Win32_Conhook_AE_2147598011_0
         $x_50_10 = "LoadAppInit_DLLs" ascii //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -80,6 +82,7 @@ rule TrojanDownloader_Win32_Conhook_AF_2147610836_0
         $x_2_5 = {74 29 68 f4 01 00 00 ff d6 55 57 e8 ?? ?? ff ff 85 c0 74 0c 53 ff d6 e8 ?? ?? 00 00 84 c0 75 1d 83 7c 24 10 03 77 09 ff 44 24 10 53 ff d6 eb c1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -110,6 +113,7 @@ rule TrojanDownloader_Win32_Conhook_AG_2147618625_0
         $x_1_7 = {88 45 08 e8 ?? ?? 00 00 8b 35 ?? ?? 01 10 fe c0 53 88 45 09 8d 45 f4 50 6a 02 8d 45 08 50 57 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

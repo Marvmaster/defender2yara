@@ -15,6 +15,7 @@ rule Rogue_Win32_FakeXPA_18119_0
         $x_11_1 = "This program will download and install XP Antivirus on your PC." ascii //weight: 11
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Rogue_Win32_FakeXPA_18119_1
         $x_1_4 = "$$$$.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Rogue_Win32_FakeXPA_18119_2
         $x_1_5 = {00 00 61 00 6e 00 74 00 79 00 00 00 00 00 61 00 6e 00 74 00 69 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -88,6 +91,7 @@ rule Rogue_Win32_FakeXPA_18119_3
         $x_10_3 = "Spyware.IEMonster activity detected." ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Rogue_Win32_FakeXPA_18119_4
         $x_1_3 = "Your system is probably infected with version of Spyware.IEMonster.b." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Rogue_Win32_FakeXPA_18119_5
         $x_1_2 = {4f 00 72 00 69 00 67 00 69 00 6e 00 61 00 6c 00 46 00 69 00 6c 00 65 00 6e 00 61 00 6d 00 65 00 00 00 73 00 76 00 63 00 33 00 32 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Rogue_Win32_FakeXPA_18119_6
         $x_1_2 = "Accordingly to technical reason it's impossible to download and install the free version" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +185,7 @@ rule Rogue_Win32_FakeXPA_18119_7
         $x_1_7 = "/httpss/setup.php?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -203,6 +211,7 @@ rule Rogue_Win32_FakeXPA_18119_8
         $x_1_6 = "ShellExecuteExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -227,6 +236,7 @@ rule Rogue_Win32_FakeXPA_18119_9
         $x_1_5 = "_stage_one_complete" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +261,7 @@ rule Rogue_Win32_FakeXPA_18119_10
         $x_1_5 = "/index.php?id=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -281,6 +292,7 @@ rule Rogue_Win32_FakeXPA_18119_11
         $x_5_7 = {61 00 6e 00 74 00 79 00 76 00 69 00 72 00 75 00 73 00 00 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -309,6 +321,7 @@ rule Rogue_Win32_FakeXPA_18119_12
         $x_1_4 = "/updater.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -342,6 +355,7 @@ rule Rogue_Win32_FakeXPA_18119_13
         $x_1_14 = "softwarereviews.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -373,6 +387,7 @@ rule Rogue_Win32_FakeXPA_18119_14
         $x_5_7 = {61 00 6e 00 74 00 79 00 76 00 69 00 72 00 75 00 73 00 00 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -406,6 +421,7 @@ rule Rogue_Win32_FakeXPA_18119_15
         $x_3_9 = "/collection.php?step=AV_uninstall_complete&id=%s" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -445,6 +461,7 @@ rule Rogue_Win32_FakeXPA_18119_16
         $x_1_12 = "AV19_GetId_failure" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -475,6 +492,7 @@ rule Rogue_Win32_FakeXPA_18119_17
         $x_1_8 = "If problem continue, please activate your antivirus software to prevent compter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -516,6 +534,7 @@ rule Rogue_Win32_FakeXPA_18119_18
         $x_1_17 = "plimus.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 13 of ($x_1_*))) or
             ((2 of ($x_2_*) and 11 of ($x_1_*))) or
@@ -554,6 +573,7 @@ rule Rogue_Win32_FakeXPA_18119_19
         $x_1_14 = "ERROR. E-mail you entered is not registered in our transaction database.It seems that purchase" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -581,6 +601,7 @@ rule Rogue_Win32_FakeXPA_18119_20
         $x_1_1 = {47 6f 74 6f 48 65 6c 6c 31 32 33 31 32 33 5f 5f 00 00 00 00 53 68 69 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -601,6 +622,7 @@ rule Rogue_Win32_FakeXPA_18119_21
         $x_1_1 = {fe 24 24 5c 77 69 6e 69 6e 69 74 2e 69 6e 69 00 ?? ?? ?? ?? 55 6e 69 6e 73 74 61 6c 6c 00 57 69 6e 64 6f 77 73 20 44 65 66 65 6e 63 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -625,6 +647,7 @@ rule Rogue_Win32_FakeXPA_18119_22
         $x_1_5 = {73 70 79 77 61 72 65 2e 74 6d 70 00 61 75 74 6f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -651,6 +674,7 @@ rule Rogue_Win32_FakeXPA_18119_23
         $x_1_3 = {8b 00 81 f8 83 fa 08 0f 0f 84 0f 00 00 00 64 8f 05 00 00 00 00 81 c4 04 00 00 00 61 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -672,6 +696,7 @@ rule Rogue_Win32_FakeXPA_18119_24
         $x_1_2 = {43 75 73 74 6f 6d 00 57 69 6e 64 6f 77 73 20 44 65 66 65 6e 63 65 20 01 00 2e 01 00 2e 01 00 00 fe 24 24 5c 77 69 6e 69 6e 69 74 2e 69 6e 69 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -695,6 +720,7 @@ rule Rogue_Win32_FakeXPA_18119_25
         $x_1_4 = "BlueScreen" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -719,6 +745,7 @@ rule Rogue_Win32_FakeXPA_18119_26
         $x_1_5 = {61 00 6e 00 74 00 69 00 76 00 69 00 72 00 75 00 73 00 [0-8] 2e 00 63 00 6f 00 6d 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -748,6 +775,7 @@ rule Rogue_Win32_FakeXPA_18119_27
         $x_1_6 = "/buy.php?id=%aff%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -779,6 +807,7 @@ rule Rogue_Win32_FakeXPA_18119_28
         $x_1_6 = {5c 65 63 61 5c 65 72 61 70 70 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -803,6 +832,7 @@ rule Rogue_Win32_FakeXPA_18119_29
         $x_1_5 = "TfrmXPAMain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -828,6 +858,7 @@ rule Rogue_Win32_FakeXPA_18119_30
         $x_1_3 = "smmservice_with_regedit\\Release\\smmservice.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -851,6 +882,7 @@ rule Rogue_Win32_FakeXPA_18119_31
         $x_1_4 = "XPantivirus" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -881,6 +913,7 @@ rule Rogue_Win32_FakeXPA_18119_32
         $x_5_7 = {00 76 65 72 2e 64 61 74 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_5_*))) or
             ((3 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -911,6 +944,7 @@ rule Rogue_Win32_FakeXPA_18119_33
         $x_1_7 = "CreateBitmap" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -940,6 +974,7 @@ rule Rogue_Win32_FakeXPA_18119_34
         $x_1_7 = "_IEBrowserHelper.pas" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -972,6 +1007,7 @@ rule Rogue_Win32_FakeXPA_18119_35
         $x_1_6 = {00 65 72 2e 65 78 65 00 6d 73 77 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -999,6 +1035,7 @@ rule Rogue_Win32_FakeXPA_18119_36
         $x_1_3 = {8d 83 8c 05 00 00 e8 ?? ?? ff ff 8b 4b 28 e3 10 ff b3 8c 05 00 00 6a 00 6a 0c 51 e8 ?? ?? ff ff 0f b6 8b c2 00 00 00 e2 07 89 d8 e8 ?? ?? 00 00 93 5b ff b0 00 01 00 00 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1022,6 +1059,7 @@ rule Rogue_Win32_FakeXPA_18119_37
         $x_4_4 = {be 01 00 01 00 56 6a 01 68 01 02 00 00 ff b5 ?? ?? ff ff ff d7 56 6a 01 68 02 02 00 00 ff b5 ?? ?? ff ff e9}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1051,6 +1089,7 @@ rule Rogue_Win32_FakeXPA_18119_38
         $x_4_7 = {68 61 50 6d 49 6a 2e 8d 45 ?? 50 ff 15 ?? ?? ?? ?? 6a 2e ff 75 ?? 8d 45 ?? ff b3 f4 00 00 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 4 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -1081,6 +1120,7 @@ rule Rogue_Win32_FakeXPA_18119_39
         $x_1_7 = "Uninstall XP An" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1105,6 +1145,7 @@ rule Rogue_Win32_FakeXPA_18119_40
         $x_1_5 = {54 68 69 73 20 77 69 6c 6c 20 69 6e 73 74 61 6c 6c 20 [0-8] 20 41 56 20 6f 6e 20 79 6f 75 72 20 63 6f 6d 70 75 74 65 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1129,6 +1170,7 @@ rule Rogue_Win32_FakeXPA_18119_41
         $x_3_5 = {8d 83 8c 05 00 00 e8 ?? ?? ff ff 8b 4b 28 e3 10 ff b3 8c 05 00 00 6a 00 6a 0c 51 e8 ?? ?? ff ff 0f b6 8b c2 00 00 00 e2 07 89 d8 e8 ?? ?? 00 00 93 5b ff b0 00 01 00 00 c3}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -1161,6 +1203,7 @@ rule Rogue_Win32_FakeXPA_18119_42
         $x_2_9 = {53 63 61 6e 20 4e 6f 77 00 00 00 00 ff ff ff ff 04 00 00 00 53 74 6f 70 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1188,6 +1231,7 @@ rule Rogue_Win32_FakeXPA_18119_43
         $x_1_4 = {50 00 68 00 79 00 73 00 69 00 63 00 61 00 6c 00 20 00 [0-4] 6d 00 65 00 6d 00 6f 00 72 00 79 00 20 00 [0-4] 64 00 75 00 6d 00 70 00 20 00 [0-4] 63 00 6f 00 6d 00 70 00 6c 00 65 00 74 00 65 00 2e 00 20 00 [0-4] 52 00 65 00 73 00 74 00 61 00 72 00 74 00 69 00 6e 00 67 00 [0-4] 2e 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1217,6 +1261,7 @@ rule Rogue_Win32_FakeXPA_18119_44
         $x_1_10 = "mit\" value=\"Get me our of here" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1241,6 +1286,7 @@ rule Rogue_Win32_FakeXPA_18119_45
         $x_5_5 = {8b 2d 70 91 40 00 8b 44 24 18 85 c0 74 3c 50 e8 ?? ?? ?? ?? 83 c4 04 8b f8 8b 44 24 18 8d 54 24 20 52 50 57 56 ff d5}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1271,6 +1317,7 @@ rule Rogue_Win32_FakeXPA_18119_46
         $n_20_8 = "XenAntiSpyware_running" ascii //weight: -20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -1307,6 +1354,7 @@ rule Rogue_Win32_FakeXPA_18119_47
         $x_1_9 = "/im Mcshield.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1336,6 +1384,7 @@ rule Rogue_Win32_FakeXPA_18119_48
         $x_1_7 = "\">Online phishing (pronounced fishing) is a way to trick y" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1369,6 +1418,7 @@ rule Rogue_Win32_FakeXPA_18119_49
         $x_1_14 = "anti-vitus" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1403,6 +1453,7 @@ rule Rogue_Win32_FakeXPA_18119_50
         $x_1_8 = "RE\\AVAST Software\\Avast" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1437,6 +1488,7 @@ rule Rogue_Win32_FakeXPA_18119_51
         $x_1_10 = "_hosts_patch_failure" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1468,6 +1520,7 @@ rule Rogue_Win32_FakeXPA_18119_52
         $x_1_6 = "70.38.11.165" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -1512,6 +1565,7 @@ rule Rogue_Win32_FakeXPA_18119_53
         $x_2_21 = {72 65 67 73 76 72 33 32 20 2f 73 20 77 73 63 72 2e 64 6c 6c 00 45 78 65 63 00 [0-6] 5c 65 78 74 65 6e 73 69 6f 6e 73 5c 67 73 6c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1550,6 +1604,7 @@ rule Rogue_Win32_FakeXPA_18119_54
         $x_4_14 = {6a 01 6a 00 ff 15 ?? ?? ?? ?? 3b f4 e8 ?? ?? ?? ?? eb ?? 8b f4 68 ?? ?? ?? ?? 6a 00 ff 15 ?? ?? ?? ?? 3b f4 e8 ?? ?? ?? ?? 89 (45 ??|85 ?? ?? ?? ??) 83 (7d ??|bd ?? ?? ?? ??) 00 74 ?? 8b f4 68 03 02 00 00 6a 00 68 7b 80 00 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -1581,6 +1636,7 @@ rule Rogue_Win32_FakeXPA_18119_55
         $x_10_8 = {6a 00 68 98 3a 00 00 6a 6e 56 ff d7 6a 00 68 20 4e 00 00 6a 6f 56 ff d7 6a 00 68 30 75 00 00 6a 70}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*))) or
             ((2 of ($x_10_*))) or
@@ -1640,6 +1696,7 @@ rule Rogue_Win32_FakeXPA_18119_56
         $x_1_33 = "ion Data\\Dfc\\Config" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1728,6 +1785,7 @@ rule Rogue_Win32_FakeXPA_18119_57
         $x_1_63 = {6d 61 6c 7a 69 6c 6c 61 00 00 00 00 ff ff ff ff 04 00 00 00 76 62 6f 78 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

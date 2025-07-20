@@ -22,6 +22,7 @@ rule Backdoor_Win32_IRCBot_QR_2147662233_0
         $x_2_8 = "ADDNEW|" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Backdoor_Win32_IRCBot_TA_2147678980_0
         $x_1_4 = "biz/s.ico" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Backdoor_Win32_IRCBot_TA_2147678980_1
         $x_5_6 = {0f be 00 83 e8 4e 99 b9 1a 00 00 00 f7 f9 83 c2 61 ?? ?? ?? ?? ?? ?? 88 10}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -100,6 +103,7 @@ rule Backdoor_Win32_IRCBot_HL_2147712400_0
         $x_1_5 = "\\webmoney\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule Backdoor_Win32_IRCBot_GFM_2147842284_0
         $x_1_2 = "alskdjfh456gvtbe789nwmqzuxicop123" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule Backdoor_Win32_IRCBot_GKH_2147850655_0
         $x_1_3 = "adftSorewaic\\Msoro\\Wftdoin\\CwsreurVentiorsRun\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -167,6 +173,7 @@ rule Backdoor_Win32_IRCBot_GAB_2147898380_0
         $x_1_2 = "Shutdown password entered - botnet shutting down" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Backdoor_Win32_Soeda_A_2147695185_0
         $x_1_6 = "microsoftservices.proxydns.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Backdoor_Win32_Soeda_B_2147695186_0
         $x_1_5 = "Elevation:Administrator!new:{" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

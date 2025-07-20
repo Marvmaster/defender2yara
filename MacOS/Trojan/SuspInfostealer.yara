@@ -21,6 +21,7 @@ rule Trojan_MacOS_SuspInfostealer_X_2147919176_0
         $x_1_7 = {44 6f 6d 61 69 6e 3a 20 00 4d 6f 6e 69 74 6f 72 69 6e 67 20 44 65 76 69 63 65 20 4d 6f 75 6e 74 73 3a 20 00 2f 56 6f 6c 75 6d 65 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_6_*) and 3 of ($x_1_*))) or
             (all of ($x*))

@@ -17,6 +17,7 @@ rule Trojan_Win64_PortStarter_A_2147920291_0
         $x_1_3 = {6b 75 69 4e 65 77 20 70 ?? 72 74 3a 20 25 73 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

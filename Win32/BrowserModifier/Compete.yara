@@ -17,6 +17,7 @@ rule BrowserModifier_Win32_Compete_223418_0
         $x_1_3 = "$$\\wininit.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule BrowserModifier_Win32_Compete_223418_1
         $x_1_4 = "CI Chrome Install Notice" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

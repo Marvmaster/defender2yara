@@ -22,6 +22,7 @@ rule Trojan_Win64_Tnega_SG_2147893384_0
         $x_1_7 = "WaitForSingleObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win64_Tnega_AC_2147896088_0
         $x_10_2 = {4d 6b c9 00 eb 04 eb d8 eb 2a 4d 69 c9 2f df eb 5a eb 69}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win64_Tnega_GTM_2147896102_0
         $x_10_1 = {8b 57 08 48 8b ce 48 87 ff 81 f2 ?? ?? ?? ?? e8 ?? ?? ?? ?? 48 85 c0 4d 87 f6 0f 84 2e 02 00 00 49 33 c6 48 ff c3 4d 89 db 48 93 48 89 1f 48 93 48 83 c7 ?? 4d 89 e4 48 83 fb ?? 0f 82 bf ff ff ff}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win64_Tnega_DA_2147924484_0
         $x_1_6 = "VMware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

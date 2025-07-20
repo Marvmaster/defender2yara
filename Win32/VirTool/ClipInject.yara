@@ -18,6 +18,7 @@ rule VirTool_Win32_ClipInject_A_2147832007_0
         $x_1_4 = {55 48 89 e5 48 83 c4 80 48 89 4d 10 48 89 55 18 48 c7 45 f0 00 00 00 00 c7 45 fc 00 00 00 00 c7 45 ec 00 00 00 00 48 8b 05 ef 66 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

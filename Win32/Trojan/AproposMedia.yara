@@ -18,6 +18,7 @@ rule Trojan_Win32_AproposMedia_14978_0
         $x_1_4 = "InternetCrackUrl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_AproposMedia_14978_1
         $x_1_5 = "adchannel.a" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_3_*))) or
@@ -70,6 +72,7 @@ rule Trojan_Win32_AproposMedia_14978_2
         $x_3_5 = "AproposObserver::" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_2_*))) or
             ((3 of ($x_3_*))) or
@@ -97,6 +100,7 @@ rule Trojan_Win32_AproposMedia_14978_3
         $x_1_4 = "/status" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Trojan_Win32_AproposMedia_14978_4
         $x_3_5 = "{8856F961-340A-11D0-A96B-00C04FD705A2}" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +155,7 @@ rule Trojan_Win32_AproposMedia_14978_5
         $x_1_10 = "HookDll.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_3_*) and 3 of ($x_1_*))) or
             ((6 of ($x_3_*))) or
@@ -180,6 +186,7 @@ rule Trojan_Win32_AproposMedia_14978_6
         $x_3_7 = "AproposClientInstaller" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 4 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -207,6 +214,7 @@ rule Trojan_Win32_AproposMedia_14978_7
         $x_2_3 = {53 4d 41 20 4d 2e 38 20 43 6f 72 65 2e 20 62 79 20 5a 75 66 79 78 65 00 46 00 69 00 6c 00 65 00 00 00 44 00 65 00 62 00 67 00 00 00 4b 00 65 00 79 00 73 00 00 00 41 00 75 00 74 00 6f 00 00 00 45 6e 75 6d 5c 52 6f 6f 74 5c 4c 45 47 41 43 59 5f 5c 00 44 00 6f 00 73 00 44 00 65 00 76 00 69 00 63 00 65 00 00 00 73 00 5c 00 00 00 4b 00 45 00 52 00 4e 00 45 00 4c 00 33 00 32 00 77 00 69 00 6e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

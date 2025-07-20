@@ -16,6 +16,7 @@ rule Trojan_MSIL_GhostRat_ARG_2147934596_0
         $x_1_1 = {13 06 16 13 07 2b 14 11 06 11 07 11 05 11 07 91 1f 7f 5f d1 9d 11 07 17 58 13 07 11 07 11 04 32 e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_GhostRat_AGR_2147934694_0
         $x_1_1 = {09 11 09 1e 5b 91 1d 11 09 1e 5d 59 1f 1f 5f 63 17 5f 60 7d ?? ?? ?? 04 11 0c 11 04 17 59 2f 10 11 0a 11 0a 7b ?? ?? ?? 04 17 62 7d ?? ?? ?? 04 11 09 17 58 13 09 11 0c 17 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

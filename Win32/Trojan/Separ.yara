@@ -17,6 +17,7 @@ rule Trojan_Win32_Separ_RB_2147844181_0
         $x_1_2 = "jhdfkldfhndfkjdfnbfklfnf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Separ_GMD_2147853505_0
         $x_1_5 = "ShellExecute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

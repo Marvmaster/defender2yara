@@ -23,6 +23,7 @@ rule PWS_MSIL_Stebilea_A_2147685576_0
         $x_1_9 = "attact_fuck" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule Backdoor_Win32_Zonebac_A_2147594494_0
         $x_1_9 = {8b 4d fc 03 c8 8d 46 01 99 f7 fb 8b 45 08 89 4d f8 33 c9 83 45 fc 04 8a 0c 02 0f be 04 06 c1 e0 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -110,6 +111,7 @@ rule Backdoor_Win32_Zonebac_B_2147594495_0
         $x_1_61 = "1607" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((45 of ($x_1_*))) or
             ((1 of ($x_2_*) and 43 of ($x_1_*))) or
@@ -144,6 +146,7 @@ rule Backdoor_Win32_Zonebac_C_2147594496_0
         $x_1_8 = "AdjustTokenPrivileges" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -183,6 +186,7 @@ rule Backdoor_Win32_Zonebac_F_2147601192_0
         $x_1_8 = "\\abc123.pid" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -265,6 +269,7 @@ rule Backdoor_Win32_Zonebac_B_2147790463_0
         $x_1_55 = "oasclnt.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (40 of ($x*))
 }
 

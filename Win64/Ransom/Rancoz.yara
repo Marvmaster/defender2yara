@@ -22,6 +22,7 @@ rule Ransom_Win64_Rancoz_MA_2147847539_0
         $x_1_7 = "HOW_TO_RECOVERY_FILES.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

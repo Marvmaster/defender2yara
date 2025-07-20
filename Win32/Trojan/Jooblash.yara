@@ -21,6 +21,7 @@ rule Trojan_Win32_Jooblash_A_2147749092_0
         $x_1_6 = "b4b615c28ccd059cf8ed1abf1c71fe03c0354522990af63adf3c911e2287a4b906d47d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Jooblash_A_2147749092_1
         $x_1_4 = {56 00 42 00 6f 00 78 00 55 00 53 00 42 00 4d 00 6f 00 6e 00 00 00 00 00 56 00 42 00 6f 00 78 00 4e 00 65 00 74 00 41 00 64 00 70 00 00 00 00 00 56 00 42 00 6f 00 78 00 4e 00 65 00 74 00 4c 00 77 00 66 00 00 00 00 00 5c 00 61 00 73 00 73 00 69 00 73 00 74 00 61 00 6e 00 74 00 2e 00 73 00 79 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Jooblash_D_2147839151_0
         $x_1_1 = "b4b615c28ccd059cf8ed1abf1c71fe03c0354522990af63adf3c911e2287a4b906d47d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

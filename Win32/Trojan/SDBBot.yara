@@ -17,6 +17,7 @@ rule Trojan_Win32_SDBBot_AK_2147919159_0
         $x_1_3 = {48 8b ca 83 e1 ?? 42 0f b6 ?? ?? 0f b6 84 15 ?? ?? ?? ?? 32 c8 88 8c 15 ?? ?? ?? ?? 48 ff c2 48 83 fa ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_SDBBot_AL_2147919160_0
         $x_1_2 = {48 8b 44 24 30 48 8d 4d d0 48 83 c0 ?? ff d0 0f 10 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

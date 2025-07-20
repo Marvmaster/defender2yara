@@ -17,6 +17,7 @@ rule Backdoor_Win32_GetShell_A_2147658603_0
         $x_1_3 = {97 6a 05 68 ba 57 45 f9 68 02 00 1f 92 89 e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

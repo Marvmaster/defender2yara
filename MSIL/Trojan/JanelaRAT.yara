@@ -24,6 +24,7 @@ rule Trojan_MSIL_JanelaRAT_ZB_2147932430_0
         $x_1_9 = "WriteAllText" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

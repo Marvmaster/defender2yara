@@ -22,6 +22,7 @@ rule TrojanDownloader_MSIL_CoinMiner_H_2147688596_0
         $x_1_8 = {6a 03 da 28 ?? 00 00 0a 0c 08 28 ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -50,6 +51,7 @@ rule TrojanDownloader_MSIL_CoinMiner_I_2147716528_0
         $x_1_4 = "-o stratum+tcp://xmg.suprnova.cc:7128 -u" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule TrojanDownloader_MSIL_CoinMiner_B_2147725244_0
         $x_1_6 = {26 00 63 00 70 00 75 00 3d 00 [0-2] 26 00 68 00 69 00 7a 00 3d 00 30 00 26 00 68 00 64 00 64 00 3d 00 [0-2] 26 00 75 00 73 00 65 00 72 00 73 00 3d 00 [0-2] 26 00 69 00 70 00 3d 00 [0-2] 26 00 64 00 6f 00 6d 00 61 00 69 00 6e 00 73 00 3d 00 [0-2] 26 00 6d 00 69 00 6e 00 69 00 6e 00 67 00 3d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -104,6 +107,7 @@ rule TrojanDownloader_MSIL_CoinMiner_D_2147725287_0
         $x_1_8 = "ProcessHacker" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -135,6 +139,7 @@ rule TrojanDownloader_MSIL_CoinMiner_E_2147725426_0
         $x_1_7 = "winmgmts:root\\cimv2:Win32_Processor='cpu0" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -163,6 +168,7 @@ rule TrojanDownloader_MSIL_CoinMiner_F_2147725702_0
         $x_1_4 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 78 00 61 00 78 00 61 00 78 00 61 00 2e 00 65 00 75 00 2f 00 [0-48] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -186,6 +192,7 @@ rule TrojanDownloader_MSIL_CoinMiner_F_2147725702_1
         $x_1_3 = {44 6f 77 6e 6c 6f 61 64 46 69 6c 65 00 43 72 65 61 74 65 44 69 72 65 63 74 6f 72 79 00 53 65 74 41 74 74 72 69 62 75 74 65 73 00 73 65 74 5f 53 65 72 76 69 63 65 4e 61 6d 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -211,6 +218,7 @@ rule TrojanDownloader_MSIL_CoinMiner_BT_2147727415_0
         $x_2_5 = "nabrowser.com" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -240,6 +248,7 @@ rule TrojanDownloader_MSIL_CoinMiner_BU_2147728570_0
         $x_1_4 = "svhost.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -266,6 +275,7 @@ rule TrojanDownloader_MSIL_CoinMiner_N_2147731759_0
         $x_1_6 = {74 00 61 00 73 00 6b 00 6b 00 69 00 6c 00 6c 00 20 00 2f 00 66 00 20 00 2f 00 66 00 69 00 20 00 [0-2] 55 00 53 00 45 00 52 00 4e 00 41 00 4d 00 45 00 20 00 45 00 51 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -297,6 +307,7 @@ rule TrojanDownloader_MSIL_CoinMiner_YRL_2147819210_0
         $x_1_11 = "axu87794.polycomusa.com/axu87794/stage1x32.ps1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -324,6 +335,7 @@ rule TrojanDownloader_MSIL_CoinMiner_PZM_2147936656_0
         $x_1_4 = "minerlol.zip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

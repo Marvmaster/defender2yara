@@ -18,6 +18,7 @@ rule VirTool_Win32_Junkdata_A_2147641421_0
         $x_1_4 = {2d 64 20 00 2d 73 20 00 6d 64 35}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

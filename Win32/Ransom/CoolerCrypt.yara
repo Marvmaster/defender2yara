@@ -17,6 +17,7 @@ rule Ransom_Win32_CoolerCrypt_MKV_2147892454_0
         $x_1_2 = {c1 e8 08 89 45 cc 8b 45 cc 8b 4d e0 33 0c c5 ?? ?? ?? ?? 89 4d e0 8b 45 c8 83 c0 20 89 45 c8 8b 45 b4 48 89 45 b4 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_FusionBlaze_A_2147725399_0
         $x_1_3 = {45 f8 e8 03 00 00 c7 45 fc 00 00 00 00 ff 15 ?? ?? ?? ?? 40 f7 d8 1b c0 23 c6 5e 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -60,6 +61,7 @@ rule Trojan_Win32_FusionBlaze_B_2147725421_0
         $x_3_22 = {00 00 25 00 73 00 20 00 5b 00 50 00 45 00 4c 00 6f 00 61 00 64 00 65 00 72 00 5d 00 20 00 70 00 69 00 64 00 3d 00 25 00 64 00 20 00 74 00 69 00 64 00 3d 00 25 00 64 00 20 00 68 00 4d 00 6f 00 64 00 75 00 6c 00 65 00 3d 00 30 00 78 00 25 00 70 00 20 00 65 00 6e 00 74 00 72 00 79 00 3d 00 30 00 78 00 25 00 70 00 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -95,6 +97,7 @@ rule Trojan_Win32_FusionBlaze_C_2147725422_0
         $x_1_2 = "%s:%d:%s:%d:%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +133,7 @@ rule Trojan_Win32_FusionBlaze_C_2147725422_1
         $x_1_15 = {00 73 74 61 72 74 20 77 6f 72 6b 2e 2e 2e 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_20_*))) or

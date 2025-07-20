@@ -17,6 +17,7 @@ rule Trojan_Win32_Vidar_PA_2147745435_0
         $x_10_2 = {8b 45 88 8d 0c 06 33 d2 8b c6 f7 75 84 8a 04 3a 8b 55 80 32 04 0a 46 88 01}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -54,6 +55,7 @@ rule Trojan_Win32_Vidar_PA_2147745435_1
         $x_2_17 = "Software\\fuck\\" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((14 of ($x_1_*))) or
             ((1 of ($x_2_*) and 12 of ($x_1_*))) or
@@ -79,6 +81,7 @@ rule Trojan_Win32_Vidar_PB_2147745748_0
         $x_1_1 = {8b d0 c1 ea 05 03 54 24 24 8b f8 c1 e7 04 03 7c 24 20 03 c1 33 d7 33 d0 2b f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule Trojan_Win32_Vidar_PB_2147745748_1
         $x_10_1 = {8b 45 88 8d 0c 06 33 d2 8b c6 f7 75 84 8a 04 3a 8b 55 80 32 04 0a 46 88 01}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +132,7 @@ rule Trojan_Win32_Vidar_PB_2147745748_2
         $x_1_8 = {27 48 23 6f 72 [0-10] 73 65 48 6f [0-10] 75 72 73 27 27 [0-10] 29 [0-10] 7c [0-10] 69 [0-10] 65 [0-10] 78 27 2e 72 65 70 6c 61 63 65 28 27 ?? 27 2c 27 27 29 2e 73 70 6c 69 74 28 27 40 27 2c 35 29 3b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +154,7 @@ rule Trojan_Win32_Vidar_V_2147745808_0
         $x_1_1 = {8b 85 74 fb ff ff 8b 8d 60 fb ff ff 03 8d 80 fb ff ff 8d 58 04 0f af d8 8b 85 68 fb ff ff 0f af de 8b 15 4c 3f 42 00 0f af de 89 8d 50 fb ff ff 8b 8d 88 fb ff ff 8a 04 01 83 c3 ?? 32 c3 88 85 78 fb ff ff 89 95}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +179,7 @@ rule Trojan_Win32_Vidar_PC_2147746135_0
         $x_1_4 = "wo.php?stub=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -195,6 +202,7 @@ rule Trojan_Win32_Vidar_PC_2147746135_1
         $x_1_2 = {2b c1 89 45 ?? 8b 45 ?? 8d 0c ?? 33 d2 8b c3 f7 75 ?? 8b 85 ?? ?? ?? ?? 57 8a 04 02 8b 55 84 32 04 0a 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -223,6 +231,7 @@ rule Trojan_Win32_Vidar_AA_2147748091_0
         $x_10_8 = "encryptedPassword" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +260,7 @@ rule Trojan_Win32_Vidar_PD_2147753133_0
         $x_1_8 = "cookies.sqlite" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +282,7 @@ rule Trojan_Win32_Vidar_GA_2147774353_0
         $x_1_1 = {33 d2 8b c3 f7 75 08 8b 45 0c 8d 0c 33 8a 04 02 8b 55 fc 32 04 0a 43 88 01 3b df 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -293,6 +304,7 @@ rule Trojan_Win32_Vidar_GA_2147774353_1
         $x_1_1 = {c1 e0 04 89 45 fc 8b 45 dc 01 45 fc 8b 45 f8 8b 4d f0 8d 14 01 8b 4d f4 31 55 fc 8b f0 d3 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -314,6 +326,7 @@ rule Trojan_Win32_Vidar_GA_2147774353_2
         $x_4_1 = {8b c8 8b 45 f8 33 d2 f7 f1 8b 45 0c 8a 0c 02 8b 45 f0 8b 55 08 32 0c 02 88 08}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -337,6 +350,7 @@ rule Trojan_Win32_Vidar_GA_2147774353_3
         $x_10_3 = {89 44 24 10 8b 44 24 ?? 01 44 24 ?? 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 8b 4c 24 10 33 cf 33 ce 2b d9 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 8b 44 24 ?? 29 44 24 ?? 83 6c 24 ?? 01}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -358,6 +372,7 @@ rule Trojan_Win32_Vidar_OMJ_2147794198_0
         $x_11_1 = {8b 55 08 03 95 f4 fb ff ff 0f b6 02 8b 8d e4 f7 ff ff 33 84 8d f8 fb ff ff 8b 95 f0 fb ff ff 03 95 f4 fb ff ff 88 02}  //weight: 11, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -379,6 +394,7 @@ rule Trojan_Win32_Vidar_PAB_2147816739_0
         $x_1_1 = {b8 cd cc cc cc f7 e1 8b c1 c1 ea 03 8d 14 92 03 d2 2b c2 8d 96 10 76 4b 00 03 d1 0f b6 80 00 30 41 00 30 81 10 76 4b 00 b8 cd cc cc cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -400,6 +416,7 @@ rule Trojan_Win32_Vidar_PAM_2147817310_0
         $x_1_1 = {2b c1 8b d8 33 d2 8b c6 f7 f3 8b 45 0c 8d 0c 3e 8a 04 02 8b 95 ?? ?? ?? ?? 32 04 0a 46 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -422,6 +439,7 @@ rule Trojan_Win32_Vidar_PAM_2147817310_1
         $x_1_2 = {66 0f ba e5 2d ac 77 04 76 02 32 ef 8d 40 fd 7c 05 7d 03 45 cc a1 8d 40 03 34 fe 71 03 70 01 1a aa c1 c9 06 c1 c1 06 49 75 03 74 01 a6 0b c9 75 cf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -443,6 +461,7 @@ rule Trojan_Win32_Vidar_PAN_2147818651_0
         $x_1_1 = {03 c6 89 45 f0 8b c6 d3 e8 03 45 d0 89 45 f8 8b 45 f0 31 45 fc 8b 45 f8 31 45 fc 89 1d ?? ?? ?? ?? 8b 45 fc 29 45 f4 8d 45 e4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -465,6 +484,7 @@ rule Trojan_Win32_Vidar_PAN_2147818651_1
         $x_1_2 = {55 8b ec 51 c7 45 fc 02 00 00 00 8b 45 08 01 45 fc 83 6d fc 02 8b 45 fc 31 01 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -486,6 +506,7 @@ rule Trojan_Win32_Vidar_DA_2147819199_0
         $x_1_1 = {8b 55 d8 8b 1a 03 5d ec 2b d8 6a 66 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 89 18 8b 45 c8 03 45 a0 8b 55 d8 31 02 83 45 ec 04 83 45 d8 04 8b 45 ec 3b 45 d4 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -509,6 +530,7 @@ rule Trojan_Win32_Vidar_AK_2147819223_0
         $x_1_3 = "FILEFUNC" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -533,6 +555,7 @@ rule Trojan_Win32_Vidar_RPT_2147819639_0
         $x_1_1 = {b1 6d b0 6c 68 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? c6 05 ?? ?? ?? ?? 73 c6 05 ?? ?? ?? ?? 33 a2 ?? ?? ?? ?? c6 05 ?? ?? ?? ?? 64 88 0d ?? ?? ?? ?? c6 05 ?? ?? ?? ?? 69 c6 05 ?? ?? ?? ?? 32 c6 05 ?? ?? ?? ?? 2e c6 05 ?? ?? ?? ?? 67 a2 ?? ?? ?? ?? c6 05 ?? ?? ?? ?? 00 ff 15 ?? ?? ?? ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -554,6 +577,7 @@ rule Trojan_Win32_Vidar_DB_2147820030_0
         $x_1_1 = {03 d8 8b 45 d8 89 18 6a ?? e8 ?? ?? ?? ?? 8b 5d c8 03 5d a0 2b d8 6a ?? e8 ?? ?? ?? ?? 03 d8 8b 45 d8 31 18 6a ?? e8 ?? ?? ?? ?? bb 04 00 00 00 2b d8 6a ?? e8 ?? ?? ?? ?? 03 d8 01 5d ec 83 45 d8 04 8b 45 ec 3b 45 d4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -575,6 +599,7 @@ rule Trojan_Win32_Vidar_DC_2147820129_0
         $x_1_1 = {89 45 a4 33 c0 89 45 a4 8b 45 c8 03 45 a0 03 45 ec 03 45 a4 8b 55 d8 31 02 83 45 ec 04 83 45 d8 04 8b 45 ec 3b 45 d4 0f 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -596,6 +621,7 @@ rule Trojan_Win32_Vidar_MA_2147822274_0
         $x_1_1 = {8b 06 89 45 fc 33 d2 8b c3 6a ?? 59 f7 f1 8b 4d fc 8a 04 0a 8b 4d 0c 30 04 1f 43 8b 41 04 8b 39 2b c7 3b d8 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -617,6 +643,7 @@ rule Trojan_Win32_Vidar_MA_2147822274_1
         $x_1_1 = {8b 44 24 0c 69 d2 fd 43 03 00 81 c2 c3 9e 26 00 89 15 14 ?? 45 00 8a 0d 16 ?? 45 00 30 0c 30 83 ff 0f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -638,6 +665,7 @@ rule Trojan_Win32_Vidar_MA_2147822274_2
         $x_10_1 = {8b 44 24 28 89 44 24 20 8b 44 24 24 01 44 24 20 8b 44 24 28 c1 e8 05 89 44 24 14 8b 4c 24 2c 8d 44 24 14 c7 05 24 0f 4d 00 ee 3d ea f4 e8 ?? ff ff ff 8b 44 24 20 31 44 24 10 8b 54 24 10 31 54 24 14 81 3d 2c 0f 4d 00 13 02 00 00 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -665,6 +693,7 @@ rule Trojan_Win32_Vidar_MA_2147822274_3
         $x_2_7 = "\\screenshot.jpg" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -691,6 +720,7 @@ rule Trojan_Win32_Vidar_MA_2147822274_4
         $x_1_6 = ".vmp2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -715,6 +745,7 @@ rule Trojan_Win32_Vidar_A_2147825078_0
         $x_1_4 = {40 8a 0c 85 ?? ?? ?? ?? 8b 45 08 32 0c 03 a1 ?? ?? ?? ?? 88 0c 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -742,6 +773,7 @@ rule Trojan_Win32_Vidar_A_2147825078_1
         $x_1_7 = "SOFTWARE\\monero-project\\monero-core" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -764,6 +796,7 @@ rule Trojan_Win32_Vidar_B_2147825079_0
         $x_1_2 = {2b c8 be 98 6c 14 00 8d 49 00 8a 14 01 88 10 40 4e 75 f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -791,6 +824,7 @@ rule Trojan_Win32_Vidar_B_2147825079_1
         $x_1_7 = "SOFTWARE\\monero-project\\monero-core" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -812,6 +846,7 @@ rule Trojan_Win32_Vidar_DD_2147827629_0
         $x_1_1 = {01 10 6a 00 e8 ?? ?? ?? ?? 8b 5d c8 03 5d a0 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 31 18 83 45 ec 04 83 45 d8 04 8b 45 ec 3b 45 d4 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -833,6 +868,7 @@ rule Trojan_Win32_Vidar_DD_2147827629_1
         $x_1_1 = {01 c8 88 45 ?? 0f b6 45 ?? 0f b6 84 05 ?? ?? ?? ?? 88 45 ?? 8b 55 ?? 8b 45 ?? 01 d0 0f b6 00 32 45 ?? 88 45 ?? 8b 55 ?? 8b 45 ?? 01 c2 0f b6 45 ?? 88 02 83 45 ?? ?? 8b 45 ?? 3b 45 ?? 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -858,6 +894,7 @@ rule Trojan_Win32_Vidar_NH_2147827654_0
         $x_1_5 = "\\Bitcoin\\wallets" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -879,6 +916,7 @@ rule Trojan_Win32_Vidar_NQ_2147827706_0
         $x_10_1 = {87 d5 7c 3a 81 44 24 ?? 8c eb 73 22 8b 4c 24 10 8b d7 8b 5c 24 ?? 8b c7 d3 e2 03 54 24 1c c1 e8 ?? 03 44 24 34 33 d0 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 8d 04 2f 33 d0 2b da 8b 15 ?? ?? ?? ?? 89 5c 24 14 81 fa}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -900,6 +938,7 @@ rule Trojan_Win32_Vidar_NR_2147827824_0
         $x_10_1 = {8b 45 8c 8d 0c 03 33 d2 8b c3 f7 75 88 8b 85 ?? ?? ?? ?? 57 8a 04 02 8b 55 80 32 04 0a 88 01 8d 45}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -922,6 +961,7 @@ rule Trojan_Win32_Vidar_NX_2147828212_0
         $x_10_2 = {6a 00 c7 05 ?? ?? ?? ?? 64 00 6c 00 c7 05 ?? ?? ?? ?? 65 00 6c 00 c7 05 ?? ?? ?? ?? 65 00 72 00 66 89 15 ?? ?? ?? ?? a3 ?? ?? ?? ?? ff 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -943,6 +983,7 @@ rule Trojan_Win32_Vidar_PAX_2147832630_0
         $x_1_1 = {89 55 94 8d 94 95 ?? ?? ?? ?? 8b 1a 89 18 89 0a 8b 00 03 c1 25 ?? ?? ?? ?? 79 ?? 48 [0-10] 0f b6 d1 8d 84 85 98 03 00 00 39 10 75 08 8b 45 8c 88 0c 30 eb 0a 8a 00 32 c1 8b 4d 8c 88 04 31 ff 75 88 ff 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -964,6 +1005,7 @@ rule Trojan_Win32_Vidar_PF_2147832966_0
         $x_1_1 = {8b c6 d3 e8 89 45 f8 8b 45 d4 01 45 f8 8b 4d f8 33 4d e0 89 3d ?? ?? ?? ?? 31 4d f4 8b 45 f4 29 45 f0 81 45 dc ?? ?? ?? ?? 83 eb 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -986,6 +1028,7 @@ rule Trojan_Win32_Vidar_PG_2147833014_0
         $x_1_2 = {8b c6 d3 e8 89 45 f8 8b 45 d4 01 45 f8 8b 4d f8 33 4d e8 8b 45 f4 81 45 e0 ?? ?? ?? ?? 33 c1 2b f8 83 6d d8 01 89 45 f4 89 1d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1007,6 +1050,7 @@ rule Trojan_Win32_Vidar_PH_2147833519_0
         $x_1_1 = {03 c7 8b d7 d3 e2 8b 4d ?? 89 45 ?? 8b c7 03 55 d4 d3 e8 89 45 f8 8b 45 d0 01 45 f8 33 55 ec 8d 4d e0 52 ff 75 f8 89 55 e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1028,6 +1072,7 @@ rule Trojan_Win32_Vidar_BA_2147833998_0
         $x_2_1 = {8b c8 8b 45 fc 33 d2 f7 f1 8b 45 0c 8b 4d 08 8a 04 02 32 04 31 ff 45 fc 88 06 39 5d fc 72}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1049,6 +1094,7 @@ rule Trojan_Win32_Vidar_MP_2147835303_0
         $x_1_1 = {8b 45 08 8b 40 04 ff 70 09 6a 00 8b 45 08 ff 50 24 89 45 f8 83 65 f4 00 6a 00 8d 45 f4 50 ff 75 f8 8b 45 08 8b 40 04 ff 30 ff 75 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1070,6 +1116,7 @@ rule Trojan_Win32_Vidar_MC_2147835410_0
         $x_1_1 = {8b 45 fc c1 e0 04 8b 4d 08 0f be 09 03 c1 89 45 fc 8b 45 fc 25 00 00 00 f0 89 45 f4 74 11 8b 45 f4 c1 e8 18 33 45 fc 25 ff ff ff 0f 89 45 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1097,6 +1144,7 @@ rule Trojan_Win32_Vidar_MC_2147835410_1
         $x_1_7 = "CalcMova.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1128,6 +1176,7 @@ rule Trojan_Win32_Vidar_MC_2147835410_2
         $x_1_11 = "root\\SecurityCenter2" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1149,6 +1198,7 @@ rule Trojan_Win32_Vidar_MB_2147835411_0
         $x_1_1 = {8b 45 f0 8d 50 01 8b 45 ec 01 d0 0f b6 84 05 1e 8f ff ff 88 85 2f bb ff ff 8b 45 f0 8d 50 01 8b 45 ec 01 c2 8b 45 f4 83 e8 01 2b 45 ec 0f b6 84 05 1e 8f ff ff 88 84 15 1e 8f ff ff 8b 45 f4 83 e8 01 2b 45 ec 0f b6 95 2f bb ff ff 88 94 05 1e 8f ff ff 83 45 ec 01 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1173,6 +1223,7 @@ rule Trojan_Win32_Vidar_MB_2147835411_1
         $x_1_4 = ".themida" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1197,6 +1248,7 @@ rule Trojan_Win32_Vidar_MB_2147835411_2
         $x_5_4 = "skjd38726287346wuyg23764t2gf76fgytr" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*))) or
             ((2 of ($x_20_*))) or
@@ -1222,6 +1274,7 @@ rule Trojan_Win32_Vidar_MPI_2147835460_0
         $x_1_1 = {8b 4d f0 03 fa d3 ea 89 55 f8 8b 45 c8 01 45 f8 8b 45 f8 33 c7 31 45 fc 89 35 0c fa 42 00 8b 45 f4 89 45 e4 8b 45 fc 29 45 e4 8b 45 e4 89 45 f4 8d 45 e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1244,6 +1297,7 @@ rule Trojan_Win32_Vidar_PJ_2147835493_0
         $x_1_2 = {55 8b ec 8b 45 08 8b 4d 0c 29 08 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1265,6 +1319,7 @@ rule Trojan_Win32_Vidar_PK_2147835591_0
         $x_1_1 = {8b c2 d3 e8 89 7d e8 89 35 ?? ?? ?? ?? 03 45 ?? 33 c7 31 45 ?? 8b 45 ?? 89 45 ?? 8b 45 ?? 29 45 ?? 8b 45 ?? 89 45 ?? 8b 45 ?? 29 45 ?? ff 4d d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1287,6 +1342,7 @@ rule Trojan_Win32_Vidar_PL_2147835594_0
         $x_1_2 = {8b 01 ba ff fe fe 7e 03 d0 83 f0 ?? 33 c2 83 c1 04 a9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1308,6 +1364,7 @@ rule Trojan_Win32_Vidar_PAI_2147836002_0
         $x_10_1 = {8b c8 33 d2 8b c3 f7 f1 8b 85 ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 8a 04 02 32 04 31 88 06 8d 85 ?? ?? ?? ?? 50 8d 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1329,6 +1386,7 @@ rule Trojan_Win32_Vidar_PAJ_2147836098_0
         $x_1_1 = {8b d8 8b 45 d8 03 45 ac 03 d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 ec 31 18 6a 00 e8 ?? ?? ?? ?? 8b 55 e8 83 c2 04 03 c2 89 45 e8 8b 45 ec 83 c0 04 89 45 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1350,6 +1408,7 @@ rule Trojan_Win32_Vidar_PAK_2147836202_0
         $x_1_1 = {8b d7 d3 ea 03 45 ?? 89 45 ?? 8b 45 e4 03 55 cc 03 c7 89 45 f0 8b 45 f0 31 45 fc 31 55 fc 89 35 ?? ?? ?? ?? 8b 45 f8 89 45 e8 8b 45 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1377,6 +1436,7 @@ rule Trojan_Win32_Vidar_NEA_2147836370_0
         $x_1_7 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1398,6 +1458,7 @@ rule Trojan_Win32_Vidar_RB_2147836573_0
         $x_1_1 = {39 10 75 08 8b 45 88 88 0c 38 eb 0a 8a 00 32 c1 8b 4d 88 88 04 39 ff 75 90 ff 45 94}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1419,6 +1480,7 @@ rule Trojan_Win32_Vidar_RB_2147836573_1
         $x_6_1 = {8b 55 f4 8a 0a 0f b6 d9 8d 84 85 ?? ?? ff ff 39 18 75 08 8b 45 fc 88 0c 10 eb 0a 8a 00 32 c1 8b 4d fc 88 04 11 ff 45 f8}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1441,6 +1503,7 @@ rule Trojan_Win32_Vidar_RB_2147836573_2
         $x_1_2 = {0f a2 89 06 89 5e 04 89 4e 08 89 56 0c 6a 01 ff d7 6a 01 ff d7 6a 01 ff d7 6a 01 ff d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1462,6 +1525,7 @@ rule Trojan_Win32_Vidar_MD_2147836827_0
         $x_5_1 = {8b 7d f0 8b 45 f4 8b 4d f8 03 c7 d3 ef 89 45 e4 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 03 7d d8 8b 45 e4 31 45 fc 33 7d fc}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1485,6 +1549,7 @@ rule Trojan_Win32_Vidar_MD_2147836827_1
         $x_1_3 = "GetLocaleInfoW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1510,6 +1575,7 @@ rule Trojan_Win32_Vidar_MD_2147836827_2
         $x_1_5 = ".themida" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or
@@ -1536,6 +1602,7 @@ rule Trojan_Win32_Vidar_PAL_2147837535_0
         $x_1_1 = {8d 34 3b e8 ?? ?? ?? ?? 8b c8 33 d2 8b c3 f7 f1 8b 85 ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 8a 04 02 32 04 31 88 06 8d 85 f4 fd ff ff 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1557,6 +1624,7 @@ rule Trojan_Win32_Vidar_GCO_2147838386_0
         $x_10_1 = {0f b6 84 0d ?? ?? ?? ?? 88 84 15 ?? ?? ?? ?? 88 9c 0d ?? ?? ?? ?? 0f b6 94 15 ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 0f b6 c3 03 d0 0f b6 c2 0f b6 84 05 ?? ?? ?? ?? 30 04 0e 46 8a 85 ?? ?? ?? ?? 3b f7 72}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1578,6 +1646,7 @@ rule Trojan_Win32_Vidar_PAY_2147839981_0
         $x_1_1 = {50 ff d6 8b c8 33 d2 8b c7 f7 f1 8b 85 ?? ?? ?? ?? 8a 0c 02 8b 95 ?? ?? ?? ?? 8d 04 17 8b 95 ?? ?? ?? ?? 32 0c 02 88 08 8d 85 ?? ?? ?? ?? 50 ff d6 8d 8d ?? ?? ?? ?? 51 ff d6 47 3b fb 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1599,6 +1668,7 @@ rule Trojan_Win32_Vidar_RA_2147840278_0
         $x_1_1 = {99 f7 fe 8b 45 ?? 0f be 0c 11 83 e1 ?? 81 e1 ?? ?? ?? ?? 31 c8 88 45 ?? 0f be 45 ?? 0f be 4d ?? 01 c8 88 c2 8b 45 ?? 8b 4d ?? 88 14 08 0f be 75 ?? 8b 45 ?? 8b 4d ?? 0f be 14 08 29 f2 88 14 08 8b 45 ?? 83 c0 01 89 45 ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1628,6 +1698,7 @@ rule Trojan_Win32_Vidar_CLS_2147840462_0
         $x_1_9 = "Select * From AntiVirusProduct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1650,6 +1721,7 @@ rule Trojan_Win32_Vidar_RF_2147840927_0
         $x_1_2 = {8b 45 10 89 45 fc 8b 45 0c 31 45 fc 8b 45 fc 8b 4d 08 89 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1671,6 +1743,7 @@ rule Trojan_Win32_Vidar_RF_2147840927_1
         $x_1_1 = {8d 14 31 bf ?? ?? ?? ?? 2b de 2b f9 eb 03 8d 49 00 8a 04 13 8d 52 01 34 ?? 88 42 ff 4f 75 f2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1692,6 +1765,7 @@ rule Trojan_Win32_Vidar_RF_2147840927_2
         $x_1_1 = {0f b6 01 88 06 88 11 0f b6 0e 0f b6 c2 03 c8 0f b6 c1 8b 8d ?? ?? ff ff 0f b6 84 05 ?? ?? ff ff 30 04 0f 47 3b bd 3c f0 ff ff 72 b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1717,6 +1791,7 @@ rule Trojan_Win32_Vidar_LK_2147841077_0
         $x_1_5 = "PROCEXP64.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -1750,6 +1825,7 @@ rule Trojan_Win32_Vidar_GEV_2147841190_0
         $x_1_9 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1772,6 +1848,7 @@ rule Trojan_Win32_Vidar_BD_2147841270_0
         $x_1_2 = "ShellExecuteW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1795,6 +1872,7 @@ rule Trojan_Win32_Vidar_NEAC_2147841519_0
         $x_2_3 = "Select * From AntiVirusProduct" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1816,6 +1894,7 @@ rule Trojan_Win32_Vidar_RE_2147841523_0
         $x_1_1 = {8b 4d fc 8b 15 ?? ?? ?? ?? 80 34 11 ?? 8d 04 11 8d 45 fc 50 ff 15 ?? ?? ?? ?? 8b 4d fc 3b 0d ?? ?? ?? ?? 72 db}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1837,6 +1916,7 @@ rule Trojan_Win32_Vidar_GFE_2147841637_0
         $x_10_1 = {2b c1 99 8b 4d d0 8b 75 d4 33 c8 33 f2 88 0d ?? ?? ?? ?? 0f b7 85 6c ff ff ff 99 8b 4d ?? 8b 75 94 23 c8 23 f2 88 4d e7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1858,6 +1938,7 @@ rule Trojan_Win32_Vidar_PBB_2147841647_0
         $x_1_1 = {c1 e0 04 89 45 ?? 8b 45 ?? 01 45 ?? 8b 4d ?? 83 0d ?? ?? ?? ?? ?? 8b c6 c1 e8 05 03 c3 03 ce 33 c8 31 4d 08 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 0c 8b 45 08 29 45 f8 8b 45 e4 29 45 fc ff 4d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1879,6 +1960,7 @@ rule Trojan_Win32_Vidar_GFF_2147841671_0
         $x_10_1 = {03 c1 0f af c3 99 89 44 24 18 8b 44 24 68 89 54 24 1c 28 44 24 13 0f b6 44 24 15 0f af 44 24 3c 0f af 44 24 3c 89 44 24 3c 8b 44 24 18 a3 ?? ?? ?? ?? 8b 44 24 1c a3 ?? ?? ?? ?? a0 ?? ?? ?? ?? 04 ?? 30 44 24}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1900,6 +1982,7 @@ rule Trojan_Win32_Vidar_GFA_2147841812_0
         $x_10_1 = {33 f6 8d 64 24 00 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff d7 a1 ?? ?? ?? ?? 80 34 30 ?? 46 3b 35 ?? ?? ?? ?? 72}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1921,6 +2004,7 @@ rule Trojan_Win32_Vidar_GFB_2147841814_0
         $x_10_1 = {66 89 55 c8 8b 45 ?? 35 28 74 0d e0 8b 4d 94 83 f1 00 66 a3 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 33 c0 8b 4d 8c 03 55 88 13 c1 8b 0d ?? ?? ?? ?? 33 f6 03 ca 13 f0 89 0d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1942,6 +2026,7 @@ rule Trojan_Win32_Vidar_GFG_2147841823_0
         $x_10_1 = {8b 55 f4 8b 45 08 01 d0 0f b6 18 8b 55 f4 8b 45 f0 01 d0 0f b6 08 8b 55 f4 8b 45 0c 01 d0 31 cb 89 da 88 10 83 45 f4 01}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1963,6 +2048,7 @@ rule Trojan_Win32_Vidar_GFK_2147841957_0
         $x_10_1 = {0f b6 00 0f b6 d0 8b 45 ec 0f b6 44 85 cb 0f b6 c0 89 54 24 04 89 04 24 e8 ?? ?? ?? ?? 89 c3 8b 45 ec 8d 14 85 00 00 00 00 8b 45 08 8d 0c 02 89 f2 31 da 8b 45 e8 01 c8 88 10}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1984,6 +2070,7 @@ rule Trojan_Win32_Vidar_NEAD_2147842028_0
         $x_10_1 = {33 c1 41 81 f9 ff 00 00 00 7c f5 32 c2 34 0f 88 04 1e 46 3b 75 0c}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2005,6 +2092,7 @@ rule Trojan_Win32_Vidar_CAR_2147842145_0
         $x_5_1 = {68 f1 f0 ad 0a ff 75 f0 e8 ?? ?? ?? ?? 59 59 a3 78 c0 40 00 e8 ?? ?? ?? ?? 68 64 18 2d 07 ff 75 f0 e8 ?? ?? ?? ?? 59 59 a3 7c c0 40 00 e8 ?? ?? ?? ?? 68 b5 3d 2c 06 ff 75 f0 e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2027,6 +2115,7 @@ rule Trojan_Win32_Vidar_CAS_2147842148_0
         $x_5_2 = {f7 d8 87 d1 47 89 ?? ?? ?? ?? ?? 4b c1 cf 1d 81 ?? ?? ?? ?? ?? ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2048,6 +2137,7 @@ rule Trojan_Win32_Vidar_GFL_2147842192_0
         $x_10_1 = {33 d2 89 85 ?? ?? ?? ?? 8a 8d ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 84 c9 66 8b 8d ?? ?? ?? ?? 0f 94 c2 f7 d0 33 d0 0f bf c1 03 d0 f7 da 1b d2 42 89 95}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2069,6 +2159,7 @@ rule Trojan_Win32_Vidar_RDD_2147842202_0
         $x_2_1 = {8b f8 33 f6 c6 04 1f 00 85 db 74 36 8b 45 08 2b c7 89 45 08 8b 45 0c 8d 48 01 8a 10 40 84 d2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2090,6 +2181,7 @@ rule Trojan_Win32_Vidar_GFO_2147842224_0
         $x_10_1 = {8b 45 e8 40 89 45 e8 83 7d ?? ?? 73 ?? 0f be 85 ?? ?? ?? ?? 8b 4d e4 03 4d e8 0f be 09 33 c8 8b 45 e4 03 45 e8 88 08 eb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2111,6 +2203,7 @@ rule Trojan_Win32_Vidar_GFP_2147842439_0
         $x_10_1 = {8b c8 33 d2 8b c7 f7 f1 8b 85 ?? ?? ?? ?? 83 c4 04 8a 0c 02 8b 95 ?? ?? ?? ?? 8d 04 17 8b 95 ?? ?? ?? ?? 32 0c 02 88 08}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2132,6 +2225,7 @@ rule Trojan_Win32_Vidar_PBC_2147842924_0
         $x_1_1 = {8b 44 24 14 33 44 24 10 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 2b f0 89 44 24 14 8b c6 c1 e0 04 89 44 24 10 8b 44 24 24 01 44 24 10 8b ce c1 e9 05 03 4c 24 28 8d 04 33 31 44 24 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2153,6 +2247,7 @@ rule Trojan_Win32_Vidar_PBD_2147842998_0
         $x_1_1 = {8b c6 c1 e8 ?? 03 c5 89 44 24 ?? 8b 44 24 ?? 31 44 24 ?? 8b 4c 24 10 33 4c 24 18 8d 44 24 28 89 4c 24 10 e8 ?? ?? ?? ?? 8b 44 24 38 29 44 24 14 83 ef 01 8b 4c 24 28 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2174,6 +2269,7 @@ rule Trojan_Win32_Vidar_RL_2147843118_0
         $x_1_1 = {51 c7 04 24 04 00 00 00 8b 44 24 08 83 2c 24 04 90 01 04 24 8b 04 24 31 01 59 c2 04 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2195,6 +2291,7 @@ rule Trojan_Win32_Vidar_GHC_2147843868_0
         $x_10_1 = {8b c8 33 d2 8b c7 f7 f1 8b 85 ?? ?? ?? ?? 8a 0c 02 8b 95 ?? ?? ?? ?? 32 0c 1a 8d 85 ?? ?? ?? ?? 50 88 0b ff d6}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2216,6 +2313,7 @@ rule Trojan_Win32_Vidar_MKV_2147844281_0
         $x_1_1 = {01 c8 88 45 ?? 0f b6 45 ?? 0f b6 84 05 ?? ?? ?? ?? 88 45 ?? 8b 55 ?? 8b 45 ?? 01 d0 0f b6 00 32 45 ?? 88 45 ?? 8b 55 ?? 8b 45 ?? 01 c2 0f b6 45 ?? 88 02 83 45 ?? ?? 8b 45 ?? 3b 45 ?? 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2237,6 +2335,7 @@ rule Trojan_Win32_Vidar_GHL_2147844530_0
         $x_10_1 = {8b c7 d3 e8 03 45 ?? 89 45 ?? 33 45 ?? 31 45 ?? 8b 45 ?? 29 45 ?? 8d 45 ?? e8 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2258,6 +2357,7 @@ rule Trojan_Win32_Vidar_MKZ_2147844693_0
         $x_1_1 = {51 52 89 54 24 ?? ff 15 ?? ?? ?? ?? 6a 00 6a 00 6a 00 ff 15 ?? ?? ?? ?? 6a 00 8d 54 24 ?? 52 6a 00 68 ?? ?? ?? ?? 6a 00 6a 00 ff 15 ?? ?? ?? ?? 31 7c 24 ?? 8b 44 24 ?? 31 44 24 ?? 8b 44 24 ?? 29 44 24 ?? 8b 15 ?? ?? ?? ?? 81 fa ?? ?? ?? ?? 74 ?? 81 c3 ?? ?? ?? ?? ff 4c 24 ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2279,6 +2379,7 @@ rule Trojan_Win32_Vidar_MKB_2147844795_0
         $x_1_1 = {33 c8 c1 e8 08 81 e1 ff 00 00 00 33 04 8d 08 82 44 00 81 e2 fd ff 00 00 89 46 38 8b 4e 3c 83 ca 02 8b c2 83 f0 01 0f af c2 c1 e8 08 32 45 08 43 88 44 0b ff 3b 5d 0c 72 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2300,6 +2401,7 @@ rule Trojan_Win32_Vidar_PBG_2147845241_0
         $x_1_1 = {8d 04 80 8b 15 ?? ?? ?? ?? 8b 44 c2 10 a3 30 ec 45 00 a1 2c ec 45 00 3b 05 30 ec 45 00 73 ?? a1 30 ec 45 00 31 05 2c ec 45 00 a1 2c ec 45 00 31 05 30 ec 45 00 a1 30 ec 45 00 31 05 2c ec 45 00 6a 04 68 00 10 00 00 a1 2c ec 45 00 50 8b 07 8d 04 80}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2321,6 +2423,7 @@ rule Trojan_Win32_Vidar_MNN_2147845291_0
         $x_1_1 = {8b d0 69 c9 05 84 08 08 41 89 4e 34 c1 e9 18 33 c8 c1 e8 08 81 e1 ff 00 00 00 33 04 8d 50 82 44 00 81 e2 fd ff 00 00 89 46 38 8b 4e 3c 83 ca 02 8b c2 83 f0 01 0f af c2 c1 e8 08 32 45 08 43 88 44 0b ff 3b 5d 0c 72 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2342,6 +2445,7 @@ rule Trojan_Win32_Vidar_RPY_2147845328_0
         $x_1_1 = {e8 30 06 02 00 59 8d 85 30 f7 ff ff 50 e8 23 06 02 00 59 8d 85 30 f7 ff ff 50 e8 16 06 02 00 59 8d 85 30 f7 ff ff 50 e8 09 06 02 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2364,6 +2468,7 @@ rule Trojan_Win32_Vidar_RPY_2147845328_1
         $x_1_2 = {c6 45 d8 61 c6 45 d9 67 c6 45 da 6a c6 45 db 76 c6 45 dc 33 c6 45 dd 76 c6 45 de 33 c6 45 df 6a c6 45 e0 76}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2385,6 +2490,7 @@ rule Trojan_Win32_Vidar_BTC_2147845574_0
         $x_1_1 = {8b c6 c1 e8 ?? 03 c3 03 ce 31 4c 24 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 44 24 ?? 8b 44 24 ?? 31 44 24 ?? 8b 44 24 ?? 29 44 24 ?? 8b 44 24 ?? 29 44 24 ?? 4f 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2406,6 +2512,7 @@ rule Trojan_Win32_Vidar_VID_2147845723_0
         $x_1_1 = {33 c8 c1 e8 08 81 e1 ff 00 00 00 33 04 8d b8 83 44 00 81 e2 fd ff 00 00 89 46 38 8b 4e 3c 83 ca 02 8b c2 83 f0 01 0f af c2 c1 e8 08 32 45 08 43 88 44 0b ff 3b 5d 0c 72 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2427,6 +2534,7 @@ rule Trojan_Win32_Vidar_GHW_2147845749_0
         $x_10_1 = {6b e9 5c 3d 0f be 45 99 0f be 4d 9a 2b c1 88 45 99 0f be 45 e7 99 35 ?? ?? ?? ?? 81 f2 ?? ?? ?? ?? 66 a3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2448,6 +2556,7 @@ rule Trojan_Win32_Vidar_GHW_2147845749_1
         $x_10_1 = {0f b6 84 3c ?? ?? ?? ?? 88 84 34 ?? ?? ?? ?? 88 8c 3c ?? ?? ?? ?? 0f b6 84 34 ?? ?? ?? ?? 03 c2 0f b6 c0 0f b6 84 04 ?? ?? ?? ?? 30 83 ?? ?? ?? ?? 43 81 fb 00 56 05 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2470,6 +2579,7 @@ rule Trojan_Win32_Vidar_GHZ_2147845833_0
         $x_1_2 = "y435uy2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2491,6 +2601,7 @@ rule Trojan_Win32_Vidar_GIA_2147845857_0
         $x_10_1 = {8b 4d 08 8b c6 83 e0 03 46 83 c4 0c 8a 04 08 30 07 8b 45 f8 3b 75 fc}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2512,6 +2623,7 @@ rule Trojan_Win32_Vidar_REW_2147846109_0
         $x_1_1 = {33 c8 c1 e8 08 81 e1 ff 00 00 00 33 04 8d 18 5b 44 00 81 e2 fd ff 00 00 89 46 38 8b 4e 3c 83 ca 02 8b c2 83 f0 01 0f af c2 c1 e8 08 32 45 08 43 88 44 0b ff 3b 5d 0c 72 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2534,6 +2646,7 @@ rule Trojan_Win32_Vidar_GID_2147846153_0
         $x_10_2 = {f7 d6 33 ce 03 d1 03 c2 a2 ?? ?? ?? ?? 6a 00 68 ?? ?? ?? ?? 8b 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2555,6 +2668,7 @@ rule Trojan_Win32_Vidar_GIE_2147846169_0
         $x_10_1 = {8a 44 3d 10 88 44 35 10 88 4c 3d 10 0f b6 44 35 10 03 c2 0f b6 c0 8a 44 05 10 30 83 ?? ?? ?? ?? 43 81 fb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2584,6 +2698,7 @@ rule Trojan_Win32_Vidar_CLR_2147846247_0
         $x_1_9 = "Select * From AntiVirusProduct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2609,6 +2724,7 @@ rule Trojan_Win32_Vidar_EH_2147846343_0
         $x_1_5 = "EHFpPVJcEyhjxhUVEKnhclGFDQALNHHItOz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2636,6 +2752,7 @@ rule Trojan_Win32_Vidar_CAF_2147846522_0
         $x_1_7 = "wal_autocheckpoint" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2657,6 +2774,7 @@ rule Trojan_Win32_Vidar_NBT_2147846907_0
         $x_1_1 = {8b d0 69 c9 05 84 08 08 41 89 4e 34 c1 e9 18 33 c8 c1 e8 08 81 e1 ff 00 00 00 33 04 8d 90 5c 44 00 81 e2 fd ff 00 00 89 46 38 8b 4e 3c 83 ca 02 8b c2 83 f0 01 0f af c2 c1 e8 08 32 45 08 43 88 44 0b ff 3b 5d 0c 72 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2678,6 +2796,7 @@ rule Trojan_Win32_Vidar_GJE_2147846939_0
         $x_10_1 = {8b 45 f8 33 d2 f7 75 fc 52 8b 4d 10 e8 ?? ?? ?? ?? 0f be 10 8b 45 08 03 45 f8 0f b6 08 33 ca 8b 55 08 03 55 f8 88 0a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2699,6 +2818,7 @@ rule Trojan_Win32_Vidar_MVU_2147846972_0
         $x_1_1 = {40 89 46 04 89 85 5c fb ff ff c1 e8 18 33 c7 25 ff 00 00 00 c1 ef 08 89 0e 33 3c 85 b0 5c 44 00 8b c7 8b bd 60 fb ff ff 8b df 83 f3 01 0f af df c1 eb 08 32 9d 68 fb ff ff 89 46 08 88 5c 15 db 89 95 60 fb ff ff 83 fa 0c 0f 8c dd fd ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2720,6 +2840,7 @@ rule Trojan_Win32_Vidar_JMS_2147847818_0
         $x_1_1 = {8b d0 69 c9 ?? ?? ?? ?? 41 89 4e 34 c1 e9 18 33 c8 c1 e8 08 81 e1 ff 00 00 00 33 04 8d 88 6d 44 00 81 e2 fd ff 00 00 89 46 38 8b 4e 3c 83 ca 02 8b c2 83 f0 01 0f af c2 c1 e8 08 32 45 08 43 88 44 0b ff 3b 5d 0c 72 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2741,6 +2862,7 @@ rule Trojan_Win32_Vidar_GJM_2147848363_0
         $x_10_1 = {8a 10 8b 85 ?? ?? ?? ?? 32 d1 88 14 18 8b 8d ?? ?? ?? ?? ff 85 ?? ?? ?? ?? 51 43 e8 ?? ?? ?? ?? 83 c4 ?? 39 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2762,6 +2884,7 @@ rule Trojan_Win32_Vidar_GJN_2147848366_0
         $x_10_1 = {2b c6 8b f8 33 d2 8b c1 f7 f7 8b 44 24 18 8d 34 19 41 8a 14 02 8b 44 24 1c 32 14 30 88 16 3b cd}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2784,6 +2907,7 @@ rule Trojan_Win32_Vidar_BK_2147848403_0
         $x_2_2 = {53 56 6a 04 68 00 30 00 00 68 c0 41 c8 17 6a 00 ff 15}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2811,6 +2935,7 @@ rule Trojan_Win32_Vidar_PAA_2147848527_0
         $x_1_7 = {26 7b 24 74 3d 27 [0-16] 69 [0-16] 65 78 [0-32] 40 28 6e [0-16] 65 77 [0-16] 2d [0-16] 6f 62 [0-16] 6a 65 63 [0-16] 74 20 4e [0-16] 65 74 [0-16] 2e 57 [0-16] 65 62 [0-16] 43 6c [0-16] 69 65 [0-16] 6e 74 [0-16] 29 2e [0-16] 55 70 [0-16] 6c 6f 61 [0-16] 64 [0-16] 53 74 [0-16] 72 69 [0-16] 6e 67 28 [0-16] 27 27 68 [0-16] 74 [0-16] 74 70 [0-16] 3a [0-16] 2f 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2833,6 +2958,7 @@ rule Trojan_Win32_Vidar_GHO_2147848534_0
         $x_1_2 = ".winlice" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2855,6 +2981,7 @@ rule Trojan_Win32_Vidar_PBH_2147848549_0
         $x_2_2 = {57 8d 4c 24 ?? 89 44 24 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 44 24 18 33 44 24 14 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 2b f0 89 44 24 18 8b c6 c1 e0 04 89 44 24}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2877,6 +3004,7 @@ rule Trojan_Win32_Vidar_PBI_2147848679_0
         $x_1_2 = {8b cf 83 e1 03 75 ?? 46 0f b6 5e 04 ba 11 00 00 00 d3 c2 23 d3 ac 0a c2 aa ff 4d 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2898,6 +3026,7 @@ rule Trojan_Win32_Vidar_FKI_2147849248_0
         $x_1_1 = {03 f9 83 bd 04 fc ff ff ?? 0f 43 b5 ?? ?? ?? ?? f7 e1 d1 ea 8d 04 52 2b c8 8a 84 0d ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 32 07 88 04 0e 41 89 8d ?? ?? ?? ?? 3b 8d ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2919,6 +3048,7 @@ rule Trojan_Win32_Vidar_BHN_2147849414_0
         $x_1_1 = {d3 e8 89 44 24 14 8b 44 24 34 01 44 24 14 8b 44 24 24 31 44 24 10 8b 4c 24 10 8b 54 24 14 51 52 8d 44 24 ?? 50 e8 ?? ?? ?? ?? 8b 4c 24 10 8d 44 24 2c ?? ?? ?? ?? ff 8d 44 24 28 e8 ?? ?? ?? ?? 83 6c 24 ?? ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2940,6 +3070,7 @@ rule Trojan_Win32_Vidar_JNB_2147849479_0
         $x_1_1 = {8b d0 69 c9 05 84 08 08 41 89 4e 34 c1 e9 18 33 c8 c1 e8 08 81 e1 ff 00 00 00 33 04 8d d0 6d 44 00 81 e2 fd ff 00 00 89 46 38 8b 4e 3c 83 ca 02 8b c2 83 f0 01 0f af c2 c1 e8 08 32 45 08 43 88 44 0b ff 3b 5d 0c 72 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2961,6 +3092,7 @@ rule Trojan_Win32_Vidar_GKH_2147849585_0
         $x_10_1 = {0f b6 8c 3d ?? ?? ?? ?? 03 ca 0f b6 c9 8a 8c 0d ?? ?? ?? ?? 30 08 40 89 45 fc 83 eb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2983,6 +3115,7 @@ rule Trojan_Win32_Vidar_NNV_2147849602_0
         $x_1_2 = "FTiNvS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3005,6 +3138,7 @@ rule Trojan_Win32_Vidar_NVD_2147849605_0
         $x_1_2 = "pwpxx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3027,6 +3161,7 @@ rule Trojan_Win32_Vidar_NVD_2147849605_1
         $x_1_2 = "AHf94Au" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3049,6 +3184,7 @@ rule Trojan_Win32_Vidar_MBEV_2147849645_0
         $x_1_2 = {40 8b 55 10 03 95 ?? ?? ?? ?? 0f b6 0a 33 8c 85 ?? ?? ?? ?? 8b 55 10 03 95 ?? ?? ?? ?? 88 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3070,6 +3206,7 @@ rule Trojan_Win32_Vidar_RTG_2147849808_0
         $x_1_1 = {8b c8 8b 85 dc fe ff ff 33 d2 f7 f1 52 8d 8d ec fe ff ff e8 57 eb ff ff 0f b6 10 33 f2 8b 85 dc fe ff ff 0f b6 88 ?? ?? ?? ?? 33 ce 8b 95 dc fe ff ff 88 8a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3091,6 +3228,7 @@ rule Trojan_Win32_Vidar_RDH_2147849902_0
         $x_2_1 = {01 44 24 14 8b 44 24 24 31 44 24 10 8b 4c 24 10 33 4c 24 14 8d 44 24 2c 89 4c 24 10}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3112,6 +3250,7 @@ rule Trojan_Win32_Vidar_PBK_2147850023_0
         $x_1_1 = {41 c1 ce 08 2b ce 33 c6 f7 d3 c1 c2 11 33 c1 81 ef ?? ?? ?? ?? 81 c7 ?? ?? ?? ?? 33 c1 c1 ca 11 f7 d3 33 c6 03 ce c1 c6 08 49 33 c7 2b cc 81 f7 ?? ?? ?? ?? 46 f7 d1 c1 c7 13 4a 4a 87 c6 c1 c7 11 33 d9 49}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3133,6 +3272,7 @@ rule Trojan_Win32_Vidar_PBJ_2147850024_0
         $x_1_1 = {03 d8 81 e3 ?? ?? ?? ?? 8b 94 9d ?? ?? ?? ?? 89 94 bd ?? ?? ?? ?? 89 84 9d ?? ?? ?? ?? 8b 8c bd ?? ?? ?? ?? 03 c1 25 ff 00 00 80 8b 95 ?? ?? ?? ?? 8a 0a 0f b6 d1 39 94 85 ?? ?? ?? ?? 8b 95 ?? ?? ?? ?? 8d 84 85 ?? ?? ?? ?? 8a 00 32 c1 8b 8d ?? ?? ?? ?? 88 04 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3154,6 +3294,7 @@ rule Trojan_Win32_Vidar_RJ_2147850107_0
         $x_1_1 = {8b 55 08 03 55 f8 89 55 f0 8b 45 f0 89 45 f4 8b 4d f4 8b 11 33 55 10 8b 45 f4 89 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3175,6 +3316,7 @@ rule Trojan_Win32_Vidar_CRI_2147850775_0
         $x_1_1 = {99 f7 7d 94 8b 85 78 ff ff ff 0f be 0c 10 8b 55 90 03 55 98 0f be 02 33 c1 8b 4d 90 03 4d 98 88 01 eb c6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3196,6 +3338,7 @@ rule Trojan_Win32_Vidar_GNI_2147851086_0
         $x_10_1 = {8b 4d 08 03 8d ?? ?? ?? ?? 8a 09 88 08 ?? ?? 8b 45 08 03 85 ?? ?? ?? ?? 0f b6 00 8b 8d ?? ?? ?? ?? 33 84 8d ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 03 8d ?? ?? ?? ?? 88 01}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3217,6 +3360,7 @@ rule Trojan_Win32_Vidar_DAR_2147851116_0
         $x_5_1 = {88 0c 10 0f b6 55 fd 8b 45 f8 8a 4d ff 88 0c 10 0f b6 55 fe 8b 45 f8 0f b6 0c 10 0f b6 55 fd 8b 45 f8 0f b6 14 10 03 ca 81 e1 ff 00 00 00 8b 45 f8 0f b6 0c 08 8b 55 08 03 55 f4 0f b6 02 33 c1 8b 4d 08 03 4d f4 88 01 e9}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3238,6 +3382,7 @@ rule Trojan_Win32_Vidar_DAS_2147851127_0
         $x_5_1 = {01 02 8b 45 c4 03 45 94 03 45 ec 03 45 9c 89 45 a4 6a 00 e8 [0-4] 8b 55 a4 2b d0 8b 45 d4 31 10 83 45 ec 04 83 45 d4 04 8b 45 ec 3b 45 d0 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3259,6 +3404,7 @@ rule Trojan_Win32_Vidar_AMS_2147851296_0
         $x_1_1 = {33 c0 89 44 24 [0-40] 30 04 29 45 3b 6b 04 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3280,6 +3426,7 @@ rule Trojan_Win32_Vidar_AMS_2147851296_1
         $x_1_1 = {8b 55 a4 2b d0 8b 45 d4 31 10 83 45 ec 04 83 45 d4 04 8b 45 ec 3b 45 d0 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3301,6 +3448,7 @@ rule Trojan_Win32_Vidar_GNL_2147851323_0
         $x_10_1 = {8b c8 33 d2 8b c6 f7 f1 8b 85 ?? ?? ?? ?? 8a 0c 02 8b 95 ?? ?? ?? ?? 32 0c 1a 8d 85 ?? ?? ?? ?? 50 88 0b}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3322,6 +3470,7 @@ rule Trojan_Win32_Vidar_RAN_2147851697_0
         $x_1_1 = {02 ca 0f b6 c9 89 4d f8 8b 4c 88 08 89 4c b8 08 02 ca 89 7d ?? 8b 7d f8 0f b6 c9 89 54 b8 08 89 55 fc 0f b6 54 88 08 30 56 04 83 c6 06 ff 4d f0 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3344,6 +3493,7 @@ rule Trojan_Win32_Vidar_GNR_2147851944_0
         $x_1_2 = "K4PCHOXE2JJBAJ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3365,6 +3515,7 @@ rule Trojan_Win32_Vidar_GNS_2147852045_0
         $x_10_1 = {2b c2 8b d8 8b 85 ?? ?? ?? ?? 8d 0c 07 33 d2 8b c7 f7 f3 8b 5d 0c 8b 85 ?? ?? ?? ?? 8a 14 1a 32 14 08 88 11 8d 8d ?? ?? ?? ?? 51 ff d6}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3387,6 +3538,7 @@ rule Trojan_Win32_Vidar_NIV_2147852426_0
         $x_1_2 = "cmd/Cicacls/setintegritylevelhigh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3408,6 +3560,7 @@ rule Trojan_Win32_Vidar_MEE_2147852508_0
         $x_1_1 = {2b c2 8b f8 8b 85 7c ec ff ff 8d 0c 06 33 d2 8b c6 f7 f7 8b 45 0c 8a 14 02 8b 85 78 ec ff ff 32 14 08 88 11 8d 8d 80 ec ff ff 51 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3429,6 +3582,7 @@ rule Trojan_Win32_Vidar_BKL_2147852564_0
         $x_1_1 = {03 4c 24 1c 8b c6 c1 e8 05 03 44 24 24 c7 05 40 1b 2d 02 00 00 00 00 33 c1 8d 0c 33 33 c1 2b f8 8b d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3451,6 +3605,7 @@ rule Trojan_Win32_Vidar_HT_2147852947_0
         $x_1_2 = {33 f3 31 74 24 10 8b 44 24 10 29 44 24 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3472,6 +3627,7 @@ rule Trojan_Win32_Vidar_RD_2147853120_0
         $x_1_1 = {8b 95 7c ec ff ff 2b c6 8d 34 11 8b f8 33 d2 8b c1 f7 f7 8b 45 0c 41 8a 14 02 8b 85 ?? ?? ?? ?? 32 14 30 88 16 3b cb 72 ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3493,6 +3649,7 @@ rule Trojan_Win32_Vidar_IND_2147853367_0
         $x_1_1 = {41 89 4e 34 c1 e9 18 33 c8 c1 e8 08 81 e1 ff 00 00 00 33 04 8d c0 ca 44 00 81 e2 fd ff 00 00 89 46 38 8b 4e 3c 83 ca 02 8b c2 83 f0 01 0f af c2 c1 e8 08 32 45 08 43 88 44 0b ff 3b 5d 0c 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3514,6 +3671,7 @@ rule Trojan_Win32_Vidar_RZ_2147888284_0
         $x_1_1 = {8a 04 37 83 c4 0c 34 74 8b cb 04 59 88 04 37 6a 6f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3536,6 +3694,7 @@ rule Trojan_Win32_Vidar_RZ_2147888284_1
         $x_1_2 = {33 f3 31 74 24 10 8b 44 24 10 29 44 24 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3558,6 +3717,7 @@ rule Trojan_Win32_Vidar_HR_2147888628_0
         $x_1_2 = {33 f3 31 74 24 14 8b 44 24 14 29 44 24 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3580,6 +3740,7 @@ rule Trojan_Win32_Vidar_AB_2147888877_0
         $x_1_2 = "robubizeki_jo.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3601,6 +3762,7 @@ rule Trojan_Win32_Vidar_AB_2147888877_1
         $x_1_1 = {8b c8 c1 e9 05 03 4c 24 2c 8b d0 c1 e2 04 03 54 24 28 03 c7 33 ca 33 c8 2b f1 8b ce c1 e1 04 c7 05 ?? ?? ?? ?? 00 00 00 00 89 4c 24 14 8b 44 24 30 01 44 24 14 81 3d ?? ?? ?? ?? be 01 00 00 8d 1c 37 75 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3622,6 +3784,7 @@ rule Trojan_Win32_Vidar_ASAF_2147888919_0
         $x_1_1 = {8b 45 08 03 85 ?? ?? ff ff 8a 08 88 0a eb ?? 8b 55 08 03 95 ?? ?? ff ff 0f b6 02 8b 8d ?? ?? ff ff 33 84 8d ?? ?? ff ff 8b 95 ?? ?? ff ff 03 95 ?? ?? ff ff 88 02 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3644,6 +3807,7 @@ rule Trojan_Win32_Vidar_PR_2147888933_0
         $x_1_2 = {33 f3 31 74 24 14 8b 44 24 14 29 44 24 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3669,6 +3833,7 @@ rule Trojan_Win32_Vidar_GMH_2147889364_0
         $x_1_5 = ".boot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3699,6 +3864,7 @@ rule Trojan_Win32_Vidar_ASAG_2147889508_0
         $x_1_10 = "LWUM172YEOPOVUS2K0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3723,6 +3889,7 @@ rule Trojan_Win32_Vidar_MBIP_2147890025_0
         $x_1_4 = "yonaxumoy gakeyuwujosepafusogigawehe fenitedinugarehi wavedujudezunanimuze" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3744,6 +3911,7 @@ rule Trojan_Win32_Vidar_CCAQ_2147890130_0
         $x_1_1 = {03 c7 d3 ef 89 45 e0 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 03 7d e4 8b 45 e0 31 45 fc 33 7d fc 81 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3765,6 +3933,7 @@ rule Trojan_Win32_Vidar_ME_2147890281_0
         $x_5_1 = {33 85 0c ff ff ff 89 85 0c ff ff ff 8b 85 10 ff ff ff 33 85 08 ff ff ff 89 85 08 ff ff ff c6 85 b9 fd ff ff 00 8b 85 d4 fd ff ff 8b 40 54 89 85 14 ff ff ff 8b 85 14 ff ff ff 03 85 f0 fe ff ff 89 85 18 ff ff ff 8b 85 18 ff ff ff 8b 00 8b 95 08 ff ff ff 3b c2 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3788,6 +3957,7 @@ rule Trojan_Win32_Vidar_MBJA_2147891384_0
         $x_1_3 = {67 62 63 69 79 6e 78 61 6e 70 72 72 6d 69 73 75 72 65 6a 72 69 73 6e 75 67 66 6c 76 70 70 73 61 64 77 79 6c 61 63 66 74 74 6e 6e 6b 65 69 63 74 67 79 7a 6a 61 7a 00 00 67 79 70 64 63 79 68 6d 72 6a 68 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3811,6 +3981,7 @@ rule Trojan_Win32_Vidar_NDR_2147891422_0
         $x_1_3 = "chia\\mainnet\\wallet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3832,6 +4003,7 @@ rule Trojan_Win32_Vidar_C_2147891490_0
         $x_2_1 = {88 54 24 12 0f b6 51 ?? 88 54 24 13 8a 51 ?? 89 5c 24 14 83 44 24 14 ?? 89 5c 24 18 83 44 24 18 ?? 8b 4c 24 14 8a da d2 e3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3859,6 +4031,7 @@ rule Trojan_Win32_Vidar_C_2147891490_1
         $x_1_7 = "https://t.me/l793oy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3881,6 +4054,7 @@ rule Trojan_Win32_Vidar_CCBQ_2147891860_0
         $x_1_2 = {d3 e8 03 45 d4 8b c8 8b 45 f0 31 45 fc 31 4d fc 2b 5d fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3902,6 +4076,7 @@ rule Trojan_Win32_Vidar_CCBR_2147891865_0
         $x_1_1 = {33 d2 8b c6 f7 f1 8b 45 ?? 8a 0c 02 8b 55 ?? 8d 04 1e 32 0c 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3924,6 +4099,7 @@ rule Trojan_Win32_Vidar_NVV_2147892393_0
         $x_1_2 = "placement delete[] closure" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3945,6 +4121,7 @@ rule Trojan_Win32_Vidar_LL_2147892566_0
         $x_1_1 = {8b d0 8b f8 c1 ea 05 c1 e7 04 03 fb 03 d5 33 d7 8b 7c 24 10 03 f8 33 d7 2b f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3966,6 +4143,7 @@ rule Trojan_Win32_Vidar_VA_2147892751_0
         $x_1_1 = {8b d0 c1 ea 05 03 54 24 1c 8b f8 c1 e7 04 03 7c 24 20 03 c1 33 d7 33 d0 2b f2 8b d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3988,6 +4166,7 @@ rule Trojan_Win32_Vidar_GMR_2147893036_0
         $x_1_2 = "Exodus\\exodus.wallet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4009,6 +4188,7 @@ rule Trojan_Win32_Vidar_ML_2147893393_0
         $x_1_1 = {8b c8 8b d0 c1 e9 05 03 4c 24 34 c1 e2 04 03 d5 33 ca 8b 54 24 14 03 d0 33 ca 2b f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4030,6 +4210,7 @@ rule Trojan_Win32_Vidar_GN_2147893468_0
         $x_1_1 = {8b 45 f4 c1 e0 04 89 45 fc 8b 45 dc 01 45 fc 8b 55 f4 8b 4d f8 8b f2 d3 ee 8d 04 13 31 45 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4051,6 +4232,7 @@ rule Trojan_Win32_Vidar_VD_2147893918_0
         $x_1_1 = {8b c8 8b 45 10 33 d2 f7 f1 8b 45 0c 8a 0c 02 8b 45 10 8b 55 08 03 c3 32 0c 02 88 08 ff 75 fc ff d7 ff 75 fc ff d7 ff 75 fc ff d7 ff 75 fc ff d7 ff 45 10 39 75 10 72 ab}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4072,6 +4254,7 @@ rule Trojan_Win32_Vidar_VE_2147894053_0
         $x_1_1 = {8b c8 33 d2 8b c3 f7 f1 8b 45 0c 56 8a 0c 02 8b 55 fc 8d 04 13 8b 55 08 32 0c 02 88 08 ff d7 56 ff d7 56 ff d7 56 ff d7 56 ff d7 56 ff d7 43 3b 5d 10 72 a7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4093,6 +4276,7 @@ rule Trojan_Win32_Vidar_VF_2147894061_0
         $x_1_1 = {8b 45 b4 3b 45 b8 73 28 8b 55 dc 03 55 b4 8b 45 d4 03 45 b0 8b 4d c0 e8 ?? ?? ?? ?? 8b 45 c0 01 45 b0 8b 45 c0 01 45 b4 8b 45 bc 01 45 b4 eb d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4114,6 +4298,7 @@ rule Trojan_Win32_Vidar_IP_2147894262_0
         $x_1_1 = {8b c7 c1 e8 05 03 44 24 28 8b cf c1 e1 04 03 4c 24 2c 8d 14 2f 33 c1 33 c2 2b d8 8b c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4136,6 +4321,7 @@ rule Trojan_Win32_Vidar_AC_2147895020_0
         $x_1_2 = {8b 74 24 20 8b 4c 24 18 89 3e 89 4e 04 83 3d 20 61 7b 00 17}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4157,6 +4343,7 @@ rule Trojan_Win32_Vidar_VG_2147895232_0
         $x_1_1 = {8a 00 32 c1 8b 8d 80 e4 ff ff 88 04 11 ff 85 84 e4 ff ff ff b5 7c e4 ff ff 42 89 95 78 e4 ff ff e8 ?? ?? ?? ?? 59 39 85 84 e4 ff ff 0f 8c 56 ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4178,6 +4365,7 @@ rule Trojan_Win32_Vidar_VK_2147895238_0
         $x_1_1 = {8a 00 32 c1 8b 8d 80 e4 ff ff 88 04 31 ff b5 74 e4 ff ff ff 85 84 e4 ff ff 46 e8 ?? ?? ?? ?? 59 39 85 84 e4 ff ff 0f 8c 62 ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4199,6 +4387,7 @@ rule Trojan_Win32_Vidar_AV_2147896118_0
         $x_1_1 = {8b 45 fc 39 45 10 76 ?? 8b 55 fc 8b 45 f4 01 d0 8b 4d fc 8b 55 f8 01 ca 0f b6 00 88 02 83 45 fc 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4220,6 +4409,7 @@ rule Trojan_Win32_Vidar_GNA_2147896243_0
         $x_4_1 = {33 ed 31 54 ef 10 31 54 ef 14 45}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4241,6 +4431,7 @@ rule Trojan_Win32_Vidar_VX_2147896553_0
         $x_1_1 = {8a 14 2a 32 14 18 88 13 ff d7 8b 5c 24 10 46 3b 74 24 20 72 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4264,6 +4455,7 @@ rule Trojan_Win32_Vidar_ASF_2147896694_0
         $x_1_3 = "Autofill\\%s_%s.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4285,6 +4477,7 @@ rule Trojan_Win32_Vidar_BC_2147898787_0
         $x_5_1 = {8b 4d 0c 51 03 de ff d7 8b c8 33 d2 8b c6 f7 f1 8b 45 0c 68 ?? ?? ?? 00 8a 0c 02 8b 55 f8 32 0c 1a 88 0b ff d7 68 ?? ?? ?? 00 ff d7 68 ?? ?? ?? 00 ff d7 8b 5d fc 46 3b 75 10 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4306,6 +4499,7 @@ rule Trojan_Win32_Vidar_RH_2147899754_0
         $x_1_1 = {8b 45 fc 6a 40 68 00 30 00 00 ff 70 50 56 ff 15 ?? ?? ?? ?? 8b f0 85 f6 75 26 85 db 0f 84 9c 02 00 00 8b 45 fc 6a 40 68 00 30 00 00 ff 70 50 56 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4327,6 +4521,7 @@ rule Trojan_Win32_Vidar_SB_2147899916_0
         $x_1_1 = {8b 4d e8 03 cf 89 4d f0 8b 4d f4 8b f7 d3 ee c7 05 ?? ?? ?? ?? ee 3d ea f4 03 75 d0 8b 45 f0 31 45 fc 81 3d ?? ?? ?? ?? e6 09 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4348,6 +4543,7 @@ rule Trojan_Win32_Vidar_YAA_2147900277_0
         $x_1_1 = {d3 e0 8b cf c1 e9 05 03 8c 24 ?? ?? ?? ?? 03 84 24 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 33 c1 8b 4c 24 14 03 cf 33 c1 2b e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4369,6 +4565,7 @@ rule Trojan_Win32_Vidar_SG_2147900351_0
         $x_1_1 = {8b 45 08 f7 f1 8b 45 fc 68 ?? ?? ?? ?? 8a 0c 02 8b 55 08 03 d6 8a 04 13 32 c1 88 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4390,6 +4587,7 @@ rule Trojan_Win32_Vidar_SG_2147900351_1
         $x_1_1 = {8a 04 02 32 04 39 88 07 ff d6 68 ?? ?? ?? ?? ff d6 68 ?? ?? ?? ?? ff d6 8b 7d ?? 43 3b 5d ?? 72 a2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4411,6 +4609,7 @@ rule Trojan_Win32_Vidar_EM_2147900372_0
         $x_5_1 = {8b 55 f8 2b c1 8b c8 8b 45 fc 03 d0 89 55 f4 33 d2 f7 f1 8b 45 0c 57 8a 0c 02 8b 45 f4 8b 55 08 32 0c 02 88 08}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4432,6 +4631,7 @@ rule Trojan_Win32_Vidar_CCGR_2147900774_0
         $x_1_1 = {33 d2 8b c7 f7 f1 8b 45 ?? 8b 4d ?? 03 c7 47 8a 92 ?? ?? ?? ?? 32 14 08 88 10 83 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4453,6 +4653,7 @@ rule Trojan_Win32_Vidar_AAQ_2147900985_0
         $x_1_1 = {8b c8 33 d2 8b c7 f7 f1 8b 45 ?? 8b 4d fc 8a 04 02 32 04 31 47 88 06 3b 7d 10 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4474,6 +4675,7 @@ rule Trojan_Win32_Vidar_DF_2147901018_0
         $x_1_1 = {8b 4d 08 8d 34 0f 8a 0e 88 4d ff 8a 4d fe d2 45 ff 8a 4d 10 2a cb 32 4d ff fe c3 88 0e 3a d8 75 ?? 32 db fe c2 88 55 fe 3a 55 fd 75 ?? 32 d2 88 55 fe 47 3b 7d 0c 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4495,6 +4697,7 @@ rule Trojan_Win32_Vidar_PMV_2147901382_0
         $x_1_1 = {8a 08 88 0a eb 27 8b 55 08 03 95 f4 fb ff ff 0f b6 02 8b 8d 14 f0 ff ff 33 84 8d f8 fb ff ff 8b 95 f0 fb ff ff 03 95 f4 fb ff ff 88 02 e9 d5 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4517,6 +4720,7 @@ rule Trojan_Win32_Vidar_PE_2147902098_0
         $x_1_2 = {46 89 75 e4 2b 75 ?? 33 75 ?? 83 e0 00 09 f0 8b 75 ?? 0f b6 1c 30 89 7d ?? 31 ff 33 7d f8 89 fa 8b 7d e4 d3 c2 23 d3 ac 0a c2 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4538,6 +4742,7 @@ rule Trojan_Win32_Vidar_PBE_2147902102_0
         $x_1_1 = {8b 55 f4 8a 0a 0f b6 d9 8d 84 85 ?? ?? ?? ?? 39 18 75 08 8b 45 fc 88 0c 10 eb 0a ?? ?? 32 c1 8b 4d fc 88 04 11 ff 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4560,6 +4765,7 @@ rule Trojan_Win32_Vidar_D_2147902361_0
         $x_2_2 = {8b c8 33 d2 8b c3 f7 f1 8b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4581,6 +4787,7 @@ rule Trojan_Win32_Vidar_SPFD_2147902941_0
         $x_5_1 = {8b 4d dc 30 04 31 83 ff 0f}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4602,6 +4809,7 @@ rule Trojan_Win32_Vidar_SPFD_2147902941_1
         $x_4_1 = {8b 04 8d 80 f0 42 00 8b f0 81 e6 ff 00 00 00 c1 e8 08 33 04 b5 80 f4 42 00 41 89 04 8d 7c f4 42 00 3b ca}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4623,6 +4831,7 @@ rule Trojan_Win32_Vidar_OPT_2147903373_0
         $x_1_1 = {03 c6 89 45 e4 8b 45 ec c1 e8 05 89 45 f8 8b 45 d4 01 45 f8 8b 45 fc c7 05 ?? ?? ?? ?? ee 3d ea f4 89 45 e8 89 5d ec 8b 45 ?? 01 45 ec 8b 45 ec 31 45 e8 8b 45 e8 31 45 f8 2b 7d f8 83 3d ?? ?? ?? ?? 0c 89 45 fc 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4644,6 +4853,7 @@ rule Trojan_Win32_Vidar_BAS_2147903718_0
         $x_1_1 = {8b c3 d3 e8 03 45 ?? 89 45 f8 8b 45 e4 31 45 fc 8b 45 fc 89 45 e8 89 75 f0 8b 45 e8 89 45 f0 8b 45 f8 31 45 f0 8b 45 f0 81 45 ec ?? ?? ?? ?? 2b f8 ff 4d dc 89 45 fc 89 7d e8 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4665,6 +4875,7 @@ rule Trojan_Win32_Vidar_BS_2147903898_0
         $x_1_1 = {8b c8 8b 45 ?? 33 d2 f7 f1 8b 45 ?? 8b 4d ?? c7 04 24 ?? ?? ?? ?? 8a 04 02 32 04 19 88 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4687,6 +4898,7 @@ rule Trojan_Win32_Vidar_AMMB_2147903935_0
         $x_2_2 = {30 04 33 83 ff ?? 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4708,6 +4920,7 @@ rule Trojan_Win32_Vidar_SPXX_2147904260_0
         $x_5_1 = {8b 45 e4 31 45 ec 8b 45 ec 31 45 f8 2b 75 f8}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4729,6 +4942,7 @@ rule Trojan_Win32_Vidar_SPGS_2147904270_0
         $x_5_1 = {8b 45 b4 f7 d8 33 45 b4 83 e0 01 75 0e 8b 4d b4 81 c1 1e 22 00 00 89 4d b4 eb}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4755,6 +4969,7 @@ rule Trojan_Win32_Vidar_AVI_2147904650_0
         $x_1_6 = "Indonesia spying scandal developed from allegations" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4777,6 +4992,7 @@ rule Trojan_Win32_Vidar_ASDN_2147905334_0
         $x_10_2 = {8a 04 02 32 04 39 88 07 ff}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4798,6 +5014,7 @@ rule Trojan_Win32_Vidar_BQ_2147905717_0
         $x_1_1 = {33 d2 f7 f1 8b 45 0c 8b 4d f4 53 6a 00 8a 04 02 32 04 31 88 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4819,6 +5036,7 @@ rule Trojan_Win32_Vidar_NDD_2147905791_0
         $x_1_1 = {d3 ea 03 55 dc 8b 4d d8 89 55 f8 33 d0 8b 45 fc 33 c2 8b 55 ?? 2b f8 89 45 fc ff 4d ?? 89 7d f4 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4840,6 +5058,7 @@ rule Trojan_Win32_Vidar_GPA_2147905962_0
         $x_1_1 = {8a 04 02 32 04 31 88 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4861,6 +5080,7 @@ rule Trojan_Win32_Vidar_SPDH_2147906090_0
         $x_5_1 = {72 00 6e 00 c7 05 ?? ?? ?? ?? 65 00 6c 00 c7 05 ?? ?? ?? ?? 33 00 32 00 c7 05 ?? ?? ?? ?? 2e 00 64 00 c7 05 ?? ?? ?? ?? 6c 00 6c 00 66 89 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4882,6 +5102,7 @@ rule Trojan_Win32_Vidar_SPDB_2147906346_0
         $x_5_1 = {69 c0 fd 43 03 00 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? 8a 0d ?? ?? ?? ?? 30 0c 33 83 ff 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4903,6 +5124,7 @@ rule Trojan_Win32_Vidar_SPDB_2147906346_1
         $x_5_1 = {8b 44 24 0c 69 c9 ?? ?? ?? ?? 81 c1 ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 8a 15 ?? ?? ?? ?? 30 14 30 83 ff 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4924,6 +5146,7 @@ rule Trojan_Win32_Vidar_GZY_2147906609_0
         $x_10_1 = {51 03 df ff d6 8b c8 33 d2 8b c7 f7 f1 8b 45 ?? 68 ?? ?? ?? ?? 8a 0c 02 8b 55 ?? 32 0c 1a 88 0b ff d6 68 ?? ?? ?? ?? ff d6 8b 5d ?? 47 3b 7d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4954,6 +5177,7 @@ rule Trojan_Win32_Vidar_RPX_2147907006_0
         $x_1_10 = "avghookx.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4975,6 +5199,7 @@ rule Trojan_Win32_Vidar_TWZ_2147907012_0
         $x_1_1 = {69 c9 fd 43 03 00 81 c1 c3 9e 26 00 89 0d 38 ?? ?? ?? 8a 15 ?? ?? ?? ?? 8b 4c 24 14 30 14 0e 83 f8 0f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4996,6 +5221,7 @@ rule Trojan_Win32_Vidar_SRH_2147907175_0
         $x_1_1 = {89 ca 81 ea fb 07 82 d2 83 ea 01 81 c2 fb 07 82 d2 0f af ca 83 e1 01 83 f9 00 0f 94 c1 80 e1 01 88 4d e6 83 f8 0a 0f 9c c0 24 01 88 45 e7 c7 45 e0 ?? ?? ?? ?? 8b 45 e0 89 45 d4 2d 0d 0d 8c 9d 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5017,6 +5243,7 @@ rule Trojan_Win32_Vidar_KHZ_2147907723_0
         $x_1_1 = {8b 6c 24 2c 8b 5c 24 30 8b 7c 24 28 8b 4c 24 38 8a 44 2c 3c 88 44 1c 3c 8a 44 24 ?? 88 44 2c 3c 0f b6 44 1c 3c 03 44 24 34 0f b6 c0 8a 44 04 3c 30 04 39 8b 44 24 ?? 85 c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5038,6 +5265,7 @@ rule Trojan_Win32_Vidar_UMP_2147908225_0
         $x_1_1 = {03 c6 0f b6 c0 8a 44 04 2c 30 04 3b 85 ed 74 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5059,6 +5287,7 @@ rule Trojan_Win32_Vidar_ZCP_2147908404_0
         $x_1_1 = {03 c6 0f b6 c0 0f b6 44 04 ?? 30 04 3a 8b 54 24 18 85 d2 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5080,6 +5309,7 @@ rule Trojan_Win32_Vidar_ZAJ_2147908484_0
         $x_1_1 = {8d a4 24 00 00 00 00 8b 0d f4 b8 45 00 69 c9 ?? ?? ?? ?? 81 c1 c3 9e 26 00 89 0d f4 b8 45 00 8a 15 f6 b8 45 00 30 14 1e 83 ff 0f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5101,6 +5331,7 @@ rule Trojan_Win32_Vidar_KGA_2147908998_0
         $x_1_1 = {0f b6 c0 8a 44 04 40 30 04 29 45 3b ac 24 4c 02 00 00 7c a0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5122,6 +5353,7 @@ rule Trojan_Win32_Vidar_SPRD_2147909044_0
         $x_1_1 = {83 6c 24 0c 64 8a 4c 24 0c 30 0c 33 83 ff 0f 75 ?? 8b 54 24 08 8b 4c 24 08 55 55 52 8d 44 24 38 50 51 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5143,6 +5375,7 @@ rule Trojan_Win32_Vidar_SPGH_2147909511_0
         $x_1_1 = {83 c0 64 89 44 24 10 83 6c 24 10 64 8a 54 24 10 8b 44 24 14 30 14 30 83 bc 24 ?? ?? ?? ?? 0f 75 ?? 6a 00 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5164,6 +5397,7 @@ rule Trojan_Win32_Vidar_DE_2147909797_0
         $x_1_1 = {0f b6 44 3c ?? 03 c6 0f b6 c0 59 8a 44 04 ?? 30 85 00 ?? ?? ?? 45 81 fd 00 ?? ?? ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5185,6 +5419,7 @@ rule Trojan_Win32_Vidar_SPGG_2147910278_0
         $x_1_1 = {83 c4 04 8b 44 24 0c 83 c0 64 89 44 24 08 83 6c 24 08 64 8a 4c 24 08 30 0c 3e 46 3b f3 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5206,6 +5441,7 @@ rule Trojan_Win32_Vidar_SV_2147910841_0
         $x_2_1 = {83 c0 64 89 85 ?? ?? ff ff 83 ad ?? ?? ff ff 64 8a 95 ?? ?? ff ff 8b 85 ?? ?? ff ff 30 14 30 83 ff 0f 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5227,6 +5463,7 @@ rule Trojan_Win32_Vidar_KLS_2147910910_0
         $x_1_1 = {83 c4 04 8b 85 f4 f7 ff ff 83 c0 ?? 89 85 f8 f7 ff ff 83 ad f8 f7 ff ff 64 8a 8d f8 f7 ff ff 30 0c 33 83 ff 0f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5248,6 +5485,7 @@ rule Trojan_Win32_Vidar_AMMF_2147911309_0
         $x_1_1 = {2b d8 8b 45 ?? 31 18 83 45 ?? ?? 6a 00 e8 ?? ?? ?? ?? 83 c0 ?? 01 45 ?? 8b 45 ?? 3b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5270,6 +5508,7 @@ rule Trojan_Win32_Vidar_ASGD_2147911419_0
         $x_2_2 = {01 02 8b 45 ?? 03 45 ?? 03 45 ?? 89 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5292,6 +5531,7 @@ rule Trojan_Win32_Vidar_ASGE_2147911549_0
         $x_2_2 = {01 02 8b 45 ?? 03 45 ?? 03 45 ?? 89 45 ?? c7 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5313,6 +5553,7 @@ rule Trojan_Win32_Vidar_ASGF_2147911669_0
         $x_5_1 = {01 02 8b 45 ?? 03 45 ?? 03 45 ?? 89 45 ?? c7 45 ?? ?? ?? 00 00 6a 00 e8 ?? ?? ?? ff 8b 55 ?? 81 c2 ?? ?? ?? 00 2b 55 ?? 2b d0 8b 45 ?? 31 10 83 45 ec 04 83 45 d4 04 8b 45 ec 3b 45 d0 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5334,6 +5575,7 @@ rule Trojan_Win32_Vidar_SPXK_2147911751_0
         $x_5_1 = {8b 44 24 18 33 4c 24 14 03 44 24 2c 33 c1 c7 05}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5355,6 +5597,7 @@ rule Trojan_Win32_Vidar_VOT_2147911812_0
         $x_1_1 = {81 c2 9e 09 00 00 2b 55 a0 2b d0 8b 45 d8 31 10 83 45 ec ?? 83 45 d8 04 8b 45 ec 3b 45 d4 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5376,6 +5619,7 @@ rule Trojan_Win32_Vidar_AMMH_2147912051_0
         $x_1_1 = {2b d0 8b 45 ?? 31 10 [0-10] 83 45 ?? 04 83 45 ?? 04 8b 45 ?? 3b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5397,6 +5641,7 @@ rule Trojan_Win32_Vidar_AVR_2147912053_0
         $x_1_1 = {40 00 7c 63 40 00 40 37 40 00 34 37 40 00 8c 63 40 00 90 34 40 00 cc 34 40 00 12 54 4f 58 44}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5419,6 +5664,7 @@ rule Trojan_Win32_Vidar_AVR_2147912053_1
         $x_1_2 = {a3 e4 4f 63 00 68 54 0c 42 00 ff 35 c4 51 63 00 e8 2a c7 fe ff a3 e8 4f 63 00 68 bd 0a 42 00 ff 35 c4 51 63 00 e8 15 c7 fe ff a3 ec 4f 63 00 68 13 09 42 00 ff 35 c4 51 63 00 e8 00 c7 fe ff a3 f0 4f 63 00 68 51 03 42 00 ff 35 c4 51 63 00 e8 eb c6 fe ff a3 98 4f 63 00 68 dc 09 42 00 ff 35 c4 51 63 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5440,6 +5686,7 @@ rule Trojan_Win32_Vidar_ASGG_2147912189_0
         $x_5_1 = {ff 6a 00 e8 ?? ?? ?? ff 8b 5d ?? 81 c3 ?? ?? ?? 00 2b 5d ?? 2b d8 6a 00 e8 ?? ?? ?? ff 2b d8 8b 45 ?? 31 18 6a 00 e8 ?? ?? ?? ff 83 45 ec 04 83 45 ?? 04 8b 45 ec 3b 45 ?? 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5461,6 +5708,7 @@ rule Trojan_Win32_Vidar_SVD_2147912290_0
         $x_1_1 = {8b d8 8b 45 a8 05 ?? ?? ?? ?? 2b 45 a0 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 8b 45 d8 31 18 6a 00 e8 ?? ?? ?? ?? 83 45 ec 04 83 45 d8 04 8b 45 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5483,6 +5731,7 @@ rule Trojan_Win32_Vidar_AMMJ_2147912392_0
         $x_1_2 = {83 45 ec 04 83 45 ?? 04 8b 45 ec 3b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5504,6 +5753,7 @@ rule Trojan_Win32_Vidar_NTJ_2147912495_0
         $x_1_1 = {88 5c 0c 3c 0f b6 44 2c 3c 8b 4c 24 ?? 03 c7 8b 5c 24 14 0f b6 c0 8a 44 04 3c 30 04 19 8b 44 24 ?? 2b c6 83 e0 f8 50 56 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5525,6 +5775,7 @@ rule Trojan_Win32_Vidar_AMAA_2147912625_0
         $x_1_1 = {2b d8 8b 45 ?? 31 18 6a 00 e8 ?? ?? ?? ?? 83 45 ec 04 6a 00 e8 ?? ?? ?? ?? 83 45 ?? 04 8b 45 ?? 3b 45 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5546,6 +5797,7 @@ rule Trojan_Win32_Vidar_IIV_2147912702_0
         $x_1_1 = {8a 04 37 34 74 04 4e 34 70 2c 65 34 22 2c 73 68 ?? ?? ?? ?? 88 04 37 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5569,6 +5821,7 @@ rule Trojan_Win32_Vidar_KT_2147912811_0
         $x_1_3 = {83 45 d8 04 8b 45 ec 3b 45 d4 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5591,6 +5844,7 @@ rule Trojan_Win32_Vidar_ASGH_2147912928_0
         $x_1_2 = {01 02 8b 45 ?? 03 45 ?? 03 45 ?? 89 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5613,6 +5867,7 @@ rule Trojan_Win32_Vidar_AMAD_2147913027_0
         $x_1_2 = {83 45 ec 04 6a 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5635,6 +5890,7 @@ rule Trojan_Win32_Vidar_ASGI_2147913162_0
         $x_1_2 = {01 02 8b 45 ?? 03 45 ?? 03 45 ?? 89 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5656,6 +5912,7 @@ rule Trojan_Win32_Vidar_LML_2147913205_0
         $x_1_1 = {8b cb e8 fc 3e 00 00 8b 54 24 1c 8b 4c 24 24 8b 7c 24 28 0f b6 44 14 ?? 03 44 24 20 0f b6 c0 8a 44 04 34 30 04 0e 46 3b f5 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5678,6 +5935,7 @@ rule Trojan_Win32_Vidar_ASGJ_2147913314_0
         $x_1_2 = {01 02 8b 45 ?? 03 45 ?? 03 45 ?? 89 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5700,6 +5958,7 @@ rule Trojan_Win32_Vidar_QW_2147913323_0
         $x_1_2 = {83 45 d8 04 8b 45 ec 3b 45 d4 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5722,6 +5981,7 @@ rule Trojan_Win32_Vidar_AMAG_2147913509_0
         $x_1_2 = {83 45 ec 04 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5743,6 +6003,7 @@ rule Trojan_Win32_Vidar_AMAE_2147914169_0
         $x_1_1 = {8a 00 32 c1 8b 4d ?? 88 04 31 ff 75 ?? ff 45 ?? 46}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5764,6 +6025,7 @@ rule Trojan_Win32_Vidar_AMAI_2147914225_0
         $x_1_1 = {03 d8 8b 45 ?? 31 18 6a 00 e8 ?? ?? ?? ?? 83 45 ec 04 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5786,6 +6048,7 @@ rule Trojan_Win32_Vidar_NV_2147914401_0
         $x_3_2 = {83 c4 f0 b8 cc 7a 45 00 e8 ?? ?? ?? ?? a1 b4 9d 45 00 8b 00 e8 ?? ?? ?? ?? 8b 0d 48 9a 45 00 a1 b4 9d 45 00 8b 00 8b 15 14 75 45 00 e8 ?? ?? ?? ?? a1 b4 9d 45}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5807,6 +6070,7 @@ rule Trojan_Win32_Vidar_ASGK_2147914412_0
         $x_5_1 = {2b d8 6a 00 e8 ?? ?? ?? ?? 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 ?? 31 18 6a 00 e8 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 83 45 ec 04 6a 00 e8 ?? ?? ?? ?? 83 45 ?? 04 6a 00 e8 ?? ?? ?? ?? 8b 45 ec 3b 45 d4 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5828,6 +6092,7 @@ rule Trojan_Win32_Vidar_YB_2147914702_0
         $x_10_1 = {2b d8 6a 00 e8 ?? ?? ?? ?? 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 31 18 6a 00 e8 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 83 45 ec 04 6a 00 e8 ?? ?? ?? ?? 83 45 d8 04 6a 00 e8 ?? ?? ?? ?? 8b 45 ec 3b 45 d4 72}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5849,6 +6114,7 @@ rule Trojan_Win32_Vidar_AMAJ_2147914864_0
         $x_1_1 = {03 d8 8b 45 d8 31 18 83 45 ec 04 6a 00 e8 ?? ?? ?? ?? 83 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5871,6 +6137,7 @@ rule Trojan_Win32_Vidar_AMAJ_2147914864_1
         $x_1_2 = {6a 14 ff 15 ?? ?? ?? ?? 6a 14 ff 15 ?? ?? ?? ?? 6a 14 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5893,6 +6160,7 @@ rule Trojan_Win32_Vidar_ASGL_2147915151_0
         $x_1_2 = {8b 45 ec 3b 45 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5914,6 +6182,7 @@ rule Trojan_Win32_Vidar_TOQ_2147916281_0
         $x_1_1 = {2b c1 89 45 f4 8b 45 fc 8d 0c 03 33 d2 8b c3 f7 75 f4 8b 45 0c 57 8a 04 02 8b 55 f0 32 04 0a 88 01 ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5935,6 +6204,7 @@ rule Trojan_Win32_Vidar_ADG_2147917890_0
         $x_1_1 = {eb 08 0f c6 1c 00 00 00 00 00 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5957,6 +6227,7 @@ rule Trojan_Win32_Vidar_PAFH_2147918296_0
         $x_1_2 = "\\Monero\\wallet.keys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5978,6 +6249,7 @@ rule Trojan_Win32_Vidar_KAE_2147918871_0
         $x_1_1 = {03 d7 8b 44 24 ?? c1 e8 05 89 44 24 ?? 8b 44 24 ?? 03 c5 33 c2 33 c1 81 3d ?? ?? ?? ?? 13 02 00 00 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 44 24 ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6002,6 +6274,7 @@ rule Trojan_Win32_Vidar_PAFQ_2147920663_0
         $x_2_4 = "loginusers.vdf" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6025,6 +6298,7 @@ rule Trojan_Win32_Vidar_MBXX_2147921642_0
         $x_1_3 = "Riyozeluha murumijax yuco micolecas xotuhutu kocunexoh rofujanimumije" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6051,6 +6325,7 @@ rule Trojan_Win32_Vidar_ND_2147922733_0
         $x_1_6 = "cavuwoxegufiyipavizes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6073,6 +6348,7 @@ rule Trojan_Win32_Vidar_ASJ_2147922815_0
         $x_1_2 = {23 c9 66 f7 e2 33 f2 46 42}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6094,6 +6370,7 @@ rule Trojan_Win32_Vidar_AMK_2147922947_0
         $x_1_1 = {0f b6 44 3c ?? 03 c6 59 8b 4c 24 ?? 0f b6 c0 8a 44 04 ?? 30 04 29 45 3b 2b 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6115,6 +6392,7 @@ rule Trojan_Win32_Vidar_SPOB_2147923185_0
         $x_4_1 = {8b 54 24 30 8a 44 34 34 59 8b 4c 24 24 30 04 0a 41 89 4c 24 24 3b 0f 7c 8e}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6140,6 +6418,7 @@ rule Trojan_Win32_Vidar_EC_2147923304_0
         $x_1_5 = "Monero\\wallet.keys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6161,6 +6440,7 @@ rule Trojan_Win32_Vidar_AIN_2147923717_0
         $x_5_1 = {83 c4 08 c7 45 d4 00 00 00 00 c7 45 d8 00 00 00 00 c7 45 dc 00 00 00 00 8b 7d bc 8b 45 c0 0f b6 84 05 ?? ?? ?? ?? 8b 4d 08 30 04 39 47 8b 45 c8 3b 38 8b 55 b8 0f 8d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6182,6 +6462,7 @@ rule Trojan_Win32_Vidar_MOZ_2147923830_0
         $x_5_1 = {57 50 e8 17 ?? ?? ?? 33 c0 59 59 89 44 24 10 89 44 24 ?? 89 44 24 18 8b 7c 24 1c 8b 4c 24 20 8a 44 0c 3c 8b 4c 24 38 30 04 29 45 3b 6b 04 0f 8c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6203,6 +6484,7 @@ rule Trojan_Win32_Vidar_IKV_2147924768_0
         $x_5_1 = {8d 64 24 00 8d 4c 24 08 c7 44 24 04 ?? ?? ?? ?? c7 44 24 08 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 44 24 08 83 c0 46 89 44 24 04 83 6c 24 04 46 8a 4c 24 ?? 30 0c 33 83 ff 0f 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6224,6 +6506,7 @@ rule Trojan_Win32_Vidar_AXBA_2147924781_0
         $x_5_1 = {ff 8b 44 24 ?? 83 c4 08 8a 4c 2c ?? 30 0c 03 8b ce e8 ?? ?? ?? ?? 8b 6c 24 ?? 43 3b 5f ?? 0f 8c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6245,6 +6528,7 @@ rule Trojan_Win32_Vidar_CZ_2147925013_0
         $x_5_1 = {8b c8 8b 45 ?? 33 d2 f7 f1 8b 45 ?? 8b 4d ?? 8a 04 02 32 04 31 ff 45 ?? 88 06 39 5d ?? 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6267,6 +6551,7 @@ rule Trojan_Win32_Vidar_NF_2147926461_0
         $x_1_2 = {83 e1 1f 8b 7e 04 33 d8 8b 76 08 33 f8 33 f0 d3 cf d3 ce d3 cb 3b fe 75 7b 2b f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6292,6 +6577,7 @@ rule Trojan_Win32_Vidar_ASU_2147926856_0
         $x_1_5 = "_key.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6314,6 +6600,7 @@ rule Trojan_Win32_Vidar_AVD_2147927185_0
         $x_3_2 = {6b 48 33 1b a1 ?? ?? ?? ?? ff 75 ec ff ?? 6b 48 33 1b a1 ?? ?? ?? ?? ff 75 c8 ff ?? 6b 48 33 1b a1 ?? ?? ?? ?? ff 75 f0 ff}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6336,6 +6623,7 @@ rule Trojan_Win32_Vidar_AVDR_2147928150_0
         $x_1_2 = {8b c8 83 e1 03 8a 8c 0d ?? ?? ?? ?? 30 0c 06 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6357,6 +6645,7 @@ rule Trojan_Win32_Vidar_EA_2147928344_0
         $x_5_1 = {33 f7 29 75 f8 8b 45 e8 29 45 fc 83 6d f0 01 0f 85 ?? ?? ?? ?? 8b 45 08 8b 4d f8 8b 55 f4 5f 5e 89 08 89 50 04}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6378,6 +6667,7 @@ rule Trojan_Win32_Vidar_ZFZ_2147928833_0
         $x_5_1 = {0f b6 c2 03 47 34 69 c0 05 84 08 08 40 89 47 34 c1 e8 18 0f b6 d1 31 c2 c1 e9 08 33 0c 95 ?? ?? ?? ?? 89 4f 38 32 7c 24 03 88 7c 35 00 8b 6c 24 20 46 39 f5 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6399,6 +6689,7 @@ rule Trojan_Win32_Vidar_POV_2147929461_0
         $x_5_1 = {89 f8 47 c1 e8 02 f7 e5 6b c2 e4 8d 14 19 0f b6 44 10 1f 32 44 19 ?? 88 44 1e 1f 43 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6420,6 +6711,7 @@ rule Trojan_Win32_Vidar_LLV_2147931108_0
         $x_5_1 = {31 ff 89 f0 89 fa 83 e2 03 8a 54 14 ?? 30 14 38 47 8b 44 24 04 8b 54 24 08 89 d6 29 c6 39 f7 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6441,6 +6733,7 @@ rule Trojan_Win32_Vidar_VKZ_2147932213_0
         $x_5_1 = {41 00 85 c0 75 4a 8b b4 24 30 0c 00 00 89 f1 68 09 ae 41 00 8d 5c 24 14 53 e8 6c f5 ff ff}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6462,6 +6755,7 @@ rule Trojan_Win32_Vidar_APD_2147932535_0
         $x_1_1 = {89 d9 83 e1 03 8a 8c 0c b8 00 00 00 32 0c 18 0f be c1 89 f1 50 6a 01 e8 5e 78 00 00 43 39 dd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6483,6 +6777,7 @@ rule Trojan_Win32_Vidar_RRR_2147932632_0
         $x_1_1 = {eb 08 0f d0 2d 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6504,6 +6799,7 @@ rule Trojan_Win32_Vidar_TEH_2147933437_0
         $x_1_1 = {89 fa 83 e2 03 8a 54 14 38 30 14 38 47 8b 44 24 04 8b 54 24 08 89 d6 29 c6 39 f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6525,6 +6821,7 @@ rule Trojan_Win32_Vidar_YAC_2147933571_0
         $x_11_1 = {f7 d6 33 f7 f7 de 81 c1 f9 5b 85 78 c1 c1 05 f7 de 81 f1 61 da 69 b4 81 c7 fb 85 94 ef 81 31 ?? ?? ?? ?? 33 dc 87 d3 49}  //weight: 11, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6559,6 +6856,7 @@ rule Trojan_Win32_Vidar_AAD_2147933797_0
         $x_1_14 = "https://t.me/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6580,6 +6878,7 @@ rule Trojan_Win32_Vidar_EAA_2147937251_0
         $x_5_1 = {0f b6 4c 24 07 00 c8 00 44 24 07 0f b6 44 24 08 0f b6 c0 89 c1 c1 e1 04 01 c1 f7 d9 00 4c 24 08}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6603,6 +6902,7 @@ rule Trojan_Win32_Vidar_SEY_2147937262_0
         $x_1_3 = "\\\\BraveWallet\\\\P" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6624,6 +6924,7 @@ rule Trojan_Win32_Vidar_EAAA_2147937337_0
         $x_5_1 = {8b b4 24 18 01 00 00 32 0c 16 30 d9 88 0c 16 42 39 94 24 1c 01 00 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6683,6 +6984,7 @@ rule Trojan_Win32_Vidar_EB_2147938908_0
         $x_1_39 = "*recovery*.*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6704,6 +7006,7 @@ rule Trojan_Win32_Vidar_AD_2147939487_0
         $x_1_1 = {41 80 f2 ff 41 20 f2 41 88 fb 41 80 f3 ff 40 88 de 44 20 de 80 f3 ff 40 20 df 40 08 fe 45 88 d3 41 20 f3 41 30 f2 45 08 d3 41 f6 c3 01 b8 37 89 da 81}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6726,6 +7029,7 @@ rule Trojan_Win32_Vidar_EAAQ_2147942200_0
         $x_2_2 = {83 c4 0c 01 ef 89 bc 9e 44 1e 00 00 0f b6 0c 9d ?? ?? ?? ?? bd 01 00 00 00 d3 e5 8b 04 24}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6747,6 +7051,7 @@ rule Trojan_Win32_Vidar_AEL_2147942320_0
         $x_5_1 = {02 cb 0f b6 c1 88 8d ?? ?? ff ff 8d 8d cc fe ff ff 03 c8 0f b6 01 88 02 88 19 0f b6 02 8b 8d bc fe ff ff 02 c3 0f b6 c0 0f b6 84 05 cc fe ff ff 30 04 0e 46 8a 8d cb fe ff ff 3b f7 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6769,6 +7074,7 @@ rule Trojan_Win32_Vidar_YAT_2147944517_0
         $x_10_2 = {2b f9 31 05 ?? ?? ?? ?? 33 d0 c1 c7 0a 8b fe}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6791,6 +7097,7 @@ rule Trojan_Win32_Vidar_AR_2147944733_0
         $x_2_2 = {f7 e1 8b d8 8b 44 24 08 f7 64 24 14 03 d8 8b 44 24 08 f7 e1 03 d3 5b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6812,6 +7119,7 @@ rule Trojan_Win32_Vidar_AE_2147944990_0
         $x_1_1 = {46 d1 da 59 47 89 46 04 c7 a0 8c 6b 73 94 1b 53 1b 1c 7c 7d d4 52 94}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Beshades_A_2147655205_0
         $x_1_2 = {68 b0 a1 41 00 ff 15 8c f0 41 00 6a 00 68 00 00 00 80 6a 00 6a 00 8b f8 55 57 89 7c 24 30 ff 15 90 f0 41 00 6a 01 8b d8 ff 15 14 a0 41 00 85 ff 74 c6 85 db 74 c2 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

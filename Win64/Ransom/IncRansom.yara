@@ -19,6 +19,7 @@ rule Ransom_Win64_IncRansom_YAC_2147941994_0
         $x_1_4 = {15 f9 00 00 c7 85 ?? ?? ?? ?? 9c 80 00 00 c7 85 ?? ?? ?? ?? 06 a9 00 00 c7 85 ?? ?? ?? ?? 79 60 01 00 c7 85 ?? ?? ?? ?? f7 cd 00 00 c7 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Worm_MSIL_Bladabindi_D_2147681342_0
         $x_10_6 = {20 e9 01 00 00 20 8b 01 00 00 28 10 00 00 06 25 14 fe 06 03 00 00 06 73 07 00 00 0a 20 ea 03 00 00 20 f1 03 00 00 16 2c 2a 26 26}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Worm_MSIL_Bladabindi_F_2147683820_0
         $x_1_3 = {03 6f c4 00 00 0a 04 73 20 00 00 0a 6f a8 00 00 0a 72 7d 08 00 70 28 3b 00 00 0a 28 a7 00 00 0a de 0e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

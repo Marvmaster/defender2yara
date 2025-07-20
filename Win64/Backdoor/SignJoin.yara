@@ -15,6 +15,7 @@ rule Backdoor_Win64_SignJoin_A_2147888309_0
         $x_1_1 = "My bolls - my rules" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

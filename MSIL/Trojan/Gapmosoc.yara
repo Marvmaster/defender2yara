@@ -20,6 +20,7 @@ rule Trojan_MSIL_Gapmosoc_A_2147707661_0
         $x_4_6 = "/goo.gl/PszMzr" wide //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or
             ((3 of ($x_4_*))) or

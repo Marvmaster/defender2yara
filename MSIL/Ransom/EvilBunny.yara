@@ -21,6 +21,7 @@ rule Ransom_MSIL_EvilBunny_SK_2147944876_0
         $x_1_6 = "EvilBunny_RANSOMWARE.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

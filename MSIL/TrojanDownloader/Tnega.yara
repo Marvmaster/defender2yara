@@ -20,6 +20,7 @@ rule TrojanDownloader_MSIL_Tnega_ESS_2147819235_0
         $x_1_5 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -53,6 +54,7 @@ rule TrojanDownloader_MSIL_Tnega_XI_2147819561_0
         $x_1_9 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +82,7 @@ rule TrojanDownloader_MSIL_Tnega_PA14_2147819851_0
         $x_1_7 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +107,7 @@ rule TrojanDownloader_MSIL_Tnega_ABR_2147831438_0
         $x_1_4 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule TrojanDownloader_MSIL_Tnega_ABGR_2147837956_0
         $x_1_3 = "Olpjzffwnofonttsofbo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +154,7 @@ rule TrojanDownloader_MSIL_Tnega_SRPC_2147843337_0
         $x_1_2 = "185.216.71.120/Fopuetgl.bmp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule TrojanDownloader_MSIL_Tnega_ABNK_2147845030_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

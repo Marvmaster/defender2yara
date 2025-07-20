@@ -17,6 +17,7 @@ rule TrojanDropper_MSIL_Vobfus_A_2147683878_0
         $x_1_3 = {6f 30 00 00 0a 28 22 00 00 0a 28 23 00 00 0a 11 ?? 6f 31 00 00 0a 6f 15 00 00 0a 28 13 00 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

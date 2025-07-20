@@ -20,6 +20,7 @@ rule Ransom_Win32_Khaminga_A_2147726401_0
         $x_1_6 = "wmic.exe shadowcopy delete /nointeractive" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Backdoor_Win32_Truebot_A_2147724323_0
         $x_1_5 = "Upsss. Process exit code" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

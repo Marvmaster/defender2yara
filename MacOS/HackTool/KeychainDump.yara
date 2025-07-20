@@ -20,6 +20,7 @@ rule HackTool_MacOS_KeychainDump_A_2147750193_0
         $x_1_5 = "%s/Library/Keychains/login.keychain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule HackTool_MacOS_KeychainDump_C_2147838126_0
         $x_1_4 = "Dump Internet Passwords" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

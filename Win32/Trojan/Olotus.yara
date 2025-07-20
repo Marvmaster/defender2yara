@@ -17,6 +17,7 @@ rule Trojan_Win32_Olotus_A_2147734673_0
         $x_1_2 = "C:\\Users\\Meister\\Documents\\Projects\\BrokenShield\\Bin\\x86\\Release\\BrokenShield.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

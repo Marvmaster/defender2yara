@@ -20,6 +20,7 @@ rule Trojan_Win32_NetLoader_RPJ_2147826126_0
         $x_1_5 = "Xyi_1.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_Win32_NetLoader_RPT_2147835818_0
         $x_1_11 = "explorer.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Trojan_Win32_NetLoader_RPH_2147836593_0
         $x_1_6 = "ShellExecuteW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +112,7 @@ rule Trojan_Win32_NetLoader_CA_2147838516_0
         $x_1_12 = "Application Data\\sys.key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +134,7 @@ rule Trojan_Win32_NetLoader_RPX_2147895426_0
         $x_1_1 = {8d 4c 24 10 51 68 00 10 00 00 8d 54 24 30 52 33 ff 55 33 f6 89 7c 24 20 ff d3 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule Trojan_Win32_NetLoader_MBEP_2147895754_0
         $x_1_1 = {4b 5b 32 0c 1f 89 da d1 ea 83 c3 02 88 0c 17 81 fb ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule Trojan_Win32_NetLoader_MBER_2147895839_0
         $x_1_1 = {8a 4c 1f 01 32 0c 1f 89 da d1 ea 83 c3 02 88 0c 17 81 fb ?? ?? ?? ?? 60 89 fa 89 d1 61 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -193,6 +200,7 @@ rule Trojan_Win32_NetLoader_AW_2147901247_0
         $x_1_1 = {be e6 81 db 06 4e 5e 9d 32 06 60 fd 89 c6 57 59 fc 61 88 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +222,7 @@ rule Trojan_Win32_NetLoader_RPY_2147904051_0
         $x_1_1 = {8b 55 fc 03 51 3c 89 55 e8 8b 45 e8 8b 4d fc 03 48 78 89 4d e0 8b 55 e0 8b 45 fc 03 42 20 89 45 e4 8b 4d e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -235,6 +244,7 @@ rule Trojan_Win32_NetLoader_RPZ_2147904052_0
         $x_1_1 = {8a cb 32 4d fb 89 45 bc 8b 45 08 88 4c 15 f4 8b 0d ?? ?? ?? ?? 88 44 0d f5 85 f6 74 08 8a 55 f4 88 14 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

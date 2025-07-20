@@ -29,6 +29,7 @@ rule Backdoor_Win32_Visel_A_2147597056_0
         $x_10_14 = "KeServiceDescriptorTable" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_10_*))) or
             (all of ($x*))
@@ -80,6 +81,7 @@ rule Backdoor_Win32_Visel_C_2147598041_0
         $x_1_29 = "Accept: */*" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +106,7 @@ rule Backdoor_Win32_Visel_F_2147625166_0
         $x_1_5 = "2c49f800-c2dd-11cf-9ad6-0080c7e7b78d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +132,7 @@ rule Backdoor_Win32_Visel_F_2147625166_1
         $x_1_6 = "Xrat_DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

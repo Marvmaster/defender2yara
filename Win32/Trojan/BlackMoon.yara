@@ -19,6 +19,7 @@ rule Trojan_Win32_BlackMoon_DH_2147824222_0
         $x_1_4 = "stfu1.pixxvv.club" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_BlackMoon_DL_2147836468_0
         $x_1_1 = {31 39 06 19 06 08 23 06 10 08 30 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_BlackMoon_CF_2147843097_0
         $x_1_7 = "shutdown -s -t" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win32_BlackMoon_DAO_2147851319_0
         $x_1_4 = {de ce b7 cf c8 b7 e6 00 b2 c3 be f6 d6 ae b5 d8 00 ba da c9 ab c3 b5 b9 e5 00 b0 b5 d3 b0 b5 ba 00 cb a1 c8 f0 c2 ea}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_Win32_BlackMoon_DW_2147888226_0
         $x_1_3 = "C:\\ezdun.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Trojan_Win32_BlackMoon_DX_2147888233_0
         $x_1_7 = "DINGPADDINGXXPADDINGPADDINGXXPADDINGkhy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +180,7 @@ rule Trojan_Win32_BlackMoon_DT_2147889134_0
         $x_1_13 = "8D387102457B8467E46D5A06DF1A61C71603BF8C1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -204,6 +211,7 @@ rule Trojan_Win32_BlackMoon_GMH_2147889162_0
         $x_1_5 = "dujkZDN12ZF" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +233,7 @@ rule Trojan_Win32_BlackMoon_AB_2147901071_0
         $x_1_1 = {64 a1 30 00 00 00 0f b6 40 02 85 c0 75 27 64 a1 30 00 00 00 8b 40 68 83 e0 70 85 c0 75 17 64 a1 30 00 00 00 8b 40 18 83 78 0c 02 75 08 83 78 10 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -250,6 +259,7 @@ rule Trojan_Win32_BlackMoon_ASH_2147902326_0
         $x_1_5 = "14.18.141.27:33355/lcy.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +282,7 @@ rule Trojan_Win32_BlackMoon_GMC_2147904765_0
         $x_1_2 = "C:\\TEMP\\svchost.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -293,6 +304,7 @@ rule Trojan_Win32_BlackMoon_NN_2147908383_0
         $x_5_1 = {33 69 72 63 38 66 63 6c 34 72 72 38 39 34 66 32 75 72 35 ?? ?? ?? ?? 37 65 30 37 37 37 35 ?? ?? ?? ?? 6b 6e 71 36 38 77 37 38 6e 68 62 65 38}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -315,6 +327,7 @@ rule Trojan_Win32_BlackMoon_Z_2147911260_0
         $x_2_2 = "BlackMoon RunTime Error:" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -340,6 +353,7 @@ rule Trojan_Win32_BlackMoon_ASGE_2147911887_0
         $x_1_5 = "5B5252460B08D3B282C37E5E7A460E18" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -364,6 +378,7 @@ rule Trojan_Win32_BlackMoon_ASGK_2147912174_0
         $x_1_4 = "BlackMoon RunTime" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -394,6 +409,7 @@ rule Trojan_Win32_BlackMoon_ASGK_2147912174_1
         $x_1_10 = "sgw3ug232gg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -421,6 +437,7 @@ rule Trojan_Win32_BlackMoon_ASGL_2147912257_0
         $x_1_7 = "ywgn-43D24A32DCEDCCC6AC3582B5F33DAC3F3B9A41F01A5FD268&2DE61E9E3C382E52E6FE7D6D17940668" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -443,6 +460,7 @@ rule Trojan_Win32_BlackMoon_GXU_2147912567_0
         $x_1_2 = "BlackMoon RunTime" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -466,6 +484,7 @@ rule Trojan_Win32_BlackMoon_GLX_2147912749_0
         $x_1_3 = "BlackMoon RunTime" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -489,6 +508,7 @@ rule Trojan_Win32_BlackMoon_GLY_2147912798_0
         $x_1_3 = "blackmoon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -515,6 +535,7 @@ rule Trojan_Win32_BlackMoon_ASGJ_2147913073_0
         $x_1_6 = "CreateMutexW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -537,6 +558,7 @@ rule Trojan_Win32_BlackMoon_GMT_2147913949_0
         $x_1_2 = "F-@A&pwd=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -563,6 +585,7 @@ rule Trojan_Win32_BlackMoon_RP_2147914404_0
         $x_10_6 = "BlackMoon RunTime Error:" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -586,6 +609,7 @@ rule Trojan_Win32_BlackMoon_ASGH_2147915101_0
         $x_2_3 = "135 245 62 140 24 179 170 134 23" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -609,6 +633,7 @@ rule Trojan_Win32_BlackMoon_ASGI_2147916255_0
         $x_2_3 = "135 245 62 140 24 179 170 134 23" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -631,6 +656,7 @@ rule Trojan_Win32_BlackMoon_GXN_2147918131_0
         $x_1_2 = "BlackMoon RunTime Error" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -652,6 +678,7 @@ rule Trojan_Win32_BlackMoon_GNN_2147918868_0
         $x_10_1 = {8b 5d 0c 89 03 8b 4d f4 8b 55 0c 8b 12 83 c2 08 33 c0 33 db 51 0f b6 c8 fe c1 52 8a 34 39 02 de 8a 14 3b 88 14 39 88 34 3b 02 d6 0f b6 d2 8a 14 3a 8a 0c 30 32 ca 5a 88 0c 10 40 59 e2 d6}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -673,6 +700,7 @@ rule Trojan_Win32_BlackMoon_GNX_2147919139_0
         $x_10_1 = {89 45 d4 68 00 00 00 00 68 48 00 00 00 ff 75 e4 ff 75 d4 ff 75 fc 33 c0 ff 15 ?? ?? ?? ?? ?? ?? 68 3c 00 00 00 ff 75 e4 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -695,6 +723,7 @@ rule Trojan_Win32_BlackMoon_AT_2147919690_0
         $x_1_2 = {80 fe 3d 66 0f ab f9 f9 89 f9 66 0f bb fe 48 ff ce c1 d6 02 f8 29 d9 66 0f bc f6 48 89 e6 f5 85 d7 f9 48 81 fd a8 a7 5b 69 48 83 ef 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -720,6 +749,7 @@ rule Trojan_Win32_BlackMoon_DA_2147920315_0
         $x_1_5 = "CryptDestroyHash" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -749,6 +779,7 @@ rule Trojan_Win32_BlackMoon_NG_2147920700_0
         $x_1_6 = "Eai.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -774,6 +805,7 @@ rule Trojan_Win32_BlackMoon_ASGM_2147920918_0
         $x_1_5 = "c3\\npc\\744\\100.c3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -797,6 +829,7 @@ rule Trojan_Win32_BlackMoon_GNT_2147924099_0
         $x_1_3 = "BlackMoon RunTime Error" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -822,6 +855,7 @@ rule Trojan_Win32_BlackMoon_GNT_2147924099_1
         $x_1_5 = "BlackMoon RunTime Error" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -854,6 +888,7 @@ rule Trojan_Win32_BlackMoon_AGN_2147924228_0
         $x_1_8 = "api=JUqYrgp|H370JWlhZKHiejE2lZA|MH171C|MH171C" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -875,6 +910,7 @@ rule Trojan_Win32_BlackMoon_ABM_2147924695_0
         $x_1_1 = {8a 07 47 08 c0 74 dc 89 f9 79 07 0f b7 07 47 50 47 b9 57 48 f2 ae 55 ff 96 3c 64 2d 00 09 c0 74 07 89 03 83 c3 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -900,6 +936,7 @@ rule Trojan_Win32_BlackMoon_ABM_2147924695_1
         $x_5_5 = "B869706B42F0C202E5667F22DA1C9CF5" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -923,6 +960,7 @@ rule Trojan_Win32_BlackMoon_NIT_2147927780_0
         $x_1_3 = "blackmoon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -946,6 +984,7 @@ rule Trojan_Win32_BlackMoon_GTC_2147931045_0
         $x_1_3 = "BlackMoon RunTime Error" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -967,6 +1006,7 @@ rule Trojan_Win32_BlackMoon_ABMN_2147931211_0
         $x_1_1 = {68 40 00 00 00 68 00 10 00 00 68 64 00 00 00 68 00 00 00 00 ff 15 ?? ?? ?? ?? ?? ?? ?? ?? 39 65 ec 74 0d 68 06 00 00 00 e8 ?? ?? ?? ?? 83 c4 04 89 45 f8 89 65 ec 68 40 00 00 00 68 00 10 00 00 68 64 00 00 00 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -989,6 +1029,7 @@ rule Trojan_Win32_BlackMoon_GTS_2147932046_0
         $x_1_2 = "BlackMoon RunTime Error" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1011,6 +1052,7 @@ rule Trojan_Win32_BlackMoon_GNS_2147932356_0
         $x_5_2 = {95 32 04 20 83 c3 43 5d 80 30 39 b8 ?? ?? ?? ?? d5 f7 8c a2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1033,6 +1075,7 @@ rule Trojan_Win32_BlackMoon_GKT_2147933349_0
         $x_1_2 = "BlackMoon RunTime Error" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1056,6 +1099,7 @@ rule Trojan_Win32_BlackMoon_GTK_2147934695_0
         $x_1_3 = "BlackMoon RunTime Error" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

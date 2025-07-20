@@ -19,6 +19,7 @@ rule Worm_MSIL_Vishu_A_2147694584_0
         $x_1_5 = {72 75 6e 73 68 75 74 00 72 75 6e 70 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

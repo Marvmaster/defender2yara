@@ -22,6 +22,7 @@ rule Trojan_Win32_Sybfusha_A_2147706780_0
         $x_1_8 = "cmd /c tskill /f icq" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or

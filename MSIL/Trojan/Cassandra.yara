@@ -16,6 +16,7 @@ rule Trojan_MSIL_Cassandra_GPPD_2147938488_0
         $x_4_1 = {91 9c 61 d2 81 01 00 00 01 11 ?? 1f ?? 91 13 10}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

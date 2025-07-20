@@ -25,6 +25,7 @@ rule HackTool_MSIL_MiniNinja_A_2147811733_0
         $x_1_10 = "HandleBeaconClientRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

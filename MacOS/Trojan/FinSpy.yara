@@ -19,6 +19,7 @@ rule Trojan_MacOS_FinSpy_A_2147764810_0
         $x_1_4 = "org.logind.ctp.archive" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MacOS_FinSpy_B_2147795253_0
         $x_1_4 = "Storage.framework /Library/Frameworks logind.plist /Library/LaunchAgents" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_TinyCrypt_A_2147758549_0
         $x_1_3 = "del  \"%s\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_TinyCrypt_PA_2147758558_0
         $x_1_2 = {99 b9 00 00 09 00 f7 f9 89 ?? e0 8b 55 ?? 33 55 ?? 89 55 ?? 8b ?? e0 2d 00 10 00 00 89 ?? e0 c1 45 ?? 07 8b ?? e0 c1 e1 ?? 89 4d e0 8b 55 ?? 33 55 ?? 89 55 ?? 8b 45 ?? 8b 4d f4 8b 55 ?? 89 14 81 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

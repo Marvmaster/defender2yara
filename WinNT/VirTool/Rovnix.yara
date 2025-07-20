@@ -16,6 +16,7 @@ rule VirTool_WinNT_Rovnix_A_2147649638_0
         $x_1_2 = {8b 54 24 04 85 d2 b8 0d 00 00 c0 74 13 8b 4c 24 10 85 c9 74 1a 8b 44 24 08 50 52 ff d1 c2 10 00 8b 4c 24 0c 85 c9 74 07 8b 54 24 08 52 ff d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule VirTool_WinNT_Rovnix_B_2147681749_0
         $x_1_2 = {81 3b 03 00 00 80 57 8b 7d 14 75 0f 56 8d b7 b8 00 00 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule VirTool_WinNT_Rovnix_C_2147683868_0
         $x_1_2 = {83 f8 2a 74 0d 0f b6 4d ff 83 f9 3b 0f 85 ?? ?? ?? ?? 8b 55 f4 52 8b 45 e4 50 8b 4d e0 51 e8 ?? ?? ?? ?? 85 c0 0f 84 ?? ?? ?? ?? c7 45 f8 22 00 00 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule VirTool_WinNT_Rovnix_D_2147690904_0
         $x_1_3 = {ff 3c 2a 74 ?? 3c 3b 74 ?? 3c 28 74 04 3c 3c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule VirTool_WinNT_Rovnix_E_2147734236_0
         $x_1_4 = "*\\safemon\\*.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

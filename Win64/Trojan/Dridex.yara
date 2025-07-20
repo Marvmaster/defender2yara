@@ -17,6 +17,7 @@ rule Trojan_Win64_Dridex_G_2147741711_0
         $x_1_2 = {eb 88 a7 e4 12 3c b8 89 bb ce 8a 19 90 8a cf aa bc 8a d8 7e da 0a cb b1 cf e7 9b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_Dridex_GH_2147742133_0
         $x_1_4 = {e5 44 15 de 71 f2 89 ?? ?? e6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win64_Dridex_GH_2147742133_1
         $x_10_2 = {4c 89 f2 44 8b 5c 24 ?? 44 89 44 24 ?? 45 89 d8 8b 6c 24 ?? 44 89 4c 24 ?? 41 89 e9 48 89 7c 24 ?? ff d0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win64_Dridex_GJ_2147742901_0
         $x_1_2 = {3f 89 ea 39 b3 48 bf df 19 51 e6 f4 a6 34 75 a6 48 b3 05 bc 4b 25 9c ef e7 8f 97 e1 4a 37 08 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Win64_Dridex_GG_2147745801_0
         $x_1_8 = "EGooglelOffqQMl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule Trojan_Win64_Dridex_GA_2147746110_0
         $x_10_1 = {43 8a 1c 11 8b 84 24 ?? ?? ?? ?? 33 84 24 ?? ?? ?? ?? 43 8a 34 10 40 28 de 89 84 24 ?? ?? ?? ?? 4c 8b 84 24 ?? ?? ?? ?? 4c 8b 8c 24 ?? ?? ?? ?? 4c 29 c2 4c 29 c9 42 88 b4 14 ?? ?? ?? ?? 49 01 ca 48 8b 4c 24 ?? 48 89 8c 24 ?? ?? ?? ?? 4c 89 94 24 ?? ?? ?? ?? 48 89 8c 24 ?? ?? ?? ?? 49 39 d2 0f 84 ?? ?? ?? ?? e9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule Trojan_Win64_Dridex_GA_2147746110_1
         $x_10_2 = {42 8a 1c 0a 8b 44 24 ?? 83 f0 ff 48 8b 94 24 ?? ?? ?? ?? 44 28 d3 48 29 d1 89 84 24 ?? ?? ?? ?? 42 88 9c 0c ?? ?? ?? ?? 66 8b b4 24 ?? ?? ?? ?? 66 83 f6 ff 66 89 b4 24 ?? ?? ?? ?? 4d 01 d9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +186,7 @@ rule Trojan_Win64_Dridex_GA_2147746110_2
         $x_1_3 = "raisingn587" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +215,7 @@ rule Trojan_Win64_Dridex_GA_2147746110_3
         $x_1_8 = "lBelfast,filedV" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -231,6 +240,7 @@ rule Trojan_Win64_Dridex_GZ_2147747987_0
         $x_1_4 = "raisingn587" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -257,6 +267,7 @@ rule Trojan_Win64_Dridex_GB_2147748139_0
         $x_1_6 = "tipsQPCwhowelcome" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -280,6 +291,7 @@ rule Trojan_Win64_Dridex_GB_2147748139_1
         $x_1_3 = "raisingn587" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -303,6 +315,7 @@ rule Trojan_Win64_Dridex_GC_2147749194_0
         $x_1_3 = "raisingn587" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -330,6 +343,7 @@ rule Trojan_Win64_Dridex_GC_2147749194_1
         $x_1_7 = "Mupdates.92thethedaxztheopened" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -356,6 +370,7 @@ rule Trojan_Win64_Dridex_SA_2147750271_0
         $x_1_6 = "fitoWusedChrome" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -384,6 +399,7 @@ rule Trojan_Win64_Dridex_SB_2147750345_0
         $x_1_8 = "TrackPopupMenu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -410,6 +426,7 @@ rule Trojan_Win64_Dridex_GK_2147751549_0
         $x_1_2 = {d8 e1 e9 40 62 f4 64 56 9f 17 1a 47 6f c4 11 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -436,6 +453,7 @@ rule Trojan_Win64_Dridex_SC_2147751963_0
         $x_1_6 = "37toGOg78inscoresqbubba" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -465,6 +483,7 @@ rule Trojan_Win64_Dridex_MR_2147765415_0
         $x_1_9 = "kernel32ntdll.dl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -489,6 +508,7 @@ rule Trojan_Win64_Dridex_2147766776_0
         $x_1_3 = {48 8b 04 24 8b 4c 24 ?? 48 8b 54 24 ?? 89 4c 24 ?? 4c 8b 44 24 ?? 45 8a 0c 00 48 81 f2 ?? ?? ?? ?? 4c 8b 54 24 ?? 45 88 0c 02 48 01 d0 48 8b 54 24 ?? 48 39 d0 48 89 04 24 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -511,6 +531,7 @@ rule Trojan_Win64_Dridex_MY_2147770162_0
         $x_1_2 = {66 8b 44 24 ?? 66 35 [0-3] 8b [0-3] 66 89 [0-3] 81 f1 [0-4] 8b [0-3] 89 [0-3] 44 8b [0-3] 44 8a [0-3] 41 80 [0-3] 44 88 [0-3] 41 39 c8 77 c8 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -540,6 +561,7 @@ rule Trojan_Win64_Dridex_MZ_2147770332_0
         $x_1_9 = "oInECanaryyitChrome" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -568,6 +590,7 @@ rule Trojan_Win64_Dridex_ALE_2147781342_0
         $x_3_8 = "SCardReleaseContext" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -596,6 +619,7 @@ rule Trojan_Win64_Dridex_SB_2147781538_0
         $x_3_8 = "could2eBugsKdevelopers,z9" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -624,6 +648,7 @@ rule Trojan_Win64_Dridex_SB_2147781538_1
         $x_3_8 = "lprotocoltranslationl" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -648,6 +673,7 @@ rule Trojan_Win64_Dridex_GW_2147782120_0
         $x_1_4 = "TeltwFoo.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -675,6 +701,7 @@ rule Trojan_Win64_Dridex_GW_2147782120_1
         $x_1_4 = "raisingn587" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -698,6 +725,7 @@ rule Trojan_Win64_Dridex_GY_2147782371_0
         $x_1_3 = "raisingn587" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -724,6 +752,7 @@ rule Trojan_Win64_Dridex_SA_2147782695_0
         $x_3_6 = "CRYPT32.dll" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -745,6 +774,7 @@ rule Trojan_Win64_Dridex_PQ_2147783288_0
         $x_1_1 = {48 8b 04 24 48 0d [0-4] 48 89 [0-3] 48 03 [0-3] 48 89 [0-3] 48 8b [0-3] 48 39 c1 0f 84 [0-4] e9 [0-4] b8 [0-4] 89 c1 48 2b [0-3] 48 89 [0-3] 8a [0-3] 80 [0-2] 88 [0-3] e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -769,6 +799,7 @@ rule Trojan_Win64_Dridex_GD_2147783526_0
         $x_1_4 = "raisingn587" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -794,6 +825,7 @@ rule Trojan_Win64_Dridex_B_2147783531_0
         $x_3_5 = "OemToCharBuffW" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -819,6 +851,7 @@ rule Trojan_Win64_Dridex_S_2147783532_0
         $x_3_5 = "NdrClearOutParameters" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -846,6 +879,7 @@ rule Trojan_Win64_Dridex_ME_2147783533_0
         $x_3_7 = "PathRemoveArgsW" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -873,6 +907,7 @@ rule Trojan_Win64_Dridex_MD_2147783534_0
         $x_3_7 = "GetSaveFileNameA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -900,6 +935,7 @@ rule Trojan_Win64_Dridex_MV_2147783542_0
         $x_3_7 = "GetUrlCacheEntryInfoA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -921,6 +957,7 @@ rule Trojan_Win64_Dridex_PS_2147783566_0
         $x_1_1 = {45 89 ca 45 21 c2 45 89 d0 45 89 c3 42 8a [0-2] 66 8b [0-3] 66 81 [0-3] 66 89 [0-3] 48 8b [0-2] 48 81 [0-5] 44 8b [0-3] 48 89 [0-3] 44 29 ?? c6 [0-4] 45 89 ?? 44 89 ?? 44 8b [0-3] 41 81 [0-5] 4c 8b [0-3] 41 8a [0-2] 44 89 [0-3] 40 28 ?? 48 8b [0-3] 40 88 [0-2] 41 01 ?? 44 89 [0-3] 8b [0-3] 41 39 ?? 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -943,6 +980,7 @@ rule Trojan_Win64_Dridex_AS_2147783680_0
         $x_10_2 = {41 8b c2 b9 40 00 00 00 83 e0 3f 2b c8 48 d3 cf 49 33 fa 4b 87 bc f7 00 ca 09}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -970,6 +1008,7 @@ rule Trojan_Win64_Dridex_AS_2147783680_1
         $x_3_7 = "GDI32.dll" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -991,6 +1030,7 @@ rule Trojan_Win64_Dridex_PT_2147783762_0
         $x_1_1 = {f6 e3 88 44 [0-2] 8b [0-3] 41 89 ?? 44 89 ?? c7 [0-7] 66 8b [0-3] 66 29 ?? 4c 8b [0-3] 41 8a [0-2] 40 28 ?? 44 8b [0-3] 66 89 [0-3] 66 8b [0-3] 66 83 [0-2] 41 81 [0-5] 66 89 [0-3] 4c 8b [0-3] 41 88 [0-2] 44 01 ?? 8a [0-3] 88 [0-3] 66 8b [0-3] 66 81 [0-3] 66 89 [0-3] 44 8b [0-3] 44 39 ?? 89 ?? ?? ?? 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1017,6 +1057,7 @@ rule Trojan_Win64_Dridex_AK_2147783767_0
         $x_3_6 = "aincluding1p" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1044,6 +1085,7 @@ rule Trojan_Win64_Dridex_AK_2147783767_1
         $x_3_7 = "DirSyncScheduleDialog" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -1072,6 +1114,7 @@ rule Trojan_Win64_Dridex_AH_2147783881_0
         $x_3_8 = "OpenPersonalTrustDBDialog" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -1099,6 +1142,7 @@ rule Trojan_Win64_Dridex_AI_2147783882_0
         $x_3_7 = "%R: p3" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1122,6 +1166,7 @@ rule Trojan_Win64_Dridex_GE_2147783931_0
         $x_1_3 = "rrpiode.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1146,6 +1191,7 @@ rule Trojan_Win64_Dridex_GE_2147783931_1
         $x_10_4 = "raisingn587" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1170,6 +1216,7 @@ rule Trojan_Win64_Dridex_PV_2147784005_0
         $x_1_1 = {8a 44 24 47 24 ?? 88 [0-6] 8b [0-6] 48 8b [0-3] 48 83 [0-2] 48 89 [0-6] 81 [0-5] 48 8b [0-8] 2a [0-3] 48 8b [0-3] 4c 8b [0-3] 41 88 [0-2] 03 [0-6] 89 [0-6] 8a [0-5] 88 [0-6] 44 8b [0-5] c9 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1193,6 +1240,7 @@ rule Trojan_Win64_Dridex_GF_2147784088_0
         $x_10_3 = "raisingn587" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1220,6 +1268,7 @@ rule Trojan_Win64_Dridex_DB_2147784161_0
         $x_3_7 = "GetSidLengthRequired" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1241,6 +1290,7 @@ rule Trojan_Win64_Dridex_PW_2147784700_0
         $x_1_1 = {89 f2 4c 8b [0-3] 49 81 [0-5] 4c 89 [0-3] 4c [0-4] 41 8a [0-2] 28 d8 48 8b [0-3] 48 89 [0-3] 4c 8b [0-3] 41 88 [0-2] 66 8b [0-3] 66 81 [0-3] 66 89 [0-3] 45 01 ?? 66 c7 [0-5] 44 89 [0-3] 48 29 ?? 48 89 [0-3] 44 8b [0-3] 45 39 ?? 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1268,6 +1318,7 @@ rule Trojan_Win64_Dridex_DC_2147784827_0
         $x_3_7 = "X6mo4:" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1291,6 +1342,7 @@ rule Trojan_Win64_Dridex_DK_2147785056_0
         $x_3_3 = "kdtltdybip" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1317,6 +1369,7 @@ rule Trojan_Win64_Dridex_DK_2147785056_1
         $x_3_6 = "HICON_UserMarshal" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1344,6 +1397,7 @@ rule Trojan_Win64_Dridex_DK_2147785056_2
         $x_3_7 = "DeleteCriticalSection" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1371,6 +1425,7 @@ rule Trojan_Win64_Dridex_AY_2147786453_0
         $x_3_7 = "Discord helper" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1398,6 +1453,7 @@ rule Trojan_Win64_Dridex_DM_2147786457_0
         $x_3_7 = "VirtualAlloc" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1426,6 +1482,7 @@ rule Trojan_Win64_Dridex_DM_2147786457_1
         $x_3_8 = "KillTimer" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1453,6 +1510,7 @@ rule Trojan_Win64_Dridex_DV_2147786528_0
         $x_3_7 = "R.\\yQZNtyoof" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1475,6 +1533,7 @@ rule Trojan_Win64_Dridex_GI_2147786538_0
         $x_10_2 = {e6 2f 44 8b 84 24 [0-4] 44 8b 8c 24 [0-4] 41 81 c0 c7 a3 49 b0 44 29 c8 48 89 4c 24 60 89 44 24 5c e8 [0-4] 8b 84 24 [0-4] 05 b9 b3 49 b0 c6 84 24 [0-4] ?? 48 8b 4c 24 ?? 89 44 24 ?? e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1497,6 +1556,7 @@ rule Trojan_Win64_Dridex_GI_2147786538_1
         $x_10_2 = {44 8b 9c 24 ?? ?? ?? ?? 45 89 d9 66 c7 84 24 ?? ?? ?? ?? ?? ?? 48 89 54 24 ?? 4c 89 ca 44 8b 5c 24 ?? 44 89 44 24 ?? 45 89 d8 44 8b 4c 24 ?? ff d0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1524,6 +1584,7 @@ rule Trojan_Win64_Dridex_DH_2147787012_0
         $x_3_7 = "tyharsenal112233" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1550,6 +1611,7 @@ rule Trojan_Win64_Dridex_ALH_2147787014_0
         $x_3_6 = "VirtualAlloc" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1577,6 +1639,7 @@ rule Trojan_Win64_Dridex_ALK_2147787015_0
         $x_3_7 = "FindFirstFreeAce" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1602,6 +1665,7 @@ rule Trojan_Win64_Dridex_AMT_2147787016_0
         $x_3_5 = "CloseAppExecutionAlias" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1627,6 +1691,7 @@ rule Trojan_Win64_Dridex_AMK_2147787040_0
         $x_3_5 = "GetCurrentThreadId" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1653,6 +1718,7 @@ rule Trojan_Win64_Dridex_ACD_2147787470_0
         $x_3_6 = "HICON_UserMarshal" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1679,6 +1745,7 @@ rule Trojan_Win64_Dridex_ACL_2147787471_0
         $x_3_6 = "UrlUnescapeA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1704,6 +1771,7 @@ rule Trojan_Win64_Dridex_ACL_2147787471_1
         $x_3_5 = "StrTrimW" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1730,6 +1798,7 @@ rule Trojan_Win64_Dridex_DG_2147787525_0
         $x_3_6 = "HICON_UserMarshal" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1757,6 +1826,7 @@ rule Trojan_Win64_Dridex_DG_2147787525_1
         $x_3_7 = "GetSecurityDescriptorOwner" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1784,6 +1854,7 @@ rule Trojan_Win64_Dridex_AJ_2147787528_0
         $x_3_7 = "boundaryfore3.0nversionsnews" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1811,6 +1882,7 @@ rule Trojan_Win64_Dridex_AGH_2147788054_0
         $x_3_7 = "SetSystemTimeAdjustment" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1838,6 +1910,7 @@ rule Trojan_Win64_Dridex_AHB_2147788181_0
         $x_3_7 = "URLotherWStableU6Mfailed11578the" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1865,6 +1938,7 @@ rule Trojan_Win64_Dridex_ABM_2147788954_0
         $x_3_7 = "CreateDiscardableBitmap" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1892,6 +1966,7 @@ rule Trojan_Win64_Dridex_AHC_2147789092_0
         $x_3_7 = "Q2hpbGthdFNvY2tldA==" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1919,6 +1994,7 @@ rule Trojan_Win64_Dridex_AKN_2147792998_0
         $x_3_7 = "tCatart9dstpundtronttstdX" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1944,6 +2020,7 @@ rule Trojan_Win64_Dridex_AMQ_2147793332_0
         $x_3_5 = "RpcBindingSetAuthInfoA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1966,6 +2043,7 @@ rule Trojan_Win64_Dridex_AA_2147793526_0
         $x_10_2 = {83 e2 1f 89 d2 41 89 d0 8b 54 24 4c 89 54 24 4c 89 c2 41 89 d1 4c 8b 54 24 30 47 8a 1c 0a 46 2a 1c 01 48 8b 4c 24 20 46 88 1c 09}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1988,6 +2066,7 @@ rule Trojan_Win64_Dridex_EF_2147794076_0
         $x_10_2 = {48 83 c1 01 89 94 24 88 00 00 00 48 89 4c 24 50 48 83 f9 25 89 44 24 3c 0f 84 ac 00 00 00 eb 46 8b 44 24 6c 0f af c0}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2015,6 +2094,7 @@ rule Trojan_Win64_Dridex_EF_2147794076_1
         $x_3_7 = "VirtualAlloc" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2036,6 +2116,7 @@ rule Trojan_Win64_Dridex_EC_2147794286_0
         $x_5_1 = {45 32 f6 33 ff 42 8b 94 28 88 00 00 00 41 89 d2 46 8b 8c 28 8c 00 00 00 44 03 ca 43 8b 44 2a 20 47 8b 44 2a 24 49 03 c5 4d 03 c5}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2062,6 +2143,7 @@ rule Trojan_Win64_Dridex_EC_2147794286_1
         $x_1_6 = "VirtualProtectEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -2088,6 +2170,7 @@ rule Trojan_Win64_Dridex_EC_2147794286_2
         $x_3_6 = "GetLastError" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2116,6 +2199,7 @@ rule Trojan_Win64_Dridex_EC_2147794286_3
         $x_3_8 = "CreateMetaFileA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2138,6 +2222,7 @@ rule Trojan_Win64_Dridex_QQ_2147794583_0
         $x_10_2 = {33 4c 24 24 89 4c 24 24 4c 8b 44 24 18 45 8a 0c 00 4c 8b 54 24 08 45 88 0c 02 48 8b 4c 24 28 48 d3 ea}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2160,6 +2245,7 @@ rule Trojan_Win64_Dridex_QR_2147794689_0
         $x_10_2 = {88 4c 24 47 d3 ea 89 94 24 9c 01 00 00 89 c2}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2182,6 +2268,7 @@ rule Trojan_Win64_Dridex_AQ_2147797774_0
         $x_10_2 = {4c 8b 55 90 4c 01 55 c0 4c 03 65 90 4c 8b 55 a0 4c 03 55 a8 49 83 ea 0a}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2209,6 +2296,7 @@ rule Trojan_Win64_Dridex_AC_2147798148_0
         $x_3_7 = "GetSecurityDescriptorGroup" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2235,6 +2323,7 @@ rule Trojan_Win64_Dridex_AG_2147798232_0
         $x_3_6 = "Girenderingmed4availablexxrelease" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2262,6 +2351,7 @@ rule Trojan_Win64_Dridex_CW_2147799491_0
         $x_3_7 = "fromChrome9September9" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2283,6 +2373,7 @@ rule Trojan_Win64_Dridex_QW_2147799572_0
         $x_10_1 = {48 8b 45 d0 8a 08 8b 55 94 89 55 fc 48 8b 45 c0 49 89 c0 49 83 c0 01 4c 89 45 c0 44 8b 4d 98 41 81 c1 5e 0b 00 00 44 89 4d fc 88 08}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2307,6 +2398,7 @@ rule Trojan_Win64_Dridex_QW_2147799572_1
         $x_3_4 = "Chrome17asksZIremoved.wasyzA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2328,6 +2420,7 @@ rule Trojan_Win64_Dridex_RPJ_2147805657_0
         $x_1_1 = {41 88 1c 3a 03 8c 24 ?? ?? ?? ?? 66 44 8b 4c 24 ?? 66 41 83 f1 ?? 66 44 89 8c 24 ?? ?? ?? ?? 8b 94 24 ?? ?? ?? ?? 4c 8b 94 24 ?? ?? ?? ?? 4c 89 94 24 ?? ?? ?? ?? 89 8c 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2355,6 +2448,7 @@ rule Trojan_Win64_Dridex_QM_2147805721_0
         $x_3_7 = "bitto4IncognitoIKinf" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2376,6 +2470,7 @@ rule Trojan_Win64_Dridex_QV_2147806179_0
         $x_10_1 = {66 44 8b 9c 24 ce 01 00 00 44 89 ce 09 f6 89 b4 24 bc 01 00 00 4c 89 94 24 a0 01 00 00 8a 9c 24 bb 01 00 00 28 d9 49 89 c2 88 8c 24 bb 01 00 00 48 89 c1 4c 89 54 24 50 48 89 54 24 48 88 5c 24 47 4c 89 44 24 38 44 89 4c 24 34 66 44 89 5c 24 32}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2397,6 +2492,7 @@ rule Trojan_Win64_Dridex_FD_2147808834_0
         $x_10_1 = {48 8b 4d 38 48 89 45 60 48 89 4d 00 48 8b 45 c0 48 89 45 60 48 8b 4d e8 8a 55 4b 88 11 8b 85 84 00 00 00 35 5e 52 00 00 8b 4d 2c 03 4d 2c 8b 55 5c 89 4d 2c 01 c2}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2424,6 +2520,7 @@ rule Trojan_Win64_Dridex_EB_2147809229_0
         $x_3_7 = ".usedVyTheMLin" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2445,6 +2542,7 @@ rule Trojan_Win64_Dridex_CE_2147809419_0
         $x_10_1 = {48 83 ec 68 31 c0 89 c1 48 8b 54 24 60 c7 44 24 5c 77 d0 cb 62 8b 44 24 5c 66 44 8b 44 24 5a 66 44 89 44 24 5a 48 81 c2 c3 12 4e 1f 41 89 c1 41 81 c1 89 2f 34 9d 48 89 54 24 60 41 89 c2 41 81 ca 27 04 40 54 44 89 54 24 54}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2466,6 +2564,7 @@ rule Trojan_Win64_Dridex_DE_2147810888_0
         $x_10_1 = {44 8b 54 24 50 44 2b 54 24 50 45 01 f1 45 21 c1 44 89 54 24 50 45 89 c8 44 89 c6 44 8a 1c 37 48 8b 74 24 30 44 32 1c 0e 44 8b 44 24 50 44 89 44 24 50 4c 8b 64 24 40 45 88 1c 0c}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2492,6 +2591,7 @@ rule Trojan_Win64_Dridex_GTM_2147811348_0
         $x_1_6 = "MprAdminServerConnect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2518,6 +2618,7 @@ rule Trojan_Win64_Dridex_ZR_2147811991_0
         $x_1_6 = "WhmnqagscmuFanedsrCowmbybtm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2539,6 +2640,7 @@ rule Trojan_Win64_Dridex_GZS_2147814241_0
         $x_10_1 = {48 8b 44 24 08 8b 4c 24 3c 89 4c 24 3c 48 8b 54 24 28 44 8a 04 02 4c 8b 4c 24 30 4c 89 4c 24 40 66 c7 44 24 4e ?? ?? 4c 8b 54 24 50 49 81 c2 ?? ?? ?? ?? 48 c7 44 24 40 ?? ?? ?? ?? 4c 8b 5c 24 18 45 88 04 03 4d 29 c9 4c 89 4c 24 40 4c 01 d0 69 4c 24 3c 3a 17 70 4d 89 4c 24 3c 8b 4c 24 3c 33 4c 24 3c 89 4c 24 3c 4c 8b 4c 24 20 4c 39 c8 48 89 44 24 08 74 10 eb 87}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2561,6 +2663,7 @@ rule Trojan_Win64_Dridex_BB_2147817279_0
         $x_1_2 = "FGTRYYB.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2582,6 +2685,7 @@ rule Trojan_Win64_Dridex_DF_2147818494_0
         $x_1_1 = {48 8b 04 24 48 8b 4c 24 28 48 81 c1 81 c5 dd a6 48 8b 54 24 18 44 8a 04 02 4c 8b 4c 24 08 45 88 04 01 66 44 8b 54 24 26 66 41 81 f2 93 a2 66 44 89 54 24 26 48 01 c8 48 8b 4c 24 10 48 39 c8 48 89 04 24 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2603,6 +2707,7 @@ rule Trojan_Win64_Dridex_ARA_2147836261_0
         $x_2_1 = {48 8b 44 24 18 48 8b 4c 24 10 8a 14 01 4c 8b 04 24 41 88 14 00 48 83 c0 01 48 89 44 24 18 4c 8b 4c 24 08 4c 39 c8 75 d8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2624,6 +2729,7 @@ rule Trojan_Win64_Dridex_BD_2147836928_0
         $x_2_1 = {42 8a 1c 3e 66 44 89 54 24 66 4c 8b 7c 24 28 4d 29 ff 44 30 cb 4c 89 7c 24 68 4c 8b 7c 24 50 43 88 1c 37 49 83 c6 01 4c 8b 24 24 4d 39 e6 8b 4c 24 0c 89 4c 24 18 89 54 24 1c 4c 89 74 24 20 74}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2645,6 +2751,7 @@ rule Trojan_Win64_Dridex_BE_2147837081_0
         $x_2_1 = {43 32 04 3a 8b 74 24 1c 89 74 24 6c 4c 8b 7c 24 38 43 88 04 37 4c 8b 64 24 10 4d 21 e4 49 83 c6 01 4c 89 64 24 60 4c 8b 64 24 58 4c 89 74 24 50 8b 7c 24 04 89 7c 24 44 89 54 24 48 66 8b 4c 24 6a 66 89 4c 24 6a 4d 39 e6 0f 85}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2666,6 +2773,7 @@ rule Trojan_Win64_Dridex_EM_2147842498_0
         $x_5_1 = {8b 4c 24 34 89 ca 83 e2 1f 41 89 c8 45 89 c1 89 d2 41 89 d2 4c 8b 5c 24 18 43 8a 1c 0b 42 2a 1c 10 48 8b 44 24 08}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2687,6 +2795,7 @@ rule Trojan_Win64_Dridex_EM_2147842498_1
         $x_5_1 = {4d 6b d0 28 49 89 c3 4d 01 d3 49 83 c3 1c 4d 6b d0 28 48 89 c6 4c 01 d6 48 83 c6 20 4d 6b d0 28 4c 01 d0 89 cf 41 89 fa 4c 03 94 24 b8 00 00 00 45 00 c9 41 8b 3b 48 8b 16 33 38}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2708,6 +2817,7 @@ rule Trojan_Win64_Dridex_RPY_2147843431_0
         $x_1_1 = {8b 44 24 40 48 8b 4c 24 58 48 8b 54 24 18 44 8a 04 0a 25 ff 00 00 00 89 c0 89 c1 4c 8b 4c 24 10 45 32 04 09 48 8b 4c 24 58 4c 8b 54 24 28 45 88 04 0a 48 8b 4c 24 58 48 83 c1 01 4c 8b 5c 24 30 48 89 4c 24 50 8b 44 24 44 89 44 24 4c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2731,6 +2841,7 @@ rule Trojan_Win64_Dridex_DS_2147853135_0
         $x_1_3 = "TcLrNhYKFKdkmXtn" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2752,6 +2863,7 @@ rule Trojan_Win64_Dridex_GME_2147888261_0
         $x_10_1 = {66 8b 44 24 56 8a 4c 24 07 80 f1 ff 48 8b 54 24 58 88 4c 24 71 66 05 4a 92 48 81 f2 ?? ?? ?? ?? 4c 8b 44 24 28 49 01 d0 66 c7 44 24 72 93 41 4c 89 44 24 20 66 3b 44 24 46 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2774,6 +2886,7 @@ rule Trojan_Win64_Dridex_MKV_2147900569_0
         $x_1_2 = {45 89 c8 44 89 c2 44 8b 84 24 ?? ?? ?? ?? 41 81 c0 30 88 7e 1f 44 89 84 24 88 00 00 00 8a 0c 10 88 8c 24 ?? ?? ?? ?? 44 8b 44 24 4c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2796,6 +2909,7 @@ rule Trojan_Win64_Dridex_GXZ_2147904601_0
         $x_1_2 = "@.uclgtf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2818,6 +2932,7 @@ rule Trojan_Win64_Dridex_ASFS_2147906242_0
         $x_2_2 = {74 43 74 74 69 72 74 74 69 73 74 69 75 6e 69 74 72 69 6e 74 74 73 74 64 58 00 4e 74 69 74 74 69 74 39 74 43 69 72 6f 69 74 37 42 74 69 74 00 67 74 69 66 74 72 33 66 69 69 74 69 6c 4f 74 6f 74 69 65 69 73 00 74 74 59 36 56 70 65 74 76 74 64 75 73 65 00 74 74 65 79 66 42 53 6b 69 61 68 00 4e 43 6b 75 33 4f 69 6e 00 62 6a 61 6b 65 74 75 63 6b 65 72 4a 69 6e 66 72 6f 6d 7a 47}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2840,6 +2955,7 @@ rule Trojan_Win64_Dridex_ADR_2147924205_0
         $x_1_2 = "Eofkiwerez4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2862,6 +2978,7 @@ rule Trojan_Win64_Dridex_ADR_2147924205_1
         $x_2_2 = {44 29 c2 44 8b 4c 24 28 89 54 24 3c 44 8a 54 24 39 66 44 8b 5c 24 22 66 44 89 5c 24 3a 41 80 f2 28 c6 44 24 4f 18 8a 5c 24 39 48 8b 44 24 18 48 83 f0 ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2883,6 +3000,7 @@ rule Trojan_Win64_Dridex_LZV_2147931184_0
         $x_5_1 = {8a 14 01 4c 8b 44 24 08 41 88 14 00 8a 54 24 ?? 80 f2 ff 88 54 24 27 48 83 c0 01 4c 8b 4c 24 28 49 81 e9 8c f8 35 37 4c 89 4c 24 28 66 44 8b 54 24 ?? 66 44 23 54 24 36 66 44 89 54 24 ?? 4c 8b 4c 24 10 4c 39 c8 48 89 04 24 74}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2904,6 +3022,7 @@ rule Trojan_Win64_Dridex_BVV_2147931266_0
         $x_5_1 = {8b d6 48 8d 4d d0 48 8b d8 e8 ?? ?? ?? ?? 8b d6 48 8d 4d e8 40 8a 38 40 32 3b e8 ?? ?? ?? ?? ff c6 40 88 38 41 3b f7 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2925,6 +3044,7 @@ rule Trojan_Win64_Dridex_PGD_2147939656_0
         $x_5_1 = {89 44 24 64 8b 44 24 34 35 07 18 8d 5a 89 84 24 a8 00 00 00 e9}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

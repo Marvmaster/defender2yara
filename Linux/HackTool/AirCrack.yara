@@ -21,6 +21,7 @@ rule HackTool_Linux_AirCrack_A_2147762154_0
         $x_1_6 = "aircrack-ce-wpa" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule HackTool_Linux_AirCrack_A_2147762154_1
         $x_1_5 = "Attack will be restarted every %d captured ivs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule HackTool_Linux_AirCrack_B_2147807679_0
         $x_2_2 = {41 b8 01 00 00 00 4c 89 f1 4c 89 ea 48 89 ee e8 ?? ?? ?? 00 85 c0 74 ?? 48 8b bb 08 03 00 00 48 83 83 50 01 00 00 01 48 85 ff 75 ?? e8 62 ?? ?? ?? 48 89 83 08 03 00 00 48 89 c7 48 85 c0 0f 85 ?? ?? ?? ff 48 8d ?? ?? ?? ?? 00 e8 ?? ?? ?? ff e9 ?? ?? ?? ff 66 0f 1f 44 00 00 e8 ?? ?? ?? 00 48 89 83 00 03 00 00 48 89 c7 48 85 c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

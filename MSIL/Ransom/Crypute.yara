@@ -18,6 +18,7 @@ rule Ransom_MSIL_Crypute_A_2147716312_0
         $x_2_4 = "://docs.google.com/forms/d/1z_ZmpdVCJkn9Iaq-bQhjc9Z3LOBClNW0mu5wVINBK1s/formResponse" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule Ransom_MSIL_Crypute_B_2147716546_0
         $x_1_6 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890~=!@#$%^&*()" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Ransom_MSIL_Crypute_C_2147716550_0
         $x_1_3 = "HitlerRansomware_Load" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Ransom_MSIL_Crypute_D_2147717433_0
         $x_1_6 = "\\Ransomware\\Ransomware\\obj\\Debug\\R.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -123,6 +127,7 @@ rule Ransom_MSIL_Crypute_E_2147722549_0
         $x_1_4 = "KeyboardHook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +151,7 @@ rule Ransom_MSIL_Crypute_PA_2147755456_0
         $x_1_3 = "Saher Blue Eagle Ransomware.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +177,7 @@ rule Ransom_MSIL_Crypute_PA_2147755456_1
         $x_1_5 = {5c 43 4f 42 52 41 5c 43 4f 42 52 41 5c [0-32] 5c 43 4f 42 52 41 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -199,6 +206,7 @@ rule Ransom_MSIL_Crypute_PB_2147766011_0
         $x_1_8 = "crazydecrypt@" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -224,6 +232,7 @@ rule Ransom_MSIL_Crypute_PC_2147766206_0
         $x_1_5 = "\\Ransomware21.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -34,6 +34,7 @@ rule TrojanSpy_Win32_Gimmiv_A_2147800944_0
         $x_1_20 = "WScript.Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 7 of ($x_2_*) and 6 of ($x_1_*))) or
             ((6 of ($x_10_*) and 8 of ($x_2_*) and 4 of ($x_1_*))) or

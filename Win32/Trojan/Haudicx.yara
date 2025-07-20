@@ -18,6 +18,7 @@ rule Trojan_Win32_Haudicx_A_2147711438_0
         $x_1_3 = "FileCopy, %A_LoopFileFullPath%, %CTF%\\%A_LoopFileName%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

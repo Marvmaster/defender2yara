@@ -18,6 +18,7 @@ rule Ransom_MSIL_Gorf_2147725282_0
         $x_2_4 = ".frog" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule VirTool_WinNT_Rootkitdrv_A_2147572132_0
         $x_1_7 = {25 ff ff fe ff 0f 22 c0 a1 ?? ?? ?? ?? 8b 00 8b 15 ?? ?? ?? ?? 8d 04 90}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +79,7 @@ rule VirTool_WinNT_Rootkitdrv_B_2147572273_0
         $x_5_37 = {8d 4c 24 6c 68 08 40 01 00 51 ff d3 8b 2d 1c 30 01 00 8d 54 24 6c 6a 01 8d 44 24 20 52 50 ff d5 56 56 6a 20 6a 03 56 68 80}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_5_*) and 3 of ($x_2_*) and 9 of ($x_1_*))) or
             ((8 of ($x_5_*) and 1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -132,6 +134,7 @@ rule VirTool_WinNT_Rootkitdrv_AI_2147575497_0
         $x_1_6 = {65 00 78 00 70 00 6c 00 6f 00 72 00 65 00 72 00 2e 00 65 00 78 00 65 00 00 00 77 00 69 00 6e 00 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -158,6 +161,7 @@ rule VirTool_WinNT_Rootkitdrv_CL_2147595038_0
         $x_1_4 = {83 c0 14 89 01 66 81 38 0b 01 75 10 8b 4c 24 10 05 e0 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -184,6 +188,7 @@ rule VirTool_WinNT_Rootkitdrv_CM_2147595140_0
         $x_2_4 = {0f 20 c0 0d 00 00 01 00 0f 22 c0 fb 5f 5e 5b c3 fa 0f 20 c0 25 ff ff fe ff 0f 22 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -213,6 +218,7 @@ rule VirTool_WinNT_Rootkitdrv_CO_2147595148_0
         $x_1_6 = {68 48 4f 4f 4b 50 6a 00 89 45 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -242,6 +248,7 @@ rule VirTool_WinNT_Rootkitdrv_CQ_2147595181_0
         $x_1_6 = "NtBuildNumber" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -267,6 +274,7 @@ rule VirTool_WinNT_Rootkitdrv_BS_2147603507_0
         $x_1_2 = {83 65 fc 00 6a 04 6a 04 53 ff 15 ?? ?? ?? ?? 6a 04 6a 04 56 ff 15 ?? ?? ?? ?? 83 4d fc ff 8b 1b a1 ?? ?? ?? ?? 39 58 08 77 09 c7 45 d0 0d 00 00 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -288,6 +296,7 @@ rule VirTool_WinNT_Rootkitdrv_BT_2147605078_0
         $x_1_2 = {eb 03 0f be c0 88 04 0a 41 4e 75 e4 80 7d 08 2e 5e 75 16 80 7d 09 73 75 10 80 7d 0a 79 75 0a 80 7d 0b 73 75 04 b0 01 eb 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -309,6 +318,7 @@ rule VirTool_WinNT_Rootkitdrv_BU_2147605086_0
         $x_1_2 = {c7 45 0c 98 00 00 00 c7 45 fc 88 00 00 00 eb 1e c7 45 0c a0 00 00 00 c7 45 fc fc 01 00 00 eb 0e c7 45 0c 88 00 00 00 c7 45 fc 74 01 00 00 8b 45 0c 8d 0c 30 39 09 89 4d f8 74 56 8b d1 2b 55 0c 33 c0 8d 7d e4 ab ab ab ab aa}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -332,6 +342,7 @@ rule VirTool_WinNT_Rootkitdrv_I_2147605501_0
         $x_1_4 = "KeServiceDescriptorTable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -358,6 +369,7 @@ rule VirTool_WinNT_Rootkitdrv_W_2147608035_0
         $x_1_7 = {00 6b 61 73 70 65 72 73 6b 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -384,6 +396,7 @@ rule VirTool_WinNT_Rootkitdrv_AR_2147609573_0
         $x_10_4 = "\\Sys\\exe\\i386\\msdirectx.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -407,6 +420,7 @@ rule VirTool_WinNT_Rootkitdrv_AS_2147609574_0
         $x_10_4 = "\\DosDevices\\phvxd" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -433,6 +447,7 @@ rule VirTool_WinNT_Rootkitdrv_AT_2147609836_0
         $x_1_7 = {fa 0f 20 c0 89 45 ?? 25 ff ff fe ff 0f 22 c0 a1 ?? ?? ?? ?? 8b 40 01 a3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -461,6 +476,7 @@ rule VirTool_WinNT_Rootkitdrv_AU_2147609841_0
         $x_1_6 = {fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 8b 07 8b 4d ?? 89 04 8b 0f 20 c0 0d 00 00 01 00 0f 22 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -487,6 +503,7 @@ rule VirTool_WinNT_Rootkitdrv_AV_2147609843_0
         $x_1_7 = {bb 49 66 73 20 53 ff 75 ?? 6a 01 ff d6 8b f8 85 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -513,6 +530,7 @@ rule VirTool_WinNT_Rootkitdrv_AW_2147609844_0
         $x_1_4 = {fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 83 3d ?? ?? ?? 00 00 8b 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -537,6 +555,7 @@ rule VirTool_WinNT_Rootkitdrv_AX_2147609846_0
         $x_1_5 = {b8 cd cc cc cc be 00 00 00 00 f7 65 04 8b da 89 74 24 5c c1 eb 04 0f 84}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -562,6 +581,7 @@ rule VirTool_WinNT_Rootkitdrv_AY_2147609859_0
         $x_1_6 = "ZwQuerySystemInformation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -591,6 +611,7 @@ rule VirTool_WinNT_Rootkitdrv_AZ_2147609866_0
         $x_1_7 = "{3366EF96-28E5-49EE-99BF-7F20C99CC5EE}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -619,6 +640,7 @@ rule VirTool_WinNT_Rootkitdrv_BW_2147609971_0
         $x_1_6 = "\\Device\\HarddiskVolume1\\Arquivos de Programas\\GbPlugin\\.gpc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -657,6 +679,7 @@ rule VirTool_WinNT_Rootkitdrv_KC_2147610109_0
         $x_1_16 = "QqQetPsgoihTekiwWtigmjcGegli" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -680,6 +703,7 @@ rule VirTool_WinNT_Rootkitdrv_BX_2147610114_0
         $x_1_4 = "\\code\\RESSDT\\i386\\RESSDT.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -705,6 +729,7 @@ rule VirTool_WinNT_Rootkitdrv_BY_2147610116_0
         $x_1_6 = {fa 0f 20 c0 89 45 fc 25 ff ff fe ff 0f 22 c0 83 7d 08 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -751,6 +776,7 @@ rule VirTool_WinNT_Rootkitdrv_KD_2147610167_0
         $x_1_27 = "Get_Cur_Image_Path is %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -778,6 +804,7 @@ rule VirTool_WinNT_Rootkitdrv_BZ_2147610193_0
         $x_1_8 = "rootkit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -803,6 +830,7 @@ rule VirTool_WinNT_Rootkitdrv_CW_2147610212_0
         $x_1_6 = "KeServiceDescriptorTable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -827,6 +855,7 @@ rule VirTool_WinNT_Rootkitdrv_CX_2147610239_0
         $x_1_5 = "KeServiceDescriptorTable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -851,6 +880,7 @@ rule VirTool_WinNT_Rootkitdrv_CY_2147610251_0
         $x_1_5 = "\\Device\\XNGAnti" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -877,6 +907,7 @@ rule VirTool_WinNT_Rootkitdrv_CZ_2147610255_0
         $x_1_4 = "MmGetSystemRoutineAddress" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -904,6 +935,7 @@ rule VirTool_WinNT_Rootkitdrv_DE_2147610262_0
         $x_1_8 = "KeServiceDescriptorTable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_100_*) and 3 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -933,6 +965,7 @@ rule VirTool_WinNT_Rootkitdrv_DF_2147610267_0
         $x_1_6 = "KeAddSystemServiceTable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 3 of ($x_10_*))) or
@@ -964,6 +997,7 @@ rule VirTool_WinNT_Rootkitdrv_DI_2147610339_0
         $x_1_8 = "Microsoft Corporation" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -995,6 +1029,7 @@ rule VirTool_WinNT_Rootkitdrv_DJ_2147610340_0
         $x_1_7 = "PsLookupProcessByProcessId" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1020,6 +1055,7 @@ rule VirTool_WinNT_Rootkitdrv_DL_2147610370_0
         $x_1_3 = "KeServiceDescriptorTable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1046,6 +1082,7 @@ rule VirTool_WinNT_Rootkitdrv_DN_2147610463_0
         $x_1_7 = {80 3c 3b e9 75 ?? 8b 44 3b 01 8d 74 38 05 80 3e e9 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1068,6 +1105,7 @@ rule VirTool_WinNT_Rootkitdrv_FB_2147616869_0
         $x_1_2 = {fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 8b 06 8b 4d c8 89 04 b9 0f 20 c0 0d 00 00 01 00 0f 22 c0 fb 33 ff eb 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1091,6 +1129,7 @@ rule VirTool_WinNT_Rootkitdrv_FC_2147616870_0
         $x_1_3 = "\\DosDevices\\fsodhfn2m" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1116,6 +1155,7 @@ rule VirTool_WinNT_Rootkitdrv_FD_2147616871_0
         $x_1_2 = {e8 83 ff ff ff 8b 45 e4 8b 4d 08 89 48 04 8b 02 8b 4d e4 89 41 08 8b 45 0c 89 02 8b 45 e4 c6 00 01 8b 4d e4 e8 53 ff ff ff b0 01 88 45 df eb 1e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1138,6 +1178,7 @@ rule VirTool_WinNT_Rootkitdrv_FE_2147616872_0
         $x_1_2 = {35 98 96 95 29 d3 c0 05 f6 20 89 95 83 c1 ff 83 f9 00 75 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1164,6 +1205,7 @@ rule VirTool_WinNT_Rootkitdrv_FF_2147616873_0
         $x_1_6 = "\\??\\Dark2008" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1190,6 +1232,7 @@ rule VirTool_WinNT_Rootkitdrv_FG_2147616876_0
         $x_1_2 = {8b 45 08 50 ff 15 ?? ?? ?? ?? 89 45 f8 81 7d 1c 03 00 12 00 74 08 8b 45 f8 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1212,6 +1255,7 @@ rule VirTool_WinNT_Rootkitdrv_FH_2147616877_0
         $x_1_2 = {8d 88 04 02 00 00 8b 11 3b d3 74 0c 8b b0 08 02 00 00 89 b2 08 02 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1234,6 +1278,7 @@ rule VirTool_WinNT_Rootkitdrv_FI_2147616878_0
         $x_1_2 = {89 95 fc fc ff ff c7 45 fc fe ff ff ff 89 95 ec fc ff ff 89 95 f0 fc ff ff 8d 8a 00 00 10 00 89 8d e8 fc ff ff c7 85 18 fd ff ff 07 00 01 00 89 9d a4 fd ff ff c7 85 a8 fd ff ff 3b 00 00 00 6a 23 58 89 85 ac fd ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1258,6 +1303,7 @@ rule VirTool_WinNT_Rootkitdrv_FJ_2147616879_0
         $x_1_4 = "Services\\AzyKit" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1281,6 +1327,7 @@ rule VirTool_WinNT_Rootkitdrv_FK_2147616880_0
         $x_1_3 = {e8 00 00 00 00 58 83 e8 05 89 45 d8 8b 45 d8 2d b7 14 00 00 89 45 e4 8b 4d fc 2b 4d e4 83 c1 34 89 4d e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1304,6 +1351,7 @@ rule VirTool_WinNT_Rootkitdrv_FL_2147616881_0
         $x_1_3 = "\\DosDevices\\dmeo8" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1334,6 +1382,7 @@ rule VirTool_WinNT_Rootkitdrv_FM_2147616882_0
         $x_1_10 = "www.feixue.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -1366,6 +1415,7 @@ rule VirTool_WinNT_Rootkitdrv_FN_2147616883_0
         $x_1_8 = "5LEGACY_SHROUD32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -1394,6 +1444,7 @@ rule VirTool_WinNT_Rootkitdrv_FO_2147616884_0
         $x_1_3 = "\\Device\\XueLuo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1419,6 +1470,7 @@ rule VirTool_WinNT_Rootkitdrv_FP_2147616885_0
         $x_10_2 = {8b 45 ec 8b 00 8b 00 89 45 c0 6a 01 58 c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1442,6 +1494,7 @@ rule VirTool_WinNT_Rootkitdrv_FR_2147616887_0
         $x_10_3 = {8b 65 e8 8b 45 c0 89 45 d4 c7 45 fc ff ff ff ff eb}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1464,6 +1517,7 @@ rule VirTool_WinNT_Rootkitdrv_FS_2147616888_0
         $x_10_2 = {83 7d f4 00 0f 84 ?? ?? ?? ?? 8b 55 f4 83 7a 3c 00 0f 84 ?? ?? ?? ?? b9 0c 00 00 00 bf 80 04 01 00 8b 45 f4 8b 70 3c 33 d2 89 55 ec f3 a6 74 08 1b c0 83 d8 ff 89 45 ec}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1488,6 +1542,7 @@ rule VirTool_WinNT_Rootkitdrv_FT_2147616889_0
         $x_1_4 = "\\DosDevices\\msiosDom32" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1514,6 +1569,7 @@ rule VirTool_WinNT_Rootkitdrv_FU_2147617022_0
         $x_1_2 = "\\DosDevices\\SSDTHOOK" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1538,6 +1594,7 @@ rule VirTool_WinNT_Rootkitdrv_FV_2147617023_0
         $x_1_4 = "\\??\\Dark2118" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1564,6 +1621,7 @@ rule VirTool_WinNT_Rootkitdrv_FW_2147617426_0
         $x_1_2 = "ROOTKIT: OnUnload called" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1587,6 +1645,7 @@ rule VirTool_WinNT_Rootkitdrv_FX_2147617427_0
         $x_10_3 = {8b 55 f4 83 3a 00 74 0d 8b 45 f4 8b 4d 0c 03 08 89 4d 0c eb}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1608,6 +1667,7 @@ rule VirTool_WinNT_Rootkitdrv_GA_2147617538_0
         $x_1_2 = {8b 40 34 0b c0 75 61 8b 54 24 04 6a 64 59 33 c0 66 81 3a c6 05 75 13 66 81 7a 06 01 e8 75 0b 83 c2 08 8b 02 8d 44 10 04 eb 03 42 e2 e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1631,6 +1691,7 @@ rule VirTool_WinNT_Rootkitdrv_FY_2147617551_0
         $x_10_3 = {8b 4d ec 8b 11 8b 02 89 45 c0 b8 01 00 00 00 c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1654,6 +1715,7 @@ rule VirTool_WinNT_Rootkitdrv_FZ_2147617552_0
         $x_1_3 = "\\DosDevices\\wrapper64x" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1679,6 +1741,7 @@ rule VirTool_WinNT_Rootkitdrv_GA_2147617588_0
         $x_10_2 = {8b 56 01 b9 ?? ?? ?? ?? 8d 04 90 87 08 89 0d ?? ?? ?? ?? 33 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1704,6 +1767,7 @@ rule VirTool_WinNT_Rootkitdrv_GB_2147617589_0
         $x_1_5 = "\\Device\\kavlec" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))
@@ -1732,6 +1796,7 @@ rule VirTool_WinNT_Rootkitdrv_FE_2147618221_0
         $x_1_6 = "WinHook:SystemCallService: %x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1756,6 +1821,7 @@ rule VirTool_WinNT_Rootkitdrv_GC_2147618461_0
         $x_1_2 = {81 f9 67 e0 22 00 0f 85 ?? ?? ?? ?? 83 65 fc 00 6a 04 6a 04 53 ff 15 ?? ?? 01 00 83 4d fc ff 8b 1b a1 ?? ?? 01 00 39 58 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1782,6 +1848,7 @@ rule VirTool_WinNT_Rootkitdrv_GD_2147618526_0
         $x_1_7 = "ZwQueryInformationProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1806,6 +1873,7 @@ rule VirTool_WinNT_Rootkitdrv_GF_2147619083_0
         $x_1_5 = "Bye, from DriverUnload" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1834,6 +1902,7 @@ rule VirTool_WinNT_Rootkitdrv_GG_2147621114_0
         $x_1_6 = {50 00 41 00 56 00 44 00 52 00 56 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -1862,6 +1931,7 @@ rule VirTool_WinNT_Rootkitdrv_KG_2147621333_0
         $x_1_3 = {fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 8b 07 89 04 b1 0f 20 c0 0d 00 00 01 00 0f 22 c0 fb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1884,6 +1954,7 @@ rule VirTool_WinNT_Rootkitdrv_KH_2147621334_0
         $x_1_3 = {fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 a1 ?? ?? ?? ?? 8b 40 01 8b 0d ?? ?? ?? ?? 8b 09 c7 04 81 ?? ?? ?? ?? 0f 20 c0 0d 00 00 01 00 0f 22 c0 fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1908,6 +1979,7 @@ rule VirTool_WinNT_Rootkitdrv_KI_2147621335_0
         $x_1_5 = {8b 0c b3 0b c9 74 ?? 8b 79 04 66 8b 07 66 83 f8 03 75 ?? 8b 47 10 0b c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1930,6 +2002,7 @@ rule VirTool_WinNT_Rootkitdrv_KJ_2147621336_0
         $x_1_3 = {8b 7d 08 05 ?? ?? ?? ?? 89 45 ?? 83 65 ?? 00 8b 47 3c 8b 74 38 78 8b 44 3e 20 03 f7 03 c7 8b 5e 1c 8b 4e 24 03 df 03 cf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1952,6 +2025,7 @@ rule VirTool_WinNT_Rootkitdrv_KL_2147621343_0
         $x_1_3 = {8b 40 3c 03 c3 89 45 ?? 8b 45 ?? 81 38 50 45 00 00 74 ?? 53 e8 ?? ?? 00 00 e9 ?? 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1975,6 +2049,7 @@ rule VirTool_WinNT_Rootkitdrv_KM_2147621400_0
         $x_1_4 = {50 0f 20 c0 25 ff ff fe ff 0f 22 c0 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1995,6 +2070,7 @@ rule VirTool_WinNT_Rootkitdrv_KN_2147621507_0
         $x_1_1 = {33 db 8b 0d ?? ?? ?? ?? 8b 09 8b 14 9d ?? ?? ?? ?? 39 14 99 74 06 8d 0c 99 f0 87 11 43 3b 1d ?? ?? ?? ?? 7c dd a1 ?? ?? ?? ?? 0b c0 74 0f 80 38 e9 75 0a c6 00 2b c7 40 01 e1 c1 e9 02 0f 20 c0 0d 00 00 01 00 0f 22 c0 61 b8 82 01 00 c0 c9 c2 08 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2019,6 +2095,7 @@ rule VirTool_WinNT_Rootkitdrv_KO_2147621508_0
         $x_1_5 = {80 39 e8 75 ?? 8b 51 01 8d 54 0a 05 81 3a 58 83 c0 03 75 ?? 8b 51 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2041,6 +2118,7 @@ rule VirTool_WinNT_Rootkitdrv_KP_2147621509_0
         $x_1_3 = {8b 48 01 8b 12 8b 0c 8a 89 0d ?? ?? ?? ?? fa 8b 40 01 8b 15 ?? ?? ?? ?? b9 ?? ?? ?? ?? 8d 04 82 87 08 89 0d ?? ?? ?? ?? fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2066,6 +2144,7 @@ rule VirTool_WinNT_Rootkitdrv_KQ_2147621510_0
         $x_1_6 = {8b 41 60 fe 49 23 83 e8 24 56 89 41 60 89 50 14 0f b6 00 8b 72 08 51 52 ff 54 86 38 5e 5d c2 08 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2087,6 +2166,7 @@ rule VirTool_WinNT_Rootkitdrv_KR_2147621603_0
         $x_1_2 = {8b 44 24 04 3b 05 ?? ?? ?? ?? 7c 07 b8 20 16 01 00 eb 08 6b c0 64 05 ?? ?? ?? ?? c2 04 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2108,6 +2188,7 @@ rule VirTool_WinNT_Rootkitdrv_GI_2147621632_0
         $x_1_2 = {03 00 12 00 89 45 ?? 0f 85 ?? ?? 00 00 85 c0 0f 8c ?? ?? 00 00 57 6a 05 59 8d 7d ?? f3 a5 81 7d ?? 00 04 00 00 0f 85 28 01 00 00 83 7d ?? 00 0f 85 ?? ?? 00 00 81 7d ?? 00 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2130,6 +2211,7 @@ rule VirTool_WinNT_Rootkitdrv_KT_2147621635_0
         $x_1_3 = {8b 4d 10 81 79 04 02 01 00 00 75 ?? 8b 55 0c 8b 42 1c 33 d2 b9 18 00 00 00 f7 f1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2152,6 +2234,7 @@ rule VirTool_WinNT_Rootkitdrv_KU_2147621701_0
         $x_1_3 = {81 39 8b ff 55 8b 75 ?? 81 79 04 ec 56 64 a1 75 ?? 81 79 08 24 01 00 00 75 ?? 81 79 0c 8b 75 08 3b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2173,6 +2256,7 @@ rule VirTool_WinNT_Rootkitdrv_KV_2147621702_0
         $x_1_2 = {8b 00 25 ff ff 00 00 2d 21 04 00 00 74 c7 05 ?? ?? ?? ?? 1e 00 00 00 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2194,6 +2278,7 @@ rule VirTool_WinNT_Rootkitdrv_KW_2147621703_0
         $x_1_2 = {3b 5d 1c 75 09 c7 45 2c 06 00 00 80 eb 06 8b 45 30 83 20 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2215,6 +2300,7 @@ rule VirTool_WinNT_Rootkitdrv_KX_2147621798_0
         $x_1_2 = {83 39 00 74 ?? 8b 55 ?? 8b 45 0c 03 02 89 45 0c eb 07 c7 45 0c 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2236,6 +2322,7 @@ rule VirTool_WinNT_Rootkitdrv_KY_2147621799_0
         $x_1_2 = {3b 45 1c 75 09 c7 45 ?? 06 00 00 80 eb 06 8b 45 ?? 83 20 00 8d 45 ?? 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2258,6 +2345,7 @@ rule VirTool_WinNT_Rootkitdrv_KZ_2147622077_0
         $x_1_3 = {6a 04 68 00 00 10 00 6a 01 8d 45 ?? 50 56 68 e8 03 00 00 56 8d 45 ?? 50 6a ff ff 75 ?? ff 15 ?? ?? ?? ?? 3d 03 00 00 40 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2280,6 +2368,7 @@ rule VirTool_WinNT_Rootkitdrv_LA_2147622078_0
         $x_1_3 = {6a 08 8d 45 ?? 50 6a 09 6a ff ff 15 ?? ?? ?? ?? f6 45 08 02 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2302,6 +2391,7 @@ rule VirTool_WinNT_Rootkitdrv_LB_2147622079_0
         $x_1_3 = {8b ca 83 e1 03 f3 a4 81 78 20 32 54 76 98}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2323,6 +2413,7 @@ rule VirTool_WinNT_Rootkitdrv_LC_2147622080_0
         $x_1_2 = {8b 40 10 c1 e1 02 85 f6 8b 14 01 75 03 33 c0 c3 fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 a1 ?? ?? ?? ?? 8b 40 10 89 34 01 0f 20 c0 0d 00 00 01 00 0f 22 c0 fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2345,6 +2436,7 @@ rule VirTool_WinNT_Rootkitdrv_LD_2147622279_0
         $x_1_3 = {80 f9 40 75 06 81 cb 00 01 00 00 80 f9 80 75 ?? 0b df eb ?? 80 f9 40 75 06 81 cb 00 01 00 00 80 f9 80 75 06 81 cb 00 04 00 00 3c 04 75 ?? 8a 06 24 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2367,6 +2459,7 @@ rule VirTool_WinNT_Rootkitdrv_LE_2147622468_0
         $x_1_3 = {8d 34 10 f3 a5 8b 4b 3c 8b c3 2b 44 19 34 33 ff 33 d2 39 3d ?? ?? ?? ?? 7e 14 8b 0d ?? ?? ?? ?? 8d 0c 91 01 01 42 3b 15 ?? ?? ?? ?? 7c ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2389,6 +2482,7 @@ rule VirTool_WinNT_Rootkitdrv_LF_2147622469_0
         $x_1_3 = {8b 7d 0c 8b 45 ?? 85 c0 75 08 8b 4d ?? 89 4f 1c eb 04 83 67 1c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2411,6 +2505,7 @@ rule VirTool_WinNT_Rootkitdrv_LG_2147622470_0
         $x_1_3 = {ff 75 1c 8d 45 ?? ff 75 18 ff 75 14 6a 00 50 ff 75 0c ff 15 ?? ?? ?? ?? ff 75 0c 8b f0 ff 15 ?? ?? ?? ?? 8b c6 5e c9 c2 18 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2433,6 +2528,7 @@ rule VirTool_WinNT_Rootkitdrv_LH_2147622471_0
         $x_1_3 = {83 e8 24 c6 00 0d 8b 8d ?? ?? ff ff 8b 49 08 8b 49 08 89 48 14 8b 8d ?? ?? ff ff 89 48 18 8d 8d ?? ?? ff ff c7 40 0c 73 00 09 00 c7 40 08 08 00 00 00 89 48 10 c7 40 04 10 01 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2455,6 +2551,7 @@ rule VirTool_WinNT_Rootkitdrv_LI_2147622689_0
         $x_1_3 = {8b 75 08 a1 ?? ?? ?? ?? 81 e6 ff 0f 00 00 85 c0 74 ?? 3b 70 18 73 ?? 8d 45 ?? 50 e8 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 50 10 8b ce 8b 75 10 c1 e1 02 8b 14 11 89 16 8b 40 10 8b 55 0c 89 14 01 ff 75 ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2476,6 +2573,7 @@ rule VirTool_WinNT_Rootkitdrv_LJ_2147622690_0
         $x_1_2 = {ff d7 84 c0 74 ?? 8b 46 08 0f b7 08 51 8d 8d ?? ?? ?? ?? 51 ff 70 04 e8 ?? ?? ?? ?? 8d 85 ?? ?? ?? ?? 68 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 85 c0 59 59 75 b8 22 00 00 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2498,6 +2596,7 @@ rule VirTool_WinNT_Rootkitdrv_LK_2147622691_0
         $x_1_3 = {89 46 50 8b 46 60 89 5e 64 83 e8 24 c6 00 03 c6 40 01 00 8b 4b 08 8b 49 08 89 48 14 8b 4d 14 89 48 04 8b 4d 18 89 58 18 8b 11 89 50 0c 8b 49 04 89 48 10 8b 46 60 83 e8 24 c7 40 1c ?? ?? ?? ?? 89 78 20 c6 40 03 e0 8b 43 08 8b 48 08 8b d6 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2521,6 +2620,7 @@ rule VirTool_WinNT_Rootkitdrv_LL_2147622732_0
         $x_1_4 = {85 c0 7c 18 8b 45 ?? 8b 48 0c 89 0d ?? ?? ?? ?? 8b 48 10 03 48 0c 89 0d ?? ?? ?? ?? 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2543,6 +2643,7 @@ rule VirTool_WinNT_Rootkitdrv_LM_2147622733_0
         $x_1_3 = {81 7d fc f4 01 00 00 0f 8f ?? ?? 00 00 6a 00 8b 95 ?? ?? ff ff 03 55 ?? 52 8d 85 ?? ?? ff ff 50 e8 ?? ?? ?? ?? 03 45 ?? 89 45 ?? 83 bd ?? ?? ff ff 29 75 ?? 6a 00 8b 8d ?? ?? ff ff 03 4d ?? 51 8d 95 ?? ?? ff ff 52 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2565,6 +2666,7 @@ rule VirTool_WinNT_Rootkitdrv_LN_2147622734_0
         $x_1_3 = {8b 4c 24 0c 8b 01 3d 13 01 00 00 75 14 8d 81 88 00 00 00 ff b0 d0 07 00 00 50 e8 ?? ?? ff ff eb 2a 3d 11 01 00 00 75 ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2587,6 +2689,7 @@ rule VirTool_WinNT_Rootkitdrv_LP_2147622760_0
         $x_1_3 = {33 c0 f3 a6 74 05 1b c0 83 d8 ff 85 c0 75 0a c7 85 ?? ?? ff ff 01 00 00 00 83 bd ?? ?? ff ff 00 74 10 83 bd ?? ?? ff ff 01 74 07 b8 22 00 00 c0 eb ?? ff 75 1c ff 75 18 ff b5 ?? ?? ff ff ?? ff 75 0c ff b5 ?? ?? ff ff ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2608,6 +2711,7 @@ rule VirTool_WinNT_Rootkitdrv_LQ_2147622824_0
         $x_1_2 = {8b 45 18 8b 40 04 33 d2 6a 14 59 f7 f1 89 45 ?? 8b 45 28 89 45 ?? 83 65 ?? 00 eb 07 8b 45 ?? 40 89 45 ?? 8b 45 ?? 3b 45 ?? 0f 83 ?? ?? 00 00 83 3d ?? ?? ?? ?? 00 74 ?? 8b 45 ?? 6b c0 14 8b 4d ?? 8b 44 01 0c 3b 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2630,6 +2734,7 @@ rule VirTool_WinNT_Rootkitdrv_LR_2147622918_0
         $x_1_3 = {8a 08 40 84 c9 75 f9 2b c2 b9 ff 03 00 00 2b c8 51 8d 85 ?? ?? ff ff 50 8d 85 ?? ?? ff ff 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2652,6 +2757,7 @@ rule VirTool_WinNT_Rootkitdrv_LS_2147622919_0
         $x_1_3 = {6a 03 59 8b bd ?? ?? ff ff 8b 95 ?? ?? ff ff 8b f2 33 c0 f3 a6 0f 84 ?? ?? 00 00 8a 02 3c e9 74 08 3c cc 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2673,6 +2779,7 @@ rule VirTool_WinNT_Rootkitdrv_GP_2147623067_0
         $x_1_2 = {8b 08 fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 8b 07 89 04 91 0f 20 c0 0d 00 00 01 00 0f 22 c0 fb 83 65 e4 00 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2695,6 +2802,7 @@ rule VirTool_WinNT_Rootkitdrv_LU_2147623125_0
         $x_1_3 = {80 7d ff 00 5f 5e 74 10 80 3d ?? ?? 01 00 00 74 07 b8 22 00 00 c0 eb 0c ff 75 0c ff 75 08 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2717,6 +2825,7 @@ rule VirTool_WinNT_Rootkitdrv_LV_2147623126_0
         $x_1_3 = {83 7d e4 00 0f 85 ?? ?? 00 00 83 7d 24 03 0f 85 ?? ?? 00 00 8b fb 89 7d dc 83 65 e0 00 85 ff 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2739,6 +2848,7 @@ rule VirTool_WinNT_Rootkitdrv_LW_2147623127_0
         $x_1_3 = {83 7d 14 01 75 13 ff 75 1c ff 75 18 e8 ?? ?? ?? ?? 84 c0 74 04 33 c0 eb 18 ff 75 1c ff 75 18 ff 75 14 ff 75 10 ff 75 0c ff 75 08 ff 15 ?? ?? 01 00 c9 c2 18 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2763,6 +2873,7 @@ rule VirTool_WinNT_Rootkitdrv_NU_2147623165_0
         $x_1_5 = "\\Software\\Microsoft\\Internet Explorer\\Main" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2787,6 +2898,7 @@ rule VirTool_WinNT_Rootkitdrv_GQ_2147623601_0
         $x_1_5 = "SERVICES\\IMAPISERVICE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2809,6 +2921,7 @@ rule VirTool_WinNT_Rootkitdrv_GR_2147623669_0
         $x_1_3 = "MmFlushImageSection" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2831,6 +2944,7 @@ rule VirTool_WinNT_Rootkitdrv_NV_2147624045_0
         $x_1_3 = {4b 65 53 65 72 76 69 63 65 44 00 00 65 73 63 72 69 70 74 6f 72 54 61 62 6c 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2852,6 +2966,7 @@ rule VirTool_WinNT_Rootkitdrv_LX_2147624095_0
         $x_1_2 = {6a 64 59 33 c0 66 81 3a c6 05 75 13 66 81 7a 06 01 e8 75 0b 83 c2 08 8b 02 8d 44 10 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2872,6 +2987,7 @@ rule VirTool_WinNT_Rootkitdrv_NW_2147624679_0
         $x_1_1 = {89 75 d8 66 c7 45 ?? 5a 00 66 c7 45 ?? 77 00 66 c7 45 ?? 51 00 66 c7 45 ?? 75 00 66 c7 45 ?? 65 00 66 c7 45 ?? 72 00 66 c7 45 ?? 79 00 66 c7 45 ?? 53 00 66 c7 45 ?? 79 00 66 c7 45 ?? 73 00 66 c7 45 ?? 74 00 66 c7 45 ?? 65 00 66 c7 45 ?? 6d 00 66 c7 45 ?? 49 00 66 c7 45 ?? 6e 00 66 c7 45 ?? 66 00 66 c7 45 ?? 6f 00 66 c7 45 ?? 72 00 66 c7 45 ?? 6d 00 66 c7 45 ?? 61 00 66 c7 45 ?? 74 00 66 c7 45 ?? 69 00 66 c7 45 ?? 6f 00 66 c7 45 ?? 6e 00 66 89}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2892,6 +3008,7 @@ rule VirTool_WinNT_Rootkitdrv_NX_2147624680_0
         $x_1_1 = {89 75 f8 66 c7 45 ?? 5a 00 66 c7 45 ?? 77 00 66 c7 45 ?? 51 00 66 c7 45 ?? 75 00 66 c7 45 ?? 65 00 66 c7 45 ?? 72 00 66 c7 45 ?? 79 00 66 c7 45 ?? 53 00 66 c7 45 ?? 79 00 66 c7 45 ?? 73 00 66 c7 45 ?? 74 00 66 c7 45 ?? 65 00 66 c7 45 ?? 6d 00 66 c7 45 ?? 49 00 66 c7 45 ?? 6e 00 66 c7 45 ?? 66 00 66 c7 45 ?? 6f 00 66 c7 45 ?? 72 00 66 c7 45 ?? 6d 00 66 c7 45 ?? 61 00 66 c7 45 ?? 74 00 66 c7 45 ?? 69 00 66 c7 45 ?? 6f 00 66 c7 45 ?? 6e 00 66 89}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2912,6 +3029,7 @@ rule VirTool_WinNT_Rootkitdrv_NY_2147624681_0
         $x_1_1 = {c7 45 d4 01 00 00 c0 66 c7 45 ?? 5a 00 66 c7 45 ?? 77 00 66 c7 45 ?? 51 00 66 c7 45 ?? 75 00 66 c7 45 ?? 65 00 66 c7 45 ?? 72 00 66 c7 45 ?? 79 00 66 c7 45 ?? 53 00 66 c7 45 ?? 79 00 66 c7 45 ?? 73 00 66 c7 45 ?? 74 00 66 c7 45 ?? 65 00 66 c7 45 ?? 6d 00 66 c7 45 ?? 49 00 66 c7 45 ?? 6e 00 66 c7 45 ?? 66 00 66 c7 45 ?? 6f 00 66 c7 45 ?? 72 00 66 c7 45 ?? 6d 00 66 c7 45 ?? 61 00 66 c7 45 ?? 74 00 66 c7 45 ?? 69 00 66 c7 45 ?? 6f 00 66 c7 45 ?? 6e 00 66 89}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2934,6 +3052,7 @@ rule VirTool_WinNT_Rootkitdrv_GS_2147624845_0
         $x_5_3 = {53 00 70 00 79 00 77 00 61 00 72 00 65 00 20 00 44 00 72 00 69 00 76 00 65 00 72 00 20 00 [0-8] 4d 00 69 00 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2963,6 +3082,7 @@ rule VirTool_WinNT_Rootkitdrv_AQ_2147627223_0
         $x_1_7 = "\\SystemRoot\\System32\\vs_mon.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2988,6 +3108,7 @@ rule VirTool_WinNT_Rootkitdrv_HI_2147627821_0
         $x_3_6 = {55 68 10 27 00 00 8b 54 ?? ?? 8b 44 ?? ?? 52 50 e8 ?? ?? 00 00 8b da 55 8b f8 6a 19 53 57 e8 ?? ?? 00 00 55 68 e8 03 00 00 83 c0 61}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -3016,6 +3137,7 @@ rule VirTool_WinNT_Rootkitdrv_GX_2147628020_0
         $x_1_5 = "ZwQueryDirectoryFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3041,6 +3163,7 @@ rule VirTool_WinNT_Rootkitdrv_GY_2147628022_0
         $x_1_3 = "ZwQueryDirectoryFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))
@@ -3066,6 +3189,7 @@ rule VirTool_WinNT_Rootkitdrv_GZ_2147628490_0
         $x_1_3 = {fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 8b 45 e4 8b 00 89 04 9f 0f 20 c0 0d 00 00 01 00 0f 22 c0 fb 33 ff eb 1b 8b 45 ec 8b 00 8b 00 89 45 dc 33 c0 40 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3089,6 +3213,7 @@ rule VirTool_WinNT_Rootkitdrv_HG_2147631250_0
         $x_1_4 = {7e 40 c7 45 fc ?? ?? ?? ?? 8d 34 bd ?? ?? ?? ?? 83 3e 00 75 21 ff 75 fc e8 ?? ?? ?? ?? 85 c0 75 06 c7 06 01 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3112,6 +3237,7 @@ rule VirTool_WinNT_Rootkitdrv_HQ_2147638434_0
         $x_1_4 = {fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 8b 45 ?? 8b 4d ?? 8b 55 ?? 8b 12 89 14 81}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3136,6 +3262,7 @@ rule VirTool_WinNT_Rootkitdrv_HR_2147639083_0
         $x_2_5 = "\\i386\\ROOT_DRIVER.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -3164,6 +3291,7 @@ rule VirTool_WinNT_Rootkitdrv_HU_2147640985_0
         $x_1_5 = "got scancode %02X" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -3187,6 +3315,7 @@ rule VirTool_WinNT_Rootkitdrv_IF_2147651956_0
         $x_1_4 = {3d e3 20 11 88}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3210,6 +3339,7 @@ rule VirTool_WinNT_Rootkitdrv_OG_2147708900_0
         $x_1_3 = {fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 8b 06 8b 4d c8 89 04 99 0f 20 c0 0d 00 00 01 00 0f 22 c0 fb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3233,6 +3363,7 @@ rule VirTool_WinNT_Rootkitdrv_OI_2147716748_0
         $x_1_3 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 00 00 61 00 62 00 6f 00 75 00 74 00 3a 00 62 00 6c 00 61 00 6e 00 6b 00 00 00 68 00 61 00 6f 00 2e 00 33 00 36 00 30 00 2e 00 63 00 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3259,6 +3390,7 @@ rule VirTool_WinNT_Rootkitdrv_OK_2147732960_0
         $x_2_6 = {8b 4d f8 83 c1 01 89 4d f8 8b 55 f8 3b 15 ?? ?? ?? 00 73 1c 8b 85 ?? ?? ?? ff 03 45 f8 0f be 08 83 f1 ?? 8b 95 ?? ?? ?? ff 03 55 f8 88 0a eb d0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -3286,6 +3418,7 @@ rule VirTool_WinNT_Rootkitdrv_OL_2147734115_0
         $x_1_3 = "h3dDSEU6c3991A==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3310,6 +3443,7 @@ rule VirTool_WinNT_Rootkitdrv_OM_2147734509_0
         $x_1_4 = "fk_drv.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

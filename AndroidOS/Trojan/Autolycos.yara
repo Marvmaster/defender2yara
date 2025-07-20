@@ -17,6 +17,7 @@ rule Trojan_AndroidOS_Autolycos_A_2147826925_0
         $x_1_3 = {ec 33 40 f9 ec 57 80 b9 ee 27 40 f9 b7 16 80 52 59 09 80 52 d1 69 6c 38 e0 1f 40 f9 f3 33 40 b9 00 c8 73 38 f3 02 31 0a 31 02 19 0a 71 02 11 2a f3 02 20 0a 00 00 19 0a 60 02 00 2a 11 00 11 4a d1 69 2c 38 ac 02 00 d0 ae 02 00 d0 b1 02 00 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

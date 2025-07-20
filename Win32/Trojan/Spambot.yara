@@ -15,6 +15,7 @@ rule Trojan_Win32_Spambot_B_2147598044_0
         $x_1_1 = {55 57 56 53 [0-48] 31 db 66 90 c7 04 24 ?? ?? ?? ?? 0f b6 b3 ?? ?? ?? ?? e8 ?? ?? ?? ?? 31 d2 89 c1 89 d8 f7 f1 89 f0 83 c3 01 83 ec 04 32 82 ?? ?? ?? ?? 88 83 ?? ?? ?? ?? 81 fb ?? ?? ?? ?? 75 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Spambot_SMC_2147750587_0
         $x_1_2 = {33 d2 f7 f1 03 d7 8a 02 88 84 1d ?? ?? ?? ff 83 c3 ?? 81 fb ?? ?? ?? ?? 0f 82 27 00 8b c3 04 ?? 88 44 1e ?? 8d 43 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win32_Spambot_RPY_2147892674_0
         $x_1_1 = {89 45 c8 8b 45 c8 8b 40 3c 8b 4d f0 8d 44 01 04 89 45 e4 8b 45 e4 0f b7 40 10 8b 4d c8 8b 49 3c 8d 44 01 18 89 45 a0 8b 45 c8 03 45 a0 89 45 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

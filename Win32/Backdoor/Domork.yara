@@ -20,6 +20,7 @@ rule Backdoor_Win32_Domork_A_2147620608_0
         $x_1_6 = "mythreadid=%d;myserveraddr=%s;myserverport=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

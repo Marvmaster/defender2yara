@@ -17,6 +17,7 @@ rule Trojan_Win32_Vreikstadi_A_2147710524_0
         $x_1_3 = {c7 40 74 c7 78 61 31 c7 40 78 ec 51 11 2b c7 40 7c 5e 07 8e e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

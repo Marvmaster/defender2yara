@@ -18,6 +18,7 @@ rule Trojan_MSIL_Evrial_B_2147725463_0
         $x_1_4 = "Buy Project Evrial: t.me/Qutrachka" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

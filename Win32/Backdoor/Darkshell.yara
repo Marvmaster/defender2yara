@@ -16,6 +16,7 @@ rule Backdoor_Win32_Darkshell_A_2147642860_0
         $x_1_2 = {83 4d fc ff 8b 1b [0-3] a1 ?? ?? ?? ?? 39 58 ?? 77 ?? c7 45 ?? 0d 00 00 c0 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

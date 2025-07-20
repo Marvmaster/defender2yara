@@ -16,6 +16,7 @@ rule Trojan_MSIL_CryptDownloader_A_2147906401_0
         $x_1_2 = {41 6d 73 74 65 72 46 75 6e 63 00 64 61 74 61 74 68 72 65 61 64 ?? 64 65 63 52 00 62 79 74 65 73 54 6f 42 65 44 65 63 72 79 70 74 65 64 00 70 61 73 73 77 6f 72 64 42 79 74 65 73 00 52 75 6e 6e 65 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_Win32_Blacksuit_AD_2147895351_0
         $x_100_4 = "BEGIN RSA PUBLIC KEY" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win32_Blacksuit_SA_2147896743_0
         $x_1_3 = "-BEGIN RSA PUBLIC KEY-" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Ransom_Win32_Blacksuit_PA_2147913843_0
         $x_1_3 = "readme.blacksuit.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

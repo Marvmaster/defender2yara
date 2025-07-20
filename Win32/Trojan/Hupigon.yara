@@ -26,6 +26,7 @@ rule Trojan_Win32_Hupigon_IF_2147797786_0
         $x_1_11 = "zdyname=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +61,7 @@ rule Trojan_Win32_Hupigon_GME_2147810546_0
         $x_1_14 = "KillTimer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +84,7 @@ rule Trojan_Win32_Hupigon_RI_2147836447_0
         $x_1_2 = {b9 e8 03 00 00 f7 f1 33 d2 b9 80 51 01 00 be 10 0e 00 00 6a 3c 5f 2b 44 24 0c f7 f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule Trojan_Win32_Hupigon_AA_2147890011_0
         $x_1_1 = {10 8b 84 24 ?? 01 00 00 73 07 8d 84 24 ?? 01 00 00 8a ?? 38 8b 44 24 ?? 30 ?? 06 8b ?? 24 ?? 83 c6 01 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +129,7 @@ rule Trojan_Win32_Hupigon_AB_2147890012_0
         $x_1_2 = {88 45 ef 0f b6 45 ef 83 f0 6f 88 45 ef 8b 45 f8 8a 4d ef 88 88 ?? ?? ?? ?? e9 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule Trojan_Win32_Hupigon_NH_2147899139_0
         $x_1_6 = "CreateFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

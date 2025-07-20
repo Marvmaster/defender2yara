@@ -17,6 +17,7 @@ rule TrojanSpy_MacOS_LightSpy_B_2147919803_0
         $x_1_2 = {41 56 53 48 89 fb 48 8b 35 94 02 02 00 4c 8b 35 a5 5a 01 00 41 ff d6 48 8b 35 5b 02 02 00 48 89 df 41 ff d6 48 8b 35 56 02 02 00 48 89 df 4c 89 f0 5b 41 5e 5d ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

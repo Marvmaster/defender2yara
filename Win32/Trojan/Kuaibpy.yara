@@ -20,6 +20,7 @@ rule Trojan_Win32_Kuaibpy_A_2147710202_0
         $x_1_5 = "HKEY_CURRENT_USER\\bug" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Worm_Win32_Ganelp_B_2147645589_0
         $x_6_7 = {8b f4 8b 95 d0 fe ff ff 52 ff 15 ?? ?? ?? ?? 3b f4 e8 ?? ?? ?? ?? 89 85 cc fe ff ff 83 bd cc fe ff ff 02 0f 85 ?? ?? ?? ?? 8d 85 54 fa ff ff 50 8b 8d d0 fe ff ff 51 e8 ?? ?? ?? ?? 83 c4 08 89 85 c4 fe ff ff 8d 95 54 fa ff ff 89 95 50 fa ff ff 8b 85 d0 fe ff ff 50 8d 8d 60 fe ff ff 51 e8 76 1e 00 00 83 c4 08 6a 00 68 40 75 42 00 8d 95 54 fe ff ff 52 e8}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule Worm_Win32_Ganelp_A_2147646311_0
         $x_1_6 = "leeexthEuSlcA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -79,6 +81,7 @@ rule Worm_Win32_Ganelp_C_2147653132_0
         $x_1_4 = {03 4d fc 0f be 51 05 83 fa 73 75 ?? a1 ?? ?? ?? ?? 03 45 fc 0f be 48 08 83 f9 74 75 ?? 8b ?? ?? ?? ?? ?? 03 55 fc 0f be 42 0c 83 f8 6e 75 ?? 8b ?? ?? ?? ?? ?? 03 4d fc 0f be 51 0f 83 fa 77 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +109,7 @@ rule Worm_Win32_Ganelp_AF_2147786315_0
         $x_3_7 = "c:\\windows\\friendl.dll" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +137,7 @@ rule Worm_Win32_Ganelp_ACD_2147787531_0
         $x_3_7 = "+d+k0U.dll.dll" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +160,7 @@ rule Worm_Win32_Ganelp_GZA_2147901682_0
         $x_5_2 = {40 00 fe b1 05 00 d4 f2 03 00 d0 f2 03 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +183,7 @@ rule Worm_Win32_Ganelp_RV_2147911025_0
         $x_1_2 = {8b 4d 10 c1 e1 03 39 4d fc 7d 64 8b 45 fc 99 83 e2 07 03 c2 c1 f8 03 8b 55 0c 0f be 04 02 8b 4d fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

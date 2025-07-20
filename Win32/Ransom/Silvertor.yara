@@ -19,6 +19,7 @@ rule Ransom_Win32_Silvertor_SK_2147760699_0
         $x_15_4 = "vssadmin.exe Delete Shadows /All /Quiet" ascii //weight: 15
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 2 of ($x_2_*))) or
             (all of ($x*))

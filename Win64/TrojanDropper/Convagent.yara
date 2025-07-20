@@ -17,6 +17,7 @@ rule TrojanDropper_Win64_Convagent_BH_2147825866_0
         $x_1_2 = {48 63 c8 48 8d 54 24 40 48 8d 14 4a 41 8d 0c 01 ff c0 66 31 0a 83 f8 13 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

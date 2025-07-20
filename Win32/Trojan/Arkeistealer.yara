@@ -26,6 +26,7 @@ rule Trojan_Win32_Arkeistealer_RFA_2147780471_0
         $x_1_11 = "GetKeyboardLayoutList" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_Arkeistealer_RMB_2147780873_0
         $x_1_1 = {33 f6 85 ff 7e ?? 55 8b 2d ?? ?? ?? ?? 83 ff 2d 75 ?? 6a 00 6a 00 6a 00 6a 00 6a 00 ff 15 ?? ?? ?? ?? 6a 00 ff 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 30 04 33 81 ff 91 05 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

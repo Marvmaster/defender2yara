@@ -18,6 +18,7 @@ rule Worm_Win32_Phorpiex_A_159755_0
         $x_1_4 = {6a 00 6a 01 6a 00 6a 11 ff d3 6a 00 6a 00 6a 00 6a 56 ff 15 ?? ?? ?? ?? 0f b6 c8 51 ff d3 6a 00 6a 03 6a 2d 6a 11 ff d3 6a 00 6a 00 6a 00 6a 0d ff d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Worm_Win32_Phorpiex_B_164473_0
         $x_1_12 = {49 4d 47 25 73 2d 4a 50 47 2e 73 63 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Worm_Win32_Phorpiex_Q_177620_0
         $x_1_6 = {25 73 5c 25 73 2e 65 78 65 00 00 00 6f 70 65 6e 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Worm_Win32_Phorpiex_A_186324_0
         $x_1_2 = {01 00 00 ff 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 84 c0 0f 85 ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff d6 85 c0 0f 85 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff d6 85 c0 0f 85 02 00 68 90}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule Worm_Win32_Phorpiex_P_186671_0
         $x_1_3 = {5c 5c 2e 5c 50 68 79 73 69 63 61 6c 44 72 69 76 65 30 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -140,6 +145,7 @@ rule Worm_Win32_Phorpiex_S_195254_0
         $x_1_3 = "images.php?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +168,7 @@ rule Worm_Win32_Phorpiex_T_195317_0
         $x_1_3 = {25 73 5c 72 6d 72 66 25 69 25 69 25 69 25 69 2e 62 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -191,6 +198,7 @@ rule Worm_Win32_Phorpiex_V_195696_0
         $x_1_7 = {50 61 69 6e 74 00 00 00 41 6e 20 75 6e 64 65 66 69 6e 65 64 20 65 72 72 6f 72 20 68 61 73 20 6f 63 63 75 72 72 65 64 20 2d 20 25 75 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -213,6 +221,7 @@ rule Worm_Win32_Phorpiex_W_198451_0
         $x_10_3 = {81 39 50 45 00 00 0f 85 ?? ?? ?? ?? 8b 7d 0c 8b 81 a0 00 00 00 2b 79 34 8b 91 a4 00 00 00 03 c6}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -237,6 +246,7 @@ rule Worm_Win32_Phorpiex_X_200278_0
         $x_1_2 = {80 f9 30 7c 1f 80 f9 39 7f 1a 0f be c9 83 f1 30 8d 14 92 46 8d 14 51 8a 0e bf 01 00 00 00 84 c9 75 de}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -261,6 +271,7 @@ rule Worm_Win32_Phorpiex_Y_203702_0
         $x_1_5 = "TZapCommunicator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -284,6 +295,7 @@ rule Worm_Win32_Phorpiex_AB_204549_0
         $x_1_4 = {5c 55 73 65 72 73 5c 73 5c 44 65 73 6b 74 6f 70 5c 53 6b 79 70 65 72 [0-3] 5c 52 65 6c 65 61 73 65 5c 53 6b 79 70 65 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -307,6 +319,7 @@ rule Worm_Win32_Phorpiex_AC_208343_0
         $x_1_4 = {71 65 6d 75 00 00 00 00 76 69 72 74 75 61 6c 00 76 6d 77 61 72 65 00 00 5c 5c 2e 5c 50 68 79 73 69 63 61 6c 44 72 69 76 65 30 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -332,6 +345,7 @@ rule Worm_Win32_Phorpiex_SKA_226022_0
         $x_10_6 = {5c 49 4d 77 6f 72 6d 5c 52 65 6c 65 61 73 65 5c 53 6b 79 70 65 2e 70 64 62 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -358,6 +372,7 @@ rule Worm_Win32_Phorpiex_SKC_226425_0
         $x_10_4 = "\\Nte\\Nte\\bin\\Release\\hola.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -386,6 +401,7 @@ rule Worm_Win32_Phorpiex_C_241594_0
         $x_1_8 = "SOFTWARE\\Policies\\Microsoft\\Windows Defender" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -414,6 +430,7 @@ rule Worm_Win32_Phorpiex_AF_252213_0
         $x_1_4 = "/c start _ & _\\DeviceManager.exe & exit" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -438,6 +455,7 @@ rule Worm_Win32_Phorpiex_BS_257022_0
         $x_1_4 = "SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy\\StandardProfile\\AuthorizedApplications\\List" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -463,6 +481,7 @@ rule Worm_Win32_Phorpiex_AJY_289222_0
         $x_1_5 = "/c start __ & __\\DriveMgr.exe & exit" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

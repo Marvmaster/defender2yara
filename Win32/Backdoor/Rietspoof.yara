@@ -19,6 +19,7 @@ rule Backdoor_Win32_Rietspoof_YA_2147733582_0
         $x_1_4 = "CreateObject(\"Scripting.FileSystemObject\").DeleteFile(Wscript.ScriptFullName)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_Rietspoof_A_2147733849_0
         $x_1_2 = "104.248.177.188" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Backdoor_Win32_Rietspoof_B_2147733850_0
         $x_1_3 = {73 79 73 74 65 6d 0a 00 [0-6] 25 73 25 73 25 73 20 55 53 45 52 3a 20 75 73 65 72 0a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -90,6 +93,7 @@ rule Backdoor_Win32_Rietspoof_B_2147733850_1
         $x_1_5 = "cmd /c %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

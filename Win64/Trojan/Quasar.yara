@@ -17,6 +17,7 @@ rule Trojan_Win64_Quasar_NSU_2147846189_0
         $x_1_2 = "onuxH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_Quasar_AMA_2147922146_0
         $x_1_3 = "Black.Myth.Wukong.Trainer.V1.4.2-XiaoXing" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win64_Quasar_AQU_2147922155_0
         $x_2_3 = "http://139.180.202.227:8080" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win64_Quasar_AUQ_2147943628_0
         $x_2_2 = {48 8b 85 e8 ?? ?? ?? 48 8d 15 b0 82 00 00 48 89 c1 48 8b 05 31 d5 00 00 ff d0 48 89 85 e0 ?? ?? ?? 48 8b 85 e8 ?? ?? ?? 48 8d 15 9e 82 00 00 48 89 c1 48 8b 05 10 d5 00 00 ff d0 48 89 85 d8 ?? ?? ?? 48 8b 85 e8 ?? ?? ?? 48 8d 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

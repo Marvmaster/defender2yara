@@ -18,6 +18,7 @@ rule Worm_Win32_Slimbraju_A_2147645505_0
         $x_1_4 = {70 6c 61 79 6c 69 00 00 ff ff ff ff 06 00 00 00 73 74 2e 6d 33 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

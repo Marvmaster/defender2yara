@@ -22,6 +22,7 @@ rule Trojan_MSIL_BadJoke_MA_2147809187_0
         $x_1_7 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_BadJoke_KAA_2147903844_0
         $x_1_1 = {59 11 07 61 1f 0a 63 61 5a 11 07 5a d2 9c 11 07 17 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_MSIL_BadJoke_PZML_2147937213_0
         $x_1_4 = "gdi_test.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_MSIL_BadJoke_SLC_2147941273_0
         $x_2_1 = {1c 72 86 04 00 70 a2 28 27 00 00 0a 0b 06 07 28 28 00 00 0a 00 06 28 29 00 00 0a 26 72 98 04 00 70 72 b0 04 00 70 72 d2 04 00 70 72 e6 04 00 70 28 04 00 00 06 00 02 28 2a 00 00 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_MSIL_BadJoke_SK_2147944112_0
         $x_1_5 = "DisableTaskMgr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Broonject_B_2147652933_0
         $x_1_6 = "freshjokes.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

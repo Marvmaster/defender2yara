@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Sventore_A_2147697458_0
         $x_1_2 = {0f be c0 8b d6 8b ce c1 e2 05 c1 e9 02 03 d0 03 ca 33 f1 47 8a 07 84 c0 75 d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDropper_Win32_Sventore_A_2147697458_1
         $x_1_6 = {50 75 15 80 7c ?? 01 4b 75 0e 80 7c ?? 02 05 75 07 80 7c ?? 03 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

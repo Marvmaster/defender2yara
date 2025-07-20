@@ -17,6 +17,7 @@ rule VirTool_Win64_Rovnix_A_2147649305_0
         $x_1_3 = {48 85 c9 74 08 4d 85 c9 74 0e 49 ff e1 4d 85 c0 74 06 48 8b ca 49 ff e0 b8 0d 00 00 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule VirTool_Win64_Rovnix_C_2147681750_0
         $x_1_3 = {80 3b e8 75 0b b9 b9 05 00 00 66 39 4b 05 74 08 48 03 d8 44 39 2b eb da 8b 43 01 48 8d 5c 18 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule VirTool_Win64_Rovnix_E_2147690907_0
         $x_1_3 = {b8 46 4a 00 00 48 83 c3 14 66 39 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule VirTool_Win64_Rovnix_E_2147690916_0
         $x_1_1 = {48 85 c9 74 08 4d 85 c9 74 0e 49 ff e1 4d 85 c0 74 06 48 8b ca 49 ff e0 b8 0d 00 00 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_NetLoader_NLA_2147898763_0
         $x_1_2 = "WIN72K8R2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_NetLoader_DA_2147904752_0
         $x_1_4 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_MSIL_CashCrypt_PA_2147909765_0
         $x_1_5 = "CashRansomware.UnknownF1.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

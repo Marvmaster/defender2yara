@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Begseabug_A_2147643051_0
         $x_1_4 = "SYSTEM32\\system.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Begseabug_A_2147643051_1
         $x_5_2 = {8a 04 1a 88 45 ff 8a 45 ff c0 c0 03 88 45 ff 8a 45 ff 32 44 0d c8 41 83 f9 10 88 04 1a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

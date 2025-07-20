@@ -19,6 +19,7 @@ rule Ransom_Win32_Morpheus_DA_2147929849_0
         $x_1_4 = ".dll.sys.exe.drv.com.cat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

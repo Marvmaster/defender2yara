@@ -18,6 +18,7 @@ rule Trojan_Win32_Winzlock_A_2147647281_0
         $x_1_4 = {89 45 fc 8b 4d fc 89 8d d4 fd ff ff 8d 95 18 fd ff ff 89 55 f8 b8 01 00 00 00 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

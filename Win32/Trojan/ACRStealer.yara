@@ -22,6 +22,7 @@ rule Trojan_Win32_ACRStealer_DA_2147929756_0
         $x_1_7 = "RstrtMgr.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

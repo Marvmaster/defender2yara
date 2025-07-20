@@ -22,6 +22,7 @@ rule Trojan_MSIL_Mamson_CG_2147778971_0
         $x_3_7 = "Launcher.exe" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_3_*))) or
             ((1 of ($x_10_*) and 3 of ($x_3_*))) or

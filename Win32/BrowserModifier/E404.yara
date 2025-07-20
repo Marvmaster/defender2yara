@@ -21,6 +21,7 @@ rule BrowserModifier_Win32_E404_18087_0
         $x_1_7 = {c6 45 d0 75 c6 45 d1 72 c6 45 d2 6c c6 45 da 63 c6 45 db 6c c6 45 dc 69 c6 45 dd 63 c6 45 de 6b c6 45 df 73 c6 45 e4 72 c6 45 e5 65 c6 45 e6 66}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule BrowserModifier_Win32_E404_18087_1
         $x_1_6 = "e404 Module" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

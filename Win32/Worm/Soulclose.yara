@@ -36,6 +36,7 @@ rule Worm_Win32_Soulclose_A_2147608225_0
         $x_2_22 = "A*\\AC:\\Documents and Settings\\" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +59,7 @@ rule Worm_Win32_Soulclose_B_2147610695_0
         $x_1_3 = {63 00 66 00 2e 00 65 00 78 00 65 00 [0-18] 61 00 75 00 74 00 6f 00 72 00 75 00 6e 00 2e 00 69 00 6e 00 66 00 [0-18] 5b 00 41 00 75 00 74 00 6f 00 52 00 75 00 6e 00 5d 00 [0-18] 6f 00 70 00 65 00 6e 00 3d 00 63 00 66 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

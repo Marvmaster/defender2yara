@@ -410,6 +410,7 @@ rule HackTool_Win32_DumpLsass_S_2147817105_0
         $x_1_7 = {4d 69 6e 69 44 75 6d 70 57 72 69 74 65 44 75 6d 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -431,6 +432,7 @@ rule HackTool_Win32_DumpLsass_T_2147817106_0
         $x_1_2 = "[+] lsass dumped successfully!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -452,6 +454,7 @@ rule HackTool_Win32_DumpLsass_U_2147830334_0
         $x_100_2 = "<LSASS_PID>" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -500,6 +503,7 @@ rule HackTool_Win32_DumpLsass_U_2147836485_0
         $x_4_7 = "[+] Successfully dumped LSASS to memory!" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or

@@ -20,6 +20,7 @@ rule Trojan_Win32_Multsarch_K_2147681181_0
         $x_1_6 = "://sms91" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule Trojan_Win32_Multsarch_Q_2147681182_0
         $x_1_3 = "Cell, ActiV, Beeline, NEO, Dalacom, Pathword. " wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Trojan_Win32_Multsarch_T_2147681183_0
         $x_1_7 = "&platnik_id=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -99,6 +102,7 @@ rule Trojan_Win32_Multsarch_U_2147681184_0
         $x_1_5 = "Flash Player 10.0.32.18 (Non-IE)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule Trojan_Win32_Multsarch_V_2147681185_0
         $x_1_2 = {66 c7 43 10 0c 00 33 d2 8d 45 f0 89 55 fc ba ?? ?? ?? ?? ff 43 1c 66 c7 43 10 18 00 66 c7 43 10 24 00 e8 ?? ?? ?? ?? ff 43 1c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Trojan_Win32_Multsarch_W_2147681186_0
         $x_1_2 = {83 c0 20 0f b7 c0 83 c6 02 66 3b c2 75 0f b7 46 fe 8d 50 be 66 83 fa 17 77 03 83 c0 20 0f b7 c8 0f b7 07 8d 50 be 66 83 fa 17 77 03 83 c0 20 0f b7 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +172,7 @@ rule Trojan_Win32_Multsarch_R_2147681187_0
         $x_10_6 = {63 3f 67 77 3d [0-3] 26 64 6f 63 75 6d 65 6e 74 3d [0-32] 26 63 6f 75 6e 74 72 79 3d [0-3] 26 63 6f 64 65 3d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -193,6 +200,7 @@ rule Trojan_Win32_Multsarch_S_2147681188_0
         $x_1_5 = "###TORRENT2EXE###" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -224,6 +232,7 @@ rule Trojan_Win32_Multsarch_M_2147681189_0
         $x_1_12 = {00 24 37 46 37 27 23 1d 24 6f 73 77 73 78 73 73 73 73 73 73 73 74 5e 79 7a 66 66 7a 68 65 74 73 73 73 73 73 73 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -253,6 +262,7 @@ rule Trojan_Win32_Multsarch_N_2147681190_0
         $x_1_6 = {75 c9 1c cd 5b 4e 72 0e 48 c3 53 de 5a 95 31 df ce 70 1f 5a d6 26 c9 bd c0 f0 e9 55 ac a7 98 bc 94 df bc f4 96 6f c9 65 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -281,6 +291,7 @@ rule Trojan_Win32_Multsarch_O_2147681191_0
         $x_1_6 = "stimulprofit.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -305,6 +316,7 @@ rule Trojan_Win32_Multsarch_P_2147681192_0
         $x_1_2 = "input id=\"smscode_psevdo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -325,6 +337,7 @@ rule Trojan_Win32_Multsarch_L_2147681193_0
         $x_1_1 = {33 d2 81 c2 05 f4 ff ff 83 c2 03 83 ea f9 52 68 83 d0 91 00 50 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

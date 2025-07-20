@@ -17,6 +17,7 @@ rule Trojan_Win32_AveMariaRat_MB_2147796705_0
         $x_1_2 = {8b f8 85 f6 89 7d 0c 76 19 8b 45 08 8b cf 2b c7 89 75 08 8a 14 08 88 11 8b 55 08 41 4a 89 55 08 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_AveMariaRat_MD_2147807607_0
         $x_1_7 = "WriteFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_AveMariaRat_MH_2147811770_0
         $x_1_2 = {8b 55 0c 8a 0c 0a 88 4c 05 08 ba 01 00 00 00 c1 e2 00 b8 01 00 00 00 c1 e0 00 8b 4d 0c 8a 14 11 88 54 05 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_AveMariaRat_MI_2147811771_0
         $x_1_1 = {8a 07 33 d2 88 44 24 10 b9 ?? ?? ?? ?? 8a 47 01 88 44 24 11 8a 47 02 88 44 24 12 8a 47 03 88 44 24 13 c7 07 ?? ?? ?? ?? 8b 01 f7 d0 85 c0 74 ?? 88 04 2a 83 e9 04 42 81 f9 ?? ?? ?? ?? 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Win32_AveMariaRat_MM_2147813149_0
         $x_1_2 = {b8 01 00 00 00 6b c8 00 ba 01 00 00 00 6b c2 00 8b 55 94 8a 0c 0a 88 4c 05 90 ba 01 00 00 00 c1 e2 00 b8 01 00 00 00 c1 e0 00 8b 4d 94 8a 14 11 88 54 05 90 b8 01 00 00 00 d1 e0 b9 01 00 00 00 d1 e1 8b 55 94 8a 04 02 88 44 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_Win32_AveMariaRat_MS_2147814892_0
         $x_1_2 = {a1 88 58 41 00 89 45 d8 8b 0d ?? ?? ?? ?? 89 4d dc 8b 15 ?? ?? ?? ?? 89 55 e0 66 a1 ?? ?? ?? ?? 66 89 45 e4 8a 0d ?? ?? ?? ?? 88 4d e6 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +159,7 @@ rule Trojan_Win32_AveMariaRat_2147815840_0
         $x_1_1 = {80 51 ff 15 ?? ?? ?? ?? 89 c3 6a 00 50 ff 15 30 00 c6 84 10 ?? ?? ?? ?? ?? 42 75 ?? 6a 00 68 80 00 00 00 6a 03 6a 00 6a 07 68 00 00 00 80}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_Win32_AveMariaRat_MU_2147815842_0
         $x_1_4 = "CreateRemoteThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +209,7 @@ rule Trojan_Win32_AveMariaRat_MV_2147816211_0
         $x_1_4 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +234,7 @@ rule Trojan_Win32_AveMariaRat_MW_2147816786_0
         $x_1_4 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -248,6 +258,7 @@ rule Trojan_Win32_AveMariaRat_MX_2147817477_0
         $x_1_3 = "IsProcessorFeaturePresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -271,6 +282,7 @@ rule Trojan_Win32_AveMariaRat_MZ_2147817553_0
         $x_1_3 = "IsProcessorFeaturePresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -294,6 +306,7 @@ rule Trojan_Win32_AveMariaRat_MAA_2147823175_0
         $x_1_3 = "ReadProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

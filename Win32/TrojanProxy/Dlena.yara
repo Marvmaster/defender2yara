@@ -28,6 +28,7 @@ rule TrojanProxy_Win32_Dlena_2147583146_0
         $x_1_14 = {d1 27 d1 47 04 d1 57 08 d1 57 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

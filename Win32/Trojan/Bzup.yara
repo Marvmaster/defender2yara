@@ -24,6 +24,7 @@ rule Trojan_Win32_Bzup_IV_2147597106_0
         $x_1_10 = "HttpSendRequestA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

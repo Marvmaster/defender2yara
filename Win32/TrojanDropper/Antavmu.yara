@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Antavmu_EASX_2147936244_0
         $x_5_1 = {8d 64 24 00 8a 14 38 80 ea 7a 80 f2 19 88 14 38 40 3b c3}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

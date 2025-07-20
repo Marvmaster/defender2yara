@@ -16,6 +16,7 @@ rule Trojan_Win32_Inhoo_A_2147599276_0
         $x_1_2 = {6a 00 ff 35 ?? ?? 00 10 68 ?? ?? 00 10 6a 07 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

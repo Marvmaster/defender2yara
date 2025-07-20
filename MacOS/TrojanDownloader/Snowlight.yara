@@ -19,6 +19,7 @@ rule TrojanDownloader_MacOS_Snowlight_A_2147943308_0
         $x_1_4 = {e9 4b 40 f9 e8 07 40 91 08 61 14 91 29 01 40 39 eb ab 80 b9 ea 03 08 aa 4a 01 0b 8b 49 01 00 39 e9 ab 80 b9 08 69 e9 38 08 29 00 71 61 03 00 54 01 00 00 14 e8 ab 40 b9 09 05 00 71 e8 07 40 91 08 61 14 91 08 c9 e9 38 08 35 00 71 61 02 00 54 01 00 00 14 e8 ab 40 b9 09 09 00 71 e8 07 40 91 08 61 14 91 08 c9 e9 38 08 29 00 71}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (2 of ($x*))
 }
 

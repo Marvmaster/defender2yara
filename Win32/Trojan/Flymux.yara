@@ -17,6 +17,7 @@ rule Trojan_Win32_Flymux_A_2147631107_0
         $x_1_3 = {64 6c 6c 6d 75 78 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

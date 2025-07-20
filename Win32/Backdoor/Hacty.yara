@@ -21,6 +21,7 @@ rule Backdoor_Win32_Hacty_D_2147650553_0
         $x_1_7 = {8a 01 0f b6 71 01 88 45 fb 0f b6 c0 c1 e0 04 33 c6 0f b6 71 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

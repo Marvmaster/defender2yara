@@ -19,6 +19,7 @@ rule Trojan_Win32_LiteDuke_A_2147752034_0
         $x_10_4 = {40 00 32 11 32 d0}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

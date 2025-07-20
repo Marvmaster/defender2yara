@@ -17,6 +17,7 @@ rule Worm_Win32_Inova_A_2147643959_0
         $x_1_3 = "xcopy %CD%\\autorun.inf /Y /h /k /r %WINDIR%\\systray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

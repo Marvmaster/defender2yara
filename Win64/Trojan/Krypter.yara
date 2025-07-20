@@ -16,6 +16,7 @@ rule Trojan_Win64_Krypter_AM_2147808529_0
         $x_1_1 = {48 8b c8 e8 ?? ?? ?? ?? 48 8b cb 41 8b c7 80 31 ?? 48 ff c1 48 83 e8 01 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

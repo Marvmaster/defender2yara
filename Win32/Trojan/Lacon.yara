@@ -16,6 +16,7 @@ rule Trojan_Win32_Lacon_A_2147643432_0
         $x_1_2 = {e8 0a 00 00 00 30 02 42 e2 f6 e9 8f fc ff ff 52 b8 c0 08 40 00 50 8b 00 8b d0 d1 e0 33 c2 83 c0 21 5a 89 02 c1 e8 18 5a c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

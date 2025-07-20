@@ -26,6 +26,7 @@ rule Trojan_Win32_Zuepan_A_2147724809_0
         $x_1_12 = {98 2f 8a 42 91 44 37 71 cf fb c0 b5 a5 db b5 e9 5b c2 56 39 f1 11 f1 59 a4 82 3f 92 d5 5e 1c ab 98 aa 07 d8 01 5b 83 12 be 85 31 24 c3 7d 0c 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or

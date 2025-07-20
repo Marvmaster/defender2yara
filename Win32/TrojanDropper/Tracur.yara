@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Tracur_B_2147678586_0
         $x_1_5 = {6d 79 4d 75 74 65 78 22 29 20 69 20 2e 72 31 20 3f 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDropper_Win32_Tracur_D_2147682243_0
         $x_1_4 = {8b 5d 08 56 b9 (fe|fd) 00 00 00 be ?? 10 00 00 bb ?? ?? ?? ?? 03 75 08 [0-4] 01 d8 01 1e 01 5e 04 83 c6 08 31 1e 83 c6 04 66 31 1e [0-4] 83 c6 02 30 1e 83 c6 01 [0-4] (e2|49 75)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule TrojanDropper_Win32_Tracur_G_2147682307_0
         $x_1_1 = {75 06 83 7d 00 00 74 79 55 89 e5 80 7d 0c 01 75 22 ba ?? ?? ?? ?? 56 52 b9 ?? ?? ?? ?? be 8e ?? 00 00 03 75 08 81 f1 ?? ?? ?? ?? d3 ca 30 36 ac e2 f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule TrojanDropper_Win32_Tracur_E_2147682308_0
         $x_1_2 = {03 7d 08 b9 ?? ?? 00 00 31 c8 d3 0f 28 07 d3 0f 83 ef 04 49 75 f2 0a 00 bf ?? 1b 00 00 b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule TrojanDropper_Win32_Tracur_F_2147682309_0
         $x_1_7 = {03 7d 08 b9 a5 02 00 00 31 c8 d3 0f d3 0f 28 07 83 ef 04 e2 f3 0a 00 bf ?? 1b 00 00 b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule TrojanDropper_Win32_Tracur_H_2147682327_0
         $x_1_1 = {80 7d 0c 01 75 27 ba ?? ?? ?? ?? 56 52 b9 ?? ?? ?? ?? 31 d1 be ?? 90 00 00 81 f1 ?? ?? ?? ?? 03 75 08 d3 ca 83 fa 00 30 36 ac e2 f6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -158,6 +164,7 @@ rule TrojanDropper_Win32_Tracur_I_2147682381_0
         $x_1_3 = {8d 45 d4 29 e0 75 ?? 8b 4d 00 [0-1] 85 c9 74 25 55 89 e5 80 7d 0c 01 75 27 ba ?? ?? ?? ?? 56 52 b9 ?? ?? ?? ?? 31 d1 be ?? 10 00 00 81 f1 ?? ?? ?? ?? 03 75 08 d3 ca 83 fa 00 30 36 ac e2 f6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -180,6 +187,7 @@ rule TrojanDropper_Win32_Tracur_J_2147682469_0
         $x_1_2 = {e8 02 00 00 00 eb 10 85 c0 74 02 31 c0 c3 66 29 10 83 c0 02 e2 f8 c3 55 89 e5 68 ?? ?? ?? ?? 5a 57 b8 ?? 10 00 00 68 ?? ?? 00 00 59 83 ed 04 03 45 0c e8 d7 ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

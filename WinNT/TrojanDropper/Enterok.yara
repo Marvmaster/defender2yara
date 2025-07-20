@@ -17,6 +17,7 @@ rule TrojanDropper_WinNT_Enterok_A_2147690426_0
         $x_1_3 = {6a 06 8d 04 37 50 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 83 c4 0c 85 c0 74 ?? 46 81 fe 00 10 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

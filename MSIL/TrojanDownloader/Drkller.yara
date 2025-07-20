@@ -21,6 +21,7 @@ rule TrojanDownloader_MSIL_Drkller_A_2147730672_0
         $x_1_6 = "smtp.gmail.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

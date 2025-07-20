@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Preald_A_2147623426_0
         $x_1_2 = {46 8b c6 6b c0 0c 83 b8 ?? ?? ?? ?? 00 75 e4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDropper_Win32_Preald_B_2147627122_0
         $x_1_2 = {47 8b f7 c1 e6 04 83 be ?? ?? ?? ?? 00 75 d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

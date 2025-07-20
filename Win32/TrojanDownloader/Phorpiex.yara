@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Phorpiex_2147749586_0
         $x_1_6 = "DisableAntiSpyware" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -56,6 +57,7 @@ rule TrojanDownloader_Win32_Phorpiex_MK_2147759312_0
         $x_2_15 = "SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy\\StandardProfile\\AuthorizedApplications\\List" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 11 of ($x_1_*))) or
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
@@ -86,6 +88,7 @@ rule TrojanDownloader_Win32_Phorpiex_GS_2147762174_0
         $x_1_4 = "FirewallDisableNotify" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +117,7 @@ rule TrojanDownloader_Win32_Phorpiex_MK_2147773801_0
         $x_1_8 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -175,6 +179,7 @@ rule TrojanDownloader_Win32_Phorpiex_C_2147776551_0
         $x_1_42 = {68 74 74 70 3a 2f 2f 63 72 65 65 67 62 6f 78 2e 04 02 02 02 03 72 75 77 73 73 75 74 6f 70 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -199,6 +204,7 @@ rule TrojanDownloader_Win32_Phorpiex_PAAE_2147850036_0
         $x_2_1 = {b8 3a 00 00 00 66 89 ?? ?? ?? ?? ?? b9 2f 00 00 00 66 89 ?? ?? ?? ?? ?? ba 2f 00 00 00 66 89 ?? ?? ?? ?? ?? b8 31 00 00 00 66 89 ?? ?? ?? ?? ?? b9 38 00 00 00 66 89 ?? ?? ?? ?? ?? ba 35 00 00 00 66 89 ?? ?? ?? ?? ?? b8 2e 00 00 00 66 89 ?? ?? ?? ?? ?? b9 32 00 00 00 66 89 ?? ?? ?? ?? ?? ba 31 00 00 00 66 89 ?? ?? ?? ?? ?? b8 35 00 00 00 66 89 ?? ?? ?? ?? ?? b9 2e 00 00 00 66 89 ?? ?? ?? ?? ?? ba 31 00 00 00 66 89 ?? ?? ?? ?? ?? b8 31 00 00 00 66 89 ?? ?? ?? ?? ?? b9 33 00 00 00 66 89 ?? ?? ?? ?? ?? ba 2e 00 00 00 66 89 ?? ?? ?? ?? ?? b8 36 00 00 00 66 89 ?? ?? ?? ?? ?? b9 36 00 00 00 66 89 ?? ?? ?? ?? ?? ba 2f 00 00 00 66 89 ?? ?? ?? ?? ?? b8 6e 00 00 00 66 89 ?? ?? ?? ?? ?? b9 70 00 00 00 66 89 ?? ?? ?? ?? ?? ba 70 00 00 00 66 89 ?? ?? ?? ?? ?? b8 2e 00 00 00 66 89 ?? ?? ?? ?? ?? b9 65 00 00 00 66 89 ?? ?? ?? ?? ?? ba 78 00 00 00 66 89 ?? ?? ?? ?? ?? b8 65 00 00 00 66 89}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +227,7 @@ rule TrojanDownloader_Win32_Phorpiex_A_2147923738_0
         $x_2_2 = {88 1c 28 8a 14 28 f6 d2 8b c8 88 14 28 45 8d 71 ?? 8b ff 8a 11 41 84 d2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +250,7 @@ rule TrojanDownloader_Win32_Phorpiex_B_2147924026_0
         $x_4_2 = {8b 4d f0 0f be 54 0d ?? 8b 45 ?? 03 45 ?? 0f be 08 33 ca 8b 55 ?? 03 55 ?? 88 0a}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -266,6 +274,7 @@ rule TrojanDownloader_Win32_Phorpiex_APX_2147929290_0
         $x_1_3 = "MeNot_.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

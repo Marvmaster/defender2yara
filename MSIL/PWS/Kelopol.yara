@@ -18,6 +18,7 @@ rule PWS_MSIL_Kelopol_A_2147643256_0
         $x_1_4 = "[Paste]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule PWS_MSIL_Kelopol_B_2147643594_0
         $x_1_3 = "Keylogger" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

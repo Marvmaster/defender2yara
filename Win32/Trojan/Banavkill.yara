@@ -24,6 +24,7 @@ rule Trojan_Win32_Banavkill_A_2147723759_0
         $x_1_10 = "20313CC125CE79D3133EFA5FEF6FE30EB64AF632F70543E31003123DF21CC01340F565EB68FB180240F0588E52FD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

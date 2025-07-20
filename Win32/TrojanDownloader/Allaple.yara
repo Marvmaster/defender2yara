@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Allaple_A_2147602079_0
         $x_10_4 = {6a ff 6a 00 e8 ?? ?? ?? ff 8b d8 85 db 74 0c e8 ?? ?? ?? ff 3d b7 00 00 00 75 0d 53 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanDownloader_Win32_Allaple_B_2147602080_0
         $x_3_8 = {2e 70 64 66 00 00 ff ff ff ff 0c 00 00 00 5c 73 76 63 68 6f 73 74 2e 65 78 65 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 3 of ($x_3_*))) or
@@ -77,6 +79,7 @@ rule TrojanDownloader_Win32_Allaple_C_2147605366_0
         $x_2_6 = {63 6f 6f 6b 69 65 73 2e 74 78 74 00 ff ff ff ff 17 00 00 00 6d 79 73 71 6c 34 2d 76 68 2e 61 6d 65 6e 77 6f 72 6c 64 2e 63 6f 6d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -105,6 +108,7 @@ rule TrojanDownloader_Win32_Allaple_D_2147605550_0
         $x_1_3 = {74 6d 70 64 6f 77 6e 33 ?? 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

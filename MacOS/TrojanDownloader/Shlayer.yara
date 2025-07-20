@@ -18,6 +18,7 @@ rule TrojanDownloader_MacOS_Shlayer_A_2147829963_0
         $x_2_4 = {2f 74 6d 70 2f 09 00 06 00 5f 69 6e 73 74 61 6c 6c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -43,6 +44,7 @@ rule TrojanDownloader_MacOS_Shlayer_B_2147830589_0
         $x_1_2 = {a1 33 10 d2 57 00 b1 33 20 00 00 d1 33 23 e5 59 00 f4 33 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule TrojanDownloader_MacOS_Shlayer_E_2147848943_0
         $x_1_5 = "com.dock2master.Dock2MasterHelper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Trojan_Win64_StealerC_RZ_2147921603_0
         $x_1_8 = "jbrgznwtqgjusbrusdagfssikogtkauw.func1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

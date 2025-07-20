@@ -40,6 +40,7 @@ rule Trojan_Win64_STARKVEIL_DA_2147942426_0
         $x_1_25 = "rust_panic" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 5 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -71,6 +72,7 @@ rule Trojan_Win64_STARKVEIL_DB_2147942591_0
         $x_1_7 = "rust_panic" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

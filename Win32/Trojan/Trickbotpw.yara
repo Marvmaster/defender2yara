@@ -23,6 +23,7 @@ rule Trojan_Win32_Trickbotpw_A_2147766701_0
         $x_1_8 = "Internet Explorer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

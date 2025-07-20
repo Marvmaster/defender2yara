@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Flirtip_A_2147651924_0
         $x_1_5 = {43 68 65 63 6b 50 45 46 69 6c 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

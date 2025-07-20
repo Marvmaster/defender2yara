@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Radosi_A_2147691007_0
         $x_1_7 = {ff d6 8d 55 c4 6a 67 52 ff d6 8d 45 a4 6a 75 50 ff d6 8d 4d 84 6a 61 51 ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

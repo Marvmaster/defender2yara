@@ -21,6 +21,7 @@ rule Worm_Win32_Flame_A_2147657363_0
         $x_2_6 = {8b 4e 1c ff 75 08 41 51 50 89 46 0c e8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -49,6 +50,7 @@ rule Worm_Win32_Flame_B_2147657364_0
         $x_1_4 = "S:(ML;;NW;;;LW)D:(A;OICI;GA;;;WD)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*))) or
             (all of ($x*))
@@ -75,6 +77,7 @@ rule Worm_Win32_Flame_C_2147657365_0
         $x_1_3 = "RpcNsBindingInit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*))) or
             (all of ($x*))
@@ -101,6 +104,7 @@ rule Worm_Win32_Flame_D_2147657433_0
         $x_1_3 = {85 c0 75 11 ff d6 3d 30 04 00 00 74 08 53 53 53 ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule Worm_Win32_Flame_E_2147657441_0
         $x_1_5 = "root@195.97.78.162 -P 443" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

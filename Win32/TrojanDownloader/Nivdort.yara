@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Nivdort_A_2147893498_0
         $x_2_4 = {89 c8 31 d2 f7 f6 0f b6 44 15 ?? 30 04 0b 83 c1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -54,6 +54,7 @@ rule Trojan_Win32_RazerPitch_A_2147730359_0
         $x_1_39 = "ayw4XVzqme5ZPBo5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_5_*))) or
@@ -90,6 +91,7 @@ rule Trojan_Win32_RazerPitch_B_2147730360_0
         $x_1_12 = "2brAP9OppWvpcCPytHtg5d6qY4YaptNByeYUKCgEkdA=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_5_*))) or
@@ -116,6 +118,7 @@ rule Trojan_Win32_RazerPitch_D_2147730361_0
         $x_1_2 = {6a d4 f8 7b 8f 47 8a a5 96 e9 3a 54 d6 de 95 02 e2 dd c2 4e 12 d7 0c c1 e2 e5 a2 8a c5 44 e2 9c 81 5b ac 4b 15 96 65 ea 0b 9f ab 0e 7d 84 78 f0 62}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -138,6 +141,7 @@ rule Trojan_Win32_RazerPitch_C_2147730362_0
         $x_1_2 = {0f 1f 40 00 66 39 18 74 14 48 83 c0 02 49 ff c9 75 f2 41 ba 57 00 07 80 48 8b cb eb 16 4d 85 c9 75 0b 41 ba 57 00 07 80 48 8b cb eb 06 49 8b c8 49 2b c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

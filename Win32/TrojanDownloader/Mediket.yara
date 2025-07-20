@@ -28,6 +28,7 @@ rule TrojanDownloader_Win32_Mediket_2147574060_0
         $x_2_14 = "PCK0DU0DMB0TJE" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or

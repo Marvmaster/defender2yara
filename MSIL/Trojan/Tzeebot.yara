@@ -23,6 +23,7 @@ rule Trojan_MSIL_Tzeebot_C_2147690397_0
         $x_10_9 = "AntiVirusDet" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or

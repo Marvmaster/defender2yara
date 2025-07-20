@@ -28,6 +28,7 @@ rule Trojan_Win32_ReflectiveLoader_EC_2147903617_0
         $x_1_13 = "_ReflectiveLoader@20" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

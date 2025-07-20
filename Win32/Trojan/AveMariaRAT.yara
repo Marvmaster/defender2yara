@@ -16,6 +16,7 @@ rule Trojan_Win32_AveMariaRAT_A_2147845376_0
         $x_2_1 = {f7 8a 44 15 98 30 04 19 41 81 f9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_AveMariaRAT_B_2147848910_0
         $x_2_1 = {8b 01 f7 d0 85 c0 74 ?? 88 04 1a 83 e9 ?? 42 81 f9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win32_AveMariaRAT_C_2147849075_0
         $x_2_1 = {8a 04 0e c0 c8 ?? 32 82 ?? ?? ?? ?? c7 45 ?? ?? ?? ?? ?? 88 04 0e 8d 42 ?? 99 f7 7d ?? 41 81 f9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +82,7 @@ rule Trojan_Win32_AveMariaRAT_D_2147849247_0
         $x_2_1 = {8a 04 0e c0 c8 ?? 32 82 ?? ?? ?? ?? 88 04 0e 8d 42 ?? 99 c7 45 fc ?? ?? ?? ?? f7 7d ?? 41 81 f9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +104,7 @@ rule Trojan_Win32_AveMariaRAT_E_2147851354_0
         $x_2_1 = {8a 04 0f c0 c8 ?? 32 82 ?? ?? ?? ?? 41 88 44 0f ff 8d 42 ?? 99 f7 fe 3b cb 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +126,7 @@ rule Trojan_Win32_AveMariaRAT_F_2147851359_0
         $x_2_1 = {8a 04 0b c0 c8 ?? 32 87 ?? ?? ?? ?? 41 88 44 ?? ff 8d 47 ?? 99 bf ?? ?? ?? ?? f7 ff 8b fa 3b ce 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +148,7 @@ rule Trojan_Win32_AveMariaRAT_G_2147891361_0
         $x_2_1 = {8b c1 99 f7 ff 8a 44 14 ?? 30 04 29 41 81 f9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +171,7 @@ rule Trojan_Win32_AveMariaRAT_H_2147891818_0
         $x_2_2 = {33 c2 c1 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -186,6 +194,7 @@ rule Trojan_Win32_AveMariaRAT_PABD_2147892092_0
         $x_1_2 = {8a 04 02 88 44 0d 04 b9 01 00 00 00 6b d1 03 b8 01 00 00 00 6b c8 03 8b 45 0c 8a 14 10 88 54 0d 04 b8 01 00 00 00 6b c8 00 8b 55 0c c6 04 0a c2 b8 01 00 00 00 c1 e0 00 8b 4d 0c c6 04 01 10 ba 01 00 00 00 d1 e2 8b 45 0c c6 04 10 00 b9 01 00 00 00 6b d1 03 8b 45 0c c6 04 10 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

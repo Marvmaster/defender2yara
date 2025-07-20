@@ -17,6 +17,7 @@ rule TrojanDownloader_Win64_AsyncRAT_A_2147851168_0
         $x_2_2 = "://116.62.11.90/main.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win64_AsyncRAT_B_2147851259_0
         $x_2_3 = "\\.\\PhysicalDrive0" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule TrojanDownloader_Win64_AsyncRAT_C_2147889004_0
         $x_2_2 = "powershell start -WindowStyle hidden %temp%\\" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule TrojanDownloader_Win64_AsyncRAT_D_2147890063_0
         $x_1_5 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -114,6 +118,7 @@ rule TrojanDownloader_Win64_AsyncRAT_E_2147919849_0
         $x_2_3 = "APPDATA" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

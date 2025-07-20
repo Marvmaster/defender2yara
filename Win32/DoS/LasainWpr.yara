@@ -19,6 +19,7 @@ rule DoS_Win32_LasainWpr_A_2147813896_0
         $x_1_4 = {00 8b c1 25 ad ?? ?? ?? ?? c1 e0 ?? 33 c8 8b c1 25 ?? ?? ?? ?? c1 e0 ?? 33 c8 8b c1 c1 e8 ?? 33 c1 89 06 83 c6 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

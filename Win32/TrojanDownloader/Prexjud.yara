@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Prexjud_A_2147629988_0
         $x_1_3 = {5c 4a 44 73 74 61 72 74 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

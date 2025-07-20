@@ -19,6 +19,7 @@ rule Backdoor_Win32_Delf_AJ_2147595056_0
         $x_1_5 = "\\sevices.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -51,6 +52,7 @@ rule Backdoor_Win32_Delf_ABA_2147596909_0
         $x_1_10 = "Wczytany Plik jest niepoprawny lub brak w nim has" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -81,6 +83,7 @@ rule Backdoor_Win32_Delf_XC_2147597407_0
         $x_1_8 = "RegDeleteKeyA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +109,7 @@ rule Backdoor_Win32_Delf_XB_2147597408_0
         $x_1_6 = "GetClipboardData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +148,7 @@ rule Backdoor_Win32_Delf_XD_2147597521_0
         $x_1_19 = "ZoneAlarm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_50_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -170,6 +175,7 @@ rule Backdoor_Win32_Delf_ALC_2147597994_0
         $x_1_4 = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\Gay-Lesbian-Photo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_2_*))) or
             (all of ($x*))
@@ -200,6 +206,7 @@ rule Backdoor_Win32_Delf_BTP_2147598407_0
         $x_1_8 = "GetClipboardData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -223,6 +230,7 @@ rule Backdoor_Win32_Delf_RAK_2147601251_0
         $x_5_4 = {89 45 fc 33 c0 55 68 ?? ?? ?? ?? 64 ff 30 64 89 20 ba ?? ?? ?? ?? 8b 45 fc e8 ?? ?? ?? ?? 33 c9 ba ?? ?? ?? ?? 8b 45 fc e8 ?? ?? ?? ?? 84 c0 74 0d ba ?? ?? ?? ?? 8b 45 fc e8 ?? ?? ?? ?? 8b 45 fc e8 ?? ?? ?? ?? 33 c0 5a 59 59 64 89 10}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -247,6 +255,7 @@ rule Backdoor_Win32_Delf_RAL_2147601365_0
         $x_1_5 = {83 38 00 75 0f 68 10 27 00 00 e8 ?? ?? ?? ?? e9 12 02 00 00 a1 ?? ?? ?? ?? 8b 00 e8 ?? ?? ?? ?? 8b c8 8b 15 ?? ?? ?? ?? 8b 12 8b 45 f0 e8 ?? ?? ?? ?? 8b 45 f0 8a 40 0c 22 45 f7 0f 84 c5 01 00 00 68 ?? ?? ?? ?? 6a 00 6a 00 68 ?? ?? ?? ?? 6a 00 6a 00 e8 ?? ?? ?? ?? e9 a9 01 00 00 8b 45 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -279,6 +288,7 @@ rule Backdoor_Win32_Delf_SJ_2147601368_0
         $x_1_13 = "http://192.168.1.5/set.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -310,6 +320,7 @@ rule Backdoor_Win32_Delf_AAE_2147601477_0
         $x_1_9 = {8b 45 ac ba 02 00 00 00 e8 ?? ?? f7 ff 68 ?? ?? 48 00 8d 55 a0 33 c0 e8 ?? ?? f7 ff 8b 45 a0 e8 ?? ?? f7 ff 50 e8 ?? ?? f7 ff b2 01 a1 ?? ?? 42 00 e8 ?? ?? f9 ff a3 ?? ?? 49 00 ba 02 00 00 80 a1 ?? ?? 49 00 e8 ?? ?? f9 ff 33 c0 55 68 ?? ?? 48 00 64 ff 30 64 89 20 b1 01 ba ?? ?? 48 00 a1 ?? ?? 49 00 e8 ?? ?? f9 ff 68 ?? ?? 48 00 8d 55 98 8b 45 fc 8b 80 2c 03 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -340,6 +351,7 @@ rule Backdoor_Win32_Delf_KZ_2147601780_0
         $x_1_11 = "http://feliz2008.land.ru/iexplore.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -378,6 +390,7 @@ rule Backdoor_Win32_Delf_ADE_2147602092_0
         $x_1_16 = "msimn.ex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 7 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -408,6 +421,7 @@ rule Backdoor_Win32_Delf_ALE_2147602201_0
         $x_1_8 = "rafa5633456544@gmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -435,6 +449,7 @@ rule Backdoor_Win32_Delf_ALF_2147602203_0
         $x_1_5 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -460,6 +475,7 @@ rule Backdoor_Win32_Delf_ADG_2147603117_0
         $x_1_6 = "sys32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -486,6 +502,7 @@ rule Backdoor_Win32_Delf_ADH_2147603123_0
         $x_1_7 = "kernl32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -510,6 +527,7 @@ rule Backdoor_Win32_Delf_RAN_2147605147_0
         $x_10_5 = {84 c0 74 59 8b 45 f4 e8 ?? ?? ?? ?? 83 fa 00 75 07 83 f8 00 72 39 eb 02 7c 35 ff 36 68 ?? ?? ?? ?? 8b 45 f4 e8 ?? ?? ?? ?? 52 50 8d 85 ?? ?? ?? ?? e8 ?? ?? ?? ?? ff b5 ?? ?? ?? ?? 68 ?? ?? ?? ?? 8b c6 ba 04 00 00 00 e8 ?? ?? ?? ?? eb 1a 8b c6 ba ?? ?? ?? ?? e8 ?? ?? ?? ?? eb 0c 8b c6 ba ?? ?? ?? ?? e8 ?? ?? ?? ?? 33 c0 5a 59}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -536,6 +554,7 @@ rule Backdoor_Win32_Delf_WC_2147605576_0
         $x_5_4 = "svchost.exe -k netsvcs" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*))) or
             ((2 of ($x_10_*))) or
@@ -567,6 +586,7 @@ rule Backdoor_Win32_Delf_ADI_2147605932_0
         $x_1_8 = "WinExec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -592,6 +612,7 @@ rule Backdoor_Win32_Delf_NB_2147607602_0
         $x_1_6 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -616,6 +637,7 @@ rule Backdoor_Win32_Delf_ZSU_2147607786_0
         $x_2_5 = {73 65 72 76 65 72 2e 65 78 65 00 53 65 6e 64 44 61 74 61}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or
@@ -643,6 +665,7 @@ rule Backdoor_Win32_Delf_BN_2147607936_0
         $x_1_4 = "Micorsoft Corporation" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -669,6 +692,7 @@ rule Backdoor_Win32_Delf_BO_2147608030_0
         $x_1_7 = {8b 95 38 fe ff ff 8d 45 f4 59 e8 ?? ?? ff ff 68 ?? ?? 40 00 ff 75 f8 68 ?? ?? 40 00 ff 75 f4 8d 85 2c fe ff ff ba 04 00 00 00 e8 ?? ?? ff ff 8b 95 2c fe ff ff a1 ?? ?? 40 00 e8 ?? ?? ff ff 8b 45 f4 e8 ?? ?? ff ff b9 0a 00 00 00 99 f7 f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -693,6 +717,7 @@ rule Backdoor_Win32_Delf_UA_2147609305_0
         $x_1_5 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -721,6 +746,7 @@ rule Backdoor_Win32_Delf_DH_2147609700_0
         $x_1_9 = "Software\\Microsoft\\Windows\\CurrentVersion\\Runservices" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -753,6 +779,7 @@ rule Backdoor_Win32_Delf_IM_2147617644_0
         $x_1_13 = "7666:131.991.95.212" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -781,6 +808,7 @@ rule Backdoor_Win32_Delf_HY_2147619779_0
         $x_1_6 = "yahoo! messenger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -803,6 +831,7 @@ rule Backdoor_Win32_Delf_IS_2147622081_0
         $x_1_3 = {89 5f 04 6a 06 6a 01 6a 02 e8 ?? ?? ?? ?? 89 07 66 c7 44 24 04 02 00 56 e8 ?? ?? ?? ?? 66 89 44 24 06 8b 47 04 50 e8 ?? ?? ?? ?? 8b f0 89 74 24 08 46 75 ?? 8b 47 04 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -825,6 +854,7 @@ rule Backdoor_Win32_Delf_IV_2147624275_0
         $x_1_3 = {50 6a 00 6a 01 e8 ?? ?? ?? ?? 8b d8 6a 00 53 e8 ?? ?? ?? ?? 53 e8 ?? ?? ?? ?? 68 88 13 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -847,6 +877,7 @@ rule Backdoor_Win32_Delf_IW_2147624276_0
         $x_1_3 = {66 ba 2e 00 66 b8 03 00 e8 ?? ?? ?? ?? 50 6a 00 68 12 03 00 00 68 ff ff 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -869,6 +900,7 @@ rule Backdoor_Win32_Delf_IX_2147624554_0
         $x_1_3 = {89 43 04 8b 45 14 e8 ?? ?? ?? ?? 66 83 c0 1c 66 89 07 66 b8 04 00 66 c7 45 ?? 05 00 c1 e0 04 0a 45 ?? 88 45 ?? c6 45 ?? 00 66 8b 07 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -890,6 +922,7 @@ rule Backdoor_Win32_Delf_JC_2147625213_0
         $x_1_2 = {89 c7 b8 00 00 00 00 0f a2 89 d8 87 d9 b9 04 00 00 00 aa c1 e8 08 e2 fa 89 d0 b9 04 00 00 00 aa c1 e8 08 e2 fa 89 d8 b9 04 00 00 00 aa c1 e8 08 e2 fa 5f 5b c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -912,6 +945,7 @@ rule Backdoor_Win32_Delf_JG_2147626709_0
         $x_1_3 = {8b 45 fc 0f b6 5c 38 ff 80 e3 0f b8 ?? ?? ?? ?? 0f b6 44 30 ff 24 0f 32 d8 80 f3 ?? 8d 45 fc e8 ?? ?? ?? ?? 8b 55 fc 0f b6 54 3a ff 80 e2 f0 02 d3 88 54 38 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -935,6 +969,7 @@ rule Backdoor_Win32_Delf_LB_2147634513_0
         $x_2_4 = "hcvs\\23metsyS" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -964,6 +999,7 @@ rule Backdoor_Win32_Delf_JX_2147636688_0
         $x_2_6 = "wauaclt-.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -989,6 +1025,7 @@ rule Backdoor_Win32_Delf_LE_2147651362_0
         $x_2_3 = "UrlJudge" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1012,6 +1049,7 @@ rule Backdoor_Win32_Delf_LY_2147654033_0
         $x_6_4 = "C:\\Windows\\System\\basilisco.exe" ascii //weight: 6
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1034,6 +1072,7 @@ rule Backdoor_Win32_Delf_MN_2147670639_0
         $x_1_3 = {7c 12 43 8d 45 08 e8 ?? ?? ?? ?? 32 06 88 07 46 47 4b 75 ef 5f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1063,6 +1102,7 @@ rule Backdoor_Win32_Delf_ZSW_2147711721_0
         $x_1_9 = "spo=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1090,6 +1130,7 @@ rule Backdoor_Win32_Delf_PF_2147733155_0
         $x_1_8 = "C:\\Users\\Public\\kla.bin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1115,6 +1156,7 @@ rule Backdoor_Win32_Delf_PG_2147733156_0
         $x_1_6 = "HKCU\\Environment" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1137,6 +1179,7 @@ rule Backdoor_Win32_Delf_BA_2147834218_0
         $x_2_2 = {88 c3 32 1e c1 e8 08 46 33 04 9d 94 b6 40 00 e2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

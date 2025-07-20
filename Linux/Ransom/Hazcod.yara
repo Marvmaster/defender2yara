@@ -19,6 +19,7 @@ rule Ransom_Linux_Hazcod_A_2147890019_0
         $x_1_4 = "dirtyLocked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

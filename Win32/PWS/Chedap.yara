@@ -17,6 +17,7 @@ rule PWS_Win32_Chedap_A_2147653580_0
         $x_1_3 = "65904321" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

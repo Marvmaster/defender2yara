@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Pacrpt_YA_2147734368_0
         $x_1_3 = "Base64dec( ByRef" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

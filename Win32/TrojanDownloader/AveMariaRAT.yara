@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_AveMariaRAT_A_2147848923_0
         $x_2_7 = "WScript.Shell" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

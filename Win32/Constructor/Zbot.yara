@@ -17,6 +17,7 @@ rule Constructor_Win32_Zbot_A_2147686947_0
         $x_1_3 = "Global\\%08X%08X%08X" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

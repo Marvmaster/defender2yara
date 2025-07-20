@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Monkif_A_2147616178_0
         $x_1_6 = "%u|%u|%u|%u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule TrojanDownloader_Win32_Monkif_B_2147616683_0
         $x_1_6 = {71 72 6f 63 65 73 73 33 32 66 69 72 73 74 00 00 7a 72 6f 63 65 73 73 33 32 6e 65 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -82,6 +84,7 @@ rule TrojanDownloader_Win32_Monkif_E_2147618161_0
         $x_1_7 = {2f 73 6f 64 6f 6d 61 2f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -113,6 +116,7 @@ rule TrojanDownloader_Win32_Monkif_F_2147618419_0
         $x_1_7 = {2f 62 61 62 79 6c 6f 6e 2f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -142,6 +146,7 @@ rule TrojanDownloader_Win32_Monkif_G_2147618900_0
         $x_1_5 = {75 e1 ff 45 fc 8b 45 fc 6b c0 60 8d 34 18 33 ff 39 3e 75 cd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -167,6 +172,7 @@ rule TrojanDownloader_Win32_Monkif_H_2147621078_0
         $x_1_3 = {67 2b 00 00 74 36 6a 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -189,6 +195,7 @@ rule TrojanDownloader_Win32_Monkif_I_2147621079_0
         $x_2_3 = {57 56 ff d5 33 c9 85 ff 76 1a 8a 04 31 8a d0 f6 d2 32 d0 80 e2 14 f6 d0 32 d0 88 14 31}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -218,6 +225,7 @@ rule TrojanDownloader_Win32_Monkif_K_2147624646_0
         $x_2_6 = {a9 00 00 02 00 59 75 e9 a8 20 75 e5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -247,6 +255,7 @@ rule TrojanDownloader_Win32_Monkif_J_2147627006_0
         $x_1_6 = {c6 45 ef 43 c6 45 f0 6f c6 45 f1 6e c6 45 f2 6e c6 45 f3 65 c6 45 f4 63 c6 45 f5 74 c6 45 f6 65 c6 45 f7 64 c6 45 f8 5a c6 45 f9 74 c6 45 fa 61 c6 45 fb 74 c6 45 fc 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -274,6 +283,7 @@ rule TrojanDownloader_Win32_Monkif_L_2147628151_0
         $x_2_5 = {3d fe fb 0f 00 7c dd 5e 81 c4 00 02 00 00 c3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -303,6 +313,7 @@ rule TrojanDownloader_Win32_Monkif_N_2147628633_0
         $x_1_10 = "CBeateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -334,6 +345,7 @@ rule TrojanDownloader_Win32_Monkif_O_2147629296_0
         $x_1_8 = {43 42 65 61 74 65 54 6f 6f 6c 68 65 6c 70 33 32 53 6e 61 70 73 68 6f 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -360,6 +372,7 @@ rule TrojanDownloader_Win32_Monkif_Q_2147637713_0
         $x_1_3 = {8b 1e 85 db 0f 84 1f 00 00 00 8b 4e 04 83 c6 08 4b 0f b6 04 19 2a c2 81 c2 ?? 00 00 00 88 04 19 49 0f 85 ea ff ff ff eb d7 66 9d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -385,6 +398,7 @@ rule TrojanDownloader_Win32_Monkif_S_2147639560_0
         $x_5_6 = {55 8b ec 83 ec 1c 8d 45 f4 50 c6 45 f4 6b c6 45 f5 65 c6 45 f6 72 c6 45 f7 6e c6 45 f8 65 c6 45 f9 6c c6 45 fa 33 c6 45 fb 32 c6 45 fc 00 c6 45 e4 43 c6 45 e5 72 c6 45 e6 65 c6 45 e7 61 c6 45 e8 74 c6 45 e9 65 c6 45 ea 4d c6 45 eb 75 c6 45 ec 74 c6 45 ed 65 c6 45 ee 78 c6 45 ef 41 c6 45 f0 00 ff 15 ?? ?? ?? ?? 85 c0 75 04 33 c0 c9 c3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -412,6 +426,7 @@ rule TrojanDownloader_Win32_Monkif_T_2147639659_0
         $x_1_5 = {25 63 25 73 25 73 2e 70 68 70 25 63 25 73 25 63 25 73 00 00 70 68 6f 74 6f 2f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -434,6 +449,7 @@ rule TrojanDownloader_Win32_Monkif_U_2147640558_0
         $x_1_3 = {6d 73 79 75 76 2e 64 6c 6c 00 45 78 70 6f 72 74 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -459,6 +475,7 @@ rule TrojanDownloader_Win32_Monkif_W_2147649955_0
         $x_2_6 = {25 63 25 73 25 63 25 73 [0-5] 70 68 6f 74 6f 2f [0-5] 2e 70 68 70}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

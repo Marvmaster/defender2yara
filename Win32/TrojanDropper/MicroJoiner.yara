@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_MicroJoiner_C_2147637983_0
         $x_1_3 = {6a 00 68 80 00 00 00 6a 03 6a 00 6a 03 68 00 00 00 80 8d 54 24 20 52 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or

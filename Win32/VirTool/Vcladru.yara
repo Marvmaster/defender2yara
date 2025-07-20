@@ -19,6 +19,7 @@ rule VirTool_Win32_Vcladru_A_2147609406_0
         $x_1_4 = {8b 55 f4 e8 ?? ?? ff ff 8b 85 ?? fe ff ff e8 ?? ?? ff ff 50 68 ?? ?? ?? ?? 6a 00 e8 ?? fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

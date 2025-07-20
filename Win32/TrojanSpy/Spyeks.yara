@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Spyeks_A_2147603156_0
         $x_1_5 = "software\\microsoft\\windows\\currentversion\\run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

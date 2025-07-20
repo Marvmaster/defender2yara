@@ -21,6 +21,7 @@ rule Trojan_MSIL_Pobfeaua_A_2147941233_0
         $x_1_7 = {67 48 8b 4d 10 67 48 8b 55 18 67 4c 8b 45 20 67 4c 8b 4d 28 67 48 8b 45 30 67 48 8b 7d 38 48 85 c0 74 16 48 8d 7c c7 f8 48 85 c0 74 0c ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

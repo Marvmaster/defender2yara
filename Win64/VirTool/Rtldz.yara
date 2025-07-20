@@ -19,6 +19,7 @@ rule VirTool_Win64_Rtldz_A_2147841304_0
         $x_1_4 = {48 8b 45 80 48 8d ?? ?? ?? 48 89 44 24 68 48 8d ?? ?? 48 89 44 24 78 48 89 74 24 60 44 89 6c 24 70 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

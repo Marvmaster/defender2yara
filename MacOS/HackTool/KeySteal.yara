@@ -18,6 +18,7 @@ rule HackTool_MacOS_KeySteal_2147747847_0
         $x_1_3 = "fill_mach_port_array" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (2 of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule Trojan_Win32_PhisherAgt_2147782115_0
         $x_1_10 = "&init_iv=a8981e5552e7326af8b7411d3eb4a9dce78dc7339e5a7b29027879c093b8853e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

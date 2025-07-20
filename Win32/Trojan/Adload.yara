@@ -19,6 +19,7 @@ rule Trojan_Win32_Adload_EA_2147641874_0
         $x_1_5 = "/re.php?key=%s&ver=%s&uid=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Trojan_Win32_Adload_A_2147694990_0
         $x_1_7 = "Client.EXE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_Adload_RX_2147752570_0
         $x_1_1 = {89 45 dc 8b 45 e8 0f b6 4c 05 e4 8b 55 dc 0f b6 84 15 c8 fe ff ff 33 c8 8b 55 e8 88 4c 15 e4 e9 3d ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_Adload_DSK_2147753033_0
         $x_2_1 = {0f be 0c 10 8b 15 ?? ?? ?? ?? 0f b6 84 15 ?? ?? ff ff 33 c1 8b 0d ?? ?? ?? ?? 88 84 0d ?? ?? ff ff eb 05 00 a1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_Win32_Adload_RDS_2147753483_0
         $x_1_1 = {b9 03 00 00 00 f7 f1 8b 45 dc 0f be 0c 10 8b 55 f4 0f b6 44 15 ec 33 c1 8b 4d f4 88 44 0d ec eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule Trojan_Win32_Adload_MR_2147753628_0
         $x_1_1 = {f7 f1 8b 45 ?? 0f be 0c 10 8b 55 ?? 0f b6 44 15 ?? 33 c1 8b 4d ?? 88 44 0d ?? eb 05 00 b9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +159,7 @@ rule Trojan_Win32_Adload_DSA_2147756794_0
         $x_1_1 = {0f be 14 11 8b 35 ?? ?? ?? ?? 0f b6 3c 35 00 20 ?? ?? 89 fb 31 d3 88 1c 35 00 20 ?? ?? 81 3d ?? ?? ?? ?? ff 2b 00 00 0f 83}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -184,6 +191,7 @@ rule Trojan_Win32_Adload_RW_2147797327_0
         $x_1_11 = "kLoaderLock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +213,7 @@ rule Trojan_Win32_Adload_D_2147797795_0
         $x_1_1 = {e8 00 00 00 00 ff 34 24 59 52 89 0c 24 89 3c 24 89 e7 81 c7 04 00 00 00 81 c7 04 00 00 00 87 3c 24 5c 68 ae af fa 27 89 14 24 ba 39 73 eb 5c 81 ca ce ae f3 6f 81 c2 04 20 d7 6d f7 d2 c1 e2 05 c1 e2 02 81 f2 b6 fe 6f 16 29 d1 ff 34 24 5a 51 89 e1 81 c1 04 00 00 00 83 c1 04 87 0c 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +239,7 @@ rule Trojan_Win32_Adload_DKL_2147808282_0
         $x_1_5 = "kLoaderLock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -254,6 +264,7 @@ rule Trojan_Win32_Adload_HNU_2147809222_0
         $x_1_4 = "fyChangeKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -277,6 +288,7 @@ rule Trojan_Win32_Adload_GFE_2147809629_0
         $x_1_3 = "BDCreator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -304,6 +316,7 @@ rule Trojan_Win32_Adload_GEM_2147809828_0
         $x_1_7 = "fyChangeKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -329,6 +342,7 @@ rule Trojan_Win32_Adload_GTM_2147814652_0
         $x_1_5 = "DbgPrompt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Mallox_IP_2147894376_0
         $x_1_1 = {72 01 00 00 70 28 03 00 00 06 28 09 00 00 06 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

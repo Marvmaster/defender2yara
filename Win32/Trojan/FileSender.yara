@@ -18,6 +18,7 @@ rule Trojan_Win32_FileSender_B_2147811986_0
         $x_5_4 = "!sender2.upload+<isConnected>" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

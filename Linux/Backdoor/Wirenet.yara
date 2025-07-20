@@ -19,6 +19,7 @@ rule Backdoor_Linux_Wirenet_B_2147815787_0
         $x_1_4 = "Fin Wait" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

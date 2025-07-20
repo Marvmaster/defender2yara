@@ -19,6 +19,7 @@ rule Ransom_Win32_Sorena_SK_2147757753_0
         $x_1_4 = "main.encrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Ransom_Win32_Sorena_PA_2147758698_0
         $x_2_9 = "FileUnlockFileEx\\Encrypt.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
             ((5 of ($x_2_*))) or

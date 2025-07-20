@@ -16,6 +16,7 @@ rule Trojan_Win64_Miner_GTT_2147930854_0
         $x_10_1 = {4c 0f af f0 4d 01 f7 4c 89 f8 50 58 48 89 45 ?? 4c 63 7d ?? 48 63 8c 24 ?? 01 00 00 49 29 cf 4c 89 f8 50 58 89 45 ?? 48 c7 c0 80 00 00 00 48 89 c0 50 48 63 45 ?? 50 59 5a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

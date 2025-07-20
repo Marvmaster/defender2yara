@@ -20,6 +20,7 @@ rule TrojanSpy_MSIL_Saitalss_A_2147688502_0
         $x_1_6 = "MakeProcessUnkillable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

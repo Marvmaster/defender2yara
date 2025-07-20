@@ -57,6 +57,7 @@ rule Worm_Win32_Simpan_A_2147574872_0
         $x_5_43 = "vriwzduh_plfurvriw_zlqgrzv_fxuuhqwyhuvlrq_uxq" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 20 of ($x_1_*))) or
             ((5 of ($x_5_*) and 15 of ($x_1_*))) or

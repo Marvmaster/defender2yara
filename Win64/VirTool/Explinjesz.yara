@@ -18,6 +18,7 @@ rule VirTool_Win64_Explinjesz_A_2147922945_0
         $x_1_3 = {48 8b 55 e8 48 8b 4d f0 ?? ?? ?? ?? 48 89 44 24 38 48 c7 44 24 30 00 00 00 00 c7 44 24 28 00 00 00 00 48 c7 44 24 20 00 00 00 00 49 89 d1 41 b8 00 00 00 00 ba 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? 48 89 45 e0 48 83 7d e0 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

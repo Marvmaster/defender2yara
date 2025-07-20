@@ -20,6 +20,7 @@ rule Virus_Win32_Xorer_A_2147599575_0
         $x_1_6 = {72 65 67 73 76 72 33 32 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Virus_Win32_Xorer_B_2147600505_0
         $x_1_7 = {72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 45 78 70 6c 6f 72 65 72 5c 41 64 76 61 6e 63 65 64 5c 46 6f 6c 64 65 72 5c 53 75 70 65 72 48 69 64 64 65 6e 00 00 4e 6f 44 72 69 76 65 54 79 70 65 41 75 74 6f 52 75 6e 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Virus_Win32_Xorer_D_2147601585_0
         $x_1_7 = {00 58 4f 52 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -105,6 +108,7 @@ rule Virus_Win32_Xorer_E_2147601593_0
         $x_1_9 = {00 73 76 00 00 67 76 00 00 6d 6d 00 00 67 63 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -138,6 +142,7 @@ rule Virus_Win32_Xorer_H_2147601627_0
         $x_1_9 = {64 00 64 00 64 00 32 00 2e 00 73 00 79 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -168,6 +173,7 @@ rule Virus_Win32_Xorer_K_2147601630_0
         $x_1_6 = {00 58 4f 52 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -203,6 +209,7 @@ rule Virus_Win32_Xorer_L_2147601633_0
         $x_1_12 = {00 72 62 00 00 61 2e 67 69 66 00 00 00 64 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -244,6 +251,7 @@ rule Virus_Win32_Xorer_A_2147605915_0
         $x_1_15 = "cmd.exe /c del /F /Q \"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -273,6 +281,7 @@ rule Virus_Win32_Xorer_O_2147609419_0
         $x_1_1 = {81 7c 24 10 ee be 09 00 75 08 6a 00 ff 15 ?? ?? 40 00 33 c0 c2 10 00 68 ?? ?? 40 00 68 ?? ?? 40 00 ff 15 ?? ?? 40 00 85 c0 75 0c 50 68 ?? ?? 40 00 ff 15 ?? ?? 40 00 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -304,6 +313,7 @@ rule Virus_Win32_Xorer_B_2147614421_0
         $x_1_11 = "bitdefender" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -334,6 +344,7 @@ rule Virus_Win32_Xorer_M_2147614422_0
         $x_1_10 = "Startup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -354,6 +365,7 @@ rule Virus_Win32_Xorer_Y_2147614423_0
         $x_1_1 = {8d 8d 80 fe ff ff 51 8d 4d d8 e8 ?? ?? 00 00 6a 00 68 ?? ?? 40 00 6a 00 6a 00 ff 15 ?? ?? 40 00 68 ?? ?? 40 00 8d 4d d8 89 45 c4 e8 ?? ?? 00 00 83 f8 ff 0f 84 34 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -382,6 +394,7 @@ rule Virus_Win32_Xorer_I_2147626649_0
         $x_2_8 = "jljpjxjE" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

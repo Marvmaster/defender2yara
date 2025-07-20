@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Shelm_A_2147889000_0
         $x_2_2 = {83 ec 18 a3 ?? 30 40 00 66 c7 05 ?? 30 40 00 02 00 0f b7 45 f2 0f b7 c0 89 04 24 a1 ?? ?? 40 00 ff d0 83 ec 04 66 a3 ?? 30 40 00 8b 45 f4 89 04 24 a1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Shelm_B_2147889417_0
         $x_2_2 = "Mozilla/4" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule TrojanDownloader_Win32_Shelm_D_2147895683_0
         $x_2_2 = {89 04 24 a1 ?? ?? 40 00 ff d0 83 ec 04 89 45 ?? 8b 45 0c 0f b7 c0 89 04 24 a1 ?? ?? 40 00 ff d0 83 ec 04 66 89 45 ?? c7 44 24 18 00 00 00 00 c7 44 24 14 00 00 00 00 c7 44 24 10 00 00 00 00 c7 44 24 0c 00 00 00 00 c7 44 24 08 10 00 00 00 8d 45 ?? 89 44 24 04 8b 45 ?? 89 04 24 a1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

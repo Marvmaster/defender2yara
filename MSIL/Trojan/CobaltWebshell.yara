@@ -25,6 +25,7 @@ rule Trojan_MSIL_CobaltWebshell_AA_2147795880_0
         $x_1_10 = "ZZzzZzZz" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Trojan_MSIL_CobaltWebshell_AC_2147797104_0
         $x_3_7 = "AddWrappedFileDependencies" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

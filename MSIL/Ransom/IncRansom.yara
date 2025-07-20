@@ -19,6 +19,7 @@ rule Ransom_MSIL_IncRansom_YAD_2147942008_0
         $x_1_4 = "PAY THE RANSOM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

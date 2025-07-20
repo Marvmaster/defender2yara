@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Wolfic_D_2147835299_0
         $x_1_4 = "\\WSOCK32.dll.GetAcceptExSockaddrs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule TrojanDownloader_Win32_Wolfic_E_2147835300_0
         $x_1_4 = "\\duser.dll.InvalidateGadget" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

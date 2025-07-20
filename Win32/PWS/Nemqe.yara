@@ -20,6 +20,7 @@ rule PWS_Win32_Nemqe_A_2147626418_0
         $x_1_6 = "suser=%s&spass=%s&serial=%s&serNum=%s&level=%d&money=%d&line=%s&flag=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule PWS_Win32_Nemqe_B_2147628427_0
         $x_1_2 = {6a 2c 8b d8 53 e8 ?? ?? 00 00 83 c4 10 85 c0 75 aa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -29,6 +29,7 @@ rule Worm_Win32_Bruhorn_A_2147598081_0
         $n_18_15 = "pcmav-log" ascii //weight: -18
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((3 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -70,6 +71,7 @@ rule Worm_Win32_Bruhorn_B_2147598083_0
         $x_1_15 = "Line1 = Your computer has been infected" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 10 of ($x_1_*))) or
             ((3 of ($x_2_*) and 8 of ($x_1_*))) or

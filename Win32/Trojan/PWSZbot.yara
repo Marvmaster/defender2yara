@@ -17,6 +17,7 @@ rule Trojan_Win32_PWSZbot_GSB_2147809224_0
         $x_10_2 = {8b d1 8b 5d f0 33 c0 42 8b 0a 40 fe c1 fe c9 75 f6 48 c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_PWSZbot_HBAI_2147809825_0
         $x_1_4 = "ShellExecute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_PWSZbot_GMM_2147811653_0
         $x_10_2 = {8a 07 32 c3 88 06 47 2b f2 49 75 f4}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_PWSZbot_GNT_2147814168_0
         $x_1_4 = "d3d8thk.dlm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

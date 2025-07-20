@@ -18,6 +18,7 @@ rule Trojan_MSIL_CustomLoader_CCCL_2147892786_0
         $x_1_3 = {26 45 04 00 00 00 00 00 00 00 3d 00 00 00 3d 00 00 00 3d 00 00 00 fe 13 7e 10 00 00 04 6f 4e 00 00 0a 73 4f 00 00 0a fe 13 80 10 00 00 04 00 7e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Ransom_Win64_Babuk_SR_2147850295_0
         $x_1_1 = {45 33 c9 48 89 46 ?? 44 8b c7 8b d7 33 c9 ff 15 ?? ?? ?? ?? 45 33 c9 44 8b c7 33 d2 48 89 06 33 c9 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Ransom_Win64_Babuk_GZZ_2147945262_0
         $x_1_3 = "all of your company's critical data has been transferred to our servers" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -43,6 +43,7 @@ rule TrojanDownloader_Win32_Zibest_A_2147575544_0
         $x_5_28 = {c6 85 64 fd ff ff 53 c6 85 65 fd ff ff 68 c6 85 66 fd ff ff 61 c6 85 67 fd ff ff 72 c6 85 68 fd ff ff 65}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((18 of ($x_2_*))) or
             ((1 of ($x_5_*) and 15 of ($x_2_*))) or

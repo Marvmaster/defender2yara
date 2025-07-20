@@ -22,6 +22,7 @@ rule PWS_Win32_Agent_AC_2147595516_0
         $x_1_8 = "WinSys64.Tao" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule PWS_Win32_Agent_AD_2147595517_0
         $x_1_7 = "&PassWord=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +85,7 @@ rule PWS_Win32_Agent_IK_2147598556_0
         $x_1_15 = "InternetWriteFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1000_*) and 5 of ($x_100_*) and 3 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_1000_*) and 5 of ($x_100_*) and 4 of ($x_10_*))) or
@@ -117,6 +120,7 @@ rule PWS_Win32_Agent_DP_2147603114_0
         $x_1_11 = "TFTPSend" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +146,7 @@ rule PWS_Win32_Agent_J_2147651207_0
         $x_1_6 = {5c 53 69 6e 63 65 00 08 00 53 4f 46 54 57 41 52 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

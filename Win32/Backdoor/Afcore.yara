@@ -25,6 +25,7 @@ rule Backdoor_Win32_Afcore_2147597756_0
         $x_1_11 = "of %d files listed in %s." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Backdoor_Win32_Afcore_I_2147608793_0
         $x_1_2 = {63 6c 65 61 6e 75 70 00 69 6e 69 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Backdoor_Win32_Afcore_CE_2147609806_0
         $x_1_3 = {ff d0 68 00 80 00 00 6a 00 ff 35 ?? ?? ?? ?? ff 55 b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Backdoor_Win32_Afcore_B_2147611849_0
         $x_1_5 = {8b d1 83 e2 03 02 44 15 ?? 30 81}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -123,6 +127,7 @@ rule Backdoor_Win32_Afcore_M_2147616308_0
         $x_1_7 = "*\\intern*\\iexplore.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -151,6 +156,7 @@ rule Backdoor_Win32_Afcore_C_2147616920_0
         $x_1_3 = {8a 0c 01 32 04 01 01 04 04 0a 0e 4a ?? 4e ?? [0-3] 88 0c 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -178,6 +184,7 @@ rule Backdoor_Win32_Afcore_E_2147626621_0
         $x_1_3 = {8a 0c 01 32 4e ?? 8b 56 ?? 88 0c 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -205,6 +212,7 @@ rule Backdoor_Win32_Afcore_F_2147629730_0
         $x_1_4 = {8a 54 0a 28 8b 7e ?? 8d 86 ?? ?? ?? ?? 32 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -236,6 +244,7 @@ rule Backdoor_Win32_Afcore_G_2147636891_0
         $x_1_7 = {6a 40 89 45 ?? b8 00 30 10 00 50 56 53 89 45 98 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -260,6 +269,7 @@ rule Backdoor_Win32_Afcore_AO_2147641088_0
         $x_1_2 = {00 6a 66 75 6e 79 00 00 00 5c 73 79 73 74 65 6d 33 32 5c 73 70 6f 6f 6c 00 73 76 2e 65 78 65 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -288,6 +298,7 @@ rule Backdoor_Win32_Afcore_A_2147643818_0
         $x_1_8 = "PostMessageA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -311,6 +322,7 @@ rule Backdoor_Win32_Afcore_H_2147643819_0
         $x_1_3 = {33 d2 f7 f1 80 c2 61 88 17}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -334,6 +346,7 @@ rule Backdoor_Win32_Afcore_I_2147643939_0
         $x_10_3 = {6a 40 68 00 30 10 00 ff 73 ?? 6a 00 ff 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -359,6 +372,7 @@ rule Backdoor_Win32_Afcore_J_2147644031_0
         $x_1_2 = {83 ec 7c 83 7d 0c 01 74 04 32 c0 eb 3f 56 ff 15 ?? ?? ?? ?? ff 35 ?? ?? ?? ?? 8b f0 8d 45 84 a3 ?? ?? ?? ?? 8b 45 08 56 89 45 ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -383,6 +397,7 @@ rule Backdoor_Win32_Afcore_K_2147644069_0
         $x_1_4 = {83 c4 0c c6 05 ?? ?? ?? ?? 47 c6 05 ?? ?? ?? ?? 65 c6 05 ?? ?? ?? ?? 73 c6 05 ?? ?? ?? ?? 73 c6 05 ?? ?? ?? ?? 00 8b 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -406,6 +421,7 @@ rule Backdoor_Win32_Afcore_L_2147649506_0
         $x_1_3 = {33 c9 81 e9 bc 01 00 00 64 8b 89 d4 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

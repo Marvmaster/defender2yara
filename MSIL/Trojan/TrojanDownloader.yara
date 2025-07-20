@@ -21,6 +21,7 @@ rule Trojan_MSIL_TrojanDownloader_Tiny_2147781323_0
         $x_3_5 = "DownloadFile" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_MSIL_TrojanDownloader_IAG_2147782383_0
         $x_2_4 = "11111-22222-40001-00001" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +84,7 @@ rule Trojan_MSIL_TrojanDownloader_MFP_2147783940_0
         $x_1_17 = "System.Net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_30_*) and 9 of ($x_1_*))) or
             ((2 of ($x_50_*))) or
@@ -111,6 +114,7 @@ rule Trojan_MSIL_TrojanDownloader_TGVC_2147793776_0
         $x_1_5 = "HtmlDocument" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

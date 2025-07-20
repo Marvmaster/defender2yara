@@ -17,6 +17,7 @@ rule Trojan_Win32_Toshliph_A_2147697050_0
         $x_1_3 = {6a 0f 6a 05 e8 ?? ?? ?? ?? 8b f0 8d 45 d0 56 50 e8 ?? ?? ?? ?? c7 44 35 d0 2e 70 68 70 c6 44 35 d4 3f 83 c6 05 8d 04 3e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

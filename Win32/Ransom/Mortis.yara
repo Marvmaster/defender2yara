@@ -18,6 +18,7 @@ rule Ransom_Win32_Mortis_PA_2147892439_0
         $x_1_3 = "\\MortisLocker.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Win32_Mortis_MA_2147900984_0
         $x_1_2 = "[*] AES Key:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

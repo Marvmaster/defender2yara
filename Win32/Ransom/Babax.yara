@@ -24,6 +24,7 @@ rule Ransom_Win32_Babax_AB_2147765548_0
         $x_1_9 = "BabaxLocker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

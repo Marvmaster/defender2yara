@@ -21,6 +21,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_F_2147819813_0
         $x_1_6 = "AppWinStyle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_K_2147826062_0
         $x_1_2 = "WebClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_W_2147830128_0
         $x_1_5 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_N_2147831650_0
         $x_1_7 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_X_2147831651_0
         $x_2_1 = {20 00 01 00 00 38 ?? 00 00 00 38 ?? 00 00 00 20 80 00 00 00 38 ?? 00 00 00 38 ?? 00 00 00 72 ?? 00 00 70 38 ?? 00 00 00 7e ?? 00 00 04 20 e8 03 00 00 73 ?? 00 00 0a 0c 07 08 07 6f ?? 00 00 0a 1e 5b 6f ?? 00 00 0a 6f ?? 00 00 0a 07 08 07 6f ?? 00 00 0a 1e 5b 6f ?? 00 00 0a 6f ?? 00 00 0a 07 17 6f ?? 00 00 0a 06 07 6f ?? 00 00 0a 17 73 ?? 00 00 0a 0d 09 02 16 02 8e 69 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +147,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_Z_2147831848_0
         $x_1_6 = "get_ASCII" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_Y_2147832621_0
         $x_2_2 = {0a 13 06 28 ?? 00 00 0a 11 06 6f ?? 00 00 0a 13 07 1f 38 8d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -188,6 +195,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_AB_2147833232_0
         $x_1_4 = "Invoke" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +226,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_AF_2147833972_0
         $x_2_10 = "ALQBQAGEAdABoACAAJABlAG4AdgA6AEEAcABwAEQAYQB0AGEA" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -244,6 +253,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_AK_2147833974_0
         $x_1_6 = "get_UTF8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +278,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_AL_2147834223_0
         $x_1_4 = "GetResponseStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -291,6 +302,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_AO_2147834514_0
         $x_2_3 = {01 25 16 11 ?? a2 25 13 ?? 14 14 17 8d ?? 00 00 01 25 16 17 9c 25 13 ?? 28 ?? 00 00 0a 11 ?? 16 91 2d 02 2b 0b 11 ?? 16 9a 28 ?? 00 00 0a 13 ?? 14 72 ?? ?? 00 70 16 8d ?? 00 00 01 14 14 14 28 ?? 00 00 0a 17 8d ?? 00 00 01 25 16 1f 16 8c ?? 00 00 01 a2 14 28 ?? 00 00 0a 14 72 ?? ?? 00 70 16 8d ?? 00 00 01 14 14 14 28 ?? 00 00 0a 17 8d ?? 00 00 01 25 16 16 8c ?? 00 00 01 a2 14 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -323,6 +335,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_AV_2147835157_0
         $x_2_12 = "AQwBoAGkAbABkAFAAYQB0AGg" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +364,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_AX_2147835158_0
         $x_2_8 = "AtAEMAaABpAGwAZABQAGEAdABoA" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -374,6 +388,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_BD_2147835636_0
         $x_1_3 = "OpenRead" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -399,6 +414,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_BA_2147836285_0
         $x_2_5 = "Start-Sleep -Seconds 9;Start-Sleep -Seconds 9;" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -421,6 +437,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_BG_2147837510_0
         $x_1_2 = "InternetGetConnectedState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -444,6 +461,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_BH_2147837516_0
         $x_1_3 = "CreateDelegate" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -465,6 +483,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_SP_2147838221_0
         $x_5_1 = {fe 09 07 00 7b 09 00 00 04 6f 0a 00 00 0a fe 09 03 00 71 09 00 00 01 6f 0b 00 00 0a 26 00 fe 09 05 00 71 03 00 00 01 20 01 00 00 00 58 fe 0e 00 00 fe 09 05 00 fe 0c 00 00 81 03 00 00 01 fe 09 05 00 71 03 00 00 01 fe 09 04 00 71 03 00 00 01 fe 02 20 00 00 00 00 fe 01 fe 0e 01 00 fe 09 06 00 fe 0c 01 00 81 14 00 00 01 fe 09 06 00 71 14 00 00 01 3a 0a 00 00 00 20 00 00 00 00 38 06 00 00 00 00 20 01 00 00 00 00 20 fe ff ff ff 5a 20 04 00 00 00 58 fe 0e 02 00 fe 09 00 00 fe 0c 02 00 54 2a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -489,6 +508,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_BI_2147838563_0
         $x_1_4 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -513,6 +533,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_BM_2147841129_0
         $x_1_4 = "-WindowStyle hidden" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -538,6 +559,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_BN_2147841506_0
         $x_1_2 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -561,6 +583,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_BT_2147842197_0
         $x_1_3 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -582,6 +605,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_BW_2147842341_0
         $x_2_1 = {18 5b 11 01 11 04 18 6f ?? 00 00 0a 1f 10 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -605,6 +629,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_CD_2147844269_0
         $x_1_3 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -629,6 +654,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_AE_2147844627_0
         $x_1_4 = "get_ASCII" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -656,6 +682,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_AP_2147844638_0
         $x_1_7 = "Download" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -678,6 +705,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_BZ_2147845481_0
         $x_2_2 = "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -699,6 +727,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_CA_2147846915_0
         $x_2_1 = {fe 0c 29 00 61 52 fe 0c 0d 00 20 01 00 00 00 58 fe 0e ?? 00 fe 0c 26 00 20 01 00 00 00 58 fe}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -723,6 +752,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_AQ_2147847021_0
         $x_1_4 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -754,6 +784,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_H_2147847168_0
         $x_2_11 = "AtRGlzYWJsZUludHJ1c2lvblByZXZlbnRpb25TeXN0ZW0gJHRydWU" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -779,6 +810,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_L_2147847409_0
         $x_2_5 = "payloadBuffer" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -801,6 +833,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_AH_2147848507_0
         $x_2_2 = "/C choice /C Y /N /D Y /T 1 & Del" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -822,6 +855,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_RDL_2147848752_0
         $x_2_1 = {06 91 20 54 02 00 00 59 d2 9c 00 06 17 58 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -845,6 +879,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_S_2147849404_0
         $x_1_3 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -867,6 +902,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_CE_2147850691_0
         $x_2_2 = {02 50 06 91 0c 02 50 06 02 50 07 91 9c 02 50 07 08 9c 06 17 58 0a 07 17 59 0b 06 07 32}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -889,6 +925,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_CG_2147850698_0
         $x_2_2 = "PredicateRole" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -910,6 +947,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_SK_2147852033_0
         $x_2_1 = {11 0d 11 04 11 06 58 17 58 17 59 11 05 11 07 58 17 58 17 59 6f ?? ?? ?? 0a 13 16 12 16 28 ?? ?? ?? 0a 13 10 11 0c 11 08 11 10 9c 11 08 17 58 13 08 11 07 17 58 13 07 11 07 17 fe 04 13 11 11 11 2d be}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -932,6 +970,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_SL_2147899871_0
         $x_2_2 = "nnn.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -957,6 +996,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_BB_2147900696_0
         $x_2_5 = "TGVnaXRBcHA" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -978,6 +1018,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_SM_2147900852_0
         $x_2_1 = {00 11 05 11 04 5d 13 08 11 05 1f 16 5d 13 09 11 05 17 58 11 04 5d 13 0a 07 11 08 91 08 11 09 91 61 13 0b 11 0b 07 11 0a 91 59 20 00 01 00 00 58 20 00 01 00 00 5d 13 0c 07 11 08 11 0c d2 9c 11 05 17 58 13 05 00 11 05 11 04 09 17 58 5a fe 04 13 0d 11 0d 2d aa}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1007,6 +1048,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_CM_2147904767_0
         $x_2_9 = "/create /sc hourly /mo 1 /tn" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1028,6 +1070,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_CN_2147908637_0
         $x_2_1 = {0a 20 00 01 00 00 14 fe 09 ?? 00 71 ?? 00 00 01 fe 09 ?? 00 71 ?? 00 00 01 74 ?? 00 00 1b 6f ?? 00 00 0a 26 fe}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1051,6 +1094,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_SN_2147914285_0
         $x_2_3 = "Reporting Encoding" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1072,6 +1116,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_SO_2147931330_0
         $x_2_1 = {00 20 0d 96 01 00 13 05 20 0d 96 01 00 13 06 00 2b 41 00 20 0d 96 01 00 13 07 20 0d 96 01 00 13 08 20 5a e4 01 00 13 09 11 09 20 a3 1c 03 00 fe 01 13 0a 11 0a 2c 0b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1096,6 +1141,7 @@ rule TrojanDownloader_MSIL_AsyncRAT_ELM_2147943878_0
         $x_2_4 = "http://144.172.116.121/uiu/Awuolavee.mp3" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

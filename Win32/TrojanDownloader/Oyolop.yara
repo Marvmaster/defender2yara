@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Oyolop_A_2147656965_0
         $x_1_3 = {8b 45 f4 c1 e0 06 89 45 f4 8b 4d fc 8a 51 01 52}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

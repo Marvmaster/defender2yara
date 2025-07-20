@@ -17,6 +17,7 @@ rule Trojan_Linux_CoinMiner_B_2147751830_0
         $x_1_2 = "/tmp/.systemd.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Linux_CoinMiner_P_2147763876_0
         $x_1_3 = "cd /tmp/.gg && rm -rf top x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Linux_CoinMiner_2147764177_0
         $x_1_7 = "postattack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Linux_CoinMiner_C_2147828137_0
         $x_1_2 = {48 8d 3d c7 45 44 00 48 8d 05 c7 45 44 00 55 48 29 f8 48 89 e5 48 83 f8 0e 76 0f 48 8b 05 9c 38 44 00 48 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_Linux_CoinMiner_D_2147828138_0
         $x_1_5 = "[kdmflush]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_Linux_CoinMiner_A_2147828995_0
         $x_1_3 = {00 d0 30 15 31 a2 97 a8 10 00 00 01 80 70 85 45 a0 54 e0 04 2d 06 8c a5 8a 10 01 8a 44 02 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -161,6 +167,7 @@ rule Trojan_Linux_CoinMiner_R_2147842818_0
         $x_1_3 = "dirtyLocked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -187,6 +194,7 @@ rule Trojan_Linux_CoinMiner_T_2147902245_0
         $x_1_3 = "i2p_addressEEE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -211,6 +219,7 @@ rule Trojan_Linux_CoinMiner_AT_2147904543_0
         $x_1_4 = "platform.lin_walk_cron" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -233,6 +242,7 @@ rule Trojan_Linux_CoinMiner_AX_2147915802_0
         $x_1_2 = {64 48 c7 04 25 30 06 00 00 ff ff ff ff f0 64 83 0c 25 08 03 00 00 10 64 48 8b 3c 25 00 03 00 00 e8 bb f4 bf ff f4 66 2e 0f 1f 84 00 00 00 00 00 f7 c7 02 00 00 00 75 ?? 64 8b 04 25 08 03 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -267,6 +277,7 @@ rule Trojan_Linux_CoinMiner_C12_2147941154_0
         $x_2_15 = "mining.authorize" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

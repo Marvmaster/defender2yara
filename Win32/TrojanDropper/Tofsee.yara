@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Tofsee_A_2147610828_0
         $x_1_6 = {5c 00 5c 00 2e 00 5c 00 72 00 6f 00 74 00 63 00 65 00 74 00 6f 00 72 00 70 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

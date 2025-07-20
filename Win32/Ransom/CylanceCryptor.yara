@@ -18,6 +18,7 @@ rule Ransom_Win32_CylanceCryptor_ND_2147847325_0
         $x_1_3 = "Your Decryption ID:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

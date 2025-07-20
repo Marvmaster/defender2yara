@@ -18,6 +18,7 @@ rule TrojanClicker_MSIL_Balamid_A_2147685071_0
         $x_1_4 = "onmousedown" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanClicker_MSIL_Balamid_A_2147685071_1
         $x_1_2 = "akeegleenaondckknlhflmihfgkpbane" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule TrojanClicker_MSIL_Balamid_A_2147685071_2
         $x_1_4 = "/toy2.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule TrojanClicker_MSIL_Balamid_A_2147685071_3
         $x_1_2 = {2f 00 72 00 65 00 6b 00 6c 00 61 00 6d 00 2f [0-32] 00 78 [0-32] 00 2e 00 68 00 74 00 6d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule TrojanClicker_MSIL_Balamid_A_2147685071_4
         $x_1_5 = "firefox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule TrojanClicker_MSIL_Balamid_A_2147685071_5
         $x_1_7 = "/toy.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule TrojanClicker_MSIL_Balamid_D_2147721467_0
         $x_1_3 = "htmlfile\\shell\\open\\command" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

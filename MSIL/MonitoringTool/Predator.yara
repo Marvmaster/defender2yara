@@ -19,6 +19,7 @@ rule MonitoringTool_MSIL_Predator_201827_0
         $x_1_5 = "screens\\screenshot" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

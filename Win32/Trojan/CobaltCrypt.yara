@@ -17,6 +17,7 @@ rule Trojan_Win32_CobaltCrypt_VC_2147760076_0
         $x_1_2 = {89 08 5f 5d 28 00 31 0d ?? ?? ?? ?? c7 05 [0-64] a1 ?? ?? ?? ?? 01 05 ?? ?? ?? ?? 8b ff a1 ?? ?? ?? ?? 8b 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -29,6 +29,7 @@ rule VirTool_Win32_Vebject_A_2147574771_0
         $x_1_15 = "lNumberOfBitsToShift" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Perintal_A_2147650292_0
         $x_1_4 = {56 56 6a 01 8d 4c 24 24 51 ff 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 08 b6 00 00 56 6a 04 8d 44 24 18 50 8d 54 24 2c 6a ff c7 44 24 20 0c 00 00 00 89 74 24 28 89 54 24 24 ff 15 ?? ?? ?? ?? a3 b4 28 45 00 ff 15 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 3b ce 74 ?? 3d b7 00 00 00 75 ?? 89 35 b0 28 45 00 68 08 b6 00 00 56 56 68 1f 00 0f 00 51 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

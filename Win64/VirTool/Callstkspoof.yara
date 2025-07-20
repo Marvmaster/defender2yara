@@ -17,6 +17,7 @@ rule VirTool_Win64_Callstkspoof_A_2147910514_0
         $x_1_3 = {bb 4c 8b d1 b8 ba 00 00 00 00 48 8b 01 39 d8 ?? ?? 48 83 c1 20 48 83 c2 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

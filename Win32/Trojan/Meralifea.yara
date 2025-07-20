@@ -19,6 +19,7 @@ rule Trojan_Win32_Meralifea_A_2147728403_0
         $x_1_5 = "\\UsbgKrnl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule Trojan_Win32_Meralifea_A_2147728403_1
         $x_3_6 = "Elevation:Administrator!new:{3ad05575-8857-4850-9277-11b85bdb8e0" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -79,6 +81,7 @@ rule Trojan_Win32_Meralifea_A_2147728403_2
         $x_2_8 = "\\LiptonMilkTea" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -108,6 +111,7 @@ rule Trojan_Win32_Meralifea_A_2147728403_3
         $x_2_4 = {53 00 54 00 4d 00 00 00 20 00 53 00 54 00 4d 00 00 00 00 00 6e 74 64 6c 6c 00 00 00 5a 77 4f 70 65 6e 53 65 63 74 69 6f 6e 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -138,6 +142,7 @@ rule Trojan_Win32_Meralifea_A_2147728403_4
         $x_2_7 = {75 23 eb 16 83 f8 01 75 11 8a 06 3c cc 74 06 80 7e 01 90 75 05 38 46 01 74 09 03 75 1c eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -174,6 +179,7 @@ rule Trojan_Win32_Meralifea_A_2147728403_5
         $x_1_12 = "\\NPF-{0179AC45-C226-48e3-A205-DCA79C824051}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -221,6 +227,7 @@ rule Trojan_Win32_Meralifea_A_2147728403_6
         $x_1_22 = "EFI PART" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -295,6 +302,7 @@ rule Trojan_Win32_Meralifea_A_2147728403_7
         $x_2_39 = "SETUPAPI.DLL,InstallHinfSection DefaultInstall 132 rdpci21.inf" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((15 of ($x_1_*))) or
             ((1 of ($x_2_*) and 13 of ($x_1_*))) or
@@ -328,6 +336,7 @@ rule Trojan_Win32_Meralifea_A_2147728447_0
         $x_2_5 = {00 44 6c 6c 49 6e 73 74 61 6c 6c 20 3d 3d 3e 0a 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

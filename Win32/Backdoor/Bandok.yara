@@ -48,6 +48,7 @@ rule Backdoor_Win32_Bandok_A_2147592515_0
         $x_1_33 = "bitchcn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 30 of ($x_1_*))) or
             ((1 of ($x_20_*) and 30 of ($x_1_*))) or

@@ -22,6 +22,7 @@ rule TrojanDropper_Win32_Febipos_I_2147693442_0
         $x_1_8 = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

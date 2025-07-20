@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Vhoster_A_2147684456_0
         $x_1_4 = "Npf MZKAjm" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

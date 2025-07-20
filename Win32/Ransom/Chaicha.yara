@@ -24,6 +24,7 @@ rule Ransom_Win32_Chaicha_2147729086_0
         $x_1_10 = {50 72 69 63 65 20 66 6f 72 20 64 65 63 72 79 70 74 69 6f 6e 20 24 ?? 30 30 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             ((3 of ($x_4_*))) or
@@ -63,6 +64,7 @@ rule Ransom_Win32_Chaicha_2147729086_1
         $x_10_16 = "{FBB4BCC6-05C7-4ADD-B67B-A98A697323C1}" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_6_*) and 1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_10_*) and 3 of ($x_6_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or

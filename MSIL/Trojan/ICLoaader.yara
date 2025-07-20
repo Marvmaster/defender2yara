@@ -18,6 +18,7 @@ rule Trojan_MSIL_ICLoaader_RTS_2147926460_0
         $x_1_3 = "v4.0.30319" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

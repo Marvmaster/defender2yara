@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Downkuary_B_2147712306_0
         $x_1_4 = "HKEY_CURRENT_USER\\Software\\yeaplayer;64:HKEY_CURRENT_USER\\Software\\yeaplayer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Downkuary_C_2147712625_0
         $x_1_4 = "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule TrojanDownloader_Win32_Downkuary_D_2147716560_0
         $x_10_4 = "d1.kuai8.com/setup/kuai8_rjaz.exe" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

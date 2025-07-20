@@ -20,6 +20,7 @@ rule BrowserModifier_Win32_Kerlofost_139094_0
         $x_1_6 = "71E59D37-D7FC-4ED6-BC1D-D13BE02FE6C5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

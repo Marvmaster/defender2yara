@@ -23,6 +23,7 @@ rule Worm_Win32_NoChod_B_2147594813_0
         $x_10_9 = "[MSNSPREAD]: Stopped MSN spreader" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

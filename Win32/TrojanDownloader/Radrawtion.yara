@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Radrawtion_A_2147632250_0
         $x_1_8 = {68 cc ea 43 00 51 ff 15 18 90 43 00 68 d0 07 00 00 ff 15 bc 92 43 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -20,6 +20,7 @@ rule Trojan_Win32_Misector_A_2147646105_0
         $x_1_6 = "valeristar@e1.ru" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Misector_B_2147650294_0
         $x_1_5 = "valeristar@e1.ru" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

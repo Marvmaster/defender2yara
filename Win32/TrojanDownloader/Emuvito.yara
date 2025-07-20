@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Emuvito_A_2147610184_0
         $x_1_3 = {8b d8 8a 83 ?? ?? 42 00 e8 ?? ?? ?? ff 3c 45 0f 84 dd 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

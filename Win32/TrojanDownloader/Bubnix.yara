@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Bubnix_A_2147630315_0
         $x_1_3 = {2f 61 70 70 6c 69 63 61 74 69 6f 6e 64 61 74 61 2e 62 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

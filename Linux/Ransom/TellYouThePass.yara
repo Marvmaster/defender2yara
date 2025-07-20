@@ -23,6 +23,7 @@ rule Ransom_Linux_TellYouThePass_A7_2147908287_0
         $x_4_9 = ".locked" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_4_*) and 1 of ($x_1_*))) or
             ((4 of ($x_4_*))) or

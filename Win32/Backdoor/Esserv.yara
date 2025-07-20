@@ -15,6 +15,7 @@ rule Backdoor_Win32_Esserv_2147600102_0
         $x_1_1 = {b8 01 00 00 00 85 c0 74 1d 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 68 80 4f 12 00 ff 15 ?? ?? ?? ?? eb da}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

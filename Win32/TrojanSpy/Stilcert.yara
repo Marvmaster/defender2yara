@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Stilcert_A_2147696909_0
         $x_1_5 = "FtpPutFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

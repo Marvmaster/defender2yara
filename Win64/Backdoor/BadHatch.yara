@@ -18,6 +18,7 @@ rule Backdoor_Win64_BadHatch_B_2147812427_0
         $x_1_4 = {50 6c 65 61 73 65 20 75 70 6c 6f 61 64 20 (32|33|34|36) (32|33|34|36) 2d 62 69 74 20 44 4c ?? 20 66 69 6c 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -65,6 +65,7 @@ rule Trojan_AndroidOS_Triada_A_2147824585_0
         $x_1_4 = "/data/local/tmp/.localtmptest.apk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -182,6 +183,7 @@ rule Trojan_AndroidOS_Triada_H_2147942303_0
         $x_1_5 = "com.hwsen.abc.SDK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

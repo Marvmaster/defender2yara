@@ -19,6 +19,7 @@ rule Trojan_Win32_FakeHadoc_157710_0
         $x_1_5 = {5c 69 6e 73 74 61 6c 6c 5f 68 64 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

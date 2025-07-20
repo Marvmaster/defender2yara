@@ -22,6 +22,7 @@ rule Rogue_Win32_Tiropot_169000_0
         $x_1_8 = "file.antiprotect.co.kr/total/AntiProtectUpdate.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

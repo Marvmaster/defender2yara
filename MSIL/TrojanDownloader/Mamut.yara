@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Mamut_SO_2147892528_0
         $x_2_1 = {28 9a 00 00 06 16 9a 75 19 00 00 1b 0d 08 09 16 09 8e 69 6f ?? ?? ?? 0a 07 6f ?? ?? ?? 0a 13 05 de 18}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule HackTool_Win32_Edrblok_B_2147923790_0
         $x_10_11 = {3b 39 72 4a ?? ?? ?? ?? 9f 31 ?? ?? ?? ?? bc 44 ?? ?? 84 c3 ba 54 dc b3 b6 b4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_5_*) and 6 of ($x_1_*))) or
             ((3 of ($x_10_*) and 6 of ($x_1_*))) or
@@ -57,6 +58,7 @@ rule HackTool_Win32_Edrblok_YAB_2147925937_0
         $x_1_6 = "blockedr/block/unblockall/unblock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +92,7 @@ rule HackTool_Win32_Edrblok_EA_2147944921_0
         $n_100_14 = "cudanacsvc" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -125,6 +128,7 @@ rule HackTool_Win32_Edrblok_EB_2147944922_0
         $n_100_15 = "cudanacsvc" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }

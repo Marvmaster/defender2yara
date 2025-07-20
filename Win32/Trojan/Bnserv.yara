@@ -18,6 +18,7 @@ rule Trojan_Win32_Bnserv_A_2147631833_0
         $x_5_4 = {26 61 63 74 69 6f 6e 3d 67 65 74 26 69 64 3d 00 72 65 73 2e 70 68 70 3f 6b 65 79 3d 00 00 00 00 63 61 70 63 68 61 4b 65 79}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_5_*))) or

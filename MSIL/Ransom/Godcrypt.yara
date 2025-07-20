@@ -30,6 +30,7 @@ rule Ransom_MSIL_Godcrypt_2147729651_0
         $x_6_16 = {47 6f 64 73 6f 6d 77 61 72 65 20 62 79 20 4e 69 6e 6a 61 47 68 6f 73 74 5c 47 6f 64 73 6f 6d 77 61 72 65 5c 47 6f 64 73 6f 6d 77 61 72 65 [0-32] 47 6f 64 73 6f 6d 77 61 72 65 2e 70 64 62}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*) and 5 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_4_*) and 6 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -24,6 +24,7 @@ rule Trojan_Win32_Chcod_A_2147629135_0
         $x_1_10 = {3c 2f 74 0d 84 c0 74 09 8a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

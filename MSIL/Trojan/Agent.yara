@@ -19,6 +19,7 @@ rule Trojan_MSIL_Agent_J_2147652067_0
         $x_1_5 = "op_Inequality" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -50,6 +51,7 @@ rule Trojan_MSIL_Agent_J_2147742406_0
         $x_1_7 = "AdjustTokenPrivileges" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Trojan_MSIL_Agent_AI_2147742408_0
         $x_1_7 = "$5f27e92a-6118-4bc7-ac94-354b27f1e80f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_MSIL_Agent_MRS_2147745468_0
         $x_1_2 = {2d 11 14 fe ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 7e ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule Trojan_MSIL_Agent_ICY_2147786567_0
         $x_1_3 = "Sylvan" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +154,7 @@ rule Trojan_MSIL_Agent_ICY_2147786567_1
         $x_1_7 = "Download successful" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +182,7 @@ rule Trojan_MSIL_Agent_UKY_2147787104_0
         $x_1_7 = "DisableAntiSpyware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +209,7 @@ rule Trojan_MSIL_Agent_UPO_2147794860_0
         $x_1_6 = "weoufgoweifhiuwef" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +238,7 @@ rule Trojan_MSIL_Agent_DAQ_2147798711_0
         $x_1_8 = "njLogger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -252,6 +261,7 @@ rule Trojan_MSIL_Agent_SPQZ_2147840561_0
         $x_1_2 = "ndirmeDenemeleri.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

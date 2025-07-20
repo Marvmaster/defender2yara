@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Rotbope_A_2147647564_0
         $x_1_4 = {61 62 63 2e 72 65 67 00 73 76 63 68 6f 73 74 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

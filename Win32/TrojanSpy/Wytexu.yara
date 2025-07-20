@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Wytexu_A_2147623069_0
         $x_1_2 = {3d 04 18 01 50 74 07 3d 04 18 21 50 75 c7 56 ff 15 ?? ?? 40 00 68 00 01 00 00 8d 4c 24 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

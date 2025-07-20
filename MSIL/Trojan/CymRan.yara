@@ -17,6 +17,7 @@ rule Trojan_MSIL_CymRan_ACY_2147896957_0
         $x_1_2 = {08 11 06 9a 28 ?? 00 00 0a 6f ?? 00 00 06 00 08 11 06 9a 28 ?? 00 00 06 13 08 11 08 2c 06 00 07 17 58 0b 00 00 00 11 06 17 58 13 06 11 06 08 8e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_CymRan_ACA_2147896975_0
         $x_1_2 = {0a 16 fe 01 0c 08 2c 61 00 02 28 ?? 00 00 0a 0d 09 2c 51 00 00 02 73 ?? 00 00 0a 03 04 05 28 ?? 00 00 0a 25 0a 13 04 00 06 16 6a 16 6a 6f ?? 00 00 0a 00 00 06 16 6a 16 6a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_MSIL_CymRan_ADT_2147934002_0
         $x_1_5 = "CymulateEDR" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_MSIL_CymRan_ACN_2147934027_0
         $x_3_2 = {64 d2 9c 11 07 11 05 25 00 72 29 00 00 70 28 ?? 00 00 0a 58 13 05 11 0b 00 72 e2 1a 00 70 28 ?? 00 00 0a 64 d2 9c 08 11 0a 8f 61 00 00 01 25 4b 11 0b 61 54 11 0a}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

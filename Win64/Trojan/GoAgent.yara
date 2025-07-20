@@ -19,6 +19,7 @@ rule Trojan_Win64_GoAgent_AT_2147920879_0
         $x_1_4 = {48 c7 c7 08 00 fe 7f 48 8b 07 48 6b c0 64 48 89 44 24 08 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

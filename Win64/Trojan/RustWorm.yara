@@ -21,6 +21,7 @@ rule Trojan_Win64_RustWorm_DA_2147924486_0
         $x_1_6 = "malwarebytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

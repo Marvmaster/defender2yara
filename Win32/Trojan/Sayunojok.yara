@@ -20,6 +20,7 @@ rule Trojan_Win32_Sayunojok_A_2147697339_0
         $x_1_6 = {68 ff 00 00 00 89 4c 24 28 b9 11 00 00 00 f3 ab b9 64 00 00 00 8d bc 24 a0 01 00 00 52 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

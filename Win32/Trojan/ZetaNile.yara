@@ -19,6 +19,7 @@ rule Trojan_Win32_ZetaNile_A_2147831332_0
         $x_1_5 = "Software\\SimonTatham\\PuTTY" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -46,6 +47,7 @@ rule Trojan_Win32_ZetaNile_M_2147832401_0
         $x_1_3 = "c:\\colorctrl\\colorcpl.exe C3A9B30B6A313F289297C9A36730DB6D" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

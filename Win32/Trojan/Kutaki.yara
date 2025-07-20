@@ -20,6 +20,7 @@ rule Trojan_Win32_Kutaki_MA_2147828812_0
         $x_1_5 = "taskkill /im" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Trojan_Win32_Kutaki_A_2147836647_0
         $x_1_12 = "GetAsyncKeyState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_Win32_Kutaki_GPA_2147912834_0
         $x_2_2 = "aHR0cDovL25ld2xpbmt3b3RvbG92ZS5jbHViL2xvdmUvdGhyZWUucGhw" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

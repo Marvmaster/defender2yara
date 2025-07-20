@@ -18,6 +18,7 @@ rule VirTool_Win64_Dumplaz_A_2147832714_0
         $x_1_3 = {44 8b 85 98 02 00 00 33 d2 b9 40 00 00 00 ff 95 ?? ?? ?? ?? 48 89 85 38 02 00 00 ff 15 ?? ?? ?? ?? 0f b7 8d 9e 02 00 00 c7 44 24 30 00 00 00 00 c7 44 24 28 00 00 00 00 c7 44 24 20 10 04 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Worm_Win32_Kolabc_C_2147626655_0
         $x_1_6 = "Total shares [%s: %d]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

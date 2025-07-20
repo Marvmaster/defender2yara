@@ -23,6 +23,7 @@ rule VirTool_Win64_Evilengesz_A_2147921759_0
         $x_1_8 = ").GetScriptInject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

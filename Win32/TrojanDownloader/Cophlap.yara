@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Cophlap_A_2147602784_0
         $x_1_7 = "Lockit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

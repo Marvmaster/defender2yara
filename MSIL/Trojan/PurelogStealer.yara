@@ -17,6 +17,7 @@ rule Trojan_MSIL_PurelogStealer_TC_2147929604_0
         $x_1_2 = "sXgbzj+mkpC69C7JvcP3sQ==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Backdoor_Win32_Aptdrop_I_2147731969_0
         $x_1_2 = "G:\\Work\\Bison\\BisonNewHNStubDll\\Release\\Goopdate.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

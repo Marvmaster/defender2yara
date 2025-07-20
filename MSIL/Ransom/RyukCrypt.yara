@@ -20,6 +20,7 @@ rule Ransom_MSIL_RyukCrypt_PC_2147782525_0
         $x_1_5 = "\\Ryuk .Net Ransomware Builder.pdb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_MSIL_RyukCrypt_PE_2147782788_0
         $x_1_6 = "ryuk.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_MSIL_RyukCrypt_PG_2147846929_0
         $x_1_4 = "You Have Been Hacked!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

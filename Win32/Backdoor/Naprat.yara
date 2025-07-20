@@ -21,6 +21,7 @@ rule Backdoor_Win32_Naprat_AG_2147896091_0
         $x_2_6 = "YunIoQwJ" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

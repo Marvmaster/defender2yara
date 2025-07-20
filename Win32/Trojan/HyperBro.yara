@@ -16,6 +16,7 @@ rule Trojan_Win32_HyperBro_GXZ_2147910976_0
         $x_10_1 = {8b 45 f4 83 c0 01 89 45 f4 8b 4d f4 3b 4d f8 ?? ?? 8b 55 ec 03 55 f4 0f b6 02 33 45 e4 8b 4d ec 03 4d f4 88 01 eb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

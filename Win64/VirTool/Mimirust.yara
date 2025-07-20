@@ -20,6 +20,7 @@ rule VirTool_Win64_Mimirust_A_2147814921_0
         $x_1_5 = "wdigest\\mod.rs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

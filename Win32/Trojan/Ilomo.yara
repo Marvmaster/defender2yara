@@ -17,6 +17,7 @@ rule Trojan_Win32_Ilomo_A_2147600104_0
         $x_1_2 = {8b 55 b8 8b 42 20 ff d0 85 c0 74 44 6a 05 8b 4d b8 8b 11 52 8b 45 b8 8b 48 24 ff d1 6a 00 6a 00 8b 55 b8 8b 02 50 8d 4d 98}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Ilomo_B_2147622879_0
         $x_1_3 = {c7 04 24 e8 03 00 00 8d 85 f4 fa ff ff 50 68 02 10 00 00 68 00 04 00 00 ff 15 ?? ?? ?? ?? 85 c0 0f 84 ?? ?? 00 00 80 bd ?? ?? ?? ?? 52}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win64_RustStealer_RPY_2147902566_0
         $x_1_6 = "GoAway" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win64_RustStealer_DA_2147926526_0
         $x_1_7 = "vel criar o arquivo .bat." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win64_RustStealer_GTT_2147926858_0
         $x_1_2 = "vel criar o arquivo .bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win64_Malvie_A_2147852891_0
         $x_1_4 = {ba 80 fc ec 04 e8 20 00 0d 0a 41 ?? 06 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_MSIL_RedlocCrypt_PA_2147785063_0
         $x_1_4 = {5c 52 65 64 65 72 5f 6c 6f 63 6b 5c [0-16] 5c [0-16] 5c 52 65 64 65 72 5f 6c 6f 63 6b 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

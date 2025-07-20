@@ -17,6 +17,7 @@ rule Trojan_Win64_DBadur_AMAA_2147920894_0
         $x_2_2 = "https://05412.net/zmm" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_DBadur_GTZ_2147926092_0
         $x_5_2 = {2c 57 d0 87 ?? ?? ?? ?? d0 2f 95 10 32 ?? ?? 67 95 10 32}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Jinto_A_2147645524_0
         $x_1_4 = "SeLoadDriverPrivilege" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Jinto_A_2147645526_0
         $x_1_7 = "act=out&bot_id=%s&data_type=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -22,6 +22,7 @@ rule Worm_Win32_Scrolo_A_2147651905_0
         $x_10_8 = {6a 09 e8 25 d4 fe ff a8 01 74 13 68 05 00 04 00 6a 00 68 f0 97 41 00 e8 9c d4 fe ff}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

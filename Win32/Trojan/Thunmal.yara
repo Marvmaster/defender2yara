@@ -18,6 +18,7 @@ rule Trojan_Win32_Thunmal_A_2147623503_0
         $x_1_4 = "ZwDeviceIoControlFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))

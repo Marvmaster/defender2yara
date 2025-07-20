@@ -20,6 +20,7 @@ rule Trojan_MSIL_Agenthao_J_2147743631_0
         $x_1_5 = "timerFirefox_Tick" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

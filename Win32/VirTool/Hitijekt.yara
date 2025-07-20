@@ -19,6 +19,7 @@ rule VirTool_Win32_Hitijekt_A_2147823372_0
         $x_1_4 = {8b 85 44 02 00 00 ff c0 89 85 44 02 00 00 8b 45 24 39 85 44 02 00 00 0f 8d ?? ?? ?? ?? 48 63 85 44 02 00 00 48 8b 4d 08 48 8b 04 c1 48 89 85 68 01 00 00 48 8b 85 68 01 00 00 8b 00 48 8b 8d 88 00 00 00 48 03 c8 48 8b c1 48 89 85 88 01 00 00 48 c7 85 28 01 00 00 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule VirTool_Win32_Hitijekt_B_2147823373_0
         $x_1_4 = {48 c7 45 08 00 00 00 00 48 c7 45 28 00 00 00 00 48 c7 45 48 00 00 00 00 48 c7 45 68 00 00 00 00 b8 08 00 00 00 48 6b c0 01 48 8d ?? ?? 48 8b 8d 18 02 00 00 48 8b 0c 01 e8 ?? ?? ?? ?? 48 89 85 88 00 00 00 48 83 bd 88 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

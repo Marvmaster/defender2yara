@@ -19,6 +19,7 @@ rule TrojanClicker_MSIL_Broclik_A_2147711632_0
         $x_1_5 = {63 00 6c 00 69 00 63 00 6b 00 32 00 ?? ?? 63 00 6c 00 69 00 63 00 6b 00 33 00 ?? ?? 63 00 6c 00 69 00 63 00 6b 00 34 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanClicker_MSIL_Broclik_B_2147721718_0
         $x_1_5 = "(((f|XX){1}XX)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

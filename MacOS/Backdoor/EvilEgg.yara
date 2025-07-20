@@ -17,6 +17,7 @@ rule Backdoor_MacOS_EvilEgg_A_2147734463_0
         $x_1_3 = {69 6e 73 74 61 6c 6c 50 65 72 73 69 73 74 65 6e 63 65 00 69 6e 73 74 61 6c 6c 45 76 69 6c 00 70 72 65 66 65 72 65 6e 63 65 73 00 73 65 74 50 72 65 66 65 72 65 6e 63 65 73 3a 00 73 74 61 74 75 73 4d 65 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (1 of ($x*))
 }
 

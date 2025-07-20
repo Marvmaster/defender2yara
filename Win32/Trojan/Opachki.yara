@@ -22,6 +22,7 @@ rule Trojan_Win32_Opachki_D_154081_0
         $x_1_8 = {26 66 5b 5d 3d 6c 6f 61 64 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Opachki_I_172450_0
         $x_1_2 = {83 c0 e0 75 12 80 ea 61 80 fa 19 77 0a 41 8a 14 0e 8a 01 84 d2 75 ?? 80 39 00 74 ?? ff 45 08 8b 45 08 8a 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

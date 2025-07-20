@@ -20,6 +20,7 @@ rule Trojan_Win64_Voldemort_DA_2147920074_0
         $x_1_5 = "n/oauth2/v4/token" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

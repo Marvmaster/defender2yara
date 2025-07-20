@@ -21,6 +21,7 @@ rule HackTool_Win64_AutoKms_DZ_2147923182_0
         $x_2_6 = "Office 2010 RTM Standard KMS Client" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

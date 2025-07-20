@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Raxtecon_228516_0
         $x_1_4 = "ContentDefender\\Release\\condefclean.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule BrowserModifier_Win32_Raxtecon_228516_1
         $x_1_4 = {68 74 74 70 3a 2f 2f 63 6f 6e 74 65 6e 74 64 65 66 65 6e 64 65 72 2d 05 00 2e 6f 72 67 2f 76 65 72 73 69 6f 6e 2f 63 68 65 63 6b 6e 65 77 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule BrowserModifier_Win32_Raxtecon_228516_2
         $x_1_8 = {63 00 6f 00 6e 00 74 00 65 00 6e 00 74 00 64 00 65 00 66 00 65 00 6e 00 64 00 65 00 72 00 2d 00 [0-16] 2f 00 76 00 65 00 72 00 73 00 69 00 6f 00 6e 00 2f 00 63 00 68 00 65 00 63 00 6b 00 6e 00 65 00 77 00 2f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule BrowserModifier_Win32_Raxtecon_228516_3
         $x_1_9 = {63 00 6f 00 6e 00 74 00 65 00 6e 00 74 00 70 00 72 00 6f 00 74 00 65 00 63 00 74 00 6f 00 72 00 2d 00 [0-16] 2f 00 76 00 65 00 72 00 73 00 69 00 6f 00 6e 00 2f 00 63 00 68 00 65 00 63 00 6b 00 6e 00 65 00 77 00 2f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

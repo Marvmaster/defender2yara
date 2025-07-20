@@ -18,6 +18,7 @@ rule Trojan_Win32_Lopelmoc_A_2147640285_0
         $x_1_4 = "handler.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win32_PlugX_B_2147913403_0
         $x_1_3 = "slides.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Win32_PlugX_B_2147913404_0
         $x_1_3 = {4d 79 4d 69 6e 69 48 4e 53 65 6c 66 44 65 6c 65 74 65 64 53 74 75 62 44 6c 6c [0-4] 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Backdoor_Win32_PlugX_C_2147913405_0
         $x_1_3 = {0f b6 c0 33 c1 a3 08 30 00 10 c6 06 e9 81 35 08 30 00 10 e9 00 00 00 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

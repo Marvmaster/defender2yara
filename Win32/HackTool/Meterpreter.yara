@@ -19,6 +19,7 @@ rule HackTool_Win32_Meterpreter_A_2147726023_0
         $x_1_4 = {8b 46 ec 89 45 f4 85 c0 ?? ?? ?? ?? ?? 50 ?? ?? ?? ?? 50 ?? ?? ?? 50 ?? ?? ?? 6a ff 50 e8 ?? ?? ?? ?? 8b ?? f8 83 c4 18 83 c6 28 85 ff 0f 85 ?? ?? ?? ?? 8b 5d ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule HackTool_Win32_Meterpreter_A_2147726023_1
         $x_1_7 = "stdapi_fs_file" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule HackTool_Win32_Meterpreter_A_2147726023_2
         $x_1_6 = {8b 77 28 33 ff 57 57 6a ff 03 f3 ff 55 d8 33 c0 57 40 50 53 ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule HackTool_Win32_Meterpreter_A_2147726023_3
         $x_1_7 = {8b 5d f0 8b 73 28 33 db 53 53 6a ff 03 f7 ff 55 dc 33 c0 53 40 50 57 ff d6 5f 8b c6 5e 5b 8b e5 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule HackTool_Win32_Meterpreter_A_2147726023_4
         $x_1_7 = "cmd.exe /c echo %s > %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +158,7 @@ rule HackTool_Win32_Meterpreter_A_2147726023_5
         $x_1_7 = "cmd.exe /c echo %s > %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +185,7 @@ rule HackTool_Win32_Meterpreter_A_2147726023_6
         $x_1_6 = {fc 8b 74 24 04 55 89 e5 e8 89 00 00 00 60 89 e5 31 d2 64 8b 52 30 8b 52 0c 8b 52 14 8b 72 28 0f b7 4a 26 31 ff 31 c0 ac 3c 61 7c 02 2c 20 c1 cf 0d 01 c7 e2 f0 52 57 8b 52 10 8b 42 3c 01 d0 8b 40 78 85 c0 74 4a 01 d0 50 8b 48 18 8b 58 20 01 d3 e3 3c 49 8b 34 8b 01 d6 31 ff 31 c0 ac c1 cf 0d 01 c7 38 e0 75 f4 03 7d f8 3b 7d 24 75 e2 58 8b 58 24 01 d3 66 8b 0c 4b 8b 58 1c 01 d3 8b 04 8b 01 d0 89 44 24 24 5b 5b 61 59 5a 51 ff e0 58 5f 5a 8b 12 eb 86 5b 80 7e 10 00 75 3b c6 46 10 01 68 a6 95 bd 9d ff d3 3c 06 7c 1a 31 c9 64 8b 41 18 39 88 a8 01 00 00 75 0c 8d 93 cf 00 00 00 89 90 a8 01 00 00 31 c9 51 51 ff 76 08 ff 36 51 51 68 38 68 0d 16 ff d3 c9 c2 0c 00 00 00 00 00 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +228,7 @@ rule HackTool_Win32_Meterpreter_E_2147750220_0
         $x_1_3 = "meterpreter_reverse_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

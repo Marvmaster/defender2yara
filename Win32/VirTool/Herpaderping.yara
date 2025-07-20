@@ -21,6 +21,7 @@ rule VirTool_Win32_Herpaderping_A_2147776958_0
         $x_1_6 = {c6 45 fc 03 ff 75 cc 6a 04 6a ff 50 68 ff ff 1f 00 8d 45 e0 50 ff 15 ?? ?? ?? ?? 8b f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule VirTool_Win32_Herpaderping_A_2147776958_1
         $x_1_5 = {4c 89 bd 30 09 00 00 4c 89 ad 28 09 00 00 4c 89 7c 24 50 4c 89 7c 24 48 4c 89 7c 24 40 4c 89 7c 24 38 44 89 7c 24 30 4c 89 7c 24 28 4c 89 74 24 20 4c 8b 8d d0 08 00 00 45 33 c0 ba ff ff 1f 00 48 8d ?? ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 8b d8 85 c0 79 06 0f ba eb 1c eb 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule VirTool_Win32_Herpaderping_2147781491_0
         $x_1_5 = {8b 45 e8 8b bd 50 ff ff ff 6a 04 68 00 30 00 00 8b b0 ?? ?? ?? ?? 03 30 56 6a 00 57 ff 15 ?? ?? ?? ?? 8b d0 89 55 88 85 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

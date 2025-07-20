@@ -17,6 +17,7 @@ rule VirTool_Win32_PoshC2_G_2147826893_0
         $x_1_3 = {41 6d 73 69 53 63 61 6e 42 75 66 66 65 72 [0-8] 6e 74 64 6c 6c [0-8] 45 74 77 45 76 65 6e 74 57 72 69 74 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

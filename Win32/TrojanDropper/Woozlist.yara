@@ -23,6 +23,7 @@ rule TrojanDropper_Win32_Woozlist_A_2147694059_0
         $x_3_9 = "ProcessMointer" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule TrojanDropper_Win32_Woozlist_B_2147697733_0
         $x_5_7 = ".tmp" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -83,6 +85,7 @@ rule TrojanDropper_Win32_Woozlist_B_2147697733_1
         $x_1_8 = "C:\\user.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +114,7 @@ rule TrojanDropper_Win32_Woozlist_B_2147697733_2
         $x_1_9 = {8b d1 57 8b f8 c1 e9 02 f3 a5 8b ca 55 83 e1 03 50 f3 a4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

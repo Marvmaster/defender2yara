@@ -20,6 +20,7 @@ rule Trojan_Win32_Disco_RE_2147842332_0
         $x_1_5 = "A_AppData \"\\Temporary\\shota.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Disco_RPX_2147888909_0
         $x_1_1 = {ff d6 6a 00 6a 04 8d 84 24 7c 02 00 00 c7 84 24 7c 02 00 00 00 00 00 00 50 ff 74 24 44 53 ff d6 8b 84 24 74 02 00 00 8b 7c 24 3c 89 44 24 10 8b 84 24 7c 02 00 00 05 f4 00 00 00 c7 44 24 14 40 00 00 00 89 44 24 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Disco_GAA_2147898278_0
         $x_1_3 = "\\discordcanary" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

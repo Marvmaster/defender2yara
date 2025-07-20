@@ -19,6 +19,7 @@ rule Trojan_Win32_Qimiral_A_2147630923_0
         $x_1_5 = {8a 45 ff 04 e0 2c 5f 72 06 04 bf 2c 40 73 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

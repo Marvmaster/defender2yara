@@ -20,6 +20,7 @@ rule Ransom_Win32_Delta_MK_2147786271_0
         $x_1_5 = "C:\\Windows\\delog.cmd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Ransom_Linux_Monti_A_2147853037_0
         $x_5_7 = ".puuuk" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_5_*) and 4 of ($x_1_*))) or
             ((3 of ($x_5_*))) or

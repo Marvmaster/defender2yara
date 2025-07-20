@@ -17,6 +17,7 @@ rule Backdoor_Win32_Yonsole_A_2147633733_0
         $x_1_3 = {7e 1f 8b 4c 24 04 8a 14 31 80 c2 ?? 88 14 31 8b 4c 24 04 8a 14 31 80 f2 ?? 88 14 31 46 3b f0 7c e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Backdoor_Win32_Yonsole_B_2147633734_0
         $x_1_5 = {47 65 74 50 6c 75 67 69 6e 52 65 73 75 6c 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))

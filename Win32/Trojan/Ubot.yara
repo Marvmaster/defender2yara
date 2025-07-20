@@ -17,6 +17,7 @@ rule Trojan_Win32_Ubot_A_2147659515_0
         $x_1_3 = "fc5dfcad738358a0cbb59bf0478340a1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

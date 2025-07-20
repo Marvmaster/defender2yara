@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Xorer_B_2147641419_0
         $x_1_3 = {75 02 33 c0 30 04 32 42 40 3b d1 7c ef}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

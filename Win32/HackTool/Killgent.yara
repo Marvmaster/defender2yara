@@ -18,6 +18,7 @@ rule HackTool_Win32_Killgent_DB_2147929258_0
         $x_1_3 = "[+] Rebooted target" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

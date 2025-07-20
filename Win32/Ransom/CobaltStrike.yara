@@ -18,6 +18,7 @@ rule Ransom_Win32_CobaltStrike_2147812409_0
         $x_2_3 = {48 83 c2 02 4c 8b 04 d0 48 8b 45 f0 83 e0 3f ba 01 00 00 00 89 c1 48 d3 e2 48 89 d1 48 8b 45 f0 48 c1 f8 06 48 89 c2 4c 09 c1 48 8b 45 f8 48 83 c2 02}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))

@@ -20,6 +20,7 @@ rule Trojan_Win64_Farfli_MA_2147830927_0
         $x_1_5 = "RtlCaptureContext" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win64_Farfli_BAZ_2147848719_0
         $x_1_4 = "ps.zip" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win64_Farfli_RD_2147853019_0
         $x_1_1 = {43 0f b6 0c 11 45 8d 49 ff 30 0a 48 8d 52 ff 41 83 c0 ff 75 eb 41 8d 40 01 42 0f b6 04 10 43 30 04 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win64_Farfli_CCAM_2147890126_0
         $x_1_7 = "F-Secure" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Trojan_Win64_Farfli_GZZ_2147905929_0
         $x_1_5 = "baiduSafeTray.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_Win64_Farfli_AFL_2147913099_0
         $x_1_1 = {c6 44 24 20 43 c6 44 24 21 3a c6 44 24 22 2f c6 44 24 23 55 c6 44 24 24 73 c6 44 24 25 65 c6 44 24 26 72 c6 44 24 27 73 c6 44 24 28 2f c6 44 24 29 50 c6 44 24 2a 75 c6 44 24 2b 62 c6 44 24 2c 6c c6 44 24 2d 69 c6 44 24 2e 63}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -161,6 +167,7 @@ rule Trojan_Win64_Farfli_AFA_2147924071_0
         $x_1_3 = "d33f351a4aeea5e608853d1a56661059" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -182,6 +189,7 @@ rule Trojan_Win64_Farfli_SDM_2147934110_0
         $x_5_1 = {45 33 db 4c 8d 05 ?? ?? ?? ff 45 33 c9 4c 89 5c 24 28 33 d2 33 c9 44 89 5c 24 20 ff 15 ?? ?? ?? 00 83 ca ff 48 8b c8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -204,6 +212,7 @@ rule Trojan_Win64_Farfli_ADC_2147941919_0
         $x_1_2 = {41 0f b6 0c 29 4c 8b 43 10 49 ff c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

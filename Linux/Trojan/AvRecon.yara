@@ -22,6 +22,7 @@ rule Trojan_Linux_AvRecon_A_2147889552_0
         $x_1_7 = "757A6D7E336D6D" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

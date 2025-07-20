@@ -26,6 +26,7 @@ rule Trojan_Win32_Hocamin_C_2147658323_0
         $x_30_12 = "6576656E746F706C75732E646F6D696E696F74656D706F726172696F2E636F6D" wide //weight: 30
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_50_*) and 2 of ($x_30_*) and 6 of ($x_10_*))) or
             ((1 of ($x_100_*) and 1 of ($x_50_*) and 2 of ($x_30_*) and 1 of ($x_20_*) and 4 of ($x_10_*))) or
@@ -67,6 +68,7 @@ rule Trojan_Win32_Hocamin_D_2147658336_0
         $x_10_10 = "swindsone.exe" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_30_*) and 5 of ($x_10_*))) or
             ((2 of ($x_100_*) and 1 of ($x_30_*) and 1 of ($x_20_*) and 3 of ($x_10_*))) or

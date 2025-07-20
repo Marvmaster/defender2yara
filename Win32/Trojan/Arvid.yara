@@ -26,6 +26,7 @@ rule Trojan_Win32_Arvid_A_2147691804_0
         $x_2_11 = "User-Agent: Skype" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -58,6 +59,7 @@ rule Trojan_Win32_Arvid_C_2147692585_0
         $x_2_4 = "/tools/dotnet2.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or
             ((2 of ($x_5_*))) or
@@ -92,6 +94,7 @@ rule Trojan_Win32_Arvid_E_2147692589_0
         $x_4_10 = "SELECT * FROM Win32_DiskDrive" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 6 of ($x_1_*))) or
             (all of ($x*))

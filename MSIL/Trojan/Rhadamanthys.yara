@@ -16,6 +16,7 @@ rule Trojan_MSIL_Rhadamanthys_ARH_2147841949_0
         $x_1_1 = {16 1b 2d 03 26 2b 66 0a 2b fb 00 72 01 00 00 70 28 ?? ?? ?? 06 73 02 00 00 0a 16 2c 03 26 2b 03 0b 2b 00 73 03 00 00 0a 1b 2d 03 26 2b 03 0c 2b 00 07 16 73 04 00 00 0a 73 05 00 00 0a 0d 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_Rhadamanthys_ARH_2147841949_1
         $x_2_2 = {08 09 1f 41 59 1f 5b 58 d2 28 ?? 00 00 06 00 00 2b 38 09 1f 61 32 07 09 1f 7a fe 02 2b 01 17 00 13 07 11 07 2d 18 00 7e ?? 00 00 04 08 09 1f 61 59 1f 75 58 d2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_MSIL_Rhadamanthys_ARH_2147841949_2
         $x_5_2 = "147.45.44.42" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Trojan_MSIL_Rhadamanthys_NEAA_2147844545_0
         $x_10_1 = {00 00 06 13 00 38 00 00 00 00 28 02 00 00 0a 11 00 6f 03 00 00 0a 28 04 00 00 0a 28 05 00 00 06 13 01 38 00 00 00 00 dd 10 00 00 00 26 38 00 00 00 00 dd ?? ?? ?? ?? 38 00 00 00 00 11 01 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +106,7 @@ rule Trojan_MSIL_Rhadamanthys_ARY_2147894231_0
         $x_1_1 = {17 da 0b 16 0c 2b 15 03 08 03 08 9a 04 72 ?? 06 00 70 6f ?? 00 00 0a a2 08 17 d6 0c 08 07 31 e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +128,7 @@ rule Trojan_MSIL_Rhadamanthys_RS_2147899245_0
         $x_1_1 = {00 28 12 00 00 06 0a 28 03 00 00 0a 06 6f 04 00 00 0a 28 05 00 00 0a 28 01 00 00 2b 28 02 00 00 2b 0b de 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +150,7 @@ rule Trojan_MSIL_Rhadamanthys_MBZU_2147906133_0
         $x_1_1 = {43 61 73 69 73 2e 65 78 65 00 3c 4d 6f 64 75 6c 65 3e 00 43 6f 72 72 65 63 74 00 4d 53 47 5f 4e 45 54 00 4f 62 6a 65 63 74 00 50 72 6f 67 72 61 6d 00 41 6e 67 65 6c 6f 00 44 67 61 73 79 75 64 67 75 79 67 69 75 78 48 49 41 00 4d 75 6c 74 69 63 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +173,7 @@ rule Trojan_MSIL_Rhadamanthys_ARM_2147927636_0
         $x_1_2 = "newcrypternoprocess.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -193,6 +201,7 @@ rule Trojan_MSIL_Rhadamanthys_BK_2147932339_0
         $x_1_7 = "g.L.Y QA_WwW_M.e k P_b.p.2_M]_t.j.S.x*.ce" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -222,6 +231,7 @@ rule Trojan_MSIL_Rhadamanthys_BN_2147934826_0
         $x_1_3 = "Lrelfunmmxbuqifzq" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -246,6 +256,7 @@ rule Trojan_MSIL_Rhadamanthys_SPS_2147935979_0
         $x_1_4 = "g2m.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -267,6 +278,7 @@ rule Trojan_MSIL_Rhadamanthys_UDP_2147937925_0
         $x_1_1 = {11 0f 11 09 16 73 3e 00 00 0a 13 06 20 00 00 00 00 7e 7a 02 00 04 7b 7b 02 00 04 3a 0f 00 00 00 26 20 00 00 00 00 38 04 00 00 00 fe 0c 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -288,6 +300,7 @@ rule Trojan_MSIL_Rhadamanthys_RK_2147939368_0
         $x_1_1 = {07 1f 10 8d 1d 00 00 01 25 d0 55 02 00 04 28 6f 00 00 0a 6f d6 00 00 0a 06 07 6f d7 00 00 0a 17 73 3b 00 00 0a 25 02 16 02 8e 69 6f d8 00 00 0a 6f d9 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -311,6 +324,7 @@ rule Trojan_MSIL_Rhadamanthys_APVA_2147942430_0
         $x_2_3 = {05 0b 16 0c 2b 11 03 08 03 08 91 08 04 28 ?? ?? 00 06 9c 08 17 d6 0c 08 07 31 eb 03 0a 2b 00 06 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

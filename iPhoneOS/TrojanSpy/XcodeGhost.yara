@@ -33,6 +33,7 @@ rule TrojanSpy_iPhoneOS_XcodeGhost_A_2147750359_0
         $x_10_19 = "headrboypIDcnlfimvu" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_10_*) and 12 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 7 of ($x_1_*))) or
@@ -64,6 +65,7 @@ rule TrojanSpy_iPhoneOS_XcodeGhost_B_2147753109_0
         $x_1_4 = "iphoneapp.kuaiyong.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

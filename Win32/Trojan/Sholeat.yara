@@ -20,6 +20,7 @@ rule Trojan_Win32_Sholeat_A_2147627009_0
         $x_1_6 = "Global\\{51E1C7A3-0033-4682-B97F-501905E717B7" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

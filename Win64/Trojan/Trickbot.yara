@@ -20,6 +20,7 @@ rule Trojan_Win64_Trickbot_I_2147742083_0
         $x_1_6 = {8b c8 48 69 c9 09 23 ed 58 48 c1 e9 20 8b d0 2b d1 d1 ea 03 d1 c1 ea 06 6b ca 5f f7 d9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win64_Trickbot_WA_2147745313_0
         $x_1_8 = "{001677D0-FD16-11CE-ABC4-02608C9E7553}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win64_Trickbot_SA_2147746149_0
         $x_1_4 = "MPGoodStatus" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Trojan_Win64_Trickbot_SS_2147752807_0
         $x_10_4 = {83 f8 68 75 ?? ?? ?? ?? ?? ?? 83 f8 74 75 ?? ?? ?? ?? ?? ?? 83 f8 74 75 ?? ?? ?? ?? ?? ?? 83 f8 70 75 [0-26] 83 f8 73}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             ((1 of ($x_20_*) and 1 of ($x_10_*))) or
@@ -122,6 +126,7 @@ rule Trojan_Win64_Trickbot_SS_2147752807_1
         $x_10_4 = {83 f8 68 75 ?? ?? ?? ?? ?? ?? 83 f8 74 75 ?? ?? ?? ?? ?? ?? 83 f8 74 75 ?? ?? ?? ?? ?? ?? 83 f8 70 75 [0-26] 83 f8 73}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             ((1 of ($x_20_*) and 1 of ($x_10_*))) or
@@ -211,6 +216,7 @@ rule Trojan_Win64_Trickbot_WB_2147753201_0
         $x_1_7 = "Invalid parentID" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -238,6 +244,7 @@ rule Trojan_Win64_Trickbot_STA_2147754481_0
         $x_1_5 = "ReflectiveLoader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -287,6 +294,7 @@ rule Trojan_Win64_Trickbot_PA_2147756517_0
         $x_1_3 = "\\Google\\Chrome\\User Data\\Default\\History.bak" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -307,6 +315,7 @@ rule Trojan_Win64_Trickbot_M_2147756596_0
         $x_1_1 = {83 f9 01 75 [0-64] 8b ?? 41 33 ?? 89 ?? 48 83 ?? 04 49 83 ?? 04 48 83 ?? 04 49 3b ?? 49 0f 43 ?? 4d 3b ?? 72 e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -330,6 +339,7 @@ rule Trojan_Win64_Trickbot_SH_2147756906_0
         $x_1_4 = {48 8b 0e 48 8b 56 08 45 33 c0 45 33 c9 ff 56 18 48 8b 0e ff 56 28 48 c7 06 00 00 00 00 48 8b 4e 08 ff 56 28 48 c7 46 08 00 00 00 00 33 c9 ff 56 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -362,6 +372,7 @@ rule Trojan_Win64_Trickbot_SH_2147756906_1
         $x_1_13 = {48 89 8e 88 00 00 00 48 89 56 70 4c 89 46 78 48 89 86 90 00 00 00 48 89 b6 98 00 00 00 48 8b 4e 10 ff 56 30 48 8b 4e 10 ba ff ff ff ff ff 56 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -384,6 +395,7 @@ rule Trojan_Win64_Trickbot_SKE_2147763251_0
         $x_10_3 = {fd ff ff 7f 74 ?? 49 83 ?? 01 48 83 ?? 01 49 8b ?? 75 ?? eb 30 00 47 0f ?? ?? ?? 66 45 ?? ?? 74 ?? 66 44 ?? ?? 48 83 ?? 02 4c ?? ?? ff 49 81}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -441,6 +453,7 @@ rule Trojan_Win64_Trickbot_PD_2147766620_0
         $x_1_14 = {ba 14 28 22 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -475,6 +488,7 @@ rule Trojan_Win64_Trickbot_AB_2147766644_0
         $x_5_9 = "group_tag" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -498,6 +512,7 @@ rule Trojan_Win64_Trickbot_ZZ_2147766671_0
         $x_1_1 = {5f 48 8b f1 48 33 c0 68 58 02 00 00 59 50 e2 fd 48 8b c7 57 48 8b ec 48 05 0b 30 00 00 48 89 45 08 48 89 75 40 68 f0 ff 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -518,6 +533,7 @@ rule Trojan_Win64_Trickbot_ZY_2147766673_0
         $x_1_1 = {48 8b 45 f8 48 3b 45 f0 73 28 48 8b 45 18 0f b6 00 66 98 48 8b 55 f8 66 89 02 48 8b 45 18 0f b6 00 84 c0 74 0c 48 83 45 f8 02 48 83 45 18 01 eb cf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -545,6 +561,7 @@ rule Trojan_Win64_Trickbot_ZX_2147766674_0
         $x_1_8 = "Successfully sent autofill data to DPost" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -575,6 +592,7 @@ rule Trojan_Win64_Trickbot_ZW_2147766679_0
         $x_1_11 = "<service>%s</service>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -600,6 +618,7 @@ rule Trojan_Win64_Trickbot_SS_2147766715_0
         $x_1_5 = {43 6f 6e 74 72 6f 6c 00 46 72 65 65 42 75 66 66 65 72 00 52 65 6c 65 61 73 65 00 53 74 61 72 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -622,6 +641,7 @@ rule Trojan_Win64_Trickbot_A_2147766733_0
         $x_1_2 = {72 64 70 73 63 61 6e 2e 64 6c 6c 00 43 6f 6e 74 72 6f 6c 00 46 72 65 65 42 75 66 66 65 72 00 52 65 6c 65 61 73 65 00 53 74 61 72 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -645,6 +665,7 @@ rule Trojan_Win64_Trickbot_SE_2147766742_0
         $x_1_4 = {48 89 8e 88 00 00 00 48 89 56 70 4c 89 46 78 48 89 86 90 00 00 00 48 89 b6 98 00 00 00 48 8b 4e 10 ff 56 30 48 8b 4e 10 ba ff ff ff ff ff 56 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -669,6 +690,7 @@ rule Trojan_Win64_Trickbot_SV_2147766791_0
         $x_1_4 = "Release" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -691,6 +713,7 @@ rule Trojan_Win64_Trickbot_BM_2147767735_0
         $x_1_2 = "\\WindowsSDK7-Samples-master\\WindowsSDK7-Samples-master\\com\\administration\\spy\\x64\\Release\\ComSpy.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -714,6 +737,7 @@ rule Trojan_Win64_Trickbot_CK_2147788491_0
         $x_1_3 = "FreeBuffer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -736,6 +760,7 @@ rule Trojan_Win64_Trickbot_CH_2147788492_0
         $x_1_2 = {48 8b d8 c7 ?? 4d 6f 64 75 c7 ?? ?? 6c 65 20 68 c7 ?? ?? 61 6e 64 6c c7 ?? ?? 65 20 30 78 c7 ?? ?? 25 30 38 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -759,6 +784,7 @@ rule Trojan_Win64_Trickbot_STL_2147796959_0
         $x_1_4 = {48 b8 97 98 8c 91 65 6d 31 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -790,6 +816,7 @@ rule Trojan_Win64_Trickbot_AC_2147798314_0
         $x_3_7 = "client finished" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -811,6 +838,7 @@ rule Trojan_Win64_Trickbot_RPU_2147840624_0
         $x_1_1 = {44 30 02 48 8d 52 01 ff c1 83 f9 1e 72 f2 45 33 c9 4c 89 6c 24 30 44 89 6c 24 28 48 8d 4c 24 40 ba 00 00 00 80 c7 44 24 20 03 00 00 00 45 8d 41 01 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -833,6 +861,7 @@ rule Trojan_Win64_Trickbot_MA_2147848911_0
         $x_1_2 = {0f be 44 24 1c c1 e0 02 0f be 4c 24 1d 83 e1 30 c1 f9 04 01 c8 88 44 24 19 0f be 44 24 1d 83 e0 0f c1 e0 04 0f be 4c 24 1e 83 e1 3c c1 f9 02 01 c8 88 44 24 1a 0f be 44 24 1e 83 e0 03 c1 e0 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -854,6 +883,7 @@ rule Trojan_Win64_Trickbot_RPX_2147888200_0
         $x_1_1 = {48 8b 4c 24 38 66 44 89 64 24 40 41 bc 01 00 00 00 c7 44 24 44 e1 07 01 00 c7 44 24 54 a0 05 00 00 66 44 89 64 24 48 44 89 64 24 58 44 89 64 24 60 66 44 89 64 24 64 48 8b 01 48 8d 54 24 40 ff 50 18 85 c0 0f 88 9d 00 00 00 48 8b 8d 88 00 00 00 66 89 5c 24 70 48 8d 54 24 70 48 8b 01 45 33 c0 ff 90 f0 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

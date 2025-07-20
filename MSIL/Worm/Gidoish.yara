@@ -22,6 +22,7 @@ rule Worm_MSIL_Gidoish_A_2147684884_0
         $x_1_8 = {53 74 61 72 74 41 6e 74 69 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

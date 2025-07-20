@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Stegvob_A_2147804018_0
         $x_1_4 = "&ok=1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Stegvob_C_2147804205_0
         $x_1_4 = {83 7d bc 05 75 ?? c7 45 bc 06 00 00 00 83 6d c8 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -70,6 +72,7 @@ rule TrojanDownloader_Win32_Stegvob_D_2147804206_0
         $x_1_2 = {83 7d c4 06 7d ?? 8b 45 c4 66 8b 55 b6 66 89 94 45 9c db ff ff ff 45 c4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule TrojanDownloader_Win32_Stegvob_E_2147804209_0
         $x_1_4 = "ieload.net/load.gif?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Backdoor_Win32_ParallaxRat_KS_2147781754_0
         $x_3_4 = "GdipCreateBitmapFromHBITMAP" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

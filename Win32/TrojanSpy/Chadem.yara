@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Chadem_A_2147803993_0
         $x_1_3 = "dm=%s&lg=%s&ps=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

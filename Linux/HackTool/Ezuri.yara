@@ -20,6 +20,7 @@ rule HackTool_Linux_Ezuri_A_2147916717_0
         $x_2_6 = "syscall.Syscall" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

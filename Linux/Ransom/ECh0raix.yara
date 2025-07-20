@@ -19,6 +19,7 @@ rule Ransom_Linux_ECh0raix_A_2147827072_0
         $x_1_4 = "filepath.Walk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Linux_ECh0raix_B_2147828436_0
         $x_1_4 = "dirtyLocked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Ransom_Linux_ECh0raix_C_2147848245_0
         $x_1_2 = {34 25 08 50 3a 25 08 80 34 25 08 58 3a 25 08 88}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

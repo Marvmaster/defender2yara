@@ -21,6 +21,7 @@ rule Trojan_MacOS_X_DokSpy_A_2147721469_0
         $x_1_7 = "chmod +x %@ && rm -f %@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (6 of ($x*))
 }
 

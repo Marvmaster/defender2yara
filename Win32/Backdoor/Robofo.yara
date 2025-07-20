@@ -32,6 +32,7 @@ rule Backdoor_Win32_Robofo_A_2147619538_0
         $x_1_18 = "*execute*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_100_*) and 3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((7 of ($x_100_*) and 4 of ($x_2_*) and 2 of ($x_1_*))) or

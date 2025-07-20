@@ -20,6 +20,7 @@ rule Trojan_Win32_Novcod_A_2147629133_0
         $x_1_6 = "AVI;ASF;WMV;AVS;FLV;MKV;MOV;3GP;MP4;MPG;MPEG;MP3;AAC;WAV;WMA;CDA;FLAC;M4A;MID." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

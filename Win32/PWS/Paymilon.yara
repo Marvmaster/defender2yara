@@ -22,6 +22,7 @@ rule PWS_Win32_Paymilon_A_2147627004_0
         $x_1_8 = {5c 63 72 65 64 31 00 00 5c 63 72 65 64 30 00 00 5c 6c 6f 67 30 30 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))

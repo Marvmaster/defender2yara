@@ -25,6 +25,7 @@ rule Ransom_Win32_WinPlock_A_2147692190_0
         $x_1_11 = {45 00 72 00 72 00 6f 00 72 00 20 00 6f 00 70 00 65 00 6e 00 20 00 66 00 69 00 6c 00 65 00 20 00 6c 00 69 00 73 00 74 00 21 00 20 00 53 00 6f 00 72 00 72 00 79 00 2e 00 2e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

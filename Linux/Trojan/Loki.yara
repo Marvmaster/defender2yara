@@ -19,6 +19,7 @@ rule Trojan_Linux_Loki_A_2147835458_0
         $x_5_5 = "requested an all kill" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or
             ((2 of ($x_5_*))) or
@@ -45,6 +46,7 @@ rule Trojan_Linux_Loki_B_2147835459_0
         $x_2_3 = "lokid -p (i|u)" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Linux_Loki_C_2147845534_0
         $x_1_3 = {be 01 f0 ff ff 31 d2 48 8d 3d ?? ?? ?? ?? 66 89 35 ?? ?? ?? ?? be 40 00 00 00 66 89 15 ?? ?? ?? ?? 66 89 1d ?? ?? ?? ?? e8 ?? ?? ?? ?? 44 8b 05 ?? ?? ?? ?? 66 89 05 ?? ?? ?? ?? e9 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Linux_Loki_D_2147845535_0
         $x_1_3 = {be 01 f0 ff ff ba 08 00 00 00 48 8d 3d ?? ?? ?? ?? 66 44 89 25 ?? ?? ?? ?? 66 89 35 ?? ?? ?? ?? be 40 00 00 00 66 89 15 ?? ?? ?? ?? 40 88 2d ?? ?? ?? ?? e8 ?? ?? ?? ?? 66 89 05 ?? ?? ?? ?? e9 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_MSIL_Anagra_R_2147830964_0
         $x_1_4 = "DLL Host Service" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

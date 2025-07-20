@@ -18,6 +18,7 @@ rule PWS_Win32_Tendrit_B_2147678266_0
         $x_1_4 = "2K3.%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

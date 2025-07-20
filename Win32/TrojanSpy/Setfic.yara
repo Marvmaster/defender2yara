@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Setfic_A_2147627909_0
         $x_1_4 = {50 72 78 52 75 6e 53 65 72 76 69 63 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

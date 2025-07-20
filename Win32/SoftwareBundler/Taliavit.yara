@@ -16,6 +16,7 @@ rule SoftwareBundler_Win32_Taliavit_225384_0
         $x_1_2 = "/OFFERKEYWORD=baseflash\" \"/OFFERURL=http://dld.baseflash.com/ProtectbaseflashSetup.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule SoftwareBundler_Win32_Taliavit_225384_1
         $x_1_6 = {6f 6b 69 74 73 70 61 63 65 00 62 61 73 65 66 6c 61 73 68 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

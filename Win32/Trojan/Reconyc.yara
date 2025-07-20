@@ -18,6 +18,7 @@ rule Trojan_Win32_Reconyc_2147808929_0
         $x_2_2 = "TJprojMain.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Reconyc_DA_2147809083_0
         $x_1_8 = "i.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_Reconyc_HMP_2147809223_0
         $x_1_6 = ".finkel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_Win32_Reconyc_CE_2147814126_0
         $x_1_4 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_Win32_Reconyc_BD_2147836032_0
         $x_1_3 = "ResumeThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +147,7 @@ rule Trojan_Win32_Reconyc_MA_2147844366_0
         $x_5_3 = {dc b5 44 00 89 01 89 0d dc b5 44 00 29 d2 8b c2 03 c0 8d 44 c1 04 8b 1e 89 18 89 06 42 83 fa 64 75 ec 8b 06 8b 10 89 16 5e 5b c3 90 89 00 89 40}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_Win32_Reconyc_GXZ_2147903460_0
         $x_10_1 = {01 f8 0f b6 c0 29 f8 8b bc 85 ?? ?? ?? ?? 89 bc 95 ?? ?? ?? ?? 89 8c 85 ?? ?? ?? ?? 03 8c 95 ?? ?? ?? ?? 89 cf c1 ff ?? c1 ef ?? 01 f9 0f b6 c9 29 f9 8b 8c 8d ?? ?? ?? ?? 8b 7d ?? 32 0c 37 8b bd ?? ?? ?? ?? 88 0c 37 83 c6 ?? 39 de}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -186,6 +193,7 @@ rule Trojan_Win32_Reconyc_GNT_2147929907_0
         $x_1_3 = "\\svchest.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +215,7 @@ rule Trojan_Win32_Reconyc_GVB_2147946570_0
         $x_1_1 = {96 8e fd 44 dd a1 8a f3 5a e5 b6 07 02 3c 25 83 ae ec 78 b5 de a7 07 0d d2 15 82 dd 02 63 a3 b5 7a 7f d9 0f 9a 51 72 0d 3e 5b 89 e4 64 ce 6c 2d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

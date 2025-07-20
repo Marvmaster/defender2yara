@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Tidola_A_2147620360_0
         $x_1_5 = {61 63 74 3d 26 64 31 30 3d 25 73 26 64 38 30 3d 25 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -47,6 +48,7 @@ rule TrojanDropper_Win32_Tidola_B_2147620361_0
         $x_1_5 = "expl~$~orer.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

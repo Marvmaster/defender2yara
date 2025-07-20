@@ -18,6 +18,7 @@ rule Trojan_Win32_Mysis_A_2147717895_0
         $x_2_4 = {6a 12 56 53 e8 ?? ?? ?? ?? c6 85 ?? ?? ff ff 47 c6 85 ?? ?? ff ff 65 c6 85 ?? ?? ff ff 74 c6 85 ?? ?? ff ff 57 c6 85 ?? ?? ff ff 69 c6 85 ?? ?? ff ff 6e c6 85 ?? ?? ff ff 64 c6 85 ?? ?? ff ff 6f c6 85 ?? ?? ff ff 77 c6 85 ?? ?? ff ff 73}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Mysis_B_2147718221_0
         $x_2_5 = {6a 12 56 53 e8 ?? ?? ?? ?? c6 85 ?? ?? ff ff 47 c6 85 ?? ?? ff ff 65 c6 85 ?? ?? ff ff 74 c6 85 ?? ?? ff ff 57 c6 85 ?? ?? ff ff 69 c6 85 ?? ?? ff ff 6e c6 85 ?? ?? ff ff 64 c6 85 ?? ?? ff ff 6f c6 85 ?? ?? ff ff 77 c6 85 ?? ?? ff ff 73}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

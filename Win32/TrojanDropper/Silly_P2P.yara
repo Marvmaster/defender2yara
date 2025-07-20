@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Silly_P2P_B_2147617931_0
         $x_1_4 = ".com/ul.htm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MSIL_Stooten_A_2147706838_0
         $x_1_4 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

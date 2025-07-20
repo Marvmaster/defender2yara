@@ -16,6 +16,7 @@ rule Trojan_MSIL_WebShell_CCGU_2147900872_0
         $x_1_1 = {0a 25 16 9a 74 ?? 00 00 01 fe ?? ?? ?? 25 17 9a 74 ?? 00 00 01 fe ?? ?? ?? 25 ?? 9a 17 28 ?? 00 00 0a ?? 26 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_WebShell_HNA_2147907167_0
         $x_1_1 = {59 00 57 00 4e 00 68 00 59 00 32 00 4d 00 77 00 4e 00 57 00 46 00 68 00 5a 00 6d 00 46 00 6d 00 4e 00 67 00 3d 00 3d 00 00 07 67 00 6f 00 76}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_MSIL_WebShell_HNE_2147907711_0
         $x_3_8 = {00 50 6f 70 53 63 72 69 70 74 4f 62 6a 65 63 74 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_25_*) and 1 of ($x_19_*) and 2 of ($x_3_*))) or
             ((2 of ($x_25_*))) or
@@ -97,6 +100,7 @@ rule Trojan_MSIL_WebShell_HNC_2147907890_0
         $x_1_3 = {00 46 72 6f 6d 42 61 73 65 36 34 53 74 72 69 6e 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +128,7 @@ rule Trojan_MSIL_WebShell_HNH_2147908329_0
         $x_10_7 = {00 07 63 00 76 00 62 00 00 0f 63 00 6d 00 64 00 2e 00 65 00 78 00 65 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -165,6 +170,7 @@ rule Trojan_MSIL_WebShell_HNB_2147911050_0
         $x_10_17 = {00 42 79 74 65 00 43 6f 6e 63 61 74 00 54 6f 49 6e 74 33 32 00 4c 6f 61 64 00 67 65 74 5f 54 6f 74 61 6c 42 79 74 65 73}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_50_*) and 1 of ($x_3_*) and 7 of ($x_1_*))) or
             ((6 of ($x_50_*) and 1 of ($x_10_*))) or
@@ -194,6 +200,7 @@ rule Trojan_MSIL_WebShell_AQ_2147923791_0
         $x_1_5 = "siyuanceshi@163.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +226,7 @@ rule Trojan_MSIL_WebShell_ACH_2147944105_0
         $x_1_5 = "d4539315521e0e79" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -250,6 +258,7 @@ rule Trojan_MSIL_WebShell_GVB_2147945398_0
         $x_1_7 = "/delstartup" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or

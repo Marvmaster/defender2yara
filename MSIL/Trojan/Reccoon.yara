@@ -16,6 +16,7 @@ rule Trojan_MSIL_Reccoon_MBCV_2147844228_0
         $x_1_1 = {2b 02 26 16 2b 02 26 16 00 00 00 00 00 20 10 22 08 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

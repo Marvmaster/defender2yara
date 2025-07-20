@@ -18,6 +18,7 @@ rule PWS_Win32_Elivoco_A_2147646294_0
         $x_1_4 = "Live.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

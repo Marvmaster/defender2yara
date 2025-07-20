@@ -17,6 +17,7 @@ rule Worm_Win32_Woriply_A_2147644890_0
         $x_1_3 = {6d 61 69 6e 63 6c 61 73 73 3d 78 73 65 65 64 6d 61 69 6e 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule Worm_Win32_Woriply_B_2147644891_0
         $x_1_3 = "ftp -s:ftpcmds.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Worm_Win32_Woriply_A_2147644902_0
         $x_2_4 = {6d 61 69 6e 63 6c 61 73 73 3d 6d 75 6c 74 69 70 6c 79 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*))) or

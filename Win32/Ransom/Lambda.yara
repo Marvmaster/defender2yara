@@ -16,6 +16,7 @@ rule Ransom_Win32_Lambda_MA_2147892649_0
         $x_5_1 = {33 d2 05 c3 ff ff 7f f7 f3 8d 04 31 41 30 10 3b cf 72}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win32_Lambda_MB_2147892650_0
         $x_1_8 = "All your files are encrypted and stolen, but you need to follow our instructions. otherwise, you cant return your data" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

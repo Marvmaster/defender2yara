@@ -23,6 +23,7 @@ rule SoftwareBundler_Win32_MediaPass_152782_0
         $n_100_9 = "register@havingfunonline.com" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_50_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or

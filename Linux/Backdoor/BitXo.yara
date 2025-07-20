@@ -22,6 +22,7 @@ rule Backdoor_Linux_BitXo_A_2147819491_0
         $x_1_7 = {08 44 9f e5 04 00 a0 e1 90 02 05 00 00 50 e3 90 02 05 f8 23 9f e5 f8 03 9f e5 02 20 8f e0 c8 3e 52 e5 03 11 82 e0 c4 4e 01 e5 3b 1d 42 e2 08 10 41 e2 83 10 81 e0 b0 01 c1 e1 03 11 82 e0 08 00 a0 e3 01 30 83 e2 b0 0e 01 e5 c8 3e 42 e5 c4 a3 9f e5 c4 83 9f e5 c4 53 9f e5 c4 93 9f e5 0a a0 8f e0 08 80 8f e0 00 70 a0 e3 01 40 a0 e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

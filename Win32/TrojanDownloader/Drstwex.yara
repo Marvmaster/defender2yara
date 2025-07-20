@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Drstwex_A_2147644433_0
         $x_5_5 = "CreateThread" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule TrojanDownloader_Win32_Drstwex_A_2147644433_1
         $x_1_8 = {89 45 fc 6a 00 68 00 04 00 00 ff 75 fc ff 75 08 e8 ?? ?? ?? ?? 83 f8 00 74 59 83 f8 ff 74 4b 89 45 f8 03 45 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule TrojanDownloader_Win32_Drstwex_C_2147646028_0
         $x_1_3 = {83 f8 00 0f 85 ?? ?? ?? ?? 6a 00 6a 07 68 08 09 10 00 ff 35 ?? ?? ?? ?? e8 27 ff ff ff 8d 45 f8 50 8d 45 fc 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule TrojanDownloader_Win32_Drstwex_E_2147647716_0
         $x_1_2 = "4ere" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule TrojanDownloader_Win32_Drstwex_F_2147650767_0
         $x_1_4 = {8b 4d 0c 8b 55 08 e8 0b 00 00 00 30 02 42 e2 f6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule TrojanDownloader_Win32_Drstwex_H_2147651609_0
         $x_1_3 = {83 e0 fd 33 c1 05 bd 04 00 00 a3 ?? ?? ?? ?? c1 c8 10 eb (0f|0e)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule TrojanDownloader_Win32_Drstwex_I_2147652563_0
         $x_1_1 = {89 18 5b 58 e2 bd e9 b3 f0 ff ff 59 5e a1 79 0d 16 00 90 8a 1e 90 32 d8 90 88 1e 90 eb d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

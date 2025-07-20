@@ -20,6 +20,7 @@ rule Backdoor_MSIL_Kryptik_A_2147747939_0
         $x_1_5 = "C choice /C Y /N /D Y /T 3 & Del" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

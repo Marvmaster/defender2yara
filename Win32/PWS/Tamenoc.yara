@@ -19,6 +19,7 @@ rule PWS_Win32_Tamenoc_A_2147629517_0
         $x_1_5 = "tcejbOmetsySeliF.gnitpircS" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

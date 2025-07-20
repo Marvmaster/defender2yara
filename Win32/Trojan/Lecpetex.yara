@@ -21,6 +21,7 @@ rule Trojan_Win32_Lecpetex_C_2147687792_0
         $x_1_7 = {c6 45 d0 8f c6 45 d1 98 c6 45 d2 5c c6 45 d3 62 c6 45 d4 c5 c6 45 d5 b7 c6 45 d6 f0 c6 45 d7 4d c6 45 d8 c1 c6 45 d9 7a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

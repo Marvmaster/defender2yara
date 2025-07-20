@@ -17,6 +17,7 @@ rule Trojan_JS_ObfusHTA_SA_2147933314_0
         $x_1_3 = {f1 d5 00 fa 4c 62 cc f4 0f 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

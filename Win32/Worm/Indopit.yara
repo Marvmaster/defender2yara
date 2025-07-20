@@ -17,6 +17,7 @@ rule Worm_Win32_Indopit_A_2147606115_0
         $x_1_3 = {5c 53 4f 46 54 57 41 52 45 5c 43 6c 61 73 73 65 73 5c 63 6f 6d 66 69 6c 65 [0-18] 44 65 6d 69 20 41 6c 6c 61 68 20 5a 75 6c 20 63 69 6e 74 61 20 6b 61 6d 75 20 41 6e 69 63 6b [0-18] 53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 45 78 70 6c 6f 72 65 72 5c 41 64 76 61 6e 63 65 64 5c 46 6f 6c 64 65 72 5c 48 69 64 65 46 69 6c 65 45 78 74 [0-18] 55 6e 63 68 65 63 6b 65 64 56 61 6c 75 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Worm_Win32_Indopit_B_2147606453_0
         $x_1_8 = "\\CurrentVersion\\Image File Execution Options\\Ansav32.exe\\Debugger" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Worm_Win32_Indopit_C_2147609200_0
         $x_1_5 = "document.writeln(runexe)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

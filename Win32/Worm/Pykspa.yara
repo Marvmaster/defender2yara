@@ -25,6 +25,7 @@ rule Worm_Win32_Pykspa_A_2147596275_0
         $x_1_11 = "SEARCH FRIENDS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -59,6 +60,7 @@ rule Worm_Win32_Pykspa_B_2147596291_0
         $x_1_15 = "look what crazy photo Tiffany sent to me,looks cool" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -82,6 +84,7 @@ rule Worm_Win32_Pykspa_C_2147598873_0
         $x_1_1 = {8b 7d 08 33 f6 83 c4 ?? 39 75 0c 76 2e 8d 45 f0 50 8d 45 f4 50 8d 85 f0 fc ff ff 50 8d 45 fc 50 8d 45 f8 50 33 c0 8a 04 3e 50 e8 ?? ?? ff ff 83 c4 18 88 04 3e 46 3b 75 0c 72 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +111,7 @@ rule Worm_Win32_Pykspa_E_2147632506_0
         $x_1_7 = {00 49 46 20 00 43 43 00 00 44 54 00 00 41 54 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -142,6 +146,7 @@ rule Worm_Win32_Pykspa_F_2147633556_0
         $x_1_8 = "i found an interesting website" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

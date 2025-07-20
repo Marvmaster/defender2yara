@@ -17,6 +17,7 @@ rule Trojan_Win64_Kazuar_C_2147902705_0
         $x_10_2 = {57 31 c0 44 8b 54 24 38 49 89 cb 48 89 d7 41 8d 48 01 f3 aa 31 c0 41 8a 0c 03 45 0f af d1 44 03 54 24 30 44 31 d1 88 0c 02 48 ff c0 41 39 c0 77 e5 5f c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Ransom_Win64_ForeigCrypt_PA_2147781680_0
         $x_1_6 = "Inf.bat.cmd.com.css.exe.gif.htm.jpg.mjs.pdf.png.svg.xml" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_Win32_MzRevenge_SK_2147753176_0
         $x_10_5 = "/C vssadmin delete shadows /all /quiet" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

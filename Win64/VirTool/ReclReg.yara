@@ -20,6 +20,7 @@ rule VirTool_Win64_ReclReg_A_2147839552_0
         $x_1_5 = {45 33 c9 45 0f b7 c5 48 8b d6 48 8b c8 ff 15 ?? ?? ?? ?? 4c 8b e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

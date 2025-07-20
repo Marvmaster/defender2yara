@@ -21,6 +21,7 @@ rule Trojan_Win32_Mypis_CB_2147838919_0
         $x_1_6 = "WahDisableNonIFSHandleSupport" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

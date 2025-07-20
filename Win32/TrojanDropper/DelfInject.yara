@@ -22,6 +22,7 @@ rule TrojanDropper_Win32_DelfInject_A_2147602098_0
         $x_1_8 = "Toolhelp32ReadProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

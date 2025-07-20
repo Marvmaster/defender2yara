@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Quasar_MK_2147773066_0
         $x_1_4 = {68 74 74 70 3a 2f 2f 6a 6f 78 69 2e 72 75 2f [0-32] 2e 70 72 6f 6a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

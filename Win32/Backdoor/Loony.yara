@@ -19,6 +19,7 @@ rule Backdoor_Win32_Loony_2147597686_0
         $x_2_5 = {6e 77 6e 63 64 6b 65 79 2e 69 6e 69 00 25 73 5c 25 73}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_2_*))) or

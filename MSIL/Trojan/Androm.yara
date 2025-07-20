@@ -19,6 +19,7 @@ rule Trojan_MSIL_Androm_D_2147730346_0
         $x_1_4 = "ZWM2MzJmZDktMTY5NC00ZjRhLTliZmYtZjIwNjAwZTM3OTgx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Androm_J_2147740583_0
         $x_1_3 = {02 74 16 00 00 01 6f 19 00 00 0a 14 16 8d 01 00 00 01 6f 1a 00 00 0a 26}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_MSIL_Androm_A_2147743728_0
         $x_1_1 = {06 7e 01 00 00 04 8e 69 fe 04 2d 01 2a 06 0b 1f 0b 0c 07 08 5d 2c 03 16 2b 01 17 16 fe 03 2c 14 7e 01 00 00 04 06 7e 01 00 00 04 06 91 1d 59 1f 09 59 d2 9c 06 25 0b 0d 17 25 0c 13 04 11 04 2c d1 09 11 04 58 0a 2b b8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_MSIL_Androm_AS_2147786450_0
         $x_3_11 = "set_UseShellExecute" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule Trojan_MSIL_Androm_DA_2147816358_0
         $x_3_6 = "CreateDecryptor" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +147,7 @@ rule Trojan_MSIL_Androm_APZ_2147832708_0
         $x_1_2 = "iRemovalProWPF.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_MSIL_Androm_MBI_2147838130_0
         $x_1_2 = "485e-bda9-9139d5da9381" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule Trojan_MSIL_Androm_RB_2147838509_0
         $x_1_1 = {06 07 9a 74 ?? ?? ?? ?? 72 ?? ?? ?? ?? 20 00 01 00 00 14 14 14 6f ?? ?? ?? 0a 26 de 03 26 de 00 07 17 58 0b 07 06 8e 69 32 d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +218,7 @@ rule Trojan_MSIL_Androm_MBAK_2147838632_0
         $x_1_5 = "ZipCosdaz.Propertie" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +243,7 @@ rule Trojan_MSIL_Androm_CB_2147838794_0
         $x_1_4 = "Pontoon.Pizza2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -256,6 +266,7 @@ rule Trojan_MSIL_Androm_CQ_2147841265_0
         $x_1_2 = {11 0e 28 43 00 00 0a 25 11 0b 16 11 0b 8e 69 6f 44 00 00 0a 6f 2c 00 00 0a 11 0e 14 1a 28 26 00 00 06 26}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -278,6 +289,7 @@ rule Trojan_MSIL_Androm_MBAS_2147841638_0
         $x_1_2 = "sOmNuSoR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -301,6 +313,7 @@ rule Trojan_MSIL_Androm_MBCI_2147843546_0
         $x_1_3 = "a0acfd767f06" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -325,6 +338,7 @@ rule Trojan_MSIL_Androm_ABNC_2147844202_0
         $x_1_4 = "GetTypes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +365,7 @@ rule Trojan_MSIL_Androm_EAO_2147845235_0
         $x_1_6 = "FileMemory.mem" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -375,6 +390,7 @@ rule Trojan_MSIL_Androm_ABRN_2147845550_0
         $x_4_4 = {38 00 35 00 2e 00 33 00 31 00 2e 00 34 00 35 00 2e 00 34 00 32}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -396,6 +412,7 @@ rule Trojan_MSIL_Androm_CST_2147846589_0
         $x_5_1 = {02 07 6f 06 00 00 0a 07 03 6f ?? ?? ?? ?? 5d 0c 03 08 6f ?? ?? ?? ?? 0d 09 61 d1 13 04 06 11 04 6f ?? ?? ?? ?? 26 07 17 58 0b 07 02 6f ?? ?? ?? ?? 32 cd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -420,6 +437,7 @@ rule Trojan_MSIL_Androm_ABUQ_2147846603_0
         $x_2_4 = "protoolschile.cl/Xxqpzds.dat" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -441,6 +459,7 @@ rule Trojan_MSIL_Androm_AAD_2147846722_0
         $x_1_1 = {0a 16 0b 2b 3d 06 07 9a 6f 30 00 00 0a 7e 0d 00 00 04 28 2d 00 00 06 2c 05 28 2e 00 00 06 06 07 9a 6f 31 00 00 0a 7e 0e 00 00 04 28 2d 00 00 06 2c 05 28 2e 00 00 06 1f 64 28 32 00 00 0a 07 17 58 0b 07 06 8e 69 17 59 32 bb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -462,6 +481,7 @@ rule Trojan_MSIL_Androm_GIF_2147847237_0
         $x_10_1 = {13 07 2b 2f 00 08 6f ?? ?? ?? 0a 11 07 18 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 16 91 13 08 09 11 08 6f ?? ?? ?? 0a 00 00 11 07 18 58 13 07 11 07 08 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a fe 04 13 09 11 09 2d bc}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -483,6 +503,7 @@ rule Trojan_MSIL_Androm_ABXY_2147848238_0
         $x_5_1 = {17 2c 04 2b 1c 2b 21 7e ?? 00 00 04 7e ?? 00 00 04 2b 18 2b 1d 2b 1e 2b 23 75 ?? 00 00 1b 2b 23 2a 28 ?? 00 00 06 2b dd 0a 2b dc 28 ?? 00 00 06 2b e1 06 2b e0 28 ?? 00 00 06 2b db 28 ?? 00 00 06 2b d6 28 ?? 00 00 06 2b d6}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -505,6 +526,7 @@ rule Trojan_MSIL_Androm_ABZH_2147848764_0
         $x_2_2 = {2b 1f 12 09 28 ?? 00 00 0a 13 0a 2b 14 12 09 28 ?? 00 00 0a 13 0a 2b 09 12 09 28 ?? 00 00 0a 13 0a 07 11 0a 6f ?? 00 00 0a 11 08 17 58 13 08 11 08 09 32 aa 11 07 17 58 13 07 11 07 11 04 32 99 11 06 17 58 13 06 11 06 19 32 89}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -526,6 +548,7 @@ rule Trojan_MSIL_Androm_CXJK_2147849331_0
         $x_1_1 = {08 13 08 16 13 09 11 08 12 09 28 ?? ?? ?? ?? 00 08 07 11 07 18 6f 17 00 00 0a 1f 10 28 18 00 00 0a 6f 19 00 00 0a 00 de 0d 11 09 2c 08 11 08 28 1a 00 00 0a 00 dc 00 11 07 18 58 13 07 11 07 07 6f 1b 00 00 0a fe 04 13 0a 11 0a 2d b2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -547,6 +570,7 @@ rule Trojan_MSIL_Androm_RDA_2147849610_0
         $x_2_1 = {16 07 a2 6f a6 00 00 0a 75 27 00 00 01 13 04 11 04 72 ?? ?? ?? ?? 6f a7 00 00 0a 7e 56 00 00 04 13 0b 11 0b 28 a8 00 00 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -570,6 +594,7 @@ rule Trojan_MSIL_Androm_AACS_2147849944_0
         $x_1_3 = "GetPixel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -592,6 +617,7 @@ rule Trojan_MSIL_Androm_AADX_2147850090_0
         $x_1_2 = "Qomedsajzi" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -614,6 +640,7 @@ rule Trojan_MSIL_Androm_MBGM_2147850564_0
         $x_1_2 = {16 13 05 20 01 ae 00 00 8d ?? 00 00 01 13 06 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -637,6 +664,7 @@ rule Trojan_MSIL_Androm_MBGN_2147850565_0
         $x_1_3 = "Aads.Sorts.He" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -659,6 +687,7 @@ rule Trojan_MSIL_Androm_ASBK_2147850630_0
         $x_2_2 = {13 04 11 04 07 16 73 ?? 00 00 0a 13 05 11 05 09 6f ?? 00 00 0a 09 6f ?? 00 00 0a 13 06 dd ?? 00 00 00 11 05 39 ?? 00 00 00 11 05 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -684,6 +713,7 @@ rule Trojan_MSIL_Androm_ASBL_2147851421_0
         $x_1_5 = {37 00 31 00 38 00 32 00 39 00 36 00 45 00 38 00 35 00 2d 00 2d 00 31 00 31 00 36 00 31 00 35 00 2d 00 2d 00 31 00 31 00 41 00 31 00 39 00 2d 00 2d 00 35 00 2d 00 2d 00 33 00 31 00 31 00 2d 00 2d 00 2a 00 2a 00 36 00 32 00 44 00 38 00 34}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -708,6 +738,7 @@ rule Trojan_MSIL_Androm_CXGG_2147851458_0
         $x_1_4 = "AUnrRRccmOUsJsOIQ7786052384152085672453645" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -729,6 +760,7 @@ rule Trojan_MSIL_Androm_SDP_2147851808_0
         $x_1_1 = {02 50 06 02 50 07 91 9c 02 50 07 08 9c 06 17 58 0a 07 17 59 0b 2b 03 0c 2b e6 06 07 32 da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -750,6 +782,7 @@ rule Trojan_MSIL_Androm_AAII_2147852088_0
         $x_5_1 = {0a 14 0b 28 ?? 00 00 06 0b 07 8e 69 8d ?? 00 00 01 0c 16 0d 38 ?? 00 00 00 08 09 07 09 91 06 09 06 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 61 d2 9c 09 17 58 0d 09 07 8e 69 32 e0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -771,6 +804,7 @@ rule Trojan_MSIL_Androm_AAIV_2147852350_0
         $x_5_1 = {04 16 06 7b ?? 00 00 04 6f ?? 00 00 0a 28 ?? 00 00 0a 7e ?? 00 00 04 25 3a ?? 00 00 00 26 7e ?? 00 00 04 fe ?? ?? 00 00 06 73 ?? 00 00 0a 25 80 ?? 00 00 04 28 ?? 00 00 2b 06 fe ?? ?? 00 00 06 73 ?? 00 00 0a 28 ?? 00 00 2b 28 ?? 00 00 2b 6f ?? 00 00 0a 28 ?? 00 00 0a 6f ?? 00 00 0a 7e ?? 00 00 04 25 3a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -793,6 +827,7 @@ rule Trojan_MSIL_Androm_NAN_2147852428_0
         $x_1_2 = "Bosch-ECU-UltimaX-Tool" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -815,6 +850,7 @@ rule Trojan_MSIL_Androm_CXIJ_2147852660_0
         $x_1_2 = "f00009f00000027000000670000" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -836,6 +872,7 @@ rule Trojan_MSIL_Androm_AND_2147852834_0
         $x_1_1 = {11 02 03 59 11 03 59 20 ff 00 00 00 5f d2 13 02 20 05 00 00 00 7e 16 00 00 04 7b 29 00 00 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -857,6 +894,7 @@ rule Trojan_MSIL_Androm_AND_2147852834_1
         $x_1_1 = {fe 01 16 fe 01 13 42 11 42 2d 1e 00 14 13 0b 14 13 0c 11 0b 11 0c 6f ?? ?? ?? 0a 13 0d 14 13 0e 11 0e 6f ?? ?? ?? 0a 26 00 02 11 09 91}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -878,6 +916,7 @@ rule Trojan_MSIL_Androm_AMAA_2147890320_0
         $x_10_1 = {00 11 09 09 5d 13 0a 11 09 11 04 5d 13 0b 07 11 0a 91 13 0c 08 11 0b 6f ?? 00 00 0a 13 0d 07 11 09 17 58 09 5d 91 13 0e 11 0c 11 0d 11 0e 28 ?? 00 00 06 13 0f 07 11 0a 11 0f 20 00 01 00 00 5d d2 9c 00 11 09 17 59 13 09 11 09 16 fe 04 16 fe 01 13 10 11 10 2d a9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -901,6 +940,7 @@ rule Trojan_MSIL_Androm_NAD_2147891423_0
         $x_1_3 = "RC2CryptoServiceProvider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -923,6 +963,7 @@ rule Trojan_MSIL_Androm_NAD_2147891423_1
         $x_1_2 = "GNOLC.g.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -946,6 +987,7 @@ rule Trojan_MSIL_Androm_AARL_2147892403_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -968,6 +1010,7 @@ rule Trojan_MSIL_Androm_MBJU_2147892787_0
         $x_1_2 = {11 05 02 11 0c 28 ?? 00 00 06 9c 07 17 59 0b 07 16 fe 04 16 fe 01 13 0d 11 0d 2d a8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -989,6 +1032,7 @@ rule Trojan_MSIL_Androm_SPAQ_2147893074_0
         $x_1_1 = {08 09 07 09 91 06 59 d2 9c 09 17 58 0d 09 07 8e 69 32 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1010,6 +1054,7 @@ rule Trojan_MSIL_Androm_SPXY_2147893569_0
         $x_4_1 = {07 06 8e 69 5d 13 05 07 11 04 6f ?? ?? ?? 0a 5d 13 09 06 11 05 91 13 0a 11 04 11 09 6f ?? ?? ?? 0a 13 0b 02 06 07 28 ?? ?? ?? 06 13 0c 02 11 0a 11 0b 11 0c 28 ?? ?? ?? 06 13 0d 06 11 05 02 11 0d 28 ?? ?? ?? 06 9c 07 17 59 0b 07 16 fe 04 16 fe 01 13 0e 11 0e 2d a8}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1031,6 +1076,7 @@ rule Trojan_MSIL_Androm_SPJR_2147893582_0
         $x_4_1 = {08 11 04 16 6f ?? ?? ?? 0a 13 05 12 05 28 ?? ?? ?? 0a 13 06 09 11 06 6f ?? ?? ?? 0a 11 04 17 58 13 04 11 04 08 6f ?? ?? ?? 0a 32 d4 09 6f ?? ?? ?? 0a 13 07 dd 0d 00 00 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1053,6 +1099,7 @@ rule Trojan_MSIL_Androm_AMAB_2147893930_0
         $x_5_2 = {11 07 11 08 16 73 ?? 00 00 0a 13 0c 20 00 00 00 00 7e ?? 08 00 04 7b ?? 08 00 04 3a ?? 00 00 00 26 20 00 00 00 00 38}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1075,6 +1122,7 @@ rule Trojan_MSIL_Androm_AAUF_2147894290_0
         $x_1_2 = "//I//n//v//o//k//e//" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1096,6 +1144,7 @@ rule Trojan_MSIL_Androm_PTAB_2147894415_0
         $x_2_1 = {06 28 1c 00 00 06 7d 0b 00 00 04 06 7b 0b 00 00 04 2c ed}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1120,6 +1169,7 @@ rule Trojan_MSIL_Androm_ADG_2147896067_0
         $x_2_4 = "Decrypt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1143,6 +1193,7 @@ rule Trojan_MSIL_Androm_GJW_2147896109_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1164,6 +1215,7 @@ rule Trojan_MSIL_Androm_AMBF_2147897402_0
         $x_2_1 = {00 11 07 11 04 5d 13 08 11 07 1f 16 5d 13 09 11 07 17 58 11 04 5d 13 0a 07 11 08 91 13 0b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1185,6 +1237,7 @@ rule Trojan_MSIL_Androm_AMCH_2147898997_0
         $x_2_1 = {11 00 11 05 11 00 11 01 11 05 59 17 59 91 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1206,6 +1259,7 @@ rule Trojan_MSIL_Androm_AMMH_2147908310_0
         $x_1_1 = {0a 13 04 11 04 72 ?? 00 00 70 28 ?? 00 00 0a 72 ?? 00 00 70 28 ?? 00 00 0a 6f ?? 00 00 0a 13 05 73 ?? 00 00 0a 13 06 07 73 ?? 00 00 0a 13 07 11 07 11 05 16 73 ?? 00 00 0a 13 08 11 08 11 06 6f ?? 00 00 0a 11 06 6f ?? 00 00 0a 0b dd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1227,6 +1281,7 @@ rule Trojan_MSIL_Androm_SPNN_2147908643_0
         $x_5_1 = {5d 13 08 07 08 91 11 07 61 07 11 08 91 59 20 00 01 00 00 58 13 09 07 08 11 09 20 ff 00 00 00 5f d2 9c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1248,6 +1303,7 @@ rule Trojan_MSIL_Androm_SPFM_2147911231_0
         $x_1_1 = {17 58 08 5d 13 ?? 07 11 ?? 91 13 ?? 02 07 11 ?? 91 11 ?? 61 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1269,6 +1325,7 @@ rule Trojan_MSIL_Androm_ARA_2147915975_0
         $x_2_1 = {00 03 08 03 8e 69 5d 94 0d 06 09 91 13 04 06 09 06 08 91 9c 06 08 11 04 9c 00 08 17 59 0c 08 16 fe 04 16 fe 01 13 05 11 05 2d d5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1290,6 +1347,7 @@ rule Trojan_MSIL_Androm_ARA_2147915975_1
         $x_2_1 = {00 11 06 11 07 11 06 11 07 91 1b 59 20 00 01 00 00 58 20 ?? ?? ?? ?? 5a 20 00 01 00 00 5d d2 9c 11 06 11 07 8f ?? ?? ?? ?? 25 47 03 09 58 20 00 01 00 00 5d d2 61 d2 52 00 11 07 17 58 13 07 11 07 11 06 8e 69 fe 04 13 08 11 08 2d b3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1316,6 +1374,7 @@ rule Trojan_MSIL_Androm_ARA_2147915975_2
         $x_1_6 = "add_MouseClick" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1341,6 +1400,7 @@ rule Trojan_MSIL_Androm_NA_2147916490_0
         $x_1_5 = "GetBytesAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1367,6 +1427,7 @@ rule Trojan_MSIL_Androm_NB_2147916503_0
         $x_1_6 = "ConvertStringToUintArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1388,6 +1449,7 @@ rule Trojan_MSIL_Androm_KAC_2147920816_0
         $x_1_1 = {91 58 20 00 01 00 00 5d 13 07 02 11 06 8f 16 00 00 01 25 71 ?? 00 00 01 07 11 07 91 61 d2 81 ?? 00 00 01 11 06 17 58 13 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1414,6 +1476,7 @@ rule Trojan_MSIL_Androm_EM_2147928046_0
         $x_1_6 = "0bf582eb-df3f-46ba-97a6-8d8caaf4113d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1438,6 +1501,7 @@ rule Trojan_MSIL_Androm_AAGA_2147928177_0
         $x_1_4 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1463,6 +1527,7 @@ rule Trojan_MSIL_Androm_AYA_2147930958_0
         $x_1_5 = "Error reading driver information from the registry" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1485,6 +1550,7 @@ rule Trojan_MSIL_Androm_SWA_2147931286_0
         $x_2_2 = {06 17 62 02 7b 06 00 00 04 06 8f 03 00 00 02 03 28 0a 00 00 06 58 0a 07 17 59 0b 07 16 30 e1 06 17 02 7b 07 00 00 04 1f 1f 5f 62 59 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1506,6 +1572,7 @@ rule Trojan_MSIL_Androm_AMCZ_2147932344_0
         $x_1_1 = {0a 0d 09 08 6f ?? 00 00 0a 09 18 6f ?? 00 00 0a 09 6f ?? 00 00 0a 06 16 06 8e 69 6f ?? 00 00 0a 13 04 11 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1527,6 +1594,7 @@ rule Trojan_MSIL_Androm_MBWQ_2147932551_0
         $x_1_1 = {05 63 00 72 00 00 05 72 00 72 00 00 21 47 00 65 00 74 00 45 00 78 00 70 00 6f 00 72 00 74 00 65 00 64 00 54 00 79 00 70 00 65 00 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1548,6 +1616,7 @@ rule Trojan_MSIL_Androm_EAOX_2147934436_0
         $x_5_1 = {00 11 06 11 07 11 06 11 07 91 19 63 11 06 11 07 91 1b 62 60 d2 9c 11 06 11 07 8f 1c 00 00 01 25 47 03 11 07 91 61 d2 52 00 11 07 17 58 13 07 11 07 06 fe 04 13 08 11 08 2d c6}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1569,6 +1638,7 @@ rule Trojan_MSIL_Androm_SEB_2147937045_0
         $x_2_1 = {5f 62 60 20 b4 d5 fd 61 59 20 ca a9 00 00 20 ab a9 00 00 59 5f 64 60 72 24 06 00 70 a2 28 17 00 00 0a d0 03 00 00 02 28 14 00 00 0a 6f 6b 00 00 0a 73 6c 00 00 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1590,6 +1660,7 @@ rule Trojan_MSIL_Androm_SIM_2147937261_0
         $x_1_1 = {02 20 03 e5 36 19 28 09 00 00 06 07 6f 12 00 00 06 74 1b 00 00 01 0d 02 09 02 7b 0d 00 00 04 6f 16 00 00 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1611,6 +1682,7 @@ rule Trojan_MSIL_Androm_SIR_2147939382_0
         $x_2_1 = {02 16 02 8e 69 6f 27 00 00 0a 6f 28 00 00 0a 6f 29 00 00 0a 7e 08 00 00 04 20 25 01 00 00 7e 08 00 00 04 20 25 01 00 00 94 7e 02 00 00 04 20 18 02 00 00 94 61 20 8c 00 00 00 5f 9e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1632,6 +1704,7 @@ rule Trojan_MSIL_Androm_SLU_2147939386_0
         $x_2_1 = {02 28 09 00 00 06 0a 73 0f 00 00 0a 25 02 06 28 08 00 00 06 6f 10 00 00 0a 0b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1653,6 +1726,7 @@ rule Trojan_MSIL_Androm_AFTA_2147940977_0
         $x_5_1 = {0a 0c 1a 8d ?? 00 00 01 0d 08 09 16 09 8e 69 6f ?? 00 00 0a 26 09 16 28 ?? 00 00 0a 13 04 08 16 73 ?? 00 00 0a 13 05 11 04 8d ?? 00 00 01 13 06 16 13 07 38 ?? 00 00 00 11 07 11 05 11 06 11 07 11 04 11 07 59 6f ?? 00 00 0a 58 13 07 11 07 11 04 32 e5}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1676,6 +1750,7 @@ rule Trojan_MSIL_Androm_AKTA_2147941068_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1699,6 +1774,7 @@ rule Trojan_MSIL_Androm_AVTA_2147941400_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1720,6 +1796,7 @@ rule Trojan_MSIL_Androm_ABYA_2147945113_0
         $x_5_1 = {06 08 06 08 91 03 08 03 8e 69 5d 91 61 d2 9c 16 0d 2b 18 06 08 06 08 91 03 09 91 07 1f 1f 5f 62 09 61 08 58 61 d2 9c 09 17 58 0d 09 03 8e 69 32 e2 08 17 58 0c 08 06 8e 69 32}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1741,6 +1818,7 @@ rule Trojan_MSIL_Androm_AB_2147945965_0
         $x_1_1 = {61 7d 1b 00 00 04 20 2f 00 00 00 38 7d fa ff ff 7e 16 00 00 04 20 93 33 d3 d6 65 20 03 00 00 00 62 20 c7 88 e4 2f 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

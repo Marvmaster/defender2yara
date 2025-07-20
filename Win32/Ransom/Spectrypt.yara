@@ -17,6 +17,7 @@ rule Ransom_Win32_Spectrypt_A_2147721803_0
         $x_1_3 = "a0142503.xsph.ru" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

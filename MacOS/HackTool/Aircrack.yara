@@ -18,6 +18,7 @@ rule HackTool_MacOS_Aircrack_A_2147745995_0
         $x_1_3 = "SELECT pmk.PMK, passwd.passwd FROM pmk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule HackTool_MacOS_Aircrack_B_2147747964_0
         $x_1_3 = "SELECT pmk.PMK, passwd.passwd FROM pmk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

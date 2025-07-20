@@ -19,6 +19,7 @@ rule VirTool_Win64_Plant_A_2147910518_0
         $x_1_5 = {88 01 48 03 ce 03 c6 3d ?? ?? 00 00 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

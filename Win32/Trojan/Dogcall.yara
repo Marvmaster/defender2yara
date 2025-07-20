@@ -16,6 +16,7 @@ rule Trojan_Win32_Dogcall_2147729582_0
         $x_1_2 = "%s?MachineId=%s&InfoSo=%s&Index=%s&Account=%s&Group=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

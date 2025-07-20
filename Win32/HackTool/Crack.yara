@@ -21,6 +21,7 @@ rule HackTool_Win32_Crack_2147745913_0
         $x_1_6 = "Activation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -51,6 +52,7 @@ rule HackTool_Win32_Crack_2147745913_1
         $x_1_7 = "REGISTRY PATCH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule HackTool_Win32_Crack_2147745913_2
         $x_1_5 = "Tonek Inc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

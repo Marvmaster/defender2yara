@@ -31,6 +31,7 @@ rule Ransom_Win32_Petya_A_2147710272_0
         $x_1_17 = "://petya" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((4 of ($x_1_*))) or
@@ -111,6 +112,7 @@ rule Ransom_Win32_Petya_B_2147722419_0
         $x_2_9 = {53 00 59 00 53 00 54 00 45 00 4d 00 22 00 20 00 00 00 00 00 00 00 64 00 6c 00 6c 00 68 00 6f 00 73 00 74 00 2e 00 64 00 61 00 74 00 00 00 6e 74}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -191,6 +193,7 @@ rule Ransom_Win32_Petya_C_2147723923_0
         $x_1_15 = "ROOT\\SecurityCenter2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -264,6 +267,7 @@ rule Ransom_Win32_Petya_PGP_2147936336_0
         $x_4_2 = "petya5koahtsf7sv.onion/" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -291,6 +295,7 @@ rule Ransom_Win32_Petya_BA_2147941997_0
         $x_1_7 = "decryption code" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

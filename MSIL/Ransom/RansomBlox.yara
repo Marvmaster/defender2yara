@@ -18,6 +18,7 @@ rule Ransom_MSIL_RansomBlox_PA_2147845043_0
         $x_1_3 = {5c 52 57 61 72 65 5c 52 57 61 72 65 5c [0-16] 5c 52 6f 57 61 72 65 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

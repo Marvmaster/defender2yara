@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Cresyaf_A_2147718249_0
         $x_1_2 = {5b 42 4f 54 49 44 3a 20 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

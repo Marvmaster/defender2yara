@@ -17,6 +17,7 @@ rule Trojan_Win32_RhadamnthStealer_PA_2147839495_0
         $x_1_2 = {2c 01 88 45 ?? 8b 45 ?? 8b 8d [0-4] d3 e0 0f b6 4d ?? 8b 95 [0-4] 89 04 8a e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

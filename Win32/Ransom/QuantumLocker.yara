@@ -21,6 +21,7 @@ rule Ransom_Win32_QuantumLocker_MAK_2147811530_0
         $x_1_6 = "Quantum Locker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win32_QuantumLocker_AB_2147820457_0
         $x_10_2 = {66 8b 45 fc 66 83 c0 01 66 89 45 fc 0f b7 45 fc 0f b7 4d f8 3b c1 7d 29 ff 75 f4 e8 ?? ?? ?? ?? 59 89 45 f4 0f b7 45 fc 8b 4d 08 0f b6 04 01 0f b6 4d f4 33 c1 0f b7 4d fc 8b 55 0c 88 04 0a eb bf}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Ransom_Win32_QuantumLocker_PC_2147831587_0
         $x_1_1 = {0f b7 45 fc 0f b7 4d f8 3b c1 7d 29 ff 75 f4 e8 ?? ?? ?? ?? 59 89 45 f4 0f b7 45 fc 8b 4d 08 0f b6 04 01 0f b6 4d f4 33 c1 0f b7 4d fc 8b 55 0c 88 04 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

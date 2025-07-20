@@ -23,6 +23,7 @@ rule Trojan_Win32_Cameobe_A_2147639076_0
         $x_3_9 = {66 3d 05 00 76 0b 66 05 fb ff 66 89 44 24 1e eb 4d 66 8b 4c 24 1a 66 05 19 00 66 83 f9 02 66 89 44 24 1e 75 19}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or

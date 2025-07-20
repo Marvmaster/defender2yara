@@ -17,6 +17,7 @@ rule HackTool_Win32_LSASSPatcher_A_2147819368_0
         $x_1_3 = "Base address of wdigest.dll: 0x%016p" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

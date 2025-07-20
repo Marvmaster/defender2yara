@@ -17,6 +17,7 @@ rule Backdoor_Win32_Hormesu_A_2147654183_0
         $x_1_2 = {55 43 43 6f 64 65 50 69 65 63 65 43 61 6c 6c 65 72 2e 64 6c 6c 00 75 63 67 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_Win32_Hormesu_B_2147654184_0
         $x_1_2 = {44 6c 6c 4c 6f 61 64 65 72 2e 64 6c 6c 00 4c 6f 61 64 54 50 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

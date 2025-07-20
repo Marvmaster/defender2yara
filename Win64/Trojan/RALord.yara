@@ -21,6 +21,7 @@ rule Trojan_Win64_RALord_SACR_2147937160_0
         $x_1_6 = "please do not touch the files becouse we can't decrypt it if you touch it" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

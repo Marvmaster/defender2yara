@@ -15,6 +15,7 @@ rule Trojan_Win32_Quackbot_2147731357_0
         $x_1_1 = {8b 55 d4 8a 14 3a 22 55 ?? 88 10 8b 55 ?? 47 3b 55 ?? eb ?? d3 f8 8b 4d ?? 29 c1 89 f0 99 f7 7d ?? 0f af c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

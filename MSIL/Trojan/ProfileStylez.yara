@@ -17,6 +17,7 @@ rule Trojan_MSIL_ProfileStylez_A_2147647892_0
         $x_1_3 = "allow us to display pop-up, pop-under and other types of advertisements" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_ProfileStylez_A_2147647892_1
         $x_1_2 = "BHO_HelloWorld.IObjectWithSite.GetSite" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

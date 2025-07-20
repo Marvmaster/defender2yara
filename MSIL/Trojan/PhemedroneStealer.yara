@@ -17,6 +17,7 @@ rule Trojan_MSIL_PhemedroneStealer_CB_2147850817_0
         $x_1_2 = {05 00 fe 0c 01 00 fe 0c 05 00 6f 93 01 00 0a 26 00 fe 0c 02 00 20 01 00 00 00 58 fe 0e 02 00 fe 0c 02 00 fe 0c 00 00 8e 69 fe 04 fe 0e 06 00 fe 0c 06 00 2d 94}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_MSIL_PhemedroneStealer_CC_2147850818_0
         $x_1_10 = "Password.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_MSIL_PhemedroneStealer_NIT_2147931113_0
         $x_1_6 = "vmware" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -97,6 +100,7 @@ rule Trojan_MSIL_PhemedroneStealer_SWA_2147935623_0
         $x_2_1 = {28 02 00 00 2b 7e 29 00 00 04 25 2d 17 26 7e 28 00 00 04 fe 06 5e 00 00 06 73 6c 00 00 0a 25 80 29 00 00 04 28 03 00 00 2b 7e 2a 00 00 04 25 2d 17 26 7e 28 00 00 04 fe 06 5f 00 00 06 73 6e 00 00 0a 25 80 2a 00 00 04 28 04 00 00 2b 28 05 00 00 2b 08 fe 06 64 00 00 06 73 71 00 00 0a 6f 72 00 00 0a 28 66 00 00 06 08 7b 2e 00 00 04 28 75 00 00 06 de 14 08 7b 2e 00 00 04 2c 0b 08 7b 2e 00 00 04 6f 01 00 00 0a dc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

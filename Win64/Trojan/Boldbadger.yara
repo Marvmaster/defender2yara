@@ -18,6 +18,7 @@ rule Trojan_Win64_Boldbadger_GA_2147938144_0
         $x_1_3 = {48 89 c8 49 89 c8 48 89 cf 49 f7 e1 49 29 d0 49 d1 e8 4c 01 c2 48 c1 ea 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

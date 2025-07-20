@@ -19,6 +19,7 @@ rule Ransom_MSIL_Anarchy_DA_2147931358_0
         $x_1_4 = "EncryptFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

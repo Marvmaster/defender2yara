@@ -46,6 +46,7 @@ rule Virus_Win32_Fakefire_A_2147599249_0
         $x_1_32 = "sistema de XP) sobre el sistema de Windows de la" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +82,7 @@ rule Virus_Win32_Fakefire_A_2147599249_1
         $x_1_16 = "Rising.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +112,7 @@ rule Virus_Win32_Fakefire_A_2147601508_0
         $x_1_9 = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -144,6 +147,7 @@ rule Virus_Win32_Fakefire_B_2147601823_0
         $x_1_12 = "fleFuck" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 8 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -177,6 +181,7 @@ rule Virus_Win32_Fakefire_C_2147601825_0
         $x_1_11 = {8d 8d 7c ff ff ff 8d 95 6c ff ff ff 51 8d 85 5c ff ff ff 52 50 c7 85 14 ff ff ff ?? ?? 40 00 c7 85 0c ff ff ff 08 80 00 00 ff 15 ?? ?? 40 00 8d 8d 0c ff ff ff 50 51 ff 15 ?? ?? 40 00 66 89 85 cc fe ff ff 8d 95 5c ff ff ff 8d 85 6c ff ff ff 52 8d 8d 7c ff ff ff 50 51 6a 03 ff 15 ?? ?? 40 00 83 c4 10 66 39 9d cc fe ff ff 0f 84 5c 01 00 00 8b 4d 08 8b 45 e8 8d 95 d8 fe ff ff 53 52 8b 11 50 52 89 9d d8 fe ff ff e8 ?? ?? ff ff ff d6 8b 55 08 8b 4d a0 8d 45 ec 53 50 8b 02 6a 04 51 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -209,6 +214,7 @@ rule Virus_Win32_Fakefire_D_2147604731_0
         $x_1_13 = "Unable to modify directories in target executable.  File may not contain any icon resources." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

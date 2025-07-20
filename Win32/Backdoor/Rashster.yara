@@ -20,6 +20,7 @@ rule Backdoor_Win32_Rashster_A_2147686580_0
         $x_1_5 = {61 50 33 6a 33 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

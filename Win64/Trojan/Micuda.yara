@@ -18,6 +18,7 @@ rule Trojan_Win64_Micuda_A_2147708477_0
         $x_1_4 = "cpuminer/2.3.3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

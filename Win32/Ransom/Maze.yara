@@ -19,6 +19,7 @@ rule Ransom_Win32_Maze_DH_2147744075_0
         $x_1_4 = "Vitalikremez detector" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win32_Maze_PA_2147745257_0
         $x_1_3 = "Your files have been encrypted by" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Ransom_Win32_Maze_PA_2147745257_1
         $x_1_2 = {8b 55 f4 33 55 f0 03 55 ec 8b 45 fc 8b 4d 08 03 14 81 8b 45 fc 8b 4d 08 89 14 81}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Ransom_Win32_Maze_PB_2147745259_0
         $x_1_4 = {0f b6 1c 30 6a 00 89 34 24 33 f6 03 75 ?? 8b d6 5e d3 c2 23 d3 ac 0a c2 88 07 47 ff 4d f8 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Ransom_Win32_Maze_PC_2147749191_0
         $x_1_2 = {c1 c0 09 0f b6 8e ?? ?? 00 00 c1 ca 0a 33 d0 8b 86 ?? ?? 00 00 c1 c8 08 03 d0 0f b6 86 ?? ?? 00 00 03 54 be 04 8b 84 86 ?? ?? 00 00 03 84 8e ?? ?? 00 00 33 d0 89 54 be 04 89 96 ?? ?? 00 00 8b 44 be 0c 8b 96 ?? ?? 00 00 0f b6 8e ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule Ransom_Win32_Maze_P_2147749744_0
         $x_1_4 = "DjDjdfodgs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Ransom_Win32_Maze_Q_2147750767_0
         $x_1_3 = "dwShellCodeSize" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +186,7 @@ rule Ransom_Win32_Maze_B_2147750984_0
         $x_1_2 = "File serves as a driver of North Korea Power" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +215,7 @@ rule Ransom_Win32_Maze_GG_2147753782_0
         $x_1_8 = ".pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -228,6 +237,7 @@ rule Ransom_Win32_Maze_PI_2147754923_0
         $x_1_1 = {8b 4d b8 83 c1 01 89 4d b8 8b 55 b8 3b 55 18 73 [0-4] 8b 45 ?? 03 45 b8 0f b6 08 8b 55 b8 0f b6 44 15 bc 33 c8 8b 55 14 03 55 b8 88 0a eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -252,6 +262,7 @@ rule Ransom_Win32_Maze_PI_2147754923_1
         $x_1_4 = "\\fucking\\idiotic\\nonexisting\\file\\with\\pdb\\extension.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*))) or
             (all of ($x*))
@@ -277,6 +288,7 @@ rule Ransom_Win32_Maze_PK_2147755042_0
         $x_1_2 = {33 44 24 14 89 07 8b 46 04 33 44 24 18 89 47 04 8b 46 08 33 44 24 1c 89 47 08 8b 46 0c 33 44 24 20 89 47 0c 8b 46 10 33 44 24 24 89 47 10 8b 46 14 33 44 24 28 89 47 14 8b 46 18 33 44 24 2c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -300,6 +312,7 @@ rule Ransom_Win32_Maze_PS_2147756584_0
         $x_1_3 = "gfg9urwyf7.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -328,6 +341,7 @@ rule Ransom_Win32_Maze_DSA_2147762022_0
         $x_1_5 = "open this file on your host to see the next part" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -352,6 +366,7 @@ rule Ransom_Win32_Maze_PD_2147763627_0
         $x_1_4 = "Dear %s Your files have been encrypted!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +388,7 @@ rule Ransom_Win32_Maze_ARA_2147897438_0
         $x_2_1 = {e9 0c 01 00 00 c6 45 e4 43 c6 45 e5 72 c6 45 e6 79 c6 45 e7 70 c6 45 e8 74 c6 45 e9 53 c6 45 ea 74 c6 45 eb 72 c6 45 ec 69 c6 45 ed 6e c6 45 ee 67 c6 45 ef 54 c6 45 f0 6f c6 45 f1 42 c6 45 f2 69 c6 45 f3 6e c6 45 f4 61 c6 45 f5 72 c6 45 f6 79 c6 45 f7 41 c6 45 f8 00 8d 4d e4 51 8b 55 b8 52}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

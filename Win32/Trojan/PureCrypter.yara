@@ -17,6 +17,7 @@ rule Trojan_Win32_PureCrypter_NIT_2147943749_0
         $x_2_2 = {8b 1d 65 60 4c 00 48 f7 d8 8b fa f7 d8 c1 eb 1e c1 e0 06 03 15 8c 9b 4e 00 c1 c8 16 f7 d0 ff c9 75 de}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

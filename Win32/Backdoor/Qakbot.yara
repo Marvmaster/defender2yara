@@ -21,6 +21,7 @@ rule Backdoor_Win32_Qakbot_A_2147611136_0
         $x_1_7 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -52,6 +53,7 @@ rule Backdoor_Win32_Qakbot_B_2147611137_0
         $x_1_8 = "CreateMutexA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +83,7 @@ rule Backdoor_Win32_Qakbot_A_2147611138_0
         $x_1_9 = "Hello999W0rld777" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -113,6 +116,7 @@ rule Backdoor_Win32_Qakbot_B_2147643209_0
         $x_1_5 = "%s\\%s_%u.cb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -142,6 +146,7 @@ rule Backdoor_Win32_Qakbot_C_2147649364_0
         $x_1_5 = "&bg=%s&it=%u&salt=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -171,6 +176,7 @@ rule Backdoor_Win32_Qakbot_T_2147688277_0
         $x_1_6 = " user=[%s] pass=[%s]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -196,6 +202,7 @@ rule Backdoor_Win32_Qakbot_T_2147688277_1
         $x_1_6 = {8b 4d fc 8d 34 08 83 e1 3f 8a 89 ?? ?? ?? ?? 30 0e 75 0a 8b 4d f8 46 83 45 f8 04 89 31 ff 45 fc 81 7d fc ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -276,6 +283,7 @@ rule Backdoor_Win32_Qakbot_T_2147708643_0
         $x_2_7 = {00 70 ff d0 83 ec}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -301,6 +309,7 @@ rule Backdoor_Win32_Qakbot_V_2147709390_0
         $x_1_1 = {f3 0f 10 05 5c 40 00 70 f3 0f 10 0d 60 40 00 70 0f b6 05 24 ?? ?? ?? f3 0f 2a d0 f3 0f 59 d1 f3 0f 5e d0 0f b6 05 24 ?? ?? ?? f3 0f 11 14 85 dc ?? ?? ?? a0 24 ?? ?? ?? 04 01 a2 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -333,6 +342,7 @@ rule Backdoor_Win32_Qakbot_W_2147726239_0
         $x_1_13 = "url=[%s] data=[%s]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -355,6 +365,7 @@ rule Backdoor_Win32_Qakbot_Y_2147726240_0
         $x_1_3 = "%s%s/dupinst.php?n=%s&bg=%s&r=%u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

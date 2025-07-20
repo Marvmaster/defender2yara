@@ -27,6 +27,7 @@ rule Trojan_Win64_Reductor_A_2147743617_0
         $x_2_13 = "module_ls.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*))) or
             ((1 of ($x_3_*) and 4 of ($x_2_*))) or

@@ -17,6 +17,7 @@ rule Trojan_MSIL_NekoStealer_AAQO_2147891989_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

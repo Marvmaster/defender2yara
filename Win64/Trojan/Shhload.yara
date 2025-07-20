@@ -21,6 +21,7 @@ rule Trojan_Win64_Shhload_A_2147850731_0
         $x_1_7 = {41 54 55 57 56 53 48 81 ec ?? ?? ?? ?? b9 0d 00 00 00 31 c0 ?? ?? ?? ?? ?? 24 20 48 89 d7 f3 48 ab 48 8b 3d ?? ?? 0c 00 44 8b 0f 45 85 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -31,6 +31,7 @@ rule BrowserModifier_Win32_ClearSearch_3729_0
         $x_1_17 = "Cycle %d Campaign" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (14 of ($x*))
 }
 
@@ -55,6 +56,7 @@ rule BrowserModifier_Win32_ClearSearch_3729_1
         $x_4_5 = "ClrSrch_Disconnect" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or
@@ -83,6 +85,7 @@ rule BrowserModifier_Win32_ClearSearch_3729_2
         $x_3_4 = "c:\\csie_debug.txt" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +110,7 @@ rule BrowserModifier_Win32_ClearSearch_3729_3
         $x_2_5 = "http://sds.clrsch.com/" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +136,7 @@ rule BrowserModifier_Win32_ClearSearch_3729_4
         $x_3_6 = "c:\\csie_debug.txt" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -159,6 +164,7 @@ rule BrowserModifier_Win32_ClearSearch_3729_5
         $n_5_8 = "Redirects to certain sites based on where you browse" ascii //weight: -5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((4 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -191,6 +197,7 @@ rule BrowserModifier_Win32_ClearSearch_3729_6
         $x_2_8 = "http://r%d.clrsch.com/" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -217,6 +224,7 @@ rule BrowserModifier_Win32_ClearSearch_3729_7
         $x_2_7 = "Governor Hit - Attempt Lost" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -250,6 +258,7 @@ rule BrowserModifier_Win32_ClearSearch_3729_8
         $x_3_9 = "CSAOLLDR.EXE" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -279,6 +288,7 @@ rule BrowserModifier_Win32_ClearSearch_3729_9
         $x_1_7 = "Could not delete current thwarter plug-in!  Aborting install." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_3_*) and 4 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -311,6 +321,7 @@ rule BrowserModifier_Win32_ClearSearch_3729_10
         $x_2_9 = "{947E6D5A-4B9F-4CF4-91B3-562CA8D03313}" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*) and 4 of ($x_2_*))) or

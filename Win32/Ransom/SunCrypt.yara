@@ -17,6 +17,7 @@ rule Ransom_Win32_SunCrypt_PA_2147770122_0
         $x_1_2 = {8b d0 c7 45 [0-6] 8b 45 ?? 03 c2 8a 4c 30 ?? 8b 45 ?? 32 0a 03 c7 88 0c 10 42 83 6d ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Ransom_Win32_SunCrypt_MK_2147780958_0
         $x_10_12 = "expand 16-byte k" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 5 of ($x_2_*))) or
             (all of ($x*))

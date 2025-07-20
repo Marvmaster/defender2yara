@@ -19,6 +19,7 @@ rule Backdoor_Linux_Rekobee_2147773042_0
         $x_4_5 = {c6 00 48 c6 40 05 49 c6 40 01 49 c6 40 06 4c c6 40 02 53 c6 40 07 45 c6 40 03 54 c6 40 08 3d c6 40 04 46 c6 40 09 00}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or

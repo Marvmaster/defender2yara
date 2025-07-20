@@ -17,6 +17,7 @@ rule Trojan_MSIL_Atraps_SK_2147892982_0
         $x_2_2 = "BUM.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_Atraps_PGA_2147940782_0
         $x_2_3 = "DownloadString" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_Atraps_A_2147945989_0
         $x_1_1 = {03 02 7b 06 00 00 04 28 53 00 00 06 10 01 73 62 00 00 0a 13 05 73 63 00 00 0a 0b 73 63 00 00 0a 0c 72 d4 11 00 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

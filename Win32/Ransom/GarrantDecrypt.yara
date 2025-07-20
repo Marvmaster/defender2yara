@@ -20,6 +20,7 @@ rule Ransom_Win32_GarrantDecrypt_PA_2147762337_0
         $x_1_5 = "Send 1 test image or text file squadhack@email.tg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win32_GarrantDecrypt_PB_2147762338_0
         $x_1_4 = "HELP_PC.EZDZ-REMOVE.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

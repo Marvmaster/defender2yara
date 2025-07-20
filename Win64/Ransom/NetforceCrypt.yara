@@ -18,6 +18,7 @@ rule Ransom_Win64_NetforceCrypt_PA_2147916802_0
         $x_5_3 = "Your files have been encrypted by the NetForceZ's Ransomware." ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

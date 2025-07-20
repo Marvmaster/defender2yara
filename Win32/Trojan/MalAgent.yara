@@ -19,6 +19,7 @@ rule Trojan_Win32_MalAgent_NIT_2147935598_0
         $x_1_4 = "chuangkou.log" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Oceanmug_A_2147682176_0
         $x_6_6 = "121.78.93.185/~adcodecplus/utilocean/utilocean.html" wide //weight: 6
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_6_*) and 4 of ($x_2_*))) or
@@ -49,6 +50,7 @@ rule TrojanDownloader_Win32_Oceanmug_B_2147682177_0
         $x_6_6 = "121.78.93.185/~adcodecplus/utilocean/utiloceanupfile.html" wide //weight: 6
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_6_*) and 4 of ($x_2_*))) or

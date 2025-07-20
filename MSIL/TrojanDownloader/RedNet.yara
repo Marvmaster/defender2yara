@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_RedNet_CCJZ_2147943668_0
         $x_1_3 = "GZSckwNk3rQ5chMNbwafzg==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

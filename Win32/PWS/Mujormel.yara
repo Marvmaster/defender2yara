@@ -26,6 +26,7 @@ rule PWS_Win32_Mujormel_A_2147687578_0
         $x_1_12 = "BRADESCO Informa: Por favor, Digite sua senha de 4 digitos" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -60,6 +61,7 @@ rule PWS_Win32_Mujormel_B_2147687582_0
         $x_1_12 = "BRADESCO Informa: Por favor, Digite sua senha de 4 digitos" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -87,6 +89,7 @@ rule PWS_Win32_Mujormel_C_2147687651_0
         $x_1_5 = "BRADESCO Informa: Por favor, Digite sua senha de 4 digitos" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -119,6 +122,7 @@ rule PWS_Win32_Mujormel_D_2147688180_0
         $x_1_9 = "senderedemail.tmp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
             ((5 of ($x_2_*))) or

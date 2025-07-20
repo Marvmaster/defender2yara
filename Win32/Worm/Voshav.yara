@@ -18,6 +18,7 @@ rule Worm_Win32_Voshav_A_2147689332_0
         $x_1_4 = "\\sYs__Tem.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

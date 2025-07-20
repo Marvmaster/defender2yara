@@ -18,6 +18,7 @@ rule Trojan_Win64_T1057_ProcessDiscovery_A_2147846090_0
         $x_10_4 = "misc::detours" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

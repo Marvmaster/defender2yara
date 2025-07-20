@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Gernidru_A_2147608249_0
         $x_1_5 = {ff 53 e4 5e [0-16] ff 53 f4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -26,6 +26,7 @@ rule Trojan_Win32_Swrort_A_2147630763_0
         $n_100_12 = "d:\\TFS\\Minerva\\DEV-branch-3.2.119-SANTANDER\\EndPoint\\BIN\\Release\\rmmpa.pdb" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (2 of ($x*))
 }
@@ -49,6 +50,7 @@ rule Trojan_Win32_Swrort_C_2147656416_0
         $n_100_3 = "C:\\ProgramData\\Symantec\\Symantec Endpoint Protection\\12.1.7004.6500.105\\Data" wide //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -72,6 +74,7 @@ rule Trojan_Win32_Swrort_E_2147711073_0
         $x_1_2 = {fc e8 82 00 00 00 60 89 e5 31 c0 64 8b 50 30 8b 52 0c 8b 52 14 8b 72 28 0f b7 4a 26 31 ff ac 3c 61 7c 02 2c 20 c1 cf 0d 01 c7 e2 f2 52 57 8b 52 10 8b 4a 3c 8b 4c 11 78 e3 48 01 d1 51 8b 59 20 01 d3 8b 49 18 e3 3a 49 8b 34 8b 01 d6 31 ff ac c1 cf 0d 01 c7 38 e0 75 f6 03 7d f8 3b 7d 24 75 e4 58 8b 58 24 01 d3 66 8b 0c 4b 8b 58 1c 01 d3 8b 04 8b 01 d0 89 44 24 24 5b 5b 61 59 5a 51 ff e0 5f 5f 5a 8b 12 eb 8d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +140,7 @@ rule Trojan_Win32_Swrort_AB_2147826901_0
         $x_1_5 = "1<1F1P1Z1b1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

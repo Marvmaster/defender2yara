@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Webalta_169511_0
         $x_1_4 = "D$own$load" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule BrowserModifier_Win32_Webalta_169511_1
         $x_1_4 = "webalta.ru/srch" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule BrowserModifier_Win32_Webalta_169511_2
         $x_1_7 = {2f 70 61 72 74 6e 65 72 3d 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -98,6 +101,7 @@ rule BrowserModifier_Win32_Webalta_169511_3
         $x_1_9 = "/s=1 /partner=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
@@ -140,6 +144,7 @@ rule BrowserModifier_Win32_Webalta_169511_4
         $x_1_16 = {71 6d 00 00 6d 74 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

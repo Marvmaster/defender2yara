@@ -19,6 +19,7 @@ rule Ransom_MSIL_CryptJoker_PA_2147845129_0
         $x_1_4 = "\\CryptoJoker.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_MSIL_CryptJoker_ARA_2147891509_0
         $x_3_4 = "BitcoinAdress" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_2_*))) or
             ((1 of ($x_6_*) and 1 of ($x_2_*))) or

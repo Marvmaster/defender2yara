@@ -17,6 +17,7 @@ rule VirTool_MSIL_Inject_2147693414_0
         $x_1_3 = "modem killa" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule VirTool_MSIL_Inject_2147693414_1
         $x_1_5 = {13 05 11 05 13 06 09 11 06 61 13 07 11 07 d1 13 08 06 11 08 6f 35 00 00 0a 26 00 07 13 09 11 09 17 58 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

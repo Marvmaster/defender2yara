@@ -16,6 +16,7 @@ rule Trojan_Win32_Spycos_B_2147655457_0
         $x_1_2 = {8d 55 f8 b8 7b 00 00 00 e8 ?? ?? ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Spycos_C_2147655458_0
         $x_1_2 = {8b 06 89 45 f8 8b c3 2c 04 74 0f b6 c3 50 8b c7 5a 8b ca 99 f7 f9 85 d2 75 0f b6 c3 8b d7 2b d0 8b 45 fc 8b 44 90 08 33 45 f8 89 46 04 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_Spycos_D_2147655770_0
         $x_1_3 = "modguard" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Spycos_E_2147667646_0
         $x_1_4 = {75 34 8d 55 ?? b8 ?? ?? 41 00 e8 ?? ?? ff ff 8b 45 ?? 50 8d 55 ?? b8 ?? ?? 41 00 e8 ?? ?? ff ff 8b 45 ?? 8d 4d ?? 5a e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -102,6 +106,7 @@ rule Trojan_Win32_Spycos_H_2147682666_0
         $x_1_1 = {00 43 6f 6e 74 72 6f 6c 50 61 6e 65 6c 43 70 6c 2e 63 70 6c 00 43 50 6c 41 70 70 6c 65 74 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +129,7 @@ rule Trojan_Win32_Spycos_H_2147682666_1
         $x_1_3 = {00 6d 6d 79 79 79 79 00 00 ff ff ff ff 04 00 00 00 2e 73 71 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +154,7 @@ rule Trojan_Win32_Spycos_I_2147683934_0
         $x_1_5 = "Plugin GB......." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))

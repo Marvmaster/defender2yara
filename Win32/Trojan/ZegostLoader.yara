@@ -16,6 +16,7 @@ rule Trojan_Win32_ZegostLoader_LK_2147841406_0
         $x_2_1 = {66 b9 2f 04 90 80 2c 11 05 90 90 90 e2 f7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Pinmos_A_2147654051_0
         $x_4_7 = {ff 46 0c 8b 45 f8 8b 08 85 c9 74 12 8b c1 33 d2 52 50 8b 46 04}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 5 of ($x_1_*))) or
             (all of ($x*))

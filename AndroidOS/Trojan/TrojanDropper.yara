@@ -16,6 +16,7 @@ rule Trojan_AndroidOS_TrojanDropper_AB_2147818278_0
         $x_2_2 = {6c 69 62 63 2e 73 6f 00 6c 69 62 ?? ?? 2e 73 6f 00 5f 5f 63 78 61 5f 66 69 6e 61 6c 69 7a 65 00 [0-49] 4a 61 76 61 5f 6a 5f 6b 63 5f 67 61 7a 00 4a 61 76 61 5f 6a 5f 6f 69 5f 62 62 66 00 4a 61 76 61 5f 6a 5f 6f 69 5f 64 76 67 00 4a 61 76 61 5f 6a 5f 6f 69 5f 65 7a 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

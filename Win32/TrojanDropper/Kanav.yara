@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Kanav_A_2147680330_0
         $x_1_4 = "FindResource error is 0x%08x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDropper_Win32_Kanav_B_2147680333_0
         $x_1_3 = "%s\\usp10.dll.bak" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

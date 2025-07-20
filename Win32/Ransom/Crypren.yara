@@ -17,6 +17,7 @@ rule Ransom_Win32_Crypren_A_2147711733_0
         $x_1_3 = {2a 2e 62 61 74 0d 0a 2a 2e 62 66 63 0d 0a 2a 2e 62 67 0d 0a 2a 2e 62 69 6e 0d 0a 2a 2e 62 6b 32 0d 0a 2a 2e 62 6d 70 0d 0a 2a 2e 62 6e 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Crypren_SK_2147754752_0
         $x_1_4 = "Send $500 worth of Bitcoin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Ransom_Win32_Crypren_PAGK_2147937391_0
         $x_2_5 = "Encrypted and renamed file: %s -> %s" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

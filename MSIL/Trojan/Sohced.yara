@@ -27,6 +27,7 @@ rule Trojan_MSIL_Sohced_A_2147845479_0
         $x_2_12 = "KDY0IEJpdCk=" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

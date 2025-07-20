@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Jazuz_A_2147639900_0
         $x_1_4 = {6a 00 68 80 00 00 00 6a 02 6a 00 6a 02 68 00 00 00 40 [0-10] ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

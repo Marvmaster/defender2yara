@@ -19,6 +19,7 @@ rule Trojan_Win32_VBCrypt_YL_2147743248_0
         $x_1_4 = "Gs8LHszJHs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_VBCrypt_YA_2147743604_0
         $x_1_4 = "dcNJtDcK1oNrG58" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

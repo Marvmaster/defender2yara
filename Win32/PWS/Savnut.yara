@@ -22,6 +22,7 @@ rule PWS_Win32_Savnut_B_2147646218_0
         $x_2_8 = {85 c0 74 08 8b 45 fc 80 38 40 75 0e ff 75 f0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule PWS_Win32_Savnut_A_2147646219_0
         $x_1_5 = {2a 00 5c 2a [0-16] 62 61 6e 6b 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule PWS_Win32_Savnut_C_2147647325_0
         $x_2_6 = {c7 44 38 fc 2e 74 78 74 53 53 ff 75 cc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -113,6 +116,7 @@ rule PWS_Win32_Savnut_D_2147648643_0
         $x_2_14 = "ActivateProxy" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 5 of ($x_2_*))) or
             ((3 of ($x_10_*) and 1 of ($x_5_*) and 3 of ($x_2_*))) or
@@ -147,6 +151,7 @@ rule PWS_Win32_Savnut_E_2147649401_0
         $x_8_10 = {ff 45 f8 89 5d b8 8d 0d ?? ?? ?? 00 8b 7d dc 66 c7 07 5c 2a 66 af 8a 01 aa 41 84 c0 75 f8}  //weight: 8, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 1 of ($x_1_*))) or
             ((6 of ($x_2_*))) or
@@ -177,6 +182,7 @@ rule PWS_Win32_Savnut_F_2147650512_0
         $x_1_5 = "%s\\%s_%08d.mpst" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -213,6 +219,7 @@ rule PWS_Win32_Savnut_G_2147652079_0
         $x_2_13 = {c7 07 55 53 46 3d af 33 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 7 of ($x_1_*))) or
             ((2 of ($x_3_*) and 6 of ($x_1_*))) or

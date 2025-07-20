@@ -18,6 +18,7 @@ rule Backdoor_MSIL_Quasarat_A_2147725184_0
         $x_1_3 = {00 64 65 73 63 72 65 76 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

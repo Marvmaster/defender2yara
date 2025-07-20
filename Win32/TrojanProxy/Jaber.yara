@@ -29,6 +29,7 @@ rule TrojanProxy_Win32_Jaber_A_2147583848_0
         $x_1_15 = "the end of the empire" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -55,6 +56,7 @@ rule TrojanProxy_Win32_Jaber_B_2147583855_0
         $x_10_4 = "zupacha" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

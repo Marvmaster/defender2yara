@@ -24,6 +24,7 @@ rule Backdoor_Win32_Xema_A_2147576653_0
         $x_100_9 = "winservu" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 1 of ($x_1_*))) or
             ((5 of ($x_100_*))) or

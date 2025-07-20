@@ -18,6 +18,7 @@ rule Trojan_Win32_LockScreen_C_2147716456_0
         $x_1_3 = {34 0e 66 0f b6 c0 41 66 89 02 8a 01 83 c2 02 3c 0e 75 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_LockScreen_YAAA_2147922145_0
         $x_3_7 = "Malware Running.." ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

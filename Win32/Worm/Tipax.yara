@@ -17,6 +17,7 @@ rule Worm_Win32_Tipax_A_2147617878_0
         $x_1_3 = "1117958A2F81E8E04C20768E44F8A028DD9551D02F22C1D7289C" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

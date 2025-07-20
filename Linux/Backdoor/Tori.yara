@@ -17,6 +17,7 @@ rule Backdoor_Linux_Tori_A_2147828131_0
         $x_1_2 = {b8 ff 72 61 00 55 48 2d f8 72 61 00 48 83 f8 0e 48 89 e5 76 1b b8 00 00 00 00 48 85 c0 74 11 5d bf f8 72 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_Linux_Tori_B_2147828132_0
         $x_1_2 = {30 9a e5 07 01 84 e7 01 70 87 e2 07 00 53 e1 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

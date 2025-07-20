@@ -16,6 +16,7 @@ rule Trojan_Win32_Sabsik_RW_2147784698_0
         $x_1_1 = {69 f1 8b 64 45 2d 01 f2 89 44 24 ?? 89 54 24 ?? 8b 44 24 ?? 35 e4 ae 96 27}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Sabsik_RW_2147784698_1
         $x_1_1 = {b8 89 88 88 88 f7 e1 8b c6 c1 ea 03 8b ca c1 e1 04 2b ca 2b c1 0f b6 80 ?? ?? ?? ?? 30 86 ?? ?? ?? ?? 83 c6 02 81 fe 7e 07 00 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Sabsik_RW_2147784698_2
         $x_1_6 = "tHqGwsKeBbME17IW7emfIbDnHhlt0UcXC24" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_Win32_Sabsik_DA_2147787434_0
         $x_1_10 = "GetCPInfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 8 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -118,6 +122,7 @@ rule Trojan_Win32_Sabsik_RM_2147789424_0
         $x_1_1 = {b8 39 8e e3 38 f7 e1 8b c6 c1 ea 02 8d 0c d2 03 c9 2b c1 0f b6 80 ?? ?? ?? ?? 30 86 ?? ?? ?? ?? 83 c6 02 81 fe 7e 07 00 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule Trojan_Win32_Sabsik_RM_2147789424_1
         $x_1_5 = "Dmetrics7majorn1lb654321" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_Win32_Sabsik_RWA_2147789425_0
         $x_1_1 = {83 c0 01 89 45 ?? 8b 4d ?? 3b 4d ?? 7d ?? 8b 55 ?? 03 55 ?? 0f b6 0a 83 c1 47 8b 45 ?? 99 f7 7d ?? 8b 45 ?? 0f be 14 10 33 ca 8b 45 ?? 03 45 ?? 88 08 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule Trojan_Win32_Sabsik_RT_2147793788_0
         $x_1_1 = {83 c1 72 8b ?? ?? 99 f7 7d ?? 8b 45 ?? 0f be 14 10 33 ca 8b 45 ?? 03 45 ?? 88 08 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +214,7 @@ rule Trojan_Win32_Sabsik_PJRT_2147797922_0
         $x_1_1 = {59 a6 d5 53 51 61 90 b3 bb 66 57 f6 b0 61 90 b3 50 ea d5 5f 91 81 94 38 1d 89 1d f7 55 c1 1b e6 b4 ec 94 7b db}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +236,7 @@ rule Trojan_Win32_Sabsik_PJ_2147797977_0
         $x_1_1 = {2b ed 02 05 66 19 70 1b a8 80 f6 3f a8 a8 f6 3f a0 a8 fe b5 7e 19 8f 22 3b 57 0e 9e 6b ed 89}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -256,6 +266,7 @@ rule Trojan_Win32_Sabsik_PJRT_2147797978_0
         $x_1_9 = "UploadValues" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -277,6 +288,7 @@ rule Trojan_Win32_Sabsik_POIU_2147797979_0
         $x_1_1 = {36 13 e6 95 35 a1 08 aa 55 ba b2 5c 62 da b1 9e 9d da b1 d6 9d dd c1 e5 0e 12 de 95 25 89 09 82 55 aa aa 5d 7a da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +310,7 @@ rule Trojan_Win32_Sabsik_VBNV_2147797980_0
         $x_1_1 = {01 c6 48 c0 04 00 00 00 81 ef b3 7a 65 f8 39 f0 75 e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -320,6 +333,7 @@ rule Trojan_Win32_Sabsik_2147797982_0
         $x_1_1 = {83 c3 00 83 c3 00 83 c4 0a 83 ec 0a 83 c3 00 83 c3 00 8a 08 02 ca 32 ca 02 ca 32 ca 88 08 40 4e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -341,6 +355,7 @@ rule Trojan_Win32_Sabsik_MNB_2147797985_0
         $x_1_1 = {0f b6 00 66 85 e1 83 e0 0f 33 c2 f7 c1 c2 4b 87 0b 81 ff 54 6c 2e 2a 81 e6 ff 00 00 00 f8 66 85 ea 33 c6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +378,7 @@ rule Trojan_Win32_Sabsik_REA_2147797986_0
         $x_1_2 = {88 04 29 0f be b5 c0 da 18 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -384,6 +400,7 @@ rule Trojan_Win32_Sabsik_RE_2147797987_0
         $x_1_1 = {ed 6b b1 55 b0 61 84 f5 36 14 18 29 7a d1 11 0d 98 88 6a ab bd c9 62 5c a0 eb e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -405,6 +422,7 @@ rule Trojan_Win32_Sabsik_RE_2147797987_1
         $x_1_1 = {8b 16 8b c2 8b cb d3 e8 8b 4d 08 d3 e2 4f 8d 76 04 0b 55 fc 89 00 fc 89 56 fc 85 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -426,6 +444,7 @@ rule Trojan_Win32_Sabsik_MO_2147798657_0
         $x_1_1 = {89 10 8b 4d 98 33 4d ac 8b 55 c0 89 0a 68 b5 00 00 00 8d 45 dc 50 8d 8d ac fd ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -449,6 +468,7 @@ rule Trojan_Win32_Sabsik_RF_2147799504_0
         $x_1_3 = "UnhookWindowsHookEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -478,6 +498,7 @@ rule Trojan_Win32_Sabsik_RF_2147799504_1
         $x_1_9 = "connection_refused" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -507,6 +528,7 @@ rule Trojan_Win32_Sabsik_ABK_2147805647_0
         $x_10_6 = ".\\mailslot\\system_alloc_mem3" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -528,6 +550,7 @@ rule Trojan_Win32_Sabsik_DAB_2147806245_0
         $x_1_1 = {31 08 81 e1 ff ff 00 00 c1 e1 02 01 ca 8b 3a 89 eb 81 c3 9b 00 00 00 8b 1b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -549,6 +572,7 @@ rule Trojan_Win32_Sabsik_FG_2147806248_0
         $x_1_1 = {c1 f9 03 0f b6 15 ?? ?? ?? ?? c1 e2 05 0b ca 88 0d ?? ?? ?? ?? 0f b6 05 ?? ?? ?? ?? f7 d8 a2 ?? ?? ?? ?? 0f b6 0d ?? ?? ?? ?? 2b 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -570,6 +594,7 @@ rule Trojan_Win32_Sabsik_PJT_2147806250_0
         $x_1_1 = {8b 48 f8 8b 38 8b 50 fc 03 4d fc 03 7d 08 8b da 4a 85 db 74 0a 42 8a 1f 88 19 41 47 4a 75 f7 83 c0 28 ff 4d 0c 75 d9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -591,6 +616,7 @@ rule Trojan_Win32_Sabsik_PJU_2147806251_0
         $x_1_1 = {83 7c 24 1c 00 74 17 8b d7 2b d3 3b c2 73 0f 83 f8 3c 72 05 83 f8 3e 76 05 c6 01 00 eb 04 8a 16 88 11 41 46 40 ff 4c 24 5c 75 d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -616,6 +642,7 @@ rule Trojan_Win32_Sabsik_RTH_2147807528_0
         $x_1_5 = "GetSystemInfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

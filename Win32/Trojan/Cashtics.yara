@@ -21,6 +21,7 @@ rule Trojan_Win32_Cashtics_A_2147655421_0
         $x_20_7 = "Facebook.Inet" wide //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_50_*) and 1 of ($x_20_*))) or
             ((1 of ($x_100_*) and 3 of ($x_50_*))) or

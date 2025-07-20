@@ -19,6 +19,7 @@ rule Trojan_Win32_Nish_A_2147643185_0
         $x_1_5 = {8d 85 7b ff ff ff 50 6a 00 e8 ?? ?? fa ff 8d 45 fc 8d 95 7b ff ff ff b9 81 00 00 00 e8 ?? ?? fa ff 8d 95 74 ff ff ff 8b 45 fc e8 ?? ?? fa ff 8b 85 74 ff ff ff ba ?? ?? 45 00 e8 ?? ?? fa ff 84 c0 74 0b a1 ?? ?? 45 00 c7 00 01 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Nish_B_2147648070_0
         $x_2_4 = {8b 45 08 66 c7 00 ff ff 8b c3 8b 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 45 0c 50 8b 45 10 50 8b 45 14 50 57 53 8d 45 f8 8b d6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

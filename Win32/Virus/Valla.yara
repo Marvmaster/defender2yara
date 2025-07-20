@@ -20,6 +20,7 @@ rule Virus_Win32_Valla_A_2147707180_0
         $x_1_5 = "-= XOR 2009 Valhalla =-" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

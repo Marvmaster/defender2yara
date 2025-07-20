@@ -29,6 +29,7 @@ rule Trojan_Win32_Aenjaris_ROC_2147744628_0
         $x_1_14 = "unkilable" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

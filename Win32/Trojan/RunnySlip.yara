@@ -16,6 +16,7 @@ rule Trojan_Win32_RunnySlip_A_2147764245_0
         $x_3_1 = "windows-manifest-filename liQuid.exe.manifest" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_RunnySlip_B_2147764246_0
         $x_3_1 = "base64-5-step-tcp-shell-decode-execute-client" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

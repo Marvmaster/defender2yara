@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Blocker_AAT_2147927331_0
         $x_1_3 = "ConsoleApp48.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

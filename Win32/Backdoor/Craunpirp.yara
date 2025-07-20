@@ -19,6 +19,7 @@ rule Backdoor_Win32_Craunpirp_A_2147696170_0
         $x_3_5 = {00 52 54 7c 00 46 54 7c 00 56 49 7c 00 56 56 7c 00 49 50 7c 00 43 50 7c 00 52 50 7c 00 52 41 7c 00 55 4e 7c 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

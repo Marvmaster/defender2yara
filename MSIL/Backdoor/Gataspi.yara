@@ -30,6 +30,7 @@ rule Backdoor_MSIL_Gataspi_A_2147717155_0
         $x_1_16 = "Pic|*.png" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or

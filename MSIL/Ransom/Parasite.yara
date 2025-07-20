@@ -21,6 +21,7 @@ rule Ransom_MSIL_Parasite_MK_2147773005_0
         $x_1_6 = "YOUR PERSONNAL SESSION ID:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Ransom_MSIL_Parasite_MK_2147773005_1
         $x_1_7 = "@READ_ME_FILE_ENCRYPTED@.html" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

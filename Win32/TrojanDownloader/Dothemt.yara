@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Dothemt_A_2147714855_0
         $x_1_6 = {c7 45 e4 6d 61 74 69 c7 45 e8 6f 6e 50 72 c7 45 ec 6f 63 65 73 66 c7 45 f0 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_AceLog_A_2147767193_0
         $n_10_9 = {52 00 55 00 4e 00 44 00 4c 00 ?? 00 33 00 32 00 2e 00 45 00 58 00 45 00 20 00 22 00 25 00 73 00 22 00 2c 00 20 00 23 00 31 00 00 00 63 6d 64 20 2f ?? 20 44 45 4c 20 00 20 22 00 00}  //weight: -10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_1_*))) or
@@ -54,6 +55,7 @@ rule TrojanDownloader_Win32_AceLog_B_2147780964_0
         $x_1_5 = {03 d0 89 95 ?? ?? ff ff 0f 84 ?? ?? 00 00 8b ff 8b b5 ?? ?? ff ff 85 f6 74 09 8d 42 ff 8b fe 3b c8 74 05 bf 00 00 20 00 57 6a 08 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

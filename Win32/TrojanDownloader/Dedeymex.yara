@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Dedeymex_A_2147648145_0
         $x_1_4 = {53 4f 46 54 57 41 52 45 5c 6f 6b 71 71 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

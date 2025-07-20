@@ -18,6 +18,7 @@ rule PWS_MSIL_Grivlog_A_2147647741_0
         $x_1_4 = "KillProcesses" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

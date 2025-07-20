@@ -18,6 +18,7 @@ rule Trojan_Win32_Covitse_M_2147751691_0
         $x_2_3 = "DoWnLoAdStRiNg('http://81.103.35.44/payload.ps1')" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Covitse_AA_2147752155_0
         $x_1_1 = "source\\repos\\Coronavirus1\\Coronavirus1\\obj\\Debug\\Coronavirus1.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

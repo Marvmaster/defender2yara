@@ -17,6 +17,7 @@ rule Trojan_Win32_Plexardu_A_2147661041_0
         $x_1_3 = {80 fa 7b 75 2b 8a 45 1b 3c 7d 75 0c 8a 4d 1c 80 f9 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win64_SystemBC_RPZ_2147839246_0
         $x_1_3 = "_loader.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_SystemBC_YAG_2147911541_0
         $x_1_2 = {c7 45 18 63 6c 6f 73 c7 45 1c 65 73 6f 63 c7 45 20 6b 65 74 00 c7 45 b8 73 68 75 74 c7 45 bc 64 6f 77 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win64_SystemBC_E_2147913408_0
         $x_1_1 = {48 8b 44 24 78 48 8b 90 30 01 00 00 48 8b 44 24 78 48 8b ?? 20 01 00 00 48 8b 44 24 78}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win64_SystemBC_MKV_2147913413_0
         $x_1_2 = {4c 8b c6 4c 2b c0 48 8d 4d ?? 48 03 ca 48 ff c2 41 8a 04 08 34 36 88 01 48 3b d3 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_Win64_SystemBC_F_2147920294_0
         $x_1_2 = {48 83 ec 20 48 c7 c1 02 00 00 00 48 8d 57 52 4c 8b c7 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +129,7 @@ rule Trojan_Win64_SystemBC_SD_2147940856_0
         $x_1_1 = {48 63 c9 48 c1 e1 02 48 01 ca 33 45 30 89 02 83 45 e4 01 8b 45 e4 48 63 d0 48 8b 45 d8 48 c1 e8 02 48 39 c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

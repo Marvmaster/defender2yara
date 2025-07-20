@@ -24,6 +24,7 @@ rule Trojan_Win64_StealerBot_A_2147944218_0
         $x_1_10 = {b9 50 00 00 00 [0-6] 48 8b 05 ?? ?? ?? ?? 80 78 04 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

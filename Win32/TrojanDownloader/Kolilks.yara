@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Kolilks_A_2147616969_0
         $x_10_4 = {6a 7c 8d 4d 08 e8 ?? ?? ?? ?? 83 c3 04 81 fb ?? ?? ?? ?? 8b ?? 7c b7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Kolilks_B_2147626749_0
         $x_1_3 = {68 bb 01 00 00 50 8d 4d ?? e8 ?? ?? ?? ?? 8b d8 f7 db 1a db 8d 4d fc fe c3 e8 ?? ?? ?? ?? 84 db 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanDownloader_Win32_Kolilks_D_2147631481_0
         $x_1_2 = {6a 05 ff 75 f8 ff 15 ?? ?? ?? ?? 3d 5e 04 00 00 90 ff 15 ?? ?? ?? ?? 6a 04 6a 00 ff 75 f8 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule TrojanDownloader_Win32_Kolilks_E_2147692729_0
         $x_1_6 = "/122.224.9.151/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or

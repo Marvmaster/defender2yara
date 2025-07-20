@@ -28,6 +28,7 @@ rule TrojanSpy_Win32_Fosin_A_2147665883_0
         $x_1_14 = "deepscan\\cloudcom2.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

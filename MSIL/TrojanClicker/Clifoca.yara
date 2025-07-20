@@ -19,6 +19,7 @@ rule TrojanClicker_MSIL_Clifoca_2147687751_0
         $x_1_5 = "c:\\Users\\AlvarSoft\\Documents\\Visual Studio 2013\\Projects\\FolderCash\\FolderCash\\obj\\Release\\FolderCash.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

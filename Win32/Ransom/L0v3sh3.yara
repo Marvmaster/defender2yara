@@ -20,6 +20,7 @@ rule Ransom_Win32_L0v3sh3_AA_2147844875_0
         $x_1_5 = "encryptedFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

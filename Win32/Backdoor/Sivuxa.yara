@@ -19,6 +19,7 @@ rule Backdoor_Win32_Sivuxa_B_2147602910_0
         $x_1_5 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Padvaw_D_2147640015_0
         $x_2_3 = {73 65 74 75 70 61 70 69 2e 64 6c 6c 00 43 72 65 61 74 65 50 72 6f 63 65 73 73 4e 6f 74 69 66 79}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))

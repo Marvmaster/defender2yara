@@ -20,6 +20,7 @@ rule Trojan_MacOS_ColdRoot_B_2147745679_0
         $x_1_5 = {c6 40 38 01 8d 83 2f d1 1b 00 e8 ?? ?? ?? ?? eb 15 8b 83 83 22 1e 00 c6 40 38 00 8d 83 5b d1 1b 00 e8 ?? ?? ?? ?? 8d 83 83 d1 1b 00 e8 ?? ?? ?? ?? 8b 83 83 22 1e 00 83 78 48 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (3 of ($x*))
 }
 

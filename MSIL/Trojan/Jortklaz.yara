@@ -17,6 +17,7 @@ rule Trojan_MSIL_Jortklaz_A_2147730699_0
         $x_10_3 = "Wrote to RuntimeBroker.exe memory" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_10_*))) or
             (all of ($x*))

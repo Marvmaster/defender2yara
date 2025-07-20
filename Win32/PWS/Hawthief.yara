@@ -30,6 +30,7 @@ rule PWS_Win32_Hawthief_A_2147601466_0
         $x_1_16 = {70 61 73 73 77 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (11 of ($x*))
 }
 

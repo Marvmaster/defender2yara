@@ -15,6 +15,7 @@ rule Trojan_MacOS_Gebozamba_A_2147774922_0
         $x_10_1 = {89 c2 c1 fa 1f c1 ea 1c 01 c2 83 e2 f0 89 c6 29 d6 8a 14 0e 30 94 05 ?? ?? ?? ?? 48 ff c0 48 83 f8 0c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

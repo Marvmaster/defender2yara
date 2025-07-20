@@ -22,6 +22,7 @@ rule Ransom_MSIL_ShinoLock_A_2147716967_0
         $x_1_8 = {53 68 69 6e 6f 4c 6f 63 6b 65 72 4d 61 69 6e 2e 4d 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule VirTool_Win64_Antinza_G_2147851409_0
         $x_1_6 = "Athena.Utilities" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule VirTool_Win64_Antinza_I_2147903670_0
         $x_1_5 = "Agent.Models" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

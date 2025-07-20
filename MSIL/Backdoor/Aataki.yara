@@ -21,6 +21,7 @@ rule Backdoor_MSIL_Aataki_A_2147695310_0
         $x_1_7 = "_floodingJob" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

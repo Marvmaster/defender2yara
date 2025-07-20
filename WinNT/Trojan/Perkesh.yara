@@ -19,6 +19,7 @@ rule Trojan_WinNT_Perkesh_A_2147616754_0
         $x_1_4 = "ZwOpenProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_WinNT_Perkesh_B_2147616755_0
         $x_1_4 = "KdDisableDebugger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

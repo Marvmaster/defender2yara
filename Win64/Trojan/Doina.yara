@@ -17,6 +17,7 @@ rule Trojan_Win64_Doina_ND_2147900480_0
         $x_1_2 = "DeleteFileW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Trojan_Win64_Doina_CCHI_2147902002_0
         $x_1_13 = "/sendDocument" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule Trojan_Win64_Doina_CH_2147903155_0
         $x_1_8 = "Thats why we have compromised your device and" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -104,6 +107,7 @@ rule Trojan_Win64_Doina_A_2147918464_0
         $x_1_2 = {40 9c 55 00 e5 9d c0 02 9e 80 76 9f 80 72 a0 05 60 02 a1 00 6f a2 6f c6 40 a3 00 67 c6 40 a4 49 c6 40 a5 00 6e c6 40 a6 64 c6 40 a7 15 e0 03 a8 60 07 a9 e0 05 aa 63 c6 04 40 ab 60 07 ac 50 c6 40 ad 15 60 06 ae e0 02 af e0 00 b0 6d c6 00 40 b1 57 44 88 60 b2 c6 00 40 88 75 c6 40 89 73 c6 54 40 8a e0 05 8b e0 03 8c 80 79 8d 00 32 c6 40 8e 2e c6 40 8f 25 e0 09 90 e0 0c 91 6c 60 05 92 ff 88 15 11 41 61 65 54 24 40 a2 5f 0a 1b a0 01 41 c0 62 64 44 89 a4 04 24 b8 e0 17 48}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +129,7 @@ rule Trojan_Win64_Doina_ALP_2147921729_0
         $x_5_1 = {41 03 c2 33 c8 8d 04 32 33 c8 44 2b e9 41 8b cd 41 8b c5 c1 e9 05 c1 e0 04 41 03 c9 41 03 c7 33 c8 42 8d 04 2a 81 c2 47 86 c8 61 33 c8 2b f1 41 ff c8 75 bf}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule Trojan_Win64_Doina_SPDG_2147935586_0
         $x_2_6 = "SpyNet" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

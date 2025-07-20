@@ -21,6 +21,7 @@ rule Trojan_Win64_Envdropper_DA_2147924487_0
         $x_1_6 = "No virtualization or observation detected. Safe to continue." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Duetag_A_2147694149_0
         $x_1_5 = "\\MFrameWorks.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

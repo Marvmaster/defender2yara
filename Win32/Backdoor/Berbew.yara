@@ -20,6 +20,7 @@ rule Backdoor_Win32_Berbew_B_2147594707_0
         $x_2_5 = {73 74 61 72 74 0d 0a 69 66 20 6e 6f 74 20 65 78 69 73 74 20 22 22 25 2a 22 22 20 67 6f 74 6f 20}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Win32_Berbew_M_2147813015_0
         $x_10_2 = {b8 46 3c 00 00 f7 e3 89 85 d8 fe ff ff 89 c3 f7 e3 89 85 d4 fe ff ff 89 c3 81 c3 41 7d 00 00 68 04 01}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Backdoor_Win32_Berbew_GZ_2147814054_0
         $x_1_2 = "OpenMutex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Backdoor_Win32_Berbew_GGT_2147896100_0
         $x_1_4 = "WinExec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

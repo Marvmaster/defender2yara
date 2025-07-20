@@ -18,6 +18,7 @@ rule HackTool_Win32_ZorHeard_A_2147894764_0
         $x_100_3 = "set recsound bitspersample 8 channels 1 samplespersec 11025" wide //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

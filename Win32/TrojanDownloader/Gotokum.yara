@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Gotokum_A_2147626486_0
         $x_1_4 = {56 8b 74 24 08 68 ?? ?? 40 00 56 e8 d1 8d 00 00 68 ?? ?? 40 00 56 e8 d6 8d 00 00 68 ?? ?? 40 00 56 e8 cb 8d 00 00 68 ?? ?? 40 00 56 e8 c0 8d 00 00 68 ?? ?? 40 00 56 e8 b5 8d 00 00 68 ?? ?? 40 00 56 e8 aa 8d 00 00 83 c4 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

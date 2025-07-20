@@ -19,6 +19,7 @@ rule VirTool_Win32_Samdumpz_A_2147846208_0
         $x_1_4 = {50 6a 12 ff 74 24 2c ff 54 ?? ?? 85 c0 0f 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule VirTool_Win32_Samdumpz_B_2147846209_0
         $x_1_4 = {50 6a 00 68 00 00 10 00 ff ?? 8b f0 89 74 24 5c 85 f6 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

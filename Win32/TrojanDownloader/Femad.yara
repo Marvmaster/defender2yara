@@ -33,6 +33,7 @@ rule TrojanDownloader_Win32_Femad_2147572876_0
         $x_3_19 = {1b 8a 19 88 18 88 11 8a ca 02 08 0f b6 c1 8a 84 05}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or

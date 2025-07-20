@@ -19,6 +19,7 @@ rule Ransom_Win32_Blackout_PA_2147752356_0
         $x_1_4 = "LmFjY2Ry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win32_Blackout_PB_2147752360_0
         $x_1_5 = ".accde" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

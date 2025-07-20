@@ -32,6 +32,7 @@ rule Worm_Win32_Pushbot_113259_0
         $x_1_18 = "aryan.opendns.be" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 10 of ($x_1_*))) or
             ((4 of ($x_5_*) and 5 of ($x_1_*))) or
@@ -68,6 +69,7 @@ rule Worm_Win32_Pushbot_B_115943_0
         $x_15_12 = {6a 00 6a 04 8d 45 ?? 50 6a 07 ff 75 08 ff 55 ?? 85 c0 75 0a 83 7d ?? 00 74 04 b0 01 eb 02}  //weight: 15, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 5 of ($x_1_*))) or
             ((1 of ($x_20_*))) or
@@ -142,6 +144,7 @@ rule Worm_Win32_Pushbot_C_116276_0
         $x_3_50 = {3b d0 75 4f 8b 8d 00 fb ff ff 83 c1 01 89 8d 00 fb ff ff 8b 55 18 52 83 ec 34 b9 0d 00 00 00 8d b5 c4 fa ff ff}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 36 of ($x_1_*))) or
             ((2 of ($x_3_*) and 37 of ($x_1_*))) or
@@ -217,6 +220,7 @@ rule Worm_Win32_Pushbot_E_123885_0
         $x_10_7 = {00 01 7e 1e ff 35 ?? ?? ?? 00 68 ?? ?? ?? 00 68 ?? ?? ?? 00 ff b5 ?? ?? ff ff e8 05 00 83 3d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))
@@ -241,6 +245,7 @@ rule Worm_Win32_Pushbot_SW_152705_0
         $x_1_2 = "net stop MsMpSvc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -263,6 +268,7 @@ rule Worm_Win32_Pushbot_UI_158110_0
         $x_1_3 = {fc 06 00 00 c7 45 fc ?? 00 00 00 c7 85 ?? ?? ff ff ?? ?? 40 00 c7 85 ?? fe ff ff 08 00 00 00 8d ?? ?? ?? 8d ?? ?? fe ff ff ?? 8d ?? ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -290,6 +296,7 @@ rule Worm_Win32_Pushbot_UJ_158192_0
         $x_1_8 = "\\RECYCLER" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -311,6 +318,7 @@ rule Worm_Win32_Pushbot_VJ_170884_0
         $x_1_2 = {6a 00 6a 03 6a 2d 6a 11 ff 15 ?? ?? ?? ?? 6a 00 6a 00 6a 00 6a 0d ff 15 00 8b 85 ?? ?? ff ff 8b 08 8b 95 02 ff ff 52 ff 51 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -342,6 +350,7 @@ rule Worm_Win32_Pushbot_VR_174208_0
         $x_20_12 = {68 d1 b1 a0 f8 e8 ?? ff ff ff 59 85 c0 77 21 68 80 e1 c7 a6}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_200_*) and 5 of ($x_20_*) and 3 of ($x_10_*))) or
             ((1 of ($x_200_*) and 1 of ($x_30_*) and 4 of ($x_20_*) and 2 of ($x_10_*))) or
@@ -382,6 +391,7 @@ rule Worm_Win32_Pushbot_VV_180122_0
         $x_1_6 = {53 75 70 65 72 53 79 6e 00 00 00 00 41 74 74 61 63 6b 20 4f 6e 20 25 73 3a 25 69 20 43 6f 6d 70 6c 65 74 65 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

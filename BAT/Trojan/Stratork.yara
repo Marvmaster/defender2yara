@@ -18,6 +18,7 @@ rule Trojan_BAT_Stratork_B_2147651246_0
         $x_1_4 = "copy \"%temp%\\leiame.txt\" \"%appdata%\\%COMPUTERNAME%.pac" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

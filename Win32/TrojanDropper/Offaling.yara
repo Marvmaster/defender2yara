@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Offaling_A_2147744091_0
         $x_1_3 = {6d 73 63 6f 72 65 65 2e 64 6c 6c 00 43 6f 72 42 69 6e 64 54 6f 52 75 6e 74 69 6d 65 45 78}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

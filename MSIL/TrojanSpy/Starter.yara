@@ -18,6 +18,7 @@ rule TrojanSpy_MSIL_Starter_ARA_2147910322_0
         $x_2_3 = "Invoke-Expression (Invoke-WebRequest" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

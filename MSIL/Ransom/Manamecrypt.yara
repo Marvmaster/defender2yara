@@ -19,6 +19,7 @@ rule Ransom_MSIL_Manamecrypt_A_2147709116_0
         $x_1_5 = ".locked" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_MSIL_Manamecrypt_A_2147709116_1
         $x_1_5 = "select * from Win32_BaseBoard" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

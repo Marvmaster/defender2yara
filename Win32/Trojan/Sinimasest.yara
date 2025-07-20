@@ -26,6 +26,7 @@ rule Trojan_Win32_Sinimasest_A_2147708075_0
         $x_1_11 = "In WriteFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_1_*))) or
             ((1 of ($x_2_*) and 7 of ($x_1_*))) or

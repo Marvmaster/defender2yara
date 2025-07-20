@@ -20,6 +20,7 @@ rule Backdoor_Win32_Mulcss_A_2147642526_0
         $x_1_6 = "SOFTWARE\\ODBC\\SQLLevel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -28,6 +28,7 @@ rule Ransom_Win32_Cryproto_A_2147708298_0
         $x_1_14 = {66 c7 44 24 18 35 00 66 c7 44 24 16 63 00 66 c7 44 24 14 6c 00 66 c7 44 24 12 61 00 66 c7 44 24 10 43 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -55,6 +56,7 @@ rule Ransom_Win32_Cryproto_B_2147717029_0
         $x_10_4 = {68 c8 af 00 00 ff 15 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 6b c9 64 b8 73 b2 e7 45}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*))) or
             (all of ($x*))

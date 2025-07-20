@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Derusbi_I_2147691846_0
         $x_1_3 = "GET /Photos/Query.cgi?loginid=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule TrojanSpy_Win32_Derusbi_A_2147691850_0
         $x_1_8 = "POST /photos/photo.asp HTTP/1.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -76,6 +78,7 @@ rule TrojanSpy_Win32_Derusbi_B_2147691851_0
         $x_1_6 = {25 77 69 6e 64 69 72 25 5c 74 65 6d 70 5c 63 6f 6e 69 6d 65 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -105,6 +108,7 @@ rule TrojanSpy_Win32_Derusbi_D_2147691852_0
         $x_1_5 = "rundll32.exe \"%s\", R32 %s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +134,7 @@ rule TrojanSpy_Win32_Derusbi_E_2147691853_0
         $x_1_5 = "AE2A3887-A30A-4B39-A5E6-AC891A07AFF" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +159,7 @@ rule TrojanSpy_Win32_Derusbi_G_2147691854_0
         $x_1_4 = "E190BC79-02DC-0166-4CF1-BD8F8CB2FF21" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +184,7 @@ rule TrojanSpy_Win32_Derusbi_H_2147691855_0
         $x_1_4 = ".blankchair.com:443" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

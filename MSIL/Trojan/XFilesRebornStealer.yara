@@ -17,6 +17,7 @@ rule Trojan_MSIL_XFilesRebornStealer_AXR_2147942227_0
         $x_3_2 = "xfilesreborn.ru" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

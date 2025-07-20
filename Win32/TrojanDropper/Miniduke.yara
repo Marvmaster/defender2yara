@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Miniduke_A_2147679575_0
         $x_1_1 = "TASKKILL /F /IM acro*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDropper_Win32_Miniduke_DK_2147831853_0
         $x_2_3 = "winarc.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

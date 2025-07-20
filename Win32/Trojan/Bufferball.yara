@@ -47,6 +47,7 @@ rule Trojan_Win32_Bufferball_B_2147742814_0
         $x_1_32 = {42 61 73 65 47 75 61 72 64 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

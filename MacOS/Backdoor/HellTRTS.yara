@@ -18,6 +18,7 @@ rule Backdoor_MacOS_HellTRTS_B_2147748626_0
         $x_1_3 = "OpenResourceMovie%o<Movie>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_MacOS_HellTRTS_C_2147748715_0
         $x_1_3 = "SMTP Grabber 2.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

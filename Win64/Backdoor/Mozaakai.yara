@@ -27,6 +27,7 @@ rule Backdoor_Win64_Mozaakai_A_2147754311_0
         $x_1_13 = {83 79 3c 00 75 e3 3c 49 0f 84 b0 00 00 00 3c 4c 0f 84 9f 00 00 00 3c 54 0f 84 8e 00 00 00 3c 68 74 6c 3c 6a 74 5c 3c 6c 74 34 3c 74 74 24 3c 77 74 14 3c 7a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Backdoor_Win64_Mozaakai_B_2147754313_0
         $x_1_4 = "forgame.bazar" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +107,7 @@ rule Backdoor_Win64_Mozaakai_MK_2147773199_0
         $x_1_1 = {0f b6 02 48 8d 52 ff 42 88 44 31 0c 48 ff c1 48 3b cb 7c ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +129,7 @@ rule Backdoor_Win64_Mozaakai_MK_2147773199_1
         $x_1_1 = {0f b6 0a 48 8d 52 ff 42 88 4c 30 0c 48 ff c0 48 3b c7 7c ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +152,7 @@ rule Backdoor_Win64_Mozaakai_MK_2147773199_2
         $x_1_2 = {8b 4c 84 48 89 ca f7 d2 81 e2 [0-4] 81 e1 [0-4] 09 d1 81 f1 [0-4] 89 [0-3] 48 85 c0 b8 [0-2] 00 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +175,7 @@ rule Backdoor_Win64_Mozaakai_MK_2147773199_3
         $x_1_2 = {8b 05 e6 d7 [0-2] 8b 0d f0 d7 00 33 c8 48 8b 05 3b d8 00 89 08 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +197,7 @@ rule Backdoor_Win64_Mozaakai_MAK_2147773857_0
         $x_1_1 = {41 0f b6 c6 b9 [0-4] 2b c8 b8 [0-4] 8d 3c [0-1] c1 e7 [0-1] f7 ef 03 d7 c1 fa [0-1] 8b c2 c1 e8 [0-1] 03 d0 6b c2 [0-1] 2b f8 b8 01 83 c7 06 f7 ef 03 d7 c1 fa [0-1] 8b c2 c1 e8 05 03 d0 6b c2 06 2b f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -215,6 +222,7 @@ rule Backdoor_Win64_Mozaakai_MBK_2147773929_0
         $x_1_4 = {89 fd f7 d5 81 e5 [0-4] 89 fe 21 c6 09 ee 31 c6 81 e7 [0-4] 09 f7 89 [0-6] 48 ff c1 48 83 f9 [0-1] 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -236,6 +244,7 @@ rule Backdoor_Win64_Mozaakai_ZY_2147778714_0
         $x_1_1 = {41 8a 00 48 83 c2 01 49 83 e8 01 48 3b d7 88 44 32 [0-1] 7c ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -257,6 +266,7 @@ rule Backdoor_Win64_Mozaakai_ZX_2147779742_0
         $x_1_1 = {41 8a 00 48 ff c2 49 ff c8 48 3b d7 88 44 32 [0-1] 7c ee}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -283,6 +293,7 @@ rule Backdoor_Win64_Mozaakai_BB_2147781649_0
         $x_1_6 = {48 c1 eb 20 01 d3 81 c3 [0-4] 89 df c1 ef [0-1] c1 fb [0-1] 01 fb 89 df c1 e7 [0-1] 29 fb 01 da 81 c2 00 88 54 0c [0-1] 48 ff c1 48 83 f9 [0-1] 75 80}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -304,6 +315,7 @@ rule Backdoor_Win64_Mozaakai_SD_2147914505_0
         $x_1_1 = {49 63 ca 48 b8 ?? ?? ?? ?? ?? ?? ?? ?? 41 ff c2 48 f7 e1 48 c1 ea ?? 48 8d 04 52 48 c1 e0 ?? 48 2b c8 49 2b cb 8a 44 0c ?? 42 32 04 0b 41 88 01 49 ff c1 45 3b d4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

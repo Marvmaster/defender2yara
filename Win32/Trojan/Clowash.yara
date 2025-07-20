@@ -19,6 +19,7 @@ rule Trojan_Win32_Clowash_AA_2147896536_0
         $x_1_4 = "Netcut Defender Anti ARP Spoof Kernal" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

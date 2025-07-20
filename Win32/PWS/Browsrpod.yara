@@ -21,6 +21,7 @@ rule PWS_Win32_Browsrpod_PAA_2147775933_0
         $x_10_6 = "Info.txt" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

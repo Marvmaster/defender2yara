@@ -20,6 +20,7 @@ rule Ransom_Win32_SanwaiCrypt_PA_2147793129_0
         $x_1_5 = "\\gerjjkrkjjk33.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Win32_SanwaiCrypt_PB_2147796154_0
         $x_3_3 = "\\gerjjkrkjjk33.pdb" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

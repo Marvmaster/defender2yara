@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Sality_AU_2147636659_0
         $x_1_4 = {51 68 00 14 01 00 68 10 40 00 10 8b 95 fc fb ff ff 52 ff 15 1c 30 00 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

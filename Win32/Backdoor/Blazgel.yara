@@ -20,6 +20,7 @@ rule Backdoor_Win32_Blazgel_A_2147607548_0
         $x_1_6 = "LoadRootKit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -52,6 +53,7 @@ rule Backdoor_Win32_Blazgel_A_2147607549_0
         $x_1_9 = "555 PASSWORD=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or

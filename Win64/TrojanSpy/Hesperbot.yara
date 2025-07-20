@@ -22,6 +22,7 @@ rule TrojanSpy_Win64_Hesperbot_A_2147683037_0
         $x_1_8 = "\\Microsoft\\Cryptography" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule TrojanSpy_Win64_Hesperbot_K_2147690324_0
         $x_1_4 = {b8 37 97 3a 66 48 83 fa ff 75 13 41 8b d1 66 44 39 09 74 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

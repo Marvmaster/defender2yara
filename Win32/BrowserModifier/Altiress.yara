@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Altiress_235002_0
         $x_1_4 = {4d 00 61 00 69 00 6e 00 00 00 53 00 74 00 61 00 72 00 74 00 20 00 50 00 61 00 67 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Backdoor_Win32_Drixed_A_2147689612_0
         $x_1_8 = {6b 65 79 6c 6f 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -72,6 +73,7 @@ rule Backdoor_Win32_Drixed_C_2147690082_0
         $x_1_27 = {80 7f 01 4f 75 ?? 80 7f 02 43 75 ?? 80 7f 03 54 75 ?? 80 7f 04 59 75 ?? 80 7f 05 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -148,6 +150,7 @@ rule Backdoor_Win32_Drixed_E_2147693155_0
         $x_1_8 = {80 79 05 61 75 25 80 79 04 74 75 1f 80 79 03 61 75 19 80 79 02 64 75 13 80 79 01 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -177,6 +180,7 @@ rule Backdoor_Win32_Drixed_F_2147694148_0
         $x_1_6 = {80 79 05 61 75 ?? 80 79 04 74 75 ?? 80 79 03 61 75 ?? 80 79 02 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -202,6 +206,7 @@ rule Backdoor_Win32_Drixed_G_2147696461_0
         $x_1_3 = {0f 5e 73 82 ea 5e 73 82 ee bf f3 80 43 3d 1c ec 19 37 6e e5 5f 3c ad f6 63 3b b4 bf 5d 6c 64 b2 3f 60 7e 88 5f de 4f f1 67 3b 01 f4 79 01 1f fb 16 3e 07 a7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -227,6 +232,7 @@ rule Backdoor_Win32_Drixed_D_2147696755_0
         $x_1_3 = {68 00 28 00 00 57 e8 ?? ?? ?? ?? 6a 36 e8 ?? ?? ?? ?? 83 c4 0c 68 86 00 00 00 89 85 ?? ?? ff ff e8 ?? ?? ?? ?? 59 6a 76 89 85 ?? ?? ff ff e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -249,6 +255,7 @@ rule Backdoor_Win32_Drixed_D_2147696755_1
         $x_1_3 = {68 00 28 00 00 57 e8 ?? ?? ?? ?? 6a 37 e8 ?? ?? ?? ?? 83 c4 0c 68 87 00 00 00 89 85 ?? ?? ff ff e8 ?? ?? ?? ?? 59 6a 77 89 85 ?? ff ff ff e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -271,6 +278,7 @@ rule Backdoor_Win32_Drixed_I_2147706797_0
         $x_1_3 = {6a 36 58 e8 ?? ?? ?? ?? 6a 00 ff 33 ff d0 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -293,6 +301,7 @@ rule Backdoor_Win32_Drixed_J_2147707069_0
         $x_1_3 = {00 00 53 6a 00 68 01 00 10 00 ff d0 8b f0 85 f6 74 04 33 ff eb bd e8 ?? ?? 00 00 b8 62 00 00 00 e8 ?? ?? 00 00 08 00 b8 62 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -317,6 +326,7 @@ rule Backdoor_Win32_Drixed_M_2147707659_0
         $x_1_5 = {8b 4c 24 04 8b 3c 24 8b 5c 24 2c 8b 74 d3 14 8b 44 d3 10 33 f1 89 74 24 14 33 c7 89 3c 24 89 44 24 10 8b c5 8b 6c 24 0c 8b 4c 24 08 8b 74 24 34 8b 7c 24 30 0f b7 5c 44 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -342,6 +352,7 @@ rule Backdoor_Win32_Drixed_P_2147717987_0
         $x_1_3 = {b9 4d ac 70 b2 ba c9 3c 60 a6 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -371,6 +382,7 @@ rule Backdoor_Win32_Drixed_Q_2147724634_0
         $x_1_10 = "dll loaded, run?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

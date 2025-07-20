@@ -21,6 +21,7 @@ rule Trojan_Win32_Boracefig_B_2147718381_0
         $x_1_6 = "//%s/%5.5d.html" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

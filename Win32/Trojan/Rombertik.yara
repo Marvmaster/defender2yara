@@ -18,6 +18,7 @@ rule Trojan_Win32_Rombertik_A_2147686579_0
         $x_1_4 = "FormGrabberKit.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Rombertik_B_2147688136_0
         $x_1_3 = "FormGrabberAlexHF.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Rombertik_C_2147688350_0
         $x_1_4 = "aWV4cGxvcmUuZXhl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -91,6 +94,7 @@ rule Trojan_Win32_Rombertik_D_2147688935_0
         $x_1_5 = "ZXhwbG9yZXIuZXhl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

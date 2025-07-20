@@ -16,6 +16,7 @@ rule Trojan_Win32_LightHand_A_2147916849_0
         $x_100_1 = {b8 0f 00 00 00 c0 ea 07 0f 1f 00 0f ?? ?? ?? ?? d0 c1 88 ?? ?? ?? 48 ff c8 48 85 c0 7f}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

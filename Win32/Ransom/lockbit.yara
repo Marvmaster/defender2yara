@@ -21,6 +21,7 @@ rule Ransom_Win32_lockbit_DB_2147771353_0
         $x_1_6 = "creased price" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Worm_Win32_Mofei_P_2147667654_0
         $x_1_8 = {24 73 5c 73 79 73 74 65 6d 33 32 5c 26 73 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Worm_Win32_Mofei_ENAW_2147941300_0
         $x_3_2 = {8a 45 f4 83 c4 0c 88 04 1e 8a 45 f5 46 88 04 1e 46}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

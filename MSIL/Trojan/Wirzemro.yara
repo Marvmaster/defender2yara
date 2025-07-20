@@ -30,6 +30,7 @@ rule Trojan_MSIL_Wirzemro_A_2147723603_0
         $x_1_16 = "127.0.0.1 beautifllink.xyz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -66,6 +67,7 @@ rule Trojan_MSIL_Wirzemro_B_2147729241_0
         $x_1_17 = "beautifllink.xyz" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

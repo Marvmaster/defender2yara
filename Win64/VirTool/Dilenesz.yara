@@ -19,6 +19,7 @@ rule VirTool_Win64_Dilenesz_A_2147890409_0
         $x_1_4 = {8b 85 94 00 00 00 49 8b d6 89 05 2b 07 02 00 48 89 1d 11 07 02 00 4c 89 64 24 20 48 8b cf ff 15 ?? ?? ?? ?? 49 8b d6 48 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule VirTool_Win64_Dilenesz_B_2147894338_0
         $x_1_3 = {41 b9 20 01 00 00 48 89 35 89 3f 00 00 4c 8d ?? ?? ?? ?? ?? 4c 89 35 8c 3f 00 00 49 8b d6 4c 89 7c 24 20 48 8b cb ff 15 ?? ?? ?? ?? 45 ?? ?? ?? 4c 89 7c 24 20 4c 8d ?? ?? ?? ?? ?? 48 8b d5 48 8b cb ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

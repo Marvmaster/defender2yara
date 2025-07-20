@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Limdup_A_2147682446_0
         $x_1_4 = {55 70 64 61 74 65 2e 65 78 65 00 [0-5] 57 00 69 00 6e 00 46 00 6f 00 72 00 6d 00 73 00 5f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

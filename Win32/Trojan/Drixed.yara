@@ -22,6 +22,7 @@ rule Trojan_Win32_Drixed_QD_2147794855_0
         $x_3_7 = "hReachappear.1529ChromiumFacebook," ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_Drixed_QS_2147794942_0
         $x_3_7 = "ImpersonateLoggedOnUser" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Trojan_Win32_Drixed_QR_2147794943_0
         $x_3_7 = "Xaddtransferred2012,securityv" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule Trojan_Win32_Drixed_QQ_2147794963_0
         $x_3_7 = "sTheVnoSExplorerE6downloadas" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +134,7 @@ rule Trojan_Win32_Drixed_QE_2147795464_0
         $x_3_7 = "WSASocketW" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule Trojan_Win32_Drixed_RPZ_2147846658_0
         $x_1_1 = {89 20 b9 02 00 00 00 e2 11 4a 4a 89 e8 50 8f 05 ?? ?? ?? ?? e9 31 fc ff ff c3 42 83 c2 07 29 c2 8d 05 ?? ?? ?? ?? 31 38 83 e8 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule Trojan_Win32_Drixed_RPZ_2147846658_1
         $x_1_1 = {80 bd ff fe ff ff 54 89 85 f4 fe ff ff 75 4a 80 bd 00 ff ff ff 45 75 41 80 bd 01 ff ff ff 53 75 38 80 bd 02 ff ff ff 54 75 2f 80 bd 03 ff ff ff 41 75 26 80 bd 04 ff ff ff 50 75 1d 80 bd 05 ff ff ff 50 75 14 b8 01 00 00 00 80 bd 0a ff ff ff 00 89 85 f0 fe ff ff 74 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -194,6 +201,7 @@ rule Trojan_Win32_Drixed_RPX_2147848433_0
         $x_1_2 = {f6 17 80 2f 7c 47 e2 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

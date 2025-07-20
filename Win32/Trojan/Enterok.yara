@@ -18,6 +18,7 @@ rule Trojan_Win32_Enterok_A_2147690427_0
         $x_1_4 = {8b 4d fc 8d 3c 08 8b 55 08 8a 0c 37 3a 0c 16 75 ?? 46 3b f3 72 ?? 3b f3 74 ?? 40 3b 45 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

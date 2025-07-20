@@ -23,6 +23,7 @@ rule Backdoor_Win32_Hackdrt_A_2147633886_0
         $x_1_9 = {56 00 6f 00 69 00 63 00 65 00 20 00 4d 00 6f 00 6e 00 69 00 74 00 6f 00 72 00 28 00 26 00 57 00 29 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

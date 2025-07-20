@@ -24,6 +24,7 @@ rule Ransom_Win32_Vanhelsing_DA_2147936357_0
         $x_1_9 = "restore your files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 4 of ($x_1_*))) or
             ((2 of ($x_50_*))) or
@@ -54,6 +55,7 @@ rule Ransom_Win32_Vanhelsing_AA_2147942026_0
         $x_1_7 = {2e 00 76 00 61 00 6e 00 68 00 65 00 6c 00 73 00 69 00 6e 00 67 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -89,6 +91,7 @@ rule Ransom_Win32_Vanhelsing_AB_2147942027_0
         $x_1_12 = {2d 00 2d 00 2d 00 65 00 6e 00 64 00 6e 00 6f 00 6e 00 63 00 65 00 2d 00 2d 00 2d 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 4 of ($x_1_*))) or
             ((6 of ($x_10_*))) or

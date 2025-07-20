@@ -19,6 +19,7 @@ rule Backdoor_Win32_Quisbot_A_2147678406_0
         $x_1_5 = {25 73 5c 4d 69 63 72 6f 73 6f 66 74 5c 25 73 5c 25 73 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

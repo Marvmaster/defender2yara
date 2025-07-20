@@ -16,6 +16,7 @@ rule Trojan_MSIL_Banload_PSWH_2147889354_0
         $x_2_1 = {72 01 00 00 70 72 2b 00 00 70 28 ?? 00 00 0a 0a 06 28 ?? 00 00 0a 2c 07 06 28 ?? 00 00 0a 26 de 03 26 de 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_Banload_GXQ_2147910695_0
         $x_1_4 = "\\credentials.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

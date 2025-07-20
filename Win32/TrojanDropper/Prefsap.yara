@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Prefsap_2147610769_0
         $x_1_3 = {8a 55 10 8a 38 c0 c2 03 32 fa c0 cf 04 32 f9 88 38 40 41 3b 4d 0c 72 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

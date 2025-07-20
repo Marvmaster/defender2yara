@@ -19,6 +19,7 @@ rule VirTool_Win64_Turdrilez_A_2147846429_0
         $x_1_4 = {44 8b 85 60 03 00 00 48 ?? ?? ?? ?? 83 64 24 20 00 45 33 c9 48 8b d6 e8 ?? ?? ?? ?? 3b 85 60 03 00 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule HackTool_iPhoneOS_IosJailbreak_A_2147837256_0
         $x_1_3 = "/var/run/pspawn_hook.ts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule HackTool_iPhoneOS_IosJailbreak_B_2147840761_0
         $x_1_4 = "ipwnder" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

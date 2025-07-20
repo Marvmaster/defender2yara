@@ -27,6 +27,7 @@ rule TrojanSpy_Win32_VB_KB_2147575261_0
         $x_5_13 = "\\system32\\drivers\\optrves.sys" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 5 of ($x_1_*))) or
             ((5 of ($x_5_*))) or
@@ -68,6 +69,7 @@ rule TrojanSpy_Win32_VB_KC_2147575269_0
         $x_1_18 = " [ Numlock=Kapal" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((15 of ($x_1_*))) or
             ((1 of ($x_5_*) and 10 of ($x_1_*))) or
@@ -94,6 +96,7 @@ rule TrojanSpy_Win32_VB_JE_2147583316_0
         $x_1000_2 = {ff 15 30 10 40 00 8b d0 8d 4d dc ff 15 fc 10 40 00 50 6a 01 6a ff 6a 01 ff 15 bc 10 40 00 8d 4d dc 51 8d 55 e0 52 6a 02 ff 15 d0 10 40 00 83 c4 0c 8d 4d d8 ff 15 10 11 40 00 8b 45 08 8d 70 34 6a 01 56 ff 15 14 10 40 00 ff 15 4c 10 40 00 8b 0e 51 6a 00 ff 15 74 10 40 00 85 c0 75 1a ba ?? ?? 40 00 8b ce eb 0b ba ?? ?? 40 00 8b 45 08 8d 48 34}  //weight: 1000, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +128,7 @@ rule TrojanSpy_Win32_VB_LA_2147595821_0
         $x_1_12 = "{F146C9B1-VMVQ-A9RC-FLUK-D0BA86B4E999}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -158,6 +162,7 @@ rule TrojanSpy_Win32_VB_BA_2147596911_0
         $x_1_11 = "Reply-to:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -191,6 +196,7 @@ rule TrojanSpy_Win32_VB_DA_2147598064_0
         $x_1_11 = "Sending Mail" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -218,6 +224,7 @@ rule TrojanSpy_Win32_VB_EU_2147598485_0
         $x_1_8 = "<script language=vbscript>form9.submit</script>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -249,6 +256,7 @@ rule TrojanSpy_Win32_VB_AM_2147599259_0
         $x_1_9 = "\\drivers\\disdn\\d.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -281,6 +289,7 @@ rule TrojanSpy_Win32_VB_GT_2147599858_0
         $x_1_9 = {57 00 69 00 6c 00 6c 00 20 00 74 00 69 00 6d 00 65 00 6f 00 75 00 74 00 20 00 69 00 6e 00 20 00 36 00 30 00 20 00 73 00 65 00 63 00 6f 00 6e 00 64 00 73 00 00 00 00 00 36 00 00 00 43 00 6f 00 6e 00 6e 00 65 00 63 00 74 00 20 00 73 00 6f 00 63 00 6b 00 65 00 74 00 20 00 72 00 65 00 74 00 75 00 72 00 6e 00 20 00 76 00 61 00 6c 00 75 00 65 00 00 00 1a 00 00 00 43 00 6f 00 6e 00 6e 00 65 00 63 00 74 00 65 00 64 00 20 00 74 00 6f 00 20 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -308,6 +317,7 @@ rule TrojanSpy_Win32_VB_AC_2147602546_0
         $x_1_8 = "C:\\tmpsss.log" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -342,6 +352,7 @@ rule TrojanSpy_Win32_VB_AAI_2147604823_0
         $x_1_12 = "SCROLLLOCK" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_3_*) and 5 of ($x_1_*))) or
             ((4 of ($x_10_*) and 3 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -373,6 +384,7 @@ rule TrojanSpy_Win32_VB_FA_2147608805_0
         $x_1_8 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -396,6 +408,7 @@ rule TrojanSpy_Win32_VB_BZ_2147627098_0
         $x_1_4 = {3a 00 38 00 38 00 2f 00 70 00 36 00 2e 00 61 00 73 00 70 00 3f 00 4d 00 41 00 43 00 3d 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -420,6 +433,7 @@ rule TrojanSpy_Win32_VB_CS_2147638322_0
         $x_3_5 = "\\Pusmint\\SystemDir.bat" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -446,6 +460,7 @@ rule TrojanSpy_Win32_VB_DE_2147639533_0
         $x_1_3 = "PicFormat32a.PicFormat32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -468,6 +483,7 @@ rule TrojanSpy_Win32_VB_DM_2147641920_0
         $x_2_3 = "HKCU\\Software\\yahoo\\pager\\ETS" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -494,6 +510,7 @@ rule TrojanSpy_Win32_VB_ED_2147643546_0
         $x_1_7 = "Firefox" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -522,6 +539,7 @@ rule TrojanSpy_Win32_VB_EJ_2147653815_0
         $x_1_5 = "rpool\\smss.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -545,6 +563,7 @@ rule TrojanSpy_Win32_VB_EK_2147655080_0
         $x_1_4 = "HIDE!!!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -571,6 +590,7 @@ rule TrojanSpy_Win32_VB_EL_2147661430_0
         $x_1_7 = "-[KOPYALANDI]-" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

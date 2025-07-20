@@ -18,6 +18,7 @@ rule Backdoor_Win32_Subseven_H_2147792441_0
         $x_6_4 = "Sub7 2.3 2010" ascii //weight: 6
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

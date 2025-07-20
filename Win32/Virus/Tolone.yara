@@ -21,6 +21,7 @@ rule Virus_Win32_Tolone_A_2147601514_0
         $x_1_6 = {50 54 50 55 e8 05 00 00 00 e9 ?? ?? ?? ?? 50 50 e8 ?? ?? ?? ?? 50 68 88 4a 88 d9 e8 ?? ?? ?? ?? ff d0 0b c0 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

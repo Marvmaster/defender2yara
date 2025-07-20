@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Coins_BBX_2147826590_0
         $x_1_5 = "fw%d.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Coins_GCW_2147838545_0
         $x_1_3 = "/c \"powershell -command IEX(New-Object Net.Webclient).DownloadString('%s/%s')\"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_BroPass_CB_2147850816_0
         $x_1_2 = {4f 00 55 00 54 00 50 00 55 00 54 00 5f 00 42 00 49 00 4e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_BroPass_CC_2147850819_0
         $x_1_1 = {41 b9 40 00 00 00 41 b8 00 30 00 00 8b d7 33 c9 48 8b f0 8b df ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

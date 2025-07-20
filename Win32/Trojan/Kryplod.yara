@@ -18,6 +18,7 @@ rule Trojan_Win32_Kryplod_A_2147783207_0
         $x_1_3 = {2b f9 be 00 00 00 00 d1 ff b9 fe ff ff ff 8d 04 3f 2b c8 01 8d a8 fd ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

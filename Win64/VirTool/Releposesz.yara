@@ -18,6 +18,7 @@ rule VirTool_Win64_Releposesz_A_2147895154_0
         $x_1_3 = {4c 63 cf 4c 89 e2 48 89 44 24 20 48 8b 05 c8 6c 00 00 4c 89 e9 ff ?? 89 c3 85 c0 0f 84 ?? ?? ?? ?? 4c ?? ?? ?? ?? 48 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

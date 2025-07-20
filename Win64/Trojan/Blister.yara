@@ -19,6 +19,7 @@ rule Trojan_Win64_Blister_A_2147813778_0
         $x_4_5 = {ff d6 48 8d 87 ?? ?? 00 00 48 8d [0-3] ff d0}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win64_Blister_B_2147839543_0
         $x_1_10 = {e9 06 00 00 00 ?? ?? ?? ?? ?? ?? c6 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 3 of ($x_1_*))) or
             ((4 of ($x_5_*))) or
@@ -73,6 +75,7 @@ rule Trojan_Win64_Blister_AC_2147888183_0
         $x_1_1 = {8b 17 83 e3 07 48 83 c7 04 8b ca 8b c2 41 23 cb 41 0b c3 f7 d1 23 c8 41 2b c8 44 8b c2 89 0e 8b cb 48 83 c6 04 41 d3 c0 ff c3 49 83 e9 01 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_Win64_Blister_MA_2147895633_0
         $x_1_1 = {48 03 ca 4d 63 d0 41 80 d2 10 49 0b fe 44 8b 51 20 40 d2 de 49 c1 c0 38 66 c1 ee 04 8b 79 1c 66 41 c1 f0 9f 4d 8d 14 12 40 d2 c6 44 8b 41 24 40 80 e6 5d 48 03 fa 40 c0 d6 c9 48 d3 fe 8b 71 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Ransom_Win32_Malasypt_A_2147711097_0
         $x_4_9 = {66 8b 04 8a 66 3d ?? ?? 74 0c 66 3d ?? ?? 74 06 66 3d ?? ?? 75 09 c7 45 f4 01 00 00 00 eb 06 41 3b 4d f8 75 db ff 75 fc}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_2_*))) or
             ((2 of ($x_4_*) and 1 of ($x_2_*))) or

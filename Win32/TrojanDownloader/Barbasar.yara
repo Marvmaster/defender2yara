@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Barbasar_2147725774_0
         $x_1_5 = "A transaction is already active" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

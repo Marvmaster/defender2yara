@@ -21,6 +21,7 @@ rule Trojan_Linux_Sotdas_A_2147784136_0
         $x_1_6 = "ln -s /etc/init.d/%s /etc/rc2.d/S77%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

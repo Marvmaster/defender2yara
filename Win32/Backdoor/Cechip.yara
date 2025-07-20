@@ -19,6 +19,7 @@ rule Backdoor_Win32_Cechip_A_2147661716_0
         $x_1_5 = "winlogon.exe -d -t -l -e0.0.0.0 -i127.0.0.1 -p" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

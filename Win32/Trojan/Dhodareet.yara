@@ -18,6 +18,7 @@ rule Trojan_Win32_Dhodareet_A_2147696647_0
         $x_1_4 = {3d 85 de 23 00 75 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

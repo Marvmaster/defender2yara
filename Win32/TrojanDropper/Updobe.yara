@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Updobe_A_2147627865_0
         $x_1_6 = {00 67 6f 6f 67 6c 65 2e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

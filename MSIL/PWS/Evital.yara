@@ -19,6 +19,7 @@ rule PWS_MSIL_Evital_A_2147725698_0
         $x_1_4 = "https://projectevrial.ru/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule PWS_MSIL_Evital_B_2147734643_0
         $x_1_11 = "select * from Win32_DiskDrive" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 4 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_3_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or

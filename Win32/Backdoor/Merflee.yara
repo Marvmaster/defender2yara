@@ -18,6 +18,7 @@ rule Backdoor_Win32_Merflee_A_2147694228_0
         $x_1_3 = "/microsoft/product/windowsupdate/aspx" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_Win32_Merflee_B_2147696351_0
         $x_1_3 = "abe2869f-9b47-4cd9-a358-c22904dba7f7" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

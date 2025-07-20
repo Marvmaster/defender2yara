@@ -20,6 +20,7 @@ rule Trojan_Win32_Barkiofork_A_2147649799_0
         $x_3_6 = {77 1b 8b c1 0f af c1 0f af c1 25 ff 00 00 00 3d 80 00 00 00 76 07 30 ?? ?? ?? ?? ?? ?? 41}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -50,6 +51,7 @@ rule Trojan_Win32_Barkiofork_B_2147654172_0
         $x_1_7 = "S[16]:Language=English" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_Win32_Barkiofork_C_2147690179_0
         $x_1_3 = "/s/asp?tr=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Trojan_Win32_Barkiofork_2147695070_0
         $x_1_4 = "Drive Serial Number_______________: [%s]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

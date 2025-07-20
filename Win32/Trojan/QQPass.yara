@@ -18,6 +18,7 @@ rule Trojan_Win32_QQPass_GB_2147709647_0
         $x_1_3 = "?qqnumber=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_QQPass_GE_2147710265_0
         $x_1_8 = "FSAV.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_3_*))) or
@@ -73,6 +75,7 @@ rule Trojan_Win32_QQPass_GF_2147712011_0
         $x_1_3 = {77 77 77 2e 39 69 66 7a 2e 6f 72 67 2f [0-16] 71 71 64 61 6f 68 61 6f 2f 3f 6e 61 6d 65 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Trojan_Win32_QQPass_G_2147740747_0
         $x_1_5 = "QQApp.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule Trojan_Win32_QQPass_DA_2147779246_0
         $x_1_4 = "wahaha" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule Trojan_Win32_QQPass_GZZ_2147905920_0
         $x_10_1 = {1e ec 16 41 00 00 1e a4 1a 41 00 00 1e 0c ee 42 00 00 1e 14 ed 42 00 00 1e 30 1b 41 00 00 1e 40 1b 41 00 00 1e}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_Win32_QQPass_GZY_2147906303_0
         $x_10_1 = {5d 81 ed 10 00 00 00 81 ed ?? ?? ?? ?? e9 ?? ?? ?? ?? 03 df d1 6b b8 28 f6 a3 ?? ?? ?? ?? c0 4c 00 00 00 b9 a1 05 00 00 ba ?? ?? ?? ?? 30 10}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +196,7 @@ rule Trojan_Win32_QQPass_BSA_2147926887_0
         $x_1_5 = "xui.ptlogin2.qq.com/cgi-bin/qlogin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

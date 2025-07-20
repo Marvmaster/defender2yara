@@ -15,6 +15,7 @@ rule Virus_Win32_Deelae_A_2147647372_0
         $x_1_1 = {64 ff 32 64 89 22 e8 00 00 00 00 f9 19 34 24 64 ad 8b 40 0c 8b 70 1c ad 8b 68 08 e8 20 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Desecreter_A_2147611246_0
         $x_1_5 = {0e 00 00 00 44 6f 77 6e 6c 6f 61 64 65 72 2e 65 78 65 00 00 ff ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

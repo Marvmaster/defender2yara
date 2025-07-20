@@ -21,6 +21,7 @@ rule Trojan_Win32_GraceWire_2147749714_0
         $x_2_6 = "getandgodll_Win32.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Trojan_Win32_GraceWire_BL_2147750251_0
         $x_1_2 = {c7 45 fc 00 00 00 00 8b 45 08 33 45 0c 89 45 08 c1 45 08 04 8b 4d 08 81 c1 ?? ?? ?? ?? 89 4d 08 8b 45 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))

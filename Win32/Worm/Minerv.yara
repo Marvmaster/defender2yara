@@ -32,6 +32,7 @@ rule Worm_Win32_Minerv_2147597882_0
         $x_1_18 = "LIBGCCW32-EH-2-SJLJ-GTHR-MINGW32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))

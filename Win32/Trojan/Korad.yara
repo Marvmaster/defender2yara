@@ -18,6 +18,7 @@ rule Trojan_Win32_Korad_A_2147655396_0
         $x_1_4 = "Loop01[%d].sChkURL = %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Korad_D_2147687569_0
         $x_2_5 = {3a 5c 70 72 6f 6a 65 63 74 5c 77 69 6e 33 32 5c 6d 6f 64 75 6c 65 5f 73 65 72 76 69 63 65 5c 52 65 6c 65 61 73 65 5c [0-12] 2e 70 64 62}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -72,6 +74,7 @@ rule Trojan_Win32_Korad_C_2147687570_0
         $x_5_7 = {be 5a 00 00 00 f7 fe 8b 45 08 8d 34 01 0f be 04 33 bb 5a 00 00 00 41 8b fa 2b c7 83 c0 37 99 f7 fb 80 c2 23 3b 4d f8 88 16 7c ce}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((3 of ($x_5_*))) or

@@ -16,6 +16,7 @@ rule Trojan_MSIL_RatX_RDA_2147888938_0
         $x_2_1 = {02 75 4c 00 00 01 6f b1 00 00 0a 1e 9a 0b 07 0a 06}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule HackTool_Win32_Guama_A_2147627363_0
         $x_1_4 = "guma = \"<iframe src='http://www.hacker.com.cn'></iframe>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

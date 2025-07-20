@@ -16,6 +16,7 @@ rule Trojan_MSIL_Genpacker_A_2147707708_0
         $x_1_2 = "UsbDetector" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

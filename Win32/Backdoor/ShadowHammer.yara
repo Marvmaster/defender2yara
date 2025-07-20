@@ -18,6 +18,7 @@ rule Backdoor_Win32_ShadowHammer_A_2147734416_0
         $x_10_3 = "ASUSTeK Computer Inc.1" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +64,7 @@ rule Backdoor_Win32_ShadowHammer_C_2147734444_0
         $x_10_1 = "D:\\C++\\AsusShellCode\\Release\\AsusShellCode.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

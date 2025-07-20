@@ -18,6 +18,7 @@ rule Spammer_Win32_Mapegost_A_2147654381_0
         $x_1_4 = {6d 6f 64 65 3d 67 65 74 [0-8] 26 75 69 64 3d 25 73 26 6f 73 3d 25 73 26 70 69 64 3d 25 73 26 66 6c 61 67 73 3d 25 73 26 73 65 6e 74 3d 25 69 26 61 63 63}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

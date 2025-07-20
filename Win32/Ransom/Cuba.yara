@@ -17,6 +17,7 @@ rule Ransom_Win32_Cuba_RMA_2147819636_0
         $x_1_2 = {8a a5 08 00 c7 [0-10] e3 14 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Win32_Cuba_MKV_2147909058_0
         $x_1_3 = "Do not rename encrypted files." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

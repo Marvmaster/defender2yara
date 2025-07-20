@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Idicaf_A_2147607515_0
         $x_1_5 = {52 6f 6f 74 23 52 43 56 59 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -45,6 +46,7 @@ rule TrojanDownloader_Win32_Idicaf_B_2147610138_0
         $x_1_2 = {8d 44 18 ff 50 8b c3 b9 0a 00 00 00 99 f7 f9 8a 82 ?? ?? ?? ?? 8a 54 1f ff 32 c2 5a 88 02 43 4e 75 d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

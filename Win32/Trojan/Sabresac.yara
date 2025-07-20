@@ -20,6 +20,7 @@ rule Trojan_Win32_Sabresac_A_2147711159_0
         $x_1_5 = {45 00 78 00 63 00 61 00 6c 00 69 00 62 00 75 00 72 00 53 00 76 00 63 00 42 00 00 00 77 00 69 00 6e 00 6c 00 6f 00 67 00 6f 00 6e 00 62 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))

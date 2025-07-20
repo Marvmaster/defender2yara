@@ -19,6 +19,7 @@ rule Ransom_MSIL_Wanacry_B_2147786658_0
         $x_1_4 = "Ethereum Adress" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

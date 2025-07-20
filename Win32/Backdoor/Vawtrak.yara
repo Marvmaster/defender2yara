@@ -17,6 +17,7 @@ rule Backdoor_Win32_Vawtrak_A_2147681339_0
         $x_1_3 = {80 38 3a 75 03 50 eb 18 8b 45 f8 ff b0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_Vawtrak_A_2147681339_1
         $x_1_4 = "[Socks] Failt connect BC [%s:%u]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -65,6 +67,7 @@ rule Backdoor_Win32_Vawtrak_B_2147684228_0
         $x_1_3 = {8b 06 c6 85 ?? ?? ?? ?? 00 80 38 3a 8b 45 f8 ff b0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Backdoor_Win32_Vawtrak_C_2147685159_0
         $x_1_2 = {81 3e 41 50 33 32 75 72 8b 46 08 83 c1 e8 3b c1 75 68 83 7e 10 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Backdoor_Win32_Vawtrak_C_2147685159_1
         $x_1_5 = {00 4d 69 6e 69 44 75 6d 70 57 72 69 74 65 44 75 6d 70 00 00 00 5c 25 75 2e 64 6d 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule Backdoor_Win32_Vawtrak_D_2147686198_0
         $x_1_5 = "/post.aspx?messageID=%u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -161,6 +167,7 @@ rule Backdoor_Win32_Vawtrak_D_2147686540_0
         $x_1_7 = {5b 50 6f 6e 79 5d 20 46 61 69 6c 20 47 65 74 20 50 61 73 73 0d 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -272,6 +279,7 @@ rule Backdoor_Win32_Vawtrak_F_2147688092_0
         $x_1_4 = {53 3a 28 4d 4c 3b 3b 4e 57 3b 3b 3b 4c 57 29 [0-4] 44 3a 28 41 3b 4f 49 43 49 3b 47 41 3b 3b 3b 57 44 29}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -303,6 +311,7 @@ rule Backdoor_Win32_Vawtrak_X_2147696867_0
         $x_1_8 = "framework_key%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -327,6 +336,7 @@ rule Backdoor_Win32_Vawtrak_X_2147696867_1
         $x_1_2 = "&info=%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.4X%0.2X%0.4X&proxy=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -348,6 +358,7 @@ rule Backdoor_Win32_Vawtrak_X_2147696867_2
         $x_1_2 = "~%0.8x.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +384,7 @@ rule Backdoor_Win32_Vawtrak_O_2147707514_0
         $x_1_6 = "PID: %u [%0.2u:%0.2u:%0.2u]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -394,6 +406,7 @@ rule Backdoor_Win32_Vawtrak_AVW_2147843549_0
         $x_1_1 = {8a c7 83 f2 06 0f 8d ?? ?? ?? ?? 5d 00 59 ff d5 69 d3 d2 ff eb 23 ec 28 00 65 00 00 81 ad ?? ?? ?? ?? ?? ?? ?? ?? e0 23 d6 03 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

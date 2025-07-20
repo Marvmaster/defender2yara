@@ -20,6 +20,7 @@ rule Backdoor_Win32_Wolyx_A_2147647456_0
         $x_3_6 = {8b 95 b4 fe ff ff 89 55 e0 8b 95 b8 fe ff ff 89 55 e4}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             ((3 of ($x_3_*))) or
@@ -55,6 +56,7 @@ rule Backdoor_Win32_Wolyx_A_2147647557_0
         $x_1_11 = "TSendKeyLogInfoThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_4_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -85,6 +87,7 @@ rule Backdoor_Win32_Wolyx_B_2147656486_0
         $x_1_3 = {49 45 69 6e 66 6f 2e 64 6c 6c 00 57 53 50 53 74 61 72 74 75 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +110,7 @@ rule Backdoor_Win32_Wolyx_B_2147656516_0
         $x_1_3 = "AD18BB45B27C8946AD19A0768E749458AE29A05BB2478847AF02A15A8D778E" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

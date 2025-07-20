@@ -19,6 +19,7 @@ rule Trojan_Win64_DiskDestroyer_A_2147851651_0
         $x_2_4 = "Your PC has been destroyed by" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

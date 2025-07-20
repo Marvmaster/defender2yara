@@ -17,6 +17,7 @@ rule Trojan_Win32_CyptInject_YBQ_2147922426_0
         $x_1_2 = {81 c8 2a 38 01 00 58 0f b6 8d 97 f9 ff ff 8b 95 44 f3 ff ff 0f be 02 2b c1 8b 8d 44 f3 ff ff 88 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_CyptInject_YBR_2147922427_0
         $x_3_1 = {0f be 0c 10 8b 95 6c fd ff ff 03 95 ?? ?? ?? ?? 0f b6 02 33 c1 8b 8d ?? ?? ?? ?? 03 8d f4 f8 ff ff 88 01}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule VirTool_Win64_Blindz_A_2147838738_0
         $x_1_4 = {48 63 45 24 48 8b 8d 20 01 00 00 0f be 04 01 03 45 04 8b 4d 04 8d ?? ?? 89 45 04 eb b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

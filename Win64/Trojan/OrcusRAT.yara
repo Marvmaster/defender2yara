@@ -16,6 +16,7 @@ rule Trojan_Win64_OrcusRAT_A_2147918884_0
         $x_2_1 = {8d 41 f1 30 04 39 48 ff c1 48 81 f9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

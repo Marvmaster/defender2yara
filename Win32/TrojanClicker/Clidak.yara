@@ -17,6 +17,7 @@ rule TrojanClicker_Win32_Clidak_A_2147654429_0
         $x_10_3 = {6a 01 6a 07 6a 01 6a 06 6a 01 6a 05 6a 01 6a 04}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

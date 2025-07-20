@@ -22,6 +22,7 @@ rule Virus_Win32_Frostui_A_2147693897_0
         $x_1_7 = {34 30 53 31 31 38 54 32 30 31 33 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

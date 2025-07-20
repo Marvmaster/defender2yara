@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Exnuth_A_2147622787_0
         $x_1_2 = {b8 6f 70 65 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

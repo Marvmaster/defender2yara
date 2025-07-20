@@ -18,6 +18,7 @@ rule Trojan_Linux_RudeDevil_A_2147764486_0
         $x_1_3 = {8b 45 f8 48 3b 45 e0 73 2d 48 8b 45 e8 0f b6 00 2a 45 f7 89 c2 48 8b 45 e8 88 10 48 8b 45 e8 48 8d 50 01 48 89 55 e8 0f b6 10 32 55 f7 88 10 48 83 45 f8 01 eb c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Linux_RudeDevil_B_2147908237_0
         $x_1_5 = "TCP_Flood" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

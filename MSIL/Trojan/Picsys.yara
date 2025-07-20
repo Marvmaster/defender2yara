@@ -17,6 +17,7 @@ rule Trojan_MSIL_Picsys_SK_2147931779_0
         $x_2_2 = "stub.exe.Properties" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

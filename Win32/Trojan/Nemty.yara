@@ -21,6 +21,7 @@ rule Trojan_Win32_Nemty_PB_2147743676_0
         $x_2_6 = "2D444543525950542E747874" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -59,6 +60,7 @@ rule Trojan_Win32_Nemty_PD_2147743744_0
         $x_1_14 = {2f 00 00 00 66 89 ?? ?? ?? 61 00 00 00 66 89 ?? ?? ?? 6c 00 00 00 66 89 ?? ?? ?? 6c 00 00 00 66 89 ?? ?? ?? 20 00 00 00 66 89 ?? ?? ?? 2f 00 00 00 66 89 ?? ?? ?? 71 00 00 00 66 89 ?? ?? ?? 75 00 00 00 66 89 ?? ?? ?? 69 00 00 00 66 89 ?? ?? ?? 65 00 00 00 66 89 ?? ?? ?? 74 00 00 00 66 89}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +83,7 @@ rule Trojan_Win32_Nemty_PE_2147743819_0
         $x_1_2 = {33 c0 8a 83 ?? ?? ?? ?? 2b c3 40 8b c8 83 e0 01 d1 e9 83 e1 7f c1 e0 07 0b c8 8d 44 59 53 33 c3 8b d0 c1 ea 04 80 e2 0f c0 e0 04 0a d0 fe c2 32 d3 f6 d2 02 d3 80 f2 ae 2a d3 fe c2 32 d3 80 f2 d4 2a d3 80 ea 6b 88 93 ?? ?? ?? ?? 43 81 fb ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule Trojan_Win32_Nemty_PA_2147786354_0
         $x_1_2 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

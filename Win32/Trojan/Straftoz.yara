@@ -20,6 +20,7 @@ rule Trojan_Win32_Straftoz_A_2147688685_0
         $x_1_6 = {c7 45 e0 40 be 55 f1 c7 45 f4 35 00 00 00 c7 45 c8 8a 00 00 00 81 7d c8 a4 94 00 00 75 16}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

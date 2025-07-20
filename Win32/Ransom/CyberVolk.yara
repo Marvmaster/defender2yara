@@ -18,6 +18,7 @@ rule Ransom_Win32_CyberVolk_PA_2147914932_0
         $x_3_3 = {41 6c 6c 20 79 6f 75 72 20 66 69 6c 65 73 20 68 61 76 65 20 62 65 65 6e 20 65 6e 63 72 79 70 74 65 64 20 62 79 20 [0-21] 20 72 61 6e 73 6f 6d 77 61 72 65}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Win32_CyberVolk_YAA_2147915103_0
         $x_1_5 = "Cyb3r Bytes Ransomware" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Ransom_Win32_CyberVolk_PAA_2147925168_0
         $x_1_3 = "your files have been encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

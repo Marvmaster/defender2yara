@@ -19,6 +19,7 @@ rule Ransom_Win32_LynxCrypt_PA_2147917405_0
         $x_4_4 = "WW91ciBkYXRhIGlzIHN0b2xlbiBhbmQgZW5jcnlwdGVkLg0K" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))

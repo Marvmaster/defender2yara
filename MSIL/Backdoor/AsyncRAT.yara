@@ -25,6 +25,7 @@ rule Backdoor_MSIL_AsyncRAT_YA_2147735888_0
         $x_10_10 = "AsyncRAT" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -61,6 +62,7 @@ rule Backdoor_MSIL_AsyncRAT_2147755383_0
         $x_1_13 = "Microsoft SQL Server.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -90,6 +92,7 @@ rule Backdoor_MSIL_AsyncRAT_GG_2147772990_0
         $x_1_9 = "Packet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -120,6 +123,7 @@ rule Backdoor_MSIL_AsyncRAT_GG_2147772990_1
         $x_1_10 = "sksathcs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -144,6 +148,7 @@ rule Backdoor_MSIL_AsyncRAT_ZB_2147779168_0
         $x_1_4 = "cmd.exe /c ping 0 -n 2 & del" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +177,7 @@ rule Backdoor_MSIL_AsyncRAT_ABZ_2147827749_0
         $x_1_8 = "GetHostAddresses" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -199,6 +205,7 @@ rule Backdoor_MSIL_AsyncRAT_ABH_2147827754_0
         $x_1_7 = "c schtasks /delete" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -223,6 +230,7 @@ rule Backdoor_MSIL_AsyncRAT_ABE_2147829927_0
         $x_1_4 = "GZipStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -244,6 +252,7 @@ rule Backdoor_MSIL_AsyncRAT_I_2147835956_0
         $x_1_1 = {07 25 0d 2c 05 09 8e 69 2d 05 16 e0 0c 2b 09 09 16 8f 1c 00 00 01 e0 0c 08 28 16 00 00 0a 13 04 11 04 07 8e 69 6a 28 17 00 00 0a 1f 40 12 05 28 01 00 00 06 26 11 04 d0 05 00 00 02 28 18 00 00 0a 28 19 00 00 0a 74 05 00 00 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -266,6 +275,7 @@ rule Backdoor_MSIL_AsyncRAT_J_2147835957_0
         $x_1_2 = {07 20 00 01 00 00 6f ?? 00 00 0a 00 07 20 80 00 00 00 6f ?? 00 00 0a 00 07 17 6f ?? 00 00 0a 00 07 18 6f ?? 00 00 0a 00 07 02 7b ?? 00 00 04 6f ?? 00 00 0a 00 02 7b ?? 00 00 04 73 ?? 00 00 0a 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -290,6 +300,7 @@ rule Backdoor_MSIL_AsyncRAT_K_2147835958_0
         $x_1_4 = "SetValue" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +329,7 @@ rule Backdoor_MSIL_AsyncRAT_L_2147835959_0
         $x_1_8 = "Execute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -340,6 +352,7 @@ rule Backdoor_MSIL_AsyncRAT_M_2147835960_0
         $x_2_2 = {09 06 91 13 06 08 12 06 20 ?? ?? ?? e9 28 ?? 00 00 06 28 ?? 00 00 0a 6f ?? 00 00 0a 26 06 17 58 0a 06 09 8e 69 32}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -362,6 +375,7 @@ rule Backdoor_MSIL_AsyncRAT_N_2147835961_0
         $x_2_2 = {0a 0a 08 06 6f ?? 00 00 0a 0a 73 ?? 00 00 0a 0d 06 13 06 16 13 05 2b 20 11 06 11 05 91 13 04 09 12 04 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -385,6 +399,7 @@ rule Backdoor_MSIL_AsyncRAT_O_2147835963_0
         $x_1_3 = "Debugger Detected" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +427,7 @@ rule Backdoor_MSIL_AsyncRAT_P_2147835964_0
         $x_1_7 = "get_OSFullName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -437,6 +453,7 @@ rule Backdoor_MSIL_AsyncRAT_Q_2147835965_0
         $x_1_5 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -458,6 +475,7 @@ rule Backdoor_MSIL_AsyncRAT_R_2147835966_0
         $x_2_1 = {06 17 58 0a 06 20 00 01 00 00 5d 0a 08 11 06 06 94 58 0c 08 20 00 01 00 00 5d 0c 11 06 06 94 13 04 11 06 06 11 06 08 94 9e 2b 03 0b 2b 87 11 06 08 11 04 9e 2b 06 9e 38 ?? ff ff ff 11 06 11 06 06 94 11 06 08 94 58 20 00 01 00 00 5d 94 0d 2b 06 9e 38 ?? ff ff ff 11 07 07 03 07 91 09 61 d2 9c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -479,6 +497,7 @@ rule Backdoor_MSIL_AsyncRAT_S_2147835971_0
         $x_2_1 = {01 13 04 08 03 17 8d ?? 00 00 01 25 16 1f 5f 9d 6f ?? 01 00 0a 17 9a 03 17 8d ?? 00 00 01 25 16 1f 5f 9d 6f ?? 01 00 0a 17 9a 72 ?? ?? 00 70 28 ?? ?? 00 0a 28 ?? ?? 00 06 6f ?? 00 00 0a 13 05 11 05 16 11 04 16 1f 10 28 ?? 01 00 0a 00 11 05 16 11 04 1f 0f 1f 10 28 ?? 01 00 0a 00 07 11 04 6f ?? 00 00 0a 00 07 18 6f ?? 00 00 0a 00 07 6f ?? 00 00 0a 13 06 03 28 ?? ?? 00 06 13 07 11 06 11 07 16 11 07 8e 69 6f ?? 00 00 0a 28 ?? 01 00 0a 0d 09 02 16 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -501,6 +520,7 @@ rule Backdoor_MSIL_AsyncRAT_T_2147836962_0
         $x_2_2 = {0a 0d 09 7e ?? 00 00 04 07 28 ?? 00 00 06 17 73 ?? 00 00 0a 13 04 7e ?? 00 00 04 11 04 06 16 06 8e 69 28 ?? 00 00 06 7e ?? 00 00 04 11 04 28 ?? 00 00 06 de}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -525,6 +545,7 @@ rule Backdoor_MSIL_AsyncRAT_NRZ_2147840036_0
         $x_1_4 = "WindowsPrincipal" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -547,6 +568,7 @@ rule Backdoor_MSIL_AsyncRAT_NE_2147840037_0
         $x_1_2 = "RayCry5.2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -568,6 +590,7 @@ rule Backdoor_MSIL_AsyncRAT_MK_2147840303_0
         $x_1_1 = {91 07 08 07 8e 69 5d 91 61 28 ?? ?? ?? 06 03 08 1b 58 19 59 17 59 03 8e 69 5d 91 59 20 ?? ?? ?? 00 58 19 59 17 58 20 00 01 00 00 5d d2 9c 08 17 58 16 2d 05 19 2d 39 26 08 6a 03 8e 69 17 59 6a 06 17 58 6e 5a 19 2c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -593,6 +616,7 @@ rule Backdoor_MSIL_AsyncRAT_W_2147844624_0
         $x_1_5 = "get_UserName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -615,6 +639,7 @@ rule Backdoor_MSIL_AsyncRAT_GKH_2147850219_0
         $x_1_2 = "TripleDESCryptoServiceProvider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -636,6 +661,7 @@ rule Backdoor_MSIL_AsyncRAT_Y_2147900382_0
         $x_2_1 = {20 e8 03 00 00 28 ?? 00 00 06 20 ?? ?? ?? 13 2b ?? 06 17 58 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -663,6 +689,7 @@ rule Backdoor_MSIL_AsyncRAT_ZA_2147901411_0
         $x_1_7 = "Microsoft.VisualBasic.Devices" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -687,6 +714,7 @@ rule Backdoor_MSIL_AsyncRAT_AB_2147904769_0
         $x_2_4 = "TWVzc2FnZQ" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -709,6 +737,7 @@ rule Backdoor_MSIL_AsyncRAT_PAEU_2147913350_0
         $x_2_2 = {8e 69 5d 1f 09 58 1f 0d 58 1f 16 59 91 59 20 fc 00 00 00 58 1a 58 20 00 01 00 00 5d d2 9c 08 17 58 0c 08 6a ?? 8e 69 17 59 6a 06 17 58 6e 5a 31 8f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -731,6 +760,7 @@ rule Backdoor_MSIL_AsyncRAT_PAGL_2147937778_0
         $x_2_2 = "[024578974asf6843sr6g87g67]" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

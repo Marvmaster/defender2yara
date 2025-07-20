@@ -23,6 +23,7 @@ rule Trojan_Win32_CryptBot_ET_2147761969_0
         $x_1_8 = "InstallSrv %s  %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_CryptBot_QLM_2147809826_0
         $x_10_2 = {8b 45 08 33 05 ?? ?? ?? ?? 81 e8 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 89 45 fc 8b 45 08 81 c0 ?? ?? ?? ?? 83 f0 ?? 81 e8 ?? ?? ?? ?? 33 45 08}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_CryptBot_GTS_2147810542_0
         $x_10_2 = {8b ce 81 f1 ?? ?? ?? ?? 83 e9 1d 03 0d ?? ?? ?? ?? 33 ce 03 0d 91 a2 74 00 89 4d e4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Win32_CryptBot_CC_2147811442_0
         $x_5_2 = {0f af d1 8b 4d 08 8b c1 56 8b 35 ?? ?? ?? ?? c1 e8 ?? 88 44 96 01 8b c1 88 0c 96 c1 e8 ?? c1 e9 ?? 88 44 96 03 88 4c 96 02}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Trojan_Win32_CryptBot_NEAA_2147837435_0
         $x_10_1 = {33 d2 8b c6 f7 75 08 8a 0c 1a 30 0c 3e 46 81 fe ?? ?? 00 00 72 ea}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_Win32_CryptBot_BS_2147837922_0
         $x_2_1 = {47 23 fe 8d 44 3d 88 0f b6 08 03 4d 84 23 ce 89 4d 84 8d 4c 0d 88 8a 11 30 10 8a 10 30 11 8a 11 30 10 0f b6 00 0f b6 09 8b 55 80 03 c1 23 c6 8a 44 05 88 03 d3 30 02 43 3b 9d 98 00 00 00 72}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule Trojan_Win32_CryptBot_CD_2147838501_0
         $x_2_3 = "GetThreadTimes" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_Win32_CryptBot_CE_2147839269_0
         $x_2_3 = "GetThreadTimes" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -199,6 +207,7 @@ rule Trojan_Win32_CryptBot_LK_2147839389_0
         $x_1_2 = {8b 4d 08 8d 14 90 8b c1 88 0a c1 e8 08 88 42 01 8b c1 c1 e8 18 c1 e9 10 88 42 03 88 4a 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -220,6 +229,7 @@ rule Trojan_Win32_CryptBot_CX_2147840463_0
         $x_5_1 = {33 c8 40 3d ?? ?? ?? ?? 7c ?? 8b 45 08 32 ca 80 f1 ?? 88 0c 06 b9 ?? ?? ?? ?? 46 3b f7 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -241,6 +251,7 @@ rule Trojan_Win32_CryptBot_MA_2147843133_0
         $x_5_1 = {8b 45 0c 8d 4e 01 8a 04 06 88 04 1a 8b c2 33 d2 8b 75 18 f7 75 14 ff 45 fc 03 f1 85 d2 8b 55 fc 0f 45 f1 3b 55 10 72}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -262,6 +273,7 @@ rule Trojan_Win32_CryptBot_RG_2147845377_0
         $x_1_1 = {55 8b ec a1 ?? ?? ?? ?? 0f af ca 8b 55 08 89 14 88 5d c3 [0-21] 55 8b ec a1 ?? ?? ?? ?? 8b 55 08 89 14 88 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -296,6 +308,7 @@ rule Trojan_Win32_CryptBot_CCHB_2147901249_0
         $x_1_14 = "\\files_\\cryptocurrency" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -336,6 +349,7 @@ rule Trojan_Win32_CryptBot_CCJD_2147916056_0
         $x_1_20 = "/c powershell -NoP -NonI -ExecutionPolicy Bypass -Command \"$Resp = Invoke-WebRequest -Uri" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((15 of ($x_1_*))) or
             ((1 of ($x_5_*) and 10 of ($x_1_*))) or
@@ -379,6 +393,7 @@ rule Trojan_Win32_CryptBot_CCJE_2147921781_0
         $x_1_19 = "UniSat Wallet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_5_*) and 10 of ($x_1_*))) or
             ((6 of ($x_5_*) and 5 of ($x_1_*))) or
@@ -405,6 +420,7 @@ rule Trojan_Win32_CryptBot_GPA_2147922168_0
         $x_1_2 = "UseBasicParsing -UserAgent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -427,6 +443,7 @@ rule Trojan_Win32_CryptBot_HZ_2147926699_0
         $x_2_2 = {20 20 20 00 20 20 20 20 00 70 66 00 00 10 00 00 00 68 27 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 20 20 20 00 10 00 00 00 80 66 00 00 00 00 00 00 78 27 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -448,6 +465,7 @@ rule Trojan_Win32_CryptBot_EZ_2147926884_0
         $x_2_1 = {20 20 20 00 20 20 20 20 00 80 06 00 00 10 00 00 00 de 02 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 d4 05 00 00 00 90 06 00 00 04 00 00 00 ee 02 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -469,6 +487,7 @@ rule Trojan_Win32_CryptBot_EZ_2147926884_1
         $x_2_1 = {20 20 20 00 20 20 20 20 00 e0 70 00 00 10 00 00 00 78 27 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 20 20 20 00 10 00 00 00 f0 70 00 00 00 00 00 00 88 27 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -490,6 +509,7 @@ rule Trojan_Win32_CryptBot_RZ_2147926885_0
         $x_2_1 = {20 20 20 00 20 20 20 20 00 b0 6d 00 00 10 00 00 00 8a 28 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 ac 01 00 00 00 c0 6d 00 00 02 00 00 00 9a 28 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -512,6 +532,7 @@ rule Trojan_Win32_CryptBot_RZ_2147926885_1
         $x_2_2 = {20 20 20 00 20 20 20 20 00 c0 06 00 00 10 00 00 00 d8 02 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 e0 01 00 00 00 d0 06 00 00 02 00 00 00 e8 02 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -533,6 +554,7 @@ rule Trojan_Win32_CryptBot_DZ_2147926970_0
         $x_2_1 = {20 20 20 00 20 20 20 20 00 50 65 00 00 10 00 00 00 6c 27 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 20 20 20 00 10 00 00 00 60 65 00 00 00 00 00 00 7c 27 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -554,6 +576,7 @@ rule Trojan_Win32_CryptBot_LZ_2147927501_0
         $x_2_1 = {20 00 00 00 12 00 00 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 9c 05 00 00 00 60 00 00 00 06 00 00 00 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0 2e 69 64 61 74 61 20 20}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -576,6 +599,7 @@ rule Trojan_Win32_CryptBot_LZ_2147927501_1
         $x_2_2 = {20 20 20 00 20 20 20 20 00 30 05 00 00 10 00 00 00 46 02 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 ac 01 00 00 00 40 05 00 00 02 00 00 00 56 02 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -599,6 +623,7 @@ rule Trojan_Win32_CryptBot_ZZ_2147927601_0
         $x_2_3 = {20 20 20 00 20 20 20 20 00 50 05 00 00 10 00 00 00 5e 02 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 ac 01 00 00 00 60 05 00 00 02 00 00 00 6e 02 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -621,6 +646,7 @@ rule Trojan_Win32_CryptBot_ZC_2147927694_0
         $x_2_2 = {20 20 20 00 20 20 20 20 00 10 05 00 00 10 00 00 00 32 02 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 b0 02 00 00 00 20 05 00 00 02 00 00 00 42 02 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -642,6 +668,7 @@ rule Trojan_Win32_CryptBot_XZ_2147928863_0
         $x_2_1 = {20 20 20 00 20 20 20 20 00 b0 07 00 00 10 00 00 00 3c 04 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 6c 16 00 00 00 c0 07 00 00 08 00 00 00 4c 04 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -663,6 +690,7 @@ rule Trojan_Win32_CryptBot_NZ_2147929259_0
         $x_1_1 = {20 20 20 00 20 20 20 20 00 20 05 00 00 10 00 00 00 64 02 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 ac 01 00 00 00 30 05 00 00 02 00 00 00 74 02 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -684,6 +712,7 @@ rule Trojan_Win32_CryptBot_ZA_2147933339_0
         $x_2_1 = {2e 72 73 72 63 00 00 00 9c 05 00 00 00 60 00 00 00 06 00 00 00 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0 2e 69 64 61 74 61 20 20 00 20 00 00 00 80 00 00 00 02 00 00 00 38 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -707,6 +736,7 @@ rule Trojan_Win32_CryptBot_BM_2147933473_0
         $x_1_3 = "t.me/m08mbk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -780,6 +810,7 @@ rule Trojan_Win32_CryptBot_DA_2147938204_0
         $x_1_53 = {43 68 72 6f 6d 69 75 6d 5c [0-15] 5c 44 65 66 61 75 6c 74 5c 43 6f 6f 6b 69 65 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_100_*) and 12 of ($x_1_*))) or
             ((7 of ($x_100_*))) or
@@ -820,6 +851,7 @@ rule Trojan_Win32_CryptBot_DB_2147938205_0
         $x_1_16 = "Chromium" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 3 of ($x_1_*))) or
             ((5 of ($x_100_*))) or

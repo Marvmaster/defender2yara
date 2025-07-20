@@ -21,6 +21,7 @@ rule Worm_Win32_Wogue_A_2147598171_0
         $x_10_7 = "DirectX10.dll" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -51,6 +52,7 @@ rule Worm_Win32_Wogue_C_2147615996_0
         $x_1_7 = "net stop System Restore Service" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

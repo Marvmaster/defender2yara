@@ -17,6 +17,7 @@ rule Trojan_Win32_Ramin_A_2147680286_0
         $x_1_3 = "\"%SYSTEMROOT%/help\\svchost.exe\" /install /silence" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

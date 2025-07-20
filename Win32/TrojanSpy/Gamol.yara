@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Gamol_A_2147692225_0
         $x_1_3 = "zq=%s&zf=%s&zu=%s&zp=%s&zmz=%s&l=%d&zjb=%d&zcj=%d&zck=%s&pin=%s&zzb=%s&para=%s&bsmb=%d&d20=%s:%s %s:%s %s:%s&hsn=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

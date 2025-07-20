@@ -34,6 +34,7 @@ rule TrojanProxy_Win32_Brownet_A_2147646263_0
         $x_1_20 = "SendCraigslistCreateAccountRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((14 of ($x_1_*))) or
             ((1 of ($x_2_*) and 12 of ($x_1_*))) or

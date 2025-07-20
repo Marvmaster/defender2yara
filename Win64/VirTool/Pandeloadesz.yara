@@ -19,6 +19,7 @@ rule VirTool_Win64_Pandeloadesz_A_2147922940_0
         $x_1_4 = {4c 8b 44 24 68 48 89 c6 48 89 c2 48 89 e9 48 c7 44 24 20 00 00 00 00 4c 8b 4c 24 70 4d 29 c1 ?? ?? ?? ?? ?? ?? 48 8b 54 24 70 45 31 c9 41 b8 20 00 00 00 48 89 f1 48 2b 54 24 68 ?? ?? ?? ?? ?? ?? 45 31 c0 48 89 fa 48 89 f1 ?? ?? ?? ?? ?? ?? 48 89 f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

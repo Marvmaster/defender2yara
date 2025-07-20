@@ -23,6 +23,7 @@ rule VirTool_Win64_Soushelesz_A_2147898255_0
         $x_1_8 = "AddTracksToPlaylist" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

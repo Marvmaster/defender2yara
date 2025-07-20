@@ -17,6 +17,7 @@ rule PWS_Win32_Jokaheq_A_2147696777_0
         $x_1_3 = "X-HTTP-Method-Override" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

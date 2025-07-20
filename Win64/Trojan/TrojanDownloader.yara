@@ -18,6 +18,7 @@ rule Trojan_Win64_TrojanDownloader_NIT_2147920896_0
         $x_1_3 = "InternetOpenW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

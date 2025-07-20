@@ -22,6 +22,7 @@ rule Trojan_MSIL_Parpwuts_C_2147670641_0
         $x_20_8 = "MYwbmOOBWCrjATQkBwUkWGj" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_200_*) and 1 of ($x_100_*) and 2 of ($x_20_*))) or
             (all of ($x*))

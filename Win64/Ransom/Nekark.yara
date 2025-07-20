@@ -18,6 +18,7 @@ rule Ransom_Win64_Nekark_MX_2147927895_0
         $x_1_3 = "Your files have been encrypted" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -56,6 +56,7 @@ rule TrojanDownloader_Win32_Vxgame_2147803761_0
         $x_1_42 = "%c%c%c%c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 14 of ($x_1_*))) or
             ((4 of ($x_2_*) and 12 of ($x_1_*))) or

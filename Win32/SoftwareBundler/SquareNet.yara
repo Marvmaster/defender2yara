@@ -45,6 +45,7 @@ rule SoftwareBundler_Win32_SquareNet_204428_0
         $x_3_31 = "\"taskUri\" : \"/up/1/r%d/up.bin" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -115,6 +116,7 @@ rule SoftwareBundler_Win32_SquareNet_204428_1
         $x_2_43 = "/entry/track/event-fb?" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

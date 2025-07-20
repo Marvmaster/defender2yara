@@ -19,6 +19,7 @@ rule Trojan_Win32_Blockflip_A_2147625278_0
         $x_1_5 = {4c 61 62 65 6c 31 00 01 01 0e 00 77 77 77 2e 64 61 68 61 79 61 2e 63 6f 6d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

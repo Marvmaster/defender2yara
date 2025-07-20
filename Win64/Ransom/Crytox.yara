@@ -17,6 +17,7 @@ rule Ransom_Win64_Crytox_AA_2147831987_0
         $x_1_2 = {8a 84 31 08 12 00 00 f6 d0 8a 84 30 08 11 00 00 8a d0 d0 c2 32 c2 d0 c2 32 c2 d0 c2 32 c2 d0 c2 32 c2 34 63 88 84 31 08 10 00 00 fe c1 75 d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Ransom_Win64_Crytox_E_2147935145_0
         $x_1_1 = {48 ff c9 41 8b 34 88 48 03 f2 4d 33 c9 48 33 ?? ac 41 c1 c9 0b 44 03 c8 3a c4 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

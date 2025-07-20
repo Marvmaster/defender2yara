@@ -19,6 +19,7 @@ rule Trojan_Win32_Queresio_A_2147727038_0
         $x_10_5 = "swapfile.sys" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Ransom_Win64_Hive_ZZ_2147799663_0
         $n_1_9 = {80 79 04 73}  //weight: -1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -53,6 +54,7 @@ rule Ransom_Win64_Hive_ZY_2147799668_0
         $n_1_10 = {80 79 04 73}  //weight: -1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -75,6 +77,7 @@ rule Ransom_Win64_Hive_E_2147815389_0
         $x_1_2 = {65 78 70 61 6e 64 20 33 32 2d 62 79 74 65 20 6b 65 78 ?? 61 6e 64 20 33 32 2d 62 79 74 65 20 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Ransom_Win64_Hive_F_2147818482_0
         $x_1_5 = "expand 32-byte kexpand 32-byte k" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Ransom_Win64_Hive_B_2147839086_0
         $x_1_3 = "windows_encrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +147,7 @@ rule Ransom_Win64_Hive_ZX_2147839303_0
         $x_10_2 = {b9 46 02 00 00 b2 01 e8 ?? ?? ?? ?? 48 89 [0-3] 03 07 07 07 48 89 [0-3] 31 c9 31 c9 48 89 [0-3] 49 89 [0-3] 31 c9 48 89 c2 41 b8 46 02 00 00 41 b9 02 00 00 00 e8 ?? ?? ?? ?? b9 46 02 00 00 b2 01 e8 ?? ?? ?? ?? 48 89 [0-3] 03 02 05 05 31 c9 49 89 [0-3] 48 89 [0-3] (31 c9|48 89 (??|?? ??)) 48 89 c2 41 b8 46 02 00 00 41 b9 02 00 00 00 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Ransom_Win64_Hive_DAA_2147848835_0
         $x_5_1 = {48 31 da 48 89 94 24 [0-4] 0f b6 54 08 0a 0f b7 44 08 08 35 bd 3c 00 00 66 89 84 24 [0-4] 80 f2 4d 88 94 24 4a 08 00 00 41 b9 0b 00 00 00 4c 89 e1 4c 89 fa 49 89 f0 e8 [0-4] 84 c0 48 8d 35 [0-4] 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule Ransom_Win64_Hive_YAA_2147891837_0
         $x_1_2 = {0f 92 c2 c0 e2 ?? 08 ca 8a 8c 04 ?? ?? ?? ?? 8d 59 ?? 80 fb ?? 0f 92 c3 c0 e3 ?? 08 cb 48 ?? ?? 38 da 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +214,7 @@ rule Ransom_Win64_Hive_YY_2147894671_0
         $x_1_1 = {41 8a 04 13 48 8b 94 24 ?? 00 00 00 32 04 0a 48 8b 4c 24 ?? 30 04 29 48 ff c5 49 39 ef 48 8b 9c 24 d8 00 00 00 49 39 ec 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +242,7 @@ rule Ransom_Win64_Hive_AF_2147907980_0
         $x_1_7 = "main.runHost" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -254,6 +264,7 @@ rule Ransom_Win64_Hive_AHVI_2147940323_0
         $x_1_1 = {49 89 d0 4d 29 d0 4d 89 c1 49 f7 d8 49 c1 f8 3f 4d 21 d0 4c 8b 5c 24 48 4b 8d 3c 03 4c 8b 64 24 38 66 ?? 49 39 cc 72 74 48 89 44 24 30 4d 29 d4 49 8d 51 e0 49 89 d2 48 f7 da 48 c1 fa 3f 48 21 d1 4a 8d 04 19 49 8d 5c 24 e0 4c 89 d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

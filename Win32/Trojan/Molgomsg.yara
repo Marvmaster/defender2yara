@@ -17,6 +17,7 @@ rule Trojan_Win32_Molgomsg_B_2147681446_0
         $x_1_3 = {00 77 69 6e 73 79 73 33 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

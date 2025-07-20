@@ -20,6 +20,7 @@ rule Trojan_Win32_Pexby_A_2147654995_0
         $x_1_5 = {6c 6f 63 6b 65 72 2e 64 6c 6c 00 46 31 00 46 32 00 46 33 00 46 34 00 49 6e 69 74 69 61 6c 69 7a 65 41 50 49}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

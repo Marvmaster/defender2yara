@@ -22,6 +22,7 @@ rule Trojan_MacOS_SpyAgnt_K_2147840871_0
         $x_1_7 = "main.exploit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (6 of ($x*))
 }
 

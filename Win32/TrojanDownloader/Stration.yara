@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Stration_DJ_2147582052_0
         $x_1_6 = "/ntsrv32.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule TrojanDownloader_Win32_Stration_CC_2147593703_0
         $x_10_3 = {48 6f 73 74 3a 20 [0-192] 2e 63 6f 6d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule TrojanDownloader_Win32_Stration_SW_2147598213_0
         $x_1_5 = "Pragma: no-cache" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule TrojanDownloader_Win32_Stration_AS_2147606076_0
         $x_10_4 = "Host: try-anything-else.com" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -117,6 +121,7 @@ rule TrojanDownloader_Win32_Stration_K_2147609456_0
         $x_10_3 = {68 74 74 70 3a 2f 2f 6c 6f 63 61 6c 68 6f 73 74 2d 32 2e 63 6f 6d 2f [0-8] 2e 65 78 65}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -139,6 +144,7 @@ rule TrojanDownloader_Win32_Stration_I_2147609983_0
         $x_1_2 = "-=run=-" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

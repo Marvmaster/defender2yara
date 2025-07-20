@@ -19,6 +19,7 @@ rule Trojan_Win32_Phorpiex_DSK_2147741061_0
         $x_1_4 = {99 b9 1a 00 00 00 f7 f9 83 c2 61 8b 45 f8 03 45 fc 88 10 eb d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Phorpiex_DHE_2147744383_0
         $x_1_1 = {81 e1 ff 00 00 00 8b 3c 8d ?? ?? ?? ?? 03 c7 25 ff 00 00 00 8a 14 85 ?? ?? ?? ?? 89 3c 85 ?? ?? ?? ?? 0f b6 d2 89 14 8d ?? ?? ?? ?? 8b 3c 85 ?? ?? ?? ?? 03 fa 81 e7 ff 00 00 00 0f b6 14 bd ?? ?? ?? ?? 30 14 2e 83 ee 01 79 b4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Phorpiex_AR_2147745613_0
         $x_1_2 = {33 d8 8b 45 08 03 45 fc 88 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_Phorpiex_MLN_2147751746_0
         $x_1_1 = {8d 34 03 e8 ?? ?? ?? ?? 30 06 83 6d ?? 01 39 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule Trojan_Win32_Phorpiex_MER_2147752131_0
         $x_1_1 = {8b 45 fc 8d 3c 03 e8 ?? ?? ?? ?? 30 07 83 6d ?? 01 39 75 ?? 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +132,7 @@ rule Trojan_Win32_Phorpiex_KA_2147762990_0
         $x_1_3 = "C:\\DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +157,7 @@ rule Trojan_Win32_Phorpiex_SBR_2147763441_0
         $x_1_4 = "worm.top" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +186,7 @@ rule Trojan_Win32_Phorpiex_SBR_2147763441_1
         $x_1_8 = "/c start __ & __\\DriveMgr.exe & exit" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -207,6 +215,7 @@ rule Trojan_Win32_Phorpiex_PX_2147767290_0
         $x_1_5 = "http://trik.ws/pc.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -231,6 +240,7 @@ rule Trojan_Win32_Phorpiex_RR_2147773577_0
         $x_1_4 = "WinHttpGetDefaultProxyConfiguration" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -259,6 +269,7 @@ rule Trojan_Win32_Phorpiex_SM_2147781244_0
         $x_1_8 = "%temp%" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -284,6 +295,7 @@ rule Trojan_Win32_Phorpiex_A_2147787041_0
         $x_1_5 = "appdata" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -304,6 +316,7 @@ rule Trojan_Win32_Phorpiex_JK_2147794883_0
         $x_1_1 = {e5 a0 f3 e2 a1 c1 9d b1 a1 c1 9d b1 a1 c1 9d b1 32 8f 05 b1 a3 c1 9d b1 ba 5c 03 b1 8d c1 9d b1 ba 5c 36 b1 9c c1 9d b1 ba 5c 37 b1 2d c1 9d b1 a8 b9 0e b1 80 c1 9d b1 a1 c1 9c b1 8e c0 9d b1 ba 5c 32 b1 89 c1 9d b1 ba 5c 07 b1 a0 c1 9d b1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -332,6 +345,7 @@ rule Trojan_Win32_Phorpiex_V_2147796172_0
         $x_1_8 = "cmdinfo.dat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -358,6 +372,7 @@ rule Trojan_Win32_Phorpiex_SIB_2147797097_0
         $x_3_6 = {8d 55 f4 52 e8 ?? ?? ?? ?? 83 c4 04 39 45 f0 73 1d 8b 45 f0 0f be 4c 05 f4 8b 55 08 03 55 fc 0f be 02 33 c1 8b 4d 08 03 4d fc 88 01 eb c9}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_3_*))) or
             ((4 of ($x_10_*))) or
@@ -386,6 +401,7 @@ rule Trojan_Win32_Phorpiex_MA_2147809193_0
         $x_1_4 = "/c start .\\%s & start .\\%s\\VolDriver.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -415,6 +431,7 @@ rule Trojan_Win32_Phorpiex_MA_2147809193_1
         $x_1_9 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -440,6 +457,7 @@ rule Trojan_Win32_Phorpiex_N_2147821698_0
         $x_1_5 = "%s\\w3t3twf.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +479,7 @@ rule Trojan_Win32_Phorpiex_J_2147829553_0
         $x_1_1 = {8a c8 8a d0 24 f0 80 e1 fc 02 c0 c0 e1 04 0a 4f 01 02 c0 0a 07 c0 e2 06 0a 57 02 88 04 1e 88 4c 1e 01 8b 4c 24 18 88 54 1e 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -485,6 +504,7 @@ rule Trojan_Win32_Phorpiex_AE_2147830024_0
         $x_1_4 = "s\\%d%d.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -510,6 +530,7 @@ rule Trojan_Win32_Phorpiex_AF_2147830087_0
         $x_1_5 = "afe6fga6egaedg8aeg6a8e6fg6af8ga" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -531,6 +552,7 @@ rule Trojan_Win32_Phorpiex_RC_2147832291_0
         $x_1_1 = {33 7d f8 33 4d fc 89 7d f8 89 4d fc 8b 55 f4 8b 45 08 8b 4d f4 8b 75 08 8b bc d0 18 ff ff ff 23 bc ce f8 fd ff ff 8b 94 d0 1c ff ff ff 23 94 ce fc fd ff ff 33 7d f8 33 55 fc 89 7d f8 89 55 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -552,6 +574,7 @@ rule Trojan_Win32_Phorpiex_BF_2147837208_0
         $x_2_1 = {8b 45 f0 0f be 4c 05 f4 8b 55 08 03 55 fc 0f be 02 33 c1 8b 4d 08 03 4d fc 88 01 eb c9 8b 55 08 03 55 fc 0f be 02 f7 d0 8b 4d 08 03 4d fc 88 01 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -573,6 +596,7 @@ rule Trojan_Win32_Phorpiex_RB_2147837536_0
         $x_1_1 = {99 b9 ff 7f 00 00 f7 f9 81 c2 e8 03 00 00 52 e8 ?? ?? ?? ?? 99 b9 ff 7f 00 00 f7 f9 [0-16] 81 c2 e8 03 00 00 52 8d [0-6] 52 68 [0-16] 50 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -594,6 +618,7 @@ rule Trojan_Win32_Phorpiex_RB_2147837536_1
         $x_1_1 = {99 b9 30 75 00 00 f7 f9 81 c2 10 27 00 00 52 e8 ?? ?? ?? ?? 99 b9 30 75 00 00 f7 f9 81 c2 10 27 00 00 52 8d ?? ?? ?? ?? ?? 52 68 ?? ?? ?? ?? 8d ?? ?? ?? ?? ?? 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -615,6 +640,7 @@ rule Trojan_Win32_Phorpiex_RA_2147839148_0
         $x_1_1 = {99 b9 ff 7f 00 00 f7 f9 81 c2 e8 03 00 00 52 e8 ?? ?? ?? ?? 99 b9 ff 7f 00 00 f7 f9 81 c2 e8 03 00 00 52 8d 95 ?? ?? ff ff 52 68 ?? ?? ?? ?? 8d 85 ?? ?? ff ff 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -643,6 +669,7 @@ rule Trojan_Win32_Phorpiex_LK_2147840406_0
         $x_1_8 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 74 00 6c 00 64 00 72 00 6e 00 65 00 74 00 2e 00 74 00 6f 00 70 00 2f 00 [0-15] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -670,6 +697,7 @@ rule Trojan_Win32_Phorpiex_CRTF_2147849517_0
         $x_1_4 = {ba 2e 00 00 00 66 89 95 80 f9 ff ff b8 38 00 00 00 66 89 85 82 f9 ff ff b9 34 00 00 00 66 89 8d 84 f9 ff ff ba 2f 00 00 00 66 89 95 86 f9 ff ff b8 70 00 00 00 66 89 85 88 f9 ff ff b9 70 00 00 00 66 89 8d 8a f9 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -692,6 +720,7 @@ rule Trojan_Win32_Phorpiex_NP_2147893667_0
         $x_1_2 = "://185.215.113.93/pi.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -715,6 +744,7 @@ rule Trojan_Win32_Phorpiex_KAA_2147899658_0
         $x_1_3 = "freeukraine" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -743,6 +773,7 @@ rule Trojan_Win32_Phorpiex_RPY_2147906015_0
         $x_1_8 = "fuckput.in" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -766,6 +797,7 @@ rule Trojan_Win32_Phorpiex_APX_2147924417_0
         $x_2_3 = {8b ec 83 ec 10 56 57 be ?? ?? ?? ?? 8d 7d f0 a5 a5 a5 a5 8b 7d 08 57 33 f6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -789,6 +821,7 @@ rule Trojan_Win32_Phorpiex_APE_2147924425_0
         $x_2_3 = {83 ec 18 a1 ?? 20 40 00 89 45 ec 8b 0d ?? 20 40 00 89 4d f0 8b 15 ?? 20 40 00 89 55 f4 a1 ?? 20 40 00 89 45 f8 c7 45 ?? ?? ?? ?? ?? eb 09 8b 4d fc 83 c1 01 89 4d fc 8b 55 08 52}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -812,6 +845,7 @@ rule Trojan_Win32_Phorpiex_APH_2147925800_0
         $x_4_3 = "91.202.233.141" wide //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -835,6 +869,7 @@ rule Trojan_Win32_Phorpiex_PAQD_2147940561_0
         $x_2_3 = {89 55 d8 b8 ?? ?? ?? ?? 66 89 45 e4 b9 ?? ?? ?? ?? 66 89 4d e6 ba ?? ?? ?? ?? 66 89 55 e8 b8 ?? ?? ?? ?? 66 89 45 ea b9 ?? ?? ?? ?? 66 89 4d ec ba ?? ?? ?? ?? 66 89 55 ee b8 ?? ?? ?? ?? 66 89 45 f0 b9 ?? ?? ?? ?? 66 89 4d f2 ba ?? ?? ?? ?? 66 89 55 f4 b8 ?? ?? ?? ?? 66 89 45 f6 b9 ?? ?? ?? ?? 66 89 4d f8 ba ?? ?? ?? ?? 66 89 55 fa}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

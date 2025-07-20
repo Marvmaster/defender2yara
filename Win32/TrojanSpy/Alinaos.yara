@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Alinaos_E_2147681079_0
         $x_3_3 = {c7 01 00 00 00 00 6a 00 6a 00 6a 00 6a 01 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 89 45 ?? 85 c0 0f 84 ?? ?? ?? ?? 83 f8 ff 0f 84 ?? ?? ?? ?? 6a 00 6a 00 6a 03 6a 00 6a 00 53 56 50 ff 15}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -41,6 +42,7 @@ rule TrojanSpy_Win32_Alinaos_D_2147681080_0
         $x_2_2 = {53 57 6a 00 6a 00 6a 00 6a 01 68 ?? ?? ?? ?? 89 45 ?? 89 4d ?? 8b fa c7 45 ?? 00 00 00 00 ff 15 ?? ?? ?? ?? 8b d8 89 5d ?? 85 db 0f 84 ?? ?? ?? ?? 83 fb ff 0f 84 ?? ?? ?? ?? 56 6a 00 6a 00 6a 03 6a 00 6a 00 6a 50 68 ?? ?? ?? ?? 53 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule TrojanSpy_Win32_Alinaos_C_2147681081_0
         $x_2_2 = {56 56 56 6a 01 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 8b f8 89 7d ?? 3b fe 0f 84 ?? ?? ?? ?? 83 ff ff 0f 84 ?? ?? ?? ?? 56 56 6a 03 56 56 6a 50 68 ?? ?? ?? ?? 57 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule TrojanSpy_Win32_Alinaos_B_2147681082_0
         $x_2_2 = {56 56 56 6a 01 68 ?? ?? ?? ?? ff 15 98 91 41 00 8b d8 89 5d ?? 3b de 0f 84 ?? ?? ?? ?? 83 fb ff 0f 84 ?? ?? ?? ?? 56 56 6a 03 56 56 6a 50 68 ?? ?? ?? ?? 53 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule TrojanSpy_Win32_Alinaos_A_2147684937_0
         $x_1_3 = {f7 e1 c1 ea 02 8d 04 d2 03 c0 8b d1 2b d0 8a 44 15 ?? 30 04 31 41 3b cf 72 e1 05 00 b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule TrojanSpy_Win32_Alinaos_F_2147686829_0
         $x_1_6 = "win-firewall.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule TrojanSpy_Win32_Alinaos_G_2147689101_0
         $x_1_5 = "win-firewall.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -184,6 +191,7 @@ rule TrojanSpy_Win32_Alinaos_A_2147691815_0
         $x_2_7 = {77 6f 6e 74 20 6b 69 6c 6c 20 72 65 67 69 73 74 72 79 20 72 65 63 6f 72 64 20 66 6f 72 20 6e 6f 77 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*))) or
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or
@@ -216,6 +224,7 @@ rule TrojanSpy_Win32_Alinaos_B_2147691816_0
         $x_2_8 = "win-firewall.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -239,6 +248,7 @@ rule TrojanSpy_Win32_Alinaos_2147692913_0
         $x_1_4 = {5b 00 2f 00 32 00 30 00 30 00 2f 00 5d 00 00 07 5b 00 69 00 5d 00 00 09 5b 00 2f 00 69 00 5d 00 00 07 5b 00 6b 00 5d 00 00 09 5b 00 2f 00 6b 00 5d 00 00 0f 5b 00 2f 00 34 00 30 00 31 00 2f 00 5d 00 00 17 40 00 65 00 63 00 68 00 6f 00 20 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

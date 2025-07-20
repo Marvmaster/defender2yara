@@ -18,6 +18,7 @@ rule Virus_Linux_Rcrgood_A_2147689698_0
         $x_1_3 = "[4096] virus coded by badCRC in 2003" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 

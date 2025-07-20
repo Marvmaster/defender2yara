@@ -18,6 +18,7 @@ rule HackTool_Win64_Prolood_A_2147904921_0
         $x_1_3 = "Pausing for 3 seconds to gauge defensive" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

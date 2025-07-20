@@ -17,6 +17,7 @@ rule Trojan_Win64_RevShellz_A_2147922092_0
         $x_1_2 = "payload" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

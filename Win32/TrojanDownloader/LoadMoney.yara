@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_LoadMoney_ARA_2147897644_0
         $x_2_1 = {89 c8 31 d2 f7 f3 0f b6 44 15 00 30 04 0e 83 c1 01 39 cf 75 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

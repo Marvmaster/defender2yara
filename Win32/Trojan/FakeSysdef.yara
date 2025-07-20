@@ -17,6 +17,7 @@ rule Trojan_Win32_FakeSysdef_155638_0
         $x_1_3 = {c7 45 cc fa 0c 00 00 c7 45 e4 00 00 00 00 c7 45 e8 d4 81 01 00 c7 45 dc 0b 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_FakeSysdef_155638_1
         $x_1_3 = {c7 85 c4 fe ff ff 6d 6f 10 00 c7 85 dc fe ff ff d9 e2 12 00 c7 85 e0 fe ff ff 81 77 09 00 c7 85 d4 fe ff ff 6e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_FakeSysdef_155638_2
         $x_1_7 = "scan your hard driv" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_FakeSysdef_155638_3
         $x_1_2 = {8b 95 d8 fe ff ff 52 8b 45 f0 50 68 ?? ?? ?? ?? ff 15 ?? ?? 40 00 5e 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Win32_FakeSysdef_155638_4
         $x_1_4 = {e8 00 00 00 00 59 81 e1 00 f0 ff ff 66 81 39 4d 5a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Trojan_Win32_FakeSysdef_155638_5
         $x_1_2 = {8b 44 24 08 56 8d 54 24 08 57 8b 3d ?? ?? ?? ?? 52 53 53 6a 19 50 ff d7 85 c0 75 ?? ff 15 ?? ?? ?? ?? 83 f8 7a 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule Trojan_Win32_FakeSysdef_155638_6
         $x_1_5 = {50 51 68 01 00 00 80 c7 44 ?? ?? 0a 02 00 00 e8 ?? ?? ?? ?? 85 c0 74 29}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_Win32_FakeSysdef_155638_7
         $x_1_4 = {52 50 68 02 00 00 80 e8 ?? ?? ?? ?? 83 c4 ?? e8 ?? ?? ?? ?? b9 1f 00 00 00 33 c0 8d bc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -203,6 +211,7 @@ rule Trojan_Win32_FakeSysdef_155638_8
         $x_1_3 = "Processing Message 0x0000013 Parameters" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -230,6 +239,7 @@ rule Trojan_Win32_FakeSysdef_155638_9
         $x_1_5 = {8a 07 8a c8 80 e9 ?? 80 f9 ?? 77 ?? 66 0f be d0 66 83 c2 20 0f b7 f2 eb ?? 66 98 0f b7 f0 8a 03 8a ?? 80 e9 ?? 80 f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -254,6 +264,7 @@ rule Trojan_Win32_FakeSysdef_155638_10
         $x_1_5 = {68 58 1b 00 00 ff 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 68 08 01 00 00 e8 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 33 ff 8d b5 ?? ?? ?? ?? 6a 02 57 68 44 23 00 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -277,6 +288,7 @@ rule Trojan_Win32_FakeSysdef_155638_11
         $x_1_4 = "%s is professional software toolkit designed to detect, identify and fix hardware memory related problems" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -301,6 +313,7 @@ rule Trojan_Win32_FakeSysdef_155638_12
         $x_1_5 = "physical resources of this disk have been exhausted. The device is unreachable" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -327,6 +340,7 @@ rule Trojan_Win32_FakeSysdef_155638_13
         $x_1_7 = "%s\\%s_License.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -353,6 +367,7 @@ rule Trojan_Win32_FakeSysdef_155638_14
         $x_1_7 = {85 c0 7e 0c 80 7c 04 18 5c 74 05 48 85 c0 7f f4 8b 94 24 ?? ?? ?? ?? 8d 44 04 19 52 50 ff 15 ?? ?? ?? ?? 85 c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -396,6 +411,7 @@ rule Trojan_Win32_FakeSysdef_155638_15
         $x_1_24 = "_exe_download__" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

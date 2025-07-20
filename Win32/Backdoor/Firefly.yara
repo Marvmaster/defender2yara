@@ -19,6 +19,7 @@ rule Backdoor_Win32_Firefly_J_2147604829_0
         $x_10_5 = {6a 01 8d 44 24 10 50 e8 ?? ?? ?? ?? 6a 00 6a 00 6a ff 8d 44 24 18 50 e8 ?? ?? ?? ?? c7 04 24 0c 00 00 00 8d 44 24 0c 89 44 24 04 c7 44 24 08 ff ff ff ff 68 ?? ?? ?? ?? 6a ff 6a 06}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

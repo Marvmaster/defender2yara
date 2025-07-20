@@ -17,6 +17,7 @@ rule Trojan_Win32_Brolhorm_A_2147682808_0
         $x_1_3 = {3d 00 04 00 00 73 33 f7 c1 00 00 00 20 74 08 80 8c 05 84 ef ff ff 01 f7 c1 00 00 00 40 74 08 80 8c 05 84 ef ff ff 02 f7 c1 00 00 00 80 74 08 80 8c 05 84 ef ff ff 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

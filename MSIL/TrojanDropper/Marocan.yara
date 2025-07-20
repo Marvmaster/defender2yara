@@ -18,6 +18,7 @@ rule TrojanDropper_MSIL_Marocan_A_2147725134_0
         $x_1_3 = {53 74 72 69 6e 67 42 75 69 6c 64 65 72 00 45 6d 70 74 79 00 67 65 74 5f 4c 65 6e 67 74 68 00 53 75 62 73 74 72 69 6e 67 00 54 6f 43 68 61 72 41 72 72 61 79 00 41 73 63 00 49 6e 74 65 72 6c 6f 63 6b 65 64 00 49 6e 63 72 65 6d 65 6e 74 00 4d 61 74 68 00 4d 61 78 00 43 68 72 00 41 70 70 65 6e 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDropper_MSIL_Marocan_B_2147725265_0
         $x_1_5 = {00 45 6e 76 69 72 6f 6e 6d 65 6e 74 00 53 70 65 63 69 61 6c 46 6f 6c 64 65 72 00 47 65 74 46 6f 6c 64 65 72 50 61 74 68 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

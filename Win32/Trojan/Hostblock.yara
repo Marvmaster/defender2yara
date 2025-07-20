@@ -18,6 +18,7 @@ rule Trojan_Win32_Hostblock_P_2147616556_0
         $x_10_4 = {ff ff ff ff 0b 00 00 00 31 32 37 2e 30 2e 30 2e 31 20 63 00 ff ff ff ff 07 00 00 00 2e 6f 6e 65 2e 6c 74 00 ff ff ff ff}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Hostblock_T_2147626099_0
         $x_1_4 = {4e 00 6f 00 20 00 73 00 65 00 20 00 65 00 6e 00 63 00 6f 00 6e 00 74 00 72 00 6f 00 20 00 6c 00 61 00 20 00 6c 00 69 00 62 00 72 00 65 00 72 00 69 00 61 00 20 00 73 00 69 00 73 00 74 00 65 00 6d 00 33 00 32 00 52 00 75 00 6d 00 2e 00 64 00 6c 00 6c 00 20 00 21 00 00 00 00 00 1c 00 00 00 65 00 72 00 72 00 6f 00 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Hostblock_V_2147643759_0
         $x_1_6 = "sdfkjvnsldkfjvn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

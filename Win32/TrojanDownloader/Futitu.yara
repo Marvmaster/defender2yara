@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Futitu_A_2147629627_0
         $x_1_4 = {8d 44 24 10 6a 00 50 ff 15 ?? ?? ?? ?? 85 c0 74 0a e8 ?? ?? ?? ?? a2 ?? ?? ?? ?? 68 88 13 00 00 ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

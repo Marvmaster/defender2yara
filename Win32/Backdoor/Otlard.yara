@@ -15,6 +15,7 @@ rule Backdoor_Win32_Otlard_A_2147631470_0
         $x_1_1 = {c6 45 f8 67 c6 45 f9 6f c6 45 fa 6f c6 45 fb 74 c6 45 fc 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Backdoor_Win32_Otlard_B_2147632716_0
         $x_1_4 = {2f 62 6f 6f 74 73 74 72 61 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

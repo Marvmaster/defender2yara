@@ -20,6 +20,7 @@ rule Ransom_MSIL_LokiLocker_MK_2147808650_0
         $x_1_5 = "mshta.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_MSIL_LokiLocker_MA_2147851213_0
         $x_1_5 = "LokiLocker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Ransom_MSIL_LokiLocker_ZA_2147851856_0
         $x_1_7 = "Debugger Detected" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule Ransom_MSIL_LokiLocker_ZB_2147851941_0
         $x_1_11 = "<Loki>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))

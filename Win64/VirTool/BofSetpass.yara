@@ -18,6 +18,7 @@ rule VirTool_Win64_BofSetpass_A_2147901303_0
         $x_1_4 = "setuserpass failed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

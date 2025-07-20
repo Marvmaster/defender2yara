@@ -25,6 +25,7 @@ rule Trojan_Win32_TurlaCarbonInjectedC2_2147849794_0
         $x_1_11 = "[ERROR] Failed to wait for mutex. Error code: " wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

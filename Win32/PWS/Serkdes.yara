@@ -19,6 +19,7 @@ rule PWS_Win32_Serkdes_A_2147679668_0
         $x_1_5 = {35 65 37 65 38 31 30 30 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

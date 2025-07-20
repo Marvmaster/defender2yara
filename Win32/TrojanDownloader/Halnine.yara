@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Halnine_B_2147665063_0
         $x_1_3 = {73 0e 6a 32 ff 15 28 50 40 00 ff 44 24 10 eb a7 85 c0 c7 44 24 14 00 00 00 00 0f 84 b4 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win32_Glowroni_2147644781_0
         $x_2_6 = "glowext.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

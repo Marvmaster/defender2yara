@@ -23,6 +23,7 @@ rule TrojanSpy_MSIL_Quasar_RB_2147752343_0
         $x_1_8 = "HandleGetKeyloggerLogs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanSpy_MSIL_Quasar_SL_2147837883_0
         $x_1_4 = "2021 Cllikiom Kfsdggimo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule TrojanSpy_MSIL_Quasar_ARA_2147896958_0
         $x_2_3 = "$cef65898-47b6-43d2-b441-07f3cd9c27e4" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule TrojanSpy_MSIL_Quasar_SN_2147917838_0
         $x_2_1 = {09 1d 5d 16 fe 01 13 04 11 04 2c 0b 07 09 07 09 91 1f 4d 61 b4 9c 00 00 09 17 d6 0d 09 08 31 e0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule TrojanSpy_MSIL_Quasar_SO_2147927664_0
         $x_2_1 = {73 3b 00 00 0a 72 4d 00 00 70 73 3c 00 00 0a 28 3d 00 00 0a 6f 3e 00 00 0a 0c dd 06 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule TrojanSpy_MSIL_Quasar_SO_2147927664_1
         $x_2_2 = "server.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

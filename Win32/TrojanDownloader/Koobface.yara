@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Koobface_A_2147804104_0
         $x_1_6 = {4d 6f 76 65 46 69 6c 65 45 78 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

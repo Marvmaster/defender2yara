@@ -17,6 +17,7 @@ rule Trojan_Win64_InjectorX_CS_2147853209_0
         $x_1_2 = "computerholocaust" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

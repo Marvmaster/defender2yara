@@ -18,6 +18,7 @@ rule Worm_Win32_Sawemp_A_2147652794_0
         $x_1_4 = "by: rieysha</p>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

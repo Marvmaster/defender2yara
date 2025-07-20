@@ -23,6 +23,7 @@ rule Worm_Win32_Combra_F_2147595061_0
         $x_1_9 = "&email=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -52,6 +53,7 @@ rule Worm_Win32_Combra_G_2147595062_0
         $x_1_7 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -81,6 +83,7 @@ rule Worm_Win32_Combra_H_2147595063_0
         $x_1_7 = ".com.br" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

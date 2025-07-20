@@ -19,6 +19,7 @@ rule Ransom_Win64_BianLian_B_2147829630_0
         $x_1_4 = "text=  zombie" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win64_BianLian_PA_2147830712_0
         $x_1_6 = "text=  zombie" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Ransom_Win64_BianLian_PB_2147837940_0
         $x_10_3 = {48 8b 54 24 ?? 48 8d 4a ?? 48 8b 84 24 [0-4] 48 8b 54 24 ?? 48 39 ca 0f 8e [0-4] 48 89 4c 24 ?? 48 8b b4 24 [0-4] 48 89 f7 48 0f af f1 48 03 35 ?? ?? ?? ?? 48 89 b4 24 [0-4] 48 89 c3 48 8b 84 24 [0-4] 48 89 f9 e8 [0-4] 48 8b b4 24 [0-4] 48 39 f0 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Ransom_Win64_BianLian_PC_2147838463_0
         $x_2_3 = {6d 61 69 6e 2e 53 63 61 6e 46 6f 72 46 69 6c 65 73 2e 66 75 6e 63 31 ?? 6d 61 69 6e 2e 6d 61 69 6e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -120,6 +124,7 @@ rule Ransom_Win64_BianLian_OBS_2147917696_0
         $x_1_5 = "Look at this instruction.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule Ransom_Win64_BianLian_FEM_2147920134_0
         $x_1_5 = "Zz158df@jniow45h@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

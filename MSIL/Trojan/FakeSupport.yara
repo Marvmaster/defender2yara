@@ -22,6 +22,7 @@ rule Trojan_MSIL_FakeSupport_MA_2147813146_0
         $x_1_7 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

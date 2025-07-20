@@ -18,6 +18,7 @@ rule VirTool_Win32_Headentesz_A_2147898254_0
         $x_1_3 = {89 45 ec c7 44 24 14 00 00 00 00 c7 44 24 10 00 00 00 00 c7 44 24 0c 00 00 00 00 c7 44 24 08 06 00 00 00 c7 44 24 04 01 00 00 00 c7 04 24 02 00 00 00 a1 ?? ?? ?? ?? ?? ?? 83 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

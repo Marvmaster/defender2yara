@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_IRCbot_B_2147648775_0
         $x_1_3 = {8b 44 24 0c 56 8d 0c 06 e8 ?? ff ff ff 30 01 83 c4 04 46 3b f7 7c e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

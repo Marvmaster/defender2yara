@@ -17,6 +17,7 @@ rule BrowserModifier_Win32_Cometsystems_14852_0
         $x_3_3 = "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Browser Helper Objects\\{1678F7E1-C422-11D0-AD7D-00400515CAAA}" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule BrowserModifier_Win32_Cometsystems_14852_1
         $x_16_6 = "<IMG alt=\"Click here to disable for the remainder of the browser session\" border=\"0\" height=\"14\" id=\"travelSnooze\" width=\"42\">" ascii //weight: 16
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_3_*) and 1 of ($x_2_*))) or
             ((1 of ($x_16_*))) or

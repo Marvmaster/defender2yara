@@ -19,6 +19,7 @@ rule Trojan_Win32_Cigril_B_2147849474_0
         $x_1_4 = {8b 46 18 48 8d 4e 28 33 01 41 89 06 8b 46 2c 33 46 1c 41 89 46 04 8b 46 30 33 46 20 41 89 46 08 8b 46 34 33 46 24 41 89 46 0c 49 83 c6 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

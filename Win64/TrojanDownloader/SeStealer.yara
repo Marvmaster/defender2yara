@@ -17,6 +17,7 @@ rule TrojanDownloader_Win64_SeStealer_A_2147905157_0
         $x_2_2 = {49 ff c0 ff c1 41 30 40}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

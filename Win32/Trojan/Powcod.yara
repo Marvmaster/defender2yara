@@ -21,6 +21,7 @@ rule Trojan_Win32_Powcod_RPJ_2147840061_0
         $x_1_6 = "UseBasicParsing" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

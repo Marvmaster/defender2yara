@@ -18,6 +18,7 @@ rule Trojan_Win64_MintZard_A_2147923638_0
         $x_1_3 = {55 48 89 e5 48 83 ec 08 44 8b d2 41 81 f0 6e 74 65 6c b9 17 00 00 00 48 83 c0 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

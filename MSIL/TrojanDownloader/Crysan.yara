@@ -21,6 +21,7 @@ rule TrojanDownloader_MSIL_Crysan_IFL_2147819212_0
         $x_1_6 = "WebClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_MSIL_Crysan_RS_2147839938_0
         $x_5_1 = {09 08 11 04 08 8e 69 5d 91 07 11 04 91 61 d2 6f 30 00 00 0a 11 04 17 58 13 04 11 04 07 8e 69 32 df}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanDownloader_MSIL_Crysan_RDA_2147841235_0
         $x_2_4 = {00 28 43 00 00 0a 03 ?? ?? ?? ?? ?? 16 1f 20 6f 40 00 00 0a 6f 44 00 00 0a 0a 28 43 00 00 0a 04 ?? ?? ?? ?? ?? 16 1f 10 6f 40 00 00 0a 6f 44 00 00 0a 0b 02 06 07 ?? ?? ?? ?? ?? 0c 2b 00 08 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule TrojanDownloader_MSIL_Crysan_ACY_2147943529_0
         $x_5_3 = "filecrumb.nl/panel/uploads/Aepnziwy.wav" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Trojan_MSIL_Rescoms_BQ_2147795514_0
         $x_3_7 = "FromBase64String" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

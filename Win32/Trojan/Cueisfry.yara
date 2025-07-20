@@ -17,6 +17,7 @@ rule Trojan_Win32_Cueisfry_A_2147685131_0
         $x_1_3 = {63 73 72 73 73 77 69 6e 6c 6f 67 6f 6e 73 65 72 76 69 63 65 73 6c 73 61 73 73 73 76 63 68 6f 73 74 73 70 6f 6f 6c 73 76 65 78 70 6c 6f 72 65 72 63 74 66 6d 6f 6e 63 6f 6e 69 6d 65 77 6d 69 70 72 76 73 65 73 79 73 74 65 6d 73 6d 73 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

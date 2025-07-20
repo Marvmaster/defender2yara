@@ -23,6 +23,7 @@ rule Worm_Win32_Usbalex_B_2147597962_0
         $x_1_9 = "usb.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

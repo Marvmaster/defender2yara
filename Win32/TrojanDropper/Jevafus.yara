@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Jevafus_A_2147609498_0
         $n_10_3 = "(C) Grandsoft Corp. Ltd." wide //weight: -10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }

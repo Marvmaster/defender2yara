@@ -23,6 +23,7 @@ rule PWS_Win32_Pony_RU_2147730777_0
         $x_1_9 = "trustno1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

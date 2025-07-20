@@ -20,6 +20,7 @@ rule HackTool_Linux_Midav_A_2147826929_0
         $x_2_5 = "Vadim v" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

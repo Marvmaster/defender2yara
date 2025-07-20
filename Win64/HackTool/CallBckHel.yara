@@ -19,6 +19,7 @@ rule HackTool_Win64_CallBckHel_2147808771_0
         $x_1_4 = "k32enumdevicedrivers" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

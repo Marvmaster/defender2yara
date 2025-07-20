@@ -18,6 +18,7 @@ rule SoftwareBundler_Win32_Techsnab_222310_0
         $x_2_4 = "&versie /fi \"PID ne %l&version=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -56,6 +57,7 @@ rule SoftwareBundler_Win32_Techsnab_222310_1
         $x_1_15 = {02 74 08 6a 02 58 e9 ?? ?? ?? ?? c7 85 ?? ?? ff ff 01 00 00 00 83 bd ?? ?? ff ff 02 74 08 6a 02 58 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

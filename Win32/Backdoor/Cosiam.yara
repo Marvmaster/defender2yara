@@ -35,6 +35,7 @@ rule Backdoor_Win32_Cosiam_2147572218_0
         $x_5_21 = "%s/r.php?i=%u&s=%u&o=%u&c=%u&v=%u&h=%u&l=%u&a=%u&ip=%s&win" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 6 of ($x_1_*))) or
             ((5 of ($x_2_*) and 4 of ($x_1_*))) or

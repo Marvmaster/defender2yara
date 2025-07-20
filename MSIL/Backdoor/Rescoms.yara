@@ -22,6 +22,7 @@ rule Backdoor_MSIL_Rescoms_AA_2147733549_0
         $x_1_7 = "ReclaimMutex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Backdoor_MSIL_Rescoms_C_2147794425_0
         $x_3_4 = "TextBoxTabStops" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

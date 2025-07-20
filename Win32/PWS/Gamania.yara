@@ -25,6 +25,7 @@ rule PWS_Win32_Gamania_A_2147583267_0
         $x_1_10 = "IHTMLElementCollection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_2_*))) or
             (all of ($x*))
@@ -57,6 +58,7 @@ rule PWS_Win32_Gamania_B_2147583511_0
         $x_2_9 = {67 61 6d 65 3a 6a 70 72 6f 0d 0a 73 65 72 76 65 72 3a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_3_*) and 1 of ($x_2_*))) or
             ((3 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -89,6 +91,7 @@ rule PWS_Win32_Gamania_C_2147601655_0
         $x_5_2 = {8b 4d fc 8a 0c 01 80 f1 86 51 59 88 0c 03 40 4a 75 ee}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +134,7 @@ rule PWS_Win32_Gamania_D_2147601806_0
         $x_1_22 = {c3 cc d3 c9 c4 dc 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_100_*) and 2 of ($x_1_*))) or
@@ -159,6 +163,7 @@ rule PWS_Win32_Gamania_E_2147603136_0
         $x_1_2 = {6a 00 8d 45 fc 50 68 01 04 00 00 8d 85 ef fb ff ff 50 56 e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +190,7 @@ rule PWS_Win32_Gamania_B_2147606000_0
         $x_1_7 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

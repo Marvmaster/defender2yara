@@ -26,6 +26,7 @@ rule Worm_Win32_Skincs_A_2147582089_0
         $x_1_12 = "livekiss.cn/ma" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Bankinc_A_2147678809_0
         $x_1_5 = ":88/soft/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Bankinc_B_2147678817_0
         $x_1_5 = {00 68 6f 75 7a 75 69 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Bankinc_C_2147678821_0
         $x_1_4 = {2f 00 73 00 6f 00 66 00 74 00 2f 00 63 00 68 00 61 00 6e 00 67 00 79 00 6f 00 75 00 2f 00 67 00 65 00 74 00 [0-16] 2e 00 61 00 73 00 70 00 3f 00 69 00 64 00 3d 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_Bankinc_2147679612_0
         $x_1_5 = ":88/soft/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -131,6 +135,7 @@ rule Trojan_Win32_Bankinc_2147679612_1
         $x_1_22 = "www.99bill.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -154,6 +159,7 @@ rule Trojan_Win32_Bankinc_D_2147681962_0
         $x_1_4 = "pay.ztgame.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

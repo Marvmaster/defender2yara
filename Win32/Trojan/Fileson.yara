@@ -18,6 +18,7 @@ rule Trojan_Win32_Fileson_A_2147654123_0
         $x_1_4 = {66 73 6e 31 2e 64 6c 6c 00 4c 33 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

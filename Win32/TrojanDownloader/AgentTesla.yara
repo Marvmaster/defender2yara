@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_AgentTesla_CCHW_2147905171_0
         $x_1_1 = {8a 14 1a 8a 1c 31 32 d3 8b 5d ?? 88 14 01 b8 01 00 00 00 03 c7 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

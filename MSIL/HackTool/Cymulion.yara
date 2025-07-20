@@ -21,6 +21,7 @@ rule HackTool_MSIL_Cymulion_SBR_2147772512_0
         $x_1_6 = "CymulateDllHijack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

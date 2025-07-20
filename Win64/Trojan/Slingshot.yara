@@ -22,6 +22,7 @@ rule Trojan_Win64_Slingshot_A_2147726434_0
         $x_2_7 = {e8 89 ca a0 c7 45 ?? b7 d7 ca a2 c7 45 ?? b0 bb e5 d1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

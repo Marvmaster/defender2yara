@@ -19,6 +19,7 @@ rule Ransom_MSIL_Blacksun_DA_2147768063_0
         $x_1_4 = ".blacksun" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_MSIL_Blacksun_DB_2147769556_0
         $x_1_5 = ".blacksun" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

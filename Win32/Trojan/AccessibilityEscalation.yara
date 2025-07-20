@@ -17,6 +17,7 @@ rule Trojan_Win32_AccessibilityEscalation_GR_2147755306_0
         $x_2_2 = "Image File Execution Options\\sethc.exe\" /v Debugger /t REG_SZ /d \"C:\\windows\\system32\\taskmgr.exe\" /f" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

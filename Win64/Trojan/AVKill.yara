@@ -21,6 +21,7 @@ rule Trojan_Win64_AVKill_A_2147906571_0
         $x_2_6 = "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Scan\" /v \"DisableScanningNetworkFiles\" /t reg_DWORD /d \"1\" /f" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

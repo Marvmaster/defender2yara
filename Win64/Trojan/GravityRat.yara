@@ -17,6 +17,7 @@ rule Trojan_Win64_GravityRat_AGRV_2147932457_0
         $x_1_2 = {48 89 f9 48 29 df 48 f7 df 48 c1 ff 3f 48 21 df 48 89 c6 48 29 d8 48 8b 5c 24 50 8b 14 13 48 83 f8 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

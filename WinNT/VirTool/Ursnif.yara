@@ -17,6 +17,7 @@ rule VirTool_WinNT_Ursnif_B_2147618618_0
         $x_1_3 = "\\hide_evr2.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -47,6 +48,7 @@ rule VirTool_WinNT_Ursnif_C_2147622349_0
         $x_1_7 = "hide_evr2.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

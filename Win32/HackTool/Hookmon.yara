@@ -18,6 +18,7 @@ rule HackTool_Win32_Hookmon_S_2147730428_0
         $x_1_4 = "\\Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

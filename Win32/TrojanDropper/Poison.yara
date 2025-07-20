@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Poison_B_2147649867_0
         $x_1_7 = "&&systemcpoy=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule TrojanDropper_Win32_Poison_E_2147692681_0
         $x_1_2 = {53 50 68 00 40 01 00 68 ?? ?? ?? ?? c6 05 ?? ?? ?? ?? 4d ff 75 fc c6 05 ?? ?? ?? ?? 5a c6 05 ?? ?? ?? ?? 90 ff 15 ?? ?? ?? ?? ff d6 83 f8 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

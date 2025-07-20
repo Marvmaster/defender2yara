@@ -20,6 +20,7 @@ rule Ransom_MSIL_ShinoLocker_KS_2147896071_0
         $x_3_5 = "ShinoLocker" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

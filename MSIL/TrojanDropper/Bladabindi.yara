@@ -19,6 +19,7 @@ rule TrojanDropper_MSIL_Bladabindi_AH_2147725844_0
         $x_2_4 = {5c 57 6f 72 6d (20|2d) 43 6c 69 65 6e 74 (20|2d) 4e 6f 72 6d 61 6c 44 6f 77 6e 6c 6f 61 64 65 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -46,6 +47,7 @@ rule TrojanDropper_MSIL_Bladabindi_NIT_2147922107_0
         $x_1_3 = "GetResourceString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

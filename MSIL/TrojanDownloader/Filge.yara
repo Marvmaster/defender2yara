@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_Filge_A_2147694394_0
         $x_2_3 = "/c cd %temp% & start /B" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

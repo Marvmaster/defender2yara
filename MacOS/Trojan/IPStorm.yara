@@ -21,6 +21,7 @@ rule Trojan_MacOS_IPStorm_A_2147765116_0
         $x_1_6 = "avbypass" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (5 of ($x*))
 }
 

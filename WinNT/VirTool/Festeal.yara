@@ -16,6 +16,7 @@ rule VirTool_WinNT_Festeal_C_2147598187_0
         $x_1_2 = {8b 45 0c 83 78 04 00 0f 84 87 00 00 00 68 ?? ?? 01 00 8b 45 0c 8b 48 04 51 e8 ?? ?? 00 00 83 c4 08 85 c0 75 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

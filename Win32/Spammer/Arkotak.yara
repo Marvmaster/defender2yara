@@ -20,6 +20,7 @@ rule Spammer_Win32_Arkotak_A_2147685855_0
         $x_1_6 = {80 fa 44 89 45 60 c6 45 67 01 0f 84 ?? ?? ?? ?? 80 fa 56 0f 84 ?? ?? ?? ?? 66 81 39 4c 4d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

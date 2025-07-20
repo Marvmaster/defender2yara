@@ -16,6 +16,7 @@ rule Trojan_Win32_Wantvi_A_114036_0
         $x_1_1 = {50 e8 14 ff ff ff 8b 4c 24 1c 50 68 ?? ?? 00 00 51 68 ?? ?? 00 10 56 ff 15 ?? ?? 00 10 83 c4 18 68 00 28 00 00 6a 08 ff d5 50 ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Wantvi_D_116205_0
         $x_1_11 = "\\mpfirewall.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -76,6 +78,7 @@ rule Trojan_Win32_Wantvi_E_116218_0
         $x_1_6 = "/6:aja mqaga" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -105,6 +108,7 @@ rule Trojan_Win32_Wantvi_F_116376_0
         $x_1_7 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -131,6 +135,7 @@ rule Trojan_Win32_Wantvi_I_123790_0
         $x_1_3 = {eb 17 6a 00 6a 06 ff 15 ?? ?? ?? ?? 85 c0 75 04 33 c0 eb 05 b8 01 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

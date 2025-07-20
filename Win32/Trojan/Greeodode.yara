@@ -22,6 +22,7 @@ rule Trojan_Win32_Greeodode_A_2147706551_0
         $x_1_8 = ".DEFAULT\\XFS\\LOGICAL_SERVICES\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

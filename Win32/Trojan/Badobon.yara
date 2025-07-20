@@ -20,6 +20,7 @@ rule Trojan_Win32_Badobon_A_2147712428_0
         $x_5_6 = {41 64 6f 62 65 [0-16] 46 6c 61 73 68 [0-16] 54 65 6d 70 [0-16] 49 6e 69 74 [0-16] 4c 6f 67 6f 6e [0-16] 55 70 64 61 74 65 [0-16] 49 44 4d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

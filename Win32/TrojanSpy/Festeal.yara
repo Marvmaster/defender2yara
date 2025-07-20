@@ -23,6 +23,7 @@ rule TrojanSpy_Win32_Festeal_A_2147598183_0
         $x_1_8 = "GetWindowsDirectoryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanSpy_Win32_Festeal_A_2147598184_0
         $x_1_1 = {b8 bf cf ff db ff 08 8b ea 6a ff 6a 02 e8 0d 02 54 8b f0 83 fe ff 74 f0 57 56 48 b3 fd b3 ff eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanSpy_Win32_Festeal_B_2147598185_0
         $x_1_1 = {8b ec 83 ec 3c a1 00 e0 40 00 33 c5 89 45 fc 56 57 6a 06 59 be 68 20 0e 8d 7d e0 7f c6 be fb f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule TrojanSpy_Win32_Festeal_B_2147598186_0
         $x_1_3 = {66 83 fd 19 0f b7 f8 74 0c 66 83 fd 50 74 06 66 83 fd 6e 75 14 8b 4c 24 10 51 ff 15 ?? ?? ?? 00 85 f6 74 34 0f b7 c5 eb 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule TrojanSpy_Win32_Festeal_C_2147602233_0
         $x_1_1 = {84 c9 74 0f 80 f9 40 74 26 8a 48 01 83 c0 01 0e 75 f1 80 38 fd fd 8f fd 17 33 c0 8b 8c 29 33 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule TrojanSpy_Win32_Festeal_C_2147611907_0
         $x_8_4 = {c7 46 20 32 00 00 00 0f 84 ?? ?? 00 00 83 7e 14 24 0f 86 ?? ?? 00 00 6a 24 68 ?? ?? ?? ?? 50 e8}  //weight: 8, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 1 of ($x_2_*))) or
             ((1 of ($x_8_*) and 1 of ($x_4_*))) or

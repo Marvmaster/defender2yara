@@ -17,6 +17,7 @@ rule Trojan_MSIL_nJRat_AG_2147838187_0
         $x_1_2 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_nJRat_ANJ_2147841499_0
         $x_2_1 = {08 d2 61 d2 81 0d 00 00 01 11 0a 20 ff 00 00 00 5f 2d 0b 08 08 5a 20 b7 5c 8a 00 6a 5e 0c 11 0a 17 58 13 0a 11 0a 11 08 8e 69}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_MSIL_nJRat_ANJ_2147841499_1
         $x_1_1 = {13 64 11 64 16 11 62 a2 00 11 64 17 07 11 61 17 28 ?? 00 00 0a a2 00 11 64 18 11 0c 11 61 17 28 ?? 00 00 0a a2 00 11 64 19 11 17 11 61 17 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_MSIL_nJRat_ANJ_2147841499_2
         $x_2_1 = {0d 2b 41 7e 07 00 00 04 11 04 6f ?? ?? ?? 0a 74 03 00 00 01 6f ?? ?? ?? 0a 2c 25 11 04 08 fe 01 16 fe 01 2c 17 7e 07 00 00 04 08 7e 07 00 00 04 11 04 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +106,7 @@ rule Trojan_MSIL_nJRat_ANJ_2147841499_3
         $x_1_2 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +129,7 @@ rule Trojan_MSIL_nJRat_ANJ_2147841499_4
         $x_1_2 = "TripleDESCryptoServiceProvider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +152,7 @@ rule Trojan_MSIL_nJRat_ANJ_2147841499_5
         $x_2_2 = {2b 12 02 28 ?? 00 00 06 2c 06 16 28 ?? 00 00 0a 06 17 58 0a 06 73 15 00 00 0a 19 1f 0a 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +175,7 @@ rule Trojan_MSIL_nJRat_ANJ_2147841499_6
         $x_2_2 = {58 17 59 17 58 17 59 17 58 8d ?? 00 00 01 0c 08 8e 69 17 59 0d 16 13 04 2b 1b 08 11 04 07 11 04 1e 5a 1e 6f ?? 00 00 0a 18 28 ?? 00 00 0a 9c 11 04 17 58 13 04 11 04 09 fe 02 16 fe 01}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +198,7 @@ rule Trojan_MSIL_nJRat_AJ_2147841500_0
         $x_1_2 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +220,7 @@ rule Trojan_MSIL_nJRat_ADF_2147853338_0
         $x_1_1 = {13 04 00 07 08 16 20 00 10 00 00 6f ef 00 00 0a 13 05 11 05 16 fe 02 13 06 11 06 2c 0d 11 04 08 16 11 05 6f 54 00 00 0a 00 00 00 00 11 05 16 fe 02 13 07 11 07 2d cb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

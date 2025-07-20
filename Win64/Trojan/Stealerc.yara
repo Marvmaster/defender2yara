@@ -19,6 +19,7 @@ rule Trojan_Win64_Stealerc_GPA_2147916632_0
         $x_1_4 = "xs<BWE]]_ZZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_Stealerc_NV_2147931488_0
         $x_1_2 = "stealer_bot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

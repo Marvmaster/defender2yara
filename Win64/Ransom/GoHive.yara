@@ -22,6 +22,7 @@ rule Ransom_Win64_GoHive_PAA_2147786531_0
         $x_1_7 = "and in mass media" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

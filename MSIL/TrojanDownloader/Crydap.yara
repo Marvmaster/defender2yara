@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Crydap_A_2147709197_0
         $x_1_4 = {5c 50 72 6f 6a 65 63 74 73 5c 50 44 46 5c 50 61 64 43 5f 44 6f 77 6e 6c 6f 61 64 65 72 5c 62 69 6e 5c 44 65 62 75 67 5c 4f 62 66 75 73 63 61 74 65 64 5c 50 61 64 43 5f 44 6f 77 6e 6c 6f 61 64 65 72 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

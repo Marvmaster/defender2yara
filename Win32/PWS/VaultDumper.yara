@@ -22,6 +22,7 @@ rule PWS_Win32_VaultDumper_GG_2147828528_0
         $x_1_7 = "SELECT * FROM logins" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

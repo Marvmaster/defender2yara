@@ -29,6 +29,7 @@ rule VirTool_WinNT_Fursto_F_2147598221_0
         $x_1_15 = "NtQueryFullAttributesFile [protected]:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 12 of ($x_1_*))) or
             ((2 of ($x_4_*) and 8 of ($x_1_*))) or
@@ -63,6 +64,7 @@ rule VirTool_WinNT_Fursto_G_2147598223_0
         $x_8_10 = {83 e9 01 89 4d c4 83 7d c4 0b 77 53 8b 55 c4 0f b6 82 ?? ?? ?? 00 ff 24 85 ?? ?? ?? 00 68}  //weight: 8, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_4_*) and 4 of ($x_1_*))) or

@@ -17,6 +17,7 @@ rule Trojan_Win32_Jalapeno_ARA_2147927387_0
         $x_2_2 = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTI" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

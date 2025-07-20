@@ -22,6 +22,7 @@ rule Backdoor_Win32_Agent_2147789785_0
         $x_1_8 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Backdoor_Win32_Agent_2147789785_1
         $x_1_8 = "OpenSCManagerA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Backdoor_Win32_Agent_2147789785_2
         $x_1_8 = "[Shell0]PE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +104,7 @@ rule Backdoor_Win32_Agent_2147789785_3
         $x_5_6 = "update_UpdateLocalSharedFiles some error" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +135,7 @@ rule Backdoor_Win32_Agent_RL_2147790241_0
         $x_1_11 = "LIBHIDE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -158,6 +163,7 @@ rule Backdoor_Win32_Agent_CAA_2147790280_0
         $x_1_8 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +185,7 @@ rule Backdoor_Win32_Agent_GI_2147790289_0
         $x_1_2 = {8a 07 fe c8 88 04 32 42 4f 3b d1 7c f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +212,7 @@ rule Backdoor_Win32_Agent_CAA_2147792069_0
         $x_1_7 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +240,7 @@ rule Backdoor_Win32_Agent_FD_2147792117_0
         $x_1_8 = "Antivirus Service" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -263,6 +272,7 @@ rule Backdoor_Win32_Agent_FH_2147792120_0
         $x_1_9 = "Norton Av crack.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -296,6 +306,7 @@ rule Backdoor_Win32_Agent_ACA_2147792152_0
         $x_1_11 = "RemoteHostIP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -342,6 +353,7 @@ rule Backdoor_Win32_Agent_HA_2147792332_0
         $x_1_24 = "Windows Updater Services" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 4 of ($x_2_*) and 7 of ($x_1_*))) or
             ((3 of ($x_10_*) and 5 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -396,6 +408,7 @@ rule Backdoor_Win32_Agent_ACF_2147792333_0
         $x_1_15 = "InternetGetConnectedState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 3 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -422,6 +435,7 @@ rule Backdoor_Win32_Agent_LV_2147792338_0
         $x_1_4 = "CreateRemoteThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -448,6 +462,7 @@ rule Backdoor_Win32_Agent_CAB_2147792340_0
         $n_100_7 = "\\CSCheat\\Driver" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -475,6 +490,7 @@ rule Backdoor_Win32_Agent_RJ_2147792351_0
         $x_10_7 = {46 00 64 ff 30 64 89 20 8b 83 fc 02 00 00 b2 01 e8 35 fc ff ff 8b 83 fc 02 00 00 ba 8c 79 46 00 8b 08 ff 91 88 00 00 00 8b 83 fc 02 00 00 ba 19 00 00 00 8b 08 ff 91 8c 00 00 00 8b 83 fc 02 00 00 83 ca ff 8b 08 ff 91 94 00 00 00 33 c0 5a 59 59 64 89 10 eb 14}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -508,6 +524,7 @@ rule Backdoor_Win32_Agent_ADF_2147792354_0
         $x_1_11 = "BeiZhu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -536,6 +553,7 @@ rule Backdoor_Win32_Agent_CF_2147792355_0
         $x_1_6 = "2.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -566,6 +584,7 @@ rule Backdoor_Win32_Agent_CK_2147792356_0
         $x_1_11 = "StopWait_%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -593,6 +612,7 @@ rule Backdoor_Win32_Agent_YZ_2147792364_0
         $x_1_8 = "open=setup.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -632,6 +652,7 @@ rule Backdoor_Win32_Agent_FT_2147792365_0
         $x_2_20 = "driver" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -660,6 +681,7 @@ rule Backdoor_Win32_Agent_KN_2147792366_0
         $x_1_9 = "HttpSendRequestA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -681,6 +703,7 @@ rule Backdoor_Win32_Agent_RM_2147792367_0
         $x_1_2 = {77 62 00 00 6f 70 65 6e 00 00 00 00 69 65 78 70 6c 6f 72 65 2e 65 78 65 00 00 00 00 20 3e 20 6e 75 6c 00 00 20 2f 63 20 20 64 65 6c 20 00 00 00 43 4f 4d 53 50 45 43 00 77 69 6e 6c 6f 67 6f 6e 2e 65 78 65 00 00 00 00 65 78 70 6c 6f 72 65 72 2e 65 78 65 00 00 00 00 5c 53 56 43 48 30 53 54 2e 45 58 45 00 00 00 00 44 4c 4c 00 5c 6d 73 76 63 6c 61 70 69 78 2e 64 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -715,6 +738,7 @@ rule Backdoor_Win32_Agent_ADB_2147792368_0
         $x_100_15 = {33 c0 53 56 57 8d 7c 24 0c f3 ab 8d 44 24 0c 68 00 01 00 00 50 ff 15 ?? ?? ?? ?? ?? ?? ?? ?? ?? 83 c9 ff 33 c0 8d 54 24 0c f2 ae f7 d1 2b f9 68 3f 00 0f 00 8b f7 8b d9 8b fa 83 c9 ff f2 ae 8b cb 4f c1 e9 02 f3 a5 8b cb 8d 54 24 10 83 e1 03 50 f3 a4 bf ?? ?? ?? ?? 83 c9 ff f2 ae f7 d1 2b f9 50 8b f7 8b d9 8b fa 83 c9 ff f2 ae 8b cb 4f c1 e9 02 f3 a5 8b cb 83 e1 03 f3 a4 ff 15 ?? ?? ?? ?? 85 c0}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 13 of ($x_1_*))) or
             (all of ($x*))
@@ -754,6 +778,7 @@ rule Backdoor_Win32_Agent_ADC_2147792369_0
         $x_100_17 = {33 c0 53 56 57 8d 7c 24 ?? f3 ab 8d 44 24 ?? 68 00 01 00 00 50 ff 15 ?? ?? ?? ?? ?? ?? ?? ?? ?? 83 c9 ff 33 c0 8d ?? ?? ?? f2 ae f7 d1 2b f9 50 8b f7 8b d9 8b fa 83 c9 ff f2 ae 8b cb 4f c1 e9 02 f3 a5 6a 02 8b cb 6a 02 50 83 e1 03 6a 02 8d ?? ?? ?? 68 00 00 00 40 f3 a4 50 ff 15 ?? ?? ?? ?? ?? ?? ?? ?? 6a 00 51 8b f0 68 00 20 00 00 68 ?? ?? ?? ?? 56 ff 15}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_50_*) and 13 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -787,6 +812,7 @@ rule Backdoor_Win32_Agent_CC_2147792395_0
         $x_1_11 = "reset_spoof_sock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -814,6 +840,7 @@ rule Backdoor_Win32_Agent_FP_2147792397_0
         $x_1_5 = "privelegeupdates.info" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -837,6 +864,7 @@ rule Backdoor_Win32_Agent_GJ_2147792398_0
         $x_1_4 = {52 45 4d 4f 56 41 42 4c 45 00 46 49 58 45 44}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -865,6 +893,7 @@ rule Backdoor_Win32_Agent_PB_2147792419_0
         $x_1_9 = "AdjustTokenPrivileges" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -894,6 +923,7 @@ rule Backdoor_Win32_Agent_PD_2147792421_0
         $x_1_10 = "InternetGetConnectedState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -923,6 +953,7 @@ rule Backdoor_Win32_Agent_ADU_2147792422_0
         $x_1_7 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Browser Helper Objects" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -952,6 +983,7 @@ rule Backdoor_Win32_Agent_ADV_2147792423_0
         $x_1_10 = "Toolhelp32ReadProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 2 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -990,6 +1022,7 @@ rule Backdoor_Win32_Agent_ADX_2147792424_0
         $x_1_16 = "freeporntoday." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 5 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1019,6 +1052,7 @@ rule Backdoor_Win32_Agent_AFA_2147792425_0
         $x_1_7 = "regedit.exe /s /e  %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1048,6 +1082,7 @@ rule Backdoor_Win32_Agent_AFB_2147792426_0
         $x_1_7 = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\IEXPLORE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1078,6 +1113,7 @@ rule Backdoor_Win32_Agent_AFF_2147792427_0
         $x_1_8 = "Arquivo de Imagem JPEG" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1110,6 +1146,7 @@ rule Backdoor_Win32_Agent_DT_2147792429_0
         $x_1_10 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1135,6 +1172,7 @@ rule Backdoor_Win32_Agent_FQ_2147792433_0
         $x_1_3 = {53 65 74 4b 65 72 6e 65 6c 4f 62 6a 65 63 74 53 65 63 75 72 69 74 79 00 ?? ?? 4f 70 65 6e 53 43 4d 61 6e 61 67 65 72 41}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1159,6 +1197,7 @@ rule Backdoor_Win32_Agent_FW_2147792440_0
         $x_3_5 = "wpaw55&mfg" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -1185,6 +1224,7 @@ rule Backdoor_Win32_Agent_GS_2147792448_0
         $x_1_2 = "Global\\server" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1206,6 +1246,7 @@ rule Backdoor_Win32_Agent_GT_2147792449_0
         $x_1_2 = "Windows Update\\update.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1228,6 +1269,7 @@ rule Backdoor_Win32_Agent_GX_2147792450_0
         $x_1_3 = {41 8a 94 38 ?? ?? 00 10 8a 99 ?? ?? 00 10 32 d3 88 97 ?? ?? 00 10 75 06 88 9f ?? ?? 00 10 47 3b 7d fc 7c ce}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1252,6 +1294,7 @@ rule Backdoor_Win32_Agent_GY_2147792451_0
         $x_1_5 = "%s SP%d (Build %d)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1275,6 +1318,7 @@ rule Backdoor_Win32_Agent_CAC_2147792453_0
         $x_1_4 = {c6 45 ac 41 c6 45 ad 64 c6 45 ae 76 c6 45 af 61 c6 45 b0 70 c6 45 b1 69 c6 45 b2 33 c6 45 b3 32 c6 45 b4 2e c6 45 b5 64 c6 45 b6 6c c6 45 b7 6c c6 45 b8 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1300,6 +1344,7 @@ rule Backdoor_Win32_Agent_CAD_2147792454_0
         $x_1_6 = "mmtask MFC Application" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1325,6 +1370,7 @@ rule Backdoor_Win32_Agent_CAE_2147792455_0
         $x_1_6 = "Unicode Normalization DLL" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1350,6 +1396,7 @@ rule Backdoor_Win32_Agent_CAF_2147792456_0
         $x_1_6 = "xecure ssl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1376,6 +1423,7 @@ rule Backdoor_Win32_Agent_CAG_2147792457_0
         $x_1_7 = "new_connection_to_bounce():" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1399,6 +1447,7 @@ rule Backdoor_Win32_Agent_CAH_2147792458_0
         $x_1_4 = {0f 84 e0 00 00 00 8d ?? ?? ?? ?? ?? 68 ?? d2 40 00 (50|51) e8 ?? ?? 00 00 83 c4 08 85 c0 75 0f 8b ?? e4 0f 41 00 (51|52) e8 ?? ?? ff ff 83 c4 04 8d ?? ?? fc ff ff 68 ?? d2 40 00 (50|52)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1423,6 +1472,7 @@ rule Backdoor_Win32_Agent_CAI_2147792459_0
         $x_1_5 = "cmd.exe /C FOR /L %%i IN (1,1,%d) DO IF EXIST \"%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1451,6 +1501,7 @@ rule Backdoor_Win32_Agent_AXA_2147792461_0
         $x_1_9 = "Fuck" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -1480,6 +1531,7 @@ rule Backdoor_Win32_Agent_AXC_2147792462_0
         $x_1_4 = {00 5c 72 65 6c 65 61 73 65 2e 74 6d 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1502,6 +1554,7 @@ rule Backdoor_Win32_Agent_ABHO_2147792463_0
         $x_1_3 = "backdoor-v4-ed2k" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1525,6 +1578,7 @@ rule Backdoor_Win32_Agent_ABHP_2147792464_0
         $x_1_4 = {00 62 69 6e 64 00 63 6d 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1548,6 +1602,7 @@ rule Backdoor_Win32_Agent_GD_2147792465_0
         $x_1_4 = "system32.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1570,6 +1625,7 @@ rule Backdoor_Win32_Agent_GF_2147792466_0
         $x_2_3 = {00 64 6c 6c 2e 64 6c 6c 00 53 65 72 76 69 63 65 4d 61 69 6e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1591,6 +1647,7 @@ rule Backdoor_Win32_Agent_GG_2147792467_0
         $x_1_2 = "\\System32\\TrkWcs.ex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1613,6 +1670,7 @@ rule Backdoor_Win32_Agent_HB_2147792468_0
         $x_1_3 = "Comres.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1635,6 +1693,7 @@ rule Backdoor_Win32_Agent_HC_2147792469_0
         $x_1_3 = "SetThreadContext" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1657,6 +1716,7 @@ rule Backdoor_Win32_Agent_HD_2147792470_0
         $x_1_3 = "\\System32\\svchost.exe -k" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1681,6 +1741,7 @@ rule Backdoor_Win32_Agent_HE_2147792471_0
         $x_1_5 = {80 33 25 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1704,6 +1765,7 @@ rule Backdoor_Win32_Agent_OY_2147792473_0
         $x_1_4 = {6a 06 8d 85 ?? ?? ff ff 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

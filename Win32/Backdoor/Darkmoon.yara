@@ -27,6 +27,7 @@ rule Backdoor_Win32_Darkmoon_AE_2147792185_0
         $x_1_13 = "DmPaSsWrOnG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -53,6 +54,7 @@ rule Backdoor_Win32_Darkmoon_MR_2147792478_0
         $x_1_3 = "BlackMoon RunTime Error:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Backdoor_Win32_Darkmoon_DA_2147792479_0
         $x_1_4 = "BlackMoon RunTime Error" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

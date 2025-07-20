@@ -18,6 +18,7 @@ rule Trojan_Win32_Finkmilt_A_2147643115_0
         $x_1_3 = "sgope.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Finkmilt_B_2147650740_0
         $x_1_4 = "dopop.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -67,6 +69,7 @@ rule Trojan_Win32_Finkmilt_B_2147655216_0
         $x_1_2 = {8b d2 90 8b d2 8b d2 68 3f 00 0f 00 8b d2 90 6a 00 8b d2 90 6a 00 90 ff d0 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

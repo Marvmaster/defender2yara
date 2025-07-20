@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Fatenur_A_2147647503_0
         $x_1_6 = "sc start schedule" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))

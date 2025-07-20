@@ -18,6 +18,7 @@ rule Trojan_Win32_CobalStrike_ATZ_2147920761_0
         $x_1_3 = {6a 40 68 00 30 00 00 57 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

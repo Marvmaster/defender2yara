@@ -19,6 +19,7 @@ rule Ransom_MSIL_FoxxCrypt_PA_2147796812_0
         $x_1_4 = "Encrypting:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

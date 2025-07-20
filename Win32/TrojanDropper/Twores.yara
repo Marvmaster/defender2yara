@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Twores_2147605381_0
         $x_10_7 = {83 e8 01 72 0a 74 1b 48 74 2b 48 74 3b eb 4a 68 04 01 00 00 8d 85 ?? ?? ff ff 50 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_4_*))) or
@@ -49,6 +50,7 @@ rule TrojanDropper_Win32_Twores_L_2147632033_0
         $x_1_4 = "SizeofResource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

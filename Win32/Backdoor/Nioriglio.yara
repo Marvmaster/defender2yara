@@ -19,6 +19,7 @@ rule Backdoor_Win32_Nioriglio_A_2147697015_0
         $x_1_5 = "\\Img\\None.png" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Backdoor_Win32_Nioriglio_A_2147697015_1
         $x_1_6 = {5c 00 45 00 78 00 70 00 6c 00 6f 00 72 00 65 00 72 00 [0-16] 53 00 74 00 61 00 72 00 74 00 55 00 70 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

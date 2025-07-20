@@ -19,6 +19,7 @@ rule Trojan_Win64_CashStream_ZZ_2147905746_0
         $x_10_5 = "tcp://127.0.0.1:%hu" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_MSIL_AllComeClipBanker_A_2147835635_0
         $x_1_4 = "ToInteger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_AllComeClipBanker_B_2147835780_0
         $x_1_2 = "ToInteger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule VirTool_Win64_Chemonesz_A_2147917410_0
         $x_1_4 = {55 48 89 e5 48 83 ec 60 48 89 4d 10 48 89 55 18 c7 45 dc 60 00 00 00 8b 45 dc 65 48 8b 00 48 89 45 d0 48 8b 45 d0 48 89 45 f0 48 8b 45 f0 48 8b 40 18 48 8b 40 20 48 89 45 c8 c6 45 ef 00 c7 45 fc 00 00 00 00 80 7d ef 00 ?? ?? ?? ?? ?? ?? 83 7d fc 63}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

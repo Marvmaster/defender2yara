@@ -23,6 +23,7 @@ rule Trojan_MSIL_Bingoml_FY_2147797664_0
         $x_1_8 = "SELECT Rom_Name, Rom_Link FROM Rom WHERE Rom_ID = @rom_id" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_MSIL_Bingoml_RPH_2147830264_0
         $x_1_6 = "DownloadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_MSIL_Bingoml_ACS_2147833495_0
         $x_1_1 = {0a 0b 00 09 17 58 0d 09 20 00 01 00 00 fe 04 13 04 11 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Trojan_MSIL_Bingoml_MA_2147836528_0
         $x_2_5 = "AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule Trojan_MSIL_Bingoml_ABEV_2147837166_0
         $x_1_3 = "Document.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -140,6 +145,7 @@ rule Trojan_MSIL_Bingoml_NEAA_2147838073_0
         $x_2_2 = "Tk1DWENYSkdLSkdLREZLJA==" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_MSIL_Bingoml_RB_2147838508_0
         $x_1_3 = "$90ab7707-9109-47af-9c89-cf89543f04b1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -184,6 +191,7 @@ rule Trojan_MSIL_Bingoml_ABVJ_2147846878_0
         $x_5_1 = {0a 1f 09 0b 02 0d 16 13 04 2b 28 09 11 04 6f ?? 00 00 0a 0c 06 08 28 ?? 00 00 0a 07 59 28 ?? 00 00 0a 8c ?? 00 00 01 28 ?? 00 00 0a 0a 11 04 17 58 13 04 11 04 09 6f ?? 00 00 0a 32 ce 06 28 ?? 00 00 0a 0a 06 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +215,7 @@ rule Trojan_MSIL_Bingoml_NB_2147915400_0
         $x_2_3 = "RSDS/FiQiT" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

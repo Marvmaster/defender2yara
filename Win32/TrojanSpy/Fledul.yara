@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Fledul_2147646239_0
         $x_1_4 = "r%e%g* *a*d*d#" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanSpy_Win32_Fledul_B_2147646292_0
         $x_1_4 = "J20-41-20-U35-23-20-39-24-22-23-37" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

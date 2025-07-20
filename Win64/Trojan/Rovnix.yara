@@ -18,6 +18,7 @@ rule Trojan_Win64_Rovnix_2147691040_0
         $x_1_4 = "BN21Rc0LqZA9" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

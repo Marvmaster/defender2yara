@@ -16,6 +16,7 @@ rule Trojan_Win32_Clokgiya_A_2147708543_0
         $x_1_2 = {34 e9 b2 00 61 00 3e 8b 8e e8 d5 00 61 00 ea fd 36 06 6e a0 66 26 c0 30 61 00 61 07 ea 40 6d 8b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

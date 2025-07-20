@@ -22,6 +22,7 @@ rule Trojan_Win32_DLLInject_EM_2147895867_0
         $x_1_7 = "fdjYUGYb&%53321" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

@@ -21,6 +21,7 @@ rule HackTool_Linux_Gost_A_2147896538_0
         $x_1_6 = "gost.Filter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule HackTool_Linux_Gost_B_2147928877_0
         $x_1_3 = "/bypass/proto/bypass_grpc.pb.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule HackTool_Linux_Gost_C_2147936164_0
         $x_1_6 = "gost/cmd/gost/main.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

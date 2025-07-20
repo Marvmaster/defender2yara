@@ -17,6 +17,7 @@ rule Trojan_MSIL_Psdownload_PGP_2147936852_0
         $x_4_2 = "Disable-Windows-Defender/main/source.bat" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

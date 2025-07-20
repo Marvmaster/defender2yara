@@ -17,6 +17,7 @@ rule Trojan_Win64_Meterpreter_A_2147720175_0
         $x_1_3 = {c6 46 05 e9 2b c6 83 e8 05 89 46 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_Win64_Meterpreter_B_2147721790_0
         $x_1_4 = {41 ba ea 0f df e0 ff d5 [0-32] 41 ba 99 a5 74 61 ff d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win64_Meterpreter_B_2147721790_1
         $x_1_5 = {5d 49 be 77 73 32 5f 33 32 00 00 41 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win64_Meterpreter_C_2147721791_0
         $x_1_6 = {49 be 77 69 6e 68 74 74 70 00 [0-8] 49 c7 c2 4c 77 26 07 ff d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Trojan_Win64_Meterpreter_D_2147721792_0
         $x_1_6 = {49 be 77 69 6e 69 6e 65 74 00 [0-8] 49 c7 c2 4c 77 26 07 ff d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Trojan_Win64_Meterpreter_I_2147723086_0
         $x_1_4 = {00 65 78 65 63 5f 73 68 65 6c 6c 63 6f 64 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -168,6 +174,7 @@ rule Trojan_Win64_Meterpreter_J_2147723087_0
         $x_1_4 = {00 65 78 65 63 5f 73 68 65 6c 6c 63 6f 64 65 36 34 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -191,6 +198,7 @@ rule Trojan_Win64_Meterpreter_F_2147723308_0
         $x_1_1 = {48 31 c9 48 81 e9 ?? ?? ?? ?? 48 8d 05 ?? ?? ?? ?? 48 bb ?? ?? ?? ?? ?? ?? ?? ?? 48 31 58 27 48 2d f8 ff ff ff e2 f4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +227,7 @@ rule Trojan_Win64_Meterpreter_A_2147727902_0
         $x_1_8 = {bb f0 b5 a2 56 41 ba a6 95 bd 9d ff d5 48 83 c4 28 3c 06 7c 0a 80 fb e0 75 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -350,6 +359,7 @@ rule Trojan_Win64_Meterpreter_B_2147729691_0
         $x_1_7 = {48 ff c9 75 db 5f 41 ff e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -378,6 +388,7 @@ rule Trojan_Win64_Meterpreter_K_2147730769_0
         $x_1_5 = "mcachemeterpretermethodargs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -399,6 +410,7 @@ rule Trojan_Win64_Meterpreter_RDA_2147842632_0
         $x_2_1 = {8b 45 ec 33 45 f4 89 45 e8 8b 45 e8 c1 e8 18 88 45 bc 8b 45 e8 c1 e8 10 88 45 bd 8b 45 e8 c1 e8 08 88 45 be 8b 45 e8 88 45 bf b8 31 00 00 00 48 89 c1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -420,6 +432,7 @@ rule Trojan_Win64_Meterpreter_RPY_2147843246_0
         $x_1_1 = {43 8a 04 3e 41 32 84 1d e8 03 00 00 48 ff c3 42 88 04 3f 49 ff c7 83 e3 0f 49 39 ef 0f 8d 1b ff ff ff 48 85 db 0f 84 68 ff ff ff 49 39 f7 7c d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -441,6 +454,7 @@ rule Trojan_Win64_Meterpreter_MKA_2147845384_0
         $x_1_1 = {49 8b d0 49 2b c8 49 63 c1 4c 8d 1d ?? ?? ?? ?? 42 8a 04 18 32 04 11 88 02 41 8d 41 01 25 ?? ?? ?? ?? 7d 07 ff c8 83 c8 f0 ff c0 48 ff c2 44 8b c8 49 ff ca 75 d0 49 8b c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -462,6 +476,7 @@ rule Trojan_Win64_Meterpreter_CATR_2147846439_0
         $x_1_1 = {c7 84 24 10 01 00 00 03 00 10 00 48 8d 94 24 e0 00 00 00 48 8b 4c 24 60 ff ?? ?? ?? ?? ?? c7 44 24 20 40 00 00 00 41 b9 00 10 00 00 41 b8 00 10 00 00 33 d2 48 8b 4c 24 58 ff ?? ?? ?? ?? ?? 48 89 44 24 50 48 c7 44 24 20 00 00 00 00 41 b9 00 10 00 00 4c 8d 05 b8 1e 00 00 48 8b 54 24 50 48 8b 4c 24 58 ff ?? ?? ?? ?? ?? 48 8b 44 24 50 48 89 84 24 d8 01 00 00 48 8d 94 24 e0 00 00 00 48 8b 4c 24 60 ff ?? ?? ?? ?? ?? 48 8b 4c 24 60 ff ?? ?? ?? ?? ?? 48 8b 4c 24 60 ff ?? ?? ?? ?? ?? 48 8b 4c 24 58 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -484,6 +499,7 @@ rule Trojan_Win64_Meterpreter_CRHG_2147847852_0
         $x_1_2 = {48 31 c0 ac 41 c1 c9 0d 41 01 c1 38 e0 75 ?? 4c 03 4c 24 08 45 39 d1 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -506,6 +522,7 @@ rule Trojan_Win64_Meterpreter_UNK_2147848377_0
         $x_1_2 = {65 4c 8b 34 25 60 00 00 00 49 8b 5e 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -527,6 +544,7 @@ rule Trojan_Win64_Meterpreter_RPX_2147848736_0
         $x_1_1 = {c6 44 24 50 50 c6 44 24 51 53 c6 44 24 52 51 c6 44 24 53 52 c6 44 24 54 56 c6 44 24 55 57 c6 44 24 56 55 c6 44 24 57 54 c6 44 24 58 41 c6 44 24 59 50 c6 44 24 5a 41 c6 44 24 5b 51 c6 44 24 5c 41 c6 44 24 5d 52}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -548,6 +566,7 @@ rule Trojan_Win64_Meterpreter_CCAH_2147889379_0
         $x_1_1 = {48 8b 45 e8 48 8d 55 18 48 89 54 24 28 48 8b 55 10 48 89 54 24 20 41 b9 00 00 00 00 41 b8 00 00 00 00 ba 00 00 00 00 48 89 c1 48 8b 05 ?? ?? ?? ?? ff d0 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -571,6 +590,7 @@ rule Trojan_Win64_Meterpreter_SG_2147892989_0
         $x_1_3 = "Shellcode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -599,6 +619,7 @@ rule Trojan_Win64_Meterpreter_EB_2147895879_0
         $x_1_8 = "YZAXAYAZH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -621,6 +642,7 @@ rule Trojan_Win64_Meterpreter_PACD_2147899058_0
         $x_1_2 = "mysuperdupersecretkey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -643,6 +665,7 @@ rule Trojan_Win64_Meterpreter_DA_2147906273_0
         $x_1_2 = {41 0f b6 40 fd c1 e1 06 41 0b 0c 82 8b c1 c1 f8 10 41 88 04 29}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -665,6 +688,7 @@ rule Trojan_Win64_Meterpreter_CCIQ_2147914414_0
         $x_1_2 = {48 c7 44 24 20 00 00 00 00 41 b9 ?? ?? 00 00 4c 8d 05 ?? ?? ?? ?? 48 89 c1 48 8b 05 ?? 6e 01 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -689,6 +713,7 @@ rule Trojan_Win64_Meterpreter_GAD_2147939647_0
         $x_1_4 = "TARGETRESOURCE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

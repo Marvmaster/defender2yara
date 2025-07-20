@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Clikug_A_2147686057_0
         $x_1_3 = ".?AVCTinyInstallerApp@@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_Win32_Clikug_A_2147686057_1
         $x_1_5 = ".?AVCTinyInstallerApp@@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -67,6 +69,7 @@ rule TrojanDownloader_Win32_Clikug_B_2147686134_0
         $x_1_4 = "http://cdn.gigaclicks.net/file.php?supp=126" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -93,6 +96,7 @@ rule TrojanDownloader_Win32_Clikug_B_2147686134_1
         $x_1_4 = "cdn.idlecrawler.com/precheck/?supp=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

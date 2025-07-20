@@ -19,6 +19,7 @@ rule VirTool_Win64_Ghesesz_A_2147890415_0
         $x_1_4 = {48 c7 44 24 30 00 00 00 00 c7 44 24 28 80 00 00 00 c7 44 24 20 02 00 00 00 45 33 c9 45 33 c0 ba 00 00 00 40 48 8d ?? ?? ?? ff 15 ?? ?? ?? ?? 48 89 44 24 48 48 83}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Virus_Win32_Liji_A_2147600119_0
         $x_1_3 = {6a 00 51 6a 64 52 ff b5 ?? ?? ff ff ff 15 ?? ?? ?? ?? ff b5 ?? ?? ff ff ff 15 ?? ?? ?? ?? 8b 8d ?? ?? ff ff 36 c6 84 29 ?? ?? ff ff 00 8b 8d ?? ?? ff ff 36 81 b4 29 ?? ?? ff ff 90 00 00 00 e2 f2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

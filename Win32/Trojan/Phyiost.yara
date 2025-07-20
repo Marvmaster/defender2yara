@@ -19,6 +19,7 @@ rule Trojan_Win32_Phyiost_A_2147626539_0
         $x_1_5 = "}aae/::" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -46,6 +47,7 @@ rule Trojan_Win32_Phyiost_B_2147634169_0
         $x_1_4 = {c7 07 64 6c 6c 63 83 c7 04 c7 07 61 63 68 65 83 c7 04 c7 07 5c 73 72 73 83 c7 04 c7 07 76 63 2e 64 83 c7 04 66 c7 07 6c 6c 83 c7 02 c6 07 00 6a 00 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8d 3d ?? ?? ?? ?? 8d 35 ?? ?? ?? ?? b9 0b 00 00 00 f3 a4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

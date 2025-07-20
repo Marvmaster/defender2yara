@@ -19,6 +19,7 @@ rule Ransom_MSIL_FakeBot_MK_2147788444_0
         $x_1_4 = "cost increases with time, don't waste your time" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

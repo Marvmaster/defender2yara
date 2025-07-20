@@ -16,6 +16,7 @@ rule Trojan_Win32_Fsysna_GM_2147755704_0
         $x_1_1 = {8b c1 99 f7 fe 8a 44 14 0c 30 04 19 41 81 f9 [0-4] 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Fsysna_ARA_2147837127_0
         $x_2_5 = "\\TEMP\\spoolsv.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Fsysna_GND_2147893563_0
         $x_1_4 = "annofaie" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_Fsysna_AS_2147896265_0
         $x_5_3 = "C:\\ProgramData\\svchost.exe" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Win32_Fsysna_GMX_2147934045_0
         $x_10_1 = {02 d2 02 d2 c0 eb 04 0a d3 88 16 0f b6 50 01 0f b6 18 0f b6 94 15 ?? ?? ?? ?? 0f b6 9c 1d ?? ?? ?? ?? c0 ea 02 c0 e3 04 0a d3 88 56 01 0f b6 50 01 0f b6 94 15 ?? ?? ?? ?? 0f b6 58 02 c0 e2 06 0a 94 1d ?? ?? ?? ?? 83 c6 03 88 56 ff 83 c0 04 4f}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Trojan_Win32_Fsysna_NITs_2147934878_0
         $x_1_8 = "EndUpdateResourceW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

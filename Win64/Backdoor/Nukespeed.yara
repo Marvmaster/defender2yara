@@ -23,6 +23,7 @@ rule Backdoor_Win64_Nukespeed_SA_2147762594_0
         $x_1_8 = "/about.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((4 of ($x_10_*) and 2 of ($x_5_*))) or

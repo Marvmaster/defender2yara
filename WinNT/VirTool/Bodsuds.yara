@@ -17,6 +17,7 @@ rule VirTool_WinNT_Bodsuds_A_2147623521_0
         $x_1_3 = {bf 10 00 00 c0 74 4f 81 f9 4b e1 22 00 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

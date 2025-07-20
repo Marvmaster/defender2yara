@@ -16,6 +16,7 @@ rule Spammer_WinNT_Srizbi_A_2147605320_0
         $x_1_2 = {7c ed 89 10 8d 50 08 89 16 2b f8 83 ef 14 c6 02 58 8b 10 41 89 70 04 c6 40 09 68 89 50 0a c6 40 0e 50 c6 40 0f e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

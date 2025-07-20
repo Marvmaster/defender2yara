@@ -26,6 +26,7 @@ rule Ransom_Win32_DarkTrace_MA_2147848095_0
         $x_1_11 = "Mail (OnionMail) Support: lockdark@onionmail.org" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule Ransom_Win32_DarkTrace_MKV_2147848248_0
         $x_1_1 = {8b c1 c1 e8 ?? 88 45 fa 8d 45 b0 50 8d 45 ?? c1 e9 18 50 ff 75 08 88 4d fb ff d2 8b 45 18 83 c4 0c 8b 55 0c 8d 0c 18 8a 44 35 ?? 43 30 01 8b 45 18 83 ef 01 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

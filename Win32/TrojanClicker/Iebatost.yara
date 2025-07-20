@@ -26,6 +26,7 @@ rule TrojanClicker_Win32_Iebatost_A_2147685731_0
         $x_100_12 = {6a 64 ff 15 ?? ?? ?? ?? 6a 00 6a 09 ff d5 c1 e0 10 50 6a 09 68 00 01 00 00 57 ff d3 6a 00 6a 09 ff d5 c1 e0 10 50 6a 09 68 01 01 00 00 57 ff d3 83 ee 01 85 f6 7f c9}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_100_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or

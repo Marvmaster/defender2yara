@@ -18,6 +18,7 @@ rule Ransom_MSIL_Troli_A_2147689176_0
         $x_1_4 = "SendMessage&User=true&Iron=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_MSIL_Troli_B_2147728569_0
         $x_1_6 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

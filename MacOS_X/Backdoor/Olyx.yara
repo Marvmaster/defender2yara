@@ -21,6 +21,7 @@ rule Backdoor_MacOS_X_Olyx_B_2147655207_0
         $x_2_7 = {ba 00 00 00 00 83 f8 01 75 [0-6] 00 00 c7 00 fa ff ff ff ba 01 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or

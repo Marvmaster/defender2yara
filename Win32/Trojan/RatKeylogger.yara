@@ -22,6 +22,7 @@ rule Trojan_Win32_RatKeylogger_UV_2147796001_0
         $x_1_7 = "RatStarter\\Release Md\\Rat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

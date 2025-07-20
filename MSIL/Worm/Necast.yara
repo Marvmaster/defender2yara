@@ -16,6 +16,7 @@ rule Worm_MSIL_Necast_A_2147638824_0
         $x_1_2 = {72 01 00 00 70 28 20 00 00 0a 73 21 00 00 0a 0a 06 72 05 00 00 70 6f 22 00 00 0a 74 09 00 00 1b 28 14 00 00 06 28 23 00 00 0a 6f 24 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Worm_MSIL_Necast_B_2147643774_0
         $x_1_6 = "firewall set opmode disable" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -70,6 +72,7 @@ rule Worm_MSIL_Necast_D_2147647874_0
         $x_1_6 = "firewall set opmode disable" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -98,6 +101,7 @@ rule Worm_MSIL_Necast_F_2147648138_0
         $x_1_5 = "\\Windows\\system\\wsystem.vx" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -128,6 +132,7 @@ rule Worm_MSIL_Necast_H_2147654284_0
         $x_1_11 = "jn.redirectme.net:305" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_5_*) and 2 of ($x_1_*))) or
             ((7 of ($x_5_*))) or
@@ -157,6 +162,7 @@ rule Worm_MSIL_Necast_J_2147666565_0
         $x_1_6 = "[endof]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanSpy_Win64_Ursnif_B_2147648285_0
         $x_1_2 = {b9 ff 03 1f 00 ff 15 ?? ?? ?? ?? 48 85 c0 48 8b f8 74 18 45 33 c0 48 8b d0 48 8b ce ff 15 ?? ?? ?? ?? 48 8b cf ff 15 ?? ?? ?? ?? 48 8d 54 24 ?? 48 8b cb e8 ?? ?? ?? ?? 85 c0 75 ?? 48 8b cb ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +60,7 @@ rule TrojanSpy_Win64_Ursnif_A_2147651085_0
         $x_1_24 = "/U /C \"type %s1 > %s & del %s1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -90,6 +92,7 @@ rule TrojanSpy_Win64_Ursnif_BB_2147686159_0
         $x_1_7 = "cmd /C \"systeminfo.exe > %s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

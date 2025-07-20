@@ -18,6 +18,7 @@ rule Trojan_MSIL_Kufshen_A_2147691376_0
         $x_1_4 = "L21pbmVyL2ZpbGVsaXN0LnR4dA==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Kufshen_B_2147691377_0
         $x_8_5 = "btcguild.com:8332" wide //weight: 8
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_4_*))) or
             ((1 of ($x_8_*) and 2 of ($x_4_*))) or

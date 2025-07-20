@@ -55,6 +55,7 @@ rule TrojanDropper_Win32_Veslorn_B_2147603180_0
         $x_1_41 = "SnipeSword.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_100_*) and 5 of ($x_1_*))) or
             (all of ($x*))

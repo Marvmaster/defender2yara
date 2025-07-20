@@ -17,6 +17,7 @@ rule Trojan_Win32_Micropsia_A_2147730661_0
         $x_1_3 = "winmgmts:\\\\localhost\\root\\SecurityCenter2" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

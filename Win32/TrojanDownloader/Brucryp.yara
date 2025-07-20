@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_Brucryp_A_2147686843_0
         $x_1_10 = {2e 00 69 00 6e 00 73 00 74 00 73 00 79 00 6e 00 63 00 2e 00 65 00 75 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule TrojanDownloader_Win32_Brucryp_B_2147705473_0
         $x_1_3 = {65 00 76 00 65 00 6e 00 74 00 74 00 6f 00 73 00 79 00 6e 00 63 00 74 00 72 00 74 00 68 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule TrojanDownloader_Win32_Brucryp_C_2147706026_0
         $x_1_3 = {69 00 70 00 63 00 68 00 6f 00 6f 00 6b 00 73 00 79 00 6e 00 63 00 [0-208] 25 00 41 00 50 00 50 00 44 00 41 00 54 00 41 00 25 00 5c 00 4d 00 69 00 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00 5c 00 43 00 72 00 79 00 70 00 74 00 6f 00 5c 00 52 00 53 00 41 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule TrojanDownloader_Win32_Brucryp_D_2147706671_0
         $x_1_5 = {72 00 65 00 67 00 73 00 76 00 72 00 33 00 32 00 2e 00 65 00 78 00 65 00 2e 00 74 00 70 00 6c 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +128,7 @@ rule TrojanDownloader_Win32_Brucryp_D_2147706671_1
         $x_1_10 = {68 72 74 75 6b 6a 79 72 75 2e 74 70 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -157,6 +162,7 @@ rule TrojanDownloader_Win32_Brucryp_G_2147712138_0
         $x_1_9 = "piensaenweb.net/contrato_autogestionable/tahyh.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

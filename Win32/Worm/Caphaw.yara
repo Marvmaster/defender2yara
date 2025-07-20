@@ -18,6 +18,7 @@ rule Worm_Win32_Caphaw_A_2147682741_0
         $x_1_4 = {83 e8 02 74 2e 48 74 0c 48 75 ?? c7 47 ?? 6e 65 74 00 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

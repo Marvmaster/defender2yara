@@ -23,6 +23,7 @@ rule Trojan_MSIL_PSWStealer_XE_2147823558_0
         $x_1_8 = "set_PasswordValue" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_MSIL_PSWStealer_ARA_2147836267_0
         $x_2_3 = "/perm_spoofer.zip" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_MSIL_PSWStealer_MBFZ_2147850548_0
         $x_1_7 = "Xuathang" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Trojan_MSIL_PSWStealer_AWA_2147919064_0
         $x_2_5 = "curl --ssl-no-revoke -X POST \"https://api.telegram.org/bot" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

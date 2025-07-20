@@ -18,6 +18,7 @@ rule Trojan_Win32_Tiny_FBE_2147712301_0
         $x_1_3 = {00 ff 55 30 90 89 45 48 90 e8 0f 00 00 00 49 73 57 6f 77 36 34 50 72 6f 63 65 73 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Tiny_FBF_2147714340_0
         $x_1_2 = {80 7c 03 ff c3 74 02 eb ?? 8b 45 00 83 c0 0c ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Tiny_PA_2147742751_0
         $x_1_6 = "Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -97,6 +100,7 @@ rule Trojan_Win32_Tiny_O_2147795122_0
         $x_1_7 = "InternetCreateUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_Win32_Tiny_AD_2147796745_0
         $x_10_2 = {88 45 99 b8 20 00 00 00 88 45 9a b8 64 00 00 00 88 45 9b b8 6d 00 00 00 88 45 9c b8 63 00 00 00 88 45 9d}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule Trojan_Win32_Tiny_EC_2147842231_0
         $x_1_5 = "twizt.ru/newtpp.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +175,7 @@ rule Trojan_Win32_Tiny_EH_2147843680_0
         $x_1_5 = "ShellExecuteW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -192,6 +199,7 @@ rule Trojan_Win32_Tiny_PAAT_2147851595_0
         $x_1_3 = "n\\boot.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +224,7 @@ rule Trojan_Win32_Tiny_EB_2147890016_0
         $x_1_4 = "http://%s.%s/v4/%s.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -238,6 +247,7 @@ rule Trojan_Win32_Tiny_NT_2147900571_0
         $x_1_2 = "Ein Systemfehler ist aufgetrete" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -259,6 +269,7 @@ rule Trojan_Win32_Tiny_ATY_2147908635_0
         $x_1_1 = {6a 00 6a 00 6a 00 6a 06 6a 01 6a 02 ff 15 10 31 01 10 a3 10 b4 01 10 68 00 a0 01 10 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -280,6 +291,7 @@ rule Trojan_Win32_Tiny_EN_2147939573_0
         $x_3_1 = {c1 e2 02 8b 5d 00 8b 5b 08 8b 1b 89 d9 8b 1b 8b 45 08 c1 e0 02 01 c3 8b 1b 85 db 81 fb 01}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

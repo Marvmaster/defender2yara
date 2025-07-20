@@ -27,6 +27,7 @@ rule TrojanSpy_MSIL_Irstil_A_2147696772_0
         $x_1_13 = "HDFC Bank" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 10 of ($x_1_*))) or
             ((2 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -58,6 +59,7 @@ rule TrojanSpy_MSIL_Irstil_B_2147697655_0
         $x_1_7 = "Default.aspx?cmd=strans&un=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

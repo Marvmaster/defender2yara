@@ -15,6 +15,7 @@ rule Ransom_Win32_Megacortex_B_2147741495_0
         $x_1_1 = "ABADAN PIZZA LTD" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Megacortex_E_2147742947_0
         $x_1_6 = "we've hacked your corporate network" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

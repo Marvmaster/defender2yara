@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Serortat_B_2147696518_0
         $x_1_3 = {4c 6f 67 69 6e 3a [0-32] 53 65 6e 68 61 3a [0-32] 49 45 39 5f 44 65 63 6f 64 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Worm_Win32_Antimane_A_2147630813_0
         $x_1_5 = {31 32 37 2e 30 2e 30 2e 31 [0-16] 77 77 77 2e 6d 61 6e 65 6c 65 34 75 2e 6f 72 67}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

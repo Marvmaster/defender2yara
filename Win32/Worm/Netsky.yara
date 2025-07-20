@@ -26,6 +26,7 @@ rule Worm_Win32_Netsky_2147555600_0
         $x_1_12 = "%s, %u %s %u %.2u:%.2u:%.2u %s%.2u%.2u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Worm_Win32_Netsky_BL_2147643966_0
         $x_1_4 = {c7 03 4d 41 49 4c c7 43 04 20 46 52 4f c7 43 08 4d 3a 3c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

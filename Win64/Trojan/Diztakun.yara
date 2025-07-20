@@ -16,6 +16,7 @@ rule Trojan_Win64_Diztakun_MKV_2147906806_0
         $x_1_1 = {41 33 c0 8b c8 c1 e9 11 33 c8 b8 ?? ?? ?? ?? 44 8b c1 41 c1 e0 05 44 33 c1 41 f7 e0 41 0f b7 c3 c1 ea 05 0f b7 ca 0f af c8 41 0f b7 c0 66 2b c1 66 83 c0 61 66 42 89 04 53 49 ff c2 4d 3b d1 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

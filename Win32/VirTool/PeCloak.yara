@@ -16,6 +16,7 @@ rule VirTool_Win32_PeCloak_2147752139_0
         $x_2_1 = {31 f6 31 ff [0-48] 3d ?? ?? ?? ?? 75 [0-48] 3d ?? ?? ?? ?? 75 [0-48] 3d ?? ?? ?? ?? 75 [0-48] b8 [0-16] 80 30 [0-48] 80 28 [0-48] 80 00 [0-48] 40 3d ?? ?? ?? ?? 7e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

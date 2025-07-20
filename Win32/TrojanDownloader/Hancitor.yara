@@ -63,6 +63,7 @@ rule TrojanDownloader_Win32_Hancitor_A_2147740667_0
         $x_1_3 = {8b 4d fc 83 c1 01 89 4d fc 8b 55 fc 3b 55 0c 73 28 8b 45 fc 33 d2 b9 08 00 00 00 f7 f1 8b 45 10 0f b6 0c 10 8b 55 f8 03 55 fc 0f b6 02 33 c1 8b 4d f8 03 4d fc 88 01 eb c7 8b e5 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +86,7 @@ rule TrojanDownloader_Win32_Hancitor_ZZ_2147793687_0
         $x_50_3 = {b8 01 00 00 00 c1 e0 00 8b 4d 08 0f be 14 01 83 fa 3a 75 35 8b 45 fc 0f be 08 85 c9 74 2b 8b 55 fc 0f be 02 b9 01 00 00 00 6b d1 00 8b 4d 08 0f be 14 11 3b c2 75 07 b8 01 00 00 00 eb 0d 8b 45 fc 83 c0 01 89 45 fc eb cb}  //weight: 50, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +109,7 @@ rule TrojanDownloader_Win32_Hancitor_ZY_2147793688_0
         $x_100_3 = {b8 01 00 00 00 c1 e0 00 8b 4d 08 0f be 14 01 83 fa 3a 75 35 8b 45 fc 0f be 08 85 c9 74 2b 8b 55 fc 0f be 02 b9 01 00 00 00 6b d1 00 8b 4d 08 0f be 14 11 3b c2 75 07 b8 01 00 00 00 eb 0d 8b 45 fc 83 c0 01 89 45 fc eb cb}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +130,7 @@ rule TrojanDownloader_Win32_Hancitor_ZX_2147793689_0
         $x_100_1 = {b8 01 00 00 00 6b c8 00 c6 81 00 50 ef 14 00 68 00 20 00 00}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +157,7 @@ rule TrojanDownloader_Win32_Hancitor_ARA_2147837129_0
         $x_3_6 = "krrewiaog3u4npcg.onion.to/sl/gate.php" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

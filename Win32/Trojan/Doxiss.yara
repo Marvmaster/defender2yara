@@ -17,6 +17,7 @@ rule Trojan_Win32_Doxiss_A_2147637877_0
         $x_1_3 = {5c 00 68 00 61 00 6c 00 2e 00 64 00 6c 00 6c 00 00 00 00 00 10 00 00 00 63 00 6f 00 70 00 79 00 20 00 2f 00 79 00 20 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

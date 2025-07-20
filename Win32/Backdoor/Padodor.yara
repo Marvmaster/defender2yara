@@ -18,6 +18,7 @@ rule Backdoor_Win32_Padodor_GMC_2147897334_0
         $x_1_3 = "f3rkKh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

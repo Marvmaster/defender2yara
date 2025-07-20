@@ -20,6 +20,7 @@ rule Worm_MSIL_Toshwire_A_2147639318_0
         $x_1_6 = {6e 20 50 45 00 00 6a fe 01 16 fe 01 12 0c 7b 56 00 00 04 20 4d 5a 00 00 fe 01 16 fe 01 60 2c 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

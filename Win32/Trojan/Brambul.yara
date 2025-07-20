@@ -19,6 +19,7 @@ rule Trojan_Win32_Brambul_A_2147705779_0
         $x_1_4 = {61 64 6d 69 6e 69 73 74 72 61 74 6f 72 00 00 00 25 64 2e 25 64 2e 25 64 2e 25 64 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

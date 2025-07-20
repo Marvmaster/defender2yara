@@ -18,6 +18,7 @@ rule Trojan_Win32_Recteok_A_2147689333_0
         $x_1_4 = {7c 30 7c 00 ff ff ff ff 03 00 00 00 47 4f 54 00 ff ff ff ff 06 00 00 00 67 72 61 76 61 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

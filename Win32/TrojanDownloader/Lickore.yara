@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Lickore_B_2147657736_0
         $x_1_4 = {54 52 41 43 45 [0-16] 50 55 54 [0-16] 43 4f 4e 4e 45 43 54}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

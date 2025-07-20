@@ -22,6 +22,7 @@ rule Trojan_Win32_Rastreio_RPX_2147846736_0
         $x_1_7 = "ExecShell" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Trojan_Win32_Rastreio_RPY_2147846745_0
         $x_1_8 = "ExecShell:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +82,7 @@ rule Trojan_Win32_Rastreio_RPZ_2147846746_0
         $x_10_10 = "!^\") ^| .($!" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

@@ -22,6 +22,7 @@ rule Backdoor_Win32_Pabcares_A_2147755474_0
         $x_1_7 = {f5 d7 c4 d2 e5 d3 d5 c3 c4 df c2 cf f8 c3 db d4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

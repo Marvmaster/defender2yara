@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Farfli_A_2147639507_0
         $x_1_4 = {8a 04 02 30 01 46 3b (74|75) [0-3] 7e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Farfli_E_2147708702_0
         $x_1_2 = {b9 ab 05 00 00 25 ff 00 00 00 99 f7 f9 8b da 80 c3 3d e8 69 0a 00 00 8b 74 24 10 85 f6 76 10 8b 44 24 0c 8a 10 32 d3 02 d3 88 10 40 4e 75 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule TrojanDownloader_Win32_Farfli_J_2147717912_0
         $x_1_3 = {33 d2 8a 14 01 81 e3 ?? ?? ?? ?? 03 d3 81 e2 ?? ?? ?? ?? 79 ?? 4a 81 ca ?? ?? ?? ?? 42 8a 1c 02 8b 55 ?? 30 1c 16 8b 55 ?? 46 3b f2 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule TrojanDownloader_Win32_Farfli_L_2147718324_0
         $x_1_3 = {4b c6 44 24 ?? 6f c6 44 24 ?? 74 c6 44 24 ?? 68 c6 44 24 ?? 65 c6 44 24 ?? 72 c6 44 24 ?? 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -111,6 +115,7 @@ rule TrojanDownloader_Win32_Farfli_PH_2147720059_0
         $x_1_3 = {0f b7 06 8b e8 81 e5 00 f0 ff ff 81 fd 00 30 00 00 75 0d 8b 6c 24 14 25 ff 0f 00 00 03 c7 01 28 8b 41 04 83 e8 08 42 d1 e8 83 c6 02 3b d0 72 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule TrojanDownloader_Win32_Farfli_PI_2147721523_0
         $x_1_4 = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Svchost" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule TrojanDownloader_Win32_Farfli_PJ_2147722534_0
         $x_1_4 = "C:\\Program Files\\AppPatch\\mysqld.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -183,6 +190,7 @@ rule TrojanDownloader_Win32_Farfli_PK_2147722647_0
         $x_1_4 = {75 c6 44 24 ?? 72 88 5c 24 1e c6 44 24 ?? 6d c6 44 24 ?? 6f c6 44 24 ?? 6e c6 44 24 ?? 2e c6 44 24 ?? 64 88 5c 24 24 88 5c 24 25}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +215,7 @@ rule TrojanDownloader_Win32_Farfli_PN_2147724811_0
         $x_1_4 = "HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +239,7 @@ rule TrojanDownloader_Win32_Farfli_PO_2147726557_0
         $x_1_3 = {8b 46 1c 8d 14 90 8b 04 0a 03 c1 5e 59}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -252,6 +262,7 @@ rule TrojanDownloader_Win32_Farfli_ARA_2147850737_0
         $x_2_2 = {0f b6 06 53 50 e8 ?? ?? ?? ?? 88 06 83 c4 08 46 3b f7 75 ec}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

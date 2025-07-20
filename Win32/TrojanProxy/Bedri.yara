@@ -17,6 +17,7 @@ rule TrojanProxy_Win32_Bedri_A_2147682004_0
         $x_1_3 = {48 74 74 70 2f 31 2e 31 20 34 30 33 20 46 6f 72 62 69 64 64 65 6e 0d 0a 0d 0a 3c 62 6f 64 79 3e 3c 68 31 3e 34 30 33 20 46 6f 72 62 69 64 64 65 6e 3c 2f 68 31 3e 3c 2f 62 6f 64 79 3e 00 00 00 48 54 54 50 2f 31 2e 30 20 32 30 30 20 4f 4b 0d 0a 0d 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule TrojanProxy_Win32_Bedri_C_2147683044_0
         $x_1_3 = "<body><h1>403 Forbidden</h1></body>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule TrojanProxy_Win32_Bedri_C_2147683044_1
         $x_2_7 = {78 63 76 00 65 63 68 6f 20 6f 66 66 0d 0a 73 74 61 72 74 20 22 66 64 63 64 66 22}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -100,6 +103,7 @@ rule TrojanProxy_Win32_Bedri_B_2147683045_0
         $x_2_8 = {50 6a 00 68 03 00 1f 00 ff 15 ?? ?? ?? ?? 89 45 ?? 83 7d ?? 00 74 0f 00 c6 45 ?? 30 c6 45 ?? 31 (c6 45|80 65) ?? 00 8d 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -133,6 +137,7 @@ rule TrojanProxy_Win32_Bedri_F_2147688743_0
         $x_1_9 = {c6 45 d4 5c c6 45 d5 69 c6 45 d6 6e c6 45 d7 63 c6 45 d8 6c c6 45 d9 75 c6 45 da 64 c6 45 db 65 c6 45 dc 5c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -158,6 +163,7 @@ rule TrojanProxy_Win32_Bedri_G_2147718119_0
         $x_1_6 = "Global\\disguise0501" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

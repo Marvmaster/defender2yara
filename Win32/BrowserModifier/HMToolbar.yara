@@ -19,6 +19,7 @@ rule BrowserModifier_Win32_HMToolbar_17327_0
         $x_1_5 = "Software\\Microsoft\\Internet Explorer\\Toolbar" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))

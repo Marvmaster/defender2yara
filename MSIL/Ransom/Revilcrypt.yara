@@ -20,6 +20,7 @@ rule Ransom_MSIL_Revilcrypt_PAA_2147815608_0
         $x_1_5 = "Infector" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_MSIL_Revilcrypt_PAB_2147815685_0
         $x_1_5 = "bcdedit /delete {current}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win32_BroomStick_Z_2147941378_0
         $x_1_5 = {8b ce ff 15 [0-32] 8b cf ff d6 8b 85 28 ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

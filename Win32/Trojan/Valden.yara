@@ -17,6 +17,7 @@ rule Trojan_Win32_Valden_A_2147663920_0
         $x_1_3 = {70 69 6e 70 61 64 00 00 00 77 69 6e 00 63 63 61 72 64 3d 31 00 63 63 61 72 64 3d 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Valden_C_2147680276_0
         $x_1_7 = "data=hello&user" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Trojan_Win32_Valden_D_2147680277_0
         $x_3_9 = {81 6d fc 47 86 c8 61 03 f1 33 f7 03 c6 8b f0 c1 ee 05 8b f8 c1 e7 04 33 f7 8b 7d fc c1 ef 0b 83 e7 03}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -97,6 +100,7 @@ rule Trojan_Win32_Valden_E_2147681110_0
         $x_1_2 = {8b 77 3c 8d 45 ?? 50 6a 40 03 f7 ff 76 50 57 ff 15 ?? ?? ?? ?? 8b 46 50 03 c7 eb 0a 8b 0f 3b 4d 0c 74 09 83 c7 04 3b f8 72 f2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

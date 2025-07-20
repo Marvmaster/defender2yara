@@ -17,6 +17,7 @@ rule Trojan_Win64_LucaStealer_NC_2147899137_0
         $x_1_2 = "://zdv.life/downloader.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_LucaStealer_GPA_2147918623_0
         $x_1_4 = "\\discord.rs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

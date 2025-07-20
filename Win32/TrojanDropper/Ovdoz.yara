@@ -22,6 +22,7 @@ rule TrojanDropper_Win32_Ovdoz_A_2147611958_0
         $x_1_8 = "FrmWebDl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

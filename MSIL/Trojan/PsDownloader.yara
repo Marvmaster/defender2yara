@@ -17,6 +17,7 @@ rule Trojan_MSIL_PsDownloader_CXA_2147842737_0
         $x_5_2 = {28 1c 00 00 0a 7e ?? ?? ?? ?? 02 1a 58 08 6f ?? ?? ?? ?? 28 ?? ?? ?? ?? a5 ?? ?? ?? ?? 0b}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_PsDownloader_PSTR_2147851954_0
         $x_2_1 = {28 06 00 00 0a 0a 06 6f ?? 00 00 0a 16 9a 0b 7e 08 00 00 0a 0c 06 07 6f ?? 00 00 0a 0d 09 73 0a 00 00 0a 13 04 11 04 6f ?? 00 00 0a 0c de 0c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_MSIL_PsDownloader_PSWL_2147889430_0
         $x_2_1 = {72 ac 03 00 70 28 ?? 00 00 0a 6f ?? 00 00 0a 13 0b 08 28 ?? 00 00 0a 2d 10 08 11 0b 28 ?? 00 00 0a 16 13 18 dd 1e 03 00 00 11 13 7b 2c 00 00 04 11 0b 6f ?? 00 00 0a 26 14 13 0c 72 cf 07 00 70 73 c0 00 00 0a 13 0d 11 07 13 0e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

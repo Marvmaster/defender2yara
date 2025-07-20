@@ -20,6 +20,7 @@ rule TrojanClicker_MSIL_Small_ARAX_2147911645_0
         $x_2_5 = "window.scrollBy(0, window.innerHeight * 2)" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_2_*))) or
             ((2 of ($x_5_*) and 1 of ($x_2_*))) or

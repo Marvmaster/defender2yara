@@ -16,6 +16,7 @@ rule Trojan_MSIL_BotX_RDQ_2147846098_0
         $x_2_1 = {07 11 06 07 11 06 91 20 fa 00 00 00 61 d2 9c 11 06 17 58 13 06}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

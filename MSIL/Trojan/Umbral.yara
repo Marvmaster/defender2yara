@@ -16,6 +16,7 @@ rule Trojan_MSIL_Umbral_ASZ_2147888126_0
         $x_1_1 = {0a 16 0b 2b 2c 06 07 9a 0c 7e 4a 05 00 04 08 6f d0 02 00 0a 6f 05 02 00 0a 28 56 00 00 2b 2c 0d 08 6f d1 02 00 0a de 05 26 17 0d de 0c 07 17 58 0b 07 06 8e 69 32 ce}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_Umbral_GA_2147915381_0
         $x_1_7 = "builder" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
@@ -68,6 +70,7 @@ rule Trojan_MSIL_Umbral_AB_2147944984_0
         $x_1_1 = {4c 61 13 1c 11 1d 02 7c 0f 00 00 04 7c 15 00 00 04 1e 58 4c 61 13 1d 11 1e 02 7c 10 00 00 04 7c 16 00 00 04 4c 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

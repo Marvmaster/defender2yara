@@ -22,6 +22,7 @@ rule Trojan_MSIL_Stealga_DC_2147939989_0
         $x_10_7 = "brave.exe" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_MSIL_SharpBlock_2147840198_0
         $x_7_1 = {12 0e 7c a3 01 00 04 20 01 01 00 00 7d 9c 01 00 04 11 0f 20 00 00 00 08 60}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

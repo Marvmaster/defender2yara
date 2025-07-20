@@ -19,6 +19,7 @@ rule Ransom_Win32_BlackCat_MK_2147809870_0
         $x_1_4 = "\\explorer.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Win32_BlackCat_A_2147815777_0
         $x_1_2 = {61 75 6c 74 5f 66 69 6c 65 5f 63 69 70 68 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Ransom_Win32_BlackCat_AB_2147831517_0
         $x_5_3 = {83 c4 04 66 0f 6f 05 00 e8 0b 00 66 0f 7f 0b 00 0f 29 07 00 0f 29 0b 00 66 0f d4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Ransom_Win32_BlackCat_ZZ_2147843505_0
         $x_10_3 = {68 c0 1f 00 00 68 ?? ?? ?? ?? [0-7] 50 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Ransom_Win32_BlackCat_SS_2147843847_0
         $x_1_1 = {89 d3 89 c8 31 d2 f7 f6 8b 45 f0 0f b6 04 10 89 da 30 04 0b 41 39 cf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Ransom_Win32_BlackCat_ZA_2147844399_0
         $x_100_3 = {8b 0e 8a 15 ?? ?? ?? ?? 88 14 01 ff 46 08 a2}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +155,7 @@ rule Ransom_Win32_BlackCat_F_2147844842_0
         $n_1_2 = {3d 43 01 00 00 7d}  //weight: -1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -175,6 +182,7 @@ rule Ransom_Win32_BlackCat_MA_2147846387_0
         $x_2_5 = "_killstrict_include_pathsesxi_vm_kill_excludesleep_restart" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +204,7 @@ rule Ransom_Win32_BlackCat_ABC_2147851858_0
         $x_1_1 = {89 f0 b9 59 17 b7 d1 f7 e1 89 f1 c1 ea 0d 69 c2 10 27 00 00 29 c1 0f b7 c1 c1 e8 02 69 c0 7b 14 00 00 c1 e8 11 6b f8 64 0f b7 84 00 e4 e3 60 00 29 f9 81 fe ff e0 f5 05 89 d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +227,7 @@ rule Ransom_Win32_BlackCat_MMM_2147888796_0
         $x_1_2 = {0f b6 54 24 32 30 4f 09 0f b6 4c 24 33 30 57 0a 0f b6 54 24 34 30 4f 0b 0f b6 4c 24 35 30 57 0c 0f b6 54 24 36 30 4f 0d 0f b6 4c 24 ?? 30 57 0e 30 4f 0f 8b 4c 24 10 83 c7 10 83 c1 10 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

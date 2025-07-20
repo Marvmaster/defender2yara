@@ -15,6 +15,7 @@ rule Trojan_MSIL_HiddenTear_B_2147731307_0
         $x_1_1 = "7ab0dd04-43e0-4d89-be59-60a30b766467" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

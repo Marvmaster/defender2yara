@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Mydown_B_2147599183_0
         $x_10_8 = {8b 4d fc 8a 4c 11 ff 8b 75 ec 88 0c 1e 43 42 48 75 ee 8b 45 f8 e8 ?? ?? ?? ?? 85 c0 7e 17 ba 01 00 00 00 8b 4d f8 8a 4c 11 ff 8b 75 ec 88 0c 1e 43 42 48 75 ee}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or

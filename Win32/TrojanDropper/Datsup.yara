@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Datsup_A_2147741975_0
         $x_1_2 = "C:\\WINDOWS\\sdtartup.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

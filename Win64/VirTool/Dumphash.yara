@@ -19,6 +19,7 @@ rule VirTool_Win64_Dumphash_A_2147912786_0
         $x_1_4 = {4c 89 74 24 30 41 b9 02 00 00 00 4c 89 74 24 28 4c 8b c6 8b d3 4c 89 74 24 20 48 8b cf ?? ?? ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

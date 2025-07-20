@@ -19,6 +19,7 @@ rule Backdoor_Linux_Arcvet_A_2147679457_0
         $x_1_4 = {f2 f2 e9 e5 bb b0 88 a4 f2 88 a4 f2 88 a4 f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

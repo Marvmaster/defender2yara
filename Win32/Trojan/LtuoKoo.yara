@@ -17,6 +17,7 @@ rule Trojan_Win32_LtuoKoo_ZZ_2147926700_0
         $x_100_3 = {48 b8 83 2d d8 82 2d d8 82 2d 48 8b f7 48 f7 e7 33 db 48 c1 ea 04 48 6b ca 5a 48 2b f1 48 83 c6 0a}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

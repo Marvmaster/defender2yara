@@ -23,6 +23,7 @@ rule Trojan_Win32_BypassUAC_BN_2147839340_0
         $x_1_8 = "GetTempPathW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule Trojan_Win32_BypassUAC_A_2147939499_0
         $x_1_1 = {49 81 d1 06 00 00 00 48 c7 44 24 00 09 f4 84 ca 48 ff 44 24 00 48 c1 74 24 00 9a 0f ad d6 68 ba 35 01 8f 41 89 31 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_BypassUAC_AB_2147945975_0
         $x_1_1 = {4d f8 21 38 95 93 2a 20 31 18 d5 1f 1e 38 31 34 81}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_Win32_BypassUAC_PAHJ_2147946768_0
         $x_1_2 = {80 b4 05 30 ?? ?? ?? 3a 40 3d 8c 0a 00 00 7c f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

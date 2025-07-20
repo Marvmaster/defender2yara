@@ -18,6 +18,7 @@ rule Trojan_Win32_Kanots_A_2147656522_0
         $x_1_4 = {ff b5 b4 fd ff ff 51 50 e8 a9 fc ff ff 83 c4 10 85 c0 74 19 68 00 80 00 00 56 ff b5 b4 fd ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

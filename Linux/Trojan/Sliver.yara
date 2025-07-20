@@ -18,6 +18,7 @@ rule Trojan_Linux_Sliver_A_2147824843_0
         $x_1_3 = "sliverpb.Pwd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_Linux_Sliver_AC_2147902344_0
         $x_1_2 = "sliverpb.pwd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Linux_Sliver_B_2147902849_0
         $x_1_3 = {83 ff 1b 75 f6 b8 00 00 00 00 b9 01 00 00 00 4c 8d 1d 02 23 ee 00 f0 41 0f b1 0b 75 de 48 8b 0d 5c f6 ea 00 4c 8d 05 b5 36 ee 00 4c 8d 0d 0e fa ff ff 48 8b 05 4f f2 ea 00 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Linux_Sliver_C_2147912571_0
         $x_1_3 = {74 21 48 8b 10 48 8b 58 08 0f b6 48 10 0f b6 78 11 48 89 d0 e8 a4 b1 fa ff 48 8b 6c 24 18 48 83 c4 20 c3 e8 d5 b7 fa ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_Linux_Sliver_D_2147920059_0
         $x_1_3 = {4c 89 e7 31 f6 e8 4a b7 ff ff 4c 89 e0 41 5c c3 0f 1f 80 00 00 00 00 48 85 d2 74 e4 0f b6 06 41 88 04 24 84 c0 74 d9 48 83 ea 01 48 83 c6 01 49 83 c4 01 40 f6 c6 07 75 de 48 85 d2 74 c2 80 3e 00 74 bd 49 b9 ff fe fe fe fe fe fe fe 49 b8 80 80 80 80 80 80 80 80 48 83 fa 07 77 24 eb 96}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -140,6 +145,7 @@ rule Trojan_Linux_Sliver_B_2147923153_0
         $x_1_9 = "Go buildinf:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or

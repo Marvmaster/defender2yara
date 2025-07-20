@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Woswitim_A_2147712595_0
         $x_1_2 = "c3lzd293LmV4ZQ==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))

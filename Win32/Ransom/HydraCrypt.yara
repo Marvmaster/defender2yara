@@ -28,6 +28,7 @@ rule Ransom_Win32_HydraCrypt_A_2147716793_0
         $x_1_14 = ".3g2.3gp.7z.ab4" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -104,6 +105,7 @@ rule Ransom_Win32_HydraCrypt_B_2147722732_0
         $x_1_9 = {81 38 73 00 79 00 75 0e 81 78 04 73 00 74 00 75 05 39 48 08 74 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -131,6 +133,7 @@ rule Ransom_Win32_HydraCrypt_SA_2147775123_0
         $x_1_7 = "/C choice /C Y /N /D Y /T 1 & Del" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -157,6 +160,7 @@ rule Ransom_Win32_HydraCrypt_PAA_2147779575_0
         $x_1_6 = "IDk.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +182,7 @@ rule Ransom_Win32_HydraCrypt_YAA_2147900193_0
         $x_1_1 = {8b 4d f0 83 c1 01 33 4d f8 03 c1 88 45 ff 8b 55 f0 8a 45 ff 88 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -199,6 +204,7 @@ rule Ransom_Win32_HydraCrypt_YAB_2147922134_0
         $x_1_1 = {f7 e1 c1 ea 03 8d 14 92 03 d2 8b c1 2b c2 8a 54 04 10 30 14 39 41}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +227,7 @@ rule Ransom_Win32_HydraCrypt_NH_2147935367_0
         $x_2_2 = {83 c0 c0 50 a1 ?? ?? ?? 00 8d 56 40 52}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -247,6 +254,7 @@ rule Ransom_Win32_HydraCrypt_NIT_2147940413_0
         $x_1_6 = "get your files back" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

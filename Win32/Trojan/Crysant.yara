@@ -16,6 +16,7 @@ rule Trojan_Win32_Crysant_RPS_2147830182_0
         $x_1_1 = {00 00 40 00 04 00 00 00 04 00 00 00 01 c0 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

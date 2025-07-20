@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Hipaki_A_2147629887_0
         $x_1_2 = {68 00 00 00 80 86 db 68 ?? ?? ?? ?? 86 db 68 ?? ?? ?? ?? 86 db 50 86 db c3 86 db a3 ?? ?? ?? ?? 86 db 83 f8 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

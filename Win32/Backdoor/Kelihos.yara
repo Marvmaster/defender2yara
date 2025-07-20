@@ -19,6 +19,7 @@ rule Backdoor_Win32_Kelihos_B_2147790312_0
         $x_1_5 = {49 44 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule Backdoor_Win32_Kelihos_F_2147790337_0
         $x_10_4 = "MIIBCAKCAQEA" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -77,6 +79,7 @@ rule Backdoor_Win32_Kelihos_A_2147790379_0
         $x_1_7 = {64 65 63 72 3a 20 00 2e 68 74 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -109,6 +112,7 @@ rule Backdoor_Win32_Kelihos_A_2147792442_0
         $x_3_8 = "encryptedPassword FROM moz_logins" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_3_*))) or
             ((1 of ($x_5_*) and 3 of ($x_3_*))) or

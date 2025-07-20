@@ -40,6 +40,7 @@ rule Trojan_MSIL_DarkLoader_2147767198_0
         $x_1_25 = "Manufacturer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (22 of ($x*))
 }
 
@@ -79,6 +80,7 @@ rule Trojan_MSIL_DarkLoader_2147767198_1
         $x_1_19 = "CopyTo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

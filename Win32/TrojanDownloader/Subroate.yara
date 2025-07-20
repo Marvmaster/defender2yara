@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Subroate_A_2147708986_0
         $x_1_2 = {00 53 74 75 62 2e 64 6c 6c 00 5f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

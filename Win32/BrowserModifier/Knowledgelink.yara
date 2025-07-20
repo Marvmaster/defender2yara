@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Knowledgelink_143785_0
         $x_1_4 = {6b 6e 6f 77 6c 65 64 67 65 6c 69 6e 6b 73 2e 44 4c 4c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

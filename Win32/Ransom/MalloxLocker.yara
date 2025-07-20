@@ -21,6 +21,7 @@ rule Ransom_Win32_MalloxLocker_MAK_2147797491_0
         $x_1_6 = "YOUR FILES ARE ENCRYPTED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

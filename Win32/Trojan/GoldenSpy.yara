@@ -17,6 +17,7 @@ rule Trojan_Win32_GoldenSpy_A_2147758844_0
         $x_1_3 = "nb_app_log_mutex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_GoldenSpy_VS_2147759075_0
         $x_1_4 = "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\svm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

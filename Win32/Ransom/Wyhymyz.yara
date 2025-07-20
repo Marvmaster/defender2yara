@@ -20,6 +20,7 @@ rule Ransom_Win32_Wyhymyz_A_2147721501_0
         $x_2_6 = "del /s /f /q c:\\*.VHD c:\\*.bac c:\\*.bak c:\\*.wbcat c:\\*.bkf c:\\Backup*.* c:\\backup*.* c:\\*.set c:\\*.win c:\\*.dsk" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule Ransom_Win32_Wyhymyz_B_2147723688_0
         $x_1_5 = "shadowstorage vssadmin Delete vssadmin resize .dsk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -77,6 +79,7 @@ rule Ransom_Win32_Wyhymyz_C_2147724970_0
         $x_1_5 = {00 52 53 41 31 00 08 00 00 01 00 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Ransom_Win32_Wyhymyz_D_2147725688_0
         $x_8_6 = {66 0f 1f 84 00 00 00 00 00 30 9e ?? ?? 40 00 46 68 ?? ?? 40 00 e8 ?? ?? ff ff 83 c4 04 3b f0 7c}  //weight: 8, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*) and 1 of ($x_2_*))) or

@@ -21,6 +21,7 @@ rule Ransom_Win32_IceRansom_YAA_2147852983_0
         $x_1_6 = "vssadmin.exe delete shadows /all /quiet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

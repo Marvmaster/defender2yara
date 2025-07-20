@@ -17,6 +17,7 @@ rule Trojan_Win32_Psaruaa_YAC_2147936400_0
         $x_6_2 = {0f b6 92 00 00 42 00 33 ca 8b 85 b8 ?? ff ff 03 85 e8 9a ff ff 88 08}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

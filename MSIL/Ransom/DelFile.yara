@@ -21,6 +21,7 @@ rule Ransom_MSIL_DelFile_MA_2147838319_0
         $x_1_6 = "843a9ce1-095e-4643-b03f-8030ee05766e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

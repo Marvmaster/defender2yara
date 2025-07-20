@@ -17,6 +17,7 @@ rule Backdoor_Linux_Xnote_A_2147692470_0
         $x_1_3 = {2f 74 6d 70 2f 2e 77 71 34 73 4d 4c 41 72 58 77 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 

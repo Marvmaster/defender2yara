@@ -20,6 +20,7 @@ rule Trojan_Win32_Kronosbot_RR_2147833670_0
         $x_1_5 = "continuenumsync.ml" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

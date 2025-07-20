@@ -22,6 +22,7 @@ rule Virus_Win32_Autorun_B_2147597961_0
         $x_1_8 = "GetLogicalDriveStringsA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Virus_Win32_Autorun_2147598019_0
         $x_1_8 = "/gx.jpg" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((5 of ($x_4_*))) or
@@ -73,6 +75,7 @@ rule Virus_Win32_Autorun_OE_2147602084_0
         $x_1_1 = {8d 85 f4 fe ff ff 68 38 16 40 00 50 ff d6 59 c7 45 fc 01 00 00 00 85 c0 59 74 03 89 5d fc 8d 85 d0 fe ff ff 50 57 e8 49 12 00 00 85 c0 75 bd 39 5d fc 75 44 53 be 18 16 40 00 53 56 68 f0 15 40 00 53 e8 57 12 00 00 53 53 53 56 8b 35 80 13 40 00 68 e8 15 40 00 53 ff d6 53 bf c8 15 40 00 53 57 68 a0 15 40 00 53 e8 32 12 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

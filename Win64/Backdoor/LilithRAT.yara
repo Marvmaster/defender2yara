@@ -25,6 +25,7 @@ rule Backdoor_Win64_LilithRAT_GB_2147820152_0
         $x_1_10 = "remoteControl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or

@@ -20,6 +20,7 @@ rule Trojan_Win32_SVCReady_HQ_2147827825_0
         $x_1_5 = "function ma(a){return function(b){var c=b.nodeName.toLowerCase();return" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

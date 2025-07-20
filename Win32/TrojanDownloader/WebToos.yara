@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_WebToos_A_2147692106_0
         $x_1_5 = {46 49 44 44 4c 45 52 2e 45 58 45 00 48 54 54 50 41 4e 41 4c 59 5a 45 52 53 54 44 56 33 2e 45 58 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

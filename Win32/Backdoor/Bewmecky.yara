@@ -17,6 +17,7 @@ rule Backdoor_Win32_Bewmecky_A_2147626858_0
         $x_1_3 = {66 3d 0d 00 74 06 66 3d 01 00 75 05 be 90 0e 00 00 66 3d 0e 00 74 06 66 3d 02 00 75 03 6a 51 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

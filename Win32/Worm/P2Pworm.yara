@@ -31,6 +31,7 @@ rule Worm_Win32_P2Pworm_2147555613_0
         $x_1_17 = "\\Edonkey2000\\Incoming" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

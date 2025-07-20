@@ -17,6 +17,7 @@ rule VirTool_Win64_PplFault_A_2147890083_0
         $x_1_3 = {40 53 48 83 ec ?? 48 8b 51 ?? 48 8b d9 48 83 fa ?? 72 2c 48 8b 09 48 ff c2 48 81 fa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

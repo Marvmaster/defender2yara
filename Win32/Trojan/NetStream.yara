@@ -16,6 +16,7 @@ rule Trojan_Win32_NetStream_DSK_2147744126_0
         $x_2_1 = {8b d6 8b ca b8 89 dc 00 00 03 c1 2d 89 dc 00 00 89 45 fc a1 ?? ?? ?? ?? 8b 4d fc 89 08}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_NetStream_DSK_2147744126_1
         $x_2_2 = {b8 26 09 00 00 8b d6 8b ca b8 89 dc 00 00 03 c1 2d 89 dc 00 00 89 45 fc a1 ?? ?? ?? ?? 8b 4d fc 89 08}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_NetStream_PDS_2147745357_0
         $x_2_2 = {8a 5c 05 f8 30 9c 3d ?? ?? ?? ?? 8b c6 83 e0 03 83 c6 06 8a 54 05 f8 30 94 3d ?? ?? ?? ?? 8d 41 ff 83 e0 03 83 e1 03 8a 44 05 f8 30 84 3d ?? ?? ?? ?? 8a 44 0d f8 30 84 3d ?? ?? ?? ?? 30 9c 3d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

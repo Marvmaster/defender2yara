@@ -18,6 +18,7 @@ rule Trojan_Win32_Xmrig_NEAA_2147837433_0
         $x_2_3 = "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\vbc.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Xmrig_NEAB_2147838388_0
         $x_5_2 = {33 c5 89 45 fc 89 4d f4 8b 45 f4 89 45 e8 8b 4d 08}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Xmrig_MA_2147843295_0
         $x_1_1 = {89 44 24 10 8b 44 24 24 01 44 24 10 8b d6 c1 ea 05 03 54 24 28 8d 04 37 31 44 24 10 c7 05 ?? ?? ?? ?? 19 36 6b ff c7 05 ?? ?? ?? ?? ff ff ff ff 89 54 24 14 8b 44 24 14 31 44 24 10 8b 44 24 10 29 44 24 18 81 c7 ?? ?? ?? ?? 4d 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_Xmrig_A_2147845229_0
         $x_2_2 = {08 33 ca 8b ?? 0c 03 ?? dc 88 0a eb 08 00 8b ?? 0c 03 ?? dc 0f b6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule Trojan_Win32_Xmrig_AX_2147896816_0
         $x_1_1 = {7b 00 c7 84 24 ?? ?? ?? ?? 56 b5 8b 2c c7 84 24 ?? ?? ?? ?? e1 c3 9c 0c c7 84 24 ?? ?? ?? ?? 94 27 73 51 c7 84 24 ?? ?? ?? ?? 65 48 6d 5a c7 84 24 ?? ?? ?? ?? 9f 3a 12 51 c7 84 24 ?? ?? ?? ?? 84 82 10 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

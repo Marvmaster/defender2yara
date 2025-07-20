@@ -19,6 +19,7 @@ rule Trojan_Win32_Delflob_A_2147598761_0
         $x_1_5 = "ConvertStringSecurityDescriptorToSecurityDescriptorA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Trojan_Win32_Delflob_I_2147599705_0
         $x_1_5 = {c7 45 e8 01 00 00 00 8d 85 ?? ?? ff ff 8b 55 e8 8b 4d fc 4a 85 c9 74 05 3b 51 fc 72 05 e8 ?? ?? ff ff 42 8a 54 11 ff 8a 4d fb 32 d1 e8 ?? ?? ff ff 8b 95 ?? ?? ff ff 8d 45 f0 e8 ?? ?? ff ff ff 45 ?? ff 4d ?? 75 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Delflob_J_2147599706_0
         $x_1_1 = {6a 00 8d 45 e0 b9 ?? ?? ?? 00 8b 15 ?? ?? ?? 00 e8 ?? ?? ?? ff 8b 45 e0 e8 ?? ?? ?? ff 50 a1 ?? ?? ?? 00 e8 ?? ?? ?? ff 50 e8 ?? ?? ?? ff c7 05 ?? ?? ?? 00 ?? ?? ?? ?? (81|83) 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_Delflob_P_2147607932_0
         $x_1_1 = {c7 45 e8 01 00 00 00 8d 45 ?? 8b 55 ?? 8b 4d ?? [0-32] 8a ?? ?? ff 8a 4d fb 32 d1 e8 ?? ?? ?? ff 8b 55 ?? 8d 45 f0 e8 ?? ?? ?? ff ff 45 e8 (4b|ff 4d ??) 75 8d 45 ?? 8b 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_Win32_Delflob_S_2147621254_0
         $x_1_10 = "to be junk content of low privacy threats" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or

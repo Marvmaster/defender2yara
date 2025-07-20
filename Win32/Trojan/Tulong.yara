@@ -22,6 +22,7 @@ rule Trojan_Win32_Tulong_XA_2147817509_0
         $x_1_7 = "@UPFILE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

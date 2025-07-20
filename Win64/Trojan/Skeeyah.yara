@@ -18,6 +18,7 @@ rule Trojan_Win64_Skeeyah_MG_2147923416_0
         $x_1_3 = "1.7.0_45-b18" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win64_Skeeyah_MG_2147923416_1
         $x_1_4 = "jli.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

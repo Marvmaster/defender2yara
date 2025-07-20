@@ -18,6 +18,7 @@ rule Trojan_Win64_TurtleLoader_CS_2147779765_0
         $x_1_3 = {24 49 01 d0 66 41 8b 0c 48 44 8b 40 1c 49 01 d0 41 8b 04 88 48 01 d0 41 58 41 58 5e 59 5a 41 58 41 59 41 5a 48 83 ec 20 41 52 ff e0 58 41 59 5a 48 8b 12 e9 4f ff ff ff 5d 6a 00 49 be 77 69 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_TurtleLoader_NT_2147914402_0
         $x_3_2 = {48 89 4c 24 40 48 8b 4c 24 40 e8 ?? ?? ?? ?? 89 44 24 3c 8b 44 24 3c}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

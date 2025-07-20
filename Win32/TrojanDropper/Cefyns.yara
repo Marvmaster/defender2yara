@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Cefyns_B_2147615640_0
         $x_1_4 = {5c 6e 76 73 76 63 31 30 32 34 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

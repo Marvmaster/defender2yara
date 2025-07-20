@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Lecpetex_A_2147687804_0
         $x_1_6 = {25 ff 00 00 00 33 d2 b9 0a 00 00 00 f7 f1 83 c2 30 88 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

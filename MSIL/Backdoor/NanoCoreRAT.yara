@@ -22,6 +22,7 @@ rule Backdoor_MSIL_NanoCoreRAT_A_2147835955_0
         $x_1_7 = "GetManifestResourceStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Backdoor_MSIL_NanoCoreRAT_B_2147835968_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Backdoor_MSIL_NanoCoreRAT_C_2147835970_0
         $x_1_2 = "GetTypes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Backdoor_MSIL_NanoCoreRAT_D_2147835972_0
         $x_2_3 = {1f 25 9d 6f ?? 00 00 0a 13 04 09 00 04 17 8d ?? 00 00 01 25 16}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Backdoor_MSIL_NanoCoreRAT_E_2147836286_0
         $x_1_5 = "GetMethods" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Backdoor_MSIL_NanoCoreRAT_G_2147846837_0
         $x_2_2 = {00 00 01 25 16 20 ?? ?? ?? 00 28 ?? ?? 00 06 a2 25 17 20 ?? ?? ?? 00 28 ?? ?? 00 06 a2 14 14 14 28 ?? 00 00 0a 28 ?? 00 00 0a 13 01 38}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

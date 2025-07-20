@@ -21,6 +21,7 @@ rule Trojan_Win32_Autorun_2147604792_0
         $x_2_7 = "derStyoffice" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -54,6 +55,7 @@ rule Trojan_Win32_Autorun_M_2147726569_0
         $x_1_9 = "Local Settings\\Application Data\\Google\\Chrome\\User Data" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +88,7 @@ rule Trojan_Win32_Autorun_PA_2147745482_0
         $x_1_12 = "typewriter" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +112,7 @@ rule Trojan_Win32_Autorun_NA_2147934128_0
         $x_1_3 = "autorun.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

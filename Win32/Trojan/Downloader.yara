@@ -22,6 +22,7 @@ rule Trojan_Win32_Downloader_G_2147742245_0
         $x_1_7 = "/success" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +82,7 @@ rule Trojan_Win32_Downloader_GA_2147744863_0
         $x_1_6 = "iplogger.org" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -144,6 +146,7 @@ rule Trojan_Win32_Downloader_CS_2147750049_0
         $x_2_5 = {31 31 30 33 2f 20 00 68 74 74 70 3a 2f 2f [0-15] 2f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -169,6 +172,7 @@ rule Trojan_Win32_Downloader_AUP_2147793784_0
         $x_1_1 = {bf 2e c9 8c 00 41 81 e9 01 00 00 00 21 c9 e8 ?? ?? ?? ?? 68 82 02 39 5e 8b 04 24 83 c4 04 29 c1 81 e8 b9 83 17 26 31 3a 81 e8 9c 58 2b ad 01 c0 b9 52 df 29 7c 42 b8 e4 fa d0 5c 09 c8 39 f2 75 bf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -194,6 +198,7 @@ rule Trojan_Win32_Downloader_AC_2147797998_0
         $x_1_5 = "tFi/ePo*nte" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +221,7 @@ rule Trojan_Win32_Downloader_AE_2147797999_0
         $x_1_2 = {8a c8 80 c1 41 88 4c 04 16 40 83 f8 1a 72 f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -237,6 +243,7 @@ rule Trojan_Win32_Downloader_ADE_2147798214_0
         $x_10_1 = {8b 85 98 fe ff ff 83 f0 14 c7 85 9c fe ff ff 01 00 00 00 8b 8d 9c fe ff ff 89 85 78 fe ff ff 83 f1 00 89 8d 7c fe ff ff c7 85 88 fe ff ff 14 00 00 00 c7 85 8c fe ff ff 00 00 00 00 c7 85 90 fe ff ff d9 0d 01 00 c7 85 94 fe ff ff 00 00 00 00 c7 85 80 fe ff ff 52 67 00 00 c7 85 84 fe ff ff 00 00 00 00 8b 95 90 fe ff ff 8b bd 94 fe ff ff 8b 85 88 fe ff ff}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -261,6 +268,7 @@ rule Trojan_Win32_Downloader_ADT_2147798215_0
         $x_1_4 = "192.95.10.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -283,6 +291,7 @@ rule Trojan_Win32_Downloader_RPG_2147798448_0
         $x_1_2 = "VMware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -308,6 +317,7 @@ rule Trojan_Win32_Downloader_RPG_2147798448_1
         $x_1_5 = "-extdummt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -333,6 +343,7 @@ rule Trojan_Win32_Downloader_RPH_2147798449_0
         $x_1_5 = "RunPE.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +374,7 @@ rule Trojan_Win32_Downloader_RPH_2147798449_1
         $x_1_10 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -390,6 +402,7 @@ rule Trojan_Win32_Downloader_RPI_2147798450_0
         $x_1_7 = "RunPE.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -417,6 +430,7 @@ rule Trojan_Win32_Downloader_RPI_2147798450_1
         $x_1_7 = "DownloadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -447,6 +461,7 @@ rule Trojan_Win32_Downloader_CF_2147798708_0
         $x_1_10 = "1.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -469,6 +484,7 @@ rule Trojan_Win32_Downloader_CH_2147799135_0
         $x_1_2 = {8a 07 90 47 90 2c e8 3c 01 77 f5 8b 07 90 8a 5f 04 86 c4 c1 c0 10 90 86 c4 29 f8 90 80 eb e8 01 f0 89 07 90 83 c7 05 90 88 d8 e2 db}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -490,6 +506,7 @@ rule Trojan_Win32_Downloader_RPP_2147799178_0
         $x_1_1 = {8b 0c 07 66 f7 c1 00 00 f7 c3 00 00 00 00 66 f7 c6 00 00 f7 c2 00 00 00 00 81 f1 af 58 73 c9 66 f7 c7 00 00 66 f7 c7 00 00 a9 00 00 00 00 31 0c 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -511,6 +528,7 @@ rule Trojan_Win32_Downloader_RPQ_2147799179_0
         $x_1_1 = {0b 5d 00 3d a6 00 00 00 83 fb 75 e8 [0-16] [0-32] 01 1c 38 [0-32] [0-16] 81 ef [0-32] [0-16] 81 c7 [0-16] 0f 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -535,6 +553,7 @@ rule Trojan_Win32_Downloader_CK_2147799482_0
         $x_1_4 = "aswChLic.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -565,6 +584,7 @@ rule Trojan_Win32_Downloader_CAE_2147805268_0
         $x_1_10 = "www.jxonline.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -588,6 +608,7 @@ rule Trojan_Win32_Downloader_CEB_2147806308_0
         $x_2_3 = "URLDownloadToFileW" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -611,6 +632,7 @@ rule Trojan_Win32_Downloader_CM_2147807567_0
         $x_2_3 = {81 f1 2a 5f ff 43 01 cb 59 81 eb 04 00 00 00 33 1c 24 31 1c 24 33 1c 24 5c 89 04 24 8f 45 f0 e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -632,6 +654,7 @@ rule Trojan_Win32_Downloader_RPS_2147807729_0
         $x_1_1 = {c7 44 24 60 0e e3 4f 55 8d 44 24 60 c7 44 24 64 3c 2d 92 b8 c7 44 24 68 a8 05 37 ba c7 44 24 6c 6a 12 38 e0 0f 28 4c 24 60 68 ?? ?? ?? ?? c7 44 24 54 65 86 3d 3b c7 44 24 58 59 41 a1 8a c7 44 24 5c 86 61 5b d6 c7 44 24 60 6a 12 38 e0 66 0f ef 4c 24 54 50 6a 00 0f 29 4c 24 6c ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -659,6 +682,7 @@ rule Trojan_Win32_Downloader_CO_2147808320_0
         $x_1_7 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -683,6 +707,7 @@ rule Trojan_Win32_Downloader_TI_2147809029_0
         $x_1_4 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -706,6 +731,7 @@ rule Trojan_Win32_Downloader_TA_2147809197_0
         $x_1_3 = "http://37.0.10.214/proxies.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -730,6 +756,7 @@ rule Trojan_Win32_Downloader_BG_2147809316_0
         $x_1_4 = "212.193.30.29" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -755,6 +782,7 @@ rule Trojan_Win32_Downloader_BH_2147809317_0
         $x_1_5 = "212.192.241.62" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -785,6 +813,7 @@ rule Trojan_Win32_Downloader_RPC_2147809352_0
         $x_1_10 = "Settings.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -806,6 +835,7 @@ rule Trojan_Win32_Downloader_RPD_2147809353_0
         $x_1_1 = {ff d6 68 dc 05 00 00 8b f8 ff 15 ?? ?? ?? ?? ff d6 2b c7 3d dc 05 00 00 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -831,6 +861,7 @@ rule Trojan_Win32_Downloader_RPE_2147809439_0
         $x_1_5 = "DownloadString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -856,6 +887,7 @@ rule Trojan_Win32_Downloader_RPF_2147809440_0
         $x_1_5 = "WebClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -877,6 +909,7 @@ rule Trojan_Win32_Downloader_RPJ_2147809513_0
         $x_1_1 = {43 43 8b 32 42 42 42 42 8a 06 88 07 46 47 49 75 f7 0f b7 0b 81 f9 ?? ?? 00 00 72 e4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -902,6 +935,7 @@ rule Trojan_Win32_Downloader_BI_2147809803_0
         $x_1_5 = "D:\\runner\\sources\\runner.dpr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -927,6 +961,7 @@ rule Trojan_Win32_Downloader_BJ_2147809807_0
         $x_1_5 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -958,6 +993,7 @@ rule Trojan_Win32_Downloader_BO_2147810512_0
         $x_1_7 = "%s\\Shell\\Open\\Command" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -983,6 +1019,7 @@ rule Trojan_Win32_Downloader_BP_2147811073_0
         $x_1_5 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1005,6 +1042,7 @@ rule Trojan_Win32_Downloader_BS_2147812740_0
         $x_1_2 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1027,6 +1065,7 @@ rule Trojan_Win32_Downloader_MG_2147814212_0
         $x_1_2 = {8b 45 f0 88 08 8b 4d f0 83 c1 01 89 4d f0 8b 55 f8 0f b6 42 02 0f b6 88 ?? ?? ?? ?? c1 e1 06 8b 55 f8 0f b6 42 03 0f b6 ?? ?? ?? ?? ?? 0b ca 8b 45 f0 88 08 8b 4d f0 83 c1 01 89 4d f0 8b 55 f8 83 c2 04 89 55 f8 8b 45 f4 83 e8 04 89 45 f4 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1049,6 +1088,7 @@ rule Trojan_Win32_Downloader_DA_2147815006_0
         $x_2_2 = {3d 35 79 02 0f 7f 08 40 3d e2 51 62 73 7c f1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1071,6 +1111,7 @@ rule Trojan_Win32_Downloader_AL_2147816306_0
         $x_2_2 = "VirtualProtect" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

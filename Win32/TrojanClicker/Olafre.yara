@@ -16,6 +16,7 @@ rule TrojanClicker_Win32_Olafre_A_2147624202_0
         $x_1_2 = {64 ff 30 64 89 20 8b d6 b8 ?? ?? 45 00 e8 ?? ?? ?? ff 85 c0 7e 0c 8d 45 ?? 8b d6 e8 ?? ?? ?? ff eb 0f 8d 45 fc 8b ce ba ?? ?? 45 00 e8 ?? ?? ?? ff 84 db 0f 84 1e 01 00 00 6a 00 8d 45 ?? 50 33 c9 ba ?? ?? 45 00 b8 00 00 00 80}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

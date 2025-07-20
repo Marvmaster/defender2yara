@@ -19,6 +19,7 @@ rule PWS_MSIL_HtmStealer_A_2147764876_0
         $x_1_4 = "C:/temp/WebBrowserPassView.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

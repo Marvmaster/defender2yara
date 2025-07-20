@@ -21,6 +21,7 @@ rule DoS_Win32_LeopardBlade_A_2147839649_0
         $x_100_6 = "main.walkFunc" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

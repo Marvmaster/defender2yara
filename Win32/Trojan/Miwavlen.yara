@@ -31,6 +31,7 @@ rule Trojan_Win32_Miwavlen_B_2147649523_0
         $x_1_17 = {5c 00 52 00 75 00 6e 00 00 00 02 00 00 00 5c 00 00 00 08 00 00 00 2e 00 65 00 78 00 65 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

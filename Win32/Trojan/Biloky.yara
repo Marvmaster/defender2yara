@@ -16,6 +16,7 @@ rule Trojan_Win32_Biloky_A_2147654627_0
         $x_1_2 = {8b 47 34 8b 7d f8 2b f0 03 cb 2b f8 83 39 00 89 75 f0 74 ?? 8b 41 04 83 f8 08 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

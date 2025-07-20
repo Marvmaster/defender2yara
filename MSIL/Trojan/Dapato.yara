@@ -18,6 +18,7 @@ rule Trojan_MSIL_Dapato_DA_2147780708_0
         $x_1_3 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Dapato_2147825923_0
         $x_1_4 = "get_OSVersion" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_MSIL_Dapato_AD_2147846723_0
         $x_1_3 = "alsopwnrun" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_MSIL_Dapato_AD_2147846723_1
         $x_1_2 = "source\\repos\\AnyDeskAdd.exe\\AnyDeskAdd.exe\\obj\\Debug\\AnyDeskAdd.exe.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_MSIL_Dapato_ABQE_2147896717_0
         $x_6_1 = {09 19 06 5a 6f ?? ?? ?? 0a 0b 07 1f 39 fe 02 13 07 11 07 2c 0b 07 1f 41 59 1f 0a 58 d1 0b 2b 06 07 1f 30 59 d1 0b 09 19 06 5a 17 58 6f ?? ?? ?? 0a 0c 08 1f 39 fe 02 13 08 11 08 2c 0b 08 1f 41 59 1f 0a 58 d1 0c 2b 06 08 1f 30 59 d1 0c 11 05 06 1f 10 07 5a 08 58 d2 9c 06 17 58 0a 06 11 04 fe 04 13 09 11 09 2d 98}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule Trojan_MSIL_Dapato_ARA_2147913776_0
         $x_2_6 = "UploadData" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +161,7 @@ rule Trojan_MSIL_Dapato_SH_2147917074_0
         $x_5_1 = {28 1c 00 00 0a 7e 0d 00 00 04 07 06 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 0d 28 ?? ?? ?? 0a 09 16 09 8e 69 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 13 04 7e 10 00 00 04 2c 08 02 11 04 28 1d 00 00 06 11 04 13 05 de 06}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_MSIL_Dapato_AJIA_2147930034_0
         $x_1_2 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +206,7 @@ rule Trojan_MSIL_Dapato_GPPC_2147932421_0
         $x_4_1 = {07 09 07 8e b7 5d 91 61 02 50 09 17 d6 02 50 8e b7 5d 91 da}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +228,7 @@ rule Trojan_MSIL_Dapato_AMDG_2147932966_0
         $x_1_1 = {11 36 11 34 16 6f ?? 00 00 0a 61 d2 13 36 20 ?? ?? ?? ?? 7e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -242,6 +252,7 @@ rule Trojan_MSIL_Dapato_NP_2147940058_0
         $x_1_3 = "knksvc.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

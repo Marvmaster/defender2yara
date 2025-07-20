@@ -25,6 +25,7 @@ rule Backdoor_Win32_HackerDefender_2147680285_0
         $x_1_11 = "[HPORTS]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -61,6 +62,7 @@ rule Backdoor_Win32_HackerDefender_2147680285_1
         $x_1_14 = "Radmin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1000_*) and 4 of ($x_100_*) and 2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -94,6 +96,7 @@ rule Backdoor_Win32_HackerDefender_2147680285_2
         $x_1_11 = "lop_b.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -140,6 +143,7 @@ rule Backdoor_Win32_HackerDefender_2147680285_3
         $x_5_24 = {85 c0 7c 09 8b 4d b0 c7 01 01 00 00 00 8b 55 c4 52 ff 15}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_2_*))) or
             ((1 of ($x_3_*) and 9 of ($x_2_*))) or
@@ -280,6 +284,7 @@ rule Backdoor_Win32_HackerDefender_2147680285_4
         $x_2_106 = {5c 5c 2e 5c 6d 61 69 6c 73 6c 6f 74 5c [0-6] 62 63 63}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 14 of ($x_1_*))) or
             ((3 of ($x_2_*) and 12 of ($x_1_*))) or

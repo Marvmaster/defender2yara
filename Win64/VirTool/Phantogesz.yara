@@ -20,6 +20,7 @@ rule VirTool_Win64_Phantogesz_A_2147917412_0
         $x_1_5 = {55 53 48 81 ec d8 07 00 00 [0-19] c7 85 44 07 00 00 48 06 00 00 [0-18] 89 85 40 07 00 00 [0-18] 89 85 3c 07 00 00 [0-25] 48 89 c1 8b 85 40 07 00 00 89 c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

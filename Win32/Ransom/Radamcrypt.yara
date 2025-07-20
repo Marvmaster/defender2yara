@@ -20,6 +20,7 @@ rule Ransom_Win32_Radamcrypt_A_2147708186_0
         $x_1_6 = "URL=http://%s/ld/?id=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

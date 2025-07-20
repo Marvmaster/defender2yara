@@ -19,6 +19,7 @@ rule Trojan_MSIL_Witch_W_2147782479_0
         $x_3_4 = "CreateDecryptor" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -54,6 +55,7 @@ rule Trojan_MSIL_Witch_MA_2147809052_0
         $x_1_15 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Trojan_MSIL_Witch_SG_2147912372_0
         $x_2_1 = {11 30 6f 0b 00 00 0a 28 03 00 00 06 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

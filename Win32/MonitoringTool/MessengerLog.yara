@@ -17,6 +17,7 @@ rule MonitoringTool_Win32_MessengerLog_154354_0
         $x_1_3 = {4d 00 6f 00 6e 00 69 00 74 00 6f 00 72 00 20 00 74 00 68 00 72 00 65 00 61 00 64 00 20 00 63 00 72 00 65 00 61 00 74 00 65 00 64 00 2c 00 20 00 54 00 49 00 44 00 3a 00 20 00 25 00 64 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule MonitoringTool_Win32_MessengerLog_154354_1
         $x_1_2 = "ML360Srv.IServController = s 'IServController Class'" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule MonitoringTool_Win32_MessengerLog_154354_2
         $x_1_3 = "(ChatLog2::WriteLog) Can not zip file %s: %d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

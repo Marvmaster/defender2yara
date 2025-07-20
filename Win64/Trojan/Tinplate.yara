@@ -19,6 +19,7 @@ rule Trojan_Win64_Tinplate_A_2147919489_0
         $x_1_4 = "doingOnDisk.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

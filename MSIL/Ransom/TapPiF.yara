@@ -21,6 +21,7 @@ rule Ransom_MSIL_TapPiF_PA_2147762523_0
         $x_1_6 = {5c 54 61 70 50 69 46 5c 6f 62 6a 5c [0-16] 5c 54 61 70 50 69 46 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

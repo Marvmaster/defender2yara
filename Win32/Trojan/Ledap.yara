@@ -20,6 +20,7 @@ rule Trojan_Win32_Ledap_A_2147651330_0
         $x_1_6 = {25 40 25 00 25 7c 25 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule Trojan_Win32_Ledap_A_2147655008_0
         $x_1_4 = {50 8b 06 50 8d 46 04 50 53 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

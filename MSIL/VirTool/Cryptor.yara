@@ -25,6 +25,7 @@ rule VirTool_MSIL_Cryptor_2147742484_0
         $x_10_10 = "CoreCodes.dll" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -65,6 +66,7 @@ rule VirTool_MSIL_Cryptor_2147742484_1
         $x_1_17 = "In$J$ct0r" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

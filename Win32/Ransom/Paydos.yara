@@ -17,6 +17,7 @@ rule Ransom_Win32_Paydos_GK_2147853344_0
         $x_1_2 = "set _passCode=AES1014DW256" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

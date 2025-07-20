@@ -17,6 +17,7 @@ rule Trojan_Win32_Beerish_O_2147749743_0
         $x_1_2 = {ba 01 00 00 00 b9 02 00 00 80 e8 ?? ?? ?? 00 48 ?? ?? ?? ?? ?? ?? ba 02 00 00 00 b9 02 00 00 80 e8 ?? ?? ?? 00 48 ?? ?? ?? ?? ?? ?? ba 03 00 00 00 b9 02 00 00 80}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

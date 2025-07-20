@@ -26,6 +26,7 @@ rule Trojan_Win32_RHADAMANTHYS_DB_2147919687_0
         $x_1_11 = "GradientFill" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule Trojan_Win32_RHADAMANTHYS_DC_2147920322_0
         $x_1_1 = {2b c1 33 d0 0f af 95 24 fd ff ff 89 95 50 e0 ff ff 8b 95 50 e0 ff ff 89 95 4c e0 ff ff 8b 85 4c e0 ff ff 83 e8 01 89 85 48 e0 ff ff c7 85 4c ef ff ff 01 00 00 00 51}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_Win32_RHADAMANTHYS_DD_2147931237_0
         $x_1_4 = "av1_ac_quant_QTX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

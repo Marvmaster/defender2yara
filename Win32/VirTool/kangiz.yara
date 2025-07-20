@@ -21,6 +21,7 @@ rule VirTool_Win32_kangiz_A_2147788331_0
         $x_1_7 = {57 ff 75 f4 6a 40 ff 15 ?? ?? ?? ?? 8b f8 85 ff 74 5d 8d ?? ?? 50 57 56 6a 16 ff 15 ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

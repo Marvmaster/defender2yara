@@ -17,6 +17,7 @@ rule Trojan_Win32_LockbitCrypt_SA_2147763544_0
         $x_1_2 = {51 6a 40 50 52 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_LockbitCrypt_SA_2147763544_1
         $x_1_2 = {8d 64 24 00 81 f9 ?? ?? ?? ?? 75 ?? 8b 15 ?? ?? ?? ?? 8d 4c 24 ?? 51 6a 40 50 52 ff 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3d ?? ?? ?? ?? 75 ?? 33 c0 33 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_LockbitCrypt_SB_2147780181_0
         $x_1_3 = {51 6a 40 50 52 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_MSIL_Jigsaw_A_2147771727_0
         $x_1_5 = "EncryptedFileList.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_MSIL_Jigsaw_AJY_2147771841_0
         $x_1_4 = "Qml0Y29pbkJsYWNrbWFpbGVyJQ==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

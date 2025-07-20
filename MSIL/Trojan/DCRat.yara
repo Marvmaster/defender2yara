@@ -23,6 +23,7 @@ rule Trojan_MSIL_DCRat_SK_2147755309_0
         $x_1_8 = "DCRatBuild.Dictionaries" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             ((4 of ($x_5_*))) or
@@ -55,6 +56,7 @@ rule Trojan_MSIL_DCRat_DEN_2147810489_0
         $x_3_8 = "root\\SecurityCenter" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +83,7 @@ rule Trojan_MSIL_DCRat_EW_2147814253_0
         $x_3_6 = "System.Security.Cryptography.AesCryptoServiceProvider" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +110,7 @@ rule Trojan_MSIL_DCRat_EC_2147814254_0
         $x_3_6 = "2020.4.11f1_fbf367ac14e9" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +136,7 @@ rule Trojan_MSIL_DCRat_AW_2147816631_0
         $x_3_5 = "{11111-22222-20001-00001}" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +158,7 @@ rule Trojan_MSIL_DCRat_A_2147825238_0
         $x_5_1 = {8d 3b 00 00 01 13 07 09 28 a8 01 00 0a 16 11 07 16 1a ?? ?? ?? ?? ?? 11 04 28 a8 01 00 0a 16 11 07 1a 1a ?? ?? ?? ?? ?? 11 05 28 a8 01 00 0a 16 11 07 1e 1a ?? ?? ?? ?? ?? 11 06 28 a8 01 00 0a 16 11 07 1f 0c 1a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +185,7 @@ rule Trojan_MSIL_DCRat_AN_2147830116_0
         $x_1_6 = "rO7bH9h2.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +208,7 @@ rule Trojan_MSIL_DCRat_ABBN_2147834312_0
         $x_1_2 = "DLqHt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +233,7 @@ rule Trojan_MSIL_DCRat_MBS_2147838055_0
         $x_1_4 = "PX00004" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -247,6 +256,7 @@ rule Trojan_MSIL_DCRat_MBH_2147838094_0
         $x_1_2 = {38 33 38 32 30 34 32 33 36 00 3c 4d 6f 64 75 6c 65 3e 00 74 50 43 6b 46}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -269,6 +279,7 @@ rule Trojan_MSIL_DCRat_MBC_2147838129_0
         $x_1_2 = "ZVbMBux6QdnMrtHT312LXdyu6bkECGBjiQGhBtwWvw" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -291,6 +302,7 @@ rule Trojan_MSIL_DCRat_SPAN_2147840305_0
         $x_1_2 = "7wkHjueQJkFxNvEUWPOHEA==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -314,6 +326,7 @@ rule Trojan_MSIL_DCRat_MBAP_2147840414_0
         $x_1_3 = "a-696781e46846" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -337,6 +350,7 @@ rule Trojan_MSIL_DCRat_DA_2147841383_0
         $x_1_3 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -358,6 +372,7 @@ rule Trojan_MSIL_DCRat_AD_2147841502_0
         $x_1_1 = {16 2d 07 15 2c 04 2b 4d 2b 52 1c 2c 31 16 2b 4f 2b 2c 2b 4e 2b 4f 72 ?? ?? ?? 70 2b 4f 2b 54 2b 55 72 ?? ?? ?? 70 2b 55 8e 69 5d 91 7e ?? ?? ?? 04 07 91 61 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -380,6 +395,7 @@ rule Trojan_MSIL_DCRat_C_2147841507_0
         $x_2_2 = {00 00 0a 20 00 00 00 00 28 ?? 00 00 06 28 ?? 00 00 0a 6f ?? 00 00 0a 28 ?? 00 00 0a 0a 06 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -403,6 +419,7 @@ rule Trojan_MSIL_DCRat_DB_2147841531_0
         $x_1_3 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -424,6 +441,7 @@ rule Trojan_MSIL_DCRat_ADR_2147841950_0
         $x_1_1 = {14 fe 01 0a 06 2c 41 00 7e 59 00 00 0a 0b 00 28 cc 00 00 0a 6f cd 00 00 0a 6f ce 00 00 0a 0b 00 de 05 26 00 00 de 00 07 28 0c 00 00 0a 0c 08 2c 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -445,6 +463,7 @@ rule Trojan_MSIL_DCRat_ADR_2147841950_1
         $x_1_1 = {0d 16 13 04 2b 29 07 06 08 16 06 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 13 05 12 05 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 0b 11 04 17 58 13 04 11 04 09 fe 04 13 06 11 06 2d cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -467,6 +486,7 @@ rule Trojan_MSIL_DCRat_ADA_2147842668_0
         $x_1_2 = "Veresiye.UI.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -489,6 +509,7 @@ rule Trojan_MSIL_DCRat_MA_2147843994_0
         $x_10_2 = "VisualStudio.Shell.Framework.dll" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -515,6 +536,7 @@ rule Trojan_MSIL_DCRat_MA_2147843994_1
         $x_1_6 = {57 ff b7 3f 09 1e 00 00 00 fa 25 33 00 16 00 00 01 00 00 00 22 01 00 00 0a 01 00 00 52 05 00 00 7a 06 00 00 43 00 00 00 35}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -537,6 +559,7 @@ rule Trojan_MSIL_DCRat_MBCZ_2147844455_0
         $x_1_2 = "27PSgncGpwYBh6ukWtTVu9uz0oJ" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -559,6 +582,7 @@ rule Trojan_MSIL_DCRat_EAP_2147844571_0
         $x_2_2 = "WQJzjw.Properties.Resources" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -580,6 +604,7 @@ rule Trojan_MSIL_DCRat_FAI_2147845942_0
         $x_5_1 = {0a 16 0b 2b 31 7e ?? 05 00 04 06 7e ?? 06 00 04 02 07 6f ?? 00 00 0a 7e ?? 05 00 04 07 7e ?? 05 00 04 8e 69 5d 91 61 28 ?? 0b 00 06 28 ?? 06 00 06 26 07 17 58 0b 07 02 6f c7 00 00 0a 32 c6}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -602,6 +627,7 @@ rule Trojan_MSIL_DCRat_RDB_2147846141_0
         $x_2_2 = {09 11 06 09 11 06 91 04 61 d2 9c 11 06 17 58 13 06 11 06 09 8e 69}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -624,6 +650,7 @@ rule Trojan_MSIL_DCRat_B_2147846913_0
         $x_2_2 = {00 00 0a 18 33 2e 09 6f ?? 00 00 0a 16 6a 31 08 09 6f ?? 00 00 0a 2d 02 de 26 02 09 6f ?? 00 00 0a 06 7b ?? 00 00 04 06 7b ?? 00 00 04 16 2c 06}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -646,6 +673,7 @@ rule Trojan_MSIL_DCRat_NTY_2147847506_0
         $x_1_2 = "Qrlydcszoo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -667,6 +695,7 @@ rule Trojan_MSIL_DCRat_PSOV_2147847860_0
         $x_2_1 = {16 72 23 00 00 70 14 d0 02 00 00 02 28 14 00 00 0a 18 8d 31 00 00 01 25 16 16 14 28 18 00 00 0a a2 25 17 17 14 28 18 00 00 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -690,6 +719,7 @@ rule Trojan_MSIL_DCRat_F_2147848663_0
         $x_2_3 = "Invoke" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -714,6 +744,7 @@ rule Trojan_MSIL_DCRat_JB_2147848674_0
         $x_50_5 = "DCRat.Code" wide //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -735,6 +766,7 @@ rule Trojan_MSIL_DCRat_AADL_2147849891_0
         $x_5_1 = {25 26 0b 16 28 ?? 00 00 06 0c 2b 1e 06 08 06 08 91 07 08 07 28 ?? 01 00 06 25 26 69 5d 91 61 d2 9c 08 1a 28 ?? 00 00 06 58 0c 08 06 28 ?? 01 00 06 25 26 69 32 d6}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -767,6 +799,7 @@ rule Trojan_MSIL_DCRat_CXLM_2147849969_0
         $x_1_12 = "Paste_bin" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -789,6 +822,7 @@ rule Trojan_MSIL_DCRat_AADN_2147849970_0
         $x_2_2 = {11 0a 16 11 08 16 11 08 8e 69 28 ?? 00 00 0a 38 00 00 00 00 11 08 13 09 38 ?? 00 00 00 11 06 11 0a 16 11 0a 8e 69 28 ?? 00 00 06 8d ?? 00 00 01 13 08 38}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -812,6 +846,7 @@ rule Trojan_MSIL_DCRat_AADQ_2147849990_0
         $x_1_3 = "ReadAsByteArrayAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -835,6 +870,7 @@ rule Trojan_MSIL_DCRat_CXFW_2147850214_0
         $x_1_3 = "pTP2Nf/rJk+yO4zTrQqEPQ==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -859,6 +895,7 @@ rule Trojan_MSIL_DCRat_RDC_2147850259_0
         $x_1_4 = "lSfgApatkdxsVcGcrktoFd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -880,6 +917,7 @@ rule Trojan_MSIL_DCRat_AAEK_2147850280_0
         $x_4_1 = {0a 06 16 73 ?? 00 00 0a 0b 16 0c 00 0f 00 08 20 00 04 00 00 58 28 ?? 00 00 2b 00 07 02 08 20 00 04 00 00 6f ?? 00 00 0a 0d 08 09 58 0c 00 09 20 00 04 00 00 fe 04 16 fe 01 13 04 11 04 2d cc}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -902,6 +940,7 @@ rule Trojan_MSIL_DCRat_G_2147851176_0
         $x_2_2 = {57 ff b7 3f 09 1f 00 00 00 fa 25 33 00 16 00 00 01 00 00 00 4b 01 00 00 26 06 00 00 3c 06 00 00 b5 0e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -926,6 +965,7 @@ rule Trojan_MSIL_DCRat_AAGO_2147851310_0
         $x_1_4 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -947,6 +987,7 @@ rule Trojan_MSIL_DCRat_PSTG_2147851665_0
         $x_2_1 = {73 0c 00 00 0a 13 05 11 04 8d 08 00 00 01 13 06 11 05 11 06 16 11 04 6f 0a 00 00 0a 26 11 06 13 07 dd 1c 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -969,6 +1010,7 @@ rule Trojan_MSIL_DCRat_AAHO_2147851712_0
         $x_1_2 = "2GM23j301t60Z96T" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -992,6 +1034,7 @@ rule Trojan_MSIL_DCRat_NDE_2147852196_0
         $x_1_3 = "Alexander Roshal" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1016,6 +1059,7 @@ rule Trojan_MSIL_DCRat_RDD_2147852686_0
         $x_1_4 = "WhichTime" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1040,6 +1084,7 @@ rule Trojan_MSIL_DCRat_AAMH_2147888651_0
         $x_1_4 = "nTOz2aV5mHQGFJ9hs6yIM2XFsxZzjzUgXXG0bRWhjIA=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1061,6 +1106,7 @@ rule Trojan_MSIL_DCRat_RDE_2147890117_0
         $x_2_1 = {fe 0c 02 00 fe 0c 01 00 6f 79 03 00 0a 20 01 00 00 00 73 7a 03 00 0a 25 fe 0c 00 00 20 00 00 00 00 fe 0c 00 00 8e 69 6f 1d 00 00 0a 25 6f 7b 03 00 0a fe 0c 02 00 6f c8 01 00 0a fe 0e 00 00 fe 0c 02 00 6f 1e 00 00 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1085,6 +1131,7 @@ rule Trojan_MSIL_DCRat_I_2147891596_0
         $x_1_4 = "CreateDelegate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1116,6 +1163,7 @@ rule Trojan_MSIL_DCRat_MAAB_2147891672_0
         $x_1_7 = "Cockos Incorporated" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1137,6 +1185,7 @@ rule Trojan_MSIL_DCRat_ADC_2147892338_0
         $x_1_1 = {0a 0b 16 0c 07 8e 69 17 59 0d 38 18 00 00 00 07 08 91 13 04 07 08 07 09 91 9c 07 09 11 04 9c 08 17 58 0c 09 17 59 0d 08 09 3f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1159,6 +1208,7 @@ rule Trojan_MSIL_DCRat_ADC_2147892338_1
         $x_1_2 = "DCRatLoader.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1181,6 +1231,7 @@ rule Trojan_MSIL_DCRat_ADC_2147892338_2
         $x_1_2 = {26 06 17 58 0a 06 18 32 ad 16 0b 1e 2c f7 07 18 5d 2d 10 02 7b 02 00 00 04 1f 58 6f ?? 00 00 0a 26 2b 0e 02 7b 02 00 00 04 1f 59 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1202,6 +1253,7 @@ rule Trojan_MSIL_DCRat_RDF_2147892592_0
         $x_2_1 = {06 18 6f 32 00 00 0a 06 6f 33 00 00 0a 0c 02 0d 08 09 16 09}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1223,6 +1275,7 @@ rule Trojan_MSIL_DCRat_AMAD_2147892664_0
         $x_5_1 = {01 0c 06 08 16 1f 10 6f ?? 00 00 0a 26 07 08 6f ?? 01 00 0a 06 07 6f ?? 01 00 0a 16 73 ?? 01 00 0a 13 08}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1244,6 +1297,7 @@ rule Trojan_MSIL_DCRat_AMAA_2147892944_0
         $x_5_1 = {11 04 11 0a 02 11 0a 91 03 11 0a 03 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 61 d2 9c 20 ?? 00 00 00 38 ?? ?? ff ff 11 04 13 0c 38 ?? ?? ff ff 11 05 11 00 fe 04 13 06}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1265,6 +1319,7 @@ rule Trojan_MSIL_DCRat_AAVD_2147895165_0
         $x_5_1 = {04 06 18 28 ?? 01 00 06 7e ?? 00 00 04 06 19 28 ?? 01 00 06 7e ?? 00 00 04 06 28 ?? 01 00 06 0d 7e ?? 00 00 04 09 02 16 02 8e 69 28 ?? 01 00 06 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1286,6 +1341,7 @@ rule Trojan_MSIL_DCRat_RDG_2147895396_0
         $x_2_1 = {11 14 11 15 11 13 11 15 9a 28 0e 00 00 0a 9c 11 15 17 58 13 15 11 15 11 13 8e 69}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1307,6 +1363,7 @@ rule Trojan_MSIL_DCRat_RDH_2147895402_0
         $x_2_1 = {07 02 16 02 8e 69 6f 28 00 00 0a 00 07 6f 29 00 00 0a 00 06 6f 2a 00 00 0a 0c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1330,6 +1387,7 @@ rule Trojan_MSIL_DCRat_RDJ_2147897646_0
         $x_1_3 = "$TR$4E" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1351,6 +1409,7 @@ rule Trojan_MSIL_DCRat_RPZ_2147898289_0
         $x_1_1 = {08 11 06 1f 16 5d 91 13 0d 11 0c 11 0d 61 13 0e 11 0e 11 0b 59 13 0f 07 11 09 11 0f 11 07 5d d2 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1372,6 +1431,7 @@ rule Trojan_MSIL_DCRat_RDK_2147898818_0
         $x_2_1 = {28 0f 01 00 06 28 12 01 00 06 74 22 00 00 01 0a 73 dd 00 00 0a 0b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1395,6 +1455,7 @@ rule Trojan_MSIL_DCRat_RDL_2147898993_0
         $x_1_3 = "AppleCheats" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1421,6 +1482,7 @@ rule Trojan_MSIL_DCRat_PSFJ_2147899366_0
         $x_1_6 = "GetNetworkInfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1443,6 +1505,7 @@ rule Trojan_MSIL_DCRat_CDC_2147899458_0
         $x_1_2 = "Ingjqgvfofy.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1465,6 +1528,7 @@ rule Trojan_MSIL_DCRat_NDT_2147900114_0
         $x_1_2 = "p91naAPJ3ftIdgWgHn.eIcV1J10NMXHttmQkC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1489,6 +1553,7 @@ rule Trojan_MSIL_DCRat_J_2147900129_0
         $x_1_4 = "get_EntryPoint" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1512,6 +1577,7 @@ rule Trojan_MSIL_DCRat_RDM_2147900170_0
         $x_1_3 = "oxZ2GcLov3VhQu2OGBY" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1533,6 +1599,7 @@ rule Trojan_MSIL_DCRat_K_2147900186_0
         $x_2_1 = {07 02 12 02 12 03 6f ?? 00 00 0a 09 8e 69 20 ?? ?? ?? ?? 20 ?? ?? ?? ?? 28 ?? 00 00 06 59 8d ?? 00 00 01 13 04 09 20 ?? ?? ?? ?? 20 ?? ?? ?? ?? 28 ?? 00 00 06 11 04 20 ?? ?? ?? ?? 20 ?? ?? ?? ?? 28 ?? 00 00 06 11 04 8e 69 28 ?? 00 00 0a 11 04 13 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1554,6 +1621,7 @@ rule Trojan_MSIL_DCRat_PTFC_2147900424_0
         $x_2_1 = {08 8d 3a 00 00 01 13 04 7e 99 08 00 04 02 1a 58 11 04 16 08 28 ?? 01 00 0a 28 ?? 01 00 0a 11 04 16 11 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1575,6 +1643,7 @@ rule Trojan_MSIL_DCRat_PTFL_2147900622_0
         $x_2_1 = {6f 23 00 00 0a 17 59 28 ?? 01 00 0a 16 7e a8 08 00 04 02 1a 28 ?? 01 00 0a 11 05 0d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1596,6 +1665,7 @@ rule Trojan_MSIL_DCRat_NN_2147900902_0
         $x_5_1 = {02 03 02 4b 03 04 61 05 61 58 0e 07 0e 04 95 58 7e a7 ?? ?? ?? 0e 06 17 59 95 58 0e 05 ?? ?? 0d 00 06 58 54 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1619,6 +1689,7 @@ rule Trojan_MSIL_DCRat_SG_2147901063_0
         $x_1_3 = "6f5245be-37ec-4cfb-8f6f-03ed38215d0a" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1644,6 +1715,7 @@ rule Trojan_MSIL_DCRat_SPXZ_2147901117_0
         $x_1_5 = "ng6lD8vHJrskZJjhpy6assV0PqMkJn9L9q4spCVzZmPaEk2FZytpnqSmFiX" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1665,6 +1737,7 @@ rule Trojan_MSIL_DCRat_PTGW_2147901274_0
         $x_2_1 = {6f 1d 00 00 0a 17 59 28 ?? 01 00 0a 16 7e a5 08 00 04 02 1a 28 ?? 01 00 0a 11 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1686,6 +1759,7 @@ rule Trojan_MSIL_DCRat_LA_2147901431_0
         $x_5_1 = {02 03 02 4b 03 04 61 05 61 58 0e 07 0e 04 95 58 7e b5 08 00 04 0e 06 17 59 95 58 0e 05 28 ?? 0d 00 06 58 54 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1708,6 +1782,7 @@ rule Trojan_MSIL_DCRat_LA_2147901431_1
         $x_5_2 = {11 0b 16 95 11 1e 25 1a 58 13 1e 4b 61 11 0c 16 95 58 11 0d 16 95 11 0e 16 95 5a 58 13 21 11 0b}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1730,6 +1805,7 @@ rule Trojan_MSIL_DCRat_E_2147902267_0
         $x_1_2 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1751,6 +1827,7 @@ rule Trojan_MSIL_DCRat_NC_2147902273_0
         $x_5_1 = {02 03 02 4b 03 04 61 05 61 58 0e 07 0e 04 95 58 7e 9e 08 00 04 0e 06 17 59 95 58 0e 05 28 ?? 0d 00 06 58 54}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1773,6 +1850,7 @@ rule Trojan_MSIL_DCRat_NL_2147902544_0
         $x_5_2 = {03 02 4b 03 05 5f 04 05 66 5f 60 58 0e 07 0e 04 95 58 7e b6 ?? ?? ?? 0e 06 17 59 95 58 0e 05 ?? ?? 0d 00 06 58 54 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1794,6 +1872,7 @@ rule Trojan_MSIL_DCRat_CCHT_2147902560_0
         $x_1_1 = {a2 25 1a 72 ?? ?? ?? ?? a2 25 1b 28 ?? 00 00 06 a2 25 1c 72 ?? ?? ?? ?? a2 25 1d 28 ?? 00 00 06 a2 25 1e 28 ?? 00 00 06 a2 28 ?? 00 00 0a 7d ?? ?? ?? ?? 16 06 7b ?? ?? ?? ?? 8e 69 28 ?? 00 00 0a 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1815,6 +1894,7 @@ rule Trojan_MSIL_DCRat_NF_2147903263_0
         $x_5_1 = {03 04 61 05 61 58 0e 07 0e 04 95 58 7e b0 08 00 04 0e 06 17 59 95 58 0e 05 28 ?? 0d 00 06 58 54 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1836,6 +1916,7 @@ rule Trojan_MSIL_DCRat_NF_2147903263_1
         $x_5_1 = {02 03 02 4b 03 04 61 05 61 58 0e 07 0e 04 95 58 7e ?? 08 00 04 0e 06 17 59 95 58 0e 05 28 04 0e 00 06 58 54 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1857,6 +1938,7 @@ rule Trojan_MSIL_DCRat_FRAA_2147903479_0
         $x_5_1 = {16 13 05 2b 2f 06 07 17 8d ?? 00 00 01 25 16 11 05 8c ?? 00 00 01 03 28 ?? 00 00 0a a2 14 28 ?? 00 00 0a 28 ?? 00 00 0a 6f ?? 00 00 0a 00 11 05 17 d6 13 05 11 05 11 04 31 cb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1878,6 +1960,7 @@ rule Trojan_MSIL_DCRat_PTJI_2147903595_0
         $x_2_1 = {2d 18 06 02 28 ?? 00 00 06 28 ?? 00 00 06 28 ?? 00 00 0a 06 28 ?? 00 00 0a 26 02 28 ?? 00 00 0a 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1899,6 +1982,7 @@ rule Trojan_MSIL_DCRat_NI_2147904305_0
         $x_5_1 = {1f 1f 5f 62 02 7b ab 01 00 04 17 91 ?? ?? 00 00 00 5f 61 02 7b b2 01 00 04 5f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1920,6 +2004,7 @@ rule Trojan_MSIL_DCRat_NA_2147904510_0
         $x_5_1 = {11 00 11 00 17 61 5a 1e 63 d2 2a 02 ?? ?? 04 00 04 18 95 20 ff ff 00 00 5f d1 18 60 d1 13 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1941,6 +2026,7 @@ rule Trojan_MSIL_DCRat_NG_2147904511_0
         $x_5_1 = {2b 09 28 b1 ?? ?? 44 14 16 9a 26 16 2d f9 02 03 02 4b 03 04 61 05 61}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1962,6 +2048,7 @@ rule Trojan_MSIL_DCRat_NJ_2147904512_0
         $x_5_1 = {02 03 02 4b 03 04 61 05 61 58 0e 07 0e 04 95 58 7e 9c 08 00 04 0e 06 17 59 95 58 0e 05 28 ?? 0d 00 06 58 54 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1983,6 +2070,7 @@ rule Trojan_MSIL_DCRat_NK_2147904793_0
         $x_5_1 = {02 7b a4 02 00 04 03 04 61 20 ff 00 00 00 5f 95 03 1e 64 61 2a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2004,6 +2092,7 @@ rule Trojan_MSIL_DCRat_JQAA_2147906574_0
         $x_5_1 = {59 91 07 08 07 8e 69 5d 1f ?? 58 1f ?? 58 1f ?? 59 91 61 03 08 20 ?? ?? 00 00 58 20 ?? ?? 00 00 59 03 8e 69 5d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2025,6 +2114,7 @@ rule Trojan_MSIL_DCRat_RDO_2147909034_0
         $x_2_1 = {5d 94 13 0c 11 05 11 0a 02 11 0a 91 11 0c 61 28 ?? ?? ?? ?? 9c 11 0a 17 58 13 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2046,6 +2136,7 @@ rule Trojan_MSIL_DCRat_L_2147909820_0
         $x_2_1 = {58 03 06 1e 58 4b 61 54 06 4b 06 1a 58 4b 61 06 1e 58 4b 61 1e 06 4b 06}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2071,6 +2162,7 @@ rule Trojan_MSIL_DCRat_SPXG_2147915759_0
         $x_1_5 = "GetDelegateForFunctionPointer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2096,6 +2188,7 @@ rule Trojan_MSIL_DCRat_NB_2147917918_0
         $x_1_5 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2117,6 +2210,7 @@ rule Trojan_MSIL_DCRat_TZAA_2147918828_0
         $x_5_1 = {15 59 91 61 ?? 08 20 0c 02 00 00 58 20 0b 02 00 00 59 1b 59 1b 58 ?? 8e 69 5d 1f 09 58 1f 0d 58 1f 16 59 91 59 20 fb 00 00 00 58 1b 58 20 00 01 00 00 5d d2 9c 08 17 58 0c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2141,6 +2235,7 @@ rule Trojan_MSIL_DCRat_RDP_2147919403_0
         $x_1_4 = "GetEncodedData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2165,6 +2260,7 @@ rule Trojan_MSIL_DCRat_SCAG_2147919936_0
         $x_1_4 = "GetDelegateForFunctionPointer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2189,6 +2285,7 @@ rule Trojan_MSIL_DCRat_SPAG_2147920487_0
         $x_1_4 = "GetDelegateForFunctionPointer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2213,6 +2310,7 @@ rule Trojan_MSIL_DCRat_SJKG_2147921755_0
         $x_1_4 = "GetDelegateForFunctionPointer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2236,6 +2334,7 @@ rule Trojan_MSIL_DCRat_DF_2147923700_0
         $x_3_3 = "yt9ZjJ88BDZQbPA3Qa" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2261,6 +2360,7 @@ rule Trojan_MSIL_DCRat_ARA_2147925404_0
         $x_2_5 = "SENT_DIS" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2283,6 +2383,7 @@ rule Trojan_MSIL_DCRat_NIT_2147926208_0
         $x_2_2 = {00 00 72 77 03 00 70 28 ?? 00 00 0a 0b 72 77 03 00 70 28 ?? 00 00 0a 00 de 15 26 00 00 de 00 20 d0 07 00 00 28 ?? 00 00 0a 00 00 17 0c 2b d1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2307,6 +2408,7 @@ rule Trojan_MSIL_DCRat_ND_2147928803_0
         $x_1_4 = "$f647afa1-68f1-4859-af0d-09db821e0d3b" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2328,6 +2430,7 @@ rule Trojan_MSIL_DCRat_AZJA_2147932019_0
         $x_5_1 = {59 91 61 03 08 20 0b 02 00 00 58 20 0a 02 00 00 59 17 59 17 58 03 8e 69 5d 1f 09 58 1f 0d 58 1f 16 59 91 59 20 fa 00 00 00 58 1c 58 20 00 01 00 00 5d d2 9c 08 17 58 0c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2350,6 +2453,7 @@ rule Trojan_MSIL_DCRat_NFA_2147933367_0
         $x_1_2 = {11 0c 11 07 58 11 09 59 93 61 11 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2371,6 +2475,7 @@ rule Trojan_MSIL_DCRat_ZHT_2147937017_0
         $x_10_1 = {01 0a 16 0b 38 13 00 00 00 06 07 02 07 91 03 07 03 8e 69 5d 91 61 d2 9c 07 17 58 0b 07 02 8e 69 3f e4 ff ff ff}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2392,6 +2497,7 @@ rule Trojan_MSIL_DCRat_SFG_2147938515_0
         $x_2_1 = {73 1d 00 00 0a 7e 02 00 00 04 6f 1e 00 00 0a 0a 7e 03 00 00 04 06 28 11 29 00 06}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2413,6 +2519,7 @@ rule Trojan_MSIL_DCRat_MMK_2147939449_0
         $x_5_1 = {20 00 00 00 00 fe 0e 01 00 fe 0c 01 00 20 01 00 00 00 40 00 00 00 00 73 1d 00 00 0a 7e 02 00 00 04 6f ?? 00 00 0a 0a 7e 03 00 00 04 06}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2434,6 +2541,7 @@ rule Trojan_MSIL_DCRat_SISI_2147940711_0
         $x_2_1 = {08 8d 24 00 00 01 13 04 7e ?? ?? ?? 04 02 1a 58 11 04 16 08 28 12 00 00 0a 28 56 00 00 0a 11 04 16}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2459,6 +2567,7 @@ rule Trojan_MSIL_DCRat_SLEO_2147941409_0
         $x_1_5 = "[SystemInfromation] Saving information..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2480,6 +2589,7 @@ rule Trojan_MSIL_DCRat_ZLU_2147942269_0
         $x_10_1 = {17 58 20 00 01 00 00 5d 7d 13 00 00 04 02 02 7b 14 00 00 04 02 7b 12 00 00 04 02 7b 13 00 00 04 91 58 20 00 01 00 00 5d 7d 14 00 00 04 02 02 7b 13 00 00 04 02 7b 14 00 00 04 28 ?? 00 00 06 02 7b 12 00 00 04 02 7b 12 00 00 04 02 7b 13 00 00 04 91 02 7b 12 00 00 04 02 7b 14 00 00 04 91 58 20 00 01 00 00 5d 91 0c 06 07 03 07 91 08 61 d2 9c 07 17 58 0b 07 03 8e 69 3f 7b ff ff ff 06 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2501,6 +2611,7 @@ rule Trojan_MSIL_DCRat_PCO_2147945129_0
         $x_1_1 = {6f 40 02 00 0a 6f 41 02 00 0a 00 09 08 1f 10 6f 40 02 00 0a 6f 42 02 00 0a 00 09 09 6f 43 02 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2522,6 +2633,7 @@ rule Trojan_MSIL_DCRat_SLUU_2147945865_0
         $x_2_1 = {1f 1a 28 1d 00 00 0a 00 28 1e 00 00 0a 72 01 00 00 70 28 1f 00 00 0a 6f 20 00 00 0a 0c 08 28 21 00 00 0a 0d 7e 07 00 00 04 2d 58}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

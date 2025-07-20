@@ -17,6 +17,7 @@ rule Trojan_Win32_Midrami_A_2147741069_0
         $x_1_3 = {72 74 75 61 c7 05 ?? ?? ?? ?? 74 65 63 74 c7 05 ?? ?? ?? ?? 6c 50 72 6f 66 c7 05 ?? ?? ?? ?? 56 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

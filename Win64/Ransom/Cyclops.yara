@@ -18,6 +18,7 @@ rule Ransom_Win64_Cyclops_PBA_2147849989_0
         $x_1_3 = "cyclops" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -44,6 +45,7 @@ rule Ransom_Win64_Cyclops_LKV_2147853250_0
         $x_1_2 = {c1 e5 07 29 dd 40 28 e9 88 4c 04 ?? 48 83 c0 01 48 83 f8 ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Ransom_Win64_Cyclops_LKW_2147853251_0
         $x_1_1 = {c0 eb 06 0f b6 eb 89 ea c1 e2 07 29 ea 28 d1 88 4c 04 20 48 83 c0 01 48 83 f8 0e 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

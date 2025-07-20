@@ -22,6 +22,7 @@ rule Ransom_Win32_Dimacrypt_A_2147723859_0
         $x_1_8 = {00 00 5c 00 25 00 6c 00 73 00 5c 00 25 00 6c 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

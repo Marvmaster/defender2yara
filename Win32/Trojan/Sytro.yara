@@ -18,6 +18,7 @@ rule Trojan_Win32_Sytro_RPY_2147889423_0
         $x_1_3 = {2e 74 73 75 73 74 75 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Backdoor_MSIL_Nanocore_2147740145_0
         $x_1_5 = "DownloadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Backdoor_MSIL_Nanocore_2147740145_1
         $x_1_10 = "ReZer0V2.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +86,7 @@ rule Backdoor_MSIL_Nanocore_2147740145_2
         $x_7_14 = ".crypted.exe" wide //weight: 7
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_7_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -108,6 +111,7 @@ rule Backdoor_MSIL_Nanocore_2147740145_3
         $x_1_1 = {58 00 59 7e ?? ?? ?? 04 61 d1 2a 40 00 20 ?? ?? ?? 00 13 ?? 20 ?? ?? ?? ?? 20 ?? ?? ?? ?? 20 ?? ?? ?? ?? 61 20 ?? ?? ?? ?? 40 ?? ?? ?? ?? 20 ?? ?? ?? ?? 13 ?? 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +134,7 @@ rule Backdoor_MSIL_Nanocore_2147740145_4
         $x_1_2 = {28 89 00 00 0a 13 05 08 14 72 ?? 08 00 70 18 8d 14 00 00 01 25 16 09 a2 25 17 17 8d 14 00 00 01 25 16 11 05 a2 a2 14 14 28 8a 00 00 0a 00 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -161,6 +166,7 @@ rule Backdoor_MSIL_Nanocore_2147740145_5
         $x_3_11 = "VirtualMachineDetector" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 8 of ($x_1_*))) or
             ((2 of ($x_3_*) and 5 of ($x_1_*))) or
@@ -197,6 +203,7 @@ rule Backdoor_MSIL_Nanocore_2147740145_6
         $x_1_12 = "DisableProtection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +232,7 @@ rule Backdoor_MSIL_Nanocore_S_2147752157_0
         $x_1_8 = "ReadBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -248,6 +256,7 @@ rule Backdoor_MSIL_Nanocore_GG_2147772077_0
         $x_1_3 = "\\Downloads\\NanoCoreSwiss\\MyClientPlugin\\obj\\Debug\\MyClientPlugin.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -278,6 +287,7 @@ rule Backdoor_MSIL_Nanocore_ABD_2147827400_0
         $x_1_10 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -313,6 +323,7 @@ rule Backdoor_MSIL_Nanocore_ABD_2147827400_1
         $x_1_15 = "Converting {0} to {1}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -340,6 +351,7 @@ rule Backdoor_MSIL_Nanocore_ABQ_2147827744_0
         $x_1_7 = "get_Assembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -368,6 +380,7 @@ rule Backdoor_MSIL_Nanocore_ABQ_2147827744_1
         $x_1_8 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -393,6 +406,7 @@ rule Backdoor_MSIL_Nanocore_ABK_2147830992_0
         $x_1_5 = "$6fe07353-243a-415b-9cca-228089c271be" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -418,6 +432,7 @@ rule Backdoor_MSIL_Nanocore_ABG_2147831797_0
         $x_1_5 = "cvhngfg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -443,6 +458,7 @@ rule Backdoor_MSIL_Nanocore_ABG_2147831797_1
         $x_1_5 = "red_love" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -470,6 +486,7 @@ rule Backdoor_MSIL_Nanocore_ABAG_2147833109_0
         $x_1_7 = "red_love" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -495,6 +512,7 @@ rule Backdoor_MSIL_Nanocore_ABBO_2147834313_0
         $x_1_5 = "GetPixel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

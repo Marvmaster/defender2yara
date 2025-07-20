@@ -23,6 +23,7 @@ rule Worm_Win32_Lumebag_A_2147602684_0
         $x_1_8 = "Software\\MuleAppData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_3_*) and 2 of ($x_2_*))) or

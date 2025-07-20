@@ -17,6 +17,7 @@ rule Trojan_Win32_InvisiMole_EC_2147814210_0
         $x_5_2 = {f7 d8 1b c0 25 00 00 00 02 50 6a 03 6a 00 6a 01 68 00 01 00 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -50,6 +50,7 @@ rule Trojan_MSIL_RATLoader_2147780307_0
         $x_1_35 = "Kill" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

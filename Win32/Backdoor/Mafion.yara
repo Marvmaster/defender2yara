@@ -27,6 +27,7 @@ rule Backdoor_Win32_Mafion_2147596345_0
         $x_1_13 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -63,6 +64,7 @@ rule Backdoor_Win32_Mafion_A_2147596346_0
         $x_1_13 = "Prozess killed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))

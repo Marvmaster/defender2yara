@@ -18,6 +18,7 @@ rule VirTool_Win32_Mangle_A_2147824262_0
         $x_1_3 = "/Mangle/Mangle.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

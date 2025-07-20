@@ -21,6 +21,7 @@ rule Trojan_Win32_DevilsTongue_A_2147784976_0
         $x_2_6 = {b8 ff 15 00 00 66 39 41 fa 74 06 80 79 fb e8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

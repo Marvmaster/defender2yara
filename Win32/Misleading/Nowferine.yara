@@ -20,6 +20,7 @@ rule Misleading_Win32_Nowferine_240741_0
         $x_1_6 = "registry-scanning-overviewcontents.htm" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

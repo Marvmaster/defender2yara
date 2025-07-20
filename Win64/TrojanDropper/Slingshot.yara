@@ -28,6 +28,7 @@ rule TrojanDropper_Win64_Slingshot_A_2147726430_0
         $x_2_12 = {41 0f b7 04 08 66 83 c8 20 66 39 01 75 ?? ff c2 48 83 c1 02 83 fa 0c 7c e7 48 8b 7f 30 b8 4d 5a 00 00 66 3b 07 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

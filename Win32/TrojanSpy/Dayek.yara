@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Dayek_A_2147652828_0
         $x_2_4 = "\\UpdateEx\\UpdateEx.vbp" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

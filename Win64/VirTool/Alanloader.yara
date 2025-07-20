@@ -18,6 +18,7 @@ rule VirTool_Win64_Alanloader_A_2147832002_0
         $x_1_4 = {49 c7 c1 04 00 00 00 49 c7 c0 00 30 00 00 49 8b d7 48 33 c9 48 83 ec 28 ff d0 48 83 c4 28 48 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

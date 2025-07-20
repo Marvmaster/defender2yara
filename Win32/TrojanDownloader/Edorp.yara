@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Edorp_A_2147625107_0
         $x_1_2 = {8d 85 78 ff ff ff 89 44 24 08 a1 ?? ?? ?? ?? 8b 04 85 ?? ?? ?? ?? 89 44 24 04 8d 85 68 ff ff ff 89 04 24 c7 85 28 ff ff ff 12 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

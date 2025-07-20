@@ -17,6 +17,7 @@ rule Worm_MSIL_Pesdear_A_2147644028_0
         $x_1_3 = {50 32 50 73 70 72 65 61 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

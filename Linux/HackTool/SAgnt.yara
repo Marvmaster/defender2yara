@@ -20,6 +20,7 @@ rule HackTool_Linux_SAgnt_B_2147825989_0
         $x_1_5 = "cleaning logs file finished" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule HackTool_Linux_SAgnt_A_2147826934_0
         $x_1_5 = "impossible restart syslogd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule HackTool_Linux_SAgnt_B_2147838808_0
         $x_1_2 = {6d 47 88 6a 0d ce e4 14 7a 29 36 1e ea 84 ce d6 38 a7 e1 6c 88 e9 bf fa 64 7d d3 a4 a4 2d b0 fa 58 32 99 9c 9c d4 df a6 d8 91 49 dd d5 f7 c9 e9 74 6c 72 2c 16 4b c6 92 4d b1 71 4d b1 c9 35 b1 d8 a4 f4 a4 d2 c7 24 15 b3 5b e3 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule HackTool_Linux_SAgnt_C_2147898353_0
         $x_1_6 = "extract_read_string" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule HackTool_Linux_SAgnt_D_2147919062_0
         $x_1_3 = "main.sendTelegramMessage" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule HackTool_Linux_SAgnt_E_2147942306_0
         $x_1_8 = "main.addSnatRule" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (6 of ($x*))
 }
 

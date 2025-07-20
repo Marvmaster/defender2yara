@@ -24,6 +24,7 @@ rule Ransom_Win64_Kanti_AK_2147851172_0
         $x_1_9 = "Cooperating with us will guarantee that all your files will be recovered completely" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

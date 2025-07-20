@@ -18,6 +18,7 @@ rule VirTool_Win64_NimRevshell_A_2147902770_0
         $x_1_4 = "\\\\.\\pipe\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

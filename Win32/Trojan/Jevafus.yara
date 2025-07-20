@@ -18,6 +18,7 @@ rule Trojan_Win32_Jevafus_A_2147622790_0
         $x_1_4 = "KG1zbnxsaXZlfG1pY3Jvc29mdCm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

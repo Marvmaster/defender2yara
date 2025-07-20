@@ -18,6 +18,7 @@ rule VirTool_Win32_SOCKRDP_A_2147755223_0
         $x_1_3 = {ff d6 6a 00 0f 57 c9 89 7c 24 34 6a 00 0f 11 4c 24 3c 6a 00 0f 28 44 24 3c 66 0f 73 d9 0c 6a 00 a3 ac 83 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

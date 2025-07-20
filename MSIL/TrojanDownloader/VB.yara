@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_VB_C_2147684582_0
         $x_4_4 = "Adobe_Flash_Player.Form1.resources" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Spammer_Win32_Sality_A_2147625321_0
         $x_1_9 = "&s_id=%d&ver=%d&r=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

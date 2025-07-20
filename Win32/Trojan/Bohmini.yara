@@ -19,6 +19,7 @@ rule Trojan_Win32_Bohmini_A_2147599595_0
         $x_1_5 = {4e 65 74 53 63 68 65 64 75 6c 65 4a 6f 62 41 64 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*))) or

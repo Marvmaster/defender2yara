@@ -16,6 +16,7 @@ rule Backdoor_MSIL_Prostbot_A_2147629448_0
         $x_1_2 = "Stasi Bot.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule Trojan_MSIL_Plimrost_A_2147705536_0
         $x_6_10 = {0c 08 07 61 0c 08 20 ?? ?? ?? ?? 59 0c 08 07 61 0c 08 66 0c 06 16 07 6f}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_6_*) and 6 of ($x_1_*))) or
             ((2 of ($x_6_*) and 1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule Trojan_MSIL_Plimrost_B_2147705537_0
         $x_1_4 = {15 7b 00 30 00 7d 00 7b 00 31 00 7d 00 2e 00 65 00 78 00 65 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

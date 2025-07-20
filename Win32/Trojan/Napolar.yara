@@ -16,6 +16,7 @@ rule Trojan_Win32_Napolar_A_2147682583_0
         $x_1_2 = {8b 10 81 fa 50 45 00 00 0f 85 ?? ?? ?? ?? 89 85 ?? ?? ff ff 8b 95 ?? ?? ff ff 8b 42 78 03 85 ?? ?? ff ff 89 85 ?? ?? ff ff 8b 50 18 4a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Napolar_A_2147682583_1
         $x_1_5 = {8b 45 f8 40 25 ff 00 00 00 89 45 f8 8b 45 f8 8b 84 85 ec fb ff ff 03 45 f4 25 ff 00 00 00 89 45 f4 8b 45 f8 8a 84 85 ec fb ff ff 88 45 f3 8b 45 f4 8b 84 85 ec fb ff ff 8b 55 f8 89 84 95 ec fb ff ff 33 c0 8a 45 f3 8b 55 f4 89 84 95 ec fb ff ff 8b 45 f8 8b 84 85 ec fb ff ff 8b 55 f4 03 84 95 ec fb ff ff 25 ff 00 00 00 8a 84 85 ec fb ff ff 8b 55 08 03 55 fc 30 02 ff 45 fc ff 4d ec 0f 85 7b ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Napolar_B_2147684606_0
         $x_1_3 = {81 38 50 45 00 00 75 ?? 8b 45 ?? 8b 70 78 03 f3 8b 46 18 48 85 c0 72 ?? 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win32_Napolar_D_2147687112_0
         $x_1_4 = "\\\\.\\pipe\\npx86_Services" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_Win32_Napolar_A_2147688146_0
         $x_2_3 = {ff 75 0c ff 75 08 e8 58 00 00 00 c9 c2 10 00 55 8b ec 60 b8 fc fd fe ff b9 40 00 00 00 89 04 ?? ?? ?? ?? 00 2d 04 04 04 04 49 75 f1 33 c0 8b 7d 08 33 db 8b 75 0c eb 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -136,6 +141,7 @@ rule Trojan_Win32_Napolar_B_2147688147_0
         $x_1_5 = "\\\\.\\pipe\\napSolar" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -188,6 +194,7 @@ rule Trojan_Win32_Napolar_GND_2147897607_0
         $x_1_6 = "hi how are you encrypted as %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanSpy_Win64_Lurk_A_2147695244_0
         $x_1_6 = {63 68 63 70 20 31 32 35 31 0d 0a 3a 6c 6f 6f 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

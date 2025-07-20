@@ -17,6 +17,7 @@ rule VirTool_Win64_Disedr_A_2147930830_0
         $x_1_3 = {48 03 c3 4c 89 64 24 30 48 d1 e8 4d 8b c6 44 0f b7 cd ba a4 00 09 00 44 89 64 24 28 49 8b cf 4c 89 64 24 20 66 45 89 64 46 10 ff ?? ?? ?? ?? ?? 8b d8 ff ?? ?? ?? ?? ?? 4d 8b c6 33 d2 48 8b c8 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

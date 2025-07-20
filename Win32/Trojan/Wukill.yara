@@ -17,6 +17,7 @@ rule Trojan_Win32_Wukill_MA_2147838776_0
         $x_5_2 = {bc 4a 40 00 4c 00 00 00 56 42 35 21 f0 1f 76 62 36 63 68 73 2e 64 6c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

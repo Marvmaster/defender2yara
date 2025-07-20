@@ -27,6 +27,7 @@ rule TrojanSpy_Win32_Zabdo_A_2147601582_0
         $x_1_13 = "taskkill /f /im norton.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 8 of ($x_5_*))) or
             (all of ($x*))

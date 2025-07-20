@@ -17,6 +17,7 @@ rule Trojan_Win32_SockSystemz_A_2147923910_0
         $x_1_2 = {2b 4e 77 31 6c d7 90 16 eb 9e 1e 95 47 b6 ae 4e 72 9a f0 30 cb 0d e8 41 d9 2d 17 dc 3c ce 85 76 05 b4 c2 a0 79 d6 d8 51 be 62 66 e9 96 bf 1d 01 55 e9 22 29 a8 f6 7b ce dc 13 2f 0b bd 2f 10 47 09 a3 c0 b4 30 7b 8a 0d ff c8 1e 9d c2 74 ed 0a 29 64 09 91 be cb 8f 5c 8c 35 41 8c 2f f4 79 40 0a 09 f2 fb 7b ab 03 85 1d ea a5 72 12 e9 f0 b8 c7 0d b9 84 c3 cc a9 66 e2 97 dc fd e9 95 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

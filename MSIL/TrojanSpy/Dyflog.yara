@@ -28,6 +28,7 @@ rule TrojanSpy_MSIL_Dyflog_A_2147628814_0
         $x_1_14 = "[Alt]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 7 of ($x_1_*))) or
             ((5 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -63,6 +64,7 @@ rule TrojanSpy_MSIL_Dyflog_B_2147646540_0
         $x_1_12 = "Microsoft-updates.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 7 of ($x_1_*))) or
             ((3 of ($x_10_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or

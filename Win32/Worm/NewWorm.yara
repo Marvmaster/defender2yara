@@ -42,6 +42,7 @@ rule Worm_Win32_NewWorm_2147555607_0
         $x_1_28 = {5c 00 49 00 50 00 43 00 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((16 of ($x_1_*))) or
             ((1 of ($x_2_*) and 14 of ($x_1_*))) or

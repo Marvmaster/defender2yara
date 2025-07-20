@@ -23,6 +23,7 @@ rule Trojan_Win32_Daekom_B_2147621092_0
         $x_1_9 = "{01196771-F5D0-4549-9A91-BA1B0D9FD73E}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

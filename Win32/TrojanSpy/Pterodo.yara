@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Pterodo_A_2147720205_0
         $x_1_2 = "__Wsnusb73__" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanSpy_Win32_Pterodo_A_2147720205_1
         $x_1_3 = "Content-Disposition: form-data; name=\"w\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

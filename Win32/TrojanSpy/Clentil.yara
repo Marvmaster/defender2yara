@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Clentil_2147653191_0
         $x_1_8 = "##BOT_ID_EXIST###yes###BOT_ID_EXIST_END###" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

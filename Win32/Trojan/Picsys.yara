@@ -21,6 +21,7 @@ rule Trojan_Win32_Picsys_PR_2147745582_0
         $x_1_6 = "play station emulator crack.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Picsys_SRPP_2147836548_0
         $x_10_2 = {45 ff 0f b6 4d ff 33 4d f8 88 4d ff 0f b6 55 ff 83 ea 4a 88 55 ff 0f b6 45 ff f7 d8 88 45 ff 0f b6 4d ff 03 4d f8 88 4d ff 0f b6 55 ff 81 f2 f9 00 00 00 88 55 ff 0f b6 45 ff 03 45 f8 88 45 ff 0f b6 4d ff f7 d9 88 4d ff 0f b6 55 ff 2b 55 f8 88 55 ff 0f b6 45 ff d1 f8 0f b6 4d ff c1 e1 07 0b c1 88 45 ff 0f b6 55 ff 33 55 f8 88 55 ff 0f b6 45 ff f7 d0 88 45 ff 0f b6 4d ff c1 f9 05 0f b6 55 ff c1 e2 03 0b ca 88 4d ff 0f b6 45 ff 2b 45 f8 88 45 ff 8b 4d f4 03 4d f8 8a 55 ff 88 11 e9 b1 fe ff ff}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Picsys_GMC_2147853351_0
         $x_1_4 = "TJprojMain.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_Picsys_GMA_2147900367_0
         $x_1_3 = "@.themida" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

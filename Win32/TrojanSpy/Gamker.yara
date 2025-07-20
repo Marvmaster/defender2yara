@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Gamker_A_2147684154_0
         $x_10_3 = {88 1f 8b 7d ec 88 5d ff 0f b6 5d 0b 88 1f 0f b6 5d 0b 0f b6 7d ff 03 fb 8a 5d fe 81 e7 ff 00 00 00 32 1c 07 fe c1}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanSpy_Win32_Gamker_A_2147684154_1
         $x_1_8 = {41 00 44 00 4d 00 49 00 4e 00 00 00 55 00 53 00 45 00 52 00 00 00 00 00 25 77 73 5c 25 77 73 5c 25 77 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule TrojanSpy_Win32_Gamker_A_2147684154_2
         $x_1_7 = {83 f9 18 72 5d 8b 1e 81 fb 41 50 33 32 75 53 8b 5e 04 83 fb 18 72 4b 29 d9 72 47 39 4e 08 77 42}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -100,6 +103,7 @@ rule TrojanSpy_Win32_Gamker_A_2147684213_0
         $x_1_6 = {75 2d b8 02 00 00 00 e8 dc 46 00 00 85 c0 74 15 33 c9 80 38 31 8b f0 0f 94 c1 89 0d 94 c0 05 10 e8 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 83 3d ?? ?? ?? ?? ?? ?? 75 6c 85 db 75 4f 33 f6 39 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -124,6 +128,7 @@ rule TrojanSpy_Win32_Gamker_B_2147686353_0
         $x_1_5 = ":Zone.Identifier" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

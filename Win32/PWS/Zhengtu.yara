@@ -25,6 +25,7 @@ rule PWS_Win32_Zhengtu_A_2147600027_0
         $x_1_10 = "WriteFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 6 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -54,6 +55,7 @@ rule PWS_Win32_Zhengtu_B_2147641869_0
         $x_1_5 = "360tray.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -79,6 +81,7 @@ rule PWS_Win32_Zhengtu_B_2147650735_0
         $x_1_2 = "cmd /c rundll32.exe %s St %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

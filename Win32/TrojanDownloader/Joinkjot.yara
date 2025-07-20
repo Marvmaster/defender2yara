@@ -29,6 +29,7 @@ rule TrojanDownloader_Win32_Joinkjot_A_2147690863_0
         $x_1_14 = "] - Serial:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

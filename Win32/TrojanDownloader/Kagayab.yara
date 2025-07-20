@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Kagayab_A_2147717891_0
         $x_1_6 = {83 ec 14 85 c0 74 51 83 eb 01 75 c6 b8 05 00 00 00 e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -32,6 +32,7 @@ rule PWS_MSIL_Stealer_DHA_2147755907_0
         $x_1_17 = "RadicalRaidBot" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -81,6 +82,7 @@ rule PWS_MSIL_Stealer_DHC_2147755908_0
         $x_1_29 = "//moanfor.me/mc.zip" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -113,6 +115,7 @@ rule PWS_MSIL_Stealer_DHD_2147755909_0
         $x_1_12 = "\\Files\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -144,6 +147,7 @@ rule PWS_MSIL_Stealer_DHD_2147755909_1
         $x_1_7 = "C:\\ProgramData\\debug.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -168,6 +172,7 @@ rule PWS_MSIL_Stealer_A_2147755933_0
         $x_1_4 = "discord\\Local Storage\\https_discordapp.com_0.localstorage" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -208,6 +213,7 @@ rule PWS_MSIL_Stealer_MAK_2147796008_0
         $x_1_20 = "SELECT encryptedUsername, encryptedPassword, hostname FROM moz_logins" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +238,7 @@ rule PWS_MSIL_Stealer_HLAY_2147813719_0
         $x_5_4 = "stderr.pl/mimi/mimikatz.exe" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -253,6 +260,7 @@ rule PWS_MSIL_Stealer_TLAY_2147813720_0
         $x_10_1 = {07 11 06 8f 16 00 00 01 25 47 06 61 d2 52 11 06 17 58 13 06 11 06 07 8e 69 32 e5}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -285,6 +293,7 @@ rule PWS_MSIL_Stealer_SLID_2147814758_0
         $x_2_12 = {00 4b 65 79 53 70 65 63 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -311,6 +320,7 @@ rule PWS_MSIL_Stealer_PA10_2147899467_0
         $x_1_6 = "Password:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -336,6 +346,7 @@ rule PWS_MSIL_Stealer_PA20_2147899468_0
         $x_1_5 = "stealer.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

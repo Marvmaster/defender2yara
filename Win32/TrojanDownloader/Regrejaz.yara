@@ -27,6 +27,7 @@ rule TrojanDownloader_Win32_Regrejaz_A_2147647681_0
         $x_1_13 = "live.com/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 5 of ($x_1_*))) or
             ((6 of ($x_2_*) and 3 of ($x_1_*))) or

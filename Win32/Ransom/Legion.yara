@@ -21,6 +21,7 @@ rule Ransom_Win32_Legion_PA_2147752854_0
         $x_1_6 = "passwordBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

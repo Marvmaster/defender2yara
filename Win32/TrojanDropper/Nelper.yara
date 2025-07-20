@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Nelper_A_2147632555_0
         $x_1_7 = "(www.52bt.net).urleee4:name46:[2004.09.07]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

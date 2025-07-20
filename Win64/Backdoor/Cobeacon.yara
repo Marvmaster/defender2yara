@@ -16,6 +16,7 @@ rule Backdoor_Win64_Cobeacon_ARA_2147920813_0
         $x_2_1 = {80 32 77 48 8d 52 01 41 ff c0 48 8d 4c 24 ?? 48 [0-6] 48 ff c0 [0-4] 75 ?? 49 63 c8 48 3b c8 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Backdoor_Win64_Cobeacon_ARAX_2147922579_0
         $x_2_1 = {41 80 30 77 4d 8d 40 01 41 ff c1 48 8d 45 ?? 48 8b ?? 48 ff [0-5] 75 f7 49 63 c1 48 3b c1 72 dd}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

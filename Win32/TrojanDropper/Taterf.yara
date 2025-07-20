@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Taterf_A_2147618703_0
         $x_1_3 = {6e 6f 64 33 32 66 75 63 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -18,6 +18,7 @@ rule HackTool_Win32_ZorCook_A_2147894763_0
         $x_100_3 = "Ch.slte" wide //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

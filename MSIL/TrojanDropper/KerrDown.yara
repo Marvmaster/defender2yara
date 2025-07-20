@@ -19,6 +19,7 @@ rule TrojanDropper_MSIL_KerrDown_C_2147744097_0
         $x_1_4 = "regsvcser" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

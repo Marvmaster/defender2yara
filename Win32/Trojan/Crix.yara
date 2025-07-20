@@ -17,6 +17,7 @@ rule Trojan_Win32_Crix_B_2147652482_0
         $x_1_3 = {ff ff 6a 14 68 ?? ?? ?? ?? e8 ?? ?? ff ff 6a 12 68 ?? ?? ?? ?? e8 ?? ?? ff ff 6a 12 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

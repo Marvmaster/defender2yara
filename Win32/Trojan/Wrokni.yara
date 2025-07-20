@@ -19,6 +19,7 @@ rule Trojan_Win32_Wrokni_AD_2147735054_0
         $x_1_4 = {58 88 01 50 b8 ?? ?? ?? ?? ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Wrokni_C_2147735106_0
         $x_1_3 = {73 65 6c 65 63 74 [0-64] 66 72 6f 6d 20 63 6f 6f 6b 69 65 73 20 77 68 65 72 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -33,6 +33,7 @@ rule Trojan_Win32_Patcher_B_2147609499_0
         $x_100_19 = {41 ad 33 db 90 0f be 54 05 00 38 f2 74 08 c1 cb 0d 03 da 40 eb ef 3b df 75 e6 5e}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_20_*))) or
             ((1 of ($x_100_*) and 1 of ($x_40_*) and 1 of ($x_20_*))) or

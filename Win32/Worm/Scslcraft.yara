@@ -19,6 +19,7 @@ rule Worm_Win32_Scslcraft_A_2147752151_0
         $x_1_4 = "= DoS rather than scan" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

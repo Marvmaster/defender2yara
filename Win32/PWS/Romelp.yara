@@ -18,6 +18,7 @@ rule PWS_Win32_Romelp_A_2147616684_0
         $x_6_4 = {ba 08 00 00 00 e8 ?? ?? ?? ?? 81 7d ?? f0 d5 ed c5 75 ?? 83 7d ?? 00 74 ?? 83 7d ?? ff 74}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_6_*))) or

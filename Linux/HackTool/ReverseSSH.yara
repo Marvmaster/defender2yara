@@ -22,6 +22,7 @@ rule HackTool_Linux_ReverseSSH_A_2147888943_0
         $x_1_7 = "maxIncomingPayload" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule HackTool_Linux_ReverseSSH_B_2147925838_0
         $x_1_4 = "reverse_ssh/pkg/logger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule HackTool_Linux_ReverseSSH_C_2147935674_0
         $x_1_4 = "client/handlers.LocalForward" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule HackTool_Linux_ReverseSSH_D_2147946603_0
         $x_1_4 = "main.createPasswordHandler" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

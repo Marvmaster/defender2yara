@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Wangbrax_B_2147693861_0
         $x_2_5 = "vweb10.nitrado.net/addons" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or

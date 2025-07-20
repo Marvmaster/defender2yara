@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Sinowal_2147572020_0
         $x_3_5 = {83 ec 10 8d 45 f0 50 ff 15 ?? ?? 40 00 33 c0 8a 45 f1 2c 74}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanDropper_Win32_Sinowal_2147572020_1
         $x_1_9 = {9c 57 66 8b 3d ?? ?? 40 00 [0-16] 66 81 ff ?? ?? [0-16] 5f [0-16] 74 00 00 9d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))

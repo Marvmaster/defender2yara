@@ -18,6 +18,7 @@ rule Trojan_Linux_GetShell_C_2147899551_0
         $x_1_3 = {e8 12 fd ff ff 85 c0 75 19 be bf 88 00 00 bf cc 0c 40 00 e8 0c fe ff ff bf 00 00 00 00 e8 b5 fc ff ff bf 23 00 00 00 e8 db fc ff ff eb d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Linux_GetShell_H_2147945395_0
         $x_1_3 = {31 f6 89 df e8 3a ff ff ff be 01 00 00 00 89 df e8 2e ff ff ff be 02 00 00 00 89 df e8 22 ff ff ff 48 8d 3d 6b 10 00 00 31 c0 31 d2 48 8d 74 24 08 48 89 7c 24 08 48 89 44 24 10 e8 13 ff ff ff 48 8d 3d 56 10 00 00 e8 d7 fe ff ff 48 8b 44 24 28 64 48 2b 04 25 28 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_VBClone_RG_2147890027_0
         $x_1_1 = {43 00 6f 00 6d 00 70 00 61 00 6e 00 79 00 4e 00 61 00 6d 00 65 00 00 00 00 00 61 00 61 00 61 00 61 00 00 00 00 00 40 00 1e 00 01 00 50 00 72 00 6f 00 64 00 75 00 63 00 74 00 4e 00 61 00 6d 00 65 00 00 00 00 00 4b 00 61 00 77 00 61 00 69 00 69 00 2d 00 55 00 6e 00 69 00 63 00 6f 00 72 00 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_VBClone_CCIB_2147912477_0
         $x_1_3 = "cmd /c" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_VBClone_TAAA_2147917520_0
         $x_1_3 = "c rename" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win32_VBClone_GZT_2147923495_0
         $x_1_2 = "Kawaii-Unicorn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_Win32_VBClone_GTT_2147926847_0
         $x_5_2 = {ff cc 31 00 04 8c 2d ?? ?? ?? ?? 56 43 99 ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Trojan_Win32_VBClone_CCJZ_2147942476_0
         $x_4_2 = {ba 62 3a 4f ad 33 99 66 cf 11 b7 0c 00 aa 00 60 d3 93}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

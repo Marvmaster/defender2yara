@@ -16,6 +16,7 @@ rule Trojan_Win64_ExfilSkip_A_2147945583_0
         $x_1_2 = "Found %d files totaling %.2f MB (skipped %d files," ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

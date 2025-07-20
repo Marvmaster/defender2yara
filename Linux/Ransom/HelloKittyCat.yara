@@ -19,6 +19,7 @@ rule Ransom_Linux_HelloKittyCat_A1_2147908285_0
         $x_1_5 = "SSH." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Linux_HelloKittyCat_A3_2147908286_0
         $x_3_7 = "service@hellokittycat.online" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

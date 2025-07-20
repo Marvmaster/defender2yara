@@ -17,6 +17,7 @@ rule Worm_Win32_Cridex_A_2147648284_0
         $x_1_3 = {c1 e2 10 0b d1 89 15 ?? ?? ?? ?? 0f b7 94 24 ?? ?? 00 00 c1 e2 10 0b d0 89 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 33 d2 b9 e8 03 00 00 f7 f1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Worm_Win32_Cridex_B_2147649733_0
         $x_1_5 = {83 c1 02 eb 0f 66 83 39 5c 74 09 66 c7 40 02 5c 00 83 c0 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Worm_Win32_Cridex_C_2147654323_0
         $x_1_2 = {8b 45 f8 89 45 d4 ff 55 d4 5b 5f 5e 89 ec 5d c2 10 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Worm_Win32_Cridex_E_2147657563_0
         $x_2_3 = {8b 40 0c 8b 70 0c 85 f6 74 ?? 33 ff eb 83 c7 01 66 83 3c 7d ?? ?? ?? ?? 00 75 f2 83 7e 18 00 74 ?? 0f b7 (46|4e) 2c 8b 56 30 d1 (e8|e9)}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -109,6 +113,7 @@ rule Worm_Win32_Cridex_L_2147682817_0
         $x_1_2 = {8b 4d 0c 03 cb 51 ff 54 24 ?? 8b d0 85 d2 89 54 24 ?? 74 ?? 8b 75 00 8b 7d 10 8b 04 1e 03 f3 03 fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Worm_Win32_Cridex_G_2147747815_0
         $x_1_2 = {0f b7 c5 49 0f af c8 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 66 89 2d ?? ?? ?? ?? 75 ?? 8b 3d ?? ?? ?? ?? c1 e7 03 2b 3d ?? ?? ?? ?? 2b 3d ?? ?? ?? ?? 66 89 3d ?? ?? ?? ?? 83 44 24 10 04 81 7c 24 10 ?? ?? ?? ?? 0f 82 08 00 81 c3 ?? ?? ?? ?? 89 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Backdoor_Win32_Taselk_2147602719_0
         $x_1_2 = {66 b8 00 00 66 e7 70 66 89 c3 66 b8 00 00 66 e7 71 66 89 d8 66 40 66 3d 3f 00 75 e8 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

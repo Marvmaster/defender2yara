@@ -31,6 +31,7 @@ rule Trojan_Win32_Havokiz_A_2147936028_0
         $x_1_17 = {d7 53 22 ac}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((16 of ($x_1_*))) or
             ((1 of ($x_16_*))) or
@@ -56,6 +57,7 @@ rule Trojan_Win32_Havokiz_SC_2147936029_0
         $x_1_2 = {65 48 8b 04 25 60 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Trojan_Win32_Havokiz_C_2147936030_0
         $x_1_1 = {48 81 ec f8 04 00 00 48 8d 7c 24 78 44 89 8c 24 58 05 00 00 48 8b ac 24 60 05 00 00 4c 8d 6c 24 78 f3 ab b9 59 00 00 00 48 c7 44 24 70 00 00 00 00 c7 44 24 78 68 00 00 00 c7 84 24 b4 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

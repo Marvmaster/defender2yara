@@ -24,6 +24,7 @@ rule TrojanClicker_Win32_Spackit_A_2147697451_0
         $x_1_10 = {2e 63 6f 6d 2c [0-16] 2e 63 6f 6d 2c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule TrojanClicker_Win32_Spackit_A_2147697451_1
         $x_1_9 = "{server}/query?version=1.6&sid={aid}&builddate={builddate}&q={keyword}&ua={ua}&lang={lang}&wt={threads}&lr={lastresult}&ls={laststage}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

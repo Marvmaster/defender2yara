@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Jadtre_A_2147626102_0
         $x_1_3 = {c1 e8 08 25 ff 00 00 00 0f b6 c0 89 45 f8 83 7d f8 02 75 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDropper_Win32_Jadtre_C_2147659821_0
         $x_2_7 = "\\KB2536276666.log" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 2 of ($x_2_*))) or
             ((1 of ($x_20_*) and 2 of ($x_2_*))) or
@@ -75,6 +77,7 @@ rule TrojanDropper_Win32_Jadtre_D_2147678920_0
         $x_1_7 = {5c 5c 2e 5c 48 69 6e 74 44 65 66 65 6e 64 00 00 5c 5c 2e 5c 44 50 30 30 30 30 00 00 53 65 74 7c 44 72 76 4d 6f 6e 7c 30 00 00 00 00 49 4d 45 20 66 69 6c 65 00 00 00 00 73 65 74 75 70 2e 65 78}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

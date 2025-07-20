@@ -18,6 +18,7 @@ rule TrojanDownloader_Linux_Samdown_2147724981_0
         $x_2_4 = "Hello from the Samba" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or
             (all of ($x*))

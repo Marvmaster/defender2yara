@@ -15,6 +15,7 @@ rule TrojanDownloader_MSIL_Aguadi_A_2147692615_0
         $x_1_1 = "@8NaMzObLyPcKxQdJwReIvSfHuT6GtUhFsViErWjDqXkCpYlBoZmA453g271n9#" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

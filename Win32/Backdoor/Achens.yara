@@ -19,6 +19,7 @@ rule Backdoor_Win32_Achens_A_2147712089_0
         $x_1_4 = {4d c6 84 24 ?? 00 00 00 6f c6 84 24 ?? 00 00 00 7a c6 84 24 ?? 00 00 00 69 c6 84 24 ?? 00 00 00 6c c6 84 24 ?? 00 00 00 6c c6 84 24 ?? 00 00 00 61 c6 84 24 ?? 00 00 00 2f c6 84 24 ?? 00 00 00 35 c6 84 24 ?? 00 00 00 2e c6 84 24 ?? 00 00 00 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

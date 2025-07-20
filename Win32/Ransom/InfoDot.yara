@@ -20,6 +20,7 @@ rule Ransom_Win32_InfoDot_PA_2147758863_0
         $x_1_5 = {5c 65 6e 63 5c [0-16] 5c 65 6e 63 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

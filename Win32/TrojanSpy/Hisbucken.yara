@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Hisbucken_A_2147650209_0
         $x_2_6 = "8445D455D" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_2_*))) or
             ((2 of ($x_4_*) and 1 of ($x_2_*))) or
@@ -51,6 +52,7 @@ rule TrojanSpy_Win32_Hisbucken_B_2147659396_0
         $x_5_7 = "E23FDF2BE07BA77C8C6ABB889C68B8" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 3 of ($x_5_*))) or
             ((2 of ($x_20_*) and 1 of ($x_10_*) and 1 of ($x_5_*))) or

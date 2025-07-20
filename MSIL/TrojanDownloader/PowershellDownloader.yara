@@ -20,6 +20,7 @@ rule TrojanDownloader_MSIL_PowershellDownloader_RDA_2147835442_0
         $x_1_5 = "5850a2b0-3717-49d0-b392-5a12a61351b9" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

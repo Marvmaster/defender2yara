@@ -18,6 +18,7 @@ rule Backdoor_Win32_Brambul_A_2147629314_0
         $x_1_4 = {ff d6 48 83 f8 05 77 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

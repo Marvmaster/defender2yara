@@ -21,6 +21,7 @@ rule Trojan_Win32_Bitter_A_2147719409_0
         $x_1_6 = "/qiq" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

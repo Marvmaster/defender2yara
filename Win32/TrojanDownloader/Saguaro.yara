@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Saguaro_A_2147725795_0
         $x_1_4 = "\\skapoland.sig" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

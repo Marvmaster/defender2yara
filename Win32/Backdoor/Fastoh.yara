@@ -17,6 +17,7 @@ rule Backdoor_Win32_Fastoh_A_2147685553_0
         $x_1_3 = {eb 07 8b 4e 0c 8b 11 8b 02 8b 95 a8 00 00 00 8d 4c 24 1c 6a 10 51 52 89 44 24 2c ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

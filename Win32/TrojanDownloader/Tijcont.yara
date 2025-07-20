@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Tijcont_A_2147657657_0
         $x_1_3 = {3a 31 33 31 34 2f 74 6a [0-1] 2f 43 6f 75 6e 74 2e 61 73 70 3f 6d 61 63 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

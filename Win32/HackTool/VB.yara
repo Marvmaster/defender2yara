@@ -23,6 +23,7 @@ rule HackTool_Win32_VB_EA_2147597232_0
         $x_1_9 = "9368265E-85FE-11d1-8BE3-0000F8754DA1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Egapel_A_2147628809_0
         $x_1_3 = {80 f9 56 75 08 8a 10 40 80 fa 56 74 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Egapel_D_2147638587_0
         $x_1_3 = {6a 7c 56 e8 ?? ?? 00 00 83 c4 0c (85 c0|3b c3)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

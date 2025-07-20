@@ -18,6 +18,7 @@ rule Trojan_Win32_AnchorLoader_A_2147766847_0
         $x_1_3 = "Release\\Anchor_x86.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +63,7 @@ rule Trojan_Win32_AnchorLoader_A_2147766847_1
         $x_5_24 = "SvchostPushServiceGlobals" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 7 of ($x_1_*))) or
             ((5 of ($x_5_*) and 2 of ($x_1_*))) or

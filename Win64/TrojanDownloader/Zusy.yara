@@ -26,6 +26,7 @@ rule TrojanDownloader_Win64_Zusy_RPA_2147928955_0
         $x_1_11 = "Microsoft Corporation. All rights reserved." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +60,7 @@ rule TrojanDownloader_Win64_Zusy_RPB_2147928968_0
         $x_1_13 = "Microsoft Corporation. All rights reserved." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

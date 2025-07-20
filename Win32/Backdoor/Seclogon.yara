@@ -18,6 +18,7 @@ rule Backdoor_Win32_Seclogon_A_2147629029_0
         $x_1_3 = {c7 43 04 02 00 00 00 c7 43 08 20 00 00 00 c7 43 0c ff 01 0f 00 c7 43 10 01 00 00 00 8d 43 14 ba ?? ?? ?? ?? e8 ?? ?? ?? ?? 8d 43 18 ba ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

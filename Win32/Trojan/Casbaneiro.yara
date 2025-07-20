@@ -17,6 +17,7 @@ rule Trojan_Win32_Casbaneiro_GTR_2147929995_0
         $x_5_2 = {4e 00 42 00 77 00 71 00 39 00 32 00 77}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Casbaneiro_GTN_2147931422_0
         $x_10_3 = {40 00 00 40 2e 69 64 61 74 61 00 00 00 10 00 00 00 50 89 06 00 06 00 00 00 22 de}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             ((1 of ($x_10_*))) or
@@ -66,6 +68,7 @@ rule Trojan_Win32_Casbaneiro_SVI_2147934101_0
         $x_2_2 = "$ZXwR" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Backdoor_MSIL_Arechbot_A_2147735459_0
         $x_1_7 = "schtasks /create /tn \\System\\SecurityService /tr %userprofile%\\AppData\\Roaming\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

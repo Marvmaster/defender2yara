@@ -19,6 +19,7 @@ rule PWS_Win32_Nessun_A_2147689155_0
         $x_1_5 = {8b d0 8b 45 f8 0f b6 44 18 ff 33 d0 8d 45 f4 e8 ?? ?? ?? ?? 8b 55 f4 8b c7 e8 ?? ?? ?? ?? 83 c6 02 43 8b 45 f8 e8 ?? ?? ?? ?? 3b d8 7e 05 bb 01 00 00 00 8b 45 fc e8 ?? ?? ?? ?? 3b f0 7e 96}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

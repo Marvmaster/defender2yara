@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Citeary_A_2147893143_0
         $x_2_3 = {c6 45 b0 48 c6 45 b1 65 c6 45 b2 61 c6 45 b3 70 c6 45 b4 41 c6 45 b5 6c c6 45 b6 6c c6 45 b7 6f c6 45 b8 63}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

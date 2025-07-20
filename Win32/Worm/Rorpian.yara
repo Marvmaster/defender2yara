@@ -25,6 +25,7 @@ rule Worm_Win32_Rorpian_A_160583_0
         $x_1_10 = {05 00 00 03 10 00 00 00 [0-2] 00 00 01 00 00 00 [0-2] 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

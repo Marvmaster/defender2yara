@@ -16,6 +16,7 @@ rule Ransom_Win32_RTMLocker_AA_2147845112_0
         $x_1_1 = {83 f8 40 73 21 8b 45 dc 41 8a 04 10 8b 55 f4 32 04 32 8b 55 e8 88 02 42 8b 45 f4 40 89 55 e8 89 45 f4 3b c7 72 da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

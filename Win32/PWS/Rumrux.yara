@@ -21,6 +21,7 @@ rule PWS_Win32_Rumrux_A_2147595004_0
         $x_1_6 = {72 78 6d 72 75 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Wedots_A_2147697026_0
         $x_1_5 = {c6 44 24 14 73 c6 44 24 15 74 c6 44 24 16 65 88 44 24 17 c6 44 24 18 5f c6 44 24 19 64 c6 44 24 1a 6f c6 44 24 1b 77 c6 44 24 1c 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

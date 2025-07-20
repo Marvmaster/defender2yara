@@ -19,6 +19,7 @@ rule Ransom_Win32_Moloci_A_2147690783_0
         $x_1_5 = {4c 6f 63 6b 65 72 53 74 61 74 65 00 44 65 63 72 79 70 74 69 6e 67 20 66 69 6c 65 73 2e 2e 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

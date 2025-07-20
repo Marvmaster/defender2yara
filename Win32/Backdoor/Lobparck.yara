@@ -19,6 +19,7 @@ rule Backdoor_Win32_Lobparck_A_2147678293_0
         $x_1_5 = "MemCode_LpkDllInitialize" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Win32_Lobparck_B_2147678294_0
         $x_1_4 = {33 c9 33 c0 89 0d 48 53 40 00 a2 04 52 40 00 89 0d 4c 53 40 00 a2 dc 50 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

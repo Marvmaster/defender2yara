@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Raren_B_2147652508_0
         $x_1_2 = "{abc-_-cba}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

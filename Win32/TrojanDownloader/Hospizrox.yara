@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Hospizrox_A_2147706846_0
         $x_1_9 = "829DFE18" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

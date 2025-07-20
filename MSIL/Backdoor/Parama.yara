@@ -19,6 +19,7 @@ rule Backdoor_MSIL_Parama_A_2147685627_0
         $x_1_5 = "Remote cam started..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

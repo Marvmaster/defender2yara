@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_ScarletFlash_A_2147722047_0
         $x_2_3 = {34 56 c4 fc 4b c2 12 9a 50 34 8a bc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

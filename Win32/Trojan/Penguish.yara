@@ -16,6 +16,7 @@ rule Trojan_Win32_Penguish_GTB_2147938912_0
         $x_10_1 = {5a 51 51 83 c4 04 81 c9 ?? ?? ?? ?? 59 51 51 83 c4 04 81 c9 ?? ?? ?? ?? 59 56 81 ee ?? ?? ?? ?? 81 f6}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

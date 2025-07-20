@@ -17,6 +17,7 @@ rule Trojan_MSIL_Ramcos_RDA_2147834347_0
         $x_2_2 = {06 6f 2d 00 00 0a 0b 07 d2 13 07 12 07 72 ?? ?? ?? ?? 28 2e 00 00 0a 13 04 11 06 07 11 04 a2 08 11 04 07 d2 6f 2f 00 00 0a 08 11 04 6f 30 00 00 0a 07 d2 6f 2f 00 00 0a 06 6f 31 00 00 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Ramcos_RDB_2147837538_0
         $x_1_2 = "VirtualMemSim" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_MSIL_Ramcos_RDC_2147838556_0
         $x_1_7 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

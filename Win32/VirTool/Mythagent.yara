@@ -27,6 +27,7 @@ rule VirTool_Win32_Mythagent_A_2147794105_0
         $x_1_13 = "self.agentSleep()" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

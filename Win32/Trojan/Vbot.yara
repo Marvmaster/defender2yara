@@ -20,6 +20,7 @@ rule Trojan_Win32_Vbot_I_2147645376_0
         $x_1_6 = "fucker" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Vbot_Q_2147651454_0
         $x_1_4 = "Pasw:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Vbot_R_2147652849_0
         $x_1_3 = "\\Downloads\\Pharm VB" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

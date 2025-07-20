@@ -24,6 +24,7 @@ rule Backdoor_Win32_Caphaw_A_2147649046_0
         $x_1_10 = "AVIE_Hook@@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -55,6 +56,7 @@ rule Backdoor_Win32_Caphaw_C_2147655033_0
         $x_1_4 = "HJVer=1.3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Backdoor_Win32_Caphaw_D_2147656484_0
         $x_1_3 = "%s%s%i.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -106,6 +109,7 @@ rule Backdoor_Win32_Caphaw_H_2147657836_0
         $x_1_6 = "AVIE_Hook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -131,6 +135,7 @@ rule Backdoor_Win32_Caphaw_N_2147678775_0
         $x_1_3 = "/hijackcfg/urls_server/url_server" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -155,6 +160,7 @@ rule Backdoor_Win32_Caphaw_P_2147682581_0
         $x_2_5 = {8b 14 c6 89 94 8d ?? ?? ?? ?? ff 85 ?? ?? ?? ?? 33 c9 66 89 4c c6 06 8b 04 c6 3b 45 fc 76 03 89 45 fc 47 3b 7d 0c 0f 82}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -180,6 +186,7 @@ rule Backdoor_Win32_Caphaw_R_2147682725_0
         $x_1_3 = {72 6f 6f 74 6b 69 74 [0-5] 23 54 45 58 54 23}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -200,6 +207,7 @@ rule Backdoor_Win32_Caphaw_S_2147682974_0
         $x_1_1 = {f6 e6 f3 48 76 f2 54 19 e8 0a 05 ca 61 76 81 5c 3a b5 f6 0c b0 3a 80 fc 4e 72 94 f6 89 f6 bb 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +229,7 @@ rule Backdoor_Win32_Caphaw_U_2147683122_0
         $x_1_2 = {8b 46 50 6a 40 50 53 ff d7 64 a1 10 00 00 00 8b 4e 50 6a 40 68 00 10 00 00 51 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -246,6 +255,7 @@ rule Backdoor_Win32_Caphaw_U_2147683122_1
         $x_1_6 = {2b d3 0f af c2 03 c6 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 3 of ($x_1_*))) or
             ((2 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -272,6 +282,7 @@ rule Backdoor_Win32_Caphaw_W_2147683932_0
         $x_1_3 = {8d 45 ec 50 6a 00 8d 4d e0 51 68 ?? ?? ?? ?? 6a 00 6a 00 ff 15 ?? ?? ?? ?? 8b f0 85 f6 75 13 8b 55 fc 8b 75 ?? 52 56 56 e8 ?? ?? ff ff 83 c4 0c eb ?? 68 e8 03 00 00 56 ff d7 3d 02 01 00 00 74 ?? 6a 02 56 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -296,6 +307,7 @@ rule Backdoor_Win32_Caphaw_X_2147683978_0
         $x_1_2 = {53 55 8b 6c 24 18 56 8b 74 24 10 57 8b 7c 24 1c 8d 64 24 00 8b ca 83 e1 1f bb 01 00 00 00 d3 e3 85 dd 74 09 8a 0e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +330,7 @@ rule Backdoor_Win32_Caphaw_X_2147683978_1
         $x_1_3 = {8b 53 3c 8b ?? ?? 28 03 ?? 83 c4 04 89 ?? ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -344,6 +357,7 @@ rule Backdoor_Win32_Caphaw_Y_2147684039_0
         $x_1_4 = {8b 4b 3c 8b 44 0b 28 03 c3 83 c4 04 89 45 d8 ff d0 8b 5d d8 93 90 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_1_*))) or
             ((2 of ($x_50_*))) or
@@ -370,6 +384,7 @@ rule Backdoor_Win32_Caphaw_Z_2147684064_0
         $x_1_3 = {8b 43 3c 8b 4c 18 28 83 c4 04 03 cb ff d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -410,6 +425,7 @@ rule Backdoor_Win32_Caphaw_AA_2147684110_0
         $x_1_18 = {8b 53 3c 8b ?? ?? 28 03 ?? ?? ?? ?? ?? ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -455,6 +471,7 @@ rule Backdoor_Win32_Caphaw_AC_2147684760_0
         $x_1_22 = {8b 4d 3c 8b ?? ?? 28 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -480,6 +497,7 @@ rule Backdoor_Win32_Caphaw_AD_2147684839_0
         $x_1_2 = {6a 04 68 00 10 00 00 8b 45 f4 50 6a 00 8b 4d 10 ff 51 10 89 45 e0 b8 00 00 00 00 b8 00 00 00 00 83 7d e0 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -502,6 +520,7 @@ rule Backdoor_Win32_Caphaw_AE_2147685260_0
         $x_1_3 = "action=setStatus&bid=%s&skype_exists=%s&" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -530,6 +549,7 @@ rule Backdoor_Win32_Caphaw_AF_2147685472_0
         $x_1_9 = {8b 46 3c 8b ?? ?? 28 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -576,6 +596,7 @@ rule Backdoor_Win32_Caphaw_AG_2147685549_0
         $x_1_24 = {8b 56 3c 8b 4c 32 54 8b c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -619,6 +640,7 @@ rule Backdoor_Win32_Caphaw_AH_2147685614_0
         $x_100_20 = {03 f1 9b 8b 03 85 c0 8d 1c 08 75 02 8b de}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -669,6 +691,7 @@ rule Backdoor_Win32_Caphaw_AI_2147686406_0
         $x_1_28 = {8b 56 3c 8b 4c ?? 54 8b c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -734,6 +757,7 @@ rule Backdoor_Win32_Caphaw_AK_2147687671_0
         $x_1_4 = "AVCInjPack@@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -761,6 +785,7 @@ rule Backdoor_Win32_Caphaw_AL_2147687833_0
         $x_2_4 = {8b 42 38 8b 0e 8d 54 01 ff 48 f7 d0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -811,6 +836,7 @@ rule Backdoor_Win32_Caphaw_AM_2147687902_0
         $x_1_3 = "action=setStatus&bid=%s&skype_exists=%s&policy=%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -838,6 +864,7 @@ rule Backdoor_Win32_Caphaw_AN_2147688126_0
         $x_100_4 = {8b 43 3c 8b 4c 18 54 8b d1}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -865,6 +892,7 @@ rule Backdoor_Win32_Caphaw_AP_2147718389_0
         $x_1_4 = {52 2b c3 55 03 c5 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Simdown_A_2147685963_0
         $x_1_5 = {00 2f 66 6c 61 73 68 73 65 63 2e 65 78 65 00 00 00 ff ff ff ff 0d 00 00 00 2f 73 74 61 72 74 73 65 63 2e 76 62 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win64_Lazy_MA_2147838780_0
         $x_2_3 = "SHGetDiskFreeSpaceA" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win64_Lazy_MA_2147838780_1
         $x_2_5 = "WaitMessage" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win64_Lazy_MB_2147840367_0
         $x_2_3 = "RegisterEventSourceA" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win64_Lazy_SPRP_2147843102_0
         $x_3_2 = {49 8d 4e 30 45 33 c0 ba a0 0f 00 00 e8 ?? ?? ?? ?? 48 8b 05 ?? ?? ?? ?? 4c 8d 05 ?? ?? ?? ?? 48 8b d5 48 c1 fa 06 4c 89 34 03 48 8b c5 83 e0 3f 48 8d 0c c0 49 8b 04 d0 48 8b 4c c8 28 48 83 c1 02 48 83 f9 02 77 06}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Win64_Lazy_CAZ_2147843716_0
         $x_1_1 = {48 8b 44 24 18 48 63 4c 24 14 0f be 14 08 48 8b 44 24 28 44 8b 44 24 14 48 89 44 24 08 44 89 c0 89 54 24 04 99 41 b8 ?? ?? ?? ?? 41 f7 f8 48 63 ca 8b 54 24 04 4c 8b 4c 24 08 41 33 14 89 41 88 d2 48 8b 4c 24 18 4c 63 5c 24 14 46 88 14 19 8b 44 24 14 83 c0 ?? 89 44 24 14 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Trojan_Win64_Lazy_EM_2147847283_0
         $x_5_1 = {47 1d c1 01 48 83 ec 10 48 31 14 24 48 31 d0 83 44 24 08 28}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +157,7 @@ rule Trojan_Win64_Lazy_EM_2147847283_1
         $x_5_1 = {48 0f b6 01 80 c0 0e 48 83 c1 01 48 33 d2 4c 0f b6 c0 41 83 e8 01 89 d0 41 3b c0 7f 13 41 83 c0 01 48 63 d0 80 04 11 0d 83 c0 01 41 3b c0 75 f1}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule Trojan_Win64_Lazy_EM_2147847283_2
         $x_1_5 = "Caoafoawfoiawjgidaj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +213,7 @@ rule Trojan_Win64_Lazy_BY_2147847376_0
         $x_2_9 = "WaitForSingleObject" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -230,6 +239,7 @@ rule Trojan_Win64_Lazy_BV_2147848229_0
         $x_5_1 = {8b 44 24 20 ff c0 89 44 24 20 8b 44 24 48 39 44 24 20 7d 20 48 63 44 24 20 48 8b 4c 24 40 0f be 04 01 83 f0 31 48 63 4c 24 20 48 8b 54 24 28 88 04 0a eb}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -253,6 +263,7 @@ rule Trojan_Win64_Lazy_RDD_2147848274_0
         $x_1_3 = "timeGetTime" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +287,7 @@ rule Trojan_Win64_Lazy_ABYV_2147848401_0
         $x_2_3 = "timeGetTime" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -297,6 +309,7 @@ rule Trojan_Win64_Lazy_ABAS_2147850012_0
         $x_10_1 = {f3 0f 7f 45 97 48 89 4d 2f c7 45 a7 c0 cf 86 c9 c7 45 ab c4 c1 c0 cd c7 45 af c0 c2 d5 00 c6 45 b3 01 0f 1f 40 00 66 66 0f 1f 84 00 00 00 00 00 8d 41 97 30 44 0d 97 48 ff c1 48 83 f9 1b 72 f0}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -320,6 +333,7 @@ rule Trojan_Win64_Lazy_AMAB_2147853391_0
         $x_1_3 = "cdn.axion.systems/diablo/cf4463f8-6db9-4a8b-9925-16a99a1bdec2.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -341,6 +355,7 @@ rule Trojan_Win64_Lazy_GMQ_2147892540_0
         $x_10_1 = {48 8b f8 48 89 5d 20 48 89 75 28 48 b8 a9 8e ed 20 d1 e2 39 fe 48 89 45 10 48 89 75 18 66 0f 6f 45 10 66 0f ef 45 20 66 0f 7f 45 10 45 33 f6 4c 89 75 b0 48 c7 45 b8 0f 00 00 00 44 88 75 a0}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -362,6 +377,7 @@ rule Trojan_Win64_Lazy_GMP_2147892746_0
         $x_10_1 = {48 89 4c 24 68 48 b8 4d f0 90 8a 5b 81 b8 04 48 89 44 24 40 48 89 4c 24 48 66 0f 6f 44 24 40 66 0f ef 44 24 60 66 0f 7f 44 24 40 48 8d 44 24 40 4c 8b c3 0f 1f 44 00 00 49 ff c0 42 80 3c 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -383,6 +399,7 @@ rule Trojan_Win64_Lazy_ARA_2147892878_0
         $x_2_1 = {8b 85 20 01 00 00 48 8b 4d 00 48 8b 49 ?? 0f b6 0c 41 e8 ?? ?? ?? ?? 8b 8d 20 01 00 00 88 44 0d 10 8b 85 20 01 00 00 ff c0 89 85 20 01 00 00 eb b9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -406,6 +423,7 @@ rule Trojan_Win64_Lazy_ARA_2147892878_1
         $x_3_3 = "test123123123123" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
             (all of ($x*))
@@ -433,6 +451,7 @@ rule Trojan_Win64_Lazy_ARA_2147892878_2
         $x_2_4 = "disableLSAProtection" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -454,6 +473,7 @@ rule Trojan_Win64_Lazy_GNT_2147895097_0
         $x_10_1 = {8d 56 6c 48 8b 4d 28 66 0f 7f 45 40 48 89 45 38 4c 89 75 50 ff 15 ?? ?? ?? ?? 48 8d 4d 10 48 89 45 58 ff 15 ?? ?? ?? ?? 48 89 74 24 58 4c 8d 05 ?? ?? ?? ?? 48 89 5c 24 50 41 b9 ?? ?? ?? ?? 48 89 74 24 48 49 8b d6 48 89 74 24 40 33 c9 89 74 24}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -476,6 +496,7 @@ rule Trojan_Win64_Lazy_NLS_2147895470_0
         $x_1_2 = "WowOpO.TXT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -498,6 +519,7 @@ rule Trojan_Win64_Lazy_AX_2147896932_0
         $x_1_2 = "payload.bin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -520,6 +542,7 @@ rule Trojan_Win64_Lazy_ALZ_2147897081_0
         $x_1_2 = {48 8d 0d c6 e2 00 00 31 d2 ff 15 be df 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -542,6 +565,7 @@ rule Trojan_Win64_Lazy_NLA_2147897388_0
         $x_1_2 = "NZRB.x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -564,6 +588,7 @@ rule Trojan_Win64_Lazy_NLA_2147897388_1
         $x_5_2 = {48 8d 4c 24 20 e8 1e e6 ff ff 48 8d 15 5f 9a 04 00 48 8d 4c 24 ?? e8 dd 1e 00 00 cc 33 c0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -586,6 +611,7 @@ rule Trojan_Win64_Lazy_NL_2147899138_0
         $x_2_2 = {75 b7 48 8b 1d ?? ?? ?? ?? 48 8b cb e8 c8 17 ff ff 48 83 25 9c 9e 0e 00 00 48 83 27 ?? c7 05 8a c6 0e 00 01 00 00 00 33 c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -608,6 +634,7 @@ rule Trojan_Win64_Lazy_NL_2147899138_1
         $x_1_2 = {33 c0 48 8b 4d 00 48 33 cd e8 bb 05 00 00 48 8b 5d 30 48 8b 75 38 48 8b 7d 40 4c 8b 6d 48 48 8d 65 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -633,6 +660,7 @@ rule Trojan_Win64_Lazy_NL_2147899138_2
         $x_1_5 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -660,6 +688,7 @@ rule Trojan_Win64_Lazy_NL_2147899138_3
         $x_1_7 = "lilithRELEASE.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -683,6 +712,7 @@ rule Trojan_Win64_Lazy_RA_2147900176_0
         $x_1_3 = "ajTSYRJNanDNI.JGOLBA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -705,6 +735,7 @@ rule Trojan_Win64_Lazy_RB_2147900681_0
         $x_1_2 = {1b 48 8b 05 50 b4 57 00 49 89 43 08 48 89 1d 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -727,6 +758,7 @@ rule Trojan_Win64_Lazy_RC_2147900682_0
         $x_1_2 = "IooHIsa1BYJ.(*AyxWYUb).IsLoopback" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -748,6 +780,7 @@ rule Trojan_Win64_Lazy_RC_2147900682_1
         $x_1_1 = {48 ba 00 10 00 00 00 00 00 00 49 b8 ?? ?? 00 00 00 00 00 00 65 48 8b 04 25 60 00 00 00 48 8b 40 10 48 01 c2 49 01 c0 4c 8b ca 48 31 0a 48 83 c2 08 49 3b d0 72 f4 41 ff e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -769,6 +802,7 @@ rule Trojan_Win64_Lazy_DAS_2147901192_0
         $x_5_1 = {80 74 24 27 ?? 34 ?? c6 44 24 20 30 88 44 24 28 48 8d 44 24 20 49 ff c0 42 80 3c 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -791,6 +825,7 @@ rule Trojan_Win64_Lazy_NY_2147902078_0
         $x_1_2 = "StickyNotes" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -812,6 +847,7 @@ rule Trojan_Win64_Lazy_ZBA_2147902338_0
         $x_1_1 = {41 ff c0 49 63 c8 42 0f b6 04 09 42 88 04 0e 48 8b 44 24 ?? 88 14 01 4c 8b 4c 24 ?? 42 0f b6 0c 0e 48 03 ca 0f b6 c1 42 0f b6 0c 08 41 30 0c 1b 49 ff c3 49 81 fb e7 d6 07 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -836,6 +872,7 @@ rule Trojan_Win64_Lazy_AMMC_2147905230_0
         $x_2_4 = "xxxx?xxxx????xxx" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -858,6 +895,7 @@ rule Trojan_Win64_Lazy_AV_2147905831_0
         $x_1_2 = "SDHEHREJRIET7IJYRIK7Y7I6UKKTHKJHTGKG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -880,6 +918,7 @@ rule Trojan_Win64_Lazy_AE_2147906062_0
         $x_1_2 = {4a 00 50 01 4a 00 e8 54 4d 00 28 f8 18 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -904,6 +943,7 @@ rule Trojan_Win64_Lazy_EE_2147906109_0
         $x_1_4 = "&& timeout /t 5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -926,6 +966,7 @@ rule Trojan_Win64_Lazy_GZY_2147906185_0
         $x_5_2 = {44 8b 03 8b 53 f8 4d 03 c5 44 8b ?? fc 49 03 d6 48 8b 4c 24 ?? 4c 89 64 24 ?? ff 15 ?? ?? ?? ?? 0f b7 46 ?? 48 8d 5b ?? ff c7 3b f8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -947,6 +988,7 @@ rule Trojan_Win64_Lazy_GZZ_2147906216_0
         $x_10_1 = {41 5f 41 5e 41 5d 41 5c 5f 5e 5d c3 30 40 02 00 91 40 02 00 91 40 02 00 45 40 02 00 45 40 02 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -968,6 +1010,7 @@ rule Trojan_Win64_Lazy_GZZ_2147906216_1
         $x_10_1 = {80 74 24 21 39 80 74 24 22 3a 80 74 24 23 3b 80 74 24 24 3c 80 74 24 25 3d 80 74 24 26 3e 80 74 24 27 3f 66 89 4c 24 28 80 f1 40 80 74 24 29 41 34 42 c6 44 24 20 58 88 44 24 2a 48 8d 44 24 20 88 4c 24 28 0f 1f 44 00 00 49 ff c0 42 80 3c 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -990,6 +1033,7 @@ rule Trojan_Win64_Lazy_CN_2147906367_0
         $x_5_2 = {74 4e 80 35 ?? ?? ?? 00 31 80 35 ?? ?? ?? 00 32 80 35 ?? ?? ?? 00 33 80 35 ?? ?? ?? 00 34 80 35 ?? ?? ?? 00 35 80 35 ?? ?? ?? 00 36 80 35 ?? ?? ?? 00 37 80 35 ?? ?? ?? 00 38 80 35}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1011,6 +1055,7 @@ rule Trojan_Win64_Lazy_RK_2147906788_0
         $x_1_1 = {33 c9 49 89 43 b8 49 89 4b c0 48 8d 05 ?? ?? ?? ?? 49 89 4b d0 4d 8d 4b b8 49 89 4b d8 48 8b da 49 89 4b e0 44 8d 41 01 49 89 43 c8 89 4c 24 50 49 89 4b f0 48 8b cf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1035,6 +1080,7 @@ rule Trojan_Win64_Lazy_RK_2147906788_1
         $x_1_4 = "&& timeout /t 5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1056,6 +1102,7 @@ rule Trojan_Win64_Lazy_KAF_2147907243_0
         $x_1_1 = {0f b7 00 0f b7 8c 24 ?? ?? ?? ?? 33 c1 0f b7 8c 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1077,6 +1124,7 @@ rule Trojan_Win64_Lazy_ACC_2147907647_0
         $x_1_1 = {f7 e9 03 d1 c1 fa 05 8b c2 c1 e8 ?? 03 d0 0f be c2 6b d0 33 0f b6 c1 ff c1 2a c2 04 36 41 30 40 ff 83 f9 1d 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1099,6 +1147,7 @@ rule Trojan_Win64_Lazy_AMMH_2147907937_0
         $x_1_2 = {0f b7 43 0e 48 83 eb 10 66 31 45 ?? 45 3b f7 0f 8e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1127,6 +1176,7 @@ rule Trojan_Win64_Lazy_SZ_2147908624_0
         $x_1_8 = "Blocker Injector1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1148,6 +1198,7 @@ rule Trojan_Win64_Lazy_RO_2147909169_0
         $x_1_1 = {44 31 f5 41 5e 55 81 34 24 91 87 ff 5d 59 81 f1 91 87 ff 5d 5d 44 01 f1 41 5e 48 81 ec 08 00 00 00 41 56 8f 04 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1170,6 +1221,7 @@ rule Trojan_Win64_Lazy_RS_2147910167_0
         $x_1_2 = "khxdled\\santo\\build\\santo.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1192,6 +1244,7 @@ rule Trojan_Win64_Lazy_RT_2147910168_0
         $x_1_2 = "khxdled\\santo\\build\\santo.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1213,6 +1266,7 @@ rule Trojan_Win64_Lazy_RU_2147911217_0
         $x_1_1 = {48 0f af f8 49 8b c2 48 f7 e7 48 c1 ea 07 48 69 c2 ?? ?? ?? ?? 48 2b f8 41 8a c8 80 e1 07 c0 e1 03 48 0f be 95 ?? ?? ?? ?? 48 d3 fa 40 32 fa 49 8b c2 49 f7 e1 48 c1 ea 07 48 69 c2 ?? ?? ?? ?? 49 8b c9 48 2b c8 40 32 f9 42 30 bc 05 ?? ?? ?? ?? 4d 03 c3 4c 03 cb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1234,6 +1288,7 @@ rule Trojan_Win64_Lazy_RW_2147911806_0
         $x_1_1 = {8a 00 41 b8 81 00 00 00 89 c2 4c 89 c1 41 89 c0 41 80 e0 0f c0 ea 04 45 8d 48 30 45 8d 58 37 41 80 f8 0a 45 0f b6 c1 45 0f b6 cb 45 0f 42 c8 44 88 4c 0c 26}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1256,6 +1311,7 @@ rule Trojan_Win64_Lazy_RW_2147911806_1
         $x_1_2 = "Lazy instance has previously been poisonedOnce" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1278,6 +1334,7 @@ rule Trojan_Win64_Lazy_HNC_2147912001_0
         $x_1_2 = {96 62 64 56 54 88 99 a7 a8 7d 78 71 56 56 63 72 41 3e b0 84 00 00 5a 85 00 00 66 64 69 73 6b 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1300,6 +1357,7 @@ rule Trojan_Win64_Lazy_ZZ_2147912273_0
         $x_1_2 = "hdfzpysvpzimorhk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1321,6 +1379,7 @@ rule Trojan_Win64_Lazy_AMAA_2147912717_0
         $x_1_1 = {0f b6 0b 49 8d 14 18 48 83 fa 64 73 ?? 0f b6 c1 80 e9 ?? 34 ?? 0f b6 c9 f6 c2 ?? 0f b6 c0 0f 45 c8 49 8b c1 48 8b d3 88 0c 03 48 ff c3 49 8d 04 18 49 3b c2 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1342,6 +1401,7 @@ rule Trojan_Win64_Lazy_AMAD_2147912887_0
         $x_1_1 = {0f b6 09 33 c8 8b c1 e9 [0-30] 88 01 8b 44 24 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1363,6 +1423,7 @@ rule Trojan_Win64_Lazy_AMAD_2147912887_1
         $x_1_1 = {41 0f b6 08 43 8d 14 10 0f b6 c1 4d 8d 40 ?? 34 ?? 80 e9 ?? f6 c2 ?? 0f b6 c0 0f b6 c9 0f 45 c8 4b 8d 04 02 43 88 4c 18 ?? 49 3b c1 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1385,6 +1446,7 @@ rule Trojan_Win64_Lazy_AI_2147913601_0
         $x_2_2 = {56 bf 7e c6 1d 0f f3 38 02 00 00 80 71 79 82 d1 6f 46 9d 05 79 f1 25 a1 b6 68 11 3e 4e 6e 8d 22}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1406,6 +1468,7 @@ rule Trojan_Win64_Lazy_GPD_2147915116_0
         $x_1_1 = {c6 45 fc 01 0f b7 c8 66 2b ca 66 31 4c 45 d0 48 ff c0 48 83 f8 15 72 ec c6 45 fc 00 48 8d 45 d0 49 c7 c0 ff ff ff ff 49 ff c0 66 42 83 3c 40 00 75 f5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1429,6 +1492,7 @@ rule Trojan_Win64_Lazy_GZM_2147915879_0
         $x_1_3 = {43 56 45 2d 32 30 32 34 2d 33 30 30 38 38 5c 78 36 34 5c 52 65 6c 65 61 73 65 5c 70 6f 63 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1450,6 +1514,7 @@ rule Trojan_Win64_Lazy_AZL_2147916156_0
         $x_1_1 = {8b c8 c1 e9 1e 33 c8 69 c9 65 89 07 6c 03 ca 89 4c 95 94 8b c1 48 ff c2 49 3b d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1476,6 +1541,7 @@ rule Trojan_Win64_Lazy_WCD_2147916494_0
         $x_1_6 = "Steal_token" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -1503,6 +1569,7 @@ rule Trojan_Win64_Lazy_NK_2147916633_0
         $x_2_3 = "Fontello project" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_3_*))) or
@@ -1533,6 +1600,7 @@ rule Trojan_Win64_Lazy_WC_2147917645_0
         $x_1_6 = "YsImfSBoP9QPYL0xyKJPq0gcaJdG3rInoqxTWbfQu9M=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1554,6 +1622,7 @@ rule Trojan_Win64_Lazy_GPB_2147917860_0
         $x_1_1 = "Software\\Bivaji Coms\\BivaApp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1576,6 +1645,7 @@ rule Trojan_Win64_Lazy_GBN_2147919382_0
         $x_5_2 = {48 b8 d3 6d 18 e2 b2 55 66 d6 48 89 44 24 40 48 89 4c 24 48 66 0f 6f 44 24 40 66 0f ef 44 24 60 66 0f 7f 44 24 40 48 8d 44 24 40 4c 8b c3 0f 1f 44 00 00 49 ff c0 42 80 3c 00 00 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1603,6 +1673,7 @@ rule Trojan_Win64_Lazy_TZ_2147919801_0
         $x_1_7 = "defender.Disable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1629,6 +1700,7 @@ rule Trojan_Win64_Lazy_CZ_2147919987_0
         $x_1_6 = "browsers.CreditCard" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1650,6 +1722,7 @@ rule Trojan_Win64_Lazy_GXB_2147920185_0
         $x_10_1 = {66 0f 6e c8 66 0f 73 f9 0e 66 0f eb cb 66 0f db ce 66 0f 6f d6 66 0f df d0 66 0f eb d1 66 0f 6f c2 66 0f fc 05 ?? ?? ?? ?? 66 0f 6f c8 66 0f da 0d ?? ?? ?? ?? 66 0f 74 c8 66 0f db 0d ?? ?? ?? ?? 66 0f eb ca f3 0f 7f 0c 2f 48 8d 45 10 48 83 c5 20 4c 39 e5 48 89 c5 0f 86}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1672,6 +1745,7 @@ rule Trojan_Win64_Lazy_DA_2147920317_0
         $x_1_2 = {48 8b 0f 49 8b c6 49 f7 e1 48 c1 ea 02 48 8d 04 52 48 03 c0 4c 2b c8 42 0f b6 44 0d b7 43 32 04 02 41 88 04 0a 41 ff c3 49 ff c2 4d 63 cb 4c 3b 4b 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1695,6 +1769,7 @@ rule Trojan_Win64_Lazy_IZ_2147920730_0
         $x_1_3 = "ILa9j1onAAMadBsyyUJv5cack8Y1WT26yLj/V+ulKp8=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1719,6 +1794,7 @@ rule Trojan_Win64_Lazy_RZ_2147921606_0
         $x_1_4 = "zPAT6CGy6wXeQ7NtTnaTerfKOsV6V6F8agHXFiazDkg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1740,6 +1816,7 @@ rule Trojan_Win64_Lazy_GMN_2147921670_0
         $x_10_1 = {48 89 08 66 89 5c 24 68 48 89 5c 24 6e 48 89 5c 24 76 33 c0 66 89 44 24 6b 88 44 24 6d 66 89 44 24 6e 88 44 24 70 66 89 44 24 71 88 44 24 73 66 89 44 24 74 88 44 24 76 66 89 44 24 77 88 44 24 79 66 89 44 24 7a 88 44 24 7c 89 5c 24 34 89 5c 24 64 0f 28 44 24 20 66 0f 7f 44 24 20 4c 8d 85 b0 01 00 00 48 8d 54 24 20 48 8d 4c 24 30}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1761,6 +1838,7 @@ rule Trojan_Win64_Lazy_ROW_2147921725_0
         $x_5_1 = {41 f7 e0 c1 ea 04 0f be c2 6b c8 32 41 8a c0 2a c1 04 32 41 30 01 41 ff c0 49 ff c1 41 83 f8 02 7c d9}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1783,6 +1861,7 @@ rule Trojan_Win64_Lazy_GM_2147922335_0
         $x_2_2 = "/c timeout /t 10 & del /f /q" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1804,6 +1883,7 @@ rule Trojan_Win64_Lazy_MBXY_2147922343_0
         $x_1_1 = {8b c8 c1 e9 1e 33 c8 69 c1 65 89 07 6c 03 c2 89 84 94 84 0c 00 00 48 ff c2 48 81 fa 70 02 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1825,6 +1905,7 @@ rule Trojan_Win64_Lazy_AMZ_2147922650_0
         $x_1_1 = {48 8b 04 24 48 8b 4c 24 10 8a 54 24 0f 32 14 01 88 14 01 48 83 c0 01 48 89 44 24 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1846,6 +1927,7 @@ rule Trojan_Win64_Lazy_GZT_2147922878_0
         $x_5_1 = {49 8b c9 66 90 8d 41 8b 30 04 0a 48 ff c1 48 83 f9 0c 72 f1 c6 42 0d 00 4c 89 4d a8 48 8d 42 0c 48 3b d0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1867,6 +1949,7 @@ rule Trojan_Win64_Lazy_AL_2147924227_0
         $x_5_1 = {33 c2 69 d0 93 01 00 01 0f b6 41 ff e9}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1888,6 +1971,7 @@ rule Trojan_Win64_Lazy_MBXX_2147925166_0
         $x_10_1 = "Desktop\\solo\\examples\\example_win32_directx11\\Release\\calculator.p" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1910,6 +1994,7 @@ rule Trojan_Win64_Lazy_NM_2147925657_0
         $x_2_2 = {80 3b cc 75 ?? c6 03 00 bb 00 10 00 00 68 d0 18 0e 31 68 18 e3 2b 4f 53 50 e8 ?? ?? ?? ?? 48 83 c0 14 48 89 44 24 10 5b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1931,6 +2016,7 @@ rule Trojan_Win64_Lazy_SOK_2147925845_0
         $x_5_1 = {f7 eb 03 d3 c1 fa 05 8b c2 c1 e8 ?? 03 d0 0f be c2 6b c8 33 0f b6 c3 ff c3 2a c1 04 37 41 30 40 ff 83 fb 17 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1952,6 +2038,7 @@ rule Trojan_Win64_Lazy_THK_2147925871_0
         $x_5_1 = {c0 e1 02 49 8b d1 48 d3 ea 66 41 23 d6 42 ?? ?? 44 44 50 66 33 d0 41 0f b7 c0 66 41 2b c2 66 33 d0 66 ?? ?? 54 44 50 49 ff c0 49 83 f8 22 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1973,6 +2060,7 @@ rule Trojan_Win64_Lazy_ZZK_2147925955_0
         $x_5_1 = {8d 50 7a 30 14 08 48 ff c0 48 83 f8 0a 72 f1}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1995,6 +2083,7 @@ rule Trojan_Win64_Lazy_GTZ_2147926142_0
         $x_10_2 = {55 48 89 e5 48 83 ec ?? 33 c0 41 81 f0 ?? ?? ?? ?? 41 81 f1 ?? ?? ?? ?? 8b c8 41 81 f2 ?? ?? ?? ?? 48 83 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2017,6 +2106,7 @@ rule Trojan_Win64_Lazy_GNS_2147927754_0
         $x_5_2 = {44 67 31 20 51 10 10 86 0e}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2039,6 +2129,7 @@ rule Trojan_Win64_Lazy_YAF_2147927862_0
         $x_5_2 = "Software\\Yuwei Qusi\\Oovi Appc" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2060,6 +2151,7 @@ rule Trojan_Win64_Lazy_YAG_2147927871_0
         $x_10_1 = {48 8d 3f 32 c3 48 8d 3f 48 8d 3f 48 8d 3f 2a c3 48 8d 3f 48 8d 3f 48 8d 3f 48 8d 3f 32 c3 48 8d 3f 2a c3 48 8d 3f}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2081,6 +2173,7 @@ rule Trojan_Win64_Lazy_AMCP_2147927902_0
         $x_1_1 = {33 d2 33 c9 ff 15 [0-30] 33 d2 33 c9 ff 15 [0-30] 45 33 c0 48 8d 15 ?? ?? ?? ?? 33 c9 ff 15 [0-30] 33 d2 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2102,6 +2195,7 @@ rule Trojan_Win64_Lazy_TYC_2147928518_0
         $x_5_1 = {f7 e1 c1 ea 04 0f be c2 6b d0 34 0f b6 c1 ff c1 2a c2 04 ?? 41 30 40 ff 83 f9 0c 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2129,6 +2223,7 @@ rule Trojan_Win64_Lazy_NP_2147928692_0
         $x_1_7 = "schtasks /create /tn \"{}\" /sc ONLOGON /tr \"{}\" /rl HIGHEST /f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2152,6 +2247,7 @@ rule Trojan_Win64_Lazy_ALL_2147929272_0
         $x_1_3 = "SAKURATECH\\Project\\B290_OneDigiMMIC\\MSVC\\mr12e\\mr12e\\mr12e\\x64\\Release\\mr12e.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2173,6 +2269,7 @@ rule Trojan_Win64_Lazy_AMCW_2147929314_0
         $x_1_1 = {20 20 20 00 c0 40 00 00 10 00 00 00 4e 02 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 a0 ae 00 00 00 d0 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2194,6 +2291,7 @@ rule Trojan_Win64_Lazy_AMCW_2147929314_1
         $x_1_1 = {40 55 48 8b ec 48 83 ec 50 c7 45 d0 ?? ?? ?? ?? 33 c0 c7 45 d4 ?? ?? ?? ?? ba ?? ?? ?? ?? c7 45 d8 ?? ?? ?? ?? c7 45 dc [0-53] c6 45 fc 01 8d 0c 02 66 31 4c 45 d0 48 ff c0 48 83 f8 15 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2215,6 +2313,7 @@ rule Trojan_Win64_Lazy_AOP_2147930767_0
         $x_5_1 = {28 d1 30 c1 31 c0 28 c8 88 44 24 ?? 8b 4c 24 08 48 8b 54 24 18 44 8a 44 24 ?? 8a 44 24 06 44 30 c0 4c 63 c1 42 88 04 02 83 c1 01 83 f9 13 89 4c 24 ?? 88 44 24 2f 0f 85}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2236,6 +2335,7 @@ rule Trojan_Win64_Lazy_GNN_2147932689_0
         $x_10_1 = {43 8d 0c 00 44 8b c9 41 81 f1 b7 0d c1 04 45 85 c0 44 0f 49 c9 43 8d 14 09 8b ca 81 f1 b7 0d c1 04 45 85 c9 0f 49 ca ff c3 89 4f fc}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2258,6 +2358,7 @@ rule Trojan_Win64_Lazy_ALY_2147932693_0
         $x_1_2 = {48 89 74 24 40 b8 20 00 00 00 8b 74 24 30 c1 ee 05 8b ce 48 f7 e1 48 c7 c1 ff ff ff ff 48 89 7c 24 20 48 8d 15 2b 65 6b 00 48 0f 42 c1 48 8b c8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2281,6 +2382,7 @@ rule Trojan_Win64_Lazy_HGP_2147932820_0
         $x_1_3 = "Registry\\Machine\\System\\CurrentControlSet\\Services\\Amaterasu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2303,6 +2405,7 @@ rule Trojan_Win64_Lazy_GNE_2147933061_0
         $x_1_2 = "UwUdisRAT.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2324,6 +2427,7 @@ rule Trojan_Win64_Lazy_AHLA_2147933460_0
         $x_5_1 = {48 8b c2 4a 8d 0c 2a 83 e0 7f 48 ff c2 0f b6 84 18 80 00 00 00 32 04 0f 88 01 48 3b d5 72}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2345,6 +2449,7 @@ rule Trojan_Win64_Lazy_GD_2147934060_0
         $x_1_1 = {4c 8b 84 24 ?? ?? ?? ?? 8a 11 4d 8b 00 41 32 54 00 08 88 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2366,6 +2471,7 @@ rule Trojan_Win64_Lazy_GTK_2147934731_0
         $x_10_1 = {b6 5e ff 73 69 02 63 31 88 3f a5 2c e4 53 32 1f 80 15 ?? ?? ?? ?? 30 cd 46}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2387,6 +2493,7 @@ rule Trojan_Win64_Lazy_GTP_2147934844_0
         $x_10_1 = {41 f6 db 41 0f 95 c3 4f 8d 9c 1b ?? ?? ?? ?? c1 6c 24 ?? 4c 48 c7 44 24 ?? 80 5b 76 e7 4c 8b 5c 24 ?? 48 81 74 24 ?? 34 72 b2 a5 80 74 24}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2408,6 +2515,7 @@ rule Trojan_Win64_Lazy_HHM_2147935725_0
         $x_5_1 = {41 f7 e8 41 03 d0 c1 fa 05 8b c2 c1 e8 1f 03 d0 b8 01 00 00 00 2a c2 0f be c0 6b c8 39 41 02 c8 41 ff c0 41 30 49 ff 41 83 f8 11 7c ca}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2429,6 +2537,7 @@ rule Trojan_Win64_Lazy_PIN_2147935942_0
         $x_5_1 = {49 8b c9 48 2b c8 40 32 f9 49 8b c7 49 f7 e2 48 c1 ea 07 48 69 c2 ff 00 00 00 49 8b ca 48 2b ?? 40 32 f9 41 32 f8 42 30 7c 05 c8 49 ff c0 4d 03 cd 49 83 c2 06 4d 3b ce 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2450,6 +2559,7 @@ rule Trojan_Win64_Lazy_A_2147936261_0
         $x_2_1 = {48 81 f3 77 9e b4 57 48 01 d8 03 f7 48 81 ec 28 00 00 00 89 b5 94 fa ff ff 29 b5 54 f9 ff ff 33 fe 81 c7 13 c3 00 00 66 81 ef 35 eb 89 b5 b8 f9 ff ff 81 c6 38 9c 00 00 c7 85 1c fa ff ff 5f 07 00 00 81 ee 95 12 00 00 81 ef f4 24 00 00 81 f7 99 c8 00 00 e9 4e e6 ff ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2472,6 +2582,7 @@ rule Trojan_Win64_Lazy_GVA_2147936311_0
         $x_1_2 = "RerueelfhnrsrWrl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2493,6 +2604,7 @@ rule Trojan_Win64_Lazy_TVZ_2147937226_0
         $x_5_1 = {b8 f7 12 da 4b 41 f7 e8 c1 fa 04 8b c2 c1 e8 1f 03 d0 0f be c2 6b c8 ?? 41 0f b6 c0 2a c1 04 34 41 30 02 41 ff c0 4d 8d 52 01 41 83 f8 13 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2514,6 +2626,7 @@ rule Trojan_Win64_Lazy_VVZ_2147937235_0
         $x_5_1 = {b8 1f 85 eb 51 4d 8d 40 01 f7 e1 c1 ea 04 0f be c2 6b d0 ?? 0f b6 c1 ff c1 2a c2 04 37 41 30 40 ff 83 f9 04 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2543,6 +2656,7 @@ rule Trojan_Win64_Lazy_GC_2147938146_0
         $x_1_9 = "sELF.eXe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2564,6 +2678,7 @@ rule Trojan_Win64_Lazy_GVB_2147938151_0
         $x_1_1 = {48 03 c8 48 8b c1 0f b6 00 83 f0 36 48 8b 8c 24 ?? ?? ?? ?? 48 8b 94 24 ?? ?? ?? ?? 48 03 d1 48 8b ca 88 01 48 8b 84 24 ?? ?? ?? ?? 48 8b 8c 24 ?? ?? ?? ?? 48 03 c8 48 8b c1 0f b6 00 83 c0 12 48 8b 8c 24 ?? ?? ?? ?? 48 8b 94 24 ?? ?? ?? ?? 48 03 d1 48 8b ca 88 01 48 8b 84 24 ?? ?? ?? ?? 48 ff c0 48 89 84 24 ?? ?? ?? ?? 48 81 bc 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2585,6 +2700,7 @@ rule Trojan_Win64_Lazy_AB_2147939489_0
         $x_1_1 = {c0 a8 e2 76 09 00 46 04 15 1f e4 10 b4 dd 01 82 3a 52 eb 20 14 ef d8 be 2c 0e 8d 42 5c 0f a0 dc fa 80 c9 4f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2606,6 +2722,7 @@ rule Trojan_Win64_Lazy_AC_2147939494_0
         $x_1_1 = {80 f2 00 80 e2 01 45 88 c2 41 80 f2 01 41 80 e2 00 44 08 d2 41 88 c2 41 80 f2 ff 41 88 d3 41 80 f3 ff 44 88 c3 80 f3 01 45 08 da 80 cb 01 41 80 f2 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2628,6 +2745,7 @@ rule Trojan_Win64_Lazy_PGY_2147939521_0
         $x_4_2 = {68 79 64 72 61 74 65 64 10 9a 13 00 00 f0 3c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00 c0}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2649,6 +2767,7 @@ rule Trojan_Win64_Lazy_PGL_2147939900_0
         $x_5_1 = {48 83 7d a0 07 48 8d 4d 88 4c 89 74 24 30 ba ?? ?? ?? ?? 48 0f 47 4d 88 45 33 c9 45 33 c0 c7 44 24 28 ?? ?? ?? ?? c7 44 24 20}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2670,6 +2789,7 @@ rule Trojan_Win64_Lazy_PLV_2147941797_0
         $x_5_1 = {31 d2 f7 f1 3d ab 10 f6 8f 0f 83 ?? ?? ?? ?? 48 8b 4d a8 8b 05 ?? ?? ?? ?? 31 d2 f7 35 7e 22 16 00 ba c0 cd 97 78 81 f2 43 ee 1d c9 09 d0 2d 17 c5 ec 6f 05 35 a7 e7 86 ba ed ca 60 fd 81 f2 fa 0f 8c 92 01 d0 25 31 15 d6 b4 48 83 f9 00 0f 94 c1 88 4d a7 3d 0e aa b9 ec 0f 83}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2691,6 +2811,7 @@ rule Trojan_Win64_Lazy_FY_2147941865_0
         $x_1_1 = {66 0f 6f c7 48 8d 4c 24 30 0f 57 c6 33 d2 66 0f 7f 44 24 30 ff ?? ?? ?? ?? ?? 48 89 05 e7 27 23 00 48 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2713,6 +2834,7 @@ rule Trojan_Win64_Lazy_MBZ_2147942168_0
         $x_1_2 = "powershell.exe -NoProfile -WindowStyle Hidden -EncodedCommand %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2734,6 +2856,7 @@ rule Trojan_Win64_Lazy_SFD_2147942779_0
         $x_1_1 = {43 0f b6 04 08 32 02 41 88 04 08 41 ff c2 49 ff c0 49 63 c2 48 3b 43 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2755,6 +2878,7 @@ rule Trojan_Win64_Lazy_AZLY_2147942839_0
         $x_2_1 = {66 89 44 24 6b 88 44 24 6d 66 89 44 24 6e 88 44 24 70 66 89 44 24 71 88 44 24 73 66 89 44 24 74 88 44 24 76 66 89 44 24 77 88 44 24 79 66 89 44 24 7a 88 44 24 7c 89 7c 24 64 0f 10 03 0f 29 45 d0 89 7c 24 34 c6 44 24 68 01 48 8d 55 50 48 8d 4c 24 20}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2780,6 +2904,7 @@ rule Trojan_Win64_Lazy_PAD_2147943902_0
         $x_1_5 = "SOFTWARE\\Microsoft\\Windows Defender\\Exclusions\\Paths" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2801,6 +2926,7 @@ rule Trojan_Win64_Lazy_BOE_2147944026_0
         $x_5_1 = {c0 e9 03 c0 e0 05 08 c8 34 a0 41 88 04 24 49 8b 76 18 48 8b 05 ?? ?? ?? ?? 4c 01 f8 ff d0 48 98 48 8d 0d a8 17 24 00 48 3b 34 c1 0f 86}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2822,6 +2948,7 @@ rule Trojan_Win64_Lazy_ETL_2147944784_0
         $x_1_1 = {30 84 0d a0 00 00 00 8d 41 88 30 84 0d a1 00 00 00 8d 41 89 30 84 0d a2 00 00 00 8d 41 8a 30 84 0d a3 00 00 00 8d 41 8b 30 84 0d a4 00 00 00 8d 41 8c 30 84 0d a5 00 00 00 8d 41 8d 30 84 0d a6 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2845,6 +2972,7 @@ rule Trojan_Win64_Lazy_MX_2147944946_0
         $x_5_3 = "textpubshiers.top" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2866,6 +2994,7 @@ rule Trojan_Win64_Lazy_AQ_2147944995_0
         $x_1_1 = {48 8b 44 24 40 0f be 00 44 31 e8 44 69 e0 95 e9 d1 5b 44 33 64 24 54 b8 00 ad 85 3a 3d 58 15 53 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2887,6 +3016,7 @@ rule Trojan_Win64_Lazy_AR_2147944997_0
         $x_1_1 = "jYR3AXLUy0BX30OQNfgSukljV5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2908,6 +3038,7 @@ rule Trojan_Win64_Lazy_AS_2147945006_0
         $x_1_1 = {48 33 c4 48 89 84 24 00 18 00 00 45 33 e4 44 89 a4 24 c0 00 00 00 c6 84 24 d0 00 00 00 ?? b0 ?? b1 ?? b2 ?? 41 b0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2931,6 +3062,7 @@ rule Trojan_Win64_Lazy_GZP_2147945542_0
         $x_10_3 = {80 74 24 21 39 80 74 24 22 3a 80 74 24 23 3b 80 74 24 24 3c 80 74 24 25 3d 80 74 24 26 3e 80 74 24 27 3f 66 89 4c 24 28 80 f1 40 80 74 24 29 41 34 42 c6 44 24 20 6c 88 44 24 2a 48 8d 44 24 20 88 4c 24 28 0f 1f 44 00 00 49 ff c0 42 80 3c 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2953,6 +3085,7 @@ rule Trojan_Win64_Lazy_LMD_2147945555_0
         $x_10_2 = {48 8b 45 30 c6 00 20 48 83 c0 01 48 89 45 30 c6 00 78 48 83 c0 01 48 89 45 30 c6 00 20 48 83 c0 01 48 89 45 30 8b c6 48 c1 e0 09 48 8d ?? ?? ?? ?? ?? ?? 8b cf 48 03 c9 8b 0c c8 48 8b 55 30}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2974,6 +3107,7 @@ rule Trojan_Win64_Lazy_GZF_2147945905_0
         $x_10_1 = {80 74 24 21 36 80 74 24 22 37 80 74 24 23 38 80 74 24 24 39 80 74 24 25 3a 80 74 24 26 3b 80 74 24 27 3c 66 89 4c 24 28 80 f1 3d 80 74 24 29 3e 34 3f c6 44 24 20 31 88 44 24 2a 48 8d 44 24 20 88 4c 24 28 0f 1f 44 00 00 49 ff c0 42 80 3c 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2996,6 +3130,7 @@ rule Trojan_Win64_Lazy_SX_2147945952_0
         $x_10_2 = {8b 85 2c 04 00 00 48 98 0f b6 44 05 a0 0f b6 c8 8b 85 2c 04 00 00 01 c0 48 63 d0 48 8b 85 10 04 00 00 48 01 d0 41 89 c8 48 8d 15 ?? ?? ?? ?? 48 89 c1 e8 ?? ?? ?? ?? 83 85 2c 04 00 00 01 83 bd 2c 04 00 00 0f 7e}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3019,6 +3154,7 @@ rule Trojan_Win64_Lazy_SXB_2147945953_0
         $x_10_3 = {48 63 d0 48 89 d0 48 01 c0 48 01 d0 48 c1 e0 03 48 83 e8 18 48 01 c1 48 8b 85 f0 04 00 00 48 8b 95 f8 04 00 00 48 89 01 48 89 51 08 48 8b 85 00 05 00 00 48 89 41 10 48 8b 95 ?? 05 00 00 48 8d 85 c0 00 00 00 49 89 d1 4c 8d 05 ?? ?? ?? ?? ba 00 01 00 00 48 89 c1}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3040,6 +3176,7 @@ rule Trojan_Win64_Lazy_AM_2147945974_0
         $x_1_1 = {89 c2 f7 d2 89 d5 09 cd f7 d5 83 e2 ?? 25 ?? 00 00 00 09 d0 31 c8 83 f0 ?? 21 c8 89 e9 21 c1 31 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3061,6 +3198,7 @@ rule Trojan_Win64_Lazy_AP_2147945990_0
         $x_1_1 = {0f 95 c0 0f 94 c1 83 3d 86 0b 04 00 09 0f 9f c2 30 d1 89 d3 20 c3 30 c2 08 da 89 c8 30 d0 bd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3083,6 +3221,7 @@ rule Trojan_Win64_Lazy_AHC_2147946023_0
         $x_2_2 = {48 31 c2 48 31 c2 48 8d 05 ?? ?? 02 00 48 c7 00 00 00 00 00 48 01 18 48 29 c2 48 83 f2 09 48 8d 05 ?? ?? 02 00 4c 89 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

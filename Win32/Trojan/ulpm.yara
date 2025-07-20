@@ -16,6 +16,7 @@ rule Trojan_Win32_ulpm_RDA_2147896310_0
         $x_2_1 = {89 c8 ba 0a 00 00 00 29 f8 d1 f8 89 d5 99 f7 fd 83 c2 30}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

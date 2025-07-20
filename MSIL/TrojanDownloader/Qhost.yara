@@ -21,6 +21,7 @@ rule TrojanDownloader_MSIL_Qhost_B_2147646279_0
         $x_1_7 = "EnableInstallerDetection" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule TrojanDownloader_MSIL_Qhost_E_2147647758_0
         $x_1_3 = {66 72 6d 41 64 6d 69 6e 69 73 74 72 61 44 65 73 63 61 72 67 61 00 41 64 6d 69 6e 69 73 74 72 61 44 65 73 63 61 72 67 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

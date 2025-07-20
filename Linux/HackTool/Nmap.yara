@@ -24,6 +24,7 @@ rule HackTool_Linux_Nmap_Gen_2147799441_0
         $x_1_10 = "[%s] Retransmitting timed probes (rcvd_before=%u, rcvd_now=%u tim" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

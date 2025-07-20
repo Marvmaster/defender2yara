@@ -23,6 +23,7 @@ rule TrojanSpy_Win32_Xegumumune_SP_2147840559_0
         $x_2_8 = "ProcGuard.exe NOTRUNEXE" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

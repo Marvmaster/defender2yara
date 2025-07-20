@@ -21,6 +21,7 @@ rule Trojan_Win64_Convagent_AD_2147782130_0
         $x_3_6 = "Ayer" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win64_Convagent_BO_2147829152_0
         $x_1_6 = "ConvertTiff" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -74,6 +76,7 @@ rule Trojan_Win64_Convagent_SPS_2147847222_0
         $x_1_3 = "cmd /c schtasks /create /sc HOURLY /TN \"MicroSoft\\Windows\\AppID\\KeepMsdtc\" /TR \"cmd /c sc config msdtc start= auto && sc start msdtc\" /ru system /f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Trojan_Win64_Convagent_CRHW_2147847765_0
         $x_1_3 = {68 74 74 70 3a 2f 2f 34 35 2e 32 30 34 2e 37 31 2e 31 33 33 2f [0-31] 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +127,7 @@ rule Trojan_Win64_Convagent_CRHY_2147847776_0
         $x_1_6 = "5ace7675-2f0c-b5de-1ce7-bd7a1fcd3e15" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule Trojan_Win64_Convagent_RF_2147890028_0
         $x_1_1 = "Go build ID: \"v1kga1LUcgRyO0Zvvzn0/9iKKAfyHByOKTWGgdQIL/QKhnXcChtCeC0Pn3m5s0/VObPL1hkuIcjIcSzUbdS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +171,7 @@ rule Trojan_Win64_Convagent_MB_2147892756_0
         $x_5_1 = {33 d2 48 8b 44 24 28 b9 20 00 00 00 48 f7 f1 48 8b c2 48 8b 0d ?? ?? ?? ?? 0f b6 04 01 48 8d 0d ?? ?? ?? ?? 48 8b 54 24 28 0f b6 0c 11 33 c8 8b c1 48 8b 4c 24 28 48 8b 54 24 48 48 03 d1 48 8b ca 88 01 eb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule Trojan_Win64_Convagent_DS_2147895071_0
         $x_1_2 = {48 8b 7d c8 48 2b df 48 c1 fb 03 41 b9 40 00 00 00 41 b8 00 10 00 00 48 8b d3 33 c9 ff 15 [0-4] 4c 8b f0 48 85 c0 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -209,6 +217,7 @@ rule Trojan_Win64_Convagent_NG_2147895471_0
         $x_1_2 = "powershell -ep bypass -w hidden -e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +239,7 @@ rule Trojan_Win64_Convagent_CP_2147899924_0
         $x_1_1 = {49 89 f0 49 29 c0 48 89 c1 ba ?? ?? ?? ?? e8 ?? ?? ?? ?? 48 85 c0 74 ?? 8b 08 31 f9 8b 50 ?? 44 31 f2 09 ca 74 ?? 48 ff c0 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -252,6 +262,7 @@ rule Trojan_Win64_Convagent_NC_2147900476_0
         $x_1_2 = "A2ma6Aw" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -274,6 +285,7 @@ rule Trojan_Win64_Convagent_RC_2147902105_0
         $x_1_2 = {6f 75 74 2e 64 6c 6c 00 78 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -295,6 +307,7 @@ rule Trojan_Win64_Convagent_SPGE_2147902438_0
         $x_1_1 = {4c 8b c9 33 c9 8b d1 8b c1 4d 8b c1 66 41 83 38 5c 0f 44 c2 66 41 39 08 74 08 ff c2 49 83 c0 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -316,6 +329,7 @@ rule Trojan_Win64_Convagent_RZ_2147914030_0
         $x_1_1 = {48 89 c7 48 8b 75 10 48 c7 c1 ?? ?? ?? 00 48 c1 e9 03 f3 48 a5 48 8d 45 e8 48 83 ec 20 48 c7 c1 ?? ?? ?? 00 48 8b 55 10 4c 8b 45 10 49 89 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -337,6 +351,7 @@ rule Trojan_Win64_Convagent_CCJB_2147915025_0
         $x_1_1 = {49 3b 66 10 76 ?? 55 48 89 e5 48 83 ec 30 48 8d 05 ?? ?? ?? ?? bb ?? 01 00 00 e8 ?? ?? ?? ?? 90 48 85 c9 74 ?? 31 c0 31 db 48 89 d9 48 83 c4 30 5d c3 48 8d 0d ?? ?? ?? ?? bf 01 00 00 00 31 f6 49 c7 c0 ff ff ff ff e8 ?? ?? ?? ?? 48 83 c4 30 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -360,6 +375,7 @@ rule Trojan_Win64_Convagent_ARA_2147915122_0
         $x_2_3 = "start /b PowerShell.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -381,6 +397,7 @@ rule Trojan_Win64_Convagent_TPAA_2147918098_0
         $x_5_1 = {ff c2 48 63 ca 0f b6 04 19 88 04 1f 44 88 0c 19 0f b6 0c 1f 49 03 c9 0f b6 c1 0f b6 04 18 41 30 02 49 ff c2 49 8b c2 49 2b c6 49 3b c3 72 a3}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -402,6 +419,7 @@ rule Trojan_Win64_Convagent_ASJ_2147920617_0
         $x_5_1 = {8b 54 24 08 03 14 24 33 54 24 04 89 54 24 ?? 8b 54 24 1c e9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -425,6 +443,7 @@ rule Trojan_Win64_Convagent_GZN_2147926485_0
         $x_1_3 = "data\\zcrxdebug.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -453,6 +472,7 @@ rule Trojan_Win64_Convagent_NAC_2147926643_0
         $x_1_8 = "powershell -Command \"New-SelfSignedCertificate -Type CodeSigning -Subject 'CN=aaa' -KeyUsage DigitalSignature" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -477,6 +497,7 @@ rule Trojan_Win64_Convagent_AMCW_2147929517_0
         $x_1_1 = {41 6e 74 69 63 68 65 61 74 00 42 69 72 64 00 43 61 74 00 43 72 61 62 00 44 6f 67 00 44 75 63 6b 00 45 6c 65 70 68 61 6e 74 00 48 6f 70 65 00 4b 6e 69 67 68 74 00 4d 6f 6c 64 6f 76 61 00 4f 6d 61 72 00 50 65 6e 67 75 69 6e 00 57 6f 6c 66 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77 00 44 6c 6c 47 65 74 43 6c 61 73 73 4f 62 6a 65 63 74 00 44 6c 6c 4d 61 69 6e 00 44 6c 6c 52 65 67 69 73 74 65 72 53 65 72 76 65 72 00 44 6c 6c 55 6e 72 65 67 69 73 74 65 72 53 65 72 76 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -497,6 +518,7 @@ rule Trojan_Win64_Convagent_PMM_2147932482_0
         $x_2_1 = {88 85 4f 03 00 00 0f b6 85 4f 03 00 00 83 f0 01 84 c0 74 0a bb 01 00 00 00 e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -518,6 +540,7 @@ rule Trojan_Win64_Convagent_CCJT_2147933440_0
         $x_1_1 = {0f b6 c2 41 2a c0 f6 d0 41 fe c0 48 ff c1 30 41 ff 44 3a c2 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -541,6 +564,7 @@ rule Trojan_Win64_Convagent_ARAZ_2147937060_0
         $x_2_3 = "NEVER open files from strangers" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -563,6 +587,7 @@ rule Trojan_Win64_Convagent_A_2147939483_0
         $x_1_2 = "Convert]::FromBase64String(" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -584,6 +609,7 @@ rule Trojan_Win64_Convagent_GTM_2147939771_0
         $x_10_1 = {64 65 2e 0d ?? ?? ?? ?? 00 00 00 00 00 00 27 33 c6 ce 63 52 ?? 9d 63 52 ?? 9d 63 52 ?? 9d 6a 2a 3b 9d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -606,6 +632,7 @@ rule Trojan_Win64_Convagent_NL_2147944294_0
         $x_1_2 = {8b 45 f8 48 8b 50 08 48 85 d2 74 0d 4c 8b 40 10 48 8b 4d e8 e8 79 4c ad ff ba ?? 00 00 00 41 b8 ?? 00 00 00 48 8b 4d e0 e8 65 4c ad ff 31 c0 48 83 c4 48 5e 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -632,6 +659,7 @@ rule Trojan_Win64_Convagent_NR_2147945688_0
         $x_1_6 = "chrome_decrypt.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -653,6 +681,7 @@ rule Trojan_Win64_Convagent_ARAX_2147945733_0
         $x_2_1 = {f7 e9 c1 fa 04 8b c2 c1 e8 1f 03 d0 0f be c2 6b d0 36 0f b6 c1 2a c2 04 38 41 30 00 ff c1 4d 8d 40 01 83 f9 0f 7c d4}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

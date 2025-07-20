@@ -25,6 +25,7 @@ rule Trojan_Win32_Rapid_A_2147747782_0
         $x_1_10 = "Also! At this page you will be able to restore any one file for free!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Trojan_Win32_Rapid_AA_2147747823_0
         $x_1_7 = "IFdlIHNlbmQgeW91IGZ1bGwgaW5zdHJ1Y3Rpb24gaG93IHRvIGRlY3J5cHQgYWxsIHlvdXIgZmlsZXMu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

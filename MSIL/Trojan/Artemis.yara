@@ -17,6 +17,7 @@ rule Trojan_MSIL_Artemis_NE_2147832166_0
         $x_5_2 = {07 06 08 06 8e 69 5d 91 02 08 91 61 d2 6f 12 00 00 0a 08 17 58 0c 08 02 8e 69}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Artemis_NEA_2147832825_0
         $x_5_2 = {00 00 01 72 01 00 00 70 6f ?? 00 00 0a 72 ?? 00 00 70 20 00 01 00 00 14 14 14 6f ?? 00 00 0a 26 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_Artemis_AWB_2147832871_0
         $x_1_2 = "Service_ALTDNS" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

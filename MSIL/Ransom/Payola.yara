@@ -19,6 +19,7 @@ rule Ransom_MSIL_Payola_PA_2147890427_0
         $x_1_4 = "File Encrypted:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Ransom_MSIL_Payola_ZC_2147892753_0
         $x_1_9 = "nuR\\noisreVtnerruC\\swodniW\\tfosorciM\\ERAWTFOS" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule HackTool_Linux_Ligolo_A_2147890467_0
         $x_1_6 = "maxPayloadSizeForWrite" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule HackTool_Linux_Ligolo_B_2147931813_0
         $x_1_4 = "/ligolo-ng/cmd/proxy/app.Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule HackTool_Linux_Ligolo_C_2147934092_0
         $x_1_6 = "ligolo-ng/pkg/relay.StartRelay" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

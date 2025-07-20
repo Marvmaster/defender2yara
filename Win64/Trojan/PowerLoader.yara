@@ -18,6 +18,7 @@ rule Trojan_Win64_PowerLoader_GA_2147932969_0
         $x_2_3 = {41 ff c1 33 d2 41 8b c0 41 f7 f1 30 11 48 ff c1 45 3b ca 72 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

@@ -29,6 +29,7 @@ rule Trojan_Win32_Iceroe_A_2147602790_0
         $x_1_14 = {4b 00 6e 00 6f 00 63 00 6b 00 44 00 61 00 74 00 65 00 54 00 69 00 6d 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

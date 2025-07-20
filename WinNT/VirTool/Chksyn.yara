@@ -15,6 +15,7 @@ rule VirTool_WinNT_Chksyn_A_2147598768_0
         $x_1_1 = {e8 17 04 00 00 c2 2c 00 85 c0 74 04 01 07 eb 0e c7 45 d8 0f 00 00 c0 eb db 8b de 89 5d d0 ff 75 e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule VirTool_WinNT_Chksyn_A_2147598768_1
         $x_1_3 = "\\Device\\sys32dev" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -62,6 +64,7 @@ rule VirTool_WinNT_Chksyn_B_2147627826_0
         $x_1_2 = {75 c0 eb 10 85 db 74 05 83 23 00 eb 07 c7 45 30 06 00 00 80}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

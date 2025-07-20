@@ -18,6 +18,7 @@ rule VirTool_Win64_Minidumpesz_A_2147910768_0
         $x_1_3 = {8b 55 fc 48 8b 4d f0 48 8b 45 e8 48 c7 44 24 30 00 00 00 00 48 c7 44 24 28 00 00 00 00 48 c7 44 24 20 00 00 00 00 41 b9 02 00 00 00 49 89 c8 48 89 c1 ?? ?? ?? ?? ?? 89 45 e4 83 7d e4 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

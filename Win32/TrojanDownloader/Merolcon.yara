@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Merolcon_A_2147638340_0
         $x_1_5 = {5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e 5c 00 57 69 6e 64 6f 77 73 20 55 70 64 61 74 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

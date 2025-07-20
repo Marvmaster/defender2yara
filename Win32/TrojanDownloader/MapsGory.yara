@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_MapsGory_A_2147725307_0
         $x_1_3 = {00 61 62 61 6e 64 6f 6e 20 61 62 69 6c 69 74 79 20 61 62 6c 65 20 61 62 6f 75 74 20 61 62 6f 76 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

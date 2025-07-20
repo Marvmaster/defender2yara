@@ -18,6 +18,7 @@ rule Trojan_Win32_Veslorn_A_2147597038_0
         $x_1_3 = {8d 4c 24 14 6a 10 51 6a 00 52 68 ?? ?? 00 10 57 ff d5 4e 75 e1 83 3d ?? ?? 00 10 01 75 cb 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_Win32_Veslorn_A_2147602206_0
         $x_1_14 = "avp.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -83,6 +85,7 @@ rule Trojan_Win32_Veslorn_B_2147608966_0
         $x_1_9 = "NtQuerySystemInformation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -114,6 +117,7 @@ rule Trojan_Win32_Veslorn_C_2147608977_0
         $x_2_8 = {00 43 72 65 61 74 65 52 65 6d 6f 74 65 54 68 72 65 61 64 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_2_*))) or
             (all of ($x*))
@@ -139,6 +143,7 @@ rule Trojan_Win32_Veslorn_D_2147617548_0
         $x_1_3 = "http://congs.zziyuan.com/1.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +170,7 @@ rule Trojan_Win32_Veslorn_D_2147619805_0
         $x_5_6 = {00 52 45 54 55 52 4e 50 4f 57 45 52}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*))) or
             (all of ($x*))
@@ -192,6 +198,7 @@ rule Trojan_Win32_Veslorn_E_2147619806_0
         $x_1_4 = {00 5c 5c 2e 5c 53 53 44 54 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -217,6 +224,7 @@ rule Trojan_Win32_Veslorn_F_2147619807_0
         $x_2_5 = {00 48 6f 6f 6b 69 6e 67 73 20 44 72 69 76 65 72 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_2_*))) or
             ((1 of ($x_5_*) and 1 of ($x_4_*) and 1 of ($x_2_*))) or
@@ -245,6 +253,7 @@ rule Trojan_Win32_Veslorn_G_2147641308_0
         $x_3_3 = "/@kinvp>" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

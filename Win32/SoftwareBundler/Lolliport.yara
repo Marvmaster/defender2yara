@@ -17,6 +17,7 @@ rule SoftwareBundler_Win32_Lolliport_198820_0
         $x_1_3 = "open http://www.lollipop-network.com/privacy.php?lg=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

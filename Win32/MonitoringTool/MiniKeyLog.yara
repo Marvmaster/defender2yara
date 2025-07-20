@@ -19,6 +19,7 @@ rule MonitoringTool_Win32_MiniKeyLog_8510_0
         $x_1_5 = "SetWindowsHookExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule MonitoringTool_Win32_MiniKeyLog_8510_1
         $x_1_4 = "publicKeyToken=\"6595b64144ccf1df\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

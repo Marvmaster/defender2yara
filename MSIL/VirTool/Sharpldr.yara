@@ -17,6 +17,7 @@ rule VirTool_MSIL_Sharpldr_A_2147945276_0
         $x_1_3 = {81 ab e2 80 ad e2 81 ae e2 80 ad e2 81 aa e2 80}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

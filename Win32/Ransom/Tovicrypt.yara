@@ -40,6 +40,7 @@ rule Ransom_Win32_Tovicrypt_A_2147716117_0
         $x_2_26 = {50 00 50 00 c7 [0-3] 50 00 2e 00 c7 [0-3] 4b 00 45 00 c7 [0-3] 59 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

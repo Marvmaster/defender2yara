@@ -19,6 +19,7 @@ rule SoftwareBundler_Win32_OneClickDownloader_200292_0
         $x_9_5 = "DropDownDeals is a feature of Yontoo, a browser add-on that enhance sites with various features. Along with DropDownDeals, Eas" ascii //weight: 9
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

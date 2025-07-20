@@ -24,6 +24,7 @@ rule Misleading_Linux_MechBot_DS_301204_0
         $x_1_9 = "send_spy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Misleading_Linux_MechBot_DT_452517_0
         $x_1_5 = "(mech_exec) unable to stat executable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Misleading_Linux_MechBot_DU_462750_0
         $x_1_6 = "Added to mech core" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

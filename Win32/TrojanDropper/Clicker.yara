@@ -24,6 +24,7 @@ rule TrojanDropper_Win32_Clicker_2147619892_0
         $x_1_10 = "/clcount/count.asp?action=install&ver=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

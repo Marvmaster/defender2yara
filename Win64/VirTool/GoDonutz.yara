@@ -19,6 +19,7 @@ rule VirTool_Win64_GoDonutz_A_2147838745_0
         $x_1_4 = {4d 89 df 49 f7 db 49 c1 fb 3f 41 81 e3 40 02 00 00 4d 8d ?? ?? 4c 8d ?? ?? ?? ?? ?? 4c 89 e0 bb 10 00 00 00 48 89 d9 48 89 ce 49 89 c8 4d 89 fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

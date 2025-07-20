@@ -19,6 +19,7 @@ rule Backdoor_Win32_Deppeels_A_2147696735_0
         $x_1_5 = "Create Reverse Shell Thread begin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

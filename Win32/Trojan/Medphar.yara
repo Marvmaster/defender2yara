@@ -17,6 +17,7 @@ rule Trojan_Win32_Medphar_A_2147694553_0
         $x_1_3 = {99 33 c2 2b c2 83 c0 17 8d ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

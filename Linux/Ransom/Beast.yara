@@ -19,6 +19,7 @@ rule Ransom_Linux_Beast_A_2147925488_0
         $x_1_4 = {2d 70 3d 35 20 2d 65 3d ?? 42 45 41 53 54 57 41 53 48 45 52 45 ?? 20 2d 78 3d ?? 52 45 41 44 4d 45 2e 54 58 54}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

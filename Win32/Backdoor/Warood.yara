@@ -19,6 +19,7 @@ rule Backdoor_Win32_Warood_A_2147706600_0
         $x_1_5 = "dir=in action=allow protocol=UDP localport=%u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_Win32_Warood_B_2147706602_0
         $x_1_3 = "[-]NTTime" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Backdoor_Win32_Warood_C_2147706656_0
         $x_1_3 = {8b cd 4f c1 e9 02 f3 a5 8b cd 6a 01 83 e1 03 6a 01 f3 a4 50 ff 15 ?? ?? ?? ?? 8b f0 8d 44 24 ?? 50 ff 15 ?? ?? ?? ?? 85 c0 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

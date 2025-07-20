@@ -17,6 +17,7 @@ rule Trojan_Win32_NSISInject_FJ_2147799518_0
         $x_1_2 = {68 00 a3 e1 11 68 de 00 00 00 ff 75 f4 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_NSISInject_FJ_2147799518_1
         $x_1_2 = {88 04 3e 47 3b fb 72 ?? 6a 00 56 ff 15 ?? ?? ?? ?? 5f 5e 33 c0 5b 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_NSISInject_D_2147805124_0
         $x_1_2 = "C:\\xampp\\htdocs\\Loct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_NSISInject_DA_2147805520_0
         $x_1_2 = "C:\\xampp\\htdocs\\Loct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_Win32_NSISInject_DB_2147805523_0
         $x_1_3 = {f7 da 88 15 ?? ?? ?? ?? 0f b6 05 ?? ?? ?? ?? c1 f8 05 0f b6 0d ?? ?? ?? ?? c1 e1 03 0b c1 a2 ?? ?? ?? ?? 0f b6 15 1f 00 a2 ?? ?? ?? ?? 0f b6 0d ?? ?? ?? ?? 81 c1 ed 00 00 00 88 0d ?? ?? ?? ?? 0f b6 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -131,6 +136,7 @@ rule Trojan_Win32_NSISInject_E_2147805551_0
         $x_1_2 = "C:\\xampp\\htdocs\\Loct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Trojan_Win32_NSISInject_DC_2147806169_0
         $x_1_6 = {c1 f8 05 0f b6 0d ?? ?? ?? ?? c1 e1 03 0b c1 a2 ?? ?? ?? ?? 0f b6 15 20 00 88 0d ?? ?? ?? ?? 0f b6 15 ?? ?? ?? ?? 03 15 ?? ?? ?? ?? 88 15 ?? ?? ?? ?? 0f b6 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -185,6 +192,7 @@ rule Trojan_Win32_NSISInject_DD_2147806170_0
         $x_1_5 = {c1 f9 03 0f b6 15 ?? ?? ?? ?? c1 e2 05 0b ca 88 0d ?? ?? ?? ?? 0f b6 05 1f 00 88 15 ?? ?? ?? ?? 0f b6 05 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? a2 ?? ?? ?? ?? 0f b6 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -209,6 +217,7 @@ rule Trojan_Win32_NSISInject_F_2147806225_0
         $x_1_1 = {c7 45 dc 00 00 00 00 c7 04 24 00 00 00 00 c7 44 24 04 00 a3 e1 11 c7 44 24 08 00 30 00 00 c7 44 24 0c 04 00 00 00 89 45 d8 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +242,7 @@ rule Trojan_Win32_NSISInject_DE_2147806262_0
         $x_1_4 = {c1 fa 02 0f b6 05 ?? ?? ?? ?? c1 e0 06 0b d0 88 15 ?? ?? ?? ?? 0f b6 0d 1f 00 a2 ?? ?? ?? ?? 0f b6 0d ?? ?? ?? ?? 2b 0d ?? ?? ?? ?? 88 0d ?? ?? ?? ?? 0f b6 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -260,6 +270,7 @@ rule Trojan_Win32_NSISInject_DF_2147806263_0
         $x_1_4 = {c1 f8 07 0f b6 0d ?? ?? ?? ?? d1 e1 0b c1 a2 ?? ?? ?? ?? 8b 15 1f 00 a2 ?? ?? ?? ?? 0f b6 15 ?? ?? ?? ?? 2b 15 ?? ?? ?? ?? 88 15 ?? ?? ?? ?? 0f b6 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -288,6 +299,7 @@ rule Trojan_Win32_NSISInject_DG_2147807423_0
         $x_1_5 = {c1 f9 05 0f b6 15 ?? ?? ?? ?? c1 e2 03 0b ca 88 0d ?? ?? ?? ?? 0f b6 05 1f 00 88 15 ?? ?? ?? ?? 0f b6 05 ?? ?? ?? ?? 2b 05 ?? ?? ?? ?? a2 ?? ?? ?? ?? 0f b6 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -313,6 +325,7 @@ rule Trojan_Win32_NSISInject_DH_2147807585_0
         $x_1_2 = "IcoLeQ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -338,6 +351,7 @@ rule Trojan_Win32_NSISInject_DH_2147807585_1
         $x_1_5 = {f7 d2 88 15 ?? ?? ?? ?? 0f b6 05 ?? ?? ?? ?? c1 f8 07 0f b6 0d ?? ?? ?? ?? d1 e1 0b c1 a2 ?? ?? ?? ?? 0f b6 15 1f 00 a2 ?? ?? ?? ?? 0f b6 0d ?? ?? ?? ?? 33 0d ?? ?? ?? ?? 88 0d ?? ?? ?? ?? 0f b6 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -366,6 +380,7 @@ rule Trojan_Win32_NSISInject_DI_2147807586_0
         $x_1_5 = {c1 fa 06 0f b6 05 ?? ?? ?? ?? c1 e0 02 0b d0 88 15 ?? ?? ?? ?? 0f b6 0d 1f 00 a2 ?? ?? ?? ?? 0f b6 0d ?? ?? ?? ?? 2b 0d ?? ?? ?? ?? 88 0d ?? ?? ?? ?? 0f b6 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -391,6 +406,7 @@ rule Trojan_Win32_NSISInject_DJ_2147807964_0
         $x_1_2 = {c1 fe 02 0f b6 3d ?? ?? ?? ?? c1 e7 06 89 f0 09 f8 a2 ?? ?? ?? ?? 0f b6 35 1b 00 88 0d ?? ?? ?? ?? 0f b6 35 ?? ?? ?? ?? 29 f0 a2 ?? ?? ?? ?? 0f b6 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -413,6 +429,7 @@ rule Trojan_Win32_NSISInject_DK_2147807966_0
         $x_1_2 = {d1 f8 0f b6 0d ?? ?? ?? ?? c1 e1 07 0b c1 a2 ?? ?? ?? ?? 8b 15 20 00 88 0d ?? ?? ?? ?? 0f b6 15 ?? ?? ?? ?? 33 15 ?? ?? ?? ?? 88 15 ?? ?? ?? ?? 0f b6 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -436,6 +453,7 @@ rule Trojan_Win32_NSISInject_DK_2147807966_1
         $x_1_3 = {04 2d 34 2a 2c 94 fe c8 2c 0f fe c0 fe c8 04 5a fe c0 fe c0 34 6b 2c 05 fe c0 2c b5 34 35 04 e4 34 f6 34 a9 fe c8 88 81 ?? ?? ?? ?? 83 c1 01 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -460,6 +478,7 @@ rule Trojan_Win32_NSISInject_DL_2147807969_0
         $x_1_4 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -484,6 +503,7 @@ rule Trojan_Win32_NSISInject_DL_2147807969_1
         $x_1_4 = {89 f9 01 f1 88 0d ?? ?? ?? ?? 0f b6 35 ?? ?? ?? ?? c1 fe 05 0f b6 3d ?? ?? ?? ?? c1 e7 03 89 f1 09 f9 88 0d ?? ?? ?? ?? 0f b6 35 13 00 88 0d ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? 0f b6 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -508,6 +528,7 @@ rule Trojan_Win32_NSISInject_DM_2147809866_0
         $x_1_1 = {81 f9 c4 12 00 00 74 ?? 04 d2 34 b8 fe c0 fe c0 34 6a fe c8 04 99 34 7e 2c f2 2c d8 fe c8 fe c8 88 84 0d ?? ?? ?? ?? 83 c1 01 eb 07 00 8a 84 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -530,6 +551,7 @@ rule Trojan_Win32_NSISInject_DN_2147809933_0
         $x_1_2 = {81 f9 e7 13 00 00 74 ?? fe c0 04 19 2c 5a 34 8b 04 30 fe c8 04 ef fe c8 04 c1 fe c8 fe c8 fe c8 34 72 2c 8b fe c8 fe c8 04 b9 04 76 88 84 0d ?? ?? ?? ?? 83 c1 01 eb 07 00 8a 84 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -558,6 +580,7 @@ rule Trojan_Win32_NSISInject_DO_2147810028_0
         $x_1_8 = {81 f9 26 15 00 00 74 ?? 34 26 fe c8 04 f8 2c de 2c 1e 2c 06 34 d2 04 a6 04 7a fe c0 fe c0 fe c8 fe c0 fe c0 88 84 0d ?? ?? ?? ?? 83 c1 01 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -582,6 +605,7 @@ rule Trojan_Win32_NSISInject_DP_2147810240_0
         $x_1_4 = {81 f9 e6 14 00 00 74 ?? 2c b3 34 ec fe c0 2c 17 fe c0 2c a4 04 2d 04 f3 34 a6 04 07 88 84 0d ?? ?? ?? ?? 83 c1 01 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -603,6 +627,7 @@ rule Trojan_Win32_NSISInject_DR_2147810572_0
         $x_1_1 = {81 f9 c2 13 00 00 74 ?? fe c0 fe c8 fe c0 2c 16 04 06 34 ff fe c0 fe c0 04 80 2c a6 34 67 2c c6 04 78 fe c8 34 e7 88 84 0d ?? ?? ?? ?? 83 c1 01 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -624,6 +649,7 @@ rule Trojan_Win32_NSISInject_DS_2147811611_0
         $x_1_1 = {81 f9 0c 13 00 00 74 ?? fe c8 fe c0 fe c8 fe c0 fe c0 fe c0 2c 70 fe c8 04 cd 04 c7 04 a0 34 4b 2c 99 fe c8 fe c0 fe c0 fe c0 88 84 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -646,6 +672,7 @@ rule Trojan_Win32_NSISInject_DT_2147811612_0
         $x_1_2 = {8b 4d f8 03 4d fc 0f b6 11 83 ea 4f 8b 45 f8 03 45 fc 88 10 8b 4d f8 03 4d fc 8a 11 80 ea 01 8b 45 f8 03 45 fc 88 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -672,6 +699,7 @@ rule Trojan_Win32_NSISInject_DU_2147811691_0
         $x_1_6 = {33 c9 85 db 74 ?? 8a 04 39 04 19 34 9b 2c 39 34 86 2c 05 88 04 39 41 3b cb 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -696,6 +724,7 @@ rule Trojan_Win32_NSISInject_DV_2147811907_0
         $x_1_4 = {8a 02 04 01 8b 4d f8 03 4d fc 88 01 8b 55 f8 03 55 fc 0f b6 02 83 c0 0e 8b 4d f8 03 4d fc 88 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -721,6 +750,7 @@ rule Trojan_Win32_NSISInject_DW_2147812920_0
         $x_1_2 = {8a 04 39 34 65 fe c8 34 49 fe c8 34 a1 04 10 88 04 39 41 3b cb 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -743,6 +773,7 @@ rule Trojan_Win32_NSISInject_DX_2147813042_0
         $x_1_2 = {8b 4d f8 03 4d fc 88 01 e9 ?? ?? ff ff 8b 45 f8 ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -765,6 +796,7 @@ rule Trojan_Win32_NSISInject_DY_2147813045_0
         $x_1_2 = {8b 4d f8 03 4d fc 88 01 e9 ?? ?? ?? ?? 6a 00 6a 00 8b 55 f8 52 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -787,6 +819,7 @@ rule Trojan_Win32_NSISInject_DZ_2147813649_0
         $x_1_2 = {8b 55 f8 03 55 fc 88 0a e9 ?? ?? ?? ?? 6a 00 6a 00 8b 45 f8 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -810,6 +843,7 @@ rule Trojan_Win32_NSISInject_EA_2147813659_0
         $x_1_3 = {88 04 39 41 3b cb 72 ?? 6a 00 6a 00 57 ff 15 ?? ?? ?? ?? 35 cd ce 00 00 81 e9 c2 fc 00 00 05 e9 5b 00 00 81 c2 24 c7 00 00 c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -836,6 +870,7 @@ rule Trojan_Win32_NSISInject_EB_2147813680_0
         $x_1_3 = {88 04 39 41 3b cb 72 ?? 6a 00 6a 00 57 ff 15 ?? ?? ?? ?? 49 c2 ?? ?? 4a f7 d1 58 49 81 f3 b6 72 01 00 81 eb 1e 26 01 00 c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -861,6 +896,7 @@ rule Trojan_Win32_NSISInject_EC_2147813848_0
         $x_1_2 = {88 04 39 41 3b cb 72 ?? 6a 00 6a 00 57 ff 15 ?? ?? ?? ?? c2 ee 8c 43 f7 d0 5b 42 81 fa d2 ff 00 00 74 ?? c2 4b b6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -883,6 +919,7 @@ rule Trojan_Win32_NSISInject_ED_2147813849_0
         $x_1_2 = {88 01 41 4e 75 ?? 6a 00 6a 00 57 ff 15 ?? ?? ?? ?? 81 fb d9 58 00 00 74 0d c2 55 d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -906,6 +943,7 @@ rule Trojan_Win32_NSISInject_EE_2147813850_0
         $x_1_3 = {88 01 41 4e 75 ?? 6a 00 6a 00 57 ff 15 ?? ?? ?? ?? f7 d1 81 eb f3 05 01 00 f7 d2 25 9d 35 00 00 c2 54 60}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -931,6 +969,7 @@ rule Trojan_Win32_NSISInject_EF_2147813941_0
         $x_1_2 = {88 04 39 41 3b ce 72 ?? 6a 00 6a 00 57 ff 15 ?? ?? ?? ?? 5f 5e 33 c0 5b 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -953,6 +992,7 @@ rule Trojan_Win32_NSISInject_EG_2147815402_0
         $x_1_2 = {6a 00 6a 00 8b 55 f8 52 ff 15 ?? ?? ?? ?? 33 c0 8b e5 5d c3 07 00 88 01 e9 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -981,6 +1021,7 @@ rule Trojan_Win32_NSISInject_EH_2147815508_0
         $x_1_8 = {8b 4d f8 03 4d fc 88 01 8b 55 f8 03 55 fc 0f b6 02 35 [0-4] 8b 4d f8 03 4d fc 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -1007,6 +1048,7 @@ rule Trojan_Win32_NSISInject_EI_2147815578_0
         $x_1_2 = {8b 4d f8 03 4d fc 88 01 e9 [0-4] 8b 45 f8 ff e0 33 c0 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1031,6 +1073,7 @@ rule Trojan_Win32_NSISInject_EJ_2147815960_0
         $x_1_4 = {89 45 d8 e9 ?? ?? ff ff 8b 45 ec ff e0 83 c4 4c 5e 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -1057,6 +1100,7 @@ rule Trojan_Win32_NSISInject_EL_2147816055_0
         $x_1_2 = {8b 0c 24 80 ?? ?? ?? 40 39 c6 75 ?? 8b 04 24 ff e0 83 c4 0c 5e 5f 5b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1079,6 +1123,7 @@ rule Trojan_Win32_NSISInject_EN_2147816227_0
         $x_1_2 = {88 14 08 8b 45 d4 83 c0 01 89 45 d4 e9 ?? ?? ?? ?? 8b 45 e8 ff e0 83 c4 4c 5e 5f 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1106,6 +1151,7 @@ rule Trojan_Win32_NSISInject_EK_2147816376_0
         $x_1_7 = {40 39 c6 0f 85 ?? ?? ff ff 8b 04 24 ff e0 83 c4 0c 5e 5f 5b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -1139,6 +1185,7 @@ rule Trojan_Win32_NSISInject_EM_2147816377_0
         $x_1_8 = "GetFileSize" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1170,6 +1217,7 @@ rule Trojan_Win32_NSISInject_EO_2147816455_0
         $x_1_7 = "GetFileSize" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1192,6 +1240,7 @@ rule Trojan_Win32_NSISInject_EP_2147816477_0
         $x_1_2 = {88 14 08 8b 45 d4 83 c0 01 89 45 d4 e9 ?? ?? ?? ?? 8b 45 e8 ff e0 83 c4 4c 5e 5f 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1216,6 +1265,7 @@ rule Trojan_Win32_NSISInject_EQ_2147816567_0
         $x_1_4 = {88 14 08 8b 45 d0 83 c0 01 89 45 d0 e9 ?? ?? ?? ?? 8b 45 e8 ff e0 83 c4 50 5e 5f 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -1244,6 +1294,7 @@ rule Trojan_Win32_NSISInject_ER_2147816718_0
         $x_1_4 = {88 14 08 8b 45 d4 83 c0 01 89 45 d4 e9 ?? ?? ?? ?? 8b 45 e4 ff e0 83 c4 5c 5e 5f 5b 5d c2 10 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -1272,6 +1323,7 @@ rule Trojan_Win32_NSISInject_ES_2147816915_0
         $x_1_4 = {8b 45 f8 03 45 fc 0f b6 08 [0-6] 8b 55 f8 03 55 fc 88 0a e9 ?? ?? ?? ?? 8b 45 f8 ff e0 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -1300,6 +1352,7 @@ rule Trojan_Win32_NSISInject_SIBA_2147817061_0
         $x_1_4 = {88 0a 8b 45 ?? 03 45 ?? 0f b6 08 81 e9 ?? ?? ?? ?? 8b 55 00 03 55 01 88 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1330,6 +1383,7 @@ rule Trojan_Win32_NSISInject_ET_2147817457_0
         $x_1_10 = {8b 4d f8 03 4d fc 0f b6 11 [0-6] 8b 45 f8 03 45 fc 88 10 e9 ?? ?? ?? ?? 8b 45 f8 ff e0 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -1362,6 +1416,7 @@ rule Trojan_Win32_NSISInject_EV_2147817458_0
         $x_1_8 = {8b 14 24 80 34 0a ?? 8b 14 24 80 04 0a ?? 39 c8 74 ?? 8b 34 24 83 c1 01 eb ?? 8b 04 24 ff e0 83 c4 0c 5e 5f 5b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1387,6 +1442,7 @@ rule Trojan_Win32_NSISInject_EW_2147817811_0
         $x_1_2 = {88 04 33 46 81 fe eb 12 00 00 72 ?? 6a 00 53 6a 00 ff 15 ?? ?? ?? ?? 5f 5e 5b 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1417,6 +1473,7 @@ rule Trojan_Win32_NSISInject_EW_2147817811_1
         $x_1_10 = {6a 00 56 6a 00 ff 15 ?? ?? 40 00 83 c4 04 5e 5f c3 06 00 88 8e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1443,6 +1500,7 @@ rule Trojan_Win32_NSISInject_NW_2147818112_0
         $x_1_2 = {52 6a 01 8b 45 f4 50 8b 4d f8 51 ff 15 30 20 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1465,6 +1523,7 @@ rule Trojan_Win32_NSISInject_NV_2147818183_0
         $x_1_2 = {57 6a 01 8b d8 68 ?? ?? ?? ?? 53 ff 15 ?? 20 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1486,6 +1545,7 @@ rule Trojan_Win32_NSISInject_NX_2147818186_0
         $x_1_1 = {83 c4 08 8b f0 6a 40 68 00 30 00 00 68 ?? ?? ?? ?? 57 ff 15 30 20 40 00 56 6a 01 8b d8 68 ?? ?? ?? ?? 53 ff 15 50 20 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1508,6 +1568,7 @@ rule Trojan_Win32_NSISInject_EX_2147818495_0
         $x_1_2 = {88 04 33 46 81 fe ?? ?? ?? ?? 72 ?? 6a 00 53 ff 15 ?? ?? ?? ?? 5f 5e 33 c0 5b 5d c2 10 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1531,6 +1592,7 @@ rule Trojan_Win32_NSISInject_FA_2147818605_0
         $x_1_3 = {31 45 fc 33 c5 50 89 65 e8 ff 75 f8 8b 45 fc c7 45 fc fe ff ff ff 89 45 f8 8d 45 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1557,6 +1619,7 @@ rule Trojan_Win32_NSISInject_FB_2147818647_0
         $x_1_2 = {88 04 3b 47 81 ff ?? ?? ?? ?? 72 ?? 6a 00 53 ff 15 ?? ?? ?? ?? 5f 5e 33 c0 5b 8b e5 5d c2 10 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1578,6 +1641,7 @@ rule Trojan_Win32_NSISInject_EST_2147818902_0
         $x_1_1 = {83 c4 08 89 c7 83 ec 10 0f 28 05 00 20 40 00 0f 11 04 24 ff 15 ?? ?? ?? ?? 89 c6 57 6a 01 68 ?? ?? ?? ?? 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1599,6 +1663,7 @@ rule Trojan_Win32_NSISInject_ETC_2147819134_0
         $x_1_1 = {83 c4 0c 6a 40 68 00 30 00 00 68 ?? ?? ?? ?? 56 ff 15 ?? ?? ?? ?? 53 6a 01 bb ?? ?? ?? ?? 8b f8 53 57 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1621,6 +1686,7 @@ rule Trojan_Win32_NSISInject_FC_2147819218_0
         $x_1_2 = {13 00 00 6a 00 56 6a 00 ff 15 ?? ?? ?? ?? 83 c4 04 5e 5f c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1642,6 +1708,7 @@ rule Trojan_Win32_NSISInject_ESU_2147819236_0
         $x_1_1 = {59 59 6a 40 68 00 30 00 00 68 ?? ?? ?? ?? 57 8b f0 ff 15 ?? ?? ?? ?? 56 6a 01 be ?? ?? ?? ?? 8b d8 56 53 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1663,6 +1730,7 @@ rule Trojan_Win32_NSISInject_ETG_2147819254_0
         $x_1_1 = {83 c4 0c 6a 40 68 00 30 00 00 68 ?? ?? ?? ?? 56 ff 15 ?? ?? ?? ?? 53 6a 01 bb ?? ?? ?? ?? 8b f8 53 57 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1685,6 +1753,7 @@ rule Trojan_Win32_NSISInject_EZ_2147819303_0
         $x_1_2 = {8d 4d e4 51 50 ff 15 ?? ?? ?? ?? 31 f6 56 68 80 00 00 00 6a 03 56 6a 01 68 00 00 00 80 ff 70 04 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1707,6 +1776,7 @@ rule Trojan_Win32_NSISInject_FE_2147819463_0
         $x_1_2 = {46 3b f3 72 ?? 6a 00 57 ff 15 ?? ?? ?? ?? 81 c1 09 aa 00 00 b8 c2 b4 00 00 2d 0e 6b 01 00 f7 d1 81 f2 f9 a6 00 00 81 fb a8 4f 00 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1731,6 +1801,7 @@ rule Trojan_Win32_NSISInject_FD_2147819571_0
         $x_1_4 = {6a 00 68 80 00 00 00 6a 03 6a 00 6a 01 68 00 00 00 80 b8 04 00 00 00 c1 e0 00 8b 4d e0 8b 14 01 52 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1757,6 +1828,7 @@ rule Trojan_Win32_NSISInject_FF_2147819603_0
         $x_1_2 = {46 3b f3 72 ?? 6a 00 57 ff 15 ?? ?? ?? ?? 3d 2f e1 00 00 74 ?? f7 d2 81 c3 13 54 01 00 81 ea a7 27 01 00 c2 72 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1779,6 +1851,7 @@ rule Trojan_Win32_NSISInject_ETI_2147819731_0
         $x_1_2 = {6a 00 51 56 ff 75 e4 ff 34 18 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1801,6 +1874,7 @@ rule Trojan_Win32_NSISInject_FH_2147819929_0
         $x_1_2 = {88 04 3e 47 3b fb 72 ?? 6a 00 56 ff 15 ?? ?? ?? ?? 81 e9 14 c4 00 00 c2 2b 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1823,6 +1897,7 @@ rule Trojan_Win32_NSISInject_AD_2147820154_0
         $x_1_2 = {8b 55 f8 03 55 fc 8a 02 2c 01 8b 4d f8 03 4d fc 88 01 8b 55 fc 83 c2 01 89 55 fc 8b 45 fc 3b 45 f4 73 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1845,6 +1920,7 @@ rule Trojan_Win32_NSISInject_FI_2147820217_0
         $x_1_2 = {8b 4d f8 03 4d fc 88 01 8b 55 fc 83 c2 01 89 55 fc 8b 45 fc 3b 45 f4 73 ?? e9 ?? ?? ?? ?? 6a 00 8b 4d f8 51 ff 15 ?? ?? ?? ?? 33 c0 8b e5 5d c2 10 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1867,6 +1943,7 @@ rule Trojan_Win32_NSISInject_EUM_2147820291_0
         $x_1_2 = {83 c4 0c 6a 40 68 00 30 00 00 68 ?? ?? ?? ?? 57 ff 15 ?? ?? ?? ?? 53 6a 01 bb ?? ?? ?? ?? 8b f0 53 56 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1889,6 +1966,7 @@ rule Trojan_Win32_NSISInject_FK_2147820307_0
         $x_1_2 = {88 04 3e 47 3b fb 72 ?? 6a 00 56 ff 15 ?? ?? ?? ?? 5f 5e 33 c0 5b 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1911,6 +1989,7 @@ rule Trojan_Win32_NSISInject_FL_2147820488_0
         $x_1_2 = {88 14 08 8b 45 f8 83 c0 01 89 45 f8 8b 45 f8 3b 45 f0 0f 83 ?? ?? ?? ?? e9 ?? ?? ?? ?? 8b 45 f4 31 c9 89 04 24 c7 44 24 04 00 00 00 00 ff 15 ?? ?? ?? ?? 83 ec 08 c7 45 fc 00 00 00 00 8b 45 fc 83 c4 34 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1933,6 +2012,7 @@ rule Trojan_Win32_NSISInject_EUG_2147822266_0
         $x_1_2 = {53 6a 01 bb ?? ?? ?? ?? 8b f0 53 56 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1955,6 +2035,7 @@ rule Trojan_Win32_NSISInject_AE_2147822345_0
         $x_1_2 = {8a 04 3b 2c ?? 34 ?? 04 ?? 34 ?? 04 ?? 34 ?? 04 ?? 34 ?? 88 04 3b 47 81 ff [0-4] 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1981,6 +2062,7 @@ rule Trojan_Win32_NSISInject_BAD_2147826860_0
         $x_1_6 = "\\Kreditvrdige\\Olympiadevinderens\\Psalters.Som" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2011,6 +2093,7 @@ rule Trojan_Win32_NSISInject_BAF_2147826861_0
         $x_1_10 = "build\\release-x64\\tools-for-windows\\Win32\\services\\rvmSetup\\rvmSetup.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2036,6 +2119,7 @@ rule Trojan_Win32_NSISInject_RPF_2147827340_0
         $x_1_5 = "Kuponklipperen" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2060,6 +2144,7 @@ rule Trojan_Win32_NSISInject_RPF_2147827340_1
         $x_1_4 = "Lactase.Kob" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2085,6 +2170,7 @@ rule Trojan_Win32_NSISInject_RPI_2147827690_0
         $x_1_5 = "Subangled.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2111,6 +2197,7 @@ rule Trojan_Win32_NSISInject_RPI_2147827690_1
         $x_1_6 = "Reasonablenesses" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2136,6 +2223,7 @@ rule Trojan_Win32_NSISInject_FM_2147827930_0
         $x_1_5 = "Overtegnende" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2161,6 +2249,7 @@ rule Trojan_Win32_NSISInject_FN_2147827931_0
         $x_1_5 = "Fabulists" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2186,6 +2275,7 @@ rule Trojan_Win32_NSISInject_FO_2147828193_0
         $x_1_5 = "fritnkersker" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2211,6 +2301,7 @@ rule Trojan_Win32_NSISInject_FP_2147828194_0
         $x_1_5 = "gaberdine.Sce" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2232,6 +2323,7 @@ rule Trojan_Win32_NSISInject_RB_2147828802_0
         $x_1_1 = {99 6a 0c 59 f7 f9 8b 45 bc 0f b6 04 10 8b 4d ec 03 4d f4 0f b6 09 33 c8 8b 45 ec 03 45 f4 88 08 eb cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2253,6 +2345,7 @@ rule Trojan_Win32_NSISInject_RB_2147828802_1
         $x_1_1 = {57 6a 40 68 00 30 00 00 68 00 09 3d 00 33 ff 57 ff d3 [0-32] 56 51 68 80 00 00 00 6a 03 51 6a 01 68 00 00 00 80 ff 75 10 ff 15 ?? ?? ?? ?? 8b f0 6a 00 56 ff 15 ?? ?? ?? ?? 6a 40 68 00 30 00 00 50 6a 00 89 45 fc ff d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2278,6 +2371,7 @@ rule Trojan_Win32_NSISInject_RB_2147828802_2
         $x_1_5 = "Outblaze\\misdistribute.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2303,6 +2397,7 @@ rule Trojan_Win32_NSISInject_RB_2147828802_3
         $x_1_5 = "Demokratiseret.Viz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2328,6 +2423,7 @@ rule Trojan_Win32_NSISInject_RB_2147828802_4
         $x_1_5 = "Countershading.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2352,6 +2448,7 @@ rule Trojan_Win32_NSISInject_RB_2147828802_5
         $x_1_4 = "Software\\Rgskys\\vandbeholders" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2377,6 +2474,7 @@ rule Trojan_Win32_NSISInject_RB_2147828802_6
         $x_1_5 = "Skandinaviseringernes69\\Frankie.lnk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2403,6 +2501,7 @@ rule Trojan_Win32_NSISInject_RB_2147828802_7
         $x_1_6 = "Skurvogne Nonimpregnated" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2427,6 +2526,7 @@ rule Trojan_Win32_NSISInject_RPC_2147828831_0
         $x_1_4 = "Samtalepartners.Svu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2452,6 +2552,7 @@ rule Trojan_Win32_NSISInject_RPC_2147828831_1
         $x_1_5 = "Swingpjatters.lnk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2477,6 +2578,7 @@ rule Trojan_Win32_NSISInject_RPD_2147828832_0
         $x_1_5 = "Fragmenterende.Gte" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2502,6 +2604,7 @@ rule Trojan_Win32_NSISInject_RPD_2147828832_1
         $x_1_5 = "Trkkrogenes.Ass" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2527,6 +2630,7 @@ rule Trojan_Win32_NSISInject_RPD_2147828832_2
         $x_1_5 = "Spontanspillene.Pre" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2552,6 +2656,7 @@ rule Trojan_Win32_NSISInject_RPD_2147828832_3
         $x_1_5 = "Corrasion.tho" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2576,6 +2681,7 @@ rule Trojan_Win32_NSISInject_RPK_2147829241_0
         $x_1_4 = "faceless.docx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2601,6 +2707,7 @@ rule Trojan_Win32_NSISInject_RPK_2147829241_1
         $x_1_5 = "Hits47.Til" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2626,6 +2733,7 @@ rule Trojan_Win32_NSISInject_RPL_2147829242_0
         $x_1_5 = "Riksdaalder.Bol" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2651,6 +2759,7 @@ rule Trojan_Win32_NSISInject_RPN_2147829684_0
         $x_1_5 = "Fluidums.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2672,6 +2781,7 @@ rule Trojan_Win32_NSISInject_RPO_2147829685_0
         $x_1_1 = {83 f0 38 88 45 ff 0f b6 4d ff 2b 4d f8 88 4d ff 0f b6 55 ff 81 f2 ac 00 00 00 88 55 ff 0f b6 45 ff f7 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2697,6 +2807,7 @@ rule Trojan_Win32_NSISInject_RPO_2147829685_1
         $x_1_5 = "Microgamy\\Bekldt.Bus" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2722,6 +2833,7 @@ rule Trojan_Win32_NSISInject_RPO_2147829685_2
         $x_1_5 = "Crowfooted.Aft" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2747,6 +2859,7 @@ rule Trojan_Win32_NSISInject_RPP_2147829686_0
         $x_1_5 = "Delighter.Ing45" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2772,6 +2885,7 @@ rule Trojan_Win32_NSISInject_RPP_2147829686_1
         $x_1_5 = "Overpunched.Bar" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2797,6 +2911,7 @@ rule Trojan_Win32_NSISInject_RPP_2147829686_2
         $x_1_5 = "Ampere.ini" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2821,6 +2936,7 @@ rule Trojan_Win32_NSISInject_RPQ_2147829687_0
         $x_1_4 = "Siderite" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2845,6 +2961,7 @@ rule Trojan_Win32_NSISInject_RPQ_2147829687_1
         $x_1_4 = "Appelmuligheder.Ozo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2870,6 +2987,7 @@ rule Trojan_Win32_NSISInject_RPQ_2147829687_2
         $x_1_5 = "Monorhina.ste" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2895,6 +3013,7 @@ rule Trojan_Win32_NSISInject_RPQ_2147829687_3
         $x_1_5 = "Software\\Opfinderprisernes\\Colourableness\\Tyvstjlende\\Tosily" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2920,6 +3039,7 @@ rule Trojan_Win32_NSISInject_RPR_2147829710_0
         $x_1_5 = "Engblommens170.ini" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2945,6 +3065,7 @@ rule Trojan_Win32_NSISInject_RPR_2147829710_1
         $x_1_5 = "Vegetomineral.Ste" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2970,6 +3091,7 @@ rule Trojan_Win32_NSISInject_RPM_2147829759_0
         $x_1_5 = "Indebt.Bes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2991,6 +3113,7 @@ rule Trojan_Win32_NSISInject_RC_2147830040_0
         $x_1_1 = {c7 04 24 00 00 00 00 c7 44 24 04 00 09 3d 00 c7 44 24 08 00 30 00 00 c7 44 24 0c 40 00 00 00 ff 15 [0-149] c7 44 24 10 03 00 00 00 c7 44 24 14 80 00 00 00 c7 44 24 18 00 00 00 00 ff 15 ?? ?? ?? ?? 83 ec 1c 89 85 48 fe ff ff 8b 85 48 fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3012,6 +3135,7 @@ rule Trojan_Win32_NSISInject_RC_2147830040_1
         $x_1_1 = {c7 04 24 00 00 00 00 c7 44 24 04 00 09 3d 00 c7 44 24 08 00 30 00 00 c7 44 24 0c 40 00 00 00 ff 15 [0-101] 89 04 24 c7 44 24 04 00 00 00 80 c7 44 24 08 01 00 00 00 c7 44 24 0c 00 00 00 00 c7 44 24 10 03 00 00 00 c7 44 24 14 80 00 00 00 c7 44 24 18 00 00 00 00 ff 15 ?? ?? ?? ?? 83 ec 1c 89 45 b0 8b 45 b0 31 c9 89 04 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3038,6 +3162,7 @@ rule Trojan_Win32_NSISInject_RC_2147830040_2
         $x_1_6 = "Ailuromania.Ner" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3064,6 +3189,7 @@ rule Trojan_Win32_NSISInject_RC_2147830040_3
         $x_1_6 = "solingklassernes.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -3088,6 +3214,7 @@ rule Trojan_Win32_NSISInject_RC_2147830040_4
         $x_1_4 = "Glamourless.ini" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3113,6 +3240,7 @@ rule Trojan_Win32_NSISInject_RC_2147830040_5
         $x_1_5 = "Ultraritualism.ini" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3137,6 +3265,7 @@ rule Trojan_Win32_NSISInject_RC_2147830040_6
         $x_1_4 = "dispapalize kreaturet paliurus" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3162,6 +3291,7 @@ rule Trojan_Win32_NSISInject_FQ_2147830167_0
         $x_1_5 = "Glacialize130.Uge" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3187,6 +3317,7 @@ rule Trojan_Win32_NSISInject_FR_2147830168_0
         $x_1_5 = "Software\\Talblokken\\prettiest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3212,6 +3343,7 @@ rule Trojan_Win32_NSISInject_FS_2147830169_0
         $x_1_5 = "\\Fastrenes\\facaders.Fil" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3237,6 +3369,7 @@ rule Trojan_Win32_NSISInject_RPB_2147830185_0
         $x_1_5 = "Confectory.Det" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3258,6 +3391,7 @@ rule Trojan_Win32_NSISInject_RE_2147830302_0
         $x_1_1 = {99 b9 0c 00 00 00 f7 f9 8b 45 e0 0f b6 0c 10 8b 55 cc 03 55 fc 0f b6 02 33 c1 8b 4d cc 03 4d fc 88 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3279,6 +3413,7 @@ rule Trojan_Win32_NSISInject_RE_2147830302_1
         $x_1_1 = {89 c8 f7 e7 d1 ea 83 e2 fc 8d 04 52 89 ca 29 c2 0f b6 92 ?? ?? ?? ?? 30 14 0e f7 d8 0f b6 84 01 ?? ?? ?? ?? 30 44 0e 01 83 c1 02 39 cb 75 d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3301,6 +3436,7 @@ rule Trojan_Win32_NSISInject_RE_2147830302_2
         $x_1_2 = {50 c7 45 a8 58 00 00 00 c7 45 b4 ?? ?? ?? ?? c7 45 dc 66 08 88 00 c7 45 ec ?? ?? ?? ?? c7 45 f0 ?? 01 00 00 c7 45 e4 ?? ?? ?? ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3326,6 +3462,7 @@ rule Trojan_Win32_NSISInject_RE_2147830302_3
         $x_1_5 = "Brndingers.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3352,6 +3489,7 @@ rule Trojan_Win32_NSISInject_RE_2147830302_4
         $x_1_6 = "Navigationsskoler" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3379,6 +3517,7 @@ rule Trojan_Win32_NSISInject_RE_2147830302_5
         $x_1_7 = "Afskrivningsmulighederne.Bed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3404,6 +3543,7 @@ rule Trojan_Win32_NSISInject_RPJ_2147830430_0
         $x_1_5 = "Skovvsner.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3429,6 +3569,7 @@ rule Trojan_Win32_NSISInject_RPJ_2147830430_1
         $x_1_5 = "Macroseismograph.Dds" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3454,6 +3595,7 @@ rule Trojan_Win32_NSISInject_RPJ_2147830430_2
         $x_1_5 = "Oversoothingly.esr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3479,6 +3621,7 @@ rule Trojan_Win32_NSISInject_RPV_2147831113_0
         $x_1_5 = "Noctambulistic.Pal" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3503,6 +3646,7 @@ rule Trojan_Win32_NSISInject_RPE_2147831300_0
         $x_1_4 = "e6744b46lf94b86re1cooo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3528,6 +3672,7 @@ rule Trojan_Win32_NSISInject_RPE_2147831300_1
         $x_1_5 = "Indtagningens.Une" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3556,6 +3701,7 @@ rule Trojan_Win32_NSISInject_AF_2147831526_0
         $x_1_8 = "Hvislendes.Eks" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3580,6 +3726,7 @@ rule Trojan_Win32_NSISInject_RPG_2147831533_0
         $x_1_4 = "Bioteknikerernes.Jun" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3605,6 +3752,7 @@ rule Trojan_Win32_NSISInject_RPG_2147831533_1
         $x_1_5 = "outspent.Rot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3632,6 +3780,7 @@ rule Trojan_Win32_NSISInject_AG_2147831783_0
         $x_1_7 = "Skarabens\\Skibsdrengene92\\Brighting\\Swedger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3653,6 +3802,7 @@ rule Trojan_Win32_NSISInject_RA_2147831788_0
         $x_1_1 = {8b 9d b8 f4 ff ff 0f af 9d 0c f5 ff ff 8b 45 14 8b 08 03 8d 18 f5 ff ff 0f be 71 04 03 de 0f be 95 10 f5 ff ff 2b da 89 9d b8 f4 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3674,6 +3824,7 @@ rule Trojan_Win32_NSISInject_RA_2147831788_1
         $x_1_1 = {8b 45 f4 40 89 45 f4 8b 45 f4 3b 45 e0 73 25 8b 45 f4 99 6a 0c 59 f7 f9 8b 45 e4 0f b6 04 10 8b 4d dc 03 4d f4 0f b6 09 33 c8 8b 45 dc 03 45 f4 88 08 eb cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3698,6 +3849,7 @@ rule Trojan_Win32_NSISInject_RA_2147831788_2
         $x_1_4 = "Forivredes\\Rigtigtnok.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3725,6 +3877,7 @@ rule Trojan_Win32_NSISInject_AH_2147832022_0
         $x_1_7 = "Vagabondize\\Rosalinde\\Tonefaldets.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3749,6 +3902,7 @@ rule Trojan_Win32_NSISInject_RPS_2147832126_0
         $x_1_4 = "Software\\Titterers\\Sanjakbeg\\Olieforurenendes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3774,6 +3928,7 @@ rule Trojan_Win32_NSISInject_RPS_2147832126_1
         $x_1_5 = "Software\\Bagsderyglnenes\\Motionen\\Floter116\\Antologier" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3799,6 +3954,7 @@ rule Trojan_Win32_NSISInject_RPA_2147832367_0
         $x_1_5 = "Socialarbejde.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3824,6 +3980,7 @@ rule Trojan_Win32_NSISInject_RPA_2147832367_1
         $x_1_5 = "Software\\Bifurcation\\Wended\\Outcastes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3845,6 +4002,7 @@ rule Trojan_Win32_NSISInject_RF_2147833574_0
         $x_1_1 = {6a 40 68 00 30 00 00 57 6a 00 ff [0-5] 56 6a 01 [0-32] b8 ab aa aa aa f7 e6 [0-3] c1 ea 03 [0-3] 8d 0c 52 c1 e1 02 2b c1 [0-2] 8a 80 ?? ?? ?? ?? 30 ?? 33 [0-3] 3b f7 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3869,6 +4027,7 @@ rule Trojan_Win32_NSISInject_RF_2147833574_1
         $x_1_4 = "Bevidstheders\\Unred\\Thielo.lnk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3892,6 +4051,7 @@ rule Trojan_Win32_NSISInject_RF_2147833574_2
         $x_1_3 = "Aesopian\\Understyr.Tei" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3915,6 +4075,7 @@ rule Trojan_Win32_NSISInject_RF_2147833574_3
         $x_1_3 = {43 3a 5c 78 61 6d 70 70 5c 68 74 64 6f 63 73 5c [0-37] 5c 4c 6f 61 64 65 72 5c 52 65 6c 65 61 73 65 5c 4c 6f 61 64 65 72 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3941,6 +4102,7 @@ rule Trojan_Win32_NSISInject_FU_2147833691_0
         $x_1_6 = "Grady" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3966,6 +4128,7 @@ rule Trojan_Win32_NSISInject_FV_2147833943_0
         $x_1_5 = "Extraversively\\Sammenkdningens.Leo171" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3987,6 +4150,7 @@ rule Trojan_Win32_NSISInject_RD_2147833966_0
         $x_1_1 = {b8 ab aa aa aa f7 e1 c1 ea 03 8d 14 52 03 d2 03 d2 8b c1 2b c2 8a ?? ?? ?? ?? ?? 30 14 0e 41 3b cf 72 dd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4008,6 +4172,7 @@ rule Trojan_Win32_NSISInject_RD_2147833966_1
         $x_1_1 = {b8 ab aa aa aa f7 e6 8b c6 c1 ea 03 8d 0c 52 c1 e1 02 2b c1 8a 80 ?? ?? ?? ?? 30 04 1e 46 3b f7 72 de}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4031,6 +4196,7 @@ rule Trojan_Win32_NSISInject_RD_2147833966_2
         $x_1_3 = "\\Kulturforskelle\\programmr.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4052,6 +4218,7 @@ rule Trojan_Win32_NSISInject_RD_2147833966_3
         $x_1_1 = {31 c0 c7 04 24 00 00 00 00 c7 44 24 04 00 09 3d 00 c7 44 24 08 00 30 00 00 c7 44 24 0c 40 00 00 00 ff 15 [0-53] 83 7d f4 00 0f 84 1d 00 00 00 8b 45 ec c6 00 00 8b 45 ec 83 c0 01 89 45 ec 8b 45 f4 83 c0 ff 89 45 f4 e9 d9 ff ff ff 8b 45 10 31 c9 89 04 24 c7 44 24 04 00 00 00 80 c7 44 24 08 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4075,6 +4242,7 @@ rule Trojan_Win32_NSISInject_RD_2147833966_4
         $x_1_3 = "Application Data\\camelhair.udg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4101,6 +4269,7 @@ rule Trojan_Win32_NSISInject_RD_2147833966_5
         $x_1_6 = "Appetitlsestes.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4126,6 +4295,7 @@ rule Trojan_Win32_NSISInject_RD_2147833966_6
         $x_1_5 = "Uninstall\\Blodrigt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4152,6 +4322,7 @@ rule Trojan_Win32_NSISInject_FW_2147834096_0
         $x_1_6 = "unknowndll.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4173,6 +4344,7 @@ rule Trojan_Win32_NSISInject_RG_2147834512_0
         $x_1_1 = {6a 40 68 00 30 00 00 53 57 ff 55 f8 [0-32] 8b c1 [0-1] 6a 0c [0-1] 5e f7 fe 8a 82 ?? ?? ?? ?? 30 04 39 41 3b cb 72 ea}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4194,6 +4366,7 @@ rule Trojan_Win32_NSISInject_RG_2147834512_1
         $x_1_1 = {6a 40 68 00 30 00 00 56 6a 00 ff d7 53 6a 01 8b f8 56 57 e8 [0-32] 03 d2 03 d2 8b c1 2b c2 8a ?? ?? ?? ?? ?? 30 14 39 41 3b ce 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4217,6 +4390,7 @@ rule Trojan_Win32_NSISInject_RG_2147834512_2
         $x_1_3 = "Burgundere7" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4242,6 +4416,7 @@ rule Trojan_Win32_NSISInject_RG_2147834512_3
         $x_1_5 = "Reproachful.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4263,6 +4438,7 @@ rule Trojan_Win32_NSISInject_RPW_2147834599_0
         $x_1_1 = {6a 00 68 80 00 00 00 6a 03 6a 00 6a 01 68 00 00 00 80 8d 85 ?? fd ff ff 50 ff 55 d8 89 45 ec 83 7d ec ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4284,6 +4460,7 @@ rule Trojan_Win32_NSISInject_RPX_2147834600_0
         $x_1_1 = {89 c3 31 ed 55 50 ff d6 89 c6 6a 40 68 00 30 00 00 50 55 ff 15 ?? ?? ?? ?? 89 c7 89 e0 55 50 56 57 53 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4309,6 +4486,7 @@ rule Trojan_Win32_NSISInject_RPX_2147834600_1
         $x_1_5 = "Autoklaveringer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4334,6 +4512,7 @@ rule Trojan_Win32_NSISInject_RPX_2147834600_2
         $x_1_5 = "Software\\Rooyebok" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4358,6 +4537,7 @@ rule Trojan_Win32_NSISInject_RPX_2147834600_3
         $x_1_4 = "Kleptomanernes\\Aarende164" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4383,6 +4563,7 @@ rule Trojan_Win32_NSISInject_RPX_2147834600_4
         $x_1_5 = "Nonreprehensibly.Ber" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4404,6 +4585,7 @@ rule Trojan_Win32_NSISInject_RPY_2147834601_0
         $x_1_1 = {6a 00 68 80 00 00 00 6a 03 6a 00 6a 01 68 00 00 00 80 8d 95 ?? fd ff ff ?? ff 55 d8 89 45 ec 83 7d ec ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4429,6 +4611,7 @@ rule Trojan_Win32_NSISInject_RPY_2147834601_1
         $x_1_5 = "pnheds.Eur" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4454,6 +4637,7 @@ rule Trojan_Win32_NSISInject_RPY_2147834601_2
         $x_1_5 = "reimert.Wil" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4475,6 +4659,7 @@ rule Trojan_Win32_NSISInject_RH_2147834897_0
         $x_1_1 = {6a 40 68 00 30 00 00 68 00 09 3d 00 6a 00 ff 15 ?? ?? ?? ?? 89 45 f4 83 7d f4 00 75 07 [0-32] 6a 00 68 80 00 00 00 6a 03 6a 00 6a 01 68 00 00 00 80 8b 4d 10 51 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4496,6 +4681,7 @@ rule Trojan_Win32_NSISInject_RH_2147834897_1
         $x_1_1 = {53 56 57 6a 00 68 80 00 00 00 6a 03 6a 00 6a 01 89 45 b0 8b 45 10 68 00 00 00 80 50 ff 15 ?? ?? ?? ?? 8b f0 6a 00 56 ff 15 ?? ?? ?? ?? 6a 40 68 00 30 00 00 8b d8 53 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4521,6 +4707,7 @@ rule Trojan_Win32_NSISInject_RH_2147834897_2
         $x_1_5 = "Funktionrlovenen.Blo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4547,6 +4734,7 @@ rule Trojan_Win32_NSISInject_RH_2147834897_3
         $x_1_6 = "Stresslessness.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4573,6 +4761,7 @@ rule Trojan_Win32_NSISInject_RH_2147834897_4
         $x_1_6 = "Konfidensintervallets.Mia" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4594,6 +4783,7 @@ rule Trojan_Win32_NSISInject_RI_2147834898_0
         $x_1_1 = {2b 5c 24 04 89 d8 c1 e8 1f 01 d8 2b 3c 24 d1 f8 89 f9 c1 e9 1f 01 f9 d1 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4615,6 +4805,7 @@ rule Trojan_Win32_NSISInject_RI_2147834898_1
         $x_1_1 = {57 6a 40 68 00 30 00 00 68 00 09 3d 00 33 c9 89 45 f0 33 ff 89 45 f4 57 89 4d fc 89 45 ec ff d3 [0-37] 56 51 68 80 00 00 00 6a 03 51 6a 01 68 00 00 00 80 ff 75 10 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4636,6 +4827,7 @@ rule Trojan_Win32_NSISInject_RI_2147834898_2
         $x_1_1 = {68 00 5a 62 02 e8 ?? ?? ?? ?? 83 c4 04 89 45 f0 68 00 5a 62 02 68 ff 00 00 00 8b 45 f0 50 e8 ?? ?? ?? ?? 83 c4 0c 83 7d f0 00 75 07 33 c0 e9 ?? ?? ?? ?? 8d 8d c0 fd ff ff 51 68 03 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4657,6 +4849,7 @@ rule Trojan_Win32_NSISInject_RI_2147834898_3
         $x_1_1 = {68 00 09 3d 00 6a 08 ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 89 45 ?? 83 7d ?? 00 75 05 e9 ?? ?? ?? ?? 68 00 09 3d 00 [0-112] 89 45 ?? 6a 40 68 00 30 00 00 8b [0-3] 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4682,6 +4875,7 @@ rule Trojan_Win32_NSISInject_RI_2147834898_4
         $x_1_5 = "uncivilness.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4708,6 +4902,7 @@ rule Trojan_Win32_NSISInject_RI_2147834898_5
         $x_1_6 = "Uenighed.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4730,6 +4925,7 @@ rule Trojan_Win32_NSISInject_RJ_2147834899_0
         $x_1_2 = {81 e1 03 09 01 00 81 e2 61 12 00 00 35 d3 6f 00 00 81 c2 c9 55 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4752,6 +4948,7 @@ rule Trojan_Win32_NSISInject_RJ_2147834899_1
         $x_1_2 = {0f b7 16 66 85 d2 74 11 83 fa 22 74 05 66 89 14 47 40 83 c6 02 3b c1 7c e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4773,6 +4970,7 @@ rule Trojan_Win32_NSISInject_RJ_2147834899_2
         $x_1_1 = {68 00 09 3d 00 6a 54 8b 45 e4 50 e8 [0-16] 6a 00 68 80 00 00 00 6a 03 6a 00 6a 01 68 00 00 00 80 b9 04 00 00 00 c1 e1 00 8b 55 0c 8b 04 0a 50 [0-32] 6a 40 68 00 30 00 00 8b 55 94 52 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4797,6 +4995,7 @@ rule Trojan_Win32_NSISInject_RJ_2147834899_3
         $x_1_4 = "Tsattine\\Vies.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4823,6 +5022,7 @@ rule Trojan_Win32_NSISInject_RJ_2147834899_4
         $x_1_6 = "Knappenaalshoveder.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4851,6 +5051,7 @@ rule Trojan_Win32_NSISInject_FX_2147835210_0
         $x_1_8 = {6a 00 57 ff 15 ?? ?? ?? ?? 5f 5e 33 c0 5b c9 c3 04 00 3b d3 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -4877,6 +5078,7 @@ rule Trojan_Win32_NSISInject_SPS_2147836055_0
         $x_5_1 = {8a 04 3b 04 6e 34 ed 04 1e 88 04 3b 47 3b 7d f0 72 ee}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4898,6 +5100,7 @@ rule Trojan_Win32_NSISInject_RM_2147836215_0
         $x_1_1 = {68 00 09 3d 00 6a 54 50 e8 ?? ?? ?? ?? 8b 45 0c 83 c4 0c 57 68 80 00 00 00 6a 03 57 6a 01 68 00 00 00 80 ff 70 04 ff 15 ?? ?? ?? ?? 8b f0 57 56 ff 15 ?? ?? ?? ?? 6a 40 68 00 30 00 00 50 57 89 45 fc ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4919,6 +5122,7 @@ rule Trojan_Win32_NSISInject_RK_2147836336_0
         $x_1_1 = {99 b9 0c 00 00 00 f7 f9 8b 45 ec 0f b6 0c 10 8b 55 e4 03 55 f8 0f b6 02 33 c1 8b 4d e4 03 4d f8 88 01 8b 55 f8 83 c2 01 89 55 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4941,6 +5145,7 @@ rule Trojan_Win32_NSISInject_RK_2147836336_1
         $x_1_2 = {c7 04 24 00 00 00 00 c7 44 24 04 00 09 3d 00 c7 44 24 08 00 30 00 00 c7 44 24 0c 40 00 00 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4965,6 +5170,7 @@ rule Trojan_Win32_NSISInject_RK_2147836336_2
         $x_1_4 = "Cavaliered\\Portulakker.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4988,6 +5194,7 @@ rule Trojan_Win32_NSISInject_RK_2147836336_3
         $x_1_3 = "Software\\Magasin\\Ostindien" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5009,6 +5216,7 @@ rule Trojan_Win32_NSISInject_SRPA_2147836550_0
         $x_5_1 = {0f be 11 81 f2 a6 00 00 00 8b 45 f8 03 45 fc 88 10 8b 4d f8 03 4d fc 0f be 11 83 c2 7a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5030,6 +5238,7 @@ rule Trojan_Win32_NSISInject_AJ_2147837465_0
         $x_2_1 = {53 68 80 00 00 00 6a 03 53 6a 01 68 00 00 00 80 8d 85 [0-4] 50 ff 15 [0-4] 8b f0 53 56 ff 15 [0-4] 6a 40 68 00 30 00 00 8b d8 53 6a 00 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5051,6 +5260,7 @@ rule Trojan_Win32_NSISInject_AK_2147837479_0
         $x_2_1 = {68 80 00 00 00 6a 03 6a 00 6a 01 89 45 b0 8b 45 10 68 00 00 00 80 50 ff 15 [0-4] 8b f0 6a 00 56 ff 15 [0-4] 6a 40 8b d8 68 00 30 00 00 53 6a 00 89 5d ac ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5072,6 +5282,7 @@ rule Trojan_Win32_NSISInject_AL_2147837630_0
         $x_2_1 = {6a 00 68 80 00 00 00 6a 03 6a 00 6a 01 68 00 00 00 80 8b 4d 0c 8b 51 04 52 ff 15 [0-4] 89 45 ec 6a 00 8b 45 ec 50 ff 15 [0-4] 89 45 f8 6a 40 68 00 30 00 00 8b 4d f8 51 6a 00 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5093,6 +5304,7 @@ rule Trojan_Win32_NSISInject_AM_2147837635_0
         $x_2_1 = {8a 04 37 34 3e 04 6d 34 be fe c0 34 a9 04 37 88 04 37 46 3b f3 72}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5115,6 +5327,7 @@ rule Trojan_Win32_NSISInject_NZA_2147837643_0
         $x_1_2 = {6a 01 68 00 00 00 80 b9 04 00 00 00 c1 e1 00 8b 55 0c 8b 04 0a 50 ff 15 [0-4] 89 45 ec 6a 00 8b 4d ec 51 ff 15 [0-4] 89 45 f0 6a 40 68 00 30 00 00 8b 55 f0 52 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5136,6 +5349,7 @@ rule Trojan_Win32_NSISInject_AN_2147837845_0
         $x_2_1 = {0f b6 55 ff 81 f2 fb 00 00 00 88 55 ff 0f b6 45 ff 03 45 f4 88 45 ff 0f b6 4d ff 33 4d f4 88 4d ff 0f b6 55 ff f7 d2 88 55 ff 8b 45 e8 03 45 f4 8a 4d ff 88 08 e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5158,6 +5372,7 @@ rule Trojan_Win32_NSISInject_AO_2147838034_0
         $x_1_2 = {83 c4 0c 6a 40 68 00 30 00 00 8b 45 e4 50 6a 00 ff 15 [0-4] 89 45 e0 8b 4d f0 51 6a 01 8b 55 e4 52 8b 45 e0 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5180,6 +5395,7 @@ rule Trojan_Win32_NSISInject_AP_2147838037_0
         $x_1_2 = {83 c4 0c 6a 40 68 00 30 00 00 8b 55 d0 52 6a 00 ff 15 [0-4] 89 45 dc 8b 45 d4 50 6a 01 8b 4d d0 51 8b 55 dc 52 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5201,6 +5417,7 @@ rule Trojan_Win32_NSISInject_MBF_2147838092_0
         $x_1_1 = {8a 0c 06 80 c1 7d 80 f1 86 80 c1 58 80 f1 e7 80 c1 77 80 f1 31 80 c1 03 80 f1 d0 fe c1 80 f1 3e 80 c1 43 80 f1 10 fe c1 88 0c 06 40 3b 45 f0 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5223,6 +5440,7 @@ rule Trojan_Win32_NSISInject_MBG_2147838093_0
         $x_1_2 = {89 45 f0 6a 40 68 00 30 00 00 8b 55 f0 52 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5245,6 +5463,7 @@ rule Trojan_Win32_NSISInject_AQ_2147838309_0
         $x_1_2 = {89 45 f0 6a 00 6a 00 8b 4d f4 51 e8 [0-4] 83 c4 0c 6a 40 68 00 30 00 00 8b 55 f0 52 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5267,6 +5486,7 @@ rule Trojan_Win32_NSISInject_AR_2147838405_0
         $x_1_2 = {83 c4 04 89 c6 53 53 57 e8 [0-4] 83 c4 0c 6a 40 68 00 30 00 00 56 53 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5288,6 +5508,7 @@ rule Trojan_Win32_NSISInject_AS_2147838495_0
         $x_2_1 = {0f b6 4d ff 81 f1 b9 00 00 00 88 4d ff 0f b6 55 ff 2b 55 f8 88 55 ff 0f b6 45 ff f7 d8 88 45 ff 8b 4d e8 03 4d f8 8a 55 ff 88 11 e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5310,6 +5531,7 @@ rule Trojan_Win32_NSISInject_AT_2147838620_0
         $x_1_2 = {83 c4 04 89 45 e0 6a 00 6a 00 8b 4d e8 51 e8 [0-4] 83 c4 0c 6a 40 68 00 30 00 00 8b 55 e0 52 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5332,6 +5554,7 @@ rule Trojan_Win32_NSISInject_MBAQ_2147838767_0
         $x_1_2 = {83 c4 0c 6a 40 68 00 30 00 00 8b 55 f0 52 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5354,6 +5577,7 @@ rule Trojan_Win32_NSISInject_AU_2147838768_0
         $x_1_2 = {8b 45 d8 31 c9 c7 04 24 00 00 00 00 89 44 24 04 c7 44 24 08 00 30 00 00 c7 44 24 0c 40 00 00 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5376,6 +5600,7 @@ rule Trojan_Win32_NSISInject_AV_2147838788_0
         $x_2_2 = {83 c4 04 89 45 f0 6a 00 6a 00 8b 4d f4 51 e8 [0-4] 83 c4 0c 6a 40 68 00 30 00 00 8b 55 f0 52 6a 00 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5397,6 +5622,7 @@ rule Trojan_Win32_NSISInject_SPQP_2147838943_0
         $x_5_1 = {8a 04 37 fe c8 34 17 04 21 34 98 04 55 34 fc 04 15 88 04 37 46 3b f3 72 e7}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5419,6 +5645,7 @@ rule Trojan_Win32_NSISInject_MBAR_2147839240_0
         $x_1_2 = {83 c4 24 6a 40 68 00 30 00 00 57 53 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5441,6 +5668,7 @@ rule Trojan_Win32_NSISInject_MBAG_2147839337_0
         $x_1_2 = {83 c4 24 6a 40 68 00 30 00 00 57 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5463,6 +5691,7 @@ rule Trojan_Win32_NSISInject_MBAI_2147839442_0
         $x_1_2 = {83 c4 24 6a 40 68 00 30 00 00 57 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5484,6 +5713,7 @@ rule Trojan_Win32_NSISInject_SPAB_2147839705_0
         $x_7_1 = {88 45 ff 0f b6 55 ff 2b 55 f4 88 55 ff 0f b6 45 ff f7 d8 88 45 ff 0f b6 4d ff 83 e9 37 88 4d ff 0f b6 55 ff 33 55 f4 88 55 ff 0f b6 45 ff 83 c0 17 88 45 ff 8b 4d e8 03 4d f4 8a 55 ff 88 11 e9 29 ff ff ff}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5506,6 +5736,7 @@ rule Trojan_Win32_NSISInject_MBAL_2147840160_0
         $x_1_2 = {83 c4 24 6a 40 68 00 30 00 00 53 56 ff 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5532,6 +5763,7 @@ rule Trojan_Win32_NSISInject_AW_2147840547_0
         $x_1_6 = "Landeveje%\\Circe.You" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5554,6 +5786,7 @@ rule Trojan_Win32_NSISInject_AX_2147840822_0
         $x_2_2 = {8b c7 99 6a 0c 59 f7 f9 8a 82 [0-4] 30 04 1f 47 3b fe 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5576,6 +5809,7 @@ rule Trojan_Win32_NSISInject_AY_2147840924_0
         $x_2_2 = {83 c4 24 6a 40 68 00 30 00 00 57 53 ff 15 [0-4] 56 6a 01 8b d8 57 53 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5601,6 +5835,7 @@ rule Trojan_Win32_NSISInject_AZ_2147841156_0
         $x_1_5 = "Squirmers\\Biseksualiteten\\Occidentalises\\Filmapparater.Afn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5622,6 +5857,7 @@ rule Trojan_Win32_NSISInject_BA_2147841321_0
         $x_5_1 = {83 c4 0c 6a 40 68 00 30 00 00 53 57 ff 15 [0-4] 56 6a 01 8b f8 53 57 e8 [0-4] 83 c4 10 33 c9 85 db 74 16 8b c1 6a 0c 99 5e f7 fe 8a 82 [0-4] 30 04 0f 41 3b cb 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5643,6 +5879,7 @@ rule Trojan_Win32_NSISInject_BB_2147841327_0
         $x_5_1 = {83 c4 0c 6a 40 68 00 30 00 00 53 57 ff 15 [0-4] 56 6a 01 8b f8 53 57 e8 [0-4] 83 c4 10 33 c9 85 db 74 16 8b c1 99 6a 0c 5e f7 fe 8a 82 [0-4] 30 04 0f 41 3b cb 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5664,6 +5901,7 @@ rule Trojan_Win32_NSISInject_RL_2147843250_0
         $x_1_1 = {99 b9 0c 00 00 00 f7 f9 8b 45 ec 0f b6 0c 10 8b 55 f0 03 55 fc 0f b6 02 33 c1 8b 4d f0 03 4d fc 88 01 8b 55 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5686,6 +5924,7 @@ rule Trojan_Win32_NSISInject_BC_2147844004_0
         $x_2_2 = {83 c4 08 89 45 f4 6a 40 68 00 30 00 00 68 [0-4] 6a 00 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5711,6 +5950,7 @@ rule Trojan_Win32_NSISInject_RPZ_2147845449_0
         $x_1_5 = "Diphenoxylate.Nae" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5736,6 +5976,7 @@ rule Trojan_Win32_NSISInject_RPZ_2147845449_1
         $x_1_5 = "opbygningsfasers" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5761,6 +6002,7 @@ rule Trojan_Win32_NSISInject_RPZ_2147845449_2
         $x_1_5 = "Indflder\\Afrodisiakas\\Purken.ini" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5786,6 +6028,7 @@ rule Trojan_Win32_NSISInject_RPZ_2147845449_3
         $x_1_5 = "Ampere.ini" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5810,6 +6053,7 @@ rule Trojan_Win32_NSISInject_BD_2147845675_0
         $x_1_4 = "Inductophone.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5834,6 +6078,7 @@ rule Trojan_Win32_NSISInject_BE_2147845744_0
         $x_1_4 = "Software\\Coseasonal\\Aggrandizement\\Mesosternal\\Theorisers" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5859,6 +6104,7 @@ rule Trojan_Win32_NSISInject_BF_2147847082_0
         $x_1_5 = "Software\\Nonnatively\\Turdine" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5884,6 +6130,7 @@ rule Trojan_Win32_NSISInject_BG_2147847091_0
         $x_1_5 = "Software\\Ninetts\\Predictiveness\\Basnglens" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5905,6 +6152,7 @@ rule Trojan_Win32_NSISInject_FZ_2147847961_0
         $x_1_1 = {0f b6 0c 10 8b 55 ?? 03 55 ?? 0f b6 02 33 c1 8b 4d ?? 03 4d ?? 88 01 8b 55 ?? 83 c2 01 89 55 ?? 81 7d ?? ?? ?? ?? ?? 7d 0e 00 8b 45 ?? 99 b9 ?? ?? ?? ?? f7 f9 8b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5930,6 +6178,7 @@ rule Trojan_Win32_NSISInject_BH_2147848121_0
         $x_1_5 = "Software\\Auktioners\\Halvdels\\Nedlggende\\Belimousined" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5956,6 +6205,7 @@ rule Trojan_Win32_NSISInject_BI_2147848449_0
         $x_1_6 = "Software\\Sanatoriet\\Stemningsblgers\\Inanimatenesses" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5981,6 +6231,7 @@ rule Trojan_Win32_NSISInject_BJ_2147848450_0
         $x_1_5 = "Titoisten\\Toiletry160\\Coffinmaker.lnk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6008,6 +6259,7 @@ rule Trojan_Win32_NSISInject_GA_2147848585_0
         $x_1_7 = "IsProcessorFeaturePresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6029,6 +6281,7 @@ rule Trojan_Win32_NSISInject_BK_2147848917_0
         $x_4_1 = {8d 0c 31 30 46 01 8d 76 03 b8 [0-4] f7 e1 8b c3 83 c3 03 c1 ea 03 8d 0c 52 c1 e1 02 2b c1 0f b6 80 [0-4] 30 46 ff 81 fb d3 17 00 00 7c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6051,6 +6304,7 @@ rule Trojan_Win32_NSISInject_BL_2147848918_0
         $x_2_2 = {89 45 f8 6a 40 68 00 10 00 00 68 6e 16 00 00 6a 00 ff 55}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6076,6 +6330,7 @@ rule Trojan_Win32_NSISInject_BM_2147848939_0
         $x_1_5 = "Minoriteternes\\Humus\\Chaetophora\\jorams" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6097,6 +6352,7 @@ rule Trojan_Win32_NSISInject_BN_2147849064_0
         $x_5_1 = {8d 42 01 99 f7 ff 0f b6 41 fe c0 c8 03 32 82 [0-4] 88 41 fe 8d 42 01 99 f7 ff 4e 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6119,6 +6375,7 @@ rule Trojan_Win32_NSISInject_BO_2147849078_0
         $x_1_2 = {6a 40 68 00 10 00 00 68 2b 16 00 00 8b f0 6a 00 89 75 fc ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6141,6 +6398,7 @@ rule Trojan_Win32_NSISInject_BP_2147849176_0
         $x_1_2 = {6a 40 68 00 10 00 00 68 d9 15 00 00 56 89 45 f8 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6163,6 +6421,7 @@ rule Trojan_Win32_NSISInject_BQ_2147850607_0
         $x_1_2 = {55 8b ec 6a 40 68 00 30 00 00 ff 75 08 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6189,6 +6448,7 @@ rule Trojan_Win32_NSISInject_BR_2147850625_0
         $x_1_6 = "Afspndingsmidlernes\\Stormasters206\\Senilises\\Journaliserende.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6216,6 +6476,7 @@ rule Trojan_Win32_NSISInject_BS_2147850626_0
         $x_1_7 = "Skabilkenhovederne\\Gutium\\Traversere\\Overrisles.Prf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6241,6 +6502,7 @@ rule Trojan_Win32_NSISInject_BT_2147850632_0
         $x_1_5 = "Refunderer.unc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6266,6 +6528,7 @@ rule Trojan_Win32_NSISInject_A_2147850682_0
         $x_2_5 = "Benjy::Shawm" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6287,6 +6550,7 @@ rule Trojan_Win32_NSISInject_GB_2147851928_0
         $x_1_1 = {8a 07 c0 c8 03 32 82 ?? ?? ?? ?? 6a 0c 88 07 8d 42 01 99 5f f7 ff 46 3b f1 72 07 00 8d bc 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6314,6 +6578,7 @@ rule Trojan_Win32_NSISInject_SPXC_2147852775_0
         $x_1_7 = "numina\\chloroplatinous\\Rebenes\\fremfrelse.eve" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6339,6 +6604,7 @@ rule Trojan_Win32_NSISInject_BU_2147889039_0
         $x_1_5 = "Dubleringernes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6367,6 +6633,7 @@ rule Trojan_Win32_NSISInject_SPGJ_2147889505_0
         $x_1_8 = "Recumbency217.koa" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -6388,6 +6655,7 @@ rule Trojan_Win32_NSISInject_PRF_2147891778_0
         $x_1_1 = {8b 45 d4 8a 04 05 00 60 ?? 00 88 45 d3 8b 45 c8 8b 4d cc 8a 04 08 88 45 d2 0f b6 45 d3 c1 f8 03 0f b6 4d d3 c1 e1 05 09 c8 0f b6 4d d2 31 c8 88 c1 8b 45 d4 88 0c 05 00 60 ?? 00 8b 45 cc 83 c0 01 b9 0d 00 00 00 99 f7 f9 89 55 cc 8b 45 d4 83 c0 01 89 45 d4 81 7d d4 ?? ?? 00 00 0f 83 05 00 00 00 e9 99 ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6409,6 +6677,7 @@ rule Trojan_Win32_NSISInject_PRG_2147891866_0
         $x_1_1 = {8b 4d f8 8a ?? ?? ?? ?? ?? 88 55 ff 8b 45 e0 03 45 f4 8a 08 88 4d fe 0f b6 55 ff c1 fa 03 0f b6 45 ff c1 e0 05 0b d0 0f b6 4d fe 33 d1 8b 45 f8 88 ?? ?? ?? ?? ?? 8b 45 f4 83 c0 01 99 b9 0d ?? ?? ?? f7 f9 89 55 f4 8b 55 f8 83 c2 01 89 55 f8 81 7d f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6431,6 +6700,7 @@ rule Trojan_Win32_NSISInject_PRI_2147892282_0
         $x_1_2 = {83 c0 01 b9 0d 00 00 00 99 f7 f9 89 55 ?? 8b ?? ?? 83 ?? 01 89 ?? ?? 81 7d ?? ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6453,6 +6723,7 @@ rule Trojan_Win32_NSISInject_GC_2147892416_0
         $x_1_2 = {c0 c8 03 32 86 ?? ?? ?? ?? 88 81 ?? ?? ?? ?? 8d 46 01 99 41 f7 fb 8b f2 81 f9 ?? ?? ?? ?? 72 06 00 8a 81}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6474,6 +6745,7 @@ rule Trojan_Win32_NSISInject_SMTY_2147896155_0
         $x_1_1 = {c1 e1 05 0b c1 0f b6 55 [0-3] 33 c2 8b 4d ?? 88 81 [0-5] 8b 45 [0-3] 83 c0 01 99 b9 0d 00 00 00 f7 f9 89 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6495,6 +6767,7 @@ rule Trojan_Win32_NSISInject_SMTK_2147896604_0
         $x_1_1 = {8a 04 05 00 00 43 00 88 45 f7 8b 45 ec 8b 4d f0 8a 04 08 88 45 f6 0f b6 45 f7 c1 f8 03 0f b6 4d f7 c1 e1 05 09 c8 0f b6 4d f6 31 c8 88 c1 8b 45 f8 88 0c 05 00 00 43 00 8b 45 f0 83 c0 01 b9 0d 00 00 00 99 f7 f9 89 55 f0 8b 45 f8 83 c0 01 89 45 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6516,6 +6789,7 @@ rule Trojan_Win32_NSISInject_SMTK_2147896604_1
         $x_1_1 = {0f b6 85 23 e2 ff ff c1 f8 03 0f b6 8d 23 e2 ff ff c1 e1 05 09 c8 0f b6 8d 22 e2 ff ff 31 c8 88 c1 8b 85 24 e2 ff ff 88 8c 05 2b e2 ff ff 8b 85 1c e2 ff ff 83 c0 01 b9 0d 00 00 00 99 f7 f9 89 95 1c e2 ff ff 8b 85 24 e2 ff ff 83 c0 01 89 85 24 e2 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6542,6 +6816,7 @@ rule Trojan_Win32_NSISInject_CF_2147898327_0
         $x_1_6 = "mavekatar.con" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6566,6 +6841,7 @@ rule Trojan_Win32_NSISInject_SPXX_2147898438_0
         $x_1_4 = "hyetometer.Rub" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6589,6 +6865,7 @@ rule Trojan_Win32_NSISInject_RX_2147903572_0
         $x_1_3 = "SYSTEM32\\energetiskes\\Physicianer223.lnk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6614,6 +6891,7 @@ rule Trojan_Win32_NSISInject_RX_2147903572_1
         $x_1_5 = "toilettes.ini" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6640,6 +6918,7 @@ rule Trojan_Win32_NSISInject_VNC_2147923977_0
         $x_1_6 = "caudotibial" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6668,6 +6947,7 @@ rule Trojan_Win32_NSISInject_VND_2147924030_0
         $x_1_8 = "Vanskeliggjordes88.bru" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6693,6 +6973,7 @@ rule Trojan_Win32_NSISInject_VNE_2147924031_0
         $x_1_5 = "1d1h1l1p1t1x1|1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6718,6 +6999,7 @@ rule Trojan_Win32_NSISInject_SLF_2147924993_0
         $x_1_5 = "\\fetaens\\scaphiopus.Aan31" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6745,6 +7027,7 @@ rule Trojan_Win32_NSISInject_SHBD_2147932602_0
         $x_1_7 = "refloated\\Arbejdstilbuddenes171.ini" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6773,6 +7056,7 @@ rule Trojan_Win32_NSISInject_SXBM_2147932694_0
         $x_1_8 = "procatalectic.mis" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6797,6 +7081,7 @@ rule Trojan_Win32_NSISInject_SVM_2147933796_0
         $x_1_4 = "Halvfemser\\luftspringenes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6824,6 +7109,7 @@ rule Trojan_Win32_NSISInject_SVM_2147933796_1
         $x_1_7 = "dislustered.sub" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

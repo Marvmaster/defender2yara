@@ -16,6 +16,7 @@ rule Trojan_Win64_ShellcodeRunner_BK_2147839582_0
         $x_5_1 = {01 d1 48 63 c9 44 0f b6 04 08 48 8b 44 24 08 0f b6 4c 24 06 48 c1 e1 02 48 01 c8 0f b6 4c 24 05 0f b6 14 08 44 31 c2 88 14 08 8a 44 24 05 04 01 88 44 24 05 e9}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_ShellcodeRunner_DX_2147888945_0
         $x_1_2 = {29 c2 89 d0 01 c0 01 d0 29 c1 89 ca 48 63 c2 0f b6 44 05 ?? 44 31 c0 89 c1 8b 45 fc 48 98 48 8d 15 [0-4] 88 0c 10 83 45 fc 01 8b 45 fc 3d fd 01 00 00 76}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win64_ShellcodeRunner_RDA_2147896469_0
         $x_2_1 = {48 8b 44 24 08 48 63 0c 24 0f be 04 08 48 8b 4c 24 18 48 63 54 24 04 0f be 0c 11 31 c8 88 c2 48 8b 44 24 08 48 63 0c 24 88 14 08 8b 44 24 04 83 c0 01 89 44 24 04 8b 04 24 83 c0 01 89 04 24}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win64_ShellcodeRunner_AMMA_2147898696_0
         $x_2_1 = {0f b6 00 31 c6 89 f1 48 8b 15 ?? ?? ?? ?? 8b 45 fc 48 98 48 01 d0 89 ca 88 10 83 45 fc 01 8b 45 fc 48 63 d0 48 8b 05 ?? ?? ?? ?? 48 39 c2 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +105,7 @@ rule Trojan_Win64_ShellcodeRunner_BN_2147898712_0
         $x_5_1 = {44 29 c2 44 6b c2 ?? 44 29 c0 89 c2 89 d0 83 c0 ?? 31 c1 48 8b 55 e0 8b 45 d4 48 98 88 0c 02 83 45 d4 01 eb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +127,7 @@ rule Trojan_Win64_ShellcodeRunner_BC_2147901504_0
         $x_1_1 = {48 c7 c0 60 00 00 00 65 48 8b 18 48 c7 c0 18 00 00 00 48 8b 1c 03 48 c7 c0 20 00 00 00 48 8b 1c 03 49 89 dc 48 8b 53 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +149,7 @@ rule Trojan_Win64_ShellcodeRunner_KAD_2147901627_0
         $x_1_1 = {41 89 d0 41 29 c0 41 8d 40 ?? 66 31 01 83 c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +172,7 @@ rule Trojan_Win64_ShellcodeRunner_GPC_2147903401_0
         $x_5_2 = "4c4242524f57534552" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -186,6 +194,7 @@ rule Trojan_Win64_ShellcodeRunner_GPE_2147903495_0
         $x_10_1 = {4c 89 ca 49 f7 d9 49 c1 f9 3f 41 83 e1 10 48 8b 74 24 48 4c 01 ce 48 8b 78 18 48 89 d8 48 8b 5c 24 58 48 8b 4c 24 38 49 89 c8 49 89 d1 48 89 fa 48 89 cf}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +216,7 @@ rule Trojan_Win64_ShellcodeRunner_GPF_2147903496_0
         $x_5_1 = "ZmZmYzNDM3MmUzMT" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -228,6 +238,7 @@ rule Trojan_Win64_ShellcodeRunner_GPD_2147903871_0
         $x_10_1 = {48 8b 74 24 40 48 8d 56 f0 48 89 54 24 40 48 f7 da 48 c1 fa 3f 83 e2 10 48 8b 4c 24 48 48 01 ca 48 89 54 24 48 90 48 8b 5c 24 50 41 b8 01 00 00 00 48 8b 44 24 60}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -250,6 +261,7 @@ rule Trojan_Win64_ShellcodeRunner_ASDF_2147904263_0
         $x_2_2 = {4c 8b cd 44 89 64 24 28 45 33 c0 33 d2 48 89 74 24 20 48 8b cb ff 15 ?? ?? ?? 00 48 85 c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +284,7 @@ rule Trojan_Win64_ShellcodeRunner_CL_2147905955_0
         $x_2_2 = {31 c1 48 8b 55 ?? 8b 45 ?? 48 98 88 0c 02 83 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -293,6 +306,7 @@ rule Trojan_Win64_ShellcodeRunner_CK_2147906191_0
         $x_5_1 = {48 f7 e6 48 c1 ea 07 48 69 c2 ff 00 00 00 48 8b ce 48 2b c8 40 32 f9 40 30 bc 1d ?? ?? 00 00 48 ff c3 48 83 c6 ?? 48 81 fe}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -314,6 +328,7 @@ rule Trojan_Win64_ShellcodeRunner_CM_2147906243_0
         $x_5_1 = {4c 39 d2 74 4e 8d 4b 01 0f b6 d9 0f b6 c9 8a 84 0c ?? ?? 00 00 46 8d 04 18 45 0f b6 d8 45 0f b6 c0 42 8a b4 04 ?? ?? 00 00 40 88 b4 0c ?? ?? 00 00 42 88 84 04 ?? ?? 00 00 02 84 0c ?? ?? 00 00 0f b6 c0 8a 84 04 ?? ?? 00 00 41 30 04 11 48 ff c2 eb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -335,6 +350,7 @@ rule Trojan_Win64_ShellcodeRunner_MKV_2147906248_0
         $x_1_1 = {45 33 c0 4c 8d 0d ?? ?? ?? ?? 4c 2b c8 48 8b c8 66 ?? 41 0f b6 14 09 48 8d 49 01 80 ea 06 41 ff c0 88 51 ff 41 83 f8 0c 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -359,6 +375,7 @@ rule Trojan_Win64_ShellcodeRunner_RO_2147907142_0
         $x_1_4 = "Stack memory corruption" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -381,6 +398,7 @@ rule Trojan_Win64_ShellcodeRunner_KAF_2147907240_0
         $x_1_2 = {4d 31 c0 4d 85 c0 0f 85 ?? ?? ?? ?? 49 ff c0 4d 85 c0 0f 84 ?? ?? ?? ?? 41 58 48 01 d8 4c 39 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -403,6 +421,7 @@ rule Trojan_Win64_ShellcodeRunner_RP_2147908480_0
         $x_1_2 = "qweasd321zxc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -424,6 +443,7 @@ rule Trojan_Win64_ShellcodeRunner_RP_2147908480_1
         $x_1_1 = {48 31 c9 48 c7 c2 ?? ?? 00 00 41 b8 00 10 00 00 44 8d 49 40 48 ff 15 ?? ?? ?? ?? e8 00 00 00 00 5e 48 81 c6 ?? ?? ?? ?? 48 89 c7 48 c7 ?? ?? ?? ?? 00 48 89 c2 90 a4 90 e2 fb ff e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -452,6 +472,7 @@ rule Trojan_Win64_ShellcodeRunner_RP_2147908480_2
         $x_1_8 = "Failed to download file: " wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -483,6 +504,7 @@ rule Trojan_Win64_ShellcodeRunner_RP_2147908480_3
         $x_1_11 = "Failed to download file: " wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 7 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -508,6 +530,7 @@ rule Trojan_Win64_ShellcodeRunner_CCID_2147908511_0
         $x_1_1 = {c7 45 04 00 00 00 00 41 b9 40 00 00 00 41 b8 00 10 00 00 ba 01 00 00 00 33 c9 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -531,6 +554,7 @@ rule Trojan_Win64_ShellcodeRunner_AG_2147910345_0
         $x_1_3 = {41 b9 40 00 00 00 41 b8 00 30 00 00 ba 7d 03 00 00 b9 00 00 00 00 48 8b 05 ?? ?? ?? 00 ff d0 48 89}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -556,6 +580,7 @@ rule Trojan_Win64_ShellcodeRunner_ADS_2147910789_0
         $x_1_1 = {33 c8 8b c1 25 ad 58 3a ff c1 e0 07 33 c8 8b c1 25 8c df ff ff c1 e0 0f 33 c8 8b c1 c1 e8 12 33 c1 49 3b c5 0f 87 67 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -580,6 +605,7 @@ rule Trojan_Win64_ShellcodeRunner_AH_2147911299_0
         $x_1_4 = "heX  hlcodhShel1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -601,6 +627,7 @@ rule Trojan_Win64_ShellcodeRunner_GPAX_2147915639_0
         $x_2_1 = "BtrMEduPNfN.(*endpointList).StateTypeName" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -622,6 +649,7 @@ rule Trojan_Win64_ShellcodeRunner_KGG_2147920136_0
         $x_5_1 = {48 2b d0 0f b6 08 88 0c 02 48 8d 40 01 49 83 e8 01 75 f0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -644,6 +672,7 @@ rule Trojan_Win64_ShellcodeRunner_EXP_2147921715_0
         $x_1_2 = {8b 05 8e a0 04 00 48 8b 0d bb a0 04 00 31 04 31 48 83 c6 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -665,6 +694,7 @@ rule Trojan_Win64_ShellcodeRunner_HMM_2147921722_0
         $x_1_1 = {0f b6 08 80 f1 03 88 08 44 0f b6 c1 f6 c2 01 75 07 41 80 f0 02 44 88 00 ff c2 48 ff c0 3b d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -689,6 +719,7 @@ rule Trojan_Win64_ShellcodeRunner_HNB_2147921839_0
         $x_1_4 = "NtCreateThreadEx Hooked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -719,6 +750,7 @@ rule Trojan_Win64_ShellcodeRunner_GM_2147922488_0
         $x_2_6 = "main.downloadData" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -744,6 +776,7 @@ rule Trojan_Win64_ShellcodeRunner_RPA_2147926892_0
         $x_1_2 = {b8 00 30 00 00 48 89 44 24 20 48 8d 45 d8 49 89 c1 48 b8 00 00 00 00 00 00 00 00 49 89 c0 48 8d 45 e0 49 89 c3 48 8b 45 e8 49 89 c2 4c 89 d1 4c 89 da 4c 8b 1d 04 80 03 00 41 ff d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -765,6 +798,7 @@ rule Trojan_Win64_ShellcodeRunner_RPA_2147926892_1
         $x_1_1 = {2e 74 65 78 74 00 00 00 e6 6a 0c 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 60 2e 72 64 61 74 61 00 00 34 18 02 00 00 80 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 40 2e 64 61 74 61 00 00 00 34 89 00 00 00 a0 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0 2e 70 64 61 74 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -787,6 +821,7 @@ rule Trojan_Win64_ShellcodeRunner_CCJR_2147927756_0
         $x_1_2 = {4c 8d 4d d0 ba 20 f2 08 00 41 b8 40 00 00 00 48 8b cb ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -808,6 +843,7 @@ rule Trojan_Win64_ShellcodeRunner_MAZ_2147933870_0
         $x_5_1 = {33 d2 41 0f b6 c0 41 c0 e0 02 48 f7 f1 41 02 d0 02 d1 30 14 19 48 ff c1 48 3b cf 0f 82 7a ff ff ff}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -829,6 +865,7 @@ rule Trojan_Win64_ShellcodeRunner_CLZ_2147934086_0
         $x_5_1 = {33 d2 4d 63 c2 4d 3b c1 48 8d 49 ?? 48 0f 45 d0 0f b6 04 1a 30 41 ff 33 c0 4d 3b c1 41 0f 45 c2 44 8d 50 01 48 8d 42 01 49 83 eb 01 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -857,6 +894,7 @@ rule Trojan_Win64_ShellcodeRunner_PKZ_2147935244_0
         $x_1_8 = "GlobalMemoryStatusEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -878,6 +916,7 @@ rule Trojan_Win64_ShellcodeRunner_ZIN_2147935851_0
         $x_7_1 = {31 c0 48 8b 7c 24 50 48 8b 94 24 88 00 00 00 4c 8b 84 24 d0 00 00 00 4c 8b 8c 24 c8 00 00 00 48 39 c5 74 ?? 48 83 f8 10 0f 84 ?? ?? ?? ?? 41 8a 0c 01 41 30 0c 02 48 ff c0 eb e4 49 83 f8 f0 0f 84}  //weight: 7, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -900,6 +939,7 @@ rule Trojan_Win64_ShellcodeRunner_A_2147936267_0
         $x_2_2 = {53 56 57 55 48 8d 35 aa ef c0 ff 48 8d be db 0f f1 ff 48 8d 87 9c 41 4d 00 ff 30 c7 00 5c 24 97 9c 50 57 31 db 31 c9 48 83 cd ff e8 50 00 00 00 01 db 74 02}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -921,6 +961,7 @@ rule Trojan_Win64_ShellcodeRunner_B_2147936273_0
         $x_2_1 = {8b 55 fc 48 8b 45 f0 41 b8 23 00 00 00 48 89 c1 e8 ?? ?? ff ff 48 89 45 e8 e8 ?? ?? 00 00 48 98 48 89 45 e0 48 8b 45 e0 48 89 c2 48 83 ea 01 48 89 55 d8 48 83 c0 0f 48 c1 e8 04 48 c1 e0 04 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -943,6 +984,7 @@ rule Trojan_Win64_ShellcodeRunner_NR_2147936333_0
         $x_2_2 = {48 8b 4c 24 20 48 8b 51 30 48 8b 9a a0 00 00 00 48 8d 05 b1 ff 21 00 e8 ec 24 fe ff 48 85 c0 0f 95 c1 0f b6 54 24 15 09 d1 88 4c 24 17}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -965,6 +1007,7 @@ rule Trojan_Win64_ShellcodeRunner_SMW_2147936578_0
         $x_3_2 = {48 33 c0 4d 33 d2 49 83 c2 60 65 49 8b 02 48 8b 40 18 48 8b 40 10 48 8b 00 48 8b 00 48 8b 40 30}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -986,6 +1029,7 @@ rule Trojan_Win64_ShellcodeRunner_MLZ_2147936781_0
         $x_5_1 = {0f 10 00 4c 8d 4c 24 20 ba b1 01 00 00 41 0f 11 00 0f 10 48 10 41 0f 11 48 10 0f 10 40 20 41 0f 11 40 20 0f b6 48 ?? 41 88 48 30 41 b8 20 00 00 00 48 8b cb ff 15 8a 1e 00 00 48 8d 0d 13 21 00 00 e8 ?? ?? ?? ?? ff d3 33 c0 48 8b 4c 24 28 48 33 cc e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1007,6 +1051,7 @@ rule Trojan_Win64_ShellcodeRunner_TPZ_2147936968_0
         $x_5_1 = {48 8b 8d 00 01 00 00 48 03 c8 48 8b c1 0f b6 00 0f b6 8d ?? ?? ?? ?? 33 c1 48 8b 4d 08 48 8b 95 00 01 00 00 48 03 d1 48 8b ca 88 01 eb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1038,6 +1083,7 @@ rule Trojan_Win64_ShellcodeRunner_RPD_2147939684_0
         $x_10_11 = "OpenAi_Service" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1067,6 +1113,7 @@ rule Trojan_Win64_ShellcodeRunner_RPS_2147939685_0
         $x_10_9 = "OpenAi_Service" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1090,6 +1137,7 @@ rule Trojan_Win64_ShellcodeRunner_AHB_2147941646_0
         $x_1_3 = {73 50 61 79 6c 6f 61 64 53 69 7a 65 00 00 00 00 70 50 61 79 6c 6f 61 64 44 61 74 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1111,6 +1159,7 @@ rule Trojan_Win64_ShellcodeRunner_ALV_2147942873_0
         $x_5_1 = {41 ff c1 49 63 c9 48 8d 95 ?? ?? ?? ?? 48 03 d1 0f b6 0a 41 88 0b 44 88 02 45 02 03 41 0f b6 d0 44 0f b6 84 15 ?? ?? ?? ?? 45 30 02 49 ff c2 48 83 eb 01 75 92}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1132,6 +1181,7 @@ rule Trojan_Win64_ShellcodeRunner_C_2147945037_0
         $x_2_1 = {0f b6 0c 07 30 08 48 8d 40 01 48 83 ea 01 75 ?? eb ?? f3 0f 6f 03 f3 0f 6f 0e 0f 57 c8 f3 0f 7f 0b 48 83 c3 ?? 49 83 c6 ?? 48 83 ef ?? 48 83 c5 ?? 0f 11 36 49 83 ef}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1153,6 +1203,7 @@ rule Trojan_Win64_ShellcodeRunner_DEL_2147945717_0
         $x_5_1 = {41 f7 e8 41 03 d0 c1 fa 05 8b c2 c1 e8 1f 03 d0 0f be c2 6b c8 33 41 0f b6 c0 41 ff c0 2a c1 04 38 41 30 41 ff 41 83 f8 0e 7c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1174,6 +1225,7 @@ rule Trojan_Win64_ShellcodeRunner_SXA_2147945954_0
         $x_5_1 = {ff d0 48 89 45 f8 48 83 7d f8 00 75 07 b8 01 00 00 00 eb 1c 8b 55 ec 48 8b 45 f8 89 10 48 8b 45 f8 48 89 45 f0 48 8b 45 f0 ff d0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

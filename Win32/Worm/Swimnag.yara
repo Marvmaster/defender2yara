@@ -26,6 +26,7 @@ rule Worm_Win32_Swimnag_A_2147609965_0
         $x_1_11 = {73 64 65 73 63 00 00 00 73 64 69 73 70 6c 61 79 00 00 00 00 73 65 72 76 64 6c 6c 64 69 73 70 6c 61 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -58,6 +59,7 @@ rule Worm_Win32_Swimnag_A_2147620488_0
         $x_1_12 = "after_startup_delay" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 5 of ($x_1_*))) or
             ((3 of ($x_5_*))) or

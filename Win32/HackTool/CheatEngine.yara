@@ -21,6 +21,7 @@ rule HackTool_Win32_CheatEngine_RC_2147772782_0
         $x_1_6 = "All In One Hacks" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

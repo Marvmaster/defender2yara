@@ -19,6 +19,7 @@ rule Trojan_Linux_Test_Sig_Infected_ELF_2147910911_0
         $x_1_5 = "1e81a0b5-df41-4cf5-b65a-704415470174" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Ransom_Win64_AidLocker_YAN_2147929985_0
         $x_1_6 = "publication of your data" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Loki_MC_2147755494_0
         $x_1_1 = {50 e8 28 ff ff ff b8 ?? ?? ?? ?? 31 c9 68 ?? ?? ?? ?? 5a 80 34 01 ?? 41 39 d1 75 ?? 05 ?? ?? ?? ?? ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanSpy_Win32_Loki_CM_2147755504_0
         $x_1_1 = {50 e8 3a ff ff ff b8 ?? ?? ?? ?? 31 c9 68 ?? ?? ?? ?? 5a 80 34 01 ?? 41 39 d1 75 ?? 05 ?? ?? ?? ?? ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule TrojanSpy_Win32_Loki_MF_2147755583_0
         $x_1_1 = {66 3b 44 24 [0-48] 50 e8 ?? ?? ?? ?? b8 ?? ?? ?? ?? 31 c9 68 ?? ?? ?? ?? 5a 80 34 01 ?? 41 39 d1 ?? ?? 05 ?? ?? ?? ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

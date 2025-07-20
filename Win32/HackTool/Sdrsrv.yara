@@ -26,6 +26,7 @@ rule HackTool_Win32_Sdrsrv_A_2147723367_0
         $x_100_11 = "P:\\Projects\\C++\\Trojan\\Target\\Sdrsrv\\Win32\\Release\\Sdrsrv.pdb" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*))) or
             ((1 of ($x_100_*))) or

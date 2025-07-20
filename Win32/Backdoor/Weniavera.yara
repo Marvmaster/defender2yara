@@ -22,6 +22,7 @@ rule Backdoor_Win32_Weniavera_A_2147690749_0
         $x_1_8 = {68 bb 01 00 00 89 84 24 98 00 00 00 ff d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))

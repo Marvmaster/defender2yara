@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Norkey_A_2147684521_0
         $x_1_2 = {8a 47 01 47 84 c0 75 f8 6a 00 b9 06 00 00 00 be ?? ?? ?? ?? 6a 00 f3 a5 6a 02 6a 00 6a 00 68 00 00 00 40 8d 84 24 c8 00 00 00 50 a4 ff 54 24 34 89 44 24 14 c7 44 24 18 28 23 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

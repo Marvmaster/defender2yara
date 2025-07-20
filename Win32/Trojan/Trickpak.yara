@@ -17,6 +17,7 @@ rule Trojan_Win32_Trickpak_DK_2147786219_0
         $x_10_2 = {2b d1 69 d2 f0 00 00 00 83 c4 24 03 d3 ff d2}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

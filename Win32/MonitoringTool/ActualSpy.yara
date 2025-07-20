@@ -22,6 +22,7 @@ rule MonitoringTool_Win32_ActualSpy_14895_0
         $x_1_8 = "Software\\ASMon\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 3 of ($x_1_*))) or
             ((5 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule MonitoringTool_Win32_ActualSpy_14895_1
         $x_1_2 = "nthidefilemapping" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule MonitoringTool_Win32_ActualSpy_14895_2
         $x_1_4 = "mousehook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule MonitoringTool_Win32_ActualSpy_14895_3
         $x_1_4 = "SetKeyboardHook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule MonitoringTool_Win32_ActualSpy_14895_4
         $x_1_5 = "Actual Spy - " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule MonitoringTool_Win32_ActualSpy_14895_5
         $x_3_9 = {74 2f 6a 38 6a 00 6a 00 68 1f 00 0f 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 7 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or

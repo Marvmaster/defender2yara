@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_AutoHK_A_2147717058_0
         $x_5_6 = "FileCreateShortcut, \"%A_Temp%\\%A_ScriptName%\", %A_Startup%\\Golupdate.lnk,,,,1" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -51,6 +52,7 @@ rule TrojanDownloader_Win32_AutoHK_C_2147730508_0
         $x_1_7 = "\\Windows\\window2.vbs\" /F,, hide" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
@@ -80,6 +82,7 @@ rule TrojanDownloader_Win32_AutoHK_D_2147730519_0
         $x_1_5 = "/FeedBack.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

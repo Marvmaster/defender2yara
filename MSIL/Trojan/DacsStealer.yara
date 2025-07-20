@@ -21,6 +21,7 @@ rule Trojan_MSIL_DacsStealer_A_2147893034_0
         $x_2_6 = "T2JqZWN0ICJwdXJwb3NlIiB8IFNlbGVjdC1PYmplY3QgLUZpcnN" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

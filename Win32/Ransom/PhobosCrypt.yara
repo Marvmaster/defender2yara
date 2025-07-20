@@ -17,6 +17,7 @@ rule Ransom_Win32_PhobosCrypt_SK_2147756277_0
         $x_2_2 = {f3 a4 56 c7 04 e4 ff ff 0f 00 59 89 7d f8 29 ff 0b bb ?? ?? ?? ?? 89 f8 8b 7d f8 55 81 04 e4 ?? ?? ?? ?? 29 2c e4 8f 83 ?? ?? ?? ?? 21 8b ?? ?? ?? ?? 89 4d f8 8b 8b ?? ?? ?? ?? 01 c1 51 8b 4d f8 58 ff e0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanProxy_Win32_Cahecon_A_2147686018_0
         $x_1_2 = {75 6f 6c 2e 63 6f 6e 68 65 63 61 61 75 6f 6c 2e 63 6f 6d 2e 62 72 2f 62 6c 61 63 6b 2f 3f [0-5] 74 69 70 6f 3d 61 6c 69 76 65 69 26 63 6c 69 65 6e 74 65 3d 74 65 73 74 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

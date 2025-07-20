@@ -27,6 +27,7 @@ rule Trojan_MSIL_Avascrypt_RPY_2147836081_0
         $x_1_12 = "Environment" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 10 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

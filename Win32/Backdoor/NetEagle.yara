@@ -16,6 +16,7 @@ rule Backdoor_Win32_NetEagle_MX_2147758154_0
         $x_1_1 = {8d 0c 02 8a 04 02 2a c2 34 ef 8a d8 c0 eb 06 c0 e0 02 0a d8 42 3b 54 24 ?? 88 19}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

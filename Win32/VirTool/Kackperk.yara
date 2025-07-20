@@ -17,6 +17,7 @@ rule VirTool_Win32_Kackperk_A_2147767614_0
         $x_1_2 = "SSH_RevShell/client/core/shell.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

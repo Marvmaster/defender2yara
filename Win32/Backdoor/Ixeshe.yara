@@ -16,6 +16,7 @@ rule Backdoor_Win32_Ixeshe_H_2147717370_0
         $x_1_1 = {c6 d1 0f 6b 9f d9 49 fc [0-80] 4d 69 63 72 6f 73 6f 66 74 20 45 6e 68 61 6e 63 65 64 20 43 72 79 70 74 6f 67 72 61 70 68 69 63 20 50 72 6f 76 69 64 65 72 20 76 31 2e 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_Ixeshe_F_2147724230_0
         $x_1_4 = {6b c6 85 45 ef ff ff 4b c6 85 46 ef ff ff 49 c6 85 47 ef ff ff 4c c6 85 48 ef ff ff 4c c6 85 49 ef ff ff 20 c6 85 4a ef ff ff 25 c6 85 4b ef ff ff 73 c6 85 4c ef ff ff 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Backdoor_Win32_Ixeshe_A_2147724231_0
         $x_1_5 = {b9 e1 04 00 00 33 c0 8d bd ?? ?? ff ff f3 ab 66 ab aa c6 85 ?? ?? ff ff 27 c6 85 ?? ?? ff ff 25 c6 85 ?? ?? ff ff 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Backdoor_Win32_Ixeshe_D_2147724232_0
         $x_1_3 = {b9 08 00 00 00 b8 cc cc cc cc 8d [0-6] 6a 00 f3 ab}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Backdoor_Win32_Ixeshe_B_2147724233_0
         $x_1_3 = {89 65 d8 68 74 ea 43 00 e8 ?? ?? ?? ?? 8d 45 b8 50 8b cf c6 45 fc 09 e8 ?? ?? ?? ?? 8b c8 e8 ?? ?? ?? ?? 50 8d 4d f0 c6 45 fc 0c e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Backdoor_Win32_Ixeshe_C_2147724234_0
         $x_1_2 = {8d 54 24 1c c7 44 24 14 01 00 00 00 33 f6 8d 44 24 14 50 68 c7 00 00 00 52 55 ff d7 8b 44 24 14 03 f0 81 fe d0 07 00 00 8d 54 04 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Backdoor_Win32_Ixeshe_E_2147724235_0
         $x_1_6 = {b9 e1 04 00 00 33 c0 8d bd ?? ?? ff ff f3 ab 66 ab aa c6 85 ?? ?? ff ff 27 c6 85 ?? ?? ff ff 25 c6 85 ?? ?? ff ff 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

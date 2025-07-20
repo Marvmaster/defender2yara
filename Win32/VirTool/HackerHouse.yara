@@ -18,6 +18,7 @@ rule VirTool_Win32_HackerHouse_A_2147755612_0
         $x_2_3 = "payload.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

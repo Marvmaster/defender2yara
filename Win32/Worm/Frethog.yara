@@ -18,6 +18,7 @@ rule Worm_Win32_Frethog_AI_2147639629_0
         $x_2_3 = "VERSON:Ant-V" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

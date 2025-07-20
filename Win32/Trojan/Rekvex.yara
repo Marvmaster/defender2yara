@@ -17,6 +17,7 @@ rule Trojan_Win32_Rekvex_AO_2147817224_0
         $x_2_2 = {33 45 f8 8b 4d fc 8b 55 08 89 44 8a 18 e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

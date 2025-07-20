@@ -18,6 +18,7 @@ rule VirTool_WinNT_Lamechi_A_2147626695_0
         $x_1_4 = {80 3c 37 e8 75 17 8b 44 37 01 03 c7 8d 5c 30 05 53 ff 15 ?? ?? ?? ?? 84 c0 75 08 33 db 47 83 ff 40 72 dd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

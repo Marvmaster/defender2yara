@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Lofaul_A_2147697790_0
         $x_1_2 = {5c 6d 69 6e 61 72 6b 6f 2e 65 78 65 [0-15] 6f 70 65 6e [0-15] 45 72 72 6f 72 20 39 30 30 34 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

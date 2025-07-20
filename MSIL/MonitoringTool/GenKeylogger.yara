@@ -17,6 +17,7 @@ rule MonitoringTool_MSIL_GenKeylogger_205303_0
         $x_1_3 = "If you want to show the Keylogger program again later, press CTRL + ALT + Z" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

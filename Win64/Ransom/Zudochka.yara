@@ -19,6 +19,7 @@ rule Ransom_Win64_Zudochka_LK_2147850041_0
         $x_1_4 = ".rsm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

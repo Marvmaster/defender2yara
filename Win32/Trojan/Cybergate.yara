@@ -17,6 +17,7 @@ rule Trojan_Win32_Cybergate_ADK_2147828592_0
         $x_1_2 = "TVpQAAIAAAAEAA8A//8AALgAAAAAAAAAQAAaAAAAAAAAAAAAAAAAAAAAAAAAAAAA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

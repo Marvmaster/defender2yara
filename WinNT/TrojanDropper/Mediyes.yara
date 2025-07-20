@@ -16,6 +16,7 @@ rule TrojanDropper_WinNT_Mediyes_C_2147655212_0
         $x_1_2 = {83 f8 68 74 [0-2] e8 [0-2] 00 00 83 f8 ?? 74 ?? e8 [0-2] 00 00 83 f8 6b 74 ?? 8b 85 ?? ?? ff ff 83 08 48}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

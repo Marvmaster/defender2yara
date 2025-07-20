@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Bedep_A_2147709041_0
         $x_1_2 = {8b 41 3c 6a 01 8b 44 08 28 51 03 c1 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

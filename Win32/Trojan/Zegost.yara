@@ -17,6 +17,7 @@ rule Trojan_Win32_Zegost_CJ_2147727947_0
         $x_1_2 = {8b 45 08 8a 4d 13 8a 10 32 d1 02 d1 88 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Zegost_CK_2147728203_0
         $x_1_3 = {8a 14 01 80 c2 ?? 80 f2 ?? 88 14 01 83 c1 01 3b ce 7c ed}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Zegost_CL_2147730257_0
         $x_1_2 = {8b 45 08 8a 10 8a 4d ef 32 d1 02 d1 88 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win32_Zegost_CN_2147730304_0
         $x_1_2 = {c6 85 ec fe ff ff 4b c6 85 ed fe ff ff 6f c6 85 ee fe ff ff 74 c6 85 ef fe ff ff 68 c6 85 f0 fe ff ff 65 c6 85 f1 fe ff ff 72 c6 85 f2 fe ff ff 35 c6 85 f3 fe ff ff 39 c6 85 f4 fe ff ff 39}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_Win32_Zegost_CO_2147733873_0
         $x_1_3 = {c6 45 c5 49 c6 45 c6 44 c6 45 c7 3a c6 45 c9 30 c6 45 ca 31 c6 45 cb 34 c6 45 cc 2d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Trojan_Win32_Zegost_RT_2147779783_0
         $x_1_1 = {8d 49 00 a1 ?? ?? ?? ?? 69 c0 fd 43 03 00 05 c3 9e 26 00 a3 ?? ?? ?? ?? 8a 0d ?? ?? ?? ?? 30 0c 37 83 fb 19 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +155,7 @@ rule Trojan_Win32_Zegost_RM_2147780847_0
         $x_1_1 = {99 f7 f9 8b 74 24 ?? 80 c2 58 85 f6 76 ?? 8b 44 24 ?? 8a 08 32 ca 02 ca 88 08 40 4e 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +177,7 @@ rule Trojan_Win32_Zegost_PEF_2147798650_0
         $x_1_1 = {8b 44 24 10 8b c8 c1 e9 18 88 0c 3e 8b c8 c1 e9 10 88 4c 3e 01 8b c8 c1 e9 08 88 4c 3e 02 88 44 3e 03 83 c6 04 ff 44 24 18 8b 44 24 18 3b 44 24 14 72 9e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +199,7 @@ rule Trojan_Win32_Zegost_RB_2147838544_0
         $x_1_1 = {56 6a 40 68 00 30 00 00 68 5c dd 04 00 8b f1 6a 00 ff 15 ?? ?? ?? ?? 85 c0 75 02 5e c3 57 6a 00 6a 00 50 b9 57 37 01 00 81 c6 74 dd 04 00 8b f8 50 6a 00 6a 00 f3 a5 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -217,6 +226,7 @@ rule Trojan_Win32_Zegost_RC_2147846584_0
         $x_1_6 = "bitnet2005\\install\\Win32\\Release\\deinstall.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -239,6 +249,7 @@ rule Trojan_Win32_Zegost_DAL_2147850609_0
         $x_2_2 = {12 28 38 9b 1f 71 be 5c 4a 92 e6 cf a7 35 b1 66 7d ca 13 66 55 a7 50 6f 42 94 3a b4 ab d5 ad 11 b3 8a c5 5a d5 ec 51 ad 51 71}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -270,6 +281,7 @@ rule Trojan_Win32_Zegost_EN_2147851362_0
         $x_1_11 = "KSWebShield.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -291,6 +303,7 @@ rule Trojan_Win32_Zegost_RDA_2147892996_0
         $x_2_1 = {88 4d f3 0f be 55 ff 0f be 45 f3 33 d0 88 55 ff 8b 4d d0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +325,7 @@ rule Trojan_Win32_Zegost_ARA_2147920778_0
         $x_2_1 = {8a 04 0a 34 5b 88 01 41 4d 75 f5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

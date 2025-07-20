@@ -20,6 +20,7 @@ rule Worm_Win32_Seeav_B_2147693620_0
         $x_1_6 = "Microsoft\\Windows\\Desktop.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

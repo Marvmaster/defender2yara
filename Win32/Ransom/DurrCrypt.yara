@@ -20,6 +20,7 @@ rule Ransom_Win32_DurrCrypt_PA_2147946159_0
         $x_4_5 = "Your important files have been encrypted using military grade algorithms" wide //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or
             ((2 of ($x_4_*))) or

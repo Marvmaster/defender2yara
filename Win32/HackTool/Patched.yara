@@ -16,6 +16,7 @@ rule HackTool_Win32_Patched_Y_2147647747_0
         $x_1_2 = "radll_HasTheProductBeenPurchased" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

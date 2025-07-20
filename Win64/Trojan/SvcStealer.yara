@@ -18,6 +18,7 @@ rule Trojan_Win64_SvcStealer_BCP_2147934073_0
         $x_1_3 = "185.81.68.15" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_SvcStealer_RJP_2147937594_0
         $x_1_1 = {65 48 8b 0c 25 30 00 00 00 48 8b 51 60 48 89 5a 10 48 8b 45 e8 48 03 c3 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win64_SvcStealer_CM_2147942571_0
         $x_1_4 = "SELECT name_on_card, expiration_month, expiration_year, card_numb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win64_SvcStealer_DIG_2147942778_0
         $x_1_1 = {48 63 ca 8d 42 87 ff c2 42 30 44 21 0a 83 fa 57 72 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

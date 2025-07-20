@@ -23,6 +23,7 @@ rule PWS_MSIL_Chifroms_A_2147638754_0
         $x_1_9 = "steamsteal" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule PWS_MSIL_Chifroms_A_2147638754_1
         $x_1_5 = {63 68 72 6f 6d 65 73 74 65 61 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

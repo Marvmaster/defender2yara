@@ -18,6 +18,7 @@ rule Ransom_Win32_Venus_A_2147835088_0
         $x_1_3 = ".goodgame" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

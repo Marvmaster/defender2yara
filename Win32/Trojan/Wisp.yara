@@ -20,6 +20,7 @@ rule Trojan_Win32_Wisp_A_2147631964_0
         $x_1_6 = {53 65 44 65 62 75 67 50 72 69 76 69 6c 65 67 65 00 00 00 00 6f 75 74 6c 6f 6f 6b 2e 65 78 65 00 69 65 78 70 6c 6f 72 65 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Wisp_A_2147631982_0
         $x_1_6 = {53 68 75 74 64 6f 77 6e 57 69 74 68 6f 75 74 4c 6f 67 6f 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -71,6 +73,7 @@ rule Trojan_Win32_Wisp_B_2147631986_0
         $x_1_3 = {53 65 44 65 62 75 67 50 72 69 76 69 6c 65 67 65 00 00 00 00 6f 75 74 6c 6f 6f 6b 2e 65 78 65 00 69 65 78 70 6c 6f 72 65 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_Win32_Wisp_B_2147632297_0
         $x_1_3 = {2a 2e 2a 00 25 2d 33 30 73 2d 3e 25 2d 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_Win32_Wisp_D_2147723812_0
         $x_1_6 = "cmd /c \"reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\" /v start /t REG_SZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

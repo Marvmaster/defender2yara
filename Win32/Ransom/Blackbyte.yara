@@ -20,6 +20,7 @@ rule Ransom_Win32_Blackbyte_A_2147848368_0
         $x_2_5 = {4d 8d 49 02 41 f7 e8 c1 fa 04 8b c2 c1 e8 1f 03 d0 0f b7 c2 6b c8 ?? 41 0f b7 c0 41 ff c0 66 2b c1 66 83 c0 ?? 66 41 31 41 fe 41 83 f8 ?? 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

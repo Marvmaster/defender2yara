@@ -21,6 +21,7 @@ rule Ransom_Win32_Lizard_PAA_2147779919_0
         $x_1_6 = "key.txt.LIZARD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

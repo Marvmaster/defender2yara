@@ -17,6 +17,7 @@ rule Backdoor_MSIL_Powlistel_A_2147695747_0
         $x_1_3 = "ifreleri Kaydet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

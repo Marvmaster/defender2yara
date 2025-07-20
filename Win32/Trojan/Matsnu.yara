@@ -19,6 +19,7 @@ rule Trojan_Win32_Matsnu_A_2147652606_0
         $x_1_4 = {47 45 4f 3a 00 4c 4f 43 4b 3a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -46,6 +47,7 @@ rule Trojan_Win32_Matsnu_B_2147660318_0
         $x_1_3 = {30 d0 31 c9 b1 08 d3 ea f8 d1 d8 73 05 35 20 83 b8 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_Win32_Matsnu_J_2147679609_0
         $x_1_9 = {67 65 74 3d c7 85 ?? ?? ?? ?? 63 66 67 26 c7 85 ?? ?? ?? ?? 73 74 74 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -101,6 +104,7 @@ rule Trojan_Win32_Matsnu_L_2147682791_0
         $x_1_8 = "dlllist=%s&proclist=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -129,6 +133,7 @@ rule Trojan_Win32_Matsnu_M_2147689087_0
         $x_1_4 = {e8 0a 00 00 00 2f 25 73 3a 2a 2d 2d 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +157,7 @@ rule Trojan_Win32_Matsnu_O_2147690811_0
         $x_1_4 = {30 d0 31 c9 b1 08 d3 ea f8 d1 d8 73 05 35 20 83 b8 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -263,6 +269,7 @@ rule Trojan_Win32_Matsnu_W_2147706270_0
         $x_1_2 = {00 00 49 41 49 41 4e 46 49 41 49 41 4e 46 b8 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +305,7 @@ rule Trojan_Win32_Matsnu_R_2147711433_0
         $x_1_16 = {30 d0 31 c9 b1 08 d3 ea f8 d1 d8 73 05 35 20 83 b8 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -333,6 +341,7 @@ rule Trojan_Win32_Matsnu_SIB_2147798811_0
         $x_1_2 = {8b c7 88 08 [0-5] 83 c7 01 [0-16] 89 35 ?? ?? ?? ?? [0-8] bb f1 28 41 00 [0-16] 29 1d 02 [0-16] 8a 0e [0-16] 46 [0-16] 80 c1 ?? [0-10] c0 c9 ?? [0-16] fe c9 [0-10] 32 0d ?? ?? ?? ?? [0-5] c0 c1 ?? [0-10] fe c1 [0-16] c0 c9 ?? [0-10] c0 c9 ?? [0-5] c0 c1 ?? [0-16] c0 c1 ?? [0-10] 80 c1 ?? [0-16] fe c9 [0-5] fe c9 [0-16] fe c1 [0-10] fe c1 [0-16] fe c9 [0-16] c0 c9 ?? [0-16] 8b c7 88 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

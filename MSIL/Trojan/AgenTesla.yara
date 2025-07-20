@@ -18,6 +18,7 @@ rule Trojan_MSIL_AgenTesla_MBFW_2147903706_0
         $x_10_3 = {45 43 58 65 76 00 41 74 74 72 69 62 75 74 65}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_AgenTesla_MBYO_2147912556_0
         $x_1_1 = {07 08 06 08 6f ?? 00 00 0a 1f ?? 61 d2 9c 08 17 58 0c 08 06 6f ?? 00 00 0a 32}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_AgenTesla_MBXL_2147917650_0
         $x_1_2 = "5AXBJZ78H857Y54D77XJP8" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_MSIL_AgenTesla_MBXN_2147917866_0
         $x_1_8 = "SmtpClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_MSIL_AgenTesla_MBXT_2147922342_0
         $x_1_3 = "uiOAshyuxgYUA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

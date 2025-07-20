@@ -17,6 +17,7 @@ rule Virus_Win32_Alvabrig_D_2147623476_0
         $x_1_2 = {56 8b 75 3c 8b 74 2e 78 03 f5 56 8b 76 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Virus_Win32_Alvabrig_A_2147623559_0
         $x_1_4 = "%s\\dtw5d\\FromActiveX%08X%08X_%08d_%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Virus_Win32_Alvabrig_C_2147623560_0
         $x_1_4 = {5c 6c 64 73 68 79 72 2e 6f 6c 64 00 77 69 6e 69 6e 65 74 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Virus_Win32_Alvabrig_B_2147623561_0
         $x_1_4 = {64 74 77 35 64 00 64 74 77 35 64 5c 25 73 5f 25 30 38 64 2e 6c 70 73 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

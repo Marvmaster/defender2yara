@@ -16,6 +16,7 @@ rule Worm_Win32_Dipasik_A_2147678478_0
         $x_1_2 = {75 60 8d 8c 24 d0 03 00 00 68 3d 0d 00 00 51 c7 44 24 18 01 00 00 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Worm_Win32_Dipasik_B_2147709370_0
         $x_2_9 = {c4 0c 3c 34 74 04 3c 35 75 0a c7 05 ?? ?? ?? ?? 01 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -75,6 +77,7 @@ rule Worm_Win32_Dipasik_C_2147720994_0
         $x_1_6 = "if exist \"%s\" goto repeat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or

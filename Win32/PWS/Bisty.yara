@@ -17,6 +17,7 @@ rule PWS_Win32_Bisty_A_2147646062_0
         $x_2_3 = {4f 75 74 6c 6f 6f 6b 32 30 30 33 5f 49 4d 41 50 00 00 00 00 4f 75 74 6c 6f 6f 6b 32 30 30 32 5f 49 4d 41 50}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*))) or
             (all of ($x*))

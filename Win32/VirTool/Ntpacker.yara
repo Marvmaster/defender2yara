@@ -26,6 +26,7 @@ rule VirTool_Win32_Ntpacker_2147606362_0
         $x_100_12 = "ReadProcessMemory" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1000_*) and 8 of ($x_100_*))) or
             (all of ($x*))

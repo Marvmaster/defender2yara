@@ -20,6 +20,7 @@ rule Trojan_MSIL_Taskun_AH_2147781936_0
         $x_3_5 = "Timeseries" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_MSIL_Taskun_MA_2147813147_0
         $x_1_7 = "CreateInstance" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_MSIL_Taskun_MB_2147817203_0
         $x_1_7 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_MSIL_Taskun_RA_2147830300_0
         $x_1_5 = "ApplicationSettingsBase" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -125,6 +129,7 @@ rule Trojan_MSIL_Taskun_FAI_2147845053_0
         $x_2_2 = "Kolko_i_krzyzyk.ResourceX" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +151,7 @@ rule Trojan_MSIL_Taskun_FAJ_2147845169_0
         $x_5_1 = {0c 16 13 04 2b 1f 00 08 07 11 04 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 0a 6f ?? ?? 00 0a 00 00 11 04 18 58 13 04 11 04 07 6f ?? 00 00 0a fe 04 13 05 11 05 2d d1}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -167,6 +173,7 @@ rule Trojan_MSIL_Taskun_PSLR_2147845310_0
         $x_2_1 = {11 02 72 d6 07 00 70 72 d1 01 00 70 6f 5d 00 00 0a 72 da 07 00 70 72 e0 07 00 70 6f 5d 00 00 0a 13 02 38 c2 f6 ff ff 02 7b 12 00 00 04 6f 2d 00 00 0a 02 7b 2d 00 00 04 6f 2e 00 00 0a 38 24 17 00 00 02}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +196,7 @@ rule Trojan_MSIL_Taskun_FAN_2147845453_0
         $x_2_2 = "WindowsFormsApp1.Properties.Resources" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +218,7 @@ rule Trojan_MSIL_Taskun_SPRF_2147845660_0
         $x_10_1 = {00 07 09 18 6f ?? ?? ?? 0a 20 03 02 00 00 28 ?? ?? ?? 0a 13 05 08 11 05 6f ?? ?? ?? 0a 00 09 18 58 0d 00 09 07 6f ?? ?? ?? 0a fe 04 13 06 11 06 2d ce}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +241,7 @@ rule Trojan_MSIL_Taskun_FAT_2147845897_0
         $x_2_2 = "VendeBemVeiculos_Patterns.Properties.Resources" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -253,6 +263,7 @@ rule Trojan_MSIL_Taskun_ABTK_2147846318_0
         $x_6_1 = {11 14 11 16 18 6f ?? ?? ?? 0a 20 03 02 00 00 28 ?? ?? ?? 0a 13 18 11 15 11 18 6f ?? ?? ?? 0a 00 11 16 18 58 13 16 00 11 16 11 14 6f ?? ?? ?? 0a fe 04 13 19 11 19 2d c7}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -275,6 +286,7 @@ rule Trojan_MSIL_Taskun_ABVB_2147846518_0
         $x_1_2 = "4D5A90" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -296,6 +308,7 @@ rule Trojan_MSIL_Taskun_PSOC_2147847622_0
         $x_2_1 = {06 72 86 2d 00 70 6f ?? ?? ?? 0a 72 96 2d 00 70 72 9a 2d 00 70 6f ?? ?? ?? 0a 28 ?? ?? ?? 2b 28 ?? ?? ?? 2b 73 ?? ?? ?? 0a 0b 07 17 8d 57 00 00 01 25 16 1f 2d 9d 6f ?? ?? ?? 0a 0c 08 8e 69 8d a0 00 00 01 0d 16 13 07 2b 15 09 11 07 08 11 07 9a 1f 10 28 ?? ?? ?? 0a 9c 11 07}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -317,6 +330,7 @@ rule Trojan_MSIL_Taskun_ABXQ_2147847636_0
         $x_5_1 = {16 13 0d 2b 2f 11 0d 09 5d 13 0e 11 0d 09 5b 13 0f 08 11 0e 11 0f 6f ?? 00 00 0a 13 10 07 11 05 12 10 28 ?? 00 00 0a 9c 11 05 17 58 13 05 11 0d 17 58 13 0d 11 0d 09 11 04 5a 32 c9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -339,6 +353,7 @@ rule Trojan_MSIL_Taskun_GAN_2147847720_0
         $x_2_2 = "QuanLyBanHang.Properties.Resources" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -360,6 +375,7 @@ rule Trojan_MSIL_Taskun_GAO_2147847739_0
         $x_5_1 = {0c 16 0d 2b 1d 07 09 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 0a 13 05 08 11 05 6f ?? 00 00 0a 09 18 58 0d 09 07 6f ?? 00 00 0a fe 04 13 06 11 06 2d d4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -382,6 +398,7 @@ rule Trojan_MSIL_Taskun_ABXW_2147847805_0
         $x_1_2 = "DeleteMC" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -403,6 +420,7 @@ rule Trojan_MSIL_Taskun_ABZL_2147848626_0
         $x_5_1 = {16 0b 2b 28 07 09 5d 13 08 07 09 5b 13 09 08 11 08 11 09 6f ?? 00 00 0a 13 0d 11 04 12 0d 28 ?? 00 00 0a 6f ?? 00 00 0a 07 17 58 0b 07 09 11 06 5a fe 04 13 0a 11 0a 2d cb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -424,6 +442,7 @@ rule Trojan_MSIL_Taskun_AABM_2147849005_0
         $x_4_1 = {16 13 12 2b 5a 00 11 0a 11 10 11 12 6f ?? 00 00 0a 13 13 11 13 16 16 16 16 28 ?? 00 00 0a 28 ?? 00 00 0a 13 14 11 14 2c 2f 00 11 0b 12 13 28 ?? 00 00 0a 6f ?? 00 00 0a 00 11 0b 12 13 28 ?? 00 00 0a 6f ?? 00 00 0a 00 11 0b 12 13 28 ?? 00 00 0a 6f ?? 00 00 0a 00 00 00 11 12 17 d6 13 12}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -445,6 +464,7 @@ rule Trojan_MSIL_Taskun_AACJ_2147849356_0
         $x_4_1 = {16 13 08 2b 2c 00 08 11 05 11 07 58 11 06 11 08 58 6f ?? 00 00 0a 13 09 12 09 28 ?? 00 00 0a 13 0a 07 09 11 0a 9c 09 17 58 0d 00 11 08 17 58 13 08 11 08 17 fe 04 13 0b 11 0b 2d c9}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -466,6 +486,7 @@ rule Trojan_MSIL_Taskun_AACM_2147849424_0
         $x_4_1 = {16 13 08 2b 2a 08 11 05 11 07 58 11 06 11 08 58 6f ?? 00 00 0a 13 09 12 09 28 ?? 00 00 0a 13 0a 07 09 11 0a 9c 09 17 58 0d 11 08 17 58 13 08 11 08 17 32 d1}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -489,6 +510,7 @@ rule Trojan_MSIL_Taskun_ASAS_2147849443_0
         $x_1_3 = "Description.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -510,6 +532,7 @@ rule Trojan_MSIL_Taskun_AACQ_2147849523_0
         $x_5_1 = {16 13 08 2b 2c 00 09 11 05 11 07 58 11 06 11 08 58 6f ?? 00 00 0a 13 09 12 09 28 ?? 00 00 0a 13 0a 08 07 11 0a 9c 07 17 58 0b 00 11 08 17 58 13 08 11 08 17 fe 04 13 0b 11 0b 2d c9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -534,6 +557,7 @@ rule Trojan_MSIL_Taskun_ASAT_2147849597_0
         $x_1_4 = {42 00 3a 00 34 00 36 00 43 00 30 00 32 00 3a 00 3a 00 30 00 31 00 3a 00 35 00 33 00 3a 00 37 00 34 00 3a 00 37 00 32 00 3a 00 36 00 39 00 3a 00 36 00 45 00 3a 00 36 00 37 00 3a 00 34 00 36 00 3a 00 36 00 39 00 3a 00 36 00 43 00 3a 00 36 00 35 00 3a 00 34 00 39 00 3a 00 36 00 45 00 3a 00 36 00 36}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -555,6 +579,7 @@ rule Trojan_MSIL_Taskun_AACX_2147849612_0
         $x_5_1 = {16 0d 2b 29 11 06 06 08 58 07 09 58 6f ?? 00 00 0a 13 0e 12 0e 28 ?? 00 00 0a 13 09 11 05 11 04 11 09 9c 11 04 17 58 13 04 09 17 58 0d 09 17 fe 04 13 0a 11 0a 2d cd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -576,6 +601,7 @@ rule Trojan_MSIL_Taskun_AADO_2147849979_0
         $x_5_1 = {16 13 05 2b 22 00 06 11 05 18 6f ?? 00 00 0a 13 06 07 11 05 18 5b 11 06 1f 10 28 ?? 00 00 0a 9c 00 11 05 18 58 13 05 11 05 06 6f ?? 00 00 0a fe 04 13 07 11 07 2d ce}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -597,6 +623,7 @@ rule Trojan_MSIL_Taskun_AADP_2147849984_0
         $x_5_1 = {16 13 06 2b 22 00 07 11 06 18 6f ?? 00 00 0a 13 07 08 11 06 18 5b 11 07 1f 10 28 ?? 00 00 0a 9c 00 11 06 18 58 13 06 11 06 07 6f ?? 00 00 0a fe 04 13 08 11 08 2d ce}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -618,6 +645,7 @@ rule Trojan_MSIL_Taskun_AAEA_2147850151_0
         $x_5_1 = {16 13 04 2b 22 00 06 11 04 18 6f ?? 00 00 0a 13 05 07 11 04 18 5b 11 05 1f 10 28 ?? 00 00 0a 9c 00 11 04 18 58 13 04 11 04 06 6f ?? 00 00 0a fe 04 13 06 11 06 2d ce}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -639,6 +667,7 @@ rule Trojan_MSIL_Taskun_AAEN_2147850704_0
         $x_5_1 = {16 13 09 2b 22 00 07 11 09 18 6f ?? 00 00 0a 13 0a 08 11 09 18 5b 11 0a 1f 10 28 ?? 00 00 0a 9c 00 11 09 18 58 13 09 11 09 07 6f ?? 00 00 0a fe 04 13 0b 11 0b 2d ce}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -660,6 +689,7 @@ rule Trojan_MSIL_Taskun_SK_2147850741_0
         $x_2_1 = {06 07 18 6f ?? ?? ?? 0a 13 07 08 07 18 5b 11 07 1f 10 28 ?? ?? ?? 0a 9c 07 18 58 0b 07 06 6f ?? ?? ?? 0a fe 04 13 08 11 08 2d d5}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -683,6 +713,7 @@ rule Trojan_MSIL_Taskun_KBA_2147850834_0
         $x_1_3 = "Dodge" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -704,6 +735,7 @@ rule Trojan_MSIL_Taskun_AAFX_2147851016_0
         $x_5_1 = {16 13 09 2b 34 00 09 11 04 11 08 58 17 58 17 59 11 07 11 09 58 17 58 17 59 6f ?? 00 00 0a 13 0a 12 0a 28 ?? 00 00 0a 13 0b 08 07 11 0b 9c 07 17 58 0b 11 09 17 58 13 09 00 11 09 17 fe 04 13 0c 11 0c 2d c1}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -725,6 +757,7 @@ rule Trojan_MSIL_Taskun_AAGC_2147851117_0
         $x_5_1 = {16 13 06 2b 34 00 11 04 11 06 07 11 06 91 09 61 08 11 05 91 61 28 ?? 00 00 0a 9c 11 05 1f 15 fe 01 13 08 11 08 2c 05 16 13 05 2b 06 11 05 17 58 13 05 11 06 17 58 13 06 00 11 06 07 8e 69 17 59 fe 02 16 fe 01 13 09 11 09 2d ba}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -746,6 +779,7 @@ rule Trojan_MSIL_Taskun_AAGG_2147851142_0
         $x_5_1 = {11 05 8e 69 17 da 13 1e 16 13 1f 2b 1b 11 06 11 05 11 1f 9a 1f 10 28 ?? 00 00 0a 86 6f ?? 00 00 0a 00 11 1f 17 d6 13 1f 11 1f 11 1e 31 df}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -769,6 +803,7 @@ rule Trojan_MSIL_Taskun_ABS_2147851294_0
         $x_1_3 = "GetPixel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -790,6 +825,7 @@ rule Trojan_MSIL_Taskun_ARAC_2147851453_0
         $x_2_1 = {00 20 00 01 00 00 13 08 11 07 17 58 13 09 11 07 20 00 b6 00 00 5d 13 0a 11 09 20 00 b6 00 00 5d 13 0b 07 11 0b 91 11 08 58 13 0c 07 11 0a 91 13 0d 08 11 07 1f 16 5d 91 13 0e 11 0d 11 0e 61 13 0f 07 11 0a 11 0f 11 0c 59 11 08 5d d2 9c 00 11 07 17 58 13 07 11 07 20 00 b6 00 00 fe 04 13 10 11 10 2d 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -811,6 +847,7 @@ rule Trojan_MSIL_Taskun_ARAC_2147851453_1
         $x_2_1 = {11 05 08 6f 53 00 00 0a 5d 13 06 11 05 08 6f 53 00 00 0a 5b 13 07 08 72 36 01 00 70 18 18 8d ?? ?? ?? 01 25 16 11 06 8c ?? ?? ?? 01 a2 25 17 11 07 8c ?? ?? ?? 01 a2 28 ?? ?? ?? 0a a5 19 00 00 01 13 08 12 08 28 55 00 00 0a 13 09 07 11 09 6f ?? ?? ?? 0a 00 00 11 05 17 58 13 05 11 05 08 6f 53 00 00 0a 08 6f 57 00 00 0a 5a fe 04 13 0a 11 0a 2d 8c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -833,6 +870,7 @@ rule Trojan_MSIL_Taskun_ARAE_2147851454_0
         $x_2_2 = {08 11 05 07 11 05 18 5a 18 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a d2 9c 00 11 05 17 58 13 05 11 05 08 8e 69 fe 04 13 06 11 06 2d d4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -854,6 +892,7 @@ rule Trojan_MSIL_Taskun_SL_2147851872_0
         $x_2_1 = {00 07 11 12 07 8e 69 5d 07 11 12 07 8e 69 5d 91 08 11 12 1f 16 5d 6f 41 00 00 0a 61 28 42 00 00 0a 07 11 12 17 58 07 8e 69 5d 91 28 43 00 00 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d 28 44 00 00 0a 9c 00 11 12 15 58 13 12 11 12 16 fe 04 16 fe 01 13 13 11 13 2d a8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -875,6 +914,7 @@ rule Trojan_MSIL_Taskun_ARAF_2147851982_0
         $x_2_1 = {09 08 6f c0 00 00 0a 5d 13 06 09 08 6f c0 00 00 0a 5b 13 07 08 72 d5 09 00 70 18 18 8d ?? ?? ?? 01 25 16 11 06 8c ?? ?? ?? 01 a2 25 17 11 07 8c ?? ?? ?? 01 a2 28 ?? ?? ?? 0a a5 33 00 00 01 13 08 12 08 28 c2 00 00 0a 13 09 07 11 09 6f c3 00 00 0a 00 09 17 58 0d 00 09 08 6f c0 00 00 0a 08 6f c4 00 00 0a 5a fe 04 13 0a 11 0a 2d 91}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -897,6 +937,7 @@ rule Trojan_MSIL_Taskun_ASCP_2147852295_0
         $x_1_2 = "Airplane_Travelling.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -919,6 +960,7 @@ rule Trojan_MSIL_Taskun_ARAG_2147852357_0
         $x_2_2 = {11 04 11 09 18 6f ?? ?? ?? 0a 13 0a 11 05 11 09 18 5b 11 0a 1f 10 28 ?? ?? ?? 0a d2 9c 00 11 09 18 58 13 09 11 09 11 04 6f ?? ?? ?? 0a fe 04 13 0b 11 0b 2d ca}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -940,6 +982,7 @@ rule Trojan_MSIL_Taskun_ARAH_2147852358_0
         $x_2_1 = {00 07 11 04 07 8e 69 5d 07 11 04 07 8e 69 5d 91 08 11 04 1f 16 5d 6f ?? ?? ?? 0a 61 28 ?? ?? ?? 0a 07 11 04 17 58 07 8e 69 5d 91 28 ?? ?? ?? 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 00 11 04 15 58 13 04 11 04 16 fe 04 16 fe 01 13 05 11 05 2d ac}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -961,6 +1004,7 @@ rule Trojan_MSIL_Taskun_ARAH_2147852358_1
         $x_2_1 = {00 07 11 05 07 8e 69 5d 07 11 05 07 8e 69 5d 91 08 11 05 1f 16 5d 6f ?? ?? ?? 0a 61 28 ?? ?? ?? 0a 07 11 05 17 58 07 8e 69 5d 91 28 ?? ?? ?? 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 00 11 05 15 58 13 05 11 05 16 fe 04 16 fe 01 13 06 11 06 2d ac}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -982,6 +1026,7 @@ rule Trojan_MSIL_Taskun_ARAI_2147852359_0
         $x_2_1 = {07 11 04 07 8e 69 5d 07 11 04 07 8e 69 5d 91 08 11 04 1f 16 5d 6f ?? ?? ?? 0a 61 28 ?? ?? ?? 0a 07 11 04 17 58 07 8e 69 5d 91 28 ?? ?? ?? 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 11 04 15 58 13 04 11 04 16 2f b7}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1003,6 +1048,7 @@ rule Trojan_MSIL_Taskun_KAC_2147852430_0
         $x_10_1 = {00 09 11 04 11 22 58 11 21 11 23 58 6f ?? ?? 00 0a 13 24 12 24 28 ?? ?? 00 0a 13 25 08 07 11 25 9c 07 17 58 0b 11 23 17 58 13 23 00 11 23 17 fe 04 13 26 11 26 2d c9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1024,6 +1070,7 @@ rule Trojan_MSIL_Taskun_KAD_2147852435_0
         $x_10_1 = {00 07 11 12 07 8e 69 5d 07 11 12 07 8e 69 5d 91 08 11 12 1f 16 5d 6f ?? 00 00 0a 61 28 ?? 00 00 0a 07 11 12 17 58 07 8e 69 5d 91 28 ?? 00 00 0a 59 20 ?? ?? 00 00 58 20 ?? ?? 00 00 5d 28 ?? 00 00 0a 9c 00 11 12 15 58 13 12 11 12 16 fe 04 16 fe 01 13 13 11 13 2d a8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1045,6 +1092,7 @@ rule Trojan_MSIL_Taskun_ARAJ_2147852683_0
         $x_2_1 = {08 72 cb 3a 03 70 72 cf 3a 03 70 6f ?? ?? ?? 0a 28 ?? ?? ?? 06 0d 09 72 d5 3a 03 70 72 81 00 00 70 6f ?? ?? ?? 0a 13 04 11 04 6f ?? ?? ?? 0a 18 5b 8d ?? ?? ?? 01 13 05 16 13 08 2b 21 00 11 05 11 08 11 04 11 08 18 5a 18 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a d2 9c 00 11 08 17 58 13 08 11 08 11 05 8e 69 fe 04 13 09 11 09 2d d1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1066,6 +1114,7 @@ rule Trojan_MSIL_Taskun_ARAK_2147852684_0
         $x_2_1 = {07 11 05 07 8e 69 5d 07 11 05 07 8e 69 5d 91 08 11 05 1f 16 5d 6f ?? ?? ?? 0a 61 07 11 05 17 58 07 8e 69 5d 91 20 00 01 00 00 58 20 00 01 00 00 5d 59 d2 9c 00 11 05 15 58 13 05 11 05 16 fe 04 16 fe 01 13 06 11 06 2d b6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1087,6 +1136,7 @@ rule Trojan_MSIL_Taskun_ASCQ_2147888227_0
         $x_1_1 = {58 0d 2b 3e 00 07 09 07 8e 69 5d 91 08 09 08 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 61 07 09 17 58 07 8e 69 5d 91 59 20 00 01 00 00 58 13 07 07 09 07 8e 69 5d 11 07 20 00 01 00 00 5d d2 9c 09 15 58 0d 00 09 16 fe 04 16 fe 01 13 08 11 08 2d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1108,6 +1158,7 @@ rule Trojan_MSIL_Taskun_AMAA_2147888634_0
         $x_1_1 = {1f 16 5d 91 13 [0-15] 17 58 07 8e 69 5d 13 [0-15] 59 20 00 01 00 00 58 20 ff 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1129,6 +1180,7 @@ rule Trojan_MSIL_Taskun_AMAA_2147888634_1
         $x_1_1 = {07 09 07 8e 69 5d 91 08 09 08 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 61 07 09 17 58 07 8e 69 5d 91 59 20 00 01 00 00 58 13 07 07 09 07 8e 69 5d 11 07 20 00 01 00 00 5d d2 9c 09 15 58 0d 09 16 2f c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1151,6 +1203,7 @@ rule Trojan_MSIL_Taskun_AAMS_2147888829_0
         $x_2_2 = {11 07 11 08 61 11 09 20 00 01 00 00 58 20 00 01 00 00 5d 59 13 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1173,6 +1226,7 @@ rule Trojan_MSIL_Taskun_ARBC_2147889346_0
         $x_2_2 = "QLCHApple_BUS.Properties.Resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1194,6 +1248,7 @@ rule Trojan_MSIL_Taskun_ARBF_2147889347_0
         $x_2_1 = {00 11 08 09 5d 13 09 11 08 11 04 5d 13 0a 07 11 09 91 13 0b 08 11 0a 6f ?? ?? ?? 0a 13 0c 07 11 08 17 58 09 5d 91 13 0d 11 0b 11 0c 61 11 0d 59 20 00 01 00 00 58 13 0e 07 11 09 11 0e 20 00 01 00 00 5d d2 9c 00 11 08 17 59 13 08 11 08 16 fe 04 16 fe 01 13 0f 11 0f 2d a6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1215,6 +1270,7 @@ rule Trojan_MSIL_Taskun_ARBG_2147889348_0
         $x_2_1 = {06 09 5d 13 05 06 11 07 5d 13 0a 07 11 05 91 13 0b 11 04 11 0a 6f ?? ?? ?? 0a 13 0c 07 06 17 58 09 5d 91 13 0d 11 0b 11 0c 61 11 0d 59 20 00 01 00 00 58 13 0e 07 11 05 11 0e 20 00 01 00 00 5d d2 9c 06 17 59 0a 06 16 fe 04 16 fe 01 13 0f 11 0f 2d ad}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1236,6 +1292,7 @@ rule Trojan_MSIL_Taskun_ARBH_2147889349_0
         $x_2_1 = {11 08 09 5d 13 09 11 08 11 04 5d 13 0a 07 11 09 91 13 0b 08 11 0a 6f ?? ?? ?? 0a 13 0c 07 11 08 17 58 09 5d 91 13 0d 11 0b 11 0c 61 11 0d 59 20 00 01 00 00 58 13 0e 07 11 09 11 0e 20 00 01 00 00 5d d2 9c 11 08 17 59 13 08 11 08 16 2f b1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1257,6 +1314,7 @@ rule Trojan_MSIL_Taskun_ARBJ_2147889350_0
         $x_2_1 = {00 11 09 11 04 5d 13 0a 11 09 11 05 5d 13 0b 08 11 0a 91 13 0c 09 11 0b 6f ?? ?? ?? 0a 13 0d 08 11 09 17 58 11 04 5d 91 13 0e 11 0c 11 0d 61 11 0e 59 20 00 01 00 00 58 13 0f 08 11 0a 11 0f 20 00 01 00 00 5d d2 9c 00 11 09 17 59 13 09 11 09 16 fe 04 16 fe 01 13 10 11 10 2d a4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1278,6 +1336,7 @@ rule Trojan_MSIL_Taskun_ARAQ_2147889373_0
         $x_2_1 = {07 09 07 8e 69 5d 07 09 07 8e 69 5d 91 08 09 08 6f ?? ?? ?? 0a 5d 6f ?? ?? ?? 0a 61 28 ?? ?? ?? 0a 07 09 17 58 07 8e 69 5d 91 28 ?? ?? ?? 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d 28 ?? ?? ?? 0a d2 9c 09 15 58 0d 09 16 fe 04 16 fe 01 13 07 11 07 2d ac}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1299,6 +1358,7 @@ rule Trojan_MSIL_Taskun_ARAQ_2147889373_1
         $x_2_1 = {00 20 00 01 00 00 13 07 11 06 17 58 13 08 11 06 20 00 cc 00 00 5d 13 09 11 08 20 00 cc 00 00 5d 13 0a 07 11 09 91 13 0b 1f 16 8d ?? ?? ?? 01 25 d0 ?? 00 00 04 28 ?? ?? ?? 0a 11 06 1f 16 5d 91 13 0c 07 11 0a 91 11 07 58 13 0d 11 0b 11 0c 61 13 0e 07 11 09 11 0e 11 0d 11 07 5d 59 d2 9c 00 11 06 17 58 13 06 11 06 20 00 cc 00 00 fe 04 13 0f 11 0f 2d 8b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1320,6 +1380,7 @@ rule Trojan_MSIL_Taskun_ARAS_2147889374_0
         $x_2_1 = {00 11 05 11 04 5d 13 09 07 11 09 91 08 11 05 1f 16 5d 91 61 13 0a 11 0a 07 11 05 17 58 11 04 5d 91 59 20 00 01 00 00 58 13 0b 07 11 09 11 0b 20 00 01 00 00 5d d2 9c 11 05 17 58 13 05 00 11 05 11 04 09 17 58 5a fe 04 13 0c 11 0c 2d b2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1341,6 +1402,7 @@ rule Trojan_MSIL_Taskun_ARAS_2147889374_1
         $x_2_1 = {00 08 11 04 08 8e 69 5d 08 11 04 08 8e 69 5d 91 09 11 04 09 6f ?? ?? ?? 0a 5d 6f ?? ?? ?? 0a 61 28 ?? ?? ?? 0a 08 11 04 17 58 08 8e 69 5d 91 28 ?? ?? ?? 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d 28 ?? ?? ?? 0a 9c 11 04 15 58 13 04 00 11 04 16 fe 04 16 fe 01 13 08 11 08 2d a4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1362,6 +1424,7 @@ rule Trojan_MSIL_Taskun_ARAS_2147889374_2
         $x_2_1 = {20 00 01 00 00 0d 06 17 58 13 09 06 20 00 cc 00 00 5d 13 04 11 09 20 00 cc 00 00 5d 13 0a 07 11 04 91 13 0b 1f 16 8d ?? ?? ?? 01 25 d0 ?? 00 00 04 28 ?? ?? ?? 0a 06 1f 16 5d 91 13 0c 07 11 0a 91 09 58 13 0d 11 0b 11 0c 61 13 0e 07 11 04 11 0e 11 0d 09 5d 59 d2 9c 06 17 58 0a 06 20 00 cc 00 00 fe 04 13 0f 11 0f 2d 96}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1383,6 +1446,7 @@ rule Trojan_MSIL_Taskun_ARBA_2147889376_0
         $x_2_1 = {11 09 09 5d 13 0a 11 09 11 04 5d 13 0b 07 11 0a 91 13 0c 08 11 0b 6f ?? ?? ?? 0a 13 0d 07 11 09 17 58 09 5d 91 13 0e 11 0c 11 0d 61 11 0e 59 20 00 01 00 00 58 13 0f 07 11 0a 11 0f 20 00 01 00 00 5d d2 9c 11 09 17 59 13 09 11 09 16 2f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1404,6 +1468,7 @@ rule Trojan_MSIL_Taskun_ARAZ_2147890084_0
         $x_2_1 = {06 07 06 8e 69 5d 06 07 06 8e 69 5d 91 11 0f 07 1f 16 5d 6f ?? ?? ?? 0a 61 28 ?? ?? ?? 0a 06 07 17 58 06 8e 69 5d 91 28 ?? ?? ?? 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d 28 ?? ?? ?? 0a 9c 07 15 58 0b 07 16 fe 04 16 fe 01 13 12 11 12 2d b0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1426,6 +1491,7 @@ rule Trojan_MSIL_Taskun_ARBE_2147890085_0
         $x_2_2 = "THDA_Group.Properties.Resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1447,6 +1513,7 @@ rule Trojan_MSIL_Taskun_ARBK_2147890532_0
         $x_2_1 = {72 21 01 00 70 6f ?? ?? ?? 0a 72 31 01 00 70 72 37 01 00 70 6f ?? ?? ?? 0a 72 3b 01 00 70 72 41 01 00 70 6f ?? ?? ?? 0a 72 47 01 00 70 72 4b 01 00 70 6f ?? ?? ?? 0a 0b 02 07 1f f6 28 ?? ?? ?? 06 17 8d ?? ?? ?? 01 25 16 1f 7e 9d 6f ?? ?? ?? 0a 0c 73 ?? ?? ?? 0a 0d 08 8e 69 17 da 13 08 16 13 09 2b 23 09 11 09 17 8d ?? ?? ?? 01 25 16 08 11 09 9a 1f 10 28 ?? ?? ?? 0a 86 9c 6f ?? ?? ?? 0a 11 09 17 d6 13 09 11 09 11 08 31 d7 17 8d ?? ?? ?? 01 25 16 09 6f ?? ?? ?? 0a a2 13 04 d0 ?? ?? ?? 01 28 ?? ?? ?? 0a 72 4f 01 00 70 28 ?? ?? ?? 0a 72 5f 01 00 70 72 63 01 00 70 6f ?? ?? ?? 0a 20 00 01 00 00 14 14 11 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1468,6 +1535,7 @@ rule Trojan_MSIL_Taskun_ARBM_2147890533_0
         $x_2_1 = {00 11 1a 09 5d 13 1b 11 1a 11 04 5d 13 1c 07 11 1b 91 13 1d 08 11 1c 6f ?? ?? ?? 0a 13 1e 07 11 1a 17 58 09 5d 91 13 1f 11 1d 11 1e 61 11 1f 59 20 00 01 00 00 58 13 20 07 11 1b 11 20 20 00 01 00 00 5d d2 9c 00 11 1a 17 59 13 1a 11 1a 16 fe 04 16 fe 01 13 21 11 21 2d a6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1490,6 +1558,7 @@ rule Trojan_MSIL_Taskun_ARBN_2147890534_0
         $x_2_2 = "PermissionViewer.Properties.Resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1512,6 +1581,7 @@ rule Trojan_MSIL_Taskun_ARBO_2147890535_0
         $x_2_2 = "QuanLyKhoHang.Properties.Resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1534,6 +1604,7 @@ rule Trojan_MSIL_Taskun_ARBP_2147890536_0
         $x_2_2 = "Do_an___Quan_ly_khach_san.Properties.Resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1556,6 +1627,7 @@ rule Trojan_MSIL_Taskun_ARBQ_2147892493_0
         $x_2_2 = "Battleships.MainForm.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1577,6 +1649,7 @@ rule Trojan_MSIL_Taskun_SM_2147892529_0
         $x_2_1 = {07 09 07 8e 69 5d 91 08 09 08 6f ?? ?? ?? 0a 5d 6f ?? ?? ?? 0a 61 07 09 17 58 07 8e 69 5d 91 59 20 00 01 00 00 58 13 07 07 09 07 8e 69 5d 11 07 20 00 01 00 00 5d d2 9c 09 15 58 0d 09 16 2f c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1599,6 +1672,7 @@ rule Trojan_MSIL_Taskun_AMAC_2147892661_0
         $x_1_2 = "2LQJF2GK3IAKRXW63CTORZGS4CNMVXHKSLUMVWQAU3ZON2GK3IAKRZGS3IAKJQW4ZDPNUA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1621,6 +1695,7 @@ rule Trojan_MSIL_Taskun_MBJV_2147892888_0
         $x_1_2 = "8573-3e16c7f38a59" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1642,6 +1717,7 @@ rule Trojan_MSIL_Taskun_NT_2147893376_0
         $x_5_1 = {11 07 20 40 79 1e 53 5a 20 ?? ?? ?? 2d 61 38 ?? ?? ?? ff 7e ?? ?? ?? 04 02 11 06 16 11 04 1a 59 28 ?? ?? ?? 0a 11 06 a5 ?? ?? ?? 1b 0b 11 07 20 ?? ?? ?? 65 5a 20 ?? ?? ?? f8 61 38 ?? ?? ?? ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1664,6 +1740,7 @@ rule Trojan_MSIL_Taskun_ASEQ_2147893817_0
         $x_1_2 = "Hierarchy.Sample.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1685,6 +1762,7 @@ rule Trojan_MSIL_Taskun_AMBA_2147894626_0
         $x_2_1 = {11 08 11 04 5d 13 09 11 08 11 05 5d 13 0a 11 08 17 58 11 04 5d 13 0b 07 11 09 91 08 11 0a 91 61 13 0c 20 00 01 00 00 13 0d 11 0c 07 11 0b 91 59 11 0d 58 11 0d 5d 13 0e 07 11 09 11 0e d2 9c 00 11 08 17 58 13 08 11 08 11 04 09 17 58 5a fe 04 13 0f 11 0f 2d a9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1706,6 +1784,7 @@ rule Trojan_MSIL_Taskun_AMBA_2147894626_1
         $x_1_1 = {07 11 07 07 8e 69 6a 5d d4 07 11 07 07 8e 69 6a 5d d4 91 08 11 07 1f 16 6a 5d d4 91 61 28 ?? 00 00 0a 07 11 07 17 6a 58 07 8e 69 6a 5d d4 91 28 ?? 00 00 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d 28 ?? 00 00 0a 9c 11 07 17 6a 58 13 07 11 07 07 8e 69 17 59 09 17 58 5a 6a 31 a4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1727,6 +1806,7 @@ rule Trojan_MSIL_Taskun_ABAS_2147896391_0
         $x_1_1 = {00 08 11 04 07 11 04 18 5a 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 0a d2 9c 00 11 04 17 58 13 04 11 04 08 8e 69 fe 04 13 05 11 05 2d d4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1748,6 +1828,7 @@ rule Trojan_MSIL_Taskun_KAE_2147897561_0
         $x_5_1 = {13 04 06 08 5d 13 05 06 17 58 08 5d 13 0b 07 11 0b 91 11 04 58 13 0c 07 11 05 91 13 0d 11 0d 11 07 06 1f 16 5d 91 61 13 0e 11 0e 11 0c 59 13 0f 07 11 05 11 0f 11 04 5d d2 9c 06 17 58 0a 06 08 11 08 17 58 5a fe 04 13 10 11 10 2d ae}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1769,6 +1850,7 @@ rule Trojan_MSIL_Taskun_ARAA_2147897738_0
         $x_2_1 = {20 00 01 00 00 13 10 11 08 17 58 13 17 11 08 11 0e 5d 13 11 11 17 11 0e 5d 13 18 11 0d 11 18 91 11 10 58 13 19 11 0d 11 11 91 13 1a 11 1a 11 13 11 08 1f 16 5d 91 61 13 1b 11 1b 11 19 59 13 1c 11 0d 11 11 11 1c 11 10 5d d2 9c 11 08 17 58 13 08 11 08 11 0e 11 14 17 58 5a fe 04 13 1d 11 1d 2d 9e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1790,6 +1872,7 @@ rule Trojan_MSIL_Taskun_KAF_2147898109_0
         $x_5_1 = {13 05 06 17 58 13 0b 06 09 5d 13 06 11 0b 09 5d 13 0c 08 11 0c 91 11 05 58 13 0d 08 11 06 91 13 0e 11 0e 11 07 06 1f 16 5d 91 61 13 0f 11 0f 11 0d 59 13 10 08 11 06 11 10 11 05 5d d2 9c 06 17 58 0a 06 09 11 08 17 58 5a 32 b0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1811,6 +1894,7 @@ rule Trojan_MSIL_Taskun_MBFQ_2147899005_0
         $x_1_1 = {0a 13 0d 28 ?? ?? ?? ?? 14 20 ?? ?? ?? ?? 28 ?? ?? ?? ?? 17 8d ?? ?? ?? ?? 25 16 11 ?? 28 ?? ?? ?? ?? a2 14 14 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1833,6 +1917,7 @@ rule Trojan_MSIL_Taskun_MBFQ_2147899005_1
         $x_1_2 = {07 06 8e 69 5d 06 07 06 8e 69 5d 91 08 07 08 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 61 28 ?? 00 00 0a 06 07 17 58 06 8e 69 5d 91}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1854,6 +1939,7 @@ rule Trojan_MSIL_Taskun_AMBD_2147899026_0
         $x_1_1 = {08 07 1f 10 6f ?? 00 00 0a 6f ?? 00 00 0a 08 6f ?? 00 00 0a 06 16 06 8e 69 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1875,6 +1961,7 @@ rule Trojan_MSIL_Taskun_ARA_2147899495_0
         $x_2_1 = {11 07 06 08 58 17 58 17 59 07 09 58 17 58 17 59 6f ?? ?? ?? 0a 13 10 12 10 28 ?? ?? ?? 0a 13 0a 11 05 11 04 11 0a 9c 11 04 17 58 13 04 09 17 58 0d 09 17 fe 04 13 0b 11 0b 2d c5}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1896,6 +1983,7 @@ rule Trojan_MSIL_Taskun_ARAD_2147899496_0
         $x_2_1 = {16 13 05 2b 2d 07 11 04 11 05 6f 2a 00 00 0a 13 08 07 11 04 11 05 6f 2a 00 00 0a 13 09 11 09 28 2b 00 00 0a 13 0a 09 08 11 0a d2 9c 11 05 17 58 13 05 11 05 07 6f 2c 00 00 0a 32 c9 08 17 58 0c 11 04 17 58 13 04 11 04 07 6f 2d 00 00 0a 32 b0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1917,6 +2005,7 @@ rule Trojan_MSIL_Taskun_ARAD_2147899496_1
         $x_2_1 = {00 20 00 01 00 00 13 07 11 06 17 58 13 08 11 06 20 00 3a 01 00 5d 13 09 11 08 20 00 3a 01 00 5d 13 0a 07 11 0a 91 11 07 58 13 0b 07 11 09 91 13 0c 08 11 06 1f 16 5d 91 13 0d 11 0c 11 0d 61 13 0e 07 11 09 11 0e 11 0b 59 11 07 5d d2 9c 00 11 06 17 58 13 06 11 06 20 00 3a 01 00 fe 04 13 0f 11 0f 2d 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1938,6 +2027,7 @@ rule Trojan_MSIL_Taskun_ARAU_2147899609_0
         $x_2_1 = {00 07 09 07 8e 69 5d 91 08 09 08 6f ?? ?? ?? 0a 5d 6f ?? ?? ?? 0a 61 07 09 17 58 07 8e 69 5d 91 59 20 00 01 00 00 58 13 07 07 09 07 8e 69 5d 11 07 20 00 01 00 00 5d d2 9c 09 15 58 0d 00 09 16 fe 04 16 fe 01 13 08 11 08 2d b5}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1960,6 +2050,7 @@ rule Trojan_MSIL_Taskun_ATA_2147900353_0
         $x_2_2 = {1e 62 60 0f 01 28 ?? 00 00 0a 60 13 06 02 19 8d ?? 00 00 01 25 16 11 06 1f 10 63 20 ff 00 00 00 5f d2 9c 25 17 11 06 1e 63 20 ff 00 00 00 5f d2 9c 25 18 11 06 20 ff 00 00 00 5f d2 9c 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1986,6 +2077,7 @@ rule Trojan_MSIL_Taskun_ATA_2147900353_1
         $x_1_6 = "Maps_Router.ManHinhChinh.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2007,6 +2099,7 @@ rule Trojan_MSIL_Taskun_KAG_2147900777_0
         $x_5_1 = {5d 91 13 0e 11 0d 11 0e 61 13 0f 07 11 0a 11 0f 11 0c 59}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2028,6 +2121,7 @@ rule Trojan_MSIL_Taskun_ARAO_2147900819_0
         $x_2_1 = {20 00 01 00 00 0d 06 17 58 13 0a 06 20 00 9a 01 00 5d 13 04 11 0a 20 00 9a 01 00 5d 13 0b 07 11 04 91 13 0c 1f 16 8d ?? ?? ?? 01 25 d0 ?? 00 00 04 28 ?? ?? ?? 0a 06 1f 16 5d 91 13 0d 07 11 0b 91 09 58 13 0e 11 0c 11 0d 61 13 0f 11 0f 11 0e 59 13 10 07 11 04 11 10 09 5d d2 9c 06 17 58 0a 06 11 06 fe 04 13 11 11 11 2d 95}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2049,6 +2143,7 @@ rule Trojan_MSIL_Taskun_AMAF_2147900950_0
         $x_1_1 = {07 11 08 91 08 11 05 1f 16 5d 91 61 13 09 11 09 07 11 05 17}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2070,6 +2165,7 @@ rule Trojan_MSIL_Taskun_AMAF_2147900950_1
         $x_1_1 = {1f 16 5d 91 13 [0-15] 61 [0-30] 17 58 [0-15] 08 5d 91 13 [0-20] 20 00 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2093,6 +2189,7 @@ rule Trojan_MSIL_Taskun_KAI_2147901078_0
         $x_1_3 = "ToBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2114,6 +2211,7 @@ rule Trojan_MSIL_Taskun_ARAT_2147901379_0
         $x_2_1 = {11 04 09 5d 13 08 07 11 08 91 28 ?? ?? ?? 0a 72 ?? ?? ?? 70 6f ?? ?? ?? 0a 11 04 1f 16 5d 91 61 13 09 11 09 07 11 04 17 58 09 5d 91 59 20 00 01 00 00 58 13 0a 07 11 08 11 0a 20 00 01 00 00 5d d2 9c 11 04 17 58 13 04 11 04 09 08 17 58 5a 32 af}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2135,6 +2233,7 @@ rule Trojan_MSIL_Taskun_ARAT_2147901379_1
         $x_2_1 = {20 00 01 00 00 13 05 11 04 17 58 11 04 20 00 56 01 00 5d 13 06 20 00 56 01 00 5d 13 07 07 11 06 91 13 08 07 11 06 11 08 1f 16 8d ?? ?? ?? 01 25 d0 ?? 00 00 04 28 ?? ?? ?? 0a 11 04 1f 16 5d 91 61 07 11 07 91 11 05 58 11 05 5d 59 d2 9c 11 04 17 58 13 04 11 04 20 00 56 01 00 32 a3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2156,6 +2255,7 @@ rule Trojan_MSIL_Taskun_ARAT_2147901379_2
         $x_2_1 = {00 20 00 01 00 00 13 06 11 05 17 58 13 07 11 05 20 00 1e 01 00 5d 13 08 11 07 20 00 1e 01 00 5d 13 09 06 11 08 91 13 0a 1f 16 8d ?? ?? ?? 01 25 d0 ?? 00 00 04 28 ?? ?? ?? 0a 11 05 1f 16 5d 91 13 0b 06 11 09 91 11 06 58 13 0c 06 11 08 11 0a 11 0b 61 11 0c 11 06 5d 59 d2 9c 00 11 05 17 58 13 05 11 05 20 00 1e 01 00 fe 04 13 0d 11 0d 2d 8f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2177,6 +2277,7 @@ rule Trojan_MSIL_Taskun_SPCC_2147901463_0
         $x_4_1 = {07 11 09 11 0b 11 0c 61 11 0d 11 07 5d 59 d2 9c 00 11 06 17 58 13 06}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2198,6 +2299,7 @@ rule Trojan_MSIL_Taskun_SPCX_2147901496_0
         $x_4_1 = {07 11 08 11 0a 11 0b 61 11 0c 11 06 5d 59 d2 9c 00 11 05 17 58 13 05}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2220,6 +2322,7 @@ rule Trojan_MSIL_Taskun_KAH_2147901600_0
         $x_5_2 = {11 09 11 01 11 05 17 58 11 04 5d 91 59 20 00 ?? 00 00 58 20 00 ?? 00 00 5d 13 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2241,6 +2344,7 @@ rule Trojan_MSIL_Taskun_KAJ_2147901604_0
         $x_5_1 = {11 05 1f 16 5d 91 61 13 09}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2262,6 +2366,7 @@ rule Trojan_MSIL_Taskun_SPZZ_2147901622_0
         $x_10_1 = {5d 59 d2 9c 00 11 06 17 58 13 06 11 06}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2283,6 +2388,7 @@ rule Trojan_MSIL_Taskun_SPCJ_2147901822_0
         $x_5_1 = {11 0b 91 61 07 11 09 91 11 06 58 11 06 5d 59 d2 9c 00 11 05 17 58 13 05}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2304,6 +2410,7 @@ rule Trojan_MSIL_Taskun_SPDD_2147901909_0
         $x_5_1 = {91 11 06 58 11 06 5d 59 d2 9c 00 11 05 17 58 13 05}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2325,6 +2432,7 @@ rule Trojan_MSIL_Taskun_NB_2147902553_0
         $x_5_1 = {5d 59 d2 9c 06 17 58 0a 06 20 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2346,6 +2454,7 @@ rule Trojan_MSIL_Taskun_KAK_2147902738_0
         $x_1_1 = {5d 91 61 13 ?? 11 ?? 06 07 17 58 08 5d 91 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2367,6 +2476,7 @@ rule Trojan_MSIL_Taskun_SPXN_2147902747_0
         $x_10_1 = {5d 91 61 13 0a 11 0a 07 11 04 17 58 09 5d 91 59 20 ?? ?? ?? 00 58 20 ?? ?? ?? 00 5d d2 13 0b}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2388,6 +2498,7 @@ rule Trojan_MSIL_Taskun_SPXM_2147902748_0
         $x_5_1 = {5d 91 11 0b 61 13 0c 07 11 09 07 8e 69 5d 91 13 0d}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2409,6 +2520,7 @@ rule Trojan_MSIL_Taskun_AMBE_2147902840_0
         $x_1_1 = {5d 91 61 06 07 17 58 09 5d 91 59 20 00 01 00 00 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2430,6 +2542,7 @@ rule Trojan_MSIL_Taskun_AMBE_2147902840_1
         $x_2_1 = {8e 69 6a 5d d4 91 61 [0-14] 6a 5d d4 91 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2451,6 +2564,7 @@ rule Trojan_MSIL_Taskun_AMBE_2147902840_2
         $x_2_1 = {07 11 05 07 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 11 ?? 61 13 ?? 07 11 ?? 07}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2472,6 +2586,7 @@ rule Trojan_MSIL_Taskun_KAL_2147902848_0
         $x_1_1 = {06 07 06 8e 69 5d 91 11 ?? 61 13 ?? 06 11 ?? 06 8e 69 5d 91}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2493,6 +2608,7 @@ rule Trojan_MSIL_Taskun_MBFU_2147902852_0
         $x_1_1 = "4D5A9**3***04***FFFF**B8*******4" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2515,6 +2631,7 @@ rule Trojan_MSIL_Taskun_MBFV_2147903138_0
         $x_1_2 = {5d d4 91 61 28 ?? 00 00 0a 07 06 17 6a 58 11 05 6a 5d d4 91 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2540,6 +2657,7 @@ rule Trojan_MSIL_Taskun_MBFV_2147903138_1
         $x_1_5 = "StringToByteArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2563,6 +2681,7 @@ rule Trojan_MSIL_Taskun_EYAA_2147903186_0
         $x_1_3 = "DBConnectionUtility.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2584,6 +2703,7 @@ rule Trojan_MSIL_Taskun_SPVG_2147903229_0
         $x_5_1 = {5d 91 61 13 08 11 08 07 09 17 58 08 5d 91 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 13 09}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2605,6 +2725,7 @@ rule Trojan_MSIL_Taskun_AMBC_2147903240_0
         $x_2_1 = {07 8e 69 5d 13 [0-30] 07 8e 69 5d 91 13}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2626,6 +2747,7 @@ rule Trojan_MSIL_Taskun_SPVP_2147903366_0
         $x_5_1 = {5d d4 91 61 28 ?? ?? ?? 0a 07 09 17 6a 58 08 6a 5d d4 91 28 ?? ?? ?? 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d 28 ?? ?? ?? 0a 9c 09 17 6a 58 0d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2647,6 +2769,7 @@ rule Trojan_MSIL_Taskun_KAM_2147903628_0
         $x_1_1 = {6a 5d d4 91 61 28 ?? 00 00 0a 07 11 ?? 08 6a 5d d4 91}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2668,6 +2791,7 @@ rule Trojan_MSIL_Taskun_SPDC_2147903806_0
         $x_5_1 = {d4 91 61 28 ?? ?? ?? 0a 07 11 ?? 08 6a 5d d4 91}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2689,6 +2813,7 @@ rule Trojan_MSIL_Taskun_KAN_2147904377_0
         $x_1_1 = {6a 5d d4 91 08 11 ?? d4 91 61 07 11 ?? 07 8e 69 6a 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2710,6 +2835,7 @@ rule Trojan_MSIL_Taskun_SPIP_2147904486_0
         $x_5_1 = {91 61 07 08 17 6a 58 07 8e 69 6a 5d d4 91 28 ?? ?? ?? 0a 59 11 0a 58 11 0a 5d 28 ?? ?? ?? 0a 9c 08 17 6a 58 0c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2731,6 +2857,7 @@ rule Trojan_MSIL_Taskun_SPPO_2147904582_0
         $x_3_1 = {d4 91 61 06 07 17 6a 58 06 8e 69 6a 5d d4 91}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2752,6 +2879,7 @@ rule Trojan_MSIL_Taskun_SPPG_2147904838_0
         $x_5_1 = {61 11 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d 13 0b 07 11 09 11 08 6a 5d d4 11 0b 28 ?? ?? ?? 0a 9c 11 09 17 6a 58}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2773,6 +2901,7 @@ rule Trojan_MSIL_Taskun_AMMC_2147904928_0
         $x_2_1 = {6a 5d d4 91 07 06 69 1f ?? 5d 6f ?? 00 00 0a 61 11 ?? 59 20 00 01 00 00 58 20 00 01 00 00 5d 13 ?? 08 06 09 6a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2794,6 +2923,7 @@ rule Trojan_MSIL_Taskun_MBZP_2147905120_0
         $x_1_1 = {5d d4 91 08 11 ?? 69 1f ?? 5d 6f ?? ?? ?? 0a 13 ?? 11 ?? 61 11 ?? 59 13 ?? 11 ?? 20 00 01 00 00 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2815,6 +2945,7 @@ rule Trojan_MSIL_Taskun_SPPX_2147905146_0
         $x_4_1 = {06 09 6a 5d d4 11 ?? 28 ?? ?? ?? 0a 9c 06 17 6a 58 0a}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2837,6 +2968,7 @@ rule Trojan_MSIL_Taskun_NC_2147905366_0
         $x_5_2 = {d4 91 07 06 69 1f 16 5d ?? ?? 00 00 0a 61 11 0c 59}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2858,6 +2990,7 @@ rule Trojan_MSIL_Taskun_SZZP_2147905550_0
         $x_5_1 = {61 11 0a 59 20 00 01 00 00 58 20 ff 00 00 00 5f 13 0c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2879,6 +3012,7 @@ rule Trojan_MSIL_Taskun_ASER_2147906077_0
         $x_5_1 = {06 17 58 13 ?? 07 11 ?? 07 8e 69 5d 91 13 ?? 09 06 1f 16 5d 91 13 ?? 07 06 07 06 91 11 ?? 61 11 ?? 59 20 00 01 00 00 58 d2 9c 06 17 58 0a 06 07 8e 69 fe 04}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2900,6 +3034,7 @@ rule Trojan_MSIL_Taskun_SDFB_2147906170_0
         $x_4_1 = {07 11 13 07 11 13 91 11 16 61 11 15 59 20 00 01 00 00 58 20 ff 00 00 00 5f d2 9c}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2921,6 +3056,7 @@ rule Trojan_MSIL_Taskun_AMMF_2147906375_0
         $x_1_1 = {07 8e 69 5d 91 13 [0-30] 59 20 00 01 00 00 58 d2 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2942,6 +3078,7 @@ rule Trojan_MSIL_Taskun_AMMF_2147906375_1
         $x_1_1 = {17 58 08 5d 13 ?? 02 07 11 ?? 91 11 ?? 61 07 11 ?? 91 20 ff 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2963,6 +3100,7 @@ rule Trojan_MSIL_Taskun_AMMF_2147906375_2
         $x_1_1 = {17 58 08 5d 13 ?? 07 11 ?? 91 11 ?? 61 13 ?? 07 11 ?? 91 13 ?? 02 11 ?? 11 ?? 28 ?? ?? ?? ?? 13 ?? 07 11 ?? 11 ?? 28 ?? 00 00 0a d2 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2984,6 +3122,7 @@ rule Trojan_MSIL_Taskun_SPZO_2147907400_0
         $x_5_1 = {5d 91 59 13 ?? 07 11 ?? 11 ?? 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3005,6 +3144,7 @@ rule Trojan_MSIL_Taskun_ASES_2147907454_0
         $x_5_1 = {07 08 07 08 91 28 ?? 00 00 06 08 1f 16 5d 91 61 07 08 17 58 09 5d 91 59 20 00 01 00 00 58 20 ff 00 00 00 5f d2 9c 08 17 58 0c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3026,6 +3166,7 @@ rule Trojan_MSIL_Taskun_AMMG_2147907601_0
         $x_1_1 = {5d 91 61 07 11 [0-10] 59 20 00 01 00 00 58 20 ff 00 00 00 5f d2 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3047,6 +3188,7 @@ rule Trojan_MSIL_Taskun_AMMH_2147907705_0
         $x_1_1 = {5d 91 61 07 11 [0-5] 91 59 20 00 01 00 00 58 d2 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3068,6 +3210,7 @@ rule Trojan_MSIL_Taskun_AMMH_2147907705_1
         $x_1_1 = {17 58 08 5d 13 [0-50] 1f 16 5d 91 61 07 11 ?? 91 59 20 00 01 00 00 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3089,6 +3232,7 @@ rule Trojan_MSIL_Taskun_AMMH_2147907705_2
         $x_1_1 = {1f 16 5d 91 13 ?? 02 07 11 ?? 91 11 ?? 61 07 11 ?? 17 58 08 5d 91 20 ff 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3110,6 +3254,7 @@ rule Trojan_MSIL_Taskun_KAO_2147907856_0
         $x_1_1 = {07 08 91 11 ?? 08 1f ?? 5d 91 61 07 11 ?? 91 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3131,6 +3276,7 @@ rule Trojan_MSIL_Taskun_SPNN_2147908328_0
         $x_5_1 = {5d 91 61 07 11 06 91 59 20 00 01 00 00 58 13 07 1f 0b}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3152,6 +3298,7 @@ rule Trojan_MSIL_Taskun_KAP_2147908992_0
         $x_1_1 = {07 08 91 11 ?? 61 13 ?? ?? ?? 07 11 ?? 91 59 20 00 01 00 00 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3173,6 +3320,7 @@ rule Trojan_MSIL_Taskun_KAQ_2147909530_0
         $x_1_1 = {07 11 09 91 11 0c 61 07 11 0d 91 59 13 0e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3194,6 +3342,7 @@ rule Trojan_MSIL_Taskun_KAR_2147909724_0
         $x_1_1 = {17 58 08 5d 13 ?? 07 11 09 91 11 ?? 61 07 11 ?? 91 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3215,6 +3364,7 @@ rule Trojan_MSIL_Taskun_SPMP_2147910297_0
         $x_5_1 = {5d 13 0a 08 07 02 08 07 91 11 09 61 08 11 0a 91 59 28 ?? ?? 00 06 28 ?? ?? 00 ?? 9c 07 17 58 0b}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3236,6 +3386,7 @@ rule Trojan_MSIL_Taskun_SPBM_2147910676_0
         $x_4_1 = {17 58 09 5d 13 0d 08 11 0b 91 11 0c 61 13 0e 08 11 0d 91 13 0f}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3257,6 +3408,7 @@ rule Trojan_MSIL_Taskun_AMAE_2147910740_0
         $x_1_1 = {1f 16 5d 91 13 ?? 07 11 ?? 91 11 ?? 61 13 ?? 11 ?? 17 58 13 ?? 07 11 ?? 08 5d 91 13 ?? 20 00 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3278,6 +3430,7 @@ rule Trojan_MSIL_Taskun_AMAE_2147910740_1
         $x_1_1 = {17 58 08 5d 13 ?? 07 11 ?? 91 11 ?? 61 13 ?? 07 11 ?? 91 13 ?? 02 11 ?? 11 ?? 59 28 ?? ?? ?? ?? 13 0a 07 11 ?? 11 ?? 28 ?? ?? ?? ?? 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3299,6 +3452,7 @@ rule Trojan_MSIL_Taskun_SPKM_2147910799_0
         $x_4_1 = {17 58 09 5d 13 0d 08 11 0b 91 11 0c 61 13 0e 08 11 0d 91 13 0f 02 11 0e 11 0f 59 28 ?? ?? ?? 06 13 10 08 11 0b 11 10 28 ?? ?? ?? 0a 9c 00 11}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3320,6 +3474,7 @@ rule Trojan_MSIL_Taskun_KAS_2147910860_0
         $x_1_1 = {69 6a 5d d4 91 58 07 06 95 58 20 ff 00 00 00 5f 0c 07 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3341,6 +3496,7 @@ rule Trojan_MSIL_Taskun_GPAE_2147910928_0
         $x_1_1 = {61 13 11 11 07 11 0c d4 11 11 20 ff 00 00 00 5f d2 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3362,6 +3518,7 @@ rule Trojan_MSIL_Taskun_SPFM_2147910936_0
         $x_1_1 = {69 6a 5d d4 91 58 11 ?? 09 95 58 20 ff 00 00 00 5f 13 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3383,6 +3540,7 @@ rule Trojan_MSIL_Taskun_MBYN_2147911732_0
         $x_1_1 = {d4 11 0e 6e 11 11 20 ff 00 00 00 5f 6a 61 d2 9c 11 04 17 6a 58 13 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3404,6 +3562,7 @@ rule Trojan_MSIL_Taskun_SPXF_2147912050_0
         $x_2_1 = {13 1b 11 18 11 09 91 13 22 11 18 11 09 11 22 11 23 61 11 1d 19 58 61 11 2c 61 d2 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3425,6 +3584,7 @@ rule Trojan_MSIL_Taskun_GPBX_2147912703_0
         $x_1_1 = {5f 6a 61 d2 9c 00 11 ?? 17 6a 58 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3448,6 +3608,7 @@ rule Trojan_MSIL_Taskun_ND_2147913018_0
         $x_2_3 = "ExecuteReader" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3469,6 +3630,7 @@ rule Trojan_MSIL_Taskun_AMAD_2147913215_0
         $x_1_1 = {1f 16 5d 91 13 ?? 07 11 ?? 91 11 ?? 61 13 ?? 11 ?? 17 58 13 ?? 07 11 ?? 11 ?? 5d 91 13 ?? 20 00 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3490,6 +3652,7 @@ rule Trojan_MSIL_Taskun_SDXF_2147914138_0
         $x_1_1 = {07 11 05 91 11 07 61 13 08 11 05 17 58 08 5d 13 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3511,6 +3674,7 @@ rule Trojan_MSIL_Taskun_SPMF_2147915075_0
         $x_4_1 = {07 11 0d 91 11 0e 61 13 0f 11 0d 17 58 07 8e 69 5d 13 10 07 11 10 91 13 11}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3532,6 +3696,7 @@ rule Trojan_MSIL_Taskun_AMAK_2147915534_0
         $x_1_1 = {1f 16 5d 91 13 ?? 07 09 91 11 ?? 61 13 ?? 09 1b 58 1a 59 08 5d 18 58 18 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3553,6 +3718,7 @@ rule Trojan_MSIL_Taskun_KAT_2147915537_0
         $x_1_1 = {1f 16 5d 91 13 ?? 07 09 91 11 ?? 61 13 ?? 09 18 58 17 59 08 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3574,6 +3740,7 @@ rule Trojan_MSIL_Taskun_AMAO_2147916072_0
         $x_1_1 = {8e 69 5d 91 13 [0-20] 61 [0-15] 17 58 08 5d 13 [0-32] 20 00 01 00 00 58 [0-8] 20 ff 00 00 00 5f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3596,6 +3763,7 @@ rule Trojan_MSIL_Taskun_AMAT_2147916788_0
         $x_1_2 = {8e 69 6a 5d d4 91 58 11 [0-10] 95 58 20 ff 00 00 00 5f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3618,6 +3786,7 @@ rule Trojan_MSIL_Taskun_AMAU_2147916975_0
         $x_1_2 = {18 5a 20 00 01 00 00 5d 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3640,6 +3809,7 @@ rule Trojan_MSIL_Taskun_SRAA_2147917041_0
         $x_2_2 = {11 12 11 09 5a 20 00 02 00 00 5d 26 11 09 17 58 13 09 11 09 19 fe 04 13 1e 11 1e 2d e3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3662,6 +3832,7 @@ rule Trojan_MSIL_Taskun_NE_2147917729_0
         $x_4_2 = {09 8e 69 5d 09 8e 69 58 09 8e 69 5d}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3686,6 +3857,7 @@ rule Trojan_MSIL_Taskun_NG_2147918285_0
         $x_1_4 = "btnNextKanji" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3707,6 +3879,7 @@ rule Trojan_MSIL_Taskun_SN_2147919069_0
         $x_2_1 = {07 11 0f 91 11 10 61 11 11 59 20 00 02 00 00 58 13 12 07 11 0f 11 12 20 ff 00 00 00 5f d2 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3728,6 +3901,7 @@ rule Trojan_MSIL_Taskun_SXPF_2147919101_0
         $x_1_1 = {07 11 06 11 07 6f ?? ?? ?? 0a 13 08 08 12 08 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 08 6f ?? ?? ?? 0a 20 00 b8 00 00 fe 04 13 09 11 09 2c 0e 08 12 08 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 08 6f ?? ?? ?? 0a 20 00 b8 00 00 fe 04 13 0a 11 0a 2c 0e 08 12 08 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 00 11 07 17 58 13 07 11 07 07 6f ?? ?? ?? 0a fe 04 13 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3750,6 +3924,7 @@ rule Trojan_MSIL_Taskun_SO_2147919615_0
         $x_2_2 = "Library.LibraryForm.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3772,6 +3947,7 @@ rule Trojan_MSIL_Taskun_SO_2147919615_1
         $x_2_2 = "Assignment_7.Properties.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3794,6 +3970,7 @@ rule Trojan_MSIL_Taskun_SO_2147919615_2
         $x_2_2 = "WindowBlindsClient.Properties.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3815,6 +3992,7 @@ rule Trojan_MSIL_Taskun_UUAA_2147919834_0
         $x_5_1 = {07 11 06 11 07 6f ?? 00 00 0a 13 08 09 12 08 28 ?? 00 00 0a 6f ?? 00 00 0a 00 09 12 08 28 ?? 00 00 0a 6f ?? 00 00 0a 00 09 12 08 28 ?? 00 00 0a 6f ?? 00 00 0a 00 08 09 20 00 1c 01 00 28 ?? 00 00 06 00 09 6f ?? 00 00 0a 00 00 11 07 17 58 13 07 11 07 07 6f ?? 00 00 0a fe 04 13 09 11 09 2d 9e}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3837,6 +4015,7 @@ rule Trojan_MSIL_Taskun_NH_2147920140_0
         $x_4_2 = {11 06 11 0f 20 ff 00 00 00 5f 95 d2}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3858,6 +4037,7 @@ rule Trojan_MSIL_Taskun_KAU_2147920270_0
         $x_1_1 = {95 58 20 ff 00 00 00 5f 13 [0-80] 05 95 58 20 ff 00 00 00 5f 95 61 d2 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3882,6 +4062,7 @@ rule Trojan_MSIL_Taskun_SUAA_2147920720_0
         $x_1_4 = "GetTypes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3903,6 +4084,7 @@ rule Trojan_MSIL_Taskun_AMA_2147920955_0
         $x_1_1 = {04 18 fe 04 16 fe 01 0b 07 2c 0e 02 0f 01 28 ?? 00 00 0a 6f ?? 00 00 0a 00 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3926,6 +4108,7 @@ rule Trojan_MSIL_Taskun_YWAA_2147922912_0
         $x_1_3 = "AKH45ICVA8F4B4N474PGZ4" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3949,6 +4132,7 @@ rule Trojan_MSIL_Taskun_ZIAA_2147923418_0
         $x_2_3 = {03 11 06 11 07 11 08 94 91 6f ?? 00 00 0a 00 20}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3971,6 +4155,7 @@ rule Trojan_MSIL_Taskun_ZMAA_2147923513_0
         $x_2_2 = {03 11 07 11 0a 11 0d 94 91 6f ?? 00 00 0a 00 11 0b 11 0d 58 13 0b 00 11 0d 17 58 13 0d 11 0d 11 0c fe 04 13 0e 11 0e 2d d6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3994,6 +4179,7 @@ rule Trojan_MSIL_Taskun_ZTAA_2147923751_0
         $x_1_3 = {11 05 d0 40 00 00 01 28 ?? 00 00 06 28 ?? 00 00 06 74 03 00 00 1b 13 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4016,6 +4202,7 @@ rule Trojan_MSIL_Taskun_BH_2147925134_0
         $x_2_2 = {11 04 11 05 95 11 04 11 06 95 58 20 ff 00 00 00 5f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4037,6 +4224,7 @@ rule Trojan_MSIL_Taskun_PMAH_2147925521_0
         $x_10_1 = {11 04 11 05 95 11 04 11 06 95 58 20 ff 00 00 00 5f 13 0b 11 0b 1f 7b 61 20 ff 00 00 00 5f 20 ?? ?? ?? ?? 58 20 00 01 00 00 5e 26 09 11 0a 07 11 0a 91 11 04 11 0b 95 61 d2 9c 11 0a 17 58 13 0a 11 0a 07 8e 69 32 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4058,6 +4246,7 @@ rule Trojan_MSIL_Taskun_SZDF_2147925641_0
         $x_4_1 = {06 2c 53 00 0f 01 28 ?? 00 00 0a 1f 10 62 0f 01 28 ?? 00 00 0a 1e 62 60 0f 01 28 ?? 00 00 0a 60 0b 02 07 1f 10 63 20 ff 00 00 00 5f d2}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4079,6 +4268,7 @@ rule Trojan_MSIL_Taskun_SYDF_2147926031_0
         $x_4_1 = {08 19 2f 02 2b 51 0f 01 28 ?? 00 00 0a 1f 10 62 0f 01 28 ?? 00 00 0a 1e 62 60 0f 01 28 ?? 00 00 0a 60 0a 02 06 1f 10 63 20 ff 00 00 00 5f d2 6f ?? 00 00 0a 00 02 06 1e 63 20 ff 00 00 00 5f d2 6f ?? 00 00 0a 00 02 06 20 ff 00 00 00 5f d2}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4102,6 +4292,7 @@ rule Trojan_MSIL_Taskun_KAV_2147926262_0
         $x_5_3 = "VgBlAHIAcwBpAG8AbgAAADEAM" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4123,6 +4314,7 @@ rule Trojan_MSIL_Taskun_SVJA_2147926438_0
         $x_10_1 = {95 58 20 ff 00 00 00 5f 13 0c 11 0c 1f 7b 61 20 ff 00 00 00 5f 13 0d 11 0d 20 ?? 01 00 00 58 20 00 01 00 00 5e 13 0d 11 0d 16 fe 01 13 0e 11 0e 2c 03 17 13 0d 09 11 0b 07 11 0b 91 11 04 11 0c 95 61 d2 9c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4145,6 +4337,7 @@ rule Trojan_MSIL_Taskun_POBH_2147926545_0
         $x_4_2 = {09 11 08 07 11 08 91 11 04 11 0b 95 61 d2 9c 11 0c 11 0a 5a 11 08 58 20 ?? ?? ?? ?? 5d 13 0d 11 09 11 0d 61 13 09 11 08 17 58 13 08}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4166,6 +4359,7 @@ rule Trojan_MSIL_Taskun_GSC_2147928249_0
         $x_1_1 = {0c 04 03 6f ?? 00 00 0a 59 0d 09 19 32 55 12 ?? 28 ?? 00 00 0a 1f 10 62 12 ?? 28 ?? 00 00 0a 1e 62 60 12 ?? 28 ?? 00 00 0a 60 13 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4188,6 +4382,7 @@ rule Trojan_MSIL_Taskun_AEHA_2147928945_0
         $x_2_2 = {01 25 16 12 08 28 ?? 00 00 0a 9c 25 17 12 08 28 ?? 00 00 0a 9c 25 18 12 08 28 ?? 00 00 0a 9c 13 18 03 11 18 11 09}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4209,6 +4404,7 @@ rule Trojan_MSIL_Taskun_PLLTH_2147930717_0
         $x_10_1 = {0a 1f 10 62 0f 01 28 ?? 01 00 0a 1e 62 60 0f 01 28 ?? 01 00 0a 60 0b 02 19 8d ?? 00 00 01 25 16 07 1f 10 63 20 ?? 00 00 00 5f d2 9c 25 17 07 1e 63 20 ?? 00 00 00 5f d2 9c 25 18 07 20 ?? 00 00 00 5f d2 9c 6f ?? 01 00 0a 09}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4231,6 +4427,7 @@ rule Trojan_MSIL_Taskun_ATIA_2147930805_0
         $x_2_2 = {01 25 16 0f 00 20 73 01 00 00 20 6e 01 00 00 28 ?? 00 00 06 9c 25 17 0f 00 1f 09 1f 17 28 ?? 00 00 06 9c 25 18 0f 00 28 ?? 00 00 0a 9c 0a 18 0c 2b a1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4252,6 +4449,7 @@ rule Trojan_MSIL_Taskun_SHLZ_2147931111_0
         $x_5_1 = {25 16 11 06 1f 10 63 20 ff 00 00 00 5f d2 9c 25 17 11 06 1e 63 20 ff 00 00 00 5f d2 9c 25 18 11 06 20 ff 00 00 00 5f d2 9c 6f ?? 00 00 0a 00 06}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4274,6 +4472,7 @@ rule Trojan_MSIL_Taskun_KAX_2147931294_0
         $x_2_2 = {25 16 0f 00 28 ?? 00 00 0a 9c 25 17 0f 00 28 ?? 00 00 0a 9c 25 18 0f 00 28 ?? 00 00 0a 9c 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4296,6 +4495,7 @@ rule Trojan_MSIL_Taskun_AAKA_2147932020_0
         $x_2_2 = {01 25 16 0f 00 20 f9 00 00 00 20 cf 00 00 00 28 ?? 00 00 06 9c 25 17 0f 00 20 e1 03 00 00 20 d6 03 00 00 28 ?? 00 00 06 9c 25 18 0f 00 28 ?? 00 00 0a 9c 0b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4318,6 +4518,7 @@ rule Trojan_MSIL_Taskun_AEKA_2147932393_0
         $x_2_2 = {01 25 16 0f 00 20 98 00 00 00 20 fe 00 00 00 28 ?? 00 00 06 9c 25 17 0f 00 20 b7 03 00 00 20 d0 03 00 00 28 ?? 00 00 06 9c 25 18 0f 00 28 ?? 00 00 0a 9c 0b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4339,6 +4540,7 @@ rule Trojan_MSIL_Taskun_PLJBH_2147932458_0
         $x_10_1 = {01 25 16 02 1f 10 63 20 ?? 00 00 00 5f d2 9c 25 17 02 1e 63 20 ?? 00 00 00 5f d2 9c 25 18 02 20 ?? 00 00 00 5f d2 9c 0b 18 0d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4361,6 +4563,7 @@ rule Trojan_MSIL_Taskun_MBWQ_2147932608_0
         $x_1_2 = {45 00 31 00 46 00 42 00 41 00 30 00 45 00 2d 00 42 00 34 00 30 00 39 00 43 00 44 00 32 00 31 00 42 00 38 00 30 00 31 00 34 00 43 00 43 00 44 00 32 00 31 00 35 00 34}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4383,6 +4586,7 @@ rule Trojan_MSIL_Taskun_PLJKH_2147932723_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4405,6 +4609,7 @@ rule Trojan_MSIL_Taskun_MBR_2147932784_0
         $x_1_2 = {65 6e 63 72 79 70 74 6f [0-9] 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4426,6 +4631,7 @@ rule Trojan_MSIL_Taskun_MBR_2147932784_1
         $x_1_1 = {0a 0d 04 07 04 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 13 04 09 11 04 59 20 00 01 00 00 58 20 00 01 00 00 5d d1 13 05 06 12 05 28 ?? 00 00 0a 28 ?? 00 00 0a 0a 07 17 58 0b 08 17 58 0c 08 03 6f 7c 00 00 0a 32 b6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4447,6 +4653,7 @@ rule Trojan_MSIL_Taskun_MBQ_2147932983_0
         $x_1_1 = {78 00 6c 00 00 09 4c 00 6f 00 61 00 64 00 00 23 53 00 65 00 67 00 6f 00 65 00 20 00 55 00 49 00 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4470,6 +4677,7 @@ rule Trojan_MSIL_Taskun_BL_2147933472_0
         $x_1_3 = {07 17 58 0b 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4492,6 +4700,7 @@ rule Trojan_MSIL_Taskun_BM_2147933635_0
         $x_1_2 = {07 17 58 0b 07 03 fe 04 0c 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4515,6 +4724,7 @@ rule Trojan_MSIL_Taskun_PHE_2147933763_0
         $x_3_3 = {04 06 08 91 6f ?? 00 00 0a 00 00 08 17 58 0c 08 03 fe 04 13 04 11 04 2d ca}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4537,6 +4747,7 @@ rule Trojan_MSIL_Taskun_SP_2147934023_0
         $x_2_2 = "MaterialWinforms.Properties.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4559,6 +4770,7 @@ rule Trojan_MSIL_Taskun_SKEA_2147934036_0
         $x_1_2 = {0e 04 05 6f ?? 00 00 0a 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4582,6 +4794,7 @@ rule Trojan_MSIL_Taskun_PHJ_2147934037_0
         $x_3_3 = {04 07 08 91 6f ?? 00 00 0a 00 00 08 17 58 0c 08 03 fe 04 0d 09}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4604,6 +4817,7 @@ rule Trojan_MSIL_Taskun_MBS_2147934925_0
         $x_1_2 = "SuperAdventure.Pr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4625,6 +4839,7 @@ rule Trojan_MSIL_Taskun_HHC_2147935204_0
         $x_10_1 = {25 16 0f 00 28 ?? 00 00 0a 9c 25 17 0f 00 28 ?? 00 00 0a 9c 25 18 0f 00 28 ?? 00 00 0a 9c 6f ?? 00 00 0a 06 28 ?? 00 00 2b 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4646,6 +4861,7 @@ rule Trojan_MSIL_Taskun_CCJR_2147935261_0
         $x_5_1 = {25 16 0f 00 28 ?? 00 00 0a 9c 25 17 0f 00 28 ?? 00 00 0a 9c 25 18 0f 00 28 ?? 00 00 0a 9c 6f ?? 00 00 0a [0-1] 06 28 02 00 00 2b [0-1] 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4669,6 +4885,7 @@ rule Trojan_MSIL_Taskun_BN_2147935430_0
         $x_1_3 = {0d 07 08 09 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4691,6 +4908,7 @@ rule Trojan_MSIL_Taskun_SMEA_2147936213_0
         $x_1_2 = {08 11 05 58 1f 64 5d 13 06 08 11 05 5a 1f 64 5d 13 07 08 11 05 61 1f 64 5d 13 08 02 08 11 05 6f ?? 00 00 0a 13 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4713,6 +4931,7 @@ rule Trojan_MSIL_Taskun_EAHC_2147936241_0
         $x_5_2 = {1f 41 08 58 d1 0d 12 03 28 7d 00 00 0a 72 0b 02 00 70 07 08 8f 56 00 00 01 28 7e 00 00 0a 28 7f 00 00 0a 13 04 04 07 08 91 6f 80 00 00 0a 08 17 58 0c 08 03 32 ca}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4737,6 +4956,7 @@ rule Trojan_MSIL_Taskun_AJKA_2147936386_0
         $x_2_4 = "--------E-1--02--47C801-03-4085--1--01----01--01------01-----------0509701-4B----" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4759,6 +4979,7 @@ rule Trojan_MSIL_Taskun_APOA_2147936469_0
         $x_2_2 = {01 25 16 0f 00 28 ?? 00 00 0a 9c 25 17 0f 00 28 ?? 00 00 0a 9c 25 18 0f 00 28 ?? 00 00 0a 9c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4782,6 +5003,7 @@ rule Trojan_MSIL_Taskun_ASOA_2147936577_0
         $x_2_3 = {01 25 16 0f 00 28 ?? 00 00 0a 9c 25 17 0f 00 28 ?? 00 00 0a 9c 25 18 0f 00 28 ?? 00 00 0a 9c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4804,6 +5026,7 @@ rule Trojan_MSIL_Taskun_ADPA_2147936959_0
         $x_2_2 = {0a 13 04 06 7c ?? 00 00 04 28 ?? 01 00 0a 13 05 06 7c ?? 00 00 04 28 ?? 01 00 0a 13 06 04 19 8d ?? 00 00 01 25 16 11 04 9c 25 17 11 05 9c 25 18 11 06 9c 6f ?? 01 00 0a 00 08}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4826,6 +5049,7 @@ rule Trojan_MSIL_Taskun_ZHV_2147937123_0
         $x_5_2 = {0a 58 02 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 0c 04 03 6f ?? 00 00 0a 59 0d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4848,6 +5072,7 @@ rule Trojan_MSIL_Taskun_EAFY_2147937528_0
         $x_5_2 = {11 0b 11 0c 94 13 0d 00 11 04 11 0d 19 5a 11 0d 18 63 59 6a 58 13 04 11 04 11 04 1b 62 11 04 19 63 60 61 13 04 00 11 0c 17 58 13 0c 11 0c 11 0b 8e 69 32 cc}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4869,6 +5094,7 @@ rule Trojan_MSIL_Taskun_SWA_2147937548_0
         $x_2_1 = {11 0b 11 0c 94 13 0d 00 11 04 11 0d 19 5a 11 0d 18 63 59 6a 58 13 04 11 04 11 04 1b 62 11 04 19 63 60 61 13 04 00 11 0c 17 58 13 0c 11 0c 11 0b 8e 69 32 cc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4891,6 +5117,7 @@ rule Trojan_MSIL_Taskun_SQ_2147937550_0
         $x_2_2 = "Marksheet_Project.Properties.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4912,6 +5139,7 @@ rule Trojan_MSIL_Taskun_EAHA_2147937892_0
         $x_5_1 = {06 08 1f 0a 5a 6f 32 00 00 0a 26 04 07 08 91 6f 33 00 00 0a 08 17 58 0c 08 03 32 e4}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4934,6 +5162,7 @@ rule Trojan_MSIL_Taskun_ZZI_2147937963_0
         $x_5_2 = {03 06 08 6f ?? 00 00 0a 0d 0e 04 0e 04 4a 17 58 54}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4956,6 +5185,7 @@ rule Trojan_MSIL_Taskun_AEQA_2147937985_0
         $x_2_2 = {06 74 02 00 00 1b 11 07 11 07 1f 11 5a 11 07 18 62 61 20 aa 00 00 00 60 9e 11 07 17 58 13 07 11 07 06 75 02 00 00 1b 8e 69 fe 04 13 08 11 08 2d cf}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4977,6 +5207,7 @@ rule Trojan_MSIL_Taskun_GPPE_2147938489_0
         $x_4_1 = {0f 00 28 d0 00 00 0a 1f 10 62 0f 00 28 d1 00 00 0a 1e 62 60 0f 00 28 d2 00 00 0a 60 0b}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4998,6 +5229,7 @@ rule Trojan_MSIL_Taskun_GPPF_2147938490_0
         $x_4_1 = {11 0a 08 61 11 0b 61 13 0c 11 10}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5019,6 +5251,7 @@ rule Trojan_MSIL_Taskun_GPPG_2147938491_0
         $x_4_1 = {8e 69 5d 91 61 28 ?? ?? 00 06 02 11 01 17 58 02 8e 69 5d 91}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5041,6 +5274,7 @@ rule Trojan_MSIL_Taskun_AVQA_2147938651_0
         $x_2_2 = {01 25 16 12 06 28 ?? 00 00 0a 9c 25 17 12 06 28 ?? 00 00 0a 9c 25 18 12 06 28 ?? 00 00 0a 9c 13 0a 16 13 0b 2b 14}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5062,6 +5296,7 @@ rule Trojan_MSIL_Taskun_PGTK_2147938922_0
         $x_5_1 = {09 20 e8 03 00 00 5d 2d 24 28 ?? 00 00 0a 08 28 ?? 00 00 0a 13 0b 12 0b 28 ?? 00 00 0a 69 13 0a 09 6c 17 11 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5084,6 +5319,7 @@ rule Trojan_MSIL_Taskun_AZQA_2147939071_0
         $x_2_2 = {01 25 16 12 00 28 ?? ?? 00 0a 9c 25 17 12 00 28 ?? ?? 00 0a 9c 25 18 12 00 28 ?? ?? 00 0a 9c 07}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5106,6 +5342,7 @@ rule Trojan_MSIL_Taskun_AARA_2147939123_0
         $x_2_2 = {01 25 16 02 7c ?? ?? 00 04 28 ?? ?? 00 0a 9c 25 17 02 7c ?? ?? 00 04 28 ?? ?? 00 0a 9c 25 18 02 7c ?? ?? 00 04 28 ?? ?? 00 0a 9c 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5128,6 +5365,7 @@ rule Trojan_MSIL_Taskun_EANM_2147939214_0
         $x_5_2 = {07 09 07 09 94 02 5a 1f 64 5d 9e 09 17 58 0d 09 07 8e 69 32 eb}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5149,6 +5387,7 @@ rule Trojan_MSIL_Taskun_BQ_2147939238_0
         $x_5_1 = {01 17 58 8c ?? 00 00 01 6f ?? ?? 00 0a 00 38 ?? 00 00 00 11 0a 16 30 05 38 ?? 00 00 00 19 8d ?? 00 00 01 25 16 12 09 28 ?? ?? 00 0a 9c 25 17 12 09 28 ?? ?? 00 0a 9c 25 18 12 09 28 ?? ?? 00 0a 9c 13 0d 11 0a 8d ?? 00 00 01 13 0e 16 13}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5171,6 +5410,7 @@ rule Trojan_MSIL_Taskun_AJRA_2147939355_0
         $x_2_2 = {01 25 16 02 7c ?? 00 00 04 28 ?? 00 00 0a 9c 25 17 02 7c ?? 00 00 04 28 ?? 00 00 0a 9c 25 18 02 7c ?? 00 00 04 28 ?? 00 00 0a 9c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5192,6 +5432,7 @@ rule Trojan_MSIL_Taskun_BAA_2147939507_0
         $x_2_1 = {28 c9 00 00 0a 00 06 8e b7 18 da 16 da 17 d6 6b 28 cc 00 00 0a 5a 28 cd 00 00 0a 22 00 00 80 3f 58 6b 6c 28 ce 00 00 0a b7 13 04 08 06 11 04 93 6f cf 00 00 0a 26 00 09 17 d6 0d 09 11 05 13 06 11 06 31 bc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5213,6 +5454,7 @@ rule Trojan_MSIL_Taskun_BAB_2147939511_0
         $x_2_1 = {06 07 8f 61 00 00 01 25 47 03 61 d2 52 07 17 58 0b 07 06 8e 69 32 e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5235,6 +5477,7 @@ rule Trojan_MSIL_Taskun_SR_2147939557_0
         $x_2_2 = "AmirCalendar.Properties.Resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5257,6 +5500,7 @@ rule Trojan_MSIL_Taskun_SR_2147939557_1
         $x_2_2 = "CalculadoraCientifica.Properties.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5279,6 +5523,7 @@ rule Trojan_MSIL_Taskun_AMRA_2147939568_0
         $x_2_2 = {01 25 16 12 02 28 ?? 00 00 0a 9c 25 17 12 02 28 ?? 00 00 0a 9c 25 18 12 02 28 ?? 00 00 0a 9c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5301,6 +5546,7 @@ rule Trojan_MSIL_Taskun_AVRA_2147939841_0
         $x_2_2 = {11 0d 16 fe 02 13 11 11 11 2c 4e 00 19 8d ?? 00 00 01 25 16 12 0c 28 ?? 00 00 0a 9c 25 17 12 0c 28 ?? 00 00 0a 9c 25 18 12 0c 28 ?? 00 00 0a 9c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5322,6 +5568,7 @@ rule Trojan_MSIL_Taskun_WQ_2147940040_0
         $x_1_1 = {74 69 00 00 01 11 05 11 0a 75 48 00 00 1b 11 0c 11 07 58 11 09 59 93 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5343,6 +5590,7 @@ rule Trojan_MSIL_Taskun_WL_2147940104_0
         $x_1_1 = {69 17 59 91 1f 70 61 0b 02 8e 69 17 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5365,6 +5613,7 @@ rule Trojan_MSIL_Taskun_SS_2147940310_0
         $x_2_2 = "WordFun.Properties.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5387,6 +5636,7 @@ rule Trojan_MSIL_Taskun_SS_2147940310_1
         $x_2_2 = "Oyunu.Properties.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5409,6 +5659,7 @@ rule Trojan_MSIL_Taskun_ALSA_2147940411_0
         $x_1_2 = {02 09 11 06 6f ?? 00 00 0a 13 07 11 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5431,6 +5682,7 @@ rule Trojan_MSIL_Taskun_ARSA_2147940530_0
         $x_2_2 = {01 25 16 12 0a 28 ?? 00 00 0a 9c 25 17 12 0a 28 ?? 00 00 0a 9c 25 18 12 0a 28 ?? 00 00 0a 9c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5452,6 +5704,7 @@ rule Trojan_MSIL_Taskun_CH_2147940807_0
         $x_2_1 = {04 03 61 1f 3c 59 06 61 45 ?? ?? ?? ?? ?? ?? ?? ?? 11 05 20 ?? ?? ?? ?? 94 20 ?? ?? ?? ?? 59 0d 2b a3 11 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5474,6 +5727,7 @@ rule Trojan_MSIL_Taskun_ADTA_2147940914_0
         $x_2_2 = {03 11 06 16 91 6f ?? 00 00 0a 00 03 11 06 17 91 6f ?? 00 00 0a 00 03 11 06 18 91 6f ?? 00 00 0a 00 00 2b 0b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5495,6 +5749,7 @@ rule Trojan_MSIL_Taskun_ZXW_2147940959_0
         $x_10_1 = {13 0b 02 11 0a 11 0b 6f ?? 00 00 0a 13 0c 04 03 6f ?? 00 00 0a 59 13 0d 11 0d 19 fe 04 16 fe 01 13 0e 11 0e 2c 55 00 16 13 0f 11 0f 17 5f 17 fe 01 16 fe 01 13 10 11 10 2c 2e 00 03 12 0c 28 ?? 00 00 0a 6f ?? 00 00 0a 00 03 12 0c 28 ?? 00 00 0a 6f ?? 00 00 0a 00 03 12 0c 28 ?? 00 00 0a 6f ?? 00 00 0a 00 00 2b 0d 00 06 1e}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5516,6 +5771,7 @@ rule Trojan_MSIL_Taskun_EDL_2147941730_0
         $x_2_1 = {00 08 18 5f 17 63 13 05 2b 52 00 07 02 11 04 11 05 ?? ?? ?? ?? ?? 13 06 04 03 ?? ?? ?? ?? ?? 59 13 07 11 07 19 ?? ?? ?? ?? ?? 13 08 11 08 2c 0d 00 03 11 06}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5537,6 +5793,7 @@ rule Trojan_MSIL_Taskun_EYS_2147941734_0
         $x_2_1 = {07 18 5f 17 63 13 04 2b 3f 06 02 09 11 04 ?? ?? ?? ?? ?? 13 05 04 03 ?? ?? ?? ?? ?? 59 13 06 11 06 19 ?? ?? ?? ?? ?? 2c 0a 03 11 05 ?? ?? ?? ?? ?? 2b 0f 11 06 16 31 0a 03 11 05 11 06 ?? ?? ?? ?? ?? 11 04 17 58 13 04 11 04 08 17 94 2f 09 03 ?? ?? ?? ?? ?? 04 32 b1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5559,6 +5816,7 @@ rule Trojan_MSIL_Taskun_ATUA_2147941984_0
         $x_2_2 = {01 25 16 12 05 28 ?? 00 00 0a 9c 25 17 12 05 28 ?? 00 00 0a 9c 25 18 12 05 28 ?? 00 00 0a 9c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5580,6 +5838,7 @@ rule Trojan_MSIL_Taskun_EAK_2147942201_0
         $x_2_1 = {00 06 7b 06 01 00 04 11 24 11 09 91 ?? ?? ?? ?? ?? 00 00 11 09 17 58 13 09 11 09 11 16 fe 04 13 25 11 25 2d db}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5601,6 +5860,7 @@ rule Trojan_MSIL_Taskun_EM_2147942318_0
         $x_1_1 = {02 11 07 91 06 75 03 00 00 1b 11 05 91 13 08 07 61 11 08 61 13 09 11 0d 20 c0 01 00 00 94 20 88 1a 00 00 59 13 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5623,6 +5883,7 @@ rule Trojan_MSIL_Taskun_AJWA_2147943376_0
         $x_2_2 = {01 25 16 12 08 20 01 01 00 00 20 2f 01 00 00 28 ?? 00 00 06 9c 25 17 12 08 20 0f 02 00 00 20 20 02 00 00 28 ?? 00 00 06 9c 25 18 12 08 20 a6 02 00 00 20 96 02 00 00 28 ?? 00 00 06 9c 13 0b 11 10 1f 5c 91 11 10 19 91 59 13 0e 38}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5645,6 +5906,7 @@ rule Trojan_MSIL_Taskun_AQWA_2147943830_0
         $x_2_2 = {25 1c 09 a2 28 ?? 00 00 0a 6f ?? 00 00 0a 13 10 12 10 72 ?? ?? 00 70 28 ?? 00 00 0a 13 1d 08 11 1d 6f ?? 00 00 0a 11 1d 0d 11 04 17 58 13 04 12 14 28 ?? 00 00 0a 11 0b 11 08 20 00 01 00 00 6a 5d d4 91 61 d2 13 15 12 14 28 ?? 00 00 0a 11 0b 11 08 17 6a 58 20 00 01 00 00 6a 5d d4 91 61 d2 13 16 12 14 28 ?? 00 00 0a 11 0b 11 08 18 6a 58 20 00 01 00 00 6a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5667,6 +5929,7 @@ rule Trojan_MSIL_Taskun_EJJJ_2147943984_0
         $x_1_2 = {00 08 17 58 07 8e 69 5d 0c 00 11 14 17 58 13 14 11 14 11 0f fe 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5688,6 +5951,7 @@ rule Trojan_MSIL_Taskun_EHDF_2147943986_0
         $x_2_1 = {11 09 11 0e 8f 0f 00 00 01 25 71 0f 00 00 01 11 0c 11 0e 91 61 d2 81 0f 00 00 01 11 0e 17 58 13 0e 11 0e 11 08 32 d9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5712,6 +5976,7 @@ rule Trojan_MSIL_Taskun_MCD_2147944149_0
         $x_1_4 = "StormCast.Properties.Resources.resource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5733,6 +5998,7 @@ rule Trojan_MSIL_Taskun_ZBS_2147944150_0
         $x_10_1 = {26 02 11 21 11 29 6f ?? 00 00 0a 13 2b 11 0a 12 2b 28 ?? 00 00 0a 58 13 0a 11 0b 12 2b 28 ?? 00 00 0a 58 13 0b 11 0c 12 2b 28 ?? 00 00 0a 58 13 0c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5754,6 +6020,7 @@ rule Trojan_MSIL_Taskun_PGT_2147944169_0
         $x_5_1 = {02 11 16 11 17 6f ?? 00 00 0a 13 18 11 0a 12 18 28 ?? 00 00 0a 58 13 0a 11 0b 12 18 28 ?? 00 00 0a 58 13 0b 11 0c 12 18 28 ?? 00 00 0a 58 13 0c 12 18 28 ?? 00 00 0a 12 18 28 ?? 00 00 0a 58 12 18}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5778,6 +6045,7 @@ rule Trojan_MSIL_Taskun_MCE_2147944293_0
         $x_1_4 = "CreateInstance" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5800,6 +6068,7 @@ rule Trojan_MSIL_Taskun_ST_2147944752_0
         $x_2_2 = "BackEndLibrary.Properties.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5821,6 +6090,7 @@ rule Trojan_MSIL_Taskun_ETL_2147944803_0
         $x_1_1 = {73 76 00 00 06 0a 06 03 7d 4f 00 00 04 06 fe 06 77 00 00 06 73 d4 00 00 0a 0c 02 08 6f d5 00 00 0a 17 73 d6 00 00 0a 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5842,6 +6112,7 @@ rule Trojan_MSIL_Taskun_ZTS_2147945159_0
         $x_10_1 = {02 11 46 11 47 6f ?? 00 00 0a 13 48 00 2b 09 00 28 ?? 00 00 0a 13 48 00 12 48 28 ?? 00 00 0a 20 c8 00 00 00 fe 02 13 56 11 56 2c 09 72 79 06 00 70 13 23 2b 41 12 48 28 ?? 00 00 0a 20 c8 00 00 00 fe 02 13 57 11 57 2c 09 72 9d 06 00 70 13 23 2b 24 12 48 28 ?? 00 00 0a 20 c8 00 00 00 fe 02 13 58 11 58 2c 09 72 c5 06 00 70 13 23}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5864,6 +6135,7 @@ rule Trojan_MSIL_Taskun_ZWS_2147945299_0
         $x_5_2 = {15 5f 16 61 d2 13 26 11 24 16 60 d2 13 27 11 25 16 61 16 61 d2 13 28 11 1e 19 5a 13 29 11 1e 19 5a 17 58}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5885,6 +6157,7 @@ rule Trojan_MSIL_Taskun_ZGV_2147946133_0
         $x_10_1 = {06 02 09 11 04 6f ?? 00 00 06 13 05 04 03 6f ?? 00 00 0a 59 13 06 11 06 19 28 ?? 00 00 06 13 07 11 07 2c 0d 00 03 11 05 28 ?? 00 00 06 00 00 2b 18 11 06 16 fe 02 13 08 11 08 2c 0d 00 03 11 05 11 06 28 ?? 00 00 06 00 00 00 11 04 17 58 13 04 11 04 08 17 94 2f 0b 03 6f ?? 00 00 0a 04 fe 04 2b 01 16 13 09 11 09 2d 96 07 07 61 0b 00 09 17 58 0d 09 08 16 94 2f 0b 03}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5906,6 +6179,7 @@ rule Trojan_MSIL_Taskun_MCF_2147946227_0
         $x_1_1 = {1f 2c 91 7e ?? 00 00 04 20 ?? 01 00 00 91 61 1f 1c 5f 9c 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5927,6 +6201,7 @@ rule Trojan_MSIL_Taskun_EHJW_2147946273_0
         $x_2_1 = {26 07 17 58 0b 11 16 1f 0a 5d 2d 1c 11 09 11 16 1f 64 5d 17 9c 11 08 11 16 11 08 8e 69 5d 11 16 ?? ?? ?? ?? ?? 5d d2 9c 11 16 6c 02}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

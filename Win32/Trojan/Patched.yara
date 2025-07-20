@@ -17,6 +17,7 @@ rule Trojan_Win32_Patched_AF_2147596329_0
         $x_5_3 = {5a 52 52 bb ?? ?? ?? ?? ff d3 5b 53 83 c3 0c 53 50 b9 ?? ?? ?? ?? ff d1 5a 6a 01 6a 00 6a 00 8b ca 83 c1 1a 51 6a 00 6a 00 ff d0 b8 ?? ?? ?? ?? ff e0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Patched_R_2147630895_0
         $x_1_6 = {81 e2 ff ff 00 00 [0-4] 03 d3 [0-8] 8a 02 35 00 ?? 00 00 3d cc ?? 00 00 75 02 33 d0 [0-5] ec 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -68,6 +70,7 @@ rule Trojan_Win32_Patched_T_2147637446_0
         $x_1_3 = {ff 55 ec 5f 5e 5b c9 c3 83 7c 24 08 01 75 07 60}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_Patched_V_2147642934_0
         $x_1_3 = {a4 cf 43 3a 5c 57 49 4e 44 4f 57 53 5c 73 79 73 74 65 6d 33 32 5c 6d 73 63 74 66 69 6d 65 2e 69 65 6d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_Win32_Patched_W_2147642948_0
         $x_1_2 = {68 89 fd 12 a4 56 89 75 ec e8 ?? ?? ?? ?? 68 19 d0 d6 02 56 8b f8 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule Trojan_Win32_Patched_AE_2147643278_0
         $x_1_2 = {68 3f 00 5c 00 68 5c 00 3f 00 66 89 47 1c 89 67 20 be 0d 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Trojan_Win32_Patched_AH_2147643289_0
         $x_1_8 = "HKEY_LOCAL_MACHINE\\Software\\SKTTeleCom\\Version5" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -181,6 +188,7 @@ rule Trojan_Win32_Patched_KA_2147912715_0
         $x_1_3 = {80 3c 11 00 75 e1 66 c7 04 46 00 00 89 74 24 40 8b 44 24 2c 89 44 24 3c c6 44 24 44 01 8d 44 24 3c 89 04 24 ff d3 83 c4 5c 5b 5e 5f 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

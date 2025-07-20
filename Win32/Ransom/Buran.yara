@@ -18,6 +18,7 @@ rule Ransom_Win32_Buran_A_2147747906_0
         $x_1_3 = "Software\\Buran V\\Stop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win32_Buran_PAA_2147773637_0
         $x_10_6 = "lsass.exe" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Misleading_Win32_SystemBooster_239472_0
         $x_1_4 = "&redir=/[PRODSMNAME]/purchase/[SYSVEN]/ref_[AFF]/track_[TRNAME]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

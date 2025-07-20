@@ -16,6 +16,7 @@ rule Trojan_Win64_XMRig_CCAN_2147890127_0
         $x_1_1 = {29 d0 48 98 48 8d 15 ?? ?? ?? ?? 40 32 2c 02 41 88 2c 3c 48 83 c7 01 49 39 fd 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_XMRig_GA_2147929548_0
         $x_1_4 = "go:itab.*net.IPAddr,net.Addr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win64_XMRig_RK_2147939292_0
         $x_2_2 = "PzLFbmBmYVZXbjd2ms94dMpoVW5jZmFWE243dmUweHRyaFVuY2Z" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win64_XMRig_WQ_2147939454_0
         $x_1_4 = "ubrin.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_Win64_XMRig_SD_2147940855_0
         $x_1_1 = {c7 05 b7 da 00 00 ee d9 d2 73 e8 ?? ?? ?? ?? c7 05 a8 da 00 00 ec 07 75 ec e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Worm_Win32_Enkye_A_2147685911_0
         $x_1_2 = {53 6e 61 6b 65 45 79 65 73 00 50 72 6f 6a 65 63 74 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

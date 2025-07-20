@@ -20,6 +20,7 @@ rule Trojan_AndroidOS_Adbminer_A_2147923192_0
         $x_1_5 = {74 6d 70 2f [0-6] 2e 61 70 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

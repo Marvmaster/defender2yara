@@ -21,6 +21,7 @@ rule Trojan_Win32_Ertfor_A_2147602727_0
         $x_1_7 = "?id=%s&ver=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -47,6 +48,7 @@ rule Trojan_Win32_Ertfor_B_2147627204_0
         $x_1_3 = "?id=%s&ver=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

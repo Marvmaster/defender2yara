@@ -18,6 +18,7 @@ rule Ransom_Win32_GermanWiper_SA_2147741692_0
         $x_1_3 = "Friction Tweeter Casting" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

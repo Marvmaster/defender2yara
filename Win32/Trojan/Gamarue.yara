@@ -16,6 +16,7 @@ rule Trojan_Win32_Gamarue_CCFO_2147899673_0
         $x_1_1 = {8d 44 11 b0 83 f0 ?? 88 45 ef 0f b7 8d ?? fe ff ff 0f b6 95 ?? fe ff ff 03 ca 83 e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

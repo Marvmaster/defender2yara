@@ -41,6 +41,7 @@ rule HackTool_Linux_Chisel_C_2147924004_0
         $x_1_6 = "syscall.sendfile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -90,6 +91,7 @@ rule HackTool_Linux_Chisel_B_2147945396_0
         $n_2_5 = "github.com/portainer/agent/" ascii //weight: -2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (not (any of ($n*))) and
         (3 of ($x*))
 }

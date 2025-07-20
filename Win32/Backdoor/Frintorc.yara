@@ -24,6 +24,7 @@ rule Backdoor_Win32_Frintorc_A_2147605619_0
         $x_2_9 = "secur32.dll" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 5 of ($x_1_*))) or
             ((4 of ($x_2_*) and 3 of ($x_1_*))) or

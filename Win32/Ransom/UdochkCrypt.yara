@@ -19,6 +19,7 @@ rule Ransom_Win32_UdochkCrypt_CM_2147771706_0
         $x_1_4 = "Was ist gerade passiert?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

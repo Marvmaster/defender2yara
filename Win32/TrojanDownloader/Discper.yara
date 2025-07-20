@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Discper_A_2147695379_0
         $x_4_7 = {33 45 d8 83 f7 7b 50 57 8d}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanDownloader_Win32_Discper_B_2147728002_0
         $x_1_6 = "ping localhost -n 4 & del /F /Q" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

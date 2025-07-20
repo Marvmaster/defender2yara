@@ -20,6 +20,7 @@ rule Trojan_Win32_Rlsloup_A_2147616744_0
         $x_1_5 = {30 14 0e 40 25 ff 00 00 00 46 3b 75 e4 72 ea 5b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Rlsloup_B_2147620740_0
         $x_1_4 = {c7 44 24 38 28 00 00 00 ff 15 ?? ?? ?? ?? 8b d0 83 c2 02 b8 ab aa aa aa f7 e2 53 6a 08 d1 ea 53 8d 44 24 3c 03 d2 50 03 d2 57 89 54 24 60 ff 15 ?? ?? ?? ?? 85 c0 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Rlsloup_B_2147623146_0
         $x_1_3 = {8b 7a 3c 03 fa c7 47 58 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

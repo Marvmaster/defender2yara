@@ -18,6 +18,7 @@ rule Trojan_Win32_MustaLoadz_2147920410_0
         $x_1_3 = {83 c4 04 6a 40 68 00 30 00 00 68 20 34 00 00 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

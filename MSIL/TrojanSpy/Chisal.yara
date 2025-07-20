@@ -22,6 +22,7 @@ rule TrojanSpy_MSIL_Chisal_A_2147696821_0
         $x_1_8 = "fuck" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

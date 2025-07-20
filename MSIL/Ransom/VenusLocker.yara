@@ -21,6 +21,7 @@ rule Ransom_MSIL_VenusLocker_A_2147716859_0
         $x_1_7 = {56 65 6e 75 73 4c 6f 63 6b 65 72 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

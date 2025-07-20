@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Percol_B_2147650770_0
         $x_1_5 = {55 8b ec 81 ec b0 02 00 00 c7 85 b0 fd ff ff 00 00 00 00 eb 0f 8b 85 b0 fd ff ff 83 c0 01 89 85 b0 fd ff ff 83 bd b0 fd ff ff 01 7d 02 eb e6 c7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

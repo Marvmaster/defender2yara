@@ -20,6 +20,7 @@ rule VirTool_Win32_Shadeloadesz_A_2147917415_0
         $x_1_5 = {6a 00 ff 15 ?? ?? ?? ?? ?? ?? ?? ?? ?? 51 8b 0d 14 51 40 00 [0-16] 83 c4 04 8b c8 [0-16] c7 44 24 10 00 00 00 00 ?? ?? ?? ?? ?? 8b f0 85 f6 ?? ?? ?? ?? ?? ?? 8b 7c 24 10 85 ff [0-17] 57 51 8b 0d 14 51 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

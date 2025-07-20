@@ -18,6 +18,7 @@ rule VirTool_WinNT_Haxdoor_2147724163_0
         $x_1_4 = "\\Device\\a311config" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -50,6 +51,7 @@ rule VirTool_WinNT_Haxdoor_2147724163_1
         $x_1_9 = "\\Device\\boot32" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

@@ -17,6 +17,7 @@ rule Ransom_Win32_Crypmod_A_2147734432_0
         $x_1_2 = {88 04 0a 0f b7 0d ?? ?? ?? ?? 03 0d ?? ?? ?? ?? 42 3b 55 ?? 0f 8c ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Ransom_Win32_Crypmod_B_2147734493_0
         $x_1_2 = {8b 11 0f b6 0c 1a 8d 04 1a 0f b6 50 ?? 88 54 24 ?? 0f b6 50 ?? 88 4c 24 ?? 0f b6 48 [0-33] e8 ?? ?? ?? ?? 8a 44 24 ?? 0f b6 4c 24 ?? 0f b6 54 24 ?? 88 04 3e 46 88 0c 3e 46 88 14 3e 83 c3 ?? 46}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Ransom_Win32_Crypmod_MK_2147760348_0
         $x_1_3 = "echo Ops, seus arquivos foram criptografados" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Ransom_Win32_Crypmod_MK_2147760348_1
         $x_1_5 = "README.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Ransom_Win32_Crypmod_MAK_2147793935_0
         $x_1_4 = "$RECYCLE.BIN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

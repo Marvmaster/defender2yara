@@ -20,6 +20,7 @@ rule VirTool_Win64_Rapotz_A_2147844662_0
         $x_1_5 = {48 8b 54 24 40 48 8d ?? ?? ?? ?? ?? e8 ?? ?? ?? ?? 48 8b 4c 24 40 e8 ?? ?? ?? ?? 48 8b f0 48 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

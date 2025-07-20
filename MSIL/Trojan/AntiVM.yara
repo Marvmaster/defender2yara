@@ -39,6 +39,7 @@ rule Trojan_MSIL_AntiVM_GTB_2147938919_0
         $x_1_24 = "Cortex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +61,7 @@ rule Trojan_MSIL_AntiVM_SWA_2147940760_0
         $x_2_1 = {00 11 07 25 4b 11 0e 11 11 1f 0f 5f 95 61 54 11 0e 11 11 1f 0f 5f 11 0e 11 11 1f 0f 5f 95 11 07 25 1a 58 13 07 4b 61 20 19 28 bb 3d 58 9e 11 11 17 58 13 11 00 11 20 17 58 13 20 11 20 11 08 fe 05 13 21 11 21 2d b9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

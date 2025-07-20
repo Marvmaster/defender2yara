@@ -24,6 +24,7 @@ rule Trojan_MSIL_Redlonam_A_2147697057_0
         $x_1_10 = "@1B2c3D4e5F6g7H8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_MSIL_Redlonam_B_2147705999_0
         $x_1_4 = {52 65 67 41 73 6d 2e 65 78 65 00 4d 69 63 72 6f 73 6f 66 74 20 41 63 63 65 73 73 2e 2e 2e 32 30 31 33 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

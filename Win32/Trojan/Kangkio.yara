@@ -18,6 +18,7 @@ rule Trojan_Win32_Kangkio_A_2147610897_0
         $x_3_4 = {68 7a 29 40 00 64 a1 00 00 00 00 50 64 89 25 00 00 00 00 51 56 57 8b f9 6a 00 e8 ?? ?? 00 00 83 c4 04 8b cf e8 ?? ?? 00 00 68 ?? ?? 40 00 6a 00 6a 00 ff 15 ?? ?? 40 00 8b f0 85 f6 74 2f ff 15 ?? ?? 40 00 3d b7 00 00 00 75 22 56 ff 15 48 30 40 00 6a 00 ff 15 34 30 40 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_Win32_Kangkio_C_2147610932_0
         $x_1_3 = "w.kang" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -70,6 +72,7 @@ rule Trojan_Win32_Kangkio_D_2147610933_0
         $x_1_5 = ".kangk.cn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

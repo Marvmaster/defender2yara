@@ -23,6 +23,7 @@ rule Trojan_Win64_Thirdeye_A_2147851666_0
         $x_5_9 = {c7 44 24 54 79 70 65 00 c7 44 24 50 4f 53 5f 74}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

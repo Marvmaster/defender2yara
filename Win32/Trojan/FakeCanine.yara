@@ -23,6 +23,7 @@ rule Trojan_Win32_FakeCanine_141628_0
         $x_1_9 = "Possible Identity Theft Detected!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or

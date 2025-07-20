@@ -18,6 +18,7 @@ rule TrojanDropper_Win64_YouieLoad_A_2147911418_0
         $x_50_3 = {8b 4c 03 fc 48 8d 40 10 33 4c 28 ec 89 48 ec 8b 4c 03 f0 33 4c 28 f0}  //weight: 50, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_50_*))) or
             (all of ($x*))

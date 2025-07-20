@@ -18,6 +18,7 @@ rule Ransom_MSIL_Kraken_A_2147729465_0
         $x_1_4 = "When the researchers party hard, our parties harder" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Ransom_MSIL_Kraken_2147729652_0
         $x_2_12 = "\"target_extensions\": [" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_4_*) and 2 of ($x_2_*))) or
             ((1 of ($x_6_*) and 3 of ($x_4_*) and 1 of ($x_2_*))) or
@@ -92,6 +94,7 @@ rule Ransom_MSIL_Kraken_2147729652_1
         $x_100_14 = "530de7d5-eb45-4ca3-afaa-255dc5c3489c" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_10_*) and 6 of ($x_1_*))) or
             ((1 of ($x_100_*) and 3 of ($x_10_*))) or
@@ -120,6 +123,7 @@ rule Ransom_MSIL_Kraken_B_2147730119_0
         $x_1_5 = {4e 6f 20 77 61 79 20 74 6f 20 72 65 63 6f 76 65 72 79 20 79 6f 75 72 20 66 69 6c 65 73 20 77 69 74 68 6f 75 74 [0-6] 4b 52 41 4b 45 4e 20 44 45 43 52 59 50 54 4f 52}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -141,6 +145,7 @@ rule Ransom_MSIL_Kraken_C_2147732026_0
         $x_1_2 = "onionhelp@memeware.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +171,7 @@ rule Ransom_MSIL_Kraken_D_2147732027_0
         $x_1_6 = "vssadmin delete shadows /All" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

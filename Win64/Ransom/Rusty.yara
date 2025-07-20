@@ -18,6 +18,7 @@ rule Ransom_Win64_Rusty_MX_2147920225_0
         $x_1_3 = "encrypt_date.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

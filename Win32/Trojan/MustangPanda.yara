@@ -17,6 +17,7 @@ rule Trojan_Win32_MustangPanda_RPX_2147905918_0
         $x_1_2 = "starmygame" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_MustangPanda_RPY_2147905919_0
         $x_1_5 = {0f b7 04 0a 66 3b c7 72 0d 66 3b c3 77 08 83 c0 20 0f b7 f0 eb 02 8b f0 0f b7 01 66 3b c7 72 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

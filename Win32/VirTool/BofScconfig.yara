@@ -19,6 +19,7 @@ rule VirTool_Win32_BofScconfig_A_2147901299_0
         $x_1_5 = "Argument domain " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

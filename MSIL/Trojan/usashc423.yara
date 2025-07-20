@@ -17,6 +17,7 @@ rule Trojan_MSIL_usashc423_RDB_2147845694_0
         $x_2_2 = {11 06 11 07 11 05 11 07 6f 61 00 00 0a 20 3b 0e 00 00 61 d1 9d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_usashc423_RDA_2147846503_0
         $x_1_4 = "2a25c14cdd204ea7ac28c220c509e048" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Linux_FegratSrv_A_2147770262_0
         $x_1_3 = "RedFlare/gorat_server.HTTPProxyServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_Linux_FegratSrv_B_2147770263_0
         $x_1_3 = "RedFlare/RedFlare/server/storage/postgres.initialBeaconDurCheck" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

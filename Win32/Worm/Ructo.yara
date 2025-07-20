@@ -16,6 +16,7 @@ rule Worm_Win32_Ructo_B_2147641090_0
         $x_1_2 = {00 00 76 00 6f 00 63 00 65 00 3d 00 00 00 10 00 00 00 45 00 6e 00 76 00 69 00 61 00 64 00 6f 00 3d 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Worm_Win32_Ructo_G_2147644829_0
         $x_1_6 = "\\msmsgs.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -69,6 +71,7 @@ rule Worm_Win32_Ructo_H_2147644883_0
         $x_1_5 = "\\msmsgs.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -96,6 +99,7 @@ rule Worm_Win32_Ructo_J_2147648147_0
         $x_1_5 = "regsvr32 /s /u" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule Worm_Win32_Ructo_J_2147648147_1
         $x_1_7 = "KeServiceDescriptorTable" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -151,6 +156,7 @@ rule Worm_Win32_Ructo_M_2147648780_0
         $x_2_6 = {2c 00 70 00 61 00 72 00 61 00 20 00 73 00 65 00 67 00 75 00 6e 00 64 00 6f 00 20 00 64 00 65 00 62 00 69 00 74 00 6f 00 20 00 6f 00 75 00 20 00 63 00 61 00 6e 00 63 00 65 00 6c 00 61 00 72 00 20 00 63 00 6c 00 69 00 63 00 6b 00 20 00 61 00 62 00 61 00 69 00 78 00 6f 00 2e 00 28 00 6f 00 62 00 73 00 2e 00 20 00 30 00 2c 00 39 00 38 00 20 00 2b 00 20 00 49 00 6d 00 70 00 6f 00 73 00 74 00 6f 00 73 00 29 00 [0-10] 3c 00 41 00 20 00 68 00 72 00 65 00 66 00 3d 00 [0-10] 3f 00 49 00 44 00 3d 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -184,6 +190,7 @@ rule Worm_Win32_Ructo_P_2147651929_0
         $x_1_10 = {fa 00 e9 00 f0 00 bb 00 ae 00 f2 00 e1 00 f2 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -212,6 +219,7 @@ rule Worm_Win32_Ructo_Q_2147655302_0
         $x_1_5 = "mplayer2" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

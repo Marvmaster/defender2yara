@@ -21,6 +21,7 @@ rule Ransom_Win32_LockFile_MK_2147789394_0
         $x_1_6 = "cmd.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win32_LockFile_ALK_2147946752_0
         $x_1_3 = "All Files stolen and encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

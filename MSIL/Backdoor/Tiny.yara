@@ -27,6 +27,7 @@ rule Backdoor_MSIL_Tiny_RHA_2147913347_0
         $x_2_12 = {50 45 00 00 4c 01 03 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0b 01 30 00 00 10 00 00 00 08 00 00 00 00 00 00 3a 2e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

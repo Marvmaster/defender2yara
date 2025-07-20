@@ -16,6 +16,7 @@ rule Trojan_Win32_Zensnif_A_2147828609_0
         $x_10_2 = {66 6a 00 05 ?? ?? 00 00 50 ff 14 24}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

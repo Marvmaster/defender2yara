@@ -18,6 +18,7 @@ rule Worm_Win32_Soglueda_A_2147636371_0
         $x_1_4 = {83 7d c4 02 0f 94 c2 f7 da 66 89 55 c0 8d 45 c8 50 8d 4d cc 51 8d 55 d0 52 6a 03 ff 15 ?? ?? ?? ?? 83 c4 10 0f bf 45 c0 85 c0 74 44 c7 45 fc 08 00 00 00 8b 4d d4 51 8b 55 dc 83 c2 41 0f 80}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

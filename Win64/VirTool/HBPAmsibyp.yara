@@ -16,6 +16,7 @@ rule VirTool_Win64_HBPAmsibyp_A_2147941248_0
         $x_1_2 = {48 8b 83 98 00 00 00 48 8b 50 30 ?? ?? ?? ?? ?? ?? ?? c7 02 00 00 00 00 81 4b 44 00 00 01 00 48 89 83 f8 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

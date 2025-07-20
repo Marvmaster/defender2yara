@@ -18,6 +18,7 @@ rule Trojan_Win32_Zbot_CL_2147636745_0
         $x_1_4 = {48 6f 73 74 73 50 72 6f 64 75 63 74 4d 75 74 65 78 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Zbot_B_2147739873_0
         $x_1_3 = {88 48 11 0f b6 50 f2 32 55 ff 8d 4e fe 88 50 12 83 c0 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Zbot_2147741592_0
         $x_2_3 = {8b 45 a4 85 c3 d1 c0 03 f0 8b 16 c1 c2 17 83 e2 09 03 ca 4b 89 0f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win32_Zbot_RL_2147743007_0
         $x_2_1 = {8b 03 33 c6 03 02 2b 02 89 01 03 15 ?? ?? ?? ?? 83 c7 01 8b c7 ff 75 18 8f 45 e8 2b 45 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_Win32_Zbot_RB_2147745100_0
         $x_2_1 = {8b 02 33 45 fc 8b 4d f8 89 01 c7 45 d0 16 00 00 00 8b e5 5d c3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +132,7 @@ rule Trojan_Win32_Zbot_RB_2147745100_1
         $x_1_1 = {2d b2 6e 00 00 89 45 18 8b 4d f0 83 c1 08 2b 4d 14 89 4d ec c7 45 e4 c0 f1 0f 00 8b 55 ec 69 d2 7b 46 01 00 a1 ?? ?? ?? ?? 2b c2 89 45 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +156,7 @@ rule Trojan_Win32_Zbot_RB_2147745100_2
         $x_1_3 = "SOWQKFT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +182,7 @@ rule Trojan_Win32_Zbot_RB_2147745100_3
         $x_1_5 = "nr4ADjU+dGtndWkAcGlq" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +209,7 @@ rule Trojan_Win32_Zbot_DSK_2147745377_0
         $x_1_6 = "C:\\EtyI3k7I.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -222,6 +231,7 @@ rule Trojan_Win32_Zbot_RC_2147747845_0
         $x_1_1 = {05 0b 42 51 00 8b 0d ?? ?? ?? ?? bb ?? ?? ?? ?? 30 03 43 49 85 c9 75 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -244,6 +254,7 @@ rule Trojan_Win32_Zbot_RC_2147747845_1
         $x_1_2 = {69 c9 fd 43 03 00 81 c1 c3 9e 26 00 8b c1 c1 e8 10 30 04 3b 43 3b de 7c e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -265,6 +276,7 @@ rule Trojan_Win32_Zbot_RC_2147747845_2
         $x_1_1 = {98 6c 00 8b c6 05 ?? 98 6c 00 ec c6 05 ?? 98 6c 00 83 c6 05 ?? 98 6c 00 c4 c6 05 ?? 98 6c 00 f0 c6 05 ?? 98 6c 00 b8 c6 05 ?? 98 6c 00 00 c6 05 ?? 98 6c 00 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -292,6 +304,7 @@ rule Trojan_Win32_Zbot_RB_2147749142_0
         $x_1_7 = "frolickly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -317,6 +330,7 @@ rule Trojan_Win32_Zbot_PVD_2147750020_0
         $x_2_5 = {8b ca b8 9a 02 00 00 03 c1 2d 9a 02 00 00 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 89 08 07 00 8b d7 b8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -338,6 +352,7 @@ rule Trojan_Win32_Zbot_XLZ_2147750724_0
         $x_1_1 = {6b c0 c0 01 85 ?? ?? ?? ?? 8a 85 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 32 85 ?? ?? ?? ?? 3b 0d ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 7f ?? 8b 8d ?? ?? ?? ?? 01 8d ?? ?? ?? ?? 88 06 39 1d ?? ?? ?? ?? 75 ?? 8b 85 ?? ?? ?? ?? 99 6a 35 59 f7 f9 69 c0 20 2a 01 00 2b c8 01 8d ?? ?? ?? ?? 81 3d ?? ?? ?? ?? e8 03 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -360,6 +375,7 @@ rule Trojan_Win32_Zbot_V_2147752791_0
         $x_1_2 = {81 ea ec 39 dd 5f 03 da 8b 03 c1 c0 0f 83 e0 13 03 c8 4f 89 0e ba 00 00 00 10 c1 c2 06 03 f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -382,6 +398,7 @@ rule Trojan_Win32_Zbot_PVE_2147754532_0
         $x_2_2 = {0f be 11 0f b6 85 63 ff ff ff 33 d0 8b 4d 08 03 4d 0c 88 11 8b 55 0c 83 ea 01 89 55 0c e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -403,6 +420,7 @@ rule Trojan_Win32_Zbot_DSA_2147757211_0
         $x_1_1 = {8a 07 03 ce 88 02 4e 4b 03 f0 f7 d0 42 48 f7 d1 4e 47 f7 d9 0b db 75 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -425,6 +443,7 @@ rule Trojan_Win32_Zbot_DEC_2147761206_0
         $x_1_2 = "08rtg0imuwrh9y3uj450yij3t" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -447,6 +466,7 @@ rule Trojan_Win32_Zbot_DED_2147762004_0
         $x_1_2 = {6b d2 61 03 ca 0f b6 05 ?? ?? ?? ?? 2b c1 a2 ?? ?? ?? ?? 8b 4d dc 83 e9 01 89 4d dc 8b 15 ?? ?? ?? ?? 6b d2 61 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -468,6 +488,7 @@ rule Trojan_Win32_Zbot_RI_2147773694_0
         $x_1_1 = {31 44 fa e1 99 e2 c5 c5 75 bf e6 0f 3d 7e 9f 75 e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -493,6 +514,7 @@ rule Trojan_Win32_Zbot_RI_2147773694_1
         $x_1_5 = "fk{vtelpp]hg[_\\HXMZ[QRI" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -524,6 +546,7 @@ rule Trojan_Win32_Zbot_RI_2147773694_2
         $x_1_11 = "LC_COLLATE=C;LC_CTYPE=C;LC_MONETARY=C;LC_NUMERIC=C;LC_TIME=C" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -557,6 +580,7 @@ rule Trojan_Win32_Zbot_RM_2147774347_0
         $x_1_13 = "1#QNAN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -583,6 +607,7 @@ rule Trojan_Win32_Zbot_RP_2147774348_0
         $x_1_2 = {30 1c 06 89 d8 c1 eb 18 89 df c1 e0 08 89 45 ?? f7 d0 f7 d7 89 45 ?? 68 4f 00 6b 9b 50 e8 ?? ?? ?? ?? 83 c4 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -609,6 +634,7 @@ rule Trojan_Win32_Zbot_SA_2147777958_0
         $x_1_6 = "%c:\\.RECYCLER\\%ls.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -630,6 +656,7 @@ rule Trojan_Win32_Zbot_RT_2147780149_0
         $x_1_1 = {89 18 8b 45 ?? 05 8a a5 08 00 03 45 ?? 8b 55 ?? 31 02 8d 85 ?? ?? ?? ?? 33 c9 ba [0-4] e8 ?? ?? ?? ?? 8d 85 ?? ?? ?? ?? 33 c9 ba}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -657,6 +684,7 @@ rule Trojan_Win32_Zbot_RT_2147780149_1
         $x_5_7 = "http://rl.ammyy.com" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -679,6 +707,7 @@ rule Trojan_Win32_Zbot_RTA_2147780160_0
         $x_1_2 = {33 c0 89 45 ?? 8b 45 ?? 3b 45 ?? 0f 83 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 8b d8 a1 ?? ?? ?? ?? 8b 00 03 45 ?? 03 d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -702,6 +731,7 @@ rule Trojan_Win32_Zbot_SIBJ_2147780371_0
         $x_5_3 = {8a 02 88 45 ?? 0f b6 4d ?? 83 c1 ?? 88 4d ?? 8b 55 ?? [0-16] 0f b6 4d ?? 83 f9 ?? 7c ?? 0f b6 55 ?? 83 fa ?? 7f ?? 0f b6 45 ?? 83 c0 ?? 88 45 ?? 0f b6 4d ?? 83 e9 ?? 88 4d ?? 0f b6 55 ?? 83 c2 ?? 88 55 ?? 0f b6 45 ?? 83 f8 ?? 7c ?? 0f b6 4d ?? 83 f9 ?? 7f ?? 0f b6 55 ?? 83 c2 ?? 88 55 ?? 0f b6 45 ?? 83 e8 ?? 88 45 ?? 0f b6 4d ?? 0f b6 55 ?? 3b ca 74 ?? eb ?? 0f b6 45 ?? 85 c0 75 ?? 8b 4d ?? 8b 41 18}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -727,6 +757,7 @@ rule Trojan_Win32_Zbot_SIBL_2147780372_0
         $x_10_1 = {89 0c d6 8d 4c d6 04 0f c8 89 01 8b 45 ?? 8b 38 31 3c d6 8b 40 04 31 01 4a 89 55 ?? 0f 89}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -749,6 +780,7 @@ rule Trojan_Win32_Zbot_SIBB_2147780525_0
         $x_10_2 = {8b 70 3c 8d b4 06 80 00 00 00 57 8b 3e 8b d8 85 ff 74 ?? 83 7e 04 14 76 ?? 8d 34 07 eb ?? 8d 3c 18 8b 46 10 03 c3 eb ?? 3b 08 75 ?? 89 10 83 c7 04 83 c0 04 83 3f 00 75 ?? 83 c6 14 8b 06 85 c0 75 ?? 33 f6 39 8e ?? ?? ?? ?? 75 ?? 89 96 ?? ?? ?? ?? 83 c6 04 83 fe 18}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -772,6 +804,7 @@ rule Trojan_Win32_Zbot_SIBG_2147780529_0
         $x_10_3 = {8b 16 31 c2 8b 5d ?? 29 da 29 c3 c1 c8 ?? 89 45 ?? 89 5d 00 89 16 83 c6 ?? e2 e5}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -796,6 +829,7 @@ rule Trojan_Win32_Zbot_SIBV_2147781941_0
         $x_1_1 = {33 db 39 5d ?? 76 ?? 8d 64 24 00 8a 0c 33 33 c0 88 4d ?? 8a 14 38 8b 4d ?? d2 e2 8a 4d 02 32 d0 02 d3 32 ca 40 88 4d 02 88 0c 33 83 f8 ?? 72 ?? 33 d2 8b c3 b9 ?? ?? ?? ?? f7 f1 43 8a 14 3a 32 55 02 88 54 33 ?? 3b 5d 00 72 ?? ff 4d 03 79}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -817,6 +851,7 @@ rule Trojan_Win32_Zbot_SIBD2_2147781942_0
         $x_2_1 = {8b 17 8b 4f ?? 53 b8 ?? ?? ?? ?? 55 8d 64 24 00 8b da c1 eb ?? 8b ea c1 e5 ?? 33 dd 8b e8 c1 ed ?? 83 e5 ?? 03 1c ae 8b e8 33 ea 03 dd 2b cb 8b d9 c1 eb ?? 8b e9 c1 e5 ?? 33 dd 05 ?? ?? ?? ?? 8b e8 83 e5 ?? 03 1c ae 8b e8 33 e9 03 dd 2b d3 85 c0 75 ?? 5d 89 17 89 4f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -838,6 +873,7 @@ rule Trojan_Win32_Zbot_SIBB3_2147781943_0
         $x_2_1 = {50 89 c7 be [0-16] 8a 1d [0-10] 8a 3e 88 3f 47 46 46 50 8a 06 aa 00 5f ?? 58 e2 [0-10] 83 ec ?? 6a ?? ff 35 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 5a 29 c2 52 6a ?? 6a ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 5a 29 c2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -860,6 +896,7 @@ rule Trojan_Win32_Zbot_SIBC3_2147781944_0
         $x_2_2 = {3b c8 0f 85 ?? ?? ?? ?? 8b 4d ?? 03 4d ?? 33 d2 8a 91 ?? ?? ?? ?? 8b 45 01 03 45 02 33 c9 8a 88 ?? ?? ?? ?? 83 c1 ?? 3b d1 0f 85 ?? ?? ?? ?? 8b 55 01 03 55 02 33 c0 8a 82 ?? ?? ?? ?? 35 ?? ?? ?? ?? 89 45 ?? 8b 4d 01 03 4d 02 33 d2 8a 91 ?? ?? ?? ?? 8b 45 ?? 03 c2 35 ?? ?? ?? ?? 89 45 ?? 8b 45 ?? 69 c0 ?? ?? ?? ?? 99 b9 ?? ?? ?? ?? f7 f9 03 45 01 8b 55 02 33 c9 8a 8c 10 ?? ?? ?? ?? 81 f1 ?? ?? ?? ?? 33 4d 0d 8b 55 01 03 55 14 88 8a ?? ?? ?? ?? 81 7d ?? ?? ?? ?? ?? 0f 84}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -881,6 +918,7 @@ rule Trojan_Win32_Zbot_SIBD4_2147781945_0
         $x_2_1 = {8b de 8b d2 81 e9 ?? ?? ?? ?? 2b d9 ba ?? ?? ?? ?? bb ?? ?? ?? ?? bf ?? ?? ?? ?? 76 ?? 33 d9 31 3a 09 fb 03 dd 8b 32 7f ?? 09 f3 8a d8 b0 ?? 8a c3 83 c6 ?? 89 32 5b 83 ec ?? 83 c2 ?? 8b da 8b d9 8b cb 83 e9 ?? 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -902,6 +940,7 @@ rule Trojan_Win32_Zbot_SIBC5_2147781946_0
         $x_1_1 = {89 e8 01 f8 89 c5 8a 26 8a 3f 88 e0 88 fb 88 c4 88 df 30 fc 88 27 41 47 46 39 ef 7d ?? 39 d1 7d ?? eb ?? 31 c9 29 d6 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -923,6 +962,7 @@ rule Trojan_Win32_Zbot_SIBC6_2147781947_0
         $x_1_1 = {8b ec 51 c7 45 ?? ?? ?? ?? ?? eb ?? 8b 45 ?? 83 c0 ?? 89 45 ?? 8b 4d ?? 3b 4d ?? 7f ?? 8b 45 ?? 99 f7 3d ?? ?? ?? ?? 8b 45 ?? 03 45 ?? 8a 08 32 8a ?? ?? ?? ?? 8b 55 ?? 03 55 ?? 88 0a eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -944,6 +984,7 @@ rule Trojan_Win32_Zbot_SIBC9_2147781948_0
         $x_1_1 = {53 85 c0 75 ?? 90 58 2b f0 8b d8 50 51 8b c7 57 8b 08 5f e8 ?? ?? ?? ?? 33 c1 8b 06 fe cd 33 c1 8b c8 46 88 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -965,6 +1006,7 @@ rule Trojan_Win32_Zbot_SIBC11_2147781949_0
         $x_1_1 = {03 f0 58 53 57 8b d8 53 85 c0 75 ?? 90 58 2b f0 8b d8 50 51 8b c7 57 8b 08 5f e8 ?? ?? ?? ?? 41 33 c0 8b 06 49 33 c1 8b c8 46 88 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -987,6 +1029,7 @@ rule Trojan_Win32_Zbot_SIBB6_2147781950_0
         $x_1_2 = {66 81 3f 4d 5a 75 ?? 89 fa 03 57 3c 66 81 3a 50 45 75 ?? 89 55 ?? 8b 42 78 03 45 08 89 45 ?? 8b 40 20 03 45 08 89 45 ?? 31 c9 8b 55 03 3b 4a 18 7d 3a 8b 5d 04 8b 1c 8b 03 5d 08 ff 75 0c 53 e8 ?? ?? ?? ?? 83 f8 01 74 ?? 41 eb ?? 8b 45 03 8b 40 24 03 45 08 31 db 66 8b 1c 48 8b 45 03 8b 40 1c 03 45 08 8b 04 98 03 45 08 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1011,6 +1054,7 @@ rule Trojan_Win32_Zbot_SIBG3_2147781953_0
         $x_10_4 = {2b ce 3b c8 74 ?? ff 45 ?? 83 7d 01 ?? 7c ?? 83 7d 01 ?? 0f 84 ?? ?? ?? ?? 80 3e ?? 74 ?? 80 7e ?? ?? 74 ?? c1 e0 ?? 50 6a ?? ff 75 ?? ff 15 ?? ?? ?? ?? 89 45 ?? 3b c3 0f 84 ?? ?? ?? ?? 8b 7d ?? 8b 45 ?? 8b 40 ?? 8b d7 33 c9 83 e7 ?? c1 e2 ?? 41 89 5d ?? 83 ff ?? 76 ?? 31 04 8e 8b 7d 12 41 c1 ef ?? 3b cf 72}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))
@@ -1035,6 +1079,7 @@ rule Trojan_Win32_Zbot_SIBD14_2147781954_0
         $x_1_1 = {8b 07 83 c7 ?? 8b f7 8b de 03 f8 8b d7 4a 2b c8 83 e9 ?? 52 ba ?? ?? ?? ?? 89 0a 89 7a ?? 5a 8a 07 8a 26 02 25 ?? ?? ?? ?? 32 c4 88 07 3b f2 74 ?? 46 47 49 75 ?? eb ?? 8b f3 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1057,6 +1102,7 @@ rule Trojan_Win32_Zbot_SIBE3_2147781955_0
         $x_1_2 = {50 8b d8 85 c0 90 58 2b f0 50 8b d8 51 8b 07 8b c8 40 e8 ?? ?? ?? ?? 47 4b 8b c3 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1080,6 +1126,7 @@ rule Trojan_Win32_Zbot_AB_2147781973_0
         $x_3_3 = "GkzCAoexmAcXCg0hL" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1106,6 +1153,7 @@ rule Trojan_Win32_Zbot_EP_2147783575_0
         $x_1_6 = "erwrdesxqw" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1138,6 +1186,7 @@ rule Trojan_Win32_Zbot_SIBK_2147785236_0
         $x_1_12 = "\\software\\LimeWire" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -1159,6 +1208,7 @@ rule Trojan_Win32_Zbot_SIBT_2147785237_0
         $x_1_1 = {8b 3e 8b 5e 04 e8 ?? ?? ?? ?? 03 c0 89 45 ?? e8 ?? ?? ?? ?? 8b 4d ?? 40 8b 75 ?? 89 45 ?? c7 45 ?? ?? ?? ?? ?? 8b 01 89 45 ?? 8b 41 ?? 89 45 ?? 8b 41 ?? 89 45 ?? 8b 41 ?? 89 45 ?? ff 15 ?? ?? ?? ?? 8b cf 8b c7 c1 e9 ?? 03 4d ?? c1 e0 ?? 03 45 ?? 56 ff 75 ?? 33 c8 8d 04 3e ff 75 ?? 33 c8 2b d9 53 e8 ?? ?? ?? ?? 33 c9 2b f8 8b 45 ?? 41 2b c8 83 c4 ?? 03 f1 ff 4d ?? 75 ?? 8b 75 ?? 89 3e 5f 89 5e 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1180,6 +1230,7 @@ rule Trojan_Win32_Zbot_SIBA6_2147785238_0
         $x_2_1 = {8b 02 03 05 ?? ?? ?? ?? 8b 4d ?? 03 0d 00 89 01 8b 15 00 81 c2 ?? ?? ?? ?? 8b 45 01 03 05 00 33 10 8b 4d 01 03 0d 00 89 11 a1 00 83 c0 04 a3 00 8b 0d 00 3b 4d ?? 73 ?? 8b 55 01 03 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1201,6 +1252,7 @@ rule Trojan_Win32_Zbot_SIBE12_2147785239_0
         $x_1_1 = {8b d8 53 85 c0 75 ?? 90 58 2b f0 8b d8 50 51 8b c7 57 8b 08 5f e8 ?? ?? ?? ?? 33 c1 8b 06 fe cd 33 c1 8b c8 46 88 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1224,6 +1276,7 @@ rule Trojan_Win32_Zbot_SIBD16_2147785240_0
         $x_5_3 = {33 c0 8b 0c 85 ?? ?? ?? ?? 40 a3 ?? ?? ?? ?? 8b c1 c1 e8 ?? 33 c8 8b c1 25 ?? ?? ?? ?? c1 e0 ?? 33 c8 8b c1 25 ?? ?? ?? ?? c1 e0 ?? 33 c8 8b c1 c1 e8 ?? 33 c1}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             ((1 of ($x_10_*))) or
@@ -1249,6 +1302,7 @@ rule Trojan_Win32_Zbot_SIBA7_2147785241_0
         $x_1_1 = {8b 08 03 4d ?? 8b 55 ?? 89 0a 8b 45 ?? 8b 08 89 4d ?? 8b 15 ?? ?? ?? ?? 52 8b 45 03 50 e8 ?? ?? ?? ?? 83 c4 08 89 45 ?? 8b 4d 02 8b 55 07 89 11 8b 45 00 83 c0 ?? 89 45 00 8b 4d 00 3b 4d ?? 0f 83 ?? ?? ?? ?? [0-26] 8b 55 00 81 c2 ?? ?? ?? ?? 89 15 04 [0-10] 8b 45 ?? 03 45 00 89 45 01 [0-26] 8b 4d 01 89 4d 02 8b 15 04 [0-16] 8b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1271,6 +1325,7 @@ rule Trojan_Win32_Zbot_SIBE19_2147785242_0
         $x_1_2 = {5a 31 c9 8a 2f 32 2a 88 2f fe c1 42 80 f9 ?? 75 ?? 31 c9 83 ea ?? 47 39 f8 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1293,6 +1348,7 @@ rule Trojan_Win32_Zbot_SIBC21_2147785243_0
         $x_1_2 = {8b 5d 00 83 eb ?? be ?? ?? ?? ?? 29 f3 89 1c 24 57 be ?? ?? ?? ?? 01 de b9 ?? ?? ?? ?? f3 a4 be ?? ?? ?? ?? 01 de b9 ?? ?? ?? ?? f3 a4 5f be ?? ?? ?? ?? 85 f6 74 ?? ba ?? ?? ?? ?? 01 fa b8 ?? ?? ?? ?? 01 f8 89 c7 89 44 24 ?? be ?? ?? ?? ?? 01 c6 80 38 ?? 75 ?? 8a 0a 88 08 42 40 39 c6 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1315,6 +1371,7 @@ rule Trojan_Win32_Zbot_AAO_2147787353_0
         $x_1_2 = {8a 06 2a 45 ff 8a 56 02 8b 4e 10 8a 5e 14 fe c8 32 d0 8a c2 32 45 fe 85 c9 74 08 84 db 0f 85 a0 00 00 00 33 c0 85 c0 74 09 32 55 fd 8a 0f ff d0 88 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1336,6 +1393,7 @@ rule Trojan_Win32_Zbot_SIBE23_2147787620_0
         $x_1_1 = {01 f8 89 c7 89 44 24 ?? be ?? ?? ?? ?? 01 c6 80 38 00 75 ?? 8a 0a 88 08 42 40 39 c6 75 ?? 5a 31 c9 8a 2f 32 2a 88 2f fe c1 42 80 f9 ?? 75 ?? 31 c9 83 ea ?? 47 39 f8 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1358,6 +1416,7 @@ rule Trojan_Win32_Zbot_SIBE15_2147787690_0
         $x_1_2 = {8b f2 2b c8 8a 14 01 30 10 40 4e 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1379,6 +1438,7 @@ rule Trojan_Win32_Zbot_SD_2147788362_0
         $x_1_1 = {8d 49 00 03 f8 8b ff 8b 17 8b 4d ?? 81 f1 9d 10 e6 3d 03 f9 8b 07 c1 c0 05 83 e0 05 03 d0 4e 89 13 b9 4e 2e dc 06 81 f1 4a 2e dc 06 03 d9 85 f6 0f 84 ?? ?? ?? ?? 8b 17 8b 4d fc 81 e9 f5 f0 2b ee 03 f9 8b 07 c1 c0 05 83 e0 05 03 d0 4e 89 13 b9 40 00 00 00 c1 c1 1c 03 d9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1400,6 +1460,7 @@ rule Trojan_Win32_Zbot_SIBD25_2147794044_0
         $x_1_1 = {b9 00 00 00 00 b8 ?? ?? ?? ?? 30 07 41 47 39 f1 30 07 41 47 39 f1 72 ?? 58 ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1421,6 +1482,7 @@ rule Trojan_Win32_Zbot_SIBA9_2147794045_0
         $x_1_1 = {8b 4d 08 03 4d ?? 8b 11 03 55 00 8b 45 08 03 45 00 89 10 [0-10] 8b 4d 00 81 c1 ?? ?? ?? ?? 8b 55 08 03 55 00 33 0a 8b 45 08 03 45 00 89 08 [0-10] 8b 45 00 83 c0 04 89 45 00 8b 4d 00 3b 4d 0c 73 ?? [0-16] 83 7d 00 00 8b 4d 08 03 4d 00 8b 11 03 55 00 8b 45 08 03 45 00 89 10 [0-10] 8b 4d 00 81 c1 05 8b 55 08 03 55 00 33 0a 8b 45 08 03 45 00 89 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1442,6 +1504,7 @@ rule Trojan_Win32_Zbot_SIBA10_2147794046_0
         $x_1_1 = {8b 55 08 03 55 ?? 8b 02 03 45 00 8b 4d 08 03 4d 00 89 01 [0-10] 8b 55 00 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? [0-16] 8b 4d 08 03 4d 00 8b 11 33 15 06 8b 45 08 03 45 00 89 10 8b 45 00 83 c0 04 89 45 00 8b 4d 00 3b 4d 0c 73 ?? [0-10] 8b 55 08 03 55 00 8b 02 03 45 00 8b 4d 08 03 4d 00 89 01 [0-10] 8b 55 00 81 c2 05 89 15 06 [0-16] 8b 4d 08 03 4d 00 8b 11 33 15 06 8b 45 08 03 45 00 89 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1463,6 +1526,7 @@ rule Trojan_Win32_Zbot_SIBA11_2147794047_0
         $x_1_1 = {3b 4d 0c 0f 83 ?? ?? ?? ?? [0-16] 8b 55 ?? 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 8b 45 08 03 45 02 8b 08 03 4d 02 8b 55 08 03 55 02 89 0a [0-16] 8b 0d 04 89 4d ?? 8b 55 0a 89 55 ?? 8b 45 0c 89 45 ?? 83 7d 02 ?? 8b 4d 08 03 4d 02 8b 11 33 55 0e 8b 45 08 03 45 02 89 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1484,6 +1548,7 @@ rule Trojan_Win32_Zbot_SIBD26_2147794048_0
         $x_1_1 = {8b d8 8b d3 56 51 8b 07 51 8b c8 48 8b 06 33 c1 51 56 8b f7 88 06 5e 46 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1507,6 +1572,7 @@ rule Trojan_Win32_Zbot_YTL_2147794453_0
         $x_1_3 = "KsdnYYe2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1529,6 +1595,7 @@ rule Trojan_Win32_Zbot_AR_2147795104_0
         $x_1_2 = {b9 5d 36 d3 84 81 f1 59 36 d3 84 03 f9 8b 0f 8b 45 cc c1 c0 0c 3b c8 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1550,6 +1617,7 @@ rule Trojan_Win32_Zbot_AM_2147795105_0
         $x_1_1 = {8b 7d 0c 8b 07 33 d2 89 45 08 33 db 8a 55 0b 8a 5d 0a 8b 14 95 f8 bb 41 00 33 14 9d f8 bf 41 00 33 db 8a dc 25 ff 00 00 00 33 14 9d f8 c3 41 00 33 14 85 f8 c7 41 00 89 17 83 c7 04 49 75 c4 ff 45 14 83 45 0c 20 8b 45 14 3b 86 d0 03 00 00 7c a8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1572,6 +1640,7 @@ rule Trojan_Win32_Zbot_AL_2147795106_0
         $x_1_2 = {8a 14 39 88 14 31 41 3b c8 72 f5 83 65 e4 00 33 c0 66 3b 43 06 73 3f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1593,6 +1662,7 @@ rule Trojan_Win32_Zbot_AL_2147795106_1
         $x_4_1 = {28 13 43 c1 ea 08 41 83 f9 04 75 0a ba 72 c6 0e de b9 00 00 00 00 81 fb 9f fa 40 00 72}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1615,6 +1685,7 @@ rule Trojan_Win32_Zbot_DF_2147796161_0
         $x_1_2 = {8a 0c 28 80 f1 80 88 0c 28 8b 4c 24 10 40 3b c1 72 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1636,6 +1707,7 @@ rule Trojan_Win32_Zbot_DG_2147796539_0
         $x_2_1 = {8b 4d f4 83 c1 01 89 4d f4 8b 55 f4 3b 55 f8 7d 69 8b 45 10 3b 45 fc 7f 0b 8b 4d 10 03 4d fc 89 4d f0 eb 09 8b 55 10 2b 55 fc 89 55 f0 8b 45 08 03 45 f4 0f be 08 8b 75 fc 33 75 10 83 c6 58 8b 45 f0 99 f7 fe 33 ca 8b 55 08 03 55 f4 88 0a 83 7d fc 3a 7e 09 c7 45 fc 00 00 00 00 eb 1a 83 7d 10 5a 7e 0b 8b 45 fc 83 c0 02 89 45 fc eb 09 8b 4d fc 83 c1 03 89 4d fc eb 86}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1661,6 +1733,7 @@ rule Trojan_Win32_Zbot_DJ_2147796822_0
         $x_1_5 = "sG6tuzSUAKNM2H4Nt1E1vrNhrkOgqkR6zohY8hOZBNLcKXmhGMvon0J8DU2Wv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1685,6 +1758,7 @@ rule Trojan_Win32_Zbot_DM_2147796825_0
         $x_1_4 = "wsnpoema.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1711,6 +1785,7 @@ rule Trojan_Win32_Zbot_DM_2147796825_1
         $x_1_6 = "131.188.40.189" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1733,6 +1808,7 @@ rule Trojan_Win32_Zbot_DO_2147796943_0
         $x_1_2 = {8a 06 46 88 07 47 01 db 75 07 8b 1e 83 ee fc 11 db 72 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1755,6 +1831,7 @@ rule Trojan_Win32_Zbot_DO_2147796943_1
         $x_1_2 = {31 19 ad 58 47 22 ed 30 ba f5 12 44 61 07 12 25 55 09 ad 30 13 53 6d 30 45 2d 87 32 13 55 ef 58 45 31 ed 70 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1778,6 +1855,7 @@ rule Trojan_Win32_Zbot_DN_2147797055_0
         $x_1_3 = "C:\\Users\\admin\\Downloads\\ffengh.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1800,6 +1878,7 @@ rule Trojan_Win32_Zbot_DQ_2147797672_0
         $x_1_2 = {c7 40 ff 3e 4c ff fd c7 44 ff 0a c0 00 08 00 32 06 00 48 ff 44 ff 40 ff 00 28 04 4c ff 04 50 ff 10 04 07 1a 00 f5 07 00 00 00 80 0c 00 6c 4c ff 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1822,6 +1901,7 @@ rule Trojan_Win32_Zbot_DR_2147797673_0
         $x_1_2 = {83 c4 0c 8d 46 1c 2b ce bf 01 01 00 00 8a 14 01 88 10 40 4f 75 f7 8d 86 1d 01 00 00 be 00 01 00 00 8a 14 08 88 10 40 4e 75 f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1843,6 +1923,7 @@ rule Trojan_Win32_Zbot_DS_2147797674_0
         $x_2_1 = {8b 75 08 bb 0a 00 00 00 8b 4d 0c c1 e9 02 ba 00 00 00 00 8b 45 0c c1 e8 02 2b c1 50 f7 f3 42 42 29 16 33 d2 58 f7 f3 03 14 24 52 81 04 24 21 ec 30 45 5a 31 16 83 c6 04 e2 d4}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1869,6 +1950,7 @@ rule Trojan_Win32_Zbot_DV_2147797676_0
         $x_1_6 = "Bit Sheover Totalfather" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1891,6 +1973,7 @@ rule Trojan_Win32_Zbot_DI_2147797751_0
         $x_1_2 = "C:\\Users\\admin\\Downloads\\wefujn.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1912,6 +1995,7 @@ rule Trojan_Win32_Zbot_AQ_2147797995_0
         $x_2_1 = {33 db 8a da 80 f3 08 80 38 00 74 06 38 18 74 02 30 18 40 42 3b 15 [0-4] 76}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1934,6 +2018,7 @@ rule Trojan_Win32_Zbot_AQ_2147797995_1
         $x_1_2 = "C:\\Documents and Settings\\All Users\\Start Menu\\Programs\\Startup\\Y9DfPswRr.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1959,6 +2044,7 @@ rule Trojan_Win32_Zbot_DB_2147797996_0
         $x_1_5 = "C:\\Users\\r.vult\\AppData\\Local\\Temp\\d89fb063517126d16cfe3bfd01205669.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1981,6 +2067,7 @@ rule Trojan_Win32_Zbot_BB_2147798301_0
         $x_5_2 = {84 00 43 00 8b 0d ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? 33 ce 89 35 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? f7 da 89 15 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 81 e1 ?? ?? ?? ?? 81 f1 ?? ?? ?? ?? 49 89 0d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2005,6 +2092,7 @@ rule Trojan_Win32_Zbot_ADT_2147798615_0
         $x_1_4 = "Copyrighz (C) 2021, fudkagat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2030,6 +2118,7 @@ rule Trojan_Win32_Zbot_FNF_2147798717_0
         $x_1_5 = "Copyrighz (C) 2021, fudkagat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2053,6 +2142,7 @@ rule Trojan_Win32_Zbot_FL_2147798718_0
         $x_1_3 = "mal.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2079,6 +2169,7 @@ rule Trojan_Win32_Zbot_DD_2147805261_0
         $x_1_6 = "C:\\yQE6ncko.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2101,6 +2192,7 @@ rule Trojan_Win32_Zbot_DU_2147805265_0
         $x_1_2 = "C:\\Users\\george\\Desktop\\dawid.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2124,6 +2216,7 @@ rule Trojan_Win32_Zbot_2147806113_0
         $x_10_2 = {89 15 43 29 06 29 42 33 30 43 03 42 00 36 50}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2147,6 +2240,7 @@ rule Trojan_Win32_Zbot_2147806236_0
         $x_10_2 = {8b c8 88 07 83 c6 01 c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2170,6 +2264,7 @@ rule Trojan_Win32_Zbot_2147806237_0
         $x_10_2 = {83 c6 23 46 b9 02 00 00 00 f7 e1 8b c8 8b 06 03 c8 8b 45 fc 03 c8 0f b7 01 83 ee 24 8b 4e 1c 8d 04 81 8b 4d fc 8b 04 01 c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2192,6 +2287,7 @@ rule Trojan_Win32_Zbot_DP_2147806400_0
         $x_1_2 = {8b 0e 03 cb b8 00 40 00 00 c1 c0 14 03 f0 c1 c1 08 89 4d 94 03 d5 52 e8 ?? ?? ?? ?? 56 59 5a 2b d5 8b 45 a8 85 c7 c1 c0 16 03 c2 3b c2 0f 85 ?? ?? ?? ?? 2b c2 4a 3b d0 75 c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2216,6 +2312,7 @@ rule Trojan_Win32_Zbot_2147807960_0
         $x_10_3 = {53 23 0e 30 48 61 96 8a 54 fb a1}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2241,6 +2338,7 @@ rule Trojan_Win32_Zbot_GLM_2147808277_0
         $x_1_5 = "conwur.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2264,6 +2362,7 @@ rule Trojan_Win32_Zbot_MMW_2147808280_0
         $x_1_3 = "hwiwjgtqkyrjleqld" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2289,6 +2388,7 @@ rule Trojan_Win32_Zbot_DKL_2147808281_0
         $x_1_5 = "Jkadsuxicni" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2314,6 +2414,7 @@ rule Trojan_Win32_Zbot_CHA_2147808318_0
         $x_1_5 = "C:\\Users\\r.vult\\AppData\\Local\\Temp\\678c93c84bc7544da0a95036deb0f76f.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2336,6 +2437,7 @@ rule Trojan_Win32_Zbot_2147808590_0
         $x_10_1 = {8b 0e 8b 45 a8 c1 c0 0c 03 f0 8b 16 c1 c2 03 83 e2 09 03 ca 4b 89 0f b8 ?? ?? ?? ?? 35 fe 0c cd f5 03 f8 85 db 75 b0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2359,6 +2461,7 @@ rule Trojan_Win32_Zbot_VHO_2147808591_0
         $x_1_3 = "budha.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2382,6 +2485,7 @@ rule Trojan_Win32_Zbot_RQIJ_2147808775_0
         $x_1_3 = "vcxtR4oeM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2409,6 +2513,7 @@ rule Trojan_Win32_Zbot_ZMZC_2147808928_0
         $x_1_7 = "POFnKJRj.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2431,6 +2536,7 @@ rule Trojan_Win32_Zbot_GLL_2147808930_0
         $x_10_2 = {33 07 33 c1 08 ff 8b ff 8b 16 8b 4d a0 81 f1 03 d4 f4 e4 03 f1 e9 f2 01 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2458,6 +2564,7 @@ rule Trojan_Win32_Zbot_QLM_2147808931_0
         $x_2_7 = "DCW6Nb7vhgEaiDCW6Nb7vhgEaiDCW6Nb7vhgEai" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2483,6 +2590,7 @@ rule Trojan_Win32_Zbot_HBAI_2147809005_0
         $x_1_5 = "Huwenond" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2505,6 +2613,7 @@ rule Trojan_Win32_Zbot_GSH_2147809631_0
         $x_10_2 = {b9 d9 2d ce 63 81 f1 ?? ?? ?? ?? 03 cb 8b 11 03 d3 bf ?? ?? ?? ?? 81 ef ?? ?? ?? ?? 03 fa 8b 37 03 f3 eb 88}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2527,6 +2636,7 @@ rule Trojan_Win32_Zbot_GFE_2147809827_0
         $x_10_2 = {8b 47 04 6a 09 d1 e8 33 d2 59 f7 f1 85 d2 74 17}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2549,6 +2659,7 @@ rule Trojan_Win32_Zbot_DA_2147810301_0
         $x_1_2 = {8b 0e 8b 45 b4 35 11 2f dd f5 03 f0 8b 16 c1 c2 1f 83 e2 15 03 ca 4b 89 0f b8 88 68 18 ec 05 7c 97 e7 13 03 f8 85 db 0f 84}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2574,6 +2685,7 @@ rule Trojan_Win32_Zbot_CA_2147810510_0
         $x_1_5 = "GetTickCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2599,6 +2711,7 @@ rule Trojan_Win32_Zbot_GTS_2147810541_0
         $x_1_5 = "edinalrdo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2622,6 +2735,7 @@ rule Trojan_Win32_Zbot_GFS_2147810543_0
         $x_1_3 = "\\1.scr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2645,6 +2759,7 @@ rule Trojan_Win32_Zbot_2147810549_0
         $x_10_2 = {01 c3 ff 08 33 33 c0 ff 10 40 ff 10 10 cc c3 10 75 40 03 40 e8 33 01 75 10}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2666,6 +2781,7 @@ rule Trojan_Win32_Zbot_GIL_2147810959_0
         $x_10_1 = {8b 75 08 bb 0a 00 00 00 8b 4d 0c c1 e9 02 33 d2 8b 45 0c c1 e8 02 2b c1 50 f7 f3 83 c2 02 29 16 33 d2 58 f7 f3 03 14 24 81 c2 a0 82 f9 45 31 16 83 c6 04 e2 d9}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2689,6 +2805,7 @@ rule Trojan_Win32_Zbot_GME_2147811341_0
         $x_1_3 = "nKERNEL32.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2712,6 +2829,7 @@ rule Trojan_Win32_Zbot_GMS_2147811344_0
         $x_1_3 = "LoadModule" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2733,6 +2851,7 @@ rule Trojan_Win32_Zbot_GWW_2147811654_0
         $x_10_1 = {8a 17 8b 74 24 14 0f b6 c3 8a 04 30 8b 74 24 1c 02 c2 02 c8 88 4c 24 11 0f b6 c9 fe c3 8a 04 31 88 07 88 14 31 0f b6 c3 33 d2 66 3b 44 24 12 0f b6 cb 0f 44 ca 47 8a d9 8a 4c 24 11 4d 75 c1}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2756,6 +2875,7 @@ rule Trojan_Win32_Zbot_WQ_2147811655_0
         $x_1_3 = "JRhr.dlhduse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2778,6 +2898,7 @@ rule Trojan_Win32_Zbot_Q_2147811675_0
         $x_3_2 = "Ptscan.exe" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2801,6 +2922,7 @@ rule Trojan_Win32_Zbot_2147811987_0
         $x_10_2 = {8b f8 8b 45 f4 8b cf 2b c7 be ?? ?? ?? ?? 8a 14 08 88 11 41 4e 75 f7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2828,6 +2950,7 @@ rule Trojan_Win32_Zbot_GMP_2147811988_0
         $x_1_7 = "__injectEntryForThreadEntry@4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2855,6 +2978,7 @@ rule Trojan_Win32_Zbot_GTK_2147811989_0
         $x_1_7 = "GDTPTQYBQBurghIODAGD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2879,6 +3003,7 @@ rule Trojan_Win32_Zbot_AAN_2147811990_0
         $x_1_4 = "Loaddibr9ryE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2903,6 +3028,7 @@ rule Trojan_Win32_Zbot_UR_2147812158_0
         $x_1_4 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2929,6 +3055,7 @@ rule Trojan_Win32_Zbot_CI_2147812208_0
         $x_1_6 = "Remove spyware from this system" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2957,6 +3084,7 @@ rule Trojan_Win32_Zbot_GWD_2147812601_0
         $x_1_8 = "awucobtst" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2979,6 +3107,7 @@ rule Trojan_Win32_Zbot_GB_2147812771_0
         $x_10_2 = {8b c6 c1 e0 10 0b f0 89 35 98 e0 40 00 f7 d6 89 35 9c e0 40 00 5e 5f 5b c9 c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3002,6 +3131,7 @@ rule Trojan_Win32_Zbot_GQQ_2147812773_0
         $x_1_3 = "Hawuqyiqo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3025,6 +3155,7 @@ rule Trojan_Win32_Zbot_GDT_2147812774_0
         $x_1_3 = "micrsolv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3047,6 +3178,7 @@ rule Trojan_Win32_Zbot_GTT_2147812776_0
         $x_10_2 = {d1 e2 8b 4d 00 03 cb 03 ca 8b 09 81 e1 ?? ?? ?? ?? 8b 55 0c 03 d3 c1 e1 02 03 d1 8b 12 03 d3 89 17 8b 4d 08 03 cb 89 4d 04 5f eb 9d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3070,6 +3202,7 @@ rule Trojan_Win32_Zbot_CB_2147812940_0
         $x_1_3 = "C:\\Users\\maxine\\AppData\\Local\\Temp\\file.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3092,6 +3225,7 @@ rule Trojan_Win32_Zbot_GNM_2147812987_0
         $x_10_2 = {8b 13 2b d8 23 d0 4b 3b d1 75 f5 e9 54 02 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3118,6 +3252,7 @@ rule Trojan_Win32_Zbot_ZR_2147812988_0
         $x_1_6 = "WinExec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3143,6 +3278,7 @@ rule Trojan_Win32_Zbot_ABA_2147812990_0
         $x_1_5 = "LoadResource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3165,6 +3301,7 @@ rule Trojan_Win32_Zbot_GTR_2147813281_0
         $x_10_2 = {8b 45 e8 8b 55 e4 69 c0 ?? ?? ?? ?? 8b 5d ?? 2b c2 33 d2 f7 f3 8b d1 69 c0 ?? ?? ?? ?? 05 ?? ?? ?? ?? 33 c6 2b d0 3b d7 0f 86}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3187,6 +3324,7 @@ rule Trojan_Win32_Zbot_CN_2147813742_0
         $x_1_2 = {89 f9 89 da d3 fa 29 d7 8b 55 e8 29 fa 89 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3209,6 +3347,7 @@ rule Trojan_Win32_Zbot_CJ_2147813928_0
         $x_1_2 = {8b 45 f8 8d 1c 03 31 f0 01 45 fc 09 f6 74 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3233,6 +3372,7 @@ rule Trojan_Win32_Zbot_EC_2147814124_0
         $x_3_4 = "InternetReadFile" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_3_*))) or
             (all of ($x*))
@@ -3260,6 +3400,7 @@ rule Trojan_Win32_Zbot_BK_2147815647_0
         $x_1_4 = "gethostname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3283,6 +3424,7 @@ rule Trojan_Win32_Zbot_CD_2147815648_0
         $x_1_3 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3310,6 +3452,7 @@ rule Trojan_Win32_Zbot_CK_2147818365_0
         $x_1_7 = "botnet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3333,6 +3476,7 @@ rule Trojan_Win32_Zbot_CM_2147818489_0
         $x_1_3 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3357,6 +3501,7 @@ rule Trojan_Win32_Zbot_WM_2147818579_0
         $x_1_4 = "software\\microsoft\\windows\\currentversion\\run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3379,6 +3524,7 @@ rule Trojan_Win32_Zbot_BD_2147819222_0
         $x_2_2 = "VirtualAlloc" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3400,6 +3546,7 @@ rule Trojan_Win32_Zbot_RPM_2147819257_0
         $x_1_1 = {c0 e0 06 0a c2 8d 93 ?? ?? ?? ?? 81 ca ?? ?? ?? ?? 88 84 3a ?? ?? ?? ?? b8 ?? ?? ?? ?? 33 d2 f7 f6 33 d2 bf ?? ?? ?? ?? f7 f7 8a 45 ?? 8b fa 81 f7 ?? ?? ?? ?? 3c e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3421,6 +3568,7 @@ rule Trojan_Win32_Zbot_BE_2147819314_0
         $x_2_1 = {2a c1 f6 6d fc 8a d8 8a c1 f6 ea 2a d8 02 1d [0-4] 02 1d [0-4] 80 eb 02 30 1c 31 39 3d [0-4] 7e 08}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3442,6 +3590,7 @@ rule Trojan_Win32_Zbot_BG_2147820501_0
         $x_2_1 = {8b 45 c4 8b 4d cc 8a 10 32 11 8b 45 c4 88 10 68 [0-4] e8 [0-4] 83 c4 04 8b f0 68 [0-4] e8 [0-4] 83 c4 04 3b f0 74}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3464,6 +3613,7 @@ rule Trojan_Win32_Zbot_BH_2147823836_0
         $x_1_2 = {23 c7 89 05 [0-4] 8b 1d [0-4] 33 df 89 1d [0-4] 8b 3d [0-4] 47 4f 89 3d [0-4] e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3485,6 +3635,7 @@ rule Trojan_Win32_Zbot_A_2147823975_0
         $x_1_1 = {6a 00 c1 da 05 33 dd 33 ff bf 2a 23 39 8c ff 75 bc c1 ca 0a b9 fe 4e f7 e0 c1 de 03 ff 15 6c d1 40 00 83 c4 04 c1 c2 01 89 d9 bb b6 54 1e 34}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3508,6 +3659,7 @@ rule Trojan_Win32_Zbot_A_2147823975_1
         $x_1_3 = "RoadSiderMount" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3530,6 +3682,7 @@ rule Trojan_Win32_Zbot_BI_2147824023_0
         $x_1_2 = {33 c6 2b c7 89 01 8b 45 ?? 8b 4d ?? 33 c6 2b c7 3b c8 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3552,6 +3705,7 @@ rule Trojan_Win32_Zbot_BJ_2147824250_0
         $x_1_2 = {33 c8 33 d0 2b ca 2b ce 33 c8 89 4d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3573,6 +3727,7 @@ rule Trojan_Win32_Zbot_C_2147824385_0
         $x_1_1 = {8b fb f3 a5 2d dc 07 00 00 04 3c 33 c9 66 a5 d0 e0 30 04 19 41 83 f9 7a 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3594,6 +3749,7 @@ rule Trojan_Win32_Zbot_C_2147824385_1
         $x_1_1 = {2b f1 8b 0d ?? ?? ?? ?? 83 c1 52 8b 85 38 fc ff ff 33 d2 f7 f1 0f af 05 ?? ?? ?? ?? 2b f0 89 b5 48 fc ff ff 0f b6 95 0f fc ff ff 33 95 08 fc ff ff 88 95 07 fc ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3615,6 +3771,7 @@ rule Trojan_Win32_Zbot_BN_2147824852_0
         $x_2_1 = {83 c0 02 bb b3 31 41 00 fe 03 43 81 fb c1 33 41 00 75 f5 b8 0b 00 00 00 47 81 ff 69 9c 01 00 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3636,6 +3793,7 @@ rule Trojan_Win32_Zbot_RPZ_2147828541_0
         $x_1_1 = {39 d2 74 01 ?? 31 1f 81 c7 04 00 00 00 81 c1 ?? ?? ?? ?? 21 f6 39 d7 75 e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3657,6 +3815,7 @@ rule Trojan_Win32_Zbot_RPZ_2147828541_1
         $x_1_1 = {89 c2 89 c1 89 f8 83 ca 01 89 55 e8 99 f7 7d e8 01 c1 8b 45 cc 03 4d 08 09 f8 03 45 08 ff 4d e4 8a 10 88 55 e8 8a 11 88 10 8a 45 e8 88 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3678,6 +3837,7 @@ rule Trojan_Win32_Zbot_RPZ_2147828541_2
         $x_1_1 = {c6 45 dd 08 c6 45 de 2b c6 45 df 08 c6 45 e0 5c c6 45 e1 08 c6 45 e2 31 c6 45 e3 08 c6 45 e4 5c c6 45 e5 08 c6 45 e6 52 c6 45 e7 08 c6 45 e8 31 c6 45 e9 08 c6 45 ea 3f c6 45 eb 08 c6 45 ec 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3699,6 +3859,7 @@ rule Trojan_Win32_Zbot_RPF_2147829240_0
         $x_1_1 = {88 55 db 8b 45 e8 8b 55 08 0f b6 4d e3 01 f1 88 0c 02 8b 45 ec 0f b6 4d db 31 f1 88 0c 02 ff 45 f0 81 7d f0 ?? ?? ?? ?? 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3721,6 +3882,7 @@ rule Trojan_Win32_Zbot_BO_2147829276_0
         $x_2_2 = {03 d7 c1 e1 02 03 d1 8b 12 03 d7 89 13 8b 4d 08 03 cf 89 4d 04 5b e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3746,6 +3908,7 @@ rule Trojan_Win32_Zbot_BP_2147829292_0
         $x_1_5 = "not initialized!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3767,6 +3930,7 @@ rule Trojan_Win32_Zbot_RPT_2147829933_0
         $x_1_1 = {c1 ea 18 88 14 3e 8b c3 c1 e8 10 88 44 3e 01 8b 44 24 14 8b cb c1 e9 08 88 4c 3e 02 40 88 5c 3e 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3788,6 +3952,7 @@ rule Trojan_Win32_Zbot_RA_2147829997_0
         $x_1_1 = {8b d9 2b df 2b d8 8b 44 24 14 8b 00 81 eb 87 28 00 00 8b fb 8b 5c 24 1c 03 d9 8d 9c 2b ?? ?? ?? ?? 89 1d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3810,6 +3975,7 @@ rule Trojan_Win32_Zbot_RA_2147829997_1
         $x_1_2 = {47 6a 00 6a 00 6a 00 6a 00 6a 79 6a 4b 6a 76 6a 18 68 00 00 80 00 6a 00 c7 05 ?? ?? ?? ?? 4c 49 53 54 c7 05 ?? ?? ?? ?? 42 4f 58 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3831,6 +3997,7 @@ rule Trojan_Win32_Zbot_BS_2147830321_0
         $x_5_1 = {67 34 31 30 38 ce bb [0-4] 3e f7 97 a1 e3 e4 80 7a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3856,6 +4023,7 @@ rule Trojan_Win32_Zbot_BT_2147830838_0
         $x_1_5 = "fk{vtelpp]hg[_\\HaQTPQGMJ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3881,6 +4049,7 @@ rule Trojan_Win32_Zbot_R_2147831320_0
         $x_1_5 = "fk{vtelpp]hg[_\\HaQTPQGMJ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3907,6 +4076,7 @@ rule Trojan_Win32_Zbot_R_2147831320_1
         $x_1_6 = "fk{vtelpp]hg[_\\HaQTPQGMJ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3934,6 +4104,7 @@ rule Trojan_Win32_Zbot_R_2147831320_2
         $x_1_7 = "zkrvvcnmaebNbcZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3955,6 +4126,7 @@ rule Trojan_Win32_Zbot_BV_2147831531_0
         $x_5_1 = {8b 45 fc 8a 88 [0-4] 30 8c 05 f8 fe ff ff 40 56 89 45 fc e8 [0-4] 59 39 45 fc 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3977,6 +4149,7 @@ rule Trojan_Win32_Zbot_BX_2147831642_0
         $x_5_2 = {33 a1 44 89 ba 49 d6 87 08 87 e5 32 6e 58 a2 82 5d f1 41 98 77}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3998,6 +4171,7 @@ rule Trojan_Win32_Zbot_RPN_2147831920_0
         $x_1_1 = {8b 32 50 57 53 5f 56 58 ab 5f 58 83 2b 01 f7 d9 f8 19 0b ff 32 8d 52 04 8d 5b 04 59 f3 0f c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4019,6 +4193,7 @@ rule Trojan_Win32_Zbot_RPN_2147831920_1
         $x_1_1 = {88 14 03 0f b6 55 db 89 55 bc 8b 7d e4 89 f0 89 45 c0 89 d1 80 c9 01 31 d2 f7 f1 89 45 b8 8b 55 bc 89 c1 01 d1 89 ca 88 14 3b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4040,6 +4215,7 @@ rule Trojan_Win32_Zbot_BY_2147832517_0
         $x_5_1 = {8a 16 00 da f6 d0 88 d0 f6 d0 aa 83 c6 04 83 c7 03 ba 30 00 00 00 83 e9 04 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4061,6 +4237,7 @@ rule Trojan_Win32_Zbot_RPG_2147832528_0
         $x_1_1 = {0f b6 00 88 45 fc 8a 22 80 cc 01 88 d8 f6 e4 8a 3a 28 c7 8a 45 fc 88 39 08 d8 88 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4082,6 +4259,7 @@ rule Trojan_Win32_Zbot_RPX_2147833388_0
         $x_1_1 = {64 8b 0d 30 00 00 00 f8 81 e8 00 00 00 00 f8 f5 8d 00 3c 8f c0 c8 28 60 60 60}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4103,6 +4281,7 @@ rule Trojan_Win32_Zbot_RPX_2147833388_1
         $x_1_1 = {8b c6 33 d2 b9 b0 03 00 00 f7 f1 8a 55 ff 8b c8 8a 45 fe 80 c1 02 d2 ea 8d 8e d2 fd ff ff d2 e0 8b 4d f4 0a d0 8b c7 69 c0 8f 00 00 00 23 c6 25 bb 01 00 00 88 54 08 df}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4127,6 +4306,7 @@ rule Trojan_Win32_Zbot_AH_2147833534_0
         $x_1_4 = "URLDownloadToFileW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4149,6 +4329,7 @@ rule Trojan_Win32_Zbot_AI_2147833535_0
         $x_2_2 = {88 14 18 33 db 8a 98 00 01 00 00 02 14 18 81 e2 ff 00 00 00 8a 14 10 32 16 88 11 41 46 ff 4d fc 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4172,6 +4353,7 @@ rule Trojan_Win32_Zbot_BQ_2147835175_0
         $x_1_3 = "wboxsh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4197,6 +4379,7 @@ rule Trojan_Win32_Zbot_AJ_2147835176_0
         $x_2_5 = "ilobqt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -4222,6 +4405,7 @@ rule Trojan_Win32_Zbot_AK_2147835177_0
         $x_4_1 = {fe 03 43 33 d2 81 fb e1 32 41 00 75 f3 40 b9 00 00 00 00 33 c8 33 c9 3d e5 99 01 00 75}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4243,6 +4427,7 @@ rule Trojan_Win32_Zbot_RE_2147835670_0
         $x_1_1 = {2a 40 00 64 2a 40 00 58 2a 40 00 4c 2a 40 00 40 2a 40 00 34 2a 40 00 20 2a 40 00 14 2a 40 00 0c 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4265,6 +4450,7 @@ rule Trojan_Win32_Zbot_RE_2147835670_1
         $x_1_2 = "pikmkgcyvtfkyheiqghg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4287,6 +4473,7 @@ rule Trojan_Win32_Zbot_BR_2147836301_0
         $x_5_2 = {33 d8 89 5d f8 03 7d fc 33 df 48 74}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4309,6 +4496,7 @@ rule Trojan_Win32_Zbot_AN_2147836837_0
         $x_2_2 = "Ihq_{JTQWtWOQAEOLI" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4332,6 +4520,7 @@ rule Trojan_Win32_Zbot_AP_2147836841_0
         $x_1_3 = {8b 14 24 83 c4 04 2d 71 e7 0c 00 05 75 e7 0c 00 c1 ea 08 81 ed df c3 05 00 81 c5 e0 c3 05 00 39 c5 75 0c bd d2 71 bf 7f 89 ea bd 00 00 00 00 81 c1 3d f5 09 00 81 e9 3e f5 09 00 83 f9 00 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4353,6 +4542,7 @@ rule Trojan_Win32_Zbot_AS_2147837792_0
         $x_2_1 = {2b d8 bf eb 00 00 00 31 3a 8d 1c 10 02 db 8b d9 8b cb 8b 32 1b d8 21 fb 81 c6 04 00 00 00 89 32 76}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4374,6 +4564,7 @@ rule Trojan_Win32_Zbot_AT_2147837890_0
         $x_2_1 = {21 c1 29 f7 58 bb 07 00 00 00 83 eb 04 ba f3 21 40 00 f7 d3 f7 db 81 ff 52 64 00 00 fe 02 83 c2 fe 90 83 c2 03 81 fa 87 53 41 00 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4395,6 +4586,7 @@ rule Trojan_Win32_Zbot_RJ_2147837973_0
         $x_1_1 = {33 cf 87 da 01 75 c0 03 4d a0 4a 89 75 b8 2b ce 99 33 d6 03 ce 03 d2 87 ca 2b d9 03 4d c0 89 6d f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4419,6 +4611,7 @@ rule Trojan_Win32_Zbot_RJ_2147837973_1
         $x_1_4 = "Hs0hDD5NWhForUTqjo7M94d9vZkWvmv0PEpiKyEGL1h8Qg7pomY2KeFa" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4440,6 +4633,7 @@ rule Trojan_Win32_Zbot_AU_2147838101_0
         $x_2_1 = {01 45 fc 03 7d ec 54 58 89 65 fc 89 7d f0 89 5d f0 33 fe 03 45 f4 89 5d ec 33 fe 01 5d ec 89 65 f4 8b 75 f4 46 e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4461,6 +4655,7 @@ rule Trojan_Win32_Zbot_AV_2147838229_0
         $x_2_1 = {0f b7 55 b0 0f b7 45 a4 0f af d0 8b 45 b8 0f b6 0c 10 83 f1 44 8b 45 b4 01 c8 89 45 b4 0f b7 55 a4 c1 e2 18 88 55 a0 8a 55 ac 84 d2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4482,6 +4677,7 @@ rule Trojan_Win32_Zbot_AW_2147838248_0
         $x_2_1 = {29 d1 8b 55 c4 0f b6 04 0a 83 f0 5e 8b 4d bc 01 c1 89 4d bc 0f b6 4d b0 89 4d ac 8b 4d c4 83 c1 01 89 4d c4 8b 55 08 88 55 a8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4507,6 +4703,7 @@ rule Trojan_Win32_Zbot_AX_2147838370_0
         $x_1_5 = "C:\\WaFObEk9.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4528,6 +4725,7 @@ rule Trojan_Win32_Zbot_BAB_2147839916_0
         $x_4_1 = {32 c2 08 07 8b 45 ?? 0f b6 10 23 15 ?? ?? ?? ?? 8b c3 2b c2}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4549,6 +4747,7 @@ rule Trojan_Win32_Zbot_BAB_2147839916_1
         $x_5_1 = {ff 30 5f d3 cf 68 7d 26 80 60 5a 03 54 24 0c 31 d7 89 3e 81 e1 00 00 00 00 f7 df 29 f9 f7 df c1 e9 03 85 ed 0f}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4573,6 +4772,7 @@ rule Trojan_Win32_Zbot_BAB_2147839916_2
         $x_1_4 = "C:\\GeWpL7uT.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4594,6 +4794,7 @@ rule Trojan_Win32_Zbot_BAA_2147840125_0
         $x_3_1 = {8a 94 06 32 09 00 00 88 14 08 8b 7c 24 10 40 3b c7 72}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4615,6 +4816,7 @@ rule Trojan_Win32_Zbot_BAA_2147840125_1
         $x_4_1 = {8b 33 f8 83 d3 ?? f7 d6 83 c6 ?? 01 d6 83 ee ?? 29 d2 31 f2 89 31}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4636,6 +4838,7 @@ rule Trojan_Win32_Zbot_BAA_2147840125_2
         $x_5_1 = {50 8b 8d 68 dc ff ff 51 6a 00 ff 15 [0-4] 89 85 1c dc ff ff 6a 00 8d 95 40 dc ff ff 52 6a 0e 8d 85 44 dc ff ff 50 8b 8d 20 dc ff ff 51 ff 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4657,6 +4860,7 @@ rule Trojan_Win32_Zbot_RF_2147840249_0
         $x_1_1 = {00 40 00 01 01 ec 71 40 00 41 00 01 01 08 72 40 00 63 00 00 00 28 72 40 00 64 00 00 00 28 72 40 00 62 00 01 01 54 72 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4678,6 +4882,7 @@ rule Trojan_Win32_Zbot_RPQ_2147840363_0
         $x_1_1 = {b9 00 c2 00 00 b0 7d b4 c5 30 06 46 28 26 46 fe c0 fe c4 83 e9 02 75 f1 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4699,6 +4904,7 @@ rule Trojan_Win32_Zbot_RPQ_2147840363_1
         $x_1_1 = {8a 45 ff 8b ce 23 4d e8 8a 55 fe 81 e1 ?? ?? 00 00 83 e9 10 d2 e0 8a 4d 0c 80 e9 14 d2 ea 8b 4d 08 81 e1 ?? ?? 00 00 0a c2 8b 55 f0 81 f1 ?? ?? 00 00 88 84 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4723,6 +4929,7 @@ rule Trojan_Win32_Zbot_AZ_2147840783_0
         $x_1_4 = "OvdTbVECV" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4744,6 +4951,7 @@ rule Trojan_Win32_Zbot_RPL_2147840846_0
         $x_1_1 = {83 c4 04 52 56 56 83 2c 24 01 01 14 24 5e 8a 1e 5a 8b f2 5a 83 e9 01 80 f3 f1 c0 c3 06 80 eb 05 8a c2 fe c8 24 01 32 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4765,6 +4973,7 @@ rule Trojan_Win32_Zbot_BAC_2147842541_0
         $x_4_1 = {03 4d f0 8b 11 33 55 ec 8b 45 08 03 45 f0 89 10 e9}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4787,6 +4996,7 @@ rule Trojan_Win32_Zbot_BAC_2147842541_1
         $x_2_2 = {a9 72 14 9e 09 3c 4a f9 a3 00 ca 74 40 23 60 8f 82 37 c9 3b 1f 6e 1b 48 0f 66 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4808,6 +5018,7 @@ rule Trojan_Win32_Zbot_RD_2147842984_0
         $x_1_1 = {8a 10 8a ca 80 e9 61 88 55 ff 80 f9 19 77 04 80 45 ff e0 8a 0c 06 8d 59 9f 80 fb 19 77 03 80 c1 e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4829,6 +5040,7 @@ rule Trojan_Win32_Zbot_RG_2147842985_0
         $x_1_1 = {81 b4 25 2c ff ff ff 8c 12 00 00 89 b4 25 ?? ff ff ff 8b 32 89 34 87 c1 2d ?? ?? ?? ?? 07 40 3b 45 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4850,6 +5062,7 @@ rule Trojan_Win32_Zbot_RG_2147842985_1
         $x_1_1 = {8b d0 c1 ea 03 8b c8 83 c0 08 83 e1 07 89 35 ?? ?? ?? ?? a3 ?? ?? ?? ?? 8b 14 2a d3 ea 8b ce 23 d3 8b ea d3 e5 8d 0c 3e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4871,6 +5084,7 @@ rule Trojan_Win32_Zbot_RG_2147842985_2
         $x_1_1 = {68 00 00 40 00 ff d6 6a 40 68 00 30 00 00 ff b5 70 ff ff ff 6a 00 ff 55 d4 8b d0 33 c0 eb 1f [0-32] 8a 0c 0b 8b b5 74 ff ff ff 32 0c 06 88 0c 02 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4892,6 +5106,7 @@ rule Trojan_Win32_Zbot_RH_2147842986_0
         $x_1_1 = {66 8b 08 03 4d 10 8b 55 08 03 55 fc 66 89 0a 8b 45 f8 c1 e8 04 89 45 f8 8b 4d f8 83 e9 01 89 4d f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4914,6 +5129,7 @@ rule Trojan_Win32_Zbot_RH_2147842986_1
         $x_1_2 = {45 3e d6 ba 63 25 5c 9c 2d 24 20 15 6f a3 9e b3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4936,6 +5152,7 @@ rule Trojan_Win32_Zbot_GHC_2147843714_0
         $x_1_2 = ".ropf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4957,6 +5174,7 @@ rule Trojan_Win32_Zbot_CAZY_2147843858_0
         $x_1_1 = {31 d2 f7 f1 66 89 55 e8 8b 4d 08 33 4d e4 81 c1 ?? ?? ?? ?? 89 4d e4 0f b7 4d e8 23 4d e4 8b 55 f4 0f b6 04 0a 0f b6 4d ec 31 c8 88 45 e0 0f b7 4d e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4978,6 +5196,7 @@ rule Trojan_Win32_Zbot_BAD_2147843924_0
         $x_4_1 = {89 4d f8 8b 55 14 8b 45 0c 03 02 8b 4d f8 8b 94 08 ?? ?? ?? ?? 03 55 10 8b 45 14 8b 4d 0c 03 08 8b 45 f8}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5000,6 +5219,7 @@ rule Trojan_Win32_Zbot_BAD_2147843924_1
         $x_2_2 = {15 b4 20 40 00 56 ff 15 b8 20 40 00 57 ff 15 bc 20 40 00 8b b4 24 48 02 00 00 8d 54 24 30 56 52 ff 15 c0 20 40 00 6a 06 56 ff 15 c4 20 40 00 8d 44 24 30 50 ff 15 c8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5021,6 +5241,7 @@ rule Trojan_Win32_Zbot_RN_2147843968_0
         $x_1_1 = {c7 45 f8 c8 db 00 00 8b 05 ?? ?? ?? ?? 89 45 dc 8b ?? dc 89 ?? e0 8b ?? e0 89 ?? e4 8b ?? e4 89 ?? e8 8b ?? 08 8b 55 08 03 55 f0 8b ?? 33 ?? e8 03 ?? f0 89 ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5044,6 +5265,7 @@ rule Trojan_Win32_Zbot_RO_2147843969_0
         $x_1_3 = "vltMFmulTAanMeeW1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5069,6 +5291,7 @@ rule Trojan_Win32_Zbot_SP_2147844277_0
         $x_1_5 = "hi.baidu.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5090,6 +5313,7 @@ rule Trojan_Win32_Zbot_BAF_2147844313_0
         $x_3_1 = {8b 02 83 c2 04 f7 d8 8d 40 d7 83 e8 02 83 c0 01 29 d8 89 c3 6a 00 8f 07 01 47}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5111,6 +5335,7 @@ rule Trojan_Win32_Zbot_BAF_2147844313_1
         $x_5_1 = {8b 8d ac fd ff ff 0f be 91 [0-4] 8b 85 a4 fc ff ff 03 85 d0 fd ff ff 33 d0 8b 8d ac fd ff ff 88 91 [0-4] ba 7d 22 00 00 85 d2 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5132,6 +5357,7 @@ rule Trojan_Win32_Zbot_BAE_2147845505_0
         $x_4_1 = {8d 40 d4 c1 c8 08 29 f8 83 e8 01 31 ff 4f 21 c7 c1 c7 08 89 03 83 eb fc 83 c6 fc}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5155,6 +5381,7 @@ rule Trojan_Win32_Zbot_BAE_2147845505_1
         $x_1_3 = ".ropf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -5180,6 +5407,7 @@ rule Trojan_Win32_Zbot_BAG_2147845544_0
         $x_2_1 = {83 c6 fe 83 ee ff 29 de 89 f3 6a 00 8f 01 01 31}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5202,6 +5430,7 @@ rule Trojan_Win32_Zbot_BAG_2147845544_1
         $x_2_2 = {b9 1a 00 00 56 0f a2 0f 31 89 c6 0f a2 0f 31 29 f0 89 45 f4 5e 81 7d f4 00 01 00 00 7f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5223,6 +5452,7 @@ rule Trojan_Win32_Zbot_BAG_2147845544_2
         $x_4_1 = {03 c2 33 d2 b9 00 01 00 00 f7 f1 89 95 e8 fb ff ff 8b 95 e8 fb ff ff 8a 84 15 e4 fa ff ff 88 85 c0 f7 ff ff 8b 0d [0-4] 03 8d d0 f8 ff ff 0f be 11 0f be 85 c0 f7 ff ff 33 d0 8b 0d [0-4] 03 8d d0 f8 ff ff 88 11 e9}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5244,6 +5474,7 @@ rule Trojan_Win32_Zbot_EH_2147846271_0
         $x_6_1 = {8b 45 08 33 d2 f7 f7 89 45 08 8d 42 37 83 fa 09 77 03 8d 42 30 88 01 41 83 7d 08 00 77 e2 8b c1 2b c6 c6 01 00 49 8a 1e 8a 11 88 19 49 88 16}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5266,6 +5497,7 @@ rule Trojan_Win32_Zbot_GHG_2147847794_0
         $x_10_2 = {33 d7 33 d6 81 a4 25 ?? ?? ?? ?? 55 1c 00 00 51 19 94 25}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5288,6 +5520,7 @@ rule Trojan_Win32_Zbot_EM_2147847858_0
         $x_2_2 = "tguxwioonrbgaalopkcvj" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5313,6 +5546,7 @@ rule Trojan_Win32_Zbot_EM_2147847858_1
         $x_1_5 = "91C38905" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5334,6 +5568,7 @@ rule Trojan_Win32_Zbot_BAH_2147848122_0
         $x_2_1 = {50 5a c1 c2 0a c1 ca 02 c7 01 ?? ?? ?? ?? 31 01 83 c1 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5355,6 +5590,7 @@ rule Trojan_Win32_Zbot_BAH_2147848122_1
         $x_2_1 = {83 ee 02 8d 76 01 29 de 31 db 4b 21 f3 c7 42 ?? ?? ?? ?? ?? 31 32}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5377,6 +5613,7 @@ rule Trojan_Win32_Zbot_BAH_2147848122_2
         $x_2_2 = {68 3e a2 aa ac 68 7e d2 4a 50 68 ca f3 a2 81 68 88 98 8a 59 68 8e d7 be 43 68 00 3a b4 93 68 40 49 5a fd 68 66 3d 7e 05 68 ca f3 a2 81 68 88 98 8a 59}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5398,6 +5635,7 @@ rule Trojan_Win32_Zbot_GJL_2147848223_0
         $x_10_1 = {33 c6 89 45 e4 69 c0 ?? ?? ?? ?? 35 ?? ?? ?? ?? 29 45 08 8b 45 08 33 d2 b9 ?? ?? ?? ?? f7 f1 8b 45 f4 85 d2 0f 84}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5419,6 +5657,7 @@ rule Trojan_Win32_Zbot_AZB_2147848498_0
         $x_1_1 = {8b 07 8a 5f 04 66 c1 e8 08 c1 c0 10 86 c4 29 f8 80 eb e8 01 f0 89 07 83 c7 05 88 d8 e2 d9 8d be 00 60 05 00 8b 07 09 c0 74 45 8b 5f 04 8d 84 30 60 9a 05 00 01 f3 50 83 c7 08 ff 96 24 9b 05 00 95 8a 07 47}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5441,6 +5680,7 @@ rule Trojan_Win32_Zbot_AZB_2147848498_1
         $x_2_2 = {f7 e1 33 f6 d3 ee 0b cf 42 d1 e9 d3 e6 8d 0c 80 d3 e3 8d 93 da 00 00 00 33 c9 8d 0c 89 ba 95 15 de f4 c1 e0 04 42 81 ef 7c 2b 00 00 c1 e7 05 83 e8 24}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5464,6 +5704,7 @@ rule Trojan_Win32_Zbot_AZB_2147848498_2
         $x_1_3 = "windows\\EPa.exe.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5485,6 +5726,7 @@ rule Trojan_Win32_Zbot_AZB_2147848498_3
         $x_1_1 = {c6 45 0f fe c6 45 12 ac c6 45 9d 92 c6 45 0d b8 c6 45 b8 ea c6 45 3e 3e c6 45 76 8f c6 45 fc bf c6 45 65 b0 c6 45 cd 24 c6 45 58 24 c6 45 94 d4 c6 45 f5 f8 c6 45 dc 51 c6 45 a8 fa c6 45 d4 fb c6 45 3b 30 c6 45 81 55 c6 45 bc f8 c6 45 57 03 c6 45 fb f0 c6 45 2a c5 c6 45 ad 4a c6 45 33 cb c6 45 93 28 c6 45 8e f0 c6 45 39 b9 c6 45 f7 e9 c6 45 18 1f c6 45 2b e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5509,6 +5751,7 @@ rule Trojan_Win32_Zbot_BAI_2147849285_0
         $x_2_4 = "ickeehvuK1DjQF93x1um5NwnfzVnYt3C2SBzlEL0MBa1B8FdueWyu6dbAxEod4Z8sMlUbPmVaZ1" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5530,6 +5773,7 @@ rule Trojan_Win32_Zbot_EN_2147849811_0
         $x_3_1 = {8d 0c 02 8b 55 f4 89 d0 c1 e0 02 01 d0 c1 e0 03 01 c8 05 f8 00 00 00 89 45 e0 8b 45 e0 8b 50 10 8b 45 08 8b 00 89 c1 8b 45 e0 8b 40 14 01 c8 89 c3 8b 45 e4 8b 48 34 8b 45 e0 8b 40 0c 01 c8}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5555,6 +5799,7 @@ rule Trojan_Win32_Zbot_EN_2147849811_1
         $x_1_5 = "fbmnX\\VW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5582,6 +5827,7 @@ rule Trojan_Win32_Zbot_EN_2147849811_2
         $x_1_7 = "mouse_event" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5607,6 +5853,7 @@ rule Trojan_Win32_Zbot_DAL_2147850085_0
         $x_1_5 = {8a cf 40 a8 0f 92 1a 5f 45 d0 da 19 a0 ad 60 2d 7c 56 0a 54 ef b6 9d 81 29 90 b5 43 06 98 94 3c dc c9 23 0c 5c 08 e2 57 98 ad 10 53 cc b6 4e 74 3a 13 f6 a2 0b c9 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5632,6 +5879,7 @@ rule Trojan_Win32_Zbot_DAM_2147850086_0
         $x_1_5 = {7d 5e b2 e4 9e f0 f9 44 00 57 03 86 09 2d b6 60 31 01 72 f2 62 73 22 e9 46 3e f2 53 b5 eb 8e 1e 5c 91 80 58 68 d1 47 12 5f 33 e2 49 b4 ae 38 3c 6d c1 25 8d b5 3e 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5657,6 +5905,7 @@ rule Trojan_Win32_Zbot_DAN_2147850603_0
         $x_1_5 = "UtL0U87fwWr6baMzX468pKyf0qIYtBd75R5yQu69858NgnJJL6oUfJtFXLtKmF4C5F1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5682,6 +5931,7 @@ rule Trojan_Win32_Zbot_DAO_2147850620_0
         $x_1_5 = "newiat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5705,6 +5955,7 @@ rule Trojan_Win32_Zbot_RPY_2147851479_0
         $x_1_3 = "Loader.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5726,6 +5977,7 @@ rule Trojan_Win32_Zbot_Z_2147851644_0
         $x_2_1 = {83 ff 00 74 ?? 83 ef 04 83 c6 04 8b 4e fc 89 8b ?? ?? ?? ?? 83 c3 04 81 ab}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5751,6 +6003,7 @@ rule Trojan_Win32_Zbot_DAQ_2147852441_0
         $x_1_5 = {ed 96 bf 16 26 2b 2f fe 1d 33 5f fd 6d 07 90 47 4f 94 3a 4d 45 98 92 4b dd 08 2e 93 76 39 2b 48 4c 81 51 cd f6 6d ff fc 66 a2 03 5c 80 c0 74 96 9f 91 e3 04 16 32 2a e9 c0 38 03 9e 42}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5775,6 +6028,7 @@ rule Trojan_Win32_Zbot_ASAF_2147888946_0
         $x_1_4 = "Evknxnyjtzyf.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5797,6 +6051,7 @@ rule Trojan_Win32_Zbot_DAZ_2147891267_0
         $x_1_2 = {2b c6 33 c9 85 c0 0f 9f c1 f7 d8 1b c0 8d 4c 09 ff 23 c1 5f 5e 5b 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5819,6 +6074,7 @@ rule Trojan_Win32_Zbot_GPA_2147891436_0
         $x_2_2 = {80 b4 05 00 ff ff ff 5c 40 3b c6 7c f3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5845,6 +6101,7 @@ rule Trojan_Win32_Zbot_ASB_2147891639_0
         $x_1_6 = ".vmp2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5867,6 +6124,7 @@ rule Trojan_Win32_Zbot_ASC_2147892572_0
         $x_1_2 = {33 f9 c4 00 cc 67 81 b1 ce 74 33 96 2b ee 43 b1 25 84 b7 71 27 5a 29 34 29 e7 d9 bb ff bd 58 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5891,6 +6149,7 @@ rule Trojan_Win32_Zbot_AMAD_2147892665_0
         $x_1_4 = {8d 3c 01 8a c8 02 c9 b2 f6 2a d1 00 17 eb ?? 8a d0 02 d2 03 c8 80 c2 07 00 11 40 3b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5918,6 +6177,7 @@ rule Trojan_Win32_Zbot_ASD_2147894706_0
         $x_1_7 = "EvJDU7FAwq.cfg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5941,6 +6201,7 @@ rule Trojan_Win32_Zbot_GIS_2147896095_0
         $x_1_3 = "C:\\virus.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5963,6 +6224,7 @@ rule Trojan_Win32_Zbot_GIM_2147896096_0
         $x_1_2 = "conwur.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5987,6 +6249,7 @@ rule Trojan_Win32_Zbot_SMT_2147896097_0
         $x_1_4 = "oAKWEMYE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6011,6 +6274,7 @@ rule Trojan_Win32_Zbot_GC_2147896098_0
         $x_1_4 = "qwQfhsdKSnD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6033,6 +6297,7 @@ rule Trojan_Win32_Zbot_GQ_2147896099_0
         $x_10_2 = {8b 45 fc 0f be 0c 10 8b 55 f4 0f be 82 98 a5 40 00 33 c1 8b 4d f4 88 81 98 a5 40 00 eb 88}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6054,6 +6319,7 @@ rule Trojan_Win32_Zbot_PABU_2147897557_0
         $x_1_1 = {8b 0e 03 cb b8 00 40 00 00 c1 c0 14 03 f0 c1 c1 08 89 4d 94 03 d5 52 e8 ?? ?? ?? ?? 56 59 5a 2b d5 8b 45 a8 85 c7 c1 c0 16 03 c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6076,6 +6342,7 @@ rule Trojan_Win32_Zbot_RMT_2147897570_0
         $x_10_2 = {8b 06 8a e9 32 c5 fe c1}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6101,6 +6368,7 @@ rule Trojan_Win32_Zbot_FFH_2147897571_0
         $x_1_5 = "roperns.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6122,6 +6390,7 @@ rule Trojan_Win32_Zbot_SPD_2147900525_0
         $x_10_1 = {8b 55 f8 83 c2 04 89 55 f8 8b 45 f8 3b 45 f0 73 38 8b 0d ?? ?? ?? ?? 03 4d f8 8b 11 03 55 f8 a1 ?? ?? ?? ?? 03 45 f8 89 10 8b 4d f8 81 c1 e9 03 00 00 8b 15 ?? ?? ?? ?? 03 55 f8 33 0a a1 ?? ?? ?? ?? 03 45 f8 89 08 eb b7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6143,6 +6412,7 @@ rule Trojan_Win32_Zbot_SPY_2147900574_0
         $x_1_1 = {50 4b 8b d8 85 c0 90 58 2b f0 50 8b d8 51 8b 0f 8b 06 33 c1 46 88 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6164,6 +6434,7 @@ rule Trojan_Win32_Zbot_ASE_2147900598_0
         $x_2_1 = {64 69 64 6c 65 72 35 00 1a 4f ad 33 99 66 cf 11 b7 0c 00 aa 00 60 d3 93 43 68 69 6e 61 6d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6187,6 +6458,7 @@ rule Trojan_Win32_Zbot_GZZ_2147905109_0
         $x_1_3 = "@gu_idata" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6208,6 +6480,7 @@ rule Trojan_Win32_Zbot_PADU_2147908446_0
         $x_2_1 = {81 f2 83 8b 45 50 03 fa 4b 89 0e ba 7b 00 ae 7c 81 c2 89 ff 51 83 03 f2 85 db 0f 84 d3 06 00 00 8b 0f 8b 55 d4 81 f2 c1 89 c0 0f 03 fa 4b 89 0e ba 45 55 ff 85 81 c2 bf aa 00 7a 03 f2 85 db 75 ba}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6230,6 +6503,7 @@ rule Trojan_Win32_Zbot_ASF_2147908977_0
         $x_1_2 = {83 c1 04 6a 40 68 00 30 00 00 51 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6252,6 +6526,7 @@ rule Trojan_Win32_Zbot_ASGA_2147909741_0
         $x_2_2 = {17 44 e8 6b 0e 4c 8b 45 d0 35 41 db dd fd 6f 7b 01 2d cd db 74 f0 89 85 5c 19 e9 3d 10 93 0b c3 57 b3 fc db 7e b8 d8 ac c8 13 14 34 39 57}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6274,6 +6549,7 @@ rule Trojan_Win32_Zbot_AZT_2147934843_0
         $x_2_2 = {d0 8b d8 c3 a1 8b 73 3c c3 8f 03 f3 c3 aa 8b 86 80 00 00 00 c3 f3 fd 8b 44 18 10 c3 41}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6297,6 +6573,7 @@ rule Trojan_Win32_Zbot_PAZB_2147936650_0
         $x_2_3 = {83 f2 73 a1 28 9f 41 00 03 85 ?? ?? ?? ?? 0f be 08 33 ca}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6318,6 +6595,7 @@ rule Trojan_Win32_Zbot_SLY_2147938426_0
         $x_2_1 = {8d 44 24 04 50 33 db 53 53 68 28 82 41 00 68 02 00 00 80 ff 15 0c 80 41 00 3b c3 74 06 83 f8 02 0f 95 c3 8a c3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6339,6 +6617,7 @@ rule Trojan_Win32_Zbot_BAJ_2147938609_0
         $x_2_1 = {2b c1 32 d8 89 44 24 ?? 8a 84 24 ?? ?? ?? ?? 8d bc 14 ?? ?? ?? ?? 88 1f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6360,6 +6639,7 @@ rule Trojan_Win32_Zbot_BAJ_2147938609_1
         $x_2_1 = {29 c0 33 02 83 c2 04 f7 d8 83 e8 29 83 e8 02 40 29 f8 89 c7 c7 46 ?? ?? ?? ?? ?? 31 06}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6381,6 +6661,7 @@ rule Trojan_Win32_Zbot_BAK_2147940154_0
         $x_2_1 = {89 85 14 ff ff ff 8b 85 40 ff ff ff 8b 4d e4 8b 04 81 99 2b c2 d1 f8 89 85 3c ff ff ff 81 bd ?? ?? ?? ?? ?? ?? ?? ?? 73}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6402,6 +6683,7 @@ rule Trojan_Win32_Zbot_EAEN_2147940171_0
         $x_5_1 = {31 c1 8b 55 fc 8b 45 0c 01 d0 89 ca 88 10 83 45 fc 01 8b 45 fc 3b 45 10}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6423,6 +6705,7 @@ rule Trojan_Win32_Zbot_BAL_2147941286_0
         $x_2_1 = {0f dc db 0f 60 f1 66 0f e9 d3 31 37 0f e5 ed}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6444,6 +6727,7 @@ rule Trojan_Win32_Zbot_BAM_2147945619_0
         $x_2_1 = {8b 45 cc 33 d2 b9 10 00 00 00 f7 f1 8b 45 cc 8a 88 ?? ?? ?? ?? 2a 8a ?? ?? ?? ?? 8b 55 cc 88 8a ?? ?? ?? ?? eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

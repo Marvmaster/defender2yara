@@ -18,6 +18,7 @@ rule Backdoor_Win32_Cprevershl_B_2147779292_0
         $x_1_3 = {c7 45 d4 63 6d 64 2e c7 45 d8 65 78 65 00 c7 44 24 08 44 00 00 00 c7 44 24 04 00 00 00 00 8d 85 ?? ?? ?? ?? 89 04 24 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

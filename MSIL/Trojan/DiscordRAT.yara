@@ -17,6 +17,7 @@ rule Trojan_MSIL_DiscordRAT_RDA_2147839819_0
         $x_1_2 = "Discord rat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_DiscordRAT_RDB_2147902244_0
         $x_1_4 = "DisableFirewall" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

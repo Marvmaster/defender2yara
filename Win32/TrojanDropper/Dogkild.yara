@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Dogkild_A_2147627331_0
         $x_2_7 = {76 2a 8b 45 fc 53 8a 04 07 fe c0 88 45 0f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule TrojanDropper_Win32_Dogkild_B_2147627447_0
         $x_2_4 = {83 c4 14 56 ff d3 83 f8 02 74 08 56 ff d3 83 f8 03 d1 6c 24 ?? 47 83 ff 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

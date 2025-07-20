@@ -16,6 +16,7 @@ rule VirTool_Win32_Oitorn_A_2147615074_0
         $x_1_2 = {7c c5 b9 06 00 00 00 be ?? ?? ?? ?? 8b fb b8 06 00 00 00 f3 a5 66 a5 8b 15 ?? ?? ?? ?? 89 14 2b 83 c5 04 48 75 f1 a1 ?? ?? ?? ?? be ?? ?? ?? ?? 89 04 2b 83 c5 04 8d 0c 2b 83 c5 04 c7 01 48 48 48 48}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

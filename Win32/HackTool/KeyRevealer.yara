@@ -21,6 +21,7 @@ rule HackTool_Win32_KeyRevealer_2147690634_0
         $x_1_7 = "SeTakeOwnershipPrivilege" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

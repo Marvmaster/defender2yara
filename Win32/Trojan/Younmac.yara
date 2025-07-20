@@ -22,6 +22,7 @@ rule Trojan_Win32_Younmac_2147497188_0
         $x_1_8 = "YONG_Mac_Sniff_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             (all of ($x*))

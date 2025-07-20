@@ -17,6 +17,7 @@ rule Trojan_Win32_Pantsy_A_2147744099_0
         $x_1_2 = {6e 74 64 6c 6c 2e 64 6c 6c 00 4c 64 72 4c 6f 61 64 44 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

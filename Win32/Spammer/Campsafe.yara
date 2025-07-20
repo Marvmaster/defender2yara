@@ -26,6 +26,7 @@ rule Spammer_Win32_Campsafe_2147607504_0
         $x_1_12 = "[%d.%d.%d.%d]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win64_T1557_AdversaryInTheMiddle_A_2147846085_0
         $x_10_2 = "misc::efs" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win64_Antiaris_A_2147906107_0
         $x_2_1 = {8d 41 e7 30 44 0d ?? 48 ff c1 48 83 f9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

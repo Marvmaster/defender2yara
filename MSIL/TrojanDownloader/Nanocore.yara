@@ -23,6 +23,7 @@ rule TrojanDownloader_MSIL_Nanocore_SA_2147753095_0
         $x_1_8 = "RegAsm.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -51,6 +52,7 @@ rule TrojanDownloader_MSIL_Nanocore_PA1_2147819050_0
         $x_1_4 = "powershell.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule TrojanDownloader_MSIL_Nanocore_ABH_2147831440_0
         $x_1_4 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -15,6 +15,7 @@ rule Virus_Win32_Glacid_A_2147656796_0
         $x_1_1 = "\\iglicd64.dl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

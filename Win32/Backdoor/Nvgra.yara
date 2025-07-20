@@ -22,6 +22,7 @@ rule Backdoor_Win32_Nvgra_A_2147599214_0
         $x_1_8 = "OpenSCManagerA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

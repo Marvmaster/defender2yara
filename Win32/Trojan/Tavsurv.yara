@@ -16,6 +16,7 @@ rule Trojan_Win32_Tavsurv_A_2147928038_0
         $x_10_1 = {30 07 83 c7 01 83 c5 01 3b 6c 24 28 7c bb}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_CobaltStrike_N_2147839351_0
         $x_1_2 = "Control_RunDLL \"C:\\ProgramData\\AxlnstSV\\xlsrd.cpl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_CobaltStrike_GV_2147920883_0
         $x_2_2 = "://0x1.social" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

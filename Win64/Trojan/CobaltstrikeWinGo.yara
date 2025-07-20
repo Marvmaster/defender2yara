@@ -17,6 +17,7 @@ rule Trojan_Win64_CobaltstrikeWinGo_AX_2147908457_0
         $x_1_2 = "/GobypassAV-shellcode-main/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

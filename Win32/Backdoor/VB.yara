@@ -17,6 +17,7 @@ rule Backdoor_Win32_VB_UI_2147511420_0
         $x_1_3 = {74 69 67 68 74 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 40 00 50 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +60,7 @@ rule Backdoor_Win32_VB_ANP_2147575270_0
         $x_1_23 = "U2VydmVyIFNpemU=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -94,6 +96,7 @@ rule Backdoor_Win32_VB_ZE_2147583019_0
         $x_1_16 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\RunServices" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_2_*) and 6 of ($x_1_*))) or
             ((3 of ($x_10_*) and 4 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -136,6 +139,7 @@ rule Backdoor_Win32_VB_AVD_2147583055_0
         $x_100_16 = "Scripting.FileSystemObject" wide //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1000_*) and 13 of ($x_100_*))) or
             (all of ($x*))
@@ -171,6 +175,7 @@ rule Backdoor_Win32_VB_CCA_2147583797_0
         $x_1_13 = "Program Files\\Internet Explorer\\IEXPLORE.EXE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_3_*) and 4 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_3_*) and 4 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -213,6 +218,7 @@ rule Backdoor_Win32_VB_ADA_2147596913_0
         $x_1_8 = {3a 00 5c 00 41 00 59 00 4f 00 20 00 58 00 20 00 4c 00 6f 00 67 00 67 00 65 00 72 00 5c 00 41 00 59 00 4f 00 20 00 53 00 70 00 79 00 20 00 34 00 33 00 5c 00 [0-48] 2e 00 76 00 62 00 70 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -246,6 +252,7 @@ rule Backdoor_Win32_VB_WZ_2147598476_0
         $x_1_14 = "MSWinsockLib.Winsock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -289,6 +296,7 @@ rule Backdoor_Win32_VB_ACF_2147601665_0
         $x_1_24 = "Windows Configuration" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((13 of ($x_10_*) and 2 of ($x_2_*) and 8 of ($x_1_*))) or
             ((14 of ($x_10_*) and 2 of ($x_1_*))) or
@@ -322,6 +330,7 @@ rule Backdoor_Win32_VB_AFA_2147602199_0
         $x_1_9 = "\\system32\\svhootss.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -349,6 +358,7 @@ rule Backdoor_Win32_VB_AFB_2147602204_0
         $x_1_5 = "microsoft Corporation. Todos os direitos reservados." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -371,6 +381,7 @@ rule Backdoor_Win32_VB_UH_2147602319_0
         $x_1_3 = {6f 6c 73 00 74 69 00 00 74 69 67 68 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -399,6 +410,7 @@ rule Backdoor_Win32_VB_ANS_2147602353_0
         $x_1_9 = "HideApplication" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -425,6 +437,7 @@ rule Backdoor_Win32_VB_ANT_2147602399_0
         $x_1_7 = "Desktop\\CWSpeciaL" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -455,6 +468,7 @@ rule Backdoor_Win32_VB_CCJ_2147602435_0
         $x_1_11 = {72 00 75 00 6e 00 64 00 6c 00 6c 00 33 00 32 00 2e 00 65 00 78 00 65 00 20 00 00 00 42 00 00 00 73 00 68 00 69 00 6d 00 67 00 76 00 77 00 2e 00 64 00 6c 00 6c 00 2c 00 49 00 6d 00 61 00 67 00 65 00 56 00 69 00 65 00 77 00 5f 00 46 00 75 00 6c 00 6c 00 73 00 63 00 72 00 65 00 65 00 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -481,6 +495,7 @@ rule Backdoor_Win32_VB_UL_2147602436_0
         $x_1_7 = "TOPPaadeeikkiiiieed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -509,6 +524,7 @@ rule Backdoor_Win32_VB_CCL_2147606114_0
         $x_1_4 = "Black Dream\\Server\\Server.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -541,6 +557,7 @@ rule Backdoor_Win32_VB_E_2147609416_0
         $x_1_9 = "WSAAsyncGetProtoByNumber" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_10_*) and 2 of ($x_2_*))) or
@@ -573,6 +590,7 @@ rule Backdoor_Win32_VB_U_2147609457_0
         $x_1_9 = "frmWebcam" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -602,6 +620,7 @@ rule Backdoor_Win32_VB_AE_2147610256_0
         $x_1_10 = "cmd.exe /c netsh" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -628,6 +647,7 @@ rule Backdoor_Win32_VB_XY_2147619591_0
         $x_1_4 = "*** Conexion establecida." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -649,6 +669,7 @@ rule Backdoor_Win32_VB_HO_2147624688_0
         $x_1_2 = {fe 64 64 ff 93 00 3a ?? ?? ?? ?? 28 34 ff 02 00 f5 01 00 00 00 6c 70 ff f5 01 00 00 00 ae f5 02 00 00 00 b2 aa 6c 0c 00 4d 54 ff 08 40 04 24 ff 0a 09 00 10 00 04 24 ff fb ef}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -670,6 +691,7 @@ rule Backdoor_Win32_VB_ZA_2147625411_0
         $x_1_2 = "vb4projectVb.Socket" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -696,6 +718,7 @@ rule Backdoor_Win32_VB_QZ_2147630800_0
         $x_1_7 = "\\FirewallPolicy\\StandardProfile\\AuthorizedApplications\\List" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -717,6 +740,7 @@ rule Backdoor_Win32_VB_KN_2147630844_0
         $x_1_2 = "Indetectables.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -741,6 +765,7 @@ rule Backdoor_Win32_VB_KQ_2147631975_0
         $x_2_5 = "tmrOFFKeys" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -767,6 +792,7 @@ rule Backdoor_Win32_VB_WO_2147634133_0
         $x_1_3 = "Fuck You!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -791,6 +817,7 @@ rule Backdoor_Win32_VB_KU_2147636172_0
         $x_1_5 = ":\\Recycler\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -819,6 +846,7 @@ rule Backdoor_Win32_VB_XC_2147636489_0
         $x_1_4 = "HDFLOOD" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -841,6 +869,7 @@ rule Backdoor_Win32_VB_LC_2147640350_0
         $x_3_3 = "Transferring Virus examples for analyse" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -864,6 +893,7 @@ rule Backdoor_Win32_VB_MA_2147642946_0
         $x_2_4 = "sistembilgisial" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -886,6 +916,7 @@ rule Backdoor_Win32_VB_MS_2147647147_0
         $x_1_3 = "C:\\Documents and Settings\\Abdelhamid\\My Documents\\Programmeren\\Arabain-Attacker\\Admin\\MSNMessengerAPI.tlb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -911,6 +942,7 @@ rule Backdoor_Win32_VB_MV_2147650373_0
         $x_1_6 = "ENVIARARCHIVO" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -937,6 +969,7 @@ rule Backdoor_Win32_VB_OF_2147653663_0
         $x_1_4 = "c:\\servidox.log" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -961,6 +994,7 @@ rule Backdoor_Win32_VB_OG_2147654171_0
         $x_3_5 = "Tpguxbsf]Njdsptpgu]Bdujwf!Tfuvq]Jotubmmfe!Dpnqpofout]" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -985,6 +1019,7 @@ rule Backdoor_Win32_VB_PN_2147655728_0
         $x_2_5 = "ResponseBody" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1008,6 +1043,7 @@ rule Backdoor_Win32_VB_CCP_2147679293_0
         $x_1_4 = "W98Sck" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1040,6 +1076,7 @@ rule Backdoor_Win32_VB_2147789784_0
         $x_100_13 = "simo keylogger)" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 3 of ($x_5_*) and 5 of ($x_1_*))) or
             ((2 of ($x_100_*) and 4 of ($x_5_*))) or

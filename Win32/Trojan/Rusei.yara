@@ -19,6 +19,7 @@ rule Trojan_Win32_Rusei_A_2147629025_0
         $x_1_5 = "http://xies.ru/?id=3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

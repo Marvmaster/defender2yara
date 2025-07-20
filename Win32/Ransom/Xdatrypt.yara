@@ -32,6 +32,7 @@ rule Ransom_Win32_Xdatrypt_A_2147721508_0
         $x_1_18 = {74 09 56 e8 ?? ?? ff ff 83 c4 04 81 75 fc 45 36 27 18 8d 45 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

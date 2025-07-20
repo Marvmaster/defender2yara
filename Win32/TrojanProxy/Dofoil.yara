@@ -17,6 +17,7 @@ rule TrojanProxy_Win32_Dofoil_A_2147650427_0
         $x_1_3 = {8d 55 f0 8a 0a 33 db 8a d8 8d 3c 1e 33 db 8a d9 c1 eb 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

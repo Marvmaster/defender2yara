@@ -20,6 +20,7 @@ rule Worm_Win32_Spyonpc_A_2147685080_0
         $x_2_6 = {05 c5 4e f1 07 89 04 ?? 46 83 fe 04 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

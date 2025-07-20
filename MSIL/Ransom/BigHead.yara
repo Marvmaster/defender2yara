@@ -17,6 +17,7 @@ rule Ransom_MSIL_BigHead_ABH_2147850641_0
         $x_1_2 = "slam_ransomware_builder\\ConsoleApp2\\ConsoleApp2\\obj\\Debug\\ConsoleApp2.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

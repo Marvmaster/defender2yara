@@ -21,6 +21,7 @@ rule Trojan_Win32_CrthRazy_A_2147741651_0
         $x_1_7 = "HARDWARE\\DESCRIPTION\\System\\Bios" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

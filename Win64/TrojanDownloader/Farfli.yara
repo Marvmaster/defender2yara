@@ -22,6 +22,7 @@ rule TrojanDownloader_Win64_Farfli_UR_2147812159_0
         $x_1_7 = "ShellExecute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule TrojanDownloader_Win64_Farfli_GNN_2147813280_0
         $x_1_9 = "ShellExecute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Virus_Win95_MrKlunky_A_2147606626_0
         $x_1_4 = "SYSTEM\\CurrentControlSet\\Services\\VxD\\MrKlunky" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

@@ -19,6 +19,7 @@ rule Backdoor_MSIL_Lizarbot_A_2147688944_0
         $x_1_5 = ".visit (start|stop) directlink 0 <(true|false)>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

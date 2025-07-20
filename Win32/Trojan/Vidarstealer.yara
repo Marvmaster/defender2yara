@@ -16,6 +16,7 @@ rule Trojan_Win32_Vidarstealer_MA_2147761925_0
         $x_1_1 = {50 88 f8 30 d8 88 c7 88 3f 58 8b 5c 24 ?? 43 89 5c 24 00 8b 5c 24 00 3b 5c 24 ?? 7e 08 c7 44 24 00 ?? ?? ?? ?? ff 44 24 ?? 71 95}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

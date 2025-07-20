@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Gabeerf_A_2147644489_0
         $x_1_2 = ":777/loading/avbs.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

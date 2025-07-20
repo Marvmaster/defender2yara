@@ -16,6 +16,7 @@ rule Backdoor_Win64_Havoc_A_2147843838_0
         $x_2_1 = {48 63 d0 48 8b 45 20 48 01 d0 0f b6 08 8b 45 f8 48 63 d0 48 8b 45 10 48 01 d0 44 89 c2 31 ca 88 10 83 45 fc 01 83 45 f8 01 8b 45 f8 3b 45 18}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule Backdoor_Win64_Havoc_D_2147845842_0
         $x_7_1 = {48 8b 1d ff 73 00 00 83 3d 50 60 00 00 ?? 75 0e e8 41 f9 ff ff 85 c0 74 05 e8 18 ee ff ff b9 ?? ?? 00 00 ff d3 eb e0}  //weight: 7, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Backdoor_Win64_Havoc_AD_2147894420_0
         $x_100_2 = {41 83 e9 20 6b c0 21 45 0f b6 c9 49 ff c2 44 01 c8 45 8a 0a 85 d2 75 06 45 84 c9 41 80 f9 60 6b c0 21}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Backdoor_Win64_Havoc_B_2147898794_0
         $x_2_2 = {4c 89 c0 ba ?? ?? ?? ?? 0f b6 00 30 01 48 83 c1 ?? 49 39 c9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +106,7 @@ rule Backdoor_Win64_Havoc_C_2147898795_0
         $x_2_2 = {4c 89 c2 b8 ?? ?? ?? ?? 0f b6 12 30 11 48 83 c1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +129,7 @@ rule Backdoor_Win64_Havoc_AJ_2147912275_0
         $x_2_2 = {31 ca 88 50 fe 44 89 c2 45 01 c0 c0 fa 07 83 e2 1b 44 31 c2 41 31 d1 44 88 48 ff 48 39 44 24}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

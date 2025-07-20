@@ -23,6 +23,7 @@ rule Backdoor_Linux_IoTReaper_2147724182_0
         $x_1_9 = "GET /system.ini?loginuse&loginpas" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

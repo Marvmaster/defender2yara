@@ -22,6 +22,7 @@ rule Backdoor_Linux_Derusbi_A_2147783284_0
         $x_1_7 = {8b 85 e4 fd ff ff 89 f1 83 c6 01 83 e1 03 c1 e1 03 d3 e8 30 02 83 c2 01 39 f7 77 e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

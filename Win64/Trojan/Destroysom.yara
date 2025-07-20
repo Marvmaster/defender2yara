@@ -16,6 +16,7 @@ rule Trojan_Win64_Destroysom_MBXW_2147921638_0
         $x_1_1 = {59 65 6b 46 34 76 41 42 78 6d 39 78 46 53 77 6c 30 6b 61 35 64 65 45 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

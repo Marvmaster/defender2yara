@@ -21,6 +21,7 @@ rule Trojan_Win32_Hewilnep_SA_2147760540_0
         $x_1_6 = "runinjectcmd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

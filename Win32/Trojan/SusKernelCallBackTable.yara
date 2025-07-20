@@ -24,6 +24,7 @@ rule Trojan_Win32_SusKernelCallBackTable_MK_2147945824_0
         $n_1_10 = "aa06e39e-7876-4ba3-beee-42bd80ff362e" wide //weight: -1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -53,6 +54,7 @@ rule Trojan_Win32_SusKernelCallBackTable_MK_2147945824_1
         $x_1_9 = {57 4d 5f 43 4f 50 59 44 41 54 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Trojan_Win32_SusKernelCallBackTable_AM_2147946867_0
         $n_1_5 = "aa06e36e-7876-4ba3-beee-42bd80ff362m" wide //weight: -1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -101,6 +104,7 @@ rule Trojan_Win32_SusKernelCallBackTable_AM_2147946867_1
         $x_1_4 = {6d 73 69 6e 66 6f 33 32 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

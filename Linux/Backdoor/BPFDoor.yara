@@ -18,6 +18,7 @@ rule Backdoor_Linux_BPFDoor_A_2147819320_0
         $x_2_3 = {55 48 89 e5 48 83 ec 30 48 89 7d d8 48 c7 45 e0 3c 08 0a 49 48 c7 45 e8 00 00 00 00 48 c7 45 f0 3c 08 0a 49 48 c7 45 f8 00 00 00 00 48 8d ?? e0 48 8b ?? d8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_Linux_BPFDoor_B_2147819609_0
         $x_1_3 = {55 89 e5 83 ec 18 c7 45 f0 3c 08 0a 49 c7 45 f4 00 00 00 00 c7 45 f8 3c 08 0a 49 c7 45 fc 00 00 00 00 8d 45 f0 89 44 24 04 8b 45 08 89 04 24 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Backdoor_Linux_BPFDoor_C_2147819610_0
         $x_2_4 = {ff fe ff 48 89 45 ?? 48 8b 45 ?? c6 00 08 48 8b 45 ?? c6 40 01 00 48 8b 45 ?? 66 c7 40 02 00 00 48 8b 45 ?? 66 c7 40 06 d2 04 e8 [0-5] 89 c2 48 8b 45 ?? 66 89 50 04 8b 45 [0-5] 48 8d ?? ?? ff fe ff 48 ?? ?? 08 48 89 ?? be ?? 46 60}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Backdoor_Linux_BPFDoor_D_2147819611_0
         $x_2_3 = {9d e3 bf 78 f0 27 a0 44 03 00 00 4e 82 10 60 67 9a ?? ?? ?? 98 10 20 16 90 10 00 0d 92 10 00 01 94 10 00 0c 40 [0-5] 01 00 00 00 40 [0-5] 01 00 00 00 9a 10 00 08 03 00 00 91 82 10 61 c4 c2 00 40 00 80 a3 40 01 [0-5] 01 00 00 00 82 ?? ?? ?? 90 10 00 01}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Backdoor_Linux_BPFDoor_E_2147819614_0
         $x_2_5 = {55 89 e5 83 ec 18 c7 45 e8 3c 08 0a 49 c7 45 ec 00 00 00 00 c7 45 f0 3c 08 0a 49 c7 45 f4 00 00 00 00 83 ec 08 8d 45 e8 50 ff 75 08 e8 [0-5] 83 c4 10 c9 c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -139,6 +144,7 @@ rule Backdoor_Linux_BPFDoor_F_2147850526_0
         $x_1_2 = "/var/run/initd.lock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -161,6 +167,7 @@ rule Backdoor_Linux_BPFDoor_G_2147943669_0
         $x_1_2 = {48 8b 45 f0 48 01 d0 0f b6 10 0f b6 4d fe 48 8b 45 f0 48 01 c8 0f b6 00 01 d0 88 45 ef 8b 45 f8 48 63 d0 48 8b 45 d8 48 01 c2 8b 45 f8 48 63 c8 48 8b 45 d8 48 01 c8 0f b6 08 0f b6 75 ef 48 8b 45 f0 48 01 f0 0f b6 00 31 c8 88 02 83 45 f8 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

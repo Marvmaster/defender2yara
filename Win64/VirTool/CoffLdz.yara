@@ -20,6 +20,7 @@ rule VirTool_Win64_CoffLdz_A_2147839558_0
         $x_1_5 = {48 c7 45 08 00 00 00 00 41 b8 08 00 00 00 48 8b 95 00 01 00 00 48 8d 4d 08 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

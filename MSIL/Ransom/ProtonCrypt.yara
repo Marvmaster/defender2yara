@@ -23,6 +23,7 @@ rule Ransom_MSIL_ProtonCrypt_PAA_2147794907_0
         $x_1_8 = "WRITE 'proton' TO RUN RANSOMWARE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

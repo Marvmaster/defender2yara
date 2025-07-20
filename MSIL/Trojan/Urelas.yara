@@ -18,6 +18,7 @@ rule Trojan_MSIL_Urelas_SP_2147843563_0
         $x_1_3 = "iomDome.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Worm_Win32_Vundo_A_2147624092_0
         $x_1_9 = {50 00 68 00 69 00 73 00 68 00 69 00 6e 00 67 00 46 00 69 00 6c 00 74 00 65 00 72 00 00 00 45 00 6e 00 61 00 62 00 6c 00 65 00 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Worm_Win32_Vundo_B_2147628135_0
         $x_1_10 = "pancolp.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             ((4 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

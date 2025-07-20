@@ -31,6 +31,7 @@ rule TrojanProxy_Win32_Diskmaster_2147583206_0
         $x_3_17 = {3b 50 a3 3c 8b 45 fc 83 c0 01 89 45 fc 8b 4d fc c7 04 8d}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_3_*) and 7 of ($x_1_*))) or

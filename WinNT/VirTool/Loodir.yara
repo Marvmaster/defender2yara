@@ -16,6 +16,7 @@ rule VirTool_WinNT_Loodir_A_2147689969_0
         $x_1_2 = {81 b8 40 60 00 00 65 56 43 34 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

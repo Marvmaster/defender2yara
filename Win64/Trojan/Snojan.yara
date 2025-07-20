@@ -16,6 +16,7 @@ rule Trojan_Win64_Snojan_KD_2147833638_0
         $x_1_1 = {48 8b 54 24 08 48 89 54 24 18 33 d2 48 8b c1 48 8b 4c 24 18 48 f7 f1 48 8b c2 48 8b 4c 24 40 0f be 04 01 8b 4c 24 04 33 c8 8b c1 48 63 0c 24 48 8b 54 24 30 88 04 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_Snojan_MA_2147847068_0
         $x_2_5 = "/c del" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

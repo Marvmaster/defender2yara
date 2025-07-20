@@ -20,6 +20,7 @@ rule Ransom_MSIL_Sapphire_DEA_2147756328_0
         $x_1_5 = "052250058205075025075207820" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_MSIL_Sapphire_DA_2147766032_0
         $x_1_5 = "GachaLife_Update.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Ransom_MSIL_Sapphire_DB_2147775311_0
         $x_1_4 = "Encryption Complete" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Lamberts_AS_2147751930_0
         $x_1_2 = {32 04 3a 59 88 06 46 42 80 7d 10 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

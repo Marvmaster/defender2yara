@@ -23,6 +23,7 @@ rule Virus_Win32_Nemim_A_2147679306_0
         $x_1_8 = {83 fa 3a 0f 84 ac 00 00 00 8b 85 d0 fe ff ff 8b 8d b8 fe ff ff 8a 11 88 94 05 e0 fe ff ff 8b 85 b8 fe ff ff 0f be 08 83 f9 2e 0f 85 80 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win32_BazarLoaderCrypt_SN_2147778354_0
         $x_2_3 = "Fuck Def" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

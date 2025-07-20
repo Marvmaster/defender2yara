@@ -19,6 +19,7 @@ rule Trojan_Win32_Cobast_YL_2147744627_0
         $x_1_4 = "hed20.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

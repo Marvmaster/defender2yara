@@ -23,6 +23,7 @@ rule Trojan_MSIL_NanocoreRat_CM_2147838517_0
         $x_2_8 = "vmware" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 4 of ($x_2_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Trojan_MSIL_NanocoreRat_CSTY_2147846855_0
         $x_1_1 = {03 08 03 8e 69 5d 7e ?? ?? ?? ?? 03 08 03 8e 69 5d 91 07 08 07 8e 69 5d 91 61 28 ?? ?? ?? ?? 03 08 18 58 17 59 03 8e 69 5d 91 59 20 ?? ?? ?? ?? 58 19 58 18 59 20 ?? ?? ?? ?? 5d d2 9c 08 17 58 1a 2d 38 26 08 6a 03 8e 69 17 59 6a 06 17 58 6e 5a 31}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_MSIL_NanocoreRat_CXRO_2147847743_0
         $x_1_5 = "OlRRqBSOfvwweUcLcd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_MSIL_NanocoreRat_NN_2147902269_0
         $x_5_2 = "NanoCore" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

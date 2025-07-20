@@ -20,6 +20,7 @@ rule Ransom_Win32_Critloki_A_2147687563_0
         $x_1_6 = "k.php?affid=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win32_Critloki_B_2147690771_0
         $x_1_6 = {73 75 72 65 20 79 6f 75 20 65 6e 74 65 72 65 64 20 79 6f 75 72 20 70 61 79 6d 65 6e 74 20 69 6e 66 6f 72 6d 61 74 69 6f 6e 20 63 6f 72 72 65 63 74 6c 79 3f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

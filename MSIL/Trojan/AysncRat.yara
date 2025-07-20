@@ -17,6 +17,7 @@ rule Trojan_MSIL_AysncRat_RF_2147841961_0
         $x_1_2 = "fak_chea\\obj\\x86\\Release\\fak_chea.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_AysncRat_RE_2147842331_0
         $x_1_2 = "$85da9699-efff-4462-9567-08c6469da806" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

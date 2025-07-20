@@ -18,6 +18,7 @@ rule Trojan_Win32_Diabarok_A_2147636862_0
         $x_1_4 = {74 1b 8b c3 c1 e0 05 8d 84 c7 04 00 01 00 50 e8 1b e6 ff ff 8b 55 f8 89 02 b3 01 eb 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

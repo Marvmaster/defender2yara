@@ -19,6 +19,7 @@ rule Trojan_MSIL_Crysen_RS_2147828546_0
         $x_1_4 = "U09GVFdBUkVcTWljcm9zb2Z0XFdpbmRvd3NcQ3VycmVudFZlcnNpb25cUnVuXA==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_Crysen_MBAS_2147839697_0
         $x_1_2 = {fe eb e8 eb de eb db eb d5 eb eb eb f6 eb fc eb c7 eb d8 eb d6 eb ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

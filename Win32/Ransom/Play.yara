@@ -16,6 +16,7 @@ rule Ransom_Win32_Play_NEAA_2147836705_0
         $x_10_1 = {8b 8d c0 fd ff ff 83 e9 01 89 8d c0 fd ff ff 83 bd c0 fd ff ff 00 0f 8e 84 01 00 00 8b 95 b4 fd ff ff 8b 42 28 8b 8d c0 fd ff ff 0f b7 14 48 83 fa 5c 0f 85}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Win32_Play_PAA_2147841923_0
         $x_1_4 = {55 8b ec 81 ec ?? ?? ?? ?? a1 ?? ?? ?? ?? 33 c5 89 45 ?? 53 56 57 83 ec 08 b0 40 b3 73 3a c3 75 ?? 81 c4 ?? ?? ?? ?? 83 c4 08 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Ransom_Win32_Play_AA_2147888336_0
         $x_1_4 = "second step encryption" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Ransom_Win32_Play_ZA_2147904412_0
         $x_10_2 = {8b 45 d0 03 45 d4 0f b6 08 33 ca 8b 55 d0 03 55 d4 88 0a eb}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -36,6 +36,7 @@ rule TrojanDropper_Win32_SpamThru_A_2147597256_0
         $x_1_21 = "Software\\Microsoft\\Windows\\CurrentVersion\\ShellServiceObjectDelayLoad" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_100_*) and 1 of ($x_20_*) and 5 of ($x_1_*))) or
@@ -64,6 +65,7 @@ rule TrojanDropper_Win32_SpamThru_E_2147597258_0
         $x_1_3 = {ec cc 00 00 00 8d 45 f0 50 ff 15 ?? ?? ?? ?? 8d 45 e0 50 ff 15 ?? ?? ?? ?? 66 8b 45 ea 66 3b 05 ?? ?? ?? ?? 75 3b 66 8b 45 e8 66 3b 05 ?? ?? ?? ?? 75 2e 66 8b 45 e6 66 3b 05 ?? ?? ?? ?? 75 21 66 8b 45 e2 66 3b 05 ?? ?? ?? ?? 75 14 66 8b 45 e0 66 3b 05 ?? ?? ?? ?? 75 07 a1 ?? ?? ?? ?? eb 45 8d 85 34 ff ff ff 50 ff 15 ?? ?? ?? ?? 83 f8 ff 74 1b 83 f8 02 75 12 66 83 7d ce 00 74 0b 83 7d dc 00 74 05 6a 01 58 eb 07 33 c0 eb 03 83 c8 ff 56 57 8d 75 e0 bf ?? ?? ?? ?? a5 a5 a5 a5 5f a3 ?? ?? ?? ?? 5e 50 0f b7 45 fc 50 0f b7 45 fa 50 0f b7 45 f8 50 0f b7 45 f6 50 0f b7 45 f2 50 0f b7 45 f0 50 e8 ee 1d 00 00 8b 4d 08 83 c4 1c 85 c9 74 02 89 01 c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +95,7 @@ rule TrojanDropper_Win32_SpamThru_D_2147597259_0
         $x_1_9 = "\"C:\\WINDOWS\\SYSTEM32\\odhzb.dll\",run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

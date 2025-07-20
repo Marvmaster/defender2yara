@@ -22,6 +22,7 @@ rule TrojanProxy_Win32_Tinxy_A_2147614558_0
         $x_1_8 = {25 73 5c 54 69 6e 79 50 72 6f 78 79 5c 25 75 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -56,6 +57,7 @@ rule TrojanProxy_Win32_Tinxy_B_2147616440_0
         $x_1_9 = "www.google." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -87,6 +89,7 @@ rule TrojanProxy_Win32_Tinxy_C_2147616668_0
         $x_1_9 = "www.google." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -116,6 +119,7 @@ rule TrojanProxy_Win32_Tinxy_D_2147616669_0
         $x_2_7 = {3c 73 70 61 6e 3e 00 00 75 73 65 72 2d 61 67 65}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -151,6 +155,7 @@ rule TrojanProxy_Win32_Tinxy_E_2147619192_0
         $x_1_9 = {70 72 6f 25 73 61 69 6e [0-16] 63 65 73 73 2d 64 6f 6d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -179,6 +184,7 @@ rule TrojanProxy_Win32_Tinxy_F_2147621160_0
         $x_1_4 = {50 4e 50 5f 54 44 49 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -205,6 +211,7 @@ rule TrojanProxy_Win32_Tinxy_G_2147621349_0
         $x_1_4 = {85 db 75 07 be ?? ?? ?? ?? eb 1b 83 fb 01 75 07 be ?? ?? ?? ?? eb 0f 83 fb 02 be ?? ?? ?? ?? 74 05 be}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -228,6 +235,7 @@ rule TrojanProxy_Win32_Tinxy_H_2147621435_0
         $x_2_4 = {c6 47 ff 25 c6 07 32 83 c4 10 c6 47 01 30}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

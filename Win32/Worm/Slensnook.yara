@@ -20,6 +20,7 @@ rule Worm_Win32_Slensnook_A_179516_0
         $x_1_5 = {52 65 63 6f 76 65 72 65 64 20 50 57 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

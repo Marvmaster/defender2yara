@@ -16,6 +16,7 @@ rule Trojan_Win64_HoundKeylogger_A_2147892447_0
         $x_2_1 = {41 b9 88 ff ff ff 48 89 5c 24 20 45 33 c0 33 d2 b9 00 08 00 00 ff 15 ?? ?? ?? ?? b9 01 00 00 00 ff 15 ?? ?? ?? ?? b9 05 00 00 00 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

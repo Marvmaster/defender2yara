@@ -28,6 +28,7 @@ rule Trojan_MSIL_DllInjector_ZC_2147759068_0
         $x_1_13 = "Stable" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -54,6 +55,7 @@ rule Trojan_MSIL_DllInjector_ZD_2147759069_0
         $x_1_6 = {4d 00 65 00 67 00 61 00 44 00 75 00 6d 00 70 00 65 00 72 00 20 00 [0-10] 20 00 62 00 79 00 20 00 43 00 6f 00 64 00 65 00 43 00 72 00 61 00 63 00 6b 00 65 00 72 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Ransom_Win64_CrazyHunter_YAC_2147938649_0
         $x_1_7 = "delete all the data" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

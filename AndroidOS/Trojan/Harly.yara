@@ -49,6 +49,7 @@ rule Trojan_AndroidOS_Harly_B_2147833634_0
         $x_1_3 = "_Unwind_GetTextRelBase" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 

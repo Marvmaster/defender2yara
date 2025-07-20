@@ -17,6 +17,7 @@ rule Trojan_Win32_Lostpy_A_2147709238_0
         $x_1_2 = "software\\microsoft\\windows\\CurrentVersion\\Run\\Terst" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

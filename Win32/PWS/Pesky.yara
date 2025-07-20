@@ -22,6 +22,7 @@ rule PWS_Win32_Pesky_A_2147690418_0
         $x_1_8 = {00 25 64 3a 25 49 36 34 75 3a 25 73 25 73 3b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

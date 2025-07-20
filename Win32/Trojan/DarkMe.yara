@@ -17,6 +17,7 @@ rule Trojan_Win32_DarkMe_MBWQ_2147931704_0
         $x_1_2 = {39 ed eb 10 3a ed eb 10 00 00 f4 01 00 00 c6 40 14 00 00 00 00 00 20 45 00 11 10 3b 28 11 00 14 00 00 08 50 28 11 76 26 00 11 00 50 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

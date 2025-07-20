@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Gladgerown_A_2147639100_0
         $x_1_2 = {6a 10 8b 55 ?? 83 c2 38 52 8b 45 ?? 8b 48 30 51 e8 ?? ?? 00 00 85 c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_Gladgerown_B_2147647266_0
         $x_1_3 = {25 30 38 78 00 [0-7] 25 73 5f 25 78 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

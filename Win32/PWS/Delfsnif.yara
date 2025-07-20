@@ -18,6 +18,7 @@ rule PWS_Win32_Delfsnif_G_2147596361_0
         $x_1_3 = {63 6d 64 2e 65 78 65 00 55 8b ec 33 c0 55 68 ?? ?? 41 00 64 ff 30 64 89 20 b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule PWS_Win32_Delfsnif_H_2147596385_0
         $x_3_7 = "Generic Host Process for Win32 Services" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

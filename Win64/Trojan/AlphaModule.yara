@@ -15,6 +15,7 @@ rule Trojan_Win64_AlphaModule_A_2147849110_0
         $x_1_1 = {4e 74 43 72 65 61 74 65 53 65 63 74 69 6f 6e 20 2d 20 46 61 69 6c 00 00 70 4e 74 4d 61 70 56 69 65 77 4f 66 53 65 63 74 69 6f 6e 20 2d 20 46 61 69 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

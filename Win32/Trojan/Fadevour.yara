@@ -19,6 +19,7 @@ rule Trojan_Win32_Fadevour_LK_2147899302_0
         $x_1_4 = {6a 04 68 00 10 00 00 ff 76 54 ff 75 fc ff d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

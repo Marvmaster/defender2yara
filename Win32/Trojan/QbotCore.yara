@@ -20,6 +20,7 @@ rule Trojan_Win32_QbotCore_A_2147763222_0
         $x_1_5 = "InitCoreData(): szSid='%s' wszUserName='%S' wszDomainName='%S' wszQbotinjExe='%S' wszHomeDir='%S' szVarsMutex='%s' szBaseRandomName='%s'" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +71,7 @@ rule Trojan_Win32_QbotCore_B_2147926706_0
         $x_1_3 = {8b c2 83 e0 0f 8a ?? ?? ?? ?? ?? 8d 0c 3a 32 04 0e 42 88 01 3b 55 0c 72 e7 5e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -26,6 +26,7 @@ rule Trojan_Win32_Febipos_A_2147682568_0
         $x_2_11 = {7c c2 eb 08 83 7d ?? 65 75 99 eb 02 eb 95 8a 45 e3 83 f0 01 84 c0 0f 84 7e 02 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -61,6 +62,7 @@ rule Trojan_Win32_Febipos_B_2147684042_0
         $x_1_10 = "\"install_time\": \"13006874669995739\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -94,6 +96,7 @@ rule Trojan_Win32_Febipos_B_2147684055_0
         $x_1_7 = {ff d3 85 c0 0f 85 7e 00 00 00 8d 85 fc f7 ff ff 8d 50 02 8d 49 00 66 8b 08 83 c0 02 66 85 c9 75 f5 2b c2 8b 95 f8 f7 ff ff d1 f8 8d 44 00 02 50 8d 8d fc f7 ff ff 51 6a 01 6a 00 6a 00 52 ff d6 8b 85 f8 f7 ff ff 6a 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -123,6 +126,7 @@ rule Trojan_Win32_Febipos_C_2147684113_0
         $x_2_5 = {8d 85 c4 e9 ff ff 66 c7 00 58 58 c6 40 02 00 8d 85 d4 fd ff ff 89 04 24 e8 7b 0a 00 00 c7 44 24 04 ?? ?? ?? ?? 8d 85 c4 e9 ff ff 89 04 24 e8 ?? ?? ?? ?? 85 c0 0f 85 0a 02 00 00 8b 45 dc 89 44 24 08 c7 44 24 04 ?? ?? ?? ?? 8d 85 d4 fd ff ff 89 04 24 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

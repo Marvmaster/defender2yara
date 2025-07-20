@@ -17,6 +17,7 @@ rule Trojan_Win32_Alisa_GHJ_2147844194_0
         $x_1_2 = "Ch7Demo6.EXE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Alisa_GNW_2147895516_0
         $x_1_2 = "CListCtrl_test" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

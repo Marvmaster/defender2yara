@@ -16,6 +16,7 @@ rule Trojan_MSIL_SpyKeyLogger_RDA_2147903920_0
         $x_2_1 = {6f 43 00 00 0a 80 1a 00 00 04 7e 1a 00 00 04 07 16 07 8e 69}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

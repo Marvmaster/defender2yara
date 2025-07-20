@@ -17,6 +17,7 @@ rule Trojan_Win32_MixLoader_RJ_2147842438_0
         $x_1_2 = {83 6a 0c 01 8b 42 00 74 2c 85 c0 89 4a 08 8a 40 01 89 41 fc 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_MixLoader_RB_2147844302_0
         $x_1_2 = "ASmartCore.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_MixLoader_RPX_2147846029_0
         $x_1_5 = {00 72 6f 63 41 64 64 72 65 73 73 00 00 41 70 69 53 65 74 51 75 65 72 79 41 70 69 53 65 74 50 72 65 73 65 6e 63 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

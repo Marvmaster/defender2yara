@@ -21,6 +21,7 @@ rule VirTool_Win32_Tater_B_2147794339_0
         $x_1_6 = "EdpRpcRmsGetContainerIdentity" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

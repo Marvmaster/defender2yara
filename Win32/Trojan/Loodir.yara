@@ -16,6 +16,7 @@ rule Trojan_Win32_Loodir_A_2147689966_0
         $x_1_2 = {81 bc 11 20 03 00 00 aa 99 88 77 75 17}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

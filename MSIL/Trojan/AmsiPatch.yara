@@ -20,6 +20,7 @@ rule Trojan_MSIL_AmsiPatch_DA_2147921598_0
         $x_1_5 = "[eax+ebx]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_AmsiPatch_DB_2147921599_0
         $x_1_1 = {08 d3 0b 06 28 ?? ?? ?? ?? 0d 00 08 17 58 0c 08 06 20 2c 01 00 00 20 b8 0b 00 00 6f ?? ?? ?? ?? fe 04 13 04 11 04 2d d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

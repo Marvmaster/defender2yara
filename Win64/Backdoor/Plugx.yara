@@ -20,6 +20,7 @@ rule Backdoor_Win64_Plugx_A_2147694041_0
         $x_1_5 = {ba 56 00 00 00 48 8d 0d 69 09 00 00 ff 15 2b 09 00 00 ff 15 cd 08 00 00 44 8b c0 ba 57 00 00 00 48 8d 0d 4e 09 00 00 ff 15 10 09 00 00 bb 32 00 00 00 eb 1d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_Win64_Plugx_2147705913_0
         $x_1_4 = "\\AppCompatFlags\\Custom\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_MSIL_Walgentz_Z_2147923454_0
         $x_1_5 = "DownloadString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

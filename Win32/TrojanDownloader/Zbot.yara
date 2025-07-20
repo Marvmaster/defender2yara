@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Zbot_D_2147645665_0
         $x_2_3 = {be 38 b5 41 6a 0f b7 f9 8b df 81 c3 92 3e 58 7c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Zbot_E_2147645754_0
         $x_1_3 = {43 00 72 00 65 00 61 00 74 00 65 00 54 00 65 00 78 00 74 00 46 00 69 00 6c 00 65 00 00 00 00 00 43 00 6c 00 6f 00 73 00 65 00 00 00 46 00 6f 00 6c 00 64 00 65 00 72 00 45 00 78 00 69 00 73 00 74 00 73 00 00 00 00 00 43 00 72 00 65 00 61 00 74 00 65 00 46 00 6f 00 6c 00 64 00 65 00 72 00 00 00 00 00 46 00 69 00 6c 00 65 00 45 00 78 00 69 00 73 00 74 00 73 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanDownloader_Win32_Zbot_G_2147647574_0
         $x_1_2 = {f5 00 00 00 00 1b 0a 00 04 ?? ff 0a 0b 00 0c 00 04 00 ff fc 34 fc f8 64 ff 35 00 ff 3a ?? ff 0c 00 25 6c 0c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

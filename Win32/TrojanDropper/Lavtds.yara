@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Lavtds_A_2147627465_0
         $x_1_2 = {c1 27 72 66 ?? ?? ?? 41 30 29 18 e8 ?? ?? ?? ?? a3 ?? ?? ?? ?? 89 ?? ?? ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

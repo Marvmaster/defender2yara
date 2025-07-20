@@ -17,6 +17,7 @@ rule Trojan_Win32_Koorema_A_2147634448_0
         $x_1_3 = {72 75 6e 64 6c 6c 33 32 20 22 25 73 22 2c 58 46 52 65 73 74 61 72 74 00 5c 69 6e 65 74 73 72 76 5c 77 61 6d 72 65 67 2e 64 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

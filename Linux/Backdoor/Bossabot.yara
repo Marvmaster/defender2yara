@@ -20,6 +20,7 @@ rule Backdoor_Linux_Bossabot_A_2147817851_0
         $x_1_5 = "NOTICE %s :rnd2 %s t %s t %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Backdoor_Linux_Bossabot_B_2147822362_0
         $x_1_5 = "BoSSaBoTv2-%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule PWS_Win32_Zuten_A_2147600461_0
         $x_1_5 = {6a 04 52 53 ff d7 8b 44 24 14 6a 02 3d fc fd fe ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*))) or
             ((1 of ($x_5_*))) or
@@ -47,6 +48,7 @@ rule PWS_Win32_Zuten_B_2147613705_0
         $x_1_3 = {4a 75 6d 70 48 6f 6f 6b 4f 66 66 00 4a 75 6d 70 48 6f 6f 6b 4f 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule PWS_Win32_Zuten_C_2147625316_0
         $x_1_1 = {6a 02 57 6a fc [0-32] ff d3 81 7d ?? 1c 4d 5f 23 [0-20] 6a 02 57 6a f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule PWS_Win32_Zuten_D_2147649811_0
         $x_1_6 = {c6 85 d0 fd ff ff 78 c6 85 d1 fd ff ff 57 88 9d d2 fd ff ff f3 ab aa 8d 85 c8 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -119,6 +123,7 @@ rule PWS_Win32_Zuten_OB_2147748023_0
         $x_1_1 = {8a 04 1f 33 d2 8a 14 37 03 c2 8b 55 ?? 83 c2 ?? 8b ca 33 d2 f7 f1 8a 04 17 88 45 ?? 8d 45 ?? 8b 55 ?? 8b 4d ?? 8a 54 ?? ?? 8a 4d ?? 32 d1 e8 ?? ?? ?? ?? 8b 55 ?? 8d 45 ?? e8 ?? ?? ?? ?? ff 45 ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_MacOS_Leap_A_2147745524_0
         $x_1_4 = {7c 00 e2 78 7c 1e 11 ae 38 42 00 01 7c 1e 10 ae 7c 00 07 74 2f 80 00 00 40 9e ff e8 38 21 00 50 7f c3 f3 78 80 01 00 08 bb 81 ff f0 7c 08 03 a6 4e 80 00 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

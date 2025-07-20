@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Kedger_B_2147825968_0
         $x_1_6 = "DF%05d.tmp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win64_DCRat_RDA_2147844564_0
         $x_1_3 = "Create by constant#1900" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_DCRat_SPQS_2147845023_0
         $x_1_2 = "RustCheatCheck.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win64_DCRat_A_2147849418_0
         $x_2_1 = {48 ff c7 48 63 05 ?? ?? 09 00 48 83 c6 ?? 48 39 c7 7c 09 00 89 ?? 41 ff ?? 48 83 c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win64_DCRat_B_2147849437_0
         $x_2_1 = {ff d6 85 c0 75 ?? 48 83 c3 ?? 48 83 c7 ?? 48 81 ff ?? ?? ?? ?? 75 07 00 4a 8b 0c 27 48 89 da}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_Win64_DCRat_C_2147849518_0
         $x_2_1 = {4c 89 e2 49 89 d8 ff ?? 3d ?? ?? ?? ?? 74 ?? 48 83 c3 ?? 48 83 c6 ?? 48 81 fe ?? ?? ?? ?? 75 04 00 4a 8b 0c 3e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +129,7 @@ rule Trojan_Win64_DCRat_D_2147850305_0
         $x_2_1 = {48 89 c1 8b 45 ?? 48 0f be 11 48 8d 0d ?? ?? ?? ?? 0f be 0c 11 c1 f9 ?? 83 e1 ?? 09 c8 88}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +151,7 @@ rule Trojan_Win64_DCRat_E_2147850686_0
         $x_2_1 = {4c 8b 17 4f 0f be 5c 8a ?? 45 0f b6 1c 0b 41 c0 e3 ?? 4f 0f be 54 8a ?? 45 0f b6 14 0a 41 80 e2 ?? 45 08 da 48 83 7d f8 ?? 4d 89 c3 0f 82}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +173,7 @@ rule Trojan_Win64_DCRat_F_2147850687_0
         $x_2_1 = {4c 8b 13 48 83 ?? 01 49 0f be 4c 02 01 4d 0f be 14 02 41 0f be 0c ?? 47 0f be 14 ?? c1 f9 04 41 c1 e2 02 83 e1 03 44 09 d1 4c 8b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +195,7 @@ rule Trojan_Win64_DCRat_G_2147850688_0
         $x_2_1 = {0f b6 00 0f be c0 48 98 48 8d 15 ?? ?? ?? ?? 0f b6 04 10 0f be c0 c1 e0 02 83 e0 ?? 89 c6 48 8b 45 e8 48 c1 e0 02 48 83 c0 01 48 89 c2 48 8b 4d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -209,6 +218,7 @@ rule Trojan_Win64_DCRat_H_2147923750_0
         $x_4_2 = {41 f7 e0 41 8b c0 2b c2 d1 ?? 03 c2 c1 e8 ?? 0f be c0 6b c8 ?? 41 0f b6 c0 41 ff c0 2a c1 04 39 41 30 41 ff 41 83 f8}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +243,7 @@ rule Trojan_Win64_DCRat_PD_2147925359_0
         $x_3_4 = "github.com/MrBrounr/main/raw/main/naker.exe" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -255,6 +266,7 @@ rule Trojan_Win64_DCRat_RPA_2147936606_0
         $x_10_2 = {5f 43 6f 72 45 00 78 65 4d 61 69 6e 00 6d 00 73 63 6f 72 65 65 2e 64 43 6c}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -277,6 +289,7 @@ rule Trojan_Win64_DCRat_ETL_2147944790_0
         $x_1_2 = "Loader.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

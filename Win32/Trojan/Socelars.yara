@@ -20,6 +20,7 @@ rule Trojan_Win32_Socelars_S_2147744171_0
         $x_2_5 = "F:\\facebook20190527_newversion\\database\\Release\\DiskScan.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -62,6 +63,7 @@ rule Trojan_Win32_Socelars_PA_2147745751_0
         $x_1_18 = "c_user" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

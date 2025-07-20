@@ -16,6 +16,7 @@ rule Trojan_Win64_Razy_RB_2147844061_0
         $x_1_1 = {48 63 44 24 40 48 3d 00 06 03 00 73 26 48 63 44 24 40 48 8d 0d ?? ?? 00 00 0f b6 04 01 35 ad 00 00 00 48 63 4c 24 40 48 8d 15 ?? ?? 00 00 88 04 0a eb c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_Razy_NR_2147849145_0
         $x_1_2 = "JNZNIzGYB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win64_Razy_AVE_2147943969_0
         $x_1_1 = {41 0f b7 01 41 8b 08 8b 14 86 49 03 cb 33 c0 8a 19 49 03 d3 84 db 74 24 c1 c0 03 48 ff c1 89 44 24 10 30 5c 24 10 8a 19 84 db}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

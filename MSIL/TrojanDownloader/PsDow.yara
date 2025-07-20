@@ -22,6 +22,7 @@ rule TrojanDownloader_MSIL_PsDow_C_2147838236_0
         $x_1_7 = "set_StartInfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_MSIL_PsDow_D_2147840496_0
         $x_1_2 = "ToCharArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule TrojanDownloader_MSIL_PsDow_F_2147845480_0
         $x_1_3 = "ProcessWindowStyle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule TrojanDownloader_MSIL_PsDow_E_2147847018_0
         $x_2_4 = "RustemSoft.Skater" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

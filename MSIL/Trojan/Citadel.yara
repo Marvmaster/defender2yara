@@ -17,6 +17,7 @@ rule Trojan_MSIL_Citadel_MBJL_2147892208_0
         $x_1_2 = "9-5feaf84bf17b" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

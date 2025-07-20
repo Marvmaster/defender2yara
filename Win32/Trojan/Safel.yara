@@ -18,6 +18,7 @@ rule Trojan_Win32_Safel_A_2147611453_0
         $x_1_4 = {73 66 6c 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

@@ -17,6 +17,7 @@ rule Trojan_Win32_SquirrelWaffel_A_2147794791_0
         $x_1_2 = {0f b6 c8 6b c9 53 56 8b 35 ?? ?? ?? ?? 2b f1 8d 4c 32 ?? 66 0f b6 d0 66 03 d6 66 83 ea 5c 0f b7 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

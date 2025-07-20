@@ -17,6 +17,7 @@ rule Trojan_Win64_DriverInject_KG_2147900617_0
         $x_1_2 = {0f be 0e 8b c3 48 33 c8 48 ff c6 0f b6 d1 48 8d 0d fc 47 00 00 c1 e8 08 8b 1c 91 33 d8 83 c7 ff 75 de}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

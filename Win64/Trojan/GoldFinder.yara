@@ -21,6 +21,7 @@ rule Trojan_Win64_GoldFinder_A_2147775900_0
         $x_1_6 = {4c 6f 63 61 74 69 6f 6e 4d 61 68 ?? 6a 61 6e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_5_*))) or

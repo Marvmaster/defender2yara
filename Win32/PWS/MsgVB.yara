@@ -20,6 +20,7 @@ rule PWS_Win32_MsgVB_2147583742_0
         $x_5_6 = "Victim's Password" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

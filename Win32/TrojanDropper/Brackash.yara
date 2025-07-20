@@ -22,6 +22,7 @@ rule TrojanDropper_Win32_Brackash_A_2147602712_0
         $x_1_7 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanDropper_Win32_Brackash_B_2147602715_0
         $x_2_5 = {72 61 6e 64 6f 6d 66 75 6e 63 69 6f 6e 64 69 72 6d 65 6d 6f 72 79 (6c 69|68 61) 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*))) or
             ((2 of ($x_10_*))) or

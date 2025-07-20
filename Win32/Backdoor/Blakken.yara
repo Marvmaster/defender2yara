@@ -22,6 +22,7 @@ rule Backdoor_Win32_Blakken_DE_2147896083_0
         $x_3_7 = "Mot de passe" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

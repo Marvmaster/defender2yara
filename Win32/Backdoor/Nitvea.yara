@@ -20,6 +20,7 @@ rule Backdoor_Win32_Nitvea_A_2147655597_0
         $x_1_6 = "DLLFILE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

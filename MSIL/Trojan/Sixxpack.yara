@@ -22,6 +22,7 @@ rule Trojan_MSIL_Sixxpack_A_2147740310_0
         $x_6_7 = {00 08 b7 7a 5c 56 19 34 e0 89 02 06 08 05}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 1 of ($x_1_*))) or
             (all of ($x*))

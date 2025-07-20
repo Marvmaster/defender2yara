@@ -17,6 +17,7 @@ rule Trojan_Win64_ClearFake_YAA_2147920970_0
         $x_1_2 = {44 30 27 48 8d 05 ?? ?? ?? ?? 50 53 57 56 41 55 41 54 55 48 89 e5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_ClearFake_NA_2147921847_0
         $x_3_2 = {cc cc cc 48 ff c7 48 ff ce e9 ?? ?? ff ff}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win64_ClearFake_NB_2147921848_0
         $x_3_2 = {48 ff c7 48 ff ce e9 ?? ?? ff ff}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Trojan_Win64_ClearFake_B_2147927455_0
         $x_1_1 = {c9 0f 31 48 c1 e2 20 48 09 c2 48 39 da 0f ?? ?? ?? ?? ?? 48 89 d9 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

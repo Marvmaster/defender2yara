@@ -18,6 +18,7 @@ rule Trojan_Win32_Cionrox_A_2147627226_0
         $x_1_4 = "reg add \"HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Cionrox_B_2147633663_0
         $x_1_4 = "user_pref(\"network.proxy.autoconfig_url\", \"http://" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -92,6 +92,7 @@ rule Trojan_AndroidOS_Hiddad_E_2147821102_0
         $x_1_1 = {80 46 be f1 00 0f 15 ?? 09 f1 ff 37 01 38 00 23 03 f0 03 01 0d f1 18 0c 61 44 01 33 17 f8 01 2f 73 45 11 f8 08 1c 82 ea 01 02 00 f8 01 2f ef ?? dd f8 0c e0 00 23 08 f8 0e 30 b9 f1 00 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -208,6 +209,7 @@ rule Trojan_AndroidOS_Hiddad_H_2147923946_0
         $x_1_2 = {20 68 d0 f8 90 13 20 46 88 47 90 b9 20 68 29 46 32 46 43 46 d0 f8 78 c1 20 46 e0 47 05 46 20 68 d0 f8 90 13 20 46 88 47 20 b1 20 68 41 6c 20 46 88 47}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -15,6 +15,7 @@ rule TrojanProxy_Win32_Bunitu_A_2147605014_0
         $x_1_1 = {68 73 76 63 68 33 d2 8f 05 ?? ?? ?? 10 68 6f 73 74 2e 8f 05 ?? ?? ?? 10 68 65 78 65 00 48 8f 05 ?? ?? ?? 10 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanProxy_Win32_Bunitu_B_2147648812_0
         $x_5_6 = {c7 40 04 69 6c 33 32 ff 48 04 ff 48 04 83 68 04 01 ff 48 04}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             ((4 of ($x_5_*))) or
@@ -68,6 +70,7 @@ rule TrojanProxy_Win32_Bunitu_C_2147649933_0
         $x_1_5 = {83 c2 08 4e 75 ?? 83 ef 04 c6 47 24 03 c7 07 21 00 00 00 6a 25 57}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule TrojanProxy_Win32_Bunitu_D_2147651506_0
         $x_1_6 = {81 c1 7b 2c 00 00 6a 00 6a 2c 51 ff 35}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule TrojanProxy_Win32_Bunitu_E_2147669248_0
         $x_1_6 = {c7 40 04 60 4f 3f 32 ff 48 04 ff 48 04 81 68 04 f8 e2 0b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -154,6 +159,7 @@ rule TrojanProxy_Win32_Bunitu_F_2147682906_0
         $x_1_13 = {ff 4a 84 07 [0-32] 6a 06 6a 01 6a 02 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -179,6 +185,7 @@ rule TrojanProxy_Win32_Bunitu_A_2147683443_0
         $x_2_5 = {81 2c 24 61 75 17 00 8f 00 c7 40 04 ?? ?? ?? ?? ff 48 04 ff 48 04 81 68 04 5c 78 39 30 01 04 ff 48 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
             ((2 of ($x_5_*))) or
@@ -208,6 +215,7 @@ rule TrojanProxy_Win32_Bunitu_G_2147683444_0
         $x_10_6 = {c7 00 3a 2a 3a 45 5a}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -231,6 +239,7 @@ rule TrojanProxy_Win32_Bunitu_H_2147683530_0
         $x_1_4 = {c7 40 04 73 32 3f 32 ff 48 04 ff 48 04 81 68 04 0b c6 0b 00 ff 48 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -254,6 +263,7 @@ rule TrojanProxy_Win32_Bunitu_I_2147686131_0
         $x_5_4 = {41 33 c1 89 85 60 fe ff ff b9 35 00 00 00 86 e9 66 89 8d 5e fe ff ff 66 c7 85 5c fe ff ff 02 00 6a 10 8d 8d 5c fe ff ff 51 ff b5 30 fe ff ff ff 15}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -280,6 +290,7 @@ rule TrojanProxy_Win32_Bunitu_K_2147692301_0
         $x_1_4 = {5c 58 68 61 72 64 64 ?? 63 63 65 73 73 5c 53 ?? 72 61 6d 65 74 65 72 73 5c 47 69 72 65 77 61 6c 6c 50 6f 6c 69 63 79 5c 53 74 61 6e 64 61 72 64 50 72 6f 66 69 6c 65 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -322,6 +333,7 @@ rule TrojanProxy_Win32_Bunitu_K_2147692301_1
         $x_1_23 = {6e 73 35 2e [0-16] 2e 63 6f 6d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -346,6 +358,7 @@ rule TrojanProxy_Win32_Bunitu_L_2147697258_0
         $x_1_5 = {63 6c 64 33 2e [0-16] 2e 63 6f 6d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -374,6 +387,7 @@ rule TrojanProxy_Win32_Bunitu_L_2147697258_1
         $x_1_6 = "brkewll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -402,6 +416,7 @@ rule TrojanProxy_Win32_Bunitu_M_2147706116_0
         $x_1_4 = {5c 58 68 61 72 64 64 ?? 63 63 65 73 73 5c 53 ?? 72 61 6d 65 74 65 72 73 5c 47 69 72 65 77 61 6c 6c 50 6f 6c 69 63 79 5c 53 74 61 6e 64 61 72 64 50 72 6f 66 69 6c 65 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -425,6 +440,7 @@ rule TrojanProxy_Win32_Bunitu_N_2147707404_0
         $x_1_4 = {4a 0b d2 75 11 0f 31 0f b6 c0 c1 e0 02 bf ?? ?? ?? ?? 03 f8 eb 05 83 3f 00 75 e5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -448,6 +464,7 @@ rule TrojanProxy_Win32_Bunitu_O_2147708586_0
         $x_1_4 = {00 61 61 63 6c 66 64 3a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -476,6 +493,7 @@ rule TrojanProxy_Win32_Bunitu_P_2147719011_0
         $x_1_8 = {b2 6e 86 d6 88 70 04 b2 65 86 d6 88 70 08 51 b9 ?? ?? ?? ?? 87 d1 29 10 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -499,6 +517,7 @@ rule TrojanProxy_Win32_Bunitu_R_2147720067_0
         $x_1_3 = {fe 09 c6 41 ?? ?? fe 49 ?? c6 41 ?? ?? fe 49 ?? fe 09 51 e8 68 20 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -527,6 +546,7 @@ rule TrojanProxy_Win32_Bunitu_R_2147720067_1
         $x_1_5 = "advfirewall firewall add rule name=\"Rundll32\" dir=out action=allow protocol=any" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -549,6 +569,7 @@ rule TrojanProxy_Win32_Bunitu_RL_2147741344_0
         $x_1_2 = {31 4d fc 8b 45 fc c7 45 fc ?? ?? ?? ?? 8b c8 b8 00 00 00 00 03 c1 89 45 fc a1 ?? ?? ?? ?? 8b 4d fc 89 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -574,6 +595,7 @@ rule TrojanProxy_Win32_Bunitu_G_2147741745_0
         $x_1_5 = {8b 4d f8 c6 01 52 8b 55 f8 c6 42 01 65 8b 45 f8 c6 40 02 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -599,6 +621,7 @@ rule TrojanProxy_Win32_Bunitu_GA_2147742246_0
         $x_1_5 = {8b 4d f8 c6 01 52 8b 55 f8 c6 42 01 65 8b 45 f8 c6 40 02 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -624,6 +647,7 @@ rule TrojanProxy_Win32_Bunitu_GN_2147742604_0
         $x_1_5 = {8b 4d f8 c6 01 52 8b 55 f8 c6 42 01 65 8b 45 f8 c6 40 02 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -649,6 +673,7 @@ rule TrojanProxy_Win32_Bunitu_GE_2147742651_0
         $x_1_5 = {8b 4d f8 c6 01 52 8b 55 f8 c6 42 01 65 8b 45 f8 c6 40 02 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -672,6 +697,7 @@ rule TrojanProxy_Win32_Bunitu_GF_2147744848_0
         $x_1_3 = {55 8b ec b8 31 [0-15] 64 [0-15] 30 [0-15] 2d [0-15] 39 [0-15] 33 [0-15] 32}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -693,6 +719,7 @@ rule TrojanProxy_Win32_Bunitu_HA_2147749791_0
         $x_1_1 = {b8 5f 33 00 00 85 c0 74 ?? 8b 4d ?? 3b 0d ?? ?? ?? ?? 72 ?? eb ?? 8b 75 ?? 03 75 ?? 68 50 11 00 00 ff 15 ?? ?? ?? ?? 03 f0 68 50 11 00 00 ff 15 ?? ?? ?? ?? 03 f0 8b 55 ?? 03 55 ?? 8b 45 ?? 8b 4d ?? 8a 0c 31 88 0c 10 8b 55 ?? 83 c2 01 89 55 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -714,6 +741,7 @@ rule TrojanProxy_Win32_Bunitu_HB_2147749792_0
         $x_1_1 = {83 c4 04 a1 ?? ?? ?? ?? a3 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 8d 44 0a 03 2b 85 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 83 e9 03 89 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 2b 15 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? 83 3d ?? ?? ?? ?? 00 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

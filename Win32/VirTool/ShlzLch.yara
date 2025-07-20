@@ -20,6 +20,7 @@ rule VirTool_Win32_ShlzLch_A_2147779450_0
         $x_1_5 = {8b 45 f8 89 45 fc 8b 4d f8 81 c1 00 00 01 00 51 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 83 c4 08 ff ?? ?? 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Mycop_NM_2147893285_0
         $x_1_2 = "jwwfaihqdu.docx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

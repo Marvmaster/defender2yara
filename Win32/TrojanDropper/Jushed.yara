@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Jushed_AS_2147751933_0
         $x_1_4 = "VmfantunmoelIriGoeotA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

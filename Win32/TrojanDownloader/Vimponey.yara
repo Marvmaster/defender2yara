@@ -46,6 +46,7 @@ rule TrojanDownloader_Win32_Vimponey_A_2147623442_0
         $x_1_32 = ".vmp1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_4_*) and 7 of ($x_3_*) and 7 of ($x_2_*) and 10 of ($x_1_*))) or
             ((1 of ($x_5_*) and 5 of ($x_4_*) and 7 of ($x_3_*) and 8 of ($x_2_*) and 8 of ($x_1_*))) or

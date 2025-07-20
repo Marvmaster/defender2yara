@@ -18,6 +18,7 @@ rule Trojan_Win32_Rozemyu_A_2147686331_0
         $x_1_4 = "Register.php?Status=New&UserID=%s&Location=%s&OSVersion=%s&Platform=%s&version=v" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Rozemyu_B_2147686332_0
         $x_1_5 = {58 45 4e 43 00 00 00 00 58 45 4e 52 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

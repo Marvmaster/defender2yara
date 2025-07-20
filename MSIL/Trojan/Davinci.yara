@@ -16,6 +16,7 @@ rule Trojan_MSIL_Davinci_RPZ_2147900450_0
         $x_1_1 = {09 91 13 0c 08 11 06 1f 16 5d 91 13 0d 11 0c 11 0d 61 13 0e 07 11 09 11 0e 11 0b 59 11 07 5d d2 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_Davinci_MBZS_2147905689_0
         $x_1_1 = {08 8e 69 5d 91 13 [0-12] 61 11 [0-4] 59 20 00 01 00 00 58 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

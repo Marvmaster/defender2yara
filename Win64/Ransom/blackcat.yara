@@ -22,6 +22,7 @@ rule Ransom_Win64_blackcat_DA_2147916894_0
         $x_1_7 = "Killing processes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             (all of ($x*))

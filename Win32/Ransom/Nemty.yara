@@ -24,6 +24,7 @@ rule Ransom_Win32_Nemty_A_2147742141_0
         $x_1_9 = "Can't execute file!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Ransom_Win32_Nemty_A_2147742141_1
         $x_1_3 = "https://pbs.twimg.com/media/Dn4vwaRW0AY-tUu.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Ransom_Win32_Nemty_C_2147742387_0
         $x_2_1 = {c7 44 24 10 ?? ?? ?? ?? b8 ?? ?? ?? ?? 81 44 24 10 ?? ?? ?? ?? 81 44 24 10 ?? ?? ?? ?? 81 e3 72 bf b9 21 81 6c 24 10 ?? ?? ?? ?? 81 44 24 10 ?? ?? ?? ?? b8 00 b4 f7 0d 81 44 24 10 ?? ?? ?? ?? c1 e8 07 81 44 24 10 ?? ?? ?? ?? c1 e0 18 25 ?? ?? ?? ?? 83 44 24 10 02 8b 44 24 10 0f af c6 8d 0c 85 ?? ?? ?? ?? 03 cd e8 ?? ?? ?? ?? 46 3b f7 72 8e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Ransom_Win32_Nemty_PA_2147742602_0
         $x_1_4 = "fuckav" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Ransom_Win32_Nemty_D_2147742810_0
         $x_2_5 = "wmic shadowcopy delete" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Ransom_Win32_Nemty_PF_2147743822_0
         $x_1_2 = {8a 55 fc 88 55 ff 0f b6 45 ff c1 e0 04 88 45 ff 0f b6 4d ff 81 e1 c0 00 00 00 88 4d ff 0f b6 55 fd 0f b6 45 ff 0b d0 88 55 fd 81 3d ?? ?? ?? ?? 7b 0e 00 00 75 0a 00 c7 05 ?? ?? ?? ?? 60 5a 20 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Ransom_Win32_Nemty_PG_2147743942_0
         $x_1_2 = {33 c0 8a 81 ?? ?? ?? ?? f7 d0 48 8b d0 83 e0 01 d1 ea 83 e2 7f c1 e0 07 0b d0 f7 d2 33 d1 8d 44 0a 1f f7 d0 35 c0 00 00 00 8d 54 48 01 f7 d2 8d 44 0a 30 88 81 e0 20 46 00 41 81 f9 ?? ?? 00 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -182,6 +189,7 @@ rule Ransom_Win32_Nemty_PH_2147749183_0
         $x_1_3 = {8b d7 c1 ea 05 03 54 24 70 33 d0 33 d6 29 54 24 18 8b 44 24 74 29 44 24 10 83 6c 24 68 01 0f 85 74 fb ff ff 81 3d ?? ?? ?? ?? ?? ?? 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +214,7 @@ rule Ransom_Win32_Nemty_PI_2147750980_0
         $x_1_4 = "-DECRYPT.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -230,6 +239,7 @@ rule Ransom_Win32_Nemty_PI_2147752802_0
         $x_1_4 = "-DECRYPT.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -255,6 +265,7 @@ rule Ransom_Win32_Nemty_PJ_2147752843_0
         $x_1_5 = "PathFindExtensionW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -277,6 +288,7 @@ rule Ransom_Win32_Nemty_MMV_2147752847_0
         $x_1_2 = "6NEPHILIM-DECRYPT.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -303,6 +315,7 @@ rule Ransom_Win32_Nemty_AA_2147754559_0
         $x_2_6 = "%username%" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_2_*))) or
             (all of ($x*))
@@ -333,6 +346,7 @@ rule Ransom_Win32_Nemty_AR_2147756365_0
         $x_1_7 = "pohui" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

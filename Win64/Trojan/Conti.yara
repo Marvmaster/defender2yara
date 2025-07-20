@@ -16,6 +16,7 @@ rule Trojan_Win64_Conti_RDA_2147851687_0
         $x_2_1 = {0f b6 85 e8 00 00 00 8d 44 00 3f 99 b9 7f 00 00 00 f7 f9 8b c2 48 8d a5 c8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_Win32_ExciteRAN_SL_2147771865_0
         $x_1_5 = "via this contact email \"excite@protonmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

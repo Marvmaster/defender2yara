@@ -17,6 +17,7 @@ rule Trojan_Win32_Zudochaka_RPX_2147843607_0
         $x_1_2 = {2b d8 8b 45 d8 31 18 83 45 ec 04 83 45 d8 04 8b 45 ec 3b 45 d4 72 b1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

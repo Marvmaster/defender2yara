@@ -17,6 +17,7 @@ rule Trojan_Win64_NighthawkRAT_PB_2147836876_0
         $x_1_2 = {48 03 c8 48 8b c1 48 89 84 24 [0-4] 48 8b 44 24 ?? 8b 40 ?? 48 8b 4c 24 ?? 48 03 c8 48 8b c1 48 89 44 24 ?? 48 8b 44 24 ?? 8b 40 ?? 48 8b 4c 24 ?? 48 03 c8 48 8b c1 48 89 84 24 [0-4] c7 44 24 [0-6] eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_NighthawkRAT_PA_2147840757_0
         $x_1_2 = {66 03 d2 66 33 d1 66 c1 e2 02 66 33 d1 66 23 d0 0f b7 c1 0f 5f d2 99 91 3c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Xorpix_C_2147595046_0
         $x_1_5 = {90 61 44 6c 6c 4e 61 6d 65 00 60 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

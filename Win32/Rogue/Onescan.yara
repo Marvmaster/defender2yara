@@ -17,6 +17,7 @@ rule Rogue_Win32_Onescan_156511_0
         $x_1_3 = "&strPC=%s&strID=%s&strSite=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Rogue_Win32_Onescan_156511_1
         $x_1_3 = "firstvaccine.co.kr]\\release\\froductline.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Rogue_Win32_Onescan_156511_2
         $x_1_5 = "kornet.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Rogue_Win32_Onescan_156511_3
         $x_1_4 = "http://%s.%s/APP/download.php?m=%s&d=%s&a=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Rogue_Win32_Onescan_156511_4
         $x_1_5 = "[svn]\\[pcprivacy]\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -134,6 +139,7 @@ rule Rogue_Win32_Onescan_156511_5
         $x_1_2 = "vaccine_Blocker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +161,7 @@ rule Rogue_Win32_Onescan_156511_6
         $x_1_2 = {2f 65 74 63 2f 68 61 72 7a 61 72 64 2e 68 74 6d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -180,6 +187,7 @@ rule Rogue_Win32_Onescan_156511_7
         $x_1_6 = "\\[UserScan-" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -209,6 +217,7 @@ rule Rogue_Win32_Onescan_156511_8
         $x_1_7 = "/bill_mobil/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -231,6 +240,7 @@ rule Rogue_Win32_Onescan_156511_9
         $x_5_3 = {49 53 4b 49 4d 20 46 72 61 6d 65 77 6f 72 6b 73 20 4c 6f 67 57 6e 64 32 00 00 00 00 b7 ce b1 d7 20 32 2e 30}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -256,6 +266,7 @@ rule Rogue_Win32_Onescan_156511_10
         $x_1_3 = {5f 6e 69 63 00 [0-3] 25 59 2d 25 6d 2d 25 64 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -280,6 +291,7 @@ rule Rogue_Win32_Onescan_156511_11
         $x_1_5 = {63 6f 64 65 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -306,6 +318,7 @@ rule Rogue_Win32_Onescan_156511_12
         $x_1_4 = ".kr/value.php?strMode=delete&strPC=%s&strID=%s&strSite=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -330,6 +343,7 @@ rule Rogue_Win32_Onescan_156511_13
         $x_1_5 = {6d 65 64 69 61 5f 63 6b 2e 70 68 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -352,6 +366,7 @@ rule Rogue_Win32_Onescan_156511_14
         $x_5_3 = "/reset.php?strPC=%s&strPNO=%s&strSNO=%s" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -380,6 +395,7 @@ rule Rogue_Win32_Onescan_156511_15
         $x_1_5 = "mbk.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -402,6 +418,7 @@ rule Rogue_Win32_Onescan_156511_16
         $x_1_3 = {75 70 64 61 74 65 00 00 75 6e 69 6e 73 74 5f 18 00 2e 65 78 65 00 [0-3] 76 65 72 31 00 [0-48] 00 76 65 72 25 64 00 00 00 25 73 25 73 00 00 00 00 00 2e 64 6c 6c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -427,6 +444,7 @@ rule Rogue_Win32_Onescan_156511_17
         $x_1_6 = {6f 6e 65 73 74 6f 70 76 61 63 63 69 6e 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -454,6 +472,7 @@ rule Rogue_Win32_Onescan_156511_18
         $x_1_5 = {2e 63 6f 2e 6b 72 2f 76 65 72 73 69 6f 6e 2f 62 69 6e 61 2f 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -480,6 +499,7 @@ rule Rogue_Win32_Onescan_156511_19
         $x_1_7 = "vaccine_install" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -505,6 +525,7 @@ rule Rogue_Win32_Onescan_156511_20
         $x_1_6 = {77 69 6e 64 6f 77 67 75 61 72 64 75 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -531,6 +552,7 @@ rule Rogue_Win32_Onescan_156511_21
         $x_1_7 = ".kr/APP/pf_ck.php?v1=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -556,6 +578,7 @@ rule Rogue_Win32_Onescan_156511_22
         $x_1_6 = {2e 63 6f 2e 6b 72 2f 61 64 6d 69 6e 2f 74 6f 70 2f 70 6f 70 75 70 [0-1] 2f 70 6f 70 5f 6c 61 79 65 72 [0-1] 2e 68 74 6d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -582,6 +605,7 @@ rule Rogue_Win32_Onescan_156511_23
         $x_1_7 = "software\\onescan" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -610,6 +634,7 @@ rule Rogue_Win32_Onescan_156511_24
         $x_1_5 = "insert into blocksite (url) values('%s');" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -634,6 +659,7 @@ rule Rogue_Win32_Onescan_156511_25
         $x_1_5 = {76 61 63 63 69 6e 65 6f 6e 2e 63 6f 2e 6b 72 2f 76 65 72 73 69 6f 6e 2f 76 65 72 73 69 6f 6e 00 00 00 76 61 63 63 69 6e 65 6f 6e 5f 61 67 65 6e 63 79 00 00 00 00 5c 76 61 63 63 69 6e 65 6f 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -664,6 +690,7 @@ rule Rogue_Win32_Onescan_156511_26
         $x_1_8 = "GetUrlinfo()  ERROR !!  Why? %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -690,6 +717,7 @@ rule Rogue_Win32_Onescan_156511_27
         $x_1_7 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\boan" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -718,6 +746,7 @@ rule Rogue_Win32_Onescan_156511_28
         $x_2_9 = "http://%s/P/%s" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
             ((5 of ($x_2_*))) or
@@ -753,6 +782,7 @@ rule Rogue_Win32_Onescan_156511_29
         $x_1_12 = {62 6f 61 6e [0-11] 5f 61 67 65 6e 63 79 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -787,6 +817,7 @@ rule Rogue_Win32_Onescan_156511_30
         $x_1_15 = {00 6d 75 74 65 78 5f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -824,6 +855,7 @@ rule Rogue_Win32_Onescan_156511_31
         $x_1_14 = {76 70 72 6f 74 65 63 74 6f 72 5f 6e 69 63 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((12 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
@@ -858,6 +890,7 @@ rule Rogue_Win32_Onescan_156511_32
         $x_1_11 = "/report.php?strSubject=%s&strEmail=%s&strComm=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -891,6 +924,7 @@ rule Rogue_Win32_Onescan_156511_33
         $x_1_14 = {00 6d 75 74 65 78 5f 69 6e 73 74 61 6c 6c 65 72 5f 18 00 00 18 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -924,6 +958,7 @@ rule Rogue_Win32_Onescan_156511_34
         $x_1_14 = {73 c6 44 24 ?? 76 c6 44 24 ?? 61 c6 44 24 ?? 74 c6 44 24 ?? 69 c6 44 24 ?? 6f c6 44 24 ?? 6e c6 44 24 ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -972,6 +1007,7 @@ rule Rogue_Win32_Onescan_156511_35
         $x_2_20 = {b0 74 c6 44 24 ?? 2f 88 44 24 ?? 88 44 24 ?? 88 44 24 ?? c6 44 24 ?? 73 c6 44 24 ?? 61 c6 44 24 ?? 72 c6 44 24 ?? 75 c6 44 24 ?? 70}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

@@ -19,6 +19,7 @@ rule MonitoringTool_Win32_GuardianEye_170235_0
         $x_8_5 = "TGEYEFileName=" wide //weight: 8
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

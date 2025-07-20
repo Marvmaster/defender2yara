@@ -19,6 +19,7 @@ rule Trojan_Win32_Ontonphu_A_2147651925_0
         $x_1_5 = {50 8b 13 8b 0f b8 02 00 00 80 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Ontonphu_B_2147652639_0
         $x_10_5 = {59 5a 46 ff ff ff ff ?? ?? ?? ?? 73 68 6f 77 74 68 72 65 61 64 2e 70 68 70 3f 70 3d 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -74,6 +76,7 @@ rule Trojan_Win32_Ontonphu_C_2147654227_0
         $x_2_9 = {6a 85 9c 88 56 7b 9e a1 99 94 47 62 6a 6a 87 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or
@@ -101,6 +104,7 @@ rule Trojan_Win32_Ontonphu_D_2147660408_0
         $x_1_4 = {2f 63 6d 64 2e 70 68 70 [0-128] 5c 41 75 74 68 6f 72 69 7a 65 64 41 70 70 6c 69 63 61 74 69 6f 6e 73 5c 4c 69 73 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

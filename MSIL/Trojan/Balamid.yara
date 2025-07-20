@@ -17,6 +17,7 @@ rule Trojan_MSIL_Balamid_A_2147685079_0
         $x_1_3 = "\"startup_urls\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Balamid_A_2147685079_1
         $x_1_3 = "\"startup_urls\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_Balamid_A_2147685079_2
         $x_1_3 = "\"urls_to_restore_on_startup\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_MSIL_Balamid_A_2147685079_3
         $x_1_5 = {77 00 77 00 77 00 2e 00 77 00 69 00 6e 00 74 00 61 00 73 00 6b 00 01 00 00 01 00 00 01 00 00 2e 00 63 00 6f 00 6d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

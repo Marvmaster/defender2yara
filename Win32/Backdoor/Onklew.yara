@@ -18,6 +18,7 @@ rule Backdoor_Win32_Onklew_A_2147697217_0
         $x_1_4 = {47 53 4e 61 6d 65 3d [0-12] 53 79 73 3d [0-12] 50 63 4e 61 6d 65 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

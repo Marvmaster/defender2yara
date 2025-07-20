@@ -29,6 +29,7 @@ rule Backdoor_MSIL_Calierot_A_2147685540_0
         $x_1_15 = {00 6b 69 6c 6c 6d 70 72 6f 63 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (14 of ($x*))
 }
 

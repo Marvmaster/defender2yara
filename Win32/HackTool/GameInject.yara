@@ -22,6 +22,7 @@ rule HackTool_Win32_GameInject_A_2147754817_0
         $x_1_7 = "Desktop\\Inject-Source" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

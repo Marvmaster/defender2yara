@@ -20,6 +20,7 @@ rule Worm_Win32_Lemoor_A_2147602792_0
         $x_1_5 = {45 70 68 65 6d 65 72 61 6c [0-16] 54 72 65 65 48 75 67 67 65 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

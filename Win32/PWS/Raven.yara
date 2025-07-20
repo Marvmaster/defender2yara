@@ -19,6 +19,7 @@ rule PWS_Win32_Raven_A_2147650775_0
         $x_2_4 = "_event_upd_afil" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

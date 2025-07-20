@@ -19,6 +19,7 @@ rule MonitoringTool_Win32_AimSniff_156012_0
         $x_1_5 = {00 00 5c 00 65 00 6d 00 78 00 66 00 69 00 6c 00 65 00 30 00 30 00 34 00 2e 00 64 00 61 00 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

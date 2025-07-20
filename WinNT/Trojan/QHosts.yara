@@ -17,6 +17,7 @@ rule Trojan_WinNT_QHosts_B_2147654491_0
         $x_1_3 = {68 6f 73 74 37 00 [0-8] 68 73 74 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

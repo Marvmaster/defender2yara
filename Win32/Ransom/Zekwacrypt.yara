@@ -19,6 +19,7 @@ rule Ransom_Win32_Zekwacrypt_A_2147711933_0
         $x_1_5 = "EXCEPTION!!! Cannot encrypt file" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

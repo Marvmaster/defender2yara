@@ -21,6 +21,7 @@ rule Trojan_Win32_Rigtoy_17744_0
         $x_1_7 = "zhongsou.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 3 of ($x_1_*))) or
             ((3 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -50,6 +51,7 @@ rule Trojan_Win32_Rigtoy_17744_1
         $x_2_6 = "Module_Raw" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_Win32_Rigtoy_17744_2
         $x_2_4 = "SGMIGEX" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

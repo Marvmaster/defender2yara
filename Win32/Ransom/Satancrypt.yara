@@ -20,6 +20,7 @@ rule Ransom_Win32_Satancrypt_A_2147726650_0
         $x_2_6 = "1BEDcx8n4PdydUNC4gcwLSbUCVksJSMuo8" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Entebore_A_2147655791_0
         $x_1_3 = {07 00 00 00 67 6f 6f 67 6c 65 2e 00 [0-8] 06 00 00 00 79 61 68 6f 6f 2e 00 [0-8] 05 00 00 00 62 69 6e 67 2e 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

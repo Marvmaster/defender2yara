@@ -19,6 +19,7 @@ rule Trojan_Win64_Hax_A_2147852695_0
         $x_2_4 = "%ws was assigned" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Rogue_Win32_FakeScanti_138020_0
         $x_1_3 = "action.php?p=%d&id=%s&system=%s&hwid=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Rogue_Win32_FakeScanti_138020_1
         $x_1_3 = {53 65 72 69 61 6c 20 6b 65 79 20 61 63 63 65 70 74 65 64 2e 0d 0a 59 6f 75 20 6d 75 73 74 20 72 65 73 74 61 72 74 20 61 70 70 6c 69 63 61 74 69 6f 6e 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Rogue_Win32_FakeScanti_138020_2
         $x_1_5 = "6988405C-71C3-427c-975A-0398706E79EE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Rogue_Win32_FakeScanti_138020_3
         $x_1_6 = "Warning: Infection is Detected" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Rogue_Win32_FakeScanti_138020_4
         $x_1_7 = "In order to prevent permanent loss of your information and credit card data theft please activate your antivirus software." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Rogue_Win32_FakeScanti_138020_5
         $x_3_4 = {81 38 33 c0 c2 2c 0f 85}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -164,6 +170,7 @@ rule Rogue_Win32_FakeScanti_138020_6
         $x_1_4 = "UNPROTECTED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -184,6 +191,7 @@ rule Rogue_Win32_FakeScanti_138020_7
         $x_1_1 = {12 00 57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 20 00 50 00 6f 00 6c 00 69 00 63 00 65 00 20 00 50 00 72 00 6f 00 12 00 41 00 6e 00 74 00 69 00 76 00 69 00 72 00 75 00 73 00 20 00 32 00 30 00 30 00 39 00 20 00 50 00 72 00 6f 00 ?? 00 68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +215,7 @@ rule Rogue_Win32_FakeScanti_138020_8
         $x_1_4 = "UNPROTECTED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -237,6 +246,7 @@ rule Rogue_Win32_FakeScanti_138020_9
         $x_1_8 = "orP eciloP swodniW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
@@ -264,6 +274,7 @@ rule Rogue_Win32_FakeScanti_138020_10
         $x_1_3 = {68 88 13 00 00 6a 01 6a 00 6a 00 6a 02 e8 ?? ?? ?? ?? 83 c4 14 85 c0 74 d7 6a 00 6a 00 6a 01 6a 00 ff 15 ?? ?? 40 00 85 c0 a3 ?? ?? ?? ?? 74 c0 68 e8 03 00 00 6a 02 6a 00 6a 00 6a 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +297,7 @@ rule Rogue_Win32_FakeScanti_138020_11
         $x_1_3 = {43 72 65 61 74 65 52 65 6d 6f 74 65 54 68 72 65 61 64 00 00 6b 65 72 6e 65 6c 33 32 2e 64 6c 6c 00 00 00 00 69 65 78 70 6c 6f 72 65 2e 65 78 65 00 00 00 00 65 78 70 6c 6f 72 65 72 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -312,6 +324,7 @@ rule Rogue_Win32_FakeScanti_138020_12
         $x_1_4 = "SPYWARE FROM YOUR COMPUTER RIGHT NOW!</p></td>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -336,6 +349,7 @@ rule Rogue_Win32_FakeScanti_138020_13
         $x_1_5 = {2f 63 6f 6e 74 65 78 74 00 [0-4] 2f 73 63 68 65 64 75 6c 65 64 00 [0-4] 2f 6d 69 6e 00 [0-4] 2f 75 6e 69 6e 73 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -361,6 +375,7 @@ rule Rogue_Win32_FakeScanti_138020_14
         $x_3_6 = {53 56 6a 10 33 db 6a 01 53 89 5d e0 c7 45 e4 50 00 72 00 c7 45 e8 69 00 76 00 c7 45 ec 61 00 74 00 c7 45 f0 65 00 42 00 c7 45 f4 75 00 69 00 c7 45 f8 6c 00 64 00 ff 15 ?? ?? ?? 00 8b f0 3b f3}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_2_*))) or
             (all of ($x*))
@@ -388,6 +403,7 @@ rule Rogue_Win32_FakeScanti_138020_15
         $x_1_5 = "Your computer continues to be infected with harmful viruses." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -417,6 +433,7 @@ rule Rogue_Win32_FakeScanti_138020_16
         $x_1_10 = "\\em_%d.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -447,6 +464,7 @@ rule Rogue_Win32_FakeScanti_138020_17
         $x_1_6 = "daily.cvd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -474,6 +492,7 @@ rule Rogue_Win32_FakeScanti_138020_18
         $x_1_5 = {63 00 72 00 69 00 74 00 69 00 63 00 61 00 6c 00 20 00 73 00 79 00 73 00 74 00 65 00 6d 00 20 00 66 00 69 00 6c 00 65 00 73 00 20 00 6f 00 6e 00 20 00 79 00 6f 00 75 00 72 00 20 00 63 00 6f 00 6d 00 70 00 75 00 74 00 65 00 72 00 20 00 74 00 68 00 61 00 74 00 20 00 77 00 65 00 72 00 65 00 20 00 6d 00 6f 00 64 00 69 00 66 00 69 00 65 00 64 00 20 00 62 00 79 00 20 00 6d 00 61 00 6c 00 69 00 63 00 69 00 6f 00 75 00 73 00 20 00 70 00 72 00 6f 00 67 00 72 00 61 00 6d 00 2e 00 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -516,6 +535,7 @@ rule Rogue_Win32_FakeScanti_138020_19
         $x_1_23 = "//core%s.%s/stget" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -565,6 +585,7 @@ rule Rogue_Win32_FakeScanti_138020_20
         $x_1_20 = {5f 53 48 41 52 4b 5f 44 49 45 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -613,6 +634,7 @@ rule Rogue_Win32_FakeScanti_138020_21
         $x_1_24 = "OpenCloud Security" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -664,6 +686,7 @@ rule Rogue_Win32_FakeScanti_138020_22
         $x_10_27 = "IMG:%d Net-Worm-Spy.Win32" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -758,6 +781,7 @@ rule Rogue_Win32_FakeScanti_138020_23
         $x_2_68 = "Open Cloud AV" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

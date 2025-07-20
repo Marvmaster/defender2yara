@@ -25,6 +25,7 @@ rule DDoS_Linux_Mirai_PA_2147740683_0
         $n_10_10 = "com.bitdefender" ascii //weight: -10
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -57,6 +58,7 @@ rule DDoS_Linux_Mirai_YB_2147741875_0
         $x_1_6 = "POST /wanipcn.xml" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -82,6 +84,7 @@ rule DDoS_Linux_Mirai_YC_2147742140_0
         $x_1_2 = "[antihoney] failed stage 1 honeypot detected!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -109,6 +112,7 @@ rule DDoS_Linux_Mirai_PB_2147745248_0
         $x_1_7 = "tearing down connection to cnc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -134,6 +138,7 @@ rule DDoS_Linux_Mirai_J_2147814697_0
         $x_1_5 = "Usage: $0 {start|stop|restart}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -163,6 +168,7 @@ rule DDoS_Linux_Mirai_F_2147818700_0
         $x_1_6 = "23.254.215.102" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -191,6 +197,7 @@ rule DDoS_Linux_Mirai_KA_2147850673_0
         $x_1_5 = "attack_free" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

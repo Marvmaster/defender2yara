@@ -17,6 +17,7 @@ rule Trojan_Win32_Seedna_A_2147685292_0
         $x_2_3 = {8d 04 cd ff ff ff ff 99 6a 18 5b f7 fb 8d 04 85 04 00 00 00 39 45 14 0f 8c 8e 02 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Seedna_A_2147685292_1
         $x_2_4 = {66 39 1a 74 14 8b ca 8a 09 88 8c 05}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

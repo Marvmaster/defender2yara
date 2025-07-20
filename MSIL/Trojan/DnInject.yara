@@ -19,6 +19,7 @@ rule Trojan_MSIL_DnInject_A_2147767355_0
         $x_1_4 = "B u t a" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_DnInject_B_2147767454_0
         $x_1_3 = {00 6c 6f 61 64 6d 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

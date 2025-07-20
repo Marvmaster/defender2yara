@@ -20,6 +20,7 @@ rule HackTool_Win32_Wpakill_B_2147634461_0
         $x_1_6 = "sc create antiwlmssvc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule HackTool_Win32_Wpakill_C_2147634462_0
         $x_1_3 = "<pid>BD6B319C-8778-4BB7-A156-ECB70E621174</pid>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule PWS_Win32_Sacanph_A_2147645927_0
         $x_1_6 = {52 65 67 69 73 74 72 79 2d 4b 65 79 20 6e 6f 74 20 66 6f 75 6e 64 21 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule PWS_Win32_Sacanph_B_2147648874_0
         $x_1_6 = "\\Mozilla\\Firefox\\Profiles\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

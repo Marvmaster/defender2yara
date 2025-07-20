@@ -22,6 +22,7 @@ rule Trojan_Win32_Punad_C_2147633069_0
         $x_1_8 = "search?|/search;|/results." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

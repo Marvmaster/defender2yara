@@ -17,6 +17,7 @@ rule Trojan_Win32_Tricbot_AM_2147751794_0
         $x_1_2 = {33 d2 8d 47 01 b9 2e 1c 00 00 f7 f1 8b fa 33 d2 8a 8c 3d c8 e3 ff ff 0f b6 c1 03 c6 be 2e 1c 00 00 f7 f6 8b f2 8a 84 35 c8 e3 ff ff 88 84 3d c8 e3 ff ff 88 8c 35 c8 e3 ff ff 0f b6 84 3d c8 e3 ff ff 0f b6 c9 03 c1 b9 2e 1c 00 00 99 f7 f9 8b 45 fc 8a 8c 15 c8 e3 ff ff 30 08 40 89 45 fc 4b 75 9e 8b 45 08 5f 5e 5b eb 02 33 c0 8b e5 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

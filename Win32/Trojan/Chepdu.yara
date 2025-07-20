@@ -19,6 +19,7 @@ rule Trojan_Win32_Chepdu_A_2147609764_0
         $x_1_5 = {44 50 45 2e 44 4c 4c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_Win32_Chepdu_B_2147609921_0
         $x_2_13 = {85 c0 74 1d 68 ?? ?? ?? ?? 8d 85 ?? ?? ff ff 50 ff 15 ?? ?? ?? ?? 85 c0 74 07 33 c0 e9 ?? ?? 00 00 68}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -83,6 +85,7 @@ rule Trojan_Win32_Chepdu_C_2147610975_0
         $x_1_7 = "%suserinit|%s|%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -113,6 +116,7 @@ rule Trojan_Win32_Chepdu_D_2147616269_0
         $x_1_7 = {71 3d 00 73 65 61 72 63 68 3f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -140,6 +144,7 @@ rule Trojan_Win32_Chepdu_G_2147618527_0
         $x_1_4 = {68 74 74 70 3a 00 78 6d 6c 77 69 6e 64 61 74 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +169,7 @@ rule Trojan_Win32_Chepdu_H_2147619212_0
         $x_1_5 = "xxx-gate.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -188,6 +194,7 @@ rule Trojan_Win32_Chepdu_P_2147625860_0
         $x_1_5 = {81 38 63 73 6d e0 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -213,6 +220,7 @@ rule Trojan_Win32_Chepdu_V_2147648816_0
         $x_1_3 = {33 45 04 89 45 fc 83 7d 08 00 74 45 68 00 01 00 00 8d 85 f8 fe ff ff 50 6a 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +242,7 @@ rule Trojan_Win32_Chepdu_W_2147648957_0
         $x_1_2 = {be 80 d1 f0 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -254,6 +263,7 @@ rule Trojan_Win32_Chepdu_X_2147651525_0
         $x_1_1 = {35 82 00 00 76 4e 83 fe 00 77 ?? 5e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +286,7 @@ rule Trojan_Win32_Chepdu_Y_2147655714_0
         $x_1_3 = {33 45 04 89 45 fc 83 7d 08 00 74 45 68 00 01 00 00 8d 85 f8 fe ff ff 50 6a 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

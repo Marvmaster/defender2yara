@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Witkinat_A_2147630731_0
         $x_1_5 = {eb 04 80 33 ?? 43 81 fb ?? ?? ?? ?? 75 f4 6a 00 68 ?? ?? ?? ?? 6a 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

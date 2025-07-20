@@ -67,6 +67,7 @@ rule Trojan_AndroidOS_SmsSpy_D_2147745618_0
         $x_1_5 = "aknserver_ptl.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -116,6 +117,7 @@ rule Trojan_AndroidOS_SmsSpy_C_2147745619_0
         $x_1_3 = "/api_msg.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -164,6 +166,7 @@ rule Trojan_AndroidOS_SmsSpy_E_2147752184_0
         $x_1_4 = "&PhoneInfo=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

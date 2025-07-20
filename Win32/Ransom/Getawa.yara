@@ -20,6 +20,7 @@ rule Ransom_Win32_Getawa_A_2147773480_0
         $x_1_5 = "copy wr-3.-71.zip wr-3.-71.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win32_Getawa_B_2147773481_0
         $x_1_4 = "%temp%\\rarcek.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

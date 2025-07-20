@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Tyqui_A_2147628491_0
         $x_1_4 = "systemdrive" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Tyqui_B_2147630300_0
         $x_3_6 = {c7 45 94 20 1b 40 00 c7 45 8c 08 00 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

@@ -19,6 +19,7 @@ rule Ransom_Win64_WiperCrypt_PA_2147935810_0
         $x_1_4 = "YOUR FILES HAVE BEEN ENCRYPTED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

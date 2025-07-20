@@ -23,6 +23,7 @@ rule Trojan_Win32_Corebot_A_2147707406_0
         $x_1_9 = "powershell.exe -NonInteractive -NoProfile -NoLogo -ExecutionPolicy Unrestricted -File \"%s\" > \"%s\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_Corebot_C_2147726411_0
         $x_1_6 = "core.installed_file" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

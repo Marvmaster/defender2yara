@@ -17,6 +17,7 @@ rule Trojan_MSIL_MagicWeb_A_2147830064_0
         $x_1_2 = {28 62 00 00 0a 6f 63 00 00 0a 26 11 04 17 58 13 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Trojan_Win32_Tracur_Q_2147655918_0
         $x_1_9 = "Application Data\\Mozilla\\Firefox\\Profiles\\*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Tracur_AE_2147655920_0
         $x_1_2 = {8a 44 2f 01 83 c5 01 2c 67 83 c1 01 3c 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Tracur_J_2147655921_0
         $x_1_4 = "%s?ping=1&%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -95,6 +98,7 @@ rule Trojan_Win32_Tracur_X_2147655922_0
         $x_1_5 = "\\netsh.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -119,6 +123,7 @@ rule Trojan_Win32_Tracur_A_2147655923_0
         $x_1_1 = {8a 1c 0e 32 9a ?? ?? 40 00 83 c2 01 3b d5 88 5c 0e ff 75 02 33 d2 83 c1 01 3b cf 7e e3 5b 5f 88 44 31 ff 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule Trojan_Win32_Tracur_A_2147655923_1
         $x_2_7 = {51 75 69 77 38 32 68 64 44 65 67 5b 75 61 56 31 6e 32 78 75 53 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -171,6 +177,7 @@ rule Trojan_Win32_Tracur_Y_2147655926_0
         $x_1_3 = {89 5d f0 c7 45 e4 04 00 00 00 89 5d e8 ff 15 ?? ?? ?? ?? 85 c0 74 19 81 7d f0 c8 00 00 00 74 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -194,6 +201,7 @@ rule Trojan_Win32_Tracur_B_2147655928_0
         $x_1_4 = {39 54 24 10 8b f8 7e 1d 8b 44 24 0c 8d 0c 06 8a 82 ?? ?? ?? 10 30 01 42}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -216,6 +224,7 @@ rule Trojan_Win32_Tracur_AC_2147655930_0
         $x_1_3 = {8b 79 08 8a 14 07 88 14 3e 83 c0 01 83 c6 01 3b 41 0c 72 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -239,6 +248,7 @@ rule Trojan_Win32_Tracur_AG_2147655939_0
         $x_1_4 = {66 3d 8b ff 74 14 31 c0 01 f8 05 00 02 00 00 3d 01 00 00 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -262,6 +272,7 @@ rule Trojan_Win32_Tracur_AK_2147655940_0
         $x_1_4 = "Shm_%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -289,6 +300,7 @@ rule Trojan_Win32_Tracur_AD_2147655941_0
         $x_1_4 = "Project1.Module1.CreateBitmapPicture" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -314,6 +326,7 @@ rule Trojan_Win32_Tracur_AA_2147655942_0
         $x_1_6 = "/login/ /tweet/ action=embed-flash" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -342,6 +355,7 @@ rule Trojan_Win32_Tracur_C_2147655943_0
         $x_1_3 = "C21234D3-5CC2-4bdd-9BE7-82A34EF3FAE0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -362,6 +376,7 @@ rule Trojan_Win32_Tracur_P_2147655944_0
         $x_1_1 = {ff b0 9c 00 00 00 [0-160] 8f 45 dc [0-26] 81 75 dc 78 42 76 39}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -384,6 +399,7 @@ rule Trojan_Win32_Tracur_AH_2147655945_0
         $x_1_3 = {80 30 5a 40 e2 fa 5b 8b 45 08 8b 08 81 f9 14 e2 a4 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -406,6 +422,7 @@ rule Trojan_Win32_Tracur_AF_2147655946_0
         $x_1_3 = {8b 45 0c ff 10 83 c4 02 00 54}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -431,6 +448,7 @@ rule Trojan_Win32_Tracur_AJ_2147655947_0
         $x_1_6 = {5c 4d 53 4c 69 63 65 6e 73 69 6e 67 5c 48 61 72 64 77 61 72 65 49 44 00 00 00 43 6c 69 65 6e 74 48 57 49 44 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -459,6 +477,7 @@ rule Trojan_Win32_Tracur_AL_2147655948_0
         $x_1_5 = "w??w???w??.???v????a????m????p???i???r???e???m???o???l???i???.??c???o??m" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -484,6 +503,7 @@ rule Trojan_Win32_Tracur_AM_2147656184_0
         $x_1_5 = "!Tibia Keylogger\\reckey_RES\\IE\\BHO" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -507,6 +527,7 @@ rule Trojan_Win32_Tracur_AN_2147656576_0
         $x_2_4 = {8b 72 28 6a 18 59 31 ff 31 c0 ac 3c 61 7c 02 2c 20 c1 cf 0d 01 c7 49}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -534,6 +555,7 @@ rule Trojan_Win32_Tracur_AP_2147656856_0
         $x_5_5 = {81 c1 00 10 00 00 c7 01 90 90 90 90 c7 41 04 90 90 90 90 c7 41 08 90 90 90 90 81 c2 39 8b 00 00 c6 02 e9 51 29 d1 89 4a 01}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((3 of ($x_5_*))) or
@@ -564,6 +586,7 @@ rule Trojan_Win32_Tracur_AQ_2147657410_0
         $x_1_7 = "porn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -593,6 +616,7 @@ rule Trojan_Win32_Tracur_AS_2147657635_0
         $x_1_7 = {0f b6 44 18 ff 8b d6 81 e2 ff 00 00 00 33 c2 83 f8 07 7d 0f 8b 17 b9 01 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -617,6 +641,7 @@ rule Trojan_Win32_Tracur_AU_2147658191_0
         $x_1_5 = {0a 00 00 00 2f 73 65 61 72 63 68 3f 71 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -761,6 +786,7 @@ rule Trojan_Win32_Tracur_AU_2147658191_1
         $x_1_125 = {00 00 00 6d 71 72 68 69 67 67 6d 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -792,6 +818,7 @@ rule Trojan_Win32_Tracur_AV_2147659134_0
         $x_1_12 = {00 71 6b 77 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -820,6 +847,7 @@ rule Trojan_Win32_Tracur_AY_2147661847_0
         $x_1_4 = "STEP: ERROR WHILE GETTING CLICKS INFO" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -841,6 +869,7 @@ rule Trojan_Win32_Tracur_AZ_2147662159_0
         $x_1_2 = {68 f4 01 00 00 e8 ?? ?? ?? ?? 6a 00 57 56 e8 ?? ?? ?? ?? 68 f4 01 00 00 e8 ?? ?? ?? ?? 43 83 fb 03 77}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -863,6 +892,7 @@ rule Trojan_Win32_Tracur_BB_2147664559_0
         $x_1_3 = {89 55 fc 89 45 f8 60 ff 75 fc 8b 45 f8 83 c0 18 50 89 c1 e8 08 00 00 00 83 c4 08 e9 a9 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -888,6 +918,7 @@ rule Trojan_Win32_Tracur_BD_2147669012_0
         $x_2_6 = {6f 3a 00 00 ?? ?? ?? ?? ?? ?? ?? ?? 62 3a 00 00 ?? ?? ?? ?? ?? ?? ?? ?? 61 3a 00 00 ?? ?? ?? ?? ?? ?? ?? ?? 63 3a 00 00 ?? ?? ?? ?? ?? ?? ?? ?? 76 3a 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -923,6 +954,7 @@ rule Trojan_Win32_Tracur_BE_2147670320_0
         $x_1_12 = {8e 2a e2 71 6e 1e 11 b3 cf 0e 64 6d 6d ab e1 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_10_*) and 4 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -952,6 +984,7 @@ rule Trojan_Win32_Tracur_BF_2147678520_0
         $x_1_3 = {8b 53 18 81 7c 82 24 00 14 00 00 0f 82 ?? ?? ?? ?? 8d 4d f8 8b d6 8b c3 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -975,6 +1008,7 @@ rule Trojan_Win32_Tracur_BI_2147680334_0
         $x_1_4 = {8b 5d f8 80 3c 1f 6b 75 36 80 7c 1f 01 31 75 2f 80 7c 1f 02 20 75 28 80 7c 1f 03 3d 75 21 80 7c 1f 04 22}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -999,6 +1033,7 @@ rule Trojan_Win32_Tracur_A_2147680336_0
         $x_1_4 = {bb 01 00 00 00 3b fb 7c 53 8b c3 b9 05 00 00 00 99 f7 f9 85 d2 75 21 b8 0c 00 00 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1020,6 +1055,7 @@ rule Trojan_Win32_Tracur_B_2147682021_0
         $x_1_1 = {83 c4 18 8b f0 5f 5b 85 f6 74 21 8b 06 8b 48 28 85 c9 74 18 8b 46 04 03 c1 74 11 6a ff 6a 01 6a 00 ff d0 85 c0 75 05 e8 ?? ?? ?? ?? 5e 33 c0 40 c9 c2 08 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

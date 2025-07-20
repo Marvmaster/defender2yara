@@ -16,6 +16,7 @@ rule Ransom_Win64_BlackBytePacker_SA_2147888537_0
         $x_1_1 = {41 f7 e8 d1 fa 8b c2 c1 e8 ?? 03 d0 41 8b c4 66 2b c2 0f b7 c0 6b c8 ?? 66 41 ?? ?? 41 ?? ?? 66 41 ?? ?? ?? 41 83 f8 ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

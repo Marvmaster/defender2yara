@@ -18,6 +18,7 @@ rule Worm_Win32_Playnro_A_2147695483_0
         $x_1_4 = {00 5c 4d 79 52 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

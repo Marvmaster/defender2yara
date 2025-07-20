@@ -20,6 +20,7 @@ rule Backdoor_Win32_Aybo_B_2147721705_0
         $x_1_6 = "add rule name=\"Security Fix\" protocol=TCP dir=in localport=445 action=block" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

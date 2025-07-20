@@ -20,6 +20,7 @@ rule VirTool_Win64_Prebembesz_A_2147919103_0
         $x_1_5 = {c7 44 24 28 00 00 00 00 c7 44 24 20 01 00 00 00 41 b9 00 00 00 00 41 b8 00 00 00 00 ba 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? 48 89 c1 ?? ?? ?? ?? ?? ?? ?? ?? ?? b9 e8 03 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

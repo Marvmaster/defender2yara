@@ -19,6 +19,7 @@ rule Trojan_Win32_Eterock_A_2147721540_0
         $x_1_5 = "Malware SMB Block" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

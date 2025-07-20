@@ -31,6 +31,7 @@ rule VirTool_WinNT_Bancos_DQ_2147618307_0
         $x_1_17 = "\\isg.gpc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 2 of ($x_20_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -58,6 +59,7 @@ rule VirTool_WinNT_Bancos_A_2147629101_0
         $x_1_5 = "\\??\\C:\\Windows\\system32\\drivers\\gbpkm.sys" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

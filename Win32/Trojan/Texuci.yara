@@ -25,6 +25,7 @@ rule Trojan_Win32_Texuci_B_2147687629_0
         $x_1_11 = "F254F85686C8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -68,6 +69,7 @@ rule Trojan_Win32_Texuci_C_2147687633_0
         $x_1_18 = "798D31AB3CB4C8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Upranfef_A_2147648442_0
         $x_1_2 = {99 59 f7 f9 8d 45 08 50 53 83 c2 61 89 55 08 e8 ?? ?? ?? ?? 59 4f 59 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

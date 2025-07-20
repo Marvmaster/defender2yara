@@ -18,6 +18,7 @@ rule Worm_Win32_Phelshap_A_2147683948_0
         $x_1_4 = "shell\\open\\command=tighVncSetup\\vnc.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

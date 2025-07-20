@@ -17,6 +17,7 @@ rule Ransom_Win32_Dircrypt_A_2147682259_0
         $x_1_3 = {00 00 44 00 69 00 72 00 74 00 79 00 50 00 61 00 79 00 43 00 6f 00 64 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Ransom_Win32_Dircrypt_A_2147682363_0
         $x_1_2 = {06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 73 9a e6 c6 d2 c2 1e 86 e3 3a 60 16 d1 6a b3 a3 58 21 de 3d 4e c1 2c a9 d0 8a be 4d 1c 4f 3c ae 32 8a 3f 03 59 1d 24 49 c4 54 0f c5 53 09 88 95 bd 5f ea d4 4a 17 29 59 41 00 54 85 41 d9 8f e2 07 cb 7f 37 8d fe 8c b7 5a 90 02 88 09 89 9e 77 10 8f 71 d7 26 08 82 63 83 2e a0 d9 bd 48 c1 e2 01 51 6b 35 a0 53 8b ab 98 11 28 e1 38 84 24 13 82 a5 2c b1 04 dd 95 a1 27 ce 75 89 7f 7d 7c 97}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Ransom_Win32_Dircrypt_C_2147683373_0
         $x_1_3 = {44 00 69 00 72 00 74 00 79 00 50 00 61 00 79 00 43 00 6f 00 64 00 65 00 00 00 00 00 29 00 3b 00 00 00 00 00 53 00 65 00 74 00 53 00 74 00 61 00 74 00 75 00 73 00 28 00 00 00 00 00 41 00 74 00 6c 00 41 00 78 00 57 00 69 00 6e 00 00 00 00 00 44 00 69 00 72 00 74 00 79 00 50 00 61 00 79 00 42 00 75 00 74 00 74 00 6f 00 6e 00 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -85,6 +88,7 @@ rule Ransom_Win32_Dircrypt_E_2147685712_0
         $x_1_2 = {2e 00 65 00 6e 00 63 00 2e 00 72 00 74 00 66 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

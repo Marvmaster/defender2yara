@@ -20,6 +20,7 @@ rule VirTool_Win64_Ciphesez_A_2147894337_0
         $x_1_5 = {c7 44 24 0c 00 80 00 00 c7 44 24 08 00 00 00 00 89 74 24 04 89 1c 24 e8 ?? ?? ?? ?? 83 ec 10 89 1c 24 e8 ?? ?? ?? ?? 50 c7 44 24 08 2e 00 00 00 c7 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

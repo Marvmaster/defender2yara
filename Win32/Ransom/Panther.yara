@@ -22,6 +22,7 @@ rule Ransom_Win32_Panther_G_2147759266_0
         $x_1_7 = ".panther" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_Win32_Critroni_A_2147688248_0
         $x_1_5 = "%s%s.ctbl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Win32_Critroni_B_2147688844_0
         $x_1_8 = "POST /unlock HTTP/1.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -99,6 +101,7 @@ rule Ransom_Win32_Critroni_C_2147694931_0
         $x_3_4 = {0c 7d 37 8b 84 24 ?? ?? 00 00 0f be 84 04 ?? ?? 00 00 35 ?? (01|2d|ff) 00 00 88 c1 8b 84 24 ?? ?? 00 00 88 8c 04 ?? ?? 00 00 8b 84 24 ?? ?? 00 00 83 c0 01 89 84 24 ?? ?? 00 00 eb bf 8d 05 ?? ?? ?? (60|2d|6f) b9 (08|2d|1f) 00 00 00 [0-64] c7 84 24 ?? ?? 00 00 00 00 00 00 c7 84 24 ?? ?? 00 00 00 00 00 00 83 bc 24 ?? ?? 00 00 ?? 7d 37}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Decay_A_2147630810_0
         $x_1_3 = {8b 10 89 16 8a 48 04 88 4e 04 83 c6 05 c6 06 e9 46 2b c6 40 89 06 83 ee 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

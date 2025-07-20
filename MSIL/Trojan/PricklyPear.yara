@@ -18,6 +18,7 @@ rule Trojan_MSIL_PricklyPear_A_2147894765_0
         $x_10_3 = "schtasks.exe /create /TN OneDriveStandal0ne /SC minute /mo 6 /tr" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

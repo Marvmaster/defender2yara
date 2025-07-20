@@ -18,6 +18,7 @@ rule MonitoringTool_Win32_SaveKeys_17974_0
         $x_1_4 = {4d 53 56 42 56 4d 36 30 2e 44 4c 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Droidpak_A_2147685172_0
         $x_1_3 = {69 6e 73 74 61 6c 6c 20 25 73 00 00 00 [0-15] 2e 61 70 6b [0-4] 61 64 62 2e 65 78 65 00 62 65 67 69 6e 20 66 69 6e 64 20 62 7a 20 70 61 74 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Droidpak_B_2147686830_0
         $x_1_4 = {2a 2e 61 70 6b 00 00 00 00 61 64 62 2e 65 78 65 00 65 6e 64 2e 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

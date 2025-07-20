@@ -19,6 +19,7 @@ rule Ransom_MSIL_NefiCrypt_PI_2147751532_0
         $x_1_4 = "\\NEFILIM.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule VirTool_Win64_GatWalkz_A_2147839549_0
         $x_1_4 = {0f b7 85 24 01 00 00 48 8b 8d 08 01 00 00 0f b7 04 41 48 8b 8d c8 00 00 00 8b 04 81 48 8b 4d 48 48 03 41 30 48 89 85 68 01 00 00 48 8b 8d 48 01 00 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

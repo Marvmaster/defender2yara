@@ -26,6 +26,7 @@ rule Backdoor_Win32_Venixol_A_2147678469_0
         $x_20_12 = {6a 53 66 89 4d fc 33 c9 66 89 4d fe 59 6a 62 66 89 4d d0 59 6a 69 66 89 4d d2 59 6a 65}  //weight: 20, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 5 of ($x_30_*) and 2 of ($x_20_*))) or
             ((1 of ($x_50_*) and 6 of ($x_30_*))) or
@@ -75,6 +76,7 @@ rule Backdoor_Win32_Venixol_B_2147679017_0
         $x_20_13 = "VENIX3N1cGVyX2NzbTp6dGUkNzQxNTcwOGF2bGlz" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_30_*) and 1 of ($x_20_*))) or
             ((8 of ($x_30_*))) or
@@ -120,6 +122,7 @@ rule Backdoor_Win32_Venixol_D_2147679537_0
         $x_20_11 = "YWRtaW46" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_30_*) and 1 of ($x_20_*))) or
             ((1 of ($x_50_*) and 6 of ($x_30_*))) or

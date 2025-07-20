@@ -17,6 +17,7 @@ rule Virus_Win32_Demig_B_2147600078_0
         $x_1_3 = {43 3a 5c 44 45 4d 49 55 52 47 2e 45 58 45 00 00 00 80 00 00 00 ff ff ff ff ff ff ff ff 40 65 63 68 6f 20 6f 66 66 0d 0a 73 65 74 20 6f 76 65 72 6c 61 79 3d 25 30 0d 0a 69 66 20 6e 6f 74 20 65 78 69 73 74 20 25 6f 76 65 72 6c 61 79 25 20 73 65 74 20 6f 76 65 72 6c 61 79 3d 25 30 2e 42 41}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

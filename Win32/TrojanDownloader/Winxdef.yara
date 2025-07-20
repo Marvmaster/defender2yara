@@ -25,6 +25,7 @@ rule TrojanDownloader_Win32_Winxdef_A_2147603390_0
         $x_1_11 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Worm_Win32_Tisandr_CB_2147819049_0
         $x_1_5 = {68 61 63 6b 69 6e 67 20 65 6e 20 65 73 70 61 c3 b1 6f 6c 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

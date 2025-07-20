@@ -18,6 +18,7 @@ rule PWS_MSIL_Grozlex_A_2147651265_0
         $x_2_4 = "?action=add&a=7&c=" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule PWS_MSIL_Grozlex_A_2147654735_0
         $x_1_13 = "\\Google\\Chrome\\User Data\\Default\\Login Data" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 4 of ($x_1_*))) or
             ((3 of ($x_5_*))) or

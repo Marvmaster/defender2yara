@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Swapexo_A_2147627480_0
         $x_1_5 = {69 6f 66 69 6c 74 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule TrojanDropper_Win32_Swapexo_B_2147712634_0
         $x_1_5 = "UPDATESERVER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

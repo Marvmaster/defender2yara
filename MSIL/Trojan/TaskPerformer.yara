@@ -21,6 +21,7 @@ rule Trojan_MSIL_TaskPerformer_A_2147773978_0
         $x_1_6 = "select MACAddress, IPEnabled from Win32_NetworkAdapterConfiguration" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

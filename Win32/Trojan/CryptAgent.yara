@@ -17,6 +17,7 @@ rule Trojan_Win32_CryptAgent_SD_2147730976_0
         $x_1_2 = "/8vlbYwQH2yHM9a3qxYMlIwfucPTFfbqBp2p8vdpNHW2ZUOA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

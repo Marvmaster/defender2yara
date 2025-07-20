@@ -24,6 +24,7 @@ rule Trojan_Win32_RedLineStealer_RT_2147780240_0
         $x_1_9 = "GetTickCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 4 of ($x_1_*))) or
             ((5 of ($x_10_*))) or
@@ -57,6 +58,7 @@ rule Trojan_Win32_RedLineStealer_RT_2147780240_1
         $x_1_9 = "CreditCard" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -80,6 +82,7 @@ rule Trojan_Win32_RedLineStealer_MA_2147794372_0
         $x_1_3 = {8b 01 ba ff ?? ?? ?? 03 d0 83 f0 ?? 33 c2 83 c1 ?? a9 ?? ?? ?? ?? 74 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -109,6 +112,7 @@ rule Trojan_Win32_RedLineStealer_MA_2147794372_1
         $x_1_5 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +138,7 @@ rule Trojan_Win32_RedLineStealer_MC_2147795096_0
         $x_1_5 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +161,7 @@ rule Trojan_Win32_RedLineStealer_MC_2147795096_1
         $x_1_2 = {89 55 fc b8 ?? ?? ?? ?? 01 45 fc 8b 45 fc 8a 04 08 88 04 31 41 3b 0d ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +189,7 @@ rule Trojan_Win32_RedLineStealer_DA_2147795332_0
         $x_1_7 = "Reboot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +213,7 @@ rule Trojan_Win32_RedLineStealer_DE_2147796546_0
         $x_1_3 = "gvcgfxrdrtwdwteysdgfyufw4673efdsgytu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +238,7 @@ rule Trojan_Win32_RedLineStealer_ME_2147796708_0
         $x_1_4 = "FindFirstFileExW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -253,6 +262,7 @@ rule Trojan_Win32_RedLineStealer_ME_2147796708_1
         $x_1_3 = {89 55 fc b8 ?? ?? ?? ?? 01 45 fc 8b 45 fc 8a 04 08 88 04 31 41 3b 0d ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -275,6 +285,7 @@ rule Trojan_Win32_RedLineStealer_MG_2147796712_0
         $x_1_2 = {85 c0 74 34 b9 4d 5a 00 00 66 39 08 75 2a 8b 48 3c 03 c8 81 39 ?? ?? ?? ?? 75 ?? b8 ?? ?? ?? ?? 66 39 41 18 75 ?? 83 79 74 0e 76 0c 83 b9 ?? ?? ?? ?? 00 74 ?? b0 01 c3 32 c0 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +309,7 @@ rule Trojan_Win32_RedLineStealer_MH_2147796713_0
         $x_1_3 = {89 55 fc b8 ?? ?? ?? ?? 01 45 fc 8b 45 fc 8a 04 08 88 04 31 41 3b 0d ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +333,7 @@ rule Trojan_Win32_RedLineStealer_MJ_2147797054_0
         $x_1_3 = {89 55 fc b8 ?? ?? ?? ?? 01 45 fc 8b 45 fc 8a 04 08 88 04 31 41 3b 0d ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -344,6 +357,7 @@ rule Trojan_Win32_RedLineStealer_MN_2147797744_0
         $x_1_3 = {89 55 fc b8 ?? ?? ?? ?? 01 45 fc 8b 45 fc 8a 04 08 88 04 31 41 3b 0d ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -367,6 +381,7 @@ rule Trojan_Win32_RedLineStealer_MQ_2147797747_0
         $x_1_3 = {33 c0 88 84 05 ?? ?? ?? ?? 40 3b c6 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -391,6 +406,7 @@ rule Trojan_Win32_RedLineStealer_2147797750_0
         $x_1_3 = {89 55 fc b8 ?? ?? ?? ?? 01 45 fc 8b 45 fc 8a 04 08 88 04 31 41 3b 0d ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -414,6 +430,7 @@ rule Trojan_Win32_RedLineStealer_MU_2147797972_0
         $x_1_3 = {89 55 fc b8 ?? ?? ?? ?? 01 45 fc 8b 45 fc 8a 04 08 88 04 31 41 3b 0d ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -438,6 +455,7 @@ rule Trojan_Win32_RedLineStealer_CG_2147798712_0
         $x_1_4 = "Select virus scanner" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -459,6 +477,7 @@ rule Trojan_Win32_RedLineStealer_DF_2147798736_0
         $x_1_1 = {03 d8 8b 45 d8 89 18 8b 45 c8 03 45 a0 8b 55 d8 31 02 6a 66 e8 ?? ?? ?? ?? bb 04 00 00 00 2b d8 6a 66 e8 ?? ?? ?? ?? 03 d8 01 5d ec 83 45 d8 04 8b 45 ec 3b 45 d4 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -486,6 +505,7 @@ rule Trojan_Win32_RedLineStealer_DF_2147798736_1
         $x_3_7 = "chkLoadTipsAtStartup" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -513,6 +533,7 @@ rule Trojan_Win32_RedLineStealer_MAO_2147805565_0
         $x_1_7 = {c7 84 24 e4 00 00 00 57 78 d1 51 c7 84 24 e0 00 00 00 0b 4c 1b 7e c7 44 24 18 dd 0b fa 64 c7 44 24 68 cf 72 b2 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -534,6 +555,7 @@ rule Trojan_Win32_RedLineStealer_MAQ_2147806283_0
         $x_1_1 = {2b fe 25 bb 52 c0 5d 8b 45 fc 83 25 ?? ?? ?? ?? 00 03 c7 50 8b c7 c1 e0 04 03 45 f0 e8 ?? ?? ?? ?? 8b cf c1 e9 05 03 4d e4 33 c1 2b d8 8b 45 ec 29 45 fc ff 4d f4 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -562,6 +584,7 @@ rule Trojan_Win32_RedLineStealer_MAU_2147807761_0
         $x_1_8 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -585,6 +608,7 @@ rule Trojan_Win32_RedLineStealer_MI_2147808460_0
         $x_1_3 = {8b 45 f4 8b 4d a8 d3 e8 89 45 ec 8b 4d ec 03 4d d4 89 4d ec 8b 55 e4 33 55 f0 89 55 e4 8b 45 ec 31 45 e4 8b 45 e4 29 45 d0 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 75 ?? eb ?? 8b 45 e8 2b 45 d8 89 45 e8 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -614,6 +638,7 @@ rule Trojan_Win32_RedLineStealer_MFA_2147811263_0
         $x_1_9 = "rqbwjqbwj345n3" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -638,6 +663,7 @@ rule Trojan_Win32_RedLineStealer_MBA_2147811457_0
         $x_1_4 = "Fortnite cheat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -659,6 +685,7 @@ rule Trojan_Win32_RedLineStealer_RPD_2147811600_0
         $x_1_1 = {eb 01 2b e8 00 00 00 00 5a 8b 42 ?? 90 90 90}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -680,6 +707,7 @@ rule Trojan_Win32_RedLineStealer_RPE_2147811601_0
         $x_1_1 = {2b f1 8b ce c1 e1 04 03 4d ec 8b c6 c1 e8 05 03 45 e8 03 de 33 cb 33 c8 8d 45 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -701,6 +729,7 @@ rule Trojan_Win32_RedLineStealer_RPE_2147811601_1
         $x_1_1 = {eb 05 21 bb ?? ?? ?? 50 e8 17 00 00 00 33 c0 eb 02 00 a9 71 64 eb 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -725,6 +754,7 @@ rule Trojan_Win32_RedLineStealer_MKA_2147811905_0
         $x_1_4 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -751,6 +781,7 @@ rule Trojan_Win32_RedLineStealer_MNA_2147812288_0
         $x_1_6 = ".5bi1k2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -776,6 +807,7 @@ rule Trojan_Win32_RedLineStealer_MOA_2147812291_0
         $x_1_5 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -803,6 +835,7 @@ rule Trojan_Win32_RedLineStealer_MPA_2147812730_0
         $x_1_7 = "Enter Mode Password" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -830,6 +863,7 @@ rule Trojan_Win32_RedLineStealer_MSA_2147813452_0
         $x_1_7 = "GetAsyncKeyState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -853,6 +887,7 @@ rule Trojan_Win32_RedLineStealer_2147813459_0
         $x_1_2 = {03 c7 50 89 45 f8 8b c7 c1 e0 04 03 85 ?? ?? ?? ?? 50 e8 6a fe ff ff 50 89 85 ?? ?? ?? ?? 8b c7 c1 e8 05 03 85 ?? ?? ?? ?? 50 8d 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -881,6 +916,7 @@ rule Trojan_Win32_RedLineStealer_MVA_2147814543_0
         $x_1_8 = "GetAsyncKeyState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -902,6 +938,7 @@ rule Trojan_Win32_RedLineStealer_RPQ_2147815541_0
         $x_1_1 = {0f 28 45 d0 0f 29 85 50 fe ff ff 8b 95 78 ff ff ff 0f 10 02 0f 29 85 60 fe ff ff 0f 28 85 60 fe ff ff 66 0f ef 85 50 fe ff ff 0f 29 85 40 fe ff ff 0f 28 85 40 fe ff ff 8b 85 78 ff ff ff 0f 11 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -924,6 +961,7 @@ rule Trojan_Win32_RedLineStealer_RPY_2147815867_0
         $x_1_2 = {8b 45 08 89 78 04 5f 89 30 5e 5b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -945,6 +983,7 @@ rule Trojan_Win32_RedLineStealer_RPY_2147815867_1
         $x_1_1 = {f6 17 33 f3 33 c0 33 db 33 c6 8b f3 33 c6 8b f3 8b f0 8b d8 80 07 75 33 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -966,6 +1005,7 @@ rule Trojan_Win32_RedLineStealer_RPZ_2147815868_0
         $x_1_1 = {eb 02 f6 bf 50 eb 02 8d 43 e8 1a 00 00 00 eb 04 be da 68 17 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -987,6 +1027,7 @@ rule Trojan_Win32_RedLineStealer_RPZ_2147815868_1
         $x_1_1 = {6a 00 6a 04 8d 4d dc 51 8b 8b a4 00 00 00 83 c1 08 51 ff 75 cc ff d0 6a 40 68 00 30 00 00 ff b7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1008,6 +1049,7 @@ rule Trojan_Win32_RedLineStealer_RPZ_2147815868_2
         $x_1_1 = {33 db b8 11 00 00 00 83 c0 1f 64 8b 3c 03 8b 7f 0c 8b 77 14 8b 36 8b 36 8b 46 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1029,6 +1071,7 @@ rule Trojan_Win32_RedLineStealer_RPZ_2147815868_3
         $x_1_1 = {40 68 00 10 00 00 8b 45 08 8b 40 04 ff 70 09 6a 00 8b 45 08 ff 50 24 89 45 f8 83 65 f4 00 6a 00 8d 45 f4 50 ff 75 f8 8b 45 08 8b 40 04 ff 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1050,6 +1093,7 @@ rule Trojan_Win32_RedLineStealer_RPA_2147815869_0
         $x_1_1 = {eb 02 69 f6 50 eb 02 0f 1c e8 1a 00 00 00 eb 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1072,6 +1116,7 @@ rule Trojan_Win32_RedLineStealer_QP_2147815941_0
         $x_10_2 = {8b 85 2c fd ff ff 03 cb 33 c1 31 45 fc 81 3d ?? ?? ?? ?? a3 01 00 00 75 08}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1096,6 +1141,7 @@ rule Trojan_Win32_RedLineStealer_MYA_2147816212_0
         $x_1_4 = "FindFirstFileExW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1118,6 +1164,7 @@ rule Trojan_Win32_RedLineStealer_GE_2147816290_0
         $x_1_2 = "MANTCVSRVXBYGHIBPS@AWDRT.COM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1139,6 +1186,7 @@ rule Trojan_Win32_RedLineStealer_PA_2147816545_0
         $x_1_1 = {89 75 ec 8b 45 e8 01 45 ec 8b 45 e4 01 45 ec 8b 45 ec 89 45 f4 8b 45 e4 8b 4d f0 d3 e8 89 45 fc 8b 45 cc 01 45 fc 8b 5d e4 c1 e3 ?? 03 5d d8 33 5d f4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1160,6 +1208,7 @@ rule Trojan_Win32_RedLineStealer_PA_2147816545_1
         $x_1_1 = {33 d2 b9 0a 00 00 00 f7 f1 0f b6 92 ?? ?? ?? ?? 8b 45 ?? 03 45 ?? 0f b6 08 33 ca 8b 55 ?? 03 55 ?? 88 0a ff 15 ?? ?? ?? ?? 89 45 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1181,6 +1230,7 @@ rule Trojan_Win32_RedLineStealer_PB_2147816630_0
         $x_1_1 = {b8 d5 41 1d d4 8b ce f7 e6 8b c6 2b c2 d1 e8 03 c2 c1 e8 05 6b c0 ?? 2b c8 8a 81 ?? ?? ?? ?? 30 04 1e 46 3b f7 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1202,6 +1252,7 @@ rule Trojan_Win32_RedLineStealer_PB_2147816630_1
         $x_1_1 = {f7 f1 0f b6 92 ?? ?? ?? ?? 8b 45 ?? 03 45 ?? 0f b6 08 33 ca 8b 55 ?? 03 55 ?? 88 0a 8b 45 ?? 8b 08 83 c1 01 8b 55 ?? 89 0a eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1224,6 +1275,7 @@ rule Trojan_Win32_RedLineStealer_PB_2147816630_2
         $x_1_2 = {8b 44 24 10 03 44 24 18 89 44 24 1c 8b 44 24 18 c1 e8 ?? 89 44 24 14 8b 44 24 14 33 74 24 1c 03 c3 33 c6 81 3d ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 44 24 14 75 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1245,6 +1297,7 @@ rule Trojan_Win32_RedLineStealer_PC_2147816900_0
         $x_1_1 = {55 8b ec 51 c7 45 fc ?? ?? ?? ?? 8b 45 0c 01 45 fc 83 6d fc ?? 8b 45 08 8b 4d fc 31 08 c9 c2 08 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1268,6 +1321,7 @@ rule Trojan_Win32_RedLineStealer_PC_2147816900_1
         $x_3_3 = {b8 d5 41 1d d4 8b ce f7 e6 8b c6 2b c2 d1 e8 03 c2 c1 e8 05 6b c0 ?? 2b c8 8a 81 ?? ?? ?? ?? 30 04 1e 46 3b f7 72}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1289,6 +1343,7 @@ rule Trojan_Win32_RedLineStealer_AA_2147817044_0
         $x_2_1 = {33 ca 89 4c 24 ?? 89 5c 24 ?? 8b 44 24 ?? 89 44 24 ?? 8b 44 24 ?? 31 44 24 ?? 8b 54 24 ?? 89 54 24 ?? 89 1d ?? ?? ?? ?? 8b 44 24 ?? 29 44 24 ?? 81 44 24 ?? ?? ?? ?? ?? ff 4c 24 ?? 0f 85 ?? ?? ?? ?? 8b 44 24 ?? 8b 4c 24 ?? 89 08 89 78}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1311,6 +1366,7 @@ rule Trojan_Win32_RedLineStealer_AA_2147817044_1
         $x_1_2 = {2b d8 89 75 ?? 81 6d ?? ?? ?? ?? ?? 81 45 ?? ?? ?? ?? ?? 8b 4d ?? 8b f3 d3 e6 8b 4d ?? 8b c3 d3 e8 03 b5 ?? ?? ?? ?? 89 45 ?? 8b 85 ?? ?? ?? ?? 01 45 ?? 8b 85 ?? ?? ?? ?? 03 c3 33 f0 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1333,6 +1389,7 @@ rule Trojan_Win32_RedLineStealer_FX_2147817554_0
         $x_10_2 = {c7 85 50 fe ff ff bb e5 ad 07 c7 85 ?? ?? ?? ?? c5 b1 6b 00 c7 85 ?? ?? ?? ?? 66 dd 60 43 c7 85 ?? ?? ?? ?? 4a d0 8a 2c c7 85 ?? ?? ?? ?? 15 6e 75 0e c7 85 ?? ?? ?? ?? 8e 52 57 39 c7 85 ?? ?? ?? ?? 5b 4a 15 44 c7 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1358,6 +1415,7 @@ rule Trojan_Win32_RedLineStealer_MZA_2147817836_0
         $x_1_5 = "GetCompressedFileSizeW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1379,6 +1437,7 @@ rule Trojan_Win32_RedLineStealer_PD_2147817922_0
         $x_1_1 = {89 45 0c 8b 45 ec 01 45 0c 8b 45 e8 83 25 ?? ?? ?? ?? ?? 03 c8 8d 04 3b 33 c8 31 4d 0c 8b 45 0c 01 05 ?? ?? ?? ?? 2b 75 0c 83 0d ?? ?? ?? ?? ?? 8b c6 c1 e8 ?? 03 45 f4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1400,6 +1459,7 @@ rule Trojan_Win32_RedLineStealer_PD_2147817922_1
         $x_1_1 = {03 c7 33 f0 33 75 ?? 89 75 ?? 8b 45 ?? 01 05 ?? ?? ?? ?? 83 0d ?? ?? ?? ?? ff 2b de 8b c3 c1 e0 04 03 45 ?? 8b d3 89 45 ?? 8d 04 1f 50 8d 45 ?? c1 ea 05 03 55 ?? 50 c7 05 ?? ?? ?? ?? b4 21 e1 c5 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1426,6 +1486,7 @@ rule Trojan_Win32_RedLineStealer_AN_2147818049_0
         $x_1_6 = "RunService" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1452,6 +1513,7 @@ rule Trojan_Win32_RedLineStealer_MB_2147818334_0
         $x_1_6 = "DebugSetProcessKillOnExit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1474,6 +1536,7 @@ rule Trojan_Win32_RedLineStealer_VZ_2147819482_0
         $x_1_2 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1495,6 +1558,7 @@ rule Trojan_Win32_RedLineStealer_A_2147820161_0
         $x_1_1 = {88 55 ff 0f b6 45 ff c1 f8 03 0f b6 4d ff c1 e1 05 0b c1 88 45 ff 8b 55 ec 8a 45 ff 88 44 15 d0 e9 dd fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1516,6 +1580,7 @@ rule Trojan_Win32_RedLineStealer_AV_2147820214_0
         $x_2_1 = {8b c8 8b 45 fc 33 d2 f7 f1 52 8d 4d 10 e8 [0-4] 0f be 10 33 f2 b8 ff 00 00 00 2b c6 03 45 f8 89 45 f8 eb b8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1538,6 +1603,7 @@ rule Trojan_Win32_RedLineStealer_DG_2147820309_0
         $x_1_2 = {8b 55 e8 03 d0 89 55 f4 8b 45 f8 c1 e8 05 89 45 fc 8b 45 fc 33 4d f4 03 45 d4 c7 05 ?? ?? ?? ?? ee 3d ea f4 33 c1 81 3d ?? ?? ?? ?? 16 05 00 00 89 45 fc 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1559,6 +1625,7 @@ rule Trojan_Win32_RedLineStealer_DH_2147821600_0
         $x_1_1 = {8b ce f7 e6 c1 ea ?? 6b c2 ?? 2b c8 0f b6 81 ?? ?? ?? ?? 8d 8f ?? ?? ?? ?? 30 86 ?? ?? ?? ?? 03 ce b8 1f 85 eb 51 f7 e1 8b ce c1 ea ?? 6b c2 ?? 2b c8 0f b6 81 ?? ?? ?? ?? 30 86 ?? ?? ?? ?? 83 c6 ?? 81 fe 7e 07 00 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1580,6 +1647,7 @@ rule Trojan_Win32_RedLineStealer_PE_2147821935_0
         $x_1_1 = {89 44 24 18 8b 4c 24 20 8b c3 d3 e8 89 44 24 14 8b 44 24 38 01 44 24 14 8b cb c1 e1 ?? 03 4c 24 3c 89 15 ?? ?? ?? ?? 33 4c 24 14 33 4c 24 18 2b f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1602,6 +1670,7 @@ rule Trojan_Win32_RedLineStealer_PF_2147821963_0
         $x_1_2 = {8b 6c 25 fc 66 c1 e6 ?? 66 8b df 66 23 df 89 44 25 00 8b f5 5b 5f f7 c3 ?? ?? ?? ?? 66 0f bc c2 5d 66 c1 e8 ?? 66 25 ?? ?? 8d ad fc ff ff ff 0f b7 c3 66 0f bd c4 8b 44 25 00 33 c3 66 85 f9 8d 80 a2 0a 16 1f 85 ea f9 0f c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1626,6 +1695,7 @@ rule Trojan_Win32_RedLineStealer_MD_2147821997_0
         $x_1_4 = "UnlockFileEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1647,6 +1717,7 @@ rule Trojan_Win32_RedLineStealer_PG_2147822257_0
         $x_1_1 = {8b 44 24 24 89 44 24 18 8b 44 24 10 01 44 24 18 8b 44 24 24 c1 e8 ?? 89 44 24 14 8b 44 24 14 03 44 24 40 c7 05 [0-8] 33 44 24 18 33 c6 81 3d [0-8] 89 44 24 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1668,6 +1739,7 @@ rule Trojan_Win32_RedLineStealer_PH_2147822429_0
         $x_1_1 = {8b 4c 24 18 8b c7 d3 e8 89 44 24 10 8b 44 24 34 01 44 24 10 ?? ?? ?? ?? ?? ?? ?? ?? 8b cf c1 e1 ?? 03 4c 24 40 89 15 ?? ?? ?? ?? 33 4c 24 10 33 4c 24 14 2b d9 4d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1689,6 +1761,7 @@ rule Trojan_Win32_RedLineStealer_PI_2147822812_0
         $x_1_1 = {89 2d 30 99 c7 02 8b 44 24 20 89 44 24 14 8b 44 24 24 01 44 24 14 8b 44 24 20 c1 e8 ?? 89 44 24 10 8b 44 24 10 03 44 24 44 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 33 44 24 14 33 c6 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 89 44 24 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1711,6 +1784,7 @@ rule Trojan_Win32_RedLineStealer_PJ_2147822906_0
         $x_1_2 = {8b 44 24 20 89 44 24 14 8b 44 24 24 01 44 24 14 8b 44 24 20 c1 e8 ?? 89 44 24 10 8b 44 24 10 03 44 24 44 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 33 44 24 14 33 c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1732,6 +1806,7 @@ rule Trojan_Win32_RedLineStealer_RPR_2147822924_0
         $x_1_1 = {c1 e0 17 31 45 fc 8b 45 fc c1 f8 11 31 45 fc 8b 45 f8 31 45 fc 8b 45 f8 c1 f8 1a 31 45 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1753,6 +1828,7 @@ rule Trojan_Win32_RedLineStealer_RPS_2147822925_0
         $x_1_1 = {8b 55 0c 69 c7 e8 ae e9 71 30 04 1a 43 eb d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1776,6 +1852,7 @@ rule Trojan_Win32_RedLineStealer_PK_2147823593_0
         $x_1_3 = {8a 8c 0d c4 5b ff ff 88 8d 8b 5b ff ff 0f b6 85 8b 5b ff ff 8b 0d e8 2b 48 00 03 8d 14 58 ff ff 0f be 11 33 d0 a1 e8 2b 48 00 03 85 14 58 ff ff 88 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1797,6 +1874,7 @@ rule Trojan_Win32_RedLineStealer_PL_2147823766_0
         $x_1_1 = {8b 44 24 20 89 44 24 14 8b 44 24 24 01 44 24 14 8b 44 24 20 c1 e8 ?? 89 44 24 10 8b 44 24 38 03 44 24 10 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 33 44 24 14 33 c6 81 3d 8c 92 63 00 ?? ?? ?? ?? 89 44 24 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1818,6 +1896,7 @@ rule Trojan_Win32_RedLineStealer_BA_2147823802_0
         $x_2_1 = {33 d2 be 04 00 00 00 f7 f6 a1 [0-4] 0f be 14 10 8b 45 f8 0f b6 0c 01 33 ca 8b 55 fc 8b 42 04 8b 55 f8 88 0c 10 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1839,6 +1918,7 @@ rule Trojan_Win32_RedLineStealer_PM_2147823942_0
         $x_1_1 = {89 44 24 14 8b 44 24 ?? 01 44 24 ?? 8b 44 24 ?? c1 e8 05 89 44 24 ?? 8b 44 24 ?? 03 44 24 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 33 44 24 ?? 33 c6 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 89 44 24 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1860,6 +1940,7 @@ rule Trojan_Win32_RedLineStealer_PO_2147823955_0
         $x_1_1 = {8b 4d fc c1 e1 ?? 03 4d e8 8b 45 fc 03 45 f8 89 45 0c 8b 55 fc 83 0d ?? ?? ?? ?? ff 8b c2 c1 e8 ?? 03 45 e4 68 ?? ?? ?? ?? 33 45 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1881,6 +1962,7 @@ rule Trojan_Win32_RedLineStealer_NEF_2147824175_0
         $x_1_1 = {89 45 fc 0f b6 0d ?? ?? ?? ?? 8b 55 fc 03 55 08 0f b6 02 33 c1 8b 4d fc 03 4d 08 88 01 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1902,6 +1984,7 @@ rule Trojan_Win32_RedLineStealer_PP_2147824386_0
         $x_1_1 = {33 c4 89 84 24 ?? ?? ?? ?? 81 3d ?? ?? ?? ?? ?? ?? ?? ?? c7 04 24 f0 43 03 00 75 08 6a 00 ff 15 ?? ?? ?? ?? 56 83 44 24 04 0d a1 ?? ?? ?? ?? 0f af 44 24 04 05 c3 9e 26 00 81 3d ?? ?? ?? ?? 81 13 00 00 a3 ?? ?? ?? ?? 0f b7 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1923,6 +2006,7 @@ rule Trojan_Win32_RedLineStealer_PQ_2147824701_0
         $x_1_1 = {8b 45 f4 29 45 fc 8b 4d fc c1 e1 04 03 4d e8 8b 45 fc 03 45 f8 89 45 0c 8b 55 fc 83 0d ?? ?? ?? ?? ff 8b c2 c1 e8 05 03 45 e4 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 33 45 0c 33 c1 2b f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1944,6 +2028,7 @@ rule Trojan_Win32_RedLineStealer_UE_2147824951_0
         $x_10_1 = {8b 55 fc 03 55 ?? 0f b6 02 33 c1 8b 4d ?? 03 4d ?? 88 01 e9 ?? ?? ?? ?? 8b e5}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1966,6 +2051,7 @@ rule Trojan_Win32_RedLineStealer_PR_2147825215_0
         $x_1_2 = {c1 e1 04 03 4d f0 8b 45 fc 03 45 f8 89 45 0c 8b 45 fc 83 0d ?? ?? ?? ?? ff c1 e8 05 c7 05 ?? ?? ?? ?? 19 36 6b ff 89 45 08 8b 45 e4 01 45 08 8b 45 08 33 45 0c 33 c1 2b f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1992,6 +2078,7 @@ rule Trojan_Win32_RedLineStealer_MF_2147825246_0
         $x_1_6 = "GetDiskFreeSpaceExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2016,6 +2103,7 @@ rule Trojan_Win32_RedLineStealer_EK_2147825277_0
         $x_1_4 = "fgkycxduixopics" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2037,6 +2125,7 @@ rule Trojan_Win32_RedLineStealer_PS_2147825401_0
         $x_1_1 = {03 c3 33 45 f4 33 45 f0 89 45 0c 8b 45 0c 01 05 ?? ?? ?? ?? 8b 45 0c 29 45 fc 8b 4d fc c1 e1 04 03 4d dc 8b 45 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2058,6 +2147,7 @@ rule Trojan_Win32_RedLineStealer_PS_2147825401_1
         $x_1_1 = {c1 e8 05 89 44 24 ?? 8b 4c 24 ?? 33 4c 24 ?? 8b 44 24 ?? 03 44 24 ?? c7 05 ?? ?? ?? ?? ee 3d ea f4 33 02 01 01 c1 c6 81 3d ?? ?? ?? ?? 16 05 00 00 89 4c 24 ?? 89 44 24 ?? 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2079,6 +2169,7 @@ rule Trojan_Win32_RedLineStealer_PT_2147825880_0
         $x_1_1 = {c1 e8 05 c7 05 ?? ?? ?? ?? 19 36 6b ff 89 45 08 8b 45 e4 01 45 08 8b 45 08 33 45 0c 33 c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2101,6 +2192,7 @@ rule Trojan_Win32_RedLineStealer_PT_2147825880_1
         $x_1_2 = {c1 e8 05 c7 05 ?? ?? ?? ?? 19 36 6b ff 89 45 08 8b 45 e4 01 45 08 8b 45 08 33 45 0c 81 45 f8 47 86 c8 61 33 c1 2b f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2122,6 +2214,7 @@ rule Trojan_Win32_RedLineStealer_PU_2147825881_0
         $x_1_1 = {d3 e8 89 44 24 ?? 8b 44 24 ?? 01 44 24 ?? 8b 44 24 ?? 33 44 24 ?? 89 74 24 ?? 89 44 24 ?? 89 44 24 ?? 8b 44 24 ?? 89 44 24 ?? 8b 44 24 ?? 31 44 24 ?? 8b 4c 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2144,6 +2237,7 @@ rule Trojan_Win32_RedLineStealer_PU_2147825881_1
         $x_1_2 = {f7 a4 24 80 00 00 00 8b 84 24 80 00 00 00 81 ac 24 80 00 00 00 d6 8a cd 68 b8 e2 3f 96 6e f7 a4 24 80 00 00 00 8b 84 24 80 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2165,6 +2259,7 @@ rule Trojan_Win32_RedLineStealer_PV_2147827631_0
         $x_1_1 = {49 81 c9 00 ff ff ff 41 8a 89 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? 0f b6 05 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 03 8d c4 fc ff ff 0f be 11 33 d0 a1 ?? ?? ?? ?? 03 85 c4 fc ff ff 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2186,6 +2281,7 @@ rule Trojan_Win32_RedLineStealer_LSA_2147827655_0
         $x_20_1 = {d3 e8 89 44 24 ?? 8b 44 24 ?? 01 44 24 ?? 8b 4c 24 ?? 33 ca 89 4c 24 ?? 89 7c 24 ?? 8b 44 24 ?? 89 44 24 ?? 8b 44 24 ?? 31 44 24 ?? 8b 54 24 ?? 89 54 24 ?? 89 3d ?? ?? ?? ?? 8b 44 24}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2207,6 +2303,7 @@ rule Trojan_Win32_RedLineStealer_LSB_2147827656_0
         $x_20_1 = {d3 ea 89 54 24 18 8b 44 24 50 01 44 24 18 8b 44 24 10 33 44 24 1c 89 74 24 34 89 44 24 10 89 44 24 58 8b 44 24 58 89 44 24 34 8b 44 24 18 31 44 24 34 8b 44 24 34}  //weight: 20, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2228,6 +2325,7 @@ rule Trojan_Win32_RedLineStealer_PW_2147827812_0
         $x_1_1 = {33 ca 89 4c 24 ?? 89 5c 24 ?? 8b 44 24 ?? 89 44 24 ?? 8b 44 24 ?? 31 44 24 ?? 8b 54 24 ?? 89 54 24 ?? 89 1d ?? ?? ?? ?? 8b 44 24 ?? 29 44 24 ?? 8b 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2249,6 +2347,7 @@ rule Trojan_Win32_RedLineStealer_PX_2147828047_0
         $x_1_1 = {23 cf 8d bc 0c ?? ?? ?? ?? 8a 17 89 4c 24 ?? 8a 08 88 0f 8b 4c 24 30 88 10 a1 ?? ?? ?? ?? 8d 2c 08 0f b6 07 0f b6 ca 03 c1 99 b9 00 01 00 00 f7 f9 8a 84 14 ?? ?? ?? ?? 30 45 00 ff 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2270,6 +2369,7 @@ rule Trojan_Win32_RedLineStealer_LSE_2147828455_0
         $x_1_1 = {03 c8 81 e1 ?? ?? ?? ?? 79 ?? 49 81 c9 ?? ?? ?? ?? 41 8a 89 ?? ?? ?? ?? 88 4d fb 0f b6 45 fb 8b 0d ?? ?? ?? ?? 03 4d e0 0f be 11 33 d0 a1 ?? ?? ?? ?? 03 45 e0 88 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2295,6 +2395,7 @@ rule Trojan_Win32_RedLineStealer_F_2147830375_0
         $x_1_5 = "AppPolicyGetProcessTerminationMethod" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2316,6 +2417,7 @@ rule Trojan_Win32_RedLineStealer_EM_2147834183_0
         $x_5_1 = {69 c9 98 09 00 00 81 e1 ff 00 00 00 8b 55 0c 03 55 dc 0f b6 02 33 c1 8b 4d 0c 03 4d dc 88 01}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2337,6 +2439,7 @@ rule Trojan_Win32_RedLineStealer_EM_2147834183_1
         $x_6_1 = {0f be 04 10 6b c0 44 99 b9 12 00 00 00 f7 f9 8b 55 0c 03 55 fc 0f b6 0a 33 c8 8b 55 0c 03 55 fc 88 0a}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2358,6 +2461,7 @@ rule Trojan_Win32_RedLineStealer_EM_2147834183_2
         $x_5_1 = {b9 41 00 00 00 f7 f9 8b 45 08 0f be 0c 10 81 e1 ff 00 00 00 8b 55 0c 03 55 dc 0f b6 02 33 c1 8b 4d 0c 03 4d dc 88 01}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2380,6 +2484,7 @@ rule Trojan_Win32_RedLineStealer_EM_2147834183_3
         $x_7_2 = {97 f7 d8 f8 25 89 00 00 00 8b ff 93 40 2f 83 ea 45 8b c7 87 d3}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2402,6 +2507,7 @@ rule Trojan_Win32_RedLineStealer_EM_2147834183_4
         $x_2_2 = "nurtoycktoqoXRJWQORJVoqwjrixnqwirokvJEOWTNMxowetkonwvo" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2427,6 +2533,7 @@ rule Trojan_Win32_RedLineStealer_EM_2147834183_5
         $x_1_5 = "CreateFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2448,6 +2555,7 @@ rule Trojan_Win32_RedLineStealer_SA_2147834529_0
         $x_2_1 = {5c 10 40 00 46 3b 35 ?? ?? ?? ?? 72 cd 26 00 a1 ?? ?? ?? ?? 8a 84 30 3b 2d 0b 00 8b 0d ?? ?? ?? ?? 88 04 31 81 3d ?? ?? ?? ?? 92 02 00 00 75 ?? 57 57 57 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2469,6 +2577,7 @@ rule Trojan_Win32_RedLineStealer_EB_2147835749_0
         $x_7_1 = {0f be 00 0f be 8d 5b ff ff ff 09 c8 88 c1 8b 85 60 ff ff ff 88 08 0f b7 85 f6 fe ff ff}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2493,6 +2602,7 @@ rule Trojan_Win32_RedLineStealer_B_2147839193_0
         $x_2_4 = "Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2517,6 +2627,7 @@ rule Trojan_Win32_RedLineStealer_C_2147839638_0
         $x_2_4 = "Software\\Microsoft\\Windows\\CurrentVersion\\App Paths" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2539,6 +2650,7 @@ rule Trojan_Win32_RedLineStealer_DI_2147840536_0
         $x_1_2 = {8b 55 08 03 55 f8 88 0a 8a 45 fd 88 45 fc 0f b6 4d fc 8b 55 08 03 55 f8 0f b6 02 2b c1 8b 4d 08 03 4d f8 88 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2560,6 +2672,7 @@ rule Trojan_Win32_RedLineStealer_E_2147843117_0
         $x_2_1 = {8b 44 24 08 83 2c 24 ?? ?? 01 04 24 8b 04 24 31 01}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2581,6 +2694,7 @@ rule Trojan_Win32_RedLineStealer_D_2147847951_0
         $x_2_1 = {03 c2 0f b6 c0 0f b6 84 05 ?? ?? ?? ?? 30 81 ?? ?? ?? ?? 41 89 8d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2602,6 +2716,7 @@ rule Trojan_Win32_RedLineStealer_G_2147848428_0
         $x_2_1 = {03 c2 0f b6 c0 0f b6 84 05 ?? ?? ?? ?? 30 83 ?? ?? ?? ?? 43 81 fb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2623,6 +2738,7 @@ rule Trojan_Win32_RedLineStealer_I_2147848975_0
         $x_2_1 = {0f b6 84 04 ?? ?? ?? ?? 30 81 ?? ?? ?? ?? 41 89 4c 24 ?? 81 f9 ?? ?? ?? ?? 72 ?? 05 00 03 c2 0f b6 c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2644,6 +2760,7 @@ rule Trojan_Win32_RedLineStealer_EN_2147849112_0
         $x_5_1 = {8b 7d 08 f6 17 80 2f 8f 47 e2 f8}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2665,6 +2782,7 @@ rule Trojan_Win32_RedLineStealer_EN_2147849112_1
         $x_5_1 = {8b 7d 08 f6 17 80 2f 9d 80 2f 35 47 e2 f5}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2686,6 +2804,7 @@ rule Trojan_Win32_RedLineStealer_J_2147849237_0
         $x_2_1 = {f7 e1 c1 ea ?? 6b c2 ?? 2b c8 8a 81 ?? ?? ?? ?? 8b 4c 24 ?? 88 44 0c ?? 41 89 4c 24}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2707,6 +2826,7 @@ rule Trojan_Win32_RedLineStealer_K_2147849252_0
         $x_2_1 = {f7 e2 c1 ea ?? 8b ca c1 e1 ?? 03 ca 8b 54 24 ?? 8b c2 2b c1 8a 80}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2729,6 +2849,7 @@ rule Trojan_Win32_RedLineStealer_L_2147850227_0
         $x_2_2 = {33 c2 83 c1 ?? a9 ?? ?? ?? ?? 74 0c 00 8b 01 ba ?? ?? ?? ?? 03 d0 83 f0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2750,6 +2871,7 @@ rule Trojan_Win32_RedLineStealer_M_2147852410_0
         $x_2_1 = {f6 17 80 37 ?? 47 e2 f8 5f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2771,6 +2893,7 @@ rule Trojan_Win32_RedLineStealer_N_2147887404_0
         $x_2_1 = {8b c0 33 db f6 17 80 37 ?? 47 e2 ?? 5f 5e 5b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2793,6 +2916,7 @@ rule Trojan_Win32_RedLineStealer_O_2147892166_0
         $x_2_2 = {80 2f 88 8b ?? 33 ?? ?? ?? 80 07 49 ?? ?? 8b ?? ?? ?? f6 2f 47 e2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2814,6 +2938,7 @@ rule Trojan_Win32_RedLineStealer_P_2147899126_0
         $x_2_1 = {80 07 48 33 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 80 2f 97 33 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f6 2f 47 e2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2847,6 +2972,7 @@ rule Trojan_Win32_RedLineStealer_MEA_2147900568_0
         $x_1_13 = "asdl94jlajsd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2868,6 +2994,7 @@ rule Trojan_Win32_RedLineStealer_PN_2147902097_0
         $x_1_1 = {c1 e8 05 89 44 24 ?? 8b 44 24 ?? 03 44 24 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 33 44 24 ?? 33 c6 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 89 44 24 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2893,6 +3020,7 @@ rule Trojan_Win32_RedLineStealer_RP_2147903621_0
         $x_1_5 = "sIasnnfbnxhbsAUie" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2914,6 +3042,7 @@ rule Trojan_Win32_RedLineStealer_SPBB_2147908219_0
         $x_1_1 = {8b 70 0c 31 c0 29 c8 31 c9 29 f1 01 c8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

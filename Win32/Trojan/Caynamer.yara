@@ -16,6 +16,7 @@ rule Trojan_Win32_Caynamer_MR_2147781781_0
         $x_1_1 = {d8 85 40 00 [0-2] e8 [0-14] 31 [0-3] 81 [0-12] 09 ?? 39 ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Caynamer_W_2147782478_0
         $x_10_2 = {8b 45 f4 8b 4d c8 d3 e0 89 45 e4}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_Caynamer_ACY_2147902449_0
         $x_1_1 = {52 50 8b 81 20 01 00 00 0b 44 24 34 33 46 64 50 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

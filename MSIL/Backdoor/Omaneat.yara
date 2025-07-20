@@ -38,6 +38,7 @@ rule Backdoor_MSIL_Omaneat_B_2147721711_0
         $x_2_24 = "Hahshes do not have the same lenght." ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

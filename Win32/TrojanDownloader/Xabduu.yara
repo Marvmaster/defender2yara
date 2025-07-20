@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Xabduu_ARAA_2147906262_0
         $x_2_5 = "urlmon" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

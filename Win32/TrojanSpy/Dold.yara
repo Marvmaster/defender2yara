@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Dold_A_2147657378_0
         $x_1_4 = "spc.org.br" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))

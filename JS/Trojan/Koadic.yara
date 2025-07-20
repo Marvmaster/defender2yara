@@ -19,6 +19,7 @@ rule Trojan_JS_Koadic_F_2147735377_0
         $x_1000_4 = "ReflectiveLoader@" ascii //weight: 1000
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1000_*) and 2 of ($x_100_*))) or
             (all of ($x*))

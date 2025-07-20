@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Delevid_A_2147607494_0
         $x_1_2 = {c6 44 18 05 6d 8d 45 fc e8 ?? ?? ff ff c6 44 18 06 33 8d 45 fc e8 ?? ?? ff ff c6 44 18 07 32}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Morix_A_2147641103_0
         $x_1_4 = {4e 47 53 5c 41 64 6d 69 6e 69 73 74 72 61 74 6f 72 5c a1 b8 bf aa ca bc a1 b9 b2 cb b5 a5 5c b3 cc d0 f2 5c c6 f4 b6 af}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

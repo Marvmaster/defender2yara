@@ -18,6 +18,7 @@ rule Spammer_Win32_Mohtersend_A_2147624516_0
         $x_1_4 = "TXMailShell" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

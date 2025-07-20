@@ -17,6 +17,7 @@ rule Trojan_Win32_Coins_GJK_2147848091_0
         $x_1_2 = "/c \"powershell -command IEX(New-Object Net.Webclient).Dow%SadString('%s/%s')\"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

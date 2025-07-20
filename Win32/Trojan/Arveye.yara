@@ -16,6 +16,7 @@ rule Trojan_Win32_Arveye_A_2147606981_0
         $x_1_2 = {e8 c9 ff ff ff 8d 44 24 0c 68 54 61 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

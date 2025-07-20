@@ -17,6 +17,7 @@ rule VirTool_Win32_Pucrpt_A_2147794468_0
         $x_1_2 = {50 68 00 10 40 00 6a 00 6a 00 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

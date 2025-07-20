@@ -20,6 +20,7 @@ rule Backdoor_Win32_SSrat_A_2147636973_0
         $x_1_6 = {5c 52 75 6e 00 33 34 7c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

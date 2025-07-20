@@ -18,6 +18,7 @@ rule Trojan_Win32_Smicon_2147638472_0
         $x_1_4 = {2f 6e 65 77 75 70 64 61 74 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

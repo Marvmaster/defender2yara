@@ -20,6 +20,7 @@ rule Backdoor_MacOS_X_WireLurker_A_2147706417_0
         $x_1_6 = {2f 6f 70 74 2f 63 6f 64 65 2f 61 70 70 2f 6d 79 50 72 6f 6a 65 63 74 2f 6d 61 63 68 6f 6f 6b 2f 6d 61 63 68 6f 6f 6b 2f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (5 of ($x*))
 }
 

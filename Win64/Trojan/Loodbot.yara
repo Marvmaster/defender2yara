@@ -18,6 +18,7 @@ rule Trojan_Win64_Loodbot_A_2147944217_0
         $x_2_4 = {49 8b cd 48 83 f8 15 48 0f 45 c8 42 0f b6 04 31 30 02 48 8d 41 01 48 8d 52 01 49 83 e8 01 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

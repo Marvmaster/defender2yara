@@ -18,6 +18,7 @@ rule TrojanClicker_Win32_Runae_A_2147643266_0
         $x_1_4 = "http://www.niudoudou.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

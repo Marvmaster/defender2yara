@@ -20,6 +20,7 @@ rule Ransom_Win32_Avaddon_PA_2147756676_0
         $x_1_5 = "\\XMedCon\\bin\\medcon.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Win32_Avaddon_AA_2147757739_0
         $x_1_6 = "<p>Do not try to recover files yourself!</p>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Ransom_Win32_Avaddon_PB_2147758685_0
         $x_2_2 = {b9 01 00 00 00 85 c9 0f 70 00 8d [0-5] 00 00 2b [0-5] 03 [0-5] a3 [0-5] 8b [0-5] 81 e9 2d ad 00 00 89 [0-5] 8b [0-5] 03 [0-5] 03 [0-5] 89 [0-5] a1 [0-5] 2b [0-5] a3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Ransom_Win32_Avaddon_KP_2147758825_0
         $x_1_4 = "\\XMedCon\\bin\\medcon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Ransom_Win32_Avaddon_C_2147759060_0
         $x_2_6 = "<title>Avaddon</title>" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -142,6 +147,7 @@ rule Ransom_Win32_Avaddon_MK_2147759332_0
         $x_1_1 = {8a 06 8d 4d bc 34 ?? 04 ?? 34 ?? 0f b6 c0 50 e8 ?? ?? ?? ?? 46 3b f7 75 e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +172,7 @@ rule Ransom_Win32_Avaddon_SS_2147759854_0
         $x_1_4 = "vcbk9uvkvdrt7bnG5Pbr5A==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -192,6 +199,7 @@ rule Ransom_Win32_Avaddon_P_2147783567_0
         $x_1_6 = "Win32_ShadowCopy.ID='%s'" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -22,6 +22,7 @@ rule Trojan_Win32_Ammyrat_C_2147735437_0
         $x_1_8 = "\\ammyygeneric\\target\\TrFmFileSys.h" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

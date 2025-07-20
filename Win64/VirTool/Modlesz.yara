@@ -19,6 +19,7 @@ rule VirTool_Win64_Modlesz_A_2147847060_0
         $x_1_4 = {4c 89 74 24 58 48 8d 0d ?? ?? ?? ?? e8 95 ?? ?? ?? 45 33 f6 4c 8d 05 ?? ?? ?? ?? 4c 8b ce 4c 89 74 24 20 48 8b d3 48 8b cf ff 15 ?? ?? ?? ?? 85 c0 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

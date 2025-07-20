@@ -26,6 +26,7 @@ rule PWS_Win32_Dozmot_A_2147621256_0
         $x_7_12 = {eb 23 e8 8e fe ff ff eb 18 8b 46 0c 85 c0 75 07 b8 01 00 00 c0 eb 23 ff 70 04 ff 30 e8 d4 fb ff ff}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_6_*) and 1 of ($x_1_*))) or
@@ -56,6 +57,7 @@ rule PWS_Win32_Dozmot_B_2147621659_0
         $x_1_5 = "=showmbm&" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -83,6 +85,7 @@ rule PWS_Win32_Dozmot_C_2147626006_0
         $x_1_5 = "%s/lin.php?m=%s&g=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -116,6 +119,7 @@ rule PWS_Win32_Dozmot_D_2147633342_0
         $x_2_10 = {f7 ff ff 5c c6 85 ?? f7 ff ff 63 c6 85 ?? f7 ff ff 75 c6 85 ?? f7 ff ff 72 c6 85 ?? f7 ff ff 72 c6 85 ?? f7 ff ff 65 c6 85 ?? f7 ff ff 6e c6 85 ?? f7 ff ff 74 c6 85 ?? f7 ff ff 73 c6 85 ?? f7 ff ff 65 c6 85 ?? f7 ff ff 72 c6 85 ?? f7 ff ff 76 c6 85 ?? f7 ff ff 65 c6 85 ?? f7 ff ff 72 c6 85 ?? f7 ff ff 2e c6 85 ?? f7 ff ff 69 c6 85 ?? f7 ff ff 6e c6 85 ?? f7 ff ff 69}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -144,6 +148,7 @@ rule PWS_Win32_Dozmot_E_2147638410_0
         $x_1_4 = "&fid=%s&lev=%d&jb=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -171,6 +176,7 @@ rule PWS_Win32_Dozmot_F_2147638491_0
         $x_1_8 = "SecurityMatrixKeypadButtonOK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

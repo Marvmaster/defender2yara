@@ -16,6 +16,7 @@ rule Trojan_MSIL_UrsuPow_AA_2147743060_0
         $x_1_2 = "choice /C Y /N /D Y /T 3 & Del" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

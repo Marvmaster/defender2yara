@@ -17,6 +17,7 @@ rule Trojan_Win64_EGWorker_SA_2147849740_0
         $x_1_3 = "rDOmHZs7uZiR7gPx1r6oSQuEWUlZTL23" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

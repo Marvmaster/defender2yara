@@ -16,6 +16,7 @@ rule Trojan_Win32_Refeys_A_2147680134_0
         $x_1_2 = {8b 43 0c 8b 00 8b 00 68 ?? ?? ?? ?? ff 37 89 45 ?? ff d6 85 c0 74 ?? 6a 50 ff d0 68 ?? ?? ?? ?? ff 37 66 89 45 ?? ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Refeys_B_2147682007_0
         $x_1_4 = "command=update_hid&new_hid=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

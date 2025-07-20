@@ -16,6 +16,7 @@ rule Trojan_MSIL_GurcuStealer_A_2147845817_0
         $x_2_1 = {fe 0c 01 00 fe 09 00 00 fe 0c ?? 00 6f ?? 00 00 0a fe 0c 00 00 fe 0c ?? 00 fe 0c 00 00 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 61 d1 fe 0e ?? 00 fe 0d ?? 00 28 ?? 00 00 0a 28 ?? 00 00 0a fe 0e 01 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_GurcuStealer_AAFT_2147851344_0
         $x_1_5 = "520b81d4-b03a-4bfa-a77f-195e662a28b6" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

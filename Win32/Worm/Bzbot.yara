@@ -19,6 +19,7 @@ rule Worm_Win32_Bzbot_C_2147626910_0
         $x_1_5 = "sandbox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

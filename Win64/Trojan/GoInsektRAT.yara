@@ -20,6 +20,7 @@ rule Trojan_Win64_GoInsektRAT_RP_2147915769_0
         $x_10_5 = "pm3/apps/Insekt/main.go" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

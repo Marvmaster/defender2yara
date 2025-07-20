@@ -16,6 +16,7 @@ rule Trojan_Win64_Raccoon_DB_2147846895_0
         $x_5_1 = {f7 d0 05 4f d4 a4 db 35 be 98 68 c9 c1 c0 f6 66 9d e9 [0-4] 41 0f b6 04 08 88 01 48 8d 49 01 48 83 ea 01 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_Raccoon_CBVV_2147851987_0
         $x_1_1 = {2b c2 48 98 0f b6 44 04 70 48 63 4c 24 2c 48 8b 94 24 ?? ?? ?? ?? 0f b6 0c 0a 33 c8 8b c1 48 63 4c 24 2c 48 8b 94 24 ?? ?? ?? ?? 88 04 0a e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Virus_Win32_Kadia_A_2147600921_0
         $x_1_3 = {b5 6b 0c 61 24 34 1e 1f 1f 8a e0 8a e2 1f b3 c8 69 65 34 1e 1f 1f 88 c8 e1 e0 e0 6f 65 38 1e 1f 1f 6d 65 38 1e 1f 1f b0 1f 55 34 1e 1f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

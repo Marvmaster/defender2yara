@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Prifou_224074_0
         $x_1_4 = {59 61 78 72 70 78 57 6a 71 78 46 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule BrowserModifier_Win32_Prifou_224074_1
         $x_1_6 = {ff ff 5d c2 10 00 0a 00 a1 ?? ?? ?? 00 8b 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule BrowserModifier_Win32_Prifou_224074_2
         $x_1_3 = "\\UpdateProc\\config.dat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule BrowserModifier_Win32_Prifou_224074_3
         $x_1_5 = "ChickenApp.openURL = function(url)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule BrowserModifier_Win32_Prifou_224074_4
         $x_1_4 = "SuzanDLL\\Release\\suzanw.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule BrowserModifier_Win32_Prifou_224074_5
         $x_1_6 = "\\Start Menu\\Programs\\Booking .lnk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule BrowserModifier_Win32_Prifou_224074_6
         $x_1_4 = "type=offinst&topic=downstart" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +190,7 @@ rule BrowserModifier_Win32_Prifou_224074_7
         $x_1_4 = {3c 73 63 72 69 70 74 20 73 72 63 3d 27 68 74 74 70 3a 2f 2f 6a 2e 70 72 69 63 65 6a 73 2e 6e 65 74 2f [0-7] 2f 63 6f 6d 6d 6f 6e 2e 6a 73 3f 63 68 61 6e 6e 65 6c 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +214,7 @@ rule BrowserModifier_Win32_Prifou_224074_8
         $x_1_4 = "instgrp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +239,7 @@ rule BrowserModifier_Win32_Prifou_224074_9
         $x_1_5 = "WatchDog\\Release\\pricemeterw.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -253,6 +263,7 @@ rule BrowserModifier_Win32_Prifou_224074_10
         $x_1_4 = "DealPly\\DealPlySetup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -278,6 +289,7 @@ rule BrowserModifier_Win32_Prifou_224074_11
         $x_1_6 = {2f 69 6e 73 74 61 6c 6c 20 2f 55 6e 4e 6d 3d 22 55 70 64 61 74 65 05 00 66 6f 72 05 00 50 72 69 63 65 46 6f 75 6e 74 61 69 6e 22}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -301,6 +313,7 @@ rule BrowserModifier_Win32_Prifou_224074_12
         $x_1_4 = "files\\PriceMeterExpressIE.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -324,6 +337,7 @@ rule BrowserModifier_Win32_Prifou_224074_13
         $x_1_4 = "http://www.pricemeter.net/go/postinstall/?action=install&partner=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -349,6 +363,7 @@ rule BrowserModifier_Win32_Prifou_224074_14
         $x_1_6 = "https://dumpster-server.herokuapp.com/manager/query" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +388,7 @@ rule BrowserModifier_Win32_Prifou_224074_15
         $x_1_5 = "\\UpdateProc\\bkup.dat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -400,6 +416,7 @@ rule BrowserModifier_Win32_Prifou_224074_16
         $x_1_5 = "SOFTWARE\\PriceMeter" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -428,6 +445,7 @@ rule BrowserModifier_Win32_Prifou_224074_17
         $x_1_9 = "SuzanEXE.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_30_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -456,6 +474,7 @@ rule BrowserModifier_Win32_Prifou_224074_18
         $x_1_6 = "http://www.PriceFountain.net/go/postinstall/?action=install&partner=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

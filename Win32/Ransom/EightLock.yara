@@ -22,6 +22,7 @@ rule Ransom_Win32_EightLock_A_2147712462_0
         $x_1_8 = "CryptoStreamMode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

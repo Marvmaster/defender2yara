@@ -19,6 +19,7 @@ rule TrojanDownloader_MSIL_Fofldr_A_2147697345_0
         $x_1_5 = {44 6f 77 6e 6c 6f 61 64 46 69 6c 65 [0-32] 50 72 6f 63 65 73 73 [0-32] 48 69 64 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

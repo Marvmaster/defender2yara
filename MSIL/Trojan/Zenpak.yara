@@ -16,6 +16,7 @@ rule Trojan_MSIL_Zenpak_PSUN_2147852737_0
         $x_2_1 = {72 3b 00 00 70 11 0a 28 ?? 00 00 0a 72 73 00 00 70 72 79 00 00 70 6f ?? 00 00 0a 1f 5c 1f 2f 6f ?? 00 00 0a 13 0b 11 0b 28 ?? 00 00 0a 13 0b 06 11 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

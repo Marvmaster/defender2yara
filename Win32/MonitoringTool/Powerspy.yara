@@ -17,6 +17,7 @@ rule MonitoringTool_Win32_Powerspy_C_147242_0
         $x_1_3 = {5c 00 6d 00 73 00 6e 00 61 00 70 00 70 00 69 00 6e 00 69 00 2e 00 69 00 6e 00 69 00 00 00 00 00 16 00 00 00 5c 00 6d 00 73 00 6e 00 75 00 73 00 72 00 2e 00 69 00 6e 00 69 00 00 00 1e 00 00 00 5c 00 65 00 6d 00 78 00 66 00 69 00 6c 00 65 00 30 00 30 00 31 00 2e 00 64 00 61 00 74 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule MonitoringTool_Win32_Powerspy_C_147242_1
         $x_1_3 = "F:\\Development\\MSN Spy Monitor Trial\\Projects\\CP Project\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule MonitoringTool_Win32_Powerspy_D_147488_0
         $x_1_3 = {5c 00 79 00 69 00 6d 00 61 00 70 00 70 00 69 00 6e 00 69 00 2e 00 69 00 6e 00 69 00 00 00 00 00 16 00 00 00 5c 00 79 00 69 00 6d 00 75 00 73 00 72 00 2e 00 69 00 6e 00 69 00 00 00 1e 00 00 00 5c 00 65 00 6d 00 78 00 66 00 69 00 6c 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule MonitoringTool_Win32_Powerspy_E_147492_0
         $x_1_3 = {4f 00 72 00 69 00 67 00 69 00 6e 00 61 00 6c 00 46 00 69 00 6c 00 65 00 6e 00 61 00 6d 00 65 00 00 00 73 00 79 00 6d 00 73 00 65 00 72 00 76 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule MonitoringTool_Win32_Powerspy_E_147492_1
         $x_1_3 = {65 00 6d 00 78 00 66 00 69 00 6c 00 65 [0-7] 2e 00 64 00 61 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +132,7 @@ rule MonitoringTool_Win32_Powerspy_F_148228_0
         $x_1_3 = "bdmreg.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -151,6 +157,7 @@ rule MonitoringTool_Win32_Powerspy_H_153027_0
         $x_2_5 = "the 'Send logs to your FTP" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -179,6 +186,7 @@ rule MonitoringTool_Win32_Powerspy_I_156063_0
         $x_1_5 = "skype.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

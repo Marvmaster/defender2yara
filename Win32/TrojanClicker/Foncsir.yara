@@ -18,6 +18,7 @@ rule TrojanClicker_Win32_Foncsir_A_2147628589_0
         $x_1_4 = {2f 63 6f 6e 66 2e 70 68 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

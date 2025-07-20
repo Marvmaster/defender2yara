@@ -19,6 +19,7 @@ rule Trojan_Win64_RootKit_LK_2147851153_0
         $x_1_4 = "SEProtectStartMutation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

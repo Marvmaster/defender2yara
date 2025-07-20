@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Suceret_A_2147612656_0
         $x_1_6 = {78 0a c1 e9 02 8b 1c 88 49 53 79 f9 8b c4 8d 72 01 8b ce 49 85 c9 7c 10 41 8d 95 ?? ?? ff ff 8a 18 88 1a 42 40 49 75 f7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule PWS_Win32_Delf_A_2147583577_0
         $x_1_7 = "goto try" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_6_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -67,6 +68,7 @@ rule PWS_Win32_Delf_MM_2147596349_0
         $x_1_23 = "HttpOpenRequestA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +94,7 @@ rule PWS_Win32_Delf_KI_2147596350_0
         $x_3_6 = {8b 80 00 03 00 00 05 90 00 00 00 ba 03 00 00 00 e8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 8b 45 fc 8b 80 00 03 00 00 8b 48 6c b2 01 a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 45 fc 8b 80 fc 02 00 00 ba}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_2_*))) or
@@ -125,6 +128,7 @@ rule PWS_Win32_Delf_EF_2147598154_0
         $x_1_10 = "CreateProcessA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +161,7 @@ rule PWS_Win32_Delf_EF_2147598154_1
         $x_1_13 = "WinExec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -192,6 +197,7 @@ rule PWS_Win32_Delf_EF_2147598155_0
         $x_200_16 = {8d 45 bc ba ?? ?? 40 00 e8 ?? ?? ff ff 8b 55 bc 58 e8 ?? ?? ff ff 84 c0 0f [0-32] 8d 45 b8 e8 ?? ?? ff ff 8b 45 b8 ba ?? ?? 40 00 e8 ?? ?? ff ff 8d 45 b0 50 8d 45 ac ba ?? ?? 40 00 e8 ?? ?? ff ff 8b 45 ac b9 03 00 00 00 66 ba 82 4d e8 ?? ?? ff ff 8b 45 b0 8d 55 b4}  //weight: 200, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_200_*) and 3 of ($x_100_*) and 8 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -223,6 +229,7 @@ rule PWS_Win32_Delf_RAG_2147600584_0
         $x_1_9 = "EGRndPassword" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +258,7 @@ rule PWS_Win32_Delf_ALD_2147601717_0
         $x_1_9 = {73 68 65 6c 6c 33 32 2e 64 6c 6c 2c 31 03 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_5_*) and 1 of ($x_1_*))) or
             ((8 of ($x_5_*))) or
@@ -284,6 +292,7 @@ rule PWS_Win32_Delf_EG_2147602088_0
         $x_1_10 = "UnLimited PW - Stealer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -316,6 +325,7 @@ rule PWS_Win32_Delf_A_2147612963_0
         $x_1_10 = "{DEDFF624-3CCB-11D9-90EE-666577660030}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -340,6 +350,7 @@ rule PWS_Win32_Delf_EJ_2147632249_0
         $x_1_2 = {73 6d 74 70 2e 79 61 6e 64 65 78 2e 72 75 [0-10] 67 72 61 62 62 65 72 20 70 61 73 73 77 6f 72 64 [0-12] 76 69 72 75 73 20 6c 6f 67}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -368,6 +379,7 @@ rule PWS_Win32_Delf_EK_2147632279_0
         $x_1_9 = "message=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             ((5 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -403,6 +415,7 @@ rule PWS_Win32_Delf_EM_2147641871_0
         $x_1_11 = "ftplist.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -429,6 +442,7 @@ rule PWS_Win32_Delf_BP_2147649665_0
         $x_4_2 = {2d 2d 2d 44 65 73 76 61 6c 69 6a 61 64 6f 72 20 76 31 2e (30|2d|39) 20 62 79 20 74 61 6b 65 64 6f 77 6e 2d 2d}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -452,6 +466,7 @@ rule PWS_Win32_Delf_CN_2147653890_0
         $x_1_4 = {5c 67 6d 2e 74 78 74 ?? ?? ?? ?? ?? 68 00 74 00 74 00 70 00 73 00 3a 00 2f 00 2f 00 77 00 77 00 77 00 2e 00 67 00 6f 00 6f 00 67 00 6c 00 65 00 2e 00 63 00 6f 00 6d 00 2f 00 61 00 63 00 63 00 6f 00 75 00 6e 00 74 00 73 00 2f 00 53 00 65 00 72 00 76 00 69 00 63 00 65 00 4c 00 6f 00 67 00 69 00 6e 00 3f 00 73 00 65 00 72 00 76 00 69 00 63 00 65 00 3d 00 6d 00 61 00 69 00 6c 00 26 00 70 00 61 00 73 00 73 00 69 00 76 00 65 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 26 50 61 73 73 77 64 3d ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 26 45 6d 61 69 6c 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -479,6 +494,7 @@ rule PWS_Win32_Delf_CR_2147718651_0
         $x_1_7 = "\\Thunderbird\\Profiles\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*))) or

@@ -24,6 +24,7 @@ rule Trojan_Win32_Price_A_2147597984_0
         $x_1_10 = "FindNextFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -31,6 +31,7 @@ rule Backdoor_Win32_Licat_2147571848_0
         $x_4_17 = {8d 45 e8 50 c6 45 e8 4d c6 45 e9 53 c6 45 ea 4e c6 45 eb 48 c6 45 ec 69 c6 45 ed 64}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_3_*) and 2 of ($x_2_*))) or
             ((5 of ($x_3_*) and 1 of ($x_2_*))) or

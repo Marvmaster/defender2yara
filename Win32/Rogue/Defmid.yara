@@ -17,6 +17,7 @@ rule Rogue_Win32_Defmid_159648_0
         $x_1_3 = {4d 61 63 68 69 6e 65 47 75 69 64 00 42 42 30 32 42 37 45 45 2d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Rogue_Win32_Defmid_159648_1
         $x_1_2 = "BB02B7EE-5FC2-407d-A6EC-5DB24C0FA7C3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Rogue_Win32_Defmid_159648_2
         $x_1_6 = "wm_id=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Rogue_Win32_Defmid_159648_3
         $x_1_5 = {2f 00 73 00 63 00 61 00 6e 00 5f 00 6f 00 76 00 65 00 72 00 2e 00 67 00 69 00 66 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Rogue_Win32_Defmid_159648_4
         $x_1_4 = {70 00 72 00 6f 00 67 00 72 00 65 00 73 00 73 00 2e 00 68 00 74 00 6d 00 6c 00 [0-5] 68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 77 00 69 00 6e 00 64 00 6f 00 77 00 73 00 75 00 70 00 64 00 61 00 74 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Rogue_Win32_Defmid_159648_5
         $x_1_8 = "threats_high_cnt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -169,6 +175,7 @@ rule Rogue_Win32_Defmid_159648_6
         $x_3_8 = {2e 63 6f 2e 63 63 00 [0-9] 49 6e 73 74 61 6c 6c [0-16] 47 65 74 56 65 72 73 69 6f 6e 2e 64 6c 6c 00 67 65 74 56}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -212,6 +219,7 @@ rule Rogue_Win32_Defmid_159648_7
         $x_2_19 = "Antivirus Center " ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -258,6 +266,7 @@ rule Rogue_Win32_Defmid_159648_8
         $x_2_21 = {05 5e 0c 00 00 0f b6 c8 81 f1 11 0c 00 00 8b 55 0c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

@@ -21,6 +21,7 @@ rule Worm_MSIL_Najm_A_2147779586_0
         $x_3_6 = "frm_nasharat" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_3_*))) or
             ((1 of ($x_5_*) and 3 of ($x_3_*))) or

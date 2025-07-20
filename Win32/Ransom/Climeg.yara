@@ -15,6 +15,7 @@ rule Ransom_Win32_Climeg_A_2147717948_0
         $x_1_1 = {72 61 6e 73 6f 6d 5c 63 73 5c 72 61 6e 73 6f 6d 5c 72 61 6e 73 6f 6d 5c 6f 62 6a 5c 44 65 62 75 67 5c 72 61 6e 73 6f 6d 2e 70 64 62 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Worm_Win32_Kasidet_A_2147687758_0
         $x_1_3 = "?getcmd=1&uid=%s&cn=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Worm_Win32_Kasidet_B_2147689258_0
         $x_1_7 = "SELECT * FROM AntiVirusProduct" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -74,6 +76,7 @@ rule Worm_Win32_Kasidet_D_2147706012_0
         $x_1_7 = "aHR0cDovL3JvbGVpbi5pbi9TZXJ2ZXJTaWRlL3Rhc2tzLnBocA==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule Worm_Win32_Kasidet_F_2147709019_0
         $x_1_7 = "\\VFFiWwxx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -125,6 +129,7 @@ rule Worm_Win32_Kasidet_G_2147724871_0
         $x_1_5 = {68 c3 f6 e6 a3 e8 ?? ?? ?? ?? 8b f8 59 85 ff 74 68 8b 47 3c 53 56 8b 74 38 78 03 f7 8b 46 20 8b 4e 24 8b 5e 1c 03 c7 03 cf 03 df}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -148,6 +153,7 @@ rule Worm_Win32_Kasidet_H_2147725533_0
         $x_1_3 = {42 80 3c 0a 00 75 f9 3b f2 73 0f 0f be 14 0e 33 c2 69 c0 ?? ?? ?? ?? 46 eb dc 5e c3 56 be ?? ?? ?? ?? 33 d2 e8 ?? ?? ?? ff 85 c0 74 16 0f b7 04 51 33 f0 69 f6 ?? ?? ?? ?? 42 e8 ?? ?? ?? ff 3b d0 72 ea 8b c6 5e c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule Worm_Win32_Kasidet_I_2147726173_0
         $x_1_4 = {66 83 34 46 ?? 40 3b c7 72 f6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

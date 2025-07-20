@@ -21,6 +21,7 @@ rule Ransom_Win32_Nobig_2147724424_0
         $x_5_7 = "FIND GIBON SUPERADMIN MESSAGE" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

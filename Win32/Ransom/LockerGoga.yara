@@ -16,6 +16,7 @@ rule Ransom_Win32_LockerGoga_2147734273_0
         $x_1_2 = {52 45 41 44 4d 45 5f 4c 4f 43 4b 45 44 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Ransom_Win32_LockerGoga_B_2147734298_0
         $x_1_2 = "(doc|dot|wbk|docx|dotx|docb|xlm|xlsx|xltx|xlsb|xlw|ppt|pot|pps|pptx|potx|ppsx|sldx|pdf)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule Ransom_Win32_LockerGoga_D_2147734301_0
         $x_2_22 = {52 45 41 44 4d 45 2d 4e 4f 57 2e 74 78 74 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_2_*))) or
             ((2 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -107,6 +110,7 @@ rule Ransom_Win32_LockerGoga_C_2147734302_0
         $x_1_2 = "CryptoLocker" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -139,6 +143,7 @@ rule Ransom_Win32_LockerGoga_STR_2147809871_0
         $x_1_12 = ".locky" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +169,7 @@ rule Ransom_Win32_LockerGoga_E_2147913047_0
         $x_1_6 = "This may lead to the impossibility of recovery of the certain files." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

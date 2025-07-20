@@ -16,6 +16,7 @@ rule Trojan_MSIL_Disdroth_ADJ_2147898742_0
         $x_1_1 = {14 0a 17 0b 0e 04 2c 13 0e 04 17 33 1a 7e 5c 00 00 0a 02 6f 61 00 00 0a 0a 2b 0c 7e 5e 00 00 0a 02 6f 61 00 00 0a 0a 06 2c 09 06 03 04 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_Disdroth_EM_2147901905_0
         $x_1_5 = "WDSync.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_MSIL_Disdroth_PTIT_2147902935_0
         $x_2_1 = {13 06 11 06 28 ?? 00 00 06 06 28 ?? 00 00 0a 2c 06 06 28 ?? 00 00 0a 08 06 28 ?? 00 00 0a de 03}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

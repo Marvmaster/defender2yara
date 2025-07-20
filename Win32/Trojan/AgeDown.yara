@@ -20,6 +20,7 @@ rule Trojan_Win32_AgeDown_DA_2147852019_0
         $x_1_5 = {68 69 64 63 6f 6e 3a [0-7] 56 53 2e 62 61 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

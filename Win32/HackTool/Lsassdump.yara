@@ -17,6 +17,7 @@ rule HackTool_Win32_Lsassdump_P_2147805372_0
         $x_3_3 = "pypykatz lsa minidump" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

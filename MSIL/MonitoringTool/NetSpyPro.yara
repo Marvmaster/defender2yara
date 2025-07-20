@@ -23,6 +23,7 @@ rule MonitoringTool_MSIL_NetSpyPro_183399_0
         $x_10_9 = "txtKeyLoggerKeyWords" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 4 of ($x_10_*))) or
             ((2 of ($x_100_*) and 1 of ($x_20_*) and 2 of ($x_10_*))) or

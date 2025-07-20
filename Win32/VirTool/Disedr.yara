@@ -17,6 +17,7 @@ rule VirTool_Win32_Disedr_B_2147930831_0
         $x_1_3 = {33 c9 03 c7 8b bd e4 fb ff ff d1 e8 51 51 51 51 ff b5 dc fb ff ff 66 89 4c 47 10 57 68 a4 00 09 00 53 ff ?? ?? ?? ?? ?? 57 6a 00 8b f0 ff ?? ?? ?? ?? ?? 50 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

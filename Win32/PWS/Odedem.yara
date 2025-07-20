@@ -19,6 +19,7 @@ rule PWS_Win32_Odedem_A_2147608912_0
         $x_1_5 = "c=1&w=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

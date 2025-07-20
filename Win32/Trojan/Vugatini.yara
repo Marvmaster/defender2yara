@@ -19,6 +19,7 @@ rule Trojan_Win32_Vugatini_A_2147834745_0
         $x_1_4 = {56 47 41 75 74 68 2e 64 6c 6c 00 76 6d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_MSIL_ArtemLoad_NR_2147912423_0
         $x_1_4 = "ProfilsManagerGmail.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

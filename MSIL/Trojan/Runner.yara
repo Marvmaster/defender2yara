@@ -17,6 +17,7 @@ rule Trojan_MSIL_Runner_GP_2147896642_0
         $x_2_2 = {47 69 1f 44 61 9d 11 0e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

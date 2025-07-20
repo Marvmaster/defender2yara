@@ -19,6 +19,7 @@ rule Trojan_Win32_Quilzir_A_2147605298_0
         $x_1_5 = {00 5a 69 6c 6c 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

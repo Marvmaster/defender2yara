@@ -30,6 +30,7 @@ rule HackTool_MSIL_FrostyStash_A_2147932410_0
         $x_1_15 = "TMR_CheckDB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -60,6 +61,7 @@ rule HackTool_MSIL_FrostyStash_B_2147932628_0
         $x_1_6 = "NO_MESSAGES" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +88,7 @@ rule HackTool_MSIL_FrostyStash_C_2147932629_0
         $x_1_6 = "JavaScriptSerializer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

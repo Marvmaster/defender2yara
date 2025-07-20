@@ -18,6 +18,7 @@ rule Spammer_Win32_EmailBomb_F_2147632464_0
         $x_1_4 = {b9 0d 00 00 00 be ?? ?? ?? ?? 8d bc 24 ?? ?? 00 00 f3 a5 89 44 24 1c 66 a5 ff 15 ?? ?? ?? ?? 68 94 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Spammer_Win32_EmailBomb_G_2147633033_0
         $x_2_4 = "%APPDATA%\\Microsoft\\Internet Explorer\\ccsr" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -68,6 +70,7 @@ rule Spammer_Win32_EmailBomb_H_2147633334_0
         $x_1_4 = {68 74 74 70 3a 2f 2f 70 72 6f 74 65 63 74 79 6f 75 72 70 63 2d 31 ?? 2e 63 6f 6d 2f 6f 75 74 32 2f 6d 73 6e 5f 69 6d 61 69 6c 65 72 5f 76 [0-2] 2e 74 78 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

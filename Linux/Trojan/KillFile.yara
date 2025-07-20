@@ -22,6 +22,7 @@ rule Trojan_Linux_KillFile_A_2147825142_0
         $x_1_7 = "killfileandpid" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

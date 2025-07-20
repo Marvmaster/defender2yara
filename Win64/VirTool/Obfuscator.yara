@@ -16,6 +16,7 @@ rule VirTool_Win64_Obfuscator_A_2147648286_0
         $x_1_2 = {48 8b 7b 18 8b 41 3c 48 03 c1 0f b7 50 14 48 8d 74 02 18 0f b7 50 06 48 83 ee 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule VirTool_Win64_Obfuscator_C_2147657883_0
         $x_1_1 = {48 8d 7c 24 20 (89 44|89 44) ff d2 (83|83) 8b d0 03 d3 (8b 4c|8b 4c) 56 57 51 51 8b 06 (b9 ?? ?? ?? ??|b9 ?? ?? ?? ??) (83|83) (48 83|48 83) 2b c2 ab}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule VirTool_Win64_Obfuscator_D_2147682197_0
         $x_1_3 = {8a 01 04 47 41 88 00 0f b6 01 99 83 e0 01 33 c2 3b c2 75 05 ff c3 48 ff c1 ff c3 49 ff c0 48 ff c1 81 fb d6 08 00 00 72 d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule VirTool_Win64_Obfuscator_ADB_2147684988_0
         $x_1_3 = {b9 b9 06 a0 bf e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule VirTool_Win64_Obfuscator_E_2147688417_0
         $x_1_6 = {c6 44 24 40 57 c6 44 24 41 49 c6 44 24 42 4e c6 44 24 43 49 c6 44 24 44 4e c6 44 24 45 45 c6 44 24 46 54}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -127,6 +132,7 @@ rule VirTool_Win64_Obfuscator_F_2147691622_0
         $x_1_3 = {b9 1c 00 00 00 fc f3 48 a5 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +154,7 @@ rule VirTool_Win64_Obfuscator_G_2147696580_0
         $x_1_2 = {48 8b e1 48 8b c2 4c 8b 4c 24 20 48 8b 54 24 10 48 8b 4c 24 08 4c 8b 44 24 18 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

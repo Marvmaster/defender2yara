@@ -23,6 +23,7 @@ rule Trojan_Win64_Truebot_B_2147844396_0
         $x_1_9 = "n=%s&o=%s&a=%d&u=%s&p=%s&d=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win64_Truebot_ZG_2147898779_0
         $x_1_2 = "QtWebEngineProcess.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

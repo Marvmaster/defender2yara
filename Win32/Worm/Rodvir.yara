@@ -17,6 +17,7 @@ rule Worm_Win32_Rodvir_2147596654_0
         $x_1_3 = {81 75 f8 36 63 02 16 6a 00 53 e8 ?? ?? ff ff 3b 45 f8 0f 82 b1 00 00 00 6a 02 6a 00 8b 45 f8 f7 d8 50 53 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

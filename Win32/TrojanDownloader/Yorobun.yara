@@ -28,6 +28,7 @@ rule TrojanDownloader_Win32_Yorobun_A_2147652038_0
         $x_1_14 = "dwtetevf.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_3_*) and 7 of ($x_1_*))) or
             ((3 of ($x_5_*) and 5 of ($x_1_*))) or
@@ -61,6 +62,7 @@ rule TrojanDownloader_Win32_Yorobun_B_2147697392_0
         $x_1_8 = {6a 04 8d 45 f8 50 6a 05 ff 75 0c ff d7 56 68 80 00 00 00 6a 04 56 6a 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

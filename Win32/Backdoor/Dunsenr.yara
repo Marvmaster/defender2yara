@@ -20,6 +20,7 @@ rule Backdoor_Win32_Dunsenr_B_2147689270_0
         $x_1_6 = "118.192.91.35" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

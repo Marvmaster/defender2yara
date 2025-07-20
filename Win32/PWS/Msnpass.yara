@@ -20,6 +20,7 @@ rule PWS_Win32_Msnpass_B_2147596919_0
         $x_5_6 = "SetWindowsHookExA" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule PWS_Win32_Msnpass_C_2147630163_0
         $x_1_6 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -71,6 +73,7 @@ rule PWS_Win32_Msnpass_D_2147633715_0
         $x_1_3 = {26 70 6d 61 69 6c 3d ?? ?? ?? ?? ?? ?? ?? ?? ?? 26 70 77 3d ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 26 6d 61 69 6c 3d ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 26 63 6f 75 6e 74 72 79 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule PWS_Win32_Msnpass_F_2147654384_0
         $x_1_3 = "173.212.238.196/msn/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule PWS_Win32_Msnpass_B_2147806852_0
         $x_2_10 = "installhook" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_5_*) and 2 of ($x_2_*))) or
             (all of ($x*))

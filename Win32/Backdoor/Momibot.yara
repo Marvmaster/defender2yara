@@ -21,6 +21,7 @@ rule Backdoor_Win32_Momibot_B_2147600926_0
         $x_1_6 = {43 4f 4e 46 49 47 53 3a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -53,6 +54,7 @@ rule Backdoor_Win32_Momibot_C_2147601107_0
         $x_1_8 = {69 63 6d 70 5f 64 64 6f 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_4_*))) or

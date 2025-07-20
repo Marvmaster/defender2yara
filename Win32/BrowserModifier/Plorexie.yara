@@ -19,6 +19,7 @@ rule BrowserModifier_Win32_Plorexie_225962_0
         $x_1_5 = "%31%32%33%2E%61%31%30%31%2E%63%63/u.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -34,6 +34,7 @@ rule Trojan_Win64_TreeTrunk_B_2147828394_0
         $x_1_19 = "7B31C9A56B15AEA8FC6032" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanSpy_MSIL_Sylonif_A_2147683515_0
         $x_1_4 = {46 74 70 55 70 6c 6f 61 64 46 69 6c 65 54 6f 53 65 72 76 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanSpy_MSIL_Sylonif_B_2147684271_0
         $x_1_5 = "windowexesystemlog" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

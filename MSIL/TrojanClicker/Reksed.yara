@@ -18,6 +18,7 @@ rule TrojanClicker_MSIL_Reksed_A_2147683206_0
         $x_1_4 = {00 67 65 74 5f 53 65 64 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanClicker_MSIL_Reksed_B_2147684576_0
         $x_1_5 = "Google\\Chrome\\User Data\\Default\\Extensions\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*))) or

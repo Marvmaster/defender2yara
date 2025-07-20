@@ -24,6 +24,7 @@ rule Backdoor_Win32_GoldenLight_A_2147690304_0
         $x_1_10 = "sOftWarE\\MIcrOsOft\\WIndOwS\\CurRenTVeRsiOn\\RuN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Backdoor_Win32_GoldenLight_B_2147690305_0
         $x_4_2 = {8a 04 0e 8a d3 32 01 f6 d2 32 c2 88 01 75 02 88 11 43 41 83 fb 1c 7c e8}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Backdoor_Win32_GoldenLight_A_2147690398_0
         $x_1_3 = {27 99 71 c8 8b 8b 75 52 66 7a 47 94 57 02 4e 6b 56 63 94 ae fe 21 14 4a c2 06 3c f4 e9 a2 a9 0a df a5 61 72 24 f8 d1 2f 0d f0 40 46 e3 f8 f2 f0 a5 10 ca b5 5b 9e 23 9a c8 d4 79 b1 d2 93 bf 53 8b 75 ba bb 5f 86 60 fb 70 7b ff 21 2c 4e 30 40 07 4f 07 e3 e1 3c 6b 2d 7d 20 6a 5a 75 45 d9 2b c6 a6 f1 32 13 6d d7 aa b4 0b 49 0c c7 89 1e da cf 8c cc af 0a 4a 4e 9c 1c f3 07 99 d2 c0 e0 9f c7 fd 42 7a 48 ee be d6 95 5c 08 ee af 3d 14 03 00 00 01 01 16 03 00 00 38 aa 10 a9 b1 7d d1 a9 33 0b 29 7a 01 74 51 9b 82 8a 37 b8 f1 8a 1f 35 4e c8 27 1a a7 0b 68 bc 35 29 9e bb 02 d4 76 2d 4a d0 de 82 ed 42 5b d0 dc 9b cf e8 ba cf 27 7c a3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Backdoor_Win32_GoldenLight_A_2147690399_0
         $x_1_4 = {55 c8 bf 65 13 da 06 b1 67 91 98 d9 09 b2 47 f9 c6 9c 74 bf d8 66 05 32 cf 54 01 b2 20 5e 53 c0 5d 5a 95 d5 d3 df ae d2 ef a4 06 1a 7e 94 9c 8d 0e e4 2b 9a ec 65 35 24 35 66 6c fb ac d2 48 11 4d ac ef c9 6e 20 d7 b8 c6 16 d3 49 f2 e3 75 2a 95 7e d3 67 c0 7b e8 e6 42 b2 aa 15 c4 96 e5 56 1e c8 d1 60 dc 0c 5c 08 ad 25 a2 50 41 5c f6 2d 39 83 58 38 f7 12 bc 63 bb 69 87 cb 5b c2 ff 02 03 01 00 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

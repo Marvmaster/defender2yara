@@ -19,6 +19,7 @@ rule Ransom_Win32_HorrorCrypt_PAA_2147797957_0
         $x_1_4 = {77 6d 69 63 20 70 72 6f 63 65 73 73 20 77 68 65 72 65 20 6e 61 6d 65 3d 27 [0-11] 2e 65 78 65 27 20 64 65 6c 65 74 65 20 2f 6e 6f 69 6e 74 65 72 61 63 74 69 76 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

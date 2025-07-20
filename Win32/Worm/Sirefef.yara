@@ -19,6 +19,7 @@ rule Worm_Win32_Sirefef_A_143930_0
         $x_2_4 = {0f 8c f1 00 00 00 8d 85 80 fc ff ff 50 ff 75 ec c7 85 80 fc ff ff 01 00 01 00 ff 15}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

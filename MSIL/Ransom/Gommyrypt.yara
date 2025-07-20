@@ -18,6 +18,7 @@ rule Ransom_MSIL_Gommyrypt_A_2147721782_0
         $x_2_4 = "QUxMIE9GIFlPVVIgRklMRVMgSEFWRSBCRUVOIEVOQ1JZUFRFRCE=" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Ransom_MSIL_Gommyrypt_AGO_2147850642_0
         $x_1_2 = "Admoooon" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

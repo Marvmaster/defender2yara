@@ -23,6 +23,7 @@ rule Backdoor_Win32_TrickPos_A_2147730306_0
         $x_1_8 = "(&(objectCategory=computer)(userAccountControl:1.2.840.113556.1.4.803:=8192))" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Ransom_Win32_R2Block_SU_2147768440_0
         $x_1_8 = "get_r2block_Wallpaper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

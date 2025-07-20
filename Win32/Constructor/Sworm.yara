@@ -18,6 +18,7 @@ rule Constructor_Win32_Sworm_A_2147649614_0
         $x_1_4 = ".WriteLine(\"%Setcode1%infect%Setcode1% c:\\windows\\%Setcode8% j:\\%Setcode1%target%Setcode1%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

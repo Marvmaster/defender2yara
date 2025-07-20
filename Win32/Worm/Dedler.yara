@@ -18,6 +18,7 @@ rule Worm_Win32_Dedler_AE_2147599985_0
         $x_1_4 = "%sauto.php?v=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

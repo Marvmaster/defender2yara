@@ -19,6 +19,7 @@ rule Trojan_Win32_Neysd_A_2147686561_0
         $x_1_5 = "SD_2013 Is Running!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Aneatop_A_2147696151_0
         $x_1_6 = "KJBV44Z6HZH2379ACI6TSEU44" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

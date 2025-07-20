@@ -18,6 +18,7 @@ rule Worm_Win32_Bancorkut_B_2147603565_0
         $x_1_4 = "www.orkut.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule Worm_Win32_Bancorkut_C_2147619196_0
         $x_5_4 = "Embedded Web Browser from: http://bsalsa.com/" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*))) or
             ((3 of ($x_10_*))) or

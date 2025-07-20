@@ -16,6 +16,7 @@ rule Trojan_Win32_ShadeR_SA_2147745460_0
         $x_1_1 = {8a 14 2e 68 [0-16] 88 54 24 43 [0-16] 00 00 74 [0-32] 8b 0d ?? ?? ?? ?? 8a 54 24 3b 88 14 0e 46 3b f3 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

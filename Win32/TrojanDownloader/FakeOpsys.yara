@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_FakeOpsys_2147624528_0
         $x_1_4 = {68 5e 01 00 00 68 82 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

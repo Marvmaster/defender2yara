@@ -17,6 +17,7 @@ rule Trojan_MSIL_Launcher_A_2147730466_0
         $x_1_2 = "get_StartupPath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_Launcher_A_2147730466_1
         $x_1_1 = {72 01 00 00 70 28 1d 00 00 0a 26 de 0c 28 1e 00 00 0a 28 1f 00 00 0a de 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_MSIL_Launcher_SG_2147908718_0
         $x_1_2 = "hideit.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

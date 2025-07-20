@@ -21,6 +21,7 @@ rule Trojan_Win32_Scribroz_A_2147650358_0
         $x_1_7 = "5959455A050D5A43411B5B5C57445D5D1D5C5B" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or

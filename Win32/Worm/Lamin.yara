@@ -20,6 +20,7 @@ rule Worm_Win32_Lamin_C_2147636520_0
         $x_1_6 = {04 5c ff ff 41 44 ff 6a 00 28 dc fe 01 00 5d fb 2f cc fe 04 5c ff ff 41 ac fe 6a 00 28 bc fe 03 00 5d fb 2f 9c fe}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

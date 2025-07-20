@@ -23,6 +23,7 @@ rule Ransom_Win32_Fortrypt_A_2147692415_0
         $x_1_9 = {8d 45 b0 50 ff 75 f8 ff 75 a8 ff 75 fc ff 15 ?? ?? ?? ?? 0b c0 75 05 e9 ?? ?? 00 00 68 00 00 10 00 8d 45 b0 50 ff 75 a8 6a 00 6a 00 6a 00 ff 35 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 0b c0 75 05 e9 ?? ?? 00 00 6a 00 8d 45 d4 50 ff 75 d0 ff 75 fc e8 ?? ?? 00 00 83 f8 ff 75 0e e8 ?? ?? 00 00 0b c0 74 05 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

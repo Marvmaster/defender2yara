@@ -19,6 +19,7 @@ rule TrojanSpy_WinNT_SevenSaw_A_2147600057_0
         $x_1_4 = {57 33 c0 50 b8 40 42 0f 00 50 8d 45 d0 50 ff 15 ?? ?? ?? ?? 57 57 57 57 8d 45 d0 50 ff d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

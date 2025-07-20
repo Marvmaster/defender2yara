@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Buzus_A_2147603255_0
         $x_2_5 = {10 00 8b 44 24 3c 8d 94 24 94 00 00 00 52 50 ff 15 ?? ?? 10 00 8b 94 24 38 01 00 00 8b 44 24 38 6a 00 8d 4c 24 4c 6a 04 83 c2 08 51 52 50 ff 15 ?? ?? 10 00 56 [0-48] c6 44 24 ?? ?? c6 44 24 ?? ?? c6 44 24 ?? ?? c6 44 24 ?? ?? c6 44 24 ?? ?? c6 44 24 ?? ?? c6 44 24}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 1 of ($x_10_*) and 1 of ($x_2_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule TrojanDropper_Win32_Buzus_A_2147609458_0
         $x_1_2 = {53 56 8b f0 6a 0a 52 a1 6c 46 40 00 50 e8 56 fd ff ff 8b d8 53 a1 6c 46 40 00 50 e8 70 fd ff ff 89 06 53 a1 6c 46 40 00 50 e8 52 fd ff ff 8b d8 53 e8 52 fd ff ff 8b f0 85 f6 74 06 53 e8 2e fd ff ff 8b c6 5e 5b c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

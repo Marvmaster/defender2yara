@@ -18,6 +18,7 @@ rule Worm_Win32_Clonrek_A_2147684362_0
         $x_1_4 = {43 4c 43 4b 00 00 00 00 4d 69 6e 69 6e 67 20 73 74 61 72 74 65 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

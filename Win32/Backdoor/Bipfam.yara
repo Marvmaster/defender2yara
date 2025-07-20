@@ -16,6 +16,7 @@ rule Backdoor_Win32_Bipfam_A_2147642237_0
         $x_1_2 = {89 d0 c1 e0 03 01 d0 8d 0c 85 00 00 00 00 8b 16 8b ?? ?? 89 44 0a 18 8d ?? ?? ff 00 eb ?? 8b ?? ?? c7 40 04 32 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_MSIL_Nightmare_ARA_2147914449_0
         $x_2_3 = "Hyper-V" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

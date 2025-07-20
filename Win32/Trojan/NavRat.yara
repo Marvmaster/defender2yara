@@ -18,6 +18,7 @@ rule Trojan_Win32_NavRat_A_2147727585_0
         $x_1_4 = "PrecomExe : returned from Preproc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule Backdoor_Win64_Drixed_A_2147689743_0
         $x_1_10 = {68 74 74 70 73 68 6f 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule Backdoor_Win64_Drixed_C_2147696314_0
         $x_1_3 = {63 6c 69 63 6b 73 68 6f 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -78,6 +80,7 @@ rule Backdoor_Win64_Drixed_Q_2147794853_0
         $x_10_2 = {4c 8b 44 24 30 4c 8b 4c 24 30 4c 8b 54 24 10 47 8a 1c 02 4c 8b 04 24 47 88 1c 08}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

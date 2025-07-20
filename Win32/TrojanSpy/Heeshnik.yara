@@ -25,6 +25,7 @@ rule TrojanSpy_Win32_Heeshnik_A_2147711657_0
         $x_1_11 = {6d 55 6e 69 74 4f 66 66 6c 69 6e 65 4b 65 79 4c 6f 67 67 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

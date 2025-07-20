@@ -21,6 +21,7 @@ rule Backdoor_IRC_Zapchast_AZ_2147597378_0
         $x_1_7 = "servers.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

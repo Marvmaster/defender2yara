@@ -16,6 +16,7 @@ rule Trojan_MSIL_GhostStealer_MB_2147897692_0
         $x_10_1 = {13 0b 08 28 ?? ?? ?? 0a 2d 10 08 11 0b 28 ?? ?? ?? 0a 16 13 18 dd 1e 03 00 00 11 13 7b 2c 00 00 04 11 0b 6f ?? ?? ?? 0a 26 14 13 0c 72 d7 06 00 70 73 c0 00 00 0a 13 0d 11 07 13 0e}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MSIL_chihuahua_ACH_2147942109_0
         $x_3_3 = "chihuahua" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

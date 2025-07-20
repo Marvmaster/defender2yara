@@ -22,6 +22,7 @@ rule Trojan_MSIL_SpyStealer_AM_2147817816_0
         $x_1_7 = "CheckRemoteDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_SpyStealer_FZA_2147818772_0
         $x_1_1 = {7e 1a 00 00 04 07 7e 1a 00 00 04 07 91 20 ?? ?? ?? 00 59 d2 9c 00 07 17 58 0b 07 7e 1a 00 00 04 8e 69 fe 04 0c 08 2d d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

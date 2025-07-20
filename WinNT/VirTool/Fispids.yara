@@ -17,6 +17,7 @@ rule VirTool_WinNT_Fispids_A_2147606854_0
         $x_1_2 = {c6 45 d4 e9 2b c6 83 e8 05 89 45 d5 6a 05 56 8d 45 d4 50 e8 ?? ?? ff ff 33 f6 eb 1b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule VirTool_WinNT_Fispids_B_2147607767_0
         $x_1_1 = {c6 45 dc e9 2b cf 83 e9 05 89 4d dd 6a 05 57 8d 45 dc 50 e8 ?? ?? ff ff 33 ff eb 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule VirTool_WinNT_Fispids_C_2147607860_0
         $x_1_1 = {c6 45 dc e9 2b c7 83 e8 05 89 45 dd [0-1] 6a 05 57 8d 45 dc 50 e8 ?? ?? ff ff 33 ff eb 1b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule VirTool_WinNT_Fispids_D_2147608073_0
         $x_1_1 = {c6 45 dc e9 2b (c1|ca) 83 (e8|e9) 05 89 (45|4d) dd 6a 05 (51|52) 8d 45 dc 50 e8 ?? ?? ff ff 33 ff eb 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

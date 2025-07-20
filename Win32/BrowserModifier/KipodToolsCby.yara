@@ -21,6 +21,7 @@ rule BrowserModifier_Win32_KipodToolsCby_207199_0
         $n_10_7 = "Viber" wide //weight: -10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule VirTool_Win32_InjectRemoteThread_NP_2147941199_0
         $x_1_2 = "\\temp\\sb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

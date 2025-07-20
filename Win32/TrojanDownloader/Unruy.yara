@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Unruy_H_2147801021_0
         $x_1_3 = {c6 00 20 40 c6 00 2e 40 c6 00 65 40 c6 00 78 40 c6 00 65 80 60 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Unruy_C_2147801346_0
         $x_2_3 = {eb 0d 8b 85 fc fb ff ff 40 89 85 fc fb ff ff 8b 85 fc fb ff ff 3b 85 f0 fb ff ff 73 3b ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 32 9c 0d 00 fc ff ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -72,6 +74,7 @@ rule TrojanDownloader_Win32_Unruy_C_2147801346_1
         $x_1_10 = "RE WE GO" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule TrojanDownloader_Win32_Unruy_R_2147801561_0
         $x_1_4 = {83 f8 03 74 ?? (83|3b c5) 8d [0-5] 75 ?? e8 ?? ?? 00 00 85 c0 75 ?? 8d [0-5] e8 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule TrojanDownloader_Win32_Unruy_F_2147803147_0
         $x_1_2 = {ff 70 50 8b 45 ?? ff 70 34}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -139,6 +144,7 @@ rule TrojanDownloader_Win32_Unruy_E_2147803898_0
         $x_10_4 = {8b 45 fc 8b 00 8b 4d fc 8b 49 04 03 48 28 89 4d f4 a1 ?? ?? ?? ?? 83 c0 07 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 0f af 05 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 6b c9 05 2b c1 a3 ?? ?? ?? ?? 6a 00 6a 00 8b 45 fc ff 70 04 ff 55 f4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -164,6 +170,7 @@ rule TrojanDownloader_Win32_Unruy_A_2147803984_0
         $x_4_3 = {80 38 3d 75 03 c6 00 00 ff 45 ?? 8d 45 ?? 50 ff d6 39 45 ?? 72 e3 68 ?? ?? ?? ?? 8d 45 ?? 50 c6 85}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             ((1 of ($x_4_*))) or
@@ -191,6 +198,7 @@ rule TrojanDownloader_Win32_Unruy_B_2147803987_0
         $x_1_4 = {73 70 6f 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -212,6 +220,7 @@ rule TrojanDownloader_Win32_Unruy_Q_2147804019_0
         $x_1_2 = {ff 90 8c 00 00 00 50 ff 16}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +252,7 @@ rule TrojanDownloader_Win32_Unruy_D_2147804162_0
         $x_1_12 = "Global\\acrobat201" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -268,6 +278,7 @@ rule TrojanDownloader_Win32_Unruy_S_2147804178_0
         $x_1_2 = {68 14 00 00 c8 57 66 c7 45 dc 02 00 66 89 75 de 66 c7 45 ec 02 00 66 89 75 ee 89 75 f0 89 75 fc ff 90 ?? ?? 00 00 a1 ?? ?? ?? ?? 57 ff 90 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -288,6 +299,7 @@ rule TrojanDownloader_Win32_Unruy_I_2147804203_0
         $x_1_1 = {6a 44 6a 46 6a 30 6a 34 [0-47] 81 c4 a0 00 00 00 8d [0-9] 68 03 00 1f 00 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -313,6 +325,7 @@ rule TrojanDownloader_Win32_Unruy_G_2147804204_0
         $x_2_6 = {49 4f 41 56 75 ?? 83 ?? 05 0f 84}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -339,6 +352,7 @@ rule TrojanDownloader_Win32_Unruy_T_2147804224_0
         $x_1_3 = {c6 45 fc 2e c6 45 fd 2e c6 45 fe 2e ff 90 2c 01 00 00 f7 d8 1b c0 40 c9 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -360,6 +374,7 @@ rule TrojanDownloader_Win32_Unruy_AUR_2147913972_0
         $x_1_1 = {33 c0 85 f6 7e 16 57 8a 11 6b c0 1f 0f be fa 03 c7 84 d2 75 01 4e 41 85 f6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

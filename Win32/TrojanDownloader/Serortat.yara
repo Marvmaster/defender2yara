@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Serortat_B_2147687048_0
         $x_1_3 = "5DM5NFWGEB1FHI20W5A9V9C8AAY0GWNPGX3S8NYE0L7RI1JDEH3MKWYRJOSCT9IZ16KJGXD8VP7PX23EU9X1LDYBCPPPBA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule TrojanDownloader_Win32_Serortat_B_2147687048_1
         $x_1_15 = "C7205CFA0A" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -17,6 +17,7 @@ rule Trojan_Win32_Privateloader_ASR_2147897552_0
         $x_1_2 = "97 91 104 100 91 98 41 40 36 90 98 98" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

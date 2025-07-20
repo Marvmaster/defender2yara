@@ -19,6 +19,7 @@ rule Ransom_Win32_Embargo_DA_2147912233_0
         $x_1_4 = "Deleted  shadows" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Win32_Embargo_A_2147917637_0
         $x_1_5 = "kill_serviceskill_procsvm_extensionsexcluded_vmscredsprivate_key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -75,6 +77,7 @@ rule Ransom_Win32_Embargo_B_2147917639_0
         $x_1_9 = "\"vm_extensions\":[\"*." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -107,6 +110,7 @@ rule Ransom_Win32_Embargo_GVA_2147936708_0
         $x_1_6 = "Failed to remove shadow:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

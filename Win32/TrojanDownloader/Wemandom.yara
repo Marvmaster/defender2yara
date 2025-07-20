@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Wemandom_A_2147644304_0
         $x_1_6 = {77 69 6e 64 6f 77 73 5c 65 6d 6d 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

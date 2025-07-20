@@ -21,6 +21,7 @@ rule Trojan_Win32_NSISInjector_DA_2147816357_0
         $x_3_6 = "user32::CallWindowProcW(i R5 ,i 0,i 0, i 0, i 0)" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_NSISInjector_EK_2147825875_0
         $x_1_5 = "folder-saved-search.png" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_NSISInjector_EM_2147826589_0
         $x_1_6 = "CreateFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Trojan_Win32_NSISInjector_EM_2147826589_1
         $x_1_5 = "Nanosystems" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +127,7 @@ rule Trojan_Win32_NSISInjector_ER_2147834963_0
         $x_1_6 = "emblem-important-symbolic.symbolic.png" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +151,7 @@ rule Trojan_Win32_NSISInjector_MFP_2147836006_0
         $x_1_3 = {b2 bc ff 78 b2 bc ff 78 b2 bc ff 78 b2 bc ff 78 b2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule Trojan_Win32_NSISInjector_EC_2147842759_0
         $x_1_6 = "PSReadline.psd1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -193,6 +200,7 @@ rule Trojan_Win32_NSISInjector_RZ_2147897639_0
         $x_1_1 = {c0 c8 03 32 82 a8 05 42 00 88 81 ?? ?? ?? ?? 8d 42 01 99 f7 fe 0f b6 81 ?? ?? ?? ?? c0 c8 03 32 82 a8 05 42 00 88 81 ?? ?? ?? ?? 8d 42 01 99}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

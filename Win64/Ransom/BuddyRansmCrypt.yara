@@ -18,6 +18,7 @@ rule Ransom_Win64_BuddyRansmCrypt_PA_2147839368_0
         $x_1_3 = "vssadmin.exe Delete Shadows /All /Quiet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

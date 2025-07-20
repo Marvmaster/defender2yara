@@ -18,6 +18,7 @@ rule TrojanDownloader_MacOS_Slisp_A_2147775632_0
         $x_1_3 = {48 83 ec 18 49 89 c6 48 bf 48 65 6c 6c 6f 2c 20 57 48 be 6f 72 6c 64 21 00 00 ed e8 93 06 00 00 0f b6 c9 48 89 c7 48 89 d6 89 ca 4c 89 c1 41 b8 00 00 00 00 41 b9 00 00 00 00 68 00 01 00 00 6a 00 6a 00 6a 00 e8 75 06 00 00 48 83 c4 20 49 89 c5 49 89 d4 89 cb 4d 89 c7 80 e3 01 e8 70 06 00 00 49 89 c2 49 89 d3 0f b6 db 49 b8 00 00 00 00 00 00 f0 7f 4c 89 f0 bf 00 00 00 00 be 01 00 00 00 ba 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule TrojanDownloader_MacOS_Slisp_A_2147775632_1
         $x_1_3 = {48 8b 5d b8 ba 0f 80 00 00 b9 02 00 00 00 48 89 c7 41 b8 00 00 00 00 41 53 41 51 53 41 52 e8 3f 14 00 00 48 83 c4 20 4c 8b 35 c8 75 00 00 4b 8b 7c 35 00 4b 89 44 35 00 ff 15 a0 28 00 00 4b 8b 7c 35 00 48 85 ff 0f 84 ec 00 00 00 48 8b 35 5b 6d 00 00 e8 0a 14 00 00 4f 8b 64 35 00 4d 85 e4 0f 84 d4 00 00 00 4c 89 e7 ff 15 77 28 00 00 49 89 c7 48 bf 4d 61 69 6e 20 57 69 6e 48 be 64 6f 77 00 00 00 00 eb e8 7d 13 00 00 48 89 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

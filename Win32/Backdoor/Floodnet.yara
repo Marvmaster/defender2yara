@@ -18,6 +18,7 @@ rule Backdoor_Win32_Floodnet_C_2147646171_0
         $x_1_4 = "in UdpPackFlood()" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

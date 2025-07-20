@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Bancos_AB_2147511473_0
         $x_1_8 = "This is a sample HOSTS file used by Microsoft TCP/IP for Windows." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule TrojanSpy_Win32_Bancos_BK_2147549796_0
         $x_1_6 = "\\liberaplug.log" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -79,6 +81,7 @@ rule TrojanSpy_Win32_Bancos_AL_2147595888_0
         $x_1_7 = {5c 00 75 00 70 00 77 00 69 00 6e 00 [0-6] 2e 00 74 00 78 00 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -106,6 +109,7 @@ rule TrojanSpy_Win32_Bancos_A_2147598658_0
         $x_1_7 = "Caixa" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +138,7 @@ rule TrojanSpy_Win32_Bancos_A_2147598658_1
         $x_1_8 = {be 01 00 00 00 8d 45 f4 8b 55 fc 8a 54 32 ff 80 ea 0a f6 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +167,7 @@ rule TrojanSpy_Win32_Bancos_A_2147598658_2
         $x_1_8 = {00 21 2f 2f 2d 2d 2d 2f 2f 2d 2d 2d 2f 2f 2d 2d 2d 2f 2f 2d 2d 2d 2f 2f 2d 2d 2d 2f 2f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -279,6 +285,7 @@ rule TrojanSpy_Win32_Bancos_B_2147598659_0
         $x_1_97 = {94 95 1b 0a 08 d4 eb 61 45 21 45 64 1b 1c 88 52 c0 3d 86 c3 7f 85 06 36 c8 ee bb f6 57 ed 40 db 23 ba ef d9 5f b5 03 6c 8e eb bf 65 7e d4 0d b2 3b ae fd 95 fb 50 36 c8 ee bb f6 57 ed 40 db 23}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -313,6 +320,7 @@ rule TrojanSpy_Win32_Bancos_IS_2147598683_0
         $x_1_12 = "bank" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -343,6 +351,7 @@ rule TrojanSpy_Win32_Bancos_KA_2147598803_0
         $x_1_8 = "InternetGetConnectedState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -375,6 +384,7 @@ rule TrojanSpy_Win32_Bancos_C_2147600187_0
         $n_12_12 = "trieste.com.br" ascii //weight: -12
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_11_*) and 2 of ($x_3_*) and 4 of ($x_2_*))) or
@@ -414,6 +424,7 @@ rule TrojanSpy_Win32_Bancos_W_2147601424_0
         $x_1_10 = "C:\\WINDOWS\\Downloaded Program Files\\CONFLICT.5\\g*.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -448,6 +459,7 @@ rule TrojanSpy_Win32_Bancos_BA_2147601771_0
         $x_1_12 = "admtdf@yahoo.com.br" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -485,6 +497,7 @@ rule TrojanSpy_Win32_Bancos_EA_2147601772_0
         $x_1_15 = "http://www.csddesigns.com/cf/seucarteiro/keylogf.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -515,6 +528,7 @@ rule TrojanSpy_Win32_Bancos_IV_2147601783_0
         $x_1_8 = "eminemjah2005@gmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -549,6 +563,7 @@ rule TrojanSpy_Win32_Bancos_IW_2147601786_0
         $x_1_12 = "Bradesco Internet Banking" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -579,6 +594,7 @@ rule TrojanSpy_Win32_Bancos_BN_2147602094_0
         $x_1_8 = "\\Norton SystemWorks\\Norton AntiVirus\\Navapw32.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -610,6 +626,7 @@ rule TrojanSpy_Win32_Bancos_KB_2147602200_0
         $x_1_9 = "c0nt4@yahoo.com.br" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -636,6 +653,7 @@ rule TrojanSpy_Win32_Bancos_AX_2147602292_0
         $x_1_4 = "[oo.pbz.oe] - Zvpebfbsg Vagrearg Rkcybere" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -674,6 +692,7 @@ rule TrojanSpy_Win32_Bancos_D_2147602634_0
         $x_1_15 = "Windowsmessenger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 10 of ($x_1_*))) or
             ((2 of ($x_100_*) and 1 of ($x_3_*) and 7 of ($x_1_*))) or
@@ -702,6 +721,7 @@ rule TrojanSpy_Win32_Bancos_KF_2147606192_0
         $x_1_3 = "Error. Compruebe los datos del servidor Ftp sin son correctos" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -733,6 +753,7 @@ rule TrojanSpy_Win32_Bancos_AZG_2147608159_0
         $x_1_12 = "Santander Banespa - Microsoft Internet Explorer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_3_*) and 3 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -776,6 +797,7 @@ rule TrojanSpy_Win32_Bancos_BX_2147609249_0
         $x_2_8 = "COMPONENTE_ENVIAR" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_5_*) and 2 of ($x_2_*))) or
             (all of ($x*))
@@ -801,6 +823,7 @@ rule TrojanSpy_Win32_Bancos_JL_2147609475_0
         $x_1_3 = {2e 65 78 65 00 6f 70 65 6e 00 00 00 00 63 3a 5c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -831,6 +854,7 @@ rule TrojanSpy_Win32_Bancos_CJ_2147610064_0
         $x_1_8 = {57 57 57 53 49 43 52 45 44 49 43 4f 4d 42 52 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -860,6 +884,7 @@ rule TrojanSpy_Win32_Bancos_CM_2147610535_0
         $x_1_7 = "Senha 6 Digitos:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_4_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -893,6 +918,7 @@ rule TrojanSpy_Win32_Bancos_KR_2147612068_0
         $x_1_10 = "GpfSLqbEH4zNKrn4RtTkR6zXP6La851oRsToOMqWHcbiPNDSKqDGKqL7BabEHW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -921,6 +947,7 @@ rule TrojanSpy_Win32_Bancos_KS_2147612109_0
         $x_10_9 = {e8 88 2f fa ff 68 f0 38 46 00 33 c9 ba 8c 01 00 00 8b 83 00 03 00 00 e8 ad 79 fd ff 40 0f 8f be 00 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -991,6 +1018,7 @@ rule TrojanSpy_Win32_Bancos_U_2147612247_0
         $n_200_47 = {40 6c 6f 67 68 61 75 73 2e 63 6f 6d 2e 62 72 00}  //weight: -200, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_1000_*) and 1 of ($x_200_*) and 1 of ($x_100_*) and 2 of ($x_6_*) and 19 of ($x_5_*) and 2 of ($x_4_*) and 3 of ($x_3_*) and 4 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -9242,6 +9270,7 @@ rule TrojanSpy_Win32_Bancos_CV_2147612647_0
         $x_1_6 = "MAIL FROM:<" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -9270,6 +9299,7 @@ rule TrojanSpy_Win32_Bancos_CW_2147612648_0
         $x_1_5 = ".XComp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9298,6 +9328,7 @@ rule TrojanSpy_Win32_Bancos_CX_2147612688_0
         $x_1_9 = "SizeofResource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*) and 6 of ($x_5_*))) or
@@ -9328,6 +9359,7 @@ rule TrojanSpy_Win32_Bancos_CY_2147613301_0
         $x_1_7 = "GbPluginSecLogoff" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -9357,6 +9389,7 @@ rule TrojanSpy_Win32_Bancos_LB_2147616281_0
         $x_1_6 = {67 6f 6f 67 6c 65 2e 64 6c 6c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -9391,6 +9424,7 @@ rule TrojanSpy_Win32_Bancos_DA_2147616341_0
         $x_1_12 = {3a 5c 44 6f 63 75 6d 65 6e 74 73 20 61 6e 64 20 53 65 74 74 69 6e 67 73 5c [0-12] 5c 43 6f 6e 74 61 63 74 73 5c [0-12] 44 65 73 6b 74 6f 70 2e 69 6e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((5 of ($x_10_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -9420,6 +9454,7 @@ rule TrojanSpy_Win32_Bancos_DB_2147616519_0
         $x_1_5 = "bb.com.br" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9441,6 +9476,7 @@ rule TrojanSpy_Win32_Bancos_DD_2147616815_0
         $x_1_2 = {50 72 6f 76 69 64 65 72 3d 53 51 4c 4f 4c 45 44 42 2e 31 3b 50 61 73 73 77 6f 72 64 3d [0-16] 3b 50 65 72 73 69 73 74 20 53 65 63 75 72 69 74 79 20 49 6e 66 6f 3d 54 72 75 65 3b 55 73 65 72 20 49 44 3d [0-16] 3b 49 6e 69 74 69 61 6c 20 43 61 74 61 6c 6f 67 3d [0-16] 3b 44 61 74 61 20 53 6f 75 72 63 65 3d 32 30 31 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9463,6 +9499,7 @@ rule TrojanSpy_Win32_Bancos_IZ_2147616822_0
         $x_1_3 = {68 74 74 70 73 3a 2f 2f 69 6e 74 65 72 6e 65 74 62 00 00 00 ff ff ff ff 0a 00 00 00 61 6e 6b 69 6e 67 2e 63 61 69 00 00 ff ff ff ff 0e 00 00 00 78 61 2e 67 6f 76 2e 62 72 2f 53 49 49 42}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -9485,6 +9522,7 @@ rule TrojanSpy_Win32_Bancos_JO_2147617100_0
         $x_1_3 = "novavibe01@gmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9507,6 +9545,7 @@ rule TrojanSpy_Win32_Bancos_JP_2147617109_0
         $x_1_3 = "GpfSLqbEH4zNKrnpUNDqPMqpCbnhPN9kPMmpCYvbU6K" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9530,6 +9569,7 @@ rule TrojanSpy_Win32_Bancos_JQ_2147617117_0
         $x_1_4 = "C:/WINDOWS/system32/sshib.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9556,6 +9596,7 @@ rule TrojanSpy_Win32_Bancos_JU_2147617573_0
         $x_1_7 = "smtps.uol.com.br" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*))) or
             (all of ($x*))
@@ -9587,6 +9628,7 @@ rule TrojanSpy_Win32_Bancos_JV_2147617658_0
         $x_10_9 = {b9 58 28 48 00 ba cc 28 48 00 e8 9a 11 00 00 8d 45 f8}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -9615,6 +9657,7 @@ rule TrojanSpy_Win32_Bancos_JW_2147617692_0
         $x_1_6 = {6c 6f 67 73 72 6f 78 40 67 6d 61 69 6c 2e 63 6f 6d 00 00 00 ff ff ff ff 1b 00 00 00 6a 75 63 69 61 72 61 2e 61 6e 74 6f 6e 69 61 40 69 73 62 74 2e 63 6f 6d 2e 62 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -9640,6 +9683,7 @@ rule TrojanSpy_Win32_Bancos_JX_2147617818_0
         $x_1_3 = {68 00 05 01 00 e8 d7 0c 00 00 83 c4 04 68 10 05 01 00 8d 8d 70 ff ff ff 51 ff 15 10 23 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9670,6 +9714,7 @@ rule TrojanSpy_Win32_Bancos_DI_2147617860_0
         $n_3_11 = "RMClassis" ascii //weight: -3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((6 of ($x_1_*))) or
@@ -9701,6 +9746,7 @@ rule TrojanSpy_Win32_Bancos_JY_2147617872_0
         $x_1_7 = "100A113CD176D40126AE2D1FD577DB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -9731,6 +9777,7 @@ rule TrojanSpy_Win32_Bancos_JZ_2147617933_0
         $x_1_11 = "c:\\WINDOWS\\system32\\process.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -9759,6 +9806,7 @@ rule TrojanSpy_Win32_Bancos_LH_2147618130_0
         $x_1_5 = "( MaRanHaO - 7.0" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -9788,6 +9836,7 @@ rule TrojanSpy_Win32_Bancos_LJ_2147618247_0
         $x_1_10 = "69464C4741565802076A795946411B5D5B5A" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -9814,6 +9863,7 @@ rule TrojanSpy_Win32_Bancos_DQ_2147618287_0
         $x_1_4 = "Removedorzao" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9837,6 +9887,7 @@ rule TrojanSpy_Win32_Bancos_DQ_2147618287_1
         $x_1_4 = {54 6f 3a 20 00 00 00 00 ff ff ff ff 06 00 00 00 46 72 6f 6d 3a 20 00 00 ff ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9861,6 +9912,7 @@ rule TrojanSpy_Win32_Bancos_LK_2147618650_0
         $x_1_5 = "r0x.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -9889,6 +9941,7 @@ rule TrojanSpy_Win32_Bancos_DU_2147618735_0
         $x_1_6 = {53 00 79 00 73 00 74 00 65 00 6d 00 20 00 50 00 68 00 6f 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -9917,6 +9970,7 @@ rule TrojanSpy_Win32_Bancos_DW_2147620105_0
         $x_1_5 = "Aguarde.." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9942,6 +9996,7 @@ rule TrojanSpy_Win32_Bancos_DV_2147620106_0
         $x_1_6 = "Browser Anexado" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -9968,6 +10023,7 @@ rule TrojanSpy_Win32_Bancos_DX_2147620352_0
         $x_1_4 = "SMTP connection" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9992,6 +10048,7 @@ rule TrojanSpy_Win32_Bancos_DY_2147620353_0
         $x_1_5 = "ATENCAO: SENHA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10014,6 +10071,7 @@ rule TrojanSpy_Win32_Bancos_LP_2147620478_0
         $x_1_3 = "controle_msn_auto1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10038,6 +10096,7 @@ rule TrojanSpy_Win32_Bancos_LL_2147620730_0
         $x_1_5 = {0f b7 1a 0f bf 31 0f af de 81 c3 00 08 00 00 8b 74 24 24 c1 fb 0c 83 c1 02 89 1e 83 c2 02 83 44 24 24 04 40 83 f8 40 7c d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10063,6 +10122,7 @@ rule TrojanSpy_Win32_Bancos_LT_2147621167_0
         $x_5_6 = "droprickhard13@gmail.com" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -10091,6 +10151,7 @@ rule TrojanSpy_Win32_Bancos_E_2147621206_0
         $x_1_5 = "caixa" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10113,6 +10174,7 @@ rule TrojanSpy_Win32_Bancos_EE_2147621207_0
         $x_10_3 = "aplicativos\\Microsoft\\Address" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10135,6 +10197,7 @@ rule TrojanSpy_Win32_Bancos_LU_2147621209_0
         $x_1_3 = {0f b7 1a 0f bf 31 0f af de 81 c3 00 08 00 00 8b 74 24 24 c1 fb 0c 83 c1 02 89 1e 83 c2 02 83 44 24 24 04 40 83 f8 40 7c d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10157,6 +10220,7 @@ rule TrojanSpy_Win32_Bancos_MB_2147621348_0
         $x_1_3 = {5c 47 00 00 ff ff ff ff 02 00 00 00 62 50 00 00 ff ff ff ff 03 00 00 00 6c 75 67 00 ff ff ff ff 04 00 00 00 69 6e 5c 2a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10181,6 +10245,7 @@ rule TrojanSpy_Win32_Bancos_EF_2147621374_0
         $x_1_5 = "SC_PLUG_BTT_2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -10209,6 +10274,7 @@ rule TrojanSpy_Win32_Bancos_EG_2147621633_0
         $x_1_6 = {63 61 6d 69 6e 68 6f 44 65 73 74 69 6e 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -10234,6 +10300,7 @@ rule TrojanSpy_Win32_Bancos_MI_2147622720_0
         $x_1_3 = {8b 45 f8 8b 55 e4 0f b6 44 10 ff 03 c7 b9 ff 00 00 00 99 f7 f9 8b da 3b 75 f0 7d 03 46 eb 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10267,6 +10334,7 @@ rule TrojanSpy_Win32_Bancos_ML_2147623469_0
         $x_1_14 = "Bradesco Net Empresa - Microsoft Internet Explorer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 1 of ($x_20_*) and 6 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_50_*) and 2 of ($x_20_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -10298,6 +10366,7 @@ rule TrojanSpy_Win32_Bancos_KY_2147623752_0
         $x_1_3 = {8a 04 11 8b 4d d4 03 c8 0f 80 ?? ?? 00 00 8b 55 cc 8b 42 0c 8b 95 f8 fe ff ff 33 db 8a 1c 10 03 cb 0f 80 ?? ?? 00 00 0f bf 75 c0 8b c1 99 f7 fe}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -10320,6 +10389,7 @@ rule TrojanSpy_Win32_Bancos_MU_2147624374_0
         $x_1_3 = {0f b7 1a 0f bf 31 0f af de 81 c3 00 08 00 00 8b 74 24 24 c1 fb 0c 83 c1 02 89 1e 83 c2 02 83 44 24 24 04 40 83 f8 40 7c d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10346,6 +10416,7 @@ rule TrojanSpy_Win32_Bancos_MY_2147624926_0
         $x_2_7 = "IEBrowserEvents.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -10373,6 +10444,7 @@ rule TrojanSpy_Win32_Bancos_MZ_2147625029_0
         $x_1_4 = "Norton Recebeu 0 - frm_Servi" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))
@@ -10400,6 +10472,7 @@ rule TrojanSpy_Win32_Bancos_ND_2147625146_0
         $x_1_5 = "http://83.140.184.152/images/msbotton.gif" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10422,6 +10495,7 @@ rule TrojanSpy_Win32_Bancos_ND_2147625229_0
         $x_1_2 = {b8 34 8e 49 00 e8 e2 4d fd ff 8b 85 10 fe ff ff e8 07 f5 ff ff 68 b8 0b 00 00 e8 45 df f6 ff 8b 45 f8 e8 e5 bf f6 ff 50 e8 27 dd f6 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10443,6 +10517,7 @@ rule TrojanSpy_Win32_Bancos_NE_2147625277_0
         $x_1_2 = {bb 01 00 00 00 8b c5 e8 1e 2a f9 ff 0f b6 54 1f ff f6 d2 88 54 18 ff 43 4e 75 ea}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10465,6 +10540,7 @@ rule TrojanSpy_Win32_Bancos_NH_2147625338_0
         $x_1_3 = {b8 c8 b9 49 00 e8 0b 03 fc ff 8b 85 14 fe ff ff 50 8d 85 10 fe ff ff e8 0d e9 ff ff 8b 95 10 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -10491,6 +10567,7 @@ rule TrojanSpy_Win32_Bancos_NK_2147625852_0
         $x_1_4 = "Bradesco" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -10516,6 +10593,7 @@ rule TrojanSpy_Win32_Bancos_NL_2147625878_0
         $x_1_3 = {73 65 6e 68 61 (3d|20)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -10541,6 +10619,7 @@ rule TrojanSpy_Win32_Bancos_NO_2147626175_0
         $x_1_3 = {63 6f 72 72 6f 6d 70 69 64 6f 21 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10565,6 +10644,7 @@ rule TrojanSpy_Win32_Bancos_NR_2147626351_0
         $x_1_5 = {73 6d 74 70 2e 74 65 72 72 61 2e 63 6f 6d 2e 62 72 00 00 00 ff ff ff ff 06 00 00 00 31 37 35 33 34 39}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*))) or
             (all of ($x*))
@@ -10595,6 +10675,7 @@ rule TrojanSpy_Win32_Bancos_NT_2147626577_0
         $x_1_8 = {00 73 76 63 68 6f 73 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -10626,6 +10707,7 @@ rule TrojanSpy_Win32_Bancos_NV_2147626674_0
         $x_1_5 = "santander" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -10653,6 +10735,7 @@ rule TrojanSpy_Win32_Bancos_OA_2147626876_0
         $x_1_5 = "Banco do Brasil" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10676,6 +10759,7 @@ rule TrojanSpy_Win32_Bancos_OE_2147627135_0
         $x_1_4 = "moc.liamg@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10699,6 +10783,7 @@ rule TrojanSpy_Win32_Bancos_OF_2147627160_0
         $x_1_4 = {53 65 6e 68 61 20 64 6f 20 43 61 72 74 e3 6f 2e 2e 2e 2e 2e 2e 2e 2e 2e 2e 2e 3a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10720,6 +10805,7 @@ rule TrojanSpy_Win32_Bancos_OG_2147627169_0
         $x_1_2 = {4e 65 74 73 63 70 36 [0-16] 4f 70 65 72 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10740,6 +10826,7 @@ rule TrojanSpy_Win32_Bancos_OH_2147627172_0
         $x_1_1 = {21 00 00 00 72 62 2e 6d 6f 63 2e 61 73 65 72 70 6d 65 74 65 6e 6f 63 73 65 64 61 72 62 2f 2f 3a 73 70 74 74 68 00 00 00 ff ff ff ff 0b 00 00 00 43 65 72 74 69 66 69 63 61 64 6f 00 ff ff ff ff 12 00 00 00 7c 76 7c 7c 20 53 45 4e 48 41 20 7c 7c 76 7c 20 3e 3e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10769,6 +10856,7 @@ rule TrojanSpy_Win32_Bancos_OI_2147627185_0
         $x_2_10 = "ahneS" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -10804,6 +10892,7 @@ rule TrojanSpy_Win32_Bancos_OJ_2147627186_0
         $x_1_8 = "MSNTimer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -10827,6 +10916,7 @@ rule TrojanSpy_Win32_Bancos_OL_2147627307_0
         $x_1_1 = {eb f0 5b 59 59 5d c3 00 00 49 6e 74 65 72 6e 65 74 20 45 78 70 6c 6f 72 65 72 00 00 00 44 61 64 6f 73 20 69 6e 76 e1 6c 69 64 6f 73 2c 20 70 6f 72 20 66 61 76 6f 72 20 74 65 6e 74 65 20 6e 6f 76 61 6d 65 6e 74 65 21 00 50 6f 72 20 66 61 76 6f 72 20 63 6f 6e 66 69 72 6d 65 20 73 75 61 20 69 64 65 6e 74 69 66 69 63 61 e7 e3 6f 20 69 6e 73 65 72 69 6e 64 6f 20 73 75 61 20 53 65 6e 68 61 20 41 64 69 63 69 6f 6e 61 6c 20 64 65 20 33 20 64 ed 67 69 74 6f 73 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10851,6 +10941,7 @@ rule TrojanSpy_Win32_Bancos_OP_2147627317_0
         $x_1_5 = "autoconfig_url\", \"http://cba.l2crazypvp.com/file.pac\");" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10876,6 +10967,7 @@ rule TrojanSpy_Win32_Bancos_OO_2147627324_0
         $x_2_6 = {06 00 00 00 6c 4d 76 33 7a 71 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -10902,6 +10994,7 @@ rule TrojanSpy_Win32_Bancos_OQ_2147627473_0
         $x_1_2 = "C:\\Builds\\TP\\indysockets\\lib\\Protocols\\IdSSLOpenSSL.pas" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10926,6 +11019,7 @@ rule TrojanSpy_Win32_Bancos_OQ_2147627473_1
         $x_1_5 = ".exe (null) true false true true (null) (null) \"http://" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -10951,6 +11045,7 @@ rule TrojanSpy_Win32_Bancos_OQ_2147627473_2
         $x_1_6 = "Recebeu[-] [ Jornal: ]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -10973,6 +11068,7 @@ rule TrojanSpy_Win32_Bancos_OS_2147627475_0
         $x_1_3 = {5c 00 77 00 75 00 75 00 61 00 75 00 63 00 74 00 63 00 2e 00 65 00 78 00 65 00 22 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10997,6 +11093,7 @@ rule TrojanSpy_Win32_Bancos_OV_2147627599_0
         $x_1_5 = "fuckthesystem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11019,6 +11116,7 @@ rule TrojanSpy_Win32_Bancos_OZ_2147627803_0
         $x_1_3 = "/enviador.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11045,6 +11143,7 @@ rule TrojanSpy_Win32_Bancos_PB_2147627899_0
         $x_3_7 = "visat.com.br" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -11071,6 +11170,7 @@ rule TrojanSpy_Win32_Bancos_PD_2147627960_0
         $x_1_4 = {63 3a 5c 73 6f 75 72 63 65 68 74 6d 6c 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11093,6 +11193,7 @@ rule TrojanSpy_Win32_Bancos_PH_2147628061_0
         $x_1_3 = {47 70 66 53 4c 71 62 45 48 34 7a 4e 4b 72 6e 70 55 4e 44 71 50 4d 71 70 43 62 6e 61 53 63 62 73 50 4e 39 70 4e 36 4c 71 4f 72 6e 65 52 74 44 71 53 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11121,6 +11222,7 @@ rule TrojanSpy_Win32_Bancos_PI_2147628065_0
         $x_1_9 = "SeDebugPrivilege" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_20_*) and 3 of ($x_2_*))) or
@@ -11153,6 +11255,7 @@ rule TrojanSpy_Win32_Bancos_PL_2147628164_0
         $x_1_6 = "btnlimpaClick" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11175,6 +11278,7 @@ rule TrojanSpy_Win32_Bancos_PM_2147628168_0
         $x_1_3 = "AtendimentoAoCliente" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11198,6 +11302,7 @@ rule TrojanSpy_Win32_Bancos_PO_2147628211_0
         $x_1_4 = {8b 55 f4 8b 06 8b 08 ff 51 38 8d 45 ec 50 8b 83 f8 05 00 00 8b 0e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11227,6 +11332,7 @@ rule TrojanSpy_Win32_Bancos_PR_2147628272_0
         $x_1_10 = "-= I-n-f-o-b-u-s-c-a =-" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 5 of ($x_1_*))) or
             ((4 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -11257,6 +11363,7 @@ rule TrojanSpy_Win32_Bancos_PU_2147628293_0
         $x_1_6 = {64 00 69 00 72 00 65 00 63 00 74 00 78 00 2e 00 74 00 78 00 74 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -11280,6 +11387,7 @@ rule TrojanSpy_Win32_Bancos_PY_2147628438_0
         $x_1_4 = "Banco de" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11302,6 +11410,7 @@ rule TrojanSpy_Win32_Bancos_PZ_2147628444_0
         $x_1_3 = {43 6f 64 69 67 6f 5f 4a 61 6e 65 6c 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11327,6 +11436,7 @@ rule TrojanSpy_Win32_Bancos_QF_2147628661_0
         $x_1_6 = "3 digitos das chaves" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11352,6 +11462,7 @@ rule TrojanSpy_Win32_Bancos_QG_2147628672_0
         $x_1_6 = {70 61 67 5f 69 6e 69 63 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -11379,6 +11490,7 @@ rule TrojanSpy_Win32_Bancos_QI_2147628690_0
         $x_1_4 = {50 6c 65 61 73 65 20 72 75 6e 20 61 20 76 69 72 75 73 2d 63 68 65 63 6b 2c 20 74 68 65 6e 20 72 65 69 6e 73 74 61 6c 6c 20 74 68 65 20 61 70 70 6c 69 63 61 74 69 6f 6e 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11402,6 +11514,7 @@ rule TrojanSpy_Win32_Bancos_QQ_2147628754_0
         $x_1_4 = "TIdFTPTransferType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11424,6 +11537,7 @@ rule TrojanSpy_Win32_Bancos_QR_2147628793_0
         $x_1_3 = {43 3a 5c 70 62 68 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11445,6 +11559,7 @@ rule TrojanSpy_Win32_Bancos_QS_2147628794_0
         $x_1_2 = {50 72 6f 6a 65 63 74 32 2e 64 6c 6c 00 53 68 6f 77 46 6f 72 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11468,6 +11583,7 @@ rule TrojanSpy_Win32_Bancos_QV_2147628842_0
         $x_1_4 = {45 00 4c 00 49 00 46 00 4f 00 52 00 50 00 52 00 45 00 53 00 55 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11490,6 +11606,7 @@ rule TrojanSpy_Win32_Bancos_QW_2147628847_0
         $x_1_3 = {4f 20 42 52 41 44 45 53 43 4f 20 4e 55 4e 43 41 20 53 4f 4c 49 43 49 54 41 20 51 55 45 20 56 4f 43 ca 20 44 49 47 49 54 45 20 54 4f 44 41 53 20 4f 55 20 4d 41 49 53 20 20 20 44 45 20 55 4d 41 20 50 4f 53 49 c7 c3 4f 20 44 4f 20 53 45 55 20 43 41 52 54 c3 4f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11514,6 +11631,7 @@ rule TrojanSpy_Win32_Bancos_QX_2147628911_0
         $x_1_5 = "a_a_a_projetos\\bb_fisico_gf\\NOVO_PUXA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -11541,6 +11659,7 @@ rule TrojanSpy_Win32_Bancos_QY_2147628958_0
         $x_1_4 = "setPublic(n_InternetBankingW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -11563,6 +11682,7 @@ rule TrojanSpy_Win32_Bancos_RA_2147628994_0
         $x_1_3 = {fe db ce db 9a 94}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -11589,6 +11709,7 @@ rule TrojanSpy_Win32_Bancos_RB_2147629020_0
         $x_1_3 = {be 01 00 00 00 8b 45 e8 0f b6 44 30 ff 33 c3 89 45 e0 3b 7d e0 7c 0f 8b 45 e0 05 ff 00 00 00 2b c7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11611,6 +11732,7 @@ rule TrojanSpy_Win32_Bancos_RE_2147629052_0
         $x_2_3 = {c7 85 78 ff ff ff 08 00 00 00 8d 85 74 ff ff ff 50 8d 4d a8 51 8d 95 78 ff ff ff 52 8d 45 98 50 ff 15 ?? ?? ?? ?? 50 8d 4d cc 51 ff 15 ?? ?? ?? ?? 50 68 ?? ?? ?? ?? 8b 55 08 8b 02 8b 4d 08 51 ff 90 f8 06 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11634,6 +11756,7 @@ rule TrojanSpy_Win32_Bancos_RG_2147629058_0
         $x_1_4 = "Senha de 4 digitos" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11656,6 +11779,7 @@ rule TrojanSpy_Win32_Bancos_RH_2147629066_0
         $x_1_3 = "SENHA 6:%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -11684,6 +11808,7 @@ rule TrojanSpy_Win32_Bancos_RM_2147629784_0
         $x_1_6 = "AUTH LOGIN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11707,6 +11832,7 @@ rule TrojanSpy_Win32_Bancos_RN_2147629843_0
         $x_1_4 = {42 41 52 44 45 4d 41 45 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11732,6 +11858,7 @@ rule TrojanSpy_Win32_Bancos_RR_2147629917_0
         $x_1_6 = "attrib -h \"c:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -11761,6 +11888,7 @@ rule TrojanSpy_Win32_Bancos_SB_2147630302_0
         $x_1_6 = {49 4e 46 45 43 54 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11785,6 +11913,7 @@ rule TrojanSpy_Win32_Bancos_SD_2147630327_0
         $x_1_5 = "Processando" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11807,6 +11936,7 @@ rule TrojanSpy_Win32_Bancos_SE_2147630329_0
         $x_1_3 = {34 33 46 43 32 43 44 43 31 34 33 39 45 43 32 35 30 41 37 36 41 36 38 39 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11829,6 +11959,7 @@ rule TrojanSpy_Win32_Bancos_SG_2147630473_0
         $x_1_3 = {bb 01 00 00 00 8d 45 f4 8b 55 fc 0f b6 54 1a ff 2b d3 81 ea 00 01 00 00 e8 ?? ?? ?? ?? 8b 55 f4 8d 45 f8 e8 ?? ?? ?? ?? 43 4e 75 d9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11852,6 +11983,7 @@ rule TrojanSpy_Win32_Bancos_SI_2147630654_0
         $x_1_4 = {43 3a 5c 57 69 6e 64 6f 77 73 5c 61 76 67 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -11876,6 +12008,7 @@ rule TrojanSpy_Win32_Bancos_SJ_2147630768_0
         $x_1_5 = "chegada321@gmail.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11897,6 +12030,7 @@ rule TrojanSpy_Win32_Bancos_SN_2147630963_0
         $x_1_2 = {a9 ae 85 f4 16 d6 cf 0c 7b e3 92 46 69 23 2f f7 4a 0c 00 18 7f 7a 9d e5 6a 7f f3 f7 69 ff 00 80 ad ff 00 c7 29 25 ff 00 90 dd af fd 7b 4d ff 00 a1 45 57 a8 02 97 95 a9 ff 00 cf dd a7 fe 02 b7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11921,6 +12055,7 @@ rule TrojanSpy_Win32_Bancos_SO_2147631027_0
         $x_1_5 = "Dados incorretos." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -11950,6 +12085,7 @@ rule TrojanSpy_Win32_Bancos_SV_2147631439_0
         $x_1_6 = "INOVANDOOOO..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -11976,6 +12112,7 @@ rule TrojanSpy_Win32_Bancos_SZ_2147631793_0
         $x_1_3 = {0f b6 44 38 ff 89 45 ?? b8 ?? ?? ?? ?? 0f b6 44 18 ff 89 45 ?? 8d 45 ?? 8b 55 ?? 2b 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12006,6 +12143,7 @@ rule TrojanSpy_Win32_Bancos_TA_2147631909_0
         $x_1_11 = {6c 00 65 00 67 00 6c 00 6f 00 6e 00 67 00 6e 00 69 00 2e 00 74 00 33 00 35 00 2e 00 63 00 6f 00 6d 00 2f 00 [0-32] 2e 00 70 00 68 00 70 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -12029,6 +12167,7 @@ rule TrojanSpy_Win32_Bancos_TG_2147632313_0
         $x_1_1 = {2a 00 5c 00 41 00 43 00 3a 00 5c 00 55 00 73 00 65 00 72 00 73 00 5c 00 4d 00 69 00 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00 5c 00 44 00 65 00 73 00 6b 00 74 00 6f 00 70 00 5c 00 42 00 52 00 41 00 44 00 45 00 53 00 43 00 4f 00 2d 00 56 00 42 00 31 00 5c 00 [0-32] 5c 00 [0-32] 2e 00 76 00 62 00 70 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12052,6 +12191,7 @@ rule TrojanSpy_Win32_Bancos_TH_2147632356_0
         $x_1_4 = "*l*m*t*h*.*s*o*d*a*d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -12081,6 +12221,7 @@ rule TrojanSpy_Win32_Bancos_TH_2147632518_0
         $x_1_5 = {8b 45 f4 ba ?? ?? ?? ?? e8 ?? ?? ?? ?? 74 1e 8d 45 f0 50 b9 01 00 00 00 8b d3 8b 45 fc e8 ?? ?? ?? ?? 8b 55 f0 8d 45 f8 e8 ?? ?? ?? ?? 43 4e 75 bc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -12106,6 +12247,7 @@ rule TrojanSpy_Win32_Bancos_TO_2147632545_0
         $x_1_6 = {42 61 6e 63 6f 20 43 61 72 6f 6e 69 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -12130,6 +12272,7 @@ rule TrojanSpy_Win32_Bancos_TS_2147632801_0
         $x_2_5 = "|BB- Cc.:" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12154,6 +12297,7 @@ rule TrojanSpy_Win32_Bancos_TU_2147632886_0
         $x_1_5 = "smtp.terra.com.br" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -12182,6 +12326,7 @@ rule TrojanSpy_Win32_Bancos_UA_2147633029_0
         $x_2_5 = "sen6....:" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -12208,6 +12353,7 @@ rule TrojanSpy_Win32_Bancos_UB_2147633030_0
         $x_1_3 = {49 4e 4f 56 41 4e 44 4f 4f 4f 4f 2e 2e 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -12231,6 +12377,7 @@ rule TrojanSpy_Win32_Bancos_UD_2147633118_0
         $x_1_4 = {77 73 63 6e 74 66 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -12260,6 +12407,7 @@ rule TrojanSpy_Win32_Bancos_UK_2147633555_0
         $x_1_7 = "Conecciones:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -12284,6 +12432,7 @@ rule TrojanSpy_Win32_Bancos_UO_2147633627_0
         $x_1_5 = "O Banco Bradesco agradece a sua colabora" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -12314,6 +12463,7 @@ rule TrojanSpy_Win32_Bancos_US_2147633718_0
         $x_1_7 = {50 00 61 00 73 00 73 00 77 00 64 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -12341,6 +12491,7 @@ rule TrojanSpy_Win32_Bancos_UV_2147633931_0
         $x_1_4 = "http://www.toetsplaza.nl/pascal/index.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12362,6 +12513,7 @@ rule TrojanSpy_Win32_Bancos_UW_2147634005_0
         $x_1_2 = {54 59 58 4f 4d 41 53 4b 51 57 42 46 48 59 55 57 45 49 47 48 4e 02 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))
@@ -12387,6 +12539,7 @@ rule TrojanSpy_Win32_Bancos_UW_2147634005_1
         $x_1_3 = {49 66 20 65 78 69 73 74 20 22 25 73 22 20 47 6f 74 6f 20 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12415,6 +12568,7 @@ rule TrojanSpy_Win32_Bancos_VI_2147636054_0
         $x_1_9 = "Internet Explorer_Server" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -12438,6 +12592,7 @@ rule TrojanSpy_Win32_Bancos_VK_2147636357_0
         $x_1_4 = "Bankline" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12459,6 +12614,7 @@ rule TrojanSpy_Win32_Bancos_VL_2147636358_0
         $x_1_2 = {8b 4d 0c 8b 11 52 ff d6 89 45 a8 b8 02 00 00 00 be 01 00 00 00 3b 75 a8 0f 8f a3 00 00 00 8b 4d 0c 89 45 c8 89 45 c0 8d 45 c0 8b 11 50 83 c3 01 56 52 0f 80}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12481,6 +12637,7 @@ rule TrojanSpy_Win32_Bancos_VN_2147636771_0
         $x_1_3 = "MAIL FROM: <" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12503,6 +12660,7 @@ rule TrojanSpy_Win32_Bancos_VN_2147636771_1
         $x_1_3 = "\\Windows\\SCR.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12525,6 +12683,7 @@ rule TrojanSpy_Win32_Bancos_VQ_2147637410_0
         $x_1_3 = {47 62 61 73 00 (47|48 65 6c 70) 00 00 59 61 68 6f 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12552,6 +12711,7 @@ rule TrojanSpy_Win32_Bancos_VR_2147637423_0
         $x_1_8 = "==BctSnMwh2dyOIdkOIJy9DJ19DJmiZYvJyNwY3doXnd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -12576,6 +12736,7 @@ rule TrojanSpy_Win32_Bancos_VX_2147637786_0
         $x_1_5 = {00 00 75 00 2e 00 63 00 6f 00 6d 00 2e 00 62 00 72 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12599,6 +12760,7 @@ rule TrojanSpy_Win32_Bancos_VY_2147637820_0
         $x_3_4 = ".pl/relacje/carb.php" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*))) or
@@ -12630,6 +12792,7 @@ rule TrojanSpy_Win32_Bancos_WD_2147637936_0
         $x_2_7 = "Nome da Maquina..:" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -12658,6 +12821,7 @@ rule TrojanSpy_Win32_Bancos_WE_2147637946_0
         $x_1_4 = "remetente=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -12692,6 +12856,7 @@ rule TrojanSpy_Win32_Bancos_VI_2147638006_0
         $x_1_10 = "h*tt*p*s:/*/ww*w2.b*anc*obra*sil*.co*m.b*r/a*apf*/re*lac*ion*ame*nto*/mc*ib*.j*sp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -12719,6 +12884,7 @@ rule TrojanSpy_Win32_Bancos_VI_2147638008_0
         $x_1_7 = "pnlBBPass" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -12749,6 +12915,7 @@ rule TrojanSpy_Win32_Bancos_VI_2147638009_0
         $x_1_10 = "22.mod" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -12774,6 +12941,7 @@ rule TrojanSpy_Win32_Bancos_WI_2147638515_0
         $x_1_6 = {4d 00 46 00 2e 00 4c 00 4e 00 4b 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -12796,6 +12964,7 @@ rule TrojanSpy_Win32_Bancos_WJ_2147638705_0
         $x_1_3 = "regsvr32 /u /s \"C:\\arquivos de programas\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12828,6 +12997,7 @@ rule TrojanSpy_Win32_Bancos_WO_2147638804_0
         $x_2_13 = {51 39 35 53 61 46 6c 6a 31 68 63 59 63 30 5a 4c 2f 33 55 76 4b 55 36 58 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -12860,6 +13030,7 @@ rule TrojanSpy_Win32_Bancos_WS_2147639075_0
         $x_5_7 = {64 00 65 00 73 00 74 00 69 00 6e 00 6f 00 3d 00 [0-15] 40 00 [0-15] 2e 00 63 00 6f 00 6d 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -12888,6 +13059,7 @@ rule TrojanSpy_Win32_Bancos_WY_2147639483_0
         $x_1_4 = "n - PayPal" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -12914,6 +13086,7 @@ rule TrojanSpy_Win32_Bancos_XD_2147639798_0
         $x_1_3 = {8b 45 f0 c1 e0 06 03 d8 89 5d f0 83 c7 06 83 ff 08 7c ?? 83 ef 08 8b cf 8b 5d f0 d3 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12937,6 +13110,7 @@ rule TrojanSpy_Win32_Bancos_XJ_2147640279_0
         $x_1_4 = "Software\\Microsoft\\Windows\\CurrentVersion\\explorer\\Browser Helper Objects" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12959,6 +13133,7 @@ rule TrojanSpy_Win32_Bancos_XK_2147640384_0
         $x_1_3 = "!ADH:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12985,6 +13160,7 @@ rule TrojanSpy_Win32_Bancos_XL_2147640468_0
         $x_3_7 = "empreAClick" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13006,6 +13182,7 @@ rule TrojanSpy_Win32_Bancos_XM_2147640470_0
         $x_1_2 = "Set-cookie" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13028,6 +13205,7 @@ rule TrojanSpy_Win32_Bancos_XR_2147640665_0
         $x_2_3 = "EditSenCard" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13049,6 +13227,7 @@ rule TrojanSpy_Win32_Bancos_XT_2147640694_0
         $x_1_2 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13075,6 +13254,7 @@ rule TrojanSpy_Win32_Bancos_XX_2147640816_0
         $x_1_7 = "libeay32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -13103,6 +13283,7 @@ rule TrojanSpy_Win32_Bancos_YB_2147640983_0
         $x_1_4 = "Configuracao de deposito" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13132,6 +13313,7 @@ rule TrojanSpy_Win32_Bancos_H_2147641091_0
         $x_1_9 = "CPlApplet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13163,6 +13345,7 @@ rule TrojanSpy_Win32_Bancos_YV_2147641747_0
         $x_1_12 = "itau.com.br" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -13189,6 +13372,7 @@ rule TrojanSpy_Win32_Bancos_YW_2147641768_0
         $x_1_4 = "Image52Click" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13212,6 +13396,7 @@ rule TrojanSpy_Win32_Bancos_YX_2147641848_0
         $x_4_4 = "update NE set st_enviado =:pST_ENVIADO, NM_TOKEN =:pNM_TOKEN, ds_crt =:pds_crt, ds_key" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13233,6 +13418,7 @@ rule TrojanSpy_Win32_Bancos_ZB_2147642256_0
         $x_1_2 = "//:p@tth" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13257,6 +13443,7 @@ rule TrojanSpy_Win32_Bancos_ZE_2147642403_0
         $x_1_5 = "explorer\\browser helper objects" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13287,6 +13474,7 @@ rule TrojanSpy_Win32_Bancos_ZI_2147642667_0
         $x_1_11 = "SophiaDLL\\Release\\SophiaDLL.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -13309,6 +13497,7 @@ rule TrojanSpy_Win32_Bancos_ZN_2147643435_0
         $x_4_3 = {ca dd 27 22 d0 03 fc 1d 2f 4b f4 71 c7 ff ba c7 3f 24 f8 af 7c 18 cc a0 06 37 c8 c1 0e 7a 50 53}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13331,6 +13520,7 @@ rule TrojanSpy_Win32_Bancos_ZO_2147643496_0
         $x_5_3 = "================= C.@.1.X.@ ==================" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13354,6 +13544,7 @@ rule TrojanSpy_Win32_Bancos_ZP_2147643503_0
         $x_1_4 = "cOderFenrir" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13375,6 +13566,7 @@ rule TrojanSpy_Win32_Bancos_ZX_2147643794_0
         $x_3_2 = "EdtItaSenhaCartao" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13399,6 +13591,7 @@ rule TrojanSpy_Win32_Bancos_ZY_2147643800_0
         $x_1_5 = "taskkill.exe -f -im" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13422,6 +13615,7 @@ rule TrojanSpy_Win32_Bancos_AAA_2147644108_0
         $x_1_4 = "http://www.oleozon.eu/templates/ja_purity/js/import.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13447,6 +13641,7 @@ rule TrojanSpy_Win32_Bancos_AAC_2147644167_0
         $x_50_6 = {c1 e9 08 66 33 d1 66 [0-20] 66 69 c6 01 d2 66 05 6a 7f}  //weight: 50, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 1 of ($x_1_*))) or
             ((3 of ($x_50_*))) or
@@ -13475,6 +13670,7 @@ rule TrojanSpy_Win32_Bancos_AAD_2147644383_0
         $x_1_5 = {6d 64 69 74 [0-2] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13501,6 +13697,7 @@ rule TrojanSpy_Win32_Bancos_AAD_2147644383_1
         $x_50_7 = {c1 e9 08 66 33 d1 66 [0-20] 66 69 c6 01 d2 66 05 6a 7f}  //weight: 50, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 4 of ($x_1_*))) or
             ((3 of ($x_50_*))) or
@@ -13527,6 +13724,7 @@ rule TrojanSpy_Win32_Bancos_AAE_2147644459_0
         $x_1_3 = "c:\\borogvegas.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13551,6 +13749,7 @@ rule TrojanSpy_Win32_Bancos_AAI_2147644803_0
         $x_1_5 = {42 54 53 74 61 63 4d 73 6e 2e 64 6c 6c 00 45 6e 76 6f 4d 53 4f 00 09 00 f3 02 00 40 40 03 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -13578,6 +13777,7 @@ rule TrojanSpy_Win32_Bancos_AAM_2147645332_0
         $x_1_5 = "senhacartao" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -13604,6 +13804,7 @@ rule TrojanSpy_Win32_Bancos_AAR_2147645764_0
         $x_1_4 = "EasyPagos.ActualizaEstadoCash/post.asp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -13629,6 +13830,7 @@ rule TrojanSpy_Win32_Bancos_AAW_2147646061_0
         $x_5_3 = "marcos.avilenco@hotmail.com" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13652,6 +13854,7 @@ rule TrojanSpy_Win32_Bancos_ABB_2147646122_0
         $x_1_4 = "Armazena" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13676,6 +13879,7 @@ rule TrojanSpy_Win32_Bancos_ABC_2147646241_0
         $x_1_5 = "\\\\.\\SMARTVSD" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -13708,6 +13912,7 @@ rule TrojanSpy_Win32_Bancos_ABD_2147646249_0
         $x_1_9 = {6a 00 6a 00 ff 75 f8 68 ?? ?? ?? 00 8d 55 ac b8 ?? ?? 00 00 e8 ?? ?? ?? ?? ff 75 ac 68 ?? ?? ?? 00 8d 45 b0 ba 04 00 00 00 e8 ?? ?? ?? ?? 8b 45 b0 e8 ?? ?? ?? ?? 50 8b 45 f4 e8 ?? ?? ?? ?? 50 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -13733,6 +13938,7 @@ rule TrojanSpy_Win32_Bancos_ABM_2147646479_0
         $x_1_6 = "=====$$$BANESPA$$$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -13761,6 +13967,7 @@ rule TrojanSpy_Win32_Bancos_ABN_2147646565_0
         $x_1_5 = {89 45 e8 8b 45 e8 85 c0 74 05 83 e8 04 8b 00 83 f8 03 7d 2a 8d 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13784,6 +13991,7 @@ rule TrojanSpy_Win32_Bancos_ABQ_2147646665_0
         $x_1_4 = "WIN 7 OUR WINVIST" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -13807,6 +14015,7 @@ rule TrojanSpy_Win32_Bancos_ABR_2147646666_0
         $x_1_4 = "AppData\\ass.log" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -13830,6 +14039,7 @@ rule TrojanSpy_Win32_Bancos_I_2147646734_0
         $x_1_3 = {bf 01 00 00 00 8b 85 ?? fe ff ff 33 db 8a 5c 38 ff 33 9d ?? fe ff ff 3b 9d ?? fe ff ff 7f 0e 81 c3 ff 00 00 00 2b 9d ?? fe ff ff eb 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13852,6 +14062,7 @@ rule TrojanSpy_Win32_Bancos_ABT_2147646866_0
         $x_1_3 = {06 54 46 6f 72 6d 31 8b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -13878,6 +14089,7 @@ rule TrojanSpy_Win32_Bancos_ABV_2147646970_0
         $x_2_7 = {8b 55 fc 8b c3 8b 08 ff 51 38 8d 4d f0 ba f4 01 00 00 b8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -13905,6 +14117,7 @@ rule TrojanSpy_Win32_Bancos_ABZ_2147647092_0
         $x_1_4 = {2f 2e 6c 6f 67 73 2f 69 6e 64 65 78 2e 70 68 70 00 00 6f 70 65 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -13929,6 +14142,7 @@ rule TrojanSpy_Win32_Bancos_ACB_2147647312_0
         $x_1_5 = "para acessar o internet bankng" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -13957,6 +14171,7 @@ rule TrojanSpy_Win32_Bancos_ACC_2147647332_0
         $x_1_6 = "img_entrarClick" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -13984,6 +14199,7 @@ rule TrojanSpy_Win32_Bancos_ACH_2147647409_0
         $x_1_5 = {4d 00 43 00 41 00 44 00 44 00 52 00 45 00 53 00 53 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -14009,6 +14225,7 @@ rule TrojanSpy_Win32_Bancos_ACI_2147647439_0
         $x_1_2 = "AutoConfigURL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14031,6 +14248,7 @@ rule TrojanSpy_Win32_Bancos_ACM_2147647732_0
         $x_1_3 = {8b 45 0c 33 db 8b d0 83 ea 02 74 0a 81 ea ff 03 00 00 74 0b eb ?? 6a 00 e8 ?? ?? ?? ?? eb ?? a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? 68 e8 03 00 00 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 68 e8 03 00 00 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 6a 00 6a 00 6a 02 8b 45 08 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14056,6 +14274,7 @@ rule TrojanSpy_Win32_Bancos_ACN_2147647784_0
         $x_1_6 = "nt.PC_7_0MQTR9K210SG70" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -14082,6 +14301,7 @@ rule TrojanSpy_Win32_Bancos_ACT_2147648143_0
         $x_1_7 = "\\Java Application\\_ Projetos\\-- FEDELHOS\\Agnaldo\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -14103,6 +14323,7 @@ rule TrojanSpy_Win32_Bancos_ACV_2147648288_0
         $x_1_2 = {ff 3a 7e 35 32 2c 31 25 25 57 49 4e 44 49 52 25 5c 25 ff 3a 7e 31 38 2c 31 25 25 ff 3a 7e 32 33 2c 31 25 25 ff 3a 7e 31 38 2c 31 25 25}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14128,6 +14349,7 @@ rule TrojanSpy_Win32_Bancos_ACW_2147648327_0
         $x_1_6 = "agenciaconta" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -14155,6 +14377,7 @@ rule TrojanSpy_Win32_Bancos_ACX_2147648328_0
         $x_1_4 = {09 54 41 44 4f 51 75 65 72 79 08 63 6f 6e 74 61 64 6f 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -14181,6 +14404,7 @@ rule TrojanSpy_Win32_Bancos_ACY_2147648329_0
         $x_1_4 = {05 64 61 64 6f 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -14207,6 +14431,7 @@ rule TrojanSpy_Win32_Bancos_ACZ_2147648330_0
         $x_1_4 = {07 4d 4d 64 61 64 6f 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -14233,6 +14458,7 @@ rule TrojanSpy_Win32_Bancos_ADA_2147648404_0
         $x_1_4 = "@hotmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14257,6 +14483,7 @@ rule TrojanSpy_Win32_Bancos_ADC_2147648577_0
         $x_2_5 = " nescessario validar este computador" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14285,6 +14512,7 @@ rule TrojanSpy_Win32_Bancos_ADD_2147648644_0
         $x_1_9 = {2f 00 6d 00 61 00 69 00 6c 00 2f 00 68 00 2f 00 [0-16] 2f 00 3f 00 76 00 3d 00 62 00 26 00 70 00 76 00 3d 00 74 00 6c 00 26 00 63 00 73 00 3d 00 62 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -14308,6 +14536,7 @@ rule TrojanSpy_Win32_Bancos_ADG_2147649341_0
         $x_1_4 = "A ON-LINE FOI BLOQUEADO DEVIDO A 3 TENTATIVAS INV" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14332,6 +14561,7 @@ rule TrojanSpy_Win32_Bancos_ADH_2147649415_0
         $x_1_5 = "senha-passaporte=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -14359,6 +14589,7 @@ rule TrojanSpy_Win32_Bancos_ADH_2147649415_1
         $x_1_5 = "dados/grava_dados.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -14390,6 +14621,7 @@ rule TrojanSpy_Win32_Bancos_ADI_2147649418_0
         $x_1_8 = "Edit1KeyPress" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -14419,6 +14651,7 @@ rule TrojanSpy_Win32_Bancos_J_2147649498_0
         $x_1_2 = {8b 86 1c 03 00 00 e8 ?? ?? ?? ?? 48 84 c0 72 ?? 40 88 45 ff b3 00 8b fb 81 e7 ff 00 00 00 8b 86 1c 03 00 00 8b 04 b8 8b 00 8d 55 f8 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14443,6 +14676,7 @@ rule TrojanSpy_Win32_Bancos_ADL_2147649581_0
         $x_1_5 = {33 00 30 00 35 00 39 00 43 00 38 00 30 00 45 00 34 00 46 00 42 00 37 00 32 00 32 00 33 00 35 00 44 00 44 00 37 00 44 00 39 00 34 00 41 00 35 00 34 00 41 00 45 00 45 00 35 00 30 00 46 00 36 00 36 00 38 00 45 00 30 00 32 00 37 00 36 00 38 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -14468,6 +14702,7 @@ rule TrojanSpy_Win32_Bancos_ADN_2147649662_0
         $x_1_6 = {26 73 65 6e 68 61 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -14490,6 +14725,7 @@ rule TrojanSpy_Win32_Bancos_ADP_2147649796_0
         $x_1_3 = "ImageConfirmarClick" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14517,6 +14753,7 @@ rule TrojanSpy_Win32_Bancos_ADR_2147650188_0
         $x_1_8 = {66 81 38 4d 5a 75 ?? 60 89 85 ?? ?? ?? ?? 8b d0 8b d8 03 40 3c 03 58 78}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -14541,6 +14778,7 @@ rule TrojanSpy_Win32_Bancos_ADT_2147650245_0
         $x_1_5 = "CONFIRME COM A SUA SENHA PHONE CENTER HSBC." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -14570,6 +14808,7 @@ rule TrojanSpy_Win32_Bancos_ADU_2147650257_0
         $x_1_6 = "caifora" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -14595,6 +14834,7 @@ rule TrojanSpy_Win32_Bancos_ADW_2147650281_0
         $x_2_2 = "taskkill -f -im" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14617,6 +14857,7 @@ rule TrojanSpy_Win32_Bancos_ADX_2147650305_0
         $x_2_3 = "TxtPass4" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14649,6 +14890,7 @@ rule TrojanSpy_Win32_Bancos_L_2147650348_0
         $x_1_12 = "x*r#/@t#e@n#.*2*p@u#p*r*o#c*s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -14672,6 +14914,7 @@ rule TrojanSpy_Win32_Bancos_AEB_2147650349_0
         $x_1_4 = "CONTR#OLGROUPPAYMENT1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14697,6 +14940,7 @@ rule TrojanSpy_Win32_Bancos_ADY_2147650368_0
         $x_1_6 = "programas\\Avira2011" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -14725,6 +14969,7 @@ rule TrojanSpy_Win32_Bancos_AEC_2147650562_0
         $x_1_6 = "\\Windows Media Player\\wmplayer.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14748,6 +14993,7 @@ rule TrojanSpy_Win32_Bancos_AEK_2147650918_0
         $x_3_4 = "logs/apaga.php?k=log" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14773,6 +15019,7 @@ rule TrojanSpy_Win32_Bancos_AEM_2147650967_0
         $x_1_6 = "c:\\WINDOWS\\system32\\fsrun.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -14811,6 +15058,7 @@ rule TrojanSpy_Win32_Bancos_AER_2147651240_0
         $x_2_15 = {45 00 73 00 74 00 65 00 20 00 43 00 61 00 72 00 74 00 e3 00 6f 00 20 00 e9 00 20 00 69 00 6e 00 76 00 61 00 6c 00 69 00 64 00 6f 00 20 00 6f 00 75 00 20 00 64 00 65 00 73 00 63 00 6f 00 6e 00 68 00 65 00 63 00 69 00 64 00 6f 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_1_*))) or
             ((1 of ($x_2_*) and 9 of ($x_1_*))) or
@@ -14842,6 +15090,7 @@ rule TrojanSpy_Win32_Bancos_AES_2147651286_0
         $x_3_4 = "Update tbl_001f_extrato Set resposta = " ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14876,6 +15125,7 @@ rule TrojanSpy_Win32_Bancos_M_2147651297_0
         $x_1_14 = "Kqz6L5T1KaLSJKb3KazJJqPKN5T9JaHFLrDSGrLIKaLEL5P5KbD9JqvSKbLE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -14899,6 +15149,7 @@ rule TrojanSpy_Win32_Bancos_AET_2147651302_0
         $x_1_4 = "cmd.exe /c taskkill -f -im iexplore.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14927,6 +15178,7 @@ rule TrojanSpy_Win32_Bancos_AEV_2147651428_0
         $x_1_9 = "rentabilidade de fundos" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -14954,6 +15206,7 @@ rule TrojanSpy_Win32_Bancos_AEW_2147651510_0
         $x_1_8 = "6547726D7A7477485E5657707D764C40611A435C47" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -14983,6 +15236,7 @@ rule TrojanSpy_Win32_Bancos_N_2147651544_0
         $x_1_5 = "http://www.starlimo.hu/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -15013,6 +15267,7 @@ rule TrojanSpy_Win32_Bancos_O_2147651837_0
         $x_1_7 = "PROFESSIONAL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -15038,6 +15293,7 @@ rule TrojanSpy_Win32_Bancos_AFA_2147651857_0
         $x_1_3 = "C*:#\\%B*a*n@c#o%B%r*a#s%i*l*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15062,6 +15318,7 @@ rule TrojanSpy_Win32_Bancos_AFC_2147651926_0
         $x_1_5 = "IBQsngpcCPF_RESPONSAVEL_SNGPC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -15085,6 +15342,7 @@ rule TrojanSpy_Win32_Bancos_AFE_2147652081_0
         $x_1_4 = "MAC...............:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15108,6 +15366,7 @@ rule TrojanSpy_Win32_Bancos_AFF_2147652082_0
         $x_1_4 = {50 61 73 73 6f 31 00 00 47 65 72 61 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15130,6 +15389,7 @@ rule TrojanSpy_Win32_Bancos_AFH_2147652159_0
         $x_1_3 = "message=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15152,6 +15412,7 @@ rule TrojanSpy_Win32_Bancos_AFJ_2147652245_0
         $x_1_3 = "Banco Santander Brasil | Banco do juntos" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15174,6 +15435,7 @@ rule TrojanSpy_Win32_Bancos_AFM_2147652385_0
         $x_1_3 = {43 3a 5c 77 69 6e 37 78 65 5c 77 69 6e [0-5] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -15197,6 +15459,7 @@ rule TrojanSpy_Win32_Bancos_AFN_2147652401_0
         $x_1_4 = "/config.pac" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -15222,6 +15485,7 @@ rule TrojanSpy_Win32_Bancos_AFS_2147652802_0
         $x_1_3 = "Size=4096;Workstation ID=XXXX" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15245,6 +15509,7 @@ rule TrojanSpy_Win32_Bancos_AFY_2147653158_0
         $x_1_4 = "If exist \"%s\" Goto 1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -15268,6 +15533,7 @@ rule TrojanSpy_Win32_Bancos_AGB_2147653365_0
         $x_1_4 = "user_pref(\"network.proxy.type\", 2);" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15291,6 +15557,7 @@ rule TrojanSpy_Win32_Bancos_AGF_2147653494_0
         $x_1_4 = "Logof.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15315,6 +15582,7 @@ rule TrojanSpy_Win32_Bancos_AGH_2147653516_0
         $x_1_5 = {63 72 6f 73 73 40 68 6f 74 6d 61 69 6c 2e 63 6f 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -15337,6 +15605,7 @@ rule TrojanSpy_Win32_Bancos_P_2147653696_0
         $x_1_2 = {8b d8 ba 02 00 00 80 8b c3 e8 ?? ?? ?? ?? 8d 55 ?? b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 55 ?? 33 c9 8b c3 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15365,6 +15634,7 @@ rule TrojanSpy_Win32_Bancos_AGL_2147654081_0
         $x_1_9 = "Dispositivo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 1 of ($x_5_*) and 4 of ($x_1_*))) or
             ((1 of ($x_15_*) and 2 of ($x_5_*))) or
@@ -15393,6 +15663,7 @@ rule TrojanSpy_Win32_Bancos_AGM_2147654107_0
         $x_1_5 = "tmrOcultaIE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15416,6 +15687,7 @@ rule TrojanSpy_Win32_Bancos_AGN_2147654388_0
         $x_1_4 = "internetbanking.caixa.gov.br/SIIBC/index.processa" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15440,6 +15712,7 @@ rule TrojanSpy_Win32_Bancos_AGP_2147654740_0
         $x_1_5 = "FrmBDDebito" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -15467,6 +15740,7 @@ rule TrojanSpy_Win32_Bancos_AGQ_2147654987_0
         $x_1_4 = {0f b6 08 88 0a c3 0f b7 08 66 89 0a c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -15490,6 +15764,7 @@ rule TrojanSpy_Win32_Bancos_AGV_2147656281_0
         $x_1_4 = "3D80F574CC3E4E6C8AA8C6E40F3F" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15513,6 +15788,7 @@ rule TrojanSpy_Win32_Bancos_AGY_2147656403_0
         $x_1_4 = "Digite sua senha de" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15535,6 +15811,7 @@ rule TrojanSpy_Win32_Bancos_AGZ_2147656841_0
         $x_1_3 = "[bb.com.br] - - Mozilla Firefox" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15559,6 +15836,7 @@ rule TrojanSpy_Win32_Bancos_AHB_2147656910_0
         $x_1_5 = "Cop LTDA..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -15588,6 +15866,7 @@ rule TrojanSpy_Win32_Bancos_AHG_2147657257_0
         $x_1_6 = {03 c7 b9 ff 00 00 00 99 f7 f9 8b da 3b 75 f0 7d ?? 46 eb ?? be 01 00 00 00 8b 45 e8 0f b6 44 30 ff 33 d8 8d 45 cc 50 89 5d d0 c6 45 d4 00 8d 55 d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -15613,6 +15892,7 @@ rule TrojanSpy_Win32_Bancos_AHK_2147657691_0
         $x_1_6 = {35 ae ca 7b c3 ff 25 ?? ?? ?? ?? 8b c0 53 33 db 6a 00 e8 ?? ?? ?? ?? 83 f8 07 75 1c 6a 01 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -15635,6 +15915,7 @@ rule TrojanSpy_Win32_Bancos_AHL_2147657735_0
         $x_1_3 = {d3 e8 89 45 ?? 8b 4d ?? bb 01 00 00 00 d3 e3 8b 45 ?? 99 f7 fb 89 55 ?? b9 00 01 00 00 8b 45 ?? 99 f7 f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15657,6 +15938,7 @@ rule TrojanSpy_Win32_Bancos_AHM_2147657781_0
         $x_1_3 = "\\GbPlugin" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15689,6 +15971,7 @@ rule TrojanSpy_Win32_Bancos_AHP_2147657925_0
         $x_10_13 = "Extrato_CC" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_50_*) and 4 of ($x_20_*) and 5 of ($x_10_*))) or
             ((1 of ($x_100_*) and 2 of ($x_50_*) and 2 of ($x_20_*) and 4 of ($x_10_*))) or
@@ -15725,6 +16008,7 @@ rule TrojanSpy_Win32_Bancos_AHQ_2147657950_0
         $x_1_4 = {66 81 e3 ff 00 8b f8 89 55 84 c7 85 7c ff ff ff 08 00 00 00 79 09 66 4b 66 81 cb 00 ff 66 43 0f bf c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -15753,6 +16037,7 @@ rule TrojanSpy_Win32_Bancos_AHR_2147658028_0
         $x_1_6 = "smtps.uol.com.br" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -15783,6 +16068,7 @@ rule TrojanSpy_Win32_Bancos_AHT_2147658168_0
         $x_1_8 = {5c 5f 67 62 69 65 68 61 62 6e 2e 70 61 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -15805,6 +16091,7 @@ rule TrojanSpy_Win32_Bancos_AHU_2147658190_0
         $x_1_3 = "DOCUMENTOS.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15827,6 +16114,7 @@ rule TrojanSpy_Win32_Bancos_AHX_2147658686_0
         $x_1_3 = {66 03 f0 66 69 c6 6d ce 66 05 bf 58 8b f0 43 66 ff 4c 24 04 75 c5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15850,6 +16138,7 @@ rule TrojanSpy_Win32_Bancos_AIC_2147659053_0
         $x_1_4 = {77 00 69 00 6e 00 64 00 69 00 72 00 [0-10] 5c 00 73 00 79 00 73 00 74 00 65 00 6d 00 33 00 32 00 5c 00 6a 00 72 00 73 00 73 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -15874,6 +16163,7 @@ rule TrojanSpy_Win32_Bancos_ACU_2147659126_0
         $x_1_2 = {6f 00 70 00 65 00 6e 00 00 00 00 00 43 00 3a 00 5c 00 77 00 69 00 6e 00 37 00 78 00 65 00 5c 00 77 00 69 00 6e 00 37 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15896,6 +16186,7 @@ rule TrojanSpy_Win32_Bancos_AIE_2147659378_0
         $x_1_3 = "\\Dados de aplicativos\\Mozilla\\Firefox\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15919,6 +16210,7 @@ rule TrojanSpy_Win32_Bancos_AIH_2147659661_0
         $x_1_4 = {06 74 63 68 75 61 6c 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -15943,6 +16235,7 @@ rule TrojanSpy_Win32_Bancos_AIL_2147660576_0
         $x_4_5 = "tmrBloqTimer" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15966,6 +16259,7 @@ rule TrojanSpy_Win32_Bancos_AIM_2147661185_0
         $x_1_4 = "MSG#Mete o Boleto Boca de Burro" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -15990,6 +16284,7 @@ rule TrojanSpy_Win32_Bancos_AIR_2147664979_0
         $x_1_5 = "https://mid.live.com/si/login.aspx?wa=wsignin1.0&rpsnv=11&ct=1310394156&rver=6.1.6206.0&wp=MBI&wreply=http%3a%2f%2fsn141w.snt1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16014,6 +16309,7 @@ rule TrojanSpy_Win32_Bancos_AIS_2147665213_0
         $x_1_5 = "type=hidden name=MERCHANTID" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -16038,6 +16334,7 @@ rule TrojanSpy_Win32_Bancos_V_2147670316_0
         $x_10_4 = {7a 00 3a 00 5c 00 61 00 62 00 63 00 5c 00 6c 00 6f 00 61 00 64 00 5c 00 6b 00 6f 00 6d 00 62 00 69 00 2e 00 76 00 62 00 70 00 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -16065,6 +16362,7 @@ rule TrojanSpy_Win32_Bancos_V_2147670316_1
         $x_10_4 = {7a 00 3a 00 5c 00 75 00 6c 00 74 00 69 00 6d 00 61 00 74 00 65 00 5c 00 63 00 61 00 73 00 61 00 2e 00 76 00 62 00 70 00 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -16092,6 +16390,7 @@ rule TrojanSpy_Win32_Bancos_AIZ_2147672217_0
         $x_5_5 = "select top 1 * from contr_pecas " wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16116,6 +16415,7 @@ rule TrojanSpy_Win32_Bancos_AJB_2147678318_0
         $x_1_5 = {63 00 3a 00 5c 00 77 00 69 00 6e 00 61 00 5c 00 74 00 6d 00 2e 00 74 00 78 00 74 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -16143,6 +16443,7 @@ rule TrojanSpy_Win32_Bancos_AJD_2147678500_0
         $x_1_4 = {8b 45 f0 c1 e0 06 03 d8 89 5d f0 83 c7 06 83 ff 08 7c 48 83 ef 08 8b cf 8b 5d f0 d3 eb 8b cf b8 01 00 00 00 d3 e0 50 8b 45 f0 5a 8b ca 99 f7 f9 89 55 f0 81 e3 ff 00 00 80 79 08 4b 81 cb 00 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -16167,6 +16468,7 @@ rule TrojanSpy_Win32_Bancos_AJF_2147678897_0
         $x_1_5 = {5c 46 69 6c 65 5a 69 6c 6c 61 5c 72 65 63 65 6e 74 73 65 72 76 65 72 73 2e 78 6d 6c 00 00 00 00 ff ff ff ff 06 00 00 00 3c 48 6f 73 74 3e 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -16190,6 +16492,7 @@ rule TrojanSpy_Win32_Bancos_AJG_2147678988_0
         $x_2_4 = {8b 45 f0 c1 e0 06 03 d8 89 5d f0 83 c7 06 83 ff 08 7c 42 83 ef 08 8b cf 8b 5d f0 d3 eb 8b cf b8 01 00 00 00 d3 e0 8b c8 8b 45 f0 99 f7 f9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -16219,6 +16522,7 @@ rule TrojanSpy_Win32_Bancos_AJH_2147679128_0
         $x_2_7 = {42 61 6e 63 6f 20 49 74 61 fa 20 2d 20 46 65 69 74 6f 20 50 61 72 61 20 56 6f 63}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -16247,6 +16551,7 @@ rule TrojanSpy_Win32_Bancos_Q_2147679182_0
         $x_5_4 = {8b 08 ff 51 1c 8b 85 ?? fa ff ff 8d 95 ?? fa ff ff e8 ?? ?? ?? ?? ff b5 ?? fa ff ff 8d 85 ?? fa ff ff ba 06}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -16272,6 +16577,7 @@ rule TrojanSpy_Win32_Bancos_AJJ_2147679279_0
         $x_1_3 = {2d 2d 6e 6f 2d 73 74 61 72 74 75 70 2d 77 69 6e 64 6f 77 20 2d 2d 6c 6f 61 64 2d 65 78 74 65 6e 73 69 6f 6e 3d 22 00 00 ff ff ff ff 08 00 00 00 5c 47 6f 6f 67 6c 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16299,6 +16605,7 @@ rule TrojanSpy_Win32_Bancos_AJN_2147680369_0
         $x_1_8 = "document.getElementById(\"kspSenha\").value" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -16321,6 +16628,7 @@ rule TrojanSpy_Win32_Bancos_AJM_2147680414_0
         $x_1_2 = {10 44 54 43 6f 6e 66 69 67 41 63 74 69 76 61 74 65 09 54 44 54 43 6f 6e 66 69 67 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16346,6 +16654,7 @@ rule TrojanSpy_Win32_Bancos_AJP_2147681860_0
         $x_2_6 = {8b 45 f4 8b 17 0f b7 74 5a fe 8b 55 f8 0f b7 44 42 fe 66 33 f0 0f b7 f6 85 f6 75 07}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_2_*))) or
             (all of ($x*))
@@ -16372,6 +16681,7 @@ rule TrojanSpy_Win32_Bancos_AJQ_2147681899_0
         $x_3_4 = "manda.php" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16399,6 +16709,7 @@ rule TrojanSpy_Win32_Bancos_AJS_2147682206_0
         $x_3_8 = {8b 55 f0 0f b7 44 50 fe 33 45 e0 89 45 dc 8b 45 dc 3b 45 ec 7f 10 8b 45 dc 05 ff 00 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_3_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -16428,6 +16739,7 @@ rule TrojanSpy_Win32_Bancos_AJT_2147682221_0
         $x_8_5 = "sen_1_06_14_Senha" wide //weight: 8
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16450,6 +16762,7 @@ rule TrojanSpy_Win32_Bancos_AJV_2147682541_0
         $x_1_3 = {7b 00 30 00 31 00 45 00 39 00 38 00 30 00 36 00 37 00 45 00 41 00 39 00 45 00 33 00 38 00 30 00 39 00 30 00 7d 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16472,6 +16785,7 @@ rule TrojanSpy_Win32_Bancos_AJX_2147683096_0
         $x_1_3 = {8d 55 fc b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 55 fc b8 ?? ?? ?? ?? b9 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8d 55 f8 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 55 f8 b8 ?? ?? ?? ?? b9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16495,6 +16809,7 @@ rule TrojanSpy_Win32_Bancos_AKF_2147684344_0
         $x_1_4 = "FOXTEK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -16519,6 +16834,7 @@ rule TrojanSpy_Win32_Bancos_AKG_2147684345_0
         $x_1_2 = {38 44 42 33 36 37 44 37 37 30 44 38 34 34 45 37 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 73 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16545,6 +16861,7 @@ rule TrojanSpy_Win32_Bancos_R_2147684392_0
         $x_1_6 = "rd GbPlugin" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16573,6 +16890,7 @@ rule TrojanSpy_Win32_Bancos_R_2147684392_1
         $x_1_8 = "Xxxx - KalvinX - xxxX" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -16603,6 +16921,7 @@ rule TrojanSpy_Win32_Bancos_AKJ_2147684757_0
         $x_1_11 = "7FBE668BB71960C4BF054F82F65384A55381AA3EE91DD80A4841EA17C7AD48F6103EE20626CE6CB7A849F051D109CC0C79A133F70133C338" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -16633,6 +16952,7 @@ rule TrojanSpy_Win32_Bancos_AKN_2147684826_0
         $x_1_8 = "\\chrone.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -16656,6 +16976,7 @@ rule TrojanSpy_Win32_Bancos_AKP_2147684948_0
         $x_1_4 = "password=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16681,6 +17002,7 @@ rule TrojanSpy_Win32_Bancos_BAC_2147685060_0
         $x_1_6 = {8b c0 33 d2 66 33 10 8b 08 c1 e9 10 66 33 d1 66 33 50 04 66 33 50 06 66 33 50 08 66 33 50 0a 66 33 50 0c 66 33 50 0e 66 33 50 10 8b 40 10 c1 e8 10 66 33 d0 8b c2 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16708,6 +17030,7 @@ rule TrojanSpy_Win32_Bancos_S_2147685642_0
         $x_1_7 = "I%n*t#e%r%n*e@t# #E%x*p*l#o%r*e@r@_#S%e*r*v#e%r*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16734,6 +17057,7 @@ rule TrojanSpy_Win32_Bancos_T_2147685647_0
         $x_1_6 = "#n%u*R#\\#n#*###@##%o" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16759,6 +17083,7 @@ rule TrojanSpy_Win32_Bancos_AKY_2147685925_0
         $x_1_6 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16788,6 +17113,7 @@ rule TrojanSpy_Win32_Bancos_AKZ_2147685992_0
         $x_10_10 = {be 01 00 00 00 8b 45 f0 0f b7 44 70 fe 33}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -16818,6 +17144,7 @@ rule TrojanSpy_Win32_Bancos_AKZ_2147685992_1
         $x_10_8 = {be 01 00 00 00 8b 45 f0 0f b7 44 70 fe 33}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -16845,6 +17172,7 @@ rule TrojanSpy_Win32_Bancos_ALA_2147686316_0
         $x_1_5 = "5Windows Memory Diagnostic tool Contact:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16867,6 +17195,7 @@ rule TrojanSpy_Win32_Bancos_ALB_2147686402_0
         $x_1_3 = "SELECT * FROM IMAGEMS WHERE ID_GAME = 1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16890,6 +17219,7 @@ rule TrojanSpy_Win32_Bancos_BAD_2147689264_0
         $x_1_4 = "atioglll.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -16918,6 +17248,7 @@ rule TrojanSpy_Win32_Bancos_ALP_2147689490_0
         $x_1_9 = "pguard.cpl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -16941,6 +17272,7 @@ rule TrojanSpy_Win32_Bancos_Lowfi_2147692019_0
         $x_1_4 = "Bank" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16963,6 +17295,7 @@ rule TrojanSpy_Win32_Bancos_AMB_2147692469_0
         $x_1_3 = "Z:\\a_new_dll\\VIVAX.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16988,6 +17321,7 @@ rule TrojanSpy_Win32_Bancos_AMD_2147693083_0
         $x_1_6 = "wanderson1985" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -17012,6 +17346,7 @@ rule TrojanSpy_Win32_Bancos_AMG_2147693413_0
         $x_1_5 = "HSBC Bank Brasil S.A." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17036,6 +17371,7 @@ rule TrojanSpy_Win32_Bancos_AMH_2147693415_0
         $x_1_5 = "internetbankingcaixa" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17060,6 +17396,7 @@ rule TrojanSpy_Win32_Bancos_AMI_2147693416_0
         $x_1_5 = "Windows Security Host" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17082,6 +17419,7 @@ rule TrojanSpy_Win32_Bancos_AMJ_2147693750_0
         $x_2_3 = {8b f2 8b c8 2b f0 8b d7 8a 1c 0e 32 5d 0c 88 19 41 4a 75 f4}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17104,6 +17442,7 @@ rule TrojanSpy_Win32_Bancos_AML_2147694316_0
         $x_1_3 = {2e 00 74 00 6d 00 70 14 00 5f 5f 76 62 61 53 74 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17136,6 +17475,7 @@ rule TrojanSpy_Win32_Bancos_AMN_2147697070_0
         $x_1_13 = "CCPAGSEGURO:'+numeroCartao+'|'+mes+'|'+ano+'|'+codSeguranca" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -17163,6 +17503,7 @@ rule TrojanSpy_Win32_Bancos_AMO_2147697122_0
         $x_1_8 = "B141C24AA069B5808B9965" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -17187,6 +17528,7 @@ rule TrojanSpy_Win32_Bancos_AMP_2147697146_0
         $x_1_5 = {63 72 65 61 74 65 6f 62 6a 65 63 74 28 22 77 73 63 72 69 70 74 2e 73 68 65 6c 6c 22 29 3e 3e 22 25 75 73 65 72 70 72 6f 66 69 6c 65 25 5c 72 75 6e 2e 76 62 73 22 0d 0a 65 63 68 6f 20 6f 62 6a 73 68 65 6c 6c 2e 72 75 6e 20 22 25 74 65 6d 70 25 5c 72 75 6e 2e 62 61 74 22 2c 76 62 68 69 64 65 3e 3e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -17214,6 +17556,7 @@ rule TrojanSpy_Win32_Bancos_AMR_2147697169_0
         $x_1_4 = "Framebrada4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17246,6 +17589,7 @@ rule TrojanSpy_Win32_Bancos_AMQ_2147697244_0
         $x_1_13 = "parent.mostraAguarde()" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -17277,6 +17621,7 @@ rule TrojanSpy_Win32_Bancos_AMU_2147705503_0
         $x_1_8 = "Banco Bradesco S/A - Mozilla Firefox" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17303,6 +17648,7 @@ rule TrojanSpy_Win32_Bancos_AMW_2147706904_0
         $x_1_7 = "AbreArquivo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -17332,6 +17678,7 @@ rule TrojanSpy_Win32_Bancos_AMY_2147717103_0
         $x_1_10 = "26f6475746f73" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -17361,6 +17708,7 @@ rule TrojanSpy_Win32_Bancos_AMZ_2147718628_0
         $x_1_10 = "<|CloseChat|>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -17385,6 +17733,7 @@ rule TrojanSpy_Win32_Bancos_2147799826_0
         $x_1_5 = "op=7BC3C3FDB26C6961F879A6FF5983FA624C5E194B87792AD7DDCF0FF9B9BF17" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -17412,6 +17761,7 @@ rule TrojanSpy_Win32_Bancos_2147799826_1
         $x_5_5 = "/~souleria/css/a.php?a=" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -17439,6 +17789,7 @@ rule TrojanSpy_Win32_Bancos_2147799826_2
         $x_1_5 = "restablecerlinks();" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -17469,6 +17820,7 @@ rule TrojanSpy_Win32_Bancos_2147799826_3
         $x_1_8 = "D89F536F33FCB0650EF2A36323EB919843429DD97E18F6A66014D1D1964732E5A" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -17491,6 +17843,7 @@ rule TrojanSpy_Win32_Bancos_MA_2147901447_0
         $x_1_2 = {ff cc 31 00 06 8b 1c d4 4d e0 ?? 97 46 a0 ?? ?? ?? ?? 36 41 88 e5 a3 ?? ?? ?? ?? bc ?? ?? ?? ?? d5 10 b1 ba b7 3a 4f ad 33 99 ?? ?? ?? ?? 0c 00 aa 00 60 d3 93}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

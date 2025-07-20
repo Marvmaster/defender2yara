@@ -17,6 +17,7 @@ rule Backdoor_Win32_Spentrpa_A_2147626361_0
         $x_1_3 = {eb ca 8b 4c 24 18 3b cb 74 29 8a 41 ff 3a c3 74 18 3c ff 74 14 fe c8 5f 5e 88 41 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

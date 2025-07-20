@@ -30,6 +30,7 @@ rule Ransom_Win32_CryptoLocker_MAK_2147796541_0
         $x_10_15 = "%cid_bot%" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 10 of ($x_1_*))) or
             (all of ($x*))

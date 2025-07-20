@@ -19,6 +19,7 @@ rule HackTool_Win32_CCProxy_2147621705_0
         $x_1_5 = "Youngzsoft Game Proxy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule HackTool_Win32_CCProxy_B_2147655504_0
         $x_1_5 = {43 43 50 72 6f 78 79 00 5c 5c 2e 5c 6d 61 69 6c 73 6c 6f 74 5c 25 73 00 2d 72 65 73 65 74 00 00 2d 75 70 64 61 74 65 00 2d 73 65 72 76 69 63 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

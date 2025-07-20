@@ -20,6 +20,7 @@ rule Trojan_MSIL_Lokild_J_2147743691_0
         $x_1_5 = {7e 02 00 00 04 02 7e 02 00 00 04 8e 69 5d 91 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MSIL_PureCrypt_NEAA_2147841891_0
         $x_2_3 = "Mqoghetk" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_PureCrypt_CCDN_2147895107_0
         $x_1_1 = {09 11 05 16 6f ?? ?? ?? ?? 13 06 12 06 28 ?? ?? ?? ?? 13 07 11 04 11 07 6f ?? ?? ?? ?? 11 05 17 58 13 05 11 05 09 6f ?? ?? ?? ?? 32 d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

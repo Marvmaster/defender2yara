@@ -30,6 +30,7 @@ rule Trojan_MSIL_Fareit_OBFU_2147795746_0
         $x_1_15 = "StringBuilder" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -57,6 +58,7 @@ rule Trojan_MSIL_Fareit_AD_2147797106_0
         $x_3_7 = "Ui.TrackingRecord.resources" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +87,7 @@ rule Trojan_MSIL_Fareit_MB_2147812737_0
         $x_1_8 = "MemoryStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +112,7 @@ rule Trojan_MSIL_Fareit_RPC_2147813206_0
         $x_1_4 = "_X_X_X_X_X_X_X_X_X_X_X_X_X_X_X_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +134,7 @@ rule Trojan_MSIL_Fareit_OTF_2147817514_0
         $x_1_1 = {7e 01 00 00 04 07 7e 01 00 00 04 07 91 7e 02 00 00 04 07 7e 02 00 00 04 8e 69 5d 91 07 06 58 7e 02 00 00 04 8e 69 58 1f 1f 5f 63 20 ff 00 00 00 5f d2 61 d2 9c 07 17 58 0b 07 7e 01 00 00 04 8e 69 32 bd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule Trojan_MSIL_Fareit_SPQ_2147837555_0
         $x_5_1 = {8d 06 00 00 01 0a 06 25 0c 2c 05 08 8e 69 2d 05 16 e0 0b 2b 09 08 16 8f 06 00 00 01 e0 0b 07 02 54 14 0c 03 0d 09 2c 06 06 28 ?? ?? ?? 0a 06 13 04 11 04 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule Trojan_MSIL_Fareit_AF_2147889145_0
         $x_1_1 = {72 01 00 00 70 6f 11 00 00 0a 6f 12 00 00 0a 0b 07 2c 1c 28 13 00 00 0a 72 69 00 00 70 28 14 00 00 0a 25 07 28 15 00 00 0a 28 16 00 00 0a 26 de 0a 06 2c 06 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -193,6 +200,7 @@ rule Trojan_MSIL_Fareit_RS_2147899317_0
         $x_1_1 = {07 11 06 91 8c 15 00 00 01 13 08 11 06 7e 16 00 00 04 8e b7 5d 8c 1a 00 00 01 13 07 07 11 06 11 08 7e 16 00 00 04 11 07 28 12 00 00 0a 91 8c 15 00 00 01 28 13 00 00 0a 28 14 00 00 0a 9c 11 06 17 58 13 06 11 06 11 09 31 b6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +224,7 @@ rule Trojan_MSIL_Fareit_SG_2147901064_0
         $x_1_3 = "get_Culture" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

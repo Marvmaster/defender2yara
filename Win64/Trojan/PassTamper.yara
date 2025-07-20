@@ -16,6 +16,7 @@ rule Trojan_Win64_PassTamper_A_2147941740_0
         $x_1_2 = {2e 00 73 00 79 00 73 00 00 00 00 00 4e 00 76 00 4b 00 65 00 72 00 62 00 65 00 6c 00 00 00 00 ?? 00 00 00 00 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 0a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Ransom_Win32_MoonRansom_YAA_2147922988_0
         $x_1_2 = {8a 44 35 dc 8b 4d d8 32 c8 88 4c 35 dc 46}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

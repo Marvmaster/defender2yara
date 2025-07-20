@@ -20,6 +20,7 @@ rule Ransom_Win32_Locksteal_A_2147690430_0
         $x_1_6 = {3f 00 68 00 77 00 69 00 64 00 3d 00 [0-4] 26 00 63 00 6f 00 75 00 6e 00 74 00 72 00 79 00 3d 00 [0-4] 26 00 63 00 6f 00 6d 00 70 00 75 00 74 00 65 00 72 00 3d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

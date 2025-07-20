@@ -20,6 +20,7 @@ rule VirTool_Win64_Malstackz_A_2147844661_0
         $x_1_5 = {4c 8b c2 0f 10 48 10 0f 11 01 0f 10 40 20 0f 11 49 10 0f 10 48 30 0f 11 41 20 0f 10 40 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

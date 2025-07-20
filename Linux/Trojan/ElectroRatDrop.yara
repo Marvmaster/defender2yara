@@ -55,6 +55,7 @@ rule Trojan_Linux_ElectroRatDrop_B_2147778124_0
         $x_1_10 = "hidefile.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

@@ -18,6 +18,7 @@ rule Trojan_Win32_Zeeborot_A_2147672640_0
         $x_1_4 = "--HiddenServiceDir \"%s\\hidden_service\" --HiddenServicePort \"55080 127.0.0.1:55080\"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

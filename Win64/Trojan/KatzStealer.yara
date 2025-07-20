@@ -20,6 +20,7 @@ rule Trojan_Win64_KatzStealer_RH_2147942138_0
         $x_2_5 = "%s\\decrypted_appbound_key.txt" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

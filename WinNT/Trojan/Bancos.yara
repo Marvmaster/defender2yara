@@ -17,6 +17,7 @@ rule Trojan_WinNT_Bancos_G_2147647309_0
         $x_1_3 = "\\WINDOWS\\system32\\drivers\\gbpkm.sys" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_WinNT_Bancos_H_2147648210_0
         $x_1_5 = {01 00 89 45 f4 c7 05 ?? ?? 01 00 18 00 00 00 c7 05 ?? ?? 01 00 00 00 00 00 c7 05 ?? ?? 01 00 40 00 00 00 c7 05 ?? ?? 01 00 ?? ?? 01 00 c7 05 ?? ?? 01 00 00 00 00 00 c7 05 ?? ?? 01 00 00 00 00 00 68 ?? ?? ?? 00 ff 15 ?? ?? 01 00 89 45 f4 68 ?? ?? 01 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_WinNT_Bancos_K_2147678813_0
         $x_1_5 = {5c 00 3f 00 3f 00 5c 00 43 00 3a 00 5c 00 61 00 72 00 71 00 75 00 69 00 76 00 6f 00 73 00 20 00 64 00 65 00 20 00 70 00 72 00 6f 00 67 00 72 00 61 00 6d 00 61 00 73 00 5c 00 67 00 62 00 70 00 6c 00 75 00 67 00 69 00 6e 00 5c 00 47 00 62 00 70 00 53 00 76 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

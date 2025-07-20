@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Brcixdlr_A_2147628411_0
         $x_1_3 = {68 c4 09 00 00 e8 ?? ?? ?? ?? 8d 55 ?? b8 24 00 00 00 e8 ?? ?? ?? ?? 8d 45 ?? 50 8d 4d ?? ba ?? ?? ?? ?? b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_Win32_Orxlocker_A_2147705978_0
         $x_1_5 = {65 6e 74 65 72 20 79 6f 75 72 20 50 61 79 6d 65 6e 74 20 49 44 20 66 72 6f 6d 20 61 62 6f 76 65 2e 3c 62 72 3e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

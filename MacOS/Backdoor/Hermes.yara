@@ -20,6 +20,7 @@ rule Backdoor_MacOS_Hermes_A_2147921851_0
         $x_5_5 = {40 33 40 f9 a8 4c 8e d2 48 ee ad f2 48 0e c0 f2 09 a0 fc d2 48 a7 05 a9}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Backdoor_MacOS_Hermes_B_2147923942_0
         $x_1_5 = "screenshotTotalDisplays" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

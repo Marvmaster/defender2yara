@@ -18,6 +18,7 @@ rule Trojan_Win64_Tinukebot_GA_2147924837_0
         $x_1_3 = "/api.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Trojan_Win64_Tinukebot_AMDG_2147932736_0
         $x_1_7 = "ReflectiveLoader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

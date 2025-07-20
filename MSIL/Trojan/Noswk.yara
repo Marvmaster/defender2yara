@@ -18,6 +18,7 @@ rule Trojan_MSIL_Noswk_PGN_2147939898_0
         $x_2_3 = "DecodeBase64ToUrl" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

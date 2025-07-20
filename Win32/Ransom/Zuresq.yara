@@ -19,6 +19,7 @@ rule Ransom_Win32_Zuresq_A_2147688675_0
         $x_1_5 = {2f 00 70 00 61 00 74 00 72 00 69 00 6f 00 74 00 65 00 2f 00 73 00 61 00 6e 00 73 00 76 00 69 00 6f 00 6c 00 65 00 6e 00 63 00 65 00 00 1b 43 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Win32_Zuresq_A_2147688675_1
         $x_1_8 = "dlDesktopFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 6 of ($x_1_*))) or
             ((2 of ($x_3_*) and 3 of ($x_1_*))) or

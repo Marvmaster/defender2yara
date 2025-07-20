@@ -16,6 +16,7 @@ rule PWS_Win32_Quopax_A_2147626304_0
         $x_1_2 = {6a 7c 56 e8 ?? ?? 00 00 6a 24 56 8b f8 e8 ?? ?? 00 00 8b d8 6a 40 56 89 5d fc e8 ?? ?? 00 00 6a 23 56}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule PWS_Win32_Quopax_A_2147626305_0
         $x_1_2 = {68 b8 0b 00 00 ff d7 8d 85 ?? ?? ff ff 50 ff d3 85 c0 75 ?? 46 83 fe 19 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

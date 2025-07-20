@@ -18,6 +18,7 @@ rule Trojan_Win32_Vbdowninst_SA_2147743309_0
         $x_1_3 = {5c 49 6e 69 73 74 61 6c 6c [0-2] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

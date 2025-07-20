@@ -16,6 +16,7 @@ rule Backdoor_Win32_Detarmal_A_2147643474_0
         $x_1_2 = {83 f8 46 0f 8f ?? ?? ?? ?? 0f 84 ?? ?? ?? ?? 83 f8 2f 7f ?? 74 ?? 83 e8 28 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

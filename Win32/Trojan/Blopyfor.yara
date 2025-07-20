@@ -19,6 +19,7 @@ rule Trojan_Win32_Blopyfor_A_2147837052_0
         $x_1_4 = "Enter Account Information for Task Registration" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

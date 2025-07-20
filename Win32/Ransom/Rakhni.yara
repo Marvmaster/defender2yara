@@ -20,6 +20,7 @@ rule Ransom_Win32_Rakhni_S_2147742389_0
         $x_1_6 = "del /q %SYSTEMDRIVE%\\Intel\\enable.cmd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

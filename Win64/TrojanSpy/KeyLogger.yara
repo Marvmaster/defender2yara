@@ -17,6 +17,7 @@ rule TrojanSpy_Win64_KeyLogger_SK_2147906538_0
         $x_2_2 = "D:winlogs.txt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

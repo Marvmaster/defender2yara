@@ -17,6 +17,7 @@ rule Worm_Win32_Selemen_A_2147706561_0
         $x_1_3 = ":\\svchosta.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

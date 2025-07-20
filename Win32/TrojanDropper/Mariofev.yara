@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Mariofev_A_2147607909_0
         $x_1_7 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 4 of ($x_1_*))) or
             ((1 of ($x_8_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule TrojanDropper_Win32_Mariofev_B_2147617523_0
         $x_1_4 = {5c 63 74 66 6d 6f 6e 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -81,6 +83,7 @@ rule TrojanDropper_Win32_Mariofev_I_2147637993_0
         $x_1_8 = "DEPACKEND" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_2_*))) or

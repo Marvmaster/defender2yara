@@ -17,6 +17,7 @@ rule Ransom_Win32_Trasbind_A_2147645262_0
         $x_1_3 = "BFFF5675-ADC0-4740-81FF-7540597A0DC5" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

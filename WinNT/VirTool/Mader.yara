@@ -18,6 +18,7 @@ rule VirTool_WinNT_Mader_B_2147595149_0
         $x_1_4 = {43 6f 72 65 20 28 25 78 29 0a 00 55 8b ec 83 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule VirTool_WinNT_Mader_A_2147606637_0
         $x_1_8 = ">XIT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

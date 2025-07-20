@@ -17,6 +17,7 @@ rule Trojan_Win64_Autorun_MP_2147908913_0
         $x_1_2 = {75 e3 48 8b 35 8c 28 1c 00 31 ff 8b 06 83 f8 01 0f 84 56 01 00 00 8b 06 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_Autorun_NA_2147927402_0
         $x_1_2 = "186.26.107.188" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

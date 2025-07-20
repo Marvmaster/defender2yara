@@ -19,6 +19,7 @@ rule Trojan_Win32_Carfekab_A_2147684978_0
         $x_1_4 = {34 61 62 64 63 33 38 31 2d 33 39 34 38 2d 34 36 37 32 2d 62 30 38 36 2d 66 63 38 39 62 39 37 62 61 39 63 63 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

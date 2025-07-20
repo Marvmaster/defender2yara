@@ -19,6 +19,7 @@ rule TrojanDownloader_Win64_PsDow_A_2147896321_0
         $x_2_4 = "web.open \"get\",.arguments(0),0:web.send:if web.status" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -15,6 +15,7 @@ rule Trojan_MSIL_Ainslot_A_2147657619_0
         $x_1_1 = {09 08 8e 69 32 b7 06 28 4b 00 00 06 6f 29 00 00 0a 2d 1a 28 2a 00 00 0a 28 49 00 00 06 28 4a 00 00 06 28 2b 00 00 0a 28 2c 00 00 0a 26}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_Ainslot_2147740084_0
         $x_1_3 = "eQkpLSSYYhDfbboUqcIpaCwPZ" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_MSIL_Ainslot_ADT_2147781327_0
         $x_4_5 = "JgtG/lRwSzgVYnWYV7K5by5WLSz2C07dKFIE/Pmc4HI" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

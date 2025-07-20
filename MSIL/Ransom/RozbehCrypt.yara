@@ -18,6 +18,7 @@ rule Ransom_MSIL_RozbehCrypt_PA_2147808327_0
         $x_1_3 = "\\EvilNominatus.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

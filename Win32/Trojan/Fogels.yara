@@ -18,6 +18,7 @@ rule Trojan_Win32_Fogels_C_2147683238_0
         $x_1_4 = {6a 69 65 66 68 68 66 75 66 68 38 7a 6b 6c 6a f6 69 73 65 67 7a 67 7a 65 67 33 33 35 34 35 36 7a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

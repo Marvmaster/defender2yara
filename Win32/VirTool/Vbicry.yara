@@ -16,6 +16,7 @@ rule VirTool_Win32_Vbicry_A_2147628238_0
         $x_1_2 = "DoNotAllowExceptions\" /t REG_DWORD /d \"0\" /f" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

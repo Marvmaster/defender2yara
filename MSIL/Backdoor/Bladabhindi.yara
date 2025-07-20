@@ -21,6 +21,7 @@ rule Backdoor_MSIL_Bladabhindi_J_2147729260_0
         $x_1_6 = "01000100 01101111 01110111 01101110 01101100 01101111 01100001 01100100 01000100 01100001 01110100 01100001" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Backdoor_MSIL_Bladabhindi_K_2147730020_0
         $x_1_6 = "%Persistence%" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

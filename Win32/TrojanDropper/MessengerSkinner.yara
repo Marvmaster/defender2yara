@@ -23,6 +23,7 @@ rule TrojanDropper_Win32_MessengerSkinner_2147799764_0
         $x_1_9 = {49 6e 69 74 69 61 6c 69 7a 65 44 6c 6c 46 72 6f 6d 45 78 65 00 00 00 00 4d 65 73 73 65 6e 67 65 72 53 6b 69 6e 6e 65 72 44 6c 6c 2e 64 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 5 of ($x_1_*))) or
             ((3 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or

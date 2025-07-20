@@ -28,6 +28,7 @@ rule Worm_Win32_Savego_A_2147575181_0
         $x_1_14 = "net start \"Symantec AntiVirus" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 

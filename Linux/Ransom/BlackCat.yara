@@ -21,6 +21,7 @@ rule Ransom_Linux_BlackCat_A_2147808375_0
         $x_1_6 = "default_file_cipher" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Linux_BlackCat_B_2147823190_0
         $x_1_5 = "locker::core::pipeline::file_worker_pool" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_Linux_BlackCat_C_2147846608_0
         $x_1_4 = "esxcli --formatter=csv --format-param=fields==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Ransom_Linux_BlackCat_H_2147916313_0
         $x_1_2 = {41 57 41 56 41 54 53 50 48 8b 4f 08 48 89 c8 48 29 f0 48 39 d0 0f 83 e3 00 00 00 48 01 d6 0f 82 e6 00 00 00 49 89 ff 48 8d 04 09 48 39 f0 48 0f 47 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

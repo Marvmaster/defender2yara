@@ -16,6 +16,7 @@ rule Trojan_MSIL_StealerC_CXII_2147852429_0
         $x_1_1 = {0c 16 0d 38 1d 00 00 00 00 08 07 09 07 8e 69 5d 91 02 09 91 61 28 ?? ?? ?? ?? 6f ?? ?? ?? ?? 00 00 09 17 58 0d 09 02 8e 69 fe 04 13 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_StealerC_SPQN_2147897591_0
         $x_5_1 = {11 06 11 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 11 05 16 16 6f ?? ?? ?? 06 16 31 01 2a 20 ?? ?? ?? 00 28 ?? ?? ?? 0a 11 07 17 58 13 07 11 07 1b 32 cb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_MSIL_StealerC_NE_2147905686_0
         $x_10_1 = {11 0c 11 07 58 11 09 59 93 61 11 0b ?? 2c 00 00 1b 11 09 11 0c 58 1f 11 58 11 08 5d 93 61 d1}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_MSIL_StealerC_MBZV_2147906787_0
         $x_1_4 = "Aigqydvxt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_MSIL_StealerC_EC_2147907693_0
         $x_1_10 = "C:\\Windows\\System32\\drivers\\etc\\hosts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_MSIL_StealerC_AMAG_2147919408_0
         $x_1_1 = {9c 06 08 91 06 09 91 58 20 00 01 00 00 5d 13 ?? 02 11 ?? 8f ?? 00 00 01 25 71 ?? 00 00 01 06 11 ?? 91 61 d2 81 ?? 00 00 01 11 ?? 17 58 13 ?? 11 ?? 02 8e 69 3f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Trojan_MSIL_StealerC_AMAG_2147919408_1
         $x_1_4 = "bxKJoJNoGNGLTKQN99" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -184,6 +191,7 @@ rule Trojan_MSIL_StealerC_CZ_2147920290_0
         $x_1_7 = "CLBYNAMEOXYAODSDFFFG4HHTTRYYUII5OOPPLJ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

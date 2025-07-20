@@ -20,6 +20,7 @@ rule Ransom_Win32_Metlock_A_2147694618_0
         $x_1_6 = {cd e5 e2 e5 f0 ed fb e9 20 ef e0 f0 ee eb fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

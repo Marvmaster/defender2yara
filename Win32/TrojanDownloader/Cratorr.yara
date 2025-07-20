@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Cratorr_A_2147608017_0
         $x_1_5 = {37 3a 63 6f 6d 6d 65 6e 74 25 64 3a 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

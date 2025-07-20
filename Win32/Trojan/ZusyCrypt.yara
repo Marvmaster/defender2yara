@@ -17,6 +17,7 @@ rule Trojan_Win32_ZusyCrypt_LKA_2147896774_0
         $x_1_2 = "ftp.forest-fire.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

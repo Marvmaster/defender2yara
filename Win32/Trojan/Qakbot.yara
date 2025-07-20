@@ -21,6 +21,7 @@ rule Trojan_Win32_Qakbot_A_2147734746_0
         $x_10_7 = {48 f7 d8 1b c0 25 ?? ?? ?? ?? 81 ?? ?? ?? ?? ?? 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -47,6 +48,7 @@ rule Trojan_Win32_Qakbot_SD_2147740376_0
         $x_1_2 = {33 cb 42 89 4e ?? 69 85 ?? ?? ?? ?? ?? ?? ?? ?? 3b d0 76}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Qakbot_E_2147742203_0
         $x_1_1 = "emtn\\pldrss.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_Qakbot_GG_2147742543_0
         $x_1_1 = {01 02 8b 45 d8 03 45 b0 03 45 e8 89 45 b4 6a 00 e8 ?? ?? ?? ?? 8b 5d b4 2b d8 6a 00 e8 ?? ?? ?? ?? 2b d8 8b 45 ec 31 18 83 45 e8 04 83 45 ec 04 8b 45 e8 3b 45 e4 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Trojan_Win32_Qakbot_GG_2147742543_1
         $x_1_2 = {32 0c 02 8b ?? ?? ?? 88 0c 30 8b ?? ?? ?? 8a ?? ?? ?? 32 ?? ?? ?? 88 ?? ?? ?? 83 ?? 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_Win32_Qakbot_GG_2147742543_2
         $x_1_1 = {89 c1 8b 45 [0-2] fc f3 a4 57 c7 04 [0-6] 59 55 33 2c [0-2] 0b ab [0-4] 83 e0 00 31 e8 5d 56 81 04 [0-6] 29 34 [0-2] 8f 83 [0-4] 21 8b [0-4] 6a 00 31 2c [0-2] 50 5d 03 ab [0-4] 89 e8 5d ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Trojan_Win32_Qakbot_GG_2147742543_3
         $x_1_1 = {bb f1 32 01 00 bb f1 32 01 00 bb f1 32 01 00 bb f1 32 01 00 bb f1 32 01 00 bb f1 32 01 00 bb f1 32 01 00 bb f1 32 01 00 bb f1 32 01 00 bb f1 32 01 00 33 05 [0-4] 8b c8 8b d1 89 15 [0-4] a1 [0-4] 8b 0d [0-4] 89 08 5f 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +181,7 @@ rule Trojan_Win32_Qakbot_GG_2147742543_4
         $x_1_2 = {8b d2 8b d2 8b d2 [0-30] a1 [0-4] a3 [0-4] a1 [0-4] 8b d8 a1 [0-4] 33 d9 c7 05 [0-4] 00 00 00 00 01 1d [0-4] a1 [0-4] 8b 0d [0-4] 89 08 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +210,7 @@ rule Trojan_Win32_Qakbot_GG_2147742543_5
         $x_1_8 = "GetCurrentThreadId" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -235,6 +244,7 @@ rule Trojan_Win32_Qakbot_GG_2147742543_6
         $x_1_10 = "OpenProcessToken" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -274,6 +284,7 @@ rule Trojan_Win32_Qakbot_GG_2147742543_7
         $x_1_16 = "GetKeyboardState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 13 of ($x_1_*))) or
             (all of ($x*))
@@ -298,6 +309,7 @@ rule Trojan_Win32_Qakbot_BS_2147742796_0
         $x_1_1 = {6b f2 71 89 cf 01 f7 6b f2 71 89 cb 01 f3 83 c3 6d 6b f2 71 89 44 24 30 89 c8 01 f0 83 c0 0d 8b 00 6b f2 71 01 f1 83 c1 11 8b 09 33 0b 8b 74 24 78 89 f3 03 5c 24 7c 89 44 24 2c 8b 44 24 30 2b 07 8b 7c 24 2c 01 c7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -320,6 +332,7 @@ rule Trojan_Win32_Qakbot_BS_2147742796_1
         $x_1_2 = {eb 00 8b 65 ?? 58 8b e8 8b 15 ?? ?? ?? ?? 52 8b 15 ?? ?? ?? ?? 52 8b 15 ?? ?? ?? ?? ff e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -343,6 +356,7 @@ rule Trojan_Win32_Qakbot_BS_2147742796_2
         $x_1_3 = "mfixautoutil4.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -364,6 +378,7 @@ rule Trojan_Win32_Qakbot_BS_2147742796_3
         $x_2_1 = {03 d8 8b 45 ec 31 18 68 [0-4] e8 [0-4] 8b d8 8b 45 e8 83 c0 04 03 d8 68 [0-4] e8 [0-4] 2b d8 68 [0-4] e8 [0-4] 03 d8 68 [0-4] e8 [0-4] 2b d8 89 5d e8 68 [0-4] e8 [0-4] 8b d8 8b 45 ec 83 c0 04 03 d8 68 [0-4] e8 [0-4] 2b d8 89 5d ec 8b 45 e8 3b 45 e4 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -386,6 +401,7 @@ rule Trojan_Win32_Qakbot_BS_2147742796_4
         $x_1_2 = {03 f0 8b 55 ?? 03 55 ?? 8b 45 ?? 8b 4d ?? 8a 0c 31 88 0c 10 8b 55 ?? 83 c2 01 89 55 ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -409,6 +425,7 @@ rule Trojan_Win32_Qakbot_BS_2147742796_5
         $x_1_3 = {01 d8 8b 5c 24 ?? 8a 14 33 88 c6 0f b6 c6 8b 74 24 ?? 8a 34 06 30 d6 8b 44 24 ?? 89 84 24 ?? ?? ?? ?? 8b 44 24 1c 89 84 24 ?? ?? ?? ?? 8b 44 24 ?? 88 34 38}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -435,6 +452,7 @@ rule Trojan_Win32_Qakbot_S_2147744162_0
         $x_1_6 = "DeletePrinterDriverExW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -457,6 +475,7 @@ rule Trojan_Win32_Qakbot_DSK_2147744950_0
         $x_2_2 = {8b 44 24 18 0d c6 1c a1 4e 01 f2 88 d7 0f b6 d7 8b 74 24 20 89 74 24 74 89 44 24 70 8a 7c 24 6b 80 c7 a0 8b 44 24 14 8a 04 10 30 d8 88 7c 24 6b 8b 54 24 28 88 04 3a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -478,6 +497,7 @@ rule Trojan_Win32_Qakbot_PDSK_2147744952_0
         $x_2_1 = {8a 1c 01 8b 44 24 24 0f b6 14 10 01 fa 88 d7 0f b6 d7 8a 3c 10 30 df 8b 54 24 44}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -500,6 +520,7 @@ rule Trojan_Win32_Qakbot_GA_2147747950_0
         $x_1_2 = {d0 2d 6b 65 1c c0 d3 0b bd fd 13 89 21 41 72 eb 22 e1 79 03 b7 6d 0c 64 76 f4 3d c0 55 44 62}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -521,6 +542,7 @@ rule Trojan_Win32_Qakbot_GA_2147747950_1
         $x_1_1 = {89 02 8b 45 c4 03 45 a4 03 45 9c 2b 45 9c 89 45 a0 8b 45 a0 03 45 9c 2b 45 9c 8b 55 d8 33 02 89 45 a0 8b 45 a0 03 45 9c 2b 45 9c 8b 55 d8 89 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -542,6 +564,7 @@ rule Trojan_Win32_Qakbot_GA_2147747950_2
         $x_10_1 = {0f b6 c1 2b c3 83 c0 ?? a3 [0-4] 8b 06 05 [0-4] 89 06 83 c6 04 a3 [0-4] 0f b6 c1 66 03 05 [0-4] 66 03 c2 89 74 24 ?? 66 03 44 24 ?? 8b f2 66 03 f8 83 6c 24 ?? 01 66 89 7c 24 ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -563,6 +586,7 @@ rule Trojan_Win32_Qakbot_GA_2147747950_3
         $x_10_1 = {8b 00 8b d9 2b 5c 24 ?? 05 ?? ?? ?? ?? 52 81 c3 a6 eb 00 00 a3 ?? ?? ?? ?? 51 89 1d ?? ?? ?? ?? 8b 5c 24 ?? 6a 00 ff 74 24 ?? 89 03 e8 ?? ?? ?? ?? 8b c8 8b c3 8b 1d ?? ?? ?? ?? 83 c0 04 83 6c 24 ?? 01 89 44 24 ?? 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -588,6 +612,7 @@ rule Trojan_Win32_Qakbot_GA_2147747950_4
         $x_1_5 = "VirtualProtectEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -613,6 +638,7 @@ rule Trojan_Win32_Qakbot_GA_2147747950_5
         $x_1_2 = {fc f3 a4 b9 ff ff [0-2] ff b3 [0-4] 8f 45 [0-2] ff 75 [0-2] 58 68 [0-4] 8f 83 [0-4] 21 8b [0-4] 57 8b bb [0-4] 50 8f 45 [0-2] 01 7d [0-2] ff 75 [0-2] 58 5f ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -637,6 +663,7 @@ rule Trojan_Win32_Qakbot_GA_2147747950_6
         $x_1_4 = {8b ff 8b 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 11 ff 00 04 01 01 01 01 31 32 30 33 [0-200] a1 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? 00 00 00 00 01 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -667,6 +694,7 @@ rule Trojan_Win32_Qakbot_GA_2147747950_7
         $x_1_10 = "OpenProcessToken" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -697,6 +725,7 @@ rule Trojan_Win32_Qakbot_GA_2147747950_8
         $x_10_7 = {8b ff 8b 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 11 ff 00 04 01 01 01 01 31 32 30 33 [0-200] a1 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? 00 00 00 00 01 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -723,6 +752,7 @@ rule Trojan_Win32_Qakbot_DAA_2147748489_0
         $x_1_2 = {8b 45 dc 8b 4d e8 8a 14 01 8b 75 e4 88 14 06 83 c0 01 c7 45 f0 ?? ?? ?? ?? 8b 7d ec 39 f8 89 45 dc 74 cc eb db}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -745,6 +775,7 @@ rule Trojan_Win32_Qakbot_JL_2147751266_0
         $x_1_2 = {03 01 8b 55 ?? 89 02 8b 45 00 8b 08 81 e9 ?? ?? ?? ?? 8b 55 00 89 0a 25 00 8d 84 02 02 8b 4d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -766,6 +797,7 @@ rule Trojan_Win32_Qakbot_PI_2147751584_0
         $x_1_1 = "e118de81b30131d6cc33a15402731037" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -788,6 +820,7 @@ rule Trojan_Win32_Qakbot_PI_2147751584_1
         $x_1_2 = {8b 45 fc 3b 05 ?? ?? ?? 00 72 ?? eb ?? eb ?? 8b 4d fc 89 4d ?? 8b 15 ?? ?? ?? 00 03 55 fc 89 15 ?? ?? ?? 00 8b 45 ?? 89 45 ?? 8b 4d ?? 51 6a 2d e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -809,6 +842,7 @@ rule Trojan_Win32_Qakbot_KMG_2147752816_0
         $x_1_1 = {83 e9 15 89 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 03 55 ?? 03 15 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 2b 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? b9 01 00 00 00 85 c9 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -830,6 +864,7 @@ rule Trojan_Win32_Qakbot_DHA_2147753216_0
         $x_1_1 = {83 c1 01 a1 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 01 31 0d 01 8b ff c7 05 00 00 00 00 00 a1 01 01 05 00 8b ff 8b 15 ?? ?? ?? ?? a1 00 89 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -851,6 +886,7 @@ rule Trojan_Win32_Qakbot_RGQ_2147753240_0
         $x_2_1 = {c1 ea 05 89 55 ?? 8b 45 ?? 03 45 ?? 89 45 ?? 8b 4d ?? 33 4d ?? 89 4d ?? c7 05 ?? ?? ?? ?? f4 6e e0 f7 8b 55 ?? 33 55 ?? 89 55 ?? 8b 45 ?? 2b 45 ?? 89 45 ?? 81 3d ?? ?? ?? ?? d9 02 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -872,6 +908,7 @@ rule Trojan_Win32_Qakbot_DHB_2147753428_0
         $x_1_1 = {f7 d7 f7 d3 89 44 24 ?? 8b 44 24 ?? 0f b6 14 10 01 f2 88 d0 0f b6 d0 89 5c 24 ?? 89 7c 24 ?? 8b 74 24 ?? 8b 7c 24 ?? 8a 04 3e 8b 5c 24 ?? 32 04 13 8b 54 24 ?? 88 04 3a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -893,6 +930,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_0
         $x_10_1 = {b8 0e 00 00 00 ff 35 ?? ?? ?? ?? b8 9c 00 00 00 ff 35 ?? ?? ?? ?? b8 11 00 00 00 ff 35 ?? ?? ?? ?? ff 35 ?? ?? ?? ?? b8 01 00 00 00 50 ff 25}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -915,6 +953,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_1
         $x_1_2 = {8b 11 89 15 [0-64] 8b 0d [0-200] a1 [0-32] 33 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -936,6 +975,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_2
         $x_1_1 = {fc f3 a4 56 c7 04 e4 ff ff 0f 00 59 8b 83 ?? ?? ?? ?? 50 c7 04 e4 ?? ?? ?? ?? 8f 83 ?? ?? ?? ?? 21 8b ?? ?? ?? ?? 89 55 fc 89 c2 03 93 ?? ?? ?? ?? 52 8b 55 fc 8f 83 ?? ?? ?? ?? ff a3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -957,6 +997,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_3
         $x_1_1 = {8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 [0-25] 33 [0-3] c7 05 [0-4] 00 00 00 00 [0-6] 01 [0-5] a1 [0-4] 8b 0d [0-4] 89 08 ?? 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -978,6 +1019,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_4
         $x_1_1 = {8b 45 d8 33 18 89 5d a0 [0-50] 03 d8 8b 45 d8 89 18 8b 45 a8 83 c0 04 89 45 a8 33 c0 89 45 a4 [0-10] 8b 55 d8 83 c2 04 03 55 a4 03 c2 40 89 45 d8 8b 45 a8 3b 45 cc 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -999,6 +1041,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_5
         $x_1_1 = {c7 04 e4 ff ff 0f 00 59 6a 00 89 3c [0-1] 31 ff 0b bb [0-4] 89 f8 5f 50 c7 04 e4 [0-4] 8f 83 [0-4] 21 8b [0-4] 6a 00 31 34 [0-1] 50 5e 03 b3 [0-4] 89 f0 5e ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1020,6 +1063,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_6
         $x_1_1 = {c7 04 e4 ff ff 0f 00 59 89 75 [0-1] 31 f6 0b b3 [0-4] 89 f0 8b 75 [0-1] 68 [0-4] 8f 83 [0-4] 21 8b [0-4] 52 8b 93 [0-4] 50 8f 45 [0-1] 01 55 [0-1] ff 75 [0-1] 58 5a ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1041,6 +1085,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_7
         $x_1_1 = {fc f3 a4 50 c7 04 e4 ff ff 0f 00 59 89 75 [0-1] 33 75 [0-1] 33 b3 [0-4] 83 e0 00 09 f0 8b 75 [0-1] 68 [0-4] 8f 83 [0-4] 21 8b [0-4] 51 8b 8b [0-4] 50 8f 45 [0-1] 01 4d [0-1] ff 75 [0-1] 58 59 ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1062,6 +1107,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_8
         $x_1_1 = {31 04 e4 31 0c e4 ff 93 [0-4] 51 83 e1 00 31 c1 83 a3 [0-4] 00 09 8b [0-4] 59 29 c9 8f 45 [0-1] 0b 4d [0-1] 8f 45 [0-1] 8b 45 [0-1] 68 [0-4] 8f 83 [0-4] 21 8b [0-4] 51 8b 8b [0-4] 50 8f 45 [0-1] 01 4d [0-1] ff 75 [0-1] 58 59 ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1086,6 +1132,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_9
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1114,6 +1161,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_10
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1142,6 +1190,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_11
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1170,6 +1219,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_12
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1198,6 +1248,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_13
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_4_*))) or
@@ -1227,6 +1278,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_14
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1257,6 +1309,7 @@ rule Trojan_Win32_Qakbot_GM_2147757137_15
         $x_1_6 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -1293,6 +1346,7 @@ rule Trojan_Win32_Qakbot_PRB_2147757589_0
         $x_1_11 = "ElfqFbyMFr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1314,6 +1368,7 @@ rule Trojan_Win32_Qakbot_MG_2147758144_0
         $x_1_1 = {8b 46 34 40 0f af 46 44 89 46 44 8b 46 14 2d ?? ?? ?? ?? 31 46 18 8b 46 68 35 ?? ?? ?? ?? 29 46 48 8b 86 ?? ?? ?? ?? 09 86 ?? ?? ?? ?? 8b 86 ?? ?? ?? ?? 01 86 ?? ?? ?? ?? 81 fb ?? ?? ?? ?? 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1339,6 +1394,7 @@ rule Trojan_Win32_Qakbot_MG_2147758144_1
         $x_2_5 = "WaitForSingleObject" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1368,6 +1424,7 @@ rule Trojan_Win32_Qakbot_MG_2147758144_2
         $x_1_9 = "next" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1390,6 +1447,7 @@ rule Trojan_Win32_Qakbot_PA_2147758189_0
         $x_1_2 = {03 f0 8b 55 08 8b 02 2b c6 8b 4d 08 89 01 5e 8b e5 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1412,6 +1470,7 @@ rule Trojan_Win32_Qakbot_PA_2147758189_1
         $x_1_2 = {8b 16 89 50 08 8b 56 04 89 50 0c 8b 13 89 10 89 58 04 89 42 04 89 03 b0 01 5e 5b c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1434,6 +1493,7 @@ rule Trojan_Win32_Qakbot_PB_2147758190_0
         $x_1_2 = {33 d2 8b c3 f7 75 ?? 8b 45 ?? 8a 04 02 32 04 0b 88 04 1f 43 83 ee 01 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1456,6 +1516,7 @@ rule Trojan_Win32_Qakbot_PB_2147758190_1
         $x_1_2 = "DrawThemeIcon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1477,6 +1538,7 @@ rule Trojan_Win32_Qakbot_AR_2147758267_0
         $x_2_1 = {03 f0 8b 45 08 8b 08 2b ce 8b 55 08 89 0a 5e 8b e5 5d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1499,6 +1561,7 @@ rule Trojan_Win32_Qakbot_AR_2147758267_1
         $x_2_2 = {8b 45 08 8b 08 2b ce 8b 55 08 89 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1522,6 +1585,7 @@ rule Trojan_Win32_Qakbot_AR_2147758267_2
         $x_1_3 = {83 74 d0 38 5f 74 da b9 51 a2 4e 4f 53 ed 38 5c 5f ef b9 5d 62 de 2e 08 7a 57}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1543,6 +1607,7 @@ rule Trojan_Win32_Qakbot_AR_2147758267_3
         $x_2_1 = {8b 4d f4 8b 55 fc 8d 84 0a 59 11 00 00 89 45 f0 8b 0d ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 8b 55 f0 89 15 ?? ?? ?? ?? 8b 45 fc}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1564,6 +1629,7 @@ rule Trojan_Win32_Qakbot_AR_2147758267_4
         $x_1_1 = {8d 8c 10 fd 8a 67 00 89 4d f8 8b 55 f8 81 ea fd 8a 67 00 89 55 f8 b8 23 5f ff ff 03 05 ?? ?? ?? ?? 8b 80 19 a1 00 00 a3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1587,6 +1653,7 @@ rule Trojan_Win32_Qakbot_AR_2147758267_5
         $x_1_3 = "a0788eabd16f6497" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1609,6 +1676,7 @@ rule Trojan_Win32_Qakbot_AR_2147758267_6
         $x_2_2 = {8b 55 08 8b 02 2b c1 8b 4d 08 89 01 5e 8b e5 5d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1631,6 +1699,7 @@ rule Trojan_Win32_Qakbot_AR_2147758267_7
         $x_2_2 = {03 f0 8b 4d 08 8b 11 2b d6 8b 45 08 89 10 5e 8b e5 5d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1653,6 +1722,7 @@ rule Trojan_Win32_Qakbot_AR_2147758267_8
         $x_1_2 = {03 4d f4 03 4d f4 8b 15 ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? 8a 04 06 88 04 0a 8b 0d ?? ?? ?? ?? 83 c1 01 89 0d ?? ?? ?? ?? eb 98}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1680,6 +1750,7 @@ rule Trojan_Win32_Qakbot_AR_2147758267_9
         $x_1_7 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1703,6 +1774,7 @@ rule Trojan_Win32_Qakbot_AR_2147758267_10
         $x_1_3 = {8b d2 8b 35 ?? ?? ?? ?? 33 f1 [0-8] c7 05 [0-8] 01 35 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 89 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1729,6 +1801,7 @@ rule Trojan_Win32_Qakbot_AR_2147758267_11
         $x_1_3 = {8b d2 8b d2 8b 15 ?? ?? ?? ?? 31 0d [0-8] c7 05 [0-8] 8b 1d ?? ?? ?? ?? 01 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 89 08 5b 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1755,6 +1828,7 @@ rule Trojan_Win32_Qakbot_AR_2147758267_12
         $x_1_6 = {b8 bc 01 00 00 b8 bc 01 00 00 31 0d ?? ?? ?? ?? eb 00 c7 05 ?? ?? ?? ?? 00 00 00 00 [0-70] a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 89 08 (5e|5d)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -1780,6 +1854,7 @@ rule Trojan_Win32_Qakbot_GC_2147760612_0
         $x_10_1 = {fc f3 a4 8d 83 ?? ?? ?? ?? 50 8d 83 ?? ?? ?? ?? 50 ff 93 ?? ?? ?? ?? 89 83 ?? ?? ?? ?? 56 c7 04 e4 ff ff 0f 00 59 8b 83 ?? ?? ?? ?? 83 bb ?? ?? ?? ?? 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1801,6 +1876,7 @@ rule Trojan_Win32_Qakbot_GC_2147760612_1
         $x_1_1 = {8b 45 d8 33 18 89 5d a0 8b 45 a0 03 45 9c 2b 45 9c 8b 55 d8 89 02 8b 45 d8 83 c0 04 03 45 9c 2b 45 9c 89 45 d8 8b 45 9c 2b 45 9c 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 a8 3b 45 cc 0f 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1822,6 +1898,7 @@ rule Trojan_Win32_Qakbot_GC_2147760612_2
         $x_1_1 = {8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 31 0d [0-4] c7 05 [0-4] 00 00 00 00 8b 1d [0-4] 01 1d [0-4] a1 [0-4] 8b 0d [0-4] 89 08 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1844,6 +1921,7 @@ rule Trojan_Win32_Qakbot_GC_2147760612_3
         $x_10_2 = {89 0c e4 ff b3 ?? ?? ?? ?? 59 01 c1 89 8b ?? ?? ?? ?? 59 ff a3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1866,6 +1944,7 @@ rule Trojan_Win32_Qakbot_GC_2147760612_4
         $x_1_2 = {8b d0 33 d1 8b c2 8b ff c7 05 [0-48] 8b ff 01 05 ?? ?? ?? ?? 8b ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1887,6 +1966,7 @@ rule Trojan_Win32_Qakbot_GC_2147760612_5
         $x_10_1 = {ba 01 00 00 00 6b c2 ?? 88 88 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 81 c2 ac cf 05 01 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 03 45 ?? 8b 0d ?? ?? ?? ?? 89 88 ?? ?? ?? ?? 6b 15 ?? ?? ?? ?? ?? 03 15 ?? ?? ?? ?? 66 89 55 ?? e9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1908,6 +1988,7 @@ rule Trojan_Win32_Qakbot_GC_2147760612_6
         $x_10_1 = {02 da 0f b7 c2 02 d9 8a ca 0f b6 db 2b d8 83 eb ?? 2a cb 89 1d ?? ?? ?? ?? 80 e9 ?? 8b 44 24 ?? 81 c6 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 89 30 8b 74 24 ?? 69 c2 ?? ?? ?? ?? 83 c6 04 0f b6 d1 89 74 24 ?? 66 2b d0 8b 44 24 10 66 03 15 ?? ?? ?? ?? 66 03 d0 83 6c 24 ?? 01 0f b7 d2 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1934,6 +2015,7 @@ rule Trojan_Win32_Qakbot_GC_2147760612_7
         $x_1_6 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -1961,6 +2043,7 @@ rule Trojan_Win32_Qakbot_JG_2147760949_0
         $x_1_3 = {55 8b ec a1 [0-4] a3 [0-4] ff 35 [0-4] 6a 00 c7 04 [0-6] 81 2c [0-6] ff 35 [0-4] ff 35 [0-4] 6a ff ff 35 [0-4] 59 ff d1 a3 [0-4] 8b 0d [0-4] 89 0d [0-4] 8b 15 [0-4] 89 15 [0-4] a1 [0-4] 05 [0-4] a3 [0-4] a1 [0-4] 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1982,6 +2065,7 @@ rule Trojan_Win32_Qakbot_RQ_2147760963_0
         $x_1_1 = {66 8b 54 24 0c 8a c1 66 2b 17 f6 ea 66 89 54 24 0c 8a c8 0f b7 c2 99 80 c1 48}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2012,6 +2096,7 @@ rule Trojan_Win32_Qakbot_RQ_2147760963_1
         $x_1_10 = "1: Anonymous (" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -2037,6 +2122,7 @@ rule Trojan_Win32_Qakbot_VD_2147762261_0
         $x_1_2 = {8b d8 8b 35 ?? ?? ?? ?? 33 f1 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 01 35 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 89 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2059,6 +2145,7 @@ rule Trojan_Win32_Qakbot_DHE_2147762832_0
         $x_1_2 = "cozocayixatu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2081,6 +2168,7 @@ rule Trojan_Win32_Qakbot_MR_2147765414_0
         $x_1_2 = {89 08 5b 5d c3 2d 00 31 0d ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 8b 1d ?? ?? ?? ?? 01 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2102,6 +2190,7 @@ rule Trojan_Win32_Qakbot_GD_2147765648_0
         $x_10_1 = {59 fc 51 8d 83 ?? ?? ?? ?? 50 8d 83 ?? ?? ?? ?? 50 ff 93 ?? ?? ?? ?? 89 83 ?? ?? ?? ?? 59 f3 a4 8d 83 ?? ?? ?? ?? 50 ff 93 ?? ?? ?? ?? 89 83 ?? ?? ?? ?? 57 c7 04 e4 ff ff 0f 00 59 51}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2123,6 +2212,7 @@ rule Trojan_Win32_Qakbot_GD_2147765648_1
         $x_1_1 = {8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b 15 [0-4] 33 d1 c7 05 [0-4] 00 00 00 00 8b da 01 1d [0-4] a1 [0-4] 8b 0d [0-4] 89 08 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2144,6 +2234,7 @@ rule Trojan_Win32_Qakbot_GD_2147765648_2
         $x_10_1 = {31 d1 8b 55 fc fc f3 a4 52 c7 04 e4 ff ff 0f 00 59 89 75 fc 33 75 fc 0b b3 ?? ?? ?? ?? 83 e0 00 09 f0 8b 75 fc 68 ?? ?? ?? ?? 8f 83 ?? ?? ?? ?? 21 8b ?? ?? ?? ?? 01 83 ?? ?? ?? ?? ff a3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2165,6 +2256,7 @@ rule Trojan_Win32_Qakbot_GD_2147765648_3
         $x_10_1 = {8b 17 80 c1 21 0f b6 c1 3b 05 ?? ?? ?? ?? 8b 44 24 ?? 81 c2 b0 70 08 01 8a cd 02 0d ?? ?? ?? ?? 89 17 83 c7 04 ff 4c 24 ?? 89 15 ?? ?? ?? ?? 8b 54 24 ?? 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2187,6 +2279,7 @@ rule Trojan_Win32_Qakbot_GD_2147765648_4
         $x_1_2 = {03 d8 89 5d d8 8b 45 9c 2b 45 9c 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 a8 3b 45 cc 0f 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2209,6 +2302,7 @@ rule Trojan_Win32_Qakbot_GD_2147765648_5
         $x_1_2 = {32 04 37 88 44 3b 04 47 3b 3b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2230,6 +2324,7 @@ rule Trojan_Win32_Qakbot_GD_2147765648_6
         $x_10_1 = {51 83 e1 00 31 c1 83 a3 ?? ?? ?? ?? 00 09 8b ?? ?? ?? ?? 59 81 e1 00 00 00 00 8f 45 ?? 0b 4d ?? f3 a4 56 c7 04 e4 ff ff 0f 00 59 83 bb ?? ?? ?? ?? 00 75 ?? c7 45 ?? 00 00 00 00 ff 75 ?? 31 0c e4 50 8b 83 ?? ?? ?? ?? 87 04 e4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2251,6 +2346,7 @@ rule Trojan_Win32_Qakbot_GD_2147765648_7
         $x_10_1 = {0f b6 ce 8a f2 2b ce 2a f3 8b 74 24 [0-1] 81 c1 [0-4] 89 4c 24 [0-1] 80 c6 [0-1] 8a 54 24 [0-1] 89 0d [0-4] 80 c2 [0-1] 8b 0e 02 d3 81 c1 [0-4] 88 35 [0-4] 89 0e 83 c6 04 83 6c 24 [0-1] 01 89 74 24 [0-1] 8b 74 24 [0-1] 89 0d [0-4] 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2277,6 +2373,7 @@ rule Trojan_Win32_Qakbot_GD_2147765648_8
         $x_1_6 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2301,6 +2398,7 @@ rule Trojan_Win32_Qakbot_GE_2147765649_0
         $x_10_1 = {fc f3 a4 57 c7 04 e4 ff ff 0f 00 59 8b 83 ?? ?? ?? ?? 50 c7 04 e4 ?? ?? ?? ?? 8f 83 ?? ?? ?? ?? 21 8b ?? ?? ?? ?? 01 83 ?? ?? ?? ?? ff a3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2322,6 +2420,7 @@ rule Trojan_Win32_Qakbot_GE_2147765649_1
         $x_1_1 = {8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 31 0d [0-4] c7 05 [0-4] 00 00 00 00 8b 1d [0-4] 01 1d [0-4] a1 [0-4] 8b 0d [0-4] 89 08 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2343,6 +2442,7 @@ rule Trojan_Win32_Qakbot_GE_2147765649_2
         $x_10_1 = {0f b6 c0 66 03 c6 66 89 44 24 ?? 0f b7 f0 8b 01 05 e8 66 03 01 89 01 8a cb a3 ?? ?? ?? ?? 80 e9 ?? 66 8b 44 24 ?? 02 c8 83 6c 24 ?? 01 88 4c 24 ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2364,6 +2464,7 @@ rule Trojan_Win32_Qakbot_GE_2147765649_3
         $x_10_1 = {2a de 0f b6 c6 80 eb [0-1] 2b 44 24 [0-1] 2d 4b c9 00 00 a3 [0-4] 8b 84 31 [0-4] 05 ?? ?? 06 01 88 1d [0-4] a3 [0-4] 89 84 31 [0-4] 83 c6 04 81 fe 7a 22 00 00 73}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2385,6 +2486,7 @@ rule Trojan_Win32_Qakbot_GE_2147765649_4
         $x_10_1 = {fc f3 a4 52 c7 04 e4 ff ff 0f 00 59 83 bb ?? ?? ?? ?? 00 ?? ?? 51 51 56 8b b3 ?? ?? ?? ?? 89 74 e4 04 5e ff 93 ?? ?? ?? ?? 89 83 ?? ?? ?? ?? 59 8b 83 ?? ?? ?? ?? 52 c7 04 e4 ?? ?? ?? ?? 83 bb ?? ?? ?? ?? 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2406,6 +2508,7 @@ rule Trojan_Win32_Qakbot_GE_2147765649_5
         $x_10_1 = {03 c9 83 c1 bb 8d 04 41 0f b7 c0 89 44 24 ?? 8b 02 05 a8 f8 02 01 89 02 83 c2 04 a3 ?? ?? ?? ?? 8b 44 24 ?? 83 c0 ?? 89 54 24 ?? 03 c1 83 6c 24 ?? 01 0f b6 c0 8d 04 c3 0f b7 f0 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2428,6 +2531,7 @@ rule Trojan_Win32_Qakbot_GE_2147765649_6
         $x_10_2 = {6a 00 89 14 e4 ff b3 ?? ?? ?? ?? 5a 01 c2 89 93 ?? ?? ?? ?? 5a ff a3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2450,6 +2554,7 @@ rule Trojan_Win32_Qakbot_GE_2147765649_7
         $x_1_2 = {03 d8 89 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 2b 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2473,6 +2578,7 @@ rule Trojan_Win32_Qakbot_GE_2147765649_8
         $x_1_3 = {fd f3 a5 89 c1 83 e1 03 83 c6 03 83 c7 03 f3 a4 fc 5f 5e c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2502,6 +2608,7 @@ rule Trojan_Win32_Qakbot_GE_2147765649_9
         $x_1_6 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2526,6 +2633,7 @@ rule Trojan_Win32_Qakbot_GF_2147765655_0
         $x_1_1 = {89 18 8b 45 c4 03 45 a4 89 45 a0 e8 ?? ?? ?? ?? 8b 5d a0 2b d8 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 33 18 89 5d a0 8b 45 a0 8b 55 d8 89 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2547,6 +2655,7 @@ rule Trojan_Win32_Qakbot_GF_2147765655_1
         $x_10_1 = {3d c0 03 00 00 0f b7 c1 2b c2 83 c0 ?? 2b d8 83 df 00 8b 06 05 70 a0 07 01 89 06 83 c6 04 83 6c 24 ?? 01 a3 ?? ?? ?? ?? 8b 44 24 ?? 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2568,6 +2677,7 @@ rule Trojan_Win32_Qakbot_GF_2147765655_2
         $x_10_1 = {02 d8 81 c1 a8 a1 02 01 89 0d ?? ?? ?? ?? 89 0a 0f b6 cb 66 2b 0d ?? ?? ?? ?? 66 2b ce 66 8b f1 8b ca 8b 15 ?? ?? ?? ?? 83 c1 04 ff 4c 24 ?? 66 89 35 ?? ?? ?? ?? 89 4c 24 ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2589,6 +2699,7 @@ rule Trojan_Win32_Qakbot_GF_2147765655_3
         $x_10_1 = {0f b6 c9 f7 d9 2b c8 03 d9 8b 0d [0-4] 89 1d [0-4] 8b 84 11 [0-4] 05 0c f5 04 01 a3 [0-4] 89 84 11 [0-4] 83 c2 04 8b 35 [0-4] 8b 1d [0-4] 81 fa 83 11 00 00 73 ?? 8a 0d [0-4] eb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2612,6 +2723,7 @@ rule Trojan_Win32_Qakbot_GF_2147765655_4
         $x_1_3 = {fd f3 a5 89 c1 83 e1 03 83 c6 03 83 c7 03 f3 a4 fc 5f 5e c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2636,6 +2748,7 @@ rule Trojan_Win32_Qakbot_GF_2147765655_5
         $x_10_1 = {8a ca 81 c6 88 3c 03 01 8b 54 24 [0-1] 2a ca 80 c1 [0-1] 89 35 [0-4] 89 b4 2b [0-4] 83 c5 04 8b 1d [0-4] 0f b6 c1 66 2b c3 89 6c 24 [0-1] 66 03 f8 66 89 7c 24 [0-1] 81 fd 4e 0a 00 00 73 [0-1] 8b 6c 24 [0-1] e9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2657,6 +2770,7 @@ rule Trojan_Win32_Qakbot_GF_2147765655_6
         $x_10_1 = {81 c2 50 01 07 01 8b 44 24 [0-1] 2b c3 89 15 [0-4] 2b 05 [0-4] 66 a3 [0-4] 89 94 2e [0-4] 83 c5 04 a1 [0-4] 0f b7 3d [0-4] 83 c0 [0-1] 8b 15 [0-4] 03 d7 03 d0 89 54 24 [0-1] 89 15 [0-4] 81 fd 4b 26 00 00 73}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2678,6 +2792,7 @@ rule Trojan_Win32_Qakbot_GF_2147765655_7
         $x_1_1 = {29 c9 09 c1 89 8b [0-4] 8b 4d ?? 8f 45 ?? 8b 4d ?? f3 a4 b9 ff ff [0-2] 89 4d ?? 31 c9 33 8b [0-4] 89 c8 8b 4d ?? 56 c7 04 [0-5] 8f 83 [0-4] 21 8b [0-4] 57 8b bb [0-4] 50 8f 45 ?? 01 7d ?? ff 75 ?? 58 5f ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2704,6 +2819,7 @@ rule Trojan_Win32_Qakbot_GF_2147765655_8
         $x_1_6 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -2729,6 +2845,7 @@ rule Trojan_Win32_Qakbot_GH_2147765760_0
         $x_10_1 = {83 e6 00 09 d6 8b 55 ?? 89 75 ?? 2b 75 ?? 0b b3 ?? ?? ?? ?? 83 e1 00 31 f1 8b 75 ?? fc f3 a4 2d 00 89 55 [0-4] 33 93}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2750,6 +2867,7 @@ rule Trojan_Win32_Qakbot_GH_2147765760_1
         $x_1_1 = {01 02 8b 45 d8 03 45 b0 03 45 e8 89 45 b4 6a 00 e8 ?? ?? ?? ?? 8b 5d b4 2b d8 6a 00 e8 ?? ?? ?? ?? 2b d8 6a 00 e8 ?? ?? ?? ?? 2b d8 8b 45 ec 31 18 83 45 e8 04 83 45 ec 04 8b 45 e8 3b 45 e4 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2771,6 +2889,7 @@ rule Trojan_Win32_Qakbot_GH_2147765760_2
         $x_10_1 = {81 c1 3c 73 0d 01 89 0d [0-4] 89 54 24 [0-1] 89 15 [0-4] 89 0b 83 c3 04 0f b6 c8 66 83 c1 [0-1] 89 5c 24 [0-1] 66 03 4c 24 [0-1] 83 6c 24 [0-1] 01 66 8b f9 89 7c 24 [0-1] 66 89 3d [0-4] 0f b7 d9 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2793,6 +2912,7 @@ rule Trojan_Win32_Qakbot_GH_2147765760_3
         $x_10_2 = {89 55 f8 83 e2 00 33 93 ?? ?? ?? ?? 83 e6 00 09 d6 8b 55 f8 6a 00 89 3c e4 31 ff 0b bb ?? ?? ?? ?? 89 f9 5f fc f3 a4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2814,6 +2934,7 @@ rule Trojan_Win32_Qakbot_GH_2147765760_4
         $x_10_1 = {fc f3 a4 50 c7 04 e4 ff ff 0f 00 59 89 55 ?? 2b 55 ?? 33 93 [0-4] 83 e0 00 31 d0 8b 55 ?? 53 c7 04 e4 [0-4] 8f 83 [0-4] 21 8b [0-4] 89 7d ?? 89 c7 03 bb [0-4] 57 8b 7d ?? 8f 83 [0-4] ff a3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2836,6 +2957,7 @@ rule Trojan_Win32_Qakbot_GH_2147765760_5
         $x_10_2 = {5e 89 55 f8 83 e2 00 0b 93 ?? ?? ?? ?? 83 e1 00 31 d1 8b 55 f8 fc f3 a4 50}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2859,6 +2981,7 @@ rule Trojan_Win32_Qakbot_GH_2147765760_6
         $x_1_3 = {fd f3 a5 89 c1 83 e1 03 83 c6 03 83 c7 03 f3 a4 fc 5f 5e c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2884,6 +3007,7 @@ rule Trojan_Win32_Qakbot_GH_2147765760_7
         $x_1_2 = {8b db 8b db 8b db 8b db 8b db 8b db 8b db 8b db 8b db 8b db 8b c8 8b d1 89 15 [0-4] a1 [0-4] 8b 0d [0-4] 89 08 5f 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2906,6 +3030,7 @@ rule Trojan_Win32_Qakbot_GH_2147765760_8
         $x_10_2 = {55 8b ec 6a ff 68 ?? ?? ?? ?? 64 a1 00 00 00 00 50 81 ec ?? ?? ?? ?? 53 56 57 a1 ?? ?? ?? ?? 33 c5 50 8d 45 f4 64 a3 00 00 00 00 89 65 f0 68 ?? ?? ?? ?? 6a 00 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2928,6 +3053,7 @@ rule Trojan_Win32_Qakbot_GH_2147765760_9
         $x_10_2 = {0f b6 c8 81 c2 80 f6 ff ff 03 ca 8b 54 24 ?? 89 0d ?? ?? ?? ?? 8b 3d ?? ?? ?? ?? 8d 8e ?? ?? ?? ?? 89 4d 00 83 c5 04 89 0d ?? ?? ?? ?? b1 a7 2a ca 2a 0d ?? ?? ?? ?? 02 c1 83 6c 24 ?? 01 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2953,6 +3079,7 @@ rule Trojan_Win32_Qakbot_GH_2147765760_10
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -2978,6 +3105,7 @@ rule Trojan_Win32_Qakbot_GI_2147765947_0
         $x_10_1 = {8b 00 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 03 15 ?? ?? ?? ?? 33 ?? 03 ?? [0-30] 89 ?? 83 05 ?? ?? ?? ?? 04 83 05 ?? ?? ?? ?? 04 a1 ?? ?? ?? ?? 3b 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2999,6 +3127,7 @@ rule Trojan_Win32_Qakbot_GI_2147765947_1
         $x_10_1 = {8b 00 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 03 15 ?? ?? ?? ?? 33 ?? 03 ?? [0-40] 89 ?? 83 05 ?? ?? ?? ?? 04 83 05 ?? ?? ?? ?? 04 a1 ?? ?? ?? ?? 3b 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3020,6 +3149,7 @@ rule Trojan_Win32_Qakbot_GI_2147765947_2
         $x_10_1 = {f3 a4 52 c7 04 e4 ?? ?? ?? ?? 59 8b 83 ?? ?? ?? ?? 56 c7 04 ?? ?? ?? ?? ?? 8f 83 ?? ?? ?? ?? 21 8b ?? ?? ?? ?? 6a 00 01 3c ?? 50 5f 03 bb ?? ?? ?? ?? 89 f8 5f ff e0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3041,6 +3171,7 @@ rule Trojan_Win32_Qakbot_GI_2147765947_3
         $x_1_1 = {8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 [0-40] 31 0d [0-8] c7 05 [0-4] 00 00 00 00 8b 1d [0-4] 01 1d [0-4] a1 [0-4] 8b 0d [0-4] 89 08 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3062,6 +3193,7 @@ rule Trojan_Win32_Qakbot_GI_2147765947_4
         $x_1_1 = {8b 00 33 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 02 a1 ?? ?? ?? ?? 83 c0 04 a3 ?? ?? ?? ?? 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3085,6 +3217,7 @@ rule Trojan_Win32_Qakbot_GI_2147765947_5
         $x_1_3 = {fd f3 a5 89 c1 83 e1 03 83 c6 03 83 c7 03 f3 a4 fc 5f 5e c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3107,6 +3240,7 @@ rule Trojan_Win32_Qakbot_GI_2147765947_6
         $x_10_2 = {0f b6 c3 b2 ?? f6 ea 02 c1 a2 ?? ?? ?? ?? b8 ?? ?? ?? ?? 66 39 05 ?? ?? ?? ?? 75 ?? 0f b6 c3 a3 ?? ?? ?? ?? 8d 86 ?? ?? ?? ?? 03 c8 8b 44 24 ?? 83 d5 00 83 44 24 ?? 04 81 c7 ?? ?? ?? ?? ff 4c 24 ?? 89 3d ?? ?? ?? ?? 89 38 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3132,6 +3266,7 @@ rule Trojan_Win32_Qakbot_GI_2147765947_7
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3159,6 +3294,7 @@ rule Trojan_Win32_Qakbot_GI_2147765947_8
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3184,6 +3320,7 @@ rule Trojan_Win32_Qakbot_GI_2147765947_9
         $x_10_2 = {8b 02 05 58 f3 0b 01 89 02 83 c2 04 a3 ?? ?? ?? ?? 0f b7 c3 2b c8 89 54 24 18 8b 15 ?? ?? ?? ?? 8d 04 cd 00 00 00 00 2b c1 2b 05 ?? ?? ?? ?? 03 44 24 ?? 01 44 24 ?? 83 6c 24 ?? 01 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3205,6 +3342,7 @@ rule Trojan_Win32_Qakbot_GJ_2147765948_0
         $x_10_1 = {8b 12 8b 0d ?? ?? ?? ?? 81 c1 ?? ?? ?? ?? 03 0d ?? ?? ?? ?? 33 d1 03 c2 8b 15 ?? ?? ?? ?? 89 02 83 05 ?? ?? ?? ?? ?? 83 05 ?? ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3227,6 +3365,7 @@ rule Trojan_Win32_Qakbot_GJ_2147765948_1
         $x_1_2 = {2b d8 8b 45 ec 31 18 83 45 e8 04 83 45 ec 04 8b 45 e8 3b 45 e4 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3248,6 +3387,7 @@ rule Trojan_Win32_Qakbot_GJ_2147765948_2
         $x_10_1 = {83 e6 00 31 fe 8b 7d fc 55 33 2c e4 0b ab [0-4] 83 e1 00 31 e9 5d fc f3 a4 56 c7 04 e4 ff ff 0f 00 59 ff b3 [0-4] 8f 45 fc ff 75 fc 58 53 81 04 e4 [0-4] 29 1c e4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3269,6 +3409,7 @@ rule Trojan_Win32_Qakbot_GJ_2147765948_3
         $x_1_1 = {83 ec fc f3 a4 [0-30] 29 c9 09 c1 89 8b [0-4] 59 52 c7 04 [0-6] 59 55 83 e5 00 0b ab [0-4] 83 e0 00 09 e8 5d 68 [0-4] 8f 83 [0-4] 21 8b [0-4] 89 4d [0-2] 8b 8b [0-4] 01 c1 51 8b 4d [0-2] 58 ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3290,6 +3431,7 @@ rule Trojan_Win32_Qakbot_GJ_2147765948_4
         $x_10_1 = {0f b6 c3 3b 05 [0-4] a1 [0-4] 80 c3 ?? 02 db 81 c6 [0-4] 2a da 89 35 [0-4] 02 1d [0-4] 89 b4 28 [0-4] 83 c5 04 81 fd 4e 07 00 00 73 1d 8b 35 [0-4] 8b 0d [0-4] 8b 3d [0-4] 8b 15 [0-4] e9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3314,6 +3456,7 @@ rule Trojan_Win32_Qakbot_GJ_2147765948_5
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3342,6 +3485,7 @@ rule Trojan_Win32_Qakbot_GJ_2147765948_6
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3370,6 +3514,7 @@ rule Trojan_Win32_Qakbot_GJ_2147765948_7
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3398,6 +3543,7 @@ rule Trojan_Win32_Qakbot_GJ_2147765948_8
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3426,6 +3572,7 @@ rule Trojan_Win32_Qakbot_GJ_2147765948_9
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -3451,6 +3598,7 @@ rule Trojan_Win32_Qakbot_MS_2147765965_0
         $x_1_1 = {6a 00 6a 00 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 8b 4d ?? 81 c1 ?? ?? ?? ?? 89 4d ?? 8b 55 ?? 6b d2 ?? 89 55 ?? a1 ?? ?? ?? ?? a3 ?? ?? ?? ?? 33 c0 8b 4c 05 ?? 89 0d ?? ?? ?? ?? 89 2d ?? ?? ?? ?? ?? ?? e8 ?? ?? ?? ?? 68 ?? ?? ?? ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3472,6 +3620,7 @@ rule Trojan_Win32_Qakbot_GK_2147766014_0
         $x_1_1 = {8b 45 d8 03 45 b0 03 45 e8 89 45 b4 6a 00 e8 ?? ?? ?? ?? 8b 5d b4 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 6a 00 e8 ?? ?? ?? ?? 03 d8 43 8b 45 ec 31 18 83 45 e8 04 83 45 ec 04 8b 45 e8 3b 45 e4 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3493,6 +3642,7 @@ rule Trojan_Win32_Qakbot_GK_2147766014_1
         $x_1_1 = {fc f3 a4 57 c7 04 e4 [0-4] 59 89 7d ?? 33 7d ?? 0b bb [0-4] 83 e0 00 31 f8 8b 7d ?? 68 [0-4] 8f 83 [0-4] 21 8b [0-4] 89 4d ?? 8b 8b [0-4] 01 c1 51 8b 4d ?? 58 ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3514,6 +3664,7 @@ rule Trojan_Win32_Qakbot_GK_2147766014_2
         $x_1_1 = {33 10 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 02 a1 ?? ?? ?? ?? 83 c0 04 a3 ?? ?? ?? ?? 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 0f 82 0d 00 8b 15 ?? ?? ?? ?? 2b d0 a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3536,6 +3687,7 @@ rule Trojan_Win32_Qakbot_GK_2147766014_3
         $x_10_2 = {0f b7 c2 03 c0 2b f8 8b 03 2b 7c 24 ?? 05 ?? ?? ?? ?? 2b f9 89 03 a3 ?? ?? ?? ?? 83 c7 f0 8b c7 2b 44 24 ?? 2b c2 83 6c 24 ?? 01 0f b7 d8 a1 ?? ?? ?? ?? 89 5c 24 ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3560,6 +3712,7 @@ rule Trojan_Win32_Qakbot_GK_2147766014_4
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3587,6 +3740,7 @@ rule Trojan_Win32_Qakbot_GK_2147766014_5
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3616,6 +3770,7 @@ rule Trojan_Win32_Qakbot_GK_2147766014_6
         $x_1_6 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_5_*))) or
@@ -3641,6 +3796,7 @@ rule Trojan_Win32_Qakbot_GL_2147766015_0
         $x_1_1 = {8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 [0-25] 33 d9 [0-2] c7 05 [0-4] 00 00 00 00 [0-6] 01 1d [0-4] a1 [0-4] 8b 0d [0-4] 89 08 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3662,6 +3818,7 @@ rule Trojan_Win32_Qakbot_GL_2147766015_1
         $x_1_1 = {89 4d 08 8d 4c 02 d0 ba ?? ?? ?? ?? 2b d0 03 ca 83 c4 0c 8b f0 c6 05 ?? ?? ?? ?? fc 89 0d ?? ?? ?? ?? 8b 7d 08 05 ?? ?? ?? ?? ff d7 46 00 e8 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 8b 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3685,6 +3842,7 @@ rule Trojan_Win32_Qakbot_GL_2147766015_2
         $x_1_3 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3709,6 +3867,7 @@ rule Trojan_Win32_Qakbot_GL_2147766015_3
         $x_1_1 = {89 18 8b 45 c4 03 45 a4 89 45 a0 6a 00 e8 ?? ?? ?? ?? 8b 5d a0 2b d8 4b 6a 00 [0-10] e8 ?? ?? ?? ?? 2b d8 4b 8b 45 d8 33 18 89 5d a0 6a 00 e8 ?? ?? ?? ?? 8b d8 03 5d a0 6a 00 e8 ?? ?? ?? ?? 03 d8 6a 00 e8 ?? ?? ?? ?? 03 d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 89 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3730,6 +3889,7 @@ rule Trojan_Win32_Qakbot_GL_2147766015_4
         $x_10_1 = {0f b6 f0 2b f3 b3 ?? f6 eb 03 f7 2a d0 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 8b 75 00 88 15 ?? ?? ?? ?? 75 [0-10] 66 0f b6 44 24 ?? 8b 1d ?? ?? ?? ?? 81 c6 ?? ?? ?? ?? 66 2b c3 89 75 00 66 83 c0 ?? 83 c5 04 ff 4c 24 ?? 89 35 ?? ?? ?? ?? 0f b7 d0 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3754,6 +3914,7 @@ rule Trojan_Win32_Qakbot_GL_2147766015_5
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3781,6 +3942,7 @@ rule Trojan_Win32_Qakbot_GL_2147766015_6
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3808,6 +3970,7 @@ rule Trojan_Win32_Qakbot_GL_2147766015_7
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3836,6 +3999,7 @@ rule Trojan_Win32_Qakbot_GL_2147766015_8
         $x_1_5 = "VirtualProtectEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3861,6 +4025,7 @@ rule Trojan_Win32_Qakbot_GL_2147766015_9
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_4_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_4_*))) or
@@ -3886,6 +4051,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_0
         $x_10_1 = {8b 00 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 03 15 ?? ?? ?? ?? 33 [0-200] 83 05 ?? ?? ?? ?? 04 83 05 ?? ?? ?? ?? 04 a1 ?? ?? ?? ?? 3b 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3907,6 +4073,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_1
         $x_1_1 = {8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 02 01 01 31 33 ?? c7 05 ?? ?? ?? ?? 00 00 00 00 01 [0-5] a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 89 08 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3928,6 +4095,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_2
         $x_1_1 = {2b d8 4b a1 ?? ?? ?? ?? 33 18 89 1d [0-50] 03 d8 a1 ?? ?? ?? ?? 89 18 [0-10] 8b d8 a1 ?? ?? ?? ?? 83 c0 04 03 d8 [0-10] 03 d8 89 1d ?? ?? ?? ?? 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3949,6 +4117,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_3
         $x_1_1 = {b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 31 0d [0-4] eb 00 c7 05 [0-90] 01 [0-5] a1 [0-4] 8b 0d [0-4] 89 08 5e 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3970,6 +4139,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_4
         $x_10_1 = {2b d1 89 55 ?? 0f b6 05 [0-4] 03 45 ?? 89 45 ?? 0f b6 0d [0-4] 8b 55 ?? 2b d1 89 55 ?? 0f b6 05 [0-4] 03 45 ?? 89 45 ?? 0f b6 0d [0-4] 33 4d ?? 89 4d ?? 8b 15 [0-4] 03 55 ?? 8a 45 ?? 88 02 e9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3992,6 +4162,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_5
         $x_1_2 = {8b ff 8b 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 11 33 c0 ff 00 04 01 01 01 01 31 32 30 33 [0-200] a1 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? 00 00 00 00 01 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4013,6 +4184,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_6
         $x_10_1 = {b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 71 00 00 00 ff ?? ?? ?? ?? ?? b8 dd 09 00 00 ff ?? ?? ?? ?? ?? b8 16 02 00 00 ff ?? ?? ?? ?? ?? b8 ?? 02 00 00 ff ?? ?? ?? ?? ?? ff ?? ?? ?? ?? ?? b8 01 00 00 00 50 ff}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4034,6 +4206,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_7
         $x_10_1 = {b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 71 00 00 00 ff [0-5] b8 dd 09 00 00 ff [0-5] b8 16 02 00 00 ff [0-5] b8 ?? 02 00 00 ff [0-5] ff [0-5] b8 01 00 00 00 50 ff}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4056,6 +4229,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_8
         $x_1_2 = {50 5d 03 ab [0-4] 89 e8 5d ff 75 [0-2] 89 04 [0-2] 8d 83 [0-4] 51 29 0c [0-2] 01 04 [0-2] 8d 83 [0-4] ff 75 [0-2] 89 04 [0-2] ff 93 [0-4] 50 8f 45 [0-2] ff 75 [0-2] 8f 83 [0-4] 8f 45 [0-2] 8b 45 [0-2] ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4080,6 +4254,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_9
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4105,6 +4280,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_10
         $x_1_2 = {b8 f0 e9 00 00 b8 f0 e9 00 00 b8 f0 e9 00 00 b8 f0 e9 00 00 31 0d [0-200] a1 [0-4] c7 05 [0-4] 00 00 00 00 01 05 [0-4] 8b ff 8b 0d [0-4] 8b 15 [0-4] 89 11 33 c0 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4126,6 +4302,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_11
         $x_10_1 = {2d 00 10 00 00 89 45 ec 83 45 ec 04 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 0b 02 00 00 b8 71 00 00 00 ff 75 ?? b8 ?? ?? ?? ?? ff 75 ?? b8 ?? ?? ?? ?? ff 75 ?? b8 ?? ?? ?? ?? ff 75 ?? ff 35 ?? ?? ?? ?? b8 01 00 00 00 50 ff 65 ec}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4150,6 +4327,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_12
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4178,6 +4356,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_13
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4206,6 +4385,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_14
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4235,6 +4415,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_15
         $x_1_6 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -4262,6 +4443,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_16
         $x_1_3 = {89 08 5f 5d c3 23 00 04 01 01 01 01 31 32 30 33 [0-5] 8b c8 8b d1 89 15 [0-4] a1 [0-4] 8b 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4288,6 +4470,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_17
         $x_1_6 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -4317,6 +4500,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_18
         $x_1_4 = {89 08 5f 5b 5d c3 23 00 04 01 01 01 01 31 32 30 33 [0-5] 8b c8 8b d1 89 15 [0-4] a1 [0-4] 8b 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4344,6 +4528,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_19
         $x_1_7 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -4374,6 +4559,7 @@ rule Trojan_Win32_Qakbot_GN_2147766447_20
         $x_1_4 = {b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 b8 bc 01 00 00 04 01 01 01 01 31 32 30 33 [0-6] eb 00 c7 05 [0-4] 00 00 00 00 [0-90] 01 [0-5] a1 [0-4] 8b 0d [0-4] 89 08 5e 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4396,6 +4582,7 @@ rule Trojan_Win32_Qakbot_CK_2147767465_0
         $x_1_2 = {8b d1 83 e2 ?? 8a 92 ?? ?? ?? 00 32 14 08 74 07 41 3b ce 72 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4429,6 +4616,7 @@ rule Trojan_Win32_Qakbot_CK_2147767465_1
         $x_1_13 = "Nikn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4450,6 +4638,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_0
         $x_10_1 = {8b 00 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 03 15 ?? ?? ?? ?? 33 [0-255] 83 05 ?? ?? ?? ?? 04 83 05 ?? ?? ?? ?? 04 a1 ?? ?? ?? ?? 3b 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4471,6 +4660,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_1
         $x_10_1 = {8b 00 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 03 15 ?? ?? ?? ?? 33 [0-100] 89 18 83 05 ?? ?? ?? ?? 04 83 05 ?? ?? ?? ?? 04 a1 ?? ?? ?? ?? 3b 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4492,6 +4682,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_2
         $x_10_1 = {8b 00 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 03 55 ?? 33 ?? 03 d8 [0-255] 83 45 ?? 04 83 05 ?? ?? ?? ?? 04 8b 45 ?? 3b 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4513,6 +4704,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_3
         $x_10_1 = {8b 00 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 03 55 ?? 33 ?? 03 d8 40 01 83 45 ?? 04 83 05 ?? ?? ?? ?? 04 8b 45 ?? 3b 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4534,6 +4726,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_4
         $x_10_1 = {32 c1 2a c1 04 ?? c0 c0 ?? c0 c0 ?? 34 ?? c0 c8 ?? 32 c1 c0 c0 ?? 04 ?? 2a c1 32 c1 32 c1 34 ?? 2c ?? aa 4a 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4557,6 +4750,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_5
         $x_1_3 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4583,6 +4777,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_6
         $x_1_3 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4607,6 +4802,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_7
         $x_1_1 = {2b d8 4b a1 ?? ?? ?? ?? 33 18 89 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 02 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b d8 a1 ?? ?? ?? ?? 83 c0 04 03 d8 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 03 d8 89 1d ?? ?? ?? ?? 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4628,6 +4824,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_8
         $x_10_1 = {33 55 fc 89 55 ?? 0f b6 05 [0-4] 03 45 ?? 89 45 ?? 0f b6 0d [0-4] 8b 55 ?? 2b d1 89 55 ?? 0f b6 05 [0-4] 33 45 ?? 89 45 ?? 0f b6 0d [0-4] 8b 55 ?? 2b d1 89 55 ?? 0f b6 05 [0-4] 8b 4d ?? 2b c8 89 4d ?? 8b 15 [0-4] 03 55 ?? 8a 45 ?? 88 02 e9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4652,6 +4849,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_9
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4677,6 +4875,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_10
         $x_1_2 = {51 68 00 10 00 00 52 50 ff 93 [0-4] 8b f8 89 bb [0-4] 8b b3 [0-4] 8b 8b [0-4] fc f3 a4 b9 [0-4] 8b 83 [0-4] 68 [0-4] 8f 83 [0-4] 21 8b [0-4] 03 83 [0-4] ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4701,6 +4900,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_11
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4729,6 +4929,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_12
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4757,6 +4958,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_13
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4786,6 +4988,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_14
         $x_1_6 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 3 of ($x_5_*))) or
@@ -4816,6 +5019,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_15
         $x_1_6 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -4848,6 +5052,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_16
         $x_1_7 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_3_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -4880,6 +5085,7 @@ rule Trojan_Win32_Qakbot_GO_2147767650_17
         $x_1_7 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 3 of ($x_5_*))) or
@@ -4912,6 +5118,7 @@ rule Trojan_Win32_Qakbot_GP_2147767663_0
         $x_1_6 = "YixcPNtjteTItxwyMrTUyTbGFRFfHceLRNw.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4933,6 +5140,7 @@ rule Trojan_Win32_Qakbot_GP_2147767663_1
         $x_1_1 = {2b d8 4b 8b 45 d8 33 18 89 5d a0 [0-50] 03 d8 8b 45 d8 89 18 8b 45 a8 83 c0 04 89 45 a8 33 c0 89 45 a4 8b 45 d8 83 c0 04 03 45 a4 89 45 d8 8b 45 a8 3b 45 cc 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4954,6 +5162,7 @@ rule Trojan_Win32_Qakbot_GP_2147767663_2
         $x_1_1 = {c7 04 e4 ff ff 0f 00 59 51 33 0c [0-1] 33 8b [0-4] 83 e0 00 31 c8 59 68 [0-4] 8f 83 [0-4] 21 8b [0-4] 89 4d [0-1] 8b 8b [0-4] 01 c1 51 8b 4d [0-1] 58 ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4975,6 +5184,7 @@ rule Trojan_Win32_Qakbot_GP_2147767663_3
         $x_1_1 = {c7 04 e4 ff ff 0f 00 59 89 4d [0-1] 33 4d [0-1] 0b 8b [0-4] 83 e0 00 09 c8 8b 4d [0-1] 54 c7 04 e4 [0-4] 8f 83 [0-4] 21 8b [0-4] 6a 00 89 3c [0-1] 50 5f 03 bb [0-4] 89 f8 5f ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4996,6 +5206,7 @@ rule Trojan_Win32_Qakbot_GP_2147767663_4
         $x_10_1 = {2b c8 89 4d ?? 0f b6 15 ?? ?? ?? ?? 8b 45 ?? 2b c2 89 45 ?? 0f b6 0d ?? ?? ?? ?? 8b 55 ?? 2b d1 89 55 ?? 0f b6 05 ?? ?? ?? ?? 33 45 ?? 89 45 ?? 8b 0d ?? ?? ?? ?? 03 4d ?? 8a 55 ?? 88 11 e9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5018,6 +5229,7 @@ rule Trojan_Win32_Qakbot_GP_2147767663_5
         $x_10_2 = {59 fc 83 bb ?? ?? ?? ?? 00 f3 a4 83 bb ?? ?? ?? ?? 00 75 ?? ff 93 ?? ?? ?? ?? 6a 00 89 34 e4 29 f6 31 c6 89 b3 ?? ?? ?? ?? 5e 57 c7 04 e4 ff ff 0f 00 59 83 bb ?? ?? ?? ?? 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5043,6 +5255,7 @@ rule Trojan_Win32_Qakbot_GP_2147767663_6
         $x_1_5 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5065,6 +5278,7 @@ rule Trojan_Win32_Qakbot_GP_2147767663_7
         $x_1_2 = {88 0a 8b 55 ?? 83 c2 ?? 89 55 ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5090,6 +5304,7 @@ rule Trojan_Win32_Qakbot_GP_2147767663_8
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -5117,6 +5332,7 @@ rule Trojan_Win32_Qakbot_GP_2147767663_9
         $x_10_4 = {8b ff 8b 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 11 33 c0 ff 00 04 01 01 01 01 31 32 30 33 [0-200] a1 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? 00 00 00 00 01 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -5144,6 +5360,7 @@ rule Trojan_Win32_Qakbot_GP_2147767663_10
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -5171,6 +5388,7 @@ rule Trojan_Win32_Qakbot_GP_2147767663_11
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -5200,6 +5418,7 @@ rule Trojan_Win32_Qakbot_GP_2147767663_12
         $x_1_6 = {c6 45 be 59 80 45 be 10 3a c9 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5225,6 +5444,7 @@ rule Trojan_Win32_Qakbot_GP_2147767663_13
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -5253,6 +5473,7 @@ rule Trojan_Win32_Qakbot_GP_2147767663_14
         $x_1_5 = {8a 0c 32 88 0c 38 8b 55 ?? 83 c2 ?? 89 55 ?? eb ?? 5f 5e 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5274,6 +5495,7 @@ rule Trojan_Win32_Qakbot_GQ_2147767664_0
         $x_1_1 = {8b 45 d8 33 18 89 5d a0 8b 45 a0 8b 55 d8 89 02 8b 45 a8 83 c0 04 89 45 a8 33 c0 89 45 a4 8b 45 d8 83 c0 04 03 45 a4 89 45 d8 8b 45 a8 3b 45 cc 0f 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5295,6 +5517,7 @@ rule Trojan_Win32_Qakbot_GQ_2147767664_1
         $x_10_1 = {49 8d 41 01 03 c7 a3 ?? ?? ?? ?? 8a 04 16 88 02 42 8b 1d ?? ?? ?? ?? 8b c3 2b c7 66 83 3d ?? ?? ?? ?? 00 8d 78 ?? 74 ?? b0 b9 2a c3 a2 ?? ?? ?? ?? 85 c9 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5316,6 +5539,7 @@ rule Trojan_Win32_Qakbot_GQ_2147767664_2
         $x_10_1 = {59 fc 83 bb ?? ?? ?? ?? 00 f3 a4 83 bb ?? ?? ?? ?? 00 75 ?? ff 93 ?? ?? ?? ?? 89 [0-2] 29 f6 09 c6 89 b3 ?? ?? ?? ?? 8b 75 ?? 57 c7 04 e4 ff ff 0f 00 59 83 bb ?? ?? ?? ?? 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5337,6 +5561,7 @@ rule Trojan_Win32_Qakbot_GQ_2147767664_3
         $x_1_1 = {55 8b ec 53 [0-2] a1 [0-4] a3 [0-4] 8b [0-5] 8b [0-2] 89 [0-5] 8b [0-5] a1 [0-4] a3 [0-4] b8 [0-4] b8 [0-4] a1 [0-4] 8b d8 33 d9 c7 05 [0-4] 00 00 00 00 01 [0-5] a1 [0-4] 8b 0d [0-4] 89 08 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5361,6 +5586,7 @@ rule Trojan_Win32_Qakbot_GQ_2147767664_4
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -5388,6 +5614,7 @@ rule Trojan_Win32_Qakbot_GQ_2147767664_5
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -5414,6 +5641,7 @@ rule Trojan_Win32_Qakbot_GQ_2147767664_6
         $x_1_3 = {8b db 8b db 8b db 8b db 8b db 8b db 8b db 8b db 8b db 8b db 8b c8 8b d1 89 15 [0-4] a1 [0-4] 8b 0d [0-4] 89 08 [0-2] 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -5435,6 +5663,7 @@ rule Trojan_Win32_Qakbot_GR_2147767767_0
         $x_10_1 = {33 c0 2b 15 ?? ?? ?? ?? 1b 05 [0-50] 8b 0d ?? ?? ?? ?? 83 c1 ?? 8b 15 ?? ?? ?? ?? 83 d2 00 33 c0 03 4d ?? 13 d0 66 89 4d fc 8b 7d f0 05 ?? ?? ?? ?? ff e7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5456,6 +5685,7 @@ rule Trojan_Win32_Qakbot_GR_2147767767_1
         $x_1_1 = {fc f3 a4 57 c7 04 e4 ff ff [0-2] 59 56 83 e6 00 0b b3 [0-4] 83 e0 00 09 f0 5e 68 [0-4] 8f 83 [0-4] 21 8b [0-4] 6a 00 01 [0-2] 50 5a 03 93 [0-4] 89 d0 5a ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5477,6 +5707,7 @@ rule Trojan_Win32_Qakbot_GR_2147767767_2
         $x_1_1 = {51 68 00 10 00 00 52 50 ff 93 [0-6] 89 bb [0-4] 8b b3 [0-4] 8b 8b [0-4] fc f3 a4 b9 ff ff 0f 00 8b 83 [0-4] 68 [0-4] 8f 83 [0-4] 21 8b [0-4] 03 83 [0-4] ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5498,6 +5729,7 @@ rule Trojan_Win32_Qakbot_GR_2147767767_3
         $x_1_1 = {55 8b ec 53 eb 00 a1 [0-4] a3 [0-4] 8b [0-5] 8b ?? 89 [0-5] 8b [0-5] a1 [0-4] a3 [0-30] 33 d9 c7 05 [0-4] 00 00 00 00 01 ?? [0-4] a1 [0-4] 8b 0d [0-4] 89 08 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5519,6 +5751,7 @@ rule Trojan_Win32_Qakbot_GR_2147767767_4
         $x_1_1 = {83 c0 04 a3 ?? ?? ?? ?? 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 0f 82 25 00 03 05 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 33 02 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 02 a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5540,6 +5773,7 @@ rule Trojan_Win32_Qakbot_GR_2147767767_5
         $x_10_1 = {83 ea 01 89 55 ?? 85 c9 74 ?? 8b 45 ?? 83 e8 ?? 2b 45 ?? a3 ?? ?? ?? ?? 8b 4d ?? 8b 55 ?? 8a 02 88 01 8b 4d ?? 83 c1 01 89 4d ?? 8b 55 ?? 83 c2 01 89 55 ?? a1 ?? ?? ?? ?? 83 e8 ?? 2b 05 ?? ?? ?? ?? 89 45}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5565,6 +5799,7 @@ rule Trojan_Win32_Qakbot_GR_2147767767_6
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -5590,6 +5825,7 @@ rule Trojan_Win32_Qakbot_MK_2147767774_0
         $x_1_1 = {52 83 24 e4 ?? 31 3c e4 6a 00 89 3c e4 29 ff 0b 7d 08 89 fe 5f 53 33 1c e4 33 5f ?? 83 e1 00 31 d9 5b 53 8b 5f ?? 56 8f 45 f8 01 5d f8 ff 75 f8 5e 5b 8b 7f 0c 6a 00 01 2c e4 57 5d 03 ab ?? ?? ?? 00 89 ef 5d f3 a4 81 e7 ?? ?? ?? ?? 0b 3c e4 83 c4 ?? 50 89 f8 81 c0 ?? ?? ?? ?? 89 c7 58 ff 4d fc 75 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5611,6 +5847,7 @@ rule Trojan_Win32_Qakbot_ZX_2147771364_0
         $x_1_1 = {b8 5f 33 00 00 85 c0 74 59 8b 4d f8 3b 0d ?? ?? ?? ?? 72 02 eb 4c 8b 45 f8 33 d2 b9 ?? ?? 00 00 f7 f1 85 d2 75 0e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5632,6 +5869,7 @@ rule Trojan_Win32_Qakbot_ZX_2147771364_1
         $x_1_1 = {8b 45 fc 89 45 f4 8b 0d ?? ?? ?? ?? 03 4d fc 89 0d ?? ?? ?? ?? 8b 55 f4 89 55 e8 8b 45 e8 50 68 ?? ?? ?? 00 e8 ?? ?? ?? ?? 83 c4 08 8b 4d f0 8b 55 fc 8d 84 0a ?? ?? ?? ?? 89 45 ec 8b 0d ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 8b 55 ec 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? a3 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 4d fc 83 c1 04 89 4d fc 8b 55 fc 3b 15 ?? ?? ?? ?? 72 02 eb 0d b8 ?? 00 00 00 85 c0 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5653,6 +5891,7 @@ rule Trojan_Win32_Qakbot_GB_2147772346_0
         $x_1_1 = {89 02 8b 45 c4 03 45 a4 03 45 9c 2b 45 9c 89 45 a0 8b 45 d8 8b 00 8b 55 a0 03 55 9c 2b 55 9c 2b 55 9c 03 55 9c 33 c2 89 45 a0 8b 45 a0 03 45 9c 2b 45 9c 8b 55 d8 89 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5674,6 +5913,7 @@ rule Trojan_Win32_Qakbot_GB_2147772346_1
         $x_10_1 = {8a 02 88 01 8b 4d ?? 83 c1 01 89 4d ?? 8b 55 ?? 83 c2 01 89 55 ?? 8b 45 ?? 2d 44 49 00 00 03 45 fc 2b 05 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 03 c8 89 0d ?? ?? ?? ?? c7 45 ?? 01 00 00 00 eb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5695,6 +5935,7 @@ rule Trojan_Win32_Qakbot_GB_2147772346_2
         $x_10_1 = {0f b7 f3 02 c6 02 c2 0f b6 c0 6b c0 ?? 2b f0 89 35 [0-4] 8a 15 [0-4] 8d 87 [0-4] 8b 7c 24 ?? 8a f3 80 c2 ?? a3 [0-4] 02 d6 8a 35 [0-4] 89 07 83 c7 04 83 6c 24 ?? 01 89 7c 24 ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5717,6 +5958,7 @@ rule Trojan_Win32_Qakbot_GB_2147772346_3
         $x_10_2 = {8b cb 6b c9 ?? 2b c8 2b c8 8d 4c 19 01 8b 6c 24 ?? 6b c0 ?? 81 c6 ?? ?? ?? ?? 2b c7 89 75 00 03 c2 83 c5 04 83 6c 24 ?? 01}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5748,6 +5990,7 @@ rule Trojan_Win32_Qakbot_GB_2147772346_4
         $x_1_11 = "Mozilla\\Firefox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -5781,6 +6024,7 @@ rule Trojan_Win32_Qakbot_GB_2147772346_5
         $x_1_10 = "GetCurrentProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -5814,6 +6058,7 @@ rule Trojan_Win32_Qakbot_GB_2147772346_6
         $x_1_10 = "OpenProcessToken" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -5841,6 +6086,7 @@ rule Trojan_Win32_Qakbot_GB_2147772346_7
         $x_1_4 = {8b ff 8b 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 11 ff 00 04 01 01 01 01 31 32 30 33 [0-200] c7 05 ?? ?? ?? ?? 00 00 00 00 01 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -5865,6 +6111,7 @@ rule Trojan_Win32_Qakbot_GB_2147772346_8
         $x_1_4 = {89 08 5f 5d c3 ff 00 04 01 01 01 01 31 32 30 33 [0-200] c7 05 ?? ?? ?? ?? 00 00 00 00 01 05 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -5886,6 +6133,7 @@ rule Trojan_Win32_Qakbot_AV_2147773338_0
         $x_1_1 = {89 55 fc 5a d3 c0 8a fc 8a e6 d3 cb ff 4d fc 75 f3 29 c9 0b 0c e4 83 c4 04 89 4d f8 83 e1 00 31 d9 83 e0 00 31 c8 8b 4d f8 aa 49 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5907,6 +6155,7 @@ rule Trojan_Win32_Qakbot_AV_2147773338_1
         $x_5_1 = {03 d8 8b 45 d8 33 18 89 5d a0 8b 45 a0 8b 55 d8 89 02 8b 45 a8 83 c0 04 89 45 a8 33 c0 89 45 a4 8b 45 d8 83 c0 04 03 45 a4 89 45 d8 8b 45 a8 3b 45 cc 0f}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5928,6 +6177,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_0
         $x_1_1 = {68 4d 1e 00 00 6a 00 e8 ?? ?? ?? ?? 03 d8 01 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 01 05 ?? ?? ?? ?? a1 ?? ?? ?? ?? 01 05 ?? ?? ?? ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5949,6 +6199,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_1
         $x_1_1 = {68 54 1b 00 00 6a 00 e8 ?? ?? ?? ?? 03 d8 01 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 01 05 ?? ?? ?? ?? a1 ?? ?? ?? ?? 01 05 ?? ?? ?? ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5970,6 +6221,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_2
         $x_1_1 = {68 e3 14 00 00 6a 00 e8 ?? ?? ?? ?? 03 d8 01 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 01 05 ?? ?? ?? ?? a1 ?? ?? ?? ?? 01 05 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5991,6 +6243,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_3
         $x_1_1 = {68 eb 14 00 00 6a 00 e8 ?? ?? ?? ?? 03 d8 01 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 01 05 ?? ?? ?? ?? a1 ?? ?? ?? ?? 01 05 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6012,6 +6265,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_4
         $x_1_1 = {0f b7 f8 83 c6 43 8a 04 2a 88 02 8b c7 2b c1 42 83 c0 43 89 54 24 ?? 0f b7 c8 2b ce 83 c1 40 39 35 ?? ?? ?? ?? 77}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6033,6 +6287,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_5
         $x_1_1 = {68 cf 0d 00 00 6a 00 e8 ?? ?? ?? ?? 03 d8 01 5d ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 01 45 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6054,6 +6309,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_6
         $x_1_1 = {05 8a a5 08 00 03 45 ?? 8b 55 ?? 31 02 83 45 ?? 04 83 45 ?? 04 8b 45 ?? 3b 45 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6075,6 +6331,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_7
         $x_1_1 = {68 d7 11 00 00 6a 00 e8 ?? ?? ?? ?? 8b d8 a1 ?? ?? ?? ?? 8b 00 8b 15 ?? ?? ?? ?? 03 55 ?? 03 55 ?? 33 c2 03 d8 68 d7 11 00 00 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6096,6 +6353,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_8
         $x_1_1 = {05 8a a5 08 00 03 45 ?? 8b 55 ?? 31 02 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 83 45 ?? 04 83 45 ?? 04 8b 45 ?? 3b 45 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6117,6 +6375,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_9
         $x_1_1 = {33 c0 89 45 ?? 8b 45 ?? 3b 45 ?? 0f 83 ?? ?? ?? ?? 68 d8 11 00 00 6a 00 e8 ?? ?? ?? ?? 8b d8 a1 ?? ?? ?? ?? 8b 00 03 45 ?? 03 d8 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6138,6 +6397,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_10
         $x_1_1 = {8d 1c 17 a3 ?? ?? ?? ?? 8b 3d ?? ?? ?? ?? 8b 94 0f ?? ?? ?? ?? 81 c2 f0 07 07 01 89 94 0f ?? ?? ?? ?? 83 c1 04 81 f9 80 05 00 00 8d 74 1e ?? 89 15 ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6159,6 +6419,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_11
         $x_1_1 = {0f b6 db 03 fb 89 3d ?? ?? ?? ?? 8b 84 0e ?? ?? ?? ?? 05 4c 6a 06 01 a3 ?? ?? ?? ?? 89 84 0e ?? ?? ?? ?? 83 c6 04 0f b7 05 ?? ?? ?? ?? 05 da 9d 00 00 03 c7 81 fe 60 0b 00 00 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6180,6 +6441,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_12
         $x_1_1 = {33 c0 89 45 ?? 8b 45 ?? 3b 45 ?? 0f 83 ?? ?? ?? ?? 68 57 15 00 00 6a 00 e8 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 8b 12 03 55 ?? 03 c2 8b 15 ?? ?? ?? ?? 89 02 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6201,6 +6463,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_13
         $x_1_1 = {2b d8 01 5d ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 01 45 ?? e9 ?? ?? ?? ?? 33 c0 89 45 ?? c7 45 ?? 8a a5 08 00 8b 45 ?? 3b 45 ?? 0f 83}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6222,6 +6485,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_14
         $x_1_1 = {8b 00 8b 55 ?? 03 55 ?? 03 55 ?? 33 c2 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 a1 ?? ?? ?? ?? 89 18 a1 ?? ?? ?? ?? 83 c0 04 a3 ?? ?? ?? ?? 83 45 ?? 04 8b 45 ?? 3b 45 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6243,6 +6507,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_15
         $x_1_1 = {05 8a a5 08 00 03 45 ?? 8b 55 ?? 31 02 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 83 45 ?? 04 83 45 ?? 04 8b 45 ?? 3b 45 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6265,6 +6530,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_16
         $x_1_2 = {8b d8 8b 45 ?? 03 45 ?? 03 45 ?? 03 d8 e8 ?? ?? ?? ?? 2b d8 a1 ?? ?? ?? ?? 31 18 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6286,6 +6552,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_17
         $x_1_1 = {33 c0 89 45 ?? 8b 45 ?? 3b 45 ?? 0f 83 ?? ?? ?? ?? 8b 45 ?? 8b 55 ?? 01 02 68 3b 11 00 00 6a 00 e8 ?? ?? ?? ?? 8b d8 8b 45 ?? 05 8a a5 08 00 03 45 ?? 03 d8 68 3b 11 00 00 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6307,6 +6574,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_18
         $x_1_1 = {2b c8 8b 55 ?? 03 55 ?? 8b 45 ?? 03 45 ?? e8 ?? ?? ?? ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 01 45 ?? eb ?? c7 45 ?? 8a a5 08 00 8b 45 ?? 3b 45 ?? 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6329,6 +6597,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_19
         $x_1_2 = {2b d8 8b 45 ?? 89 18 8b 45 ?? 03 45 ?? 03 45 ?? 8b 55 ?? 31 02 83 45 ?? 04 83 45 ?? 04 8b 45 ?? 3b 45 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6351,6 +6620,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_20
         $x_1_2 = {68 2d 16 00 00 6a 00 e8 ?? ?? ?? ?? 8b d8 a1 ?? ?? ?? ?? 8b 00 8b 15 ?? ?? ?? ?? 81 c2 8a a5 08 00 03 55 ?? 33 c2 03 d8 68 2d 16 00 00 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6373,6 +6643,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_21
         $x_1_2 = {68 cf 0d 00 00 6a 00 e8 ?? ?? ?? ?? 8b d8 a1 ?? ?? ?? ?? 8b 00 8b 15 ?? ?? ?? ?? 81 c2 8a a5 08 00 03 55 ?? 33 c2 03 d8 68 cf 0d 00 00 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6394,6 +6665,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_22
         $x_1_1 = {33 c0 89 45 ?? 33 c9 8b 55 ?? 8b 45 ?? e8 ?? ?? ?? ?? 8b 45 ?? 3b 45 ?? 73 ?? 8b 55 ?? 03 55 ?? 8b 45 ?? 03 45 ?? 8b 4d ?? e8 ?? ?? ?? ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 01 45 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6415,6 +6687,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_23
         $x_1_1 = {2b d8 01 5d ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 01 45 ?? e9 ?? ?? ?? ?? c7 45 a8 8a a5 08 00 8b 45 ?? 3b 45 ?? 73 ?? 8b 45 ?? 8b 55 ?? 01 02 8b 45 ?? 03 45 ?? 03 45 ?? 8b 55 ?? 31 02 83 45 ?? 04 83 45 ?? 04 8b 45 ?? 3b 45 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6436,6 +6709,7 @@ rule Trojan_Win32_Qakbot_GKM_2147773497_24
         $x_1_1 = {2b d8 01 5d ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 01 45 ?? eb ?? c7 45 ?? 8a a5 08 00 8b 45 ?? 3b 45 ?? 73 ?? 8b 45 ?? 8b 55 ?? 01 02 8b 45 ?? 03 45 ?? 03 45 ?? 8b 55 ?? 31 02 83 45 ?? 04 83 45 ?? 04 8b 45 ?? 3b 45 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6460,6 +6734,7 @@ rule Trojan_Win32_Qakbot_PC_2147773912_0
         $x_4_4 = {d3 fa 89 15 ?? ?? ?? ?? 8b 4d ?? 2b 4d ?? 2b 0d ?? ?? ?? ?? 03 4d ?? 8b 45 ?? d3 f8 33 45 ?? 8b 55 ?? 8b 0d ?? ?? ?? ?? d3 fa 33 55 ?? 8b 4d ?? 2b 4d ?? 8b 35 ?? ?? ?? ?? d3 e6 33 d6 3b c2 7f}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6481,6 +6756,7 @@ rule Trojan_Win32_Qakbot_GS_2147776916_0
         $x_10_1 = {0f af c1 2b 45 ?? 66 89 45 ?? 0f b6 15 ?? ?? ?? ?? 0f af 15 ?? ?? ?? ?? 2b 15 ?? ?? ?? ?? 88 15 ?? ?? ?? ?? 0f b7 45 ?? 83 c0 ?? 2b 45 ?? 66 89 45 ?? 8b 75 ?? 81 c2 ?? ?? ?? ?? 42 ff e6}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6502,6 +6778,7 @@ rule Trojan_Win32_Qakbot_GS_2147776916_1
         $x_1_1 = {83 c0 04 a3 ?? ?? ?? ?? 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 0f 82 2d 00 03 05 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 33 02 a3 [0-15] 03 05 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 02 a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6523,6 +6800,7 @@ rule Trojan_Win32_Qakbot_AA_2147778946_0
         $x_2_1 = {d3 c0 8a fc 8a e6 d3 cb ff 4d ?? 75 ?? 89 4d ?? 2b 4d ?? 09 d9 83 e0 00 09 c8 8b 4d ?? 59 aa 49 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6545,6 +6823,7 @@ rule Trojan_Win32_Qakbot_AA_2147778946_1
         $x_1_2 = {d3 c0 8a fc 8a e6 d3 cb ff 4d ?? 75 ?? 59 8b c3 aa 49 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6567,6 +6846,7 @@ rule Trojan_Win32_Qakbot_VIP_2147781069_0
         $x_1_2 = {8b 45 d8 03 45 ac 03 45 ec 03 d8 e8 ?? ?? ?? ?? 2b d8 a1 ?? ?? ?? ?? 31 18 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6588,6 +6868,7 @@ rule Trojan_Win32_Qakbot_PD_2147782359_0
         $x_1_1 = {2b c8 89 4d ?? 0f b6 15 ?? ?? ?? ?? 8b 45 ?? 2b c2 89 45 ?? 0f b6 0d ?? ?? ?? ?? 8b 55 ?? 2b d1 89 55 ?? 0f b6 05 ?? ?? ?? ?? 33 45 ?? 89 45 ?? 8b 0d ?? ?? ?? ?? 03 4d ?? 8a 55 ?? 88 11 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6616,6 +6897,7 @@ rule Trojan_Win32_Qakbot_W_2147782484_0
         $x_3_8 = "IsProcessorFeaturePresent" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6720,6 +7002,7 @@ rule Trojan_Win32_Qakbot_F_2147782784_0
         $x_1_2 = {50 5e 01 ce 89 f0 5e 89 55 ?? 33 55 ?? 33 93 ?? ?? ?? ?? 83 e1 00 09 d1 8b 55 ?? 39 c1 76 ?? 8d 83 ?? ?? ?? ?? c7 45 ?? ?? ?? ?? ?? ff 75 ?? 31 04 ?? 8d 83 ?? ?? ?? ?? 83 65 ?? ?? ff 75 ?? 09 04 ?? ff 93}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6742,6 +7025,7 @@ rule Trojan_Win32_Qakbot_W_2147782943_0
         $x_10_3 = {5f 5e 5b c9 c3 2a 00 8b 4d ?? 8b 45 ?? 03 ce 03 c1 33 d2 6a 5a 5b f7 f3 8b 45 ?? 8a 04 02 32 04 37 46 88 01 3b 75 fc 72 de 8b 45}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6763,6 +7047,7 @@ rule Trojan_Win32_Qakbot_U_2147782945_0
         $x_10_2 = {08 01 00 00 32 ?? ?? 04 88 ?? ?? ?? 3b ?? 72 e8 1a 00 76 18 8b ?? 83 ?? 03 8a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6784,6 +7069,7 @@ rule Trojan_Win32_Qakbot_BN_2147783309_0
         $x_1_1 = {8b 1c 28 83 c5 04 0f af 5e 70 8b 86 ?? ?? ?? ?? 8b d3 c1 ea 08 88 14 01 8b 86 ?? ?? ?? ?? 2b 86 ?? ?? ?? ?? ff 86 ?? ?? ?? ?? 05 ?? ?? ?? ?? 01 86 ?? ?? ?? ?? 8b 86 ?? ?? ?? ?? 8b 8e ?? ?? ?? ?? 83 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6805,6 +7091,7 @@ rule Trojan_Win32_Qakbot_BN_2147783309_1
         $x_2_1 = {8b 45 e8 8b 55 ec 01 02 8b 45 b8 03 45 e8 89 45 b4 68 [0-4] e8 [0-4] 8b d8 8b 45 d8 03 45 b4 03 d8 68 [0-4] e8 [0-4] 03 d8 8b 45 ec 31 18 68 [0-4] e8 [0-4] 8b d8 8b 45 e8 83 c0 04 03 d8 68 [0-4] e8 [0-4] 2b d8 89 5d e8 8b 45 ec 83 c0 04 89 45 ec 8b 45 e8 3b 45 e4 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6826,6 +7113,7 @@ rule Trojan_Win32_Qakbot_PG_2147783653_0
         $x_1_1 = {83 e8 2c 03 45 [0-48] 89 ?? b0 8b 45 ?? 03 45 ?? 8b 55 ?? 31 02 83 45 ?? 04 8b 45 ?? 83 c0 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6849,6 +7137,7 @@ rule Trojan_Win32_Qakbot_AL_2147784835_0
         $x_1_3 = {8b 55 f0 68 50 3c 0a 60 68 5a 6e 00 00 6a 00 e8 ?? ?? ?? ?? 5a ff d0 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6870,6 +7159,7 @@ rule Trojan_Win32_Qakbot_AL_2147784835_1
         $x_2_1 = {01 02 8b 45 ?? 2d 80 0d 00 00 03 45 ?? 89 45 ?? 8b 45 ?? 03 45 ?? 8b 55 ?? 31 02 [0-32] e8 40 00 8b 45 ?? 8b 55}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6892,6 +7182,7 @@ rule Trojan_Win32_Qakbot_Z_2147794328_0
         $x_100_3 = {33 d2 8b c7 f7 75 10 8a 04 0a 8b 55 fc 32 04 17 88 04 3b 47 83 ee 01 75 e7 8b 4d f8 eb b6}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6914,6 +7205,7 @@ rule Trojan_Win32_Qakbot_PAA_2147794418_0
         $x_1_2 = {8b 0d 28 fe 05 10 d3 e2 33 c2 8b 55 fc 2b 15 ?? ?? ?? ?? 03 15 ?? ?? ?? ?? 2b 15 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 03 0d 44 fe 05 10 d3 e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6939,6 +7231,7 @@ rule Trojan_Win32_Qakbot_PAA_2147794418_1
         $x_1_5 = "Motd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6982,6 +7275,7 @@ rule Trojan_Win32_Qakbot_AY_2147794596_0
         $x_1_2 = "Qkkbal" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7004,6 +7298,7 @@ rule Trojan_Win32_Qakbot_AY_2147794596_1
         $x_2_2 = "DllRegisterServer" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7026,6 +7321,7 @@ rule Trojan_Win32_Qakbot_GY_2147794788_0
         $x_10_2 = {83 c4 04 81 e0 00 00 00 00 8f 45 f8 33 45 f8 8f 83 ?? ?? ?? ?? 21 8b ?? ?? ?? ?? 01 83 ?? ?? ?? ?? 83 bb ?? ?? ?? ?? 00 75 ?? ff 93 ?? ?? ?? ?? 50 8f 45 fc ff 75 fc 8f 83 ?? ?? ?? ?? ff a3 ?? ?? ?? ?? e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7053,6 +7349,7 @@ rule Trojan_Win32_Qakbot_GY_2147794788_1
         $x_1_7 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7074,6 +7371,7 @@ rule Trojan_Win32_Qakbot_PK_2147794866_0
         $x_1_1 = {03 d8 8b 45 ?? 33 18 89 5d ?? 8b 45 ?? 8b 55 ?? 89 02 33 c0 89 45 ?? 8b 45 ?? 83 c0 04 03 45 ?? 89 45 ?? 8b 45 ?? 83 c0 04 03 45 ?? 89 45 ?? 8b 45 ?? 3b 45 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7094,6 +7392,7 @@ rule Trojan_Win32_Qakbot_J_2147794882_0
         $x_1_1 = {01 10 68 26 09 00 00 6a 00 e8 ?? ?? ?? ?? 8b d8 a1 ?? ?? ?? ?? 8b 00 8b 15 ?? ?? ?? ?? 81 c2 8a a5 08 00 03 15 ?? ?? ?? ?? 33 c2 03 d8 68 26 09 00 00 6a 00 e8 ?? ?? ?? ?? 03 d8 a1 ?? ?? ?? ?? 89 18 83 05 ?? ?? ?? ?? 04 83 05 ?? ?? ?? ?? 04 a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 72 98}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7116,6 +7415,7 @@ rule Trojan_Win32_Qakbot_AYE_2147795824_0
         $x_1_2 = {83 a3 2c 51 43 00 00 31 8b 2c 51 43 00 8b 4d fc 29 c0 33 04 e4 83 c4 04 c7 83 00 50 43 00 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7137,6 +7437,7 @@ rule Trojan_Win32_Qakbot_AB_2147796018_0
         $x_2_1 = {2b d1 89 55 ?? a1 ?? ?? ?? ?? 03 45 ?? 8a 4d ?? 88 08 e9 30 00 89 45 ?? 0f b6 0d ?? ?? ?? ?? 8b 55}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7158,6 +7459,7 @@ rule Trojan_Win32_Qakbot_AB_2147796018_1
         $x_10_1 = {2b d0 4a a1 ?? ?? ?? ?? 89 10 a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 8b 1d ?? ?? ?? ?? 2b d8 4b 6a 00 e8 ?? ?? ?? ?? 2b d8 4b 6a 00 e8 ?? ?? ?? ?? 03 d8 a1 ?? ?? ?? ?? 33 18 89 1d ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 02}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7179,6 +7481,7 @@ rule Trojan_Win32_Qakbot_RR_2147796808_0
         $x_1_1 = {29 1f 8a c5 83 5f 04 00 83 ef 08 f6 e9 02 c3 f6 ed 8a c8 02 cb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7207,6 +7510,7 @@ rule Trojan_Win32_Qakbot_BZ_2147797088_0
         $x_1_8 = "Hango_ft2_render_transformed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7228,6 +7532,7 @@ rule Trojan_Win32_Qakbot_DA_2147797339_0
         $x_1_1 = {8b 4d e8 83 e9 37 0f b7 45 f8 99 03 c8 88 4d ff 8b 15 ?? ?? ?? ?? 81 c2 d4 b4 08 01 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 03 45 f4 8b 0d ?? ?? ?? ?? 89 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7252,6 +7557,7 @@ rule Trojan_Win32_Qakbot_DA_2147797339_1
         $x_1_4 = "aorbis_synthesis_blockin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7273,6 +7579,7 @@ rule Trojan_Win32_Qakbot_DB_2147797340_0
         $x_1_1 = {8b 4d e8 2b c8 8b 15 ?? ?? ?? ?? 2b d1 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 05 7c 13 0e 01 a3 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 03 4d f8 8b 15 ?? ?? ?? ?? 89 91}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7294,6 +7601,7 @@ rule Trojan_Win32_Qakbot_DB_2147797340_1
         $x_5_1 = {40 03 d8 a1 [0-4] 89 18 a1 [0-4] 03 05 [0-4] a3 [0-4] 6a 00 e8 [0-4] 03 05 [0-4] 40 8b 15 [0-4] 33 02 a3 [0-4] a1 [0-4] 8b 15 [0-4] 89 10 8b 45 f8 83 c0 04 89 45 f8 33 c0 a3 [0-4] a1 [0-4] 83 c0 04 03 05 [0-4] a3 [0-4] 8b 45 f8 3b 05 [0-4] 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7315,6 +7623,7 @@ rule Trojan_Win32_Qakbot_DC_2147797353_0
         $x_1_1 = {0f b7 4d fc 2b c1 a3 ?? ?? ?? ?? 0f b7 55 fc 0f af 15 ?? ?? ?? ?? 03 15 ?? ?? ?? ?? 66 89 55 fc a1 ?? ?? ?? ?? 05 04 b0 01 01 a3 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 03 4d f8 8b 15 ?? ?? ?? ?? 89 91}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7342,6 +7651,7 @@ rule Trojan_Win32_Qakbot_DC_2147797353_1
         $x_1_7 = "next" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7373,6 +7683,7 @@ rule Trojan_Win32_Qakbot_DD_2147797397_0
         $x_1_11 = "unwakened" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7396,6 +7707,7 @@ rule Trojan_Win32_Qakbot_DD_2147797397_1
         $x_1_3 = {0f b7 55 fc a1 ?? ?? ?? ?? 8d 4c 02 a9 03 0d ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 81 c2 d8 1f 0b 01 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 03 45 f8 8b 0d ?? ?? ?? ?? 89 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -7426,6 +7738,7 @@ rule Trojan_Win32_Qakbot_DD_2147797397_2
         $x_1_10 = "menu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7447,6 +7760,7 @@ rule Trojan_Win32_Qakbot_DE_2147797483_0
         $x_1_1 = {0f b6 c0 3b c2 ?? ?? 2a 5c 24 0c 8b 06 2b 4c 24 14 05 94 d4 08 01 03 cf 89 06 a3 ?? ?? ?? ?? 83 c6 04 8a c1 89 0d ?? ?? ?? ?? 2a 44 24 0c 04 6f 83 6c 24 10 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7474,6 +7788,7 @@ rule Trojan_Win32_Qakbot_DE_2147797483_1
         $x_3_7 = "ClientToScreen" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7506,6 +7821,7 @@ rule Trojan_Win32_Qakbot_DE_2147797483_2
         $x_1_12 = "klc_entry_copyright__3_0_0f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7527,6 +7843,7 @@ rule Trojan_Win32_Qakbot_DF_2147797503_0
         $x_1_1 = {0f b6 ca 2b 0d ?? ?? ?? ?? 81 c1 5c 45 01 00 0f b6 d2 89 0d ?? ?? ?? ?? 0f b6 cb 0f af d1 02 54 24 10 89 54 24 14 88 15 ?? ?? ?? ?? 8d 56 ff 8b 74 24 18 8b 0e 81 c1 70 36 08 01 89 0e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7548,6 +7865,7 @@ rule Trojan_Win32_Qakbot_DF_2147797503_1
         $x_2_1 = {01 02 8b 45 c4 03 45 a4 89 45 a0 8b 45 d8 8b 00 33 45 a0 89 45 a0 8b 45 a0 8b 55 d8 89 02 8b 45 d8 83 c0 04 89 45 d8 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 a8 3b 45 cc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7570,6 +7888,7 @@ rule Trojan_Win32_Qakbot_RF_2147797666_0
         $x_1_2 = {2d 00 10 00 00 a3 ?? ?? ?? ?? 83 ?? ?? ?? ?? ?? 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7591,6 +7910,7 @@ rule Trojan_Win32_Qakbot_RF_2147797666_1
         $x_1_1 = {31 02 6a 00 e8 ?? ?? ?? ?? 8b d8 83 c3 04 [0-40] 2b d8 01 5d ?? 83 05 ?? ?? ?? ?? 04 8b 45 ?? 3b 05 ?? ?? ?? ?? 72 ?? a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 2d 00 10 00 00 83 c0 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7612,6 +7932,7 @@ rule Trojan_Win32_Qakbot_RM_2147797818_0
         $x_1_1 = {83 c4 18 89 05 ?? ?? ?? ?? b8 26 00 00 00 03 05 ?? ?? ?? ?? 83 e8 4f 33 05 ?? ?? ?? ?? 03 c0 81 e8 36 52 e0 7d 03 c0 83 e8 1f 33}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7633,6 +7954,7 @@ rule Trojan_Win32_Qakbot_RM_2147797818_1
         $x_1_1 = {05 98 d9 0b 01 88 54 24 ?? 8a d3 2a d1 89 07 80 c2 13 a3 ?? ?? ?? ?? 0f b7 c9 83 c7 04 0f b6 c2 0f af c1 66 03 44 24 ?? 83 6c 24 ?? 01 0f b7 c8 89 ?? 24 4c 0f b7 c8 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7655,6 +7977,7 @@ rule Trojan_Win32_Qakbot_RM_2147797818_2
         $x_1_2 = {8b d2 33 15 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? 00 00 00 00 8b d2 01 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 89 08 8b e5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7676,6 +7999,7 @@ rule Trojan_Win32_Qakbot_RMA_2147797819_0
         $x_1_1 = {05 70 83 07 01 a3 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 03 4d ?? 8b 15 ?? ?? ?? ?? 89 91 ?? ?? ?? ?? a1 ?? ?? ?? ?? 6b c0 03 03 05 ?? ?? ?? ?? 66 89 45 ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7698,6 +8022,7 @@ rule Trojan_Win32_Qakbot_EY_2147797871_0
         $x_10_2 = {8a ca 02 4c 24 10 b0 f0 02 c9 2a c1 8b ce 02 d8}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7719,6 +8044,7 @@ rule Trojan_Win32_Qakbot_EY_2147797871_1
         $x_1_1 = {89 18 6a 00 e8 ?? ?? ?? ?? 8b d8 8b 45 c4 03 45 a4 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 8b 45 d8 33 18 89 5d a0 6a 00 e8 ?? ?? ?? ?? 8b d8 03 5d a0 6a 00 e8 ?? ?? ?? ?? 2b d8 8b 45 d8 89 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7741,6 +8067,7 @@ rule Trojan_Win32_Qakbot_AD_2147797872_0
         $x_10_2 = {8b 5c 24 0c 83 44 24 0c 04 83 6c 24 14 01 89 0d ?? ?? ?? ?? 89 0b 8b 5c 24 18 0f b7 cf 89 4c 24 10}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7762,6 +8089,7 @@ rule Trojan_Win32_Qakbot_AD_2147797872_1
         $x_10_1 = {2b d8 4b 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 03 d8 a1 [0-4] 33 18 89 1d [0-4] 6a 00 e8 [0-4] 03 05 [0-4] 8b 15 [0-4] 89 02 a1 [0-4] 83 c0 04 a3 [0-4] 33 c0 a3 [0-4] a1 [0-4] 83 c0 04 03 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7788,6 +8116,7 @@ rule Trojan_Win32_Qakbot_AD_2147797872_2
         $x_3_6 = "CryptReleaseContext" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7813,6 +8142,7 @@ rule Trojan_Win32_Qakbot_AD_2147797872_3
         $x_1_5 = {8b c7 83 e0 ?? 8a 44 05 ?? 32 04 37 88 44 3b ?? 47 3b 3b 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -7834,6 +8164,7 @@ rule Trojan_Win32_Qakbot_RW_2147798043_0
         $x_1_1 = {2d f2 05 00 00 03 05 ?? ?? ?? ?? 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 a1 ?? ?? ?? ?? 31 18 6a 00 e8 ?? ?? ?? ?? 8b d8 83 c3 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7855,6 +8186,7 @@ rule Trojan_Win32_Qakbot_RTH_2147798074_0
         $x_1_1 = {66 b8 93 29 8b 4c 24 ?? 8b 54 24 ?? 66 c7 44 24 ?? 92 a6 66 8b 74 24 ?? 6b c9 48 01 ca 89 54 24 ?? c7 84 24 ?? ?? ?? ?? a2 91 9f 8e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7876,6 +8208,7 @@ rule Trojan_Win32_Qakbot_RTH_2147798074_1
         $x_1_1 = {8b 00 03 05 ?? ?? ?? ?? 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 a1 ?? ?? ?? ?? 89 18 6a 00 e8 ?? ?? ?? ?? 8b d8 a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 a1 ?? ?? ?? ?? 31 18 83 05 ?? ?? ?? ?? 04 83 05 ?? ?? ?? ?? 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7897,6 +8230,7 @@ rule Trojan_Win32_Qakbot_PAB_2147799054_0
         $x_1_1 = {33 d2 3a c0 bb 04 00 00 00 53 3a ed 5e f7 f6 66 3b db 0f b6 44 15 ?? 33 c8 3a c0 8b 45 ?? 88 4c 05 ?? 8b 45 ?? 40 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7930,6 +8264,7 @@ rule Trojan_Win32_Qakbot_PAB_2147799054_1
         $x_1_13 = "yMBeGI" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7958,6 +8293,7 @@ rule Trojan_Win32_Qakbot_PAC_2147805368_0
         $x_1_8 = "IZTVN3MFX9MFXVectorIP15MFX_DISP_HANDLEEE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7997,6 +8333,7 @@ rule Trojan_Win32_Qakbot_PAC_2147805368_1
         $x_1_19 = "xVjrAwSs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8024,6 +8361,7 @@ rule Trojan_Win32_Qakbot_CE_2147806405_0
         $x_3_7 = "ClientToScreen" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8056,6 +8394,7 @@ rule Trojan_Win32_Qakbot_CE_2147806405_1
         $x_1_12 = "RebPPictureYUVAToARGB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8083,6 +8422,7 @@ rule Trojan_Win32_Qakbot_QE_2147807483_0
         $x_3_7 = "CLleWKir@REu@gaBMgm" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8105,6 +8445,7 @@ rule Trojan_Win32_Qakbot_DG_2147807899_0
         $x_1_2 = {8b d8 8b 45 d8 83 c0 04 03 45 a4 03 d8 e8 [0-4] 2b d8 e8 [0-4] 2b d8 e8 [0-4] 03 d8 89 5d d8 8b 45 a8 3b 45 cc 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8137,6 +8478,7 @@ rule Trojan_Win32_Qakbot_DG_2147807899_1
         $x_1_12 = "deflate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8158,6 +8500,7 @@ rule Trojan_Win32_Qakbot_RT_2147808755_0
         $x_1_1 = {1d 45 12 eb 06 1a 41 ?? 33 04 5f 03 db 4b 03 d2 81 e8 e8 ef 00 00 33 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8180,6 +8523,7 @@ rule Trojan_Win32_Qakbot_RT_2147808755_1
         $x_1_2 = {81 e1 8e 46 1b 50 89 8c 24 ?? ?? ?? ?? 8b 44 c2 ?? 89 44 24 ?? 66 8b 74 24 ?? 66 89 b4 24 ?? ?? ?? ?? 8b 44 24 ?? c7 84 24 ?? ?? ?? ?? f8 19 ab 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8206,6 +8550,7 @@ rule Trojan_Win32_Qakbot_RT_2147808755_2
         $x_1_6 = "stager_1.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8227,6 +8572,7 @@ rule Trojan_Win32_Qakbot_ZY_2147811522_0
         $x_10_2 = {80 ea 80 88 55 f0 e8 ?? ?? ?? ?? 0f b6 4d [0-3] 0f b6 45 [0-3] 0f b6 4d [0-3] 0f b6 4d [0-3] 0f b6 4d [0-3] 0f b6 45 [0-3] 0f b6 45 [0-3] 0f b6 45 [0-3] 0f b6 45 [0-3] 0f b6 45 [0-3] 0f b6 45 [0-3] 0f b6 45 [0-3] 0f b6 45 [0-3] 0f b6 45 [0-3] 0f b6 45 [0-3] 0f b6 45 ?? ?? ?? 6a 28 ?? 89 55 fc e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8249,6 +8595,7 @@ rule Trojan_Win32_Qakbot_ZW_2147811524_0
         $x_5_3 = {f6 80 98 18 00 00 82}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8274,6 +8621,7 @@ rule Trojan_Win32_Qakbot_ZV_2147811525_0
         $x_5_6 = {f7 04 84 ff 04 00 c7 45 ?? 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8348,6 +8696,7 @@ rule Trojan_Win32_Qakbot_PE_2147813628_0
         $x_1_2 = {2b d1 89 55 ?? 0f b6 05 ?? ?? ?? ?? 33 45 ?? 89 45 ?? 0f b6 0d ?? ?? ?? ?? 33 4d ?? 89 4d ?? 0f b6 15 ?? ?? ?? ?? 8b 45 ?? 2b c2 89 45 ?? 0f b6 0d ?? ?? ?? ?? 8b 55 ?? 2b d1 89 55 ?? a1 00 70 0c 10 03 45 ?? 8a 4d ?? 88 08 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -8369,6 +8718,7 @@ rule Trojan_Win32_Qakbot_PF_2147813630_0
         $x_1_1 = {2d a2 d1 00 00 03 05 [0-4] a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? a3 ?? ?? ?? ?? 6a 01 [0-208] 6a 01 e8 ?? ?? ?? ?? a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 31 02 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8395,6 +8745,7 @@ rule Trojan_Win32_Qakbot_AC_2147813763_0
         $x_3_6 = "StrRetToBufW" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8416,6 +8767,7 @@ rule Trojan_Win32_Qakbot_AC_2147813763_1
         $x_10_1 = {2b d8 4b 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 03 d8 a1 [0-4] 33 18 89 1d [0-4] 6a 00 e8 [0-4] 03 05 [0-4] 8b 15 [0-4] 89 02 a1 [0-4] 83 c0 04 a3 [0-4] 33 c0 a3 [0-4] a1 [0-4] 83 c0 04 03 05 [0-4] a3 [0-4] a1 [0-4] 3b 05 [0-4] 0f}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8438,6 +8790,7 @@ rule Trojan_Win32_Qakbot_AC_2147813763_2
         $x_1_2 = {51 0f be 45 ?? 66 3b e4 74 ?? 83 f8 30 7c ?? 0f be 45 ?? 66 3b c0 74 ?? 83 f8 66 7e ?? 0f be 45 ?? eb ?? 83 f8 61 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8461,6 +8814,7 @@ rule Trojan_Win32_Qakbot_AH_2147813960_0
         $x_1_3 = {c6 45 c2 54 80 45 c2 22 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8482,6 +8836,7 @@ rule Trojan_Win32_Qakbot_AH_2147813960_1
         $x_5_1 = {47 8d 0c 86 0f b7 c5 0f af 44 24 28 66 45 09 01 8b 44 24 14 8b 4c 24 20 31 44 24 1c 41 81 22 8d 1c 00 00 0f b7 c3 89 4c 24 20 3b c8 74}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8506,6 +8861,7 @@ rule Trojan_Win32_Qakbot_EM_2147814046_0
         $x_1_4 = {88 4c 05 a4 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8527,6 +8883,7 @@ rule Trojan_Win32_Qakbot_EM_2147814046_1
         $x_6_1 = {8b cb 83 c6 04 0b cf 0b 4c 24 30 0b d1 8b cd 89 90 a8 00 00 00 2b 48 0c 69 c9 4c 03 00 00 3b f1 72 de}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8548,6 +8905,7 @@ rule Trojan_Win32_Qakbot_EM_2147814046_2
         $x_6_1 = {03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 a1 ?? ?? ?? ?? 33 18 89 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 10}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8570,6 +8928,7 @@ rule Trojan_Win32_Qakbot_EM_2147814046_3
         $x_1_2 = "desktop.d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8596,6 +8955,7 @@ rule Trojan_Win32_Qakbot_EM_2147814046_4
         $x_1_6 = "CSNZ4z" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8622,6 +8982,7 @@ rule Trojan_Win32_Qakbot_EM_2147814046_5
         $x_3_6 = "CloseEnhMetaFile" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8643,6 +9004,7 @@ rule Trojan_Win32_Qakbot_AE_2147814224_0
         $x_1_1 = {2d a2 d1 00 00 03 05 [0-4] a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? a3 ?? ?? ?? ?? 6a 01 [0-208] 6a 01 e8 ?? ?? ?? ?? a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 31 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8664,6 +9026,7 @@ rule Trojan_Win32_Qakbot_AE_2147814224_1
         $x_10_1 = {2b d8 4b 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 03 d8 a1 [0-4] 33 18 89 1d [0-4] 6a 00 e8 [0-4] 8b d8 03 1d [0-4] 6a 00 e8 [0-4] 03 d8 a1 [0-4] 89 18 a1 [0-4] 83 c0 04 a3 [0-4] 33 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8692,6 +9055,7 @@ rule Trojan_Win32_Qakbot_DH_2147814540_0
         $x_1_8 = "ci0P162BNwYao26sfbd5bkX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8715,6 +9079,7 @@ rule Trojan_Win32_Qakbot_AI_2147814557_0
         $x_1_3 = "53cd7e7469c332c0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8736,6 +9101,7 @@ rule Trojan_Win32_Qakbot_AI_2147814557_1
         $x_2_1 = {69 66 3b e4 74 ?? c6 45 ?? 72 66 3b db 74 ?? c6 45 ?? 65 66 3b ed 74 ?? c6 45 ?? 53 66 3b f6 74 ?? c6 45 ?? 76 eb ?? c6 45 ?? 72 66 3b d2 74 ?? c6 45 ?? 73 3a e4 74 ?? c6 45 ?? 65 3a d2 74}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8763,6 +9129,7 @@ rule Trojan_Win32_Qakbot_DJ_2147814582_0
         $x_1_7 = "philathletic" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8784,6 +9151,7 @@ rule Trojan_Win32_Qakbot_DK_2147814632_0
         $x_1_1 = {2d 80 0d 00 00 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 31 02 6a 00 e8 ?? ?? ?? ?? 8b d8 a1 ?? ?? ?? ?? 83 c0 04 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8811,6 +9179,7 @@ rule Trojan_Win32_Qakbot_DK_2147814632_1
         $x_1_7 = "galvanothermometer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8839,6 +9208,7 @@ rule Trojan_Win32_Qakbot_DK_2147814632_2
         $x_1_8 = "kSL_CONF_CTX_set1_prefix" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8861,6 +9231,7 @@ rule Trojan_Win32_Qakbot_AK_2147814643_0
         $x_3_2 = {8b 45 d8 33 18 89 5d a0 8b 45 a0 8b 55 d8 89 02}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8883,6 +9254,7 @@ rule Trojan_Win32_Qakbot_AK_2147814643_1
         $x_3_2 = {eb c0 7c 50 be ca 6b 41 c8 c1 7a 65 bf d6 08 00 ac a5 08 56}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8904,6 +9276,7 @@ rule Trojan_Win32_Qakbot_AK_2147814643_2
         $x_2_1 = {2b c8 89 4d ?? 0f b6 15 ?? ?? ?? ?? 33 55 ?? 89 55 ?? 0f b6 05 ?? ?? ?? ?? 8b 4d ?? 2b c8 89 4d ?? 0f b6 15 ?? ?? ?? ?? 33 55 ?? 89 55 ?? a1 ?? ?? ?? ?? 03 45 ?? 8a 4d ?? 88 08 e9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8925,6 +9298,7 @@ rule Trojan_Win32_Qakbot_GW_2147814679_0
         $x_1_1 = {33 18 89 1d [0-60] 03 d8 a1 ?? ?? ?? ?? 89 18 a1 ?? ?? ?? ?? 83 c0 04 a3 ?? ?? ?? ?? 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8946,6 +9320,7 @@ rule Trojan_Win32_Qakbot_DI_2147814730_0
         $x_1_1 = {2d 80 0d 00 00 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 31 02 83 05 ?? ?? ?? ?? 04 a1 ?? ?? ?? ?? 83 c0 04 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 99 52 50 a1 ?? ?? ?? ?? 33 d2 3b 54 24 04 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8967,6 +9342,7 @@ rule Trojan_Win32_Qakbot_AJ_2147814742_0
         $x_2_1 = {03 45 e0 89 45 dc 8b 45 f0 03 45 e0 89 45 f0 8b 45 ec 2b 45 e0 89 45 ec 83 7d e0 00 76 50 00 ff 75 ?? ff 75 ?? 8b 45 ?? 8b 40 ?? 8b 4d ?? 8b 00 8b 49 ?? ff 50 ?? 89 45 ?? 8b 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8988,6 +9364,7 @@ rule Trojan_Win32_Qakbot_AJ_2147814742_1
         $x_2_1 = {69 66 3b db 74 ?? c6 45 ?? 65 66 3b ?? 74 ?? c6 45 ?? 73 66 3b ?? 74 ?? c6 45 ?? 74 3a ?? 74 ?? c6 45 ?? 52 66 3b ?? 74 ?? c6 45 ?? 67 66 3b ?? 74 ?? c6 45 ?? 65 66 3b ?? 74}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9015,6 +9392,7 @@ rule Trojan_Win32_Qakbot_NB_2147814902_0
         $x_3_7 = "ScriptGetGlyphABCWidth" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9046,6 +9424,7 @@ rule Trojan_Win32_Qakbot_NC_2147814903_0
         $x_3_11 = "j8hyubtnvejrtgeorhwry" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9067,6 +9446,7 @@ rule Trojan_Win32_Qakbot_DL_2147814996_0
         $x_1_1 = {2d 80 0d 00 00 03 45 ?? 89 45 ?? 8b 45 ?? 03 45 ?? 8b 55 ?? 31 02 6a 00 e8 ?? ?? ?? ?? 8b d8 8b 45 9c 83 c0 04 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9092,6 +9472,7 @@ rule Trojan_Win32_Qakbot_DL_2147814996_1
         $x_1_5 = "more" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9113,6 +9494,7 @@ rule Trojan_Win32_Qakbot_DM_2147815095_0
         $x_1_1 = {2d 80 0d 00 00 03 45 ?? 89 45 ?? 8b 45 ?? 03 45 ?? 8b 55 ?? 31 02 e8 ?? ?? ?? ?? 8b d8 8b 45 ?? 83 c0 ?? 03 d8 e8 ?? ?? ?? ?? 2b d8 e8 ?? ?? ?? ?? 03 d8 e8 ?? ?? ?? ?? 2b d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9136,6 +9518,7 @@ rule Trojan_Win32_Qakbot_CB_2147815193_0
         $x_1_3 = "55666n0jumb4956j8hyubtnvejrtgeorhwry958u6j9y5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9166,6 +9549,7 @@ rule Trojan_Win32_Qakbot_CB_2147815193_1
         $x_1_10 = "Hpeg_open_backing_store" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9192,6 +9576,7 @@ rule Trojan_Win32_Qakbot_DN_2147815427_0
         $x_1_6 = "nzgCQGRLDC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9217,6 +9602,7 @@ rule Trojan_Win32_Qakbot_DN_2147815427_1
         $x_1_5 = "k?0Mutex@icu_51@@QAE@PAUUMutex@@@Z" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9238,6 +9624,7 @@ rule Trojan_Win32_Qakbot_RTC_2147815446_0
         $x_1_1 = {2b d8 89 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 0f 82 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? bb 00 00 a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? 83 05 ?? ?? ?? ?? 04 81 2d ?? ?? ?? ?? 00 10 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9264,6 +9651,7 @@ rule Trojan_Win32_Qakbot_DO_2147815477_0
         $x_1_6 = "ZMEpBDXWkP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9289,6 +9677,7 @@ rule Trojan_Win32_Qakbot_DO_2147815477_1
         $x_2_5 = "k_application_command_line_get_cwd" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9310,6 +9699,7 @@ rule Trojan_Win32_Qakbot_DP_2147815518_0
         $x_1_1 = {8b 45 9c 8b 55 d8 01 02 8b 45 b4 83 e8 2c 03 45 9c 89 45 b0 8b 45 cc 03 45 b0 8b 55 d8 31 02 83 45 9c 04 8b 45 d8 83 c0 04 89 45 d8 8b 45 9c 99 52 50 8b 45 d4 33 d2 3b 54 24 04 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9335,6 +9725,7 @@ rule Trojan_Win32_Qakbot_DP_2147815518_1
         $x_2_5 = "RZN10KUserGroupC1EN5KUser7UIDModeE" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9356,6 +9747,7 @@ rule Trojan_Win32_Qakbot_MP_2147815563_0
         $x_1_1 = {8b 55 fc 83 c2 01 89 55 fc 83 7d fc 12 73 28 8b 45 fc 6b c0 13 03 45 f8 50 8b 4d d0 51 8b 55 08 8b 82 44 03 00 00 ff d0 8b 4d fc 8b 55 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9377,6 +9769,7 @@ rule Trojan_Win32_Qakbot_MPE_2147815564_0
         $x_1_1 = {8b 45 e0 8b 00 89 45 d4 8b 45 e0 83 c0 04 89 45 e0 8b 45 d8 89 45 dc 8b 45 dc 83 e8 04 89 45 dc 33 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9403,6 +9796,7 @@ rule Trojan_Win32_Qakbot_DQ_2147815760_0
         $x_1_6 = "ddzIzUrvft" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9429,6 +9823,7 @@ rule Trojan_Win32_Qakbot_DR_2147815821_0
         $x_1_6 = "D7FN3uDF7sl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9452,6 +9847,7 @@ rule Trojan_Win32_Qakbot_PAN_2147815861_0
         $x_1_3 = {f7 d0 0f 57 c0 66 0f 13 45 f8 eb ba 89 4d fc 8b 45 08 3a e4 74 26 55 8b ec 3a f6 74 00 51 51 66 3b ed 74 de 83 c0 01 8b 4d fc 66 3b d2 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -9476,6 +9872,7 @@ rule Trojan_Win32_Qakbot_AM_2147815958_0
         $x_2_4 = "EQ4ePb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9502,6 +9899,7 @@ rule Trojan_Win32_Qakbot_AM_2147815958_1
         $x_1_6 = "GetGlyphOutlineA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9523,6 +9921,7 @@ rule Trojan_Win32_Qakbot_PH_2147816005_0
         $x_1_1 = {50 66 3b c0 74 ?? 80 45 ?? 46 e9 ?? ?? ?? ?? c6 45 ?? 1f eb ?? c6 45 ?? 40 80 45 ?? 12 3a f6 74 ?? c6 45 ?? 4c 80 45 ?? 20 66 3b e4 74 ?? c6 45 ?? 24 80 45 ?? 20 3a f6 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9544,6 +9943,7 @@ rule Trojan_Win32_Qakbot_AO_2147816179_0
         $x_10_1 = {2b d8 4b 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 03 d8 a1 [0-4] 33 18 89 1d [0-4] 6a 00 e8 [0-4] 8b d8 03 1d [0-4] 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 03 d8 a1 [0-4] 89 18 a1 [0-4] 83 c0 04 a3 [0-4] 33 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9566,6 +9966,7 @@ rule Trojan_Win32_Qakbot_AO_2147816179_1
         $x_1_2 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9597,6 +9998,7 @@ rule Trojan_Win32_Qakbot_DS_2147816230_0
         $x_1_11 = "Dx2aSBsQE8y" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -9621,6 +10023,7 @@ rule Trojan_Win32_Qakbot_DT_2147816390_0
         $x_1_1 = {89 02 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 8b 1d ?? ?? ?? ?? 83 c3 04 03 1d ?? ?? ?? ?? 2b d8 6a 00 e8 18 00 8b 15 ?? ?? ?? ?? 33 02 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9652,6 +10055,7 @@ rule Trojan_Win32_Qakbot_DU_2147816395_0
         $x_1_11 = "DQOpC5sKgC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -9686,6 +10090,7 @@ rule Trojan_Win32_Qakbot_DV_2147816538_0
         $x_1_11 = "D5VMGuG4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -9710,6 +10115,7 @@ rule Trojan_Win32_Qakbot_DW_2147816556_0
         $x_1_1 = {89 02 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 72 18 00 8b 15 ?? ?? ?? ?? 33 02 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9732,6 +10138,7 @@ rule Trojan_Win32_Qakbot_PAE_2147816634_0
         $x_5_2 = {8b 55 fc 32 04 13 0f b6 c0 66 89 04 4e 41 43 3b cf}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9759,6 +10166,7 @@ rule Trojan_Win32_Qakbot_PAE_2147816634_1
         $x_10_7 = "Time" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9780,6 +10188,7 @@ rule Trojan_Win32_Qakbot_DX_2147816653_0
         $x_1_1 = {4b 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 a1 ?? ?? ?? ?? 33 18 89 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 02 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9811,6 +10220,7 @@ rule Trojan_Win32_Qakbot_DY_2147816728_0
         $x_1_11 = "DqxDV94RXMn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -9845,6 +10255,7 @@ rule Trojan_Win32_Qakbot_DZ_2147816744_0
         $x_1_11 = "DpjAvdDDTb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -9869,6 +10280,7 @@ rule Trojan_Win32_Qakbot_EA_2147816804_0
         $x_5_1 = {8b 6c 24 4c 8b 97 c8 00 00 00 8b 87 14 01 00 00 8b 8f 0c 01 00 00 8b 04 82 31 04 8a 8b 8f 38 01 00 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9890,6 +10302,7 @@ rule Trojan_Win32_Qakbot_EA_2147816804_1
         $x_3_1 = {33 10 89 55 a0 8b 45 a0 8b 55 d8 89 02 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 d8 83 c0 04 03 45 a4}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9911,6 +10324,7 @@ rule Trojan_Win32_Qakbot_EA_2147816804_2
         $x_5_1 = {8a c8 c0 e1 02 8a c4 c0 eb 04 80 e3 03 c0 e0 04 02 d9 8a ca c0 e9 02 80 e1 0f c0 e2 06 02 55 ff 02 c8 8b 45 f0 88 4d 09 88 5d 08 88 55 0a 88 48 ff 8b 4d f8 88 58 fe}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9936,6 +10350,7 @@ rule Trojan_Win32_Qakbot_EA_2147816804_3
         $x_1_5 = "LGv5I" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9958,6 +10373,7 @@ rule Trojan_Win32_Qakbot_EA_2147816804_4
         $x_1_2 = "dfxsgdfhdgfjh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9983,6 +10399,7 @@ rule Trojan_Win32_Qakbot_EA_2147816804_5
         $x_1_5 = "WXbba298N" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10014,6 +10431,7 @@ rule Trojan_Win32_Qakbot_EA_2147816804_6
         $x_1_11 = "DFptdQAdNpx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -10038,6 +10456,7 @@ rule Trojan_Win32_Qakbot_EB_2147816908_0
         $x_5_1 = {2b 13 2b 17 8b 45 f8 8a 14 10 8b 45 08 32 14 08 8b 45 fc 88 14 08}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10060,6 +10479,7 @@ rule Trojan_Win32_Qakbot_EB_2147816908_1
         $x_3_2 = {03 d8 8b 45 d8 33 18 89 5d a0}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10081,6 +10501,7 @@ rule Trojan_Win32_Qakbot_EB_2147816908_2
         $x_6_1 = {8b 55 d8 33 02 89 45 a0 8b 45 a0 8b 55 d8 89 02 8b 45 a8 83 c0 04 89 45 a8 33 c0 89 45 a4}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10102,6 +10523,7 @@ rule Trojan_Win32_Qakbot_EB_2147816908_3
         $x_6_1 = {8b d3 03 f8 8b 86 48 01 00 00 8b cf d3 ea 8b 4e 1c 8a 40 ?? 34 ?? 22 d0 8b 86 34 01 00 00 88 14 01}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10123,6 +10545,7 @@ rule Trojan_Win32_Qakbot_EB_2147816908_4
         $x_7_1 = {89 02 6a 00 e8 ?? ?? ?? ?? 8b d8 03 1d ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 03 d8 6a 00 e8 ?? ?? ?? ?? 03 d8 a1 ?? ?? ?? ?? 33 18}  //weight: 7, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10148,6 +10571,7 @@ rule Trojan_Win32_Qakbot_EB_2147816908_5
         $x_1_5 = "ROUO809" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10173,6 +10597,7 @@ rule Trojan_Win32_Qakbot_EB_2147816908_6
         $x_1_5 = "WIudK398" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10194,6 +10619,7 @@ rule Trojan_Win32_Qakbot_EB_2147816908_7
         $x_1_1 = {01 02 6a 00 e8 ?? ?? ?? ?? 8b 1d ?? ?? ?? ?? 03 1d ?? ?? ?? ?? 03 1d ?? ?? ?? ?? 4b 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 a1 ?? ?? ?? ?? 33 18 89 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10221,6 +10647,7 @@ rule Trojan_Win32_Qakbot_EB_2147816908_8
         $x_1_7 = "HZ5ki18nPKc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10242,6 +10669,7 @@ rule Trojan_Win32_Qakbot_EC_2147817064_0
         $x_5_1 = {8a d1 8b cb 2a d3 80 c2 1b 01 1e 0f b6 c2 83 56 04 00 2b c8 81 e9 71 51 01 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10263,6 +10691,7 @@ rule Trojan_Win32_Qakbot_EC_2147817064_1
         $x_6_1 = {8b c2 0f af c2 03 f0 89 b1 9c 00 00 00 8b 81 94 00 00 00 83 f0 2f 0b f8 42 89 79 24 3b 51 38 76 df}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10284,6 +10713,7 @@ rule Trojan_Win32_Qakbot_EC_2147817064_2
         $x_8_1 = {8b 82 9c 00 00 00 33 c5 33 42 30 0f af 82 d4 00 00 00 89 82 d4 00 00 00 8b 82 a8 00 00 00 83 c1 02 23 42 48}  //weight: 8, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10306,6 +10736,7 @@ rule Trojan_Win32_Qakbot_EC_2147817064_3
         $x_2_2 = {6a 00 89 0c e4 ff 75 fc 59 01 f9 89 4d fc 59 c1 e7 04 49 75 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10331,6 +10762,7 @@ rule Trojan_Win32_Qakbot_EC_2147817064_4
         $x_1_5 = "WhzxqY0Jrk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10357,6 +10789,7 @@ rule Trojan_Win32_Qakbot_EC_2147817064_5
         $x_1_6 = "DkqpyEj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10382,6 +10815,7 @@ rule Trojan_Win32_Qakbot_EC_2147817064_6
         $x_1_5 = "peGDtaKHxm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10408,6 +10842,7 @@ rule Trojan_Win32_Qakbot_EC_2147817064_7
         $x_1_6 = "vpIMsYKcflCohCsBeNMYqRADbaH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10429,6 +10864,7 @@ rule Trojan_Win32_Qakbot_ED_2147817076_0
         $x_8_1 = {03 d8 43 8b 45 d8 89 18 8b 45 a8 83 c0 04 89 45 a8 33 c0 89 45 a4}  //weight: 8, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10450,6 +10886,7 @@ rule Trojan_Win32_Qakbot_ED_2147817076_1
         $x_1_1 = {2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 a1 ?? ?? ?? ?? 33 18 89 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 02 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10478,6 +10915,7 @@ rule Trojan_Win32_Qakbot_ED_2147817076_2
         $x_1_8 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10499,6 +10937,7 @@ rule Trojan_Win32_Qakbot_EE_2147817139_0
         $x_1_1 = {2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 a1 ?? ?? ?? ?? 01 18 a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 48 8b 15 ?? ?? ?? ?? 33 02 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 02 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10520,6 +10959,7 @@ rule Trojan_Win32_Qakbot_EF_2147817140_0
         $x_1_1 = {8b d8 8b 45 d8 03 45 ac 03 45 e8 03 d8 e8 ?? ?? ?? ?? 2b d8 89 5d b0 8b 45 b4 33 45 b0 8b 55 ec 89 02 83 45 e8 04 8b 45 ec 83 c0 04 89 45 ec 8b 45 e8 3b 45 e4 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10546,6 +10986,7 @@ rule Trojan_Win32_Qakbot_EG_2147817150_0
         $x_1_6 = "K98BOqJX6jh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10571,6 +11012,7 @@ rule Trojan_Win32_Qakbot_MA_2147817168_0
         $x_1_5 = "DrawThemeIcon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10597,6 +11039,7 @@ rule Trojan_Win32_Qakbot_MA_2147817168_1
         $x_1_6 = "JetG7TeKm1t" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10622,6 +11065,7 @@ rule Trojan_Win32_Qakbot_MA_2147817168_2
         $x_2_5 = "Pava_com_sun_star_sdbcx_comp_hsqldb_StorageNativeOutputStream_write__Ljava_lang_String_2Ljava_lang_String" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10643,6 +11087,7 @@ rule Trojan_Win32_Qakbot_EH_2147817207_0
         $x_3_1 = {8b 55 d8 8b 12 03 55 a8 2b d0 8b 45 d8 89 10 6a 00 e8 ?? ?? ?? ?? 8b 55 c4 03 55 a4 2b d0 89 55 a0}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10664,6 +11109,7 @@ rule Trojan_Win32_Qakbot_EH_2147817207_1
         $x_3_1 = {33 18 89 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 02 a1 ?? ?? ?? ?? 83 c0 04 a3 ?? ?? ?? ?? 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10685,6 +11131,7 @@ rule Trojan_Win32_Qakbot_EH_2147817207_2
         $x_4_1 = {8b 12 03 55 a8 2b d0 8b 45 d8 89 10 6a 00 e8 ?? ?? ?? ?? 8b 55 c4 03 55 a4 2b d0 89 55 a0 6a 00 e8 ?? ?? ?? ?? 8b 55 a0 2b d0 8b 45 d8 33 10}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10707,6 +11154,7 @@ rule Trojan_Win32_Qakbot_EH_2147817207_3
         $x_2_2 = {8b 8f 44 01 00 00 8b 87 fc 00 00 00 8b b7 3c 01 00 00 8b 97 f8 00 00 00 8b 04 88 01 04 b2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10728,6 +11176,7 @@ rule Trojan_Win32_Qakbot_EH_2147817207_4
         $x_4_1 = {2b d8 4b 6a 00 e8 ?? ?? ?? ?? 2b d8 4b a1 ?? ?? ?? ?? 33 18 89 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 02 a1 ?? ?? ?? ?? 83 c0 04 a3 ?? ?? ?? ?? 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10749,6 +11198,7 @@ rule Trojan_Win32_Qakbot_EH_2147817207_5
         $x_1_1 = {89 02 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 0f 82 18 00 8b 15 ?? ?? ?? ?? 33 02 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10774,6 +11224,7 @@ rule Trojan_Win32_Qakbot_EH_2147817207_6
         $x_1_5 = "GtfbsDzAFiJhwIWnol" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10800,6 +11251,7 @@ rule Trojan_Win32_Qakbot_EH_2147817207_7
         $x_1_6 = "zccmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10825,6 +11277,7 @@ rule Trojan_Win32_Qakbot_EH_2147817207_8
         $x_1_5 = "FORMULA_HID_FORMULA_FAP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10846,6 +11299,7 @@ rule Trojan_Win32_Qakbot_EI_2147817228_0
         $x_1_1 = {33 c0 89 45 a4 e8 ?? ?? ?? ?? 8b 55 d8 8b 1a 03 5d ec 2b d8 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 89 18 8b 45 c8 03 45 a0 03 45 ec 03 45 a4 8b 55 d8 31 02 83 45 ec 04 83 45 d8 04 8b 45 ec 3b 45 d4 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10877,6 +11331,7 @@ rule Trojan_Win32_Qakbot_EJ_2147817293_0
         $x_1_11 = "yeBp5w1iXq" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -10903,6 +11358,7 @@ rule Trojan_Win32_Qakbot_AT_2147817527_0
         $x_1_3 = "7ce12d8a10f4c49b" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10925,6 +11381,7 @@ rule Trojan_Win32_Qakbot_AT_2147817527_1
         $x_1_2 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10948,6 +11405,7 @@ rule Trojan_Win32_Qakbot_PJ_2147817589_0
         $x_1_3 = "33ea69388d4d3646f501ab81f8871c6689ac235f547b5433" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -10970,6 +11428,7 @@ rule Trojan_Win32_Qakbot_EK_2147817590_0
         $x_2_2 = {8b 55 d8 8b 12 03 55 a8 2b d0 8b 45 d8 89 10}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11001,6 +11460,7 @@ rule Trojan_Win32_Qakbot_EK_2147817590_1
         $x_1_11 = "JWsl7YiVW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -11025,6 +11485,7 @@ rule Trojan_Win32_Qakbot_EL_2147817666_0
         $x_1_1 = {4b 2b d8 e8 ?? ?? ?? ?? 03 d8 a1 ?? ?? ?? ?? 33 18 89 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 02 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11046,6 +11507,7 @@ rule Trojan_Win32_Qakbot_EO_2147817747_0
         $x_1_1 = {8b 45 d8 33 18 89 5d a0 8b 45 a0 8b 55 d8 89 02 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 d8 83 c0 04 03 45 a4 89 45 d8 8b 45 a8 3b 45 cc 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11067,6 +11529,7 @@ rule Trojan_Win32_Qakbot_EP_2147817833_0
         $x_1_1 = {03 d8 8b 45 ?? 33 18 89 5d ?? 8b 45 ?? 8b 55 ?? 89 02 33 c0 89 45 ?? 8b 45 ?? 83 c0 ?? 03 45 ?? 89 45 ?? 6a 00 e8 ?? ?? ?? ?? 8b 5d ?? 83 c3 ?? 03 5d ?? 2b d8 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11093,6 +11556,7 @@ rule Trojan_Win32_Qakbot_EP_2147817833_1
         $x_1_6 = "DMHkBWq" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11114,6 +11578,7 @@ rule Trojan_Win32_Qakbot_EQ_2147818025_0
         $x_1_1 = {01 02 8b 45 ?? 03 45 ?? 03 45 ?? 48 8b 55 ?? 33 02 89 45 ?? 8b 45 ?? 8b 55 ?? 89 02 33 c0 89 45 ?? 8b 45 ?? 83 c0 04 03 45 ?? 89 45 ?? 6a 00 e8 ?? ?? ?? ?? 8b 5d ?? 83 c3 04 03 5d ?? 2b d8 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11135,6 +11600,7 @@ rule Trojan_Win32_Qakbot_EU_2147818080_0
         $x_1_1 = {2b d8 6a 66 e8 ?? ?? ?? ?? 03 d8 6a 66 e8 ?? ?? ?? ?? 2b d8 6a 66 e8 ?? ?? ?? ?? 03 d8 89 5d ?? 8b 45 ?? 8b 55 d8 01 02 8b 45 ?? 03 45 ?? 8b 55 ?? 31 02 83 45 ec 04 83 45 d8 04 8b 45 ?? 3b 45 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11156,6 +11622,7 @@ rule Trojan_Win32_Qakbot_MRT_2147818087_0
         $x_1_1 = {2c d3 2c dc 2c f6 2c 52 2c 40 2c e0 20 26 2c b1 2c e0 45 37 2c 3e 2c e0 2c 88 2c 41}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11177,6 +11644,7 @@ rule Trojan_Win32_Qakbot_ME_2147818129_0
         $x_10_1 = {2b d0 4a a1 ?? ?? ?? ?? 89 10 a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 8b 1d ?? ?? ?? ?? 2b d8 4b 6a 00 e8 ?? ?? ?? ?? 2b d8 4b 6a 00 e8 ?? ?? ?? ?? 03 d8 a1 ?? ?? ?? ?? 33 18 89 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 02 a1 ?? ?? ?? ?? 83 c0 04 a3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11198,6 +11666,7 @@ rule Trojan_Win32_Qakbot_EV_2147818338_0
         $x_1_1 = {8b 4d e4 2b 0d ?? ?? ?? ?? 03 0d ?? ?? ?? ?? 33 f1 89 35 ?? ?? ?? ?? 8d 8d 64 ff ff ff e8 ?? ?? ?? ?? 0f b6 15 ?? ?? ?? ?? 33 55 f0 89 55 f0 0f b6 05 ?? ?? ?? ?? 8b 4d f0 2b c8 89 4d f0 0f b6 15 ?? ?? ?? ?? 8b 45 f0 2b c2 89 45 f0 8b 0d ?? ?? ?? ?? 03 4d ec 8a 55 f0 88 11 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11219,6 +11688,7 @@ rule Trojan_Win32_Qakbot_EW_2147818614_0
         $x_1_1 = {8b 45 d8 8b 55 a8 01 10 8b 45 d8 8b 00 8b 55 c4 03 55 a8 03 55 ac 4a 33 c2 89 45 a0 6a 00 e8 ?? ?? ?? ?? 8b 5d a0 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 89 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11240,6 +11710,7 @@ rule Trojan_Win32_Qakbot_PMF_2147818695_0
         $x_1_1 = {4b 2b d8 6a 00 e8 [0-4] 03 d8 8b 45 d8 33 18 89 5d a0 6a 00 e8 [0-4] 8b 5d a0 2b d8 6a 00 e8 [0-4] 03 d8 8b 45 d8 89 18 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 6a 00 e8 [0-4] 8b 5d d8 83 c3 04 03 5d a4 2b d8 6a 00 e8 [0-4] 03 d8 89 5d d8 8b 45 a8 3b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11261,6 +11732,7 @@ rule Trojan_Win32_Qakbot_PMG_2147818788_0
         $x_1_1 = {8b 45 d8 01 18 8b 45 d8 8b 00 8b 55 c4 03 55 a8 03 55 ac 4a 33 c2 89 45 a0 6a 00 e8 [0-4] 8b 5d a0 2b d8 6a 00 e8 [0-4] 03 d8 8b 45 d8 89 18 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 6a 00 e8 [0-4] 8b 5d d8 83 c3 04 03 5d a4 2b d8 6a 00 e8 [0-4] 03 d8 89 5d d8 8b 45 a8 3b 45 cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11282,6 +11754,7 @@ rule Trojan_Win32_Qakbot_PMH_2147819387_0
         $x_1_1 = {8b 45 c4 03 45 a4 8b 55 d8 33 02 89 45 a0 8b 45 a0 8b 55 d8 89 02 33 c0 89 45 a4 6a 00 e8 [0-4] 8b d8 8b 45 a8 83 c0 04 03 45 a4 03 d8 6a 00 e8 [0-4] 2b d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11322,6 +11795,7 @@ rule Trojan_Win32_Qakbot_AMF_2147819530_0
         $x_1_20 = "v5BM2Af" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11343,6 +11817,7 @@ rule Trojan_Win32_Qakbot_EX_2147819604_0
         $x_1_1 = {2b d8 8b 45 d8 33 18 89 5d a0 8b 45 a0 8b 55 d8 89 02 33 c0 89 45 a4 6a 00 e8 ?? ?? ?? ?? 8b d8 8b 45 a8 83 c0 04 03 45 a4 03 d8 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11364,6 +11839,7 @@ rule Trojan_Win32_Qakbot_PMI_2147819754_0
         $x_1_1 = {8b 45 c4 03 45 a4 8b 55 d8 33 02 89 45 a0 8b 45 a0 8b 55 d8 89 02 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 6a 00 e8 [0-4] 8b d8 8b 45 d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11385,6 +11861,7 @@ rule Trojan_Win32_Qakbot_EZ_2147819999_0
         $x_1_1 = {2b d8 89 5d a0 8b 45 d8 8b 00 33 45 a0 89 45 a0 8b 45 a0 8b 55 d8 89 02 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 6a 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11406,6 +11883,7 @@ rule Trojan_Win32_Qakbot_FA_2147820073_0
         $x_1_1 = {2b d8 8b 45 d8 33 18 89 5d a0 8b 45 a0 8b 55 d8 89 02 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 6a 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11427,6 +11905,7 @@ rule Trojan_Win32_Qakbot_FB_2147820131_0
         $x_1_1 = {2b d8 89 5d a0 8b 45 d8 8b 00 33 45 a0 89 45 a0 6a 00 e8 ?? ?? ?? ?? 8b d8 03 5d a0 6a 00 e8 ?? ?? ?? ?? 2b d8 8b 45 d8 89 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11448,6 +11927,7 @@ rule Trojan_Win32_Qakbot_PMJ_2147820280_0
         $x_1_1 = {89 45 a4 8b 45 a8 8b 55 d8 01 02 8b 45 c4 03 45 a4 89 45 a0 8b 45 d8 8b 00 33 45 a0 89 45 a0 8b 45 a0 8b 55 d8 89 02 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11469,6 +11949,7 @@ rule Trojan_Win32_Qakbot_FC_2147820481_0
         $x_1_1 = {03 d8 89 5d a0 8b 45 d8 8b 00 33 45 a0 89 45 a0 8b 45 a0 8b 55 d8 89 02 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 d8 83 c0 04 03 45 a4 89 45 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11490,6 +11971,7 @@ rule Trojan_Win32_Qakbot_MB_2147821232_0
         $x_1_1 = {89 45 a0 8b 45 d8 8b 00 33 45 a0 89 45 a0 8b 45 a0 8b 55 d8 89 02 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 d8 83 c0 04 03 45 a4 89 45 d8 8b 45 a8 3b 45 cc 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11511,6 +11993,7 @@ rule Trojan_Win32_Qakbot_MB_2147821232_1
         $x_10_1 = {33 18 89 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 10 8b 45 f8 83 c0 04 4f 00 8b d8 03 1d ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 6a 00 e8 ?? ?? ?? ?? 2b d8 a1}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11533,6 +12016,7 @@ rule Trojan_Win32_Qakbot_FD_2147821259_0
         $x_1_2 = {8b d8 8b 45 d8 03 45 b0 03 45 e8 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 89 5d b4 8b 45 b4 8b 55 ec 31 02 83 45 e8 04 83 45 ec 04 8b 45 e8 3b 45 e4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -11555,6 +12039,7 @@ rule Trojan_Win32_Qakbot_FE_2147821727_0
         $x_1_2 = {01 02 6a 00 e8 ?? ?? ?? ?? 8b d8 8b 45 c4 03 45 a4 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 89 5d a0 8b 45 d8 8b 00 33 45 a0 89 45 a0 8b 45 a0 8b 55 d8 89 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -11576,6 +12061,7 @@ rule Trojan_Win32_Qakbot_NA_2147822456_0
         $x_1_1 = {03 d8 8b 45 d8 89 18 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 d8 83 c0 04 03 45 a4 89 45 d8 8b 45 a8 3b 45 cc 72 89}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11597,6 +12083,7 @@ rule Trojan_Win32_Qakbot_EVU_2147822836_0
         $x_1_1 = {03 d8 8b 45 d8 89 18 8b 45 c4 03 45 a4 89 45 a0 8b 45 d8 8b 00 33 45 a0 89 45 a0 8b 45 a0 8b 55 d8 89 02 8b 45 d8 83 c0 04 89 45 d8 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 a8 3b 45 cc 72 99}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11618,6 +12105,7 @@ rule Trojan_Win32_Qakbot_EVV_2147822854_0
         $x_1_1 = {03 d8 89 5d a4 8b 45 a8 8b 55 d8 01 02 8b 45 c4 03 45 a4 89 45 a0 8b 45 d8 8b 00 33 45 a0 89 45 a0 8b 45 a0 8b 55 d8 89 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11639,6 +12127,7 @@ rule Trojan_Win32_Qakbot_PMK_2147822973_0
         $x_1_1 = {8b 45 d8 33 18 89 5d a0 8b 45 a0 8b 55 d8 89 02 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 d8 83 c0 04 03 45 a4 89 45 d8 8b 45 a8 3b 45 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11660,6 +12149,7 @@ rule Trojan_Win32_Qakbot_FG_2147823001_0
         $x_1_1 = {8b 45 d8 8b 00 33 45 a0 89 45 a0 8b 45 a0 8b 55 d8 89 02 6a 00 e8 ?? ?? ?? ?? 8b 5d d8 83 c3 04 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 89 5d d8 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 a8 3b 45 cc 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11682,6 +12172,7 @@ rule Trojan_Win32_Qakbot_FH_2147823173_0
         $x_1_2 = {8b 00 33 45 a0 89 45 a0 8b 45 a0 8b 55 d8 89 02 8b 45 d8 83 c0 04 89 45 d8 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 a8 3b 45 cc 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -11703,6 +12194,7 @@ rule Trojan_Win32_Qakbot_FI_2147823247_0
         $x_1_1 = {89 18 6a 00 e8 ?? ?? ?? ?? 8b 5d c4 03 5d a4 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 89 5d a0 6a 00 e8 ?? ?? ?? ?? 8b 5d a0 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 33 18 89 5d a0 6a 00 e8 ?? ?? ?? ?? 8b 5d a0 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 89 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11724,6 +12216,7 @@ rule Trojan_Win32_Qakbot_FJ_2147823612_0
         $x_1_1 = {01 02 8b 45 c8 03 45 98 03 45 ec 03 45 a0 89 45 a8 6a 00 e8 ?? ?? ?? ?? 8b 5d a8 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 31 18 83 45 ec 04 83 45 d8 04 8b 45 ec 3b 45 d4 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11745,6 +12238,7 @@ rule Trojan_Win32_Qakbot_FK_2147823695_0
         $x_1_1 = {03 d8 8b 45 d8 33 18 89 5d a0 e8 ?? ?? ?? ?? 8b 5d a0 2b d8 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 89 18 8b 45 d8 83 c0 04 89 45 d8 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 a8 3b 45 cc 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11772,6 +12266,7 @@ rule Trojan_Win32_Qakbot_FL_2147823696_0
         $x_1_7 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11799,6 +12294,7 @@ rule Trojan_Win32_Qakbot_FM_2147823856_0
         $x_1_7 = "TzK86601" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11820,6 +12316,7 @@ rule Trojan_Win32_Qakbot_FN_2147824038_0
         $x_1_1 = {89 18 8b 45 c4 03 45 a4 89 45 a0 8b 45 d8 8b 00 33 45 a0 89 45 a0 6a 00 e8 ?? ?? ?? ?? 8b 5d a0 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 89 18 6a 00 e8 ?? ?? ?? ?? 8b 5d d8 83 c3 04 2b d8 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11844,6 +12341,7 @@ rule Trojan_Win32_Qakbot_FO_2147824039_0
         $x_1_4 = "RqC423" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11865,6 +12363,7 @@ rule Trojan_Win32_Qakbot_FP_2147824195_0
         $x_1_1 = {8b 00 33 45 a0 89 45 a0 6a 00 e8 ?? ?? ?? ?? 8b 5d a0 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 89 18 8b 45 d8 83 c0 04 89 45 d8 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 a8 3b 45 cc 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11886,6 +12385,7 @@ rule Trojan_Win32_Qakbot_MC_2147824366_0
         $x_10_1 = {8b d8 03 1d ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 6a 00 e8 ?? ?? ?? ?? 2b d8 6a 00 e8 ?? ?? ?? ?? 2b d8 a1 ?? ?? ?? ?? 33 18 89 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 10 8b 45 f8 83 c0 04}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11907,6 +12407,7 @@ rule Trojan_Win32_Qakbot_MC_2147824366_1
         $x_5_1 = {0f af da 8d 50 ff 33 d0 89 91 fc 00 00 00 8b 81 00 01 00 00 01 41 50 8b 81 ec 00 00 00 01 41 10 8b 81 80 00 00 00 8b 91 a8 00 00 00 88 1c 02 ff 81 80 00 00 00 8b 81 c0 00 00 00 2b 81 0c 01 00 00 35 ?? ?? ?? ?? 01 81}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11932,6 +12433,7 @@ rule Trojan_Win32_Qakbot_MC_2147824366_2
         $x_1_5 = "nduktpe709bf55.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11958,6 +12460,7 @@ rule Trojan_Win32_Qakbot_FQ_2147824488_0
         $x_1_6 = "SUn15D" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11979,6 +12482,7 @@ rule Trojan_Win32_Qakbot_FR_2147824859_0
         $x_1_1 = {8b c7 83 e0 ?? 8a 04 10 32 04 1f 88 04 39 47 83 ee ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12000,6 +12504,7 @@ rule Trojan_Win32_Qakbot_FR_2147824859_1
         $x_1_1 = {89 18 8b 45 c4 03 45 a4 89 45 a0 8b 45 d8 8b 00 33 45 a0 89 45 a0 6a 00 e8 ?? ?? ?? ?? 8b 5d a0 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 89 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12021,6 +12526,7 @@ rule Trojan_Win32_Qakbot_FS_2147825201_0
         $x_1_1 = {03 d8 8b 45 d8 89 18 8b 45 c4 03 45 a4 89 45 a0 8b 45 d8 8b 00 33 45 a0 89 45 a0 6a 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12042,6 +12548,7 @@ rule Trojan_Win32_Qakbot_FT_2147825406_0
         $x_1_1 = {8b 45 d8 8b 00 33 45 a0 89 45 a0 8b 45 a0 8b 55 d8 89 02 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 d8 83 c0 04 03 45 a4 89 45 d8 8b 45 a8 3b 45 cc 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12063,6 +12570,7 @@ rule Trojan_Win32_Qakbot_MD_2147826033_0
         $x_1_1 = {8b 45 d8 8b 00 33 45 a0 89 45 a0 8b 45 a0 8b 55 d8 89 02 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 e8 ?? ?? ?? ?? 8b d8 8b 45 d8 83 c0 04 03 45 a4 03 d8 e8 ?? ?? ?? ?? 2b d8 89 5d d8 8b 45 a8 3b 45 cc 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12090,6 +12598,7 @@ rule Trojan_Win32_Qakbot_MD_2147826033_1
         $x_10_7 = "print" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12112,6 +12621,7 @@ rule Trojan_Win32_Qakbot_FU_2147826284_0
         $x_1_2 = {03 d8 8b 45 d8 89 18 8b 45 d8 83 c0 04 89 45 d8 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 a8 3b 45 cc 0f 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -12133,6 +12643,7 @@ rule Trojan_Win32_Qakbot_FV_2147826597_0
         $x_1_1 = {89 5d a4 8b 45 ec 8b 55 d8 01 02 8b 45 c8 03 45 a4 8b 55 d8 31 02 83 45 ec 04 83 45 d8 04 8b 45 ec 3b 45 d4 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12154,6 +12665,7 @@ rule Trojan_Win32_Qakbot_FW_2147826785_0
         $x_1_1 = {89 18 8b 45 c4 03 45 a4 89 45 a0 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 45 d8 8b 00 33 45 a0 89 45 a0 8b 45 a0 8b 55 d8 89 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12175,6 +12687,7 @@ rule Trojan_Win32_Qakbot_FX_2147827260_0
         $x_1_1 = {89 18 8b 45 c4 03 45 a4 89 45 a0 6a 00 e8 ?? ?? ?? ?? 8b 5d a0 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 33 18 89 5d a0 6a 00 e8 ?? ?? ?? ?? 8b 5d a0 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 89 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12197,6 +12710,7 @@ rule Trojan_Win32_Qakbot_FY_2147827768_0
         $x_1_2 = {03 d8 89 5d d8 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 a8 3b 45 cc 0f 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12218,6 +12732,7 @@ rule Trojan_Win32_Qakbot_FZ_2147828962_0
         $x_1_1 = {03 d8 89 5d a0 8b 45 d8 8b 00 33 45 a0 89 45 a0 8b 45 a0 8b 55 d8 89 02 8b 45 d8 83 c0 04 89 45 d8 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 a8 3b 45 cc 0f 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12239,6 +12754,7 @@ rule Trojan_Win32_Qakbot_DAT_2147829441_0
         $x_1_1 = {8b 45 e0 8b 4d f4 2b 4d f4 89 4d f4 8b 4d e8 8a 14 01 8b 75 e4 88 14 06 8a 55 f3 83 c0 01 88 55 f3 8b 7d ec 39 f8 89 45 e0 74 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12260,6 +12776,7 @@ rule Trojan_Win32_Qakbot_SYS_2147829442_0
         $x_1_1 = {ff 15 98 10 55 00 8b 0d f8 4c 5b 00 0f b6 3d ef 4c 5b 00 8b 35 0c b2 74 00 8b c1 2b 05 f8 b1 74 00 8d 14 0f 2b 05 fc 4c 5b 00 8d 6c 32 ba 0f b6 15 e7 4c 5b 00 89 2d 00 4d 5b 00 be 02 00 00 00 0f b6 9e e4 4c 5b 00 03 dd 03 5c 24 14 8d 44 18 ba 3b c2 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12282,6 +12799,7 @@ rule Trojan_Win32_Qakbot_SB_2147833221_0
         $x_1_2 = "DQFiFa0y" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12305,6 +12823,7 @@ rule Trojan_Win32_Qakbot_SC_2147833222_0
         $x_1_3 = "DQFiFa0y" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12326,6 +12845,7 @@ rule Trojan_Win32_Qakbot_MRU_2147833274_0
         $x_1_1 = {8b 5d 08 2b cf 33 d2 8b c7 f7 75 10 8a 04 1a 8b 55 fc 32 04 17 88 04 39 47 83 ee 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12349,6 +12869,7 @@ rule Trojan_Win32_Qakbot_RK_2147833288_0
         $x_1_3 = {03 d8 8b 45 d8 33 18 89 5d a0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12370,6 +12891,7 @@ rule Trojan_Win32_Qakbot_AF_2147833291_0
         $x_10_1 = {03 c2 8b 55 d8 89 02 68 [0-4] e8 [0-4] 8b 55 c4 03 55 a4 03 c2 89 45 a0 68 [0-4] e8 [0-4] 8b d8 03 5d a0 68 [0-4] e8 [0-4] 03 d8 8b 45 d8 33 18 89 5d a0 68 [0-4] e8 [0-4] 03 45 a0 8b 55 d8 89 02 8b 45 a8 83 c0 04 89 45 a8 33 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12391,6 +12913,7 @@ rule Trojan_Win32_Qakbot_AQ_2147833439_0
         $x_10_1 = {03 d8 8b 45 d8 33 18 89 5d a0 6a 00 e8 [0-4] 8b d8 03 5d a0 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 03 d8 8b 45 d8 89 18 68 [0-4] e8 [0-4] 8b 55 d8 83 c2 04 03 c2 89 45 d8 33 c0 89 45 a4 8b 45 a8 83 c0 04 03 45 a4 89 45 a8 8b 45 a8 3b 45 cc 0f}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12412,6 +12935,7 @@ rule Trojan_Win32_Qakbot_AP_2147833536_0
         $x_10_1 = {8b 45 f8 99 f7 7d e4 8b 45 10 0f b6 0c 10 8b 55 08 03 55 f8 0f b6 02 33 c1 8b 4d 08 03 4d f8 88 01 eb}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12433,6 +12957,7 @@ rule Trojan_Win32_Qakbot_MOH_2147833699_0
         $x_1_1 = {83 c6 04 8b 82 ?? ?? ?? ?? 31 42 ?? b8 ?? ?? ?? ?? 2b 82 ?? ?? ?? ?? 01 82 ?? ?? ?? ?? 8b 42 ?? 2d ?? ?? ?? ?? 01 42 ?? 8b 82 ?? ?? ?? ?? 01 42 ?? b8 ?? ?? ?? ?? 2b 42 ?? 01 82 ?? ?? ?? ?? 8b 42 ?? 33 82 ?? ?? ?? ?? 35 ?? ?? ?? ?? 89 42 ?? 81 fe ?? ?? ?? ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12455,6 +12980,7 @@ rule Trojan_Win32_Qakbot_AS_2147833721_0
         $x_2_2 = {8b 55 a0 2b d0 4a 8b 45 d8 33 10 89 55 a0 6a 00 e8 [0-4] 8b d8 03 5d a0 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 03 d8 8b 45 d8 89 18}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12477,6 +13003,7 @@ rule Trojan_Win32_Qakbot_AS_2147833721_1
         $x_1_2 = {0f b6 04 39 33 f0 8b c6 c1 ee 04 83 e0 0f 33 34 85 ?? ?? ?? ?? 8b c6 c1 ee 04 83 e0 0f 33 34 85 ?? ?? ?? ?? 41 3b ca 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12498,6 +13025,7 @@ rule Trojan_Win32_Qakbot_MM_2147833758_0
         $x_1_1 = {8b 82 80 00 00 00 31 42 40 b8 ?? ?? ?? ?? 2b 82 ?? ?? ?? ?? 01 82 ?? ?? ?? ?? 8b 42 48 2d ?? ?? ?? ?? 01 42 68 8b 82 ?? ?? ?? ?? 01 42 74 b8 ?? ?? ?? ?? 2b 42 30 01 82 ?? ?? ?? ?? 8b 82 d0 00 00 00 33 42 68 35 ?? ?? ?? ?? 89 42 68 81 fe}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12519,6 +13047,7 @@ rule Trojan_Win32_Qakbot_ECG_2147833992_0
         $x_1_1 = {8b 46 24 83 e8 ?? 01 86 ?? ?? ?? ?? 8b 4e ?? 8b 46 ?? 31 04 0a 83 c2 ?? 8b 46 ?? 83 e8 ?? 0f af 86 ?? ?? ?? ?? 89 86 ?? ?? ?? ?? 8b 46 ?? 01 46 ?? 81 fa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12540,6 +13069,7 @@ rule Trojan_Win32_Qakbot_AU_2147834300_0
         $x_5_1 = {fc ff 03 05 [0-4] 8b 15 [0-4] 33 02 a3 [0-4] a1 [0-4] 8b 15 [0-4] 89 02 a1 [0-4] 83 c0 04 a3 [0-4] 33 c0 a3 [0-4] a1 [0-4] 83 c0 04 03 05 [0-4] a3 [0-4] a1 [0-4] 3b 05 [0-4] 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12561,6 +13091,7 @@ rule Trojan_Win32_Qakbot_MF_2147834364_0
         $x_10_1 = {03 d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 33 18 89 5d a0 8b 45 a0 8b 55 d8 89 02 8b 45 a8 83 c0 04 89 45 a8 33 c0 89 45 a4 8b 45 d8 83 c0 04 03 45 a4 89 45 d8 8b 45 a8 3b 45 cc 0f 82}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12583,6 +13114,7 @@ rule Trojan_Win32_Qakbot_MF_2147834364_1
         $x_2_2 = "DllRegisterServer" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12613,6 +13145,7 @@ rule Trojan_Win32_Qakbot_MF_2147834364_2
         $x_1_10 = "next" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12636,6 +13169,7 @@ rule Trojan_Win32_Qakbot_GPA_2147834415_0
         $x_1_3 = "DllInstall" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12658,6 +13192,7 @@ rule Trojan_Win32_Qakbot_AX_2147834493_0
         $x_1_2 = {0b 01 0e 00 00 d8 00 00 00 9c 04 00 00 00 00 00 60 e7 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12681,6 +13216,7 @@ rule Trojan_Win32_Qakbot_SF_2147834496_0
         $x_1_3 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12703,6 +13239,7 @@ rule Trojan_Win32_Qakbot_DIO_2147834517_0
         $x_1_2 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12724,6 +13261,7 @@ rule Trojan_Win32_Qakbot_AZ_2147834568_0
         $x_5_1 = {2b d8 4b 8b 45 d8 33 18 89 5d a0 8b 45 a0 8b 55 d8 89 02 8b 45 a8 83 c0 04 89 45 a8 33 c0 89 45 a4 6a 00 e8 [0-4] 8b 55 d8 83 c2 04 03 55 a4 03 c2 40 89 45 ?? 8b 45 ?? 3b 45 ?? 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12746,6 +13284,7 @@ rule Trojan_Win32_Qakbot_AW_2147834570_0
         $x_1_2 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12767,6 +13306,7 @@ rule Trojan_Win32_Qakbot_SAB_2147834671_0
         $x_1_1 = {40 0f af 46 ?? 89 46 ?? 8b 46 ?? 2d ?? ?? ?? ?? 31 46 ?? 8b 46 ?? 35 ?? ?? ?? ?? 29 46 ?? 8b 86 ?? ?? ?? ?? 09 86 ?? ?? ?? ?? 8b 86 ?? ?? ?? ?? 01 86 ?? ?? ?? ?? 81 fb ?? ?? ?? ?? 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12788,6 +13328,7 @@ rule Trojan_Win32_Qakbot_GT_2147834827_0
         $x_1_1 = {2b d8 8b 45 d8 33 18 89 5d a0 8b 45 d8 8b 55 a0 89 10 8b 45 a8 83 c0 04 89 45 a8 33 c0 89 45 a4 8b 45 d8 83 c0 04 03 45 a4 89 45 d8 8b 45 a8 3b 45 cc 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12810,6 +13351,7 @@ rule Trojan_Win32_Qakbot_RPN_2147834844_0
         $x_1_2 = {33 18 89 5d a0 8b 45 d8 8b 55 a0 89 10 8b 45 a8 83 c0 04 89 45 a8 33 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12831,6 +13373,7 @@ rule Trojan_Win32_Qakbot_GU_2147834922_0
         $x_1_1 = {33 18 89 1d [0-15] 03 05 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 02 a1 ?? ?? ?? ?? 83 c0 04 a3 ?? ?? ?? ?? 33 c0 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 04 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12852,6 +13395,7 @@ rule Trojan_Win32_Qakbot_GV_2147834995_0
         $x_1_1 = {2b d8 8b 45 d8 89 18 8b 45 c4 03 45 a4 89 45 a0 [0-15] 8b d8 03 5d a0 [0-15] 2b d8 8b 45 d8 33 18 89 5d a0 8b 45 d8 8b 55 a0 89 10 8b 45 a8 83 c0 04 89 45 a8 33 c0 89 45 a4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12874,6 +13418,7 @@ rule Trojan_Win32_Qakbot_BD_2147835236_0
         $x_1_2 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12895,6 +13440,7 @@ rule Trojan_Win32_Qakbot_MSD_2147835253_0
         $x_1_1 = {8b 34 28 83 c5 04 8b 43 7c 31 43 48 8b c1 2b 43 78 35 ?? ?? ?? ?? 0f af 43 10 89 43 10 33 c0 40 2b c1 01 83 ?? ?? ?? ?? 8b 43 2c 8b 53 60 35 ?? ?? ?? ?? 0f af 43 2c 0f af d6 89 43 2c 8b 4b 68 8b 83 ?? ?? ?? ?? 88 14 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12917,6 +13463,7 @@ rule Trojan_Win32_Qakbot_TG_2147835292_0
         $x_1_2 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12938,6 +13485,7 @@ rule Trojan_Win32_Qakbot_BE_2147835402_0
         $x_4_1 = {2b c1 8b 4d 64 89 41 1c 8b 55 64 8b 42 48 35 c4 4e 0e 00 8b 4d 64 03 81 d0 00 00 00 8b 55 64 89 82 d0 00 00 00 e9}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12960,6 +13508,7 @@ rule Trojan_Win32_Qakbot_MKE_2147835413_0
         $x_1_2 = {b8 04 00 00 00 c1 e0 ?? 8b 4d ?? 8b 55 ?? 8b 84 01 ?? ?? ?? ?? 33 42 ?? 05 ?? ?? ?? ?? 8b 4d ?? 8b 51 ?? 2b d0 8b 45 ?? 89 50 ?? 8b 4d ?? 8b 51 ?? 83 ea ?? 8b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12981,6 +13530,7 @@ rule Trojan_Win32_Qakbot_BF_2147835417_0
         $x_2_1 = {2b d8 6a 00 e8 [0-4] 2b d8 a1 [0-4] 33 18 89 1d [0-4] a1 [0-4] 8b 15 [0-4] 89 02 6a 00 e8 [0-4] 8b d8 a1 [0-4] 83 c0 04 03 d8 6a 00 e8 [0-4] 2b d8 89 1d [0-4] 33 c0 a3 [0-4] a1 [0-4] 83 c0 04 03 05 [0-4] a3 [0-4] a1 [0-4] 3b 05 [0-4] 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13009,6 +13559,7 @@ rule Trojan_Win32_Qakbot_BG_2147835486_0
         $x_1_8 = "unturpentined" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13030,6 +13581,7 @@ rule Trojan_Win32_Qakbot_BH_2147835576_0
         $x_1_1 = {99 f7 7d e4 89 55 ?? 8b 45 ?? 03 45 ?? 0f b6 08 8b 55 ?? 03 55 ?? 0f b6 02 33 c1 8b 4d ?? 03 4d ?? 88 01 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13051,6 +13603,7 @@ rule Trojan_Win32_Qakbot_BH_2147835576_1
         $x_2_1 = {8b d3 c1 ea 08 88 14 01 ff 47 50 8b 87 b8 00 00 00 8b 4f 50 35 83 00 75 06 09 47 28 29 47 20 8b 47 78 88 1c 01 ff 47 50 8b 47 68 2d [0-4] 01 87 b8 00 00 00 8b 87 ac 00 00 00 35 [0-4] 29 47 14 8b 87 94 00 00 00 8b 4f 68 03 c8 81 f1 [0-4] 03 c8 8b 47 44 33 47 08 2d [0-4] 89 8f 94 00 00 00 09 47 14 81 fe [0-4] 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13076,6 +13629,7 @@ rule Trojan_Win32_Qakbot_GX_2147835660_0
         $x_1_5 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13098,6 +13652,7 @@ rule Trojan_Win32_Qakbot_QBT_2147835675_0
         $x_1_2 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13120,6 +13675,7 @@ rule Trojan_Win32_Qakbot_MH_2147835678_0
         $x_5_2 = "DllRegisterServer" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13149,6 +13705,7 @@ rule Trojan_Win32_Qakbot_MH_2147835678_1
         $x_1_9 = "xairo_ft_font_face_create_for_pattern" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13172,6 +13729,7 @@ rule Trojan_Win32_Qakbot_BI_2147835773_0
         $x_1_3 = "DllUnregisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13193,6 +13751,7 @@ rule Trojan_Win32_Qakbot_NZA_2147836082_0
         $x_1_1 = {8b 55 a0 2b d0 8b 45 d8 33 10 89 55 a0 8b 45 d8 8b 55 a0 89 10 8b 45 a8 83 c0 04 89 45 a8 33 c0 89 45 a4 8b 45 d8 83 c0 04 03 45 a4 89 45 d8 8b 45 a8 3b 45 cc 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13215,6 +13774,7 @@ rule Trojan_Win32_Qakbot_MI_2147836229_0
         $x_10_2 = {03 d8 8b 45 ec 31 18 6a 00 e8 ?? ?? ?? ?? 8b 55 e8 83 c2 04 03 c2 89 45 e8 8b 45 ec 83 c0 04 89 45 ec 8b 45 e8 3b 45 e4 72}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13238,6 +13798,7 @@ rule Trojan_Win32_Qakbot_SAC_2147836292_0
         $x_1_3 = {be 53 47 00 ba 57 53 00 ff 96 46 00 09 be 80 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13259,6 +13820,7 @@ rule Trojan_Win32_Qakbot_SAE_2147836366_0
         $x_1_1 = {2b f8 8b 43 ?? 89 bb ?? ?? ?? ?? 31 04 29 83 c5 ?? 8b 4b ?? 49 01 4b ?? 8b 8b ?? ?? ?? ?? 01 4b ?? 81 fd ?? ?? ?? ?? 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13285,6 +13847,7 @@ rule Trojan_Win32_Qakbot_BJ_2147836401_0
         $x_2_6 = "bodywork" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13306,6 +13869,7 @@ rule Trojan_Win32_Qakbot_BK_2147836416_0
         $x_2_1 = {8b 5d a0 2b d8 6a 00 e8 [0-4] 2b d8 8b 45 d8 33 18 89 5d a0 6a 00 e8 [0-4] 8b 55 a0 2b d0 8b 45 d8 89 10 6a 00 e8 [0-4] 8b 55 a8 83 c2 04 2b d0 89 55 a8 33 c0 89 45 a4 8b 45 d8 83 c0 04 03 45 a4 89 45 d8 8b 45 a8 3b 45 cc 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13327,6 +13891,7 @@ rule Trojan_Win32_Qakbot_SAF_2147836437_0
         $x_1_1 = {2b d8 8b 46 ?? 89 9e ?? ?? ?? ?? 31 04 29 83 c5 ?? 8b 46 ?? 48 01 46 ?? 8b 46 ?? 01 46 ?? 81 fd ?? ?? ?? ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13348,6 +13913,7 @@ rule Trojan_Win32_Qakbot_BL_2147836556_0
         $x_2_1 = {03 d8 6a 00 e8 [0-4] 2b d8 a1 [0-4] 33 18 89 1d [0-4] 6a 00 e8 [0-4] 6a 00 e8 [0-4] 6a 00 e8 [0-4] 6a 00 e8 [0-4] 6a 00 e8 [0-4] a1 [0-4] 8b 15 [0-4] 89 02 a1 [0-4] 83 c0 04 a3 [0-4] 33 c0 a3 [0-4] a1 [0-4] 83 c0 04 03 05 [0-4] a3 [0-4] a1 [0-4] 3b 05 [0-4] 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13375,6 +13941,7 @@ rule Trojan_Win32_Qakbot_GZ_2147836611_0
         $x_1_7 = "soniou" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13401,6 +13968,7 @@ rule Trojan_Win32_Qakbot_RDA_2147837021_0
         $x_1_6 = "DllUnregisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13428,6 +13996,7 @@ rule Trojan_Win32_Qakbot_HA_2147837057_0
         $x_1_7 = "CbNB0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13449,6 +14018,7 @@ rule Trojan_Win32_Qakbot_HB_2147837058_0
         $x_1_1 = {01 10 8b 45 c4 03 45 a4 89 45 a0 [0-7] 8b 5d a0 2b d8 [0-7] 2b d8 8b 45 d8 33 18 89 5d a0 [0-7] 8b 5d a0 2b d8 [0-7] 2b d8 [0-7] 2b d8 8b 45 d8 89 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13470,6 +14040,7 @@ rule Trojan_Win32_Qakbot_NZ_2147837131_0
         $x_1_1 = {33 c1 2b c8 8b 86 ?? ?? ?? ?? 05 ?? ?? ?? ?? 81 c1 ?? ?? ?? ?? 31 46 ?? b8 ?? ?? ?? ?? 2b 46 ?? 01 86 ?? ?? ?? ?? 8b 86 ?? ?? ?? ?? 89 8e ?? ?? ?? ?? 8b 8e ?? ?? ?? ?? 31 04 11 83 c2 ?? 8b 86 ?? ?? ?? ?? 01 86 ?? ?? ?? ?? 81 fa ?? ?? ?? ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13497,6 +14068,7 @@ rule Trojan_Win32_Qakbot_BO_2147837181_0
         $x_1_7 = "graben" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13529,6 +14101,7 @@ rule Trojan_Win32_Qakbot_KD_2147837184_0
         $x_1_12 = "ConEmuTh.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13550,6 +14123,7 @@ rule Trojan_Win32_Qakbot_BP_2147837229_0
         $x_2_1 = {8b 55 d8 03 55 b4 2b d0 8b 45 ec 31 10 6a 00 e8 [0-4] 8b d8 8b 45 e8 83 c0 04 03 d8 6a 00 e8 [0-4] 2b d8 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 2b d8 89 5d e8 8b 45 ec 83 c0 04 89 45 ec 8b 45 e8 3b 45 e4 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13572,6 +14146,7 @@ rule Trojan_Win32_Qakbot_BQ_2147837480_0
         $x_1_2 = {8b 12 03 15 [0-4] 03 c2 8b 15 [0-4] 89 02 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13597,6 +14172,7 @@ rule Trojan_Win32_Qakbot_HBA_2147837491_0
         $x_1_5 = "DrawThemeIcon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13619,6 +14195,7 @@ rule Trojan_Win32_Qakbot_SAH_2147837545_0
         $x_1_2 = {8b c1 83 e0 ?? 8a 44 30 ?? 30 04 11 41 3b cf 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13641,6 +14218,7 @@ rule Trojan_Win32_Qakbot_SAI_2147837677_0
         $x_1_2 = "Updt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13663,6 +14241,7 @@ rule Trojan_Win32_Qakbot_BR_2147837694_0
         $x_1_2 = {03 72 14 8b 85 70 ff ff ff 8b 7d f4 03 78 0c 8b 49 10 f3 a4 8b 8d 70 ff ff ff 83 c1 28 89 8d 70 ff ff ff eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13685,6 +14264,7 @@ rule Trojan_Win32_Qakbot_QQ_2147837733_0
         $x_1_2 = "Updt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13708,6 +14288,7 @@ rule Trojan_Win32_Qakbot_PL_2147837921_0
         $x_1_3 = "GetClipboardData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13729,6 +14310,7 @@ rule Trojan_Win32_Qakbot_BT_2147838123_0
         $x_2_1 = {03 d8 43 8b 45 d8 33 18 89 5d a0 6a 00 e8 [0-4] 8b 5d a0 2b d8 6a 00 e8 [0-4] 2b d8 6a 00 e8 [0-4] 2b d8 8b 45 d8 89 18 6a 00 e8 [0-4] 8b 55 a8 83 c2 04 2b d0 89 55 a8 33 c0 89 45 a4 6a 00 e8 [0-4] 8b 5d d8 83 c3 04 03 5d a4 2b d8 6a 00 e8 [0-4] 2b d8 6a 00 e8 [0-4] 03 d8 89 5d d8 8b 45 a8 3b 45 cc 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13750,6 +14332,7 @@ rule Trojan_Win32_Qakbot_HC_2147840009_0
         $x_1_1 = {8b d8 03 1d ?? ?? ?? ?? 43 [0-7] 03 d8 43 a1 ?? ?? ?? ?? 33 18 89 1d [0-11] 8b 1d ?? ?? ?? ?? 2b d8 [0-7] 2b d8 [0-7] 2b d8 a1 ?? ?? ?? ?? 89 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13771,6 +14354,7 @@ rule Trojan_Win32_Qakbot_BU_2147840025_0
         $x_2_1 = {8b 45 e8 8b 55 ec 01 02 6a 00 e8 [0-4] 8b 55 d8 03 55 e4 03 55 e8 2b d0 8b 45 ec 31 10 83 45 e8 04 e8 [0-4] bb 04 00 00 00 2b d8 e8 [0-4] 03 d8 01 5d ec 8b 45 e8 3b 45 e0 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13799,6 +14383,7 @@ rule Trojan_Win32_Qakbot_BV_2147840026_0
         $x_1_8 = "UMGFLT_InitDDEColor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13820,6 +14405,7 @@ rule Trojan_Win32_Qakbot_BW_2147840165_0
         $x_2_1 = {8b 00 33 05 [0-4] a3 [0-4] 6a 00 e8 [0-4] 8b 1d [0-4] 2b d8 6a 00 e8 [0-4] 2b d8 6a 00 e8 [0-4] 2b d8 a1 [0-4] 89 18 a1 [0-4] 83 c0 04 a3 [0-4] 33 c0 a3 [0-4] 6a 00 e8 [0-4] 8b 15 [0-4] 83 c2 04 03 15 [0-4] 03 c2 40 a3 [0-4] a1 [0-4] 3b 05 [0-4] 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13841,6 +14427,7 @@ rule Trojan_Win32_Qakbot_HD_2147840182_0
         $x_1_1 = {8b 00 33 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 8b 1d ?? ?? ?? ?? 2b d8 6a 00 e8 ?? ?? ?? ?? 2b d8 6a 00 e8 ?? ?? ?? ?? 2b d8 a1 ?? ?? ?? ?? 89 18 a1 ?? ?? ?? ?? 83 c0 04 a3 ?? ?? ?? ?? 33 c0 a3 17 00 01 10 a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13862,6 +14449,7 @@ rule Trojan_Win32_Qakbot_SAK_2147840183_0
         $x_1_1 = {8b 00 33 05 ?? ?? ?? ?? a3 3c 00 a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 48 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 01 10 a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13884,6 +14472,7 @@ rule Trojan_Win32_Qakbot_SAL_2147840184_0
         $x_1_2 = "Wind" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13913,6 +14502,7 @@ rule Trojan_Win32_Qakbot_RPO_2147840235_0
         $x_1_9 = "violetwise" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13935,6 +14525,7 @@ rule Trojan_Win32_Qakbot_SAN_2147840430_0
         $x_1_2 = "Wind" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13958,6 +14549,7 @@ rule Trojan_Win32_Qakbot_CNG_2147840491_0
         $x_1_3 = {8a 44 0d dc 04 09 88 44 0d c0 41 83 f9 1b 7c f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13981,6 +14573,7 @@ rule Trojan_Win32_Qakbot_SAQ_2147840526_0
         $x_1_3 = "UT_Sin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14003,6 +14596,7 @@ rule Trojan_Win32_Qakbot_SAR_2147840527_0
         $x_1_2 = {0f b6 08 66 ?? ?? 74 ?? 8b 45 ?? 0f b6 44 10 ?? 33 c8 3a c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14025,6 +14619,7 @@ rule Trojan_Win32_Qakbot_HE_2147840535_0
         $x_1_2 = "wind" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14047,6 +14642,7 @@ rule Trojan_Win32_Qakbot_PM_2147840594_0
         $x_1_2 = {8b 45 fc 0f b6 44 10 ?? 33 c8 [0-4] 8b 45 ?? 03 45 ?? 88 08 8b 45 ?? 40 89 45 ?? 8b 45 ?? 3b 45 ?? 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14073,6 +14669,7 @@ rule Trojan_Win32_Qakbot_MJ_2147840930_0
         $x_2_6 = "SZN12KCodecActionD0Ev" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14099,6 +14696,7 @@ rule Trojan_Win32_Qakbot_GEO_2147840993_0
         $x_1_6 = "SZN5QHashI7QStringP7QWidgetE13duplicateNodeEPN9QHashData4NodeEPv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14120,6 +14718,7 @@ rule Trojan_Win32_Qakbot_HF_2147841006_0
         $x_1_1 = {83 c0 04 a3 3f 00 01 10 a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 40 8b 15 ?? ?? ?? ?? 33 02 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 10 a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14141,6 +14740,7 @@ rule Trojan_Win32_Qakbot_HG_2147841014_0
         $x_1_1 = {0f b6 4c 05 ?? 8b 45 ?? 33 d2 66 3b ff 74 ?? bb ?? ?? ?? ?? 53 5e 66 3b f6 74 ?? 8b 4d ?? 03 48 ?? 89 4d ?? 66 3b d2 74 ?? f7 f6 0f b6 44 15 ?? 33 c8 e9 ?? ?? ?? ?? ff 75 ?? 8b 45 ?? ff 70 ?? 3a f6 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14162,6 +14762,7 @@ rule Trojan_Win32_Qakbot_BX_2147841075_0
         $x_2_1 = {8b 5d d8 03 5d b4 2b d8 6a 00 e8 [0-4] 03 d8 8b 45 ec 31 18 6a 00 e8 [0-4] 8b d8 8b 45 e8 83 c0 04 03 d8 6a 00 e8 [0-4] 2b d8 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 2b d8 89 5d e8 8b 45 ec 83 c0 04 89 45 ec 8b 45 e8 3b 45 e4 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14184,6 +14785,7 @@ rule Trojan_Win32_Qakbot_BY_2147841384_0
         $x_1_2 = {83 e8 01 8b 4d 14 83 d9 00 eb c5 40 89 45 f8 8b 45 10 66 3b db 74 e9 8a 09 88 08 8b 45 fc 66 3b c0 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14207,6 +14809,7 @@ rule Trojan_Win32_Qakbot_SAS_2147841449_0
         $x_1_3 = "Wind" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14237,6 +14840,7 @@ rule Trojan_Win32_Qakbot_CC_2147842107_0
         $x_1_10 = "LcmsxyY2XYZ@8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14267,6 +14871,7 @@ rule Trojan_Win32_Qakbot_CD_2147842244_0
         $x_1_10 = "Lswirl@Image@Magick@@QAEXN@Z" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14288,6 +14893,7 @@ rule Trojan_Win32_Qakbot_SAT_2147842445_0
         $x_1_1 = {01 10 a1 5c ?? ?? ?? 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? 6a ?? e8 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 33 02 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 10 a1 ?? ?? ?? ?? 83 c0 ?? a3 ?? ?? ?? ?? 33 c0 a3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14309,6 +14915,7 @@ rule Trojan_Win32_Qakbot_RDB_2147842631_0
         $x_2_1 = {8b d1 8b 4d fc 2b d7 8b c7 83 e0 7f 8a 04 18 32 04 0f 88 04 3a 47 83 ee 01}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14333,6 +14940,7 @@ rule Trojan_Win32_Qakbot_RDB_2147842631_1
         $x_1_4 = "kkcs11h_openssl_createSession" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14354,6 +14962,7 @@ rule Trojan_Win32_Qakbot_PO_2147842808_0
         $x_1_1 = {8b d3 89 46 ?? 8b 86 ?? ?? ?? ?? 33 06 01 46 ?? 8b 4e ?? 33 0e 81 e9 [0-4] c1 ea 08 09 4e ?? 8b 46 ?? 8b 4e ?? 88 14 01 8b 86 ?? ?? ?? ?? ff 46 ?? 05 ?? ?? ?? ?? 03 46 ?? 09 46 ?? 8b 56 ?? 8b 46 ?? 88 1c 02 ff 46 ?? 8b 46 ?? 2b 86 [0-4] 05 [0-4] 31 86 [0-4] 81 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14376,6 +14985,7 @@ rule Trojan_Win32_Qakbot_PP_2147842809_0
         $x_1_2 = "ZMDGyz104wqz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14397,6 +15007,7 @@ rule Trojan_Win32_Qakbot_PR_2147842891_0
         $x_1_1 = {33 d2 bb 04 00 00 00 53 5e f7 f6 0f b6 44 15 ?? 66 3b d2 33 c8 8b 45 ?? 88 4c 05 ?? e9 ?? ?? ?? ?? e9 ?? ?? ?? ?? 8b 40 ?? 8b 4d ?? 8d 44 01 ?? 66 3b ed 89 45 ?? bb d2 04 00 00 53 66 3b ed}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14418,6 +15029,7 @@ rule Trojan_Win32_Qakbot_SJN_2147842904_0
         $x_1_1 = {48 a3 c0 8d ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 01 10 a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? 6a ?? e8 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 33 02 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 10 a1 ?? ?? ?? ?? 83 c0 ?? a3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14439,6 +15051,7 @@ rule Trojan_Win32_Qakbot_SJM_2147842905_0
         $x_1_1 = {bb 10 00 00 00 03 e3 eb ?? f7 f6 8b 45 ?? 0f b6 44 10 ?? 66 3b c9 74 ?? 33 c8 8b 45 ?? 03 45 ?? e9 ?? ?? ?? ?? 0f b6 08 8b 45 ?? 33 d2 66 3b f6 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14460,6 +15073,7 @@ rule Trojan_Win32_Qakbot_PS_2147842944_0
         $x_1_1 = {8b 14 31 8b 0d [0-4] 33 15 [0-4] 89 14 0e 83 c6 04 8b 0d [0-4] 81 c1 [0-4] 0f af 48 ?? 89 48 ?? 8b 0d [0-6] 88 [0-4] 8b 0d [0-4] 8b 49 [0-4] 2b 0d [0-4] 83 e9 [0-4] 0f af 88 [0-4] 89 88 [0-4] 8b 0d [0-4] 81 f1 [0-4] 29 88 [0-4] 81 fe [0-4] 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14481,6 +15095,7 @@ rule Trojan_Win32_Qakbot_PU_2147843119_0
         $x_1_1 = {33 d2 bb 04 00 00 00 53 5e f7 f6 0f b6 44 ?? a8 66 3b c9 33 c8 8b 45 ?? 88 4c ?? ac 8b 45 ?? 40 89 45 ?? 83 7d ?? 04 8b 45 ?? 89 45 ?? 8b 45 ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14502,6 +15117,7 @@ rule Trojan_Win32_Qakbot_PV_2147843294_0
         $x_1_1 = {33 d2 66 3b ed bb 08 00 00 00 53 5e 3a f6 f7 f6 8b 45 ?? 0f b6 44 10 ?? 66 3b c0 33 c8 8b 45 ?? 03 45 ?? 88 08 8b 45 ?? 40 89 45 ?? 8b 45 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14528,6 +15144,7 @@ rule Trojan_Win32_Qakbot_CEB_2147843380_0
         $x_1_6 = "Cpgme_io_write" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14549,6 +15166,7 @@ rule Trojan_Win32_Qakbot_CF_2147843417_0
         $x_5_1 = {8b 45 f8 03 05 [0-4] 48 a3 [0-4] 6a 00 e8 [0-4] 8b d8 a1 [0-4] 8b 00 03 45 f8 03 d8 6a 00 e8 [0-4] 03 d8 a1 [0-4] 89 18 a1 [0-4] 03 05 [0-4] a3 [0-4] a1 [0-4] 8b 00 33 05 [0-4] a3 [0-4] a1 [0-4] 8b 15 [0-4] 89 10 8b 45 f8 83 c0 04 89 45 f8 33 c0 a3 [0-4] a1 [0-4] 83 c0 04 03 05 [0-4] a3 [0-4] 8b 45 f8 3b 05 [0-4] 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14570,6 +15188,7 @@ rule Trojan_Win32_Qakbot_RC_2147844189_0
         $x_1_1 = {33 c8 8b 45 ec 66 3b e4 74 0b 03 45 f0 0f b6 08 66 3b f6 74 e1 03 45 f0 88 08 e9 3f 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14591,6 +15210,7 @@ rule Trojan_Win32_Qakbot_PX_2147844558_0
         $x_1_1 = {33 d2 3a c0 bb 08 00 00 00 53 66 3b f6 5e f7 f6 66 3b c0 8b 45 ?? 0f b6 44 10 ?? 66 3b c0 33 c8 8b 45 ?? 3a db 03 45 ?? 88 08 8b 45 ?? 40 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14623,6 +15243,7 @@ rule Trojan_Win32_Qakbot_CH_2147844587_0
         $x_1_12 = "J_gmpn_bc_mulmod_bnm1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14655,6 +15276,7 @@ rule Trojan_Win32_Qakbot_CI_2147844746_0
         $x_1_12 = "Sexecvpe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14676,6 +15298,7 @@ rule Trojan_Win32_Qakbot_PY_2147844789_0
         $x_1_1 = {33 d2 3a e4 bb 08 00 00 00 53 3a db 5e f7 f6 66 3b c0 8b 45 ?? 0f b6 44 10 10 3a ff 33 c8 8b 45 ?? 3a e4 03 45 ?? 88 08 8b 45 ?? 40 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14709,6 +15332,7 @@ rule Trojan_Win32_Qakbot_CJ_2147844817_0
         $x_1_13 = "Nikn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14730,6 +15354,7 @@ rule Trojan_Win32_Qakbot_PZ_2147844912_0
         $x_1_1 = {33 d2 66 3b c0 bb 04 00 00 00 53 66 3b ed 5e f7 f6 66 3b db 0f b6 44 15 ?? 33 c8 3a ed 8b 45 ?? 88 4c 05 ?? 8b 45 ?? 40 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14754,6 +15379,7 @@ rule Trojan_Win32_Qakbot_CT_2147845234_0
         $x_1_4 = {8b 00 8b 00 66 3b c9 74 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14775,6 +15401,7 @@ rule Trojan_Win32_Qakbot_PT_2147845254_0
         $x_1_1 = {64 a1 30 00 00 00 89 45 08 8b 45 08 80 78 02 00 74 21 33 c0 ba 80 00 00 00 8b c8 80 b1 20 f8 09 00 09 41 3b ca 72 f4 80 b0 50 f0 09 00 aa 40 3b c2 72 f4 8b 4d 0c e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14797,6 +15424,7 @@ rule Trojan_Win32_Qakbot_PT_2147845254_1
         $x_1_2 = {8b d1 c7 45 [0-6] 66 c7 45 [0-6] 8a 44 15 ?? 34 ab 88 44 15 ?? 42 83 fa ?? 7c ?? 88 4d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14830,6 +15458,7 @@ rule Trojan_Win32_Qakbot_CL_2147845259_0
         $x_1_13 = "JRR_load_SSL_strings" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14851,6 +15480,7 @@ rule Trojan_Win32_Qakbot_SJO_2147845356_0
         $x_1_1 = {f7 f6 8b 45 ?? eb ?? e8 ?? ?? ?? ?? bb ?? ?? ?? ?? 66 3b c9 74 ?? 53 5e 66 3b f6 74 ?? 0f b6 44 10 ?? 33 c8 e9 ?? ?? ?? ?? 33 d2 bb ?? ?? ?? ?? 66}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14872,6 +15502,7 @@ rule Trojan_Win32_Qakbot_SJP_2147845435_0
         $x_1_1 = {40 30 8b 40 0c 66 3b c9 74 ?? 8b 40 ?? 8b 4d ?? eb ?? 83 ec ?? bb ?? ?? ?? ?? 66 3b c0 74 ?? 3b 48 ?? 72 ?? 8b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14904,6 +15535,7 @@ rule Trojan_Win32_Qakbot_CN_2147845618_0
         $x_1_12 = "ILLIsUpgradeAvailable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14925,6 +15557,7 @@ rule Trojan_Win32_Qakbot_HH_2147845639_0
         $x_10_1 = {33 18 89 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 10 2f 00 89 18 a1 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 8b d8 03 1d ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 03 d8 a1}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14947,6 +15580,7 @@ rule Trojan_Win32_Qakbot_HI_2147845713_0
         $x_1_2 = {bb 04 00 00 00 53 66 3b c0 74 ?? 8b 45 ?? 33 d2 66 3b ff 74 ?? 89 45 ?? bb ?? ?? ?? ?? eb ?? 8b 45 ?? 88 4c 05 ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14979,6 +15613,7 @@ rule Trojan_Win32_Qakbot_CO_2147845794_0
         $x_1_12 = "GG10" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15004,6 +15639,7 @@ rule Trojan_Win32_Qakbot_CP_2147845904_0
         $x_10_5 = "GG10" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15030,6 +15666,7 @@ rule Trojan_Win32_Qakbot_CQ_2147846108_0
         $x_10_6 = "Time" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15059,6 +15696,7 @@ rule Trojan_Win32_Qakbot_CR_2147846611_0
         $x_10_9 = "print" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15086,6 +15724,7 @@ rule Trojan_Win32_Qakbot_CREQ_2147846643_0
         $x_10_7 = "print" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15108,6 +15747,7 @@ rule Trojan_Win32_Qakbot_HJ_2147846857_0
         $x_1_2 = {33 c8 8b 45 ?? e9 ?? ?? ?? ?? 0f b6 4c 05 ?? 8b 45 ?? 66 3b e4 74 ?? 8d 44 01 ?? 89 45 ?? e9 ?? ?? ?? ?? 8b 40 ?? 8b 4d ?? eb ?? 40 89 45 ?? e9 ?? ?? ?? ?? 89 45 ?? 8b 45 ?? 66 3b ed 74 ?? 33 d2 bb 04 00 00 00 3a d2 74 ?? a5 bb ?? ?? ?? ?? e9 ?? ?? ?? ?? f7 f6 0f b6 44 15 ?? 3a c9 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -15130,6 +15770,7 @@ rule Trojan_Win32_Qakbot_NIV_2147846873_0
         $x_1_2 = "print" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15157,6 +15798,7 @@ rule Trojan_Win32_Qakbot_PAF_2147846942_0
         $x_10_7 = "print" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15179,6 +15821,7 @@ rule Trojan_Win32_Qakbot_PAG_2147846968_0
         $x_1_2 = "print" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15203,6 +15846,7 @@ rule Trojan_Win32_Qakbot_HK_2147847044_0
         $x_1_4 = "UrccB70P" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15230,6 +15874,7 @@ rule Trojan_Win32_Qakbot_CREL_2147847128_0
         $x_10_7 = "Test" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15251,6 +15896,7 @@ rule Trojan_Win32_Qakbot_HL_2147847173_0
         $x_1_1 = {33 c8 8b 45 ?? 66 3b d2 74 ?? 8b 45 ?? 0f b6 44 10 ?? 66 3b db 74 ?? 66 89 45 ?? bb ?? ?? ?? ?? 66 3b ff 74 ?? 66 89 45 ?? bb ?? ?? ?? ?? 3a c0 74 ?? 66 89 45 ?? bb ?? ?? ?? ?? 66 3b c9 74 ?? 53 58 3a ff 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15273,6 +15919,7 @@ rule Trojan_Win32_Qakbot_PAH_2147847343_0
         $x_1_2 = "vips" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15294,6 +15941,7 @@ rule Trojan_Win32_Qakbot_HM_2147847505_0
         $x_1_1 = {33 c8 8b 45 ?? eb ?? 55 8b ec eb ?? 8b 45 ?? 0f b6 04 10 eb ?? 51 bb ?? ?? ?? ?? eb ?? 8b 45 ?? 03 45 ?? eb ?? 40 89 45 ?? eb ?? 99 f7 7d ?? eb ?? 03 45 ?? 88 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15315,6 +15963,7 @@ rule Trojan_Win32_Qakbot_PAJ_2147847857_0
         $x_1_1 = {99 f7 7d 14 8b 45 ?? 0f b6 04 10 33 c8 8b 45 ?? 03 45 ?? 88 08 8b 45 ?? 40 89 45 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15336,6 +15985,7 @@ rule Trojan_Win32_Qakbot_HN_2147848488_0
         $x_1_1 = {0f b6 44 10 ?? 3a ff 74 ?? 03 45 ?? 88 08 e9 ?? ?? ?? ?? e9 ?? ?? ?? ?? 5e f7 f6 66 3b c9 74 ?? 83 c3 ?? 53 66 3b c9 74 ?? 21 5d ?? 8d 45 ?? eb ?? 53 58 3a e4 74 ?? c1 e0 ?? 8b 44 05 ?? 3a ed 74 ?? 33 c8 8b 45 ?? 66 3b c9 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15365,6 +16015,7 @@ rule Trojan_Win32_Qakbot_PAL_2147849038_0
         $x_1_9 = "ilc_entry_license__3_0_0f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15386,6 +16037,7 @@ rule Trojan_Win32_Qakbot_PN_2147849703_0
         $x_1_1 = {8b 45 e4 bb 04 00 00 00 eb 2c 03 c1 89 45 f0 eb 37 03 41 18 89 45 f4 eb e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15421,6 +16073,7 @@ rule Trojan_Win32_Qakbot_MBFK_2147850121_0
         $x_1_15 = "must" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15467,6 +16120,7 @@ rule Trojan_Win32_Qakbot_VL_2147892639_0
         $x_1_1 = {2b 46 0c 01 86 28 01 00 00 8b 86 24 01 00 00 35 9d 88 f2 ff c1 ea 08 01 86 2c 01 00 00 8b 86 b8 00 00 00 88 14 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15489,6 +16143,7 @@ rule Trojan_Win32_Qakbot_VIS_2147901381_0
         $x_1_2 = "X555" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15512,6 +16167,7 @@ rule Trojan_Win32_Qakbot_SE_2147902111_0
         $x_1_3 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -15535,6 +16191,7 @@ rule Trojan_Win32_Qakbot_SAO_2147902115_0
         $x_1_3 = "toxicologic" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15556,6 +16213,7 @@ rule Trojan_Win32_Qakbot_EAXX_2147935735_0
         $x_5_1 = {03 75 f4 03 c6 03 45 f4 8b 0d ?? ?? ?? ?? 03 4d f4 03 4d f4 03 4d f4 8b 15 ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? 8a 04 06 88 04 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

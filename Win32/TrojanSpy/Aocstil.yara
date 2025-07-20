@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Aocstil_A_2147692424_0
         $x_1_8 = {8a d3 02 d2 8a c7 c0 e8 04 02 d2 24 03 02 c2 8a 55 fa 8a ca c0 e9 02 8a df c0 e2 06 02 55 fb 80 e1 0f c0 e3 04 32 cb 88 04 37 88 4c 37 01 88 54 37 02 83 c6 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule VirTool_Win64_GoclpC2_A_2147944839_0
         $x_1_7 = ".captureScreenshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

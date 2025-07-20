@@ -18,6 +18,7 @@ rule VirTool_WinNT_Yellsob_A_2147608590_0
         $x_1_4 = {6f 62 6a 66 72 65 5c 69 33 38 36 5c 4d 61 79 61 53 59 53 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

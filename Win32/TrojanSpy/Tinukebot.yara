@@ -23,6 +23,7 @@ rule TrojanSpy_Win32_Tinukebot_2147725031_0
         $x_1_7 = "--no-sandbox --allow-no-sandbox-job --disable-3d-apis --disable-gpu --disable-d3d11 --user-data-dir=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

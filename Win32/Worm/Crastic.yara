@@ -19,6 +19,7 @@ rule Worm_Win32_Crastic_A_2147688028_0
         $x_1_4 = {6a 27 53 ff 15 ?? ?? ?? ?? 3b c3 75 2c 8d 85 ?? ?? ?? ?? 8d 50 01 8a 08 40 3a cb 75 f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

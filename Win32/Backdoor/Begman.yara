@@ -24,6 +24,7 @@ rule Backdoor_Win32_Begman_A_2147643747_0
         $x_2_10 = {1f 00 00 00 5b 61 75 74 6f 72 75 6e 5d 0d 0a 55 73 65 41 75 74 6f 50 6c 61 79 3d 31 0d 0a 6f 70 65 6e 3d 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule Backdoor_Win32_Begman_B_2147645654_0
         $x_2_4 = "expand -r " ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Backdoor_Win32_Begman_C_2147651232_0
         $x_1_4 = "wusa.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Backdoor_Win32_Begman_D_2147654667_0
         $x_1_3 = {56 42 4f 58 [0-15] 51 45 4d 55 [0-10] 55 8b ec 6a 00 6a 00 53 56}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

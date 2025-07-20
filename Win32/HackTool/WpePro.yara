@@ -19,6 +19,7 @@ rule HackTool_Win32_WpePro_2147627942_0
         $x_1_5 = "WPE-C1467211-7C89-49c5-801A-1D048E4014C4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

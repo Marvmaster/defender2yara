@@ -18,6 +18,7 @@ rule VirTool_Win64_Shelentesz_A_2147912784_0
         $x_1_3 = {8b 94 24 a0 00 00 00 48 8b c8 [0-19] 48 8b c8 ?? ?? ?? ?? ?? ?? 44 8b 44 24 34 33 d2 b9 01 00 00 00 ?? ?? ?? ?? ?? ?? 48 89 44 24 50 48 83 7c 24 50 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

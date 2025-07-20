@@ -17,6 +17,7 @@ rule Ransom_MSIL_Crysis_AJQA_2147938272_0
         $x_2_2 = {02 8e b7 17 d6 8d 5a 00 00 01 0c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

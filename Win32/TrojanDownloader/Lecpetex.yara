@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Lecpetex_B_2147688323_0
         $x_1_3 = "176.9.11.216" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

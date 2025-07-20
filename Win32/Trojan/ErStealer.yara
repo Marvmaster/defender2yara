@@ -18,6 +18,7 @@ rule Trojan_Win32_ErStealer_PA_2147838298_0
         $x_1_3 = {8b c8 8b 1e 83 e1 ?? 8b 7e ?? 33 d8 8b 76 ?? 33 f8 33 f0 d3 cf d3 ce d3 cb 3b fe}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -51,6 +51,7 @@ rule Trojan_Win32_RedLeaves_C_2147730368_0
         $x_3_36 = {2e 3f 41 56 54 63 70 43 6f 6d 6d 40 40 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((15 of ($x_1_*))) or
             ((1 of ($x_3_*) and 12 of ($x_1_*))) or
@@ -89,6 +90,7 @@ rule Trojan_Win32_RedLeaves_E_2147730369_0
         $x_1_4 = {57 8b 56 10 83 fa ff 0f 84 9f 00 00 00 8b 7e 08 8d 8e 18 20 00 00 8b c7 2b c6 83 e8 18 c1 f8 03 c1 e0 0c 03 c2 3b f9 89 45 fc 73 3a 8b 0f 8b 5d 08 3b cb 7c 1a 39 5f 04 76 15 53 51 50 e8 ?? ?? ?? ?? 83 c4 0c 85 c0 75 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

@@ -18,6 +18,7 @@ rule Trojan_MSIL_BlackGuard_RDA_2147839392_0
         $x_1_3 = "BDIC.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_BlackGuard_ABG_2147847157_0
         $x_1_3 = "ekia" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

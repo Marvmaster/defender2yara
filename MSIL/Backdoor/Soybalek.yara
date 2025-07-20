@@ -19,6 +19,7 @@ rule Backdoor_MSIL_Soybalek_A_2147707012_0
         $x_1_4 = {02 72 01 00 00 70 7d 02 00 00 04 02 72 ?? 00 00 70 7d 03 00 00 04 02 72 ?? 00 00 70 7d 04 00 00 04 02 [0-12] 03 7d 01 00 00 04 02 7b 01 00 00 04 02 fe 06 ?? 00 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -46,6 +47,7 @@ rule Backdoor_MSIL_Soybalek_2147707013_0
         $x_2_3 = {5c 53 79 62 65 72 53 70 61 63 65 5c 44 65 73 6b 74 6f 70 5c 6f 77 61 5c 48 74 74 70 73 45 78 74 73 5c 48 74 74 70 73 45 78 74 73 5c 48 74 74 70 73 45 78 74 73 5c 6f 62 6a 5c 52 65 6c 65 61 73 65 5c 4f 77 61 41 75 74 68 2e 70 64 62 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

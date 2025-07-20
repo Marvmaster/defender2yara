@@ -19,6 +19,7 @@ rule Trojan_Win32_Beado_A_2147681417_0
         $x_1_5 = {3c 00 21 00 2d 00 2d 00 ?? ?? ?? ?? ?? ?? ?? ?? 69 00 69 00 69 00 69 00 69 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

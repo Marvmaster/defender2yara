@@ -16,6 +16,7 @@ rule VirTool_Win64_Rusol_A_2147930829_0
         $x_1_2 = "NTLMsrc\\soliloquy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

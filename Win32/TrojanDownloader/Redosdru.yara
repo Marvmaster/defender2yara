@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Redosdru_C_2147695433_0
         $x_1_4 = {c6 45 e0 4d c6 45 e1 6f c6 45 e2 7a 88 55 e3 88 45 e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Redosdru_D_2147709446_0
         $x_1_5 = {ff ff 4d c6 85 ?? ?? ff ff 6f c6 85 ?? ?? ff ff 7a c6 85 ?? ?? ff ff 69 c6 85 ?? ?? ff ff 6c c6 85 ?? ?? ff ff 6c c6 85 ?? ?? ff ff 61 c6 85 ?? ?? ff ff 2f c6 85 ?? ?? ff ff 34 c6 85 ?? ?? ff ff 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -70,6 +72,7 @@ rule TrojanDownloader_Win32_Redosdru_F_2147712299_0
         $x_1_2 = {c6 44 24 20 4d c6 44 24 21 6f c6 44 24 22 7a 88 54 24 23 88 4c 24 26 c6 44 24 27 2f c6 44 24 28 34}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule TrojanDownloader_Win32_Redosdru_F_2147712299_1
         $x_1_4 = {2f 53 79 73 74 65 6d ?? 2e 64 6c 6c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule TrojanDownloader_Win32_Redosdru_G_2147714344_0
         $x_1_5 = {83 c4 08 3b c3 75 39 68 ?? ?? 40 00 ff 15 ?? ?? 40 00 68 ?? ?? 40 00 68 ?? ?? 40 00 e8 ?? ?? ff ff 83 c4 08 85 c0 74 08 c7 44 24 10 14 00 00 00 8b 4c 24 10 51 ff 15 ?? ?? 40 00 e9 ?? ?? ff ff 68 ?? ?? 40 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -146,6 +151,7 @@ rule TrojanDownloader_Win32_Redosdru_H_2147716535_0
         $x_1_7 = "\\ServerDat\\Release\\ServerDat.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -174,6 +180,7 @@ rule TrojanDownloader_Win32_Redosdru_I_2147717911_0
         $x_1_4 = {53 c6 44 24 ?? 53 c6 44 24 ?? 53 c6 44 24 ?? 53 c6 44 24 ?? 53 c6 44 24 ?? ?? c6 44 24 ?? ?? c6 44 24 ?? ?? c6 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +205,7 @@ rule TrojanDownloader_Win32_Redosdru_J_2147718753_0
         $x_1_4 = {79 08 4b 81 cb ?? ?? ?? ?? 43 8a 14 0b 30 10 8b 45 fc 40 3b 45 0c 89 45 fc 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +230,7 @@ rule TrojanDownloader_Win32_Redosdru_K_2147718951_0
         $x_1_4 = "C:\\Program Files\\AppPatch\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -247,6 +256,7 @@ rule TrojanDownloader_Win32_Redosdru_L_2147719931_0
         $x_1_2 = {4b c6 44 24 ?? 6f c6 44 24 ?? 74 c6 44 24 ?? 68 c6 44 24 ?? 65 c6 44 24 ?? 72 c6 44 24 ?? 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -271,6 +281,7 @@ rule TrojanDownloader_Win32_Redosdru_M_2147720064_0
         $x_1_4 = {6a 04 68 00 30 00 00 8b f8 57 53 ff 15 ?? ?? ?? 00 53 8b e8 8d 44 24 ?? 50 57 55 56 ff 15 ?? ?? ?? 00 56 ff 15 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -299,6 +310,7 @@ rule TrojanDownloader_Win32_Redosdru_N_2147721407_0
         $x_1_4 = {4b c6 44 24 ?? 6f c6 44 24 ?? 74 c6 44 24 ?? 68 c6 44 24 ?? 65 c6 44 24 ?? 72 c6 44 24 ?? 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -323,6 +335,7 @@ rule TrojanDownloader_Win32_Redosdru_O_2147722489_0
         $x_1_4 = "DllFuUpgradrs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -348,6 +361,7 @@ rule TrojanDownloader_Win32_Redosdru_Q_2147724779_0
         $x_1_5 = {50 c6 44 24 ?? 44 c6 44 24 ?? 6c c6 44 24 ?? 6c c6 44 24 ?? 46 c6 44 24 ?? 75 c6 44 24 ?? 55 c6 44 24 ?? 70 c6 44 24 ?? 67 c6 44 24 ?? 72 c6 44 24 ?? 61 c6 44 24 ?? 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -378,6 +392,7 @@ rule TrojanDownloader_Win32_Redosdru_R_2147725086_0
         $x_1_6 = {00 47 65 74 6f 6e 67 35 33 38 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -402,6 +417,7 @@ rule TrojanDownloader_Win32_Redosdru_S_2147725230_0
         $x_1_4 = {eb b0 c6 45 ?? 47 c6 45 ?? 65 c6 45 ?? 74 c6 45 ?? 6f c6 45 ?? 6e c6 45 ?? 67 c6 45 ?? 35 c6 45 ?? 33 c6 45 ?? 38 c6 45 ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -425,6 +441,7 @@ rule TrojanDownloader_Win32_Redosdru_Z_2147731964_0
         $x_1_3 = {8b 4c 24 0c 8a 14 08 80 c2 ?? 88 14 08 8b 4c 24 0c 8a 14 08 80 f2 ?? 88 14 08 40 3b c6 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -447,6 +464,7 @@ rule TrojanDownloader_Win32_Redosdru_SIB_2147787619_0
         $x_1_2 = {8b 6c 24 18 41 81 e1 ?? ?? ?? ?? 79 ?? 49 81 c9 ?? ?? ?? ?? 41 8a 14 01 8b da 81 e3 ?? ?? ?? ?? 03 f3 81 e6 ?? ?? ?? ?? 79 ?? 4e 81 ce ?? ?? ?? ?? 46 8a 1c 06 88 54 24 18 88 1c 01 8b 5c 24 18 88 14 06 33 d2 8a 14 01 81 e3 ?? ?? ?? ?? 03 d3 81 e2 ?? ?? ?? ?? 79 ?? 4a 81 ca ?? ?? ?? ?? 42 8a 14 02 8a 1c 2f 32 da 8b 54 24 1c 88 1c 2f 47 3b fa 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

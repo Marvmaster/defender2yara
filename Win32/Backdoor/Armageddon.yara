@@ -135,6 +135,7 @@ rule Backdoor_Win32_Armageddon_C_2147576984_0
         $x_1_121 = "Your Girlfriend is a wallowing" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (80 of ($x*))
 }
 

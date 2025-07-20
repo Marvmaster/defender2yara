@@ -19,6 +19,7 @@ rule Trojan_Win32_Revil_SE_2147763323_0
         $x_1_4 = {22 73 75 62 22 3a 22 [0-8] 22 2c 22 64 62 67 22 3a [0-8] 2c 22 65 74 22 3a [0-2] 2c 22 77 69 70 65 22 3a [0-5] 2c 22 77 68 74 22 3a 7b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +109,7 @@ rule Trojan_Win32_Revil_SJ_2147763928_0
         $x_1_8 = "\"dmn\":" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

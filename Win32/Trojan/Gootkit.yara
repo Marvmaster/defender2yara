@@ -18,6 +18,7 @@ rule Trojan_Win32_Gootkit_KA_2147743239_0
         $x_1_3 = "RunPreSetupCommands" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule Trojan_Win32_Gootkit_DSK_2147755479_0
         $x_2_1 = {8b 55 fc 81 ea d0 07 00 00 89 55 fc c1 4d 08 09 8b 45 fc 2d 00 10 00 00 89 45 fc 8b 4d 08 33 4d 0c 89 4d 08 8b 55 fc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

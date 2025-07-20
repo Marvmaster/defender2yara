@@ -17,6 +17,7 @@ rule Worm_Win32_Faltbang_A_2147625342_0
         $x_1_3 = "cmd /c lsnss.exe -S %s -U sa -P %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

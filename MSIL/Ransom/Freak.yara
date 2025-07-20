@@ -20,6 +20,7 @@ rule Ransom_MSIL_Freak_MK_2147792894_0
         $x_1_5 = "is my computer damaged?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

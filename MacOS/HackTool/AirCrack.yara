@@ -21,6 +21,7 @@ rule HackTool_MacOS_AirCrack_C_2147748054_0
         $x_1_6 = "Attack failed. Possible reasons:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (5 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule HackTool_MacOS_AirCrack_A_2147816675_0
         $x_1_6 = "setKorekAttack:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 

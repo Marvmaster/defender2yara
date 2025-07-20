@@ -19,6 +19,7 @@ rule PWS_Win32_Stimilina_A_2147694882_0
         $x_1_5 = "/half_life_3/index.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule PWS_Win32_Stimilina_B_2147695034_0
         $x_8_7 = "\\Steam2.exe" ascii //weight: 8
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule PWS_Win32_Stimilina_C_2147708984_0
         $x_1_3 = {b8 44 65 00 00 66 89 46 ?? b8 74 6f 00 00 66 89 46 ?? b8 75 72 00 00 66 89 46 ?? b8 73 21 00 00 66 89 46}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule PWS_Win32_Stimilina_D_2147722554_0
         $x_1_8 = "dsfsd4fs4df65sd656" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule PWS_Win32_Stimilina_E_2147728120_0
         $x_1_5 = "\\wallet.dat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +152,7 @@ rule PWS_Win32_Stimilina_F_2147730747_0
         $x_1_6 = "mbhd.spvchain" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -26,6 +26,7 @@ rule TrojanDownloader_Win32_Qulkonwi_A_2147686374_0
         $x_1_12 = "CA6A8B518DF5160E37AE25DE14B123C463E007042DDD1873EA6E9F41F5" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -55,6 +56,7 @@ rule TrojanDownloader_Win32_Qulkonwi_B_2147687576_0
         $x_1_6 = "FD1ED91FC80944E21B097DB164E9698CB81E" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule TrojanDownloader_Win32_Qulkonwi_F_2147719130_0
         $x_1_2 = {6a 01 6a 00 6a 00 8d 8d ?? ?? ?? ff ba ?? ?? ?? 00 b8 ?? ?? ?? 00 e8 ?? ?? ?? ff 8b 85 ?? ?? ?? ff e8 ?? ?? ?? ff 50 6a 00 8b c3 e8 ?? ?? ?? ff 50 e8 ?? ?? ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

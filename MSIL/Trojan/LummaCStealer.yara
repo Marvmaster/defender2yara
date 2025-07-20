@@ -20,6 +20,7 @@ rule Trojan_MSIL_LummaCStealer_CXFW_2147850269_0
         $x_1_5 = "QNEYZkC5JxDGjlrAYwS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_LummaCStealer_AAKA_2147852867_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

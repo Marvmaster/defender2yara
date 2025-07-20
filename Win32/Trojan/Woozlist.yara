@@ -22,6 +22,7 @@ rule Trojan_Win32_Woozlist_A_2147694147_0
         $x_1_8 = "h.bbyyjy.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_Woozlist_B_2147705499_0
         $x_1_6 = "AF6AD80AA4244A59AFB3D83ECF5173CC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_MSIL_Inject_SRPX_2147836806_0
         $x_4_1 = {07 08 07 08 93 0d 09 20 ff 00 00 00 5f 06 25 17 58 0a 61 1e 62 09 1e 63 06 25 17 58 0a 61 d2 60 d1 9d 18 2b b4 08 17 58 0c 19 2b ad 2b ca 07 73 3c 00 00 0a 28 ?? ?? ?? 0a}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_Inject_NEAS_2147836974_0
         $x_5_2 = "APCInject.exe" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

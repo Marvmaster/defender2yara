@@ -21,6 +21,7 @@ rule Ransom_Win32_Lolkek_PA_2147758756_0
         $x_1_6 = "All your files, documents, photos, databases and other important files are encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

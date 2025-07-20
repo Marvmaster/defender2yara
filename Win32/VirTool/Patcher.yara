@@ -16,6 +16,7 @@ rule VirTool_Win32_Patcher_C_2147642855_0
         $x_1_2 = {8b 42 f6 8b 5a fa 8a 52 fe 31 c9 30 10 40 41 31 ca 39 d9 76 f6 59 58 8b 50 ea 89 11 8b 50 ee 89 51 04 58 9d ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

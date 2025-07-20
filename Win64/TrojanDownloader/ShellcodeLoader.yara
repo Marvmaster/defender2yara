@@ -20,6 +20,7 @@ rule TrojanDownloader_Win64_ShellcodeLoader_RP_2147908421_0
         $x_1_5 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win64_ShellcodeLoader_RP_2147908421_1
         $x_1_4 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

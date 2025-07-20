@@ -19,6 +19,7 @@ rule Trojan_MacOS_Gmera_A_2147745837_0
         $x_1_4 = "Developer ID Application: Nikolay Shmatko (57LR7SY7LF)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MacOS_Gmera_B_2147756815_0
         $x_1_4 = "Developer ID Application: Andrey Novoselov (M8WVDT659T)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_MacOS_Gmera_C_2147760170_0
         $x_1_4 = "A265HSB92F" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

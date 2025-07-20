@@ -18,6 +18,7 @@ rule TrojanSpy_MSIL_Tedy_ATY_2147847987_0
         $x_1_3 = "GetKeys" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

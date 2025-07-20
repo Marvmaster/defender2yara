@@ -20,6 +20,7 @@ rule Trojan_Win32_TinyNuke_AD_2147832763_0
         $x_1_5 = "CurrentStake" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_TinyNuke_MA_2147842171_0
         $x_1_5 = "QueryPerformanceCounter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_TinyNuke_RDA_2147898724_0
         $x_1_4 = "shell_TrayWnd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

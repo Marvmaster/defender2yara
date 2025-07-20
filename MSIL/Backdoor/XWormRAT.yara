@@ -20,6 +20,7 @@ rule Backdoor_MSIL_XWormRAT_B_2147849974_0
         $x_1_5 = "Confuser.Core" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_MSIL_XWormRAT_C_2147891893_0
         $x_1_3 = "set_Expect100Continue" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Backdoor_MSIL_XWormRAT_D_2147894577_0
         $x_1_2 = "CheckRemoteDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Backdoor_MSIL_XWormRAT_F_2147898631_0
         $x_1_2 = "CompressShell" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Backdoor_MSIL_XWormRAT_G_2147898632_0
         $x_2_2 = {25 26 14 14 14 17 28}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Backdoor_MSIL_XWormRAT_H_2147898782_0
         $x_2_2 = {20 b8 0b 00 00 20 10 27 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Backdoor_MSIL_XWormRAT_SP_2147899641_0
         $x_4_1 = {73 0b 00 00 06 13 05 73 ?? ?? ?? 0a 13 06 11 06 72 ?? ?? ?? 70 6f ?? ?? ?? 0a 13 07 11 04 14 18 8d ?? ?? ?? 01 13 0a 11 0a 16 72 ?? ?? ?? 70 a2 11 0a 17 11 07 a2 11 0a 6f ?? ?? ?? 0a 26 11 05 13 09 de 3f}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +180,7 @@ rule Backdoor_MSIL_XWormRAT_I_2147900131_0
         $x_2_1 = {00 00 04 13 14 7e ?? 00 00 04 13 0b 7e ?? 00 00 04 20 e8 03 00 00 d8 1f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +204,7 @@ rule Backdoor_MSIL_XWormRAT_HJAA_2147904865_0
         $x_2_3 = "Gw5rVSFJxc+t+F2aCe4P8g==" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +228,7 @@ rule Backdoor_MSIL_XWormRAT_J_2147904895_0
         $x_2_3 = {07 6c 23 00 00 00 00 00 00 d0 41 5b 13 04 12 04 28}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -244,6 +254,7 @@ rule Backdoor_MSIL_XWormRAT_K_2147904908_0
         $x_2_5 = "HKEY_CURRENT_USER\\SOFTWARE\\XWorm" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

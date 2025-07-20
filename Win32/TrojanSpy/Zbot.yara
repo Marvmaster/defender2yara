@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Zbot_MA_2147815339_0
         $x_1_1 = {b3 50 fc 44 8b 85 ?? ?? ?? ?? ed 3c 3a 4f ad 33 99 ?? ?? ?? ?? 0c 00 aa 00 60 d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

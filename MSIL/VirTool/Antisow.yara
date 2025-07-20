@@ -19,6 +19,7 @@ rule VirTool_MSIL_Antisow_A_2147692121_0
         $x_1_5 = "\":ZONE.identifier & exit" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule VirTool_MSIL_Antisow_A_2147692121_1
         $x_1_12 = "-prockill" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

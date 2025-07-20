@@ -22,6 +22,7 @@ rule TrojanDownloader_MSIL_DCRat_B_2147824434_0
         $x_1_7 = "RijndaelManaged" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule TrojanDownloader_MSIL_DCRat_F_2147830887_0
         $x_1_4 = "set_FileName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule TrojanDownloader_MSIL_DCRat_H_2147833623_0
         $x_1_4 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +110,7 @@ rule TrojanDownloader_MSIL_DCRat_G_2147844626_0
         $x_2_17 = "FMAdABhAHIAdAAtAFAAcgBvAGMAZQBzAHMAIAAtAEYAaQBsAGUAUABhAHQAaA" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +134,7 @@ rule TrojanDownloader_MSIL_DCRat_O_2147849330_0
         $x_1_3 = "SpecialFolder" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +159,7 @@ rule TrojanDownloader_MSIL_DCRat_ABV_2147896630_0
         $x_1_4 = "Task27Loader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +181,7 @@ rule TrojanDownloader_MSIL_DCRat_Q_2147900472_0
         $x_2_1 = {2b 0a de 03 26 de ca 06 28 ?? 00 00 0a 6f ?? 00 00 0a 28 ?? 00 00 2b 6f ?? 00 00 0a 28 ?? 00 00 2b 14 14 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +204,7 @@ rule TrojanDownloader_MSIL_DCRat_R_2147900524_0
         $x_2_2 = {06 07 17 5b 7e ?? 00 00 0a a4 ?? 00 00 01 07 17 58 0b 07 02 8e 69}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +227,7 @@ rule TrojanDownloader_MSIL_DCRat_U_2147917669_0
         $x_4_2 = {06 08 02 08 91 07 08 07 8e 69 5d 93 61 d2 9c 00 08 17 58 0c 08 02 8e 69 fe 04 0d 09}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -240,6 +249,7 @@ rule TrojanDownloader_MSIL_DCRat_X_2147918467_0
         $x_2_1 = {06 19 9a 74 ?? 00 00 02 07 1b 9a 28 ?? 00 00 0a 07 18 9a 28 ?? ?? 00 0a 07 1c 9a 14 72 ?? ?? 00 70 18 8d ?? 00 00 01 25 16 72 ?? ?? 00 70 a2 25 17 7e ?? ?? 00 0a a2 14 14 14 28 ?? 00 00 0a 14 72 ?? ?? 00 70 18 8d ?? 00 00 01 25 16 72 ?? ?? 00 70 a2 25 17 7e ?? ?? 00 0a a2 14 14 14 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -261,6 +271,7 @@ rule TrojanDownloader_MSIL_DCRat_MG_2147922780_0
         $x_1_1 = {28 25 00 00 06 72 01 00 00 70 6f 08 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

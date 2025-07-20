@@ -18,6 +18,7 @@ rule Ransom_Win32_Crenag_ARG_2147759912_0
         $x_1_3 = "CryptoCymulate_Encrypted.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

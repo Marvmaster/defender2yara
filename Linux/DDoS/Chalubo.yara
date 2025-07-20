@@ -19,6 +19,7 @@ rule DDoS_Linux_Chalubo_A_2147763917_0
         $x_1_4 = "/tmp/tmpnam_XXXXXX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule DDoS_Linux_Chalubo_DS_2147809148_0
         $x_1_8 = "easy_attack_syn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Backdoor_MSIL_AsyncRat_A_2147794210_0
         $x_1_5 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Backdoor_MSIL_AsyncRat_PA7_2147819287_0
         $x_1_4 = "CarRentalSystem\\obj\\Debug\\Dash.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

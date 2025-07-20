@@ -18,6 +18,7 @@ rule Trojan_MSIL_Delhost_A_2147731184_0
         $x_1_4 = "Done. Deleted {0} files and {1} folders in {2}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

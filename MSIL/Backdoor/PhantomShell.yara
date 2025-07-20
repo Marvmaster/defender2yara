@@ -18,6 +18,7 @@ rule Backdoor_MSIL_PhantomShell_B_2147848178_0
         $x_1_4 = {4d 4f 56 45 69 74 2e 44 4d 5a 2e 43 6f 72 65 2e 44 61 74 61 01 09 61 2d 7a 41 2d 5a 30 2d 39 01 00 01 09 61 2d 7a 41 2d 5a 30 2d 39}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

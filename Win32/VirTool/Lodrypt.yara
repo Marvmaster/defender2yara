@@ -18,6 +18,7 @@ rule VirTool_Win32_Lodrypt_A_2147610111_0
         $x_1_3 = {52 54 5f 52 43 44 41 54 41 00 00 00 43 4f 4e 54 45 4e 54 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

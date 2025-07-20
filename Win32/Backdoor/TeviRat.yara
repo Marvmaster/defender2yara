@@ -17,6 +17,7 @@ rule Backdoor_Win32_TeviRat_GMD_2147853405_0
         $x_10_2 = {83 c4 14 48 89 35 a4 10 27 01 5f 5e a3 a0 10 27 01}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_Win32_TeviRat_HNA_2147910586_0
         $x_1_6 = {7a 25 63 25 63 25 63 25 63 25 63 25 63 2e 75 61 [0-64] 48 6f 73 74 3a 20 25 73 0d 0a 0d 0a 00 00 00 00 [0-32] 63 00 00 00 63 6f 6e 6e 65 63 74 00 64 69 73 63 6f 6e 6e 65 63 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Backdoor_Win32_TeviRat_HNB_2147910595_0
         $x_1_2 = {03 01 8b 55 08 03 c2 8b 55 f8 01 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

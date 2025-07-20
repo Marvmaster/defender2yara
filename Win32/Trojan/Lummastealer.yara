@@ -19,6 +19,7 @@ rule Trojan_Win32_Lummastealer_MBY_2147940965_0
         $x_1_4 = {e9 0a 81 c9 ?? ?? ?? ?? 81 e2 ?? ?? ?? ?? 81 ca ?? ?? ?? ?? 66 89 56 0c 31 c0 40 89 ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

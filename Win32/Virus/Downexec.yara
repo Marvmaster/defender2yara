@@ -18,6 +18,7 @@ rule Virus_Win32_Downexec_A_2147627684_0
         $x_1_3 = {83 c0 01 81 38 8b ff 55 8b 74 05 83 c0 01 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

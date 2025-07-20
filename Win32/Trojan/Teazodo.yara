@@ -21,6 +21,7 @@ rule Trojan_Win32_Teazodo_A_2147637575_0
         $x_1_6 = ":\\dev\\t0d0\\lab\\downloader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

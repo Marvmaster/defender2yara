@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Kitte_A_2147678814_0
         $x_1_4 = {26 6f 73 3d 00 00 00 00 26 69 65 76 65 72 3d 00 6d 61 63 3d 00 00 00 00 25 30 32 58 3a 25 30 32 58 3a 25 30 32 58 3a 25 30 32 58 3a 25 30 32 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

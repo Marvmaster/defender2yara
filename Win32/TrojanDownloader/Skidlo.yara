@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Skidlo_A_2147650501_0
         $x_1_2 = {ff ff 02 00 01 00 04 00 c7 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Skidlo_B_2147654726_0
         $x_1_4 = {e8 00 00 00 00 5d 81 ed ?? ?? ?? ?? bb c0 e6 0a b3 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule TrojanDownloader_Win32_Skidlo_D_2147708610_0
         $x_1_3 = {ac 32 c2 42 aa e2 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_Win32_Ophionlock_A_2147690652_0
         $x_1_5 = {2e 70 68 70 3f 68 77 69 64 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Dyloader_A_2147718592_0
         $x_1_2 = {66 8b 0c 46 8d 95 ?? ?? ff ff 83 f1 08 88 8c 05 ?? ?? ff ff 40 83 f8 08 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Dyloader_B_2147728121_0
         $x_1_3 = {83 7d fc 00 0f 84 9b 00 00 00 8b 8d ?? ?? ?? ff 51 8b 55 f8 52 e8 ?? ?? ?? ff 83 c4 08 85 c0 74 28 8b f4 6a 40 68 00 30 00 00 8b 45 18 50 8b 4d 0c 8b 51 34 52 8b 45 f8 50 ff 55 fc 3b f4 e8 ?? ?? ?? 00 89 85 ?? ?? ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

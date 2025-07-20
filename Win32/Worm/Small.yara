@@ -18,6 +18,7 @@ rule Worm_Win32_Small_AF_2147630897_0
         $x_1_4 = {68 49 6e 66 6f 30 38 30 32 40 67 6d 61 69 6c 2e 63 6f 6d 00 00 00 00 74 65 73 74 31 32 33 34}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Worm_Win32_Small_GD_2147940797_0
         $x_10_1 = {34 44 47 47 59 9c 31 cb b5 19 d1 31 0d ?? ?? ?? ?? 19 ec e4 52 2a c2 2c a5 6c 52 e2}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

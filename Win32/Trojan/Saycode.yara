@@ -17,6 +17,7 @@ rule Trojan_Win32_Saycode_2147627886_0
         $x_1_3 = {73 68 65 6c 6c 65 78 70 2e 64 6c 6c 00 44 6c 6c 52 65 67 69 73 74 65 72 53 65 72 76 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

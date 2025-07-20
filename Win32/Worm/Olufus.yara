@@ -21,6 +21,7 @@ rule Worm_Win32_Olufus_A_2147696513_0
         $x_1_7 = {54 00 69 00 6d 00 65 00 72 00 53 00 70 00 72 00 65 00 61 00 64 00 69 00 6e 00 67 00 41 00 63 00 74 00 69 00 6f 00 6e 00 [0-16] 44 00 72 00 69 00 76 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))

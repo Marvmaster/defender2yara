@@ -19,6 +19,7 @@ rule Trojan_MSIL_Lokegiyg_A_2147686340_0
         $x_1_5 = {1f 1d 12 00 1a 28 ?? 00 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_MSIL_Lokegiyg_B_2147686346_0
         $x_1_6 = {1f 1d 12 00 1a 28 ?? 00 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Rateven_A_2147641119_0
         $x_1_4 = {83 3b 00 0f 85 ?? ?? ?? ?? 68 ?? ?? 40 00 e8 ?? fe ff ff 89 03 83 3b 00 0f 84 ?? ?? ?? ?? 68 ?? ?? 40 00 8b 03 50 e8 ?? fe ff ff a3 ?? ?? 40 00 68 ?? ?? 40 00 8b 03 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

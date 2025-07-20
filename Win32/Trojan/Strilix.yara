@@ -19,6 +19,7 @@ rule Trojan_Win32_Strilix_A_2147727596_0
         $x_5_4 = {c7 00 44 33 22 11 48 89 b0 d8 00 00 00 48 89 70 10 48 89 70 18 89 70 20 48 89 70 74 b8 20 00 00 00 ba b0 10 00 00 44 8d 48 e4 33 c9}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
             ((2 of ($x_10_*))) or

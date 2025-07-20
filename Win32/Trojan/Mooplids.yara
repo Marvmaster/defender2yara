@@ -19,6 +19,7 @@ rule Trojan_Win32_Mooplids_A_155450_0
         $x_1_5 = {3b 07 75 18 8b 1b 8b 43 3c b9 02 21 00 00 c7 45 f8 01 00 00 00 66 89 4c 18 16 eb 0e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

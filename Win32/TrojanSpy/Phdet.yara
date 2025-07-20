@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Phdet_B_2147689532_0
         $x_1_3 = {66 61 69 6c 65 64 2e 20 4e 6f 74 20 61 20 53 79 73 74 65 6d 2e 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

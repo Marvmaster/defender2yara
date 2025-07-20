@@ -16,6 +16,7 @@ rule Trojan_Win32_Bluesix_A_2147677711_0
         $x_1_2 = "ClientRandom[32]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_Win64_QilinCrypt_PC_2147913588_0
         $x_1_4 = "vssadmin.exe delete shadows /all /quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

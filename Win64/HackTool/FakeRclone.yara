@@ -15,6 +15,7 @@ rule HackTool_Win64_FakeRclone_A_2147840537_0
         $x_1_1 = "no refresh token found - run `rclone config reconnect`oauth2/google:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

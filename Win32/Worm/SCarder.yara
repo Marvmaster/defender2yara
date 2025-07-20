@@ -18,6 +18,7 @@ rule Worm_Win32_SCarder_2147681769_0
         $x_5_4 = "e2342242flfEBG" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             (all of ($x*))

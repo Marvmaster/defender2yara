@@ -18,6 +18,7 @@ rule Trojan_MSIL_RezltGrabber_AYA_2147919625_0
         $x_1_3 = "ZOPZ-SNIFF.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

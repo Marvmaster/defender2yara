@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Mafchek_A_2147637587_0
         $x_1_5 = "I run in injected process" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Mafchek_B_2147637589_0
         $x_1_1 = {8d 45 dc e8 46 fd ff ff ff 75 dc ff 35 ?? ?? ?? ?? 68 ?? ?? ?? ?? 8d 45 e0 ba 04 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanDropper_Linux_SAgnt_A_2147828130_0
         $x_1_6 = "Starting Flood" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

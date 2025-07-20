@@ -21,6 +21,7 @@ rule Ransom_Win32_Snafes_A_2147727198_0
         $x_1_7 = "extort money, files restore is an optional service." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win32_Snafes_A_2147727208_0
         $x_5_3 = {48 89 4c 24 08 48 83 ec 68 c7 44 24 24 00 00 00 00 c7 44 24 2c 00 00 00 00 c7 44 24 20 00 00 00 00 c7 44 24 28 00 00 00 00 48 c7 44 24 30 00 00 00 00 48 83 7c 24 70 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             ((1 of ($x_10_*))) or

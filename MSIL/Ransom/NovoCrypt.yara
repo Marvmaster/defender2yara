@@ -19,6 +19,7 @@ rule Ransom_MSIL_NovoCrypt_MK_2147788120_0
         $x_10_4 = "your files will be permamently shredded" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

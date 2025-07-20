@@ -17,6 +17,7 @@ rule Trojan_Win32_Lodbak_S_2147756307_0
         $x_1_2 = "ruiigeqr.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Lodbak_MBER_2147896059_0
         $x_1_5 = "wslegxufdnporo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanDownloader_MSIL_FormBook_AE_2147817762_0
         $x_1_6 = "RRUUNNN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_MSIL_FormBook_NYH_2147828381_0
         $x_1_3 = {15 b6 09 09 0b 00 00 00 10 00 01 00 02 00 00 01 00 00 00 30 00 00 00 08 00 00 00 08 00 00 00 19 00 00 00 0f 00 00 00 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanDownloader_MSIL_FormBook_NYI_2147828705_0
         $x_1_2 = {95 b6 29 09 0b 00 00 00 da a4 21 00 16 00 00 01 00 00 00 35 00 00 00 08 00 00 00 07 00 00 00 14 00 00 00 0a 00 00 00 3f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule TrojanDownloader_MSIL_FormBook_ABL_2147830994_0
         $x_1_5 = "Rfc2898DeriveBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule TrojanDownloader_MSIL_FormBook_ABO_2147831439_0
         $x_1_4 = "Rfc2898DeriveBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule TrojanDownloader_MSIL_FormBook_A_2147900583_0
         $x_2_1 = {0a 0d 08 09 16 73 ?? 00 00 0a 13 04 11 04 02 7b ?? 00 00 04 6f ?? 00 00 0a 02 7b ?? 00 00 04 6f ?? 00 00 0a 13 05 dd}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule TrojanDownloader_MSIL_FormBook_B_2147900843_0
         $x_2_1 = {0a 13 04 73 ?? 00 00 0a 13 05 08 73 ?? 00 00 0a 13 06 11 06 11 04 16 73 ?? 00 00 0a 13 07 11 07 11 05 6f ?? 00 00 0a 11 05 6f ?? 00 00 0a 13 08 de}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +186,7 @@ rule TrojanDownloader_MSIL_FormBook_C_2147900925_0
         $x_2_2 = {01 20 10 27 00 00 6f ?? 00 00 0a 07 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +210,7 @@ rule TrojanDownloader_MSIL_FormBook_D_2147900930_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +234,7 @@ rule TrojanDownloader_MSIL_FormBook_F_2147904551_0
         $x_2_3 = {02 16 25 13 01 7d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -246,6 +256,7 @@ rule TrojanDownloader_MSIL_FormBook_G_2147905286_0
         $x_2_1 = {06 0b 07 8e 69 0c 2b ?? 06 07 08 91 6f ?? 00 00 0a 08 25 17 59 0c 16 fe ?? 2d ?? 06 6f ?? 00 00 0a 0b 07 0d 09}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -267,6 +278,7 @@ rule TrojanDownloader_MSIL_FormBook_H_2147905287_0
         $x_2_1 = {0a 0b 06 8e 69 0c 2b ?? 07 06 08 91 6f ?? 00 00 0a 08 25 17 59 0c 16 fe ?? 2d ?? 07 6f ?? 00 00 0a 0a 06 0d 09 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

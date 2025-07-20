@@ -43,6 +43,7 @@ rule TrojanClicker_Win32_Hatigh_A_2147611261_0
         $x_1_29 = "BCMSVCRT.DLL" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((20 of ($x_1_*))) or
             ((1 of ($x_2_*) and 18 of ($x_1_*))) or
@@ -74,6 +75,7 @@ rule TrojanClicker_Win32_Hatigh_B_2147611262_0
         $x_1_7 = "66.250.74.152/kw_img/img_gen.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -97,6 +99,7 @@ rule TrojanClicker_Win32_Hatigh_C_2147611263_0
         $x_1_4 = "/kw_img/img_gen.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

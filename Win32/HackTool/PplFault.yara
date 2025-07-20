@@ -20,6 +20,7 @@ rule HackTool_Win32_PplFault_A_2147846558_0
         $x_10_6 = {23 65 9c 11 ?? ?? ?? 7b 40 6b 44 ?? ?? ?? b0 e3 e0 30}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -48,6 +49,7 @@ rule HackTool_Win32_PplFault_B_2147846820_0
         $x_10_5 = {48 87 c9 41 b8 3c 00 00 00 48 87 d2 4d [0-16] 87 c0 4d 87}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

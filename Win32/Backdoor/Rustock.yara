@@ -16,6 +16,7 @@ rule Backdoor_Win32_Rustock_E_2147792229_0
         $x_1_2 = {0f b7 11 81 fa 4d 5a 00 00 74 5f 8b 45 f8 2d 00 10 00 00 89 45 f8 c7 45 e8 47 00 00 00 c7 45 f0 80 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +128,7 @@ rule Backdoor_Win32_Rustock_2147792408_0
         $x_1_92 = "chliml\\jvsmypzyqmpm\\ssegzxmuybxsg.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

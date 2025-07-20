@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Fepgul_A_2147616671_0
         $x_1_8 = "cmd /c net stop sharedaccess" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             ((5 of ($x_2_*))) or

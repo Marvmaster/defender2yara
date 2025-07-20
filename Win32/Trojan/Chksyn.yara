@@ -18,6 +18,7 @@ rule Trojan_Win32_Chksyn_A_2147598095_0
         $x_1_3 = {74 4e 68 00 01 00 00 ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? b8 ?? ?? ?? ?? 99 52 50 68 76 01 00 00 e8 ?? ?? ff ff 85 c0 74 17}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -56,6 +57,7 @@ rule Trojan_Win32_Chksyn_A_2147598095_1
         $x_2_18 = {89 48 01 66 c7 40 05 ff e0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -86,6 +88,7 @@ rule Trojan_Win32_Chksyn_D_2147629073_0
         $x_1_5 = "m=%s&p=%s&v=%d&b=%s&u=%d&s=%s&headers=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -109,6 +112,7 @@ rule Trojan_Win32_Chksyn_E_2147637649_0
         $x_1_4 = "Macromedia\\SwUpdate\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +137,7 @@ rule Trojan_Win32_Chksyn_F_2147649371_0
         $x_1_5 = {c6 45 ec e9 8b 45 0c 2b 45 08 83 e8 05 89 45 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +161,7 @@ rule Trojan_Win32_Chksyn_G_2147717725_0
         $x_1_4 = "v=%d&s=%d&h=%d&un=%s&o=%d&c=%d&ip=%s&sys=%s&uid=%d&w=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

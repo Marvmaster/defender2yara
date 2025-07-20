@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Blmoon_A_2147640465_0
         $x_1_4 = "@echo [InternetShortcut] >> \"C:\\Documents and Settings\\All Users\\Start Menu\\Programs\\Startup\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

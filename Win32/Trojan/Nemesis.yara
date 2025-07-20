@@ -21,6 +21,7 @@ rule Trojan_Win32_Nemesis_RB_2147827410_0
         $x_1_6 = "Software\\Refleksfries\\Outlot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Nemesis_RC_2147827794_0
         $x_1_5 = "Saltsyres falstringer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win32_Nemesis_RD_2147827800_0
         $x_1_4 = "GetShortPathNameA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

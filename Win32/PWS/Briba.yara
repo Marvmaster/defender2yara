@@ -19,6 +19,7 @@ rule PWS_Win32_Briba_A_2147660611_0
         $x_2_5 = {80 f9 3a 74 0f 80 f9 20 74 0a 40 3b c7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

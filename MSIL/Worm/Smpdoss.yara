@@ -20,6 +20,7 @@ rule Worm_MSIL_Smpdoss_A_2147684256_0
         $x_1_6 = "Attemping to seed" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

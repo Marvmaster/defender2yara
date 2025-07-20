@@ -17,6 +17,7 @@ rule Trojan_Win32_Eyesow_A_2147618644_0
         $x_1_3 = "TIdAntiFreeze" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

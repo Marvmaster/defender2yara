@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Dooxud_A_2147654535_0
         $x_1_3 = {33 d2 66 8b 11 81 fa 4d 5a 00 00 74 05 e9 ?? ?? 00 00 a1 ?? ?? ?? 00 8b 4d 0c 03 48 3c 89 0d ?? ?? ?? 00 8b 15 ?? ?? ?? 00 81 3a 50 45 00 00 74 05 e9 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

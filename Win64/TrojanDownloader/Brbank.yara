@@ -16,6 +16,7 @@ rule TrojanDownloader_Win64_Brbank_A_2147725102_0
         $x_2_2 = {31 c0 49 39 c1 76 09 80 34 02 08 48 ff c0 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

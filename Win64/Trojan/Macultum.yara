@@ -20,6 +20,7 @@ rule Trojan_Win64_Macultum_B_2147684936_0
         $x_1_6 = {73 00 65 00 72 00 76 00 69 00 63 00 65 00 20 00 66 00 61 00 69 00 6c 00 65 00 64 00 [0-8] 4d 75 74 75 61 6c 20 69 6e 73 74 61 6c 6c 20 7c 20 72 65 6d 6f 76 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

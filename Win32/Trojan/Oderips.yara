@@ -26,6 +26,7 @@ rule Trojan_Win32_Oderips_2147616170_0
         $x_1_12 = "systemsp.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or

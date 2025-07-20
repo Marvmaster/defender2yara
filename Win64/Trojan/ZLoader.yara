@@ -19,6 +19,7 @@ rule Trojan_Win64_ZLoader_BA_2147766897_0
         $x_1_4 = "CryptAcquireContextA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_ZLoader_F_2147912096_0
         $x_1_1 = {4c 6f 61 64 65 72 44 6c 6c 2e 64 6c 6c 00 (41|2d|5a) [0-36] 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win64_ZLoader_DA_2147924369_0
         $x_1_4 = "{INJECTDATA}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_Win64_ZLoader_DAA_2147925487_0
         $x_1_13 = "rax=0x%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -120,6 +124,7 @@ rule Trojan_Win64_ZLoader_DB_2147925509_0
         $x_10_1 = {c1 e6 04 01 ce 89 f9 29 f1 48 63 c9 46 0f b6 1c 01 44 32 1c 38 44 88 1c 3a}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Trojan_Win64_ZLoader_YAB_2147925527_0
         $x_11_1 = {48 d1 e8 48 03 c2 48 c1 e8 04 48 6b c0 15 48 2b c8 8a 44 0d ?? 43 32 04 02 41 88 00}  //weight: 11, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_Win64_ZLoader_DC_2147925602_0
         $x_10_2 = {48 c1 ea 04 48 6b c2 11 48 2b c8 49 0f af cb 0f b6 44 0c ?? 42 32 44 0b ff 41 88 41 ff}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -184,6 +191,7 @@ rule Trojan_Win64_ZLoader_DD_2147925614_0
         $x_10_1 = {01 58 a6 41 2c bc 6d d7 0d 3e be 4b 43 25 db cc 79 23 4a a4 ff e2 b2 80 00 c1 6b 75 70 18 0b 5f be}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +213,7 @@ rule Trojan_Win64_ZLoader_YAC_2147925629_0
         $x_11_1 = {48 2b c8 49 0f af ca 0f b6 44 0c ?? 42 32 44 03 fa 41 88 40 fa}  //weight: 11, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -226,6 +235,7 @@ rule Trojan_Win64_ZLoader_DE_2147925723_0
         $x_10_1 = {48 8b c3 48 f7 e1 48 c1 ea 02 48 6b c2 16 48 2b c8 0f b6 44 0d ?? 43 32 44 22 ?? 43 88 44 0a fe}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -249,6 +259,7 @@ rule Trojan_Win64_ZLoader_DF_2147925724_0
         $x_1_3 = "rAJUeuNfNSCR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -273,6 +284,7 @@ rule Trojan_Win64_ZLoader_DG_2147925725_0
         $x_1_4 = "LdrDll.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -294,6 +306,7 @@ rule Trojan_Win64_ZLoader_DH_2147925726_0
         $x_10_1 = {b4 bd 0b 11 1d 63 0b 0c 6d 01 7d e9 5b 10 d9 39 58 20 15 5d 61 56 a0 b8 62 2b 21 56 03 0f 1d 47 8c 39 74 34 fd c1 3d}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -315,6 +328,7 @@ rule Trojan_Win64_ZLoader_YAD_2147925755_0
         $x_11_1 = {49 8b c4 48 f7 e1 48 c1 ea 04 48 ?? ?? ?? 48 03 c0 48 2b c8 0f b6 44 0c ?? 43 32 44 0f ?? 41 88 41}  //weight: 11, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -337,6 +351,7 @@ rule Trojan_Win64_ZLoader_YAE_2147925756_0
         $x_11_2 = {48 03 c0 48 2b c8 49 0f af cb 0f b6 44 0c ?? 42 32 44 17 ff 41 88 42}  //weight: 11, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -359,6 +374,7 @@ rule Trojan_Win64_ZLoader_CY_2147926381_0
         $x_2_2 = {33 c9 41 b8 00 30 00 00 42 8b 54 20 50 44 8d 49 40 48 81 c2 80 c3 c9 01 ff d7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -380,6 +396,7 @@ rule Trojan_Win64_ZLoader_GA_2147926853_0
         $x_1_1 = {48 31 d2 41 f7 f2 45 8a 1c 14 44 30 1c 0f 48 ff c1 48 89 c8 48 81 f9 ff 3f 00 00 76 e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -401,6 +418,7 @@ rule Trojan_Win64_ZLoader_ZZV_2147931293_0
         $x_5_1 = {48 89 ca 48 c1 ea 3f 48 c1 f9 ?? 01 d1 89 ca c1 e2 04 01 ca 89 c1 29 d1 48 63 c9 42 0f b6 0c 31 32 0c 06 88 0c 07 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

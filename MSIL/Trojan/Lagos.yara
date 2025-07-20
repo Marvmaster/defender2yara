@@ -20,6 +20,7 @@ rule Trojan_MSIL_Lagos_MBEN_2147895385_0
         $x_1_5 = "Veil.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

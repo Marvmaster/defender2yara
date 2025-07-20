@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Lentrigy_A_2147697772_0
         $x_1_6 = {ff 30 d0 8b ?? ?? ?? ff ff 8b ?? ?? ?? ff ff 88 04 11 8b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

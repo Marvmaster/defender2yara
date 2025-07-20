@@ -19,6 +19,7 @@ rule Trojan_MSIL_Startpage_H_2147658544_0
         $x_2_5 = "h+E4Y6I2s7V3/oFq7MD6rfzAqqPfbw==" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule Trojan_MSIL_Startpage_XW_2147696089_0
         $x_1_3 = "\"last_prompted_google_url\": \"https://www.google.com.tr/\"," ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

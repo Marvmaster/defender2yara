@@ -18,6 +18,7 @@ rule Trojan_Win64_REntS_SIB_2147780524_0
         $x_1_3 = "{aa5b6a80-b834-11d0-932f-00a0c90dcaa9}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -45,6 +46,7 @@ rule Trojan_Win64_REntS_SIBB_2147796756_0
         $x_1_3 = {48 63 40 3c 48 8d 04 03 8b 80 88 00 00 00 4c 8d 34 18 4d 33 ed 48 33 ff 41 8b 46 20 48 8d 04 18 41 8b cd 03 c9 03 c9 [0-5] 8b 04 08 48 8d 04 18 48 89 c1 48 89 f2 e8 ?? ?? ?? ?? 84 c0 74 ?? 41 8b c5 03 c0 41 03 46 24 8b c0 48 0f b7 04 18 66 83 e0 ff 0f b7 c0 03 c0 03 c0 41 03 46 1c 8b c0 8b 04 18 48 8d 3c 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win64_REntS_SIBC_2147807250_0
         $x_1_2 = {44 8b da 48 85 c0 75 ?? b8 ?? ?? ?? ?? eb ?? 4c 8b d0 48 8b 81 ?? ?? ?? ?? 48 d1 e8 4d 8d 42 ?? 4c 03 c0 4c 89 41 ?? 8b 41 ?? 85 c0 7f ?? 45 85 db 74 ?? ff c8 33 d2 89 41 ?? 41 8b c3 f7 f3 80 c2 ?? 44 8b d8 80 fa ?? 7e ?? 41 8a c1 34 ?? c0 e0 ?? 04 ?? 02 d0 48 8b 41 ?? 88 10 48 ff 49 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

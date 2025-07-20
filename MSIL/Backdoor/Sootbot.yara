@@ -20,6 +20,7 @@ rule Backdoor_MSIL_Sootbot_A_2147686234_0
         $x_1_6 = {1f 1d 12 00 1a 28 ?? 00 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Backdoor_MSIL_Sootbot_A_2147686234_1
         $x_1_6 = "Flood started @@" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Backdoor_MSIL_Sootbot_B_2147686335_0
         $x_1_3 = {0b 06 07 16 07 8e 69 16 6f ?? ?? ?? ?? 26 14 0b 7e ?? ?? ?? ?? 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

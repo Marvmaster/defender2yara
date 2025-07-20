@@ -75,6 +75,7 @@ rule Trojan_AndroidOS_Rootnik_C_2147822364_0
         $x_1_5 = {66 67 20 70 61 74 68 3a 25 73 00 2f 73 79 73 74 65 6d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -121,6 +122,7 @@ rule Trojan_AndroidOS_Rootnik_B_2147832693_0
         $x_1_2 = {72 74 73 65 72 76 69 63 65 20 2d 2d 75 73 65 72 20 30 20 2d 61 ?? ?? 73 00 61 6d 20 73 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

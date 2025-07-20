@@ -46,6 +46,7 @@ rule Worm_Win32_Brontok_2147572220_0
         $x_1_31 = "*\\AF:\\VPROJECT\\STABLE\\17-Beta\\BRONTOK.A\\Brontok.A.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -75,6 +76,7 @@ rule Worm_Win32_Brontok_B_2147572409_0
         $x_1_8 = "*\\AF:\\VPROJECT\\OK\\5\\SENSASI.A\\Sensasi.A.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -109,6 +111,7 @@ rule Worm_Win32_Brontok_C_2147582773_0
         $x_10_13 = "Tak ada lagi yang ku kejar saat ini" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 9 of ($x_10_*))) or
             ((1 of ($x_100_*) and 1 of ($x_20_*) and 7 of ($x_10_*))) or
@@ -143,6 +146,7 @@ rule Worm_Win32_Brontok_FFR_2147601656_0
         $x_1_9 = "DisableRegistryTools" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -168,6 +172,7 @@ rule Worm_Win32_Brontok_GA_2147602386_0
         $x_1_2 = {4d 53 56 42 56 4d 36 30 2e 44 4c 4c 00 00 00 00 4d 65 74 68 43 61 6c 6c 45 6e 67 69 6e 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +194,7 @@ rule Worm_Win32_Brontok_MBQ_2147932984_0
         $x_1_1 = {70 7f 40 00 00 f8 30 00 00 ff ff ff 08 00 00 00 01 00 00 00 01 00 00 00 e9 00 00 00 00 7a 40 00 e8 78 40 00 00 20 40 00 78 00 00 00 7d 00 00 00 82 00 00 00 83}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

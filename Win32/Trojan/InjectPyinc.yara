@@ -18,6 +18,7 @@ rule Trojan_Win32_InjectPyinc_SA_2147734336_0
         $x_1_4 = "\\_MEI38042\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

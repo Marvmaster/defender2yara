@@ -16,6 +16,7 @@ rule Worm_Win32_Sholfuse_A_2147708815_0
         $x_1_2 = {50 68 f5 06 00 00 68 ?? ?? ?? ?? 56 c7 44 24 20 00 00 00 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

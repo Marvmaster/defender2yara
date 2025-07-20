@@ -17,6 +17,7 @@ rule Trojan_Win32_TreasureHunter_A_2147730656_0
         $x_1_3 = "cmdLineDecrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_TreasureHunter_B_2147896161_0
         $x_2_5 = "successfully sent the dumps" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win64_RemcosRAT_KAT_2147946557_0
         $x_1_1 = {65 48 8b 04 25 30 00 00 00 48 8b 50 60 48 85 c9 75 09 48 8b 42 10 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Pipsek_A_2147643477_0
         $x_1_3 = "lqcyc52.cyc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_Win32_Pipsek_B_2147643478_0
         $x_1_4 = {56 56 56 56 56 56 00 00 43 43 43 43 43 43 00 00 5c 54 61 73 6b 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule TrojanDownloader_Win32_Pipsek_C_2147643479_0
         $x_1_5 = "\\lqcyc5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule TrojanDownloader_Win32_Pipsek_B_2147645005_0
         $x_1_3 = "lqcyc52.cyc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

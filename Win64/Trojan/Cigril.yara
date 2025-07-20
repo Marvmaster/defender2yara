@@ -17,6 +17,7 @@ rule Trojan_Win64_Cigril_D_2147846487_0
         $x_1_2 = {48 83 ec 00 48 b8 00 00 00 00 00 00 00 00 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

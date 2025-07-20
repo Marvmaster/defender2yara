@@ -19,6 +19,7 @@ rule Virus_Win32_Quervar_B_2147657615_0
         $x_10_4 = {03 cb 81 e1 ff 00 00 00 8b 1c 24 8a 1c 13 32 99 ?? ?? ?? ?? 8b 4c 24 04 88 1c 11 42 48 75 ad 59 5a 5f 5e 5b c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule Virus_Win32_Quervar_B_2147657615_1
         $x_1_3 = {75 72 6c 6d 6f 6e 2e 64 6c 6c 00 00 55 52 4c 44 6f 77 6e 6c 6f 61 64 54 6f 46 69 6c 65 57 00 00 68 00 74 00 74 00 70 00 00 00 00 00 3f 00 00 00 26 00 00 00 26 00 70 00 69 00 6e 00 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Virus_Win32_Quervar_D_2147682030_0
         $x_1_2 = {36 69 73 74 33 39 66 69 75 38 72 6a 6f 00 00 00 2d 00 75 00 70 00 70 00 20 00 00 00 37 38 69 38 37 36 75 79 34 35 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

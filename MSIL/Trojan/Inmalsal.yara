@@ -18,6 +18,7 @@ rule Trojan_MSIL_Inmalsal_A_2147708625_0
         $x_1_4 = "{11111-22222-50001-00000}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_Inmalsal_A_2147708625_1
         $x_1_4 = "{11111-22222-50001-00000}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_MSIL_Inmalsal_A_2147708625_2
         $x_1_4 = "{11111-22222-50001-00000}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_MSIL_Inmalsal_B_2147708626_0
         $x_1_3 = {73 76 63 68 6f 73 74 2e ?? 2e 72 65 73 6f 75 72 63 65 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

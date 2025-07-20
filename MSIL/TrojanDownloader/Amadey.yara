@@ -19,6 +19,7 @@ rule TrojanDownloader_MSIL_Amadey_RDA_2147841236_0
         $x_2_4 = {11 04 91 20 28 03 00 00 59 d2 9c 00 11 04 17 58 13 04 11 04 7e ?? ?? ?? ?? 8e 69 fe 04 13 05 11 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

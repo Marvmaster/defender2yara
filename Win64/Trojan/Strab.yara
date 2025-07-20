@@ -16,6 +16,7 @@ rule Trojan_Win64_Strab_A_2147833041_0
         $x_1_1 = {44 89 c0 41 f7 ea 44 01 c2 c1 fa 05 44 89 c0 c1 f8 1f 29 c2 6b d2 ?? 44 89 c0 29 d0 48 63 d0 48 8b 0d ?? ?? ?? ?? 0f b6 14 11 42 32 94 04 ?? ?? ?? ?? 43 88 14 01 49 83 c0 01 4d 39 d8 75 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_Strab_ARA_2147852902_0
         $x_1_3 = "GetClipboardFormatNameW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win64_Strab_ASB_2147927969_0
         $x_1_3 = "\\danie\\source\\repos\\noconsole\\x64\\Release\\noconsole.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win64_Strab_GZK_2147942726_0
         $x_5_2 = {2e 74 68 65 6d 69 64 61 00 e0 2e 00 00 10 16 00 00 00 00 00 00 40 14 00 00 00 00 00 00 00 00 00 00 00 00 00 60 00 00 e0 2e 62 6f 6f 74 00 00 00 00 dc 1c 00 00 f0 44 00 00 dc 1c 00 00 40 14}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

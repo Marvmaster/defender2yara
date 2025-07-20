@@ -17,6 +17,7 @@ rule Trojan_Win32_Dosenjo_A_145058_0
         $x_1_3 = {43 72 65 61 74 65 50 72 6f 63 65 73 73 41 00 00 6b 65 72 6e 65 6c 33 32 00 00 00 00 25 73 5c 25 73 00 00 00 63 73 72 73 73 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

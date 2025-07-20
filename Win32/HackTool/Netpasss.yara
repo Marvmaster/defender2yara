@@ -20,6 +20,7 @@ rule HackTool_Win32_Netpasss_AB_2147817179_0
         $x_1_5 = "Network Passwords List" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

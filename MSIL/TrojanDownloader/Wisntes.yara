@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_Wisntes_A_2147686115_0
         $x_1_3 = {1f 1d 0f 00 1a 28 ?? 00 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_MSIL_Wisntes_B_2147686338_0
         $x_1_4 = {1f 1d 12 00 1a 28 ?? 00 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule TrojanDownloader_MSIL_Efliot_A_2147719771_0
         $x_1_9 = "HideMe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*))) or
             ((1 of ($x_4_*) and 3 of ($x_2_*))) or

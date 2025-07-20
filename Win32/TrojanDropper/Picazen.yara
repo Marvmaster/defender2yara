@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Picazen_A_2147621285_0
         $x_1_5 = "if exist \"%s\" goto repeat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

@@ -18,6 +18,7 @@ rule VirTool_MSIL_Cajan_A_2147760885_0
         $x_1_3 = "CVE_2019_1405" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule VirTool_MSIL_Cajan_B_2147763878_0
         $x_1_3 = "CVE_2019_1405" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

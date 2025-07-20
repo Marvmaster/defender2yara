@@ -16,6 +16,7 @@ rule Trojan_Win32_Rulxy_A_2147679856_0
         $x_1_2 = {3d 47 45 54 20 74 ?? 3d 50 4f 53 54 75 ?? 80 7f 04 20 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

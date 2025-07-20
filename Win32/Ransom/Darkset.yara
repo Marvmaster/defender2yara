@@ -20,6 +20,7 @@ rule Ransom_Win32_Darkset_CCIQ_2147926242_0
         $x_1_5 = ".DARKSET" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

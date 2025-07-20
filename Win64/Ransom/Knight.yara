@@ -19,6 +19,7 @@ rule Ransom_Win64_Knight_ZA_2147853198_0
         $x_1_4 = {73 00 3a 00 [0-10] 2f 00 2f 00 e8 ?? ?? 00 00 81 3b 68 74 74 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Win64_Knight_ZA_2147853198_1
         $x_1_7 = "Only process smb hosts inside defined host. -host" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_Win64_Knight_ZB_2147904413_0
         $x_1_4 = "Value>%s.lock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Ransom_Win64_Knight_ZC_2147905422_0
         $x_1_5 = "avx512chan<-domainenableexec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

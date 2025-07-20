@@ -19,6 +19,7 @@ rule Worm_Win32_Koobface_A_127243_0
         $x_1_4 = {d4 dc ff ff 68 ?? ?? 40 00 50 ff 15 ?? ?? 40 00 83 c4 1c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Worm_Win32_Koobface_B_127250_0
         $x_1_7 = "%s/profile.php?id=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -81,6 +83,7 @@ rule Worm_Win32_Koobface_D_129668_0
         $x_1_8 = {53 65 6e 64 54 6f 00 00 68 74 74 70 3a 2f 2f 77 77 77 2e 25 73 2f 6d 61 69 6c 2f 4d 61 69 6c 43 6f 6d 70 6f 73 65 2e 6a 73 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             ((5 of ($x_2_*))) or
@@ -117,6 +120,7 @@ rule Worm_Win32_Koobface_F_131698_0
         $x_10_11 = {99 6a 3c 59 f7 f9 52 ff d6}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -149,6 +153,7 @@ rule Worm_Win32_Koobface_G_132372_0
         $x_1_10 = "InternetGetConnectedState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 3 of ($x_1_*))) or
             ((5 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -180,6 +185,7 @@ rule Worm_Win32_Koobface_H_132994_0
         $x_1_8 = "FBTARGET" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -212,6 +218,7 @@ rule Worm_Win32_Koobface_I_134787_0
         $x_1_7 = "/achcheck.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -239,6 +246,7 @@ rule Worm_Win32_Koobface_J_135256_0
         $x_1_3 = "nick=%s&login=%s&success=%d&friends=%d&captcha=%d&finish=%d&v=%s&p=%s&c=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -264,6 +272,7 @@ rule Worm_Win32_Koobface_B_137851_0
         $x_1_5 = {36 46 31 33 7d 22 0a 22 45 78 74 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -290,6 +299,7 @@ rule Worm_Win32_Koobface_C_140765_0
         $x_1_6 = "ck=%d&c_fb=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -318,6 +328,7 @@ rule Worm_Win32_Koobface_E_142251_0
         $x_1_4 = "dump responce" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -340,6 +351,7 @@ rule Worm_Win32_Koobface_T_146300_0
         $x_1_3 = {8b d8 83 fb ff 0f 84 ?? ?? 00 00 8d 44 24 ?? 50 53 ff 15 ?? ?? 40 00 8b e8 83 fd 0a 0f 86}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -364,6 +376,7 @@ rule Worm_Win32_Koobface_U_147458_0
         $x_1_5 = "http\\shell\\open\\command" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -388,6 +401,7 @@ rule Worm_Win32_Koobface_F_147883_0
         $x_1_4 = "%sW%sros%sow%srentVer%sun" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -415,6 +429,7 @@ rule Worm_Win32_Koobface_G_155318_0
         $x_1_7 = {2f 00 72 00 6f 00 61 00 64 00 62 00 6c 00 6f 00 63 00 6b 00 2f 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -438,6 +453,7 @@ rule Worm_Win32_Koobface_AP_156823_0
         $x_1_4 = "C:\\NuAT.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -460,6 +476,7 @@ rule Worm_Win32_Koobface_AT_159940_0
         $x_1_3 = {63 61 70 74 63 68 61 20 66 69 6e 69 73 68 65 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -482,6 +499,7 @@ rule Worm_Win32_Koobface_AU_161715_0
         $x_1_3 = {68 88 13 00 00 c6 45 fc 0f ff d7 53 8d 85 ?? ?? ?? ?? 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -507,6 +525,7 @@ rule Worm_Win32_Koobface_AV_161995_0
         $x_1_6 = "crypted code detected" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -535,6 +554,7 @@ rule Worm_Win32_Koobface_AW_164885_0
         $x_1_5 = {25 73 3f 61 63 74 69 6f 6e 3d [0-10] 26 68 61 72 64 69 64 3d 25 73 26 76 3d 25 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -563,6 +583,7 @@ rule Worm_Win32_Koobface_AX_167280_0
         $x_1_5 = "dump responce" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

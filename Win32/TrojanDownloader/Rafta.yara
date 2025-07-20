@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Rafta_A_2147656901_0
         $x_1_3 = {80 78 02 0a 75 ?? c6 46 02 0a c6 46 03 02 83 bb a0 97 00 00 01 75 ?? c6 46 03 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

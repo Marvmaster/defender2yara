@@ -52,6 +52,7 @@ rule Trojan_Win32_Vundo_D_93619_0
         $x_1_38 = "yPo0q-uz(JXiR+@l;eG\\8x.O?UM|dFgr&~HI`'VshQ%EZYA3NLS7W=2paw6{D5^]C<}1$_)4#jbBv:T" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (30 of ($x*))
 }
 
@@ -74,6 +75,7 @@ rule Trojan_Win32_Vundo_100135_0
         $x_1_3 = {c1 ea 0b 83 e2 03 8b c3 c1 e8 05 8b cb c1 e1 04 33 c1 8b 4c 95 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -104,6 +106,7 @@ rule Trojan_Win32_Vundo_V_116700_0
         $x_5_11 = "RtlTimeToSecondsSince1970" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 3 of ($x_3_*) and 2 of ($x_1_*))) or
             ((5 of ($x_5_*) and 1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -137,6 +140,7 @@ rule Trojan_Win32_Vundo_C_118995_0
         $x_1_8 = {2f 3f 63 6d 70 3d 76 6d 74 65 6b 5f [0-10] 26 6c 69 64 3d 72 75 6e 26 75 69 64 3d 25 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -165,6 +169,7 @@ rule Trojan_Win32_Vundo_E_119448_0
         $x_1_4 = {6a 4e 56 ff 15 ?? ?? ?? ?? 83 f8 ff 74 3a 53 8d 85 ?? ?? ff ff 50 6a 0d 8d 45 ec 50 56 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -185,6 +190,7 @@ rule Trojan_Win32_Vundo_BI_119853_0
         $x_1_1 = {81 a4 27 92 7f aa 83 48 9c 51 18 06 83 fa 3e 74 0f 0a 75 3b 7a 0e 3b c1 2c 01 c8 75 ec 33 c0 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -223,6 +229,7 @@ rule Trojan_Win32_Vundo_CQ_121236_0
         $x_1_18 = "opera" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 10 of ($x_1_*))) or
             (all of ($x*))
@@ -256,6 +263,7 @@ rule Trojan_Win32_Vundo_121770_0
         $x_1_11 = "sysprotect.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -281,6 +289,7 @@ rule Trojan_Win32_Vundo_N_121841_0
         $x_1_3 = {e8 00 00 00 00 68 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -301,6 +310,7 @@ rule Trojan_Win32_Vundo_U_121979_0
         $x_1_1 = {5a be e0 26 52 36 d1 34 1e 0d 93 5f df fe cc ee 49 bd c2 b1 d7 6f 8d 09 a8 2e 08 71 37 5b 87 1a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +331,7 @@ rule Trojan_Win32_Vundo_Y_121980_0
         $x_1_1 = {20 93 30 86 20 c3 d9 38 dc 13 87 2f 99 52 6f d0 c5 ae 6f 38 3f bd d9 38 d4 45 8b 48 20 8c 57 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -345,6 +356,7 @@ rule Trojan_Win32_Vundo_AG_122143_0
         $x_1_5 = "/go/?cmp=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -371,6 +383,7 @@ rule Trojan_Win32_Vundo_FA_122263_0
         $x_1_3 = {50 53 53 6a 26 53 33 f6 ff 15 ?? ?? 00 10 68 ?? ?? 00 10 8d 45 ?? 50 ff 15 ?? ?? 00 10 8d 45 ?? 50 ff 15 ?? ?? 00 10 8b f8 3b fb 74 ?? 68 ?? ?? 00 10 57 ff 15 ?? ?? 00 10 3b c3 74 ?? 53 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -398,6 +411,7 @@ rule Trojan_Win32_Vundo_KE_122271_0
         $x_1_8 = {c6 45 fb 64 [0-4] c6 45 fc 6c [0-4] c6 45 fd 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -423,6 +437,7 @@ rule Trojan_Win32_Vundo_FJ_122292_0
         $x_1_3 = "red_green_test" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -459,6 +474,7 @@ rule Trojan_Win32_Vundo_EL_122848_0
         $x_1_14 = "opera.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -481,6 +497,7 @@ rule Trojan_Win32_Vundo_G_122988_0
         $x_1_2 = {74 07 3d 38 0c 00 00 75 1f b0 01 c3 3d 0a 1a 00 00 74 f6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -504,6 +521,7 @@ rule Trojan_Win32_Vundo_AR_123068_0
         $x_1_4 = "ntdll.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -526,6 +544,7 @@ rule Trojan_Win32_Vundo_AT_123103_0
         $x_1_3 = "ntdll.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -557,6 +576,7 @@ rule Trojan_Win32_Vundo_I_123161_0
         $x_1_11 = {8b 44 24 04 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 5 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*) and 3 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -593,6 +613,7 @@ rule Trojan_Win32_Vundo_J_123682_0
         $x_1_3 = {83 f8 04 7e 25 8d 74 30 fc bf ?? ?? ?? ?? 57 56 ff 15 ?? ?? ?? ?? 85 c0 74 22 83 c3 05 83 c7 05 83 fb 0f 72 e9 8b 7d f0 33 db ff 45 f8 8b 45 f8 83 45 fc 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -616,6 +637,7 @@ rule Trojan_Win32_Vundo_AX_123759_0
         $x_1_4 = {81 f1 4f 68 4f ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -636,6 +658,7 @@ rule Trojan_Win32_Vundo_AY_123902_0
         $x_1_1 = {2e 44 4c 4c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77 00 44 6c 6c 47 65 74 43 6c 61 73 73 4f 62 6a 65 63 74 00 49 6e 69 74 53 65 63 75 72 69 74 79 49 6e 74 65 72 66 61 63 65 57 00 4c 73 61 41 70 43 61 6c 6c 50 61 63 6b 61 67 65 00 4c 73 61 41 70 43 61 6c 6c 50 61 63 6b 61 67 65 50 61 73 73 74 68 72 6f 75 67 68 00 4c 73 61 41 70 43 61 6c 6c 50 61 63 6b 61 67 65 55 6e 74 72 75 73 74 65 64 00 4c 73 61 41 70 49 6e 69 74 69 61 6c 69 7a 65 50 61 63 6b 61 67 65 00 4c 73 61 41 70 4c 6f 67 6f 6e 54 65 72 6d 69 6e 61 74 65 64 00 4c 73 61 41 70 4c 6f 67 6f 6e 55 73 65 72 00 4c 73 61 41 70 4c 6f 67 6f 6e 55 73 65 72 45 78 00 53 70 49 6e 69 74 69 61 6c 69 7a 65 00 63 00 66 00 6f 00 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -666,6 +689,7 @@ rule Trojan_Win32_Vundo_BX_124436_0
         $x_1_11 = "Your e-mail account is no longer subject to termination" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -690,6 +714,7 @@ rule Trojan_Win32_Vundo_BY_124513_0
         $x_1_1 = {fa 8f 80 bf b1 50 67 73 43 44 54 ca 6d af 50 c0 5f 49 6e 73 74 6d 61 c6 46 d9 68 4e 10 1c 44 4c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -718,6 +743,7 @@ rule Trojan_Win32_Vundo_L_124522_0
         $x_1_8 = {68 bd 4d 54 7d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -748,6 +774,7 @@ rule Trojan_Win32_Vundo_M_124539_0
         $x_1_5 = {3e cc eb 29 03 00 (c7|?? ??)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -775,6 +802,7 @@ rule Trojan_Win32_Vundo_HA_124710_0
         $x_1_4 = {b9 30 07 b4 d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -798,6 +826,7 @@ rule Trojan_Win32_Vundo_HB_124826_0
         $x_1_4 = {81 f1 e4 36 08 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -821,6 +850,7 @@ rule Trojan_Win32_Vundo_HC_124827_0
         $x_1_4 = {81 c3 60 8a 82 3e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -845,6 +875,7 @@ rule Trojan_Win32_Vundo_N_124967_0
         $x_1_4 = {b4 e4 39 28 03 00 (c7|?? ??)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -872,6 +903,7 @@ rule Trojan_Win32_Vundo_O_125094_0
         $x_1_7 = "g_ConnectionPerDay" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -898,6 +930,7 @@ rule Trojan_Win32_Vundo_HM_125126_0
         $x_1_7 = {44 9d 00 3d 76 e6 73 43 b7 5f b0 3f 58 34 da f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -926,6 +959,7 @@ rule Trojan_Win32_Vundo_Q_125196_0
         $x_1_4 = {92 f5 ee 39 03 00 (c7|?? ??)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -950,6 +984,7 @@ rule Trojan_Win32_Vundo_S_125493_0
         $x_1_4 = {74 27 83 7d fc 10 75 21 8b 45 10 3b c3 8b 4d f8 74 02 89 08 38 5d 14 74 0e 8b 45 0c 6a 04 5a 31 08 83 c0 04 4a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -971,6 +1006,7 @@ rule Trojan_Win32_Vundo_HT_125510_0
         $x_1_2 = {ff 75 08 59 ff 75 fc 5a 8b 14 97 ?? ?? e8 ?? ?? ?? ?? 39 45 0c 0f 84 10 00 00 00 ff 45 fc ff 75 fc 58 3b 46 18 0f 82 d5 ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -991,6 +1027,7 @@ rule Trojan_Win32_Vundo_IG_127116_0
         $x_1_1 = {2e 64 6c 6c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77 00 44 6c 6c 47 65 74 43 6c 61 73 73 4f 62 6a 65 63 74 00 61 00 66 00 68 00 6f 00 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1011,6 +1048,7 @@ rule Trojan_Win32_Vundo_IJ_127252_0
         $x_1_1 = {46 56 67 63 0d 20 78 11 c7 f5 e2 67 7c 08 ac 6a ef 9d 7c 25 09 bf 49 c7 66 b6 03 e2 f8 8e 6a ba}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1043,6 +1081,7 @@ rule Trojan_Win32_Vundo_IO_127749_0
         $x_1_13 = "m0_glk_110908" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1068,6 +1107,7 @@ rule Trojan_Win32_Vundo_Y_128082_0
         $x_1_5 = {74 5a 6a 02 53 68 54 ff ff ff 56 ff 15 ?? ?? ?? ?? 83 f8 ff 74 3f 57 6a 11 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1088,6 +1128,7 @@ rule Trojan_Win32_Vundo_IP_128204_0
         $x_1_1 = {2e 64 6c 6c 00 61 00 62 00 00 00 00 51 00 49 6e 74 65 72 6e 65 74 4f 70 65 6e 41 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1111,6 +1152,7 @@ rule Trojan_Win32_Vundo_Z_128665_0
         $x_1_3 = {66 81 38 4d 5a [0-3] c3 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1134,6 +1176,7 @@ rule Trojan_Win32_Vundo_KG_130476_0
         $x_1_1 = {60 e8 06 00 00 00 00 00 00 00 00 00 58 83 c0 08 61 [0-96] cc 62 40 c6 d4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1156,6 +1199,7 @@ rule Trojan_Win32_Vundo_W_130636_0
         $x_1_2 = {64 8b 40 30 52 c1 ca 3c 42 5a 8b 40 0c 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1179,6 +1223,7 @@ rule Trojan_Win32_Vundo_AN_131726_0
         $x_1_3 = "rundll32.exe \"%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1202,6 +1247,7 @@ rule Trojan_Win32_Vundo_AB_131764_0
         $x_1_3 = "Microsoft Corporation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*))) or
             (all of ($x*))
@@ -1233,6 +1279,7 @@ rule Trojan_Win32_Vundo_KZ_132636_0
         $x_1_9 = {0f 84 b1 00 00 00 53 68 80 00 00 00 6a 02 53 6a 03 68 00 00 00 40 ff 75 0c ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -1257,6 +1304,7 @@ rule Trojan_Win32_Vundo_KAM_132774_0
         $x_1_2 = {89 55 fc 33 c0 c1 c0 ?? ?? ?? ?? ?? ?? [0-37] 32 02 42 80 3a 00 0f 85 ?? ff ff ff 3b 45 0c 0f 84 ?? 00 00 00 [0-32] 46 [0-32] 3b 73 18 0f 82 ?? ff ff ff [0-255] 83 ec 04 c7 04 24 ?? ?? ?? ?? 81 04 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1278,6 +1326,7 @@ rule Trojan_Win32_Vundo_AG_133014_0
         $x_1_1 = {6f 00 6e 00 00 00 00 00 47 00 72 00 65 00 65 00 6b 00 20 00 49 00 42 00 4d 00 20 00 33 00 31 00 39 00 20 00 4b 00 65 00 79 00 62 00 6f 00 61 00 72 00 64 00 20 00 4c 00 61 00 79 00 6f 00 75 00 74 00 00 00 64 00 22 00 01 00 46 00 69 00 6c 00 65 00 56 00 65 00 72 00 73 00 69 00 6f 00 6e 00 00 00 00 00 35 00 2e 00 31 00 2e 00 32 00 36 00 30 00 30 00 2e 00 30 00 20 00 28 00 78 00 70 00 63 00 6c 00 69 00 65 00 6e 00 74 00 2e 00 30 00 31 00 30 00 38 00 31 00 37 00 2d 00 31 00 31 00 34 00 38 00 29 00 00 00 40 00 10 00 01 00 49 00 6e 00 74 00 65 00 72 00 6e 00 61 00 6c 00 4e 00 61 00 6d 00 65 00 00 00 6b 00 62 00 64 00 68 00 65 00 33 00 31 00 39 00 20 00 28 00 33 00 2e 00 31 00 31 00 29 00 00 00 80 00 2e 00 01 00 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1311,6 +1360,7 @@ rule Trojan_Win32_Vundo_AH_133128_0
         $x_1_13 = {73 75 69 64 3d 00 00 00 26 63 75 69 64 3d 00 00 26 74 69 64 3d 00 00 00 26 6d 6f 72 70 68 5f 69 64 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1336,6 +1386,7 @@ rule Trojan_Win32_Vundo_AJ_133130_0
         $x_3_5 = {66 81 45 e6 fd ff 8d 45 f4 50 8d 45 e4 50 ff 15 ?? ?? ?? ?? 8d 45 f4 50 50 50 ff 75 08 ff 15}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -1366,6 +1417,7 @@ rule Trojan_Win32_Vundo_AI_133133_0
         $x_1_6 = {57 36 7d 7b [0-64] 81 ?? 5b 45 cd 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1387,6 +1439,7 @@ rule Trojan_Win32_Vundo_AK_133273_0
         $x_1_1 = {e8 03 00 00 00 ?? ?? ?? 5b eb 83 c3 ?? eb ff e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1411,6 +1464,7 @@ rule Trojan_Win32_Vundo_AM_133876_0
         $x_1_4 = {3b c6 74 0e 6a 04 ff 75 0c 53 ff d0 85 c0 0f 95 45 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -1437,6 +1491,7 @@ rule Trojan_Win32_Vundo_JI_134245_0
         $x_1_3 = {2e 64 6c 6c 00 43 68 65 63 6b 53 61 76 65 00 43 68 65 63 6b 53 74 61 63 6b 00 4f 70 65 6e 53 61 76 65 00 53 68 65 6c 6c 50 61 74 68 00 55 6e 72 65 61 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1458,6 +1513,7 @@ rule Trojan_Win32_Vundo_KM_137997_0
         $x_1_2 = {db 3c 87 0c 3e 99 24 5e 0d 1c 06 b7 47 de b3 12 4d c8 43 bb 8b a6 1f 03 5a 7d 09 38 25 1f 5d d4 cb fc 96 f5 45 3b 13 0d 89 0a 1c db ae 32 20 9a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1481,6 +1537,7 @@ rule Trojan_Win32_Vundo_AP_139297_0
         $x_1_3 = {72 2d 6a 14 59 8d 50 ec 3b c8 1b c0 23 c2 50 8b d7 33 c0 e8 ?? ?? ?? ?? 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -1511,6 +1568,7 @@ rule Trojan_Win32_Vundo_KS_139736_0
         $x_1_7 = {81 38 55 8b ec 5d 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1535,6 +1593,7 @@ rule Trojan_Win32_Vundo_AQ_139780_0
         $x_1_4 = {d3 f8 47 32 45 0f 88 04 32 42 43 83 fb 04 7c 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1566,6 +1625,7 @@ rule Trojan_Win32_Vundo_AR_140581_0
         $x_1_7 = "Rundll32.exe \"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1595,6 +1655,7 @@ rule Trojan_Win32_Vundo_LM_140607_0
         $x_3_7 = "85.12.43.75" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_10_*) and 1 of ($x_3_*))) or
             ((2 of ($x_20_*))) or
@@ -1624,6 +1685,7 @@ rule Trojan_Win32_Vundo_KT_140678_0
         $x_1_6 = "FHDTimer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1654,6 +1716,7 @@ rule Trojan_Win32_Vundo_LN_141702_0
         $x_1_6 = {81 fd 00 30 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1680,6 +1743,7 @@ rule Trojan_Win32_Vundo_AT_143490_0
         $x_1_3 = {72 02 33 d2 8a 04 0e 32 04 3a 88 01 41 42 4b 75 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1706,6 +1770,7 @@ rule Trojan_Win32_Vundo_AU_143572_0
         $x_3_6 = {83 f8 50 74 0b 3d b7 00 00 00 0f 85 b9 00 00 00 ff 45 f8 81 7d f8 c8 00 00 00 7c af e9}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1739,6 +1804,7 @@ rule Trojan_Win32_Vundo_BL_144344_0
         $x_1_7 = {3d 4d 5a 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -1764,6 +1830,7 @@ rule Trojan_Win32_Vundo_LR_144436_0
         $x_1_2 = "Wuwei.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1788,6 +1855,7 @@ rule Trojan_Win32_Vundo_BN_144802_0
         $x_1_4 = {8b 48 3c 03 c8 89 4e 14 8b 51 2c 03 d0 8b 41 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1814,6 +1882,7 @@ rule Trojan_Win32_Vundo_BO_145074_0
         $x_1_2 = {43 6f 6f 6b 69 65 54 65 72 6d 69 6e 61 74 6f 72 2e 64 6c 6c 00 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1838,6 +1907,7 @@ rule Trojan_Win32_Vundo_BP_145096_0
         $x_1_4 = {42 00 49 00 4e 00 52 00 45 00 53 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1865,6 +1935,7 @@ rule Trojan_Win32_Vundo_BQ_145414_0
         $x_1_4 = {32 32 32 2e 64 6c 6c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77 00 44 6c 6c 47 65 74 43 6c 61 73 73 4f 62 6a 65 63 74 00 61 00 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1890,6 +1961,7 @@ rule Trojan_Win32_Vundo_MD_145478_0
         $x_1_3 = {4c 53 44 4d 5f 4d 74 78 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1912,6 +1984,7 @@ rule Trojan_Win32_Vundo_ME_145479_0
         $x_1_3 = {53 2d 31 2d 31 2d 30 00 53 2d 31 2d 31 36 2d 34 30 39 36 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1935,6 +2008,7 @@ rule Trojan_Win32_Vundo_BR_146010_0
         $x_1_3 = {44 4e 53 43 68 61 6e 67 65 72 57 69 6e 2e 64 6c 6c 00 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -1962,6 +2036,7 @@ rule Trojan_Win32_Vundo_BV_147654_0
         $x_1_3 = {44 4e 53 43 68 61 6e 67 65 72 57 69 6e 2e 64 6c 6c 00 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -1992,6 +2067,7 @@ rule Trojan_Win32_Vundo_MY_148004_0
         $x_1_7 = "Global\\xwrapper_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -2020,6 +2096,7 @@ rule Trojan_Win32_Vundo_BW_149779_0
         $x_1_4 = {49 6e 64 72 61 2e 64 6c 6c 00 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2044,6 +2121,7 @@ rule Trojan_Win32_Vundo_AV_155012_0
         $x_1_4 = {7d 15 33 c9 8a 4c 05 c4 33 d2 8a 54 05 d4 33 ca}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2068,6 +2146,7 @@ rule Trojan_Win32_Vundo_BX_157551_0
         $x_1_4 = {70 72 6f 74 65 63 74 2e 64 6c 6c 00 69 6e 73 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2092,6 +2171,7 @@ rule Trojan_Win32_Vundo_BY_157552_0
         $x_1_4 = {78 32 2e 64 6c 6c 00 69 6e 73 74 61 6c 6c 00 70 6f 70 75 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2116,6 +2196,7 @@ rule Trojan_Win32_Vundo_BZ_157553_0
         $x_1_4 = "x2_alive_mutex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2138,6 +2219,7 @@ rule Trojan_Win32_Vundo_AW_161152_0
         $x_1_2 = {8b 45 d4 6a 00 2b ce 68 80 96 98 00 1b c2 50 51}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2161,6 +2243,7 @@ rule Trojan_Win32_Vundo_OB_162787_0
         $x_1_4 = {5f 63 72 79 70 74 65 64 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2188,6 +2271,7 @@ rule Trojan_Win32_Vundo_OD_163836_0
         $x_1_5 = "LoadAppInit_DLLs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -2216,6 +2300,7 @@ rule Trojan_Win32_Vundo_OH_164751_0
         $x_2_4 = {00 80 55 aa 68 1c 27 c0 00 20 4c aa 93 8c 2f ea 13 8c 26 e5 45 09}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_2_*))) or
             ((1 of ($x_8_*) and 1 of ($x_2_*))) or
@@ -2244,6 +2329,7 @@ rule Trojan_Win32_Vundo_AX_165191_0
         $x_1_3 = {53 56 57 6a 59 ff 15 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? 2b ce 03 c1 a3 ?? ?? ?? ?? 74 ?? 8b 15 ?? ?? ?? ?? 6a 00 6a 00 6a 02 52 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2265,6 +2351,7 @@ rule Trojan_Win32_Vundo_OT_167716_0
         $x_1_2 = {2b c7 8b 34 38 8b dd 83 e3 1f 6a 20 59 2b cb 8b d6 d3 e2 8b cb d3 ee 0b d6 81 c2 ?? ?? 00 00 8b ca c1 e1 14 c1 ea 0c 0b ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2287,6 +2374,7 @@ rule Trojan_Win32_Vundo_OV_167767_0
         $x_1_3 = {8b 4d fc 66 83 79 0c 08 74 05 b8 06 00 00 00 85 c0 75 0c 8d 55 f8 52 ff 73 08 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2310,6 +2398,7 @@ rule Trojan_Win32_Vundo_CA_169244_0
         $x_1_3 = {ff 14 85 00 b0 01 10 09 00 74 04 83 45 fc 06 8b 45 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2335,6 +2424,7 @@ rule Trojan_Win32_Vundo_PD_169600_0
         $x_1_6 = {0f b7 45 10 83 e8 68 0f 84 ?? ?? ?? ?? 48 74 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2358,6 +2448,7 @@ rule Trojan_Win32_Vundo_PF_170322_0
         $x_1_4 = {56 6a 00 68 ff 0f 1f 00 e8 ?? ?? ?? ?? 6a ff 50 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 3c 08 73 52 6a 00 8d 55 d0 b8 02 00 00 00 e8 ?? ?? ?? ?? 8b 45 d0 e8 ?? ?? ?? ?? 50 8d 55 cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2383,6 +2474,7 @@ rule Trojan_Win32_Vundo_PG_170323_0
         $x_1_6 = {8b 85 8c fe ff ff ba b8 40 41 00 e8 ?? ?? ?? ?? 74 56 8d 95 88 fe ff ff 8b 45 f4 e8 ?? ?? ?? ?? 8b 85 88 fe ff ff ba c4 40 41 00 e8 ?? ?? ?? ?? 74 36 ff 75 f8 68 ?? ?? ?? 00 ff b5 a8 fe ff ff 8d 85 84 fe ff ff ba 03 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2405,6 +2497,7 @@ rule Trojan_Win32_Vundo_PK_171206_0
         $x_1_3 = {0f b6 00 83 e8 ?? 85 c0 74 0b 00 a1 ?? ?? ?? ?? 2b 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2434,6 +2527,7 @@ rule Trojan_Win32_Vundo_PR_172679_0
         $x_1_7 = {d3 c0 28 07 47 e2 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -2455,6 +2549,7 @@ rule Trojan_Win32_Vundo_AZ_173284_0
         $x_1_1 = {74 04 83 04 24 06 8b 04 24 8b 0c 85 68 31 01 10 ff d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2477,6 +2572,7 @@ rule Trojan_Win32_Vundo_CB_173302_0
         $x_1_2 = {10 ff d0 59 0a 00 89 ?? ?? (4f|4e|49) 79 ?? 68 ?? ?? (01|00)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2499,6 +2595,7 @@ rule Trojan_Win32_Vundo_QA_174089_0
         $x_1_3 = {88 cb 6e 71 bf a7 09 ed 2a c3 ab a9 80 1f a5 a5 b8 bb a9 e1 78 97 25 5d 53 b3 d7 19}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2526,6 +2623,7 @@ rule Trojan_Win32_Vundo_QA_174089_1
         $x_1_8 = "%APPDATA%\\Opera" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -2549,6 +2647,7 @@ rule Trojan_Win32_Vundo_CC_174100_0
         $x_1_3 = {83 e1 1f d3 c6 81 ee 63 1a 00 00 89 34 90 4a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2575,6 +2674,7 @@ rule Trojan_Win32_Vundo_CD_174190_0
         $x_1_6 = {73 2e 8b f0 c1 e6 17 c1 e8 09 0b c6 89 85 ?? ?? ff ff 0f b6 f1 33 db 8a 1c b5 ?? ?? ?? ?? 2b d8 88 5c 35 ?? fe c1 88 8d ?? ?? ff ff 33 db eb ce}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2602,6 +2702,7 @@ rule Trojan_Win32_Vundo_QB_174219_0
         $x_10_4 = {52 6a 06 56 ff 15 ?? ?? ?? ?? 89 5d e4 6a 04 8d 45 e4 50 6a 07 56 ff 15 ?? ?? ?? ?? 89 7d e4 6a 04 8d 4d e4 51 6a 05 56 ff 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2625,6 +2726,7 @@ rule Trojan_Win32_Vundo_CE_174276_0
         $x_1_3 = {08 a0 00 00 c7 45 0c 60 ae 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2652,6 +2754,7 @@ rule Trojan_Win32_Vundo_QF_174517_0
         $x_1_5 = {ff ff 90 d0 03 00 0f 87}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2679,6 +2782,7 @@ rule Trojan_Win32_Vundo_CF_175484_0
         $x_1_3 = {8b 08 1b db 50 8b eb ff 51 28 3b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2703,6 +2807,7 @@ rule Trojan_Win32_Vundo_RT_198877_0
         $x_1_2 = {81 3c 10 8b ff 55 8b 74 0d 41 83 f9 12 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2731,6 +2836,7 @@ rule Trojan_Win32_Vundo_RU_200106_0
         $x_2_9 = {68 2c 0f 00 00 56 56 e8 ?? ?? ?? ?? 53 68 28 09 00 00 56 56 e8 ?? ?? ?? ?? 83 c4 20 39 3e 74 25 53 b8 ?? ?? ?? ?? 68 2c 0f 00 00 50 50 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2758,6 +2864,7 @@ rule Trojan_Win32_Vundo_RV_200952_0
         $x_1_2 = {6a 02 8b 85 ?? ?? ff ff 50 ff 55 ?? 85 c0 75 12 ff 15 ?? ?? ?? ?? 83 f8 7a 74 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2787,6 +2894,7 @@ rule Trojan_Win32_Vundo_RW_202616_0
         $x_1_10 = {5b 52 52 5d 00 00 00 00 5b 55 42 4d 50 5d 00 00 5b 55 44 4c 4c 5d 00 00 5b 44 4c 4c 5d 00 00 00 5b 44 41 53 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -2817,6 +2925,7 @@ rule Trojan_Win32_Vundo_RZ_223142_0
         $x_1_3 = {33 c9 8a 0c 37 33 c1 88 04 37 46 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2844,6 +2953,7 @@ rule Trojan_Win32_Vundo_SA_223571_0
         $x_1_8 = {53 8b 5c 24 08 57 8d bb ?? ?? 00 00 66 81 3f 4d 5a 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2866,6 +2976,7 @@ rule Trojan_Win32_Vundo_CA_334045_0
         $x_1_2 = {8b df 2b d8 8a 03 88 07 47 bb 02 00 00 00 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

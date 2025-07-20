@@ -21,6 +21,7 @@ rule Trojan_MSIL_EvilPlayout_NB_2147896085_0
         $x_3_6 = "get_Installers" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

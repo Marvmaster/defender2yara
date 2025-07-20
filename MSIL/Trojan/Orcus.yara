@@ -17,6 +17,7 @@ rule Trojan_MSIL_Orcus_KAA_2147896397_0
         $x_5_2 = {36 00 34 00 38 00 36 00 2e 00 32 00 2e 00 2e 00 46 00 36 00 35 00 32 00 2e 00 32 00 41 00 37}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule TrojanSpy_Win32_Rorpesafi_A_2147697452_0
         $x_1_9 = "ZapuskVVV" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or

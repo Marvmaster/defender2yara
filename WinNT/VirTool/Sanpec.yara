@@ -19,6 +19,7 @@ rule VirTool_WinNT_Sanpec_A_2147608368_0
         $x_1_4 = {5c 00 44 00 65 00 76 00 69 00 63 00 65 00 5c 00 50 00 72 00 6f 00 63 00 50 00 61 00 6e 00 61 00 6d 00 61 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

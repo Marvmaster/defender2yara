@@ -22,6 +22,7 @@ rule Trojan_Win32_BlueStealer_SE_2147850514_0
         $x_1_7 = "HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\*RD_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

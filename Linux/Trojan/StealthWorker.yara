@@ -21,6 +21,7 @@ rule Trojan_Linux_StealthWorker_A_2147832679_0
         $x_1_6 = "WorkerHtpasswd_brut" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

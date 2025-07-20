@@ -22,6 +22,7 @@ rule Backdoor_Win32_Havex_A_2147687981_0
         $x_1_7 = "MTMxMjMxMg==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Backdoor_Win32_Havex_B_2147687982_0
         $x_1_6 = {5c 00 71 00 6c 00 6e 00 2e 00 64 00 62 00 78 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Backdoor_Win32_Havex_E_2147705726_0
         $x_1_4 = {00 00 64 00 64 00 65 00 78 00 2e 00 65 00 78 00 65 00 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

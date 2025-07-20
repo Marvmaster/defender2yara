@@ -17,6 +17,7 @@ rule Trojan_Win64_Bafrord_A_2147735241_0
         $x_1_2 = {48 83 c1 fd 4c 03 c1 49 03 c0 4c 89 05 ?? ?? 00 00 48 89 42 08 4c 89 02 48 8b 0d ?? ?? 00 00 48 c7 c2 fd ff ff ff ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_Bafrord_B_2147739978_0
         $x_1_2 = {48 83 c1 fd [0-20] 4c 03 c1 [0-7] 49 03 c0 [0-7] 48 89 42 08 4c 89 02 [0-7] 48 c7 c2 fd ff ff ff [0-7] ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

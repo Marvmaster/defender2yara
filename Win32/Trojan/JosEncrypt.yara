@@ -20,6 +20,7 @@ rule Trojan_Win32_JosEncrypt_LK_2147853258_0
         $x_1_5 = {68 10 27 00 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Adylkuzz_B_2147721257_0
         $x_1_4 = {77 75 61 75 73 65 72 2e 65 78 65 [0-4] 53 65 72 76 65 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Adylkuzz_C_2147721258_0
         $x_1_5 = {64 69 73 70 6c 61 79 [0-4] 4d 69 63 72 6f 73 6f 66 74 20 2e 4e 45 54 20 46 72 61 6d 65 77 6f 72 6b 20 4e 47 45 4e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_Adylkuzz_D_2147721500_0
         $x_1_7 = {57 48 44 4d 49 44 45 [0-4] 64 69 73 70 6c 61 79 [0-4] 57 69 6e 64 6f 77 73 20 48 61 72 64 77 61 72 65 20 44 72 69 76 65 72 20 4d 61 6e 61 67 65 6d 65 6e 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_Win32_Adylkuzz_E_2147721504_0
         $x_1_6 = {57 49 4e 53 53 [0-4] 64 69 73 70 6c 61 79 [0-4] 57 69 6e 64 6f 77 73 20 53 65 63 75 72 69 74 79}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Trojan_Win32_Adylkuzz_F_2147721531_0
         $x_1_5 = {57 69 6e 53 65 73 [0-4] 64 69 73 70 6c 61 79 [0-4] 57 69 6e 64 6f 77 73 20 53 65 63 75 72 69 74 79 20 53 65 72 76 69 63 65 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

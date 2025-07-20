@@ -18,6 +18,7 @@ rule PWS_MSIL_Vojin_A_2147686784_0
         $x_1_4 = "Bank Found: Old School" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

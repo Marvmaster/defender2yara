@@ -28,6 +28,7 @@ rule TrojanDropper_Win32_Dogrobot_A_2147611579_0
         $x_1_14 = "ChangeServiceConfigA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule TrojanDropper_Win32_Dogrobot_C_2147618533_0
         $x_1_2 = {57 6a 03 6a 01 6a 10 56 56 53 ff 15 ?? ?? ?? ?? 8b ?? ff 15 ?? ?? ?? ?? 3d 31 04 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule TrojanDropper_Win32_Dogrobot_E_2147626059_0
         $x_2_9 = {8b 45 ec 03 45 d8 0f b6 00 83 c0 05 88 45 fc 6a 00 8d 45 e0 50 6a 01 8d 45 fc 50 ff 75 f4 ff 15}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -103,6 +106,7 @@ rule TrojanDropper_Win32_Dogrobot_F_2147627777_0
         $x_1_2 = {72 65 63 79 63 6c 65 2e 7b ?? ?? ?? ?? ?? ?? ?? ?? 2d ?? ?? ?? ?? 2d ?? ?? ?? ?? 2d ?? ?? ?? ?? 2d ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 7d 5c 6b 61 76 33 32 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule TrojanDropper_Win32_Dogrobot_G_2147641424_0
         $x_1_5 = "%c:\\Program files\\MSDN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

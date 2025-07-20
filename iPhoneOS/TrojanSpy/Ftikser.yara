@@ -18,6 +18,7 @@ rule TrojanSpy_iPhoneOS_Ftikser_A_2147750358_0
         $x_1_4 = {2f 62 69 6e 2f 25 40 00 44 6f 77 6e 6c 6f 61 64 69 6e 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanSpy_iPhoneOS_Ftikser_A_2147750358_1
         $x_1_4 = {52 75 6e 43 6f 6d 6d 61 6e 64 3a [0-5] 53 65 6e 64 53 4d 53 3a [0-5] 43 61 6c 6c 54 65 6c 3a [0-5] 47 65 74 47 70 73 3a [0-5] 47 65 74 57 65 69 58 69 6e 3a [0-5] 47 65 74 4b 65 79 43 68 61 69 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

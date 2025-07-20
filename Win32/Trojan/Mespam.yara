@@ -23,6 +23,7 @@ rule Trojan_Win32_Mespam_A_2147576479_0
         $x_1_9 = "ksbsskeenmigkbcfhjjerfmgbddin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -65,6 +66,7 @@ rule Trojan_Win32_Mespam_B_2147580881_0
         $x_1_17 = "htmlcompose/c_compose" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -107,6 +109,7 @@ rule Trojan_Win32_Mespam_C_2147583606_0
         $x_1_22 = "spmsmtsmx.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (17 of ($x*))
 }
 
@@ -130,6 +133,7 @@ rule Trojan_Win32_Mespam_2147598687_0
         $x_1_3 = {01 83 88 c1 27 40 00 61 16 b8 07 fd 2d 21 30 85 15 6c 4e 13 32 49 02 d8 99 26 40 00 52 62 a3 23 6e 21 d5 e4 2a fc 28 d3 78 5e 77 75 73 6f 63 41 b7 33 79 62 a1 94 d6 03 2b fc 28 d3 31 f9 02 7a 8a e5 83 ec 5b 96 4c f5 2d 21 d6 03 f2 41 24 d4 31 f9 02 85 8c 75 08 03 c9 0b 16 b4 84 27 20 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +175,7 @@ rule Trojan_Win32_Mespam_A_2147603216_0
         $x_1_21 = "UniversalWebEngine" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 10 of ($x_1_*))) or
             ((6 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -207,6 +212,7 @@ rule Trojan_Win32_Mespam_E_2147626466_0
         $x_1_4 = {4d 00 7a 00 4e 00 61 00 6d 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -229,6 +235,7 @@ rule Trojan_Win32_Mespam_F_2147626574_0
         $x_1_3 = {7a 70 75 72 73 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -256,6 +263,7 @@ rule Trojan_Win32_Mespam_G_2147628510_0
         $x_10_8 = {74 24 81 fe a0 00 00 00 75 07 e8 ?? ?? 00 00 eb 15 81 fe 02 02 00 00 74 08 81 fe a2 00 00 00 75 05 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))

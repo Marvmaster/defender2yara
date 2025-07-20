@@ -29,6 +29,7 @@ rule Trojan_Win32_TurlaMtx_A_2147845983_0
         $x_1_15 = "Global\\{E41B9AF4-B4E1-063B-7352-4AB6E8F355C7}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or

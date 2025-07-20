@@ -17,6 +17,7 @@ rule Trojan_Linux_VShell_A_2147931808_0
         $x_1_2 = {48 8b 4a 10 48 8b 72 18 48 89 74 24 48 48 8b 52 08 48 89 54 24 50 48 8b 19 48 8b 49 08 48 89 4c 24 40 48 8d 05 e3 e0 05 00 0f 1f 00 e8 db e7 c2 ff 48 8b 5c 24 50 48 89 c1 48 8b 7c 24 40 31 f6 45 31 c0 4d 89 c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Linux_VShell_B_2147943670_0
         $x_1_2 = {48 85 c0 74 24 48 8b 38 48 8b 70 08 31 c0 48 8d 1d d4 f7 44 00 b9 0f 00 00 00 e8 ea 7b fe ff 48 83 c4 28 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

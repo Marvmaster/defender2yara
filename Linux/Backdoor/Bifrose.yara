@@ -16,6 +16,7 @@ rule Backdoor_Linux_Bifrose_JJ_2147781121_0
         $x_1_2 = {8b 45 f0 03 45 08 0f b6 00 30 45 fd 8b 45 f0 89 c1 03 4d 08 8b 45 f8 89 c2 02 55 fd b8 ff ff ff ff 21 d0 88 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Backdoor_Linux_Bifrose_B_2147905472_0
         $x_5_2 = {48 63 05 56 55 20 00 48 6b c0 3e 4a 8d 14 28 41 0f bf 4c 05 3c bf b8 5d 40 00 31 c0 e8 ?? ?? ?? ?? bf c4 5d 40 00 31 c0 e8 ?? ?? ?? ?? bf 02 00 00 00 be 01 00 00 00 ba 06 00 00 00 e8 ?? ?? ?? ?? 41 89 c4 45 85 e4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule PWS_Win32_Prostor_A_2147605626_0
         $x_100_2 = "Software\\Microsoft\\Windows\\Currentversion\\Run" wide //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

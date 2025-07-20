@@ -20,6 +20,7 @@ rule Trojan_Win32_Bafi_M_2147660267_0
         $x_10_6 = "F535DD2D-9339-48ED-A378-61084B1049AB" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_80_*) and 2 of ($x_10_*))) or
             ((1 of ($x_100_*) and 1 of ($x_80_*) and 1 of ($x_20_*))) or

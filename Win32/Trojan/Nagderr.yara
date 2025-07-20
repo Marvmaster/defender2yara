@@ -17,6 +17,7 @@ rule Trojan_Win32_Nagderr_A_2147625413_0
         $x_1_3 = {80 3f 2f 75 f2 80 7f 05 3e 75 ec 8b 57 01 81 e2 df df df df 81 fa 42 4f 44 59 75 db}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

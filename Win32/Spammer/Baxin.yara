@@ -16,6 +16,7 @@ rule Spammer_Win32_Baxin_2147627340_0
         $x_1_2 = "tudo\\baixa darlam\\Project1.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

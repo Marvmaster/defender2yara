@@ -17,6 +17,7 @@ rule Worm_Win32_Failnum_B_2147693206_0
         $x_1_3 = {ff ff de c0 ad d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

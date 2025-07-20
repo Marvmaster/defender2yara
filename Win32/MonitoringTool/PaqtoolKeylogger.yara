@@ -17,6 +17,7 @@ rule MonitoringTool_Win32_PaqtoolKeylogger_17560_0
         $x_3_3 = {59 6f 75 20 68 61 76 65 20 61 6c 72 65 61 64 79 20 73 74 61 72 74 65 64 20 4b 65 79 6c 6f 67 2e ?? ?? ?? ?? 6f 6e 65 49 6e 73 74 61 6e 63 65 4d 75 74 65 78 74 50 61 71 4b 65 79 4c 6f 67}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

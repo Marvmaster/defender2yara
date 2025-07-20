@@ -18,6 +18,7 @@ rule Worm_MSIL_Puontib_A_2147637040_0
         $x_1_4 = {69 6e 66 65 63 74 44 72 69 76 65 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Worm_MSIL_Puontib_B_2147664122_0
         $x_1_3 = {1b 28 31 00 00 0a 72 ?? ?? 00 70 28 32 00 00 0a 73 55 00 00 0a 0a 06 6f 56 00 00 0a 16 6a 18 6f 57 00 00 0a 26 06 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Worm_MSIL_Puontib_C_2147682385_0
         $x_1_11 = {00 52 75 6e 00 47 43 00 4b 65 65 70 41 6c 69 76 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -101,6 +104,7 @@ rule Worm_MSIL_Puontib_D_2147688857_0
         $x_1_6 = "c2V0IEZydXhyID0gV1NjcmlwdC5DcmVhdGVPYmplY3QoIiJTa3lwZTRDT00uU2t5cGUiIiwgIiJTa3lwZV8iIik=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

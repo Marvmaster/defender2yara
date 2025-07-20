@@ -18,6 +18,7 @@ rule Ransom_Linux_Fog_A_2147921856_0
         $x_1_3 = ".fog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

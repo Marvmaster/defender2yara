@@ -21,6 +21,7 @@ rule Trojan_Win32_Musecador_V_2147739942_0
         $x_1_6 = "virus QQ 621370902" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

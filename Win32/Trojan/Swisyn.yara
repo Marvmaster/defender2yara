@@ -20,6 +20,7 @@ rule Trojan_Win32_Swisyn_E_2147632136_0
         $x_1_6 = {70 61 73 6c 69 73 74 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Swisyn_T_2147641497_0
         $x_1_3 = {68 15 3a 01 00 68 90 5d 3a 00 68 c9 75 65 00 e8 ?? ?? 00 00 83 c4 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Swisyn_J_2147647902_0
         $x_1_6 = {41 75 5f 69 6e 69 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -94,6 +97,7 @@ rule Trojan_Win32_Swisyn_M_2147691818_0
         $x_1_4 = "%APPDATA%\\Microsoft\\wuauclt\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_Win32_Swisyn_U_2147709858_0
         $x_1_5 = "DisableCMD /t REG_DWORD /d 1 /f" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +153,7 @@ rule Trojan_Win32_Swisyn_ADA_2147783530_0
         $x_3_9 = "ShellIE_WindowRegistered" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +176,7 @@ rule Trojan_Win32_Swisyn_MBHW_2147888485_0
         $x_1_2 = {41 00 2a 00 5c 00 41 00 46 00 3a 00 5c 00 52 00 46 00 44 00 5c 00 78 00 4e 00 65 00 77 00 43 00 6f 00 64 00 65 00 5c 00 78 00 4e 00 65 00 77 00 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -192,6 +199,7 @@ rule Trojan_Win32_Swisyn_GMH_2147890055_0
         $x_1_2 = "TJprojMain.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +224,7 @@ rule Trojan_Win32_Swisyn_GNF_2147896386_0
         $x_1_4 = "qfxrnSkBNkj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -238,6 +247,7 @@ rule Trojan_Win32_Swisyn_MBXR_2147919374_0
         $x_1_2 = "KLprojMain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -259,6 +269,7 @@ rule Trojan_Win32_Swisyn_ARAZ_2147929141_0
         $x_2_1 = {8b 44 24 10 8d 54 24 14 6a 04 52 6a 04 6a 00 68 cc c1 b0 00 50 89 7c 24 2c ff d6 8b 54 24 10 8d 4c 24 14 6a 04 51 6a 04 6a 00 68 c0 c1 b0 00 52 c7 44 24 2c 03 00 00 00 ff d6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -281,6 +292,7 @@ rule Trojan_Win32_Swisyn_ASW_2147933246_0
         $x_2_2 = {8d 44 24 00 68 ec ?? ba 00 50 e8 ?? ?? ?? ?? 83 c4 08 8d 4c 24 00 6a 10 68 ac ?? ba 00 51 6a 00 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -303,6 +315,7 @@ rule Trojan_Win32_Swisyn_ASW_2147933246_1
         $x_1_2 = {8d 53 41 8d 44 24 14 52 68 5c b1 e1 00 50 e8 ?? ?? ?? ?? 83 c4 0c 8d 4c 24 14 51 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -325,6 +338,7 @@ rule Trojan_Win32_Swisyn_ASY_2147935965_0
         $x_3_2 = {89 74 24 1c 89 44 24 20 c7 44 24 24 20 ?? b6 00 89 5c 24 28 89 5c 24 2c c7 44 24 30 01 00 00 00 89 4c 24 34 c7 44 24 38 00 01 00 00 89 5c 24 3c 89 5c 24 40 89 5c 24 44 c7 44 24 48 e0 ?? b6 00 66 89 5c 24 50 66 89 5c 24 52 c7 44 24 54 d4 ?? b6 00 89 5c 24 5c c7 44 24 4c 06 00 20 00 ff 15}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -349,6 +363,7 @@ rule Trojan_Win32_Swisyn_ASI_2147935977_0
         $x_2_4 = "RootkitRevealer must be run from the console" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -371,6 +386,7 @@ rule Trojan_Win32_Swisyn_ASV_2147936095_0
         $x_3_2 = {89 74 24 1c 89 44 24 20 c7 44 24 24 20 ?? b3 00 89 5c 24 28 89 5c 24 2c c7 44 24 30 01 00 00 00 89 4c 24 34 c7 44 24 38 00 01 00 00 89 5c 24 3c 89 5c 24 40 89 5c 24 44 c7 44 24 48 e0 ?? b3 00 66 89 5c 24 50 66 89 5c 24 52 c7 44 24 54 d4 ?? b3 00 89 5c 24 5c c7 44 24 4c 06 00 20 00 ff 15}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -393,6 +409,7 @@ rule Trojan_Win32_Swisyn_ASL_2147936106_0
         $x_3_2 = {51 53 68 4b 10 00 00 6a 78 56 89 44 24 78 ff d7 50 ff d5 85 c0 75 18 6a 30 68 ac ?? 9a 00 68 80 ?? 9a 00 56 ff 15}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -415,6 +432,7 @@ rule Trojan_Win32_Swisyn_ASU_2147936252_0
         $x_1_2 = {ff d7 8b 1d ac ?? bf 00 50 ff d3 68 bc ?? bf 00 68 a0 ?? bf 00 8b f0 ff d7 50 ff d3 3b f5 8b f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

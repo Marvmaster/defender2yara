@@ -20,6 +20,7 @@ rule Ransom_Linux_Sodinokibi_JJ_2147783553_0
         $x_1_6 = "Using silent mode, if you on esxi - stop VMs manualy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Linux_Sodinokibi_JK_2147784192_0
         $n_100_3 = "SecureVisor" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -66,6 +68,7 @@ rule Ransom_Linux_Sodinokibi_JL_2147795772_0
         $x_1_4 = "{\"ver\":%d,\"pk\":\"%s\",\"uid\":\"%s\",\"sk\":\"%s\",\"os\":\"%s\",\"ext\":\"%s\"}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

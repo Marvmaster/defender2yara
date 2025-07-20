@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Minmal_A_2147649826_0
         $x_1_2 = {ff d5 99 b9 1a 00 00 00 f7 f9 80 c2 61 88 14 1e 46 3b f7 72 eb 5d 5b 5f 5e c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

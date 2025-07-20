@@ -17,6 +17,7 @@ rule Trojan_Win64_DarkMoon_GVA_2147944804_0
         $x_1_2 = {ac 48 8d 3f 48 8d 3f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

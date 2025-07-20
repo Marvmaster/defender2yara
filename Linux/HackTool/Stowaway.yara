@@ -20,6 +20,7 @@ rule HackTool_Linux_Stowaway_A_2147844753_0
         $x_1_5 = "dirtyLocked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

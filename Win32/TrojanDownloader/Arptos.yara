@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Arptos_A_2147640162_0
         $x_1_5 = {69 00 67 00 69 00 6e 00 61 00 6c 00 46 00 69 00 6c 00 65 00 6e 00 61 00 6d 00 65 00 00 00 49 00 45 00 78 00 70 00 6c 00 6f 00 72 00 65 00 41 00 63 00 74 00 69 00 76 00 65 00 78 00 2e 00 45 00 58 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

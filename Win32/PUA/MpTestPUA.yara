@@ -19,6 +19,7 @@ rule PUA_Win32_MpTestPUA_257953_0
         $x_3_5 = "0d2d1465-7406-4973-9eac-c1801f5a9a36" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

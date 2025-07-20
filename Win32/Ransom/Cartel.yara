@@ -17,6 +17,7 @@ rule Ransom_Win32_Cartel_AA_2147822382_0
         $x_1_2 = "/c vssadmin.exe Delete Shadows /All /Quiet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

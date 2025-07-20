@@ -18,6 +18,7 @@ rule HackTool_MacOS_X_Rubilyn_A_2147681916_0
         $x_2_3 = "rubilyn" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

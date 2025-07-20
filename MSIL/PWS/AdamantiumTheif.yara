@@ -25,6 +25,7 @@ rule PWS_MSIL_AdamantiumTheif_GA_2147773585_0
         $x_1_10 = "Not connected to internet!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))

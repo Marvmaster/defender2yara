@@ -19,6 +19,7 @@ rule Ransom_Win32_Zudochka_A_2147756600_0
         $x_1_4 = "decryptor and a unique decryption key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Win32_Zudochka_D_2147756620_0
         $x_1_4 = "Do not rename encrypted files." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_Win32_Zudochka_AR_2147756636_0
         $x_2_7 = "C:\\WINDOWS\\SYSTEM32\\drivers\\gmreadme.txt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             ((5 of ($x_2_*))) or
@@ -96,6 +99,7 @@ rule Ransom_Win32_Zudochka_V_2147757176_0
         $x_2_2 = {8b 11 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 e8 ?? a3 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 83 c2 ?? ff 35 ?? ?? ?? ?? 8f 45 ?? 8b ca 31 4d ?? 8b 45 ?? c7 05 [0-10] 01 05 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 11}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Ransom_Win32_Zudochka_G_2147765552_0
         $x_1_3 = "LockBit Decryptor 1.3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

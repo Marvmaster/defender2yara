@@ -23,6 +23,7 @@ rule Trojan_MSIL_Tnega_RT_2147763138_0
         $x_5_8 = "4C816952BA53CC361D8E45BD833338DC6427E4A5D5F06EBAD5351FD46439A15A" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_MSIL_Tnega_AQ_2147765653_0
         $x_1_6 = "remove_OnPluginsLoadedParseDoubleget_Syntax" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Trojan_MSIL_Tnega_AL_2147768083_0
         $x_1_8 = "C:/temp/filed.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +117,7 @@ rule Trojan_MSIL_Tnega_MS_2147770002_0
         $x_1_17 = "VerificaVersaoPlugin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -142,6 +146,7 @@ rule Trojan_MSIL_Tnega_AMP_2147773165_0
         $x_1_8 = "hpCGGsxnBfkpZyTC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +180,7 @@ rule Trojan_MSIL_Tnega_AMP_2147773165_1
         $x_1_13 = "WinForms_SeeInnerException" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +207,7 @@ rule Trojan_MSIL_Tnega_AM_2147781183_0
         $x_1_6 = "mconhost" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +232,7 @@ rule Trojan_MSIL_Tnega_MA_2147786445_0
         $x_3_4 = "DebuggerBrowsableAttribute" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -252,6 +260,7 @@ rule Trojan_MSIL_Tnega_UMQ_2147787404_0
         $x_1_7 = "DecodeWithMatchByte" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -279,6 +288,7 @@ rule Trojan_MSIL_Tnega_HXS_2147787482_0
         $x_5_7 = "11111-22222-50001-00002" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -310,6 +320,7 @@ rule Trojan_MSIL_Tnega_HWJ_2147787669_0
         $x_1_8 = "set_SecurePassword" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -337,6 +348,7 @@ rule Trojan_MSIL_Tnega_DHI_2147788129_0
         $x_1_7 = "DecodeFromStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -362,6 +374,7 @@ rule Trojan_MSIL_Tnega_DFS_2147788916_0
         $x_1_5 = "PacketFileManager_DownloadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -384,6 +397,7 @@ rule Trojan_MSIL_Tnega_IDI_2147788939_0
         $x_1_2 = "AMR_DOWN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -407,6 +421,7 @@ rule Trojan_MSIL_Tnega_B_2147788941_0
         $x_1_3 = "GxP6yGPwtZJTjM5nLF1kquatccbmojv9ETK.zip" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -433,6 +448,7 @@ rule Trojan_MSIL_Tnega_ING_2147789079_0
         $x_1_6 = "get_StartupPath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -462,6 +478,7 @@ rule Trojan_MSIL_Tnega_YN_2147789209_0
         $x_1_9 = "Chuyentien" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -486,6 +503,7 @@ rule Trojan_MSIL_Tnega_PAG_2147789451_0
         $x_1_4 = "Fro@mBa@se6@4St@ring@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -514,6 +532,7 @@ rule Trojan_MSIL_Tnega_IFK_2147793174_0
         $x_1_8 = "get_CurrentDomain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -538,6 +557,7 @@ rule Trojan_MSIL_Tnega_INL_2147793939_0
         $x_1_4 = "198-ProtectorA198-Protector" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -561,6 +581,7 @@ rule Trojan_MSIL_Tnega_IKV_2147794361_0
         $x_1_3 = "tererererwgamal.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -583,6 +604,7 @@ rule Trojan_MSIL_Tnega_PA_2147794824_0
         $x_1_2 = {19 2d 09 26 2b 21 0a 2b ea 0b 2b f3 0c 2b f5 07 08 18 5b 02 08 18 6f 26 00 00 0a 1f 10 28 27 00 00 0a 9c 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -606,6 +628,7 @@ rule Trojan_MSIL_Tnega_BIF_2147798371_0
         $x_1_3 = "__StaticArrayInitTypeSize=87" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -629,6 +652,7 @@ rule Trojan_MSIL_Tnega_M_2147799519_0
         $x_1_3 = "OneDriveTimerUI.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -658,6 +682,7 @@ rule Trojan_MSIL_Tnega_MD_2147808968_0
         $x_1_9 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -689,6 +714,7 @@ rule Trojan_MSIL_Tnega_MB_2147809047_0
         $x_1_11 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -717,6 +743,7 @@ rule Trojan_MSIL_Tnega_BL_2147810206_0
         $x_1_8 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -740,6 +767,7 @@ rule Trojan_MSIL_Tnega_RK_2147818978_0
         $x_1_3 = "/home/keith/builds/mingw/gcc-9.2.0-mingw32-cross-native/mingw32/libgcc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -763,6 +791,7 @@ rule Trojan_MSIL_Tnega_RK_2147818978_1
         $x_1_3 = "CredUIPromptForCredentials" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -790,6 +819,7 @@ rule Trojan_MSIL_Tnega_ABM_2147832742_0
         $x_1_7 = "#=zC23wgLjk9R1QtaYL_XeFtS6twt4z" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -812,6 +842,7 @@ rule Trojan_MSIL_Tnega_SPQ_2147837092_0
         $x_2_2 = "palacewpolsce.pl/images/Qvctdry.jpeg" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -835,6 +866,7 @@ rule Trojan_MSIL_Tnega_ABFR_2147837171_0
         $x_1_3 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -860,6 +892,7 @@ rule Trojan_MSIL_Tnega_SPAD_2147840563_0
         $x_1_5 = "CreateDelegate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -883,6 +916,7 @@ rule Trojan_MSIL_Tnega_ABOK_2147842974_0
         $x_1_3 = "Metropolis_Launcher.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -910,6 +944,7 @@ rule Trojan_MSIL_Tnega_SJK_2147850512_0
         $x_1_7 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -938,6 +973,7 @@ rule Trojan_MSIL_Tnega_SJKL_2147850513_0
         $x_1_8 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -961,6 +997,7 @@ rule Trojan_MSIL_Tnega_ABGZ_2147896499_0
         $x_1_3 = "Dkkqbl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -985,6 +1022,7 @@ rule Trojan_MSIL_Tnega_SGA_2147900245_0
         $x_1_4 = "get_RequestingAssembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1007,6 +1045,7 @@ rule Trojan_MSIL_Tnega_MVT_2147900848_0
         $x_1_2 = "C:\\workspace\\mudfix\\attach\\screen_block\\general\\obj\\Release\\general.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1038,6 +1077,7 @@ rule Trojan_MSIL_Tnega_MC_2147901837_0
         $x_1_11 = "UsesEncryption" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1061,6 +1101,7 @@ rule Trojan_MSIL_Tnega_SIK_2147928023_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1085,6 +1126,7 @@ rule Trojan_MSIL_Tnega_SLP_2147935038_0
         $x_1_4 = "CSVProject.Properties" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1106,6 +1148,7 @@ rule Trojan_MSIL_Tnega_SLD_2147935820_0
         $x_1_1 = {06 72 ff 06 00 70 6f 95 00 00 0a 75 2b 00 00 01 0b 73 00 01 00 0a 0c 20 00 0e 01 00 0d 07 08 09 28 46 00 00 06 00 d0 46 00 00 01 28 50 00 00 0a 06 72 09 07 00 70 6f 01 01 00 0a 20 00 01 00 00 14 14 17 8d 08 00 00 01 25 16 08 6f 02 01 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

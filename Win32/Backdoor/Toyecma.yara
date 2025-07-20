@@ -19,6 +19,7 @@ rule Backdoor_Win32_Toyecma_A_2147708076_0
         $x_1_4 = {0f b6 59 01 88 1c 08 0f b6 19 fe cb 88 5c 37 01 83 c6 02 83 c1 02 3b f2 7e ?? 8b ?? ?? 8b ?? ?? 8b c3 25 01 00 00 80 79 ?? 48 83 c8 fe 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

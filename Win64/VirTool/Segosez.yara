@@ -20,6 +20,7 @@ rule VirTool_Win64_Segosez_A_2147853082_0
         $x_1_5 = {48 c7 44 24 28 00 00 00 00 45 33 c9 4c 8b c3 c7 44 24 20 00 00 00 00 33 d2 33 c9 ff 15 ?? ?? ?? ?? 48 8b d8 48 85 c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

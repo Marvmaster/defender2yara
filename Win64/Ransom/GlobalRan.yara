@@ -16,6 +16,7 @@ rule Ransom_Win64_GlobalRan_A_2147943806_0
         $x_1_2 = {00 6d 61 69 6e 2e 64 72 6f 70 4e 6f 74 65 00 6d 61 69 6e 2e 65 6e 63 72 79 70 74 44 69 72 65 63 74 6f 72 79 ?? 6d 61 69 6e 2e 65 6e 63 72 79 70 74 44 69 72 65 63 74 6f 72 79 2e 66 75 6e 63 32 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

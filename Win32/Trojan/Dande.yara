@@ -16,6 +16,7 @@ rule Trojan_Win32_Dande_A_2147651316_0
         $x_1_2 = {ff d0 8b f0 8b 56 3c 8b 44 32 78 8b 4d 0c 8b d1 03 c6 c1 ea 10 89 45 f8 85 d2 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

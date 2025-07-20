@@ -19,6 +19,7 @@ rule Virus_Win32_Jadtre_A_2147632742_0
         $x_1_4 = "\\\\.\\pipe\\96DBA249-E88E-4c47-98DC-E18E6E3E3E5A" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

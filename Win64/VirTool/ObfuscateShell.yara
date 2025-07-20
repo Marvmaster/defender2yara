@@ -18,6 +18,7 @@ rule VirTool_Win64_ObfuscateShell_B_2147758795_0
         $x_1_3 = {48 89 c1 e8 ?? ?? ?? ?? 48 8d ?? ?? ?? ?? ?? 48 89 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

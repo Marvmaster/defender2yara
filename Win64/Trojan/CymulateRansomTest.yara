@@ -21,6 +21,7 @@ rule Trojan_Win64_CymulateRansomTest_LK_2147846290_0
         $x_1_6 = "get-encryption-key?token=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win64_CymulateRansomTest_MKC_2147846308_0
         $x_1_3 = "\\Users\\YoavShaharabani\\source\\repos\\windows-scenarios\\Payloads\\NativeRansomewareDll\\x64\\RandomKey_ManualAes_Overwrite\\NativeRansomewareDll.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win64_CymulateRansomTest_MKW_2147846309_0
         $x_1_3 = {5c 55 73 65 72 73 5c 59 6f 61 76 53 68 61 68 61 72 61 62 61 6e 69 5c 73 6f 75 72 63 65 5c 72 65 70 6f 73 5c 77 69 6e 64 6f 77 73 2d 73 63 65 6e 61 72 69 6f 73 5c 50 61 79 6c 6f 61 64 73 5c 4e 61 74 69 76 65 52 61 6e 73 6f 6d 65 77 61 72 65 44 6c 6c 5c 78 36 34 5c [0-48] 5c 4e 61 74 69 76 65 52 61 6e 73 6f 6d 65 77 61 72 65 44 6c 6c 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Win64_CymulateRansomTest_MKD_2147846567_0
         $x_1_2 = "encryption_path:string:c:\\programdata\\cymulate\\EDR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

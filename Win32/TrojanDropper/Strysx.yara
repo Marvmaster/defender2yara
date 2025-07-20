@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Strysx_A_2147599287_0
         $x_1_3 = {73 79 73 00 77 69 6e 33 32 00 00 00 6d 73 78 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

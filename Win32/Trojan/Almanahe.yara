@@ -21,6 +21,7 @@ rule Trojan_Win32_Almanahe_B_2147595047_0
         $x_2_7 = "ZwLoadDriver" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Trojan_Win32_Almanahe_C_2147609322_0
         $x_1_1 = {74 50 89 75 e4 81 7d e4 d0 04 00 00 73 17 8b 45 e4 8d 80 ?? ?? ?? ?? 33 c9 8a 08 83 f1 23 88 08 ff 45 e4 eb e0 56 8d 45 e4 50 68 00 26 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Almanahe_C_2147609322_1
         $x_1_2 = {5f 5f 44 4c 5f 43 4f 52 45 34 47 41 45 58 5f 4d 55 54 45 58 5f 5f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win32_Almanahe_C_2147609322_2
         $x_1_7 = {5f 5f 44 4c 34 47 41 45 58 5f 52 45 53 55 4c 54 5f 5f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -116,6 +120,7 @@ rule Trojan_Win32_Almanahe_D_2147609346_0
         $x_1_2 = {41 72 70 50 6c 75 67 69 6e 2e 64 6c 6c 00 44 4c 50 49 6e 69 74 00 44 4c 50 54 65 72 6d 69 6e 61 74 65 00 44 4c 50 55 70 64 61 74 65 00 44 4c 50 56 65 72 73 69 6f 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Trojan_Win32_Almanahe_D_2147609346_1
         $x_1_2 = {25 73 3f 61 63 74 69 6f 6e 3d 70 6f 73 74 26 48 54 48 3d 25 75 26 48 54 4c 3d 25 75 26 50 54 3d 25 64 26 55 53 3d 25 73 26 50 57 3d 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +171,7 @@ rule Trojan_Win32_Almanahe_A_2147645724_0
         $x_1_9 = "htmlfile\\shell\\open\\command" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*))) or

@@ -18,6 +18,7 @@ rule Trojan_Win32_Belazbot_A_2147710264_0
         $x_1_3 = {47 45 54 20 25 73 20 48 54 54 50 2f 31 2e 31 0d 0a 48 6f 73 74 3a 20 25 73 0d 0a 0d 0a 00 72 62 00 77 62 2b 00 0d 0a 0d 0a 00 4d 5a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

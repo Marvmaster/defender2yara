@@ -19,6 +19,7 @@ rule Backdoor_Win32_Polnur_A_2147650723_0
         $x_1_5 = {53 74 61 72 74 46 75 6e 00 00 00 00 53 65 53 68 75 74 64 6f 77 6e 50 72 69 76 69 6c 65 67 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_Win32_Polnur_C_2147650754_0
         $x_2_5 = {c6 45 f0 7b c6 45 f1 01}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

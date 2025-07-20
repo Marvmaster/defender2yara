@@ -17,6 +17,7 @@ rule HackTool_Win32_Mikatz_2147657555_0
         $x_100_3 = "KIWI_MSV1_0_CREDENTIALS" wide //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule HackTool_Win32_Mikatz_2147706304_0
         $x_1_2 = {6b 65 6c 6c 6f 77 6f 72 6c 64 2e 64 6c 6c 00 68 65 6c 6c 6f 77 6f 72 6c 64 00 70 69 6e 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule HackTool_Win32_Mikatz_2147706304_1
         $x_1_4 = "FUCK ANY AV" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule HackTool_Win32_Mikatz_2147706304_2
         $x_1_5 = "KiwiAndRegistryTools" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule HackTool_Win32_Mikatz_2147706304_3
         $x_1_5 = "samenumeratedomainsinsamserver" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -139,6 +144,7 @@ rule HackTool_Win32_Mikatz_2147706304_4
         $x_1_3 = {67 65 74 4c 6f 63 61 6c 41 63 63 6f 75 6e 74 73 [0-5] 67 65 74 4c 6f 67 6f 6e 50 61 73 73 77 6f 72 64 73 [0-5] 67 65 74 4c 6f 67 6f 6e 53 65 73 73 69 6f 6e 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +171,7 @@ rule HackTool_Win32_Mikatz_2147706304_5
         $x_1_6 = "ERROR kuhl_m_crypto_l_certificates ; CertGetNameString (0x%08x)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_1_*))) or
             (all of ($x*))

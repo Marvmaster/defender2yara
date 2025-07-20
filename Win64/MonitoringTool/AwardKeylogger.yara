@@ -17,6 +17,7 @@ rule MonitoringTool_Win64_AwardKeylogger_166310_0
         $x_1_3 = {80 7b 10 aa 74 08 c6 04 25 00 00 00 00 78 44 8b 44 24 ?? 48 8b 54 24 ?? 48 8b cb e8 ?? ?? ?? ?? b2 20 48 8b cb e8 ?? ?? ?? ?? 80 7b 10 aa 74 08 c6 04 25 00 00 00 00 78}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

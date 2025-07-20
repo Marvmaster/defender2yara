@@ -18,6 +18,7 @@ rule Trojan_Win32_Antivirusxp_125016_0
         $x_1_4 = {4d 61 63 68 69 6e 65 4b 65 79 2e 64 6c 6c 00 47 65 74 4b 65 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_Win32_Antivirusxp_125016_1
         $x_1_3 = "\\VirusIsolator\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Antivirusxp_125016_2
         $x_1_3 = "Antivirus XP 2008" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -92,6 +95,7 @@ rule Trojan_Win32_Antivirusxp_125016_3
         $x_1_5 = {2e 6c 6e 6b 00 53 65 44 65 62 75 67 50 72 69 76 69 6c 65 67 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -121,6 +125,7 @@ rule Trojan_Win32_Antivirusxp_125016_4
         $x_2_6 = {b8 39 32 32 39 eb 04 8b 44 24 10 8b 4c 24 38 33 c1 8b d1 81 f2 39 32 32 39}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -148,6 +153,7 @@ rule Trojan_Win32_Antivirusxp_125016_5
         $x_1_5 = "Software\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Approved" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -192,6 +198,7 @@ rule Trojan_Win32_Antivirusxp_125016_6
         $x_5_22 = {5c 6c 69 63 65 6e 73 65 2e 74 78 74 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((13 of ($x_10_*) and 2 of ($x_5_*))) or
             ((14 of ($x_10_*))) or

@@ -16,6 +16,7 @@ rule PWS_Win32_Stimilini_J_2147691946_0
         $x_1_2 = "??253763253763" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule PWS_Win32_Stimilini_K_2147707680_0
         $x_1_5 = "#!acti!#" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

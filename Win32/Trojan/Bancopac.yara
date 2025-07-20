@@ -16,6 +16,7 @@ rule Trojan_Win32_Bancopac_2147632091_0
         $x_1_2 = "user_pref(\"network.proxy.autoconfig_url" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

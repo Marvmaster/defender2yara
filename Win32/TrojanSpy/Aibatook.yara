@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Aibatook_A_2147683595_0
         $x_1_3 = {3f 4d 41 43 3d [0-16] 26 56 45 52 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanSpy_Win32_Aibatook_B_2147683896_0
         $x_1_5 = "BB82D50CAF8CD68EAA88D75AE282C8D1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -68,6 +70,7 @@ rule TrojanSpy_Win32_Aibatook_C_2147688360_0
         $x_1_5 = {61 69 6b 6f 74 6f 62 61 [0-16] 6c 6f 67 69 6e 50 61 73 73 77 6f 72 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule Ransom_MSIL_Goodlock_YAC_2147946454_0
         $x_10_9 = {65 00 6e 00 63 00 72 00 79 00 70 00 74 00 65 00 64 00 20 00 62 00 79 00 20 00 47 00 6f 00 6f 00 64 00 4c 00 6f 00 63 00 6b}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

@@ -25,6 +25,7 @@ rule Backdoor_MSIL_NetWire_MA_2147901838_0
         $x_1_10 = "set_Key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

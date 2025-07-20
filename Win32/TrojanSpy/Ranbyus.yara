@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Ranbyus_A_2147621587_0
         $x_1_5 = "prfx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule TrojanSpy_Win32_Ranbyus_C_2147645265_0
         $x_3_3 = "[MOUSE L %ux%u]" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule TrojanSpy_Win32_Ranbyus_G_2147645480_0
         $x_1_9 = "%s?id=%s&session=%u&v=%u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -102,6 +105,7 @@ rule TrojanSpy_Win32_Ranbyus_N_2147689954_0
         $x_1_4 = {73 79 73 74 65 6d 20 63 68 65 63 6b 2e 6c 6e 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -128,6 +132,7 @@ rule TrojanSpy_Win32_Ranbyus_P_2147694631_0
         $x_1_4 = {73 65 73 73 69 6f 6e 3d [0-8] 76 3d [0-8] 6e 61 6d 65 3d [0-8] 6d 6f 64 75 6c 65 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -31,6 +31,7 @@ rule Backdoor_Win32_Heling_A_2147694318_0
         $x_1_15 = "xweber_server.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -63,6 +64,7 @@ rule Backdoor_Win32_Heling_B_2147694319_0
         $x_1_11 = "XSLAuto" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

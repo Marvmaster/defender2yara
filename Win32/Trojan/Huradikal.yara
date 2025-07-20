@@ -19,6 +19,7 @@ rule Trojan_Win32_Huradikal_A_2147697776_0
         $x_1_5 = {23 63 68 72 6f 6d 65 70 61 73 73 [0-4] 23 68 75 67 62 6f 74 6d 6f 64 [0-4] 23 67 61 6d 65 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

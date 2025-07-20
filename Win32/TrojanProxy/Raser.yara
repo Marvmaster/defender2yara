@@ -28,6 +28,7 @@ rule TrojanProxy_Win32_Raser_2147582261_0
         $x_1_14 = "prefc%u.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((12 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

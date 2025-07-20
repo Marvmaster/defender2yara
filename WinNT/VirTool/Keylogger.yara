@@ -20,6 +20,7 @@ rule VirTool_WinNT_Keylogger_FE_2147617689_0
         $x_4_6 = {6d 73 65 70 73 2e 70 64 62 00}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule VirTool_WinNT_Keylogger_B_2147639082_0
         $x_1_6 = "\\DDKPasswordListenner\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

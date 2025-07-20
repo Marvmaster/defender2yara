@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Netwire_ANW_2147896121_0
         $x_1_1 = {72 43 00 00 70 6f ?? ?? ?? 0a 11 02 28 ?? ?? ?? 0a 72 43 00 00 70 6f ?? ?? ?? 0a 8e 69 5d 91 7e 03 00 00 04 11 02 91 61 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

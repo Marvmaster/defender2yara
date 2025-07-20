@@ -17,6 +17,7 @@ rule Trojan_Win32_Gyplit_A_2147646530_0
         $x_2_3 = {8a 9c 04 bc 02 00 00 80 f3 47 88 9c 04 bc 02 00 00 40 3b c1 72 ea 8d 4c 24}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

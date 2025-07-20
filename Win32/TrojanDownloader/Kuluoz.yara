@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Kuluoz_A_172580_0
         $x_1_3 = {c6 40 01 68 8b 8d ?? ?? ff ff 03 8d ?? ?? ff ff 8b 55 ?? 89 51 02 8b 85 00 ff ff 03 85 01 ff ff c6 40 06 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_Win32_Kuluoz_B_173812_0
         $x_1_5 = {00 69 64 6c 00 72 75 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule TrojanDownloader_Win32_Kuluoz_B_173812_1
         $x_10_5 = ".php?r=gate&id=" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -90,6 +93,7 @@ rule TrojanDownloader_Win32_Kuluoz_C_174849_0
         $x_1_3 = "%1024[^=]=%1024[^;]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule TrojanDownloader_Win32_Kuluoz_C_174849_1
         $x_1_3 = "%1024[^=]=%1024[^;]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule TrojanDownloader_Win32_Kuluoz_D_174869_0
         $x_1_4 = "%1024[^=]=%1024[^;]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

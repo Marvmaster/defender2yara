@@ -18,6 +18,7 @@ rule Worm_Win32_Psyokym_A_2147654086_0
         $x_1_4 = "ysp\\ysp.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Worm_Win32_Psyokym_B_2147654954_0
         $x_1_3 = "autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Worm_Win32_Psyokym_C_2147710604_0
         $x_1_8 = "S1O1F1T1W1A1R1E1\\1Microsoft1\\1W1i1n1d1o1w1s1\\1C1u1r1r1e1n1t1V1e1r1s1i1o1n1\\1R1u1n1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

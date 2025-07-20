@@ -23,6 +23,7 @@ rule MonitoringTool_Win32_SystemSurveillance_121306_0
         $x_1_9 = "then restart the System Surveillance" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Tridmerc_A_2147607401_0
         $x_1_2 = {51 53 e8 25 00 00 00 53 e8 19 00 00 00 50 e8 01 00 00 00 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win32_Tridmerc_B_2147607402_0
         $x_1_3 = {75 2c 6a 00 8d 85 d8 fd ff ff 50 e8 ?? ?? 00 00 83 f8 1f 76 00 8d 85 d8 fd ff ff 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win64_BlankGrabber_DA_2147850510_0
         $x_1_6 = "Injecting backdoor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +64,7 @@ rule Trojan_Win64_BlankGrabber_DV_2147904574_0
         $x_1_22 = ".StealTelegramSessions" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (15 of ($x*))
 }
 

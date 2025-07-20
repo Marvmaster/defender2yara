@@ -102,6 +102,7 @@ rule VirTool_WinNT_Higlieder_A_2147575030_0
         $x_1_87 = "Anti-Trojan.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (70 of ($x*))
 }
 

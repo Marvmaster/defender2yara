@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Zolpiq_A_2147645511_0
         $x_1_3 = {6d 73 74 64 33 32 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDropper_Win32_Zolpiq_C_2147646087_0
         $x_1_2 = {03 f8 8b 86 10 01 00 00 03 c3 2b b8 0c 01 00 00 05 08 01 00 00 2b be 0c 01 00 00 47 39 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

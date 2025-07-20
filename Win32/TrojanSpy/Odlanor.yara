@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Odlanor_A_2147711642_0
         $x_1_4 = {46 75 6c 6c 54 69 6c 74 50 6f 6b 65 72 3a 20 00 46 75 6c 6c 54 69 6c 74 50 6f 6b 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

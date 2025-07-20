@@ -21,6 +21,7 @@ rule HackTool_Linux_MedusaBrute_A_2147799020_0
         $x_2_7 = "medusaConnectSSLInternal" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

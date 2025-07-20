@@ -22,6 +22,7 @@ rule Trojan_Win64_DuckTail_LKA_2147899305_0
         $x_1_7 = "facebook.com/adsmanager" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Trojan_Win64_DuckTail_ADT_2147903790_0
         $x_1_1 = {83 3b 00 75 22 83 0b ff eb 45 45 33 c9 48 8d 15 b6 c4 92 00 41 83 c8 ff 48 8d 0d a3 c4 92 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win64_DuckTail_GTT_2147926754_0
         $x_1_2 = "APEX_TMHupdatingdisabledkey_not_ot_found" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win64_DuckTail_GA_2147932198_0
         $x_1_4 = "DotNetRuntimeDebugHeader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_Win64_DuckTail_GTM_2147939645_0
         $x_1_2 = "APEX_NOWAX_LOADER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

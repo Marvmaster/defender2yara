@@ -19,6 +19,7 @@ rule Trojan_Win32_Congrim_A_2147657182_0
         $x_1_4 = {8a 5e 01 0a 59 01 8a 48 01 40 0a cb 42 81 ff 00 01 00 00 88 08 0f 8c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

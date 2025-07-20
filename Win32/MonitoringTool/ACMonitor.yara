@@ -24,6 +24,7 @@ rule MonitoringTool_Win32_ACMonitor_17859_0
         $x_1_10 = "Confirm Delete" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 7 of ($x_1_*))) or
             (all of ($x*))

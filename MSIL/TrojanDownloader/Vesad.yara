@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Vesad_A_2147705837_0
         $x_1_4 = {61 64 64 5f 44 6f 77 6e 6c 6f 61 64 46 69 6c 65 43 6f 6d 70 6c 65 74 65 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

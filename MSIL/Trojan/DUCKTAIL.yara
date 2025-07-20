@@ -22,6 +22,7 @@ rule Trojan_MSIL_DUCKTAIL_EH_2147846751_0
         $x_1_7 = "CreateMemoryResourceNotification" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -59,6 +60,7 @@ rule Trojan_MSIL_DUCKTAIL_EH_2147846751_1
         $x_1_13 = "browser_headers" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +86,7 @@ rule Trojan_MSIL_DUCKTAIL_EM_2147895025_0
         $x_1_5 = "tkfgk435jkdgf.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

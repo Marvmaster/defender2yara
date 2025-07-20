@@ -17,6 +17,7 @@ rule Trojan_Win32_Zenloader_C_2147784018_0
         $x_10_3 = "#5008#" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

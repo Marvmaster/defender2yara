@@ -25,6 +25,7 @@ rule Trojan_MSIL_RelineStealer_FM_2147818352_0
         $x_1_10 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -55,6 +56,7 @@ rule Trojan_MSIL_RelineStealer_FO_2147818354_0
         $x_1_10 = "AppData\\Roaming\\TReplaceokReplaceenReplaces.tReplacext" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

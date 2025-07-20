@@ -41,6 +41,7 @@ rule Backdoor_Win32_Spybot_2147602566_0
         $x_10_27 = {59 31 f6 eb 1c e8 ?? ?? ?? 00 b9 1a 00 00 00 99 f7 f9 89 d7 83 c7 61 89 fa 88 14 35}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 12 of ($x_1_*))) or
             ((3 of ($x_2_*) and 10 of ($x_1_*))) or
@@ -100,6 +101,7 @@ rule Backdoor_Win32_Spybot_B_2147602642_0
         $x_1_2 = {86 00 74 70 67 75 78 62 73 66 7d 6e 8a 84 93 90 94 90 87 95}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

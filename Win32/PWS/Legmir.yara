@@ -22,6 +22,7 @@ rule PWS_Win32_Legmir_B_2147555054_0
         $x_1_8 = "Iparmor.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -56,6 +57,7 @@ rule PWS_Win32_Legmir_E_2147574406_0
         $x_1_11 = "WSGAME" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 7 of ($x_1_*))) or
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
@@ -84,6 +86,7 @@ rule PWS_Win32_Legmir_G_2147597322_0
         $x_1_3 = {64 6c 6c 2e 64 6c 6c 00 57 53 50 53 74 61 72 74 75 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +111,7 @@ rule PWS_Win32_Legmir_A_2147622114_0
         $x_1_5 = {4d 53 5f 44 6f 73 2e 64 6c 6c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

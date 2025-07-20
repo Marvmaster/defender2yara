@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Isnev_2147607942_0
         $x_1_8 = {62 69 61 6f 6a 69 00 00 6c 6f 63 61 6c 66 69 6c 65 00 00 00 63 6f 75 6e 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

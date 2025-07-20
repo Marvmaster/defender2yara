@@ -23,6 +23,7 @@ rule Constructor_Win32_Jenxcus_A_2147691369_0
         $x_1_8 = "delphi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

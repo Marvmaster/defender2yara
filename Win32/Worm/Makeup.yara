@@ -22,6 +22,7 @@ rule Worm_Win32_Makeup_A_2147607921_0
         $x_10_7 = {6a 00 6a 02 6a 00 0f b7 85 ?? ?? ff ff 8a 84 05 ?? ?? ff ff 50 ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 6a 64 ff 15 ?? ?? ?? ?? eb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -49,6 +50,7 @@ rule Worm_Win32_Makeup_B_2147607922_0
         $x_10_3 = {83 f8 02 75 34 89 5c 24 08 ba 05 00 00 00 b8 ?? ?? ?? ?? 89 54 24 14 31 ff be ?? ?? ?? ?? 89 7c 24 10 89 74 24 0c 89 44 24 04 c7 04 24 00 00 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))

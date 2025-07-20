@@ -19,6 +19,7 @@ rule Trojan_Win32_Ghopog_A_2147638318_0
         $x_1_5 = {72 61 76 6d 6f 6e 64 2e 65 78 65 ?? 51 51 2e 65 78 65 ?? ?? 70 66 77 2e 65 78 65 ?? 6c 73 61 73 73 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

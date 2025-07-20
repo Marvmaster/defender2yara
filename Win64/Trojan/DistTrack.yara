@@ -21,6 +21,7 @@ rule Trojan_Win64_DistTrack_D_2147731424_0
         $x_1_7 = "NDI4Cg bf039ab1663ed782124ba04d4e457892" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

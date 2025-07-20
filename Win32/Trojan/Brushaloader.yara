@@ -20,6 +20,7 @@ rule Trojan_Win32_Brushaloader_S_2147745233_0
         $x_1_5 = "GetLastActivePopup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

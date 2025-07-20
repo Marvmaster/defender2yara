@@ -19,6 +19,7 @@ rule VirTool_Win32_Dakdosc_A_2147778716_0
         $x_1_4 = "discordgo.EventHandler" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_Win32_Gerber_A_2147731047_0
         $x_1_5 = "Contact to email address: memoyanov.artur79@bitmessage.ch or bestleveldaypayday@bitmessage.ch" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

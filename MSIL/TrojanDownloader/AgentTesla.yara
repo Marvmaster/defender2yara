@@ -22,6 +22,7 @@ rule TrojanDownloader_MSIL_AgentTesla_A_2147731535_0
         $x_1_7 = "ConfuserEx v1.0.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -52,6 +53,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ND_2147777022_0
         $x_1_7 = "2.22.11.11" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NQ_2147777570_0
         $x_1_2 = {95 a2 29 09 0b 00 00 00 da a4 21 00 16 00 00 01 00 00 00 39 00 00 00 08 00 00 00 06 00 00 00 12 00 00 00 04 00 00 00 39 00 00 00 18 00 00 00 01 00 00 00 07 00 00 00 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NS_2147777696_0
         $x_1_5 = "Toairbnwmoksarjexj.Vfiozsrttxhfjelvfpiwltx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -124,6 +128,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NY_2147777949_0
         $x_1_2 = {63 00 64 00 6e 00 2e 00 64 00 69 00 73 00 63 00 6f 00 72 00 64 00 61 00 70 00 70 00 2e 00 63 00 6f 00 6d 00 2f 00 61 00 74 00 74 00 61 00 63 00 68 00 6d 00 65 00 6e 00 74 00 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule TrojanDownloader_MSIL_AgentTesla_STB_2147780285_0
         $x_1_1 = ".ml/liverpool-fc-news/features/steven-gerrard" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +176,7 @@ rule TrojanDownloader_MSIL_AgentTesla_CVX_2147794301_0
         $x_1_6 = "GetMethod" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -202,6 +209,7 @@ rule TrojanDownloader_MSIL_AgentTesla_JTN_2147794503_0
         $x_1_8 = "cmd.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -231,6 +239,7 @@ rule TrojanDownloader_MSIL_AgentTesla_JUA_2147794770_0
         $x_1_9 = "Debug Mode!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -261,6 +270,7 @@ rule TrojanDownloader_MSIL_AgentTesla_JVC_2147795099_0
         $x_1_7 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +296,7 @@ rule TrojanDownloader_MSIL_AgentTesla_JZQ_2147795411_0
         $x_1_5 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -316,6 +327,7 @@ rule TrojanDownloader_MSIL_AgentTesla_JZR_2147795412_0
         $x_1_10 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -343,6 +355,7 @@ rule TrojanDownloader_MSIL_AgentTesla_DBJ_2147795721_0
         $x_1_7 = {00 49 6e 76 6f 6b 65 4d 65 6d 62 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -369,6 +382,7 @@ rule TrojanDownloader_MSIL_AgentTesla_JXH_2147795864_0
         $x_1_6 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -396,6 +410,7 @@ rule TrojanDownloader_MSIL_AgentTesla_LCB_2147796827_0
         $x_1_7 = "Contains" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -421,6 +436,7 @@ rule TrojanDownloader_MSIL_AgentTesla_LIN_2147798335_0
         $x_1_5 = "WebClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -446,6 +462,7 @@ rule TrojanDownloader_MSIL_AgentTesla_LLB_2147799001_0
         $x_1_5 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -473,6 +490,7 @@ rule TrojanDownloader_MSIL_AgentTesla_LPD_2147805115_0
         $x_1_7 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -500,6 +518,7 @@ rule TrojanDownloader_MSIL_AgentTesla_DNO_2147805395_0
         $x_1_7 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -525,6 +544,7 @@ rule TrojanDownloader_MSIL_AgentTesla_LQS_2147805737_0
         $x_1_5 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -551,6 +571,7 @@ rule TrojanDownloader_MSIL_AgentTesla_LSD_2147807578_0
         $x_1_6 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -577,6 +598,7 @@ rule TrojanDownloader_MSIL_AgentTesla_LTB_2147807794_0
         $x_1_6 = "GetTypes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -602,6 +624,7 @@ rule TrojanDownloader_MSIL_AgentTesla_LUU_2147808669_0
         $x_1_5 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -630,6 +653,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NCB_2147810497_0
         $x_1_8 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -660,6 +684,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NHS_2147812346_0
         $x_10_10 = "GetType" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -691,6 +716,7 @@ rule TrojanDownloader_MSIL_AgentTesla_EFZ_2147812368_0
         $x_1_8 = {00 73 65 74 5f 53 65 63 75 72 69 74 79 50 72 6f 74 6f 63 6f 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -719,6 +745,7 @@ rule TrojanDownloader_MSIL_AgentTesla_EFY_2147812797_0
         $x_1_8 = {00 48 74 74 70 43 6c 69 65 6e 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -751,6 +778,7 @@ rule TrojanDownloader_MSIL_AgentTesla_EGA_2147812798_0
         $x_1_8 = {00 48 74 74 70 43 6c 69 65 6e 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -781,6 +809,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NLQ_2147813551_0
         $x_1_7 = "vpx3x;component/mainwindow.xaml" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -806,6 +835,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NLR_2147813552_0
         $x_1_5 = {44 00 78 00 79 00 72 00 6d 00 63 00 68 00 62 00 71 00 76 00 6a 00 71 00 76 00 6b 00 72 00 6c 00 66 00 68 00 61 00 75 00 6e 00 67 00 61 00 7a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -837,6 +867,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NLS_2147813579_0
         $x_1_11 = "Zipuvmvkmgwtxwhdyvxlppk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -867,6 +898,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NLT_2147813580_0
         $x_1_7 = "Suyehdmfjayr.Atcezcoqa" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -898,6 +930,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NLU_2147813581_0
         $x_1_8 = "Pqfnbdv.Yyfyodoenbg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -929,6 +962,7 @@ rule TrojanDownloader_MSIL_AgentTesla_N_2147815195_0
         $x_1_8 = "GetExecutingAssembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -957,6 +991,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NPW_2147815579_0
         $x_1_8 = "GFFQFWQFWQFWQ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -985,6 +1020,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NPY_2147815580_0
         $x_1_8 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1013,6 +1049,7 @@ rule TrojanDownloader_MSIL_AgentTesla_EOQ_2147816162_0
         $x_1_4 = {00 47 65 74 54 79 70 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1036,6 +1073,7 @@ rule TrojanDownloader_MSIL_AgentTesla_EOR_2147816163_0
         $x_1_3 = {00 47 65 74 4d 65 74 68 6f 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1059,6 +1097,7 @@ rule TrojanDownloader_MSIL_AgentTesla_EOT_2147816180_0
         $x_1_3 = "/c timeout 15" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1086,6 +1125,7 @@ rule TrojanDownloader_MSIL_AgentTesla_EPY_2147816768_0
         $x_1_7 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1109,6 +1149,7 @@ rule TrojanDownloader_MSIL_AgentTesla_EPZ_2147816769_0
         $x_1_3 = "45.137.22.163" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1133,6 +1174,7 @@ rule TrojanDownloader_MSIL_AgentTesla_EQD_2147816907_0
         $x_1_4 = "HttpWebResponse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1157,6 +1199,7 @@ rule TrojanDownloader_MSIL_AgentTesla_EQE_2147816909_0
         $x_1_4 = "HttpWebResponse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1184,6 +1227,7 @@ rule TrojanDownloader_MSIL_AgentTesla_EQO_2147817192_0
         $x_1_7 = "passPhrase" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1205,6 +1249,7 @@ rule TrojanDownloader_MSIL_AgentTesla_EQQ_2147817285_0
         $x_1_1 = {06 07 93 28 ?? ?? ?? ?? ?? 59 0c 20 ff ff 00 00 08 2f 0a 08 20 ff ff 00 00 59 0c 2b 0c 16 08 31 08 08 20 ff ff 00 00 58 0c 06 07 08 d1 9d 07 17 58 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1231,6 +1276,7 @@ rule TrojanDownloader_MSIL_AgentTesla_EQA_2147817417_0
         $x_1_6 = "HttpWebResponse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1256,6 +1302,7 @@ rule TrojanDownloader_MSIL_AgentTesla_EQR_2147817419_0
         $x_1_5 = {00 47 65 74 54 79 70 65 46 72 6f 6d 48 61 6e 64 6c 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1280,6 +1327,7 @@ rule TrojanDownloader_MSIL_AgentTesla_CC_2147817572_0
         $x_1_4 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1303,6 +1351,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ERE_2147817635_0
         $x_1_3 = {0b 06 07 16 07 8e 69 6f ?? ?? ?? 0a 00 06 0c 0a 00 73 ?? ?? ?? 06 28 ?? ?? ?? 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1326,6 +1375,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ERG_2147817660_0
         $x_1_3 = {0a 0c 08 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 0d 09 06 6f ?? ?? ?? 0a 00 06 6f ?? ?? ?? 0a 09 00 73 ?? ?? ?? 0a 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1352,6 +1402,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NSW_2147817689_0
         $x_1_6 = "YEWHSHJSJUISYUS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1374,6 +1425,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ERJ_2147817804_0
         $x_1_2 = {20 00 0c 00 00 28 ?? ?? ?? 0a 00 00 de 05 26 00 00 de 00 73 ?? ?? ?? 0a 03 73 ?? ?? ?? 0a 28 ?? ?? ?? 0a 0a 2b 00 06 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1404,6 +1456,7 @@ rule TrojanDownloader_MSIL_AgentTesla_CB_2147817827_0
         $x_1_10 = "CurrentDomain" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1432,6 +1485,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ERX_2147818253_0
         $x_1_3 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1456,6 +1510,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ERY_2147818262_0
         $x_1_4 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1481,6 +1536,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ERZ_2147818263_0
         $x_1_5 = "WebRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1506,6 +1562,7 @@ rule TrojanDownloader_MSIL_AgentTesla_KA_2147818439_0
         $x_10_1 = {00 08 13 06 16 13 07 11 06 12 07 28 1e 00 00 0a 00 08 07 11 05 18 6f 1f 00 00 0a 1f 10 28 20 00 00 0a 6f 21 00 00 0a 00 de 0d 11 07 2c 08 11 06 28 22 00 00 0a 00 dc}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1530,6 +1587,7 @@ rule TrojanDownloader_MSIL_AgentTesla_KA_2147818439_1
         $x_1_4 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1553,6 +1611,7 @@ rule TrojanDownloader_MSIL_AgentTesla_KAB_2147818440_0
         $x_1_3 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1580,6 +1639,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NUA_2147818496_0
         $x_1_7 = "Nbwomghltwhyvkknnlwv.Ovkrtdrpwteunda" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1608,6 +1668,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ESG_2147818534_0
         $x_1_5 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1640,6 +1701,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ESI_2147818582_0
         $x_1_8 = {00 52 65 76 65 72 73 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1664,6 +1726,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ESM_2147818688_0
         $x_1_4 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1687,6 +1750,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ESH_2147818842_0
         $x_1_3 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1710,6 +1774,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ESV_2147818990_0
         $x_1_3 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1735,6 +1800,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ETA_2147819064_0
         $x_1_5 = {00 47 65 74 4d 65 74 68 6f 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1756,6 +1822,7 @@ rule TrojanDownloader_MSIL_AgentTesla_HWMF_2147819208_0
         $x_1_1 = {38 16 00 00 00 12 00 28 ?? ?? ?? 06 38 1a 00 00 00 38 12 00 00 00 38 0d 00 00 00 00 28 ?? ?? ?? 06 13 00 38 dd ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1783,6 +1850,7 @@ rule TrojanDownloader_MSIL_AgentTesla_YRK_2147819209_0
         $x_1_7 = "lempado" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1806,6 +1874,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ESZ_2147819237_0
         $x_1_3 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1830,6 +1899,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ETP_2147819642_0
         $x_1_4 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1854,6 +1924,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ETJ_2147819732_0
         $x_1_4 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1881,6 +1952,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ETO_2147819733_0
         $x_1_3 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1906,6 +1978,7 @@ rule TrojanDownloader_MSIL_AgentTesla_AM_2147821601_0
         $x_1_5 = {63 00 64 00 6e 00 2e 00 64 00 69 00 73 00 63 00 6f 00 72 00 64 00 61 00 70 00 70 00 2e 00 63 00 6f 00 6d 00 2f 00 61 00 74 00 74 00 61 00 63 00 68 00 6d 00 65 00 6e 00 74 00 73 00 2f 00 [0-96] 2f 00 64 00 69 00 73 00 70 00 75 00 74 00 65 00 64 00 2e 00 74 00 78 00 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1934,6 +2007,7 @@ rule TrojanDownloader_MSIL_AgentTesla_AN_2147821849_0
         $x_1_8 = "GetMethod" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -1964,6 +2038,7 @@ rule TrojanDownloader_MSIL_AgentTesla_AL_2147822813_0
         $x_1_4 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1988,6 +2063,7 @@ rule TrojanDownloader_MSIL_AgentTesla_AO_2147822814_0
         $x_1_4 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2012,6 +2088,7 @@ rule TrojanDownloader_MSIL_AgentTesla_AR_2147823783_0
         $x_1_4 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2037,6 +2114,7 @@ rule TrojanDownloader_MSIL_AgentTesla_AP_2147823784_0
         $x_1_5 = "get_Assembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2062,6 +2140,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABM_2147824756_0
         $x_1_5 = "Invoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2086,6 +2165,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABM_2147824756_1
         $x_1_4 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2111,6 +2191,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABM_2147824756_2
         $x_1_5 = "CAccPropServicesClass.IAccPropServer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2134,6 +2215,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABG_2147824760_0
         $x_1_3 = "get_Assembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2159,6 +2241,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABO_2147824764_0
         $x_1_5 = "WebClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2184,6 +2267,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABO_2147824764_1
         $x_1_5 = "RobloxPlayerBeta.zip" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2211,6 +2295,7 @@ rule TrojanDownloader_MSIL_AgentTesla_EXV_2147826162_0
         $x_1_7 = {00 47 65 74 54 79 70 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2234,6 +2319,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NYD_2147826833_0
         $x_1_3 = "VideoPlayer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2265,6 +2351,7 @@ rule TrojanDownloader_MSIL_AgentTesla_MA_2147826873_0
         $x_1_11 = "./Trigon/bin/Trigon.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 9 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -2292,6 +2379,7 @@ rule TrojanDownloader_MSIL_AgentTesla_BF_2147827178_0
         $x_1_3 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2318,6 +2406,7 @@ rule TrojanDownloader_MSIL_AgentTesla_BF_2147827178_1
         $x_1_6 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2347,6 +2436,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABI_2147827394_0
         $x_1_9 = "CreateInstance" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2372,6 +2462,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABI_2147827394_1
         $x_1_5 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2395,6 +2486,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABD_2147827751_0
         $x_1_3 = "WebRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2419,6 +2511,7 @@ rule TrojanDownloader_MSIL_AgentTesla_D_2147828364_0
         $x_1_4 = {59 d2 9c 00 06 17 58 0a 06 7e ?? ?? ?? 04 8e 69 fe ?? 0b 07 2d 28 00 7e ?? ?? ?? 04 06 7e ?? ?? ?? 04 06 91 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2441,6 +2534,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABQ_2147828473_0
         $x_5_2 = {0a 19 6f 17 ?? ?? 0a 72 ?? ?? ?? 70 28 ?? ?? ?? 0a 28 ?? ?? ?? 06 d0 ?? ?? ?? 02 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 17 8d ?? ?? ?? 01 25 16 02 a2 6f ?? ?? ?? 06 de 03 3f 00 72 31 ?? ?? 70 28 16}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2470,6 +2564,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABQ_2147828473_1
         $x_1_9 = "CreateInstance" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2492,6 +2587,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABZ_2147828600_0
         $x_1_2 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2515,6 +2611,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABL_2147828761_0
         $x_1_3 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2539,6 +2636,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABL_2147828761_1
         $x_1_4 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2562,6 +2660,7 @@ rule TrojanDownloader_MSIL_AgentTesla_BA_2147828795_0
         $x_1_3 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2585,6 +2684,7 @@ rule TrojanDownloader_MSIL_AgentTesla_BB_2147828796_0
         $x_1_3 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2608,6 +2708,7 @@ rule TrojanDownloader_MSIL_AgentTesla_BC_2147828818_0
         $x_1_3 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2633,6 +2734,7 @@ rule TrojanDownloader_MSIL_AgentTesla_F_2147829378_0
         $x_1_5 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2657,6 +2759,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABT_2147829607_0
         $x_1_4 = "WebClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2685,6 +2788,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NXD_2147829820_0
         $x_1_8 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2711,6 +2815,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABR_2147831435_0
         $x_1_6 = "$fedbe1d0-c630-4e55-9539-9a7f0fa7f788" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2739,6 +2844,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABN_2147832233_0
         $x_1_8 = "zk2IDQz" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2765,6 +2871,7 @@ rule TrojanDownloader_MSIL_AgentTesla_AMCN_2147832524_0
         $x_1_6 = "V1dwT1EwMUhSbGhQV0ZacVpXNW5kMXBWYUZKUVVUMDk=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2786,6 +2893,7 @@ rule TrojanDownloader_MSIL_AgentTesla_AW_2147832733_0
         $x_5_1 = {8e 69 5d 91 2b 44 2b 45 91 61 d2 6f ?? ?? ?? 0a 07 1d 2c 04 17 58 0b 07 02 8e 69 32 db}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2811,6 +2919,7 @@ rule TrojanDownloader_MSIL_AgentTesla_BJ_2147832734_0
         $x_1_5 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2835,6 +2944,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABK_2147832739_0
         $x_1_4 = "safsa" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2859,6 +2969,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABAE_2147833108_0
         $x_1_4 = "SGBITPlacementManagementSystem.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2883,6 +2994,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABAO_2147833560_0
         $x_1_4 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2908,6 +3020,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABAX_2147833564_0
         $x_1_5 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2933,6 +3046,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABBD_2147834308_0
         $x_1_5 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2959,6 +3073,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABBR_2147834852_0
         $x_1_6 = "yarkaprojesi" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2982,6 +3097,7 @@ rule TrojanDownloader_MSIL_AgentTesla_K_2147835159_0
         $x_1_3 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3007,6 +3123,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABDQ_2147835894_0
         $x_1_5 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3030,6 +3147,7 @@ rule TrojanDownloader_MSIL_AgentTesla_NZS_2147836667_0
         $x_1_3 = "u6nHGiwhHY2jMCJmgs.FtMkWlnaFargBND7mv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3052,6 +3170,7 @@ rule TrojanDownloader_MSIL_AgentTesla_MP_2147836846_0
         $x_1_2 = {5d 94 13 06 08 11 04 07 11 04 91 11 06 61 d2 9c 11 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3073,6 +3192,7 @@ rule TrojanDownloader_MSIL_AgentTesla_MPA_2147836847_0
         $x_1_1 = {1e 2c 0d 17 2c 0a 1d 2c 07 2c 04 1e 2c ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3098,6 +3218,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABS_2147837014_0
         $x_1_5 = "Check if the internet address is valid" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3122,6 +3243,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABFV_2147837422_0
         $x_1_4 = "GetResponseStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3146,6 +3268,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ANLL_2147837446_0
         $x_1_4 = "hits in hit.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3167,6 +3290,7 @@ rule TrojanDownloader_MSIL_AgentTesla_MPB_2147837746_0
         $x_1_1 = {09 11 04 08 11 04 08 8e 69 5d 91 06 11 04 91 61 d2 9c 11 04 17 58 13 04 11 04 06 8e 69 32 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3191,6 +3315,7 @@ rule TrojanDownloader_MSIL_AgentTesla_RDJ_2147837813_0
         $x_1_4 = "Afvkglrxbmcqtsrghdqubmgx" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3216,6 +3341,7 @@ rule TrojanDownloader_MSIL_AgentTesla_M_2147837854_0
         $x_2_5 = "CRAZY_SEAL" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3240,6 +3366,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABFG_2147837953_0
         $x_1_4 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3264,6 +3391,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABKO_2147839357_0
         $x_1_4 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3289,6 +3417,7 @@ rule TrojanDownloader_MSIL_AgentTesla_CTT_2147841048_0
         $x_1_5 = "withoutstartup.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3314,6 +3443,7 @@ rule TrojanDownloader_MSIL_AgentTesla_CTS_2147841049_0
         $x_1_5 = "KDE Softwares" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -3343,6 +3473,7 @@ rule TrojanDownloader_MSIL_AgentTesla_CTJ_2147841050_0
         $x_1_5 = "KDE Softwares" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -3369,6 +3500,7 @@ rule TrojanDownloader_MSIL_AgentTesla_CAG_2147841199_0
         $x_2_2 = {07 2c 06 07 6f ?? 00 00 0a dc 26 20 e0 2e 00 00 28 ?? 00 00 0a de}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3393,6 +3525,7 @@ rule TrojanDownloader_MSIL_AgentTesla_CAH_2147841590_0
         $x_1_4 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3414,6 +3547,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ATA_2147842156_0
         $x_2_1 = {0a 16 0b 2b 19 06 03 07 18 6f 08 00 00 0a 1f 10 28 09 00 00 0a 6f 0a 00 00 0a 07 18 58 0b 07 03 6f 0b 00 00 0a 32 de}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3438,6 +3572,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABOI_2147842972_0
         $x_1_4 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3463,6 +3598,7 @@ rule TrojanDownloader_MSIL_AgentTesla_KAC_2147844632_0
         $x_1_5 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3484,6 +3620,7 @@ rule TrojanDownloader_MSIL_AgentTesla_MBEF_2147849063_0
         $x_1_1 = {31 00 37 00 32 00 2e 00 32 00 34 00 35 00 2e 00 31 00 39 00 31 00 2e 00 31 00 37 00 2f 00 30 00 30 00 30 00 2f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3508,6 +3645,7 @@ rule TrojanDownloader_MSIL_AgentTesla_Q_2147850695_0
         $x_1_4 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3529,6 +3667,7 @@ rule TrojanDownloader_MSIL_AgentTesla_AMAA_2147853393_0
         $x_1_1 = {06 20 97 59 c0 e0 28 ?? 01 00 06 28 ?? 01 00 0a 6f ?? 01 00 0a 06 20 ?? ?? ?? e0 28 ?? 01 00 06 28 ?? 01 00 0a 6f ?? 01 00 0a 06 06 6f ?? 01 00 0a 06 6f ?? 01 00 0a 6f ?? 01 00 0a 13 05 73 ?? 00 00 0a 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3554,6 +3693,7 @@ rule TrojanDownloader_MSIL_AgentTesla_R_2147890061_0
         $x_1_5 = "CreateInstance" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3576,6 +3716,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ATL_2147896119_0
         $x_1_2 = "transfer.sh" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3597,6 +3738,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ALA_2147896120_0
         $x_2_1 = {0a 06 18 5b 8d 2b 00 00 01 0b 16 0c 2b 18 07 08 18 5b 02 08 18 6f 33 00 00 0a 1f 10 28 34 00 00 0a 9c 08 18 58 0c 08 06}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3618,6 +3760,7 @@ rule TrojanDownloader_MSIL_AgentTesla_KAA_2147896228_0
         $x_10_1 = {00 08 13 06 16 13 07 11 06 12 07 28 ?? 00 00 0a 00 08 07 11 05 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 0a 6f ?? 00 00 0a 00 de 0d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3642,6 +3785,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABKF_2147896477_0
         $x_1_4 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3665,6 +3809,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABFA_2147896493_0
         $x_1_3 = "Vtiijrimqrvbljaiaci" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3688,6 +3833,7 @@ rule TrojanDownloader_MSIL_AgentTesla_ABBG_2147896521_0
         $x_1_3 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3717,6 +3863,7 @@ rule TrojanDownloader_MSIL_AgentTesla_AS_2147896626_0
         $x_1_9 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3742,6 +3889,7 @@ rule TrojanDownloader_MSIL_AgentTesla_DIG_2147942740_0
         $x_1_5 = "Leswvbebd.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

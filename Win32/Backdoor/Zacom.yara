@@ -21,6 +21,7 @@ rule Backdoor_Win32_Zacom_A_2147681818_0
         $x_1_7 = {3d 04 10 00 00 77 23 74 1a 2d 04 0c 00 00 74 0c 83 e8 05 75 23 bf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Backdoor_Win32_Zacom_C_2147706723_0
         $x_1_5 = "reg add hkcu\\software\\microsoft\\windows\\currentversion\\run /v" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))

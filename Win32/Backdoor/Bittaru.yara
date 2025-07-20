@@ -18,6 +18,7 @@ rule Backdoor_Win32_Bittaru_A_2147645015_0
         $x_1_4 = {3d 4b 4f 4f 4c 75 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

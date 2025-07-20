@@ -19,6 +19,7 @@ rule Trojan_Win64_FusionBlaze_A_2147725397_0
         $x_1_4 = {24 80 00 00 00 ff 15 ?? ?? ?? ?? 83 f8 ff 48 0f 44 df 48 8b c3 48 8b 9c 24 88 00 00 00 48 83 c4 70 5f c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win64_FusionBlaze_A_2147725397_1
         $x_1_3 = {52 65 43 6f 6e 66 69 67 20 73 75 63 63 65 73 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win64_FusionBlaze_A_2147725397_2
         $x_1_5 = {52 65 43 6f 6e 66 69 67 20 73 75 63 63 65 73 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

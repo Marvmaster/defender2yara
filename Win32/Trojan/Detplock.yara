@@ -17,6 +17,7 @@ rule Trojan_Win32_Detplock_RPX_2147845774_0
         $x_1_2 = {8b 12 89 ff 81 e2 ff 00 00 00 09 df 29 db 29 db 46}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

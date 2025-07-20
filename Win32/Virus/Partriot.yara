@@ -19,6 +19,7 @@ rule Virus_Win32_Partriot_B_2147601414_0
         $x_10_5 = {33 c9 e8 3f 02 00 00 85 c0 0f 84 03 02 00 00 89 45 f8 e8 3f 02 00 00 85 c0 0f 84 ea 01 00 00 89 45 f4 66 81 38 4d 5a 0f 85 cc 01 00 00 66 83 78 18 40 0f 85 c1 01 00 00 8b 40 3c 89 45 e4 03 45 f4 81 38 50 45 00 00 0f 85 ac 01 00 00 80 78 ff 2a 0f 84 99 01 00 00 8b f8 0f b7 47 06 48 6b c0 28}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Atalo_A_2147654521_0
         $x_1_4 = {7e 28 bb 01 00 00 00 8d 45 f0 8b 55 fc 0f b6 54 1a ff 2b d3 2b d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

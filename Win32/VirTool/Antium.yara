@@ -20,6 +20,7 @@ rule VirTool_Win32_Antium_A_2147823375_0
         $x_1_5 = "DownstreamLocaltcp).ListenAddr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

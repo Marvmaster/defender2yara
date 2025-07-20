@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Putabmow_A_2147697380_0
         $x_1_5 = {68 a0 00 00 00 6a 20 68 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 83 c4 10 c6 84 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Putabmow_B_2147697381_0
         $x_1_8 = {2f 00 2f 00 75 00 70 00 64 00 61 00 74 00 65 00 2f 00 76 00 65 00 72 00 73 00 69 00 6f 00 6e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

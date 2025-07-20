@@ -19,6 +19,7 @@ rule VirTool_Win64_Preinjesz_A_2147922944_0
         $x_1_4 = {48 89 c1 e8 ?? ?? ?? ?? 8b 45 1c 41 89 c0 ba 00 00 00 00 b9 ff 0f 1f 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? 48 89 45 10 48 83 7d 10 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

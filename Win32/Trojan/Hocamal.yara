@@ -20,6 +20,7 @@ rule Trojan_Win32_Hocamal_A_2147717426_0
         $x_1_6 = "120e0715160013041d1d0c2822332e322e27351d1d16282f252e36321d1d02343333242f3517243332282e2f1d1d13342f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

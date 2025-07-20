@@ -17,6 +17,7 @@ rule HackTool_MSIL_CryptInject_NIT_2147924133_0
         $x_1_2 = {02 28 08 00 00 06 7e 0e 00 00 04 25 2d 17 26 7e 0a 00 00 04 fe 06 1c 00 00 06 73 41 00 00 0a 25 80 0e 00 00 04 28 07 00 00 2b 28 08 00 00 2b 0a 28 43 00 00 0a 03 6f 44 00 00 0a 06 06 8e 69 28 06 00 00 06 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule HackTool_MSIL_CryptInject_NIT_2147924133_1
         $x_2_3 = "\\obj\\Debug\\Loader.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

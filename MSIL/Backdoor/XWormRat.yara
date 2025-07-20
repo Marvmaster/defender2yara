@@ -17,6 +17,7 @@ rule Backdoor_MSIL_XWormRat_SDA_2147919115_0
         $x_1_2 = {28 0d 00 00 0a 2c 08 11 08 28 ?? ?? ?? 0a 00 11 08 28 ?? ?? ?? 0a 2d 0d 11 08 28 0e 00 00 06 28 0f 00 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

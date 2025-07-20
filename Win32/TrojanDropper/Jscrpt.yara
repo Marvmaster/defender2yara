@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Jscrpt_A_2147724810_0
         $x_1_4 = {56 8b d8 53 6a ff ff 37 33 ff 57 57 ff 15 ?? ?? ?? 00 8b 75 ?? 57 57 6a 02 8b 4e 0c 57 57 57 8b 11 57 68 ?? ?? ?? 00 53 51 ff 52 14 8b 46 08 6a 02 50 8b 08 ff 51 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

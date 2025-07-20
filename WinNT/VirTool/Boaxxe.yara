@@ -17,6 +17,7 @@ rule VirTool_WinNT_Boaxxe_A_2147598052_0
         $x_1_3 = "Boot Bus Extender" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule VirTool_WinNT_Boaxxe_B_2147598053_0
         $x_1_3 = "Boot Bus Extender" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))
@@ -67,6 +69,7 @@ rule VirTool_WinNT_Boaxxe_C_2147598054_0
         $x_1_3 = "Boot Bus Extender" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))
@@ -92,6 +95,7 @@ rule VirTool_WinNT_Boaxxe_D_2147598055_0
         $x_1_3 = "Boot Bus Extender" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))
@@ -116,6 +120,7 @@ rule VirTool_WinNT_Boaxxe_E_2147598056_0
         $x_1_2 = {6a 0b ff d3 8b 45 ?? 89 46 1c 0a 00 72 ?? 8d 4d ?? 51 50 ff ?? 0c ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? (eb ??|e9 ?? ?? ?? ??) 8b 4e 0c 89 01 89 7e 1c (eb|e9)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

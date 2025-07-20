@@ -17,6 +17,7 @@ rule PWS_MSIL_Wealwedst_A_2147648258_0
         $x_1_3 = {73 69 67 6e 6f 6e 00 49 50 41 64 72 65 73 73 65 00 4d 61 69 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

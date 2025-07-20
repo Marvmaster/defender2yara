@@ -23,6 +23,7 @@ rule Trojan_MSIL_Camru_A_2147685372_0
         $x_1_9 = "urls_to_restore_on_startup\": [ \"http" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

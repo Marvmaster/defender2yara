@@ -28,6 +28,7 @@ rule Trojan_MSIL_SmallDownloader_EXPL_2147795978_0
         $x_1_13 = "SoapHttpClientProtocol" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +63,7 @@ rule Trojan_MSIL_SmallDownloader_EXPL_2147795978_1
         $x_1_14 = "Concat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +94,7 @@ rule Trojan_MSIL_SmallDownloader_EXPI_2147795979_0
         $x_1_10 = "cmd.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -120,6 +123,7 @@ rule Trojan_MSIL_SmallDownloader_EXP_2147795980_0
         $x_1_8 = "Host: xz.8dashi.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +156,7 @@ rule Trojan_MSIL_SmallDownloader_EXPO_2147797368_0
         $x_1_12 = "$1b049a5d-b396-460c-a015-35e3999bfed4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +188,7 @@ rule Trojan_MSIL_SmallDownloader_GA_2147812727_0
         $x_1_11 = "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\ComputerName\\ComputerName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -208,6 +214,7 @@ rule Trojan_MSIL_SmallDownloader_RK_2147819133_0
         $x_1_5 = "UpdaterPro" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_PawFall_A_2147943819_0
         $x_2_3 = {c1 ea 04 6b ?? 42 2b ?? 48 ?? ?? 42 0f b6 ?? ?? (41|30)}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

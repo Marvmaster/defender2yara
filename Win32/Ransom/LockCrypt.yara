@@ -19,6 +19,7 @@ rule Ransom_Win32_LockCrypt_A_2147721822_0
         $x_1_4 = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win32_LockCrypt_PAA_2147762403_0
         $x_1_5 = "__lock_XXX__" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Ransom_Win32_LockCrypt_G_2147765678_0
         $x_1_5 = "download key ok" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Ransom_Win32_LockCrypt_MAK_2147808365_0
         $x_1_5 = "Do not rename encrypted files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule Ransom_Win32_LockCrypt_PD_2147809019_0
         $x_1_4 = "README_FOR_" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

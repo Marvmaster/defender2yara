@@ -18,6 +18,7 @@ rule Trojan_MSIL_ASyncRAT_ZZU_2147938516_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

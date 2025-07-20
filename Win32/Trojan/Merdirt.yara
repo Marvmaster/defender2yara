@@ -17,6 +17,7 @@ rule Trojan_Win32_Merdirt_A_2147638350_0
         $x_1_3 = {33 c0 50 50 ff 75 68 ff 75 58 50 8b 45 54 ff 70 e0 ff 15 ?? ?? ?? ?? c6 45 fc 13 8d 4d 68 e8 ?? ?? ?? ?? c6 45 fc 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

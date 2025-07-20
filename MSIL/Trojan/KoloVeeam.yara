@@ -19,6 +19,7 @@ rule Trojan_MSIL_KoloVeeam_A_2147906295_0
         $x_1_5 = "decrypted pass:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

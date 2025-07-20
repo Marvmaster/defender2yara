@@ -19,6 +19,7 @@ rule Trojan_Win32_Blister_A_2147815252_0
         $x_4_5 = {50 6a ff ff d7 8d 45 ?? 50 8d 83 ?? ?? ?? ?? ff d0}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Blister_MKZ_2147917192_0
         $x_5_1 = {50 6a ff ff d7 8b c6 83 e0 03 8a 44 05 e8 30 04 1e 46 81 fe e0 89 01 00 72 eb}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Blister_TWR_2147920256_0
         $x_5_1 = {ff d7 8b c6 83 e0 03 8a 44 05 e8 30 04 1e 46 81 fe 50 7a 01 00 72 eb}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Blister_RTQ_2147920358_0
         $x_4_1 = {8b c6 83 e0 03 8a 44 05 e8 30 04 1e 46 81 fe e0 89 01 00 72 eb}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

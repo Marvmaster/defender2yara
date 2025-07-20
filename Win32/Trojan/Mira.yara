@@ -19,6 +19,7 @@ rule Trojan_Win32_Mira_D_2147730080_0
         $x_1_4 = "\\All Users\\Application Data\\xinsbp.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

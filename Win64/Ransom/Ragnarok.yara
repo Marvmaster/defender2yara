@@ -20,6 +20,7 @@ rule Ransom_Win64_Ragnarok_BR_2147837819_0
         $x_1_5 = "crustom-support@proton.me" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

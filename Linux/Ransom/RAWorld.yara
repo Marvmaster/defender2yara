@@ -19,6 +19,7 @@ rule Ransom_Linux_RAWorld_A_2147946605_0
         $x_1_4 = {74 74 70 3a 2f 2f 72 61 77 6f 72 6c 64 [0-80] 2e 6f 6e 69 6f 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

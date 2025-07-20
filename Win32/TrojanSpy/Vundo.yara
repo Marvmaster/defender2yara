@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Vundo_A_2147603211_0
         $x_1_3 = {66 c7 46 1c 44 65 66 c7 46 1e 74 6f 66 c7 46 20 75 72 66 c7 46 22 73 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

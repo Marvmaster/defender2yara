@@ -20,6 +20,7 @@ rule VirTool_Win32_Injeobesz_A_2147918049_0
         $x_1_5 = {89 95 8c fe ff ff 0f b6 01 b9 01 00 00 00 30 47 fd 83 fe 0d ?? ?? ?? 0f 45 c8 85 d2 ?? ?? ?? ?? ?? ?? 8b bd 84 fe ff ff 8b 8d bc fe ff ff 88 57 0c 8b 95 88 fe ff ff ?? ?? ?? ?? ?? 8b 8d bc fe ff ff 8b d7 89 85 8c fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

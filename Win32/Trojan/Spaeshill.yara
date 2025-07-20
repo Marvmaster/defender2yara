@@ -20,6 +20,7 @@ rule Trojan_Win32_Spaeshill_2147707462_0
         $x_1_6 = "splsrv.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 3 of ($x_1_*))) or
             ((3 of ($x_3_*))) or

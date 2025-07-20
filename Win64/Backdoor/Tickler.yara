@@ -16,6 +16,7 @@ rule Backdoor_Win64_Tickler_A_2147919673_0
         $x_1_1 = {e9 71 0b 00 00 c6 84 24 ?? ?? ?? ?? ?? b0 ?? b1 ?? b2 ?? 41 b0 ?? 41 b1 ?? 41 b2 ?? 45 33 db 34 ?? 88 84 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

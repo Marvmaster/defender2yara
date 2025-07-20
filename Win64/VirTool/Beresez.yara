@@ -19,6 +19,7 @@ rule VirTool_Win64_Beresez_A_2147921772_0
         $x_1_4 = "namedpipe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

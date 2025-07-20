@@ -22,6 +22,7 @@ rule Backdoor_Win32_Psatela_STA_2147773154_0
         $x_1_8 = {44 6f 77 6e 6c 6f 61 64 46 69 6c 65 00 44 65 6c 65 74 65 46 69 6c 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or

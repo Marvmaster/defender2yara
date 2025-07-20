@@ -19,6 +19,7 @@ rule Worm_Win32_Pricbot_A_2147631760_0
         $x_1_5 = "Flood started" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -54,6 +55,7 @@ rule Worm_Win32_Pricbot_C_2147642164_0
         $x_2_13 = "Flood started" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_2_*) and 2 of ($x_1_*))) or
             ((8 of ($x_2_*))) or

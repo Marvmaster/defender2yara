@@ -21,6 +21,7 @@ rule Ransom_Win64_Sola_YAC_2147917664_0
         $x_1_6 = "Meow." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

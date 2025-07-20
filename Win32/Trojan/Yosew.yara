@@ -20,6 +20,7 @@ rule Trojan_Win32_Yosew_A_2147697463_0
         $x_1_6 = "\\YSWMDll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

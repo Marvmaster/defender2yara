@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Vircim_A_2147631476_0
         $x_1_3 = {73 63 20 63 72 65 61 74 65 20 25 73 20 74 79 70 65 3d 20 6b 65 72 6e 65 6c 20 62 69 6e 70 61 74 68 3d 20 22 25 73 22 20 73 74 61 72 74 3d 20 61 75 74 6f 00 63 6d 64 20 2f 43 20 63 6f 70 79 20 22 25 73 22 20 22 25 73 22 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

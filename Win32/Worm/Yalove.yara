@@ -18,6 +18,7 @@ rule Worm_Win32_Yalove_A_2147601039_0
         $x_1_4 = "AUTORUN.INF" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule Worm_Win32_Yalove_B_2147611048_0
         $x_1_10 = {8d 45 fc 8b cb ba ?? ?? ?? ?? e8 ?? ?? ff ff 68 02 00 00 80 8d 45 f8 8b 55 fc e8 ?? ?? ff ff 8b 45 f8 b9 ?? ?? ?? ?? ba ?? ?? ?? ?? e8 ?? ?? ff ff 33 c0 5a 59 59 64 89 10 68 ?? ?? ?? ?? 8d 45 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

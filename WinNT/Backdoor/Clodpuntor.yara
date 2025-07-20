@@ -19,6 +19,7 @@ rule Backdoor_WinNT_Clodpuntor_A_2147595286_0
         $x_1_4 = {fa 0f 20 c0 50 25 ff ff fe ff 0f 22 c0 66 c7 01 3b c0 58 0f 22 c0 fb 8b d1 eb d3 8b 45 f0 85 c0 75 05 b8 82 01 00 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

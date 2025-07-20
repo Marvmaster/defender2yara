@@ -18,6 +18,7 @@ rule VirTool_Win64_Edrblok_C_2147926577_0
         $x_1_4 = {b8 00 00 00 00 b9 41 00 00 00 48 89 d7 f3 48 ab c7 85 2c 03 00 00 04 01 00 00 66 0f ef c0 0f 11 45 b0 0f 11 45 c0 66 0f d6 45 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

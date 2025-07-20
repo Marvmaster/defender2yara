@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Bulilit_A_2147634635_0
         $x_1_3 = {25 30 32 58 25 30 32 58 25 30 32 58 25 30 32 58 25 30 32 58 25 30 32 58 30 30 30 30 30 30 30 30 30 30 30 30 [0-16] 2e 64 6c 6c [0-8] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_Bulilit_D_2147647260_0
         $x_1_8 = "Mozilla/4.0 (compatible;" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -72,6 +74,7 @@ rule TrojanDownloader_Win32_Bulilit_E_2147651582_0
         $x_1_4 = "ChongTxt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

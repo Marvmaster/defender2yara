@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_OnLineGames_H_2147619318_0
         $x_1_4 = {6e 65 74 20 73 74 6f 70 20 22 53 65 63 75 72 69 74 79 20 43 65 6e 74 65 72 22 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule TrojanDropper_Win32_OnLineGames_E_2147646778_0
         $x_1_5 = {b9 fe 00 00 00 56 f7 f9 8b 74 24 0c fe c2 85 f6 76 10 8b 44 24 08 8a 08 2a ca 32 ca 88 08 40 4e 75 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_ChChes_A_2147723449_0
         $n_2_4 = "hydevice.pdb" ascii //weight: -2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -46,6 +47,7 @@ rule Trojan_Win32_ChChes_B_2147730364_0
         $x_1_6 = "IDA: Quick start" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_ChChes_G_2147730365_0
         $x_1_1 = {85 db 74 19 8d 14 3e 8b 7d fc 8a 0c 11 32 0c 38 40 8b 7d 10 88 0a 8b 4d 08 3b c3 72 e7 3b 75 f8 76 0e 57 68 ?? ?? ?? ?? e8 31 00 00 00 83 c4 08 8b 45 0c 46 8b 4d 08 3b f0 72 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_Win32_ChChes_G_2147730365_1
         $x_10_6 = {c7 45 9c 61 62 65 32 c7 45 a0 38 36 39 66 c7 45 a4 2d 39 62 34}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_3_*))) or
             ((1 of ($x_10_*) and 2 of ($x_3_*))) or

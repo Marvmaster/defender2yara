@@ -19,6 +19,7 @@ rule Ransom_Win32_FonixCrypter_PB_2147762066_0
         $x_1_4 = "schtasks /CREATE /SC ONLOGON /TN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

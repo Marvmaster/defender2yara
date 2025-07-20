@@ -18,6 +18,7 @@ rule Backdoor_MSIL_Agent_C_2147652072_0
         $x_1_4 = "beerg.eu/PHP%20Files/bot.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

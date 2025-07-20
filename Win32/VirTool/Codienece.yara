@@ -19,6 +19,7 @@ rule VirTool_Win32_Codienece_A_2147767615_0
         $x_1_4 = {65 48 8b 0c 25 28 00 00 00 48 8b 89 00 00 00 00 48 3b 61 10 0f 86 35 01 00 00 48 83 ec 40 48 89 6c 24 38 48 8d ?? ?? ?? 48 8b 44 24 50 48 89 04 24 48 8b 44 24 58 48 89 44 24 08 e8 ?? ?? ?? ?? 48 8b 44 24 10 48 8b 4c 24 18 48 8b 54 24 30 48 8b 5c 24 28 48 85 db 0f 84 dc 00 00 00 31 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

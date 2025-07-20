@@ -18,6 +18,7 @@ rule Trojan_Win64_LaplasClipper_B_2147844498_0
         $x_2_3 = "os/exec" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win64_LaplasClipper_EN_2147849716_0
         $x_1_5 = "Set-CookieUser-AgentW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

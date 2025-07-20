@@ -19,6 +19,7 @@ rule VirTool_Win64_Amsebesz_A_2147848727_0
         $x_1_4 = {48 8b 0c cb ff 15 ?? ?? ?? ?? 44 8b c0 33 d2 8d ?? ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Worm_MacOS_Inqtana_A_2147747846_0
         $x_1_6 = "./excploit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 

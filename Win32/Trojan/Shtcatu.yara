@@ -19,6 +19,7 @@ rule Trojan_Win32_Shtcatu_A_2147719724_0
         $x_1_4 = "captura.bmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Shtcatu_B_2147720951_0
         $x_1_5 = "captura.bmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

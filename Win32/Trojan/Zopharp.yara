@@ -17,6 +17,7 @@ rule Trojan_Win32_Zopharp_A_2147634034_0
         $x_1_3 = "$serv = gethostbyname(\"$urldonw\");" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

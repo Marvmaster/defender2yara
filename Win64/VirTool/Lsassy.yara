@@ -22,6 +22,7 @@ rule VirTool_Win64_Lsassy_B_2147933622_0
         $x_1_8 = "minidump.minidumpfile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_5_*))) or

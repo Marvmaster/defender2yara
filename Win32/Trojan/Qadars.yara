@@ -21,6 +21,7 @@ rule Trojan_Win32_Qadars_A_2147681691_0
         $x_1_7 = {ff ff 21 43 65 87 c7 85 ?? ?? ff ff 01 00 00 00 b9 20 00 00 00 8d b5 ?? ?? ff ff 8d bd ?? ?? ff ff f3 a5 6a 00 68 ?? ?? 00 00 04 00 c7 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Qadars_B_2147720873_0
         $x_100_1 = {d6 d4 9d 6a aa 6e 89 0f 3e 91 37 38 39 5f 5f 4b 45 59 5f 5f}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +92,7 @@ rule Trojan_Win32_Qadars_C_2147722777_0
         $x_1_9 = "virtual hd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

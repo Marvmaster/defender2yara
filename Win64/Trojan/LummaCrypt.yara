@@ -16,6 +16,7 @@ rule Trojan_Win64_LummaCrypt_LKA_2147896773_0
         $x_1_1 = {48 89 ca 48 c1 ea ?? 48 c1 f9 ?? 01 d1 69 c9 ?? ?? 00 00 29 c8 89 04 bb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

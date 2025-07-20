@@ -17,6 +17,7 @@ rule Backdoor_Win64_RomCom_A_2147851917_0
         $x_1_3 = "C:\\ProgramData\\worker.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Backdoor_Win64_RomCom_B_2147851922_0
         $x_1_1 = {c1 e1 03 48 8b [0-6] 48 d3 ea 48 8b ca 0f b6 c9 33 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -15,6 +15,7 @@ rule Virus_Win32_Mabezat_2147601561_0
         $x_1_1 = {55 8b ec 81 ec d8 06 00 00 53 56 57 (b8 ?? ?? ?? ?? b9 00 00|b9 00 00 00 00 b8 ?? ?? ?? ??) 8a ?? 80 ?? ?? 88 ?? 83 ?? 01 83 ?? 01 81 f9 90 05 00 00 75 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

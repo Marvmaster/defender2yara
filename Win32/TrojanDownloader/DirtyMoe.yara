@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_DirtyMoe_A_2147851369_0
         $x_2_1 = {8b d8 85 db 7e ?? 8b 4d fc 8d 85 ?? ?? ?? ?? 53 50 a1 ?? ?? ?? ?? 03 c1 50 e8 83 01 00 00 01 5d fc 83 c4 ?? 81 7d fc ?? ?? ?? ?? 74 ?? 6a 00 8d 85 ?? ?? ?? ?? 57 50 ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

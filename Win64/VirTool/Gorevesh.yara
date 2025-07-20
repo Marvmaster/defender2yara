@@ -18,6 +18,7 @@ rule VirTool_Win64_Gorevesh_A_2147772377_0
         $x_1_3 = {48 89 8c 24 d8 00 00 00 48 89 84 24 d0 00 00 00 c6 44 24 4f 01 48 8d ?? ?? ?? ?? ?? 48 89 0c 24 48 c7 44 24 08 07 00 00 00 0f 57 c0 0f 11 44 24 10 48 c7 44 24 20 00 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win64_Midie_SIB_2147807755_0
         $x_1_6 = {48 c7 c0 08 00 00 00 48 3b 44 24 ?? 7c ?? 4c 8b 7c 24 ?? 49 83 e7 01 4d 21 ff 74 ?? 4c 63 7c 24 ?? 4c 8b 74 24 02 49 d1 ?? 49 81 e6 ff ff ff 7f 4d 31 f7 4c 89 7c 24 02 eb ?? 4c 8b 7c 24 02 49 d1 ?? 49 81 e7 ff ff ff 7f 4c 89 7c 24 02 48 ff 44 24 00 71 ?? ff 74 24 02 4c 8b 7c 24 ?? 48 8b 2d ?? ?? ?? ?? 49 c1 e7 ?? 58 49 89 04 2f 48 ff 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -48,6 +49,7 @@ rule Trojan_Win64_Midie_NM_2147904896_0
         $x_1_3 = "Baat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win64_Midie_NM_2147904896_1
         $x_2_2 = {48 8b c8 e8 0a fd ff ff 84 c0 74 16 48 8b 1b 48 8b cb e8 b7 00 00 00 45 33 c0 41 8d 50 02 33 c9 ff d3 e8 73 0b 00 00 48 8b d8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win64_Midie_NM_2147904896_2
         $x_1_2 = {48 89 ce 0f b6 81 ?? 00 00 00 88 91 ?? 00 00 00 48 8d 0d 67 01 00 00 48 63 04 81 48 01 c8 ff e0 0f b6 c2 ff c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Win64_Midie_GXZ_2147908904_0
         $x_10_1 = {0f b6 02 41 88 00 88 0a 0f b6 54 24 31 44 0f b6 44 24 30 0f b6 4c 14 32 42 02 4c 04 32 0f b6 c1 0f b6 4c 04 32 42 32 4c 17 f7 41 88 4a ff 49 83 eb 01}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Trojan_Win64_Midie_GP_2147914443_0
         $x_1_4 = "EaVMlTKHmPPIYKX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Trojan_Win64_Midie_ASJ_2147922485_0
         $x_1_2 = {49 8d 04 30 49 2b d0 0f 1f 40 00 0f 1f 84 00 00 00 00 00 44 30 38 48 8d 40 01 48 83 ea 01 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +190,7 @@ rule Trojan_Win64_Midie_AMI_2147925996_0
         $x_3_4 = "70.59.2345.6789" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +215,7 @@ rule Trojan_Win64_Midie_AMD_2147926002_0
         $x_2_4 = "Stratford.dll" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -229,6 +238,7 @@ rule Trojan_Win64_Midie_GNS_2147927639_0
         $x_5_2 = {8c 11 42 36 ee 97 a4 bc ?? ?? ?? ?? cc 31 d1 32 2e 59 00 76 10}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +261,7 @@ rule Trojan_Win64_Midie_GNS_2147927639_1
         $x_1_2 = "baE8.NU6L" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +283,7 @@ rule Trojan_Win64_Midie_GNK_2147927659_0
         $x_10_1 = {48 63 c0 48 c1 f2 b2 42 80 b4 44 ?? ?? ?? ?? ?? 42 ff 4c 04 ?? 48 13 e8 5e 4e 8b 94 83 ?? ?? ?? ?? ff ce 36 66 43 8b 34 8a 48 8d 8a ?? ?? ?? ?? 0f 8d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -294,6 +306,7 @@ rule Trojan_Win64_Midie_GTC_2147931139_0
         $x_5_2 = {41 32 f8 56 40 08 b4 54 1e 00 fe ff 40 d2 c7 66 0b de 40 1a f8}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -316,6 +329,7 @@ rule Trojan_Win64_Midie_NS_2147937841_0
         $x_1_2 = {48 89 f1 e8 2e ff ff ff 48 8b 46 ?? 48 31 06 48 83 66}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -337,6 +351,7 @@ rule Trojan_Win64_Midie_GZK_2147941295_0
         $x_10_1 = {b4 1f 4d bf 85 e6 08 f6 9c fa 43 1b 08 1e 32 f9 bf}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -360,6 +375,7 @@ rule Trojan_Win64_Midie_GZZ_2147941354_0
         $x_5_3 = {18 31 10 42 ?? 54 02 20 35 ?? ?? ?? ?? 1a cb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             ((1 of ($x_10_*))) or
@@ -387,6 +403,7 @@ rule Trojan_Win64_Midie_SPR_2147945181_0
         $x_1_3 = "posdfcc.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -410,6 +427,7 @@ rule Trojan_Win64_Midie_AHB_2147946815_0
         $x_5_3 = "MP3SimWnd" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

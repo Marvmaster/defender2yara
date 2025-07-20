@@ -16,6 +16,7 @@ rule Virus_Win32_Hematite_A_2147720955_0
         $x_1_1 = {75 ef ff 75 10 ff 95 ?? ?? 00 00 ff 75 ?? ff 95 ?? ?? 00 00 8b 45 ?? 01 45 ?? 8b 45 ?? 8b 4d ?? 81 c1 ?? ?? 00 00 e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

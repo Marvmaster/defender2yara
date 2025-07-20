@@ -19,6 +19,7 @@ rule Backdoor_MacOS_EggShell_A_2147745381_0
         $x_1_4 = "problems getting password" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_MacOS_EggShell_D_2147748005_0
         $x_1_4 = "isBtcMarket" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Backdoor_MacOS_EggShell_C_2147778122_0
         $x_1_5 = "KeylogThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -97,6 +100,7 @@ rule Backdoor_MacOS_EggShell_A_2147817557_0
         $x_1_5 = "EggShell/src/esplosx/esplosx/espl.h" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Backdoor_MacOS_EggShell_G_2147849542_0
         $x_1_4 = "takepicture" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

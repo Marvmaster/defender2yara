@@ -17,6 +17,7 @@ rule BrowserModifier_Win32_Elopesmut_225275_0
         $x_1_3 = "Chrome_WidgetWin_1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule BrowserModifier_Win32_Elopesmut_225275_1
         $x_1_4 = "\\Internet Explorer\\Approved Extensions" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_2_*))) or

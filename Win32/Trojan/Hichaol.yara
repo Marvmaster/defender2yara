@@ -28,6 +28,7 @@ rule Trojan_Win32_Hichaol_2147645717_0
         $x_1_14 = "%s?action=%s&v=1&hardid=%s&id=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

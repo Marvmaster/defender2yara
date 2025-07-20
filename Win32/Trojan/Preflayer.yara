@@ -22,6 +22,7 @@ rule Trojan_Win32_Preflayer_A_2147680004_0
         $x_1_8 = "anasayfada.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 2 of ($x_1_*))) or
             ((4 of ($x_5_*) and 1 of ($x_2_*))) or

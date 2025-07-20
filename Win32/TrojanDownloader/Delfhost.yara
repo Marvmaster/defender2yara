@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Delfhost_A_2147599828_0
         $x_1_8 = {ff ff 84 c0 74 30 25 00 50 e8 ?? ?? ?? ff 6a 01 a1 ?? ?? ?? 00 50 e8 ?? ?? ?? ff eb 46 6a 06 a1 ?? ?? ?? 00 50 e8 ?? ?? ?? ff e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -18,6 +18,7 @@ rule Ransom_MSIL_Zillyrypt_A_2147721776_0
         $x_1_4 = "Dosyalariniz Sifrelendi!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

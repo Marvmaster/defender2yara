@@ -20,6 +20,7 @@ rule Trojan_MSIL_CryptTrickldr_A_2147769295_0
         $x_1_5 = {24 44 61 54 61 3d 24 [0-16] 2e 44 6f 77 6e 6c 6f 41 64 44 61 54 41 28 24 53 45 72 2b 24 74 29 3b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_MSIL_CryptTrickldr_A_2147770147_0
         $x_1_9 = ".downloaddata(" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

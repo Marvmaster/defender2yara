@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Pasuom_A_2147813820_0
         $x_3_7 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 [0-32] 2e 00 72 00 75 00 2f 00 70 00 73 00 77 00 64 00 2e 00 70 00 68 00 70 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or

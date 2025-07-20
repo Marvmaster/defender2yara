@@ -17,6 +17,7 @@ rule Backdoor_Win32_Thoper_A_2147648161_0
         $x_1_3 = "nateon.duamlive.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -41,6 +42,7 @@ rule Backdoor_Win32_Thoper_B_2147651636_0
         $x_1_2 = {83 c4 08 a3 ?? ?? ?? ?? 8b 45 18 50 8b 4d 14 51 8b 55 10 52 8b 45 0c 50 8b 4d 08 51 ff 15 00 5d c2 14 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Backdoor_Win32_Thoper_C_2147655307_0
         $x_1_4 = "SfcIsFileProtected" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Backdoor_Win32_Thoper_E_2147659061_0
         $x_1_2 = {83 ec 08 83 3d ?? ?? ?? ?? 00 75 3a 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a ?? 68 ?? ?? ?? ?? 8d 4d f8 e8 ?? ?? ?? ?? 8b c8 e8 ?? ?? ?? ?? 50 a1 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? a3 ?? ?? ?? ?? 8d 4d f8 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Backdoor_Win32_Thoper_F_2147665345_0
         $x_1_3 = {c1 e1 0c 0f b6 11 83 fa 4d 75 3c 8b 45 ec c1 e0 0c 0f b6 48 01 83 f9 5a 75 2d 8b 55 ec c1 e2 0c 0f b6 42 02 3d 90 00 00 00 75 1c 8b 4d ec c1 e1 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_AshamedWages_A_2147923568_0
         $x_1_2 = {ac 30 d0 aa c1 ca 08 e2 f7 61 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanSpy_Win32_AshamedWages_D_2147924189_0
         $x_1_3 = {f7 e2 3c 61 72 04 3c 7a 76 0d 2d 21 30 00 00 81 c2 21 30 00 00 eb e9 aa e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

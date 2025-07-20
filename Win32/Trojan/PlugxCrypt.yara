@@ -18,6 +18,7 @@ rule Trojan_Win32_PlugxCrypt_BA_2147763865_0
         $x_1_3 = {85 c0 c6 44 24 [0-2] c6 44 24 [0-2] c6 44 24 [0-2] c6 44 24 [0-2] c6 44 24 [0-2] c6 44 24 [0-2] c6 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))

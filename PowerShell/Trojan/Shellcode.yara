@@ -21,6 +21,7 @@ rule Trojan_PowerShell_Shellcode_SV_2147819083_0
         $x_1_6 = "EV-CAT-KIOSK3.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

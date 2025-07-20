@@ -18,6 +18,7 @@ rule Virus_Win32_Patchload_B_2147636673_0
         $x_1_3 = {66 6a 00 68 56 41 5f 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Virus_Win32_Patchload_I_2147640599_0
         $x_1_2 = {6a 02 68 c8 9d 41 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Virus_Win32_Patchload_J_2147641400_0
         $x_1_1 = {ff d3 85 c0 0f 85 ?? ?? ?? ?? 8b 45 f8 8b 50 08 8b 7c 02 08 3b fa 0f 87 ?? ?? ?? ?? 81 ff 38 01 00 00 0f 82 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 75 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Virus_Win32_Patchload_C_2147642384_0
         $x_3_1 = {68 78 65 63 00 68 57 69 6e 45 35 00 47 65 74 50 [0-16] 72 6f 63 41}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Virus_Win32_Patchload_D_2147642385_0
         $x_1_6 = {b8 6f 6c 65 2e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Virus_Win32_Patchload_E_2147648446_0
         $x_1_4 = {ff 14 85 f8 db 00 10 eb ?? 8b d0 c1 e2 ?? c1 e8 ?? 0b c2 89 45 ?? 05 ?? ?? 00 00 89 45 ?? 0f b6 c9 03 c1 e9 ?? ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

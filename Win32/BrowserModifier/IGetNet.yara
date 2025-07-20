@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_IGetNet_6941_0
         $x_1_4 = {43 00 6f 00 6d 00 70 00 61 00 6e 00 79 00 4e 00 61 00 6d 00 65 00 [0-8] 69 00 47 00 65 00 74 00 4e 00 65 00 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

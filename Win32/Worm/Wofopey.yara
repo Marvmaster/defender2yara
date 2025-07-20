@@ -19,6 +19,7 @@ rule Worm_Win32_Wofopey_A_2147638443_0
         $x_1_5 = "VirusPPT-DDXPPX-FTP-CommandExecuter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

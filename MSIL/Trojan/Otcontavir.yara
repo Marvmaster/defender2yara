@@ -22,6 +22,7 @@ rule Trojan_MSIL_Otcontavir_A_2147711164_0
         $x_1_8 = "=====START-LIST-FROM-CONTACTS=====" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or

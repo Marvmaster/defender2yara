@@ -16,6 +16,7 @@ rule Trojan_Win32_Powemet_2147725131_0
         $x_1_2 = "1i9peGvS/bZcMi0XMycosAvZILTMAlVdjyhJ2er371VucdJY1uW/MpMmbFXPkxT7dZvSKsf85AqHozzCbFUlVhwm4SqtT0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

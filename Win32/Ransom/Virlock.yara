@@ -17,6 +17,7 @@ rule Ransom_Win32_Virlock_B_2147741479_0
         $x_5_3 = {e9 00 00 00 00 0f 85 ?? ?? ?? ?? ff d3 81 c4 ?? ?? ?? ?? e9 ?? ?? ?? ?? 8a 06 32 c2 88 07 90 42 90 46 47 90 49 90 83 f9 00 e9 ?? ?? ff ff cc cc}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Ransom_Win32_Virlock_C_2147741973_0
         $x_2_1 = {e9 00 00 00 00 88 07 90 42 90 46 90 47 90 49 90 83 f9 00 90 0f 85 ?? ?? ?? ?? e9 ?? ?? ?? ?? 81 ec ?? ?? ?? ?? be ?? ?? ?? ?? bf ?? ?? ?? ?? e9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_XRed_AU_2147848049_0
         $x_2_2 = {84 33 c9 36 29 47 9f 4c 57 35 8f 5b 14 50 23 33 5c 38 01 35 63 69 95 02 11 03 70}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

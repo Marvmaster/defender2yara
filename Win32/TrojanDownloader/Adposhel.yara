@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Adposhel_A_2147726830_0
         $x_1_2 = {0f b6 03 89 f1 29 d9 69 c9 ?? ?? ?? ?? 29 f9 0f b6 80 ?? ?? ?? ?? 31 c1 88 0b 43 39 d3 0f 82 ?? ?? ?? ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

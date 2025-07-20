@@ -19,6 +19,7 @@ rule Trojan_Win32_PassView_SIBA_2147798539_0
         $x_50_4 = {33 db 88 1f 8a 06 84 c0 b1 ?? 2a cb 32 c8 6a ?? 8d 45 ?? 50 80 f1 ?? 57 88 4d 04 e8 ?? ?? ?? ?? 83 c4 0c 43 8a 04 33 84 c0 75}  //weight: 50, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 2 of ($x_5_*))) or
             (all of ($x*))

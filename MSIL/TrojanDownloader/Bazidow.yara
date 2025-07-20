@@ -19,6 +19,7 @@ rule TrojanDownloader_MSIL_Bazidow_A_2147716103_0
         $x_1_5 = "/brazil/bb.zip|http:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

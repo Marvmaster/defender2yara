@@ -22,6 +22,7 @@ rule Trojan_Win32_Strakupa_A_2147697663_0
         $x_1_8 = "s=6be3ab6f&w=55901&c=228&i=143&l=0&e=zw&t=http://www.redmall.com.cn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_8_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or

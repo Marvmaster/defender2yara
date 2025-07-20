@@ -17,6 +17,7 @@ rule DDoS_MSIL_Loioir_A_2147708591_0
         $x_1_3 = "ircBot.App_Config" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -15,6 +15,7 @@ rule TrojanDownloader_Win32_Dofoil_A_160314_0
         $x_1_1 = {61 8d 85 06 05 00 00 50 ff 95 d6 04 00 00 09 c0 74 24 89 c3 8d b5 ee 04 00 00 e8 ?? ?? 00 00 8d 9d 4e 05 00 00 8d 85 81 05 00 00 89 85 9e 05 00 00 e8 08 00 00 00 6a 00 ff 95 e6 04 00 00 8d bd a2 05 00 00 8d b5 1c 05 00 00 e8 ?? ?? 00 00 01 cf 4f 89 de e8 ?? ?? 00 00 8d 85 12 05 00 00 6a 00 6a 00 6a 00 6a 00 50 ff 95 ee 04 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule TrojanDownloader_Win32_Dofoil_D_160826_0
         $x_1_2 = {46 32 06 aa e0 fa f7 d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule TrojanDownloader_Win32_Dofoil_G_163750_0
         $x_1_6 = "\\Startup\\dxdiag.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule TrojanDownloader_Win32_Dofoil_A_164230_0
         $x_1_2 = {8b 4e 50 c1 e9 02 31 c0 f3 ab 0f b7 5e 06 b8 28 00 00 00 f7 e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule TrojanDownloader_Win32_Dofoil_L_166033_0
         $x_1_2 = {8b 44 24 0c 50 a1 ?? ?? ?? ?? 8b 00 ff d0 3d 03 01 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +130,7 @@ rule TrojanDownloader_Win32_Dofoil_L_166033_1
         $x_1_2 = {eb 08 e8 09 00 00 00 89 46 fc ad 85 c0 75 f3 c3 56 89 c2 8b 45 3c 8b 7c 28 78 01 ef}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +154,7 @@ rule TrojanDownloader_Win32_Dofoil_L_166033_2
         $x_1_4 = {68 56 71 64 4f 8b 03 50 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -177,6 +184,7 @@ rule TrojanDownloader_Win32_Dofoil_M_166524_0
         $x_1_6 = {4f 75 72 5f 41 67 65 6e 74 00 5c 63 74 66 6d 6f 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -200,6 +208,7 @@ rule TrojanDownloader_Win32_Dofoil_C_168560_0
         $x_1_3 = {e2 ea eb d4 61 89 c5 8d bb ?? ?? ?? ?? 03 80 78 01 00 00 8b 48 14 0b 48 18 74 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -222,6 +231,7 @@ rule TrojanDownloader_Win32_Dofoil_R_174260_0
         $x_1_3 = {81 c7 00 12 00 00 66 c7 07 57 6f 66 c7 47 02 72 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -244,6 +254,7 @@ rule TrojanDownloader_Win32_Dofoil_D_180729_0
         $x_1_2 = {6a 40 68 00 30 00 00 8b 46 50 50 6a 00 ff 93}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -270,6 +281,7 @@ rule TrojanDownloader_Win32_Dofoil_T_195234_0
         $x_1_7 = {5c 45 78 70 6c 6f 72 65 72 5c 52 75 6e 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -296,6 +308,7 @@ rule TrojanDownloader_Win32_Dofoil_U_195330_0
         $x_1_7 = {b8 5a 00 00 00 e8 44 ?? ?? ?? ?? 04 20 88 04 37 46 4b 75 ed}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -319,6 +332,7 @@ rule TrojanDownloader_Win32_Dofoil_W_200036_0
         $x_1_4 = {81 7d 00 40 1a cd 00 74 09 81 7d 00 46 46 14 70 75 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -404,6 +418,7 @@ rule TrojanDownloader_Win32_Dofoil_U_238226_0
         $x_1_2 = {30 14 30 40 3b 45 fc 7c e6 89 0d ?? ?? ?? ?? ff 55 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -427,6 +442,7 @@ rule TrojanDownloader_Win32_Dofoil_V_238799_0
         $x_1_3 = {5f 5e 5b 8b e5 5d c2 10 00 05 00 8b 6d ?? ff d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -461,6 +477,7 @@ rule TrojanDownloader_Win32_Dofoil_AA_240168_0
         $x_1_11 = {25 73 25 73 88 5d f4 c7 45 f8 46 46 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -492,6 +509,7 @@ rule TrojanDownloader_Win32_Dofoil_AB_242569_0
         $x_1_6 = "9Eetmcmpi_thx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -521,6 +539,7 @@ rule TrojanDownloader_Win32_Dofoil_AB_242569_1
         $x_1_10 = {2e 62 69 74 03 00 c7 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -560,6 +579,7 @@ rule TrojanDownloader_Win32_Dofoil_AD_242629_0
         $x_1_15 = {25 30 32 58 03 00 c7 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -709,6 +729,7 @@ rule TrojanDownloader_Win32_Dofoil_AE_244396_0
         $x_4_5 = {e8 00 00 00 00 75 06 74 04 ?? ?? ?? ?? 5e eb ?? ?? 81 ee ?? ?? ?? ?? eb ?? ?? eb ?? ?? ?? eb ?? ?? ?? ?? ?? ?? 01 c6 eb ?? ?? ?? ?? ?? 89 f7 eb ?? ?? ?? ?? ?? eb ?? ?? ac eb ?? ?? ?? ?? ?? ?? 30 d0 aa e2 ?? 75 06 74 04}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -733,6 +754,7 @@ rule TrojanDownloader_Win32_Dofoil_AF_244907_0
         $x_1_4 = {8a 10 80 ca 60 01 d3 d1 e3 03 45 10 8a 08 84 c9 e0 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -758,6 +780,7 @@ rule TrojanDownloader_Win32_Dofoil_AG_247858_0
         $x_1_5 = "\\lock.dat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -781,6 +804,7 @@ rule TrojanDownloader_Win32_Dofoil_AH_250647_0
         $x_1_3 = {0f b6 46 68 eb [0-32] 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -807,6 +831,7 @@ rule TrojanDownloader_Win32_Dofoil_AI_251748_0
         $x_1_6 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -832,6 +857,7 @@ rule TrojanDownloader_Win32_Dofoil_BM_258052_0
         $x_1_2 = {30 04 3e 4e 79 f5 8b 8c 24 30 08 00 00 5f 5e 5d 5b 33 cc e8 ?? ?? ?? ?? 81 c4 24 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -857,6 +883,7 @@ rule TrojanDownloader_Win32_Dofoil_B_279114_0
         $x_1_5 = "dump_dumpfve.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -878,6 +905,7 @@ rule TrojanDownloader_Win32_Dofoil_AS_328526_0
         $x_1_2 = {a1 0c cf 45 00 8a 8c 10 76 f1 08 00 a1 08 cf 45 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -899,6 +927,7 @@ rule TrojanDownloader_Win32_Dofoil_AT_329332_0
         $x_1_2 = {b1 6d b0 6c 68 68 91 47 00 88 [0-5] c6 ?? ?? ?? ?? ?? 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -921,6 +950,7 @@ rule TrojanDownloader_Win32_Dofoil_AU_329333_0
         $x_1_3 = "HellStar.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -942,6 +972,7 @@ rule TrojanDownloader_Win32_Dofoil_AU_329333_1
         $x_1_2 = "Ckpgauidqzkhpinyep" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -968,6 +999,7 @@ rule TrojanDownloader_Win32_Dofoil_AU_329333_2
         $x_1_7 = "bearvpn3" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -995,6 +1027,7 @@ rule TrojanDownloader_Win32_Dofoil_AU_329333_3
         $x_1_4 = "Games of the chrome" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

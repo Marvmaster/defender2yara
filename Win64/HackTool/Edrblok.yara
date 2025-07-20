@@ -22,6 +22,7 @@ rule HackTool_Win64_Edrblok_A_2147900151_0
         $x_1_8 = {3b 39 72 4a ?? ?? ?? ?? 9f 31 ?? ?? ?? ?? bc 44 ?? ?? 84 c3 ba 54 dc b3 b6 b4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -56,6 +57,7 @@ rule HackTool_Win64_Edrblok_YAA_2147925687_0
         $x_10_6 = {01 10 00 00 c7 45 ?? 87 1e 8e d7 66 c7 45 ?? 44 86 66 c7 45 ?? a5 4e ?? ?? 94 37 d8 09 ec ef c9 71}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +84,7 @@ rule HackTool_Win64_Edrblok_YAC_2147925938_0
         $x_10_6 = {d1 57 8d c3 a7 05 33 4c 48 89 84 24 ?? ?? ?? ?? 48 b8 90 4f 7f bc ee e6 0e 82}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +111,7 @@ rule HackTool_Win64_Edrblok_B_2147926256_0
         $x_2_7 = "Added WFP filter for \"%S\" (Filter id: %d, IPv" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -20,6 +20,7 @@ rule HackTool_Linux_Exaramel_A_2147917889_0
         $x_1_6 = "worker.OSShellExecute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

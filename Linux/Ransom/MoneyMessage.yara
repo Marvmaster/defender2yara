@@ -20,6 +20,7 @@ rule Ransom_Linux_MoneyMessage_K_2147845997_0
         $x_1_5 = "moneypunct_byname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Pterodactyl_CB_2147839185_0
         $x_1_4 = "SfvgJuim" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Pterodactyl_SPQ_2147841206_0
         $x_1_4 = "tfuyukty.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Pterodactyl_SPL_2147842162_0
         $x_1_4 = "rdrufnitu.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_RaspberryRobin_ARR_2147898847_0
         $x_1_1 = {89 11 c7 41 10 f7 06 00 00 c7 41 0c f7 06 00 00 c7 41 08 f7 06 00 00 c7 41 04 f7 06 00 00 8b 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

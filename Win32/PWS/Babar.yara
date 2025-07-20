@@ -19,6 +19,7 @@ rule PWS_Win32_Babar_A_2147691874_0
         $x_1_4 = "8eb762f4;95bb6519;fefd4f5b" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

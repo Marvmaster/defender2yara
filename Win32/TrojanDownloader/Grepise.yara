@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Grepise_A_2147727980_0
         $x_1_2 = {0f be c1 83 f0 ?? 83 c0 ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

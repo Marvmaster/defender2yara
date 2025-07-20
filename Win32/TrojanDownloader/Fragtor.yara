@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Fragtor_ARAZ_2147936192_0
         $x_2_1 = {8b 55 08 03 55 fc 0f be 02 33 45 0c 8b 4d 08 03 4d fc 88 01 eb d2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

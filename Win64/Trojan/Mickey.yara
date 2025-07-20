@@ -17,6 +17,7 @@ rule Trojan_Win64_Mickey_CBVV_2147852322_0
         $x_1_2 = {0f b6 44 15 0b 8b 4d 07 32 c8 88 4c 15 0b 48 ff c2 48 83 fa ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

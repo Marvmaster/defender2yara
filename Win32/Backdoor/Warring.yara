@@ -16,6 +16,7 @@ rule Backdoor_Win32_Warring_B_2147632379_0
         $x_1_2 = {77 61 72 72 69 6e 67 2e 2e 2e 00 00 63 6f 6e 6e 65 63 74 20 31 32 37 2e 30 2e 30 2e 31 3a 31 32 33 34 35 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

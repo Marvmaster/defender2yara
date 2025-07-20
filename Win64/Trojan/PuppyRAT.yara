@@ -18,6 +18,7 @@ rule Trojan_Win64_PuppyRAT_A_2147910173_0
         $x_2_3 = {41 0f b6 00 ff c9 49 ff c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

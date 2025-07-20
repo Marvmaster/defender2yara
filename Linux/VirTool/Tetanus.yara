@@ -22,6 +22,7 @@ rule VirTool_Linux_Tetanus_B_2147817462_0
         $x_1_7 = "MythicFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

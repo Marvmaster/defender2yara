@@ -15,6 +15,7 @@ rule Trojan_Win32_Urelas_A_2147653786_0
         $x_1_1 = {68 a4 1c 04 10 8d 55 ec 52 e8 00 dd fc ff 83 c4 10 c6 45 fc 00 8d 4d e8 e8 81 de fc ff 51 8b c4 89 65 e4 50 e8 55 03 00 00 83 c4 04 89 45 d4 8b 4d d4 89 4d d0 c6 45 fc 02 51 8b cc 89 65 e0 8d 55 ec 52 e8 16 d9 fc ff 89 45 cc c6 45 fc 00 e8 8a fd ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Urelas_A_2147653786_1
         $x_1_4 = {09 5f 50 4d 4e 55 4d 42 45 52}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Urelas_B_2147656744_0
         $x_1_9 = {52 00 65 00 73 00 6f 00 6c 00 76 00 69 00 6e 00 67 00 20 00 68 00 6f 00 73 00 74 00 6e 00 61 00 6d 00 65 00 20 00 25 00 73 00 2e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_Urelas_C_2147656778_0
         $x_1_3 = {67 00 6f 00 6c 00 66 00 69 00 6e 00 66 00 6f 00 2e 00 69 00 6e 00 69 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Win32_Urelas_C_2147656778_1
         $x_1_6 = "_PMNUMBER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -144,6 +149,7 @@ rule Trojan_Win32_Urelas_C_2147656778_2
         $x_3_9 = {73 00 76 00 63 00 73 00 67 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 73 00 6d 00 73 00 65 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_3_*) and 2 of ($x_2_*))) or
             ((1 of ($x_10_*) and 5 of ($x_3_*))) or
@@ -173,6 +179,7 @@ rule Trojan_Win32_Urelas_E_2147679529_0
         $x_1_4 = {4d 00 6b 00 55 00 70 00 64 00 61 00 74 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -201,6 +208,7 @@ rule Trojan_Win32_Urelas_K_2147682402_0
         $x_1_5 = {81 38 4d 53 4d 50 75 ?? be 00 02 00 00 56 50 8d 85 ?? ?? ?? ?? 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -225,6 +233,7 @@ rule Trojan_Win32_Urelas_O_2147683133_0
         $x_1_2 = {67 00 6f 00 6c 00 66 00 69 00 6e 00 66 00 6f 00 2e 00 69 00 6e 00 69 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -250,6 +259,7 @@ rule Trojan_Win32_Urelas_AA_2147707480_0
         $x_1_6 = "golfset.ini" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -276,6 +286,7 @@ rule Trojan_Win32_Urelas_JU_2147743862_0
         $x_1_6 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -302,6 +313,7 @@ rule Trojan_Win32_Urelas_EC_2147892160_0
         $x_1_6 = "_MYDEBUG:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -328,6 +340,7 @@ rule Trojan_Win32_Urelas_ASC_2147901805_0
         $x_1_6 = {33 c0 f6 94 05 f4 fd ff ff 40 3b c6 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -352,6 +365,7 @@ rule Trojan_Win32_Urelas_ASD_2147902395_0
         $x_1_4 = "Boahkilser" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -375,6 +389,7 @@ rule Trojan_Win32_Urelas_GPA_2147905546_0
         $x_1_3 = {44 00 75 00 65 00 6c 00 50 00 6f 00 6b 00 65 00 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -398,6 +413,7 @@ rule Trojan_Win32_Urelas_HNS_2147905964_0
         $x_1_3 = {44 00 75 00 65 00 6c 00 50 00 6f 00 6b 00 65 00 72 00 00 00 b0 04 02 00 ff ff ff ff 07 00 00 00 5c d5 8c ac 84 c7 20 00 de b9 ec d3 e4 ce 00 00 b0 04 02 00 ff ff ff ff 09 00 00 00 4e 00 65 00 77 00 62 00 61 00 64 00 75 00 67 00 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

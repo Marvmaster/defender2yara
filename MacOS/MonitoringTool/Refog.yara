@@ -20,6 +20,7 @@ rule MonitoringTool_MacOS_Refog_TB_314550_0
         $x_1_5 = "MAShy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule MonitoringTool_MacOS_Refog_TA_322243_0
         $x_1_7 = "/Monitor/SSCrypto.m" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (5 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule MonitoringTool_MacOS_Refog_B_462960_0
         $x_1_5 = "kTCCServiceScreenCapture" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

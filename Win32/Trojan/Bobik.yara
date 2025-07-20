@@ -16,6 +16,7 @@ rule Trojan_Win32_Bobik_ED_2147833988_0
         $x_5_1 = {2b 86 cc 00 00 00 2b 46 24 01 46 3c ff 46 48 8b 4e 48 8b 46 64 88 1c 01 b8 ?? ?? ?? ?? 2b 46 44 01 46 68 8b 96 ac 00 00 00 8b ae a0 00 00 00 8b c5 8b 5e 4c 33 c3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Bobik_EB_2147840081_0
         $x_2_3 = {8b 45 ec 03 45 f0 0f b6 08 3a ed 74 86}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Bobik_GMP_2147892754_0
         $x_1_4 = "BYTrasTN1sTra" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win32_Bobik_NB_2147897389_0
         $x_1_2 = "WWAN_AutoConfig.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

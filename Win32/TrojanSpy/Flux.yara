@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Flux_AD_2147609563_0
         $x_1_5 = {6b 65 72 6e 65 6c 33 32 2e 64 6c 6c [0-112] 5c 45 78 70 4c 6f 72 65 72 2e 65 58 65 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1000_*) and 1 of ($x_500_*) and 2 of ($x_1_*))) or
             ((2 of ($x_1000_*))) or
@@ -48,6 +49,7 @@ rule TrojanSpy_Win32_Flux_C_2147609564_0
         $x_1_6 = "AdjustTokenPrivileges" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*))) or
             (all of ($x*))

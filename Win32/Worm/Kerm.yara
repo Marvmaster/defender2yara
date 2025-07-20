@@ -18,6 +18,7 @@ rule Worm_Win32_Kerm_A_2147652544_0
         $x_1_4 = "keypress" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

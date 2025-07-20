@@ -23,6 +23,7 @@ rule Backdoor_Win32_Forusfank_A_2147678296_0
         $x_50_9 = "ILTXC!4IXB5FB*PX" ascii //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_200_*) and 1 of ($x_100_*) and 2 of ($x_50_*))) or

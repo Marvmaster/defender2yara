@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Spycos_P_2147630006_0
         $x_1_5 = "gVNhCD3GnrYjnAK3XJSrFA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule TrojanDownloader_Win32_Spycos_N_2147631441_0
         $x_1_9 = "xzb+sNo3RiuAbbVLnOznP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_9_*) and 1 of ($x_3_*) and 6 of ($x_1_*))) or
             ((2 of ($x_9_*))) or
@@ -79,6 +81,7 @@ rule TrojanDownloader_Win32_Spycos_O_2147641519_0
         $x_1_6 = {49 4e 4f 56 41 4e 44 4f 4f 4f 4f 2e 2e 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -108,6 +111,7 @@ rule TrojanDownloader_Win32_Spycos_E_2147644603_0
         $x_1_6 = {49 4e 4f 56 41 4e 44 4f 4f 4f 4f 2e 2e 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -134,6 +138,7 @@ rule TrojanDownloader_Win32_Spycos_I_2147647896_0
         $x_1_7 = "t/Kblhy52U6fAC7GlDjS7e9dwRjfYAXY/ECeQWnZHuQ=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -157,6 +162,7 @@ rule TrojanDownloader_Win32_Spycos_H_2147648894_0
         $x_1_4 = {50 6c 75 67 69 6e 20 52 45 44 2e 2e 2e 2e 2e 2e 3a 20 (53|41 56 47 49 4e)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +185,7 @@ rule TrojanDownloader_Win32_Spycos_D_2147653024_0
         $x_1_3 = {6a 00 53 8d 55 e8 b9 10 00 00 00 8b 45 fc e8 ?? ?? ?? ff 33 c0 5a 59 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +214,7 @@ rule TrojanDownloader_Win32_Spycos_A_2147655313_0
         $x_1_9 = "50444349021D17" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -234,6 +242,7 @@ rule TrojanDownloader_Win32_Spycos_B_2147655775_0
         $x_1_8 = {22 20 2d 75 00 00 00 00 0e 00 3d 3d 00 00 00 00 ff ff ff ff 04 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_5_*))) or
@@ -259,6 +268,7 @@ rule TrojanDownloader_Win32_Spycos_G_2147655907_0
         $x_1_2 = {22 20 2d 75 00 00 00 00 ff ff ff ff 06 00 00 00 41 43 20 52 45 47 00 0e 00 3d 3d 00 00 00 00 ff ff ff ff 04 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -284,6 +294,7 @@ rule TrojanDownloader_Win32_Spycos_J_2147656010_0
         $x_1_6 = {63 70 6c 4d 69 6e 69 2e 63 70 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -314,6 +325,7 @@ rule TrojanDownloader_Win32_Spycos_R_2147663539_0
         $x_1_5 = "UPD 10 DISCARDABLE \"htmlgrd.exe\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

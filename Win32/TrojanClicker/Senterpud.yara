@@ -23,6 +23,7 @@ rule TrojanClicker_Win32_Senterpud_A_2147671750_0
         $x_1_9 = {53 74 61 72 74 44 6f 77 6e 6c 6f 61 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_MSIL_NitroCrypt_MK_2147806049_0
         $x_1_5 = "mo obtengo la clave de descifrado?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

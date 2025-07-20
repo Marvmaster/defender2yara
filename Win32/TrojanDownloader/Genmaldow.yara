@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Genmaldow_A_2147708719_0
         $x_1_5 = "server.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

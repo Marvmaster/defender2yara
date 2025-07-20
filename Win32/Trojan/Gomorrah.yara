@@ -25,6 +25,7 @@ rule Trojan_Win32_Gomorrah_RPX_2147892949_0
         $x_1_10 = "credit_cards" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Backdoor_Win32_Konny_A_2147721349_0
         $x_1_2 = {00 69 64 3d 25 73 26 70 61 73 73 77 64 3d 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MSIL_Pony_KAY_2147924327_0
         $x_5_3 = {7f 4d 74 e0 0f d3 9e 6f 6d 61 6c b3 14 6e ad 6f 51 72 80 9a b3 ba 2a 6e 6a 4a 73 38 79}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

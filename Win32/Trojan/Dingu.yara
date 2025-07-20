@@ -21,6 +21,7 @@ rule Trojan_Win32_Dingu_A_2147633325_0
         $x_1_7 = "VERSION3.2 with Encrypted " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

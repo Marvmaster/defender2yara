@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_VidarStealer_SIB_2147816793_0
         $x_1_3 = {8b d8 8b 45 ?? 8b 00 03 45 ?? 03 d8 [0-32] 2b d8 8b 45 00 89 18 [0-32] 8b (45|55) 00 31 (18|02) [0-32] 8b d8 [0-32] 2b d8 [0-32] 8b 45 01 3b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

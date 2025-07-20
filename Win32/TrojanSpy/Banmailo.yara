@@ -27,6 +27,7 @@ rule TrojanSpy_Win32_Banmailo_A_2147650268_0
         $x_2_13 = "piramide02@gmail.com" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_2_*))) or
             ((1 of ($x_4_*) and 4 of ($x_2_*))) or

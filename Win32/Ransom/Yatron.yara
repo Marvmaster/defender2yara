@@ -19,6 +19,7 @@ rule Ransom_Win32_Yatron_SA_2147734193_0
         $x_1_5 = "Yatron" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

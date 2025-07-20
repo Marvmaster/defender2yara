@@ -17,6 +17,7 @@ rule Trojan_Win32_Iepatch_A_2147707757_0
         $x_5_3 = "hm32\\hystehws\\shindohC:\\W" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

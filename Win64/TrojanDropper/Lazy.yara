@@ -17,6 +17,7 @@ rule TrojanDropper_Win64_Lazy_CCJR_2147922861_0
         $x_2_2 = {48 63 41 04 48 8b 4c 18 48 48 8b 01 41 b8 00 ?? da 00 48 8d 15 ?? ?? ?? ?? ff 50 48 44 8b c7 ba 04 00 00 00 48 3d 00 ?? da 00 44 0f 45 c2 44 89 84 24 90 00 00 00 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

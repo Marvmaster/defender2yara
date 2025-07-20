@@ -16,6 +16,7 @@ rule Trojan_Win64_RTStealer_A_2147851340_0
         $x_2_1 = {0f b6 14 0b 48 8d 49 ?? 80 f2 ?? 41 ff c0 88 51 ?? 48 8b 54 24 ?? 49 63 c0 48 3b c2 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

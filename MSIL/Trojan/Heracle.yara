@@ -17,6 +17,7 @@ rule Trojan_MSIL_Heracle_KAG_2147897090_0
         $x_1_2 = "kgwurhmajkdoezp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_Heracle_KAH_2147897091_0
         $x_5_1 = {09 11 05 08 11 05 91 07 11 04 93 28 ?? 00 00 0a 61 d2 9c 11 04 17 58 13 04 11 05 17 58 13 05 11 05 08 8e 69}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

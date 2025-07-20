@@ -20,6 +20,7 @@ rule Worm_Win32_Nayrabot_A_2147648675_0
         $x_2_5 = {6a 5b 59 50 53 53 68 1a 80 00 00 f3 a5 53 ff 15 ?? ?? ?? ?? 85 c0 7d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

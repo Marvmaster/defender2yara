@@ -26,6 +26,7 @@ rule Worm_MSIL_Aninisom_A_2147666408_0
         $x_3_12 = "[SLOWLORIS]: " wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 2 of ($x_20_*) and 2 of ($x_5_*) and 2 of ($x_3_*))) or
             ((2 of ($x_100_*) and 2 of ($x_20_*) and 3 of ($x_5_*))) or

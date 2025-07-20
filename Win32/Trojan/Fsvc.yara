@@ -22,6 +22,7 @@ rule Trojan_Win32_Fsvc_A_2147603340_0
         $x_1_8 = "GetClipboardData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

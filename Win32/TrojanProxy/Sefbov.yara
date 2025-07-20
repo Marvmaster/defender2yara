@@ -17,6 +17,7 @@ rule TrojanProxy_Win32_Sefbov_A_2147622786_0
         $x_1_3 = "89.107.104" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanProxy_Win32_Sefbov_B_2147626502_0
         $x_1_3 = "89.107.104" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanProxy_Win32_Sefbov_D_2147638638_0
         $x_1_5 = {68 80 00 00 00 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 00 6a 02 e8 ?? ?? ?? ?? 0b c0 0f 84 ?? ?? ?? ?? 8b f8 68 ?? ?? ?? ?? 6a 00 6a 02 e8 ?? ?? ?? ?? 90 8b f0 68 ?? ?? ?? ?? 6a 00 68 00 00 10 00 e8 ?? ?? ?? ?? 8b d8 57 e8 ?? ?? ?? ?? 6a ff 53 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule TrojanProxy_Win32_Sefbov_E_2147646324_0
         $x_1_3 = "executePredefinedQuery:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

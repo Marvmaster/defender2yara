@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_QQspy_A_2147658071_0
         $x_1_7 = {68 74 74 70 3a 2f 2f 31 30 2e 31 2e 32 35 34 2e 32 33 33 2f 64 6f 77 6e 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

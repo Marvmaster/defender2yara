@@ -16,6 +16,7 @@ rule Trojan_Win64_Turtleloader_AA_2147908010_0
         $x_1_1 = {48 89 c8 48 99 49 f7 fb 41 8a 04 12 41 32 04 09 88 04 0e 48 ff c1 48 81 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule VirTool_Win32_BofRegsave_A_2147901297_0
         $x_1_5 = "delete_regkey failed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

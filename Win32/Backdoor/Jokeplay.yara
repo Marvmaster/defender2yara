@@ -17,6 +17,7 @@ rule Backdoor_Win32_Jokeplay_A_2147600943_0
         $x_2_3 = "C:\\gu.wav" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 1 of ($x_3_*))) or
             (all of ($x*))

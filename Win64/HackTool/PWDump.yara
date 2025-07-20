@@ -20,6 +20,7 @@ rule HackTool_Win64_PWDump_M_2147744665_0
         $x_1_5 = "lsaext.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

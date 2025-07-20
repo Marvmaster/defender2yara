@@ -16,6 +16,7 @@ rule Worm_Win32_Gate_A_2147708147_0
         $x_1_2 = "with respect SafetyGate.ru" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

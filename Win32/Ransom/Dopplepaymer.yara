@@ -18,6 +18,7 @@ rule Ransom_Win32_Dopplepaymer_A_2147745261_0
         $x_1_4 = "File is locked: %ws" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Ransom_Win32_Dopplepaymer_A_2147745261_1
         $x_1_1 = {66 b8 17 a1 8b 4c 24 10 89 4c 24 14 8b 4c 24 14 8b 54 24 04 8a 1c 0a 66 8b 74 24 0e 88 5c 24 1b 66 69 7c 24 2e 63 f2 8b 0c 24 03 4c 24 14 66 89 7c 24 2e 89 4c 24 1c 66 39 f0 76 15 c7 44 24 10 00 00 00 00 eb ba 8b 04 24 8d 65 f4 5e 5f 5b 5d c3 8b 44 24 30 8b 4c 24 28 83 f1 ff 35 a9 86 ef 37 89 4c 24 28 8b 4c 24 1c 8a 54 24 1b 88 11 03 44 24 14 89 44 24 10 8b 4c 24 08 39 c8 74 c7 e9 7c ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Ransom_Win32_Dopplepaymer_A_2147745261_2
         $x_2_2 = "AssocIsDangerous" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Ransom_Win32_Dopplepaymer_A_2147745261_3
         $x_1_3 = {0f b6 44 24 08 c1 e0 08 0f b6 4a 11 03 c1 c6 42 10 01 80 3a 00 74 16 8b 7a 08 8b 4a 04 66 89 04 79 ff 42 08 85 c0 75 11 33 c0 40 eb 0e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -218,6 +222,7 @@ rule Ransom_Win32_Dopplepaymer_KM_2147770407_0
         $x_1_2 = {8a 14 01 8b 75 ?? 88 14 06 83 c0 01 8b 7d ?? 39 f8 89 45 ?? 74 ?? eb ?? 31 c0 89 45 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

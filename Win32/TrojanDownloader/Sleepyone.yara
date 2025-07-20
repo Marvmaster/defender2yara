@@ -25,6 +25,7 @@ rule TrojanDownloader_Win32_Sleepyone_A_2147583204_0
         $x_100_11 = "c:\\x.exe" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1000_*) and 2 of ($x_100_*))) or
             ((3 of ($x_1000_*))) or

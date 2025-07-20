@@ -19,6 +19,7 @@ rule Worm_Win32_Bickytroy_2147608199_0
         $x_10_5 = {83 f8 03 74 13 83 f8 02 74 0e 83 f8 06 74 09 83 f8 04 0f 85 ?? ?? 00 00 80 3b 41 0f 84}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or

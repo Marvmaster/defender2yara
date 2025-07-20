@@ -20,6 +20,7 @@ rule DDoS_Linux_Trigemini_A_2147827555_0
         $x_1_5 = "TriGemini. [TCP/UDP/ICMP Packet flooder]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

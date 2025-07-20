@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Buzy_SIB_2147811829_0
         $x_1_3 = {8b fa 83 c7 ?? 3b fb 7e ?? ff d6 6a ?? 99 59 f7 f9 83 c2 30 83 fa 39 7e ?? 83 fa 41 7c ?? 88 54 1d ?? 43 3b df 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

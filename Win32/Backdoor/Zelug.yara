@@ -20,6 +20,7 @@ rule Backdoor_Win32_Zelug_A_2147663266_0
         $x_1_6 = {63 6d 64 63 6f 6d 6d 61 6e 64 3a 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule Backdoor_Win32_Zelug_B_2147708236_0
         $x_1_4 = {70 6f 73 74 20 72 63 34 64 65 63 72 79 70 74 3a 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

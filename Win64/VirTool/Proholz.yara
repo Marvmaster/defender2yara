@@ -18,6 +18,7 @@ rule VirTool_Win64_Proholz_A_2147847729_0
         $x_1_3 = {48 89 c1 e8 ?? ?? ?? ?? b9 12 00 00 00 48 8b 05 e0 c9 00 00 ff ?? 48 8b 85 a8 04 00 00 48 89 c1 48 8b 05 b5 c9 00 00 ff ?? 48 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

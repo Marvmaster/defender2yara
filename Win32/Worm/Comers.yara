@@ -20,6 +20,7 @@ rule Worm_Win32_Comers_A_2147664982_0
         $x_1_6 = {5c 63 6f 6d 72 65 73 2e 64 6c 6c 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

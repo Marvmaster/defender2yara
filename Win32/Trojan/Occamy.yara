@@ -20,6 +20,7 @@ rule Trojan_Win32_Occamy_AMAB_2147853392_0
         $x_1_5 = "set ppopup_executable=popupe.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Occamy_NC_2147899959_0
         $x_1_2 = "Lmkmejmz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

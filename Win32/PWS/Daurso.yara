@@ -16,6 +16,7 @@ rule PWS_Win32_Daurso_A_2147806610_0
         $x_1_2 = {80 f9 0a 75 04 4e 48 eb f0 83 c6 fc 56 83 c7 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule PWS_Win32_Daurso_A_2147806861_0
         $x_1_1 = {8a 14 06 02 14 24 32 d3 88 14 06 40 3d 38 4a 00 00 75 ed 5a 5e 5b c3 07 00 e8 ?? ?? ?? ?? 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

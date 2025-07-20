@@ -17,6 +17,7 @@ rule Trojan_Win32_Relinestealer_FA_2147817968_0
         $x_10_2 = {34 24 4d 00 a1 ?? ?? ?? ?? 8a 88 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a1 34 24 4d 00 8b 0d ?? ?? ?? ?? 8a 91}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Relinestealer_XG_2147821262_0
         $x_1_2 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Relinestealer_UH_2147825480_0
         $x_10_2 = {0f be d9 77 ?? 83 c9 ?? 0f be d9 31 fb 69 fb ?? ?? ?? ?? eb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

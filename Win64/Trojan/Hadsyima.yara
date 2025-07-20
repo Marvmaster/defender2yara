@@ -17,6 +17,7 @@ rule Trojan_Win64_Hadsyima_A_2147910375_0
         $x_1_3 = {58 48 0f b7 c8 48 8d 88 00 03 00 00 c7 01 ?? ?? ?? ?? c7 41 04 ?? ?? ?? ?? 65 48 8b 14 25 60 00 00 00 48 89 51 08 48 8b d3 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

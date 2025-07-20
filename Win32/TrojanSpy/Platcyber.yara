@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Platcyber_A_2147639648_0
         $x_2_4 = "i8bh1PrJifrM4q" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

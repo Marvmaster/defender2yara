@@ -19,6 +19,7 @@ rule PWS_Win32_Lmir_2147574193_0
         $x_1_5 = "AVP.AlertDialog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule PWS_Win32_Lmir_ZX_2147583442_0
         $x_4_5 = "SrvHost.dll" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_4_*))) or
             (all of ($x*))
@@ -75,6 +77,7 @@ rule PWS_Win32_Lmir_ZX_2147583442_1
         $x_1_10 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_3_*) and 1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_3_*) and 5 of ($x_1_*))) or
@@ -108,6 +111,7 @@ rule PWS_Win32_Lmir_ZY_2147583725_0
         $x_1_9 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -140,6 +144,7 @@ rule PWS_Win32_Lmir_ZZ_2147583726_0
         $x_1_13 = "UnhookWindowsHookEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 9 of ($x_1_*))) or
             (all of ($x*))
@@ -173,6 +178,7 @@ rule PWS_Win32_Lmir_AAA_2147583727_0
         $x_1_11 = "People=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -204,6 +210,7 @@ rule PWS_Win32_Lmir_AAB_2147583728_0
         $x_1_9 = "StarHook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -235,6 +242,7 @@ rule PWS_Win32_Lmir_AAV_2147583827_0
         $x_1_12 = "Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/x-shockwave-flash, application/vnd.ms-powerpoint, application/vnd.ms-excel, application/msword, */*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (11 of ($x*))
 }
 
@@ -264,6 +272,7 @@ rule PWS_Win32_Lmir_I_2147593206_0
         $x_15_9 = "maoxiandao mapfile" ascii //weight: 15
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_15_*) and 1 of ($x_5_*))) or
             ((6 of ($x_15_*))) or
@@ -374,6 +383,7 @@ rule PWS_Win32_Lmir_K_2147593311_0
         $x_1_85 = "antivirus.ex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1000_*) and 3 of ($x_50_*) and 50 of ($x_1_*))) or
             ((3 of ($x_1000_*) and 3 of ($x_50_*) and 1 of ($x_5_*) and 45 of ($x_1_*))) or
@@ -423,6 +433,7 @@ rule PWS_Win32_Lmir_L_2147593512_0
         $x_2_24 = "Toolhelp32ReadProcessMemory" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_25_*) and 3 of ($x_5_*) and 8 of ($x_2_*) and 4 of ($x_1_*))) or
             ((5 of ($x_25_*) and 4 of ($x_5_*) and 6 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -478,6 +489,7 @@ rule PWS_Win32_Lmir_M_2147593513_0
         $n_150_18 = "Only registered version of Iparmor can clean" ascii //weight: -150
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((4 of ($x_25_*) and 11 of ($x_5_*))) or
@@ -511,6 +523,7 @@ rule PWS_Win32_Lmir_BMM_2147596718_0
         $x_1_8 = "msmpsvc." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -541,6 +554,7 @@ rule PWS_Win32_Lmir_BMM_2147596929_0
         $x_1_10 = "fsav.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -563,6 +577,7 @@ rule PWS_Win32_Lmir_ZD_2147598427_0
         $x_1_3 = {81 ec 04 01 00 00 80 a5 fc fe ff ff 00 53 56 57 6a 40 33 c0 59 8d bd fd fe ff ff f3 ab 66 ab 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? aa ff 15 ?? ?? ?? ?? 8b d8 8d 85 fc fe ff ff 68 04 01 00 00 50 6a 00 ff 15 ?? ?? ?? ?? 8d 85 fc fe ff ff 6a 5c 50 ff 15 ?? ?? ?? ?? 8b 3d ?? ?? ?? ?? 8b f0 46 68 ?? ?? ?? ?? 56 ff d7 83 c4 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -590,6 +605,7 @@ rule PWS_Win32_Lmir_BMQ_2147598477_0
         $x_1_8 = "soul.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -622,6 +638,7 @@ rule PWS_Win32_Lmir_AGZ_2147598568_0
         $x_1_7 = "Woool" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -652,6 +669,7 @@ rule PWS_Win32_Lmir_BMO_2147598602_0
         $x_1_8 = "wow." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -682,6 +700,7 @@ rule PWS_Win32_Lmir_BMS_2147598622_0
         $x_1_8 = {8a 45 e3 24 3f 25 ff 00 00 00 89 45 dc b9 06 00 00 00 2b cf d3 6d dc 33 c0 8a c3 0b 45 dc 84 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -707,6 +726,7 @@ rule PWS_Win32_Lmir_AHB_2147602287_0
         $x_1_6 = "RAVMON" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -733,6 +753,7 @@ rule PWS_Win32_Lmir_AHC_2147602409_0
         $x_2_7 = {c7 45 f8 02 00 00 00 6a 00 6a 00 6a 10 8d 45 ec 50 6a 00 ff 75 fc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -772,6 +793,7 @@ rule PWS_Win32_Lmir_AZ_2147604939_0
         $x_1_13 = {6a 00 6a 00 6a 00 68 1f 00 0f 00 53 e8 ?? ?? fb ff 89 06 8b 06 c6 40 1b 58 8b 06 c6 40 1c 00 8b 06 c6 40 22 00 8b 06 c6 40 25 00 8b 06 c6 40 1d 00 8b 06 c6 40 1e 00 8b 06 80 78 1f 39 74 06 8b 06 c6 40 1f 58 8b 06 c6 40 05 58 8b 06 c6 40 21 00 8b 06 c6 40 23 01 8b 06 c6 40 32 01 8b 06 66 c7 40 34 01 09 8b 06 c6 40 37 fd 8b 06 c6 40 45 00 8b 06 c6 40 36 ff 83 3e 00 75 19 53}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -805,6 +827,7 @@ rule PWS_Win32_Lmir_F_2147604995_0
         $x_1_14 = "RavMon.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 7 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -851,6 +874,7 @@ rule PWS_Win32_Lmir_E_2147604998_0
         $x_1_6 = "WinInet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -885,6 +909,7 @@ rule PWS_Win32_Lmir_E_2147604999_0
         $x_1_15 = "SeDebugPrivilege" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -914,6 +939,7 @@ rule PWS_Win32_Lmir_AHD_2147605406_0
         $x_1_10 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -944,6 +970,7 @@ rule PWS_Win32_Lmir_J_2147606748_0
         $x_1_11 = {6a 00 6a 00 68 ?? ?? ?? 00 6a 00 6a 00 e8 ?? ?? fd ff 33 c0 55 68 ?? ?? ?? 00 64 ff 30 64 89 20 33 c0 5a 59 59 64 89 10 eb 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -969,6 +996,7 @@ rule PWS_Win32_Lmir_O_2147609673_0
         $x_1_6 = {81 3e 0f b7 42 08 75 ?? 81 7e 04 0f b7 4a 0a 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -991,6 +1019,7 @@ rule PWS_Win32_Lmir_S_2147609927_0
         $x_1_3 = {45 78 65 63 c7 45 ?? 75 74 65 48 c7 45 ?? 6f 6f 6b 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1016,6 +1045,7 @@ rule PWS_Win32_Lmir_X_2147611290_0
         $x_2_6 = {2e 64 6c 6c 00 49 6e 73 74 48 6f 6f 6b 50 72 6f 63 00 55 6e 49 6e 73 74 48 6f 6f 6b 50 72 6f 63}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
@@ -1050,6 +1080,7 @@ rule PWS_Win32_Lmir_AQ_2147622318_0
         $x_1_10 = "map\\88X600.nmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1076,6 +1107,7 @@ rule PWS_Win32_Lmir_EO_2147691773_0
         $x_1_4 = "gameid=%s&PassWord=%s&key=%s&quyu=%s&mirserver=%s&count=%i&zt=%s&action=submit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

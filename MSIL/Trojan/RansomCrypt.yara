@@ -16,6 +16,7 @@ rule Trojan_MSIL_RansomCrypt_RP_2147911282_0
         $x_1_1 = {28 9f 00 00 0a 28 ae 00 00 0a 2c 3d 28 0d 00 00 06 6f ?? ?? ?? ?? 7b 13 00 00 04 11 0a 9a 00 72 ?? ?? 00 70 28 9f 00 00 0a 13 04 00 72 ?? ?? 00 70 11 04 00 72 ?? ?? 00 70 11 00 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

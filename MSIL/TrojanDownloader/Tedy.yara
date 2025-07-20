@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Tedy_NE_2147830481_0
         $x_2_3 = "$TRUMP" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

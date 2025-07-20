@@ -21,6 +21,7 @@ rule PWS_Win32_Racoon_PAA_2147808974_0
         $x_1_6 = "cmd /c 'whoami.exe && systeminfo.exe && ipconfig.exe && netstat.exe'" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -67,6 +68,7 @@ rule PWS_Win32_Racoon_AD_2147812187_0
         $x_1_23 = "WinHttpSendRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

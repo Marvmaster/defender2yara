@@ -18,6 +18,7 @@ rule Trojan_Linux_Slice_A_2147650009_0
         $x_3_3 = "ps aux | grep -E \"httpd|nginx|lsws|apache2\" | wc -l" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

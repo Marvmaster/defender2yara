@@ -18,6 +18,7 @@ rule Trojan_Win32_Wysotot_A_2147683975_0
         $x_1_4 = "SOFTWARE\\eSafeSecControl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Wysotot_B_2147684065_0
         $x_1_4 = {44 50 72 6f 74 65 63 74 53 76 63 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Wysotot_C_2147684192_0
         $x_1_5 = {61 00 64 00 6d 00 2e 00 73 00 6f 00 66 00 74 00 33 00 36 00 35 00 2e 00 63 00 6f 00 6d 00 2f 00 67 00 64 00 70 00 2f 00 73 00 6f 00 66 00 74 00 75 00 70 00 64 00 61 00 74 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win32_Wysotot_A_2147685050_0
         $x_1_6 = {68 6f 6d 65 70 61 67 65 00 [0-48] 68 6f 6d 65 70 61 67 65 5f 63 68 61 6e 67 65 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_Win32_Wysotot_2147685615_0
         $x_1_5 = "logUrl=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             ((3 of ($x_5_*))) or
@@ -147,6 +152,7 @@ rule Trojan_Win32_Wysotot_E_2147685978_0
         $x_1_9 = "portaldosites.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -179,6 +185,7 @@ rule Trojan_Win32_Wysotot_F_2147687888_0
         $x_1_10 = "portaldosites.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             ((4 of ($x_10_*))) or

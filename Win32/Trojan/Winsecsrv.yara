@@ -21,6 +21,7 @@ rule Trojan_Win32_Winsecsrv_A_2147730376_0
         $x_1_6 = {00 49 6e 73 74 4d 6f 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Trojan_Win32_Winsecsrv_B_2147730377_0
         $x_1_2 = {00 61 64 69 6e 73 74 2e 64 6c 6c 00 64 6c 6c 5f 69 6e 69 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

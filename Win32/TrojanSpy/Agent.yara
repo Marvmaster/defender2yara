@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Agent_2147800051_0
         $x_1_7 = "InternetCloseHandle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule TrojanSpy_Win32_Agent_2147800051_1
         $x_1_5 = "szAccount = %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule TrojanSpy_Win32_Agent_2147800051_2
         $x_1_10 = "WebMoney" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule TrojanSpy_Win32_Agent_2147800051_3
         $x_1_4 = "c:\\windows\\system32\\1.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -125,6 +129,7 @@ rule TrojanSpy_Win32_Agent_IA_2147801612_0
         $x_2_6 = "Process32First" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_3_*) and 2 of ($x_2_*))) or
             ((2 of ($x_10_*) and 2 of ($x_3_*))) or
@@ -154,6 +159,7 @@ rule TrojanSpy_Win32_Agent_A_2147801921_0
         $x_1_6 = "\\passes.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -189,6 +195,7 @@ rule TrojanSpy_Win32_Agent_DA_2147803118_0
         $x_1_13 = "Sorry, service is currently not available" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -226,6 +233,7 @@ rule TrojanSpy_Win32_Agent_FL_2147803460_0
         $x_20_15 = {56 33 f6 83 7c 24 0c 01 75 ?? 68 ?? ?? 00 10 6a 01 56 ff 15 60 c0 00 10 3b c6 a3 48 e0 00 10 74 ?? ff 15 78 c0 00 10 3d b7 00 00 00 74}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 12 of ($x_1_*))) or
             (all of ($x*))
@@ -252,6 +260,7 @@ rule TrojanSpy_Win32_Agent_CQ_2147803654_0
         $x_1_4 = "Cammy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -279,6 +288,7 @@ rule TrojanSpy_Win32_Agent_GP_2147803795_0
         $x_1_5 = {51 51 2e 65 78 65 00 00 5c 74 68 65 6d 73 67 6d 6f 76 65 2e 65 78 65 00 5c 61 75 74 6f 72 75 6e 2e 69 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -302,6 +312,7 @@ rule TrojanSpy_Win32_Agent_JA_2147803825_0
         $x_1_4 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -330,6 +341,7 @@ rule TrojanSpy_Win32_Agent_BP_2147803867_0
         $x_1_9 = "logo.png" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -360,6 +372,7 @@ rule TrojanSpy_Win32_Agent_PI_2147803870_0
         $x_1_8 = "\\tmp.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -390,6 +403,7 @@ rule TrojanSpy_Win32_Agent_GR_2147803877_0
         $x_10_11 = {74 28 6a 02 53 53 55 ff 15 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 56 6a 1e 8d 44 24 1c 50 bd ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 5b 3c 5d 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -422,6 +436,7 @@ rule TrojanSpy_Win32_Agent_PO_2147803878_0
         $x_1_9 = "if exist \"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -443,6 +458,7 @@ rule TrojanSpy_Win32_Agent_FGI_2147803913_0
         $x_1_2 = {68 00 00 88 00 68 68 63 40 00 68 60 63 40 00 56 ff d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*))) or
             (all of ($x*))
@@ -482,6 +498,7 @@ rule TrojanSpy_Win32_Agent_FGH_2147803914_0
         $x_1_17 = ">Informations%20from%20Tibia.com<a>+<br>+<a%20href=https://secure.tibia.com/account/?subtopic=accountmanagement>Login%20to%20Tibia.com<a>+<br>+<a%20href=http://tibia.pl/earth.php?x=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -516,6 +533,7 @@ rule TrojanSpy_Win32_Agent_XFX_2147803916_0
         $x_2_15 = "megashare" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_20_*) and 2 of ($x_10_*) and 2 of ($x_5_*) and 5 of ($x_2_*))) or
             ((1 of ($x_100_*) and 4 of ($x_20_*) and 2 of ($x_5_*) and 5 of ($x_2_*))) or
@@ -545,6 +563,7 @@ rule TrojanSpy_Win32_Agent_GS_2147803917_0
         $x_1_2 = {e8 05 00 00 00 e9 10 00 00 00 68 90 80 40 00 b9 ?? 8c 40 00 e8 ?? ?? 00 00 c3 68 62 16 40 00 e8 ?? ?? 00 00 59 c3 b9 ?? 8c 40 00 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -571,6 +590,7 @@ rule TrojanSpy_Win32_Agent_KA_2147803923_0
         $x_1_7 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -597,6 +617,7 @@ rule TrojanSpy_Win32_Agent_TA_2147803939_0
         $x_1_7 = {01 00 00 53 56 57 6a 01 58 39 45 0c 0f 85 ?? ?? 00 00 33 db 68 ?? ?? ?? ?? 53 68 03 00 1f 00 ff 15 ?? ?? ?? ?? 3b c3 74 0c 50 ff 15 ?? ?? ?? ?? e9 ?? ?? 00 00 8d ?? ?? fe ff ff 68 04 01 00 00 50 53 ff 15 ?? ?? ?? ?? 8d ?? ?? fe ff ff 50 e8 ?? ?? ?? ?? be ?? ?? ?? ?? 8d 7d f0 a5 a5 a5 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -627,6 +648,7 @@ rule TrojanSpy_Win32_Agent_CF_2147804024_0
         $x_1_8 = {5c 73 68 65 6c 6c 5c 6f 70 65 6e 5c 63 6f 6d 6d 61 6e 64 5c 00 00 00 22 00 22 20 65 78 65 63 75 74 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -650,6 +672,7 @@ rule TrojanSpy_Win32_Agent_TB_2147804099_0
         $x_1_4 = "DnsQuery_A" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -678,6 +701,7 @@ rule TrojanSpy_Win32_Agent_GQ_2147804154_0
         $x_100_9 = {8b 4d 08 8b 55 0c 8a 01 32 02 8b 4d 08 88 01 8b 55 0c 83 c2 01 89 55 0c 8b 45 08 83 c0 01 89 45 08}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -701,6 +725,7 @@ rule TrojanSpy_Win32_Agent_DF_2147804196_0
         $x_1_4 = "User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:8.0.1) Gecko/20100101 Firefox/8.0.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

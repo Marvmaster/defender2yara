@@ -20,6 +20,7 @@ rule TrojanProxy_Win64_Magroxy_A_2147847368_0
         $x_1_5 = "HTTP_PROXYHost: %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Zopharp_A_2147634035_0
         $x_1_3 = "%s\\gert%i.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

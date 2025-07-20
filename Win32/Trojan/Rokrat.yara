@@ -18,6 +18,7 @@ rule Trojan_Win32_Rokrat_A_2147913232_0
         $x_1_4 = "dir /A /S %s >>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

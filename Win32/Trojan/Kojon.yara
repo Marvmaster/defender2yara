@@ -17,6 +17,7 @@ rule Trojan_Win32_Kojon_A_2147682271_0
         $x_1_3 = "\\attack_temp\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

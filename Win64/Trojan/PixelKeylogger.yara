@@ -16,6 +16,7 @@ rule Trojan_Win64_PixelKeylogger_A_2147893179_0
         $x_2_1 = {8b cb ff 15 ?? ?? 00 00 66 0f ba e0 ?? 72 ?? ff c3 81 fb ?? ?? ?? ?? 7e ?? 8b 1d 46 45 00 00 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

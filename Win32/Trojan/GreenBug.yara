@@ -17,6 +17,7 @@ rule Trojan_Win32_GreenBug_A_2147727216_0
         $x_1_3 = "Turn off the television as it is only a flashing box distraction from life! Interact" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

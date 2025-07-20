@@ -22,6 +22,7 @@ rule TrojanSpy_MSIL_Stelega_AV_2147771691_0
         $x_1_7 = "e2acb467-72ee-4e9b-950d-e2cfdb8a48d1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanSpy_MSIL_Stelega_AVP_2147771834_0
         $x_1_5 = "a7c8d659-4e4c-4c4d-9d19-f975be357d54" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +88,7 @@ rule TrojanSpy_MSIL_Stelega_VPA_2147771950_0
         $x_1_19 = "MenuVirtual.BtnMenu.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

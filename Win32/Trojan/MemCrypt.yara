@@ -20,6 +20,7 @@ rule Trojan_Win32_MemCrypt_MK_2147787718_0
         $x_1_5 = "Your computer won't boot up again" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

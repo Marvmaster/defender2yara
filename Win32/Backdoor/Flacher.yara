@@ -20,6 +20,7 @@ rule Backdoor_Win32_Flacher_A_2147691672_0
         $x_1_5 = {8a 08 40 84 c9 75 f9 2b c2 53 8b d8 80 7c 3b ff ?? 75 3e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Backdoor_Win32_Flacher_B_2147706804_0
         $x_1_6 = "debug: cannot allocate memory for ptrfilearray!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

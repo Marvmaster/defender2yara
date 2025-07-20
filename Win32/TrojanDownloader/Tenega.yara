@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Tenega_B_2147782390_0
         $x_1_2 = {8b 55 fc 8a 1c 11 80 c3 7a 88 1c 11 8b 55 fc 8a 1c 11 80 c3 fd 88 1c 11 8b 55 fc 80 04 11 03 90 8b 55 fc 8a 1c 11 80 f3 19 88 1c 11}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Tenega_B_2147782390_1
         $x_1_6 = {63 3a 5c 74 65 6d 70 5c 6e 73 [0-15] 2e 74 6d 70 5c [0-15] 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule TrojanDownloader_Win32_Tenega_FGTR_2147794544_0
         $x_1_2 = {30 40 00 5a 10 40 00 00 00 00 00 2a 00 5c 00 41 00 43 00 3a 00 5c 00 44}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule TrojanDownloader_Win32_Tenega_BGHY_2147797364_0
         $x_1_1 = {66 89 75 d2 66 89 7d da 66 89 55 84 66 89 4d 8e 66 89 7d 90 66 89 75 ba 66 89 4d bc 66 89 5d c2 66 89 45 c8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule TrojanDownloader_Win32_Tenega_JITA_2147797885_0
         $x_1_1 = {33 14 85 e0 f9 07 01 33 14 85 e4 f9 07 01 33 14 85 e8 f9 07 01 33 14 85 ec f9 07 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule TrojanDownloader_Win32_Tenega_A_2147899390_0
         $x_1_5 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

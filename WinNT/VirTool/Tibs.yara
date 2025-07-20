@@ -20,6 +20,7 @@ rule VirTool_WinNT_Tibs_A_2147598456_0
         $x_3_5 = {eb 91 57 56 89 75 30 e8 ?? ?? ff ff 03 f0 84 db 74 81 eb 19 3b 75 1c 75 09 c7 45 2c 06 00 00 80}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

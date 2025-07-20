@@ -17,6 +17,7 @@ rule Backdoor_Win32_Dawkhu_A_2147610172_0
         $x_1_3 = {2d c6 44 24 ?? 30 c6 44 24 ?? 3d c6 44 24 ?? 4f c6 44 24 ?? 70 c6 44 24 ?? 65 c6 44 24 ?? 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

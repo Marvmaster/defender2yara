@@ -24,6 +24,7 @@ rule Trojan_Win32_Swotter_BB_2147758884_0
         $x_1_9 = "%%\\rundll32.exe Bridesmaid,Minyan" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -50,6 +51,7 @@ rule Trojan_Win32_Swotter_BC_2147761166_0
         $x_1_2 = {25 25 5c 72 75 6e 64 6c 6c 33 32 2e 65 78 65 20 [0-63] 2c 4d 69 6e 79 61 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

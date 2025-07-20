@@ -16,6 +16,7 @@ rule Trojan_MSIL_ABRisk_PTCR_2147897435_0
         $x_2_1 = {72 21 00 00 70 0a 28 ?? 00 00 0a 0b 00 73 43 00 00 0a 0d 09 06 6f 44 00 00 0a 6f 45 00 00 0a 0c de 0c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_ABRisk_PTCT_2147897437_0
         $x_2_1 = {6f 6f 00 00 0a 00 02 72 fd 02 00 70 72 0d 03 00 70 6f 31 00 00 06 26 20 10 27 00 00 28 ?? 00 00 0a 00 02}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

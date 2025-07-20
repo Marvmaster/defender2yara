@@ -18,6 +18,7 @@ rule Worm_Win32_Soltern_GMH_2147889371_0
         $x_10_3 = {45 f0 e8 49 e4 ff ff c3 e9 67 70 ff ff eb f0 8b d6 8b c3 8b cf e8 02 fd ff ff 5f 5e 5b 8b e5 5d}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

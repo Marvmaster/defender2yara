@@ -22,6 +22,7 @@ rule Trojan_Win32_Rakine_A_2147597058_0
         $x_1_8 = "220.95.231.197/access_count" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

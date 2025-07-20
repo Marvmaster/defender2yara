@@ -17,6 +17,7 @@ rule TrojanDownloader_Win64_Cobaltstrike_RRR_2147932729_0
         $x_1_2 = {48 8d 1d c9 e7 07 00 b9 23 00 00 00 e8 5a c0 fa ff 48 85 db}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Worm_Win32_Catinea_A_2147652856_0
         $x_1_4 = "cmd.exe /c %s vb -ibck  -y -p- \"%s\" >\"%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

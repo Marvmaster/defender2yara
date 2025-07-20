@@ -22,6 +22,7 @@ rule DoS_Win32_WhisperGate_A_2147810460_0
         $x_1_7 = {77 69 74 68 20 79 6f 75 72 20 6f 72 67 61 6e 69 7a 61 ?? 69 6f 6e 20 6e 61 6d 65 2e 0d 0a 57 65 20 77 69 6c 6c 20 63 6f 6e 74 61 63 74 20 79 6f 75 20 74 6f 20 ?? 69 76 65 20 66 75 72 74 68 65 72 20 69 6e 73 74 72 75 63 74 69 6f 6e 73 2e 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule DoS_Win32_WhisperGate_C_2147810461_0
         $x_1_4 = {7a 7c c7 00 00 00 66 81 16 7e 7c 00 00 00 ?? f8 eb af 10 00 01 00 00 00 00 00 01 00 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule DoS_Win32_WhisperGate_M_2147810985_0
         $x_1_5 = {2e 00 48 00 54 00 4d 00 4c 00 00 00 2e 00 48 00 54 00 4d 00 00 00 2e 00 53 00 48 00 54 00 4d 00 4c 00 00 00 2e 00 58 00 48 00 54 00 4d 00 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

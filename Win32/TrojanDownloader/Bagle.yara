@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Bagle_ACB_2147804005_0
         $x_1_4 = "S1o1f1t1w1a1r1e1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_Bagle_A_2147804037_0
         $x_1_4 = {5c 53 76 63 00 45 6e 61 62 6c 65 4c 55 41 00 5c 2a 2e 2a 00 53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e 00 3a 5c 57 49 4e 00 72 75 6e 64 6c 6c 33 32 2e 65 78 65 00 5c 5c 2e 5c 00 53}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

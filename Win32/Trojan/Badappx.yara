@@ -19,6 +19,7 @@ rule Trojan_Win32_Badappx_A_2147755654_0
         $x_20_5 = "\\??\\e:" wide //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_20_*))) or
             (all of ($x*))

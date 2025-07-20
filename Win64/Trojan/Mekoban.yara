@@ -18,6 +18,7 @@ rule Trojan_Win64_Mekoban_DA_2147918474_0
         $x_10_3 = "Adobe Download Manager" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_Mekoban_DAA_2147919032_0
         $x_1_2 = {43 3a 5c 55 73 65 72 73 5c 4d 75 73 71 75 69 74 61 6f 5c 44 65 73 6b 74 6f 70 5c 42 52 5f 32 30 32 33 5c 4c 4f 41 44 43 50 50 32 30 32 34 5c [0-30] 5c 78 36 34 5c 52 65 6c 65 61 73 65 5c [0-30] 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

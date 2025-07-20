@@ -20,6 +20,7 @@ rule PWS_Win32_Vkont_C_2147654674_0
         $x_1_6 = {2e 00 72 00 75 00 2f 00 [0-4] 2e 00 74 00 78 00 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule PWS_Win32_Vkont_D_2147658727_0
         $x_1_4 = "funk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

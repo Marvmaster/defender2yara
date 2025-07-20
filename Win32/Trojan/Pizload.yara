@@ -17,6 +17,7 @@ rule Trojan_Win32_Pizload_B_2147610866_0
         $x_1_3 = {83 f8 40 0f 94 c2 c1 e1 06 83 e0 3f 0b c1 8b c8 2b ea 47 83 ff 04 75 1d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

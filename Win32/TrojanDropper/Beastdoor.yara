@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Beastdoor_DV_2147606743_0
         $x_1_3 = {40 00 33 c0 a0 ?? ?? 40 00 31 05 ?? ?? 40 00 e8 ?? ?? ff ff 8d 45 c4 ba ?? ?? 40 00 b9 05 01 00 00 e8 ?? ?? ff ff 8b 45 c4 8b 0d ?? ?? 40 00 8b 15 ?? ?? 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

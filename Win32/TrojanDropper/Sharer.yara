@@ -29,6 +29,7 @@ rule TrojanDropper_Win32_Sharer_A_2147624532_0
         $x_1_15 = "scan.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +70,7 @@ rule TrojanDropper_Win32_Sharer_B_2147624593_0
         $x_1_21 = "sql delete Bethserv" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 12 of ($x_1_*))) or
             (all of ($x*))

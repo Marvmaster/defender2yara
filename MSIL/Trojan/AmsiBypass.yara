@@ -20,6 +20,7 @@ rule Trojan_MSIL_AmsiBypass_NE_2147827660_0
         $x_1_5 = "UVcxemFWTmpZVzVDZFdabVpYST0=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_AmsiBypass_NB_2147904796_0
         $x_5_1 = {08 8e 69 5d 91 61 d2 9c 11 0d 17 58}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_MSIL_AmsiBypass_CCHT_2147904999_0
         $x_1_1 = {11 09 11 08 6f ?? 00 00 0a 11 19 91 11 0a 11 19 11 0a 8e 69 5d 91 61 d2 6f ?? 00 00 0a 11 19 17 58 13 19 11 19 6a 11 08 6f ?? 00 00 0a 32 d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_MSIL_AmsiBypass_CCHZ_2147910221_0
         $x_1_7 = "The number of processes in the system is less than 40. Exiting the program" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             ((3 of ($x_10_*))) or

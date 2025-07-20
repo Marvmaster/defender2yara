@@ -21,6 +21,7 @@ rule Trojan_Win32_Eternal_RPH_2147840899_0
         $x_1_6 = ":%UDYUDZJe%:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_Eternal_RPI_2147840900_0
         $x_1_6 = ":%JZdAnHQXjf%:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

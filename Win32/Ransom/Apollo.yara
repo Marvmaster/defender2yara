@@ -16,6 +16,7 @@ rule Ransom_Win32_Apollo_A_2147723888_0
         $x_10_2 = "\\Users\\sabri\\documents\\visual studio 2010\\Projects\\cripto\\Release\\Stub.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

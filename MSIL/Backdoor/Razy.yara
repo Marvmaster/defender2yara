@@ -20,6 +20,7 @@ rule Backdoor_MSIL_Razy_G_2147745230_0
         $x_1_5 = "icsharpcode.sharpziplib.pdb.compressed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

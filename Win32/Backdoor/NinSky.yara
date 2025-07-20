@@ -23,6 +23,7 @@ rule Backdoor_Win32_NinSky_A_2147709034_0
         $x_1_9 = "[SkypeMessage] Logged out." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

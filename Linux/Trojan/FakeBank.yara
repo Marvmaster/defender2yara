@@ -18,6 +18,7 @@ rule Trojan_Linux_FakeBank_B_2147808332_0
         $x_1_3 = {68 74 74 70 3a 2f 2f [0-16] 2e 69 65 67 6f 2e 6e 65 74 2f 61 70 70 48 6f 6d 65 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Linux_FakeBank_GV_2147808847_0
         $x_1_3 = {68 74 74 70 3a 2f 2f [0-16] 2e 69 65 67 6f 2e 6e 65 74 2f 61 70 70 48 6f 6d 65 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

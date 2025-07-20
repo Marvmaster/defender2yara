@@ -21,6 +21,7 @@ rule Trojan_MSIL_MarsStealer_MA_2147817202_0
         $x_1_6 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_MarsStealer_AAMF_2147888627_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_MSIL_MarsStealer_AANY_2147889483_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_MSIL_MarsStealer_AAQM_2147891970_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_MSIL_MarsStealer_AAWE_2147895926_0
         $x_2_2 = {72 55 45 00 70 28 ?? 00 00 0a 28 ?? 00 00 06 5b 59 7e ?? 00 00 0a 8e 59 7e ?? 00 00 0a 8e 59 28 ?? 00 00 06 7e ?? 00 00 04 7e ?? 00 00 04 28 ?? 00 00 06 28 ?? 00 00 06 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

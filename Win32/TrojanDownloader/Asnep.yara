@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Asnep_A_2147696568_0
         $x_5_7 = "518peng.com" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_2_*))) or
             ((3 of ($x_5_*))) or

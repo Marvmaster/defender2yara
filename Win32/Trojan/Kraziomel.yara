@@ -17,6 +17,7 @@ rule Trojan_Win32_Kraziomel_C_2147682715_0
         $x_1_3 = "10fa597b30f766c011dfd84e881360a50aa927954157ee47" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

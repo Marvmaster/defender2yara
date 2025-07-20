@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Barlaiy_A_2147717399_0
         $x_1_2 = {68 00 6a 02 00 68 ?? ?? ?? ?? 56 e8 ?? ?? ?? ?? 8b 44 24 ?? 81 c6 00 6a 02 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Wastker_WR_2147758336_0
         $x_1_3 = {68 0e 27 00 00 ff d6 85 db 74 ?? ff ?? 33 db eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_Win32_Cryptolocker_PDP_2147778404_0
         $x_1_3 = "WANACRY" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Cryptolocker_PDP_2147778404_1
         $x_1_3 = "Read-Me-Now" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Ransom_Win32_Cryptolocker_PDP_2147778404_2
         $x_1_4 = "System Volume Information\\__empty" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Ransom_Win32_Cryptolocker_PDP_2147778404_3
         $x_1_4 = "DECRYPT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Ransom_Win32_Cryptolocker_PDP_2147778404_4
         $x_1_5 = "FindFirstFileW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -140,6 +145,7 @@ rule Ransom_Win32_Cryptolocker_PDP_2147778404_5
         $x_1_6 = "SHEmptyRecycleBinA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Ransom_Win32_Cryptolocker_PDR_2147778644_0
         $x_1_4 = "Tor Browser" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +196,7 @@ rule Ransom_Win32_Cryptolocker_PDR_2147778644_1
         $x_1_5 = "DisableTaskmgr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -213,6 +221,7 @@ rule Ransom_Win32_Cryptolocker_PDR_2147778644_2
         $x_1_4 = "decrypted successfully" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -237,6 +246,7 @@ rule Ransom_Win32_Cryptolocker_PDR_2147778644_3
         $x_1_4 = "@protonmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -261,6 +271,7 @@ rule Ransom_Win32_Cryptolocker_PDR_2147778644_4
         $x_1_4 = "BASE64ENCRYPTED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -287,6 +298,7 @@ rule Ransom_Win32_Cryptolocker_PAC_2147786677_0
         $x_1_6 = "\\winmsism" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -313,6 +325,7 @@ rule Ransom_Win32_Cryptolocker_PAJ_2147795382_0
         $x_1_6 = "cry.ps1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -337,6 +350,7 @@ rule Ransom_Win32_Cryptolocker_PAK_2147798131_0
         $x_1_4 = "bW9uZXksIG1vbmV5LCBtb25leSE=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +377,7 @@ rule Ransom_Win32_Cryptolocker_PAL_2147814158_0
         $x_1_6 = "vssadmin Delete Shadows /all /quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -388,6 +403,7 @@ rule Ransom_Win32_Cryptolocker_PAM_2147814504_0
         $x_1_5 = "Hello sir, your files was been ripped off" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -409,6 +425,7 @@ rule Ransom_Win32_Cryptolocker_MKZ_2147926120_0
         $x_5_1 = {33 c6 03 82 80 f4 00 00 8b 54 24 14 21 04 8a 8b 0b 83 eb 04 a1 ?? ?? ?? ?? 46 45 c7 04 88 23 10 00 00 a1 ?? ?? ?? ?? 0f b7 c0 3b 34 87 7e}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

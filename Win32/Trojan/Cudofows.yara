@@ -18,6 +18,7 @@ rule Trojan_Win32_Cudofows_A_2147687636_0
         $x_2_4 = {0f b6 14 32 32 14 2f 47 83 6c 24 14 01 88 57 ff 75 a3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

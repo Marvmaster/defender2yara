@@ -19,6 +19,7 @@ rule HackTool_Win32_Patcher_E_2147654807_0
         $x_1_5 = "created with dUP2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule HackTool_Win32_Patcher_2147744922_0
         $x_1_6 = "file patched" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule HackTool_Win32_Patcher_2147744922_1
         $x_1_6 = "combobox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule HackTool_Win32_Patcher_2147744922_2
         $x_1_8 = "Patch succeeded!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

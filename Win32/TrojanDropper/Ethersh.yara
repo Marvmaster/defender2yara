@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Ethersh_A_2147655369_0
         $x_1_1 = {8a 07 2c 63 34 42 34 63 f6 d0 88 07 47 e2 f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

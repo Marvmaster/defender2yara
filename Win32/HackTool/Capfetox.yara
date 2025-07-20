@@ -20,6 +20,7 @@ rule HackTool_Win32_Capfetox_A_2147807489_0
         $x_1_5 = "nice0e3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

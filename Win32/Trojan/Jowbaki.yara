@@ -19,6 +19,7 @@ rule Trojan_Win32_Jowbaki_A_2147712065_0
         $x_1_5 = "rmansys.ru" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or

@@ -18,6 +18,7 @@ rule Worm_MSIL_Zatobax_A_2147687753_0
         $x_1_4 = {28 3e 00 00 0a 0a 06 0d 16 0c 2b 0e 09 08 9a 0b 07 28 23 00 00 06 08 17 d6 0c 08 09 8e b7 32 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

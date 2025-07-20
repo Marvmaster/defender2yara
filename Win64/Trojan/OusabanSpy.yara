@@ -17,6 +17,7 @@ rule Trojan_Win64_OusabanSpy_RP_2147913017_0
         $x_1_2 = {41 81 38 d0 ff 13 00 75 31 48 83 ee 20 48 8b 06 48 8b 56 08 48 89 50 08 48 89 02 31 c0 88 05 e2 8d 4f 00 48 89 f1 31 d2 41 b8 00 80 00 00 e8 ea}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

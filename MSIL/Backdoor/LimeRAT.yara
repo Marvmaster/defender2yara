@@ -22,6 +22,7 @@ rule Backdoor_MSIL_LimeRAT_A_2147735914_0
         $x_1_7 = {00 53 50 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

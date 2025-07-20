@@ -19,6 +19,7 @@ rule Backdoor_Linux_Tusnami_C_2147788409_0
         $x_1_4 = ":KILL_PORT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Backdoor_Linux_Tusnami_B_2147794161_0
         $x_1_11 = "XMAS <target> <port> <secs> <cwr,ece,urg,ack,psh,rst,fin,syn or null" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -85,6 +87,7 @@ rule Backdoor_Linux_Tusnami_D_2147794162_0
         $x_1_11 = "killer_kill_by_port" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -109,6 +112,7 @@ rule Backdoor_Linux_Tusnami_E_2147794163_0
         $x_1_4 = "sendHTTP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -136,6 +140,7 @@ rule Backdoor_Linux_Tusnami_F_2147797456_0
         $x_1_7 = "UDP flood" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -163,6 +168,7 @@ rule Backdoor_Linux_Tusnami_G_2147797457_0
         $x_1_7 = "/var/run/shit.bkp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

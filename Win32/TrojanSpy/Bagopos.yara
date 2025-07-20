@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Bagopos_A_2147690057_0
         $x_1_4 = {80 f9 30 72 0d 80 f9 39 77 08 40 83 f8 14 7c ?? eb 05 83 f8 0d 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule TrojanSpy_Win32_Bagopos_A_2147690057_1
         $x_10_8 = {5c 6a 73 64 5f 31 32 2e 32 5c [0-4] 52 65 6c 65 61 73 65 5c 6a 73 64 5f 31 32 2e 32 2e 70 64 62 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or

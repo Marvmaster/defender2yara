@@ -18,6 +18,7 @@ rule Ransom_Win32_GanWaste_A_2147757962_0
         $x_1_3 = {8a 1f 4d 8a d3 47 e8 ?? ?? ?? ?? 0f b6 c8 0f b6 d3 83 e1 0f c1 ea 04 33 ca c1 e8 04 33 04 8e 85 ed 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

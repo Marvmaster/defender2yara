@@ -16,6 +16,7 @@ rule TrojanDownloader_MacOS_X_Revir_A_2147649886_0
         $x_3_2 = {55 89 e5 83 ec 18 e8 8b ff ff ff c7 44 24 04 ?? ?? 00 00 a1 28 20 00 00 89 04 24 e8 a3 00 00 00 c7 04 24 ?? ?? 00 00 e8 c7 00 00 00 c7 44 24}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_MacOS_X_Revir_B_2147656196_0
         $x_5_7 = {01 ff 7e a3 ab 78 48 00 00 41 38 76 1e f4 48 00 01 39}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

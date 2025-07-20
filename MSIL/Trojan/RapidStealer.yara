@@ -44,6 +44,7 @@ rule Trojan_MSIL_RapidStealer_A_2147691099_0
         $x_1_29 = "GetUsernameAndPassword" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

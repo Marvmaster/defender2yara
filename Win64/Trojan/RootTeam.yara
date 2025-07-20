@@ -16,6 +16,7 @@ rule Trojan_Win64_RootTeam_RDA_2147850790_0
         $x_2_1 = {e9 26 00 00 00 c8 25 92 29 7f 21 7e 0c 1e a5 0b 57 ae e9 a8 8a 39 1a d8 ea 82 45 89 83 f3 77 a2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

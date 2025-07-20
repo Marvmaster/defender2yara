@@ -22,6 +22,7 @@ rule Trojan_Linux_StealthLoader_2147808231_0
         $x_1_8 = "LoadLibrary" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_16_*) and 2 of ($x_8_*) and 1 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_16_*) and 1 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or

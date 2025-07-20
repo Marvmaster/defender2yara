@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Pedrp_A_2147657117_0
         $x_1_4 = "\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

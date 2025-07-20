@@ -19,6 +19,7 @@ rule Trojan_Win32_Cinject_B_2147619240_0
         $x_1_5 = {68 c9 36 00 00 ff 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 01 01 00 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

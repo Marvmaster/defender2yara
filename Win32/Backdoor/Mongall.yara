@@ -18,6 +18,7 @@ rule Backdoor_Win32_Mongall_MA_2147822277_0
         $x_1_3 = "somnuek.bu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_Win32_Mongall_MB_2147901451_0
         $x_1_5 = "WaitForSingleObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

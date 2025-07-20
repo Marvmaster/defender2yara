@@ -18,6 +18,7 @@ rule Worm_Win32_Prolaco_A_2147616956_0
         $x_1_3 = {3c 41 88 45 ?? 74 25 3c 42 74 21 3c 61 74 1d 3c 62 74 19 8d 45 ?? 50 ff 15 ?? ?? ?? ?? 83 f8 02 75 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Worm_Win32_Prolaco_B_2147618738_0
         $x_1_3 = {ff ff 3c 61 74 ?? 8a 85 ?? ?? ff ff 3c 62 74 ?? 83 ec ?? 8d 85 ?? ?? ff ff 50 e8 ?? ?? ?? ?? 83 c4 ?? 83 f8 02 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -69,6 +71,7 @@ rule Worm_Win32_Prolaco_C_2147622351_0
         $x_2_4 = {83 c4 0c 6a 40 68 00 30 00 00 ff 70 50 ff 70 34 ff ?? ?? ff 95 ?? ?? ?? ?? a1 ?? ?? ?? ?? 6a 00 ff 70 54 57 ff 70 34 ff ?? ?? ff 95}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -98,6 +101,7 @@ rule Worm_Win32_Prolaco_D_2147629630_0
         $x_1_5 = "files/test/svchosts.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -124,6 +128,7 @@ rule Worm_Win32_Prolaco_E_2147631316_0
         $x_1_3 = {83 c4 0c 6a 40 68 00 30 00 00 ff 70 50 ff 70 34 ff ?? ?? ff 95 ?? ?? ?? ?? a1 ?? ?? ?? ?? 6a 00 ff 70 54 57 ff 70 34 ff ?? ?? ff 95}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

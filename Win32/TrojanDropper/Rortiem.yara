@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Rortiem_A_2147658137_0
         $x_1_2 = {68 40 02 00 00 50 6a 03 6a 0b ff 75 ?? ff 15 ?? ?? ?? ?? 85 c0 75 0d ff 15 ?? ?? ?? ?? 3d ea 00 00 00 75 ?? 39 75 ?? 89 75 ?? 7e ?? 8b 4d 08 8d 04 9b c1 e0 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Popureb_B_2147644806_0
         $x_1_2 = {2b d1 89 55 fc 60 8b 45 fc c1 c8 03 c1 c8 04 89 45 fc 61 8b 45 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Popureb_F_2147646127_0
         $x_3_4 = {68 8d 34 10 e5}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -63,6 +65,7 @@ rule Trojan_Win32_Popureb_H_2147650484_0
         $x_1_2 = "hello_tt.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Tondirt_A_2147658307_0
         $x_1_3 = {00 70 25 30 35 64 2e 70 6c 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

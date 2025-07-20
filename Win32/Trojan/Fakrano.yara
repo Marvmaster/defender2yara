@@ -20,6 +20,7 @@ rule Trojan_Win32_Fakrano_A_2147726679_0
         $x_1_5 = "taskkill /f /im explorer.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

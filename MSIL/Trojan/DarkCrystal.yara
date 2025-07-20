@@ -26,6 +26,7 @@ rule Trojan_MSIL_DarkCrystal_SBR_2147762346_0
         $x_1_11 = "SELECT * FROM Win32_BIOS" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

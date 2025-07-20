@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Bibei_A_2147651871_0
         $x_1_3 = {eb 1b c7 86 10 01 00 00 ?? ?? ?? ?? eb 1b a1 ?? ?? ?? ?? 6a 0a 33 d2 59 f7 f1 83 fa 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_Bibei_B_2147651872_0
         $x_1_3 = {bb 58 ae 89 18 74 14 39 58 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_ThemidaPacked_D_2147788920_0
         $x_1_1 = {32 47 29 a9 bf 52 ae 03 c0 81 9e 4f 43 3e 93 d3 34 2e 04 7a e4 56 22 87 4b 03 00 44 97}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_ThemidaPacked_PK_2147797874_0
         $x_1_1 = {86 0b 10 74 b2 15 08 72 aa 13 1c d7 31 15 02 d4 84 0b 4f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_ThemidaPacked_RT_2147799503_0
         $x_1_5 = "*/che0kpront" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Worm_Win32_Radoom_A_2147620603_0
         $x_1_5 = "YOU ARE iNFECTED BY RAVO_5002" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -20,6 +20,7 @@ rule Trojan_Win32_Disclipboard_A_2147719328_0
         $x_1_5 = "XkTbabUxmehfrfHQUxSvWB8tY8YfzXKjHX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

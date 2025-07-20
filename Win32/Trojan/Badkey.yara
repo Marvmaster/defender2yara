@@ -17,6 +17,7 @@ rule Trojan_Win32_Badkey_A_2147604826_0
         $x_1_3 = {53 6c 65 65 70 00 6b 65 72 6e 65 6c 33 32 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

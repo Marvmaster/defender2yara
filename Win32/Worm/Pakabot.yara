@@ -27,6 +27,7 @@ rule Worm_Win32_Pakabot_2147600048_0
         $x_6_13 = {6a 0a 8b d8 ff d5 ff d7 6a 0a 8b f0 ff d5 ff d7 2b f3 5d 83 fe 0a 73 ?? 2b c3 83 f8 14 73}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or

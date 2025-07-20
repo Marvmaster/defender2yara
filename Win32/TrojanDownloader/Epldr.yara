@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Epldr_A_2147643852_0
         $x_1_2 = {44 6f 77 6e 6c 6f 61 64 50 72 6f 67 72 65 73 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

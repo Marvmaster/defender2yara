@@ -18,6 +18,7 @@ rule VirTool_Win32_Thredesiz_A_2147907211_0
         $x_1_3 = {c7 44 24 10 00 00 00 00 c7 44 24 0c 01 00 00 00 c7 44 24 08 20 70 40 00 8b 45 e8 89 44 24 04 8b 45 ec 89 04 24 ?? ?? ?? ?? ?? 83 ec 14 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

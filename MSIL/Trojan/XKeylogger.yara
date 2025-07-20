@@ -19,6 +19,7 @@ rule Trojan_MSIL_XKeylogger_A_2147848992_0
         $x_2_4 = {11 4d 14 14 14 28}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

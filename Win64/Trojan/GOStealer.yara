@@ -23,6 +23,7 @@ rule Trojan_Win64_GOStealer_DA_2147851049_0
         $x_1_8 = "botnet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

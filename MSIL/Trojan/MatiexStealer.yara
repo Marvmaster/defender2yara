@@ -40,6 +40,7 @@ rule Trojan_MSIL_MatiexStealer_ZZ_2147772802_0
         $x_1_25 = "Matiex" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

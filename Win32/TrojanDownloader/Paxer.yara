@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Paxer_A_2147696564_0
         $x_1_6 = {53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 53 68 61 72 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

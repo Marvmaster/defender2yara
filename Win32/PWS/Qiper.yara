@@ -21,6 +21,7 @@ rule PWS_Win32_Qiper_A_2147628216_0
         $x_10_7 = {8a 45 ff 04 e0 2c 5f 72 06 04 bf 2c 40 73 1c}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

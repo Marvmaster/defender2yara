@@ -20,6 +20,7 @@ rule Trojan_Win32_KillAV_SA_2147808492_0
         $x_1_6 = "savservice.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule Trojan_Win32_KillAV_SA_2147808492_1
         $x_1_7 = "process32nextw" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +82,7 @@ rule Trojan_Win32_KillAV_A_2147834222_0
         $x_1_11 = "netsh advfirewall firewall delete rule name=\"tcpall\" dir=out" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

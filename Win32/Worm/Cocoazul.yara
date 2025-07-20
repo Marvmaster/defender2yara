@@ -18,6 +18,7 @@ rule Worm_Win32_Cocoazul_A_2147602082_0
         $x_1_4 = {fe 45 0b 8b 75 e4 8b 45 f4 ff 45 f8 03 c0 83 7d f8 1a 89 45 f4 0f 8c da fe ff ff 5f 8b c6 5e 5b c9 c2 04 00 be ?? ?? ?? ?? a5 a5 66 a5 eb d1 be ?? ?? ?? ?? a5 a5 a5 eb c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win32_Advhost_A_2147597202_0
         $x_1_6 = "shell\\add\\command" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

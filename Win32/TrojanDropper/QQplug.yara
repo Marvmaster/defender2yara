@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_QQplug_A_2147628599_0
         $x_1_3 = {56 50 8d 45 fc 6a 02 50 ff 75 f8 c7 45 fc 50 45 00 00 ff d7 ff 75 f8 ff 15 ?? ?? 40 00 5f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

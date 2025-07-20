@@ -20,6 +20,7 @@ rule Backdoor_MSIL_Muddywat_A_2147731131_0
         $x_1_5 = "COMMAND" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

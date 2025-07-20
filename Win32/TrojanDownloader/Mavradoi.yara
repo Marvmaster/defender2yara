@@ -27,6 +27,7 @@ rule TrojanDownloader_Win32_Mavradoi_A_2147692783_0
         $x_2_13 = "DF827984KD88G434F5D" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*))) or
             ((1 of ($x_3_*) and 3 of ($x_2_*))) or
@@ -66,6 +67,7 @@ rule TrojanDownloader_Win32_Mavradoi_B_2147692788_0
         $x_2_9 = "kIOQie1HBgrPDg5GAw9ZDgfSywrVicOQkG" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*))) or
             ((1 of ($x_3_*) and 3 of ($x_2_*))) or

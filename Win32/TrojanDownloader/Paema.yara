@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Paema_A_2147646049_0
         $x_1_2 = {f7 f3 8b 4f 14 89 4d ec d1 6d ec 8b 55 ec 3b d0 76 0e 8b 75 e8 8b c6 2b c2 3b c8 77 03 8d 34 0a 83 65 fc 00 8d 46 01 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

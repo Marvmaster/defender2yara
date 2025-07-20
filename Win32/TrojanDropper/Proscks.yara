@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Proscks_C_2147618051_0
         $x_1_1 = {68 04 01 00 00 68 ?? ?? ?? 00 e8 ?? ?? ff ff e8 01 02 03 ff 15 ?? ?? ?? 00 68 ?? ?? ?? 00 e8 ?? ?? ff ff e8 01 02 03 ff 15 ?? ?? 40 00 e8 ?? ?? ff ff e8 01 02 03 e8 0c 00 00 00 74 61 73 6b 6d 67 72 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

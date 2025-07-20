@@ -43,6 +43,7 @@ rule TrojanProxy_Win32_Malynfits_A_2147721510_0
         $x_1_29 = ".vm_detect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

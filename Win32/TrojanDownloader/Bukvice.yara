@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Bukvice_2147689832_0
         $x_2_3 = "\\ServiceDownLoader.ini" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

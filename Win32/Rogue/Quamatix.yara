@@ -30,6 +30,7 @@ rule Rogue_Win32_Quamatix_213963_0
         $x_1_16 = "System critically infected with Trojans." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

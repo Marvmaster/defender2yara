@@ -22,6 +22,7 @@ rule Worm_Win32_Syhotran_A_2147625060_0
         $x_1_8 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

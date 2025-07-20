@@ -16,6 +16,7 @@ rule VirTool_WinNT_Hyflid_A_2147608689_0
         $x_1_2 = {59 c9 c2 04 00 fa 50 0f 20 c0 25 ff ff fe ff 0f 22 c0 58 c3 50 0f 20 c0 0d 00 00 01 00 0f 22 c0 58 fb c3 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

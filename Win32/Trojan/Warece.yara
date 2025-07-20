@@ -16,6 +16,7 @@ rule Trojan_Win32_Warece_A_2147599232_0
         $x_1_2 = {75 d0 8b 46 05 83 c6 05 3b 05 ?? ?? ?? 10 74 6b 3b 05 ?? ?? ?? 10 74 63 6a 01 51 51 8b cc 89 65 ec 56 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Warece_B_2147610827_0
         $x_1_5 = {47 45 54 54 41 53 4b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -72,6 +74,7 @@ rule Trojan_Win32_Warece_C_2147611215_0
         $x_1_9 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -99,6 +102,7 @@ rule Trojan_Win32_Warece_D_2147615641_0
         $x_1_4 = {77 6f 77 66 78 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

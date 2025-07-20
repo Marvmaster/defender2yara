@@ -17,6 +17,7 @@ rule HackTool_Win32_DefenderRmv_A_2147827461_0
         $x_1_3 = ";copy /b compiler.mpm + config.txt + rebd.7z gallery_mpm.exe;" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

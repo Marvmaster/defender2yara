@@ -17,6 +17,7 @@ rule PUA_Win32_DotDo_J_259254_0
         $x_1_2 = {16 72 01 00 00 70 72 01 00 00 70 28 01 00 00 06 16 72 ?? 00 00 70 72 ?? 00 00 70 28 01 00 00 06 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

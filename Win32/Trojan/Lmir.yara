@@ -35,6 +35,7 @@ rule Trojan_Win32_Lmir_BMN_2147596915_0
         $x_2_21 = "norton.e" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 10 of ($x_2_*))) or
             ((7 of ($x_10_*) and 5 of ($x_2_*))) or
@@ -63,6 +64,7 @@ rule Trojan_Win32_Lmir_D_2147607412_0
         $x_2_5 = {80 38 e9 75 0f b9 2b e1 c1 e9 c7 00 2b e1 c1 e9 c6 40 04 02 0f 20 c0 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 82 01 00 c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

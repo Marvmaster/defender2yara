@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Deyjalil_A_2147657239_0
         $x_10_8 = "ForceRemove {11111111-1111-1111-" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 2 of ($x_50_*) and 1 of ($x_10_*))) or
             (all of ($x*))
@@ -60,6 +61,7 @@ rule TrojanDownloader_Win32_Deyjalil_A_2147657239_1
         $x_10_16 = "ForceRemove {11111111-1111-1111-" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 2 of ($x_50_*) and 1 of ($x_10_*))) or
             ((4 of ($x_100_*) and 1 of ($x_10_*))) or

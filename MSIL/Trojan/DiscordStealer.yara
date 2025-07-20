@@ -23,6 +23,7 @@ rule Trojan_MSIL_DiscordStealer_XO_2147822915_0
         $x_1_8 = "\\passwords.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_MSIL_DiscordStealer_CXJK_2147849511_0
         $x_1_3 = "recipient_id" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_MSIL_DiscordStealer_CXFW_2147850215_0
         $x_1_2 = "Uk43uf0BLYg=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Trojan_MSIL_DiscordStealer_PAB_2147899470_0
         $x_1_10 = "\\Temporary\\OperaPasswords.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -131,6 +135,7 @@ rule Trojan_MSIL_DiscordStealer_PAD_2147899471_0
         $x_1_9 = "C:\\KFJD947DHC.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +158,7 @@ rule Trojan_MSIL_DiscordStealer_SZ_2147900613_0
         $x_2_2 = "ziggy.Properties.Resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +180,7 @@ rule Trojan_MSIL_DiscordStealer_GP_2147901079_0
         $x_4_1 = {64 00 69 00 73 00 63 00 00 0b 6f 00 72 00 64 00 2e 00 63 00 00 11 6f 00 6d 00 2f 00 61 00 70 00 69 00 2f 00 77 00 00 0b 65 00 62 00 68 00 6f 00 6f 00 00 1f 6b 00 73 00 2f 00 38 00 31 00 30 00 39 00 39 00 34 00 33 00 35 00 34 00 36 00 33 00 33 00 00 31 35 00 37 00 32 00 34 00 33 00 32}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

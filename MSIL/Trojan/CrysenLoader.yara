@@ -38,6 +38,7 @@ rule Trojan_MSIL_CrysenLoader_2147772069_0
         $x_1_23 = "StripAfterObfuscation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

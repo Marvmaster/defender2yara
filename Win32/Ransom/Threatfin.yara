@@ -21,6 +21,7 @@ rule Ransom_Win32_Threatfin_A_2147694512_0
         $x_1_7 = "files will be lost forever!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

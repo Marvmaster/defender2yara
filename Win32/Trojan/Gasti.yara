@@ -20,6 +20,7 @@ rule Trojan_Win32_Gasti_BT_2147831375_0
         $x_1_5 = "[hashCode]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

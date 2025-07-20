@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Sinmis_A_2147637576_0
         $x_1_6 = {26 6f 73 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))

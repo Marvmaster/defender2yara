@@ -16,6 +16,7 @@ rule Trojan_Win32_Sessa_A_2147735432_0
         $x_1_2 = "clsid\\{083863f1-70de-11d0-bd40-00a0c911ce86}\\instance\\{129d7e40-c10d-11d0-afb9-00aa00b67a42}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

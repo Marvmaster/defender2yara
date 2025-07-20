@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Playb_2147628088_0
         $x_1_5 = "NewStartPanel\\{871C5380-42A0-1069-A2EA-08002B30309D}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

@@ -27,6 +27,7 @@ rule Trojan_Win32_PhantomStar_A_2147724656_0
         $x_1_12 = "CompatData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -57,6 +58,7 @@ rule Trojan_Win32_PhantomStar_C_2147724657_0
         $x_1_6 = {2d eb 4a 00 00 50 ff 15 06 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

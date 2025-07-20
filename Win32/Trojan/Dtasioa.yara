@@ -23,6 +23,7 @@ rule Trojan_Win32_Dtasioa_A_2147904924_0
         $x_1_9 = "peerPublicKey must be null or 32 bytes long" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

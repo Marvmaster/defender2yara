@@ -20,6 +20,7 @@ rule HackTool_Win64_JuicyPotato_SBR_2147755358_0
         $x_1_5 = "hello.stg" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule HackTool_Win64_JuicyPotato_LK_2147838812_0
         $x_1_5 = "ncacn_ip_tcp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

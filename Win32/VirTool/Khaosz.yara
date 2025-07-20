@@ -21,6 +21,7 @@ rule VirTool_Win32_Khaosz_A_2147779378_0
         $x_1_6 = {76 69 63 74 69 6d [0-32] 77 69 6e 64 6f 77 [0-32] 77 72 69 74 65 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

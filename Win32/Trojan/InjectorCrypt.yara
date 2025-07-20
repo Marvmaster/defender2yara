@@ -17,6 +17,7 @@ rule Trojan_Win32_InjectorCrypt_SK_2147755584_0
         $x_1_2 = {5f 5e 5b c9 c2 0c 00 50 00 09 d9 ac 6b d2 ?? eb [0-5] 31 d8 0f af d0 aa 01 55 fc eb [0-5] 1f c1 c3 [0-4] 89 c1 eb [0-5] 03 5d 10 2d [0-4] ff 4d 0c f7 d9 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_InjectorCrypt_SL_2147772847_0
         $x_2_2 = {58 50 83 e8 ?? c3 8b 45 ?? e8 ?? ?? ?? ?? 8b 55 ?? 8b 45 ?? e8 ?? ?? ?? ?? 8b 45 ?? e8 ?? ?? ?? ?? 8b 45 ?? e8 ?? ?? ?? ?? 8b 45 ?? e8 ?? ?? ?? ?? 8b 45 ?? e8 ?? ?? ?? ?? c9 c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_InjectorCrypt_SN_2147773605_0
         $x_2_3 = {55 89 e5 8d 64 24 ?? 50 e8 00 00 00 00 58 83 c0 ?? 89 45 ?? 58 8d 45 ?? e8 ?? ?? ?? ?? 8b 45 ?? 8b 00 89 45 ?? 8b 45 ?? 8b 40 04 89 45 ?? 8b 45 ?? 8d 40 08 89 45 ?? 6a 40 68 00 30 00 00 ff 75 ?? 6a 00 ff 55}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

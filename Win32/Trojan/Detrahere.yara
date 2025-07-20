@@ -67,6 +67,7 @@ rule Trojan_Win32_Detrahere_B_2147725568_0
         $x_2_52 = "atad.ksidu" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_2_*))) or
             ((1 of ($x_10_*) and 5 of ($x_2_*))) or
@@ -94,6 +95,7 @@ rule Trojan_Win32_Detrahere_C_2147725569_0
         $x_1_2 = "Global\\splsrv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -129,6 +131,7 @@ rule Trojan_Win32_Detrahere_D_2147725570_0
         $x_5_16 = "http://gpt9.com/api/cpx?Lq=" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -163,6 +166,7 @@ rule Trojan_Win32_Detrahere_E_2147725571_0
         $x_1_10 = "[@U@RSTH-DWD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -189,6 +193,7 @@ rule Trojan_Win32_Detrahere_2147727700_0
         $x_1_3 = "CChrome_MessagePumpWindow" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -213,6 +218,7 @@ rule Trojan_Win32_Detrahere_2147727700_1
         $x_1_5 = "minkernel\\crts\\ucrt\\inc\\corecrt_internal_strtox.h" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -235,6 +241,7 @@ rule Trojan_Win32_Detrahere_H_2147727711_0
         $x_1_3 = "SMARTSOFT Copyright (C) svcvmx" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Ursu_RDA_2147892485_0
         $x_2_1 = {17 6f 1f 00 00 0a 25 6f 1d 00 00 0a 17 6f 20 00 00 0a 6f 1d 00 00 0a 17}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_MSIL_Ursu_AB_2147896264_0
         $x_1_6 = "FromStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

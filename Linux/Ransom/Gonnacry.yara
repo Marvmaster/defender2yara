@@ -21,6 +21,7 @@ rule Ransom_Linux_Gonnacry_C_2147901040_0
         $x_1_6 = "exfiltrate_data" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

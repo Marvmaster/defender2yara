@@ -21,6 +21,7 @@ rule Trojan_Win32_AMSI_HardwareBreakPoint_2147944491_0
         $x_1_6 = {41 4d 53 49 5f 52 45 53 55 4c 54 5f 43 4c 45 41 4e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

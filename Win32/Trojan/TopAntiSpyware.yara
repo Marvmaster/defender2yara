@@ -18,6 +18,7 @@ rule Trojan_Win32_TopAntiSpyware_2147569826_0
         $x_1_4 = {57 49 4e 44 4f 57 53 5c 53 79 73 74 65 6d 33 32 5c [0-5] 73 72 76 33 32 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

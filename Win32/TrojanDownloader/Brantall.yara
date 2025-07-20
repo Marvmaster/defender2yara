@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Brantall_A_2147683857_0
         $x_1_8 = "component_service@@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule TrojanDownloader_Win32_Brantall_D_2147684061_0
         $x_1_3 = {2d 00 6e 00 6f 00 64 00 65 00 63 00 00 00 00 00 73 00 65 00 72 00 76 00 69 00 63 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule TrojanDownloader_Win32_Brantall_E_2147684197_0
         $x_1_6 = {2e 00 64 00 65 00 63 00 72 00 70 00 74 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

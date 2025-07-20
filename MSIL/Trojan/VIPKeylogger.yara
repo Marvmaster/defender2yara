@@ -18,6 +18,7 @@ rule Trojan_MSIL_VIPKeylogger_PLIRH_2147932157_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_VIPKeylogger_PHS_2147934617_0
         $x_10_1 = {0a 03 19 8d ?? 00 00 01 25 16 0f 00 28 ?? 00 00 0a 9c 25 17 0f 00 28 ?? 00 00 0a 9c 25 18 0f 00 28 ?? 00 00 0a 9c 6f ?? 00 00 0a 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_VIPKeylogger_ZZQ_2147938294_0
         $x_5_2 = {08 11 06 11 06 1f 25 5a 20 00 01 00 00 5d d2 9c 11 06 17 58 13 06 11 06 08 8e 69 32 e3}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_MSIL_VIPKeylogger_ARQA_2147938525_0
         $x_2_4 = {03 11 0c 6f ?? 00 00 0a 03 11 0d 6f ?? 00 00 0a 03 11 0e 6f ?? 00 00 0a 06 19 58 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_MSIL_VIPKeylogger_SXDA_2147939358_0
         $x_1_1 = {2b 37 2b 3c 72 ?? ?? ?? 70 2b 3c 1e 2c 1a 2b 3e 72 ?? ?? ?? 70 2b 3a 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 0a 07 6f ?? ?? ?? 0a 06 0c de 37 73 ?? ?? ?? 0a 2b c9 0b 2b c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +132,7 @@ rule Trojan_MSIL_VIPKeylogger_ZZV_2147941824_0
         $x_10_1 = {0a 59 03 6f ?? 01 00 0a 6f ?? 01 00 0a 20 00 01 00 00 5d 03 6f ?? 01 00 0a 6f ?? 01 00 0a 20 00 01 00 00 5d 61 d2 03 6f ?? 01 00 0a 6f ?? 01 00 0a 1f 1f 5a 03 6f ?? 01 00 0a 6f ?? 01 00 0a 58 20 ff 00 00 00 5f}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +154,7 @@ rule Trojan_MSIL_VIPKeylogger_ACH_2147943978_0
         $x_5_1 = {02 05 0e 04 6f ?? 00 00 0a 0a 06 0e 05 28 ?? 00 00 06 0b 04 03 6f ?? 00 00 0a 59 0c 08 19 32 0a 03 07 0e 05 28 ?? 00 00 06 2a 08 16 31 0a 03 07 08 0e 05 28}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +176,7 @@ rule Trojan_MSIL_VIPKeylogger_ACH_2147943978_1
         $x_5_1 = {6c 5b 13 0d 02 11 15 11 17 6f ?? 00 00 0a 13 18 12 18 28 ?? 00 00 0a 16 32 19 12 18 28 ?? 00 00 0a 16 32 0f 12 18 28 ?? 00 00 0a 16 fe 04 16 fe 01 2b 01 16}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +199,7 @@ rule Trojan_MSIL_VIPKeylogger_AFXA_2147944321_0
         $x_2_2 = {13 06 16 13 07 2b 14 00 03 11 06 11 07 91 6f ?? 00 00 0a 00 00 11 07 17 58 13 07 11 07 09 fe 04 13 08 11 08 2d e1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +221,7 @@ rule Trojan_MSIL_VIPKeylogger_ZKS_2147944620_0
         $x_10_1 = {5a 11 20 58 13 33 02 11 31 11 35 6f ?? 00 00 0a 13 38 12 38 28 ?? 00 00 0a 06 61 d2 13 39 12 38 28 ?? 00 00 0a 06 61 d2 13 3a 12 38 28 ?? 00 00 0a 06 61 d2 13 3b 11 39 07 1f 1f}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +244,7 @@ rule Trojan_MSIL_VIPKeylogger_ZSR_2147946558_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

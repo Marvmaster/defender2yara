@@ -18,6 +18,7 @@ rule Trojan_MSIL_Coins_ABVX_2147847207_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Coins_AAFQ_2147851343_0
         $x_5_1 = {04 06 16 06 8e 69 6f ?? 01 00 0a 0b 07 16 fe 02 13 06 11 06 2c 0b 11 05 06 16 07 6f ?? 00 00 0a 00 16 13 07 2b 2e 00 03 7e ?? 00 00 04 03 7b ?? 00 00 04 06 11 07 91 61 20 ff 00 00 00 5f 95 03 7b ?? 00 00 04 1e 64 61 7d ?? 00 00 04 00 11 07 17 58 13 07 11 07 6e 07 6a fe 04 13 08 11 08 2d c5}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_Coins_AAQR_2147892026_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_MSIL_Coins_KAA_2147900306_0
         $x_5_1 = {00 fe 0c 01 00 fe 0c 02 00 fe 09 00 00 fe 0c 02 00 6f ?? 00 00 0a fe 0c 00 00 fe 0c 02 00 fe 0c 00 00 8e 69 5d 91 61 d2 9c 00 fe 0c 02 00 20 ?? 00 00 00 58 fe 0e 02 00 fe 0c 02 00 fe 09 00 00 6f ?? 00 00 0a fe 04 fe 0e 03 00 fe 0c 03 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

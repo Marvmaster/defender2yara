@@ -17,6 +17,7 @@ rule Trojan_MSIL_Grotseento_A_2147687524_0
         $x_1_3 = {66 65 64 61 68 61 62 65 72 2e 63 6f 6d 2f 22 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

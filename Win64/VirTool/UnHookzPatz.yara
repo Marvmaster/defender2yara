@@ -19,6 +19,7 @@ rule VirTool_Win64_UnHookzPatz_A_2147839550_0
         $x_1_4 = {48 8b 85 20 01 00 00 0f b6 00 3d e9 00 00 00 74 4c 48 8b 85 20 01 00 00 0f b6 40 03 3d e9 00 00 00 74 3a 48 8b 85 20 01 00 00 0f b6 40 08 3d e9 00 00 00 74 28 48 8b 85 20 01 00 00 0f b6 40 0a 3d e9 00 00 00 74 16 48 8b 85 20 01 00 00 0f b6 40 0c 3d e9 00 00 00 0f 85 8d 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

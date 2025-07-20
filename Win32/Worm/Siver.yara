@@ -21,6 +21,7 @@ rule Worm_Win32_Siver_A_2147629569_0
         $x_1_6 = ":\\AutoRun.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Worm_Win32_Siver_A_2147629579_0
         $x_1_5 = {33 f6 56 6a 01 6a 02 ff 15 ?? ?? ?? ?? 6a 35 89 83 06 00 83 c7 08 4e 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

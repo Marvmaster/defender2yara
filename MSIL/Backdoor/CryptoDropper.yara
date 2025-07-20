@@ -16,6 +16,7 @@ rule Backdoor_MSIL_CryptoDropper_2147742419_0
         $x_1_1 = {fe 0e 00 00 00 11 00 59 7e ?? ?? ?? 04 61 d1 2a 50 00 fe 0e 01 00 fe 0c 00 00 fe 0c 01 00 58 [0-37] 20 20 05 00 00 [0-16] fe 0e 00 00 00 38 [0-32] fe 0e 00 00 00 11 00 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

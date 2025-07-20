@@ -17,6 +17,7 @@ rule TrojanClicker_Win32_Worbe_2147598222_0
         $x_1_3 = {61 63 74 69 6f 6e 3d 67 65 74 25 35 46 73 63 72 69 70 74 26 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

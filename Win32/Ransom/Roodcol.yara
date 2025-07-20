@@ -45,6 +45,7 @@ rule Ransom_Win32_Roodcol_2147728979_0
         $x_1_31 = "ren *.iso *.door26" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_54_*) and 1 of ($x_27_*))) or
             ((4 of ($x_54_*))) or

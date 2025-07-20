@@ -17,6 +17,7 @@ rule Trojan_MSIL_Proyores_A_2147733568_0
         $x_5_3 = "C:\\Documents and Settings\\renzon\\Escritorio\\Proyectos\\Negociadores\\SVN Entendiendo\\Euro-CAFTA\\RoSistema\\SqlNet\\obj\\Debug\\SqlNet.pdb" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_StormKitty_DA_2147942813_0
         $x_2_3 = "main.doubleDecrypt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

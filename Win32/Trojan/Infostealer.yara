@@ -26,6 +26,7 @@ rule Trojan_Win32_Infostealer_PAH_2147781482_0
         $x_1_11 = "winlogon.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Trojan_Win32_Infostealer_HBAI_2147808774_0
         $x_2_6 = "CIDAFICUDUROSOTAROM" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

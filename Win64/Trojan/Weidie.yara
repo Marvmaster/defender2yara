@@ -16,6 +16,7 @@ rule Trojan_Win64_Weidie_A_2147898682_0
         $x_2_1 = {4c 0f b6 11 44 8b 1d ?? ?? ?? ?? 41 81 e3 ?? ?? ?? ?? 45 33 d3 45 8b d2 47 33 04 91 44 89 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule Backdoor_Win32_Rollingaim_A_2147898119_0
         $x_1_10 = {52 66 68 6e 20 4d 18 22 76 b5 33 11 12 33 0c 6d 0a 20 4d 18 22 9e a1 29 61 1c 76 b5 05 19 01 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

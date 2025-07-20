@@ -19,6 +19,7 @@ rule Ransom_Linux_AvosLocker_A_2147810965_0
         $x_1_4 = "ESXi VMs will be forced to shutdown when ran against ESXi paths" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule Ransom_Linux_AvosLocker_B_2147853065_0
         $x_1_3 = {74 74 70 3a 2f 2f 61 76 6f 73 [0-88] 2e 6f 6e 69 6f 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Debaox_A_2147726402_0
         $x_2_1 = {8d 14 18 8a 12 ?? ?? 80 f2 ?? 8d 0c 18 88 11 ?? ?? 40 3d ?? ?? ?? ?? 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

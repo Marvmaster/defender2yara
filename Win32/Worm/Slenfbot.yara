@@ -37,6 +37,7 @@ rule Worm_Win32_Slenfbot_B_115853_0
         $x_10_22 = {3d b7 00 00 00 75 (07 56|08) ff 15 ?? ?? ?? ?? 8d 45 ?? 50 8d 45 ?? 50 8d 45 ?? 50 e8 ?? ?? ?? ?? 83 c4 0c 83 7d ?? 05 75 25 83 7d ?? 01 75 1f 8d 4d ?? e8 ?? ?? ?? ?? ff 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 7 of ($x_1_*))) or
             ((2 of ($x_6_*) and 1 of ($x_1_*))) or
@@ -68,6 +69,7 @@ rule Worm_Win32_Slenfbot_AIC_144437_0
         $x_1_4 = "\\eMule\\Incoming\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +93,7 @@ rule Worm_Win32_Slenfbot_D_146363_0
         $x_1_3 = {6a 04 68 00 10 00 00 68 6c 05 00 00 6a 00 8b ?? f4 ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +116,7 @@ rule Worm_Win32_Slenfbot_F_167347_0
         $x_1_2 = {8b 45 f8 83 c0 01 89 45 f8 83 7d f8 ?? 7d ?? 8b 4d 08 03 4d f8 0f be 91 ?? ?? ?? ?? 33 55 fc 8b 45 f4 03 45 f8 88 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +140,7 @@ rule Worm_Win32_Slenfbot_ALD_172698_0
         $x_1_4 = {4d 53 42 4c 57 69 6e 64 6f 77 43 6c 61 73 73 00 49 4d 57 69 6e 64 6f 77 43 6c 61 73 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +165,7 @@ rule Worm_Win32_Slenfbot_ALJ_175362_0
         $x_1_5 = "##4ucku" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -192,6 +198,7 @@ rule Worm_Win32_Slenfbot_G_178575_0
         $x_1_9 = {99 b9 e8 03 00 00 f7 f9 99 b9 3c 00 00 00 f7 f9 99 b9 3c 00 00 00 f7 f9 99 b9 18 00 00 00 f7 f9 99 b9 07 00 00 00 f7 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

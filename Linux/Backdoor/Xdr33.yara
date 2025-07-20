@@ -17,6 +17,7 @@ rule Backdoor_Linux_Xdr33_A_2147930754_0
         $x_1_2 = {50 50 8d 85 b8 fd ff ff 50 ff 35 d8 78 0f 08 e8 ?? ?? ?? ?? 83 c4 10 85 c0 74 ?? 83 ec 0c 68 ad 41 0b 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

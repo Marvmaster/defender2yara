@@ -16,6 +16,7 @@ rule Trojan_Linux_CobaltStrike_C_2147853500_0
         $x_1_1 = {27 86 71 8e 60 be 67 1d 41 73 25 df 04 df 68 49 da 1c 6d 38 30 81 f1 ca fc f3 07 1c 16 b0 5f 3f f6 92 46 2c 01 bd 86 93 c0 c5 66 83}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Linux_CobaltStrike_B_2147853501_0
         $x_5_3 = ".PWD" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_5_*))) or
             ((1 of ($x_10_*))) or
@@ -67,6 +69,7 @@ rule Trojan_Linux_CobaltStrike_D_2147890165_0
         $x_1_4 = {31 4b 17 fd 9b c7 36 dc 79 4f 4c c2 25 57 bc 08 db 36 d8 e1 13 a1 70 ba d7 c0 99 10 61 f7 44 f4 13 fe 37 e4 34 3f 16 2e 4e 36 9d 38 81 97 d0 cd df 0f 07 85 9e 27 e4 e5 36 cc 8e 45 6d 92 b0 c8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Linux_CobaltStrike_G_2147929994_0
         $x_1_4 = "services.CmdSleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Linux_CobaltStrike_H_2147937784_0
         $x_1_2 = {44 88 cb f6 c3 01 0f 94 47 f0 41 83 ea 0a 0f 9c 42 f0 8a 5f f0 44 8a 72 f0 44 20 f3 44 8a 77 f0 44 8a 7a f0 45 30 fe 44 08 f3 80 e3 01 88 58 f0 48 89 e0 48 83 c0 f0 48 89 c4 c7 00 ee 5d 15 26 48 83 ec 0a 50 68 93 45 41 1d 31 c0 0f 84 01 00 00 00 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_Win32_DMREncryptor_PA_2147746284_0
         $x_1_4 = "background.png" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

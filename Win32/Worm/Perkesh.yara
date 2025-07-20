@@ -19,6 +19,7 @@ rule Worm_Win32_Perkesh_A_2147616757_0
         $x_1_4 = "%s\\open\\%s %s,%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Worm_Win32_Perkesh_B_2147620107_0
         $x_1_4 = "\\drivers\\Beep.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

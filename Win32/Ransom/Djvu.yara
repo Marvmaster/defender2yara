@@ -16,6 +16,7 @@ rule Ransom_Win32_Djvu_RPO_2147831921_0
         $x_1_1 = {8b 7d f0 8b c7 c1 e0 04 89 45 0c 8b 45 dc 01 45 0c 8b 45 f0 03 45 f4 89 45 f8 ff 75 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

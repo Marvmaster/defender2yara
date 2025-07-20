@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Strumapine_A_2147717227_0
         $x_1_5 = {68 00 74 00 74 00 70 00 73 00 3a 00 2f 00 2f 00 [0-96] 2f 00 64 00 64 00 2f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -28,6 +28,7 @@ rule Trojan_MSIL_LunaStealer_NS_2147929146_0
         $x_1_13 = "dmdimapfghaakeibppbfeokhgoikeoci" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

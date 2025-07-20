@@ -19,6 +19,7 @@ rule Ransom_MSIL_WannaCrypt_DC_2147773126_0
         $x_1_4 = "@toututa.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_MSIL_WannaCrypt_DD_2147775154_0
         $x_1_4 = "NoCry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Ransom_MSIL_WannaCrypt_DE_2147775155_0
         $x_1_4 = "DisableTaskMgr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Ransom_MSIL_WannaCrypt_PA_2147792996_0
         $x_1_5 = "Your important files are encrypted" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Ransom_MSIL_WannaCrypt_PAC_2147796155_0
         $x_1_4 = "disable your antivirus for a while" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Ransom_MSIL_WannaCrypt_PD_2147798525_0
         $x_1_5 = "\\AllTheThings.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +172,7 @@ rule Ransom_MSIL_WannaCrypt_PE_2147807392_0
         $x_1_5 = "\\Wana Decrypt Or 2.0.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

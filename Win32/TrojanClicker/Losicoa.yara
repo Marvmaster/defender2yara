@@ -16,6 +16,7 @@ rule TrojanClicker_Win32_Losicoa_A_2147685164_0
         $x_1_2 = {c7 44 24 18 01 00 00 00 83 f8 06 77 3f ff 24 85 30 46 40 00 68 ?? ?? 42 00 eb 28 68 ?? ?? 42 00 eb 21 68 ?? ?? 42 00 eb 1a 68 ?? ?? 42 00 eb 13 68 ?? ?? 42 00 eb 0c 68 ?? ?? 42 00 eb 05 68 ?? ?? 42 00 8d 4c 24 0c e8 4e da 00 00 6a 04 6a 01 51}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

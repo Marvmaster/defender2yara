@@ -18,6 +18,7 @@ rule Trojan_Win32_Ositki_A_2147599550_0
         $x_1_4 = "id=%u&cmd=%d&cookie=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_4_*))) or

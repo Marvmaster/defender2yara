@@ -22,6 +22,7 @@ rule Worm_Win32_Citeary_B_2147627642_0
         $x_1_8 = {ff 5b c6 85 ?? ?? ff ff 41 c6 85 ?? ?? ff ff 75 c6 85 ?? ?? ff ff 74 c6 85 ?? ?? ff ff 6f c6 85 ?? ?? ff ff 52 c6 85 ?? ?? ff ff 75 c6 85 ?? ?? ff ff 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Worm_Win32_Citeary_C_2147631467_0
         $x_1_5 = {5c 73 79 73 74 65 6d 2e 64 61 74 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -71,6 +73,7 @@ rule Worm_Win32_Citeary_E_2147643776_0
         $x_1_2 = {68 09 20 22 00 8b 55 ?? ?? ff 15 ?? ?? ?? ?? 68 b8 0b 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

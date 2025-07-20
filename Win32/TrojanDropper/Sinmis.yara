@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Sinmis_A_2147646606_0
         $x_1_2 = {80 c2 61 88 14 3e 83 c6 01 3b f5 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDropper_Win32_Sinmis_B_2147647991_0
         $x_1_2 = {31 c0 6a 00 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8 ?? ?? 00 00 4d 5a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

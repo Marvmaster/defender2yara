@@ -22,6 +22,7 @@ rule Ransom_Win32_Tescrypt_A_2147692253_0
         $x_1_8 = {53 75 62 6a 65 63 74 3d 25 73 26 6b 65 79 3d 25 73 26 61 64 64 72 3d 25 73 26 73 69 7a 65 3d 25 6c 6c 64 26 76 65 72 73 69 6f 6e 3d 25 73 26 4f 53 3d 25 6c 64 26 49 44 3d 25 64 26 67 61 74 65 3d 25 73 26 69 70 3d 25 73 26 69 6e 73 74 5f 69 64 3d 25 58 25 58 25 58 25 58 25 58 25 58 25 58 25 58 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -97,6 +98,7 @@ rule Ransom_Win32_Tescrypt_A_2147692253_1
         $x_3_56 = {b8 42 4d 00 00 51 c7 44 24 3e 36 00 00 00 89 54 24 36 66 89 44 24 34 c7 44 24 2c 00 00 00 00 ff 15}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -147,6 +149,7 @@ rule Ransom_Win32_Tescrypt_B_2147693164_0
         $x_1_3 = "Your personal files are encrypted!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +180,7 @@ rule Ransom_Win32_Tescrypt_2147693915_0
         $x_4_11 = {83 fa 07 7c 0e 7f 07 3d ff 6f 40 93 76 05 83 c8 ff 8b d0}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_4_*) and 3 of ($x_2_*))) or
@@ -209,6 +213,7 @@ rule Ransom_Win32_Tescrypt_C_2147706645_0
         $x_1_7 = "bcdedit.exe /set {current} recoveryenabled off" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -233,6 +238,7 @@ rule Ransom_Win32_Tescrypt_C_2147706645_1
         $x_1_5 = "\\recover_file_" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -277,6 +283,7 @@ rule Ransom_Win32_Tescrypt_C_2147706645_2
         $x_1_25 = {2d 2d 3e 53 65 63 72 65 74 20 20 3c 21 2d 2d [0-48] 2d 2d 3e 53 65 72 76 65 72 21 21 21 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -302,6 +309,7 @@ rule Ransom_Win32_Tescrypt_D_2147707630_0
         $x_1_6 = {00 00 5c 00 72 00 65 00 63 00 6f 00 76 00 65 00 72 00 5f 00 66 00 69 00 6c 00 65 00 5f 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -330,6 +338,7 @@ rule Ransom_Win32_Tescrypt_E_2147707849_0
         $x_1_5 = {68 00 65 00 6c 00 70 00 5f 00 72 00 65 00 63 00 6f 00 76 00 65 00 72 00 5f 00 69 00 6e 00 73 00 74 00 72 00 75 00 63 00 74 00 69 00 6f 00 6e 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +360,7 @@ rule Ransom_Win32_Tescrypt_G_2147708208_0
         $x_1_2 = ".onion.to/%S" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -380,6 +390,7 @@ rule Ransom_Win32_Tescrypt_H_2147709013_0
         $x_1_10 = {01 39 8b 7d fc 01 79 04 8b 19 8b 79 04 c1 c2 1e 03 51 08 89 51 08 8b 51 0c 03 d6 89 51 0c 8b 51 10 03 55 f0 ff 4d 0c 89 51 10 74 1b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -415,6 +426,7 @@ rule Ransom_Win32_Tescrypt_I_2147709119_0
         $x_1_10 = {73 68 61 64 6f 77 73 [0-16] 2f 61 6c 6c [0-16] 2f 51 75 69 65 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -445,6 +457,7 @@ rule Ransom_Win32_Tescrypt_J_2147709215_0
         $x_1_6 = "/Quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -470,6 +483,7 @@ rule Ransom_Win32_Tescrypt_O_2147709904_0
         $x_1_6 = "0987skfg998jkh89345jk987437k" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -501,6 +515,7 @@ rule Ransom_Win32_Tescrypt_Q_2147710080_0
         $x_1_8 = {2e 61 74 2f 25 53 0d 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -530,6 +545,7 @@ rule Ransom_Win32_Tescrypt_R_2147710130_0
         $x_1_4 = {68 bc 02 00 00 6a 00 6a 00 c7 06 00 00 00 00 6a 00 66 0f ef c0 66 0f d6 46 04 6a 12 c7 46 0c 00 00 00 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -800,6 +816,7 @@ rule Ransom_Win32_Tescrypt_T_2147710328_0
         $x_2_42 = {68 80 38 01 00 8d ?? ?? ?? ?? ?? 6a 00 52 e8 ?? ?? ?? ?? 83 c4 0c 68 c8 00 00 00 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((12 of ($x_1_*))) or
             ((1 of ($x_2_*) and 10 of ($x_1_*))) or
@@ -840,6 +857,7 @@ rule Ransom_Win32_Tescrypt_U_2147712045_0
         $x_1_3 = {0f be 00 85 c0 74 ?? 8b 45 ?? 03 45 ?? 0f be 00 8b 4d ?? 0f af 4d ?? 03 c1 8b 4d ?? 03 4d ?? 0f b6 09 33 c8 8b 45 ?? 03 45 ?? 88 08 8b 45 ?? 40 89 45 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -864,6 +882,7 @@ rule Ransom_Win32_Tescrypt_V_2147716527_0
         $x_1_4 = "all DATA will be damaged unrecoverably" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -888,6 +907,7 @@ rule Ransom_Win32_Tescrypt_W_2147721468_0
         $x_1_2 = {0f b7 c9 c1 c0 07 33 c1 83 c2 02 0f b7 0a 66 85 c9 75 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -913,6 +933,7 @@ rule Ransom_Win32_Tescrypt_X_2147727193_0
         $x_1_5 = "net start TermService" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -937,6 +958,7 @@ rule Ransom_Win32_Tescrypt_2147745099_0
         $x_1_4 = "MA7h5Ic73PV89" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -958,6 +980,7 @@ rule Ransom_Win32_Tescrypt_AC_2147795239_0
         $x_2_1 = {33 c8 89 45 ?? 2b f9 25 ?? ?? ?? ?? 8b c7 8d 4d ?? e8 ?? ?? ?? ?? 8b 4d ?? 8b c7 c1 e8 ?? 89 45 ?? 8d 45 ?? e8 ?? ?? ?? ?? 8b 45 ?? 03 c7 50 8b 45 ?? 03 c3 e8 ?? ?? ?? ?? 8b 4d ?? 89 45 ?? 8d 45 ?? e8 ?? ?? ?? ?? 83 25 ?? ?? ?? ?? ?? 2b 75 ?? 8b 45 ?? 29 45 ?? ff 4d ?? 0f 85 ?? ?? ?? ?? 8b 45 ?? 89 78 ?? 5f 89 30 5e 5b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -979,6 +1002,7 @@ rule Ransom_Win32_Tescrypt_AB_2147903119_0
         $x_1_1 = {8a 0c 0f 88 4c 24 ?? 8b 54 24 ?? 8b 7c 24 ?? 8a 4c 24 ?? 80 f1 ?? 88 4c 24 ?? 0f be 4c 24 1f 0f be 14 3a 29 ca 88 d1 88 4c 24 ?? 8b 54 24 ?? 8a 4c 24 ?? c7 44 24 ?? ?? ?? ?? ?? 8b 7c 24 ?? 88 0c 17 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -999,6 +1023,7 @@ rule Ransom_Win32_Tescrypt_YAA_2147905456_0
         $x_1_1 = {03 c5 81 c0 4c 00 00 00 b9 b2 05 00 00 ba 27 af 2b 2e 30 10 40 49}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1021,6 +1046,7 @@ rule Ransom_Win32_Tescrypt_YAB_2147905473_0
         $x_1_2 = {66 8b 84 24 ?? ?? ?? ?? 66 33 84 24 ?? ?? ?? ?? 66 89 84 24 ?? ?? ?? ?? 8b 4c 24 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1044,6 +1070,7 @@ rule Ransom_Win32_Tescrypt_NA_2147916369_0
         $x_1_3 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1067,6 +1094,7 @@ rule Ransom_Win32_Tescrypt_ND_2147916379_0
         $x_1_3 = "supperStr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1088,6 +1116,7 @@ rule Ransom_Win32_Tescrypt_NB_2147917727_0
         $x_5_1 = {83 ec 08 83 f8 00 0f 95 c3 8a 7c 24 ?? 30 fb f6 c3 01}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1110,6 +1139,7 @@ rule Ransom_Win32_Tescrypt_NC_2147917728_0
         $x_2_2 = "n if you like" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1132,6 +1162,7 @@ rule Ransom_Win32_Tescrypt_NNL_2147917917_0
         $x_2_2 = "suppekStr" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

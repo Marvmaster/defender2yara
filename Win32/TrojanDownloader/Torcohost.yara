@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Torcohost_A_2147679390_0
         $x_1_2 = {ff d2 50 8b 06 57 ff d0 85 c0 0f 84 ?? ?? 00 00 8b 35 ?? ?? ?? ?? 53 53 53 53 b9 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 8e ?? ?? 00 00 50 ff d1 89}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

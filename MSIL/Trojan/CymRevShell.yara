@@ -18,6 +18,7 @@ rule Trojan_MSIL_CymRevShell_RDA_2147913004_0
         $x_1_3 = "Start-Process -FilePath rundll32.exe -ArgumentList \"$env:TEMP\\$<FILE_TO_DOWNLOAD>$,rundll32EntryPoint\"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

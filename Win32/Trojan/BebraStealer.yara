@@ -16,6 +16,7 @@ rule Trojan_Win32_BebraStealer_GTC_2147836087_0
         $x_10_1 = {8b 55 0c 8b 45 08 01 f2 8d 0c b0 31 c0 89 d3 8a 14 83 30 14 01 40 83 f8 ?? 75 f4 46 83 fe ?? 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

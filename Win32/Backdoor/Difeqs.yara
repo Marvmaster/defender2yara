@@ -25,6 +25,7 @@ rule Backdoor_Win32_Difeqs_2147572063_0
         $x_2_11 = {0f be 44 24 1b 83 e8 00 0f ?? ?? 01 00 00 48 0f ?? ?? 02 00 00 0f be 44 24 13 48 83 f8 06 0f ?? ?? 02 00 00 ff 24 85 ?? ?? 00 10 8b ?? 24 14 66}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_2_*))) or
             ((1 of ($x_3_*) and 5 of ($x_2_*))) or

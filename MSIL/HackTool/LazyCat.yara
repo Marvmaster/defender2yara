@@ -18,6 +18,7 @@ rule HackTool_MSIL_LazyCat_YA_2147733653_0
         $x_1_3 = "LazyCat.local_privilege_escalation.rotten_potato" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_Blackwidow_MLV_2147935557_0
         $x_4_2 = {dd 61 e1 c5 fd 70 f8 4e c5 fd 62 c3 c5 e5 6a dc 48 89 c8 c4 e3 fd 00 f6 ?? c4 e3 fd 00 ff d8 c5 cd 60 e1 c5 cd 68 f1 c5 c5 60 c1 48 81 f9 d3 25 1c 00 0f 86}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

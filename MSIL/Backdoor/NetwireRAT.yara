@@ -21,6 +21,7 @@ rule Backdoor_MSIL_NetwireRAT_A_2147846838_0
         $x_2_6 = {08 1a 59 1b 58 0c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

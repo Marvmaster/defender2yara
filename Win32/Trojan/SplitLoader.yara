@@ -16,6 +16,7 @@ rule Trojan_Win32_SplitLoader_B_2147911599_0
         $x_100_1 = ":\\workspace\\CBG\\Loader\\SplitLoader\\x64\\Release\\SplitLoader.pdb" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

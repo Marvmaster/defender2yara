@@ -16,6 +16,7 @@ rule Trojan_Win32_MewsSpy_CCJT_2147929842_0
         $x_1_1 = {8b 56 04 8a 14 0a 32 56 fc 41 88 54 01 ff 3b 0e 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

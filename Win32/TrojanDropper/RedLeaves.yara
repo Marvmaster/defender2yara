@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_RedLeaves_A_2147723371_0
         $x_1_2 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDropper_Win32_RedLeaves_B_2147723450_0
         $x_1_2 = {b8 cd cc cc cc 8b ce f7 e6 c1 ea 03 8d 04 92 03 c0 2b c8 8a 44 0d ?? 2a 44 0d ?? 00 04 1e 46 3b f7 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanDropper_Win32_RedLeaves_C_2147730370_0
         $x_1_5 = {43 89 9d cc f5 ff ff 89 18 83 c9 ff 83 38 09 7f 1a 8b 95 d8 f5 ff ff 41 83 f9 51 7c 99 8b 85 d0 f5 ff ff 8b 9d d4 f5 ff ff eb 1b 8b 9d d4 f5 ff ff c7 00 00 00 00 00 8b 85 d0 f5 ff ff 8b 10 4a 83 eb 02 83 e8 08 83 fb ff 7c 18 b9 01 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule TrojanDropper_Win32_RedLeaves_D_2147730371_0
         $x_2_9 = {99 b9 1a 00 00 00 f7 f9 80 c2 41 88 94 35 ?? ?? ?? ?? 03 f7 81 fe 96 00 00 00 7c [0-76] 83 c8 02 39 59 38 75 26 83 c8 04 eb 21 8b ?? ?? ?? ?? ?? 8b ?? 04 8b 84 0d ?? ?? ?? ?? 8d 8c 0d ?? ?? ?? ?? f7 d8 1b c0 83 e0 fc 83 c0 04 83 e0 17}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

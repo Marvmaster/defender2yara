@@ -52,6 +52,7 @@ rule Backdoor_Win32_Irchack_2147572946_0
         $x_2_38 = "-:UNINSTALL" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_2_*) and 18 of ($x_1_*))) or
             ((12 of ($x_2_*) and 16 of ($x_1_*))) or

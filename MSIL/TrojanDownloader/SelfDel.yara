@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_SelfDel_AN_2147744211_0
         $x_1_1 = "\\ConsoleApp2\\ConsoleApp2\\obj\\Release\\NetClient.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

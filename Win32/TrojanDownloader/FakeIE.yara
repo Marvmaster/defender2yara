@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_FakeIE_A_2147687999_0
         $x_1_5 = {00 43 35 38 4d 65 6e 75 42 61 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule TrojanDownloader_Win32_FakeIE_A_2147687999_1
         $x_1_10 = {43 00 6f 00 6e 00 66 00 69 00 67 00 [0-32] 43 00 6f 00 6e 00 66 00 69 00 67 00 [0-32] 43 00 6f 00 6e 00 66 00 69 00 67 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule TrojanDownloader_Win32_FakeIE_B_2147696788_0
         $x_1_6 = "27bb20fdd3e145e4bee3db39ddd6e64c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

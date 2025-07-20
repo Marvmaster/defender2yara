@@ -22,6 +22,7 @@ rule Worm_Win32_Smees_A_2147593225_0
         $x_1_8 = "darn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

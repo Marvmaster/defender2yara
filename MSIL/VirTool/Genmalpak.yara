@@ -15,6 +15,7 @@ rule VirTool_MSIL_Genmalpak_B_2147711780_0
         $x_1_1 = {08 11 0a 08 11 0a 91 11 05 11 0a 09 5d 91 61 9c 11 0a 17 d6 13 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

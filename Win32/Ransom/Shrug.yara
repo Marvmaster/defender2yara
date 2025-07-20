@@ -20,6 +20,7 @@ rule Ransom_Win32_Shrug_A_2147748561_0
         $x_2_5 = "ShrugDecryptor" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

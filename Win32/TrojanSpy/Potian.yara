@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Potian_A_2147620196_0
         $x_1_4 = {00 00 00 00 65 78 70 6c 6f 72 65 72 2e 65 78 65 00 00 00 00 63 68 69 6e 61 5f 6c 6f 67 69 6e 2e 6d 70 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

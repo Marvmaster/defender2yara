@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Blocgree_A_2147719292_0
         $x_1_2 = "http://5.206.225.17/blog/w2eezcfue85y.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

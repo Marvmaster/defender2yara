@@ -17,6 +17,7 @@ rule Trojan_Win32_Dedreftot_A_2147685109_0
         $x_1_3 = {8b 14 24 8b 52 3c 8b c3 03 d0 81 c2 f8 00 00 00 0f b7 cf c1 e1 03 8d 0c 89 03 d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

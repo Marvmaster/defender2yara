@@ -22,6 +22,7 @@ rule Trojan_MSIL_CloudySky_A_2147757515_0
         $x_3_7 = "e2fc1773-26cd-49be-b468-89d1bddb4308" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

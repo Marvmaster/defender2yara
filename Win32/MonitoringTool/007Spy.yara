@@ -19,6 +19,7 @@ rule MonitoringTool_Win32_007Spy_17530_0
         $x_10_5 = "Timer_Keylogger" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule MonitoringTool_Win32_007Spy_17530_1
         $x_1_8 = {73 76 63 68 6f 73 74 00 73 76 63 68 6f 73 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))

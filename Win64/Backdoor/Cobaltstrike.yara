@@ -17,6 +17,7 @@ rule Backdoor_Win64_Cobaltstrike_AX_2147908031_0
         $x_1_2 = {43 0f b6 04 0b 49 63 ca 41 ff c2 4d 8d 5b 01 4c 69 c0 ?? ?? ?? ?? 41 0f b6 01 49 ff c8 4c 0f af c0 48 8b c6 48 f7 e1 [0-48] 48 2b c8 0f b6 44 ?? ?? 43 30 44 18 ff 41 81 fa ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

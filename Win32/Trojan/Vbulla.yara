@@ -17,6 +17,7 @@ rule Trojan_Win32_Vbulla_A_2147630341_0
         $x_1_3 = {c7 45 fc 07 00 00 00 68 ?? ?? 40 00 8b 55 08 8b 42 70 50 ff 15 ?? ?? 40 00 c7 45 fc 08 00 00 00 ff 15 ?? ?? 40 00 d9 5d cc c7 45 c4 04 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

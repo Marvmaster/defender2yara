@@ -17,6 +17,7 @@ rule Trojan_Win32_Weelsof_RYM_2147752189_0
         $x_1_2 = {81 ff e6 77 00 00 [0-31] eb 8f 00 8a 1c 38 90 [0-31] eb [0-31] 80 f3 [0-31] f6 d3 [0-31] 80 f3 [0-31] 88 1c 38 90 [0-31] 47 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

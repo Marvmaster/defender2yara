@@ -18,6 +18,7 @@ rule Backdoor_Win32_Pigeon_GMX_2147896985_0
         $x_1_3 = "\\dnfahk.ahk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

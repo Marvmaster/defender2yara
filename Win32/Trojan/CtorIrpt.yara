@@ -17,6 +17,7 @@ rule Trojan_Win32_CtorIrpt_AD_2147744574_0
         $x_1_2 = {64 a1 00 00 00 00 50 81 ec ?? ?? 00 00 a1 ?? ?? ?? ?? 33 c5 89 45 ?? 50 8d 45 ?? 64 a3 00 00 00 00 b9 ?? ?? ?? ?? e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

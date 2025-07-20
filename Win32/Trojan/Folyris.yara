@@ -16,6 +16,7 @@ rule Trojan_Win32_Folyris_A_2147683774_0
         $x_1_2 = {c7 03 74 72 75 65 c6 43 04 00 eb 0c c7 03 66 61 6c 73 66 c7 43 04 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

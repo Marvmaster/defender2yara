@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_B_2147717183_0
         $x_1_2 = "DownloadFile" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_F_2147717742_0
         $x_1_2 = "DownloadFile" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_H_2147718551_0
         $x_1_4 = "\\data\\ieclone.mdb;User Id=admin;Password=;" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_L_2147718819_0
         $x_1_4 = "taskhostex" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_AX_2147721921_0
         $x_1_2 = "BTC GENERATOR_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_BC_2147722713_0
         $x_1_2 = {11 6e 00 76 00 78 00 64 00 73 00 79 00 6e 00 63 00 00 77 48 00 4b 00 45 00 59 00 5f 00 43 00 55 00 52 00 52 00 45 00 4e 00 54 00 5f 00 55 00 53 00 45 00 52 00 5c 00 53 00 6f 00 66 00 74 00 77 00 61 00 72 00 65 00 5c 00 43 00 6c 00 61 00 73 00 73 00 65 00 73 00 5c 00 73 00 74 00 65 00 61 00 6d 00 5c 00 53 00 68 00 65 00 6c 00 6c 00 5c 00 4f 00 70 00 65 00 6e 00 5c 00 43 00 6f 00 6d 00 6d 00 61 00 6e 00 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_BC_2147722713_1
         $x_1_3 = "HKEY_CURRENT_USER\\Software\\Classes\\steam\\Shell\\Open\\Command" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_AY_2147722750_0
         $x_1_3 = "start WEscr.vbs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -200,6 +208,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_AZ_2147722751_0
         $x_1_3 = "HKEY_CURRENT_USER\\Software\\Classes\\steam\\Shell\\Open\\Command" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +234,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_BD_2147722781_0
         $x_1_5 = "2f6766696c65732e706870" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -253,6 +263,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_BA_2147723101_0
         $x_1_4 = {4d 75 74 65 78 00 53 79 73 74 65 6d 2e 54 68 72 65 61 64 69 6e 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +287,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_BE_2147724798_0
         $x_1_3 = "HKEY_CURRENT_USER\\Software\\Classes\\steam\\Shell\\Open\\Command" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +311,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_BJ_2147724799_0
         $x_1_3 = "/k DownloadFile" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +334,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_BK_2147724800_0
         $x_1_2 = {6c 00 6f 00 61 00 64 00 [0-16] 65 00 6e 00 74 00 72 00 79 00 70 00 6f 00 69 00 6e 00 74 00 [0-16] 69 00 6e 00 76 00 6f 00 6b 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -344,6 +358,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_BL_2147725700_0
         $x_1_3 = "http://c2.howielab.com/C2/Command" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -367,6 +382,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_BM_2147725701_0
         $x_1_3 = "Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -390,6 +406,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_BO_2147727773_0
         $x_1_3 = "923f329yf9" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +429,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_BO_2147727773_1
         $x_1_2 = ".jpg'); hackbacktrack" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -434,6 +452,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_BN_2147727817_0
         $x_1_2 = {41 00 70 00 70 00 64 00 61 00 74 00 61 00 [0-16] 2e 00 45 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -456,6 +475,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_BR_2147728373_0
         $x_1_2 = "XFNlcnZlci5leGU=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -479,6 +499,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_BS_2147728374_0
         $x_1_3 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 35 00 2e 00 34 00 35 00 2e 00 38 00 32 00 2e 00 32 00 34 00 33 00 2f 00 [0-6] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -502,6 +523,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_BT_2147728375_0
         $x_1_3 = {43 00 3a 00 5c 00 50 00 72 00 6f 00 67 00 72 00 61 00 6d 00 44 00 61 00 74 00 61 00 [0-16] 2e 00 72 00 61 00 72 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -525,6 +547,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_CB_2147735329_0
         $x_1_3 = "C:\\Users\\tuann\\OneDrive\\XSOFT\\XFace\\SETUP\\AutoUpdateXface\\Xface\\obj\\Debug\\AutoUpdateXface.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -550,6 +573,7 @@ rule TrojanDownloader_MSIL_Gendwnurl_QQ_2147795242_0
         $x_3_5 = "\\Users\\MasterHy" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

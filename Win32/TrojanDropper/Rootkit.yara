@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Rootkit_AFH_2147606393_0
         $x_1_3 = "beep.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDropper_Win32_Rootkit_AFH_2147606393_1
         $x_1_8 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule TrojanDropper_Win32_Rootkit_AFH_2147606393_2
         $x_1_5 = {57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e 00 00 53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 00 6d 72 75 6c 69 73 74 00 25 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

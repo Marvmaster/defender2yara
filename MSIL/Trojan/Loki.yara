@@ -16,6 +16,7 @@ rule Trojan_MSIL_Loki_NEA_2147829226_0
         $x_1_1 = {65 07 06 06 6f 2b 00 00 06 5b 5a 58 6f 2c 00 00 06 09 17 58 0d 09 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_Loki_NEB_2147830090_0
         $x_1_2 = "TripleDESCryptoServiceProvider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_MSIL_Loki_NEAB_2147834184_0
         $x_5_2 = {07 03 08 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 0a 6f ?? 00 00 0a 08 18 58 0c 08 06 32 e3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_MSIL_Loki_NEAC_2147835615_0
         $x_5_2 = "DataCenter_OnDial" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_MSIL_Loki_NEAE_2147836095_0
         $x_5_6 = "BLYAT GBLYAT eBLYAT tBLYAT TBLYAT yBLYAT pBLYAT e" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +134,7 @@ rule Trojan_MSIL_Loki_AAHS_2147851802_0
         $x_5_1 = {0a 13 04 07 74 ?? 00 00 1b 11 04 1f 09 8c ?? 00 00 01 28 ?? 00 00 0a 28 ?? 00 00 0a 6f ?? 00 00 0a 1b 13 09 2b 8f 08 17 d6 0c 19 13 09 2b 86}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +156,7 @@ rule Trojan_MSIL_Loki_SG_2147912600_0
         $x_2_1 = {16 6a 0d 2b 5b 06 17 58 20 ff 00 00 00 5f 0a 08 07 06 95 58 20 ff 00 00 00 5f 0c 07 06 95 13 04 07 06 07 08 95 9e 07 08 11 04 9e 11 07 09 d4 91 13 0e 07 06 95 07 08 95 58 d2 13 0f 11 0f d2 13 10 07 11 10 95 d2 13 11 11 05 09 d4 11 0e 6e 11 11 20 ff 00 00 00 5f 6a 61 d2 9c 09 17 6a 58 0d 09 11 05 8e 69 17 59 6a fe 02 16 fe 01 13 12 11 12 2d 92}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +178,7 @@ rule Trojan_MSIL_Loki_A_2147914504_0
         $x_2_1 = {02 11 04 91 07 61 06 09 91 61 13 05 08 11 04 11 05 d2 9c 09 13 07}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -193,6 +201,7 @@ rule Trojan_MSIL_Loki_A_2147914504_1
         $x_1_2 = "7cfc33c2-8ffc-452a-97ef-af0fcbc82af4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +223,7 @@ rule Trojan_MSIL_Loki_B_2147914952_0
         $x_2_1 = {02 11 01 02 8e 69 5d 02 11 01 02 8e 69 5d 91 11 00 11 01 11 00 8e 69 5d 91 61 28 ?? ?? ?? 06 02 11 01 17 58 02 8e 69 5d 91 28 ?? ?? ?? 06 59 20 00 01 00 00 58 20 00 01 00 00 5d 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -239,6 +249,7 @@ rule Trojan_MSIL_Loki_C_2147914995_0
         $x_4_5 = {01 0d 08 74 ?? ?? ?? 1b 1a 09 74 ?? ?? ?? 1b 16 09 75 ?? ?? ?? 1b 8e 69 28}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -260,6 +271,7 @@ rule Trojan_MSIL_Loki_D_2147915065_0
         $x_2_1 = {02 11 04 91 07 61 06 09 91 61 13 05 08 11 04 11 05 d2 9c 09}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -284,6 +296,7 @@ rule Trojan_MSIL_Loki_E_2147917668_0
         $x_4_4 = {04 05 5d 05 58 05 5d 0a 03 06 91 0e 04 61 0e 05 59}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -306,6 +319,7 @@ rule Trojan_MSIL_Loki_MBWD_2147927368_0
         $x_1_2 = {57 32 45 79 71 6b 5a 67 00 38 5a 6d 4d 6e 6a 59 47 55 54 4b 76 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -328,6 +342,7 @@ rule Trojan_MSIL_Loki_KAC_2147930181_0
         $x_3_2 = "NGX0nOu/blPv4NWmVlDwefgMjWd" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

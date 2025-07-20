@@ -16,6 +16,7 @@ rule Trojan_MSIL_RisePro_KAB_2147902685_0
         $x_1_1 = {1f 30 61 d2 81 ?? 00 00 01 03 50 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_RisePro_RDD_2147919180_0
         $x_1_3 = "KLCP Update 18.5.0 Setup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

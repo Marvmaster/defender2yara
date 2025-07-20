@@ -20,6 +20,7 @@ rule Ransom_Linux_Rango_A_2147837901_0
         $x_1_5 = "dirtyLocked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Plite_A_2147905985_0
         $x_2_1 = {88 14 0c 66 85 d7 8d ad ?? ?? ?? ?? f8 80 d1 ?? 8b 4c 25 ?? f5 f8 3b e3 33 cb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_GameHack_A_2147641879_0
         $x_1_5 = "/ExeIni/c8cConfig2_run.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_GameHack_H_2147662155_0
         $x_1_9 = "xtrap\\cmdx4.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_GameHack_DHN_2147795228_0
         $x_1_2 = {32 c1 41 88 44 15 [0-4] 81 e1 ff 00 00 80 79 08 49 81 c9 00 ff ff ff 41 42 83 fa ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_Win32_GameHack_AB_2147896081_0
         $x_3_7 = "steamui.dll" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

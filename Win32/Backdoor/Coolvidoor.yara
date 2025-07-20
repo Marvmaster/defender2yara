@@ -21,6 +21,7 @@ rule Backdoor_Win32_Coolvidoor_A_2147601105_0
         $x_1_7 = "LISTARVALORES|" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Backdoor_Win32_Coolvidoor_B_2147601207_0
         $x_1_11 = "LISTARVALORES" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -94,6 +96,7 @@ rule Backdoor_Win32_Coolvidoor_A_2147601249_0
         $x_1_23 = "RESUMETRANSFER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +128,7 @@ rule Backdoor_Win32_Coolvidoor_D_2147608547_0
         $x_7_12 = {3c 47 45 54 46 49 4c 45 53 3e [0-12] 3c 4c 49 53 54 4f 46 46 49 4c 45 53 3e [0-12] 4c 49 53 54 41 52 53 45 52 56 49 43 49 4f 53}  //weight: 7, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_3_*) and 3 of ($x_1_*))) or
             ((5 of ($x_3_*))) or
@@ -157,6 +161,7 @@ rule Backdoor_Win32_Coolvidoor_F_2147653960_0
         $x_1_7 = "LISTARARCHIVOS|" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -187,6 +192,7 @@ rule Backdoor_Win32_Coolvidoor_G_2147659041_0
         $x_1_7 = "Jaka_Kamu_salem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

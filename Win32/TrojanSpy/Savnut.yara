@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Savnut_A_2147646222_0
         $x_3_7 = {8b 4d cc 8b 55 f0 56 89 71 08 8b 42 f4 68 ?? ?? ?? 10 03 c0 50 52 ff 31 ff 15}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

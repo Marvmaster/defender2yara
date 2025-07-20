@@ -23,6 +23,7 @@ rule VirTool_Win32_VB_L_2147601056_0
         $x_1_9 = {40 a6 6f 2c ad 3c c1 51 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +61,7 @@ rule VirTool_Win32_VB_M_2147601579_0
         $x_1_18 = "if exist" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

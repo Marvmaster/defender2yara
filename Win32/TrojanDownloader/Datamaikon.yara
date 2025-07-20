@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Datamaikon_A_2147655020_0
         $x_1_5 = {99 b9 10 27 00 00 f7 f9 8d 84 24 18 01 00 00 52 68 5c e6 41 00 8d 94 24 a0 00 00 00 52 68 50 e6 41 00 50 e8 ?? ?? 00 00 8d 8c 24 ac 03 00 00 51 8d 54 24 30 52 8d 84 24 34 01 00 00 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

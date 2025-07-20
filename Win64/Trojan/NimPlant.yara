@@ -16,6 +16,7 @@ rule Trojan_Win64_NimPlant_B_2147845841_0
         $x_7_1 = {44 0f b6 0a 48 83 c2 01 41 31 c1 c1 e8 08 45 0f b6 c9 43 33 04 88 48 39 ca 75 e5 5b 5e}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

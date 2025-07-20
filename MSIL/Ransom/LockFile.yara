@@ -20,6 +20,7 @@ rule Ransom_MSIL_LockFile_PDZ_2147943903_0
         $x_1_5 = "If you wish to learn more, look for a README.txt on your desktop" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

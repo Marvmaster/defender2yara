@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Rezona_RA_2147760708_0
         $x_4_6 = {70 6f 77 65 72 73 68 65 6c 6c 20 2d 45 78 65 63 75 74 69 6f 6e 50 6f 6c 69 63 79 20 42 79 50 61 73 73 20 2d 46 69 6c 65 20 [0-32] 20 26 20 53 54 41 52 54 20 2f 4d 49 4e 20 [0-32] 2e 65 78 65}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*))) or
             ((1 of ($x_5_*) and 1 of ($x_4_*) and 1 of ($x_1_*))) or

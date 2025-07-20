@@ -21,6 +21,7 @@ rule Trojan_Win32_ZLoader_RZ_2147758548_0
         $x_1_6 = "oncc3u610rea iexim5wmer1o 0daWi.M0kibi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win32_ZLoader_DA_2147767279_0
         $x_1_7 = "DoInfInstall" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_ZLoader_A_2147777757_0
         $x_1_5 = {6a 00 ff d0 85 c0 14 00 [0-8] 68 ?? ?? ?? ?? 6a 00 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -126,6 +129,7 @@ rule Trojan_Win32_ZLoader_MMC_2147919179_0
         $x_5_2 = {c1 e9 05 03 4d e8 c7 05 ?? ?? ?? ?? 84 10 d6 cb 33 cf 33 ce c7 05 ?? ?? ?? ?? ff ff ff ff 2b d9 8b 45 ec 29 45 f8 83 6d f4 01 0f 85}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +151,7 @@ rule Trojan_Win32_ZLoader_FLE_2147920449_0
         $x_5_1 = {01 d9 0f b6 c1 8a 14 06 88 14 2e 88 1c 06 0f b6 04 2e 01 d8 0f b6 c0 8a 04 06 8b 74 24 08 30 07 47 4e 75 c4}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +173,7 @@ rule Trojan_Win32_ZLoader_BLG_2147920450_0
         $x_4_1 = {89 f0 c1 e0 04 01 f0 b9 01 00 00 00 29 c1 03 0d ?? ?? ?? ?? 0f b6 5c 0f ff 8b 4d ec 41 8b 45 08 32 1c 38 8b 45 0c 88 1c 38 8d 7f 01 74}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +195,7 @@ rule Trojan_Win32_ZLoader_MJJ_2147921733_0
         $x_5_1 = {89 d6 8a 04 0e 88 04 1e 8b 55 dc 88 14 0e 8b 4d 08 0f b6 04 1e 01 d0 0f b6 c0 8a 04 06 30 04 39 47 ff 75 0c 57 e8 ?? ?? ?? ?? 83 c4 08 a8 01 0f 84}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +217,7 @@ rule Trojan_Win32_ZLoader_AAB_2147930846_0
         $x_5_1 = {57 50 e8 fd dd ?? ?? 8b 4d ec 83 c4 08 23 45 f0 21 ?? 8b 75 10 0f b6 04 06 30 01 41 8b 45 e8 48 0f 85}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

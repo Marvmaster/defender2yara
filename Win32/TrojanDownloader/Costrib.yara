@@ -15,6 +15,7 @@ rule TrojanDownloader_Win32_Costrib_A_2147733854_0
         $x_5_1 = "http://138.204.171.108/BxjL5iKld8.zip" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

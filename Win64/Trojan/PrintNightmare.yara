@@ -17,6 +17,7 @@ rule Trojan_Win64_PrintNightmare_A_2147850692_0
         $x_2_2 = "nightmare" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_PrintNightmare_SA_2147895788_0
         $x_1_4 = "Batman42!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

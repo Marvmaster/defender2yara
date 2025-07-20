@@ -17,6 +17,7 @@ rule Backdoor_Win32_Leenx_A_2147655268_0
         $x_1_3 = {56 8b ff b9 ?? ?? ?? ?? 8d b5 ?? ?? ?? ?? 8b fb f3 a5 8b ff 8d 45 ?? 50 6a 00 6a 00 53 6a 00 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

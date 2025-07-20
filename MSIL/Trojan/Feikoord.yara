@@ -17,6 +17,7 @@ rule Trojan_MSIL_Feikoord_A_2147711327_0
         $x_1_2 = {0a 16 0b 2b 25 06 28 17 00 00 06 72 ?? ?? ?? ?? 07 8c 39 00 00 01 28 52 00 00 0a 6f 53 00 00 0a 28 54 00 00 0a 0a 07 17 58 0b 07 28 1b 00 00 06 32 d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

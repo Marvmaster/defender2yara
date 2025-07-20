@@ -24,6 +24,7 @@ rule VirTool_MSIL_Subti_A_2147696038_0
         $x_1_10 = "RunNet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -54,6 +55,7 @@ rule VirTool_MSIL_Subti_A_2147696038_1
         $x_1_11 = "_downloader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -83,6 +85,7 @@ rule VirTool_MSIL_Subti_B_2147696039_0
         $x_1_10 = "52756E4E6574" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -113,6 +116,7 @@ rule VirTool_MSIL_Subti_B_2147696039_1
         $x_1_11 = "5F646F776E6C6F61646572" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -141,6 +145,7 @@ rule VirTool_MSIL_Subti_C_2147696131_0
         $x_1_9 = "echo DONT CLOSE THIS WINDOW!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -168,6 +173,7 @@ rule VirTool_MSIL_Subti_D_2147696132_0
         $x_1_8 = "44656372797074" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -193,6 +199,7 @@ rule VirTool_MSIL_Subti_E_2147696731_0
         $x_1_6 = "echo DONT CLOSE THIS WINDOW!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -217,6 +224,7 @@ rule VirTool_MSIL_Subti_F_2147696784_0
         $x_1_5 = {52 75 6e 4e 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +251,7 @@ rule VirTool_MSIL_Subti_G_2147706180_0
         $x_1_7 = {5f 43 6f 72 45 78 65 4d 61 69 6e 00 6d 73 63 6f 72 65 65 2e 64 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -266,6 +275,7 @@ rule VirTool_MSIL_Subti_H_2147707576_0
         $x_1_4 = {2e 00 65 00 78 00 65 00 ?? ?? 70 00 69 00 6e 00 67 00 20 00 67 00 6f 00 6f 00 67 00 6c 00 65 00 2e 00 63 00 6f 00 6d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -289,6 +299,7 @@ rule VirTool_MSIL_Subti_I_2147707581_0
         $x_1_4 = "%ITSELFINJECTION%" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -313,6 +324,7 @@ rule VirTool_MSIL_Subti_J_2147708924_0
         $x_1_5 = "*/***C {*0*}* *& *{*1*}*" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -336,6 +348,7 @@ rule VirTool_MSIL_Subti_L_2147711487_0
         $x_1_4 = {73 00 76 00 63 00 68 00 6f 00 73 00 74 00 ?? ?? 72 00 65 00 67 00 61 00 73 00 6d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -360,6 +373,7 @@ rule VirTool_MSIL_Subti_M_2147711624_0
         $x_1_5 = "Client\\WdiServiceHost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -392,6 +406,7 @@ rule VirTool_MSIL_Subti_N_2147712136_0
         $x_1_13 = "ZoneIDDelete" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -417,6 +432,7 @@ rule VirTool_MSIL_Subti_O_2147718580_0
         $x_1_5 = "lvotgso.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -442,6 +458,7 @@ rule VirTool_MSIL_Subti_P_2147724751_0
         $x_1_5 = {00 67 65 74 5f 45 6e 74 72 79 50 6f 69 6e 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -466,6 +483,7 @@ rule VirTool_MSIL_Subti_Q_2147725133_0
         $x_1_4 = {16 0a 2b 10 00 03 06 03 06 91 1f 20 61 d2 9c 00 06 17 58 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -491,6 +509,7 @@ rule VirTool_MSIL_Subti_R_2147725166_0
         $x_1_5 = {49 00 6e 00 6a 00 00 0d 69 00 74 00 73 00 65 00 6c 00 66 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -515,6 +534,7 @@ rule VirTool_MSIL_Subti_S_2147727003_0
         $x_1_4 = "%ITSELFINJECTION%" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -539,6 +559,7 @@ rule VirTool_MSIL_Subti_U_2147733819_0
         $x_1_4 = "L0MgY2hvaWNlIC9DIFkgL04gL0QgWSAvVCAzICYgRGVsICI=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -564,6 +585,7 @@ rule VirTool_MSIL_Subti_V_2147734297_0
         $x_1_5 = "ReclaimMutex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

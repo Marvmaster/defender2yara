@@ -18,6 +18,7 @@ rule Trojan_Win64_CryptoClipper_A_2147842340_0
         $x_2_3 = "clipboard_windows.go" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Ransom_Win32_MountLocker_PAA_2147795538_0
         $x_1_6 = ".quantum" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

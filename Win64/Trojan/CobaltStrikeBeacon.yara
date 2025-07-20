@@ -16,6 +16,7 @@ rule Trojan_Win64_CobaltStrikeBeacon_LKA_2147888518_0
         $x_1_1 = {48 89 01 0f b7 04 24 66 ff c8 66 89 04 24 48 8b 44 24 ?? 48 83 c0 04 48 89 44 24 38 48 8b 44 24 ?? 48 83 c0 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_CobaltStrikeBeacon_LKB_2147888519_0
         $x_1_1 = {8b 44 24 28 39 04 24 73 ?? 8b 04 24 0f b6 4c 24 ?? 48 8b 54 24 ?? 0f be 04 02 33 c1 8b 0c 24 48 8b 54 24 ?? 88 04 0a eb cf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win64_CobaltStrikeBeacon_YY_2147897118_0
         $x_1_1 = {02 ca 8a 8c 0d ?? ?? ?? ?? 30 0e 46 4f fe c3 8a 94 1d ?? ?? ?? ?? 02 c2 8a 8c 05 ?? ?? ?? ?? 88 8c 1d ?? ?? ?? ?? 88 94 05 ?? ?? ?? ?? 02 ca 8a 8c 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win64_CobaltStrikeBeacon_EM_2147898410_0
         $x_1_2 = "mysuperdupersecretkey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

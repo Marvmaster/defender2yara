@@ -20,6 +20,7 @@ rule MonitoringTool_MacOS_Spyrix_DS_329160_0
         $x_1_5 = "CallRecordViewController" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule MonitoringTool_MacOS_Spyrix_A_345574_0
         $x_1_6 = "ScreenRecorder" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (5 of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule MonitoringTool_MacOS_Spyrix_A_345574_1
         $x_1_7 = "spyrix-keylogger-for-mac-manual.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule MonitoringTool_MacOS_Spyrix_K_418697_0
         $x_1_5 = "/Library/skm/Spyrix.app" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -126,6 +130,7 @@ rule MonitoringTool_MacOS_Spyrix_J_418698_0
         $x_1_5 = "pathSpyrix" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -156,6 +161,7 @@ rule MonitoringTool_MacOS_Spyrix_B_449777_0
         $x_1_6 = "settings:enableCallRecording" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -182,6 +188,7 @@ rule MonitoringTool_MacOS_Spyrix_R_450448_0
         $x_1_6 = "spyrix.net/usr/monitor/upload_prg.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (3 of ($x*))
 }
 
@@ -204,6 +211,7 @@ rule MonitoringTool_MacOS_Spyrix_C_452031_0
         $x_1_2 = {ff 03 02 d1 fc 6f 02 a9 fa 67 03 a9 f8 5f 04 a9 f6 57 05 a9 f4 4f 06 a9 fd 7b 07 a9 fd c3 01 91 28 11 00 d0 08 0d 46 f9 93 02 08 8b e1 23 00 91 e0 03 13 aa 02 00 80 d2 03 00 80 d2 9b a4 05 94 73 02 40 f9 68 fe 7e d3 a8 0c 00 b5 68 e2 7d 92 14 09 40 f9 e0 03 13 aa 41 00 80 52 9f a4 05 94 34 0d 00 b4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -229,6 +237,7 @@ rule MonitoringTool_MacOS_Spyrix_D_454393_0
         $x_1_5 = "$s13Spyrix_Helper23_ACResourceInitProtocolP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

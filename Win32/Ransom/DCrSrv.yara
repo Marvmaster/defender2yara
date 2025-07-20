@@ -17,6 +17,7 @@ rule Ransom_Win32_DCrSrv_AK_2147913833_0
         $x_1_3 = "DCmod\\DiskCryptor\\DCrypt\\Bin\\boot\\boot_load.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

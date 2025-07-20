@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Purgodoor_A_2147636704_0
         $x_1_5 = {25 64 25 64 25 64 2e 63 61 62 [0-4] 6d 61 6b 65 63 61 62 20 25 73 20 25 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

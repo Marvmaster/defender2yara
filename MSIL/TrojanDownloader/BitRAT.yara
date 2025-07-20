@@ -22,6 +22,7 @@ rule TrojanDownloader_MSIL_BitRAT_E_2147827733_0
         $x_1_7 = "GetMethod" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_MSIL_BitRAT_H_2147830888_0
         $x_1_2 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule TrojanDownloader_MSIL_BitRAT_ABL_2147831441_0
         $x_1_4 = "AZLIJE8U3Y" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule TrojanDownloader_MSIL_BitRAT_J_2147833233_0
         $x_1_5 = "GetResponseStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule TrojanDownloader_MSIL_BitRAT_K_2147833622_0
         $x_1_5 = "GetResponseStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule TrojanDownloader_MSIL_BitRAT_L_2147834224_0
         $x_1_5 = "get_UTF8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule TrojanDownloader_MSIL_BitRAT_R_2147837507_0
         $x_2_1 = {91 61 d2 6f 2d 00 11 ?? 28 ?? 00 00 0a 72 ?? 00 00 70 28 ?? 00 00 06 11 ?? 28 ?? 00 00 0a 72 ?? 00 00 70 28 ?? 00 00 06 8e 69 5d 91 7e ?? 00 00 04 11}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +198,7 @@ rule TrojanDownloader_MSIL_BitRAT_I_2147844625_0
         $x_1_7 = "get_CurrentDomain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +220,7 @@ rule TrojanDownloader_MSIL_BitRAT_A_2147850680_0
         $x_2_1 = {00 00 04 06 91 20 92 ?? 00 00 59 d2 9c 00 06 17 58 0a 06 7e ?? 00 00 04 8e 69 fe}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +243,7 @@ rule TrojanDownloader_MSIL_BitRAT_Q_2147900537_0
         $x_2_2 = {02 8e 69 17 5b 8d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -258,6 +268,7 @@ rule TrojanDownloader_MSIL_BitRAT_P_2147900620_0
         $x_2_4 = "Q2hlY2tSZW1vdGVEZWJ1Z2dlclByZXNlbnQ=" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -284,6 +295,7 @@ rule TrojanDownloader_MSIL_BitRAT_B_2147902472_0
         $x_2_6 = "U09GVFdBUkVcTWljcm9zb2Z0XFdpbmRvd3NcQ3VycmVudFZlcnNpb25cUnVu" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -305,6 +317,7 @@ rule TrojanDownloader_MSIL_BitRAT_C_2147902609_0
         $x_2_1 = {0a 11 01 72 ?? 00 00 70 28 ?? 00 00 0a 28 ?? 00 00 2b 6f ?? 00 00 0a 26 20}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -326,6 +339,7 @@ rule TrojanDownloader_MSIL_BitRAT_T_2147905005_0
         $x_2_1 = {0a 11 07 72 ?? ?? 00 70 28 ?? 00 00 0a 16 8d ?? 00 00 01 6f ?? 00 00 0a 26 20}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -347,6 +361,7 @@ rule TrojanDownloader_MSIL_BitRAT_U_2147905175_0
         $x_2_1 = {06 11 06 20 ?? ?? ?? 2c 28 ?? 00 00 06 28 ?? 00 00 0a 28 ?? 00 00 2b 28 ?? 00 00 06 26 20}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

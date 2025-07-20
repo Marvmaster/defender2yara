@@ -17,6 +17,7 @@ rule Ransom_Win64_Dovs_CRDA_2147850319_0
         $x_1_2 = "Content-RangeChunk  uploaded successfully!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

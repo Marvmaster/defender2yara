@@ -20,6 +20,7 @@ rule Trojan_WinNT_Mooqkel_A_2147697076_0
         $x_1_6 = {0a 46 42 8a 0e 84 c9 75 ee 3b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

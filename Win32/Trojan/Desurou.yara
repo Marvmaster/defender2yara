@@ -21,6 +21,7 @@ rule Trojan_Win32_Desurou_A_2147628125_0
         $x_1_7 = {00 63 73 79 73 2e 64 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule Trojan_Win32_Desurou_B_2147630874_0
         $x_1_3 = {00 63 73 79 73 2e 64 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win32_Desurou_C_2147632194_0
         $x_1_4 = {20 00 5b 00 77 00 79 00 62 00 68 00 6f 00 69 00 6e 00 69 00 5d 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

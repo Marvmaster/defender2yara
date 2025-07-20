@@ -19,6 +19,7 @@ rule DoS_Win64_ElekiWiper_B_2147944723_0
         $x_1_4 = {5b 00 53 00 4b 00 49 00 50 00 5d 00 20 00 4f 00 70 00 74 00 69 00 63 00 61 00 6c 00 20 00 64 00 72 00 69 00 76 00 65 00 20 00 73 00 6b 00 69 00 70 00 70 00 65 00 64 00 3a 00 20 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule DoS_Win64_ElekiWiper_A_2147944817_0
         $x_1_4 = "Skipping self executable:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

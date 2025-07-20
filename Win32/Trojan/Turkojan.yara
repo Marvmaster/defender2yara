@@ -18,6 +18,7 @@ rule Trojan_Win32_Turkojan_A_2147610966_0
         $x_3_3 = {f7 c7 00 00 00 80 75 33 83 c3 f0 83 eb 03 0f 92 c0 34 01 0a 05 ?? ?? 40 00 74 20 e8 ?? ?? ff ff 50 0f b7 05 ?? ?? 40 00 50 68 2c cf 00 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_Win32_Turkojan_B_2147610967_0
         $x_1_2 = {44 4c 4d 4e 49 55 6d 73 6e 00 00 00 09 6d 73 74 77 61 69 6e 33 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

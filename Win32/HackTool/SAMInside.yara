@@ -18,6 +18,7 @@ rule HackTool_Win32_SAMInside_A_2147725306_0
         $x_1_4 = "GetHashes <SAM registry file> [System key file]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

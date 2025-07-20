@@ -20,6 +20,7 @@ rule HackTool_Win32_LSASecretsHF_B_2147901875_0
         $x_1_6 = "CryptDestroyHash" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -26,6 +26,7 @@ rule Backdoor_Win32_Misdat_A_2147696120_0
         $x_1_11 = {c1 e9 08 32 d1 88 54 18 ff 8b 45 f4 0f b6 44 18 ff 03 45 f8 69 c0 ?? ?? 00 00 05 ?? 00 00 89 45 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -26,6 +26,7 @@ rule Ransom_MSIL_OsnoCrypt_MB_2147765663_0
         $x_1_11 = "All your files are encrypted by Osno Ransomware!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

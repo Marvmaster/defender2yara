@@ -18,6 +18,7 @@ rule Trojan_Win32_CyberGate_ACG_2147919825_0
         $x_1_3 = "SPY_NET_RATMUTEX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule VirTool_Win32_Mirrordumpz_A_2147850792_0
         $x_1_5 = ".Lsa.LsaProviderDuper.boo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

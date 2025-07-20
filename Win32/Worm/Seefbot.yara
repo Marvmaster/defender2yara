@@ -26,6 +26,7 @@ rule Worm_Win32_Seefbot_A_2147596949_0
         $x_1_11 = {6a 09 5b 99 8b cb f7 f9 52 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

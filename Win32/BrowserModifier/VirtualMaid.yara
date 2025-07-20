@@ -16,6 +16,7 @@ rule BrowserModifier_Win32_VirtualMaid_15548_0
         $x_3_2 = "http://www.rsdn.ru/cgi-bin/search.exe?query=" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule BrowserModifier_Win32_VirtualMaid_15548_1
         $x_1_6 = {4d 41 49 44 44 4c 4c 00 56 69 72 74 75 61 6c 20 4d 61 69 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))

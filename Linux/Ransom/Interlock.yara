@@ -20,6 +20,7 @@ rule Ransom_Linux_Interlock_A_2147923935_0
         $x_1_5 = {74 74 70 3a 2f 2f [0-88] 2e 6f 6e 69 6f 6e 2f 73 75 70 70 6f 72 74 2f 73 74 65 70 2e 70 68 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

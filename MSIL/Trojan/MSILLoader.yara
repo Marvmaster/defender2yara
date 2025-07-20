@@ -19,6 +19,7 @@ rule Trojan_MSIL_MSILLoader_RDA_2147846713_0
         $x_1_4 = "//124.223.11.169:49673/Csyfrcotd.png" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

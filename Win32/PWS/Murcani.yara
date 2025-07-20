@@ -21,6 +21,7 @@ rule PWS_Win32_Murcani_A_2147667377_0
         $x_1_7 = {0f 01 4d dc 81 7d de 00 f4 03 80 76 09 81 7d de 00 74 04 80 72 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

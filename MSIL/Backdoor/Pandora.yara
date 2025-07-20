@@ -18,6 +18,7 @@ rule Backdoor_MSIL_Pandora_SP_2147837090_0
         $x_1_3 = "filifilm.com.br/images/colors/purple/Bqvoou.png" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_MSIL_Pandora_MBZQ_2147905121_0
         $x_1_1 = {07 11 05 03 11 04 1f fe 28 ?? 00 00 0a 6f ?? 00 00 0a 1f ?? 28 ?? 00 00 0a 28 ?? 00 00 0a 08 11 05 09 5d 91 61 d2 9c 11 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

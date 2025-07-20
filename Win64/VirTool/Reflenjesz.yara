@@ -18,6 +18,7 @@ rule VirTool_Win64_Reflenjesz_A_2147909553_0
         $x_1_3 = {48 89 c1 48 8b 45 40 41 b9 40 00 00 00 41 b8 00 30 00 00 48 89 c2 ?? ?? ?? ?? ?? ?? ?? ?? ?? 48 89 45 38 48 8b 55 38 48 8b 45 48 48 8b 48 30 48 89 d0 48 29 c8 48 89 45 30 48 8b 45 48 8b 40 54 89 c2 48 8b 45 38 49 89 d0 48 8b 95 a0 00 00 00 48 89 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

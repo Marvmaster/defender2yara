@@ -18,6 +18,7 @@ rule Backdoor_Linux_Iroffer_A_2147830598_0
         $x_1_3 = {a1 90 9c 07 08 31 c9 29 c3 39 d9 7d 1f bf 54 a5 07 08 8d 14 86}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

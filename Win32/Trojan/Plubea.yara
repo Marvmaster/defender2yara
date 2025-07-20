@@ -24,6 +24,7 @@ rule Trojan_Win32_Plubea_B_2147733555_0
         $x_1_10 = {25 61 70 70 64 61 74 61 25 5c 46 6c 61 73 68 50 6c 61 79 65 72 00 [0-8] 5c 70 6c 75 67 31 2e 64 61 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

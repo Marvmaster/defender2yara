@@ -18,6 +18,7 @@ rule Worm_Win32_Cadombi_A_2147618507_0
         $x_1_4 = {83 f8 66 0f 8f ?? ?? 00 00 0f 84 ?? ?? 00 00 83 f8 4c 0f 8f ?? ?? 00 00 0f 84 ?? ?? 00 00 83 f8 ff 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

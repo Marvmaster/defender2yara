@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Rozena_ARA_2147911690_0
         $x_2_1 = {89 ca c1 e2 0d 31 ca 89 d6 c1 ee 11 31 d6 89 f1 c1 e1 05 31 f1 89 8c 05 50 ff ff ff 83 c0 04 83 f8 3c 72 dc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

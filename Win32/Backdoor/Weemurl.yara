@@ -22,6 +22,7 @@ rule Backdoor_Win32_Weemurl_B_2147717444_0
         $x_3_7 = {3b 7d 7d 3b 6e 65 77 20 4d 41 49 4e 28 29 2e 46 69 72 65 28 29 3b 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

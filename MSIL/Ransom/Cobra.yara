@@ -20,6 +20,7 @@ rule Ransom_MSIL_Cobra_PA_2147767321_0
         $x_1_5 = "Your copmuter has been locked by BlackMamba 2.0 Ransomware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_MSIL_Cobra_PC_2147772458_0
         $x_1_4 = {5c 43 6f 62 72 61 5f 4c 6f 63 6b 65 72 5c 43 6f 62 72 61 5f 4c 6f 63 6b 65 72 5c [0-32] 5c 43 6f 62 72 61 5f 4c 6f 63 6b 65 72 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Ransom_MSIL_Cobra_PD_2147784853_0
         $x_1_3 = "All your important files were encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

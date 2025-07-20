@@ -19,6 +19,7 @@ rule Ransom_Win64_Booran_PA_2147935365_0
         $x_1_4 = "Your files are encrypted, and currently unavailable." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win64_Booran_A_2147935905_0
         $x_1_3 = {53 74 61 72 74 20 53 68 61 64 6f 77 20 43 6f ?? 79 20 64 65 6c 65 74 65 20 5b 2a 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Ransom_Win64_Booran_PB_2147938064_0
         $x_1_1 = {4c 89 e9 e8 ?? ?? ?? ?? 48 8b 8d ?? ?? ?? ?? 31 04 b9 48 ff c7 48 39 fe 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_MSIL_Sistomerdly_A_2147640586_0
         $x_1_2 = {64 65 73 74 72 6f 79 46 69 6c 65 53 79 73 74 65 6d 00 64 65 73 74 72 6f 79 50 72 6f 66 69 6c 65 73 00 64 65 73 74 72 6f 79 50 72 6f 67 72 61 6d 46 69 6c 65 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

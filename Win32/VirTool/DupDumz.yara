@@ -20,6 +20,7 @@ rule VirTool_Win32_DupDumz_A_2147818942_0
         $x_1_5 = {4c 73 61 73 73 [0-80] 68 50 72 6f 63 65 73 73 [0-32] 47 65 74 43 75 72 72 65 6e 74 50 72 6f 63 65 73 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

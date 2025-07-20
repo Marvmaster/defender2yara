@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Onitab_A_2147658625_0
         $x_2_3 = "!@#$r#@%@#$@#" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

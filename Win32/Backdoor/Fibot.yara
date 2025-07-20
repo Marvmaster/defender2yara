@@ -22,6 +22,7 @@ rule Backdoor_Win32_Fibot_A_2147711522_0
         $x_1_8 = "Bot install success" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

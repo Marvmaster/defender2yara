@@ -18,6 +18,7 @@ rule Trojan_Win32_Cuffahlt_B_2147706386_0
         $x_1_4 = {43 65 72 74 73 46 46 2e 64 61 74 00 43 65 72 74 73 4f 50 2e 64 61 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule Trojan_Win32_Cuffahlt_C_2147708727_0
         $x_2_5 = {6e 5c 52 75 c7 45 ?? 6e 6f 6e 63 66 c7 45 ?? 65 00 c7 45 ?? 63 6d 64 72 66 c7 45 ?? 75 6e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

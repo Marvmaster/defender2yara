@@ -18,6 +18,7 @@ rule HackTool_Win32_Zeloxat_A_2147688269_0
         $x_1_4 = "wating on port %d..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win64_Nitrol_YAA_2147922586_0
         $x_4_3 = "nJlQwxpjRBQX" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

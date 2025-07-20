@@ -23,6 +23,7 @@ rule HackTool_Win32_Elevate_B_2147718781_0
         $x_1_9 = "w7e_TIORDir" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

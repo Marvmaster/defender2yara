@@ -20,6 +20,7 @@ rule PWS_Win32_Qqhook_A_2147583578_0
         $x_1_5 = "qq.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_3_*))) or
             (all of ($x*))
@@ -54,6 +55,7 @@ rule PWS_Win32_Qqhook_B_2147601436_0
         $x_2_11 = "HookClass" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*) and 4 of ($x_2_*) and 2 of ($x_1_*))) or

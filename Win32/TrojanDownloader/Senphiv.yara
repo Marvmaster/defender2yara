@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Senphiv_A_2147630248_0
         $x_1_3 = {00 6d 43 68 61 6e 67 65 49 45 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

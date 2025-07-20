@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Tonfled_A_2147662948_0
         $x_1_3 = {81 fb 9f 86 01 00 0f 8d aa 01 00 00 85 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

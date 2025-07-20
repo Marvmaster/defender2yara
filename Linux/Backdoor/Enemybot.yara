@@ -18,6 +18,7 @@ rule Backdoor_Linux_Enemybot_A_2147818701_0
         $x_1_4 = "KEKSEC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

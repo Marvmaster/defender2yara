@@ -17,6 +17,7 @@ rule Trojan_Win64_QuasarRat_NEAF_2147841430_0
         $x_5_2 = "github.com-1ecc6299db9ec823" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win64_QuasarRat_NEAE_2147842135_0
         $x_1_12 = "DisableOnAccessProtection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -31,6 +31,7 @@ rule PWS_Win32_Pebox_A_2147626132_0
         $x_1_17 = "data\\config.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or

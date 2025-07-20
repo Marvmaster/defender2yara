@@ -18,6 +18,7 @@ rule Trojan_Win64_SharpWipe_A_2147847602_0
         $x_1_3 = {c7 45 b8 72 00 20 00 c7 45 bc 2d 00 73 00 c7 45 c0 20 00 2d 00 c7 45 c4 71 00 20 00 c7 45 c8 25 00 63 00 c7 45 cc 3a 00 5c 00 c7 45 d0 2a 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

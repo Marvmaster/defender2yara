@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_WinReanimator_A_2147603018_0
         $x_1_4 = {2f 66 69 72 73 74 20 2f 69 64 3d 25 64 20 2f 73 75 62 69 64 3d 25 73 00 2f 6d 65 6d 62 65 72 73 2f 75 70 64 61 74 65 5f 69 6e 73 74 2e 70 68 70 3f 77 6d 69 64 3d 25 64 26 73 75 62 69 64 3d 25 73 26 70 69 64 3d 25 64 26 6c 69 64 3d 25 64 26 68 73 3d 25 73 00 25 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_Win32_WinReanimator_B_2147603019_0
         $x_1_4 = {68 74 74 70 3a 2f 2f 77 77 77 2e 77 69 6e 72 65 61 6e 69 6d 61 74 6f 72 2e 63 6f 6d 2f 62 75 79 2e 68 74 6d 6c 00 00 00 48 54 4d 4c 5f 57 41 52 4e 5f 44 49 41 4c 4f 47}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

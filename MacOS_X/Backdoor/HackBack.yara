@@ -22,6 +22,7 @@ rule Backdoor_MacOS_X_HackBack_A_2147681628_0
         $x_2_8 = "/upload.php" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (7 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Backdoor_MSIL_Baldr_YA_2147734996_0
         $x_1_6 = "History Count : {" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 3 of ($x_1_*))) or
             (all of ($x*))

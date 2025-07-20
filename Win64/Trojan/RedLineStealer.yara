@@ -20,6 +20,7 @@ rule Trojan_Win64_RedLineStealer_SPIZ_2147928400_0
         $x_1_5 = "x64dbg.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

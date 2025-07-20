@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Injranluder_A_2147724282_0
         $x_1_8 = {74 1f ff 75 10 ff 15 ?? ?? ?? ?? 85 c0 74 0b 68 b8 0b 00 00 ff 15 ?? ?? ?? ?? 53 57 e8 ?? ?? ff ff 56 e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

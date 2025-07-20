@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Saffle_A_2147630130_0
         $x_3_4 = {2b c2 3d e8 03 00 00 7c 26 3d d0 07 00 00 7d 1f 6a ff 6a 00 6a 00 ff 15 ?? ?? 40 00 85 c0 75 0f}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

@@ -16,6 +16,7 @@ rule Ransom_Win32_ContiCryptor_MAK_2147794869_0
         $x_1_1 = {80 c2 20 46 c1 c1 [0-1] 03 f5 0f be c2 33 c8 43 8a 16 84 d2 75 d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -31,6 +31,7 @@ rule TrojanSpy_MSIL_Psankos_A_2147686116_0
         $x_100_17 = "{0} - Keystrokes" wide //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 8 of ($x_1_*))) or
             (all of ($x*))

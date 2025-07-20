@@ -19,6 +19,7 @@ rule Ransom_Win64_CryWiper_PA_2147836499_0
         $x_1_4 = "vssadmin delete shadows /for=c: /all" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

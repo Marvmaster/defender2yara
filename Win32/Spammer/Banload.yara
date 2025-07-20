@@ -18,6 +18,7 @@ rule Spammer_Win32_Banload_A_2147615383_0
         $x_1_4 = "C:\\Arquivos de programas\\msn_livers.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

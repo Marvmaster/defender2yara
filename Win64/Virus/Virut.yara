@@ -18,6 +18,7 @@ rule Virus_Win64_Virut_HNB_2147925660_0
         $x_1_3 = {8d 00 8b cc 1b 51 2c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

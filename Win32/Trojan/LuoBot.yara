@@ -17,6 +17,7 @@ rule Trojan_Win32_LuoBot_RPY_2147816703_0
         $x_1_2 = {89 f7 31 c0 40 89 f0 81 c7 ?? ?? 00 00 81 2e ?? ?? ?? ?? 83 c6 04 39 fe 7c f3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_LuoBot_RPZ_2147816704_0
         $x_1_2 = {89 f7 31 c0 89 f0 81 c7 ?? ?? 00 00 81 2e ?? ?? ?? ?? 83 c6 04 39 fe 7c f3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Baldr_AD_2147735055_0
         $x_1_2 = "av4.0.30319" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

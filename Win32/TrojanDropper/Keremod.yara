@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Keremod_A_2147625464_0
         $x_1_5 = "5D42434E-BCA3-4061-9FAC-C3ABEE0B82EC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

@@ -17,6 +17,7 @@ rule Trojan_Win32_NsInject_CT_2147744724_0
         $x_1_2 = {8b 4c 24 04 33 c0 eb ?? 8d a4 24 00 00 00 00 [0-16] 8a 14 85 ?? ?? ?? ?? 80 c2 ?? 88 14 08 83 c0 01 3d ?? ?? 00 00 7c ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

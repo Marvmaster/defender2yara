@@ -22,6 +22,7 @@ rule Backdoor_MSIL_Njogv_A_2147688681_0
         $x_1_8 = {72 65 6d 6f 76 65 5f 4f 6e 46 69 6e 69 73 68 65 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

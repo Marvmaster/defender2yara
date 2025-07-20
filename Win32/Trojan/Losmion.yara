@@ -16,6 +16,7 @@ rule Trojan_Win32_Losmion_A_2147685270_0
         $x_1_2 = "Reg Add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\run\" /ve /t REG_SZ /d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

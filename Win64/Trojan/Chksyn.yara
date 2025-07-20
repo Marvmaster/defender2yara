@@ -17,6 +17,7 @@ rule Trojan_Win64_Chksyn_A_2147717858_0
         $x_1_3 = "v=%d&s=%d&h=%d&un=%s&o=%d&c=%d&ip=%s&sys=%s&uid=%d&w=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

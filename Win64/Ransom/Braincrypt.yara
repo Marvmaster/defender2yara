@@ -16,6 +16,7 @@ rule Ransom_Win64_Braincrypt_A_2147719880_0
         $x_1_2 = "/gateway/gate.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

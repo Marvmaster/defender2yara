@@ -26,6 +26,7 @@ rule Backdoor_Win32_Likseput_B_2147633549_0
         $x_1_12 = "Volume on this computer:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -54,6 +55,7 @@ rule Backdoor_Win32_Likseput_D_2147654675_0
         $x_1_3 = {6b 69 6c 6c 00 00 00 00 67 65 74 66 00 00 00 00 70 75 74 66 00 00 00 00 73 74 61 72 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Backdoor_MSIL_Dictaor_A_2147692764_0
         $x_1_9 = "Filemang_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Backdoor_MSIL_Dictaor_A_2147692764_1
         $x_1_6 = ":DOWM::jop::DONE:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

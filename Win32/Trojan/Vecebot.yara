@@ -17,6 +17,7 @@ rule Trojan_Win32_Vecebot_A_2147639806_0
         $x_1_3 = {72 00 75 00 6e 00 64 00 6c 00 6c 00 33 00 32 00 2e 00 65 00 78 00 65 00 00 00 00 00 63 00 6f 00 6e 00 66 00 69 00 72 00 6d 00 5f 00 65 00 78 00 70 00 6c 00 6f 00 72 00 65 00 72 00 00 00 00 00 44 00 48 00 43 00 50 00 20 00 56 00 65 00 72 00 73 00 69 00 6f 00 6e 00 20 00 36 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Vecebot_A_2147639806_1
         $x_1_3 = {6a 04 6a 5d b9 ?? ?? ?? ?? 8d b5 ?? ?? ?? ?? e8 ?? ?? ?? ?? 6a 04 68 ?? 90 04 00 b9 ?? ?? ?? ?? 8d b5 ?? ?? ?? ?? e8 ?? ?? ?? ?? 6a 04 68 f2 7a 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

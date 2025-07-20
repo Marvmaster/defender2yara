@@ -20,6 +20,7 @@ rule Ransom_Win64_Rhysida_MA_2147847825_0
         $x_1_5 = "file_to_crypt size [%ld] bytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win64_Rhysida_YAA_2147852008_0
         $x_1_5 = "vssadmin.exe Delete Shadows /All /Quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_Win64_Rhysida_C_2147852717_0
         $x_1_5 = {54 6f 20 75 74 69 6c 69 7a 65 20 74 68 69 73 20 6b 65 79 2c 20 76 69 73 69 74 20 6f 75 72 20 73 65 63 75 72 65 20 70 6f 72 74 61 6c 3a 20 [0-255] 6f 6e 69 6f 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_MSIL_HiveMon_AAPJ_2147891400_0
         $x_5_1 = {11 0c 72 01 00 00 70 6f ?? 00 00 0a 28 ?? 00 00 06 28 ?? 00 00 0a 28 ?? 00 00 0a 13 0d 11 0c 72 49 00 00 70 72 a1 00 00 70 72 c1 00 00 70 28 ?? 00 00 0a 6f ?? 00 00 0a 28 ?? 00 00 06 28 ?? 00 00 0a 28 ?? 00 00 0a 13 0e 11 0e 28 ?? 00 00 0a 13 0f 11 0f 72 d1 00 00 70 72 a1 00 00 70 72 1b 01 00 70 28 ?? 00 00 0a 6f ?? 00 00 0a 72 1f 01 00 70 72 a1 00 00 70 72 43 01 00 70 28 ?? 00 00 0a 6f ?? 00 00 0a 13 10}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_HiveMon_AAPR_2147891568_0
         $x_1_2 = "FJDCTVWVXEBCOLCTQESFUMHDPNMQKCOTNNHDLVGB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_MSIL_HiveMon_AAPS_2147891575_0
         $x_5_1 = {11 0b 72 01 00 00 70 6f ?? 00 00 0a 28 ?? 00 00 06 28 ?? 00 00 0a 28 ?? 00 00 0a 13 0c 11 0b 72 49 00 00 70 72 91 00 00 70 72 a1 00 00 70 28 ?? 00 00 0a 6f ?? 00 00 0a 28 ?? 00 00 06 28 ?? 00 00 0a 28 ?? 00 00 0a 13 0d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

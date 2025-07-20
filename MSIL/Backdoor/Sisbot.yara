@@ -21,6 +21,7 @@ rule Backdoor_MSIL_Sisbot_A_2147683229_0
         $x_1_7 = "!youtube" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

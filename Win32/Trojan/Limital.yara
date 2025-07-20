@@ -16,6 +16,7 @@ rule Trojan_Win32_Limital_A_2147696569_0
         $x_1_2 = {56 33 c9 8b 45 08 8d 04 48 be ?? ?? 00 00 66 31 30 41 83 f9 32 7c ec 4a 75 e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

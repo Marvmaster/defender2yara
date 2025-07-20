@@ -26,6 +26,7 @@ rule PWS_MSIL_StormKitty_GA_2147777409_0
         $x_1_11 = "MegaDumper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -57,6 +58,7 @@ rule PWS_MSIL_StormKitty_GB_2147819190_0
         $x_1_8 = "setwindowshookex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -88,6 +90,7 @@ rule PWS_MSIL_StormKitty_ABV_2147837015_0
         $x_1_8 = "ZombieHunter$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

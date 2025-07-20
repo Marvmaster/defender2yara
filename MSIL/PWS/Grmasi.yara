@@ -18,6 +18,7 @@ rule PWS_MSIL_Grmasi_YA_2147731263_0
         $x_1_3 = "SbieDLL.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))

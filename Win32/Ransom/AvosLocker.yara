@@ -20,6 +20,7 @@ rule Ransom_Win32_AvosLocker_PAC_2147794682_0
         $x_1_5 = "Disable mutex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win32_AvosLocker_AB_2147794821_0
         $x_1_2 = "Bruteforce SMB for logical drives" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

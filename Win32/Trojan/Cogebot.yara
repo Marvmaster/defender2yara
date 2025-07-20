@@ -19,6 +19,7 @@ rule Trojan_Win32_Cogebot_A_2147647889_0
         $x_1_5 = "!update" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

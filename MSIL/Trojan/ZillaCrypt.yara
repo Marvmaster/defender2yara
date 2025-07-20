@@ -19,6 +19,7 @@ rule Trojan_MSIL_ZillaCrypt_NG_2147926320_0
         $x_1_4 = "TeZFfjD34A7jvG75o6Nq9C9" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_ZillaCrypt_NMA_2147935689_0
         $x_1_3 = {e0 4a 11 08 11 11 17 59 8f c3 00 00 01 e0 4a 61 54 11 0f 11 11 18 59 16}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

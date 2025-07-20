@@ -26,6 +26,7 @@ rule TrojanSpy_MSIL_Hesipy_A_2147717261_0
         $x_1_12 = "7777772E616C657862656E736F6E736869702E636F6D" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

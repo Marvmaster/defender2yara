@@ -18,6 +18,7 @@ rule TrojanSpy_MSIL_Blanajog_A_2147688657_0
         $x_1_4 = {00 57 52 4b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule TrojanSpy_MSIL_Blanajog_A_2147688657_1
         $x_1_9 = "[TAP]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -72,6 +74,7 @@ rule TrojanSpy_MSIL_Blanajog_B_2147688658_0
         $x_1_4 = "getlogs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

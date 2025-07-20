@@ -19,6 +19,7 @@ rule Ransom_Win32_Crilock_A_2147683128_0
         $x_1_5 = "%AMOUNT_USD% USD\\b0  / \\b %AMOUNT_EUR% EUR\\b0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Ransom_Win32_Crilock_A_2147683128_1
         $x_1_7 = "Your important files \\b encryption\\b0  produced on this computer: photos, videos, documents, etc." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Ransom_Win32_Crilock_B_2147683592_0
         $x_1_7 = {75 55 c7 45 f4 00 a4 00 00 b8 00 00 00 01 eb 09 c7 45 f4 10 66 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

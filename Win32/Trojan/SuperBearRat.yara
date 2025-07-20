@@ -16,6 +16,7 @@ rule Trojan_Win32_SuperBearRat_AVKF_2147890053_0
         $x_1_1 = {51 68 00 04 00 00 8b 55 b4 52 8b 45 c0 8b 08 51}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

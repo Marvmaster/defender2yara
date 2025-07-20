@@ -17,6 +17,7 @@ rule Backdoor_Win64_CobaltStrikeLoader_G_2147781898_0
         $x_1_2 = {8a 04 37 0f b6 c0 6a [0-1] 59 2b c8 6b c1 [0-1] 99 f7 fb 8d 04 13 99 f7 fb 88 14 37 47 83 ff [0-1] 72 e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_Win64_CobaltStrikeLoader_ES_2147812348_0
         $x_4_2 = {49 89 c8 48 89 c1 e8 ?? ?? ?? ?? c7 85 ?? ?? ?? ?? ?? ?? ?? ?? 48 8b 95 ?? ?? ?? ?? 48 8d 85 ?? ?? ?? ?? 48 89 44 24 ?? c7 44 24 ?? ?? ?? ?? ?? 41 b9 00 00 00 00 49 89 d0 ba 00 00 00 00 b9 00 00 00 00 48 8b 05 ?? ?? ?? ?? ff d0}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Backdoor_Win64_CobaltStrikeLoader_IP_2147821463_0
         $x_1_7 = "RtlIpv4StringToAddressA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Backdoor_Win64_CobaltStrikeLoader_HCC_2147832103_0
         $x_1_2 = {48 6b d2 0a 48 0f b6 08 48 83 e9 30 48 ff c0 48 01 ca 80 38 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

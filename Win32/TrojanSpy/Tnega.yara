@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Tnega_2147758364_0
         $x_1_3 = {8a 45 b2 30 44 0d b3 41 83 f9 34 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

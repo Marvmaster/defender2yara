@@ -18,6 +18,7 @@ rule Ransom_Win32_Weenloc_A_2147689401_0
         $x_1_4 = "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

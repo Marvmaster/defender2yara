@@ -23,6 +23,7 @@ rule Ransom_Win32_VCrypt_2147725537_0
         $x_2_9 = {64 61 76 69 64 00 2e 64 61 76 69 64 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Ransom_Win32_VCrypt_2147754579_0
         $x_1_5 = {54 6f 75 73 20 76 6f 73 20 66 69 63 68 69 65 72 73 20 6f 6e 74 20 c3 a9 74 c3 a9 73 20 63 68 69 66 66 72 c3 a9 73 20 65 74 20 70 6c 61 63 c3 a9 73 20 64 61 6e 73 20 75 6e 65 20 7a 6f 6e 65 20 64 65 20 73 c3 a9 63 75 72 69 74 c3 a9 2e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

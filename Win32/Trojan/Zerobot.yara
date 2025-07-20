@@ -33,6 +33,7 @@ rule Trojan_Win32_Zerobot_A_2147837585_0
         $x_1_18 = {5a 65 72 6f 53 74 72 65 73 ?? 65 72 20 42 6f 74 6e 65 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

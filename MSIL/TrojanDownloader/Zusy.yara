@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Zusy_CCIG_2147913305_0
         $x_1_1 = {0b 2b 17 02 07 8f ?? 00 00 01 25 49 06 07 06 8e 69 5d 93 61 d1 53 07 17 58 0b 07 02 8e 69 32 e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_MSIL_Zusy_PZMZ_2147939602_0
         $x_1_4 = "GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

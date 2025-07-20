@@ -17,6 +17,7 @@ rule Trojan_Win64_Shellcoderunner_DA_2147921033_0
         $x_1_2 = {48 8d ac 24 00 02 00 00 48 8d 05 ?? ?? ?? ?? 50 55 48 89 e5 48 81 ec 07 00 48 81 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_Shellcoderunner_PGR_2147945224_0
         $x_5_1 = {8b 55 fc 48 8b 45 10 48 01 d0 0f b6 00 0f be c0 8d 50 ec 89 d0 c1 f8 ?? c1 e8 ?? 01 c2 0f b6 d2 29 c2 89 d1 8b 55 fc 48 8b 45 10 48 01 d0 89 ca 88 10 83 45 fc ?? 8b 45 fc 3b 45 18 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

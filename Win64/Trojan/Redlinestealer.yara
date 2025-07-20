@@ -18,6 +18,7 @@ rule Trojan_Win64_Redlinestealer_PGA_2147939516_0
         $x_1_3 = "bitcoincash" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

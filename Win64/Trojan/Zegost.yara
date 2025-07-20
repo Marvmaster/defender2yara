@@ -16,6 +16,7 @@ rule Trojan_Win64_Zegost_SAG_2147929678_0
         $x_1_1 = {e8 f7 04 00 00 48 83 c4 28 e9 09 10 ff ff cc cc 40 53 48 83 ec 20 48 8b d9 33 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

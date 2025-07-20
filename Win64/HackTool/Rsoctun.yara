@@ -17,6 +17,7 @@ rule HackTool_Win64_Rsoctun_GA_2147932199_0
         $x_2_2 = "/root/klpo_reverse_socks-new_logger_settings/cmd/reverse_socks" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

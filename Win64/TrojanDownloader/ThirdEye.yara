@@ -19,6 +19,7 @@ rule TrojanDownloader_Win64_ThirdEye_SK_2147850738_0
         $x_2_4 = "C:\\Users\\Public\\calc.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule TrojanDownloader_Win64_ThirdEye_SL_2147850739_0
         $x_2_3 = "3rd_eye" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

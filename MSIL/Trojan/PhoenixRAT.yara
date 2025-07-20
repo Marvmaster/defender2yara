@@ -18,6 +18,7 @@ rule Trojan_MSIL_PhoenixRAT_A_2147842982_0
         $x_2_3 = "poOTSlK3L0DkDKdhzKCCcQ==" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

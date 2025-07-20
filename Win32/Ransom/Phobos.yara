@@ -15,6 +15,7 @@ rule Ransom_Win32_Phobos_A_2147741436_0
         $x_2_1 = {57 33 c0 89 5d d4 8d 7d d8 ab ab 33 c0 89 5d c4 8d 7d c8 ab ab 33 c0 89 5d b8 8d 7d bc ab 8d b6 ?? ?? ?? ?? 89 5d f0 89 5d f4 89 5d e0 ab}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Ransom_Win32_Phobos_A_2147741436_1
         $x_2_3 = {8d 7d e0 ab ab ab ab 8d ?? ?? 8d ?? ?? 50 8d ?? ?? e8 ?? ?? ?? ?? ff ?? ?? 8b ?? ff ?? ?? 50 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -66,6 +68,7 @@ rule Ransom_Win32_Phobos_V_2147749980_0
         $x_1_6 = "bcdedit /set {default} bootstatuspolicy ignoreallfailures" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Ransom_Win32_Phobos_PA_2147750813_0
         $x_5_4 = {0f b7 48 14 53 55 8b 6c 24 0c 56 0f b7 70 06 66 85 f6 57 8d 7c 01 18 74 29 8b 1d 5c 70 40 00 90 6a ff 55 6a ff 57 6a 01 68 00 08 00 00 81 c6 ff ff 00 00 ff d3 83 f8 02 74 0f}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Ransom_Win32_Phobos_PB_2147750888_0
         $x_1_3 = "netsh firewall set opmode mode=disable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Ransom_Win32_Phobos_PB_2147750888_1
         $x_1_3 = {55 8b ec 51 8b 45 08 89 45 fc 8b 4d 10 8b 55 10 83 ea 01 89 55 10 85 c9 74 1e 8b 45 08 8b 4d 0c 8a 11 88 10 8b 45 08 83 c0 01 89 45 08 8b 4d 0c 83 c1 01 89 4d 0c eb d2 8b 45 fc 8b e5 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Ransom_Win32_Phobos_PC_2147753251_0
         $x_1_4 = "bcdedit /set {default} recoveryenabled no" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -182,6 +189,7 @@ rule Ransom_Win32_Phobos_MK_2147756852_0
         $x_2_2 = {0f b6 0e 33 c8 81 e1 ?? ?? ?? ?? c1 e8 08 33 44 8c 04 83 ea 01 83 c6 01 85 d2 75 e4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -204,6 +212,7 @@ rule Ransom_Win32_Phobos_PD_2147794868_0
         $x_4_2 = {c7 45 cc 00 00 00 00 81 7d cc [0-4] 0f 83 [0-4] 8b 45 ?? 8b 4d ?? 83 e1 ?? 0f be 04 08 8b 4d ?? 0f b6 14 0d [0-4] 31 c2 88 d3 88 1c 0d [0-4] 8b 45 ?? 83 c0 01 89 45 ?? e9}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -226,6 +235,7 @@ rule Ransom_Win32_Phobos_MAK_2147810333_0
         $x_10_2 = {0f b6 11 ff 4c 24 04 33 d0 81 e2 ff 00 00 00 c1 e8 08 33 04 95 00 b0 40 00 41 83 7c 24 04 00 75}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))
@@ -251,6 +261,7 @@ rule Ransom_Win32_Phobos_PAG_2147850995_0
         $x_1_2 = {8d 14 37 d3 ee 8b 4c 24 ?? 8d 44 24 ?? 89 54 24 ?? 89 74 24 1c c7 05 ?? ?? ?? ?? ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 44 24 28 31 44 24 10 81 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +283,7 @@ rule Ransom_Win32_Phobos_MKZ_2147934896_0
         $x_5_1 = {2b 7d 10 8d 58 ff c1 eb 04 43 8b 45 10 8b ce 2b c8 c7 45 ?? 10 00 00 00 8a 14 07 32 10 88 14 01 40 ff 4d fc 75 ?? 83 7d 0c 01 ff 75 08 8b c6 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

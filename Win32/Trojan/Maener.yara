@@ -20,6 +20,7 @@ rule Trojan_Win32_Maener_A_2147688776_0
         $x_5_6 = {68 74 74 70 3a 2f 2f 31 2e [0-16] 2e 7a 38 2e 72 75 2f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((1 of ($x_5_*))) or
@@ -48,6 +49,7 @@ rule Trojan_Win32_Maener_B_2147691522_0
         $x_1_5 = {53 74 6f 70 70 65 72 2d 6d 75 74 65 78 [0-5] 50 47 68 30 62 57 77 3d [0-5] 5c 62 69 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_Maener_MKV_2147920052_0
         $x_4_1 = {8b c1 33 d2 f7 75 ec 41 8a 82 ?? ?? ?? ?? 30 44 31 ff 3b cf 72 ea 83 ec 0c 8d 8d 88 fe ff ff 53 e8}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

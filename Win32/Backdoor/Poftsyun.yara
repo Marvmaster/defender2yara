@@ -24,6 +24,7 @@ rule Backdoor_Win32_Poftsyun_A_2147679394_0
         $x_1_10 = "/dc/launch" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Backdoor_Win32_Poftsyun_B_2147679396_0
         $x_1_8 = "toobu.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

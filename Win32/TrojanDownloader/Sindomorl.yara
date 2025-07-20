@@ -25,6 +25,7 @@ rule TrojanDownloader_Win32_Sindomorl_C_2147705750_0
         $x_1_11 = "139D54ECF54B76892B372B087" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -60,6 +61,7 @@ rule TrojanDownloader_Win32_Sindomorl_D_2147705754_0
         $x_1_11 = "006BFA5C" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*))) or
             ((2 of ($x_4_*))) or

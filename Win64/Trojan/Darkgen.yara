@@ -16,6 +16,7 @@ rule Trojan_Win64_Darkgen_RPY_2147900040_0
         $x_1_1 = {8d 53 71 33 c9 44 8d 4b 04 41 b8 00 30 00 00 ff 55 80 48 89 85 c8 00 00 00 48 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_Darkgen_RPX_2147904646_0
         $x_1_1 = {83 e3 07 c1 e1 06 49 83 c7 04 c1 e3 12 83 e2 3f 09 ca 09 da 89 d1 81 f9 ff ff 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

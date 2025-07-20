@@ -22,6 +22,7 @@ rule Backdoor_Win32_Webdor_AJ_2147603253_0
         $x_1_8 = {8b c0 83 c4 f4 33 d2 89 14 24 c7 44 24 04 04 00 00 00 8d 54 24 08 52 8d 54 24 08 52 8d 54 24 08 52 68 13 00 00 20 8b 40 08 50 e8 ?? ?? ff ff 8b 04 24 83 c4 0c c3 6a 00 6a 00 6a 00 6a 00 68 ?? ?? ?? ?? e8 ?? ?? ff ff a3 ?? ?? ?? ?? 6a 00 68 ?? ?? ?? ?? e8 ?? ?? ff ff c3 43 61 74 61 6c 79 73 74 00 00 00 00 a1 ?? ?? ?? ?? 50 e8 ?? ?? ff ff c3 83 78 04 00 74 0c 83 78 08 00 74 06 80 78 0c 00 75 03 33 c0 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

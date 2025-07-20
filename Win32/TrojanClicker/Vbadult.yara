@@ -20,6 +20,7 @@ rule TrojanClicker_Win32_Vbadult_A_2147625465_0
         $x_1_6 = "WScript.Shell" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

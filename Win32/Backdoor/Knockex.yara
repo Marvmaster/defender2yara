@@ -17,6 +17,7 @@ rule Backdoor_Win32_Knockex_C_2147598254_0
         $x_1_3 = {ff 75 08 5f 57 5e b3 ?? ac 32 c3 aa fe c3 84 c0 75 f6 61 c9 c2 04 00 55 8b ec 60 ff 75 08 5f 8b f7 b3 ?? 66 ad 32 c3 66 ab fe c3 84 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Backdoor_Win32_Knockex_F_2147609519_0
         $x_1_2 = {b2 8b 8b 70 6e 71 77 24 43 6f 75 6d 7e 6b 67 60 2d 5e 7d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Backdoor_Win32_Knockex_G_2147609521_0
         $x_1_3 = {f9 c2 cc c9 d5 c8 c8 9d f8 d6 b2 a4 b5 a2 a8 a9 e6 97 ba a6 ca}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Backdoor_Win32_Knockex_H_2147614390_0
         $x_2_4 = {55 52 4c 44 6f 77 6e 6c 6f 61 64 54 6f 46 69 6c 65 41 00 73 64 61 73 64 61 64 73 61 64 2e 65 78 65 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Aksula_C_2147655397_0
         $x_3_3 = {ff 15 38 a0 40 00 90 90 90 90 39 65 e8 74 0d 68 06 00 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

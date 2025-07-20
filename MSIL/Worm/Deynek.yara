@@ -20,6 +20,7 @@ rule Worm_MSIL_Deynek_A_2147662998_0
         $x_1_6 = "mcagentmcuimgr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Lyzapo_A_2147626614_0
         $x_1_5 = {8d 4d d8 6a 08 51 50 89 5d fc ff d6 8d 45 fc 53 50 8d 45 f8 6a 04 50 ff 75 f0 ff d6 83 7d fc 04 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

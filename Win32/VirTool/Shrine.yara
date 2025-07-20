@@ -18,6 +18,7 @@ rule VirTool_Win32_Shrine_A_2147758089_0
         $x_1_4 = "brimstone/go-shellcode.VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Backdoor_Win32_Rusdonet_A_2147694020_0
         $x_1_5 = {57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 20 00 37 00 00 00 75 00 6e 00 6b 00 6f 00 77 00 6e 00 00 00 00 00 63 00 6d 00 64 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

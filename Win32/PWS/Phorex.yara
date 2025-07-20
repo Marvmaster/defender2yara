@@ -23,6 +23,7 @@ rule PWS_Win32_Phorex_A_2147598871_0
         $x_3_9 = {25 73 5c 63 66 67 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 2 of ($x_1_*))) or
             ((4 of ($x_3_*))) or

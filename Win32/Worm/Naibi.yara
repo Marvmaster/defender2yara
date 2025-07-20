@@ -17,6 +17,7 @@ rule Worm_Win32_Naibi_A_2147711570_0
         $x_1_3 = "Nouveaudossier" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

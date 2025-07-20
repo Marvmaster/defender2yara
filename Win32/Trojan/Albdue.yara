@@ -16,6 +16,7 @@ rule Trojan_Win32_Albdue_A_2147597897_0
         $x_1_2 = {89 5d fc 57 50 e8 ?? ?? 00 00 83 c4 0c 83 ff 05 a3 ?? ?? 00 10 0f 8c ?? ?? 00 00 81 bd ?? ?? ff ff 21 40 23 24 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

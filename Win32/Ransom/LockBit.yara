@@ -19,6 +19,7 @@ rule Ransom_Win32_LockBit_A_2147745590_0
         $x_1_4 = "We will decrypt 1 file for test" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Win32_LockBit_PA_2147748589_0
         $x_1_4 = "Restore-My-Files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Ransom_Win32_LockBit_PA_2147748589_1
         $x_1_13 = "bcdedit /set {default} bootstatuspolicy ignoreallfailures" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Ransom_Win32_LockBit_PA_2147748589_2
         $x_1_6 = "/c vssadmin delete shadows /all /quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -124,6 +128,7 @@ rule Ransom_Win32_LockBit_PB_2147752636_0
         $x_1_2 = ".lockbit" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +152,7 @@ rule Ransom_Win32_LockBit_PB_2147752636_1
         $x_1_3 = "Restore-My-Files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +175,7 @@ rule Ransom_Win32_LockBit_SK_2147756502_0
         $x_2_2 = {85 c0 74 0a 8d 8c 24 ?? ?? ?? ?? 51 ff d0 8d 84 24 ?? ?? ?? ?? c7 84 24 ?? ?? ?? ?? 3c 00 00 00 89 84 24 ?? ?? ?? ?? 8d 44 24 ?? 89 84 24 ?? ?? ?? ?? 8b 44 24 ?? 89 84 24 ?? ?? ?? ?? 8d 84 24 ?? ?? ?? ?? 50 c7 84 24 ?? ?? ?? ?? 00 00 00 00 c7 84 24 ?? ?? ?? ?? 00 00 00 00 c7 84 24 ?? ?? ?? ?? 00 00 00 00 c7 84 24 ?? ?? ?? ?? 00 00 00 00 c7 84 24 ?? ?? ?? ?? 00 00 00 00 ff 15 ?? ?? ?? ?? 68 e8 03 00 00 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +197,7 @@ rule Ransom_Win32_LockBit_AA_2147818734_0
         $x_10_2 = {33 c0 8b 55 0c 8b 75 08 ac 33 c9 b9 30 00 00 00 8d 0c 4d 01 00 00 00 02 f1 2a f1 33 c9 b9 06 00 00 00 8d 0c 4d 01 00 00 00 d3 ca 03 d0 90 85 c0 75 d6}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +219,7 @@ rule Ransom_Win32_LockBit_AB_2147818735_0
         $x_10_2 = {8b 55 0c 8b 75 08 66 ad 90 66 83 f8 41 72 0b 66 83 f8 5a 77 05 66 83 c8 20 90 33 c9 b9 30 00 00 00 8d 0c 4d 01 00 00 00 02 f1 2a f1 33 c9 b9 06 00 00 00 8d 0c 4d 01 00 00 00 d3 ca 03 d0 90 85 c0 75 c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +241,7 @@ rule Ransom_Win32_LockBit_AC_2147818736_0
         $x_10_2 = {8b 4d 08 8b 55 0c ?? 81 31 ?? ?? ?? ?? f7 11 ?? 83 c1 04 4a 75 f1}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -253,6 +263,7 @@ rule Ransom_Win32_LockBit_AD_2147818737_0
         $x_10_2 = {8b 0e 0f b6 d1 0f b6 dd 57 8d bd fc fe ff ff 8a 04 3a 8a 24 3b c1 e9 10 83 c6 04 0f b6 d1 0f b6 cd 8a 1c 3a 8a 3c 39 5f 8a d4 8a f3 c0 e0 02 c0 eb 02 c0 e6 06 c0 e4 04 c0 ea 04 0a fe 0a c2 0a e3 88 07 88 7f 02 88 67 01 ff 4d fc 8d 7f 03 75 af 58}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -274,6 +285,7 @@ rule Ransom_Win32_LockBit_PD_2147829188_0
         $x_1_1 = {8b f9 2b cf 0f b6 16 03 c2 46 03 d8 4f 75 f5 bf ?? ?? ?? ?? 81 f7 ?? ?? ?? ?? 33 d2 f7 f7 52 8b c3 33 d2 f7 f7 8b da 58 85 c9 75 c5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -297,6 +309,7 @@ rule Ransom_Win32_LockBit_PE_2147841512_0
         $x_1_3 = "All your important files are encrypted!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -319,6 +332,7 @@ rule Ransom_Win32_LockBit_ADA_2147845365_0
         $x_100_2 = {fc 9c c9 2d ?? ?? ?? ?? ac d0 41 ?? 1d ?? ?? ?? ?? 55 c9 ce 8d 76 ?? 4e e6 ?? 7b ?? be ?? ?? ?? ?? 8c 5d ?? 43 05}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -341,6 +355,7 @@ rule Ransom_Win32_LockBit_PF_2147846983_0
         $x_1_2 = {83 f0 6c 33 d2 88 44 24 ?? 8a 44 24 ?? 8a 44 14 ?? 8b 4c 24 ?? 02 ca 0f be c0 33 c8 88 4c 14 ?? 42 83 fa 0b 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -364,6 +379,7 @@ rule Ransom_Win32_LockBit_PG_2147900108_0
         $x_1_3 = "LockBit 3.0 the world's fastest and most stable ransomware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -390,6 +406,7 @@ rule Ransom_Win32_LockBit_SA_2147913037_0
         $x_1_7 = "Ransomware.hta" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -416,6 +433,7 @@ rule Ransom_Win32_LockBit_K_2147929342_0
         $n_1_3 = "[%d] Decrypted:" wide //weight: -1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -439,6 +457,7 @@ rule Ransom_Win32_LockBit_AL_2147934827_0
         $x_1_2 = {c7 04 24 10 27 00 00 ff d3 83 ec 04 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

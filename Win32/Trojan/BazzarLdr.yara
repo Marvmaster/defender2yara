@@ -27,6 +27,7 @@ rule Trojan_Win32_BazzarLdr_AA_2147775460_0
         $x_1_12 = {2e 49 4e 49 00 00 00 00 2e 48 4c 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

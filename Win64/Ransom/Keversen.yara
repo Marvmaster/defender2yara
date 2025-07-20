@@ -19,6 +19,7 @@ rule Ransom_Win64_Keversen_PA_2147786699_0
         $x_1_4 = "All your important files have been encrypted!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win64_Keversen_PB_2147787389_0
         $x_3_5 = "How_to_decrypt_files.txt" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

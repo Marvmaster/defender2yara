@@ -21,6 +21,7 @@ rule Trojan_Win32_Nildochi_STB_2147781983_0
         $x_1_7 = ".php?n=%s&c1=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

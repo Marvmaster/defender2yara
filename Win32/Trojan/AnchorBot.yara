@@ -19,6 +19,7 @@ rule Trojan_Win32_AnchorBot_SD_2147766834_0
         $x_1_4 = "where guid? who will do it?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

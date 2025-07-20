@@ -19,6 +19,7 @@ rule Trojan_Linux_BForce_A_2147830790_0
         $x_1_4 = {83 c4 10 85 c0 89 c3 75 63 83 ec 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

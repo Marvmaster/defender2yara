@@ -18,6 +18,7 @@ rule MonitoringTool_MSIL_PCDataManagerBasic_205042_0
         $x_1_4 = "Are you sure you want to uninstall PC Data Manager" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule MonitoringTool_MSIL_PCDataManagerBasic_205042_1
         $x_1_3 = "Please find the Keystrokes Activities Log recorded and created by DRPU PC Management" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

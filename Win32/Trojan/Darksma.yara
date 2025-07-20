@@ -40,6 +40,7 @@ rule Trojan_Win32_Darksma_C_2147576893_0
         $x_5_26 = {8d 45 fc 50 ff 75 ?? ff 75 ?? ?? ff 15 38 20 40 00 ?? ff 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((24 of ($x_1_*))) or
             ((1 of ($x_5_*) and 19 of ($x_1_*))) or

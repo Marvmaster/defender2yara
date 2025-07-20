@@ -23,6 +23,7 @@ rule Trojan_Win32_Hijacker_RPY_2147847560_0
         $x_1_8 = "ResumeThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Hijacker_ARA_2147925941_0
         $x_2_1 = {8a 17 80 ea 41 8a 4f 01 80 e9 41 c1 e1 04 02 d1 88 10 80 ea 17 80 f2 17 80 c2 17 88 10 40 83 c7 02 4e 75 dc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

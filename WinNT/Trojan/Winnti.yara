@@ -18,6 +18,7 @@ rule Trojan_WinNT_Winnti_C_2147711358_0
         $x_1_3 = {56 ff d3 33 c9 8d be 00 04 00 00 83 c4 0c 66 89 8e fe 01 00 00 85 ff 74 19}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

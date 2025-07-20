@@ -22,6 +22,7 @@ rule Worm_Win32_Bokill_C_2147693168_0
         $x_1_8 = "usbspread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Worm_Win32_Bokill_D_2147697808_0
         $x_1_6 = {53 65 6e 64 6d 65 73 73 61 67 65 53 70 72 65 61 64 46 61 63 65 62 6f 6f 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

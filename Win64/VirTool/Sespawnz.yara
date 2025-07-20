@@ -17,6 +17,7 @@ rule VirTool_Win64_Sespawnz_A_2147849840_0
         $x_1_2 = {48 8b 8d e0 00 00 00 48 89 4c 24 28 48 8b 8d d8 00 00 00 48 89 4c 24 20 41 b9 00 00 00 00 48 89 c1 48 8b 05 de c8 00 00 ff ?? 89 85 98 00 00 00 83 bd 98 00 00 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

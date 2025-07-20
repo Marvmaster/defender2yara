@@ -19,6 +19,7 @@ rule Backdoor_Win32_Tackbit_B_2147722846_0
         $x_1_4 = {00 4b 65 79 4c 6f 67 67 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -19,6 +19,7 @@ rule VirTool_Win64_Hidesz_A_2147849229_0
         $x_1_4 = {48 89 fa 48 89 c6 49 8b 06 48 89 f1 ff ?? ?? ?? ?? ?? 49 8b 06 48 8b 54 24 68 48 89 f9 ff ?? ?? ?? ?? ?? 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

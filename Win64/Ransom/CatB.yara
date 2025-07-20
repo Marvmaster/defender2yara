@@ -20,6 +20,7 @@ rule Ransom_Win64_CatB_A_2147838371_0
         $x_1_5 = "catB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win64_CatB_AD_2147838913_0
         $x_1_4 = {41 8b c8 48 c1 e9 ?? 83 e1 ?? c1 e0 ?? 48 03 d1 42 0f b6 0c 1a 41 8b d0 c1 e1 ?? 03 c1 48 c1 ea ?? 41 8b c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Alobtoe_A_2147626877_0
         $x_1_2 = {3d 40 00 00 00 83 c4 28 68 ?? ?? 40 00 e8 c3 03 00 00 a3 ?? ?? 40 00 90 90 90}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

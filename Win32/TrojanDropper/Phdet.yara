@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Phdet_A_2147644476_0
         $x_1_3 = {5f 00 44 00 45 00 4c 00 00 00 00 00 45 00 72 00 72 00 6f 00 72 00 43 00 6f 00 6e 00 74 00 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

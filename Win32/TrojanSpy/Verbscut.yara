@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Verbscut_A_2147682225_0
         $x_5_5 = "URL ...: %s" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

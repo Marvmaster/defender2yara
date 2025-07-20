@@ -18,6 +18,7 @@ rule VirTool_Win32_Tinmetz_A_2147782218_0
         $x_1_3 = {8b 40 0c 53 8b 00 8b 00 a3 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 83 c4 04 50 ff 15 ?? ?? ?? ?? 8b ?? ?? ?? ?? ?? 6a 00 89 4c 24 18 b9 02 00 00 00 6a 01 51 66 a3 ?? ?? ?? ?? 66 89 4c 24 1c 66 89 44 24 1e ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule VirTool_Win32_Tinmetz_C_2147782826_0
         $x_1_3 = {41 b8 00 00 00 00 ba 01 00 00 00 b9 02 00 00 00 48 8b 05 ?? ?? ?? ?? ff d0 48 89 85 ?? ?? ?? ?? 48 83 bd 01 ff [0-32] 48 8d 45 ?? 48 8b 8d 01 41 b8 10 00 00 00 48 89 c2 48 8b 05 ?? ?? ?? ?? ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

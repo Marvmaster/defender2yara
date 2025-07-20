@@ -17,6 +17,7 @@ rule PWS_Win32_Fifesock_A_2147644584_0
         $x_1_2 = {6a 40 68 00 30 00 00 ?? ?? 05 ?? 6a 00 ff 15 [0-12] 51 50 89 86 ?? 00 00 00 e8 ?? ?? ?? ?? 8b ?? ?? 00 00 00 [0-3] c6 ?? ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

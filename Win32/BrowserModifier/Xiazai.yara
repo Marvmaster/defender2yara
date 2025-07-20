@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Xiazai_223573_0
         $x_1_4 = "$\\wininit.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

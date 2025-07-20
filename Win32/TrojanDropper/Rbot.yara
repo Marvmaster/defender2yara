@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Rbot_A_2147624079_0
         $x_1_2 = {72 42 6f 74 4c 6f 63 61 6c 2e 65 78 65 00 4d 5a 90 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule Spammer_Win32_Newacc_A_2147601259_0
         $x_5_10 = "lamodano.info" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 4 of ($x_5_*))) or
             ((4 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -57,6 +58,7 @@ rule Spammer_Win32_Newacc_A_2147605730_0
         $x_1_8 = {00 70 66 66 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or

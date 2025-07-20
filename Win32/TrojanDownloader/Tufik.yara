@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Tufik_A_2147616984_0
         $x_1_4 = "IEHlprObj.IEHlprObj.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

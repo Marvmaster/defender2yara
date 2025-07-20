@@ -20,6 +20,7 @@ rule Trojan_Win32_Savit_A_2147654039_0
         $x_1_6 = {55 66 53 65 41 67 6e 74 2e 65 78 65 ?? ?? ?? ?? 50 63 53 63 6e 53 72 76 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Savit_B_2147657041_0
         $x_1_4 = "IPV4.bak" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

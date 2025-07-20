@@ -16,6 +16,7 @@ rule Virus_Win32_Geksone_EC_2147903827_0
         $x_5_1 = {60 9c e8 00 00 00 00 5d 81 ed 07 10 40 00 8d b5 5a 10 40 00 56 68 2c 01 00 00 ff b5 56 10 40 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

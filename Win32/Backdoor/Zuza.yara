@@ -17,6 +17,7 @@ rule Backdoor_Win32_Zuza_2147633108_0
         $x_1_3 = "mscmos.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

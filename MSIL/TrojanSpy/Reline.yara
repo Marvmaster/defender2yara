@@ -16,6 +16,7 @@ rule TrojanSpy_MSIL_Reline_SK_2147946127_0
         $x_2_1 = {06 3a 06 00 00 00 28 13 00 00 06 0a 06 39 0a 00 00 00 06 16 06 8e 69 28 04 00 00 0a dd 13 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

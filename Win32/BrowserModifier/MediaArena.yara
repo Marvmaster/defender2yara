@@ -17,6 +17,7 @@ rule BrowserModifier_Win32_MediaArena_362962_0
         $x_1_3 = "get_StatsUrl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule BrowserModifier_Win32_MediaArena_362962_1
         $x_1_4 = "offerWindow" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

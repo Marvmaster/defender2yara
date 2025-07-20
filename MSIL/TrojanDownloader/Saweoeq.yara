@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_Saweoeq_A_2147705945_0
         $x_2_3 = {3a 00 2f 00 2f 00 73 00 34 00 76 00 65 00 2e 00 72 00 75 00 2f 00 64 00 6f 00 77 00 6e 00 6c 00 6f 00 61 00 64 00 65 00 72 00 2f 00 73 00 34 00 76 00 65 00 5f 00 61 00 64 00 73 00 ?? ?? 2e 00 65 00 78 00 65 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

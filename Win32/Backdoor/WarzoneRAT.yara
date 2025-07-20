@@ -16,6 +16,7 @@ rule Backdoor_Win32_WarzoneRAT_GA_2147771682_0
         $x_10_1 = "\\W7H64\\source\\repos\\Ring3 CRAT x64\\Ring3 CRAT x64\\nope.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Backdoor_Win32_WarzoneRAT_GA_2147771682_1
         $x_1_10 = "AVE_MARIA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Backdoor_Win32_WarzoneRAT_GB_2147777445_0
         $x_1_10 = "AVE_MARIA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

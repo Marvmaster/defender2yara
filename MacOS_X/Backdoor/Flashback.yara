@@ -19,6 +19,7 @@ rule Backdoor_MacOS_X_Flashback_A_2147649885_0
         $x_5_5 = {48 8d 34 cd 00 00 00 00 48 b8 ab aa aa aa aa aa aa aa 48 f7 e6 48 89 d1 48 c1 e9 02 48 8d 04 49 48 01 c0 48 29 c6 48 83 fe 02}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or
@@ -46,6 +47,7 @@ rule Backdoor_MacOS_X_Flashback_B_2147650487_0
         $x_3_4 = {8b 85 14 fa ff ff c1 e8 02 ba 15 02 4d 21 f7 e2 c1 ea 04 85 d2 75 0f 89 1c 24 e8 4a 38 00 00 31 ff e9 22 04 00 00 8d 7a ff 69 c2 ec 01 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -75,6 +77,7 @@ rule Backdoor_MacOS_X_Flashback_C_2147650677_0
         $x_2_6 = {44 89 ea 32 14 03 0f be f2 4c 89 e7 e8 ?? ?? 00 00 48 ff c3 49 8b 06 48 3b 58 e8 72 e3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -105,6 +108,7 @@ rule Backdoor_MacOS_X_Flashback_E_2147654559_0
         $x_10_7 = "6649234;8575343" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -135,6 +139,7 @@ rule Backdoor_MacOS_X_Flashback_E_2147654559_1
         $x_1_8 = {d0 e3 e4 e6 ee d6 00 d0 f8 ee e7 ed d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (7 of ($x*))
 }
 
@@ -161,6 +166,7 @@ rule Backdoor_MacOS_X_Flashback_F_2147655165_0
         $x_6_7 = {f7 d0 21 c2 81 ?? 80 80 80 80 74 ?? 89 ?? c1 e8 10 f7 c2 80 80 00 00 0f 44}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((2 of ($x_6_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -191,6 +197,7 @@ rule Backdoor_MacOS_X_Flashback_G_2147655166_0
         $x_5_8 = {f7 d0 21 c2 81 ?? 80 80 80 80 74 ?? 89 ?? c1 e8 10 f7 c2 80 80 00 00 0f 44}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((3 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -220,6 +227,7 @@ rule Backdoor_MacOS_X_Flashback_G_2147655769_0
         $x_1_6 = {89 c8 ba 08 00 00 00 a8 01 74 [0-2] d1 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -245,6 +253,7 @@ rule Backdoor_MacOS_X_Flashback_H_2147656047_0
         $x_1_6 = {89 c8 ba 08 00 00 00 a8 01 74 [0-2] d1 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -269,6 +278,7 @@ rule Backdoor_MacOS_X_Flashback_E_2147656481_0
         $x_1_4 = {01 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 31 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

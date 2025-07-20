@@ -27,6 +27,7 @@ rule MonitoringTool_Win32_NetSpyKeylogger_9027_0
         $x_1_13 = {53 65 74 4f 70 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

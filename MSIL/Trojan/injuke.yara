@@ -16,6 +16,7 @@ rule Trojan_MSIL_injuke_NEAA_2147836324_0
         $x_10_1 = {28 17 00 00 06 20 e4 1d 29 81 20 47 c7 f9 e2 61 7e be 00 00 04 7b 34 01 00 04 61 28 48 00 00 06 6f 26 00 00 0a 13 09 20 00 00 00 00 7e 75 00 00 04 7b 11 00 00 04}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

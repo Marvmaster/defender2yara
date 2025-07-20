@@ -18,6 +18,7 @@ rule Worm_Win64_Boychi_A_2147661345_0
         $x_2_3 = {66 f2 af 49 8b d0 48 f7 d1 48 ff c9 0f b7 c1 66 03 c0 66 89 44 24 30}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

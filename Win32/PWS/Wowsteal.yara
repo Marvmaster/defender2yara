@@ -129,6 +129,7 @@ rule PWS_Win32_Wowsteal_A_2147572245_0
         $n_150_114 = "ScrapeBox is accessing" ascii //weight: -150
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((12 of ($x_1_*))) or
@@ -213,6 +214,7 @@ rule PWS_Win32_Wowsteal_S_2147584525_0
         $x_1_6 = "Accept-Language: zh-cn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -238,6 +240,7 @@ rule PWS_Win32_Wowsteal_T_2147584526_0
         $x_1_6 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -265,6 +268,7 @@ rule PWS_Win32_Wowsteal_U_2147584527_0
         $x_1_8 = "realmlist.wtf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -295,6 +299,7 @@ rule PWS_Win32_Wowsteal_V_2147584628_0
         $x_1_8 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -335,6 +340,7 @@ rule PWS_Win32_Wowsteal_W_2147593186_0
         $x_1_21 = "Accept-Language: zh-cn" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -361,6 +367,7 @@ rule PWS_Win32_Wowsteal_XQ_2147596916_0
         $x_1_7 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -393,6 +400,7 @@ rule PWS_Win32_Wowsteal_ZA_2147596930_0
         $x_1_13 = "CallNextHookEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -422,6 +430,7 @@ rule PWS_Win32_Wowsteal_ZB_2147596931_0
         $x_10_10 = {8d 4d cc 8d 55 e8 b0 6c b3 64 51 52 c6 45 e8 75 c6 45 e9 72 88 45 ea c6 45 eb 6d c6 45 ee 2e 88 5d ef 88 45 f0 88 45 f1 c6 45 f2 00 c6 45 cc 55 c6 45 cd 52 c6 45 ce 4c c6 45 cf 44 c6 45 d1 77 88 45 d3 88 5d d6 c6 45 d7 54 c6 45 d9 43 c6 45 db 63 c6 45 dc 68 c6 45 de 46 c6 45 df 69 88 45 e0 c6 45 e2 41 c6 45 e3 00 ff 15 70 60 00 25 50 ff 15 74 60 00 25}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -445,6 +454,7 @@ rule PWS_Win32_Wowsteal_ZE_2147597228_0
         $x_10_4 = "This prokkki must be run under Win32" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -472,6 +482,7 @@ rule PWS_Win32_Wowsteal_ZF_2147602195_0
         $x_1_8 = "SE_DEBUG_NAME" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -500,6 +511,7 @@ rule PWS_Win32_Wowsteal_ZG_2147606906_0
         $x_1_6 = "TCnMethodHook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -534,6 +546,7 @@ rule PWS_Win32_Wowsteal_J_2147609311_0
         $x_1_11 = "FFXIService.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -564,6 +577,7 @@ rule PWS_Win32_Wowsteal_B_2147609620_0
         $x_1_7 = "LovEf3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -614,6 +628,7 @@ rule PWS_Win32_Wowsteal_AA_2147609942_0
         $x_1_28 = "HOMEPATH" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 23 of ($x_1_*))) or
             (all of ($x*))
@@ -645,6 +660,7 @@ rule PWS_Win32_Wowsteal_C_2147610035_0
         $x_1_8 = {33 db c7 45 e4 54 41 32 45 c7 45 e8 64 69 74 00 89 5d ec c7 45 d4 54 46 72 6d c7 45 d8 4c 6f 67 4f c7 45 dc 6e 00 00 00 89 5d e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -670,6 +686,7 @@ rule PWS_Win32_Wowsteal_Z_2147611486_0
         $x_1_3 = {8a 0c 10 80 c1 88 80 f1 77 80 e9 88 8b 1d 08 a1 40 00 88 0c 13 42 81 fa 22 02 00 00 75 e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -702,6 +719,7 @@ rule PWS_Win32_Wowsteal_AB_2147612385_0
         $x_1_10 = "grunt.wowchina.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -732,6 +750,7 @@ rule PWS_Win32_Wowsteal_ZI_2147614419_0
         $x_6_8 = {ff 53 56 e8 ?? ?? ff ff 53 e8 ?? ?? ff ff c6 44 06 ?? 44 53 e8 ?? ?? ff ff c6 44 06 ?? 69 53 e8 ?? ?? ff ff c6 44 06 ?? 76 53 e8 ?? ?? ff ff c6 44 06 ?? 78 53 e8 ?? ?? ff ff c6 44 06 ?? 44 53 e8 ?? ?? ff ff c6 44 06 ?? 65 53 e8 ?? ?? ff ff c6 44 06 ?? 63 53 e8 ?? ?? ff ff c6 44 06 ?? 6f 53 e8 ?? ?? ff ff c6 44 06 ?? 64 53 e8 ?? ?? ff ff c6 44 06 ?? 65 53 e8 ?? ?? ff ff c6 44 06 ?? 72 53 e8 ?? ?? ff ff c6 44 06 ?? 2e 53 e8 ?? ?? ff ff c6 44 06 ?? 64 53 e8 ?? ?? ff ff c6 44 06 ?? 6c 53 e8 ?? ?? ff ff c6 44 06 ?? 6c}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_6_*) and 2 of ($x_1_*))) or
@@ -767,6 +786,7 @@ rule PWS_Win32_Wowsteal_AE_2147615997_0
         $x_1_7 = "logon.worldofwarcraft.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -802,6 +822,7 @@ rule PWS_Win32_Wowsteal_AK_2147618725_0
         $x_1_7 = "[accountName:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -829,6 +850,7 @@ rule PWS_Win32_Wowsteal_AL_2147621654_0
         $x_1_5 = "/loginip.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -854,6 +876,7 @@ rule PWS_Win32_Wowsteal_D_2147622473_0
         $x_1_5 = ".worldofwarcraft.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -881,6 +904,7 @@ rule PWS_Win32_Wowsteal_AM_2147622701_0
         $x_2_4 = {81 fe 96 00 00 00 7e 35 81 fe e8 03 00 00 7d 2d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -906,6 +930,7 @@ rule PWS_Win32_Wowsteal_AO_2147622808_0
         $x_1_3 = {73 75 62 6d 69 74 00 00 70 61 73 73 77 6f 72 64 00 00 00 00 57 6f 57 2e 63 6f 6d 20 41 63 63 6f 75 6e 74 2f 50 61 73 73 77 6f 72 64 20 52 65 74 72 69 65 76 61 6c 00 00 65 6d 61 69 6c 00 00 00 61 63 63 6f 75 6e 74 4e 61 6d 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -935,6 +960,7 @@ rule PWS_Win32_Wowsteal_AO_2147622808_1
         $x_1_10 = "%s?us=%s&ps=%s&lv=%s&se=%s&qu=%s&os=%s&mo=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -965,6 +991,7 @@ rule PWS_Win32_Wowsteal_AQ_2147624743_0
         $x_3_7 = {51 51 68 e2 12 61 00 56 89 4c 24}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -994,6 +1021,7 @@ rule PWS_Win32_Wowsteal_AR_2147625250_0
         $x_1_5 = "RegSetValueEx(start)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1021,6 +1049,7 @@ rule PWS_Win32_Wowsteal_AO_2147625295_0
         $x_2_4 = {33 db b0 90 68 00 a0 57 00 c6 44 24 10 e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))
@@ -1047,6 +1076,7 @@ rule PWS_Win32_Wowsteal_AS_2147625932_0
         $x_1_4 = {26 75 3d 25 73 26 70 3d 25 73 26 73 70 3d 25 73 26 6d 62 3d 25 73 26 72 3d 25 73 26 6c 3d 25 64 26 6d 3d 25 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1072,6 +1102,7 @@ rule PWS_Win32_Wowsteal_E_2147627450_0
         $x_5_5 = {53 50 36 00 57 49 4e 4e 54 00 00 00 57 49 4e 32 30 30 30 00 57 49 4e 58 50 00 00 00 57 49 4e 32 30 30 33 00 58 50 5f 50 72 6f 66 65 73 73 69 6f 6e 61 6c 5f 78 36 34 5f 45 64 69 74 69 6f 6e 20 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -1098,6 +1129,7 @@ rule PWS_Win32_Wowsteal_UV_2147631309_0
         $x_2_4 = {6b 61 2e 69 6e 69 [0-5] 71 72 77 6f 77}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or
             ((2 of ($x_4_*))) or
@@ -1125,6 +1157,7 @@ rule PWS_Win32_Wowsteal_AV_2147631845_0
         $x_2_4 = "daerhtetomeretaerc" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1154,6 +1187,7 @@ rule PWS_Win32_Wowsteal_AX_2147641107_0
         $x_1_6 = ":65151/djbzcd/i.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -1181,6 +1215,7 @@ rule PWS_Win32_Wowsteal_AY_2147641418_0
         $x_1_3 = {6a 05 50 68 ?? ?? 40 00 ff 75 08 ff ?? 8d 45 ?? c6 45 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1208,6 +1243,7 @@ rule PWS_Win32_Wowsteal_BC_2147655164_0
         $x_1_8 = "%s?f1=getpos&f2=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or

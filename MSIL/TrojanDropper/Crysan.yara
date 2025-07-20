@@ -16,6 +16,7 @@ rule TrojanDropper_MSIL_Crysan_AAT_2147923699_0
         $x_5_1 = {11 05 15 28 ?? ?? ?? 06 26 11 06 20 ?? ?? ?? ?? 5a 20 ?? ?? ?? ?? 61 38}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_MSIL_ReviL_DA_2147773260_0
         $x_1_4 = "Win32_ShadowCopy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

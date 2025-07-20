@@ -21,6 +21,7 @@ rule Trojan_MSIL_Vimditator_IF_2147797662_0
         $x_1_6 = "ProcessInformationClass" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_MSIL_Vimditator_AVM_2147841225_0
         $x_1_3 = "This assembly is protected by an unregistered version of IntelliLock" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_MSIL_Vimditator_SL_2147921711_0
         $x_2_1 = {06 72 ad 00 00 70 6f 2a 00 00 0a 10 00 dd 0d 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_MSIL_Vimditator_SL_2147921711_1
         $x_2_1 = {16 2d 0b 2b 0b 72 61 00 00 70 2b 07 2b 0c de 1a 07 2b f2 6f 1f 00 00 0a 2b f2 0a 2b f1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_MSIL_Vimditator_AWWA_2147944050_0
         $x_2_3 = {03 08 02 03 08 91 08 04 28 ?? ?? 00 06 9c 08 17 d6 0c 08 07 31 ea}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

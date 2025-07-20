@@ -21,6 +21,7 @@ rule Ransom_Win32_SiennaBlue_A_2147826196_0
         $x_1_6 = "adm-karsair" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -55,6 +56,7 @@ rule Ransom_Win32_SiennaBlue_B_2147826198_0
         $x_1_9 = "H0lyGh0stWebsite" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

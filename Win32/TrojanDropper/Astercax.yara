@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Astercax_A_2147599461_0
         $x_1_1 = {83 e8 4f 0f 80 a6 04 00 00 50 8d 47 50 50 6a 28 ff 15 ?? ?? 40 00 6a 01 6a 01 ff 15 ?? ?? 40 00 83 e8 27 0f 80 86 04 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -35,6 +36,7 @@ rule TrojanDropper_Win32_Astercax_B_2147624119_0
         $x_1_1 = {83 e8 4f 0f 80 ec 05 00 00 50 8d 47 3c 50 6a 28 ff 15 ?? ?? 40 00 6a 01 6a 01 ff 15 ?? ?? 40 00 83 e8 27 0f 80 cc 05 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

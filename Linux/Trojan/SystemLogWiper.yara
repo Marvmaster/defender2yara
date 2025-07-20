@@ -41,6 +41,7 @@ rule Trojan_Linux_SystemLogWiper_HA_2147836757_0
         $x_20_27 = "%s <username> <fixthings>" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_18_*) and 1 of ($x_2_*))) or
             ((2 of ($x_18_*))) or

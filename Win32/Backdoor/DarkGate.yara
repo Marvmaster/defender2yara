@@ -17,6 +17,7 @@ rule Backdoor_Win32_DarkGate_FF_2147893677_0
         $x_1_2 = "DebugConnectWide" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

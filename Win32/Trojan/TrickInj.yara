@@ -20,6 +20,7 @@ rule Trojan_Win32_TrickInj_A_2147752998_0
         $x_1_5 = "inj_32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_TrickInj_B_2147766713_0
         $x_1_7 = {84 c0 75 ec 81 f6 34 70 00 10 81 fe 5f b8 ec 0e 74 25 81 fe 7b f8 87 0f 74 19 81 fe a5 50 5a c3 74 0d 33 c0 81 fe 8f 22 34 ea 0f 94 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

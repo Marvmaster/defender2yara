@@ -18,6 +18,7 @@ rule Trojan_MSIL_BagliWiper_A_2147778678_0
         $x_1_4 = "qdim olunan bitkoin adresin" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

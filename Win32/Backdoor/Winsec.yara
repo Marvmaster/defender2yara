@@ -19,6 +19,7 @@ rule Backdoor_Win32_Winsec_A_2147706524_0
         $x_2_4 = {9f 98 c6 b8 fc 20 24 cf 91 a7 73 01 d5 66 d3 31}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -48,6 +49,7 @@ rule Backdoor_Win32_Winsec_B_2147706525_0
         $x_1_5 = {52 65 2e 2e 67 44 65 6c 2e 65 74 65 56 61 2e 20 6c 75 65 57 20 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -84,6 +86,7 @@ rule Backdoor_Win32_Winsec_C_2147707752_0
         $x_1_13 = "2YqcvZO70lewYgO3w7CYiiKO" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

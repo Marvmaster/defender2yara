@@ -16,6 +16,7 @@ rule Trojan_Win64_Druid_DA_2147926690_0
         $x_1_1 = {48 8b 4c 24 08 48 3b c1 73 ?? 48 63 04 24 48 8b 4c 24 30 0f be 04 01 0f be 0d ?? ?? ?? ?? 33 c1 48 63 0c 24 48 8b 54 24 30 88 04 0a eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

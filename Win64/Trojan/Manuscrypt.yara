@@ -18,6 +18,7 @@ rule Trojan_Win64_Manuscrypt_RI_2147836569_0
         $x_1_3 = {48 8b cb 41 f7 e3 44 2b da b8 05 41 10 04 41 d1 eb 44 03 da 41 c1 eb 09 41 f7 e3 44 2b da 41 d1 eb 44 03 da ba 3c 00 00 00 41 c1 eb 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

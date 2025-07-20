@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_PoisonIvy_A_2147831484_0
         $x_2_1 = {07 09 9a 6f ?? 00 00 0a 28 ?? 00 00 0a 13 04 08 09 11 04 9c 00 09 17 58 0d 09 07 8e 69 fe}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

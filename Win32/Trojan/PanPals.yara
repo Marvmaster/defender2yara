@@ -19,6 +19,7 @@ rule Trojan_Win32_PanPals_2147811718_0
         $x_5_3 = {6a 04 68 00 30 00 00 8b 55 ?? 8b 02 05 c0 0d 00 00 50 6a 00 ff ?? ?? ?? ?? ?? 89 45 ?? 8b 4d ?? 81 c1 a0 0b 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

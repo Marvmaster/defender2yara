@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Kimsuk_A_2147683168_0
         $x_1_2 = {5b 52 4d 4f 55 53 45 5d 00 [0-4] 5b 4c 4d 4f 55 53 45 5d 00 [0-4] 5b 44 57 4e 5d 00 [0-4] 5b 55 50 5d 00 [0-91] 4c 54 5d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Backdoor_Win32_R2d2_A_2147650308_0
         $x_1_5 = "\\\\.\\KeyboardClassC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Backdoor_Win32_R2d2_A_2147650308_1
         $x_1_6 = "yahoomessenger.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

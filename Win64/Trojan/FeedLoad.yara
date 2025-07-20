@@ -16,6 +16,7 @@ rule Trojan_Win64_FeedLoad_A_2147893102_0
         $x_100_1 = {85 c0 0f 88 ?? ?? ?? ?? c7 ?? ?? ?? ef cd ab 89 c7 ?? ?? ?? 67 45 23 01 83 fd 08}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

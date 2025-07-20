@@ -19,6 +19,7 @@ rule Trojan_Win64_Dirthy_YAB_2147922429_0
         $x_1_4 = "code/rustc/3f5fd8dd41153bc5fdca9427e9e05be2c767ba23\\library\\std\\src\\io\\error\\repr_bitpacked.rs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Backdoor_Win32_Doftenlo_A_2147624919_0
         $x_1_4 = {25 73 20 28 55 70 74 69 6d 65 3a 20 25 64 64 29 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

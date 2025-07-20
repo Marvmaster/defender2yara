@@ -17,6 +17,7 @@ rule Spammer_MSIL_Yabam_A_2147637668_0
         $x_1_3 = "{TB_MSGID}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

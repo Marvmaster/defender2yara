@@ -20,6 +20,7 @@ rule Ransom_Win32_Kattisrypt_A_2147721670_0
         $x_1_6 = {5b 57 41 49 54 44 41 54 45 5d ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 5b 2f 54 41 53 4b 4e 41}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

@@ -21,6 +21,7 @@ rule Trojan_Win32_Covically_A_2147764132_0
         $x_1_6 = "function bdec($in){$out" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

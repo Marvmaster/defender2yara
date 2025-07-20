@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Gaxfid_A_2147661393_0
         $x_5_4 = "%c:\\Program Files\\%d.jpg" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

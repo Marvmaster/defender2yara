@@ -21,6 +21,7 @@ rule Trojan_MSIL_Blustealer_MA_2147834236_0
         $x_1_6 = "GetDomain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -52,6 +53,7 @@ rule Trojan_MSIL_Blustealer_MB_2147834237_0
         $x_1_6 = "GetDomain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -78,6 +80,7 @@ rule Trojan_MSIL_Blustealer_ABL_2147850638_0
         $x_1_1 = {0c 2b 31 02 08 91 0d 08 1f 0e 5d 13 04 03 11 04 9a 13 05 02 08 11 05 09 28 ?? ?? ?? 06 9c 08 04 fe 01 13 06 11 06 2c 07 28 ?? ?? ?? 0a 0a 00 00 08 17 d6 0c 08 07 31 cb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

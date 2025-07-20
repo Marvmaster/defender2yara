@@ -23,6 +23,7 @@ rule Trojan_Win64_T1098_AccountManipulation_A_2147846083_0
         $x_10_9 = "lsadump::zerologon" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

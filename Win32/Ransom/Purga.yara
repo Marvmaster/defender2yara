@@ -19,6 +19,7 @@ rule Ransom_Win32_Purga_DA_2147773312_0
         $x_1_4 = "bootstatuspolicy ignoreallfailures" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

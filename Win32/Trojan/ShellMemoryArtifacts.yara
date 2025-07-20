@@ -64,6 +64,7 @@ rule Trojan_Win32_ShellMemoryArtifacts_A_2147765692_0
         $x_10_50 = {4d 31 ff 49 f7 e7 65 4c 8b 08 01 01 01 01 01 01 01 01 40 48 50 58 60 68 70 78 60}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

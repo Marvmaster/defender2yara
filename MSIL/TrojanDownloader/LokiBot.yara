@@ -19,6 +19,7 @@ rule TrojanDownloader_MSIL_LokiBot_EV_2147818326_0
         $x_1_4 = "WebRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_MSIL_LokiBot_EW_2147818604_0
         $x_1_5 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule TrojanDownloader_MSIL_LokiBot_EX_2147818648_0
         $x_1_5 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule TrojanDownloader_MSIL_LokiBot_EY_2147819572_0
         $x_1_5 = "WebClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -122,6 +126,7 @@ rule TrojanDownloader_MSIL_LokiBot_EZ_2147819573_0
         $x_1_5 = "WebRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -154,6 +159,7 @@ rule TrojanDownloader_MSIL_LokiBot_C_2147829376_0
         $x_1_9 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +181,7 @@ rule TrojanDownloader_MSIL_LokiBot_RDC_2147833132_0
         $x_2_1 = {08 09 07 09 07 8e 69 5d 91 02 09 91 61 d2 6f ?? ?? ?? 0a 09 17 58 0d 09 02 8e 69}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +203,7 @@ rule TrojanDownloader_MSIL_LokiBot_CCHD_2147901427_0
         $x_1_1 = {0b 16 0c 38 ?? 00 00 00 06 28 ?? 00 00 0a 12 02 28 ?? 00 00 0a 6f ?? 00 00 0a 6f ?? 00 00 0a 28 ?? 00 00 0a 07 28 ?? 00 00 0a 39}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

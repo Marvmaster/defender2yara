@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Fobansug_A_2147706845_0
         $x_1_6 = "43DE1CD1021BC57AB550F63E" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

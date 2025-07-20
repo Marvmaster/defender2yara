@@ -16,6 +16,7 @@ rule Trojan_MSIL_Scar_EHH_2147941736_0
         $x_2_1 = {14 11 06 11 07 ?? ?? ?? ?? ?? 26 09 17 58 0d 11 07 17 58 13 07 11 07 11 06 ?? ?? ?? ?? ?? 32 e1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

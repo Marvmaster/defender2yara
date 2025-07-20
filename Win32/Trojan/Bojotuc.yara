@@ -19,6 +19,7 @@ rule Trojan_Win32_Bojotuc_A_2147632741_0
         $x_1_5 = {53 56 57 b0 ?? b1 ?? b2 ?? 8b 7c 24 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -26,6 +26,7 @@ rule Trojan_Win32_Opalcot_A_2147575008_0
         $x_1_12 = "KeServiceDescriptorTable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 7 of ($x_1_*))) or
             ((4 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -59,6 +60,7 @@ rule Trojan_Win32_Opalcot_2147575009_0
         $x_1_9 = {83 7d fc 08 72 21 8b 45 f4 8b 48 04 51 8b 55 f4 8b 02 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or

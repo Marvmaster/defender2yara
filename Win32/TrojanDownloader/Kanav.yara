@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Kanav_B_2147680331_0
         $x_1_4 = "\\AYLaunch.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_Kanav_H_2147680332_0
         $x_1_7 = "<description><![CDATA[" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -73,6 +75,7 @@ rule TrojanDownloader_Win32_Kanav_CH_2147746192_0
         $x_1_4 = "reg delete \"HKEY_CURRENT_USER\\Software\\Microsoft\\Active Setup\\Installed Components" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

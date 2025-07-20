@@ -20,6 +20,7 @@ rule Trojan_Win64_ClassCuts_A_2147933297_0
         $x_100_5 = "NoData" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win64_ClassCuts_B_2147933298_0
         $x_100_5 = "STATUS_OK" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win64_ClassCuts_C_2147933299_0
         $x_100_1 = {48 89 4b 68 c6 83 88 00 00 00 01 48 8b c3 48 83 c4 20 5b c3}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Win64_ClassCuts_D_2147938290_0
         $x_1_3 = "[+] Endpoint changed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

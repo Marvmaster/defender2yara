@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Cavitate_C_2147598058_0
         $x_1_1 = {8b c8 81 e1 0f 00 00 80 79 05 49 83 c9 f0 41 8a 91 ?? ?? ?? 10 8a (88|98) ?? ?? ?? 10 32 (ca|da) 88 (88|98) ?? ?? ?? 10 40 3d ?? ?? 00 00 7c d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_Win32_Cavitate_D_2147599753_0
         $x_1_1 = {8d 1c c5 00 00 00 00 2b d8 c1 e3 04 8d 44 03 81 8a 1c 0e 25 ff 00 00 00 32 d8 88 19 41 4f 75 e0 5f c6 04 2a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule TrojanDownloader_Win32_Cavitate_E_2147610328_0
         $x_1_2 = {8d 8c 40 29 87 00 00 8a 04 16 81 e1 ff ff 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule TrojanDownloader_Win32_Cavitate_F_2147610416_0
         $x_1_2 = {8b 6c 24 0c 83 fd 01 73 04 33 c0 5d c3 83 fd 05 76 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

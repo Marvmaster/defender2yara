@@ -25,6 +25,7 @@ rule Trojan_Win64_Kryptik_MB_2147807759_0
         $x_1_10 = "GetKeyState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win64_Kryptik_PGK_2147938072_0
         $x_5_1 = {1f 0a 08 32 35 1f 0a 08 30 05 38 62 05 00 00 1e 08 32 0e 1e 08 30 05 38 f2 04 00 00 38 86 03 00 00 1f 09 08 32 0f 1f 09 08 30 05 38 09 05 00 00 38 72 03 00 00 38 6d 03 00 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

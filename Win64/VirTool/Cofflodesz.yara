@@ -19,6 +19,7 @@ rule VirTool_Win64_Cofflodesz_A_2147914832_0
         $x_1_4 = {48 8b 85 d8 00 00 00 0f b7 40 08 66 83 f8 04 ?? ?? ?? ?? ?? ?? 48 8b 85 80 00 00 00 48 85 c0 ?? ?? ?? ?? ?? ?? 8b 85 c4 00 00 00 c1 e0 03 48 63 d0 48 8b 85 ?? 00 00 00 48 01 c2 8b 85 d0 00 00 00 48 98 48 8b 4c c5 a0 48 8b 85 d8 00 00 00 8b 00 89 c0 48 83 c0 04 48 01 c8 48 29 c2 b8 ff ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

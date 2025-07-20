@@ -18,6 +18,7 @@ rule Ransom_Win64_RALord_BB_2147939224_0
         $x_1_3 = "please do not touch the files becouse we can't decrypt it if you touch it" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win64_RALord_A_2147940828_0
         $x_1_4 = "Nova" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -64,6 +66,7 @@ rule Ransom_Win64_RALord_B_2147940829_0
         $x_1_1 = {01 00 00 55 c6 85 ?? 01 00 00 aa c6 85 ?? 01 00 00 00 c6 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Ransom_Win64_RALord_SCR_2147941705_0
         $x_1_3 = ".encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

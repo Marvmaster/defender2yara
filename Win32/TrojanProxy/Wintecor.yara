@@ -18,6 +18,7 @@ rule TrojanProxy_Win32_Wintecor_A_2147610401_0
         $x_1_4 = "HTTP/1[.][10x] ([1-5][0-9][0-9])[^" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

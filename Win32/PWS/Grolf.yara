@@ -20,6 +20,7 @@ rule PWS_Win32_Grolf_A_2147624838_0
         $x_1_6 = "MSSECDRV" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

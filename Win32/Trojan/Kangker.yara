@@ -20,6 +20,7 @@ rule Trojan_Win32_Kangker_A_2147620039_0
         $x_1_6 = "Software\\Policies\\Microsoft\\MMC\\{58221C66-EA27-11CF-ADCF-00AA00A80033}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

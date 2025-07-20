@@ -19,6 +19,7 @@ rule Trojan_MSIL_Ficongur_A_2147717210_0
         $x_2_5 = "\\winupdate\\w" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 1 of ($x_4_*) and 1 of ($x_2_*))) or
             ((1 of ($x_8_*) and 2 of ($x_4_*))) or

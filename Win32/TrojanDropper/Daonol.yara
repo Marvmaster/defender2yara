@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Daonol_B_2147803897_0
         $x_2_4 = {4e 83 fe 00 7c 16 b8 19 00 00 00 e8 ?? ?? ff ff 83 c0 61 88 03 43 4e 83 fe ff 75 ea c6 03 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDropper_Win32_Daonol_D_2147803901_0
         $x_1_4 = {8a 4c 02 ff 80 f1 ?? 88 4c 02 ff 4a 75 f2 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -70,6 +72,7 @@ rule TrojanDropper_Win32_Daonol_E_2147803949_0
         $x_2_6 = {4e 83 fe 00 7c 16 b8 19 00 00 00 e8 ?? ?? ff ff 83 c0 61 88 03 43 4e 83 fe ff 75 ea c6 03 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

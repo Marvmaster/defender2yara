@@ -18,6 +18,7 @@ rule Worm_Win32_Ohmsrot_A_2147644335_0
         $x_1_4 = {52 75 6e 00 00 00 ff ff ff ff 07 00 00 00 6e 6f 68 6f 73 73 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

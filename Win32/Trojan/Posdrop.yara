@@ -17,6 +17,7 @@ rule Trojan_Win32_Posdrop_B_2147735893_0
         $x_1_2 = {48 8b cb e8 8e ed ff ff 85 c0 74 4a 48 8d 4c 24 20 4c 8b c3 48 8b d7 e8 40 1d 00 00 4c 8d 05 83 da ff ff 48 8d 4c 24 20 48 8b d7 e8 4a 1d 00 00 48 8d 54 24 20 48 8b cb ff 15 c8 c9 1e 00 c6 05 91 2b 00 00 01 ff 15 5b c9 1e 00 48 8b c8 33 d2 ff 15 60 ca 1e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

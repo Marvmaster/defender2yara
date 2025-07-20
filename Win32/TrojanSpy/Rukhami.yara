@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Rukhami_S_2147728338_0
         $x_1_3 = "payload" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -26,6 +26,7 @@ rule Worm_MSIL_Sipia_A_2147695309_0
         $x_1_12 = "AStartup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -56,6 +57,7 @@ rule Worm_MSIL_Sipia_A_2147695309_1
         $x_1_11 = "SpyTheSpy" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

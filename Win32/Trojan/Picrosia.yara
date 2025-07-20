@@ -19,6 +19,7 @@ rule Trojan_Win32_Picrosia_A_2147726046_0
         $x_1_5 = {41 00 50 00 50 00 44 00 41 00 54 00 41 00 [0-16] 55 00 53 00 45 00 52 00 4e 00 41 00 4d 00 45 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Picrosia_B_2147726047_0
         $x_1_5 = "Exsist ::::" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Picrosia_C_2147726048_0
         $x_1_5 = "run_patch" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_Picrosia_D_2147726049_0
         $x_1_4 = {69 00 74 00 6d 00 (31|32|33) 00 [0-6] 6d 00 70 00 34}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_Win32_Picrosia_E_2147726050_0
         $x_1_5 = {6e 00 6f 00 2d 00 73 00 74 00 6f 00 72 00 65 00 [0-18] 4b 00 65 00 65 00 70 00 41 00 6c 00 69 00 76 00 65 00 [0-32] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

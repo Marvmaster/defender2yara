@@ -18,6 +18,7 @@ rule Trojan_Win32_Tenpoj_A_2147744742_0
         $x_1_3 = "Documents\\Visual Studio 2008\\Projects\\vpnet_dll\\Release\\vpnet_dll.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

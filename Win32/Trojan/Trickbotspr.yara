@@ -21,6 +21,7 @@ rule Trojan_Win32_Trickbotspr_A_2147766712_0
         $x_1_6 = "spreader with module handle 0x%08X is started" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

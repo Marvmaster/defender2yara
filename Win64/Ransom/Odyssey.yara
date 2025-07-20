@@ -18,6 +18,7 @@ rule Ransom_Win64_Odyssey_ARA_2147915412_0
         $x_2_3 = "\\RansomWare-encrypt.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

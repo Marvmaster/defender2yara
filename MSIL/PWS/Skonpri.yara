@@ -20,6 +20,7 @@ rule PWS_MSIL_Skonpri_A_2147679055_0
         $x_1_6 = "Y0U Can?!$FR" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

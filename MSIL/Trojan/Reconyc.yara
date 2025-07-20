@@ -21,6 +21,7 @@ rule Trojan_MSIL_Reconyc_AVD_2147781334_0
         $x_5_6 = "FromBase64String" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

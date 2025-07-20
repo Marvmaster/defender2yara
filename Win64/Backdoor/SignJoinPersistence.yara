@@ -15,6 +15,7 @@ rule Backdoor_Win64_SignJoinPersistence_A_2147851920_0
         $x_1_1 = {4f 6e 65 44 72 69 76 65 53 72 76 2e 64 6c 6c 00 53 65 72 76 69 63 65 4d 61 69 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

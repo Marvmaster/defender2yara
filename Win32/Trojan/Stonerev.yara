@@ -20,6 +20,7 @@ rule Trojan_Win32_Stonerev_A_2147667451_0
         $x_1_6 = {ff 72 c6 85 ?? ff ff ff 5c c6 85 ?? ff ff ff 63 c6 85 ?? ff ff ff 61 c6 85 ?? ff ff ff 72 c6 85 ?? ff ff ff 73 c6 85 ?? ff ff ff 73 c6 85 ?? ff ff ff 2e c6 85 ?? ff ff ff 65 c6 85 ?? ff ff ff 78 c6 85 ?? ff ff ff 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

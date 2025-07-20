@@ -20,6 +20,7 @@ rule Trojan_Win32_Libie_GNF_2147893844_0
         $x_1_5 = ".vmp0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

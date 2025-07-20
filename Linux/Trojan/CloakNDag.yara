@@ -24,6 +24,7 @@ rule Trojan_Linux_CloakNDag_A_2147889551_0
         $x_1_9 = "main.runCommand" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

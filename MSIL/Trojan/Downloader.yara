@@ -21,6 +21,7 @@ rule Trojan_MSIL_Downloader_DAB_2147798710_0
         $x_1_6 = "CheckRemoteDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_MSIL_Downloader_DSB_2147798713_0
         $x_1_4 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_MSIL_Downloader_RPN_2147798845_0
         $x_1_5 = "DelegateExecute" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Trojan_MSIL_Downloader_RPO_2147798846_0
         $x_1_7 = "WebRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +128,7 @@ rule Trojan_MSIL_Downloader_RPR_2147799297_0
         $x_1_7 = "LoadLibraryEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule Trojan_MSIL_Downloader_RPS_2147799298_0
         $x_1_7 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +184,7 @@ rule Trojan_MSIL_Downloader_RPT_2147799299_0
         $x_1_7 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +212,7 @@ rule Trojan_MSIL_Downloader_RPU_2147799300_0
         $x_1_7 = "LoadLibrary" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -231,6 +239,7 @@ rule Trojan_MSIL_Downloader_RPV_2147799301_0
         $x_1_6 = "builder.pp.ru" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -258,6 +267,7 @@ rule Trojan_MSIL_Downloader_RPV_2147799301_1
         $x_1_7 = "updaterrr.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -285,6 +295,7 @@ rule Trojan_MSIL_Downloader_CAB_2147799484_0
         $x_1_7 = "ping twitter.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -314,6 +325,7 @@ rule Trojan_MSIL_Downloader_CAC_2147799486_0
         $x_1_9 = "ToBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -348,6 +360,7 @@ rule Trojan_MSIL_Downloader_CAD_2147799487_0
         $x_1_10 = "GetTempPath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -374,6 +387,7 @@ rule Trojan_MSIL_Downloader_RPM_2147805654_0
         $x_1_6 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -402,6 +416,7 @@ rule Trojan_MSIL_Downloader_RPM_2147805654_1
         $x_1_8 = "CreateInstance" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -428,6 +443,7 @@ rule Trojan_MSIL_Downloader_RPK_2147805658_0
         $x_1_6 = "WebClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -454,6 +470,7 @@ rule Trojan_MSIL_Downloader_RPK_2147805658_1
         $x_1_6 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -483,6 +500,7 @@ rule Trojan_MSIL_Downloader_JIKLU_2147805868_0
         $x_1_9 = "SetWeak" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -508,6 +526,7 @@ rule Trojan_MSIL_Downloader_IHU_2147805869_0
         $x_1_5 = "MethodInfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -536,6 +555,7 @@ rule Trojan_MSIL_Downloader_INKT_2147806227_0
         $x_1_8 = "RunMapper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -564,6 +584,7 @@ rule Trojan_MSIL_Downloader_CAH_2147806309_0
         $x_1_8 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -592,6 +613,7 @@ rule Trojan_MSIL_Downloader_SILA_2147807214_0
         $x_1_8 = "MethodInfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -613,6 +635,7 @@ rule Trojan_MSIL_Downloader_SDV_2147808639_0
         $x_10_1 = {04 0d 09 17 59 45 05 00 00 00 01 00 00 00 09 00 00 00 2b 00 00 00 35 00 00 00 3e 00 00 00 2a 28 ?? ?? ?? 0a 0a 2b 40 72 25 00 00 70 28 ?? ?? ?? 06 72 ce 00 00 70 28 ?? ?? ?? 06 14 28 ?? ?? ?? 0a 75 09 00 00 01 0a 2b 1e 1f 10 28 ?? ?? ?? 0a 0a 2b 14 1b 28 ?? ?? ?? 0a 0a 2b 0b 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 0a 06 02 28 ?? ?? ?? 0a 10 00 02 28 ?? ?? ?? 0a 02 0e 06}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -640,6 +663,7 @@ rule Trojan_MSIL_Downloader_BA_2147808813_0
         $x_1_7 = "$b84c135b-a8d6-4716-9615-5af0962eb287" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -667,6 +691,7 @@ rule Trojan_MSIL_Downloader_TF_2147809026_0
         $x_1_7 = "Kkiupsvwpwwn.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -695,6 +720,7 @@ rule Trojan_MSIL_Downloader_TH_2147809027_0
         $x_1_8 = "$e8b55f91-c32f-480e-9233-8eaf445549ac" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -722,6 +748,7 @@ rule Trojan_MSIL_Downloader_BC_2147809195_0
         $x_1_7 = "C:\\Vonex\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -749,6 +776,7 @@ rule Trojan_MSIL_Downloader_BD_2147809202_0
         $x_1_7 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -770,6 +798,7 @@ rule Trojan_MSIL_Downloader_LST_2147809237_0
         $x_10_1 = {20 6f 83 0b 00 28 ?? ?? ?? 06 25 26 20 74 83 0b 00 28 ?? ?? ?? 06 25 26 28 ?? ?? ?? 0a 25 26 20 77 83 0b 00 28 ?? ?? ?? 06 25 26 20 7e 83 0b 00 28 ?? ?? ?? 06 25 26 6f ?? ?? ?? 0a 20 81 83 0b 00 28 ?? ?? ?? 06 25 26 20 84 83 0b 00 28 ?? ?? ?? 06 25 26 6f ?? ?? ?? 0a 25 26 20 87 83 0b 00 28 ?? ?? ?? 06 20 8a 83 0b 00 28 ?? ?? ?? 06 25 26 6f ?? ?? ?? 0a 25 26 20 8d 83 0b 00 28 ?? ?? ?? 06 20 96 83 0b 00 28 ?? ?? ?? 06 25 26 6f ?? ?? ?? 0a 25 26 0a 06 28 ?? ?? ?? 0a 25 26 0b 28 ?? ?? ?? 06 25 26 28 ?? ?? ?? 0a 25 26 0c 1a 8d 1f 00 00 01 25 16 20 99 83 0b 00 28 ?? ?? ?? 06 20 18 84 0b 00 28 ?? ?? ?? 06 20 33 84 0b 00 28 ?? ?? ?? 06 25 26 28 ?? ?? ?? 0a 25 26 a2 25 17 7e 18 00 00 0a a2 25 18 07 a2 25 19 17 8c 05 00 00 01 a2 0d 08 20 52 84 0b 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -797,6 +826,7 @@ rule Trojan_MSIL_Downloader_BE_2147809314_0
         $x_1_7 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -824,6 +854,7 @@ rule Trojan_MSIL_Downloader_BF_2147809315_0
         $x_1_7 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -856,6 +887,7 @@ rule Trojan_MSIL_Downloader_BH_2147809318_0
         $x_1_8 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -888,6 +920,7 @@ rule Trojan_MSIL_Downloader_BI_2147809319_0
         $x_1_8 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 6 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -922,6 +955,7 @@ rule Trojan_MSIL_Downloader_BGF_2147809344_0
         $x_1_10 = "GetManifestResourceStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -950,6 +984,7 @@ rule Trojan_MSIL_Downloader_MLC_2147809592_0
         $x_1_8 = {00 62 78 78 78 78 78 78 78 78 78 78 78 78 78 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -975,6 +1010,7 @@ rule Trojan_MSIL_Downloader_MRP_2147809594_0
         $x_1_5 = "StrReverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1001,6 +1037,7 @@ rule Trojan_MSIL_Downloader_BN_2147810203_0
         $x_1_6 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1029,6 +1066,7 @@ rule Trojan_MSIL_Downloader_BG_2147810303_0
         $x_1_8 = {38 6c dc 8f 0d 4e 81 89 40 67 7b 6b 00 4e 2a 4e 09 67 c1 54 73 54 84 76 ba 4e 63}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1053,6 +1091,7 @@ rule Trojan_MSIL_Downloader_RPW_2147810515_0
         $x_1_4 = "DxownxloxadDxatxxax" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1077,6 +1116,7 @@ rule Trojan_MSIL_Downloader_RPX_2147810516_0
         $x_1_4 = "DxownxloxadDxatxxax" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1101,6 +1141,7 @@ rule Trojan_MSIL_Downloader_SRX_2147810531_0
         $x_1_4 = "StrReverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1122,6 +1163,7 @@ rule Trojan_MSIL_Downloader_DEGA_2147810533_0
         $x_10_1 = {73 27 00 00 0a 0b 1e 8d 29 00 00 01 13 07 11 07 16 17 9c 11 07 17 18 9c 11 07 18 19 9c 11 07 19 1a 9c 11 07 1a 1b 9c 11 07 1b 1c 9c 11 07 1c 1d 9c 11 07 1d 1e 9c 11 07 13 05 72 1e 01 00 70 11 05 73 28 ?? ?? ?? 0d 07 09 07 6f ?? ?? ?? 0a 8e b7 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 07 09 07 6f ?? ?? ?? 0a 8e b7 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 73 2e 00 00 0a 13 06 11 06 07 6f ?? ?? ?? 0a 17 73 30 00 00 0a 0a 00 03 28 ?? ?? ?? 0a 13 04 06 11 04 16 11 04 8e b7 6f ?? ?? ?? 0a 00 06 6f ?? ?? ?? 0a 00 28 ?? ?? ?? 0a 11 06 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 0c de 10 de 0d 28 ?? ?? ?? 0a 00 28 ?? ?? ?? 0a de 00 00 08 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1148,6 +1190,7 @@ rule Trojan_MSIL_Downloader_RPJ_2147810768_0
         $x_1_6 = "WebClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1176,6 +1219,7 @@ rule Trojan_MSIL_Downloader_PST_2147810914_0
         $x_1_8 = "ToCharArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1206,6 +1250,7 @@ rule Trojan_MSIL_Downloader_BO_2147811618_0
         $x_1_10 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1232,6 +1277,7 @@ rule Trojan_MSIL_Downloader_TE_2147811694_0
         $x_1_6 = "D:\\.000.Private\\000.NET\\VvMain\\q0\\4.0\\VvSvcHost\\VvSvcHost\\obj\\Release\\RuntimeBroker.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1258,6 +1304,7 @@ rule Trojan_MSIL_Downloader_TG_2147811695_0
         $x_1_6 = "GetTempFileName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1279,6 +1326,7 @@ rule Trojan_MSIL_Downloader_CRIMB_2147812167_0
         $x_10_1 = {14 0a 1e 8d 5b 00 00 01 25 d0 5a 00 00 04 28 ?? ?? ?? 0a 0b 73 9a 00 00 0a 0c 00 73 9b 00 00 0a 0d 00 09 20 00 01 00 00 6f ?? ?? ?? 0a 00 09 20 80 00 00 00 6f ?? ?? ?? 0a 00 28 9e 00 00 0a 72 15 0a 00 70 6f ?? ?? ?? 0a 13 04 11 04 07 20 e8 03 00 00 73 a0 00 00 0a 13 05 09 11 05 09 6f ?? ?? ?? 0a 1e 5b 6f a2 00 00 0a 6f ?? ?? ?? 0a 00 09 11 05 09 6f ?? ?? ?? 0a 1e 5b 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 09 17 6f ?? ?? ?? 0a 00 08 09 6f ?? ?? ?? 0a 17 73 a8 00 00 0a 13 06 00 11 06 03 16 03 8e 69 6f ?? ?? ?? 0a 00 11 06 6f ?? ?? ?? 0a 00 00 de 0d 11 06 2c 08 11 06 6f ?? ?? ?? 0a 00 dc 08 6f ?? ?? ?? 0a 0a 00 de 0b 09 2c 07 09 6f ?? ?? ?? 0a 00 dc 00 de 0b 08 2c 07 08 6f ?? ?? ?? 0a 00 dc 06 13 07 2b 00 11 07 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1300,6 +1348,7 @@ rule Trojan_MSIL_Downloader_SHAZ_2147812170_0
         $x_10_1 = {14 0a 1e 8d 77 00 00 01 25 d0 e8 00 00 04 28 ?? ?? ?? 0a 0b 73 2b 00 00 0a 0c 00 73 2c 00 00 0a 0d 00 09 20 00 01 00 00 6f ?? ?? ?? 0a 00 09 20 80 00 00 00 6f ?? ?? ?? 0a 00 28 ?? ?? ?? 0a 72 73 00 00 70 6f ?? ?? ?? 0a 13 04 11 04 07 20 e8 03 00 00 73 31 00 00 0a 13 05 09 11 05 09 6f ?? ?? ?? 0a 1e 5b 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 09 11 05 09 6f ?? ?? ?? 0a 1e 5b 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 09 17 6f ?? ?? ?? 0a 00 08 09 6f ?? ?? ?? 0a 17 73 39 00 00 0a 13 06 00 11 06 03 16 03 8e 69 6f ?? ?? ?? 0a 00 11 06 6f ?? ?? ?? 0a 00 00 de 0d 11 06 2c 08 11 06 6f ?? ?? ?? 0a 00 dc 08 6f ?? ?? ?? 0a 0a 00 de 0b 09 2c 07 09 6f ?? ?? ?? 0a 00 dc 00 de 0b 08 2c 07 08 6f ?? ?? ?? 0a 00 dc 06 13 07 2b 00 11 07 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1328,6 +1377,7 @@ rule Trojan_MSIL_Downloader_HMV_2147812860_0
         $x_1_8 = "transfer.sh/get/YHqpWW/dvikll.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1362,6 +1412,7 @@ rule Trojan_MSIL_Downloader_SDR_2147813525_0
         $x_4_11 = "esalog-bg.com/images1/book/gig/a/Criyop.jpg" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 3 of ($x_4_*) and 2 of ($x_2_*))) or
             ((6 of ($x_10_*) and 1 of ($x_4_*) and 1 of ($x_2_*))) or
@@ -1394,6 +1445,7 @@ rule Trojan_MSIL_Downloader_BL_2147814551_0
         $x_1_7 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1422,6 +1474,7 @@ rule Trojan_MSIL_Downloader_CF_2147816186_0
         $x_1_8 = "ToBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1444,6 +1497,7 @@ rule Trojan_MSIL_Downloader_NE_2147822242_0
         $x_1_2 = "P.O-97809886.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1465,6 +1519,7 @@ rule Trojan_MSIL_Downloader_SQ_2147839577_0
         $x_1_1 = {2b 32 72 27 00 00 70 2b 32 2b 37 2b 3c 17 2d 17 26 2b 3d 16 2b 3d 8e 69 1b 2d 12 26 26 26 2b 36 2b 37 dd 5b 00 00 00 0b 15 2c f3 2b e4 28 2e 00 00 0a 2b ea 28 2f 00 00 0a 2b c7 28 0e 00 00 06 2b c7 6f 30 00 00 0a 2b c2 28 31 00 00 0a 2b bd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

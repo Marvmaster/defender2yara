@@ -19,6 +19,7 @@ rule VirTool_Win64_Privilanz_A_2147847415_0
         $x_1_4 = {33 c9 48 89 44 24 28 45 8d ?? ?? c7 44 24 20 00 00 00 00 ff 15 ?? ?? ?? ?? 8b 54 24 50 b9 40 00 00 00 ff 15 ?? ?? ?? ?? 48 8b f0 48 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

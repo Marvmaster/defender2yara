@@ -18,6 +18,7 @@ rule Backdoor_Linux_Myrddin_B_2147796217_0
         $x_1_4 = {48 85 c9 0f 85 ?? 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

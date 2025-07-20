@@ -23,6 +23,7 @@ rule Trojan_Win32_Kexqoud_A_2147681343_0
         $x_1_8 = "system.exe -o http://hitmanuk_multi:123@btcguild.com:8332" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 1 of ($x_1_*))) or
             (all of ($x*))

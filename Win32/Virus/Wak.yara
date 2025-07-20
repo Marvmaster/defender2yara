@@ -25,6 +25,7 @@ rule Virus_Win32_Wak_A_2147599830_0
         $x_1_11 = "\\interview.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

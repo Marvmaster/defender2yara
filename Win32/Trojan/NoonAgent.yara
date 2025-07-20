@@ -17,6 +17,7 @@ rule Trojan_Win32_NoonAgent_MBXR_2147918936_0
         $x_2_2 = "FILE FOLDER" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanProxy_Win32_Nvgra_A_2147609446_0
         $x_1_2 = {8b 55 fc 33 c0 8a 42 02 83 f8 05 75 16 8b 4d fc 8b 51 04 89 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

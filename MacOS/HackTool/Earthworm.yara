@@ -18,6 +18,7 @@ rule HackTool_MacOS_Earthworm_A_2147746215_0
         $x_1_3 = "./agent_exe -l 8888" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (2 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule HackTool_MacOS_Earthworm_B_2147749832_0
         $x_1_3 = "./ew -s lcx_listen -l 1080 -e 8888" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (2 of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win64_Dtrack_B_2147904707_0
         $x_100_5 = "%s\\res.ip" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

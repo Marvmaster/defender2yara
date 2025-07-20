@@ -18,6 +18,7 @@ rule Backdoor_Win64_DCRat_GP_2147815757_0
         $x_1_3 = "CreateMutex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Win64_DCRat_RHB_2147914344_0
         $x_2_4 = {50 45 00 00 64 86 06 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0b 02 0e 27 00 46 00 00 00 0c 06 00 00 00 00 00 40 46}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

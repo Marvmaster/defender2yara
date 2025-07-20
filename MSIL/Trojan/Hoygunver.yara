@@ -18,6 +18,7 @@ rule Trojan_MSIL_Hoygunver_A_2147655107_0
         $x_1_4 = {28 09 00 00 0a 2d 27 7e 01 00 00 04 28 0a 00 00 0a 2d 1b 7e 02 00 00 04 28 0a 00 00 0a 2c 0f 7e 02 00 00 04 7e 01 00 00 04 28 0b 00 00 0a 7e 0c 00 00 0a 72 01 00 00 70 17 6f 0d 00 00 0a 72 5d 00 00 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Trojan_MSIL_Hoygunver_B_2147685327_0
         $x_1_4 = {28 0f 00 00 0a 72 ?? 00 00 70 28 10 00 00 0a 80 01 00 00 04 72 ?? 00 00 70 80 02 00 00 04 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

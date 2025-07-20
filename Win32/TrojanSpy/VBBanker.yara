@@ -24,6 +24,7 @@ rule TrojanSpy_Win32_VBBanker_A_2147688982_0
         $x_50_10 = {8b 10 6a 01 51 56 52 c7 45 d4 01 00 00 00 c7 45 cc 02 00 00 00 ff 15 ?? ?? ?? ?? 8b d0 8d 4d e0 ff d3 50 ff 15 ?? ?? ?? ?? 0f bf 4d e4 0f bf c0 33 c1 50 ff 15}  //weight: 50, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_50_*) and 3 of ($x_1_*))) or
             ((4 of ($x_50_*))) or

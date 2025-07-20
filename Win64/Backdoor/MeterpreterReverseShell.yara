@@ -23,6 +23,7 @@ rule Backdoor_Win64_MeterpreterReverseShell_A_2147780008_0
         $x_1_9 = {eb 55 2e 3b ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

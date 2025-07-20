@@ -19,6 +19,7 @@ rule Trojan_Win32_FakeChrome_2147755571_0
         $x_1_4 = {74 00 64 00 6c 00 31 00 [0-16] 2d 00 [0-32] 40 00 40 00 43 00 6f 00 6e 00 74 00 72 00 6f 00 6c 00 6c 00 65 00 72 00 2e 00 47 00 6f 00 6f 00 67 00 6c 00 65 00 20 00 43 00 68 00 72 00 6f 00 6d 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

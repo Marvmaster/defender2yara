@@ -20,6 +20,7 @@ rule VirTool_Win64_Berentesz_A_2147919108_0
         $x_1_5 = {41 b8 0d 00 00 00 [0-23] 48 83 78 18 0f ?? ?? 48 8b 00 48 8b c8 ?? ?? ?? ?? ?? ?? 8b d8 48 8b 54 24 38 48 83 fa 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

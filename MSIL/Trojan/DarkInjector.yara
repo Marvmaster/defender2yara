@@ -32,6 +32,7 @@ rule Trojan_MSIL_DarkInjector_2147777922_0
         $x_1_17 = "GetInjectionPath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

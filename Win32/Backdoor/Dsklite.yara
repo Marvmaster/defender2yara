@@ -32,6 +32,7 @@ rule Backdoor_Win32_Dsklite_G_2147597944_0
         $x_100_18 = "C:\\Program Files\\Microsoft Visual Studio\\VB98\\VB6.OLB" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 13 of ($x_1_*))) or
             (all of ($x*))
@@ -62,6 +63,7 @@ rule Backdoor_Win32_Dsklite_H_2147609657_0
         $x_1_8 = "Fake Error Body:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))

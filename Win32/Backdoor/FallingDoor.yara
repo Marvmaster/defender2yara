@@ -20,6 +20,7 @@ rule Backdoor_Win32_FallingDoor_A_2147641123_0
         $x_2_5 = "PrDownFile" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

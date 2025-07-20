@@ -22,6 +22,7 @@ rule Backdoor_Win32_Sensode_F_2147689138_0
         $x_2_8 = "202.96.128.166" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -52,6 +53,7 @@ rule Backdoor_Win32_Sensode_G_2147689140_0
         $x_1_6 = "hacksite: %s -> %s." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Backdoor_Win32_Sensode_H_2147689735_0
         $x_5_3 = "Shell setup information:" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

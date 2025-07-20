@@ -16,6 +16,7 @@ rule Trojan_Win32_ShellCodeRunner_GNB_2147894388_0
         $x_4_1 = {30 04 3e 43 6a 00 ff 15 ?? ?? ?? ?? b8 cd cc cc cc f7 e6 c1 ea 02 8d 0c 92 8b d6 2b d1 75 02 33 db 46 81 fe 00 00 10 00 7c d0}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_ShellCodeRunner_GPA_2147899027_0
         $x_1_4 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_ShellCodeRunner_NZL_2147942096_0
         $x_4_2 = {8a 0c 01 32 0c 16 8b 53 ?? 88 4d ff 3b 53 08 74}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win32_ShellCodeRunner_KK_2147943867_0
         $x_5_3 = {5c 00 62 00 75 00 69 00 6c 00 64 00 65 00 72 00 5f 00 76 00 [0-3] 5c 00 73 00 74 00 65 00 61 00 6c 00 63 00 5c 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

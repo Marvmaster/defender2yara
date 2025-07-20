@@ -17,6 +17,7 @@ rule Trojan_Linux_Nerbian_A_2147922750_0
         $x_1_2 = {48 83 fa 0e 0f ?? ?? ?? ?? ?? 80 70 0e 2e 41 b8 96 01 00 00 41 b9 0f 00 00 00 bf 95 01 00 00 41 ba a5 01 00 00 48 29 d7 49 29 d2 48 c1 ef 04 48 83 c7 01 49 89 fb 49 c1 e3 04 66 0f 6f 0d 40 cc 22 00 48 01 c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -31,6 +31,7 @@ rule Backdoor_MSIL_Torwofun_B_2147695622_0
         $x_1_17 = "get_SystemAutorun" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or

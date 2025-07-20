@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Nurech_R_2147594783_0
         $x_5_4 = {c6 85 d0 fb ff ff 5c c6 85 d1 fb ff ff 64 c6 85 d2 fb ff ff 65 c6 85 d3 fb ff ff 6c c6 85 d4 fb ff ff 73 c6 85 d5 fb ff ff 65 c6 85 d6 fb ff ff 6c c6 85 d7 fb ff ff 66 c6 85 d8 fb ff ff 2e c6 85 d9 fb ff ff 62 c6 85 da fb ff ff 61 c6 85 db fb ff ff 74}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_Nurech_S_2147610520_0
         $x_1_2 = {c6 45 fc 57 50 e8 ?? ?? ff ff 83 c4 0c ff 30 8d 85 ?? ff ff ff c6 45 fc 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

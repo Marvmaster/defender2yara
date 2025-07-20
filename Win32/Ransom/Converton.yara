@@ -18,6 +18,7 @@ rule Ransom_Win32_Converton_A_2147711712_0
         $x_2_4 = {25 30 32 78 [0-8] 43 6f 76 65 72 74 6f 6e [0-8] 25 78 25 78 25 78 25 78}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

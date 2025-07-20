@@ -23,6 +23,7 @@ rule Backdoor_Win32_Microbd_D_2147814326_0
         $x_5_8 = "30D78F9B-C56E-472C-8A29-E9F27FD8C985" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or

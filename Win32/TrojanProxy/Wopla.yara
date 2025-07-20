@@ -19,6 +19,7 @@ rule TrojanProxy_Win32_Wopla_AG_2147596690_0
         $x_1_5 = {8d 7d c0 68 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 33 f6 3b c6 89 45 08 7d 17 3d 01 00 00 c0 74 07 3d 25 02 00 c0 75 09 83 c7 04 8b 07 3b c6 75 d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanProxy_Win32_Wopla_Z_2147598332_0
         $x_1_6 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule TrojanProxy_Win32_Wopla_A_2147602118_0
         $x_2_12 = "SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy\\StandardProfile\\AuthorizedApplications\\List" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 10 of ($x_2_*))) or
             ((2 of ($x_10_*) and 5 of ($x_2_*))) or
@@ -104,6 +107,7 @@ rule TrojanProxy_Win32_Wopla_B_2147602459_0
         $x_1_4 = {eb 64 38 5d 10 74 3f 80 bd ?? ?? ff ff 4d 75 09 80 bd ?? ?? ff ff 5a 74 2d 6a fc eb be 53 8d 45 f0 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -134,6 +138,7 @@ rule TrojanProxy_Win32_Wopla_C_2147616299_0
         $x_1_10 = "7DA51AA8-A5F2-46cc-B892-A3DF1EA4762F" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 1 of ($x_1_*))) or
             ((8 of ($x_10_*))) or
@@ -165,6 +170,7 @@ rule TrojanProxy_Win32_Wopla_D_2147620946_0
         $x_1_7 = "CFE7F539-7305-48f8-9E76-2EB71ECA67D1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

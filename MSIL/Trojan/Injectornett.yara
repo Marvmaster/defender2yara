@@ -19,6 +19,7 @@ rule Trojan_MSIL_Injectornett_PGN_2147943769_0
         $x_5_4 = {68 74 00 74 00 70 73 3a 2f 2f 77 77 77 2e 6e 65 77 2e 65 76 65 6e 74 61 77 61 72 64 73 72 75 73 73 69 61 2e 63 6f 6d 2f 77 70 2d 69 6e 63 6c 75 64 65 73 2f [0-31] 2e 76 64 66}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

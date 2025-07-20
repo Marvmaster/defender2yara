@@ -23,6 +23,7 @@ rule Trojan_Win32_SquareNet_R_2147727749_0
         $x_1_9 = "Sophos UI.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -60,6 +61,7 @@ rule Trojan_Win32_SquareNet_P_2147727750_0
         $x_1_5 = "dataup.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -86,6 +88,7 @@ rule Trojan_Win32_SquareNet_Q_2147727751_0
         $x_2_7 = "vmxclient.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule PWS_Win32_Buzbav_B_2147607896_0
         $x_1_2 = {43 3a 5c 57 49 4e 44 4f 57 53 5c 73 79 73 74 65 6d 33 32 5c [0-16] 2e 64 6c 6c [0-16] 53 45 52 56 45 52 [0-21] 40 65 78 69 74 00 40 64 65 6c [0-48] 2e 61 71 71}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule PWS_Win32_Buzbav_B_2147607896_1
         $x_1_2 = {43 3a 5c 57 49 4e 44 4f 57 53 5c 73 79 73 74 65 6d 33 32 5c [0-16] 2e 64 6c 6c [0-5] 50 72 6f 67 4d 61 6e [0-5] 58 59 74 65 73 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule PWS_Win32_Buzbav_B_2147607897_0
         $x_1_3 = "BZBAVSMT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -28,6 +28,7 @@ rule PWS_Win32_Stealer_M_2147621276_0
         $x_1_14 = "Software\\Microsoft\\Internet Account Manager\\Accounts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 10 of ($x_1_*))) or
             ((2 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -65,6 +66,7 @@ rule PWS_Win32_Stealer_E_2147656497_0
         $x_1_11 = {2f 62 6f 74 6e 65 74 2f 75 70 6c 6f 61 64 2e 70 68 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +89,7 @@ rule PWS_Win32_Stealer_N_2147730748_0
         $x_1_2 = {8b d0 8b cd e8 ?? ?? ?? ?? 2b f8 59 59 8b cf 8b c7 c1 e9 ?? 03 4c 24 ?? c1 e0 ?? 03 44 24 ?? 33 c8 8d 04 3b 33 c8 8b 44 24 ?? 2b e9 6a f7 59 2b c8 8b 44 24 ?? 03 d9 8b 4c 24 ?? 4e 75 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +116,7 @@ rule PWS_Win32_Stealer_O_2147733577_0
         $x_1_6 = "ftp57.hostland.ru" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +139,7 @@ rule PWS_Win32_Stealer_V_2147742759_0
         $x_1_2 = {0f be 04 0e 89 45 fc e8 ?? ?? ?? ?? 89 45 f8 8b 45 fc 33 45 f8 89 45 fc 8a 45 fc 88 04 0e 46 3b f2 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -157,6 +162,7 @@ rule PWS_Win32_Stealer_KM_2147755676_0
         $x_1_2 = {d3 e2 c7 45 ?? ?? ?? ?? ?? 89 55 ?? 8b 45 ?? ?? 45 ?? 8b 45 ?? ?? 45 ?? 81 3d ?? ?? ?? ?? 4a 04 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -178,6 +184,7 @@ rule PWS_Win32_Stealer_VM_2147760555_0
         $x_1_1 = {33 c1 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 01 05 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 89 02 0f 00 a1 ?? ?? ?? ?? a3 ?? ?? ?? ?? a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

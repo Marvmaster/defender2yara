@@ -21,6 +21,7 @@ rule BrowserModifier_Win32_Helpth_123283_0
         $x_1_7 = "http://click.p4p.cn.yahoo.com/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 4 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule BrowserModifier_Win32_Helpth_123283_1
         $x_1_8 = {53 68 65 6c 6c 5f 43 61 6c 6c 00 00 50 72 6f 67 72 61 6d 5c 55 70 64 61 74 65 53 68 65 6c 6c 2e 64 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_1_*))) or
             (all of ($x*))

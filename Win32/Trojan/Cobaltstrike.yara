@@ -16,6 +16,7 @@ rule Trojan_Win32_Cobaltstrike_DK_2147759716_0
         $x_1_1 = {8b 4d fc 8d 94 01 ?? ?? ?? ?? 8b 45 08 03 10 8b 4d 08 89 11 68 5a 11 00 00 ff 15 ?? ?? ?? ?? 05 9c 5b 00 00 8b 55 08 8b 0a 2b c8 8b 55 08 89 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Cobaltstrike_MK_2147761004_0
         $x_1_1 = {a1 fc fe 54 00 33 c1 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 01 05 00 8b ff a1 ?? ?? ?? ?? 8b 0d 00 89 08 5f 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win32_Cobaltstrike_MK_2147761004_1
         $x_10_1 = {83 c5 04 0f af 5f 30 8b 87 ?? ?? ?? ?? 8b d3 c1 ea 10 88 14 01 8b d3 ff 47 38 8b 8f ?? ?? ?? ?? 8b 47 3c 81 c1 ?? ?? ?? ?? 03 c1 c1 ea 08}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +82,7 @@ rule Trojan_Win32_Cobaltstrike_MK_2147761004_2
         $x_1_1 = {0f b6 48 02 c1 e1 ?? 33 f9 0f b6 48 01 c1 e1 ?? 33 f9 0f b6 00 33 c7 69 f8 ?? ?? ?? ?? 8b c7 c1 e8 ?? 33 c7 69 c8 02 5f 5e 8b c1 c1 e8 ?? 33 c1 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +104,7 @@ rule Trojan_Win32_Cobaltstrike_MB_2147762275_0
         $x_5_1 = {31 86 80 00 00 00 8b 86 b4 00 00 00 8b d3 c1 ea 08 88 14 01 ff 86 9c 00 00 00 8b 8e 9c 00 00 00 8b 86 b4 00 00 00 88 1c 01 ff 86 9c 00 00 00 8b 86 ec 00 00 00 8b 96 88 00 00 00 2b c2 01 46 1c 81 fd e8 94 01 00 0f 8c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +130,7 @@ rule Trojan_Win32_Cobaltstrike_AA_2147762711_0
         $x_1_5 = "indefinite86.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +152,7 @@ rule Trojan_Win32_Cobaltstrike_SM_2147773501_0
         $x_1_1 = {66 0f ef c2 0f 11 80 ?? ?? ?? ?? 0f 10 80 ?? ?? ?? ?? 66 0f ef c8 0f 11 88 ?? ?? ?? ?? 83 c0 40 3d 40 03 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +176,7 @@ rule Trojan_Win32_Cobaltstrike_MFP_2147782173_0
         $x_5_3 = {0f 10 03 0f 11 01 0f 10 4b 10 0f 11 49 10 0f 10 43 20 0f 11 41 20 0f 10 4b 30 0f 11 49 30 0f 10 43 40 0f 11 41 40 0f 10 4b 50 0f 11 49 50 0f 10 43 60 0f 11 41 60 48 03 cd 0f 10 4b 70 48 03 dd 0f 11 49 f0 48 83 ef 01 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -192,6 +200,7 @@ rule Trojan_Win32_Cobaltstrike_MKRT_2147794083_0
         $x_1_3 = "rust_eh_personality" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +229,7 @@ rule Trojan_Win32_Cobaltstrike_DC_2147794111_0
         $x_1_8 = "CreateMutexA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -241,6 +251,7 @@ rule Trojan_Win32_Cobaltstrike_DD_2147798234_0
         $x_1_1 = {89 c6 83 ec 10 31 c0 39 d8 7d ?? 8b 4d 10 89 c2 83 e2 03 8a 14 11 8b 4d 08 32 14 01 88 14 06 40 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -262,6 +273,7 @@ rule Trojan_Win32_Cobaltstrike_DE_2147798235_0
         $x_1_1 = {8b 45 f4 89 c1 03 4d 08 8b 45 f4 03 45 08 0f b6 18 8b 45 f4 89 c2 c1 fa 1f c1 ea ?? 01 d0 83 e0 ?? 29 d0 03 45 10 0f b6 00 31 d8 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -283,6 +295,7 @@ rule Trojan_Win32_Cobaltstrike_DF_2147798701_0
         $x_1_1 = {8b 4b 04 8b c9 8b c7 8b 55 0c 8b c0 c1 e1 02 2b c1 8a 04 10 32 06 88 04 3a 8b c9 8b c7 8b 4b 04 c1 e1 02 8b c9 2b c1 8a 44 10 01 8b c0 32 46 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -304,6 +317,7 @@ rule Trojan_Win32_Cobaltstrike_DF_2147798701_1
         $x_1_1 = {8a 04 07 89 7d f8 8b 7d fc 88 04 3e 8b c7 8b 7d f8 88 0c 07 0f b6 04 06 8b 4d fc 03 c2 8b 7d f4 0f b6 c0 8a 04 08 32 04 1f 88 03 43 83 6d 0c 01 8b c1 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -335,6 +349,7 @@ rule Trojan_Win32_Cobaltstrike_ROX_2147811089_0
         $x_1_11 = "$fe53e141-8812-490f-ae7a-5627a794092e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -356,6 +371,7 @@ rule Trojan_Win32_Cobaltstrike_SMLL_2147817424_0
         $x_1_1 = {6b d2 0a 8b c0 0f b6 08 83 e9 30 40 03 d1 80 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -377,6 +393,7 @@ rule Trojan_Win32_Cobaltstrike_UIP_2147818082_0
         $x_1_1 = {41 8b c3 44 88 1a 41 ff c3 83 e0 03 49 83 c0 04 48 ff c2 45 3b d9 0f b6 04 08 41 89 40 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -398,6 +415,7 @@ rule Trojan_Win32_Cobaltstrike_APS_2147819228_0
         $x_1_1 = {66 39 18 75 51 bb ?? ?? ?? ?? 66 39 58 02 75 46 bb ?? ?? ?? ?? 66 39 58 04 75 3b bb ?? ?? ?? ?? 66 39 58 06 75 30 bb ?? ?? ?? ?? 66 39 58 08 75 25 bb ?? ?? ?? ?? 66 39 58 0a 75 1a bb 73 73 00 00 66 39 58 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -419,6 +437,7 @@ rule Trojan_Win32_Cobaltstrike_VA_2147819229_0
         $x_1_1 = {8b 44 24 10 50 52 8b 54 24 10 52 8b 54 24 10 52 8b 0d 4c 30 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -440,6 +459,7 @@ rule Trojan_Win32_Cobaltstrike_EF_2147823613_0
         $x_1_1 = {01 02 6a 00 e8 ?? ?? ?? ?? 8b 5d d8 03 5d b0 03 5d e8 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 89 5d b4 8b 45 b4 8b 55 ec 31 02 83 45 e8 04 83 45 ec 04 8b 45 e8 3b 45 e4 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +481,7 @@ rule Trojan_Win32_Cobaltstrike_EG_2147826285_0
         $x_1_1 = {48 8b 44 24 ?? 48 63 54 24 ?? 0f be 0c 10 8b 44 24 ?? 41 b9 ?? ?? ?? ?? 99 41 f7 f9 83 c2 ?? 31 d1 48 63 44 24 ?? 41 88 0c 00 8b 44 24 ?? 83 c0 01 89 44 24 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -483,6 +504,7 @@ rule Trojan_Win32_Cobaltstrike_EH_2147827769_0
         $x_1_2 = {03 d8 8b 45 ec 31 18 83 45 e8 04 83 45 ec 04 8b 45 e8 3b 45 e4 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -504,6 +526,7 @@ rule Trojan_Win32_Cobaltstrike_EI_2147828054_0
         $x_1_1 = {03 d8 8b 45 ec 89 18 8b 45 d8 03 45 b0 03 45 e8 89 45 b4 8b 45 b4 8b 55 ec 31 02 83 45 e8 04 83 45 ec 04 8b 45 e8 3b 45 e4 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -526,6 +549,7 @@ rule Trojan_Win32_Cobaltstrike_EJ_2147828202_0
         $x_1_2 = {41 f7 ea c1 fa ?? 89 c8 c1 f8 ?? 29 c2 89 d0 c1 e0 ?? 8d 14 50 41 29 d1 4d 63 c9 48 8b 05 ?? ?? ?? ?? 42 0f b6 04 08 32 44 0c ?? 41 88 04 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -547,6 +571,7 @@ rule Trojan_Win32_Cobaltstrike_EK_2147828954_0
         $x_1_1 = {89 02 8b 45 c4 03 45 a4 03 45 9c 2b 45 9c 89 45 a0 8b 45 d8 8b 00 8b 55 a0 03 55 9c 2b 55 9c 33 c2 89 45 a0 8b 45 a0 03 45 9c 2b 45 9c 8b 55 d8 89 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -568,6 +593,7 @@ rule Trojan_Win32_Cobaltstrike_FG_2147832375_0
         $x_1_1 = {8b 45 fc 33 d2 f7 75 0c 8b 45 08 0f be 14 10 33 ca 8b 45 10 03 45 fc 88 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -589,6 +615,7 @@ rule Trojan_Win32_Cobaltstrike_RPP_2147837292_0
         $x_1_1 = {29 c1 89 c8 0f af 45 e4 01 d0 89 c2 8b 45 d8 01 d0 0f b6 00 31 f0 88 03 83 45 e0 01 83 45 e4 01 8b 45 e0 3b 45 0c 0f 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -610,6 +637,7 @@ rule Trojan_Win32_Cobaltstrike_RPT_2147838987_0
         $x_1_1 = {8b 44 24 70 29 c6 c6 00 e9 83 ee 05 89 70 01 8b 44 24 78 8b 74 24 1c 89 30 8b 44 24 30 89 5c 24 0c 89 44 24 08 8b 44 24 70 c7 44 24 04 05 00 00 00 89 04 24 8b 44 24 18 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -631,6 +659,7 @@ rule Trojan_Win32_Cobaltstrike_SB_2147839735_0
         $x_1_1 = {88 1c 01 ff 46 ?? 8b 86 ?? ?? ?? ?? 03 46 ?? 35 ?? ?? ?? ?? 29 46 ?? 8b 86 ?? ?? ?? ?? 01 46 ?? 8b 46 ?? 31 46 ?? b8 ?? ?? ?? ?? 2b 86 ?? ?? ?? ?? 2b 86 ?? ?? ?? ?? 01 46 ?? 8b 86}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -652,6 +681,7 @@ rule Trojan_Win32_Cobaltstrike_RPR_2147840901_0
         $x_1_1 = {31 d2 8d 76 00 0f b6 04 0a 88 04 1a 42 84 c0 75 f4 8b 35 28 80 40 00 85 f6 87 d0 c1 c9 03 33 c7 c1 cb 17 2b d4 03 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -673,6 +703,7 @@ rule Trojan_Win32_Cobaltstrike_RPZ_2147844737_0
         $x_1_1 = {0f b6 44 3c 18 8a cb 88 44 24 19 88 4c 3c 18 8a 5c 24 19 0f b6 c1 0f b6 fb 03 c7 0f b6 c0 0f b6 44 04 18 30 84 34 18 02 00 00 0f b6 84 34 18 02 00 00 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -694,6 +725,7 @@ rule Trojan_Win32_Cobaltstrike_RPY_2147848252_0
         $x_1_1 = {8d 45 e0 31 f6 89 75 e0 89 44 24 0c c7 44 24 08 40 00 00 00 89 5c 24 04 8b 45 08 89 04 24 a1 ?? ?? ?? ?? 89 45 d4 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -715,6 +747,7 @@ rule Trojan_Win32_Cobaltstrike_RPX_2147898621_0
         $x_1_1 = {57 8d 45 f8 50 ff 36 ff d3 3d ?? ?? ?? ?? 74 2c 83 c6 04 83 c7 06 81 fe ?? ?? ?? ?? 7c e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -736,6 +769,7 @@ rule Trojan_Win32_Cobaltstrike_GPA_2147900404_0
         $x_4_1 = {83 c4 04 89 45 e8 33 d2 85 db 74 26 8b 75 e0 8b f8 90 8b c2 8b ca c1 e8 02 83 e1 03 c1 e1 03 8b 04 86 d3 e8 88 04 3a 42 3b d3}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -767,6 +801,7 @@ rule Trojan_Win32_Cobaltstrike_AMBE_2147903002_0
         $x_1_11 = "[+] Memory Allocated" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -789,6 +824,7 @@ rule Trojan_Win32_Cobaltstrike_HD_2147903125_0
         $x_1_2 = {43 6c 65 61 6e 55 70 2e 64 6c 6c 00 43 6c 65 61 6e 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -810,6 +846,7 @@ rule Trojan_Win32_Cobaltstrike_HE_2147903826_0
         $x_10_1 = {39 c6 7e 17 48 89 c2 83 e2 07 41 8a 14 16 41 32 54 05 00 88 14 03 48 ff c0 eb e5}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -838,6 +875,7 @@ rule Trojan_Win32_Cobaltstrike_HI_2147907429_0
         $x_1_8 = {54 68 69 73 20 70 72 00 6f 67 72 61 6d 20 63 61 00 6e 6e 6f 74 20 62 65 20 00 72 75 6e 20 69 6e 20 44 00 4f 53 20 6d 6f 64 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -859,6 +897,7 @@ rule Trojan_Win32_Cobaltstrike_AJS_2147924457_0
         $x_1_1 = {0f b6 c9 03 ca 81 e1 ff 00 00 80 79 08 49 81 c9 00 ff ff ff 41 0f b6 4c 0c 0c 30 0c 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

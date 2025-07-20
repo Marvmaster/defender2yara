@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Farfli_D_2147643549_0
         $x_4_4 = {55 5d 90 90 41 49 90 90 90 90 41 49 90 41 49 80 3e 00}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDropper_Win32_Farfli_G_2147685393_0
         $x_1_7 = {5b 72 75 6e 5f 41 64 64 52 65 67 5d ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 5c 52 75 6e 22 2c 22 55 70 64 61 74 65 22 2c 2c 22 72 75 6e 64 6c 6c 33 32 2e 65 78 65 20 22 22}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule TrojanDropper_Win32_Farfli_J_2147722428_0
         $x_1_4 = "DQY97XGB5iZ4Vf3KsEt61HLoTOuIqJPp2AlncRCgSxUWyebhMdmzvFjNwka=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

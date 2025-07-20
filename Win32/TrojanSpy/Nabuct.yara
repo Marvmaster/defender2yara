@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Nabuct_A_2147636729_0
         $x_1_6 = {47 6c 6f 62 61 6c 5c 70 72 65 63 73 61 67 70 63 77 63 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

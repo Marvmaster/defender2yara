@@ -18,6 +18,7 @@ rule Trojan_Win32_Risnopyx_A_2147685011_0
         $x_1_4 = {8b 44 24 08 8b 4c 24 04 6a 00 6a 00 6a 00 6a 00 6a 00 50 51 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

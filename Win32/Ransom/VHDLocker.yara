@@ -18,6 +18,7 @@ rule Ransom_Win32_VHDLocker_SK_2147752806_0
         $x_5_3 = "c:/data/prj/test" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))

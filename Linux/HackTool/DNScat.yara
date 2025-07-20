@@ -17,6 +17,7 @@ rule HackTool_Linux_DNScat_A_2147818284_0
         $x_2_3 = "Starting: /bin/sh -c" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

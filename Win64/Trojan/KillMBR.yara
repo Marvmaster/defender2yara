@@ -16,6 +16,7 @@ rule Trojan_Win64_KillMBR_RPJ_2147838256_0
         $x_1_1 = {ff 15 6d 1d 00 00 48 63 c3 f0 80 34 38 23 ff c3 81 fb ff 01 00 00 72 e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win64_KillMBR_RPX_2147846027_0
         $x_1_6 = "ll.df" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win64_KillMBR_EM_2147847658_0
         $x_1_7 = "I am virus! Fuck you" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Trojan_Win64_KillMBR_EM_2147847658_1
         $x_1_6 = "taskkill /f /im explorer.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Trojan_Win64_KillMBR_ARA_2147914690_0
         $x_2_2 = "\\\\.\\PhysicalDrive0" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -140,6 +145,7 @@ rule Trojan_Win64_KillMBR_ARA_2147914690_1
         $x_2_3 = "\\\\.\\PhysicalDrive0" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +168,7 @@ rule Trojan_Win64_KillMBR_NM_2147917704_0
         $x_1_2 = "APM 08279+5255.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

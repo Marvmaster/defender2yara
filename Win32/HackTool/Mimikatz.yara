@@ -21,6 +21,7 @@ rule HackTool_Win32_Mimikatz_A_2147720186_0
         $x_1_6 = "logonPasswords" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule HackTool_Win32_Mimikatz_A_2147720186_1
         $x_1_11 = "credman" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -164,6 +166,7 @@ rule HackTool_Win32_Mimikatz_B_2147727944_0
         $x_1_4 = "SELECT id FROM moz_historyvisits ORDER BY id" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -186,6 +189,7 @@ rule HackTool_Win32_Mimikatz_C_2147729502_0
         $x_10_3 = {64 00 65 00 6c 00 65 00 74 00 69 00 6e 00 67 00 20 00 43 00 3a 00 5c 00 57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 5c 00 54 00 65 00 6d 00 70 00 5c 00 64 00 65 00 62 00 75 00 67 00 2e 00 62 00 69 00 6e 00 0a 00 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -273,6 +277,7 @@ rule HackTool_Win32_Mimikatz_D_2147729891_0
         $x_1_11 = "samenumerateusersindomain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -336,6 +341,7 @@ rule HackTool_Win32_Mimikatz_E_2147730094_0
         $x_1_7 = "_NetServerTrustPasswordsGet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -408,6 +414,7 @@ rule HackTool_Win32_Mimikatz_F_2147739704_0
         $x_1_1 = "sekurlsa::logonpasswords exit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -433,6 +440,7 @@ rule HackTool_Win32_Mimikatz_G_2147739705_0
         $x_1_6 = "image_nt_optional_hdr64_magic', [uint16] 0x20b)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -460,6 +468,7 @@ rule HackTool_Win32_Mimikatz_PTHA_2147739982_0
         $x_1_4 = "/ntlm:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -492,6 +501,7 @@ rule HackTool_Win32_Mimikatz_H_2147740641_0
         $x_1_10 = "acquirecredentialshandle:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -695,6 +705,7 @@ rule HackTool_Win32_Mimikatz_G_2147781483_0
         $x_1_3 = {83 7c 24 04 03 75 [0-48] 59 59 85 c0 75 10 33 c0 50 50 50 68 85 04 00 00 ff 15 [0-8] 33 c0 c2 08 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -718,6 +729,7 @@ rule HackTool_Win32_Mimikatz_G_2147781483_1
         $x_1_3 = {8b 85 48 ff ff ff 35 2c 17 5a e3 89 06 0f 84 ?? ?? ?? ?? 6a 08 8d 45 ec 8b d6 5b 53 8d 4d f8 89 45 f8 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -825,6 +837,7 @@ rule HackTool_Win32_Mimikatz_H_2147784024_0
         $x_1_4 = {68 69 77 69 6b ff 75 ec ff 15 ?? ?? ?? ?? 5b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -849,6 +862,7 @@ rule HackTool_Win32_Mimikatz_H_2147784024_1
         $x_1_4 = {c6 45 e0 8b c6 45 e1 5c c6 45 e2 24 c6 45 e3 18 c6 45 e4 8b c6 45 e5 13 c7 45 d0 06 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -873,6 +887,7 @@ rule HackTool_Win32_Mimikatz_H_2147784024_2
         $x_1_4 = "lsasrv!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -896,6 +911,7 @@ rule HackTool_Win32_Mimikatz_SA_2147785072_0
         $x_10_4 = {ba dc 0f fe eb ad be fd ea db ab ef ac e8 ac dc}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
@@ -920,6 +936,7 @@ rule HackTool_Win32_Mimikatz_NPTT_2147787347_0
         $x_1_1 = {6b 65 72 62 65 72 6f 73 3a 3a 70 74 74 20 90 02 40 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -940,6 +957,7 @@ rule HackTool_Win32_Mimikatz_NPTT_2147787347_1
         $x_1_1 = "sekurlsa::tickets /export" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -962,6 +980,7 @@ rule HackTool_Win32_Mimikatz_NPTT_2147787347_2
         $x_1_3 = "/domain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -987,6 +1006,7 @@ rule HackTool_Win32_Mimikatz_NPTT_2147787347_3
         $x_1_3 = "/domain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1015,6 +1035,7 @@ rule HackTool_Win32_Mimikatz_NPTT_2147787347_4
         $x_1_6 = {6b 65 72 62 65 72 6f 73 3a 3a 70 74 74 20 ?? 3a 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1056,6 +1077,7 @@ rule HackTool_Win32_Mimikatz_ESN_2147787348_0
         $x_1_22 = "[%x;%x]-%1u-%u-%08x-%wZ@%wZ-%wZ.%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_9_*) and 1 of ($x_1_*))) or

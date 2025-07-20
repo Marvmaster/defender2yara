@@ -20,6 +20,7 @@ rule Ransom_Win32_Cobra_AA_2147756840_0
         $x_1_5 = "Cobra_Locker" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win32_Cobra_AB_2147759078_0
         $x_1_4 = "Cobra_Locker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

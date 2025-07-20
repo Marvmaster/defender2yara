@@ -26,6 +26,7 @@ rule Trojan_Win32_Gophe_A_2147691490_0
         $x_3_12 = {8d 70 08 8d 64 24 00 8b f9 c1 ef 1e 33 cf 69 c9 ?? ?? ?? ?? 03 ca 89 0e 42 83 c6 04 81 fa 70 02 00 00 7c e3}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or

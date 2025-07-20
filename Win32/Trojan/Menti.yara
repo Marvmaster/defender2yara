@@ -18,6 +18,7 @@ rule Trojan_Win32_Menti_GNE_2147924859_0
         $x_1_3 = "file.tky" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

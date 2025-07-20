@@ -24,6 +24,7 @@ rule Trojan_MSIL_Asbit_SP_2147837217_0
         $x_1_9 = "aHR0cHM6Ly9yZGxpdGUuY29tLw==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_MSIL_Asbit_HNS_2147906774_0
         $x_2_4 = "GetRuntimeDirectory" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_MyloBot_RDB_2147838457_0
         $x_2_1 = {0f b6 0e 33 ca 81 e1 ff 00 00 00 c1 ea 08 33 14 8d ?? ?? ?? ?? 46 48 75 ?? 8b c7 8b da}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_MyloBot_RDA_2147838555_0
         $x_2_4 = {0f b6 06 33 c1 c1 e9 08 0f b6 c0 33 0c 85 ?? ?? ?? ?? 46 83 ea 01}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_MyloBot_A_2147896852_0
         $x_2_4 = "HTTP/1.0 200" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

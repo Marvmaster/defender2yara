@@ -20,6 +20,7 @@ rule Trojan_Win32_MassLogger_A_2147758691_0
         $x_1_5 = "Keylogger And Clipboard" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

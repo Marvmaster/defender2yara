@@ -20,6 +20,7 @@ rule Backdoor_Win32_Meac_A_2147683679_0
         $x_4_6 = {4b 56 53 72 76 58 50 2e 65 78 65 00 73 79 73 74 65 6d 5c 66 78 73 73 74 2e 64 6c 6c}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))

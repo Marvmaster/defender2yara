@@ -19,6 +19,7 @@ rule Backdoor_Win32_Lukicsel_C_2147626935_0
         $x_1_5 = {e8 00 00 00 00 59 83 c1 ?? c1 (e0|e8) 03 01 c1 ff d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -49,6 +50,7 @@ rule Backdoor_Win32_Lukicsel_A_2147626996_0
         $x_1_7 = "/gwc.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -76,6 +78,7 @@ rule Backdoor_Win32_Lukicsel_B_2147626998_0
         $x_1_4 = {53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 41 63 74 69 76 65 20 53 65 74 75 70 5c 44 61 74 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

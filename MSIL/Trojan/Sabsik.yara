@@ -20,6 +20,7 @@ rule Trojan_MSIL_Sabsik_FGR_2147781621_0
         $x_3_5 = "lpProcessInformation" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_MSIL_Sabsik_FTR_2147781622_0
         $x_3_5 = "INIFiles" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_MSIL_Sabsik_DB_2147797341_0
         $x_1_4 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

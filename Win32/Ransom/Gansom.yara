@@ -16,6 +16,7 @@ rule Ransom_Win32_Gansom_AB_2147751378_0
         $x_1_1 = "repos\\ransomlol\\ransomlol\\obj\\Debug\\ransomlol.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Gansom_AC_2147752468_0
         $x_1_5 = "Desine sperare qui hic intras!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

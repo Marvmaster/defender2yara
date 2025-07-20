@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_NetWired_SIB_2147812261_0
         $x_1_3 = {f7 e2 c1 e8 ?? 89 d1 81 e2 ?? ?? ?? ?? c1 e9 ?? 8d 14 92 01 c2 89 c8 83 c8 ?? 88 07 89 d0 83 f9 01 83 df ff c1 e8 ?? 81 e2 ?? ?? ?? ?? 09 c1 83 c8 ?? 88 07 8d 04 92 8d 14 92 83 f9 01 83 df ff c1 e8 ?? 81 e2 ?? ?? ?? ?? 09 c1 83 c8 ?? 88 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

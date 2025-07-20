@@ -19,6 +19,7 @@ rule Worm_Win32_Nerphun_A_2147652681_0
         $x_1_4 = "Hey !! mira esta postal que encontre para ti :$ http" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

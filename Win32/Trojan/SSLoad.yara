@@ -17,6 +17,7 @@ rule Trojan_Win32_SSLoad_DA_2147908026_0
         $x_1_2 = {33 d2 c7 45 [0-5] 8b c6 8d 0c 3e f7 75 ?? 03 d3 8a 44 15 ?? 8b 55 ?? 32 04 11 46 88 01 81 fe ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_SSLoad_ZZ_2147911677_0
         $x_1_2 = "POST*/*HTTP/1.1Content-Type: application/json" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

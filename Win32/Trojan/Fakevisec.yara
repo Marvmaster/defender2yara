@@ -17,6 +17,7 @@ rule Trojan_Win32_Fakevisec_149091_0
         $x_1_3 = "You have 11 viruses!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Bandit_DSK_2147742757_0
         $x_1_3 = {e9 05 00 00 0f 84 ?? ?? ?? ?? ?? ?? 80 e2 fc c0 e2 04 08 95 e9 ef ff ff 83 ?? 2c 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Bandit_YP_2147748135_0
         $x_1_1 = {8b 44 24 18 81 c6 47 86 c8 61 ff 4c 24 1c 8b 4c 24 14 ?? ?? ?? ?? ?? ?? 8b 74 24 2c 89 3e 81 fa 6d 0a 00 00 75 06 00 8b 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Bandit_MP_2147749276_0
         $x_1_1 = {50 56 ff 15 ?? ?? ?? ?? 8b 4c 24 70 8b 54 24 1c 89 35 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 8b f7 c1 ee 05 03 74 24 68 03 d9 03 d7 33 da 81 3d ?? ?? ?? ?? 72 07 00 00 75 53}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Bandit_GA_2147749288_0
         $x_1_2 = {3d 82 03 00 00 75 ?? 57 57 57 ff 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 8a 8c 31 f5 d0 00 00 8b 15 ?? ?? ?? ?? 88 0c 32 46 3b f0 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule Trojan_Win32_Bandit_DHB_2147750038_0
         $x_1_2 = {8b f7 d3 e7 c1 ee 05 03 74 24 ?? 03 7c 24 ?? 33 f8 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 75 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -125,6 +130,7 @@ rule Trojan_Win32_Bandit_DHC_2147750039_0
         $x_1_1 = {2b f8 8b 44 24 ?? d1 6c 24 ?? 29 44 24 ?? ff 4c 24 ?? 0f 85 ?? ?? ?? ?? 81 3d ?? ?? ?? ?? 61 01 00 00 5b 75 14 55 55 ff 15 ?? ?? ?? ?? 55 55 55 55 55 55 ff 15 ?? ?? ?? ?? 8b 44 24 ?? 89 38 5f 89 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +153,7 @@ rule Trojan_Win32_Bandit_GB_2147750169_0
         $x_1_2 = {83 c1 01 89 8d ?? ?? ?? ?? 81 bd ?? ?? ?? ?? 1c 86 0d 00 7d ?? 81 bd ?? ?? ?? ?? 7c 87 02 00 75 ?? e8 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +176,7 @@ rule Trojan_Win32_Bandit_GC_2147751363_0
         $x_1_2 = {8b cb 89 44 24 10 8d 04 1f c1 e9 05 03 4c 24 3c 89 44 24 1c 89 35 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 8b 44 24 1c 31 44 24 10 81 3d ?? ?? ?? ?? 72 07 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

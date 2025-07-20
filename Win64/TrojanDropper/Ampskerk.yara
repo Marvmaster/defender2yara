@@ -18,6 +18,7 @@ rule TrojanDropper_Win64_Ampskerk_B_2147693035_0
         $x_3_3 = {c7 44 24 70 25 53 79 73 c7 84 24 88 00 00 00 63 68 6f 73 c7 44 24 74 74 65 6d 52 c7 44 24 78 6f 6f 74 25 c7 84 24 94 00 00 00 20 6e 65 74 c7 44 24 7c 5c 53 79 73 c7 84 24 80 00 00 00 74 65 6d 33 c7 84 24 90 00 00 00 65 20 2d 6b c7 84 24 84 00 00 00 32 5c 73 76 c7 84 24 8c 00 00 00 74 2e 65 78}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

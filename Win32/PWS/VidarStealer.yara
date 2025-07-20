@@ -26,6 +26,7 @@ rule PWS_Win32_VidarStealer_KMG_2147772809_0
         $x_1_11 = "multidoge.wallet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule PWS_Win32_VidarStealer_MR_2147772985_0
         $x_1_1 = {30 04 39 81 [0-5] 47 3b fb 81 fb [0-4] e8 [0-4] 8b 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule PWS_Win32_VidarStealer_MS_2147773175_0
         $x_1_1 = {30 04 31 81 fb ?? ?? ?? ?? 46 3b f3 81 fb ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule PWS_Win32_VidarStealer_2147773309_0
         $x_1_1 = {30 04 31 83 fb ?? 46 3b f3 81 fb [0-4] e8 [0-4] 8b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule PWS_Win32_VidarStealer_MU_2147777568_0
         $x_1_12 = "files\\outlook.txtfiles\\\\outlook.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

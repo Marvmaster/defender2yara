@@ -18,6 +18,7 @@ rule Ransom_Win32_PowerRanges_A_2147853359_0
         $x_1_3 = "powerranges" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

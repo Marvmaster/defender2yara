@@ -18,6 +18,7 @@ rule Trojan_Win32_Tasker_CB_2147805531_0
         $x_2_3 = "atom.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Tasker_A_2147827693_0
         $x_1_1 = {8a 49 02 49 81 e9 06 00 00 00 49 63 d2 44 0f ab fa 66 44 0f ac f2 9f 66 41 d3 e0 0f b7 d7 49 0f bf d0 66 45 89 41 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Tasker_A_2147827693_1
         $x_1_2 = "tg167AA750" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_Tasker_BJ_2147828067_0
         $x_2_2 = {33 c1 89 44 24 10 8b 54 24 10 89 54 24}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule Trojan_Win32_Tasker_GDA_2147838974_0
         $x_10_1 = {32 4c 24 13 8b 4c 24 18 80 64 24 10 2e c6 44 24 10 4e 81 6c 24 10 65 55 a3 0d 31 74 24 10 c7 44 24 10 c0 79 43 59 33 74 24 10 23 74 24 10 0f 90 44 24 10 0f 9c 44 24 10 66 3b 74 24 11}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule Trojan_Win32_Tasker_HB_2147839490_0
         $x_1_8 = "CDebugger detected" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +161,7 @@ rule Trojan_Win32_Tasker_GB_2147846991_0
         $x_1_3 = {e0 00 02 01 0b 01 0e 22 00 b4 02 00 00 a4 08 00 00 00 00 00 78 94 49}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule Trojan_Win32_Tasker_GNQ_2147851891_0
         $x_10_1 = {8b 45 fc 83 c0 ?? 89 45 fc 8b 4d fc 3b 4d 0c 7d ?? ?? ?? ?? ?? e8 ?? ?? ?? ?? 55 fc 0f b6 02 83 f0 1e 8b 4d 08 03 4d fc 88 01 eb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +205,7 @@ rule Trojan_Win32_Tasker_BAA_2147944119_0
         $x_2_1 = {5a 2b d0 31 13 83 45 ec 04 83 c3 04 8b 45 ec 3b 45 dc 72}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +229,7 @@ rule Trojan_Win32_Tasker_LM_2147946818_0
         $x_5_3 = {33 c0 01 1e 8b 7d d8 03 7d a4 03 fb 03 f8 c7 45 b8 89 15 00 00 6a 00 e8 ?? ?? ?? ?? 03 7d b8 81 ef 89 15 00 00 2b f8 6a 00 e8 ?? ?? ?? ?? 2b f8 6a 00 e8 ?? ?? ?? ?? 2b f8 31 3e 83 c3 04 83 c6 04 3b 5d e0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

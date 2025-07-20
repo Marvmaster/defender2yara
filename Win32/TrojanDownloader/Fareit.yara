@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Fareit_A_2147655426_0
         $x_1_3 = {6a 00 6a 01 8b 45 e0 50 ff 55 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -68,6 +68,7 @@ rule Trojan_MSIL_FoxyBooks_B_2147812960_0
         $x_1_53 = "juerd@msn.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or

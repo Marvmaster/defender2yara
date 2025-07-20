@@ -16,6 +16,7 @@ rule VirTool_MSIL_Binder_B_2147633329_0
         $x_1_2 = {41 6e 74 69 56 69 72 74 75 61 6c 50 43 00 41 6e 74 69 56 69 72 74 75 61 6c 42 6f 78 00 41 6e 74 69 56 6d 57 61 72 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

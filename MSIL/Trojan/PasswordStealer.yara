@@ -27,6 +27,7 @@ rule Trojan_MSIL_PasswordStealer_PA_2147752176_0
         $x_1_12 = "Graber From" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -26,6 +26,7 @@ rule Trojan_Win32_Tarifarch_E_2147680946_0
         $x_1_12 = "confirmationCode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -55,6 +56,7 @@ rule Trojan_Win32_Tarifarch_I_2147680947_0
         $x_1_7 = "/rebill/unsubscr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -83,6 +85,7 @@ rule Trojan_Win32_Tarifarch_P_2147680948_0
         $x_1_5 = "epCodeKeyPress" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -111,6 +114,7 @@ rule Trojan_Win32_Tarifarch_V_2147680949_0
         $x_1_6 = "RER656756345634" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -136,6 +140,7 @@ rule Trojan_Win32_Tarifarch_X_2147680950_0
         $x_1_3 = {15 62 74 6e 53 75 62 73 63 72 69 70 74 69 6f 6e 73 43 6c 69 63 6b 17 00 ?? ?? ?? ?? 10 6f 6e 4b 63 61 70 74 63 68 61 52 65 6c 6f 61 64 1b 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +164,7 @@ rule Trojan_Win32_Tarifarch_Y_2147680951_0
         $x_1_4 = "onSubscriptionNumberChange" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +189,7 @@ rule Trojan_Win32_Tarifarch_T_2147680952_0
         $x_1_5 = {4f 7a 77 38 4e 51 3d 3d 00 00 00 00 7a 50 7a 67 36 65 48 6b 38 77 3d 3d 00 00 00 00 53 6b 6f 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -209,6 +216,7 @@ rule Trojan_Win32_Tarifarch_U_2147680953_0
         $x_1_4 = {8b 45 08 05 ?? ?? 00 00 2d ?? 00 00 c0 83 c0 ?? 03 45 f4 89 45 fc 6a 40 68 00 30 00 00 ff 35 00 30 40 00 33 c0 50 a1 ?? ?? 40 00 05 08 10 11 c0 2b 45 f4 2d 00 10 11 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +241,7 @@ rule Trojan_Win32_Tarifarch_Q_2147680954_0
         $x_1_5 = "UnlockFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -261,6 +270,7 @@ rule Trojan_Win32_Tarifarch_J_2147680955_0
         $x_1_9 = "smstariffs.ru" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -289,6 +299,7 @@ rule Trojan_Win32_Tarifarch_K_2147680956_0
         $x_1_6 = "Release\\arc_2005.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*))) or
             (all of ($x*))
@@ -314,6 +325,7 @@ rule Trojan_Win32_Tarifarch_L_2147680957_0
         $x_1_3 = "mePhoneNumber" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -340,6 +352,7 @@ rule Trojan_Win32_Tarifarch_M_2147680958_0
         $x_10_7 = "/ccdev2.ru/" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -375,6 +388,7 @@ rule Trojan_Win32_Tarifarch_N_2147680959_0
         $x_1_12 = {14 ff a6 58 38 91 92 47 2d 64 78 37 30 6b 5e 2c 2e 6a 62 31 2e 83}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*))) or
             ((1 of ($x_100_*))) or
@@ -401,6 +415,7 @@ rule Trojan_Win32_Tarifarch_O_2147680960_0
         $x_1_3 = "://helpprice.i" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -428,6 +443,7 @@ rule Trojan_Win32_Tarifarch_W_2147680961_0
         $x_2_8 = {12 04 4b 04 20 00 34 04 3e 04 3b 04 36 04 3d 04 4b 04 20 00 41 04 3e 04 33 04 3b 04 30 04 41 04 38 04 42 04 4c 04 41 04 4f 04 20 00 41 04 20 00 3f 04 40 04 30 04 32 04 38 04 3b 04 30 04 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -460,6 +476,7 @@ rule Trojan_Win32_Tarifarch_Z_2147680962_0
         $x_1_9 = "lSwitchToNormalSmsMode1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -491,6 +508,7 @@ rule Trojan_Win32_Tarifarch_S_2147680963_0
         $x_1_9 = "confirmationCode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -529,6 +547,7 @@ rule Trojan_Win32_Tarifarch_F_2147680964_0
         $x_10_19 = "confirmationCodeKeyPress" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             ((5 of ($x_10_*))) or
@@ -557,6 +576,7 @@ rule Trojan_Win32_Tarifarch_G_2147680965_0
         $x_1_5 = "onKeyPressValidateNumber" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -585,6 +605,7 @@ rule Trojan_Win32_Tarifarch_H_2147680966_0
         $x_1_5 = " 3339  life :); MTC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -607,6 +628,7 @@ rule Trojan_Win32_Tarifarch_AO_2147710833_0
         $x_1_3 = "&mtid=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

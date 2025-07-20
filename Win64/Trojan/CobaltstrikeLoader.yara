@@ -17,6 +17,7 @@ rule Trojan_Win64_CobaltstrikeLoader_LKAM_2147888312_0
         $x_1_2 = "github.com/latortuga71/GoPeLoader/pkg/peloader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win32_Ragzil_B_2147851616_0
         $x_1_6 = "pump_file" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Ragzil_C_2147851649_0
         $x_1_5 = "\\utils.rs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

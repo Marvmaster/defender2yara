@@ -18,6 +18,7 @@ rule Trojan_MSIL_Renerez_AKV_2147752803_0
         $x_1_3 = "Go2Crck@Team" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

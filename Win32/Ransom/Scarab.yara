@@ -17,6 +17,7 @@ rule Ransom_Win32_Scarab_PA_2147745757_0
         $x_1_2 = {a4 49 75 fc 33 c9 0b 0c 24 83 c4 04 33 ff 8b 3c 24 83 ec fc 6a 00 89 04 24 33 c0 33 c7 8b f0 58 56 29 34 24 31 1c 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

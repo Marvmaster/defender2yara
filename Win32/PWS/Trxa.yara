@@ -17,6 +17,7 @@ rule PWS_Win32_Trxa_A_2147684737_0
         $x_1_3 = {8a 07 3c 2d 74 36 3c 5f 74 32 3c 2e 74 2e 3c 7e 74 2a 3c 20 75 05 c6 06 2b eb 25}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

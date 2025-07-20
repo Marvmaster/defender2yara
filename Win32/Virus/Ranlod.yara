@@ -24,6 +24,7 @@ rule Virus_Win32_Ranlod_A_2147600141_0
         $x_20_9 = "*.exe" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 5 of ($x_20_*))) or
             ((3 of ($x_100_*))) or

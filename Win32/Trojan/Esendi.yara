@@ -20,6 +20,7 @@ rule Trojan_Win32_Esendi_D_2147730990_0
         $x_10_6 = {8b 8e 80 13 00 00 33 4e 04 81 e1 ff ff ff 7f 33 8e 80 13 00 00 8b c1 24 01 0f b6 c0 f7 d8 5f 1b c0 d1 e9 25 df b0 08 99 33 86 34 06 00 00 33 c1}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*))) or
             ((1 of ($x_20_*) and 3 of ($x_10_*))) or

@@ -16,6 +16,7 @@ rule Trojan_Win32_Chomioy_A_2147627393_0
         $x_1_2 = "WinCE3.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

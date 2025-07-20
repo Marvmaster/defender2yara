@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Juloft_A_2147625312_0
         $x_1_4 = "about.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_Win32_Juloft_A_2147625312_1
         $x_1_4 = "sc config CiSvc start= auto" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule TrojanDownloader_Win32_Juloft_A_2147625312_2
         $x_1_10 = "TCConfig.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*) and 2 of ($x_10_*))) or

@@ -19,6 +19,7 @@ rule HackTool_Win32_keylogger_2147621731_0
         $x_1_5 = {4d 00 61 00 69 00 6c 00 20 00 4f 00 72 00 67 00 61 00 6e 00 74 00 69 00 6f 00 6e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_OnLineGames_C_2147679078_0
         $x_1_6 = "txx|B//" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

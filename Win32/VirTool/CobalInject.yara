@@ -23,6 +23,7 @@ rule VirTool_Win32_CobalInject_A_2147915425_0
         $n_1_8 = "EventObjectSha256" ascii //weight: -1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }

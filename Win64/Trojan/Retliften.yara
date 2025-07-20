@@ -26,6 +26,7 @@ rule Trojan_Win64_Retliften_A_2147782827_0
         $x_1_12 = "EnableLegacyAutoProxyFeatures" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_3_*) and 2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_6_*) and 2 of ($x_3_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or

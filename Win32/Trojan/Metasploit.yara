@@ -16,6 +16,7 @@ rule Trojan_Win32_Metasploit_CBU_2147851495_0
         $x_1_1 = {8b 45 d4 01 d0 0f b6 00 31 c1 89 ca 8d 8d 97 fb ff ff 8b 45 d0 01 c8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Metasploit_AMAA_2147898995_0
         $x_1_1 = {83 eb fc 31 43 10 03 43 10 e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Metasploit_PAEV_2147913708_0
         $x_1_6 = "Press enter to unhook the function and exit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_Metasploit_PAFV_2147924782_0
         $x_2_3 = ".\\exploit.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

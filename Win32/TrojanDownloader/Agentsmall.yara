@@ -15,6 +15,7 @@ rule TrojanDownloader_Win32_Agentsmall_I_2147804022_0
         $x_1_1 = {81 f2 87 1b 01 14 66 8b 30 66 46 66 89 30 43 81 e2 72 73 35 0b 66 8b 10 66 42 66 89 10 46 40 81 f7 c4 f5 4a 2b 40 81 e6 aa e8 25 1a bb 76 53 40 00 3b d8 75 cb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

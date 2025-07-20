@@ -21,6 +21,7 @@ rule Ransom_Win32_Basta_C_2147818215_0
         $x_2_7 = "Done time: %.4f seconds, encrypted: %.4f gb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule Ransom_Win32_Basta_AA_2147818219_0
         $x_10_2 = {8b 7d 08 be 01 00 00 00 c6 07 69 8d 45 08 50 e8 ?? ?? ?? ?? 8a 45 08 83 c4 04 88 04 3e 46 83 fe 28 72 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Ransom_Win32_Basta_AA_2147819836_0
         $x_1_6 = "fg122.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Ransom_Win32_Basta_D_2147832075_0
         $x_1_2 = {66 67 31 32 32 2e 44 ?? 4c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Ransom_Win32_Basta_SA_2147834261_0
         $x_1_7 = "-forcepath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -147,6 +152,7 @@ rule Ransom_Win32_Basta_AB_2147834343_0
         $x_10_3 = {2b c2 d1 f8 83 f8 ff 0f 84 ?? ?? ?? ?? 85 c0 0f 84 ?? ?? ?? ?? 2b f0 83 fe 03 [0-6] 83 ff 08 8d 4d d4 68 ?? ?? ?? ?? 0f 43 cb 83 c1 02 8d 34 41 56 e8 ?? ?? ?? ?? 83 c4 08 85 c0 74 ?? 68 ?? ?? ?? ?? 56 e8 ?? ?? ?? ?? 83 c4 08 85 c0 74 ?? 68 ?? ?? ?? ?? 56 e8 ?? ?? ?? ?? 83 c4 08 85 c0 74 ?? 68 ?? ?? ?? ?? 56 e8 ?? ?? ?? ?? 83 c4 08 85 c0 74}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +175,7 @@ rule Ransom_Win32_Basta_PA_2147835064_0
         $x_1_2 = {d3 fa 88 55 ?? 8b 8d ?? ?? ?? ?? 8b 11 8b 4d dc d3 e2 89 95 ?? ?? ?? ?? 8b 45 d0 33 45 b8 89 85 ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 8b 11 23 55 d4 8b 45 c4 89 10 8b 0d ?? ?? ?? ?? 8b 55 d4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -193,6 +200,7 @@ rule Ransom_Win32_Basta_PB_2147835450_0
         $x_1_4 = "cmd.exe /c start /MAX notepad.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -215,6 +223,7 @@ rule Ransom_Win32_Basta_AC_2147836426_0
         $x_10_3 = {51 6a 10 e8 ?? ?? ?? ?? 83 c4 04 89 45 ?? [0-7] 85 c0 74 ?? 8b 4d 08 89 48 08 8b 4d 0c 89 48 04 8b 4d 10 89 08}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -237,6 +246,7 @@ rule Ransom_Win32_Basta_AF_2147840553_0
         $x_1_2 = {8b 55 f0 83 c2 01 89 55 f0 83 7d f0 03 7d 1a 8b 45 d0 03 45 e0 8b 4d f0 8a 54 0d e4 88 10 8b 45 e0 83 c0 01 89 45 e0 8b 55 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -258,6 +268,7 @@ rule Ransom_Win32_Basta_PE_2147840613_0
         $x_1_1 = {f7 e1 c1 ea ?? 69 c2 ?? ?? ?? ?? 2b c8 75 ?? ff d6 8b f8 ff d6 3b c7 74 f6 8b 4d fc 8b c1 99 f7 fb 8b 45 ?? 33 55 ?? 8a 04 02 30 81 ?? ?? ?? ?? 41 89 4d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -283,6 +294,7 @@ rule Ransom_Win32_Basta_HW_2147841192_0
         $x_1_5 = "Copyright (c) 2003-2022 Glarysoft Ltd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -307,6 +319,7 @@ rule Ransom_Win32_Basta_DP_2147841845_0
         $x_5_4 = {8b 4d fc 83 c1 0e 89 4d fc 8b 55 f8 8b 42 08 89 45 f0 8b 4d f8 8b 51 08 8b 45 f0 03 50 3c 89 55 ec 8b 45 fc 99 2b c2 d1 f8 89 45 fc 8b 4d f8 8b 51 08 8b 45 ec 03 50 28 89 55 e8}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -333,6 +346,7 @@ rule Ransom_Win32_Basta_PF_2147843640_0
         $x_1_2 = {01 d0 0f b6 30 8b 4d e4 ba ?? ?? ?? ?? 89 c8 f7 ea c1 fa 03 89 c8 c1 f8 1f 29 c2 89 d0 6b c0 2b 29 c1 89 c8 89 c2 8b 45 e0 01 d0 0f b6 00 31 f0 88 03 83 45 e4 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -355,6 +369,7 @@ rule Ransom_Win32_Basta_SDD_2147843645_0
         $x_1_2 = "VisibleEntry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -376,6 +391,7 @@ rule Ransom_Win32_Basta_SDE_2147843646_0
         $x_1_1 = {c1 e0 02 e9 ?? ?? ?? ?? 8b 00 e9 ?? ?? ?? ?? 0f b7 4a ?? e9 ?? ?? ?? ?? 8b d0 e9 ?? ?? ?? ?? 32 02 e9 ?? ?? ?? ?? 8b d8 e9 ?? ?? ?? ?? 8d 73 ?? e9 ?? ?? ?? ?? 89 75 ?? e9 ?? ?? ?? ?? f7 d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -399,6 +415,7 @@ rule Ransom_Win32_Basta_CB_2147844274_0
         $x_1_3 = {8d 51 30 8b 12}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -420,6 +437,7 @@ rule Ransom_Win32_Basta_PI_2147844965_0
         $x_1_1 = {c1 e9 05 29 c2 8a 06 46 c1 e0 05 29 c2 41 87 f2 f3 a4 89 d6 31 c0 8a 06 46 3c 20 0f 83 94 fc fb ff 08 c0 0f 84 [0-4] 89 c1 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -454,6 +472,7 @@ rule Ransom_Win32_Basta_MKK_2147845734_0
         $x_1_14 = "VisibleEntry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -475,6 +494,7 @@ rule Ransom_Win32_Basta_AI_2147845799_0
         $x_1_1 = {8b 75 08 8b fe bb ?? ?? ?? ?? 90 8b 4d ?? fc ac 90 02 c3 90 90 8b f6 32 c3 90 fc c0 c8 ?? aa fc 49 ac 90 02 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -501,6 +521,7 @@ rule Ransom_Win32_Basta_MKZ_2147845826_0
         $x_5_6 = "VisibleEntry" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -522,6 +543,7 @@ rule Ransom_Win32_Basta_PIA_2147846750_0
         $x_1_1 = {8b 4d 0c e9 05 00 8b 4d 0c fc 8b e4 90 90 ac 02 c3 32 c3 c0 c8 3f aa 90 fc 90 8b c9 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -543,6 +565,7 @@ rule Ransom_Win32_Basta_PIB_2147847121_0
         $x_1_1 = {8b 34 18 a1 ?? ?? ?? ?? 8b 1d ?? ?? ?? ?? 35 ?? ?? ?? ?? 03 c8 0f af de a1 ?? ?? ?? ?? 2b 05 ?? ?? ?? ?? 35 ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 01 05 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b cb c1 e9 10 88 0c 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -564,6 +587,7 @@ rule Ransom_Win32_Basta_AD_2147847453_0
         $x_1_1 = {33 f6 39 74 24 ?? 76 ?? b8 ?? ?? ?? ?? 8b ce f7 ee c1 fa 03 8b c2 c1 e8 1f 03 c2 6b c0 ?? 2b c8 8b 44 24 ?? 8a 89 ?? ?? ?? ?? 32 8e ?? ?? ?? ?? 88 0c 06 46 3b 74 24 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -585,6 +609,7 @@ rule Ransom_Win32_Basta_SI_2147847577_0
         $x_1_1 = {8b 4d e0 8d 76 ?? b8 ?? ?? ?? ?? f7 ef 03 d7 c1 fa ?? 8b c2 c1 e8 ?? 03 c2 6b c0 ?? 2b c8 8b 45 ?? 8a 8c 39 ?? ?? ?? ?? 32 8f ?? ?? ?? ?? 47 88 4c 06 ?? 3b 7d ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -608,6 +633,7 @@ rule Ransom_Win32_Basta_B_2147847823_0
         $x_1_3 = {48 89 5c 24 08 48 89 6c 24 10 48 89 74 24 18 57 41 56 41 57 48 83 ec 20 48 8b 0d ?? ?? ?? ?? 48 85 ff 74 78 48 63 47 3c 83 bc 38 8c 00 00 00 00 74 6a 8b ac 38 88 00 00 00 48 03 ef 8b 45 18 85 c0 74 59 83 7d 14 00 74 53 8b 75 20 33 db 44 8b 7d 24 48 03 f7 4c 03 ff 44 8b f3 85 c0 74 3f 90 8b 16 48 03 d7 74 37 48 8d 0d ?? ?? ?? ?? e8 b9 9b 02 00 85 c0 74 13 41 ff c6 48 83 c6 04 49 83 c7 02 44 3b 75 18 72 d8 eb 14 8b 45 1c 41 0f b7 0f 48 03 c7 8b 1c 88 48 03 df eb 02 33 db ff d3 48 8b 5c 24 40 33 c0 48 8b 6c 24 48 48 8b 74 24 50 48 83 c4 20 41 5f 41 5e 5f c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -633,6 +659,7 @@ rule Ransom_Win32_Basta_AE_2147847937_0
         $x_1_2 = "VisibleEntry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -655,6 +682,7 @@ rule Ransom_Win32_Basta_CRUW_2147849327_0
         $x_2_2 = "VisibleEntry" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -676,6 +704,7 @@ rule Ransom_Win32_Basta_PIE_2147850035_0
         $x_1_1 = {32 c3 c0 c8 ?? aa 49 fc ac fc fc fc 02 c3 8b d2 fc fc e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -698,6 +727,7 @@ rule Ransom_Win32_Basta_YAA_2147897213_0
         $x_1_2 = {88 14 01 8b cb ff 47 3c 8b 57 3c 8b 47 60 c1 e9 08 88 0c 02 ff 47 3c 8b 4f 3c 8b 47 60 88 1c 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -720,6 +750,7 @@ rule Ransom_Win32_Basta_MA_2147898646_0
         $x_2_2 = {83 c6 04 0f af 5d 38 8b 45 0c 2d ?? ?? ?? ?? 31 85 a0 00 00 00 8b 45 60 8b d3 c1 ea 08 88 14 01}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -741,6 +772,7 @@ rule Ransom_Win32_Basta_YAB_2147902674_0
         $x_1_1 = {8b 4d 14 8b 91 ?? ?? ?? ?? 8b 45 f4 8b 4d 14 8b 14 82 33 51 5c 8b 45 14 8b 88 ?? ?? ?? ?? 8b 45 f4 89 14 81}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -762,6 +794,7 @@ rule Ransom_Win32_Basta_YAD_2147904602_0
         $x_1_1 = {0f af da 8b d3 c1 ea 10 88 14 01 8b d3 ff 46 48 a1 ?? ?? ?? ?? c1 ea 08 8b 48 48 a1 ?? ?? ?? ?? 88 14 08 a1 ?? ?? ?? ?? ff 40 48 8b 4e 48 8b 86 9c 00 00 00 88 1c 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -786,6 +819,7 @@ rule Ransom_Win32_Basta_XX_2147904776_0
         $x_1_4 = "SendKeysSample.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -807,6 +841,7 @@ rule Ransom_Win32_Basta_RT_2147907819_0
         $x_1_1 = {0f af c5 2b 05 ?? ?? ?? ?? 33 d8 a1 ?? ?? ?? ?? 8b b0 ?? ?? ?? ?? 8b 50 ?? 8b 44 24 ?? 0b d3 0f af 35 ?? ?? ?? ?? 03 88 ?? ?? ?? ?? 0b 48 ?? a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -828,6 +863,7 @@ rule Ransom_Win32_Basta_YAE_2147909751_0
         $x_1_1 = {31 46 14 8b 46 4c 33 86 b0 00 00 00 8b 4e 68 35 cf e7 0b 00 89 46 4c a1 ?? ?? ?? ?? 8b 40 44 31 04 11 83 c2 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -849,6 +885,7 @@ rule Ransom_Win32_Basta_RU_2147910788_0
         $x_1_1 = {36 12 86 d0 b7 a4 7d d4 ?? b1 ?? a0 ?? ?? ?? ?? ?? a7 ?? ?? ?? ?? 30 97 ?? ?? ?? ?? 42 b6 ?? d1 b3 ?? ?? ?? ?? d5 ?? d2 b1 ?? ?? ?? ?? b3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -870,6 +907,7 @@ rule Ransom_Win32_Basta_AMMF_2147911016_0
         $x_1_1 = {31 41 48 8b 9e 80 00 00 00 a1 ?? ?? ?? ?? 0f af da 8b 88 84 00 00 00 8b 86 b8 00 00 00 8b d3 c1 ea 08 88 14 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -891,6 +929,7 @@ rule Ransom_Win32_Basta_YAF_2147911364_0
         $x_1_1 = {83 c7 04 8b 46 34 0f af 5e 3c 03 c2 33 81 c0 00 00 00 35 ?? ?? ?? ?? 89 81 c0 00 00 00 a1 ?? ?? ?? ?? 8b 4e 58 8b d3 c1 ea 08 88 14 08 ff 46 58 a1 ?? ?? ?? ?? 8b 80 d8 00 00 00 2d 64 d7 03 00 31 46 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -913,6 +952,7 @@ rule Ransom_Win32_Basta_SIH_2147911626_0
         $x_1_2 = {35 02 14 03 00 89 81 c0 00 00 00 a1 8c dc 0f 10 8b 4e 58 8b d3 c1 ea 08 88 14 08 ff 46 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -935,6 +975,7 @@ rule Ransom_Win32_Basta_AC_2147912089_0
         $x_1_2 = "VisibleEntry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -960,6 +1001,7 @@ rule Ransom_Win32_Basta_AB_2147912090_0
         $x_1_5 = "We have your data and encrypted your files, but in less than an hour, we can put things back on track: if you pay for our recovery services, you get a decryptor, the data will be deleted from all of our systems and returned to you" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -982,6 +1024,7 @@ rule Ransom_Win32_Basta_BB_2147913636_0
         $x_1_2 = "git66\\dll_release\\Dither.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1003,6 +1046,7 @@ rule Ransom_Win32_Basta_MVK_2147913869_0
         $x_1_1 = {8b d3 35 02 14 03 00 c1 ea 18 89 86 c0 00 00 00 a1 ?? ?? ?? ?? 8b 8e 8c 00 00 00 88 14 08 8b d3 ff 05 ?? ?? ?? ?? a1 ?? ?? ?? ?? 05 9c 28 fc ff c1 ea 10 31 46 50 8b 4e 50 a1 ?? ?? ?? ?? 81 f1 02 7c 15 00 01 88 f4 00 00 00 a1 ?? ?? ?? ?? 8b 8e 8c 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1025,6 +1069,7 @@ rule Ransom_Win32_Basta_JKR_2147913870_0
         $x_1_2 = "If you are reading this, it means we have encrypted your data" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1046,6 +1091,7 @@ rule Ransom_Win32_Basta_YAG_2147914461_0
         $x_1_1 = {83 f0 01 0f af 46 74 89 46 74 8b 86 ec 00 00 00 03 c1 33 c9 09 05 ?? ?? ?? ?? 41 8b 46 78}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1067,6 +1113,7 @@ rule Ransom_Win32_Basta_YAH_2147924780_0
         $x_1_1 = {2b c8 81 c1 ?? ?? ?? ?? 33 c8 89 8e b4 00 00 00 8b 86 88 00 00 00 8b 1c 28 83 c5 04 a1 ?? ?? ?? ?? 0f af 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1088,6 +1135,7 @@ rule Ransom_Win32_Basta_KGQ_2147926046_0
         $x_10_1 = {8b c3 99 f7 fe 8b 45 00 8b 74 24 50 8b 7c 24 58 89 5c 24 20 32 14 30 0f b6 c1 0f b6 ca 0f af c8 a1 ?? ?? ?? ?? 40 a3 ?? ?? ?? ?? 8d 3c 87}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1109,6 +1157,7 @@ rule Ransom_Win32_Basta_AAZ_2147933802_0
         $x_5_1 = {0f b7 c9 0f af c8 8b 44 24 24 66 2b 0c f8 66 01 0c 7a a1 ?? ?? ?? ?? 8a 44 43 1a 0a 44 24 14 30 04 2f a1 ?? ?? ?? ?? 0f b7 4c 42 2e 8d 34 42 b8 3f 15 00 00 2b 05 ?? ?? ?? ?? 2b 05}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1131,6 +1180,7 @@ rule Ransom_Win32_Basta_PAGY_2147940392_0
         $x_1_2 = {89 86 c0 00 00 00 a1 ?? ?? ?? ?? 8b 8e 8c 00 00 00 88 14 08 8b d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1152,6 +1202,7 @@ rule Ransom_Win32_Basta_KTS_2147941172_0
         $x_5_1 = {f7 f7 8b 44 24 14 31 14 98 33 d2 a1 ?? ?? ?? ?? f7 f3 0f b7 05 ?? ?? ?? ?? 03 d0 8b 44 24 5c 0f b7 44 68 06 8b 6c 24 10 23 d0 8b 44 24 50 0f af 14 88 89 14 88 41 3b 4c 24 40 7f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Omexo_A_2147626895_0
         $x_1_2 = {33 c9 3d 01 00 00 c0 0f 94 c1 89 8d ?? ?? ?? ?? 68 00 80 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

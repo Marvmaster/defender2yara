@@ -20,6 +20,7 @@ rule PWS_Win32_Daptdei_A_2147628474_0
         $x_1_6 = "ftpdata=1&user=%s&pass=%s&host=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

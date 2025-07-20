@@ -17,6 +17,7 @@ rule TrojanDropper_MSIL_VB_C_2147634280_0
         $x_1_3 = "D:\\Users\\Peter\\Desktop\\Stub\\Stub\\obj\\Release\\Stub.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDropper_MSIL_VB_G_2147638321_0
         $x_1_2 = "Coyney's Crypter\\crypt sub\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule TrojanDropper_MSIL_VB_I_2147640275_0
         $x_3_2 = "PolyDeCrypt" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule TrojanDropper_MSIL_VB_K_2147640859_0
         $x_1_3 = "IsVmWare" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +106,7 @@ rule TrojanDropper_MSIL_VB_N_2147643621_0
         $x_4_2 = "_1scantime_crypter_stub.Resources.resources" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +129,7 @@ rule TrojanDropper_MSIL_VB_W_2147651057_0
         $x_3_3 = "Release\\xcfjoye.pdb" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +152,7 @@ rule TrojanDropper_MSIL_VB_Y_2147651772_0
         $x_3_3 = "UmVhZFByb2Nlc3NNZW1vcnk=" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +180,7 @@ rule TrojanDropper_MSIL_VB_AA_2147657595_0
         $n_20_8 = "GAT.ACE.Properties" ascii //weight: -20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -200,6 +208,7 @@ rule TrojanDropper_MSIL_VB_AB_2147658402_0
         $x_1_7 = "DisableTaskMgr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -227,6 +236,7 @@ rule TrojanDropper_MSIL_VB_AE_2147661324_0
         $x_7_3 = "Changlings.Mlifed, Changlings" wide //weight: 7
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

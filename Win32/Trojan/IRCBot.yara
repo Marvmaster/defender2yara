@@ -22,6 +22,7 @@ rule Trojan_Win32_IRCBot_RTU_2147776817_0
         $x_1_7 = {ba da cc 43 00 89 f6 e8 ?? ?? ?? ?? 89 ff 01 fe 31 13 21 f7 43 39 cb 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_IRCBot_RM_2147776912_0
         $x_1_1 = {68 10 14 40 00 c3 39 ff 74 ?? ea 31 07 4b 4b 81 c7 04 00 00 00 39 d7 75 ?? 68 b1 b6 30 22 8b 34 24 83 c4 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_IRCBot_RT_2147777318_0
         $x_1_2 = {68 ec 09 71 00 58 81 ea 15 9b 40 ff 21 db e8 28 00 00 00 21 db 31 06 09 d3 81 c6 01 00 00 00 89 d3 89 d3 21 d3 39 fe 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_IRCBot_RT_2147777318_1
         $x_1_5 = {81 c0 78 16 2b 7c e8 ?? ?? ?? ?? 81 c3 ?? ?? ?? ?? 31 17 89 d8 21 c0 29 db 81 c7 02 00 00 00 81 c0 37 be 54 81 68 d7 19 e4 24 58 39 cf 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_Win32_IRCBot_RT_2147777318_2
         $x_1_9 = {ba ec 09 71 00 81 c1 57 a3 16 93 29 ff e8 ?? ?? ?? ?? 01 f9 b9 f6 f9 5d 49 31 16 29 cf 81 c6 01 00 00 00 81 c7 43 37 47 17 01 ff 39 c6 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -140,6 +145,7 @@ rule Trojan_Win32_IRCBot_GKM_2147777847_0
         $x_1_1 = {83 ec 04 c7 04 24 ?? ?? ?? ?? 5e 01 cf e8 ?? ?? ?? ?? b9 4b c6 13 ec 31 32 81 ef a3 38 7a 37 41 83 ec 04 89 0c 24 8b 0c 24 83 c4 04 81 c2 01 00 00 00 21 cf 01 c9 39 da 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_Win32_IRCBot_RTH_2147777887_0
         $x_2_3 = {68 2e ce 43 00 5b 21 f1 e8 ?? ?? ?? ?? 01 f1 31 1a 89 ce 29 f6 42 39 fa 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -190,6 +197,7 @@ rule Trojan_Win32_IRCBot_RTH_2147777887_1
         $x_1_7 = {09 d7 09 ff 21 d2 21 d7 42 31 0b f7 d2 81 c2 01 00 00 00 81 c3 02 00 00 00 4f bf 9f f7 75 93 09 d7 39 f3 0f 8c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -211,6 +219,7 @@ rule Trojan_Win32_IRCBot_MR_2147777889_0
         $x_1_1 = {47 21 fb 40 [0-2] 81 [0-5] 21 ?? 39 ?? b9 [0-4] 81 [0-5] 09 ?? e8 [0-4] 81 [0-5] 29 ?? 01 ?? 31 ?? bb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +241,7 @@ rule Trojan_Win32_IRCBot_MS_2147777890_0
         $x_1_1 = {83 c6 01 8b [0-2] 8d [0-2] 89 ?? 8b [0-2] 8a [0-3] 30 ?? 8d [0-2] 89 ?? 81 [0-5] 39 ?? 77}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -265,6 +275,7 @@ rule Trojan_Win32_IRCBot_RW_2147781401_0
         $x_1_13 = {bf 2d c9 4e 00 29 c2 e8 ?? ?? ?? ?? 81 c0 51 99 d1 f6 31 3e 48 81 c6 01 00 00 00 81 c2 01 00 00 00 40 ba 21 4e e4 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -286,6 +297,7 @@ rule Trojan_Win32_IRCBot_MA_2147838929_0
         $x_5_1 = {8b c3 03 c0 03 46 24 33 d2 52 50 a1 ?? ?? ?? ?? 99 03 04 24 13 54 24 04 83 c4 08 66 8b 00 66 25 ff ff 0f b7 c0 c1 e0 02 03 46 1c 33 d2 52 50 a1 ?? ?? ?? ?? 99 03 04 24 13 54 24 04 83 c4 08 8b 00 03 05 ?? ?? ?? ?? 89 45 f8 43 83 7d f8 00 75 ?? 3b 5e 18 0f 85}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -311,6 +323,7 @@ rule Trojan_Win32_IRCBot_EN_2147850146_0
         $x_1_5 = "us.undernet.org" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -332,6 +345,7 @@ rule Trojan_Win32_IRCBot_EM_2147850147_0
         $x_5_1 = {31 3e 21 c9 81 c3 01 00 00 00 81 c6 01 00 00 00 39 c6 75 e0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -353,6 +367,7 @@ rule Trojan_Win32_IRCBot_EC_2147850525_0
         $x_5_1 = {8b 45 08 03 45 fc 0f b6 10 33 14 8d ?? ?? ?? ?? 8b 45 08 03 45 fc 88 10}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -378,6 +393,7 @@ rule Trojan_Win32_IRCBot_DS_2147852319_0
         $x_1_5 = {68 d7 75 00 00 e8 2b a9 ff ff 66 89 44 24 02 8b 43 10 e8 d6 9e ff ff 50 e8 20 a9 ff ff 89 44 24 04 6a 10 8d 44 24 04 50 56 e8 ff a8 ff ff 40 74 05 83 cf ff eb 07 a1 70 b1 40 00 ff 00 85 ff 74 1f 56 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

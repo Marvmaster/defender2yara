@@ -21,6 +21,7 @@ rule Ransom_Win32_Wyverlock_PA_2147760692_0
         $x_5_6 = {5c 77 79 76 65 72 6e 6c 6f 63 6b 65 72 5c [0-16] 5c 77 79 76 65 72 6e 6c 6f 63 6b 65 72 2e 70 64 62}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

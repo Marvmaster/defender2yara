@@ -18,6 +18,7 @@ rule HackTool_Win32_ZorKey_A_2147894762_0
         $x_100_3 = {7b 00 43 00 31 00 7d 00 00 00 00 00 7b 00 43 00 32 00 7d 00 00 00 00 00 7b 00 41 00 44 00 44 00 7d}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

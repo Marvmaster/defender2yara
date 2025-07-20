@@ -19,6 +19,7 @@ rule Trojan_Win32_Puzlice_A_2147626967_0
         $x_1_5 = {3a 00 38 00 38 [0-6] 00 0e 00 00 00 2f 00 70 00 36 00 2e 00 61 00 73 00 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Puzlice_B_2147679578_0
         $x_1_2 = "Publicer=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Puzlice_C_2147696740_0
         $x_1_8 = {55 53 42 47 75 61 72 64 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

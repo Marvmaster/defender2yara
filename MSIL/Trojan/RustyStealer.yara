@@ -16,6 +16,7 @@ rule Trojan_MSIL_RustyStealer_BH_2147914569_0
         $x_1_1 = {00 06 07 02 07 6f 76 00 00 0a 03 07 03 6f 74 00 00 0a 5d 6f 76 00 00 0a 61 d1 9d 00 07 17 58 0b 07 02 6f 74 00 00 0a fe 04 0c 08 2d d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

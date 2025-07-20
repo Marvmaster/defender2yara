@@ -17,6 +17,7 @@ rule Backdoor_Win32_WipBot_B_2147688612_0
         $x_1_3 = {c7 47 20 90 90 90 90 c7 47 24 90 90 90 c3 c7 47 28 50 51 48 83 c7 47 2c ec 28 48 b9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

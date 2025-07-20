@@ -17,6 +17,7 @@ rule Trojan_MSIL_SkarCrypt_A_2147844622_0
         $x_2_2 = {06 02 11 05 6f ?? 00 00 0a 28 ?? 00 00 0a 11 04 11 05 09 5d 91 1f 30 59 59 d1 6f ?? 00 00 0a 26 11 05 17 58 13 05 11 05 02 6f ?? 00 00 0a 09 59 17 59}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

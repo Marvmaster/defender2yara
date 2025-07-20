@@ -16,6 +16,7 @@ rule TrojanDownloader_Win64_Snojan_DL_2147831967_0
         $x_1_1 = {48 8b c1 48 8b 8c 24 ?? ?? ?? ?? 48 f7 f1 48 8b c2 0f be 84 04 ?? ?? ?? ?? 8b 8c 24 ?? ?? ?? ?? 33 c8 8b c1 48 63 4c 24 40 48 8b 15 ?? ?? ?? ?? 88 04 0a e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

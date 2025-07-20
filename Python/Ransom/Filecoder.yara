@@ -24,6 +24,7 @@ rule Ransom_Python_Filecoder_DA_2147939990_0
         $x_1_9 = "encrypted successfully" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_100_*) and 2 of ($x_10_*))) or

@@ -31,6 +31,7 @@ rule Worm_Win32_Dronzho_A_2147601831_0
         $x_10_17 = {8d 95 00 fc ff ff 52 68 ?? ?? 42 00 8d 8d 00 f8 ff ff 51 e8 ?? ?? 01 00 83 c4 0c 8d 85 00 fc ff ff 50 68 ?? ?? 42 00 8d 95 00 f4 ff ff 52 e8 ?? ?? 01 00 83 c4 0c 68 80 00 00 00 8d 8d 00 f4 ff ff 51 e8 ?? ?? 02 00 6a 00 8d 85 00 f4 ff ff 50 8d 95 00 f8 ff ff 52 e8 ?? ?? 02 00 8d 8d 00 f4 ff ff 51}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 15 of ($x_1_*))) or
             (all of ($x*))

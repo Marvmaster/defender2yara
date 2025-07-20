@@ -17,6 +17,7 @@ rule Backdoor_Win32_Baceed_A_2147708988_0
         $x_1_2 = "\\Modules\\BaseCode\\MyIni.cpp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

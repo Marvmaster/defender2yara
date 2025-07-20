@@ -19,6 +19,7 @@ rule Backdoor_Win32_Throabot_A_2147607321_0
         $x_1_4 = {74 26 56 0f be c9 c1 e0 04 03 c1 8b c8 42 81 e1 00 00 00 f0 74 07 8b f1 c1 ee 18 33 c6 f7 d1 23 c1 8a 0a 84 c9 75 dc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Usteal_B_2147646434_0
         $x_1_4 = {44 69 73 70 6c 61 79 4e 61 6d 65 00 54 72 6f 6c 6f 6c 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule TrojanSpy_Win32_Usteal_C_2147653615_0
         $x_1_9 = "dokotaaaa.hop.ru" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -73,6 +75,7 @@ rule TrojanSpy_Win32_Usteal_D_2147655153_0
         $x_1_5 = {68 ff 00 00 00 ff 75 fc 6a 01 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 15 68 ?? ?? ?? ?? ff 35 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? a3 ?? ?? ?? ?? 0b c0 75 11 ff 35 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? e9 b2 ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule TrojanSpy_Win32_Usteal_A_2147655156_0
         $x_2_7 = {ac 84 c0 74 05 41 3b cb 75 f6 83 e9 02 8d 35 ?? ?? ?? ?? 8d 3d ?? ?? ?? ?? 8a 15 ?? ?? ?? ?? 32 15 ?? ?? ?? ?? 80 ca ?? ac 32 c2 aa 49 75 f9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -127,6 +131,7 @@ rule TrojanSpy_Win32_Usteal_F_2147670568_0
         $x_1_4 = "Rainy Keylogger Logs [ %s ]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

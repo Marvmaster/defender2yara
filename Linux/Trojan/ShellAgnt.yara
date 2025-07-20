@@ -17,6 +17,7 @@ rule Trojan_Linux_ShellAgnt_A_2147797301_0
         $x_1_2 = {68 0a 00 02 61 68 02 00 1a 0a 89 e6 50 50 50 50 40 50 40 50 68 ea 0f df e0 ff d5 97 6a 10 56 57 68 99 a5 74 61 ff d5 85 c0 74 0a ff 4e 08 75 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

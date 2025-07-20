@@ -18,6 +18,7 @@ rule Backdoor_Win32_Zegost_Z_2147629478_0
         $x_1_4 = {7e 3b b9 00 08 00 00 33 c0 8d bc 24 ?? ?? ?? ?? 50 f3 ab 8b 83 ?? ?? ?? ?? 8d 94 24 ?? ?? ?? ?? 68 00 20 00 00 52 50 ff d5 85 c0 7e 2b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_Win32_Zegost_B_2147630702_0
         $x_1_4 = {83 c2 0d 52 ff d0 a1 ?? ?? ?? ?? 83 c0 0d 50 ff 15 ?? ?? ?? ?? 83 f8 ff 5f 74 0c 8b 0d ?? ?? ?? ?? c6 41 0c 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -67,6 +69,7 @@ rule Backdoor_Win32_Zegost_F_2147642128_0
         $x_1_3 = {89 86 f4 00 00 00 c7 86 c0 00 00 00 20 00 cc 00 c6 86 b4 00 00 00 01 ff 15 ?? ?? ?? ?? 8b 4c 24 6c 89 86 c4 00 00 00 b8 e8 03 00 00 33 d2 f7 f1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Backdoor_Win32_Zegost_2147642130_0
         $x_1_4 = "%sot%%\\System32\\svc%s %s%s%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Backdoor_Win32_Zegost_2147642130_1
         $x_1_7 = "<Enter>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -139,6 +144,7 @@ rule Backdoor_Win32_Zegost_G_2147642344_0
         $x_1_4 = {5c 73 79 73 6c 6f 67 2e 64 61 74 00 25 64 2e 62 61 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule Backdoor_Win32_Zegost_H_2147643955_0
         $x_3_14 = "%s\\kb0x%d~.tmp" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_3_*) and 9 of ($x_1_*))) or
             ((2 of ($x_4_*) and 8 of ($x_1_*))) or
@@ -201,6 +208,7 @@ rule Backdoor_Win32_Zegost_I_2147643993_0
         $x_1_2 = {c6 86 b5 00 00 00 00 a1 ?? ?? ?? ?? 85 c0 74 14 83 f8 04 74 0f 83 f8 05 74 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -223,6 +231,7 @@ rule Backdoor_Win32_Zegost_K_2147648788_0
         $x_1_3 = {44 51 c6 44 24 ?? 65 c6 44 24 ?? 62 c6 44 24 ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -249,6 +258,7 @@ rule Backdoor_Win32_Zegost_K_2147648788_1
         $x_3_7 = {74 23 3d 00 00 00 08 72 07 2d 00 00 00 80 eb 06 8d 04 28 83 c0 02 52 50}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -279,6 +289,7 @@ rule Backdoor_Win32_Zegost_F_2147648835_0
         $x_1_4 = "fproxy.dl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -308,6 +319,7 @@ rule Backdoor_Win32_Zegost_H_2147648837_0
         $x_1_9 = "fDenyTSConnections" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -339,6 +351,7 @@ rule Backdoor_Win32_Zegost_L_2147648880_0
         $x_1_6 = {25 73 25 63 25 63 25 69 25 69 25 63 25 69 2e 65 78 65 00 00 5c 63 6d 64 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -375,6 +388,7 @@ rule Backdoor_Win32_Zegost_M_2147649117_0
         $x_1_12 = "\\\\.\\msrmctrlvip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -406,6 +420,7 @@ rule Backdoor_Win32_Zegost_N_2147649746_0
         $x_1_4 = {5c 63 6f 6d 5c 73 79 73 6c 6f 67 2e 64 61 74 00 25 73 5c 25 64 2e 62 61 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -435,6 +450,7 @@ rule Backdoor_Win32_Zegost_O_2147649784_0
         $x_1_6 = {5c 74 65 6d 70 5c 50 6c 67 75 69 6e 73 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -462,6 +478,7 @@ rule Backdoor_Win32_Zegost_AA_2147651477_0
         $x_1_4 = "DragonNest.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -485,6 +502,7 @@ rule Backdoor_Win32_Zegost_2147651881_0
         $x_1_4 = "InstallModule" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_5_*))) or
@@ -511,6 +529,7 @@ rule Backdoor_Win32_Zegost_Q_2147653404_0
         $x_1_3 = "%s\\nt%xz.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -536,6 +555,7 @@ rule Backdoor_Win32_Zegost_Q_2147653404_1
         $x_1_3 = {57 50 ff b6 ?? 00 00 00 ff 15 ?? ?? ?? ?? 80 bd ?? ?? ff ff 05 0f 85 ?? ?? 00 00 38 9d ?? ?? ff ff 74 0d 80 bd 04 ff ff 02 0f 85 ?? ?? 00 00 80 bd 04 ff ff 02 0f 85 ?? ?? 00 00 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 85 c0 59 0f 86}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -559,6 +579,7 @@ rule Backdoor_Win32_Zegost_R_2147653533_0
         $x_1_4 = {8b 4c 24 14 6a 00 68 00 00 00 02 6a 00 6a 00 6a 00 51 ff d0 8b f0 85 f6 0f 84 80 00 00 00 56 ff 15 ?? ?? ?? ?? b9 11 00 00 00 33 c0 8d 7c 24 64 50 f3 ab}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -582,6 +603,7 @@ rule Backdoor_Win32_Zegost_S_2147653870_0
         $x_2_4 = {68 04 01 00 00 ff 15 ?? ?? ?? ?? c6 45 f8 25 c6 45 f9 73 c6 45 fa 5c c6 45 fb 25 c6 45 fc 64 c6 45 fd 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -611,6 +633,7 @@ rule Backdoor_Win32_Zegost_S_2147653870_1
         $x_2_6 = {8a 1c 11 80 c3 7a 88 1c 11 8b 54 24 04 8a 1c 11 80 f3 19 88 1c 11 41 3b c8 7c e1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -639,6 +662,7 @@ rule Backdoor_Win32_Zegost_T_2147654080_0
         $x_1_5 = "DNAMMOC\\NEPO\\LLEHS\\EXE.EROLPXEI\\SNOITACILPPa" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -662,6 +686,7 @@ rule Backdoor_Win32_Zegost_U_2147654104_0
         $x_1_4 = {50 44 46 2d 05 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -688,6 +713,7 @@ rule Backdoor_Win32_Zegost_V_2147654106_0
         $x_1_4 = "_dll_Delete_Me__.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -712,6 +738,7 @@ rule Backdoor_Win32_Zegost_W_2147655470_0
         $x_1_5 = "C:\\haotu.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -736,6 +763,7 @@ rule Backdoor_Win32_Zegost_X_2147655622_0
         $x_1_5 = "Storm ddos soft" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -763,6 +791,7 @@ rule Backdoor_Win32_Zegost_2147655953_0
         $x_1_4 = {57 69 6e 53 74 61 30 5c 44 65 66 61 75 6c 74 00 47 68 30 73 74 20 55 70 64 61 74 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -792,6 +821,7 @@ rule Backdoor_Win32_Zegost_AC_2147656916_0
         $x_5_10 = "V3JpdGVGaWxl" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_10_*) and 5 of ($x_5_*))) or
             ((2 of ($x_50_*) and 2 of ($x_20_*) and 3 of ($x_5_*))) or
@@ -829,6 +859,7 @@ rule Backdoor_Win32_Zegost_AC_2147656917_0
         $x_5_12 = "SW1tR2V0Q29tcG9zaXRpb25TdHJpbmdB" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 3 of ($x_20_*) and 5 of ($x_5_*))) or
             ((2 of ($x_50_*) and 3 of ($x_20_*) and 1 of ($x_10_*) and 3 of ($x_5_*))) or
@@ -856,6 +887,7 @@ rule Backdoor_Win32_Zegost_AD_2147656985_0
         $x_10_2 = {8b d1 83 e2 01 80 fa 01 8a 14 01 75 05 80 f2 ?? eb 03 80 f2 ?? 88 14 01 41 3b ce}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -877,6 +909,7 @@ rule Backdoor_Win32_Zegost_AD_2147656985_1
         $x_1_2 = {b9 00 08 00 00 33 c0 8d bc 24 ?? ?? 00 00 50 f3 ab 8b 83 ?? ?? 00 00 8d 94 24 ?? ?? 00 00 68 00 20 00 00 52 50 ff d5 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -900,6 +933,7 @@ rule Backdoor_Win32_Zegost_AE_2147658360_0
         $x_1_4 = "Global\\UUPP %d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -927,6 +961,7 @@ rule Backdoor_Win32_Zegost_AE_2147658360_1
         $x_1_4 = {54 65 72 6d 69 6e 61 74 65 54 68 72 65 61 64 00 25 73 3a 5c 57 69 6e 64 6f 77 73 5c 53 79 73 74 65 6d 33 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -960,6 +995,7 @@ rule Backdoor_Win32_Zegost_AF_2147658728_0
         $x_1_10 = {33 c6 44 24 33 32 c6 44 24 34 2e c6 44 24 35 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -989,6 +1025,7 @@ rule Backdoor_Win32_Zegost_AG_2147660060_0
         $x_1_2 = {b9 00 08 00 00 33 c0 8d bd 00 e0 ff ff f3 ab 6a 00 68 00 20 00 00 8d 8d 00 e0 ff ff 51 8b 95 ?? ?? ff ff 8b 82 ?? 00 00 00 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1017,6 +1054,7 @@ rule Backdoor_Win32_Zegost_AI_2147661742_0
         $x_1_9 = "[Scroll Lock]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_5_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1044,6 +1082,7 @@ rule Backdoor_Win32_Zegost_AJ_2147661786_0
         $x_1_5 = {00 5b 43 61 70 73 4c 6f 63 6b 5d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1067,6 +1106,7 @@ rule Backdoor_Win32_Zegost_AK_2147662287_0
         $x_1_4 = {ff 45 08 81 7d 08 64 19 00 00 0f 8c ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1092,6 +1132,7 @@ rule Backdoor_Win32_Zegost_AM_2147662338_0
         $x_1_6 = {48 54 54 50 45 58 45 00 5c 75 70 64 61 74 65 2e 74 65 6d 70 [0-4] 5c 63 6f 6d 6d 61 6e 64 2e 70 61 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1118,6 +1159,7 @@ rule Backdoor_Win32_Zegost_AN_2147663046_0
         $x_1_3 = {8b c1 6a 03 99 5f f7 ff 8a 04 31 83 fa 01 75 0c 3c 20 7e 15 3c 7f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1142,6 +1184,7 @@ rule Backdoor_Win32_Zegost_AO_2147664546_0
         $x_1_5 = "yktstar" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1172,6 +1215,7 @@ rule Backdoor_Win32_Zegost_AP_2147666251_0
         $x_1_8 = {5c 68 65 6c 70 6d 73 67 2e 74 65 6d 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1201,6 +1245,7 @@ rule Backdoor_Win32_Zegost_AX_2147679133_0
         $x_1_6 = {ff d6 50 ff d7 ff d0 68 7f 03 00 00 6a 00 68 ?? ?? ?? 10 [0-6] ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1230,6 +1275,7 @@ rule Backdoor_Win32_Zegost_AY_2147682670_0
         $x_1_10 = "\\6C4DA6FB\\svchsot.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1256,6 +1302,7 @@ rule Backdoor_Win32_Zegost_A_2147684101_0
         $x_1_6 = "[print screen]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1280,6 +1327,7 @@ rule Backdoor_Win32_Zegost_BE_2147684332_0
         $x_1_5 = {5b 45 58 45 43 55 54 45 5f 6b 65 79 5d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1304,6 +1352,7 @@ rule Backdoor_Win32_Zegost_2147684932_0
         $x_5_4 = {8a 0c 28 80 f1 ?? 88 0c 28 40 3b c3 7c f2 6a 40 68 00 10 00 00 53 6a 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -1332,6 +1381,7 @@ rule Backdoor_Win32_Zegost_BH_2147685064_0
         $x_1_6 = "--->To MyServer2010 ^_^ [%d]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*))) or
@@ -1359,6 +1409,7 @@ rule Backdoor_Win32_Zegost_BK_2147686219_0
         $x_2_4 = "\\keylog.dat" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1382,6 +1433,7 @@ rule Backdoor_Win32_Zegost_BL_2147686276_0
         $x_1_4 = "rundll32.exe %s,hi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1410,6 +1462,7 @@ rule Backdoor_Win32_Zegost_B_2147686293_0
         $x_1_8 = {53 65 72 76 69 63 65 4d 61 69 6e 00 6d 61 69 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1436,6 +1489,7 @@ rule Backdoor_Win32_Zegost_BO_2147686545_0
         $x_1_3 = {89 45 fc c6 45 f0 57 c6 45 f1 69 c6 45 f2 6e c6 45 f3 6c c6 45 f4 6f c6 45 f5 67 c6 45 f6 6f c6 45 f7 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1458,6 +1512,7 @@ rule Backdoor_Win32_Zegost_BP_2147686576_0
         $x_1_3 = {c6 45 e0 66 c6 45 e1 75 c6 45 e2 63 c6 45 e3 6b c6 45 e4 33 c6 45 e5 36 88 5d e6 c6 45 e7 00 ff 55 b0 6a 64 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1480,6 +1535,7 @@ rule Backdoor_Win32_Zegost_BQ_2147686577_0
         $x_1_3 = {c6 45 f0 5c c6 45 f1 6f c6 45 f2 75 c6 45 f3 72 c6 45 f4 6c c6 45 f5 6f c6 45 f6 67 c6 45 f7 2e c6 45 f8 64 c6 45 f9 61 c6 45 fa 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1502,6 +1558,7 @@ rule Backdoor_Win32_Zegost_BR_2147686587_0
         $x_1_3 = {6a 04 56 ff 77 50 ff 77 34 ff d3 89 45 fc 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1524,6 +1581,7 @@ rule Backdoor_Win32_Zegost_BS_2147686601_0
         $x_1_3 = {ff 77 c6 85 ?? ?? ff ff 64 c6 85 ?? ?? ff ff 5c c6 85 ?? ?? ff ff 54 c6 85 ?? ?? ff ff 64 c6 85 ?? ?? ff ff 73 c6 85 ?? ?? ff ff 5c c6 85 ?? ?? ff ff 74 c6 85 ?? ?? ff ff 63}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1555,6 +1613,7 @@ rule Backdoor_Win32_Zegost_C_2147686622_0
         $x_10_11 = "pbk\\rasphone.pbk" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1581,6 +1640,7 @@ rule Backdoor_Win32_Zegost_BU_2147686634_0
         $x_1_3 = {8a 08 83 c1 fe 83 f9 0d 0f 87 ?? ?? 00 00 ff 24 8d ?? ?? 40 00 40 8b ce 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1603,6 +1663,7 @@ rule Backdoor_Win32_Zegost_BV_2147686659_0
         $x_1_3 = {ff 5c c6 85 ?? ?? ff ff 74 c6 85 ?? ?? ff ff 63}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1627,6 +1688,7 @@ rule Backdoor_Win32_Zegost_BW_2147686661_0
         $x_2_5 = {47 c6 44 24 ?? 68 c6 44 24 ?? 30 c6 44 24 ?? 73}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1655,6 +1717,7 @@ rule Backdoor_Win32_Zegost_BX_2147686663_0
         $x_1_5 = {ff 2e c6 85 ?? ?? ff ff 64 c6 85 ?? ?? ff ff 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1680,6 +1743,7 @@ rule Backdoor_Win32_Zegost_BY_2147686692_0
         $x_1_6 = {ff 5c c6 85 ?? ?? ff ff 74 c6 85 ?? ?? ff ff 63}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1705,6 +1769,7 @@ rule Backdoor_Win32_Zegost_C_2147686701_0
         $x_1_5 = "RegQueryValueEx(Svchost\\netsvcs)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1732,6 +1797,7 @@ rule Backdoor_Win32_Zegost_D_2147686702_0
         $x_1_3 = {8a 1c 11 80 f3 19 88 1c 11 41 3b c8 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1759,6 +1825,7 @@ rule Backdoor_Win32_Zegost_BZ_2147686706_0
         $x_1_8 = {ff 53 c6 85 ?? ?? ff ff 4f c6 85 ?? ?? ff ff 46}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1783,6 +1850,7 @@ rule Backdoor_Win32_Zegost_CB_2147687867_0
         $x_1_5 = "Gh0st Update" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -1815,6 +1883,7 @@ rule Backdoor_Win32_Zegost_CC_2147687868_0
         $x_1_9 = "yek.metsySfOgoL\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -1854,6 +1923,7 @@ rule Backdoor_Win32_Zegost_CD_2147687869_0
         $x_1_10 = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1885,6 +1955,7 @@ rule Backdoor_Win32_Zegost_CE_2147687870_0
         $x_1_9 = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Svchost" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             ((6 of ($x_10_*))) or
@@ -1910,6 +1981,7 @@ rule Backdoor_Win32_Zegost_CF_2147687873_0
         $x_1_2 = {47 68 30 73 74 20 52 41 54 20 45 78 63 65 70 74 69 6f 6e 00 43 52 41 53 48 20 43 4f 44 45 3a 30 78 25 2e 38 78 20 41 44 44 52 3d 30 78 25 2e 38 78 20 46 4c 41 47 53 3d 30 78 25 2e 38 78 20 50 41 52 41 4d 53 3d 30 78 25 2e 38 78}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1932,6 +2004,7 @@ rule Backdoor_Win32_Zegost_CG_2147687874_0
         $x_1_3 = {c6 45 c6 50 c6 45 c7 72 c6 45 c8 6f c6 45 c9 63 c6 45 ca 65 c6 45 cb 73 c6 45 cc 73 c6 45 cd 49 c6 45 ce 64 88 5d cf ff d6 50 ff d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1962,6 +2035,7 @@ rule Backdoor_Win32_Zegost_CG_2147687874_1
         $x_1_11 = {d7 bc b1 b8 b7 a2 cb cd c9 cf cf df d0 c5 cf a2 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 53 56 43 53 48 4f 53 54 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1987,6 +2061,7 @@ rule Backdoor_Win32_Zegost_CH_2147688671_0
         $x_1_3 = {c6 44 24 0c 44 c6 44 24 0f 50 c6 44 24 10 72 c6 44 24 11 6f c6 44 24 12 78 c6 44 24 13 79 c6 44 24 14 4f c6 44 24 15 70 c6 44 24 16 65 c6 44 24 17 6e c6 44 24 18 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2009,6 +2084,7 @@ rule Backdoor_Win32_Zegost_CI_2147688817_0
         $x_1_3 = " %.2fms, " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2039,6 +2115,7 @@ rule Backdoor_Win32_Zegost_CI_2147688817_1
         $x_1_11 = "Z2V0aG9zdGJ5bmFtZQ==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_4_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -2076,6 +2153,7 @@ rule Backdoor_Win32_Zegost_CJ_2147688865_0
         $x_1_5 = {c7 44 24 24 4d 5a 00 00 c7 44 24 1c 90 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2100,6 +2178,7 @@ rule Backdoor_Win32_Zegost_CL_2147689005_0
         $x_1_5 = "/www.kl.gz.cn/~glb/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2122,6 +2201,7 @@ rule Backdoor_Win32_Zegost_CM_2147689053_0
         $x_1_3 = {c6 45 f0 43 c6 45 f1 6f c6 45 f2 6e c6 45 f3 6e c6 45 f4 65 c6 45 f5 63 c6 45 f6 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2144,6 +2224,7 @@ rule Backdoor_Win32_Zegost_CO_2147689201_0
         $x_1_3 = {5c 5c 73 65 c7 85 ?? ?? ?? ?? 72 76 2e 74 c7 85 ?? ?? ?? ?? 78 74 00 78 89 4d a8 c7 45 ?? 69 63 65 73 c7 45 ?? 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2166,6 +2247,7 @@ rule Backdoor_Win32_Zegost_CP_2147689343_0
         $x_1_3 = {c6 44 24 38 00 c6 44 24 3c 57 c6 44 24 3d 61 c6 44 24 40 46 c6 44 24 41 6f 88 54 24 42 c6 44 24 43 53 c6 44 24 45 6e c6 44 24 46 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2189,6 +2271,7 @@ rule Backdoor_Win32_Zegost_CR_2147689772_0
         $x_1_4 = {7e 4d 00 00 48 7a 00 00 48 41 52 44 57 41 52 45 5c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2212,6 +2295,7 @@ rule Backdoor_Win32_Zegost_CS_2147690877_0
         $x_1_4 = {00 47 68 30 73 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2235,6 +2319,7 @@ rule Backdoor_Win32_Zegost_CT_2147691051_0
         $x_1_4 = {00 48 74 74 70 2f 31 2e 31 20 34 30 33 20 46 6f 72 62 69 64 64 65 4e 0d 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2256,6 +2341,7 @@ rule Backdoor_Win32_Zegost_CU_2147691119_0
         $x_1_2 = {c8 00 00 00 c6 44 24 ?? 50 c6 44 24 ?? 72 c6 44 24 ?? 6f c6 44 24 ?? 64 c6 44 24 ?? 75 c6 44 24 ?? 63 c6 44 24 ?? 74 c6 44 24 ?? 4e c6 44 24 ?? 61 c6 44 24 ?? 6d c6 44 24 ?? 65 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2282,6 +2368,7 @@ rule Backdoor_Win32_Zegost_CV_2147691381_0
         $x_1_7 = {00 57 48 4d 5f 53 65 72 76 65 72 5f 55 70 64 61 74 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -2310,6 +2397,7 @@ rule Backdoor_Win32_Zegost_ME_2147692368_0
         $x_1_5 = "[Print Screen]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2337,6 +2425,7 @@ rule Backdoor_Win32_Zegost_MB_2147692430_0
         $x_1_8 = {66 69 6c 65 3a 43 3a 5c 50 72 6f 67 72 61 7e 31 5c 25 25 50 72 6f 67 72 7e 31 5c 44 45 53 54 2e 42 41 54 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -2365,6 +2454,7 @@ rule Backdoor_Win32_Zegost_MF_2147692431_0
         $x_1_4 = "rossecorPlartneC\\metsyS\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2390,6 +2480,7 @@ rule Backdoor_Win32_Zegost_CW_2147692432_0
         $x_1_3 = {0d 0a 3c 48 31 3e 34 30 33 20 46 6f 72 62 69 64 64 65 6e 3c 2f 48 31 3e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2413,6 +2504,7 @@ rule Backdoor_Win32_Zegost_MC_2147692495_0
         $x_1_4 = {48 74 74 70 2f 31 2e 31 20 34 30 33 20 46 6f 72 62 69 64 64 65 6e 0d 0a 0d 0a 3c 62 6f 64 79 3e 3c 68 31 3e 34 30 33 20 46 6f 72 62 69 64 64 65 6e 3c 2f 68 31 3e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2440,6 +2532,7 @@ rule Backdoor_Win32_Zegost_CX_2147692497_0
         $x_1_5 = {00 5c 73 79 73 6c 6f 67 2e 64 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2467,6 +2560,7 @@ rule Backdoor_Win32_Zegost_CZ_2147692755_0
         $x_1_4 = "SYSTEM\\Group\\Group" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2489,6 +2583,7 @@ rule Backdoor_Win32_Zegost_DA_2147692824_0
         $x_2_3 = {73 c6 44 24 ?? 25 c6 44 24 ?? 64 c6 44 24 ?? 2e c6 44 24 ?? 76 c6 44 24 ?? 62 c6 44 24 ?? 73}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2514,6 +2609,7 @@ rule Backdoor_Win32_Zegost_DB_2147693096_0
         $x_1_3 = {6e 75 52 5c 6e 6f 69 73 72 65 56 74 6e 65 72 72 75 43 5c 73 77 6f 64 6e 69 57 5c 74 66 6f 73 6f 72 63 69 4d 5c 45 52 41 57 54 46 4f 53 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2540,6 +2636,7 @@ rule Backdoor_Win32_Zegost_DD_2147693288_0
         $x_1_4 = "rundll32.exe \"%s\",HighSystem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2566,6 +2663,7 @@ rule Backdoor_Win32_Zegost_DD_2147693288_1
         $x_1_4 = {55 c6 00 4d c6 40 01 5a 66 81 38 4d 5a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2590,6 +2688,7 @@ rule Backdoor_Win32_Zegost_DE_2147693627_0
         $x_1_2 = {5c c6 44 24 ?? 6f c6 44 24 ?? 75 c6 44 24 ?? 72 c6 44 24 ?? 6c c6 44 24 ?? 6f c6 44 24 ?? 67 c6 44 24 ?? 2e c6 44 24 ?? 64 c6 44 24 ?? 61 c6 44 24 ?? 74 c6 44 24 ?? 00 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2612,6 +2711,7 @@ rule Backdoor_Win32_Zegost_DE_2147693627_1
         $x_1_3 = {fb ff ff 5c c6 85 ?? fb ff ff 6f c6 85 ?? fb ff ff 75 c6 85 ?? fb ff ff 72 c6 85 ?? fb ff ff 6c c6 85 ?? fb ff ff 6f c6 85 ?? fb ff ff 67 c6 85 ?? fb ff ff 2e c6 85 ?? fb ff ff 64 c6 85 ?? fb ff ff 61 c6 85 ?? fb ff ff 74 c6 85 ?? fb ff ff 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2637,6 +2737,7 @@ rule Backdoor_Win32_Zegost_DF_2147694108_0
         $x_1_3 = "\\\\.\\agmkis2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2659,6 +2760,7 @@ rule Backdoor_Win32_Zegost_DG_2147694334_0
         $x_1_3 = {83 ec 0c c6 45 ?? 44 c6 45 ?? 6c c6 45 ?? 6c c6 45 ?? 41 c6 45 ?? 75 c6 45 ?? 64 c6 45 ?? 69 c6 45 ?? 6f c6 45 ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2681,6 +2783,7 @@ rule Backdoor_Win32_Zegost_DH_2147694407_0
         $x_1_3 = {0d 0a 3c 48 31 3e 34 30 33 20 46 6f 72 62 69 64 64 65 6e 3c 2f 48 31 3e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2703,6 +2806,7 @@ rule Backdoor_Win32_Zegost_DH_2147694407_1
         $x_1_3 = {0d 0a 3c 48 31 3e 34 30 33 20 46 6f 72 62 69 64 64 65 6e 3c 2f 48 31 3e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2727,6 +2831,7 @@ rule Backdoor_Win32_Zegost_DJ_2147694702_0
         $x_5_5 = {8a 14 08 80 c2 ?? 80 f2 ?? 88 14 08 40 3b c6 7c ef}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2752,6 +2857,7 @@ rule Backdoor_Win32_Zegost_DL_2147695013_0
         $x_2_3 = {51 c6 44 24 ?? 5c c6 44 24 ?? 6f c6 44 24 ?? 75 c6 44 24 ?? 72 c6 44 24 ?? 6c c6 44 24 ?? 6f c6 44 24 ?? 67 c6 44 24 ?? 2e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2775,6 +2881,7 @@ rule Backdoor_Win32_Zegost_DM_2147695295_0
         $x_5_4 = {0f bc c1 d2 ec f7 d3 0f c8 b7 8c 0f ba f0 ed}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2797,6 +2904,7 @@ rule Backdoor_Win32_Zegost_DN_2147695834_0
         $x_1_3 = {56 49 50 00 53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e 00 00 00 78 37}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2820,6 +2928,7 @@ rule Backdoor_Win32_Zegost_DO_2147696068_0
         $x_1_4 = {52 44 50 2d 54 63 70 00 25 64 44 61 79 20 25 64 48 6f 75 72 20 25 64 4d 69 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2842,6 +2951,7 @@ rule Backdoor_Win32_Zegost_DP_2147696198_0
         $x_1_3 = "%s /v \"%s\\config\\sam\" \"%sdfer.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2865,6 +2975,7 @@ rule Backdoor_Win32_Zegost_DQ_2147696267_0
         $x_1_4 = {89 86 ac 00 00 00 c6 45 ?? 4b c6 45 ?? 75 c6 45 ?? 47 c6 45 ?? 6f c6 45 ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2889,6 +3000,7 @@ rule Backdoor_Win32_Zegost_DT_2147696469_0
         $x_1_2 = {83 ec 08 c6 45 ?? 44 c6 45 ?? 6c c6 45 ?? 6c c6 45 ?? 64 c6 45 ?? 64 c6 45 ?? 6f c6 45 ?? 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2910,6 +3022,7 @@ rule Backdoor_Win32_Zegost_DU_2147696526_0
         $x_1_2 = {53 50 c6 45 ?? 48 c6 45 ?? 61 c6 45 ?? 63 c6 45 ?? 6b c6 45 ?? 65 c6 45 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2932,6 +3045,7 @@ rule Backdoor_Win32_Zegost_DA_2147718686_0
         $x_1_2 = {c7 45 ec 44 68 6c 56 50 56 c7 45 f0 69 70 56 65 c7 45 f4 72 73 66 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2955,6 +3069,7 @@ rule Backdoor_Win32_Zegost_CG_2147720993_0
         $x_1_3 = {8a 14 08 80 c2 ?? 88 14 08 8b 4c 24 08 8a 14 08 80 f2 ?? 88 14 08 40 3b c6 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2978,6 +3093,7 @@ rule Backdoor_Win32_Zegost_CH_2147721256_0
         $x_1_3 = {52 c6 85 7d ?? ?? ?? 69 c6 85 7e ?? ?? ?? 73 c6 85 7f ?? ?? ?? 69 c6 85 80 ?? ?? ?? 6e c6 85 81 ?? ?? ?? 67 c6 85 82 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3001,6 +3117,7 @@ rule Backdoor_Win32_Zegost_DF_2147732667_0
         $x_1_3 = {50 c6 44 24 ?? 44 c6 44 24 ?? 6c c6 44 24 ?? 6c c6 44 24 ?? 46 c6 44 24 ?? 75 c6 44 24 ?? 55 c6 44 24 ?? 70 c6 44 24 ?? 67 c6 44 24 ?? 72 c6 44 24 ?? 61 c6 44 24 ?? 64 c6 44 24 ?? 72 c6 44 24 ?? 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3025,6 +3142,7 @@ rule Backdoor_Win32_Zegost_CS_2147732965_0
         $x_1_4 = {8b 0b 8b 41 28 85 c0 74 ?? 03 c6 85 c0 74 [0-48] 6a 00 6a 01 56 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3051,6 +3169,7 @@ rule Backdoor_Win32_Zegost_CJ_2147732969_0
         $x_1_3 = {53 68 65 6c 6c 65 78 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3075,6 +3194,7 @@ rule Backdoor_Win32_Zegost_CK_2147732973_0
         $x_1_4 = {80 3c 1e 5c 75 35 56 8d 8d ?? ?? ?? ff 53 51 ff 15 ?? ?? ?? 00 8d 95 ?? ?? ?? ff 6a 00 52 ff 15 ?? ?? ?? 00 83 c4 14 83 f8 ff 75 0f 8d 85 ?? ?? ?? ff 6a 00 50 ff 15 ?? ?? ?? 00 8b fb 83 c9 ff 33 c0 46 f2 ae f7 d1 49 3b f1 72 b4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3099,6 +3219,7 @@ rule Backdoor_Win32_Zegost_CL_2147732975_0
         $x_1_4 = "%ProgramFiles%\\AppPatch\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3128,6 +3249,7 @@ rule Backdoor_Win32_Zegost_CM_2147732976_0
         $x_1_9 = "\\\\.\\PHYSICALDRIVE0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -3162,6 +3284,7 @@ rule Backdoor_Win32_Zegost_DG_2147732981_0
         $x_1_7 = {5b 42 41 43 4b 53 50 41 43 45 5d [0-6] 5b 44 45 4c 45 54 45 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -3192,6 +3315,7 @@ rule Backdoor_Win32_Zegost_CQ_2147732990_0
         $x_1_6 = {00 50 6c 75 67 69 6e 4d 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3215,6 +3339,7 @@ rule Backdoor_Win32_Zegost_CR_2147732991_0
         $x_1_3 = {66 81 38 4d 5a 0f 85 12 01 00 00 8b 78 3c 03 f8 81 3f 50 45 00 00 0f 85 01 01 00 00 6a 04 68 00 20 00 00 ff 77 50 ff 77 34 ff 55 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3241,6 +3366,7 @@ rule Backdoor_Win32_Zegost_EA_2147733021_0
         $x_1_6 = "C:\\Windows\\System32\\wscript.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -3265,6 +3391,7 @@ rule Backdoor_Win32_Zegost_CI_2147733036_0
         $x_1_4 = {56 57 8b 78 3c 89 65 f0 03 f8 89 7d e4 81 3f 50 45 00 00 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3292,6 +3419,7 @@ rule Backdoor_Win32_Zegost_CI_2147733036_1
         $x_1_4 = "Applications\\iexplore.exe\\shell\\open\\command" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3318,6 +3446,7 @@ rule Backdoor_Win32_Zegost_DY_2147733060_0
         $x_1_6 = "?AVCKeyboardManager@@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -3344,6 +3473,7 @@ rule Backdoor_Win32_Zegost_CD_2147733081_0
         $x_1_2 = {c6 45 f6 6c c6 45 f7 44 c6 45 f8 64 ff 35 ?? ?? ?? ?? c6 45 f9 6f c6 45 fa 73 c6 45 fb 53 c6 45 fc 74 c6 45 fd 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3366,6 +3496,7 @@ rule Backdoor_Win32_Zegost_DE_2147733085_0
         $x_1_2 = {ff 50 c6 85 ?? ?? ?? ?? 6c c6 85 ?? ?? ?? ?? 75 c6 85 ?? ?? ?? ?? 67 c6 85 ?? ?? ?? ?? 69 c6 85 ?? ?? ?? ?? 6e c6 85 ?? ?? ?? ?? 33 c6 85 ?? ?? ?? ?? 32 c6 85 ?? ?? ?? ?? 2e c6 85 ?? ?? ?? ?? 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3389,6 +3520,7 @@ rule Backdoor_Win32_Zegost_CP_2147733093_0
         $x_1_3 = {00 25 73 5c 25 64 2e 62 61 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3412,6 +3544,7 @@ rule Backdoor_Win32_Zegost_SL_2147733099_0
         $x_1_3 = {8a 1c 30 80 f3 ?? f6 d3 80 f3 ?? 88 1c 30 46 81 fe ?? ?? 00 00 75 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3434,6 +3567,7 @@ rule Backdoor_Win32_Zegost_EF_2147733109_0
         $x_1_2 = {c6 45 f0 47 c6 45 f1 65 c6 45 f2 74 c6 45 f3 6f c6 45 f4 6e c6 45 f5 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3455,6 +3589,7 @@ rule Backdoor_Win32_Zegost_EG_2147733130_0
         $x_1_1 = {8b 45 10 25 ?? ?? ?? ?? 99 b9 ?? ?? ?? ?? f7 f9 [0-16] 88 55 fc c7 45 f8 00 00 00 00 eb ?? 8b 55 f8 83 c2 01 89 55 f8 8b 45 f8 3b 45 0c 73 ?? 8b 4d 08 8a 11 32 55 fc 8b 45 08 88 10 8b 4d 08 8a 11 02 55 fc 8b 45 08 88 10 8b 4d 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3477,6 +3612,7 @@ rule Backdoor_Win32_Zegost_CZ_2147735275_0
         $x_1_2 = {88 54 24 25 c6 44 24 26 6c c6 44 24 28 69 c6 44 24 29 70 88 5c 24 2b 88 4c 24 2c c6 44 24 2d 73 c6 44 24 2e 66 c6 44 24 2f 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3498,6 +3634,7 @@ rule Backdoor_Win32_Zegost_ZG_2147758169_0
         $x_1_1 = {8a 11 32 55 fc 8b 45 08 88 10 8b 4d 08 8a 11 02 55 fc 8b 45 08 88 10 8b 4d 08 8a 11 32 55 fc 8b 45 08 88 10 8b 4d 08 83 c1 01 89 4d 08 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3520,6 +3657,7 @@ rule Backdoor_Win32_Zegost_KM_2147772866_0
         $x_1_2 = {0f be 04 1e 99 bd d9 06 00 00 f7 fd 8a 04 39 bd 05 00 00 00 80 c2 4f 32 c2 46 88 04 39 8b c1 99 f7 fd 85 d2 75 ?? 33 f6 8b 44 24 ?? 41 3b c8 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3541,6 +3679,7 @@ rule Backdoor_Win32_Zegost_GKM_2147779744_0
         $x_1_1 = {33 f6 0f be 04 3e 99 f7 fd 8b 44 24 ?? 83 c6 01 80 c2 4b 30 91 ?? ?? ?? ?? 8d 94 08 ?? ?? ?? ?? b8 cd cc cc cc f7 e2 c1 ea 02 8d 04 92 8b d1 2b d0 83 c2 02 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3568,6 +3707,7 @@ rule Backdoor_Win32_Zegost_STA_2147780920_0
         $x_1_8 = {c7 45 f0 77 73 70 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -3601,6 +3741,7 @@ rule Backdoor_Win32_Zegost_C_2147794435_0
         $x_3_7 = "DenyTSConnections" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3622,6 +3763,7 @@ rule Backdoor_Win32_Zegost_DF_2147798523_0
         $x_10_1 = {8a 44 1e 01 8a 14 39 46 32 d0 8b c1 88 14 39 99 bd 05 00 00 00 f7 fd 85 d2 75 02 33 f6 8b 44 24 18 41 3b c8 7c da}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3647,6 +3789,7 @@ rule Backdoor_Win32_Zegost_GZK_2147813485_0
         $x_1_5 = "R2V0RElCaXRz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3669,6 +3812,7 @@ rule Backdoor_Win32_Zegost_GJK_2147847943_0
         $x_1_2 = "programB.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3690,6 +3834,7 @@ rule Backdoor_Win32_Zegost_GKH_2147849938_0
         $x_10_1 = {2b c2 8b f0 33 c9 85 f6 ?? ?? 8d a4 24 ?? ?? ?? ?? b8 ?? ?? ?? ?? f7 e1 8b c2 d1 e8 b2 03 f6 ea 8a d1 2a d0 80 c2 02 00 91 ?? ?? ?? ?? 41 3b ce}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3712,6 +3857,7 @@ rule Backdoor_Win32_Zegost_GNX_2147918284_0
         $x_5_2 = {8b ec 83 ec 0c c6 45 f4 44 c6 45 f5 6c c6 45 f6 6c c6 45 f7 53 c6 45 f8 68 c6 45 f9 65 c6 45 fa 6c c6 45 fb 6c c6 45 fc 00 8b 45 08 50}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

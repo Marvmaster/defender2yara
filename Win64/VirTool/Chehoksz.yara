@@ -18,6 +18,7 @@ rule VirTool_Win64_Chehoksz_A_2147922939_0
         $x_1_3 = {48 89 44 24 28 0f b6 44 24 50 85 c0 ?? ?? 48 83 7c 24 28 00 ?? ?? 48 83 7c 24 28 00 ?? ?? 48 83 7c 24 40 ff ?? ?? b2 01 48 8b 4c 24 48 ?? ?? ?? ?? ?? 48 89 44 24 28 4c 8b 44 24 28 48 8b 54 24 48}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

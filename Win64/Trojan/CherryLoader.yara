@@ -17,6 +17,7 @@ rule Trojan_Win64_CherryLoader_RX_2147903864_0
         $x_1_2 = "Go build ID: \"4pnnN7IdNKjzHuOELYFM/uFzb4lTFk4VxecmwXJnl/Pql-vF9kSZvjveUjLSd2/wf-VFTg8PbTL82teVhG0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

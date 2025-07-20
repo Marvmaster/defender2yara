@@ -19,6 +19,7 @@ rule Worm_Win32_Sorer_A_2147603504_0
         $x_1_5 = "Microsoft Windows,\"You are using a pirated(illegal) version of Microsoft.`nYou may encounter severe Penalties for this kind of action.`nPlease Register your copy at www.microsoft.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

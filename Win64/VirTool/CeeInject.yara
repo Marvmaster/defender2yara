@@ -16,6 +16,7 @@ rule VirTool_Win64_CeeInject_QW_2147729085_0
         $x_1_2 = "%c%c%c%c%c%c%c%c%cMSSE-%d-server" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule VirTool_Win64_CeeInject_BAC_2147730093_0
         $x_1_2 = {48 8b 45 b0 48 8d 1c 02 48 8b 4d e0 e8 e1 fe ff ff 88 03 48 83 45 e0 02 83 45 bc 01 8b 45 bc 3b 45 ac 7c d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

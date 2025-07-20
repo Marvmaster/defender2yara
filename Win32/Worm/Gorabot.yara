@@ -25,6 +25,7 @@ rule Worm_Win32_Gorabot_A_2147649499_0
         $x_10_11 = "Terminated: \"IRC Bot\" %s:%d" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*))) or

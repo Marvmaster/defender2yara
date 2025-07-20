@@ -21,6 +21,7 @@ rule HackTool_Win32_BackStab_A_2147913801_0
         $x_1_7 = "procexp64" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

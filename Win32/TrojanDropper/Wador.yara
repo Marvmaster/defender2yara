@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Wador_A_2147649397_0
         $x_1_4 = "\\\\.\\Bios" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

@@ -16,6 +16,7 @@ rule Trojan_Win32_AVTamper_E_2147931624_0
         $x_1_2 = {b9 6b 00 00 00 66 89 8d ?? ?? ?? ?? ba 65 00 00 00 66 89 95 ?? ?? ?? ?? b8 72 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

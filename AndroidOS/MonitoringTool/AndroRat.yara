@@ -36,6 +36,7 @@ rule MonitoringTool_AndroidOS_AndroRat_199201_0
         $x_1_22 = "AndroRat_Binder.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_Win64_TherRansom_YAC_2147946108_0
         $x_2_3 = "WannaCry - Ransomware" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

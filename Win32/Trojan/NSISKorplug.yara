@@ -17,6 +17,7 @@ rule Trojan_Win32_NSISKorplug_OR_2147796150_0
         $x_1_2 = {c1 e8 08 c1 e9 10 88 46 07 88 4e 08 c1 ea 18 88 56 09 c6 46 0a c3 8b 4c 24 08 8d 44 24 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Worm_MSIL_Mieka_A_2147688806_0
         $x_1_5 = {43 00 3a 00 5c 00 ?? ?? 44 00 3a 00 5c 00 ?? ?? 45 00 3a 00 5c 00 ?? ?? 50 00 72 00 6f 00 67 00 72 00 61 00 6d 00 44 00 61 00 74 00 61 00 ?? ?? 78 00 70 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_MSIL_Suzqu_A_2147730530_0
         $x_20_2 = "Microsoft Defander Lab" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

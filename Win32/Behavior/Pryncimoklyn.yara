@@ -19,6 +19,7 @@ rule Behavior_Win32_Pryncimoklyn_A_2147722006_0
         $x_100_4 = "!!! Your DECRYPT-ID: %s !!!" wide //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

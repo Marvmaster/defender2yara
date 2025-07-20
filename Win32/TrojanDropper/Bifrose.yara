@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Bifrose_ACI_2147606973_0
         $x_1_6 = ".tmp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule TrojanDropper_Win32_Bifrose_ACI_2147606973_1
         $x_1_5 = "hideit.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -71,6 +73,7 @@ rule TrojanDropper_Win32_Bifrose_F_2147643186_0
         $x_2_2 = "C0nv3Rt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

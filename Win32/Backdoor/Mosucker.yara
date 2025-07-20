@@ -45,6 +45,7 @@ rule Backdoor_Win32_Mosucker_AB_2147584358_0
         $x_1_31 = "ftp.simloads.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 4 of ($x_10_*) and 9 of ($x_5_*) and 10 of ($x_1_*))) or
             ((1 of ($x_50_*) and 4 of ($x_10_*) and 10 of ($x_5_*) and 5 of ($x_1_*))) or
@@ -119,6 +120,7 @@ rule Backdoor_Win32_Mosucker_2147594944_0
         $x_10_32 = "cam.jpg" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_30_*) and 17 of ($x_10_*) and 12 of ($x_5_*))) or
             ((2 of ($x_30_*) and 18 of ($x_10_*) and 10 of ($x_5_*))) or
@@ -155,6 +157,7 @@ rule Backdoor_Win32_Mosucker_Y_2147605394_0
         $x_1_13 = "lstDataTrans" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 9 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_4_*) and 5 of ($x_1_*))) or
@@ -182,6 +185,7 @@ rule Backdoor_Win32_Mosucker_AA_2147624076_0
         $x_1_4 = {47 00 65 00 74 00 44 00 61 00 74 00 61 00 00 00 02 00 00 00 2e 00 00 00 52 00 65 00 6d 00 6f 00 74 00 65 00 48 00 6f 00 73 00 74 00 00 00 00 00 52 00 65 00 6d 00 6f 00 74 00 65 00 50 00 6f 00 72 00 74 00 00 00 00 00 43 00 6f 00 6e 00 6e 00 65 00 63 00 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

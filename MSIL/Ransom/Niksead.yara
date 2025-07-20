@@ -20,6 +20,7 @@ rule Ransom_MSIL_Niksead_2147725274_0
         $x_2_6 = "C:\\Users\\d.koporushkin\\Desktop\\WindowsFormsApp1\\WindowsFormsApp1\\obj\\Debug\\Ransomware.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

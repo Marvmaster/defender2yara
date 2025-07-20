@@ -16,6 +16,7 @@ rule TrojanProxy_Win32_Agent_E_2147800571_0
         $x_1_2 = {50 4f 53 54 00 00 00 00 41 63 63 65 70 74 3a 20 2a 2f 2a 00 48 54 54 50 2f 31 2e 30 00 00 00 00 4d 53 49 45 36 00 00 00 5c 65 78 70 6c 6f 72 65 72 2e 65 78 65 00 00 00 53 65 44 65 62 75 67 50 72 69 76 69 6c 65 67 65 00 00 00 00 5f 21 4d 53 4e 44 53 23 31 21 5f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanProxy_Win32_Agent_BS_2147804192_0
         $x_2_3 = "c://2.txt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanProxy_Win32_Agent_A_2147804288_0
         $x_10_5 = {ac c0 c0 03 aa e2 f9 61 c9}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_5_*))) or
             ((3 of ($x_10_*))) or

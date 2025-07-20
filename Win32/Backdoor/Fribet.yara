@@ -19,6 +19,7 @@ rule Backdoor_Win32_Fribet_2147605277_0
         $x_1_5 = {46 6b 53 68 75 74 64 6f 77 6e 00 00 53 74 61 72 74 75 70 00 46 6b 53 74 61 72 74 75 70 00 00 00 63 6c 61 73 73 69 64 00 46 4b 69 6e 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_MSIL_IceXLoader_NEAA_2147836090_0
         $x_2_2 = "www.filifilm.com.br" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

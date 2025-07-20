@@ -18,6 +18,7 @@ rule VirTool_Win64_Dumplesesz_A_2147894336_0
         $x_1_3 = {c7 44 24 28 80 00 00 00 45 33 c9 45 33 c0 c7 44 24 20 02 00 00 00 ba 00 00 00 10 ff 15 ?? ?? ?? ?? 44 8b 05 4c 43 00 00 4c ?? ?? ?? ?? 48 8b 15 48 43 00 00 48 8b c8 48 89 74 24 20 ff 15 ?? ?? ?? ?? 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_Win32_Negozl_A_2147716123_0
         $x_1_5 = "\\DECRYPT_YOUR_FILES.HTML" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_QQpass_AA_2147596647_0
         $x_10_4 = {ff ff ff ff 02 00 00 00 6d 6d 00 00 ff ff ff ff 03 00 00 00 64 6c 6c 00 53 74 61 72 74 48 6f 6f 6b 00 00 00 49 6e 73 74 61 6c 6c 48 6f 6f 6b 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanSpy_Win32_QQpass_A_2147648130_0
         $x_3_3 = {5b 42 61 63 6b 73 70 61 63 65 5d 00 5b 54 41 42 5d 00 5b 45 4e 54 45 52 5d 00 5b 53 48 49 46 54}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

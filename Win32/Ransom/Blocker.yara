@@ -17,6 +17,7 @@ rule Ransom_Win32_Blocker_NN_2147743863_0
         $x_1_2 = {6a 00 6a 00 8b c3 2d b7 a0 0b 00 50 6a 00 8b c3 2d b9 a0 0b 00 50 81 c3 46 5f f4 7f 53 8b 45 ?? e8 c4 60 fb ff 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win32_Blocker_MA_2147840325_0
         $x_1_5 = "CryptHashData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

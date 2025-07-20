@@ -23,6 +23,7 @@ rule Ransom_Win64_LockBit_B_2147919370_0
         $x_1_9 = "XpSimulateParanoid" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win64_LockBit_NB_2147920141_0
         $x_5_1 = {48 8b ca 83 e1 7f 0f b6 0c 39 0f b6 84 14 ?? ?? 00 00 32 c8 88 8c 14 ?? ?? 00 00 48 ff c2 48 83 fa}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Ransom_Win64_LockBit_PH_2147929528_0
         $x_1_1 = {48 8b 44 24 ?? 48 63 54 24 ?? 44 0f b7 04 ?? 8b 44 24 ?? 41 b9 [0-4] 99 41 f7 f9 83 c2 ?? 41 31 d0 48 63 44 24 ?? 66 44 89 ?? ?? 8b 44 24 ?? 83 c0 ?? 89 44 24 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Ransom_Win64_LockBit_M_2147929542_0
         $n_1_3 = "[%d] Decrypted:" wide //weight: -1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -116,6 +120,7 @@ rule Ransom_Win64_LockBit_AYA_2147929767_0
         $x_1_8 = "bcdedit /delete {bootmgr} /f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule Ransom_Win64_LockBit_YAC_2147934874_0
         $x_1_7 = "decrypt one file for free" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +179,7 @@ rule Ransom_Win64_LockBit_GVA_2147934998_0
         $x_1_10 = "main.loadRSAPublicKeyFromPEM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +209,7 @@ rule Ransom_Win64_LockBit_AQUA_2147941881_0
         $x_1_9 = "How to decrypt my data.log" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

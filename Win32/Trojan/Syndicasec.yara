@@ -18,6 +18,7 @@ rule Trojan_Win32_Syndicasec_2147727783_0
         $x_2_4 = "ProbeScriptFint" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Trojan_Win32_Syndicasec_C_2147727825_0
         $x_1_7 = "ReleaseEvildll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -29,6 +29,7 @@ rule Backdoor_Win32_Blackhole_R_2147595186_0
         $x_5_15 = "Module32Next" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +66,7 @@ rule Backdoor_Win32_Blackhole_S_2147595187_0
         $x_2_17 = "_kaspersky" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_10_*) and 9 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_100_*) and 4 of ($x_10_*) and 9 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -102,6 +104,7 @@ rule Backdoor_Win32_Blackhole_T_2147595460_0
         $x_1_14 = "WinStar.dlll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_5_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -133,6 +136,7 @@ rule Backdoor_Win32_Blackhole_U_2147595468_0
         $x_1_9 = "Toolhelp32ReadProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +169,7 @@ rule Backdoor_Win32_Blackhole_U_2147595468_1
         $x_1_13 = "getip.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_10_*) and 6 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_10_*) and 6 of ($x_5_*) and 2 of ($x_2_*))) or
@@ -194,6 +199,7 @@ rule Backdoor_Win32_Blackhole_Y_2147602372_0
         $x_1_6 = "ExPloReR.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -221,6 +227,7 @@ rule Backdoor_Win32_Blackhole_Z_2147605515_0
         $x_10_8 = {54 52 65 67 4d 6f 6e 69 74 6f 72 54 68 72 65 61 64 55 8b ec 53 56 57 84 d2 74 08 83 c4 f0 e8 ?? ?? ?? ?? 8b f1 8b da 8b f8 b1 01 33 d2 8b c7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -247,6 +254,7 @@ rule Backdoor_Win32_Blackhole_L_2147632992_0
         $x_10_4 = {0f 84 8e 00 00 00 b8 ?? ?? ?? ?? ba 1c 00 00 00 e8 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? 10 01 00 00 c7 05 ?? ?? ?? ?? 02 00 00 00 c7 05 ?? ?? ?? ?? 03 00 00 00 c7 05 ?? ?? ?? ?? e8 03 00 00 68 ?? ?? ?? ?? a1 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? c6 05 ?? ?? ?? ?? 00 c6 05 ?? ?? ?? ?? 00 c7 05 ?? ?? ?? ?? 04 00 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +280,7 @@ rule Backdoor_Win32_Blackhole_AB_2147637022_0
         $x_1_6 = "ntVersion\\Policies\\WinOldApp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -300,6 +309,7 @@ rule Backdoor_Win32_Blackhole_AC_2147642791_0
         $x_1_5 = "mgmts:{impersonationLevel=impersonate}\").InstancesOf(\"Win32_Processor\")" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

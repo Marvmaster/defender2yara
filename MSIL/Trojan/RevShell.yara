@@ -16,6 +16,7 @@ rule Trojan_MSIL_RevShell_RDA_2147908436_0
         $x_2_1 = {0b 73 15 00 00 0a 0c 08 17 6f 16 00 00 0a 00 08 18 6f 17 00 00 0a 00 08 06 06}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

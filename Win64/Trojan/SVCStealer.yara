@@ -18,6 +18,7 @@ rule Trojan_Win64_SVCStealer_SX_2147945951_0
         $x_5_3 = "9APARW83Z6" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

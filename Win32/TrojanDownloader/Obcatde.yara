@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Obcatde_A_2147697620_0
         $x_1_2 = {80 7f 78 00 74 17 8b 87 8c 00 00 00 99 3b 57 74 75 03 3b 47 70 0f 94 c0 88 47 6c eb 1b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

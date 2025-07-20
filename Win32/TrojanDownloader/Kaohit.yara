@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Kaohit_A_2147691182_0
         $x_1_6 = "\"%Program_Path%\" +e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

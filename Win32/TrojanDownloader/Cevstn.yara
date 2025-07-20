@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Cevstn_B_2147613014_0
         $x_1_2 = {74 31 88 18 8d 85 ?? ?? ff ff 6a 5c 50 ff 15 ?? ?? 40 00 59 3b c3 59 74 1a 80 78 ff 3a 75 05 88 58 01 eb 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

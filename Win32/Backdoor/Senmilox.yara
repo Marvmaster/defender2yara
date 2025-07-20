@@ -23,6 +23,7 @@ rule Backdoor_Win32_Senmilox_A_2147650789_0
         $x_1_9 = "abe2869f-9b47-4cd9-a358-c22904dba7f7" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

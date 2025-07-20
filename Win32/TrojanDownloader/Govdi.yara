@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Govdi_A_2147655752_0
         $x_1_3 = {51 c6 44 24 ?? 69 c6 44 24 ?? 6e c6 44 24 ?? 45 c6 44 24 ?? 78 c6 44 24 ?? 65 c6 44 24 ?? 63 c6 44 24 ?? 00 ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

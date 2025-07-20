@@ -17,6 +17,7 @@ rule Trojan_Win32_AgenTesla_RT_2147743231_0
         $x_1_2 = {50 58 51 59 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

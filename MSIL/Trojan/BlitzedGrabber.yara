@@ -35,6 +35,7 @@ rule Trojan_MSIL_BlitzedGrabber_CXLM_2147850027_0
         $x_1_20 = "\\Local Storage\\leveldb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

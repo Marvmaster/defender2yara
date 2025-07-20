@@ -18,6 +18,7 @@ rule Trojan_Win64_TigerCrypt_A_2147916846_0
         $x_50_3 = "CryptorDES@@" ascii //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_150_*) and 1 of ($x_50_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule Trojan_Win64_TigerCrypt_C_2147916852_0
         $x_100_1 = {e8 f7 49 00 00 48 8b d3 48 8d 4c 24 38 e8 ba 2d 00 00 48 8b d0 48 8d 4c 24 20 e8 ed 2e 00 00 48 8d 54 24 20 48 8d 4c 24 38 e8 4e}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

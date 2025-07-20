@@ -16,6 +16,7 @@ rule Trojan_MSIL_Jigsaw_PSNE_2147846479_0
         $x_2_1 = {26 38 c2 f8 ff ff 11 16 17 58 13 16 11 1a 20 38 3b 25 12 5a 20 8a 58 b4 76 61 38 a9 f8 ff ff 1f 10 8d 24 00 00 01 13 14 1f 10 8d 24 00 00 01 13 15}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_MSIL_Agensla_GG_2147767713_0
         $x_1_1 = {02 09 02 8e 69 5d 02 09 02 8e 69 5d 91 07 09 07 8e 69 5d 91 61 02 09 17 d6 02 8e 69 5d 91 da [0-5] d6 [0-5] 5d b4 9c 09 15 d6 0d 09 16 2f cb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_Agensla_GG_2147767713_1
         $x_1_1 = {2b 61 02 09 02 8e 69 5d 02 09 02 8e 69 5d 91 07 09 07 8e 69 5d 91 61 02 09 17 d6 02 8e 69 5d 91 da 20 ?? ?? ?? 00 28 ?? ?? ?? 06 28 ?? ?? ?? 0a d6 20 ?? ?? ?? 00 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 5d b4 9c 09 15 d6 0d 2b 1a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_Agensla_GA_2147768877_0
         $x_1_4 = "http://liverpoolofcfanclub.com/liverpool" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_MSIL_Agensla_GA_2147768877_1
         $x_1_7 = {d0 a1 d0 b5 d0 bd d1 8c d0 be d1 80 d0 b8 d1 82 d0 b0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Trojan_MSIL_Agensla_GA_2147768877_2
         $x_1_9 = "#installation_method#" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -144,6 +149,7 @@ rule Trojan_MSIL_Agensla_GC_2147768878_0
         $x_1_4 = "DownloadString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +179,7 @@ rule Trojan_MSIL_Agensla_GC_2147768878_1
         $x_1_9 = "Write" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +210,7 @@ rule Trojan_MSIL_Agensla_2147771571_0
         $x_1_9 = "$10e303b6-20c7-48d0-8a6a-a3e558f16e80" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -227,6 +235,7 @@ rule Trojan_MSIL_Agensla_GB_2147777777_0
         $x_1_4 = "liverpool" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +260,7 @@ rule Trojan_MSIL_Agensla_GD_2147779235_0
         $x_1_4 = "DownloadString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -279,6 +289,7 @@ rule Trojan_MSIL_Agensla_GE_2147780171_0
         $x_2_8 = "DownloadString" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_2_*))) or
             ((2 of ($x_10_*))) or
@@ -308,6 +319,7 @@ rule Trojan_MSIL_Agensla_ABDX_2147787670_0
         $x_1_5 = "TryCallName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -329,6 +341,7 @@ rule Trojan_MSIL_Agensla_MBFS_2147901468_0
         $x_1_1 = {34 00 44 00 35 00 41 00 39 00 3a 00 3a 00 33 00 3a 00 3a 00 3a 00 30 00 34 00 3a 00 3a 00 3a 00 46 00 46 00 46 00 46 00 3a 00 3a 00 42 00 38 00 3a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -350,6 +363,7 @@ rule Trojan_MSIL_Agensla_PGA_2147939523_0
         $x_5_1 = {25 16 0f 00 28 ?? 00 00 0a 9c 25 17 0f 00 28 ?? 00 00 0a 9c 25 18 0f 00 28 ?? 00 00 0a 9c 13 08 73 ?? 00 00 0a 13 09}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +387,7 @@ rule Trojan_MSIL_Agensla_NIT_2147945429_0
         $x_2_3 = {0c 00 00 00 12 00 28 ?? 00 00 0a 6f 0a 00 00 06 12 00 28 ?? 00 00 0a 2d eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Worm_Win32_Cambot_B_2147650463_0
         $x_1_3 = "/cmd.php?key=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Worm_Win32_Cambot_C_2147653360_0
         $x_1_3 = "xampp\\htdocs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

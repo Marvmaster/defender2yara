@@ -18,6 +18,7 @@ rule VirTool_Win64_Cordesesz_A_2147895621_0
         $x_1_3 = {48 c7 45 f8 ff ff ff ff 48 8d ?? ?? ?? ?? ?? 48 89 c2 48 8b 05 48 cf 0e 00 48 89 c1 e8 ?? ?? ?? ?? 48 89 c1 48 8b 05 46 cf 0e 00 48 89 c2 e8 ?? ?? ?? ?? 48 8b 45 f8 48 89 c1 e8 ?? ?? ?? ?? 48 89}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

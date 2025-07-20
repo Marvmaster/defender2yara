@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Mecifg_A_2147661904_0
         $x_1_2 = {51 50 ff 75 ?? ff 55 ?? 57 ff 75 ?? ff 55 ?? ff 75 ?? ff 15 ?? ?? ?? ?? ff 75 ?? ff 15 ?? ?? ?? ?? e9 ?? ?? 00 00 6a 40 68 00 10 10 00 8d 83 ?? 08 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

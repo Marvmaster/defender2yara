@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Pirpi_B_2147639902_0
         $x_1_2 = {83 7d f4 00 74 14 81 7d f4 ?? ?? ?? ?? 74 0b 8b 45 f4 35 00 89 45 f4 6a 00 8d 8d ?? ?? ff ff 51 6a 04 8d 55 f4 52 8b 85 ?? ?? ff ff 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

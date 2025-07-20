@@ -19,6 +19,7 @@ rule Trojan_Win32_Vbmalin_A_2147628902_0
         $x_1_5 = "Games.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

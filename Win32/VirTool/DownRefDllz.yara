@@ -20,6 +20,7 @@ rule VirTool_Win32_DownRefDllz_B_2147839553_0
         $x_1_5 = {6a 00 0f b7 45 0c 50 8b 4d 08 51 8b 55 90 52 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

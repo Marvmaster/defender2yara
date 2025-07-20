@@ -15,6 +15,7 @@ rule TrojanDownloader_Win32_Silky_A_2147650454_0
         $x_1_1 = {63 3a 5c 49 6e 73 74 61 6c 6c 65 72 2e 65 78 65 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 68 74 74 70 3a 2f 2f [0-101] 63 6d 64 20 2f 6b 20 63 3a 5c 49 6e 73 74 61 6c 6c 65 72 2e 65 78 65 00 55 8b ec 6a 00 33 c0 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

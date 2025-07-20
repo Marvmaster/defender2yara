@@ -19,6 +19,7 @@ rule Trojan_Win32_Delf_DZ_2147553234_0
         $x_2_5 = {2a 72 2a 2e ?? 70 ?? 68 ?? 70 ?? 3f ?? 75 ?? 72 ?? 6c ?? 3d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -57,6 +58,7 @@ rule Trojan_Win32_Delf_DA_2147594560_0
         $x_10_15 = "C:\\Program Files\\StreamCast\\Morpheus\\My Shared\\" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 11 of ($x_10_*))) or
             ((2 of ($x_50_*) and 6 of ($x_10_*))) or
@@ -115,6 +117,7 @@ rule Trojan_Win32_Delf_BB_2147594842_0
         $x_1_32 = "SeRestorePrivilege" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 2 of ($x_10_*) and 2 of ($x_5_*) and 21 of ($x_1_*))) or
             ((3 of ($x_100_*) and 3 of ($x_10_*) and 21 of ($x_1_*))) or
@@ -192,6 +195,7 @@ rule Trojan_Win32_Delf_CB_2147598664_0
         $x_1_16 = "updskljs.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +223,7 @@ rule Trojan_Win32_Delf_B_2147598750_0
         $x_1_7 = "RegisterServiceCtrlHandlerA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +248,7 @@ rule Trojan_Win32_Delf_QB_2147599317_0
         $x_5_5 = "arun.reg" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_5_*))) or
             ((2 of ($x_10_*) and 1 of ($x_5_*))) or
@@ -273,6 +279,7 @@ rule Trojan_Win32_Delf_RA_2147601206_0
         $x_1_7 = "FastMM Borland Edition" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +305,7 @@ rule Trojan_Win32_Delf_AOW_2147601379_0
         $x_1_6 = "www1.softuu.cn/download/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -332,6 +340,7 @@ rule Trojan_Win32_Delf_AOX_2147601434_0
         $x_1_12 = "WinExec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -368,6 +377,7 @@ rule Trojan_Win32_Delf_FC_2147601775_0
         $x_1_17 = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 2 of ($x_50_*) and 8 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -407,6 +417,7 @@ rule Trojan_Win32_Delf_CJ_2147602333_0
         $x_1_17 = "Enviar MSG." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_20_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -449,6 +460,7 @@ rule Trojan_Win32_Delf_CJ_2147602333_1
         $x_20_20 = "http://orcult.0lx.net/tcgeneration.htm" wide //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_20_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -478,6 +490,7 @@ rule Trojan_Win32_Delf_RAT_2147602467_0
         $x_1_7 = {69 66 20 65 78 69 73 74 [0-32] 67 6f 74 6f [0-32] 74 72 79 [0-32] 64 65 6c 20 25 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -506,6 +519,7 @@ rule Trojan_Win32_Delf_CM_2147602813_0
         $x_1_6 = {43 6f 6d 73 70 65 63 00 ff ff ff ff 09 00 00 00 20 2f 63 20 64 65 6c 20 22}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -533,6 +547,7 @@ rule Trojan_Win32_Delf_CM_2147603259_0
         $x_1_8 = "OpenClipboard" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -559,6 +574,7 @@ rule Trojan_Win32_Delf_FL_2147603703_0
         $x_1_7 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -582,6 +598,7 @@ rule Trojan_Win32_Delf_AR_2147606967_0
         $x_1_4 = {43 00 6f 00 6d 00 70 00 61 00 6e 00 79 00 4e 00 61 00 6d 00 65 00 00 00 00 00 4d 00 69 00 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00 20 00 43 00 6f 00 6d 00 70 00 6f 00 72 00 61 00 74 00 69 00 6f 00 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -609,6 +626,7 @@ rule Trojan_Win32_Delf_CO_2147610993_0
         $x_4_8 = {26 76 3d 31 00 [0-3] ff ff ff ff 05 00 00 00 43 6c 69 63 6b 00 00 00 ff ff ff ff 04 00 00 00 26 63 3d 31 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*) and 4 of ($x_1_*))) or
@@ -639,6 +657,7 @@ rule Trojan_Win32_Delf_CR_2147612027_0
         $x_1_6 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\policies\\Explorer\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_10_*))) or
             (all of ($x*))
@@ -671,6 +690,7 @@ rule Trojan_Win32_Delf_CZ_2147612481_0
         $x_1_10 = "ServiceStop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -700,6 +720,7 @@ rule Trojan_Win32_Delf_FD_2147616460_0
         $x_1_7 = {e8 00 00 00 00 5b [0-4] 8d 53 32 [0-4] 8d 43 2a [0-4] 52 ff 10 8b f0 [0-4] 8d 53 72 [0-4] 8d 43 2e [0-4] 52 56 ff 10 83 f8 00 74 02 [0-4] ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -724,6 +745,7 @@ rule Trojan_Win32_Delf_EG_2147620885_0
         $x_1_5 = {8d 40 00 85 c9 74 19 8b 41 01 80 39 e9 74 0c 80 39 eb 75 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -757,6 +779,7 @@ rule Trojan_Win32_Delf_EI_2147621184_0
         $x_1_11 = "209.20.130.33" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 5 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 6 of ($x_10_*))) or
@@ -784,6 +807,7 @@ rule Trojan_Win32_Delf_EN_2147623507_0
         $x_1_4 = "\\dhcp\\svchost.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))
@@ -813,6 +837,7 @@ rule Trojan_Win32_Delf_EP_2147623654_0
         $x_1_7 = "zehir2010" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -842,6 +867,7 @@ rule Trojan_Win32_Delf_EQ_2147623733_0
         $x_1_5 = "ControlService" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -864,6 +890,7 @@ rule Trojan_Win32_Delf_ES_2147624028_0
         $x_1_3 = {bf 01 00 00 00 8b 45 fc 8a 5c 38 ff 80 e3 0f b8 ?? ?? ?? ?? 8a 44 30 ff 24 0f 32 d8 80 f3 0a 8d 45 fc e8 ?? ?? ?? ?? 8b 55 fc 8a 54 3a ff 80 e2 f0 02 d3 88 54 38 ff 46}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -885,6 +912,7 @@ rule Trojan_Win32_Delf_ET_2147624227_0
         $x_1_2 = {8b c6 33 c9 ba 44 00 00 00 e8 ?? ?? ff ff c7 46 2c 01 00 00 00 66 c7 46 30 00 00 68 ?? ?? ?? ?? 56 6a 00 6a 00 6a 40 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -906,6 +934,7 @@ rule Trojan_Win32_Delf_EZ_2147624987_0
         $x_1_2 = {68 f4 01 00 00 e8 ?? ?? fe ff e8 ?? ?? ff ff 83 3b 03 74 05 83 3b 01 75 e7 33 c0 5a 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -930,6 +959,7 @@ rule Trojan_Win32_Delf_GE_2147628299_0
         $x_1_5 = "DEL /a \"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -955,6 +985,7 @@ rule Trojan_Win32_Delf_GT_2147631007_0
         $x_1_6 = "ServidorFtp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -978,6 +1009,7 @@ rule Trojan_Win32_Delf_HH_2147632688_0
         $x_1_4 = "application/vnd.ms-powerpoint, */*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1002,6 +1034,7 @@ rule Trojan_Win32_Delf_HY_2147634705_0
         $x_1_5 = "::{20D04FE0-3AEA-1069-A2D8-08002B30309D}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1025,6 +1058,7 @@ rule Trojan_Win32_Delf_NC_2147635925_0
         $x_2_4 = "mutex_senddata_.la" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1052,6 +1086,7 @@ rule Trojan_Win32_Delf_HZ_2147636470_0
         $x_1_4 = "groups.google.com/grphp?hl=zh-CN&ned=cn&tab=ng" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1075,6 +1110,7 @@ rule Trojan_Win32_Delf_ND_2147637020_0
         $x_1_4 = "Thunder.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1100,6 +1136,7 @@ rule Trojan_Win32_Delf_NE_2147637021_0
         $x_1_6 = "/update.aspx?feedback=success&ver=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1124,6 +1161,7 @@ rule Trojan_Win32_Delf_II_2147637028_0
         $x_2_5 = {e5 db d3 ce e4 af c0 c0 c6 f7 2e 6c 6e 6b 00 00 ff ff ff ff 09 00 00 00 33 36 30 73 65 2e 65 78 65 00 00 00 ff ff ff ff 07 00 00 00 61 62 63 2e 65 78 65}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1150,6 +1188,7 @@ rule Trojan_Win32_Delf_IJ_2147637522_0
         $x_1_4 = {70 69 6e 67 20 31 32 37 2e 30 2e 30 2e 31 0d 0a 00 00 00 00 ff ff ff ff 1a 00 00 00 7b 70 66 7d 5c 52 69 73 69 6e 67 5c 52 61 76 5c 52 73 4d 61 69 6e 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1176,6 +1215,7 @@ rule Trojan_Win32_Delf_IM_2147637677_0
         $x_1_7 = {2f 6c 69 73 74 32 2f 3f 73 3d ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 26 61 3d ?? ?? ?? ?? ?? ?? ?? ?? ?? 26 72 6e 64 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1199,6 +1239,7 @@ rule Trojan_Win32_Delf_IN_2147637750_0
         $x_1_4 = {78 7a 7a 2f 10 00 25 64 ?? ?? 64 6b 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1223,6 +1264,7 @@ rule Trojan_Win32_Delf_IO_2147637796_0
         $x_1_5 = "software\\microsoft\\windows\\currentversion\\explorer\\browser helper objects" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1247,6 +1289,7 @@ rule Trojan_Win32_Delf_IT_2147639087_0
         $x_1_4 = ";360deepscan;DSMain;krnl360svc;egui;ekrn;kissvc;kswebshield;ZhuDongFangYu;SuperKiller;" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1271,6 +1314,7 @@ rule Trojan_Win32_Delf_IU_2147639088_0
         $x_1_4 = {2e 6c 6c 61 64 73 2e 63 6e [0-5] 2f 69 65 62 61 72 2f 74 74 65 73 74 2e 61 73 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1294,6 +1338,7 @@ rule Trojan_Win32_Delf_IV_2147639611_0
         $x_1_4 = {53 61 66 65 74 72 61 79 5c 20 2f 64 20 32 00 5c 53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e 20 2f 76 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1319,6 +1364,7 @@ rule Trojan_Win32_Delf_IX_2147641110_0
         $x_2_5 = "122.224.9.113:8022/Insertbz.aspx?mci=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1345,6 +1391,7 @@ rule Trojan_Win32_Delf_JE_2147641124_0
         $x_1_4 = {53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e [0-16] 64 65 6c 6c 69 73 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1370,6 +1417,7 @@ rule Trojan_Win32_Delf_JG_2147642015_0
         $x_1_6 = "uma cpl : WshShell.Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1393,6 +1441,7 @@ rule Trojan_Win32_Delf_MW_2147642090_0
         $x_1_3 = "CreateFactorys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1416,6 +1465,7 @@ rule Trojan_Win32_Delf_RRB_2147642620_0
         $x_1_4 = {24 24 61 2e 62 61 74 ?? ?? ?? ?? ?? ?? ?? ?? ?? 3a 74 72 79}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1441,6 +1491,7 @@ rule Trojan_Win32_Delf_JN_2147643308_0
         $x_1_6 = "Controller of computer safety" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1464,6 +1515,7 @@ rule Trojan_Win32_Delf_KB_2147645925_0
         $x_1_4 = "css/logs/add.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1487,6 +1539,7 @@ rule Trojan_Win32_Delf_KK_2147647533_0
         $x_1_4 = "\\windows\\kilinh.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1510,6 +1563,7 @@ rule Trojan_Win32_Delf_KO_2147648229_0
         $x_3_4 = "z_hstemp%.3d.html" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1532,6 +1586,7 @@ rule Trojan_Win32_Delf_KP_2147648255_0
         $x_1_3 = "TStartThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1553,6 +1608,7 @@ rule Trojan_Win32_Delf_KQ_2147648340_0
         $x_4_2 = {ff ff ff ff 05 00 00 00 53 54 20 2f 31 00 00 00 ff ff ff ff 03 00 00 00 73 74 65 00 ff ff ff ff 03 00 00 00 6d 61 69 00 ff ff ff ff 03 00 00 00}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1574,6 +1630,7 @@ rule Trojan_Win32_Delf_KU_2147649062_0
         $x_1_2 = {6f 00 2f 00 3f 00 69 00 73 00 6c 00 65 00 6d 00 3d 00 68 00 6f 00 73 00 74 00 73 00 26 00 67 00 75 00 76 00 65 00 6e 00 6c 00 69 00 6b 00 3d 00 64 00 77 00 6d 00 08 00 2e 00 69 00 6e 00 66 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1597,6 +1654,7 @@ rule Trojan_Win32_Delf_LI_2147652320_0
         $x_1_4 = "UCC2011.COM" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1620,6 +1678,7 @@ rule Trojan_Win32_Delf_LK_2147653710_0
         $x_1_4 = {2e 31 67 62 2e 72 75 2f [0-16] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1643,6 +1702,7 @@ rule Trojan_Win32_Delf_LL_2147653928_0
         $x_1_4 = {68 6f 6f 6b [0-1] 44 6c 6c 2e 64 6c 6c [0-4] 45 6e 64 48 6f 6f 6b [0-4] 53 74 61 72 74 48 6f 6f 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1666,6 +1726,7 @@ rule Trojan_Win32_Delf_KX_2147656319_0
         $x_5_4 = {68 c8 00 00 00 e8 ?? ?? ff ff e8 ?? ?? ff ff 68 c8 00 00 00 e8 ?? ?? ff ff e8 ?? ?? ff ff 68 ?? ?? 40 00 e8 ?? ?? ff ff 6a 64 e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1695,6 +1756,7 @@ rule Trojan_Win32_Delf_LX_2147657688_0
         $x_1_7 = {8b 41 01 80 39 e9 74 0c 80 39 eb 75 0c 0f be c0 41 41 eb 03 83 c1 05 01 c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1716,6 +1778,7 @@ rule Trojan_Win32_Delf_LZ_2147658021_0
         $x_1_2 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1737,6 +1800,7 @@ rule Trojan_Win32_Delf_MF_2147659624_0
         $x_1_2 = {bf 01 00 00 00 8b c3 34 01 84 c0 74 1b 8d 45 f0 8b 55 fc 0f b6 54 3a ff e8 ?? ?? ?? ?? 8b 55 f0 8d 45 f8 e8 ?? ?? ?? ?? 80 f3 01 47 4e 75 d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1759,6 +1823,7 @@ rule Trojan_Win32_Delf_MK_2147693611_0
         $x_1_3 = "choice /t 5 /d y" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1781,6 +1846,7 @@ rule Trojan_Win32_Delf_GL_2147720091_0
         $x_1_2 = {6d 65 67 61 70 65 73 74 72 00 00 00 ff ff ff ff 09 00 00 00 6d 65 67 61 70 65 65 6e 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1804,6 +1870,7 @@ rule Trojan_Win32_Delf_J_2147743803_0
         $x_1_3 = "8303027835B6869586F743721D4F1AB42112215D8E1C80E33" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1830,6 +1897,7 @@ rule Trojan_Win32_Delf_SA_2147779445_0
         $x_5_6 = "F:\\Office\\Target\\x86\\ship\\postc2r\\x-none\\wordconv" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1861,6 +1929,7 @@ rule Trojan_Win32_Delf_MBK_2147781409_0
         $x_1_8 = "http://controle.supermercadoimperial.com.br/modulos/contador/fatal/bit/go.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1885,6 +1954,7 @@ rule Trojan_Win32_Delf_UNK_2147786568_0
         $x_1_4 = {8b 10 85 d2 74 1c c7 00 00 00 00 00 8b 4a f8 49 7c 10 f0 ff 4a f8 75 0a 50 8d 42 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1914,6 +1984,7 @@ rule Trojan_Win32_Delf_AF_2147787514_0
         $x_3_9 = "GetKeyboardLayout" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1944,6 +2015,7 @@ rule Trojan_Win32_Delf_OKR_2147789168_0
         $x_1_10 = "Sunward Information Technology Co.Ltd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1970,6 +2042,7 @@ rule Trojan_Win32_Delf_EM_2147813939_0
         $x_3_6 = "AutoHotkeys" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1996,6 +2069,7 @@ rule Trojan_Win32_Delf_EM_2147813939_1
         $x_1_6 = "JXIzRSaFVcOiQiI1E6JFVDSk4yT3t0VDFwTHVmSn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2022,6 +2096,7 @@ rule Trojan_Win32_Delf_EN_2147813940_0
         $x_3_6 = "ShellFolder" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2048,6 +2123,7 @@ rule Trojan_Win32_Delf_EN_2147813940_1
         $x_1_6 = "PowerLame PE-ExeEnCrypter!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2074,6 +2150,7 @@ rule Trojan_Win32_Delf_NB_2147814558_0
         $x_3_6 = "CopyEnhMetaFileA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2102,6 +2179,7 @@ rule Trojan_Win32_Delf_AG_2147819837_0
         $x_1_8 = "GetACP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2124,6 +2202,7 @@ rule Trojan_Win32_Delf_EC_2147841685_0
         $x_1_2 = "FADGRQSPCUTWVihj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2149,6 +2228,7 @@ rule Trojan_Win32_Delf_EC_2147841685_1
         $x_1_5 = "QDExMTExMTExQA==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2176,6 +2256,7 @@ rule Trojan_Win32_Delf_EC_2147841685_2
         $x_1_7 = "eHZ5aQ==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2203,6 +2284,7 @@ rule Trojan_Win32_Delf_AT_2147896079_0
         $x_3_7 = "GetCommandLineA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2229,6 +2311,7 @@ rule Trojan_Win32_Delf_NS_2147926475_0
         $x_1_6 = "Privileged instruction" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2252,6 +2335,7 @@ rule Trojan_Win32_Delf_OKN_2147935404_0
         $x_1_3 = "%TEMP%\\vmware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2282,6 +2366,7 @@ rule Trojan_Win32_Delf_OKL_2147935611_0
         $x_1_10 = "r  u  n      u  r  l" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2303,6 +2388,7 @@ rule Trojan_Win32_Delf_OKM_2147936283_0
         $x_3_1 = {8b 45 f8 03 c6 40 99 89 45 f0 89 55 f4 eb ?? 46 4f 75}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2326,6 +2412,7 @@ rule Trojan_Win32_Delf_OKP_2147937533_0
         $x_1_3 = "OMNTAAAA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2353,6 +2440,7 @@ rule Trojan_Win32_Delf_OKO_2147944118_0
         $x_1_7 = "Auto Update -> Deactive" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_CryptInj_BA_2147742433_0
         $x_1_2 = {83 c7 08 4e 75 09 00 8b d3 8b cf 55 8b [0-208] 20 00 00 00 8b 0d [0-7] c1 e6 04 [0-32] c1 ea 05 03 95 ?? ?? ?? ?? 89 0d [0-32] c1 e7 04 3d ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule VirTool_MSIL_PEinject_GA_2147811467_0
         $x_10_3 = "https://github.com/Gaganin1212/sosalka/raw/main/" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_10_*))) or
             (all of ($x*))

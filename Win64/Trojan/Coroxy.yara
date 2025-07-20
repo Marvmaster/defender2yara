@@ -19,6 +19,7 @@ rule Trojan_Win64_Coroxy_MB_2147839829_0
         $x_2_4 = "socks64.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win64_Coroxy_SB_2147851263_0
         $x_1_3 = {87 d7 2a e5 d0 69 ?? bc ?? ?? ?? ?? 25 ?? ?? ?? ?? 79}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win64_Coroxy_SPK_2147892395_0
         $x_2_1 = {48 8d 0d 76 0f 00 00 0f be 04 01 8b 4c 24 28 33 c8 8b c1 48 63 4c 24 20 48 8b 54 24 30 88 04 0a eb a6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win64_Coroxy_GZN_2147926382_0
         $x_10_1 = {48 2b c8 49 0f af ?? 0f b6 44 0c ?? 49 63 cf 43 32 44 0b ?? 41 88 41 ?? 49 8b c5 48 f7 e1 48 8b c1 48 2b c2 48 d1 e8 48 03 c2}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_Win64_Coroxy_LIZ_2147933706_0
         $x_5_1 = {0f b6 d0 0f b6 85 a5 0a 00 00 0f af c2 ba 35 01 00 00 88 85 a5 0a 00 00 41 8b 41 ec 03 c1 ff c1 41 31 41 ?? 0f b7 05 bf ea 00 00 2b d0 8b c2 99 f7 3d ?? ?? 00 00 89 05 22 eb 00 00 81 f9 a3 0a 00 00 7f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

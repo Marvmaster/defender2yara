@@ -18,6 +18,7 @@ rule Backdoor_Win32_Regiskazi_A_2147693313_0
         $x_2_4 = "!calistir" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

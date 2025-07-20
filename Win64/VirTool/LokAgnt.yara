@@ -17,6 +17,7 @@ rule VirTool_Win64_LokAgnt_B_2147941246_0
         $x_1_3 = {81 38 50 45 00 00 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

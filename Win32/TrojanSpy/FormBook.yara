@@ -65,6 +65,7 @@ rule TrojanSpy_Win32_FormBook_AR_2147750278_0
         $x_1_50 = "J8egKhEM1a1JgihiOe0Onnfc5YIsHb4xcHIowhyl253" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

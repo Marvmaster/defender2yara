@@ -24,6 +24,7 @@ rule Trojan_Win32_Loshi_A_2147667443_0
         $x_1_10 = {6c 61 6f 73 68 69 31 33 35 2e 7a 68 61 6e 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or

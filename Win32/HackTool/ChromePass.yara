@@ -18,6 +18,7 @@ rule HackTool_Win32_ChromePass_2147692564_0
         $x_1_4 = "origin_url, action_url, username_element, username_value, password_element, password_value" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

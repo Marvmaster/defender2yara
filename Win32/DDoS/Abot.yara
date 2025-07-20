@@ -20,6 +20,7 @@ rule DDoS_Win32_Abot_A_2147656521_0
         $n_100_6 = "System.Collections.Generic.IComparer<Microsoft.Sounder.Protocols.Frame>" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (3 of ($x*))
 }

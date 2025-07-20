@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Lazchen_A_2147638125_0
         $x_1_3 = {50 46 60 45 6a 31 44 6b 61 4f 6b 09 6f 52 77 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

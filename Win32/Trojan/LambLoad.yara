@@ -16,6 +16,7 @@ rule Trojan_Win32_LambLoad_B_2147896170_0
         $x_100_1 = {80 34 32 59 4a 79 e3 80 3e 4d 75 12 80 7e 01 5a 75 0c}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

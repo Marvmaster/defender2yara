@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Fatsee_A_2147623170_0
         $x_1_6 = "\\usp10.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

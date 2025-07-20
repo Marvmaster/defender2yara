@@ -16,6 +16,7 @@ rule PWS_Win32_Dexter_A_2147683003_0
         $x_1_2 = {44 65 74 65 63 74 53 68 75 74 64 6f 77 6e 43 6c 61 73 73 00 64 6f 77 6e 6c 6f 61 64 2d 00 00 [0-3] 75 70 64 61 74 65 2d 00 63 68 65 63 6b 69 6e 3a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule PWS_Win32_Dexter_2147683822_0
         $x_1_3 = {8b 45 0c 0f be 08 33 d1 8b 45 08 88 10 8b 4d 0c 83 c1 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

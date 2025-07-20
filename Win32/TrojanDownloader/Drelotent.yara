@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Drelotent_A_2147720999_0
         $x_1_3 = "://sorrycorpmail.site/mail/index.php?id=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

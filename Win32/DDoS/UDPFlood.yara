@@ -18,6 +18,7 @@ rule DDoS_Win32_UDPFlood_2147496579_0
         $x_1_4 = {bb 00 7d 00 00 8d ?? ?? 8d ?? ?? 6a 01 6a 1c 51 50 6a 00 6a 00 ff 75 ?? ff 75 ?? ff 55 ?? 4b 75 e4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

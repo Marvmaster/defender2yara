@@ -24,6 +24,7 @@ rule Ransom_Win32_Probrella_A_2147717090_0
         $x_1_10 = {2e 6c 6f 63 6b 65 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule TrojanDownloader_Win32_Centim_2147574189_0
         $x_3_11 = {83 c4 fc 68 ?? ?? 00 00 6a 00 50 e8 ?? ?? ?? ?? 83 c4 10 [0-3] 83 c4 f8 68 ?? ?? ?? ?? 8d 85 ?? ?? ?? ?? 50 e8}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule Trojan_Win32_Rwek_A_2147662133_0
         $x_1_2 = "%\\thunb.db\" 666\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

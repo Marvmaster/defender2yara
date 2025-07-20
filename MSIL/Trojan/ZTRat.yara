@@ -27,6 +27,7 @@ rule Trojan_MSIL_ZTRat_AZR_2147917927_0
         $x_1_12 = "/kill-process" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +59,7 @@ rule Trojan_MSIL_ZTRat_AZT_2147918394_0
         $x_1_11 = "/get-remote-shell" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

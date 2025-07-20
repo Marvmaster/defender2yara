@@ -16,6 +16,7 @@ rule Trojan_Win32_Pony_H_2147730229_0
         $x_1_1 = {8a 10 80 f2 ?? [0-4] 88 10 [0-4] c3 8b c0 53 51 8b d8 54 6a 40 52 53}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Pony_I_2147730242_0
         $x_1_1 = {c3 8b c0 53 51 8b d8 54 6a 40 52 53 07 00 8b c0 [0-4] 80 30 ??}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_Pony_DA_2147739929_0
         $x_1_2 = {10 30 00 10 [0-16] a1 05 00 00 8a ?? ?? (34|80) [0-3] 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Trojan_Win32_Pony_SA_2147742122_0
         $x_1_2 = {8b f2 b0 83 4e 44 b2 31 97 f0 08 0e b1 10 00 8b f2 b0 ?? 4e 44 b2 ?? 97 [0-10] f0 08 0e b1 ?? 23 c9 d4 ?? 43 23 57 7c 80 38 ?? 5f 8a 3b 4d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_Win32_Pony_AZ_2147743681_0
         $x_1_13 = "DisableScriptScanning" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule Trojan_Win32_Pony_AN_2147837926_0
         $x_2_1 = {39 c3 ac 25 2d b0 f7 85 6b 6c 6f 67 19 15 8c dd ab 78 fa bf 4f 57 49 52 c1 51 13 44 e4 5a 0b 49 91 53 1b 57 43 87 0a 55 42 ec 33 6f b8 32 25 75 1d 75 01 57 17 5a 08 4d fb bd 13 49 df 9e 05 50 0a 50 0b 51 71}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Trojan_Win32_Pony_AM_2147837928_0
         $x_1_2 = {2b 33 71 b5 05 80 c1 82 80 89 9f 4c 8a fd 1e 4b f7 6c 51 10 21 3d fb fc fa a0 68 10 a7 38 08 00 2b 33 71 b5 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +185,7 @@ rule Trojan_Win32_Pony_AO_2147837988_0
         $x_2_1 = {32 01 1d dc ce 00 8a 89 da fa f1 2b c6 00 88 44 8a 00 3b 00 34 a1 83 bc 46 8b 82 f9 fc 8c 63 63 c5 b1 00 86 00 35 90 89 00 00 34 1b 1d 00 86 3a 00 7e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -200,6 +208,7 @@ rule Trojan_Win32_Pony_AP_2147837995_0
         $x_1_2 = {44 fb fa 14 9f 98 35 94 6f d3 07 ae 96 9e fa 66 42 98 86 37 43 f8 7d 83}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +231,7 @@ rule Trojan_Win32_Pony_AQ_2147841714_0
         $x_2_2 = {21 81 1b 55 ae 4d ef 25 04 5f 0c f5 30 45 96 fb 53 f8 40 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +253,7 @@ rule Trojan_Win32_Pony_AR_2147841932_0
         $x_2_1 = {33 0c eb ae 3a 8d 2d 25 42 81 ac 69 3f 8f 2d ae cc 29 c4 1a 32 8d 2d f6 b6 08 ed ae 3f 8d c5 1a 3b 8d 2d 27 f7 d4 04 61 bc 64 2f af fe 04 60 ba d7 f2 df 51 c0 eb a6 b2 30 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -265,6 +276,7 @@ rule Trojan_Win32_Pony_AS_2147843812_0
         $x_2_2 = {3d d3 d7 4f 99 bf bc 04 70 54 56 b9 79 0d ac 53 f1 54 1d 58 0b 9e cb 5e 98 24 85 04 70 2a 6b f3 b3 e3 0b 84 7f 5c e3 14 26 4b b6 04 70}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -287,6 +299,7 @@ rule Trojan_Win32_Pony_AT_2147843813_0
         $x_2_2 = {29 10 8a 44 6a 2d 14 88 45 22 2a d1 44 a1 a2 34 d6 3d 14 44 1f b1 66 5a 80 00 02 b3 10 c4 56 48 4c 62 2a 10 2e 18 08 0e ac 72}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -309,6 +322,7 @@ rule Trojan_Win32_Pony_RPX_2147847553_0
         $x_1_2 = {66 09 1c 0f 49 49 85 c9 0f 8d 54 ff ff ff 31 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -331,6 +345,7 @@ rule Trojan_Win32_Pony_AU_2147848048_0
         $x_2_2 = {b4 c4 d9 65 05 b7 97 64 dc 73 a4 05 a2 1c 61 12 aa 2d fd 24 e5 96 84 b1 1f d1 4a 33 ac a0 db 56 de 0a 5c 32 04 7d 37 a7 0f f7 43 dd 96 e5 25 2d b5 21 23 b9 d8 d9 bc 5e 70}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -353,6 +368,7 @@ rule Trojan_Win32_Pony_DAX_2147888522_0
         $x_1_2 = {46 31 5d ca a4 47 29 4a d0 ab 2d 22 49 07 0a d0 cd b8 04 dd b0 6f 87 a9 e9 33 80 e7 67 90 38 43 c8 41 0c 48 90 99 7d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -377,6 +393,7 @@ rule Trojan_Win32_Pony_ASC_2147892573_0
         $x_1_4 = {ba 3c d9 d2 ff c0 e8 2e 92 bc c9 5c 5d e1 35 98 95 6c 8d 15 b4 27 c9 30 d6 05 be bb 6d f5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -399,6 +416,7 @@ rule Trojan_Win32_Pony_ASE_2147907256_0
         $x_1_2 = {0a f1 82 1d 76 fd 0b 6f 88 30 ca 1f 44 fd 01 57 4f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule VirTool_Win64_BypassAV_C_2147928577_0
         $x_1_4 = "MAKEINTRESOURCE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

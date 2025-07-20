@@ -17,6 +17,7 @@ rule Trojan_Win32_Corelump_A_2147827202_0
         $x_1_2 = {5d 5d 3e c5 85 c8 77 59 d5 e7 00 45 a3 11 57 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

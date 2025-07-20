@@ -28,6 +28,7 @@ rule Backdoor_Win32_NetWiredRC_A_2147661506_0
         $x_10_14 = {0f b7 d1 69 d2 69 90 00 00 c1 e1 10 01 ca 89}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_5_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 5 of ($x_1_*))) or
@@ -62,6 +63,7 @@ rule Backdoor_Win32_NetWiredRC_B_2147679567_0
         $x_1_10 = {57 49 4e 4e 54 00 4c 41 4e 4d 41 4e 4e 54 00 53 45 52 56 45 52 4e 54 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +93,7 @@ rule Backdoor_Win32_NetWiredRC_C_2147691862_0
         $x_1_10 = {5b 25 2e 32 64 2f 25 2e 32 64 2f 25 64 ?? 25 2e 32 64 3a 25 2e 32 64 3a 25 2e 32 64 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +116,7 @@ rule Backdoor_Win32_NetWiredRC_C_2147696815_0
         $x_1_2 = {75 7a 8a 04 17 fe c0 88 04 17 29 c0 83 c0 06 89 c1 53 56 8a 44 0e ff 32 44 0f ff 5e 5b 3a 44 0b ff 75 04 e2 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +137,7 @@ rule Backdoor_Win32_NetWiredRC_D_2147697385_0
         $x_1_1 = {39 36 77 28 28 37 37 37 36 35 7a 3b 31 2b 39 37 [0-255] 5a 58 50 45 57 58 5a 58 50 45 57 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +162,7 @@ rule Backdoor_Win32_NetWiredRC_E_2147710321_0
         $x_1_5 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +185,7 @@ rule Backdoor_Win32_NetWiredRC_AB_2147734617_0
         $x_1_2 = {8a 44 0f ff 3c 7a 75 ?? 4a 8a 04 17 fe c0 88 04 17 3c 7b 75 ?? c6 04 17 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +209,7 @@ rule Backdoor_Win32_NetWiredRC_2147740986_0
         $x_5_3 = "ipIJ5khkM33u0qZJiHVV8hd9gGQUi59" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -226,6 +234,7 @@ rule Backdoor_Win32_NetWiredRC_A_2147772396_0
         $x_1_4 = "2154D82A4F0340AADF0AB5D76D6F8F0F2E6CE3297517C3E9E54AEE6F59F0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

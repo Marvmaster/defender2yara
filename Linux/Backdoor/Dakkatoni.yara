@@ -16,6 +16,7 @@ rule Backdoor_Linux_Dakkatoni_B_2147761580_0
         $x_3_1 = {31 db f7 e3 53 43 53 6a 02 b0 66 89 e1 cd 80 97 5b 68 65 20 13 06 68 02 00 11 5c 89 e1 6a 66 58 50 51 57 89 e1 43 cd 80 85 c0 79 19 4e 74 3d 68 a2 00 00 00 58 6a 00 6a 05 89 e3 31 c9 cd 80 85 c0 79 bd eb 27}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Linux_Dakkatoni_B_2147761580_1
         $x_1_4 = "python -c 'import pty;pty.spawn(\"/bin/sh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Backdoor_Linux_Dakkatoni_2147762155_0
         $x_1_6 = "mettlesploit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Backdoor_Linux_Dakkatoni_B_2147819485_0
         $x_1_4 = "31.202.128.80" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

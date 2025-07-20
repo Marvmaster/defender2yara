@@ -21,6 +21,7 @@ rule Trojan_Win32_Helbsly_A_2147603163_0
         $x_1_7 = "baiyuanfan@SteelKernelGroup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             ((4 of ($x_5_*))) or

@@ -19,6 +19,7 @@ rule Backdoor_MacOS_X_Flosax_A_2147659382_0
         $x_1_5 = "mXpcCon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Backdoor_MacOS_X_Flosax_A_2147659382_1
         $x_1_12 = "isACrisisApp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Backdoor_MacOS_X_Flosax_A_2147659391_0
         $x_2_6 = {83 fa 50 7d 24 8d 42 01 80 3c 11 e8 75 f0 8b 74 11 01 01 d6 80 7c 31 05 55 75 e3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

@@ -23,6 +23,7 @@ rule Ransom_Win32_FileEncoder_A_2147756883_0
         $x_1_8 = "Go build ID:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win32_FileEncoder_A_2147756883_1
         $x_1_2 = {bb 01 00 00 00 d3 e3 23 d8 74 2d 80 c1 41 88 0d ?? ?? ?? ?? 80 e9 41 c7 05 ?? ?? ?? ?? 3a 5c 2a 2e c6 05 ?? ?? ?? ?? 2a c6 05 ?? ?? ?? ?? 00 50 51}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Zloader_STA_2147771104_0
         $x_1_3 = {6c 6f 61 64 65 72 5f 78 6c 73 2e 64 6c 6c 00 49 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

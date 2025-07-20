@@ -17,6 +17,7 @@ rule Trojan_MSIL_MeduzaStealer_AME_2147927861_0
         $x_1_2 = {0a 00 06 02 7b 07 00 00 04 6f ?? 00 00 0a 00 06 06 6f ?? 00 00 0a 06 6f ?? 00 00 0a 6f ?? 00 00 0a 0b 73 42 00 00 0a 0c 08 07 17 73 43 00 00 0a 0d 09 73 44 00 00 0a 13 04 00 11 04 03 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_MeduzaStealer_AMZ_2147928768_0
         $x_2_2 = "147.45.47.15/duschno.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_OysterLoader_YAB_2147912418_0
         $x_1_2 = {49 63 c9 48 b8 ?? ?? ?? ?? ?? ?? ?? ?? 45 03 cc 48 f7 e1 48 c1 ea}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_OysterLoader_GZZ_2147945207_0
         $x_5_3 = {41 ff d7 48 89 c7 48 89 f1 ba 02 00 00 00 ff 15}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

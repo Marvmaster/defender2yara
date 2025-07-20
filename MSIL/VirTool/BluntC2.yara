@@ -26,6 +26,7 @@ rule VirTool_MSIL_BluntC2_C_2147793719_0
         $x_1_11 = "DynamicInvocation.Injection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -55,6 +56,7 @@ rule VirTool_MSIL_BluntC2_J_2147843228_0
         $x_1_9 = ".Commands.Shell" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win64_PostGallery_A_2147926518_0
         $x_100_1 = {73 68 65 6c 6c 65 78 65 e9 ?? ?? ?? ?? 48 83 fe 09 0f 85 ?? ?? ?? ?? ?? ?? 73 68 65 6c 6c 65 78 65}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

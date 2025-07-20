@@ -25,6 +25,7 @@ rule TrojanDownloader_Win32_Elivoco_A_2147646295_0
         $x_1_11 = "FASA9PlainDriver" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 1 of ($x_1_*))) or
             ((2 of ($x_20_*) and 1 of ($x_2_*))) or

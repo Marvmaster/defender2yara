@@ -22,6 +22,7 @@ rule Trojan_Win32_Arcyess_A_2147696634_0
         $x_2_7 = "Running in background" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

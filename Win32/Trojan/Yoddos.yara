@@ -20,6 +20,7 @@ rule Trojan_Win32_Yoddos_A_2147637803_0
         $x_1_6 = {6b 6d 6f 6e 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Yoddos_B_2147655130_0
         $x_1_6 = {8b 54 24 10 8b 35 ?? ?? ?? ?? 8d 4c 24 14 6a 04 51 6a 04 50 68 ?? ?? ?? ?? 52 ff d6 8b 4c 24 10 8d 44 24 14 6a 04 50 6a 04 6a 00 68 ?? ?? ?? ?? 51 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_Yoddos_C_2147661079_0
         $x_1_8 = "DNSFlood" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -97,6 +100,7 @@ rule Trojan_Win32_Yoddos_D_2147684136_0
         $x_2_3 = {b9 01 00 00 00 85 c9 74 57 83 3d ?? ?? ?? ?? 01 75 02 eb 4c b8 63 00 00 00 90 b8 9d ff ff ff 90 6a 06 6a 01 6a 02 ff 15 ?? ?? ?? ?? 89 85 7c fd ff ff 6a 10 8d 55 f0 52 8b 85 7c fd ff ff 50 ff 15 ?? ?? ?? ?? b8 63 00 00 00 90 b8 9d ff ff ff 90 8b 8d 7c fd ff ff 51 ff 15 ?? ?? ?? ?? eb a0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))

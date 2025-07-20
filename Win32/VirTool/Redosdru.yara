@@ -19,6 +19,7 @@ rule VirTool_Win32_Redosdru_A_2147623135_0
         $x_1_5 = "e:\\job\\gh0st\\Release\\gh0st.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

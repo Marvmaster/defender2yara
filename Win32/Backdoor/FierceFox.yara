@@ -21,6 +21,7 @@ rule Backdoor_Win32_FierceFox_A_2147926602_0
         $x_1_6 = "037109091112037055093091100106037063100105067089094" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

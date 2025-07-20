@@ -19,6 +19,7 @@ rule Trojan_Win32_Snoodsnip_A_2147627957_0
         $x_1_5 = "register=PRIMARY" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Backdoor_Win64_Lotok_GMF_2147891716_0
         $x_10_2 = {66 89 45 d8 0f b6 05 8e 46 24 00 f2 0f 11 45 d0 0f 29 4d c0 88 45 da}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Backdoor_Win64_Lotok_GLX_2147913212_0
         $x_10_1 = {49 8b f5 0f b7 43 14 48 8d 0d ?? ?? ?? ?? 48 03 c6 4c 89 6c 24 20 44 8b 44 18 2c 8b 54 18 24 4c 03 c1 48 8b 4c 24 68 49 03 d6 44 8b 4c 18 28 ff 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

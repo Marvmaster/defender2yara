@@ -18,6 +18,7 @@ rule Trojan_Win64_Dogyb_B_2147734934_0
         $x_1_3 = {ba 10 66 00 00 [0-8] 41 b9 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win64_Dogyb_D2_2147734935_0
         $x_1_5 = {65 78 70 6c 6f 69 74 20 66 61 69 6c 65 64 21 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_MSIL_WannaMadCrypt_PA_2147784836_0
         $x_2_5 = {5c 57 61 6e 6e 61 4d 61 64 5c [0-16] 5c [0-16] 44 65 62 75 67 5c 57 61 6e 6e 61 4d 61 64 2e 70 64 62}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Ransom_MSIL_WannaMadCrypt_PB_2147788116_0
         $x_1_4 = "C:\\Program Files\\System32\\WannaMad" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

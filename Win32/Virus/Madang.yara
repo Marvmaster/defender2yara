@@ -21,6 +21,7 @@ rule Virus_Win32_Madang_A_2147630222_0
         $x_1_6 = "vguarder" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Virus_Win32_Madang_B_2147689721_0
         $x_1_3 = "Angry Angel v" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -27,6 +27,7 @@ rule Worm_Win32_Spetcrum_2147599860_0
         $x_1_13 = "Windows Millenium" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

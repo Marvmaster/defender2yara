@@ -18,6 +18,7 @@ rule Trojan_Win32_ThemFakSvc_SP_2147753484_0
         $x_1_3 = "svchost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

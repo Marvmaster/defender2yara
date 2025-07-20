@@ -20,6 +20,7 @@ rule Trojan_Win32_Danginex_2147636053_0
         $x_1_6 = "AdvOcr.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

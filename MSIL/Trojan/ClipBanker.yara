@@ -19,6 +19,7 @@ rule Trojan_MSIL_ClipBanker_CB_2147745163_0
         $x_1_4 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_ClipBanker_GA_2147748138_0
         $x_10_1 = {5c 42 69 74 63 6f 69 6e 2d 47 72 61 62 62 65 72 2d 6d 61 73 74 65 72 5c 42 69 74 63 6f 69 6e 2d 47 72 61 62 62 65 72 5c [0-50] 2e 70 64 62}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_MSIL_ClipBanker_GA_2147748138_1
         $x_1_10 = "b4([0-9]|[A-B])(.){93}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -106,6 +109,7 @@ rule Trojan_MSIL_ClipBanker_GB_2147753783_0
         $n_10_13 = "sounder" ascii //weight: -10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
@@ -131,6 +135,7 @@ rule Trojan_MSIL_ClipBanker_A_2147765585_0
         $x_1_1 = {06 02 07 6f 40 00 00 0a 03 07 03 6f 48 00 00 0a 5d 6f 40 00 00 0a 61 d1 6f 49 00 00 0a 26 07 17 58 0b 07 02 6f 48 00 00 0a 32 d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +161,7 @@ rule Trojan_MSIL_ClipBanker_AB_2147770041_0
         $x_3_5 = "get_CurrentDomain" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_3_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_3_*))) or
@@ -185,6 +191,7 @@ rule Trojan_MSIL_ClipBanker_AB_2147770041_1
         $x_3_5 = "get_CurrentDomain" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_3_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_3_*))) or
@@ -219,6 +226,7 @@ rule Trojan_MSIL_ClipBanker_GC_2147774355_0
         $x_1_10 = "taskmgr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -254,6 +262,7 @@ rule Trojan_MSIL_ClipBanker_GC_2147774355_1
         $x_1_12 = "XGIweFthLWZBLUYwLTldezQwfVxi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 9 of ($x_1_*))) or
             (all of ($x*))
@@ -283,6 +292,7 @@ rule Trojan_MSIL_ClipBanker_GD_2147775633_0
         $x_1_6 = "(bc1|[13])[a-zA-HJ-NP-Z0-9]{26,35}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -307,6 +317,7 @@ rule Trojan_MSIL_ClipBanker_GD_2147775633_1
         $x_1_4 = "Clipper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -338,6 +349,7 @@ rule Trojan_MSIL_ClipBanker_ACF_2147779933_0
         $x_4_11 = "DetectVirtualMachine" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_4_*))) or
             ((1 of ($x_5_*) and 5 of ($x_4_*))) or
@@ -370,6 +382,7 @@ rule Trojan_MSIL_ClipBanker_GF_2147780460_0
         $x_1_4 = "BitCoin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -400,6 +413,7 @@ rule Trojan_MSIL_ClipBanker_GF_2147780460_1
         $x_1_10 = "^(q|p)[a-z0-9]{41}$" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -434,6 +448,7 @@ rule Trojan_MSIL_ClipBanker_GF_2147780460_2
         $x_1_11 = "https://ipv4bot.whatismyipaddress.com/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -460,6 +475,7 @@ rule Trojan_MSIL_ClipBanker_DA_2147781176_0
         $x_1_6 = "ConsoleApp1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -489,6 +505,7 @@ rule Trojan_MSIL_ClipBanker_MR_2147781259_0
         $x_1_9 = "ToBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -518,6 +535,7 @@ rule Trojan_MSIL_ClipBanker_PA_2147783594_0
         $x_1_9 = "$417450af-ed6d-4177-b0cb-cef4ccdbdb02" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -549,6 +567,7 @@ rule Trojan_MSIL_ClipBanker_V_2147783949_0
         $x_1_11 = "Sys32Hotfix" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -577,6 +596,7 @@ rule Trojan_MSIL_ClipBanker_VI_2147783950_0
         $x_1_8 = "WgIBAAKBgH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -604,6 +624,7 @@ rule Trojan_MSIL_ClipBanker_DB_2147786210_0
         $x_1_7 = "Decrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -633,6 +654,7 @@ rule Trojan_MSIL_ClipBanker_DC_2147786211_0
         $x_1_9 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -658,6 +680,7 @@ rule Trojan_MSIL_ClipBanker_AV_2147786314_0
         $x_3_5 = "infectedFile" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -684,6 +707,7 @@ rule Trojan_MSIL_ClipBanker_VE_2147789434_0
         $x_1_6 = "mSVfgNjUYRlMlZQiKaecifBaFEzfBA9z1zVH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -715,6 +739,7 @@ rule Trojan_MSIL_ClipBanker_ABM_2147789556_0
         $x_3_11 = "set_hidden" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -751,6 +776,7 @@ rule Trojan_MSIL_ClipBanker_JJ_2147793429_0
         $x_1_16 = "LiteCoin" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -785,6 +811,7 @@ rule Trojan_MSIL_ClipBanker_VW_2147793666_0
         $x_10_14 = {11 17 20 8f a0 12 fb 5a 20 29 3c 1e 84 61}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -814,6 +841,7 @@ rule Trojan_MSIL_ClipBanker_DY_2147794428_0
         $x_1_6 = "get_FullName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -841,6 +869,7 @@ rule Trojan_MSIL_ClipBanker_DY_2147794428_1
         $x_1_7 = "gfddsfdsf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -867,6 +896,7 @@ rule Trojan_MSIL_ClipBanker_Z_2147794627_0
         $x_1_6 = "5omT5byA(U3RvcFNoYXJpbmdUb29sU3RyaXBNZW51SXRlbQ==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -893,6 +923,7 @@ rule Trojan_MSIL_ClipBanker_G_2147795126_0
         $x_1_6 = "Windows16" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -926,6 +957,7 @@ rule Trojan_MSIL_ClipBanker_GE_2147795258_0
         $x_1_13 = "IPLogger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -954,6 +986,7 @@ rule Trojan_MSIL_ClipBanker_QA_2147795398_0
         $x_3_5 = "FailFast" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -980,6 +1013,7 @@ rule Trojan_MSIL_ClipBanker_DF_2147795869_0
         $x_1_6 = "GZipStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1004,6 +1038,7 @@ rule Trojan_MSIL_ClipBanker_PEI_2147795871_0
         $x_1_4 = "loimensaturn.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1030,6 +1065,7 @@ rule Trojan_MSIL_ClipBanker_IFK_2147797051_0
         $x_1_6 = "jkaeido30.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1058,6 +1094,7 @@ rule Trojan_MSIL_ClipBanker_IFK_2147797051_1
         $x_1_8 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1086,6 +1123,7 @@ rule Trojan_MSIL_ClipBanker_XS_2147797901_0
         $x_1_8 = "GW8UdtdtFdcrwK8urZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1117,6 +1155,7 @@ rule Trojan_MSIL_ClipBanker_DG_2147798704_0
         $x_1_11 = "CreateInstance" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 5 of ($x_1_*))) or
             ((2 of ($x_50_*))) or
@@ -1146,6 +1185,7 @@ rule Trojan_MSIL_ClipBanker_UI_2147799309_0
         $x_1_5 = "get_Location" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1172,6 +1212,7 @@ rule Trojan_MSIL_ClipBanker_XO_2147799310_0
         $x_1_6 = "op_Explicit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1200,6 +1241,7 @@ rule Trojan_MSIL_ClipBanker_XO_2147799310_1
         $x_1_8 = {00 41 73 73 65 6d 62 6c 79 44 65 73 63 72 69 70 74 69 6f 6e 41 74 74 72 69 62 75 74 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1226,6 +1268,7 @@ rule Trojan_MSIL_ClipBanker_B_2147805548_0
         $x_1_6 = "3.2.3.2" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1249,6 +1292,7 @@ rule Trojan_MSIL_ClipBanker_QS_2147805918_0
         $x_1_3 = "Clipper\\Clipper\\bin\\Release\\Obfuscated\\Inc.Infrastructur Host driver.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1277,6 +1321,7 @@ rule Trojan_MSIL_ClipBanker_CA_2147806307_0
         $x_1_8 = "DebuggerHiddenAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1311,6 +1356,7 @@ rule Trojan_MSIL_ClipBanker_ST_2147808057_0
         $x_1_14 = "PasswordDeriveBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1340,6 +1386,7 @@ rule Trojan_MSIL_ClipBanker_MA_2147808211_0
         $x_1_9 = "Debugger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1370,6 +1417,7 @@ rule Trojan_MSIL_ClipBanker_MB_2147808212_0
         $x_1_10 = "IsLogging" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1400,6 +1448,7 @@ rule Trojan_MSIL_ClipBanker_MC_2147808213_0
         $x_1_10 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1431,6 +1480,7 @@ rule Trojan_MSIL_ClipBanker_DH_2147808642_0
         $x_1_11 = "FileDrop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 9 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1461,6 +1511,7 @@ rule Trojan_MSIL_ClipBanker_L_2147809608_0
         $x_1_6 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1493,6 +1544,7 @@ rule Trojan_MSIL_ClipBanker_DI_2147809834_0
         $x_1_12 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 3 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1523,6 +1575,7 @@ rule Trojan_MSIL_ClipBanker_CM_2147811658_0
         $x_3_6 = "START CMD /C" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1549,6 +1602,7 @@ rule Trojan_MSIL_ClipBanker_CM_2147811658_1
         $x_3_6 = "rJqNEeiWXDvJsanTbLjIo4HO" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1577,6 +1631,7 @@ rule Trojan_MSIL_ClipBanker_RPK_2147812458_0
         $x_1_8 = "E7wDmTi0R54MaOPrgwT770N32" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1606,6 +1661,7 @@ rule Trojan_MSIL_ClipBanker_MF_2147815338_0
         $x_1_9 = ".compressed" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1628,6 +1684,7 @@ rule Trojan_MSIL_ClipBanker_NE_2147822241_0
         $x_1_2 = {11 16 28 5d 00 00 0a 6f 5f 00 00 0a 2c 0f 72 57 8b 00 70 28 08 00 00 06 38 bf 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1651,6 +1708,7 @@ rule Trojan_MSIL_ClipBanker_AG_2147822299_0
         $x_1_3 = "IsMatch" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1676,6 +1734,7 @@ rule Trojan_MSIL_ClipBanker_NL_2147822313_0
         $x_1_5 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1698,6 +1757,7 @@ rule Trojan_MSIL_ClipBanker_NH_2147822315_0
         $x_1_2 = {57 bf a2 3f 09 0e 00 00 00 fa 25 33 00 16 00 00 01 00 00 00 a6 00 00 00 52 00 00 00 07 01 00 00 a7 01 00 00 43 01 00 00 03 00 00 00 cc 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1719,6 +1779,7 @@ rule Trojan_MSIL_ClipBanker_K_2147824430_0
         $x_1_1 = {06 25 26 2c ?? 7e ?? ?? ?? 04 28 ?? ?? ?? 06 72 ?? ?? ?? 70 28 ?? ?? ?? 06 25 26 2c 4d 00 7e ?? ?? ?? 0a 28 ?? ?? ?? 06 28 ?? ?? ?? 06 25 72 ?? ?? ?? 70 28 ?? ?? ?? 06 2c ?? 7e ?? ?? ?? 04 28 ?? ?? ?? 06 25 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1740,6 +1801,7 @@ rule Trojan_MSIL_ClipBanker_ADS_2147825928_0
         $x_1_1 = {fe 0c 01 00 fe 0c 00 00 6f ?? ?? ?? 0a fe 0c 02 00 20 01 00 00 00 fe 0e 04 00 20 fd ff ff ff 20 ac d2 1d 60 20 fc 18 6a 37 61 20 50 ca 77 57 40 10 00 00 00 20 02 00 00 00 fe 0e 04 00 fe 1c 18 00 00 01 58 00 58 fe 0e 02 00 fe 0c 02 00 00 23 00 00 00 00 00 00 00 40 23 00 00 00 00 00 00 14 40 5a 28 ?? ?? ?? 0a 3f 94 ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1762,6 +1824,7 @@ rule Trojan_MSIL_ClipBanker_NEC_2147827666_0
         $x_1_2 = "-extdummt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1787,6 +1850,7 @@ rule Trojan_MSIL_ClipBanker_NED_2147827668_0
         $x_1_5 = "a-2eD4NLkGufXM9Uj9" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1813,6 +1877,7 @@ rule Trojan_MSIL_ClipBanker_ABR_2147828760_0
         $x_1_6 = "get_CurrentDomain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1836,6 +1901,7 @@ rule Trojan_MSIL_ClipBanker_R_2147829766_0
         $x_1_3 = "^(1|3)[1-9A-HJ-NP-Za-km-z]{26,34}$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1859,6 +1925,7 @@ rule Trojan_MSIL_ClipBanker_S_2147831081_0
         $x_1_3 = "GetTempFileName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1880,6 +1947,7 @@ rule Trojan_MSIL_ClipBanker_NEE_2147833297_0
         $x_10_1 = {06 07 9a 0c 08 6f 19 00 00 0a 02 28 1c 00 00 0a 2c 1d 08 72 0b 00 00 70 6f 1d 00 00 0a 72 5b 00 00 70 6f 1e 00 00 0a 14 14 6f 18 00 00 0a 26 07 17 58 0b 07 06 8e 69 32 c7}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1902,6 +1970,7 @@ rule Trojan_MSIL_ClipBanker_T_2147833620_0
         $x_2_2 = {0a 16 0b 2b 11 06 07 93 0c 08 03 58 d1 0c 06 07 08 9d 07 17 58 0b 07 06 8e 69 32}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1925,6 +1994,7 @@ rule Trojan_MSIL_ClipBanker_P_2147833971_0
         $x_1_3 = "[a-zA-Z1-9]{42}$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1947,6 +2017,7 @@ rule Trojan_MSIL_ClipBanker_Y_2147834226_0
         $x_1_2 = "GetResponse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1976,6 +2047,7 @@ rule Trojan_MSIL_ClipBanker_RPD_2147834565_0
         $x_1_9 = "LateGet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2000,6 +2072,7 @@ rule Trojan_MSIL_ClipBanker_AK_2147835781_0
         $x_1_4 = "ToInteger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2022,6 +2095,7 @@ rule Trojan_MSIL_ClipBanker_AL_2147835782_0
         $x_1_2 = "ToInteger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2046,6 +2120,7 @@ rule Trojan_MSIL_ClipBanker_ABB_2147836074_0
         $x_1_4 = "ace492e9661223449782fcc8096dc6ef6289032d08d03a7b0a92179622c35bdb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2072,6 +2147,7 @@ rule Trojan_MSIL_ClipBanker_ABC_2147837207_0
         $x_1_6 = {63 00 64 00 6e 00 2e 00 64 00 69 00 73 00 63 00 6f 00 72 00 64 00 61 00 70 00 70 00 2e 00 63 00 6f 00 6d 00 2f 00 61 00 74 00 74 00 61 00 63 00 68 00 6d 00 65 00 6e 00 74 00 73 00 2f 00 [0-96] 2f 00 54 00 6f 00 6f 00 6b 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2099,6 +2175,7 @@ rule Trojan_MSIL_ClipBanker_NEAA_2147837831_0
         $x_2_7 = "pZbnhv6YB" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2123,6 +2200,7 @@ rule Trojan_MSIL_ClipBanker_AM_2147838239_0
         $x_1_4 = "ComputeHash" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2145,6 +2223,7 @@ rule Trojan_MSIL_ClipBanker_SPQB_2147838628_0
         $x_1_2 = "Lona.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2166,6 +2245,7 @@ rule Trojan_MSIL_ClipBanker_ACL_2147838637_0
         $x_1_1 = {20 dc 05 00 00 28 ?? 00 00 0a 17 72 ?? 13 00 70 12 00 73 ?? 00 00 0a 80 ?? 00 00 04 06 2d 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2187,6 +2267,7 @@ rule Trojan_MSIL_ClipBanker_ACL_2147838637_1
         $x_1_1 = {1d 13 07 06 72 03 01 00 70 15 16 28 ?? ?? ?? 0a 0b 1e 13 07 19 09 07 19 9a 28 ?? ?? ?? 0a 1f 20 19 15 15 28 ?? ?? ?? 0a 00 1f 09 13 07 19 07 17 9a 15 6a 16 28 ?? ?? ?? 0a 00 1f 0a 13 07 17}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2209,6 +2290,7 @@ rule Trojan_MSIL_ClipBanker_ACL_2147838637_2
         $x_1_2 = {72 db 00 00 70 6f ?? 00 00 0a 25 72 eb 00 00 70 28 ?? 00 00 06 28 ?? 00 00 06 28 ?? 00 00 0a 6f ?? 00 00 0a 25 17 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2230,6 +2312,7 @@ rule Trojan_MSIL_ClipBanker_AC_2147838879_0
         $x_1_1 = {13 04 1f 23 28 ?? ?? ?? 0a 72 35 00 00 70 28 ?? ?? ?? 0a 13 05 11 05 18 18 73 08 00 00 0a 13 06 11 06 11 04 16 11 04 8e 69 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2252,6 +2335,7 @@ rule Trojan_MSIL_ClipBanker_AC_2147838879_1
         $x_1_2 = "TrafficProgrammerv2.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2273,6 +2357,7 @@ rule Trojan_MSIL_ClipBanker_AO_2147839112_0
         $x_2_1 = {00 00 0a 2c 26 16 28 ?? 00 00 0a 0c 08 6f ?? 00 00 0a 1f 19 31 15 08 6f ?? 00 00 0a 1f 24 2f 0b 7e ?? 00 00 0a 06 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2297,6 +2382,7 @@ rule Trojan_MSIL_ClipBanker_AT_2147840693_0
         $x_2_4 = "BNG}/I9h6x|>\\*zj95u$.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -2324,6 +2410,7 @@ rule Trojan_MSIL_ClipBanker_CAK_2147840784_0
         $x_1_3 = "AdobeClipp.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2346,6 +2433,7 @@ rule Trojan_MSIL_ClipBanker_ADL_2147841497_0
         $x_1_2 = "OffSmart" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2368,6 +2456,7 @@ rule Trojan_MSIL_ClipBanker_BC_2147842195_0
         $x_2_2 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2390,6 +2479,7 @@ rule Trojan_MSIL_ClipBanker_NCA_2147842252_0
         $x_1_2 = "STEAM TRADE LINK" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2414,6 +2504,7 @@ rule Trojan_MSIL_ClipBanker_MG_2147842624_0
         $x_1_4 = "GetActiveProcessFileName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2436,6 +2527,7 @@ rule Trojan_MSIL_ClipBanker_NBL_2147842653_0
         $x_1_2 = "FNinternal.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2458,6 +2550,7 @@ rule Trojan_MSIL_ClipBanker_NPB_2147842957_0
         $x_1_2 = "O.N.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2480,6 +2573,7 @@ rule Trojan_MSIL_ClipBanker_CXS_2147843364_0
         $x_1_2 = "ContainsKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2504,6 +2598,7 @@ rule Trojan_MSIL_ClipBanker_GFX_2147843390_0
         $x_1_4 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2526,6 +2621,7 @@ rule Trojan_MSIL_ClipBanker_ABLO_2147843436_0
         $x_1_2 = "PokemonSystem" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2548,6 +2644,7 @@ rule Trojan_MSIL_ClipBanker_DAJ_2147843856_0
         $x_2_2 = {c4 81 eb df b6 53 9a df 2b e9 cb f8 35 e5 66 4a bd 39 72 d2 03 ab ff dc ab 4d 3a d6 00 82 0b 88 c8 33 07 cd 32 c0 2d 6b 6d 70 53 32 e8 3b 1d c9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2570,6 +2667,7 @@ rule Trojan_MSIL_ClipBanker_CSRR_2147843978_0
         $x_5_2 = {28 0a 00 00 06 0a 28 ?? ?? ?? ?? 06 6f ?? ?? ?? ?? 28 ?? ?? ?? ?? 28 ?? ?? ?? ?? 0b dd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2594,6 +2692,7 @@ rule Trojan_MSIL_ClipBanker_MBCV_2147844227_0
         $x_1_4 = "GetFolderPath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2615,6 +2714,7 @@ rule Trojan_MSIL_ClipBanker_PSLY_2147846180_0
         $x_2_1 = {28 34 00 00 0a 7e 01 00 00 04 02 08 6f 35 00 00 0a 28 36 00 00 0a a5 01 00 00 1b 0b 11 07 20 fb 9d aa 47 5a 20 c4 30 82 6d 61 38 98 fe ff ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2637,6 +2737,7 @@ rule Trojan_MSIL_ClipBanker_C_2147846854_0
         $x_1_2 = ".NET Reactor" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2660,6 +2761,7 @@ rule Trojan_MSIL_ClipBanker_BE_2147847019_0
         $x_1_3 = "GetFolderPath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2684,6 +2786,7 @@ rule Trojan_MSIL_ClipBanker_RDG_2147848264_0
         $x_1_4 = "Z4q4bUV4G2a2AkSpDc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2706,6 +2809,7 @@ rule Trojan_MSIL_ClipBanker_MAAO_2147848440_0
         $x_1_2 = "1P~LK~0O~00~L4~09~MN~21~L8~01~4M~MN~" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2731,6 +2835,7 @@ rule Trojan_MSIL_ClipBanker_CXIS_2147848747_0
         $x_1_5 = "AaAbPOOrBhdjpO" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2756,6 +2861,7 @@ rule Trojan_MSIL_ClipBanker_F_2147848818_0
         $x_2_5 = "Convert.ToString(PatternRegex" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2778,6 +2884,7 @@ rule Trojan_MSIL_ClipBanker_ABS_2147849337_0
         $x_10_2 = {00 00 0a 19 5d 59 0a 02 1f 41 06 73 ?? 00 00 0a 28 ?? 00 00 0a 0b 28 ?? 00 00 0a 07 6f ?? 00 00 0a 28 ?? 00 00 0a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2800,6 +2907,7 @@ rule Trojan_MSIL_ClipBanker_ABT_2147849338_0
         $x_10_2 = {74 06 00 00 1b 13 05 07 11 05 73 ?? 00 00 0a 72 ?? 03 00 70 72 ?? 03 00 70 6f ?? 00 00 0a 00 02 7b ?? 00 00 04 02 7b ?? 00 00 04 07 6f ?? 00 00 0a 6f ?? 00 00 0a 13 06 11 06 6f ?? 00 00 0a 20 ?? 00 00 00 fe 01 0a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2821,6 +2929,7 @@ rule Trojan_MSIL_ClipBanker_AACK_2147849372_0
         $x_4_1 = {04 08 16 07 1f 0f 1f 10 28 ?? 01 00 06 7e ?? 00 00 04 06 07 28 ?? 00 00 06 7e ?? 00 00 04 06 18 28 ?? 00 00 06 7e ?? 00 00 04 06 19 28 ?? 00 00 06 7e ?? 00 00 04 06 28 ?? 00 00 06 0d 7e ?? 00 00 04 09 03 16 03 8e 69 28 ?? 00 00 06 2a}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2843,6 +2952,7 @@ rule Trojan_MSIL_ClipBanker_AR_2147849530_0
         $x_1_2 = "AddClipboardFormatListener" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2865,6 +2975,7 @@ rule Trojan_MSIL_ClipBanker_ABD_2147849710_0
         $x_1_2 = {13 04 11 04 16 6f 10 00 00 0a 00 11 04 6f 11 00 00 0a 00 00 07 0a 00 00 00 de 05 26 00 00 de 00 00 00 17 13 05 38 b5 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2886,6 +2997,7 @@ rule Trojan_MSIL_ClipBanker_AADU_2147850026_0
         $x_4_1 = {07 04 1d 3a ?? 00 00 00 26 26 00 07 07 6f ?? 00 00 0a 07 6f ?? 00 00 0a 6f ?? 00 00 0a 16 39 ?? 00 00 00 26 02 73 ?? 00 00 0a 18 3a ?? 00 00 00 26 00 09 08 16 73 ?? 00 00 0a 16 2c 48 26 16 2d 01 00 73 ?? 00 00 0a 13 05 00 1d 2c fc 11 04 11 05 6f ?? 00 00 0a 00 11 05 6f ?? 00 00 0a 0a 1b 2c 01 00 de 0d 11 05 2c 08 11 05 6f ?? 00 00 0a 00 dc}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2909,6 +3021,7 @@ rule Trojan_MSIL_ClipBanker_BJ_2147850699_0
         $x_2_3 = "V2luZG93c0FwcGxpY2F0aW9uM" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2930,6 +3043,7 @@ rule Trojan_MSIL_ClipBanker_AAEO_2147850705_0
         $x_5_1 = {1e 2c 27 38 a5 00 00 00 38 a6 00 00 00 38 a7 00 00 00 00 38 ab 00 00 00 07 6f ?? 00 00 0a 07 6f ?? 00 00 0a 6f ?? 00 00 0a 0c 02 73 ?? 00 00 0a 0d 00 09 08 16 73 ?? 00 00 0a 13 04 16 2d 01 00 73 ?? 00 00 0a 13 05 00 1d 2c fc 11 04 11 05 6f ?? 00 00 0a 00 11 05 6f ?? 00 00 0a 0a 1b 2c 01 00 de 0d 11 05 2c 08 11 05 6f ?? 00 00 0a 00 dc}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2951,6 +3065,7 @@ rule Trojan_MSIL_ClipBanker_AAFC_2147850719_0
         $x_4_1 = {0b 06 16 fe 0e 03 00 20 f8 ff ff ff 20 5d 3c 3f 74 20 8e ff 6d 1f 61 20 d3 c3 52 6b 40 ?? 00 00 00 20 02 00 00 00 fe 0e 03 00 fe ?? ?? 00 00 01 58 00 73 ?? 00 00 0a 0c 08 07 6f ?? 00 00 0a 08 6f ?? 00 00 0a 07 6f ?? 00 00 0a 06 6f ?? 00 00 0a 07 6f ?? 00 00 0a 2a}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2972,6 +3087,7 @@ rule Trojan_MSIL_ClipBanker_PSRN_2147850750_0
         $x_2_1 = {28 09 00 00 06 0a 28 08 00 00 0a 06 6f 09 00 00 0a 28 08 00 00 06 75 01 00 00 1b 0b 07 16 07 8e 69 28 0a 00 00 0a 07 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2993,6 +3109,7 @@ rule Trojan_MSIL_ClipBanker_PSSX_2147851455_0
         $x_2_1 = {6f ac 00 00 0a 06 07 6f ad 00 00 0a 17 73 5d 00 00 0a 25 02 16 02 8e 69 6f ae 00 00 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3018,6 +3135,7 @@ rule Trojan_MSIL_ClipBanker_EA_2147851545_0
         $x_1_5 = "IsClipboardFormatAvailable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3039,6 +3157,7 @@ rule Trojan_MSIL_ClipBanker_PSTB_2147851565_0
         $x_2_1 = {00 00 0a 20 54 93 ca 40 28 ?? 00 00 06 02 20 8a 92 ca 40 28 ?? 00 00 06 28 ?? 00 00 0a 6f ?? 00 00 0a 0a 06 2c 07 06 73 37 00 00 0a 2a 14 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3062,6 +3181,7 @@ rule Trojan_MSIL_ClipBanker_AAID_2147851991_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3085,6 +3205,7 @@ rule Trojan_MSIL_ClipBanker_BM_2147852537_0
         $x_2_3 = {00 00 06 25 26 02 50 8e 69 28 ?? ?? 00 06 25 26 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3109,6 +3230,7 @@ rule Trojan_MSIL_ClipBanker_BL_2147853406_0
         $x_2_4 = "Mj0z3vFnkGbVQASczroA3Ku7NEe7l51RxtMIeamSq5Z04" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3131,6 +3253,7 @@ rule Trojan_MSIL_ClipBanker_NQC_2147889498_0
         $x_1_2 = "CryptoLauncher.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3158,6 +3281,7 @@ rule Trojan_MSIL_ClipBanker_MBIM_2147889518_0
         $x_1_7 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3179,6 +3303,7 @@ rule Trojan_MSIL_ClipBanker_PSXH_2147890473_0
         $x_2_1 = {00 07 28 1f 00 00 0a 0d 09 14 fe 03 13 04 11 04 39 b5 00 00 00 00 07 72 7f 00 00 70 6f 23 00 00 0a 13 05 11 05 2c 12 00 72 85 00 00 70 28 24 00 00 0a 00 00 38 90}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3204,6 +3329,7 @@ rule Trojan_MSIL_ClipBanker_NGW_2147892261_0
         $x_1_5 = "trades.g.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3225,6 +3351,7 @@ rule Trojan_MSIL_ClipBanker_PTBK_2147895775_0
         $x_2_1 = {72 77 00 00 70 6f 1f 00 00 0a 25 72 95 00 00 70 02 72 ab 00 00 70 28 ?? 00 00 0a 6f 2e 00 00 0a 25 17 6f 2f 00 00 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3247,6 +3374,7 @@ rule Trojan_MSIL_ClipBanker_KA_2147896283_0
         $x_5_2 = "1EN9DmsnRk9GLatXp7v2WqUnmB6XznDdgv" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3275,6 +3403,7 @@ rule Trojan_MSIL_ClipBanker_ABAT_2147896517_0
         $x_1_8 = "$13465ce4-1987-446b-b6bb-0c587bd6b35f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3296,6 +3425,7 @@ rule Trojan_MSIL_ClipBanker_KAB_2147900308_0
         $x_5_1 = {fe 0c 00 00 fe 09 00 00 fe 0c 01 00 6f ?? 00 00 0a 20 ?? ?? ?? ?? 61 d1 fe 0e 02 00 fe 0d 02 00 28 ?? 00 00 0a 28 ?? 00 00 0a fe 0e 00 00 fe 0c 01 00 20 ?? 00 00 00 58 fe 0e 01 00 fe 0c 01 00 fe 09 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3317,6 +3447,7 @@ rule Trojan_MSIL_ClipBanker_BY_2147900605_0
         $x_2_1 = {11 05 09 06 94 58 08 06 94 58 20 ?? ?? ?? 00 5d 13 05 09 06 94 0b 09 06 09 11 05 94 9e 09 11 05 07 9e 06 17 58 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3338,6 +3469,7 @@ rule Trojan_MSIL_ClipBanker_ATD_2147900827_0
         $x_1_1 = {fe 09 00 00 28 07 00 00 0a fe 0e 00 00 7e 08 00 00 0a fe 0e 01 00 fe 0c 00 00 39 8b 00 00 00 fe 0c 00 00 8e 39 81 00 00 00 fe 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3363,6 +3495,7 @@ rule Trojan_MSIL_ClipBanker_CC_2147900997_0
         $x_2_5 = "autorun_name" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3384,6 +3517,7 @@ rule Trojan_MSIL_ClipBanker_RDJ_2147903219_0
         $x_2_1 = {25 07 6f 2f 00 00 0a 17 73 30 00 00 0a 25 02 16}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3407,6 +3541,7 @@ rule Trojan_MSIL_ClipBanker_SG_2147903356_0
         $x_1_3 = "$a3392dc3-d8ff-4069-8782-0ae8a1125281" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3431,6 +3566,7 @@ rule Trojan_MSIL_ClipBanker_KAC_2147905517_0
         $x_1_1 = {11 05 9a 0c 06 08 6f ?? 00 00 0a 2c 1d d0 ?? 00 00 02 28 ?? 00 00 0a 08 28 ?? 00 00 0a a5 ?? 00 00 02 73 ?? 00 00 0a 0b 2b 0e 11 05 17 58 13 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3455,6 +3591,7 @@ rule Trojan_MSIL_ClipBanker_NB_2147906030_0
         $x_1_4 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3478,6 +3615,7 @@ rule Trojan_MSIL_ClipBanker_NC_2147906430_0
         $x_1_3 = "AsyncClipboardManager" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3505,6 +3643,7 @@ rule Trojan_MSIL_ClipBanker_CG_2147906739_0
         $x_2_7 = "\\b4[0-9AB][1-9A-HJ-NP-Za-km-z]{93}\\b" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3527,6 +3666,7 @@ rule Trojan_MSIL_ClipBanker_CI_2147906772_0
         $x_2_2 = {01 13 04 1f ?? 58 1e 5c 18 5a 17 59 e0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3549,6 +3689,7 @@ rule Trojan_MSIL_ClipBanker_GZX_2147908573_0
         $x_1_2 = "nahu112.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3570,6 +3711,7 @@ rule Trojan_MSIL_ClipBanker_GNK_2147917071_0
         $x_10_1 = {08 09 06 09 91 07 09 07 8e 69 5d 91 61 d2 9c 09 16 2d ea 17 58 0d 09 06 8e 69 32 e4}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3595,6 +3737,7 @@ rule Trojan_MSIL_ClipBanker_AYA_2147919626_0
         $x_1_5 = "Debugger Detected" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3621,6 +3764,7 @@ rule Trojan_MSIL_ClipBanker_AYA_2147919626_1
         $x_1_6 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3642,6 +3786,7 @@ rule Trojan_MSIL_ClipBanker_CCJB_2147921779_0
         $x_1_1 = {fe 0c 02 00 25 20 01 00 00 00 58 fe 0e 02 00 6f ?? 00 00 0a 61 d2 6f ?? 00 00 0a fe 0c 02 00 fe 0c 00 00 6f ?? 00 00 0a 5d fe 0e 02 00 fe 0c 04 00 20 01 00 00 00 58 fe 0e 04 00 fe 0c 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3663,6 +3808,7 @@ rule Trojan_MSIL_ClipBanker_PDDH_2147923422_0
         $x_1_1 = {0a 06 60 61 20 11 88 ba 4c 61 16 33 02 2b 36 1f 1e 06 1f 21 5a 06 1f 1f 5a 58 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3685,6 +3831,7 @@ rule Trojan_MSIL_ClipBanker_ND_2147924598_0
         $x_1_2 = "e4b00ba3-65db-4000-ac11-e391f3221a5c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3707,6 +3854,7 @@ rule Trojan_MSIL_ClipBanker_MX_2147926200_0
         $x_1_2 = {06 28 11 00 00 06 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3728,6 +3876,7 @@ rule Trojan_MSIL_ClipBanker_NIT_2147927783_0
         $x_2_1 = {07 2c 6d 07 6f ?? 00 00 0a 0c 16 0d 2b 48 08 09 9a 13 04 07 11 04 6f ?? 00 00 0a 6f ?? 00 00 0a 13 05 11 04 1c 28 ?? 00 00 06 28 ?? 00 00 0a 2c 1f 11 05 7e 36 00 00 04 28 ?? 00 00 0a 2c 0d 07 11 04 7e 36 00 00 04 6f ?? 00 00 0a 17 0a 2b 02 16 0a 09 17 58 0d 09 08 8e 69 32 b2 06 2d 11 07 1c 28 ?? 00 00 06 7e 36 00 00 04 6f ?? 00 00 0a de 0d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3749,6 +3898,7 @@ rule Trojan_MSIL_ClipBanker_ACB_2147929218_0
         $x_1_1 = {a2 25 17 02 a2 25 18 72 ?? ?? ?? 70 a2 25 19 03 a2 25 1a 72 ?? ?? ?? 70 a2 25 1b 04 a2 28 ?? 00 00 0a 6f ?? 00 00 0a 00 08 0b 07 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3771,6 +3921,7 @@ rule Trojan_MSIL_ClipBanker_ACB_2147929218_1
         $x_3_2 = {d2 1f 18 26 26 06 13 04 16 13 05 11 04 12 05 28 ?? 00 00 0a 07 09 02 09 6f ?? 00 00 0a d2 17 61 d1 9d de 0c}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3793,6 +3944,7 @@ rule Trojan_MSIL_ClipBanker_ANIA_2147930115_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3814,6 +3966,7 @@ rule Trojan_MSIL_ClipBanker_AENA_2147935203_0
         $x_5_1 = {59 1b 58 1b 59 91 61 03 08 20 10 02 00 00 58 20 0f 02 00 00 59 1a 59 1a 58 03 8e 69 5d 1f 09 58 1f 0c 58 1f 15 59 91 59 20 fb 00 00 00 58 1a 58 17 58 20 00 01 00 00 5d d2 9c 08 17 58 0c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3835,6 +3988,7 @@ rule Trojan_MSIL_ClipBanker_EAAJ_2147935420_0
         $x_5_1 = {02 02 6f 1b 00 00 0a 07 59 6f 1c 00 00 0a 03 03 6f 1b 00 00 0a 07 59 6f 1c 00 00 0a fe 01 16 fe 01 0c 08 2c 03 00 2b 24 06 17 58 0a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3861,6 +4015,7 @@ rule Trojan_MSIL_ClipBanker_NJK_2147943564_0
         $x_1_6 = "ProcessClipboardContent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3886,6 +4041,7 @@ rule Trojan_MSIL_ClipBanker_NJM_2147944242_0
         $x_1_5 = "UserOOBEBroker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3908,6 +4064,7 @@ rule Trojan_MSIL_ClipBanker_SL_2147944857_0
         $x_2_2 = "predst014" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3931,6 +4088,7 @@ rule Trojan_MSIL_ClipBanker_SM_2147944858_0
         $x_2_3 = "cc_Config.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3952,6 +4110,7 @@ rule Trojan_MSIL_ClipBanker_PLZ_2147944893_0
         $x_4_1 = {72 01 00 00 70 fe 0e 00 00 fe 09 00 00 6f ?? 00 00 0a 8d 3f 00 00 01 fe 0e 01 00 20 00 00 00 00 fe 0e 02 00 20 00 00 00 00 fe 0e 03 00 38 50 00 00 00 fe 0c 01 00 fe 0c 03 00 fe 09 00 00 fe 0c 03 00 6f ?? 00 00 0a fe 0c 00 00 fe 0c 02 00 25 20 01 00 00 00 58 fe 0e 02 00 6f ?? 00 00 0a 61 d2 9c fe 0c 02 00 fe 0c 00 00 6f ?? 00 00 0a 5d fe 0e 02 00 fe 0c 03 00 20 01 00 00 00 58 fe 0e 03 00 fe 0c 03 00 fe 09 00 00 6f ?? 00 00 0a 3f 9e}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3978,6 +4137,7 @@ rule Trojan_MSIL_ClipBanker_GAF_2147945544_0
         $x_1_6 = "(?:^0x[a-fA-F0-9]{40}$)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3999,6 +4159,7 @@ rule Trojan_MSIL_ClipBanker_GTD_2147946562_0
         $x_10_1 = {1f 31 13 1d 1f 2d 20 ?? ?? ?? ?? 20 ?? ?? ?? ?? 61 20 ?? ?? ?? ?? 33 0a 18 13 1d fe ?? ?? ?? ?? ?? 58 00 3b ?? ?? ?? ?? 07 6f ?? ?? ?? ?? 07 6f ?? ?? ?? ?? 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

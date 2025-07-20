@@ -19,6 +19,7 @@ rule Trojan_Win32_Nokec_A_2147627656_0
         $x_1_5 = {4d 6f 7a 69 6c 6c 61 57 69 6e 64 6f 77 43 6c 61 73 73 00 00 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

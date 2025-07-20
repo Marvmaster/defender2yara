@@ -19,6 +19,7 @@ rule Ransom_Win32_Gpcode_G_2147607918_0
         $x_1_5 = "CryptImportKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

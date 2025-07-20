@@ -17,6 +17,7 @@ rule MonitoringTool_Win32_InvisibleKeylogger_7197_0
         $x_1_3 = "DisableAntispy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

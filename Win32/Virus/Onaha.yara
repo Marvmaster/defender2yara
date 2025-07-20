@@ -20,6 +20,7 @@ rule Virus_Win32_Onaha_B_2147724671_0
         $x_1_5 = {6a 00 6a 00 6a 00 6a 04 55 ff 15 ?? ?? 40 00 8b f0 85 f6 0f 84 92 00 00 00 66 8b 06 66 3d 4d 5a 74 06 66 3d 5a 4d 75 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

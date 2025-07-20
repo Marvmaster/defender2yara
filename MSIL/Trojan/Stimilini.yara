@@ -17,6 +17,7 @@ rule Trojan_MSIL_Stimilini_H_2147691373_0
         $x_1_3 = ".Item>>.get_Current" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Stimilini_H_2147691373_1
         $x_1_6 = {00 6d 5f 44 65 63 6f 64 65 72 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_9_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -72,6 +74,7 @@ rule Trojan_MSIL_Stimilini_A_2147692652_0
         $x_1_7 = {63 6d 64 2e 65 78 65 ?? ?? ?? ?? ?? 73 74 61 72 74 20 22 22 20 22 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 72 75 6e 61 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule Trojan_MSIL_Stimilini_A_2147692652_1
         $x_1_8 = "{1}{0}User - {2}{0}Pass" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -125,6 +129,7 @@ rule Trojan_MSIL_Stimilini_J_2147694143_0
         $x_1_6 = {00 55 6e 61 75 74 68 6f 72 69 7a 65 64 41 63 63 65 73 73 45 78 63 65 70 74 69 6f 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +155,7 @@ rule Trojan_MSIL_Stimilini_K_2147694660_0
         $x_3_6 = "2.35.92.75" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -180,6 +186,7 @@ rule Trojan_MSIL_Stimilini_L_2147694673_0
         $x_10_7 = "://pokestealer.com" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -207,6 +214,7 @@ rule Trojan_MSIL_Stimilini_M_2147694992_0
         $x_6_3 = {2f 00 2f 00 64 00 6f 00 63 00 73 00 2e 00 67 00 6f 00 6f 00 67 00 6c 00 65 00 2e 00 63 00 6f 00 6d 00 2f 00 75 00 63 00 3f 00 61 00 75 00 74 00 68 00 75 00 73 00 65 00 72 00 3d 00 30 00 26 00 69 00 64 00 3d 00 30 00 42 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 26 00 65 00 78 00 70 00 6f 00 72 00 74 00 3d 00 64 00 6f 00 77 00 6e 00 6c 00 6f 00 61 00 64 00}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -236,6 +244,7 @@ rule Trojan_MSIL_Stimilini_M_2147694992_1
         $x_6_10 = "://docs.google.com/uc?authuser=0&id=0B4lKdpVaR2TEbkNiMzRlenBjTzA&export=download" wide //weight: 6
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 1 of ($x_4_*) and 1 of ($x_2_*))) or
             ((2 of ($x_6_*))) or
@@ -264,6 +273,7 @@ rule Trojan_MSIL_Stimilini_N_2147695064_0
         $x_20_5 = "HollyMolly.Properties.Resources" wide //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_5_*))) or
@@ -292,6 +302,7 @@ rule Trojan_MSIL_Stimilini_G_2147705979_0
         $x_1_5 = ".ru/steam/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

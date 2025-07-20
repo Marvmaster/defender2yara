@@ -19,6 +19,7 @@ rule Rogue_Win32_FakeSmav_127652_0
         $x_1_5 = {73 70 6f 72 64 65 72 2e 64 6c 6c 00 25 73 20 6f 76 65 72 20 5b 25 73 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Rogue_Win32_FakeSmav_127652_1
         $x_1_5 = "Autorun" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Rogue_Win32_FakeSmav_127652_2
         $x_5_5 = "Smart Antivirus-2009" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -91,6 +94,7 @@ rule Rogue_Win32_FakeSmav_127652_3
         $x_1_2 = {74 39 2d 00 04 00 00 2d 00 04 00 00 2d 00 08 00 00 eb e0 0d 00 8b ?? 81 ?? ?? ?? ?? ?? 66}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Rogue_Win32_FakeSmav_127652_4
         $x_1_4 = {31 31 31 2d 36 36 36 2d 36 36 36 2d 34 33 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Rogue_Win32_FakeSmav_127652_5
         $x_10_4 = {8a 08 83 c0 01 84 c9 75 f7 2b c2 8d 70 01 8d 44 24 0c 68 ?? ?? ?? ?? 50 c7 44 24 10 00 00 00 00 e8 ?? ?? ?? ?? bf 10 00 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Rogue_Win32_FakeSmav_127652_6
         $x_1_7 = {41 00 6e 00 74 00 76 00 72 00 73 00 49 00 6e 00 73 00 74 00 61 00 6c 00 6c 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule Rogue_Win32_FakeSmav_127652_7
         $x_10_3 = "/soft/Antispyware2008.exe" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

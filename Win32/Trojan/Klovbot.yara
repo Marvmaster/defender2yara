@@ -16,6 +16,7 @@ rule Trojan_Win32_Klovbot_D_2147651585_0
         $x_1_2 = "server=ROBINSON;uid=ROBINSON;pwd=ROBINSON;database=ROBINSON" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Klovbot_J_2147656086_0
         $x_1_11 = "5C73797374656D33325C647269766572735C6574635C686F737473" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

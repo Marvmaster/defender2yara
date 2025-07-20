@@ -17,6 +17,7 @@ rule Backdoor_Win32_Potlonad_A_2147638862_0
         $x_1_3 = "$Fuego = @explode(\"BotJava\" , $MiCalificacion) ;" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

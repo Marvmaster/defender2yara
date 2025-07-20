@@ -25,6 +25,7 @@ rule Trojan_Win32_MiniDuke_A_2147752035_0
         $x_30_10 = "salesappliances.com" ascii //weight: 30
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             ((1 of ($x_30_*))) or
@@ -51,6 +52,7 @@ rule Trojan_Win32_MiniDuke_BS_2147831450_0
         $x_5_2 = {0f b6 02 42 34 b9 88 01 41 eb}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_MiniDuke_RB_2147833853_0
         $x_1_1 = {0f b7 4d fe c1 e0 0d 33 c1 33 05 ?? ?? ?? ?? 69 c0 0d 66 19 00 05 6c 59 88 3c 33 d2 f7 75 0c 89 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_Win32_MiniDuke_RF_2147840780_0
         $x_1_1 = {83 e0 3f 83 c0 20 8b 8d f0 d3 ff ff 88 01 8b 85 90 e7 ff ff 0f be 00 25 c0 00 00 00 8b 8d f4 d3 ff ff d3 f8 0f b6 8d 9f e7 ff ff 0b c8 88 8d 9f e7 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_Win32_MiniDuke_SG_2147908720_0
         $x_1_1 = {8b 0d 18 30 40 00 09 c9 74 11 a1 10 30 40 00 8d 0c 88 51 50 e8 b5 ff ff ff 59}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule BrowserModifier_Win32_Accoona_17901_0
         $x_1_3 = "C:\\Program Files\\Accoona" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

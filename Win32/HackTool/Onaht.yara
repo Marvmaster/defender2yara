@@ -18,6 +18,7 @@ rule HackTool_Win32_Onaht_A_2147685081_0
         $x_2_4 = "ONTAH.EXE -h FOR HELP INFORMATION" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -20,6 +20,7 @@ rule Trojan_Win32_Nymeria_SN_2147775589_0
         $x_1_5 = "\\key3.db" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +113,7 @@ rule Trojan_Win32_Nymeria_RPO_2147841060_0
         $x_1_5 = "goto die" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +139,7 @@ rule Trojan_Win32_Nymeria_ARA_2147897509_0
         $x_2_5 = "Setup=ijh-d.vbe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

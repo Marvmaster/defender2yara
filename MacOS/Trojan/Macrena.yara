@@ -19,6 +19,7 @@ rule Trojan_MacOS_Macrena_A_2147747956_0
         $x_1_4 = {3d ce fa ed fe 75 5d ad 83 f8 07 75 57 ad ad 83 f8 02 75 50 ad 85 c0 74 4b 97 6a 00 50 6a 08 56 53 50 6a 03 58 cd 80 83 c4 10 56 ad 91 ad 5e 0f c1 04 24 e2 41 91 0f b1 4c 24 04 75 12 6a 2c 56 53 50 b0 03 cd 80 83 c4 10 83 7e 24 00 75 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

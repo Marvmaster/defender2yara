@@ -17,6 +17,7 @@ rule Ransom_Linux_Hive_A_2147817005_0
         $x_1_3 = "vmdk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Linux_Hive_A_2147831786_0
         $x_1_3 = "vmdk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Ransom_Linux_Hive_B_2147851014_0
         $x_1_5 = "HOW_TO_DECRYPT.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Ransom_Linux_Hive_C_2147891315_0
         $x_1_1 = {52 a9 e7 1c 8a e5 be 64 06 a5 e0 72 36 71 73 4f 16 5f 06 97 d6 b4 92 a1 51 25 fb 54 43 c7 49 24 0c 33 bc 04 7b 47 fd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Ransom_Linux_Hive_E_2147913714_0
         $x_1_2 = {eb 40 ff 15 4b 48 26 00 8b 38 48 89 fb 48 c1 e3 20 48 83 cb 02 48 89 9c 24 b0 00 00 00 48 c7 84 24 a8 00 00 00 01 00 00 00 e8 6d c7 02 00 3c 23 75 4d 48 8d bc 24 b0 00 00 00 e8 cc 1b 00 00 4c 89 f9 48 85 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Ransom_Linux_Hive_L_2147913717_0
         $x_1_2 = {48 8b 03 48 83 f8 05 72 0f 49 f7 e4 48 85 c0 74 07 48 8b 7b 10 41 ff d5 48 8b 43 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Ransom_Linux_Hive_M_2147923441_0
         $x_1_2 = {48 8b 5c 24 10 49 89 ef ?? ?? 6c 24 18 48 89 df ff 55 00 48 83 7d 08 00 4c 89 fd 74 ?? 48 89 df}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

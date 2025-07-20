@@ -23,6 +23,7 @@ rule Trojan_Win32_Adkuadu_A_2147697726_0
         $x_1_9 = "{D27CDB6E-AE6D-11CF-96B8-444553540000}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

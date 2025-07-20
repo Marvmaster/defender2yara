@@ -15,6 +15,7 @@ rule PWS_Win32_Reveton_A_2147653348_0
         $x_1_1 = {b8 40 14 26 5a e8 ?? ?? ?? ?? 8b 85 ?? ?? ff ff 66 ba bb 01 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule PWS_Win32_Reveton_B_2147681429_0
         $x_1_4 = "TurboFTP\\addrbk.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

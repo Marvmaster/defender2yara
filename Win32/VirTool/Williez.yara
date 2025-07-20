@@ -20,6 +20,7 @@ rule VirTool_Win32_Williez_A_2147844469_0
         $x_1_5 = "InjectionHandler.func2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win64_Solorigate_SB_2147771447_0
         $x_2_5 = {37 2d 7a 69 70 2e 64 6c 6c 00 44 6c 6c [0-96] 2e 54 6b 53 65 6c 50 72 6f 70 50 72 6f 63}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -46,6 +47,7 @@ rule Trojan_Win64_Solorigate_SC_2147772527_0
         $x_1_2 = {44 8b c0 48 8d 5b 01 b8 ?? ?? ?? ?? 41 f7 e8 41 03 d0 c1 fa 06 8b ca c1 e9 1f 03 d1 6b ca ?? 44 2b c1 41 83 c0 02 44 00 43 ff 48 83 ef 01 75 ?? ?? ?? ?? ?? ?? ?? 8d 8e ?? ?? 00 00 2b c8 85 c9 7f ac}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

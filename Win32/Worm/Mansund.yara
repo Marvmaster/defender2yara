@@ -22,6 +22,7 @@ rule Worm_Win32_Mansund_A_2147611194_0
         $x_1_7 = {6e 00 6f 00 74 00 65 00 70 00 64 00 65 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

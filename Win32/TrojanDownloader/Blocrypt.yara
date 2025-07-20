@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Blocrypt_A_2147718756_0
         $x_1_3 = {ff d5 8b c8 8b 44 24 ?? 33 d2 f7 f1 2c ?? 30 06 43 81 fb ?? ?? ?? ?? 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_Blocrypt_B_2147719012_0
         $x_1_4 = {8b c1 33 d2 f7 35 ?? ?? ?? ?? 41 8a 82 ?? ?? ?? ?? 2a 44 0b ff 88 44 0b ff 3b 4d 0c 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

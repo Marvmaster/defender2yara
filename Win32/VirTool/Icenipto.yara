@@ -21,6 +21,7 @@ rule VirTool_Win32_Icenipto_A_2147624362_0
         $x_1_7 = "explorer.exe http://Botnet.8800.org" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Retefe_B_2147686251_0
         $x_3_4 = {83 e8 01 75 ef 0c 00 8a 88 ?? ?? ?? ?? 30 88}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_Retefe_C_2147686773_0
         $x_1_2 = {99 b9 15 00 00 00 f7 f9 83 c2 0a 0f b7 c2 69 c0 e8 03 00 00 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -26,6 +26,7 @@ rule Trojan_Win32_JackServn_A_2147692361_0
         $x_1_12 = {46 49 4c 45 4e 41 4d 45 [0-16] 46 49 4c 45 4e 41 4d 45 [0-16] 46 49 4c 45 4e 41 4d 45 [0-16] 46 49 4c 45 4e 41 4d 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_Win32_JackServn_B_2147726335_0
         $x_1_5 = "%s\\svchost.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Trojan_Win32_JackServn_C_2147726814_0
         $x_1_5 = "%s\\%s.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

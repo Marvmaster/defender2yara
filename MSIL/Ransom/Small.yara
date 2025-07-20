@@ -19,6 +19,7 @@ rule Ransom_MSIL_Small_B_2147786310_0
         $x_1_4 = ".Xerog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_MSIL_Small_C_2147786657_0
         $x_1_6 = "EncryptFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Ransom_MSIL_Small_D_2147788364_0
         $x_1_4 = "Urgent Notice.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

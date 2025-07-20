@@ -22,6 +22,7 @@ rule Backdoor_Win32_Zopharp_A_2147633893_0
         $x_1_8 = "fopen(UrlServer . \"/Admin/FunctionsClient/Update.php?\" . $Url  , 'r');" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

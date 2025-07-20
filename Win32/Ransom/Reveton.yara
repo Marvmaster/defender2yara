@@ -28,6 +28,7 @@ rule Ransom_Win32_Reveton_A_2147651658_0
         $x_1_14 = {43 48 52 4f 4d 45 2e 45 58 45 [0-16] 49 45 58 50 4c 4f 52 45 2e 45 58 45 [0-16] 4f 50 45 52 41 2e 45 58 45 [0-16] 46 49 52 45 46 4f 58 2e 45 58 45 [0-16] 53 41 46 41 52 49 2e 45 58 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 10 of ($x_1_*))) or
             ((1 of ($x_5_*) and 9 of ($x_1_*))) or
@@ -69,6 +70,7 @@ rule Ransom_Win32_Reveton_B_2147653665_0
         $x_1_13 = "Starter OK Name: " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_1_*))) or
             ((1 of ($x_2_*) and 9 of ($x_1_*))) or
@@ -98,6 +100,7 @@ rule Ransom_Win32_Reveton_D_2147654461_0
         $x_1_5 = "Windows\\CurrentVersion\\Run\\ctfmon.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +125,7 @@ rule Ransom_Win32_Reveton_F_2147658474_0
         $x_3_5 = {8b ce ba 01 00 00 00 d3 e2 4a 23 54 24 28 0f b7 4c 24 42 03 d1 8b 4c 24 34 8b 14 91 89 54 24 40 e9 ?? ?? ff ff 8b 04 24 c7 40 18 ?? ?? ?? ?? 8b 44 24 04 c7 00 12 00 00 00 eb ?? f7 c6 40 00 00 00 75 ?? 8b ce ba 01 00 00 00 d3 e2 4a 23 54 24 28 0f b7 44 24 42 03 d0 8b 4c 24 30 8b 14 91 89 54 24 40}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -151,6 +155,7 @@ rule Ransom_Win32_Reveton_A_2147661406_0
         $x_5_5 = {8b ce ba 01 00 00 00 d3 e2 4a 23 54 24 28 0f b7 4c 24 42 03 d1 8b 4c 24 34 8b 14 91 89 54 24 40 e9 ?? ?? ff ff 8b 04 24 c7 40 18 ?? ?? ?? ?? 8b 44 24 04 c7 00 12 00 00 00 eb ?? f7 c6 40 00 00 00 75 ?? 8b ce ba 01 00 00 00 d3 e2 4a 23 54 24 28 0f b7 44 24 42 03 d0 8b 4c 24 30 8b 14 91 89 54 24 40}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -179,6 +184,7 @@ rule Ransom_Win32_Reveton_N_2147670681_0
         $x_1_6 = "CurrentVersion\\Winlogon\\Shell" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -207,6 +213,7 @@ rule Ransom_Win32_Reveton_O_2147670728_0
         $x_1_6 = {8b 4e 2c 8b 51 04 33 c0 89 44 32 28 8b 4e 2c 8b 51 08 89 44 32 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -228,6 +235,7 @@ rule Ransom_Win32_Reveton_Q_2147678731_0
         $x_1_2 = "FBI - Computer locked." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -250,6 +258,7 @@ rule Ransom_Win32_Reveton_R_2147680129_0
         $x_1_3 = {9a 02 00 00 6a 00 6a 04 8d 45 ?? 50 53 e8 ?? ?? ?? ?? 40 0f 84 03 00 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +281,7 @@ rule Ransom_Win32_Reveton_T_2147681923_0
         $x_1_3 = {9a 02 00 00 6a 00 6a 04 8d 45 ?? 50 53 e8 ?? ?? ?? ?? 40 0f 84 03 00 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -294,6 +304,7 @@ rule Ransom_Win32_Reveton_U_2147682478_0
         $x_1_3 = "impmtcngt,amo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -322,6 +333,7 @@ rule Ransom_Win32_Reveton_V_2147682535_0
         $x_5_9 = {b9 38 36 00 00 8b 45 f4 e8 ?? ?? ?? ?? 33 c9 33 d2 8b 45 f4 8b 18 ff 53 10}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_50_*) and 2 of ($x_5_*))) or
@@ -348,6 +360,7 @@ rule Ransom_Win32_Reveton_W_2147682811_0
         $x_1_3 = {9a 02 00 00 6a 00 6a 04 8d 45 ?? 50 53 e8 ?? ?? ?? ?? 40 0f 84 03 00 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -371,6 +384,7 @@ rule Ransom_Win32_Reveton_X_2147683053_0
         $x_10_4 = {9a 02 00 00 6a 00 6a 04 8d 45 ?? 50 53 e8 ?? ?? ?? ?? 40 0f 84 03 00 c7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -403,6 +417,7 @@ rule Ransom_Win32_Reveton_Y_2147683615_0
         $x_10_10 = {2c 01 00 00 6a 00 6a 04 8d 45 ?? 50 53 e8 ?? ?? ?? ?? 40 0f 84 03 00 c7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -428,6 +443,7 @@ rule Ransom_Win32_Reveton_AA_2147686451_0
         $x_10_3 = {a7 02 00 00 6a 00 6a 04 8d 45 ?? 50 53 e8 ?? ?? ?? ?? 40 0f 84 03 00 c7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -450,6 +466,7 @@ rule Ransom_Win32_Reveton_Z_2147687976_0
         $x_10_3 = {2c 01 00 00 6a 00 6a 04 8d 45 ?? 50 53 e8 ?? ?? ?? ?? 40 0f 84 03 00 c7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -472,6 +489,7 @@ rule Ransom_Win32_Reveton_AB_2147690279_0
         $x_10_3 = {a7 02 00 00 6a 00 6a 04 8d 45 ?? 50 53 e8 ?? ?? ?? ?? 40 0f 84 03 00 c7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -494,6 +512,7 @@ rule Ransom_Win32_Reveton_EM_2147794959_0
         $x_10_2 = {2b 85 50 ff ff ff 8b 8d 58 ff ff ff 01 f1 20 9d 3b ff ff ff 89 8d 58 ff ff ff 31 c9 2b 8d 40 ff ff ff 89 85 50 ff ff ff 89 8d 40 ff ff ff 8b 85 58 ff ff ff}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

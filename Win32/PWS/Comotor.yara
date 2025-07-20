@@ -18,6 +18,7 @@ rule PWS_Win32_Comotor_A_2147620701_0
         $x_1_4 = {49 6e 74 65 72 6e 65 74 43 6c 6f 73 65 48 61 6e 64 6c 65 00 49 6e 74 65 72 6e 65 74 52 65 61 64 46 69 6c 65 00 00 00 00 49 6e 74 65 72 6e 65 74 4f 70 65 6e 41 00 00 00 49 6e 74 65 72 6e 65 74 4f 70 65 6e 55 72 6c 41 00 00 00 00 77 69 6e 69 6e 65 74 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule PWS_Win32_Comotor_B_2147621469_0
         $x_1_12 = {6c 69 76 65 75 70 64 61 74 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

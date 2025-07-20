@@ -18,6 +18,7 @@ rule Trojan_Win32_Fero_SPDB_2147908644_0
         $x_1_3 = "EbfeUadehahctkdan" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Fero_ASGA_2147909276_0
         $x_1_5 = "lover.Fm" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Fero_SPVB_2147910549_0
         $x_1_3 = "OsTlhtlohe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_Fero_SPPP_2147914750_0
         $x_2_1 = "TihEethoueows" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_Win32_Fero_SEC_2147940751_0
         $x_1_1 = {8a 45 0c 8a 4d 08 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 88 45 ff 88 4d fe 89 55 f8 8b 45 f8 a3 ?? ?? ?? ?? 8a 4d ff 8a 55 fe 30 d1 0f b6 c1 83 c4 08 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

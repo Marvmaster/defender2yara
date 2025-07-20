@@ -19,6 +19,7 @@ rule VirTool_Win64_Abjector_B_2147782216_0
         $x_1_4 = {ba 01 00 00 00 48 03 [0-4] 44 8b c2 [0-3] ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule VirTool_Win64_Abjector_C_2147785107_0
         $x_1_3 = {b8 01 00 00 00 85 c0 75 ?? e9 ?? ?? ?? ?? ?? 03 ?? 49 8b ?? 48 8b [0-2] ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

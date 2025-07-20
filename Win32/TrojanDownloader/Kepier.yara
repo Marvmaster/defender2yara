@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Kepier_A_2147731700_0
         $x_1_4 = ".pbipkierrqom.life/m/uac.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

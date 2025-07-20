@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Chepvil_A_114401_0
         $x_1_8 = "c:\\ntldr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_Chepvil_B_114403_0
         $x_1_1 = {33 c0 eb 06 8d 3f d3 c9 33 c1 8a 0a 83 c2 01 0a c9 75 f3 c9 c2 04 ?? ?? 83 c4 ec 53 56 57 ff 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanDownloader_Win32_Chepvil_A_114703_0
         $x_1_2 = {58 34 cc 68 ?? ?? ?? ?? 5f (68|b9) ?? ?? ?? ?? [0-1] f2 af [0-5] 8a 07 47 8b 0f 83 c7 04 57 51 6a 00 50 51 57 (e8 ?? ??|68 ?? ?? ?? ?? 68 ?? ?? ?? ??) 59 5f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule TrojanDownloader_Win32_Chepvil_C_115901_0
         $x_1_1 = {6a 00 59 8b 55 08 28 58 eb 07 8b ff d3 c9 90 33 c1 8a 0a 42 0a c9 75 f4 c9 c2 04 00 f9 83 c4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule TrojanDownloader_Win32_Chepvil_B_127790_0
         $x_1_3 = {8b 07 3d 68 74 74 70 75 16 ff 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -133,6 +138,7 @@ rule TrojanDownloader_Win32_Chepvil_C_139898_0
         $x_1_3 = {ae 20 5c 7e c6 1d 2f e4 64 6e 3f a2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule TrojanDownloader_Win32_Chepvil_J_160693_0
         $x_4_5 = {80 3c 18 2f 75 [0-8] 8d (44|54) 18 01}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -181,6 +188,7 @@ rule TrojanDownloader_Win32_Chepvil_I_160695_0
         $x_1_2 = {6a 00 6a 00 68 52 08 00 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +211,7 @@ rule TrojanDownloader_Win32_Chepvil_K_161561_0
         $x_1_3 = {0f be 40 01 8b 95 ?? fc ff ff 0f be 12 31 d0 89 85 ?? fc ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -227,6 +236,7 @@ rule TrojanDownloader_Win32_Chepvil_L_161562_0
         $x_1_2 = {32 44 39 01 88 84 ?? ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 80 bc ?? ?? ?? ?? ?? 2c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -248,6 +258,7 @@ rule TrojanDownloader_Win32_Chepvil_N_164532_0
         $x_10_2 = {0f be 45 00 0f be 75 01 33 f0 b8 00 00 00 00 76 14}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

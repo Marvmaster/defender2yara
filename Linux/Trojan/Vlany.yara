@@ -20,6 +20,7 @@ rule Trojan_Linux_Vlany_A_2147826926_0
         $x_1_5 = "/proc/*/numa_maps" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

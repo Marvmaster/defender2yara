@@ -18,6 +18,7 @@ rule Trojan_Win32_Lodpois_B_2147687968_0
         $x_5_4 = {4d 6f 64 75 6f 65 20 46 69 6c 65 20 50 61 74 68 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

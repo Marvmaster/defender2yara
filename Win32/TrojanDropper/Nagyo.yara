@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Nagyo_A_2147622281_0
         $x_1_3 = {6a 66 6a 00 ff 15 ?? ?? 40 00 8b f0 85 f6 75 07 5f 5e 5b 83 c4 44 c3 56 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -28,6 +28,7 @@ rule Trojan_Win32_Wzizh_EC_2147902756_0
         $x_1_13 = "CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

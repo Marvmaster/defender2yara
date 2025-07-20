@@ -18,6 +18,7 @@ rule Trojan_Win32_Elkmil_2147602428_0
         $x_3_4 = {c7 45 fc 33 00 00 00 c7 85 58 ff ff ff ?? ?? ?? ?? c7 85 50 ff ff ff 08 00 00 00 8d 95 50 ff ff ff 8d 8d 60 ff ff ff ff 15 ?? ?? ?? ?? 6a 00 8d 8d 60 ff ff ff 51 ff 15}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

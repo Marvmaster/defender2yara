@@ -32,6 +32,7 @@ rule Worm_Win32_Lightmoon_A_2147573344_0
         $x_1_16 = "\\startup" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*) and 1 of ($x_1_*))) or
             ((4 of ($x_20_*))) or
@@ -63,6 +64,7 @@ rule Worm_Win32_Lightmoon_B_2147582082_0
         $x_1_6 = "ScanEmail" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 3 of ($x_5_*))) or
             (all of ($x*))
@@ -89,6 +91,7 @@ rule Worm_Win32_Lightmoon_H_2147619539_0
         $x_1_4 = "DataHellSpawn\\WARING_VIRII_LABORATORY\\Virus Ku\\Moonlight" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

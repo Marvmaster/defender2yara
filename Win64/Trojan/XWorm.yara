@@ -17,6 +17,7 @@ rule Trojan_Win64_XWorm_GPA_2147904521_0
         $x_5_2 = ".binhttps://github.comInternet" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win64_XWorm_DA_2147922667_0
         $x_12_5 = "C:/explorerwi/pdf.dll" ascii //weight: 12
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_12_*) and 1 of ($x_1_*))) or
@@ -74,6 +76,7 @@ rule Trojan_Win64_XWorm_AXM_2147926498_0
         $x_5_7 = "Permanent Spoofer\\x64\\Release\\Permanent Spoofer.pdb" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_Win64_XWorm_PAFW_2147926653_0
         $x_2_2 = {41 f7 e8 c1 fa 04 8b c2 c1 e8 1f 03 d0 0f be c2 6b c8 36 41 0f b6 c0 41 ff c0 2a c1 04 35 41 30 41 ff 41 83 f8 2c 7c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Trojan_Win64_XWorm_GVA_2147935573_0
         $x_1_1 = {48 8b 55 10 48 8b 45 f0 48 01 d0 0f b6 00 0f be d0 8b 45 fc 01 c2 8b 45 fc c1 e0 0a 01 c2 8b 45 fc c1 e8 06 31 d0 89 45 fc 48 83 45 f0 01 48 8b 45 10 48 89 c1 ?? ?? ?? ?? ?? 48 39 45 f0 72 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_Win64_XWorm_SDEL_2147940094_0
         $x_2_1 = {31 c9 31 d2 45 31 c9 ff 15 fb 55 ff ff 48 8b 0d fc b0 ff ff 4c 63 59 04 8b 0d ce a3 ff ff 8b 15 cc a3 ff ff 8d 69 ff 0f af e9 89 e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Trojan_Win64_XWorm_GZK_2147943016_0
         $x_10_1 = {48 89 d1 48 8d 15 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 48 85 c0 0f 84 ?? ?? ?? ?? 48 8d 15 ?? ?? ?? ?? 48 89 f1 48 89 c7 ff d0 48 89 45 ?? 48 8d 15 ?? ?? ?? ?? 48 89 f1 ff d7 48 89 45 ?? 48 8d 15 ?? ?? ?? ?? 48 89 f1 ff d7 48 89 45 00 48 8d 15 ?? ?? ?? ?? 48 89 f1 48 89 7d ?? ff d7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -180,6 +187,7 @@ rule Trojan_Win64_XWorm_GZM_2147944854_0
         $x_10_1 = {49 89 c7 48 89 d9 e8 ?? ?? ?? ?? 48 89 c1 4c 89 f2 e8 ?? ?? ?? ?? 49 89 c4 48 c7 44 24 ?? 00 00 00 00 41 b8 04 00 00 00 48 89 f9 4c 89 fa 41 b9 04 00 00 00 ff d0 48 c7 44 24 ?? 00 00 00 00 4c 8d 05 ?? ?? ?? ?? 41 b9 04 00 00 00 48 89 f9 4c 89 fa e8 ?? ?? ?? ?? 48 c7 44 24 ?? 00 00 00 00 41 b8 04 00 00 00 48 89 f9 4c 89 fa 45 31 c9 41 ff d4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +213,7 @@ rule Trojan_Win64_XWorm_GXF_2147946470_0
         $x_1_5 = "DisableRealtimeMonitoring" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

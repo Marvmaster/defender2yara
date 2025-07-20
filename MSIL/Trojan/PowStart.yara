@@ -19,6 +19,7 @@ rule Trojan_MSIL_PowStart_SB_2147900876_0
         $x_1_5 = "UNCn0NCiRwcm9jID0gU3RhcnQtUHJvY2VzcyBAc3RhcnRwcm9jZXNzUGFyYW1z" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

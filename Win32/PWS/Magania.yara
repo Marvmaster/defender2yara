@@ -21,6 +21,7 @@ rule PWS_Win32_Magania_2147603208_0
         $x_30_7 = {64 ff 35 00 00 00 00 64 89 25 00 00 00 00 bf 4d 4a 00 00 b8 02 09 00 00 74 ?? 75}  //weight: 30, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*))) or
             ((1 of ($x_30_*))) or
@@ -48,6 +49,7 @@ rule PWS_Win32_Magania_BQ_2147634533_0
         $x_2_4 = {c7 85 b0 fe ff ff 01 00 00 00 ff b5 d0 fe ff ff ff 93 ?? ?? ?? ?? 8d 8d d8 fe ff ff 51 ff b5 d4 fe ff ff ff 93 ?? ?? ?? ?? 0b c0 0f 85 5f fe ff ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

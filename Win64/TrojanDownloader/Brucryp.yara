@@ -17,6 +17,7 @@ rule TrojanDownloader_Win64_Brucryp_B_2147697092_0
         $x_1_3 = {0f b6 42 ff 0f b6 0a 3c 61 7c 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win64_Brucryp_E_2147709421_0
         $x_2_3 = {41 b8 2a 0a 00 00 48 8b c8 e8 ?? ?? ?? ?? ?? ?? ?? ?? ?? 41 b8 14 05 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

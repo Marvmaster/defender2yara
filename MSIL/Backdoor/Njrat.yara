@@ -19,6 +19,7 @@ rule Backdoor_MSIL_Njrat_C_2147726104_0
         $x_1_4 = {1f 1d 0f 01 1a 28 ?? 00 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

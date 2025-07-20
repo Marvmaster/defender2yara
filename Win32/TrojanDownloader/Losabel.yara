@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Losabel_B_2147598368_0
         $x_1_2 = {8d 45 fc 50 68 ?? ?? ?? ?? 68 02 00 00 80 e8 ?? ?? ff ff 8d 45 fc 50 68 ?? ?? ?? ?? 8b 45 fc 50 e8 ?? ?? ff ff 8d 45 fc 50 68 ?? ?? ?? ?? 8b 45 fc 50 e8 ?? ?? ff ff 8d 45 f8 b9 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? e8 ?? ?? ff ff 8b 45 f8 e8 ?? ?? ff ff 68 ff 00 00 00 50 6a 01 6a 00 68 ?? ?? ?? ?? 8b 45 fc 50 e8 ?? ?? ff ff 33 c0 5a 59 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_Win32_Losabel_H_2147624399_0
         $x_1_6 = "360Safe.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

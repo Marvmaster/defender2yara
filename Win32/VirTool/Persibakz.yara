@@ -18,6 +18,7 @@ rule VirTool_Win32_Persibakz_A_2147846427_0
         $x_1_3 = {89 54 24 10 c7 44 24 0c 01 00 00 00 c7 44 24 08 00 00 00 00 c7 44 24 04 82 a0 40 00 89 04 24 a1 dc ?? ?? ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

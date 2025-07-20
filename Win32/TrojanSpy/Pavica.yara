@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Pavica_C_2147730172_0
         $x_1_4 = {68 75 10 ad 01 ff 35 ?? ?? ?? ?? e8 ?? ?? ?? ?? 59 59 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule TrojanSpy_Win32_Pavica_PAEC_2147912110_0
         $x_1_6 = "SOFTWARE\\\\Usoris\\\\Backup" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

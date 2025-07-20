@@ -22,6 +22,7 @@ rule Trojan_MSIL_Clipper_AA_2147768526_0
         $x_1_7 = "Clipper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_MSIL_Clipper_AB_2147775613_0
         $x_1_5 = "b(bc1|[13])[a-zA-HJ-NP-Z0-9]{26,35}\\b" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

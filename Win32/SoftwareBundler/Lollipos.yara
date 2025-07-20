@@ -17,6 +17,7 @@ rule SoftwareBundler_Win32_Lollipos_198718_0
         $x_1_3 = "lollipop-network.com/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

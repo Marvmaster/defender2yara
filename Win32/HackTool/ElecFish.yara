@@ -19,6 +19,7 @@ rule HackTool_Win32_ElecFish_A_2147735689_0
         $x_1_4 = "CCGCLOG ===> try connect to %s:%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanSpy_MacOS_Bartacomabelli_A_2147743630_0
         $x_2_4 = {e9 c5 c4 de cf c4 de d9 [0-16] 85 e7 cb c9 e5 f9 85 eb [0-16] da da f9 de c5 d8 cf aa}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

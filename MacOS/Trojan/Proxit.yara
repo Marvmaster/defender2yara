@@ -17,6 +17,7 @@ rule Trojan_MacOS_Proxit_A_2147820289_0
         $x_1_3 = "proxit.com/common/config.loadViper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MacOS_Proxit_B_2147828450_0
         $x_1_3 = "proxit.com/common/hostinfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_MSIL_PoC_DA_2147774385_0
         $x_1_4 = "get_Extension" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule PWS_Win32_Bividon_A_2147600215_0
         $x_1_5 = {57 72 69 74 65 50 72 6f 63 65 73 73 4d 65 6d 6f 72 79 00 00 4c 6f 61 64 4c 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule PWS_Win32_Bividon_A_2147600216_0
         $x_3_6 = "SetWindowsHook" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -75,6 +77,7 @@ rule PWS_Win32_Bividon_2147607383_0
         $x_1_6 = "SetWindowsHook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

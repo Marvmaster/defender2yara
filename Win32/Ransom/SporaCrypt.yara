@@ -19,6 +19,7 @@ rule Ransom_Win32_SporaCrypt_PAD_2147818075_0
         $x_1_4 = "vssadmin.exe Delete Shadows /All /Quiet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win32_SporaCrypt_PA_2147837657_0
         $x_1_3 = {73 63 68 74 61 73 6b 73 20 2f 63 72 65 61 74 65 20 2f 73 63 20 6d 69 6e 75 74 65 20 2f 6d 6f 20 36 20 2f 74 6e 20 22 4d 69 63 72 6f 73 6f 66 74 5f 41 75 74 6f 5f 53 63 68 65 64 75 6c 65 72 22 20 2f 74 72 20 22 27 43 3a 5c 55 73 65 72 73 5c 25 75 73 65 72 6e 61 6d 65 25 5c 41 70 70 44 61 74 61 5c [0-21] 2e 62 61 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

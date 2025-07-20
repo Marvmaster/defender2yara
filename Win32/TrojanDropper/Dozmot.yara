@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Dozmot_A_2147621255_0
         $x_1_5 = {44 69 76 78 44 65 63 6f 64 65 00 48 6f 6f 6b 6f 66 66 00 48 6f 6f 6b 6f 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule TrojanDropper_Win32_Dozmot_B_2147621658_0
         $x_1_3 = {44 69 76 78 44 65 63 6f 64 65 72 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanDropper_Win32_Dozmot_C_2147626005_0
         $x_2_2 = {80 f9 41 7c 0d 80 f9 4d 7f 08 0f be c9 83 c1 ?? eb 1f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule TrojanDropper_Win32_Dozmot_D_2147638409_0
         $x_1_2 = {8b ce 83 ee 08 d3 ea 48 89 75 ?? 88 90 ?? ?? ?? ?? 79 e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

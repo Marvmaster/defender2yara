@@ -20,6 +20,7 @@ rule Trojan_MSIL_CryptMiner_NZK_2147836917_0
         $x_1_5 = "Download" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_CryptMiner_MBXT_2147920581_0
         $x_2_2 = "ScoutVerity_BlueParka.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

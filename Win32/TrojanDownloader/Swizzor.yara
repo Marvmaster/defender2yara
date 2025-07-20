@@ -27,6 +27,7 @@ rule TrojanDownloader_Win32_Swizzor_2147566898_0
         $x_1_13 = "ReadProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -57,6 +58,7 @@ rule TrojanDownloader_Win32_Swizzor_C_2147603383_0
         $x_10_4 = {85 c0 0f 84 [0-26] c1 ?? 05 c1 2d ?? ?? ?? 00 1b 0b ?? ?? ?? ?? 00 (83|81 e8 41 00) 01}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -81,6 +83,7 @@ rule TrojanDownloader_Win32_Swizzor_J_2147603634_0
         $x_10_2 = {8a 17 32 14 18 88 17 40 83 f8 ?? 7c 02}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule TrojanDownloader_Win32_Swizzor_E_2147610923_0
         $x_1_2 = {3b c6 75 09 b8 a1 7a 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +129,7 @@ rule TrojanDownloader_Win32_Swizzor_F_2147612729_0
         $x_1_2 = {c0 e1 04 99 f7 7e 04 8b 06 02 cb 8b 5f f4 8d 73 01 32 0c 02 8b 47 f8 88 4c 24 ?? b9 01 00 00 00 2b 4f fc 2b c6 0b c1 7d 0e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +153,7 @@ rule TrojanDownloader_Win32_Swizzor_G_2147614106_0
         $x_2_3 = {f7 79 04 8b 01 b9 01 00 00 00 2b 4e fc 32 1c 02 8b 56 f4 8b 46 f8 8d 6a 01 2b c5 0b c1 89 54 24 ?? 7d 12}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -173,6 +179,7 @@ rule TrojanDownloader_Win32_Swizzor_H_2147618893_0
         $x_1_2 = {0f be 04 19 33 c6 0f ac fe 08 25 ff 00 00 00 33 34 c5 ?? ?? ?? ?? c1 ef 08 33 3c c5 ?? ?? ?? ?? 41 3b ca 7c db}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -195,6 +202,7 @@ rule TrojanDownloader_Win32_Swizzor_I_2147627346_0
         $x_1_2 = {68 00 02 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 8b 52 78 6a 00 ?? ?? ?? ?? ?? ?? ff d2 ?? ?? ?? ?? ?? ?? 8b 51 70 68 00 22 00 00 50 ff d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +226,7 @@ rule TrojanDownloader_Win32_Swizzor_J_2147627479_0
         $x_1_3 = {8b 8e a4 00 00 00 53 68 58 1b 00 00 51 32 db ff 15 ?? ?? ?? ?? 85 c0 75 33 39 46 38 74 21 8b 7c 24 10 8b 96 a8 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -240,6 +249,7 @@ rule TrojanDownloader_Win32_Swizzor_K_2147628190_0
         $x_1_2 = {83 fb 5a 7e d9 39 75 d4 75 07 c7 45 d4 19 2e 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +278,7 @@ rule TrojanDownloader_Win32_Swizzor_L_2147628494_0
         $x_1_8 = ".dll::PayFunc(" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -296,6 +307,7 @@ rule TrojanDownloader_Win32_Swizzor_AB_2147643470_0
         $x_1_4 = {61 62 6f 75 74 3a 62 6c 61 6e 6b 00 68 74 74 70 3a 2f 2f 73 74 61 74 2e 77 61 6d 6d 65 2e 63 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -319,6 +331,7 @@ rule TrojanDownloader_Win32_Swizzor_AB_2147643470_1
         $x_1_4 = {70 72 6f 63 65 73 73 31 00 70 72 6f 63 65 73 73 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

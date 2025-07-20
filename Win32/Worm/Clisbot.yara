@@ -16,6 +16,7 @@ rule Worm_Win32_Clisbot_A_2147658588_0
         $x_1_2 = {68 01 01 00 00 ff 15 ?? ?? ?? ?? b9 02 00 00 00 6a 35 66 89 4c 24 ?? c7 44 24 ?? 00 00 00 00 ff 15 ?? ?? ?? ?? 6a 11 6a 02 6a 02 66 89 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

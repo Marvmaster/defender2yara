@@ -19,6 +19,7 @@ rule Trojan_WinCE_MobUn_A_2147643832_0
         $x_1_5 = {5c 73 65 6e 64 73 65 72 76 69 63 65 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

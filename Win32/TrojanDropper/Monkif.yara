@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Monkif_A_2147616041_0
         $x_1_3 = {43 83 fb 0a 7f 28 68 d0 07 00 00 ff 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 81 3d ?? ?? ?? ?? 00 03 00 00 74 de 81 3d ?? ?? ?? ?? 01 03 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDropper_Win32_Monkif_B_2147616051_0
         $x_1_6 = {45 d1 4c c6 45 d2 64 c6 45 d3 74 c6 45 d4 45 c6 45 d5 6e c6 45 d6 74 c6 45 d7 72 c6 45 d8 69 c6 45 d9 65 c6 45 da 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -70,6 +72,7 @@ rule TrojanDropper_Win32_Monkif_F_2147621201_0
         $x_1_5 = {b8 68 58 4d 56 b9 14 00 00 00 66 ba 58 56 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule TrojanDropper_Win32_Monkif_G_2147622748_0
         $x_1_3 = {8d 46 fe 83 c4 ?? 3d 04 af 22 00 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -116,6 +120,7 @@ rule TrojanDropper_Win32_Monkif_J_2147641347_0
         $x_1_2 = {6d 73 30 30 31 2e 74 6d 70 [0-5] 54 68 72 65 61 64 69 6e 67 4d 6f 64 65 6c [0-5] 70 61 72 74 6d 65 6e 74 [0-5] 25 73 25 73 5c 25 73 00 53 6f 66 74 77 61 72 65 5c 43 6c 61 73 73 65 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule TrojanDropper_Win32_Monkif_J_2147641347_1
         $x_1_2 = {50 68 01 00 00 80 ff 55 f4 85 c0 75 3e ff 75 08 ff d6 50 ff 75 08 6a 01 53 53 ff 75 fc ff 55 f8 85 c0 75 27 bf ?? ?? ?? ?? 57 ff d6 50 57 6a 01 53 68 ?? ?? ?? ?? ff 75 fc ff 55 f8 85 c0 75 0b ff 75 fc ff 55 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -158,6 +164,7 @@ rule TrojanDropper_Win32_Monkif_J_2147641347_2
         $x_1_2 = {50 68 01 00 00 80 ff 55 f4 85 c0 75 3e ff 75 08 ff d6 50 ff 75 08 6a 01 53 53 ff 75 fc ff 55 f8 85 c0 75 27 bf ?? ?? ?? ?? 57 ff d6 50 57 6a 01 53 68 ?? ?? ?? ?? ff 75 fc ff 55 f8 85 c0 75 0b ff 75 fc ff 55 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

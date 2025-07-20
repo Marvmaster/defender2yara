@@ -28,6 +28,7 @@ rule TrojanSpy_Win32_Sappwort_A_2147583205_0
         $x_100_14 = "%20%20%20Passwort%:0:%20" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1000_*) and 2 of ($x_100_*))) or
             ((3 of ($x_1000_*))) or

@@ -18,6 +18,7 @@ rule Trojan_Win32_Lnkiebes_A_2147641987_0
         $x_1_4 = "bullsky.res" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Trojan_Win32_Lnkiebes_B_2147642380_0
         $x_1_4 = ".best360" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

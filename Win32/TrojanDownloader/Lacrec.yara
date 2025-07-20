@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Lacrec_A_2147611328_0
         $x_1_4 = {52 65 67 43 6f 6d 33 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

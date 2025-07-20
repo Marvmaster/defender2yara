@@ -19,6 +19,7 @@ rule VirTool_Win32_Vbinder_A_2147606414_0
         $x_1_5 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule VirTool_Win32_Vbinder_B_2147607343_0
         $x_1_5 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule VirTool_Win32_Vbinder_C_2147607525_0
         $x_1_6 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule VirTool_Win32_Vbinder_D_2147611196_0
         $x_1_2 = {3c 00 3c 00 3e 00 3e 00 00 00 00 00 08 00 00 00 3c 00 5c 00 5c 00 3e 00 00 00 00 00 10 00 00 00 3c 00 3c 00 44 00 44 00 44 00 44 00 3e 00 3e 00 00 00 00 00 12 00 00 00 36 00 36 00 36 00 36 00 36 00 36 00 36 00 36 00 36 00 00 00 54 00 00 00 4d 00 69 00 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00 20 00 42 00 61 00 73 00 65 00 20 00 43 00 72 00 79 00 70 00 74 00 6f 00 67 00 72 00 61 00 70 00 68 00 69 00 63 00 20 00 50 00 72 00 6f 00 76 00 69 00 64 00 65 00 72 00 20 00 76 00 31 00 2e 00 30 00 00 00 00 00 12 00 00 00 4d 00 65 00 74 00 61 00 6c 00 6c 00 69 00 63 00 61 00 00 00 0c 00 00 00 73 68 65 6c 6c 33 32 2e 64 6c 6c 00 0e 00 00 00 53 68 65 6c 6c 45 78 65 63 75 74 65 41}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule VirTool_Win32_Vbinder_N_2147616785_0
         $x_1_3 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule VirTool_Win32_Vbinder_P_2147618523_0
         $x_1_11 = {2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_2_*) and 2 of ($x_1_*))) or
             ((9 of ($x_2_*))) or
@@ -173,6 +179,7 @@ rule VirTool_Win32_Vbinder_Q_2147618524_0
         $x_1_9 = {73 74 69 6b 69 00 73 74 69 6b 69 00 00 73 74 69 6b 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -195,6 +202,7 @@ rule VirTool_Win32_Vbinder_T_2147618629_0
         $x_1_3 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +224,7 @@ rule VirTool_Win32_Vbinder_B_2147618861_0
         $x_1_1 = {4d c4 fc 03 40 fc 8f e4 fc 01 00 04 e4 fc 1b 05 00 1b 06 00 0a 07 00 0c 00 04 e4 fc 5a f5 00 00 00 00 f5 04 00 00 00 04 e4 fc fe 8e 01 00 00 00 10 00 80 08 04 b8 fd 4d d4 fc 03 40 fc 8f e4 fc 00 00 04 70 fe 4d c4 fc 03 40 fc 8f e4 fc 01 00 04 8c fe 4d b4 fc 03 40 fc 8f e4 fc 02 00 fe c1 a4 fc 00 30 00 00 f5 03 00 00 00 6c e4 fc 52 fe c1 94 fc 40 00 00 00 f5 04 00 00 00 6c e4 fc 52 04 e4 fc 1b 08 00 1b 09 00 0a 07 00 0c 00 04 e4 fc 5a f5 00 00 00 00 59 90 fc 6c 90 fe f5 00 00 00 00 80 10 00 2e e8 fc 40 6c 70 fe 6c b8 fd 0a 0a 00 14 00 3c 2d e8 fc f5 00 00 00 00 04 74 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -240,6 +249,7 @@ rule VirTool_Win32_Vbinder_AC_2147622321_0
         $x_1_5 = "silw3r" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -262,6 +272,7 @@ rule VirTool_Win32_Vbinder_BO_2147626046_0
         $x_1_3 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -284,6 +295,7 @@ rule VirTool_Win32_Vbinder_AU_2147630839_0
         $x_1_3 = {52 74 6c 4d 6f 76 65 4d 65 6d 6f 72 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -305,6 +317,7 @@ rule VirTool_Win32_Vbinder_AW_2147630894_0
         $x_1_2 = {4d 6f 64 75 6c 65 31 00 4d 6f 64 75 6c 65 32 00 48 55 4e 54 57 55 56 4a 55 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -330,6 +343,7 @@ rule VirTool_Win32_Vbinder_CK_2147648096_0
         $x_1_6 = "NtUnmapViewOfSection" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -356,6 +370,7 @@ rule VirTool_Win32_Vbinder_CL_2147648471_0
         $x_1_3 = "TVqQAAMAAAAEAAAA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -380,6 +395,7 @@ rule VirTool_Win32_Vbinder_CQ_2147653594_0
         $x_2_5 = {00 00 73 00 74 00 26 00 26 00 64 00 65 00 6c 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

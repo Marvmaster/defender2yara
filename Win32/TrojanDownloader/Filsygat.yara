@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Filsygat_A_2147728028_0
         $x_1_3 = {00 2f 63 2e 70 68 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

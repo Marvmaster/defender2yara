@@ -21,6 +21,7 @@ rule Trojan_MSIL_Babadeda_RDA_2147840120_0
         $x_1_6 = "System32\\WSLog.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Babadeda_PSRD_2147897152_0
         $x_2_1 = {08 28 cc 00 00 0a 0d 28 06 00 00 06 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 72 da 09 00 70 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 13 21 11 21 2c 0d 02 6f ?? ?? ?? 06 6f ?? ?? ?? 0a 00 00 00 17 73 ?? ?? ?? 0a 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

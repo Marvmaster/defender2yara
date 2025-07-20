@@ -17,6 +17,7 @@ rule Trojan_MacOS_ProxyAgent_A_2147918314_0
         $x_1_2 = {0f 57 d2 f2 48 0f 2a d3 f2 0f 58 d0 f2 0f 5c c8 0f 57 c0 f2 48 0f 2a c1 f2 0f 59 c1 f2 0f 10 0d e4 f1 39 00 f2 0f 59 c8 f2 0f 58 d1 f2 0f 10 05 c4 f2 39 00 f2 0f 5c d0 0f 57 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MacOS_ProxyAgent_B_2147923518_0
         $x_1_2 = {e8 cc b3 2b 00 85 db 75 1b 48 8b 05 b1 dd 55 00 48 8b 00 48 3b 45 e0 75 14 48 83 c4 68 5b 41 5e 41 5f 5d c3 89 df e8 46 00 00 00 eb dc e8 99 b3 2b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MacOS_ProxyAgent_C_2147923771_0
         $x_1_2 = {4c 89 ff 31 f6 4c 89 ea 4c 89 f1 e8 1d b0 2b 00 89 c3 83 f8 23 75 29 48 c7 45 c0 00 00 00 00 4c 89 65 c8 48 8d 7d c0 31 f6 e8 05 b0 2b 00 49 81 c4 40 42 0f 00 49 81 fc 40 6f 40 01 ?? ?? eb ?? 85 db}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_MacOS_ProxyAgent_F_2147931810_0
         $x_1_3 = {48 8b 85 68 ff ff ff 48 3b 85 70 ff ff ff 0f 83 4a 00 00 00 48 8b 45 80 48 8b 8d 68 ff ff ff 0f b6 04 08 48 8b 8d 78 ff ff ff 48 8b 95 68 ff ff ff 0f b6 0c 11 31 c8 88 c2 48 8b 45 88 48 8b 8d 68 ff ff ff 88 14 08 48 8b 85 68 ff ff ff 48 83 c0 01 48 89 85 68 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

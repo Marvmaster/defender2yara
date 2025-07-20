@@ -25,6 +25,7 @@ rule Trojan_Win64_Knot_EH_2147828334_0
         $x_1_10 = "1.3.6.1.4.1.311.72.1.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

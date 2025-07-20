@@ -17,6 +17,7 @@ rule Ransom_MSIL_BlackBit_ABB_2147847025_0
         $x_1_2 = "This file and all other files in your computer are encrypted by BlackBit" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Ransom_MSIL_BlackBit_MA_2147852278_0
         $x_2_2 = "info.BlackBit" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Ransom_MSIL_BlackBit_AYA_2147937393_0
         $x_1_3 = "If you want to restore this file and rest of your files, Please send us message to this e-mail" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Ransom_MSIL_BlackBit_NIT_2147937967_0
         $x_1_2 = "info.BlackBit" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

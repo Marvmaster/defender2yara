@@ -23,6 +23,7 @@ rule TrojanClicker_Win32_Yeeha_A_2147633652_0
         $x_10_9 = "http://wpa.qq.com" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

@@ -16,6 +16,7 @@ rule Worm_WinNT_Bzbot_A_2147626137_0
         $x_1_2 = "\\Device\\pigsux" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

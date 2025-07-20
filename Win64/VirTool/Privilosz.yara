@@ -19,6 +19,7 @@ rule VirTool_Win64_Privilosz_A_2147847726_0
         $x_1_4 = {48 8b 5c 24 68 48 8d ?? ?? ?? ?? ?? 48 8b c3 48 8b fb 8b d0 e8 ?? ?? ?? ?? b9 00 01 00 00 ff 15 ?? ?? ?? ?? 4c 8b f8 48 8b ce 33 c0 48 89}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

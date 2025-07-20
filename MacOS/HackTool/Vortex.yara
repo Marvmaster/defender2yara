@@ -22,6 +22,7 @@ rule HackTool_MacOS_Vortex_D_2147832207_0
         $x_1_7 = "tardy0n" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (5 of ($x*))
 }
 

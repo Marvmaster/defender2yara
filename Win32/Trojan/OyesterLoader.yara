@@ -17,6 +17,7 @@ rule Trojan_Win32_OyesterLoader_YR_2147913258_0
         $x_1_2 = "postman\\Desktop\\NZT\\ProjectD_cpprest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_OyesterLoader_WQF_2147919395_0
         $x_1_1 = {8b 45 10 53 6a 01 89 87 24 03 00 00 88 9f 2c 03 00 00 89 9f 30 03 00 00 89 9f 28 03 00 00 89 b7 34 03 00 00 83 4e 0c ff 53 ff 15 44 f0 08 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

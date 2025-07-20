@@ -21,6 +21,7 @@ rule Ransom_MSIL_Bytelocker_DA_2147775156_0
         $x_1_6 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

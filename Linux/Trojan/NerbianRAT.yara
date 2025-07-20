@@ -22,6 +22,7 @@ rule Trojan_Linux_NerbianRAT_K_2147906331_0
         $x_2_7 = {48 8b 45 f0 48 89 c7 e8 be a0 23 00 83 f8 ff 0f 94 c0 84 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

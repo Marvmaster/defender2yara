@@ -27,6 +27,7 @@ rule VirTool_MSIL_Aikaantivm_GG_2147769553_0
         $x_1_12 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -62,6 +63,7 @@ rule VirTool_MSIL_Aikaantivm_GG_2147769553_1
         $x_1_12 = "NtQueryInformationProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))

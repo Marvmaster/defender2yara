@@ -16,6 +16,7 @@ rule Trojan_MSIL_ZgRat_RPX_2147906235_0
         $x_1_1 = {11 14 11 15 11 15 07 58 9e 11 15 17 58 13 15 11 15 11 14 8e 69 32 e9 11 11 17 58 13 11 11 11 03 8e 69 3f 52 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_ZgRat_SGB_2147912597_0
         $x_2_1 = {11 06 72 01 00 00 70 28 0f 00 00 06 80 01 00 00 04}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

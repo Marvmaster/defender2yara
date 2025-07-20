@@ -16,6 +16,7 @@ rule Ransom_Win32_RanzyLocker_MKV_2147919646_0
         $x_5_1 = {53 8b 5d 08 83 79 14 10 8b d1 72 ?? 8b 11 30 1c 02 40 3b c6 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

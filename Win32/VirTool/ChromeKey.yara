@@ -19,6 +19,7 @@ rule VirTool_Win32_ChromeKey_A_2147901292_0
         $x_2_5 = "Decoded key" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Meteorite_A_2147728102_0
         $x_1_4 = "SbieDll.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

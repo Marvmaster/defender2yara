@@ -23,6 +23,7 @@ rule Trojan_MSIL_ScreenLock_MB_2147763245_0
         $x_1_8 = "Release\\Win Act.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

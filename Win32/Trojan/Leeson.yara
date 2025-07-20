@@ -19,6 +19,7 @@ rule Trojan_Win32_Leeson_A_2147811731_0
         $x_1_4 = "w([a-zA-Z]+)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win64_GaryStealer_A_2147892619_0
         $x_2_4 = "extended master secret" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win64_AuKill_B_2147906404_0
         $x_1_2 = {5b 21 5d 20 4f 70 65 6e 50 72 6f 63 65 73 73 54 6f 6b 65 6e 20 66 61 69 6c 65 64 20 28 54 72 75 ?? 74 65 64 49 6e 73 74 61 6c 6c 65 72 2e 65 78 65 29 3a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

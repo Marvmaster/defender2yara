@@ -15,6 +15,7 @@ rule Worm_Win32_Mothyfil_A_2147694855_0
         $x_1_1 = {66 75 63 6b 5f 75 34 00 66 75 63 6b 5f 75 35 00 43 6c 61 73 73 31 00 00 50 72 6f 6a 65 63 74 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Worm_Win32_Mothyfil_B_2147707162_0
         $x_1_6 = {61 64 75 6c 74 6b 69 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

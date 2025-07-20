@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_Reline_GM_2147758389_0
         $x_1_2 = {12 03 28 0e 00 00 0a 0b 73 0f 00 00 0a 0c 08 07 28 04 00 00 06 6f 10 00 00 0a 08 16 6f 11 00 00 0a 08 16 6f 12 00 00 0a 08 28 13 00 00 0a 26 de 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule TrojanDownloader_MSIL_Reline_SIB_2147787417_0
         $x_1_8 = "ProcessVmCounters" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -79,6 +81,7 @@ rule TrojanDownloader_MSIL_Reline_SIBA_2147798221_0
         $x_1_10 = "NETSecure" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*) and 2 of ($x_1_*))) or
             ((4 of ($x_20_*))) or

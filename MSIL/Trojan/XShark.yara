@@ -21,6 +21,7 @@ rule Trojan_MSIL_XShark_A_2147745256_0
         $x_1_6 = "StubXShark" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

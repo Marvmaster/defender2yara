@@ -17,6 +17,7 @@ rule PWS_Win32_Delmes_A_2147628515_0
         $x_1_3 = {bf 01 00 00 00 8b 45 f4 0f b6 5c 38 ff 33 5d e0 3b 5d e4 7f 0b 81 c3 ff 00 00 00 2b 5d e4 eb 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

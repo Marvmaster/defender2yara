@@ -21,6 +21,7 @@ rule Ransom_Win32_Ergop_A_2147719796_0
         $x_2_7 = "rsa_priv_testing.txt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule Ransom_Win32_Ergop_A_2147719796_1
         $x_2_8 = {50 bd 00 01 00 00 55 68 ?? ?? ?? ?? 56 ff d7 85 c0 0f 84 ?? ?? ff ff 39 6c 24 ?? 0f 85 ?? ?? ff ff 6a 01 53 6a 02 56 ff 15 ?? ?? ?? ?? 53 8d 44 24 ?? 50 68 00 04 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -78,6 +80,7 @@ rule Ransom_Win32_Ergop_B_2147720581_0
         $x_100_2 = {55 8b ec 83 ec 3c 53 56 57 68 28 e8 02 03 e8 6d 03 ff ff 33 db 59 3d b3 01 00 00 0f 86 2b 01 00 00 81 7d d0 9b 4b 08 00 0f 84 1e 01 00 00 81 7d d0 04 11 00 00 0f 84 11 01 00 00 e8 00 ff ff ff}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -105,6 +108,7 @@ rule Ransom_Win32_Ergop_B_2147720581_1
         $x_1_8 = "Delete Shadows /All /Quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -172,6 +176,7 @@ rule Ransom_Win32_Ergop_A_2147722998_0
         $x_1_7 = {70 6f 73 74 67 72 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +208,7 @@ rule Ransom_Win32_Ergop_C_2147723190_0
         $x_2_12 = "/c bcdedit.exe /set {default} bootstatuspolicy ignoreallfailures" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -239,6 +245,7 @@ rule Ransom_Win32_Ergop_D_2147725016_0
         $x_2_11 = "B231B717113902E9F788C7BD0C7ABABAF9B173A7F6B432076B82CBCB7C8149F3CF2F5" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -312,6 +319,7 @@ rule Ransom_Win32_Ergop_E_2147725028_0
         $x_1_1 = {00 2e 2e 64 6f 63 00 52 65 61 64 5f 5f 5f 4d 45 2e 68 74 6d 6c 00 2e 2e 64 6f 63}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

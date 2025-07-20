@@ -22,6 +22,7 @@ rule TrojanDropper_Win32_Vasnasea_A_2147649879_0
         $x_4_8 = {c6 04 08 e9 8b 13 8b ce 2b c8 83 e9 05 89 4c 02 01 8d 4d fc}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*) and 3 of ($x_2_*))) or
             ((1 of ($x_8_*) and 1 of ($x_4_*) and 3 of ($x_2_*))) or

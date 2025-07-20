@@ -22,6 +22,7 @@ rule Worm_MSIL_Roxin_A_2147656107_0
         $x_1_8 = "/it.asp?intTimes=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Worm_MSIL_Roxin_B_2147656229_0
         $x_3_3 = "tcpz.sys" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Worm_MSIL_Roxin_D_2147682695_0
         $x_1_4 = {00 53 71 6c 45 78 65 63 42 79 43 6d 64 53 68 65 6c 6c 00 63 6d 64 53 74 72 69 6e 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

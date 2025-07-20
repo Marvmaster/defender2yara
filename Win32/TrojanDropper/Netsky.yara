@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Netsky_D_2147582440_0
         $x_3_6 = "userconfig9x.dll" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_6_*) and 2 of ($x_3_*))) or
             ((4 of ($x_6_*))) or

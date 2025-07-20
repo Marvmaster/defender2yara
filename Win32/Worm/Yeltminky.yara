@@ -16,6 +16,7 @@ rule Worm_Win32_Yeltminky_A_2147626007_0
         $x_1_2 = {74 11 6a 00 6a 03 6a 00 a1 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 80 3d ?? ?? ?? ?? 00 74 11 6a 00 6a 02 6a 00 a1 ?? ?? ?? ?? 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Worm_Win32_Yeltminky_A_2147626090_0
         $x_1_4 = {68 48 20 22 00 53 ff d6 53 ff d7 68 d0 07 00 00 ff 55 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

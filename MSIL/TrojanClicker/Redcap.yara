@@ -19,6 +19,7 @@ rule TrojanClicker_MSIL_Redcap_MBWE_2147928215_0
         $x_2_4 = "E3D5C0C330C2" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

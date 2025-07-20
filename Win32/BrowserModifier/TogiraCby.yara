@@ -20,6 +20,7 @@ rule BrowserModifier_Win32_TogiraCby_224352_0
         $x_2_6 = "Global\\{SS_EXE_RUNNING_15B475F3-750C-4889-A091-41A9E28FC471}" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

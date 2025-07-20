@@ -23,6 +23,7 @@ rule HackTool_MSIL_Rat4noobs_2147695314_0
         $x_1_9 = "Remote Webcam" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

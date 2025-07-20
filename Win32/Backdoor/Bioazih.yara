@@ -18,6 +18,7 @@ rule Backdoor_Win32_Bioazih_A_2147693186_0
         $x_1_3 = "Pass:%s Hostname:%s Ip:%s Os:%s Proxy:%s Vm:%s Pro:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Backdoor_Win32_Bioazih_A_2147693186_1
         $x_1_8 = ".asp?keyword=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -75,6 +77,7 @@ rule Backdoor_Win32_Bioazih_B_2147693267_0
         $x_1_3 = {68 fc 0f 00 00 8d 45 0c 6a 00 50 e8 ?? ?? ?? ?? 46 8d 85 ?? ?? ?? ?? 6b f6 2c 56 50 8d 45 0c 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Backdoor_Win32_Bioazih_B_2147693267_1
         $x_3_4 = "success to delete fileforder" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

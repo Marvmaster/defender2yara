@@ -19,6 +19,7 @@ rule Trojan_Win32_Gapined_DSK_2147749987_0
         $x_2_4 = {8b 44 24 14 8a 0c 50 8a 14 1f 32 d1 88 14 1f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

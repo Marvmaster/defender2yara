@@ -20,6 +20,7 @@ rule Ransom_Win32_ABCLocker_A_2147722801_0
         $x_100_5 = "AFFILIATE ID" wide //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

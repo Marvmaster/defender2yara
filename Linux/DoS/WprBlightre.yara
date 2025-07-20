@@ -17,6 +17,7 @@ rule DoS_Linux_WprBlightre_A_2147894305_0
         $x_1_3 = {2e 00 00 00 42 00 00 00 69 00 00 00 42 00 00 00 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule VirTool_Win64_Bypez_A_2147838152_0
         $x_1_3 = {c7 45 04 00 00 00 00 33 d2 b9 02 00 00 00 e8 ?? ?? ?? ?? 48 89 45 28 48 83 7d 28 ff 74 ?? c7 45 50 30 01 00 00 48 8d ?? ?? 48 8b 4d 28 e8 ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

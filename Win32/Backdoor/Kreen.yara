@@ -23,6 +23,7 @@ rule Backdoor_Win32_Kreen_2147711216_0
         $x_5_8 = {b1 5c 2a c8 30 8c 05 f8 fe ff ff 40 83 f8 5c 72 ef}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             ((3 of ($x_5_*))) or
@@ -50,6 +51,7 @@ rule Backdoor_Win32_Kreen_A_2147716284_0
         $x_1_3 = "\\filecfg_temp.dat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

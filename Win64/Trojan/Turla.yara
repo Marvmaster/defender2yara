@@ -18,6 +18,7 @@ rule Trojan_Win64_Turla_A_2147731731_0
         $x_1_3 = "{531511FA-190D-5D85-8A4A-279F2F592CC7}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win64_Turla_AG_2147821028_0
         $x_1_6 = "GetTempPath2W" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

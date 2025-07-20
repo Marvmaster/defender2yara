@@ -22,6 +22,7 @@ rule Trojan_Win32_Comroki_A_2147645302_0
         $x_1_8 = "Assunto=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

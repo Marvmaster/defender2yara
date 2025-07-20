@@ -16,6 +16,7 @@ rule Trojan_Win64_SnakeKeylogger_SPK_2147889377_0
         $x_1_1 = {48 8b d1 41 b9 04 00 00 00 33 c9 44 8b c7 48 8b 74 24 48 48 83 c4 30 5f 48 ff 25 ac ca 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

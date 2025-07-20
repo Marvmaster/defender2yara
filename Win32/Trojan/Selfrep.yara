@@ -19,6 +19,7 @@ rule Trojan_Win32_Selfrep_DJ_2147830042_0
         $x_5_4 = {69 48 18 fd 43 03 00 81 c1 c3 9e 26 00 89 48 18 c1 e9 10 81 e1 ff 7f 00 00 8b c1}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

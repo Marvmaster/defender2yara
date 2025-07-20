@@ -19,6 +19,7 @@ rule BrowserModifier_Win32_My123_17550_0
         $x_3_5 = "aHR0cDovL" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule BrowserModifier_Win32_My123_17550_1
         $x_10_10 = "http://www.my123.com/" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_3_*))) or
             ((2 of ($x_5_*) and 4 of ($x_3_*))) or

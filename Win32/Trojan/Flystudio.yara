@@ -23,6 +23,7 @@ rule Trojan_Win32_Flystudio_MR_2147772401_0
         $x_1_8 = "Reply-To: %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_Flystudio_RF_2147787103_0
         $x_1_6 = "taobao.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +83,7 @@ rule Trojan_Win32_Flystudio_RW_2147789423_0
         $x_1_12 = "\\EasyAntiCheat_x86.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 10 of ($x_1_*))) or
             (all of ($x*))
@@ -111,6 +114,7 @@ rule Trojan_Win32_Flystudio_DA_2147795787_0
         $x_1_7 = "\\Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +136,7 @@ rule Trojan_Win32_Flystudio_GPN_2147894387_0
         $x_4_1 = {c0 e0 04 c1 eb 03 32 d8 c1 e9 05 8a c2 c0 e0 02 32 c8 8b 45 f8 02 d9 83 e0 03 8b 4d 08 33 c6 8a 0c 81 32 4d fc 8a 45 f4 32 c2 02 c8 32 d9 8b 4d f8 00 1c 39}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +159,7 @@ rule Trojan_Win32_Flystudio_NF_2147899074_0
         $x_5_2 = {a1 64 08 4e 00 89 35 ?? ?? ?? ?? 8b fe 38 18 74 02 8b f8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +182,7 @@ rule Trojan_Win32_Flystudio_NF_2147899074_1
         $x_5_2 = {83 f9 ff 74 38 8a 03 a8 01 74 32 a8 ?? 75 0b 51 ff 15 50 23 47}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +205,7 @@ rule Trojan_Win32_Flystudio_NF_2147899074_2
         $x_1_2 = {eb de 8d 45 ?? 50 ff 15 94 51 49 00 66 83 7d ?? 00 0f 84 d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +229,7 @@ rule Trojan_Win32_Flystudio_A_2147920520_0
         $x_2_3 = {8a 0c 02 03 d0 03 d8 2b e8 3b e8 88 0b 77 f1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -244,6 +253,7 @@ rule Trojan_Win32_Flystudio_B_2147936262_0
         $x_2_3 = {d0 c2 66 d3 c0 66 c1 f0 d9 80 ea a1 d0 ca 80 ea 77 66 2d 58 5f 66 0f a4 e0 71 32 da 66 c1 e8 89 66 0f a4 e8 7a 66 0f be c1 66 0f b6 04 14}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -266,6 +276,7 @@ rule Trojan_Win32_Flystudio_AB_2147936814_0
         $x_10_2 = {83 ec 0c 50 ff 74 24 ?? 33 c0 89 44 24 ?? 89 44 24 ?? 89 44 24 ?? 8d 54 24 ?? 52 ff d3 8b 44 24 ?? 8b 54 24 ?? 8b 4c 24 ?? 83 c4 18}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -292,6 +303,7 @@ rule Trojan_Win32_Flystudio_DB_2147939992_0
         $x_10_6 = "SetRequestHeader" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_10_*))) or
             (all of ($x*))

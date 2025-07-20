@@ -19,6 +19,7 @@ rule Ransom_Win32_Taleb_PAA_2147793510_0
         $x_1_4 = "Files Has Been Encrypted" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

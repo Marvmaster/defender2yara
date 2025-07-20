@@ -17,6 +17,7 @@ rule Trojan_Win32_Fersip_A_2147691575_0
         $x_1_3 = "msvcsip4.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

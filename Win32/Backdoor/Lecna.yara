@@ -27,6 +27,7 @@ rule Backdoor_Win32_Lecna_2147694066_0
         $x_3_11 = "\\netsvcs.exe" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*) and 6 of ($x_3_*))) or
             (all of ($x*))
@@ -53,6 +54,7 @@ rule Backdoor_Win32_Lecna_2147694067_0
         $x_1_3 = "User-Agent: SJZJ (compatible; MSIE 6.0; Win32)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +88,7 @@ rule Backdoor_Win32_Lecna_A_2147694074_0
         $x_1_13 = "MicrosoftSYNoRegHaveAck" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule Trojan_WinNT_Worbe_A_2147610829_0
         $x_1_2 = "msdefender" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

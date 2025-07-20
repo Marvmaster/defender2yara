@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Goriadu_A_2147709216_0
         $x_1_4 = {63 6b 28 57 0d 59 36 52 87 65 f6 4e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

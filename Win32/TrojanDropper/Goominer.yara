@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Goominer_A_2147696720_0
         $x_1_3 = {3c 4d 6f 64 75 6c 65 3e 00 42 61 62 65 6c 41 74 74 72 69 62 75 74 65 00 [0-7] 52 65 73 6f 75 72 63 65 73 00 49 6e 73 74 61 6c 6c 47 6f 6f 67 6c 65 54 6f 6f 6c 42 61 72 2e 50 72 6f 70 65 72 74 69 65 73 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

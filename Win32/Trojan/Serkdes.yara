@@ -17,6 +17,7 @@ rule Trojan_Win32_Serkdes_A_2147679666_0
         $x_1_3 = {8b 9c 96 00 03 00 00 8a 51 ff 0b fb 49 8b d8 83 e2 3f 83 e3 3f 33 d3 c1 f8 04 8b 9c 96 00 02 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

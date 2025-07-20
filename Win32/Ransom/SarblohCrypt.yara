@@ -20,6 +20,7 @@ rule Ransom_Win32_SarblohCrypt_PA_2147776834_0
         $x_3_5 = "FUCKINDIA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Mariofev_A_2147640628_0
         $x_1_4 = {89 44 24 28 ff 54 24 38 33 f6 bf c8 00 00 00 ff d5 3b 44 24 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_Mariofev_B_2147640886_0
         $x_1_5 = "&load=0x%.8X" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

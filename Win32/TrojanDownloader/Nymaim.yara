@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Nymaim_A_2147678986_0
         $x_1_3 = {c7 03 26 64 61 74 (66 c7 43 04|e9 66 c7 43 04)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Nymaim_B_2147680306_0
         $x_1_4 = {8b 06 46 08 c0 0f 84 86 f3 ff ff 0d 20 20 20 20 3d 73 6f 63 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -69,6 +71,7 @@ rule TrojanDownloader_Win32_Nymaim_C_2147684634_0
         $x_1_4 = {89 c2 58 89 f9 81 e9 ?? ?? ?? ?? 51 c1 e9 02 83 f9 00 74 05 01 d3 49 75 fb 59 83 e1 03 c1 e1 03 d3 cb 8a 07 30 d8 59 5f 5b 5a c9 c2 04 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule TrojanDownloader_Win32_Nymaim_G_2147694569_0
         $x_1_2 = {83 c4 01 68 ?? ?? ?? ?? 58 83 ec fd 50 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule TrojanDownloader_Win32_Nymaim_G_2147694569_1
         $x_1_3 = {ff ff 59 59 68 ?? ?? ?? ?? e8 ?? ff ff ff 0f 00 ff ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule TrojanDownloader_Win32_Nymaim_H_2147708367_0
         $x_1_2 = {ff 75 08 c3 0c 00 8d 15 ?? ?? ?? ?? 52 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule TrojanDownloader_Win32_Nymaim_I_2147708375_0
         $x_1_4 = {33 f6 8d 4c 35 ?? 0f be 01 [0-1] e8 ?? ?? ?? ?? a3 ?? ?? ?? ?? 8b c6 99 6a 19 5f f7 ff 80 c2 61 0f be c2 50 88 11 e8 ?? ?? ?? ?? 46 59 [0-1] a3 03 83 fe 40 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -181,6 +188,7 @@ rule TrojanDownloader_Win32_Nymaim_L_2147722506_0
         $x_1_2 = {33 c0 03 06 60 00 83 c6 04 ab 81 fe ?? ?? ?? ?? ?? ?? e8 09 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? a1 ?? ?? ?? ?? ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +210,7 @@ rule TrojanDownloader_Win32_Nymaim_K_2147723763_0
         $x_1_2 = {32 06 46 88 07 8b 5d f4 8b 4d f8 89 ca 83 e1 03 c1 e1 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +234,7 @@ rule TrojanDownloader_Win32_Nymaim_N_2147733529_0
         $x_1_3 = {68 a5 cc e9 65 e8 ?? ?? ?? ff 8b 4c 24 10 66 39 04 71 74 19 68 a7 cc e9 65 e8 ?? ?? ?? ff 8b 4c 24 10 66 39 04 71}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

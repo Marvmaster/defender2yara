@@ -19,6 +19,7 @@ rule VirTool_Win32_Parlsz_B_2147844670_0
         $x_1_4 = {6a 08 8d 84 ?? ?? ?? ?? ?? 50 6a 00 57 ff 74 24 58 ff b4 24 8c 00 00 00 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -40,6 +40,7 @@ rule Trojan_MSIL_Imminent_A_2147729958_0
         $x_1_25 = "PasswordRecovery Ready" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (15 of ($x*))
 }
 
@@ -63,6 +64,7 @@ rule Trojan_MSIL_Imminent_B_2147731641_0
         $x_1_4 = "Imminent-Monitor-Client-Watermark" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

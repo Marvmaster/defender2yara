@@ -20,6 +20,7 @@ rule HackTool_Linux_Prtscan_A_2147756873_0
         $x_1_5 = "github.com/robertdavidgraham/masscan" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule HackTool_Linux_Prtscan_B_2147834366_0
         $x_1_5 = "gethostbyname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

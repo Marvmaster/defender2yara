@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Fainli_A_2147804009_0
         $x_1_2 = {8b 44 24 0c 6a 0a 83 c0 04 50 53 ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

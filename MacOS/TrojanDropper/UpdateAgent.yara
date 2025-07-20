@@ -18,6 +18,7 @@ rule TrojanDropper_MacOS_UpdateAgent_C_2147827142_0
         $x_1_3 = {48 8b 35 6c 24 00 00 4c 89 ff 4c 89 f2 e8 f5 18 00 00 4c 8b 2d ba 21 00 00 4c 89 f7 41 ff d5 4c 89 ff 41 ff d5 48 8b 35 4f 24 00 00 4c 8b 7d b8 4c 89 ff e8 cf 18 00 00 48 8b 35 2c 24 00 00 4c 8b 75 a8 4c 89 f7 e8 bc 18 00 00 48 89 c7 e8 ba 18 00 00 48 89 c3 48 8b 35 26 24 00 00 48 89 c7 e8 a2 18 00 00 48 89 df 41 ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (2 of ($x*))
 }
 

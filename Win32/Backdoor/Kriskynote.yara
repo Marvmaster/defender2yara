@@ -17,6 +17,7 @@ rule Backdoor_Win32_Kriskynote_A_2147691115_0
         $x_1_3 = "Install_uac" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_Win32_Kriskynote_A_2147691115_1
         $x_1_3 = {8a 04 31 34 36 8a d0 80 e2 0f c0 e2 04 c0 e8 04 02 d0 88 14 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -63,6 +65,7 @@ rule Backdoor_Win32_Kriskynote_B_2147691144_0
         $x_1_2 = {3b c5 76 1e 8a 04 3e 34 36 8a c8 80 e1 0f c0 e1 04 c0 e8 04 02 c8 88 0c 3e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Backdoor_Win32_Kriskynote_C_2147691155_0
         $x_1_2 = "AssecorPetaerC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

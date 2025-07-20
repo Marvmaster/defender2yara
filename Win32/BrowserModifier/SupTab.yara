@@ -17,6 +17,7 @@ rule BrowserModifier_Win32_SupTab_214126_0
         $x_1_3 = "\\luckysearchesSoftware\\luckysearcheshp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule BrowserModifier_Win32_SupTab_214126_1
         $x_1_5 = {65 55 70 67 72 61 64 65 5c 65 75 70 67 72 61 64 65 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -71,6 +73,7 @@ rule BrowserModifier_Win32_SupTab_214126_2
         $x_1_7 = "\\searchProvider.xml" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule BrowserModifier_Win32_SupTab_214126_3
         $x_2_7 = "\\TMain\\Release\\SvrUpdater.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -124,6 +128,7 @@ rule BrowserModifier_Win32_SupTab_214126_4
         $x_1_4 = "Manages network policy and network policy notification delivery for TSv.com." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -156,6 +161,7 @@ rule BrowserModifier_Win32_SupTab_214126_5
         $x_2_9 = {49 00 49 00 2e 00 7a 00 69 00 70 00 00 00 00 00 5c 00 49 00 00 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -189,6 +195,7 @@ rule BrowserModifier_Win32_SupTab_214126_6
         $x_1_9 = {53 55 50 44 75 69 57 69 6e 64 6f 77 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -224,6 +231,7 @@ rule BrowserModifier_Win32_SupTab_214126_7
         $x_1_11 = {5c 53 46 4b 45 58 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -255,6 +263,7 @@ rule BrowserModifier_Win32_SupTab_214126_8
         $x_1_7 = "\\bin\\BrowserAction_MD.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -287,6 +296,7 @@ rule BrowserModifier_Win32_SupTab_214126_9
         $x_2_9 = {53 55 68 51 63 6d 39 30 5a 57 4e 30 55 47 78 31 5a 32 6c 75 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -322,6 +332,7 @@ rule BrowserModifier_Win32_SupTab_214126_10
         $x_2_11 = "\\extensions\\defsearchp@gmail.com\\install.rdf" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -359,6 +370,7 @@ rule BrowserModifier_Win32_SupTab_214126_11
         $x_1_13 = "/sof-everything/%s?action" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -390,6 +402,7 @@ rule BrowserModifier_Win32_SupTab_214126_12
         $x_1_7 = "SFKEX.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -443,6 +456,7 @@ rule BrowserModifier_Win32_SupTab_214126_13
         $x_2_34 = {2e 2e 5c 44 61 74 61 42 61 73 65 00 44 6f 00 00 57 6f 00 00 72 6b 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

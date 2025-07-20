@@ -21,6 +21,7 @@ rule Ransom_Win64_LockFile_MBK_2147795409_0
         $x_1_6 = {52 45 41 44 4d 45 2d 46 49 4c 45 [0-32] 2e 68 74 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win64_LockFile_A_2147925023_0
         $x_1_4 = "/rustc/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Ransom_Win64_LockFile_B_2147925024_0
         $x_1_1 = {48 ff c8 48 89 44 24 58 45 8b 2c 0e 41 8b 5c 0e 04 41 0f cd 44 33 ac 24 00 01 00 00 0f cb 33 9c 24 f8 00 00 00 41 8b 6c 0e 08 0f cd 33 ac 24 f0 00 00 00 48 89 8c 24 08 01 00 00 41 8b 74 0e 0c 0f ce 33 b4 24 28 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Ransom_Win64_LockFile_C_2147925124_0
         $x_1_8 = "download" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Ransom_Win64_LockFile_D_2147925127_0
         $x_1_3 = {48 89 44 24 20 48 c7 44 24 40 00 00 00 00 48 89 f9 31 d2 45 31 c0 45 31 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +147,7 @@ rule Ransom_Win64_LockFile_E_2147925380_0
         $x_1_5 = ".encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +174,7 @@ rule Ransom_Win64_LockFile_DA_2147925384_0
         $x_1_6 = "Your files have been encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -193,6 +200,7 @@ rule Ransom_Win64_LockFile_DB_2147925385_0
         $x_1_5 = "Once instance has previously been poisoned" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

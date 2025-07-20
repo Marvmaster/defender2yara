@@ -17,6 +17,7 @@ rule Trojan_WinNT_Waltrodock_A_2147656151_0
         $x_1_3 = {ff d6 84 c0 0f 84 ?? ?? 00 00 83 c3 30 85 db 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_WinNT_Waltrodock_B_2147658069_0
         $x_1_2 = {75 1a 8b 4d 0c be 34 00 00 c0 32 d2 89 71 18 89 79 1c ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_WinNT_Waltrodock_C_2147658612_0
         $x_1_5 = "cardctrl.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

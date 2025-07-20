@@ -17,6 +17,7 @@ rule VirTool_WinNT_KillProc_A_2147638800_0
         $x_1_3 = {ff 45 f0 8b 45 fc 8b 4d f0 01 7d ec 01 7d f4 3b 08 72 ?? eb ?? 8b 45 ec 8b 40 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule VirTool_WinNT_KillProc_B_2147658301_0
         $x_1_5 = {8d 45 08 50 ff 75 08 ff 15 ?? ?? ?? ?? 85 c0 7c [0-2] 8d 45 e8 50 ff 75 08 ff 15 [0-26] 6a (00|02)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

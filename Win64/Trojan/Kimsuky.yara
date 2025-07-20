@@ -16,6 +16,7 @@ rule Trojan_Win64_Kimsuky_A_2147847017_0
         $x_2_1 = {44 8b c2 80 ea ?? 41 8b c0 83 c8 20 80 fa ?? 41 0f 47 c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_Kimsuky_B_2147899196_0
         $x_2_1 = {44 0f b7 4c 6c ?? 66 44 33 0c 70 48 8b 4f 10 48 8b 57 18}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win64_Kimsuky_AH_2147911308_0
         $x_2_2 = {c6 44 24 46 82 c6 44 24 47 a4 c6 44 24 48 dd c6 44 24 49 1a c6 44 24 4a 3d c6 44 24 4b c2 c6 44 24 4c d2 c6 44 24 4d 62 c6 44 24 4e 28 c6 44 24 4f be c6 44 24 20 1a c6 44 24 21 b5 c6 44 24 22 3a c6 44 24 23 bb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win64_Kimsuky_ARA_2147919884_0
         $x_2_5 = "Remote Desktop Users" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((1 of ($x_4_*) and 2 of ($x_3_*))) or

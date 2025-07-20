@@ -17,6 +17,7 @@ rule Trojan_Win32_Gatak_A_2147686279_0
         $x_1_2 = "veverka.junyks.cz/report1_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Gatak_DT_2147690901_0
         $x_5_1 = {c6 45 f8 00 c6 45 d8 4d c6 45 d9 70 c6 45 da 53 c6 45 db 74 c6 45 dc 61 c6 45 dd 72 c6 45 de 74 c6 45 df 50 c6 45 e0 72 c6 45 e1 6f c6 45 e2 63 c6 45 e3 65 c6 45 e4 73 c6 45 e5 73 c6 45 e6 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_Gatak_DT_2147690901_1
         $x_1_1 = {31 c7 89 7d ?? 29 f1 8b 45 ?? 8a 5d ?? 80 cb ?? 88 5d ?? 89 4d ?? 8a 5d ?? 38 1c 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win32_Gatak_DT_2147690901_2
         $x_5_1 = {c6 45 f0 31 c6 45 f1 32 c6 45 f2 33 c6 45 f3 34 c6 45 f4 35 c6 45 f5 35 c6 45 f6 34 c6 45 f7 33 c6 45 f8 32 c6 45 f9 31 88 5d fa ff 15 ?? ?? ?? ?? 66 85 c0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +105,7 @@ rule Trojan_Win32_Gatak_DT_2147690901_3
         $x_5_1 = "CMD /C SYSTEMINFO && SYSTEMINFO && SYSTEMINFO && SYSTEMINFO && SYSTEMINFO && DEL" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +194,7 @@ rule Trojan_Win32_Gatak_DR_2147695764_0
         $x_1_8 = "gesup.net/?di=214046519679" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -215,6 +221,7 @@ rule Trojan_Win32_Gatak_DP_2147695766_0
         $x_10_2 = {73 12 8b 45 08 03 45 f8 8b 4d 0c 03 4d f8 8a 09 88 08 eb df c6 45 ff 01 8a 45 ff c9 c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -236,6 +243,7 @@ rule Trojan_Win32_Gatak_DU_2147695773_0
         $x_5_1 = {8b f8 68 eb 2f 76 e0 e8 ?? ?? ?? ?? 68 5e ce d6 e9 89 45 ?? e8 ?? ?? ?? ?? 68 f2 79 36 18 89 45 ?? e8 ?? ?? ?? ?? 8b 7d ?? 33 f6 89 45 ?? 8a 07 83 c4 0c 46 3c 43}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -259,6 +267,7 @@ rule Trojan_Win32_Gatak_EA_2147695774_0
         $x_1_3 = "EV_MMAC_RF_KILL_WAIT3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -284,6 +293,7 @@ rule Trojan_Win32_Gatak_DV_2147695783_0
         $x_5_2 = {80 3e 89 59 59 0f 85 ?? ?? ?? ?? 80 7e 01 50 0f 85 ?? ?? ?? ?? 80 7e 02 4e 0f 85 ?? ?? ?? ?? 80 7e 03 47}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -307,6 +317,7 @@ rule Trojan_Win32_Gatak_DQ_2147695795_0
         $x_1_3 = {6a 00 68 41 54 51 00 68 43 4c 42 43 54 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -337,6 +348,7 @@ rule Trojan_Win32_Gatak_DW_2147695796_0
         $x_2_10 = "Microsoft\\SHVU\\jltle" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -358,6 +370,7 @@ rule Trojan_Win32_Gatak_DX_2147695797_0
         $x_5_1 = {64 a1 30 00 00 00 89 45 fc 8b 45 fc 8b 40 0c 8b 40 0c 53 c6 45 ec 6e c6 45 ed 74 c6 45 ee 64 c6 45 ef 6c c6 45 f0 6c c6 45 f1 2e c6 45 f2 64 c6 45 f3 6c c6 45 f4 6c c6 45 f5 00 56 66 83 78 2c 12 75 ?? 8b 48 30 33 f6 8a 11 8a da 80 eb 41 80 fb 19 77 ?? 80 c2 20 38 54 35 ec 75 ?? 46 41 41 83 fe 09 72 ?? 8b 40 18}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -379,6 +392,7 @@ rule Trojan_Win32_Gatak_DEA_2147756358_0
         $x_1_1 = {8b 45 d8 8b 4d dc 0f b6 04 01 8b 4d d8 83 e1 03 83 c1 02 0f b6 4c 0d f1 29 c8 88 c2 8b 45 e8 03 45 ec 8b 4d d8 88 14 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -402,6 +416,7 @@ rule Trojan_Win32_Gatak_BH_2147941067_0
         $x_1_3 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -423,6 +438,7 @@ rule Trojan_Win32_Gatak_SPDH_2147943378_0
         $x_10_1 = {48 8b 85 e8 0b 00 00 48 89 85 68 06 00 00 0f 10 85 d8 0b 00 00 0f 11 85 58 06 00 00 48 8b 45 c0 48 89 85 80 06 00 00 f3 0f 6f 45 b0 66 0f 7f 85 70 06 00 00 b9 02 00 00 00 31 d2 e8 ?? ?? ?? ?? 48 89 c6 48 83 f8 ff 0f 84 ?? ?? ?? ?? 48 8d 7d dc 41 b8 08 02 00 00 48 89 f9 31 d2 e8 ?? ?? ?? ?? 48 c7 45 b0 38 02 00 00 c7 45 b8 00 00 00 00 66 0f ef c0 f3 0f 7f 45 c0 f3 0f 7f 45 cc 48 8d 55 b0 48 89 f1 e8 ?? ?? ?? ?? 85 c0 0f 84}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

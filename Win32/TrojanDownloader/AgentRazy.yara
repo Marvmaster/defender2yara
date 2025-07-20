@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_AgentRazy_SN_2147804297_0
         $x_1_6 = "/C ping 127.0.0.1 /n 300" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

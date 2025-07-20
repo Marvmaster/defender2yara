@@ -19,6 +19,7 @@ rule Worm_MSIL_ScodBot_A_2147633920_0
         $x_1_5 = {67 65 6e 65 72 61 74 65 69 70 73 61 6e 64 73 68 69 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

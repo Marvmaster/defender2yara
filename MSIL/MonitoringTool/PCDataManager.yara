@@ -17,6 +17,7 @@ rule MonitoringTool_MSIL_PCDataManager_205044_0
         $x_1_3 = "Please find the Keystrokes Log recorded and created by PC Data Manager" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

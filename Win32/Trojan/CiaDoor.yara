@@ -19,6 +19,7 @@ rule Trojan_Win32_CiaDoor_GIS_2147811650_0
         $x_1_4 = "\\temp\\melt.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Bamital_G_2147634591_0
         $x_1_3 = {3c 24 72 0c 3c 3d 77 08 04 30 04 07 04 06 eb 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDropper_Win32_Bamital_B_2147636902_0
         $x_1_2 = {8a e0 88 21 8b 4d f8 83 c2 02 83 ea 01 58 8b c8 e2 84}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanDropper_Win32_Bamital_C_2147637455_0
         $x_1_3 = {8b 4d 08 89 0d ?? ?? ?? ?? b9 ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 8b d0 68 ?? ?? ?? ?? 6a 01 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 00 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule TrojanDropper_Win32_Bamital_D_2147646083_0
         $x_1_3 = {8b 75 0c 80 3e e9 75 18 e8 ?? ?? ?? ?? 83 f8 05 75 07 ba 0a 00 00 00 eb 0c e9 a0 00 00 00 eb 05 ba 05 00 00 00 bb 00 00 00 00 8b 75 0c eb ?? e8 ?? ?? ?? ?? 83 f8 ff 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule TrojanDropper_Win32_Bamital_A_2147678300_0
         $x_1_3 = {5f 0b c0 74 30 ff 15 ?? ?? ?? ?? 3c 05 75 09 c7 45 ec 01 00 00 00 eb 1b 8d 45 f4 50 6a 04 8d 45 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

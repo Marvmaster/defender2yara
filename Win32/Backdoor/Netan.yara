@@ -16,6 +16,7 @@ rule Backdoor_Win32_Netan_A_2147637339_0
         $x_1_2 = ":443;66.197." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

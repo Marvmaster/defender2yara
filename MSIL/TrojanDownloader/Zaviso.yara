@@ -29,6 +29,7 @@ rule TrojanDownloader_MSIL_Zaviso_A_2147696359_0
         $x_1_15 = "TOD09H/SFSsPMtYSYP8JGNFEZVFLUFnpCZmLxGCSxcquDMg6RDODJEdXFS/7FL+RjezpOLLltrE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

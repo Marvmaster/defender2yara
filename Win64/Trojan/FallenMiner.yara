@@ -18,6 +18,7 @@ rule Trojan_Win64_FallenMiner_BSA_2147932245_0
         $x_2_3 = {48 8b 4c 24 30 48 85 c9 0f 85 36 ?? ?? ?? 48 8b 44 24 48 48 8b 5c 24 28 0f 1f 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

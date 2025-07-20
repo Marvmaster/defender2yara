@@ -25,6 +25,7 @@ rule HackTool_Win32_Panddos_A_2147612366_0
         $x_10_11 = {6e 65 74 20 6c 6f 63 61 6c 67 72 6f 75 70 20 61 64 6d 69 6e 69 73 74 72 61 74 6f 72 73 20 [0-10] 20 2f 61 64 64}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             ((4 of ($x_10_*))) or

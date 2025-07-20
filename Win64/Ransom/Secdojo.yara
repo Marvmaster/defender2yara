@@ -19,6 +19,7 @@ rule Ransom_Win64_Secdojo_YAB_2147911276_0
         $x_1_4 = "cmd.exe /c vssadmin delete shadows /all /quiet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

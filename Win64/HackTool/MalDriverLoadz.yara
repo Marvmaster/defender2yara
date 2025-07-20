@@ -20,6 +20,7 @@ rule HackTool_Win64_MalDriverLoadz_A_2147925203_0
         $x_1_5 = "vulnerable driver" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

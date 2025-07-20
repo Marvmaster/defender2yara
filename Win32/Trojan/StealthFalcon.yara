@@ -18,6 +18,7 @@ rule Trojan_Win32_StealthFalcon_E_2147742826_0
         $x_6_3 = {8b 45 08 83 f8 01 76 0a 8d 73 01 8d 48 ff 8b fb f3 a4 8b c3}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

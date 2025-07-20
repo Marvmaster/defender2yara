@@ -16,6 +16,7 @@ rule Trojan_Win32_GameThief_SIB_2147794371_0
         $x_1_1 = {8b f1 33 d2 [0-16] 8a 0f [0-16] 8a 06 46 47 80 7d 08 ?? 88 4d ?? 0f 84 ?? ?? ?? ?? 8a ca c0 cf ?? bb ?? ?? ?? ?? d3 c3 8a 4d 05 [0-16] 02 da 32 c3 42 [0-16] 84 c0 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_GameThief_GMQ_2147892635_0
         $x_1_2 = "OLGame.itm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Stalni_2147601169_0
         $x_1_9 = {64 8b 15 30 00 00 00 8d 52 03 80 3a 01 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or

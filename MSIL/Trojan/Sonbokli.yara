@@ -17,6 +17,7 @@ rule Trojan_MSIL_Sonbokli_ASN_2147907198_0
         $x_1_2 = {0a 00 00 06 02 6f ?? 00 00 0a 6f ?? 00 00 0a 0c de 21 0b 00 72 ?? 00 00 70 28 ?? 00 00 0a 00 14 0c de 10 06 14 fe 01 0d 09 2d 07 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

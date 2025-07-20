@@ -32,6 +32,7 @@ rule Worm_Win32_Delf_AZ_2147595963_0
         $x_1_18 = "NET stop Symantec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -71,6 +72,7 @@ rule Worm_Win32_Delf_BA_2147596912_0
         $x_1_17 = ":\\antihost.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -102,6 +104,7 @@ rule Worm_Win32_Delf_BB_2147601669_0
         $x_1_9 = "http://seguritysys.kinghost.net/?id=1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -134,6 +137,7 @@ rule Worm_Win32_Delf_BC_2147602087_0
         $x_1_10 = "InternetConnectA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -168,6 +172,7 @@ rule Worm_Win32_Delf_ZAB_2147603247_0
         $x_1_12 = "shell\\open\\command=diskdrive.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +206,7 @@ rule Worm_Win32_Delf_BD_2147612797_0
         $x_1_14 = "NoFind" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -230,6 +236,7 @@ rule Worm_Win32_Delf_BT_2147614413_0
         $x_1_7 = "shell\\explore\\Command=RECYCLER\\autoplay.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -261,6 +268,7 @@ rule Worm_Win32_Delf_BE_2147621647_0
         $x_1_9 = "{A781A1EC-975E-4788-AF8E-A3F552D55C41}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -290,6 +298,7 @@ rule Worm_Win32_Delf_BE_2147829048_0
         $x_1_6 = "Harry Potter and The Sorcerers Stone no cd crack.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

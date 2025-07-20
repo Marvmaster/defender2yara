@@ -19,6 +19,7 @@ rule Trojan_Win32_FoggyWeb_A_2147794646_0
         $x_1_4 = {45 33 4b 10 44 89 4b 04 41 8b 43 14 41 33 c1 41 c1 c0 03 44 2b d0 45 33 53 10 44 89 53 08 41 8b ?? 41 33 43 18 44 2b c0 45 33 43 10 49 83 ef 01 44 89 43 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_FoggyWeb_A_2147794646_1
         $x_2_5 = {48 8b 4c 24 ?? 48 8b 01 4c 8d 44 24 ?? 48 8b 17 ff 90 48 01 00 00 85 c0 75 ?? 48 8b 4c 24 ?? 48 8b 01 ff 50 10 b3 01 eb ?? 32 db 41 8b c6 f0 0f c1 46 10 83 f8 01}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

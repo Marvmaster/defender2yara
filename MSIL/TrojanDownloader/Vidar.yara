@@ -19,6 +19,7 @@ rule TrojanDownloader_MSIL_Vidar_RDC_2147838559_0
         $x_2_4 = {11 0d 11 10 1f 0f 5f 11 0d 11 10 1f 0f 5f 95 11 06 25 1a 58 13 06 4b 61 20 ?? ?? ?? ?? 58 9e 11 18}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_MSIL_Vidar_A_2147839043_0
         $x_2_1 = {94 58 18 28 ?? 00 00 06 5d 94 13 06 11 0a 11 04 07 11 04 91 11 06 61 d2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanDownloader_MSIL_Vidar_C_2147892366_0
         $x_1_6 = "Form1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanSpy_MSIL_CenterPOS_A_2147717555_0
         $x_1_5 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

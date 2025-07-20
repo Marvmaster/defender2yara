@@ -23,6 +23,7 @@ rule Trojan_Win64_Blindspot_GV_2147920747_0
         $x_3_8 = "main.encryptedVFS=blindspot.zip" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

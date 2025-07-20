@@ -18,6 +18,7 @@ rule Virus_Win32_Biwili_A_2147569696_0
         $x_1_4 = {66 81 3b 4d 5a 75 13 8b 73 3c 81 fe ff 0f 00 00 77 08 03 f3 81 3e 50 45 00 00 c3 66 81 7e 08 fb 7d 74 f7 8b 46 16 34 02 66 a9 02 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

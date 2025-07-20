@@ -17,6 +17,7 @@ rule Trojan_Win32_MemCCDump_A_2147689106_0
         $x_1_2 = "Found track data at %s with PID " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_MemCCDump_A_2147689106_1
         $x_5_10 = {63 61 6c 73 72 76 2e 65 78 65 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 5 of ($x_5_*))) or
             ((2 of ($x_50_*) and 1 of ($x_10_*) and 3 of ($x_5_*))) or
@@ -76,6 +78,7 @@ rule Trojan_Win32_MemCCDump_A_2147689106_2
         $x_1_4 = "|(<Field name=\"CardNumber\">[0-9]{15,19}</Field>))" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

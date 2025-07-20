@@ -19,6 +19,7 @@ rule Trojan_Win32_Eepal_A_2147651209_0
         $x_1_5 = {5b 43 41 50 53 5d [0-5] 5b 45 53 43 5d [0-5] 5b 50 47 55 50 5d [0-5] 5b 50 47 44 4e 5d [0-5] 5b 45 4e 44 5d [0-5] 5b 48 4f 4d 45 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

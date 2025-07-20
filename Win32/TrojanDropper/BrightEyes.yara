@@ -22,6 +22,7 @@ rule TrojanDropper_Win32_BrightEyes_A_2147741597_0
         $x_3_7 = "\\project\\owl\\isapi\\" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

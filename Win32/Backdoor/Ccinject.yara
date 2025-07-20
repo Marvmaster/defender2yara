@@ -16,6 +16,7 @@ rule Backdoor_Win32_Ccinject_A_2147648306_0
         $x_1_2 = {c6 85 39 ff ff ff 69 c6 85 3a ff ff ff 6f c6 85 3b ff ff ff 6e 8d 7d 95 b1 0f f3 aa c6 45 95 56 c6 45 96 69 c6 45 97 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

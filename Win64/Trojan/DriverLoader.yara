@@ -16,6 +16,7 @@ rule Trojan_Win64_DriverLoader_RDA_2147849161_0
         $x_2_1 = {f7 ee d1 fa 8b c2 c1 e8 1f 03 d0 41 8b c6 2a c2 0f be c0 6b c8 37 40 02 ce 41 30 08 ff c6 4d 8d 40 01}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win64_DriverLoader_ARA_2147892684_0
         $x_2_6 = "taskkill /f /im steam.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win64_DriverLoader_DB_2147912746_0
         $x_1_7 = "taskkill /f /im steam.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -97,6 +100,7 @@ rule Trojan_Win64_DriverLoader_DA_2147913279_0
         $x_1_4 = "taskkill /FI \"IMAGENAME eq processhacker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -126,6 +130,7 @@ rule Trojan_Win64_DriverLoader_DC_2147913280_0
         $x_1_5 = "taskkill /FI \"IMAGENAME eq KsDumper.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +154,7 @@ rule Trojan_Win64_DriverLoader_RDB_2147919671_0
         $x_1_3 = "Probably some anticheat or antivirus running blocking the load of vulnerable driver" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +176,7 @@ rule Trojan_Win64_DriverLoader_ADRL_2147924394_0
         $x_2_1 = {0f 57 c0 48 89 6c 24 30 48 03 fb c7 44 24 28 30 00 00 00 41 b9 30 00 00 00 48 89 6c 24 48 ba 48 20 00 80 48 89 6c 24 58 f3 0f 7f 44 24 64 48 8d 04 3e 89 6c 24 74 48 89 44 24 50 48 8d 44 24 48 48 89 44 24 20 c7 44 24 60}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -192,6 +199,7 @@ rule Trojan_Win64_DriverLoader_GNQ_2147933869_0
         $x_10_2 = {43 31 3f 6c 2b a2 ?? ?? ?? ?? 52 0b eb d3 2f 86 f6 dc 6c 5c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -215,6 +223,7 @@ rule Trojan_Win64_DriverLoader_SAO_2147934648_0
         $x_2_3 = "RaidPort" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -239,6 +248,7 @@ rule Trojan_Win64_DriverLoader_NR_2147945553_0
         $x_1_4 = "hide" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

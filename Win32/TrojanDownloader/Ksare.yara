@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Ksare_A_2147618606_0
         $x_1_4 = {50 56 8d 85 ?? ?? ?? ?? 50 68 e8 03 00 00 ff 35 ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

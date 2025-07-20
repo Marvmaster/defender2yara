@@ -18,6 +18,7 @@ rule Trojan_Win32_Keyjack_A_2147621514_0
         $x_1_4 = {52 53 31 2f 49 6e 73 74 61 6c 6c 65 64 42 75 6e 64 6c 65 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

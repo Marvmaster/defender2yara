@@ -19,6 +19,7 @@ rule Backdoor_Linux_Setag_A_2147690343_0
         $x_1_4 = {2f 74 6d 70 2f 62 69 6c 6c 2e 6c 6f 63 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 

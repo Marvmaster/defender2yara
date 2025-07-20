@@ -19,6 +19,7 @@ rule Worm_Win32_Yimper_2147646415_0
         $x_2_5 = {6a 01 68 58 04 00 00 68 00 01 00 00 6a 02 ?? ff d0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

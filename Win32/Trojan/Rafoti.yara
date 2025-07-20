@@ -19,6 +19,7 @@ rule Trojan_Win32_Rafoti_B_2147605413_0
         $x_1_4 = "SetWindowsHookExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Trojan_Win32_Rafoti_C_2147605414_0
         $x_1_4 = {00 48 54 54 50 3a 2f 2f 25 73 3a 25 64 2f 25 73 25 64 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

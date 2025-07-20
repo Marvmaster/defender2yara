@@ -29,6 +29,7 @@ rule Trojan_WinNT_Startpage_B_2147597993_0
         $x_1_15 = "\\Device\\LocalSystemX" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (13 of ($x*))
 }
 

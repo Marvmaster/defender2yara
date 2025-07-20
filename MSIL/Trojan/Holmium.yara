@@ -20,6 +20,7 @@ rule Trojan_MSIL_Holmium_SA_2147741600_0
         $x_2_5 = "$336edac9-2385-4d92-916c-f77a3b995c6b" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

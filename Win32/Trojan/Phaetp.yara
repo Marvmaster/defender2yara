@@ -20,6 +20,7 @@ rule Trojan_Win32_Phaetp_E_2147816249_0
         $x_1_5 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -47,6 +48,7 @@ rule Trojan_Win32_Phaetp_F_2147816250_0
         $x_1_3 = {25 30 31 36 49 36 34 78 25 30 38 78 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or

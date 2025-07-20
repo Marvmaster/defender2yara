@@ -17,6 +17,7 @@ rule VirTool_WinNT_Drvheed_A_2147643259_0
         $x_1_3 = {81 20 ff ff ff fd 0f b7 56 06 83 c0 28 41 3b ca 72 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule VirTool_WinNT_Drvheed_A_2147643259_1
         $x_1_4 = {83 c4 24 a9 ff ff 1f 00 74 0a 25 00 00 e0 ff 05 00 00 20 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

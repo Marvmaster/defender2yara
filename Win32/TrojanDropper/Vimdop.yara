@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Vimdop_A_2147708917_0
         $x_1_6 = "/v SuperHidden /t REG_DWORD /d 00000000 /f" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

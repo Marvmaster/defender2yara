@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_PureCrypt_KS_2147912969_0
         $x_1_2 = {06 72 01 00 00 70 28 29 05 00 06 6f 59 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

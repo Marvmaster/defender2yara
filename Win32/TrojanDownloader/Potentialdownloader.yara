@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Potentialdownloader_A_2147641866_0
         $x_1_3 = {64 a1 30 00 00 00 8b 40 0c 8b 70 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

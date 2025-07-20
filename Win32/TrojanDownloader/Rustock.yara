@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Rustock_A_2147628326_0
         $x_1_4 = {67 6c 61 69 64 65 33 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

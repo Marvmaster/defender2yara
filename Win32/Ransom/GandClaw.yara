@@ -19,6 +19,7 @@ rule Ransom_Win32_GandClaw_A_2147729751_0
         $x_10_5 = "LPE DLL: Target path: %ws" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 2 of ($x_10_*))) or
             ((3 of ($x_20_*))) or

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Rudeflate_A_2147619221_0
         $x_1_2 = {8b d8 c7 43 08 0f 00 00 00 83 ce ff 66 b9 50 00 8b 55 ?? 8b c3 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

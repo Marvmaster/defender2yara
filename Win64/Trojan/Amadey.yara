@@ -26,6 +26,7 @@ rule Trojan_Win64_Amadey_CA_2147838642_0
         $x_1_11 = "STEALERDLL.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win64_Amadey_CX_2147838966_0
         $x_10_1 = {49 87 cf 49 89 c7 4c 87 f9 c6 04 10 ?? 80 34 10 ?? 80 2c 10 ?? 80 04 10 ?? 80 2c 10 ?? 48 d1 e1 48 c1 e1 ?? 48 d1 e1 48 ?? ?? ?? ?? ?? ?? 48 03 c8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule Trojan_Win64_Amadey_CAV_2147843705_0
         $x_1_11 = "SELECT origin_url, username_value, password_value FROM logins" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Trojan_Win64_Amadey_RDL_2147894701_0
         $x_1_4 = "\\logins.json" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule Trojan_Win64_Amadey_A_2147902053_0
         $x_2_5 = "hostname" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule Trojan_Win64_Amadey_B_2147902169_0
         $x_2_4 = "netsh wlan show profiles" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule Trojan_Win64_Amadey_COP_2147931423_0
         $x_1_1 = {e8 a5 f6 ff ff 48 89 05 42 59 00 00 48 8d 15 e3 44 00 00 48 8d 0d ec 44 00 00 e8 8b f6 ff ff 48 89 05 30 59 00 00 48 8d 15 e9 44 00 00 48 8d 0d fa 44 00 00 e8 71 f6 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -193,6 +200,7 @@ rule Trojan_Win64_Amadey_AUJ_2147931424_0
         $x_1_1 = {eb 08 0f 94 5d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -215,6 +223,7 @@ rule Trojan_Win64_Amadey_BS_2147935304_0
         $x_1_2 = {0f b6 c1 2a c2 04 ?? 41 30 01 ff c1 4d 8d 49 01 83 f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

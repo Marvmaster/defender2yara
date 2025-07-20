@@ -18,6 +18,7 @@ rule Trojan_Win32_Gamotrol_A_2147711608_0
         $x_3_3 = {73 75 78 63 66 71 00 61 62 00 00 00 5c 6e 65 73 74 72 61 73 2e 64 6c 6c}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

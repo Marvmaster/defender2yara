@@ -21,6 +21,7 @@ rule PWS_Win32_Gypthoy_A_2147648014_0
         $x_1_7 = {43 6f 6d 6d 61 6e 64 39 00 04 01 07 00 53 65 61 72 63 68 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

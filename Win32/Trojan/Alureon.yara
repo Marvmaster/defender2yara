@@ -55,6 +55,7 @@ rule Trojan_Win32_Alureon_B_91469_0
         $x_1_40 = "InternetConnectA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_3_*) and 29 of ($x_1_*))) or
             ((6 of ($x_3_*) and 26 of ($x_1_*))) or
@@ -85,6 +86,7 @@ rule Trojan_Win32_Alureon_113116_0
         $x_1_4 = {0f 84 88 04 00 00 d1 e9 8d 56 0c 50 a1 ?? ?? ?? ?? 51 52 53 ff 30 e8 ?? ?? ff ff 83 c4 14 85 c0 0f 95 c0 3a c3 0f 84 84 00 00 00 39 1e 75 0c c7 45 30 0f 00 00 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -109,6 +111,7 @@ rule Trojan_Win32_Alureon_D_114173_0
         $x_1_4 = {9c 8f 45 fc 81 65 fc 00 01 00 00 74 01 cc 8b 55 e4 52 68 ?? ?? ?? ?? e8 ?? ?? ff ff 83 c4 08 89 45 e0 6a 00 6a 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -144,6 +147,7 @@ rule Trojan_Win32_Alureon_E_114864_0
         $x_1_15 = "lzma.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 6 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_100_*) and 7 of ($x_10_*))) or
@@ -174,6 +178,7 @@ rule Trojan_Win32_Alureon_F_115740_0
         $x_1_6 = {70 61 63 6b 2e 62 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -208,6 +213,7 @@ rule Trojan_Win32_Alureon_G_117858_0
         $x_1_11 = "Nullsoft Install System" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -232,6 +238,7 @@ rule Trojan_Win32_Alureon_C_121046_0
         $x_1_4 = "[refs_to_change_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -271,6 +278,7 @@ rule Trojan_Win32_Alureon_C_121046_1
         $x_1_16 = "videoscash.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((7 of ($x_10_*) and 2 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -297,6 +305,7 @@ rule Trojan_Win32_Alureon_I_122922_0
         $x_1_2 = {3d 00 00 00 80 73 15 68 ?? ?? 40 00 68 ?? ?? 40 00 e8 ?? ?? ff ff 85 c0 75 38 eb 2f 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -334,6 +343,7 @@ rule Trojan_Win32_Alureon_J_126104_0
         $x_1_17 = {5f 89 48 58 8b c6 5e 5b c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -363,6 +373,7 @@ rule Trojan_Win32_Alureon_AP_126907_0
         $x_1_5 = "LICENSE AGREEMENT !" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -391,6 +402,7 @@ rule Trojan_Win32_Alureon_K_127182_0
         $x_2_8 = {75 15 32 d2 8b cb c7 43 18 56 01 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -422,6 +434,7 @@ rule Trojan_Win32_Alureon_L_127242_0
         $x_1_7 = "First-Click:%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -457,6 +470,7 @@ rule Trojan_Win32_Alureon_AW_127340_0
         $x_10_11 = {49 6e 74 65 72 6e 65 74 52 65 61 64 46 69 6c 65 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((5 of ($x_10_*) and 3 of ($x_2_*))) or
@@ -488,6 +502,7 @@ rule Trojan_Win32_Alureon_O_131469_0
         $x_1_7 = {00 74 65 6d 70 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -514,6 +529,7 @@ rule Trojan_Win32_Alureon_P_132759_0
         $x_1_2 = {be 65 00 00 00 e8 ?? ?? 00 00 83 f8 04 75 07 be 66 00 00 00 eb 0a 83 f8 08 75 05 be 67 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -537,6 +553,7 @@ rule Trojan_Win32_Alureon_Q_132804_0
         $x_1_3 = {69 61 6d 66 61 6d 6f 75 73 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -562,6 +579,7 @@ rule Trojan_Win32_Alureon_R_133720_0
         $x_1_5 = {8a d1 02 d0 30 14 31 83 c1 01 3b cf 72 f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -589,6 +607,7 @@ rule Trojan_Win32_Alureon_S_134073_0
         $x_1_3 = {6a 04 8d 85 fc fe ff ff 50 c6 04 37 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -612,6 +631,7 @@ rule Trojan_Win32_Alureon_BD_134715_0
         $x_1_4 = "tdlmask.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -635,6 +655,7 @@ rule Trojan_Win32_Alureon_BC_136835_0
         $x_1_4 = "faces\\%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -657,6 +678,7 @@ rule Trojan_Win32_Alureon_BE_136836_0
         $x_1_3 = "tdllog.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -681,6 +703,7 @@ rule Trojan_Win32_Alureon_BF_136837_0
         $x_1_5 = "NetFilter.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -706,6 +729,7 @@ rule Trojan_Win32_Alureon_BG_136838_0
         $x_1_6 = {6a 01 6a 09 68 ?? ?? ?? ?? 8b c6 e8 ?? ?? 00 00 85 c0 74 19 57}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -729,6 +753,7 @@ rule Trojan_Win32_Alureon_BH_136839_0
         $x_1_4 = {80 7c 31 01 0a 74 15 8a d1 2a 55 10 32 d0 88 14 31 41}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -753,6 +778,7 @@ rule Trojan_Win32_Alureon_BJ_138797_0
         $x_1_5 = "keyword = RegExp.$1;" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -787,6 +813,7 @@ rule Trojan_Win32_Alureon_BK_139065_0
         $x_1_11 = "\\\\?\\globalroot\\systemroot\\system32\\msvcrt.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -813,6 +840,7 @@ rule Trojan_Win32_Alureon_BN_139464_0
         $x_1_2 = {c7 45 e4 54 00 00 00 c7 45 c4 ab 00 00 00 8b 4d c4 83 c1 01 8b 45 e4 99 f7 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -833,6 +861,7 @@ rule Trojan_Win32_Alureon_BQ_140128_0
         $x_1_1 = {8b 43 28 6a 40 6a 25 03 c7 50 ff 15 ?? ?? ?? ?? 8b 43 28 6a 09 03 f0 03 f8 59 f3 a5 8d 45 0c 50 a4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -857,6 +886,7 @@ rule Trojan_Win32_Alureon_T_140593_0
         $x_1_4 = "\\\\?\\globalroot\\systemroot\\system32\\drivers\\UACd.sys" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -883,6 +913,7 @@ rule Trojan_Win32_Alureon_BT_141150_0
         $x_1_3 = {3d ed 03 00 00 72 0f 77 08 81 f9 00 c0 10 d4 76 05 be 01 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -911,6 +942,7 @@ rule Trojan_Win32_Alureon_BU_141285_0
         $x_1_5 = "infobin.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -939,6 +971,7 @@ rule Trojan_Win32_Alureon_CG_143701_0
         $x_1_4 = {00 0d 0a 58 2d 4d 6f 7a 3a 20 70 72 65 66 65 74 63 68 0d 0a 00 0d 0a 75 73 65 72 2d 61 67 65 6e 74 3a 20 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -963,6 +996,7 @@ rule Trojan_Win32_Alureon_W_144444_0
         $x_1_4 = "affid=%s&subid=%s&data=%s&id=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -988,6 +1022,7 @@ rule Trojan_Win32_Alureon_CO_144686_0
         $x_2_6 = {76 15 8b 44 24 04 8a d1 02 54 24 0c 03 c1 30 10 41}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1022,6 +1057,7 @@ rule Trojan_Win32_Alureon_CT_144991_0
         $x_1_11 = {74 6c 56 8d 45 fc 50 68 ac 01 00 00 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1049,6 +1085,7 @@ rule Trojan_Win32_Alureon_CU_145029_0
         $x_1_3 = "gasfky" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1073,6 +1110,7 @@ rule Trojan_Win32_Alureon_CV_145030_0
         $x_1_5 = "/adc.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -1099,6 +1137,7 @@ rule Trojan_Win32_Alureon_CW_145185_0
         $x_1_3 = {55 41 43 64 2e 73 79 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1121,6 +1160,7 @@ rule Trojan_Win32_Alureon_CX_145186_0
         $x_1_3 = {76 10 8a d1 02 54 24 08 30 14 01 41 3b 4c 24 04 72 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1144,6 +1184,7 @@ rule Trojan_Win32_Alureon_CY_145201_0
         $x_1_4 = {4c 4f 41 44 45 52 3a 20 62 6c 61 63 6b 6c 69 73 74 20 63 6f 75 6e 74 72 79 20 63 68 65 63 6b 20 46 41 49 4c 45 44 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -1172,6 +1213,7 @@ rule Trojan_Win32_Alureon_DA_145422_0
         $x_1_5 = {50 ff 75 08 8d 85 fc fe ff ff 50 68 ?? ?? ?? ?? 56 57 ff 15 ?? ?? ?? ?? 83 c4 18 57 ff 15 ?? ?? ?? ?? 83 f8 ff 75 ce}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1197,6 +1239,7 @@ rule Trojan_Win32_Alureon_DB_145935_0
         $x_1_2 = "tdl3desk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1225,6 +1268,7 @@ rule Trojan_Win32_Alureon_DC_146021_0
         $x_3_9 = {8d 54 02 18 33 c0 3b de 76 35 55 89 54 24 0c 57 8b 74 24 10 6a 05 bf ?? ?? ?? ?? 59 33 ed f3 a6 74 10 83 44 24 10 28 40 3b c3 72 e4}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -1249,6 +1293,7 @@ rule Trojan_Win32_Alureon_DD_146343_0
         $x_1_1 = {c6 45 f0 69 c6 45 f1 27 c6 45 f2 6c c6 45 f3 6c c6 45 f4 20 c6 45 f5 62 c6 45 f6 65 c6 45 f7 20 c6 45 f8 62 c6 45 f9 61 c6 45 fa 63 c6 45 fb 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1272,6 +1317,7 @@ rule Trojan_Win32_Alureon_DE_146606_0
         $x_1_4 = {8b 43 08 01 45 08 81 73 0c ?? ?? ?? ?? 8b 5b 0c 8b 46 2c 03 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1294,6 +1340,7 @@ rule Trojan_Win32_Alureon_DH_147052_0
         $x_1_3 = "[PANEL_SIGN_CHECK]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1314,6 +1361,7 @@ rule Trojan_Win32_Alureon_DI_147210_0
         $x_1_1 = {89 74 24 04 ?? d8 ?? 90 ?? 6a 30 ?? d8 ?? 90 ?? 58 e9 ?? ?? 00 00 ?? ?? ?? e9 ?? ?? 00 00 83 ec 04 97 d8 ?? 90 97 33 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1337,6 +1385,7 @@ rule Trojan_Win32_Alureon_DJ_147440_0
         $x_1_4 = {73 6f 72 64 65 72 2e 64 6c 6c 00 00 57 53 50 53 74 61 72 74 75 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1365,6 +1414,7 @@ rule Trojan_Win32_Alureon_DM_147646_0
         $x_2_5 = {8d 49 00 8a d0 80 c2 54 30 14 30 83 c0 01 3b c7 72}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1394,6 +1444,7 @@ rule Trojan_Win32_Alureon_DN_147653_0
         $x_1_5 = "[PANEL_SIGN_CHECK]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1421,6 +1472,7 @@ rule Trojan_Win32_Alureon_DO_147951_0
         $x_1_4 = "4DW4R3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1448,6 +1500,7 @@ rule Trojan_Win32_Alureon_DP_147952_0
         $x_1_8 = "subdel.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1474,6 +1527,7 @@ rule Trojan_Win32_Alureon_DQ_148106_0
         $x_1_3 = "tdlcmd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1501,6 +1555,7 @@ rule Trojan_Win32_Alureon_DV_149864_0
         $x_1_8 = "getgrab" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1528,6 +1583,7 @@ rule Trojan_Win32_Alureon_DW_152081_0
         $x_1_3 = "knock_%d_%x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1552,6 +1608,7 @@ rule Trojan_Win32_Alureon_DY_153302_0
         $x_1_5 = {50 6a 5a 68 00 08 00 00 ff 15 ?? ?? ?? ?? 85 c0 75 0e be ?? ?? ?? ?? 8d bd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1581,6 +1638,7 @@ rule Trojan_Win32_Alureon_DX_153303_0
         $x_1_5 = {73 72 76 00 63 6d 64 00 77 73 72 76 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1606,6 +1664,7 @@ rule Trojan_Win32_Alureon_DZ_154042_0
         $x_1_1 = {57 6a 02 68 00 00 00 80 56 8b 05 ?? ?? 40 00 ff d0 56 8b [0-4] 40 00 ff d0 8b [0-3] 3b c7 0f 85 ?? 00 00 00 57 ff [0-3] 57 ff [0-3] e8 ?? ?? ?? ?? e9 ?? 00 00 00 83 f8 02 0f 84 ?? 00 00 00 3b c6 0f 85 ?? 00 00 00 f7 [0-3] fe ff ff ff 0f 84 ?? 00 00 00 83 f8 03 0f 84 ?? 00 00 00 56 56 56 56 e8 ?? ?? ?? ?? 50 8b [0-4] 40 00 e9 ?? 00 00 00 6a 4d 6a 4d 6a 37 6a 2c 57 57 8b [0-4] 40 00 ff d0 85 c0 0f 84 ?? 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1626,6 +1685,7 @@ rule Trojan_Win32_Alureon_EA_154088_0
         $x_1_1 = {ff d0 53 53 53 8b ?? ?? ?? ?? 40 00 ff d0 68 33 2b 38 6a e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? ff d0 83 f8 05 0f 84 ?? 00 00 00 83 f8 02 0f 85 ?? 00 00 00 80 7c 24 ?? 61 0f 84 ?? 00 00 00 33 c0 e9 ?? ?? 00 00 6a 40 68 00 30 00 00 68 00 38 0b 00 53 8b [0-4] 40 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1647,6 +1707,7 @@ rule Trojan_Win32_Alureon_X_154093_0
         $x_1_1 = {c6 45 0b 01 e9 ?? ?? ?? ?? b8 43 46 00 00 66 39 85 ?? ?? ?? ?? 0f 85 ?? ?? ?? ?? 66 83 bd ?? ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1673,6 +1734,7 @@ rule Trojan_Win32_Alureon_EC_154186_0
         $x_1_7 = "?i=%s&a=%d&f=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1697,6 +1759,7 @@ rule Trojan_Win32_Alureon_EN_158265_0
         $x_2_5 = {8a c8 80 c1 51 30 88 ?? ?? ?? ?? 83 c0 01 83 f8 20 72 ed}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1724,6 +1787,7 @@ rule Trojan_Win32_Alureon_EO_158266_0
         $x_1_3 = "ldr_dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1746,6 +1810,7 @@ rule Trojan_Win32_Alureon_EP_158267_0
         $x_1_3 = "maxsscore" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1768,6 +1833,7 @@ rule Trojan_Win32_Alureon_EQ_158268_0
         $x_1_3 = {73 70 6f 6f 6c 73 76 2e 65 78 65 00 4c 64 72 41 64 64 52 65 66 44 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1792,6 +1858,7 @@ rule Trojan_Win32_Alureon_ET_160409_0
         $x_1_2 = {8d 45 f8 50 8d 45 fc 50 68 05 00 00 20 ff 77 08 c7 45 f8 04 00 00 00 ff 15 ?? ?? ?? ?? 85 c0 74 0d 39 75 fc 75 08 33 c0 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1813,6 +1880,7 @@ rule Trojan_Win32_Alureon_AA_161295_0
         $x_1_1 = {c6 45 0b 01 89 45 ?? e9 ?? ?? ?? ?? b8 43 46 00 00 66 39 85 ?? ?? ?? ?? 0f 85 ?? ?? ?? ?? 66 83 bd ?? ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1836,6 +1904,7 @@ rule Trojan_Win32_Alureon_EW_162575_0
         $x_1_4 = "xtasks.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1860,6 +1929,7 @@ rule Trojan_Win32_Alureon_EZ_162731_0
         $x_1_5 = {8b 40 28 03 45 08 68 42 50 57 46}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1882,6 +1952,7 @@ rule Trojan_Win32_Alureon_FA_162850_0
         $x_1_3 = "OK_INSTALL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1905,6 +1976,7 @@ rule Trojan_Win32_Alureon_AC_163312_0
         $x_1_3 = {85 c0 0f 84 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 35 ?? ?? ?? ?? c6 45 ?? 53 c6 45 ?? 22 ff 55 ?? 68 ?? ?? ?? ?? ff 35 02 8b ?? ff 55 05 6a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1929,6 +2001,7 @@ rule Trojan_Win32_Alureon_AD_163751_0
         $x_1_1 = {c6 45 0b 01 89 45 ?? e9 ?? ?? ?? ?? b8 53 46 00 00 66 39 85 ?? ?? ?? ?? 0f 85 ?? ?? ?? ?? 66 83 bd ?? ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1956,6 +2029,7 @@ rule Trojan_Win32_Alureon_FE_164569_0
         $x_3_8 = {52 85 c9 75 ?? b8 ?? 00 00 c0 8b e5 5d c3 c6 45 ff 03 8a 45 ff 53 83 ca ff 0f 00 c6 45 ?? 41 c6 45 ?? 4a c6 45 ?? 45 c6 45}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1986,6 +2060,7 @@ rule Trojan_Win32_Alureon_FF_164570_0
         $x_1_6 = "[referer_end]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2014,6 +2089,7 @@ rule Trojan_Win32_Alureon_FG_164571_0
         $x_1_4 = "mainfb.script" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2035,6 +2111,7 @@ rule Trojan_Win32_Alureon_FH_164686_0
         $x_1_2 = {b8 4c 01 00 00 66 39 46 04 0f 85 ?? ?? ?? ?? 83 c0 bf 66 39 46 18 0f 85 ?? ?? ?? ?? 0f b7 46 14 8d 7c 30 18 8b 46 50 6a 40 68 00 30 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2058,6 +2135,7 @@ rule Trojan_Win32_Alureon_FI_164918_0
         $x_1_4 = {31 36 30 31 00 00 00 00 31 34 30 30 00 00 00 00 31 32 30 36}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2082,6 +2160,7 @@ rule Trojan_Win32_Alureon_FJ_165678_0
         $x_1_5 = "\\\\.\\globalroot%s\\ph" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -2109,6 +2188,7 @@ rule Trojan_Win32_Alureon_FK_165682_0
         $x_1_4 = "PurpleHaze" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2138,6 +2218,7 @@ rule Trojan_Win32_Alureon_FL_166233_0
         $x_1_10 = {59 66 83 c9 ff 66 41 66 8b 11 66 81 f2 ?? ?? 66 81 fa ?? ?? 74 0e 81 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2165,6 +2246,7 @@ rule Trojan_Win32_Alureon_FO_170134_0
         $x_1_4 = "PurpleHaze" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -2192,6 +2274,7 @@ rule Trojan_Win32_Alureon_FP_170135_0
         $x_1_4 = "ver=%s&bid=%s&aid=%s&sid=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2215,6 +2298,7 @@ rule Trojan_Win32_Alureon_FQ_171515_0
         $x_1_4 = {0f b6 4c 05 bc 81 e9 ?? 00 00 00 81 f1 ?? 00 00 00 88 4d ff 8a 4d ff 0f b6 c9 88 84 0d 38 ff ff ff 40 83 f8 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2239,6 +2323,7 @@ rule Trojan_Win32_Alureon_FR_172412_0
         $x_1_5 = {43 6d 64 52 75 6e 45 78 65 55 72 6c 00 43 6d 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -2266,6 +2351,7 @@ rule Trojan_Win32_Alureon_FS_172968_0
         $x_1_4 = {c7 45 f4 75 61 6c 41 c7 45 f8 6c 6c 6f 63 c6 45 fc 00 6a 40 68 ?? ?? 00 00 68 ?? ?? 00 00 6a 00 8d 45 f0 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2287,6 +2373,7 @@ rule Trojan_Win32_Alureon_FT_174099_0
         $x_1_2 = {83 e8 05 89 45 ?? 8b 45 14 8d 3c 1e c6 45 ?? e9 8d 75 ?? a5 a4 8b 7d fc 89 18 8b 45 10 2b c7 83 e8 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2354,6 +2441,7 @@ rule Trojan_Win32_Alureon_FV_177920_0
         $x_1_48 = {c7 45 8c 18 00 00 00 c7 45 ae 00 00 00 00 c7 45 9c 01 4e 65 63}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2376,6 +2464,7 @@ rule Trojan_Win32_Alureon_FW_183436_0
         $x_1_3 = {75 32 83 4a 18 02 8a c8 c0 e9 06 88 4a 0d 8a c8 88 42 0c 0f b6 c0 c0 e9 03 83 e0 07 80 e1 07 43 88 4a 0e 88 42 0f 3c 05 75 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2399,6 +2488,7 @@ rule Trojan_Win32_Alureon_GB_195781_0
         $x_1_4 = {71 00 61 00 7a 00 78 00 73 00 77 00 5f 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2421,6 +2511,7 @@ rule Trojan_Win32_Alureon_GC_196225_0
         $x_1_3 = {0f b7 46 04 b9 64 86 00 00 66 3b c1 75 06 8b 4a 08 29 4e 50 b9 4c 01 00 00 66 3b c1 75 06 8b 42 08 29 46 50 33 c0 6a 0a 59 8b fa f3 ab b8 ff ff 00 00 66 01 46 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2444,6 +2535,7 @@ rule Trojan_Win32_Alureon_GD_196398_0
         $x_1_4 = {6a 04 68 00 30 00 00 68 06 01 00 00 56 ff 75 10 ff 15 ?? ?? ?? ?? 8b d8 3b de 0f 84 ?? ?? ?? ?? 8b 45 0c 8d 50 02 66 8b 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2467,6 +2559,7 @@ rule Trojan_Win32_Alureon_GG_197327_0
         $x_1_4 = {49 6e 6a 65 63 74 4e 6f 72 6d 61 6c 52 6f 75 74 69 6e 65 00 49 6e 6a 65 63 74 65 64 53 68 65 6c 6c 43 6f 64 65 45 6e 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2489,6 +2582,7 @@ rule Trojan_Win32_Alureon_GH_197723_0
         $x_1_3 = {8d 7c 08 fe 6a 00 57 68 08 01 00 00 68 ?? ?? ?? ?? 68 bb 20 01 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2511,6 +2605,7 @@ rule Trojan_Win32_Alureon_GO_197898_0
         $x_1_3 = "typerttsx.com:80;typicalsx.com:80" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2535,6 +2630,7 @@ rule Trojan_Win32_Alureon_GQ_197899_0
         $x_4_5 = {26 61 69 64 3d 25 73 26 69 64 3d 25 73 26 6f 73 3d 25 73 5f 25 73 00}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2562,6 +2658,7 @@ rule Trojan_Win32_Alureon_GQ_197899_1
         $x_1_5 = {c7 03 06 00 00 00 c7 45 ?? 02 00 00 00 c7 45 ?? 17 00 02 00 c7 45 ?? 03 00 00 00 89 45 ?? 89 75 ?? ff 15 ?? ?? ?? ?? 85 c0 75 ?? 8d 7d ?? ab ab ab ab ab 6a 04 58 66 89 ?? ce}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2589,6 +2686,7 @@ rule Trojan_Win32_Alureon_GK_197906_0
         $x_10_8 = "7f5ed85d-6828-4f92-858c-f40b0ac68138" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_25_*) and 1 of ($x_10_*))) or
             ((2 of ($x_100_*) and 2 of ($x_25_*))) or
@@ -2620,6 +2718,7 @@ rule Trojan_Win32_Alureon_GJ_197909_0
         $x_5_8 = "peercmd_%u_%u.%u.%u.%u:%u_%u=%u" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_60_*) and 1 of ($x_50_*) and 1 of ($x_5_*))) or
             ((1 of ($x_60_*) and 1 of ($x_50_*) and 1 of ($x_10_*))) or
@@ -2652,6 +2751,7 @@ rule Trojan_Win32_Alureon_GL_197910_0
         $x_10_9 = "sx_run" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_25_*) and 5 of ($x_10_*))) or
             ((1 of ($x_100_*) and 1 of ($x_50_*) and 5 of ($x_10_*))) or
@@ -2709,6 +2809,7 @@ rule Trojan_Win32_Alureon_GT_200079_0
         $x_1_3 = {6a 01 6a 28 56 8b c7 e8 ?? ?? ?? ?? 85 c0 74 ad 33 ff 81 bd ?? ?? ff ff 78 56 34 12 74 0e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2731,6 +2832,7 @@ rule Trojan_Win32_Alureon_AL_264901_0
         $x_1_2 = {36 55 50 03 fe 8d 3c 38 33 c0 03 fe 8d 3c 38 68 2c ca 3a 16 03 fe 8d 3c 38 68 35 d0 15 dc 03 fe 8d 3c 38 6a 00 03 fe 8d 3c 38 68 a2 7d 80 62 6a 53 83 c4 04 54 6a 53 83 c4 04 68 30 08 01 00 6a 53 83 c4 04 6a 10 52}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

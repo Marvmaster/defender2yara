@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Boaxxe_2147638061_0
         $x_1_3 = {0f b7 3a 8b df 81 e3 00 f0 ff ff 81 fb 00 30 00 00 75 0c 8b 5d 08 81 e7 ff 0f 00 00 01 1c 37 8b 78 04 ff 45 fc 83 ef 08 d1 ef 83 c2 02 39 7d fc 72 ce}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win32_Boaxxe_A_2147639646_0
         $x_1_3 = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -68,6 +70,7 @@ rule TrojanDownloader_Win32_Boaxxe_B_2147649916_0
         $x_2_4 = {3b f0 7e e8 6a 7b 58 66 89 85 00 fe ff ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

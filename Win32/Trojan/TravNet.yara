@@ -19,6 +19,7 @@ rule Trojan_Win32_TravNet_MA_2147826869_0
         $x_1_4 = "GetTickCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

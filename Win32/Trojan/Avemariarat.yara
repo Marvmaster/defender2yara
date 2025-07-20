@@ -16,6 +16,7 @@ rule Trojan_Win32_Avemariarat_VU_2147758817_0
         $x_1_1 = {8b 45 fc 99 f7 bd ?? ?? ?? ?? 89 95 ?? ?? ?? ?? 8b 55 ?? 03 55 ?? 0f be 02 8b 8d ?? ?? ?? ?? 0f be 54 0d ?? 33 c2 8b 4d ?? 03 4d ?? 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

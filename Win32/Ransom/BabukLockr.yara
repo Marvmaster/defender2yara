@@ -19,6 +19,7 @@ rule Ransom_Win32_BabukLockr_PA_2147772027_0
         $x_1_4 = "How To Restore Your Files.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win32_BabukLockr_PB_2147772068_0
         $x_1_3 = "WIOSOSOSOW" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

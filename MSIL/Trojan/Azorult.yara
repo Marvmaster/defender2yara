@@ -16,6 +16,7 @@ rule Trojan_MSIL_Azorult_GN_2147760829_0
         $x_1_1 = {0a 0b 12 01 28 ?? ?? ?? 0a 0a 02 7b ?? ?? ?? 04 02 7b ?? ?? ?? 04 02 7b ?? ?? ?? 04 02 7b ?? ?? ?? 04 91 06 02 7b ?? ?? ?? 04 06 8e 69 5d 91 61 d2 9c 02 25 7b ?? ?? ?? 04 17 58 7d ?? ?? ?? 04 02 7b ?? ?? ?? 04 02 7b ?? ?? ?? 04 8e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Azorult_MK_2147760962_0
         $x_1_6 = "Normalization Normalization Strano:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_MSIL_Azorult_PAF_2147777162_0
         $x_1_12 = "MyComputer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule Trojan_MSIL_Azorult_ABM_2147789557_0
         $x_3_9 = "Rfc2898DeriveBytes" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule Trojan_MSIL_Azorult_EC_2147831755_0
         $x_1_6 = "Rcenhngcnnknydvzuareir" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +155,7 @@ rule Trojan_MSIL_Azorult_AZ_2147844092_0
         $x_1_1 = {13 10 2b 0d 00 11 10 11 11 d2 6f ?? ?? ?? 0a 00 00 11 0f 6f ?? ?? ?? 0a 25 13 11 15 fe 01 16 fe 01 13 12 11 12 2d dd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +177,7 @@ rule Trojan_MSIL_Azorult_SPQ_2147845703_0
         $x_6_1 = {11 1e 11 20 18 6f ?? ?? ?? 0a 20 03 02 00 00 28 ?? ?? ?? 0a 13 22 11 1f 11 22 6f ?? ?? ?? 0a 00 11 20 18 58 13 20 00 11 20 11 1e 6f ?? ?? ?? 0a fe 04 13 23 11 23 2d c7}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -193,6 +200,7 @@ rule Trojan_MSIL_Azorult_AKAA_2147900407_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +222,7 @@ rule Trojan_MSIL_Azorult_GMZ_2147900600_0
         $x_10_1 = {00 0a 14 17 8d 01 00 00 01 25 16 28 ?? ?? ?? 06 a2 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 07 2b 06 0a 2b b4 0b 2b ba 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -242,6 +251,7 @@ rule Trojan_MSIL_Azorult_MA_2147901640_0
         $x_1_8 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -263,6 +273,7 @@ rule Trojan_MSIL_Azorult_GNK_2147917054_0
         $x_10_1 = {11 20 11 1f 11 21 6f ?? ?? ?? 0a 11 1d 28 ?? ?? ?? 06 6f ?? ?? ?? 0a 26 11 21 17 58 13 21 11 21 11 1f 6f ?? ?? ?? 0a fe 04 13 22 11 22 2d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -284,6 +295,7 @@ rule Trojan_MSIL_Azorult_KAA_2147919182_0
         $x_5_1 = {02 08 91 0d 09 08 59 20 ff 00 00 00 5f 0d 09 03 1e 5d 1f 1f 5f 63 09 1e 03 1e 5d 59 1f 1f 5f 62 60 20 ff 00 00 00 5f 0d 09 03 59 20 ff 00 00 00 5f 0d 09 03 61 0d 06 08 09 d2 9c 00 08 17 58 0c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

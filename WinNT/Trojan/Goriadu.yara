@@ -23,6 +23,7 @@ rule Trojan_WinNT_Goriadu_A_2147640245_0
         $x_10_8 = {80 a6 b4 00 00 00 00 81 c6 a4 00 00 00 56 ff 15 ?? ?? ?? ?? 8b c7 5f 5e 5d c2 18 00 30 01 80 [0-2] 48 0f ?? ?? eb [0-4] 75 ?? 80 [0-2] 6f 75 ?? 6a 02 eb ?? 83 ?? 02 75 ?? 80 [0-2] 73 75 ?? 6a 03 eb ?? 83 ?? 03 75 ?? 80 [0-2] 74 75 ?? 6a 04 eb ?? 83 ?? 04 75 ?? 80 [0-2] 3a 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -52,6 +53,7 @@ rule Trojan_WinNT_Goriadu_B_2147648181_0
         $x_2_5 = "NdisGetPoolFromPacket" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

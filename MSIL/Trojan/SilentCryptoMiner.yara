@@ -16,6 +16,7 @@ rule Trojan_MSIL_SilentCryptoMiner_2147893045_0
         $x_2_1 = {13 0b 11 0a 11 06 28 10 00 00 06 26 11 0a 11 06 07 6a 20 00 30 00 00 1f 40 28 0e 00 00 06 26 11 0a 11 06 02 08 16 6a 28 0f 00 00 06 26 16}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_SilentCryptoMiner_NR_2147929305_0
         $x_1_3 = "Reoxggyzhux.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

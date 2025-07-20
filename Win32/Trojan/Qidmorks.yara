@@ -17,6 +17,7 @@ rule Trojan_Win32_Qidmorks_A_2147685391_0
         $x_1_3 = {3f 00 64 57 6c 6b 50 51 3d 3d 00 26 00 64 6d 56 79 50 51 3d 3d 00 62 57 73 39 00 62 33 4d 39 00 63 6e 4d 39 00 59 7a 30 3d 00 63 6e 45 39}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

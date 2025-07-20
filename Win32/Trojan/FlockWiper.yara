@@ -19,6 +19,7 @@ rule Trojan_Win32_FlockWiper_A_2147944437_0
         $x_1_5 = {00 00 46 00 61 00 69 00 6c 00 65 00 64 00 20 00 74 00 6f 00 20 00 67 00 65 00 74 00 20 00 64 00 69 00 73 00 6b 00 20 00 67 00 65 00 6f 00 6d 00 65 00 74 00 72 00 79 00 3a 00 20 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

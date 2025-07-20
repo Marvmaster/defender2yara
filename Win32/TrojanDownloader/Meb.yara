@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Meb_A_2147625418_0
         $x_1_4 = {5b c6 07 b8 89 5f 01 66 c7 47 05 ff e0 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

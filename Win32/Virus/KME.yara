@@ -20,6 +20,7 @@ rule Virus_Win32_KME_A_2147501223_0
         $x_1_6 = {3f 3a 5c 00 2a 2e 2a 00 2e 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

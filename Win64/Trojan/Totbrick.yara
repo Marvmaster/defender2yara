@@ -17,6 +17,7 @@ rule Trojan_Win64_Totbrick_A_2147719040_0
         $x_1_3 = {66 c7 44 24 40 48 b9 66 c7 45 81 48 b8 66 c7 45 8b ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_Totbrick_B_2147719041_0
         $x_1_2 = {41 03 48 fc 3b d1 72 1c 41 ff c2 49 83 c0 28 45 3b d3 7c e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win64_Totbrick_C_2147719656_0
         $x_1_3 = "\\\\.\\pipe\\pidplacesomepipe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win64_Totbrick_D_2147719657_0
         $x_1_3 = {48 63 c9 48 2b c2 48 c1 f8 05 48 3b c8 73 15 48 c1 e1 05 48 03 ca 48 83 79 18 10 72 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_Win64_Totbrick_E_2147722880_0
         $x_1_5 = {4d 61 63 68 69 6e 65 46 69 6e 64 65 72 00 6e 65 74 73 63 61 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -196,6 +201,7 @@ rule Trojan_Win64_Totbrick_H_2147726886_0
         $x_1_71 = "rSa/oGoNE8OV" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or

@@ -18,6 +18,7 @@ rule Trojan_Win64_MalDrivz_A_2147921613_0
         $x_1_3 = {41 8b 10 8b c2 25 ff ff ff 03 41 8d 0c 83 c1 f9 02 33 ca 81 e1 ff ff ff 03 33 ca 41 89 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

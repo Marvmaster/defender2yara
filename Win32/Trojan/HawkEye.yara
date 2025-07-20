@@ -17,6 +17,7 @@ rule Trojan_Win32_HawkEye_A_2147740944_0
         $x_10_3 = {33 c8 8b c2 c1 e0 1c c1 f8 1f 25 32 88 db 0e c1 ea 08 33 c8 33 d1 46}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +72,7 @@ rule Trojan_Win32_HawkEye_D_2147743897_0
         $x_1_6 = "/bitsigd/bitsigd.vbs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

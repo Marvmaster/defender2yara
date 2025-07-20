@@ -21,6 +21,7 @@ rule Trojan_Win32_Fakeqip_2147616610_0
         $x_1_7 = "/install /silent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

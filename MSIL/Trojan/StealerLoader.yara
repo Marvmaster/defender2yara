@@ -16,6 +16,7 @@ rule Trojan_MSIL_StealerLoader_2147772754_0
         $x_1_1 = "1ese92VWgsRJFT1srbgo5SFPIMk+jbLKTQ5ewNnKClI5csh6i5HItc6B40fr9wVIfYpUxb63Gvz4DGxgcD7qn2prJsnnb2tpZ+3zDqOUhcoTOoF0F7KDoLSLZDP3aQ5cAqh/bcGXWvQpfVDZoDC66W+BXEQw8VkWZAHPNKFE6WCHrFZSZRNnLmsFE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -57,6 +58,7 @@ rule Trojan_MSIL_StealerLoader_2147772754_1
         $x_1_21 = "set_RedirectStandardError" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +106,7 @@ rule Trojan_MSIL_StealerLoader_2147772754_2
         $x_1_27 = "LoadXml" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (26 of ($x*))
 }
 
@@ -148,6 +151,7 @@ rule Trojan_MSIL_StealerLoader_2147772754_3
         $x_1_24 = "SetPixel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +201,7 @@ rule Trojan_MSIL_StealerLoader_2147772754_4
         $x_1_29 = "get_EntryPoint" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -240,6 +245,7 @@ rule Trojan_MSIL_StealerLoader_2147772754_5
         $x_1_23 = "GetDelegateForFunctionPointer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -274,6 +280,7 @@ rule Trojan_MSIL_StealerLoader_2147772754_6
         $x_1_14 = "trump2020" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -323,6 +330,7 @@ rule Trojan_MSIL_StealerLoader_2147772754_7
         $x_1_29 = "GetRuntimeDirectory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -384,6 +392,7 @@ rule Trojan_MSIL_StealerLoader_2147772754_8
         $x_1_41 = "{11111-22222-40001-00002}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -443,6 +452,7 @@ rule Trojan_MSIL_StealerLoader_2147772754_9
         $x_50_39 = "{11111-22222-50001-00002}" wide //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -508,6 +518,7 @@ rule Trojan_MSIL_StealerLoader_2147772754_10
         $x_50_45 = "{11111-22222-50001-00002}" wide //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -577,6 +588,7 @@ rule Trojan_MSIL_StealerLoader_2147772754_11
         $x_1_49 = "{11111-22222-50001-00002}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -644,6 +656,7 @@ rule Trojan_MSIL_StealerLoader_2147772754_12
         $x_1_47 = "{11111-22222-50001-00002}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -731,6 +744,7 @@ rule Trojan_MSIL_StealerLoader_2147772754_13
         $x_1_67 = "{11111-22222-50001-00002}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -784,6 +798,7 @@ rule Trojan_MSIL_StealerLoader_AD_2147778650_0
         $x_1_33 = "GetRuntimeDirectory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -846,6 +861,7 @@ rule Trojan_MSIL_StealerLoader_AD_2147778650_1
         $x_1_42 = "{11111-22222-50001-00002}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -893,6 +909,7 @@ rule Trojan_MSIL_StealerLoader_AB_2147780079_0
         $x_1_27 = "Kill" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -928,6 +945,7 @@ rule Trojan_MSIL_StealerLoader_MK_2147789393_0
         $x_1_15 = "LoadLibraryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -960,6 +978,7 @@ rule Trojan_MSIL_StealerLoader_MAK_2147805388_0
         $x_1_12 = "CommandLine \"stop WinDefend\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

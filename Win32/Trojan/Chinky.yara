@@ -17,6 +17,7 @@ rule Trojan_Win32_Chinky_MBWM_2147929948_0
         $x_2_2 = {64 17 40 00 20 13 40 00 04 f8 30 01 00 ff ff ff 08 00 00 00 01 00 00 00 02 00 00 00 e9 00 00 00 80 12 40 00 b4 11 40 00 70 11 40 00 78 00 00 00 81 00 00 00 8a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

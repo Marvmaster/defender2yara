@@ -18,6 +18,7 @@ rule Trojan_MSIL_Mardom_NEAA_2147840111_0
         $x_2_3 = "TnRBbGxvY2F0ZVZpcnR1YWxNZW1vcnk=" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Mardom_AMR_2147844016_0
         $x_1_1 = {0d 16 0b 2b 13 09 07 9a 03 28 ?? ?? ?? 06 13 04 11 04 2d 0c 07 17 58 0b 07 09 8e 69 32 e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_Mardom_SPL_2147846791_0
         $x_1_2 = "_ALVgaewDiwada" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_MSIL_Mardom_AMD_2147849940_0
         $x_1_1 = {0b 2b f8 02 50 06 91 18 2d 18 26 02 50 06 02 50 07 91 9c 02 50 07 08 9c 06 17 58 0a 07 17 59 0b 2b 03 0c 2b e6 06 07 32 da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_MSIL_Mardom_AMA_2147850007_0
         $x_1_1 = {0b 2b f8 02 50 06 91 1d 2d 18 26 02 50 06 02 50 07 91 9c 02 50 07 08 9c 06 17 58 0a 07 17 59 0b 2b 03 0c 2b e6 06 07 32 da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +132,7 @@ rule Trojan_MSIL_Mardom_MBFX_2147850551_0
         $x_1_4 = "CryptoStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +154,7 @@ rule Trojan_MSIL_Mardom_AAJB_2147852472_0
         $x_5_1 = {02 08 02 8e 69 5d 02 08 02 8e 69 5d 91 07 08 07 8e 69 5d 91 61 28 ?? 00 00 0a 02 08 1e 58 1d 59 02 8e 69 5d 91 59 20 fd 00 00 00 58 19 58 20 00 01 00 00 5d d2 9c 08 17 58 0c 08 6a 02 8e 69 17 59 6a 06 17 58 6e 5a 31 b7}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +177,7 @@ rule Trojan_MSIL_Mardom_AAKC_2147852957_0
         $x_1_2 = "ReadAsByteArrayAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +199,7 @@ rule Trojan_MSIL_Mardom_KA_2147892121_0
         $x_10_1 = {16 2d 1d 06 09 11 04 09 8e 69 5d 91 08 11 04 91 61 d2 6f ?? 00 00 0a 11 04 17 58 1d 2c de 13 04 11 04 08 8e 69 32 d9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +221,7 @@ rule Trojan_MSIL_Mardom_AMSA_2147894274_0
         $x_5_1 = {07 09 16 6f ?? 00 00 0a 13 04 12 04 28 ?? 00 00 0a 13 05 08 11 05 6f ?? 00 00 0a 09 17 58 0d 09 07 6f ?? 00 00 0a 32 d8 08 6f ?? 00 00 0a 13 06}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -236,6 +246,7 @@ rule Trojan_MSIL_Mardom_AAFY_2147896759_0
         $x_1_4 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -257,6 +268,7 @@ rule Trojan_MSIL_Mardom_AAWT_2147896827_0
         $x_5_1 = {04 08 04 8e 69 5d 1c 58 1c 59 1d 58 1d 59 04 08 04 8e 69 5d 91 07 08 07 8e 69 5d 1c 58 1c 59 1d 58 1d 59 91 61 28 ?? 00 00 0a 04 08 20 87 10 00 00 58 20 86 10 00 00 59 04 8e 69 5d 91 59 20 fa 00 00 00 58 1c 58 20 00 01 00 00 5d d2 9c 08 17 58 0c 08 6a 04 8e 69 17 59 6a 06 17 58 6e 5a 31 9f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -278,6 +290,7 @@ rule Trojan_MSIL_Mardom_SM_2147897434_0
         $x_2_1 = {16 13 04 16 13 05 1f 10 8d 1d 01 00 01 13 06 06 1a 5a 8d 93 00 00 01 13 07 38 5b 01 00 00 16 13 09 2b 12 11 06 11 09 07 11 04 11 09 58 95 9e 11 09 17 58 13 09 11 09 1f 10 32 e8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +312,7 @@ rule Trojan_MSIL_Mardom_CCFW_2147899739_0
         $x_1_1 = {02 07 02 8e b7 5d 02 07 02 8e b7 5d 91 08 07 08 8e b7 5d 91 61 02 07 17 58 02 8e b7 5d 91 59}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +335,7 @@ rule Trojan_MSIL_Mardom_BNAA_2147901308_0
         $x_1_2 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -342,6 +357,7 @@ rule Trojan_MSIL_Mardom_SPD_2147901347_0
         $x_5_1 = {0b 73 19 00 00 0a 25 07 6f ?? ?? ?? 0a 25 18 6f ?? ?? ?? 0a 25 18 6f ?? ?? ?? 0a 25 6f ?? ?? ?? 0a 06 16 06 8e 69}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +379,7 @@ rule Trojan_MSIL_Mardom_CIAA_2147901544_0
         $x_5_1 = {0a 06 07 28 ?? 00 00 0a 91 8c ?? 00 00 01 09 07 09 8e b7 8c ?? 00 00 01 28 ?? 00 00 0a 28 ?? 00 00 0a 91 8c ?? 00 00 01 07 04 8c ?? 00 00 01 28 ?? 00 00 0a 09 8e b7 8c ?? 00 00 01 28 ?? 00 00 0a 28 ?? 00 00 0a 11 04 28 ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 9c 07 11 07 12 01}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -384,6 +401,7 @@ rule Trojan_MSIL_Mardom_NB_2147903262_0
         $x_5_1 = {02 03 02 4b 03 04 61 05 61 58 0e 07 0e 04 95 58 7e ?? 08 00 04 0e 06 17 59 95 58 0e 05 28 d2 0d 00 06 58 54 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -405,6 +423,7 @@ rule Trojan_MSIL_Mardom_NN_2147904132_0
         $x_5_1 = {02 03 02 4b 03 04 61 05 61 58 ?? ?? ?? ?? 95 58 7e ad 08 ?? ?? 0e 06 17 59 95 58 0e 05}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -426,6 +445,7 @@ rule Trojan_MSIL_Mardom_NA_2147904304_0
         $x_5_1 = {0a 5d 6f 19 00 00 0a 61 d2}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -447,6 +467,7 @@ rule Trojan_MSIL_Mardom_NC_2147904792_0
         $x_5_1 = {07 08 17 59 25 0c 91 61 1f 10 1f 1f 5f 62 58 ?? ?? 08 00 06 0d 09 06 16}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -468,6 +489,7 @@ rule Trojan_MSIL_Mardom_ND_2147906431_0
         $x_10_1 = {11 27 11 20 61 11 1d 19 58 61 11 32 61 d2}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -492,6 +514,7 @@ rule Trojan_MSIL_Mardom_NE_2147910555_0
         $x_1_4 = "Rijndael" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -513,6 +536,7 @@ rule Trojan_MSIL_Mardom_SSXP_2147910850_0
         $x_4_1 = {2b 1e 11 0b 6f e7 00 00 0a 13 23 11 0c 11 23 11 10 59 61 13 0c 11 10 11 0c 19 58 1e 63 59 13 10 11 0b 6f b4 00 00 06 2d d9 de 0c}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -536,6 +560,7 @@ rule Trojan_MSIL_Mardom_SQ_2147917683_0
         $x_2_3 = "toyscenter.cl" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -560,6 +585,7 @@ rule Trojan_MSIL_Mardom_YZAA_2147923082_0
         $x_1_4 = "QzILOMHiwEIXJPbnfjuqYJPXrmfQELrJWYMUcLztEbZifnpxdtAIfJrGjkUchqdlMyBkCHLUkBmxjhsEwhnLKjeMgFkr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -582,6 +608,7 @@ rule Trojan_MSIL_Mardom_AABA_2147924089_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -603,6 +630,7 @@ rule Trojan_MSIL_Mardom_GPN_2147927076_0
         $x_1_1 = {61 d2 9c 20 05 00 00 00 38 66 ff ff ff 38 96 00 00 00 20 05 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -625,6 +653,7 @@ rule Trojan_MSIL_Mardom_MM_2147931492_0
         $x_2_2 = {11 06 11 04 6f 0a 00 00 0a 11 04 6f 0b 00 00 0a 0b dd 2b 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -646,6 +675,7 @@ rule Trojan_MSIL_Mardom_SAJ_2147931940_0
         $x_1_1 = {73 24 00 00 0a 25 73 25 00 00 0a 25 00 28 11 00 00 0a 72 ?? ?? ?? 70 28 12 00 00 0a 6f 13 00 00 0a 6f 26 00 00 0a 00 25 00 28 11 00 00 0a 72 ?? ?? ?? 70 28 12 00 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -668,6 +698,7 @@ rule Trojan_MSIL_Mardom_GTR_2147935041_0
         $x_10_2 = {0b 00 07 20 ?? ?? ?? ?? fe 01 39 ?? ?? ?? 00 fe 0d 00 00 20 ?? ?? ?? ff 7d ?? ?? ?? 04 20 ?? ?? ?? 00 0b 00 07 20 ?? ?? ?? 00 fe 01}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -691,6 +722,7 @@ rule Trojan_MSIL_Mardom_AYA_2147935290_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -713,6 +745,7 @@ rule Trojan_MSIL_Mardom_PGM_2147937133_0
         $x_5_2 = "0E448EF5E5E60630BDDB19388CB6378436E3C65D03DD66DA7C6EBFF563BD857A" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -736,6 +769,7 @@ rule Trojan_MSIL_Mardom_AB_2147939505_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -757,6 +791,7 @@ rule Trojan_MSIL_Mardom_SFA_2147939618_0
         $x_2_1 = {28 0a 00 00 0a 0d 07 28 0b 00 00 0a 2d 2b 28 0c 00 00 0a 28 0d 00 00 0a 28 0e 00 00 0a 72 ?? ?? ?? 70 28 0f 00 00 0a 13 04 11 04 09 28 10 00 00 0a 11 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -780,6 +815,7 @@ rule Trojan_MSIL_Mardom_ASUA_2147941983_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -804,6 +840,7 @@ rule Trojan_MSIL_Mardom_MBZ_2147942266_0
         $x_1_4 = "ntqjrzznpykjm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -825,6 +862,7 @@ rule Trojan_MSIL_Mardom_MKV_2147942455_0
         $x_5_1 = {13 04 11 04 09 17 73 94 00 00 0a 13 05 2b 33 2b 35 16 2b 36 8e 69 2b 36 2b 3b 2b 3d 2b 42 2b 44 2b 4c 2b 51 72 ef 00 00 70 2b 51 16 2c 54 26 26 26 2b 59 72 13 01 00 70 2b 58 17 2b 5f dd c2 00 00 00 2b 5e 2b c9 2b 5e 2b c7 2b 5d 2b c6 6f ?? 00 00 0a 2b c3 11 05 2b c1 6f ?? 00 00 0a 2b bc 11 04 2b ba 6f ?? 00 00 0a 38 b2 ff ff ff 13 06 38 ad ff ff ff 11 06 38 a8 ff ff ff 03 38 a9 ff ff ff 28 ad 0a 00 06 38 a5 ff ff ff 05 38 a1 ff ff ff 6f ?? 00 00 0a 38 9e ff ff ff 0b 38 9b ff ff ff 11 05 2b 9e 06 2b 9f 06 2b a0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -846,6 +884,7 @@ rule Trojan_MSIL_Mardom_ACWA_2147943053_0
         $x_5_1 = {06 8e 69 1a 2f 07 16 0b dd ?? 00 00 00 06 73 ?? 00 00 0a 0c 16 2d 44 2b 47 2b 48 2b 49 2b 4e 2b 4f 8d ?? 00 00 01 2b 4b 2b 4d 16 2b 4d 2b 52 16 11 04 09 11 05 02 28 ?? 00 00 06 de 0f 11 05 2c 0a 16 2d 07 11 05 6f ?? 00 00 0a dc 03 72 ?? ?? 00 70 11 04 28 ?? 00 00 06 17 0b 1d 2c ee de 3a 08 2b b6 02 2b b5 28 ?? 00 00 06 2b b0 0d 2b af 09 2b ae 13 04 2b b1 08 2b b0 73 ?? 00 00 0a 2b ac 13 05 2b aa}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -868,6 +907,7 @@ rule Trojan_MSIL_Mardom_GVA_2147943382_0
         $x_1_2 = {6f 16 00 00 0a 26 07 17 6f 17 00 00 0a 07 17 8d 17 00 00 01 25 16 06 a2 6f 18 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -891,6 +931,7 @@ rule Trojan_MSIL_Mardom_ANXA_2147944523_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

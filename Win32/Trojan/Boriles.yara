@@ -18,6 +18,7 @@ rule Trojan_Win32_Boriles_A_2147705617_0
         $x_1_4 = "U3VuQXd0RGlhbG9n" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

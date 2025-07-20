@@ -19,6 +19,7 @@ rule Ransom_MSIL_PencilCrypt_PA_2147798179_0
         $x_1_4 = "your files have been encrypted!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Pdos_A_2147631877_0
         $x_1_4 = {57 69 6e 45 78 65 63 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

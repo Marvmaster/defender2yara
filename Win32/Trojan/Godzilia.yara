@@ -17,6 +17,7 @@ rule Trojan_Win32_Godzilia_A_2147717257_0
         $x_1_3 = {cf 11 bb 82 ?? ?? ?? 00 aa 00 bd ?? ?? ?? ?? ce 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

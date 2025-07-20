@@ -16,6 +16,7 @@ rule Trojan_WinNT_Jinto_A_2147645525_0
         $x_1_2 = {56 57 ff 15 ?? ?? ?? ?? 8b f8 33 f6 8d 64 24 00 6a 07 8d 04 3e 68 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 83 c4 0c 85 c0 74 ?? 46 81 fe 00 10 00 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

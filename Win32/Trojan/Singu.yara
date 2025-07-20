@@ -17,6 +17,7 @@ rule Trojan_Win32_Singu_A_2147603493_0
         $x_1_3 = {68 b4 03 00 00 ff 75 ?? ff d7 ff 75 ?? 6a 02 6a 01 68 ?? ?? 00 10 ff d3 83 c4 28 83 3d f4 ?? ?? 10 00 0f ?? ?? 00 00 00 6a 00 68 b6 03 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_Win32_Singu_B_2147603512_0
         $x_1_15 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\IEXPLORE.EXE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 5 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))

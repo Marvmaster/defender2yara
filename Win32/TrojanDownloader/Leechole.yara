@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Leechole_A_2147678581_0
         $x_1_5 = {63 6f 70 79 00 26 72 64 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or

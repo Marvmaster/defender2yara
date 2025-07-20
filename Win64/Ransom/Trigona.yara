@@ -16,6 +16,7 @@ rule Ransom_Win64_Trigona_YAA_2147904059_0
         $x_1_1 = {48 8b 45 30 48 2b 45 38 48 89 45 38 48 0f b6 45 38 88 45 2f 48 0f b6 45 2f 30 03 83 ee 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

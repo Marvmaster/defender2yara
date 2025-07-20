@@ -18,6 +18,7 @@ rule Ransom_Win32_Edicrypt_A_2147717149_0
         $x_1_4 = "Key to decrypt: " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

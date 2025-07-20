@@ -18,6 +18,7 @@ rule Trojan_Win32_WinSpywareProtect_122283_0
         $x_1_4 = "InternetOpenA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_WinSpywareProtect_122283_1
         $x_1_6 = "TVIRUSDESCFORM" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -72,6 +74,7 @@ rule Trojan_Win32_WinSpywareProtect_122283_2
         $x_2_7 = {68 74 74 70 3a 2f 2f 64 6c 2e 00 00 ff ff ff ff 05 00 00 00 2f 67 65 74 2f 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -102,6 +105,7 @@ rule Trojan_Win32_WinSpywareProtect_122283_3
         $x_1_6 = {4e 00 6f 00 52 00 75 00 6e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -131,6 +135,7 @@ rule Trojan_Win32_WinSpywareProtect_122283_4
         $x_1_6 = "This program is a new and improved approach to spyware identification and removal." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -160,6 +165,7 @@ rule Trojan_Win32_WinSpywareProtect_122283_5
         $x_1_6 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_9_*) and 2 of ($x_1_*))) or
             ((1 of ($x_11_*))) or
@@ -188,6 +194,7 @@ rule Trojan_Win32_WinSpywareProtect_122283_6
         $x_3_5 = {8b c1 99 f7 ff 42 0f ?? ?? 01 00 00 3b d7 0f ?? ?? 01 00 00 0f be 04 32 89 84 8c ?? ?? 00 00 89 4c 8c ?? 41 81 f9 00 01 00 00 7c d4}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -221,6 +228,7 @@ rule Trojan_Win32_WinSpywareProtect_122283_7
         $x_2_9 = {45 72 72 6f 72 20 6f 63 63 75 72 73 20 77 68 69 6c 65 20 64 6f 77 6e 6c 6f 61 64 69 6e 67 20 75 70 64 61 74 65 3a 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_2_*))) or
             ((2 of ($x_5_*) and 3 of ($x_2_*))) or
@@ -254,6 +262,7 @@ rule Trojan_Win32_WinSpywareProtect_122283_8
         $x_1_9 = "WinSpywareProtect installer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -285,6 +294,7 @@ rule Trojan_Win32_WinSpywareProtect_122283_9
         $x_2_8 = "http://www.avpro-labs.com/buy.html" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -322,6 +332,7 @@ rule Trojan_Win32_WinSpywareProtect_122283_10
         $x_4_14 = {53 68 69 03 00 00 50 e8 ?? ?? ?? ?? b8 69 03 00 00 83 c4 0c 39 85 ?? ?? ?? ?? 73}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

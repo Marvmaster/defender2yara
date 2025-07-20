@@ -21,6 +21,7 @@ rule Ransom_Win32_RnToad_HL_2147771795_0
         $x_1_6 = "RansomeToad.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

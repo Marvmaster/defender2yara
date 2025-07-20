@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Carberp_A_2147631028_0
         $x_1_9 = {8d 41 0c c7 01 53 4d 53 54 89 51 08 c6 04 10 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule TrojanDownloader_Win32_Carberp_C_2147634177_0
         $x_1_10 = {00 6d 79 2e 63 61 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -79,6 +81,7 @@ rule TrojanDownloader_Win32_Carberp_J_2147640834_0
         $x_1_3 = {47 6f 6f 67 6c 65 20 55 70 64 61 74 65 20 53 65 72 76 69 63 65 00 49 6e 73 74 61 6c 6c 00 53 74 61 72 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +113,7 @@ rule TrojanDownloader_Win32_Carberp_G_2147642240_0
         $x_1_12 = {5c 63 61 72 62 65 72 70 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -138,6 +142,7 @@ rule TrojanDownloader_Win32_Carberp_K_2147645351_0
         $x_1_4 = {c6 44 24 10 63 66 c7 44 24 13 03 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -161,6 +166,7 @@ rule TrojanDownloader_Win32_Carberp_S_2147650970_0
         $x_1_4 = ".ruporno.tv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +193,7 @@ rule TrojanDownloader_Win32_Carberp_A_2147651616_0
         $x_1_6 = {89 0b 83 c2 05 c6 02 c3 c7 44 24 0c 30 00 00 00 c7 44 24 10 80 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -208,6 +215,7 @@ rule TrojanDownloader_Win32_Carberp_Z_2147654394_0
         $x_1_2 = {b9 04 01 00 00 8d 68 0c c7 00 53 4d 53 54 89 48 04 89 48 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -231,6 +239,7 @@ rule TrojanDownloader_Win32_Carberp_AD_2147658558_0
         $x_1_4 = {b9 ff 09 00 00 8d bd f9 d7 ff ff f3 ab 66 ab be 00 28 00 00 56 aa 53 bf ?? ?? ?? ?? 57 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -257,6 +266,7 @@ rule TrojanDownloader_Win32_Carberp_BO_2147670727_0
         $x_10_3 = {31 ee 0f b6 ee 0f b6 2c ed ?? ?? ?? ?? c1 e5 08 31 ee 0f b6 ef 0f b6 2c ed ?? ?? ?? ?? c1 e5 18 31 ee 0f b6 ea 0f b6 2c ed ?? ?? ?? ?? 31 ef 0f b6 ec 0f b6 2c ed ?? ?? ?? ?? c1 e5 08 31 ef}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -283,6 +293,7 @@ rule TrojanDownloader_Win32_Carberp_BS_2147681930_0
         $x_10_4 = {31 ee 0f b6 ee 0f b6 2c ed ?? ?? ?? ?? c1 e5 08 31 ee 0f b6 ef 0f b6 2c ed ?? ?? ?? ?? c1 e5 18 31 ee 0f b6 ea 0f b6 2c ed ?? ?? ?? ?? 31 ef 0f b6 ec 0f b6 2c ed ?? ?? ?? ?? c1 e5 08 31 ef}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -305,6 +316,7 @@ rule TrojanDownloader_Win32_Carberp_BT_2147682628_0
         $x_5_3 = {8a 04 29 32 06 88 04 29 88 07 47 46 45 eb 0a 31 ed 89 d0 29 f0 89 44 24 24 8b 4c 24 24 01 f1 89 4c 24 10 83 f9 0f 7f}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -335,6 +347,7 @@ rule TrojanDownloader_Win32_Carberp_BU_2147683706_0
         $x_1_8 = "installbk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -365,6 +378,7 @@ rule TrojanDownloader_Win32_Carberp_BV_2147724976_0
         $x_1_4 = {6a 40 68 00 30 00 00 68 ?? ?? ?? 00 56 ff 37 ff 15 ?? ?? ?? 00 89 45 08 85 c0 0f 84 cc 00 00 00 8d 85 ?? ?? ?? ff 50 ff 77 04 ff 15 ?? ?? ?? 00 85 c0 79 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -388,6 +402,7 @@ rule TrojanDownloader_Win32_Carberp_BW_2147724979_0
         $x_1_3 = {76 6e 63 64 6c 6c 33 32 2e 64 6c 6c 00 56 6e 63 53 74 61 72 74 53 65 72 76 65 72 00 56 6e 63 53 74 6f 70 53 65 72 76 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

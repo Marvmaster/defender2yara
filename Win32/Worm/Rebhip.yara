@@ -22,6 +22,7 @@ rule Worm_Win32_Rebhip_A_2147629622_0
         $x_1_8 = "IEPASS.abc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*))) or
             (all of ($x*))
@@ -51,6 +52,7 @@ rule Worm_Win32_Rebhip_A_2147629622_1
         $x_1_7 = {75 48 6a 40 68 00 30 00 00 68 f4 01 00 00 6a 00 53 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Worm_Win32_Rebhip_F_2147636352_0
         $x_2_7 = "AeonHackRunPE" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -103,6 +106,7 @@ rule Worm_Win32_Rebhip_I_2147640259_0
         $x_4_1 = "borlo 1.9.7 src\\WindowsApplication1\\obj\\Debug\\Winlogon.pdb" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule Worm_Win32_Rebhip_V_2147694230_0
         $x_5_5 = {8a 54 1a ff 80 f2 bc 88 54 18 ff 43 4e 75 e6}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -155,6 +160,7 @@ rule Worm_Win32_Rebhip_W_2147694566_0
         $x_1_6 = {72 65 63 65 62 65 72 63 6f 6e 66 69 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -181,6 +187,7 @@ rule Worm_Win32_Rebhip_W_2147694597_0
         $x_1_6 = {55 6e 69 74 50 65 72 73 69 73 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -206,6 +213,7 @@ rule Worm_Win32_Rebhip_X_2147694819_0
         $x_1_6 = "XX-XX-XX-XX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -227,6 +235,7 @@ rule Worm_Win32_Rebhip_Y_2147695419_0
         $x_1_2 = "frmLogin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -257,6 +266,7 @@ rule Worm_Win32_Rebhip_H_2147697157_0
         $x_1_10 = "_fmcheckrar|" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

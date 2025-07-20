@@ -16,6 +16,7 @@ rule Trojan_Win64_Necurs_A_162164_0
         $x_1_2 = {48 83 c9 ff 33 c0 48 8b fd ff ?? 66 f2 af 48 f7 d1 48 8d 6c 4d 00 66 44 39 65 00 75 ?? 48 8b 0d ?? ?? ?? ?? 49 3b cc 74 ?? 33 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

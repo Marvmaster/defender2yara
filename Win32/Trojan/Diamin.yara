@@ -19,6 +19,7 @@ rule Trojan_Win32_Diamin_F_2147603539_0
         $x_11_5 = {6f 72 65 00 [0-16] 65 78 70 6c [0-32] 6f 76 65 72 2e 20 57 6f 75 6c 64 20 79 6f 75 20 6c 69 6b 65 20 74 6f 20 63 6f 6e 6e 65 63 74 20 61 67 61 69 6e}  //weight: 11, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_2_*))) or
             ((1 of ($x_11_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule Trojan_Win32_Diamin_G_2147604943_0
         $x_1_8 = "ti, scegliere \"No\" per accedere direttamente." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_2_*))) or

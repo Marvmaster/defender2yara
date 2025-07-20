@@ -24,6 +24,7 @@ rule Ransom_MSIL_JigsawLocker_A_2147710637_0
         $x_1_10 = {67 65 74 5f 4a 69 67 73 61 77 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -68,6 +69,7 @@ rule Ransom_MSIL_JigsawLocker_B_2147721602_0
         $x_1_25 = "You have to send $" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -97,6 +99,7 @@ rule Ransom_MSIL_JigsawLocker_C_2147733286_0
         $x_1_4 = "NotTxtTest.nottxt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -121,6 +124,7 @@ rule Ransom_MSIL_JigsawLocker_SBR_2147755534_0
         $x_1_4 = "ZW5jcnlwdGVkIHlvdXIgcGVyc29uYWwgZmlsZXM" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +152,7 @@ rule Ransom_MSIL_JigsawLocker_DA_2147775310_0
         $x_3_7 = "your own risk" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_4_*) and 2 of ($x_3_*))) or
             ((1 of ($x_10_*) and 2 of ($x_4_*) and 2 of ($x_3_*))) or
@@ -180,6 +185,7 @@ rule Ransom_MSIL_JigsawLocker_DB_2147778639_0
         $x_1_4 = "cats" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +209,7 @@ rule Ransom_MSIL_JigsawLocker_PA_2147779917_0
         $x_1_3 = {fe 0c 08 00 fe 0c 0a 00 8f ?? 00 00 01 25 71 ?? 00 00 01 fe 0c 02 00 d2 61 d2 81 ?? 00 00 01 fe 0c 0a 00 20 ff 00 00 00 5f 3a 14 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -226,6 +233,7 @@ rule Ransom_MSIL_JigsawLocker_PB_2147781480_0
         $x_1_3 = "PrimoPDF.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

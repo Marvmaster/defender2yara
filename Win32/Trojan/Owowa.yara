@@ -26,6 +26,7 @@ rule Trojan_Win32_Owowa_B_2147807913_0
         $x_4_12 = "jFuLIXpzRdateYHoVwMlfc" wide //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_2_*))) or
             ((1 of ($x_4_*) and 5 of ($x_2_*))) or

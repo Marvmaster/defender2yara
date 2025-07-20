@@ -21,6 +21,7 @@ rule Ransom_Win64_Weelsof_A_2147667201_0
         $x_6_7 = {48 8b d9 c7 40 ?? 75 00 73 00 c7 40 ?? 65 00 72 00 c7 40 ?? 33 00 32 00 c7 40 ?? 2e 00 64 00 c7 40 ?? 6c 00 6c 00 48 83 79}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 4 of ($x_1_*))) or
             (all of ($x*))

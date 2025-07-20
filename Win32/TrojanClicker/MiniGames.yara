@@ -22,6 +22,7 @@ rule TrojanClicker_Win32_MiniGames_A_2147642140_0
         $x_1_8 = "\\qqmusic.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or

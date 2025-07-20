@@ -18,6 +18,7 @@ rule TrojanClicker_Win32_Erbon_A_2147691001_0
         $x_3_4 = "http://c.l7l73.net.cn/test/err.asp?alerr=sub:timer3__errnb:" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule VirTool_Win64_Nemangelz_A_2147907202_0
         $x_1_3 = {4d 8b 84 24 e8 08 00 00 48 c7 44 24 20 25 00 00 00 [0-20] 48 89 f1 4c 89 ea ?? ?? ?? ?? ?? 48 89 f1 ?? ?? ?? ?? ?? 48 89 c2 49 89 84 24 10 1f 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

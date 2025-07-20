@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Banker_2147628005_0
         $x_1_3 = {63 6d 64 20 2f 6b 20 63 3a 5c 78 78 [0-6] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_Banker_D_2147630288_0
         $x_1_6 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanDownloader_Win32_Banker_G_2147647569_0
         $x_1_3 = {07 00 00 00 75 72 6c 6d 6f 6e 00 00 13 00 00 00 55 52 4c 44 6f 77 6e 6c 6f 61 64 54 6f 46 69 6c 65 41 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule TrojanDownloader_Win32_Banker_H_2147647875_0
         $x_1_5 = "ipadconf.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule TrojanDownloader_Win32_Banker_J_2147649677_0
         $x_1_4 = "208.115.238.109" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule TrojanDownloader_Win32_Banker_J_2147649677_1
         $x_1_4 = {72 65 67 73 76 72 33 32 20 2f 73 20 90 02 0f 5c 57 69 6e 65 74 77 6f 72 6b 2e 64 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -159,6 +165,7 @@ rule TrojanDownloader_Win32_Banker_K_2147649718_0
         $x_1_3 = "level=\"requireAdministrator\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule TrojanDownloader_Win32_Banker_N_2147653523_0
         $x_1_7 = "text/html, */*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -214,6 +222,7 @@ rule TrojanDownloader_Win32_Banker_R_2147658079_0
         $x_1_4 = {8b 45 f0 c1 e0 06 03 d8 89 5d f0 83 c7 06 83 ff 08 7c 48 83 ef 08 8b cf 8b 5d f0 d3 eb 8b cf b8 01 00 00 00 d3 e0 50 8b 45 f0 5a 8b ca 99 f7 f9 89 55 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +243,7 @@ rule TrojanDownloader_Win32_Banker_AC_2147708177_0
         $x_1_1 = {43 59 76 61 52 36 6d [0-64] 2f 69 6e 69 63 69 6f [0-128] 52 75 6e 44 6c 6c 33 32 2e 65 78 65 [0-64] 2c 6f 6e 6c 69 66 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

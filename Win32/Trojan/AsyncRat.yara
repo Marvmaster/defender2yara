@@ -18,6 +18,7 @@ rule Trojan_Win32_AsyncRat_PA_2147753638_0
         $x_1_3 = "a2V5TG9nZ2Vy" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_AsyncRat_MA_2147816622_0
         $x_10_3 = {82 8c 30 ab 9c ca 96 93 19 b6 34 10 a4 89 6c 44 a1 3e fb 30 ad a4 ad af}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_AsyncRat_MA_2147816622_1
         $x_1_4 = "Muiucuruousuoufutu" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_AsyncRat_MA_2147816622_2
         $x_1_3 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Win32_AsyncRat_RPX_2147841717_0
         $x_1_1 = {ba bf c0 f6 2a 30 10 40 49 0f 85 f6 ff ff ff e9 04 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Trojan_Win32_AsyncRat_RPX_2147841717_1
         $x_1_1 = {6a 40 68 00 10 00 00 ff 74 24 10 6a 00 ff 15 ?? ?? ?? ?? 8b f0 85 f6 74 21 ff 74 24 08 ff 74 24 10 56 e8 1f 12 00 00 83 c4 0c ff d6 68 00 80 00 00 6a 00 56 ff 15 ?? ?? ?? ?? ff 74 24 0c e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule Trojan_Win32_AsyncRat_RPX_2147841717_2
         $x_1_4 = "Garbage1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule Trojan_Win32_AsyncRat_RPX_2147841717_3
         $x_1_11 = "fopen_s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +214,7 @@ rule Trojan_Win32_AsyncRat_RPZ_2147852302_0
         $x_1_1 = {ff d6 ff b5 98 fb ff ff ff d6 0f 57 c0 c7 85 ec fb ff ff 00 00 00 00 8d 95 c0 fb ff ff 66 0f d6 85 e4 fb ff ff 8d 8d e4 fb ff ff e8 ?? ?? ?? ?? c6 45 fc 04 8b 85 e8 fb ff ff 2b 85 e4 fb ff ff 6a 40 68 00 10 00 00 50 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -229,6 +238,7 @@ rule Trojan_Win32_AsyncRat_RPZ_2147852302_1
         $x_1_3 = "Client.bin" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -273,6 +283,7 @@ rule Trojan_Win32_AsyncRat_ASA_2147931668_0
         $x_1_1 = {53 57 83 c4 04 81 f3 10 0e 01 00 81 f3 0d 27 00 00 81 eb 58 52 00 00 5b 56 81 ce ea 17 00 00 5e 52 52 83 c4 04 81 ea e0 4e 01 00 81 ca 45 db 00 00 5a 51 81 c9 f8 99 00 00 81 e9 e4 5e 00 00 59 52 83 ec 14 e8 ?? ?? ?? ?? 00 37 32 50 43 45 46 3a 48 37 32 83 c4 18 81 c2 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +310,7 @@ rule Trojan_Win32_AsyncRat_Z_2147936647_0
         $x_1_6 = "get_SslClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -327,6 +339,7 @@ rule Trojan_Win32_AsyncRat_Z_2147936647_1
         $x_1_8 = "timeout" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

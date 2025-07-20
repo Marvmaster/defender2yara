@@ -16,6 +16,7 @@ rule Trojan_Win32_Filecoder_DSK_2147743920_0
         $x_2_1 = {8a 54 24 15 8a 44 24 17 0a 44 24 13 88 14 3e 83 25 ?? ?? ?? ?? 00 8a 54 24 16 88 54 3e 01 81 3d ?? ?? ?? ?? d8 01 00 00 88 44 24 17 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Filecoder_NFV_2147783316_0
         $x_2_2 = {81 f8 00 08 00 00 b8 00 00 00 00 0f 9f c0 85 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Filecoder_CH_2147807559_0
         $x_1_7 = "SHGetSpecialFolderPathW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_Filecoder_RPR_2147807728_0
         $x_1_1 = {6a 00 6a 00 6a 00 6a 00 ff 15 ?? ?? ?? ?? 8d 54 24 40 52 6a 00 ff 15 ?? ?? ?? ?? 33 c0 8d 54 24 3c 52 50 50 50 50 89 44 24 24 ff 15 ?? ?? ?? ?? 6a 00 6a 00 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_Win32_Filecoder_RPX_2147812201_0
         $x_1_1 = {ba 25 00 00 00 8a 06 90 32 c2 90 88 07 90 46 90 47 90 e9 c6 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Trojan_Win32_Filecoder_RPY_2147812202_0
         $x_1_1 = {8a 06 32 c2 88 07 46 47 49 83 f9 00 e9 dc ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +155,7 @@ rule Trojan_Win32_Filecoder_RPJ_2147812423_0
         $x_1_1 = {ba 97 00 00 00 8a 06 90 32 c2 90 88 07 90 46 90 47 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +177,7 @@ rule Trojan_Win32_Filecoder_ARA_2147847474_0
         $x_2_1 = {99 f7 fd 8d 42 7f 99 f7 fd 88 54 34 27 46 83 fe 38 72 dc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +199,7 @@ rule Trojan_Win32_Filecoder_ARA_2147847474_1
         $x_2_1 = {51 52 8b 4d 08 8b 55 0c 81 31 ?? ?? ?? ?? f7 11 83 c1 04 4a 75 f2 5a 59}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +221,7 @@ rule Trojan_Win32_Filecoder_ARA_2147847474_2
         $x_2_1 = {32 04 33 f7 d0 88 04 33 83 c6 01 8b 44 24 18 83 d7 00 31 fa 31 f0 09 c2 75 be}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -235,6 +245,7 @@ rule Trojan_Win32_Filecoder_ARA_2147847474_3
         $x_2_3 = "dollars in Bitcoin" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -258,6 +269,7 @@ rule Trojan_Win32_Filecoder_ARA_2147847474_4
         $x_2_3 = "SELECT * FROM SystemRestore" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -281,6 +293,7 @@ rule Trojan_Win32_Filecoder_ARA_2147847474_5
         $x_2_3 = "RansomWar_EOF" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -304,6 +317,7 @@ rule Trojan_Win32_Filecoder_ARA_2147847474_6
         $x_2_3 = "tCryptoPP RNG" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -328,6 +342,7 @@ rule Trojan_Win32_Filecoder_ARA_2147847474_7
         $x_2_4 = "Vyper Ransomware" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -352,6 +367,7 @@ rule Trojan_Win32_Filecoder_ARA_2147847474_8
         $x_2_4 = "vssadmin.exe Delete Shadows /All /Quiet" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -377,6 +393,7 @@ rule Trojan_Win32_Filecoder_ARA_2147847474_9
         $x_2_5 = "EncryptHiddenDirectories" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -399,6 +416,7 @@ rule Trojan_Win32_Filecoder_ARA_2147847474_10
         $x_2_2 = "https://aazsbsgya565vlu2c6bzy6yfiebkcbtvvcytvolt33s77xypi7nypxyd.onion/" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -423,6 +441,7 @@ rule Trojan_Win32_Filecoder_VHO_2147896094_0
         $x_1_4 = "Ldeokp Mnzfd Psfrweso" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -449,6 +468,7 @@ rule Trojan_Win32_Filecoder_RSD_2147905060_0
         $x_5_6 = "lolol" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

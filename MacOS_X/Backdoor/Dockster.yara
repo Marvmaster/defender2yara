@@ -19,6 +19,7 @@ rule Backdoor_MacOS_X_Dockster_A_2147672237_0
         $x_1_5 = {2f 76 61 72 2f 74 6d 70 2f [0-21] 2e 6c 63 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (3 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Batload_K_2147834534_0
         $x_1_3 = "avolkov\\x64\\Release Garb\\avolkov.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

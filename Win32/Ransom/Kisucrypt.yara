@@ -19,6 +19,7 @@ rule Ransom_Win32_Kisucrypt_A_2147717158_0
         $x_100_5 = {8a 06 46 32 45 f7 50 56 ff 45 f8 8b 75 f8 8a 06 46 8b 5d fc 39 5d f8 75 0c 8b 55 10 89 55 f8 8b 75 f8 8a 06 46 88 45 f7 5e 58 88 07 47 49 83 f9 00 75 cd}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule Ransom_Win32_Kisucrypt_A_2147717158_1
         $x_1_9 = "MESSAGE:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 2 of ($x_1_*))) or
             ((4 of ($x_3_*))) or

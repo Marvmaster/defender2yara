@@ -18,6 +18,7 @@ rule DDoS_Win32_MSNFlood_C_2147620185_0
         $x_1_4 = {2d 20 43 6f 6e 76 65 72 73 61 00 00 6c 6f 6c 6c 6c 6c 6c 20 68 74 74 70 3a 2f 2f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

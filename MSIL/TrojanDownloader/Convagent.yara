@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Convagent_EALJ_2147932165_0
         $x_5_1 = {00 06 08 72 35 00 00 70 07 72 35 00 00 70 28 32 00 00 0a 6f 33 00 00 0a 28 34 00 00 0a 9d 00 08 17 58 0c 08 03 fe 04 0d 09 2d d5}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -72,6 +72,7 @@ rule TrojanSpy_AndroidOS_Asacub_A_2147817364_0
         $x_1_1 = {80 c6 d0 80 fe 0a 83 d7 00 8a 74 08 02 41 84 f6 [0-5] 89 46 10 89 e3 83 c7 0f 83 e7 f0 29 fb 89 5e 04 89 dc 85 c9 [0-5] 31 ff 31 db [0-5] 90 8b 46 10 0f b6 54 38 01 47 88 d6 80 c6 d0 80 fe 09 [0-5] 89 d0 89 da 8b 5e 04 88 04 13 89 d3 43 39 cf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -147,6 +147,7 @@ rule Trojan_AndroidOS_Wroba_D_2147852239_0
         $x_1_3 = "fork child process" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

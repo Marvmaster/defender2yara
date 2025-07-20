@@ -15,6 +15,7 @@ rule Trojan_Win32_Storark_A_2147599277_0
         $x_1_1 = {bb 02 00 00 00 eb 3e 8a 44 1c 20 88 04 24 8a 44 1c 21 88 44 24 01 c6 44 24 02 00 8b c4 e8 ?? ?? ff ff 8b d7 81 f2 9e 00 00 00 33 c2 88 04 24 c6 44 24 01 00 54 8d 84 24 24 04 00 00 50 e8 ?? ?? ff ff 83 c3 02 8b c6 83 e8 02 3b d8 7e b9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -35,6 +36,7 @@ rule Trojan_Win32_Storark_B_2147600460_0
         $x_1_1 = {bb 02 00 00 00 eb 42 8a 44 1c 24 88 44 24 04 8a 44 1c 25 88 44 24 05 c6 44 24 06 00 8d 44 24 04 e8 ?? ?? ff ff 8b d5 33 d7 33 c2 88 44 24 04 c6 44 24 05 00 8d 44 24 04 50 8d 84 24 28 04 00 00 50 e8 ?? ?? ff ff 83 c3 02 8b c6 83 e8 02 3b d8 7e b5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Storark_D_2147604997_0
         $x_1_10 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_3_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -97,6 +100,7 @@ rule Trojan_Win32_Storark_C_2147605000_0
         $x_1_6 = {53 59 53 54 45 4d 5c 43 75 72 72 65 6e 74 43 6f 6e 74 72 6f 6c 53 65 74 5c 53 65 72 76 69 63 65 73 5c 53 68 61 72 65 64 41 63 63 65 73 73 5c 50 61 72 61 6d 65 74 65 72 73 5c 46 69 72 65 77 61 6c 6c 50 6f 6c 69 63 79 5c 53 74 61 6e 64 61 72 64 50 72 6f 66 69 6c 65 00 00 00 00 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule Trojan_Win32_Storark_A_2147607384_0
         $x_1_5 = {40 65 63 68 6f 20 6f 66 66 0d 0a 3a 4c 6f 6f 70 0d 0a 61 74 74 72 69 62 20 22 00 00 22 20 2d 72 20 2d 61 20 2d 73 20 2d 68 0d 0a 64 65 6c 20 22 00 00 00 00 22 0d 0a 69 66 20 65 78 69 73 74 20 22 00 00 00 22 20 67 6f 74 6f 20 4c 6f 6f 70 0d 0a 64 65 6c 20 25 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

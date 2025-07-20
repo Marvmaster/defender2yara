@@ -22,6 +22,7 @@ rule Trojan_Win32_Nachhat_A_2147621190_0
         $x_1_8 = "outpost.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

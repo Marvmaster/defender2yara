@@ -27,6 +27,7 @@ rule TrojanDownloader_MSIL_SnakeKeylogger_G_2147824429_0
         $x_1_12 = "GetMethod" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 10 of ($x_1_*))) or
             (all of ($x*))
@@ -56,6 +57,7 @@ rule TrojanDownloader_MSIL_SnakeKeylogger_I_2147831652_0
         $x_1_6 = "get_ASCII" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +81,7 @@ rule TrojanDownloader_MSIL_SnakeKeylogger_H_2147844621_0
         $x_1_3 = {00 00 0a 74 0a 00 00 01 ?? 3a ?? 00 00 00 26 06 38 ?? 00 00 00 0a 38 ?? ff ff ff 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule TrojanDownloader_MSIL_SnakeKeylogger_CXFP_2147852025_0
         $x_1_1 = {77 00 77 00 77 00 2e 00 6c 00 6f 00 67 00 70 00 61 00 73 00 74 00 61 00 2e 00 63 00 6f 00 6d 00 2f 00 70 00 61 00 73 00 74 00 65 00 2f 00 72 00 61 00 77 00 2f 00 62 00 33 00 66 00 65 00 36 00 31 00 63 00 63 00 2d 00 65 00 35 00 63 00 63 00 2d 00 34 00 62 00 34 00 63 00 2d 00 39 00 66 00 33 00 33 00 2d 00 35 00 32 00 37 00 34 00 64 00 63 00 30 00 66 00 37 00 35 00 36 00 66 00 2e 00 74 00 78 00 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

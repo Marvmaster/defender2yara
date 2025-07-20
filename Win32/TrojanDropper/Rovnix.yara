@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Rovnix_A_2147649546_0
         $x_1_3 = {66 3d 46 4a 74 0d 83 c6 10 0f b7 06 66 85 c0 75 ef}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDropper_Win32_Rovnix_B_2147653874_0
         $x_1_2 = {8b 47 3c 03 c7 0f b7 48 06 0f b7 50 14 6b c9 28 03 c8 8d 74 0a 40 eb 09 66 3d 46 4a 74 0d 83 c6 10 0f b7 06 66 85 c0 75 ef}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule TrojanDropper_Win32_Rovnix_C_2147654392_0
         $x_1_2 = {0f b7 88 fe 01 00 00 81 f9 55 aa 00 00 74 05 e9 ?? ?? ?? ?? 8b 55 ?? 81 c2 be 01 00 00 89 55 ?? c7 45 ?? 00 00 00 00 83 7d ?? 04 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule TrojanDropper_Win32_Rovnix_D_2147657307_0
         $x_1_2 = {eb 09 66 3d 46 4a 74 0d 83 c6 14 0f b7 06 66 85 c0 75 ef}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule TrojanDropper_Win32_Rovnix_E_2147657830_0
         $x_1_5 = {3d 46 4a 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -130,6 +135,7 @@ rule TrojanDropper_Win32_Rovnix_F_2147657831_0
         $x_1_4 = {68 6f fe e2 62 6a 05 6a 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -151,6 +157,7 @@ rule TrojanDropper_Win32_Rovnix_G_2147659271_0
         $x_1_2 = {8b 45 9c 83 c0 08 89 45 98 ff 75 80 ff 75 84 ff 75 88 ff 75 8c ff 35 e8 c0 42 00 ff 35 e4 c0 42 00 ff 75 98 ff 55 98}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +180,7 @@ rule TrojanDropper_Win32_Rovnix_H_2147680142_0
         $x_1_3 = {81 3c 31 77 77 77 77 74 16 41 3b cf 72 f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -196,6 +204,7 @@ rule TrojanDropper_Win32_Rovnix_I_2147682280_0
         $x_1_4 = {ba 55 aa 00 00 66 39 93 fe 01 00 00 75 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -226,6 +235,7 @@ rule TrojanDropper_Win32_Rovnix_J_2147683319_0
         $x_3_7 = {8b 04 b3 03 c2 33 47 0a 0f b6 ca d3 c0 46 4a 89 44 b3 fc 3b 75 08 72 e8}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -253,6 +263,7 @@ rule TrojanDropper_Win32_Rovnix_L_2147684898_0
         $x_1_3 = {0f b7 88 fe 01 00 00 81 f9 55 aa 00 00 74 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -281,6 +292,7 @@ rule TrojanDropper_Win32_Rovnix_P_2147690645_0
         $x_1_6 = "Global\\BD%s%u" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

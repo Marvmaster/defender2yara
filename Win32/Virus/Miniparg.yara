@@ -17,6 +17,7 @@ rule Virus_Win32_Miniparg_A_2147600238_0
         $x_1_3 = {51 8d 54 24 2c 68 ?? ?? ?? ?? 52 e8 ?? ?? 00 00 83 c4 20 8d 44 24 14 6a 00 68 82 00 00 00 6a 02 6a 00 6a 02 68 00 00 00 40 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

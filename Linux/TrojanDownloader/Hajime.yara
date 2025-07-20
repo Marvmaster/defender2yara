@@ -21,6 +21,7 @@ rule TrojanDownloader_Linux_Hajime_A_2147794758_0
         $x_1_6 = {ff ff 06 28 57 10 02 24 0c 01 01 01 ff ff a2 af ff ff a4 8f ff ff d0 04 00 00 00 00 58 00 e5 27 ef ff 0c 24 27 30 80 01 4a 10 02 24 0c 01 01 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_MSIL_Moloterae_B_2147684220_0
         $x_1_3 = {45 78 74 52 65 73 65 74 2e 65 78 65 00 46 6f 72 6d 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Moloterae_C_2147684221_0
         $x_1_3 = {48 6f 73 74 2e 65 78 65 00 46 6f 72 6d 31 00 77 70 75 64 74 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_Moloterae_D_2147684222_0
         $x_1_3 = {1b 5c 00 45 00 78 00 74 00 52 00 65 00 73 00 65 00 74 00 2e 00 65 00 78 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_MSIL_Moloterae_A_2147684224_0
         $x_1_3 = "mailRuSputnik.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_MSIL_Moloterae_E_2147684336_0
         $x_1_3 = {53 65 61 61 63 68 00 4e 61 69 67 65 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_MSIL_Moloterae_F_2147684337_0
         $x_1_7 = {76 5f 4f 6d 6e 69 62 6f 78 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

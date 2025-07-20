@@ -20,6 +20,7 @@ rule Ransom_Win32_Cerber_A_2147709768_0
         $x_3_6 = {33 d2 f7 f7 50 ff 35 ?? ?? ?? ?? 8d [0-5] 68 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 83 c4 18 6a 40}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -55,6 +56,7 @@ rule Ransom_Win32_Cerber_A_2147709768_1
         $n_2_10 = "Local private.key file found" ascii //weight: -2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -240,6 +242,7 @@ rule Ransom_Win32_Cerber_B_2147712038_0
         $x_1_4 = {66 69 6c 65 5f 65 78 74 65 6e 73 69 6f 6e [0-8] 66 69 6c 65 5f 62 6f 64 79 [0-8] 2e 76 62 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -264,6 +267,7 @@ rule Ransom_Win32_Cerber_B_2147712038_1
         $x_1_5 = {25 00 73 00 5c 00 76 00 73 00 73 00 61 00 64 00 6d 00 69 00 6e 00 2e 00 65 00 78 00 65 00 00 00 64 00 65 00 6c 00 65 00 74 00 65 00 20 00 73 00 68 00 61 00 64 00 6f 00 77 00 73 00 20 00 2f 00 61 00 6c 00 6c 00 20 00 2f 00 71 00 75 00 69 00 65 00 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -436,6 +440,7 @@ rule Ransom_Win32_Cerber_D_2147716869_0
         $x_1_4 = "<h3>C E R B E R&nbsp;&nbsp;&nbsp;R A N S O M W A R E</h3>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -460,6 +465,7 @@ rule Ransom_Win32_Cerber_E_2147717192_0
         $x_10_5 = "CryptDecodeObjectEx" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -482,6 +488,7 @@ rule Ransom_Win32_Cerber_F_2147718559_0
         $x_1_3 = {75 02 0f 31 8b 15 ?? ?? ?? ?? 6b f6 64 8b c8 c1 e1 0b 33 c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -505,6 +512,7 @@ rule Ransom_Win32_Cerber_G_2147719300_0
         $n_1_4 = "Local private.key file found" ascii //weight: -1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -535,6 +543,7 @@ rule Ransom_Win32_Cerber_H_2147719345_0
         $x_1_10 = {8d 46 f8 8b 10 50 b9 ef be ad de}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -560,6 +569,7 @@ rule Ransom_Win32_Cerber_I_2147720568_0
         $x_1_2 = {0f 05 48 81 c4 00 01 00 00 e8 00 00 00 00 c7 44 24 04 23 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -591,6 +601,7 @@ rule Ransom_Win32_Cerber_J_2147720613_0
         $x_1_12 = {69 c0 6b ca eb 85 8b c8 c1 e9 0d 33 c8 69 c9 35 ae b2 c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -641,6 +652,7 @@ rule Ransom_Win32_Cerber_J_2147720613_1
         $x_1_26 = "(\"en, ar, zh, nl, fr, de, it, ja, ko, pl, pt, es, tr\".indexOf(nav_lang)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -781,6 +793,7 @@ rule Ransom_Win32_Cerber_K_2147721638_0
         $x_2_34 = "PCFET0NUWVBFIGh0bWw+DQo8aHRtbCBsYW5nPSJlbiI+DQo8aGVhZD4NCgk8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+DQoJPHRpdGxlP" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -874,6 +887,7 @@ rule Ransom_Win32_Cerber_L_2147722430_0
         $x_1_3 = {2b ca c1 e1 ?? d3 e8 69 c0 ?? ?? ?? ?? c1 c0 ?? 69 c0 ?? ?? ?? ?? 33 f0 33 74 24 ?? 8b c6 c1 e8 ?? 33 c6 69 c0 ?? ?? ?? ?? 8b c8 c1 e9 ?? 33 c8 69 c9 ?? ?? ?? ?? 8b c1 c1 e8 ?? 33 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -896,6 +910,7 @@ rule Ransom_Win32_Cerber_O_2147722798_0
         $x_1_2 = {68 d7 a3 a4 2a 6a 0c 68 ?? ?? ?? 00 e8 ?? ?? ?? 00 83 c4 0c 50 68 ?? ?? ?? 00 ff 15 ?? ?? ?? 00 83 c4 0c 68 a5 de a6 b4 6a 18 68 ?? ?? ?? 00 e8 ?? ?? ?? 00 83 c4 0c 50 e8 ?? ?? ?? ff 59 68 c0 18 5a fc 6a 05 68 ?? ?? ?? 00 e8 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -922,6 +937,7 @@ rule Ransom_Win32_Cerber_2147766250_0
         $x_1_6 = {8a d0 80 ca 7a 66 0f be ca 66 39 0d ?? ?? ?? ?? 7c 30 0f bf 15 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? c1 e2 a7 83 c9 27 3b d1 7d 19 a0 ?? ?? ?? ?? 8a 0d ?? ?? ?? ?? 32 c1 a2 96 10 01 10 eb 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -943,6 +959,7 @@ rule Ransom_Win32_Cerber_ACB_2147850637_0
         $x_1_1 = {8b d8 3b f2 74 ?? 33 c0 39 55 ?? 76 ?? 0f b6 3c 32 8b c8 c1 e1 03 d3 e7 33 df 42 40 83 e0 03 3b 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -964,6 +981,7 @@ rule Ransom_Win32_Cerber_YAA_2147904414_0
         $x_1_1 = {8b 85 ec fb ff ff 03 45 f8 0f b6 08 0f b6 95 f2 fb ff ff 33 ca 8b 85 ec fb ff ff 03 45 f8 88 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -985,6 +1003,7 @@ rule Ransom_Win32_Cerber_YAB_2147905900_0
         $x_1_1 = {8a 84 95 d8 fb ff ff 88 85 ?? ?? ?? ?? 8b 4d 08 03 4d dc 0f b6 11 0f b6 85 93 fb ff ff 33 d0 8b 4d 08 03 4d dc 88 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1006,6 +1025,7 @@ rule Ransom_Win32_Cerber_YAC_2147913547_0
         $x_1_1 = {89 55 9c 8b 45 9c 69 c0 30 09 00 00 89 45 9c 8b 4d f8 33 4d f0 83 c1 02 89 4d f8 8b 55 9c 81 ea 30 09 00 00 89 55 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1028,6 +1048,7 @@ rule Ransom_Win32_Cerber_PAFY_2147927900_0
         $x_2_2 = {0f be f4 0f bd f1 84 e5 80 ee 11 b2 9a 2a f4 8a f4 80 ca d2 0f c0 f2 b6 56 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1050,6 +1071,7 @@ rule Ransom_Win32_Cerber_YAD_2147932627_0
         $x_10_2 = {33 3d 60 96 40 00 03 3d 18 96 40 00 8b 55 08 f7 1d ?? ?? ?? ?? 03 f3 8b 45 0c 89 4d ec 8b 0d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1071,6 +1093,7 @@ rule Ransom_Win32_Cerber_ARA_2147940934_0
         $x_2_1 = {8b 4c 24 14 8a 0c 0a 03 d8 a1 6c 06 44 00 32 cb 83 e8 01 88 4c 24 13 75 21}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

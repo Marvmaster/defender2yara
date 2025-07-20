@@ -19,6 +19,7 @@ rule Worm_Linux_Ramen_DS_2147782921_0
         $x_1_4 = "gzip -d ramen.tgz;tar -xvf ramen.tar;./start.sh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Worm_Linux_Ramen_A_2147819259_0
         $x_1_6 = "rm -fr 1i0n" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

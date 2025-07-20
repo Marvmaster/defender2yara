@@ -17,6 +17,7 @@ rule Trojan_Win32_Miep_A_2147655010_0
         $x_1_3 = {6a 1a 5e f7 fe a1 [0-4] 80 c2 61 88 54 08 07 a1 [0-4] 88 54 08 07 41 83 f9 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

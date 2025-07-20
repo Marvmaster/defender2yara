@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Zamelcat_A_169464_0
         $x_1_2 = {6a 03 e8 80 ff ff ff 50 8d 85 ?? ?? ff ff 50 68 ?? ?? ?? ?? 8d 85 ?? ?? ff ff 56 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_Win32_Zamelcat_D_178030_0
         $x_1_2 = {3a 36 2f 2e 78 2f 05 00 2e 65 78 65 00 [0-16] 25 73 5c 25 73 2e 65 78 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

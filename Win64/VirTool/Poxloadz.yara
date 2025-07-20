@@ -19,6 +19,7 @@ rule VirTool_Win64_Poxloadz_A_2147844667_0
         $x_1_4 = {48 89 d1 48 31 d2 e8 ?? ?? ?? ?? ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

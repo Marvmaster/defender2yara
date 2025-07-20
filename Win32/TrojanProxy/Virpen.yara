@@ -18,6 +18,7 @@ rule TrojanProxy_Win32_Virpen_A_2147655124_0
         $x_1_4 = {68 49 76 45 00 8d 45 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

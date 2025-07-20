@@ -20,6 +20,7 @@ rule Backdoor_Linux_Botenago_B_2147809957_0
         $x_1_5 = "main.infectFunctionMagic" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

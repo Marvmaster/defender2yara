@@ -17,6 +17,7 @@ rule PWS_MSIL_Stimilini_C_2147690490_0
         $x_1_3 = {00 67 65 74 5f 73 74 65 61 6d 49 44 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule PWS_MSIL_Stimilini_C_2147690490_1
         $x_1_6 = "get_access_token" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -69,6 +71,7 @@ rule PWS_MSIL_Stimilini_B_2147690492_0
         $x_1_5 = {47 65 74 53 74 65 61 6d 50 61 74 68 00 53 65 6e 64 46 69 6c 65 73 00 63 6c 69 65 6e 74 5f 55 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule PWS_MSIL_Stimilini_D_2147691871_0
         $x_20_6 = {2f 00 53 00 74 00 65 00 61 00 6d 00 2e 00 65 00 78 00 65 00 [0-8] 46 00 69 00 6c 00 65 00 20 00 69 00 73 00 20 00 63 00 6f 00 72 00 72 00 75 00 70 00 74 00 65 00 64 00}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -124,6 +128,7 @@ rule PWS_MSIL_Stimilini_E_2147692503_0
         $x_6_8 = "(c) 20012-2015 Game Platform" ascii //weight: 6
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -156,6 +161,7 @@ rule PWS_MSIL_Stimilini_E_2147692503_1
         $x_1_6 = "http://5.39.124.175/files/module.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -181,6 +187,7 @@ rule PWS_MSIL_Stimilini_F_2147692617_0
         $x_1_6 = "&tradeoffermessage=&json_tradeoffer=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -206,6 +213,7 @@ rule PWS_MSIL_Stimilini_F_2147692617_1
         $x_1_6 = "acceptAllIncomingTrades" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -231,6 +239,7 @@ rule PWS_MSIL_Stimilini_F_2147692617_2
         $x_1_3 = "_steam.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -254,6 +263,7 @@ rule PWS_MSIL_Stimilini_I_2147694145_0
         $x_1_4 = "ValveDataFormatParser" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -281,6 +291,7 @@ rule PWS_MSIL_Stimilini_J_2147694146_0
         $x_1_5 = "Adding injection settings ..." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -308,6 +319,7 @@ rule PWS_MSIL_Stimilini_K_2147694663_0
         $x_3_5 = "InventoryStealer" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -334,6 +346,7 @@ rule PWS_MSIL_Stimilini_L_2147695124_0
         $x_3_2 = "$8fac72f9-1065-47bc-b350-30bac7f12009" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -362,6 +375,7 @@ rule PWS_MSIL_Stimilini_M_2147695370_0
         $x_1_9 = {46 69 72 65 66 6f 78 50 61 73 73 77 6f 72 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -384,6 +398,7 @@ rule PWS_MSIL_Stimilini_O_2147696644_0
         $x_3_3 = "SteamStealer" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -407,6 +422,7 @@ rule PWS_MSIL_Stimilini_R_2147697084_0
         $x_1_4 = {53 74 65 61 6d 57 6f 72 6b 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -429,6 +445,7 @@ rule PWS_MSIL_Stimilini_T_2147707166_0
         $x_1_3 = {46 61 6b 65 46 6f 72 6d 00 53 74 65 61 6d 2e 46 6f 72 6d 73 00 46 6f 72 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

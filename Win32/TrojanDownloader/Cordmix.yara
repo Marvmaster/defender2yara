@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Cordmix_A_2147651248_0
         $x_1_3 = {bb 3e 22 00 00 81 f3 73 78 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

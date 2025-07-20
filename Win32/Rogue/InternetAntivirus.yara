@@ -15,6 +15,7 @@ rule Rogue_Win32_InternetAntivirus_126886_0
         $x_1_1 = {56 90 66 8d 52 00 57 90 66 8d 52 00 89 34 24 90 66 8d 52 00 6a 30 e9 cc 02 00 00 54 e9 cc 02 00 00 57 90 66 8d 52 00 57 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -35,6 +36,7 @@ rule Rogue_Win32_InternetAntivirus_126886_1
         $x_1_1 = {70 67 75 61 72 64 2e 69 6e 69 00 00 ff ff ff ff 08 00 00 00 45 78 74 65 72 6e 61 6c 00 00 00 00 ff ff ff ff 05 00 00 00 47 75 61 72 64 00 00 00 ff ff ff ff 07 00 00 00 50 48 61 6e 64 6c 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -56,6 +58,7 @@ rule Rogue_Win32_InternetAntivirus_126886_2
         $x_1_2 = {cd 50 52 4f 20 43 e8 4c 52 27 16 0a 2c 5b a7 1e 52 52 56 bb 30 08 95 52 27 fe cb 02 e1 53 86 2d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +82,7 @@ rule Rogue_Win32_InternetAntivirus_126886_3
         $x_1_4 = {50 72 6f 63 65 73 73 42 6c 6f 63 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -104,6 +108,7 @@ rule Rogue_Win32_InternetAntivirus_126886_4
         $x_1_3 = {44 65 6c 65 74 69 6e 67 20 73 65 74 74 69 6e 67 73 20 69 6e 69 20 66 69 6c 65 3a 20 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +130,7 @@ rule Rogue_Win32_InternetAntivirus_126886_5
         $x_1_2 = "Internet Antivirus Pro\" /password=avir" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +156,7 @@ rule Rogue_Win32_InternetAntivirus_126886_6
         $x_1_6 = {50 6a 00 6a 02 e8 ?? ?? ?? ?? 8b f0 85 f6 74 ?? 56 e8 ?? ?? ?? ?? 56 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -172,6 +179,7 @@ rule Rogue_Win32_InternetAntivirus_126886_7
         $x_1_3 = "%s\\%s_%02d_%02d.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -195,6 +203,7 @@ rule Rogue_Win32_InternetAntivirus_126886_8
         $x_1_4 = {2f 76 65 72 79 73 69 6c 65 6e 74 20 2f 6e 6f 72 65 73 74 61 72 74 20 2f 4e 4f 43 41 4e 43 45 4c 20 2f 44 49 52 3d 22 [0-32] 5c 47 65 6e 65 72 61 6c 20 41 6e 74 69 76 69 72 75 73 22 20 2f 70 61 73 73 77 6f 72 64 3d 67 65 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -217,6 +226,7 @@ rule Rogue_Win32_InternetAntivirus_126886_9
         $x_1_3 = "Internet Antivirus will be downloaded and" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -247,6 +257,7 @@ rule Rogue_Win32_InternetAntivirus_126886_10
         $x_2_11 = {67 61 31 39 30 39 30 38 67 2e 64 62 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_2_*))) or
             ((1 of ($x_4_*) and 4 of ($x_2_*))) or
@@ -279,6 +290,7 @@ rule Rogue_Win32_InternetAntivirus_126886_11
         $x_1_7 = "D6_IPSEC" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -317,6 +329,7 @@ rule Rogue_Win32_InternetAntivirus_126886_12
         $x_1_15 = "iantiviruspro.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 10 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -344,6 +357,7 @@ rule Rogue_Win32_InternetAntivirus_126886_13
         $x_1_4 = {49 00 6e 00 74 00 65 00 72 00 6e 00 61 00 6c 00 4e 00 61 00 6d 00 65 00 [0-8] 55 00 70 00 64 00 61 00 74 00 65 00 20 00 49 00 6e 00 74 00 65 00 72 00 6e 00 65 00 74 00 20 00 41 00 6e 00 74 00 69 00 76 00 69 00 72 00 75 00 73 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -380,6 +394,7 @@ rule Rogue_Win32_InternetAntivirus_126886_14
         $x_1_17 = "iantiviruspro.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -410,6 +425,7 @@ rule Rogue_Win32_InternetAntivirus_126886_15
         $x_1_8 = {4d 00 49 00 43 00 52 00 4f 00 49 00 4e 00 53 00 54 00 41 00 4c 00 4c 00 45 00 52 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

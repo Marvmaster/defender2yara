@@ -21,6 +21,7 @@ rule TrojanSpy_MSIL_VB_A_2147632024_0
         $x_2_7 = "\\Kreylogger Source\\gmail Keylogger\\My Keylogger\\" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule TrojanSpy_MSIL_VB_D_2147636780_0
         $x_2_4 = "\\waudio32.xml" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -75,6 +77,7 @@ rule TrojanSpy_MSIL_VB_E_2147636786_0
         $x_1_3 = "\\Start Menu\\Programs\\startup\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -100,6 +103,7 @@ rule TrojanSpy_MSIL_VB_F_2147640331_0
         $x_3_3 = "KBDLLHOOKSTRUCT" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +129,7 @@ rule TrojanSpy_MSIL_VB_G_2147640728_0
         $x_2_6 = "K_Numpad3" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +151,7 @@ rule TrojanSpy_MSIL_VB_L_2147643618_0
         $x_4_2 = "Fpt_Fuck_AllInOne_Upload" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +175,7 @@ rule TrojanSpy_MSIL_VB_M_2147644042_0
         $x_2_4 = "GetExecutingAssembly" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +198,7 @@ rule TrojanSpy_MSIL_VB_O_2147647146_0
         $x_5_3 = "Rapzo Logger - Private Edition Ftp Logs On" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +222,7 @@ rule TrojanSpy_MSIL_VB_Q_2147651548_0
         $x_2_4 = "ftp://mike:U3CruzerMicro@nsc.mine.nu/" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

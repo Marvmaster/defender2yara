@@ -21,6 +21,7 @@ rule Backdoor_Win32_PlugXInj_2147810314_0
         $x_1_6 = {f7 e1 c1 ea ?? 69 d2 ?? ?? 00 00 8b c1 2b c2 8a 94 05 ?? ?? ?? ?? 30 14 31 41 3b cf 7c dd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

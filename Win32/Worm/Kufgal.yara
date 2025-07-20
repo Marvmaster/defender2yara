@@ -19,6 +19,7 @@ rule Worm_Win32_Kufgal_A_2147630387_0
         $x_1_5 = "\\Fonts\\bp.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -46,6 +47,7 @@ rule Worm_Win32_Kufgal_B_2147630388_0
         $x_1_4 = {83 c0 14 83 c0 02 50 6a 42 e8 ?? ?? ff ff 8b f0 85 f6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

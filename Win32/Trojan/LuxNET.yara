@@ -23,6 +23,7 @@ rule Trojan_Win32_LuxNET_SD_2147745088_0
         $x_1_8 = "LuxNET RAT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

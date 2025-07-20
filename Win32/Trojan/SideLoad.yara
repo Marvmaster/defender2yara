@@ -24,6 +24,7 @@ rule Trojan_Win32_SideLoad_M_2147836668_0
         $x_1_9 = "EnumDisplayMonitors" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

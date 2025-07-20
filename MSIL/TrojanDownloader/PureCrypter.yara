@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_PureCrypter_B_2147840918_0
         $x_1_2 = "GetMethod" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_MSIL_PureCrypter_E_2147844623_0
         $x_2_1 = {8e 69 5d 91 7e ?? 00 00 04 11 03 91 61 d2 6f 02 00 00 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanDownloader_MSIL_PureCrypter_APC_2147845845_0
         $x_1_2 = {20 00 0c 00 00 28 ?? ?? ?? 06 38 00 00 00 00 dd 10 00 00 00 26 38 00 00 00 00 dd 05 00 00 00 38 00 00 00 00 02 28 ?? ?? ?? 0a 74 17 00 00 01 6f ?? ?? ?? 0a 73 1a 00 00 0a 13 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule TrojanDownloader_MSIL_PureCrypter_APY_2147896128_0
         $x_1_1 = {14 0a 38 2c 00 00 00 00 28 11 00 00 0a 02 72 0d 00 00 70 28 08 00 00 06 6f 12 00 00 0a 28 13 00 00 0a 28 06 00 00 06 0a dd 06 00 00 00 26 dd 00 00 00 00 06 2c d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule TrojanDownloader_MSIL_PureCrypter_G_2147901333_0
         $x_2_2 = "DownloadAsync" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +132,7 @@ rule TrojanDownloader_MSIL_PureCrypter_H_2147910926_0
         $x_1_4 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +156,7 @@ rule TrojanDownloader_MSIL_PureCrypter_I_2147911964_0
         $x_2_3 = {20 80 3e 00 00 8d ?? 00 00 01 13 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +178,7 @@ rule TrojanDownloader_MSIL_PureCrypter_ARA_2147923214_0
         $x_2_1 = {07 11 05 11 04 6f ?? ?? ?? 0a 13 06 08 09 25 17 58 0d 12 06 28 ?? ?? ?? 0a 9c 11 05 17 58 13 05 11 05 07 6f ?? ?? ?? 0a 32 d6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

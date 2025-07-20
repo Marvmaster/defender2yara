@@ -16,6 +16,7 @@ rule Backdoor_MSIL_LoaderCsharp_A_2147788071_0
         $x_10_2 = "\\LoaderCsharp\\obj\\Release\\LoaderCsharp.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

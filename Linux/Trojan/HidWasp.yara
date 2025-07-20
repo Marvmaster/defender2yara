@@ -21,6 +21,7 @@ rule Trojan_Linux_HidWasp_A_2147772533_0
         $x_1_6 = "fake_processname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

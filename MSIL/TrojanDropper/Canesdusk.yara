@@ -16,6 +16,7 @@ rule TrojanDropper_MSIL_Canesdusk_A_2147641931_0
         $x_1_2 = {64 65 63 72 79 70 74 00 6d 65 73 73 61 67 65 00 70 61 73 73 77 6f 72 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

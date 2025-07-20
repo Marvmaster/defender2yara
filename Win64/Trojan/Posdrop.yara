@@ -21,6 +21,7 @@ rule Trojan_Win64_Posdrop_A_2147735892_0
         $x_1_6 = ".stopped" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

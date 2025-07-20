@@ -21,6 +21,7 @@ rule Trojan_Win32_MBRlock_DAX_2147852650_0
         $x_1_6 = {8b 44 24 08 6a ff 50 ff 15 ?? ?? ?? ?? eb 10 8b 4c 24 08 68 e8 03 00 00 51 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_MBRlock_DY_2147852924_0
         $x_1_4 = {8b 46 1c 68 e8 03 00 00 50 ff 15 ?? ?? ?? 00 c7 46 50 00 00 00 00 5e c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_MBRlock_NM_2147897007_0
         $x_1_2 = "\\physicaldrive0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

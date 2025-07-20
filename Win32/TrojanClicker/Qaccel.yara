@@ -19,6 +19,7 @@ rule TrojanClicker_Win32_Qaccel_A_2147717386_0
         $x_1_4 = {68 74 74 70 73 3a 2f 2f 77 77 77 2e [0-16] 2e 63 6f 6d 2f 3f 74 6e 3d 25 73 [0-32] 5f 68 61 6f 5f 70 67}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

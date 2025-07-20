@@ -29,6 +29,7 @@ rule Trojan_MSIL_Agentesla_PSB_2147764838_0
         $x_1_14 = "YEXT5NSD4ASZFNIDVCSGTJBAODSGHBUFA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Trojan_MSIL_Agentesla_RT_2147780470_0
         $x_1_3 = "GetPixel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Trojan_MSIL_Agentesla_AD_2147814565_0
         $x_1_4 = {11 0e 11 0d 9a 0d 09 6f ?? ?? 00 0a 6f ?? ?? 00 0a 28 ?? ?? 00 0a 0c 08 07 16 28 ?? ?? 00 0a 16 33 06 09 6f ?? ?? 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_MSIL_Agentesla_ADA_2147818243_0
         $x_1_3 = {0b 07 28 22 02 00 06 6f ?? 00 00 0a 2c 11 07 28 22 02 00 06 28 fa 01 00 06 6f ?? 00 00 0a 0b de 12}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +147,7 @@ rule Trojan_MSIL_Agentesla_PL_2147898598_0
         $x_1_24 = "keciYemVerbutton" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

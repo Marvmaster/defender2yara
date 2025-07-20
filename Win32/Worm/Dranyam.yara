@@ -18,6 +18,7 @@ rule Worm_Win32_Dranyam_A_2147601331_0
         $x_2_4 = "    |  Marc Maynard was here!   |" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 2 of ($x_2_*))) or
             (all of ($x*))

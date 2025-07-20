@@ -22,6 +22,7 @@ rule HackTool_MSIL_StormRAT_2147688712_0
         $x_1_8 = "RemoteDesktop|" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

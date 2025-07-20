@@ -18,6 +18,7 @@ rule Trojan_Win32_Racstealer_RS_2147899227_0
         $x_1_3 = "WmM2MzE3NWozMDIwMzJlPz08Zz0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

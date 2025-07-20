@@ -20,6 +20,7 @@ rule Backdoor_MSIL_Twient_A_2147721716_0
         $x_3_5 = "https://twitter.com/eduClient" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

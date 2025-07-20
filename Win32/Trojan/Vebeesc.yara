@@ -20,6 +20,7 @@ rule Trojan_Win32_Vebeesc_A_2147642357_0
         $x_1_6 = {c7 45 fc 17 00 00 00 c7 85 c8 fe ff ff ?? ?? ?? 00 c7 85 c0 fe ff ff 08 00 00 00 c7 85 b8 fe ff ff ?? ?? ?? 00 c7 85 b0 fe ff ff 08 00 00 00 8d 95 c0 fe ff ff 52 8d 45 b0 50 8d 8d 60 ff ff ff 51}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

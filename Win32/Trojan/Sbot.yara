@@ -21,6 +21,7 @@ rule Trojan_Win32_Sbot_VW_2147896105_0
         $x_1_6 = "GetTickCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

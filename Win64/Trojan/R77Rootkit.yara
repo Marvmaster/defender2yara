@@ -16,6 +16,7 @@ rule Trojan_Win64_R77Rootkit_CCIL_2147912222_0
         $x_1_1 = {66 44 03 d0 c1 ca ?? 41 80 39 61 8d 41 e0 0f 4c c1 03 d0 49 ff c1 66 45 85 d2 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_StealC_GIC_2147846149_0
         $x_10_1 = {23 c1 66 89 85 ?? ?? ?? ?? 0f be 55 ff 0f be 45 fe 33 d0 88 15 ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 0f be 11 0f be 45 fd 0b d0 88 55 fe 8b 8d ?? ?? ?? ?? 0f be 11}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_StealC_GFO_2147849931_0
         $x_1_2 = "@.eh_fram" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_StealC_YAA_2147890059_0
         $x_1_2 = {88 45 e2 8b 55 f0 8b 45 08 01 d0 0f b6 00 32 45 e2 88 45 e1 8b 55 f0 8b 45 0c 01 c2 0f b6 45 ?? 88 02 83 45 f0 01 8b 45 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_StealC_CCBJ_2147891497_0
         $x_1_2 = {33 f3 31 74 24 ?? 8b 44 24 ?? 29 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_Win32_StealC_AS_2147891739_0
         $x_1_1 = {66 8b c8 66 2b cf 66 8b f8 b8 03 70 00 00 66 89 0d ?? ?? ?? ?? 66 23 f8 0f b7 e9 8a 02 46 88 04 13 42 0f b7 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +129,7 @@ rule Trojan_Win32_StealC_MMK_2147892623_0
         $x_1_1 = {8b c8 c1 e9 05 03 4c 24 18 8b d0 c1 e2 04 03 54 24 1c 03 c7 33 ca 33 c8 2b f1 8b ce c1 e1 04 c7 05 ?? ?? ?? ?? 00 00 00 00 89 4c 24 10 8b 44 24 20 01 44 24 10 81 3d ?? ?? ?? ?? be 01 00 00 8d 1c 37 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +152,7 @@ rule Trojan_Win32_StealC_MVK_2147892937_0
         $x_1_2 = {c1 e0 04 89 45 fc 8b 45 d8 01 45 fc 8b 75 f8 8b 4d f4 8d 04 37 31 45 fc d3 ee 03 75 d0 81 3d ?? ?? ?? ?? 21 01 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +175,7 @@ rule Trojan_Win32_StealC_NIN_2147893161_0
         $x_1_2 = {8b c6 c1 e8 05 03 c5 33 c3 31 44 24 14 c7 05 ?? ?? ?? ?? 19 36 6b ff c7 05 ?? ?? ?? ?? ff ff ff ff 8b 44 24 14 29 44 24 18 a1 b8 36 7c 00 3d 93 00 00 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +198,7 @@ rule Trojan_Win32_StealC_NIF_2147893242_0
         $x_1_2 = {8b d6 c1 ea 05 03 54 24 2c c7 05 ?? ?? ?? ?? 19 36 6b ff 33 d7 31 54 24 14 c7 05 ?? ?? ?? ?? ff ff ff ff 8b 44 24 14 29 44 24 18 8b 44 24 30 29 44 24 10 ff 4c 24 20 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +221,7 @@ rule Trojan_Win32_StealC_NIT_2147893243_0
         $x_1_2 = {8b 45 f8 c1 e0 04 89 45 fc 8b 45 d8 01 45 fc 8b 4d f8 8d 04 0f 31 45 fc 8b f9 8b 4d f4 d3 ef 03 7d d0 81 3d ?? ?? ?? ?? 21 01 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +244,7 @@ rule Trojan_Win32_StealC_RYY_2147893323_0
         $x_1_2 = {c1 e0 04 89 45 fc 8b 45 dc 01 45 fc 8b 7d f4 8b 4d f8 8d 04 3b 31 45 fc d3 ef 03 7d e0 81 3d ?? ?? ?? ?? 21 01 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -256,6 +267,7 @@ rule Trojan_Win32_StealC_TRW_2147893404_0
         $x_1_2 = {c1 e0 04 89 45 fc 8b 45 dc 01 45 fc 8b 75 f4 8b 4d f8 8d 04 33 31 45 fc d3 ee 03 75 e0 81 3d ?? ?? ?? ?? 21 01 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -278,6 +290,7 @@ rule Trojan_Win32_StealC_DUS_2147893828_0
         $x_1_2 = {33 f5 31 74 24 10 8b 44 24 10 29 44 24 14 a1 8c db 7a 00 3d 93 00 00 00 74 ?? 81 c3 ?? ?? ?? ?? ff 4c 24 1c 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +312,7 @@ rule Trojan_Win32_StealC_JHN_2147894237_0
         $x_1_1 = {8b d0 8b c8 c1 ea 05 03 54 24 34 c1 e1 04 03 4c 24 24 03 c3 33 d1 33 d0 2b fa 8b cf c1 e1 04 c7 05 ?? ?? ?? ?? 00 00 00 00 89 4c 24 10 8b 44 24 28 01 44 24 10 81 3d ?? ?? ?? ?? be 01 00 00 8d 2c 3b 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +335,7 @@ rule Trojan_Win32_StealC_CHD_2147894332_0
         $x_1_2 = {8d 04 2f 33 f0 8b 44 24 ?? 33 c6 2b d8 81 c5 47 86 c8 61 ff 4c 24 18 89 44 24 10 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -343,6 +358,7 @@ rule Trojan_Win32_StealC_HOI_2147894540_0
         $x_1_2 = {8d 04 2f 33 f0 8b 44 24 ?? 33 c6 2b d8 81 c5 47 86 c8 61 ff 4c 24 18 89 44 24 10 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -365,6 +381,7 @@ rule Trojan_Win32_StealC_HOK_2147894541_0
         $x_1_2 = {8d 04 2b 33 f0 8b 44 24 ?? 33 c6 2b f8 81 c5 47 86 c8 61 ff 4c 24 1c 89 44 24 14 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -387,6 +404,7 @@ rule Trojan_Win32_StealC_RAZ_2147894696_0
         $x_1_2 = {33 f0 8b 44 24 ?? 33 c6 2b d8 81 c5 47 86 c8 61 ff 4c 24 20 89 44 24 14 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -409,6 +427,7 @@ rule Trojan_Win32_StealC_RAY_2147894943_0
         $x_1_2 = {56 ff 15 14 ?? ?? ?? 31 7d fc 8b 45 fc 29 45 f0 81 c3 ?? ?? ?? ?? ff 4d e8 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -431,6 +450,7 @@ rule Trojan_Win32_StealC_RAS_2147894944_0
         $x_1_2 = {8d 04 2f 33 f0 8b 44 24 ?? 33 c6 2b d8 81 c5 47 86 c8 61 ff 4c 24 20 89 44 24 14 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -454,6 +474,7 @@ rule Trojan_Win32_StealC_CCDJ_2147895005_0
         $x_1_3 = "VMware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -476,6 +497,7 @@ rule Trojan_Win32_StealC_RAR_2147895197_0
         $x_1_2 = {31 5c 24 10 8b 44 24 18 31 44 24 10 a1 ?? ?? ?? ?? 2b 74 24 10 3d 93 00 00 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -497,6 +519,7 @@ rule Trojan_Win32_StealC_KS_2147895253_0
         $x_1_1 = {33 c1 89 54 24 18 89 44 24 10 89 1d a4 67 7b 00 8b 44 24 18 01 05 a4 67 7b 00 8b 15 a4 67 7b 00 89 54 24 30 89 5c 24 18 8b 44 24 30 01 44 24 18 8b 44 24 10 33 44 24 18 89 44 24 18 8b 44 24 18 89 44 24 18 8b 44 24 18 29 44 24 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -519,6 +542,7 @@ rule Trojan_Win32_StealC_DIW_2147895360_0
         $x_1_2 = {31 7c 24 10 8b 44 24 1c 31 44 24 10 8b 44 24 10 29 44 24 18 a1 ?? ?? ?? ?? 3d 93 00 00 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -541,6 +565,7 @@ rule Trojan_Win32_StealC_YLA_2147895551_0
         $x_1_2 = {31 7c 24 10 8b 44 24 20 31 44 24 10 8b 44 24 10 29 44 24 1c c7 44 24 18 ?? ?? ?? ?? 8b 44 24 34 01 44 24 18 2b 74 24 18 ff 4c 24 2c 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -563,6 +588,7 @@ rule Trojan_Win32_StealC_YLZ_2147895635_0
         $x_1_2 = {31 74 24 14 8b 44 24 28 31 44 24 14 8b 44 24 14 29 44 24 ?? 89 6c 24 24 8b 44 24 38 01 44 24 24 29 44 24 1c ff 4c 24 34 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -584,6 +610,7 @@ rule Trojan_Win32_StealC_CHT_2147896823_0
         $x_1_1 = {c1 e0 04 89 45 fc 8b 45 e0 01 45 fc 8b 55 f4 8b 4d f8 8b c2 d3 e8 8d 3c 13 81 c3 47 86 c8 61 03 45 e4 33 c7 31 45 fc 8b 45 fc 29 45 f0 ff 4d e8 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -606,6 +633,7 @@ rule Trojan_Win32_StealC_CHC_2147896888_0
         $x_1_2 = {c1 e0 04 89 45 fc 8b 45 e0 01 45 fc 8b 45 f4 8b 4d f8 8b f0 d3 ee 8d 14 03 31 55 fc 03 75 ?? 81 3d ?? ?? ?? ?? 21 01 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -627,6 +655,7 @@ rule Trojan_Win32_StealC_VEA_2147896917_0
         $x_1_1 = {8b d6 d3 ea 8d 04 37 89 45 e8 c7 05 ?? ?? ?? ?? ee 3d ea f4 03 55 d4 8b 45 e8 31 45 fc 33 55 fc 81 3d ?? ?? ?? ?? 13 02 00 00 89 55 e8 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -648,6 +677,7 @@ rule Trojan_Win32_StealC_VEB_2147896918_0
         $x_1_1 = {8b d0 8b c8 c1 e2 04 03 54 24 34 c1 e9 05 03 4c 24 28 03 c6 33 d0 89 4c 24 1c 89 54 24 10 89 3d ?? ?? ?? ?? 8b 44 24 1c 01 05 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 89 4c 24 2c 89 7c 24 1c 8b 44 24 2c 01 44 24 1c 8b 44 24 10 33 44 24 1c 89 44 24 1c 8b 54 24 1c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -670,6 +700,7 @@ rule Trojan_Win32_StealC_SKA_2147897171_0
         $x_1_2 = {31 45 fc 8b fa d3 ef 03 7d dc 81 3d ?? ?? ?? ?? 21 01 00 00 75 10 68 ?? ?? ?? ?? 56 56 ff 15 ?? ?? ?? ?? 8b 55 f8 31 7d fc 2b 5d fc 8d 45 f0 e8 ?? ?? ?? ?? ff 4d e8 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -691,6 +722,7 @@ rule Trojan_Win32_StealC_A_2147897415_0
         $x_1_1 = {0c 8b 45 f0 89 45 c8 8b 45 c8 8b 40 3c 8b 4d f0 8d 44 01 04 89}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -712,6 +744,7 @@ rule Trojan_Win32_StealC_A_2147897415_1
         $x_1_1 = {55 8b ec 8b 45 14 56 57 8b 7d 08 33 f6 89 47 0c 39 75 10 76 15 8b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -734,6 +767,7 @@ rule Trojan_Win32_StealC_A_2147897415_2
         $x_2_2 = {c6 05 01 c1 42 00 6c c6 05 fb c0 42 00 6d c6 05 fc c0 42 00 67 c6 05 00 c1 42 00 64 c6 05 03 c1 42 00 ?? c6 05 02 c1 42 00 6c c6 05 ff c0 42 00 2e c6 05 fe c0 42 00 32 c6 05 f8 c0 42 00 6d c6 05 fa c0 42 00 69 c6 05 fd c0 42 00 33 c6 05 f9 c0 42 00 73}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -756,6 +790,7 @@ rule Trojan_Win32_StealC_ANI_2147897502_0
         $x_1_2 = {c1 e8 05 03 44 24 38 33 cf c7 05 ?? ?? ?? ?? 19 36 6b ff c7 05 ?? ?? ?? ?? ff ff ff ff 89 44 24 18 89 4c 24 10 8b 44 24 18 31 44 24 10 2b 74 24 10 81 c3 ?? ?? ?? ?? ff 4c 24 20 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -778,6 +813,7 @@ rule Trojan_Win32_StealC_ANG_2147897504_0
         $x_1_2 = {56 56 ff 15 9c 10 40 00 31 7d fc 8b 45 fc 29 45 f0 81 c3 47 86 c8 61 ff 4d e8 0f 85 ad fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -800,6 +836,7 @@ rule Trojan_Win32_StealC_NKK_2147897597_0
         $x_1_2 = {c1 e0 04 89 45 fc 8b 45 d8 01 45 fc 8b 7d f8 8b 4d f4 8d 04 3b 31 45 fc d3 ef 03 7d d4 81 3d ?? ?? ?? ?? 21 01 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -822,6 +859,7 @@ rule Trojan_Win32_StealC_NKO_2147897601_0
         $x_1_2 = {33 c6 89 44 24 10 8b 44 24 18 31 44 24 10 2b 7c 24 10 81 c3 ?? ?? ?? ?? ff 4c 24 20 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -843,6 +881,7 @@ rule Trojan_Win32_StealC_NHA_2147897702_0
         $x_1_1 = {8b d6 d3 ea 8d 04 37 89 45 d8 c7 05 ?? ?? ?? ?? ee 3d ea f4 03 55 dc 8b 45 d8 31 45 fc 33 55 fc 89 55 d8 8b 45 d8 83 45 f8 64 29 45 f8 83 6d f8 64 83 3d f8 af a9 02 0c 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -865,6 +904,7 @@ rule Trojan_Win32_StealC_NHB_2147897703_0
         $x_1_2 = {33 c6 89 44 24 14 8b 44 24 24 31 44 24 14 2b 5c 24 14 89 6c 24 20 8b ?? 24 44 01 44 24 20 29 44 24 18 ff 4c 24 2c 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -887,6 +927,7 @@ rule Trojan_Win32_StealC_NHC_2147897767_0
         $x_1_2 = {8b c2 d3 e8 8d 3c 13 81 c3 ?? ?? ?? ?? 03 45 d4 33 c7 31 45 fc 8b 45 fc 29 45 f0 ff 4d e8 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -909,6 +950,7 @@ rule Trojan_Win32_StealC_NHD_2147897773_0
         $x_1_2 = {d3 ee 03 75 d0 81 3d ?? ?? ?? ?? 21 01 00 00 75 07 53 ff 15 ?? ?? ?? ?? 31 75 fc 8b 45 fc 29 45 ec 81 45 f0 47 86 c8 61 ff 4d e4 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -931,6 +973,7 @@ rule Trojan_Win32_StealC_IDL_2147898248_0
         $x_1_2 = {33 c6 89 44 24 10 8b 44 24 18 31 44 24 10 a1 ?? ?? ?? ?? 2b 5c 24 10 3d ?? ?? ?? ?? 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -953,6 +996,7 @@ rule Trojan_Win32_StealC_EAA_2147898652_0
         $x_1_2 = {33 c6 89 44 24 10 8b 44 24 18 31 44 24 10 a1 ?? ?? ?? ?? 2b 5c 24 10 3d 93 00 00 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -981,6 +1025,7 @@ rule Trojan_Win32_StealC_B_2147898941_0
         $x_2_8 = "VirtualBox" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1002,6 +1047,7 @@ rule Trojan_Win32_StealC_C_2147899127_0
         $x_2_1 = {81 ad 3c ff ff ff 02 6e 7c 7c 81 6d b0 ab ac 55 11 81 45 c0 a3 a6 28 6b 81 45 c0 07 93 a9 39 81 45 a4 48 19 ae 48 81 45 e0 ee 58 f0 51 81 85 68 ff ff ff 08 c4 c6 51}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1023,6 +1069,7 @@ rule Trojan_Win32_StealC_RDC_2147899690_0
         $x_2_1 = {8b 4c 24 10 30 04 0e 83 ff 0f 75 12}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1044,6 +1091,7 @@ rule Trojan_Win32_StealC_CCFV_2147899725_0
         $x_1_1 = {83 ff 2d 75 ?? 6a 00 ff 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 30 04 33 83 ff 0f 75 ?? 6a 00 [0-6] 6a 00 6a 00 6a 00 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1065,6 +1113,7 @@ rule Trojan_Win32_StealC_RDD_2147899751_0
         $x_2_1 = {89 03 03 d9 25 61 6c 20 63 0d 00 02 4e 0c 89 03 03 d9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1087,6 +1136,7 @@ rule Trojan_Win32_StealC_MZX_2147899795_0
         $x_1_2 = {33 c6 89 45 fc 2b f8 8b 45 d4 29 45 f8 83 6d e4 ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1108,6 +1158,7 @@ rule Trojan_Win32_StealC_AMBA_2147900547_0
         $x_1_1 = {8b c2 d3 e8 8b 4d ?? 03 c3 33 45 ?? 33 c8 8d 45 ?? 89 4d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1130,6 +1181,7 @@ rule Trojan_Win32_StealC_AMBA_2147900547_1
         $x_1_2 = {8b 8d f8 fb ff ff 30 04 31 83 fb 0f 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1151,6 +1203,7 @@ rule Trojan_Win32_StealC_CYD_2147900668_0
         $x_1_1 = {30 01 83 fb 0f 75 19}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1172,6 +1225,7 @@ rule Trojan_Win32_StealC_CCGL_2147900753_0
         $x_1_1 = {30 04 31 83 fb 0f 75 19}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1194,6 +1248,7 @@ rule Trojan_Win32_StealC_VER_2147900794_0
         $x_1_2 = {8b 45 fc 33 c6 89 45 fc 2b f8 8d 45 e8 e8 ?? ?? ?? ?? 83 6d e0 01 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1215,6 +1270,7 @@ rule Trojan_Win32_StealC_KKA_2147901178_0
         $x_1_1 = {8b 4c 24 0c 30 04 31 83 7d 0c 0f 75 57}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1237,6 +1293,7 @@ rule Trojan_Win32_StealC_MRZ_2147901270_0
         $x_1_2 = {33 c6 81 c3 ?? ?? ?? ?? 2b f8 83 6d e0 01 89 45 fc 89 5d e8 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1258,6 +1315,7 @@ rule Trojan_Win32_StealC_BBV_2147901717_0
         $x_1_1 = {30 04 1e 83 ff 0f 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1279,6 +1337,7 @@ rule Trojan_Win32_StealC_AMBF_2147901827_0
         $x_1_1 = {8b 45 e4 31 45 e8 8b 45 e8 33 d0 89 45 fc 89 55 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1301,6 +1360,7 @@ rule Trojan_Win32_StealC_SES_2147901978_0
         $x_1_2 = {31 75 fc 8b 45 fc 29 45 ec 81 45 f4 ?? ?? ?? ?? ff 4d e0 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1323,6 +1383,7 @@ rule Trojan_Win32_StealC_SHR_2147902144_0
         $x_1_2 = {31 75 fc 8b 45 fc 29 45 ec 8b 45 d8 29 45 ?? ff 4d e0 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1344,6 +1405,7 @@ rule Trojan_Win32_StealC_SHY_2147902145_0
         $x_1_1 = {89 e0 89 70 0c 89 50 08 89 08 c7 40 04 ?? ?? ?? ?? e8 ?? ?? ?? ?? 89 c6 8b 45 e8 8b 55 f4 89 d1 0f b6 54 10 02 31 f2 88 54 08 02 8b 45 f4 83 c0 01 89 45 f4 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1365,6 +1427,7 @@ rule Trojan_Win32_StealC_CCHS_2147902330_0
         $x_1_1 = {8b d7 d3 ea 8d 04 3e 89 45 f4 03 55 e0 8b 45 f4 31 45 fc 31 55 fc 2b 5d fc 81 c6 ?? ?? ?? ?? ff 4d e8 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1386,6 +1449,7 @@ rule Trojan_Win32_StealC_NA_2147902550_0
         $x_5_1 = {59 5f 5f 5e 5b 8b e5 5d 51 c3 cc cc cc 8b 07 83 f8 fe 74 0d 8b 4f 04 03 ce 33 0c 30 e8 79 d4 ff ff 8b 4f 0c 8b 47 08 03 ce 33 0c 30 e9}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1407,6 +1471,7 @@ rule Trojan_Win32_StealC_YX_2147902862_0
         $x_1_1 = {01 45 ec 8b 45 ec 31 45 f0 8b 45 f8 33 45 f0 2b f0 89 45 f8 8b c6 c1 e0 04 89 45 fc 8b 45 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1428,6 +1493,7 @@ rule Trojan_Win32_StealC_ATG_2147902900_0
         $x_1_1 = {8b c8 33 d2 8b c6 f7 f1 8b 45 0c 46 83 c4 04 8a 0c 02 8b 55 ?? 32 0c 3a 88 0f 3b 75 10 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1450,6 +1516,7 @@ rule Trojan_Win32_StealC_ATT_2147902987_0
         $x_1_2 = {33 45 f4 2b f8 89 45 ?? 89 7d e8 8b 45 cc 29 45 f8 ff 4d e0 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1472,6 +1539,7 @@ rule Trojan_Win32_StealC_BAL_2147903213_0
         $x_1_2 = {88 04 31 81 3d ?? ?? ?? ?? ab 05 00 00 75 32 00 8b 0d ?? ?? ?? ?? 89 4c 24 ?? b8 31 a2 00 00 01 44 24 ?? 8b 54 24 ?? 8a 04 32 8b 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1493,6 +1561,7 @@ rule Trojan_Win32_StealC_SPXX_2147903232_0
         $x_5_1 = {01 45 f0 8b 45 f0 31 45 e8 8b 45}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1514,6 +1583,7 @@ rule Trojan_Win32_StealC_OPT_2147903472_0
         $x_1_1 = {8b c7 d3 e8 03 45 ?? 89 45 f8 8b 45 ?? 31 45 fc 8b 45 fc 89 45 ?? 89 75 ?? 8b 45 ?? 89 45 ?? 8b 45 f8 31 45 ?? 8b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1535,6 +1605,7 @@ rule Trojan_Win32_StealC_GF_2147903478_0
         $x_1_1 = {8b 45 e4 31 45 fc 8b 45 fc 89 45 e4 89 75 f0 8b 45 e4 89 45 f0 8b 45 f8 31 45 f0 8b 45 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1558,6 +1629,7 @@ rule Trojan_Win32_StealC_GF_2147903478_1
         $x_2_3 = {72 09 81 7d f8 57 04 00 00 73 08}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1580,6 +1652,7 @@ rule Trojan_Win32_StealC_VNM_2147903574_0
         $x_1_2 = {b8 31 a2 00 00 01 44 24 ?? 8b 44 24 ?? 8a 0c 30 8b 15 ?? ?? ?? ?? ?? ?? ?? 81 3d ?? ?? ?? ?? ab 05 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1601,6 +1674,7 @@ rule Trojan_Win32_StealC_HR_2147903705_0
         $x_1_1 = {8b 45 e4 31 45 fc 8b 45 fc 89 45 ?? 89 75 f0 8b 45 ?? 89 45 f0 8b 45 f8 31 45 f0 8b 45 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1622,6 +1696,7 @@ rule Trojan_Win32_StealC_SPXC_2147904391_0
         $x_5_1 = {83 ec 20 a1 ?? ?? ?? ?? 33 c5 89 45 fc 81 ff 82 01 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1643,6 +1718,7 @@ rule Trojan_Win32_StealC_XX_2147904775_0
         $x_1_1 = {e8 fa fe ff ff 30 04 33 83 ff 0f 75 25 6a 00 6a 00 6a 00 8d 8d fc f7 ff ff 51 6a 00 6a 00 ff 15 44 d0 40 00 ff 15 38 d0 40 00 6a 00 ff 15 60 d0 40 00 46 3b f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1664,6 +1740,7 @@ rule Trojan_Win32_StealC_SPF_2147904839_0
         $x_5_1 = {31 45 e4 8b 45 f8 33 45 e4}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1685,6 +1762,7 @@ rule Trojan_Win32_StealC_CCHV_2147904868_0
         $x_1_1 = {30 04 33 83 ff 0f 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1706,6 +1784,7 @@ rule Trojan_Win32_StealC_SPCO_2147905088_0
         $x_5_1 = {83 ff 2d 75 0a 8d 4d dc 51 ff 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 30 04 33 46 3b f7 7c e4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1727,6 +1806,7 @@ rule Trojan_Win32_StealC_CCHZ_2147905294_0
         $x_1_1 = {ff d6 8b c8 33 d2 8b c7 f7 f1 8b 45 f8 47 83 c4 04 8a 92 ?? ?? ?? ?? 32 14 03 88 13 83 ff 02 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1748,6 +1828,7 @@ rule Trojan_Win32_StealC_MBFV_2147905463_0
         $x_1_1 = {b8 31 a2 00 00 01 44 24 ?? 8b 54 24 ?? 8a 04 0a 8b 15 ?? ?? ?? ?? 88 04 0a 41 3b 0d ?? ?? ?? ?? 72 d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1770,6 +1851,7 @@ rule Trojan_Win32_StealC_NDZ_2147905710_0
         $x_1_2 = {8b 0d e8 f9 52 00 69 c9 fd 43 03 00 81 c1 ?? ?? ?? ?? 89 0d e8 f9 52 00 0f b7 05 ea f9 52 00 8b 8c 24 00 08 00 00 33 cc 25 ff 7f 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1791,6 +1873,7 @@ rule Trojan_Win32_StealC_SPDH_2147905874_0
         $x_5_1 = {01 45 fc 8b 45 fc 31 45 f8 8b 45 f0 33 45 f8 2b d0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1812,6 +1895,7 @@ rule Trojan_Win32_StealC_GZY_2147906004_0
         $x_10_1 = {8d 04 33 89 45 ?? 8b 45 ?? c1 e8 ?? 89 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 83 65 ?? ?? c7 05 ?? ?? ?? ?? ee 3d ea f4 89 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 33 45}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1833,6 +1917,7 @@ rule Trojan_Win32_StealC_MAC_2147906451_0
         $x_1_1 = {8b de 8b 4d f4 03 c6 8b 55 fc d3 eb 33 d0 03 5d ?? 81 3d ?? ?? ?? ?? 03 0b 00 00 89 5d f0 89 55 fc 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1854,6 +1939,7 @@ rule Trojan_Win32_StealC_SPDB_2147907581_0
         $x_5_1 = {69 c9 fd 43 03 00 81 c1 c3 9e 26 00 89 0d ?? ?? ?? ?? 8a 15 ?? ?? ?? ?? 30 14 33 83 ff 0f 75 5e}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1875,6 +1961,7 @@ rule Trojan_Win32_StealC_KHU_2147907715_0
         $x_1_1 = {8b 0d 54 ad 45 00 69 c9 fd 43 03 00 81 c1 c3 9e 26 00 89 0d 54 ?? 45 00 8a 15 56 ?? 45 00 30 14 33 83 ff 0f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1896,6 +1983,7 @@ rule Trojan_Win32_StealC_SPI_2147907811_0
         $x_1_1 = {d3 e8 03 d7 89 45 f8 8b 45 d0 01 45 f8 8b 45 f8 8d 4d ?? 33 c2 8b 55 f4 33 d0 89 55 f4 e8 ?? ?? ?? ?? 8b 45 e8 29 45 fc 4e 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1917,6 +2005,7 @@ rule Trojan_Win32_StealC_SZ_2147908345_0
         $x_2_1 = {30 14 38 83 ?? 0f 75 ?? 6a 00 6a 00 ff 15 ?? ?? ?? ?? 8d 85 f0 ?? ff ff 50 8d 8d fc ?? ff ff 51}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1946,6 +2035,7 @@ rule Trojan_Win32_StealC_SZ_2147908345_1
         $x_1_9 = "avghookx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1967,6 +2057,7 @@ rule Trojan_Win32_StealC_GXZ_2147908580_0
         $x_10_1 = {30 14 1e 83 ff 0f ?? ?? 6a 00 6a 00 6a 00 e8 05 45 ff ff 46 3b f7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1988,6 +2079,7 @@ rule Trojan_Win32_StealC_CCID_2147908645_0
         $x_1_1 = {8b c7 d3 e8 89 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 8d 4d ?? 8b 55 ?? 33 45 ?? 33 d0 89 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2009,6 +2101,7 @@ rule Trojan_Win32_StealC_CCIE_2147908900_0
         $x_1_1 = {8b c3 d3 e8 89 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 81 c2 ?? ?? ?? ?? 33 45 ?? 8b 4d ?? 33 c8 89 55 ?? 2b f9 89 4d ?? 8b 4d ?? 89 7d ?? 4e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2031,6 +2124,7 @@ rule Trojan_Win32_StealC_MBYF_2147908975_0
         $x_1_2 = {6f 6d 6f 79 6f 77 65 76 00 00 00 7a 00 6f 00 72 00 75 00 6e 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2052,6 +2146,7 @@ rule Trojan_Win32_StealC_RDG_2147909411_0
         $x_2_1 = {89 45 f4 8b 45 e8 c1 e8 05 89 45 f8 8b 4d fc 33 db 33 4d f4 8b 45 f8 03 45 d0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2073,6 +2168,7 @@ rule Trojan_Win32_StealC_CCIH_2147910382_0
         $x_1_1 = {8d 0c 3a 8d 42 ?? 30 41 ?? 42 83 fa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2094,6 +2190,7 @@ rule Trojan_Win32_StealC_ERR_2147911041_0
         $x_1_1 = {8b d8 8b 45 a4 05 ee cc 00 00 2b 45 9c 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 8b 45 d4 31 18 83 45 ec 04 6a 00 e8 ?? ?? ?? ?? 83 c0 04 01 45 d4 8b 45 ec 3b 45 d0 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2115,6 +2212,7 @@ rule Trojan_Win32_StealC_STK_2147911491_0
         $x_1_1 = {8b c6 d3 e8 89 45 f4 8b 45 dc 01 45 f4 8b 45 f4 33 45 f8 31 45 fc 8b 45 fc 29 45 ec 8d 4d f0 e8 ?? ?? ?? ?? 4f 74 0b 8b 5d f0 8b 4d d8 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2136,6 +2234,7 @@ rule Trojan_Win32_StealC_CCIK_2147911896_0
         $x_1_1 = {03 c7 30 08 83 fb 0f 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2157,6 +2256,7 @@ rule Trojan_Win32_StealC_GOZ_2147912055_0
         $x_1_1 = {8b 55 a8 81 c2 ?? ?? ?? ?? 2b 55 a0 2b d0 8b 45 d8 31 10 6a 00 e8 ?? ?? ?? ?? 83 45 ec 04 83 45 d8 04 8b 45 ec 3b 45 d4 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2178,6 +2278,7 @@ rule Trojan_Win32_StealC_GGM_2147912139_0
         $x_1_1 = {83 c0 64 89 85 f8 fb ff ff 83 ad ?? ?? ?? ?? 64 8a 85 f8 fb ff ff 30 04 33 83 7d 08 0f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2199,6 +2300,7 @@ rule Trojan_Win32_StealC_TYQ_2147912250_0
         $x_1_1 = {8b c5 d3 e8 89 44 24 14 8b 44 24 30 01 44 24 14 8d 04 2b 33 44 24 14 31 44 24 10 8b 44 24 10 29 44 24 1c ba b9 79 37 9e 8d 4c 24 18 e8 ?? ?? ?? ?? 4e 74 09 8b 5c 24 18 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2220,6 +2322,7 @@ rule Trojan_Win32_StealC_GXW_2147912266_0
         $x_10_1 = {30 04 37 83 7d ?? 0f ?? ?? 53 8d 85 ?? ?? ?? ?? 50 53 ff 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2241,6 +2344,7 @@ rule Trojan_Win32_StealC_KGF_2147912341_0
         $x_1_1 = {8b 45 f8 83 c0 64 89 45 fc 83 6d fc ?? 8b 45 08 8a 4d fc 03 c2 30 08 42 3b 55 0c 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2262,6 +2366,7 @@ rule Trojan_Win32_StealC_RA_2147912470_0
         $x_1_1 = {8b 45 f8 83 c0 64 89 45 fc 83 6d fc 64 8b 45 08 8a 4d fc 03 c2 30 08 42 3b d7 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2283,6 +2388,7 @@ rule Trojan_Win32_StealC_RB_2147912747_0
         $x_1_1 = {8b 45 f8 83 c0 ?? 89 45 fc 83 6d fc ?? 83 6d fc ?? 8b 45 08 8a 4d fc 03 c2 30 08 42 3b 55 ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2304,6 +2410,7 @@ rule Trojan_Win32_StealC_AMAB_2147912760_0
         $x_1_1 = {83 c0 46 89 45 ?? 83 6d ?? ?? ?? 83 6d ?? ?? 8b 45 ?? 8a 4d ?? 03 c6 30 08 46 3b 75 ?? 7c ?? 83 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2325,6 +2432,7 @@ rule Trojan_Win32_StealC_CCIQ_2147912956_0
         $x_1_1 = {8a 4d fc 03 c6 30 08 46 3b 75 0c 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2346,6 +2454,7 @@ rule Trojan_Win32_StealC_QW_2147913490_0
         $x_2_1 = {8a 45 c4 30 04 3b 83 7d ?? 0f 59 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2367,6 +2476,7 @@ rule Trojan_Win32_StealC_WS_2147913958_0
         $x_1_1 = {8a 85 f8 fb ff ff 30 04 3b 83 7d 08 0f 59 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2388,6 +2498,7 @@ rule Trojan_Win32_StealC_GND_2147914610_0
         $x_10_1 = {6a 6b 58 6a 6e 66 a3 ?? ?? ?? ?? 58 6a 65 66 a3 ?? ?? ?? ?? 58 6a 6c 66 a3 ?? ?? ?? ?? 58 6a 33 66 a3 ?? ?? ?? ?? 58 6a 32 66 a3 ?? ?? ?? ?? 58 6a 2e 66 a3 ?? ?? ?? ?? 58 6a 64 66 a3 ?? ?? ?? ?? 58 6a 6c 66 a3 ?? ?? ?? ?? 58 66 a3 ?? ?? ?? ?? 66 a3 ?? ?? ?? ?? 33 c0 6a 65 66 a3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2409,6 +2520,7 @@ rule Trojan_Win32_StealC_ZT_2147914812_0
         $x_1_1 = {8b c6 c1 e0 ?? 03 85 ?? ?? ?? ?? 03 ce 33 c1 33 45 ?? 2b d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2430,6 +2542,7 @@ rule Trojan_Win32_StealC_ZL_2147914844_0
         $x_1_1 = {60 e8 00 00 00 00 5d 81 ed 10 00 00 00 81 ed 40 66 bf 00 e9 04 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2452,6 +2565,7 @@ rule Trojan_Win32_StealC_SSD_2147914948_0
         $x_1_2 = {0f b6 c0 33 94 85 b8 f7 ff ff 0f b6 c1 03 94 85 b8 fb ff ff 8b 85 ?? ?? ?? ?? 33 14 38 83 ad 5c ef ff ff 01 89 14 38 8b 85 68 ef ff ff 8b 0c 07 89 14 07 8b d0 89 4c 38 04 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2473,6 +2587,7 @@ rule Trojan_Win32_StealC_NC_2147915104_0
         $x_1_1 = {60 e8 00 00 00 00 5d 81 ed 10 00 00 00 81 ed 1c 55 be 00 e9 04 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2494,6 +2609,7 @@ rule Trojan_Win32_StealC_IIC_2147915932_0
         $x_1_1 = {c1 e8 05 c7 05 ?? ?? ?? ?? ee 3d ea f4 89 45 70 8b 85 70 fe ff ff 01 45 70 8b 85 80 fe ff ff 8b f3 c1 e6 04 03 b5 6c fe ff ff 03 c3 33 f0 81 3d ?? ?? ?? ?? 03 0b 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2515,6 +2631,7 @@ rule Trojan_Win32_StealC_BBZ_2147916725_0
         $x_1_1 = {8b c7 c1 e8 05 89 45 74 8b 85 10 ff ff ff 01 45 74 8b 8d 3c ff ff ff 8b c7 c1 e0 04 03 85 ?? ?? ?? ?? 03 cf 33 c1 81 3d ?? ?? ?? ?? 03 0b 00 00 89 85 1c ff ff ff 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2536,6 +2653,7 @@ rule Trojan_Win32_StealC_GNN_2147919381_0
         $x_10_1 = {33 ca 03 c3 33 c1 81 3d ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ee 3d ea f4 89 44 24}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2557,6 +2675,7 @@ rule Trojan_Win32_StealC_GNM_2147919465_0
         $x_10_1 = {8b 45 f8 83 c0 46 89 45 fc 83 6d fc 46 8a 45 fc 30 04 1f 47 3b 7d}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2578,6 +2697,7 @@ rule Trojan_Win32_StealC_GNM_2147919465_1
         $x_10_1 = {8b c3 c1 e8 ?? 89 44 24 ?? 8b 44 24 ?? 01 44 24 ?? 8b f3 c1 e6 ?? 03 74 24 ?? 8d 0c 1f 33 f1 81 3d ?? ?? ?? ?? 03 0b 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2599,6 +2719,7 @@ rule Trojan_Win32_StealC_RZ_2147921607_0
         $x_2_1 = {30 14 38 83 ?? 0f 75 ?? 8d 85 f0 ?? ff ff 50 8d 8d fc ?? ff ff 51}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2620,6 +2741,7 @@ rule Trojan_Win32_StealC_RZ_2147921607_1
         $x_2_1 = {20 20 20 00 20 20 20 20 00 40 05 00 00 10 00 00 00 58 02 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 ac 01 00 00 00 50 05 00 00 02 00 00 00 68 02 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2641,6 +2763,7 @@ rule Trojan_Win32_StealC_TZ_2147921610_0
         $x_1_1 = {8b c7 c1 e8 ?? 89 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? c1 e7 ?? 03 7d ?? 03 c3 33 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2662,6 +2785,7 @@ rule Trojan_Win32_StealC_EZ_2147921611_0
         $x_2_1 = {8b c3 c1 e0 ?? 03 45 ?? 33 45 ?? 33 c1 89 45 ?? 8b 45 ?? 29 45 ?? 8b 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2683,6 +2807,7 @@ rule Trojan_Win32_StealC_EZ_2147921611_1
         $x_2_1 = {8b c3 c1 e8 05 03 cb 89 45 ?? 8b 45 ?? 01 45 ?? 8b fb c1 e7 ?? 03 7d ?? 33 f9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2709,6 +2834,7 @@ rule Trojan_Win32_StealC_EZ_2147921611_2
         $x_1_6 = "HARDWARE\\ACPI\\DSDT\\VBOX__" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2730,6 +2856,7 @@ rule Trojan_Win32_StealC_D_2147921681_0
         $x_2_1 = {58 53 50 b8 ?? ?? ?? ?? 40 25 ?? ?? ?? ?? 35 ?? ?? ?? ?? 89 c3 58 43 81 eb ?? ?? ?? ?? 81 eb ?? ?? ?? ?? 01 de 5b 68}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2751,6 +2878,7 @@ rule Trojan_Win32_StealC_E_2147921683_0
         $x_2_1 = {01 d3 31 03 5b 5a 50 51 68 ?? ?? ?? ?? 59 81 e9 ?? ?? ?? ?? 41 81 c1 ?? ?? ?? ?? 89 c8 59 2d ?? ?? ?? ?? 01 f0 05 ?? ?? ?? ?? 01 18 58 55}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2774,6 +2902,7 @@ rule Trojan_Win32_StealC_F_2147921684_0
         $x_4_3 = {01 de 5b 57 56 be ?? ?? ?? ?? bf ?? ?? ?? ?? 29 f7 5e 29 f9 5f}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2795,6 +2924,7 @@ rule Trojan_Win32_StealC_G_2147921685_0
         $x_2_1 = {01 f1 81 c1 ?? ?? ?? ?? 31 01 59 51 b9 ?? ?? ?? ?? 01 f1 01 19 8b 0c ?? 55 89 e5 81 c5}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2816,6 +2946,7 @@ rule Trojan_Win32_StealC_ZMZ_2147922237_0
         $x_5_1 = {8d 9b 00 00 00 00 8d b5 ?? ?? ff ff c7 85 ?? ?? ff ff 00 00 00 00 e8 ?? ?? ?? ?? 8a 95 ?? ?? ff ff 8b 85 ?? ?? ff ff 30 14 38 83 fb 0f 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2837,6 +2968,7 @@ rule Trojan_Win32_StealC_IZ_2147922413_0
         $x_2_1 = {8a 4d fc 8b 45 08 30 0c 07 83 fb 0f 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2858,6 +2990,7 @@ rule Trojan_Win32_StealC_AMZ_2147923014_0
         $x_1_1 = {33 75 f8 89 75 d0 8b 45 d0 29 45 f4 81 45 ec 47 86 c8 61 ff 4d e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2879,6 +3012,7 @@ rule Trojan_Win32_StealC_SGOB_2147923027_0
         $x_4_1 = {59 8b 4c 24 ?? 0f b6 44 14 ?? 03 c6 0f b6 c0 8a 44 04 ?? 30 04 39 47 3b 3b 7c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2900,6 +3034,7 @@ rule Trojan_Win32_StealC_GNZ_2147923054_0
         $x_10_1 = {33 f9 33 c7 81 3d ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ee 3d ea f4 89 45 ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2927,6 +3062,7 @@ rule Trojan_Win32_StealC_NE_2147923479_0
         $x_1_7 = "msimg32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2953,6 +3089,7 @@ rule Trojan_Win32_StealC_NF_2147923480_0
         $x_1_6 = "msimg32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2974,6 +3111,7 @@ rule Trojan_Win32_StealC_GA_2147923804_0
         $x_1_1 = {30 14 38 83 fb 0f 75 0c 00 8a 95 [0-4] 8b 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2995,6 +3133,7 @@ rule Trojan_Win32_StealC_GI_2147923805_0
         $x_1_1 = {8b ce 80 fa 11 76 1d 0f b6 fa 83 ef 11 8d 4e 01 83 ff 04 0f 82 aa 00 00 00 8a 11 88 10 40 41 4f 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3016,6 +3155,7 @@ rule Trojan_Win32_StealC_GZ_2147923828_0
         $x_2_1 = {8a 9c 07 49 9e 00 00 88 1c 06 81 f9 8d 00 00 00 75 06 89 15 ?? ?? ?? ?? 40 3b c1 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3037,6 +3177,7 @@ rule Trojan_Win32_StealC_KYI_2147924045_0
         $x_1_1 = {8a 44 0c 3c 8b 4c 24 38 30 04 29 45 3b 6b 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3059,6 +3200,7 @@ rule Trojan_Win32_StealC_KAK_2147924321_0
         $x_1_2 = {51 50 c7 04 24 00 00 00 00 59 01 f1 31 01 59 50 53}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3089,6 +3231,7 @@ rule Trojan_Win32_StealC_NG_2147924601_0
         $x_1_10 = "msimg32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3110,6 +3253,7 @@ rule Trojan_Win32_StealC_AMA_2147924889_0
         $x_1_1 = {eb 08 0f 5e 20 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3131,6 +3275,7 @@ rule Trojan_Win32_StealC_ACE_2147924899_0
         $x_1_1 = {83 c0 46 89 44 24 04 83 6c 24 04 46 8a 4c 24 04 30 0c 33 83 ff 0f 75 ?? 6a 00 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3153,6 +3298,7 @@ rule Trojan_Win32_StealC_GE_2147924967_0
         $x_1_2 = {a1 38 64 45 00 8a 8c 30 4b 13 01 00 8b 15 8c 50 45 00 88 0c 32 81 3d fc 55 45 00 90 04 00 00 75 1e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3174,6 +3320,7 @@ rule Trojan_Win32_StealC_MNO_2147925076_0
         $x_1_1 = {eb 08 0f 66 1f 00 00 00 00 00 e9 00 20 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3195,6 +3342,7 @@ rule Trojan_Win32_StealC_WWP_2147925110_0
         $x_5_1 = {8b c3 c1 e8 05 89 45 ?? 8b 45 e8 01 45 ?? 8b cb c1 e1 04 03 4d e4 8d 14 1f 33 ca 33 4d ?? 89 4d ec 8b 45 ?? 29 45 f8 81 c7 47 86 c8 61 83 6d f0 01 0f 85}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3216,6 +3364,7 @@ rule Trojan_Win32_StealC_CCJN_2147925182_0
         $x_1_1 = {83 c4 04 50 6a 00 ff 15 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 8b f0 33 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3237,6 +3386,7 @@ rule Trojan_Win32_StealC_CCJN_2147925182_1
         $x_5_1 = {8b c6 c1 e0 04 03 45 e8 8d 0c 33 33 c1 33 45 fc 89 45 d8 8b 45 d8 29 45 f8}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3258,6 +3408,7 @@ rule Trojan_Win32_StealC_JZ_2147925360_0
         $x_2_1 = {89 44 24 0c 83 6c 24 ?? ?? 0f be 04 1f 89 44 24 ?? 8b 44 24 ?? 31 44 24 ?? 8a 4c 24 ?? 88 0c 1f 47 3b fd 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3279,6 +3430,7 @@ rule Trojan_Win32_StealC_HZ_2147925498_0
         $x_2_1 = {8b c3 c1 e0 ?? 03 45 ?? 8d 0c 1f 33 c1 33 45 ?? 89 45 ?? 8b 45 ?? 29 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3300,6 +3452,7 @@ rule Trojan_Win32_StealC_HZ_2147925498_1
         $x_2_1 = {89 04 24 83 2c 24 ?? 0f be 04 32 89 44 24 ?? 8b 04 24 31 44 24 ?? 8a 4c 24 ?? 88 0c 32 42 3b d7 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3321,6 +3474,7 @@ rule Trojan_Win32_StealC_HZ_2147925498_2
         $x_1_1 = {20 20 20 00 20 20 20 20 00 90 24 00 00 10 00 00 00 62 01 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 ac 01 00 00 00 a0 24 00 00 02 00 00 00 72 01 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3348,6 +3502,7 @@ rule Trojan_Win32_StealC_NI_2147925557_0
         $x_1_7 = "bidevilumopalozidepowayo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3369,6 +3524,7 @@ rule Trojan_Win32_StealC_TGF_2147925633_0
         $x_5_1 = {8b c3 c1 e0 04 03 45 e4 8d 0c 1f 33 c1 33 45 ?? 89 45 ?? 8b 45 ec 29 45 ?? 81 c7 47 86 c8 61 83 6d f0 01 0f 85 85}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3390,6 +3546,7 @@ rule Trojan_Win32_StealC_JGM_2147925744_0
         $x_1_1 = {8b d3 c1 ea 05 89 55 fc 8b 45 e8 01 45 fc 8b c3 c1 e0 04 03 45 e4 8d 0c 1f 33 c1 33 45 fc 89 45 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3416,6 +3573,7 @@ rule Trojan_Win32_StealC_MBWA_2147925820_0
         $x_1_6 = "Rexitigayol zajahadenacawos funeluzeyucix" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3437,6 +3595,7 @@ rule Trojan_Win32_StealC_GD_2147925882_0
         $x_1_1 = {33 c1 33 45 fc 89 45 ec 8b 45 ec 29 45 f8 81 c7 47 86 c8 61 83 6d f0 01 0f 85 ?? ?? ?? ?? 8b 45 08 8b 55 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3458,6 +3617,7 @@ rule Trojan_Win32_StealC_AW_2147925953_0
         $x_1_1 = {eb 08 0f 62 1b 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3479,6 +3639,7 @@ rule Trojan_Win32_StealC_AE_2147926167_0
         $x_1_1 = {eb 08 0f a8 1b 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3500,6 +3661,7 @@ rule Trojan_Win32_StealC_BYM_2147926345_0
         $x_5_1 = {88 45 d0 0f 92 c0 34 7f 83 fb 7e 0f b6 c0 0f 42 c3 89 45 ?? 8b 01 29 f8 83 f8 01 0f b6 42 0f 0f b6 52 ?? 88 55 d8 77}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3522,6 +3684,7 @@ rule Trojan_Win32_StealC_ASE_2147926961_0
         $x_3_2 = {8b c7 c1 e8 05 8d 0c 3a 89 45 fc 8b 45 e8 01 45 fc 8b d7 c1 e2 04 03 55 e0 33 55 fc 33 d1 89 55 e4 8b 45 e4 29 45 f4 8b 45 dc 29 45 f8 83 6d ec 01}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3543,6 +3706,7 @@ rule Trojan_Win32_StealC_AZ_2147927063_0
         $x_2_1 = {8b d7 c1 e2 ?? 03 55 ?? 33 55 ?? 33 d1 89 55 ?? 8b 45 ?? 29 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3564,6 +3728,7 @@ rule Trojan_Win32_StealC_AZ_2147927063_1
         $x_2_1 = {20 20 20 00 20 20 20 20 00 10 05 00 00 10 00 00 00 48 02 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 b0 02 00 00 00 20 05 00 00 04 00 00 00 58 02 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3585,6 +3750,7 @@ rule Trojan_Win32_StealC_ASL_2147927067_0
         $x_1_1 = {b8 69 00 00 00 66 a3 ?? ?? ?? ?? b9 32 00 00 00 66 89 0d ?? ?? ?? ?? ba 73 00 00 00 66 89 15 ?? ?? ?? ?? b8 33 00 00 00 b9 6c 00 00 00 ba 64 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3610,6 +3776,7 @@ rule Trojan_Win32_StealC_ASC_2147927174_0
         $x_4_5 = "guwifumejotuwafumapigiwihemoheyecik" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3631,6 +3798,7 @@ rule Trojan_Win32_StealC_TBM_2147927235_0
         $x_1_1 = {eb 08 0f f2 1c 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3652,6 +3820,7 @@ rule Trojan_Win32_StealC_BZ_2147927284_0
         $x_2_1 = {03 c8 8b 45 ?? c1 e8 ?? 89 45 ?? 8b 55 ?? 01 55 ?? 33 f1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3673,6 +3842,7 @@ rule Trojan_Win32_StealC_PZ_2147927525_0
         $x_2_1 = {8b d3 c1 ea ?? 89 55 ?? 8b 45 ?? 01 45 ?? 8b f3 c1 e6 ?? 03 75 ?? 8d 04 1f 33 f0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3694,6 +3864,7 @@ rule Trojan_Win32_StealC_OLP_2147928018_0
         $x_5_1 = {83 c0 46 89 44 24 14 ?? 83 6c 24 ?? 46 8a 44 24 14 30 04 1f 47 3b fd 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3715,6 +3886,7 @@ rule Trojan_Win32_StealC_SPCB_2147928027_0
         $x_10_1 = {8d 74 24 0c c7 44 24 14 ?? ?? ?? ?? c7 44 24 0c ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 44 24 0c 83 c0 46 89 44 24 14 90 83 6c 24 14 46 8a 44 24 14 30 04 1f 47 3b fd 7c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3737,6 +3909,7 @@ rule Trojan_Win32_StealC_GQ_2147928065_0
         $x_1_2 = {90 04 00 00 75 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3758,6 +3931,7 @@ rule Trojan_Win32_StealC_GTM_2147928146_0
         $x_10_1 = {8b c8 33 d2 8b c7 f7 f1 8b 45 ?? 83 c4 ?? 68 ?? ?? ?? ?? 8a 0c 02 8b 55 ?? 32 0c 1a 88 0b}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3779,6 +3953,7 @@ rule Trojan_Win32_StealC_GTM_2147928146_1
         $x_10_1 = {89 c8 41 f7 e5 c1 ea ?? 6b c2 ?? 8d 14 1e 0f b6 44 10 ?? 32 44 1e ?? 88 44 1f ?? 43}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3800,6 +3975,7 @@ rule Trojan_Win32_StealC_OIX_2147928164_0
         $x_5_1 = {8b 55 ec 8b 45 f4 8d 0c 02 8b 45 f4 c1 e8 05 89 45 f8 8b 55 d8 01 55 f8 33 f1 81 3d ?? ?? ?? ?? e6 09 00 00 c7 05 ?? ?? ?? ?? ee 3d ea f4 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3821,6 +3997,7 @@ rule Trojan_Win32_StealC_AMCQ_2147928167_0
         $x_4_1 = {0f b6 c0 33 94 86 ?? ?? ?? ?? 0f b6 c3 8b 5d ?? 03 94 86 ?? ?? ?? ?? 8b 45 ?? 31 14 c8 83 6d ?? 01 8b 04 c8 8b 14 cb 89 04 cb 89 54 cb ?? 75 ?? 8b c8 8b 45 ?? 89 14 c3 89 4c c3 ?? 8b 46 ?? 33 c1 8b 4d ?? 89 44 cb ?? 8b 06 31 04 cb 41 8d 46 ?? 89 4d}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3842,6 +4019,7 @@ rule Trojan_Win32_StealC_ZC_2147928230_0
         $x_2_1 = {20 20 20 00 20 20 20 20 00 90 24 00 00 10 00 00 00 68 01 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 ac 01 00 00 00 a0 24 00 00 02 00 00 00 78 01 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3864,6 +4042,7 @@ rule Trojan_Win32_StealC_ARAZ_2147928285_0
         $x_2_2 = {53 8d 44 24 14 89 5c 24 14 50 53 68 3f 00 0f 00 53 53 53 8d 84 24 3c 04 00 00 50 68 01 00 00 80 ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3889,6 +4068,7 @@ rule Trojan_Win32_StealC_ARAZ_2147928285_1
         $x_2_5 = "Opus Theatre was founded by" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3910,6 +4090,7 @@ rule Trojan_Win32_StealC_SPFF_2147928545_0
         $x_5_1 = {8d 74 24 10 c7 44 24 0c ?? ?? ?? ?? c7 44 24 10 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 44 24 10 83 c0 46 89 44 24 0c 83 6c 24 0c 0a 90 83 6c 24 0c 3c 8a 44 24 0c 30 04 2f 83 fb 0f 75 0b 8b 4c 24 10 51 ff 15 ?? ?? ?? ?? 47 3b fb 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3931,6 +4112,7 @@ rule Trojan_Win32_StealC_TKV_2147928690_0
         $x_5_1 = {8b cb c1 e1 04 03 4d ?? 8d 14 18 33 ca 33 4d f8 05 47 86 c8 61 2b f9 83 6d ?? 01 89 7d ec 89 45 f4 0f 85}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3952,6 +4134,7 @@ rule Trojan_Win32_StealC_GCM_2147928769_0
         $x_10_1 = {0f b6 c0 8a 84 04 ?? ?? ?? ?? 8b 4c 24 ?? 30 04 0e 89 c8 40 39 e8 8b 54 24}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3973,6 +4156,7 @@ rule Trojan_Win32_StealC_RPA_2147928940_0
         $x_1_1 = {20 20 20 00 20 20 20 20 00 90 24 00 00 10 00 00 00 68 01 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 f0 01 00 00 00 a0 24 00 00 02 00 00 00 78 01 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0 2e 69 64 61 74 61 20 20 00 10 00 00 00 b0 24 00 00 02 00 00 00 7a 01 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3994,6 +4178,7 @@ rule Trojan_Win32_StealC_BN_2147929360_0
         $x_5_1 = {40 00 00 e0 [0-11] 1b 00 00 ?? ?? 00 00 ?? 1b 00 00 ?? 28 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 ?? ?? ?? ?? ?? ?? ?? ?? 00 10 00 00 00 ?? ?? 00 00 ?? 00 00 00 ?? 43 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 74 61 67 67 61 6e 74 00 30}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4015,6 +4200,7 @@ rule Trojan_Win32_StealC_GW_2147929411_0
         $x_1_1 = {83 6c 24 0c 3c 8a 44 24 0c 30 04 3b 83 fd 0f 75 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4037,6 +4223,7 @@ rule Trojan_Win32_StealC_AMCX_2147929568_0
         $x_1_2 = {20 20 20 f0 13 00 00 00 d0 01 00 00 10 00 00 00 b0 00 00 00 00 00 00 00 00 00 00 00 00 35 00 40 00 00 e0 2e 69 64 61 74 61 00 00 00 10 00 00 00 f0 01 00 00 10 00 00 00 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4058,6 +4245,7 @@ rule Trojan_Win32_StealC_ZE_2147929748_0
         $x_2_1 = {8b d3 c1 e2 ?? 03 55 ?? 8d 0c 18 33 d1 33 55 ?? 05 ?? ?? ?? ?? 2b fa}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4079,6 +4267,7 @@ rule Trojan_Win32_StealC_AMCY_2147930105_0
         $x_1_1 = {8b c1 99 f7 fb 8b 04 97 31 04 8e 41 83 f9 ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4100,6 +4289,7 @@ rule Trojan_Win32_StealC_YOP_2147930396_0
         $x_5_1 = {8b 44 24 04 83 c0 46 89 04 24 83 2c 24 ?? 83 2c 24 3c 8a 04 24 30 04 32 42 3b d7 7c cb 83 ff 2d 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4121,6 +4311,7 @@ rule Trojan_Win32_StealC_AMV_2147930981_0
         $x_5_1 = {8d 0c 3a 8b 45 f0 c1 e8 05 89 45 fc 8b 45 dc 01 45 fc 33 f1 81 3d ?? ?? ?? ?? e6 09 00 00 c7 05 ?? ?? ?? ?? ee 3d ea f4 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4142,6 +4333,7 @@ rule Trojan_Win32_StealC_NNP_2147932518_0
         $x_5_1 = {89 de 8a 18 a1 ?? ?? ?? ?? 01 c8 89 e9 57 ff d0 30 18 89 f3 be d5 4c ca d0 47 a1 1c c1 43 00 01 f0 89 e9 ff d0 39 c7 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4163,6 +4355,7 @@ rule Trojan_Win32_StealC_BAA_2147934831_0
         $x_3_1 = {03 fe 81 ef 89 15 00 00 03 c7 31 03 83 45 ec 04 6a 00 e8 ?? ?? ?? ?? 8b f0 83 c6 04 6a 00 e8 ?? ?? ?? ?? 03 f0 01 f3 8b 45 ec}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4184,6 +4377,7 @@ rule Trojan_Win32_StealC_GJ_2147938145_0
         $x_1_1 = {8b 45 0c 57 8d 14 06 e8 be ff ff ff 30 02 46 59 3b 75 10 72 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4205,6 +4399,7 @@ rule Trojan_Win32_StealC_SCPC_2147939391_0
         $x_1_1 = {20 20 20 00 20 20 20 20 00 90 0c 00 00 10 00 00 00 e0 04 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 14 03 00 00 00 a0 0c 00 00 02 00 00 00 f0 04 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0 2e 69 64 61 74 61 20 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4226,6 +4421,7 @@ rule Trojan_Win32_StealC_LJV_2147942792_0
         $x_5_1 = {ff d6 8b f0 89 b4 24 a0 00 00 00 b2 78 c7 84 24 b0 00 00 00 78 19 1d 0b 33 c9 c7 84 24 b4 00 00 00 58 1d 0a 0a c7 84 24 b8 00 00 00 17 0a 42 58 c6 84 24 bc 00 00 00 00 8d 84 24 ?? ?? ?? ?? 30 14 08 41 83 f9 0b 73}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4248,6 +4444,7 @@ rule Trojan_Win32_StealC_GVD_2147945134_0
         $x_1_2 = {01 d1 01 19 59 5a 83 ec 04 89 14 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win64_Zenpak_GXM_2147918428_0
         $x_10_1 = {48 f7 e1 48 c1 ea ?? 48 69 d2 ?? ?? ?? ?? 48 2b ca 42 8a 04 11 41 30 01 49 ff c1 41 81 f8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_Zenpak_GPA_2147919648_0
         $x_3_5 = "SwpLikwKTIpNCk4KTopPCk##" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win64_Zenpak_GPB_2147919649_0
         $x_1_1 = {55 89 e5 8a 45 0c 8a 4d 08 88 c2 02 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win64_Zenpak_GPC_2147920375_0
         $x_1_1 = {55 89 e5 56 8a 45 0c 8a 4d 08 88 c2 02 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_Win64_Zenpak_PAGE_2147929634_0
         $x_2_2 = {41 30 00 ff c1 48 ff c2 49 ff c0 49 ff c9 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

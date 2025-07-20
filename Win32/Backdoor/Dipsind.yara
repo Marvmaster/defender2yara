@@ -18,6 +18,7 @@ rule Backdoor_Win32_Dipsind_C_2147707040_0
         $x_1_3 = {b8 ab aa aa aa 8b b4 24 ?? 00 00 00 8b 8c 24 ?? 00 00 00 8d 57 02 83 c4 ?? f7 e2 8b 84 24 f8 00 00 00 8b da d1 eb c1 e3 02 85 c0 74 02 89 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

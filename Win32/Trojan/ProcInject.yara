@@ -16,6 +16,7 @@ rule Trojan_Win32_ProcInject_A_2147594937_0
         $x_1_2 = {43 72 65 61 74 65 54 68 72 65 61 64 00 52 65 61 64 50 72 6f 63}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

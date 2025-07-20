@@ -20,6 +20,7 @@ rule VirTool_Win32_RogPotz_A_2147781568_0
         $x_1_5 = {8b 45 c8 8d 73 ?? 88 45 c8 8b 45 9c 56 c6 45 c9 00 88 45 ca c6 45 cb 00 e8 ?? ?? ?? ?? 0f 10 45 a4 8b f8 8b 45 c8 53 ff 75 a0 0f 11 07 0f 10 45 b4 0f 11 47 10 0f 10 45 cc 0f 11 47 20 0f 10 45 dc 0f 11 47 30 89 47 40 8d ?? ?? 50 c6 47 44 07 e8 ?? ?? ?? ?? 8b 4d 98 8d ?? ?? 83 c4 10 c7 44 1f 45 00 00 00 00 c7 44 1f 49 00 0a 00 ff c7 44 1f 4d ff 00 00 00 c6 44 1f 51 00 8b 01 52 56 57 51 c7 45 c4 00 00 00 00 ff ?? ?? ff 75 c4 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 57 e8 ?? ?? ?? ?? ff 75 a0 e8 ?? ?? ?? ?? 8b 4d fc 83 c4 10 33 cd 33 c0 5f 5e 5b e8 ?? ?? ?? ?? 8b e5 5d c2 1c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

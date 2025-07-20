@@ -20,6 +20,7 @@ rule Trojan_Win32_Paynebot_SBR_2147764528_0
         $x_1_5 = "Lock_policy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule TrojanSpy_MSIL_Infoustil_A_2147708922_0
         $x_1_9 = "index.php?action=delete&arquivo=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule TrojanSpy_MSIL_Infoustil_A_2147708922_1
         $x_1_9 = "Tentando Reiniciar Server|" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Ransom_Win32_VasaLocker_MK_2147772935_0
         $x_10_8 = "__NIST_K571__" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Fastpos_A_2147728837_0
         $x_1_3 = "newcomputer&username=%S&computername=%S&os=%S&architecture=%S" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

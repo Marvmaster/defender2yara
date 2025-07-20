@@ -18,6 +18,7 @@ rule Ransom_Win32_HQCrypt_PA_2147792995_0
         $x_1_3 = "\\al-madani\\Release\\HQ_52_42.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Worm_Win32_Rimecud_B_2147622942_0
         $x_1_9 = "Flood running" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -55,6 +56,7 @@ rule Worm_Win32_Rimecud_F_2147626076_0
         $x_1_7 = {5b 49 43 51 20 4d 65 73 73 61 67 65 20 55 73 65 72 5d ?? 55 49 4e 3d 25 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Worm_Win32_Rimecud_G_2147626077_0
         $x_1_3 = {e8 00 00 00 00 5e 83 c6 49 b9 4b c0 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Worm_Win32_Rimecud_Q_2147629142_0
         $x_1_3 = {e8 c0 e9 af ed b5 f3 79 f3 ab f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Worm_Win32_Rimecud_HM_2147641375_0
         $x_1_3 = "/receive/r_autoidcnt.asp?mer_seq=%s&realid=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Gepys_A_2147680240_0
         $x_1_7 = {43 00 72 00 79 00 70 00 74 00 6f 00 67 00 72 00 61 00 70 00 68 00 79 00 00 00 4d 00 61 00 63 00 68 00 69 00 6e 00 65 00 47 00 75 00 69 00 64 00 00 00 00 00 00 00 5c 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule TrojanDropper_Win32_Gepys_DJ_2147742179_0
         $x_1_4 = {f7 f1 88 d9 d3 6d ec 8b 4d ec 81 c1 3f 9c 04 00 d3 e3 8d 04 0b b9 bb ff 00 00 89 d6 89 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule TrojanDropper_Win32_Gepys_GC_2147743010_0
         $x_1_2 = {8b 55 08 8b 4d 0c 8a 02 88 45 ff 8a 01 88 02 8a 45 ff 88 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule TrojanDropper_Win32_Gepys_RL_2147744030_0
         $x_2_2 = {29 c1 31 d2 89 c8 b9 9e 00 01 00 f7 f1 a1 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 01 d8 31 d2 05 b5 92 02 00 8d 4b 01 a3 ?? ?? ?? ?? f7 f1 b9 b3 fe 00 00 31 d2 f7 f1 b9 89 0b 01 00 a1 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 09 d8 31 d2 f7 f1 b9 70 03 01 00 8d 43 ff 89 15 ?? ?? ?? ?? 23 05 ?? ?? ?? ?? 31 d2 f7 f1 8b 0d ?? ?? ?? ?? 89 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule TrojanDropper_Win32_Gepys_DQ_2147817682_0
         $x_1_2 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule TrojanDropper_Win32_Gepys_ARA_2147837130_0
         $x_2_2 = "c:\\Mozilla\\jbvusrj.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule TrojanDropper_Win32_Gepys_PABE_2147892658_0
         $x_1_1 = {05 81 aa 00 00 31 d2 a3 ?? ?? ?? 00 a1 ?? ?? ?? 00 f7 f1 b9 4e 00 01 00 31 d2 f7 f1 a1 ?? ?? ?? 00 89 15 ?? ?? ?? 00 09 d8 88 d9 05 51 c5 00 00 31 d2 a3 ?? ?? ?? 00 d3 e8 b9 ef ff 00 00 f7 f1 8a 0d ?? ?? ?? 00 89 d8 d3 f8 8b 0d ?? ?? ?? 00 89 15 ?? ?? ?? 00 29 c1 31 d2 89 c8 b9 2d 0b 01 00 f7 f1 b9 d5 0d 01 00 8d 43 ff 89 15 ?? ?? ?? 00 23 05 ?? ?? ?? 00 31 d2 f7 f1 a1 ?? ?? ?? 00 0c 01 0f af c3 8b 0d ?? ?? ?? 00 89 15 ?? ?? ?? 00 29 c1 31 d2 89 c8 b9 6c 0a 01 00 f7 f1 b9 99 0e 01 00 a1 ?? ?? ?? 00 89 15 ?? ?? ?? 00 01 d8 31 d2 f7 f1 a1 ?? ?? ?? 00 e9 13 fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

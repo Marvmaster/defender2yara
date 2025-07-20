@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_CoinMiner_I_2147688271_0
         $x_1_2 = "kwws=22lqvlglrxvfrghu1frp2Uhydpshg2Ilohv2fj1h" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_CoinMiner_J_2147716747_0
         $x_1_3 = {00 36 36 36 41 6e 6f 74 68 65 72 50 61 73 73 77 6f 72 64 36 36 36 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanDownloader_Win32_CoinMiner_K_2147716957_0
         $x_1_4 = "%s://%s%s%s:%hu%s%s%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule TrojanDownloader_Win32_CoinMiner_L_2147718631_0
         $x_1_3 = {68 74 74 70 3a 2f 2f [0-48] 2e 6f 6e 69 6f 6e 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule TrojanDownloader_Win32_CoinMiner_QA_2147726089_0
         $x_1_2 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +161,7 @@ rule TrojanDownloader_Win32_CoinMiner_QD_2147727448_0
         $x_1_5 = {43 3a 5c 57 69 6e 64 6f 77 73 5c 53 79 73 57 4f 57 36 34 [0-32] 74 78 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +187,7 @@ rule TrojanDownloader_Win32_CoinMiner_QE_2147728645_0
         $x_1_5 = {34 2e 70 72 6f 67 72 61 6d 2d 69 71 2e 63 6f 6d 2f 75 70 6c 6f 61 64 73 2f [0-32] 2e 6a 70 67}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -253,6 +260,7 @@ rule TrojanDownloader_Win32_CoinMiner_M_2147730286_0
         $x_1_7 = {68 74 74 70 3a 2f 2f 05 00 2e 66 74 70 68 6f 73 74 69 6e 67 2e 70 77 2f 75 73 65 72 38 31 32 34 39 2f 34 39 31 38 2f 05 00 2e 74 78 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -281,6 +289,7 @@ rule TrojanDownloader_Win32_CoinMiner_N_2147735571_0
         $x_1_8 = ":::x123xsuccess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -318,6 +327,7 @@ rule TrojanDownloader_Win32_CoinMiner_AMK_2147788178_0
         $x_3_12 = "Themida" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

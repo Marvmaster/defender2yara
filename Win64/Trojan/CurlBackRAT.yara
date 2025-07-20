@@ -19,6 +19,7 @@ rule Trojan_Win64_CurlBackRAT_PSR_2147946854_0
         $x_1_4 = "SELECT * FROM AntiVirusProduct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

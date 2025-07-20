@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Sycomder_A_2147660035_0
         $x_1_4 = {3e 3e 20 25 54 45 4d 50 25 5c [0-8] 2e 5f 65 67}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanSpy_Win32_Sycomder_B_2147672229_0
         $x_3_5 = "\\autoinstall.exe" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

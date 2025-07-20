@@ -20,6 +20,7 @@ rule Ransom_MSIL_Fsysna_DA_2147789041_0
         $x_1_5 = "Bitcoin Address" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

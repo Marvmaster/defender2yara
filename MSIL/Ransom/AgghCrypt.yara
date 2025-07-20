@@ -22,6 +22,7 @@ rule Ransom_MSIL_AgghCrypt_PA_2147774203_0
         $x_1_7 = {5c 78 36 35 34 35 34 5c [0-16] 5c [0-16] 5c 78 36 35 34 35 34 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

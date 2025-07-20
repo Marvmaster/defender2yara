@@ -21,6 +21,7 @@ rule Trojan_MSIL_Fauppod_HB_2147841764_0
         $x_1_6 = "$$method0x600" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -50,6 +51,7 @@ rule Trojan_MSIL_Fauppod_CB_2147841765_0
         $x_1_5 = "DebuggerHiddenAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_MSIL_Fauppod_ABLA_2147841766_0
         $x_1_2 = {53 00 49 00 4b 00 4a 00 44 00 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

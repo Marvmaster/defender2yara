@@ -27,6 +27,7 @@ rule TrojanDownloader_Win32_Selex_A_2147603617_0
         $x_20_13 = "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zone" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_100_*) and 2 of ($x_20_*) and 3 of ($x_1_*))) or
             (all of ($x*))

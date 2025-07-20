@@ -18,6 +18,7 @@ rule Trojan_Win32_Salimpel_A_2147633321_0
         $x_1_4 = "-:Generation:-" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

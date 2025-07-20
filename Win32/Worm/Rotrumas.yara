@@ -18,6 +18,7 @@ rule Worm_Win32_Rotrumas_A_2147608370_0
         $x_1_4 = "ot02_88@mail.ru" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

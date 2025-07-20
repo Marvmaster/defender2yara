@@ -19,6 +19,7 @@ rule Trojan_MSIL_BitRat_MK_2147773856_0
         $x_1_4 = "7300650063006F006E0064006100720079002E00700068007000" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -51,6 +52,7 @@ rule Trojan_MSIL_BitRat_A_2147794212_0
         $x_1_9 = {11 04 11 05 11 04 11 05 91 20 ae 02 00 00 59 d2 9c 00 11 05 17 58 13 05 11 05 11 04 8e 69 fe 04 13 06 11 06 2d d9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_MSIL_BitRat_NE_2147827659_0
         $x_1_1 = {20 00 0c 00 00 28 ?? 00 00 0a 72 ?? 00 00 70 28 ?? 00 00 0a 0a 06 6f ?? 00 00 0a 0b 07 6f ?? 00 00 0a 0c 73 ?? 00 00 0a 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_MSIL_BitRat_NEA_2147829571_0
         $x_1_2 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_MSIL_BitRat_NEB_2147830277_0
         $x_1_1 = {0c 06 08 6f 15 00 00 0a 06 18 6f 16 00 00 0a 72 ?? 00 00 70 28 06 00 00 06 0d 06 6f 17 00 00 0a 09 16 09 8e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Trojan_MSIL_BitRat_NEAA_2147836091_0
         $x_2_2 = "lucidsoftech" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -161,6 +167,7 @@ rule Trojan_MSIL_BitRat_NEAC_2147844054_0
         $x_1_4 = "set_CreateNoWindow" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

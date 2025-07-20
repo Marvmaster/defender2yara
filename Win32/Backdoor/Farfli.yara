@@ -25,6 +25,7 @@ rule Backdoor_Win32_Farfli_A_2147595048_0
         $x_3_11 = "43f69cc9-8007-4b" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 2 of ($x_1_*))) or
             ((4 of ($x_3_*))) or
@@ -58,6 +59,7 @@ rule Backdoor_Win32_Farfli_B_2147595049_0
         $x_1_7 = {66 c7 44 24 18 58 02 89 4c 24 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -84,6 +86,7 @@ rule Backdoor_Win32_Farfli_C_2147596695_0
         $x_1_7 = {0f 84 14 00 00 00 0f 85 0e 00 00 00 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or
             ((3 of ($x_4_*))) or
@@ -111,6 +114,7 @@ rule Backdoor_Win32_Farfli_C_2147596695_1
         $x_1_4 = "(C) Microsoft Corporation. All rights reserved." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +141,7 @@ rule Backdoor_Win32_Farfli_D_2147596696_0
         $x_1_7 = {0f 84 14 00 00 00 0f 85 0e 00 00 00 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or
             ((3 of ($x_4_*))) or
@@ -163,6 +168,7 @@ rule Backdoor_Win32_Farfli_A_2147601358_0
         $x_1_3 = {55 8b ec 83 ec 10 e8 ?? ?? ff ff 83 78 10 02 75 ?? e8 ?? ?? ff ff 83 78 04 05 72 ?? e8 ?? ?? ff ff 83 78 08 01 75 ?? 8d 45 fc 53 33 db 50 6a 01 53 68 ?? ?? ?? ?? 68 02 00 00 80 ff 15 ?? ?? ?? ?? 85 c0 75 ?? 8d 45 f8 c7 45 f8 04 00 00 00 50 8d 45 f4 50 8d 45 f0 50 53 68 ?? ?? ?? ?? ff 75 fc ff 15 ?? ?? ?? ?? 85 c0 75 08 83 7d f4 01 75 02 b3 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -185,6 +191,7 @@ rule Backdoor_Win32_Farfli_E_2147601600_0
         $x_5_2 = {68 24 0c 0b 83 56 ff 15}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +218,7 @@ rule Backdoor_Win32_Farfli_E_2147606302_0
         $x_1_7 = {52 61 76 6d 6f 6e 64 2e 65 78 65 00 61 76 70 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +241,7 @@ rule Backdoor_Win32_Farfli_G_2147606747_0
         $x_3_3 = {74 1d 8d 85 d8 fe ff ff 50 57 e8 ?? ?? 00 00 85 c0 74 12 8d 85 fc fe ff ff 50 ff 75 08 eb db 8b 9d e0 fe ff ff 57}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -256,6 +265,7 @@ rule Backdoor_Win32_Farfli_H_2147606855_0
         $x_20_4 = {40 65 63 68 6f 20 6f 66 66 0d 0a 3a 4c 6f 6f 70 0d 0a 61 74 74 72 69 62 20 22 25 73 22 20 2d 72 20 2d 61 20 2d 73 20 2d 68 0d 0a 64 65 6c 20 22 25 73 22 0d 0a 69 66 20 65 78 69 73 74 20 22 25 73 22 20 67 6f 74 6f 20 4c 6f 6f 70 0d 0a 64 65 6c 20 25 25 30 0d 0a}  //weight: 20, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -278,6 +288,7 @@ rule Backdoor_Win32_Farfli_I_2147616654_0
         $x_2_3 = {33 c0 80 b0 ?? ?? ?? ?? ?? 40 3d ?? ?? ?? ?? 7c f1 33 c0 c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             ((1 of ($x_3_*))) or
@@ -310,6 +321,7 @@ rule Backdoor_Win32_Farfli_I_2147616654_1
         $x_1_9 = "CVideoCap" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -338,6 +350,7 @@ rule Backdoor_Win32_Farfli_N_2147642408_0
         $x_1_6 = {6a 01 8d 8c 24 54 02 00 00 68 14 42 40 00 51 68 02 00 00 80 e8 56 00 00 00 56 e8 10 f8 ff ff 56 e8 26 03 00 00 53 e8 20 03 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -359,6 +372,7 @@ rule Backdoor_Win32_Farfli_P_2147647337_0
         $x_1_2 = "netddos" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -387,6 +401,7 @@ rule Backdoor_Win32_Farfli_Q_2147647899_0
         $x_2_9 = "[%02u-%02u-%d %02u:%02u:%02u] (%s)" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 6 of ($x_2_*))) or
             ((2 of ($x_4_*) and 4 of ($x_2_*))) or
@@ -415,6 +430,7 @@ rule Backdoor_Win32_Farfli_R_2147649417_0
         $x_10_4 = "ConneCtIOns\\pbk\\raSPHONE.pbk" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -439,6 +455,7 @@ rule Backdoor_Win32_Farfli_U_2147653860_0
         $x_1_2 = {5c 75 73 65 72 2e 64 61 74 [0-16] 42 6c 6f 63 6b 49 6e 70 75 74 [0-32] 5c 63 6d 64 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +478,7 @@ rule Backdoor_Win32_Farfli_Z_2147666527_0
         $x_4_3 = "[%02u-%02u-%d %02u:%02u:%02u] (%s)" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -490,6 +508,7 @@ rule Backdoor_Win32_Farfli_AA_2147678441_0
         $x_5_10 = "ttp://127.0.0.1:8888/ip.txt" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_50_*) and 1 of ($x_10_*) and 2 of ($x_5_*))) or
             ((1 of ($x_100_*) and 3 of ($x_50_*) and 2 of ($x_10_*))) or
@@ -523,6 +542,7 @@ rule Backdoor_Win32_Farfli_AC_2147678660_0
         $x_20_5 = {c6 45 90 4d c6 45 91 58 c6 45 92 57 c6 45 93 4c c6 45 94 56 c6 45 95 49 c6 45 96 50}  //weight: 20, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_50_*) and 1 of ($x_20_*))) or
             ((2 of ($x_100_*) and 1 of ($x_20_*))) or
@@ -554,6 +574,7 @@ rule Backdoor_Win32_Farfli_AD_2147678780_0
         $x_10_7 = "<H1>403 Forbidden</H1>" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_50_*) and 1 of ($x_20_*))) or
             ((2 of ($x_100_*) and 2 of ($x_50_*))) or
@@ -583,6 +604,7 @@ rule Backdoor_Win32_Farfli_AE_2147678781_0
         $x_25_6 = {c6 85 64 ff ff ff 00 b8 01 00 00 00 b8 ff ff ff ff 90 90 c6 85}  //weight: 25, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 3 of ($x_25_*))) or
             ((2 of ($x_100_*) and 1 of ($x_50_*) and 1 of ($x_25_*))) or
@@ -614,6 +636,7 @@ rule Backdoor_Win32_Farfli_AH_2147678905_0
         $x_10_8 = {c6 45 f0 47 c6 45 f1 48 66 8b 45 f0 89 11 c7 86 a8 00 00 00 ff ff ff ff 66 89 41 04}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*))) or
             (all of ($x*))
@@ -644,6 +667,7 @@ rule Backdoor_Win32_Farfli_AI_2147678907_0
         $x_25_8 = {c6 45 f4 43 c6 45 f5 68 c6 45 f6 69 c6 45 f7 63 c6 45 f8 6b}  //weight: 25, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_30_*) and 4 of ($x_25_*))) or
             ((1 of ($x_100_*) and 4 of ($x_25_*))) or
@@ -678,6 +702,7 @@ rule Backdoor_Win32_Farfli_AJ_2147678964_0
         $x_25_8 = {c6 45 e6 55 c6 45 e7 aa 53 53 6a 03 53 6a 03 68 00 00 00 c0}  //weight: 25, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 2 of ($x_30_*) and 4 of ($x_25_*))) or
             ((1 of ($x_100_*) and 4 of ($x_25_*))) or
@@ -712,6 +737,7 @@ rule Backdoor_Win32_Farfli_AN_2147679095_0
         $x_20_6 = {0f b7 d0 0f af 55 0c 8b 4d 10 83 c2 1f c1 fa 03 83 e2 fc c7 06 28 00 00 00 0f af d1 83 f8 10}  //weight: 20, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_20_*))) or
             ((1 of ($x_100_*) and 1 of ($x_50_*) and 1 of ($x_20_*))) or
@@ -743,6 +769,7 @@ rule Backdoor_Win32_Farfli_AO_2147679247_0
         $x_20_8 = {c6 45 f6 65 c6 45 f7 2e c6 45 f8 6e c6 45 f9 69 c6 45 fa 61 c6 45 fb 4d c6 45 fc 53 c6 45 fd 44 c6 45 fe 00}  //weight: 20, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_20_*) and 1 of ($x_10_*))) or
             ((1 of ($x_100_*) and 1 of ($x_30_*) and 1 of ($x_20_*) and 2 of ($x_10_*))) or
@@ -779,6 +806,7 @@ rule Backdoor_Win32_Farfli_AQ_2147679273_0
         $x_5_9 = "ttp://127.0.0.1:8888/ip.txt" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_50_*) and 1 of ($x_10_*) and 2 of ($x_5_*))) or
             ((1 of ($x_100_*) and 2 of ($x_50_*) and 1 of ($x_20_*))) or
@@ -813,6 +841,7 @@ rule Backdoor_Win32_Farfli_AR_2147679594_0
         $x_1_10 = {ff 61 c6 85 ?? ff ff ff 76 c6 85 ?? ff ff ff 63 c6 85 ?? ff ff ff 65 c6 85 ?? ff ff ff 6e c6 85 ?? ff ff ff 74 c6 85 ?? ff ff ff 65 c6 85 ?? ff ff ff 72 c6 85 ?? ff ff ff 2e c6 85 ?? ff ff ff 65 c6 85 ?? ff ff ff 78 c6 85 ?? ff ff ff 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -838,6 +867,7 @@ rule Backdoor_Win32_Farfli_AZ_2147682703_0
         $x_1_3 = "lla/4.0 (TOKEZ)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -862,6 +892,7 @@ rule Backdoor_Win32_Farfli_BD_2147683052_0
         $x_4_5 = {51 8d 54 24 ?? 52 bb (9e|91) 01 00 00 e8}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -890,6 +921,7 @@ rule Backdoor_Win32_Farfli_BE_2147683149_0
         $x_5_5 = "%s\\wi%dnd.temp" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -915,6 +947,7 @@ rule Backdoor_Win32_Farfli_BH_2147686457_0
         $x_1_6 = {c6 44 24 54 47 c6 44 24 56 74 c6 44 24 57 56 c6 44 24 5b 6d c6 44 24 5d 49 c6 44 24 60 6f c6 44 24 64 74 ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -938,6 +971,7 @@ rule Backdoor_Win32_Farfli_BI_2147688405_0
         $x_1_4 = {43 72 65 61 74 65 50 72 6f 63 65 73 73 41 [0-8] 25 31 [0-5] 22 25 31 ?? 25 73 5c 73 68 65 6c 6c 5c 6f 70 65 6e 5c 63 6f 6d 6d 61 6e 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -962,6 +996,7 @@ rule Backdoor_Win32_Farfli_CB_2147691059_0
         $x_1_5 = {bf 54 ca af 91 e8 ?? fe ff ff 6a 04 68 00 10 00 00 6a 44 6a 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -988,6 +1023,7 @@ rule Backdoor_Win32_Farfli_DA_2147706193_0
         $x_1_2 = {66 81 38 4d 5a 74 0a 5f 5e 5d 33 c0 5b 83 c4 64 c3 8b 70 3c 03 f0 89 74 24 20 81 3e 50 45 00 00 74 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1009,6 +1045,7 @@ rule Backdoor_Win32_Farfli_DB_2147708399_0
         $x_1_2 = {8a 14 01 80 ea 26 80 f2 29 88 14 01 41 3b ce 7c ef}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1030,6 +1067,7 @@ rule Backdoor_Win32_Farfli_DC_2147708422_0
         $x_1_2 = {8b 44 24 0c b9 ab 05 00 00 25 ff 00 00 00 56 99 f7 f9 8b 74 24 0c 80 c2 3d 85 f6 76 10 8b 44 24 08 8a 08 32 ca 02 ca 88 08 40 4e 75 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1052,6 +1090,7 @@ rule Backdoor_Win32_Farfli_DD_2147708514_0
         $x_1_3 = {61 67 6d 6b 69 73 32 00 5c 5c 2e 5c 61 67 6d 6b 69 73 32 00 48 74 74 70 2f 31 2e 31 20 34 30 33 20 46 6f 72 62 69 64 64 65 4e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1078,6 +1117,7 @@ rule Backdoor_Win32_Farfli_CT_2147725374_0
         $x_1_6 = {ff 4b c6 85 ?? ?? ff ff 6f c6 85 ?? ?? ff ff 74 c6 85 ?? ?? ff ff 68 c6 85 ?? ?? ff ff 65 c6 85 ?? ?? ff ff 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1101,6 +1141,7 @@ rule Backdoor_Win32_Farfli_QT_2147725616_0
         $x_1_3 = "\\Fonts\\service.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1126,6 +1167,7 @@ rule Backdoor_Win32_Farfli_QU_2147727199_0
         $x_1_5 = "SYSTEM\\CurrentControlSet\\Services\\%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1148,6 +1190,7 @@ rule Backdoor_Win32_Farfli_QX_2147727884_0
         $x_1_2 = {66 3d 7e 00 75 02 33 c0 8a 19 8b d0 81 e2 ff ff 00 00 8a 54 54 0c 32 da 40 88 19 41 4e 75 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1173,6 +1216,7 @@ rule Backdoor_Win32_Farfli_QY_2147730496_0
         $x_1_5 = "InjectDLL.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1196,6 +1240,7 @@ rule Backdoor_Win32_Farfli_RA_2147734621_0
         $x_1_3 = "XXOOXXOO:%s|%d|%d|%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1218,6 +1263,7 @@ rule Backdoor_Win32_Farfli_RB_2147735012_0
         $x_1_2 = {0f b6 54 0e fc 30 50 ff 0f b6 14 0e 30 10 0f b6 54 0e 04 30 50 01 0f b6 54 0e 08 30 50 02 41 83 c0 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1239,6 +1285,7 @@ rule Backdoor_Win32_Farfli_G_2147753904_0
         $x_1_1 = {80 ea 7a 80 f2 19 88 91 ?? ?? ?? ?? 50 33 c0 74 06 00 8a 91}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1261,6 +1308,7 @@ rule Backdoor_Win32_Farfli_ABM_2147789555_0
         $x_10_2 = {8b 4d 0c 01 0c 18 8b 42 04 47 83 e8 08 83 c6 02 d1 e8 3b f8}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1288,6 +1336,7 @@ rule Backdoor_Win32_Farfli_AM_2147792970_0
         $x_3_7 = "C:\\INTERNAL\\REMOTE.EXE" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1311,6 +1360,7 @@ rule Backdoor_Win32_Farfli_GZ_2147814053_0
         $x_1_3 = "host123.zz.am" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1335,6 +1385,7 @@ rule Backdoor_Win32_Farfli_BA_2147817188_0
         $x_1_4 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1356,6 +1407,7 @@ rule Backdoor_Win32_Farfli_BXA_2147817409_0
         $x_10_1 = {a0 78 5b 04 42 31 29 32 d0 40 81 ca ?? ?? ?? ?? 32 9a ?? ?? ?? ?? 30 5f 32 c6 4d 55 30 73 a5 97}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1378,6 +1430,7 @@ rule Backdoor_Win32_Farfli_AFX_2147817420_0
         $x_10_2 = {c6 45 f4 57 50 c6 45 f5 69 c6 45 f6 6e c6 45 f7 6c c6 45 f8 6f c6 45 f9 67 c6 45 fa 6f c6 45 fb 6e}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1399,6 +1452,7 @@ rule Backdoor_Win32_Farfli_FT_2147818658_0
         $x_10_1 = {8b 74 24 0c 80 c2 08 85 f6 76 10 8b 44 24 08 8a 08 32 ca 02 ca 88 08 40 4e 75 f4}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1422,6 +1476,7 @@ rule Backdoor_Win32_Farfli_VM_2147819500_0
         $x_1_3 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1446,6 +1501,7 @@ rule Backdoor_Win32_Farfli_XZ_2147820479_0
         $x_1_4 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1472,6 +1528,7 @@ rule Backdoor_Win32_Farfli_BF_2147824395_0
         $x_1_2 = {c6 44 24 19 44 c6 44 24 1a 56 c6 44 24 1c 50 c6 44 24 1d 49 c6 44 24 1e 33 c6 44 24 1f 32 c6 44 24 20 2e c6 44 24 21 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1495,6 +1552,7 @@ rule Backdoor_Win32_Farfli_BG_2147824905_0
         $x_1_3 = "hloworld.cn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -1521,6 +1579,7 @@ rule Backdoor_Win32_Farfli_BH_2147825429_0
         $x_1_2 = {8a 14 01 80 ea 7a 80 f2 19 88 14 01 41 3b ce 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1542,6 +1601,7 @@ rule Backdoor_Win32_Farfli_BI_2147826107_0
         $x_2_1 = {33 d1 03 c2 8b 55 e0 33 55 f8 8b 4d d4 83 e1 03 33 4d bc 8b 75 10 8b 0c 8e 33 4d ec 03 d1 33 c2 8b 55 08 0f b6 0a 2b c8 8b 55 08 88 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1566,6 +1626,7 @@ rule Backdoor_Win32_Farfli_BY_2147829775_0
         $x_1_4 = "vmps1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1590,6 +1651,7 @@ rule Backdoor_Win32_Farfli_BN_2147830294_0
         $x_1_4 = "[Print Screen]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1613,6 +1675,7 @@ rule Backdoor_Win32_Farfli_BM_2147830320_0
         $x_1_3 = "[EXECUTE_key]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1634,6 +1697,7 @@ rule Backdoor_Win32_Farfli_BO_2147830450_0
         $x_5_1 = {8a 14 01 80 ea 31 80 f2 fc 88 14 01 41 3b ce 7c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1656,6 +1720,7 @@ rule Backdoor_Win32_Farfli_BP_2147831116_0
         $x_2_2 = "cYreenQillthht" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1678,6 +1743,7 @@ rule Backdoor_Win32_Farfli_BQ_2147831129_0
         $x_2_2 = "Applications\\VMwareHostOpen.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1702,6 +1768,7 @@ rule Backdoor_Win32_Farfli_BR_2147831366_0
         $x_2_4 = "Users\\Public\\Documents\\\\IBoxHelper.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1724,6 +1791,7 @@ rule Backdoor_Win32_Farfli_BS_2147831381_0
         $x_2_2 = "s\\%sair.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1747,6 +1815,7 @@ rule Backdoor_Win32_Farfli_BT_2147831483_0
         $x_1_3 = "Enter" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1768,6 +1837,7 @@ rule Backdoor_Win32_Farfli_BU_2147831851_0
         $x_2_1 = {8a 01 34 9b 2c 65 88 01 41 4a 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1790,6 +1860,7 @@ rule Backdoor_Win32_Farfli_BW_2147832515_0
         $x_1_2 = "PluginMe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1814,6 +1885,7 @@ rule Backdoor_Win32_Farfli_BX_2147832516_0
         $x_1_4 = "TestFun" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1835,6 +1907,7 @@ rule Backdoor_Win32_Farfli_AAB_2147832732_0
         $x_5_1 = {8b 4d fc 80 04 11 7a 03 ca 8b 4d fc 80 34 11 19 03 ca 42 3b d0 7c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1856,6 +1929,7 @@ rule Backdoor_Win32_Farfli_AAC_2147833036_0
         $x_5_1 = {8a 14 01 80 f2 19 80 c2 46 88 14 01 41 3b 4c 24 08 7c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1877,6 +1951,7 @@ rule Backdoor_Win32_Farfli_BV_2147836100_0
         $x_2_1 = {c1 e0 02 33 d0 8b 4d f8 c1 e9 03 8b 45 ec c1 e0 04 33 c8 03 d1 8b 4d f0 33 4d f8 8b 45 fc 83 e0 03 33 45 e8 8b 75 10 8b 04 86 33 45 ec 03 c8 33 d1 8b 4d 08 03 4d fc 0f b6 01 03 c2 8b 4d 08 03 4d fc 88 01 8b 55 08 03 55 fc 0f b6 02 89 45 ec eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1900,6 +1975,7 @@ rule Backdoor_Win32_Farfli_BZ_2147836464_0
         $x_1_3 = "www.sarahclub.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1921,6 +1997,7 @@ rule Backdoor_Win32_Farfli_BAA_2147836755_0
         $x_2_1 = {33 c9 0f b7 d1 8a 94 55 ?? ?? ?? ?? 30 10 41 40 4e 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1943,6 +2020,7 @@ rule Backdoor_Win32_Farfli_BAA_2147836755_1
         $x_2_2 = "c:\\WinRecel\\air.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1965,6 +2043,7 @@ rule Backdoor_Win32_Farfli_BAB_2147837270_0
         $x_2_2 = {31 66 84 dd 7a 54 fd f7 ac 7a de a1 b5 29 67 5f ed 91 09 60 ff 49 92 19 53 2b c9 fd fa 7b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1988,6 +2067,7 @@ rule Backdoor_Win32_Farfli_BAE_2147837675_0
         $x_1_3 = "user.qzone.qq.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2009,6 +2089,7 @@ rule Backdoor_Win32_Farfli_BAD_2147837791_0
         $x_2_1 = {33 ff 8b 45 08 8d 0c 02 0f b7 c7 8a 44 45 ?? 30 01 47 42 3b d6 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2031,6 +2112,7 @@ rule Backdoor_Win32_Farfli_BAG_2147837974_0
         $x_2_2 = "note.youdao.com/yws/public/resource" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2052,6 +2134,7 @@ rule Backdoor_Win32_Farfli_GCW_2147838817_0
         $x_10_1 = {0f b6 09 8a d9 c0 e3 ?? 8b d0 c1 ea ?? 32 d3 89 4d fc c1 e9 ?? 8a d8 c0 e3 ?? 32 cb 8a 5d 0c 81 45 ?? 47 86 c8 61 02 d1 8b 4d 10 83 e6 ?? 33 75 f8 32 d8 8a 0c b1 32 4d fc 02 cb 32 d1 28 17 ff 4d f4 0f b6 07 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2075,6 +2158,7 @@ rule Backdoor_Win32_Farfli_BAH_2147838877_0
         $x_1_3 = "c%c%c%c%c%c.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2096,6 +2180,7 @@ rule Backdoor_Win32_Farfli_GDH_2147839838_0
         $x_10_1 = {8b 5c 24 30 8b 44 24 28 83 c0 01 0f b6 80 ?? ?? ?? ?? 88 44 1c 48 8b 44 24 30 8d 68 ff 89 e8 31 d8 f7 d0 09 e8 78 05 e8 ?? ?? ?? ?? 83 fd ?? 0f 86}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2122,6 +2207,7 @@ rule Backdoor_Win32_Farfli_BAI_2147841122_0
         $x_1_6 = "[Print Screen]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2144,6 +2230,7 @@ rule Backdoor_Win32_Farfli_BAC_2147843095_0
         $x_2_2 = "103.163.47.247" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2166,6 +2253,7 @@ rule Backdoor_Win32_Farfli_GIC_2147845980_0
         $x_1_2 = "Startup\\hao567.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2188,6 +2276,7 @@ rule Backdoor_Win32_Farfli_GNL_2147851379_0
         $x_1_2 = "PluginMe1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2210,6 +2299,7 @@ rule Backdoor_Win32_Farfli_GMF_2147888644_0
         $x_1_2 = "zhu.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2233,6 +2323,7 @@ rule Backdoor_Win32_Farfli_GMC_2147891911_0
         $x_1_3 = "ZqL2GA1OT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2254,6 +2345,7 @@ rule Backdoor_Win32_Farfli_GMQ_2147892675_0
         $x_10_1 = {89 c8 31 d2 f7 f6 0f b6 04 17 30 04 0b 83 c1 01 39 cd 75}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2279,6 +2371,7 @@ rule Backdoor_Win32_Farfli_XG_2147896357_0
         $x_1_5 = "hloworld.cn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2300,6 +2393,7 @@ rule Backdoor_Win32_Farfli_GAB_2147898748_0
         $x_10_1 = {33 db 57 33 c0 be 00 ?? ?? ?? 80 b0 ?? ?? ?? ?? b6 40 3b c6}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2321,6 +2415,7 @@ rule Backdoor_Win32_Farfli_GAC_2147898775_0
         $x_10_1 = {88 5d e8 c6 45 ec 43 c6 45 ed 72 c6 45 ee 65 c6 45 ef 61 c6 45 f0 74 c6 45 f1 65 c6 45 f2 45 c6 45 f3 76 c6 45 f4 65 c6 45 f5 6e c6 45 f6 74 c6 45 f7 41 88 5d f8 ff d7 50 ff 15}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2343,6 +2438,7 @@ rule Backdoor_Win32_Farfli_GZZ_2147905464_0
         $x_5_2 = {9d 10 fb 22 5a 61 01 29 24 37 4c 10 59 52 3b f0 71 ed}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2366,6 +2462,7 @@ rule Backdoor_Win32_Farfli_GZZ_2147905464_1
         $x_1_3 = "\\ProgramData\\jfds.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2387,6 +2484,7 @@ rule Backdoor_Win32_Farfli_GNK_2147917815_0
         $x_10_1 = {0f b6 02 99 be c8 01 00 00 f7 fe 83 c2 36 8b 45 e0 8b 40 08 8b 75 ec 0f be 04 30 33 c2 8b 55 ec 88 04 11 8b 45 e8 83 c0 01 89 45 e8}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Backdoor_WinNT_Pfinet_A_2147691974_0
         $x_5_8 = {46 66 83 fe 5a 76 9d 38 5d 0b 0f 84 ?? ?? 00 00 8b 45 fc 66 8b 48 30 66 81 f9 f2 01 0f 87 77 ?? ?? 00 8b 70 34 0f b7 c9 ff 75 0c 8b d1 c1 e9 02}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
@@ -64,6 +65,7 @@ rule Backdoor_WinNT_Pfinet_B_2147691975_0
         $x_1_15 = "\\SystemRoot\\$NtUninstallQ722833$\\fixdata.dat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

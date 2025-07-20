@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Shebooren_156009_0
         $x_5_4 = {32 c3 24 0f 32 c3 6a 01 8d 4c 24 ?? 04 ?? 51 8d 4c 24 ?? 88 44 24 ?? e8 ?? ?? ?? ?? 8a 06 84 c0 0f 85}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win64_Malgent_NITB_2147941841_0
         $x_3_2 = "cm74336.tw1.ru/calc.execalc.exesrc" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

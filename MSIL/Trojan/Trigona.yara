@@ -18,6 +18,7 @@ rule Trojan_MSIL_Trigona_MBDH_2147844947_0
         $x_1_3 = "uuuuuDDDD77777" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

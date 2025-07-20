@@ -100,6 +100,7 @@ rule PWS_Win32_Sinowal_A_2147593219_0
         $x_3_85 = "17vvj61k#%))%k<vqj4,4" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((14 of ($x_1_*))) or
             ((1 of ($x_2_*) and 12 of ($x_1_*))) or
@@ -158,6 +159,7 @@ rule PWS_Win32_Sinowal_B_2147593226_0
         $x_1_9 = "$_2341233.TMP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 6 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -185,6 +187,7 @@ rule PWS_Win32_Sinowal_F_2147602460_0
         $x_1_2 = {c6 00 01 ff 25 64 11 40 00 [0-7] ff 25}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +210,7 @@ rule PWS_Win32_Sinowal_G_2147602461_0
         $x_1_2 = {ff 15 14 a0 40 00 ff 25 f0 10 40 00 [0-7] ff 25}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -229,6 +233,7 @@ rule PWS_Win32_Sinowal_H_2147603685_0
         $x_1_2 = {ff 15 14 a0 40 00 ff 25 ?? ?? 40 00 [0-7] ff 25}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +256,7 @@ rule PWS_Win32_Sinowal_I_2147606177_0
         $x_1_2 = {e8 00 00 00 00 58 64 8b 1d 30 00 00 00 83 c3 06 8b 5b 06 8b 5b 0c 8b cb 39 43 18 7f 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +282,7 @@ rule PWS_Win32_Sinowal_J_2147606893_0
         $x_1_5 = {81 3c 11 50 45 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_3_*))) or
@@ -302,6 +309,7 @@ rule PWS_Win32_Sinowal_K_2147608792_0
         $x_1_2 = {68 18 10 40 00 9c 50 66 a1 ?? ?? 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -323,6 +331,7 @@ rule PWS_Win32_Sinowal_F_2147609723_0
         $x_1_2 = {8b 45 c4 83 c0 01 89 45 c4 [0-3] e9 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -346,6 +355,7 @@ rule PWS_Win32_Sinowal_L_2147609725_0
         $x_1_3 = {4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00 b8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +383,7 @@ rule PWS_Win32_Sinowal_M_2147610991_0
         $x_1_7 = {81 3c 11 50 45 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -402,6 +413,7 @@ rule PWS_Win32_Sinowal_N_2147618838_0
         $x_1_3 = {3d a0 68 06 00 73 0d 68 f4 01 00 00 ff 15 ?? ?? ?? ?? eb c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -428,6 +440,7 @@ rule PWS_Win32_Sinowal_O_2147619072_0
         $x_1_3 = {2d 00 2d 00 63 00 70 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -457,6 +470,7 @@ rule PWS_Win32_Sinowal_P_2147627148_0
         $x_1_9 = {89 45 f0 b8 ?? ?? ?? ?? 05 ?? ?? ?? ?? 89 45 f4 0a 00 b8 ?? ?? ?? ?? 2d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -484,6 +498,7 @@ rule PWS_Win32_Sinowal_R_2147630475_0
         $x_1_2 = {8b c0 55 8b ec 83 ec ?? c7 45 fc ff ff ff ff c7 45 bc 00 00 00 00 eb 09 8b 45 bc 83 c0 01 89 45 bc 83 7d bc ?? 73 0e 90 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -509,6 +524,7 @@ rule PWS_Win32_Sinowal_S_2147630873_0
         $x_1_5 = {3b f7 75 05 be 4f e6 40 bb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -532,6 +548,7 @@ rule PWS_Win32_Sinowal_T_2147630899_0
         $x_1_3 = {8b c0 55 8b ec 83 ec 28 6a 20 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -556,6 +573,7 @@ rule PWS_Win32_Sinowal_U_2147631741_0
         $x_1_4 = {89 45 dc c7 45 d8 00 00 00 00 66 c7 05 ?? ?? ?? ?? 00 00 66 c7 45 fe 00 00 c7 45 d8 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -582,6 +600,7 @@ rule PWS_Win32_Sinowal_V_2147640923_0
         $x_1_3 = {8b 55 08 8b 42 10 ff d0 85 c0 75 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -607,6 +626,7 @@ rule PWS_Win32_Sinowal_W_2147643771_0
         $x_1_5 = "NvCplDaemonTool" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -650,6 +670,7 @@ rule PWS_Win32_Sinowal_X_2147644691_0
         $x_1_23 = {81 7d f4 0b fc 00 00 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 11 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -677,6 +698,7 @@ rule PWS_Win32_Sinowal_V_2147646764_0
         $x_1_3 = {8b 45 fc 8b 48 3c 89 4d f8 8b 55 fc 03 55 f8 0f b7 42 16 0d 00 20 00 00 8b 4d fc 03 4d f8 66 89 41 16 8b 55 ?? 52 8b 45 fc 50 8b 4d 08 51 e8 ?? ?? ?? ?? 83 c4 0c 89 45 f4 33 d2 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -704,6 +726,7 @@ rule PWS_Win32_Sinowal_Y_2147646766_0
         $x_1_7 = {8b 4d 0c 03 (8d ?? ??|4d ??) 51 ff 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -730,6 +753,7 @@ rule PWS_Win32_Sinowal_Z_2147647781_0
         $x_1_2 = {8b 4d 0c 03 4d ?? 51 ff 55 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -756,6 +780,7 @@ rule PWS_Win32_Sinowal_AA_2147649847_0
         $x_1_6 = {8b 45 fc 83 c0 01 50 8f 45 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -781,6 +806,7 @@ rule PWS_Win32_Sinowal_AC_2147652612_0
         $x_1_2 = {8b 45 f4 33 d2 b9 ?? 00 00 00 f7 f1 89 45 f4 8b 55 0c 03 55 f4 8a 02 88 45 f3 [0-8] 8b 4d 08 03 4d f4 8a 55 f3 88 11 ff 75 fc 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -803,6 +829,7 @@ rule PWS_Win32_Sinowal_AF_2147653338_0
         $x_1_3 = {00 6f 2e 70 64 62 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -832,6 +859,7 @@ rule PWS_Win32_Sinowal_AJ_2147653753_0
         $x_10_7 = "msdtcdbgdbg.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))
@@ -860,6 +888,7 @@ rule PWS_Win32_Sinowal_AK_2147653871_0
         $x_1_6 = "dumbdumb.backpu" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -887,6 +916,7 @@ rule PWS_Win32_Sinowal_AB_2147679270_0
         $x_1_7 = "&itag=ody&q=%s%%2C%02x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -909,6 +939,7 @@ rule PWS_Win32_Sinowal_AE_2147718121_0
         $x_1_2 = {81 57 e4 0a 44 44 44 44}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

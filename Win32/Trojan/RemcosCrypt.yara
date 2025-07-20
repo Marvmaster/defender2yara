@@ -16,6 +16,7 @@ rule Trojan_Win32_RemcosCrypt_GG_2147773251_0
         $x_1_1 = {8b 04 99 8b 55 ?? 8b 4d ?? 33 04 8a 8b 55 ?? 8b 4d ?? 89 04 8a 66 a1 [0-4] 66 3b 05 3c 00 8b 15 [0-4] 33 15 [0-4] 3b 15 [0-4] 8b 4d ?? 8b 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

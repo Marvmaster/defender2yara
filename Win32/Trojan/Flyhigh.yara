@@ -19,6 +19,7 @@ rule Trojan_Win32_Flyhigh_A_2147828003_0
         $x_2_5 = {68 30 bd 00 00 68 ?? ?? ?? ?? 56 e8 ?? ?? ?? 00 83 c4 0c ff d6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

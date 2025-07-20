@@ -22,6 +22,7 @@ rule Ransom_Win64_GoCrypt_PAA_2147797956_0
         $x_1_7 = "-Inf-inf.Id-.bat.cmd.com.exe.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

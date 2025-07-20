@@ -18,6 +18,7 @@ rule HackTool_MSIL_SMBExec_SK_2147899038_0
         $x_1_3 = "SMBBBB.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

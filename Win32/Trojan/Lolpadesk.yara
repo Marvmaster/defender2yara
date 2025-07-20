@@ -19,6 +19,7 @@ rule Trojan_Win32_Lolpadesk_A_2147839192_0
         $x_1_4 = "getaddrinfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

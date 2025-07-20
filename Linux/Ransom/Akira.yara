@@ -21,6 +21,7 @@ rule Ransom_Linux_Akira_A_2147851013_0
         $x_1_6 = {74 74 70 73 3a 2f 2f [0-88] 2e 6f 6e 69 6f 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Linux_Akira_B_2147891813_0
         $x_1_5 = "akira_readme.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -71,6 +73,7 @@ rule Ransom_Linux_Akira_C_2147923770_0
         $x_1_2 = {48 89 e5 41 57 41 56 41 55 41 54 53 48 81 ec 28 08 00 00 89 bd bc f7 ff ff 48 89 b5 b0 f7 ff ff 48 8d 85 00 f9 ff ff 48 89 c7 e8 0f ca 00 00 48 8b 95 b0 f7 ff ff 8b b5 bc f7 ff ff 48 8d 85 00 f9 ff ff b9 01 00 00 00 48 89 c7 e8 32 bd 00 00 48 c7 85 60 fb ff ff a3 24 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Ransom_Linux_Akira_AB_2147931430_0
         $x_1_2 = {55 48 89 e5 48 83 ec 10 48 89 7d f8 48 89 75 f0 48 8b 45 f8 48 89 c7 e8 0d 37 fd ff 84 c0 74 13 48 8b 55 f0 48 8b 45 f8 48 89 d6 48 89 c7 e8 03 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Emptybase_A_2147605138_0
         $x_1_1 = {89 7d f8 76 18 33 d2 6a 03 8b c1 5e f7 f6 28 91 08 40 40 00 41 3b 0d 04 40 40 00 72 e8 39 1d 00 40 40 00 89 5d f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

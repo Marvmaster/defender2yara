@@ -18,6 +18,7 @@ rule Ransom_Win64_MadiLockCrypt_PA_2147945552_0
         $x_1_3 = "Files were encrypted and stolen. Pay to decrypt and delete stolen copies" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

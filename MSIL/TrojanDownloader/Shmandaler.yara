@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_Shmandaler_A_2147709595_0
         $x_1_3 = {21 4d 00 41 00 67 00 65 00 6e 00 74 00 2e 00 52 00 65 00 73 00 6f 00 75 00 72 00 63 00 65 00 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

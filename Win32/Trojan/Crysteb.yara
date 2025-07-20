@@ -17,6 +17,7 @@ rule Trojan_Win32_Crysteb_A_2147732030_0
         $x_1_3 = "performer.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Crysteb_B_2147732031_0
         $x_1_1 = "ext-test-e1718.firebaseapp.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Crysteb_C_2147733335_0
         $x_1_7 = "\\Mozilla\\Firefox\\Profiles\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Win32_Crysteb_SD_2147733770_0
         $x_1_6 = "Software\\Microsoft\\Windows\\CurrentVersion\\Performer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -28,6 +28,7 @@ rule Rogue_Win32_FakeKernav_172549_0
         $x_1_14 = "uninstall.soft" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

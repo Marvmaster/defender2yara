@@ -18,6 +18,7 @@ rule Trojan_Win32_Orbus_A_2147687984_0
         $x_1_4 = "ZGVsIFNUUlRfRy5iYXQ=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Orbus_D_2147689344_0
         $x_1_6 = {25 64 2a 25 64 4d 48 7a 00 00 00 00 7e 4d 48 7a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

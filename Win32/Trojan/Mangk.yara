@@ -17,6 +17,7 @@ rule Trojan_Win32_Mangk_A_2147631263_0
         $x_1_3 = {2d 20 4d 72 2e 4b 22 [0-5] 6b 6d 69 61 6f 2e 63 6f 6d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

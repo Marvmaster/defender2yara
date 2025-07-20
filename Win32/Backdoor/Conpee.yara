@@ -17,6 +17,7 @@ rule Backdoor_Win32_Conpee_A_2147655026_0
         $x_1_3 = {8b 55 08 03 55 fc 0f be 02 83 e8 ?? 8b 4d 08 03 4d fc 88 01 8b 55 08 03 55 fc 0f be 02 35 ?? ?? ?? ?? 8b 4d 08 03 4d fc 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_Conpee_A_2147655027_0
         $x_1_4 = "iisgetdir" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Backdoor_Win32_Conpee_A_2147655027_1
         $x_1_4 = "peer_plugin_main" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

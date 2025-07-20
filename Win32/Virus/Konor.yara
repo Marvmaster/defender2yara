@@ -16,6 +16,7 @@ rule Virus_Win32_Konor_RS_2147910908_0
         $x_1_1 = {0f b6 04 39 33 c6 25 ff 00 00 00 c1 ee 08 33 b4 85 fc fb ff ff 41 3b ca 72 e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

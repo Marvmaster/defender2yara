@@ -19,6 +19,7 @@ rule VirTool_Win64_Amsipatch_B_2147835315_0
         $x_1_4 = {44 8b 4d bf 48 8d ?? ?? 4c 8d ?? ?? 48 89 44 24 20 48 8d ?? ?? 48 8b cf ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule VirTool_Win64_Amsipatch_C_2147835316_0
         $x_1_4 = {44 8b 4d bf 48 8d ?? ?? 4c 8d ?? ?? 48 89 44 24 20 48 8d ?? ?? 48 8b cf ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule VirTool_Win64_Amsipatch_D_2147835317_0
         $x_1_4 = {44 8b 4c 24 38 48 8d ?? ?? ?? 4c 8d ?? ?? ?? 48 89 44 24 20 48 8d ?? ?? ?? 48 8b ce ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

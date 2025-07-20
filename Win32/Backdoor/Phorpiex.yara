@@ -21,6 +21,7 @@ rule Backdoor_Win32_Phorpiex_J_2147729748_0
         $x_5_7 = "bitsadmin /transfer getitman /download /priority high" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_5_*))) or
             ((2 of ($x_20_*))) or
@@ -51,6 +52,7 @@ rule Backdoor_Win32_Phorpiex_YO_2147730070_0
         $x_1_6 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule Backdoor_Win32_Phorpiex_YP_2147735877_0
         $x_1_7 = {99 b9 10 27 00 00 f7 f9 81 c2 e8 03 00 00 52 e8 ?? ?? ?? ?? 99 b9 10 27 00 00 f7 f9 81 c2 e8 03 00 00 52 8d 95 ?? ?? ?? ?? 52 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +126,7 @@ rule Backdoor_Win32_Phorpiex_YA_2147740829_0
         $x_25_25 = "%ls\\%d%d%d%d.jpg" wide //weight: 25
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_25_*) and 5 of ($x_1_*))) or
             (all of ($x*))

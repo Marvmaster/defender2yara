@@ -17,6 +17,7 @@ rule Backdoor_Win64_Negetsog_C_2147895437_0
         $x_1_2 = "dee6ce91473dafff" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

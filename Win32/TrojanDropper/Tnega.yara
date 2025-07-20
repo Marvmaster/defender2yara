@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Tnega_EA_2147788927_0
         $x_1_1 = {f2 ae f7 d1 57 8d 3d 21 31 40 00 fc b0 00 b9 ff ff ff ff f2 ae f7 d1 8d 15 21 31 40 00 42 5f 4f 8a 02 88 07 47 42}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

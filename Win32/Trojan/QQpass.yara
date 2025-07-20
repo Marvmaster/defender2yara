@@ -16,6 +16,7 @@ rule Trojan_Win32_QQpass_U_2147609539_0
         $x_1_2 = {99 b9 0a 00 00 00 f7 f9 80 c2 30 88 54 34 10 46 83 fe 05 7c e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_QQpass_AY_2147634543_0
         $x_1_4 = "dNfcHiNa.Exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -69,6 +71,7 @@ rule Trojan_Win32_QQpass_E_2147635914_0
         $x_1_6 = "LoginUinList.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -99,6 +102,7 @@ rule Trojan_Win32_QQpass_CX_2147641878_0
         $x_1_6 = "SOFTWARE\\TENCENT\\QQ2009\\Install" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule Trojan_Win32_QQpass_FZ_2147680070_0
         $x_1_4 = {54 58 47 75 69 46 6f 75 6e 64 61 74 69 6f 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +154,7 @@ rule Trojan_Win32_QQpass_EC_2147896930_0
         $x_1_7 = "NtResumeProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +176,7 @@ rule Trojan_Win32_QQpass_MX_2147931475_0
         $x_1_1 = {c6 45 fc 00 8b b5 dc fd ff ff 83 c6 f0 8d 7e 0c 83 c4 08 83 3f 00 8b d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

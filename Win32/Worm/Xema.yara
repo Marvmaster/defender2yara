@@ -17,6 +17,7 @@ rule Worm_Win32_Xema_A_2147599975_0
         $x_1_2 = "%sautorun.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Worm_Win32_Xema_B_2147600205_0
         $x_1_3 = "&Command=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_MacOS_Fegrat_C_2147770261_0
         $x_1_3 = "RedFlare/rat/platforms/darwin.(*darwinAgent).Destroy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

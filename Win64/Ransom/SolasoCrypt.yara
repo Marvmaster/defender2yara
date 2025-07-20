@@ -21,6 +21,7 @@ rule Ransom_Win64_SolasoCrypt_MK_2147772212_0
         $x_1_6 = ".solaso" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Ransom_Win64_SolasoCrypt_AJY_2147772356_0
         $x_1_6 = ".solaso" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Ransom_Win64_SolasoCrypt_PA_2147772517_0
         $x_1_6 = {5c 45 4e 43 52 49 50 54 41 52 5c [0-4] 5c [0-16] 5c 45 4e 43 52 49 50 54 41 52 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or

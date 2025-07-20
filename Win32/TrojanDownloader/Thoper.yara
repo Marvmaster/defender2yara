@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Thoper_A_2147644907_0
         $x_1_2 = {6a 5b 99 5f f7 ff 46 88 45 ff 3b 71 04 7c e5 5f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_Thoper_B_2147648519_0
         $x_1_3 = {6b c0 64 03 c1 0f b7 4d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanDownloader_Win32_Thoper_C_2147651726_0
         $x_1_3 = "POST http://%s/%d HTTP/1.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule TrojanDownloader_Win32_Thoper_D_2147680343_0
         $x_1_4 = {81 c1 36 79 00 00 66 89 4d fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

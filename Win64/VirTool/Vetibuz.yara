@@ -18,6 +18,7 @@ rule VirTool_Win64_Vetibuz_A_2147833347_0
         $x_1_3 = {c6 45 2c 76 c6 45 2d 69 c6 45 2e 72 c6 45 2f 75 c6 45 30 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule VirTool_Win64_Vetibuz_B_2147833348_0
         $x_1_3 = {c6 45 28 61 c6 45 29 70 c6 45 2a 69 c6 45 2b 2e c6 45 2c 67 c6 45 2d 69 c6 45 2e 74 c6 45 2f 68 c6 45 30 75 c6 45 31 62}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule VirTool_Win64_Vetibuz_C_2147838151_0
         $x_1_5 = {4c 8b 85 c8 00 00 00 48 8b 55 28 48 8b 4d 08 e8 ?? ?? ?? ?? b9 b8 0b 00 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

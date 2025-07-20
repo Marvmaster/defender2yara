@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_Ilink_A_2147638905_0
         $x_1_10 = {00 26 6f 73 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))

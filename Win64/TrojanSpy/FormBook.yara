@@ -21,6 +21,7 @@ rule TrojanSpy_Win64_FormBook_AKO_2147945359_0
         $x_1_6 = "line/?fields=147505" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

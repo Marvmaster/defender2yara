@@ -21,6 +21,7 @@ rule HackTool_Win32_NSudo_A_2147810347_0
         $x_1_7 = "NSudo.RunAs.System.EnableAllPrivileges" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

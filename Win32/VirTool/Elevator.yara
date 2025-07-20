@@ -17,6 +17,7 @@ rule VirTool_Win32_Elevator_A_2147832008_0
         $x_1_3 = "manualmap\\src\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Linux_Pomedaj_A_2147752622_0
         $x_2_3 = {b9 10 00 00 00 31 c0 48 89 e7 f3 48 ab 48 89 ea be b0 4f 49 00 48 89 e7 48 89 e3 e8 68 24 00 00 0f 1f 84 00 00 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

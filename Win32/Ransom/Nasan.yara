@@ -18,6 +18,7 @@ rule Ransom_Win32_Nasan_A_2147721309_0
         $x_1_3 = {83 c9 ff 85 db 74 ?? 0f b6 04 2e 33 c1 c1 e9 08 25 ff 00 00 00 33 0c 85 ?? ?? ?? ?? 46 3b f3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Nasan_B_2147723289_0
         $x_1_3 = {6a 07 59 e8 b8 05 00 00 6a 0e 8d 54 24 10 59 e8 64 05 00 00 8d 44 24 28 50 ff 15 ?? ?? ?? 00 33 ed 45 85 c0 74 13 8d 4c 24 0c 51 50 ff 15 ?? ?? ?? 00 85 c0 74 03 55 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

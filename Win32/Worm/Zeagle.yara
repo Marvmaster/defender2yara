@@ -20,6 +20,7 @@ rule Worm_Win32_Zeagle_A_2147649990_0
         $x_1_6 = {77 65 62 64 6f 77 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

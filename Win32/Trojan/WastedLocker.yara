@@ -17,6 +17,7 @@ rule Trojan_Win32_WastedLocker_VD_2147761137_0
         $x_1_2 = {eb 00 31 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_WastedLocker_CB_2147767009_0
         $x_10_3 = {c7 45 dc 01 00 00 00 c7 45 b4 01 00 00 00 c7 45 b8 01 00 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

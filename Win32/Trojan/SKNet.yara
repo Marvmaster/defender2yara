@@ -20,6 +20,7 @@ rule Trojan_Win32_SKNet_2147632477_0
         $x_5_6 = "[!]DeviceIoControl failed. maybe has been injected!" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))

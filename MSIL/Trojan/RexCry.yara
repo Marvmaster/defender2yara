@@ -22,6 +22,7 @@ rule Trojan_MSIL_RexCry_DA_2147779754_0
         $x_1_7 = "MASFUCK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

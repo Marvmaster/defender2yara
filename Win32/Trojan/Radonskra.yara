@@ -17,6 +17,7 @@ rule Trojan_Win32_Radonskra_A_2147690952_0
         $x_1_3 = "pop.okinofilm.ru/ru.php?snid=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Radonskra_A_2147690952_1
         $x_1_4 = {53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 53 63 72 69 70 74 53 79 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Radonskra_B_2147692460_0
         $x_1_3 = "DQovLyBAaW5jbHVkZSBodHRwczovLyoNCi8vID09L1VzZXJTY3JpcHQ9PQ0KDQo=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_Radonskra_C_2147692619_0
         $x_1_5 = "Ly8gPT1Vc2VyU2NyaXB0PT0NCi8vIEBpbmNsdWRlIGh0dHA6Ly8qDQovLyBAaW5jbHVkZSBodHRwczovLyoNCi8vID09L1VzZXJTY3JpcHQ9PQ0KDQ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_Win32_Radonskra_D_2147692742_0
         $x_1_3 = "d.location.protocol=='https:')exit;ourdom='HTTP'" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_Win32_Radonskra_E_2147693616_0
         $x_1_4 = {53 79 73 74 65 6d 53 63 72 69 70 74 00 53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +161,7 @@ rule Trojan_Win32_Radonskra_F_2147694119_0
         $x_1_5 = "dows.zpz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -183,6 +190,7 @@ rule Trojan_Win32_Radonskra_G_2147718012_0
         $x_1_5 = "Ly8gPT1Vc2VyU2NyaXB0PT0NCi8vIEBpbmNsdWRlIGh0dHA6Ly8qDQovLyBAaW5jbHVkZSBodHRwczovLyoNCi8vID09L1VzZXJTY3JpcHQ9PQ0KDQ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -208,6 +216,7 @@ rule Trojan_Win32_Radonskra_H_2147721940_0
         $x_1_5 = ".php?snid=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

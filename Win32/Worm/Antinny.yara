@@ -22,6 +22,7 @@ rule Worm_Win32_Antinny_BM_2147621670_0
         $x_1_8 = {b8 84 59 46 00 e8 75 39 fa ff 84 c0 0f 85 3b 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

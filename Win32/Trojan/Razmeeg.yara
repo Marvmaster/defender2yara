@@ -16,6 +16,7 @@ rule Trojan_Win32_Razmeeg_A_2147683335_0
         $x_1_2 = "/zemra/gate.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

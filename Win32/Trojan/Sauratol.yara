@@ -25,6 +25,7 @@ rule Trojan_Win32_Sauratol_A_2147575173_0
         $x_1_11 = "/c del \"C:\\/c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

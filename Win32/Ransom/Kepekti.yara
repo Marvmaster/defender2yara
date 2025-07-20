@@ -18,6 +18,7 @@ rule Ransom_Win32_Kepekti_A_2147723754_0
         $x_2_4 = "Builder Ransom.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule BrowserModifier_Win32_Zwangi_144384_0
         $x_1_2 = ":CreateMutexA(i 0, i 0, t \"SpaceQuery_Uninst_mtx\")" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule BrowserModifier_Win32_Zwangi_144384_1
         $x_1_2 = {8b 55 ec 3b 55 f4 74 6a 8b 45 fc 83 c0 01 25 ff 00 00 00 89 45 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule BrowserModifier_Win32_Zwangi_144384_2
         $x_1_2 = "Zumie loader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule BrowserModifier_Win32_Zwangi_144384_3
         $x_1_4 = "<[<[<[<[" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -106,6 +110,7 @@ rule BrowserModifier_Win32_Zwangi_144384_4
         $x_1_3 = {83 c4 04 f7 d8 eb 1a 0f b6 4d 0c 85 c9 74 0e 8b 4d 08 51}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule BrowserModifier_Win32_Zwangi_144384_5
         $x_1_3 = {ff 6a 08 8b 0d 98 ?? 40 00 51 8b 55 fc 52 8b 85 ?? ec ff ff 50 e8 ?? ?? 00 00 83 c4 10 89 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -150,6 +156,7 @@ rule BrowserModifier_Win32_Zwangi_144384_6
         $x_1_3 = {2d 72 00 00 2d 52 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +180,7 @@ rule BrowserModifier_Win32_Zwangi_144384_7
         $x_1_4 = {47 65 74 53 79 73 74 65 6d 49 6e 66 6f [0-32] 01 00 00 00 09 00 00 00 09 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +204,7 @@ rule BrowserModifier_Win32_Zwangi_144384_8
         $x_1_4 = {3c 3d 74 04 3c 26 75 02 b0 5f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -219,6 +228,7 @@ rule BrowserModifier_Win32_Zwangi_144384_9
         $x_1_4 = {53 ff d0 8b d8 ff 75 10 ff 75 0c ff 75 08 53 ff 15 ?? ?? ?? ?? 5f 5e 5b c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -242,6 +252,7 @@ rule BrowserModifier_Win32_Zwangi_144384_10
         $x_1_4 = {8b c1 99 f7 7c 24 50 33 c0 8a 04 2a 33 d2 8a 91 ?? ?? ?? ?? 03 d6 03 c2 25 ff 00 00 00 8b f0 3b ce 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -265,6 +276,7 @@ rule BrowserModifier_Win32_Zwangi_144384_11
         $x_1_4 = {8d 04 82 8b 04 08 5f 03 c1 5d d1 e0 5b d1 e8 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -287,6 +299,7 @@ rule BrowserModifier_Win32_Zwangi_144384_12
         $x_1_3 = {2d 72 00 00 2d 52 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -310,6 +323,7 @@ rule BrowserModifier_Win32_Zwangi_144384_13
         $x_1_4 = {f7 d9 ff 24 8d ?? ?? 40 00 8d 49 00 8b c7 ba 03 00 00 00 83 f9 04 72 ?? 83 e0 03 2b c8 ff 24 85 ?? ?? 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -331,6 +345,7 @@ rule BrowserModifier_Win32_Zwangi_144384_14
         $x_1_2 = {8b 74 24 20 66 81 3e 4d 5a c6 44 24 18 01 74 0c 68 ?? ?? 00 10 8b cf e8 ?? ?? ?? ?? 53 8b 5e 3c 8b 04 33 03 de 3d 50 45 00 00 74 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -354,6 +369,7 @@ rule BrowserModifier_Win32_Zwangi_144384_15
         $x_1_4 = {74 17 8a 46 01 80 e9 ?? 46 84 c0 74 33 2c ?? b3 ?? f6 eb 02 c8 8b 44 24 ?? 8b 5c 24 ?? 2a ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -377,6 +393,7 @@ rule BrowserModifier_Win32_Zwangi_144384_16
         $x_1_4 = {42 49 4e 00 53 65 74 57 69 6e 64 6f 77 73 48 6f 6f 6b 45 78 41}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -401,6 +418,7 @@ rule BrowserModifier_Win32_Zwangi_144384_17
         $x_1_5 = {53 ff d0 8b d8 ff 75 10 ff 75 0c ff 75 08 53 ff 15 ?? ?? ?? ?? 5f 5e 5b c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -426,6 +444,7 @@ rule BrowserModifier_Win32_Zwangi_144384_18
         $x_2_6 = {47 65 74 53 79 73 74 65 6d 49 6e 66 6f [0-32] 01 00 00 00 09 00 00 00 09 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -454,6 +473,7 @@ rule BrowserModifier_Win32_Zwangi_144384_19
         $x_1_5 = {f7 d9 ff 24 8d ?? ?? 40 00 8d 49 00 8b c7 ba 03 00 00 00 83 f9 04 72 ?? 83 e0 03 2b c8 ff 24 85 ?? ?? 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -481,6 +501,7 @@ rule BrowserModifier_Win32_Zwangi_144384_20
         $x_1_5 = {8b 0d a4 72 40 00 0f be 11 85 d2 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -509,6 +530,7 @@ rule BrowserModifier_Win32_Zwangi_144384_21
         $x_5_6 = {74 23 6a 04 68 00 20 00 00 8b 85 ?? ?? ff ff 50 8b 8d ?? ?? ff ff 51 ff 95 ?? ?? ff ff 89 85 ?? ?? ff ff eb 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_3_*))) or
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -538,6 +560,7 @@ rule BrowserModifier_Win32_Zwangi_144384_22
         $x_1_5 = {8b 59 04 85 db c7 44 24 18 00 00 00 00 75 04 33 c0 eb 18 8b 71 08 2b f3 b8 ?? ?? ?? ?? f7 ee 03 d6 c1 fa 04 8b c2 c1 e8 1f 03 c2 8b 7c 24 20 3b c7 73 33 85 db 75 04 33 c0 eb 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -565,6 +588,7 @@ rule BrowserModifier_Win32_Zwangi_144384_23
         $x_1_8 = "Seekeen" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_5_*))) or
@@ -594,6 +618,7 @@ rule BrowserModifier_Win32_Zwangi_144384_24
         $x_1_6 = {30 80 40 00 88 0b 00 8b ?? fc 0f be ?? 8b ?? f8 8a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -618,6 +643,7 @@ rule BrowserModifier_Win32_Zwangi_144384_25
         $x_1_5 = {80 38 2d 89 74 24 08 74 0c 8b 06 8b 48 7c 83 c0 78}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -642,6 +668,7 @@ rule BrowserModifier_Win32_Zwangi_144384_26
         $x_1_5 = {53 ff d0 8b d8 ff 75 10 ff 75 0c ff 75 08 53 ff 15 ?? ?? ?? ?? 5f 5e 5b c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -666,6 +693,7 @@ rule BrowserModifier_Win32_Zwangi_144384_27
         $x_1_5 = {47 65 74 53 79 73 74 65 6d 49 6e 66 6f [0-23] 01 00 00 00 09 00 00 00 09 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -689,6 +717,7 @@ rule BrowserModifier_Win32_Zwangi_144384_28
         $x_1_4 = {8b 4d cc 0f be 11 83 fa 2d 0f 85 ?? ?? 00 00 8b 45 cc 0f be 48 01 83 f9 78 0f 85 ?? ?? 00 00 8b 55 cc 0f be 42 02 83 f8 72 0f 85 ?? ?? 00 00 8b 4d cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -713,6 +742,7 @@ rule BrowserModifier_Win32_Zwangi_144384_29
         $x_1_5 = {c7 44 24 14 ff ff ff ff 74 21 6a 00 6a 00 68 10 a1 00 10 68 ?? a1 00 10 e8 6f 03 00 00 83 c4 10 50 56 ff d7 85 c0 74 03 56 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             (all of ($x*))
@@ -740,6 +770,7 @@ rule BrowserModifier_Win32_Zwangi_144384_30
         $x_2_5 = {53 ff d0 8b d8 ff 75 10 ff 75 0c ff 75 08 53 ff 15 ?? ?? ?? ?? 5f 5e 5b c9 c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -767,6 +798,7 @@ rule BrowserModifier_Win32_Zwangi_144384_31
         $x_1_4 = {41 56 20 74 6f 6f 6c 73 3a 20 25 64 0a 00 41 53 20 74 6f 6f 6c 73 3a 20 25 64 0a 00 2d 20 6e 61 6d 65 3a 20 25 73 0a 20 20 63 6f 6d 70 61 6e 79 3a 20 25 73 0a 20 20 76 65 72 73 69 6f 6e 3a 20 25 73 0a 20 20 65 6e 61 62 6c 65 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -791,6 +823,7 @@ rule BrowserModifier_Win32_Zwangi_144384_32
         $x_1_5 = {8d 34 40 8d 34 ?? ?? ?? 40 00 2b d0 83 26 00 83 c6 0c 4a 75 ?? 8b 09 81 f9 8e 00 00 c0 8b ?? ?? ?? 40 00 75 ?? c7 05 ?? ?? 40 00 83 00 00 00 eb ?? 81 f9 90 00 00 c0 75 ?? c7 05 ?? ?? 40 00 81 00 00 00 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -819,6 +852,7 @@ rule BrowserModifier_Win32_Zwangi_144384_33
         $x_1_6 = "<ShortName>FindBasic</ShortName>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -849,6 +883,7 @@ rule BrowserModifier_Win32_Zwangi_144384_34
         $x_1_8 = {83 3d a0 72 40 00 00 75 0a c7 05 a4 72 40 00 00 00 00 00 (eb|e9)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -878,6 +913,7 @@ rule BrowserModifier_Win32_Zwangi_144384_35
         $x_1_7 = {53 ff d0 8b d8 ff 75 10 ff 75 0c ff 75 08 53 ff 15 ?? ?? ?? ?? 5f 5e 5b c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -909,6 +945,7 @@ rule BrowserModifier_Win32_Zwangi_144384_36
         $x_1_9 = {83 7d d8 03 75 (09|0c) 8b 03 01 01 01 55 45 4d f0 03 01 01 01 52 50 51 ff 55 e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -936,6 +973,7 @@ rule BrowserModifier_Win32_Zwangi_144384_37
         $x_1_8 = {8a 11 88 10 8b 45 ?? 83 c0 01 89 45 ?? 8b 4d ?? 83 c1 01 89 4d ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -967,6 +1005,7 @@ rule BrowserModifier_Win32_Zwangi_144384_38
         $x_2_8 = "Zumie Search Software Activated" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -997,6 +1036,7 @@ rule BrowserModifier_Win32_Zwangi_144384_39
         $x_1_11 = {33 4d 10 8b 55 ?? 89 0a 8b 45 ?? 83 c0 04 89 45 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1022,6 +1062,7 @@ rule BrowserModifier_Win32_Zwangi_144384_40
         $x_100_6 = {6b c0 61 99 b9 29 e5 0a 00 f7 f9 89 55 fc ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 8b 55 ?? 8b 02 69 c0 56 05 00 00 05 73 4d 02 00}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1050,6 +1091,7 @@ rule BrowserModifier_Win32_Zwangi_144384_41
         $x_100_6 = {6b c0 61 99 b9 29 e5 0a 00 f7 f9 89 55 fc ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 8b 55 ?? 8b 02 69 c0 56 05 00 00 05 73 4d 02 00}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1082,6 +1124,7 @@ rule BrowserModifier_Win32_Zwangi_144384_42
         $x_1_10 = {b9 09 00 00 00 33 c0 f3 a6 5f 5e 75 1f e8 ?? ?? ?? ?? 84 c0 74 16 8b 0d ?? ?? ?? ?? 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 85 c0 74 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 3 of ($x_5_*))) or
@@ -1123,6 +1166,7 @@ rule BrowserModifier_Win32_Zwangi_144384_43
         $x_1_16 = {8d 04 82 8b 04 08 5f 03 c1 5d d1 e0 5b d1 e8 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1165,6 +1209,7 @@ rule BrowserModifier_Win32_Zwangi_144384_44
         $x_1_23 = {89 4d f4 8b 55 ?? 83 3a 00 74 22 00 89 4d 00 c7 45 fc ?? ?? ?? ?? c7 45 f8 ?? ?? ?? ?? 8b 45 f8 2d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1208,6 +1253,7 @@ rule BrowserModifier_Win32_Zwangi_144384_45
         $x_1_24 = {85 ff 76 04 8a 11 88 10 40 41 4e 75 f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1234,6 +1280,7 @@ rule BrowserModifier_Win32_Zwangi_144384_46
         $x_1_7 = {79 6f 75 20 6d 61 79 20 62 65 20 65 78 70 6f 73 65 64 [0-2] 74 6f 20 73 75 63 68 20 4f 74 68 65 72 20 43 6f 6e 74 65 6e 74 20 6f 72 20 53 65 72 76 69 63 65 73 20 74 68 61 74 20 6d 61 79 20 62 65 20 6f 66 66 65 6e 73 69 76 65 2c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1282,6 +1329,7 @@ rule BrowserModifier_Win32_Zwangi_144384_47
         $x_1_26 = {eb e8 eb 17 eb 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1326,6 +1374,7 @@ rule BrowserModifier_Win32_Zwangi_144384_48
         $x_1_25 = {80 38 2d 89 74 24 08 74 0c 8b 06 8b 48 7c 83 c0 78}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1371,6 +1420,7 @@ rule BrowserModifier_Win32_Zwangi_144384_49
         $x_1_26 = {20 7d 12 0f be ?? ?? 83 ?? 09 74 09 c6 06 00 0f be 55 fd 83 fa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1450,6 +1500,7 @@ rule BrowserModifier_Win32_Zwangi_144384_50
         $x_1_60 = {40 23 40 26 6e 55 39 50 57 45 09 5e 59 62 57 55 40 23 40 26 40 23 40 26 57 3b 09 6d 4f 6b 4b 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 51 of ($x_1_*))) or
             ((3 of ($x_50_*) and 1 of ($x_1_*))) or
@@ -1546,6 +1597,7 @@ rule BrowserModifier_Win32_Zwangi_144384_51
         $x_1_69 = {8b 45 0c 2b 45 08 89 45 f8 db 45 f8 de c9 da 45 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

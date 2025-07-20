@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_Bladabi_RS_2147899318_0
         $x_1_2 = "41.216.183.235" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

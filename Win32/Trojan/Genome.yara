@@ -21,6 +21,7 @@ rule Trojan_Win32_Genome_AA_2147634351_0
         $x_1_7 = {b8 eb d7 d3 b9 a4 d7 f7 ca d2 b2 e9 b6 be b9 a4 be df 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Genome_C_2147637029_0
         $x_1_4 = {5c cc da d1 b6 c8 ed bc fe 00 00 00 cc da d1 b6 54 54 00 00 b0 c1 d3 ce e4 af c0 c0 c6 f7 00 00 ca c0 bd e7 d6 ae b4 b0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

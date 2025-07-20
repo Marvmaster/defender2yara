@@ -17,6 +17,7 @@ rule HackTool_MacOS_LinPeas_A_2147923947_0
         $x_1_2 = {81 0b 40 f9 e2 03 00 91 5f 00 01 eb c9 01 00 54 fe 0f 1e f8 fd 83 1f f8 fd 23 00 d1 81 13 40 f9 81 01 00 b5 40 07 40 f9 e0 07 00 f9 e0 17 40 f9 e0 0b 00 f9 3b 98 fe 97 fd 83 5f f8 fe 07 42 f8 c0 03 5f d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule HackTool_MacOS_LinPeas_B_2147937878_0
         $x_1_4 = {49 89 d5 48 29 f2 48 83 c2 14 48 89 54 24 58 4c 8d 7e ec 4c 89 f8 49 c1 ff 3f 4c 21 fe 4c 8d bc 34 94 00 00 00 48 39 d7 73 3f 48 89 44 24 70 4c 89 bc 24 28 01 00 00 4c 89 6c 24 68 48 8d 05 bb a3 09 00 4c 89 c3 4c 89 e9 48 89 d6 e8 2d f0 03 00 4c 8b 6c 24 68 4c 8b bc 24 28 01 00 00 49 89 c0 48 89 cf 48 8b 44 24 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

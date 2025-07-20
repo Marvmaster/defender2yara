@@ -16,6 +16,7 @@ rule Trojan_Win64_CobalStrike_ARAX_2147944891_0
         $x_2_1 = {41 32 ca 44 8b 54 24 30 41 ff c2 41 88 09 49 ff c1 44 89 54 24 30 4c 89 4c 24 28 41 8d 04 32 3b c3 0f 8c 79 fc ff ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

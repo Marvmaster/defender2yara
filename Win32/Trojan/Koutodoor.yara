@@ -20,6 +20,7 @@ rule Trojan_Win32_Koutodoor_B_2147630276_0
         $x_1_4 = {6a 00 6a 00 6a 00 68 00 00 00 80 6a 00 68 00 00 00 80 68 00 00 cf 00 50 50 6a 00 ff 15 ?? ?? ?? ?? 85 c0 75 ?? c3 8b 4c 24 08 51 50 ff 15 ?? ?? ?? ?? b8 01 00 00 00 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win32_Koutodoor_A_2147630277_0
         $x_1_9 = {55 fc 6a 0b 68 ?? ?? ?? ?? 8d 4d 98 52 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -77,6 +79,7 @@ rule Trojan_Win32_Koutodoor_B_2147630278_0
         $x_2_4 = {44 50 00 00 03 00 c7 45 ?? ?? ?? ?? ?? c7 45 ?? 45 50 00 00 c7 45 ?? 3d 50 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -105,6 +108,7 @@ rule Trojan_Win32_Koutodoor_C_2147634342_0
         $x_1_4 = "329A624A-1D22-48ae-9576-A02F1EDB1372" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -133,6 +137,7 @@ rule Trojan_Win32_Koutodoor_D_2147636335_0
         $x_1_5 = {00 33 36 30 74 72 61 79 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -160,6 +165,7 @@ rule Trojan_Win32_Koutodoor_D_2147636375_0
         $x_1_5 = {53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 44 61 74 65 54 69 6d 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -189,6 +195,7 @@ rule Trojan_Win32_Koutodoor_E_2147636381_0
         $x_1_7 = "7f7f.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -217,6 +224,7 @@ rule Trojan_Win32_Koutodoor_E_2147636381_1
         $x_1_6 = {53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 49 6e 74 65 72 6e 65 74 20 45 78 70 6c 6f 72 65 72 5c 4d 61 69 6e [0-5] 53 74 61 72 74 20 50 61 67 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -247,6 +255,7 @@ rule Trojan_Win32_Koutodoor_E_2147636382_0
         $x_2_5 = {8b 75 08 c6 06 [0-37] c6 46 01 [0-37] c6 46 02 [0-37] c6 46 03}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -280,6 +289,7 @@ rule Trojan_Win32_Koutodoor_F_2147649854_0
         $x_10_10 = {53 66 50 32 c3 80 c4 25 66 3b c2 66 2b c2 81 cb f5 62 00 00 3b df 66 0b c3 f6 c3 01 66 58 5b}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -311,6 +321,7 @@ rule Trojan_Win32_Koutodoor_H_2147718219_0
         $x_10_7 = {53 66 50 32 c3 80 c4 25 66 3b c2 66 2b c2 81 cb f5 62 00 00 3b df 66 0b c3 f6 c3 01 66 58 5b}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

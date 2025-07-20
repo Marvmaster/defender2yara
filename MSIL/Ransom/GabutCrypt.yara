@@ -19,6 +19,7 @@ rule Ransom_MSIL_GabutCrypt_PB_2147795844_0
         $x_1_4 = "gabuts project is back.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

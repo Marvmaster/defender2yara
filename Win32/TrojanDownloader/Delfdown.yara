@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Delfdown_2147628120_0
         $x_1_3 = {ff ff ff ff 15 00 00 00 68 74 74 70 3a 2f 2f 64 2e 6c 61 69 79 69 62 61 2e 63 6f 6d 2f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             (all of ($x*))

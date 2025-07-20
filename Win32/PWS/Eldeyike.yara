@@ -18,6 +18,7 @@ rule PWS_Win32_Eldeyike_A_2147639099_0
         $x_1_4 = {6c 69 6e 6b 69 6e 73 69 64 65 73 5f 73 70 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

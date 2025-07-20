@@ -17,6 +17,7 @@ rule Trojan_Win32_Temvekil_A_2147648038_0
         $x_1_3 = "taskkill /f /im teamviewer.e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Temvekil_B_2147649919_0
         $x_1_3 = "_N_u_l_l_s_o_f_t_I_n_s_t_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

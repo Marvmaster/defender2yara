@@ -23,6 +23,7 @@ rule Trojan_Win32_TurlaCarbon_2147849698_0
         $x_1_9 = {22 2c 20 22 74 79 70 65 22 3a 22 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

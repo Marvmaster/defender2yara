@@ -19,6 +19,7 @@ rule PWS_MSIL_OnLineGames_NW_2147717060_0
         $x_1_4 = {5c 50 72 6f 6a 65 63 74 73 5c 43 6f 6e 73 6f 6c 65 41 70 70 6c 69 63 61 74 69 6f 6e [0-2] 5c 43 6f 6e 73 6f 6c 65 41 70 70 6c 69 63 61 74 69 6f 6e [0-2] 5c 6f 62 6a 5c 44 65 62 75 67 5c 43 6f 6e 73 6f 6c 65 41 70 70 6c 69 63 61 74 69 6f 6e [0-2] 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

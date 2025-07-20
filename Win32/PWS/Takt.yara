@@ -18,6 +18,7 @@ rule PWS_Win32_Takt_A_2147629319_0
         $x_1_4 = {68 74 74 70 3a 2f 2f 68 61 6f 6d 61 2e 61 73 74 72 65 6e 64 2e 72 75 2f 73 6e 69 66 2e 70 68 70 3f 6c 6f 67 69 6e 3d 00 ff ff ff ff 06 00 00 00 26 70 61 73 73 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

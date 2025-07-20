@@ -17,6 +17,7 @@ rule PWS_Win32_Dentuti_A_2147682599_0
         $x_1_3 = "End with status: {0x%X}, thId: [%d]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

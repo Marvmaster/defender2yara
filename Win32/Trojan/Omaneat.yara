@@ -30,6 +30,7 @@ rule Trojan_Win32_Omaneat_MR_2147780047_0
         $x_1_16 = "CryptReleaseContext" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +64,7 @@ rule Trojan_Win32_Omaneat_MS_2147780850_0
         $x_1_13 = "FindNextFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

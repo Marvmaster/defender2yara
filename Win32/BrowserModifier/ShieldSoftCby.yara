@@ -16,6 +16,7 @@ rule BrowserModifier_Win32_ShieldSoftCby_224262_0
         $x_1_2 = "&r=7001&geo=US&ptag=YAHOO&affid=yahoo&app=shield" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule BrowserModifier_Win32_ShieldSoftCby_224262_1
         $x_1_3 = "Software\\Microsoft\\Internet Explorer\\SearchScopes" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

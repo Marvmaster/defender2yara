@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Ocibt_A_2147642864_0
         $x_1_4 = "http://go.myzy.info/down.php?i=bexe&" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_Win32_Ocibt_A_2147642864_1
         $x_1_4 = "\\winrar\\ico\\taobao.tbico" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule TrojanDownloader_Win32_Ocibt_A_2147642864_2
         $x_1_5 = {5c 61 61 31 5f fd 83 80 fd 84 80 fd 85 80 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule TrojanDownloader_Win32_Ocibt_B_2147648132_0
         $x_2_3 = "?i=tbico&" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

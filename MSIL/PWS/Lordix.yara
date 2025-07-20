@@ -23,6 +23,7 @@ rule PWS_MSIL_Lordix_A_2147730209_0
         $x_1_8 = "\\Opera Software\\Opera Stable\\Login Data" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Ransom_MSIL_Irus_2147729116_0
         $x_2_9 = "WindowsApp1.SuriProtector.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_4_*) and 4 of ($x_2_*))) or
             ((5 of ($x_4_*) and 2 of ($x_2_*))) or

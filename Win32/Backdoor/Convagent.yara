@@ -16,6 +16,7 @@ rule Backdoor_Win32_Convagent_SRP_2147835599_0
         $x_2_1 = {8b 55 08 81 c2 9f 04 00 00 89 55 08 8b 45 08 33 d2 b9 4e 01 00 00 f7 f1 89 45 08 66 b9 15 00 66 b8 00 00 66 81 f3 f8 00 66 8b c3 e2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

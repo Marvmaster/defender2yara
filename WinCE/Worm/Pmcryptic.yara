@@ -16,6 +16,7 @@ rule Worm_WinCE_Pmcryptic_A_2147616468_0
         $x_1_2 = {08 30 a0 e3 1c 20 4f e2 00 20 42 e2 01 1a 8f e2 ae 1f 81 e2 20 00 8f e2 00 00 80 e2 00 10 41 e0 14 00 8f e2 00 00 80 e2 c1 ff ff eb 08 00 8f e2 00 00 80 e2 00 f0 a0 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_Win32_Cryptomix_A_2147723298_0
         $x_3_6 = {53 6a 61 5b 6a 41 c7 45 ?? 1a 00 00 00 5a 0f b7 01 66 3b c3 72 ?? 83 f8 7a 77 ?? 83 e8 54 99 f7 7d ?? 03 d3 eb ?? 66 3b c2 72 ?? 83 f8 5a 77 ?? 83 e8 34 99 f7 7d ?? 83 c2 41 6a 41}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or

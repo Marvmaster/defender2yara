@@ -19,6 +19,7 @@ rule Ransom_MSIL_EncnCrypt_PA_2147938480_0
         $x_2_4 = "Ransomware Files Already Encrypted!" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

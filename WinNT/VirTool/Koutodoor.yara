@@ -24,6 +24,7 @@ rule VirTool_WinNT_Koutodoor_A_2147627137_0
         $x_1_10 = {b9 50 45 00 00 39 0c 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -54,6 +55,7 @@ rule VirTool_WinNT_Koutodoor_B_2147636445_0
         $x_1_3 = {b8 00 40 96 d5 c7 45 fc 36 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule VirTool_WinNT_Koutodoor_C_2147638003_0
         $x_1_2 = "\\ApsX85.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win64_GhostRAT_A_2147897903_0
         $x_2_3 = "%-24s %-15s" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_GhostRAT_ARA_2147946569_0
         $x_2_3 = "zhuxianlu" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win32_Inexsmar_A_2147696930_0
         $x_1_6 = {6f 6e 66 63 57 39 5b 5b 52 24 30 66 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

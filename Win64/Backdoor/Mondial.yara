@@ -18,6 +18,7 @@ rule Backdoor_Win64_Mondial_A_2147816428_0
         $x_1_3 = {c6 44 24 60 52 c6 44 24 61 65 c6 44 24 62 67 c6 44 24 63 69 c6 44 24 64 73 c6 44 24 65 74 c6 44 24 66 65 c6 44 24 67 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

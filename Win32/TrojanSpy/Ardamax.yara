@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Ardamax_W_2147642918_0
         $x_1_3 = {83 f8 12 74 18 83 f8 5b 74 13 83 f8 10 74 0e 83 f8 11 74 09 83 f8 5c 74 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_1_*))) or
             (all of ($x*))

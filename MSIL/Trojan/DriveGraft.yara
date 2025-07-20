@@ -22,6 +22,7 @@ rule Trojan_MSIL_DriveGraft_A_2147936008_0
         $x_1_7 = "/me/MailFolders/drafts/messages" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

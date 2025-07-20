@@ -24,6 +24,7 @@ rule HackTool_Linux_Sshscan_B_2147928844_0
         $x_1_10 = "main.execCommand" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (6 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule HackTool_Linux_Sshscan_C_2147935636_0
         $x_1_6 = "main.timekeep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule HackTool_Linux_Sshscan_D_2147936161_0
         $x_1_4 = "main.trySSH.Printf.func5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

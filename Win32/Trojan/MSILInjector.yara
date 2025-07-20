@@ -20,6 +20,7 @@ rule Trojan_Win32_MSILInjector_GZ_2147906437_0
         $x_1_5 = "d17b41c9-3955-4890-95b8-887aac006e0b" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

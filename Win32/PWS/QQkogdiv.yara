@@ -19,6 +19,7 @@ rule PWS_Win32_QQkogdiv_A_2147626103_0
         $x_1_5 = {7b 00 72 00 65 00 67 00 6f 00 6b 00 7d 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

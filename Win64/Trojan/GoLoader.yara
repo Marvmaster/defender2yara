@@ -16,6 +16,7 @@ rule Trojan_Win64_GoLoader_EC_2147919988_0
         $x_10_1 = {48 ba 00 00 1a 3d eb 03 b2 a1 48 8d 04 0a e8 45 d0 fe ff b8 40 42 0f 00 e8 7b d1 fe ff 44 0f 11 bc 24 b8 01 00 00 e8 0d b4 f4 ff}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

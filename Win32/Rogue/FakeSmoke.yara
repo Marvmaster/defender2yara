@@ -18,6 +18,7 @@ rule Rogue_Win32_FakeSmoke_141916_0
         $x_1_4 = {32 2e 34 2e 30 2e 37 30 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule Rogue_Win32_FakeSmoke_141916_1
         $x_1_2 = {2f 54 52 41 4e 53 4c 41 54 45 32 00 64 6f 77 6e 6c 6f 61 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Rogue_Win32_FakeSmoke_141916_2
         $x_1_3 = "Virii Protection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Rogue_Win32_FakeSmoke_141916_3
         $x_1_5 = "ArmorShield" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -114,6 +118,7 @@ rule Rogue_Win32_FakeSmoke_141916_4
         $x_1_3 = "/download.php?p=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Rogue_Win32_FakeSmoke_141916_5
         $x_1_3 = {56 69 73 69 74 20 74 68 65 20 [0-16] 20 73 69 74 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Rogue_Win32_FakeSmoke_141916_6
         $x_1_4 = {2f 54 52 41 4e 53 4c 41 54 45 32 00 64 6f 77 6e 6c 6f 61 64 00 fe 25 25 5c [0-40] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -186,6 +193,7 @@ rule Rogue_Win32_FakeSmoke_141916_7
         $x_1_5 = {83 f8 ff bb 01 00 00 00 74 08 89 9e a0 01 00 00 eb 06 89 be a0 01 00 00 55 8b ce}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -215,6 +223,7 @@ rule Rogue_Win32_FakeSmoke_141916_8
         $x_1_10 = {47 45 54 00 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -240,6 +249,7 @@ rule Rogue_Win32_FakeSmoke_141916_9
         $x_1_6 = {2f 54 52 41 4e 53 4c 41 54 45 32 00 64 6f 77 6e 6c 6f 61 64 00 fe 25 25 5c [0-40] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_11_*))) or
@@ -269,6 +279,7 @@ rule Rogue_Win32_FakeSmoke_141916_10
         $x_1_6 = "Register $ProgName$ to activate protection from malware attacks." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -297,6 +308,7 @@ rule Rogue_Win32_FakeSmoke_141916_11
         $x_1_9 = {33 c0 50 50 68 1f 00 02 00 50 50 56 68 01 00 00 80 8d 4d ?? 89 45 ?? e8 ?? ?? ?? ?? 85 c0 8b 7d ?? 75 18 6a 01 57 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -322,6 +334,7 @@ rule Rogue_Win32_FakeSmoke_141916_12
         $x_1_6 = {2d 20 4e 6f 20 70 65 72 73 6f 6e 20 6f 72 20 63 6f 6d 70 61 6e 79 20 6d 61 79 20 64 69 73 74 72 69 62 75 74 65 20 64 69 73 69 6e 74 65 67 72 61 74 65 64 20 70 61 72 74 73 10 00 6f 66 20 74 68 65 20 70 61 63 6b 61 67 65 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -348,6 +361,7 @@ rule Rogue_Win32_FakeSmoke_141916_13
         $x_1_7 = "Your computer is infected with spyware.It could damage your critical files" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -389,6 +403,7 @@ rule Rogue_Win32_FakeSmoke_141916_14
         $x_1_16 = "Agressive Werbung Pop-ups" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -420,6 +435,7 @@ rule Rogue_Win32_FakeSmoke_141916_15
         $x_1_6 = "Enable data exchange for AntiSpyUI server" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -485,6 +501,7 @@ rule Rogue_Win32_FakeSmoke_141916_16
         $x_1_46 = {26 43 6c 6f 73 65 00 53 65 63 75 72 65 50 63 41 76 20 32 2e 32 2e 30 2e 35 33 00 fe 24 24 5c 77 69 6e 69 6e 69 74 2e 69 6e 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -549,6 +566,7 @@ rule Rogue_Win32_FakeSmoke_141916_17
         $x_1_45 = {3a 20 43 6f 6d 70 6c 65 74 65 64 00 26 43 6c 6f 73 65 00 56 69 72 75 73 50 72 6f 74 65 63 74 6f 72 00 fe 24 24 5c 77 69 6e 69 6e 69 74 2e 69 6e 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

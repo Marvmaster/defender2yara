@@ -24,6 +24,7 @@ rule Ransom_Win32_Bosloki_A_2147726220_0
         $x_2_10 = "Launch_crypt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule Ransom_Win32_Bosloki_B_2147726227_0
         $x_10_1 = {8b c0 53 33 d2 ?? 8d 0c 02 8a 09 ?? ?? 80 f1 ad 8d 1c 02 88 0b 42 81 fa ?? ?? ?? ?? 75 ?? 05 ?? ?? ?? ?? 5b c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

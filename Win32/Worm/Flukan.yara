@@ -17,6 +17,7 @@ rule Worm_Win32_Flukan_A_2147583562_0
         $x_1_3 = "RavTimeXP" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Worm_Win32_Flukan_C_2147649716_0
         $x_1_4 = "infeksi_mirc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

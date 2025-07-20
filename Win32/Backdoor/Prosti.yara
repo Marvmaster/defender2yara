@@ -18,6 +18,7 @@ rule Backdoor_Win32_Prosti_U_2147607977_0
         $x_1_4 = {52 74 6c 4e 74 53 74 61 74 75 73 54 6f 44 6f 73 45 72 72 6f 72 00 4e 74 41 6c 6c 6f 63 61 74 65 56 69 72 74 75 61 6c 4d 65 6d 6f 72 79 00 4e 74 46 72 65 65 56 69 72 74 75 61 6c 4d 65 6d 6f 72 79 00 4e 74 4f 70 65 6e 54 68 72 65 61 64 00 52 65 61 64 50 72 6f 63 65 73 73 4d 65 6d 6f 72 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Backdoor_Win32_Prosti_F_2147621242_0
         $x_1_4 = {8b e5 5d c3 ff ff ff ff ?? 00 00 00 68 74 74 70 3a 2f 2f 77 77 77 2e 73 63 72 65 65 6e 62 6c 61 7a 65 2e 63 6f 6d 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Backdoor_Win32_Prosti_L_2147621602_0
         $x_1_3 = {68 7f 66 04 40 8b 43 14 50 e8 ?? ?? ?? ?? 40 75 ?? c7 04 24 ff ff ff ff 8b c3 e8 ?? ?? ?? ?? eb ?? 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Backdoor_Win32_Prosti_AG_2147627798_0
         $x_1_6 = "del C:\\Windows\\ScreenBlaze.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -122,6 +126,7 @@ rule Backdoor_Win32_Prosti_CCJZ_2147943648_0
         $x_1_8 = "C:\\$RECYCLE.BIN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

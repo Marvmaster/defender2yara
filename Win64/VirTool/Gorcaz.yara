@@ -21,6 +21,7 @@ rule VirTool_Win64_Gorcaz_A_2147844468_0
         $x_1_6 = "stager/settlemsg.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

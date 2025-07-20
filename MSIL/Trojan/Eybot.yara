@@ -19,6 +19,7 @@ rule Trojan_MSIL_Eybot_A_2147721715_0
         $x_1_4 = "\\steamconfig.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

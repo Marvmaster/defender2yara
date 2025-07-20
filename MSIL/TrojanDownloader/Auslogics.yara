@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Auslogics_SK_2147923163_0
         $x_2_1 = {28 12 00 00 06 10 00 02 0a dd 03 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

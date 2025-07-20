@@ -28,6 +28,7 @@ rule Trojan_Win32_Frgnrns_A_2147740888_0
         $x_1_13 = "SomeKey" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Backdoor_Win32_Poebot_2147596763_0
         $x_1_2 = {8d 85 a4 ee ff ff 50 e8 89 02 00 00 83 c4 20 89 bd d8 ee ff ff 83 bd d8 ee ff ff 0a 75 05 e8 ?? ?? ff ff 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Ransom_Win32_CryptoLemPiz_A_2147716178_0
         $x_2_7 = {8b c3 e8 98 ff ff ff 88 04 2e 45 8a 04 2e 84 c0 75 ec 8b c6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

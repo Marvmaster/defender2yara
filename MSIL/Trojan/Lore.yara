@@ -17,6 +17,7 @@ rule Trojan_MSIL_Lore_BZ_2147767455_0
         $x_1_2 = {65 00 78 00 61 00 67 00 e8 00 72 00 65 00 2e 00 64 00 6c 00 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Lore_GNT_2147929465_0
         $x_1_2 = "Eminem.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

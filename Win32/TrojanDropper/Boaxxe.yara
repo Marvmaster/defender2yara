@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Boaxxe_C_2147603386_0
         $x_1_1 = {83 bd f0 fd ff ff 00 74 0d 8d 95 f8 fe ff ff 52 ff 15 ?? ?? 40 00 83 7d 14 02 75 75 8d 45 f8 50 8d 8d f8 fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDropper_Win32_Boaxxe_D_2147603387_0
         $x_1_3 = {89 85 f0 fd ff ff 83 bd f0 fd ff ff 00 74 16 83 3d ?? ?? ?? 00 00 74 0d 8d 85 f8 fe ff ff 50 ff 15 ?? ?? ?? 00 83 7d (10|14) 02 0f 85 ?? 00 00 00 6a 20 8d 8d ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule TrojanDropper_Win32_Boaxxe_E_2147621052_0
         $x_1_2 = {73 09 c7 45 f4 ?? 00 00 00 eb 07 c7 45 f4 ?? 00 00 00 81 7d f8 ?? ?? 00 00 76 07 c7 45 f4 ?? 00 00 00 83 7d f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule TrojanDropper_Win32_Boaxxe_G_2147626928_0
         $x_1_3 = {8b 40 3c 83 c0 14 05 e0 00 00 00 83 c0 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

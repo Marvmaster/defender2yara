@@ -25,6 +25,7 @@ rule Worm_Win32_Ainslot_A_2147641238_0
         $x_1_11 = "IMWindowClass" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule Worm_Win32_Ainslot_C_2147644006_0
         $x_2_9 = "|Shortcut Files|*.lnk|Picture Files|*.jpg;*.bmp;*.gif|DLL Files|*.dll" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -80,6 +82,7 @@ rule Worm_Win32_Ainslot_H_2147646459_0
         $x_1_4 = "scripting.filesystemobject" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +107,7 @@ rule Worm_Win32_Ainslot_K_2147654817_0
         $x_1_5 = "--8cba7c0b4681f6e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule Worm_Win32_Ainslot_N_2147660551_0
         $x_1_6 = "Variant of Zeus BOT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +155,7 @@ rule Worm_Win32_Ainslot_O_2147662167_0
         $x_1_2 = "@~~@Inetnt Cleaneaar@~~@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +176,7 @@ rule Worm_Win32_Ainslot_AI_2147663188_0
         $x_1_1 = {55 00 32 00 39 00 6d 00 64 00 48 00 64 00 68 00 63 00 6d 00 56 00 63 00 58 00 45 00 31 00 70 00 59 00 33 00 4a 00 76 00 63 00 32 00 39 00 6d 00 64 00 46 00 78 00 63 00 56 00 32 00 6c 00 75 00 5a 00 47 00 39 00 33 00 63 00 31 00 78 00 63 00 51 00 33 00 56 00 79 00 63 00 6d 00 56 00 75 00 64 00 46 00 5a 00 6c 00 63 00 6e 00 4e 00 70 00 62 00 32 00 35 00 63 00 58 00 46 00 4a 00 31 00 62 00 67 00 3d 00 3d 00 00 1f 58 00 58 00 58 00 30 00 30 00 30 00 59 00 59 00 59 00 39 00 39 00 39 00 5a 00 5a 00 5a 00 00 03 5c 00 00 39 53 00 79 00 73 00 74 00 65 00 6d 00 2e 00 44 00 69 00 72 00 65 00 63 00 74 00 6f 00 72 00 79 00 53 00 65 00 72 00 76 00 69 00 63 00 65 00 73 00 2e 00 65 00 78 00 65 00 00 31 53 00 79 00 73 00 74 00 65 00 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -192,6 +199,7 @@ rule Worm_Win32_Ainslot_GNE_2147924852_0
         $x_5_2 = {40 00 10 3e 32 00 30 4f ?? 00 03 00 03 00 d3 1d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

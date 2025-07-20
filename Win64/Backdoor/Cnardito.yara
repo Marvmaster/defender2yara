@@ -22,6 +22,7 @@ rule Backdoor_Win64_Cnardito_A_2147712327_0
         $x_1_7 = {00 52 65 67 69 73 74 65 72 4d 6f 64 75 6c 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule Trojan_Win32_VBInjector_2147697044_0
         $x_1_2 = {85 c0 74 02 eb (32|38|3b) 83 c8 ff 85 c0 74 (29|2f|32) c7 ?? ?? [0-3] 01 00 00 00 c7 ?? ?? [0-3] 02 00 00 00 8d 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_VBInjector_2147697044_1
         $x_1_4 = {99 2b c2 d1 f8 89 45 ?? 83 3d 10 f0 42 00 00 75 1b 68 10 f0 42 00 68 ?? 14 40 00 e8 ?? ?? fd ff c7 85 ?? fd ff ff 10 f0 42 00 eb 0a c7 85 ?? fd ff ff 10 f0 42 00 0a 00 c7 45 ?? ?? ?? (81|84) 00 8b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_VBInjector_AAR_2147745391_0
         $x_1_4 = {5a 4b 52 81 ca ?? ?? ?? ?? 5a eb 11 00 52 81 ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -91,6 +94,7 @@ rule Trojan_Win32_VBInjector_AS_2147751138_0
         $x_1_4 = "Dorskeiagttagelsesvelserrdvinens" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

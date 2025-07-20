@@ -20,6 +20,7 @@ rule VirTool_Win32_Cristesz_A_2147900980_0
         $x_1_5 = {56 6a 05 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 83 c4 0c ff 74 24 68 6a 05 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 83 c4 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

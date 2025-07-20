@@ -21,6 +21,7 @@ rule Ransom_Linux_Criptato_A_2147901499_0
         $x_1_6 = "VisitCrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
             ((3 of ($x_5_*))) or

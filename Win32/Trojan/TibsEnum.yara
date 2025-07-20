@@ -19,6 +19,7 @@ rule Trojan_Win32_TibsEnum_A_2147594598_0
         $x_1_5 = {81 bd 9c fb ff ff 66 74 70 3a 0f 84}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

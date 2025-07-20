@@ -15,6 +15,7 @@ rule Trojan_Win64_T1562_002_DisableWindowsEventLogging_A_2147846080_0
         $x_10_1 = "event::drop" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

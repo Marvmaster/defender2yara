@@ -16,6 +16,7 @@ rule VirTool_Win64_Shloader_A_2147927350_0
         $x_1_2 = {48 8b c1 4c 8b d0 8b 05 06 15 00 00 ff 25 04 15 00 00 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

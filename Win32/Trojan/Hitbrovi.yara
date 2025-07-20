@@ -23,6 +23,7 @@ rule Trojan_Win32_Hitbrovi_B_2147696661_0
         $x_3_8 = "LOuWApl" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule Trojan_Win32_Hitbrovi_E_2147697467_0
         $x_1_6 = {c7 44 24 0c 25 00 73 00 c7 44 24 10 5c 00 25 00 c7 44 24 14 53 00 2e 00 c7 44 24 18 65 00 78 00 c7 44 24 1c 65 00 00 00 e8 ?? ?? ?? ?? 68 fe ff 00 00 8b f0 e8 ?? ?? ?? ?? 83 c4 08 6a 00 6a 07 56 6a 00 8b f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

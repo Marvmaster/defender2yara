@@ -16,6 +16,7 @@ rule Ransom_Win64_ThreeAM_B_2147935781_0
         $x_1_2 = {48 89 f1 b2 31 66 41 b8 30 31 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Trojan_Win32_Sfuzuan_A_2147712059_0
         $x_1_7 = {8d 7c 24 3c f3 a5 68 a7 00 00 00 8d 4c ?? ?? 6a 00 51 89 44 ?? ?? a4 e8 ?? ?? 00 00 83 c4 0c 8d 54 24 3c 52 68 ?? ?? ?? ?? 8b c2 50 e8 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -51,6 +52,7 @@ rule Trojan_Win32_Sfuzuan_AMAB_2147852932_0
         $x_1_5 = "223.5.5.5/resolve?name=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule Trojan_Win32_Sfuzuan_EN_2147895865_0
         $x_1_7 = "spi2.tyui54345.xyz" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

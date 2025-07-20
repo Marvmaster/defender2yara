@@ -18,6 +18,7 @@ rule Ransom_Win32_DithyRamb_A_2147921614_0
         $x_1_3 = {8b 55 fc 3b 55 f0 74 19 8b 45 fc 89 45 f4 8b 4d f4 0f be 11 81 f2 aa 00 00 00 8b 45 f4 88 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

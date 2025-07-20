@@ -19,6 +19,7 @@ rule Trojan_MSIL_UACBypassExp_AU_2147896150_0
         $x_1_4 = "Screen_Shot_2020-07-27_at_3.12.22_PM" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

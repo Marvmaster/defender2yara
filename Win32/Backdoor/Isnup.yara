@@ -17,6 +17,7 @@ rule Backdoor_Win32_Isnup_A_2147616456_0
         $x_1_3 = {85 ff b0 45 7e 14 56 8b 74 24 0c 30 04 31 2c 06 b2 14 f6 ea 41 3b cf 7c f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Win32_Isnup_B_2147622850_0
         $x_1_6 = "MsUpdater" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

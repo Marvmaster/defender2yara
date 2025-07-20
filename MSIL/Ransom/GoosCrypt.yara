@@ -18,6 +18,7 @@ rule Ransom_MSIL_GoosCrypt_PA_2147815448_0
         $x_1_3 = "\\sus.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

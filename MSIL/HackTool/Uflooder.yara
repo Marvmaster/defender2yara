@@ -18,6 +18,7 @@ rule HackTool_MSIL_Uflooder_A_2147708728_0
         $x_1_3 = "Eternals UDP Flood" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule HackTool_MSIL_Uflooder_C_2147709445_0
         $x_1_4 = "TCP/IP stress-test tool" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule HackTool_MSIL_Uflooder_D_2147711198_0
         $x_1_6 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

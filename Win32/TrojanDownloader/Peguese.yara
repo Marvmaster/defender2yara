@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Peguese_D_2147653902_0
         $x_1_7 = {8d 95 e4 fa ff ff b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 59 8b 85 e4 fa ff ff e8 ?? ?? ?? ?? 50 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Peguese_J_2147661762_0
         $x_1_6 = {8b 08 ff 51 1c 8b 85 ?? ?? ff ff 50 8d 95 ?? ?? ff ff b8 ?? ?? ?? 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

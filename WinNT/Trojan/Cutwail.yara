@@ -20,6 +20,7 @@ rule Trojan_WinNT_Cutwail_A_2147596633_0
         $x_1_5 = {33 f6 8b 45 08 6a ff 6a ff ff 74 b5 f0 ff 70 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Trojan_WinNT_Cutwail_B_2147596634_0
         $x_1_3 = {30 4d 0f 8a 4d 0f 88 0c 10 40 3b c6 72 e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +83,7 @@ rule Trojan_WinNT_Cutwail_C_2147596636_0
         $x_1_15 = "ZwWriteFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Trojan_WinNT_Cutwail_D_2147596637_0
         $x_1_1 = {eb d4 5e 8b fe 8b 76 24 03 f3 66 8b 14 56 2b 57 10 42 8b 77 1c 03 f3 8b 04 96 03 c3 6a 00 68 2e 64 6c 6c 68 77 73 79 73 54 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

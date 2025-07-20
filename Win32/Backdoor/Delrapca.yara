@@ -18,6 +18,7 @@ rule Backdoor_Win32_Delrapca_A_2147622440_0
         $x_1_4 = "%s?arg1=%s&arg2=%s&arg3=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

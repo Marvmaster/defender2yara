@@ -19,6 +19,7 @@ rule PWS_Win32_Sipay_A_2147623065_0
         $x_3_5 = "FTP Server :" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

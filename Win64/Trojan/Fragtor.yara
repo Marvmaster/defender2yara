@@ -16,6 +16,7 @@ rule Trojan_Win64_Fragtor_A_2147907877_0
         $x_2_1 = {50 ac fe c8 f6 d8 2c ?? c0 c8 ?? 34 ?? fe c8 88 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

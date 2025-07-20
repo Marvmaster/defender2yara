@@ -18,6 +18,7 @@ rule Backdoor_Win32_Khrat_A_2147723989_0
         $x_1_3 = {8b 4d 0c 8b 75 08 30 06 46 e2 fb 5e 59}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule HackTool_MSIL_Grobo_2147687974_0
         $x_1_2 = {5f 73 70 61 6d 00 67 65 74 5f 73 70 61 6d 00 73 65 74 5f 73 70 61 6d 00 5f 73 65 6e 64 61 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

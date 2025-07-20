@@ -29,6 +29,7 @@ rule TrojanSpy_Win32_Broftuk_A_2147687065_0
         $x_1_15 = "94A9638F40F111C4" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

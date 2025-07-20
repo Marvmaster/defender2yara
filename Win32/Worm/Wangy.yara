@@ -19,6 +19,7 @@ rule Worm_Win32_Wangy_C_2147653345_0
         $x_10_4 = {65 78 69 73 74 20 22 00 22 20 67 6f 74 6f 20 74 72 79 00 64 65 6c 20 25 30 00 00 69 6e 74 66 20}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

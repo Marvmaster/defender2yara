@@ -23,6 +23,7 @@ rule Trojan_Win32_Rupergas_A_2147650675_0
         $x_2_9 = "46585F5C565F4C430B4B5D5C405C434" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*))) or
             ((1 of ($x_4_*) and 3 of ($x_2_*))) or

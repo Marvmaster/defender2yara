@@ -22,6 +22,7 @@ rule Trojan_Win32_Disabler_EH_2147843312_0
         $x_1_7 = "CreateFileW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_Disabler_GB_2147846992_0
         $x_1_5 = "This malware requires NT 10.0 to run properly" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Linux_Kabypari_2147808230_0
         $x_1_5 = "linux_rat/src/Client.Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

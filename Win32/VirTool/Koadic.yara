@@ -23,6 +23,7 @@ rule VirTool_Win32_Koadic_A_2147732039_0
         $x_1_9 = ".open('','_self','')" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -56,6 +57,7 @@ rule VirTool_Win32_Koadic_A_2147732039_1
         $x_2_14 = "=\"999999999999999\";" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -92,6 +94,7 @@ rule VirTool_Win32_Koadic_A_2147732039_2
         $x_1_13 = "jobkey,work.status==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -124,6 +127,7 @@ rule VirTool_Win32_Koadic_A_2147732039_3
         $x_1_13 = "\"wmic os get /FORMAT:\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Neroblamy_RPX_2147908494_0
         $x_1_2 = {83 65 80 00 8b 45 f4 89 85 4c ff ff ff 8b 45 f8 89 85 54 ff ff ff 83 7d f4 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

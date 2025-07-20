@@ -16,6 +16,7 @@ rule Trojan_Win32_Regonid_A_2147655105_0
         $x_1_2 = {8b d0 2b d1 03 55 14 83 fa 7e 76 03 83 c1 7e 8b 55 08 8a 14 10 8b 1e 2a d1 02 55 14 02 d0 88 14 18 40 3b c7 72 da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -39,6 +39,7 @@ rule TrojanDownloader_Win32_Tonick_2147599761_0
         $x_10_25 = {6b 70 ff fb 12 e7 0b ?? 00 04 00 23 44 ff 2a 31 74 ff 32 04 00 48 ff 44 ff 35 4c ff 00 0c 6b 70 ff f3 ff 00 c6 1c ?? ?? 00 07 f4 01 70 70 ff 1e ?? ?? 00 0b 6b 70 ff f4 01 a9 70 70 ff 00 0a 04 72 ff 64 6c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((14 of ($x_1_*))) or
             ((1 of ($x_5_*) and 9 of ($x_1_*))) or
@@ -74,6 +75,7 @@ rule TrojanDownloader_Win32_Tonick_A_2147605743_0
         $x_5_6 = "jwpu<('" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -103,6 +105,7 @@ rule TrojanDownloader_Win32_Tonick_B_2147608902_0
         $x_1_5 = "]qugmit|'osi" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*))) or
             ((2 of ($x_10_*))) or
@@ -131,6 +134,7 @@ rule TrojanDownloader_Win32_Tonick_C_2147623530_0
         $x_10_4 = {6b 70 ff fb 12 e7 0b ?? 00 04 00 23 44 ff 2a 31 74 ff 32 04 00 48 ff 44 ff 35 4c ff 00 0c 6b 70 ff f3 ff 00 c6 1c ?? ?? 00 07 f4 01 70 70 ff 1e ?? ?? 00 0b 6b 70 ff f4 01 a9 70 70 ff 00 0a 04 72 ff 64 6c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

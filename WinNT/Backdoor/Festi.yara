@@ -18,6 +18,7 @@ rule Backdoor_WinNT_Festi_A_2147627916_0
         $x_1_4 = "\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy\\StandardProfile\\GloballyOpenPorts\\List" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_WinNT_Festi_B_2147629439_0
         $x_1_5 = {55 8b ec 51 51 ff 75 08 8d 45 f8 50 ff 15 ?? ?? ?? ?? 8d 45 f8 50 ff 15 ?? ?? ?? ?? c9 c2 04 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Backdoor_WinNT_Festi_C_2147629440_0
         $x_1_5 = "eclipse\\botnet\\drivers" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Backdoor_WinNT_Festi_D_2147656868_0
         $x_1_10 = "telnet.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or

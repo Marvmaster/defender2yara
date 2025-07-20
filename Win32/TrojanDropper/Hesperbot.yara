@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Hesperbot_A_2147683046_0
         $x_2_7 = "MachineGuid" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_8_*) and 3 of ($x_2_*))) or
             ((3 of ($x_8_*))) or
@@ -48,6 +49,7 @@ rule TrojanDropper_Win32_Hesperbot_B_2147684597_0
         $x_1_2 = {03 d8 8b 53 20 8b 4b 24 57 8b 7b 1c 03 d0 03 c8 03 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Synrat_A_2147628262_0
         $x_1_4 = "Server Connected to Sin Client" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Backdoor_Win32_Hupigon_2147489240_0
         $x_1_8 = {0b 46 69 6c 65 73 53 6f 63 6b 65 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -53,6 +54,7 @@ rule Backdoor_Win32_Hupigon_2147489242_0
         $x_1_6 = "NtQuerySystemInformation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -78,6 +80,7 @@ rule Backdoor_Win32_Hupigon_A_2147555277_0
         $x_1_2 = "6d92aDaNAr1i" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule Backdoor_Win32_Hupigon_H_2147565368_0
         $x_1_3 = {8b 4d f8 3b 4d fc 76 2e 8b 55 f8 8a 02 88 45 f4 8b 4d f8 8b 55 fc 8a 02 88 01 8b 4d f8 83 e9 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Backdoor_Win32_Hupigon_B_2147599234_0
         $x_1_1 = {4a 00 8b 00 8b 15 ?? ?? 49 00 e8 ?? ?? fb ff a1 ?? ?? 4a 00 8b 00 e8 ?? ?? fb ff c3 8b c0 55 8b ec 8b 45 08 48 74 24 48 74 05 48 74 10 eb 5f a1 ?? ?? 4a 00 c7 40 04 07 00 00 00 eb 51 03 00 a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +147,7 @@ rule Backdoor_Win32_Hupigon_C_2147599235_0
         $x_1_1 = {ba 02 00 00 00 e8 8c f9 ff ff 84 c0 0f 84 90 01 00 00 b2 01 a1 18 98 ?? ?? e8 10 e3 ff ff 0a 00 b9 4c e9 ?? ?? b8 ?? b7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Backdoor_Win32_Hupigon_D_2147599236_0
         $x_1_1 = {47 00 8b 00 8b 15 ?? ?? 46 00 e8 ?? ?? fe ff a1 ?? ?? 47 00 8b 00 e8 ?? ?? fe ff 5d c2 04 00 [0-1] a1 ?? ?? 47 00 50 6a 00 6a 00 68 ?? ?? 46 00 6a 00 6a 00 e8 ?? ?? ?? ff 8b 15 ?? ?? 47 00 89 02 c3 [0-3] 83 c4 ?? c7 04 24 03 00 a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +196,7 @@ rule Backdoor_Win32_Hupigon_ZM_2147599237_0
         $x_1_7 = "ChangeServiceConfig2A" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_7_*))) or
@@ -214,6 +222,7 @@ rule Backdoor_Win32_Hupigon_ZN_2147599319_0
         $x_10_2 = {3c 00 0a 00 01 00 4f 00 72 00 69 00 67 00 69 00 6e 00 61 00 6c 00 46 00 69 00 6c 00 65 00 6e 00 61 00 6d 00 65 00 00 00 57 00 69 00 73 00 69 00 6e 00 2e 00 65 00 78 00 65 00 00 00 72 00 29 00 01 00 50 00 72 00 6f 00 64 00 75 00 63 00 74 00 4e 00 61 00 6d 00 65 00 00 00 00 00 4d 00 69 00 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00 28 00 52 00 29 00 20 00 57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 28 00 52 00 29 00 20 00 4f 00 70 00 65 00 72 00 61 00 74 00 69 00 6e 00 67 00 20 00 53 00 79 00 73 00 74 00 65 00 6d 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -239,6 +248,7 @@ rule Backdoor_Win32_Hupigon_ZO_2147600096_0
         $x_10_6 = "> nul" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -269,6 +279,7 @@ rule Backdoor_Win32_Hupigon_ZP_2147601130_0
         $x_1_11 = "Software\\ns" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -297,6 +308,7 @@ rule Backdoor_Win32_Hupigon_RA_2147603273_0
         $x_1_9 = "#WindowsManagementCheckRadioBoxClick*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -346,6 +358,7 @@ rule Backdoor_Win32_Hupigon_YA_2147604956_0
         $x_5_30 = "^^xfZZ\\KeeXNbb" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1000_*) and 1 of ($x_4_*) and 5 of ($x_2_*) and 16 of ($x_1_*))) or
             ((4 of ($x_1000_*) and 1 of ($x_5_*) and 5 of ($x_2_*) and 15 of ($x_1_*))) or
@@ -397,6 +410,7 @@ rule Backdoor_Win32_Hupigon_E_2147605474_0
         $x_1_1 = {47 00 8b 00 8b 15 ?? ?? 46 00 e8 ?? ?? fd ff a1 ?? ?? 47 00 8b 00 e8 ?? ?? fd ff 83 c4 ?? c3 8d 40 00 55 8b ec 8b 45 08 48 74 24 48 74 05 48 74 10 eb 5f a1 ?? ?? 47 00 c7 40 04 07 00 00 00 eb 51 03 00 a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -445,6 +459,7 @@ rule Backdoor_Win32_Hupigon_YB_2147605723_0
         $x_5_29 = "^^xfZZ\\KeeXNbb" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1000_*) and 1 of ($x_4_*) and 5 of ($x_2_*) and 16 of ($x_1_*))) or
             ((4 of ($x_1000_*) and 1 of ($x_5_*) and 5 of ($x_2_*) and 15 of ($x_1_*))) or
@@ -502,6 +517,7 @@ rule Backdoor_Win32_Hupigon_ZAF_2147609237_0
         $x_1_9 = "rwx_bye" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -526,6 +542,7 @@ rule Backdoor_Win32_Hupigon_F_2147609692_0
         $x_1_1 = {4a 00 8b 00 8b 15 ?? ?? 49 00 e8 ?? ?? fb ff a1 ?? ?? 4a 00 8b 00 e8 ?? ?? fb ff c3 8b c0 55 8b 45 08 8b ec 48 74 24 48 74 05 48 74 10 eb 5f a1 ?? ?? 4a 00 c7 40 04 07 00 00 00 eb 51 03 00 a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -547,6 +564,7 @@ rule Backdoor_Win32_Hupigon_G_2147610155_0
         $x_1_1 = {48 00 8b 00 e8 ?? ?? fc ff 8b 0d ?? ?? 48 00 a1 ?? ?? 48 00 8b 00 8b 15 ?? ?? 47 00 e8 ?? ?? fc ff a1 ?? ?? 48 00 8b 00 e8 ?? ?? fc ff c3 [0-1] 55 8b ec 8b 45 08 48 74 24 48 74 05 48 74 10 eb 5f a1 ?? ?? 48 00 c7 40 04 07 00 00 00 eb 51 03 00 a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -571,6 +589,7 @@ rule Backdoor_Win32_Hupigon_H_2147610156_0
         $x_2_4 = {49 00 b1 fe ba ?? 00 00 00 e8 ?? ?? ?? ff a1 ?? ?? 48 00 8b 00 e8 ?? ?? fc ff c3 55 8b ec 8b 45 08 48 74 24 48 74 05 48 74 10 eb 5f a1 ?? ?? 48 00 c7 40 04 07 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -605,6 +624,7 @@ rule Backdoor_Win32_Hupigon_CK_2147617704_0
         $x_1_11 = {40 4a 75 f9 33 c0 55 68 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 6a 11 6a 02 6a 02 e8 03 00 c6 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -631,6 +651,7 @@ rule Backdoor_Win32_Hupigon_CY_2147624278_0
         $x_1_3 = {50 6a 00 e8 ?? ?? ?? ?? 80 7b 50 00 74 23 0f b7 05 ?? ?? ?? ?? 50 6a 00 6a 00 a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? 50 68 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -652,6 +673,7 @@ rule Backdoor_Win32_Hupigon_DD_2147624685_0
         $x_1_2 = {50 6a 00 e8 ?? ?? ?? ?? 80 7b 50 00 74 23 0f b7 05 ?? ?? ?? ?? 50 6a 00 6a 00 a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? 50 68 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -675,6 +697,7 @@ rule Backdoor_Win32_Hupigon_DE_2147625353_0
         $x_1_4 = "GetDriverI" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -696,6 +719,7 @@ rule Backdoor_Win32_Hupigon_DF_2147625471_0
         $x_1_2 = {6a 00 6a 00 6a 00 6a 00 6a 10 e8 ?? ?? ?? ?? e9 c5 00 00 00 6a 00 6a 00 6a 00 6a 5b e8 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -718,6 +742,7 @@ rule Backdoor_Win32_Hupigon_DG_2147626040_0
         $x_1_3 = {8b f0 89 35 ?? ?? ?? ?? 85 f6 74 0e 6a 01 e8 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 53 e8 ?? ?? ?? ?? 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -740,6 +765,7 @@ rule Backdoor_Win32_Hupigon_DV_2147630677_0
         $x_1_3 = {8b e8 83 c4 04 85 ed 0f 84 ?? ?? ?? ?? 81 fd 00 00 00 80 0f 82 ?? ?? ?? ?? 81 fd ff ff ff 9f 0f 87}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -762,6 +788,7 @@ rule Backdoor_Win32_Hupigon_EA_2147631244_0
         $x_1_3 = {03 42 3c 8b 55 f8 89 02 8b 45 f8 8b 00 05 f8 00 00 00 89 06 8b 45 f8 8b 00 8b 50 38 8b 45 f8 8b 00 8b 40 54 e8 ?? ?? ?? ?? 8b 55 0c 03 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -786,6 +813,7 @@ rule Backdoor_Win32_Hupigon_DZ_2147634345_0
         $x_1_5 = "AVPSytemPid" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -815,6 +843,7 @@ rule Backdoor_Win32_Hupigon_ED_2147634346_0
         $x_1_6 = {c9 cf cf df d6 f7 bb fa}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -847,6 +876,7 @@ rule Backdoor_Win32_Hupigon_BaiJin_2147635916_0
         $x_1_8 = "RegisterServiceCtrlHandlerEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -878,6 +908,7 @@ rule Backdoor_Win32_Hupigon_EE_2147637019_0
         $x_1_4 = "info:Shell Code" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -903,6 +934,7 @@ rule Backdoor_Win32_Hupigon_FC_2147637023_0
         $x_1_6 = {8b f0 85 f6 74 0c 8b 04 24 50 55 ff d6 85 c0 0f 94 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -929,6 +961,7 @@ rule Backdoor_Win32_Hupigon_FF_2147637822_0
         $x_1_3 = {c9 cf cf df d6 f7 bb fa}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -955,6 +988,7 @@ rule Backdoor_Win32_Hupigon_FI_2147637956_0
         $x_1_4 = "aUTlOGINtcpcLIENT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -979,6 +1013,7 @@ rule Backdoor_Win32_Hupigon_FI_2147637956_1
         $x_1_5 = {00 42 45 49 5f 5a 48 55 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1005,6 +1040,7 @@ rule Backdoor_Win32_Hupigon_EJ_2147638801_0
         $x_1_3 = {c7 45 fc ff ff ff ff e8 ?? ?? ?? ?? 39 9d ?? ?? ff ff 75 ?? 3b f3 74 0f 56 53 ff 95 ?? ?? ff ff 50 ff 95 ?? ?? ff ff 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1029,6 +1065,7 @@ rule Backdoor_Win32_Hupigon_FK_2147640854_0
         $x_1_5 = "_kaspersky" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1056,6 +1093,7 @@ rule Backdoor_Win32_Hupigon_FU_2147640855_0
         $x_1_4 = "_kaspersky" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1081,6 +1119,7 @@ rule Backdoor_Win32_Hupigon_EU_2147642407_0
         $x_1_3 = {ff 15 14 20 40 00 3d 36 20 00 00 72 35 8d 05 14 20 40 00 89 45 fc 68 00 10 40 00 68 88 30 40 00 68 00 30 40 00 ff 75 fc ff 15 24 20 40 00 85 c0 74 40 6a ff ff 35 08 30 40 00 ff 15 04 20 40 00 eb 30 68 78 30 40 00 8d 85 fc fe ff ff 68 68 30 40 00 50 ff 15 30 20 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1107,6 +1146,7 @@ rule Backdoor_Win32_Hupigon_ZAI_2147642547_0
         $x_1_7 = "BITSServiceMain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -1134,6 +1174,7 @@ rule Backdoor_Win32_Hupigon_ZAI_2147642547_1
         $x_1_4 = "%s\\%d_Index.TEMP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1159,6 +1200,7 @@ rule Backdoor_Win32_Hupigon_ZAJ_2147642548_0
         $x_1_6 = "36%xsvc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1188,6 +1230,7 @@ rule Backdoor_Win32_Hupigon_ZAK_2147642549_0
         $x_1_6 = "ONS\\IExPLoRE.EXE\\SHelL\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1214,6 +1257,7 @@ rule Backdoor_Win32_Hupigon_EX_2147647694_0
         $x_1_3 = "\\Windows\\System','DisableCMD'" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1240,6 +1284,7 @@ rule Backdoor_Win32_Hupigon_FP_2147691771_0
         $x_1_7 = {7d 03 46 eb 05 be 01 00 00 00 8b 45 ?? 33 db 8a 5c 30 ff 33 5d ?? 3b fb 7c 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1265,6 +1310,7 @@ rule Backdoor_Win32_Hupigon_ZAP_2147733097_0
         $x_1_5 = "objws.Run kavpath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1292,6 +1338,7 @@ rule Backdoor_Win32_Hupigon_A_2147743961_0
         $x_1_7 = "firefox.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1323,6 +1370,7 @@ rule Backdoor_Win32_Hupigon_EC_2147842700_0
         $x_1_8 = "deleteme.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1345,6 +1393,7 @@ rule Backdoor_Win32_Hupigon_DW_2147901125_0
         $x_1_2 = {8a 18 80 c3 ?? 80 f3 ?? 80 c3 ?? 88 18 40 49 83 f9 ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

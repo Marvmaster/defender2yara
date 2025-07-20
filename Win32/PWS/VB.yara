@@ -24,6 +24,7 @@ rule PWS_Win32_VB_HB_2147515526_0
         $x_1_10 = "CIEPasswords" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule PWS_Win32_VB_AOA_2147596908_0
         $x_1_8 = "Login =" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -78,6 +80,7 @@ rule PWS_Win32_VB_CE_2147597158_0
         $x_1_5 = {50 ff d6 8b d0 8d 4d d4 ff d7 50 68 ?? ?? ?? ?? ff d6 8b d0 8d 4d d0 ff d7 50 53 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 8d 4d d0 51 8d 55 d4 52 6a 02 ff 15 ?? ?? ?? ?? 83 c4 18 53 ff 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? e9 ?? ?? ?? ?? ff d6 8b d0 8d 4d d4 ff d7 8b 55 10 50 8b 02 50 ff d6 8b d0 8d 4d d0 ff d7 50 68 ?? ?? ?? ?? ff d6 8b d0 8d 4d cc ff d7 50 53 6a ff 68 02 02 00 00 ff 15 ?? ?? ?? ?? 8d 4d cc 51 8d 55 d0 52 8d 45 d4 50 6a 03 ff 15 ?? ?? ?? ?? 8b 4d 0c 8b 11 83 c4 10 68 ?? ?? ?? ?? 52 ff d6 8b d0 8d 4d d4 ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +117,7 @@ rule PWS_Win32_VB_DA_2147605031_0
         $x_1_17 = "Hacked Web Pass" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((13 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -139,6 +143,7 @@ rule PWS_Win32_VB_Q_2147624684_0
         $x_1_3 = {50 51 c7 45 ?? 01 80 ff ff c7 45 ?? 02 80 00 00 ff 15 ?? ?? ?? ?? 66 85 c0 0f 84 ?? ?? 00 00 66 83 ff 01 75 0a ba ?? ?? ?? ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -161,6 +166,7 @@ rule PWS_Win32_VB_AW_2147625214_0
         $x_1_3 = {6d 64 6c 57 69 6e 73 6f 63 6b 00 00 6d 64 6c 57 69 6e 73 6f 63 6b 41 50 49 73 00 00 6d 6f 64 53 4d 54 50 00 6d 6f 64 5f 56 61 72 69 61 76 65 69 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +191,7 @@ rule PWS_Win32_VB_CT_2147643417_0
         $x_1_5 = "Copyright (C) Microsoft Corp." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +219,7 @@ rule PWS_Win32_VB_DG_2147653350_0
         $x_1_8 = "UACDisableNotify" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -239,6 +247,7 @@ rule PWS_Win32_VB_DL_2147653980_0
         $x_3_8 = "smtp.gmail.com" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -261,6 +270,7 @@ rule PWS_Win32_VB_CS_2147749690_0
         $x_1_2 = {0f c8 0f c8 0f c8 0f c8 89 c0 89 c0 89 ff 0f c8 0f c8 40 00 b8 ?? ?? ?? ?? 89}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

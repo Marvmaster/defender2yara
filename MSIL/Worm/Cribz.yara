@@ -20,6 +20,7 @@ rule Worm_MSIL_Cribz_A_2147689730_0
         $x_1_6 = "\"ServiceMain\"=\"SvchostEntry_W32Time\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

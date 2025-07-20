@@ -18,6 +18,7 @@ rule Trojan_Win32_EyeStye_2147631403_0
         $x_1_4 = "cleansweep.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -47,6 +48,7 @@ rule Trojan_Win32_EyeStye_2147631403_1
         $n_1_6 = {2a 44 72 6f 70 70 65 72 2a 21 6d 61 69 6e 20 3a 20 43 72 65 61 74 65 4d 75 74 65 78 2d 3e 45 52 52 4f 52 5f 41 4c 52 45 41 44 59 5f 45 58 49 53 54 53 00}  //weight: -1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -75,6 +77,7 @@ rule Trojan_Win32_EyeStye_H_2147637450_0
         $x_1_4 = {1b 6a 00 43 dc fe 04 dc fe 04 0c ff 0a 08 00 08 00 04 b0 fe 04 0c ff fd fe ?? fe 04 3c ff fd fe ?? fe 07 08 00 80 00 24 0a 00 0d 20 00 0b 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule Trojan_Win32_EyeStye_H_2147637450_1
         $x_1_9 = {25 42 4f 54 4e 41 4d 45 25 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -132,6 +136,7 @@ rule Trojan_Win32_EyeStye_L_2147643689_0
         $x_1_3 = {ba 17 00 00 00 66 89 16 ff 15 ?? ?? ?? ?? 66 89 46 02 8d 45 ?? 50 8b cf c7 46 04 00 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +157,7 @@ rule Trojan_Win32_EyeStye_N_2147645167_0
         $x_1_1 = {c7 45 f8 d9 09 00 00 8b 55 f0 81 f2 00 00 00 99 89 15 ?? ?? 42 00 8b 05 ?? ?? 43 00 f7 d0 05 ?? ?? 00 00 c1 e8 ?? 89 45 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +181,7 @@ rule Trojan_Win32_EyeStye_N_2147645167_1
         $x_1_4 = {3d 33 8a 04 43 0f 84 ?? ?? ?? ?? 39 7d e0 74 14 3d 72 09 0a 49}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -197,6 +204,7 @@ rule Trojan_Win32_EyeStye_C_2147645536_0
         $x_1_2 = {0f be c9 c1 c0 07 33 c1 42 8a 0a 84 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +227,7 @@ rule Trojan_Win32_EyeStye_2147645556_0
         $x_1_3 = {6a 00 6a 00 6a 03 6a 00 6a 00 68 bb 01 00 00 8d 4d c0 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -242,6 +251,7 @@ rule Trojan_Win32_EyeStye_2147645556_1
         $x_1_4 = "RdpGetLastError" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -266,6 +276,7 @@ rule Trojan_Win32_EyeStye_2147645556_2
         $x_1_5 = "grabkeys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -288,6 +299,7 @@ rule Trojan_Win32_EyeStye_2147645556_3
         $x_1_3 = "-rw-r--r-- 1 0 0 " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -311,6 +323,7 @@ rule Trojan_Win32_EyeStye_2147645556_4
         $x_1_4 = "TakeBotGuid" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -334,6 +347,7 @@ rule Trojan_Win32_EyeStye_2147645556_5
         $x_2_4 = {73 70 79 53 70 72 65 61 64 2e 64 6c 6c 00 43 61 6c 6c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -361,6 +375,7 @@ rule Trojan_Win32_EyeStye_2147645556_6
         $x_1_4 = {8b f0 81 7d fc c8 00 00 00 76 ?? 8b [0-21] 8b c6 e8 ?? ?? ?? ?? 8b f8 8d ?? ?? 50 8b cf ba 50 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -386,6 +401,7 @@ rule Trojan_Win32_EyeStye_2147645556_7
         $x_1_6 = "Callback_OnBeforeProcessUrl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -408,6 +424,7 @@ rule Trojan_Win32_EyeStye_2147645556_8
         $x_1_3 = {73 6f 66 74 77 61 72 65 67 72 61 62 62 65 72 2e 64 6c 6c 00 49 6e 69 74 00 53 74 61 72 74 00 53 74 6f 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -432,6 +449,7 @@ rule Trojan_Win32_EyeStye_2147645556_9
         $x_1_5 = "%s&stat=online" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -463,6 +481,7 @@ rule Trojan_Win32_EyeStye_2147645556_10
         $x_3_12 = "SpyEye_Start" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -491,6 +510,7 @@ rule Trojan_Win32_EyeStye_U_2147647113_0
         $x_1_4 = {63 6f 6f 6b 69 65 73 2d [0-8] 74 6f 72 2e 78 6d 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -512,6 +532,7 @@ rule Trojan_Win32_EyeStye_D_2147647317_0
         $x_1_1 = {50 6a 08 ff 15 ?? ?? ?? ?? 50 06 1c ff 03 b0 f6 5d c3 33 c0 03 20 83 7d 08 00 74 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -533,6 +554,7 @@ rule Trojan_Win32_EyeStye_AK_2147658791_0
         $x_2_2 = {0f b6 5c 15 00 45 83 fd 0f 75 05 bd 00 00 00 00 46 30 1f 47 3b f1 72 e8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -556,6 +578,7 @@ rule Trojan_Win32_EyeStye_AEYE_2147939905_0
         $x_1_3 = "kEYedSMuZpDwVKUWPOIR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

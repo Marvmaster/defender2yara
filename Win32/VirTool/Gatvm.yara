@@ -15,6 +15,7 @@ rule VirTool_Win32_Gatvm_2147684534_0
         $x_1_1 = {8b 74 24 28 fc 07 00 9c 60 68 ?? ?? ?? ?? ?? ?? ?? ?? ?? bf ?? ?? ?? ?? 03 34 24 8a (0e|06) 0f b6 (c1|c0) (8d|46) ff 34 85 ?? ?? ?? ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

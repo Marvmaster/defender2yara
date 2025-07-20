@@ -25,6 +25,7 @@ rule HackTool_Linux_Mirai_2147765816_0
         $x_1_9 = "runtime.injectglist" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule HackTool_Linux_Mirai_B_2147946604_0
         $x_1_4 = "main.encryptCredentials" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

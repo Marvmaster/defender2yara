@@ -20,6 +20,7 @@ rule Worm_MSIL_Bitbogar_A_2147685581_0
         $x_1_6 = "SpreadToSystem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

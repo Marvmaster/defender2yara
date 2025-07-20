@@ -30,6 +30,7 @@ rule PWS_Win32_Mafagent_A_2147623494_0
         $x_10_16 = "update_id" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_4_*) and 8 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_4_*) and 7 of ($x_2_*) and 2 of ($x_1_*))) or

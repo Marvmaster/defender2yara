@@ -18,6 +18,7 @@ rule Trojan_Win64_Winnti_A_2147689668_0
         $x_1_3 = "twofish" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Trojan_Win64_Winnti_C_2147689685_0
         $x_1_6 = "D:\\ZeusServer.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Trojan_Win64_Winnti_I_2147690225_0
         $x_1_4 = "%s\\sysprep\\cryptbase.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Trojan_Win64_Winnti_I_2147690225_1
         $x_1_4 = "%s\\sysprep\\cryptbase.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_Win64_Winnti_H_2147690226_0
         $x_1_4 = "work_end" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -146,6 +151,7 @@ rule Trojan_Win64_Winnti_H_2147690226_1
         $x_1_4 = "work_end" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +174,7 @@ rule Trojan_Win64_Winnti_F_2147690227_0
         $x_1_2 = "AemaNeliFpmeTteG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +197,7 @@ rule Trojan_Win64_Winnti_F_2147690227_1
         $x_1_2 = "AemaNeliFpmeTteG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +222,7 @@ rule Trojan_Win64_Winnti_J_2147692130_0
         $x_1_4 = "Device\\Tcp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_3_*))) or
@@ -244,6 +253,7 @@ rule Trojan_Win64_Winnti_2147692925_0
         $x_2_6 = "wind0ws" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -270,6 +280,7 @@ rule Trojan_Win64_Winnti_G_2147694707_0
         $x_1_6 = {2f 6c 6f 6f 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +309,7 @@ rule Trojan_Win64_Winnti_K_2147696342_0
         $x_1_8 = "Windows Title:%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -325,6 +337,7 @@ rule Trojan_Win64_Winnti_L_2147696571_0
         $x_1_7 = "advfirewall firewall add rule name=\"Windows Management Instrumentation (RPC-In)\" dir=in action=allow localport=%d protocol=TCP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -353,6 +366,7 @@ rule Trojan_Win64_Winnti_M_2147705552_0
         $x_1_8 = "wind0ws" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -377,6 +391,7 @@ rule Trojan_Win64_Winnti_P_2147706284_0
         $x_1_4 = {43 4f 4e 4e 45 43 54 20 25 73 3a 25 64 20 48 54 54 50 2f 31 2e 30 0d 0a 0d 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -406,6 +421,7 @@ rule Trojan_Win64_Winnti_N_2147711360_0
         $x_1_5 = {49 6e 73 74 61 6c 6c 00 54 65 73 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -431,6 +447,7 @@ rule Trojan_Win64_Winnti_T_2147717718_0
         $x_1_5 = "%s\\rundll32.exe \"%s\", sqlite3_get_version %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -460,6 +477,7 @@ rule Trojan_Win64_Winnti_Y_2147741668_0
         $x_1_5 = "stone64.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -484,6 +502,7 @@ rule Trojan_Win64_Winnti_Z_2147741669_0
         $x_1_4 = "Appinit64.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -508,6 +527,7 @@ rule Trojan_Win64_Winnti_ZA_2147741670_0
         $x_1_4 = {63 6d 64 2e 65 78 65 20 2f 43 20 22 43 3a 5c 54 45 4d 50 5c [0-10] 2e 74 6d 70 2e 62 61 74 22}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -532,6 +552,7 @@ rule Trojan_Win64_Winnti_ZB_2147741671_0
         $x_1_4 = {ff d8 ff e0 00 00 00 00 00 00 [0-100] e9 ea eb ec ed ee ef f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -558,6 +579,7 @@ rule Trojan_Win64_Winnti_ZC_2147741672_0
         $x_1_6 = "TerminateFilter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -581,6 +603,7 @@ rule Trojan_Win64_Winnti_SS_2147747980_0
         $x_1_3 = "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E972-E325-11CE-BFC1-08002BE10318}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -607,6 +630,7 @@ rule Trojan_Win64_Winnti_SJ_2147748037_0
         $x_1_6 = "GetPidByName %s ret err" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

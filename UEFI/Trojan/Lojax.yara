@@ -19,6 +19,7 @@ rule Trojan_UEFI_Lojax_H_2147750109_0
         $x_1_4 = {4d 9b 2d 83 d5 d8 5f 42 bd 52 5c 5a fb 2c 85 dc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

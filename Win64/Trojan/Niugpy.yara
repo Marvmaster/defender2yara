@@ -17,6 +17,7 @@ rule Trojan_Win64_Niugpy_A_2147691550_0
         $x_1_3 = {81 e1 f0 00 ff ff 44 8d 81 88 ff 00 00 49 8b ca 41 c1 e0 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

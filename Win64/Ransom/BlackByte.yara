@@ -18,6 +18,7 @@ rule Ransom_Win64_BlackByte_DKC_2147832570_0
         $x_1_3 = {0f b6 04 1f 30 03 48 ff c3 48 83 e9 01 75 f1 48 83 ef 10 0f 29 ?? ?? 48 83 ee 01 75 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Ransom_Win64_BlackByte_FG_2147848231_0
         $x_1_1 = {41 8b c2 4d 8d 49 01 99 41 ff c2 f7 ff 48 63 c2 44 0f b6 04 18 45 30 41 ff 45 3b d3 7c e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +81,7 @@ rule Ransom_Win64_BlackByte_GB_2147930059_0
         $x_3_20 = "BlackByteGO/_cgo_gotypes.go" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

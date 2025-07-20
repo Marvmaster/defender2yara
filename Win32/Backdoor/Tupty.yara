@@ -17,6 +17,7 @@ rule Backdoor_Win32_Tupty_A_2147651598_0
         $x_1_3 = {49 6e 73 74 61 6c 6c 54 65 72 6d 20 50 6f 72 74 20 [0-32] 2d 2d 3e 49 6e 73 74 61 6c 6c 20 4e 65 77 20 54 65 72 6d 69 6e 61 6c 20 50 6f 72 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

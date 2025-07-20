@@ -21,6 +21,7 @@ rule VirTool_MSIL_Luxod_A_2147692807_0
         $x_1_7 = "add \"HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\" /f /v shell /t REG_SZ /d explorer.exe,\"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule VirTool_MSIL_Luxod_B_2147710455_0
         $x_1_5 = {45 6e 61 62 6c 65 53 74 61 72 74 75 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

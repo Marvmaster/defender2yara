@@ -20,6 +20,7 @@ rule Trojan_Win32_SharPyShell_STE_2147779122_0
         $x_1_6 = {47 65 74 42 79 74 65 73 00 63 6f 64 65 00 70 61 73 73 77 6f 72 64 00 41 72 72 61 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

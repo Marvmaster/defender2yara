@@ -18,6 +18,7 @@ rule Trojan_Win32_Zonidel_A_2147732053_0
         $x_1_4 = "http://92.63.197.48/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Zonidel_G_2147745595_0
         $x_1_5 = {8a 44 0d 54 88 02 06 00 8b 55 ?? 03 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -68,6 +70,7 @@ rule Trojan_Win32_Zonidel_VC_2147756731_0
         $x_1_1 = {8b cf 8b c7 c1 e9 ?? 03 4c 24 ?? c1 e0 ?? 03 44 24 ?? 33 c8 8d 04 3b 33 c8 8b 44 24 ?? 2b f1 b9 ?? ?? ?? ?? 2b c8 03 d9 4d 75 ?? 8b 6c 24 ?? 89 7d ?? 5f 89 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

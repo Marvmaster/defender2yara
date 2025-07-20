@@ -20,6 +20,7 @@ rule HackTool_Win32_Wirekeyview_2147694233_0
         $x_1_5 = "\"%s\" /GetKeys %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

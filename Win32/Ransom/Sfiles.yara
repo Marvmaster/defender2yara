@@ -22,6 +22,7 @@ rule Ransom_Win32_Sfiles_B_2147820193_0
         $x_1_7 = "! cynet ransom protection(don't delete)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

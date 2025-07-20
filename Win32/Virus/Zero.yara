@@ -16,6 +16,7 @@ rule Virus_Win32_Zero_RS_2147910293_0
         $x_1_1 = {69 c0 01 01 00 00 0f b6 c9 03 c1 c1 e1 10 8d 76 01 33 c1 8a 0e 84 c9 75 e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

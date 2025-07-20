@@ -19,6 +19,7 @@ rule TrojanDownloader_Win64_Malgentz_AT_2147922418_0
         $n_100_4 = "Purple Pen" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }

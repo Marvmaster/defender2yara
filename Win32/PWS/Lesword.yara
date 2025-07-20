@@ -19,6 +19,7 @@ rule PWS_Win32_Lesword_A_2147657653_0
         $x_1_5 = {74 14 8d 54 24 ?? 68 ?? ?? ?? 10 52 ff 15 ?? ?? ?? 10 85 c0 75 19 8b 44 24 ?? 50 6a 00 6a 01 ff d3 8b f0 6a 00 56 ff d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule PWS_Win32_Lesword_B_2147657807_0
         $x_1_3 = {50 4f 53 54 [0-5] 2e 6a 70 67 [0-16] 41 43 44 [0-16] 25 73 3f 64 31 30 3d 25 73 26 64 38 30 3d 25 64 [0-10] 25 73 5c 25 73 2e 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

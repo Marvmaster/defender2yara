@@ -17,6 +17,7 @@ rule Trojan_Win32_Starms_A_2147655189_0
         $x_1_3 = {5c 00 6d 00 73 00 66 00 74 00 64 00 6d 00 2e 00 65 00 78 00 65 00 00 00 5c 00 6d 00 73 00 66 00 74 00 64 00 6d 00 33 00 32 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Ransom_Win32_Purubutu_A_2147688855_0
         $x_1_7 = {8b 55 fc 0f b7 54 5a fe 33 d7 66 89 54 58 fe 43 4e 75 e5 8b 45 f8 8b 55 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win32_Purubutu_B_2147688856_0
         $x_10_4 = {36 01 24 01 29 01 20 01 36 01 05 01 37 01 2c 01 35 01 2a 01 29 01 24 01 6b 01 2b 01 20 01 31 01}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

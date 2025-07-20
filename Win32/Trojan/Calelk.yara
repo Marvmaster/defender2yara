@@ -16,6 +16,7 @@ rule Trojan_Win32_Calelk_A_2147632783_0
         $x_1_2 = {6a 09 6a 01 6a 6c 6a 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

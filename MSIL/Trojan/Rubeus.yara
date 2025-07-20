@@ -17,6 +17,7 @@ rule Trojan_MSIL_Rubeus_NR_2147937185_0
         $x_1_2 = {6f df 06 00 06 17 9a 6f df 06 00 06 16 9a 6f 04 07 00 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

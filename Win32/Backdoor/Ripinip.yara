@@ -20,6 +20,7 @@ rule Backdoor_Win32_Ripinip_2147605803_0
         $x_2_6 = {48 4b 45 59 5f 4c 4f 43 41 4c 5f 4d 41 43 48 49 4e 45 5c 53 4f 46 54 57 41 52 45 5c 43 6c 61 73 73 65 73 5c 43 4c 53 49 44 5c 7b 44 43 38 38 38 36 33 31 2d 35 37 46 35 2d 34 41 46 34 2d 38 36 42 33 2d 42 44 45 35 46 38 35 34 44 43 42 46 7d 5c 00 00 00 48 4b 45 59 5f 4c 4f 43 41 4c 5f 4d 41 43 48 49 4e 45 5c 53 4f 46 54 57 41 52 45 5c 43 6c 61 73 73 65 73 5c 50 57 46 6c 61 73 68 2e 50 6f 77 65 72 46 6c 61 73 68 5c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -46,6 +47,7 @@ rule Backdoor_Win32_Ripinip_2147605804_0
         $x_2_3 = {65 78 65 63 75 74 65 3d 00 00 00 00 73 68 65 6c 6c 00 00 00 6f 52 75 6e 5d 0d 0a 00 5b 41 75 74 00 00 00 00 2e 65 78 65 00 00 00 00 75 64 6b 00 64 3a 5c 72 65 00 00 00 6f 70 65 6e 3d 00 00 00 52 75 6e 2e 69 6e 66 00 41 75 74 6f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Backdoor_Win32_Ripinip_C_2147608027_0
         $x_1_6 = {53 65 72 76 69 63 65 44 6c 6c 00 00 50 61 72 61 6d 65 74 65 72 73 5c 00 53 74 61 72 74 00 00 00 72 69 70 5c 00 00 00 00 69 63 65 73 5c 49 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -95,6 +98,7 @@ rule Backdoor_Win32_Ripinip_H_2147617631_0
         $x_1_2 = {81 7e 04 01 14 00 00 75 1e 8b 56 08 6a 00 8d 46 0c 50 52 55 57 ff 15 ?? ?? ?? ?? 56 8b cb e8 ?? ?? ff ff 85 c0 75 d9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +128,7 @@ rule Backdoor_Win32_Ripinip_L_2147627972_0
         $x_1_10 = "<%s*%d*%d*%d*%d*>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 5 of ($x_1_*))) or
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
@@ -150,6 +155,7 @@ rule Backdoor_Win32_Ripinip_O_2147646262_0
         $x_1_2 = {8b f8 83 c4 14 85 ff 74 1b 6a 02 68 ?? ff ff ff 57 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

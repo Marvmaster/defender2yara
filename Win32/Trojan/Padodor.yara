@@ -17,6 +17,7 @@ rule Trojan_Win32_Padodor_GPB_2147903347_0
         $x_5_2 = {4d 5a e1 3d 08 ea f4 3f 2c 38 75 f4 98 2c 3d f4 74 4d 3d 75 3f 9d 3c 75 5d 1f b3 e6 90 3f 6e 75 3d 6e aa f4 3d 4d d7 75 38 75 4c f4 1f 75 75 3f}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Padodor_JPAA_2147906484_0
         $x_5_1 = {89 d8 01 d8 89 c3 81 eb e4 34 00 00 81 eb 3f 7a 00 00 89 d8 29 d8 89 c3 f7 e3 89 85 ?? ?? ?? ?? 89 c3 81 f3 1b 6a 00 00 89 d8 f7 e3 89 85 ?? ?? ?? ?? 89 c3 f7 e3 89 85}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Padodor_A_2147922415_0
         $x_1_2 = {55 f8 bd c5 11 68 ac 44 d6 0d 75 04 3d 25 4a 41 9e cb f7 44 57 cb 12 1f d6 3c df 44 80 d4 d3 b9 29 c3 36 80 de 0d 75 1b 88 67 e8 87 83 b5 50 c5 3a 2c b4 44 d6 6f e3 13 5d 49 bd fb 16 6c 32 79 5f c4 b4 bc 5f fb 73 c1 25 c2 4a bb d6 c3 b0 0c 21 7e b5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

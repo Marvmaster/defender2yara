@@ -16,6 +16,7 @@ rule TrojanDropper_MSIL_Bifrost_MVA_2147900921_0
         $x_2_1 = {72 35 00 00 70 09 28 2c 00 00 0a 28 2d 00 00 0a 6f 27 00 00 0a 74 0a 00 00 1b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

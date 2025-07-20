@@ -17,6 +17,7 @@ rule MonitoringTool_Win32_SpyRecon_154334_0
         $x_1_3 = "\\WinCbt\\Release\\WinCbt.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule MonitoringTool_Win32_SpyRecon_154334_1
         $x_1_4 = {4b 65 79 6c 6f 67 67 65 72 52 65 70 6f 72 74 00 [0-15] 57 65 62 6c 6f 67 52 65 70 6f 72 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Xicp_A_2147679759_0
         $x_1_4 = "WorkMain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_WinNT_Tandfuy_A_2147684329_0
         $x_1_3 = {fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 8d 75 ?? a5 a4 0f 20 c0 0d 00 00 01 00 0f 22 c0 fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_WinNT_Tandfuy_B_2147684330_0
         $x_1_2 = {c6 06 4d c6 46 01 5a c6 46 02 90 88 5e 03 c6 46 04 03 88 5e 05 88 5e 06 88 5e 07 c6 46 08 04 88 5e 09 ff 15 ?? ?? ?? ?? 53 53 6a 20 6a 03 6a 02 6a 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

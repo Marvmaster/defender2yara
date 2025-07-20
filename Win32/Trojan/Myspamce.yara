@@ -19,6 +19,7 @@ rule Trojan_Win32_Myspamce_A_2147607411_0
         $x_1_5 = {66 72 69 65 6e 64 69 64 3d 36 32 32 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or

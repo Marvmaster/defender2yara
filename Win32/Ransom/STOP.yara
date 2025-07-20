@@ -20,6 +20,7 @@ rule Ransom_Win32_STOP_BS_2147743901_0
         $x_1_5 = "ns4.andromath.ug" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_STOP_RP_2147907738_0
         $x_1_1 = {3d c3 01 00 00 75 06 8d 91 31 a2 00 00 81 fa 41 01 00 00 75 0c 89 ?? ?? ?? ?? 00 89 ?? ?? ?? ?? 00 40 3d ?? ?? ?? ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

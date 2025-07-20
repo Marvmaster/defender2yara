@@ -16,6 +16,7 @@ rule Trojan_WinNT_Rortiem_A_2147658139_0
         $x_1_2 = {03 cf 51 8b 4d 08 8b 04 88 03 c7 50 ff 55 0c 85 c0 74 11 8b 45 ?? ff 45 08 8b 4d 08 3b 4e 18 8b 55 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

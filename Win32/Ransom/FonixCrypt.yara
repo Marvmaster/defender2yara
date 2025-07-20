@@ -19,6 +19,7 @@ rule Ransom_Win32_FonixCrypt_SK_2147757932_0
         $x_1_4 = "Copy Cpriv.key %appdata%\\Cpriv.key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

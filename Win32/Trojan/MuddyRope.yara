@@ -30,6 +30,7 @@ rule Trojan_Win32_MuddyRope_B_2147741357_0
         $x_1_16 = "builds\\TpAddons\\IndyNet\\Protocols\\IdHTTP.pas" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 2 of ($x_10_*))) or
             ((3 of ($x_20_*))) or
@@ -57,6 +58,7 @@ rule Trojan_Win32_MuddyRope_C_2147755313_0
         $x_1_1 = {41 50 50 44 41 54 41 [0-16] 5c 4c 69 62 2e 70 73 31 [0-25] 68 74 74 70 3a 2f 2f [0-42] 2e 64 61 74 [0-48] 2d 65 78 65 63 [0-5] 62 79 70 61 73 73 [0-8] 50 6f 77 65 72 73 68 65 6c 6c 2e 65 78 65 [0-6] 4f 70 65 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule VirTool_Win32_Bofpless_A_2147901304_0
         $x_1_2 = {c6 44 24 4b 68 c6 44 24 4c 72 c6 44 24 4d 65 c6 44 24 4e 61 c6 44 24 4f 64 c6 44 24 50 00 48 8d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

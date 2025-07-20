@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Banload_2147663696_0
         $x_1_4 = {6c 00 6b 00 70 00 72 00 6f 00 63 00 2e 00 52 00 65 00 73 00 6f 00 75 00 72 00 63 00 65 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_MSIL_Banload_L_2147692026_0
         $x_1_1 = {74 00 65 00 73 00 74 00 65 00 20 00 30 00 31 00 00 13 74 00 65 00 73 00 74 00 65 00 20 00 30 00 38 00 37 00 00 [0-2] 68 00 74 00 74 00 70 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanDownloader_MSIL_Banload_M_2147692165_0
         $x_1_3 = {2e 00 65 00 78 00 65 00 00 23 77 00 77 00 77 00 2e 00 67 00 6f 00 6f 00 67 00 6c 00 65 00 2e 00 63 00 6f 00 6d 00 2e 00 62 00 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule TrojanDownloader_MSIL_Banload_N_2147692685_0
         $x_1_2 = "\\Banks\\Loaders" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule TrojanDownloader_MSIL_Banload_N_2147692685_1
         $x_2_5 = "Exemplo: \"O update do flash" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -130,6 +135,7 @@ rule TrojanDownloader_MSIL_Banload_O_2147692760_0
         $x_1_2 = {20 30 75 00 00 28 ?? 00 00 0a 00 73 ?? 00 00 0a 0b 07 72 ?? ?? 00 70 06 72 ?? ?? 00 70 28 ?? 00 00 0a 6f ?? 00 00 0a 00 de 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule TrojanDownloader_MSIL_Banload_P_2147693085_0
         $x_3_7 = {06 13 05 11 05 02 7b ?? 00 00 04 73 ?? 00 00 0a 13 04 11 04 6f ?? 00 00 0a 74 ?? 00 00 1b}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -186,6 +193,7 @@ rule TrojanDownloader_MSIL_Banload_P_2147693085_1
         $x_2_7 = {00 70 6f 2f 00 00 06 0d 09 02 7b ?? 00 00 04 73 ?? 00 00 0a 0c 08 6f ?? 00 00 0a 74 0c 00 00 1b 0a 02 7b ?? 00 00 04 72 ?? ?? 00 70 09 00 02 7b ?? 00 00 04 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -213,6 +221,7 @@ rule TrojanDownloader_MSIL_Banload_Q_2147693086_0
         $x_1_4 = {3a 00 5c 00 50 00 72 00 6f 00 67 00 72 00 61 00 6d 00 44 00 61 00 74 00 61 00 5c 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? [0-24] 2e 00 (65 00 78|63 00 70) 00 [0-5] 68 00 74 00 74 00 70 00 3a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -235,6 +244,7 @@ rule TrojanDownloader_MSIL_Banload_R_2147693999_0
         $x_1_3 = "C:\\arqText.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -256,6 +266,7 @@ rule TrojanDownloader_MSIL_Banload_S_2147694060_0
         $x_1_2 = ".vmp.scr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -280,6 +291,7 @@ rule TrojanDownloader_MSIL_Banload_T_2147694552_0
         $x_1_5 = {72 01 00 00 70 0a 72 ?? 00 00 70 0b 72 ?? 00 00 70 0c 72 ?? 00 00 70 0d 1f 1a 28 01 00 00 0a 13 04 20 30 75 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -305,6 +317,7 @@ rule TrojanDownloader_MSIL_Banload_T_2147694552_1
         $x_1_6 = "molde.zip" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -332,6 +345,7 @@ rule TrojanDownloader_MSIL_Banload_T_2147694552_2
         $x_2_8 = {0a 02 02 fe 06 ?? 00 00 06 73 ?? 00 00 0a 28 ?? 00 00 0a [0-1] 02 1f 1a 28 ?? 00 00 0a 7d 01 00 00 04 02 72 01 00 00 70 7d 02 00 00 04 02 72 ?? 00 00 70 7d 03 00 00 04 02 72 ?? 00 00 70 7d 04 00 00 04 02 72 ?? 00 00 70 7d 05 00 00 04 02}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -359,6 +373,7 @@ rule TrojanDownloader_MSIL_Banload_U_2147695044_0
         $x_1_4 = "Banks\\Loaders" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -382,6 +397,7 @@ rule TrojanDownloader_MSIL_Banload_V_2147695403_0
         $x_1_4 = "c:\\Users\\PROVIDER\\Desktop\\SOPA\\LOAD_EXE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -408,6 +424,7 @@ rule TrojanDownloader_MSIL_Banload_W_2147696254_0
         $x_1_7 = {5c 4d 6f 64 20 [0-6] 20 56 42 2e 4e 45 54 [0-6] 5c 46 69 6c 65 20 44 6f 77 6e 6c 6f 61 64 65 72 5c 6f 62 6a 5c 44 65 62 75 67 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -432,6 +449,7 @@ rule TrojanDownloader_MSIL_Banload_Y_2147697198_0
         $x_1_5 = {2e 00 63 00 70 00 6c 00 ?? ?? 68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -457,6 +475,7 @@ rule TrojanDownloader_MSIL_Banload_Y_2147697198_1
         $x_1_6 = "D:\\Exemplo Um 1\\obj\\Debug\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -484,6 +503,7 @@ rule TrojanDownloader_MSIL_Banload_Z_2147706316_0
         $x_2_4 = "D:\\RODANDO\\PROJETO PG SUBZID\\Mod Loaders\\Exemplo Dois 2\\obj\\Debug\\j2_2.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -506,6 +526,7 @@ rule TrojanDownloader_MSIL_Banload_AA_2147706341_0
         $x_1_3 = "\\Users\\Admin\\Desktop\\Lord\\Lord ZIP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -526,6 +547,7 @@ rule TrojanDownloader_MSIL_Banload_AB_2147706585_0
         $x_1_1 = {6c 00 75 00 6d 00 61 00 2e 00 7a 00 69 00 70 00 [0-4] 72 00 75 00 6e 00 61 00 73 00 [0-16] 5c 00 00 [0-4] 2e 00 65 00 78 00 65 00 00 [0-16] 44 00 6f 00 77 00 6e 00 6c 00 6f 00 61 00 64 00 46 00 69 00 6c 00 65 00 00 [0-255] 6d 00 6f 00 78 00 2e 00 65 00 78 00 65 00 [0-255] 57 00 69 00 6e 00 46 00 6f 00 72 00 6d 00 73 00 5f 00 52 00 65 00 63 00 75 00 72 00 73 00 69 00 76 00 65 00 46 00 6f 00 72 00 6d 00 43 00 72 00 65 00 61 00 74 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -551,6 +573,7 @@ rule TrojanDownloader_MSIL_Banload_AB_2147706585_1
         $x_1_6 = "\\Admin\\Desktop\\Product\\Product\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -584,6 +607,7 @@ rule TrojanDownloader_MSIL_Banload_AB_2147706585_2
         $x_1_10 = {2e 00 65 00 78 00 65 00 ?? ?? 44 00 6f 00 77 00 6e 00 6c 00 6f 00 61 00 64 00 46 00 69 00 6c 00 65 00 ?? ?? 5c 00 [0-16] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -606,6 +630,7 @@ rule TrojanDownloader_MSIL_Banload_AD_2147706805_0
         $x_1_3 = "uixpqox.zip" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -628,6 +653,7 @@ rule TrojanDownloader_MSIL_Banload_AE_2147706831_0
         $x_1_3 = "Key_Cel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -650,6 +676,7 @@ rule TrojanDownloader_MSIL_Banload_AF_2147706887_0
         $x_1_3 = "[^A-Za-z0-9]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -672,6 +699,7 @@ rule TrojanDownloader_MSIL_Banload_AF_2147706887_1
         $x_1_3 = ".exe?dl=1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -693,6 +721,7 @@ rule TrojanDownloader_MSIL_Banload_AG_2147706893_0
         $x_1_2 = {74 00 6f 00 70 00 69 00 63 00 73 00 2e 00 7a 00 69 00 70 00 ?? ?? ?? ?? 64 00 66 00 67 00 78 00 2e 00 65 00 78 00 65 00 ?? ?? 72 00 75 00 6e 00 61 00 73 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -720,6 +749,7 @@ rule TrojanDownloader_MSIL_Banload_AH_2147707239_0
         $x_1_8 = "IsUserAdministrator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -746,6 +776,7 @@ rule TrojanDownloader_MSIL_Banload_AK_2147707648_0
         $x_1_3 = {2e 65 78 65 00 73 65 74 5f 53 69 7a 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -768,6 +799,7 @@ rule TrojanDownloader_MSIL_Banload_AL_2147707740_0
         $x_1_3 = {5c 00 74 00 65 00 6d 00 70 00 6c 00 63 00 2e 00 65 00 78 00 65 00 ?? ?? 25 00 44 00 4f 00 57 00 4e 00 32 00 25 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -788,6 +820,7 @@ rule TrojanDownloader_MSIL_Banload_AM_2147708159_0
         $x_1_1 = "http://millioncarros.com.br/carshdbfv.zip" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -815,6 +848,7 @@ rule TrojanDownloader_MSIL_Banload_AM_2147708159_1
         $x_1_8 = {78 7a 63 76 00 73 65 74 5f 54 61 62 49 6e 64 65 78 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -842,6 +876,7 @@ rule TrojanDownloader_MSIL_Banload_AN_2147708499_0
         $x_10_4 = {6c 00 69 00 6e 00 6b 00 3d 00 ?? ?? ?? ?? 64 00 6e 00 73 00 3d 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -870,6 +905,7 @@ rule TrojanDownloader_MSIL_Banload_AQ_2147708960_0
         $x_1_6 = {44 72 6f 70 58 [0-6] 68 74 74 70 3a 2f 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -895,6 +931,7 @@ rule TrojanDownloader_MSIL_Banload_AR_2147709367_0
         $x_1_3 = {44 69 73 70 6f 73 65 5f 5f 49 6e 73 74 61 6e 63 65 5f 5f [0-10] 68 74 74 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -918,6 +955,7 @@ rule TrojanDownloader_MSIL_Banload_AR_2147709367_1
         $x_1_4 = {44 69 73 70 6f 73 65 5f 5f 49 6e 73 74 61 6e 63 65 5f 5f [0-10] 68 74 74 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -943,6 +981,7 @@ rule TrojanDownloader_MSIL_Banload_AR_2147709367_2
         $x_10_3 = {13 06 11 06 28 ?? ?? 00 06 6f ?? ?? 00 06 6f ?? ?? 00 0a 13 05 72 ?? ?? 00 70 28 ?? ?? 00 0a 13 07 02 6f ?? ?? 00 06 11 07 72 ?? ?? 00 70 28 ?? ?? 00 0a 6f ?? ?? 00 0a 00 11 07 72 ?? ?? 00 70 28 ?? ?? 00 06 6f}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -967,6 +1006,7 @@ rule TrojanDownloader_MSIL_Banload_AS_2147710198_0
         $x_10_5 = {1f 20 8d 39 00 00 01 13 ?? ?? 28 3a 00 00 0a 03 6f 3b 00 00 0a 6f 3c 00 00 0a 13 ?? 11 ?? 16 11 ?? 16 1f 10 28 3d 00 00 0a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -992,6 +1032,7 @@ rule TrojanDownloader_MSIL_Banload_AT_2147710759_0
         $x_1_3 = "LOAD_G0LP3\\obj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1018,6 +1059,7 @@ rule TrojanDownloader_MSIL_Banload_AU_2147728157_0
         $x_1_6 = "\\msconfig.ini" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -1046,6 +1088,7 @@ rule TrojanDownloader_MSIL_Banload_A_2147731658_0
         $x_1_4 = {72 2d 00 00 70 28 48 00 00 0a 26}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1068,6 +1111,7 @@ rule TrojanDownloader_MSIL_Banload_ABN_2147845008_0
         $x_1_2 = "dizipal.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1090,6 +1134,7 @@ rule TrojanDownloader_MSIL_Banload_ABL_2147851749_0
         $x_1_2 = "source\\repos\\GsmRemoteService\\GsmRemoteService\\obj\\Release\\GsmRemoteService.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

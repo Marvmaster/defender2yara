@@ -16,6 +16,7 @@ rule Trojan_Win32_PinkyAgent_A_2147843202_0
         $x_100_1 = "cd C:\\programdata\\service\\core && cmd.exe /C \"\"C:\\programdata\\Windows Events.exe\" \"C:\\programdata\\service\\core\\agent.py\"\"" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

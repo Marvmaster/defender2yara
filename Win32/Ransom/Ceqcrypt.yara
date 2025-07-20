@@ -17,6 +17,7 @@ rule Ransom_Win32_Ceqcrypt_A_2147712057_0
         $x_1_3 = {00 6a 00 61 00 32 00 00 [0-48] 50 00 4f 00 57 00 45 00 52 00 43 00 46 00 47 00 20 00 2f 00 53 00 45 00 54 00 41 00 43 00 54 00 49 00 56 00 45 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Backdoor_Win32_Ruperk_A_2147682665_0
         $x_10_6 = {83 c0 01 89 45 f0 74 57 6a 05 8d 4d e0 51 e8 ?? ?? ?? ?? 83 c4 08 8d 55 e0 52 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 89 45 f0 83 7d f0 00 74 31 68 ?? ?? ?? ?? 8d 45 e0 50 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 83 c4 0c 89 45 f0 83 7d f0 00 74 12 68}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

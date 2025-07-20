@@ -22,6 +22,7 @@ rule Trojan_Win64_Maloder_A_2147922593_0
         $x_1_8 = {8a 44 0c 24 32 87 ?? ?? ?? ?? 88 04 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

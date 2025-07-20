@@ -17,6 +17,7 @@ rule HackTool_Win32_Incognito_2147661227_0
         $x_1_3 = "incognito" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Coopop_B_2147678536_0
         $x_1_3 = {68 1f 00 02 00 53 68 48 c1 00 10 68 01 00 00 80 89 ?? ?? 18 89 ?? ?? 24 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Coopop_B_2147678536_1
         $x_1_6 = "SOGOUID" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

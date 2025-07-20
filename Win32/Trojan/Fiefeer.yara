@@ -21,6 +21,7 @@ rule Trojan_Win32_Fiefeer_A_2147617127_0
         $x_1_7 = "microsoft.data.xsl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -50,6 +51,7 @@ rule Trojan_Win32_Fiefeer_A_2147617128_0
         $x_2_6 = "\\DataFeeder.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Trojan_Win32_Fiefeer_A_2147622472_0
         $x_1_5 = "pr9001" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

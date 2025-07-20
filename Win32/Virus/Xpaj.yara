@@ -22,6 +22,7 @@ rule Virus_Win32_Xpaj_A_2147611506_0
         $x_1_7 = {c7 44 24 5e 2e 6f 72 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Virus_Win32_Xpaj_B_2147642353_0
         $x_1_3 = {2e 63 6f 6d 0f 84 ?? ?? 00 00 81 ?? 2e 69 6e 66 0f 84 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Virus_Win32_Xpaj_C_2147649568_0
         $x_1_2 = {61 75 74 6f c7 44 ?? 04 72 75 6e 2e c7 44 00 08 (65|69) 00 13 00 c7 04 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Virus_Win32_Xpaj_D_2147651292_0
         $x_1_8 = "://saltodemortallex.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 4 of ($x_1_*))) or
             ((3 of ($x_4_*))) or

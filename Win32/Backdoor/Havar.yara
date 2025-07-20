@@ -22,6 +22,7 @@ rule Backdoor_Win32_Havar_G_2147599952_0
         $x_1_8 = {ba a1 25 00 00 b9 50 78 01 00 b8 96 ff 92 00 03 c0 03 d1 03 d0 8b ca 2b c8 03 c8 03 c8 2b c8 8b c1 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Backdoor_Win32_Havar_B_2147619549_0
         $x_1_6 = "Server creator started...." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

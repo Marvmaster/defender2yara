@@ -16,6 +16,7 @@ rule Trojan_MSIL_Coroxy_SPDL_2147917893_0
         $x_1_1 = {d1 13 14 11 1d 11 09 91 13 22 11 1d 11 09 11 21 11 22 61 19 11 1f 58 61 11 34 61 d2 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

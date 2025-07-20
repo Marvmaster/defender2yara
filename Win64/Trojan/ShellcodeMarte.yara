@@ -18,6 +18,7 @@ rule Trojan_Win64_ShellcodeMarte_AMAG_2147913752_0
         $x_1_3 = "Application Data\\quickScreenShot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

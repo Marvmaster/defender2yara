@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Iletraskod_A_2147705984_0
         $x_1_7 = {eb f0 ff 45 f0 83 7d f0 37 0f 85 43 ff ff ff 33 c0 5a 59 59}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -57,6 +58,7 @@ rule TrojanSpy_Win32_Iletraskod_B_2147706363_0
         $x_1_10 = {8b 45 08 8b d0 8b 45 0c f0 87 02 5d c2 08 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

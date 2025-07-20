@@ -19,6 +19,7 @@ rule Ransom_MSIL_Phobos_PA_2147793989_0
         $x_1_4 = "wbadmin delete systemstatebackup -deleteoldest" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_MSIL_Phobos_BK_2147931601_0
         $x_5_1 = {02 08 1b 58 1a 59 02 8e 69 5d 91 59 20 ff 00 00 00 58 17 58 20 00 01 00 00 5d d2 9c 08 17 58 0c 08 6a 02 8e 69 17 59 6a 06 17 58 6e 5a 31}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

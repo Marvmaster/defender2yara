@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_Taskun_CCHZ_2147905797_0
         $x_1_2 = "80.66.75.44" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

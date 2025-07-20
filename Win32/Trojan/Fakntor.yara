@@ -19,6 +19,7 @@ rule Trojan_Win32_Fakntor_B_2147743216_0
         $x_1_4 = "CF08C3F3-2CA3-4215-8CB3-4CDBD3030EC4" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Fakntor_C_2147743217_0
         $x_1_2 = {43 3a 5c 6d 79 57 6f 72 6b 5c 76 63 5c 4e 61 72 72 61 74 6f 72 5f 77 69 6e 64 6f 77 5f ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 5c 78 36 34 5c 52 65 6c 65 61 73 65 5c 4e 61 72 72 61 74 6f 72 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

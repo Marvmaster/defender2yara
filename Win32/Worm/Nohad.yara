@@ -19,6 +19,7 @@ rule Worm_Win32_Nohad_ON_2147746193_0
         $x_1_4 = "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

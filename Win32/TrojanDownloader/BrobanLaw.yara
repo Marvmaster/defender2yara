@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_BrobanLaw_A_2147692505_0
         $x_1_3 = {2e 63 61 62 00 00 ff ff ff ff 0a 00 00 00 ?? ?? ?? ?? ?? ?? 2e 63 61 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_BrobanLaw_A_2147692505_1
         $x_1_2 = {3d b7 00 00 00 74 4c e8 ?? ?? ?? ?? b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 05 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b d0 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 6a 24 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 83 f8 06 75 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule TrojanDownloader_Win32_BrobanLaw_A_2147692505_2
         $x_1_5 = {77 00 6d 00 70 00 6c 00 61 00 79 00 65 00 72 00 2e 00 65 00 78 00 65 20 00 6f ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -87,6 +90,7 @@ rule TrojanDownloader_Win32_BrobanLaw_B_2147694383_0
         $x_1_3 = {8b fe 03 f8 0f b6 17 2a 55 10 88 17 40 49 75 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

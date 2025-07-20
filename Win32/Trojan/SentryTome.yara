@@ -18,6 +18,7 @@ rule Trojan_Win32_SentryTome_A_2147724721_0
         $x_1_3 = {d0 c6 44 24 ?? cd [0-9] c6 44 24 ?? 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

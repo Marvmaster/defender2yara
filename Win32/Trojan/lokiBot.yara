@@ -17,6 +17,7 @@ rule Trojan_Win32_lokiBot_DF_2147739987_0
         $x_1_2 = {55 8b ec ff 75 0c 8a 45 08 [0-16] 5f 30 07 5d c2 08 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

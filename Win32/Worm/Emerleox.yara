@@ -42,6 +42,7 @@ rule Worm_Win32_Emerleox_K_2147599941_0
         $x_100_28 = "Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 10 of ($x_1_*))) or
             (all of ($x*))

@@ -19,6 +19,7 @@ rule HackTool_Win32_SunriseUnlocker_A_2147645699_0
         $x_2_5 = "Microsoft.WindowsAPICodePack.Shell" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

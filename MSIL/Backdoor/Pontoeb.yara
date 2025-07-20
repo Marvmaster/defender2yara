@@ -20,6 +20,7 @@ rule Backdoor_MSIL_Pontoeb_A_2147637545_0
         $x_1_6 = {6e 48 54 54 50 46 6c 6f 6f 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Backdoor_MSIL_Pontoeb_A_2147637744_0
         $x_10_4 = "SELECT * FROM Win32_VideoController" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_50_*))) or
             (all of ($x*))
@@ -81,6 +83,7 @@ rule Backdoor_MSIL_Pontoeb_A_2147637744_1
         $x_1_11 = "stoning_video.scr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*))) or
             (all of ($x*))
@@ -106,6 +109,7 @@ rule Backdoor_MSIL_Pontoeb_B_2147639626_0
         $x_1_3 = "SELECT * FROM Win32_BaseBoard" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule Backdoor_MSIL_Pontoeb_J_2147652524_0
         $x_1_4 = "SELECT * FROM Win32_BaseBoard" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +158,7 @@ rule Backdoor_MSIL_Pontoeb_N_2147655911_0
         $x_1_5 = "Windows-Network Component" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

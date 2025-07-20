@@ -18,6 +18,7 @@ rule Trojan_Win32_Ejik_B_2147606755_0
         $x_5_4 = {eb eb 5e 5b 59 59 5d c3 [0-4] ff ff ff ff ?? 00 00 00 10 00 2e 69 6e 69 00 [0-4] ff ff ff ff 02 00 00 00 49 44 00 [0-4] ff ff ff ff 08 00 00 00 73 65 74 74 69 6e 67 73 00 [0-4] (55|53)}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule Trojan_Win32_Ejik_C_2147606756_0
         $x_1_4 = {2e 63 6e 2f 64 61 74 61 5f 61 64 64 2e 61 73 70 78 3f 66 69 6c 65 6e 61 6d 65 3d 73 65 74 75 70 6f 6c 5f 04 00 5f 04 00 2e 65 78 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Trojan_Win32_Ejik_A_2147607436_0
         $x_1_10 = "EIdInvalidServiceName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))

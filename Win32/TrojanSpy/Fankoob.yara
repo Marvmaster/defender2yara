@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Fankoob_A_2147657630_0
         $x_5_6 = "E735D53DFC22EE15E22AE1221DE02AE936C74FDF57AE64" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 1 of ($x_5_*))) or
             ((3 of ($x_100_*) and 1 of ($x_10_*))) or

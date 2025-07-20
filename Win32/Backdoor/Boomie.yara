@@ -20,6 +20,7 @@ rule Backdoor_Win32_Boomie_A_2147653435_0
         $x_1_6 = {25 73 25 58 25 69 25 58 25 69 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

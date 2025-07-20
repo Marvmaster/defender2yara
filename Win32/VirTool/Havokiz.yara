@@ -20,6 +20,7 @@ rule VirTool_Win32_Havokiz_E_2147841305_0
         $x_1_5 = {45 8b 48 04 48 01 c8 4d 01 c1 49 83 c0 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule VirTool_Win32_Havokiz_F_2147890082_0
         $x_1_3 = {89 74 24 08 c7 44 24 04 18 00 00 00 89 04 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

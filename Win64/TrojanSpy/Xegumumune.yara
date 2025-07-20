@@ -19,6 +19,7 @@ rule TrojanSpy_Win64_Xegumumune_AXU_2147927658_0
         $x_5_4 = "curl -X POST -H \"Content-Type: application/json\" -k https://209.151.151.172/timetrack/add -d" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

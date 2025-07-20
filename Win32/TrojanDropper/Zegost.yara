@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Zegost_B_2147635820_0
         $x_1_5 = "ik\\labolGs%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule TrojanDropper_Win32_Zegost_B_2147635820_1
         $x_1_5 = "ik\\labolGs%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -74,6 +76,7 @@ rule TrojanDropper_Win32_Zegost_B_2147635820_2
         $x_3_5 = "%sot%%\\System32\\svc%s %s%s%s" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -105,6 +108,7 @@ rule TrojanDropper_Win32_Zegost_B_2147635820_3
         $x_1_7 = "%sot%%\\System32\\svc%s %s%s%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -132,6 +136,7 @@ rule TrojanDropper_Win32_Zegost_G_2147642343_0
         $x_1_5 = {8a 14 01 80 c2 7a 80 f2 19 88 14 01 41 3b ce}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -172,6 +177,7 @@ rule TrojanDropper_Win32_Zegost_G_2147642343_1
         $x_2_17 = {6a 00 50 c6 44 24 ?? 73 c6 44 24 ?? 74 c6 44 24 ?? 61 c6 44 24 ?? 6c c6 44 24 ?? 6c c6 44 24 ?? 4d c6 44 24 ?? 6f c6 44 24 ?? 64 c6 44 24 ?? 75 c6 44 24 ?? 6c 88 5c 24}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -220,6 +226,7 @@ rule TrojanDropper_Win32_Zegost_E_2147647764_0
         $x_1_8 = "sgfdfds58r" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             ((3 of ($x_4_*))) or
@@ -250,6 +257,7 @@ rule TrojanDropper_Win32_Zegost_F_2147648834_0
         $x_1_7 = {53 59 53 54 45 4d 5c 43 75 72 72 65 6e 74 43 6f 6e 74 72 6f 6c 53 65 74 5c 53 65 72 76 69 63 65 73 5c 25 73 00 00 00 00 6e 65 74 73 76 63 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -280,6 +288,7 @@ rule TrojanDropper_Win32_Zegost_H_2147648836_0
         $x_1_5 = "RsTray.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -307,6 +316,7 @@ rule TrojanDropper_Win32_Zegost_L_2147651882_0
         $x_1_5 = "InstallModule" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -334,6 +344,7 @@ rule TrojanDropper_Win32_Zegost_M_2147652897_0
         $x_2_5 = {68 ff 01 0f 00 ?? ?? 53 [0-3] ff 15 ?? ?? ?? ?? 8b d8 3b ?? 89 5d ?? 75 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -361,6 +372,7 @@ rule TrojanDropper_Win32_Zegost_Q_2147655621_0
         $x_1_4 = {b9 00 08 00 00 33 c0 8d bc 24 ?? ?? 00 00 50 f3 ab 8b 83 ?? 00 00 00 8d 94 24 ?? ?? 00 00 68 00 20 00 00 52 50 ff d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -383,6 +395,7 @@ rule TrojanDropper_Win32_Zegost_R_2147657540_0
         $x_1_3 = {2b c8 8a 14 01 8a 18 32 da 88 18 40 4e 75 f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -407,6 +420,7 @@ rule TrojanDropper_Win32_Zegost_T_2147661782_0
         $x_1_5 = {56 8b 74 24 10 85 f6 7e 19 8b 44 24 08 8b 4c 24 0c 53 2b c8 8a 14 01 8a 18 32 da 88 18 40 4e 75 f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -430,6 +444,7 @@ rule TrojanDropper_Win32_Zegost_W_2147687866_0
         $x_1_4 = {5c 5c 2e 5c 52 45 53 53 44 54 44 4f 53 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -455,6 +470,7 @@ rule TrojanDropper_Win32_Zegost_X_2147688890_0
         $x_1_2 = {8b 4c 24 04 8a 14 08 80 c2 7a 88 14 08 8b 4c 24 04 8a 14 08 80 f2 59 88 14 08 40 3b c6 7c e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -478,6 +494,7 @@ rule TrojanDropper_Win32_Zegost_Y_2147688942_0
         $x_1_4 = {c6 44 24 10 7e 89 44 24 04 89 44 24 08 8d 44 24 00 c6 44 24 11 4d 50 68 ?? ?? ?? ?? 68 02 00 00 80 c6 44 24 1e 48 c6 44 24 1f 7a c6 44 24 20 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

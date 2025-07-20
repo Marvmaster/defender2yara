@@ -17,6 +17,7 @@ rule Trojan_MSIL_Cryptinject_SE_2147759714_0
         $x_1_2 = {1f 19 8d 06 00 00 01 25 d0 46 00 00 04 28 01 00 00 0a 80 36 00 00 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

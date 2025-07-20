@@ -15,6 +15,7 @@ rule Backdoor_Win32_Fakesuit_B_2147727833_0
         $x_1_1 = "c:\\users\\mz\\documents\\visual studio 2013\\Projects\\Shellcode\\Release\\Shellcode.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

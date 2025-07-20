@@ -17,6 +17,7 @@ rule Trojan_WinNT_Hookmoot_A_2147626477_0
         $x_1_2 = {50 0f 20 c0 a3 ?? ?? ?? ?? 25 ff ff fe ff 0f 22 c0 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

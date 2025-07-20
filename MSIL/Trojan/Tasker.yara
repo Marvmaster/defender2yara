@@ -17,6 +17,7 @@ rule Trojan_MSIL_Tasker_NEAB_2147834398_0
         $x_5_2 = "clipper.guru" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_Tasker_AUUG_2147836989_0
         $x_2_1 = {16 0a 1a 8d ?? ?? ?? 01 0b 03 15 16 6f ?? ?? ?? 0a 26 03 07 16 1a 16 6f ?? ?? ?? 0a 0c 07 16 28 ?? ?? ?? 0a 0d 09 13 04 09 8d ?? ?? ?? 01 13 05 2b 17 03 11 05 06 11 04 16 6f ?? ?? ?? 0a 0c 06 08 58 0a 11 04 08 59 13 04 06 09 32 e5}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_MSIL_Tasker_NEAC_2147838072_0
         $x_2_2 = "Confuser.Core 1.6.0+447341964f" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Trojan_MSIL_Tasker_PSIR_2147844984_0
         $x_2_1 = {00 7e f8 01 00 04 7e f7 01 00 04 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 00 73 ?? ?? ?? 0a 0b 07 72 69 16 00 70 6f ?? ?? ?? 0a 00 07 17 6f ?? ?? ?? 0a 00 07 1b 8d 4c 00 00 01 25 16 72 83 16 00 70 a2 25 17 7e f7 01 00 04 28 ?? ?? ?? 0a a2 25 18 72 c7 16 00 70 a2 25 19 7e f8 01 00 04 a2 25 1a 72 d7 16 00 70 a2 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 07 28 ?? ?? ?? 0a 0c 08}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_MSIL_Tasker_MBDT_2147845444_0
         $x_1_2 = "BusinessSimulation.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +129,7 @@ rule Trojan_MSIL_Tasker_GKH_2147850653_0
         $x_10_1 = {fe 0c 08 00 fe 0c 0a 00 8f 14 00 00 01 25 71 14 00 00 01 fe 0c 02 00 d2 61 d2 81 14 00 00 01 fe 0c 0a 00 20 ff 00 00 00 5f 3a 14 00 00 00 fe 0c 02 00 fe 0c 02 00 5a 20 b7 5c 8a 00 6a 5e fe 0e 02 00 fe 0c 0a 00 20 01 00 00 00 58 fe 0e 0a 00 fe 0c 0a 00 fe 0c 08 00 8e 69}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +152,7 @@ rule Trojan_MSIL_Tasker_AMAA_2147896270_0
         $x_5_2 = {0a 08 25 06 16 1f 10 6f ?? 00 00 0a 26 09 25 06 6f ?? 00 00 0a 6f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +175,7 @@ rule Trojan_MSIL_Tasker_GBX_2147896362_0
         $x_1_2 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +197,7 @@ rule Trojan_MSIL_Tasker_ILAA_2147905677_0
         $x_5_1 = {8e 69 5d 1f 09 58 1f 0c 58 1f 15 59 91 61 ?? 08 20 0e 02 00 00 58 20 0d 02 00 00 59 1b 59 1b 58 ?? 8e 69 5d 1f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +223,7 @@ rule Trojan_MSIL_Tasker_NB_2147919498_0
         $x_1_5 = "Invoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

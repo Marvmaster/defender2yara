@@ -18,6 +18,7 @@ rule Ransom_MSIL_TankixCrypt_PA_2147837892_0
         $x_1_3 = "infected by Tanki X Ransomware" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

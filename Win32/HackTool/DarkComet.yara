@@ -20,6 +20,7 @@ rule HackTool_Win32_DarkComet_2147689268_0
         $x_1_6 = "DarkComet aka Unremote NAT aka SynRAT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

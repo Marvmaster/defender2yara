@@ -35,6 +35,7 @@ rule Trojan_Win32_Fotomoto_A_2147593504_0
         $x_3_20 = {81 ec 20 02 00 00 56 68 c0 90 41 00 68 fc cb 41 00 e8 ba fc ff ff 83 c4 08 68 88 90 41 00 68 fc cb 41 00 e8 a8 fc ff ff 83 c4 08 ff 15 d8 50 41 00 68 80 90 41 00 68 fc cb 41 00 8b f0 e8 8e fc ff ff 68 68 90 41 00 56 e8 95 7a 00 00 83 c4 10 85 c0 0f 84 b8 00 00 00 68 2c 90 41 00 68 fc cb 41 00 e8 69 fc ff ff 68 98 8c 41 00 e8 4f 4f 00 00 83 c4 0c 68 f4 8f 41 00 68 fc cb 41 00 e8 4d fc ff ff 8d 44 24 0c c7 44 24 0c 00 00 00 00 50 c7 44 24 14 00 00 00 00 e8 69 79 00 00 83 c4 0c 68 b8 8f 41 00 68 fc cb 41 00 e8 21 fc ff ff 8b 35 f4 50 41 00 83 c4 08 68 98 8c 41 00 e8 2e 4d 00 00 83 c4 04 84 c0 74 29 8d 4c 24 08 51 e8 33 79 00 00 8b 54 24 0c 8b 4c 24 08 2b d1 83 c4 04 83 fa 1e 0f 8f b7 01 00 00 68 f4 01 00 00 ff d6 eb c6}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((18 of ($x_3_*))) or
             (all of ($x*))
@@ -63,6 +64,7 @@ rule Trojan_Win32_Fotomoto_A_17832_0
         $x_1_6 = "SFCDisable" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -105,6 +107,7 @@ rule Trojan_Win32_Fotomoto_A_17832_1
         $x_3_20 = {81 ec 20 02 00 00 56 68 c0 90 41 00 68 fc cb 41 00 e8 ba fc ff ff 83 c4 08 68 88 90 41 00 68 fc cb 41 00 e8 a8 fc ff ff 83 c4 08 ff 15 d8 50 41 00 68 80 90 41 00 68 fc cb 41 00 8b f0 e8 8e fc ff ff 68 68 90 41 00 56 e8 95 7a 00 00 83 c4 10 85 c0 0f 84 b8 00 00 00 68 2c 90 41 00 68 fc cb 41 00 e8 69 fc ff ff 68 98 8c 41 00 e8 4f 4f 00 00 83 c4 0c 68 f4 8f 41 00 68 fc cb 41 00 e8 4d fc ff ff 8d 44 24 0c c7 44 24 0c 00 00 00 00 50 c7 44 24 14 00 00 00 00 e8 69 79 00 00 83 c4 0c 68 b8 8f 41 00 68 fc cb 41 00 e8 21 fc ff ff 8b 35 f4 50 41 00 83 c4 08 68 98 8c 41 00 e8 2e 4d 00 00 83 c4 04 84 c0 74 29 8d 4c 24 08 51 e8 33 79 00 00 8b 54 24 0c 8b 4c 24 08 2b d1 83 c4 04 83 fa 1e 0f 8f b7 01 00 00 68 f4 01 00 00 ff d6 eb c6}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((18 of ($x_3_*))) or
             (all of ($x*))

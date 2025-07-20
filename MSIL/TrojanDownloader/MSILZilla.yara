@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_MSILZilla_RDB_2147839818_0
         $x_1_3 = "Eiigzs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule TrojanDownloader_MSIL_MSILZilla_NIT_2147925283_0
         $x_1_7 = "fiddler" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

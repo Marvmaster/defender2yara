@@ -16,6 +16,7 @@ rule Trojan_WinNT_Helbsly_A_2147603164_0
         $x_1_2 = {74 09 81 7d 1c 03 00 12 00 74 07 8b c7 e9 48 01 00 00 85 ff 0f 8c 3d 01 00 00 83 65 d0 00 6a 05 59}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

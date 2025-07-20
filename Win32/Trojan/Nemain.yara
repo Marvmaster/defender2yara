@@ -18,6 +18,7 @@ rule Trojan_Win32_Nemain_A_2147685950_0
         $x_1_4 = "USB Count: %d<br>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

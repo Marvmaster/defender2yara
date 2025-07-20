@@ -18,6 +18,7 @@ rule Backdoor_MacOS_MacSpy_B_2147798311_0
         $x_1_3 = {4c 89 f7 e8 47 48 3c 00 66 0f 6f 4d b0 66 0f 70 c1 4e 66 48 0f 7e c0 4c 85 e0 74 45 66 0f 7f 4d c0 4c 89 7d d0 be 02 00 00 00 4c 89 ff e8 1d 47 3c 00 48 8d 3d 9a 2a 3e 00 48 8d 4d c0 be 01 00 00 00 31 d2 e8 36 e0 2e 00 66 0f 6f 45 c0 66 0f 7f 45 b0 4c 8b 75 d0 4c 89 ff e8 f0 47 3c 00 eb 22}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

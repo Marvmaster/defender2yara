@@ -21,6 +21,7 @@ rule Trojan_Win32_Ripuchia_A_2147690855_0
         $x_1_7 = " ***==> HookBufferString:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or

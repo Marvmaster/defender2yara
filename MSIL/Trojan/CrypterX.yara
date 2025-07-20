@@ -19,6 +19,7 @@ rule Trojan_MSIL_CrypterX_RDA_2147851700_0
         $x_1_4 = "ProtectMe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

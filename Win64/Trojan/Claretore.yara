@@ -16,6 +16,7 @@ rule Trojan_Win64_Claretore_A_2147658719_0
         $x_1_2 = "$mid=%S&uid=%d&version=%s$" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_Claretore_B_2147680215_0
         $x_1_4 = "C:\\Project\\UM\\branches\\username\\bin\\[Release.x64]Clicker.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

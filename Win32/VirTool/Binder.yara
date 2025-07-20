@@ -18,6 +18,7 @@ rule VirTool_Win32_Binder_C_2147654668_0
         $x_1_4 = "(*.pdf)|*.pdf|" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

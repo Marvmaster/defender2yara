@@ -18,6 +18,7 @@ rule PWS_Win32_Enterak_B_2147678899_0
         $x_2_4 = {66 3b c3 74 11 66 3d 06 00 74 0b 66 3d 05 00 74 05 bd 02 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule PWS_Win32_Enterak_A_2147696358_0
         $x_1_6 = "V3LTray.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule PWS_Win32_Enterak_A_2147696358_1
         $x_1_5 = "&p_mny_bal=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -102,6 +105,7 @@ rule PWS_Win32_Enterak_A_2147696358_2
         $x_1_9 = "\\res\\PCOTP.okf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -134,6 +138,7 @@ rule PWS_Win32_Enterak_A_2147696358_3
         $x_1_8 = ".nexon.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

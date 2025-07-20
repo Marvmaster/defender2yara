@@ -21,6 +21,7 @@ rule Worm_Win32_Backterra_H_2147597204_0
         $x_1_7 = "Microsoft? Windows? Operating System" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

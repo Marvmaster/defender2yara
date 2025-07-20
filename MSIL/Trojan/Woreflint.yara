@@ -20,6 +20,7 @@ rule Trojan_MSIL_Woreflint_ABF_2147782677_0
         $x_3_5 = "dsGetir" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

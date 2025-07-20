@@ -19,6 +19,7 @@ rule Trojan_MSIL_Smokeloader_XT_2147829886_0
         $x_1_4 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_Smokeloader_JN_2147830752_0
         $x_1_4 = "Cgpzvrgxodwcymxlrtzbois" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_MSIL_Smokeloader_AMBA_2147893944_0
         $x_5_2 = {54 d5 29 5c 70 71 7b 28 78 7a 77 6f 7a 69 75 28 6b 69 76 76 77 7c 28 6a 6d 28 7a 7d 76 28 71 76 28 4c 57 5b 28 75 77 6c 6d 36}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

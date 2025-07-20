@@ -18,6 +18,7 @@ rule Backdoor_Win32_Argech_A_2147611498_0
         $x_2_4 = {79 08 4a 81 ca 00 ff ff ff 42 83 c0 ?? 3d ?? ?? ?? ?? 0f 82 ?? ?? ff ff 6a 00 8d 44 24 14 50 68}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

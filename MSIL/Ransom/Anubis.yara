@@ -19,6 +19,7 @@ rule Ransom_MSIL_Anubis_DA_2147787781_0
         $x_1_4 = "FindFirstFileW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_MKLKlog_A_2147611280_0
         $x_1_5 = "gsmtp185.google.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

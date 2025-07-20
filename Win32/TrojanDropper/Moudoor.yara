@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Moudoor_A_2147652728_0
         $x_1_2 = {eb 0f 8b 85 ?? ?? ff ff 83 c0 01 89 85 00 ff ff 8b 8d 00 ff ff 3b 8d ?? ?? ff ff 73 25 8b 95 ?? ?? ff ff 03 95 00 ff ff 0f be 02 33 85 00 ff ff 8b 8d ?? ?? ff ff 03 8d 00 ff ff 88 01 eb be 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

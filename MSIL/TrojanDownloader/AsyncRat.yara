@@ -22,6 +22,7 @@ rule TrojanDownloader_MSIL_AsyncRat_CC_2147844614_0
         $x_1_7 = "Start-Process -FilePath $temp -WindowStyle Hidden" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule TrojanDownloader_MSIL_AsyncRat_CH_2147851349_0
         $x_2_1 = {11 04 11 07 11 04 11 07 91 20 ?? ?? ?? ?? 59 d2 9c 00 11 07 17 58 13 07 11 07 11 04 8e 69 fe 04 13 08 11 08}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule TrojanDownloader_MSIL_AsyncRat_CCHZ_2147905552_0
         $x_1_3 = "Sideload" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule TrojanDownloader_MSIL_AsyncRat_CCJR_2147937003_0
         $x_1_4 = "RunBotKiller" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule TrojanDownloader_MSIL_AsyncRat_C_2147946153_0
         $x_2_1 = {08 11 04 06 11 04 91 07 11 04 09 5d 6f ?? ?? ?? ?? 61 d2 9c 11 04 17 58 13 04 11 04 06 8e 69 32 df}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

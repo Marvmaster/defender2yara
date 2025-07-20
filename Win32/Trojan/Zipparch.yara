@@ -20,6 +20,7 @@ rule Trojan_Win32_Zipparch_E_2147680525_0
         $x_1_6 = "obtain password" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -51,6 +52,7 @@ rule Trojan_Win32_Zipparch_F_2147680526_0
         $x_1_9 = {00 00 5f 00 63 00 75 00 72 00 72 00 65 00 6e 00 63 00 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_1_*))) or
             ((1 of ($x_100_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -83,6 +85,7 @@ rule Trojan_Win32_Zipparch_G_2147680527_0
         $x_1_7 = "abonent_price" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

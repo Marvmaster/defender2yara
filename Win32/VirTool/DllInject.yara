@@ -18,6 +18,7 @@ rule VirTool_Win32_DllInject_A_2147683452_0
         $x_1_4 = {f7 7d 10 8b ?? 0c 8a 04 ?? 30 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*))) or
             (all of ($x*))

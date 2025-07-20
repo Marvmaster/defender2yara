@@ -17,6 +17,7 @@ rule VirTool_Win64_Rudump_A_2147923511_0
         $x_1_3 = {41 80 f9 61 45 0f b6 c9 45 0f b6 d2 45 0f 42 d1 41 89 c9 41 c1 e1 05 41 01 c9 41 0f b6 ca 44 01 c9 ?? ?? 81 f9 7b 11 84 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

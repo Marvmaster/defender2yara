@@ -20,6 +20,7 @@ rule Ransom_Win32_Sola_YAA_2147915515_0
         $x_1_5 = "--rest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

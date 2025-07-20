@@ -17,6 +17,7 @@ rule Trojan_Win32_GenusAgent_JL_2147837991_0
         $x_1_2 = {a8 00 00 00 7e 00 00 00 00 00 00 5f 12 00 00 00 10 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

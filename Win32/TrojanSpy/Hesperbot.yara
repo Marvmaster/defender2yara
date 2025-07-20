@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Hesperbot_B_2147686352_0
         $x_1_4 = "S:(ML;;NRNWNX;;;LW)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanSpy_Win32_Hesperbot_L_2147691028_0
         $x_1_4 = {c2 b7 71 00 e2 56 49 bc 1b be 0a 14 0d e0 3d 94 bc 92 cf f8 e5 0d a6 65 a2 84 30 42 8a b0 0d 27}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

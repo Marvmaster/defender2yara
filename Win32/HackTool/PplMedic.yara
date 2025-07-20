@@ -20,6 +20,7 @@ rule HackTool_Win32_PplMedic_A_2147845790_0
         $x_1_6 = "SOFTWARE\\Classes\\TypeLib\\%ws\\1.0\\0\\Win64" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule HackTool_Win32_PplMedic_B_2147846819_0
         $x_1_6 = "$CI.CATALOGHINT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

@@ -17,6 +17,7 @@ rule VirTool_Win64_Bofprocinj_A_2147931720_0
         $x_1_3 = {42 65 61 63 6f 6e 49 6e 6a 65 63 74 [0-16] 50 72 6f 63 65 73 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

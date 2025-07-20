@@ -16,6 +16,7 @@ rule Trojan_Win32_Loyeetro_DSK_2147742600_0
         $x_2_1 = {8a 54 08 03 88 55 fe 8a 45 fe 88 45 ff c0 65 ff 02 0f b6 4d ff 81 e1 c0 00 00 00 88 4d ff 0f b6 55 fd 0f b6 45 ff 0b d0 88 55 fd}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

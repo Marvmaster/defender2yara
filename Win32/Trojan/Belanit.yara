@@ -20,6 +20,7 @@ rule Trojan_Win32_Belanit_A_2147652426_0
         $x_1_6 = {8b f0 85 f6 0f 84 90 00 00 00 6a 00 68 00 00 00 80 6a 00 6a 00 8b c7 e8 ?? ?? ?? ff 50 56 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Belanit_C_2147652510_0
         $x_10_7 = {8b f0 85 f6 0f 84 90 00 00 00 6a 00 68 00 00 00 80 6a 00 6a 00 8b c7 e8 ?? ?? ?? ff 50 56 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))

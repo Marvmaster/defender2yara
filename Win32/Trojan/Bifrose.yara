@@ -19,6 +19,7 @@ rule Trojan_Win32_Bifrose_SP_2147837735_0
         $x_1_4 = "LrABzEpiqThgwAC" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

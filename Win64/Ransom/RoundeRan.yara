@@ -22,6 +22,7 @@ rule Ransom_Win64_RoundeRan_YAE_2147944167_0
         $x_1_7 = "get into the media" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

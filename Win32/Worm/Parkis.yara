@@ -26,6 +26,7 @@ rule Worm_Win32_Parkis_A_2147657266_0
         $x_1_12 = "cadretest.ru" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

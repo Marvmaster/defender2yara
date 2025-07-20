@@ -21,6 +21,7 @@ rule Trojan_Win32_Zopt_A_2147646656_0
         $x_1_7 = "impenc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             ((5 of ($x_2_*))) or
@@ -51,6 +52,7 @@ rule Trojan_Win32_Zopt_A_2147646656_1
         $x_2_7 = "Administrator\\Application DataCLIENT" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

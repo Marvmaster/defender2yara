@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Sirefef_D_2147799761_0
         $x_1_1 = {e4 26 16 91 cc 1d 46 59 39 03 00 00 3c 77 cd 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDropper_Win32_Sirefef_D_2147799761_1
         $x_1_4 = {f7 f3 8b d6 2b d0 8b 45 ?? 8b (5d|7d) 00 8a 8c (19|39) ?? ?? ?? ?? 88 8c 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_100_*))) or
@@ -65,6 +67,7 @@ rule TrojanDropper_Win32_Sirefef_B_2147800860_0
         $x_1_2 = {b8 00 51 00 00 66 89 44 24 30 b8 00 52 00 00 66 89 44 24 32 b8 00 50 00 00 66 89 44 24 34 b8 73 72 00 00 66 89 44 24 36}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule TrojanDropper_Win32_Sirefef_B_2147800860_1
         $x_1_3 = "ZwQueueApcThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule TrojanDropper_Win32_Sirefef_B_2147800860_2
         $x_7_8 = {8b 48 fc 83 c0 28 4a f3 a4 75 ea 33 c0 8d bd ?? ?? ?? ?? b9 ?? ?? ?? ?? f3 ab c7 85 ?? ?? ?? ?? 10 00 01 00 c7}  //weight: 7, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -205,6 +210,7 @@ rule TrojanDropper_Win32_Sirefef_I_2147801024_0
         $x_1_2 = {83 c4 24 89 45 f8 3b c3 74 ?? 8b 45 08 8b 00 89 45 ?? 8b 06 89 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -248,6 +254,7 @@ rule TrojanDropper_Win32_Sirefef_B_2147801474_0
         $x_1_2 = {8b 4d b8 8b 55 bc 33 c0 81 c7 ?? ?? ?? ?? 83 d0 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -270,6 +277,7 @@ rule TrojanDropper_Win32_Sirefef_B_2147801474_1
         $x_1_2 = {ff d7 85 c0 0f 84 ?? ?? ?? ?? 46 81 fe 03 04 00 00 72 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -302,6 +310,7 @@ rule TrojanDropper_Win32_Sirefef_B_2147801474_2
         $x_1_12 = {8b 0e 8b 56 04 0f ac d1 04 89 4d 0c 8b 0e 31 45 0c c1 e1 1c 33 c9 0b 4d 0c c1 ea 04 8b 56 04 89 4d 08 8b 4d 10 8b 55 14 0f ac d1 04 89 4d 0c 8b 4d 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -379,6 +388,7 @@ rule TrojanDropper_Win32_Sirefef_B_2147801474_3
         $x_1_57 = {01 08 08 93 11 95 84 01 20 93 4d 10 93 55 08 93 88 9c 09 08 08 8b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -462,6 +472,7 @@ rule TrojanDropper_Win32_Sirefef_E_2147801539_0
         $x_10_3 = {8b 75 08 8b 4b 54 f3 a4 0f b7 53 06 0f b7 43 14 8d 44 18 18 85 d2 74 ?? 83 c0 14}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -487,6 +498,7 @@ rule TrojanDropper_Win32_Sirefef_A_2147803887_0
         $x_1_2 = {81 39 04 00 00 80 8b 46 04 8b 58 10 0f 85 82 01 00 00 f6 40 14 01 0f 84 78 01 00 00 39 98 c4 00 00 00 0f 83 6c 01 00 00 64 a1 18 00 00 00 3b 58 04 0f 83 5d 01 00 00 81 3b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -529,6 +541,7 @@ rule TrojanDropper_Win32_Sirefef_A_2147803888_0
         $x_1_1 = {8b 75 fc 6a 40 59 8d bd dc fe ff ff 8d 85 dc fe ff ff f3 a5 50 8d b5 dc fd ff ff e8 ?? ?? ?? ?? 8b 45 fc 6a 40 8b f0 8d bd dc fe ff ff 59 f3 a5 be ff 00 00 00 03 c6 8b 4d f8 0f b6 0c 01 8a 8c 0d dc fe ff ff 88 08 8b ce 4e 48 85 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -550,6 +563,7 @@ rule TrojanDropper_Win32_Sirefef_A_2147803888_1
         $x_1_2 = {8b f8 85 ff 74 4e 6a 10 58 e8 ?? ?? 00 00 8b f4 8d 47 60 50 6a 20 83 c6 f0 56 ff 15 ?? ?? 40 00 56 6a 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -612,6 +626,7 @@ rule TrojanDropper_Win32_Sirefef_D_2147804004_0
         $x_1_2 = {ad 4a 03 c2 ab 3b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -654,6 +669,7 @@ rule TrojanDropper_Win32_Sirefef_F_2147804141_0
         $x_1_2 = {8a 10 6b db 21 88 55 0b 0f be d2 33 da 40 80 7d 0b 00 75 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

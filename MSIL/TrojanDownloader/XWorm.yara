@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_XWorm_CXIT_2147848490_0
         $x_1_2 = {68 00 74 00 74 00 70 00 73 00 3a 00 2f 00 2f 00 66 00 69 00 6c 00 65 00 73 00 2e 00 63 00 61 00 74 00 62 00 6f 00 78 00 2e 00 6d 00 6f 00 65 00 2f [0-31] 00 70 00 6e 00 67}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_MSIL_XWorm_OKA_2147920555_0
         $x_1_4 = "Loader.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanDownloader_MSIL_XWorm_SFD_2147942896_0
         $x_1_5 = "Task created successfully" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

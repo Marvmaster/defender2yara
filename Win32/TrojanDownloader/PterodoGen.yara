@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_PterodoGen_A_2147811395_0
         $x_1_3 = {66 83 7c 24 14 01 0f 85 ?? ?? ?? ?? 81 7c ?? ?? aa 00 00 00 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_PterodoGen_B_2147811396_0
         $x_1_4 = {c7 45 f8 00 00 00 00 c7 45 fc 00 00 00 00 eb 09 8b 45 fc 83 c0 01 89 45 fc 8b 4d fc 3b 4d 0c 73 24 8b 55 08 03 55 fc 0f b6 0a 8b 45 fc 33 d2 f7 75 14 8b 45 10 0f b6 14 10 33 ca 8b 45 08 03 45 fc 88 08 eb cb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanDownloader_Win32_PterodoGen_C_2147811397_0
         $x_1_2 = {8b 04 24 89 d1 31 d2 01 d8 f7 f6 8b 44 24 20 0f b6 04 10 89 ca 8b 4c 24 18 32 04 19 88 44 1d 00 0f b7 df 47 39 d3 72 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

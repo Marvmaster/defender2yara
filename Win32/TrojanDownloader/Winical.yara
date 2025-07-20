@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Winical_A_2147601539_0
         $x_2_2 = {0c 7d 32 8b ?? 08 03}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

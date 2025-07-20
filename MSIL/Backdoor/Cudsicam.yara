@@ -18,6 +18,7 @@ rule Backdoor_MSIL_Cudsicam_A_2147658714_0
         $x_1_4 = {46 6c 61 67 45 78 73 69 73 74 73 00 70 72 6d 73 00 66 6c 61 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

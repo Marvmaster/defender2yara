@@ -46,6 +46,7 @@ rule Trojan_Linux_UtCleaner_HA_2147836758_0
         $n_2_32 = {2f 63 70 20 2d [0-2] 20 2f 76 61 72 2f 72 75 6e 2f 75 74 6d 70 20}  //weight: -2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (not (any of ($n*))) and
         (1 of ($x*))
 }

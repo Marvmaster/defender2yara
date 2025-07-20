@@ -19,6 +19,7 @@ rule TrojanSpy_MSIL_Wetimonit_A_2147697413_0
         $x_1_5 = {73 65 74 5f 53 68 6f 77 49 6e 54 61 73 6b 62 61 72 00 73 65 74 5f 4f 70 61 63 69 74 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_6_*) and 2 of ($x_2_*))) or

@@ -17,6 +17,7 @@ rule Trojan_Win32_Nefyn_A_2147682073_0
         $x_1_3 = {f3 a5 b9 33 00 00 00 8d bc 24 4c 03 00 00 f3 ab b9 41 00 00 00 8d bc 24 10 02 00 00 f3 ab b9 41 00 00 00 8d bc 24 0c 01 00 00 f3 ab b9 41 00 00 00 8d 7c 24 08 f3 ab}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

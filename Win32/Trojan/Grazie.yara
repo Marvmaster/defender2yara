@@ -20,6 +20,7 @@ rule Trojan_Win32_Grazie_A_2147655701_0
         $x_2_6 = {8a 44 31 ff 8a 14 31 32 c2 8a d0 c0 ea ?? c0 e0 ?? 0a d0 88 14 31 49 75 ?? 8a 06 8a 4c 24 ?? 32 c1 8a c8 c0 e9 ?? c0 e0 ?? 0a c8 88 0e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))

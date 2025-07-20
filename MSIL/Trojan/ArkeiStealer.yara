@@ -16,6 +16,7 @@ rule Trojan_MSIL_ArkeiStealer_CN_2147843363_0
         $x_5_1 = {02 02 7b 71 00 00 04 28 ?? ?? ?? ?? 28 ?? ?? ?? ?? 58 7d ?? ?? ?? ?? 00 02 7b ?? ?? ?? ?? 0c 02 08 17 58 7d ?? ?? ?? ?? 02 7b ?? ?? ?? ?? 02 7b ?? ?? ?? ?? 1d 1f 0e 6f 6f 01 00 0a fe 04}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_ArkeiStealer_ABYZ_2147848761_0
         $x_1_3 = "DataBasePracticalJob" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_ArkeiStealer_ABZG_2147848763_0
         $x_1_2 = "DataBasePracticalJob" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_MSIL_ArkeiStealer_ABZX_2147849002_0
         $x_1_2 = "4dda05b6-c125-4b6f-9b38-5ca666b517c8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_MSIL_ArkeiStealer_ABZS_2147849178_0
         $x_1_2 = {44 00 61 00 74 00 61 00 42 00 61 00 73 00 65 00 50 00 72 00 61 00 63 00 74 00 69 00 63 00 61 00 6c 00 4a 00 6f 00 62}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +132,7 @@ rule Trojan_MSIL_ArkeiStealer_AAHL_2147851702_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +155,7 @@ rule Trojan_MSIL_ArkeiStealer_AAHM_2147851703_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +178,7 @@ rule Trojan_MSIL_ArkeiStealer_AAQL_2147891966_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -192,6 +200,7 @@ rule Trojan_MSIL_ArkeiStealer_AATB_2147893241_0
         $x_5_1 = {04 06 18 28 ?? 01 00 06 7e ?? 00 00 04 06 1b 28 ?? 01 00 06 7e ?? 00 00 04 06 28 ?? 01 00 06 0d 7e ?? 00 00 04 09 05 16 05 8e 69 28 ?? 01 00 06 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +223,7 @@ rule Trojan_MSIL_ArkeiStealer_AAZO_2147898895_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

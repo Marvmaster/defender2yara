@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_OzoneRAT_A_2147851945_0
         $x_2_2 = {66 2b 1e 8b cb 0f b7 07 66 d3 e0 66 09 45}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

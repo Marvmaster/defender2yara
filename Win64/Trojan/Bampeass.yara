@@ -18,6 +18,7 @@ rule Trojan_Win64_Bampeass_A_2147696407_0
         $x_1_4 = "UACMe injected, Fubuki at your service" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_Bampeass_B_2147696408_0
         $x_2_3 = {ba 63 00 00 00 48 2b f8 90 0f b7 4c 07 02 48 8d 40 02 0f b7 d1 66 85 c9 75 ef 48 8d 44 24 70 48 8d 0d a3 1c 00 00 45 33 c9 48 89 44 24 48 48 8d 45 90 45 33 c0 48 89 44 24 40 48 8d 45 00 33 d2 48 89 44 24 38 48 89 5c 24 30 89 5c 24 28 89 5c 24 20 ff 15}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -65,6 +67,7 @@ rule Trojan_Win64_Bampeass_C_2147706309_0
         $x_1_3 = {00 75 63 6d 4c 6f 61 64 43 61 6c 6c 62 61 63 6b 2c 20 6b 65 72 6e 65 6c 33 32 20 62 61 73 65 20 66 6f 75 6e 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win32_Hocomrac_A_2147652339_0
         $x_1_7 = {5c 73 76 68 6f 73 74 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -18,6 +18,7 @@ rule Trojan_Win32_Fnvhack_A_2147626264_0
         $x_1_4 = {8d 20 8a 12 ff cb 65 d9 b0 70 9e 85 11 70 ae 91 e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

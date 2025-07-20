@@ -16,6 +16,7 @@ rule VirTool_Win64_Remeshelsz_A_2147900125_0
         $x_1_2 = {48 89 c1 48 8b ?? ?? ?? ?? ?? ?? ?? 89 05 9b 5c 00 00 48 8b 05 88 5c 00 00 48 c7 44 24 30 00 00 00 00 48 c7 44 24 28 00 00 00 00 48 c7 44 24 20 00 00 00 00 41 b9 00 00 00 00 41 b8 10 00 00 00 ?? ?? ?? ?? ?? ?? ?? 48 89 c1 48 8b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

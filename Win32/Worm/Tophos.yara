@@ -18,6 +18,7 @@ rule Worm_Win32_Tophos_A_2147667378_0
         $x_1_4 = {0f b7 54 45 ac 52 68 ?? ?? ?? ?? 8d 8d ?? ?? ?? ?? 51 e8 ?? ?? ?? ?? 83 c4 10 8d 85 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 83 f8 01 74 3d 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Worm_Win32_Tophos_C_2147681889_0
         $x_2_4 = ",porn," wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*))) or
             (all of ($x*))
@@ -65,6 +67,7 @@ rule Worm_Win32_Tophos_E_2147695661_0
         $x_1_2 = "cmd /c chcp 1251 && systeminfo >" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

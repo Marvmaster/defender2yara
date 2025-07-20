@@ -20,6 +20,7 @@ rule Trojan_Win32_Inject_J_2147595766_0
         $x_1_6 = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Hotfix\\Q246009" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Inject_T_2147622040_0
         $x_1_4 = {eb 04 43 48 75 cd 85 ff 0f ?? ?? 01 00 00 e8 ?? ?? ff ff 84 c0 75 07 33 c0 e8 ?? ?? ff ff 6a 00 6a 00 57}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -68,6 +70,7 @@ rule Trojan_Win32_Inject_V_2147625288_0
         $x_1_3 = {8b 00 8b f0 85 f6 7e 1c bb 01 00 00 00 8b c5 e8 ?? ?? ff ff 0f b6 14 24 32 54 1f ff 88 54 18 ff 43 4e 75 e9 5a 5d 5f 5e 5b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_Win32_Inject_AK_2147650412_0
         $x_1_9 = "firefox.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 6 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -125,6 +129,7 @@ rule Trojan_Win32_Inject_AL_2147650882_0
         $x_1_5 = "dao7erms_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -148,6 +153,7 @@ rule Trojan_Win32_Inject_ZH_2147712308_0
         $x_1_3 = {8a 04 11 8b 95 ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 30 04 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +177,7 @@ rule Trojan_Win32_Inject_ZI_2147712309_0
         $x_1_3 = {8b c9 ff e0 34 00 0f 85 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 51 8b 15 ?? ?? ?? ?? 52 e8 ?? ?? ?? ?? 83 c4 08 a1 ?? ?? ?? ?? 05 f0 1b 1b 00 a3 ?? ?? ?? ?? 8b ff b8 b0 18 5c 00 8b ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -194,6 +201,7 @@ rule Trojan_Win32_Inject_ZG_2147712310_0
         $x_1_3 = {8a 18 8b 74 ?? ?? 8a 8a ?? ?? ?? ?? 32 d9 46 85 d2 88 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -215,6 +223,7 @@ rule Trojan_Win32_Inject_LO_2147754551_0
         $x_1_1 = {8a 01 41 84 c0 75 ?? 2b ca 8b c6 33 d2 f7 f1 46 8a 82 ?? ?? ?? 00 30 44 3e ff 3b f3 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -240,6 +249,7 @@ rule Trojan_Win32_Inject_CA_2147811423_0
         $x_1_5 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -263,6 +273,7 @@ rule Trojan_Win32_Inject_L_2147835479_0
         $x_1_3 = "ShellcodeDelegate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

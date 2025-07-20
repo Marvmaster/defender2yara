@@ -25,6 +25,7 @@ rule TrojanProxy_Win32_Minigaway_A_2147641179_0
         $x_2_11 = {8b 45 f8 8d 3c 30 03 7b 04 8d 46 f4 e8 ?? ?? 00 00 66 8b 47 08 ff 45 f4 66 89 46 fc 8b 47 0c 89 06 8b 45 f4 83 c6 10 3b 03 72 d5}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule TrojanProxy_Win32_Minigaway_B_2147642405_0
         $x_3_4 = "POST /CallBack/SomeScripts/mgsNewPeer.php HTTP/1.0" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

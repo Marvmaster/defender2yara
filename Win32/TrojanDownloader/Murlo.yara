@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_Murlo_AD_2147568919_0
         $x_1_10 = "\\Device\\XueLuo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

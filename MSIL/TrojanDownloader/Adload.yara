@@ -15,6 +15,7 @@ rule TrojanDownloader_MSIL_Adload_2147727854_0
         $x_1_1 = "http://asedownloadgate.com/safe_download/582369/AdsShow.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

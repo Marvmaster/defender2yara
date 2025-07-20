@@ -20,6 +20,7 @@ rule PWS_Win32_Jaftipee_A_2147682546_0
         $x_1_6 = {75 00 73 00 65 00 72 00 6e 00 61 00 6d 00 65 00 00 00 00 00 75 00 73 00 65 00 72 00 00 00 00 00 70 00 61 00 73 00 73 00 77 00 6f 00 72 00 64 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -20,6 +20,7 @@ rule Trojan_Win64_PrairieWiper_A_2147944438_0
         $x_1_6 = "[PHASE 1] Destroying partition structures..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

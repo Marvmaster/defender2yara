@@ -15,6 +15,7 @@ rule Trojan_MSIL_Dustylog_A_2147742476_0
         $x_1_1 = "2015-05-14\\NeD Worm Version 1 (2015-05-15)\\obj\\x86\\Debug\\log file.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

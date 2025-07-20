@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Miscer_A_2147655168_0
         $x_1_8 = "zcy_click" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule TrojanDownloader_Win32_Miscer_B_2147655699_0
         $x_1_3 = "SCH0STS.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

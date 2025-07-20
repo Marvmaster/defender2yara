@@ -16,6 +16,7 @@ rule Trojan_MSIL_ABrisk_PSUK_2147852638_0
         $x_2_1 = {09 02 16 02 8e 69 6f ?? 00 00 0a 09 6f ?? 00 00 0a 07 6f ?? 00 00 0a 13 04 de 0d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Winbao_2147643129_0
         $x_1_5 = "ForceRemove {ABCAE223-1278-7829-A43E-42D18BB79950} = s 'Windows Assistannt v." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

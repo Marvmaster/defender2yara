@@ -18,6 +18,7 @@ rule VirTool_WinNT_Repezor_A_2147686949_0
         $x_1_4 = "0:/plugins/rootkit/binary" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

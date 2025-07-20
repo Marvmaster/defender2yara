@@ -18,6 +18,7 @@ rule Backdoor_Win32_Spark_MA_2147897259_0
         $x_1_3 = {e0 00 02 01 0b 01 0e 10 00 ee 07 00 00 aa 06 00 00 00 00 00 00 90 54 00 00 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

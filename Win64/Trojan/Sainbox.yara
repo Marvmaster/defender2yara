@@ -25,6 +25,7 @@ rule Trojan_Win64_Sainbox_A_2147945808_0
         $x_1_11 = "\\Public\\MpDefender" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -52,6 +53,7 @@ rule Trojan_Win64_Sainbox_C_2147945910_0
         $x_1_5 = {83 fd 0a 0f 8d 0d 00 00 00 83 ed 03 e9 00 00 00 00 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

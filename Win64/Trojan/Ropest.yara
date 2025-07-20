@@ -16,6 +16,7 @@ rule Trojan_Win64_Ropest_B_2147689779_0
         $x_1_2 = {74 17 48 63 40 3c b3 01 42 8b 4c 18 58 89 4d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

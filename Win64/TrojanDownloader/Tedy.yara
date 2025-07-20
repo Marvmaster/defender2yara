@@ -17,6 +17,7 @@ rule TrojanDownloader_Win64_Tedy_NITA_2147941020_0
         $x_2_2 = {4c 8d 3d 3f 7c 23 00 4c 8d 25 78 7c 23 00 33 d2 b9 02 00 00 00 41 8b f6 ff 15 f8 e5 1d 00 48 8b f8 48 83 f8 ff 0f 84 47 01 00 00 48 8d 94 24 b0 00 00 00 c7 84 24 b0 00 00 00 38 02 00 00 48 8b c8 ff 15 af e5 1d 00 85 c0 0f 84 1a 01 00 00 48 83 7b 18 07 48 8b d3 76 03 48 8b 13 48 8d 8c 24 dc 00 00 00 e8 55 ab 1a 00 85 c0 74 17 48 8d 94 24 b0 00 00 00 48 8b cf ff 15 80 e5 1d 00 85 c0 75 cd}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

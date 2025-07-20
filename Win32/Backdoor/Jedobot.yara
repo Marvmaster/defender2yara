@@ -21,6 +21,7 @@ rule Backdoor_Win32_Jedobot_A_2147656371_0
         $x_1_7 = "?p=BotPoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule Backdoor_Win32_Jedobot_C_2147688689_0
         $x_1_8 = "%SystemRoot%\\smss.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 2 of ($x_3_*))) or

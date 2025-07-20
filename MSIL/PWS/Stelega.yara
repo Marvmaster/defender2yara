@@ -17,6 +17,7 @@ rule PWS_MSIL_Stelega_ZA_2147773173_0
         $x_1_2 = "yhxGkJfDMpTfiUkihOywMGfEhwUUQLLMnQOsEBvpnBEZUkExQhTyUQhJwkMJAisikT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

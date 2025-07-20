@@ -22,6 +22,7 @@ rule TrojanDownloader_MSIL_BrobanDel_A_2147691409_0
         $x_1_8 = {6c 00 69 00 6e 00 6b 00 3d [0-8] 64 00 6e 00 73 00 3d [0-8] 5c 00 61 00 2e 00 64 00 6c 00 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule TrojanDownloader_MSIL_BrobanDel_C_2147719133_0
         $x_1_6 = "Ijpab25lLklkZW50aWZpZXIi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

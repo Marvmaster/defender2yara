@@ -19,6 +19,7 @@ rule Trojan_MSIL_ZemsilF_RDA_2147840608_0
         $x_1_4 = "ConfusedByAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_MSIL_ZemsilF_RDB_2147840807_0
         $x_1_5 = "Jiomat LLC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_MSIL_ZemsilF_RDD_2147841238_0
         $x_1_5 = "wRtkqC40LW22ZRZGm2.BmN6q9yP6SxXSf6uMU" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_MSIL_ZemsilF_AYA_2147918985_0
         $x_1_4 = "$e4c05e25-ca33-4314-ab56-656a5c196143" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Trojan_MSIL_ZemsilF_AYB_2147920015_0
         $x_1_4 = "VirtualProtect" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -139,6 +144,7 @@ rule Trojan_MSIL_ZemsilF_NF_2147926989_0
         $x_2_2 = {02 6f 37 00 00 06 6f 4e 00 00 0a 00 72 f7 00 00 70 0a 06 28 4d 00 00 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +168,7 @@ rule Trojan_MSIL_ZemsilF_NE_2147927399_0
         $x_1_3 = "desktop/ENCRYPTED +" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule Trojan_MSIL_ZemsilF_NG_2147931490_0
         $x_1_5 = "winlogon.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

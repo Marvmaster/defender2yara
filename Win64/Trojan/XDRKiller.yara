@@ -18,6 +18,7 @@ rule Trojan_Win64_XDRKiller_DA_2147932563_0
         $x_1_3 = "360Safe.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

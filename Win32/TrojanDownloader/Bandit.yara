@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Bandit_MR_2147742745_0
         $x_1_1 = {30 04 31 81 fb ?? ?? ?? ?? 75 ?? 57 ff 15 ?? ?? ?? ?? 8d 85 ?? ?? ?? ?? 50 57 8d 85 ?? ?? ?? ?? 50 57 ff 15 ?? ?? ?? ?? 46 3b f3 7c 23 00 81 fb ?? ?? ?? ?? 75 ?? 8d 85 ?? ?? ?? ?? 50 57 57 57 ff 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Bandit_MS_2147743671_0
         $x_1_3 = {81 c1 47 86 c8 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -20,6 +20,7 @@ rule MonitoringTool_MSIL_Skeylart_169294_0
         $x_1_6 = "thepiratebay.org/user/_Smithy_" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

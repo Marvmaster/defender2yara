@@ -16,6 +16,7 @@ rule Trojan_MSIL_PovertyStealer_AP_2147897481_0
         $x_1_1 = {09 07 16 73 ?? 00 00 0a 13 04 11 04 08 6f ?? 00 00 0a 73 ?? 00 00 06 08 6f ?? 00 00 0a 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

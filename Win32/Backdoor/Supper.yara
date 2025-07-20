@@ -17,6 +17,7 @@ rule Backdoor_Win32_Supper_GTB_2147938944_0
         $x_5_2 = {48 8b 07 48 89 45 ?? 48 83 c7 ?? 48 31 db e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MSIL_Daggertooth_C_2147838753_0
         $x_1_3 = {02 1f 51 0a 12 00 28 ?? ?? ?? 0a 1f 26 0a 12 00 28 ?? ?? ?? 0a 1f 34 0a 12 00 28 ?? ?? ?? 0a 1f 67 0a 12 00 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

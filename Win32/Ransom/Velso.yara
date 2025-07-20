@@ -21,6 +21,7 @@ rule Ransom_Win32_Velso_AA_2147852018_0
         $x_1_6 = "NSt7__cxx1114collate_bynameIcEE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

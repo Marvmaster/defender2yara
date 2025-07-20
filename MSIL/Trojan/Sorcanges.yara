@@ -18,6 +18,7 @@ rule Trojan_MSIL_Sorcanges_A_2147728351_0
         $x_10_4 = "MPRESS" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Worm_Win32_Cissi_2147582927_0
         $x_1_7 = "Poem_collection.pif" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

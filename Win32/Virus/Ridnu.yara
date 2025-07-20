@@ -18,6 +18,7 @@ rule Virus_Win32_Ridnu_A_2147610242_0
         $x_1_3 = {8a 10 8a ca 3a 16 75 1c 3a cb 74 14 8a 50 01 8a ca 3a 56 01 75 0e 83 c0 02 83 c6 02 3a cb 75 e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Virus_Win32_Ridnu_C_2147619435_0
         $x_1_9 = "Toolhelp32ReadProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

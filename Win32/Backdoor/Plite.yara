@@ -18,6 +18,7 @@ rule Backdoor_Win32_Plite_SE_2147834942_0
         $x_1_3 = "HanAgent_pe.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

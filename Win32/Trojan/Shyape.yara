@@ -16,6 +16,7 @@ rule Trojan_Win32_Shyape_RG_2147845426_0
         $x_1_1 = {02 55 18 32 d1 eb 0f 8b 55 10 8b 75 08 03 f2 8a 16 32 d1 02 55 18 ff 45 10 88 16 8b 4d 10 3b 4d 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

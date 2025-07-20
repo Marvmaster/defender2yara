@@ -23,6 +23,7 @@ rule Ransom_MSIL_Maze_CCHD_2147901517_0
         $x_1_8 = "DECRYPT-FILES.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

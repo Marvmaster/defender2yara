@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Smordess_A_2147719200_0
         $x_1_2 = {69 67 66 78 65 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

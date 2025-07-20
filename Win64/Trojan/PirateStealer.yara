@@ -19,6 +19,7 @@ rule Trojan_Win64_PirateStealer_BSA_2147932086_0
         $x_2_4 = "A3A4CNCcCfCoCsLlLmLoLtLuMcMeMnNdNlNoOKONOUPcPdPePfPiPoPsSTScSkSmSoTeToV1V2V3V5V6YiZlZpZs" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_PirateStealer_ABC_2147942238_0
         $x_1_2 = {ba 00 10 00 00 31 c9 41 b8 00 30 00 00 41 b9 04 00 00 00 ff 15 ?? ?? ?? 00 48 85 c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

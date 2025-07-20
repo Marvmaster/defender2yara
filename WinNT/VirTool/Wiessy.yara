@@ -18,6 +18,7 @@ rule VirTool_WinNT_Wiessy_A_2147607518_0
         $x_1_4 = "\\??\\ipfill" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule VirTool_WinNT_Wiessy_B_2147607519_0
         $x_1_5 = {5c 44 65 76 69 63 65 5c 45 43 61 74 44 69 73 6b 30 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*))) or

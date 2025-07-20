@@ -18,6 +18,7 @@ rule Constructor_Win32_Bifrose_A_2147627102_0
         $x_1_4 = "RECOMMENDATION: Bifrost will usually be better at bypassing firewalls if this is not used." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

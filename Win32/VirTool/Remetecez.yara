@@ -18,6 +18,7 @@ rule VirTool_Win32_Remetecez_A_2147901810_0
         $x_1_3 = {51 6a 10 50 57 56 ?? ?? ?? ?? ?? ?? 8b 3d 14 30 40 00 85 c0 ?? ?? 83 7d f8 10 ?? ?? 8b 95 0c fd ff ff 8b 7d f4 c7 85 08 fd ff ff 01 00 00 00 8b 02 8b 4a 04 a3 ?? ?? ?? ?? 8b 45 f0 89 0d ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 89 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

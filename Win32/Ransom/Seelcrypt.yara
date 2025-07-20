@@ -21,6 +21,7 @@ rule Ransom_Win32_Seelcrypt_A_2147721600_0
         $x_3_7 = "bin:com:exe:bat:png:bmp:dat:log:ini:dll:sys:" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or

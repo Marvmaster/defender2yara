@@ -16,6 +16,7 @@ rule TrojanClicker_Win32_Jolic_A_2147646475_0
         $x_1_2 = {59 8b f0 e9 ?? ?? ?? ?? 3c 3c 0f 85 ?? ?? ?? ?? 81 7f ?? 73 74 6f 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanClicker_Win32_Jolic_A_2147646690_0
         $x_1_4 = {3d 75 70 64 00 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

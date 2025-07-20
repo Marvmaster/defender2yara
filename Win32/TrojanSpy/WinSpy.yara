@@ -51,6 +51,7 @@ rule TrojanSpy_Win32_WinSpy_2147724011_0
         $x_1_37 = {53 54 4f 50 43 41 4d 20 53 54 41 52 54 43 41 4d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

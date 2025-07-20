@@ -29,6 +29,7 @@ rule TrojanProxy_Win32_Ditsolay_B_2147684902_0
         $x_50_15 = "5DEA6C973FAE5CFF5181EB379D42F05C" ascii //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_50_*) and 7 of ($x_25_*))) or
             ((4 of ($x_50_*) and 5 of ($x_25_*))) or

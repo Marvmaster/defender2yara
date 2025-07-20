@@ -22,6 +22,7 @@ rule Ransom_Win64_Hermes_A_2147889447_0
         $x_2_7 = "wbadmin delete catalog - quiet" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

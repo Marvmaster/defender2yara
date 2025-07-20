@@ -18,6 +18,7 @@ rule Trojan_Win32_Availmetre_A_2147634141_0
         $x_1_4 = "U; Windows NT 5.1; ru; rv:1.9.0.11) Gecko/2009060215 Firefox/3.0.11" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_Win32_Availmetre_B_2147634142_0
         $x_1_3 = {62 6f 74 00 65 78 65 63 00 65 78 69 74 64 6c 6c 00 70 6f 77 65 72 00 78 61 6e 61 00 73 68 65 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Availmetre_B_2147634142_1
         $x_1_3 = "U; Windows NT 5.1; ru; rv:1.9.0.11) Gecko/2009060215 Firefox/3.0.11" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

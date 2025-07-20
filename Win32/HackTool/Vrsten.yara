@@ -26,6 +26,7 @@ rule HackTool_Win32_Vrsten_A_2147723368_0
         $x_10_11 = {73 6c 62 73 6d 62 20 (4e|4b) 31}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 8 of ($x_10_*))) or
             ((2 of ($x_20_*) and 6 of ($x_10_*))) or

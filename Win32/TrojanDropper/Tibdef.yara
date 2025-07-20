@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Tibdef_A_2147643062_0
         $x_1_4 = {61 6c 6b 61 72 65 2e 66 6f 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDropper_Win32_Tibdef_B_2147648185_0
         $x_3_2 = "--@Count----h--" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_MSIL_Joker_DA_2147768062_0
         $x_1_5 = "JokerIsNotRunning" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_MSIL_Joker_DB_2147771536_0
         $x_1_5 = "CryptoJoker.Properties" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_MSIL_Joker_DC_2147789093_0
         $x_1_5 = "Bitcoin Address" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

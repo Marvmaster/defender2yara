@@ -16,6 +16,7 @@ rule Trojan_Win32_PermClaw_A_2147943821_0
         $x_1_2 = {89 51 30 b8 4d 4f 00 00 8b ?? f8 66 89 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

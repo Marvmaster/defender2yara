@@ -18,6 +18,7 @@ rule Trojan_AndroidOS_Skygofree_2147725385_0
         $x_1_4 = {f0 b5 2d 4a 2d 4f 8b b0 7a 44 01 92 03 aa 7f 44 11 1c 70 cf 70 c1 3b 68 ?? 24 0b 60 ?? 28 48 d0 ?? 24 ?? 60 60 02 09 ?? 09 a9 08 aa 00 20 0a f0 ?? ?? 0a f0 ?? ?? 04 1c 42 1c 02 d0 00 28 06 d0 16 e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

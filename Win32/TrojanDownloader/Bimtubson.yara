@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Bimtubson_A_2147636892_0
         $x_1_4 = {8a 10 80 ea 0a 74 05 80 ea 03 75 03 c6 00 00 40 4b 75 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win32_Bimtubson_B_2147645347_0
         $x_1_3 = {53 63 61 63 68 65 2e 65 78 65 00 33 30 30 30 00 6f 70 65 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

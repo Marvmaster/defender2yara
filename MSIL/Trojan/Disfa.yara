@@ -20,6 +20,7 @@ rule Trojan_MSIL_Disfa_AC_2147780094_0
         $x_3_5 = "rawAssembly" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_4_*) and 2 of ($x_3_*))) or
             ((1 of ($x_10_*) and 2 of ($x_3_*))) or
@@ -54,6 +55,7 @@ rule Trojan_MSIL_Disfa_ACH_2147781756_0
         $x_3_8 = "Append" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Trojan_MSIL_Disfa_AAJT_2147852779_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Trojan_MSIL_Disfa_SAW_2147922848_0
         $x_1_1 = {73 17 00 00 0a 0a 06 02 6f ?? ?? ?? 0a 6f 19 00 00 0a 0b 12 01 28 1a 00 00 0a 25 6f 1b 00 00 0a 26 6f 1c 00 00 0a 6f 1d 00 00 0a 6f ?? ?? ?? 0a 0c 12 02 28 1f 00 00 0a 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Trojan_MSIL_Disfa_ZJAA_2147923419_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

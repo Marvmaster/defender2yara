@@ -21,6 +21,7 @@ rule SoftwareBundler_Win32_OxyPumper_205134_0
         $x_2_7 = {53 00 6f 00 66 00 74 00 77 00 61 00 72 00 65 00 5c 00 44 00 6f 00 77 00 6e 00 6c 00 6f 00 61 00 64 00 65 00 72 00 73 00 5c 00 44 00 6f 00 77 00 6e 00 6c 00 6f 00 61 00 64 00 20 00 4d 00 61 00 6e 00 61 00 67 00 65 00 72 00 5c 00 55 00 70 00 64 00 61 00 74 00 65 00 72 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -54,6 +55,7 @@ rule SoftwareBundler_Win32_OxyPumper_205134_1
         $x_2_10 = "Software\\LADY'S WOOD 2013 LIMITED" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

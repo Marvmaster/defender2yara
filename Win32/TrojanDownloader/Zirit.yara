@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Zirit_A_2147602924_0
         $x_1_3 = {6a 00 68 80 00 00 00 6a 03 6a 00 6a 01 68 00 00 00 80 68 ?? ?? ?? 00 ff 15 ?? ?? ?? 00 a3 ?? ?? ?? 00 6a 02 6a 00 6a fc ff 35 ?? ?? ?? 00 ff 15 ?? ?? ?? 00 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

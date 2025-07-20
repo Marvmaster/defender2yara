@@ -34,6 +34,7 @@ rule Spammer_Win32_Talwadig_A_2147628082_0
         $x_1_20 = "128.107.241.185" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((15 of ($x_1_*))) or
             ((1 of ($x_2_*) and 13 of ($x_1_*))) or

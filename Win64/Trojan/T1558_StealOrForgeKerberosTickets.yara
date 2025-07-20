@@ -24,6 +24,7 @@ rule Trojan_Win64_T1558_StealOrForgeKerberosTickets_A_2147846078_0
         $x_10_10 = "sekurlsa::tickets" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

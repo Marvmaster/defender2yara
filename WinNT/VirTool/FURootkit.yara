@@ -37,6 +37,7 @@ rule VirTool_WinNT_FURootkit_2147571986_0
         $x_2_23 = "Rootkit\\Fuzen\\fu\\" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 9 of ($x_1_*))) or
             ((6 of ($x_2_*) and 7 of ($x_1_*))) or
@@ -76,6 +77,7 @@ rule VirTool_WinNT_FURootkit_BG_2147574128_0
         $x_1_12 = "\\Hide_Src\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 7 of ($x_1_*))) or
             ((3 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -107,6 +109,7 @@ rule VirTool_WinNT_FURootkit_A_2147616867_0
         $x_1_5 = "\\Device\\bbbsys32d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*))) or
@@ -136,6 +139,7 @@ rule VirTool_WinNT_FURootkit_B_2147624067_0
         $x_1_5 = "\\DosDevices\\MSprocessP" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*))) or
@@ -164,6 +168,7 @@ rule VirTool_WinNT_FURootkit_C_2147624068_0
         $x_1_4 = "\\DosDevices\\MSprocessP" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*))) or

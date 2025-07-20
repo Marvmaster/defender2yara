@@ -19,6 +19,7 @@ rule VirTool_Win64_Sliver_A_2147842382_0
         $x_1_4 = {65 48 8b 04 25 28 00 00 00 48 8b 80 00 00 00 00 48 8b 40 30 48 8b ?? ?? ?? ?? ?? 48 8b 80 38 03 00 00 48 89 0c 24 48 89 44 24 08 b8 ff ff ff ff 48 89 44 24 10 e8 ?? ?? ?? ?? 48 8b 44 24 18 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule VirTool_Win64_Sliver_JZ_2147904604_0
         $x_1_2 = {44 88 04 01 8b 43 ?? ff 83 ?? ?? ?? ?? 83 f0 ?? 01 43 ?? 49 81 fa ?? ?? ?? ?? 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

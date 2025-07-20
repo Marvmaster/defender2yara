@@ -21,6 +21,7 @@ rule Trojan_Linux_IPStorm_A_2147765286_0
         $x_1_6 = "storm/malware-guard/malware-guard.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Linux_IPStorm_B_2147890542_0
         $x_1_6 = "/storm/statik/statik.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

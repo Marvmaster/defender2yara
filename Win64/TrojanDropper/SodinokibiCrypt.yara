@@ -17,6 +17,7 @@ rule TrojanDropper_Win64_SodinokibiCrypt_SA_2147780180_0
         $x_1_2 = {8b 44 24 24 ff c0 89 44 24 ?? 8b 44 24 ?? 39 44 24 ?? 73 ?? 48 63 44 24 ?? 48 8b 4c 24 ?? 0f b6 04 01 88 44 24 ?? 0f b6 44 24 ?? 44 8b c0 48 8d 15 ?? ?? ?? ?? 48 8b 4c 24 ?? ff 15 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

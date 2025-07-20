@@ -23,6 +23,7 @@ rule Backdoor_MSIL_Reomot_A_2147688160_0
         $x_1_9 = "AddWatcher" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Backdoor_MSIL_Reomot_B_2147688167_0
         $x_1_7 = "Startstresser" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

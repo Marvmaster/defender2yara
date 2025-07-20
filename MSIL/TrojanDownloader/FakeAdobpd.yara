@@ -20,6 +20,7 @@ rule TrojanDownloader_MSIL_FakeAdobpd_A_2147696022_0
         $x_1_6 = "\\Update Log" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDownloader_MSIL_FakeAdobpd_A_2147696022_1
         $x_1_4 = "Yzpcd2luZG93c1xhZG9iZTMyLmV4ZQ==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

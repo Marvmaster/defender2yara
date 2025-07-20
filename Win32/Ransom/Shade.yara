@@ -19,6 +19,7 @@ rule Ransom_Win32_Shade_B_2147733595_0
         $x_1_4 = {8b 11 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 e8 0b a3 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 83 c2 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Shade_C_2147733645_0
         $x_1_2 = {55 8b ec 51 c7 45 fc 00 00 00 00 a1 ?? ?? ?? 00 03 05 ?? ?? ?? 00 0f b6 08 f7 d9 8b 15 ?? ?? ?? 00 03 15 ?? ?? ?? 00 0f b6 02 2b c1 8b 0d ?? ?? ?? 00 03 0d ?? ?? ?? 00 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Ransom_Win32_Shade_C_2147735695_0
         $x_1_6 = "Wr/teF/le" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -95,6 +98,7 @@ rule Ransom_Win32_Shade_PA_2147743916_0
         $x_1_5 = {51 6a 40 50 ff 35 ?? ?? ?? ?? ff 15 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_1_*))) or
             ((2 of ($x_20_*))) or

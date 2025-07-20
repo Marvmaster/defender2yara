@@ -24,6 +24,7 @@ rule Trojan_Win32_CryptTrickload_B_2147769327_0
         $x_1_9 = "wscript  /e:JScript" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

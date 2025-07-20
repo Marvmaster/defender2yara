@@ -24,6 +24,7 @@ rule Trojan_Win32_Busky_A_98826_0
         $x_4_9 = {fe ff ff 61 c6 85 ?? ?? ff ff 48 c6 85 ?? ?? ff ff 6f c6 85 ?? ?? ff ff 32 c6 85 ?? ?? ff ff 36 c6 85 ?? ?? ff ff 62 c6 85 ?? ?? ff ff 59 c6 85 ?? ?? ff ff 47 c6 85 ?? ?? ff ff 2e c6 85 ?? ?? ff ff 65 c6 85 ?? ?? ff ff 78 c6 85 ?? ?? ff ff 65 c6 85 ?? ?? ff ff 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_4_*) and 3 of ($x_3_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_4_*) and 4 of ($x_3_*))) or
@@ -54,6 +55,7 @@ rule Trojan_Win32_Busky_D_121166_0
         $x_1_5 = {2f 64 6f 77 6e 6c 6f 61 64 [0-1] 2e 70 68 70 3f 61 66 66 69 64 3d [0-15] 26 73 75 62 61 63 63 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -90,6 +92,7 @@ rule Trojan_Win32_Busky_EE_121684_0
         $x_10_14 = "/c del /f C:\\myapp.exe.bak >> NUL" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_300_*) and 1 of ($x_10_*))) or
             (all of ($x*))
@@ -115,6 +118,7 @@ rule Trojan_Win32_Busky_EF_121743_0
         $x_1_3 = {c1 6d dc 0a 8b 45 dc 31 45 e8 8b 45 e8 89 45 d8 c1 65 d8 03 8b 45 d8 01 45 e8 8b 45 e8 89 45 d4 c1 6d d4 06 8b 45 d4 31 45 e8 8b 45 e8 89 45 d0 c1 65 d0 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -137,6 +141,7 @@ rule Trojan_Win32_Busky_I_122081_0
         $x_1_3 = {61 56 31 39 44 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +165,7 @@ rule Trojan_Win32_Busky_J_122275_0
         $x_1_4 = {61 56 31 39 44 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

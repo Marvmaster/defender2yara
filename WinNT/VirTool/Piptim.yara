@@ -17,6 +17,7 @@ rule VirTool_WinNT_Piptim_2147606927_0
         $x_1_3 = {0f 20 c0 89 45 fc 25 ff ff fe ff 0f 22 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

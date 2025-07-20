@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Chekafe_A_2147630301_0
         $x_1_6 = {6b db 2b 69 c0 82 00 00 00 6b ff 33 03 c6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

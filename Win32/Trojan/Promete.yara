@@ -17,6 +17,7 @@ rule Trojan_Win32_Promete_YAA_2147944449_0
         $x_10_2 = {8a 4d fc 02 c8 30 0f 3b c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

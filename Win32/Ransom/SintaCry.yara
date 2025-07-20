@@ -25,6 +25,7 @@ rule Ransom_Win32_SintaCry_A_2147721477_0
         $x_1_11 = "*.SQLITE3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_15_*) and 3 of ($x_5_*) and 5 of ($x_1_*))) or
             ((3 of ($x_15_*) and 5 of ($x_1_*))) or

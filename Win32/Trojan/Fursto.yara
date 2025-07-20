@@ -24,6 +24,7 @@ rule Trojan_Win32_Fursto_A_2147598160_0
         $x_5_9 = {74 18 8b 45 fc 0f be 08 f7 d1 8b 55 fc 88 0a 8b 45 fc 83 c0 01 89 45 fc eb de}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_5_*))) or
             ((2 of ($x_10_*) and 1 of ($x_5_*))) or
@@ -50,6 +51,7 @@ rule Trojan_Win32_Fursto_C_2147598161_0
         $x_1_1 = {39 75 fc 75 32 ff 75 0c e8 ?? ?? 00 00 84 c0 59 74 25 be ?? ?? 00 10 56 ff 15 ?? ?? 00 10 50 8b 45 0c 05 ?? 05 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_Fursto_D_2147598162_0
         $x_1_3 = {ff d3 eb e4 68 ?? ?? 40 00 57 ff 15 ?? ?? 40 00 3b c6 74 49 56 57 50 6a 03 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win32_Fursto_E_2147598163_0
         $x_1_1 = {50 55 ff d7 85 c0 74 57 68 ?? ?? 00 10 55 56 ff d7 85 c0 74 4a 8b 3d ?? ?? 00 10 6a 00 56 ff 15 ?? ?? 00 10 85 c0 74 33}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

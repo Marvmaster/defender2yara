@@ -18,6 +18,7 @@ rule Backdoor_MacOS_GoDoor_A_2147899716_0
         $x_1_3 = "main.aggregateDelegateMessagesToMythic" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_MacOS_GoDoor_B_2147927640_0
         $x_1_5 = "/root/malware/malwareKiller.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

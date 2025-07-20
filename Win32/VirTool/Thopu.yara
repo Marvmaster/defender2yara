@@ -18,6 +18,7 @@ rule VirTool_Win32_Thopu_A_2147763588_0
         $x_1_3 = "adedayo/reverse-shell/pkg.ShellOut" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

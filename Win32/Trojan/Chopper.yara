@@ -18,6 +18,7 @@ rule Trojan_Win32_Chopper_A_2147694607_0
         $x_1_4 = "X=CreateObject(\"wscript.shell\").exec(\"\"\"\"&bd(Request(\"z1\"))&\"\"\" /c \"\"\"&bd(Request(\"z2\"))&\"\"\"\"):" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_Chopper_SBR_2147760703_0
         $x_1_9 = "EXEC master..xp_cmdshell" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 4 of ($x_1_*))) or

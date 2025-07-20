@@ -18,6 +18,7 @@ rule VirTool_WinNT_Dogrobot_I_2147608068_0
         $x_1_3 = {8b 0c b3 0b c9 74 25 8b 79 04 66 8b 07 66 83 f8 03 75 19 8b 47 10 0b c0 74 12 a3 ?? ?? 01 00 89 3d ?? ?? 01 00 33 c0 89 47 10 eb 08 83 c6 01 83 fe 26 72 cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule VirTool_WinNT_Dogrobot_M_2147609559_0
         $x_10_5 = "\\Driver\\ProtectedC" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule VirTool_WinNT_Dogrobot_J_2147617559_0
         $x_1_2 = "ObReferenceObjectByHandle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule VirTool_WinNT_Dogrobot_K_2147617560_0
         $x_1_3 = {51 50 0f 20 c0 89 44 24 04 25 ff ff fe ff 0f 22 c0 58 fa 8b 04 24 a3 ?? ?? ?? ?? 59 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

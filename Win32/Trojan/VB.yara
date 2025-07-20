@@ -30,6 +30,7 @@ rule Trojan_Win32_VB_AT_2147500903_0
         $x_1_16 = "Macrom\\ScheTime.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -54,6 +55,7 @@ rule Trojan_Win32_VB_BD_2147502864_0
         $x_10_5 = "MSWinsockLib" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))
@@ -84,6 +86,7 @@ rule Trojan_Win32_VB_CT_2147504503_0
         $x_1_8 = {52 00 65 00 63 00 79 00 63 00 6c 00 65 00 64 00 5c 00 [0-16] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -116,6 +119,7 @@ rule Trojan_Win32_VB_ZE_2147584800_0
         $x_1_10 = "http://www.microname.co.kr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 3 of ($x_5_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -145,6 +149,7 @@ rule Trojan_Win32_VB_ZF_2147592461_0
         $x_1_5 = "execScript" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))
@@ -173,6 +178,7 @@ rule Trojan_Win32_VB_ZG_2147592462_0
         $x_2_6 = "\\Program Files\\Internet Explorer\\IEXPLORE.EXE" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_2_*))) or
             (all of ($x*))
@@ -205,6 +211,7 @@ rule Trojan_Win32_VB_AAB_2147592557_0
         $x_1_10 = "C:\\http.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -241,6 +248,7 @@ rule Trojan_Win32_VB_ZH_2147594862_0
         $x_1_14 = {5c 00 43 00 79 00 72 00 61 00 78 00 2e 00 76 00 62 00 70 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +276,7 @@ rule Trojan_Win32_VB_AAC_2147595101_0
         $x_2_8 = "C:\\windows\\system32\\pinoy.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 4 of ($x_2_*))) or
             ((2 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -299,6 +308,7 @@ rule Trojan_Win32_VB_AAD_2147595137_0
         $x_1_8 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -327,6 +337,7 @@ rule Trojan_Win32_VB_AAE_2147595753_0
         $x_1_5 = "ExitWindowsEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -365,6 +376,7 @@ rule Trojan_Win32_VB_AAH_2147596344_0
         $x_1_19 = "URLDownloadToFileA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 14 of ($x_1_*))) or
             ((2 of ($x_10_*) and 14 of ($x_1_*))) or
@@ -398,6 +410,7 @@ rule Trojan_Win32_VB_KT_2147596405_0
         $x_1_8 = "(I LOVE YOU ALL) </h4></CENTER></BODY></HTML>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -429,6 +442,7 @@ rule Trojan_Win32_VB_DNA_2147597131_0
         $x_1_9 = "shell32.dll,OpenAs_RunDLL" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -467,6 +481,7 @@ rule Trojan_Win32_VB_DNB_2147597132_0
         $x_1_16 = "http://e223pg.awardspace.co.uk/up.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -502,6 +517,7 @@ rule Trojan_Win32_VB_DNC_2147597133_0
         $x_1_13 = "BroadCast IP address" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -531,6 +547,7 @@ rule Trojan_Win32_VB_PA_2147597952_0
         $x_10_7 = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\DanBtR270414" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 2 of ($x_10_*))) or
             (all of ($x*))
@@ -562,6 +579,7 @@ rule Trojan_Win32_VB_NO_2147599779_0
         $x_1_9 = "net stop wscsvc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -592,6 +610,7 @@ rule Trojan_Win32_VB_BH_2147599965_0
         $x_1_6 = "RegWrite" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -621,6 +640,7 @@ rule Trojan_Win32_VB_KD_2147601784_0
         $x_1_10 = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -650,6 +670,7 @@ rule Trojan_Win32_VB_DC_2147602089_0
         $x_1_7 = {68 74 74 70 3a 2f 2f 77 77 77 2e [0-18] 2e 63 6f 6d 2e 62 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -684,6 +705,7 @@ rule Trojan_Win32_VB_IJ_2147602391_0
         $x_1_12 = "www.ero-anime-star.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -712,6 +734,7 @@ rule Trojan_Win32_VB_ZJ_2147605733_0
         $x_1_6 = "[Autorun]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -738,6 +761,7 @@ rule Trojan_Win32_VB_PB_2147606341_0
         $x_10_7 = "MSVBVM60.DLL" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -766,6 +790,7 @@ rule Trojan_Win32_VB_ZK_2147606464_0
         $x_1_6 = "http://hacking.gvu.cc/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -792,6 +817,7 @@ rule Trojan_Win32_VB_PD_2147606759_0
         $x_1_7 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -829,6 +855,7 @@ rule Trojan_Win32_VB_BQ_2147607800_0
         $x_1_18 = "C:\\boot.ini" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((12 of ($x_3_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -857,6 +884,7 @@ rule Trojan_Win32_VB_YCA_2147608091_0
         $x_3_6 = "TopLevVisWindsFound" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_4_*) and 3 of ($x_3_*))) or
             ((1 of ($x_10_*) and 2 of ($x_4_*) and 1 of ($x_3_*))) or
@@ -890,6 +918,7 @@ rule Trojan_Win32_VB_DJ_2147609009_0
         $x_1_10 = "\\windows\\readme.txt.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -921,6 +950,7 @@ rule Trojan_Win32_VB_ER_2147609569_0
         $x_1_9 = "rundll.exe user.exe,exitwindows" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -950,6 +980,7 @@ rule Trojan_Win32_VB_ES_2147609570_0
         $x_1_7 = "Attacks Enabled" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -982,6 +1013,7 @@ rule Trojan_Win32_VB_FF_2147609856_0
         $x_1_10 = "/ip2location/look.php?ip=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1009,6 +1041,7 @@ rule Trojan_Win32_VB_FM_2147610049_0
         $x_1_5 = "sys.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -1035,6 +1068,7 @@ rule Trojan_Win32_VB_FO_2147610260_0
         $x_1_4 = "cmd.exe /c start rundll32.exe %SystemRoot%\\system32\\shimgvw.dll,ImageView_Fullscreen" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1059,6 +1093,7 @@ rule Trojan_Win32_VB_FQ_2147610380_0
         $x_1_5 = "\\i love you" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1089,6 +1124,7 @@ rule Trojan_Win32_VB_FR_2147610462_0
         $x_1_8 = "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\svchost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -1113,6 +1149,7 @@ rule Trojan_Win32_VB_FS_2147610499_0
         $x_1_5 = "You Fucking Moron!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))
@@ -1146,6 +1183,7 @@ rule Trojan_Win32_VB_FT_2147610602_0
         $x_1_11 = "ping -n 10 localhost > nul" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -1178,6 +1216,7 @@ rule Trojan_Win32_VB_FV_2147611110_0
         $x_1_10 = {63 61 72 65 6c 70 6d 61 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1207,6 +1246,7 @@ rule Trojan_Win32_VB_GH_2147612365_0
         $x_1_10 = "/ip2location/look.php?ip=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1231,6 +1271,7 @@ rule Trojan_Win32_VB_JK_2147612808_0
         $x_1_5 = "vb6chs.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1258,6 +1299,7 @@ rule Trojan_Win32_VB_ZR_2147618158_0
         $x_1_5 = "jvvr<11pgy0htgg/nkpm0eq0mt1ugvwr1pwrfcvg0cur" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1283,6 +1325,7 @@ rule Trojan_Win32_VB_IW_2147618549_0
         $x_1_6 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1306,6 +1349,7 @@ rule Trojan_Win32_VB_LN_2147619127_0
         $x_1_4 = "C:\\Program files\\internet explorer\\IEXPLORE.exe http://" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1334,6 +1378,7 @@ rule Trojan_Win32_VB_MY_2147619227_0
         $x_1_9 = "staff@telecom.it" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1361,6 +1406,7 @@ rule Trojan_Win32_VB_PE_2147620396_0
         $x_1_5 = "VB6.OLB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_5_*))) or
             (all of ($x*))
@@ -1391,6 +1437,7 @@ rule Trojan_Win32_VB_NR_2147621045_0
         $x_1_8 = ".com/cadastro.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             ((6 of ($x_10_*))) or
@@ -1420,6 +1467,7 @@ rule Trojan_Win32_VB_YS_2147622828_0
         $x_1_6 = {45 00 78 00 65 00 63 00 41 00 63 00 63 00 65 00 73 00 73 00 [0-8] 4d 00 6f 00 6e 00 41 00 63 00 63 00 65 00 73 00 73 00 [0-8] 53 00 69 00 74 00 65 00 41 00 63 00 63 00 65 00 73 00 73 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1442,6 +1490,7 @@ rule Trojan_Win32_VB_OB_2147623498_0
         $x_10_3 = "-SOFTWARE\\-Microsoft\\-Windows\\-CurrentVersion\\-Run" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1465,6 +1514,7 @@ rule Trojan_Win32_VB_OJ_2147624030_0
         $x_1_4 = {8d 4d c8 51 53 e8 ?? ?? ?? ?? ff d6 8b 55 c8 52 6a 00 6a 38 e8 ?? ?? ?? ?? 89 45 b4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1490,6 +1540,7 @@ rule Trojan_Win32_VB_YT_2147624089_0
         $x_1_6 = {5c 00 00 00 08 00 00 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1517,6 +1568,7 @@ rule Trojan_Win32_VB_OK_2147624102_0
         $x_1_5 = {8d 55 a8 52 8d 45 b8 50 8d 4d bc 51 8b 55 08 8b 02 8b 4d 08 51 ff 90 30 07 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1539,6 +1591,7 @@ rule Trojan_Win32_VB_OR_2147624759_0
         $x_1_3 = {c7 45 fc 07 00 00 00 c7 45 ac 6e 00 00 00 c7 45 fc 08 00 00 00 c7 45 a8 12 00 00 00 c7 45 fc 09 00 00 00 c7 45 d4 22 f3 04 00 c7 45 fc 0a 00 00 00 c7 45 c8 23 f3 04 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1564,6 +1617,7 @@ rule Trojan_Win32_VB_PQ_2147624979_0
         $x_1_6 = "txtkeylog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1591,6 +1645,7 @@ rule Trojan_Win32_VB_QA_2147625014_0
         $x_1_5 = "sysconfig.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1612,6 +1667,7 @@ rule Trojan_Win32_VB_QB_2147625024_0
         $x_1_2 = "reg add HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run /t reg_sz /d c:\\windows\\explorerr.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1635,6 +1691,7 @@ rule Trojan_Win32_VB_XVB_2147625308_0
         $x_1_4 = "]qugmit|" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1659,6 +1716,7 @@ rule Trojan_Win32_VB_QK_2147625572_0
         $x_1_2 = {73 68 65 6c 6c 33 32 00 0f 00 00 00 53 48 43 68 61 6e 67 65 4e 6f 74 69 66 79 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 6b 00 69 00 6c 00 6c 00 2e 00 62 00 61 00 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1680,6 +1738,7 @@ rule Trojan_Win32_VB_QL_2147625573_0
         $x_1_2 = {46 6f 72 6d 31 00 00 00 6d 4d 61 69 6e 00 00 00 6d 45 4e 00 6d 43 68 61 6e 67 65 49 45 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1701,6 +1760,7 @@ rule Trojan_Win32_VB_QM_2147625575_0
         $x_1_2 = {8b 45 0c ff 30 e8 ?? ?? ff ff 8b d0 8d 8d ?? ?? ff ff e8 ?? ?? ff ff 50 e8 ?? ?? ff ff 33 85 ?? ?? ff ff 66 89 85 ?? ?? ff ff 89 bd ?? ?? ff ff 8d 95 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1723,6 +1783,7 @@ rule Trojan_Win32_VB_QQ_2147626003_0
         $x_1_3 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1745,6 +1806,7 @@ rule Trojan_Win32_VB_TA_2147626154_0
         $x_2_3 = {64 00 6c 00 69 00 00 00 04 00 00 00 6e 00 6b 00 00 00 00 00 02 00 00 00 63 00 00 00 04 00 00 00 6c 00 69 00 00 00 00 00 04 00 00 00 63 00 6b 00 00 00 00 00 04 00 00 00 69 00 73 00 00 00 00 00 08 00 00 00 68 00 69 00 74 00 73 00 00 00 00 00 04 00 00 00 74 00 72 00 00 00 00 00 04 00 00 00 70 00 6f 00 00 00 00 00 08 00 00 00 72 00 74 00 61 00 6c 00 00 00 00 00 06 00 00 00 66 00 74 00 79 00 00 00 04 00 00 00 70 00 65 00 00 00 00 00 08 00 00 00 73 00 75 00 62 00 74 00 00 00 00 00 06 00 00 00 79 00 70 00 65 00 00 00 06 00 00 00 69 00 6d 00 67 00 00 00 06 00 00 00 73 00 72 00 63 00 00 00 04 00 00 00 61 00 68 00 00 00 00 00 06 00 00 00 72 00 65 00 66 00 00 00 04 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -1772,6 +1834,7 @@ rule Trojan_Win32_VB_TT_2147626797_0
         $x_1_4 = "\\Count.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1796,6 +1859,7 @@ rule Trojan_Win32_VB_SV_2147626950_0
         $x_1_5 = "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Microsoftword\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1820,6 +1884,7 @@ rule Trojan_Win32_VB_TE_2147627387_0
         $x_1_5 = "fuwukongjian" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1847,6 +1912,7 @@ rule Trojan_Win32_VB_TF_2147627388_0
         $x_1_8 = "sql delete RasAutoConn" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1871,6 +1937,7 @@ rule Trojan_Win32_VB_TH_2147627498_0
         $x_1_2 = "just4yourname.bounceme.net" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1892,6 +1959,7 @@ rule Trojan_Win32_VB_TI_2147627499_0
         $x_1_2 = {52 c7 85 5c ff ff ff 01 00 00 00 c7 85 54 ff ff ff 02 00 00 00 e8 ?? ?? 00 00 8b 8d ?? ff ff ff 8b 95 ?? ff ff ff 83 ec 10 89 45 a0 8b c4 c7 45 98 08 20 00 00 6a 01 89 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1913,6 +1981,7 @@ rule Trojan_Win32_VB_TK_2147627655_0
         $x_1_2 = {fd e7 08 00 94 01 36 0a 00 54 ff 44 ff 34 ff 24 ff 14 ff 00 10 27 54 ff 0b 1a 00 04 00 70 6a ff 35 54 ff 00 2e 04 fc fe 04 00 ff 05 00 00 24 01 00 0d 14 00 02 00 08 00 ff 0d 50 00 03 00 6c fc fe 4a f5 03 00 00 00 c7 2f fc fe 1a 00 ff 1c 56 01 00 c0 04 fc fe 04 00 ff 05 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1940,6 +2009,7 @@ rule Trojan_Win32_VB_AAK_2147628130_0
         $x_1_8 = "IEXPLORERSS.BAK" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1968,6 +2038,7 @@ rule Trojan_Win32_VB_UD_2147628651_0
         $x_1_6 = "caixa.com.br" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1991,6 +2062,7 @@ rule Trojan_Win32_VB_UF_2147628757_0
         $x_1_4 = {43 00 72 00 65 00 61 00 74 00 65 00 53 00 68 00 6f 00 72 00 74 00 63 00 75 00 74 00 [0-8] 43 00 6f 00 6e 00 74 00 65 00 78 00 74 00 4d 00 75 00 2e 00 64 00 6c 00 6c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2014,6 +2086,7 @@ rule Trojan_Win32_VB_ZU_2147628942_0
         $x_1_4 = "ShellExecuteA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2044,6 +2117,7 @@ rule Trojan_Win32_VB_UV_2147630025_0
         $x_1_11 = "Gusanito.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2070,6 +2144,7 @@ rule Trojan_Win32_VB_VE_2147630342_0
         $x_1_4 = {0b 0f 00 04 00 23 78 ff 2a 23 74 ff 76 13 00 2a 23 70 ff 04 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2102,6 +2177,7 @@ rule Trojan_Win32_VB_VM_2147630801_0
         $x_1_13 = "\\Windows NT\\CurrentVersion\\Winlogon" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_5_*) and 5 of ($x_1_*))) or
             ((4 of ($x_10_*) and 1 of ($x_5_*) and 5 of ($x_1_*))) or
@@ -2129,6 +2205,7 @@ rule Trojan_Win32_VB_VS_2147630871_0
         $x_1_3 = "echo o nnforce.3322.org  >" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2153,6 +2230,7 @@ rule Trojan_Win32_VB_VT_2147630891_0
         $x_10_5 = {eb 0f 8b 45 e8 03 45 b4 0f 80 d8 00 00 00 89 45 e8 8b 45 e8 3b 45 b0 7f 7c c7 45 d0 01 00 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2179,6 +2257,7 @@ rule Trojan_Win32_VB_WE_2147631277_0
         $x_1_4 = ":\\Recycler\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2199,6 +2278,7 @@ rule Trojan_Win32_VB_WJ_2147631739_0
         $x_1_1 = ":\\Documents and Settings\\usuario\\Mis documentos\\SCrypter\\Stub\\SCP.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2222,6 +2302,7 @@ rule Trojan_Win32_VB_WU_2147632068_0
         $x_1_4 = {ff ff ff 8d 95 20 ff ff ff c7 85 ?? ff ff ff 08 40 00 00 c7 85 ?? ff ff ff ?? ?? 40 00 89 9d 20 ff ff ff ff d6 8d 95 ?? ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2246,6 +2327,7 @@ rule Trojan_Win32_VB_ABH_2147634514_0
         $x_1_5 = "del %0" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -2274,6 +2356,7 @@ rule Trojan_Win32_VB_AAT_2147634636_0
         $x_10_4 = "{85AEFBE8-763F-0647-899C-A93278894599}" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2301,6 +2384,7 @@ rule Trojan_Win32_VB_ABA_2147636570_0
         $x_1_5 = {6c 00 68 00 79 00 26 00 [0-8] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -2327,6 +2411,7 @@ rule Trojan_Win32_VB_ABJ_2147637030_0
         $x_2_7 = "shenjingyuanie520" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             ((5 of ($x_2_*))) or
@@ -2357,6 +2442,7 @@ rule Trojan_Win32_VB_ABK_2147637031_0
         $x_1_7 = "\\Documents and Settings\\All Users\\Application Data\\now.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -2381,6 +2467,7 @@ rule Trojan_Win32_VB_ABM_2147637360_0
         $x_1_5 = "<a href= http://www.qq.com/>111111111111111111</a>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2405,6 +2492,7 @@ rule Trojan_Win32_VB_ABN_2147637427_0
         $x_1_5 = "c:\\zc.bat&echo del" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2429,6 +2517,7 @@ rule Trojan_Win32_VB_ABO_2147637524_0
         $x_1_5 = {5c 00 7e 81 af 8b 54 00 54 00 2e 00 54 00 54}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2452,6 +2541,7 @@ rule Trojan_Win32_VB_ABP_2147637525_0
         $x_1_4 = {47 00 3a 00 5c 00 11 62 84 76 56 00 42 00 5c 00 a9 8b 7e 76 a6 5e 1c 64 22 7d d3 7e 9c 67 bb 53 07 63 9a 5b 30 57 40 57 5c 00 75 00 39 00 75 00 38 00 0b 4e 7d 8f 4b 6d d5 8b 5c 00 85 8f 32 00 f7 53 b0 65 20 00 43 00 46 00 5c 00 74 00 65 00 6e 00 6e 00 65 00 6e 00 74 00 2e 00 76 00 62 00 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2476,6 +2566,7 @@ rule Trojan_Win32_VB_ABQ_2147637609_0
         $x_1_5 = {51 00 51 00 3a 00 00 00 0e 00 00 00 52 00 30 00 52 00 2e 00 74 00 78 00 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2500,6 +2591,7 @@ rule Trojan_Win32_VB_ABR_2147637627_0
         $x_1_5 = {51 00 51 00 3a 00 00 00 0e 00 00 00 52 00 30 00 52 00 2e 00 74 00 78 00 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2524,6 +2616,7 @@ rule Trojan_Win32_VB_ABS_2147637666_0
         $x_1_5 = {5c 00 7e 81 af 8b 54 00 54 00 2e 00 54 00 54}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2546,6 +2639,7 @@ rule Trojan_Win32_VB_ABT_2147637673_0
         $x_1_3 = {31 00 2a 00 2a 00 49 00 6e 00 74 00 65 00 72 00 6e 00 65 00 74 00 20 00 45 00 78 00 70 00 6c 00 6f 00 72 00 65 00 72 00 5f 00 53 00 65 00 72 00 76 00 65 00 72 00 [0-218] 31 00 2a 00 2a 00 58 00 54 00 50 00 54 00 61 00 73 00 6b 00 50 00 61 00 6e 00 65 00 6c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2570,6 +2664,7 @@ rule Trojan_Win32_VB_ABU_2147637972_0
         $x_1_5 = "8746457654ugejrwtbrwebtrwbtrgdfjgdfjgfdhgfdhgd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2593,6 +2688,7 @@ rule Trojan_Win32_VB_ABV_2147638385_0
         $x_1_4 = {5c 00 0b 4e 7d 8f 2d 00 2d 00 2d 00 2d 00 2d 00 2d 00 00 4e 74 65 57 59 d2 63 f6 4e 5c 00 0b 4e 7d 8f 89 5b c5 88 ba 4e b6 5b d2 63 f6 4e 5c 00 e5 5d 0b 7a 31 00 2e 00 76 00 62 00 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2615,6 +2711,7 @@ rule Trojan_Win32_VB_ABW_2147638427_0
         $x_1_3 = {8b ff 2b 00 32 00 43 00 49 00 63 00 6f 00 73 00 2a 00 ?? ?? b0 ff 64 00 61 00 64 00 6a 00 5f 00 66 00 70 00 74 00 61 00 6e 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? e0 ff 64 00 69 00 76 00 5f 00 6d 00 36 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 60 00 30 00 6d 00 31 00 69 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2637,6 +2734,7 @@ rule Trojan_Win32_VB_ABX_2147638436_0
         $x_1_3 = {09 4e db 6b 36 52 5c 4f 20 00 51 00 51 00 3a 00 35 00 31 00 30 00 37 00 38 00 34 00 35 00 31 00 38 00 1a 00 43 00 6f 00 6d 00 70 00 61 00 6e 00 79 00 4e 00 61 00 6d 00 65 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2662,6 +2760,7 @@ rule Trojan_Win32_VB_ABY_2147638499_0
         $x_3_6 = {66 64 66 66 73 67 66 31 00 00 00 00 66 66 67 66 67 66 67 66 32 00 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2687,6 +2786,7 @@ rule Trojan_Win32_VB_ABZ_2147638500_0
         $x_1_3 = {66 66 67 66 67 66 67 66 32 00 00 00 66 64 66 66 73 67 66 31 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2712,6 +2812,7 @@ rule Trojan_Win32_VB_ACA_2147638541_0
         $x_1_6 = {32 00 35 00 33 00 31 00 33 00 33 00 33 00 66 00 64 00 64 00 64 00 64 00 67 00 64 00 64 00 ?? ?? ?? ?? ?? ?? ?? ?? 2e 00 35 00 36 00 39 00 39 00 35 00 2e 00 63 00 6f 00 6d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2735,6 +2836,7 @@ rule Trojan_Win32_VB_ACB_2147638544_0
         $x_1_4 = "%B6%AB%B7%BD%C9%F1%C6%F0%D7%EE%D0%C2%CD%BC&oq=dfs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2758,6 +2860,7 @@ rule Trojan_Win32_VB_ACC_2147638545_0
         $x_1_4 = {63 00 6f 00 75 00 6e 00 74 00 2f 00 69 00 70 00 2e 00 61 00 73 00 70 00 3f 00 61 00 63 00 74 00 69 00 6f 00 6e 00 3d 00 69 00 6e 00 73 00 74 00 61 00 6c 00 6c 00 26 00 6d 00 61 00 63 00 3d 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 26 00 6c 00 69 00 61 00 6e 00 6d 00 65 00 6e 00 67 00 3d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2780,6 +2883,7 @@ rule Trojan_Win32_VB_ACD_2147638596_0
         $x_1_3 = {73 00 68 00 6f 00 75 00 73 00 68 00 6f 00 75 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 74 00 61 00 73 00 6b 00 6b 00 69 00 6c 00 6c 00 20 00 2f 00 66 00 20 00 2f 00 69 00 6d 00 20 00 5a 00 68 00 75 00 44 00 6f 00 6e 00 67 00 46 00 61 00 6e 00 67 00 79 00 75 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2802,6 +2906,7 @@ rule Trojan_Win32_VB_ACE_2147638616_0
         $x_1_3 = "HAH@KGOI@OEM@FIKDBIJFICFLAOHMKHLIM@FBJLEGGALHDGGGGFJ@OHMOHPBDOJGCEMOKDGBMALADBJGL@NKDCPB@EGDIIKGBI@" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2825,6 +2930,7 @@ rule Trojan_Win32_VB_ACF_2147638714_0
         $x_1_4 = "taskkill /f /im ZhuDongFangyu.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2847,6 +2953,7 @@ rule Trojan_Win32_VB_ACG_2147638843_0
         $x_1_3 = {64 00 72 00 76 00 2e 00 74 00 78 00 74 00 61 00 30 00 43 00 3a 00 5c 00 57 00 49 00 4e 00 44 00 4f 00 57 00 53 00 5c 00 77 00 64 00 6d 00 61 00 75 00 64 00 2e 00 64 00 72 00 76 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2869,6 +2976,7 @@ rule Trojan_Win32_VB_ACH_2147638866_0
         $x_1_3 = "HAH@KGOI@OEM@FIKDBIJFICFLAOHMKHLIM@FBJLEALALHDHMIMFJHMGFPB@NE@" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2890,6 +2998,7 @@ rule Trojan_Win32_VB_ADF_2147640941_0
         $x_1_2 = "WH#EN%UCOM&EBACKI*WI(LLF@ICKY!OU" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2914,6 +3023,7 @@ rule Trojan_Win32_VB_ADM_2147641193_0
         $x_2_5 = "txt.asp?host=" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2937,6 +3047,7 @@ rule Trojan_Win32_VB_ADR_2147641833_0
         $x_1_4 = "g.cn/g.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2963,6 +3074,7 @@ rule Trojan_Win32_VB_ADZ_2147642356_0
         $x_1_7 = {67 00 6d 00 48 00 54 00 54 00 50 00 5f 00 52 00 45 00 51 00 55 00 45 00 53 00 54 00 ?? ?? ?? ?? ?? ?? ?? ?? 2e 00 74 00 6d 00 70 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 53 00 63 00 72 00 69 00 70 00 74 00 69 00 6e 00 67 00 2e 00 46 00 69 00 6c 00 65 00 53 00 79 00 73 00 74 00 65 00 6d 00 4f 00 62 00 6a 00 65 00 63 00 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2988,6 +3100,7 @@ rule Trojan_Win32_VB_YAK_2147642538_0
         $x_1_3 = "c.greenclick.cn/click?pid=23&mid=19483&channel=2&pt=df" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3011,6 +3124,7 @@ rule Trojan_Win32_VB_YAB_2147642539_0
         $x_1_4 = "NaNianHuaKai" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3034,6 +3148,7 @@ rule Trojan_Win32_VB_AEP_2147642925_0
         $x_1_4 = "Nonauthoritative host not found" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3057,6 +3172,7 @@ rule Trojan_Win32_VB_AEQ_2147642952_0
         $x_1_4 = "AppendChunk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3080,6 +3196,7 @@ rule Trojan_Win32_VB_AER_2147642976_0
         $x_2_4 = "Maxthon2_View" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3103,6 +3220,7 @@ rule Trojan_Win32_VB_YAF_2147643078_0
         $x_1_4 = "|104_8|105_9|106_*|107_+|109_-|110_.|111_/|13_Enter|" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3128,6 +3246,7 @@ rule Trojan_Win32_VB_AFX_2147644615_0
         $x_1_6 = "Hijack This" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -3152,6 +3271,7 @@ rule Trojan_Win32_VB_AGB_2147645626_0
         $x_1_2 = {43 00 3a 00 5c 00 43 00 61 00 6e 00 64 00 79 00 5c 00 [0-37] 5c 00 50 00 72 00 6f 00 6a 00 65 00 6b 00 74 00 31 00 2e 00 76 00 62 00 70 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3173,6 +3293,7 @@ rule Trojan_Win32_VB_AGE_2147645775_0
         $x_1_2 = {8d 45 08 ff 75 ?? 89 45 ?? c7 45 ?? 03 40 00 00 8d 5d ?? e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3202,6 +3323,7 @@ rule Trojan_Win32_VB_AGF_2147645825_0
         $x_1_10 = "http://www.fixarasana.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -3230,6 +3352,7 @@ rule Trojan_Win32_VB_AGT_2147647084_0
         $x_1_3 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3250,6 +3373,7 @@ rule Trojan_Win32_VB_AHC_2147648825_0
         $x_1_1 = {6d 43 6f 6f 6b 69 65 41 6e 64 43 61 63 68 65 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 6d 6f 64 45 6e 61 62 6c 65 50 72 69 76 69 6c 65 67 65 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 6d 4c 6f 63 61 6c 4d 41 43 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 6d 6f 64 48 6f 6f 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3273,6 +3397,7 @@ rule Trojan_Win32_VB_AHQ_2147650644_0
         $x_2_4 = "ReqTongji" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3294,6 +3419,7 @@ rule Trojan_Win32_VB_AIR_2147658198_0
         $x_1_2 = {8b 4d e0 8b 55 ?? 51 52 ff d3 8b d0 8d 4d e0 ff d6 b8 02 00 00 00 03 c7 0f 80 86 00 00 00 8b f8 b8 02 00 00 00 e9 42 ff ff ff 8b 55 e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3317,6 +3443,7 @@ rule Trojan_Win32_VB_AIX_2147658936_0
         $x_1_4 = "VBRUN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3342,6 +3469,7 @@ rule Trojan_Win32_VB_YDH_2147720063_0
         $x_1_5 = "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Domains\\taobao.com\\*" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3365,6 +3493,7 @@ rule Trojan_Win32_VB_13710_0
         $x_1_4 = "vbasssssrCopy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

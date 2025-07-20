@@ -16,6 +16,7 @@ rule Trojan_Win32_Tinba_A_2147657487_0
         $x_1_2 = {8b 76 20 03 75 08 8b 7d 08 03 3e 83 c6 04 ba 00 00 00 00 b8 07 00 00 00 f7 e2 8b d0 0f b6 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Tinba_F_2147695095_0
         $x_1_7 = {81 3e 47 45 54 20 74 17 81 3e 50 4f 53 54 0f 85 ?? ?? ?? ?? 80 7e 04 20 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -68,6 +70,7 @@ rule Trojan_Win32_Tinba_I_2147725592_0
         $x_1_1 = {68 85 ad ff b3 e8 ?? ?? ?? 00 89 45 fc 8b 4d fc 68 ab 9b e1 ab 51 e8 ?? ?? ?? 00 83 c4 08 89 45 f8 6a 40 68 00 10 00 00 68 ?? ?? ?? 00 6a 00 ff 55 f8 89 45 fc 68 9c ea 25 e4 68 ?? ?? ?? 00 68 ?? ?? ?? 00 ff 75 fc e8 ?? ?? ?? 00 ff 55 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win32_Tinba_DSK_2147740930_0
         $x_2_4 = {8b 85 50 ff ff ff 05 01 00 00 00 66 8b 4d de 66 81 f1 ea 06 66 89 4d de 89 85 50 ff ff ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -117,6 +121,7 @@ rule Trojan_Win32_Tinba_GC_2147744031_0
         $x_2_1 = {0f af d1 88 95 ?? ?? ?? ?? c7 85 ?? ?? ?? ?? ?? ?? ?? ?? 0f be 85 ?? ?? ?? ?? 69 c0 ?? ?? ?? ?? 88 85 ?? ?? ?? ?? c7 85 ?? ?? ?? ?? ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 81 e9 ?? ?? ?? ?? 2b 8d ?? ?? ?? ?? 8b 95 ?? ?? ?? ?? 2b d1 89 95}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_Win32_Tinba_RL_2147744032_0
         $x_2_1 = {0f be 0c 0a 89 45 ?? 89 4d ?? 8b 45 ?? 0f af 45 ?? 8b 4d ?? 8b 95 ?? ?? ?? ?? 89 8d ?? ?? ?? ?? 89 d1 8b b5 ?? ?? ?? ?? d3 ee 01 f0 8b 75 ?? 01 c6 66 8b 7d ?? 66 81 e7 ?? ?? 66 89 7d ?? 89 75 ?? 8d 45 ?? 66 8b 4d ?? 66 89 c2 66 09 d1 66 89 4d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +168,7 @@ rule Trojan_Win32_Tinba_V_2147744060_0
         $x_2_4 = {8b 45 94 8b 4d ec 81 e1 ?? ?? ?? ?? 89 4d ec 3b 85 ?? ?? ?? ?? 74 ?? 8d 45 ec 8b 4d 90 89 ca 81 c2 ?? ?? ?? ?? c7 45 ec ?? ?? ?? ?? 89 55 90 8a 19 8b 4d 8c 89 ca 81 c2 ?? ?? ?? ?? 89 55 8c 88 19 8b 4d dc 31 c1 89 4d ec 8b 45 94 8b 8d ?? ?? ?? ?? 01 c8 8b 55 a4 81 c2 ?? ?? ?? ?? 89 45 94 89 55 a4 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -186,6 +193,7 @@ rule Trojan_Win32_Tinba_PDSK_2147745484_0
         $x_2_4 = {8a 44 24 4b 04 f1 29 f9 88 84 24 8d 00 00 00 89 4c 24 58 8b 4c 24 74 8a 84 24 87 00 00 00 34 45 85 c9 8b 4c 24 58 8b 7c 24 3c 0f 44 f9 89 7c 24 7c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -211,6 +219,7 @@ rule Trojan_Win32_Tinba_RX_2147747844_0
         $x_1_1 = {c1 c2 05 09 0d ?? ?? ?? ?? 13 0d ?? ?? ?? ?? 81 35 ?? ?? ?? ?? d2 00 00 00 11 0d ?? ?? ?? ?? 83 25 ?? ?? ?? ?? 4f 89 06 89 0d ?? ?? ?? ?? 82 f1 74 83 e1 f7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +241,7 @@ rule Trojan_Win32_Tinba_MI_2147748451_0
         $x_1_1 = {66 81 f3 75 33 66 89 5c 24 6a 66 89 cb 66 09 df 66 89 7c 24 5e 66 89 c7 66 29 f7 66 89 bc 24 0a 02 00 00 8b 44 24 20 39 c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -256,6 +266,7 @@ rule Trojan_Win32_Tinba_BJ_2147787668_0
         $x_1_4 = "6534896790767349067340673497697604767649760349" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -278,6 +289,7 @@ rule Trojan_Win32_Tinba_CC_2147811077_0
         $x_1_2 = {2b c8 89 4d c0 8b 55 84 03 55 90 8b 45 b0 8d 8c 10 bd 01 00 00 89 4d b0 8b 55 bc 2b 55 84 8b 45 90 2b c2 89 45 90 8b 4d bc 69 c9 4d fe ff ff 81 c1 e4 03 00 00 89 4d b0 c7 45 fc ff ff ff ff eb 47}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -303,6 +315,7 @@ rule Trojan_Win32_Tinba_BA_2147813296_0
         $x_1_5 = "IwANei" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -326,6 +339,7 @@ rule Trojan_Win32_Tinba_GZN_2147814244_0
         $x_1_3 = "QueryPerformanceCounter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -348,6 +362,7 @@ rule Trojan_Win32_Tinba_MA_2147831536_0
         $x_1_2 = "CreateMailslotWGetTickCoum" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +388,7 @@ rule Trojan_Win32_Tinba_MA_2147831536_1
         $x_1_5 = "IsProcessorFeaturePresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -394,6 +410,7 @@ rule Trojan_Win32_Tinba_ATB_2147843595_0
         $x_1_1 = {02 03 03 c7 45 ec b4 98 4b c0 02 02 03 03 02 03 03 02 02 03 03 02 02 03 c7 45 ec ?? ?? ?? ?? 03 02 ff 75 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -416,6 +433,7 @@ rule Trojan_Win32_Tinba_RF_2147895082_0
         $x_1_2 = "nosnledomtrtgbominmaFheetISmtBe.a" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -438,6 +456,7 @@ rule Trojan_Win32_Tinba_AMMC_2147905124_0
         $x_2_2 = {88 1a 8b 55 d4 8b 75 c0 8b 7d c0 31 cf 89 7d c0 21 c6 89 75 c0 8b 45 ac 01 c2 89 55 d4}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -460,6 +479,7 @@ rule Trojan_Win32_Tinba_MBZW_2147907375_0
         $x_1_2 = {4f 6c 79 6d 70 69 63 53 74 00 44 65 61 6c 61 68 6f 79 61 00 00 44 65 61 6c 61 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -484,6 +504,7 @@ rule Trojan_Win32_Tinba_AMMF_2147908982_0
         $x_1_4 = "D:\\Maz-milocevic4\\FlashGames.vbp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -505,6 +526,7 @@ rule Trojan_Win32_Tinba_MKV_2147920564_0
         $x_5_1 = {2b c8 03 4d dc 8b 55 f0 03 d1 89 55 f0 8b 45 d8 0f af 45 b4 03 45 cc 8a 4d d0 02 c8 88 4d d0 8b 55 b8 83 c2 02 89 55 b8 8b 45 b8 33 c9 66 8b 08 85 c9 0f 85 f0 fe ff ff}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -526,6 +548,7 @@ rule Trojan_Win32_Tinba_MKA_2147929788_0
         $x_5_1 = {8b 4a 0c 8b 95 ?? ?? ff ff 8a 0c 11 8b 95 ?? ?? ff ff 32 0c 10 8b 95 a8 fe ff ff 88 0c 10 ff d7 8b d0 8d 8d ?? ?? ff ff ff d6 50 6a 6b ff d7 8b d0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -548,6 +571,7 @@ rule Trojan_Win32_Tinba_2147931799_0
         $x_5_1 = {8a 11 88 55 d6 8b 4d f0 03 4d be 89 4d f0 8b 4d f4 03 4d be 89 4d f4 0f b6 4d d6 0f b6 55 d7 c7 45 ?? fb 9e f1 81 33 ca 8b 45 c6 88 08 c7 45 ?? 19 d9 b2 12 e9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -569,6 +593,7 @@ rule Trojan_Win32_Tinba_RLA_2147937534_0
         $x_2_1 = {89 4d e8 8a 75 cb 80 c6 4f 88 75 cb 88 10 8b 45 d8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -590,6 +615,7 @@ rule Trojan_Win32_Tinba_RLB_2147939893_0
         $x_2_1 = {8a 4c 24 38 32 4c 24 5b 88 4c 24 4f 8a 4c 24 4f 6a 05 56 88 4c 04 2c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -611,6 +637,7 @@ rule Trojan_Win32_Tinba_CCJX_2147940071_0
         $x_1_1 = {8b 55 ac c1 e2 ed 33 55 a4 89 55 cc c7 85 ?? ?? ?? ?? ?? ?? ?? ?? 8b 4d b8 03 4d c8 8b 75 d8 d3 e6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -632,6 +659,7 @@ rule Trojan_Win32_Tinba_EDG_2147940174_0
         $x_5_1 = {03 c0 2b 44 24 10 03 c1 89 44 24 24 8b 44 24 40 0f af 44 24 2c 8d 44 10 0a 89 44 24 14 a1 ?? ?? ?? ?? 3b 05}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -654,6 +682,7 @@ rule Trojan_Win32_Tinba_ATI_2147940999_0
         $x_2_2 = {8b 45 c4 33 d2 f7 f6 89 45 c4 ba 71 02 00 00 2b 55 d8 8b 45 c4 33 c2 89 45 c4 68 79 01 00 00 8d 8d 98 fe ff ff 51 ff 15 ?? ?? ?? ?? 8b 55 c0 8b 4d dc d3 e2 8b 4d d8 d3 e2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

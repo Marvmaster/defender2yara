@@ -18,6 +18,7 @@ rule Backdoor_Linux_Blackhole_B_2147795448_0
         $x_1_3 = {53 6f 63 6b 65 74 20 65 72 72 6f 72 0a 00 42 69 6e 64 20 65 72 72 6f 72 0a 00 4c 69 73 74 65 6e 20 65 72 72 6f 72 0a 00 41 63 63 65 70 74 20 65 72 72 6f 72 00 2f 62 69 6e 2f 73 68 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

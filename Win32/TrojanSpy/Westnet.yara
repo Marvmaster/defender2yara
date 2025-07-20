@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Westnet_A_2147682514_0
         $x_4_5 = {2f 31 2f 31 2e 70 68 70 3f 71 3d 31 26 61 3d 35 00 2e 65 78 65 00 [0-21] 68 74 74 70 73 3a 2f 2f}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or
             (all of ($x*))

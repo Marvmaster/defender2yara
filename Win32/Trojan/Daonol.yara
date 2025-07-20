@@ -16,6 +16,7 @@ rule Trojan_Win32_Daonol_A_132991_0
         $x_1_2 = {68 45 01 00 00 8b 44 24 1c 50 8b 44 24 18 50 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Daonol_D_140414_0
         $x_1_7 = "foobarg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_4_*) and 4 of ($x_1_*))) or
@@ -72,6 +74,7 @@ rule Trojan_Win32_Daonol_C_140417_0
         $x_1_5 = "onecare" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -97,6 +100,7 @@ rule Trojan_Win32_Daonol_C_140417_1
         $x_1_3 = {03 5b 3c 8b 7b 50 57 47 c1 e6 10 6a 40 99 b6 30 52 57 56 ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -124,6 +128,7 @@ rule Trojan_Win32_Daonol_E_141392_0
         $x_1_5 = {8a 0a 8a 5c 34 0c 32 cb 8d 98 62 0d 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -147,6 +152,7 @@ rule Trojan_Win32_Daonol_G_145180_0
         $x_1_4 = "\\internet explorer\\iexplore.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +175,7 @@ rule Trojan_Win32_Daonol_H_145273_0
         $x_1_3 = {80 a8 12 01 6a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +196,7 @@ rule Trojan_Win32_Daonol_I_145289_0
         $x_1_1 = {40 80 38 5a 74 03 83 c2 f8 48 ff d2 [0-16] e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -209,6 +217,7 @@ rule Trojan_Win32_Daonol_J_145370_0
         $x_1_1 = {40 00 40 80 38 5a 74 03 83 c2 f8 48 ff d2 [0-40] b8 ?? ?? ?? ?? b8 ?? ?? ?? ?? e8 ?? ?? ff ff e8 ?? ?? ff ff e8 ?? ?? ff ff e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +241,7 @@ rule Trojan_Win32_Daonol_A_145873_0
         $x_1_3 = {bd 19 46 00 00 81 c6 ?? ?? ?? ?? 53 46 8a 24 24 30 24 2e 46 (ff d7|e8 ?? ?? ?? ??) 80 eb ?? 4d 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -253,6 +263,7 @@ rule Trojan_Win32_Daonol_L_145940_0
         $x_1_2 = {55 ff 53 04 ff d0 85 c0 0f 84 ?? ?? ?? ?? 56 ff 53 10 97 6a 00 6a 01 50 8b 6b 24 03 6d 3c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -274,6 +285,7 @@ rule Trojan_Win32_Daonol_M_148044_0
         $x_1_2 = {8d 4d d0 66 4b [0-10] ff 34 37 [0-10] 8b 49 fc [0-10] 31 c8 [0-10] 03 0c 06 06 46 [0-10] c1 (e0|c0) 08 d3 c8 [0-10] 46 46 [0-10] d3 c8 [0-10] 88 (64|44) 37 ff [0-10] 4f [0-10] 75 [0-10] 46 [0-10] (81|83) c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -297,6 +309,7 @@ rule Trojan_Win32_Daonol_N_154047_0
         $x_1_4 = {ff 74 87 fc 81 fe ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

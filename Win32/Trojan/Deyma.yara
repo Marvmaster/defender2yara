@@ -16,6 +16,7 @@ rule Trojan_Win32_Deyma_DSK_2147744951_0
         $x_2_1 = {6b c0 09 a3 ?? ?? ?? ?? 8b 85 2c fe ff ff 40 89 85 2c fe ff ff 8b 85 44 fe ff ff 33 05 ?? ?? ?? ?? 89 85 44 fe ff ff 8b 85 e4 fe ff ff b9 2c 01 00 00 ff e0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Deyma_ME_2147812923_0
         $x_5_2 = {55 8b ec 83 ec 08 89 4d fc 8b 45 fc 89 45 f8 6b 45 08 18 8b 4d f8 03 01 8b e5 5d c2 04 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Deyma_MBHK_2147852138_0
         $x_1_2 = {54 00 4e 00 65 00 7a 00 6f 00 76 00 69 00 64 00 61 00 66 00 69 00 77 00 69 00 20 00 67 00 6f 00 7a 00 61 00 67 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Deyma_MBJZ_2147893343_0
         $x_1_2 = "vdwxfythdrnramdpevwcxqtdglktg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_Win32_Deyma_MBJZ_2147893343_1
         $x_1_3 = "iferpbjgyujqbltcthoqqwfmfnwsrulusnnfucvlrkezmxxkqwimmtxtxlclphjojlsovwmujhlmayqvhxufkmwn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +131,7 @@ rule Trojan_Win32_Deyma_ARA_2147899010_0
         $x_2_1 = {80 34 30 41 40 3b c1 72 f7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

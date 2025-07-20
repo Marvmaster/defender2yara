@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Conficker_A_2147622697_0
         $x_1_4 = {50 ff d7 6a 35 8d 85 18 00 35 ?? ?? ?? ?? 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDropper_Win32_Conficker_B_2147624129_0
         $x_1_4 = {45 14 e7 ad a6 9c 68 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

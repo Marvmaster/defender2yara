@@ -19,6 +19,7 @@ rule Trojan_WinNT_Almanahe_B_2147595288_0
         $x_1_4 = {39 3e 75 54 81 7e 18 73 45 72 76}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_WinNT_Almanahe_A_2147645725_0
         $x_1_3 = "E:\\DLMon5\\drv\\obj\\i386\\RioDrvs.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_WinNT_Almanahe_A_2147645725_1
         $x_1_4 = "E:\\DLMon5\\drivers\\obj\\i386\\SynTPS.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

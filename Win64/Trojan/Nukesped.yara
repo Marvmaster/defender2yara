@@ -18,6 +18,7 @@ rule Trojan_Win64_Nukesped_MA_2147832890_0
         $x_2_3 = {f0 00 22 20 0b 02 0a 00 00 ?? 07 00 00 5c 03 00 00 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_3_*))) or

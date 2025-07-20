@@ -18,6 +18,7 @@ rule Ransom_Win32_Paradise_R_2147727633_0
         $x_1_4 = "with respect Ransomware Paradise Team" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win32_Paradise_A_2147744611_0
         $x_1_4 = "delete shadows /all /quiet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Ransom_Win32_Paradise_PA_2147745500_0
         $x_1_11 = "@helprestore" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Ransom_Win32_Paradise_PA_2147745500_1
         $x_1_5 = "All your files have been blocked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule Ransom_Win32_Paradise_BB_2147763777_0
         $x_5_11 = "%appdata%\\_uninstalling_.png" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 5 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -162,6 +167,7 @@ rule Ransom_Win32_Paradise_BC_2147763778_0
         $x_1_4 = "Do not rename encrypted files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -192,6 +198,7 @@ rule Ransom_Win32_Paradise_BD_2147763779_0
         $x_1_10 = "</CRYPTED>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
@@ -224,6 +231,7 @@ rule Ransom_Win32_Paradise_BG_2147763961_0
         $x_10_7 = "delete shadows /all /quiet" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -250,6 +258,7 @@ rule Ransom_Win32_Paradise_BI_2147766270_0
         $x_1_2 = {0f 45 d0 8b 4d d8 8b 45 b0 88 14 01 83 3d 98 37 42 00 00 75 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +281,7 @@ rule Ransom_Win32_Paradise_BA_2147766632_0
         $x_1_2 = {56 69 72 75 73 20 73 69 7a 65 [0-32] 62 79 74 65 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +308,7 @@ rule Ransom_Win32_Paradise_BN_2147768912_0
         $x_1_6 = "http://prt-recovery.support/chat/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

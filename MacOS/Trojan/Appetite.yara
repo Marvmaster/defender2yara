@@ -17,6 +17,7 @@ rule Trojan_MacOS_Appetite_A_2147919804_0
         $x_1_2 = {42 09 9c bd d0 fe ff ff 48 63 05 6d 46 00 00 48 85 c0 7e 2a 48 89 85 c0 fe ff ff c7 85 c8 fe ff ff 00 00 00 00 31 d2 bf 00 04 00 00 ?? ?? ?? ?? ?? ?? ?? 31 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

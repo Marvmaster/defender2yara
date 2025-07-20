@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Loyeetro_A_2147721656_0
         $x_1_4 = "start /b \"\" cmd /c del \"%%~f0\"&exit /b" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanSpy_Win32_Loyeetro_B_2147724431_0
         $x_1_4 = "GET %s HTTP/1.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanSpy_Win32_Loyeetro_KS_2147758886_0
         $x_1_5 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

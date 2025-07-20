@@ -19,6 +19,7 @@ rule Trojan_Win32_TorrentLocker_ASC_2147917081_0
         $x_1_4 = "koeytusi4uytrfsehdf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

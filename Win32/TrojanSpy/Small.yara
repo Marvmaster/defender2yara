@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Small_DI_2147602510_0
         $x_1_4 = {6f 77 3d 6f 70 74 69 6f 6e 73 00 00 77 6d 6b 3a 70 61 79 74 6f 3f 50 75 72 73 65 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

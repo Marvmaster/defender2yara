@@ -19,6 +19,7 @@ rule Trojan_Win32_Etaclef_A_2147656118_0
         $x_1_4 = "DLL_STARTER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

@@ -17,6 +17,7 @@ rule MonitoringTool_Win32_StaffCop_A_252013_0
         $x_5_3 = "Staffcop" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Pingbed_A_2147629380_0
         $x_1_2 = {68 e8 03 00 00 8b f0 ff 15 ?? ?? ?? ?? 3b ?? 76 ?? 56 ?? 68 ff 0f 1f 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Pingbed_A_2147629380_1
         $x_1_4 = {8a 14 37 8d 04 37 8a ca c0 e1 03 c0 ea 05 0a ca 88 08 8a 54 37 ff 32 d1 47 3b 7c 24 14 88 10 72 df}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule TrojanDownloader_Win32_Pingbed_B_2147633372_0
         $x_1_3 = {80 bd 85 f9 ff ff 75 75 16 80 bd 86 f9 ff ff 69 75 0d 80 bd 87 f9 ff ff 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule TrojanDownloader_Win32_Pingbed_C_2147645824_0
         $x_1_2 = "!@#tiuq#@!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

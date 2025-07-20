@@ -17,6 +17,7 @@ rule Trojan_Win32_IStartSurf_DSK_2147742755_0
         $x_2_2 = {8b 45 dc 83 c0 12 50 ff 75 d4 8b 45 dc ff 70 04 8b 45 dc 8b 4d d8 03 08 51 e8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_IStartSurf_VDSK_2147743754_0
         $x_2_2 = {89 45 e8 89 7d f8 03 c0 83 f1 3a 8b 45 cc 40 89 7d d4 89 45 cc 3b 45 10 0f 82}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_IStartSurf_PVD_2147746162_0
         $x_2_2 = {8a 0c 02 8b 45 20 8a 04 06 32 c1 8b 4d 18 88 04 0e 8b 45 b4 89 45 d4 8b 45 cc 89 45 ec}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_IStartSurf_MG_2147749156_0
         $x_1_2 = {33 0c ba 81 e1 ?? ?? ?? ?? 33 0c ba 8b c1 d1 e9 83 e0 ?? 69 c0 ?? ?? ?? ?? 33 c1 33 84 ba ?? ?? ?? ?? 89 04 ba 47 3b fe 7c 04 00 8b 4c ba}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_Win32_IStartSurf_PVS_2147749238_0
         $x_2_3 = {8b 40 36 8b 4d d8 8b 04 01 89 45 e0 8b 45 e0 33 d2 b9 00 00 01 00 f7 f1 8b 45 e0 2b c2 89 45 e0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +134,7 @@ rule Trojan_Win32_IStartSurf_PVK_2147750104_0
         $x_2_3 = {8b 40 36 8b 4d d8 8b 04 01 89 45 e0 8b 45 e0 33 d2 b9 00 00 01 00 f7 f1 8b 45 e0 2b c2 89 45 e0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +156,7 @@ rule Trojan_Win32_IStartSurf_PDSK_2147750139_0
         $x_2_1 = {88 4d ff 8a 04 02 32 c1 8b 4d 10 88 04 0e 8b 45 0c 89 45 e4 8b 45 c8 89 45 f4 83 ca 76}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +180,7 @@ rule Trojan_Win32_IStartSurf_KVP_2147750527_0
         $x_2_3 = {8b 40 36 8b 4d d8 8b 04 01 89 45 e0 8b 45 e0 33 d2 b9 00 00 01 00 f7 f1 8b 45 e0 2b c2 89 45 e0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +205,7 @@ rule Trojan_Win32_IStartSurf_KDS_2147750848_0
         $x_2_4 = {8b 40 36 8b 4d d8 8b 04 01 89 45 e0 8b 45 e0 33 d2 b9 00 00 01 00 f7 f1 8b 45 e0 2b c2 89 45 e0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -220,6 +229,7 @@ rule Trojan_Win32_IStartSurf_VSD_2147751448_0
         $x_2_3 = {8b 40 36 8b 4d d8 8b 04 01 89 45 e0 8b 45 e0 33 d2 b9 00 00 01 00 f7 f1 8b 45 e0 2b c2 89 45 e0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +253,7 @@ rule Trojan_Win32_IStartSurf_VDP_2147751745_0
         $x_2_3 = {8b 40 36 8b 4d ?? 8b 04 01 89 45 e0 8b 45 e0 33 d2 b9 00 00 01 00 f7 f1 8b 45 e0 2b c2 89 45 e0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -266,6 +277,7 @@ rule Trojan_Win32_IStartSurf_GM_2147752342_0
         $x_1_3 = {33 c8 8b 45 c8 03 45 cc 88 08 [0-48] 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -287,6 +299,7 @@ rule Trojan_Win32_IStartSurf_PDK_2147752584_0
         $x_2_1 = {8b 4d e0 c1 e9 05 03 4d b4 33 c1 8b 55 e4 2b d0 89 55 e4 8b 45 c8 2b 45 b0 89 45 c8 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -310,6 +323,7 @@ rule Trojan_Win32_IStartSurf_DSP_2147752813_0
         $x_2_3 = {8b 40 36 8b 4d d8 8b 04 01 89 45 e0 8b 45 e0 33 d2 b9 00 00 01 00 f7 f1 8b 45 e0 2b c2 89 45 e0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -333,6 +347,7 @@ rule Trojan_Win32_IStartSurf_PVE_2147753884_0
         $x_2_3 = {8b 40 36 8b 4d d8 8b 04 01 89 45 e0 8b 45 e0 33 d2 b9 00 00 01 00 f7 f1 8b 45 e0 2b c2 89 45 e0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -354,6 +369,7 @@ rule Trojan_Win32_IStartSurf_PVA_2147755886_0
         $x_2_1 = {0f be 08 8b 45 ?? 33 d2 f7 75 ?? 0f be 84 15 ?? ff ff ff 33 c8 8b 45 ?? 03 45 ?? 88 08 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -380,6 +396,7 @@ rule Trojan_Win32_IStartSurf_PVB_2147756268_0
         $x_1_6 = {6a 04 58 6b c0 00 8b 4d e0 8b 55 e4 89 14 01 6a 04 58 c1 e0 00 8b 4d e0 8b 55 dc 89 14 01 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -401,6 +418,7 @@ rule Trojan_Win32_IStartSurf_PVC_2147756527_0
         $x_2_1 = {8b 45 14 8a 04 02 8b 55 10 32 c1 88 04 16 0f be f1 8b c6 c1 f8 02 83 e0 0f 83 f8 04 0f 83}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -424,6 +442,7 @@ rule Trojan_Win32_IStartSurf_DSA_2147760552_0
         $x_1_3 = {8b 40 36 8b 4d ?? 8b 04 01 89 45 e0 8b 45 e0 33 d2 b9 00 00 01 00 f7 f1 8b 45 e0 2b c2 89 45 e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -445,6 +464,7 @@ rule Trojan_Win32_IStartSurf_DA_2147777650_0
         $x_1_1 = {b8 24 00 00 00 8b 3e ba c3 00 00 00 0f 45 d0 33 c0 8d 8f ?? ?? ?? ?? 3b fe ?? ?? 3b ce ?? ?? 8b 0e 30 14 01 40 3d 00 06 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_WinNT_Frethog_AD_2147602288_0
         $x_2_6 = {3b 7d 1c 75 09 c7 45 28 06 00 00 80 eb 0b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_2_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -45,6 +46,7 @@ rule Trojan_WinNT_Frethog_AE_2147606983_0
         $x_1_1 = {81 7d f0 4d 5a 91 11 75 07 c6 05 ?? ?? 01 00 01 81 7d f0 4b 43 55 46 75 07 c6 05 ?? ?? 01 00 00 33 c9 8a 0d ?? ?? 01 00 85 c9 75 09 81 7d f0 4b 43 55 46 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

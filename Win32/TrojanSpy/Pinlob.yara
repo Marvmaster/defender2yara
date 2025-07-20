@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Pinlob_A_2147619309_0
         $x_1_2 = {d4 da cf df 00 00 00 00 25 64 00 00 cf df 00 00 25 73 00 00 54 77 65 6c 76 65 53 74 6f 72 79 00 50 4f 53 54 20 2f 25 73 20 48 54 54 50 2f 31 2e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

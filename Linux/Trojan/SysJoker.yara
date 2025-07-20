@@ -21,6 +21,7 @@ rule Trojan_Linux_SysJoker_A_2147810734_0
         $x_1_6 = {48 89 c7 e8 ?? ?? 00 00 c7 45 ec 00 00 00 00 48 8d 85 f8 fc ff ff ba b5 ea 45 00 be 28 27 68 00 48 89 c7 e8 ?? ?? 00 00 48 8d 85 f0 fc ff ff ba 30 27 68 00 be ac e9 45 00 48 89 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

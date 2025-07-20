@@ -21,6 +21,7 @@ rule Trojan_MSIL_Yakbeex_MBK_2147837889_0
         $x_1_6 = "GetTempFileName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_MSIL_Yakbeex_NZQ_2147838090_0
         $x_1_3 = "DisableAntiSpyware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_MSIL_Yakbeex_PSEE_2147899361_0
         $x_1_4 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

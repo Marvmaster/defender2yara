@@ -20,6 +20,7 @@ rule VirTool_Win32_Ofsenot_A_2147814858_0
         $x_1_5 = "src/cmd/inject.rs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Backdoor_Win32_Polif_A_2147668399_0
         $x_1_3 = {c6 44 24 02 4d c6 44 24 03 5a c7 44 24 04 90 00 03 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_MSIL_Mamut_EYE_2147826896_0
         $x_1_6 = "GetExecutingAssembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_Mamut_MBU_2147838481_0
         $x_1_2 = "BE14D8CB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_MSIL_Mamut_RPQ_2147838787_0
         $x_1_1 = {16 2d cc 11 04 11 05 09 11 05 09 8e 69 5d 91 07 11 05 91 61 d2 9c 11 05 17 58 13 05 11 05 07 8e 69 16 2d fc 32 da 11 04 13 06 1b 2c d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_MSIL_Mamut_RPU_2147840896_0
         $x_1_1 = {02 7b 06 00 00 04 6f 11 00 00 0a 18 1f 64 02 7b 03 00 00 04 5b 6b 73 14 00 00 0a 6f 15 00 00 0a 26 06 17 58 0a 06 02 7b 03 00 00 04 fe 04 0b 07 2d ce}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_MSIL_Mamut_GFM_2147842672_0
         $x_1_3 = "TripleDESCryptoServiceProvider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Trojan_MSIL_Mamut_GFK_2147845124_0
         $x_1_8 = "SELECT PROCESSID, NAME, CREATIONDATE, COMMANDLINE FROM WIN32_PROCESS WHERE NAME = '{0}'" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Trojan_MSIL_Mamut_AA_2147845581_0
         $x_1_1 = {11 04 28 28 00 00 06 07 8e 69 5e 13 04 08 09 07 11 04 e0 9a a2 09 17 58 0d 00 09 06 fe 04 13 16 11 16 2d db}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +186,7 @@ rule Trojan_MSIL_Mamut_NM_2147846351_0
         $x_1_2 = "Packman" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +210,7 @@ rule Trojan_MSIL_Mamut_NM_2147846351_1
         $x_2_3 = "LevsSpoofer" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -223,6 +232,7 @@ rule Trojan_MSIL_Mamut_KAB_2147851490_0
         $x_10_1 = {16 6a 0b 08 28 ?? 00 00 0a 23 00 00 00 00 00 00 e0 3f 28 ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 0c 07 17 6a 58 0b 07 20}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -245,6 +255,7 @@ rule Trojan_MSIL_Mamut_AAHA_2147851556_0
         $x_1_2 = "GetPixel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -267,6 +278,7 @@ rule Trojan_MSIL_Mamut_AMAB_2147852135_0
         $x_1_2 = {31 00 34 00 43 00 43 00 44 00 32 00 31 00 35 00 34 00 36 00 38 00 36 00 39 00 37 00 33 00 32 00 2e 00 37 00 2e 00 37 00 32 00 36 00 46 00 36 00 37 00 37 00 32 00 36 00 31 00 36 00 44 00 32 00 2e 00 36 00 33 00 36 00 31 00 36 00 45 00 36 00 45 00 36 00 46 00 37 00 34 00 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -288,6 +300,7 @@ rule Trojan_MSIL_Mamut_AFYN_2147891595_0
         $x_1_1 = {1f 25 2e 42 07 17 59 16 31 0d 02 07 17 59 6f ?? ?? ?? 0a 1f 25 2e 2f 07 17 58 02 6f ?? ?? ?? 0a 2f 0d 02 07 17 58 6f ?? ?? ?? 0a 1f 25 2e 17 11 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -309,6 +322,7 @@ rule Trojan_MSIL_Mamut_AMAA_2147892239_0
         $x_5_1 = {0a 13 04 73 ?? 00 00 0a 0b 02 28 ?? 00 00 06 75 ?? 00 00 1b 73 ?? 00 00 0a 0c 08 11 04 16 73 ?? 00 00 0a 0d 09 07 6f ?? 00 00 0a 07 13 05 de 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -331,6 +345,7 @@ rule Trojan_MSIL_Mamut_KAD_2147892851_0
         $x_5_2 = {00 09 11 04 16 11 04 8e 69 6f ?? 00 00 0a 13 05 07 11 04 16 11 05 6f ?? 00 00 0a 00 00 11 05 16 fe 02 13 06 11 06 2d d8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -352,6 +367,7 @@ rule Trojan_MSIL_Mamut_KAE_2147892852_0
         $x_5_1 = {11 07 07 6f ?? 00 00 0a 17 73 ?? 00 00 0a 13 08 11 08 02 16 02 8e 69 6f ?? 00 00 0a 11 08 6f ?? 00 00 0a 11 07 6f ?? 00 00 0a 13 04 de 18}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +389,7 @@ rule Trojan_MSIL_Mamut_KAF_2147892853_0
         $x_5_1 = {0a 02 16 06 6e 28 ?? 00 00 0a 02 8e 69 28 ?? 00 00 0a 00 06 6e 28 ?? 00 00 0a 02 8e 69 6a 28 ?? 00 00 0a 7e ?? 00 00 04 12 01 28}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -394,6 +411,7 @@ rule Trojan_MSIL_Mamut_AMT_2147897282_0
         $x_1_1 = {07 11 04 17 73 ?? 00 00 0a 0c 28 ?? 06 00 06 0d 08 09 16 09 8e 69 6f ?? 00 00 0a 07 6f ?? 00 00 0a 13 05 de 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -415,6 +433,7 @@ rule Trojan_MSIL_Mamut_AMT_2147897282_1
         $x_1_1 = {13 04 11 04 13 09 16 13 0a 2b 28 11 09 11 0a 9a 13 05 7e 01 00 00 04 1f 64 33 05 16 13 06 de 1d 11 05 28 ?? ?? ?? 06 26 de 03 26 de 00 11 0a 17 58 13 0a 11 0a 11 09 8e 69 32 d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -436,6 +455,7 @@ rule Trojan_MSIL_Mamut_PSPQ_2147897589_0
         $x_2_1 = {02 02 6f 27 00 00 06 6f ?? ?? ?? 0a 73 ?? ?? ?? 0a 7d 0b 00 00 04 02 6f ?? ?? ?? 06 72 fd 01 00 70 28 ?? ?? ?? 06 6f ?? ?? ?? 0a 02 7b 0b 00 00 04 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 02 20 e8 03 00 00 28 ?? ?? ?? 0a 7d 0e 00 00 04 02 28 16 00 00 06 02}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -458,6 +478,7 @@ rule Trojan_MSIL_Mamut_AMU_2147900522_0
         $x_1_2 = {0b 16 0c 2b 18 07 08 18 5b 02 08 18 6f 78 00 00 0a 1f 10 28 7f 00 00 0a 9c 08 18 58 0c 08 06 fe 04 0d 09 2d e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -479,6 +500,7 @@ rule Trojan_MSIL_Mamut_LL_2147901186_0
         $x_5_1 = {09 17 58 07 8e b7 ?? ?? ?? ?? ?? 07 09 93 0c 07 09 07 09 17 58 93 9d 07 09 17 58 08 9d 00 09 18 58 0d 09}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -500,6 +522,7 @@ rule Trojan_MSIL_Mamut_NN_2147902543_0
         $x_5_1 = {00 06 02 09 6f ?? ?? ?? ?? 03 09 6f 7f ?? ?? ?? 61 60 0a 00 09 17 58 0d 09 02}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -523,6 +546,7 @@ rule Trojan_MSIL_Mamut_ARA_2147923216_0
         $x_2_3 = "\\System Files\\Backup\\Windows Backup.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -545,6 +569,7 @@ rule Trojan_MSIL_Mamut_ARAF_2147927388_0
         $x_2_2 = "$3645D93A-AFBF-4B56-BC8A-E12A5A0BA6BA" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -570,6 +595,7 @@ rule Trojan_MSIL_Mamut_NK_2147928372_0
         $x_1_5 = "addMateriKhususUSB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -593,6 +619,7 @@ rule Trojan_MSIL_Mamut_NT_2147939124_0
         $x_1_3 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

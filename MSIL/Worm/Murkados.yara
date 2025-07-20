@@ -21,6 +21,7 @@ rule Worm_MSIL_Murkados_A_2147680363_0
         $x_1_7 = "socialmedya.net/php/config.php?type=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

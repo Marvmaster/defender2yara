@@ -18,6 +18,7 @@ rule Trojan_Win64_Alureon_A_154091_0
         $x_1_3 = {0f b7 47 06 48 83 c6 28 ff c5 4c 03 d9 3b e8 72 ?? 48 63 41 3c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win64_Alureon_B_154092_0
         $x_1_4 = "IN MINT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win64_Alureon_C_161296_0
         $x_1_1 = {41 b9 00 02 00 00 b2 28 44 89 64 24 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? b8 43 44 00 00 66 39 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win64_Alureon_D_161297_0
         $x_1_3 = {44 6f 77 6e 6c 6f 61 64 54 6f 46 53 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -112,6 +116,7 @@ rule Trojan_Win64_Alureon_C_164685_0
         $x_1_3 = {48 b8 66 69 72 65 66 6f 78 00 48 89 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule Trojan_Win64_Alureon_E_165680_0
         $x_1_3 = "IN MINT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule Trojan_Win64_Alureon_F_165681_0
         $x_1_1 = {41 b9 00 02 00 00 b2 28 44 89 64 24 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? b8 53 44 00 00 66 39 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_Win64_Alureon_D_167758_0
         $x_1_2 = {41 b9 00 30 00 00 41 b8 06 01 00 00 c7 44 24 ?? 04 00 00 00 ff 15 ?? ?? ?? ?? 48 8b f0 48 3b c3 0f 84 ?? ?? 00 00 48 83 c9 ff 33 c0 48 8b fd 66 f2 af 48 8d 44 24 ?? 4c 8b c5 48 f7 d1 48 8b d6 48 89 44 24 ?? 4c 8d 0c 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +206,7 @@ rule Trojan_Win64_Alureon_E_167762_0
         $x_1_2 = {80 3f 0e 0f 85 ?? ?? 00 00 81 7f 18 30 d0 04 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +230,7 @@ rule Trojan_Win64_Alureon_G_168178_0
         $x_1_3 = {41 8b 49 0c 41 8b 51 08 41 81 61 0c 0f 08 00 f0 48 8b c1 4c 8b c2 48 25 00 00 00 f8 41 81 e0 ff ff 7f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -245,6 +255,7 @@ rule Trojan_Win64_Alureon_H_168179_0
         $x_1_4 = {66 81 3a 4d 5a 75 0d 48 63 42 3c 81 3c 10 50 45 00 00 74 09 48 81 ea 00 10 00 00 75 e3 48 8d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -269,6 +280,7 @@ rule Trojan_Win64_Alureon_I_168180_0
         $x_1_4 = {ff ca 41 0b d5 ff c2 0f b6 da 41 fe c0 8a 04 1c 41 80 e0 03 88 07 48 ff c7 49 ff cb 40 88 34 1c 75 c8 45 85 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -293,6 +305,7 @@ rule Trojan_Win64_Alureon_J_169874_0
         $x_1_4 = {b9 10 27 00 00 ff 15 ?? ?? ?? ?? e9 48 8d 15 ?? ?? ?? ?? 48 8d 0d ?? ?? ?? ?? 45 33 c0 ff 15 ?? ?? ?? ?? 85 c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -316,6 +329,7 @@ rule Trojan_Win64_Alureon_K_171948_0
         $x_1_3 = "restart64" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -339,6 +353,7 @@ rule Trojan_Win64_Alureon_L_176339_0
         $x_1_3 = {48 83 c2 28 8b c8 41 ff c0 f3 a4 8b 7a 04 48 8b 4d ?? 41 0f b7 44 24 06 48 03 f9 44 3b c0 72 cf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -363,6 +378,7 @@ rule Trojan_Win64_Alureon_M_197326_0
         $x_1_4 = {73 64 72 6f 70 70 65 72 36 34 2e 65 78 65 00 44 6f 77 6e 6c 6f 61 64 52 75 6e 45 78 65 49 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -386,6 +402,7 @@ rule Trojan_Win64_Alureon_N_197449_0
         $x_1_3 = {00 57 6f 77 36 34 53 65 74 54 68 72 65 61 64 43 6f 6e 74 65 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -429,6 +446,7 @@ rule Trojan_Win64_Alureon_L_200017_0
         $x_1_2 = {0f b7 40 04 3d 64 86 00 00 75 0e 48 8b 44 24 ?? 48 8b 40 30 48 89 44 24 ?? 48 8b 44 24 ?? 0f b7 40 04 3d 4c 01 00 00 75 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -450,6 +468,7 @@ rule Trojan_Win64_Alureon_M_200119_0
         $x_1_2 = {41 81 7f 18 3c 3c 22 00 75 23 44 88 25 ?? ?? ?? ?? eb 1a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win64_Crnoash_A_2147710543_0
         $x_1_2 = {48 8b 5b 10 ba 26 80 ac c8 48 8b cb e8 55 fe ff ff ba ee ea c0 1f 48 8b cb 4c 8b f0 e8 45 fe ff ff 83 7e 10 00 4c 8b e8 0f 84 93 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

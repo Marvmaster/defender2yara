@@ -18,6 +18,7 @@ rule Trojan_Win32_Tibrun_A_2147685833_0
         $x_1_4 = {00 31 2e 62 61 74 [0-4] 00 69 70 2e 73 79 73 [0-4] 00 31 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Tibrun_A_2147685833_1
         $x_1_7 = {b8 69 6e 67 3a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -71,6 +73,7 @@ rule Trojan_Win32_Tibrun_B_2147687029_0
         $x_1_4 = {50 4f 53 54 [0-16] 2f 77 77 77 2f 63 6d 64 2e 70 68 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Trojan_Win32_Tibrun_RPO_2147828101_0
         $x_1_4 = "RemoveVectoredExceptionHandler" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

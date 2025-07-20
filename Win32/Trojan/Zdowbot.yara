@@ -17,6 +17,7 @@ rule Trojan_Win32_Zdowbot_NZ_2147917702_0
         $x_3_2 = {03 ce 51 52 e8 ?? ?? ?? ?? 0f b7 47 06 43 83 c4 0c 3b d8 7c}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

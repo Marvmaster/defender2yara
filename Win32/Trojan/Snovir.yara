@@ -16,6 +16,7 @@ rule Trojan_Win32_Snovir_NS_2147897383_0
         $x_5_1 = {e8 bc 00 00 00 33 db 39 9e ?? ?? ?? ?? 75 13 8d 85 f8 fe ff ff 50 e8 a7 32 ff ff 59 89 86 ?? ?? ?? ?? 39 5e 78 75 32}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

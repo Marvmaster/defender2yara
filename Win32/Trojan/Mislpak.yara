@@ -22,6 +22,7 @@ rule Trojan_Win32_Mislpak_A_2147935068_0
         $x_1_8 = "10714BD818A457DFD807368AD3762BBA6B7E2E7169282A8576B45E12419C15C5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))

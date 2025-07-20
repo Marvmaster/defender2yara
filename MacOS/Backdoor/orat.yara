@@ -28,6 +28,7 @@ rule Backdoor_MacOS_orat_C_2147850675_0
         $x_1_13 = "orat/utils" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (9 of ($x*))
 }
 

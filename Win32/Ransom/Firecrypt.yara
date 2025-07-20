@@ -17,6 +17,7 @@ rule Ransom_Win32_Firecrypt_A_2147719230_0
         $x_10_3 = "\\SysWin32" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Ransom_Win32_Firecrypt_A_2147719230_1
         $x_10_3 = "DDoser... (Because" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

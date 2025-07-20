@@ -17,6 +17,7 @@ rule HackTool_Win64_EDRSandBlast_SA_2147913213_0
         $x_1_2 = {2b c2 d1 f8 89 45 ?? 8b 85 ?? ?? ?? ?? ff c0 89 85 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

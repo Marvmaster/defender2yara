@@ -19,6 +19,7 @@ rule PWS_Win32_DNFpass_A_2147641420_0
         $x_1_5 = {54 57 49 4e 43 4f 4e 54 52 4f 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

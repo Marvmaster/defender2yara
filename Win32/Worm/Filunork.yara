@@ -19,6 +19,7 @@ rule Worm_Win32_Filunork_A_2147655274_0
         $x_1_5 = "-s -copyto -bncc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

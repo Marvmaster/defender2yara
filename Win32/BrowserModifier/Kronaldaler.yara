@@ -17,6 +17,7 @@ rule BrowserModifier_Win32_Kronaldaler_227496_0
         $x_1_3 = "Shell Overlay Shell" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

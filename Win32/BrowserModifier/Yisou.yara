@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Yisou_141957_0
         $x_1_4 = {42 68 6f 4f 62 6a 2e 44 4c 4c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

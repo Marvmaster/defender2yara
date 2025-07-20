@@ -17,6 +17,7 @@ rule Trojan_Win64_Ymacco_YAA_2147906591_0
         $x_1_2 = {2b d1 8a ca 50 90 5a 48 d3 ca}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

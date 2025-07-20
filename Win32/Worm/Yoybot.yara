@@ -28,6 +28,7 @@ rule Worm_Win32_Yoybot_2147600665_0
         $x_5_14 = {6a 00 6a 01 6a 00 6a 11 ff d6 6a 00 6a 00 6a 00 6a 56 ff d3 50 ff d6 6a 00 6a 03 6a 2d 6a 11 ff d6 6a 00 6a 00 6a 00 6a 0d ff d6}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or

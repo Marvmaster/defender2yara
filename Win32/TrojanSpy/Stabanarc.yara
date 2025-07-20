@@ -34,6 +34,7 @@ rule TrojanSpy_Win32_Stabanarc_A_2147627054_0
         $x_1_20 = "%s\\trash%X" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (16 of ($x*))
 }
 

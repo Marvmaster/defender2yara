@@ -18,6 +18,7 @@ rule Worm_Win32_Foamer_A_2147597918_0
         $x_1_4 = "cls && echo THE WORLD-WIDE DONT ACCEPT COMMAND PROMPT!!!! && exit" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

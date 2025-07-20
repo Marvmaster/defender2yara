@@ -19,6 +19,7 @@ rule Trojan_Win32_Canahom_A_2147597871_0
         $x_1_4 = {eb 62 81 3e 2d 6d 64 35 75 59 81 7e 01 6d 64 35 5b 75 50 83 eb 05 83 c6 05 8d 85 ?? ?? ff ff 50 6a 01 6a 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Canahom_C_2147609797_0
         $x_1_2 = {66 81 7e 01 3a 5c 74 1f e8 ?? ?? ?? ?? 8b c8 48 75 fb 83 e9 02 51 5a 8b fe 8d 0d ?? ?? ?? ?? 2b ce ac 32 c2 aa e2 fa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

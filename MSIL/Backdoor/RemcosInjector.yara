@@ -19,6 +19,7 @@ rule Backdoor_MSIL_RemcosInjector_2147744532_0
         $x_1_4 = {00 fe 0c 06 00 20 05 00 00 00 fe 01 39 1b 00 00 00 28 ?? 00 00 0a fe 09 00 00 6f ?? 00 00 0a fe 0e 01 00 20 06 00 00 00 fe 0e 06 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

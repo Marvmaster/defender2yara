@@ -16,6 +16,7 @@ rule Trojan_Win32_Gepys_A_2147680058_0
         $x_1_2 = {2e 74 6d 70 00 47 45 54 [0-7] 50 4f 53 54}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Gepys_A_2147680058_1
         $x_1_5 = {8b 45 fc 8b 08 31 0e 8b 40 04 31 46 04 ?? 79 cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Gepys_B_2147683545_0
         $x_1_3 = {0f b7 46 24 8b 4e 28 d1 e8 85 c9 74 20 85 c0 74 1c 8d 54 41 fe 66 83 3a 5c 74 06 83 ea 02 48 75 f4 8d 04 41}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_Gepys_B_2147683545_1
         $x_1_5 = {47 45 54 20 ?? ?? ?? ?? 50 4f 53 54 20 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0d 0a 68 6f 73 74 3a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_Win32_Gepys_B_2147683545_2
         $x_1_7 = {2e 00 65 00 78 00 65 00 00 00 00 00 00 00 00 00 53 00 4f 00 46 00 54 00 57 00 41 00 52 00 45 00 5c 00 4d 00 69 00 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00 5c 00 43 00 72 00 79 00 70 00 74 00 6f 00 67 00 72 00 61 00 70 00 68 00 79 00 00 00 4d 00 61 00 63 00 68 00 69 00 6e 00 65 00 47 00 75 00 69 00 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_Win32_Gepys_B_2147683545_3
         $x_1_7 = {2e 00 65 00 78 00 65 00 00 00 00 00 00 00 00 00 53 00 4f 00 46 00 54 00 57 00 41 00 52 00 45 00 5c 00 4d 00 69 00 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00 5c 00 43 00 72 00 79 00 70 00 74 00 6f 00 67 00 72 00 61 00 70 00 68 00 79 00 00 00 4d 00 61 00 63 00 68 00 69 00 6e 00 65 00 47 00 75 00 69 00 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -181,6 +187,7 @@ rule Trojan_Win32_Gepys_2147740716_0
         $x_1_1 = {89 da 88 c1 d3 e2 8d 0c 10 89 f8 83 c8 01 03 4d 08 0f af c3 29 c7 8a 11 03 7d 08 ff 4d e4 8a 07 88 17 88 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +210,7 @@ rule Trojan_Win32_Gepys_MR_2147740826_0
         $x_1_2 = "(cts\\progs\\SysProg\\work\\rm\\templates\\exe\\runinmem2.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -224,6 +232,7 @@ rule Trojan_Win32_Gepys_A_2147741593_0
         $x_1_1 = {0f b6 04 33 33 47 60 88 04 33 46 3b 75 0c 7c f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -247,6 +256,7 @@ rule Trojan_Win32_Gepys_DSK_2147741679_0
         $x_1_3 = "LeHzDDgCulQBzssRq" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +278,7 @@ rule Trojan_Win32_Gepys_PDSK_2147743505_0
         $x_2_1 = {8b 45 08 8a 04 18 88 45 df 43 8b 45 ec 03 45 f0 8b 55 08 0f b6 4d df 31 f1 88 0c 02 8b 45 e8 09 f0 39 45 f0 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -290,6 +301,7 @@ rule Trojan_Win32_Gepys_VDSK_2147744350_0
         $x_2_2 = {8b 55 08 8b 4d 0c 8a 02 88 45 ff 8a 01 88 02 8a 45 ff 88 01 c9 c3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -313,6 +325,7 @@ rule Trojan_Win32_Gepys_PVD_2147745106_0
         $x_2_3 = {8a 17 03 45 08 ff 4d f0 88 55 d7 8a 10 88 17 8a 55 d7 88 10 8b 4d d8 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -336,6 +349,7 @@ rule Trojan_Win32_Gepys_PVS_2147745358_0
         $x_2_3 = {01 d8 05 a5 28 01 00 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 31 d8 05 71 25 04 00 a3 05 00 a1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -360,6 +374,7 @@ rule Trojan_Win32_Gepys_VDK_2147747810_0
         $x_1_4 = {31 34 81 e9 07 00 3b c2 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -385,6 +400,7 @@ rule Trojan_Win32_Gepys_PVR_2147754467_0
         $x_2_1 = {89 c2 80 ca 01 0f af 55 fc 29 d0 8b 55 e0 01 c2 8b 45 e4 d3 e0 03 45 e0 ff 45 f4 e8 ?? ?? ?? ?? 81 7d f4 e8 07 00 00 7d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -406,6 +422,7 @@ rule Trojan_Win32_Gepys_DSA_2147757210_0
         $x_1_1 = {8a 38 80 cf 01 88 d8 f6 e7 8a 3e 28 c7 88 d9 0f b6 02 d3 f8 88 f9 88 06 88 d8 d2 e0 00 c7 88 3a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -427,6 +444,7 @@ rule Trojan_Win32_Gepys_DSB_2147757471_0
         $x_1_1 = {8b 55 e8 8d 84 0a ?? ?? ?? ?? 33 45 f0 89 45 f0 8b 4d dc 8b 55 f0 89 11 8b 45 e8 83 c0 04 89 45 e8 b9 bc 01 00 00 85 c9 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -449,6 +467,7 @@ rule Trojan_Win32_Gepys_DSC_2147757476_0
         $x_1_2 = {89 d1 0f b6 00 8d 7b 01 99 f7 ff 88 45 fc 8a 01 0c 01 0f b6 f8 89 d8 99 f7 ff 0f b6 39 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -471,6 +490,7 @@ rule Trojan_Win32_Gepys_DSD_2147757557_0
         $x_1_2 = {8b 55 e0 01 c2 8b 45 e4 d3 e0 8b 5d fc 03 45 e0 ff 45 f4 e8 ?? ?? ?? ?? 81 7d f4 e8 07 00 00 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -492,6 +512,7 @@ rule Trojan_Win32_Gepys_RPK_2147816053_0
         $x_1_1 = {01 c1 31 df 03 7d 08 ff 4d f0 8a 07 88 45 cb 8a 01 88 07 8a 45 cb 88 01 8b 55 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -513,6 +534,7 @@ rule Trojan_Win32_Gepys_RPK_2147816053_1
         $x_1_1 = {0f af 4d 10 29 ca 03 55 08 ff 4d f0 8a 0a 88 4d db 8a 08 88 0a 8a 55 db 88 10 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -534,6 +556,7 @@ rule Trojan_Win32_Gepys_RPO_2147821972_0
         $x_1_1 = {88 38 88 dc 89 f1 fe c4 88 c8 f6 e4 88 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -555,6 +578,7 @@ rule Trojan_Win32_Gepys_RPS_2147823631_0
         $x_1_1 = {80 c9 01 f7 e1 89 45 b0 8b 45 bc 8b 55 b0 29 d0 8b 55 b4 88 04 13 ff 45 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -576,6 +600,7 @@ rule Trojan_Win32_Gepys_RPP_2147830743_0
         $x_1_1 = {88 d9 fe c9 8a 28 20 cd 88 6d fc 85 db 74 07 0f b6 0a 01 c9 eb 03 0f b6 0a 89 4d f8 8a 7d f8 88 38 8a 45 fc 08 d8 88 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -597,6 +622,7 @@ rule Trojan_Win32_Gepys_RPL_2147840161_0
         $x_1_1 = {89 45 ac 88 45 d6 0f b6 55 d7 89 f1 d3 ea 88 14 3b 8b 45 e0 0f b6 55 d6 31 f2 88 14 03 ff 45 ec 81 7d ec e8 07 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -619,6 +645,7 @@ rule Trojan_Win32_Gepys_PAB_2147848164_0
         $x_1_2 = {23 7d d4 89 c1 83 c9 01 0f af cb 03 7d ?? 29 c8 03 45 ?? 8a 0f ff 4d ?? 88 4d ?? 8a 08 88 0f 8a 4d cb 88 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -641,6 +668,7 @@ rule Trojan_Win32_Gepys_GNZ_2147852917_0
         $x_1_2 = "ss xhrurr>=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -662,6 +690,7 @@ rule Trojan_Win32_Gepys_GZY_2147907438_0
         $x_10_1 = {01 d3 ff 59 12 36 30 5d 8b c9 5e 5a 59 5b c3 53 51 52}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Magania_DSK_2147743921_0
         $x_2_1 = {8a 44 1e 01 8a 14 39 46 32 c2 2c 03 bd 06 00 00 00 88 04 39 8b c1 99 f7 fd 85 d2 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

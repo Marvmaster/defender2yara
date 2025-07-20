@@ -21,6 +21,7 @@ rule Backdoor_MSIL_Famtrat_A_2147723260_0
         $x_1_6 = "SendDesktopImage" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -18,6 +18,7 @@ rule Trojan_Win32_Polyglot_SIB_2147807752_0
         $x_1_3 = {f9 ff ff 33 d2 8a 90 ?? ?? ?? ?? 83 f2 33 83 f2 33 8b 45 fc 88 90 00 8b 4d fc 83 c1 01 89 4d fc 81 7d fc 11 06 00 00 8b 45 fc 69 c0 b8 01 00 00 99 b9 dc 00 00 00 f7 f9 33 d2 8a 90 a4 00 41 00 83 f2 33 83 f2 33 8b 45 fc 88 90 a4 00 41 00 8b 4d fc 83 c1 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

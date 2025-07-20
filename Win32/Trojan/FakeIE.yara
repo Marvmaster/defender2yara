@@ -25,6 +25,7 @@ rule Trojan_Win32_FakeIE_ASG_2147893920_0
         $x_1_10 = "sentinelmfc.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_Win32_FakeIE_GNH_2147893924_0
         $x_1_6 = "nonodirhhect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule Trojan_Win32_FakeIE_ASW_2147923674_0
         $x_1_7 = {68 67 02 00 00 68 b6 03 00 00 68 00 01 00 00 68 00 00 cf 10 53 53 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

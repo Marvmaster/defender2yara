@@ -18,6 +18,7 @@ rule Virus_Win32_Senoval_HNS_2147905678_0
         $x_2_3 = {ff d3 c9 c3 06 00 03 8d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_Win32_Pulobe_A_2147719768_0
         $x_1_4 = "mshta.exe \"javascript:o=new ActiveXObject('WScript.Shell');setInterval(function(){try{o.RegWrite('HKCU\\\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

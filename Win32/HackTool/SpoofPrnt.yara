@@ -19,6 +19,7 @@ rule HackTool_Win32_SpoofPrnt_A_2147796130_0
         $x_1_4 = "  - Get a SYSTEM reverse shell" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule HackTool_Win32_SpoofPrnt_SGA_2147892284_0
         $x_1_6 = "getSpoofingRegistryKeys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Backdoor_MSIL_Evilnum_SP_2147834670_0
         $x_3_2 = "DataReceivedEventHandler" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

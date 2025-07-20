@@ -19,6 +19,7 @@ rule Trojan_MSIL_Swotter_FAC_2147781335_0
         $x_4_4 = "\\RosterLoad.txt" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

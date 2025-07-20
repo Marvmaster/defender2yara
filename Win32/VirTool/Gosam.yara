@@ -19,6 +19,7 @@ rule VirTool_Win32_Gosam_A_2147818519_0
         $x_1_4 = {8b ec 6a 04 68 00 30 00 00 ff 75 08 6a 00 e8 ?? ?? ?? ?? 0b c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

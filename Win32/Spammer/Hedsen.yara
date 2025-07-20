@@ -18,6 +18,7 @@ rule Spammer_Win32_Hedsen_B_2147690267_0
         $x_1_4 = "MAIL FROM:<" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Spammer_Win32_Hedsen_C_2147690772_0
         $x_1_7 = "by $domain$ (Postfix)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Spammer_Win32_Hedsen_D_2147693088_0
         $x_1_7 = "get_mails&Processed=%d&Resolved=%d&Connected=%d&550ERROR=%d&LettersSuccessful=%d&LettersSuccessfulTls=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -97,6 +100,7 @@ rule Spammer_Win32_Hedsen_E_2147706918_0
         $x_1_3 = {41 00 79 00 00 00 6a 70 ff 75 08 ff 15 ?? ?? 41 00 a3 ?? ?? 41 00 8b 45 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

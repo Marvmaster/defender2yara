@@ -23,6 +23,7 @@ rule TrojanDropper_Win32_Pistolar_AA_2147747926_0
         $x_1_8 = "\\Driver.db" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

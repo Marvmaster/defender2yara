@@ -20,6 +20,7 @@ rule Worm_Win32_Hamweq_CM_121311_0
         $x_1_6 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Worm_Win32_Hamweq_A_122731_0
         $x_4_12 = {3c 42 0f 84 ?? ?? 00 00 3c 61 0f 84 ?? ?? 00 00 3c 62 0f 84 ?? ?? 00 00 8b 06 8d 4d ?? 51 ff 50 ?? 83 f8 02 0f 85}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*))) or
             ((1 of ($x_3_*) and 4 of ($x_2_*))) or
@@ -86,6 +88,7 @@ rule Worm_Win32_Hamweq_B_127323_0
         $x_1_3 = {80 f9 30 7c 0e 80 f9 39 7f 09 04 0d c0 e0 04 02 c1 eb 11 80 f9 41 7c 12 80 f9 46 7f 0d c0 e0 04 02 c1 2c 37}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +114,7 @@ rule Worm_Win32_Hamweq_AI_143382_0
         $x_1_6 = {59 41 4d 30 53 34 48 33 6c 59 61 52 41 42 49 74 53 6d 59 57 65 44 44 69 4e 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or

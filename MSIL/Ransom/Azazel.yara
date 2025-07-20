@@ -18,6 +18,7 @@ rule Ransom_MSIL_Azazel_DA_2147788053_0
         $x_1_3 = "kk.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

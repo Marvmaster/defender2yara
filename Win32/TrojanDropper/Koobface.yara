@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Koobface_J_2147804007_0
         $x_1_3 = {68 95 1f 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDropper_Win32_Koobface_K_2147804014_0
         $x_1_3 = {68 95 1f 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanDropper_Win32_Koobface_M_2147804016_0
         $x_1_2 = {68 95 1f 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule TrojanDropper_Win32_Koobface_F_2147804038_0
         $x_1_3 = "s%s%s\\dri%s%sTE%ss" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule TrojanDropper_Win32_Koobface_E_2147804181_0
         $x_1_4 = "%%p%sRA%slES%%%sDDn%sl%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule TrojanDropper_Win32_Koobface_L_2147804197_0
         $x_1_4 = {41 00 ff 25 68 ?? 41 00 ff 25 6c ?? 41 00 ff 25 70 ?? 41 00 ff 25 74 ?? 41 00 ff 25 78 ?? 41 00 ff 25 7c ?? 41 00 ff 25 80 ?? 41 00 ff 25 84 ?? 41 00 cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

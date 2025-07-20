@@ -30,6 +30,7 @@ rule Ransom_MSIL_Trycrypt_2147725254_0
         $x_5_16 = "code=HtR5uoBGkrrvignZuSPmEvlpCVYWiSTaxVTvnJByJuXourUEzWRU0A==" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

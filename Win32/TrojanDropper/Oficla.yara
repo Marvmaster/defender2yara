@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Oficla_G_2147800199_0
         $x_1_5 = {ff ff ff 03 00 00 0f 86 04 00 81 bd ?? (e9|ea)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule TrojanDropper_Win32_Oficla_B_2147801505_0
         $x_1_3 = {31 c3 89 d8 5b 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanDropper_Win32_Oficla_C_2147803890_0
         $x_1_3 = {89 54 24 0c 8b 95 ?? ?? ?? ?? c7 44 24 10 00 00 00 00 d3 e8 8b 8d ?? ?? ?? ?? 89 44 24 04 89 54 24 08 89 0c 24 ff 15 ?? ?? ?? ?? 0f b7 5d 96 c7 85 ?? ?? ?? ?? 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule TrojanDropper_Win32_Oficla_I_2147803976_0
         $x_1_3 = {89 44 24 0c 8b 85 ?? ?? ?? ?? 89 4c 24 04 c7 44 24 10 00 00 00 00 89 14 24 89 44 24 08 ff d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule TrojanDropper_Win32_Oficla_N_2147804015_0
         $x_1_4 = {83 f9 07 7f 15 c1 e1 02 b8 ?? ?? 2b cb d3 e8 83 e0 0f ff 24 85 00 60 40 00 ?? ?? ?? 0f 8d 0c 8d e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule TrojanDropper_Win32_Oficla_AB_2147804129_0
         $x_1_3 = {00 a0 40 00 8b 9d ?? ?? ff ff 88 d1 d3 fb 29 da 81 f2 ?? ?? ?? ?? 89 94 ?? ?? ff ff ff 83 c0 04 83 f8 3c 75 d9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule TrojanDropper_Win32_Oficla_K_2147804148_0
         $x_1_5 = {a5 ef 54 12 c6 a5 af 5f 45 90 aa 90 f5 34 98 ca cd 9b 20 62 fc 8a 80}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -184,6 +191,7 @@ rule TrojanDropper_Win32_Oficla_T_2147804175_0
         $x_2_5 = {89 44 24 04 c7 04 24 00 00 00 00 ff 15 ?? ?? ?? ?? 83 ec 0c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -211,6 +219,7 @@ rule TrojanDropper_Win32_Oficla_X_2147804187_0
         $x_1_4 = {e8 52 52 8b 45 ?? 83 e8 ?? f7 d0 88 03 43}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_LatortugaGoPEloader_LK_2147899304_0
         $x_1_2 = "Go build ID:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

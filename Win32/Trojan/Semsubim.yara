@@ -17,6 +17,7 @@ rule Trojan_Win32_Semsubim_A_2147696881_0
         $x_1_3 = {c1 fe 02 ff 15 ?? ?? ?? ?? 33 d2 8b 4c 24 ?? f7 f6 8b 14 91 52 8b 54 24 ?? ?? 68 02 05 00 00 8b 42 20 50 ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

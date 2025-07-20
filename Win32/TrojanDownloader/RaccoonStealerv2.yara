@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_RaccoonStealerv2_A_2147899019_0
         $x_2_3 = {30 04 32 8d 41 ?? 33 c9 42}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

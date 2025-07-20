@@ -19,6 +19,7 @@ rule TrojanSpy_MSIL_Drashed_A_2147693208_0
         $x_1_5 = {12 84 fa 3f 82 a3 9f 9a 7d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

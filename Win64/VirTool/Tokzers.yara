@@ -19,6 +19,7 @@ rule VirTool_Win64_Tokzers_A_2147844681_0
         $x_1_4 = {8b 4d 04 e8 ?? ?? ?? ?? 85 c0 75 0e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

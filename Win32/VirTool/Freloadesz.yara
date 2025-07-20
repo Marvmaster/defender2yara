@@ -18,6 +18,7 @@ rule VirTool_Win32_Freloadesz_A_2147918046_0
         $x_1_3 = {8b 45 10 83 e2 03 8b 04 88 8b 3c ?? 57 89 7d b8 ?? ?? ?? ?? ?? ?? 89 45 c8 ?? ?? ?? 50 6a 40 68 16 01 00 00 56 57}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

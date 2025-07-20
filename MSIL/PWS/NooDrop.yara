@@ -35,6 +35,7 @@ rule PWS_MSIL_NooDrop_2147743637_0
         $x_1_20 = "[downloadlink-replace]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (15 of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_MSIL_Crypton_B_2147751699_0
         $x_1_5 = "\\ReportGenerator\\obj\\Debug\\Crypton.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

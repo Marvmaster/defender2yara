@@ -18,6 +18,7 @@ rule VirTool_Win64_PidSpooz_A_2147832713_0
         $x_1_3 = {48 8b f8 33 c0 b9 68 00 00 00 f3 aa 4c 8d ?? ?? ?? ?? ?? 45 33 c0 ba 01 00 00 00 33 c9 ff 15 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 4c 8b 85 c8 00 00 00 33 d2 48 8b c8 ff 15 ?? ?? ?? ?? 48 89 45 78}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

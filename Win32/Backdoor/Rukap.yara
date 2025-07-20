@@ -35,6 +35,7 @@ rule Backdoor_Win32_Rukap_A_2147575037_0
         $x_2_20 = "Software\\Microsoft\\Direct" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*))) or
             (all of ($x*))
@@ -59,6 +60,7 @@ rule Backdoor_Win32_Rukap_B_2147602786_0
         $x_1_1 = "Hello 2 AV programmers from India. You debug 'MoonClicker' :)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

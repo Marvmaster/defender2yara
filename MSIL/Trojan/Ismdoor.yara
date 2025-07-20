@@ -17,6 +17,7 @@ rule Trojan_MSIL_Ismdoor_AL_2147789165_0
         $x_10_2 = {02 02 02 1f 3c 6a d6 28 ?? 00 00 0a 28 ?? 00 00 0a 6a d6 20 88 00 00 00 6a d6 28 ?? 00 00 0a 28 ?? 00 00 0a 6a d6 1f 18 6a d6 28 ?? 00 00 0a 1f 10 28 ?? 00 00 06 0b}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

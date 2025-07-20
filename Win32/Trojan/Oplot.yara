@@ -20,6 +20,7 @@ rule Trojan_Win32_Oplot_B_2147735863_0
         $x_1_6 = "SOFTWARE\\App\\AppX37cc7fdccd644b4f85f4b22d5a3f105a\\DefaultIcon" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule HackTool_Win32_Sechack_A_2147734950_0
         $x_1_3 = {4c 73 61 49 52 65 67 69 73 74 65 72 4e 6f 74 69 66 69 63 61 74 69 6f 6e 00 00 00 00 00 00 00 00 4c 73 61 49 43 61 6e 63 65 6c 4e 6f 74 69 66 69 63 61 74 69 6f 6e 00 00 6b 00 65 00 72 00 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

@@ -17,6 +17,7 @@ rule HackTool_Win32_Binder_B_2147621796_0
         $x_1_3 = "If you want the binder to use another stub-file than the usual one, choose your stub-file here !" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

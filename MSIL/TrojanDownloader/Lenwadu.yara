@@ -19,6 +19,7 @@ rule TrojanDownloader_MSIL_Lenwadu_A_2147728042_0
         $x_1_4 = "C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule TrojanDownloader_MSIL_Lenwadu_B_2147728103_0
         $x_1_3 = "SandboxieRpcSs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -70,6 +72,7 @@ rule TrojanDownloader_MSIL_Lenwadu_C_2147728268_0
         $x_1_2 = "DownloadData" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

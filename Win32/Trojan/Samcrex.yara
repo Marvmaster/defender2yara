@@ -21,6 +21,7 @@ rule Trojan_Win32_Samcrex_A_2147725887_0
         $x_10_6 = {6a 01 6a 00 6a 02 6a 00 6a 00 6a 01 68 2a 02 28 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Samcrex_A_2147725887_1
         $x_1_1 = "_wfrcmd.vbs && cscript.exe %ProgramData%\\_wfrcmd.vbs && %ProgramData%\\%COMPUTERNAME%.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

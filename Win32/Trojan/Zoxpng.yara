@@ -17,6 +17,7 @@ rule Trojan_Win32_Zoxpng_A_2147689336_0
         $x_1_3 = {42 36 34 3a 5b 25 73 5d [0-16] 53 74 65 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Zoxpng_B_2147689337_0
         $x_2_3 = {43 6c 65 61 72 46 69 6c 65 00 53 74 61 72 74 53 68 65 6c 6c 00 67 5f 69 69 73 65 78 69 74 00 67 5f 69 69 73 6b 69 6c 6c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

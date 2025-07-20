@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Baop_A_2147655734_0
         $x_5_7 = "oft/down.aspx" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

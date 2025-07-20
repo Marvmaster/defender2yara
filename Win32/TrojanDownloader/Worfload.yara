@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Worfload_A_2147722893_0
         $x_1_4 = "DOWNLOADANDEXECUTE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_10_*))) or

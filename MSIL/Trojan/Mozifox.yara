@@ -19,6 +19,7 @@ rule Trojan_MSIL_Mozifox_A_2147646523_0
         $x_1_5 = {73 00 65 00 72 00 76 00 65 00 72 00 3d 00 ?? ?? 3b 00 20 00 75 00 69 00 64 00 3d 00 ?? ?? 3b 00 20 00 70 00 77 00 64 00 3d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

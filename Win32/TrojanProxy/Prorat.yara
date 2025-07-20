@@ -22,6 +22,7 @@ rule TrojanProxy_Win32_Prorat_A_2147575542_0
         $x_2_7 = {83 c4 24 a1 8c 10 40 00 8b 30 89 75 8c 80 3e 22 75 3a 46 89 75 8c 8a 06 3a c3 74 04 3c 22 75 f2 80 3e 22 75 04 46 89 75 8c 8a 06 3a c3 74 04 3c 20 76 f2 89 5d d0 8d 45 a4}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

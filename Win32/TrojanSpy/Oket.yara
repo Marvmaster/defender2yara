@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Oket_A_2147627124_0
         $x_1_7 = "{539FF4GG/H6C7/64ff/067G/DE6C9E521526}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*) and 1 of ($x_5_*))) or
             (all of ($x*))

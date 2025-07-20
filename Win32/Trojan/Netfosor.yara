@@ -20,6 +20,7 @@ rule Trojan_Win32_Netfosor_A_2147685123_0
         $x_1_5 = {2f 00 72 00 65 00 73 00 75 00 6c 00 74 00 3f 00 25 00 (64 00|6c 00)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Netfosor_B_2147707231_0
         $x_1_3 = {48 89 47 ff 8b 05 ?? ?? ?? ?? 48 8d 8c 24 90 01 00 00 89 47 07 0f b7 05 ?? ?? ?? ?? ba 00 00 00 40 c7 44 24 28 80 00 00 00 c7 44 24 20 02 00 00 00 66 89 47 0b ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Netfosor_D_2147707232_0
         $x_1_4 = "/down?p=%ld&l=%d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

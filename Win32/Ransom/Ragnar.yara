@@ -22,6 +22,7 @@ rule Ransom_Win32_Ragnar_GG_2147753781_0
         $x_1_7 = "%s-%s-%s-%s-%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule Ransom_Win32_Ragnar_PA_2147837678_0
         $x_1_4 = "_README_NOTES_RAGNAR_" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

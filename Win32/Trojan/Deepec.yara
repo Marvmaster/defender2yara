@@ -21,6 +21,7 @@ rule Trojan_Win32_Deepec_A_2147641923_0
         $x_1_7 = {6a 06 6a 01 6a 02 ff 15 ?? ?? ?? 10 89 45 c8 6a 01 e8 ?? ?? ?? 00 59 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

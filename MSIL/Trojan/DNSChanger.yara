@@ -20,6 +20,7 @@ rule Trojan_MSIL_DNSChanger_E_2147717894_0
         $x_1_6 = "http://richardpop.com:8888" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

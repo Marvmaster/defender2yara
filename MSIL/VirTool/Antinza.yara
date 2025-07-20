@@ -24,6 +24,7 @@ rule VirTool_MSIL_Antinza_B_2147814113_0
         $x_1_9 = "MythicUploadJob" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Telemot_D_2147653611_0
         $x_1_4 = "ban <add/del/show> [IP] [msg]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

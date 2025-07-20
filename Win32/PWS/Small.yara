@@ -19,6 +19,7 @@ rule PWS_Win32_Small_BA_2147657113_0
         $x_1_5 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 [0-208] 2e 00 6c 00 6f 00 67 00 69 00 6e 00 66 00 6f 00 72 00 2e 00 75 00 73 00 2f 00 [0-32] 2f 00 73 00 61 00 76 00 65 00 2e 00 70 00 68 00 70 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

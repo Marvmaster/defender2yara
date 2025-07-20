@@ -17,6 +17,7 @@ rule HackTool_Win32_UACBypass_A_2147776441_0
         $x_1_3 = "UAC_Bypass" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule HackTool_Win32_UACBypass_LKV_2147851155_0
         $x_1_3 = "iscsiexe_org.DiscpEstablishServiceLinkage" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

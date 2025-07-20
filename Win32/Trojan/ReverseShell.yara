@@ -19,6 +19,7 @@ rule Trojan_Win32_ReverseShell_HNA_2147908516_0
         $x_1_4 = {c7 44 24 1c 00 00 00 00 c7 44 24 18 00 00 00 00 c7 44 24 14 00 00 00 ?? c7 44 24 10 01 00 00 00 c7 44 24 0c 00 00 00 00 c7 44 24 08 00 00 00 00 c7 44 24 04 ?? ?? ?? 00 c7 04 24 00 00 00 00 e8 ?? ?? ?? ?? 83 ec 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

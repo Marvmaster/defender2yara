@@ -18,6 +18,7 @@ rule Trojan_Win32_Manggarypt_B_2147725643_0
         $x_1_3 = {8a 11 8d 42 ?? 3c 19 77 03 80 c2 e0 88 11 41 80 39 00 75 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Backdoor_Win32_Darkddoser_B_2147667401_0
         $x_1_8 = {73 76 63 68 6f 73 74 2e 65 78 65 [0-16] 44 61 52 4b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule Backdoor_Win32_Darkddoser_A_2147667402_0
         $x_1_5 = "SYN Flood Active" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -77,6 +79,7 @@ rule Backdoor_Win32_Darkddoser_D_2147667413_0
         $x_1_6 = "USB|Infected Drive" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -103,6 +106,7 @@ rule Backdoor_Win32_Darkddoser_E_2147681695_0
         $x_5_4 = {0f b6 08 2a 0a 75 ?? 53 8b 58 fc 2b 5a fc 53 83 d1 ff 21 d9 2b 48 fc 29 c8 29 ca 8b 1c 01 33 1c 11}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

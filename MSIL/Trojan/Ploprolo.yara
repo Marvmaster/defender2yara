@@ -19,6 +19,7 @@ rule Trojan_MSIL_Ploprolo_A_2147707521_0
         $x_1_5 = "QXZhc3RTdmM=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

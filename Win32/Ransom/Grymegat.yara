@@ -19,6 +19,7 @@ rule Ransom_Win32_Grymegat_A_2147662742_0
         $x_1_5 = "&Status=Lock&text=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Grymegat_B_2147666504_0
         $x_1_3 = "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\" /v " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

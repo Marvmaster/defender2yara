@@ -18,6 +18,7 @@ rule Ransom_MSIL_Lapsus_YAB_2147908019_0
         $x_1_3 = {02 28 4a 00 00 0a 0d 02 28 4b 00 00 0a 02 28 4c 00 00 0a 72 e6 08 00 70 28 0f 00 00 0a 28 4d 00 00 0a 13 04 11 04 08 28 4e 00 00 0a 00 02 28 4f 00 00 0a 00 11 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

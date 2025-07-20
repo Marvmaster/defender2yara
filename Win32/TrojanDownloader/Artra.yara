@@ -15,6 +15,7 @@ rule TrojanDownloader_Win32_Artra_A_2147733789_0
         $x_1_1 = "Asterix\\Documents\\Visual Studio 2008\\Projects\\28NovDwn\\Release\\28NovDwn.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

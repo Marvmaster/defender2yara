@@ -19,6 +19,7 @@ rule HackTool_Win64_Chisel_2147829265_0
         $x_1_4 = "powrprofH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

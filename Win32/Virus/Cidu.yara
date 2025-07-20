@@ -22,6 +22,7 @@ rule Virus_Win32_Cidu_A_2147601433_0
         $x_1_8 = "rundll32 mouse,disable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

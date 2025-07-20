@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Elsentric_AG_2147835429_0
         $x_1_8 = "\\prefs.js" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 6 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or

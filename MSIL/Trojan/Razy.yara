@@ -16,6 +16,7 @@ rule Trojan_MSIL_Razy_B_2147727821_0
         $x_1_2 = {02 7b 09 00 00 04 61 20 20 a7 00 00 58 d1 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_Razy_DHA_2147757265_0
         $x_1_5 = "suyh387rqh9IASHJ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_MSIL_Razy_DHB_2147758146_0
         $x_1_6 = "eufgyhsouyeht83" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_MSIL_Razy_DLKT_2147786566_0
         $x_1_7 = "http://api.thundermods.com/dlldownload.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_MSIL_Razy_PSHE_2147841341_0
         $x_2_1 = {02 7b 22 00 00 04 72 33 05 00 70 28 23 00 00 0a 28 29 00 00 0a 0a 02 7b 22 00 00 04 72 33 05 00 70 28 23 00 00 0a 28 84 00 00 0a 02 7b 22 00 00 04 72 33 05 00 70 28 23 00 00 0a 18 18 73 30 00 00 0a 0b 06 73 7e 00 00 0a 0c 08 6f 7f 00 00 0a 08 6f 80 00 00 0a 13 0b 2b 14 12 0b 28 81 00 00 0a 0d 07 09 66 1f 53 61 d2 6f 36 00 00 0a 12 0b 28 82 00 00 0a 2d e3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Trojan_MSIL_Razy_AR_2147846438_0
         $x_1_2 = "BlackBinderStub.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_MSIL_Razy_CXRM_2147847750_0
         $x_1_6 = "zBd18G6G3bQKZjaeIMj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule Trojan_MSIL_Razy_NRZ_2147848733_0
         $x_1_2 = "BcmcnB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -208,6 +216,7 @@ rule Trojan_MSIL_Razy_ARA_2147848813_0
         $x_1_3 = "Paila" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +239,7 @@ rule Trojan_MSIL_Razy_ARA_2147848813_1
         $x_1_2 = "BlackBinderStub.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -252,6 +262,7 @@ rule Trojan_MSIL_Razy_ARA_2147848813_2
         $x_1_2 = {13 04 2b 2b 12 04 28 70 00 00 0a 0b 00 07 28 29 00 00 06 0c 08 28 73 00 00 0a 0d 09 2d 08 03 08 6f 74 00 00 0a 00 07 03 28 2c 00 00 06 00 00 12 04 28 72 00 00 0a 0d 09 2d ca}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -273,6 +284,7 @@ rule Trojan_MSIL_Razy_PSSJ_2147851037_0
         $x_2_1 = {99 07 17 99 28 ?? 00 00 06 58 6f ?? 00 00 0a 00 09 28 ?? 00 00 2b 13 04 09 28 ?? 00 00 2b 08 fe 02 13 0b 11 0b 2c 1c 00 09 28 ?? 00 00 2b 13 06}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -294,6 +306,7 @@ rule Trojan_MSIL_Razy_KA_2147890153_0
         $x_10_1 = {17 59 0d 38 ?? 00 00 00 07 09 6f ?? 00 00 0a 74 ?? 00 00 1b 13 04 02 11 04 16 94 91 13 05 02 11 04 16 94 02 11 04 17 94 91 9c 02 11 04 17 94 11 05 9c 09 17 59 0d 09 16}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -317,6 +330,7 @@ rule Trojan_MSIL_Razy_KAB_2147895795_0
         $x_1_3 = "StrReverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -338,6 +352,7 @@ rule Trojan_MSIL_Razy_KAC_2147896421_0
         $x_5_1 = {61 65 5f 91 04 60 61 d1 9d 06 20 ?? ?? ?? ?? 66 66 66 20 ?? ?? ?? ?? 61 66 20 ?? ?? ?? ?? 61 20 ?? ?? ?? ?? 61 66 20 ?? ?? ?? ?? 61 66 59 25 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -359,6 +374,7 @@ rule Trojan_MSIL_Razy_PTEC_2147899088_0
         $x_2_1 = {08 28 54 00 00 06 0c 11 07 20 e5 e9 b2 53 5a 20 3a 73 10 52}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -381,6 +397,7 @@ rule Trojan_MSIL_Razy_AMBH_2147900301_0
         $x_2_2 = {fe 0c 01 00 fe 0c 02 00 93 fe 0e 03 00 fe 0c 00 00 fe 0c 03 00 fe 09 02 00 59 d1 6f ?? 00 00 0a 26 fe 0c 02 00 20 ?? 00 00 00 20 ?? ?? ?? ?? 65 65 65 65 65 65 65 65}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -405,6 +422,7 @@ rule Trojan_MSIL_Razy_NL_2147900615_0
         $x_1_4 = "/C schtasks /create /RU SYSTEM /sc minute /mo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -427,6 +445,7 @@ rule Trojan_MSIL_Razy_GPB_2147902605_0
         $x_5_2 = {00 53 74 72 52 65 76 65 72 73 65 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -448,6 +467,7 @@ rule Trojan_MSIL_Razy_SPYU_2147903566_0
         $x_1_1 = {11 04 02 16 02 8e 69 6f ?? ?? ?? 0a 00 11 04 6f ?? ?? ?? 0a 00 00 dd 17 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -469,6 +489,7 @@ rule Trojan_MSIL_Razy_PPD_2147925390_0
         $x_2_1 = {73 63 00 00 0a 0a 06 72 0d 02 00 70 72 d9 01 00 70 28 ?? 00 00 06 72 b8 02 00 70 28 ?? 00 00 0a 6f ?? 00 00 0a 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -26,6 +26,7 @@ rule Trojan_Win32_Delkrom_A_2147718003_0
         $x_1_12 = {20 64 65 6c 20 22 25 61 70 70 64 61 74 61 25 5c 47 6f 6f 67 6c 65 5c 55 70 64 61 74 65 22 20 2f 66 20 2f 73 20 2f 71 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

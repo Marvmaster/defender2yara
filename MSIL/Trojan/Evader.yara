@@ -20,6 +20,7 @@ rule Trojan_MSIL_Evader_PGE_2147939895_0
         $x_1_5 = "$NextScript | ps12exe -outputFile $PSScriptRoot/$NextNumber.exe *> $null" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

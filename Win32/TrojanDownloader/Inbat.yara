@@ -27,6 +27,7 @@ rule TrojanDownloader_Win32_Inbat_A_2147642541_0
         $x_1_13 = "/36a11.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -58,6 +59,7 @@ rule TrojanDownloader_Win32_Inbat_C_2147643453_0
         $x_1_7 = "pipi_dae_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -87,6 +89,7 @@ rule TrojanDownloader_Win32_Inbat_G_2147643699_0
         $x_1_6 = "\\kws.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -114,6 +117,7 @@ rule TrojanDownloader_Win32_Inbat_H_2147644531_0
         $x_1_4 = {64 65 6c 20 22 43 3a 5c 50 72 6f 67 72 61 6d 20 46 69 6c 65 73 5c [0-6] 5c 75 6e 69 6e 73 30 30 30 2e 65 78 65 22 20 2f 66}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

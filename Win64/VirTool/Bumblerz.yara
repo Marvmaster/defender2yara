@@ -21,6 +21,7 @@ rule VirTool_Win64_Bumblerz_A_2147838737_0
         $x_1_6 = {48 8b 45 68 48 39 45 48 0f 83 e4 00 00 00 8b 45 04 ff c0 99 81 e2 ff 00 00 00 03 c2 25 ff 00 00 00 2b c2 89 45 04 48 63 45 04 48 8b 8d 80 01 00 00 0f b6 04 01 8b 4d 24 03 c8 8b c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

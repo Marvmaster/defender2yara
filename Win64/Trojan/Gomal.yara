@@ -17,6 +17,7 @@ rule Trojan_Win64_Gomal_RF_2147888660_0
         $x_1_2 = "Go build ID: \"DGOF_U0-KA13DkK_k-bg/eB6gwb3DfThBy4Scd8ZP/c3tw-SozJi5L3vU_Y0jt/fFUPoXwacRQZAt2OoG6Z" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_Gomal_A_2147936268_0
         $x_1_3 = "Go build ID: \"DhPRtKn3hDGs3liDAHCt/mVWqbG9z8gcfbRGurp93/jH8zxIc3AW_yYMuHKeR3/sQcifcJTnr5trfae70Cp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

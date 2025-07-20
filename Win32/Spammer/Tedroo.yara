@@ -26,6 +26,7 @@ rule Spammer_Win32_Tedroo_A_2147596423_0
         $x_2_12 = {83 c0 02 83 c4 1c 3d f7 03 00 00 a3 ?? ?? ?? ?? 73 0a 81 05 ?? ?? ?? ?? f7 03 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -50,6 +51,7 @@ rule Spammer_Win32_Tedroo_B_2147598016_0
         $x_1_1 = {00 68 3f 00 0f 00 30 0a 68 44 21 40 20 01 00 00 80 ff 15 0c 20 51 30 39 50 00 50 18 51 8b 14 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Spammer_Win32_Tedroo_C_2147598017_0
         $x_1_1 = {c3 8b c1 18 cc cc cc cc cc 51 c7 70 c1 09 b8 44 23 40 00 8d 49 00 c9 0b 01 c7 0b c2 0a 22 32 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Spammer_Win32_Tedroo_D_2147598050_0
         $x_1_1 = {0f 00 30 0a 68 ?? 21 40 20 01 00 00 80 ff 15 04 20 51 28 39 50 00 50 ?? 51 8b 14 24 50 68 72 6a 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +132,7 @@ rule Spammer_Win32_Tedroo_E_2147601773_0
         $x_1_19 = "smtp.aol.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 8 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -151,6 +156,7 @@ rule Spammer_Win32_Tedroo_F_2147602380_0
         $x_1_1 = {8c b5 b8 34 24 40 cd 9e 31 53 1c b4 f3 43 5a e6 fe 4c 4f 47 47 45 52 08 0b 4f 42 0b 73 c9 6b 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +177,7 @@ rule Spammer_Win32_Tedroo_F_2147602380_1
         $x_1_1 = {c3 8b c1 18 cc cc 08 cc 51 c7 dc 42 71 b8 44 23 40 00 8d 49 42 fa 01 42 f7 42 b2 1a 32 d2 83 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +198,7 @@ rule Spammer_Win32_Tedroo_H_2147605505_0
         $x_1_1 = {26 d6 24 9e 70 30 3e 48 d0 8e b8 38 1d 60 5c 02 55 09 da a6 28 65 6f a4 65 ee 1f 4c 4f 47 47 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +220,7 @@ rule Spammer_Win32_Tedroo_I_2147606944_0
         $x_1_2 = {8a c8 80 c1 ?? 30 88 ?? ?? ?? ?? 40 3d ?? ?? ?? ?? 72 ed be ?? ?? ?? ?? 8d 7d e8 a5 a5 a5 a5 b8 ?? ?? ?? ?? 8b f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -232,6 +241,7 @@ rule Spammer_Win32_Tedroo_J_2147607329_0
         $x_1_1 = {08 30 04 cb f8 4b 03 4a 75 e1 00 10 55 8b ec 51 51 8d 45 fc 50 ff 75 08 30 f8 50 6a 00 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -252,6 +262,7 @@ rule Spammer_Win32_Tedroo_Q_2147608072_0
         $x_1_1 = {66 89 e3 66 8b 45 14 6a 01 61 fe 61 ff d7 8b 4d 10 33 db 38 19 79 00 fc e1 89 b5 02 34 04 34 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +283,7 @@ rule Spammer_Win32_Tedroo_R_2147608877_0
         $x_1_1 = {8b e8 85 ed 74 57 53 56 f0 35 6f 10 1d 20 6a 30 68 04 21 c0 10 55 ff d6 8b 1d 50 14 1f f8 7b 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -292,6 +304,7 @@ rule Spammer_Win32_Tedroo_S_2147609484_0
         $x_1_1 = {8b e8 85 ed 74 57 53 56 8b 35 08 69 57 6a 30 68 d0 39 55 ff d6 8b 1d 0c f2 f8 85 ff 74 11 8d 44}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +325,7 @@ rule Spammer_Win32_Tedroo_X_2147610856_0
         $x_1_1 = {08 30 04 cb f8 4b 03 4a 75 e1 03 ?? 81 ec 10 01 00 00 56 57 be ?? ?? ?? f4 a5 a5 66 a5 be ?? ?? 58 56 53 e8 ?? ?? c8 85 c0 59 59 74 5b 33 c0 8a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -335,6 +349,7 @@ rule Spammer_Win32_Tedroo_Z_2147613317_0
         $x_2_4 = {6f fb c8 1f 01 64 77 31 df 50 e9 a0 c4 82 9a 30 d1 03 97 38 d8 21 59 27 fc 28 3f dc 36 30 8f 2a c1 da 31 f2 2c b0 fd 96 f5 24 03 f4 99 2a 28 58 25 79 44 2d f1 6f ba ae 9c 2c 9b ea 28 de 8b 9a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))
@@ -369,6 +384,7 @@ rule Spammer_Win32_Tedroo_A_2147621081_0
         $x_1_11 = "do_work" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -405,6 +421,7 @@ rule Spammer_Win32_Tedroo_AA_2147627493_0
         $x_1_9 = "get_id.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -441,6 +458,7 @@ rule Spammer_Win32_Tedroo_AB_2147628636_0
         $x_2_14 = {33 c9 8b d0 2b 91 ?? ?? ?? ?? 81 fa 60 ea 00 00 76 0a c7 81 ?? ?? ?? ?? 02 00 00 00 83 c1 04 83 f9 14 7c de 06 00 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -483,6 +501,7 @@ rule Spammer_Win32_Tedroo_B_2147629802_0
         $x_1_10 = {72 75 6e 25 64 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -511,6 +530,7 @@ rule Spammer_Win32_Tedroo_AL_2147688249_0
         $x_10_4 = {55 00 52 00 4c 00 73 00 20 00 50 00 72 00 6f 00 73 00 65 00 73 00 73 00 65 00 64 00 3a 00 20 00 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

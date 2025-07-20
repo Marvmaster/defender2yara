@@ -17,6 +17,7 @@ rule Trojan_MSIL_Meterpreter_MBM_2147838095_0
         $x_1_2 = "cKJoKrzO1ifoXVA3CmRQWxycQ5lVuClk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Meterpreter_MBN_2147838131_0
         $x_1_2 = "$2059a686-3f50-409f-991c-cf05144d7d67" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_Meterpreter_MBFG_2147849998_0
         $x_1_2 = "hackedanyway" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_MSIL_Meterpreter_RP_2147913494_0
         $x_1_1 = {07 6f 16 00 00 0a 74 1e 00 00 01 72 ?? 00 00 70 6f 17 00 00 0a a5 1f 00 00 01 76 6b 22 00 00 80 44 5b 22 00 00 80 44 5b 6c 0a 07 6f 18 00 00 0a 2d ce}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

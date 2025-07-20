@@ -17,6 +17,7 @@ rule Trojan_Win32_KryptStealer_AA_2147756359_0
         $x_1_2 = {8b 45 08 83 c0 01 89 45 08 8b 4d 00 83 e9 01 39 4d 08 7f 1b 8b 55 00 83 ea 01 2b 55 08 8b 45 ec 8b 0c d0 f7 d1 8b 55 fc 03 55 08 88 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

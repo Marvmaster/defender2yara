@@ -21,6 +21,7 @@ rule Trojan_Win32_Herxmin_A_2147680307_0
         $x_1_7 = {68 41 00 00 80 ff 15 ?? ?? ?? ?? 8b 85 64 ff ff ff 3b c3 74 05 8d 70 50 eb 02 33 f6 05 d8 02 00 00 50 8b ce 89 86 00 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Trojan_MSIL_TrojanDropper_Phonzy_2147780365_0
         $x_2_7 = "Windows\\Media\\Log" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_3_*) and 1 of ($x_2_*))) or
             ((3 of ($x_4_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -64,6 +65,7 @@ rule Trojan_MSIL_TrojanDropper_Agent_2147797973_0
         $x_1_14 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +102,7 @@ rule Trojan_MSIL_TrojanDropper_Agent_2147807756_0
         $x_1_15 = "WriteAllBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +126,7 @@ rule Trojan_MSIL_TrojanDropper_PSE_2147831470_0
         $x_1_3 = "LaunchProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

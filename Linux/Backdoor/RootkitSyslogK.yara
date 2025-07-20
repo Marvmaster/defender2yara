@@ -18,6 +18,7 @@ rule Backdoor_Linux_RootkitSyslogK_H_2147822795_0
         $x_2_4 = "/etc/rc-Zobk0jpi/PgSD93ql" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

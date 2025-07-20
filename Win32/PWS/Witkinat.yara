@@ -16,6 +16,7 @@ rule PWS_Win32_Witkinat_A_2147634330_0
         $x_1_2 = {ba 00 00 01 00 e8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 6a 00 68 82 00 00 00 6a 03 6a 00 6a 01 68 00 00 00 80 8d 85 f3 7f fe ff 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

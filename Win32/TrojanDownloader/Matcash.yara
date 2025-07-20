@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Matcash_A_2147597867_0
         $x_1_6 = "GetWindowsDirectoryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule TrojanDownloader_Win32_Matcash_B_2147597868_0
         $x_1_9 = {6a 05 8d 85 ?? ?? ff ff 68 ?? ?? 40 00 50 ff d7 83 c4 0c 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule TrojanDownloader_Win32_Matcash_D_2147600886_0
         $x_4_4 = {8d 85 64 d8 ff ff 50 ff 15 ?? ?? 41 00 6a ?? ff 15 ?? ?? 41 00 68 ?? ?? 41 00 8d 8d 64 d8 ff ff 51 ff 15}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*))) or
@@ -106,6 +109,7 @@ rule TrojanDownloader_Win32_Matcash_E_2147605720_0
         $x_10_8 = {26 78 3d 00 26 69 3d 00 26 70 3d 00 26 63 6d 64 3d}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -130,6 +134,7 @@ rule TrojanDownloader_Win32_Matcash_F_2147606985_0
         $x_1_2 = {68 74 74 70 3a 2f 2f 79 6d 71 2e 61 1c 00 6d 2f 31 37 50 [0-5] 2e 63 6f [0-5] 6f 6f [0-5] 63 62 [0-5] 2e 77 72 73 2e 6d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -150,6 +155,7 @@ rule TrojanDownloader_Win32_Matcash_G_2147607789_0
         $x_1_1 = {68 74 74 00 [0-5] 70 3a 2f [0-21] 2e 6d [0-5] 63 62 [0-5] 6f [0-5] 6f [0-5] 2e [0-5] 63 6f [0-5] 6d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +177,7 @@ rule TrojanDownloader_Win32_Matcash_H_2147611452_0
         $x_1_2 = {42 c9 21 d3 f2 b3 12 22 02 ab 08 66 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -193,6 +200,7 @@ rule TrojanDownloader_Win32_Matcash_K_2147616768_0
         $x_1_3 = {64 00 00 65 6c 00 00 20 22 00 00 25 73 00 00 6f 70 65 6e 00 00 00 00 68 74 00 00 74 70 00 00 63 6c 61 73 73 00 00 00 2e 00 00 00 77 77 00 00 6c 61 00 00 78}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +226,7 @@ rule TrojanDownloader_Win32_Matcash_A_2147622492_0
         $x_1_5 = "Advertisment" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -242,6 +251,7 @@ rule TrojanDownloader_Win32_Matcash_O_2147629970_0
         $x_1_2 = {81 fe 00 00 10 00 75 ?? 57 e8 ?? ?? ff ff [0-16] 3b c7 59 74 02 ff d0 57 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

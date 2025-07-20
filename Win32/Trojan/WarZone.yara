@@ -16,6 +16,7 @@ rule Trojan_Win32_WarZone_RDA_2147893096_0
         $x_2_1 = {8b c1 99 f7 ff 8a 44 15 98 30 04 31 41}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_WarZone_A_2147935984_0
         $x_1_3 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_MSIL_QuasarStealer_EA_2147937249_0
         $x_5_1 = {06 07 02 07 91 03 07 03 6f 20 00 00 0a 5d 6f 21 00 00 0a 61 d2 9c 07 17 58 0b 07 02 8e 69 32 e0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

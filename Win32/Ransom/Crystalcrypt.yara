@@ -45,6 +45,7 @@ rule Ransom_Win32_Crystalcrypt_A_2147726190_0
         $x_1_31 = "Z_Drive" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 24 of ($x_1_*))) or
             ((2 of ($x_4_*) and 20 of ($x_1_*))) or

@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Lepasud_A_2147650931_0
         $x_1_5 = {63 70 64 73 64 61 73 64 6c 75 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

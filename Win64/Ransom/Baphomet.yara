@@ -20,6 +20,7 @@ rule Ransom_Win64_Baphomet_DA_2147772564_0
         $x_1_5 = "Paste public rsa key here" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

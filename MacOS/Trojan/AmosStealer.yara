@@ -18,6 +18,7 @@ rule Trojan_MacOS_AmosStealer_PA_2147920372_0
         $x_1_3 = "2f746d702f7875796e612f46696c65477261626265722f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

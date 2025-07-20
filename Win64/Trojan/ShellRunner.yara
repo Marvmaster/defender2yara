@@ -19,6 +19,7 @@ rule Trojan_Win64_ShellRunner_JL_2147838047_0
         $x_1_4 = {00 02 00 00 d0 14 00 00 00 10 00 00 00 00 00 40 01 00 00 00 00 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

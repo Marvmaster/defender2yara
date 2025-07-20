@@ -19,6 +19,7 @@ rule Trojan_Win32_Checkweb_A_2147627919_0
         $x_1_5 = {33 fa 23 fb 33 fa 03 c6 03 c7 c1 c0 03 8b fb 8b 75 04 33 f9 23 f8 33 f9 03 d6 03 d7 c1 c2 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanDownloader_Win64_Bingom_PA_2147776054_0
         $x_1_4 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Linux_AcidRain_A_2147923813_0
         $x_1_2 = {01 c3 8b 45 c8 05 01 04 00 00 39 d8 7e 19 b8 00 04 00 00 89 44 24 08 89 7c 24 04 89 34 24 e8 65 1a 00 00 85 c0 7f d9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

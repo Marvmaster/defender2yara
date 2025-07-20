@@ -17,6 +17,7 @@ rule VirTool_Win32_Procdopplegang_A_2147911228_0
         $x_1_3 = {6a 00 6a 00 6a 00 57 6a 00 6a 00 ff 75 f0 ff ?? ?? ?? ?? ?? 8b f8 85 ff ?? ?? ff ?? ?? ?? ?? ?? 50 ?? ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

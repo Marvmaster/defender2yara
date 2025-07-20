@@ -17,6 +17,7 @@ rule Virus_Win32_Neshta_C_2147603721_0
         $x_1_3 = "Best regards 2 Tommy Salo. [Nov-2005] yours [Dziadulja Apanas]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

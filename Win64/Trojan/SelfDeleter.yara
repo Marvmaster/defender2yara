@@ -16,6 +16,7 @@ rule Trojan_Win64_SelfDeleter_A_2147928114_0
         $n_1_2 = {8b 85 50 26 00 00 83 e8 02 39 85 98 26 00 00 ?? ?? 8b 85 50 26 00 00 83 e8 02 48 8b 95 40 26 00 00 48 98 c6 04 02 00 48 8b 95 40 26 00 00 48 8b 85 78 26 00 00 48 89 c1 e8}  //weight: -1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -38,6 +39,7 @@ rule Trojan_Win64_SelfDeleter_B_2147928115_0
         $n_1_2 = {8b 85 50 26 00 00 83 e8 02 39 85 98 26 00 00 ?? ?? 8b 85 50 26 00 00 83 e8 02 48 8b 95 40 26 00 00 48 98 c6 04 02 00 48 8b 95 40 26 00 00 48 8b 85 78 26 00 00 48 89 c1 e8}  //weight: -1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }

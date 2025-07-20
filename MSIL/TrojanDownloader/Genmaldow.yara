@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_Genmaldow_N_2147708624_0
         $x_1_3 = {69 64 6f 74 6b 6e 6f 77 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_MSIL_Genmaldow_Q_2147710504_0
         $x_1_3 = ".NET Reactor" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanDownloader_MSIL_Genmaldow_S_2147711699_0
         $x_1_2 = {26 00 65 00 78 00 70 00 6f 00 72 00 74 00 3d 00 64 00 6f 00 77 00 6e 00 6c 00 6f 00 61 00 64 00 ?? ?? 68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 [0-64] 2e 00 70 00 68 00 70 00 3f 00 65 00 78 00 3d 00 [0-32] 74 00 61 00 73 00 6b 00 68 00 6f 00 73 00 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule TrojanDownloader_MSIL_Genmaldow_S_2147711699_1
         $x_1_2 = {68 00 74 00 74 00 70 00 73 00 3a 00 2f 00 2f 00 64 00 6f 00 63 00 73 00 2e 00 67 00 6f 00 6f 00 67 00 6c 00 65 00 2e 00 63 00 6f 00 6d 00 2f 00 75 00 63 00 [0-128] 26 00 65 00 78 00 70 00 6f 00 72 00 74 00 3d 00 64 00 6f 00 77 00 6e 00 6c 00 6f 00 61 00 64 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule TrojanDownloader_MSIL_Genmaldow_T_2147711708_0
         $x_1_7 = "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -132,6 +137,7 @@ rule TrojanDownloader_MSIL_Genmaldow_U_2147716251_0
         $x_1_2 = "Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), \"Java\")" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +161,7 @@ rule TrojanDownloader_MSIL_Genmaldow_V_2147719476_0
         $x_1_4 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 [0-48] 2f 00 6c 00 6e 00 6b 00 2e 00 77 00 73 00 63 00 [0-8] 5c 00 77 00 73 00 63 00 2e 00 6c 00 6e 00 6b 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -185,6 +192,7 @@ rule TrojanDownloader_MSIL_Genmaldow_W_2147735436_0
         $x_1_8 = "Flesh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

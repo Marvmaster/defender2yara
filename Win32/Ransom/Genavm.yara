@@ -25,6 +25,7 @@ rule Ransom_Win32_Genavm_ARC_2147757621_0
         $x_1_10 = "qwertyuiopasdfghjkl1234567890" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

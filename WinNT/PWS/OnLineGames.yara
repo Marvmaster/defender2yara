@@ -17,6 +17,7 @@ rule PWS_WinNT_OnLineGames_A_2147617424_0
         $x_1_3 = {39 5e 08 76 5e 53 e8 ?? ?? ff ff 8b 45 fc 8b 55 b8 8b c8 c1 e1 02 8b 84 0d 30 f2 ff ff 3b c2 76 37 8b 7d d4 03 fa 3b c7 73 2e 8b 3e 2b c2 53 8b 0c 39 8b f8 89 4d e8 e8 ?? ?? ff ff 03 7d f8 53 e8 58 fa ff ff 3b 7d e8 74 0e 53 e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule PWS_WinNT_OnLineGames_D_2147656225_0
         $x_1_5 = {66 81 38 64 a1 75 27 66 81 78 06 8a 80 75 1f 0f b7 48 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule PWS_WinNT_OnLineGames_E_2147659131_0
         $x_1_3 = "wshtcpip.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule PWS_WinNT_OnLineGames_E_2147659131_1
         $x_1_5 = "AVp.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

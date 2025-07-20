@@ -17,6 +17,7 @@ rule Trojan_Win32_Atoff_A_2147680425_0
         $x_1_3 = {68 ff ff 1f 00 51 89 7c 24 ?? 89 7c 24 ?? c7 44 24 ?? 24 00 00 00 c7 44 24 ?? 03 00 01 00 c7 44 24 ?? 08 00 00 00 89 7c 24 ?? c7 44 24 ?? 04 00 01 00 c7 84 24 ?? 00 00 00 04 00 00 00 89 bc 24 ?? 00 00 00 ff d0 83 c4 2c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -41,6 +42,7 @@ rule Trojan_Win32_Atoff_B_2147680426_0
         $x_1_2 = {2b cf 83 f9 75 76 05 b9 75 00 00 00 89 4d ?? 8b 55 0c 03 d7 8b c6 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_MacOS_X_CallMe_A_2147681322_0
         $x_2_4 = "/tmp/__system" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*))) or

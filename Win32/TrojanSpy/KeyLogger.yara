@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_KeyLogger_GC_2147719488_0
         $x_1_5 = "Mozilla/4.0 (compatible; MSIE 6.0;" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule TrojanSpy_Win32_KeyLogger_HB_2147725641_0
         $x_2_4 = {00 5b 50 61 75 73 65 5d 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule TrojanSpy_Win32_KeyLogger_SP_2147835865_0
         $x_1_2 = "\\AppData\\Roaming\\SysMsn.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

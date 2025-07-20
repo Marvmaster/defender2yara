@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Dabvegi_A_2147628668_0
         $x_1_4 = {4d 79 73 66 78 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

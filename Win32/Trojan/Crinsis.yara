@@ -19,6 +19,7 @@ rule Trojan_Win32_Crinsis_A_2147709026_0
         $x_1_5 = {b9 06 00 00 00 33 c0 8d bd ?? ?? ff ff f3 ab c6 85 ?? ?? ff ff 00 b9 06 00 00 00 33 c0 8d bd ?? ?? ff ff f3 ab b9 4b 00 00 00 33 c0 8d bd ?? ?? ff ff f3 ab 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

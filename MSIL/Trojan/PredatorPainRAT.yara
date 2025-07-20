@@ -16,6 +16,7 @@ rule Trojan_MSIL_PredatorPainRAT_A_2147839990_0
         $x_2_1 = {00 00 04 06 1a 58 91 06 28 ?? 00 00 06 61 d2 9c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

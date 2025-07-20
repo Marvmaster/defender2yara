@@ -19,6 +19,7 @@ rule Ransom_Win32_Ikrik_A_2147720513_0
         $x_1_5 = "spyiboot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win64_MalDrv_B_2147923640_0
         $x_1_6 = "Hello DriverEntry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win64_MalDrv_D_2147923642_0
         $x_1_4 = "\\DosDevices\\yesSilentView" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win64_MalDrv_E_2147924934_0
         $x_1_5 = {0a ed 9e 97 2d 7a 39 55 ae 5d 28 c1 a9 26 ef 0f 98 1f 59 a8 a5 f2 e4 4a 22 8c d2 f1 b9 cb 44 6d 38 ba e3 aa 55 8e 7c 8d 2d e1 5e 1d 8a 80 b9 a3 af 27 05 e2 a1 cf 22 30 12 6a 68 17 60 c6 a1 51 27 ea 3e 5d d9 cd f5 67 eb a6 72 e7 0d 10 b5 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win64_MalDrv_RPA_2147929543_0
         $x_1_1 = {8b 0b 8b 53 0c 39 c1 76 19 01 c2 89 c1 44 8a 14 16 41 31 c2 ff c0 44 89 d2 f7 d2 41 88 54 0d 00 eb de}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +128,7 @@ rule Trojan_Win64_MalDrv_I_2147939633_0
         $x_1_13 = "SecurityHealthService.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

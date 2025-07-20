@@ -18,6 +18,7 @@ rule Trojan_Win64_Icxikil_A_2147706591_0
         $x_1_4 = "feitu32Ej64\\ProcessOper\\Win7Release\\ProcessOper.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

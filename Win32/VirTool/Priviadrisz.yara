@@ -19,6 +19,7 @@ rule VirTool_Win32_Priviadrisz_A_2147847414_0
         $x_1_4 = {ff 74 24 20 ff 74 24 28 6a 00 ff 15 ?? ?? ?? ?? 50 68 78 cb 41 00 e8 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

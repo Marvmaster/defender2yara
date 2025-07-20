@@ -18,6 +18,7 @@ rule Trojan_Win32_Jatodis_A_2147656117_0
         $x_1_3 = "/js/data/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

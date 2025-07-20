@@ -19,6 +19,7 @@ rule Misleading_Linux_Chisel_A_347929_0
         $x_1_4 = "tunnel.(*Tunnel).keepAliveLoop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Misleading_Linux_Chisel_B_348954_0
         $x_1_4 = "man-in-the-middle attacks" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

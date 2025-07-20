@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Vundo_2147623060_0
         $x_1_2 = {89 35 3c 68 40 00 a3 2c 68 40 00 72 c1 8b 15 5c 6c 40 00 8d 83 c2 02 00 00 8d 8b 72 02 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_Win32_Vundo_J_2147641757_0
         $x_1_2 = {2b d9 0f b6 1b 0f b6 d2 2b d3 83 fa 12 74 (3b)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule TrojanDownloader_Win32_Vundo_J_2147641757_1
         $x_2_5 = {81 fa 47 45 54 20 75 04 33 d2 eb 0b 81 fa 50 4f 53 54 75 b7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -89,6 +92,7 @@ rule TrojanDownloader_Win32_Vundo_HIY_2147644197_0
         $x_1_5 = {81 7c 0a fd 0d 0a 0d 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -114,6 +118,7 @@ rule TrojanDownloader_Win32_Vundo_F_2147648994_0
         $x_1_3 = {83 ec 20 e8 ?? e4 ff ff ff 15 ?? 90 00 10 68 d2 04 00 00 50 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule TrojanDownloader_Win32_Vundo_HIZ_2147650795_0
         $x_1_2 = {e8 37 35 00 00 e8 fb 5c ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -158,6 +164,7 @@ rule TrojanDownloader_Win32_Vundo_HIZ_2147650795_1
         $x_1_4 = {0f b7 55 f4 33 4d f4 33 c2 5f 5e 66 85 c9 75 05 b8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -180,6 +187,7 @@ rule TrojanDownloader_Win32_Vundo_A_2147651472_0
         $x_1_3 = {8a 00 88 45 b0 0f b6 45 ac 0f b6 4d b0 33 c1 8b 0d ?? ?? ?? 10 03 0d ?? ?? ?? 10 88 01 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -201,6 +209,7 @@ rule TrojanDownloader_Win32_Vundo_HJA_2147652995_0
         $x_1_2 = {e8 37 35 00 00 e8 9a 5c ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +231,7 @@ rule TrojanDownloader_Win32_Vundo_HJB_2147653039_0
         $x_1_2 = {e8 79 3c 00 00 e8 1d 5c ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +253,7 @@ rule TrojanDownloader_Win32_Vundo_HJC_2147653414_0
         $x_1_2 = {e8 37 35 00 00 e8 fb 5c ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +279,7 @@ rule TrojanDownloader_Win32_Vundo_A_2147653972_0
         $x_1_6 = {8b 45 f8 89 45 f0 8b 45 e4 8b 40 08 89 45 e0 81 45 e0 48 02 00 00 6a 04 8d 4d f0 8b 55 e0 8b c7 e8 ?? ?? ?? ?? 8b 45 f0 c1 e8 04 c1 e0 04 03 45 f8 89 45 f0 6a 04 8d 4d f0 8b 55 e0 8b c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -289,6 +301,7 @@ rule TrojanDownloader_Win32_Vundo_A_2147908980_0
         $x_2_1 = {8d 44 24 0c c7 44 24 0c 28 01 00 00 50 53 e8 ?? 22 00 00 85 c0 74 ?? 8b b4 24 38 01 00 00 8b 3d 58 70 00 10 8d 4c 24 30 56 51 ff ?? 85 c0 74 ?? 8d 54 24 0c 52 53 e8 ?? 22 00 00 85 c0 74 ?? 8d 44 24 30 56 50 ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

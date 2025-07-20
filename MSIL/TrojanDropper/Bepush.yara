@@ -16,6 +16,7 @@ rule TrojanDropper_MSIL_Bepush_D_2147682902_0
         $x_1_2 = {6f 72 6d 73 41 70 70 6c 69 63 61 74 69 6f 6e 35 2e 46 6f 72 6d 31 2e 72 65 73 6f 75 72 63 65 73 00 46 6c 61 73 68 47 75 6e 63 65 6c 6c 65 2e 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDropper_MSIL_Bepush_2147684891_0
         $x_1_6 = "BakBakim" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanDropper_MSIL_Bepush_C_2147685041_0
         $x_1_3 = "/extFiles/control" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule TrojanDropper_MSIL_Bepush_C_2147685041_1
         $x_1_3 = "/extFiles/control" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule TrojanDropper_MSIL_Bepush_C_2147685041_2
         $x_1_4 = "Facebook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

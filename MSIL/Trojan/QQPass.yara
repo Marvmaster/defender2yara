@@ -17,6 +17,7 @@ rule Trojan_MSIL_QQPass_NIT_2147926894_0
         $x_1_2 = "TUKSystemForSell" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_QQPass_NIT_2147926894_1
         $x_2_1 = {72 e1 02 00 70 13 18 02 28 ?? 00 00 06 11 13 11 15 20 00 04 00 00 12 17 28 ?? 00 00 06 26 72 19 03 00 70 13 19 28 ?? 00 00 0a 11 15 6f ?? 00 00 0a 6f ?? 00 00 0a 13 1a 72 49 03 00 70 13 1b 00 11 1a 02 28 ?? 00 00 06 28 ?? 00 00 0a 6f ?? 00 00 0a 13 1d 2b 38 11 1d 6f ?? 00 00 0a 74 16 00 00 01 13 1e 00 72 87 03 00 70 13 1f 02 11 1e 6f ?? 00 00 0a 1f 0a 6f ?? 00 00 0a 6f ?? 00 00 0a 28 ?? 00 00 06 00 72 af 03 00 70 13 20 00 11 1d 6f ?? 00 00 0a 2d bf de 16}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

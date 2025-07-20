@@ -20,6 +20,7 @@ rule Worm_MSIL_Mofin_A_2147681347_0
         $x_1_6 = {2a 00 2e 00 64 00 6f 00 63 00 ?? ?? 2a 00 2e 00 78 00 6c 00 73 00 78 00 ?? ?? 2a 00 2e 00 78 00 6c 00 73 00 ?? ?? 2a 00 2e 00 64 00 6f 00 63 00 78 00 ?? ?? 2a 00 2e 00 70 00 64 00 66 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Worm_MSIL_Mofin_B_2147685574_0
         $x_1_9 = "tala.regwrite \"HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\Pinangat\",dalan & \"\\kernel.vbs\"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Ransom_Win64_Clop_F_2147844011_0
         $x_1_2 = "ENDOEFEND123" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Ransom_Win64_Clop_SM_2147847140_0
         $x_1_3 = ".CL_0_P" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Ransom_Win64_Clop_SA_2147849470_0
         $x_1_2 = {41 0f b6 14 10 03 ca 81 e1 ?? ?? ?? ?? 48 63 c9 48 8b 54 24 ?? 0f b6 0c 0a 48 ?? ?? ?? ?? 0f b6 04 02 33 c1 8b 4c 24 ?? 48 ?? ?? ?? ?? 88 04 0a e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Ransom_Win64_Clop_J_2147906483_0
         $x_1_2 = {25 00 73 00 5c 00 21 00 [0-32] 5f 00 52 00 45 00 41 00 44 00 5f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Ransom_Win64_Clop_KWAA_2147907932_0
         $x_1_6 = ".C_-_L_-_0_-_P" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Ransom_Win64_Clop_A_2147919384_0
         $x_1_6 = "too many files open in system" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Ransom_Win64_Clop_AMCV_2147928846_0
         $x_1_7 = "net stop ReportServer /y" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

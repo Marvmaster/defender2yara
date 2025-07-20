@@ -17,6 +17,7 @@ rule TrojanProxy_Win32_Bakcorox_A_2147633130_0
         $x_1_3 = {50 72 6f 78 79 42 6f 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

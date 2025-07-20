@@ -23,6 +23,7 @@ rule Trojan_Win32_Runner_AR_2147743490_0
         $x_1_8 = "regwrite" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 4 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -53,6 +54,7 @@ rule Trojan_Win32_Runner_RP_2147910770_0
         $x_1_6 = "NullsoftInst" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Trojan_Win32_Runner_CCJT_2147929896_0
         $x_1_2 = {83 ec 14 85 c0 75 ?? c7 04 24 ?? ?? ?? ?? ff d3 52 85 c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

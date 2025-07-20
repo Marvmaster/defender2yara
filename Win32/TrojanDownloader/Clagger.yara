@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Clagger_A_2147573997_0
         $x_1_7 = {70 68 70 00 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -65,6 +66,7 @@ rule TrojanDownloader_Win32_Clagger_B_2147573998_0
         $x_2_15 = {48 89 45 d8 50 8b 45 f4 e8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 8 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 9 of ($x_1_*))) or
@@ -110,6 +112,7 @@ rule TrojanDownloader_Win32_Clagger_H_2147608486_0
         $x_1_6 = "r=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

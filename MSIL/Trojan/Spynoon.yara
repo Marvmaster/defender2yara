@@ -18,6 +18,7 @@ rule Trojan_MSIL_Spynoon_MFP_2147782172_0
         $x_5_3 = {17 13 25 11 ?? 14 72 ?? ?? ?? 70 17 8d ?? ?? ?? 01 25 16 72 ?? ?? ?? 70 a2 14 14 28 ?? ?? ?? 0a 13 26 11 26 14 72 ?? ?? ?? 70 17 8d ?? ?? ?? 01 25 16 72 ?? ?? ?? 70 a2 14 14 28 ?? ?? ?? 0a 13 ?? 11 ?? 14 72 ?? ?? ?? 70 18 8d ?? ?? ?? 01 25 16 16 8c ?? ?? ?? 01 a2 25 17 06 a2 14 14 28 ?? ?? ?? 0a 13 ?? 72 ?? ?? ?? 70}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Spynoon_VMS_2147787667_0
         $x_1_4 = "www.lumixsoft.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_MSIL_Spynoon_SYN_2147828289_0
         $x_1_1 = {06 07 03 07 91 2b 0e 07 25 17 59 1e 2d 13 26 16 fe 02 0c 2b 07 6f ?? ?? ?? 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_MSIL_Spynoon_ABEW_2147836679_0
         $x_1_2 = "CurrencyConverter.POIUYHJK" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_MSIL_Spynoon_DC_2147841776_0
         $x_1_2 = "Append" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_MSIL_Spynoon_DD_2147842413_0
         $x_1_4 = "WindowsFormsApp1.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Trojan_MSIL_Spynoon_FAM_2147845258_0
         $x_5_1 = {25 2d 17 26 7e ?? 00 00 04 fe ?? ?? 00 00 06 73 ?? 00 00 0a 25 80 ?? 00 00 04 0a 72 ?? 13 00 70 28 ?? 00 00 0a 0b 06 07 6f ?? 00 00 0a 0c 02 8e 69 8d ?? 00 00 01 0d 08 02 16 02 8e 69 09 16 6f ?? 00 00 0a 13 04 09 11 04 28 ?? 00 00 2b 28 ?? 00 00 2b 13 05 2b 00 11 05 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule Trojan_MSIL_Spynoon_ABSW_2147846102_0
         $x_1_4 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -199,6 +207,7 @@ rule Trojan_MSIL_Spynoon_ABPY_2147847375_0
         $x_1_3 = "QYwAc.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +231,7 @@ rule Trojan_MSIL_Spynoon_ABXK_2147847813_0
         $x_1_3 = "DataBasePracticalJob" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -247,6 +257,7 @@ rule Trojan_MSIL_Spynoon_GAM_2147848226_0
         $x_1_5 = "TLbnUNC1iCwEQOQnQPVcmQpuvJYqDxnwxSg4U20UL" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -270,6 +281,7 @@ rule Trojan_MSIL_Spynoon_ABYA_2147848453_0
         $x_1_3 = "ReadAsByteArrayAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -292,6 +304,7 @@ rule Trojan_MSIL_Spynoon_ABZT_2147848784_0
         $x_2_2 = {2b 21 12 09 28 ?? 00 00 0a 13 0a 2b 16 12 09 28 ?? 00 00 0a 13 0a 2b 0b 12 09 28 ?? 00 00 0a 13 0a 2b 00 07 11 0a 6f ?? 00 00 0a 00 00 11 08 17 58 13 08 11 08 09 fe 04 13 0d 11 0d 2d 97}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -313,6 +326,7 @@ rule Trojan_MSIL_Spynoon_AABA_2147848868_0
         $x_5_1 = {16 0a 2b 28 06 09 5d 13 07 06 09 5b 13 08 08 11 07 11 08 6f ?? 00 00 0a 13 0a 11 04 12 0a 28 ?? 00 00 0a 6f ?? 00 00 0a 06 17 58 0a 06 09 11 05 5a 32 d1}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -335,6 +349,7 @@ rule Trojan_MSIL_Spynoon_AABO_2147849051_0
         $x_1_2 = "476a274f-fdbe-4042-9b4b-a1852e74909c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -356,6 +371,7 @@ rule Trojan_MSIL_Spynoon_AABW_2147849172_0
         $x_5_1 = {11 04 08 07 6f ?? 01 00 0a 13 13 16 0d 11 05 06 9a 20 ea 74 bb fb 28 ?? 01 00 06 28 ?? 00 00 0a 13 0c 11 0c 2c 0a 12 13 28 ?? 01 00 0a 0d 2b 44 11 05 06 9a 20 e2 74 bb fb 28 ?? 01 00 06 28 ?? 00 00 0a 13 0d 11 0d 2c 0a 12 13 28 ?? 01 00 0a 0d 2b 21 11 05 06 9a 20 da 74 bb fb 28 ?? 01 00 06 28 ?? 00 00 0a 13 0e 11 0e 2c 08 12 13 28 ?? 01 00 0a 0d 11 06 09 6f ?? 01 00 0a 08 17 58 0c 08 11 08 fe 04 13 0f 11 0f 3a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -377,6 +393,7 @@ rule Trojan_MSIL_Spynoon_AACF_2147849321_0
         $x_5_1 = {11 04 08 07 6f ?? 00 00 0a 13 12 16 0d 11 05 06 9a 20 0c bd 56 0f 28 ?? 00 00 06 28 ?? 00 00 0a 13 0b 11 0b 2c 0a 12 12 28 ?? 00 00 0a 0d 2b 44 11 05 06 9a 20 14 bd 56 0f 28 ?? 00 00 06 28 ?? 00 00 0a 13 0c 11 0c 2c 0a 12 12 28 ?? 00 00 0a 0d 2b 21 11 05 06 9a 20 1c bd 56 0f 28 ?? 00 00 06 28 ?? 00 00 0a 13 0d 11 0d 2c 08 12 12 28 ?? 00 00 0a 0d 11 06 09 6f ?? 00 00 0a 08 17 58 0c 08 11 08 fe 04 13 0e 11 0e 3a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -398,6 +415,7 @@ rule Trojan_MSIL_Spynoon_ASAU_2147849747_0
         $x_5_1 = {13 05 11 04 8e 69 17 da 13 09 16 13 0a 2b 1d 11 05 11 0a 11 04 11 0a 9a 1f 10 28 ?? 00 00 0a 86 6f ?? 00 00 0a 00 11 0a 17 d6 13 0a 11 0a 11 09 31 dd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -419,6 +437,7 @@ rule Trojan_MSIL_Spynoon_ASAT_2147849835_0
         $x_5_1 = {11 05 11 0a 74 ?? 00 00 1b 11 0c 11 07 58 11 09 59 93 61 11 0b 74 ?? 00 00 1b 11 09 11 0c 58 1f 11 58 11 08 5d 93 61 d1 6f ?? 00 00 0a 26 16 13 0e 38 ?? fe ff ff 11 09 17 58 13 09 1d 13 0e 38}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -446,6 +465,7 @@ rule Trojan_MSIL_Spynoon_ABT_2147849947_0
         $x_1_7 = "HtmlDecode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -467,6 +487,7 @@ rule Trojan_MSIL_Spynoon_AAEG_2147850252_0
         $x_5_1 = {13 0c 11 0c 18 6f ?? 00 00 0a 00 11 0c 18 6f ?? 00 00 0a 00 11 0c 72 0d c2 12 70 28 ?? 00 00 0a 6f ?? 00 00 0a 00 11 0c 6f ?? 00 00 0a 13 0d 11 0d 06 16 06 8e 69 6f ?? 00 00 0a 13 0e}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -488,6 +509,7 @@ rule Trojan_MSIL_Spynoon_ASBI_2147850613_0
         $x_5_1 = {0d 16 13 06 2b 23 00 08 11 06 18 6f ?? 00 00 0a 13 07 09 11 06 18 5b 11 07 1f 10 28 ?? 00 00 0a d2 9c 00 11 06 18 58 13 06 11 06 08 6f ?? 00 00 0a fe 04 13 08 11 08 2d cd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -511,6 +533,7 @@ rule Trojan_MSIL_Spynoon_AAEM_2147850703_0
         $x_1_3 = "ForestInhabitant.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -532,6 +555,7 @@ rule Trojan_MSIL_Spynoon_AAEU_2147850711_0
         $x_5_1 = {09 8e 69 17 da 13 11 16 13 12 2b 1b 11 04 11 12 09 11 12 9a 1f 10 28 ?? 00 00 0a 6f ?? 00 00 0a 00 11 12 17 d6 13 12 11 12 11 11 31 df}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -553,6 +577,7 @@ rule Trojan_MSIL_Spynoon_AAEV_2147850712_0
         $x_5_1 = {16 13 07 2b 24 00 09 11 07 18 6f ?? 00 00 0a 13 08 11 04 11 07 18 5b 11 08 1f 10 28 ?? 00 00 0a d2 9c 00 11 07 18 58 13 07 11 07 20 02 d0 00 00 fe 04 13 09 11 09 2d cd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -576,6 +601,7 @@ rule Trojan_MSIL_Spynoon_AAFF_2147850998_0
         $x_1_3 = "Main_Project" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -601,6 +627,7 @@ rule Trojan_MSIL_Spynoon_ASBT_2147851318_0
         $x_1_5 = "83RZPR16RZZRN2RZOR9ZR15RZKRZZRN2R14RM6R13RZKRZZR58R14" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -624,6 +651,7 @@ rule Trojan_MSIL_Spynoon_AAHT_2147851813_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -646,6 +674,7 @@ rule Trojan_MSIL_Spynoon_ASCO_2147852184_0
         $x_1_2 = "Quan_Ly_Thu_Vien.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -667,6 +696,7 @@ rule Trojan_MSIL_Spynoon_AAIN_2147852213_0
         $x_5_1 = {06 07 06 8e 69 5d 06 07 06 8e 69 5d 91 09 07 1f 16 5d 6f ?? 00 00 0a 61 28 ?? 00 00 0a 06 07 17 58 06 8e 69 5d 91 28 ?? 00 00 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 07 15 58 0b 07 16 fe 04 16 fe 01 13 05 11 05 2d b5}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -689,6 +719,7 @@ rule Trojan_MSIL_Spynoon_AAIQ_2147852230_0
         $x_1_2 = "ReadAsByteArrayAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -710,6 +741,7 @@ rule Trojan_MSIL_Spynoon_ASCT_2147852685_0
         $x_1_1 = {02 00 0d 2b 34 07 09 07 8e 69 5d 07 09 07 8e 69 5d 91 08 09 1f 16 5d 6f ?? 00 00 0a 61 07 09 17 58 07 8e 69 5d 91 20 00 01 00 00 58 20 00 01 00 00 5d 59 d2 9c 09 15 58 0d 09 16 fe 04 16 fe 01 13 06 11 06 2d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -732,6 +764,7 @@ rule Trojan_MSIL_Spynoon_ASCU_2147852753_0
         $x_1_2 = "DJKGYSJHDHJ KDGJKHSDGKJHSDG" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -753,6 +786,7 @@ rule Trojan_MSIL_Spynoon_AAJQ_2147852759_0
         $x_5_1 = {07 11 04 07 8e 69 5d 07 11 04 07 8e 69 5d 91 08 11 04 1f 16 5d 28 ?? 00 00 06 61 28 ?? 00 00 06 07 11 04 17 58 07 8e 69 5d 91 28 ?? 00 00 06 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -775,6 +809,7 @@ rule Trojan_MSIL_Spynoon_ASCV_2147852837_0
         $x_1_2 = "FinalProject.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -797,6 +832,7 @@ rule Trojan_MSIL_Spynoon_MBHT_2147852940_0
         $x_1_2 = "Ee7bVsviP" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -818,6 +854,7 @@ rule Trojan_MSIL_Spynoon_AAKI_2147853011_0
         $x_5_1 = {07 11 07 07 8e 69 5d 07 11 07 07 8e 69 5d 91 08 11 07 08 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 61 28 ?? 00 00 0a 07 11 07 17 58 07 8e 69 5d 91 28 ?? 00 00 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d 28 ?? 00 00 0a 9c 11 07 15 58 13 07 11 07 16 2f af}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -842,6 +879,7 @@ rule Trojan_MSIL_Spynoon_AAKJ_2147853012_0
         $x_1_4 = "Germania.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -864,6 +902,7 @@ rule Trojan_MSIL_Spynoon_AAKR_2147853126_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -888,6 +927,7 @@ rule Trojan_MSIL_Spynoon_AAKY_2147853244_0
         $x_1_4 = "ReadAsByteArrayAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -910,6 +950,7 @@ rule Trojan_MSIL_Spynoon_ASBO_2147891265_0
         $x_2_2 = {59 5f 13 0e 11 10 11 0f 11 0b 11 0f 91 11 0e d2 61 d2 9c 00 11 0f 17 58 13 0f 11 0f 11 0b 8e 69 fe 04 13 12 11 12 3a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -931,6 +972,7 @@ rule Trojan_MSIL_Spynoon_AAPE_2147891323_0
         $x_5_1 = {11 10 11 0a 5d 13 11 11 10 11 0b 5d 13 12 11 08 11 11 91 13 13 11 09 11 12 28 ?? 00 00 06 13 14 02 11 08 11 10 28 ?? 00 00 06 13 15 02 11 13 11 14 11 15 28 ?? 00 00 06 13 16 11 08 11 11 11 16 20 00 01 00 00 5d d2 9c 11 10 17 59 13 10 11 10 16 2f ad}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -954,6 +996,7 @@ rule Trojan_MSIL_Spynoon_AAPL_2147891465_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -976,6 +1019,7 @@ rule Trojan_MSIL_Spynoon_AAPM_2147891466_0
         $x_1_2 = "7C584G8GF8FIGHH47S7Z54" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -998,6 +1042,7 @@ rule Trojan_MSIL_Spynoon_ASEF_2147891644_0
         $x_1_2 = "7B5QA88S258X89EAA5NGR5" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1019,6 +1064,7 @@ rule Trojan_MSIL_Spynoon_AAQA_2147891681_0
         $x_5_1 = {16 13 07 2b 28 08 09 7e ?? 00 00 04 09 91 11 04 11 07 1a 5b 95 11 07 1a 5d 1e 5a 1f 1f 5f 64 d2 61 d2 9c 11 07 17 58 13 07 09 17 58 0d 11 07 1f 10 2f 0c 09 7e ?? 00 00 04 8e 69 fe 04 2b 01 16 13 08 11 08 2d bf}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1040,6 +1086,7 @@ rule Trojan_MSIL_Spynoon_AASA_2147892713_0
         $x_5_1 = {11 11 07 8e 69 5d 13 12 11 11 08 6f ?? 00 00 0a 5d 13 13 07 11 12 91 13 14 08 11 13 6f ?? 00 00 0a 13 15 02 07 11 11 28 ?? 00 00 06 13 16 02 11 14 11 15 11 16 28 ?? 00 00 06 13 17 07 11 12 02 11 17 28 ?? 00 00 06 9c 00 11 11 17 59 13 11 11 11 16 fe 04 16 fe 01 13 18 11 18 2d a2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1063,6 +1110,7 @@ rule Trojan_MSIL_Spynoon_AASR_2147893065_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1084,6 +1132,7 @@ rule Trojan_MSIL_Spynoon_AATC_2147893259_0
         $x_5_1 = {09 07 8e 69 5d 13 08 09 08 6f ?? 00 00 0a 5d 13 09 07 11 08 91 13 0a 08 11 09 6f ?? 00 00 0a 13 0b 02 07 09 28 ?? 00 00 06 13 0c 02 17 11 0a 11 0b 11 0c 28 ?? 00 00 06 13 0d 07 11 08 02 11 0d 28 ?? 00 00 06 9c 00 09 17 59 0d 09 16 fe 04 16 fe 01 13 0e 11 0e 2d a7}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1105,6 +1154,7 @@ rule Trojan_MSIL_Spynoon_AATE_2147893273_0
         $x_5_1 = {06 07 02 07 91 72 01 00 00 70 28 ?? 00 00 0a 59 d2 9c 07 17 58 0b 07 02 8e 69 32 e4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1127,6 +1177,7 @@ rule Trojan_MSIL_Spynoon_AATQ_2147894559_0
         $x_2_2 = "fe3d45bf-f2da-4b78-9ae6-c39375383825" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1148,6 +1199,7 @@ rule Trojan_MSIL_Spynoon_AAUT_2147894700_0
         $x_5_1 = {07 11 07 07 8e 69 6a 5d d4 91 08 11 07 08 8e 69 6a 5d d4 91 61 07 11 07 17 6a 58 07 8e 69 6a 5d d4 91 59 20 00 01 00 00 58 13 08 07 11 07 07 8e 69 6a 5d d4 11 08 20 00 01 00 00 5d d2 9c 00 11 07 17 6a 58 13 07 11 07 07 8e 69 17 59 09 17 58 5a 6a fe 02 16 fe 01 13 09 11 09 2d a2}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1169,6 +1221,7 @@ rule Trojan_MSIL_Spynoon_AAUY_2147894986_0
         $x_5_1 = {07 11 10 07 8e 69 6a 5d d4 91 08 11 10 08 8e 69 6a 5d d4 91 61 07 11 10 17 6a 58 07 8e 69 6a 5d d4 91 59 20 00 01 00 00 58 13 11 07 11 10 07 8e 69 6a 5d d4 11 11 20 00 01 00 00 5d d2 9c 00 11 10 17 6a 58 13 10 11 10 07 8e 69 17 59 09 17 58 5a 6a fe 02 16 fe 01 13 12 11 12 2d a2}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1192,6 +1245,7 @@ rule Trojan_MSIL_Spynoon_AAVB_2147895063_0
         $x_1_3 = "$$$A$ms$iSc$a$nBu$f$fer$$$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1213,6 +1267,7 @@ rule Trojan_MSIL_Spynoon_AAWG_2147895948_0
         $x_5_1 = {11 08 11 04 5d 13 09 11 08 1f 16 5d 13 0a 11 08 17 58 11 04 5d 13 0b 07 11 09 91 13 0c 20 00 01 00 00 13 0d 11 0c 08 11 0a 91 61 07 11 0b 91 59 11 0d 58 11 0d 5d 13 0e 07 11 09 11 0e d2 9c 00 11 08 17 58 13 08 11 08 11 04 09 17 58 5a fe 04 13 0f 11 0f 2d a9}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1234,6 +1289,7 @@ rule Trojan_MSIL_Spynoon_AAWO_2147896687_0
         $x_5_1 = {11 08 11 04 5d 13 09 11 08 17 58 11 04 5d 13 0a 07 11 09 91 13 0b 11 08 1f 16 5d 13 0c 07 11 09 11 0b 08 11 0c 91 61 07 11 0a 91 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 00 11 08 17 58 13 08 11 08 11 04 09 17 58 5a fe 04 13 0d 11 0d 2d ae}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1256,6 +1312,7 @@ rule Trojan_MSIL_Spynoon_ABSD_2147896719_0
         $x_1_2 = "$bcc41665-492c-44e5-9b7c-34d0f2cb1866" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1279,6 +1336,7 @@ rule Trojan_MSIL_Spynoon_AAOW_2147896762_0
         $x_1_3 = "2f0b1c59-9dea-4b18-8e0d-bd5df1d9d827" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1300,6 +1358,7 @@ rule Trojan_MSIL_Spynoon_AAWU_2147896892_0
         $x_5_1 = {16 0a 2b 1d 11 04 06 08 06 91 11 05 06 11 05 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 61 d2 9c 06 17 58 0a 06 08 8e 69 32 dd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1324,6 +1383,7 @@ rule Trojan_MSIL_Spynoon_AAYW_2147898601_0
         $x_1_4 = "Power_Troubleshooter.Properties" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1346,6 +1406,7 @@ rule Trojan_MSIL_Spynoon_AAZI_2147898783_0
         $x_2_2 = {07 11 0a 11 10 11 08 5d d2 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1369,6 +1430,7 @@ rule Trojan_MSIL_Spynoon_AF_2147899948_0
         $x_1_3 = "E4ZDFA4U8X5579G4VFS95G" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1390,6 +1452,7 @@ rule Trojan_MSIL_Spynoon_AAAX_2147900020_0
         $x_5_1 = {11 03 28 01 00 00 2b 28 ?? 00 00 2b 13 03 20 ?? 00 00 00 38 ?? ff ff ff d0 ?? 00 00 01 28 ?? 00 00 0a 11 04 28 ?? 00 00 06 28 ?? 00 00 2b 72 ?? 00 00 70 28 ?? 00 00 0a 02 7b ?? 00 00 04 6f ?? 00 00 0a 28 ?? 00 00 06 26}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1414,6 +1477,7 @@ rule Trojan_MSIL_Spynoon_AM_2147900314_0
         $x_1_4 = "GetTempPath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1435,6 +1499,7 @@ rule Trojan_MSIL_Spynoon_BXAA_2147901281_0
         $x_5_1 = {11 07 13 08 11 06 13 09 11 08 11 09 fe 02 16 fe 01 13 16 11 16 2d 03 00 2b 22 11 04 11 07 09 11 07 1e 5a 1e 6f ?? 00 00 0a 18 28 ?? 00 00 0a 9c 11 07 17 58 13 07 00 17 13 16 2b c3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1456,6 +1521,7 @@ rule Trojan_MSIL_Spynoon_CDAA_2147901462_0
         $x_5_1 = {11 04 11 09 94 13 0a 09 11 09 09 8e 69 5d 91 13 0b 11 05 11 09 11 0a 11 0b 66 5f 11 0a 66 11 0b 5f 60 9e 00 11 09 17 58 13 09 11 09 11 04 8e 69 fe 04 13 0c 11 0c 2d c7}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1477,6 +1543,7 @@ rule Trojan_MSIL_Spynoon_CEAA_2147901486_0
         $x_5_1 = {ff ff 11 00 11 00 28 ?? 00 00 06 11 00 28 ?? 00 00 06 28 ?? 00 00 06 13 06}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1498,6 +1565,7 @@ rule Trojan_MSIL_Spynoon_CUAA_2147901992_0
         $x_5_1 = {11 0b 91 61 08 11 08 07 20 88 00 00 00 58 5d 91 11 07 58 11 07 5d 59 d2 9c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1521,6 +1589,7 @@ rule Trojan_MSIL_Spynoon_DCAA_2147902127_0
         $x_1_3 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1542,6 +1611,7 @@ rule Trojan_MSIL_Spynoon_DVAA_2147902600_0
         $x_5_1 = {11 06 2c 39 02 14 72 ?? ?? 00 70 16 8d ?? 00 00 01 14 14 14 28 ?? 00 00 0a 28 ?? 00 00 0a 0c 07 08 28 ?? 00 00 0a 6f ?? 00 00 0a 00 11 05 11 04 12 05 28 ?? 00 00 0a 13 07 11 07 2d c7}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1566,6 +1636,7 @@ rule Trojan_MSIL_Spynoon_AO_2147902968_0
         $x_1_4 = "vmware" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1587,6 +1658,7 @@ rule Trojan_MSIL_Spynoon_EOAA_2147903004_0
         $x_5_1 = {11 09 02 74 ?? 00 00 1b 16 02 14 72 3c 15 00 70 16 8d ?? 00 00 01 14 14 14 28 ?? 00 00 0a 28 ?? 00 00 0a 6f ?? 00 00 0a 00 11 09 6f ?? 00 00 0a 00 11 08 6f ?? 00 00 0a 0d de 0e}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1610,6 +1682,7 @@ rule Trojan_MSIL_Spynoon_FCAA_2147903190_0
         $x_1_3 = "12{Q0Z2BZ13{DZ16Z13{EZ1CZ13Z18Z38" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1631,6 +1704,7 @@ rule Trojan_MSIL_Spynoon_FUAA_2147903563_0
         $x_5_1 = {5d d4 91 61 28 ?? 00 00 0a 07 11 07 08 6a 5d d4 91 28 ?? 00 00 0a 59 11 08 58 11 08 5d 28 ?? 00 00 0a 9c 00 11 05 17 6a 58}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1652,6 +1726,7 @@ rule Trojan_MSIL_Spynoon_GNAA_2147904287_0
         $x_5_1 = {16 13 04 2b 1f 00 7e ?? 00 00 04 11 04 7e ?? 00 00 04 11 04 91 20 ?? ?? 00 00 59 d2 9c 00 11 04 17 58 13 04 11 04 7e ?? 00 00 04 8e 69 fe 04 13 05 11 05 2d d0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1673,6 +1748,7 @@ rule Trojan_MSIL_Spynoon_HVAA_2147905158_0
         $x_5_1 = {11 05 1f 16 6a 5d d4 91 61 28 ?? 00 00 06 07 11 07 08 6a 5d d4 91 28 ?? 00 00 06 59 11 08 58 11 08 5d 28 ?? 00 00 06 9c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1694,6 +1770,7 @@ rule Trojan_MSIL_Spynoon_IFAA_2147905511_0
         $x_5_1 = {06 20 00 01 00 00 6f ?? 00 00 0a 06 7e ?? 00 00 04 28 ?? 00 00 0a 6f ?? 00 00 0a 06 7e ?? 00 00 04 28 ?? 00 00 0a 6f ?? 00 00 0a 06 06 6f ?? 00 00 0a 06 6f ?? 00 00 0a 6f ?? 00 00 0a 13 04 73 ?? 00 00 0a 0b 28 ?? 00 00 06 73 ?? 00 00 0a 0c 08 11 04 16 73 ?? 00 00 0a 0d 09 07 6f ?? 00 00 0a 07 6f ?? 00 00 0a 73 ?? 00 00 0a 13 05 de 1f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1715,6 +1792,7 @@ rule Trojan_MSIL_Spynoon_LHAA_2147908442_0
         $x_5_1 = {0a 72 72 f8 03 70 72 76 f8 03 70 17 8d ?? 00 00 01 25 16 1f 2d 9d 28 ?? 00 00 0a 28 ?? 00 00 0a 20 00 01 00 00 14 14 17 8d ?? 00 00 01 25 16 06 72 80 f8 03 70 72 84 f8 03 70 6f ?? 00 00 0a 28 ?? 00 00 06 a2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1736,6 +1814,7 @@ rule Trojan_MSIL_Spynoon_MHAA_2147909844_0
         $x_5_1 = {07 11 0a 91 11 0e 61 07 11 0f 91 59 13 10 11 10 20 00 01 00 00 58 13 11 07 11 0a 11 11 20 ff 00 00 00 5f d2 9c 00 11 0a 17 58 13 0a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1757,6 +1836,7 @@ rule Trojan_MSIL_Spynoon_NMAA_2147911338_0
         $x_5_1 = {06 17 58 09 5d 13 07 07 11 07 91 13 08 02 07 06 91 11 06 61 11 08 28 ?? 00 00 06 13 09 07 06 11 09 28 ?? 00 00 0a 9c 06 17 58 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1779,6 +1859,7 @@ rule Trojan_MSIL_Spynoon_KAF_2147911340_0
         $x_1_2 = {03 04 59 0a 06 20 00 ?? 00 00 58 20 ff 00 00 00 5f 0b 1a 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1800,6 +1881,7 @@ rule Trojan_MSIL_Spynoon_KAH_2147911959_0
         $x_1_1 = {02 07 08 91 11 ?? 61 07 08 17 58 07 8e 69 5d 91}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1821,6 +1903,7 @@ rule Trojan_MSIL_Spynoon_OYAA_2147912603_0
         $x_5_1 = {11 05 11 11 91 11 12 61 13 13 11 11 17 58 11 05 8e 69 5d 13 14 11 05 11 14 91 13 15 11 13 11 15 59 20 00 01 00 00 58 20 ff 00 00 00 5f 13 16 11 05 11 11 11 16 d2 9c 00 11 11 17 58}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1844,6 +1927,7 @@ rule Trojan_MSIL_Spynoon_PIAA_2147913650_0
         $x_2_3 = "HeyCanIPopShit.Properties.Resources" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1866,6 +1950,7 @@ rule Trojan_MSIL_Spynoon_RDAA_2147915517_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1888,6 +1973,7 @@ rule Trojan_MSIL_Spynoon_AE_2147918986_0
         $x_1_2 = "MyFtpClient.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1910,6 +1996,7 @@ rule Trojan_MSIL_Spynoon_VSAA_2147920466_0
         $x_1_2 = "E4ZDFA4U8X5579G4VFS95G" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1932,6 +2019,7 @@ rule Trojan_MSIL_Spynoon_ALCA_2147925216_0
         $x_2_2 = {01 25 16 0f 01 28 ?? 00 00 0a 9c 25 17 0f 01 28 ?? 00 00 0a 9c 25 18 0f 01 28 ?? 00 00 0a 9c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1954,6 +2042,7 @@ rule Trojan_MSIL_Spynoon_AWCA_2147925859_0
         $x_2_2 = {01 25 16 0f 01 28 ?? 00 00 0a 9c 25 17 0f 01 28 ?? 00 00 0a 9c 25 18 0f 01 28 ?? 00 00 0a 9c 13 05 00 11 05 13 06 16 13 07 2b 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1976,6 +2065,7 @@ rule Trojan_MSIL_Spynoon_ALEA_2147927034_0
         $x_2_2 = {03 19 8d d9 00 00 01 25 16 12 00 28 ?? 00 00 0a 9c 25 17 12 00 28 ?? 00 00 0a 9c 25 18 12 00 28 ?? 00 00 0a 9c 07 28 ?? 00 00 2b 6f ?? 00 00 0a 00 00 11 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1999,6 +2089,7 @@ rule Trojan_MSIL_Spynoon_ALFA_2147927897_0
         $x_2_3 = "00E1FBA0E00B409CD21B8014CCD21546869732070726F677261" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2021,6 +2112,7 @@ rule Trojan_MSIL_Spynoon_AXFA_2147928098_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2043,6 +2135,7 @@ rule Trojan_MSIL_Spynoon_ARNA_2147935716_0
         $x_1_2 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2065,6 +2158,7 @@ rule Trojan_MSIL_Spynoon_AALA_2147936388_0
         $x_2_2 = {01 25 16 0f 00 28 ?? 00 00 0a 9c 25 17 0f 00 28 ?? 00 00 0a 9c 25 18 0f 00 28 ?? 00 00 0a 9c 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2089,6 +2183,7 @@ rule Trojan_MSIL_Spynoon_AXQA_2147938674_0
         $x_2_4 = "Student_Housing.Properties.Resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2111,6 +2206,7 @@ rule Trojan_MSIL_Spynoon_AXRA_2147939856_0
         $x_2_2 = {11 05 11 0c 6f ?? ?? 00 0a 2b 48 11 0b 16 31 43 19 8d ?? 00 00 01 25 16 12 0a 28 ?? ?? 00 0a 9c 25 17 12 0a 28 ?? ?? 00 0a 9c 25 18 12 0a 28 ?? ?? 00 0a 9c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2132,6 +2228,7 @@ rule Trojan_MSIL_Spynoon_AOUA_2147941864_0
         $x_5_1 = {09 16 07 16 94 9e 09 17 07 17 94 9e 02 07 16 94 07 17 94 6f ?? 00 00 0a 13 06 19 8d ?? 00 00 01 13 07 11 07 16 12 06 28 ?? 00 00 0a 9c 11 07 17 12 06 28 ?? 00 00 0a 9c 11 07 18 12 06 28 ?? 00 00 0a 9c 09 18 04 03 6f ?? 00 00 0a 59 9e 09 18 94 19}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2153,6 +2250,7 @@ rule Trojan_MSIL_Spynoon_ASVA_2147942444_0
         $x_5_1 = {02 11 0a 11 0b 6f ?? 00 00 0a 13 0c 12 0c 28 ?? 00 00 0a 16 61 d2 13 0d 12 0c 28 ?? 00 00 0a 16 61 d2 13 0e 12 0c 28 ?? 00 00 0a 16 61 d2 13 0f 07 11 0d 6f ?? 00 00 0a 00 08 11 0e 6f ?? 00 00 0a 00 09 11 0f 6f ?? 00 00 0a 00 04 03 6f ?? 00 00 0a 59 13 10 11 10 19 fe 04 16 fe 01 13 11 11 11 2c 3a 00 07 6f ?? 00 00 0a 13 12 08 6f ?? 00 00 0a 13 13 09 6f ?? 00 00 0a 13 14 03 11 12 6f ?? 00 00 0a 00 03 11 13 6f ?? 00 00 0a 00 03 11 14 6f ?? 00 00 0a 00 00 38}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2175,6 +2273,7 @@ rule Trojan_MSIL_Spynoon_AVVA_2147942848_0
         $x_2_2 = {13 0a 2b 37 11 0a 6f ?? 01 00 0a 13 0b 00 06 7b ?? 00 00 04 6f ?? 01 00 0a 06 7b ?? 00 00 04 fe 04 16 fe 01 13 0c 11 0c 2c 02 2b 18 06 7b ?? 00 00 04 11 0b 6f ?? 01 00 0a 00 00 11 0a 6f ?? 01 00 0a 2d c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2197,6 +2296,7 @@ rule Trojan_MSIL_Spynoon_AHWA_2147943238_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2220,6 +2320,7 @@ rule Trojan_MSIL_Spynoon_AIWA_2147943375_0
         $x_2_3 = {01 25 16 11 25 9c 25 17 11 26 9c 25 18 11 27 9c 13 32 11 0b 20 e8 03 00 00 5d 20 e7 03 00 00 fe 01 16 fe 01 13 33}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

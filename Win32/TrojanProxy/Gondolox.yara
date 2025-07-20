@@ -19,6 +19,7 @@ rule TrojanProxy_Win32_Gondolox_A_2147678708_0
         $x_1_5 = {0f b6 1c 39 0f b6 d2 69 d2 ?? ?? ?? ?? 03 db 8d 2c 10 03 ed 33 dd 33 d8 81 c3 ?? ?? ?? ?? 83 c1 01 3b ce 8b c3 72 ?? 8b 5c 24 14 5d 89 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

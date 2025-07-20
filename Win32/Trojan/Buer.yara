@@ -20,6 +20,7 @@ rule Trojan_Win32_Buer_PA_2147755565_0
         $x_1_5 = {0f b6 c1 03 c6 0f b6 f0 8a 84 35 ?? ?? ?? ff 88 84 3d ?? ?? ?? ff 8b 45 fc 88 8c 35 ?? ?? ?? ff 0f b6 94 3d ?? ?? ?? ff 0f b6 c9 03 d1 0f b6 ca 8a 8c 0d ?? ?? ?? ff 30 08 40 89 45 fc 83 eb 01 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

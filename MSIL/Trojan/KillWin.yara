@@ -22,6 +22,7 @@ rule Trojan_MSIL_KillWin_ATM_2147780818_0
         $x_3_7 = "C:\\Windows\\System32\\drivers\\disk.sys" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_MSIL_KillWin_MA_2147901446_0
         $x_1_9 = "And it's your fault" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Trojan_MSIL_KillWin_SWR_2147927260_0
         $x_1_4 = "Virus_Destructive.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_MSIL_KillWin_SWT_2147927261_0
         $x_1_4 = "DisableTaskMgr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule Trojan_MSIL_KillWin_SWS_2147935871_0
         $x_2_1 = {09 02 16 02 8e 69 6f 62 00 00 0a 09 6f 63 00 00 0a de 0a 09 2c 06 09 6f 39 00 00 0a dc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

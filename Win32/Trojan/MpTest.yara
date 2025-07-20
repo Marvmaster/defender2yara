@@ -19,6 +19,7 @@ rule Trojan_Win32_MpTest_A_2147683628_0
         $x_1_5 = "abedda45-5184-4e01-9dd3-8365c469ec43" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Rescoms_A_2147716902_0
         $x_1_3 = "BreakingSecurity RAT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Backdoor_Win32_Rescoms_B_2147719326_0
         $x_5_10 = "Breaking-Security.Net" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 6 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -75,6 +77,7 @@ rule Backdoor_Win32_Rescoms_C_2147728905_0
         $x_1_3 = "Uploading file to C&C" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Backdoor_Win32_Rescoms_D_2147730434_0
         $x_1_4 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Backdoor_Win32_Rescoms_KD_2147760038_0
         $x_1_1 = {8b 45 00 03 c6 0f b7 0b 66 81 e1 ff 0f 0f b7 c9 03 c1 01 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

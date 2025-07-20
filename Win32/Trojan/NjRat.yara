@@ -22,6 +22,7 @@ rule Trojan_Win32_NjRat_NEL_2147831125_0
         $x_1_7 = "sfx\\build" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Trojan_Win32_NjRat_NEAA_2147833195_0
         $x_1_8 = "IsWow64Process" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +83,7 @@ rule Trojan_Win32_NjRat_NEBE_2147838570_0
         $x_2_11 = "Software\\Microsoft\\Windows\\CurrentVersion\\GrpConv\\MapGroup" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Trojan_Win32_NjRat_NEDF_2147843184_0
         $x_10_1 = {c1 e8 18 83 c6 04 88 42 fa 8b c1 c1 e8 10 88 42 fb 8b c1 c1 e8 08 88 42 fc 88 4a fd}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

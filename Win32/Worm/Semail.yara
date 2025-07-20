@@ -28,6 +28,7 @@ rule Worm_Win32_Semail_A_2147574158_0
         $x_1_14 = "FreeOfCharge" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 11 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 10 of ($x_1_*))) or
@@ -62,6 +63,7 @@ rule Worm_Win32_Semail_2147582339_0
         $x_2_10 = {81 3e 1e 00 01 30 75 18}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 4 of ($x_1_*))) or
             ((5 of ($x_2_*) and 2 of ($x_1_*))) or

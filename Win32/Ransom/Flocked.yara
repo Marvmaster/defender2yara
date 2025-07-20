@@ -16,6 +16,7 @@ rule Ransom_Win32_Flocked_YAD_2147932753_0
         $x_11_1 = {33 0c bb 8b 7d 0c 8b 45 fc 31 0f 8b 4c 83 08 8b c1 8b b3 38 20 00}  //weight: 11, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

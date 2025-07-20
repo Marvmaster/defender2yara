@@ -15,6 +15,7 @@ rule Trojan_Win32_FrmBuk_A_2147741017_0
         $x_1_1 = {81 f9 86 5d 00 00 75 c0 90 90 8b c6 90 90 90 ba 51 1a 00 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

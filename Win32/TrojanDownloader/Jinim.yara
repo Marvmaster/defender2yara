@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Jinim_A_2147692706_0
         $x_1_4 = "rundll32.exe %s RealService %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

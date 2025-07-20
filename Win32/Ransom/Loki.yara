@@ -25,6 +25,7 @@ rule Ransom_Win32_Loki_ST_2147793437_0
         $x_1_10 = "Do not rename encrypted files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Ransom_Win32_Loki_AD_2147793534_0
         $x_1_6 = "wmic shadowcopy delete" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

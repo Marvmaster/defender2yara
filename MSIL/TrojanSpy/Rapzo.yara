@@ -23,6 +23,7 @@ rule TrojanSpy_MSIL_Rapzo_2147640828_0
         $x_1_9 = "Password.NET Messenger Service" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or

@@ -17,6 +17,7 @@ rule Virus_Win32_Netop_A_2147599954_0
         $x_1_3 = {c7 46 24 20 00 00 e0 8b 85 ?? ?? ?? ?? 8b 58 28 89 9d ?? ?? ?? ?? 8b 9d ?? ?? ?? ?? 89 58 28 8b 5e 0c 03 5e 08 89 58 50 c7 40 08 6b 72 61 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

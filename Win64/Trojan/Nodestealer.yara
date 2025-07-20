@@ -16,6 +16,7 @@ rule Trojan_Win64_Nodestealer_MC_2147892745_0
         $x_5_1 = "MicrosofOffice.exe" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

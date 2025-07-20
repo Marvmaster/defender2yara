@@ -17,6 +17,7 @@ rule Trojan_Win32_Webprefix_A_2147642849_0
         $x_1_3 = {8b 4d 0c bf 04 01 00 00 57 c7 45 ?? 3c 00 00 00 e8 ?? ?? ?? ?? 8b 4d 10 56 89 45 ?? 89 7d ?? e8 ?? ?? ?? ?? 89 45 ?? 8d 45 ?? 50 6a 00 6a 00 89 75 ?? ff 75 fc ff 15 ?? ?? ?? ?? 8b 4d 0c 6a ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Webprefix_B_2147644454_0
         $x_10_5 = {80 38 3b 75 02 88 18 41 3b ce 72 ed 57 8d 85 ?? ?? ff ff 50 6a 07 53 ff 75 10 ff 75 ?? ff 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -68,6 +70,7 @@ rule Trojan_Win32_Webprefix_C_2147687100_0
         $x_1_5 = {59 33 f6 46 e9 50 fe ff ff 33 f6 e9 49 fe ff ff 55 8b ec 81 ec 10 01 00 00 53 56 57 33 db 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win32_Webprefix_17709_0
         $x_1_4 = "Software\\Microsoft\\Windows Media\\WMSDK\\General" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Win32_Webprefix_17709_1
         $x_2_3 = "&os=%s&wpa" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Trojan_Win32_Webprefix_17709_2
         $x_1_9 = "Enable Browser Extensions" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or

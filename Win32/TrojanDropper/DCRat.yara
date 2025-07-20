@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_DCRat_SK_2147755319_0
         $x_1_4 = "\\mnb.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

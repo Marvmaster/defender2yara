@@ -18,6 +18,7 @@ rule Trojan_MSIL_Cookafack_A_2147650166_0
         $x_1_4 = "password will be hacked by you" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

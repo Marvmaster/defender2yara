@@ -22,6 +22,7 @@ rule Trojan_Win64_SysChange_SA_2147890103_0
         $x_1_7 = "Explorer\\HideDesktopIcons\\NewStartPane" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule HackTool_Win32_ProcHolow_BA_2147901534_0
         $x_1_6 = "CreateProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -27,6 +27,7 @@ rule VirTool_Win32_SwifGenerator_A_2147608162_0
         $x_10_13 = "MethCallEngine" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

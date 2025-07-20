@@ -21,6 +21,7 @@ rule Trojan_Win32_Aptdrop_A_2147729585_0
         $x_1_7 = ":\\work\\n1st\\Agent\\Release\\PotPlayerUpdate.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -60,6 +61,7 @@ rule Trojan_Win32_Aptdrop_B_2147729586_0
         $x_1_20 = "\\MyWork\\Relative Backdoor\\New Backdoor2.3-with-cmd-resource\\New Backdoor2.3\\Release\\Backdoor.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*))) or
             (all of ($x*))
@@ -84,6 +86,7 @@ rule Trojan_Win32_Aptdrop_E_2147730438_0
         $x_1_2 = "ws://45.32.117.116:443PAdefaultPhttp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +108,7 @@ rule Trojan_Win32_Aptdrop_F_2147730628_0
         $x_1_2 = "Good night for a walk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +129,7 @@ rule Trojan_Win32_Aptdrop_G_2147730630_0
         $x_1_1 = {2f 00 63 00 20 00 70 00 69 00 6e 00 67 00 20 00 31 00 2e 00 31 00 2e 00 31 00 2e 00 31 00 20 00 2d 00 6e 00 20 00 33 00 20 00 26 00 20 00 64 00 65 00 6c 00 20 00 25 00 73 00 00 00 63 00 6d 00 64 00 2e 00 65 00 78 00 65 00 00 00 6f 00 70 00 65 00 6e 00 00 00 00 00 44 00 46 00 54 00 30 00 32 00 34 00 38 00 30 00 33 00 39 00 38 00 34 00 30 00 32 00 39 00 33 00 2e 00 74 00 6d 00 70 00 00 00 00 00 5c 00 77 00 69 00 6e 00 75 00 70 00 64 00 61 00 74 00 65 00 2e 00 65 00 78 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule Trojan_Win32_Aptdrop_R_2147730787_0
         $x_1_1 = {8b cf 8b c7 c1 e9 05 03 4c 24 ?? c1 e0 04 03 44 24 ?? 33 c8 8d 04 2f 33 c8 8b 44 24 ?? 2b d9 6a f7 59 2b c8 03 e9 4e 75 ?? 8b 74 24 24 89 7e 04 5f 89 1e 5e 5d 5b 83 c4 ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +172,7 @@ rule Trojan_Win32_Aptdrop_RU_2147730827_0
         $x_1_2 = {51 ff 33 58 83 c3 04 f7 d8 83 e8 26 83 e8 02 83 e8 ff 29 f8 50 5f c7 01 00 00 00 00 01 01 83 e9 fc 83 c2 04 81 fa 88 06 00 00 75 d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -186,6 +193,7 @@ rule Trojan_Win32_Aptdrop_L_2147735622_0
         $x_1_1 = "C:\\Users\\aa\\Documents\\Visual Studio 2015\\Projects\\agent k nov\\Release\\agent k nov.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +214,7 @@ rule Trojan_Win32_Aptdrop_H_2147735887_0
         $x_1_1 = "Ping 127.0.0.1 -459B2-3311-54C3- Processid:{0A10 /Processid:{712C245-2190-7215-A3C5-43215926716Asoftware\\Intel\\Jicacls \"%s\" /graft\\windows\\curreNtQueryInformatiIntelGraphicsConsoftware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -226,6 +235,7 @@ rule Trojan_Win32_Aptdrop_N_2147739795_0
         $x_10_1 = "N:\\C#MM\\YKMM\\LoadW\\obj\\Release\\LoadW.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

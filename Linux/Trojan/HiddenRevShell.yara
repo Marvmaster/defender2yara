@@ -17,6 +17,7 @@ rule Trojan_Linux_HiddenRevShell_A_2147936335_0
         $x_2_2 = {48 89 45 e0 48 c7 45 e8 00 00 00 00 48 8d 45 e0 ba 00 00 00 00 48 89 c6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Linux_HiddenRevShell_B_2147942815_0
         $x_1_2 = {48 89 e6 ba 10 00 00 00 89 df 89 44 24 04 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

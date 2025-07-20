@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Bunabom_A_2147682682_0
         $x_1_4 = {64 ff 30 64 89 20 c6 45 fb 00 6a 00 6a 00 6a 00 6a 00 68 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

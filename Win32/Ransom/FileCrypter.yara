@@ -23,6 +23,7 @@ rule Ransom_Win32_FileCrypter_MK_2147762105_0
         $x_1_8 = "END ENCRYPT ONLY EXTENATIONS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Ransom_Win32_FileCrypter_MK_2147762105_1
         $x_1_6 = "AttentionVictim" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +84,7 @@ rule Ransom_Win32_FileCrypter_2147762276_0
         $x_1_13 = "\\Desktop\\README.HTML" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -111,6 +114,7 @@ rule Ransom_Win32_FileCrypter_MB_2147763484_0
         $x_1_9 = ".mouse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +142,7 @@ rule Ransom_Win32_FileCrypter_M_2147766821_0
         $x_1_7 = ".SNPDRGN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

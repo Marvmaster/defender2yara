@@ -21,6 +21,7 @@ rule Ransom_MSIL_Mrynimal_2147729796_0
         $x_30_7 = {50 72 69 76 61 74 65 5c 4d 69 6e 6f 74 61 75 72 5c 4d 69 6e 6f 74 61 75 72 [0-24] 5c 4d 69 6e 6f 74 61 75 72 2e 70 64 62}  //weight: 30, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_5_*))) or
             ((1 of ($x_30_*) and 2 of ($x_5_*))) or

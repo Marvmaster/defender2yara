@@ -17,6 +17,7 @@ rule Trojan_Win32_CoinLoader_SM_2147761707_0
         $x_1_2 = {8a 1a 8d 43 ?? 3c ?? 77 03 80 c3 ?? 0f be c3 83 c2 ?? 33 f8 c1 c7 0d 47 66 39 32 75 ?? 81 ff ?? ?? ?? ?? 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

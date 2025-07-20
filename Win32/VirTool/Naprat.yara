@@ -22,6 +22,7 @@ rule VirTool_Win32_Naprat_A_2147626355_0
         $x_1_8 = "cbAntiNormanSandbox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

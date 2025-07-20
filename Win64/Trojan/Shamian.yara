@@ -19,6 +19,7 @@ rule Trojan_Win64_Shamian_A_2147777393_0
         $x_1_4 = "/miansha/xx2.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

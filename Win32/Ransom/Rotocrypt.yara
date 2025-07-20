@@ -22,6 +22,7 @@ rule Ransom_Win32_Rotocrypt_A_2147725973_0
         $x_4_8 = {6a 40 68 00 10 00 00 68 40 9c 00 00 57 ff 96 ?? ?? 00 00 89 46 1c e8 ?? ?? ff ff}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 6 of ($x_1_*))) or
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or

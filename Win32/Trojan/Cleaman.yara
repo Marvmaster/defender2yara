@@ -16,6 +16,7 @@ rule Trojan_Win32_Cleaman_A_2147645494_0
         $x_1_2 = {b9 00 50 00 00 66 39 4e 02 75 64 66 83 3e 02 75 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Cleaman_B_2147647326_0
         $x_1_8 = {2e 6c 6f 67 00 00 00 00 4c 6f 61 64 4c 69 62 72 61 72 79 45 78 57 00 00 64 70 6c 61 79 73 76 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -70,6 +72,7 @@ rule Trojan_Win32_Cleaman_D_2147650366_0
         $x_1_3 = {8b f7 f7 de 80 3c 16 5c 0f 84}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -96,6 +99,7 @@ rule Trojan_Win32_Cleaman_E_2147651002_0
         $x_1_4 = "\\drivers\\3r5werg.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

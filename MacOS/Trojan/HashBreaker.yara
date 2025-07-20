@@ -19,6 +19,7 @@ rule Trojan_MacOS_HashBreaker_A_2147844111_0
         $x_1_4 = "get_coinomi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MacOS_HashBreaker_A_2147844111_1
         $x_1_4 = "ExtractSafeStoragePassword" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_MacOS_HashBreaker_B_2147844827_0
         $x_1_3 = "NUITKA_ONEFILE_PARENT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (2 of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_MacOS_HashBreaker_C_2147917118_0
         $x_1_4 = "injecting/Documents/Addons.zip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (3 of ($x*))
 }
 

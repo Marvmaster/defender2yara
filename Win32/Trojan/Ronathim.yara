@@ -20,6 +20,7 @@ rule Trojan_Win32_Ronathim_A_2147648341_0
         $x_1_6 = "Desktop\\New Folder (2)\\New Folder" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             ((3 of ($x_4_*))) or

@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Raccoon_AKL_2147799512_0
         $x_1_1 = {bd a0 ac aa bc bc cf 99 a6 bd bb ba ae a3 9f bd a0 bb aa ac bb cf 99 a6 bd bb ba ae a3 8e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

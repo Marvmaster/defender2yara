@@ -16,6 +16,7 @@ rule Trojan_Win32_Harasom_A_2147680393_0
         $x_1_2 = {56 33 f6 68 ?? ?? ?? ?? 46 e8 ?? ?? ?? ?? 59 6a 40 68 00 30 00 00 ff 75 0c 6a 00 ff 75 08 ff d0 5e 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

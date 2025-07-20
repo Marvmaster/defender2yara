@@ -18,6 +18,7 @@ rule Backdoor_Win32_Saluchtra_A_2147688793_0
         $x_1_3 = {45 78 70 65 63 74 3a 00 43 4f 4d 50 55 54 45 52 4e 41 4d 45 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Win32_Saluchtra_B_2147688794_0
         $x_1_4 = {56 42 4f 58 00 00 00 00 56 4d 77 61 72 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

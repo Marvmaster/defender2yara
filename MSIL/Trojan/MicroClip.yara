@@ -16,6 +16,7 @@ rule Trojan_MSIL_MicroClip_RDA_2147933843_0
         $x_2_1 = {16 07 6f ef 00 00 0a 6f f0 00 00 0a 13 05 08 07 11 05 17 6f f1 00 00 0a 6f f2 00 00 0a 26 11 04 17 d6 13 04}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

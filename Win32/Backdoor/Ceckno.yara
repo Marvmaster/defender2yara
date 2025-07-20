@@ -20,6 +20,7 @@ rule Backdoor_Win32_Ceckno_D_2147606654_0
         $x_1_6 = "socket" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Backdoor_Win32_Ceckno_A_2147607870_0
         $x_5_5 = {62 00 00 00 5c 78 63 6f 70 79 2e 65 78 65 00 00 5c 6e 74 73 65 72 76 65 72 2e 65 78 65 00 00 00 45 58 45 00 5c 6e 74 73 65 72 76 65 72 2e 64 6c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -76,6 +78,7 @@ rule Backdoor_Win32_Ceckno_E_2147610055_0
         $x_1_9 = "WinExec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Backdoor_Win32_Ceckno_C_2147610693_0
         $x_1_7 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +129,7 @@ rule Backdoor_Win32_Ceckno_H_2147664028_0
         $x_1_4 = "SYSTEM\\CurrentControlSet\\Services\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -154,6 +159,7 @@ rule Backdoor_Win32_Ceckno_I_2147681578_0
         $x_1_10 = "set cdaudio door open" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             ((3 of ($x_10_*))) or

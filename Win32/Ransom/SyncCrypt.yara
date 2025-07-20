@@ -27,6 +27,7 @@ rule Ransom_Win32_SyncCrypt_A_2147723089_0
         $x_2_13 = {c6 40 0a 00 e8 ?? ?? ?? ?? 31 d2 b9 1a 00 00 00 f7 f1 8a 82 ?? ?? ?? ?? 88 04 1e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

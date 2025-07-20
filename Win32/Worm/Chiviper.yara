@@ -16,6 +16,7 @@ rule Worm_Win32_Chiviper_A_2147608846_0
         $x_1_2 = {80 3e 00 75 04 8b 74 24 14 8a 0e 28 08 8a 08 8a 16 32 d1 46 88 10 40 4f 75 e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Worm_Win32_Chiviper_B_2147608859_0
         $x_1_4 = {5c 77 73 6f 63 6b 33 32 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Worm_Win32_Chiviper_C_2147618792_0
         $x_1_7 = "rs=createObject(\"Wscript.shell\")" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

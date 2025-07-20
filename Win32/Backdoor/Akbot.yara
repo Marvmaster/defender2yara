@@ -25,6 +25,7 @@ rule Backdoor_Win32_Akbot_A_2147595439_0
         $x_1_11 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -54,6 +55,7 @@ rule Backdoor_Win32_Akbot_B_2147595442_0
         $x_1_10 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +85,7 @@ rule Backdoor_Win32_Akbot_2147608237_0
         $x_10_10 = {33 d2 85 c9 7e 10 3b 55 ?? 7d 0b 8a 04 1e 30 04 3a 42 3b d1 7c f0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 5 of ($x_1_*))) or
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
@@ -119,6 +122,7 @@ rule Backdoor_Win32_Akbot_K_2147616419_0
         $x_1_11 = "const char e_filename[" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

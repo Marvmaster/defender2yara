@@ -21,6 +21,7 @@ rule Ransom_Win32_Dedsec_A_2147901783_0
         $x_1_7 = "DECRYPTION_KEY" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

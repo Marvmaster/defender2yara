@@ -23,6 +23,7 @@ rule Trojan_Win32_Kerfuffle_C_2147744095_0
         $x_2_8 = {54 65 6d 70 5c 00 00 00 77 6e 64 70 77 64}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or

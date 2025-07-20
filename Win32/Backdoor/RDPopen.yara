@@ -16,6 +16,7 @@ rule Backdoor_Win32_RDPopen_A_2147656536_0
         $x_1_2 = {8b 55 08 0f be 02 85 c0 74 0f 8b 4d 08 8a 11 80 ea 01 8b 45 08 88 10 eb de}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Backdoor_Win32_RDPopen_B_2147658924_0
         $x_1_3 = {2b c2 03 45 ?? 99 b9 1a 00 00 00 f7 f9 0f be 45 ?? 03 d0 8b 4d ?? 88 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Backdoor_Win32_RDPopen_B_2147658924_1
         $x_1_5 = "hd2h080hch" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Worm_Win32_Vormus_A_2147622738_0
         $x_1_3 = "detectar usbs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

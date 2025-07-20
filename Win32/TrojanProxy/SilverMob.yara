@@ -20,6 +20,7 @@ rule TrojanProxy_Win32_SilverMob_A_2147724640_0
         $x_1_5 = {69 67 66 78 [0-8] 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_2_*))) or
             (all of ($x*))

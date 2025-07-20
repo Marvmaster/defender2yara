@@ -16,6 +16,7 @@ rule Trojan_Win64_AresLdrCrypt_LKC_2147845847_0
         $x_1_1 = {44 8a 04 10 48 8b 44 24 ?? 44 32 04 08 45 88 04 09 48 ff c1 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

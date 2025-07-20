@@ -19,6 +19,7 @@ rule Ransom_MSIL_Cryptid_2147725299_0
         $x_2_5 = "You have to pay for decryption in Bitcoins." wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

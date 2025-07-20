@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Roscamoin_A_2147691435_0
         $x_1_8 = "get_dir_list_win7" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule Trojan_Win64_Bodegun_ABD_2147939881_0
         $x_1_1 = {80 f1 55 48 8d 7f 01 49 3b d0 73 ?? 48 8d 42 01 48 89 45 bf 48 8d 45 af 49 83 f8 0f 48 0f 47 45 af 88 0c 10 c6 44 10 01 00 eb 0d 44 0f b6 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_Bodegun_KK_2147944059_0
         $x_5_4 = "Failed to add to Startup Folder via WScript.Shell method." ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_25_*) and 1 of ($x_5_*))) or
             (all of ($x*))

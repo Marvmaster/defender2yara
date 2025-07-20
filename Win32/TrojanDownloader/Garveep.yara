@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Garveep_A_2147638119_0
         $x_1_2 = {3d 97 01 00 00 0f 84 ?? ?? ?? ?? 68 00 04 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Garveep_B_2147645198_0
         $x_2_4 = {3d 97 01 00 00 0f 84 ?? ?? ?? ?? 68 00 04 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -64,6 +66,7 @@ rule TrojanDownloader_Win32_Garveep_C_2147689984_0
         $x_3_2 = {3d 97 01 00 00 0f 84 ?? ?? ?? ?? 68 00 04 00 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule TrojanDownloader_Win32_Garveep_D_2147690079_0
         $x_1_4 = "%s?a1=%s&a2=%s&a3=%s&a4=NOTUSED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule TrojanDownloader_Win32_Garveep_F_2147690087_0
         $x_1_4 = "V3LSvc.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule TrojanDownloader_Win32_Garveep_E_2147690090_0
         $x_3_4 = "-}zilla]F" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*))) or
             ((1 of ($x_5_*) and 1 of ($x_3_*))) or
@@ -161,6 +167,7 @@ rule TrojanDownloader_Win32_Garveep_H_2147690207_0
         $x_1_5 = "/u3/update/update.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -188,6 +195,7 @@ rule TrojanDownloader_Win32_Garveep_I_2147690265_0
         $x_2_5 = "prtshgrd.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_2_*))) or
             (all of ($x*))

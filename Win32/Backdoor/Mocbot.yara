@@ -38,6 +38,7 @@ rule Backdoor_Win32_Mocbot_2147571575_0
         $x_1_24 = "%.128s\\%.64s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or

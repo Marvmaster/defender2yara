@@ -19,6 +19,7 @@ rule Trojan_Win32_Nuktob_A_2147690392_0
         $x_1_5 = {8b d6 66 89 07 8b c3 2b d3 8d 49 00 8a 08 88 0c 02 40 84 c9 75 f6 8d 46 ff 8d 49 00 8a 48 01 40 84 c9 75 f8 8b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

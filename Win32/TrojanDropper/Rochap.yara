@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Rochap_A_2147627740_0
         $x_1_3 = {6a 02 68 80 00 00 00 6a 00 8b 45 f8 e8 ?? ?? ?? ?? b9 02 00 00 00 ba 00 00 00 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_MSIL_Remdobe_C_2147681747_0
         $x_1_2 = {13 04 12 04 20 00 01 00 00 28 12 00 00 06 28 ?? 00 00 0a 72 ?? ?? 00 70 72 2b 00 00 70 28 (14|15|16) 00 00 06 28 ?? 00 00 0a 72 ?? ?? 00 70 72 2b 00 00 70 28 (14|15|16) 00 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_Remdobe_D_2147682321_0
         $x_9_3 = "http://198.23.167.160/sov1001/coin-miner.exe" wide //weight: 9
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_MSIL_Remdobe_E_2147682322_0
         $x_1_3 = {21 2f 00 43 00 20 00 61 00 74 00 74 00 72 00 69 00 62 00 20 00 2d 00 73 00 20 00 2d 00 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

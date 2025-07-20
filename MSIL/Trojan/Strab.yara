@@ -16,6 +16,7 @@ rule Trojan_MSIL_Strab_AMMD_2147905488_0
         $x_2_1 = {05 11 0f 8f ?? 00 00 01 25 71 ?? 00 00 01 11 ?? 11 ?? 6f ?? 00 00 0a a5 ?? 00 00 01 61 d2 81}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_Strab_ISAA_2147905878_0
         $x_1_4 = "RemoteObjects" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

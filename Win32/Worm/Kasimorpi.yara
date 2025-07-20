@@ -20,6 +20,7 @@ rule Worm_Win32_Kasimorpi_A_2147633558_0
         $x_1_6 = "Terimakasih Anda Telah Mencintaiku Apa Adanya" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

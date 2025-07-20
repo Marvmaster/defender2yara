@@ -15,6 +15,7 @@ rule Trojan_Linux_BashMiner_A_2147807464_0
         $x_1_1 = {24 7b 6a 6e 64 69 3a 6c 64 61 70 3a 2f 2f 90 02 0f 2f 62 61 73 69 63 2f 63 6f 6d 6d 61 6e 64 2f 62 61 73 65 36 34 2f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Redaman_A_2147734374_0
         $x_1_3 = {85 d2 74 2d 31 c9 2b 0e f7 d9 83 ee ?? 4e f7 d1 83 e9 ?? 01 d9 83 c1 ?? 49 89 cb 89 0f 83 c7 ?? 83 ea ?? 8d 0d ?? ?? ?? ?? 81 c1 ?? ?? ?? ?? ff e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +62,7 @@ rule Trojan_Win32_Redaman_B_2147734375_0
         $x_1_3 = "pritePro_____e_ory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Olf1Vir_A_2147735728_0
         $x_1_5 = "C:\\Olf1VirDir\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

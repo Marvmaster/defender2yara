@@ -23,6 +23,7 @@ rule Trojan_Win32_SuspGolang_MK_2147913295_0
         $x_1_9 = ").Username" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_Win32_SuspGolang_MG_2147913297_0
         $x_1_9 = "DNSBlockHeader)." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +82,7 @@ rule Trojan_Win32_SuspGolang_NK_2147914565_0
         $x_1_10 = "InvokeInProcExecuteAssemblyReq)." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +112,7 @@ rule Trojan_Win32_SuspGolang_GK_2147914566_0
         $x_1_10 = ").VarTimeDoubleScalarBaseMult" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +140,7 @@ rule Trojan_Win32_SuspGolang_LK_2147914567_0
         $x_1_8 = "ChmodReq)." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +170,7 @@ rule Trojan_Win32_SuspGolang_QK_2147914568_0
         $x_1_10 = "MemfilesAddReq)." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -192,6 +198,7 @@ rule Trojan_Win32_SuspGolang_AM_2147915792_0
         $x_1_8 = ").GetKeySeedBitLength" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +227,7 @@ rule Trojan_Win32_SuspGolang_MA_2147915793_0
         $x_1_9 = "ServiceInfo)." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -250,6 +258,7 @@ rule Trojan_Win32_SuspGolang_AG_2147915794_0
         $x_1_11 = ").SetBytesWithClamping" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -279,6 +288,7 @@ rule Trojan_Win32_SuspGolang_LY_2147915795_0
         $x_1_10 = ").SetReadDeadline" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -309,6 +319,7 @@ rule Trojan_Win32_SuspGolang_Y_2147915796_0
         $x_1_11 = ").HasPassword" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -337,6 +348,7 @@ rule Trojan_Win32_SuspGolang_MN_2147915797_0
         $x_1_9 = ").Hostname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

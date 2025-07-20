@@ -19,6 +19,7 @@ rule VirTool_Win32_Moteum_A_2147780137_0
         $x_1_4 = "syscall/windows/zsyscall_windows.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule VirTool_Win32_Moteum_A_2147780137_1
         $x_1_4 = "postex.handleSOCKSCommunication" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule VirTool_Win32_Moteum_A_2147780137_2
         $x_1_5 = "postex.ReverseShellHTTPS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule VirTool_Win32_Moteum_A_2147780137_3
         $x_1_6 = "tools/xortool.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule VirTool_Win32_Moteum_A_2147780137_4
         $x_1_6 = "postex-tools/tools/shellcode-windows.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -146,6 +151,7 @@ rule VirTool_Win32_Moteum_A_2147780137_5
         $x_1_6 = "/net/http/httpproxy/proxy.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

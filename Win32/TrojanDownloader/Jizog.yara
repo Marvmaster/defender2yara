@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Jizog_A_2147596372_0
         $x_1_6 = "\\Windows\\CurrentVersion\\Run\\IESet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanProxy_Win32_Pirpi_A_2147626063_0
         $x_1_7 = {0a 09 67 65 74 66 2e 0a 09 70 6c 0a 09 70 6b 0a 09 75 6e 6c 6f 61 64 0a 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

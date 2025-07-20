@@ -19,6 +19,7 @@ rule Ransom_Win32_Ruqwili_A_2147706794_0
         $x_1_5 = {c2 f1 e5 20 e2 e0 f8 e8 20 f4 e0 e9 eb fb 20 e7 e0 f8 e8 f4 f0 ee e2 e0 ed fb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

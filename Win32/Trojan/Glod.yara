@@ -26,6 +26,7 @@ rule Trojan_Win32_Glod_A_2147660366_0
         $x_1_12 = "mail-cax.com/web.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -60,6 +61,7 @@ rule Trojan_Win32_Glod_B_2147682291_0
         $x_1_11 = {37 00 31 00 31 00 35 00 36 00 39 00 33 00 [0-8] 26 00 26 00 2a 00 2a 00 45 00 52 00 52 00 4f 00 52 00 2a 00 2a 00 26 00 26 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -85,6 +87,7 @@ rule Trojan_Win32_Glod_C_2147688398_0
         $x_1_6 = {74 00 61 00 73 00 6b 00 6b 00 69 00 6c 00 6c 00 20 00 2f 00 69 00 6d 00 20 00 [0-27] 2e 00 65 00 78 00 65 00 20 00 2f 00 66 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

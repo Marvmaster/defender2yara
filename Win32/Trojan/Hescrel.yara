@@ -17,6 +17,7 @@ rule Trojan_Win32_Hescrel_A_2147688998_0
         $x_1_3 = {52 74 6c 49 c7 45 ?? 6e 69 74 41 c7 45 ?? 6e 73 69 53 c7 45 ?? 74 72 69 6e 66 c7 ?? e8 67 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

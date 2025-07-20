@@ -23,6 +23,7 @@ rule Worm_Win32_Phrositer_2147601554_0
         $x_1_9 = "Smile, Doozo Yoroshiku" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_11_*) and 4 of ($x_1_*))) or
             ((2 of ($x_11_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or

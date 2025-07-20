@@ -16,6 +16,7 @@ rule Worm_Win32_Skypii_A_2147679359_0
         $x_1_2 = {6a 00 6a 09 68 00 01 00 00 52 ff d7 6a ?? ff d6 6a 00 6a 02 6a 00 6a 10 ff d3 6a ?? ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

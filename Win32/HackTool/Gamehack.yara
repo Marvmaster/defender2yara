@@ -18,6 +18,7 @@ rule HackTool_Win32_Gamehack_G_2147743547_0
         $x_1_3 = "GLOWHACK:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule HackTool_Win32_Gamehack_G_2147743547_1
         $x_1_5 = "script=Instance.new(\"LocalScript\")" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule HackTool_Win32_Gamehack_MD_2147788160_0
         $x_1_1 = {8a 04 38 6a 00 6a 01 88 45 f8 8d 45 f8 50 57 ff 71 04 ff d3 8b 4d f4 47 8b 45 f0 83 ee 01 75 e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

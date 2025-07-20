@@ -16,6 +16,7 @@ rule Ransom_Win64_Crypmod_ARAX_2147944596_0
         $x_2_1 = {8b 85 0c 01 00 00 48 63 d0 48 8b 85 ?? ?? ?? ?? 48 01 d0 0f b6 10 8b 85 0c 01 00 00 48 63 c8 48 8b 85 ?? ?? ?? ?? 48 01 c8 83 f2 55 88 10 83 85 0c 01 00 00 ?? 8b 85 0c 01 00 00 3b 85 ?? ?? ?? ?? 7c bd}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -29,6 +29,7 @@ rule Trojan_MSIL_KeyLogger_BN_2147811146_0
         $x_1_14 = "Append" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Trojan_MSIL_KeyLogger_SVR_2147835866_0
         $x_5_1 = {02 0e 04 11 05 1f 10 5a 7e 0c 00 00 04 20 ff 7f 00 00 03 08 92 58 91 58 a3 21 00 00 02 0e 05 28 ?? ?? ?? 06 00 02 7e 0d 00 00 04 20 ff 7f 00 00 03 08 92 58 a3 21 00 00 02 0e 05 28 ?? ?? ?? 06 00 08 17 58 d2 0c 00 08 11 04 fe 02 16 fe 01 13 0d 11 0d 3a 40 ff ff ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_MSIL_KeyLogger_SSVP_2147837089_0
         $x_1_2 = "muQv.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_MSIL_KeyLogger_SPQP_2147837802_0
         $x_5_1 = {5d 94 13 07 09 11 05 08 11 05 91 11 07 61 d2 9c 11 05 17 58 13 05 11 05 08 8e 69}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_MSIL_KeyLogger_SPAB_2147841023_0
         $x_6_1 = {06 07 06 8e 69 5d 06 07 06 8e 69 5d 91 09 07 1f 16 5d 91 61 28 ?? ?? ?? 0a 06 07 17 58 06 8e 69 5d 91 28 ?? ?? ?? 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 07 15 58}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Trojan_MSIL_KeyLogger_SPAT_2147842176_0
         $x_1_3 = "@DmCD95fdwysEecVxJbRA@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Trojan_MSIL_KeyLogger_NKA_2147850780_0
         $x_1_2 = "Keystrokes saved from user" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +190,7 @@ rule Trojan_MSIL_KeyLogger_RDF_2147892291_0
         $x_1_4 = "CallNextHookEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +215,7 @@ rule Trojan_MSIL_KeyLogger_RDG_2147894304_0
         $x_1_4 = "Tela" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -229,6 +238,7 @@ rule Trojan_MSIL_KeyLogger_MMO_2147899150_0
         $x_1_2 = "KeyLogger.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -264,6 +274,7 @@ rule Trojan_MSIL_KeyLogger_ARA_2147899260_0
         $x_1_15 = "cmd /c sc delete windefend" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -287,6 +298,7 @@ rule Trojan_MSIL_KeyLogger_MVA_2147900920_0
         $x_1_3 = "webhookstart" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -313,6 +325,7 @@ rule Trojan_MSIL_KeyLogger_ARAQ_2147908027_0
         $x_2_3 = "These are your keylogs files" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -341,6 +354,7 @@ rule Trojan_MSIL_KeyLogger_ARAQ_2147908027_1
         $x_2_8 = "Keylogger" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -366,6 +380,7 @@ rule Trojan_MSIL_KeyLogger_SMP_2147911851_0
         $x_4_1 = {7e 06 00 00 04 18 6f ?? ?? ?? 0a 00 7e 06 00 00 04 6f ?? ?? ?? 0a 0a 2b 00 06}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -387,6 +402,7 @@ rule Trojan_MSIL_KeyLogger_SPBF_2147915070_0
         $x_4_1 = {13 04 11 04 39 ea 06 00 00 09 1f 20 33 11 06 72 ?? ?? ?? 70 28 ?? ?? ?? 0a 0a 38 d4 06 00 00 09 1f 0d 33 16}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -413,6 +429,7 @@ rule Trojan_MSIL_KeyLogger_NK_2147928809_0
         $x_1_6 = "$83e17252-1a27-46c6-8ba1-65c2c91b90d0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -434,6 +451,7 @@ rule Trojan_MSIL_KeyLogger_SO_2147931331_0
         $x_2_1 = {07 06 08 91 1f 1a 59 1f 1f 58 1f 15 59 1e 59 1f 21 59 d2 6f 0a 00 00 0a 08 17 58 0c 08 06 8e 69 32 de}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -455,6 +473,7 @@ rule Trojan_MSIL_KeyLogger_SEDA_2147935236_0
         $x_1_1 = {13 05 11 05 28 ?? 00 00 0a 72 2a 04 00 70 6f ?? 00 00 0a 6f ?? 00 00 0a 11 05 28 ?? 00 00 0a 72 3c 04 00 70 6f ?? 00 00 0a 6f ?? 00 00 0a 7e 16 00 00 04 19 73 10 00 00 0a 0d 09 6f ?? 00 00 0a 69 13 07 09 11 05 6f ?? 00 00 0a 16 73 13 00 00 0a 0b 07 11 04 7e 15 00 00 04 16 94 11 07 6f ?? 00 00 0a 26 72 ?? ?? ?? 70 13 06 72 ?? ?? ?? 70 0a 11 04 28 ?? 00 00 06 26 08 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

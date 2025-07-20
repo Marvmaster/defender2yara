@@ -19,6 +19,7 @@ rule Trojan_Win32_Tibs_T_2147584944_0
         $x_1_5 = {5f 63 6f 6e 74 72 6f 6c 38 37 00 00 00 5f 63 6f 70 79 73 69 67 6e 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 43 72 65 61 74 65 4d 75 74 65 78 41 00 00 00 43}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Tibs_P_2147593711_0
         $x_1_2 = {43 6f 70 79 42 69 6e 64 49 6e 66 6f 00 00 00 47 65 74 43 6f 6d 70 6f 6e 65 6e 74 49 44 46 72 6f 6d 43 4c 53 53 50 45 43 00 00 00 49 73 4a 49 54}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Tibs_D_2147593743_0
         $x_1_7 = "AbortSystemShutdownA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_2_*))) or
@@ -99,6 +102,7 @@ rule Trojan_Win32_Tibs_S_2147594024_0
         $x_1_5 = {8d 4d fc 8b 4c 21 00 c9 c2 0c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule Trojan_Win32_Tibs_U_2147594444_0
         $x_1_4 = {49 40 5a 00 00 00 73 74 72 65 72 72 6f 72 00 00 00 5f 43 49 61 73 69 6e 00 00 00 5f 43 49 74 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule Trojan_Win32_Tibs_DF_2147595633_0
         $x_1_4 = {00 81 c0 01 00 00 00 01 04 24 e8 ?? 00 00 00 bb e0 08 00 00 8d 1c 33 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -167,6 +173,7 @@ rule Trojan_Win32_Tibs_DG_2147595635_0
         $x_1_3 = {49 57 69 6e 64 6f 77 41 00 00 00 43 72 65 61 74 65 50 6f 70 75 70 4d 65 6e 75 00 57 49 4e 49 4e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +198,7 @@ rule Trojan_Win32_Tibs_DG_2147595635_1
         $x_5_5 = {8b 5d 14 8d 1c 03 8b 75 10 8b 7d 10 c9 c2 10 00 8d 05}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -218,6 +226,7 @@ rule Trojan_Win32_Tibs_DH_2147595636_0
         $x_2_5 = {55 69 53 74 6f 70 44 65 62 75 67 67 69 6e 67 00 00 00 4c 64 72 45 6e 75 6d 52 65 73 6f 75 72 63}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -248,6 +257,7 @@ rule Trojan_Win32_Tibs_DI_2147595645_0
         $x_1_8 = "CreateRemoteThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -274,6 +284,7 @@ rule Trojan_Win32_Tibs_ED_2147596342_0
         $x_1_3 = {72 61 77 53 74 61 74 65 41 00 00 00 45 6e 64 4d 65 6e 75 00 00 00 45 6e 64 50 61 69 6e 74 00 00 00 45 6e 75 6d 44 65 73 6b 74 6f 70 73 41 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -297,6 +308,7 @@ rule Trojan_Win32_Tibs_EE_2147596343_0
         $x_1_4 = {6c 6c 6f 63 00 00 00 5f 63 68 64 69 72 00 00 00 66 72 65 65 00 00 00 5f 43 49 6c 6f 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -319,6 +331,7 @@ rule Trojan_Win32_Tibs_EI_2147596386_0
         $x_1_3 = {4c 64 72 53 65 74 44 6c 6c 4d 61 6e 69 66 65 73 74 50 72 6f 62 65 72 00 00 00 4c 64 72 53 68 75 74 64 6f 77 6e 54 68 72 65 61 64 00 00 00 4e 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -339,6 +352,7 @@ rule Trojan_Win32_Tibs_ET_2147597214_0
         $x_1_1 = {05 62 45 03 00 ?? 2d 61 45 03 00 83 ?? 01 75 f0 bf 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -360,6 +374,7 @@ rule Trojan_Win32_Tibs_EW_2147597847_0
         $x_1_2 = {83 c5 02 89 ef 83 c5 02 83 c7 02 89 f9 29 e9 89 ca 81 c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -381,6 +396,7 @@ rule Trojan_Win32_Tibs_EW_2147597847_1
         $x_1_2 = {43 6f 6e 76 65 72 74 44 65 66 61 75 6c 74 4c 6f 63 61 6c 65 00 00 00 45 78 69 74 50 72 6f 63 65 73 73 00 00 00 43 72 65 61 74 65 54 68 72 65 61 64 00 00 00 47 65 74 43 50 49 6e 66 6f 45 78 57}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -401,6 +417,7 @@ rule Trojan_Win32_Tibs_EV_2147597860_0
         $x_1_1 = {51 89 ce c1 e9 ?? [0-9] 81 c1 ?? ?? ?? ?? 81 (c1|e9) ?? ?? ?? ?? [0-3] 8b 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -421,6 +438,7 @@ rule Trojan_Win32_Tibs_EX_2147597885_0
         $x_1_1 = {d1 e8 c1 e2 1f 8d 44 02 01 ?? ?? ?? ?? ?? ?? ?? ?? ?? [0-2] 81 76 fc ?? ?? ?? ?? (49|83) [0-2] 75 ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -441,6 +459,7 @@ rule Trojan_Win32_Tibs_EY_2147598094_0
         $x_1_1 = {89 ce 83 c9 ff 41 81 c1 ?? ?? ?? ?? 81 e9 ?? ?? ?? ?? 8d 16}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +480,7 @@ rule Trojan_Win32_Tibs_EZ_2147598192_0
         $x_1_1 = {89 ce 31 c9 81 c1 ?? ?? ?? ?? 81 e9 ?? ?? ?? ?? 8d 16}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -481,6 +501,7 @@ rule Trojan_Win32_Tibs_FA_2147598193_0
         $x_1_1 = {89 ce b9 00 00 00 00 81 c1 ?? ?? ?? ?? 81 e9 ?? ?? ?? ?? 8d 16}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -501,6 +522,7 @@ rule Trojan_Win32_Tibs_FB_2147598256_0
         $x_1_1 = {83 cd ff 83 ed ?? 89 ea (08|84) d2 75 03 83 c0 02 [0-2] 09 (ed|d5) 75 ?? bf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -521,6 +543,7 @@ rule Trojan_Win32_Tibs_FC_2147598320_0
         $x_1_1 = {31 ed 4d 83 ed ?? 89 ea 08 d2 75 03 83 c0 02 89 e9 09 cd 75 ee bf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -541,6 +564,7 @@ rule Trojan_Win32_Tibs_FD_2147598396_0
         $x_1_1 = {89 c5 83 ed ?? 83 ed ?? 66 09 ed [0-1] 74 05 05 00 02 00 00 89 ea 09 ea [0-1] 75 ?? bf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -566,6 +590,7 @@ rule Trojan_Win32_Tibs_FE_2147598536_0
         $x_1_6 = {83 ed 02 83 c5 fd (e9|66)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -589,6 +614,7 @@ rule Trojan_Win32_Tibs_FF_2147598893_0
         $x_1_1 = {83 ec e8 69 c0 ?? ?? ?? ?? bf ?? ?? ?? ?? 83 c9 ff (41|81) [0-5] 01 c7 [0-4] 96 ad 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -610,6 +636,7 @@ rule Trojan_Win32_Tibs_I_2147600115_0
         $x_1_2 = {00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 43 68 61 72 4e 65 78 74 41 00 00 00 43 6c 6f 73 65 43 6c 69 70 62 6f 61 72 64 00 00 00 43 72 65 61 74 65 44 65 73 6b 74 6f 70 41 00 00 00 43 72 65 61 74 65 50 6f 70 75 70 4d 65 6e 75 00 00 00 44 6c 67 44 69 72 4c 69 73 74 41 00 00 00 44 72 61 77 45 64 67 65 00 00 00 5f 43 49 70 6f 77 00 00 00 5f 47 65 74 6d 6f 6e 74 68 73 00 00 00 73 74 72 73 74 72 00 00 00 5f 5f 69 73 61 73 63 69 69 00 00 00 5f 5f 77 61 72 67 76 00 00 00 5f 61 6c 69 67 6e 65 64 5f 66 72 65 65 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 75 73 65 72 33 32 2e 64 6c 6c 00 6d 73 76 63 72 74 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -630,6 +657,7 @@ rule Trojan_Win32_Tibs_FG_2147600210_0
         $x_1_1 = {3e 00 00 31 d2 b9 09 00 00 00 f7 f1 f7 d8 8d 34 86 56 c3 31 d2 87 d1 5a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -650,6 +678,7 @@ rule Trojan_Win32_Tibs_FH_2147600265_0
         $x_1_1 = {31 d2 87 d1 5a 8d 1d ?? ?? 40 00 29 d2 8b 3b 52 ff d7 69 c0 00 00 01 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -670,6 +699,7 @@ rule Trojan_Win32_Tibs_FI_2147600280_0
         $x_1_1 = {87 ca 83 c4 ?? 83 c4 ?? 8d 1d ?? ?? 40 00 [0-2] 6a ?? ff (13|d3) 69 c0 00 00 01 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -690,6 +720,7 @@ rule Trojan_Win32_Tibs_FJ_2147600596_0
         $x_1_1 = {87 ca 83 c4 ?? 83 ec ?? 6a ?? ff 15 ?? ?? ?? ?? (69 c0 00 ?? ??|ba 00 00 01 00)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -710,6 +741,7 @@ rule Trojan_Win32_Tibs_FL_2147601191_0
         $x_1_1 = {87 d1 81 c4 ?? ?? ?? ?? 81 ec ?? ?? ?? ?? 6a ?? ff 15 ?? ?? ?? ?? (69 c0 00 ?? ??|ba 00 ?? ?? 00)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -730,6 +762,7 @@ rule Trojan_Win32_Tibs_FM_2147601353_0
         $x_1_1 = {87 d1 81 c4 ?? ?? ?? ?? 81 ec ?? ?? ?? ?? (68 ?? ?? ?? ??|6a ??) ff 15 ?? ?? ?? ?? (c1 e0|69 c0)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -752,6 +785,7 @@ rule Trojan_Win32_Tibs_G_2147601551_0
         $x_1_2 = {89 c7 f3 a4 61 (83 c0 ??|05 ?? ?? ?? ??) ff e0 60 8b bd ?? ?? ?? ?? 03 bd ?? ?? ?? ?? 8d b5 ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 68 00 10 00 00 57 e8 ?? ?? 00 00 f3 a4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -772,6 +806,7 @@ rule Trojan_Win32_Tibs_FN_2147601744_0
         $x_1_1 = {87 d1 81 c4 ?? ?? ?? ?? 81 ec ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? ?? ?? ?? ?? ?? f7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -792,6 +827,7 @@ rule Trojan_Win32_Tibs_FO_2147601745_0
         $x_1_1 = {ff e0 8b 04 24 66 31 c0 8b 10 81 f2 ?? ?? ?? ?? 66 81 fa ?? ?? 74 07 2d 00 10 00 00 eb ea}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -812,6 +848,7 @@ rule Trojan_Win32_Tibs_FP_2147601814_0
         $x_1_1 = {ff e0 8b 04 24 66 31 c0 89 c5 b8 ?? ?? ?? ?? 6a 00 ff 14 28 89 c2 69 d2 00 00 01 00 83 c4 04 29 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -832,6 +869,7 @@ rule Trojan_Win32_Tibs_FR_2147601815_0
         $x_1_1 = {6a 00 ff 10 [0-2] 69 ?? 00 00 01 00 09 00 [0-4] b8 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? [0-64] ad 35 ?? ?? ?? ?? ab}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -852,6 +890,7 @@ rule Trojan_Win32_Tibs_FS_2147602382_0
         $x_1_1 = {87 d1 58 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 68 00 00 00 01 6a 00 f7 64 24 04 83 c4 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -872,6 +911,7 @@ rule Trojan_Win32_Tibs_FT_2147602641_0
         $x_1_1 = {87 d1 58 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? [0-5] 81 (44|6c) 24 ?? 00 00 ?? ?? f7 64 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -892,6 +932,7 @@ rule Trojan_Win32_Tibs_FU_2147603006_0
         $x_1_1 = {ff 12 5e c1 e0 18 b9 ?? ?? ?? ?? 81 0b 00 ba ?? ?? ?? ?? 81 c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -912,6 +953,7 @@ rule Trojan_Win32_Tibs_FV_2147603008_0
         $x_1_1 = {87 02 03 55 08 03 55 0c ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? [0-64] 69 c0 ?? ?? ?? ?? b9 ?? ?? ?? ?? 81 e9 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -939,6 +981,7 @@ rule Trojan_Win32_Tibs_H_2147603097_0
         $x_1_7 = {8d 7c 39 25 30 07 [0-1] fe 07 [0-1] c1 c0 03 [0-2] ae [0-1] e2 ?? 5f 4a 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -961,6 +1004,7 @@ rule Trojan_Win32_Tibs_FY_2147603158_0
         $x_1_3 = {55 89 e5 87 02 03 55 08 03 55 0c c9 c2 08 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -981,6 +1025,7 @@ rule Trojan_Win32_Tibs_FZ_2147603171_0
         $x_1_1 = {fd ad 48 35 ?? ?? ?? ?? (87|89) 46 04 83 c6 03 e2 f1 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1001,6 +1046,7 @@ rule Trojan_Win32_Tibs_GA_2147603218_0
         $x_1_1 = {87 02 03 55 08 03 55 0c [0-80] 0f c8 b9 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1021,6 +1067,7 @@ rule Trojan_Win32_Tibs_GB_2147603451_0
         $x_1_1 = {8b 55 0c 8b 4d 08 89 11 03 7d 10 03 75 10 c9 [0-64] 8b 3b 89 e3 53 ff d7 [0-32] 96 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1041,6 +1088,7 @@ rule Trojan_Win32_Tibs_GD_2147603682_0
         $x_1_1 = {87 02 2b 55 08 2b 55 0c [0-68] 0f c8 b9 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1061,6 +1109,7 @@ rule Trojan_Win32_Tibs_GE_2147603683_0
         $x_1_1 = {c7 02 00 00 00 00 0f c1 02 2b 55 08 03 55 0c c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1081,6 +1130,7 @@ rule Trojan_Win32_Tibs_EU_2147604697_0
         $x_1_1 = {51 89 ce b9 00 00 00 00 81 c1 ?? ?? ?? ?? 81 e9 ?? ?? ?? ?? [0-1] 8b 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1101,6 +1151,7 @@ rule Trojan_Win32_Tibs_GF_2147605012_0
         $x_1_1 = {eb 00 66 ad 69 c0 00 00 01 00 66 ad c1 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1121,6 +1172,7 @@ rule Trojan_Win32_Tibs_GG_2147605148_0
         $x_1_1 = {89 f2 52 66 ad 69 c0 00 ?? ?? 00 [0-6] 66 ad c1 (c0|c8) ?? [0-2] c1 (c0|c8) ?? 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1142,6 +1194,7 @@ rule Trojan_Win32_Tibs_I_2147606817_0
         $x_1_1 = {56 57 53 55 e8 00 00 00 00 5d 81 ed ?? 2c 40 00 e8 e6 02 00 00 e8 b4 06 00 00 b8 00 00 00 00 85 c0 75 21 ff 85 ?? 2c 40 00 e8 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1162,6 +1215,7 @@ rule Trojan_Win32_Tibs_GI_2147607408_0
         $x_1_1 = {fd 8b 06 48 83 c6 fc 35 ?? ?? ?? ?? 50 8f 46 04 83 ee fd e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1182,6 +1236,7 @@ rule Trojan_Win32_Tibs_GJ_2147607724_0
         $x_1_1 = {89 f2 52 66 ad 6b c0 ?? [0-6] 66 ad c1 (c0|c8) ?? [0-2] c1 (c0|c8) ?? 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1202,6 +1257,7 @@ rule Trojan_Win32_Tibs_GK_2147607725_0
         $x_1_1 = {66 ad 69 c0 00 ?? ?? 00 [0-6] 66 ad c1 (c0|c8) ?? [0-4] c1 (c0|c8) ?? 93 81 c3 1b 00 [0-12] (c3|c2 ?? ??) 66 ad}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1222,6 +1278,7 @@ rule Trojan_Win32_Tibs_GM_2147607863_0
         $x_1_1 = {89 d6 52 66 ad c1 e0 ?? 66 ad c1 c8 ?? c1 c0 ?? 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1242,6 +1299,7 @@ rule Trojan_Win32_Tibs_GV_2147608153_0
         $x_1_1 = {89 d6 52 ac 86 (c4|e0) ac 86 (c4|e0) c1 (e0|e8) ?? c1 (e0|e8)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1262,6 +1320,7 @@ rule Trojan_Win32_Tibs_HH_2147608857_0
         $x_1_1 = {87 02 83 ea fd 42 83 c1 fe 83 e9 02 85 c9 10 00 [0-3] 68 ?? ?? 00 00 59 87 02 [0-3] 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1282,6 +1341,7 @@ rule Trojan_Win32_Tibs_HI_2147609145_0
         $x_1_1 = {c3 66 ad c1 e0 04 c1 e0 04 c1 e0 04 c1 e0 04 66 ad c1 c0 02 c1 c0 0b c1 c0 03 93 81 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1304,6 +1364,7 @@ rule Trojan_Win32_Tibs_HN_2147609826_0
         $x_2_3 = "URLOpenStreamA" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))
@@ -1327,6 +1388,7 @@ rule Trojan_Win32_Tibs_HO_2147610157_0
         $x_1_1 = {5a 58 01 df 03 14 06 03 (83 c7 14 83|83 ef ?? 81 ef ?? ?? ?? ??) 83 c7 0a 83 ef 0f 83 ef 05 e2 ab 50 52}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1349,6 +1411,7 @@ rule Trojan_Win32_Tibs_HP_2147610158_0
         $x_2_3 = {03 4d 0c 03 4d 08 81 e9 01 ?? ?? ?? c9 06 00 (59 5a|5a 59) 85 d2 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -1373,6 +1436,7 @@ rule Trojan_Win32_Tibs_HQ_2147610892_0
         $x_1_1 = {89 cb c3 ad 35 ?? ?? ?? ?? ab e2 f7 c3 8b 44 24 ?? c1 e8 ?? c1 e8 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1393,6 +1457,7 @@ rule Trojan_Win32_Tibs_HS_2147610981_0
         $x_1_1 = {87 02 83 ea (fe 42 42 83 c1 ff 83|ff 42 42 42 83 c1 fe 83) 09 c9 14 00 [0-3] 68 ?? ?? 00 00 59 87 02 [0-3] 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1413,6 +1478,7 @@ rule Trojan_Win32_Tibs_LD_2147611233_0
         $x_1_1 = {59 5a 01 df (83 ef ??|81 ef ?? ?? ?? ??) 81 ef ?? ?? ?? ?? e2 (ab|(57|6a ??) e8 ?? ?? ?? ??) 52 51}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1438,6 +1504,7 @@ rule Trojan_Win32_Tibs_IE_2147611460_0
         $x_10_6 = {50 15 01 00 3b ?? 74 08 c1 (00|2d|07) 02 e9 ee ff ff ff [0-2] 3b (c0|2d|ff) [0-2] 0f 8f d2 ff ff ff (b8|2d|bf) ?? ?? ?? ?? 81 ?? ?? ?? ?? ?? ?? c3 38 00 83 (c8|2d|cf) ff ?? 03 ?? 24 34 81 (c0|2d|c7) ?? ?? ?? ?? 81 (e8|2d|ef) ?? ?? ?? ?? 81 (c0|2d|c7) ?? ?? ?? ?? 81 (c0|2d|c7) ?? ?? ?? ?? 8d ?? ?? ?? ?? ?? 81 (c0|2d|c7) ?? ?? ?? ?? 81 (c0|2d|c7) ?? ?? ?? ?? ?? ?? 2b ?? ?? (b8|2d|bf)}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1462,6 +1529,7 @@ rule Trojan_Win32_Tibs_IF_2147611601_0
         $x_1_2 = {83 e8 fe 8b 28 b9 ?? ?? ?? ?? ff 94 29 ?? ?? ?? ?? [0-3] 09 d2 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1482,6 +1550,7 @@ rule Trojan_Win32_Tibs_IG_2147612105_0
         $x_1_1 = {83 c0 01 83 c0 01 8b 18 be ?? ?? ?? ?? ff 94 1e ?? ?? ?? ?? 61 b9 ?? ?? 00 00 c9 c2 ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1503,6 +1572,7 @@ rule Trojan_Win32_Tibs_IH_2147612732_0
         $x_1_2 = {bb 05 ee 0f 00 81 f3 45 ee 0f 00 8d 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1525,6 +1595,7 @@ rule Trojan_Win32_Tibs_II_2147612795_0
         $x_1_3 = {81 f2 54 a4 00 00 66 81 fa 19 fe 74 ?? 2d ?? ?? ?? ?? 2d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1545,6 +1616,7 @@ rule Trojan_Win32_Tibs_JAB_2147615356_0
         $x_1_1 = {e8 d3 01 00 00 e8 89 01 00 00 e8 58 02 00 00 b8 00 00 00 00 85 c0 75 27 ff 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1566,6 +1638,7 @@ rule Trojan_Win32_Tibs_L_2147615647_0
         $x_1_1 = {c1 e3 06 c1 e3 0a 01 df 83 ef 04 81 ef 00 80 00 00 81 ef 00 80 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1587,6 +1660,7 @@ rule Trojan_Win32_Tibs_M_2147615789_0
         $x_1_1 = {8d 05 59 f7 fa ff 05 e7 1a 05 00 b9 15 bb 41 00 8b 19 0f c1 5d fc bb 05 3e 1f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1607,6 +1681,7 @@ rule Trojan_Win32_Tibs_JAC_2147615820_0
         $x_1111_1 = {59 5a c1 e3 ?? c1 e3 ?? 8d 7c 1f ?? 81 ef ?? ?? ?? ?? 81 c7 ?? ?? ?? ?? e2 c8 c3}  //weight: 1111, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1632,6 +1707,7 @@ rule Trojan_Win32_Tibs_N_2147616016_0
         $x_1_5 = "netsh firewall set allowedprogram '%s'" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1652,6 +1728,7 @@ rule Trojan_Win32_Tibs_IK_2147616018_0
         $x_1_1 = {8b 19 0f c1 5d fc bb ?? ?? ?? ?? 81 f3 ?? ?? ?? ?? 8d 55 f4 52 53 50 56 ff 55 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1678,6 +1755,7 @@ rule Trojan_Win32_Tibs_O_2147616257_0
         $x_1_6 = {03 76 3c 0f b7 56 06 4a 0e 00 c7 85 ?? ?? ff ff 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1702,6 +1780,7 @@ rule Trojan_Win32_Tibs_P_2147616268_0
         $x_1_1 = {89 c3 58 59 5a c1 e3 10 8d 7c 1f fc 81 ef 00 00 01 00 e2 d1 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1723,6 +1802,7 @@ rule Trojan_Win32_Tibs_Q_2147616270_0
         $x_1_1 = {89 c3 58 59 5a c1 e3 09 c1 e3 07 8d 7c 1f fc 81 ef 00 80 00 00 81 c7 00 80 ff ff e2 c5 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1745,6 +1825,7 @@ rule Trojan_Win32_Tibs_R_2147616273_0
         $x_1_2 = {89 d7 f3 0f 2d cf 09 c9 74 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1765,6 +1846,7 @@ rule Trojan_Win32_Tibs_HX_2147616330_0
         $x_1_1 = {89 c3 58 59 5a 69 db 00 00 01 00 01 df 83 ef 01 83 ef 01 83 ef 02 81 ef 00 70 00 00 81 ef 00 60 00 00 81 ef 00 30 00 00 e2 b7 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1785,6 +1867,7 @@ rule Trojan_Win32_Tibs_HX_2147616330_1
         $x_1_1 = {ff 83 e8 03 29 c2 49 eb ?? 89 d7 85 c9 74 02 29 c9 81 c1 90 4c 00 00 e8 ?? ff ff ff 59 eb ?? e8 ?? ff ff ff 08 00 [0-2] c3 51 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1806,6 +1889,7 @@ rule Trojan_Win32_Tibs_S_2147616355_0
         $x_1_1 = {69 db 00 00 01 00 01 df 83 ef 01 83 ef 01 83 ef 02 81 ef 00 70 00 00 81 ef 00 60 00 00 81 ef 00 30 00 00 e2 b4 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1828,6 +1912,7 @@ rule Trojan_Win32_Tibs_IP_2147616601_0
         $x_1_3 = {83 c0 ff ba ?? ?? ?? ?? c1 c2 0b 00 b9 ?? ?? ?? ?? 81 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1851,6 +1936,7 @@ rule Trojan_Win32_Tibs_IQ_2147617656_0
         $x_3_4 = {0f 6f 01 0f 7e 45 fc bb ?? ?? ?? ?? 81 f3}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -1876,6 +1962,7 @@ rule Trojan_Win32_Tibs_IS_2147618654_0
         $x_1_2 = {0f 6e c0 0f 7e 07 83 c7 ?? 83 ef ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1897,6 +1984,7 @@ rule Trojan_Win32_Tibs_IT_2147618655_0
         $x_1_2 = {8b 55 08 01 c2 8b 4d fc 89 d6 c9 c2 04 00 02 00 cd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1918,6 +2006,7 @@ rule Trojan_Win32_Tibs_IU_2147619588_0
         $x_1_2 = {28 c0 c0 e4 07 31 db (80|80 78) 74 0c 2d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1938,6 +2027,7 @@ rule Trojan_Win32_Tibs_IV_2147621115_0
         $x_1_1 = {f3 0f 7e 26 66 0f 7e e0 83 c6 02 83 c6 02 f8 73 ?? 50 f3 0f 7e 14 24 58 66 0f 7e 17}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1958,6 +2048,7 @@ rule Trojan_Win32_Tibs_IW_2147622122_0
         $x_1_1 = {f3 0f 7e 26 89 e8 66 0f 7e e0 83 c6 02 83 c6 02 f8 73 ?? 50 f3 0f 7e 0c 24 fc 58 66 0f 7e 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1979,6 +2070,7 @@ rule Trojan_Win32_Tibs_T_2147622493_0
         $x_1_1 = {0f 6e c0 0f 6f c8 0f 7e c8 48 83 f8 00 75 f1 8b 04 24 83 c4 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2000,6 +2092,7 @@ rule Trojan_Win32_Tibs_IY_2147623194_0
         $x_1_2 = {50 ff 75 10 be ?? ?? 40 00 56 e8 ?? ?? ?? ?? 59 50 56 53 ff 15 ?? ?? 40 00 ff 15 ?? ?? 40 00 53 ff d7 ff 75 fc ff d7 5b ff 75 f8 ff d7 5f 5e c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2022,6 +2115,7 @@ rule Trojan_Win32_Tibs_IZ_2147623195_0
         $x_1_3 = {6a 06 6a 01 6a 02 e8 ?? ?? ?? ?? 8b f8 83 ff ff 74 ?? ff 75 08 e8 ?? ?? ?? ?? 8b f0 85 f6 74 ?? 6a 19 66 c7 45 f0 02 00 e8 ?? ?? ?? ?? 66 89 45 f2 8b 46 0c 8b 00 8b 00 89 45 f4 6a 10 8d 45 f0 50 57 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2043,6 +2137,7 @@ rule Trojan_Win32_Tibs_JB_2147623777_0
         $x_1_2 = {80 3a 4d 74 08 81 ea 00 10 00 00 eb f3 83 c4 04 56 57 53 55 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2063,6 +2158,7 @@ rule Trojan_Win32_Tibs_JD_2147629104_0
         $x_1_1 = {8d 55 f4 52 51 6a 04 57 ff 55 fc 14 00 0f 6f ?? 89 c1 0f 7e ?? fc b9 ?? ?? ?? ?? 81 f1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2083,6 +2179,7 @@ rule Trojan_Win32_Tibs_JE_2147629837_0
         $x_1_1 = {8b 0d 40 02 fe 7f 69 c9 ?? ?? ?? ?? 01 c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2104,6 +2201,7 @@ rule Trojan_Win32_Tibs_JF_2147634464_0
         $x_1_2 = {66 0f 6e c8 0f 54 c1 66 0f 7e c2 8a 02 34 ?? 3c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2125,6 +2223,7 @@ rule Trojan_Win32_Tibs_JG_2147634562_0
         $x_1_2 = {66 0f 6e 04 24 66 0f 7e c2 89 d7 89 fe 89 cb e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2146,6 +2245,7 @@ rule Trojan_Win32_Tibs_JG_2147634562_1
         $x_1_2 = {66 0f 6e c8 66 0f 54 c1 66 0f 7e c2 8a 02 34 ?? 3c ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2167,6 +2267,7 @@ rule Trojan_Win32_Tibs_JH_2147636372_0
         $x_1_2 = {c7 45 d4 20 55 26 02 c7 45 d8 10 44 65 22 c7 45 dc 56 69 72 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2188,6 +2289,7 @@ rule Trojan_Win32_Tibs_JI_2147636397_0
         $x_1_2 = {c6 45 ed 6b c6 45 ee 00 c6 45 ef 65 c6 45 f0 00 c6 45 f1 72 c6 45 f2 00 c6 45 f3 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2209,6 +2311,7 @@ rule Trojan_Win32_Tibs_JJ_2147636398_0
         $x_1_2 = {c6 45 ec 6b c6 45 ed 00 c6 45 ee 65 c6 45 ef 00 c6 45 f0 72 c6 45 f1 00 c6 45 f2 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2229,6 +2332,7 @@ rule Trojan_Win32_Tibs_JK_2147636450_0
         $x_1_1 = {56 ff 75 08 ff d1 c9 c2 04 00 ba ?? ?? ?? ?? (66 0f 6e ?? 66 0f 7e ??|89 d1) 31 d2 41 42 81 fa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2251,6 +2355,7 @@ rule Trojan_Win32_Tibs_JL_2147637263_0
         $x_1_3 = {83 e2 fe 69 c2 00 10 00 00 59 5a 66 0f 12 12 66 0f 7e d2 01 c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2271,6 +2376,7 @@ rule Trojan_Win32_Tibs_LE_2147637377_0
         $x_1_1 = {67 61 6e 64 c7 45 ?? 75 61 6c 50 c7 45 ?? 72 6f 74 65 c7 45 ?? 63 74 45 78 c6 45 ?? 00 c6 45 ?? 6b c6 45 ?? 00 c6 45 ?? 45 c6 45 ?? 00 c6 45 ?? 52 c6 45 ?? 00 c6 45 ?? 6e c6 45 ?? 00 c6 45 ?? 65 c6 45 ?? 00 c6 45 ?? 6c c6 45 ?? 00 c6 45 ?? 33 c6 45 ?? 00 c6 45 ?? 32 c6 45 ?? 00 c6 45 ?? 00 c6 45 ?? 00 ?? 8d 55 ?? c7 ?? 56 69 72 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2291,6 +2397,7 @@ rule Trojan_Win32_Tibs_JM_2147637588_0
         $x_1_1 = {29 d0 0f 6e c0 0f 6e 0e 0f 73 f1 20 0f eb c8 f3 0f d6 c1 0f 13 07 81 c7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2316,6 +2423,7 @@ rule Trojan_Win32_Tibs_JN_2147638757_0
         $x_1_6 = {89 d1 01 c1 31 d2 83 c1 01 83 c2 01 81 fa ?? ?? ?? ?? 75 f2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2336,6 +2444,7 @@ rule Trojan_Win32_Tibs_JP_2147646378_0
         $x_1_1 = {74 11 60 83 ec 08 0f 01 0c 24 58 07 00 83 bd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2363,6 +2472,7 @@ rule Trojan_Win32_Tibs_B_90215_0
         $x_3_7 = "cgi-bin/%s?prog=ldr&ver=%s&code=%d&info=%s" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or

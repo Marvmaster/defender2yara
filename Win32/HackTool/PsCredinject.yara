@@ -20,6 +20,7 @@ rule HackTool_Win32_PsCredinject_A_2147730301_0
         $x_1_6 = "\\\\.\\pipe\\sqsvc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

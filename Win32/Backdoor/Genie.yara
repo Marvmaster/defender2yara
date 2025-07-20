@@ -30,6 +30,7 @@ rule Backdoor_Win32_Genie_A_2147593298_0
         $x_1_15 = "cprog.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (13 of ($x*))
 }
 

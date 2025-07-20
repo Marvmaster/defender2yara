@@ -22,6 +22,7 @@ rule Trojan_Win32_Minxer_A_2147688840_0
         $x_1_8 = {2e 64 6c 6c 00 72 75 6e 6d 65 00 73 74 6f 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -50,6 +51,7 @@ rule Trojan_Win32_Minxer_A_2147688840_1
         $x_1_3 = "XCN.1GH.COM - Cryptonite Mining Pool" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_Win32_Minxer_A_2147690099_0
         $x_1_3 = {2e 64 6c 6c 00 61 73 64 61 73 64 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

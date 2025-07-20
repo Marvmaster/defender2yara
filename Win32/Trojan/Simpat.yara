@@ -17,6 +17,7 @@ rule Trojan_Win32_Simpat_A_2147626165_0
         $x_1_3 = {9c 60 89 76 04 83 6e 04 05 8b 46 04 2b 46 08 01 46 08 01 46 0c 01 46 10 01 46 14 01 46 18 01 46 1c 01 46 20 01 46 24 01 46 28 01 46 2c 01 46 30 01 46 34 01 46 40 8b 7e 0c 8b 46 48}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_MSIL_CryptInject_2147729509_0
         $x_1_1 = {00 fe 0c 00 00 20 01 00 00 00 13 04 20 ?? ?? ?? ?? 20 ?? ?? ?? ?? 20 ?? ?? ?? ?? 61 20 ?? ?? ?? ?? 33 0d 20 ?? ?? ?? ?? 13 04 20 ?? ?? ?? ?? 58 00 fe 01 2c 02 2b 05 38 5e ff ff ff 28 ?? 00 00 06 de 08 26 28 ?? 00 00 06 de 00 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_CryptInject_2147729509_1
         $x_1_1 = {08 0d 09 13 04 11 04 13 05 11 05 20 ?? ?? ?? ?? 28 ?? 00 00 06 28 ?? 00 00 06 13 06 11 06 28 ?? 00 00 0a 13 07 11 07 6f ?? 00 00 0a 13 08 11 08 14 14 6f ?? 00 00 0a 26 17 28 ?? 00 00 0a 2b 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_MSIL_CryptInject_2147729509_2
         $x_1_1 = {00 fe 01 2c 4c 28 ?? 00 00 0a 25 28 ?? 00 00 06 14 fe ?? ?? 00 00 06 73 ?? 00 00 0a 6f ?? 00 00 0a 20 ?? 00 00 00 13 03 20 ?? ?? ?? ?? 20 ?? ?? ?? ?? 20 ?? ?? ?? ?? 61 20 ?? ?? ?? ?? 33 0d 20 ?? ?? 00 00 13 03 20 ?? ?? ?? ?? 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_MSIL_CryptInject_2147729509_3
         $x_1_4 = "meQTINKP.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_MSIL_CryptInject_Z_2147731984_0
         $x_1_5 = "CiderMeddeb.Tekri.C4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -126,6 +131,7 @@ rule Trojan_MSIL_CryptInject_RB_2147742469_0
         $x_1_1 = {08 18 5b 1f 10 59 0d 08 1f 20 2f 16 06 08 18 5b 03 08 18 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a 9c 2b 1b 07 09 03 08 18 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a 06 09 06 8e 69 5d 91 61 d2 9c 08 18 58 0c 08 03 6f ?? ?? ?? 0a 32 b6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +154,7 @@ rule Trojan_MSIL_CryptInject_AR_2147742679_0
         $x_1_2 = {61 00 75 00 74 00 6f 00 72 00 75 00 6e 00 00 0f 41 00 75 00 74 00 6f 00 72 00 75 00 6e 00 00 29 20 00 20 00 40 00 65 00 63 00 68 00 6f 00 20 00 6f 00 66 00 66 00 20 00 26 00 20 00 73 00 74 00 61 00 72 00 74 00 20 00 00 29 4a 00 41 00 49 00 53 00 49 00 59 00 41 00 52 00 41 00 4d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +176,7 @@ rule Trojan_MSIL_CryptInject_OJ_2147742846_0
         $x_1_1 = {06 02 8e 69 7e 21 00 00 04 20 ea 00 00 00 7e 21 00 00 04 20 ea 00 00 00 91 03 61 20 b3 00 00 00 5f 9c 32 07 18 0c 38 15 ff ff ff 1d 2b f7 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -195,6 +203,7 @@ rule Trojan_MSIL_CryptInject_SV_2147742977_0
         $x_1_6 = {20 9e 01 00 00 8d 05 00 00 01 25 d0 44 00 00 04 28 01 00 00 0a 80 45 00 00 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +230,7 @@ rule Trojan_MSIL_CryptInject_SW_2147742979_0
         $x_1_6 = {01 00 00 8d 05 00 00 01 25 d0 ?? 00 00 04 28 01 00 00 0a 80 ?? 00 00 04 30 00 20 ?? 01 00 00 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -242,6 +252,7 @@ rule Trojan_MSIL_CryptInject_RC_2147743032_0
         $x_1_1 = {07 09 16 11 05 6f ?? ?? ?? 0a 26 16 13 06 2b 11 09 11 06 09 11 06 91 04 61 d2 9c 11 06 17 58 13 06 11 06 09 8e 69 32 e8 28 ?? ?? ?? 0a 09 6f ?? ?? ?? 0a 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -265,6 +276,7 @@ rule Trojan_MSIL_CryptInject_RD_2147743033_0
         $x_2_3 = "DVyxEvrx7St77JQX1wkH7MyIQj2iX4+c6Uvr2t4C4jRe6w9MQBLJo1mM3Xthr4FttvM+x/MFW9arZI7Dl9hKwLbzPsfzBVvWq2SOw5fY" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -291,6 +303,7 @@ rule Trojan_MSIL_CryptInject_AD_2147743036_0
         $x_1_3 = {7e 0c 00 00 04 28 0f 00 00 06 28 ?? 00 00 0a 28 06 00 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -313,6 +326,7 @@ rule Trojan_MSIL_CryptInject_AD_2147743036_1
         $x_1_2 = {1f 49 13 0e 12 0e 28 ?? 00 00 0a 28 ?? 00 00 06 13 05 1f 45 13 0e 12 0e 28 ?? 00 00 0a 28 ?? 00 00 06 13 06 1f 41 13 0e 12 0e 28 ?? 00 00 0a 28 ?? 00 00 06 13 07 1f 3d 13 0e 12 0e 28 ?? 00 00 0a 28 ?? 00 00 06 13 08 08 1b 8d ?? 00 00 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -341,6 +355,7 @@ rule Trojan_MSIL_CryptInject_B_2147743379_0
         $x_1_8 = "193.111.155.137" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -365,6 +380,7 @@ rule Trojan_MSIL_CryptInject_SP_2147744238_0
         $x_1_1 = {3a 5c 78 61 6d 70 70 5c 68 74 64 6f 63 73 5c 41 73 70 69 72 65 5c 66 69 6c 65 73 5c [0-64] 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -387,6 +403,7 @@ rule Trojan_MSIL_CryptInject_RN_2147745241_0
         $x_1_2 = {02 03 06 28 ?? 00 00 06 06 17 58 0a 06 02 8e 69 32 ee}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -408,6 +425,7 @@ rule Trojan_MSIL_CryptInject_RT_2147745242_0
         $x_2_1 = {02 06 8f 03 00 00 01 25 47 03 06 03 8e 69 5d 91 61 d2 52 06 17 58 0a 06 02 8e 69 32 e3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -433,6 +451,7 @@ rule Trojan_MSIL_CryptInject_SL_2147745457_0
         $x_1_5 = "ezA6eDJ9(L3RyYmlsZTtjb21wb25lbnQvYWRkb25zLnhhbWw=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -465,6 +484,7 @@ rule Trojan_MSIL_CryptInject_A_2147754278_0
         $x_1_12 = "Kill" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -489,6 +509,7 @@ rule Trojan_MSIL_CryptInject_BM_2147755934_0
         $x_1_4 = "https://wtfismyip.com/text" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -511,6 +532,7 @@ rule Trojan_MSIL_CryptInject_BA_2147756624_0
         $x_1_3 = "Atrocity Incorporation" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -532,6 +554,7 @@ rule Trojan_MSIL_CryptInject_RB_2147758552_0
         $x_1_1 = {07 06 1a 58 4a 8f ?? ?? ?? ?? 0c 08 08 47 02 06 1a 58 4a 1f ?? 5d 91 61 d2 52 00 06 1a 58 06 1a 58 4a 17 d6 54 06 1e 58 06 1a 58 4a 06 4a fe ?? 16 fe ?? 52 06 1e 58 46 2d ?? 07 0d 2b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -554,6 +577,7 @@ rule Trojan_MSIL_CryptInject_SF_2147759715_0
         $x_1_2 = {28 1a 00 00 0a 11 0e 11 04 28 d6 00 00 06 6f 1b 00 00 0a 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -575,6 +599,7 @@ rule Trojan_MSIL_CryptInject_SF_2147759715_1
         $x_1_1 = {13 30 05 00 ba 00 00 00 02 00 00 11 02 8e b7 17 d6 8d 03 00 00 01 0a 16 8c 04 00 00 01 28 02 00 00 0a 26 02 02 8e b7 17 da 91 1f 70 61 0b 28 03 00 00 0a 03 6f 04 00 00 0a 0c 16 8c 04 00 00 01 28 02 00 00 0a 26 16 8c 04 00 00 01 28 02 00 00 0a 26 16 02 8e b7 17 da 0d 13 04 2b 2d 06 11 04 02 11 04 91 07 61 08 11 05 91 61 b4 9c 11 05 03 6f 05 00 00 0a 17 da 33 05 16 13 05 2b 06 11 05 17 d6 13 05 11 04 17 d6 13 04 11 04 09 31 ce 16 8c 04 00 00 01 28 02 00 00 0a 26 06 74 08 00 00 01 02 8e b7 18 da 17 d6 8d 03 00 00 01 28 06 00 00 0a 74 01 00 00 1b 0a 16 8c 04 00 00 01 28 02 00 00 0a 26 06 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -598,6 +623,7 @@ rule Trojan_MSIL_CryptInject_PE_2147761148_0
         $x_1_3 = "1231.12312.1.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -621,6 +647,7 @@ rule Trojan_MSIL_CryptInject_PF_2147761462_0
         $x_1_3 = {08 11 04 7e ?? ?? ?? ?? 6f [0-6] 11 04 8f ?? ?? ?? ?? 25 71 ?? ?? ?? ?? 08 11 04 91 61 d2 81 ?? ?? ?? ?? 11 04 7e ?? ?? ?? ?? 58 13 04 11 04 07 8e 69 32}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -651,6 +678,7 @@ rule Trojan_MSIL_CryptInject_PF_2147761462_1
         $x_1_7 = "dbo.Patient_Admissions" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -677,6 +705,7 @@ rule Trojan_MSIL_CryptInject_PL_2147762584_0
         $x_1_6 = "Dotnet Poly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -698,6 +727,7 @@ rule Trojan_MSIL_CryptInject_PB_2147765443_0
         $x_1_1 = {11 17 d2 13 34 11 17 1e 63 d1 13 17 11 15 11 09 91 13 28 11 15 11 09 [0-4] 61 ?? ?? ?? 58 61 11 34 61 d2 9c 11 28 13 1f ?? ?? ?? 58 13 09 11 09 11 24 32 a4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -719,6 +749,7 @@ rule Trojan_MSIL_CryptInject_PA_2147765608_0
         $x_1_1 = {11 15 d2 13 30 11 15 1e 63 d1 13 15 11 1a 11 0b 91 13 26 11 1a 11 0b ?? ?? ?? ?? ?? ?? ?? ?? 58 61 11 30 61 d2 9c 11 26 13 1e ?? ?? ?? 58 13 0b 11 0b 11 27 32 a4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -745,6 +776,7 @@ rule Trojan_MSIL_CryptInject_PA_2147765608_1
         $x_1_6 = "ToBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -772,6 +804,7 @@ rule Trojan_MSIL_CryptInject_PC_2147765609_0
         $x_1_7 = "PlaneGame.MDIParent1.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -796,6 +829,7 @@ rule Trojan_MSIL_CryptInject_PH_2147765752_0
         $x_1_4 = "VideoLAN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -822,6 +856,7 @@ rule Trojan_MSIL_CryptInject_PH_2147765752_1
         $x_1_6 = "HKEY_CURRENT_USER\\SOFTWARE\\Copier" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -845,6 +880,7 @@ rule Trojan_MSIL_CryptInject_PD_2147765887_0
         $x_1_3 = "ThisIsStage1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -872,6 +908,7 @@ rule Trojan_MSIL_CryptInject_PD_2147765887_1
         $x_1_7 = "Dama.MDIParent1.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -893,6 +930,7 @@ rule Trojan_MSIL_CryptInject_PM_2147766328_0
         $x_1_1 = {0d 09 09 47 02 08 1f ?? 5d 91 61 d2 52 00 08 17 d6 0c 08 07 fe ?? 16 fe ?? 13 ?? 11 ?? 2d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -921,6 +959,7 @@ rule Trojan_MSIL_CryptInject_PM_2147766328_1
         $x_1_8 = "Thanks for playing Blackjack!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -947,6 +986,7 @@ rule Trojan_MSIL_CryptInject_PG_2147766784_0
         $x_1_3 = {58 13 04 11 04 07 8e 69 32 ae}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -971,6 +1011,7 @@ rule Trojan_MSIL_CryptInject_PI_2147766785_0
         $x_1_4 = "VideoLAN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -998,6 +1039,7 @@ rule Trojan_MSIL_CryptInject_PJ_2147767362_0
         $x_1_7 = "$$method0x6000007-1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1026,6 +1068,7 @@ rule Trojan_MSIL_CryptInject_PK_2147767363_0
         $x_1_8 = "get_IsBrowserHosted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -1060,6 +1103,7 @@ rule Trojan_MSIL_CryptInject_PQ_2147767563_0
         $x_1_10 = "Are you sure you want to remove the selected resource?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -1087,6 +1131,7 @@ rule Trojan_MSIL_CryptInject_PR_2147767564_0
         $x_1_7 = "A simple ticker to display various cryptocurrency prices" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1113,6 +1158,7 @@ rule Trojan_MSIL_CryptInject_PN_2147768390_0
         $x_1_6 = "Monopoly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1139,6 +1185,7 @@ rule Trojan_MSIL_CryptInject_PO_2147769425_0
         $x_1_6 = "get_qqqqqqqqqqqqqqqqqqqqqqqqqqqqq" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1166,6 +1213,7 @@ rule Trojan_MSIL_CryptInject_PP_2147769426_0
         $x_1_7 = "Carte chance : La Banque vous doit 5 000 euros." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1193,6 +1241,7 @@ rule Trojan_MSIL_CryptInject_PT_2147770020_0
         $x_1_7 = "Que pinga es esto!!!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1220,6 +1269,7 @@ rule Trojan_MSIL_CryptInject_PS_2147770165_0
         $x_1_7 = "Developer: Taravann Heng" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1246,6 +1296,7 @@ rule Trojan_MSIL_CryptInject_AMK_2147787251_0
         $x_3_6 = "GetExecutingAssembly" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1273,6 +1324,7 @@ rule Trojan_MSIL_CryptInject_ON_2147794199_0
         $x_1_7 = "DecodeWithMatchByte" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1302,6 +1354,7 @@ rule Trojan_MSIL_CryptInject_CK_2147807560_0
         $x_1_9 = "Please inject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1331,6 +1384,7 @@ rule Trojan_MSIL_CryptInject_KA_2147807568_0
         $x_1_9 = "DownloadDLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1361,6 +1415,7 @@ rule Trojan_MSIL_CryptInject_DC_2147816217_0
         $x_1_10 = "NetzStarter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1392,6 +1447,7 @@ rule Trojan_MSIL_CryptInject_MF_2147816619_0
         $x_1_11 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1419,6 +1475,7 @@ rule Trojan_MSIL_CryptInject_MG_2147818450_0
         $x_1_7 = "MemoryStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1448,6 +1505,7 @@ rule Trojan_MSIL_CryptInject_MH_2147818452_0
         $x_1_9 = "CreateRemoteThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1478,6 +1536,7 @@ rule Trojan_MSIL_CryptInject_N_2147818875_0
         $x_1_10 = "/FluxusTeamAPI.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1505,6 +1564,7 @@ rule Trojan_MSIL_CryptInject_NU_2147818958_0
         $x_1_7 = "ShortPddsaddddddddddddddddddrocess Compfsfleted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1529,6 +1589,7 @@ rule Trojan_MSIL_CryptInject_UK_2147819174_0
         $x_1_4 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1558,6 +1619,7 @@ rule Trojan_MSIL_CryptInject_NVD_2147819820_0
         $x_1_9 = "ResumeThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1584,6 +1646,7 @@ rule Trojan_MSIL_CryptInject_NP_2147821634_0
         $x_1_6 = "GetScriptData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1612,6 +1675,7 @@ rule Trojan_MSIL_CryptInject_C_2147821817_0
         $x_1_8 = "WaitNamedPipe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1640,6 +1704,7 @@ rule Trojan_MSIL_CryptInject_NL_2147822013_0
         $x_1_8 = {d5 a2 1f 09 0f 00 00 00 fa 25 33 00 16 00 00 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1670,6 +1735,7 @@ rule Trojan_MSIL_CryptInject_NW_2147822438_0
         $x_1_10 = "ffsdfsdfds" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1691,6 +1757,7 @@ rule Trojan_MSIL_CryptInject_NYZ_2147824730_0
         $x_1_1 = {57 ff a3 3f 09 0f 00 00 00 00 00 00 00 00 00 00 01 00 00 00 ce 00 00 00 8b 05 00 00 56 0a 00 00 e0 17 00 00 a3 12 00 00 2a 00 00 00 6d 02 00 00 99 01 00 00 e3 00 00 00 1a 00 00 00 01 00 00 00 1a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1714,6 +1781,7 @@ rule Trojan_MSIL_CryptInject_NY_2147826835_0
         $x_1_3 = "4bee-a526-18e06e07de26" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1742,6 +1810,7 @@ rule Trojan_MSIL_CryptInject_NYH_2147829282_0
         $x_1_8 = "ToInt32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1768,6 +1837,7 @@ rule Trojan_MSIL_CryptInject_MI_2147830392_0
         $x_1_6 = "PostMessage" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1794,6 +1864,7 @@ rule Trojan_MSIL_CryptInject_AY_2147832888_0
         $x_1_6 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1817,6 +1888,7 @@ rule Trojan_MSIL_CryptInject_NWN_2147835147_0
         $x_1_3 = "WindowsFormsApp3.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1840,6 +1912,7 @@ rule Trojan_MSIL_CryptInject_NZZ_2147837579_0
         $x_1_3 = "uccfursygylsjm.E" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1861,6 +1934,7 @@ rule Trojan_MSIL_CryptInject_SPQP_2147838118_0
         $x_4_1 = {00 07 11 06 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 11 04 11 06 58 47 52 00 11 06 17 58 13 06 11 06 08 8e 69 fe 04 13 07 11 07 2d d7}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1886,6 +1960,7 @@ rule Trojan_MSIL_CryptInject_NZ_2147838128_0
         $x_1_5 = "ColorTranslator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1912,6 +1987,7 @@ rule Trojan_MSIL_CryptInject_NCI_2147838206_0
         $x_1_6 = "AutoUpdateErrorLog.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1935,6 +2011,7 @@ rule Trojan_MSIL_CryptInject_MBAJ_2147840059_0
         $x_1_3 = {68 00 49 00 48 00 57 00 37 00 34 00 72 00 6e 00 37 00 50 00 66 00 44 00 7a 00 68 00 68 00 47 00 70 00 59 00 62 00 56 00 6d 00 7a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1960,6 +2037,7 @@ rule Trojan_MSIL_CryptInject_NVA_2147840223_0
         $x_1_5 = {57 15 02 1c 09 0a 00 00 00 fa 25 33 00 16 00 00 01 00 00 00 11 00 00 00 03 00 00 00 04 00 00 00 08 00 00 00 01 00 00 00 1c 00 00 00 03 00 00 00 03 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1982,6 +2060,7 @@ rule Trojan_MSIL_CryptInject_MBAI_2147840356_0
         $x_1_2 = {4a 06 4a 06 28 06 0d 00 33 06 4a 06 0d 00 2e 06 3a 06 0d 00 2e 06 3a 06 0d 00 2d 06 2d 06 0d 00 2e 06 3a 06 0d 00 2e 06 3a 06 0d 00 2e 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2007,6 +2086,7 @@ rule Trojan_MSIL_CryptInject_MBAL_2147840364_0
         $x_1_5 = "permunban" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2033,6 +2113,7 @@ rule Trojan_MSIL_CryptInject_SRP_2147840562_0
         $x_1_6 = "$$$CallByName$$$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2054,6 +2135,7 @@ rule Trojan_MSIL_CryptInject_AIC_2147842671_0
         $x_1_1 = {0a 16 0b 2b 31 7e bc 01 00 04 06 7e bb 01 00 04 02 07 6f ?? ?? ?? 0a 7e ae 00 00 04 07 7e ae 00 00 04 8e 69 5d 91 61 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2076,6 +2158,7 @@ rule Trojan_MSIL_CryptInject_MBCS_2147843757_0
         $x_1_2 = "bbbd-c4bab702618c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2097,6 +2180,7 @@ rule Trojan_MSIL_CryptInject_MBCU_2147843961_0
         $x_1_1 = {07 09 07 09 91 03 11 04 91 61 d2 9c 11 04 17 58 13 04 11 04 03 8e 69 32 e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2118,6 +2202,7 @@ rule Trojan_MSIL_CryptInject_MS_2147844804_0
         $x_1_1 = {06 08 06 8e 69 5d 91 0d 07 08 02 08 91 09 61 d2 9c 08 17 58 0c 08 02 8e 69 32 e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2139,6 +2224,7 @@ rule Trojan_MSIL_CryptInject_MBDG_2147845038_0
         $x_1_1 = {01 07 8e 69 8c ?? 00 00 01 14 14 17 8c ?? 00 00 01 28 ?? 00 00 06 28 ?? 00 00 0a 28 ?? 00 00 0a 13 0a 11 0a 11 05 5f 13 0b 07 11 04 8c ?? 00 00 01 07 8e 69 8c ?? 00 00 01 14 14 17}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2160,6 +2246,7 @@ rule Trojan_MSIL_CryptInject_HH_2147845496_0
         $x_1_1 = {72 01 00 00 70 28 11 00 00 06 13 01 38 00 00 00 00 dd 2a 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2181,6 +2268,7 @@ rule Trojan_MSIL_CryptInject_MBCI_2147846390_0
         $x_10_1 = {48 00 34 00 73 00 49 00 41 00 41 00 41 00 41 00 41 00 41 00 41 00 45 00 41 00 4e 00 53 00 39 00 43 00 32 00 78 00 72 00 61 00 33 00 62 00 66 00 39 00 2b 00 6b 00 38}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2207,6 +2295,7 @@ rule Trojan_MSIL_CryptInject_MBCR_2147846569_0
         $x_1_6 = "Qjzterhzrb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2228,6 +2317,7 @@ rule Trojan_MSIL_CryptInject_UNK_2147847389_0
         $x_1_1 = {71 02 00 00 01 20 00 00 00 00 20 46 7b 70 49 20 27 7b 70 49 61 9d fe 09 03 00 71 02 00 00 01 20 01 00 00 00 20 a6 f5 9f 5f 20 cb f5 9f 5f 61 9d fe 09 03 00 71 02 00 00 01 20 02 00 00 00 20 a2 3d 54 47 20 d1 3d 54 47 61 9d fe 09 03 00 71 02 00 00 01 20 03 00 00 00 20 18 ef 53 05 20 71 ef 53 05 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2249,6 +2339,7 @@ rule Trojan_MSIL_CryptInject_MKV_2147848004_0
         $x_1_1 = {73 5f 07 00 0a 0a dd 20 00 00 00 26 72 3d 00 00 70 72 dc 00 00 70 28 60 07 00 0a 6f 61 07 00 0a 74 27 01 00 01 0a dd 00 00 00 00 06 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2271,6 +2362,7 @@ rule Trojan_MSIL_CryptInject_MBEM_2147849454_0
         $x_1_2 = "Whoon.Himentater" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2292,6 +2384,7 @@ rule Trojan_MSIL_CryptInject_MBEN_2147849455_0
         $x_1_1 = {2d 35 00 35 00 46 00 55 00 34 00 36 00 34 00 56 00 48 00 55 00 34 00 38 00 42 00 42 00 55 00 38 00 43 00 53 00 43 00 34 00 48 00 35 00 00 05 68 00 68 00 00 05 67 00 67 00 00 09 4c 00 6f 00 61 00 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2317,6 +2410,7 @@ rule Trojan_MSIL_CryptInject_MBET_2147849962_0
         $x_1_5 = "ZYXDNGuarder" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2338,6 +2432,7 @@ rule Trojan_MSIL_CryptInject_MBEV_2147849963_0
         $x_1_1 = {2c 28 07 08 09 28 ?? 00 00 0a 16 6f ?? 00 00 0a 13 08 12 08 28 ?? 00 00 0a 6f ?? 00 00 0a 09 11 07 12 03 28 ?? 00 00 0a 2d d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2359,6 +2454,7 @@ rule Trojan_MSIL_CryptInject_MBHZ_2147851803_0
         $x_1_1 = {07 8e b7 17 da 13 04 0d 2b 2b 08 07 09 9a 28 ?? 00 00 0a 17 6a 61 28 ?? 00 00 0a 18 28 ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 0c 09 17 d6 0d 09 11 04 31 d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2390,6 +2486,7 @@ rule Trojan_MSIL_CryptInject_PAV_2147888531_0
         $x_1_11 = "ResumeThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2412,6 +2509,7 @@ rule Trojan_MSIL_CryptInject_PAZ_2147888532_0
         $x_1_2 = {72 01 00 00 70 7e 0e 00 00 0a 7e 0e 00 00 0a 16 1a 7e 0e 00 00 0a 14 12 05 12 06 28 ?? ?? ?? 06 13 08 16 13 09 11 06 7b 18 00 00 04 13 0a 11 0a 16 12 07 28 ?? ?? ?? 0a 1c 5a 12 09 28 ?? ?? ?? 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2434,6 +2532,7 @@ rule Trojan_MSIL_CryptInject_MBIQ_2147890026_0
         $x_1_2 = {44 00 6f 00 64 00 67 00 65 00 00 0d 49 00 6e 00 76 00 6f 00 6b 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2460,6 +2559,7 @@ rule Trojan_MSIL_CryptInject_MBJK_2147892183_0
         $x_1_6 = "StringSorter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2482,6 +2582,7 @@ rule Trojan_MSIL_CryptInject_MBJM_2147892408_0
         $x_1_2 = {1a 04 29 04 1a 04 39 04 13 04 26 04 16 04 7a 04 43 04 1b 04 41 04 47 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2505,6 +2606,7 @@ rule Trojan_MSIL_CryptInject_MBJS_2147893419_0
         $x_1_3 = "Sling.g.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2527,6 +2629,7 @@ rule Trojan_MSIL_CryptInject_MBKS_2147894717_0
         $x_1_2 = {67 00 74 00 73 00 61 00 76 00 6a 00 76 00 45 00 52 00 41 00 63 00 77 00 6b 00 6f 00 47 00 34 00 6d 00 30 00 46 00 68 00 67 00 42 00 53 00 46 00 58 00 5a 00 66 00 66 00 6d 00 42 00 4b 00 49 00 73 00 6b 00 4a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2549,6 +2652,7 @@ rule Trojan_MSIL_CryptInject_MBKS_2147894717_1
         $x_1_2 = {20 00 51 00 75 00 61 00 6e 00 4c 00 79 00 42 00 61 00 6e 00 4c 00 75 00 75 00 4e 00 69 00 65 00 6d 00 2e 00 43 00 6f 00 75 00 70 00 6f 00 6e 00 4e 00 75 00 6d 00 62 00 65 00 72 00 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2575,6 +2679,7 @@ rule Trojan_MSIL_CryptInject_MBEH_2147895193_0
         $x_1_6 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2602,6 +2707,7 @@ rule Trojan_MSIL_CryptInject_MBEO_2147895691_0
         $x_1_7 = "RijndaelManaged" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2625,6 +2731,7 @@ rule Trojan_MSIL_CryptInject_PA22_2147899469_0
         $x_1_3 = "SFZwT0wk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2646,6 +2753,7 @@ rule Trojan_MSIL_CryptInject_MBFU_2147902585_0
         $x_1_1 = {09 06 08 06 6f ?? 00 00 0a 1f ?? 61 d2 9c 06 17 58 0a 06 08 6f ?? 00 00 0a 32 e5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2680,6 +2788,7 @@ rule Trojan_MSIL_CryptInject_XC_2147903117_0
         $x_1_14 = {43 6f 70 79 42 6c 6f 63 6b 00 50 75 74 42 79 74 65 00 47 65 74 42 79 74 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2705,6 +2814,7 @@ rule Trojan_MSIL_CryptInject_MBZV_2147906786_0
         $x_1_5 = "RijndaelManaged" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2727,6 +2837,7 @@ rule Trojan_MSIL_CryptInject_MBYC_2147908018_0
         $x_1_2 = "vMeJL4ytO" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2748,6 +2859,7 @@ rule Trojan_MSIL_CryptInject_SPMP_2147910505_0
         $x_4_1 = {06 18 d8 0a 06 1f 18 fe 02 0c 08 2c 03 1f 18 0a 06 1f 18 5d 16 fe 03 0d 09 2d e5}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2769,6 +2881,7 @@ rule Trojan_MSIL_CryptInject_PDF_2147912046_0
         $x_1_1 = {d0 6f 00 00 06 26 11 06 1f 0b 93 20 6a 29 00 00 59 13 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2790,6 +2903,7 @@ rule Trojan_MSIL_CryptInject_YR_2147913202_0
         $x_1_1 = {07 02 7b 04 00 00 04 8e 69 5d 0c 06 07 03 07 91 02 7b 04 00 00 04 08 91 61 d2 9c 00 07 17 58 0b 07 03 8e 69 fe 04 0d 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2820,6 +2934,7 @@ rule Trojan_MSIL_CryptInject_RHE_2147913372_0
         $x_2_10 = {50 45 00 00 4c 01 05 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0b 01 0b ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? fe 37}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2841,6 +2956,7 @@ rule Trojan_MSIL_CryptInject_MBYW_2147913902_0
         $x_1_1 = {73 00 4b 00 75 00 45 00 74 00 36 00 6d 00 6d 00 2f 00 30 00 4d 00 70 00 2b 00 4a 00 2b 00 65 00 6e 00 5a 00 4a 00 34 00 67 00 72 00 47 00 33 00 72 00 77 00 4e 00 65 00 64 00 48 00 6a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2871,6 +2987,7 @@ rule Trojan_MSIL_CryptInject_RHK_2147914305_0
         $x_1_10 = "XPS Printing" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2902,6 +3019,7 @@ rule Trojan_MSIL_CryptInject_RHL_2147914306_0
         $x_1_11 = "toHost" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2927,6 +3045,7 @@ rule Trojan_MSIL_CryptInject_RHO_2147916625_0
         $x_1_5 = "System.Data.Linq.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2953,6 +3072,7 @@ rule Trojan_MSIL_CryptInject_MBXL_2147917649_0
         $x_1_6 = "TRM.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2979,6 +3099,7 @@ rule Trojan_MSIL_CryptInject_RHP_2147918300_0
         $x_2_6 = {43 00 6f 00 6d 00 70 00 61 00 6e 00 79 00 4e 00 61 00 6d 00 65 00 ?? ?? ?? ?? 44 00 69 00 73 00 70 00 6c 00 61 00 79 00 20 00 44 00 72 00 69 00 76 00 65 00 72 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3014,6 +3135,7 @@ rule Trojan_MSIL_CryptInject_RHQ_2147918334_0
         $x_1_15 = "newsoftgnu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 13 of ($x_1_*))) or
             ((2 of ($x_2_*) and 11 of ($x_1_*))) or
@@ -3041,6 +3163,7 @@ rule Trojan_MSIL_CryptInject_MBXT_2147921635_0
         $x_1_3 = "BotClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3064,6 +3187,7 @@ rule Trojan_MSIL_CryptInject_MBXU_2147921636_0
         $x_1_3 = "ProDRENALIN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -3091,6 +3215,7 @@ rule Trojan_MSIL_CryptInject_RHAK_2147924166_0
         $x_2_3 = "Zmkwrra.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3113,6 +3238,7 @@ rule Trojan_MSIL_CryptInject_MBWA_2147926103_0
         $x_1_2 = "2154a4eea3ff" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3135,6 +3261,7 @@ rule Trojan_MSIL_CryptInject_RHAM_2147926139_0
         $x_2_2 = {50 45 00 00 4c 01 03 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0b 01 30 00 00 0a 00 00 00 08 00 00 00 00 00 00 5a 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3156,6 +3283,7 @@ rule Trojan_MSIL_CryptInject_TEH_2147927126_0
         $x_3_1 = {08 12 03 28 55 00 00 0a 73 80 00 00 0a 13 04 20 20 00 00 02 28 ec 03 00 06 28 6a 00 00 0a 6f 6b 00 00 0a 72 54 4e 00 70 6f 62 00 00 0a 73 7f 00 00 0a 25 6f 7a 00 00 0a 16 6a 6f 63 00 00 0a 25 25 6f 7a 00 00 0a 6f 64 00 00 0a 69 6f 81 00 00 0a 13 05}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3184,6 +3312,7 @@ rule Trojan_MSIL_CryptInject_RHAO_2147928028_0
         $x_2_8 = {50 45 00 00 4c 01 03 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0b 01 50 00 00 26 00 00 00 08 00 00 00 00 00 00 d2 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3209,6 +3338,7 @@ rule Trojan_MSIL_CryptInject_RHAP_2147929408_0
         $x_2_5 = {50 45 00 00 4c 01 03 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0b 01 30}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3235,6 +3365,7 @@ rule Trojan_MSIL_CryptInject_RH_2147934370_0
         $x_2_6 = {50 45 00 00 4c 01 03 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0b 01 08 00 00 bc 13 00 00 6e d1 00 00 00 00 00 ae da 13}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3257,6 +3388,7 @@ rule Trojan_MSIL_CryptInject_MBS_2147934979_0
         $x_1_2 = "Larewibifa" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3279,6 +3411,7 @@ rule Trojan_MSIL_CryptInject_MBT_2147934980_0
         $x_1_2 = {65 00 73 00 73 00 2e 00 74 00 78 00 74 00 00 51 67 00 68 00 70 00 5f 00 51 00 4e 00 38 00 6e 00 5a 00 58 00 56 00 79 00 57 00 33 00 77 00 64 00 41 00 4a 00 6d 00 79 00 59 00 54 00 7a 00 76 00 64 00 31 00 69 00 79 00 78 00 35 00 57 00 75 00 35 00 30 00 32 00 4a 00 7a 00 6c 00 56 00 39}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3302,6 +3435,7 @@ rule Trojan_MSIL_CryptInject_BSA_2147935496_0
         $x_9_3 = "lover.exe" ascii //weight: 9
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3324,6 +3458,7 @@ rule Trojan_MSIL_CryptInject_BSA_2147935496_1
         $x_10_2 = "2b73c51c-9d53-4a40-8269-a53478fa16d4" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3348,6 +3483,7 @@ rule Trojan_MSIL_CryptInject_BSA_2147935496_2
         $x_9_4 = "SmartAssembly.HouseOfCards" ascii //weight: 9
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3376,6 +3512,7 @@ rule Trojan_MSIL_CryptInject_BSA_2147935496_3
         $x_2_8 = "WndVbm1hcFZpZXdPZ1N1Y3Rpb24=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3397,6 +3534,7 @@ rule Trojan_MSIL_CryptInject_DAA_2147936284_0
         $x_3_1 = {08 09 02 09 6f 2a 00 00 0a 03 09 07 5d 6f 2a 00 00 0a 61 d1 9d 09 17 58 0d 09 06 32 e3}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3418,6 +3556,7 @@ rule Trojan_MSIL_CryptInject_DAB_2147940151_0
         $x_2_1 = {1a 8d 05 00 00 01 0c 07 08 16 1a 6f 0d 00 00 0a 26 08 16 28 0e 00 00 0a 26 07 16 73 0f 00 00 0a 0d 09 06 6f 10 00 00 0a 06 6f 0a 00 00 0a 13 04 dd 27}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3440,6 +3579,7 @@ rule Trojan_MSIL_CryptInject_JYAA_2147941511_0
         $x_2_2 = {06 07 17 58 6f ?? 00 00 0a 28 ?? 00 00 0a 0a 07 17 58 0b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3462,6 +3602,7 @@ rule Trojan_MSIL_CryptInject_MBZ_2147942278_0
         $x_1_2 = "e579baefae58" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win32_HydraCrypt_ED_2147835922_0
         $x_1_6 = "KFLJSDHijfq3n2iufq3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_HydraCrypt_BAH_2147845327_0
         $x_2_2 = {6a 04 68 00 30 00 00 6a 75 6a 00 ff 15}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

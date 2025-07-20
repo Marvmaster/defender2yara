@@ -18,6 +18,7 @@ rule Trojan_MacOS_LooseMaque_A_2147745483_0
         $x_1_3 = "killing in lose/lose deletes your files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

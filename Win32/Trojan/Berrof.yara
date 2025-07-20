@@ -17,6 +17,7 @@ rule Trojan_Win32_Berrof_A_2147696372_0
         $x_1_3 = {76 65 72 63 6c 73 69 64 00 50 ff 93 ?? ?? ?? ?? 85 c0 0f 84 a3 00 00 00 c7 85 dc fc ff ff 07 00 01 00 8d 95 dc fc ff ff 52 ff 75 f0 ff 93}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

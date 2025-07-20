@@ -18,6 +18,7 @@ rule Backdoor_MSIL_DcRat_SM_2147945333_0
         $x_2_3 = "ShowSuperHidden" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_MSIL_DcRat_SN_2147945334_0
         $x_2_3 = "BXCJDF.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

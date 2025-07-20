@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Datepop_143786_0
         $x_1_4 = {61 70 70 2f 61 70 70 5f 70 6f 70 75 70 2e 70 68 70 3f [0-10] 6b 65 79 77 6f 72 64 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Worm_Win32_Winlire_A_2147657809_0
         $x_1_3 = {66 c7 43 10 14 00 8b f0 ba 02 00 00 80 8b c6 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

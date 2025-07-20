@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Likpeh_A_2147650656_0
         $x_1_3 = "//%s%s?act%sor&v=1&a=%d&id=%s&hardid=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Risepro_RPX_2147852904_0
         $x_1_1 = {c1 fa 3b 66 ff c2 80 ea 1d f6 d0 c1 f2 99 66 c1 f2 af f6 d1 22 c1 c1 c2 30 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Risepro_RPZ_2147897309_0
         $x_1_1 = {ff d7 80 b6 ?? ?? ?? ?? b4 6a 00 ff d7 80 86 ?? ?? ?? ?? f6 6a 00 ff d7 80 86 ?? ?? ?? ?? f9 6a 00 ff d7 80 b6 ?? ?? ?? ?? fd 6a 00 ff d7 80 86}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanDropper_MacOS_X_CoinThief_A_2147685453_0
         $x_2_6 = "U2FmYXJpL0V4dGVuc2lvbnM=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

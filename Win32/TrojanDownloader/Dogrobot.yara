@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Dogrobot_J_2147610778_0
         $x_1_1 = {7e 30 0f be 34 1f 83 fe 20 7c 22 83 fe 7e 7f 1d e8 ?? ?? 00 00 8d 0c 40 c1 e1 05 8d 44 31 e0 b9 5f 00 00 00 99 f7 f9 80 c2 20 88 14 1f 47 3b fd 7c d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Dogrobot_A_2147611326_0
         $x_1_11 = "kaka" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_4_*) and 4 of ($x_1_*))) or
@@ -72,6 +74,7 @@ rule TrojanDownloader_Win32_Dogrobot_B_2147617630_0
         $x_1_2 = "rubbish\\dnloaerc\\Release\\dnloaderc.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule TrojanDownloader_Win32_Dogrobot_D_2147624419_0
         $x_1_5 = {26 64 74 69 6d 65 3d [0-5] 26 6f 73 3d [0-5] 26 76 65 72 3d [0-5] 3f 6d 61 63 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule TrojanDownloader_Win32_Dogrobot_C_2147624450_0
         $x_1_5 = "count.asp?mac=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule TrojanDownloader_Win32_Dogrobot_E_2147624793_0
         $x_1_5 = "%s\\%d_xeex.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Maptrepol_A_2147712219_0
         $x_1_5 = "prst.cab" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_2_*))) or

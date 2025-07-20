@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Stioldaat_STB_2147781464_0
         $x_2_5 = {6a 00 68 00 ca 9a 3b 52 50 8b f1 e8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

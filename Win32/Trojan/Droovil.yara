@@ -18,6 +18,7 @@ rule Trojan_Win32_Droovil_A_2147811724_0
         $x_1_3 = {69 64 3d 00 25 30 33 78 00 00 00 00 26 75 72 69 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

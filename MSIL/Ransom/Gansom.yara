@@ -17,6 +17,7 @@ rule Ransom_MSIL_Gansom_AA_2147749888_0
         $x_1_2 = "Ransomware.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

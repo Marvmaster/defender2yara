@@ -17,6 +17,7 @@ rule Trojan_Win32_FlyAgent_B_2147630904_0
         $x_1_3 = {14 00 00 00 50 ff 75 f4 e8 ?? ?? ?? ?? 83 c4 08 83 f8 00 b8 00 00 00 00 0f 94 c0 89 45 f0 8b 5d f4 85 db 74 09 53 e8 ?? ?? ?? ?? 83 c4 04 83 7d f0 00 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_FlyAgent_RG_2147845247_0
         $x_1_6 = "CurrentVersion\\Run\\360safo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_FlyAgent_GMF_2147892106_0
         $x_1_3 = "@Microsoft\\Config.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

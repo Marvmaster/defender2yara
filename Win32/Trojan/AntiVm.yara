@@ -21,6 +21,7 @@ rule Trojan_Win32_AntiVm_EM_2147850223_0
         $x_1_6 = "cangku\\WinOsClientProject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

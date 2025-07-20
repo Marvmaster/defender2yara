@@ -16,6 +16,7 @@ rule Trojan_Win32_Miuref_A_2147684676_0
         $x_1_2 = {c6 06 7b ff 37 8d 46 01 6a ?? 6a ?? 50 e8 ?? ?? ?? ?? c6 46 09 2d 0f b7 47 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Miuref_A_2147684676_1
         $x_2_3 = {b8 4d 5a 00 00 66 39 45 00 75 f1 56 8b 75 3c 03 f5 81 3e 50 45 00 00 74 07}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Miuref_A_2147684677_0
         $x_1_2 = {8b 06 8b 48 28 85 c9 74 ?? 8b 46 04 03 c1 74 ?? 6a ff 6a 01 6a 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Trojan_Win32_Miuref_B_2147685038_0
         $x_1_2 = {80 e3 0f 6a 01 80 fb 03 77 ?? 6a 06 58 e8 ?? ?? ?? ?? 8b f8 59 6a 2e 58 66 89 07 [0-1] 0f b6 c3 66 83 c0 30 66 89 47 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +106,7 @@ rule Trojan_Win32_Miuref_C_2147686089_0
         $x_1_2 = {0f b7 0a 8b d9 81 e3 00 f0 ff ff 81 fb 00 30 00 00 75 0d 8b 5d 08 81 e1 ff 0f 00 00 03 cf 01 19}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +128,7 @@ rule Trojan_Win32_Miuref_D_2147686320_0
         $x_1_2 = {c7 40 44 02 00 00 00 c7 40 48 4d dd eb 5a c7 40 4c a1 ce eb 5a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +149,7 @@ rule Trojan_Win32_Miuref_E_2147686974_0
         $x_1_1 = {89 3c 24 81 2c 24 78 54 cb 32 58 50 89 1c 24 bb 78 54 cb 32 01 d8 5b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +173,7 @@ rule Trojan_Win32_Miuref_F_2147688184_0
         $x_1_4 = {3d c7 50 58 e8 75 ?? c7 05 ?? ?? ?? ?? 01 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_16_*) and 2 of ($x_1_*))) or
             ((1 of ($x_16_*) and 1 of ($x_2_*))) or
@@ -246,6 +254,7 @@ rule Trojan_Win32_Miuref_G_2147689279_0
         $x_1_3 = {8b 45 f8 8b 00 83 78 28 00 74 2e 8b 45 f8 8b 00 8b 4d f8 8b 49 04 03 48 28 89 4d fc 74 1b 6a ff 6a 01 ff 75 0c ff 55 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -296,6 +305,7 @@ rule Trojan_Win32_Miuref_H_2147689414_0
         $x_2_2 = "Any-Video-Converter.com" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -319,6 +329,7 @@ rule Trojan_Win32_Miuref_I_2147689933_0
         $x_1_4 = {73 7a 53 56 8d 71 24 8b 0e 8b d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -343,6 +354,7 @@ rule Trojan_Win32_Miuref_K_2147696140_0
         $x_1_5 = {3d ee 86 47 cf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -366,6 +378,7 @@ rule Trojan_Win32_Miuref_L_2147696295_0
         $x_1_4 = {2e 00 69 00 64 00 78 00 00 00 00 00 2e 00 6c 00 63 00 6b 00 00 00 00 00 2e 00 64 00 61 00 74 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -390,6 +403,7 @@ rule Trojan_Win32_Miuref_M_2147696692_0
         $x_10_5 = {2e 00 69 00 64 00 78 00 00 00 00 00 2e 00 6c 00 63 00 6b 00 00 00 00 00 2e 00 64 00 61 00 74 00 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -414,6 +428,7 @@ rule Trojan_Win32_Miuref_O_2147696852_0
         $x_1_2 = {be 80 38 01 00 33 ff ff 15 ?? ?? ?? 10 ff 35 ?? ?? ?? 10 83 c6 50 ff 15 ?? ?? ?? 10 83 c7 32 3b fe 7c e4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -435,6 +450,7 @@ rule Trojan_Win32_Miuref_P_2147696888_0
         $x_1_2 = {71 02 10 34 ?? 2c ?? 88 82 ?? 71 02 10 42 81 fa 00 2c 00 00 72 e7 03 00 8a 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -457,6 +473,7 @@ rule Trojan_Win32_Miuref_R_2147716203_0
         $x_1_3 = {c6 06 7b ff 37 8d 46 01 6a ?? 6a ?? 50 e8 ?? ?? ?? ?? c6 46 09 2d 0f b7 47 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

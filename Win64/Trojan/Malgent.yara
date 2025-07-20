@@ -19,6 +19,7 @@ rule Trojan_Win64_Malgent_DSG_2147815604_0
         $x_100_4 = "movie.youtoboo.kro.kr" wide //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win64_Malgent_MA_2147898645_0
         $x_2_5 = {f0 00 2e 02 0b 02 02 28 00 50 7f 00 00 10 00 00 00 e0 c9 00 60 34 49 01 00 f0 c9 00 00 00 00 40 01 00 00 00 00 10 00 00 00 02}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_2_*))) or
             (all of ($x*))
@@ -69,6 +71,7 @@ rule Trojan_Win64_Malgent_NM_2147900462_0
         $x_1_2 = "sdsdsdsds.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

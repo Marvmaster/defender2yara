@@ -21,6 +21,7 @@ rule Trojan_MSIL_XWormRAT_B_2147840915_0
         $x_2_6 = "cmd.exe /c net stop wuauserv && sc config wuauserv start= disabled" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Trojan_MSIL_XWormRAT_C_2147843840_0
         $x_2_9 = "\\b(0x)[a-zA-HJ-NP-Z0-9]{40,45}\\b" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Trojan_MSIL_XWormRAT_E_2147849620_0
         $x_2_1 = {07 08 09 28 ?? 00 00 0a 16 6f ?? 00 00 0a 13 08 12 08 28 ?? 00 00 0a 6f ?? 00 00 0a 09 11 07 12 03 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_MSIL_XWormRAT_F_2147849968_0
         $x_2_1 = {11 00 7e 5f 01 00 04 28 ?? ?? 00 06 14 14 6f ?? 00 00 0a 26 20}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_MSIL_XWormRAT_G_2147891851_0
         $x_2_2 = {20 00 01 00 00 14 14 14 6f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule Trojan_MSIL_XWormRAT_I_2147894381_0
         $x_2_1 = {00 00 01 14 14 14 28 ?? 00 00 0a 74 ?? 00 00 1b 13 04 1b 0d 2b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule Trojan_MSIL_XWormRAT_J_2147897380_0
         $x_2_1 = {09 11 04 08 11 04 91 20 ?? ?? 00 00 28 ?? ?? 00 06 11 04 20 ?? ?? 00 00 28 ?? ?? 00 06 28 ?? ?? 00 0a 5d 28 ?? ?? 00 0a 61 d2 9c 11 04 17 58 13 04 11 04 16 2d ?? 08 8e 69}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_MSIL_XWormRAT_AAYY_2147898610_0
         $x_5_1 = {06 07 02 17 8d ?? 00 00 01 0c 08 16 07 8c ?? 00 00 01 a2 08 14 28 ?? 00 00 0a 1f 0e 8d ?? 00 00 01 13 04 11 04 16 20 f7 00 00 00 9e 11 04 17 1f 28 9e 11 04 18 1f 73 9e 11 04 19 20 b1 00 00 00 9e 11 04 1a 20 c7 00 00 00 9e 11 04 1b 20 8a 00 00 00 9e 11 04 1c 1f 6c 9e 11 04 1d 20 98 00 00 00 9e 11 04 1e 1f 23 9e 11 04 1f 09 20 ba 00 00 00 9e 11 04 1f 0a 20 ee 00 00 00 9e 11 04 1f 0b 1f 55 9e 11 04 1f 0c 20 8d 00 00 00 9e 11 04 1f 0d 20 b1 00 00 00 9e 11 04 07 1f 0e 5d 94 8c ?? 00 00 01 28 ?? 00 00 0a 28 ?? 00 00 0a 9c 07 17 d6 0b 07}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +211,7 @@ rule Trojan_MSIL_XWormRAT_K_2147899086_0
         $x_2_6 = "BHAFUAQQBaAEEAQgAxAEEARwB3AEEAWgBRAEIAeQBBAEEAPQA9" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +236,7 @@ rule Trojan_MSIL_XWormRAT_M_2147900688_0
         $x_2_4 = "C:\\Windows\\Microsoft.Net\\Framework\\v4.0.30319" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +261,7 @@ rule Trojan_MSIL_XWormRAT_N_2147901325_0
         $x_2_4 = "C:\\Windows\\Microsoft.Net\\Framework\\v4.0.30319" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -275,6 +286,7 @@ rule Trojan_MSIL_XWormRAT_O_2147902690_0
         $x_2_4 = "C:\\Windows\\Microsoft.Net\\Framework\\v4.0.30319" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +311,7 @@ rule Trojan_MSIL_XWormRAT_P_2147902820_0
         $x_2_4 = "C:\\Windows\\Microsoft.Net\\Framework\\v4.0.30319" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -323,6 +336,7 @@ rule Trojan_MSIL_XWormRAT_Q_2147904981_0
         $x_2_4 = "C:\\Windows\\Microsoft.Net\\Framework\\v4.0.30319\\" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -345,6 +359,7 @@ rule Trojan_MSIL_XWormRAT_S_2147905640_0
         $x_2_2 = "CYQ.Data" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -369,6 +384,7 @@ rule Trojan_MSIL_XWormRAT_R_2147906568_0
         $x_2_4 = "\\Windows\\Microsoft.Net\\Framework\\v4.0.30319\\" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -390,6 +406,7 @@ rule Trojan_MSIL_XWormRAT_V_2147907676_0
         $x_2_1 = {0a 8e 69 8d ?? 00 00 01 fe ?? ?? 00 fe ?? ?? 00 8e 69 fe ?? ?? 00 28 ?? 00 00 0a 3b ?? 00 00 00 fe ?? ?? 00 fe ?? ?? 00 28 ?? 00 00 0a fe ?? 00 00 a2 14 fe}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +429,7 @@ rule Trojan_MSIL_XWormRAT_U_2147907783_0
         $x_2_2 = {57 bd a3 3d 09 0f 00 00 00 00 00 00 00 00 00 00 02 00 00 00 d3 00 00 00 fa 00 00 00 9f 04 00 00 f2 09}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -433,6 +451,7 @@ rule Trojan_MSIL_XWormRAT_W_2147908321_0
         $x_2_1 = {07 1a 5d 91 07 1a 5d 1e 5a 1f ?? 5f 63 d2 61 d2 52}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -454,6 +473,7 @@ rule Trojan_MSIL_XWormRAT_X_2147908419_0
         $x_2_1 = {02 11 06 d4 91 11 04 11 04 07 95 11 04 08 95 58 20 ?? ?? ?? ?? 5f 95 61 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -475,6 +495,7 @@ rule Trojan_MSIL_XWormRAT_Y_2147908507_0
         $x_2_1 = {0a 11 03 11 03 18 5a 7e ?? ?? 00 04 28 ?? ?? 00 06 6c 7e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -501,6 +522,7 @@ rule Trojan_MSIL_XWormRAT_RP_2147912888_0
         $x_1_6 = "XHJYDTw3pnYWwXSL5jLick" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

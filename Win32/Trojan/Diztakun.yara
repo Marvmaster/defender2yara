@@ -18,6 +18,7 @@ rule Trojan_Win32_Diztakun_AR_2147752855_0
         $x_10_3 = "echo CORONAVIRUS" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Diztakun_ADI_2147941921_0
         $x_1_3 = "Shepard.R_merged\\Release\\Shepard.R_merged.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

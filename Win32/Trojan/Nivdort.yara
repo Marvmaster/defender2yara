@@ -19,6 +19,7 @@ rule Trojan_Win32_Nivdort_A_2147707846_0
         $x_1_4 = {c6 45 e0 46 c6 45 e1 49 c6 45 e2 52 c6 45 e3 45 c6 45 e4 46 c6 45 e5 4f c6 45 e6 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule Trojan_Win32_Nivdort_B_2147707847_0
         $x_1_3 = {48 6f 6f 6b 44 6f 6e 65 00 00 00 00 48 6f 6f 6b 49 6e 69 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Nivdort_ND_2147913123_0
         $x_3_2 = {c1 e1 06 03 0c b5 60 84 42 00 eb ?? 8b ca f6 41 24 7f}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

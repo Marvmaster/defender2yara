@@ -17,6 +17,7 @@ rule DoS_Win32_ZeroBlade_A_2147839784_0
         $x_100_2 = {8b 7c 24 2c c1 e7 0a 57 6a 40 ff}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

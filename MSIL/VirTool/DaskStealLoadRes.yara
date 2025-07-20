@@ -19,6 +19,7 @@ rule VirTool_MSIL_DaskStealLoadRes_2147765780_0
         $x_1_4 = "System.Drawing.Bitmap" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Worm_Win32_Naras_A_2147582918_0
         $x_1_5 = {41 ad 03 c5 33 db 0f be 10 3a d6 74 08 c1 cb 07 03 da 40 eb f1 3b df 75 e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

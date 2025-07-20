@@ -19,6 +19,7 @@ rule Backdoor_MacOS_Nukesped_A_2147745471_0
         $x_1_4 = {45 31 ed 89 d9 83 e1 0f 46 32 2c 21 48 63 70 04 48 39 f3 7d 2b 8b 08 83 f9 01 77 07 48 83 78 10 18 74 27}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

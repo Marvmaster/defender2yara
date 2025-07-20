@@ -17,6 +17,7 @@ rule Trojan_Win32_Palevo_MA_2147823656_0
         $x_1_2 = {66 0f b6 d2 66 8b c1 66 0b c2 66 89 07 74 ?? 47 47 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Palevo_DJ_2147850190_0
         $x_1_5 = {35 a8 87 40 00 ff d6 83 7d e4 02 75 20 81 ec 60 03 00 00 b9 d8 00 00 00 8d b5 e0 fa ff ff 8b fc f3 a5 e8 4a da ff ff 81 c4 60 03 00 00 83 7d e4 03 c6 05 da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

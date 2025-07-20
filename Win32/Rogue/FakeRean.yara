@@ -16,6 +16,7 @@ rule Rogue_Win32_FakeRean_124161_0
         $x_1_2 = "\\setup.exe -p\"15:30\" -y -o\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Rogue_Win32_FakeRean_124161_1
         $x_1_4 = "report url [%s]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Rogue_Win32_FakeRean_124161_2
         $x_1_5 = {74 65 73 74 00 00 00 00 2e 2e 5c 73 69 6d 2e 65 78 65 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Rogue_Win32_FakeRean_124161_3
         $x_1_5 = "FastMM Borland Edition" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Rogue_Win32_FakeRean_124161_4
         $x_2_6 = "Software\\AntiVirus AntiSpyware" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -144,6 +149,7 @@ rule Rogue_Win32_FakeRean_124161_5
         $x_1_7 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +175,7 @@ rule Rogue_Win32_FakeRean_124161_6
         $x_1_6 = "if exist \"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -195,6 +202,7 @@ rule Rogue_Win32_FakeRean_124161_7
         $x_1_7 = "Serious threats were detected" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -219,6 +227,7 @@ rule Rogue_Win32_FakeRean_124161_8
         $x_1_5 = {05 c0 0f 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -240,6 +249,7 @@ rule Rogue_Win32_FakeRean_124161_9
         $x_1_2 = {89 79 04 8d 8c 0e 22 08 d0 6c c7 45 dc 81 6d c7 45 92 e0 51 2a eb 23 60 06 89 d6 21 37 82 f2 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -261,6 +271,7 @@ rule Rogue_Win32_FakeRean_124161_10
         $x_1_2 = {8a 09 30 08 a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 48 41 3b 05 ?? ?? ?? ?? 89 0d ?? ?? ?? ?? a3 ?? ?? ?? ?? 7f d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -284,6 +295,7 @@ rule Rogue_Win32_FakeRean_124161_11
         $x_1_4 = "Please purchase" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -305,6 +317,7 @@ rule Rogue_Win32_FakeRean_124161_12
         $x_1_2 = {33 d2 6a 1f 59 f7 f1 6a 1f 59 2b ca}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -328,6 +341,7 @@ rule Rogue_Win32_FakeRean_124161_13
         $x_1_4 = {44 69 61 6c 65 72 69 42 6c 6f 63 6b 65 72 74 72 61 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +365,7 @@ rule Rogue_Win32_FakeRean_124161_14
         $x_1_4 = {4c 44 52 5f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -377,6 +392,7 @@ rule Rogue_Win32_FakeRean_124161_15
         $x_1_4 = {6a 06 8b fa be ?? ?? ?? ?? 59 33 db f3 a6 74 ?? 83 c2 28 ff 45 fc 66 39 45 fc 72 e4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -400,6 +416,7 @@ rule Rogue_Win32_FakeRean_124161_16
         $x_1_4 = {41 72 65 20 79 6f 75 20 73 75 72 65 20 79 6f 75 20 77 61 6e 74 20 74 6f 20 71 75 69 74 20 57 69 6e 44 65 66 65 6e 64 65 72 3f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -424,6 +441,7 @@ rule Rogue_Win32_FakeRean_124161_17
         $x_1_5 = "SOFTWARE\\Microsoft\\MediaPlayer\\Setup\\Files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -451,6 +469,7 @@ rule Rogue_Win32_FakeRean_124161_18
         $x_1_3 = {6c 69 62 43 6c 61 6d 41 56 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -475,6 +494,7 @@ rule Rogue_Win32_FakeRean_124161_19
         $x_1_5 = {73 6f 75 72 63 65 3d 68 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -499,6 +519,7 @@ rule Rogue_Win32_FakeRean_124161_20
         $x_1_2 = {70 61 75 73 65 00 00 00 45 6e 74 65 72 20 74 65 78 74 2e 20 49 6e 63 6c 75 64 65 20 61 20 64 6f 74 20 28 27 2e 27 29 20 69 6e 20 61 20 73 65 6e 74 65 6e 63 65 20 74 6f 20 65 78 69 74 3a 00 00 43 68 61 72 61 63 74 65 72 73 3a 20 25 63 20 25 63 20 0a 00 44 65 63 69 6d 61 6c 73 3a 20 25 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -524,6 +545,7 @@ rule Rogue_Win32_FakeRean_124161_21
         $x_1_6 = {2e 63 70 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -549,6 +571,7 @@ rule Rogue_Win32_FakeRean_124161_22
         $x_1_1 = {5b 41 6e 74 69 76 69 72 75 73 2e 6d 73 69 5d 0d 0a 54 79 70 65 3d 32 0d 0a 4c 6f 63 61 74 69 6f 6e 3d 68 74 74 70 3a 2f 2f 64 6f 77 6e 6c 6f 61 64 2e [0-37] 2f 65 6e 2f 50 45 2f 41 6e 74 69 76 69 72 75 73 2e 6d 73 69 0d 0a 43 61 63 68 65 52 6f 6f 74 3d 32 38 0d 0a 43 61 63 68 65 46 6f 6c 64 65 72 3d 44 6f 77 6e 6c 6f 61 64 65 64 20 49 6e 73 74 61 6c 6c 61 74 69 6f 6e 73 0d 0a 5b 53 65 74 75 70 2e 62 6d 70 5d 0d 0a 54 79 70 65 3d 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -571,6 +594,7 @@ rule Rogue_Win32_FakeRean_124161_23
         $x_1_3 = "worm that relies on the Microsoft Windows Server Service RPC Handling" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -595,6 +619,7 @@ rule Rogue_Win32_FakeRean_124161_24
         $x_1_5 = "Software\\Security Solution" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -620,6 +645,7 @@ rule Rogue_Win32_FakeRean_124161_25
         $x_1_6 = "Player\\Setup\\Files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -648,6 +674,7 @@ rule Rogue_Win32_FakeRean_124161_26
         $x_5_4 = "CAntivirusBaseDownload" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -674,6 +701,7 @@ rule Rogue_Win32_FakeRean_124161_27
         $x_1_7 = {25 25 73 2f 62 75 79 2f 69 6e 64 65 78 2f 25 73 2f 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -702,6 +730,7 @@ rule Rogue_Win32_FakeRean_124161_28
         $x_3_5 = {83 c9 ff f2 ae f7 d1 49 83 f9 08 72 1a 8d ?? 24 ?? 6a 2f ?? e8 ?? ?? ?? ?? 83 c4 08 85 c0 74 07 b8 01 00 00 00 eb 02}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -731,6 +760,7 @@ rule Rogue_Win32_FakeRean_124161_29
         $x_1_6 = {50 6c 65 61 73 65 20 63 6c 69 63 6b 20 93 41 63 74 69 76 61 74 65 20 6e 6f 77 94 20 74 6f 20 63 6f 6e 74 69 6e 75 65 20 77 69 74 68 20 61 20 73 65 63 75 72 65 20 70 75 72 63 68 61 73 65 20 6f 66}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -755,6 +785,7 @@ rule Rogue_Win32_FakeRean_124161_30
         $x_1_5 = "Security Center" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -784,6 +815,7 @@ rule Rogue_Win32_FakeRean_124161_31
         $x_1_7 = {41 72 65 20 79 6f 75 20 73 75 72 65 3f 20 59 6f 75 72 20 50 43 20 77 69 6c 6c 20 6e 6f 74 20 62 65 20 70 72 6f 74 65 63 74 65 64 20 61 67 61 69 6e 74 73 20 73 70 79 77 61 72 65 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -812,6 +844,7 @@ rule Rogue_Win32_FakeRean_124161_32
         $x_2_4 = {42 00 00 00 44 00 00 00 4d 00 00 00 53 00 00 00 (53 65 63 75 72 69 74 79 20 6d 61 6e 61 67|41 6e 74 69 56 69 72)}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -839,6 +872,7 @@ rule Rogue_Win32_FakeRean_124161_33
         $x_1_5 = {49 6e 73 74 61 6c 6c 20 53 65 63 75 72 69 74 79 20 45 73 73 65 6e 74 69 61 6c 73 [0-2] 20 69 73 20 62 72 65 61 6b 69 6e 67 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -872,6 +906,7 @@ rule Rogue_Win32_FakeRean_124161_34
         $x_3_14 = {2e 65 78 65 00 00 00 00 5c 4f 72 69 67 69 6e 61 6c 46 69 6c 65 6e 61 6d 65 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -906,6 +941,7 @@ rule Rogue_Win32_FakeRean_124161_35
         $x_1_6 = "imlRemoveTrojanBtnh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -929,6 +965,7 @@ rule Rogue_Win32_FakeRean_124161_36
         $x_1_4 = "Software\\Microsoft\\Software Notifier" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_3_*))) or
@@ -963,6 +1000,7 @@ rule Rogue_Win32_FakeRean_124161_37
         $x_6_11 = {68 00 00 00 80 50 ff 15 ?? ?? ?? ?? 8b ?? 83 ?? ff [0-3] (74 ??|0f 84 ?? ?? ?? ??) 53 ?? ff 15 ?? ?? ?? ?? 83 e8 70 53 53 50 ?? ff 15 ?? ?? ?? ?? 6a 1b}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -993,6 +1031,7 @@ rule Rogue_Win32_FakeRean_124161_38
         $x_1_5 = "Detected ttems" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1022,6 +1061,7 @@ rule Rogue_Win32_FakeRean_124161_39
         $x_1_10 = {2f 66 69 72 73 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1056,6 +1096,7 @@ rule Rogue_Win32_FakeRean_124161_40
         $x_1_9 = " is infected by W32/Blaster.worm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1089,6 +1130,7 @@ rule Rogue_Win32_FakeRean_124161_41
         $x_1_8 = {53 6f 6d 65 20 6f 66 20 73 65 63 75 72 65 20 63 6f 6d 70 6f 6e 65 6e 74 73 20 69 6e 61 63 74 69 76 65 2e 20 50 6c 65 61 73 65 20 63 68 65 63 6b 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1116,6 +1158,7 @@ rule Rogue_Win32_FakeRean_124161_42
         $x_1_8 = "Your system might be at risk now." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1148,6 +1191,7 @@ rule Rogue_Win32_FakeRean_124161_43
         $x_1_8 = "Do you want to block this suspicious software?" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1189,6 +1233,7 @@ rule Rogue_Win32_FakeRean_124161_44
         $x_1_16 = "/data/self.hdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -1224,6 +1269,7 @@ rule Rogue_Win32_FakeRean_124161_45
         $x_1_8 = {66 00 75 00 63 00 6b 00 69 00 6e 00 67 00 20 00 66 00 75 00 63 00 6b 00 20 00 2e 00 2e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1263,6 +1309,7 @@ rule Rogue_Win32_FakeRean_124161_46
         $x_1_14 = "Antispyware Protection.lnk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1298,6 +1345,7 @@ rule Rogue_Win32_FakeRean_124161_47
         $x_1_10 = "Email-Worm.VBS.Peach#This internet worm spreads via e-mail" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1337,6 +1385,7 @@ rule Rogue_Win32_FakeRean_124161_48
         $x_1_13 = "return add('Continue to this website unprotected (not recommended).')\"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1383,6 +1432,7 @@ rule Rogue_Win32_FakeRean_124161_49
         $x_2_27 = "private data steal such as passwords" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

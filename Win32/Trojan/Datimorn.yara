@@ -18,6 +18,7 @@ rule Trojan_Win32_Datimorn_A_2147679118_0
         $x_1_4 = {8d 9d 68 fe ff ff b0 00 ba 86 00 00 00 89 df 89 d1 f3 aa 8d 85 34 fe ff ff 89 44 24 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

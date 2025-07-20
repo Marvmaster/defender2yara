@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Rootkitdrv_AG_2147593790_0
         $x_2_5 = {83 c6 03 56 ff 15}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or

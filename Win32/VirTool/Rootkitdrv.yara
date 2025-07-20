@@ -18,6 +18,7 @@ rule VirTool_Win32_Rootkitdrv_DD_2147598278_0
         $x_1_4 = "KeStackAttachProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule VirTool_Win32_Rootkitdrv_BR_2147598712_0
         $x_1_2 = {83 65 fc 00 53 56 57 be 00 10 00 00 68 44 64 6b 20 56 6a 00 ff 15 [0-48] 8b d8 81 fb 04 00 00 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule VirTool_Win32_Rootkitdrv_BS_2147598713_0
         $x_1_2 = {81 ff 04 00 00 c0 75 16 81 c3 00 10 00 00 68 44 64 6b 20 53 6a 00 ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule VirTool_Win32_Rootkitdrv_CV_2147602565_0
         $x_2_6 = {8b 46 60 89 5e 18 89 5e 1c 80 38 0e 75 ?? 8b 50 0c c7 46 1c 4c 06 00 00 b9 dc 05 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_2_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -114,6 +118,7 @@ rule VirTool_Win32_Rootkitdrv_CT_2147603128_0
         $x_1_5 = {75 73 65 72 69 6e 69 74 2e 65 78 65 00 00 00 00 4b 65 53 65 72 76 69 63 65 44 65 73 63 72 69 70 74 6f 72 54 61 62 6c 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

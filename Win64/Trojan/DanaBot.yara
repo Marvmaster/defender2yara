@@ -16,6 +16,7 @@ rule Trojan_Win64_DanaBot_SA_2147897831_0
         $x_1_1 = {48 0f b6 00 89 45 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 0f af 45 ?? 0f af 45 ?? 8b 4d ?? 03 c8 33 4d ?? 89 4d ?? 83 45 ?? ?? 83 eb ?? 85 db 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

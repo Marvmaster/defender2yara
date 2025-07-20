@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Bodsuds_A_2147623520_0
         $x_1_2 = {ff 54 24 30 85 c0 74 0b ff 44 24 10 83 7c 24 10 14 7c da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

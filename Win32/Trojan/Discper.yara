@@ -18,6 +18,7 @@ rule Trojan_Win32_Discper_A_2147688648_0
         $x_1_4 = {2f 66 20 2f 69 6d 20 63 6d 64 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_Win32_Discper_A_2147689260_0
         $x_1_2 = "454HDLDtqCLS24EsDAYorf9QAVkNqQPdJTaEBrdi9pVELUH6ZSU37VqV8UAoTYV7k" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Discper_E_2147691923_0
         $x_1_2 = {57 68 d0 07 00 00 ff 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? 33 f6 56 56 ff 15 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 3d b7 00 00 00 75 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

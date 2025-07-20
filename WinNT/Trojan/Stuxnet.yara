@@ -18,6 +18,7 @@ rule Trojan_WinNT_Stuxnet_B_2147635801_0
         $x_1_4 = "\\FileSystem\\fastfat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -47,6 +48,7 @@ rule Trojan_WinNT_Stuxnet_A_2147635802_0
         $x_1_6 = {2e 74 65 78 74 00 00 00 50 41 47 45 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

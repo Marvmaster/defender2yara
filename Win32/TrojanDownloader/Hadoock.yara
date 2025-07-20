@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Hadoock_A_2147709695_0
         $x_1_5 = {ba 0b 00 00 00 8b 38 83 c9 ff 89 13 8b 55 dc 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 89 53 04 50 89 45 d0 89 4b 08 8b 4d e4 89 4b 0c ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

@@ -19,6 +19,7 @@ rule Worm_MSIL_Sendecor_A_2147695333_0
         $x_1_5 = {4d 53 75 70 64 61 74 65 2e 4d 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule Backdoor_Win32_Scieron_B_2147691613_0
         $x_10_9 = "httpsapi_dll_5_1" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Backdoor_Win32_Scieron_A_2147691614_0
         $x_1_8 = {25 00 75 00 00 00 00 00 50 00 4f 00 53 00 54 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or
             (all of ($x*))

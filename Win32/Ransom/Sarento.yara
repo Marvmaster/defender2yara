@@ -21,6 +21,7 @@ rule Ransom_Win32_Sarento_A_2147697446_0
         $x_2_7 = {81 7c 24 18 3e 1d 60 a2 75 ?? 81 7c 24 1c 17 cc 49 c1 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -63,6 +64,7 @@ rule Ransom_Win32_Sarento_B_2147706066_0
         $x_3_18 = "://decryptoraveidf7.onion.cab" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((5 of ($x_1_*))) or
@@ -92,6 +94,7 @@ rule Ransom_Win32_Sarento_C_2147706288_0
         $x_1_1 = "vict?cust=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +117,7 @@ rule Ransom_Win32_Sarento_C_2147706288_1
         $x_1_3 = {00 53 79 73 74 65 6d 46 75 6e 63 74 69 6f 6e 30 33 36 00 [0-16] 53 68 65 6c 6c 45 78 65 63 75 74 65 41}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +142,7 @@ rule Ransom_Win32_Sarento_C_2147706288_2
         $x_1_5 = {00 53 79 73 74 65 6d 46 75 6e 63 74 69 6f 6e 30 33 36 00 [0-16] 53 68 65 6c 6c 45 78 65 63 75 74 65 41}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -170,6 +175,7 @@ rule Ransom_Win32_Sarento_DA_2147890401_0
         $x_1_8 = "DeleteFileW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

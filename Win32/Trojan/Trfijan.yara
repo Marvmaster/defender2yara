@@ -21,6 +21,7 @@ rule Trojan_Win32_Trfijan_A_2147705850_0
         $x_1_7 = {00 00 68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 31 00 36 00 39 00 2e 00 35 00 35 00 2e 00 36 00 39 00 2e 00 32 00 35 00 30 00 2f 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

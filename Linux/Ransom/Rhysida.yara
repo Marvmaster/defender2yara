@@ -20,6 +20,7 @@ rule Ransom_Linux_Rhysida_A_2147895591_0
         $x_1_5 = {72 68 79 73 69 64 61 [0-88] 2e 6f 6e 69 6f 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

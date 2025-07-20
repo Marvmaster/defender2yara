@@ -17,6 +17,7 @@ rule Trojan_Win32_Lockbit_SRP_2147835864_0
         $x_1_2 = "sel.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Lockbit_RPZ_2147848973_0
         $x_1_3 = {8b d7 c1 e2 04 89 54 24 14 8b 44 24 24 01 44 24 14 8b c7 c1 e8 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Lockbit_MBFA_2147896783_0
         $x_1_5 = "hekenowatemabapapajiwiwenafo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_Lockbit_MBFV_2147903392_0
         $x_1_2 = {72 b5 33 db a1 ?? ?? ?? ?? 03 c3 3d 8d 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule TrojanDownloader_Win32_FakeMSA_A_2147596301_0
         $x_5_10 = "msctrl" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*) and 6 of ($x_5_*))) or
             ((4 of ($x_20_*) and 2 of ($x_5_*))) or
@@ -56,6 +57,7 @@ rule TrojanDownloader_Win32_FakeMSA_B_2147597960_0
         $x_1_7 = "FtpPutFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_AgentT_ST_2147762171_0
         $x_1_2 = {59 8b c8 33 d2 8b c6 f7 f1 8a 0c 1a 30 0c 3e 46 3b 75 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

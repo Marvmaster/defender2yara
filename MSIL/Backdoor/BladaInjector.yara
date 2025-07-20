@@ -19,6 +19,7 @@ rule Backdoor_MSIL_BladaInjector_2147742421_0
         $x_1_4 = {9c a2 14 14 28 ?? 00 00 0a 26 30 00 28 ?? 00 00 0a 9c 25 17 12 07 28 ?? 00 00 0a 9c 25 18 12 07 28 ?? 00 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

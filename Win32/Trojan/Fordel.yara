@@ -16,6 +16,7 @@ rule Trojan_Win32_Fordel_A_2147644018_0
         $x_1_2 = "@del /f /s /q z:\\*.*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_MacOS_NimDoor_A_2147946728_0
         $x_1_3 = {48 89 f2 48 c1 ea 03 83 e2 38 48 8b 44 10 10 48 0f a3 f0 73 15 49 39 4c 24 08 75 0e 49 8b 07 83 e0 01 48 09 c8 49 89 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

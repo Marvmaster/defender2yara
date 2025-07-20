@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Bedobot_A_2147646609_0
         $x_1_5 = {e8 00 00 00 00 5f 81 ef ?? ?? 49 00 8b c7 81 c7 ?? ?? 49 00 3b 47 2c 75 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Bedobot_B_2147651728_0
         $x_2_5 = {8d 40 00 53 51 8b d8 c7 04 24 01 00 00 00 54 68 7e 66 04 80 8b 43 08 50 e8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanDownloader_Win32_Bedobot_C_2147653018_0
         $x_2_4 = {75 0d 8d 45 ?? ba ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 55 ?? 8b 45 ?? e8 ?? ?? ?? ?? 48 0f 85 ?? ?? ?? ?? 80 7d ?? 01 75 04 b3 02 eb 02}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

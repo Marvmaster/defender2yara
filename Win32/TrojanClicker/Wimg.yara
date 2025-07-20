@@ -18,6 +18,7 @@ rule TrojanClicker_Win32_Wimg_A_2147689608_0
         $x_5_4 = ".html' target='_self'><div id='ggg'></div></a> " wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

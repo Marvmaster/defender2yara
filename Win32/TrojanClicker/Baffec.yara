@@ -18,6 +18,7 @@ rule TrojanClicker_Win32_Baffec_A_2147655478_0
         $x_1_4 = "MEDIA_SEARCH_CLOSE_MESSAGE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

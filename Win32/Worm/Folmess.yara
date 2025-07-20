@@ -19,6 +19,7 @@ rule Worm_Win32_Folmess_A_2147617433_0
         $x_1_5 = {cd ee e2 e0 ff 20 ef e0 ef ea e0 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

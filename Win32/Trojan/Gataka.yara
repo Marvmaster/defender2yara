@@ -17,6 +17,7 @@ rule Trojan_Win32_Gataka_C_2147655569_0
         $x_1_3 = {68 f8 00 00 00 8d 8d ?? ?? ff ff 51 8b 95 ?? ?? ff ff 52 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Gataka_D_2147657027_0
         $x_1_2 = {39 5d 08 74 04 3b c3 75 ?? 68 e8 03 00 00 ff 15 ?? ?? ?? ?? e9 ?? ?? ff ff 68 10 27 00 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

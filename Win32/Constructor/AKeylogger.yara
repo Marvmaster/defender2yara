@@ -17,6 +17,7 @@ rule Constructor_Win32_AKeylogger_A_2147629109_0
         $x_1_3 = "?cmd=_s-xclick&hosted_button_id=1536236" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

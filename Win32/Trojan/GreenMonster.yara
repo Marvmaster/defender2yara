@@ -18,6 +18,7 @@ rule Trojan_Win32_GreenMonster_2147811717_0
         $x_5_2 = {50 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 8d 85 ?? ?? ?? ?? 50 6a 00 ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

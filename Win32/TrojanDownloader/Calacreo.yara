@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Calacreo_A_2147649381_0
         $x_2_5 = {6a 00 6a 1a 68 ?? ?? ?? ?? 6a 00 ff d0 be ?? ?? ?? ?? fc 83 e1 00 8a 06 50 9c 58 25 00 04 00 00 83 f8 00 75 05 83 c6 01 eb 03 83 ee 01 58 3c 00 74}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule TrojanDownloader_Win32_Calacreo_C_2147653216_0
         $x_1_6 = "C:\\Sandbox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_5_*))) or

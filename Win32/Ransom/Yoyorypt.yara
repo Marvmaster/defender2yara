@@ -17,6 +17,7 @@ rule Ransom_Win32_Yoyorypt_A_2147721955_0
         $x_1_3 = "help_to_decrypt.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

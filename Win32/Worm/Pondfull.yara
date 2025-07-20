@@ -17,6 +17,7 @@ rule Worm_Win32_Pondfull_B_2147687861_0
         $x_1_3 = {5a 03 d0 c7 02 2e 65 78 65 c6 42 04 00 8d 94 24 00 01 00 00 6a 03 6a 01 68 00 00 00 10 52 e8 ?? ?? ?? ?? 83 c4 ?? 83 f8 00 74 ?? 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_MacOS_SAgnt_B_2147850535_0
         $x_1_4 = "process).kill" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -47,6 +48,7 @@ rule Trojan_MacOS_SAgnt_C_2147888515_0
         $x_1_4 = "libc_execve_trampoline" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_MacOS_SAgnt_D_2147927666_0
         $x_1_2 = {89 d1 80 e1 38 49 89 f0 49 d3 e8 44 30 07 48 83 c2 08 48 ff c7 48 83 fa 50 75 ?? c6 40 0a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_MacOS_SAgnt_AC_2147929100_0
         $x_1_2 = {48 85 db 0f 88 43 01 00 00 49 89 f4 0f b6 05 7b 7d 3b 00 be 01 00 00 00 48 89 df e8 36 fe ff ff 48 85 c0 0f 84 28 01 00 00 49 89 c7 48 89 c7 4c 89 e6 48 89 da e8 36 8f 25 00 49 83 3e 00 74 09 49 8b 7e 08 e8 97 8e 25 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_MacOS_SAgnt_E_2147935634_0
         $x_1_2 = {a8 02 40 f9 e0 03 15 aa 00 01 3f d6 08 08 40 39 28 01 00 34 08 00 40 39 a9 09 80 52 08 01 09 4a 08 00 00 39 08 04 40 39 08 79 19 52 08 04 00 39 1f 08 00 39 a8 83 03 d1 08 05 00 d1 09 1d 40 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule Trojan_MacOS_SAgnt_F_2147937881_0
         $x_1_2 = {49 d3 e2 4c 89 d7 48 c1 ef 20 48 89 f0 31 d2 48 f7 f7 49 89 c1 48 89 d0 45 89 d7 45 89 c3 4c 89 ca 49 0f af d7 4c 0f a4 c0 20 48 39 d0 73 25 4c 01 d0 4c 39 d0 41 0f 93 c0 48 39 d0 0f 92 c3 31 f6 44 20 c3 49 0f 45 f2 48 01 f0 0f b6 f3 48 f7 d6 49 01 f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Trojan_MacOS_SAgnt_G_2147937883_0
         $x_1_2 = {48 29 d0 31 d2 48 f7 f7 4c 0f af d0 48 c1 e2 20 4c 09 da 4c 39 d2 73 25 4c 01 e2 4c 39 e2 41 0f 93 c0 4c 39 d2 0f 92 c3 31 ff 44 20 c3 49 0f 45 fc 48 01 fa 0f b6 fb 48 f7 d7 48 01 f8 4c 29 d2 49 c1 e1 20 49 09 c1 48 d3 ea}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

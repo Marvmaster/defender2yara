@@ -19,6 +19,7 @@ rule Ransom_MSIL_Fox_PA_2147739939_0
         $x_1_4 = "[Foxdecrypt@protonmail.com].vendetta" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_Linux_BlackBasta_A_2147820382_0
         $x_1_3 = {4a 8b 0c de 49 89 c9 89 c9 49 c1 e9 20 49 89 c8 4c 0f af c5 4d 89 ca 4c 0f af d5 49 0f af cc 4c 89 c3 45 89 c0 48 c1 eb 20 49 01 c0 4d 0f af cc 4c 01 d1 48 01 d9 49 89 cf 49 c1 e7 20 4d 01 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Linux_BlackBasta_B_2147847809_0
         $x_1_5 = "export processIds=$(esxcli vm process list" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

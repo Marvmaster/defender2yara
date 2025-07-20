@@ -24,6 +24,7 @@ rule Ransom_Win32_Takabum_A_2147710299_0
         $x_2_10 = {44 45 43 52 59 50 54 5f 49 4e 46 4f 5f [0-16] 2e 68 74 6d 6c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

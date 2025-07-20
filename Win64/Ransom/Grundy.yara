@@ -18,6 +18,7 @@ rule Ransom_Win64_Grundy_AA_2147895753_0
         $x_1_3 = "crypto/elliptic.bigFromHex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

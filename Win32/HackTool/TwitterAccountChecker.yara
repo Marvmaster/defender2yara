@@ -16,6 +16,7 @@ rule HackTool_Win32_TwitterAccountChecker_A_2147692527_0
         $x_1_2 = "session%5Busername_or_email%5D={0}&session%5Bpassword%5D={1}&authenticity_token={2}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Backdoor_MSIL_WebShell_GMF_2147888715_0
         $x_1_4 = "cyRCbLv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_MSIL_WebShell_GMH_2147889019_0
         $x_1_4 = "CrmManagement/MemberManagement/SystemSet/HouseSet/BatchUpdate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Backdoor_MSIL_WebShell_AF_2147889324_0
         $x_1_8 = "Clear All Thread ......" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Backdoor_MSIL_WebShell_AG_2147889342_0
         $x_1_8 = "Clear All Thread ......" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +128,7 @@ rule Backdoor_MSIL_WebShell_GMP_2147892748_0
         $x_1_5 = "SP_oamethod exec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +154,7 @@ rule Backdoor_MSIL_WebShell_GMQ_2147892830_0
         $x_1_5 = "Backdoor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +177,7 @@ rule Backdoor_MSIL_WebShell_GND_2147893567_0
         $x_1_2 = "asnuylbgaubb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -199,6 +206,7 @@ rule Backdoor_MSIL_WebShell_AH_2147893654_0
         $x_1_8 = "File time clone success!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +229,7 @@ rule Backdoor_MSIL_WebShell_GNE_2147895965_0
         $x_1_2 = "asnuylbgaubb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -244,6 +253,7 @@ rule Backdoor_MSIL_WebShell_GNF_2147896319_0
         $x_1_3 = "scbyzh_aspx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -269,6 +279,7 @@ rule Backdoor_MSIL_WebShell_GNC_2147897193_0
         $x_1_2 = {41 70 70 5f 57 65 62 5f [0-22] 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -291,6 +302,7 @@ rule Backdoor_MSIL_WebShell_GMB_2147897206_0
         $x_1_2 = {41 70 70 5f 57 65 62 5f [0-22] 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +324,7 @@ rule Backdoor_MSIL_WebShell_GMC_2147897297_0
         $x_10_1 = {0d 08 09 6f ?? ?? ?? 0a 26 08 02 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 26 08 07 6f ?? ?? ?? 0a 26 08 6f ?? ?? ?? 0a 26 09 6f ?? ?? ?? 0a 13 04 09 6f ?? ?? ?? 0a 02 6f ?? ?? ?? 0a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -334,6 +347,7 @@ rule Backdoor_MSIL_WebShell_AI_2147899626_0
         $x_1_2 = "8edb23160d1571a0" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -356,6 +370,7 @@ rule Backdoor_MSIL_WebShell_AK_2147900001_0
         $x_2_2 = {0a 07 8e 69 6f ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 72 ?? ?? 00 70 28 ?? 00 00 0a 6f ?? 00 00 0a 6f ?? 00 00 0a 02 6f ?? 00 00 0a 26 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -380,6 +395,7 @@ rule Backdoor_MSIL_WebShell_AL_2147900168_0
         $x_1_4 = "30e724cfc1b7b28c" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -405,6 +421,7 @@ rule Backdoor_MSIL_WebShell_AM_2147900169_0
         $x_1_2 = "8c0d0e836ab62f65" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -426,6 +443,7 @@ rule Backdoor_MSIL_WebShell_GMZ_2147900506_0
         $x_10_1 = {25 19 9a 17 28 ?? ?? ?? 0a 0b 26 28 ?? ?? ?? 0a 26 02 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 74 ?? ?? ?? ?? 7b ?? ?? ?? ?? 25 16 03 a2 25 17 04 a2 25 18 06 a2 25 19 07 a2 26}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -450,6 +468,7 @@ rule Backdoor_MSIL_WebShell_AO_2147911769_0
         $x_1_4 = {41 00 70 00 70 00 5f 00 57 00 65 00 62 00 5f 00 [0-10] 2e 00 64 00 6c 00 6c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -477,6 +496,7 @@ rule Backdoor_MSIL_WebShell_ASQ_2147924498_0
         $x_1_4 = "Process Kill Success !" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -499,6 +519,7 @@ rule Backdoor_MSIL_WebShell_GNS_2147927840_0
         $x_5_2 = {20 c8 85 6a 9f 0a 2b 00 06 2a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -520,6 +541,7 @@ rule Backdoor_MSIL_WebShell_GTB_2147939787_0
         $x_10_1 = {26 11 07 6f ?? 00 00 0a 13 08 11 07 6f ?? 00 00 0a 00 02 6f ?? 00 00 0a 6f ?? 00 00 0a 73 ?? 00 00 0a 08 08 6f ?? 00 00 0a 11 08 16 11 08 8e 69 6f ?? 00 00 0a 6f ?? 00 00 0a 00 00 00 de 05 26 00 00 de 00 00 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -543,6 +565,7 @@ rule Backdoor_MSIL_WebShell_GTQ_2147945169_0
         $x_1_3 = "RijndaelManaged" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Annia_A_2147706191_0
         $x_1_3 = {53 53 6a 03 53 6a 03 53 68 ?? ?? 40 00 c7 45 64 ?? ?? 40 00 c7 45 68 ?? ?? 40 00 c7 45 6c ?? ?? 40 00 89 5d 70 ff 15 bb a0 ae 1d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win32_Annia_A_2147706191_1
         $x_1_4 = "JevgrSvyr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule TrojanDownloader_Win32_Annia_B_2147706977_0
         $x_1_3 = {53 53 6a 03 53 6a 03 53 68 ?? ?? 40 00 c7 45 64 ?? ?? 40 00 c7 45 68 ?? ?? 40 00 c7 45 6c ?? ?? 40 00 89 5d 70 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

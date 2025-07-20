@@ -21,6 +21,7 @@ rule VirTool_WinNT_Cutwail_B_2147596630_0
         $x_5_6 = {8b 45 08 8b 88 a4 00 00 00 8b 80 a0 00 00 00 ba a0 00 00 00 2b ca 2b c2 03 ca 8d 90 a0 00 00 00 89 11 89 88 a4 00 00 00 8b 45 08 05 a0 00 00 00 89 00 8b 45 08 8d 88 a0 00 00 00 89 88 a4 00 00 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
@@ -50,6 +51,7 @@ rule VirTool_WinNT_Cutwail_C_2147596632_0
         $x_1_5 = "ZwQuerySystemInformation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -91,6 +93,7 @@ rule VirTool_WinNT_Cutwail_A_2147596635_0
         $x_10_17 = {55 8b ec 51 fa 0f 20 c0 89 45 fc 25 ff ff fe ff 0f 22 c0 8b 0d ?? ?? 01 00 8b 09 a1 ?? 29 01 00 8b 40 01 c7 04 81 ?? 1f 01 00 8b 0d ?? ?? 01 00 8b 09 a1 ?? ?? 01 00 8b 40 01 c7 04 81 ?? 1f 01 00 8b 0d ?? ?? 01 00 8b 09 a1 ?? ?? 01 00 8b 40 01 c7 04 81 ?? 21 01 00 8b 0d ?? ?? 01 00 8b 09 a1 ?? 29 01 00 8b 40 01 c7 04 81 ?? 23 01 00 8b 0d ?? ?? 01 00 a1 ?? ?? 01 00 8b 40 01 8b 09 c7 04 81 ?? 24 01 00 8b 45 fc 0f 22 c0 fb c9 c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_5_*) and 11 of ($x_3_*))) or
             ((1 of ($x_10_*) and 5 of ($x_5_*) and 10 of ($x_3_*))) or
@@ -115,6 +118,7 @@ rule VirTool_WinNT_Cutwail_E_2147598116_0
         $x_1_1 = {e8 7d ff ff ff 0f b7 c0 83 f8 19 74 28 83 f8 50 74 23 3d e8 03 00 00 72 07 3d b8 0b 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +147,7 @@ rule VirTool_WinNT_Cutwail_F_2147599189_0
         $x_4_9 = {eb ae 8b 85 e8 fc ff ff 50 68 ?? ?? 01 00 8b 4d cc 51 e8 ?? ?? 00 00 83 c4 0c 8d 55 d0 52 ff 15 ?? ?? 01 00 68}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -175,6 +180,7 @@ rule VirTool_WinNT_Cutwail_H_2147601813_0
         $x_1_7 = "KeDelayExecutionThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +203,7 @@ rule VirTool_WinNT_Cutwail_C_2147606366_0
         $x_1_2 = {81 3a 52 43 50 54 75 02 eb 02 eb dd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +229,7 @@ rule VirTool_WinNT_Cutwail_I_2147606479_0
         $x_1_6 = "siberia\\protect\\objfre_wxp_x86\\i386\\protect.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -253,6 +261,7 @@ rule VirTool_WinNT_Cutwail_J_2147606851_0
         $x_1_8 = "\\Device\\Prot2" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -286,6 +295,7 @@ rule VirTool_WinNT_Cutwail_K_2147606859_0
         $x_1_9 = {63 49 60 00 7f 52 62 47 7d 41 73 00 7e 41 7f 4e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -315,6 +325,7 @@ rule VirTool_WinNT_Cutwail_D_2147617864_0
         $x_1_4 = "hNrtk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -344,6 +355,7 @@ rule VirTool_WinNT_Cutwail_E_2147619812_0
         $x_1_6 = "ndis_ver" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -374,6 +386,7 @@ rule VirTool_WinNT_Cutwail_L_2147621443_0
         $x_1_6 = {0f b6 02 3d ff 00 00 00 75 1c 8b 4d f4 0f b6 51 01 83 fa 25 75 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -401,6 +414,7 @@ rule VirTool_WinNT_Cutwail_M_2147626642_0
         $x_1_3 = {8b 49 28 03 c8 51 56 68 ?? ?? 01 00 56 ff 75 ?? 57 ff 15 ?? ?? ?? ?? 56 56 56 57 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -425,6 +439,7 @@ rule VirTool_WinNT_Cutwail_N_2147628513_0
         $x_10_5 = {68 44 4e 57 52 6a 30 6a 00 ff 15 ?? ?? 01 00 8b f0 85 f6 74 26 6a 00 6a 01 57 6a 00 68 ?? ?? 01 00 6a 00 55 56 ff 15 ?? ?? 01 00 6a 00 6a 00 68 45 34 23 12 56 ff 15 ?? ?? 01 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -450,6 +465,7 @@ rule VirTool_WinNT_Cutwail_F_2147641131_0
         $x_1_2 = {c7 80 04 04 00 00 ?? ?? ?? ?? 8b 45 fc 0f 22 c0 fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

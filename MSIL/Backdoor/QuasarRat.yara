@@ -23,6 +23,7 @@ rule Backdoor_MSIL_QuasarRat_GG_2147753051_0
         $x_1_8 = "api.bit.ly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))

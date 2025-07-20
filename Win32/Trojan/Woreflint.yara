@@ -19,6 +19,7 @@ rule Trojan_Win32_Woreflint_AS_2147780096_0
         $x_3_4 = "BBBB2" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_4_*) and 1 of ($x_3_*))) or
             ((1 of ($x_10_*) and 1 of ($x_3_*))) or

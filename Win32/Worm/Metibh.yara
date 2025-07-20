@@ -20,6 +20,7 @@ rule Worm_Win32_Metibh_A_2147610398_0
         $x_1_6 = {47 65 74 50 69 63 00 49 6e 69 74 4e 65 74 00 4e 76 53 74 61 72 74 75 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

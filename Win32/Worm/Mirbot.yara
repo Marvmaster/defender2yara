@@ -25,6 +25,7 @@ rule Worm_Win32_Mirbot_A_2147646759_0
         $x_1_11 = {50 00 49 00 4e 00 47 00 20 00 3a 00 [0-50] 50 00 4f 00 4e 00 47 00 20 00 3a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*))) or
             (all of ($x*))

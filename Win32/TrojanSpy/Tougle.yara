@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Tougle_A_2147721786_0
         $x_1_4 = {72 00 65 00 6d 00 6f 00 76 00 65 00 [0-32] 2f 00 63 00 68 00 6b 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanSpy_Win32_Tougle_C_2147722937_0
         $x_1_4 = {6a 40 68 00 10 00 00 50 6a 00 ff 55 c0 85 c0 8b 5d c8 89 03 0f 84 df 00 00 00 0f b7 4e 06 85 c9 8b 56 54 7e 19 8d 77 14 8b f9 8b 0e 85 c9 74 06 3b ca 73 02 8b d1 83 c6 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanSpy_Win32_Tougle_D_2147723004_0
         $x_1_3 = {c7 02 6b 65 72 6e c7 45 38 65 6c 33 32 c7 45 3c 2e 64 6c 6c ff 55 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule TrojanSpy_Win32_Tougle_G_2147723316_0
         $x_1_5 = {00 00 2f 00 63 00 68 00 6b 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule TrojanSpy_Win32_Tougle_L_2147726083_0
         $x_1_6 = "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -145,6 +150,7 @@ rule TrojanSpy_Win32_Tougle_N_2147729798_0
         $x_1_5 = "schtasks /create /tn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

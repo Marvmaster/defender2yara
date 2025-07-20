@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Dalexis_A_2147688296_0
         $x_1_3 = {83 c4 14 57 68 80 00 00 00 6a 02 57 6a 01 68 00 00 00 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win32_Dalexis_A_2147688296_1
         $x_1_4 = {6a 01 68 00 00 00 40 8d 85 ?? ?? ?? ?? 50 89 5d ?? ff 15 ?? ?? ?? ?? 89 45 ?? 83 f8 ff 75 0a 68 ea 03 00 00 e9 ?? ?? ?? ?? 53}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -65,6 +67,7 @@ rule TrojanDownloader_Win32_Dalexis_C_2147690633_0
         $x_1_3 = "%stemp_cab_%d.cab" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -139,6 +142,7 @@ rule TrojanDownloader_Win32_Dalexis_D_2147691540_0
         $x_1_5 = "mp3avimpgmdvflv" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -192,6 +196,7 @@ rule TrojanDownloader_Win32_Dalexis_F_2147694111_0
         $x_1_3 = "%08x.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -215,6 +220,7 @@ rule TrojanDownloader_Win32_Dalexis_F_2147694111_1
         $x_1_4 = {f8 83 d0 04 83 c3 f7 f7 d3 29 fb 43 29 ff 4f 21 df c1 c7 03 c1 c7 05 89 1e f8 83 d6 04 8d 52 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

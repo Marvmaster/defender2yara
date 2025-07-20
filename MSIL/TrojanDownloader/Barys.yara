@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Barys_CXJK_2147849725_0
         $x_1_1 = {68 00 74 00 74 00 70 00 73 00 3a 00 2f 00 2f 00 6f 00 6e 00 65 00 64 00 72 00 69 00 76 00 65 00 2e 00 6c 00 69 00 76 00 65 00 2e 00 63 00 6f 00 6d 00 2f 00 64 00 6f 00 77 00 6e 00 6c 00 6f 00 61 00 64 00 3f 00 63 00 69 00 64 00 3d 00 38 00 39 00 37 00 39 00 39 00 31 00 31 00 42 00 38 00 30 00 41 00 38 00 44 00 43 00 44 00 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_MSIL_Barys_SK_2147891706_0
         $x_2_1 = {73 04 00 00 0a 0b 28 ?? ?? ?? 0a 03 6f ?? ?? ?? 0a 0c 07 08 16 08 8e 69 6f ?? ?? ?? 0a 0d 73 08 00 00 0a 13 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule TrojanDownloader_MSIL_Barys_ARA_2147893339_0
         $x_2_4 = "del /s /f /q C:\\Windows\\Prefetch" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

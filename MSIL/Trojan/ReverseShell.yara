@@ -17,6 +17,7 @@ rule Trojan_MSIL_ReverseShell_ARL_2147847781_0
         $x_1_2 = "RevShellAI" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_ReverseShell_ZJV_2147941274_0
         $x_10_1 = {8e 69 0a 03 8d ?? 00 00 01 0b 16 0c 2b 17 00 07 08 02 08 91 7e ?? 00 00 04 08 06 5d 91 61 d2 9c 00 08 17 58 0c 08 03 fe 04 13 04 11 04 2d df 07 0d 2b 00 09 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

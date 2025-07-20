@@ -22,6 +22,7 @@ rule Trojan_Win32_Sparrot_A_2147817177_0
         $x_1_7 = "MyAgent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

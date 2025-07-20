@@ -16,6 +16,7 @@ rule Trojan_Win64_Fauppod_ML_2147888888_0
         $x_10_1 = {48 8b d0 48 2b d8 44 8b cf 0f 1f 00 41 0f b6 c8 32 0c 13 88 0a 41 80 c0 05 48 8d 52 01 49 83 e9 01 75}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_Fauppod_MN_2147892929_0
         $x_2_1 = {55 48 89 e5 48 83 ec 20 48 8b 05 86 8d 00 00 ff d0 48 8b 05 9d 8d 00 00 ff d0 ba 00 00 00 00 48 89 c1 48 8b 05 4c 8e 00 00 ff d0 48 8d 05 23 2c 00 00 48 89 c1 e8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

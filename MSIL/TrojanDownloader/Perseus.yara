@@ -21,6 +21,7 @@ rule TrojanDownloader_MSIL_Perseus_GG_2147745229_0
         $x_1_6 = "Password incorrect!!!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -55,6 +56,7 @@ rule TrojanDownloader_MSIL_Perseus_MA_2147812735_0
         $x_1_10 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

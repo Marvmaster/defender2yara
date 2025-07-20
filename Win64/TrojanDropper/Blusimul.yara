@@ -19,6 +19,7 @@ rule TrojanDropper_Win64_Blusimul_ARA_2147889127_0
         $x_2_4 = "IsDumpComplete" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanDropper_Win64_Blusimul_SGA_2147891291_0
         $x_1_8 = "BluescreenSimulator.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

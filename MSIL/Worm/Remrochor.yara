@@ -17,6 +17,7 @@ rule Worm_MSIL_Remrochor_A_2147658319_0
         $x_1_3 = {53 70 72 65 61 64 00 47 65 74 44 65 63 72 79 70 74 65 64 44 61 74 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

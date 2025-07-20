@@ -22,6 +22,7 @@ rule DoS_Linux_WprBightre_D_2147911328_0
         $x_1_7 = "[+] CPU cores: %d, Threads: %d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (6 of ($x*))
 }
 

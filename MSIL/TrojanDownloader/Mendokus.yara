@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Mendokus_A_2147722010_0
         $x_1_2 = {fe 0e 02 00 fe 0d 02 00 4a 0b 38 ?? ?? ff ff 02 02 72 ?? 00 00 70 fe 0c 03 00 28 17 00 00 06 28 09 00 00 06 72 ?? 00 00 70 fe 0c 03 00 28 17 00 00 06 28 1a 00 00 0a 28 08 00 00 06 39 ?? ?? 00 00 20 ?? 00 00 00 fe 0e 02 00 fe 0d 02 00 4a 0b 38 ?? ?? ff ff 38 ?? ?? 00 00 20 ?? 00 00 00 fe 0e 02 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

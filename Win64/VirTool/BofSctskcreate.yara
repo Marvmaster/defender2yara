@@ -20,6 +20,7 @@ rule VirTool_Win64_BofSctskcreate_A_2147901300_0
         $x_1_6 = "createTask hostname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

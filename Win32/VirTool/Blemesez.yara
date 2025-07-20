@@ -18,6 +18,7 @@ rule VirTool_Win32_Blemesez_A_2147902287_0
         $x_1_3 = {89 44 24 04 c7 04 24 56 d2 40 00 ?? ?? ?? ?? ?? 85 c0 ?? ?? c7 44 24 14 00 00 00 00 c7 44 24 10 00 00 00 00 c7 44 24 0c 00 00 00 00 c7 44 24 08 f3 15 40 00 c7 44 24 04 00 00 00 00 c7 04 24 00 00 00 00 ?? ?? ?? ?? ?? 83 ec 18 89 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

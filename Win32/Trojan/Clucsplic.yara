@@ -17,6 +17,7 @@ rule Trojan_Win32_Clucsplic_A_2147599149_0
         $x_5_3 = {8d 45 e4 50 8d 4d fc 51 6a 00 6a 00 6a 0c 8d 55 d8 52 68 00 e0 22 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Rumish_A_2147649849_0
         $x_1_4 = {2b c6 05 c8 00 00 00 3d e8 03 00 00 7d 0b 68 c8 00 00 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanSpy_Win32_Rumish_B_2147649851_0
         $x_1_2 = {26 62 72 77 73 76 3d 00 26 62 72 77 73 3d 00 00 26 69 65 3d 38 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanSpy_Win32_Rumish_C_2147680072_0
         $x_1_2 = "explWS\\runexpl\\Release\\psthost.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

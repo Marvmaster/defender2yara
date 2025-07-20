@@ -17,6 +17,7 @@ rule Trojan_Win32_Kinob_A_2147682479_0
         $x_1_3 = {4f 69 6e 6b 4f 69 6e 6b 2e 64 6c 6c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

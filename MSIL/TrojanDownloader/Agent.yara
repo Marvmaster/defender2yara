@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Agent_A_2147576562_0
         $x_1_4 = "explorer http://messenger.msn.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_MSIL_Agent_K_2147651077_0
         $x_1_5 = "surfguart" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule TrojanDownloader_MSIL_Agent_Q_2147654872_0
         $x_1_4 = "KHTML, like Gecko" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule TrojanDownloader_MSIL_Agent_AA_2147745047_0
         $x_1_6 = "aHR0cHM6Ly9wYXN0ZWJpbi5jb20v" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule TrojanDownloader_MSIL_Agent_ME_2147799595_0
         $x_1_12 = "GetTypes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +154,7 @@ rule TrojanDownloader_MSIL_Agent_JPG_2147806145_0
         $x_1_7 = {00 44 65 62 75 67 67 69 6e 67 4d 6f 64 65 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +187,7 @@ rule TrojanDownloader_MSIL_Agent_MH_2147806286_0
         $x_1_12 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -213,6 +220,7 @@ rule TrojanDownloader_MSIL_Agent_MI_2147806287_0
         $x_1_12 = "GOLD Fixed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -242,6 +250,7 @@ rule TrojanDownloader_MSIL_Agent_MA_2147808548_0
         $x_1_9 = "does not work on your computer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -276,6 +285,7 @@ rule TrojanDownloader_MSIL_Agent_MC_2147808549_0
         $x_1_14 = "WriteLine" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (13 of ($x*))
 }
 
@@ -302,6 +312,7 @@ rule TrojanDownloader_MSIL_Agent_EUA_2147819923_0
         $x_1_6 = "$f9195372-f40f-458a-8738-9a7097870157" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -327,6 +338,7 @@ rule TrojanDownloader_MSIL_Agent_SPQ_2147838222_0
         $x_1_5 = "WindowsServices\\WindowsServices.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

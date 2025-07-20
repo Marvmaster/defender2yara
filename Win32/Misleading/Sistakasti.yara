@@ -18,6 +18,7 @@ rule Misleading_Win32_Sistakasti_240758_0
         $x_1_4 = {5c 53 79 73 74 65 6d 20 43 6c 65 61 6e 65 72 20 [0-3] 5c 55 74 69 6c 69 74 69 65 73 5c 50 6f 69 6e 74 73 74 6f 6e 65 20 44 69 73 6b 20 44 65 66 72 61 67 2e 6c 6e 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Misleading_Win32_Sistakasti_240758_1
         $x_1_4 = "Recommendations.Frame.FixProgress" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

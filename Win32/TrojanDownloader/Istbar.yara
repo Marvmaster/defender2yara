@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_Istbar_IV_2147803944_0
         $x_1_10 = "account_id" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule TrojanDownloader_Win32_Istbar_M_2147804021_0
         $x_1_4 = "exe_start" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

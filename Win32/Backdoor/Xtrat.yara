@@ -20,6 +20,7 @@ rule Backdoor_Win32_Xtrat_A_2147645657_0
         $x_1_6 = "UnitInjectProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_Win32_Xtrat_A_2147645657_1
         $x_1_4 = "TServerKeylogger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Backdoor_Win32_Xtrat_A_2147645657_2
         $x_2_5 = "ServerKeyloggerU" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -96,6 +99,7 @@ rule Backdoor_Win32_Xtrat_A_2147645657_3
         $x_2_6 = "TServerKeylogger" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -127,6 +131,7 @@ rule Backdoor_Win32_Xtrat_A_2147645657_4
         $x_1_8 = "UnitInjectProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +157,7 @@ rule Backdoor_Win32_Xtrat_B_2147652515_0
         $x_1_6 = "NOINJECT%" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -174,6 +180,7 @@ rule Backdoor_Win32_Xtrat_C_2147654732_0
         $x_1_3 = {53 6a 00 6a 00 6a 04 6a 00 6a 00 6a 00 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +204,7 @@ rule Backdoor_Win32_Xtrat_D_2147656725_0
         $x_1_4 = {8b 12 83 ea 1e a1 ?? ?? ?? ?? 8b 00 e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +233,7 @@ rule Backdoor_Win32_Xtrat_G_2147662540_0
         $x_1_9 = "server.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -249,6 +258,7 @@ rule Backdoor_Win32_Xtrat_H_2147665364_0
         $x_1_5 = "SOFTWARE\\FakeMessage" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -274,6 +284,7 @@ rule Backdoor_Win32_Xtrat_L_2147680028_0
         $x_1_6 = "NOINJECT%" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -303,6 +314,7 @@ rule Backdoor_Win32_Xtrat_2147687552_0
         $x_1_10 = "delay.ygto.com/trandocs/mm/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -328,6 +340,7 @@ rule Backdoor_Win32_Xtrat_P_2147706837_0
         $x_1_3 = "VB5 Setup Toolkit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

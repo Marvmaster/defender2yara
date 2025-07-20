@@ -18,6 +18,7 @@ rule PWS_Win32_Stafum_A_2147687991_0
         $x_1_4 = "SELECT * FROM cookies WHERE host_key=\"www.facebook.com\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win64_Etset_GVA_2147941527_0
         $x_1_1 = {4d 89 c2 66 2d c1 60 0f b6 c0 31 4d e4 29 55 e4 48 33 45 d2 48 ff 04 24 48 83 3c 24 07 7e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

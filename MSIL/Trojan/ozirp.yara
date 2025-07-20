@@ -16,6 +16,7 @@ rule Trojan_MSIL_ozirp_RDF_2147893867_0
         $x_2_1 = {6f 2f 00 00 0a 6f 33 00 00 0a 25 17 6f 34 00 00 0a 25 02}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

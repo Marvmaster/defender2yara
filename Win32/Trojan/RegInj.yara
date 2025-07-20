@@ -18,6 +18,7 @@ rule Trojan_Win32_RegInj_J_2147752647_0
         $x_1_3 = "IaiyOxwJOTXzlrZDMTFe0EvkJx0Sc7QVI68qxnvoaiyOxwJOTXzlrZDMTFe0EvkJx0Sc7QVI68qxke" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

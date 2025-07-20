@@ -17,6 +17,7 @@ rule Trojan_Win32_Lopock_A_2147681130_0
         $x_1_3 = {6a 04 8d 45 f4 50 6a 06 57 c7 45 f4 c0 27 09 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

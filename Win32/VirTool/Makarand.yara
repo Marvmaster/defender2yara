@@ -22,6 +22,7 @@ rule VirTool_Win32_Makarand_A_2147945320_0
         $x_1_8 = "RXR3RXZlbnRXcml0ZQ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

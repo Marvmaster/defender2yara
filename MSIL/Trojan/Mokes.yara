@@ -24,6 +24,7 @@ rule Trojan_MSIL_Mokes_B_2147783652_0
         $x_1_9 = "RunOnStartup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_MSIL_Mokes_AMO_2147844497_0
         $x_1_2 = "IntrastatPiese" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

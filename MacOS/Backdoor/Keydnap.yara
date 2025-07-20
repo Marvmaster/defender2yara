@@ -18,6 +18,7 @@ rule Backdoor_MacOS_Keydnap_A_2147760211_0
         $x_2_3 = {60 6c 63 63 20 2c 2e 2f 33 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (2 of ($x*))
 }
 

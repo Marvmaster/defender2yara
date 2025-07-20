@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Snilis_A_2147626637_0
         $x_1_2 = {2a 31 68 ff 32 20 00 60 ff 5c ff 58 ff 54 ff 50 ff 4c ff 48 ff 44 ff 40 ff 3c ff 38 ff 34 ff 30 ff 2c ff 28 ff 24 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_Win32_Snilis_B_2147626960_0
         $x_1_2 = "bucks" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule TrojanDownloader_Win32_Snilis_C_2147627439_0
         $x_1_2 = {c7 45 fc 05 00 00 00 33 c0 66 83 3d ?? ?? ?? ?? 02 0f 95 c0 f7 d8 66 89 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

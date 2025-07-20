@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_Dowritn_A_2147601065_0
         $x_1_10 = {33 c0 55 68 ?? ?? 44 00 64 ff 30 64 89 20 6a 00 8d 45 e0 b9 ?? ?? 44 00 8b 15 98 28 44 00 e8 ?? ?? fc ff 8b 45 e0 e8 ?? ?? fc ff 50 e8 ?? ?? fc ff 6a 0a e8 ?? ?? fc ff 33 c0 5a 59 59 64 89 10 eb 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

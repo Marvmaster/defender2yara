@@ -18,6 +18,7 @@ rule Trojan_Win32_Porsmi_2147605704_0
         $x_1_4 = {ff ff ff ff 07 00 00 00 74 63 70 69 70 2e 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Porsmi_A_2147606678_0
         $x_1_4 = {74 63 70 69 70 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

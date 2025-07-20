@@ -18,6 +18,7 @@ rule Trojan_Win32_RZStreet_2147811719_0
         $x_5_2 = {10 ff 75 f8 ff 35 ?? ?? ?? ?? c3 6a ?? ff 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule Trojan_MSIL_RedLineSteal_NC_2147925581_0
         $x_1_10 = "set_encrypted_key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

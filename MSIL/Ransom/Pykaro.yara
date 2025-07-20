@@ -16,6 +16,7 @@ rule Ransom_MSIL_Pykaro_A_2147722448_0
         $x_1_2 = {6b 61 72 6f 2e 65 78 65 00 6b 61 72 6f 00 3c 4d 6f 64 75 6c 65 3e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

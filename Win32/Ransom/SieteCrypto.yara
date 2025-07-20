@@ -22,6 +22,7 @@ rule Ransom_Win32_SieteCrypto_A_2147711945_0
         $x_1_8 = {37 00 5c 00 74 00 6d 00 70 00 2e 00 62 00 6d 00 70 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

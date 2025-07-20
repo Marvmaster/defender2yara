@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Raemnk_A_2147658502_0
         $x_10_3 = {6c 54 ff 2a 23 4c ff 08 08 00 06 ?? 00 24 ?? 00 0d 44 00 ?? 00 6b 4a ff f4 ff c6 32 08 00 58 ff 50 ff 54 ff 4c ff 35 5c ff 1c af 00 00 53 3a 6c ff ?? 00 4e 5c ff}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_Raemnk_A_2147658502_1
         $x_1_3 = {66 8b c8 66 2b 4d ?? 0f 80 ?? ?? 00 00 66 03 ce 0f 80 ?? ?? 00 00 0f bf c9 3b cb 7d ?? b9 ff 00 00 00 6a 1e 66 8b d1 59 66 2b 55 00 0f 80 ?? ?? 00 00 66 03 d6 0f 80 ?? ?? 00 00 66 2b c1 0f 80 ?? ?? 00 00 66 03 c6 0f 80 ?? ?? 00 00 66 03 d0 0f 80 ?? ?? 00 00 0f bf ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

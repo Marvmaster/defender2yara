@@ -17,6 +17,7 @@ rule Trojan_Win32_Vbobfus_RJ_2147849888_0
         $x_1_2 = "wlxkbybq.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

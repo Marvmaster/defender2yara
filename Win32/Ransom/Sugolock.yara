@@ -23,6 +23,7 @@ rule Ransom_Win32_Sugolock_2147729987_0
         $x_30_9 = {54 68 65 4a 75 73 74 47 75 73 [0-24] 5c 47 55 53 63 72 79 70 74 6f 6c 6f 63 6b 65 72 20 2d 20 75 70 64 61 74 65 5c 52 65 6c 65 61 73 65 5c 6c 6f 63 6b 65 72 2e 70 64 62}  //weight: 30, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_30_*) and 4 of ($x_2_*))) or
             (all of ($x*))

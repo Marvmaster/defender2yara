@@ -16,6 +16,7 @@ rule Trojan_Win32_ParallaxRAT_A_2147902373_0
         $x_2_1 = {fe c3 f7 db 81 c3 ?? ?? ?? ?? f7 db f7 db f6 d3 f6 d3 fe c3 33 ff ff cb 29 9d ?? ?? ff ff c0 e3 ?? 66 81 ?? ?? ?? c0 eb ?? f7 db f6 d3 81 f3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

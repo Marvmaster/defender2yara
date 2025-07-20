@@ -17,6 +17,7 @@ rule Backdoor_Win32_Xifos_A_2147678381_0
         $x_1_3 = {3e 20 6e 75 6c 00 00 2f 63 20 64 65 6c 20 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_Xifos_C_2147679419_0
         $x_1_4 = "johansson.scarlet@hotmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

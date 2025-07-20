@@ -30,6 +30,7 @@ rule PWS_Win32_Hoardy_2147744303_0
         $x_1_15 = "p3oahin/worldcat.aspx" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

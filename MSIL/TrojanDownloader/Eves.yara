@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Eves_A_2147697366_0
         $x_1_2 = "QicowIGONydFEv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_MSIL_Eves_A_2147697366_1
         $x_1_2 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 31 00 39 00 38 00 2e 00 35 00 30 00 2e 00 31 00 35 00 39 00 2e 00 31 00 35 00 35 00 2f 00 [0-6] 2f 00 [0-5] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

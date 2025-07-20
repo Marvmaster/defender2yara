@@ -17,6 +17,7 @@ rule Trojan_MSIL_Phemedrone_AO_2147904028_0
         $x_2_2 = {fe 0c 00 00 fe 0c 02 00 91 fe 0e 03 00 7e ?? 00 00 04 fe 0c 02 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Phemedrone_APH_2147914788_0
         $x_1_2 = "Debug\\Phemedrone-Stealer.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_MSIL_Phemedrone_APH_2147914788_1
         $x_1_3 = "Phemedrone-Stealer.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_MSIL_Phemedrone_APD_2147921663_0
         $x_2_1 = {fe 0c 02 00 7e 44 01 00 04 6f ?? 00 00 0a 5d 6f ?? 01 00 0a fe 0e 03 00 fe 0c 03 00 61 d1 fe 0e 04 00 fe 0c 01 00 fe 0c 04 00 6f ?? 01 00 0a 26 fe 0c 02 00 20 01 00 00 00 58 fe 0e 02 00 fe 0c 02 00 fe 0c 00 00 8e 69}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule Trojan_MSIL_Phemedrone_APM_2147930867_0
         $x_1_1 = {5d 13 07 11 08 08 11 07 91 58 20 00 01 00 00 5d 13 08 08 11 07 91 0d 08 11 07 08 11 08 91 9c 08 11 08 09 9c 08 08 11 07 91 08 11 08 91 58 20 00 01 00 00 5d 91 13 0a 07 11 09 02 11 09 91 11 0a 61 d2 9c 11 09 17 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

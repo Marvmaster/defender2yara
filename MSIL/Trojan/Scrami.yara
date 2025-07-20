@@ -18,6 +18,7 @@ rule Trojan_MSIL_Scrami_GPA_2147902462_0
         $x_5_3 = {63 00 33 00 52 00 31 00 5a 00 47 00 56 00 75 00 64 00 43 00 31 00 32 00 62 00 32 00 6c 00 6a 00 5a 00 53 00 35 00 6a 00 62 00 32 00 30 00 76 00 59 00 58 00 42 00 70 00 4c 00 32 00 64 00 6c 00 64 00 46 00 39 00 77 00 63 00 79 00 49 00 70}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
             ((2 of ($x_5_*))) or
@@ -43,6 +44,7 @@ rule Trojan_MSIL_Scrami_GZZ_2147942095_0
         $x_10_1 = {11 12 1e 1f 40 12 15 28 ?? 00 00 06 26 1e 8d 47 00 00 01 16 11 12 28 ?? 00 00 0a 1e 28 ?? 00 00 0a 11 12 1f 28 58 13 12 11 1f 17 58 13 1f 11 1f 11 13 32 cc 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

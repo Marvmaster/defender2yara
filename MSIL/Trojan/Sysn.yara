@@ -17,6 +17,7 @@ rule Trojan_MSIL_Sysn_NS_2147896737_0
         $x_1_2 = "Authennticate @2023" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

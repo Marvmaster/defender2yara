@@ -19,6 +19,7 @@ rule Trojan_Win64_AgentWinDis_PA_2147942249_0
         $x_1_4 = "shutdown /s /f /t 0 /c \"Windows Update" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

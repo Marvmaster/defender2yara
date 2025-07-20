@@ -19,6 +19,7 @@ rule Trojan_MSIL_DustySky_A_2147721029_0
         $x_1_4 = "SELECT Caption FROM Win32_OperatingSystem" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

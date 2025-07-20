@@ -22,6 +22,7 @@ rule Trojan_Win32_MoonRover_DA_2147819993_0
         $x_1_7 = "O Mamma Mia..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

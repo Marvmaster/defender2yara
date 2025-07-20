@@ -24,6 +24,7 @@ rule Trojan_Win32_C2Lop_C_109602_0
         $x_100_10 = {0f cd 89 84 24 ?? ?? ?? ff 8b 84 24 ?? ?? ?? ?? 89 84 24 ?? ?? ff ff 8b bc 24}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -54,6 +55,7 @@ rule Trojan_Win32_C2Lop_A_118716_0
         $x_1_6 = {43 3a 5c 50 72 6f 67 72 61 6d 20 46 69 6c 65 73 5c 49 6e 74 65 72 6e 65 74 20 45 78 70 6c 6f 72 65 72 5c 69 65 78 70 6c 6f 72 65 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -78,6 +80,7 @@ rule Trojan_Win32_C2Lop_B_122148_0
         $x_1_1 = {51 55 57 8b 1f 8b 4f 04 ba b9 79 38 9e 8b c2 c1 e0 04 bf 10 00 00 00 8b eb c1 e5 04 2b cd 8b 6e 08 33 eb 2b cd 8b eb c1 ed 05 33 e8 2b cd 2b 4e 0c 8b e9 c1 e5 04 2b dd 8b 2e 33 e9 2b dd 8b e9 c1 ed 05 33 e8 2b dd 2b 5e 04 2b c2 4f 75 c8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +108,7 @@ rule Trojan_Win32_C2Lop_B_122148_1
         $x_1_8 = "http://www.lop.com/search/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -128,6 +132,7 @@ rule Trojan_Win32_C2Lop_B_122148_2
         $x_1_1 = {51 55 57 8b 1f 8b 4f 04 ba b9 79 (37|39) 9e 8b c2 c1 e0 04 bf 10 00 00 00 8b eb c1 e5 04 2b cd 8b 6e 08 33 eb 2b cd 8b eb c1 ed 05 33 e8 2b cd 2b 4e 0c 8b e9 c1 e5 04 2b dd 8b 2e 33 e9 2b dd 8b e9 c1 ed 05 33 e8 2b dd 2b 5e 04 2b c2 4f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +162,7 @@ rule Trojan_Win32_C2Lop_B_122148_3
         $x_1_10 = "Breast Enhancement" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -187,6 +193,7 @@ rule Trojan_Win32_C2Lop_A_124815_0
         $x_1_8 = "lopsearch.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -213,6 +220,7 @@ rule Trojan_Win32_C2Lop_D_129089_0
         $x_10_2 = {c2 1c 00 6a 05 59 eb 03 6a 57 59 e8 58 fd ff ff eb ec 52 74 6c 4e 74 53 74 61 74 75 73 54 6f 44 6f 73 45 72 72 6f 72 00 4e 74 41 6c 6c 6f 63 61 74 65 56 69 72 74 75 61 6c 4d 65 6d 6f 72 79 00 4e 74 46 72 65 65 56 69 72 74 75 61 6c 4d 65 6d 6f 72 79 00 4e 74 4f 70 65 6e 54 68 72 65 61 64 00 52 65 61 64 50 72 6f 63 65 73 73 4d 65 6d 6f 72 79 00 53 65 74 54 68 72 65 61 64 41 66 66 69 6e 69 74 79 4d 61 73 6b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -237,6 +245,7 @@ rule Trojan_Win32_C2Lop_J_140905_0
         $x_1_4 = {6a 00 ff 15 02 00 ff 07 01 01 01 01 01 01 01 d0 d1 d2 d3 d5 d6 d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -261,6 +270,7 @@ rule Trojan_Win32_C2Lop_O_141384_0
         $x_1_5 = "Buy Viagra" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -287,6 +297,7 @@ rule Trojan_Win32_C2Lop_Q_143120_0
         $x_1_4 = "NTDLL.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -310,6 +321,7 @@ rule Trojan_Win32_C2Lop_R_143860_0
         $x_1_4 = {3a 5c 75 6e 73 69 7a 7a 6c 65 2e 62 61 74 00 66 6f 6c 64 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -332,6 +344,7 @@ rule Trojan_Win32_C2Lop_AL_304850_0
         $x_10_2 = {8b 45 e8 8b 4d f0 03 c3 d3 eb 89 45 cc}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

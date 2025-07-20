@@ -17,6 +17,7 @@ rule PWS_Win32_Ceekat_A_2147599264_0
         $x_1_2 = {6a 02 6a 00 6a fc (53|56) e8 ?? ?? ?? ?? 6a 00 8d 45 ?? 50 6a 04 8d 45 ?? 50 (53|56) e8 ?? ?? ?? ?? 81 75 ?? ?? ?? ?? ?? 6a 00 (53|56) e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule PWS_Win32_Ceekat_B_2147605001_0
         $x_1_8 = "Explorer.EXE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

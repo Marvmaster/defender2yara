@@ -18,6 +18,7 @@ rule VirTool_Win64_Remetecez_A_2147901809_0
         $x_1_3 = {41 b9 10 00 00 00 4c 8b c6 48 89 44 24 20 49 8b d4 48 8b cf ?? ?? ?? ?? ?? ?? 85 c0 ?? ?? 48 83 bd 20 04 00 00 10 ?? ?? 48 8b 06 41 bf 01 00 00 00 48 89 05 e6 3b 00 00 48 8b ?? ?? ?? ?? ?? 48 89 05 fe 3b 00 00 4c 89 25 c7 3b 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule VirTool_Win64_Remetecez_B_2147901811_0
         $x_1_2 = {48 bb bb bb bb bb bb bb bb bb 48 b9 cc cc cc cc cc cc cc cc 48 89 0b 48 83 ec 50 48 89 d9 48 c7 c2 00 04 00 00 41 b8 02 00 00 00 ?? ?? ?? ?? ?? 48 b8 bb bb bb bb bb bb bb bb ?? ?? ?? ?? ?? ?? ?? 48 83 c4 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

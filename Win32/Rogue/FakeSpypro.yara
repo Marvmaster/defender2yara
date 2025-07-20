@@ -15,6 +15,7 @@ rule Rogue_Win32_FakeSpypro_136370_0
         $x_1_1 = {68 4e 5f 87 2a c7 04 24 94 fe 63 50 48 f5 68 73 17 f5 00 68 47 ce f2 d1 83 f8 00 60 66 89 7c 24 04 68 35 d3 81 53 68 a6 2d d7 02 8d 64 24 34 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Rogue_Win32_FakeSpypro_136370_1
         $x_1_7 = "_getUpdate_verSigs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -69,6 +71,7 @@ rule Rogue_Win32_FakeSpypro_136370_2
         $x_1_4 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))
@@ -99,6 +102,7 @@ rule Rogue_Win32_FakeSpypro_136370_3
         $x_1_8 = "http://%s/block.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -131,6 +135,7 @@ rule Rogue_Win32_FakeSpypro_136370_4
         $x_1_9 = "antivirnet.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule Rogue_Win32_FakeSpypro_136370_5
         $x_1_1 = {96 58 b9 e7 bf 35 02 01 ca 81 e9 03 bb 35 02 81 c6 21 bd 38 00 81 c6 df ea 0d 00 89 f2 fc 89 f7 52 e9 77 ff ff ff 2d ?? ?? ?? ?? 41 49 e8 72 ff ff ff 83 e9 0a 83 c1 09 85 c9 75 e5 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +179,7 @@ rule Rogue_Win32_FakeSpypro_136370_6
         $x_1_3 = {70 72 6f 78 79 6c 73 70 2e 64 6c 6c 00 49 6e 73 74 61 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -197,6 +204,7 @@ rule Rogue_Win32_FakeSpypro_136370_7
         $x_1_5 = {37 61 1d 02 a4 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -225,6 +233,7 @@ rule Rogue_Win32_FakeSpypro_136370_8
         $x_1_5 = {37 61 1d 02 a4 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -249,6 +258,7 @@ rule Rogue_Win32_FakeSpypro_136370_9
         $x_1_1 = {fe ff ce fe 8d 44 24 0c 50 ff 74 08 07 e8 18 02 55 50 58 30 00 00 00 00 00 (a0|b0) 02 00 00 10 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00 e0 55 50 58 31 00 00 00 00 00 30 03 00 00 (b0|c0) 02 00 00 ?? 03 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -269,6 +279,7 @@ rule Rogue_Win32_FakeSpypro_136370_10
         $x_1_1 = {fe ff ce fe 8d 44 24 0c 50 ff 74 08 07 e8 20 02 55 50 58 30 00 00 00 00 00 (90 90|a0) 02 00 00 10 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00 e0 55 50 58 31 00 00 00 00 00 30 03 00 00 (a0|b0) 02 00 00 ?? 03 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -289,6 +300,7 @@ rule Rogue_Win32_FakeSpypro_136370_11
         $x_1_1 = {fe ff ce fe 8d 44 24 0c 50 ff 74 08 07 e8 08 02 55 50 58 30 00 00 00 00 00 (90|a0|b0) 02 00 00 10 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00 e0 55 50 58 31 00 00 00 00 00 (30|b0|c0) 03 00 00 (a0|b0|c0) 02 00 00 ?? 03 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -309,6 +321,7 @@ rule Rogue_Win32_FakeSpypro_136370_12
         $x_1_1 = {fe ff ce fe 8d 44 24 0c 50 ff 74 08 07 e8 10 02 55 50 58 30 00 00 00 00 00 (90|a0|b0) 02 00 00 10 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00 e0 55 50 58 31 00 00 00 00 00 (30|b0|c0) 03 00 00 (a0|b0|c0) 02 00 00 ?? 03 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -333,6 +346,7 @@ rule Rogue_Win32_FakeSpypro_136370_13
         $x_2_5 = "%s/purchase?r=%s" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -360,6 +374,7 @@ rule Rogue_Win32_FakeSpypro_136370_14
         $x_2_4 = "Software\\AvScan" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -387,6 +402,7 @@ rule Rogue_Win32_FakeSpypro_136370_15
         $x_2_4 = "Software\\AvScan" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -415,6 +431,7 @@ rule Rogue_Win32_FakeSpypro_136370_16
         $x_1_5 = {73 00 79 00 73 00 67 00 75 00 61 00 72 00 64 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -444,6 +461,7 @@ rule Rogue_Win32_FakeSpypro_136370_17
         $x_1_6 = {44 6f 77 6e 6c 6f 61 64 20 64 61 74 61 62 61 73 65 00 64 6f 77 6e 6c 6f 61 64 73 2f 63 6f 6d 6d 6f 6e 2f 73 63 72 69 70 74 2e 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -464,6 +482,7 @@ rule Rogue_Win32_FakeSpypro_136370_18
         $x_1_1 = {33 2e 30 34 00 55 50 58 21 0d 09 08 08 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 06 00 26 0a 00 e3 01 2e 74 65 78 74 00 ?? 00 (48|5a|53|51) (21|15) 02 00 00 10 00 00 (48|5a|53|51) (21|15) 02 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 60 2e 72 64 61 74 61 00 00 (4c|14|54) 01 00 00 00 (40|30) 02 00 (4c|14|54) 01 00 00 00 (40|30) 02 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 40 2e 64 61 74 61 00 ?? 00 (a8|20) (1e|15) 02 00 00 (50|40) 02 00 (a8|20) (1e|15) 02 00 00 (50|40) 02 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -491,6 +510,7 @@ rule Rogue_Win32_FakeSpypro_136370_19
         $x_1_8 = {74 38 3d 48 45 41 44 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -524,6 +544,7 @@ rule Rogue_Win32_FakeSpypro_136370_20
         $x_2_9 = "'activButton'" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -554,6 +575,7 @@ rule Rogue_Win32_FakeSpypro_136370_21
         $x_1_7 = {61 00 72 00 63 00 68 00 2e 00 00 00 3f 00 71 00 3d 00 00 00 73 00 70 00 79 00 77 00 61 00 72 00 65 00 00 00 70 00 72 00 6f 00 74 00 65 00 63}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -598,6 +620,7 @@ rule Rogue_Win32_FakeSpypro_136370_22
         $x_1_25 = {5c 72 75 6e 6f 6e 63 65 5c 76 69 72 75 73 74 72 69 67 67 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -648,6 +671,7 @@ rule Rogue_Win32_FakeSpypro_136370_23
         $x_1_26 = "vinfact.gif" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

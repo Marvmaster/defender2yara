@@ -23,6 +23,7 @@ rule Trojan_Win32_keyLogger_DJ_2147845372_0
         $x_1_8 = "github.com/kbinani/screenshot.GetDisplayBounds" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

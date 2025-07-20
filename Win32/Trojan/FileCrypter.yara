@@ -16,6 +16,7 @@ rule Trojan_Win32_FileCrypter_BK_2147763433_0
         $x_1_1 = {c1 e0 04 89 01 c3 cc cc cc cc cc cc cc cc cc cc 31 08 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

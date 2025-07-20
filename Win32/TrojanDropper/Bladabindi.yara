@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Bladabindi_BI_2147725116_0
         $x_1_2 = "Server.sfx.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

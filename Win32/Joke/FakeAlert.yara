@@ -21,6 +21,7 @@ rule Joke_Win32_FakeAlert_A_2147611518_0
         $x_1_6 = {00 75 00 79 00 20 00 41 00 20 00 4d 00 61 00 63 00 21 00 00 23 45 00 76 00 69 00 6c 00 47 00 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

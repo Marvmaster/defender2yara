@@ -17,6 +17,7 @@ rule Trojan_Win32_Eikaf_A_2147730800_0
         $x_10_3 = {46 69 6c 65 45 78 69 73 74 28 [0-16] 29 20 3f 20 [0-16] 20 3a 20 22 64 65 6c 20 2f 66 20 2f 71 20}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Ropest_A_2147688397_0
         $x_1_4 = {83 fe 04 72 02 33 f6 8a 14 01 32 96 ?? ?? ?? ?? 88 10 40 46 4f 75 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Trojan_MSIL_Kilim_A_2147687605_0
         $x_2_9 = {70 18 16 15 28 ?? 00 00 0a 26 06 72 ?? ?? 00 70 28 ?? 00 00 0a 28 ?? 00 00 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule Trojan_MSIL_Kilim_B_2147687626_0
         $x_2_6 = {13 0e 11 0e 8e 69 16 fe 02 16 fe 01 13 11 11 11 2d 28 00 16 13 0f 2b 13 00 11 0e 11 0f 9a 6f ?? ?? 00 0a 00 00 11 0f 17 58 13 0f 11 0f 11 0e 8e 69 fe 04 13 11 11 11 2d df}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -84,6 +86,7 @@ rule Trojan_MSIL_Kilim_C_2147687707_0
         $x_1_8 = {50 00 72 00 65 00 66 00 65 00 72 00 65 00 6e 00 63 00 65 00 73 00 2e 00 74 00 78 00 74 00 ?? ?? 62 00 67 00 2e 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -112,6 +115,7 @@ rule Trojan_MSIL_Kilim_D_2147688166_0
         $x_1_9 = "chrome://extensions/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 7 of ($x_1_*))) or
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -138,6 +142,7 @@ rule Trojan_MSIL_Kilim_F_2147690043_0
         $x_1_3 = "Facebook_Videos_Player.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -161,6 +166,7 @@ rule Trojan_MSIL_Kilim_F_2147690043_1
         $x_1_4 = "\\Sunny Player\\Sunny Player\\obj\\x86\\Debug\\Sunny Player" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -186,6 +192,7 @@ rule Trojan_MSIL_Kilim_F_2147690043_2
         $x_1_6 = {57 00 51 00 42 00 52 00 41 00 45 00 49 00 41 00 4e 00 41 00 42 00 42 00 41 00 45 00 67 00 41 00 55 00 51 00 42 00 42 00 41 00 46 00 6f 00 41 00 55 00 51 00 42 00 43 00 41 00 48 00 6b 00 41 00 51 00 51 00 42 00 45 00 41 00 45 00 55 00 41 00 51 00 51 00 41 00 3d 00 ?? ?? 5c 00 42 00 6f 00 6f 00 6b 00 6d 00 61 00 72 00 6b 00 73 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -210,6 +217,7 @@ rule Trojan_MSIL_Kilim_G_2147692985_0
         $x_10_5 = "dABhAHMAawBrAGkAbABsACAALwBGACAALwBJAE0AIABvAHAAZQByAGEALgBlAHgAZQA" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -231,6 +239,7 @@ rule Trojan_MSIL_Kilim_H_2147694565_0
         $x_1_2 = "RABpAHMAYQBiAGwAZQBBAHUAdABvAFUAcABkAGEAdABlAEMAaABlAGMAawBzAEMAaABlAGMAawBiAG8AeABWAGEAbAB1AGUA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -253,6 +262,7 @@ rule Trojan_MSIL_Kilim_J_2147705825_0
         $x_1_3 = "XABMAG8AYwBhAGwAIABTAGUAdAB0AGkAbgBnAHMAXABBAHAAcABsAGkAYwBhAHQAaQBvAG4AIABEAGEAdABhAFwARwBvAG8AZwBsAGUA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -274,6 +284,7 @@ rule Trojan_MSIL_Kilim_K_2147705826_0
         $x_1_2 = "UQB3AEEANgBBAEYAdwBBAFYAdwBCAHAAQQBHADQAQQBaAEEAQgB2AEEASABjAEEAYwB3AEIAYwBBAEcAUQ" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -295,6 +306,7 @@ rule Trojan_MSIL_Kilim_L_2147705827_0
         $x_1_2 = {51 00 77 00 41 00 36 00 41 00 46 00 77 00 41 00 56 00 77 00 42 00 70 00 41 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

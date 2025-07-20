@@ -21,6 +21,7 @@ rule HackTool_Linux_Cymothoa_A_2147783546_0
         $x_1_6 = "alarm() backdoor (requires -j -y) bind port, fork on accept" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

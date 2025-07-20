@@ -17,6 +17,7 @@ rule Trojan_Linux_Loerbas_A_2147755579_0
         $x_1_2 = {48 89 e5 48 83 ec 70 48 89 7d a8 48 89 75 a0 48 89 55 98 89 4d 94 48 8b 45 a8 be 00 34 60 00 48 89 c7 e8 96 f8 ff ff 89 45 fc 83 7d fc 00 79 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

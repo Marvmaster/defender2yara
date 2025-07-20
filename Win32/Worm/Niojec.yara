@@ -19,6 +19,7 @@ rule Worm_Win32_Niojec_2147605121_0
         $x_10_5 = {c7 45 fc 09 00 00 00 e8 ?? ?? ?? ?? c7 45 fc 0a 00 00 00 68 88 13 00 00 e8 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? c7 45 fc 0b 00 00 00 ff 15 ?? ?? ?? ?? c7 45 fc 0c 00 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -48,6 +49,7 @@ rule Worm_Win32_Niojec_B_2147617695_0
         $x_10_6 = {ba 60 78 40 00 e8 77 34 00 00 6a 00 8b dc e8 c1 2d 00 00 ba 54 78 40 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))

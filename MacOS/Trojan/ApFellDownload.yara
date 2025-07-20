@@ -18,6 +18,7 @@ rule Trojan_MacOS_ApFellDownload_A_2147890290_0
         $x_2_4 = "_OBJC_CLASS_$_OSAScript" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*))) or

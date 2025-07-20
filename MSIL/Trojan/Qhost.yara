@@ -17,6 +17,7 @@ rule Trojan_MSIL_Qhost_A_2147638309_0
         $x_1_3 = "127.0.0.1 google.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_Qhost_ARA_2147911898_0
         $x_2_3 = "CopyPasswordToolStripMenuItem.Image" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

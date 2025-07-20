@@ -18,6 +18,7 @@ rule Ransom_MSIL_BlackWorld_DA_2147767071_0
         $x_1_3 = "Black World Ransomware.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

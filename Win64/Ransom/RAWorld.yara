@@ -22,6 +22,7 @@ rule Ransom_Win64_RAWorld_YAF_2147945543_0
         $x_1_7 = "the higher ransom" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

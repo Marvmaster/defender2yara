@@ -17,6 +17,7 @@ rule BrowserModifier_Win32_EyeOnIE_A_166901_0
         $x_1_3 = {77 77 77 00 77 77 00 00 77 00 00 00 77 77 77 2e 00 00 00 00 68 74 74 70 3a 2f 2f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_WarzoneRat_AWZ_2147898390_0
         $x_1_1 = {16 0a 2b 12 00 7e ?? 00 00 04 06 6f ?? 00 00 0a 00 00 06 17 58 0a 06 7e ?? 00 00 04 8e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

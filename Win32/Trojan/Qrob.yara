@@ -29,6 +29,7 @@ rule Trojan_Win32_Qrob_RPP_2147841145_0
         $x_1_14 = "get_token()" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

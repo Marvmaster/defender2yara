@@ -18,6 +18,7 @@ rule Ransom_Win64_BazarCrypt_SV_2147770174_0
         $x_2_3 = {ba 01 68 00 00 48 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 85 c0 0f 84 ?? ?? ff ff 48 8d 0d 97 d7 01 00 e8 ?? ?? 00 00 44 8b c8 8b 54 ?? ?? 33 c9 41 b8 00 10 00 00 ff 15 ?? ?? ?? ?? 48 8b d8 44 8b ?? ?? ?? 48 8b d7 48 8b c8 e8 ca 25 00 00 44 8b ?? ?? ?? 44 89}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Win64_BazarCrypt_SX_2147772846_0
         $x_2_2 = {b9 4c 77 26 07 44 8b fa 33 db e8 ?? ?? 00 00 b9 49 f7 02 78 4c 8b e8 e8 ?? ?? 00 00 b9 58 a4 53 e5 48 89 44 24 ?? e8 ?? ?? 00 00 b9 10 e1 8a c3 48 8b f0 e8 ?? ?? 00 00 b9 af b1 5c 94}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

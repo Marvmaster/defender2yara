@@ -17,6 +17,7 @@ rule Trojan_Win32_Alevaul_DC_2147943961_0
         $x_5_2 = {8a 44 31 08 8b 4d 08 32 04 0b 88 01 41 ff 4d 0c 89 4d 08 8b 4d fc}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Alureon_J_127339_0
         $x_1_7 = {61 64 77 5f 64 6c 6c [0-1] 2e 64 6c 6c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule TrojanDropper_Win32_Alureon_T_149300_0
         $x_1_1 = {3b 21 40 49 6e 73 74 61 6c 6c 40 21 55 54 46 2d 38 21 0d 0a 54 69 74 6c 65 3d 22 43 72 61 63 6b 20 61 6e 64 20 53 65 72 69 61 6c 22 0d 0a 42 65 67 69 6e 50 72 6f 6d 70 74 3d 22 44 69 73 61 62 6c 65 20 61 6e 74 69 76 69 72 75 73 65 73 20 62 65 66 6f 72 65 20 70 61 74 63 68 69 6e 67 21 5c 6e 43 6f 6e 74 69 6e 75 65 3f 22 0d 0a 52 75 6e 50 72 6f 67 72 61 6d 3d 22 73 65 74 75 70 2e 62 61 74 22 0d 0a 3b 21 40 49 6e 73 74 61 6c 6c 45 6e 64 40 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule TrojanDropper_Win32_Alureon_V_152591_0
         $x_1_4 = {2d 70 6c 6f 6c 6d 69 6c 66 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule TrojanDropper_Win32_Alureon_Z_165036_0
         $x_1_6 = "batch.WriteLine \"cmd /C  ping -n 1  localhost > nul & del" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule TrojanDropper_Win32_Alureon_E_195706_0
         $x_1_1 = {a5 22 02 0a dd dd 9d d9 a5 22 02 12 dd dd 9d d9 6a 22 02 f6 2d dd 53 fa dd 53 f6 dc 53 f2 dc 53}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

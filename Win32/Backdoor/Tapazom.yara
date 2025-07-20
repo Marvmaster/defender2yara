@@ -24,6 +24,7 @@ rule Backdoor_Win32_Tapazom_A_2147666526_0
         $x_10_10 = {05 00 00 00 48 41 52 4d 7c}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_50_*) and 2 of ($x_20_*) and 3 of ($x_10_*))) or
             ((1 of ($x_100_*) and 1 of ($x_50_*) and 1 of ($x_30_*) and 4 of ($x_10_*))) or
@@ -60,6 +61,7 @@ rule Backdoor_Win32_Tapazom_B_2147667482_0
         $x_10_7 = "wid.dll" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_200_*) and 2 of ($x_30_*) and 2 of ($x_10_*))) or
             ((1 of ($x_200_*) and 1 of ($x_50_*) and 1 of ($x_30_*))) or
@@ -90,6 +92,7 @@ rule Backdoor_Win32_Tapazom_D_2147669019_0
         $x_10_6 = "dot3dlxe.dll" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_50_*) and 1 of ($x_20_*))) or
             ((2 of ($x_100_*) and 1 of ($x_20_*))) or
@@ -120,6 +123,7 @@ rule Backdoor_Win32_Tapazom_F_2147669021_0
         $x_20_6 = "mzsr64.dll" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_50_*) and 1 of ($x_20_*))) or
             ((2 of ($x_100_*) and 1 of ($x_20_*))) or
@@ -147,6 +151,7 @@ rule Backdoor_Win32_Tapazom_G_2147678805_0
         $x_1_3 = {47 45 54 53 45 52 56 45 52 7c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_WinNT_Simda_A_2147650329_0
         $x_1_2 = "c_%4.4x%d.nls" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_WinNT_Simda_B_2147650678_0
         $x_1_4 = {41 6d 65 72 69 63 61 20 4f 6e 6c 69 6e 65 20 42 72 6f 77 73 65 72 20 31 2e 31 00 00 3f 4f 39}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

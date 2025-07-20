@@ -16,6 +16,7 @@ rule Trojan_Win32_XWormRAT_A_2147901099_0
         $x_2_1 = {2b 72 14 8b 55 ?? 8b 52 0c 8a 04 08 32 04 32 8b 4d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

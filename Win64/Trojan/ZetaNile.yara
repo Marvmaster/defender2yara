@@ -17,6 +17,7 @@ rule Trojan_Win64_ZetaNile_A_2147831331_0
         $x_1_3 = "Software\\SimonTatham\\PuTTY" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_ZetaNile_N_2147832402_0
         $x_1_4 = "2.MyDevelopment\\3.Tools_Development\\4.TightVNCCustomize\\Munna_Customize\\tightvnc\\x64\\Release\\tvnviewer.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win64_ZetaNile_O_2147832403_0
         $x_1_4 = "software\\simontatham\\putty" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win64_ZetaNile_P_2147832404_0
         $x_1_3 = "LoadDocument: '%s', tid=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

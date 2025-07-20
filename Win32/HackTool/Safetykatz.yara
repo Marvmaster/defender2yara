@@ -15,6 +15,7 @@ rule HackTool_Win32_Safetykatz_A_2147729504_0
         $x_10_1 = "zL17fBNV+jg8aVJIoWUCNFC1apCoXUEsBrW1gJl2AhNIaJVbVZAqiLig1pJAFVQwLRKP47ourrq6rndZLwu6KlBWbCm9cWsp" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

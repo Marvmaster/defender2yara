@@ -17,6 +17,7 @@ rule Trojan_Win32_Fenibot_A_2147682008_0
         $x_1_3 = {00 4e 6f 20 46 54 50 20 41 63 63 6f 75 6e 74 73 20 46 6f 75 6e 64 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

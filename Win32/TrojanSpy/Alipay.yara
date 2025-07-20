@@ -38,6 +38,7 @@ rule TrojanSpy_Win32_Alipay_2147646015_0
         $x_1_24 = {69 63 6f 6e 20 [0-3] 42 41 4e 4b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_5_*) and 15 of ($x_1_*))) or
             (all of ($x*))

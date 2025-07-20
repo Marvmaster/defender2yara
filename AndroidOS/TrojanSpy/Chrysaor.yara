@@ -17,6 +17,7 @@ rule TrojanSpy_AndroidOS_Chrysaor_B_2147815438_0
         $x_1_2 = {16 4c 16 4a 17 4d 7c 44 7a 44 03 20 21 1c 7d 44 ff ?? ?? ?? 6b 68 01 2b 17 d0 12 4a 01 23 6b 60 7a 44 21 1c 03 20 ff ?? ?? ?? 0f 48 10 49 10 4a 78 44 79 44 7a 44 2b 1c ff ?? ?? ?? 0e 4a 03 20 21 1c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 

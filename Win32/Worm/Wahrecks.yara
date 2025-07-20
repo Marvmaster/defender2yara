@@ -17,6 +17,7 @@ rule Worm_Win32_Wahrecks_A_2147637860_0
         $x_1_3 = {57 53 57 48 41 43 4b 45 52 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

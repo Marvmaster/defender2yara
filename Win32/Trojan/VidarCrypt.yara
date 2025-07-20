@@ -17,6 +17,7 @@ rule Trojan_Win32_VidarCrypt_PAA_2147816651_0
         $x_1_2 = {d3 e6 8b 4d f4 8b c2 d3 e8 03 b5 ?? ?? ?? ?? 89 45 fc 8b 85 ?? ?? ?? ?? 01 45 fc 8d 04 17 33 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_VidarCrypt_PAC_2147819220_0
         $x_1_1 = {03 c2 33 c8 8d 04 3b 33 c8 89 4d fc 8b 45 fc [0-15] 2b f1 8b ce c1 e1 04 03 4d ec 8b c6 c1 e8 05 03 45 e8 8d 14 33 33 ca 33 c8 2b f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_VidarCrypt_PAD_2147819411_0
         $x_1_2 = {2b f1 8b ce c1 e1 ?? 03 4d f0 8b c6 c1 e8 ?? 03 45 f4 8d 14 33 33 ca 33 c8 2b f9 81 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_VidarCrypt_PAE_2147819412_0
         $x_1_2 = {33 c6 2b f8 ff 8d 78 ff ff ff 89 bd 7c ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

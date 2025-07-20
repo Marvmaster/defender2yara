@@ -20,6 +20,7 @@ rule Trojan_Linux_SunOSRKT_A_2147795485_0
         $x_1_5 = {40 00 41 98 90 07 bd f0 11 00 00 86 13 00 00 86 15 00 00 86 d0 02 23 28 d2 02 63 60 40 00 00 52 d4 02 a3 74 92 92 20 00 12 80 00 04 b0 07 bc f0 11 00 00 46 92 12 20 78}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

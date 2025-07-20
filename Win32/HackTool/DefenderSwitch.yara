@@ -18,6 +18,7 @@ rule HackTool_Win32_DefenderSwitch_A_2147812077_0
         $x_1_4 = "Usage: .\\DefenderSwitch.exe [-on|-off]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

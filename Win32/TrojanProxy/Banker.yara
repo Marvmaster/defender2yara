@@ -18,6 +18,7 @@ rule TrojanProxy_Win32_Banker_C_2147648778_0
         $x_3_4 = "texto=infectado" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*))) or
             ((1 of ($x_6_*) and 1 of ($x_3_*))) or
@@ -44,6 +45,7 @@ rule TrojanProxy_Win32_Banker_E_2147652862_0
         $x_1_3 = {5c 70 72 65 66 73 2e 6a 73 [0-32] 66 69 72 65 66 6f 78 2e 65 78 65 [0-16] 75 73 65 72 5f 70 72 65 66 28 22 6e 65 74 77 6f 72 6b 2e 70 72 6f 78 79 2e 74 79 70 65 22 2c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule TrojanProxy_Win32_Banker_G_2147654124_0
         $x_1_6 = "user_pref(\"network.proxy.autoconfig_url\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule TrojanProxy_Win32_Banker_I_2147655485_0
         $x_10_3 = {44 47 53 52 46 18 5e 46 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*))) or
             ((1 of ($x_100_*) and 1 of ($x_20_*))) or
@@ -119,6 +123,7 @@ rule TrojanProxy_Win32_Banker_L_2147655712_0
         $x_1_5 = "BLR=ATT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule TrojanProxy_Win32_Banker_M_2147655722_0
         $x_20_5 = "/70573505/winapp.txt" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_50_*) and 1 of ($x_20_*))) or
             ((1 of ($x_100_*) and 2 of ($x_50_*))) or
@@ -167,6 +173,7 @@ rule TrojanProxy_Win32_Banker_O_2147656019_0
         $x_1_1 = {25 4c 4f 49 4f 4c 41 25 73 65 74 20 70 61 69 3d 66 75 6e 63 74 69 6f 6e 20 46 69 6e 64 50 72 6f 78 79 46 0d 0a 25 4c 4f 49 4f 4c 41 25 73 65 74 20 69 78 3d 75 73 65 72 5f 70 72 65 66 28 22 6e 65 74 77 6f 72 6b 2e 70 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +204,7 @@ rule TrojanProxy_Win32_Banker_U_2147657032_0
         $x_5_11 = "bc.mstsc@live.com" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_200_*) and 5 of ($x_20_*) and 2 of ($x_5_*))) or
             ((1 of ($x_200_*) and 5 of ($x_20_*) and 1 of ($x_10_*))) or
@@ -225,6 +233,7 @@ rule TrojanProxy_Win32_Banker_V_2147657218_0
         $x_1_3 = "/IM firefox.exe /F" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -248,6 +257,7 @@ rule TrojanProxy_Win32_Banker_W_2147657275_0
         $x_1_1 = {94 ee 83 bd c0 8f b6 02 bf d5 6e fd cc b0 39 5d c8 f8 f6 b7 46 d0 5b c7 aa ce 3d 04 d6 a9 5c 8f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -269,6 +279,7 @@ rule TrojanProxy_Win32_Banker_X_2147657345_0
         $x_1_2 = "200.98.162.126/GeraDados.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -293,6 +304,7 @@ rule TrojanProxy_Win32_Banker_Z_2147657408_0
         $x_1_5 = {5c 00 64 00 65 00 6c 00 5f 00 73 00 65 00 6c 00 66 00 2e 00 62 00 61 00 74 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -318,6 +330,7 @@ rule TrojanProxy_Win32_Banker_AA_2147657573_0
         $x_10_6 = "FlashPlayer.exe" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_50_*) and 2 of ($x_10_*))) or
             ((1 of ($x_100_*) and 2 of ($x_50_*))) or
@@ -345,6 +358,7 @@ rule TrojanProxy_Win32_Banker_GI_2147658232_0
         $x_1_4 = {5c 00 4d 00 6f 00 7a 00 69 00 6c 00 6c 00 61 00 5c 00 46 00 69 00 72 00 65 00 66 00 6f 00 78 00 5c 00 50 00 72 00 6f 00 66 00 69 00 6c 00 65 00 73 00 5c 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 5c 00 70 00 72 00 65 00 66 00 73 00 2e 00 6a 00 73 00 ?? ?? ?? ?? ?? ?? 5c 00 75 00 73 00 65 00 72 00 2e 00 6a 00 73 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -375,6 +389,7 @@ rule TrojanProxy_Win32_Banker_AI_2147658278_0
         $x_100_11 = "tgklbbnksloop.com/includes/" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 2 of ($x_50_*) and 1 of ($x_30_*) and 2 of ($x_20_*))) or
             ((3 of ($x_100_*) and 2 of ($x_50_*) and 2 of ($x_30_*) and 1 of ($x_20_*))) or
@@ -412,6 +427,7 @@ rule TrojanProxy_Win32_Banker_AJ_2147658284_0
         $x_40_8 = "contador/log.php" ascii //weight: 40
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_50_*) and 1 of ($x_40_*) and 4 of ($x_20_*))) or
             ((2 of ($x_100_*) and 4 of ($x_20_*))) or
@@ -442,6 +458,7 @@ rule TrojanProxy_Win32_Banker_AL_2147658456_0
         $x_1_4 = "remetente=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -467,6 +484,7 @@ rule TrojanProxy_Win32_Banker_AM_2147659343_0
         $x_1_6 = "luzanjo.com/mes/pit.pac" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -494,6 +512,7 @@ rule TrojanProxy_Win32_Banker_AN_2147659631_0
         $x_1_5 = "WinNTService.vbs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -521,6 +540,7 @@ rule TrojanProxy_Win32_Banker_AP_2147661434_0
         $x_10_8 = {62 6e 2e 63 6f 6d 2e 70 65 0d 0a}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -553,6 +573,7 @@ rule TrojanProxy_Win32_Banker_AU_2147666753_0
         $x_1_9 = "destinatario=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -577,6 +598,7 @@ rule TrojanProxy_Win32_Banker_AV_2147669991_0
         $x_1_5 = {19 7d bb e3 4b 2f e0 b8 0a 22 f8 b9 03 20 e1 ae 0d 3b fe a6 14 65 ae f4 15 65 a7 e7 19}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -605,6 +627,7 @@ rule TrojanProxy_Win32_Banker_AW_2147678595_0
         $x_1_6 = {84 c0 74 16 a1 ?? ?? 50 00 8b 80 44 03 00 00 66 be eb ff e8 ?? ?? ?? ff eb 1d 6a 00 6a 00 6a 00 68 ?? ?? 50 00 68 ?? ?? 50 00 8b c3 e8 ?? ?? ?? ff 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -629,6 +652,7 @@ rule TrojanProxy_Win32_Banker_BA_2147681595_0
         $x_1_5 = "http://sishab.uhosti.com/index.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -658,6 +682,7 @@ rule TrojanProxy_Win32_Banker_BB_2147682444_0
         $x_1_7 = {41 75 74 6f 43 6f 6e 66 69 67 55 52 4c ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 30 78 30 30 30 30 30 30 30 30 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -684,6 +709,7 @@ rule TrojanProxy_Win32_Banker_BD_2147683078_0
         $x_2_7 = {66 69 72 65 66 6f 78 2e 65 78 65 ?? ?? ?? ?? ?? ?? ?? ?? ?? 63 68 72 6f 6d 65 2e 65 78 65 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -712,6 +738,7 @@ rule TrojanProxy_Win32_Banker_BM_2147688651_0
         $x_2_5 = ";picas++)" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*))) or
             (all of ($x*))
@@ -742,6 +769,7 @@ rule TrojanProxy_Win32_Banker_BN_2147693432_0
         $x_1_8 = "\\Proxy.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

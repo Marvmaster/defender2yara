@@ -20,6 +20,7 @@ rule Trojan_MSIL_SpySnake_MA_2147794211_0
         $x_1_5 = "MovementToDown" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_MSIL_SpySnake_MA_2147794211_1
         $x_10_7 = {0d 09 07 6f ?? ?? ?? 0a 17 1a 00 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 73 28 00 00 0a [0-13] 73 2a 00 00 0a 13 04 11 04 06 16 06 8e 69 6f ?? ?? ?? 0a 11 04 6f ?? ?? ?? 0a de 0c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_MSIL_SpySnake_MA_2147794211_2
         $x_1_6 = "Enter_Details" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_MSIL_SpySnake_MB_2147794774_0
         $x_1_6 = "Stat_Warn" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule Trojan_MSIL_SpySnake_MB_2147794774_1
         $x_1_7 = "OKIJUHYGTF" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +160,7 @@ rule Trojan_MSIL_SpySnake_MB_2147794774_2
         $x_1_9 = "ananakoyz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -177,6 +183,7 @@ rule Trojan_MSIL_SpySnake_ME_2147805562_0
         $x_10_2 = {25 16 11 05 16 9a a2 25 17 11 05 17 9a a2 25 18 72 8f 04 00 70 a2 13 06}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +208,7 @@ rule Trojan_MSIL_SpySnake_ME_2147805562_1
         $x_1_4 = "ControlCollection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +240,7 @@ rule Trojan_MSIL_SpySnake_ME_2147805562_2
         $x_1_11 = "fixedhost.modulation" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -257,6 +266,7 @@ rule Trojan_MSIL_SpySnake_MF_2147805564_0
         $x_3_5 = "ControlCollection" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -287,6 +297,7 @@ rule Trojan_MSIL_SpySnake_MF_2147805564_1
         $x_1_10 = "DownloadString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +323,7 @@ rule Trojan_MSIL_SpySnake_MC_2147808466_0
         $x_1_5 = "Compla4n.Properties" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -336,6 +348,7 @@ rule Trojan_MSIL_SpySnake_MC_2147808466_1
         $x_2_4 = "prisonerControl1_Load" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -365,6 +378,7 @@ rule Trojan_MSIL_SpySnake_MC_2147808466_2
         $x_1_9 = "get_CurrentDomain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -387,6 +401,7 @@ rule Trojan_MSIL_SpySnake_MD_2147808553_0
         $x_10_2 = {25 16 11 06 16 9a a2 25 17 11 06 17 9a a2 25 18 72 ?? ?? ?? 70 a2 13 07 11 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -411,6 +426,7 @@ rule Trojan_MSIL_SpySnake_MD_2147808553_1
         $x_1_4 = "FileDownload" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -447,6 +463,7 @@ rule Trojan_MSIL_SpySnake_MD_2147808553_2
         $x_1_16 = "add_KeyUp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -468,6 +485,7 @@ rule Trojan_MSIL_SpySnake_MG_2147808838_0
         $x_5_1 = {08 09 07 09 9a 1f 10 28 ?? ?? ?? 0a 9c 09 17 d6 0d 00 09 07 8e 69 fe 04 13 05 11 05 2d e2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -494,6 +512,7 @@ rule Trojan_MSIL_SpySnake_MG_2147808838_1
         $x_1_6 = "Evolution_Simulation.Properties" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -522,6 +541,7 @@ rule Trojan_MSIL_SpySnake_MG_2147808838_2
         $x_1_8 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -543,6 +563,7 @@ rule Trojan_MSIL_SpySnake_MH_2147809309_0
         $x_5_1 = {08 11 09 07 11 09 9a 1f 10 28 ?? ?? ?? 0a 9c 11 09 17 58 13 09 11 09 07 8e 69 fe 04 13 0a 11 0a 2d de}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -567,6 +588,7 @@ rule Trojan_MSIL_SpySnake_MH_2147809309_1
         $x_1_4 = "Rooll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -594,6 +616,7 @@ rule Trojan_MSIL_SpySnake_MH_2147809309_2
         $x_1_7 = {19 8d 0a 00 00 01 25 16 72 17 00 00 70 a2 25 17 72 5d 00 00 70 a2 25 18 07 06 28 ?? ?? ?? 06 a2 0c 20 05 00 00 00 38}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -615,6 +638,7 @@ rule Trojan_MSIL_SpySnake_MJ_2147811765_0
         $x_5_1 = {5d 94 13 07 09 11 05 08 11 05 91 11 07 61 d2 9c 11 05 17 58 13 05 11 05 08 8e 69 32 95}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -640,6 +664,7 @@ rule Trojan_MSIL_SpySnake_MJ_2147811765_1
         $x_1_5 = "ThreadStart" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -664,6 +689,7 @@ rule Trojan_MSIL_SpySnake_MJ_2147811765_2
         $x_1_4 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -687,6 +713,7 @@ rule Trojan_MSIL_SpySnake_MK_2147811768_0
         $x_1_3 = "NetToSwing.Properties" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -714,6 +741,7 @@ rule Trojan_MSIL_SpySnake_MK_2147811768_1
         $x_3_7 = "King_Black" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -745,6 +773,7 @@ rule Trojan_MSIL_SpySnake_MK_2147811768_2
         $x_1_11 = "Encrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -769,6 +798,7 @@ rule Trojan_MSIL_SpySnake_ML_2147811769_0
         $x_1_4 = "eaab72bc-a594-49bd-971a-696bdce93b9f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -797,6 +827,7 @@ rule Trojan_MSIL_SpySnake_ML_2147811769_1
         $x_1_8 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -822,6 +853,7 @@ rule Trojan_MSIL_SpySnake_ML_2147811769_2
         $x_2_5 = "CASCX" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -847,6 +879,7 @@ rule Trojan_MSIL_SpySnake_MO_2147812289_0
         $x_1_5 = "connectionId" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -881,6 +914,7 @@ rule Trojan_MSIL_SpySnake_MO_2147812289_1
         $x_1_14 = "UpperLeft" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -906,6 +940,7 @@ rule Trojan_MSIL_SpySnake_MQ_2147813151_0
         $x_1_5 = "PassUrlToBroker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -932,6 +967,7 @@ rule Trojan_MSIL_SpySnake_MQ_2147813151_1
         $x_1_6 = "get_DataDiskImages" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -962,6 +998,7 @@ rule Trojan_MSIL_SpySnake_MQ_2147813151_2
         $x_1_10 = "9c54b190-e5ca-4b42-8fbc-2e0f8a163fcc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -985,6 +1022,7 @@ rule Trojan_MSIL_SpySnake_MR_2147813790_0
         $x_1_3 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1009,6 +1047,7 @@ rule Trojan_MSIL_SpySnake_MR_2147813790_1
         $x_2_4 = "Create__Instance__" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1038,6 +1077,7 @@ rule Trojan_MSIL_SpySnake_MR_2147813790_2
         $x_1_9 = "set_Key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1062,6 +1102,7 @@ rule Trojan_MSIL_SpySnake_2147813795_0
         $x_1_3 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1086,6 +1127,7 @@ rule Trojan_MSIL_SpySnake_2147813795_1
         $x_1_3 = "e07cda72-71b3-4295-8657-d7aa1b3b5b13" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1115,6 +1157,7 @@ rule Trojan_MSIL_SpySnake_2147813795_2
         $x_1_8 = {63 00 64 00 6e 00 2e 00 64 00 69 00 73 00 63 00 6f 00 72 00 64 00 61 00 70 00 70 00 2e 00 63 00 6f 00 6d 00 2f 00 61 00 74 00 74 00 61 00 63 00 68 00 6d 00 65 00 6e 00 74 00 73 00 2f 00 [0-96] 2e 00 6a 00 70 00 67 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1140,6 +1183,7 @@ rule Trojan_MSIL_SpySnake_MV_2147814214_0
         $x_2_5 = "GetExportedTypes" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1163,6 +1207,7 @@ rule Trojan_MSIL_SpySnake_MV_2147814214_1
         $x_2_3 = {13 0d 11 0d 72 f7 03 0c 70 28 ?? ?? ?? 0a 13 0d 11 0d 72 e7 03 0c 70 28 ?? ?? ?? 0a 13 0d 11 0d 72 cb 04 0c 70 28 ?? ?? ?? 0a 13 0d 11 0d 72 ff 03 0c 70 28 ?? ?? ?? 0a 13 0d 11 0d 72 cb 04 0c 70 28 ?? ?? ?? 0a 13 0d 11 0d 72 cf 04 0c 70}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1192,6 +1237,7 @@ rule Trojan_MSIL_SpySnake_MV_2147814214_2
         $x_1_9 = "set_Key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1215,6 +1261,7 @@ rule Trojan_MSIL_SpySnake_MW_2147814893_0
         $x_5_3 = "PromoCore.Properties" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1238,6 +1285,7 @@ rule Trojan_MSIL_SpySnake_MW_2147814893_1
         $x_2_3 = {13 0e 11 0e 72 d5 04 0c 70 28 ?? ?? ?? 0a 13 0e 11 0e 72 c5 04 0c 70 28 ?? ?? ?? 0a 13 0e 11 0e 72 2d 05 0c 70 28 ?? ?? ?? 0a 13 0e 11 0e 72 dd 04 0c 70 28 ?? ?? ?? 0a 13 0e 11 0e 72 2d 05 0c 70 28 ?? ?? ?? 0a 13 0e 11 0e 72 31 05 0c 70}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1267,6 +1315,7 @@ rule Trojan_MSIL_SpySnake_MW_2147814893_2
         $x_1_9 = "set_Key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1292,6 +1341,7 @@ rule Trojan_MSIL_SpySnake_MZ_2147814896_0
         $x_1_5 = "Growi1g" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1320,6 +1370,7 @@ rule Trojan_MSIL_SpySnake_MZ_2147814896_1
         $x_1_8 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1348,6 +1399,7 @@ rule Trojan_MSIL_SpySnake_MZ_2147814896_2
         $x_1_8 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1377,6 +1429,7 @@ rule Trojan_MSIL_SpySnake_MAA_2147814897_0
         $x_1_9 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1403,6 +1456,7 @@ rule Trojan_MSIL_SpySnake_MAB_2147814898_0
         $x_1_6 = "sworhTnoitpecxEnoNparW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1428,6 +1482,7 @@ rule Trojan_MSIL_SpySnake_MAC_2147815336_0
         $x_1_5 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1458,6 +1513,7 @@ rule Trojan_MSIL_SpySnake_MAD_2147815337_0
         $x_1_10 = "Proxy-Connection" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1484,6 +1540,7 @@ rule Trojan_MSIL_SpySnake_MAF_2147815733_0
         $x_1_6 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1509,6 +1566,7 @@ rule Trojan_MSIL_SpySnake_MAG_2147819716_0
         $x_1_5 = "Yknbhpsjkxiqrzvyzaovb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1536,6 +1594,7 @@ rule Trojan_MSIL_SpySnake_MAK_2147823660_0
         $x_1_7 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1562,6 +1621,7 @@ rule Trojan_MSIL_SpySnake_MAL_2147823662_0
         $x_1_6 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1589,6 +1649,7 @@ rule Trojan_MSIL_SpySnake_MAJ_2147825197_0
         $x_1_7 = "get_Log_Bulk_Analysis_Solution_Snapshot_Missing" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1617,6 +1678,7 @@ rule Trojan_MSIL_SpySnake_MAM_2147825200_0
         $x_1_8 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1642,6 +1704,7 @@ rule Trojan_MSIL_SpySnake_ABK_2147827755_0
         $x_1_5 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1670,6 +1733,7 @@ rule Trojan_MSIL_SpySnake_MAN_2147827762_0
         $x_1_8 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1698,6 +1762,7 @@ rule Trojan_MSIL_SpySnake_MAO_2147827763_0
         $x_1_8 = "aaMaeatahaoada0a" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1724,6 +1789,7 @@ rule Trojan_MSIL_SpySnake_MAQ_2147828809_0
         $x_1_6 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1750,6 +1816,7 @@ rule Trojan_MSIL_SpySnake_MAR_2147829200_0
         $x_1_6 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1777,6 +1844,7 @@ rule Trojan_MSIL_SpySnake_MAS_2147830106_0
         $x_1_7 = "CodeAccessPermission" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1803,6 +1871,7 @@ rule Trojan_MSIL_SpySnake_MAT_2147830107_0
         $x_1_6 = "ReleaseCapture" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1829,6 +1898,7 @@ rule Trojan_MSIL_SpySnake_MAU_2147830388_0
         $x_1_6 = "add_MouseDown" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1856,6 +1926,7 @@ rule Trojan_MSIL_SpySnake_MAV_2147830391_0
         $x_1_7 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1883,6 +1954,7 @@ rule Trojan_MSIL_SpySnake_MAX_2147830928_0
         $x_1_7 = "SoldireData.Properties" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1906,6 +1978,7 @@ rule Trojan_MSIL_SpySnake_MP_2147834235_0
         $x_5_3 = "StringFormatEx.Properties" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1931,6 +2004,7 @@ rule Trojan_MSIL_SpySnake_MP_2147834235_1
         $x_1_5 = "Alor_28" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1956,6 +2030,7 @@ rule Trojan_MSIL_SpySnake_MS_2147834296_0
         $x_1_5 = "get_NextOpenId" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1981,6 +2056,7 @@ rule Trojan_MSIL_SpySnake_MS_2147834296_1
         $x_5_5 = "Self installation" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*))) or
             ((4 of ($x_10_*))) or
@@ -2009,6 +2085,7 @@ rule Trojan_MSIL_SpySnake_MU_2147834378_0
         $x_1_4 = "hotkey_HotkeyPressed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2034,6 +2111,7 @@ rule Trojan_MSIL_SpySnake_MU_2147834378_1
         $x_1_5 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2062,6 +2140,7 @@ rule Trojan_MSIL_SpySnake_MU_2147834378_2
         $x_1_8 = "Nrjlsk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2086,6 +2165,7 @@ rule Trojan_MSIL_SpySnake_MY_2147835234_0
         $x_1_4 = "timer_receiveOnly_Tick" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2110,6 +2190,7 @@ rule Trojan_MSIL_SpySnake_MY_2147835234_1
         $x_1_4 = "BookInformation" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2131,6 +2212,7 @@ rule Trojan_MSIL_SpySnake_SP_2147835407_0
         $x_3_1 = {02 7b 25 00 00 04 08 6f ?? ?? ?? 0a 13 04 08 12 00 28 ?? ?? ?? 0a 6b 11 04 7b 3d 00 00 04 5a 69 12 00 28 ?? ?? ?? 0a 6b 11 04 7b 3e 00 00 04 5a 69 73 1e 00 00 0a 6f ?? ?? ?? 0a 00 08 12 00 28 ?? ?? ?? 0a 6b 11 04 7b 3f 00 00 04 5a 69 12 00 28 ?? ?? ?? 0a 6b 11 04 7b 40 00 00 04 5a 69 73 21 00 00 0a 6f ?? ?? ?? 0a 00 00 00 07 6f ?? ?? ?? 0a 3a 6b ff ff ff}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2156,6 +2238,7 @@ rule Trojan_MSIL_SpySnake_MI_2147837289_0
         $x_1_5 = "XoxoTor.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2182,6 +2265,7 @@ rule Trojan_MSIL_SpySnake_MI_2147837289_1
         $x_1_6 = "KillProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2208,6 +2292,7 @@ rule Trojan_MSIL_SpySnake_MM_2147837290_0
         $x_1_6 = "RemoveProxy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2233,6 +2318,7 @@ rule Trojan_MSIL_SpySnake_MM_2147837290_1
         $x_1_5 = "K000001" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2257,6 +2343,7 @@ rule Trojan_MSIL_SpySnake_MN_2147837291_0
         $x_1_4 = "$8fae485d-6dbb-4ead-9ffc-853544b60994" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2283,6 +2370,7 @@ rule Trojan_MSIL_SpySnake_MN_2147837291_1
         $x_1_6 = "Form2_KeyDown" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2313,6 +2401,7 @@ rule Trojan_MSIL_SpySnake_MN_2147837291_2
         $x_1_10 = "DynamicDllInvokeType" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2335,6 +2424,7 @@ rule Trojan_MSIL_SpySnake_SNP_2147838219_0
         $x_1_2 = "VuWm.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2359,6 +2449,7 @@ rule Trojan_MSIL_SpySnake_MX_2147838927_0
         $x_2_4 = "NetworkAssassin.Samples.CoffeeMaker" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2386,6 +2477,7 @@ rule Trojan_MSIL_SpySnake_MAZ_2147900097_0
         $x_1_7 = "GetExcelProcessAndKill" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2411,6 +2503,7 @@ rule Trojan_MSIL_SpySnake_MAH_2147901449_0
         $x_1_5 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

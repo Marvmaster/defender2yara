@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Eykspini_A_2147638157_0
         $x_1_4 = {47 65 74 41 73 79 6e 63 4b 65 79 53 74 61 74 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Gofot_GPA_2147904588_0
         $x_1_3 = {5c 73 79 73 74 65 6d 33 32 5c 77 75 70 64 6d 67 72 64 2e 65 78 65 00 00 25 73 25 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

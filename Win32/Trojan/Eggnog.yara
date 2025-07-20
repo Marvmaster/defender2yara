@@ -16,6 +16,7 @@ rule Trojan_Win32_Eggnog_MA_2147836279_0
         $x_10_1 = {8b c3 60 61 6a 0a 5f 99 f7 ff 80 c2 30 29 c0 8a c1 88 14 06 8b c3 bb 0a 00 00 00 99 f7 fb 50 5b 49 09 db 75}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Eggnog_EM_2147851718_0
         $x_1_5 = "Worm.P2P.Google" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

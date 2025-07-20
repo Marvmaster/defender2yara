@@ -22,6 +22,7 @@ rule Trojan_Win32_Smlogger_SD_2147755415_0
         $x_1_7 = "AppData\\Roaming\\Thunderbird\\Profiles" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

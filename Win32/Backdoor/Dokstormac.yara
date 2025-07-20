@@ -21,6 +21,7 @@ rule Backdoor_Win32_Dokstormac_A_2147655245_0
         $x_3_7 = "InetCpl.cpl,ClearMyTracksByProcess 32" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_10_*) and 3 of ($x_3_*))) or
             (all of ($x*))

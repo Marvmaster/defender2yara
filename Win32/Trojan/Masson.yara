@@ -17,6 +17,7 @@ rule Trojan_Win32_Masson_B_2147772223_0
         $x_1_3 = "7593dbcb-ee05-44dd-a2e5-658803f5cdde" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Masson_C_2147773328_0
         $x_1_3 = "b05ac33b-3a48-489d-a29c-6dff54873b63" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

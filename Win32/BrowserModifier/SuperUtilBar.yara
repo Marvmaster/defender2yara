@@ -42,6 +42,7 @@ rule BrowserModifier_Win32_SuperUtilBar_17578_0
         $x_5_28 = "http://www.6781.com/tools/#" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_4_*) and 21 of ($x_1_*))) or
             ((2 of ($x_5_*) and 20 of ($x_1_*))) or

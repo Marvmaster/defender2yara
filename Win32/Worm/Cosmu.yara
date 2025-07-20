@@ -18,6 +18,7 @@ rule Worm_Win32_Cosmu_B_2147633055_0
         $x_1_4 = {2e 6a 70 67 2e 65 78 65 00 00 66 3a 2f [0-16] 2e 6a 70 67 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

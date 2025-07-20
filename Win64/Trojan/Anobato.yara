@@ -17,6 +17,7 @@ rule Trojan_Win64_Anobato_A_2147708151_0
         $x_2_3 = "regsvrmobsynrundllrunonc" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_Anobato_A_2147708151_1
         $x_1_3 = {81 fb 04 04 00 00 73 09 48 83 c0 04 83 c3 04 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win64_Anobato_A_2147708151_2
         $x_1_4 = {eb 06 2e 30 2e 32 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win64_Anobato_A_2147708151_3
         $x_1_4 = {eb 0f 31 39 33 2e 32 38 2e 31 37 39 2e 31 30 35 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

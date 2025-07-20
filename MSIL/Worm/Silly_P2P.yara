@@ -17,6 +17,7 @@ rule Worm_MSIL_Silly_P2P_B_2147642211_0
         $x_1_3 = "SteamHack.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

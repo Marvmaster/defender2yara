@@ -20,6 +20,7 @@ rule HackTool_MacOS_Dnscat_A_2147927642_0
         $x_1_5 = "_controller_kill_all_sessions" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

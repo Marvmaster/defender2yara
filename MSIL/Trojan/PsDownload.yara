@@ -21,6 +21,7 @@ rule Trojan_MSIL_PsDownload_MB_2147825198_0
         $x_1_6 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_MSIL_PsDownload_MA_2147836631_0
         $x_1_3 = "Bypass -Confirm:$false -Force" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_MSIL_PsDownload_MA_2147836631_1
         $x_1_4 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_MSIL_PsDownload_MA_2147836631_2
         $x_1_5 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Trojan_MSIL_PsDownload_GDF_2147839143_0
         $x_1_3 = "DynamicInvoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_MSIL_PsDownload_EAS_2147843926_0
         $x_1_2 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Trojan_MSIL_PsDownload_PSJQ_2147844711_0
         $x_2_1 = {38 16 00 00 00 00 06 09 02 03 09 58 91 05 61 d2 9c 00 09 17 58 0d 05 17 58 10 03 09 04 fe 04 13 04 7e 16 00 00 04 38 b6 ff ff ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +188,7 @@ rule Trojan_MSIL_PsDownload_ABRX_2147846495_0
         $x_1_2 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +210,7 @@ rule Trojan_MSIL_PsDownload_HAA_2147848739_0
         $x_5_1 = {26 2b f5 00 2b 15 72 ?? 00 00 70 2b 15 2b 1a 2b 1f 15 2d 03 26 de 26 2b 1e 2b fa 28 ?? 00 00 0a 2b e4 28 ?? 00 00 06 2b e4 6f ?? 00 00 0a 2b df 28 ?? 00 00 0a 2b da 0a 2b df}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -223,6 +232,7 @@ rule Trojan_MSIL_PsDownload_HAB_2147849084_0
         $x_5_1 = {01 00 70 28 ?? 00 00 06 0a dd ?? 00 00 00 26 dd 00 00 00 00 06 2c e6 16 0b 06 8e 69 17 59 0c 38 ?? 00 00 00 06 07 91 0d 06 07 06 08 91 9c 06 08 09 d2 9c 07 17 58 0b 08 17 59 0c 07 08 32 e5}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -245,6 +255,7 @@ rule Trojan_MSIL_PsDownload_AADZ_2147850150_0
         $x_1_2 = "Rqwndbjtikt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -266,6 +277,7 @@ rule Trojan_MSIL_PsDownload_APS_2147889006_0
         $x_1_1 = {0a 00 07 17 6f ?? ?? ?? 0a 00 06 07 6f ?? ?? ?? 0a 00 06 6f ?? ?? ?? 0a 26 00 de 10 06 14 fe 01 0c 08 2d 07 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -290,6 +302,7 @@ rule Trojan_MSIL_PsDownload_AMAB_2147890135_0
         $x_1_4 = "6uD3by7WS6LQiosKT5FlEJ8Dcs4FaEdSw622A0zJWqefdmZQHuTttA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +325,7 @@ rule Trojan_MSIL_PsDownload_ENAA_2147902975_0
         $x_1_2 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -335,6 +349,7 @@ rule Trojan_MSIL_PsDownload_M_2147903771_0
         $x_1_3 = "powershell.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -357,6 +372,7 @@ rule Trojan_MSIL_PsDownload_MVT_2147907300_0
         $x_1_2 = "whoami" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

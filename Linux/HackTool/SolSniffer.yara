@@ -21,6 +21,7 @@ rule HackTool_Linux_SolSniffer_A_2147836690_0
         $x_5_7 = "filtering out rsh/rlogin connections." ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

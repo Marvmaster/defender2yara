@@ -17,6 +17,7 @@ rule VirTool_WinNT_Sichesh_A_2147678583_0
         $x_2_3 = {b9 17 c0 20 04 3b c1 0f 87 ?? ?? ?? ?? 0f 84 ?? ?? ?? ?? 2d 07 c0 20 04 0f 84 ?? ?? ?? ?? 83 e8 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

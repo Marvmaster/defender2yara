@@ -17,6 +17,7 @@ rule Trojan_Win32_Cudolkus_A_2147643785_0
         $x_1_3 = {77 69 6e 6b 2e 6c 6f 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

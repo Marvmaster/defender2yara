@@ -19,6 +19,7 @@ rule Trojan_Win32_WebToos_A_2147688310_0
         $x_1_5 = "Presto/2.|D&8&18|.|D&90&890| Version/|D&|" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_WebToos_B_2147688311_0
         $x_1_6 = {5c 49 45 43 74 72 6c 5c [0-8] 5c 49 45 43 74 72 6c 2e 70 64 62 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_WebToos_C_2147689647_0
         $x_5_5 = {c6 44 24 3c 05 6a 0c 68 ?? ?? ?? ?? 8d 4c 24 20 89 6c 24 38 89 5c 24 34 88 5c 24 24 e8 ?? ?? ?? ?? 8d 44 24 18 50 c6 44 24 40 06 e8 ?? ?? ?? ?? c6 44 24 3c 05 83 7c 24 30 10 72 0d 8b 4c 24 1c 51 e8 ?? ?? ?? ?? 83 c4 04 6a 0b 68}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -95,6 +98,7 @@ rule Trojan_Win32_WebToos_D_2147689648_0
         $x_1_5 = "IEctrl.log" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Wenga_A_2147654222_0
         $x_1_3 = "ameganewnewdriver" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

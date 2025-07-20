@@ -18,6 +18,7 @@ rule Trojan_Win32_Floyadi_A_2147709155_0
         $x_1_3 = "\\Ruikop.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))

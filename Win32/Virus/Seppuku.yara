@@ -19,6 +19,7 @@ rule Virus_Win32_Seppuku_A_2147601574_0
         $x_1_4 = {66 35 20 83 66 81 f3 b8 ed fe ce 75 ?? 33 c8 33 d3 4f 75 ?? f7 d2 f7 d1 8b c2 c1 c0 10 66 8b c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

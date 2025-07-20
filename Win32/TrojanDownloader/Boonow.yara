@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Boonow_A_2147718626_0
         $x_1_2 = "Payload downloaded" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule VirTool_Win64_Empire_A_2147788333_0
         $x_1_7 = "get_DefaultCredentials" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule VirTool_Win64_Empire_D_2147844991_0
         $x_1_7 = ".proxy=[system.net.webrequest]::defaultwebproxy;" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule VirTool_Win64_Empire_G_2147895058_0
         $x_1_3 = {40 55 57 48 81 ec ?? ?? 00 00 48 8d 6c 24 ?? 48 8d 7c 24 ?? b9 ?? ?? ?? ?? b8 cc cc cc cc f3 ab}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

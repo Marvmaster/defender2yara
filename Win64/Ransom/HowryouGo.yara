@@ -23,6 +23,7 @@ rule Ransom_Win64_HowryouGo_A_2147767749_0
         $x_1_8 = "main.read_me_name" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule VirTool_Win64_Truesightkiller_A_2147911865_0
         $x_1_5 = {2e 73 79 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

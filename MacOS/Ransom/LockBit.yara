@@ -19,6 +19,7 @@ rule Ransom_MacOS_LockBit_A_2147845051_0
         $x_1_5 = "blake2b-ref.c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_MacOS_LockBit_F_2147916315_0
         $x_1_2 = {76 2d 55 48 89 e5 48 83 ec 08 0f b6 48 17 83 e1 1f 48 83 f9 14 75 0a 48 8b 40 40 48 83 c4 08 5d c3 e8 16 ff ff ff 48 89 d8 48 83 c4 08 5d c3 48 89 44 24 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Ransom_MacOS_LockBit_A_2147920067_0
         $x_1_2 = {aa 6a 6a 38 ab 02 08 8b 6c 41 40 39 8a 01 0a 4a 6a 41 00 39 08 05 00 91 1f 01 09 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

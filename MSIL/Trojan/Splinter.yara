@@ -20,6 +20,7 @@ rule Trojan_MSIL_Splinter_A_2147773977_0
         $x_1_5 = "6D007300770069006E0068006F00730074007300760063002E006E0065007400" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

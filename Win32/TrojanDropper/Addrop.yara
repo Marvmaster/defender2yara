@@ -24,6 +24,7 @@ rule TrojanDropper_Win32_Addrop_C_2147731315_0
         $x_1_9 = "http://www.worldofbooks.org/getchannel?" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

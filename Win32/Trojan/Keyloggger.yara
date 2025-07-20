@@ -17,6 +17,7 @@ rule Trojan_Win32_Keyloggger_A_2147624741_0
         $x_1_3 = {83 d8 03 b9 20 00 00 00 2d ?? ?? ?? ?? 66 89 88 ?? ?? ?? ?? bb 5b 2a 5d 20 bf 56 65 6e 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

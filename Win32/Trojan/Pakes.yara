@@ -18,6 +18,7 @@ rule Trojan_Win32_Pakes_I_2147617480_0
         $x_5_3 = {8b 54 24 14 8b ce 8d 44 1a c1 50 8d 46 04 50 e8 ?? 00 00 00 83 c3 40 83 c5 40 3b df 72 e2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule Trojan_Win32_Pakes_I_2147619552_0
         $x_1_9 = {56 8b 34 81 80 3e e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

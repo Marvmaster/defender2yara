@@ -18,6 +18,7 @@ rule TrojanSpy_MSIL_Keylog_A_2147663203_0
         $x_15_4 = {00 4b 65 79 62 6f 61 72 64 50 72 6f 63 00}  //weight: 15, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 2 of ($x_5_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule TrojanSpy_MSIL_Keylog_B_2147663214_0
         $x_15_2 = "KECABA" ascii //weight: 15
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanSpy_MSIL_Keylog_B_2147663214_1
         $x_1_3 = "Reborn Stub.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule TrojanSpy_MSIL_Keylog_E_2147664327_0
         $x_15_6 = {00 4b 59 42 52 44 4c 43 4b 00}  //weight: 15, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -118,6 +122,7 @@ rule TrojanSpy_MSIL_Keylog_E_2147664327_1
         $x_1_7 = {4b 59 42 52 44 4c 43 4b 00 43 6f 64 65 00 57 50 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -140,6 +145,7 @@ rule TrojanSpy_MSIL_Keylog_E_2147664327_2
         $x_1_3 = {00 4b 59 42 52 44 4c 43 4b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -167,6 +173,7 @@ rule TrojanSpy_MSIL_Keylog_G_2147666863_0
         $x_1_4 = "|qwertyasdfzx" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +197,7 @@ rule TrojanSpy_MSIL_Keylog_I_2147679618_0
         $x_15_4 = {00 4b 45 43 41 42 41 00}  //weight: 15, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +224,7 @@ rule TrojanSpy_MSIL_Keylog_AB_2147684200_0
         $x_2_7 = "C:\\systmp.tmp" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -244,6 +253,7 @@ rule TrojanSpy_MSIL_Keylog_AC_2147719013_0
         $x_1_5 = "shiftandcaps" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

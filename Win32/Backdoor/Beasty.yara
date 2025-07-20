@@ -19,6 +19,7 @@ rule Backdoor_Win32_Beasty_2147499987_0
         $x_1_5 = {47 65 74 5f 43 61 6d 00 47 5f 53}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

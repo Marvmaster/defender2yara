@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Mavtost_A_2147710698_0
         $x_1_6 = "masterhost122" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or

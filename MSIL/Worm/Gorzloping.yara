@@ -21,6 +21,7 @@ rule Worm_MSIL_Gorzloping_A_2147706974_0
         $x_1_7 = {47 65 74 44 72 69 76 65 73 00 67 65 74 5f 49 73 52 65 61 64 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or

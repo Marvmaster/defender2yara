@@ -22,6 +22,7 @@ rule Backdoor_MSIL_Horsamaz_B_2147658350_0
         $x_1_8 = "Unable to connect to server" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -50,6 +51,7 @@ rule Backdoor_MSIL_Horsamaz_A_2147678433_0
         $x_1_5 = "Task Manager killed and re-enabled..." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -19,6 +19,7 @@ rule Trojan_Win32_Miemoes_A_2147622869_0
         $x_1_5 = {69 63 71 00 79 69 6d 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

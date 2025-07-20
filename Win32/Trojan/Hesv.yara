@@ -20,6 +20,7 @@ rule Trojan_Win32_Hesv_AF_2147838633_0
         $x_1_5 = "GDI Malware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Hesv_HNC_2147907919_0
         $x_1_1 = {70 7b b1 42 6c 32 7c 34 41 85 44 f3 34 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Hesv_NIT_2147925280_0
         $x_1_5 = "KJO_UPDATE\\wget.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

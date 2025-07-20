@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Enameler_B_2147825967_0
         $x_1_6 = "html<''K(*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_Enameler_C_2147825970_0
         $x_1_3 = "8du7hv76)(*HUY%^TR$EpW<:>HUijkso" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

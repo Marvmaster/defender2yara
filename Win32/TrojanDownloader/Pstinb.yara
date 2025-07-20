@@ -41,6 +41,7 @@ rule TrojanDownloader_Win32_Pstinb_B_2147729973_0
         $x_1_2 = {52 75 6e 20 25 50 72 6f 67 72 61 6d 44 61 74 61 25 5c [0-32] 2e 76 62 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win32_Mamson_RW_2147796506_0
         $x_1_6 = "_crt_debugger_hook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

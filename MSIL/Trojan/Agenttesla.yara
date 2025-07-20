@@ -24,6 +24,7 @@ rule Trojan_MSIL_Agenttesla_XNHU_2147805871_0
         $x_1_9 = "uniqueDuck" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_MSIL_Agenttesla_EVD_2147821516_0
         $x_1_2 = {d8 fd 46 95 01 a8 30 46 13 47 87 c6 2a f5 7c 0f af c1 bd ce ee 24 20 70 db e8 c7 b7 56 d7 6a a4 78 cd f2 14 ba ba 8b 5c da d4 49 b7 7c 01 52 36}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_MSIL_Agenttesla_EVB_2147822269_0
         $x_1_4 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_MSIL_Agenttesla_EVL_2147822271_0
         $x_1_4 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule Trojan_MSIL_Agenttesla_EVC_2147826545_0
         $x_1_4 = "StrReverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -139,6 +144,7 @@ rule Trojan_MSIL_Agenttesla_ARAD_2147900084_0
         $x_2_1 = {06 07 03 07 91 04 07 04 8e 69 5d 91 61 b4 9c 07 17 d6 0b 07 03 8e 69 32 e7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_MSIL_Agenttesla_ARAD_2147900084_1
         $x_2_1 = {00 11 05 11 04 5d 13 08 11 05 1f 16 5d 13 09 11 05 17 58 11 04 5d 13 0a 07 11 08 91 08 11 09 91 61 13 0b 20 00 01 00 00 13 0c 11 0b 07 11 0a 91 59 11 0c 58 11 0c 5d 13 0d 07 11 08 11 0d d2 9c 11 05 17 58 13 05 00 11 05 11 04 09 17 58 5a fe 04 13 0e 11 0e 2d a9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +188,7 @@ rule Trojan_MSIL_Agenttesla_ARAD_2147900084_2
         $x_2_1 = {20 00 01 00 00 0d 06 17 58 13 0a 06 20 00 b6 00 00 5d 13 04 11 0a 20 00 b6 00 00 5d 13 0b 07 11 0b 91 09 58 13 0c 07 11 04 91 13 0d 11 06 06 1f 16 5d 91 13 0e 11 0d 11 0e 61 13 0f 07 11 04 11 0f 11 0c 59 09 5d d2 9c 06 17 58 0a 06 20 00 b6 00 00 fe 04 13 10 11 10 2d a6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +210,7 @@ rule Trojan_MSIL_Agenttesla_ARAE_2147900124_0
         $x_2_1 = {00 20 00 01 00 00 13 08 11 07 17 58 13 09 11 07 20 00 56 01 00 5d 13 0a 11 09 20 00 56 01 00 5d 13 0b 07 11 0b 91 11 08 58 13 0c 07 11 0a 91 13 0d 08 11 07 1f 16 5d 91 13 0e 11 0d 11 0e 61 13 0f 07 11 0a 11 0f 11 0c 59 11 08 5d d2 9c 00 11 07 17 58 13 07 11 07 20 00 56 01 00 fe 04 13 10 11 10 2d 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -223,6 +232,7 @@ rule Trojan_MSIL_Agenttesla_ARAF_2147900317_0
         $x_2_1 = {20 00 01 00 00 13 07 11 06 17 58 13 08 11 06 20 00 32 01 00 5d 13 09 11 08 20 00 32 01 00 5d 13 0a 07 11 0a 91 11 07 58 13 0b 07 11 09 91 13 0c 08 11 06 1f 16 5d 91 13 0d 11 0c 11 0d 61 13 0e 07 11 09 11 0e 11 0b 59 11 07 5d d2 9c 11 06 17 58 13 06 11 06 20 00 32 01 00 32 a4}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -244,6 +254,7 @@ rule Trojan_MSIL_Agenttesla_ARAG_2147900318_0
         $x_2_1 = {00 20 00 01 00 00 13 08 11 07 17 58 13 09 11 07 20 00 90 01 00 5d 13 0a 11 09 20 00 90 01 00 5d 13 0b 07 11 0b 91 11 08 58 13 0c 07 11 0a 91 13 0d 08 11 07 1f 16 5d 91 13 0e 11 0d 11 0e 61 13 0f 07 11 0a 11 0f 11 0c 59 11 08 5d d2 9c 00 11 07 17 58 13 07 11 07 20 00 90 01 00 fe 04 13 10 11 10 2d 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -265,6 +276,7 @@ rule Trojan_MSIL_Agenttesla_ARAH_2147900319_0
         $x_2_1 = {20 00 01 00 00 13 08 11 07 17 58 13 09 11 07 20 00 90 01 00 5d 13 0a 11 09 20 00 90 01 00 5d 13 0b 07 11 0b 91 11 08 58 13 0c 07 11 0a 91 13 0d 08 11 07 1f 16 5d 91 13 0e 11 0d 11 0e 61 13 0f 07 11 0a 11 0f 11 0c 59 11 08 5d d2 9c 11 07 17 58 13 07 11 07 20 00 90 01 00 32 a4}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +298,7 @@ rule Trojan_MSIL_Agenttesla_ARAI_2147900422_0
         $x_2_1 = {20 00 01 00 00 13 07 11 06 17 58 13 08 11 06 20 00 06 01 00 5d 13 09 11 08 20 00 06 01 00 5d 13 0a 07 11 0a 91 11 07 58 13 0b 07 11 09 91 13 0c 08 11 06 1f 16 5d 91 13 0d 11 0c 11 0d 61 13 0e 07 11 09 11 0e 11 0b 59 11 07 5d d2 9c 11 06 17 58 13 06 11 06 20 00 06 01 00 32 a4}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -307,6 +320,7 @@ rule Trojan_MSIL_Agenttesla_ARAJ_2147900669_0
         $x_2_1 = {00 20 00 01 00 00 13 18 11 17 17 58 13 19 11 17 20 00 ba 00 00 5d 13 1a 11 19 20 00 ba 00 00 5d 13 1b 08 11 1a 91 13 1c 09 11 17 1f 16 5d 91 13 1d 08 11 1b 91 11 18 58 13 1e 11 1c 11 1d 61 13 1f 11 1f 11 1e 59 13 20 08 11 1a 11 20 11 18 5d d2 9c 00 11 17 17 58 13 17 11 17 20 00 ba 00 00 fe 04 13 21 11 21 2d 98}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -328,6 +342,7 @@ rule Trojan_MSIL_Agenttesla_ARAJ_2147900669_1
         $x_2_1 = {00 02 07 91 0c 03 07 03 8e 69 5d 91 0d 16 13 04 16 13 05 2b 41 00 08 17 11 05 1f 1f 5f 62 5f 16 fe 03 13 06 09 17 11 05 1f 1f 5f 62 5f 16 fe 03 13 07 11 06 11 07 61 13 08 11 08 13 09 11 09 2c 0e 11 04 17 11 05 1f 1f 5f 62 d2 60 d2 13 04 00 11 05 17 58 13 05 11 05 1e fe 04 13 0a 11 0a 2d b4 06 07 11 04 9c 00 07 17 58 0b 07 02 8e 69 fe 04 13 0b 11 0b 2d 89}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -349,6 +364,7 @@ rule Trojan_MSIL_Agenttesla_ARAK_2147900811_0
         $x_2_1 = {00 20 00 01 00 00 13 07 11 06 17 58 13 08 11 06 20 00 9a 01 00 5d 13 09 11 08 20 00 9a 01 00 5d 13 0a 07 11 09 91 13 0b 1f 16 8d ?? ?? ?? 01 25 d0 ?? 00 00 04 28 ?? ?? ?? 0a 11 06 1f 16 5d 91 13 0c 07 11 0a 91 11 07 58 13 0d 11 0b 11 0c 61 13 0e 11 0e 11 0d 59 13 0f 07 11 09 11 0f 11 07 5d d2 9c 00 11 06 17 58 13 06 11 06 20 00 9a 01 00 fe 04 13 10 11 10 2d 87}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -370,6 +386,7 @@ rule Trojan_MSIL_Agenttesla_ARAN_2147900818_0
         $x_2_1 = {20 00 01 00 00 13 04 09 17 58 09 20 00 9a 01 00 5d 13 05 20 00 9a 01 00 5d 13 06 07 11 05 91 13 07 1f 16 8d ?? ?? ?? 01 25 d0 ?? 00 00 04 28 ?? ?? ?? 0a 09 1f 16 5d 91 13 08 07 11 06 91 11 04 58 13 09 11 07 11 08 61 11 09 59 13 0a 07 11 05 11 0a 11 04 5d d2 9c 09 17 58 0d 09 20 00 9a 01 00 32 9d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -391,6 +408,7 @@ rule Trojan_MSIL_Agenttesla_ARAQ_2147900889_0
         $x_2_1 = {11 08 11 07 5d 13 0b 11 04 11 0b 91 11 05 11 08 1f 16 5d 91 61 13 0c 11 0c 11 04 11 08 17 58 11 07 5d 91 59 20 00 01 00 00 58 20 00 01 00 00 5d 13 0d 11 04 11 0b 11 0d d2 9c 11 08 17 58 13 08 11 08 11 07 11 06 17 58 5a 32 b5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +430,7 @@ rule Trojan_MSIL_Agenttesla_PPGH_2147921873_0
         $x_10_1 = {03 12 01 28 7b 00 00 0a 6f ?? 00 00 0a 00 09 18 fe 04 16 fe 01 13 06 11 06 2c 0e 03 12 01 28 ?? 00 00 0a 6f ?? 00 00 0a 00 09 19 fe 01 13 07 11 07 2c 0e}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -433,6 +452,7 @@ rule Trojan_MSIL_Agenttesla_PPMH_2147923244_0
         $x_10_1 = {03 12 02 28 ?? 00 00 0a 6f ?? 00 00 0a 00 2b 00 03 12 02 28 ?? 00 00 0a 6f ?? 00 00 0a 00 2b 00 03 12 02 28 ?? 00 00 0a 6f ?? 00 00 0a 00 2b 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -454,6 +474,7 @@ rule Trojan_MSIL_Agenttesla_PGA_2147942842_0
         $x_5_1 = {02 05 0e 04 6f ?? 00 00 0a 0a 06 0e 05 28 ?? 00 00 06 0b 04 03 6f ?? 00 00 0a 59 0c 08 19 32 0a 03 07 0e 05 28 ?? 00 00 06 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -476,6 +497,7 @@ rule Trojan_MSIL_Agenttesla_PGA_2147942842_1
         $x_1_2 = {68 00 74 00 74 00 70 00 73 00 3a 00 2f 00 2f 00 63 00 69 00 61 00 2e 00 74 00 66 00 2f 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 2e 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -505,6 +527,7 @@ rule Trojan_MSIL_Agenttesla_PGY_2147943194_0
         $x_5_9 = {28 04 00 00 06 72 01 00 00 70 72 33 00 00 70 28 05 00 00 06 72 4d 00 00 70 72 99 00 00 70 28 06 00 00 06 20 00 00 00 00 7e ?? ?? 00 04 7b ?? ?? 00 04 ?? 0f 00 00 00 26 20 00 00 00 00 38 04 00 00 00 fe 0c ?? 00 45 01 00 00 00 05 00 00 00 38 00 00 00 00 dd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((3 of ($x_5_*))) or
@@ -530,6 +553,7 @@ rule Trojan_MSIL_Agenttesla_PGAT_2147945221_0
         $x_5_1 = {11 08 11 1c 11 0c 6f ?? ?? 00 0a 23 00 00 00 00 00 00 59 40 5a a1 11 09 11 1c 11 0c 6f ?? ?? 00 0a 23 00 00 00 00 00 00 24 40 5a 23 00 00 00 00 00 00 14 40 59 a1 11 1c 17 d6 13 1c 11 1c 11 1b 31 be}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

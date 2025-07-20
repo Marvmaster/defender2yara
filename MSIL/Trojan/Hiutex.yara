@@ -23,6 +23,7 @@ rule Trojan_MSIL_Hiutex_A_2147645009_0
         $x_1_8 = {77 69 6e 33 32 5f 6c 6f 67 69 63 61 6c 64 69 73 6b 2e 64 65 76 69 63 65 69 64 3d 22 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

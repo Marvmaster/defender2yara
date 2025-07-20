@@ -17,6 +17,7 @@ rule Virus_Win32_Enot_A_2147599883_0
         $x_1_3 = {50 8b 7d e4 b9 28 00 00 00 b0 00 f3 aa 8b 7d e4 c7 07 2e 74 6c 73 8b 75 f4 8b 46 24 89 47 08 8f 47 0c 57 8b f0 56 8b 75 f4 8b 46 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

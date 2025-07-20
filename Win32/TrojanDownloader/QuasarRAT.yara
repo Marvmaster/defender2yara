@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_QuasarRAT_B_2147906570_0
         $x_2_1 = {83 c4 10 b9 00 10 00 00 8b 45 ?? 03 c1 89 45 ?? 03 d9 89 5d ?? 83 d6 ?? 89 75 ?? 2b f9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

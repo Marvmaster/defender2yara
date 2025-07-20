@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Finkmilt_A_2147645499_0
         $x_1_5 = "\\drivers\\etc\\host5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDropper_Win32_Finkmilt_B_2147650676_0
         $x_1_4 = "\\drivers\\etc\\host5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanDropper_Win32_Finkmilt_C_2147650980_0
         $x_1_3 = {5c 64 72 69 76 65 72 73 5c 65 74 63 5c 68 6f 73 74 09 01 01 01 01 01 01 01 01 01 31 32 33 34 35 36 37 38 39}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

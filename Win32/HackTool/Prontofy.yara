@@ -24,6 +24,7 @@ rule HackTool_Win32_Prontofy_A_2147838290_0
         $x_1_9 = "854A20FB-2D44-457D-992F-EF13785D2B51" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

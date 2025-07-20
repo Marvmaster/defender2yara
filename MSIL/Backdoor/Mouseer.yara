@@ -16,6 +16,7 @@ rule Backdoor_MSIL_Mouseer_A_2147708188_0
         $x_1_2 = {00 64 72 75 6d 73 61 6d 6f 72 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

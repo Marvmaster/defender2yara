@@ -17,6 +17,7 @@ rule Ransom_Win32_DJVU_KD_2147851450_0
         $x_1_2 = {33 cb 31 4c 24 10 8b 44 24 10 29 44 24 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

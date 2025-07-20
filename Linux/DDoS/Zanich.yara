@@ -16,6 +16,7 @@ rule DDoS_Linux_Zanich_A_2147691151_0
         $x_1_2 = {73 65 64 20 2d 69 20 2d 65 20 27 32 20 69 25 73 2f 25 73 27 20 2f 65 74 63 2f 72 63 2e 6c 6f 63 61 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule DDoS_Linux_Zanich_B_2147691152_0
         $x_4_4 = "COMMAND_DDOS_STOP" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_4_*))) or
             (all of ($x*))
@@ -63,6 +65,7 @@ rule DDoS_Linux_Zanich_C_2147691153_0
         $x_1_2 = {6d 76 20 44 44 6f 73 43 6c 69 65 6e 74 2e 62 61 63 6b 20 44 44 6f 73 43 6c 69 65 6e 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_MacOS_Padzer_A_2147756726_0
         $x_1_4 = "/Applications/Final\\ Cut\\ Pro.app/Contents/MacOS/.Final\\ Cut\\ Pro" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Trojan_MacOS_Padzer_B_2147842817_0
         $x_1_2 = {fe ff 74 2d 48 85 c9 75 14 48 8d 45 d8 48 8d 4d d7 48 89 4b 30 48 89 4b 28 48 89 43 38 44 88 31 48 8b 53 28 48 8b 4b 30 48 ff c1 48 89 4b 30 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

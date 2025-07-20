@@ -16,6 +16,7 @@ rule Trojan_Win32_Kadena_D_2147695438_0
         $x_1_1 = {37 48 45 76 ?? 74 47 73 74 ?? 72 72 6f 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

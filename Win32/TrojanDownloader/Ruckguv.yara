@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Ruckguv_A_2147693047_0
         $x_1_4 = "uggc://" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

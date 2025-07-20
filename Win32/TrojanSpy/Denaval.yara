@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Denaval_A_2147605822_0
         $x_1_6 = {72 00 69 00 76 00 65 00 72 00 73 00 00 00 16 00 00 00 6d 00 73 00 6e 00 6d 00 73 00 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

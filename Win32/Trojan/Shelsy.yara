@@ -21,6 +21,7 @@ rule Trojan_Win32_Shelsy_B_2147827450_0
         $x_1_6 = "C:\\TEMP\\Gaardmand.qui" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

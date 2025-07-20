@@ -18,6 +18,7 @@ rule HackTool_Linux_Sandcat_A_2147894006_0
         $x_1_3 = "/payload.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

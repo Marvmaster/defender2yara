@@ -17,6 +17,7 @@ rule Virus_Win32_Almanahe_A_2147609041_0
         $n_1_2 = "This folder has been created by SmartCOP Anti-Virus to immunize" ascii //weight: -1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -40,6 +41,7 @@ rule Virus_Win32_Almanahe_PABR_2147899054_0
         $x_1_2 = {06 ec a4 bf 8c 34 bf da 94 a6 b3 ce 4e e4 4c 5c cc 95}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Virus_Win32_Almanahe_PACA_2147899055_0
         $x_1_2 = {b9 9e 04 00 00 80 04 19 a2 e2 fa}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Rogue_Win32_FakeCog_140896_0
         $x_2_4 = {50 6c 65 61 73 65 2c 20 6d 61 72 6b 20 74 68 65 20 72 65 61 73 6f 6e 20 66 6f 72 20 72 65 6d 6f 76 65 20 61 6e 74 69 76 69 72 75 73 20 73 6f 66 74 77 61 72 65 21 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -49,6 +50,7 @@ rule Rogue_Win32_FakeCog_140896_1
         $x_1_8 = "support.png" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -76,6 +78,7 @@ rule Rogue_Win32_FakeCog_140896_2
         $x_1_5 = "A8954909-1F0F-41A5-A7FA-3B376D69E226" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -109,6 +112,7 @@ rule Rogue_Win32_FakeCog_140896_3
         $x_1_9 = {63 6f 72 65 65 78 74 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -136,6 +140,7 @@ rule Rogue_Win32_FakeCog_140896_4
         $x_1_3 = "coreguard" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -162,6 +167,7 @@ rule Rogue_Win32_FakeCog_140896_5
         $x_1_3 = {d8 3d 87 88 0a 00 3f 00 00 00 3f 08 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -189,6 +195,7 @@ rule Rogue_Win32_FakeCog_140896_6
         $x_1_4 = {75 73 72 70 72 6f 74 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -214,6 +221,7 @@ rule Rogue_Win32_FakeCog_140896_7
         $x_1_2 = "Single User License Grant: GuardSoft, Ltd. (\"GuardSoft\")" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -239,6 +247,7 @@ rule Rogue_Win32_FakeCog_140896_8
         $x_1_6 = {20 50 72 6f 74 65 63 74 69 6f 6e 00 (10 00 59 6f|13 00 44 69 67 69 74)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
@@ -266,6 +275,7 @@ rule Rogue_Win32_FakeCog_140896_9
         $x_1_3 = {63 00 68 00 72 00 6f 00 6d 00 65 00 2e 00 65 00 78 00 65 00 00 00 00 00 69 00 65 00 78 00 70 00 6c 00 6f 00 72 00 65 00 2e 00 65 00 78 00 65 00 00 00 00 00 63 00 6f 00 64 00 65 00 63 00 70 00 61 00 63 00 6b 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -288,6 +298,7 @@ rule Rogue_Win32_FakeCog_140896_10
         $x_1_3 = {00 66 69 72 65 77 61 6c 6c 2e 64 6c 6c 00 [0-10] 65 78 74 2e 64 6c 6c 00 [0-3] 55 6e 69 6e 73 74 61 6c 6c 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -311,6 +322,7 @@ rule Rogue_Win32_FakeCog_140896_11
         $x_1_4 = "\\_favdata.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -338,6 +350,7 @@ rule Rogue_Win32_FakeCog_140896_12
         $x_1_5 = "cgupdate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -367,6 +380,7 @@ rule Rogue_Win32_FakeCog_140896_13
         $x_1_6 = {4d 00 69 00 64 00 64 00 6c 00 65 00 20 00 52 00 69 00 73 00 6b 00 00 00 48 00 69 00 67 00 68 00 20 00 52 00 69 00 73 00 6b 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -393,6 +407,7 @@ rule Rogue_Win32_FakeCog_140896_14
         $x_2_7 = "Defense Center extension" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -424,6 +439,7 @@ rule Rogue_Win32_FakeCog_140896_15
         $x_1_7 = "%s/core.cga" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -460,6 +476,7 @@ rule Rogue_Win32_FakeCog_140896_16
         $x_1_13 = "http://%s/any2/%s-direct.ex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -499,6 +516,7 @@ rule Rogue_Win32_FakeCog_140896_17
         $x_1_15 = "948048601436" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

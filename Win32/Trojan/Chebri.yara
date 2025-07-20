@@ -17,6 +17,7 @@ rule Trojan_Win32_Chebri_B_2147651790_0
         $x_1_3 = "DANCHODANCHEV_AND_BRIANKREBS_GOT_MARRIED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

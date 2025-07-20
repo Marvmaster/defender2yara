@@ -17,6 +17,7 @@ rule Virus_Win32_Ruirui_A_2147637548_0
         $x_1_2 = {e8 00 00 00 00 58 2d ?? ?? ?? ?? c2 04 00 ?? ?? 58 5a 50 66 81 3a 4d 5a 75 11 8b 42 3c 66 81 3c 10 50 45 75 06 b8 01 00 00 00 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

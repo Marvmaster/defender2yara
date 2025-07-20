@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Ranbyus_A_2147621588_0
         $x_1_3 = {78 2e 6c 63 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

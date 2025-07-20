@@ -20,6 +20,7 @@ rule Trojan_Win32_Nuwvult_A_2147624824_0
         $x_1_6 = "*Skype* conversa" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or

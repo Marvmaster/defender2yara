@@ -23,6 +23,7 @@ rule Backdoor_MSIL_Turla_DB_2147772390_0
         $x_1_8 = "PublicKeyToken=b77a5c561934e089" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

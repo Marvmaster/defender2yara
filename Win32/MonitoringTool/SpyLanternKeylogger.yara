@@ -18,6 +18,7 @@ rule MonitoringTool_Win32_SpyLanternKeylogger_17955_0
         $x_2_4 = "report_key_bottom.templ" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule MonitoringTool_Win32_SpyLanternKeylogger_17955_1
         $x_1_4 = "__ITSNOTROOM__" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule MonitoringTool_Win32_SpyLanternKeylogger_17955_2
         $x_1_3 = {53 70 79 20 4c 61 6e 74 65 72 6e 20 4b 65 79 6c 6f 67 67 65 72 5c [0-53] 3c 43 6f 6e 66 69 67 75 72 61 74 69 6f 6e 3e [0-32] 3c 55 6e 69 71 49 44 20 6e 61 6d 65 3d 22}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Edogom_A_2147690137_0
         $x_1_5 = {5c 64 65 73 6b 74 6f 70 73 2e 64 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_Edogom_B_2147691408_0
         $x_1_3 = {04 12 2b 34 37 55 47 4a 28 6b 43 23 32 4c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule TrojanDownloader_Win32_Edogom_C_2147691414_0
         $x_1_4 = {68 74 74 70 3a 2f 2f 77 77 77 2e 33 64 76 69 64 65 6f 2e 72 75 2f 6e 65 77 2f 33 64 2f [0-16] 2e 70 68 70 3f 70 6c 61 79 3d 31 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

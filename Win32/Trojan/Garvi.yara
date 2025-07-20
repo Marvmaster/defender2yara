@@ -23,6 +23,7 @@ rule Trojan_Win32_Garvi_PAA_2147781311_0
         $x_1_8 = "TerminateProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Garvi_DF_2147822004_0
         $x_1_2 = {8a 18 0f b6 14 07 0f be cb 3b ca 75 5f 84 db 74 07 46 40 83 fe 08 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

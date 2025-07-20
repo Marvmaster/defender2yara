@@ -16,6 +16,7 @@ rule Trojan_Win64_Prowloc_RPW_2147807731_0
         $x_1_1 = {0f be 54 04 20 83 ea 09 88 54 04 20 48 ff c0 48 83 f8 09 72 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

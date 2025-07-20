@@ -16,6 +16,7 @@ rule Trojan_Win32_Tacorti_A_2147630573_0
         $x_1_2 = {50 8b 07 8b 40 14 03 45 f0 50 8b 07 8b 40 0c 03 45 ec 50 53 ff 15 4c 18 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

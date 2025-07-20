@@ -25,6 +25,7 @@ rule Trojan_Linux_Winnti_2147764557_0
         $x_1_9 = "CB2FA36AAA9541F0Unknown" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (8 of ($x*))
 }
 

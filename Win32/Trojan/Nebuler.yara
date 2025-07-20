@@ -18,6 +18,7 @@ rule Trojan_Win32_Nebuler_F_2147606494_0
         $x_1_4 = "m3d5rt10" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_Nebuler_B_2147609387_0
         $x_1_11 = "iphlpapi.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_Nebuler_C_2147609388_0
         $x_1_3 = "&v=%d&b=%d&id=%X&cnt=%s&q=%X" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -106,6 +109,7 @@ rule Trojan_Win32_Nebuler_D_2147609390_0
         $x_1_10 = {55 52 4c 41 6e 64 45 78 69 74 43 6f 6d 6d 61 6e 64 73 45 6e 61 62 6c 65 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -136,6 +140,7 @@ rule Trojan_Win32_Nebuler_A_2147609391_0
         $x_5_4 = {00 69 6e 73 74 00 69 6e 73 74 32 00 6d 6f 75 6e 74 00 73 74 61 72 74 75 70 00 74 65 73 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -165,6 +170,7 @@ rule Trojan_Win32_Nebuler_G_2147611130_0
         $x_5_7 = {53 68 75 74 64 6f 77 6e ?? ?? ?? ?? 53 74 61 72 74 75 70 ?? ?? ?? ?? 54 65 73 74 19 00 2e 64 6c 6c ?? ?? ?? ?? 49 6e 73 74 ?? ?? ?? ?? 52 75 6e}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*))) or
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
@@ -199,6 +205,7 @@ rule Trojan_Win32_Nebuler_E_2147611729_0
         $x_1_9 = {0c 52 5f 49 52 58 52 0c 72 6f 26 2f 28 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -223,6 +230,7 @@ rule Trojan_Win32_Nebuler_F_2147615333_0
         $x_1_4 = {53 68 75 74 64 6f 77 6e [0-4] 53 74 61 72 74 75 70 [0-4] 54 65 73 74 19 2e 64 6c 6c [0-4] 49 6e 73 74 [0-4] 52 75 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -249,6 +257,7 @@ rule Trojan_Win32_Nebuler_G_2147616736_0
         $x_1_6 = {5b 62 72 61 6e 64 5d 00 5b 76 65 72 73 69 6f 6e 5d 00 00 00 5b 75 69 64 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -278,6 +287,7 @@ rule Trojan_Win32_Nebuler_H_2147616782_0
         $x_1_9 = {81 bd 28 f4 ff ff 00 05 01 02 01 01 01 8e 90 98 9a 9c 00 00 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -302,6 +312,7 @@ rule Trojan_Win32_Nebuler_J_2147625561_0
         $x_1_1 = {4d 53 53 4d 53 47 53 00 25 73 5c 25 73 00 00 00 50 49 44 00 4c 49 44 00 65 6d 70 74 79 00 00 00 5c 57 69 6e 49 6e 69 74 2e 49 6e 69 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -323,6 +334,7 @@ rule Trojan_Win32_Nebuler_J_2147631947_0
         $x_1_2 = {b8 68 58 4d 56 b9 14 00 00 00 66 ba 58 56 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -346,6 +358,7 @@ rule Trojan_Win32_Nebuler_K_2147632543_0
         $x_1_4 = {eb 28 8b 4d 08 89 0d ?? ?? ?? 10 68 00 04 00 00 68 ?? ?? ?? 10 8b 55 08 52 ff 15 ?? ?? ?? 10 85 c0 75 07 c6 05 ?? ?? ?? 10 00 b8 01 00 00 00 8b e5 5d c2 0c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -371,6 +384,7 @@ rule Trojan_Win32_Nebuler_I_2147639579_0
         $x_1_1 = {8b 95 10 ff ff ff 3b 55 f4 73 37 6a 00 ff 15 ?? ?? ?? ?? 89 45 f0 8b 45 08 03 85 10 ff ff ff 0f be 48 01 8b 95 10 ff ff ff 0f be 82 c0 24 01 10 33 c8 8b 95 0c ff ff ff 03 95 10 ff ff ff 88 0a eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -391,6 +405,7 @@ rule Trojan_Win32_Nebuler_Q_2147642145_0
         $x_1_1 = {0f be 42 01 8b 8d ?? ?? ?? ?? 0f be 91 ?? ?? ?? ?? 33 c2 8b 8d ?? ?? ?? ?? 03 8d ?? ?? ?? ?? 88 01 09 00 8b 55 08 03 95}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -416,6 +431,7 @@ rule Trojan_Win32_Nebuler_R_2147651150_0
         $x_1_6 = "&SuiMsk=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -449,6 +465,7 @@ rule Trojan_Win32_Nebuler_R_2147651150_1
         $x_1_11 = {73 74 6f 70 5f 66 75 6e 63 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or

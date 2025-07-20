@@ -17,6 +17,7 @@ rule PWS_Win32_Dexfom_2147610012_0
         $x_1_3 = {03 42 0c 89 47 0c c7 07 2e 7a 64 00 8b 4a 14 03 4a 10 ff 76 3c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

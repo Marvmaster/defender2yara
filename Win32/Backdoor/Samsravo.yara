@@ -22,6 +22,7 @@ rule Backdoor_Win32_Samsravo_A_2147691983_0
         $x_1_8 = {75 f9 2b d1 33 c9 85 d2 7e 13 8a 81 ?? ?? 41 00 34 fd 88 81 ?? ?? 41 00 41 3b ca 7c ed}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

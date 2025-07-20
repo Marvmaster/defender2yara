@@ -19,6 +19,7 @@ rule Ransom_MSIL_CobraLocker_DA_2147772561_0
         $x_1_4 = "EncryptFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_MSIL_CobraLocker_DB_2147772568_0
         $x_1_4 = "Cobra_Locker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Ransom_MSIL_CobraLocker_DC_2147773262_0
         $x_1_5 = "GetFiles" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Ransom_MSIL_CobraLocker_DD_2147775152_0
         $x_1_5 = "Start_Encrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule Ransom_MSIL_CobraLocker_DE_2147775153_0
         $x_1_5 = ".locked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

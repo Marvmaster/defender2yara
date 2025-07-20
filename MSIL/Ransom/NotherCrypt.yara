@@ -19,6 +19,7 @@ rule Ransom_MSIL_NotherCrypt_PA_2147788299_0
         $x_1_4 = "\\NOTHERSPACE_USE.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

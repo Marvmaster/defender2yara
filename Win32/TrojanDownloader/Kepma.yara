@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Kepma_A_2147679080_0
         $x_1_3 = {77 65 6d 61 6b 65 70 70 6f 70 5c 63 6e 73 2e 64 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

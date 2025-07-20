@@ -21,6 +21,7 @@ rule Trojan_Win32_WebHijack_A_2147641882_0
         $x_1_6 = "\\Device\\Tcp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -52,6 +53,7 @@ rule Trojan_Win32_WebHijack_A_2147641883_0
         $x_1_8 = "cutil_driver_OpenDevice" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or

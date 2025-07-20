@@ -16,6 +16,7 @@ rule Trojan_Win32_Zupd_A_2147629017_0
         $x_1_2 = {43 3a 5c 57 49 4e 44 4f 57 53 5c 73 79 73 74 65 6d 33 32 5c 61 70 70 65 6e 64 2e 65 78 65 00 65 61 79 73 72 68 72 00 6b 65 72 6e 65 6c 33 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

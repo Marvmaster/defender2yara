@@ -20,6 +20,7 @@ rule Trojan_Win32_Ovoxual_A_2147630357_0
         $x_1_6 = {8b 4c 24 48 3b c1 c7 44 24 54 07 00 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Ovoxual_B_2147653577_0
         $x_1_5 = {8b 7d 0c 57 c7 07 07 00 01 00 ff 76 04 ff 15 ?? ?? ?? ?? 8b 5d 10 8d 45 08 50 8b 87 a4 00 00 00 6a 04 83 c0 08 53 50 ff 36 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

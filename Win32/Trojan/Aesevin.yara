@@ -17,6 +17,7 @@ rule Trojan_Win32_Aesevin_B_2147628643_0
         $x_1_3 = {62 6f 64 79 00 69 6e 6e 65 72 48 54 4d 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_MSIL_Ffloq_A_2147706176_0
         $x_1_3 = "ConfuserEx v0." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

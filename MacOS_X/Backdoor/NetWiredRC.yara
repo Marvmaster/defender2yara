@@ -23,6 +23,7 @@ rule Backdoor_MacOS_X_NetWiredRC_A_2147661504_0
         $x_10_9 = "RGI28DQ30QB8Q1F7" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 6 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule Trojan_Win32_DistTrack_A_2147731181_0
         $x_1_2 = {e8 d3 e6 ff ff bb 11 00 00 00 b8 ?? ?? ?? ?? e8 e4 be ff ff 8d 4c 24 20 51 89 44 24 24 c7 44 24 28 ?? ?? ?? ?? 89 7c 24 2c 89 7c 24 30 ff 15 ?? ?? ?? ?? 85 c0 75 36}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_DistTrack_B_2147731267_0
         $x_1_6 = "*.txt?shutter" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_DistTrack_C_2147731412_0
         $x_1_9 = "mz{qwvdXwtqkqm{d[" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

@@ -25,6 +25,7 @@ rule Trojan_Win32_ETWKeyLogger_2147759679_0
         $x_1_10 = "ignoring non-usb keyboard device: 0x{0:X" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or

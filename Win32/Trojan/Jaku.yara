@@ -18,6 +18,7 @@ rule Trojan_Win32_Jaku_A_2147711552_0
         $x_1_3 = "|WindowsUpdate|systeminfo;net use;net user;" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Jaku_B_2147711553_0
         $x_1_4 = {25 73 5c 25 73 2e 69 66 6f 00 00 00 25 73 2e 69 66 6f 00 00 25 73 5c 25 73 00 00 00 25 73 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Jaku_C_2147711554_0
         $x_1_4 = {25 00 73 00 5c 00 2a 00 2e 00 2a 00 00 00 00 00 5c 00 00 00 25 00 73 00 25 00 73 00 00 00 00 00 25 00 73 00 3a 00 5c 00 2a 00 2e 00 2a 00 00 00 25 00 63 00 3a 00 5c 00 00 00 00 00 5c 00 5c 00 3f 00 5c 00 25 00 63 00 3a 00 00 00 25 00 50 00 72 00 6f 00 67 00 72 00 61 00 6d 00 46 00 69 00 6c 00 65 00 73 00 25 00 5c 00 33 00 36 00 30 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_Jaku_F_2147711599_0
         $x_1_1 = {5c 73 65 6c 66 2e 62 61 74 00 69 6d 20 77 75 61 75 63 6c 74 2e 65 78 65 0d 0a 0d 0a 64 65 6c 20 2f 66 20 2f 71 20 22 25 55 53 45 52 50 52 4f 46 49 4c 45 25 5c 53 74 61 72 74 75 70 5c 77 75 61 75 63 6c 74 2e 65 78 65 22 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

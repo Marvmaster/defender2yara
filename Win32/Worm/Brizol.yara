@@ -23,6 +23,7 @@ rule Worm_Win32_Brizol_2147596498_0
         $x_1_9 = {2e 4e 45 54 00 00 00 00 2e 6e 65 74 00 00 00 00 2e 43 4f 4d 00 00 00 00 2e 63 6f 6d 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Ploscato_D_2147680395_0
         $x_1_6 = "dump grabber" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanSpy_Win32_Ploscato_A_2147685065_0
         $x_1_2 = "z:\\Projects\\Rescator\\uploader\\Debug\\scheck.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule TrojanSpy_Win32_Ploscato_B_2147685087_0
         $x_1_2 = "\\Rescator\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule TrojanSpy_Win32_Ploscato_C_2147689094_0
         $x_1_3 = {72 bf 33 ff 0f b6 05 ?? ?? ?? ?? 50 0f b6 87 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 32 05 ?? ?? ?? ?? 47 88 87 ?? ?? ?? ?? 59 59 81 ff 0c 01 00 00 72 d4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule TrojanSpy_Win32_Ploscato_E_2147690069_0
         $x_1_6 = {73 4e 62 72 6c 53 66 79 42 4d 32 50 52 35 37 54 71 33 51 65 56 70 6e 57 34 2b 77 38 4a 4f 48 4b 36 43 6f 67 75 59 78 76 6b 2f 49 64 5a 30 4c 58 6a 55 61 41 68 47 7a 44 46 6d 63 74 39 45 69 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule TrojanSpy_Win32_Ploscato_F_2147690070_0
         $x_1_4 = {62 65 61 63 6f 6e 2e 25 73 2e 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

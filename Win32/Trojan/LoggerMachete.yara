@@ -16,6 +16,7 @@ rule Trojan_Win32_LoggerMachete_B_2147741868_0
         $x_1_2 = "py2exe\\boot_common.pyt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

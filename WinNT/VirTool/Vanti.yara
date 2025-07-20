@@ -21,6 +21,7 @@ rule VirTool_WinNT_Vanti_2147574984_0
         $x_1_7 = "Device\\XRW005" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_4_*) and 4 of ($x_1_*))) or
@@ -54,6 +55,7 @@ rule VirTool_WinNT_Vanti_2147574984_1
         $x_1_8 = "\\DosDevices\\VXP005" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -97,6 +99,7 @@ rule VirTool_WinNT_Vanti_A_2147574989_0
         $x_8_19 = {8a 10 8a ca 3a 16 75 1a 3a cb 74 12 8a 50 01 8a ca 3a 56 01 75 0c 40 40 46 46 3a cb 75 e2 33 c0 eb 05 1b c0 83 d8 ff 3b c3 74 10 81 c7 06 01 00 00 81 ff 48 3a 01 00 7c b6 eb 07}  //weight: 8, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 1 of ($x_7_*) and 2 of ($x_6_*))) or
             ((2 of ($x_8_*) and 2 of ($x_6_*))) or
@@ -171,6 +174,7 @@ rule VirTool_WinNT_Vanti_B_2147601753_0
         $x_1_11 = "KeServiceDescriptorTable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -220,6 +224,7 @@ rule VirTool_WinNT_Vanti_C_2147605858_0
         $x_1_11 = {5c 69 33 38 36 5c 6e 6f 64 33 32 [0-8] 2e 73 79 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 5 of ($x_1_*))) or
             ((4 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -256,6 +261,7 @@ rule VirTool_WinNT_Vanti_D_2147617574_0
         $x_1_3 = {ff ff fe ff 0f 22 (c0|c1|c2|c3|c6|c7) fa e8 ?? 00 00 00 ff 15 ?? ?? ?? ?? fb 8b (45|4d|55|5d|75|7d) fc 0f 22 (c0|c1|c2|c3|c6|c7) 08 00 [0-1] 0f 20 (c0|c1|c2|c3|c6|c7) 89 (45|4d|55|5d|75|7d) fc (25|81 (e1|e2|e3|e6|e7))}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -283,6 +289,7 @@ rule VirTool_WinNT_Vanti_E_2147629591_0
         $x_2_4 = {20 32 54 76 98 0f 84 ?? 01 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Remetrac_A_2147618569_0
         $x_1_2 = {8b d6 83 c2 04 88 02 c6 03 e9 47 8b 45 f4 89 07 8d 45 f0 50 8b 45 f0 50 6a 05 53 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

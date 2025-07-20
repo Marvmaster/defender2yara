@@ -18,6 +18,7 @@ rule Ransom_MSIL_Crypticware_PA_2147945539_0
         $x_3_3 = "Your important files has been encrypted with Crypticware." wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

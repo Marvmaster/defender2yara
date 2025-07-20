@@ -25,6 +25,7 @@ rule HackTool_Linux_CloudFox_A_2147946362_0
         $x_2_11 = "awsservicemap" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

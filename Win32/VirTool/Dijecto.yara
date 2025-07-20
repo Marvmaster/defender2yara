@@ -19,6 +19,7 @@ rule VirTool_Win32_Dijecto_B_2147695869_0
         $x_1_5 = {dc 5d 18 df e0 f6 c4 01 75 14 8b 44 24 1c 40 3d 98 3a 00 00 89 44 24 1c 0f 8c 4e fe ff ff 8b 4d 10 8b 54 24 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_QuarkBandit_A_2147733754_0
         $x_1_2 = {c7 45 b8 49 6f 63 70 66 c7 45 bc 53 5f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_Win32_QuarkBandit_A_2147733754_1
         $x_2_14 = "D$456D" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or

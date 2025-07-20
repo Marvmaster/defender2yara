@@ -17,6 +17,7 @@ rule Trojan_Win32_GhostRAT_AA_2147745411_0
         $x_1_2 = {30 11 ff 45 ?? c3 1a 00 be 7c 44 00 00 0f be 04 02 99 f7 fe b8 ?? ?? ?? ?? 80 ea 3f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_GhostRAT_MA_2147817603_0
         $x_1_2 = {8b 45 08 8a 08 32 4d 13 02 4d 13 88 08 40 89 45 08 b8 ?? ?? ?? ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_GhostRAT_MA_2147817603_1
         $x_2_3 = "RunOnlyOneInstance" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_GhostRAT_MC_2147817604_0
         $x_1_4 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Win32_GhostRAT_MB_2147819114_0
         $x_1_3 = {8d 4c 24 48 8d 54 24 10 51 68 3f 00 0f 00 6a 00 52 68 02 00 00 80 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_Win32_GhostRAT_BS_2147837840_0
         $x_1_4 = "47.93.60.63:8000/exploror.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule Trojan_Win32_GhostRAT_A_2147891717_0
         $x_2_1 = {0f b6 00 8b 55 f4 31 d0 83 f0 ?? 89 c2 8b 45 ?? 05 20 ?? ?? ?? 88 10 8b 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +182,7 @@ rule Trojan_Win32_GhostRAT_B_2147896327_0
         $x_2_1 = {8d 4d 88 ff d6 80 65 0b 00 ff 15 ?? 21 40 00 99 b9 00 01 00 00 68 00 28 00 00 f7 f9 8d 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +204,7 @@ rule Trojan_Win32_GhostRAT_C_2147896771_0
         $x_2_1 = {8b c7 5f 5e 8b e5 5d ?? 8a 04 39 2c ?? 34 ?? 88 04 39 41}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -217,6 +226,7 @@ rule Trojan_Win32_GhostRAT_D_2147899008_0
         $x_2_1 = {0f be 08 81 e9 ?? ?? ?? ?? 8b 55 ?? 03 55 ?? 88 0a 8b 45 ?? 03 45 ?? 0f be 08 83 f1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -248,6 +258,7 @@ rule Trojan_Win32_GhostRAT_RHA_2147914342_0
         $x_2_11 = {50 45 00 00 4c 01 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0b 01 06 00 00 c6 00 00 00 82 00 00 00 00 00 00 08 62}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +287,7 @@ rule Trojan_Win32_GhostRAT_SPHF_2147935751_0
         $x_1_8 = "timeout /t 30 /nobreak" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

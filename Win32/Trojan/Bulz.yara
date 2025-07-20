@@ -16,6 +16,7 @@ rule Trojan_Win32_Bulz_SIB_2147780527_0
         $x_10_1 = {60 31 c9 b9 ?? ?? ?? ?? 51 59 83 f9 ?? 75 [0-32] 61 b8 ?? ?? ?? ?? 60 31 c9 b9 ?? ?? ?? ?? 51 59 83 f9 ?? 75 [0-32] 61 50 60 31 c9 b9 ?? ?? ?? ?? 51 59 83 f9 ?? 75 [0-32] 61 68 ?? ?? ?? ?? 60 31 c9 b9 ?? ?? ?? ?? 51 59 83 f9 ?? 75 [0-32] 61 68 ?? ?? ?? ?? 60 31 c9 b9 ?? ?? ?? ?? 51 59 83 f9 ?? 75 [0-32] 61 bb ?? ?? ?? ?? 60 31 c9 b9 ?? ?? ?? ?? 51 59 83 f9 ?? 75 [0-32] 61 ff d3 60 31 c9 b9 ?? ?? ?? ?? 51 59}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Bulz_SIBA_2147796674_0
         $x_1_3 = {8b 4d 0c 8b 51 ?? 89 55 ?? c7 45 ?? ?? ?? ?? ?? c7 45 ?? ?? ?? ?? ?? c7 45 ?? ?? ?? ?? ?? 83 7d 06 ?? 73 ?? 8b 4d ?? c1 e1 ?? 03 4d ?? 8b 55 0c 03 55 02 33 ca 8b 45 0c c1 e8 ?? 03 45 01 33 c8 8b 55 ?? 2b d1 89 55 14 8b 45 14 c1 e0 ?? 03 45 ?? 8b 4d 14 03 4d 02 33 c1 8b 55 14 c1 ea ?? 03 55 ?? 33 c2 8b 4d 0c 2b c8 89 4d 0c 8b 55 02 2b 55 04 89 55 02 8b 45 06 83 c0 ?? 89 45 06 83 7d 06 0a 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -66,6 +68,7 @@ rule Trojan_Win32_Bulz_CE_2147807904_0
         $x_1_4 = "You are infected LMAO" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win32_Bulz_CB_2147815678_0
         $x_1_6 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_Win32_Bulz_GZF_2147902853_0
         $x_1_2 = "zaccl.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Trojan_Win32_Bulz_GNM_2147919605_0
         $x_1_2 = "e8it.net/tuiguang/qudao" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

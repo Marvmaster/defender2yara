@@ -17,6 +17,7 @@ rule VirTool_Win32_Keylogger_A_2147639081_0
         $x_1_3 = {83 c0 9b 83 f8 09 0f 87 ?? ?? 00 00 ff 24 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

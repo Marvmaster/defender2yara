@@ -21,6 +21,7 @@ rule HackTool_Win32_SmbAgent_J_2147743299_0
         $x_1_6 = "m17sc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

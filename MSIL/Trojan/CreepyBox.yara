@@ -22,6 +22,7 @@ rule Trojan_MSIL_CreepyBox_A_2147818393_0
         $x_3_7 = "Yew-rgFAtM0AAAAAAAAAAdxiG9HkchNZgdOmNz6N6duFDUBmDweVudXi2_KKFSVO" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -48,6 +49,7 @@ rule Trojan_MSIL_CreepyBox_B_2147818394_0
         $x_2_2 = "-Command '$shortcut = (New-Object -comObject WScript.Shell).CreateShortcut($c1);$shortcut.TargetPath = $c2;$shortcut.Save()" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

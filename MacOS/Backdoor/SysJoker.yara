@@ -20,6 +20,7 @@ rule Backdoor_MacOS_SysJoker_A_2147810208_0
         $x_1_6 = {2f 61 70 69 2f 61 74 74 61 63 68 00 2f 61 70 69 2f 72 65 71 2f 72 65 73 00 74 6f 6b 65 6e 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

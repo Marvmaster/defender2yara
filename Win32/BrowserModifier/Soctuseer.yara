@@ -16,6 +16,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_0
         $x_1_2 = "Socia2Searc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_1
         $x_1_1 = "http://install-apps.com/s2s_install.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_2
         $x_1_3 = "Socia2Sear Browser Enhancer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -84,6 +87,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_3
         $x_1_4 = "Socia2Search" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -110,6 +114,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_4
         $x_1_4 = "Socia2Search" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -135,6 +140,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_5
         $x_1_3 = "/NAME Social2Sear" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_6
         $x_1_3 = "Socia2Searc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -180,6 +187,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_7
         $x_1_4 = "Socia2Searc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -203,6 +211,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_8
         $x_1_4 = "Socia2Searc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +236,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_9
         $x_1_5 = "AVquic_request_parser@http_parsing@@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -254,6 +264,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_10
         $x_1_5 = "AV?$_Ref_count_obj@Uinjection@html_injection@@@std@@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -278,6 +289,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_11
         $x_1_5 = "--apply_searchpage_search_provider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -307,6 +319,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_12
         $x_1_7 = "manual_mapping_inject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -336,6 +349,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_13
         $x_1_7 = "wtf! unsupported patch type: %1%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -366,6 +380,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_14
         $x_1_8 = ".?AV?$_Ref_count_del@PAUHINSTANCE__@@V" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -396,6 +411,7 @@ rule BrowserModifier_Win32_Soctuseer_233287_15
         $x_1_8 = ".?AVAsmHelper64@blackbone@@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

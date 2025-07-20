@@ -19,6 +19,7 @@ rule Backdoor_Win32_Vonost_A_2147672251_0
         $x_1_5 = {7a 68 75 64 6f 6e 67 66 61 6e 67 79 75 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((3 of ($x_5_*))) or

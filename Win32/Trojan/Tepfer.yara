@@ -16,6 +16,7 @@ rule Trojan_Win32_Tepfer_RJ_2147775937_0
         $x_2_1 = {c1 e8 05 c7 05 ?? ?? ?? ?? 84 10 d6 cb c7 05 ?? ?? ?? ?? ff ff ff ff 89 44 24 ?? 8b 84 24 ?? ?? ?? ?? 01 44 24 ?? 8b 4c 24 ?? 33 cb 33 ce}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Tepfer_RB_2147836465_0
         $x_1_2 = {c7 45 e0 6d 6d 42 4b c7 45 e4 4f 40 4b 5c c6 45 bf 2e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_Tepfer_PAB_2147845160_0
         $x_1_1 = {03 4c 24 20 89 4c 24 10 8d 0c 07 c1 e8 05 89 44 24 14 8b 44 24 24 01 44 24 14 8b 44 24 10 33 c1 31 44 24 14 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 89 44 24 10 89 1d cc 22 7f 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Trojan_Win32_Tepfer_NT_2147901181_0
         $x_1_2 = "AppPolicyGetProcessTerminationMethod" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +106,7 @@ rule Trojan_Win32_Tepfer_SPDB_2147907967_0
         $x_5_1 = {69 c9 fd 43 03 00 81 c1 c3 9e 26 00 89 0d ?? ?? ?? ?? 8a 15 ?? ?? ?? ?? 30 14 33 83 ff 0f 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +128,7 @@ rule Trojan_Win32_Tepfer_FK_2147911072_0
         $x_5_1 = {83 c4 04 8b 85 ?? ?? ff ff 83 c0 64 89 85 ?? ?? ff ff 83 ad ?? ?? ff ff 64 8a 95 ?? ?? ff ff 8b 85 ?? ?? ff ff 30 14 30 83 7d ?? 0f 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +150,7 @@ rule Trojan_Win32_Tepfer_SPPB_2147913143_0
         $x_1_1 = {03 c7 33 c2 33 45 74 c7 05 ?? ?? ?? ?? ee 3d ea f4 2b c8 89 45 70 8b c1 c1 e0 04 89 45 74 8b 85 ?? ?? ?? ?? 01 45 74 8b c1 c1 e8 05 89 45 70 8b 85 ?? ?? ?? ?? 01 45 70 8d 04 0e 33 45 70 31 45 74 8b 45 74 29 45 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +172,7 @@ rule Trojan_Win32_Tepfer_GNN_2147919098_0
         $x_10_1 = {8b 45 08 8a 4d fc 03 c7 30 08 47 3b}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +197,7 @@ rule Trojan_Win32_Tepfer_EM_2147926886_0
         $x_1_4 = "chrispassas/silk@v1.3.0/file.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +219,7 @@ rule Trojan_Win32_Tepfer_SPCI_2147929650_0
         $x_10_1 = {c1 e8 05 89 45 fc 8b 45 f8 8b 55 e8 01 55 fc 03 c7 33 f0 81 3d}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +244,7 @@ rule Trojan_Win32_Tepfer_SPXC_2147931544_0
         $x_1_4 = "fetujowuwovacahuyamegeday dinocizifucevujabataco kafaxopipesamaniyukiza" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -255,6 +266,7 @@ rule Trojan_Win32_Tepfer_ATP_2147936485_0
         $x_1_1 = {83 e8 fc 56 5f 33 39 83 ef 01 89 3b ff 33 6a fc 5e ?? ?? 2b ce 2b de 5e 0f ce}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +288,7 @@ rule Trojan_Win32_Tepfer_BA_2147937162_0
         $x_2_1 = {03 c7 31 03 83 45 ec 04 83 c3 04 8b 45 ec 3b 45 dc 72}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -297,6 +310,7 @@ rule Trojan_Win32_Tepfer_EAHR_2147938594_0
         $x_5_1 = {8b 03 8b 8d 00 ef ff ff 8a 5c 08 03 88 9d 04 ef ff ff c0 e3 02 81 3d ?? ?? ?? ?? 09 0d 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +332,7 @@ rule Trojan_Win32_Tepfer_BAB_2147938610_0
         $x_2_1 = {33 c0 8b 55 ec 01 13 8b 75 d4 03 75 ac 03 75 ec 03 f0 bf 89 15 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -339,6 +354,7 @@ rule Trojan_Win32_Tepfer_PGT_2147938920_0
         $x_5_1 = {8b c8 c1 e9 1e 33 c8 69 c1 ?? ?? ?? ?? 03 c6 89 84 b5 74 ec ff ff 46 3b f2 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -360,6 +376,7 @@ rule Trojan_Win32_Tepfer_SGGL_2147939669_0
         $x_5_1 = {57 33 c9 89 5d f8 8b c6 8b 7e 10 47 83 7e 14 10 72}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -381,6 +398,7 @@ rule Trojan_Win32_Tepfer_BAC_2147941283_0
         $x_2_1 = {5a 2b d0 31 13 6a 00 e8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -402,6 +420,7 @@ rule Trojan_Win32_Tepfer_BAC_2147941283_1
         $x_2_1 = {5a 2b d0 31 13 83 45 ec 04 6a 00 e8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -423,6 +442,7 @@ rule Trojan_Win32_Tepfer_BAD_2147943151_0
         $x_2_1 = {2b f8 8b 45 dc 31 38 83 45 ec 04 83 45 dc 04 8b 45 ec 3b 45 d8 72}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -444,6 +464,7 @@ rule Trojan_Win32_Tepfer_BAD_2147943151_1
         $x_2_1 = {b8 00 10 00 00 8b 55 ?? 03 55 ?? 2b d0 83 c2 04 89 55 ?? b8 6a 0a 00 00 ff 75 ?? b8 6a 0a 00 00 ff 75 ?? b8 6a 0a 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

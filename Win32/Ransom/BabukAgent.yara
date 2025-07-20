@@ -22,6 +22,7 @@ rule Ransom_Win32_BabukAgent_PA_2147787437_0
         $x_1_7 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

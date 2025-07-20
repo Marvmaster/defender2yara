@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Komilet_A_2147728359_0
         $x_1_4 = "http://185.219.81.232/Upload/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Backdoor_Win32_Gamloby_A_2147718522_0
         $x_1_7 = {68 02 20 00 00 68 ?? ?? ?? 00 ff 15 ?? ?? ?? 00 6a 00 68 ?? ?? ?? 00 6a 00 8d 84 24 ?? ?? 00 00 50 68 ?? ?? ?? 00 6a 00 ff 15 ?? ?? ?? 00 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

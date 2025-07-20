@@ -24,6 +24,7 @@ rule VirTool_Win64_EdrBlok_D_2147926827_0
         $x_1_10 = {48 8b 05 4a 23 01 00 48 89 45 e0 48 ?? ?? ?? ?? ?? ?? 48 89 45 e8 c7 45 f0 01 00 00 00 48 8b 85 18 03 00 00 ?? ?? ?? ?? 41 b8 00 00 00 00 48 89 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

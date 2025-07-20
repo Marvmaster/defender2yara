@@ -18,6 +18,7 @@ rule TrojanDropper_MSIL_Muddeling_A_2147740856_0
         $x_1_3 = "\\Save the Date G20 Digital Economy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

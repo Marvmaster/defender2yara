@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Tefosteal_A_2147734159_0
         $x_1_4 = "PasswordRecoveryChrome.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanSpy_Win32_Tefosteal_B_2147734160_0
         $x_1_5 = "PasswordRecoveryChrome.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -66,6 +68,7 @@ rule TrojanSpy_Win32_Tefosteal_C_2147734161_0
         $x_1_1 = "\\svnhost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule TrojanSpy_Win32_Tefosteal_D_2147734162_0
         $x_1_7 = "PasswordRecoveryChrome.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

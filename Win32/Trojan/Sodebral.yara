@@ -54,6 +54,7 @@ rule Trojan_Win32_Sodebral_A_2147684308_0
         $x_1_40 = "jauSAFGGhgh_SEC_537" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -77,6 +78,7 @@ rule Trojan_Win32_Sodebral_E_2147688842_0
         $x_2_4 = "sercFLASH" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +102,7 @@ rule Trojan_Win32_Sodebral_F_2147689232_0
         $x_1_4 = {3a 00 38 00 30 00 38 00 30 00 2f 00 64 00 6f 00 63 00 73 00 2f 00 66 00 75 00 6e 00 63 00 73 00 70 00 65 00 63 00 73 00 2f 00 70 00 72 00 69 00 6e 00 74 00 65 00 72 00 2f 00 34 00 30 00 33 00 2e 00 69 00 6e 00 66 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

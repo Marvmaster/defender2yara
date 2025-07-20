@@ -17,6 +17,7 @@ rule Ransom_MSIL_Ryuk_ARA_2147919300_0
         $x_2_2 = "RyukEncrypter" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_MSIL_Ryuk_MX_2147920224_0
         $x_5_3 = "RyukEncrypter" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

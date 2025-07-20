@@ -19,6 +19,7 @@ rule Trojan_Win32_Higspoo_A_2147709382_0
         $x_1_5 = {5c 53 70 6f 6f 6c 65 72 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

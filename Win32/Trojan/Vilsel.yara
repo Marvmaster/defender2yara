@@ -17,6 +17,7 @@ rule Trojan_Win32_Vilsel_A_2147649745_0
         $x_1_3 = {c1 e0 07 8b 4d f8 c1 e9 19 0b c1 89 45 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Vilsel_D_2147718577_0
         $x_1_9 = "net stop wscsvc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Vilsel_CA_2147813295_0
         $x_2_1 = {81 fe 10 27 00 00 6a 00 76 1f 8d 4c 24 10 8d 94 24 18 01 00 00 51 68 10 27 00 00 52 57 ff d3 81 ee 10 27 00 00 75 d9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win32_Vilsel_AP_2147833422_0
         $x_1_4 = "Rest In Peace... Pesin" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Win32_Vilsel_DAM_2147850087_0
         $x_1_2 = "Sorry i don't want work for you" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule Trojan_Win32_Vilsel_ABS_2147850828_0
         $x_10_10 = "musicvn.exe" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 8 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -178,6 +184,7 @@ rule Trojan_Win32_Vilsel_AMAB_2147852136_0
         $x_20_11 = "musicvn.exe" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_10_*) and 7 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_10_*))) or
@@ -208,6 +215,7 @@ rule Trojan_Win32_Vilsel_EN_2147852399_0
         $x_1_5 = "oolhelp32SnapshotRDele" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -229,6 +237,7 @@ rule Trojan_Win32_Vilsel_MBXQ_2147918552_0
         $x_1_1 = {34 73 40 00 00 f8 32 00 00 ff ff ff 08 00 00 00 01 00 00 00 01 00 00 00 e9 00 00 00 6c 6a 40 00 6c 6a 40 00 5c 11 40 00 78 00 00 00 80 00 00 00 92 00 00 00 93}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +260,7 @@ rule Trojan_Win32_Vilsel_MBXV_2147924745_0
         $x_2_2 = {20 24 40 00 a8 12 40 00 00 f0 30 00 00 ff ff ff 08 00 00 00 01 00 00 00 00 00 00 00 e9 00 00 00 20 11 40 00 20 11 40 00 e4 10 40 00 78 00 00 00 80 00 00 00 83}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +282,7 @@ rule Trojan_Win32_Vilsel_RPA_2147931804_0
         $x_1_1 = {20 20 20 00 20 20 20 20 00 c0 00 00 00 10 00 00 00 40 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e0 2e 72 73 72 63 00 00 00 a0 5b 00 00 00 d0 00 00 00 30 00 00 00 50 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0 2e 69 64 61 74 61 20 20 00 10 00 00 00 30 01 00 00 10 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -294,6 +305,7 @@ rule Trojan_Win32_Vilsel_RPB_2147931939_0
         $x_1_2 = "Microsoft Windows" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -315,6 +327,7 @@ rule Trojan_Win32_Vilsel_GZZ_2147944852_0
         $x_10_1 = {5a 09 1b 28 d1 5d 21 68 2d b7 b7 34 6c 40 c0 0e da 80 ad ?? ?? ?? ?? fe a7 ad e1 ad 2b 03 71}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

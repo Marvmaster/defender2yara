@@ -23,6 +23,7 @@ rule Trojan_Win32_Adialer_CQ_2147511013_0
         $x_1_9 = "0088193911220" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -58,6 +59,7 @@ rule Trojan_Win32_Adialer_NAC_2147596917_0
         $x_1_13 = "angel@carlton" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 7 of ($x_1_*))) or
             ((5 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -89,6 +91,7 @@ rule Trojan_Win32_Adialer_OR_2147600156_0
         $x_1_7 = "Processing modem callback" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +118,7 @@ rule Trojan_Win32_Adialer_OS_2147601383_0
         $x_10_7 = {b2 46 b3 54 80 bc 04 3c 4f 00 00 43 75 56 38 94 04 3d 4f 00 00 75 4d 80 bc 04 3e 4f 00 00 47 75 43 80 bc 04 3f 4f 00 00 5f 75 39 80 bc 04 40 4f 00 00 4f 75 2f 38 94 04 41 4f 00 00 75 26 38 94 04 42 4f 00 00 75 1d 80 bc 04 43 4f 00 00 53 75 13 80 bc 04 44 4f 00 00 45 75 09 38 9c 04 45 4f 00 00 74 07 40 3b c1}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -145,6 +149,7 @@ rule Trojan_Win32_Adialer_OU_2147603110_0
         $x_1_8 = "shell\\open\\command" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -181,6 +186,7 @@ rule Trojan_Win32_Adialer_LB_2147603714_0
         $x_1_14 = "CVideoCap" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +228,7 @@ rule Trojan_Win32_Adialer_CZ_2147605393_0
         $x_100_22 = {6a 01 5f 50 8d 45 ?? 50 56 56 56 56 56 8d 85 ?? ?? ff ff 56 50 56 89 7d ?? 66 89 ?? ?? ff 15 ?? ?? 40 00 85 c0 75 12 57 56 8d 85 ?? ?? ff ff 56 50 56 56 ff 15 ?? ?? 40 00 ff 75}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 19 of ($x_1_*))) or
             (all of ($x*))
@@ -249,6 +256,7 @@ rule Trojan_Win32_Adialer_BAF_2147627495_0
         $x_1_5 = "30 minutes de visio sexe " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +280,7 @@ rule Trojan_Win32_Adialer_OP_18051_0
         $x_5_4 = {00 69 6e 73 74 00 69 6e 73 74 32 00 6d 6f 75 6e 74 00 73 74 61 72 74 75 70 00 74 65 73 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -305,6 +314,7 @@ rule Trojan_Win32_Adialer_OP_18051_1
         $x_10_11 = "RasHangUpA" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 7 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -334,6 +344,7 @@ rule Trojan_Win32_Adialer_OO_67528_0
         $x_1_5 = {74 24 14 0f 84 a8 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -357,6 +368,7 @@ rule Trojan_Win32_Adialer_83836_0
         $x_1_4 = "strstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -383,6 +395,7 @@ rule Trojan_Win32_Adialer_83836_1
         $x_1_7 = {55 8b ec b8 ?? ?? ?? 00 e8 ?? ?? ?? ?? 53 56 ?? ?? ?? 89 ?? ?? e8 ?? ?? ?? ?? 84 c0 0f 84 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 8b 45 08 68 ?? ?? ?? 00 ?? ?? a3 ?? ?? ?? 00 ff 15 ?? ?? ?? 00 ff 15 ?? ?? ?? 00 3d ?? ?? 00 00 ?? 0f 84 ?? ?? ?? ?? e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 8d 85 ?? ?? ?? ?? 68 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

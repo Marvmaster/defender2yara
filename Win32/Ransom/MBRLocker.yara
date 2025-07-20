@@ -20,6 +20,7 @@ rule Ransom_Win32_MBRLocker_A_2147723438_0
         $x_1_5 = {32 54 05 f4 40 3b c1 7c f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_3_*))) or
@@ -48,6 +49,7 @@ rule Ransom_Win32_MBRLocker_DA_2147772135_0
         $x_1_4 = "PayloadMBR.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

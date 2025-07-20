@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Doutrad_B_2147630179_0
         $x_1_3 = {b9 41 00 00 00 33 c0 8d 7c 24 08 6a ff f3 ab b9 41 00 00 00 8d bc 24 10 01 00 00 f3 ab}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

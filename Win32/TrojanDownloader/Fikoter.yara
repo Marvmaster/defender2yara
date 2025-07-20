@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Fikoter_A_2147706630_0
         $x_1_2 = {8b ca 83 e1 03 f3 a4 89 43 f8 8b 4c 24 24 8b 44 24 10 40 83 c3 28 8b 11 33 c9 89 44 24 10 66 8b 4a 06 3b c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

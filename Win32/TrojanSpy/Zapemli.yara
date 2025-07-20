@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Zapemli_A_2147650202_0
         $x_2_7 = "00185C415445441F533A55" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 4 of ($x_2_*))) or
             ((2 of ($x_4_*) and 2 of ($x_2_*))) or

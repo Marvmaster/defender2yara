@@ -17,6 +17,7 @@ rule Trojan_Linux_CronRAT_A_2147808785_0
         $x_2_2 = {48 85 ff 75 25 be 01 00 00 00 4c 89 c7 e8 bc 5d 01 00 48 8d 50 10 48 89 58 08 48 89 15 c4 d8 01 00 48 c7 00 00 00 00 00 eb 1b 48 83 ef 10 4c 89 c6 e8 30 54 01 00 48 8d 50 10 48 89 58 08 48 89 15 a0 d8 01 00 48 8b 15 99 d8 01 00 31 c0 48 85 d2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

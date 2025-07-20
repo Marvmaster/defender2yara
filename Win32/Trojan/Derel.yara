@@ -20,6 +20,7 @@ rule Trojan_Win32_Derel_A_2147679814_0
         $x_3_6 = {c7 05 00 62 40 00 01 00 00 00 66 8b ?? ?? ?? 40 00 66 89 ?? c0 8d ?? c0}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_3_*))) or

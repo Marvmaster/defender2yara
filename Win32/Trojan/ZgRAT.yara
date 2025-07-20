@@ -16,6 +16,7 @@ rule Trojan_Win32_ZgRAT_A_2147902541_0
         $x_2_1 = {66 ad 66 83 f0 ?? 66 ab 66 83 f8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_ZgRAT_NG_2147915528_0
         $x_1_2 = "InternetOpenUrlW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

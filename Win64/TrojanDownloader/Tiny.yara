@@ -17,6 +17,7 @@ rule TrojanDownloader_Win64_Tiny_CCIR_2147936324_0
         $x_1_2 = "powershell -WindowStyle Hidden -Command \"Expand-Archive -Force" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

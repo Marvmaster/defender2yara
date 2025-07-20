@@ -22,6 +22,7 @@ rule Trojan_MSIL_Clicker_NWE_2147788127_0
         $x_1_7 = "IWebBrowser" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_MSIL_Clicker_SPQE_2147894534_0
         $x_1_3 = "Oikoherg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

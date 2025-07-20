@@ -17,6 +17,7 @@ rule DDoS_Linux_WprBlightre_A_2147894699_0
         $x_1_2 = {5b 21 5d 20 57 61 69 74 69 6e 67 20 46 6f 72 20 51 75 65 75 65 20 00 5b 2b 5d 20 52 6f 75 6e 64 20 25 64 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

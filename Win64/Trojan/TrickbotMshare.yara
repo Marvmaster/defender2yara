@@ -19,6 +19,7 @@ rule Trojan_Win64_TrickbotMshare_A_2147766734_0
         $x_1_4 = "IgYMmw4d/CWzmw9a" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -30,6 +30,7 @@ rule Virus_Win32_Munfor_B_2147601326_0
         $x_1_16 = "</Script>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (14 of ($x*))
 }
 

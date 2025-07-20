@@ -19,6 +19,7 @@ rule Ransom_Win32_Genasom_B_2147599803_0
         $x_1_5 = {43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 00 00 ff ff ff ff 03 00 00 00 52 75 6e 00 ff ff ff ff 07 00 00 00 4c 69 63 65 6e 73 65 00 ff ff ff ff 0a 00 00 00 6c 6f 63 6b 65 72 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -44,6 +45,7 @@ rule Ransom_Win32_Genasom_D_2147625613_0
         $x_1_2 = "Software\\KJ\\Share\\DateInfo\\Wareki\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Ransom_Win32_Genasom_F_2147626080_0
         $x_1_2 = {5c c6 44 24 ?? 52 c6 44 24 ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Ransom_Win32_Genasom_H_2147626953_0
         $x_1_2 = {75 6e 69 78 74 69 6d 65 2e 64 61 74 00 00 00 00 5c 00 00 00 6c 6e 6b 2e 6c 6e 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Ransom_Win32_Genasom_N_2147629032_0
         $x_1_3 = {8b 45 10 8b 48 04 49 83 e9 0b 72 05 83 38 08 75 09 83 38 1b 74 04 33 c0 eb 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule Ransom_Win32_Genasom_O_2147629310_0
         $x_1_8 = "eval(" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -160,6 +166,7 @@ rule Ransom_Win32_Genasom_Q_2147630509_0
         $x_1_3 = "locker - new\\toSEND\\form.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -182,6 +189,7 @@ rule Ransom_Win32_Genasom_V_2147631109_0
         $x_1_3 = {43 3a 5c 57 49 4e 44 4f 57 53 5c 78 73 74 6f 70 69 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +211,7 @@ rule Ransom_Win32_Genasom_W_2147631110_0
         $x_1_2 = {c6 00 41 c6 40 01 64 c6 40 02 6a c6 40 03 75 c6 40 04 73 c6 40 05 74 c6 40 06 54 c6 40 07 6f c6 40 08 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +234,7 @@ rule Ransom_Win32_Genasom_Y_2147631320_0
         $x_1_3 = "ffffffff-F03B-4b40-A3D0-F62E04DD1C09" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -247,6 +257,7 @@ rule Ransom_Win32_Genasom_Z_2147631490_0
         $x_1_3 = "mediamodule.xsl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -269,6 +280,7 @@ rule Ransom_Win32_Genasom_AC_2147632204_0
         $x_1_3 = "&document=openoffice.2010-fr." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -293,6 +305,7 @@ rule Ransom_Win32_Genasom_AD_2147632208_0
         $x_1_5 = "YOUR COMPUTER IS INFECTED BY SPYWARE !!!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -321,6 +334,7 @@ rule Ransom_Win32_Genasom_AJ_2147632921_0
         $x_1_5 = "sms-price.ru" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -345,6 +359,7 @@ rule Ransom_Win32_Genasom_AN_2147633888_0
         $x_1_5 = "PC Health Status" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -374,6 +389,7 @@ rule Ransom_Win32_Genasom_AP_2147634092_0
         $x_10_6 = {74 00 61 00 73 00 6b 00 6b 00 69 00 6c 00 6c 00 20 00 2f 00 49 00 4d 00 [0-64] 25 00 55 00 53 00 45 00 52 00 50 00 52 00 4f 00 46 00 49 00 4c 00 45 00 25 00 5c 00 43 00 6f 00 6f 00 6b 00 69 00 65 00 73 00 5c 00 2a 00 2e 00 2a 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -406,6 +422,7 @@ rule Ransom_Win32_Genasom_AS_2147634369_0
         $x_3_10 = {ff da 00 0c 03 01 00 02 11 03 11 00 3f 00 fb 9b f6 35 fd 8d be 0d eb df b1 b7 c1 dd 47 51 f8 3b f0 97 52 d4 75 2f 01 e8 17 97 97 97 9e 0c d3 2e}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -435,6 +452,7 @@ rule Ransom_Win32_Genasom_AW_2147636365_0
         $x_1_3 = "redtube.eu/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -455,6 +473,7 @@ rule Ransom_Win32_Genasom_AZ_2147636668_0
         $x_1_1 = {53 63 72 00 65 65 6e 2e 6a 70 67 [0-6] 45 78 70 6c 6f 72 65 00 72 20 68 74 74 70 3a 2f 00 2f [0-16] 2e 50 6e 65 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -477,6 +496,7 @@ rule Ransom_Win32_Genasom_BC_2147637774_0
         $x_1_3 = "pornhub.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -501,6 +521,7 @@ rule Ransom_Win32_Genasom_BH_2147638426_0
         $x_2_5 = "Timer1Timer" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -526,6 +547,7 @@ rule Ransom_Win32_Genasom_BI_2147638528_0
         $x_1_3 = "www.netlinkinvest.com/support/it" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -549,6 +571,7 @@ rule Ransom_Win32_Genasom_BO_2147640540_0
         $x_1_4 = {66 81 7f 04 05 b0 75 73 51 0f b7 4f 0a 8b 73 4c 66 3b 4e 20 75 1b 80 bb 26 01 00 00 00 7f 4e 89 d8 b2 01 e8 ?? ?? ff ff 89 d8 e8 ?? ?? 00 00 eb 3c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -575,6 +598,7 @@ rule Ransom_Win32_Genasom_C_2147640541_0
         $x_1_6 = {6a 01 6a 00 6a 00 68 ?? ?? ?? 00 68 ?? ?? ?? 00 a1 ?? ?? ?? ?? 8b 00 8b 40 30 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -598,6 +622,7 @@ rule Ransom_Win32_Genasom_BQ_2147640647_0
         $x_3_4 = {8b 75 08 8b fe 33 d2 8b 4d 0c 83 fa 10 75 02 33 d2 ac 32 82 ?? ?? 40 00 aa 42 49 75 ed}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((1 of ($x_4_*) and 2 of ($x_3_*))) or
@@ -626,6 +651,7 @@ rule Ransom_Win32_Genasom_BR_2147640696_0
         $x_1_5 = {0f ba f0 1f 73 09 83 e0 7f 50 e8 ?? ?? ff ff c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -650,6 +676,7 @@ rule Ransom_Win32_Genasom_CE_2147641610_0
         $x_1_5 = {68 04 01 00 00 68 ?? ?? ?? 00 e8 ?? ?? ?? ff 68 ?? ?? ?? 00 68 ?? ?? ?? 00 e8 ?? ?? ?? ff 68 ?? ?? ?? 00 68 ?? ?? ?? 00 e8 ?? ?? ?? ff b8 ?? ?? ?? 00 e8 ?? ?? ?? ff 6a 00 68 ?? ?? ?? 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -676,6 +703,7 @@ rule Ransom_Win32_Genasom_CF_2147641666_0
         $x_1_7 = "System\\CurrentControlSet\\Control\\SafeBoot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 3 of ($x_2_*))) or
@@ -712,6 +740,7 @@ rule Ransom_Win32_Genasom_CG_2147641755_0
         $x_2_13 = {57 69 6e 64 6f 77 73 00 57 69 6e 64 6f 77 73 20 54 61 73 6b 20 4d 61 6e 61 67 65 72}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -743,6 +772,7 @@ rule Ransom_Win32_Genasom_CH_2147641845_0
         $x_1_6 = "\\Application Data\\scgrbzbw.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -768,6 +798,7 @@ rule Ransom_Win32_Genasom_CN_2147642346_0
         $x_1_6 = "Toolhelp32ReadProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -793,6 +824,7 @@ rule Ransom_Win32_Genasom_CT_2147643769_0
         $x_1_3 = {c7 85 d8 f2 ff ff 4b 00 65 00 c7 85 dc f2 ff ff 72 00 6e 00 c7 85 e0 f2 ff ff 65 00 6c 00 c7 85 e4 f2 ff ff 33 00 32 00 c7 85 e8 f2 ff ff 2e 00 64 00 c7 85 ec f2 ff ff 6c 00 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -815,6 +847,7 @@ rule Ransom_Win32_Genasom_CX_2147644384_0
         $x_3_3 = {68 00 04 00 00 8d 44 24 04 50 e8 ?? ?? ?? ?? 8b c3 8b d4 b9 01 04 00 00 e8 ?? ?? ?? ?? 81 c4 04 04 00 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -838,6 +871,7 @@ rule Ransom_Win32_Genasom_DH_2147645378_0
         $x_1_1 = {2e 72 75 00 00 00 00 48 54 54 50 2f 31 2e 30 00 [0-7] 2f 6c 6f 63 6b 65 72 2e 70 68 70 00 47 45 54 00 [0-5] 55 8b ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -862,6 +896,7 @@ rule Ransom_Win32_Genasom_DK_2147645940_0
         $x_1_5 = {25 57 69 6e 44 69 72 25 5c 57 69 6e 33 32 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -883,6 +918,7 @@ rule Ransom_Win32_Genasom_DN_2147646282_0
         $x_1_2 = {ff d3 50 ff d6 68 d0 01 00 00 8d 94 24 ?? ?? 00 00 6a 00 b9 0e 00 00 00 be ?? ?? ?? ?? 8d bc 24 ?? ?? 00 00 52 f3 a5 e8 ?? ?? ?? ?? 83 c4 0c 83 7c 24 10 00 0f 85 ?? ?? 00 00 33 c0 68 06 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -906,6 +942,7 @@ rule Ransom_Win32_Genasom_DU_2147647111_0
         $x_1_4 = {8d 44 24 0c 50 ff d3 8d 4c 24 0c 51 ff d5 6a 0a ff 15 ?? ?? ?? 00 6a 00 6a 00 6a 00 8d 54 24 18 52 ff d6 85 c0 75 d9 5d 5b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -927,6 +964,7 @@ rule Ransom_Win32_Genasom_DW_2147647253_0
         $x_1_2 = "Now your computer is blocked by newly installed software" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -948,6 +986,7 @@ rule Ransom_Win32_Genasom_DZ_2147647513_0
         $x_1_2 = "Hyde.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -972,6 +1011,7 @@ rule Ransom_Win32_Genasom_EJ_2147648351_0
         $x_1_5 = {6a 09 6a 01 6a ?? ff 75 08 e8 ?? ?? ?? ?? 6a (73|1b) 6a 01 6a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -999,6 +1039,7 @@ rule Ransom_Win32_Genasom_EO_2147648625_0
         $x_1_4 = "+7 981 " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1024,6 +1065,7 @@ rule Ransom_Win32_Genasom_ES_2147648862_0
         $x_1_3 = {68 fa 00 00 00 6a 00 ff d5 50 ff 15 ?? ?? ?? ?? 8b f8 85 ff 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1047,6 +1089,7 @@ rule Ransom_Win32_Genasom_FF_2147649678_0
         $x_1_4 = {b8 6c 00 00 00 66 89 85 54 fc ff ff b9 6c 00 00 00 66 89 8d 56 fc ff ff ba 20 00 00 00 66 89 95 58 fc ff ff b8 2f 00 00 00 66 89 85 5a fc ff ff b9 46 00 00 00 66 89 8d 5c fc ff ff ba 20 00 00 00 66 89 95 5e fc ff ff b8 2f 00 00 00 66 89 85 60 fc ff ff b9 49 00 00 00 66 89 8d 62 fc ff ff ba 4d 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1068,6 +1111,7 @@ rule Ransom_Win32_Genasom_FL_2147650637_0
         $x_1_2 = {39 5e 0c 74 ?? 68 30 75 00 00 ff 15 ?? ?? ?? ?? 8d 4d ?? 51 6a 00 6a 02 ff 15 ?? ?? ?? ?? 8b f8 85 ff 74 ?? 57 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1092,6 +1136,7 @@ rule Ransom_Win32_Genasom_GG_2147652694_0
         $x_1_5 = {75 2b 8b f8 8b d8 c1 eb 10 81 e7 00 00 ff 00 0b fb 8b d8 81 e3 00 ff 00 00 c1 e0 10 0b d8 c1 ef 08 c1 e3 08 0b fb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1117,6 +1162,7 @@ rule Ransom_Win32_Genasom_GI_2147652786_0
         $x_1_6 = {31 2e 20 c8 e7 e3 ee f2 ee e2 eb e5 ed e8 e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1139,6 +1185,7 @@ rule Ransom_Win32_Genasom_GV_2147654056_0
         $x_1_3 = "Silence_lock_bot.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1163,6 +1210,7 @@ rule Ransom_Win32_Genasom_GW_2147654137_0
         $x_1_5 = "Silence_lock_bot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1184,6 +1232,7 @@ rule Ransom_Win32_Genasom_HE_2147654857_0
         $x_1_2 = "\\Silence_lock_bot\\Release\\Silence_lock_bot.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1208,6 +1257,7 @@ rule Ransom_Win32_Genasom_HI_2147655894_0
         $x_2_5 = {b9 19 00 00 00 bb 01 00 00 00 d3 e3 23 d8 74 1f 80 c1 41}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1247,6 +1297,7 @@ rule Ransom_Win32_Genasom_HS_2147656454_0
         $x_1_16 = "\"NoDesktop\"=dword:00000001" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1271,6 +1322,7 @@ rule Ransom_Win32_Genasom_HV_2147656658_0
         $x_4_5 = "3423434534512333466576743532423423545657567657465345345234234" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1300,6 +1352,7 @@ rule Ransom_Win32_Genasom_JD_2147658729_0
         $x_1_10 = "Your PC is blocked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1327,6 +1380,7 @@ rule Ransom_Win32_Genasom_JJ_2147659609_0
         $x_3_5 = {ba 80 00 b9 03 00 b8 03 02 bb 00 10 cd 13 73 05 b8 47 0e cd 10 b8 00 11 bd 00 10 b9 40 00 ba c0 00 b7 10 b3 00 cd 10 ba 80 00 b9 05 00 b8 04 02 bb 00 30 cd 13 66 60 b8 01 13 bb 0c 00 b9 30 07 31 d2 bd 00 30 cd 10}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1353,6 +1407,7 @@ rule Ransom_Win32_Genasom_JU_2147661111_0
         $x_1_7 = {6a 09 6a 01 6a 0a ff 75 08 e8 ?? ?? 00 00 6a 73 6a 01 6a 14 ff 75 08 e8 ?? ?? 00 00 6a 1b 6a 01 6a 1e ff 75 08 e8 ?? ?? 00 00 6a 1b 6a 03 6a 28 ff 75 08 e8 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1377,6 +1432,7 @@ rule Ransom_Win32_Genasom_KF_2147664152_0
         $x_1_5 = {50 61 67 65 20 69 73 20 6c 6f 61 64 69 6e 67 2c 20 70 6c 65 61 73 65 20 77 61 69 74 2e 20 54 68 69 73 20 6d 61 79 20 74 61 6b 65 20 75 70 20 74 6f 20 33 30 20 73 65 63 6f 6e 64 73 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1409,6 +1465,7 @@ rule Ransom_Win32_Genasom_ID_2147667299_0
         $x_1_9 = {ac c4 e3 b5 c4 b5 e7 c4 d4 d2 d1 b1 bb ba da bf cd c8 eb c7 d6 c1 cb a3 a1 0d 0a 0d 0a d2 bb a3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1432,6 +1489,7 @@ rule Ransom_Win32_Genasom_KT_2147678304_0
         $x_1_4 = {8e c2 94 c2 93 c2 91 c2 92 c2 8a c2 95 c2 95 c2 88 c2 92 c2 92 c2 87 c2 8b c2 8f c2 89 c2 95 c2 88 c2 8f c2 8a 00 55 49 6e 74 33 32 00 57 72 69 74 65 50 72 6f 63 65 73 73 4d 65 6d 6f 72 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1459,6 +1517,7 @@ rule Ransom_Win32_Genasom_KT_2147678304_1
         $x_1_4 = "n=b03f5f7f11d50a3aPADP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1488,6 +1547,7 @@ rule Ransom_Win32_Genasom_B_2147719146_0
         $x_1_6 = {6e 65 74 20 75 73 65 72 [0-64] 2f 61 63 74 69 76 65 3a 79 65 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 4 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1518,6 +1578,7 @@ rule Ransom_Win32_Genasom_A_2147746064_0
         $x_1_6 = "SHGetFolderPathA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1543,6 +1604,7 @@ rule Ransom_Win32_Genasom_C_2147746212_0
         $x_1_5 = "INSTRUCTION.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1565,6 +1627,7 @@ rule Ransom_Win32_Genasom_BA_2147751912_0
         $x_1_2 = {0f b6 c1 03 05 ?? ?? ?? ?? 25 ff 00 00 00 8a ?? ?? ?? ?? ?? 88 88 ?? ?? ?? ?? 88 96 ?? ?? ?? ?? 0f b6 b0 ?? ?? ?? ?? 0f b6 d2 03 f2 81 e6 ff 00 00 00 81 3d ?? ?? ?? ?? 81 0c 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1590,6 +1653,7 @@ rule Ransom_Win32_Genasom_SD_2147754143_0
         $x_1_5 = {8b 45 08 3b 45 0c 7d ?? b9 01 00 00 00 6b d1 00 0f be 82 ?? ?? ?? ?? 35 ?? ?? 00 00 88 45 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1616,6 +1680,7 @@ rule Ransom_Win32_Genasom_AR_2147757898_0
         $x_1_6 = ".gomer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1652,6 +1717,7 @@ rule Ransom_Win32_Genasom_MX_2147760556_0
         $x_1_13 = "privatesessionkey" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -1674,6 +1740,7 @@ rule Ransom_Win32_Genasom_VIS_2147768784_0
         $x_1_2 = {89 45 f8 33 45 e0 33 45 f0 2b d8 8b 45 d8 29 45 f4 ff 4d ec 0f 85 12 ff ff ff 8b 45 08 89 78 04 5f 5e 89 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1698,6 +1765,7 @@ rule Ransom_Win32_Genasom_RF_2147777420_0
         $x_1_4 = "C:\\Users\\john\\Documents\\Visual Studio 2008\\Projects\\EncryptFile -svcV2\\Release\\EncryptFile.exe.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1722,6 +1790,7 @@ rule Ransom_Win32_Genasom_DA_2147779170_0
         $x_1_4 = "Bitcoin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1751,6 +1820,7 @@ rule Ransom_Win32_Genasom_EA_2147853201_0
         $x_1_9 = "wevtutil clear-log security" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1774,6 +1844,7 @@ rule Ransom_Win32_Genasom_AGM_2147917659_0
         $x_1_3 = {0f 10 04 2f 0f 28 ca 0f 57 c8 0f 11 0c 2f 83 c7 10 83 ff 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1799,6 +1870,7 @@ rule Ransom_Win32_Genasom_GNS_2147927733_0
         $x_1_5 = "Your license has been removed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

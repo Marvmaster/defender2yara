@@ -20,6 +20,7 @@ rule Trojan_Win64_Zombie_DS_2147888637_0
         $x_1_5 = {90 41 57 41 56 41 55 41 54 55 57 56 53 48 83 ec 38 31 d2 48 89 cf e8 f6 fd ff ff 48 89 c5 f6 47 50 01 0f 84 c9 00 00 00 48 8b 77 28 48 85 f6 0f 84 dc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

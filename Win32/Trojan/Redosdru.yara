@@ -21,6 +21,7 @@ rule Trojan_Win32_Redosdru_B_2147617425_0
         $x_1_7 = "GetTokenInformation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule Trojan_Win32_Redosdru_B_2147617425_1
         $x_1_6 = {49 6e 73 74 61 6c 6c 4d 6f 64 75 6c 65 00 00 00 4d 69 63 72 6f 73 6f 66 74 20 44 65 76 69 63 65 20 4d 61 6e 61 67 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -75,6 +77,7 @@ rule Trojan_Win32_Redosdru_C_2147617430_0
         $x_1_4 = {71 6d 67 72 2e 64 6c 6c 00 5c 44 72 69 76 65 72 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -105,6 +108,7 @@ rule Trojan_Win32_Redosdru_C_2147617430_1
         $x_1_8 = "%s\\%sex.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -132,6 +136,7 @@ rule Trojan_Win32_Redosdru_D_2147617431_0
         $x_1_3 = "GH0STC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +158,7 @@ rule Trojan_Win32_Redosdru_E_2147617432_0
         $x_1_2 = {8b cd 2b cf 8b ee 8a 14 01 80 f2 62 88 10 40 83 ed 01 75 f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +181,7 @@ rule Trojan_Win32_Redosdru_E_2147617432_1
         $x_1_3 = {7e 11 8a 14 01 80 ea 08 80 f2 20 88 14 01 41 3b ce 7c ef}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +208,7 @@ rule Trojan_Win32_Redosdru_F_2147621855_0
         $x_1_7 = {00 52 65 67 51 75 65 72 79 56 61 6c 75 65 45 78 28 53 76 63 68 6f 73 74 5c 6e 65 74 73 76 63 73 29 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -230,6 +238,7 @@ rule Trojan_Win32_Redosdru_L_2147630026_0
         $x_2_5 = {3d 00 00 20 03 73 0d 6a 02 6a 00 6a 00 53 ff 15}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*))) or
@@ -256,6 +265,7 @@ rule Trojan_Win32_Redosdru_2147630931_0
         $x_5_3 = {49 6e 74 65 72 6e 65 74 52 65 61 64 [0-16] 49 6e 74 65 72 6e 65 74 4f 70 65 6e 55 72 6c [0-16] 49 6e 74 65 72 6e 65 74 4f 70 65 6e}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -290,6 +300,7 @@ rule Trojan_Win32_Redosdru_N_2147631817_0
         $x_1_12 = "pavfires.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -318,6 +329,7 @@ rule Trojan_Win32_Redosdru_O_2147633038_0
         $x_1_3 = "Global\\mouse %d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -342,6 +354,7 @@ rule Trojan_Win32_Redosdru_M_2147640644_0
         $x_1_5 = "%s\\%d_res.tmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -377,6 +390,7 @@ rule Trojan_Win32_Redosdru_Q_2147640929_0
         $x_1_12 = {25 73 5c 77 69 25 64 6e 64 2e 74 65 6d 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -415,6 +429,7 @@ rule Trojan_Win32_Redosdru_R_2147644064_0
         $x_1_9 = {47 6c 6f 62 61 6c 5c 66 79 74 20 25 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -443,6 +458,7 @@ rule Trojan_Win32_Redosdru_S_2147646682_0
         $x_1_5 = "%sDay%sHour%sMin" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -468,6 +484,7 @@ rule Trojan_Win32_Redosdru_U_2147648735_0
         $x_1_2 = {55 ff d7 50 ff d3 8b f8 56 ff 74 24 ?? ff d7 85 c0 74 ?? ff 74 24 ?? 8d 46 ?? 50 ff 15 ?? ?? ?? ?? 85 c0 75 e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -490,6 +507,7 @@ rule Trojan_Win32_Redosdru_V_2147688650_0
         $x_5_3 = {8b 54 24 04 8a 1c 11 80 c3 7a 88 1c 11 8b 54 24 04 8a 1c 11 80 f3 59 88 1c 11 41 3b c8 7c e1}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -515,6 +533,7 @@ rule Trojan_Win32_Redosdru_W_2147690919_0
         $x_2_3 = {81 ca 00 ff ff ff 42 8a 14 02 8a 1c 2f 32 da 8b 54 24 1c 88 1c 2f 47 3b fa 72 90 5d 5b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -539,6 +558,7 @@ rule Trojan_Win32_Redosdru_AA_2147691443_0
         $x_1_2 = {80 04 11 7a 03 ca 8b ?? ?? 80 34 11 59 03 ca 42 3b d0 7c e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -563,6 +583,7 @@ rule Trojan_Win32_Redosdru_X_2147691980_0
         $x_1_5 = {c6 44 24 27 2f c6 44 24 28 34 c6 44 24 29 2e c6 44 24 2a 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -584,6 +605,7 @@ rule Trojan_Win32_Redosdru_AB_2147705500_0
         $x_1_2 = {fb ff ff 4d c6 85 ?? fb ff ff 6f c6 85 ?? fb ff ff 7a c6 85 ?? fb ff ff 69 c6 85 ?? fb ff ff 6c c6 85 ?? fb ff ff 6c c6 85 ?? fb ff ff 61 c6 85 ?? fb ff ff 2f c6 85 ?? fb ff ff 34}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -606,6 +628,7 @@ rule Trojan_Win32_Redosdru_Z_2147718222_0
         $x_1_2 = {0f be 11 2b d0 8b 45 ec 03 45 e8 88 10 0f be 4d dc 8b 55 ec 03 55 e8 0f be 02 33 c1 8b 4d ec 03 4d e8 88 01 eb bf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -629,6 +652,7 @@ rule Trojan_Win32_Redosdru_D_2147720486_0
         $x_1_3 = {8a 14 0b 30 10 8b 45 ?? 40 89 45 ?? 3b 45 ?? 72 9f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -652,6 +676,7 @@ rule Trojan_Win32_Redosdru_E_2147722532_0
         $x_1_3 = {8a 0a 32 08 8b 55 ?? 03 55 ?? 88 0a e9 0c 00 8b 55 ?? 03 55 ?? 8b 45 ?? 03 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -673,6 +698,7 @@ rule Trojan_Win32_Redosdru_ARU_2147919739_0
         $x_1_1 = {8b 55 f8 83 c2 01 89 55 f8 8b 45 f8 3b 45 f4 7d 30 8b 4d fc 03 4d f8 0f be 11 0f be 45 f0 2b d0 8b 4d fc 03 4d f8 88 11 8b 55 fc 03 55 f8 0f be 02 0f be 4d ec 33 c1 8b 55 fc 03 55 f8 88 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

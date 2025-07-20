@@ -17,6 +17,7 @@ rule Trojan_Win32_IcedId_PA_2147739826_0
         $x_1_2 = {8b 2a 83 c1 fa 03 cf a3 ?? ?? ?? 00 0f b7 c1 05 eb 00 00 00 66 89 0d ?? ?? ?? 00 3d 21 1b 00 00 7e ?? 8b 0d ?? ?? ?? 00 69 c7 58 18 00 00 2b c8 8d 0c 4b 66 89 0d ?? ?? ?? 00 0f b7 c1 81 c5 ac 00 56 01 05 eb 00 00 00 89 2a 3d 21 1b 00 00 7e ?? 8b 0d ?? ?? ?? 00 8b c1 2b c6 83 e8 1d 69 c0 58 18 00 00 2b c8 8d 0c 4b 66 89 0d ?? ?? ?? 00 a1 ?? ?? ?? 00 83 c2 04 2b 05 ?? ?? ?? 00 83 c0 06 89 54 24 18 ff 4c 24 1c 0f b7 f8 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_IcedId_PB_2147745018_0
         $x_1_1 = {66 3b d8 7f 51 8b 07 8b 78 0c 8b 48 14 2b f9 8d 4d ?? 51 ff d6 8b 4d ?? 83 c3 05 8b 51 0c 2b 51 14 66 0f b6 04 10 66 99 66 f7 fb 8d 45 ?? 50 66 8b da ff d6 8a 0c 38 32 d9 8d 4d ?? 51 ff d6 8b 4d ?? 88 1c 38 8b 7d 08 b8 01 00 00 00 03 c8 89 4d ?? 8b d9 eb 05 00 b8 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_IcedId_PC_2147748466_0
         $x_1_2 = {8b 38 8b d1 2b d5 81 c2 ?? ?? ?? ?? 81 fe ?? ?? ?? ?? 75 0f bd ?? ?? ?? ?? 2b e9 8b cd 8b 2d ?? ?? ?? ?? 83 44 24 10 04 81 c7 dc 6b ee 01 89 38 8b c1 8b 0d ?? ?? ?? ?? 2b c2 83 c0 09 81 7c 24 10 ?? ?? 00 00 a3 ?? ?? ?? ?? 8d 4c 01 ?? 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win32_IcedId_PVS_2147748658_0
         $x_2_4 = {81 c2 f0 a5 f7 01 89 15 ?? ?? ?? ?? 89 94 1e e9 fc ff ff 8b 35 ?? ?? ?? ?? ba 04 00 00 00 03 da 81 fb 07 04 00 00 89 15 06 00 8b 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_Win32_IcedId_VSK_2147749240_0
         $x_2_4 = {8b 55 ec 31 ca c6 45 eb 16 89 55 ec 8b 4d e4 8b 55 f4 8a 65 eb 8a 1c 0a 28 e0 88 45 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Trojan_Win32_IcedId_PVD_2147750142_0
         $x_2_2 = {8a 9c 24 df 03 00 00 88 a4 24 7f 01 00 00 c7 84 24 ec 00 00 00 00 00 00 00 c7 84 24 e8 00 00 00 46 3e 00 00 80 f3 16 c6 84 24 97 01 00 00 94 88 9c 24 0f 01 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Trojan_Win32_IcedId_DHA_2147757153_0
         $x_1_2 = "RP5dRFB7AqcBcwwqvpbFjlFptqdJq4C" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -174,6 +181,7 @@ rule Trojan_Win32_IcedId_DEB_2147757648_0
         $x_1_2 = "RYxhhug5op5e0nh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -195,6 +203,7 @@ rule Trojan_Win32_IcedId_DEC_2147758831_0
         $x_1_1 = {83 c4 10 53 6a 01 53 53 8d 44 24 28 50 ff 15 ?? ?? ?? ?? 85 c0 75 3a 6a 08 6a 01 53 53 8d 4c 24 28 51 ff 15 00 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -217,6 +226,7 @@ rule Trojan_Win32_IcedId_DEE_2147758930_0
         $x_1_2 = "hfRuPhzYOiqUHw59w9g68tAN1lVGPBlmYjNKv6HArNKYj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -238,6 +248,7 @@ rule Trojan_Win32_IcedId_DEF_2147759258_0
         $x_1_1 = {83 c4 10 8d 44 24 18 53 6a 01 53 53 50 ff 15 ?? ?? ?? ?? 85 c0 75 3a 6a 08 6a 01 53 8d 4c 24 24 53 51 ff 15 00 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -260,6 +271,7 @@ rule Trojan_Win32_IcedId_DEG_2147759357_0
         $x_1_2 = "H7Gx9op2JpZ3BwqtjR2PgOcnlo3MsUBimaeBgh3GvPVpLJuZfHAdfOmuvsolHZeEyQQGiE0IhjdNj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -286,6 +298,7 @@ rule Trojan_Win32_IcedId_DEH_2147759822_0
         $x_1_6 = "eOrSHsbkt5WGM9s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -308,6 +321,7 @@ rule Trojan_Win32_IcedId_DEJ_2147760011_0
         $x_1_2 = "EeSVHCB8fA84i6E" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -330,6 +344,7 @@ rule Trojan_Win32_IcedId_DEK_2147760012_0
         $x_1_2 = "onItrOx8cz93ZpykfJlBaYTDZvZYVfHRQjiEB4a" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -357,6 +372,7 @@ rule Trojan_Win32_IcedId_AB_2147760344_0
         $x_3_7 = "ord6582" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -378,6 +394,7 @@ rule Trojan_Win32_IcedId_DEM_2147760367_0
         $x_1_1 = {83 c4 14 6a 00 6a 01 6a 00 6a 00 8d 55 ?? 52 ff 15 ?? ?? ?? ?? 85 c0 75 ?? 6a 08 6a 01 6a 00 6a 00 8d 45 00 50 ff 15 01 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -399,6 +416,7 @@ rule Trojan_Win32_IcedId_DEO_2147760805_0
         $x_1_1 = {83 c4 04 50 6a 01 6a 00 6a 00 8d 4d f4 51 ff 15 ?? ?? ?? ?? 85 c0 75 ?? 32 c0 e9 ?? ?? ?? ?? c7 45 d4 00 00 00 00 8d 55 d4 52 6a 00 6a 00 68 34 01 00 00 68 ?? ?? ?? ?? 8b 45 f4 50 ff 15 ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -421,6 +439,7 @@ rule Trojan_Win32_IcedId_DEP_2147760877_0
         $x_1_2 = "0oFW9eeKrWCPUZxEr9i0VuyhowVRpsztR4iBzl3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -443,6 +462,7 @@ rule Trojan_Win32_IcedId_DEQ_2147760878_0
         $x_1_2 = "Xdq7mk5iNSp2eWF" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -466,6 +486,7 @@ rule Trojan_Win32_IcedId_DAS_2147760976_0
         $x_1_3 = "Runbook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -488,6 +509,7 @@ rule Trojan_Win32_IcedId_DAS_2147760976_1
         $x_1_2 = "Em1O7ccsDHAQEUj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -510,6 +532,7 @@ rule Trojan_Win32_IcedId_DAT_2147761039_0
         $x_1_2 = "VVXNHZEfp71kFlGUXv5du60C599rgamSBySsjXA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -532,6 +555,7 @@ rule Trojan_Win32_IcedId_DAU_2147761046_0
         $x_1_2 = "jzaWmvU4NxwhOXQ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -553,6 +577,7 @@ rule Trojan_Win32_IcedId_DAZ_2147761198_0
         $x_1_1 = {8b 44 24 14 81 c1 ?? ?? ?? ?? 8b f7 2b 35 ?? ?? ?? ?? 83 c6 10 89 08 83 c0 04 83 6c 24 18 01 89 44 24 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -574,6 +599,7 @@ rule Trojan_Win32_IcedId_DBA_2147761199_0
         $x_1_1 = {8b c6 2b c7 48 0f b7 d8 0f b7 cb 2b 0d ?? ?? ?? ?? 81 c5 ?? ?? ?? ?? 89 2a 83 c2 04 83 6c 24 14 01 8d 74 0e 14 89 54 24 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -595,6 +621,7 @@ rule Trojan_Win32_IcedId_DAJ_2147761346_0
         $x_1_1 = {8b 5c 24 14 b0 a9 2a 05 ?? ?? ?? ?? 8b 74 24 10 2a c4 02 c8 89 1d ?? ?? ?? ?? 8b 44 24 28 89 35 ?? ?? ?? ?? 8b 38 81 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -617,6 +644,7 @@ rule Trojan_Win32_IcedId_DBD_2147761504_0
         $x_1_2 = "457867ujhfghdhgdgfdgh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -640,6 +668,7 @@ rule Trojan_Win32_IcedId_DBF_2147761528_0
         $x_2_3 = "$}*tnKEPGFHBLSO" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -666,6 +695,7 @@ rule Trojan_Win32_IcedId_DBG_2147761612_0
         $x_1_2 = "jH9{P|nWKBpPP%J" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -688,6 +718,7 @@ rule Trojan_Win32_IcedId_DBH_2147761927_0
         $x_1_2 = "wPB6Gy0*CuLienC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -710,6 +741,7 @@ rule Trojan_Win32_IcedId_DBI_2147761935_0
         $x_1_2 = "W8mWzWSX6Zvw1mG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -732,6 +764,7 @@ rule Trojan_Win32_IcedId_DBK_2147762001_0
         $x_1_2 = "OGur1xPpGxsXWcS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -754,6 +787,7 @@ rule Trojan_Win32_IcedId_DBL_2147762002_0
         $x_1_2 = "EcX1EsAduZpJrQGnsGrHl2PsDK5bXR10f6YmuCu0nAUca76MgpN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -781,6 +815,7 @@ rule Trojan_Win32_IcedId_DBO_2147762241_0
         $x_1_7 = "CJ6dBqnAQZ3P8Y@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -802,6 +837,7 @@ rule Trojan_Win32_IcedId_DBR_2147762482_0
         $x_1_1 = {83 c4 0c 53 6a 01 53 53 8d 44 24 ?? 50 ff 15 ?? ?? ?? ?? 85 c0 75 3d 6a 08 6a 01 53 53 8d 4c 24 00 51 ff 15 01 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -824,6 +860,7 @@ rule Trojan_Win32_IcedId_DC_2147762489_0
         $x_10_2 = {89 82 45 df ff ff 8b 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 8d 84 0a 57 7a 00 00 a3 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 69 c9 f7 00 00 00 81 f9 45 25 00 00 76 18 8b 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -845,6 +882,7 @@ rule Trojan_Win32_IcedId_DBU_2147762595_0
         $x_1_1 = {53 6a 01 53 53 8d 44 24 ?? 50 ff 15 ?? ?? ?? ?? 85 c0 75 3f 6a 08 6a 01 53 53 8d 4c 24 00 51 ff 15 01 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -866,6 +904,7 @@ rule Trojan_Win32_IcedId_DBX_2147762765_0
         $x_1_1 = {83 c4 0c 8d 45 ?? 53 6a 01 53 53 50 ff 15 ?? ?? ?? ?? 85 c0 75 36 6a 08 6a 01 53 8d 45 00 53 50 ff 15 01 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -887,6 +926,7 @@ rule Trojan_Win32_IcedId_DE_2147763880_0
         $x_1_1 = {8b c1 99 f7 ff 8a 82 ?? ?? ?? ?? 30 81 ?? ?? ?? ?? 41 3b ce 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -912,6 +952,7 @@ rule Trojan_Win32_IcedId_DH_2147764494_0
         $x_1_5 = "oAQM#" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -935,6 +976,7 @@ rule Trojan_Win32_IcedId_PK_2147765380_0
         $x_1_3 = "\\This\\49\\soldier\\Hope.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -957,6 +999,7 @@ rule Trojan_Win32_IcedId_PK_2147765380_1
         $x_1_2 = "\\Step\\Shoe\\Wave\\pull\\Allow\\condition\\copy.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -981,6 +1024,7 @@ rule Trojan_Win32_IcedId_SC_2147778200_0
         $x_10_4 = "IsDebuggerPresent" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1005,6 +1049,7 @@ rule Trojan_Win32_IcedId_SA_2147778337_0
         $x_1_4 = "tw7TQt9pNstL7Wn" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1027,6 +1072,7 @@ rule Trojan_Win32_IcedId_SB_2147778358_0
         $x_1_2 = "f:\\dd\\vctools\\crt\\vcruntime\\src\\internal\\winapi_downlevel.cpp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1049,6 +1095,7 @@ rule Trojan_Win32_IcedId_EDV_2147783112_0
         $x_10_2 = {83 ea 04 33 c0 2b 55 e8 1b 45 ec 88 55 e7}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1076,6 +1123,7 @@ rule Trojan_Win32_IcedId_ACD_2147787530_0
         $x_3_7 = "GetWindowThreadProcessId" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1098,6 +1146,7 @@ rule Trojan_Win32_IcedId_SIBE_2147787623_0
         $x_1_2 = {8b 45 08 89 45 ?? [0-240] 8b 75 00 [0-10] ff e6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1125,6 +1174,7 @@ rule Trojan_Win32_IcedId_QR_2147794962_0
         $x_3_7 = "StopServer" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1147,6 +1197,7 @@ rule Trojan_Win32_IcedId_QA_2147796263_0
         $x_10_2 = {b8 6d e3 4c 00 89 04 24 89 44 24 04 f7 04 24 03 00 00 00 74 1e 41 83 f8 0a 0f 9c c2 41 8d 41 ff 41 0f af c1 83 e0 01 0f 94 c1 08 d1 80 f9 01}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1169,6 +1220,7 @@ rule Trojan_Win32_IcedId_SIBJ_2147813155_0
         $x_1_2 = {89 08 8b c2 [0-10] 81 7c 24 ?? ?? ?? ?? ?? [0-58] 8b 0d ?? ?? ?? ?? 81 c1 ?? ?? ?? ?? [0-5] 03 4c 24 01 [0-10] 89 4c 24 1c 8b 09 [0-37] 81 c1 ?? ?? ?? ?? 83 44 24 ?? 04 [0-16] 8b 44 24 1c 89 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1191,6 +1243,7 @@ rule Trojan_Win32_IcedId_SIBJ1_2147813156_0
         $x_1_2 = {83 c6 04 8d [0-16] 81 fe ?? ?? ?? ?? [0-58] 8b 15 ?? ?? ?? ?? [0-10] 8b ac 32 ?? ?? ?? ?? [0-90] a1 04 81 c5 ?? ?? ?? ?? [0-10] 89 ac 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1213,6 +1266,7 @@ rule Trojan_Win32_IcedId_SIBJ2_2147813157_0
         $x_1_2 = {83 c2 04 89 [0-10] 81 fa ?? ?? ?? ?? [0-42] 8b 1d ?? ?? ?? ?? 8b b4 13 ?? ?? ?? ?? [0-64] 81 c6 f4 49 0a 01 89 b4 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1235,6 +1289,7 @@ rule Trojan_Win32_IcedId_SIBJ3_2147813158_0
         $x_1_2 = {83 c0 04 89 [0-10] 89 44 24 ?? 3d ?? ?? ?? ?? 73 ?? [0-10] [0-58] 03 2d ?? ?? ?? ?? [0-16] 8b 85 ?? ?? ?? ?? 89 44 24 ?? [0-85] 8b 44 24 0a 05 ?? ?? ?? ?? [0-10] 89 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1257,6 +1312,7 @@ rule Trojan_Win32_IcedId_SIBJ4_2147813797_0
         $x_1_2 = {8b 00 89 44 24 ?? [0-32] 8b 4c 24 ?? 8b 44 24 00 83 44 24 02 04 05 ?? ?? ?? ?? [0-5] 89 01 [0-16] ff 4c 24 ?? [0-122] 8b 44 24 02 [0-10] 8b 00 89 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1279,6 +1335,7 @@ rule Trojan_Win32_IcedId_SIBJ5_2147813798_0
         $x_1_2 = {8b 7d 00 a3 [0-58] 81 c7 a4 6f 01 01 89 7d 00 [0-26] 83 c5 04 83 6c 24 ?? 01 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1301,6 +1358,7 @@ rule Trojan_Win32_IcedId_SIBJ5_2147813798_1
         $x_1_2 = {57 c7 44 24 ?? ?? ?? ?? ?? [0-139] 7c 24 ?? [0-139] 35 ?? ?? ?? ?? [0-141] bc 3e ?? ?? ?? ?? 8b 37 [0-131] 44 24 03 04 [0-129] c6 8c 48 06 01 81 7c 24 03 ?? ?? ?? ?? [0-137] 37 [0-15] 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1323,6 +1381,7 @@ rule Trojan_Win32_IcedId_SIBK_2147813799_0
         $x_1_2 = {c1 e5 07 8b 4c 24 ?? c1 e9 ?? 89 f0 89 fe 89 cf ba ?? ?? ?? ?? 31 d7 89 eb 31 d3 41 b8 ?? ?? ?? ?? 44 21 c7 83 e1 ?? 09 f9 89 f7 89 c6 44 21 c3 81 e5 ?? ?? ?? ?? 09 dd 31 cd 45 0f be e9 89 e9 31 d1 b8 ?? ?? ?? ?? 21 c1 bb ?? ?? ?? ?? 21 dd 09 cd 44 89 e9 31 d1 21 c1 41 21 dd 41 09 cd 8b 4c 24 ?? ff c1 48 63 c1 48 03 44 24 ?? 41 31 ed 8b 54 24 ?? ff c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1345,6 +1404,7 @@ rule Trojan_Win32_IcedId_SIBK_2147813799_1
         $x_1_2 = {45 33 c0 4c 8d 0d ?? ?? ?? ?? 49 2b c9 4b 8d 14 08 49 ff c0 8a 42 ?? 32 02 88 44 11 ?? 49 83 f8 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1367,6 +1427,7 @@ rule Trojan_Win32_IcedId_SIBJ6_2147815126_0
         $x_1_2 = {83 c5 04 83 [0-5] 81 fd ?? ?? ?? ?? [0-10] [0-80] a1 ?? ?? ?? ?? [0-10] 8b 94 28 ?? ?? ?? ?? [0-74] 81 c2 ?? ?? ?? ?? [0-10] a1 05 89 94 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1389,6 +1450,7 @@ rule Trojan_Win32_IcedId_SIBJ7_2147815225_0
         $x_1_2 = {83 c2 04 89 55 ?? 81 7d 00 ?? ?? ?? ?? 0f 83 ?? ?? ?? ?? [0-147] [0-147] 8b 0d ?? ?? ?? ?? 03 4d 00 8b 91 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? [0-112] 8b 0d 09 81 c1 ?? ?? ?? ?? 89 0d 09 8b 15 06 03 55 00 a1 09 89 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1411,6 +1473,7 @@ rule Trojan_Win32_IcedId_SIBJ8_2147815226_0
         $x_1_2 = {83 c7 04 83 6c 24 ?? 01 [0-10] [0-96] 8b 37 [0-80] 81 c6 ?? ?? ?? ?? [0-10] 89 37 [0-5] 83 c7 04 83 6c 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1433,6 +1496,7 @@ rule Trojan_Win32_IcedId_SIBJ8_2147815226_1
         $x_1_2 = {83 c1 04 89 4d ?? 81 7d 00 ?? ?? ?? ?? 0f 83 ?? ?? ?? ?? 60 01 8b 0d ?? ?? ?? ?? 03 4d 00 8b 91 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? e0 02 8b 15 08 81 c2 ?? ?? ?? ?? 89 15 08 a1 05 03 45 00 8b 0d 08 89 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1455,6 +1519,7 @@ rule Trojan_Win32_IcedId_SIBJ9_2147815328_0
         $x_1_2 = {89 37 83 c7 04 ff 4c 24 ?? [0-10] [0-64] 8b 37 [0-48] 81 c6 ?? ?? ?? ?? 89 37 83 c7 04 ff 4c 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1477,6 +1542,7 @@ rule Trojan_Win32_IcedId_SIBJ9_2147815328_1
         $x_1_2 = {83 c2 04 83 6c 24 ?? 01 89 54 24 ?? [0-16] [0-176] 8b 44 24 01 [0-16] 8b 00 [0-16] 89 44 24 ?? [0-186] 8b 54 24 01 [0-10] 8b 44 24 08 [0-10] 05 60 34 2f 01 [0-10] 89 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1499,6 +1565,7 @@ rule Trojan_Win32_IcedId_SIBJ10_2147815329_0
         $x_1_2 = {83 c6 04 8b [0-32] 81 fe ?? ?? ?? ?? 73 ?? [0-16] [0-112] a1 ?? ?? ?? ?? [0-16] 8b bc 30 ?? ?? ?? ?? [0-16] a1 06 [0-16] 81 c7 ?? ?? ?? ?? [0-10] 89 bc 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1521,6 +1588,7 @@ rule Trojan_Win32_IcedId_SIBJ10_2147815329_1
         $x_1_2 = {83 c1 04 89 4d ?? 81 7d 00 ?? ?? ?? ?? 0f 83 ?? ?? ?? ?? 8a 01 8b 15 ?? ?? ?? ?? 03 55 00 8b 82 ?? ?? ?? ?? a3 ?? ?? ?? ?? [0-220] 8b 0d 08 81 c1 ?? ?? ?? ?? 89 0d 08 8b 15 05 03 55 00 a1 08 89 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1543,6 +1611,7 @@ rule Trojan_Win32_IcedId_SIBJ11_2147815330_0
         $x_1_2 = {8b 0f 81 c1 ?? ?? ?? ?? [0-16] 89 0f 83 c7 04 83 6c 24 ?? 01 [0-16] 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1565,6 +1634,7 @@ rule Trojan_Win32_IcedId_SIBJ11_2147815330_1
         $x_1_2 = {04 ff 4c 24 ?? [0-10] [0-112] 8b 5c 24 ?? [0-32] 8b 1b [0-58] 8b 44 24 04 81 c3 ?? ?? ?? ?? [0-16] 89 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1587,6 +1657,7 @@ rule Trojan_Win32_IcedId_SIBJ11_2147815330_2
         $x_1_2 = {83 c1 04 ff 4c 24 ?? 89 4c 24 ?? [0-176] 8b 54 24 01 [0-32] 8b 12 [0-32] 89 54 24 ?? [0-112] 8b 54 24 07 [0-64] 8b 4c 24 01 81 c2 ?? ?? ?? ?? [0-32] 89 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1609,6 +1680,7 @@ rule Trojan_Win32_IcedId_SIBJ12_2147815331_0
         $x_1_2 = {83 c6 04 2c [0-10] 81 fe ?? ?? ?? ?? [0-10] [0-112] 8b 2d ?? ?? ?? ?? [0-32] 8b bc 2e ?? ?? ?? ?? [0-48] 81 c7 ?? ?? ?? ?? [0-16] 89 bc 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1631,6 +1703,7 @@ rule Trojan_Win32_IcedId_SIBJ12_2147815331_1
         $x_1_2 = {03 cd 89 4c 24 ?? 8b 29 [0-48] 8b 4c 24 00 81 c5 ?? ?? ?? ?? [0-16] 89 29 [0-48] 8b 6c 24 ?? [0-16] 83 c5 04 [0-16] 89 6c 24 06 [0-16] 81 fd ?? ?? ?? ?? 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1653,6 +1726,7 @@ rule Trojan_Win32_IcedId_SIBJ12_2147815331_2
         $x_1_2 = {4d 85 ff 74 ?? b8 ?? ?? ?? ?? [0-10] 8b 15 ?? ?? ?? ?? 8b 8c 02 ?? ?? ?? ?? 81 c1 ?? ?? ?? ?? [0-10] 89 8c 02 04 83 c0 04 3d ?? ?? ?? ?? 72 ?? [0-32] 4f [0-16] 73 ?? [0-10] 83 ff ?? 77}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1675,6 +1749,7 @@ rule Trojan_Win32_IcedId_SIBJ13_2147815590_0
         $x_1_2 = {89 3e 83 c6 04 [0-16] 83 6c 24 ?? 01 89 74 24 ?? [0-96] 8b 54 24 02 8b 3a [0-80] 8b 74 24 02 81 c7 ?? ?? ?? ?? [0-16] 89 3e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1697,6 +1772,7 @@ rule Trojan_Win32_IcedId_SIBJ13_2147815590_1
         $x_1_2 = {83 c5 04 0f [0-16] 81 fd ?? ?? ?? ?? 73 ?? [0-16] [0-96] 8b 3d ?? ?? ?? ?? [0-32] 8b b4 2f ?? ?? ?? ?? [0-48] 81 c6 ?? ?? ?? ?? [0-16] 89 b4 ?? ?? ?? ?? [0-16] 83 c5 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1719,6 +1795,7 @@ rule Trojan_Win32_IcedId_SIBJ14_2147815993_0
         $x_1_2 = {83 c2 04 89 55 ?? 81 7d 00 ?? ?? ?? ?? 0f 83 ?? ?? ?? ?? 8a 01 8b 15 ?? ?? ?? ?? 03 55 00 8b 82 ?? ?? ?? ?? a3 ?? ?? ?? ?? 8a 01 8b 15 08 81 c2 ?? ?? ?? ?? 89 15 08 a1 05 03 45 00 8b 0d 08 89 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1741,6 +1818,7 @@ rule Trojan_Win32_IcedId_SIBJ15_2147816067_0
         $x_1_2 = {8b 44 24 10 ?? ?? ?? ?? [0-80] 8b 44 24 10 [0-16] 83 44 24 10 04 81 c7 ?? ?? ?? ?? 89 38 [0-32] ff 4c 24 ?? [0-16] 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1763,6 +1841,7 @@ rule Trojan_Win32_IcedId_SIBJ16_2147816068_0
         $x_1_2 = {83 c1 04 89 4c 24 ?? 81 f9 ?? ?? ?? ?? [0-224] 8b 15 ?? ?? ?? ?? 03 54 24 00 8b 8a ?? ?? ?? ?? [0-32] 81 c1 ?? ?? ?? ?? [0-16] 89 8a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1784,6 +1863,7 @@ rule Trojan_Win32_IcedId_SIBJ17_2147816069_0
         $x_1_1 = {31 d2 4c 8d 05 ?? ?? ?? ?? 80 44 24 ?? ?? c0 64 24 01 ?? 8a 4c 24 01 88 4c 24 ?? 41 8a 4c 50 ?? 88 4c 24 01 80 44 24 01 ?? 8a 4c 24 01 08 4c 24 06 8a 4c 24 ?? 30 4c 24 06 fe 44 24 0d 8a 4c 24 06 88 0c 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1806,6 +1886,7 @@ rule Trojan_Win32_IcedId_SIBJ18_2147816070_0
         $x_1_2 = {83 c7 04 81 ff ?? ?? ?? ?? [0-16] [0-96] 8b 2d ?? ?? ?? ?? [0-32] 8b b4 2f ?? ?? ?? ?? [0-48] 81 c6 d0 10 08 01 89 b4 2f ?? ?? ?? ?? 83 c7 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1828,6 +1909,7 @@ rule Trojan_Win32_IcedId_SIBJ19_2147816071_0
         $x_1_2 = {04 ff 4c 24 ?? [0-16] 8b 15 ?? ?? ?? ?? 89 11 [0-96] 8b 44 24 ?? [0-16] 8b 00 [0-16] a3 02 [0-224] 81 05 02 ?? ?? ?? ?? [0-16] 8b 4c 24 ?? 83 44 24 ?? 04 ff 4c 24 ?? [0-16] 8b 15 02 89 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1850,6 +1932,7 @@ rule Trojan_Win32_IcedId_SIBN_2147816498_0
         $x_1_2 = {83 c5 04 8b [0-16] 81 fd ?? ?? ?? ?? 73 ?? [0-32] [0-165] 8b 3d ?? ?? ?? ?? [0-10] 8b b4 2f ?? ?? ?? ?? [0-48] 81 c6 ?? ?? ?? ?? [0-32] 89 b4 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1872,6 +1955,7 @@ rule Trojan_Win32_IcedId_SIBN_2147816498_1
         $x_1_2 = {83 c7 04 0f [0-16] 89 7c 24 ?? [0-16] 83 6c 24 28 01 [0-149] 8b 54 24 01 [0-16] 8b 12 [0-16] 81 c2 ?? ?? ?? ?? [0-16] 89 15 ?? ?? ?? ?? [0-128] 8b 7c 24 01 [0-16] a1 0a [0-16] 89 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1894,6 +1978,7 @@ rule Trojan_Win32_IcedId_SIBM_2147816499_0
         $x_1_2 = {58 89 44 24 ?? 8b 3b [0-80] 8b 44 24 00 81 c7 ?? ?? ?? ?? 89 3b 83 c3 04 48 [0-16] 89 44 24 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1916,6 +2001,7 @@ rule Trojan_Win32_IcedId_SIBM3_2147816805_0
         $x_1_2 = {83 c2 04 89 55 ?? 81 7d 00 ?? ?? ?? ?? 0f 83 ?? ?? ?? ?? 80 01 8b 0d ?? ?? ?? ?? 03 4d 00 8b 91 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? f0 01 8b 15 08 81 c2 ?? ?? ?? ?? 89 15 08 a1 05 03 45 00 8b 0d 08 89 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1938,6 +2024,7 @@ rule Trojan_Win32_IcedId_SIBM4_2147816815_0
         $x_1_2 = {83 c5 04 69 [0-16] 81 fd ?? ?? ?? ?? 73 ?? [0-16] [0-128] 8b 15 ?? ?? ?? ?? [0-16] 8b 8c 2a ?? ?? ?? ?? 81 c1 ?? ?? ?? ?? [0-16] 89 8c 2a 08 83 c5 04 [0-16] 81 fd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1960,6 +2047,7 @@ rule Trojan_Win32_IcedId_SIBM5_2147817100_0
         $x_1_2 = {33 c0 0f b6 0a [0-16] c1 c8 ?? 48 8d 52 01 0f be c9 03 c1 0f b6 0a 84 c9 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1982,6 +2070,7 @@ rule Trojan_Win32_IcedId_SIBP_2147817101_0
         $x_1_2 = {04 ff 4c 24 ?? [0-16] [0-176] 8b 54 24 ?? 8b 12 [0-48] 8b 7c 24 ?? 81 c2 ?? ?? ?? ?? 89 17}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2004,6 +2093,7 @@ rule Trojan_Win32_IcedId_EC_2147831658_0
         $x_1_2 = "fuadsyguasgduhaisudjyuagsdua" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2031,6 +2121,7 @@ rule Trojan_Win32_IcedId_EC_2147831658_1
         $x_1_7 = "CreateMutexW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2052,6 +2143,7 @@ rule Trojan_Win32_IcedId_PAB_2147939514_0
         $x_2_1 = {8d 0c 50 8b 15 ?? ?? ?? ?? 2b d1 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2073,6 +2165,7 @@ rule Trojan_Win32_IcedId_AC_2147945972_0
         $x_1_1 = {8b dc e6 e8 00 68 45 58 82 72 5a 00 00 22 10 f8 d8 48 02 b2 00 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

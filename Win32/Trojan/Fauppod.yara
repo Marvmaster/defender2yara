@@ -19,6 +19,7 @@ rule Trojan_Win32_Fauppod_A_2147828150_0
         $x_1_5 = {8b 30 8b 78 04 8b 58 08 8b 68 0c 8b 60 10 8b 40 14 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Fauppod_D_2147828237_0
         $x_1_4 = {8a 45 14 8b 4d 10 8b 55 0c 8b 75 08 [0-2] 8a 24 0a 28 c4 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_Fauppod_F_2147828405_0
         $x_1_7 = {e8 de ff ff ff 40 1a 00 89 18 89 f0 01 05 ?? ?? ?? ?? 89 ea 01 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win32_Fauppod_B_2147838865_0
         $x_1_4 = "WaitForSingleObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Trojan_Win32_Fauppod_MA_2147839058_0
         $x_1_4 = "WaitForSingleObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -139,6 +144,7 @@ rule Trojan_Win32_Fauppod_MA_2147839058_1
         $x_1_3 = {8b 45 e8 8b 4d f0 8a 14 01 8b 75 ec 88 14 06 05 01 00 00 00 8b 7d f4 39 f8 89 45 e8 75 e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_Win32_Fauppod_MB_2147839059_0
         $x_1_4 = "WaitForSingleObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule Trojan_Win32_Fauppod_MC_2147839229_0
         $x_1_4 = "WaitForSingleObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +219,7 @@ rule Trojan_Win32_Fauppod_MD_2147839324_0
         $x_1_4 = "WaitForSingleObjectEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -235,6 +244,7 @@ rule Trojan_Win32_Fauppod_ME_2147839920_0
         $x_1_4 = "WaitForSingleObjectEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -259,6 +269,7 @@ rule Trojan_Win32_Fauppod_MF_2147840350_0
         $x_1_4 = "WaitForSingleObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -283,6 +294,7 @@ rule Trojan_Win32_Fauppod_MG_2147840351_0
         $x_1_4 = "WaitForSingleObjectEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -305,6 +317,7 @@ rule Trojan_Win32_Fauppod_DA_2147845207_0
         $x_10_2 = {8a 06 46 32 02 68 ?? ?? ?? ?? 83 c4 04 88 07 83 c7 01 89 c0 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 42 ?? 50 83 c4 04 49 [0-2] 85 c9 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -327,6 +340,7 @@ rule Trojan_Win32_Fauppod_MH_2147847713_0
         $x_2_2 = {83 c4 04 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 8b 7d 0c 52 83 c4 04 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 57 5a 31 c0 66 8b 06 46 46 53 83 c4 04 50 83 c4 04 85 c0 74}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -356,6 +370,7 @@ rule Trojan_Win32_Fauppod_SPD_2147847759_0
         $x_1_9 = "b3GreaterkwOseaDhad" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -381,6 +396,7 @@ rule Trojan_Win32_Fauppod_C_2147849483_0
         $x_2_5 = "RcytvgHvubhm" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -405,6 +421,7 @@ rule Trojan_Win32_Fauppod_MI_2147852163_0
         $x_1_4 = "CloseHandle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -426,6 +443,7 @@ rule Trojan_Win32_Fauppod_GNQ_2147852303_0
         $x_10_1 = {46 8a 46 ff 68 ?? ?? ?? ?? 83 c4 04 32 02 47 88 47 ff 89 c0 42 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 89 c0 83 e9 01 89 c0 ?? 85 c9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -447,6 +465,7 @@ rule Trojan_Win32_Fauppod_GNS_2147852321_0
         $x_10_1 = {83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 83 c6 01 8a 46 ff 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 32 02 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 88 07 47}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -468,6 +487,7 @@ rule Trojan_Win32_Fauppod_GNS_2147852321_1
         $x_10_1 = {83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 68 ?? ?? ?? ?? 83 c4 04 32 02 83 ec 04 c7 04 ?? ?? ?? ?? 6f 83 c4 04 83 c7 01 88 47 ff ?? 83 c2 01 68 ?? ?? ?? ?? 83 c4 04 49 53 83 c4 04 89 c0 85 c9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -489,6 +509,7 @@ rule Trojan_Win32_Fauppod_GNT_2147852331_0
         $x_10_1 = {30 c8 88 45 ?? 8a 45 ?? a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 0f b6 c0 83 c4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -510,6 +531,7 @@ rule Trojan_Win32_Fauppod_GNT_2147852331_1
         $x_10_1 = {8b 55 14 68 ?? ?? ?? ?? 83 c4 04 80 3a 00 ?? ?? ?? ?? ac 32 02 47 88 47 ff 68 ?? ?? ?? ?? 83 c4 04 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 42 83 e9 01 85 c9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -532,6 +554,7 @@ rule Trojan_Win32_Fauppod_GNT_2147852331_2
         $x_10_2 = {83 c4 04 42 89 c0 89 c0 83 e9 01 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 85 c9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -553,6 +576,7 @@ rule Trojan_Win32_Fauppod_PA_2147853044_0
         $x_1_1 = {83 c4 04 8a 06 83 c6 01 83 ec 04 c7 04 24 [0-4] 83 c4 04 83 ec 04 c7 04 24 [0-4] 83 c4 04 32 02 88 07 47 51 83 c4 04 42 83 ec 04 c7 04 24 [0-4] 83 c4 04 53 83 c4 04 49 85 c9 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -574,6 +598,7 @@ rule Trojan_Win32_Fauppod_PC_2147853381_0
         $x_1_1 = {80 3a 00 74 [0-4] ac 32 02 88 07 47 51 83 c4 ?? 42 89 c0 56 83 c4 ?? 83 e9 ?? 89 c0 85 c9 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -595,6 +620,7 @@ rule Trojan_Win32_Fauppod_PB_2147853509_0
         $x_1_1 = {8b c3 8d 50 01 0f b7 ca 89 4c 24 ?? 8b 34 24 66 d1 c6 0f b7 fe 8b 5c 24 ?? 0f b7 14 5d ?? ?? ?? ?? 8d 87 ?? ?? ?? ?? 66 c1 c0 0b 0f b7 c8 33 d1 88 54 1c ?? 89 0c 24 84 d2 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -616,6 +642,7 @@ rule Trojan_Win32_Fauppod_MJ_2147888118_0
         $x_10_1 = {83 f2 68 88 54 24 68 8a 44 24 68 8a d0 02 c0 c0 ea 07 0a d0 8b 74 24 64 8a c2 04 f3 8a 9e ?? ?? ?? ?? 02 d8 88 5c 34 10 46 81 e6 ff 00 00 00 89 74 24 64 83 fe 4c 7c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -637,6 +664,7 @@ rule Trojan_Win32_Fauppod_PD_2147888204_0
         $x_1_1 = {80 3a 00 74 [0-6] 68 ?? ?? ?? ?? 83 c4 04 8a 06 46 53 83 c4 04 32 02 88 07 47 89 c0 83 c2 01 90 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 49 85 c9 75 ?? 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -658,6 +686,7 @@ rule Trojan_Win32_Fauppod_PE_2147888275_0
         $x_1_1 = {80 3a 00 74 [0-6] 8a 06 46 32 02 83 c7 01 88 47 [0-4] 83 c2 01 53 83 c4 04 89 c0 83 e9 01 68 [0-4] 83 c4 04 89 c0 85 c9 75 ?? 61 c9 c2 10 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -679,6 +708,7 @@ rule Trojan_Win32_Fauppod_PF_2147888299_0
         $x_1_1 = {80 3a 00 74 [0-6] 83 c6 01 8a 46 ?? 89 c0 32 02 88 07 47 56 83 c4 04 83 c2 01 49 51 83 c4 04 90 85 c9 75 ?? 61 c9 c2 10 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -700,6 +730,7 @@ rule Trojan_Win32_Fauppod_PG_2147888867_0
         $x_1_1 = {80 3a 00 74 [0-6] 8a 06 83 c6 01 89 c0 32 02 68 ?? ?? ?? ?? 83 c4 04 47 88 47 ?? 89 c0 90 83 c2 01 83 e9 01 51 83 c4 04 85 c9 75 ?? 61 c9 c2 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -724,6 +755,7 @@ rule Trojan_Win32_Fauppod_MM_2147888896_0
         $x_5_4 = {e0 d8 c7 d8 c3 d8 ed d8 d0 d8 d6 89 0c d8 e0 d8 da d8 ce d8 d8 d8 c6 d8 cb d8 cf d8 df d8 e0 d8}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -745,6 +777,7 @@ rule Trojan_Win32_Fauppod_PH_2147888906_0
         $x_1_1 = {80 3a 00 74 ?? 90 90 90 ac 89 c0 32 02 89 c0 aa 42 90 53 83 c4 04 49 56 83 c4 04 85 c9 75 ?? 61 c9 c2 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -766,6 +799,7 @@ rule Trojan_Win32_Fauppod_PI_2147888907_0
         $x_1_1 = {80 3a 00 74 ?? 90 90 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 8a 06 83 c6 01 90 32 02 56 83 c4 04 88 07 83 c7 01 56 83 c4 04 42 83 e9 01 89 c0 85 c9 75 ?? 61 c9 c2 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -787,6 +821,7 @@ rule Trojan_Win32_Fauppod_PJ_2147889097_0
         $x_1_1 = {80 3a 00 74 ?? 90 90 83 c6 01 8a 46 ?? 90 89 c0 32 02 89 c0 aa 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 42 68 [0-4] 83 c4 04 49 90 85 c9 75 ?? 61 c9 c2 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -808,6 +843,7 @@ rule Trojan_Win32_Fauppod_PK_2147889098_0
         $x_1_1 = {80 3a 00 74 ?? 90 90 ac 32 02 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 88 07 47 89 c0 83 c2 01 57 83 c4 04 83 e9 01 56 83 c4 04 85 c9 75 ?? 61 c9 c2 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -829,6 +865,7 @@ rule Trojan_Win32_Fauppod_PL_2147889114_0
         $x_1_1 = {80 3a 00 74 ?? 90 90 8a 06 46 68 ?? ?? ?? ?? 83 c4 04 68 ?? ?? ?? ?? 83 c4 04 32 02 89 c0 83 c7 01 88 47 ?? 68 ?? ?? ?? ?? 83 c4 04 42 68 ?? ?? ?? ?? 83 c4 04 90 49 68 ?? ?? ?? ?? 83 c4 04 89 c0 85 c9 75 ?? 61 c9 c2 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -850,6 +887,7 @@ rule Trojan_Win32_Fauppod_PM_2147889321_0
         $x_1_1 = {80 3a 00 74 ?? 90 90 46 8a 46 ?? 51 83 c4 04 53 83 c4 04 32 02 88 07 83 c7 01 90 42 83 e9 01 85 c9 75 ?? 61 c9 c2 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -871,6 +909,7 @@ rule Trojan_Win32_Fauppod_PN_2147889322_0
         $x_1_1 = {80 3a 00 74 [0-6] 83 c6 01 8a 46 ?? 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 32 02 aa 52 83 c4 04 89 c0 83 c2 01 68 ?? ?? ?? ?? 83 c4 04 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 49 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 85 c9 75 ?? 61 c9 c2 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -892,6 +931,7 @@ rule Trojan_Win32_Fauppod_PO_2147889490_0
         $x_1_1 = {80 3a 00 74 [0-6] 8a 06 83 c6 01 51 83 c4 04 32 02 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 88 07 47 90 83 c2 01 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 49 56 83 c4 04 68 ?? ?? ?? ?? 83 c4 04 85 c9 75 ?? 61 c9 c2 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -913,6 +953,7 @@ rule Trojan_Win32_Fauppod_PP_2147889491_0
         $x_1_1 = {80 3a 00 74 ?? 90 90 46 8a 46 ?? 89 c0 32 02 89 c0 aa 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 42 83 e9 01 90 85 c9 75 ?? 61 c9 c2 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -934,6 +975,7 @@ rule Trojan_Win32_Fauppod_MO_2147891556_0
         $x_10_1 = {83 c4 04 46 8a 46 ff 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 68 ?? ?? ?? ?? 83 c4 04 32 02 89 c0 88 07 83 c7 01 57 83 c4 04 42 68 ?? ?? ?? ?? 83 c4 04 49}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -955,6 +997,7 @@ rule Trojan_Win32_Fauppod_MP_2147892921_0
         $x_10_1 = {83 c4 04 32 02 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 88 07 83 c7 01 ?? 42 ?? 83 e9 01 85 c9 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -976,6 +1019,7 @@ rule Trojan_Win32_Fauppod_PQ_2147893052_0
         $x_1_1 = {ac 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 68 ?? ?? ?? ?? 83 c4 04 32 02 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 83 c7 01 88 47 ?? 83 c2 01 49 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 68 ?? ?? ?? ?? 83 c4 04 85 c9 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -997,6 +1041,7 @@ rule Trojan_Win32_Fauppod_PR_2147893145_0
         $x_1_1 = {80 3a 00 74 ?? 90 90 8a 06 46 90 51 83 c4 04 32 02 88 07 47 89 c0 42 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 49 68 ?? ?? ?? ?? 83 c4 04 85 c9 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1021,6 +1066,7 @@ rule Trojan_Win32_Fauppod_MK_2147893160_0
         $x_1_4 = "WaitForSingleObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1043,6 +1089,7 @@ rule Trojan_Win32_Fauppod_MQ_2147893805_0
         $x_5_2 = {83 c4 04 83 c2 01 68 ?? ?? ?? ?? 83 c4 04 68 ?? ?? ?? ?? 83 c4 04 49 [0-4] 85 c9 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1067,6 +1114,7 @@ rule Trojan_Win32_Fauppod_MR_2147894351_0
         $x_1_4 = "EtcyvYvgbh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1088,6 +1136,7 @@ rule Trojan_Win32_Fauppod_IP_2147894366_0
         $x_1_1 = {64 8b 72 30 8b 76 0c 8b 76 0c ad 8b 30 8b 7e 18 8b 5f 3c 8b 5c 1f 78 8b 74 1f 20 01 fe}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1109,6 +1158,7 @@ rule Trojan_Win32_Fauppod_MKV_2147895254_0
         $x_1_1 = {01 f2 89 55 e0 8b 55 e0 89 d0 99 f7 f9 89 15 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 81 ea ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 8b 55 dc 8b 75 ec 0f b6 14 16 8b 35 ?? ?? ?? ?? 8b 7d e4 0f b6 34 37 31 f2 88 d3 8b 55 dc 8b 75 e8 88 1c 16 8b 45 dc 05 01 00 00 00 89 45 dc e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1130,6 +1180,7 @@ rule Trojan_Win32_Fauppod_GMB_2147896742_0
         $x_10_1 = {31 38 4a 8d 05 ?? ?? ?? ?? 31 18 40 83 e8 03 31 35 ?? ?? ?? ?? 31 d0 29 c2 89 2d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1151,6 +1202,7 @@ rule Trojan_Win32_Fauppod_GAN_2147899635_0
         $x_10_1 = {40 48 8d 05 ?? ?? ?? ?? 31 38 42 8d 05 ?? ?? ?? ?? 31 30 42 89 d0 89 e8 50 8f 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1172,6 +1224,7 @@ rule Trojan_Win32_Fauppod_AMAF_2147900899_0
         $x_1_1 = {8a 0c 0b 8b 55 e8 8b 75 d0 8a 2c 32 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 30 cd 8b 55 e4 88 2c 32 8b 55 f0 39 d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1193,6 +1246,7 @@ rule Trojan_Win32_Fauppod_AMBB_2147902309_0
         $x_2_1 = {55 89 e5 8a 45 0c 8a 4d 08 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 30 c8 0f b6 c0 5d c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1214,6 +1268,7 @@ rule Trojan_Win32_Fauppod_RX_2147904286_0
         $x_1_1 = {88 45 ff 88 4d fe 8a 45 ff 8a 4d fe 30 c8 0f b6 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1235,6 +1290,7 @@ rule Trojan_Win32_Fauppod_ZK_2147905389_0
         $x_1_1 = {01 d1 81 e1 ff 00 00 00 89 0d ?? ?? ?? ?? c7 05 ?? ?? ?? ?? e2 02 00 00 8a 0c 0b 8b 55 e8 8b 75 d4 32 0c 32 8b 55 e4 88 0c 32 c7 05 ?? ?? ?? ?? 0b 13 00 00 8b 4d f0 39 cf 89 7d cc 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1265,6 +1321,7 @@ rule Trojan_Win32_Fauppod_AFU_2147906177_0
         $x_1_10 = "SjstAffduro" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1288,6 +1345,7 @@ rule Trojan_Win32_Fauppod_SPDB_2147907990_0
         $x_1_3 = "ekrnn73.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1311,6 +1369,7 @@ rule Trojan_Win32_Fauppod_CO_2147908418_0
         $x_4_3 = {55 89 e5 8a 45 0c 8a 4d 08 30 c8 a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? 7e 0f 00 00 c7 05 ?? ?? ?? ?? 51 e9 ff ff 0f b6 c0 5d c3}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             ((1 of ($x_4_*))) or
@@ -1336,6 +1395,7 @@ rule Trojan_Win32_Fauppod_AMMF_2147909499_0
         $x_1_1 = {0f b6 55 fa 0f b6 75 fb 89 55 f4 89 75 f0 8b 45 f4 8b 4d f0 31 c8 88 c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1358,6 +1418,7 @@ rule Trojan_Win32_Fauppod_SPZX_2147911219_0
         $x_2_2 = "JeehPeeaeor" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1379,6 +1440,7 @@ rule Trojan_Win32_Fauppod_GXT_2147911670_0
         $x_10_1 = {40 01 d0 4a 42 01 25 ?? ?? ?? ?? 01 d0 83 c2 ?? 48 ?? ?? 4a 8d 05 ?? ?? ?? ?? 89 18 83 c0 ?? 01 3d ?? ?? ?? ?? 83 f2 ?? 89 d0 8d 05 ?? ?? ?? ?? 31 28 31 35}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1401,6 +1463,7 @@ rule Trojan_Win32_Fauppod_SPUO_2147911958_0
         $x_2_2 = "IhzpheuldS" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1422,6 +1485,7 @@ rule Trojan_Win32_Fauppod_AMMI_2147912120_0
         $x_1_1 = {55 89 e5 8a 45 ?? 8a 4d ?? 8b 15 ?? ?? ?? ?? 30 c8 a2 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 0f b6 c0 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1443,6 +1507,7 @@ rule Trojan_Win32_Fauppod_GXU_2147912350_0
         $x_10_1 = {31 20 83 c2 ?? 83 c2 ?? ?? ?? 8d 05 ?? ?? ?? ?? 89 30 31 3d ?? ?? ?? ?? 83 c2 ?? 89 d0 ba ?? ?? ?? ?? 89 e8 50 8f 05 ?? ?? ?? ?? 40 89 d8 50}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1464,6 +1529,7 @@ rule Trojan_Win32_Fauppod_GYA_2147912814_0
         $x_10_1 = {01 20 4a b8 ?? ?? ?? ?? 48 eb ?? 89 f0 50 8f 05 ?? ?? ?? ?? 31 d0 8d 05 ?? ?? ?? ?? 31 28 89 d0 89 d8 50}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1485,6 +1551,7 @@ rule Trojan_Win32_Fauppod_GNK_2147913054_0
         $x_10_1 = {8a 45 0c 8a 4d 08 8b 15 ?? ?? ?? ?? 30 c8 a2 ?? ?? ?? ?? 89 d6 81 c6 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 81 c2}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1507,6 +1574,7 @@ rule Trojan_Win32_Fauppod_SPVX_2147913230_0
         $x_2_2 = "EteiawnHqiteatilpnii" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1528,6 +1596,7 @@ rule Trojan_Win32_Fauppod_GXZ_2147913360_0
         $x_10_1 = {56 8a 45 0c 8a 4d 08 30 c8 8b 15 ?? ?? ?? ?? a2 ?? ?? ?? ?? 89 d6 81 c6 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1550,6 +1619,7 @@ rule Trojan_Win32_Fauppod_ASGL_2147913581_0
         $x_5_2 = {55 89 e5 8a 45 0c 8a 4d 08 8b 15 ?? ?? ?? 10 81 c2 ?? ?? ?? ff 89 15 ?? ?? ?? 10 30 c8 a2 ?? ?? ?? 10 0f b6 c0 5d c3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1571,6 +1641,7 @@ rule Trojan_Win32_Fauppod_GNX_2147913844_0
         $x_10_1 = {8a 4d 08 30 c8 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 0f b6 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1592,6 +1663,7 @@ rule Trojan_Win32_Fauppod_GNX_2147913844_1
         $x_10_1 = {89 e5 8a 45 ?? 8a 4d ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? 30 c8 a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 0f b6 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1614,6 +1686,7 @@ rule Trojan_Win32_Fauppod_GNX_2147913844_2
         $x_10_2 = {55 89 e5 8a 45 0c 8a 4d 08 30 c8 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? a8 06 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1635,6 +1708,7 @@ rule Trojan_Win32_Fauppod_GNV_2147914036_0
         $x_10_1 = {88 45 ff 88 4d fe 8a 45 ff 8a 4d fe 30 c8 a2 60 7f 5b 00 c7 05 ?? ?? ?? ?? a8 06 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1656,6 +1730,7 @@ rule Trojan_Win32_Fauppod_GNU_2147914102_0
         $x_10_1 = {89 e5 8a 45 0c 8a 4d 08 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 30 c8 c7 05 ?? ?? ?? ?? a8 06 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1678,6 +1753,7 @@ rule Trojan_Win32_Fauppod_SCPP_2147914939_0
         $x_1_2 = "keevel85.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1699,6 +1775,7 @@ rule Trojan_Win32_Fauppod_AMAJ_2147915051_0
         $x_1_1 = {55 89 e5 8a 45 0c 8a 4d 08 30 c8 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 0f b6 c0 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1719,6 +1796,7 @@ rule Trojan_Win32_Fauppod_N_2147915814_0
         $x_1_1 = {78 77 6e 7a 72 73 77 6f 34 32 2e 64 6c 6c 00 52 6c 6f 73 72 65 65 6e 68 61 48 00 6b 65 72 6e 65 6c 33 32 2e 53 65 74 54 68 72 65 61 64 50 72 69 6f 72 69 74 79 42 6f 6f 73 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1740,6 +1818,7 @@ rule Trojan_Win32_Fauppod_GZM_2147916038_0
         $x_10_1 = {89 e5 8a 45 ?? 8a 4d ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? 30 c8 a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 0f b6 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1761,6 +1840,7 @@ rule Trojan_Win32_Fauppod_GNM_2147916623_0
         $x_10_1 = {88 c2 02 15 ?? ?? ?? ?? 88 15 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? 30 c8 81 c6 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 0f b6 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1782,6 +1862,7 @@ rule Trojan_Win32_Fauppod_GNM_2147916623_1
         $x_10_1 = {0f b6 c8 8b 55 ?? 0f af d1 88 d4 88 25 ?? ?? ?? ?? 8a 65 ?? 88 25 ?? ?? ?? ?? 8a 65 ?? 88 25 ?? ?? ?? ?? 0f b6 0d ?? ?? ?? ?? 0f b6 15 ?? ?? ?? ?? 31 d1 88 cc 88 25 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 81 e9 ?? ?? ?? ?? 89 0d ?? ?? ?? ?? c7 05 ?? ?? ?? ?? 4e 0a 00 00 0f b6 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1804,6 +1885,7 @@ rule Trojan_Win32_Fauppod_SSZC_2147916787_0
         $x_1_2 = "EesIwysullstetwlssi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1825,6 +1907,7 @@ rule Trojan_Win32_Fauppod_SZZC_2147917013_0
         $x_1_1 = {89 e5 8a 45 0c 8a 4d 08 8b 15 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? 30 c8 a2 ?? ?? ?? ?? 81 c2 4e 09 00 00 89 15 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? 22 04 00 00 0f b6 c0 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1846,6 +1929,7 @@ rule Trojan_Win32_Fauppod_SXZC_2147917961_0
         $x_3_1 = {8a 45 fa a2 ?? ?? ?? ?? 0f b6 15 ?? ?? ?? ?? 0f b6 35 ?? ?? ?? ?? 31 f2 88 d0 a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 0f b6 05 ?? ?? ?? ?? 83 c4 04 5e}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1867,6 +1951,7 @@ rule Trojan_Win32_Fauppod_SXXC_2147918313_0
         $x_3_1 = {8a 45 0c 8a 4d 08 88 0d ?? ?? ?? ?? 88 c2 30 ca a2 ?? ?? ?? ?? 88 15 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 0f b6 c2 5d}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1888,6 +1973,7 @@ rule Trojan_Win32_Fauppod_SBXC_2147918331_0
         $x_1_1 = {8a 45 0c 8a 4d 08 88 c2 02 15 ?? ?? ?? ?? 88 15 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? 30 c8 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 0f b6 c0 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1910,6 +1996,7 @@ rule Trojan_Win32_Fauppod_MEA_2147918455_0
         $x_3_2 = {8b 45 e0 8b 4d e4 03 0d ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 8b 4d f0 8a 14 01 8b 75 ec 88 14 06 05 01 00 00 00 8b 7d f4 39 f8 89 45 dc 74}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1931,6 +2018,7 @@ rule Trojan_Win32_Fauppod_SKXC_2147918529_0
         $x_1_1 = {8a 45 0c 8a 4d 08 88 c2 02 15 ?? ?? ?? ?? 88 15 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? 81 c6 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 30 c8 0f b6 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1952,6 +2040,7 @@ rule Trojan_Win32_Fauppod_PWH_2147919002_0
         $x_10_1 = {89 e5 8a 45 ?? 8a 4d ?? 88 c2 02 15 ?? ?? ?? ?? 88 15 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? a2 ?? ?? ?? ?? 30 c8 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 0f b6 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1973,6 +2062,7 @@ rule Trojan_Win32_Fauppod_KAA_2147919039_0
         $x_1_1 = {89 e5 8a 45 [0-15] 88 c2 02 15 [0-50] 30 c8 0f b6 c0 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1994,6 +2084,7 @@ rule Trojan_Win32_Fauppod_GBX_2147919209_0
         $x_10_1 = {88 c2 02 15 ?? ?? ?? ?? 88 15 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? 30 c8 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 0f b6 c0 5d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2015,6 +2106,7 @@ rule Trojan_Win32_Fauppod_SNUK_2147919835_0
         $x_5_1 = {8a 4d 08 88 c2 02 15 ?? ?? ?? ?? 88 15 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? 30 c8 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? 81 c6 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 0f b6 c0 5e}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2036,6 +2128,7 @@ rule Trojan_Win32_Fauppod_ASAQ_2147920295_0
         $x_5_1 = {55 89 e5 50 8a 45 0c 8a 4d 08 88 0d [0-4] a2 [0-4] 30 c8 a2 [0-4] 8b 15 [0-4] 81 c2 [0-4] 89 15 [0-4] 88 45 ff c7 05 [0-8] 8a 45 ff 0f b6 c0 83 c4 04 5d c3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2057,6 +2150,7 @@ rule Trojan_Win32_Fauppod_GND_2147920724_0
         $x_10_1 = {31 f2 88 d0 88 45 ?? 8b 15 ?? ?? ?? ?? 81 ea ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 0f b6 45 ?? 83 c4 ?? 5e 5d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2078,6 +2172,7 @@ rule Trojan_Win32_Fauppod_GZP_2147921003_0
         $x_10_1 = {5d c3 8d 05 ?? ?? ?? ?? 31 20 e8 ?? ?? ?? ?? c3 01 2d ?? ?? ?? ?? e8 ?? ?? ?? ?? 01 d0 8d 05 ?? ?? ?? ?? 89 30 42 29 d0 8d 05 ?? ?? ?? ?? 01 38 89 d8 50}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2099,6 +2194,7 @@ rule Trojan_Win32_Fauppod_SEZC_2147921058_0
         $x_1_1 = {88 c4 02 25 ?? ?? ?? ?? 88 25 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? a2 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 30 c8 0f b6 c0 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2120,6 +2216,7 @@ rule Trojan_Win32_Fauppod_AMA_2147921785_0
         $x_1_1 = {55 89 e5 8a 45 0c 8a 4d 08 88 0d [0-40] 30 c8 [0-20] c7 05 [0-20] 0f b6 c0 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2141,6 +2238,7 @@ rule Trojan_Win32_Fauppod_AMB_2147921789_0
         $x_1_1 = {55 89 e5 56 50 8a 45 0c 8a 4d 08 88 45 fb 88 4d fa 0f b6 55 fa 0f b6 35 [0-50] 01 f2 88 d0 a2 [0-40] c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 8a 45 [0-31] c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 0f b6 15 ?? ?? ?? ?? 0f b6 35 ?? ?? ?? ?? 31 f2 88 d0 a2 [0-80] 83 c4 04 5e 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2162,6 +2260,7 @@ rule Trojan_Win32_Fauppod_GCN_2147922472_0
         $x_10_1 = {01 28 8d 05 ?? ?? ?? ?? 89 18 83 e8 ?? 01 d0 31 d0 89 f8 50 8f 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2184,6 +2283,7 @@ rule Trojan_Win32_Fauppod_SFDB_2147922824_0
         $x_1_2 = "tedsrtamol30.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2205,6 +2305,7 @@ rule Trojan_Win32_Fauppod_GZT_2147922894_0
         $x_10_1 = {48 42 8d 05 ?? ?? ?? ?? 31 20 89 d0 83 f0 ?? e8 ?? ?? ?? ?? c3 48 4a 01 d0 29 c2 89 35 ?? ?? ?? ?? 4a 42 40 89 2d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2226,6 +2327,7 @@ rule Trojan_Win32_Fauppod_GNE_2147925045_0
         $x_10_1 = {31 38 42 29 c2 31 d0 8d 05 ?? ?? ?? ?? 89 28 31 d0 89 35 ?? ?? ?? ?? 83 f2 ?? 4a 48 31 1d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2247,6 +2349,7 @@ rule Trojan_Win32_Fauppod_PPHH_2147926926_0
         $x_10_1 = {56 50 8a 45 0c 8a 4d 08 88 45 fb 88 4d fa 0f b6 55 fa 0f b6 35 ?? ?? ?? ?? 01 f2 88 d0 a2 ?? ?? ?? ?? 0f b6 55 fb 0f b6 35 ?? ?? ?? ?? 01 f2 88 d0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2268,6 +2371,7 @@ rule Trojan_Win32_Fauppod_PPVH_2147927418_0
         $x_10_1 = {89 e5 8a 45 0c 8a 4d 08 31 d2 88 d4 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 88 c5 02 2d ?? ?? ?? ?? 88 2d ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? 0f b6 c4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2289,6 +2393,7 @@ rule Trojan_Win32_Fauppod_PQGH_2147927863_0
         $x_10_1 = {89 e5 8a 45 0c 8a 4d 08 31 d2 88 d4 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 88 c5 02 2d ?? ?? ?? ?? 88 2d ?? ?? ?? ?? 88 0d ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? a2 ?? ?? ?? ?? 0f b6 c4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2310,6 +2415,7 @@ rule Trojan_Win32_Fauppod_PLBH_2147928721_0
         $x_10_1 = {89 e5 8a 45 0c 8a 4d 08 31 d2 88 d4 88 c5 02 2d ?? ?? ?? ?? 88 2d ?? ?? ?? ?? 88 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 0f b6 c4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2331,6 +2437,7 @@ rule Trojan_Win32_Fauppod_GTM_2147929121_0
         $x_10_1 = {89 e5 56 8a 45 ?? 8a 4d ?? 31 d2 88 d4 8b 15 ?? ?? ?? ?? 89 d6 81 c6 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 88 c5 02 2d ?? ?? ?? ?? 88 2d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2352,6 +2459,7 @@ rule Trojan_Win32_Fauppod_GTG_2147929388_0
         $x_10_1 = {31 38 8d 05 ?? ?? ?? ?? 31 28 40 8d 05 ?? ?? ?? ?? 31 30 8d 05 ?? ?? ?? ?? 31 18 8d 05 ?? ?? ?? ?? 50 c3 b9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2395,6 +2503,7 @@ rule Trojan_Win32_Fauppod_AMDC_2147931539_0
         $x_1_1 = {55 89 e5 56 8a 45 0c 8a 4d 08 31 d2 88 d4 [0-30] 8b 15 ?? ?? ?? ?? 89 d6 81 c6 ?? ?? ?? ?? 89 35 [0-21] 0f b6 c4 5e 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2416,6 +2525,7 @@ rule Trojan_Win32_Fauppod_PHA_2147932937_0
         $x_10_1 = {89 e5 8a 45 0c 8a 4d 08 31 d2 88 d4 8b 15 ?? ?? ?? ?? 88 c5 02 2d ?? ?? ?? ?? 88 2d ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 0f b6 c4 5d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2437,6 +2547,7 @@ rule Trojan_Win32_Fauppod_PHB_2147933649_0
         $x_10_1 = {89 e5 8a 45 0c 8a 4d 08 31 d2 88 d4 88 c5 02 2d ?? ?? ?? ?? 88 2d ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 0f b6 c4 5d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2458,6 +2569,7 @@ rule Trojan_Win32_Fauppod_PHQ_2147934478_0
         $x_10_1 = {89 e5 8a 45 0c 8a 4d 08 31 d2 88 d4 88 c5 02 2d ?? ?? ?? ?? 88 2d ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 0f b6 c4 5d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2479,6 +2591,7 @@ rule Trojan_Win32_Fauppod_HHT_2147935812_0
         $x_10_1 = {89 e5 8a 45 0c 8a 4d 08 31 d2 88 d4 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 88 cd 02 2d ?? ?? ?? ?? 88 2d ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 0f b6 c4 5d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2500,6 +2613,7 @@ rule Trojan_Win32_Fauppod_ZHZ_2147937263_0
         $x_10_1 = {50 8a 45 0c 8a 4d 08 31 d2 88 d4 88 45 fb 88 4d fa 0f b6 55 fa 0f b6 35 ?? ?? ?? ?? 01 f2 88 d0 a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 8a 45 fa a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 8a 45 fb a2 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 81 ea ?? ?? ?? ?? 89 15 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 81 ea ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 0f b6 c4 83 c4 04 5e 5d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2521,6 +2635,7 @@ rule Trojan_Win32_Fauppod_GTY_2147937540_0
         $x_10_1 = {01 18 01 d0 8d 05 ?? ?? ?? ?? 31 d2 89 10 31 28 89 c2 01 d0 8d 05 ?? ?? ?? ?? 31 d2 89 10 31 38 b9 02 00 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2542,6 +2657,7 @@ rule Trojan_Win32_Fauppod_ZZJ_2147937997_0
         $x_10_1 = {89 e5 8a 45 0c 8a 4d 08 31 d2 88 d4 8b 15 ?? ?? ?? ?? 88 cd 02 2d ?? ?? ?? ?? 88 2d ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 0f b6 c4 5d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2563,6 +2679,7 @@ rule Trojan_Win32_Fauppod_ZZY_2147938642_0
         $x_10_1 = {55 89 e5 53 81 ec ?? ?? ?? ?? a1 ?? ?? ?? ?? 8a 08 88 8d ?? ?? ?? ?? b8 ?? ?? ?? ?? 8a 8d ?? ?? ?? ?? 80 f9 ?? 89 85 ?? ?? ?? ?? 0f 85 ?? ?? ?? ?? 8b 85 e0 fe ff ff 81 c4 ?? ?? ?? ?? 5b 5d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2584,6 +2701,7 @@ rule Trojan_Win32_Fauppod_GTB_2147939772_0
         $x_10_1 = {31 d0 31 d2 89 15 ?? ?? ?? ?? 01 35 ?? ?? ?? ?? 8d 05 ?? ?? ?? ?? 31 d2 89 10 31 18}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2605,6 +2723,7 @@ rule Trojan_Win32_Fauppod_GYZ_2147940324_0
         $x_10_1 = {83 c0 04 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 31 2d ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 31 3d ?? ?? ?? ?? e9 ?? ?? ?? ?? c3 4a 01 c2 89 d0 31 c2 31 d2 89 15 ?? ?? ?? ?? 01 1d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2626,6 +2745,7 @@ rule Trojan_Win32_Fauppod_ZRY_2147940632_0
         $x_10_1 = {31 d0 88 c1 88 0d ?? ?? ?? ?? a1 ?? ?? ?? ?? 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? a1 ?? ?? ?? ?? 2d ?? ?? ?? ?? a3 ?? ?? ?? ?? 0f b6 05 ?? ?? ?? ?? 83 c4 08 5e 5d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2647,6 +2767,7 @@ rule Trojan_Win32_Fauppod_GZZ_2147940876_0
         $x_10_1 = {42 31 d2 89 15 ?? ?? ?? ?? 01 1d ?? ?? ?? ?? 31 d0 42 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 01 35 ?? ?? ?? ?? b9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2668,6 +2789,7 @@ rule Trojan_Win32_Fauppod_ZCV_2147941135_0
         $x_10_1 = {55 89 e5 56 8a 45 0c 8a 4d 08 b2 01 88 cc 02 25 ?? ?? ?? ?? 88 25 ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? 81 c6 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 0f b6 c2 5e 5d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2689,6 +2811,7 @@ rule Trojan_Win32_Fauppod_ZEV_2147941143_0
         $x_10_1 = {55 89 e5 56 50 8a 45 0c 8a 4d 08 31 d2 88 d4 88 45 fb 88 4d fa 0f b6 55 fa 0f b6 35 ?? ?? ?? ?? 01 f2 88 d0 a2 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 81 ea ?? ?? ?? ?? 89 15 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 8a 45 fa a2 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 81 ea ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 8a 45 fb a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 0f b6 c4 83 c4 04 5e 5d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2710,6 +2833,7 @@ rule Trojan_Win32_Fauppod_BH_2147941357_0
         $x_5_1 = {29 c2 83 ea ?? b8 ?? ?? ?? ?? 31 d2 89 15 ?? ?? ?? ?? 01 25 ?? ?? ?? ?? 31 d0 31 c2 29 c2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2731,6 +2855,7 @@ rule Trojan_Win32_Fauppod_ZTV_2147941598_0
         $x_10_1 = {55 89 e5 57 56 8a 45 0c 8a 4d 08 b2 01 8b 35 ?? ?? ?? ?? 89 f7 81 c7 ?? ?? ?? ?? 89 3d ?? ?? ?? ?? 88 c4 02 25 ?? ?? ?? ?? 88 25 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? 81 c6 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 0f b6 c2 5e 5f 5d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2752,6 +2877,7 @@ rule Trojan_Win32_Fauppod_ZPU_2147942457_0
         $x_10_1 = {55 89 e5 8a 45 0c 8a 4d 08 b2 01 88 c4 02 25 ?? ?? ?? ?? 88 25 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 0f b6 c2 5d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2773,6 +2899,7 @@ rule Trojan_Win32_Fauppod_GZK_2147942710_0
         $x_10_1 = {29 d0 31 d2 89 15 ?? ?? ?? ?? 01 25 ?? ?? ?? ?? 29 c2 b9 02 00 00 00 ?? ?? 42 31 d2 89 15 ?? ?? ?? ?? 31 2d ?? ?? ?? ?? 8d 05 ?? ?? ?? ?? ff d0 48}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2794,6 +2921,7 @@ rule Trojan_Win32_Fauppod_ZCT_2147942914_0
         $x_10_1 = {55 89 e5 56 8a 45 0c 8a 4d 08 b2 01 88 c4 02 25 ?? ?? ?? ?? 88 25 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a2 ?? ?? ?? ?? 8b 35 3c a8 02 10 81 c6 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 0f b6 c2 5e 5d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2815,6 +2943,7 @@ rule Trojan_Win32_Fauppod_ZHT_2147943035_0
         $x_10_1 = {89 c2 4a 40 8d 05 ?? ?? ?? ?? c7 00 ?? ?? ?? ?? 31 20 e8 ?? ?? ?? ?? c3 01 d0 8d 05 ?? ?? ?? ?? 31 d2 89 10 31 18 31 d2 89 15 ?? ?? ?? ?? 01 3d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2836,6 +2965,7 @@ rule Trojan_Win32_Fauppod_ZTT_2147943790_0
         $x_10_1 = {89 c2 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 31 25 ?? ?? ?? ?? e8 ?? ?? ?? ?? c3 29 d0 8d 05 ?? ?? ?? ?? c7 00 ?? ?? ?? ?? 01 18 e8 ?? ?? ?? ?? c3 01 c2 83 c2 0a c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 01 2d ?? ?? ?? ?? 29 c2 31 d2 89 15 ?? ?? ?? ?? 31 3d ?? ?? ?? ?? 42 83 c0 04 31 d2 89 15 ?? ?? ?? ?? 31 35}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2858,6 +2988,7 @@ rule Trojan_Win32_Fauppod_AQ_2147944713_0
         $x_2_2 = {ff d0 83 ec 04 b9 f6 ff ff ff 25 01 00 00 00 3d 00 00 00 00 89 4d f4 0f 85}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

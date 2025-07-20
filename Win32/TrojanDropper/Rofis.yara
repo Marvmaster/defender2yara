@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Rofis_2147627424_0
         $x_1_6 = "ShellCode\\xRelease\\ShellCode.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_DelpInj_2147747930_0
         $x_1_1 = {8b 45 fc 0f b6 44 38 ff 33 45 f8 89 45 f4 8d 45 f0 8a 55 f4 e8 ?? ?? ?? ?? 8b 55 f0 8b c6 e8 ?? ?? ?? ?? 47 4b 75 d9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

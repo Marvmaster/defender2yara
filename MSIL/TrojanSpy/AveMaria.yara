@@ -21,6 +21,7 @@ rule TrojanSpy_MSIL_AveMaria_2147820421_0
         $x_1_6 = "get_Assembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

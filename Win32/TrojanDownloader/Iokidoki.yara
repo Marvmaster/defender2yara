@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Iokidoki_A_2147599263_0
         $x_1_3 = {eb c8 8b 45 fc 5e 5b 8b e5 5d c2 0c 00 00 75 00 72 00 6c 00 00 00 70 00 69 00 64 00 00 00 ff ff ff ff 05 00 00 00 76 69 73 74 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

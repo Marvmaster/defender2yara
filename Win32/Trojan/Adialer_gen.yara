@@ -21,6 +21,7 @@ rule Trojan_Win32_Adialer_gen_A_2147575236_0
         $x_1_7 = "Errore nel rilascio del certificato di attivazione." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -55,6 +56,7 @@ rule Trojan_Win32_Adialer_gen_B_2147575237_0
         $x_1_12 = "RegisterServiceProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_5_*) and 5 of ($x_2_*) and 2 of ($x_1_*))) or

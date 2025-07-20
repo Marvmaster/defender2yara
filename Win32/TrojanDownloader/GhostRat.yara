@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_GhostRat_CBI_2147851471_0
         $x_1_1 = {8a 0f 8b 56 10 fe c9 88 4d f0 3b 56 14 73 ?? 83 7e 14 10 8d 42 01 89 46 10 8b c6 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_Win32_GhostRat_CCHU_2147904442_0
         $x_1_1 = {8d 49 00 8a 8c 15 ?? ?? ?? ?? fe c9 88 8c 15 ?? ?? ?? ?? 42 3b d0 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

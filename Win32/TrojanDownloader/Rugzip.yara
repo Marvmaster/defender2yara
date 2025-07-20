@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Rugzip_A_2147618173_0
         $x_10_3 = {c8 00 00 00 8b f8 0f 85 ?? ?? 00 00 3b fb 0f 84 ?? ?? 00 00 8b 45 ?? 80 38 4d 0f 85 ?? ?? 00 00 80 78 01 5a 0f 85 ?? ?? 00 00 8d 45 ?? 6a 08 50 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -17,6 +17,7 @@ rule Backdoor_Win32_Tsaisda_A_2147638059_0
         $x_1_3 = {51 68 a0 0f 00 00 52 55 ff 15 ?? ?? ?? ?? 85 c0 74 2e 8b 44 24 10 85 c0 74 1f 8d 4c 24 14 6a 00 51 8d 94 24 ?? ?? ?? ?? 50 52 56 ff 15 ?? ?? ?? ?? 89 3d ?? ?? ?? ?? eb bc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

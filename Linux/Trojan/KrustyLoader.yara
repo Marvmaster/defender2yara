@@ -17,6 +17,7 @@ rule Trojan_Linux_KrustyLoader_A_2147943672_0
         $x_1_2 = {48 8b 84 d4 c0 04 00 00 48 89 c1 48 c1 e9 08 48 31 c1 4c 21 e1 48 31 c8 48 c1 e1 08 48 31 c1 48 89 c8 48 c1 e8 04 48 31 c8 4c 21 f8 48 31 c1 48 c1 e0 04 48 31 c8 48 89 84 d4 c0 04 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

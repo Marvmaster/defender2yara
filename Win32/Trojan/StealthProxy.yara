@@ -18,6 +18,7 @@ rule Trojan_Win32_StealthProxy_B_2147641259_0
         $x_3_4 = {8b 55 fc 0f b6 54 1a ff 2b d3 83 ea 3c}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

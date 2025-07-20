@@ -17,6 +17,7 @@ rule VirTool_Win64_Cookidumpesz_2147921764_0
         $x_1_2 = {48 8b 54 24 38 [0-18] 41 b8 08 00 00 00 ?? ?? ?? ?? ?? ?? ?? 48 8b 4c 24 38 [0-16] 48 89 44 24 20 41 b9 08 00 00 00 ?? ?? ?? ?? ?? ?? ?? 48 8b d3 [0-16] 85 c0 [0-20] 48 8b 54 24 38}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule VirTool_Win64_Cookidumpesz_B_2147924964_0
         $x_1_2 = {48 8b 54 24 70 [0-18] 49 8b fe 4c 39 74 24 70 ?? ?? 48 8b 1c fe 48 85 db [0-24] 45 8b c5 [0-19] 48 ff c7 48 3b 7c 24 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

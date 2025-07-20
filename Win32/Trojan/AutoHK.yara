@@ -17,6 +17,7 @@ rule Trojan_Win32_AutoHK_GP_2147938482_0
         $x_1_2 = {20 46 69 6c 65 44 65 6c 65 74 65 20 29 0a 7b 0a 7d 0a 49 66 20 28 20 52 65 67 52 65 61 64 20 3c 20 45 6e 76 47 65 74 20 29 0a 7b 0a 7d 0a 49 66 20 28 20 44 6c 6c 43 61 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -27,6 +27,7 @@ rule Trojan_MSIL_AviMaria_FF_2147826842_0
         $x_1_12 = "C:\\sdfdfry\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_10_*))) or

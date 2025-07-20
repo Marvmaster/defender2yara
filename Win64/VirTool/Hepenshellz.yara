@@ -19,6 +19,7 @@ rule VirTool_Win64_Hepenshellz_A_2147844675_0
         $x_1_4 = {48 8b d0 48 8d ?? ?? ?? ?? ?? e8 ?? ?? ?? ?? 0f b6 00 83 f0 7e 48 63 8d 24 02 00 00 48 8b 95 08 02 00 00 88 04 0a eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

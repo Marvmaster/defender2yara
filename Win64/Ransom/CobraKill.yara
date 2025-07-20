@@ -17,6 +17,7 @@ rule Ransom_Win64_CobraKill_YAB_2147916952_0
         $x_1_2 = {f7 80 14 e8 2e ad 6b f9 73 9e e9 21 43 c5 d9 e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

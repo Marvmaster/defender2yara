@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Bacokyt_A_2147685497_0
         $x_2_6 = "&GetWinVersionAsStringWinArch=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 1 of ($x_4_*) and 2 of ($x_2_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*))) or

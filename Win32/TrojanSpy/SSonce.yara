@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_SSonce_B_2147650496_0
         $x_1_7 = "uRegistry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanSpy_Win32_SSonce_C_2147652980_0
         $x_1_4 = "[shift]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule TrojanSpy_Win32_SSonce_C_2147652980_1
         $x_1_8 = "uRemoteShell" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or
             (all of ($x*))

@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Cutwail_P_2147598115_0
         $x_1_2 = {89 5d fc 66 81 3b 4d 5a 75 1e 80 7b 50 75 74 0d ff 75 f8 ff 75 fc e8 ?? ?? 00 00 eb 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win32_Cutwail_Q_2147598322_0
         $x_1_5 = {68 74 74 70 3a 2f 2f 25 73 3a 25 75 2f 73 62 5f 25 75 5f 25 75 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -70,6 +72,7 @@ rule TrojanDownloader_Win32_Cutwail_S_2147601812_0
         $x_1_8 = "WLEventStartShell" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_6_*) and 1 of ($x_1_*))) or
@@ -99,6 +102,7 @@ rule TrojanDownloader_Win32_Cutwail_T_2147604765_0
         $x_1_6 = "\\glock32.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule TrojanDownloader_Win32_Cutwail_A_2147604767_0
         $x_1_3 = {75 7f 8a 44 3e 01 30 04 3e 8a 54 3e 02 31 d0 88 44 3e 01 8a 44 3e 03 31 c2 88 54 3e 02 40 88 44 3e 03 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule TrojanDownloader_Win32_Cutwail_V_2147611019_0
         $x_1_3 = {47 45 54 20 2f 66 69 6c 65 73 2f [0-10] 2e 65 78 65 20 48 54 54 50 2f 31 2e 31}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -167,6 +173,7 @@ rule TrojanDownloader_Win32_Cutwail_W_2147611148_0
         $x_1_4 = ";%4.4hx-%4.4hx;" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -193,6 +200,7 @@ rule TrojanDownloader_Win32_Cutwail_Y_2147611588_0
         $x_1_3 = {68 20 00 cc 00 68 c8 00 00 00 68 96 00 00 00 6a 00 6a 00 ff 35}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -214,6 +222,7 @@ rule TrojanDownloader_Win32_Cutwail_AA_2147611717_0
         $x_1_2 = {c7 45 e0 b9 79 37 9e (ff|58 8b)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +252,7 @@ rule TrojanDownloader_Win32_Cutwail_B_2147612115_0
         $x_1_9 = {68 40 24 08 9d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -272,6 +282,7 @@ rule TrojanDownloader_Win32_Cutwail_C_2147615334_0
         $x_1_4 = {c1 e2 02 8d 88 ?? ?? ?? ?? 8b 1c 11 03 ca 83 eb 28 8d 95 ?? ?? ?? ?? 03 55 e4 89 1a 83 e9 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -303,6 +314,7 @@ rule TrojanDownloader_Win32_Cutwail_C_2147615334_1
         $x_1_11 = {8b 48 50 51 8b 55 ?? 8b 42 34 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -334,6 +346,7 @@ rule TrojanDownloader_Win32_Cutwail_2147616232_0
         $x_5_7 = "qzlbtgrnkxsfdcmp" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -362,6 +375,7 @@ rule TrojanDownloader_Win32_Cutwail_AF_2147617130_0
         $x_1_5 = "ResetWriteWatch" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -387,6 +401,7 @@ rule TrojanDownloader_Win32_Cutwail_D_2147618078_0
         $x_1_2 = {80 38 4d 75 ?? 80 78 01 5a 75 ?? 80 78 50 69 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +427,7 @@ rule TrojanDownloader_Win32_Cutwail_AJ_2147618365_0
         $x_20_6 = {80 78 50 69 8d 4e 0c 51 8d 4e 08 51 75 0b}  //weight: 20, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             ((1 of ($x_20_*) and 1 of ($x_10_*))) or
@@ -442,6 +458,7 @@ rule TrojanDownloader_Win32_Cutwail_AL_2147619811_0
         $x_1_6 = {64 a1 24 01 00 00 8b 40 44 8b f8 81 c7 c8 00 00 00 05 88 00 00 00 8b 00 bb ec 00 00 00 03 d8 8b 0b 81 f9 53 79 73 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -467,6 +484,7 @@ rule TrojanDownloader_Win32_Cutwail_AN_2147622606_0
         $x_1_2 = {74 1a 8d 4d e8 51 50 8b 46 04 05 ?? ?? ?? ?? 50 8b 46 fc 03 45 f8 50 ff 75 08 ff d7 8b 45 f4 0f b7 40 02 ff 45 fc 83 c6 28 39 45 fc 7c ce}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -490,6 +508,7 @@ rule TrojanDownloader_Win32_Cutwail_AO_2147624799_0
         $x_1_4 = {05 e9 00 00 00 50 8b 45 e4 29 04 24 8f 45 f8 8d 45 fc 50 6a 04 ff 75 f4 ff 75 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -514,6 +533,7 @@ rule TrojanDownloader_Win32_Cutwail_AP_2147625119_0
         $x_1_5 = {80 78 51 7a 0f 94 c1 8b c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -546,6 +566,7 @@ rule TrojanDownloader_Win32_Cutwail_AP_2147625119_1
         $x_2_8 = {f2 df ee c1 c4 dc cd da fc c7 c3 cd c6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -572,6 +593,7 @@ rule TrojanDownloader_Win32_Cutwail_AQ_2147626016_0
         $x_1_2 = {c6 03 8b ff 25 18 00 0f b6 1b 81 f3 ?? ?? ?? ?? 90 81 fb ?? ?? ?? ?? 75 09 8b 1d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -596,6 +618,7 @@ rule TrojanDownloader_Win32_Cutwail_AQ_2147626016_1
         $x_1_5 = {80 38 4d 75 20 80 78 01 5a 75 1a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -616,6 +639,7 @@ rule TrojanDownloader_Win32_Cutwail_AS_2147626804_0
         $x_1_1 = {c7 05 0c 30 10 09 74 00 00 00 [0-16] c7 05 ?? 30 10 09 00 40 00 00 [0-16] 64 a1 18 00 00 00 [0-10] 8b 40 34}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -638,6 +662,7 @@ rule TrojanDownloader_Win32_Cutwail_AV_2147629138_0
         $x_2_3 = {8a 47 01 47 84 c0 75 f8 8b 15 ?? ?? ?? ?? 8b 0b a0 ?? ?? ?? ?? 89 17 51 88 47 04 ff 15 ?? ?? ?? ?? 8b 03 6a 00 6a 00 8d 54 24}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -666,6 +691,7 @@ rule TrojanDownloader_Win32_Cutwail_AW_2147632141_0
         $x_1_5 = "proxy1.ru:8080;proxy1.ru:80;proxy3.ru;" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -692,6 +718,7 @@ rule TrojanDownloader_Win32_Cutwail_BA_2147632585_0
         $x_1_7 = {ff d3 81 7c 24 10 5a 5a 5a 5a 74 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -713,6 +740,7 @@ rule TrojanDownloader_Win32_Cutwail_BB_2147632593_0
         $x_1_2 = {88 04 31 86 c3 41 42 83 fa 04 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -734,6 +762,7 @@ rule TrojanDownloader_Win32_Cutwail_BC_2147634397_0
         $x_1_2 = {8b 55 08 03 55 fc 0f b6 02 83 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -755,6 +784,7 @@ rule TrojanDownloader_Win32_Cutwail_BE_2147642303_0
         $x_1_2 = {8b 8d c0 fc ff ff 03 48 28 89 8d d8 fd ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -776,6 +806,7 @@ rule TrojanDownloader_Win32_Cutwail_BE_2147642303_1
         $x_1_2 = {78 76 72 66 69 65 72 2e 64 6c 6c 00 42 65 67 69 6e 53 65 61 72 63 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -801,6 +832,7 @@ rule TrojanDownloader_Win32_Cutwail_BE_2147642303_2
         $x_1_6 = {ff ff ad 33 85 ?? ?? ff ff ab e2 0a 00 05 ?? ?? ?? ?? 50 8f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -826,6 +858,7 @@ rule TrojanDownloader_Win32_Cutwail_BF_2147646227_0
         $x_2_3 = {0f b6 42 03 35 ?? ?? ?? ?? 8b 4d 08 03 4d fc 88 41 03 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -851,6 +884,7 @@ rule TrojanDownloader_Win32_Cutwail_BH_2147647625_0
         $x_1_3 = {81 3a 43 6d 64 4c 75 14 8b 45 ?? 81 78 04 69 6e 65 3a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -872,6 +906,7 @@ rule TrojanDownloader_Win32_Cutwail_BM_2147650461_0
         $x_1_2 = {6a 40 68 00 30 00 00 ff 76 50 ff 76 34 e8 bf 01 00 00 85 c0 75 15 6a 40 68 00 30 00 00 ff 76 50 6a 00 e8 aa 01 00 00 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -894,6 +929,7 @@ rule TrojanDownloader_Win32_Cutwail_BP_2147654218_0
         $x_1_3 = {8b 45 fc 05 01 01 01 00 05 01 01 01 01 89 45 fc 8b 5d fc ac 90 32 c3 90 aa f7 c1 01 00 00 00 74 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -917,6 +953,7 @@ rule TrojanDownloader_Win32_Cutwail_BS_2147659849_0
         $x_1_4 = {c1 e9 02 8b 35 ?? ?? ?? ?? 81 c6 ca 01 00 00 8b fe 8b 45 ?? bb ?? ?? ?? ?? 33 d2 f7 e3 05 ?? ?? ?? ?? 89 45 ?? ad 33 45 ?? ab e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -940,6 +977,7 @@ rule TrojanDownloader_Win32_Cutwail_BT_2147659853_0
         $x_1_4 = "4130t5gio13485" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -963,6 +1001,7 @@ rule TrojanDownloader_Win32_Cutwail_BV_2147664316_0
         $x_1_4 = {8b 7d fc 8b 77 24 03 75 f4 03 75 08 33 c0 66 8b 06 c1 e0 02 8b 75 fc 8b 76 1c 03 75 08 03 f0 8b 06 03 45 08 89 44 24 1c 61 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -989,6 +1028,7 @@ rule TrojanDownloader_Win32_Cutwail_BW_2147669253_0
         $x_1_7 = {33 c0 f3 a4 5e 56 33 c9 66 8b 4e 06 81 c6 f8 00 00 00 8b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1010,6 +1050,7 @@ rule TrojanDownloader_Win32_Cutwail_BZ_2147679285_0
         $x_1_2 = {81 7d f8 44 41 54 41 74 ?? 81 7d f8 43 4d 44 20 74 ?? 81 7d f8 45 4e 44 2e 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1036,6 +1077,7 @@ rule TrojanDownloader_Win32_Cutwail_CB_2147680287_0
         $x_1_7 = {53 6a 04 5b be 00 02 00 80 39 5d ?? 75 05 be 80 33 80 80 57 57 6a 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1059,6 +1101,7 @@ rule TrojanDownloader_Win32_Cutwail_CC_2147681240_0
         $x_1_1 = {05 07 c3 55 8b ec 83 c4 fc 8b 75 08 03 76 3c 6a 40 18 ec 77 db db 30 14 ff 76 50 02 34 ?? bd 12}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1083,6 +1126,7 @@ rule TrojanDownloader_Win32_Cutwail_CE_2147682617_0
         $x_1_5 = "GetObjectA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

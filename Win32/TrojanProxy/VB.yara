@@ -19,6 +19,7 @@ rule TrojanProxy_Win32_VB_N_2147608821_0
         $x_1_5 = "capGetDriverDescriptionA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 3 of ($x_10_*))) or

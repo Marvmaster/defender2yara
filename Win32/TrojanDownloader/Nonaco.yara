@@ -32,6 +32,7 @@ rule TrojanDownloader_Win32_Nonaco_C_2147803792_0
         $x_10_18 = "http://setup.theoreon.com" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_100_*) and 3 of ($x_50_*) and 5 of ($x_10_*))) or
             ((7 of ($x_100_*) and 4 of ($x_50_*))) or
@@ -60,6 +61,7 @@ rule TrojanDownloader_Win32_Nonaco_B_2147803839_0
         $x_1_5 = {6a 06 99 59 f7 f9 8b da e8 ?? ?? 00 00 99 b9 8c 00 00 00 f7 f9 8b f2 46}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -86,6 +88,7 @@ rule TrojanDownloader_Win32_Nonaco_G_2147803922_0
         $x_1_7 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +116,7 @@ rule TrojanDownloader_Win32_Nonaco_G_2147803922_1
         $x_1_8 = {72 00 75 00 6e 00 2d 00 63 00 6f 00 6d 00 6d 00 61 00 6e 00 64 00 00 00 65 00 78 00 65 00 2d 00 75 00 72 00 6c 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -149,6 +153,7 @@ rule TrojanDownloader_Win32_Nonaco_I_2147803936_0
         $x_10_12 = {46 47 83 fe 03 75 ?? 8a 45 ?? 8a cb c0 e8 02 88 ?? 0c 8a 45 ?? 24 03 c0 e0 04 c0 e9 04 02 c1}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -176,6 +181,7 @@ rule TrojanDownloader_Win32_Nonaco_F_2147803983_0
         $x_1_5 = {74 04 6a 01 eb 19 8d 85 00 fc ff ff 68 ?? ?? ?? ?? 50 e8 ?? ?? ff ff 59 84 c0 59 74 05 6a 02 58 eb 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -206,6 +212,7 @@ rule TrojanDownloader_Win32_Nonaco_H_2147803986_0
         $x_1_6 = {65 34 30 35 2e 44 4c 4c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -235,6 +242,7 @@ rule TrojanDownloader_Win32_Nonaco_J_2147803995_0
         $x_1_5 = "mainfeedthere.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

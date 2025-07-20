@@ -25,6 +25,7 @@ rule Worm_Win32_Brobrat_A_2147594399_0
         $x_1_11 = "GetComputerNameA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

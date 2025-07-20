@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Dremlebal_A_2147697617_0
         $x_1_8 = {31 74 6f 31 63 72 6d 31 00 00 00 00 69 70 69 6e 79 6f 75 00 73 65 64 72 69 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 3 of ($x_1_*))) or
             ((1 of ($x_8_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

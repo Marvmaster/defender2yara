@@ -26,6 +26,7 @@ rule Trojan_Win32_Quakbot_SD_2147787511_0
         $x_3_11 = "mmioRenameW" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule Trojan_Win32_Quakbot_MB_2147814735_0
         $x_3_7 = "DllRegisterServer" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

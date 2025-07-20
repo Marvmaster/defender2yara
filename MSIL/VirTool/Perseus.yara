@@ -24,6 +24,7 @@ rule VirTool_MSIL_Perseus_AB_2147745502_0
         $x_1_9 = "Jumped-Over-The-Lazy-Dog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule VirTool_MSIL_Perseus_AC_2147753702_0
         $x_1_6 = "pbDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

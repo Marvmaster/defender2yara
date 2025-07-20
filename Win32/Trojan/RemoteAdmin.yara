@@ -20,6 +20,7 @@ rule Trojan_Win32_RemoteAdmin_PAGO_2147942955_0
         $x_1_5 = "ScreenConnect.ClientInstallerRunner.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_3_*))) or

@@ -22,6 +22,7 @@ rule TrojanDropper_Win32_NakedBind_2147582967_0
         $x_1_8 = {39 17 75 13 0f b7 00 c1 e0 02 03 44 24 04 03 c3 8b 00 03 c3 ab eb 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

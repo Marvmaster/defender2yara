@@ -18,6 +18,7 @@ rule Trojan_Win32_DarkCloud_MBHP_2147852877_0
         $x_1_3 = "hvkLxKbCtVIhsSxYuBtRpFekZrFGjKZt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_DarkCloud_MBIP_2147890349_0
         $x_1_2 = {f8 30 00 00 ff ff ff 08 00 00 00 01 00 00 00 01 00 00 00 e9 00 00 00 ac 32 40 00 ac 32 40 00 2c 31 40 00 78 00 00 00 80 00 00 00 89}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_DarkCloud_DA_2147897757_0
         $x_1_1 = {69 04 ab 91 e9 d1 5b 89 c1 c1 e9 18 31 c1 69 c1 91 e9 d1 5b 69 f6 91 e9 d1 5b 31 c6 45 39 ef}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win32_DarkCloud_GZA_2147901776_0
         $x_1_3 = "DARKCLOUD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -161,6 +165,7 @@ rule Trojan_Win32_DarkCloud_EALN_2147935744_0
         $x_5_1 = {8b 48 0c 8b 85 28 ff ff ff 8b b5 20 ff ff ff 8a 14 02 32 14 31 8b 45 cc 8b 48 0c 8b 85 18 ff ff ff 88 14 01 c7 45 fc 0b 00 00 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

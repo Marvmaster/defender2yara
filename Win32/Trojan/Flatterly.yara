@@ -20,6 +20,7 @@ rule Trojan_Win32_Flatterly_A_2147751923_0
         $x_1_5 = "DNSClien.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

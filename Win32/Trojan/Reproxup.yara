@@ -17,6 +17,7 @@ rule Trojan_Win32_Reproxup_A_2147678797_0
         $x_1_3 = "r_pref(\"network.proxy.autoconfig_url\"," ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Ligzoc_B_2147697078_0
         $x_1_7 = {43 3a 5c 54 45 4d 50 5c 5c 7a 2e 69 63 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Worm_Win32_Dock_A_2147624386_0
         $x_1_8 = "%s\\~$%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or

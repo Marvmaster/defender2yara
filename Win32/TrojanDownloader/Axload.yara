@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Axload_A_2147608444_0
         $x_1_5 = "HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*) and 3 of ($x_2_*))) or

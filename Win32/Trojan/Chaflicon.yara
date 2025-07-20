@@ -27,6 +27,7 @@ rule Trojan_Win32_Chaflicon_A_2147687736_0
         $x_1_13 = "16303ACC5DEA799896BF" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -66,6 +67,7 @@ rule Trojan_Win32_Chaflicon_B_2147687907_0
         $x_2_13 = "9481D57DF92BDB0938E4033EC16C89BF53" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -96,6 +98,7 @@ rule Trojan_Win32_Chaflicon_C_2147688159_0
         $x_1_5 = "[LINKEXE]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

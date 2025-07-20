@@ -21,6 +21,7 @@ rule Backdoor_Win32_Deselia_A_2147696277_0
         $x_1_6 = {b8 68 58 4d 56 bb 00 00 00 00 b9 0a 00 00 00 ba 58 56 00 00 ed 81 fb 68 58 4d 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Backdoor_Win32_Deselia_B_2147696278_0
         $x_1_4 = {8a 4c 30 ff 30 0c 30 48 85 c0 7f f4 80 36 ?? 5e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

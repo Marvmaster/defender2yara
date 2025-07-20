@@ -21,6 +21,7 @@ rule PWS_Win32_Nabrek_A_2147697459_0
         $x_1_7 = ":9000/ipr.html" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

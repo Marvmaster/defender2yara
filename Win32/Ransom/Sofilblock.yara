@@ -18,6 +18,7 @@ rule Ransom_Win32_Sofilblock_A_2147664118_0
         $x_1_4 = {8b 10 ff 12 f7 d8 83 d2 00 f7 da 52 50 b2 01 8b c6 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

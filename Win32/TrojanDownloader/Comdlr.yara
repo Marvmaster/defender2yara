@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Comdlr_A_2147628337_0
         $x_1_2 = {6a 00 6a 00 6a 01 6a 00 6a 02 68 00 00 00 40 8b 45 f8 e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 89 45 ec 6a 06 6a 01 6a 02 e8 ?? ?? ?? ?? 89 45 f0 8b 45 d8 e8 ?? ?? ?? ?? 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_Win32_Comdlr_B_2147629875_0
         $x_1_2 = {6a 00 6a 00 6a 01 6a 00 6a 02 68 00 00 00 40 8b 45 f8 e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 89 45 ec 6a 06 6a 01 6a 02 e8 ?? ?? ?? ?? 89 45 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

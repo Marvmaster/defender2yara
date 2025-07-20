@@ -16,6 +16,7 @@ rule Trojan_Win32_NanoCore_VD_2147754936_0
         $x_1_1 = {80 34 01 17 41 81 f9 ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_NanoCore_VD_2147754936_1
         $x_1_1 = {31 d2 81 c2 ?? ?? ?? ?? 80 34 01 ?? 41 39 d1 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win32_NanoCore_VD_2147754936_2
         $x_1_1 = {ff 45 fc 41 39 d1 75 0b 00 c7 45 fc ?? ?? ?? ?? 80 34 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win32_NanoCore_VD_2147754936_3
         $x_1_2 = {89 c0 41 89 [0-64] 39 d9 [0-64] 89 [0-64] 80 34 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -102,6 +106,7 @@ rule Trojan_Win32_NanoCore_VD_2147754936_4
         $x_1_2 = {33 d2 f7 f3 85 d2 [0-64] 8b c6 03 c1 [0-64] b2 [0-64] 30 10 [0-64] 41}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_Win32_NanoCore_VB_2147755652_0
         $x_1_9 = "Pargetted7" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_Win32_NanoCore_VB_2147755652_1
         $x_1_9 = "KRIGSGUDERNE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +197,7 @@ rule Trojan_Win32_NanoCore_VB_2147755652_2
         $x_1_10 = "Confiscations" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +227,7 @@ rule Trojan_Win32_NanoCore_RPG_2147821260_0
         $x_1_9 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -240,6 +249,7 @@ rule Trojan_Win32_NanoCore_RPW_2147832141_0
         $x_1_1 = {2a c8 80 c1 2b 32 c8 fe c1 02 c8 c0 c1 02 32 c8 02 c8 32 c8 80 c1 6b 88 88 ?? ?? ?? ?? 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

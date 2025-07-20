@@ -40,6 +40,7 @@ rule Backdoor_MSIL_Orcusrot_A_2147709931_0
         $x_1_26 = "ProtectFromVMs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (20 of ($x*))
 }
 

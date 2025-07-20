@@ -25,6 +25,7 @@ rule Trojan_MSIL_VenomStealer_GP_2147914825_0
         $x_1_10 = "passwords.json" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

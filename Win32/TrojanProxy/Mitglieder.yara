@@ -24,6 +24,7 @@ rule TrojanProxy_Win32_Mitglieder_A_2147573941_0
         $x_1_9 = {66 72 75 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -17,6 +17,7 @@ rule Trojan_Win32_Gelsnopi_A_2147633666_0
         $x_1_3 = {26 72 76 72 3d 25 64 00 3f 72 76 72 3d 25 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

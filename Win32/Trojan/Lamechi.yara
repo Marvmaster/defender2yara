@@ -16,6 +16,7 @@ rule Trojan_Win32_Lamechi_A_2147626664_0
         $x_1_2 = {66 81 3f 41 4b 0f 85 ?? ?? ?? 00 56 8b 77 3c 03 f7 81 3e 50 45 00 00 0f 85 ?? ?? ?? 00 66 81 7e 14 e0 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Lamechi_C_2147643499_0
         $x_1_2 = {c7 00 4e 56 53 2e c7 40 08 00 00 00 00 c7 40 04 05 00 00 00 c7 40 0c 00 00 00 00 c7 40 10 10 27 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_Lamechi_E_2147648279_0
         $x_1_3 = {81 3e 58 4a 56 32 0f 85 ?? ?? ?? ?? 39 56 0c 0f 87 ?? ?? ?? ?? f6 c2 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

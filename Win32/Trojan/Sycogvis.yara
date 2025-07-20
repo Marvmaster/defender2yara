@@ -17,6 +17,7 @@ rule Trojan_Win32_Sycogvis_A_2147651203_0
         $x_1_3 = {8b 45 08 89 45 fc 8a 4d fc d3 f8 89 7e 08 89 55 fc 66 c7 06 09 00 89 45 08 8b 45 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

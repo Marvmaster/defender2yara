@@ -17,6 +17,7 @@ rule VirTool_Win64_Encledosz_A_2147906322_0
         $x_1_2 = {48 c7 44 24 40 00 00 00 00 c7 03 10 00 00 00 c7 43 04 00 00 10 00 ?? ?? ?? ?? ?? ?? 41 b9 08 00 00 00 4c 8b c3 48 8b c8 48 8b d7 ?? ?? ?? ?? ?? 48 89 44 24 20 ?? ?? ?? ?? ?? ?? 48 8b d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

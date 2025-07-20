@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Bancos_B_2147583054_0
         $x_100_5 = {ff ff ff ff 07 00 00 00 68 74 74 70 3a 2f 2f 00}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1000_*) and 2 of ($x_100_*))) or
             ((3 of ($x_1000_*))) or
@@ -53,6 +54,7 @@ rule TrojanDownloader_Win32_Bancos_2147598059_0
         $x_1_10 = "CreateServiceA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule TrojanDownloader_Win32_Bancos_A_2147605812_0
         $x_1_3 = "UrlDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule TrojanDownloader_Win32_Bancos_D_2147613100_0
         $x_1_8 = "MAPI32.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 3 of ($x_1_*))) or
@@ -131,6 +135,7 @@ rule TrojanDownloader_Win32_Bancos_H_2147616603_0
         $x_2_5 = {66 77 62 64 6c 6c 2e 64 6c 6c 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -159,6 +164,7 @@ rule TrojanDownloader_Win32_Bancos_I_2147616821_0
         $x_1_4 = "http://www.freewebtown.com/login187/worm.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -186,6 +192,7 @@ rule TrojanDownloader_Win32_Bancos_M_2147617562_0
         $x_5_5 = {84 c0 74 30 6a 00 68 ?? ?? 45 00 e8 ?? ?? fb ff ba ?? ?? 45 00 b8 ?? ?? 45 00 e8 ?? ?? ff ff 84 c0 74 0c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or
@@ -213,6 +220,7 @@ rule TrojanDownloader_Win32_Bancos_P_2147618652_0
         $x_1_4 = "srevird" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -237,6 +245,7 @@ rule TrojanDownloader_Win32_Bancos_U_2147618886_0
         $x_1_5 = {72 65 64 69 72 65 63 69 6f 6e 61 64 6f 20 70 61 72 61 20 6e 6f 73 73 6f 20 73 69 74 65 21 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             (all of ($x*))
@@ -264,6 +273,7 @@ rule TrojanDownloader_Win32_Bancos_AC_2147622795_0
         $x_1_5 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -290,6 +300,7 @@ rule TrojanDownloader_Win32_Bancos_AK_2147624614_0
         $x_1_3 = {ba 0f 00 00 00 e8 ?? ?? fb ff 8b 85 ?? ?? ff ff e8 ?? ?? fb ff 50 6a 00 e8 ?? ?? fb ff 8b 45 ec e8 ?? ?? fb ff 84 c0 75 4f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -311,6 +322,7 @@ rule TrojanDownloader_Win32_Bancos_AN_2147625074_0
         $x_1_2 = {6e 74 6c 64 6c 6c 2e 64 6c 6c 00 46 69 42 61 73 65 53 69 73 74 65 6d 61 00 46 75 6e 63 43 61 43 6c 69 65 6e 74 65 00 46 75 6e 63 52 65 6c 61 74 6f 72 69 6f 00 4d 6f 76 65 47 61 74 65 00 53 68 6f 77 46 6f 72 6d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -334,6 +346,7 @@ rule TrojanDownloader_Win32_Bancos_BD_2147627120_0
         $x_1_4 = {0f b6 44 30 ff 33 d8 8d 45 d0 50 89 5d d4 c6 45 d8 00 8d 55 d4 33 c9 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 55 d0 8d 45 ec e8 ?? ?? ?? ?? 8b fb ff 45 e8 ff 4d e0 75 a3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -358,6 +371,7 @@ rule TrojanDownloader_Win32_Bancos_BE_2147627192_0
         $x_1_5 = {6d 49 6e 46 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -380,6 +394,7 @@ rule TrojanDownloader_Win32_Bancos_BM_2147627869_0
         $x_1_3 = {63 00 6f 00 6d 00 2f 00 2e 00 2e 00 2e 00 2f 00 6b 00 65 00 72 00 6e 00 65 00 6c 00 33 00 32 00 2e 00 64 00 6c 00 6c 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -404,6 +419,7 @@ rule TrojanDownloader_Win32_Bancos_BN_2147627977_0
         $x_1_2 = {6a 05 ff b3 7c 03 00 00 68 ?? ?? ?? ?? ff b3 80 03 00 00 8d 45 e4 ba 03 00 00 00 e8 ?? ?? ?? ?? 8b 45 e4 e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 68 e8 03 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -426,6 +442,7 @@ rule TrojanDownloader_Win32_Bancos_BQ_2147628070_0
         $x_1_3 = "Loader_VB_didu.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -449,6 +466,7 @@ rule TrojanDownloader_Win32_Bancos_BR_2147628271_0
         $x_1_4 = "C:\\Windows\\boOT.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -474,6 +492,7 @@ rule TrojanDownloader_Win32_Bancos_BV_2147628432_0
         $x_1_6 = "/cadastro.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -500,6 +519,7 @@ rule TrojanDownloader_Win32_Bancos_BY_2147628459_0
         $x_1_3 = {89 74 24 04 8d 95 64 ff ff ff b8 64 00 00 00 89 54 24 0c 89 44 24 08 89 3c 24 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -524,6 +544,7 @@ rule TrojanDownloader_Win32_Bancos_CA_2147628557_0
         $x_1_5 = "C:\\Documents and Settings\\dessa\\Desktop\\vb puxador melhor no jeito\\Project1.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -549,6 +570,7 @@ rule TrojanDownloader_Win32_Bancos_CL_2147628841_0
         $x_1_3 = {2d 20 56 69 73 75 61 6c 69 7a 61 64 6f 72 20 64 65 20 69 6d 61 67 65 6e 73 20 65 20 66 61 78 20 64 6f 20 57 69 6e 64 6f 77 73 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -574,6 +596,7 @@ rule TrojanDownloader_Win32_Bancos_CQ_2147629102_0
         $x_2_6 = "C:\\Arquivos de Programas\\Internet Explorer\\delon.txt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -601,6 +624,7 @@ rule TrojanDownloader_Win32_Bancos_DA_2147630847_0
         $x_1_4 = "esmasmasks" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -628,6 +652,7 @@ rule TrojanDownloader_Win32_Bancos_DJ_2147634004_0
         $x_1_8 = "comuns\\satplg.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -654,6 +679,7 @@ rule TrojanDownloader_Win32_Bancos_DM_2147634136_0
         $x_1_3 = {5c 41 72 71 75 69 76 6f 73 20 63 6f 6d 75 6e 73 5c 6b 6c 73 79 73 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -678,6 +704,7 @@ rule TrojanDownloader_Win32_Bancos_DW_2147639956_0
         $x_1_5 = "www.adobe.com/br/shockwave/welcome/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -699,6 +726,7 @@ rule TrojanDownloader_Win32_Bancos_DY_2147640693_0
         $x_1_2 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -721,6 +749,7 @@ rule TrojanDownloader_Win32_Bancos_DZ_2147640937_0
         $x_1_3 = {68 74 74 70 3a 2f 2f 77 77 77 2e 74 68 6f 6e 2d 73 61 6d 73 6f 6e 2e 62 65 2f 6a 73 2f 5f 6e 6f 74 65 73 2f [0-8] 2e 6a 70 67}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -742,6 +771,7 @@ rule TrojanDownloader_Win32_Bancos_EE_2147642322_0
         $x_1_2 = {b2 68 b1 3a 80 bc 05 ?? ?? ?? ?? 67 75 1c 80 bc 05 ?? ?? ?? ff 74 75 12 38 94 ?? ?? ?? ?? ?? 75 09 38 8c ?? ?? ?? ?? ?? 74 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -764,6 +794,7 @@ rule TrojanDownloader_Win32_Bancos_EH_2147644364_0
         $x_1_3 = "MuTexXx2010" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -787,6 +818,7 @@ rule TrojanDownloader_Win32_Bancos_EI_2147644704_0
         $x_1_4 = "ConsentPromptBehaviorAdmin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -812,6 +844,7 @@ rule TrojanDownloader_Win32_Bancos_EX_2147649379_0
         $x_1_6 = "C:\\programfiles\\cssrsa.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -836,6 +869,7 @@ rule TrojanDownloader_Win32_Bancos_FC_2147649752_0
         $x_1_5 = {77 00 2e 00 66 00 75 00 6e 00 6f 00 72 00 70 00 2e 00 63 00 6f 00 6d 00 2e 00 62 00 72 00 2f 00 66 00 6f 00 74 00 6f 00 73 00 2f 00 [0-24] 2e 00 6a 00 70 00 67 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -861,6 +895,7 @@ rule TrojanDownloader_Win32_Bancos_FL_2147652059_0
         $x_1_6 = {41 74 75 61 6c 69 7a 61 e7 e3 6f 20 64 6f 20 57 69 6e 64 6f 77 73 20 63 6f 6d 70 6c 65 74 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -883,6 +918,7 @@ rule TrojanDownloader_Win32_Bancos_FM_2147652548_0
         $x_1_3 = "sertup.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -906,6 +942,7 @@ rule TrojanDownloader_Win32_Bancos_FP_2147653359_0
         $x_2_4 = {5c 00 47 00 65 00 6c 00 74 00 69 00 58 00 5c 00 44 00 65 00 73 00 6b 00 74 00 6f 00 70 00 5c 00 50 00 75 00 74 00 65 00 6e 00 63 00 69 00 61 00 5c 00 50 00 75 00 74 00 65 00 6e 00 63 00 69 00 61 00 5c 00 [0-16] 2e 00 76 00 62 00 70 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -930,6 +967,7 @@ rule TrojanDownloader_Win32_Bancos_FQ_2147653383_0
         $x_1_2 = {43 00 6f 00 6d 00 70 00 61 00 6e 00 79 00 4e 00 61 00 6d 00 65 00 00 00 00 00 47 00 6f 00 6f 00 67 00 6c 00 65 00 20 00 43 00 68 00 72 00 6f 00 6d 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -952,6 +990,7 @@ rule TrojanDownloader_Win32_Bancos_FS_2147653933_0
         $x_1_3 = {8b cf 8b 5d f0 d3 eb 8b cf b8 01 00 00 00 d3 e0 8b c8 8b 45 f0 99 f7 f9 89 55 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -973,6 +1012,7 @@ rule TrojanDownloader_Win32_Bancos_AEW_2147655794_0
         $x_1_2 = {0a 00 00 00 5c 69 64 73 79 73 2e 74 78 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1006,6 +1046,7 @@ rule TrojanDownloader_Win32_Bancos_EB_2147656404_0
         $x_1_14 = "696E646F7773" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1030,6 +1071,7 @@ rule TrojanDownloader_Win32_Bancos_FU_2147659117_0
         $x_10_5 = {8b c3 8b 08 ff 51 38 68 ?? ?? 47 00 8d 55 ?? 8b [0-2] e8 ?? ?? ff ff ff 75 ?? 68 ?? ?? 47 00 8d 45 ?? ba 03 00 00 00 e8 ?? ?? f8 ff 8b 55 ?? 8b c3 8b 08 ff 51 38 8d 55 ?? 8b ?? 8b 08 ff 51 ?? 8b 4d ?? 8d 45 ?? ba ?? ?? 47 00 e8 ?? ?? ?? ff 8b 55}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1056,6 +1098,7 @@ rule TrojanDownloader_Win32_Bancos_FW_2147661620_0
         $x_1_4 = "REG_SZ /d C:\\WINDOWS\\system32\\ituneshelper.exe /f" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1077,6 +1120,7 @@ rule TrojanDownloader_Win32_Bancos_GH_2147686414_0
         $x_1_2 = "\\Projetos\\Botnets\\TrixNet\\source\\TrixNet\\Release\\Flash Downloader.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1101,6 +1145,7 @@ rule TrojanDownloader_Win32_Bancos_GL_2147695062_0
         $x_1_5 = ");Start-Process regsvr32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1125,6 +1170,7 @@ rule TrojanDownloader_Win32_Bancos_GN_2147717106_0
         $x_1_5 = "687474703a2f2f6e733635382e686f73746761746f722e636f6d2e62722f7e6d61726b653735342f6e6f7661732f6469722f536b7970652e7a6970" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule VirTool_WinNT_Oanum_2147575034_0
         $x_1_6 = "ZwQuerySystemInformation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or

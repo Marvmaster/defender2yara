@@ -18,6 +18,7 @@ rule PWS_Win32_QQpass_CZ_2147593121_0
         $x_1_4 = "hook.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule PWS_Win32_QQpass_DA_2147593122_0
         $x_1_5 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule PWS_Win32_QQpass_DF_2147596543_0
         $x_1_2 = {5c 59 6c 64 71 71 2e 64 6c 6c 00 5c 51 51 2e 65 78 65 00 26 71 71 70 61 73 73 77 6f 72 64 3d 00 3f 71 71 6e 75 6d 62 65 72 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule PWS_Win32_QQpass_DG_2147596544_0
         $x_1_18 = "LaTaleClient.EXE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (17 of ($x*))
 }
 
@@ -139,6 +143,7 @@ rule PWS_Win32_QQpass_DH_2147596547_0
         $x_1_17 = "HttpOpenRequestA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_2_*) and 9 of ($x_1_*))) or
             ((3 of ($x_10_*) and 4 of ($x_2_*) and 7 of ($x_1_*))) or
@@ -174,6 +179,7 @@ rule PWS_Win32_QQpass_DI_2147596568_0
         $x_1_12 = "Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (11 of ($x*))
 }
 
@@ -201,6 +207,7 @@ rule PWS_Win32_QQpass_CX_2147596928_0
         $x_1_8 = "ZXY_wfgWD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -261,6 +268,7 @@ rule PWS_Win32_QQpass_A_2147597070_0
         $x_2_40 = "http://flash.chinaren.com/ip/ip.php" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_6_*) and 15 of ($x_5_*) and 5 of ($x_3_*) and 5 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_10_*) and 1 of ($x_6_*) and 16 of ($x_5_*) and 4 of ($x_3_*) and 4 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -1033,6 +1041,7 @@ rule PWS_Win32_QQpass_B_2147597646_0
         $x_10_5 = {66 bf 01 00 0f b7 c7 8b 55 fc 0f b6 44 02 ff 66 89 45 fa 8d 45 f4 66 8b 55 fa 66 83 f2 0c e8 aa ee ff ff 8b 55 f4 8b c6 e8 00 ef ff ff 47 66 ff cb 75 d1}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1058,6 +1067,7 @@ rule PWS_Win32_QQpass_CJM_2147597844_0
         $x_1_6 = "wininit.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1085,6 +1095,7 @@ rule PWS_Win32_QQpass_CJL_2147598497_0
         $x_1_5 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_1_*))) or
@@ -1119,6 +1130,7 @@ rule PWS_Win32_QQpass_KA_2147599409_0
         $x_1_10 = "GetWindowsDirectoryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1145,6 +1157,7 @@ rule PWS_Win32_QQpass_DJ_2147600255_0
         $x_10_7 = "GetSystemDirectoryA" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1180,6 +1193,7 @@ rule PWS_Win32_QQpass_EA_2147601177_0
         $x_1_13 = "RavMonD.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 5 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1209,6 +1223,7 @@ rule PWS_Win32_QQpass_CJO_2147604748_0
         $x_1_7 = "QQHelperDll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -1238,6 +1253,7 @@ rule PWS_Win32_QQpass_DL_2147606460_0
         $x_1_7 = {00 5c 6b 65 79 2e 64 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1264,6 +1280,7 @@ rule PWS_Win32_QQpass_C_2147606506_0
         $x_3_6 = "InternetOpenUrlA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_3_*))) or
             ((2 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_3_*))) or
@@ -1294,6 +1311,7 @@ rule PWS_Win32_QQpass_D_2147610453_0
         $x_1_6 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1327,6 +1345,7 @@ rule PWS_Win32_QQpass_AA_2147616903_0
         $x_1_11 = "DrRtp.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 6 of ($x_1_*))) or
             ((1 of ($x_10_*) and 3 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -1355,6 +1374,7 @@ rule PWS_Win32_QQpass_AU_2147617131_0
         $x_1_4 = {8b d8 83 7d ec 00 74 40 6a 00 68 80 00 00 00 6a 02 6a 00 6a 00 68 00 00 00 c0 8b 45 f4 e8 ?? ?? ff ff 50 e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1382,6 +1402,7 @@ rule PWS_Win32_QQpass_BC_2147617586_0
         $x_1_5 = "EnumProcessModules" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1403,6 +1424,7 @@ rule PWS_Win32_QQpass_BE_2147619830_0
         $x_1_2 = "%x_{605272C9-BAE4-4826-9181-8C90A89FF03A}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1430,6 +1452,7 @@ rule PWS_Win32_QQpass_DP_2147621060_0
         $x_1_8 = "\\sysautorun.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1456,6 +1479,7 @@ rule PWS_Win32_QQpass_BF_2147621479_0
         $x_1_4 = {6a 64 ff d7 68 ?? ?? ?? ?? 6a 00 ff d6 85 c0 a3 ?? ?? ?? ?? 74 ea e8 ?? ?? ff ff 6a 00 6a 00 6a 00 68 ?? ?? 00 10 6a 00 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1479,6 +1503,7 @@ rule PWS_Win32_QQpass_BI_2147622763_0
         $x_1_4 = {68 a8 3e 00 00 8b 07 50 e8 ?? ?? ff ff 8b 15 ?? ?? 40 00 89 02 68 8a 00 00 00 8b 07 50 e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1504,6 +1529,7 @@ rule PWS_Win32_QQpass_BJ_2147622971_0
         $x_2_6 = {68 04 13 00 00 57 e8 ?? ?? ff ff 48 85 c0 0f 8c e4 00 00 00 40 89 45 ?? 33 f6 c7 45 ?? 01 00 00 00 33 c0 89 45 ?? 33 c0 89 45 ?? c7 45 ?? 00 08 00 00 8b 45 ?? 83 c0 70}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1531,6 +1557,7 @@ rule PWS_Win32_QQpass_CJ_2147623982_0
         $x_1_5 = {8d 51 01 8b 4c 24 04 56 0f b6 31 6b c0 21 03 c6 41 4a 75 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1560,6 +1587,7 @@ rule PWS_Win32_QQpass_BY_2147624671_0
         $x_1_10 = {6f 00 70 00 65 00 6e 00 3d 00 [0-21] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1584,6 +1612,7 @@ rule PWS_Win32_QQpass_BM_2147625106_0
         $x_1_2 = {52 00 55 00 4e 00 44 00 31 00 31 00 33 00 32 00 00 00 00 00 0c 00 00 00 4b 00 49 00 4c 00 4c 00 51 00 51 00 00 00 00 00 1a 00 00 00 72 00 75 00 6e 00 64 00 31 00 31 00 33 00 32 00 2e 00 65 00 78 00 65 00 20 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1606,6 +1635,7 @@ rule PWS_Win32_QQpass_BQ_2147626344_0
         $x_1_3 = {c6 06 e8 2b c6 83 e8 05 89 46 01 8b 45 0c 83 f8 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1629,6 +1659,7 @@ rule PWS_Win32_QQpass_KB_2147627888_0
         $x_1_4 = "Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Disableregistrytools" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1651,6 +1682,7 @@ rule PWS_Win32_QQpass_CA_2147630678_0
         $x_1_3 = {72 02 5d c3 5d c3 55 8b ec 83 05 ?? ?? ?? 00 01 72 02 5d c3 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1674,6 +1706,7 @@ rule PWS_Win32_QQpass_CB_2147630708_0
         $x_1_4 = {44 00 69 00 73 00 6b 00 4e 00 75 00 6d 00 62 00 65 00 72 00 3d 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1702,6 +1735,7 @@ rule PWS_Win32_QQpass_CD_2147631248_0
         $x_10_6 = {8b 03 05 00 00 2f 00 50 6a 00 68 79 01 00 00 68 ?? ?? ?? ?? 6a 00 8b 0b 81 c1 00 00 21 00 ba ?? ?? ?? ?? a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? 89 06 83 3e 00 74 ?? 33 c0 a3 ?? ?? ?? ?? 8b 06 83 c0 05 a3 ?? ?? ?? ?? 68 00 00 4f 00 6a 07 6a 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1729,6 +1763,7 @@ rule PWS_Win32_QQpass_DR_2147631278_0
         $x_1_5 = "\\KMe.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1754,6 +1789,7 @@ rule PWS_Win32_QQpass_CI_2147631742_0
         $x_1_6 = "ion\\Winlogon\\Userinit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1779,6 +1815,7 @@ rule PWS_Win32_QQpass_CV_2147631878_0
         $x_1_2 = {68 0b 00 01 16 68 01 00 01 52 e8 ?? ?? ?? ?? 83 c4 10 89 45 f8 8d 45 f8 50 8d 45 fc 50 b8 ?? ?? ?? ?? 89 45 f4 8d 45 f4 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1807,6 +1844,7 @@ rule PWS_Win32_QQpass_EE_2147635915_0
         $x_2_9 = {8b 48 7c 83 c0 14 85 c9 0f 84 ?? ?? 00 00 8b 70 6c 85 f6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1838,6 +1876,7 @@ rule PWS_Win32_QQpass_EC_2147635929_0
         $x_1_7 = {d7 a3 c4 fa d2 bb b7 ab b7 e7 cb b3 a3 ac d0 c4 cf eb ca c2 b3 c9 a3 a1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -1863,6 +1902,7 @@ rule PWS_Win32_QQpass_EG_2147636344_0
         $x_1_6 = {51 ce d2 b0 c9 cd bc b1 ea}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1885,6 +1925,7 @@ rule PWS_Win32_QQpass_DS_2147636698_0
         $x_1_3 = "DD5FFEDC-8DC7-420F-B99C-770DBDEE5749" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1910,6 +1951,7 @@ rule PWS_Win32_QQpass_EF_2147636733_0
         $x_1_6 = "Q-$-DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1947,6 +1989,7 @@ rule PWS_Win32_QQpass_EH_2147636983_0
         $x_1_18 = "hellp.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_4_*) and 12 of ($x_1_*))) or
             ((1 of ($x_10_*) and 3 of ($x_4_*) and 8 of ($x_1_*))) or
@@ -1976,6 +2019,7 @@ rule PWS_Win32_QQpass_EI_2147637648_0
         $x_1_5 = "MXD_CangKu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1999,6 +2043,7 @@ rule PWS_Win32_QQpass_DU_2147637800_0
         $x_1_4 = "AutoLogin.db" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2022,6 +2067,7 @@ rule PWS_Win32_QQpass_DU_2147637800_1
         $x_1_4 = "SizeofResource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2045,6 +2091,7 @@ rule PWS_Win32_QQpass_EJ_2147638312_0
         $x_1_4 = "&QQNumber=%s&QQPassWord=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2069,6 +2116,7 @@ rule PWS_Win32_QQpass_EJ_2147638312_1
         $x_1_5 = "QQUIN:%s PWDHASH:%S /STAT:40" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2096,6 +2144,7 @@ rule PWS_Win32_QQpass_EK_2147638313_0
         $x_1_4 = "TXGuiFoundation" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2119,6 +2168,7 @@ rule PWS_Win32_QQpass_EK_2147638313_1
         $x_1_4 = {00 61 73 70 55 72 6c 00 26 50 61 73 73 57 6f 72 64 3d 00 3f 4e 75 6d 62 65 72 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2143,6 +2193,7 @@ rule PWS_Win32_QQpass_EL_2147638314_0
         $x_1_5 = "hpig_WS2.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -2164,6 +2215,7 @@ rule PWS_Win32_QQpass_EM_2147638315_0
         $x_1_2 = {0d 0a 20 51 51 c3 dc c2 eb a3 ba 00 20 51 51 ba c5 c2 eb a3 ba 00 68 61 63 6b 64 6f 6e 67 40 31 36 33 2e 63 6f 6d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2187,6 +2239,7 @@ rule PWS_Win32_QQpass_ED_2147638749_0
         $x_1_4 = {00 26 71 71 70 61 73 73 77 6f 72 64 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2210,6 +2263,7 @@ rule PWS_Win32_QQpass_EI_2147640534_0
         $x_1_4 = "1110/2hghf/mail.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2236,6 +2290,7 @@ rule PWS_Win32_QQpass_EN_2147640819_0
         $x_1_7 = "\\Tencent Files\\All Users \\Users" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -2264,6 +2319,7 @@ rule PWS_Win32_QQpass_DW_2147641437_0
         $x_1_5 = {75 00 73 00 65 00 72 00 3d 00 ?? ?? ?? ?? ?? ?? 26 00 6d 00 3d 00 ?? ?? ?? ?? ?? ?? 26 00 66 00 3d 00 ?? ?? ?? ?? ?? ?? 26 00 70 00 63 00 3d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2297,6 +2353,7 @@ rule PWS_Win32_QQpass_EX_2147641876_0
         $x_1_11 = "taskmgr.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -2320,6 +2377,7 @@ rule PWS_Win32_QQpass_CIA_2147642532_0
         $x_1_4 = {26 6f 70 5f 74 79 70 65 3d 61 64 64 26 73 75 62 6d 69 74 3d 6f 6b 00 26 61 32 3d 00 26 61 31 3d 00 26 70 61 73 73 77 6f 72 64 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2342,6 +2400,7 @@ rule PWS_Win32_QQpass_CJQ_2147643239_0
         $x_1_3 = "taskkill /f /im QQ.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2363,6 +2422,7 @@ rule PWS_Win32_QQpass_CIK_2147644239_0
         $x_1_2 = {ce a8 d2 bb b9 d9 b7 bd b2 a9 bf cd a3 ba 68 74 74 70 3a 2f 2f 68 69 2e 62 61 69 64 75 2e 63 6f 6d 2f 71 71 35 33 39 39 39 34 38 0d 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2386,6 +2446,7 @@ rule PWS_Win32_QQpass_CIM_2147644494_0
         $x_1_4 = {72 77 79 65 72 77 65 69 75 72 65 72 00 00 00 00 68 68 68 68 68 68 68 68 68 68 68 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2407,6 +2468,7 @@ rule PWS_Win32_QQpass_ET_2147648009_0
         $x_1_2 = {b9 80 23 00 00 81 c6 00 04 00 00 8b fb 83 c4 04 f3 a5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2430,6 +2492,7 @@ rule PWS_Win32_QQpass_EY_2147649399_0
         $x_1_4 = "qq/k102tr/mail.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2453,6 +2516,7 @@ rule PWS_Win32_QQpass_CJR_2147649465_0
         $x_2_4 = {0d 00 00 00 2f 63 6f 6e 6e 2e 61 73 70 3f 61 61 3d 00 00 00 ff ff ff ff 04 00 00 00 26 62 62 3d 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2480,6 +2544,7 @@ rule PWS_Win32_QQpass_EZ_2147650175_0
         $x_1_5 = "\\All Users\\QQ\\Registry.db" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2504,6 +2569,7 @@ rule PWS_Win32_QQpass_F_2147651773_0
         $x_2_4 = "?qqinf=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2527,6 +2593,7 @@ rule PWS_Win32_QQpass_FD_2147652190_0
         $x_2_4 = "http://www.soqo.tk" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2550,6 +2617,7 @@ rule PWS_Win32_QQpass_FE_2147652709_0
         $x_2_4 = "QQYX_DLL.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2574,6 +2642,7 @@ rule PWS_Win32_QQpass_CJS_2147652886_0
         $x_1_5 = "TXGuiFoundation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2597,6 +2666,7 @@ rule PWS_Win32_QQpass_CJZ_2147653778_0
         $x_1_4 = {8b f4 6a 00 6a 02 8b fc 6a 00 6a 08 ff 15 ?? ?? ?? ?? 3b fc e8 ?? ?? ?? ?? 50 6a 08 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2622,6 +2692,7 @@ rule PWS_Win32_QQpass_FG_2147654389_0
         $x_1_6 = "taskkill /f /im QQ.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2648,6 +2719,7 @@ rule PWS_Win32_QQpass_FK_2147654842_0
         $x_1_4 = {8a 00 8b d5 88 01 41 5f 5d 84 c0 74 ?? 8a 02 88 01 41 42 84 c0 75 ?? b1 6d b0 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2670,6 +2742,7 @@ rule PWS_Win32_QQpass_FM_2147654863_0
         $x_1_3 = "\\TM\\Registry.db" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -2695,6 +2768,7 @@ rule PWS_Win32_QQpass_FP_2147655461_0
         $x_1_2 = {80 ea 03 88 94 05 98 fb ff ff 40 3b c7 7e eb 06 00 8a 90}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2717,6 +2791,7 @@ rule PWS_Win32_QQpass_FP_2147655461_1
         $x_1_3 = {c6 85 fc dc fd ff 5c c6 85 fd dc fd ff 51 c6 85 fe dc fd ff 51 c6 85 ff dc fd ff 5c c6 85 00 dd fd ff 52 c6 85 01 dd fd ff 65 c6 85 02 dd fd ff 67 c6 85 03 dd fd ff 69 c6 85 04 dd fd ff 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2743,6 +2818,7 @@ rule PWS_Win32_QQpass_FR_2147656788_0
         $x_1_7 = {54 57 65 62 42 72 6f 77 73 65 72 4f 6e 46 75 6c 6c 53 63 72 65 65 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2768,6 +2844,7 @@ rule PWS_Win32_QQpass_FU_2147657228_0
         $x_1_6 = "\\All Users\\QQ\\Registry.db" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -2792,6 +2869,7 @@ rule PWS_Win32_QQpass_FX_2147657765_0
         $x_1_5 = {4e 6f 44 72 69 76 65 73 00 00 00 00 52 65 73 74 72 69 63 74 52 75 6e 00 00 00 00 00 4e 6f 4e 65 74 43 6f 6e 6e 65 63 74 44 69 73 63 6f 6e 6e 65 63 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2816,6 +2894,7 @@ rule PWS_Win32_QQpass_GD_2147678364_0
         $x_1_5 = {71 70 6c 75 73 72 70 00 71 70 72 65 67 69 73 74 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -2840,6 +2919,7 @@ rule PWS_Win32_QQpass_GF_2147682565_0
         $x_1_5 = "zjtd000" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -2868,6 +2948,7 @@ rule PWS_Win32_QQpass_GR_2147697606_0
         $x_1_9 = {49 50 b5 d8 d6 b7 a3 ba 00 20 20 20 20 20 20 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2893,6 +2974,7 @@ rule PWS_Win32_QQpass_GT_2147705697_0
         $x_1_6 = "mailto:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2919,6 +3001,7 @@ rule PWS_Win32_QQpass_GW_2147708700_0
         $x_1_7 = "C:\\92B9EN1S.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2942,6 +3025,7 @@ rule PWS_Win32_QQpass_CKH_2147708746_0
         $x_1_3 = {41 63 74 69 6f 6e 3d 41 64 64 55 73 65 72 26 53 65 72 76 65 72 3d [0-8] 26 55 73 65 72 3d [0-16] 26 50 61 73 73 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2969,6 +3053,7 @@ rule PWS_Win32_QQpass_CKL_2147733062_0
         $x_1_4 = "&password=1&op_type=add" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2995,6 +3080,7 @@ rule PWS_Win32_QQpass_A_2147742124_0
         $x_1_6 = "path.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3019,6 +3105,7 @@ rule PWS_Win32_QQpass_B_2147742233_0
         $x_1_4 = "path.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

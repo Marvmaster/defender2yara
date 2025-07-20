@@ -17,6 +17,7 @@ rule Trojan_Win32_Phorplex_A_2147730614_0
         $x_1_2 = {8a 4c 2a 03 8a d9 8a c1 80 e1 f0 c0 e0 06 0a 44 2a 02 80 e3 fc c0 e1 02 0a 0c 2a c0 e3 04 0a 5c 2a 01 83 c5 04 88 0c 3e 88 5c 3e 01 88 44 3e 02 83 c6 03 3b 6c 24 14 72 c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

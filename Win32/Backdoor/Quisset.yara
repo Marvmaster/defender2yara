@@ -19,6 +19,7 @@ rule Backdoor_Win32_Quisset_A_2147622745_0
         $x_1_5 = "starturl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -46,6 +47,7 @@ rule Backdoor_Win32_Quisset_B_2147638327_0
         $x_3_4 = "http://cashbackmoa.co.kr/reward.php?name=%s&userid=%s&macaddr=%s&orgaddr=%s" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or

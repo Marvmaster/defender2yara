@@ -23,6 +23,7 @@ rule Trojan_Win32_NanoBot_VB_2147751602_0
         $x_1_8 = "ojRtdXP2rPNF5tlOIKjTMRhg5XbcALahnwNWY206" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_NanoBot_SMW_2147773620_0
         $x_1_4 = "XbLABtoKOd.lnk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_NanoBot_MA_2147812287_0
         $x_1_2 = {53 31 db 69 93 08 90 40 00 05 84 08 08 42 89 93 08 90 40 00 f7 e2 89 d0 5b c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_NanoBot_CL_2147838673_0
         $x_5_1 = {8b 8d 38 ff ff ff 83 c1 ?? 89 8d 38 ff ff ff 8b 55 ac 0f b7 42 06 39 85 38 ff ff ff 7d ?? 8b 8d 70 ff ff ff 8b 95 70 ff ff ff 8b b5 54 ff ff ff 03 72 14 8b 85 70 ff ff ff 8b 7d f4 03 78 0c 8b 49 10 f3 a4 8b 8d 70 ff ff ff 83 c1 28 89 8d 70 ff ff ff eb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_Win32_NanoBot_RB_2147844483_0
         $x_1_1 = {30 4d f9 8a 4d fa 8a 55 fb 32 4d fe 32 55 ff 34 dd 88 45 f8 88 4d fa 88 55 fb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule Trojan_Win32_NanoBot_RC_2147844484_0
         $x_1_3 = "LG Uplus,.CO.LTD" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

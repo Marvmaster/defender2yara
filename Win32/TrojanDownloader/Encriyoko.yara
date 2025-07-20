@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Encriyoko_A_2147663759_0
         $x_1_2 = "sourceslang.iwebs.ws/downs/zdx.tgz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

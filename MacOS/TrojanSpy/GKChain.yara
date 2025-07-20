@@ -20,6 +20,7 @@ rule TrojanSpy_MacOS_GKChain_A_2147836797_0
         $x_1_5 = "%@/MobileDevice/Provisioning Profiles" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule TrojanSpy_MacOS_GKChain_D_2147906330_0
         $x_1_7 = "deviceIdentityServerCheck:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_6_*) and 3 of ($x_1_*))) or
             (all of ($x*))

@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Ldpinch_UQ_2147602293_0
         $x_1_5 = {50 69 6e 63 68 2e 65 78 65 00 00 00 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

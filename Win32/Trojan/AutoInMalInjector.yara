@@ -17,6 +17,7 @@ rule Trojan_Win32_AutoInMalInjector_A_2147917262_0
         $x_1_2 = {78 e4 a9 f2 8c fc cd a0 24 bd c7 57 35 f9 17 a2 8c c5 8e f7 7e fb 25 26 6a 46 da a6 82 38 ac 1b f9 3a a3 78 9f 14 a5 58 7f 54 8b ad 7e bb 4e 59 9a 26 ef f2 06 9d e4 e1 f3 dd c3 c8 53 8d 0c 9c c1 3a b9 38 e6 3d f0 17 2f dc 25 77 44 05 3a 1b 42 92 b7 3e 88 7b e4 0e b3 a9 bd a7 3f d1 b0 ce cc 4f a6 4d 39 f0 38 99 8e 16 b0 68 8c 8f e9 f4 8b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

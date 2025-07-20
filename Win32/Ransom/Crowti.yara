@@ -15,6 +15,7 @@ rule Ransom_Win32_Crowti_A_2147684191_0
         $x_1_1 = {68 a0 00 00 00 e8 18 00 00 00 59 89 45 fc 83 7d fc 00 74 ?? 8b 45 fc 2d ?? ?? ?? ?? ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule Ransom_Win32_Crowti_A_2147684191_1
         $x_1_2 = {0f b7 51 2c d1 ea 52 8b 45 ?? 8b 48 30 51 e8 ?? ?? ?? ?? 83 c4 08 3b 45 08 75 08 8b 55 ?? 8b 42 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Ransom_Win32_Crowti_B_2147686318_0
         $x_1_5 = {63 72 79 70 74 65 64 20 10 62 79 20 43 01 14 6f 44 65 00 66 65 6e 73 65 20 53 6f 08 66 74 77 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Ransom_Win32_Crowti_B_2147686318_1
         $x_1_2 = {9b 85 e7 e3 ca 85 53 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule Ransom_Win32_Crowti_B_2147686318_2
         $x_1_4 = {b8 53 00 00 00 66 89 45 ac b9 59 00 00 00 66 89 4d ae ba 53 00 00 00 66 89 55 b0 b8 54 00 00 00 66 89 45 b2 b9 45 00 00 00 66 89 4d b4 ba 4d 00 00 00 66 89 55 b6 b8 44 00 00 00 66 89 45 b8 b9 52 00 00 00 66 89 4d ba ba 49 00 00 00 66 89 55 bc b8 56 00 00 00 66 89 45 be b9 45 00 00 00 66 89 4d c0 33 d2 66 89 55 c2 c7 45 e4 00 00 00 00 c7 45 c4 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -267,6 +272,7 @@ rule Ransom_Win32_Crowti_C_2147687789_0
         $x_2_5 = {c6 45 e0 20 c6 45 e1 44 c6 45 e2 65 c6 45 e3 6c c6 45 e4 65 c6 45 e5 74 c6 45 e6 65 c6 45 e7 20 c6 45 e8 53 c6 45 e9 68 c6 45 ea 61 c6 45 eb 64 c6 45 ec 6f c6 45 ed 77 c6 45 ee 73 c6 45 ef 20 c6 45 f0 2f c6 45 f1 41 c6 45 f2 6c c6 45 f3 6c c6 45 f4 20 c6 45 f5 2f c6 45 f6 51 c6 45 f7 75 c6 45 f8 69 c6 45 f9 65 c6 45 fa 74 c6 45 fb 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -295,6 +301,7 @@ rule Ransom_Win32_Crowti_B_2147706956_0
         $x_1_3 = "HELP_DECRYPT." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -319,6 +326,7 @@ rule Ransom_Win32_Crowti_P_2147744741_0
         $x_1_4 = "I am truly sorry to inform you that all your important files are crypted" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -340,6 +348,7 @@ rule Ransom_Win32_Crowti_MKV_2147937068_0
         $x_5_1 = {c1 ee 08 0f b7 55 fe 52 e8 ?? ?? ?? ?? 83 c4 04 0f b7 c0 33 45 f8 25 ff 00 00 00 33 34 85 ?? ?? ?? ?? 89 75 f8 8b 4d f4 83 c1 02 89 4d f4 eb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

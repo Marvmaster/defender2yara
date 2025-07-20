@@ -15,6 +15,7 @@ rule TrojanDropper_MSIL_Doriload_A_2147628365_0
         $x_1_1 = {6f 11 00 00 0a 26 09 6f 12 00 00 0a 72 1b 00 00 70 28 09 00 00 0a 72 25 00 00 70 28 0a 00 00 0a 28 13 00 00 0a de 03 26 de 00 2a [0-32] 02 28 14 00 00 0a 2a ?? ?? ?? ?? 4d 5a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

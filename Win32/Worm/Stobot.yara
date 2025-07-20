@@ -18,6 +18,7 @@ rule Worm_Win32_Stobot_A_2147636467_0
         $x_2_4 = "command_synflood" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or

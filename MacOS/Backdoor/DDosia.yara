@@ -21,6 +21,7 @@ rule Backdoor_MacOS_DDosia_K_2147906332_0
         $x_1_6 = "0atomicor8tracebackrwxrwxrwxcomplex64math" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_MacOS_DDosia_A_2147923772_0
         $x_1_2 = {3f 00 00 f1 c9 00 00 54 40 00 40 f9 41 04 40 f9 fd fb 7f a9 ff 83 00 91 c0 03 5f d6 e0 03 1f aa e1 03 00 aa 33 98 01 94 36 98 01 94 1f 20 03 d5 e0 07 00 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

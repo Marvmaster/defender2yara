@@ -20,6 +20,7 @@ rule HackTool_Win32_MSNPatcher_A_2147630093_0
         $x_1_5 = "Universal JnrzLoader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*))) or
             (all of ($x*))

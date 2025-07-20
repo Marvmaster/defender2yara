@@ -18,6 +18,7 @@ rule Trojan_Win32_AceLog_A_2147767194_0
         $n_10_3 = {52 00 55 00 4e 00 44 00 4c 00 ?? 00 33 00 32 00 2e 00 45 00 58 00 45 00 20 00 22 00 25 00 73 00 22 00 2c 00 20 00 23 00 31 00 00 00 63 6d 64 20 2f ?? 20 44 45 4c 20 00 20 22 00 00}  //weight: -10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (1 of ($x*))
 }
@@ -40,6 +41,7 @@ rule Trojan_Win32_AceLog_B_2147780965_0
         $x_1_1 = {0f b7 8c 05 ?? ?? ff ff 66 31 8c 05 ?? ?? ff ff 0f b7 8c 05 ?? ?? ff ff 66 31 8c 05 ?? ?? ff ff 0f b7 8c 05 ?? ?? ff ff 66 31 8c 05 ?? ?? ff ff 0f b7 8c 05 ?? ?? ff ff 66 31 8c 05 ?? ?? ff ff 83 c0 08 3d 00 01 00 00 72 b6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

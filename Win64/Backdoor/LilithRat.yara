@@ -26,6 +26,7 @@ rule Backdoor_Win64_LilithRat_GA_2147809626_0
         $x_1_11 = "Couldn't write to CMD: CMD not ope" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

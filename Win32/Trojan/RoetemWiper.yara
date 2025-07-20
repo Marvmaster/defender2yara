@@ -20,6 +20,7 @@ rule Trojan_Win32_RoetemWiper_A_2147787106_0
         $x_1_5 = "Successfully changed lock screen image in Windows 10" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

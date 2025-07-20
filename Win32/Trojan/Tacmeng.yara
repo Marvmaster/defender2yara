@@ -27,6 +27,7 @@ rule Trojan_Win32_Tacmeng_A_2147667362_0
         $x_2_13 = "nctadbldla.edalcln" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or

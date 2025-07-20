@@ -23,6 +23,7 @@ rule Trojan_MSIL_Aggah_A_2147735193_0
         $x_1_9 = "2336,2336,2336,2336,2336" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

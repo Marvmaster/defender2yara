@@ -16,6 +16,7 @@ rule Trojan_Win32_Dorv_S_2147743009_0
         $x_2_1 = {8b 13 31 16 ad 3b f3 75 f9 e9 ?? ?? ff ff 25 00 8d 35 ?? ?? ?? ?? 8d 1d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Dorv_A_2147797739_0
         $x_10_2 = {8a d8 8a fb 8b d1 8b c3 c1 e0 10 66 8b c3 5b c1 e9 02 f3 ab}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Votossa_A_2147694515_0
         $x_1_8 = {69 6e 69 74 69 61 6c 69 7a 65 64 20 6f 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule VirTool_Win32_Antinza_J_2147903672_0
         $x_1_9 = "get_socks" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_DaytonToll_A_2147724723_0
         $x_1_1 = "182JKWJb1278IUDQ1fnkl289!@_)!@KLWQ*(!@KL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

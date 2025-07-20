@@ -25,6 +25,7 @@ rule Worm_Win32_Rudov_2147606831_0
         $x_1_11 = "-kill" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

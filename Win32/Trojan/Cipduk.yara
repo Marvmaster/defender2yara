@@ -18,6 +18,7 @@ rule Trojan_Win32_Cipduk_A_2147730654_0
         $x_1_3 = {63 6f 6d 6d 6f 6e 2f 75 70 2f 75 70 5f 62 61 73 65 2e 70 68 70 20 [0-16] 20 47 61 67 65 6e 61 31 20 77 69 72 65 73 68 61 72 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Cipduk_A_2147730654_1
         $x_1_3 = {63 6f 6d 6d 6f 6e 2f 75 70 2f 75 70 5f 62 61 73 65 2e 70 68 70 20 [0-16] 20 47 61 67 65 6e 61 31 20 77 69 72 65 73 68 61 72 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Cipduk_E_2147734126_0
         $x_1_2 = "com/board/sitemahttp://checkin.travelsanignacio.com/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_Cipduk_F_2147734450_0
         $x_10_1 = {44 3a 5c 50 42 5c 56 53 41 67 65 6e 74 5c [0-2] 5c 73 5c 43 6c 69 65 6e 74 5c 53 6f 75 72 63 65 5c 43 6c 69 65 6e 74 53 6f 75 72 63 65 5c 52 65 6c 65 61 73 65 5c 50 42 43 6f 6e 66 69 67 2e 70 64 62}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

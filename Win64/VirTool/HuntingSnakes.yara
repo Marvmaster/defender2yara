@@ -17,6 +17,7 @@ rule VirTool_Win64_HuntingSnakes_M_2147945828_0
         $x_1_3 = {48 c7 44 24 20 ?? ?? ?? ?? 4d 89 c1 49 89 c8 48 89 c1 41 ff d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

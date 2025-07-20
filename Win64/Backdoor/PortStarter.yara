@@ -18,6 +18,7 @@ rule Backdoor_Win64_PortStarter_B_2147830160_0
         $x_1_4 = "-Command \"Get-WMIObject Win32_ComputerSystem | Select-Object -ExpandProperty domain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_Win64_PortStarter_DA_2147840008_0
         $x_1_3 = "main.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule VirTool_WinNT_Pasich_A_2147607326_0
         $x_1_7 = "KeServiceDescriptorTable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule VirTool_WinNT_Pasich_B_2147607768_0
         $x_1_2 = {57 8d 7d f1 c6 45 f0 e9 ab 8b 7d 08 57 e8 ?? ?? 00 00 89 45 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule VirTool_WinNT_Pasich_C_2147624113_0
         $x_1_7 = "last_download_time" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or

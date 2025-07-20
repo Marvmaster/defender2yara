@@ -21,6 +21,7 @@ rule Trojan_MSIL_Marte_PQHH_2147928001_0
         $x_1_6 = "Software\\Classes\\ms-settings\\Shell\\Open\\command" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

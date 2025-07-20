@@ -19,6 +19,7 @@ rule Backdoor_Win32_Mailie_A_2147721413_0
         $x_1_5 = "Explorer\\PhishingFilter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

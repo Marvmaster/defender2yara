@@ -29,6 +29,7 @@ rule Ransom_Win32_Saturn_A_2147726019_0
         $x_4_15 = "wbadmin delete catalog -quiet" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_4_*))) or
             ((2 of ($x_10_*) and 2 of ($x_4_*))) or

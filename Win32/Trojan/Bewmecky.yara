@@ -18,6 +18,7 @@ rule Trojan_Win32_Bewmecky_A_2147626860_0
         $x_1_4 = {75 f2 eb 2a 8b 3d ?? ?? ?? ?? 8d 45 08 50 6a 40 6a 04 56 ff d7 50 ff 15 ?? ?? ?? ?? 6a 00 6a 04 8d 45 0c 50 56 ff d7 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

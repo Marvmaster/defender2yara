@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_ZgRAT_A_2147893350_0
         $x_1_3 = "GetMethod" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_MSIL_ZgRAT_B_2147895755_0
         $x_1_4 = "GetProcessById" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanDownloader_MSIL_ZgRAT_C_2147896942_0
         $x_2_1 = {06 08 06 91 11 ?? 06 11 ?? 6f ?? ?? 00 0a 5d 6f ?? ?? 00 0a 61 d2 9c 06 17 58 0a 06 08 8e 69}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule TrojanDownloader_MSIL_ZgRAT_F_2147901226_0
         $x_1_4 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule TrojanDownloader_MSIL_ZgRAT_G_2147902092_0
         $x_1_2 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule TrojanDownloader_MSIL_ZgRAT_H_2147902457_0
         $x_1_3 = "GetExportedTypes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

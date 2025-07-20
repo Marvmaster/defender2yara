@@ -16,6 +16,7 @@ rule Ransom_Win32_MatrixCrypt_PA_2147813365_0
         $x_1_1 = {69 c9 fd 43 03 00 81 c1 c3 9e 26 00 8b d1 c1 ea 10 30 14 06 8b 55 ?? 40 3b c2 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

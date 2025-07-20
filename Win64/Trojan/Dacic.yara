@@ -16,6 +16,7 @@ rule Trojan_Win64_Dacic_ADA_2147906287_0
         $x_1_1 = {4c 03 c0 66 90 b8 9d 82 97 53 4d 8d 40 01 f7 e9 c1 fa 04 8b c2 c1 e8 1f 03 d0 0f be c2 6b d0 31 0f b6 c1 ff c1 2a c2 04 30 41 30 40 ff 83 f9 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_Dacic_ADC_2147906302_0
         $x_1_1 = {4c 03 c0 66 66 0f 1f 84 00 ?? ?? ?? ?? b8 93 24 49 92 4d 8d 40 01 f7 e9 03 d1 c1 fa 05 8b c2 c1 e8 1f 03 d0 0f be c2 6b d0 38 0f b6 c1 ff c1 2a c2 04 36 41 30 40 ff 83 f9 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win64_Dacic_ADI_2147906308_0
         $x_1_1 = {4d 63 c8 4d 03 ca 0f 1f 40 00 66 0f 1f 84 00 00 00 00 00 b8 ?? ?? ?? ?? 41 f7 e8 41 03 d0 c1 fa 05 8b c2 c1 e8 1f 03 d0 0f be c2 6b c8 39 41 0f b6 c0 2a c1 04 34 41 30 01 41 ff c0 4d 8d 49 01 41 83 f8 41}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +82,7 @@ rule Trojan_Win64_Dacic_ADJ_2147906328_0
         $x_1_1 = {48 63 c1 4c 8d 44 24 20 4c 03 c0 66 90 b8 1f 85 eb 51 4d 8d 40 01 f7 e9 c1 fa 04 8b c2 c1 e8 1f 03 d0 0f be c2 6b d0 32 0f b6 c1 ff c1 2a c2 04 33 41 30 40 ff 83 f9 0c 7c d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +105,7 @@ rule Trojan_Win64_Dacic_RK_2147906496_0
         $x_1_2 = "Normaliz.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +130,7 @@ rule Trojan_Win64_Dacic_WE_2147907065_0
         $x_1_4 = "&& timeout /t 5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +152,7 @@ rule Trojan_Win64_Dacic_RPX_2147907701_0
         $x_1_1 = {b8 95 20 4f 09 f7 e9 d1 fa 8b c2 c1 e8 1f 03 d0 0f be c2 6b d0 37 0f b6 c1 2a c2 04 39 41 30 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -167,6 +174,7 @@ rule Trojan_Win64_Dacic_RPX_2147907701_1
         $x_1_1 = {f7 e9 d1 fa 8b c2 c1 e8 1f 03 d0 0f be c2 6b d0 37 0f b6 c1 2a c2 04 39 41 30 00 ff c1 4d 8d 40 01 83 f9 19}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -188,6 +196,7 @@ rule Trojan_Win64_Dacic_MKV_2147907846_0
         $x_1_1 = {f7 ef 03 d7 c1 fa 05 8b c2 c1 e8 1f 03 d0 0f be c2 6b c8 38 40 0f b6 c7 2a c1 04 36 41 30 00 ff c7 4d 8d 40 ?? 83 ff 27 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -209,6 +218,7 @@ rule Trojan_Win64_Dacic_ADZ_2147909778_0
         $x_1_1 = {33 d2 41 b8 00 80 00 00 49 8b cc ff 15 ?? ?? ?? ?? 8b 55 df 33 c9 44 8d 49 04 41 b8 00 30 00 00 ff 15 ?? ?? ?? ?? 4c 8b e0 4c 8d 4d df 44 8b 45 df 48 8b d0 b9 0b 00 00 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +240,7 @@ rule Trojan_Win64_Dacic_RR_2147910292_0
         $x_1_1 = {48 8b c8 ff 15 ?? ?? ?? ?? 48 8b 5d ?? 48 2b 5d ?? 48 c1 fb 05 ff 15 ?? ?? ?? ?? 48 98 33 d2 48 f7 f3 48 63 d2 48 c1 e2 05 48 03 55 ?? 48 8d 8d ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -252,6 +263,7 @@ rule Trojan_Win64_Dacic_AMAK_2147915536_0
         $x_1_2 = {74 20 0f 1f 40 00 66 0f 1f 84 00 00 00 00 00 8d 48 eb 30 0c 02 48 ff c0 48 83 f8 07 72 f1 c6 42 08 00 4c 8d 42 07 48 8b cb 4c 8d 4c 24 48 e8 ?? ?? ?? ?? 48 8b c3 48 83 c4 30 5b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -273,6 +285,7 @@ rule Trojan_Win64_Dacic_ARZ_2147920366_0
         $x_5_1 = {f7 eb d1 fa 8b c2 c1 e8 1f 03 d0 0f be c2 6b c8 37 0f b6 c3 2a c1 04 38 41 30 00 ff c3 4d 8d 40 01 83 fb 41 7c d5}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -297,6 +310,7 @@ rule Trojan_Win64_Dacic_NE_2147922730_0
         $x_1_4 = {5c 78 36 34 5c 52 65 6c 65 61 73 65 5c [0-47] 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -327,6 +341,7 @@ rule Trojan_Win64_Dacic_DZ_2147925073_0
         $x_1_7 = "\\\\.\\kprocesshacker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -352,6 +367,7 @@ rule Trojan_Win64_Dacic_WWZ_2147925208_0
         $x_5_1 = {f7 e1 8b c1 2b c2 d1 e8 03 c2 c1 e8 05 0f be c0 6b d0 38 0f b6 c1 ff c1 2a c2 04 36 41 30 40 ?? 83 f9 0c 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +389,7 @@ rule Trojan_Win64_Dacic_THK_2147925954_0
         $x_5_1 = {f7 eb 03 d3 c1 fa 05 8b c2 c1 e8 ?? 03 d0 0f be c2 6b c8 39 0f b6 c3 ff c3 2a c1 04 34 41 30 40 ff 83 fb 17 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -394,6 +411,7 @@ rule Trojan_Win64_Dacic_MPF_2147928261_0
         $x_5_1 = {41 f7 e0 c1 ea 05 0f be c2 6b c8 3a 41 0f b6 c0 2a c1 04 33 41 30 01 41 ff c0 4d 8d 49 ?? 41 83 f8 04 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -415,6 +433,7 @@ rule Trojan_Win64_Dacic_TFZ_2147928977_0
         $x_5_1 = {f7 e9 03 d1 c1 fa 05 8b c2 c1 e8 1f 03 d0 0f be c2 6b d0 ?? 0f b6 c1 ff c1 2a c2 04 36 41 30 40 ff 83 f9 1d 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -436,6 +455,7 @@ rule Trojan_Win64_Dacic_OOZ_2147929145_0
         $x_5_1 = {41 f7 e8 41 03 d0 c1 fa 05 8b c2 c1 e8 ?? 03 d0 0f be c2 6b c8 3a 41 0f b6 c0 2a c1 04 31 41 30 01 41 ff c0 4d 8d 49 01 41 83 f8 0c 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -457,6 +477,7 @@ rule Trojan_Win64_Dacic_LOZ_2147929169_0
         $x_5_1 = {41 f7 e8 41 03 d0 c1 fa 05 8b c2 c1 e8 1f 03 d0 0f be c2 6b c8 33 41 0f b6 c0 2a c1 04 37 41 30 01 41 ff c0 4d 8d 49 ?? 41 83 f8 1d 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -478,6 +499,7 @@ rule Trojan_Win64_Dacic_NTJ_2147929303_0
         $x_5_1 = {41 f7 e8 c1 fa 04 8b c2 c1 e8 1f 03 d0 0f be c2 6b c8 ?? 41 0f b6 c0 2a c1 04 38 41 30 01 41 ff c0 4d 8d 49 ?? 41 83 f8 1c 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -501,6 +523,7 @@ rule Trojan_Win64_Dacic_AMCY_2147930694_0
         $x_1_3 = "Zc_AntiHitbox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -525,6 +548,7 @@ rule Trojan_Win64_Dacic_AMCZ_2147930985_0
         $x_1_4 = "sc stop KProcessHacker2 >nul 2>&1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -546,6 +570,7 @@ rule Trojan_Win64_Dacic_UTD_2147934739_0
         $x_5_1 = {41 f7 e8 c1 fa 04 8b c2 c1 e8 1f 03 d0 0f be c2 6b c8 34 41 0f b6 c0 2a c1 04 39 41 30 01 41 ff c0 4d 8d 49 01 41 83 f8 41 7c d0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -568,6 +593,7 @@ rule Trojan_Win64_Dacic_SEC_2147942173_0
         $x_1_2 = "tV#*vV9i4ex6zW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -597,6 +623,7 @@ rule Trojan_Win64_Dacic_C_2147945427_0
         $x_1_9 = "chrome_decrypt.log" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

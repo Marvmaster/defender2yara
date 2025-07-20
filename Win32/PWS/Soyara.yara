@@ -20,6 +20,7 @@ rule PWS_Win32_Soyara_A_2147687764_0
         $x_1_6 = {0f b6 d9 03 5d fc 8a 08 d3 c3 40 8a 08 89 5d fc 84 c9 75 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

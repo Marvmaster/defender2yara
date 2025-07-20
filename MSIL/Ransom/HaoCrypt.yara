@@ -18,6 +18,7 @@ rule Ransom_MSIL_HaoCrypt_PA_2147808896_0
         $x_1_3 = "\\Desktop\\README.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_MSIL_HaoCrypt_PB_2147809220_0
         $x_1_4 = "Desk1.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

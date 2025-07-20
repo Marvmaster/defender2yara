@@ -17,6 +17,7 @@ rule Trojan_Win32_Yakes_RL_2147744239_0
         $x_2_2 = {0f 95 c1 57 49 23 c8 03 c8 81 c9 ?? ?? ?? ?? 51 57 57 57 ff 75 ?? 89 4d ?? ff 75 ?? ff 75 ?? ff 15 42 00 80 7d ?? ?? b8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Yakes_DSK_2147748659_0
         $x_2_5 = {0f b6 32 88 d9 d3 fe 89 75 fc 8a 4d fc 88 08 88 f9 88 d8 d2 e0 00 c7 88 3a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -68,6 +70,7 @@ rule Trojan_Win32_Yakes_DSP_2147754593_0
         $x_2_2 = {8b 45 f8 33 45 f0 89 45 f8 c7 85 ?? fc ff ff 8d 00 00 00 8b 0d ?? ?? ?? ?? 8b 55 f8 89 11}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_Win32_Yakes_CC_2147811149_0
         $x_1_5 = "GetTickCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule Trojan_Win32_Yakes_GER_2147841810_0
         $x_1_7 = "Command.com /c %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule Trojan_Win32_Yakes_ASG_2147894259_0
         $x_1_3 = {40 08 00 00 50 3c 00 00 00 00 00 00 30 81 00 00 10 00 00 00 50 08 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_Win32_Yakes_SPPB_2147913474_0
         $x_1_1 = {03 c6 33 c2 33 45 70 c7 05 ?? ?? ?? ?? ee 3d ea f4 2b c8 89 45 6c 8b c1 c1 e0 04 89 45 70 8b 85 ?? ?? ?? ?? 01 45 70 8b 55 74 8b c1 c1 e8 05 03 d1 89 45 6c 8b 85 ?? ?? ?? ?? 01 45 6c 8b 45 6c 33 c2 31 45 70 8b 45 70 29 45 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule Trojan_Win32_Yakes_SPON_2147914161_0
         $x_1_1 = {ff 50 89 b5 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8a 85 ?? ?? ?? ?? 30 04 3b 83 7d 08 0f 59 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -41,6 +41,7 @@ rule Virus_Win32_Delemon_A_2147575005_0
         $x_1_26 = "VSAPINT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (24 of ($x*))
 }
 

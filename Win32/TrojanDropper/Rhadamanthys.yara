@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Rhadamanthys_EA_2147937248_0
         $x_5_1 = {8b 45 98 48 89 45 98 8d 97 ?? ?? ?? ?? 66 89 15 ?? ?? ?? ?? 66 89 4d a8 8a 14 1e 88 13}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

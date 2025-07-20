@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Wekrober_G_2147691809_0
         $x_1_6 = "lidos ! -  Senha incorreta." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

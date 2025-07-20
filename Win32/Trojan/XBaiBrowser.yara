@@ -20,6 +20,7 @@ rule Trojan_Win32_XBaiBrowser_2147900431_0
         $x_1_6 = "https://www.minibai.com/agreement.html" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

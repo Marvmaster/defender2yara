@@ -23,6 +23,7 @@ rule Trojan_Linux_Umberon_A_2147773636_0
         $x_2_8 = "backconnect" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

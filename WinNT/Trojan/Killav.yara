@@ -16,6 +16,7 @@ rule Trojan_WinNT_Killav_BU_2147623066_0
         $x_1_2 = {ab 8b 45 08 89 45 f4 8d 45 f4 50 8d 45 dc 50 68 ff 0f 1f 00 8d 45 fc 50 c7 45 dc 18 00 00 00 ff 15 ?? ?? 01 00 8b 45 fc 5f c9 c2 04 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_WinNT_Killav_DK_2147626348_0
         $x_1_4 = {80 38 ff 75 11 80 78 01 75 75 0b 8a 50 02 3a 15 80 09 40 00 74 ?? 40 41 81 f9 96 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_WinNT_Killav_E_2147641117_0
         $x_1_3 = {20 20 22 00 0f 84 ?? ?? ?? ?? 81 7d ?? 24 20 22 00 0f 84 ?? ?? ?? ?? 81 7d ?? 57 e1 22 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_WinNT_Killav_F_2147652314_0
         $x_5_6 = {59 8b 45 08 c7 40 34 e0 02 01 00 68}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -112,6 +116,7 @@ rule Trojan_WinNT_Killav_DL_2147678744_0
         $x_1_4 = {00 00 4e 00 56 00 43 00 41 00 67 00 65 00 6e 00 74 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule Trojan_WinNT_Killav_DM_2147679452_0
         $x_1_4 = {4e 00 56 00 43 00 41 00 67 00 65 00 6e 00 74 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_WinNT_Killav_DN_2147691660_0
         $x_1_10 = {5c 00 44 00 6f 00 73 00 44 00 65 00 76 00 69 00 63 00 65 00 73 00 5c 00 41 00 56 00 53 00 61 00 46 00 65 00 53 00 76 00 63 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             ((4 of ($x_10_*))) or

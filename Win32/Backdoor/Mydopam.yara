@@ -21,6 +21,7 @@ rule Backdoor_Win32_Mydopam_A_2147595193_0
         $x_1_6 = {40 65 63 68 6f 20 6f 66 66 0d 0a 3a 74 72 79 0d 0a 64 65 6c 20 25 73 0d 0a 69 66 20 65 78 69 73 74 20 25 73 20 67 6f 74 6f 20 74 72 79 0d 0a 64 65 6c 20 25 73 2e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

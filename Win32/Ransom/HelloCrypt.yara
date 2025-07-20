@@ -20,6 +20,7 @@ rule Ransom_Win32_HelloCrypt_MK_2147806026_0
         $x_1_5 = "your personal id:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

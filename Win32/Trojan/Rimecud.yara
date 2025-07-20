@@ -17,6 +17,7 @@ rule Trojan_Win32_Rimecud_A_2147632583_0
         $x_1_2 = {eb 0b 68 c8 00 00 00 ff 15 ?? ?? ?? ?? 6a 00 68 ?? ?? ?? ?? ff d3 85 c0 74 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Rimecud_A_2147632584_0
         $x_1_9 = {81 78 04 19 02 00 00 0f 85 ?? ?? ?? ?? 8b 45 10 81 78 08 00 80 00 00 0f 85 ?? ?? ?? ?? 8b 85 78 ff ff ff 83 78 04 02 0f 85 ?? ?? ?? ?? 8b 45 10 8b 40 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Rimecud_ARMI_2147929807_0
         $x_1_1 = {33 c0 55 68 d7 4a 4a 00 64 ff 30 64 89 20 8b c3 8b 10 ff 52 ?? ba f0 4a 4a 00 8b c3 8b 08 ff 51 ?? 8d 45 f8 8b 4d fc ba 10 4b 4a 00 e8 ?? ?? ?? ?? 8b 55 f8 8b c3 8b 08 ff 51 ?? ba 28 4b 4a 00 8b c3 8b 08 ff 51 38}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win64_Disttl_RS_2147909836_0
         $x_1_3 = "\\AppData\\Local\\Growtopia\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

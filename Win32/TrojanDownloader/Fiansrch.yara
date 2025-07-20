@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Fiansrch_A_2147596321_0
         $x_1_7 = "InternetWriteFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*))) or
             (all of ($x*))
@@ -54,6 +55,7 @@ rule TrojanDownloader_Win32_Fiansrch_B_2147600532_0
         $x_1_11 = "UnhookWindowsHookEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

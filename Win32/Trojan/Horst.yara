@@ -43,6 +43,7 @@ rule Trojan_Win32_Horst_B_2147600697_0
         $x_1_28 = {61 63 63 6f 75 6e 74 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_2_*) and 2 of ($x_1_*))) or
             ((8 of ($x_2_*))) or
@@ -96,6 +97,7 @@ rule Trojan_Win32_Horst_C_2147602381_0
         $x_1_7 = {b8 aa 05 00 00 c6 82 a8 05 00 00 0a 88 8a a9 05 00 00 33 ?? 85 ?? 7e ?? 80 34}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -126,6 +128,7 @@ rule Trojan_Win32_Horst_C_2147603639_0
         $x_1_11 = "InternetGetCookieExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*) and 3 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -159,6 +162,7 @@ rule Trojan_Win32_Horst_D_2147605827_0
         $x_1_7 = {69 6e 6e 65 72 5f 78 6d 6c 00 00 00 74 61 67 5f 6e 61 6d 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 3 of ($x_5_*))) or
@@ -194,6 +198,7 @@ rule Trojan_Win32_Horst_D_2147608074_0
         $x_1_9 = {25 73 5f 63 72 61 63 6b 5f 6b 65 79 67 65 6e 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -226,6 +231,7 @@ rule Trojan_Win32_Horst_I_2147608635_0
         $x_1_9 = "kavsvc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -256,6 +262,7 @@ rule Trojan_Win32_Horst_G_2147608636_0
         $x_1_6 = {68 6d 75 6e 6d 6c 32 30 64 6c 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -288,6 +295,7 @@ rule Trojan_Win32_Horst_H_2147608637_0
         $x_1_8 = {46 00 61 00 63 00 65 00 62 00 6f 00 6f 00 6b 00 20 00 7c 00 20 00 48 00 6f 00 6d 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or

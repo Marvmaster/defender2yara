@@ -17,6 +17,7 @@ rule Trojan_Win32_Asruex_A_2147708363_0
         $x_1_2 = {85 c0 74 06 c6 46 6c 20 eb 04 c6 46 6c 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Asruex_A_2147742113_0
         $x_1_1 = {b9 44 00 00 00 8d 44 24 20 88 18 40 83 e9 01 75 f8 c7 44 24 20 44 00 00 00 b9 10 00 00 00 8d 44 24 10 8d 49 00 88 18 40 83 e9 01 75 f8 8b 0d 28 54 4d 00 8b 11 52}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

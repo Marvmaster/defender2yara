@@ -21,6 +21,7 @@ rule Trojan_Win32_Hiloti_A_133275_0
         $x_1_6 = "%s%x.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Trojan_Win32_Hiloti_B_139879_0
         $x_1_3 = {c9 83 04 24 ?? c2 ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -77,6 +79,7 @@ rule Trojan_Win32_Hiloti_A_144490_0
         $x_1_6 = "keyword=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Trojan_Win32_Hiloti_C_147136_0
         $x_1_5 = "tick=%010d&pid=%04x" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +148,7 @@ rule Trojan_Win32_Hiloti_D_147238_0
         $x_1_22 = {0f b6 cd 03 c1 99 59 f7 f9 [0-18] 8b da 83 c3 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -178,6 +183,7 @@ rule Trojan_Win32_Hiloti_E_153143_0
         $x_1_9 = {26 00 70 00 72 00 6f 00 63 00 3d 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

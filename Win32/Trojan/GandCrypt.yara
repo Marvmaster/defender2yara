@@ -16,6 +16,7 @@ rule Trojan_Win32_GandCrypt_GA_2147744723_0
         $x_1_1 = {8b c7 c1 e8 05 03 44 24 18 8b cf c1 e1 04 03 4c 24 1c 8d 14 3b 33 c1 33 c2 2b f0 8b c6 c1 e8 05 03 44 24 20 8b ce c1 e1 04 03 4c 24 24 8d 14 33 33 c1 33 c2 45 2b f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_GandCrypt_KMG_2147745171_0
         $x_1_1 = {c1 e0 04 03 45 e4 8b 4d f8 03 4d f4 33 c1 8b 55 f8 c1 ea 05 03 55 e0 33 c2 8b 4d fc 2b c8 89 4d fc 8b 55 dc 83 ea 01 8b 45 f4 2b c2 89 45 f4 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_GandCrypt_G_2147745172_0
         $x_1_2 = {8d 9b 00 00 00 00 8b 7d fc 8a 44 37 03 8a d0 8a d8 80 e2 fc 24 f0 c0 e2 04 0a 54 37 01 8b 7d fc 02 c0 c0 e3 06 0a 5c 37 02 02 c0 0a 04 37 8b 7d f8 88 04 39 41 88 14 39 41 88 1c 39 83 c6 04 41 3b 75 f4 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Trojan_Win32_GandCrypt_GS_2147745173_0
         $x_1_2 = {55 8b ec 81 ec 20 08 00 00 a1 ?? ?? ?? ?? 33 c5 89 45 fc 56 57 33 ff 81 3d ?? ?? ?? ?? 12 0f 00 00 75 ?? 57 8d 85 e0 f7 ff ff 50 57}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +106,7 @@ rule Trojan_Win32_GandCrypt_GB_2147745308_0
         $x_1_1 = {81 fe 70 d2 14 00 7e ?? 81 bd 6c ff ff ff 28 9b 1a 75 74 ?? 81 7d ?? ?? 2a 69 12 75 ?? 46 81 fe 01 3f 14 22 7c ?? a1 ?? ?? ?? ?? 8b f7 05 3b 2d 0b 00 a3 ?? ?? ?? ?? 81 fe 89 62 65 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +131,7 @@ rule Trojan_Win32_GandCrypt_GE_2147745459_0
         $x_1_4 = {30 04 1e 46 3b f7 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -148,6 +154,7 @@ rule Trojan_Win32_GandCrypt_GD_2147746244_0
         $x_1_2 = {6a 00 ff 15 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 69 c9 ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 81 05 ?? ?? ?? ?? c3 9e 26 00 81 3d ?? ?? ?? ?? cf 12 00 00 0f b7 1d ?? ?? ?? ?? 75 ?? 6a 00 6a 00 ff 15 ?? ?? ?? ?? 8b 45 f8 30 1c 06 46 3b f7 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +176,7 @@ rule Trojan_Win32_GandCrypt_AR_2147747899_0
         $x_1_1 = {69 c9 fd 43 03 00 89 0d ?? ?? ?? 00 81 05 ?? ?? ?? 00 c3 9e 26 00 81 3d ?? ?? ?? 00 cf 12 00 00 0f b7 1d ?? ?? ?? 00 75 ?? 6a 00 6a 00 ff 15 ?? ?? ?? ?? 8b 45 f8 30 1c 06 45 00 ff 15 ?? ?? ?? ?? 8b 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +199,7 @@ rule Trojan_Win32_GandCrypt_GH_2147748116_0
         $x_1_2 = {3d 4a 38 02 00 7e ?? ba db 86 00 00 66 3b ca 75 ?? 40 3d 59 68 00 00 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +221,7 @@ rule Trojan_Win32_GandCrypt_GG_2147748554_0
         $x_1_1 = {b8 5f 33 00 00 85 c0 74 ?? 8b 4d f8 3b 0d ?? ?? ?? ?? 72 ?? eb ?? 8b 75 f8 03 75 f0 68 50 11 00 00 ff 15 ?? ?? ?? ?? 03 f0 8b 55 f8 03 55 f0 8b 45 fc 8b 4d f4 8a 0c 31 88 0c 10 8b 55 f8 83 c2 01 89 55 f8 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +243,7 @@ rule Trojan_Win32_GandCrypt_GI_2147748555_0
         $x_1_1 = {03 d8 c7 05 ?? ?? ?? ?? 2e ce 50 91 a1 ?? ?? ?? ?? 81 fa a9 0f 00 00 89 5c 24 18 bb 40 2e eb ed 0f 44 c3 8b df c1 eb 05 03 d9 a3 ?? ?? ?? ?? 8d 04 3e 81 fa 76 09 00 00 75 ?? 33 c9 8d 84 24 ?? ?? ?? ?? 51 51 50 51}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -255,6 +266,7 @@ rule Trojan_Win32_GandCrypt_GJ_2147748560_0
         $x_1_2 = {55 8b ec 51 a1 ?? ?? ?? ?? 69 c0 fd 43 03 00 a3 ?? ?? ?? ?? 81 05 ?? ?? ?? ?? c3 9e 26 00 8b 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -279,6 +291,7 @@ rule Trojan_Win32_GandCrypt_DSK_2147749128_0
         $x_2_4 = {8b 4d fc 8d 94 01 bc 01 00 00 8b 45 08 89 10 8b 4d 08 8b 11 81 ea bc 01 00 00 8b 45 08 89 10}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -300,6 +313,7 @@ rule Trojan_Win32_GandCrypt_GF_2147749287_0
         $x_1_1 = {89 4d e0 81 7d e0 4e ce 21 00 7d ?? 81 7d e0 e8 a7 03 00 75 ?? 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? a3 ?? ?? ?? ?? 81 3d ?? ?? ?? ?? 0b 12 00 00 75 ?? 8d 95 9c f3 ff ff 52 6a 00 ff 15 ?? ?? ?? ?? eb ?? 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -323,6 +337,7 @@ rule Trojan_Win32_GandCrypt_PVD_2147750606_0
         $x_2_3 = {8b ce 8b c6 c1 e1 04 03 0d ?? ?? ?? ?? c1 e8 05 03 05 ?? ?? ?? ?? 33 c8 8d 04 37 2b 7d fc}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -348,6 +363,7 @@ rule Trojan_Win32_GandCrypt_PVS_2147752582_0
         $x_2_1 = {0f be 19 e8 ?? ?? ?? ?? 33 d8 8b 55 c4 03 55 fc 88 1a eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -369,6 +385,7 @@ rule Trojan_Win32_GandCrypt_PVR_2147753594_0
         $x_2_1 = {69 c9 fd 43 03 00 6a 00 81 c1 c3 9e 26 00 6a 00 89 0d ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 8a 15 ?? ?? ?? ?? 30 14 3e 46 3b f3 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -390,6 +407,7 @@ rule Trojan_Win32_GandCrypt_KSV_2147753654_0
         $x_2_1 = {69 c0 fd 43 03 00 53 05 c3 9e 26 00 53 a3 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? a0 ?? ?? ?? ?? 30 04 3e 46 3b 75 08 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -414,6 +432,7 @@ rule Trojan_Win32_GandCrypt_PVP_2147753659_0
         $x_1_4 = {6a 00 ff 15 08 00 e8 ?? ff ff ff 30 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -440,6 +459,7 @@ rule Trojan_Win32_GandCrypt_PVC_2147753715_0
         $x_2_2 = {30 04 37 4e 79 05 00 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -461,6 +481,7 @@ rule Trojan_Win32_GandCrypt_PVE_2147754080_0
         $x_2_1 = {6a 00 ff 15 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 30 04 37 8d 85 fc f7 ff ff 50 6a 00 ff 15 ?? ?? ?? ?? 46 3b 75 08 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -483,6 +504,7 @@ rule Trojan_Win32_GandCrypt_PVF_2147754184_0
         $x_2_2 = {8b c3 c1 e9 05 03 4d f0 c1 e0 04 03 45 ec 33 c8 8d 04 1e 33 c8 8d b6 ?? ?? ?? ?? 2b f9 83 6d fc 01 75 ?? 8b 75 e8 89 3e 5f 89 5e 04 5e 5b 8b e5 5d c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -506,6 +528,7 @@ rule Trojan_Win32_GandCrypt_PVG_2147754185_0
         $x_1_3 = {8b 4d fc 33 cd 25 ff 7f 00 00 e8 ?? ?? ?? ?? c9 c3 07 00 0f b7 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -532,6 +555,7 @@ rule Trojan_Win32_GandCrypt_PVH_2147754194_0
         $x_2_2 = {8b 4d f8 c1 e9 05 8b 55 0c 03 4a 04 33 c1 8b 4d e4 2b c8 89 4d e4 ff 75 f0 e8 ?? ?? ?? ?? 89 45 f0 eb ?? 8b 45 08 8b 4d e4 89 08 8b 45 08 8b 4d f8 89 48 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -554,6 +578,7 @@ rule Trojan_Win32_GandCrypt_PVI_2147754411_0
         $x_2_2 = {8b 55 f4 c1 ea 05 03 55 e0 33 c2 8b 4d dc 2b c8 89 4d dc 81 7d fc c5 22 00 00 73}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -576,6 +601,7 @@ rule Trojan_Win32_GandCrypt_PVB_2147755851_0
         $x_1_2 = {89 74 24 18 89 5c 24 1c 3b 74 24 2c 0f 82 ?? ?? ?? ?? 5e 5d 5b 8b 4c 24 44 5f 33 cc e8 ?? ?? ?? ?? 83 c4 44 c2 0c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -597,6 +623,7 @@ rule Trojan_Win32_GandCrypt_PVJ_2147756252_0
         $x_2_1 = {8b ce c1 e9 05 03 0d ?? ?? ?? ?? 50 33 d1 8d 0c 30 33 d1 2b fa e8 ?? ?? ?? ?? 4b 75 ?? 8b 44 24 1c 89 38 5f 89 70 04 5e 5d 5b 83 c4 08 c2 04 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -618,6 +645,7 @@ rule Trojan_Win32_GandCrypt_DSA_2147757713_0
         $x_1_1 = {8b 45 f0 03 45 e4 89 45 d8 8b 45 f0 c1 e8 05 89 45 f8 c7 05 ?? ?? ?? ?? 2e ce 50 91 8b 45 f8 03 45 cc 89 45 f8 81 3d ?? ?? ?? ?? 76 09 00 00 75 0a 00 c7 05 ?? ?? ?? ?? 40 2e eb ed}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -639,6 +667,7 @@ rule Trojan_Win32_GandCrypt_DSB_2147759841_0
         $x_1_1 = {8a 41 03 8a d0 8a d8 24 f0 80 e2 fc c0 e0 02 0a 01 c0 e2 04 0a 51 01 c0 e3 06 0a 59 02 88 04 3e 46 88 14 3e 46 88 1c 3e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -661,6 +690,7 @@ rule Trojan_Win32_GandCrypt_DSC_2147763498_0
         $x_1_2 = "De bemojeyuze bazobupuyobumetelawefibu diwuza hibeligacakujakaco" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -682,6 +712,7 @@ rule Trojan_Win32_GandCrypt_RF_2147788213_0
         $x_1_1 = {03 c1 8b 0d ?? ?? ?? ?? 89 44 24 ?? 89 4c 24 ?? 8b 30 a1 ?? ?? ?? ?? 89 44 24 ?? a1 ?? ?? ?? ?? 89 44 24 ?? a1 ?? ?? ?? ?? c7 44 24 ?? ba 79 37 9e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

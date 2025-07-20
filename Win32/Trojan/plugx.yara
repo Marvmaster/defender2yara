@@ -17,6 +17,7 @@ rule Trojan_Win32_plugx_2147842174_0
         $x_7_1 = {07 08 9a 0d 09 6f 15 00 00 0a 72 01 00 00 70 28 16 00 00 0a 2c 28 09 6f 17 00 00 0a 20 0e 00 02 00 12 00 28 01 00 00 06 2d 01 2a 06 28 03 00 00 06 26 09 6f 17 00 00 0a 28 02 00 00 06 26 08 17 58 0c 08}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

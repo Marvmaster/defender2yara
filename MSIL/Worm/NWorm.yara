@@ -21,6 +21,7 @@ rule Worm_MSIL_NWorm_G_2147742428_0
         $x_1_6 = "pongPing" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Worm_MSIL_NWorm_GA_2147744784_0
         $x_1_7 = "pongPing" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Worm_MSIL_NWorm_NIT_2147937964_0
         $x_2_2 = {28 18 00 00 0a 02 6f ?? 00 00 0a 6f ?? 00 00 0a 14 14 6f ?? 00 00 0a 26 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Ransom_MSIL_KobosCrypt_SN_2147771746_0
         $x_10_8 = "svchost.exe" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

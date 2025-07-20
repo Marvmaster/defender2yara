@@ -17,6 +17,7 @@ rule Trojan_MSIL_PowDow_NEAA_2147841114_0
         $x_5_2 = "Hide-PowerShell" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_PowDow_NEAB_2147843931_0
         $x_2_3 = "set_CreateNoWindow" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

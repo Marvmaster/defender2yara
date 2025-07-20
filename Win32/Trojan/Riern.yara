@@ -15,6 +15,7 @@ rule Trojan_Win32_Riern_A_2147627627_0
         $x_1_1 = {64 a1 30 00 00 00 8b 40 0c 8b 70 1c ad 8b 40 08 5e 89 45 fc 8b 75 fc 85 f6 74 2f 68 48 1e 35 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule Trojan_Win32_Riern_B_2147629978_0
         $x_1_2 = {50 ff 55 fc 8d 85 ?? ?? ff ff 50 8d 85 ?? ?? ff ff 50 ff 55 f8 6a 08 8d 85 ?? ?? ff ff 6a 00 50 ff 55 e8 8d 85 ?? ?? ff ff 50 56 ff 55 f4 85 c0 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_Riern_H_2147638540_0
         $x_1_4 = {c7 44 24 10 01 00 00 00 39 ?? ?? ?? 72 0a 8b ?? ?? ?? 89 ?? ?? ?? eb 08 8d ?? ?? ?? 89 [0-9] 8d ?? ?? ?? ?? 6a 01 ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win32_Riern_I_2147638745_0
         $x_1_2 = {8b 91 10 01 00 00 68 f2 0a 00 00 6a 40 ff d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_Win32_Riern_L_2147649502_0
         $x_1_4 = {8b 5e 14 03 da 3b d9 76 19 83 ff 10 72 02 8b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -127,6 +132,7 @@ rule Trojan_Win32_Riern_M_2147649905_0
         $x_1_2 = {56 53 53 6a 1a 53 ff d0 3b c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

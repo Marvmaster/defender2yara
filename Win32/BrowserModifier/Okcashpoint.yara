@@ -23,6 +23,7 @@ rule BrowserModifier_Win32_Okcashpoint_18098_0
         $x_1_9 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule BrowserModifier_Win32_Okcashpoint_18098_1
         $x_1_7 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule BrowserModifier_Win32_Okcashpoint_18098_2
         $x_1_7 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

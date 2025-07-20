@@ -18,6 +18,7 @@ rule TrojanDownloader_MacOS_AmdDwn_B_2147921854_0
         $x_1_3 = {e8 01 80 52 e8 1b 00 b9 e8 1b 40 b9 1f 4d 00 71 48 ?? ?? ?? 09 00 00 ?? 29 71 36 91 ca fc ff 10 2b 69 68 38 4a 09 0b 8b 40 01 1f d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule TrojanDownloader_MacOS_AmdDwn_A_2147921862_0
         $x_1_2 = {48 89 df 48 89 de 31 c9 31 c0 e8 45 02 00 00 f6 45 c0 01 74 ?? 48 8b 7d d0 e8 2a 02 00 00 b8 01 00 00 00 e9 ?? ?? ?? ?? e8 39 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

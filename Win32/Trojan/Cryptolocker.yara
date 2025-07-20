@@ -19,6 +19,7 @@ rule Trojan_Win32_Cryptolocker_PAM_2147816727_0
         $x_2_4 = "vssadmin delete shadows /all /quiet && wmic shadowcopy delete && net users " ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

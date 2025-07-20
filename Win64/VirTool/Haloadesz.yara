@@ -18,6 +18,7 @@ rule VirTool_Win64_Haloadesz_A_2147852612_0
         $x_1_3 = {49 8b ce e8 ?? ?? ?? ?? 48 8b c8 4c 8b d8 e8 ?? ?? ?? ?? 49 8b cb 44 0f b7 d0 e8 ?? ?? ?? ?? 41}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

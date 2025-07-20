@@ -16,6 +16,7 @@ rule Trojan_Win32_Ghostrat_RPW_2147838257_0
         $x_1_1 = {50 c6 45 ec 41 c6 45 ed 44 c6 45 ee 56 c6 45 ef 41 c6 45 f0 50 c6 45 f1 49 c6 45 f2 33 c6 45 f3 32 c6 45 f4 2e c6 45 f5 64 c6 45 f6 6c c6 45 f7 6c 88 5d f8 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Ghostrat_RPZ_2147846275_0
         $x_1_1 = {47 83 c6 04 83 c3 02 3b 7d f4 72 b8 eb 1d 0f b7 0b 3b 4d f0 77 15 8b 45 ec 8b 40 1c 8d 04 88 8b 4d fc 8b 04 08 03 c1 74 02 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Ghostrat_RPY_2147848820_0
         $x_1_3 = "CheckServer\\Tcs.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Ghostrat_RPX_2147851473_0
         $x_1_2 = "ShellcodeBase64Loader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

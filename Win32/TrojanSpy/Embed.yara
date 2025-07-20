@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Embed_A_2147646260_0
         $x_1_5 = {57 69 6e 73 33 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule TrojanSpy_Win32_Embed_A_2147646260_1
         $x_1_6 = {57 69 6e 73 33 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -76,6 +78,7 @@ rule TrojanSpy_Win32_Embed_B_2147658652_0
         $x_1_6 = {57 68 61 74 54 68 65 46 75 63 6b 69 6e 67 49 73 47 6f 69 6e 67 4f 6e 48 69 4d 61 6e 21 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

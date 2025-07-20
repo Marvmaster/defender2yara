@@ -16,6 +16,7 @@ rule Trojan_Win32_SpyShiz_RE_2147844716_0
         $x_1_1 = {c1 ea 07 03 15 ?? ?? ?? ?? c1 c2 04 2b 15 ?? ?? ?? ?? c1 c2 06 8b c2 d1 e8 c1 c0 03 2b c3 89 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_SpyShiz_MX_2147926201_0
         $x_1_3 = "familycould cost" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_SpyShiz_MX_2147926201_1
         $x_1_4 = "familycould cost" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

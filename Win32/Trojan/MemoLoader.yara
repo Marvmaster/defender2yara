@@ -24,6 +24,7 @@ rule Trojan_Win32_MemoLoader_DA_2147917641_0
         $x_1_9 = "Restart-Computer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

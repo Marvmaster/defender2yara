@@ -20,6 +20,7 @@ rule Ransom_Win32_GOCoder_DA_2147939991_0
         $x_10_5 = "_expand_key_" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

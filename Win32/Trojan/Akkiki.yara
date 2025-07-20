@@ -17,6 +17,7 @@ rule Trojan_Win32_Akkiki_A_2147611772_0
         $x_1_3 = {0f be 34 10 83 c6 1c 81 fe 96 00 00 00 0f 87 e2 00 00 00 33 c9 8a 8e ?? ?? ?? 00 ff 24 8d ?? ?? ?? 00 c6 04 10 53 e9 ca 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

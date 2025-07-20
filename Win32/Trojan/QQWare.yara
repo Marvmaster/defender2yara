@@ -24,6 +24,7 @@ rule Trojan_Win32_QQWare_EC_2147920732_0
         $x_1_9 = "www.123cha.com/ip/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

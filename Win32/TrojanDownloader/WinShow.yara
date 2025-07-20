@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_WinShow_H_2147804045_0
         $x_1_3 = {00 46 65 61 74 32 43 6f 6e 66 69 67 4d 65 6d 6f 72 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

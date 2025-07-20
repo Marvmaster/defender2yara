@@ -25,6 +25,7 @@ rule Trojan_Win32_Favadd_T_2147603254_0
         $x_1_11 = "Spam Filters.url" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -51,6 +52,7 @@ rule Trojan_Win32_Favadd_C_2147636783_0
         $x_2_4 = "http://taobao.lo" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or

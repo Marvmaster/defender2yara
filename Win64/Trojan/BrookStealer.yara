@@ -19,6 +19,7 @@ rule Trojan_Win64_BrookStealer_DA_2147899867_0
         $x_1_4 = "FirefoxCrackLoginData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Trojan_Win32_Krepper_AJ_2147601778_0
         $x_1_8 = "4E74E0EF-D424-4012-BCCD-1097C5CB6FC7-V34" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 4 of ($x_10_*))) or
             (all of ($x*))

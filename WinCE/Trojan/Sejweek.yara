@@ -16,6 +16,7 @@ rule Trojan_WinCE_Sejweek_A_2147630328_0
         $x_1_2 = {72 e5 00 00 70 80 0a 00 00 04 20 80 6d ef 04 80 0b 00 00 04 20 80 6d ef 04 80 0c 00 00 04 17 80 10 00 00 04 73 58 00 00 0a 80 12 00 00 04 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_WinCE_Sejweek_B_2147630522_0
         $x_1_2 = {72 73 03 00 70 80 15 00 00 04 20 80 6d ef 04 80 16 00 00 04 20 80 6d ef 04 80 17 00 00 04 17 80 1b 00 00 04 73 e5 00 00 0a 80 1d 00 00 04 20 6c 07 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

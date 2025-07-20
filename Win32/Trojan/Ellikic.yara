@@ -17,6 +17,7 @@ rule Trojan_Win32_Ellikic_A_2147624617_0
         $x_1_3 = {69 65 68 65 6c 70 65 72 2e 64 6c 6c 00 44 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

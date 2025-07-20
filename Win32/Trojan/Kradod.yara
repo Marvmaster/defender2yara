@@ -18,6 +18,7 @@ rule Trojan_Win32_Kradod_A_2147680138_0
         $x_1_4 = "9B345CD7-B006-4b3a-AFC6-9A61C5491BCA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

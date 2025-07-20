@@ -19,6 +19,7 @@ rule Trojan_Linux_ProcessHider_A_2147756253_0
         $x_1_4 = "get_process_name" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Linux_ProcessHider_B_2147798312_0
         $x_1_3 = "xmrig" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Linux_ProcessHider_C_2147819195_0
         $x_1_2 = {48 8b 95 d8 fe ff ff 48 8d 85 e0 fe ff ff be 00 01 00 00 48 89 c7 e8 39 fd ff ff 48 85 c0 75 16 48 8b 85 d8 fe ff ff 48 89 c7 e8 d5 fc ff ff b8 00 00 00 00 eb 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Linux_ProcessHider_C_2147819195_1
         $x_1_3 = "get_process_name" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Linux_ProcessHider_D_2147923834_0
         $x_1_2 = {83 7b 08 25 48 8b 2b 0f 85 b2 01 00 00 ff 53 10 48 83 c3 18 48 89 45 00 48 81 fb b0 02 40 00 72 df e8 72 05 00 00 48 8b 05 9b 02 2c 00 48 85 c0 0f 84 93 01 00 00 48 8b 10 48 89 d6 48 89 54 24 20 40 80 e6 00 64 48 89 34 25 28 00 00 00 48 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

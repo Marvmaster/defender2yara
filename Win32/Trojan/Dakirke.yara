@@ -25,6 +25,7 @@ rule Trojan_Win32_Dakirke_A_2147730226_0
         $x_1_11 = "StartSysInfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

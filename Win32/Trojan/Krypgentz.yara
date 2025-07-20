@@ -17,6 +17,7 @@ rule Trojan_Win32_Krypgentz_AT_2147922419_0
         $x_1_2 = {26 3b c3 7d 22 84 c9 74 0a 8a 07 47 84 c0 75 f9 20 47 fe 8d 45 f0 6a 01 50 53 ff 75 0c e8 e5 fe ff ff 83 c4 10 eb 15 8d 45 f0 6a 01 50 ff 75 14 53 ff 75 0c e8 b7 fd ff ff 83 c4 14 5f 5e 5b c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

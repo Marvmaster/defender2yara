@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Namaneat_A_2147709601_0
         $x_1_7 = "/c.php?add=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or

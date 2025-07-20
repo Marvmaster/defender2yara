@@ -16,6 +16,7 @@ rule Trojan_Win32_Uztuby_KAA_2147901603_0
         $x_5_1 = {83 f2 02 89 d0 01 c2 42 89 35 ?? ?? ?? ?? 42 b8 ?? ?? ?? ?? 89 d0 31 1d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

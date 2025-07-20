@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Draobo_A_2147650513_0
         $x_1_2 = {8b 4c 3a 24 8b 44 3a 20 03 cf 89 4c 24 14 8b 4c 3a 18 55 03 c7 33 ed 85 c9 89 44 24 14 76 ?? eb 04 8b 44 24 14 8b 0c a8 8b 74 24 24 03 cf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

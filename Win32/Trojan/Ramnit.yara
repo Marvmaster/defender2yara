@@ -16,6 +16,7 @@ rule Trojan_Win32_Ramnit_A_2147632845_0
         $x_1_2 = {6a 05 8f 45 f0 6a 04 8d 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Ramnit_A_2147632845_1
         $x_1_2 = {8b 4d 0c 8b 75 1c 8b 7d 08 8b 55 10 3b 55 10 75 04 03 55 14 4a 8a 1a 32 1f 83 7d 18 00 75 0f 88 1e 46 80 fb 00 74 1e 39 75 20 76 19 eb 07 0a db 75 03 ff 4d 18 47 4a e2 d3 ff 75 18 8f 45 fc 83 7d 18 00 75 bb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -57,6 +59,7 @@ rule Trojan_Win32_Ramnit_C_2147640304_0
         $x_1_1 = {8b d0 68 02 00 00 00 68 00 30 00 10 52 ff 75 08 e8 ?? ?? ?? ?? 0b c0 75 05 8b 45 08 eb 01 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win32_Ramnit_A_2147642898_0
         $x_1_3 = {40 c6 00 5c 40 c6 00 00 6a 00 8f 85 f4 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_Win32_Ramnit_A_2147642898_1
         $x_1_19 = {6a 19 52 e8 [0-8] ?? ?? ?? ?? 04 61 [0-8] 88 06 [0-8] 46 [0-8] e2 ?? c6 06 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Trojan_Win32_Ramnit_D_2147645306_0
         $x_1_3 = "RapportMgmt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_Win32_Ramnit_A_2147679637_0
         $x_1_2 = {74 0b 83 78 49 00 74 05 50 ff 50 49 59}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule Trojan_Win32_Ramnit_A_2147679638_0
         $x_1_2 = {85 c0 74 6e 83 3c 24 4e 75 68 6a 00 8d 44 24 08 50 68 8d 49 37 29 e8 58 9f ff ff 6a 4c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -247,6 +255,7 @@ rule Trojan_Win32_Ramnit_B_2147691387_0
         $x_1_3 = {40 90 90 c6 00 5c 40 90 90 c6 00 00 90 90 33 c0 90 90 89 85 f4 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -270,6 +279,7 @@ rule Trojan_Win32_Ramnit_I_2147722627_0
         $x_1_3 = {8b 55 0c 8b 45 08 8b 52 04 33 14 08 b8 ?? ?? ?? ?? 6b c8 ?? 8b 45 08 8b 0c 08 c1 e9 ?? 33 d1 b8 ?? ?? ?? ?? 6b c8 ?? 8b 45 08 8b 0c 08 c1 e1 ?? 33 d1 8b 45 10 89 50 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -293,6 +303,7 @@ rule Trojan_Win32_Ramnit_J_2147722841_0
         $x_1_3 = {ff 75 18 8b 35 ?? ?? ?? ?? 8b ce ff 75 14 33 35 ?? ?? ?? ?? 83 e1 1f ff 75 10 d3 ce ff 75 0c ff 75 08 85 f6 75 be}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -314,6 +325,7 @@ rule Trojan_Win32_Ramnit_K_2147730000_0
         $x_1_2 = {d1 fa 6a 00 8b c2 6a ?? c1 e8 ?? 6a ?? 03 c2 51 8d 94 24 ?? ?? ?? 00 8b f8 52 0f af fd ff 15 ?? ?? ?? 00 8b 8c 24 ?? ?? 00 00 8a c3 32 44 24 ?? 88 44 24 ?? 8b c7 c1 e0 ?? 2b c8 2b 4c 24 ?? 01 4c 24 ?? 83 3d ?? ?? ?? 00 00 0f 85 ?? ?? 00 00 8d 94 24 ?? ?? 00 00 68 ?? ?? ?? 00 52 e8 ?? ?? ?? ff 6a ?? 8b f0 6a ?? 56 e8 ?? ?? ?? ff 56 e8 ?? ?? ?? ff 8b f0 8d 46 ?? 50 e8 ?? ?? ?? ?? 8b 0d ?? ?? ?? 00 83 c4 1c 6a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -336,6 +348,7 @@ rule Trojan_Win32_Ramnit_AK_2147730812_0
         $x_1_3 = {54 68 69 73 20 0e 70 72 6f 67 67 61 6d 87 63 47 6e 1f 4f 74 e7 62 65 af cf 75 5f 98 69 06 44 4f 7e 53 03 6d 6f 64 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +386,7 @@ rule Trojan_Win32_Ramnit_C_2147740303_0
         $x_1_17 = {63 6f 6d 2e 25 73 2e 73 64 62 00 00 25 73 5c 63 6d 64 2e 25 73 2e 62 61 74 00 00 00 75 73 65 72 6e 61 6d 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -400,6 +414,7 @@ rule Trojan_Win32_Ramnit_E_2147740305_0
         $x_1_7 = "pref(\"network.http.spdy.enabled.http2\", false);" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -429,6 +444,7 @@ rule Trojan_Win32_Ramnit_F_2147740445_0
         $x_2_4 = {66 45 34 68 4e 79 31 4f 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

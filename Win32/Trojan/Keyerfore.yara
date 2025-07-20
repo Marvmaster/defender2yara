@@ -19,6 +19,7 @@ rule Trojan_Win32_Keyerfore_A_2147709684_0
         $x_1_4 = {66 74 70 2e [0-16] 2e 63 6f 6d 00 55 53 45 52 20 [0-32] 0d 0a 00 50 41 53 53}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

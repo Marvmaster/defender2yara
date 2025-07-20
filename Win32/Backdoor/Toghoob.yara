@@ -17,6 +17,7 @@ rule Backdoor_Win32_Toghoob_A_2147648209_0
         $x_1_3 = {8b 44 81 fc 0f be 00 83 f8 23 74 31 6a 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Trojan_MSIL_AveMariaRAT_RPT_2147817794_0
         $x_1_7 = "WebRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_MSIL_AveMariaRAT_NT_2147818339_0
         $x_1_6 = "Atsssssssssssssssssssss" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_MSIL_AveMariaRAT_NT_2147818339_1
         $x_1_5 = "CPT185" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_MSIL_AveMariaRAT_NUE_2147818568_0
         $x_1_6 = "todo.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule Trojan_MSIL_AveMariaRAT_NHG_2147818583_0
         $x_1_7 = "[poldata5].[DeleteExistingReminder]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +155,7 @@ rule Trojan_MSIL_AveMariaRAT_NYD_2147826836_0
         $x_1_4 = "GetManifestResourceNames" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +177,7 @@ rule Trojan_MSIL_AveMariaRAT_NYJ_2147827607_0
         $x_1_1 = {43 00 3a 00 5c 00 54 00 65 00 66 00 73 00 64 00 64 00 64 00 64 00 64 00 6d 00 70 00 00 41 43 00 3a 00 5c 00 4e 00 65 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 64 00 77 00 54 00 65 00 6d 00 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +203,7 @@ rule Trojan_MSIL_AveMariaRAT_NYJ_2147827607_1
         $x_1_5 = "Coisdhvpsduyps98yvhajn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +229,7 @@ rule Trojan_MSIL_AveMariaRAT_NYE_2147828035_0
         $x_1_5 = "GetManifestResourceNames" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -247,6 +256,7 @@ rule Trojan_MSIL_AveMariaRAT_NYG_2147828357_0
         $x_1_6 = "GetManifestResourceNames" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +282,7 @@ rule Trojan_MSIL_AveMariaRAT_NYH_2147828779_0
         $x_1_5 = "GetManifestResourceNames" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +309,7 @@ rule Trojan_MSIL_AveMariaRAT_NYK_2147829299_0
         $x_1_6 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -324,6 +336,7 @@ rule Trojan_MSIL_AveMariaRAT_NYS_2147829627_0
         $x_1_6 = "hkfsffhhcf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -349,6 +362,7 @@ rule Trojan_MSIL_AveMariaRAT_NYI_2147829748_0
         $x_1_5 = "GetManifestResourceNames" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -376,6 +390,7 @@ rule Trojan_MSIL_AveMariaRAT_NYT_2147829749_0
         $x_1_7 = "FromBase64" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -401,6 +416,7 @@ rule Trojan_MSIL_AveMariaRAT_A_2147838649_0
         $x_2_5 = "costura.newtonsoft.json.dll.compressed" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -424,6 +440,7 @@ rule Trojan_MSIL_AveMariaRAT_B_2147839194_0
         $x_1_3 = "set_KeepAlive" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -445,6 +462,7 @@ rule Trojan_MSIL_AveMariaRAT_D_2147844642_0
         $x_2_1 = {04 08 04 8e 69 5d 04 08 04 8e 69 5d 91 07 08 07 8e 69 5d 91 61 28 ?? 00 00 0a 04 08 1d 58 1c 59 04 8e 69 5d 91 59 20 fd 00 00 00 58 19 58 20 00 01 00 00 5d d2 9c 08 17 58}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -468,6 +486,7 @@ rule Trojan_MSIL_AveMariaRAT_E_2147845482_0
         $x_2_3 = "InstallRegistry" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -490,6 +509,7 @@ rule Trojan_MSIL_AveMariaRAT_G_2147846853_0
         $x_2_2 = "dasdasd" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -513,6 +533,7 @@ rule Trojan_MSIL_AveMariaRAT_H_2147847286_0
         $x_1_3 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -540,6 +561,7 @@ rule Trojan_MSIL_AveMariaRAT_MAAY_2147848744_0
         $x_1_7 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -566,6 +588,7 @@ rule Trojan_MSIL_AveMariaRAT_I_2147849706_0
         $x_2_2 = "QuanLyCuaHangThuCungSieuPet" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -590,6 +613,7 @@ rule Trojan_MSIL_AveMariaRAT_M_2147893360_0
         $x_2_4 = {03 04 61 05 59 20 00 01 00 00 58}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -611,6 +635,7 @@ rule Trojan_MSIL_AveMariaRAT_S_2147893963_0
         $x_1_1 = {0a 06 72 13 14 00 70 6f ?? ?? ?? ?? 0b 16 0c 2b 13 00 07 08 07 08 91 20 ?? ?? ?? ?? 59 d2 9c 08 17 58 0c 00 08 07 8e 69 fe 04 0d 09 2d e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -634,6 +659,7 @@ rule Trojan_MSIL_AveMariaRAT_N_2147896706_0
         $x_1_3 = "ParameterizedThreadStart" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -657,6 +683,7 @@ rule Trojan_MSIL_AveMariaRAT_O_2147898152_0
         $x_1_3 = "GetTypes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -679,6 +706,7 @@ rule Trojan_MSIL_AveMariaRAT_P_2147902082_0
         $x_1_2 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -702,6 +730,7 @@ rule Trojan_MSIL_AveMariaRAT_Q_2147902183_0
         $x_1_3 = "ResourceManager" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -724,6 +753,7 @@ rule Trojan_MSIL_AveMariaRAT_R_2147918905_0
         $x_4_2 = {08 03 17 59 6f ?? 00 00 0a 06 7b ?? 00 00 04 8e 69 58 0d 08 03 6f ?? 00 00 0a 09 59 13 04 06 7b ?? 00 00 04 09 28}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

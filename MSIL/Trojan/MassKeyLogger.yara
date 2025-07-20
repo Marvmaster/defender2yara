@@ -26,6 +26,7 @@ rule Trojan_MSIL_MassKeyLogger_MK_2147772760_0
         $x_1_11 = {4d 61 73 73 4c 6f 67 67 65 72 [0-20] 72 65 73 6f 75 72 63 65 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

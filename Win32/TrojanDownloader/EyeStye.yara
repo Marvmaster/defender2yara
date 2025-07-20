@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_EyeStye_C_2147646689_0
         $x_1_3 = {33 f6 59 56 56 56 56 85 c0 75 ?? 68 ?? ?? ?? ?? eb ?? 68 ?? ?? ?? ?? 56 6a 05 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_EyeStye_D_2147648958_0
         $x_1_3 = {77 61 69 74 63 6f 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

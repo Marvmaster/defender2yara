@@ -17,6 +17,7 @@ rule Trojan_Win32_Bladabind_RPI_2147826125_0
         $x_1_2 = {31 03 81 ee ?? ?? ?? ?? 81 c3 04 00 00 00 39 d3 75 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

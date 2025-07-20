@@ -18,6 +18,7 @@ rule Backdoor_Win32_FlyAgent_D_2147608223_0
         $x_1_4 = "SOFTWARE\\Policies\\Microsoft\\Windows\\Installer\\EnableAdminTSRemote" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Backdoor_Win32_FlyAgent_E_2147620374_0
         $x_1_7 = "image/pjpeg, application/x-shockwave-flash, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -69,6 +71,7 @@ rule Backdoor_Win32_FlyAgent_H_2147646522_0
         $x_1_3 = "on.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Backdoor_Win32_FlyAgent_H_2147646522_1
         $x_1_3 = "\\msyianjiup." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Backdoor_Win32_FlyAgent_HDFG_2147793773_0
         $x_1_1 = {c1 fe ff f3 35 33 f6 74 08 8b 4e 04 83 c6 08 f3 a4 4a 75 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

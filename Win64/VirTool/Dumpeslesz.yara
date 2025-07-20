@@ -20,6 +20,7 @@ rule VirTool_Win64_Dumpeslesz_A_2147913710_0
         $x_1_5 = {48 8b 85 a8 01 00 00 48 ff c0 48 89 85 a8 01 00 00 [0-18] 48 39 85 a8 01 00 00 ?? ?? 48 8b 95 a8 01 00 00 [0-18] 48 8b 08 ?? ?? ?? ?? ?? ?? 48 89 85 b8 03 00 00 48 8b 95 a8 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

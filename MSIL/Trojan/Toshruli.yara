@@ -17,6 +17,7 @@ rule Trojan_MSIL_Toshruli_A_2147638291_0
         $x_1_3 = {38 0e 00 00 00 11 0e 6f ?? 00 00 0a 26 11 0f 17 58 13 0f 11 0f 20 18 04 00 00 32 e9 11 0e 20 ?? ?? ?? ?? 28 ?? 00 00 06 6f ?? 00 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

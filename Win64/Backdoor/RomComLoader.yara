@@ -15,6 +15,7 @@ rule Backdoor_Win64_RomComLoader_C_2147851923_0
         $x_1_1 = {49 8b c1 48 d3 e8 42 32 44 04 50 42 88 44 05 38 83 c1 08 41 03 d4 4d 03 c4 83 f9 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

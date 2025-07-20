@@ -17,6 +17,7 @@ rule Trojan_Win32_MBRLock_EP_2147846457_0
         $x_2_2 = "Your disk have a lock!!!Please enter the unlock password" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_MBRLock_EQ_2147846571_0
         $x_2_3 = "Your disk have a lock!!!Please enter the unlock password" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_3_*))) or
@@ -66,6 +68,7 @@ rule Trojan_Win32_MBRLock_NMB_2147899646_0
         $x_1_2 = "Your disk have a lock!!!Please enter the unlock password" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

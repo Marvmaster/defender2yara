@@ -19,6 +19,7 @@ rule DDoS_Linux_Ddostf_A_2147823255_0
         $x_1_4 = "TCP_Flood" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule DDoS_Linux_Ddostf_B_2147824590_0
         $x_1_2 = {89 f6 8d bc 27 00 00 00 00 80 3d e0 fa 0f 08 00 75 65 55 89 e5 53 bb 28 f0 0f 08 83 ec 14 a1 e4 fa 0f 08 81 eb 20 f0 0f 08 c1 fb 02 83 eb 01 39 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

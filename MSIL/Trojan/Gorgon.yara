@@ -21,6 +21,7 @@ rule Trojan_MSIL_Gorgon_GJY_2147849275_0
         $x_1_6 = "MU02p2LbSCFu0iqt50E" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

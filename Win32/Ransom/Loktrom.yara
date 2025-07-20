@@ -18,6 +18,7 @@ rule Ransom_Win32_Loktrom_A_2147649404_0
         $x_1_4 = {cf f0 e8 eb ee e6 e5 ed e8 e5 ec 20 4d 69 63 72 6f 73 6f 66 74 20 53 65 63 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Win32_Loktrom_C_2147667650_0
         $x_1_3 = "Neagato_Hotela.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Ransom_Win32_Loktrom_B_2147667651_0
         $x_1_2 = {00 4c 6f 6b 6f 4d 6f 54 4f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Ransom_Win32_Loktrom_B_2147667651_1
         $x_1_1 = {b9 03 03 00 00 be ?? ?? 40 00 8d bd c8 f3 ff ff f3 a5 a4 c7 45 f8 ?? 00 00 00 c7 45 f0 00 00 00 00 e8 14 01 00 00 89 45 f4 c7 45 f0 00 00 00 00 eb 09 8b 4d f0 83 c1 01 89 4d f0 8b 55 f0 3b 55 f4 0f 8d d0 00 00 00 8b 45 f0 8a 8c 05 c8 f3 ff ff 88 4d fe 8b 55 f0 83 c2 01 89 55 dc 0f be 45 fe 8b 4d dc 33 4d f8 03 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Ransom_Win32_Loktrom_B_2147667651_2
         $x_1_8 = "KLBTBTNBITBTN1_BITMAP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule Ransom_Win32_Loktrom_B_2147667651_3
         $x_1_16 = "C:\\setup.rnd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -171,6 +177,7 @@ rule Ransom_Win32_Loktrom_2147667867_0
         $x_2_5 = {8a 02 33 46 04 88 02 42 49 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
             ((2 of ($x_5_*))) or
@@ -196,6 +203,7 @@ rule Ransom_Win32_Loktrom_K_2147679064_0
         $x_1_2 = {6a 00 8b 46 18 8b 40 1c 50 e8 ?? ?? ?? ?? 8b d8 85 db 74 ?? 8b 46 18 3b 58 1c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +230,7 @@ rule Ransom_Win32_Loktrom_L_2147679167_0
         $x_10_7 = "KLBTBTNBITBTN1_BITMAP" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_15_*) and 2 of ($x_10_*))) or
             ((1 of ($x_100_*) and 2 of ($x_15_*) and 1 of ($x_10_*))) or

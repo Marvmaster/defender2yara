@@ -25,6 +25,7 @@ rule Backdoor_Win32_Olux_A_2147619307_0
         $x_1_11 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 5 of ($x_1_*))) or
             ((6 of ($x_10_*))) or

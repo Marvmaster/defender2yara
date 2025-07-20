@@ -18,6 +18,7 @@ rule Trojan_MSIL_Perseus_DHE_2147742459_0
         $x_1_3 = "Invoke" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Trojan_MSIL_Perseus_AKR_2147753291_0
         $x_1_12 = "AssemblyTitleAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 10 of ($x_1_*))) or
             ((2 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -79,6 +81,7 @@ rule Trojan_MSIL_Perseus_A_2147763108_0
         $x_1_5 = "frombase64string" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_3_*))) or
@@ -111,6 +114,7 @@ rule Trojan_MSIL_Perseus_XA_2147768475_0
         $x_1_8 = "Waves.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -140,6 +144,7 @@ rule Trojan_MSIL_Perseus_XB_2147768476_0
         $x_1_6 = {53 65 74 74 69 6e 67 73 [0-15] 74 74 00 42 79 74 65 00 75 6b 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -166,6 +171,7 @@ rule Trojan_MSIL_Perseus_RW_2147779787_0
         $x_10_6 = "Possible malicious activity detected!" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -196,6 +202,7 @@ rule Trojan_MSIL_Perseus_ABM_2147789167_0
         $x_3_7 = "ProcessedByFody" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -217,6 +224,7 @@ rule Trojan_MSIL_Perseus_OEH_2147824716_0
         $x_1_1 = {11 04 08 95 9e 11 04 08 09 9e 11 05 11 08 02 11 08 91 11 04 11 04 07 95 11 04 08 95 58 20 ff 00 00 00 5f 95 61 28 ?? ?? ?? 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +251,7 @@ rule Trojan_MSIL_Perseus_NE_2147833498_0
         $x_1_6 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +277,7 @@ rule Trojan_MSIL_Perseus_GCE_2147838180_0
         $x_1_5 = "useisus" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -295,6 +305,7 @@ rule Trojan_MSIL_Perseus_BAA_2147840314_0
         $x_1_7 = "Software\\ICNS\\BT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -316,6 +327,7 @@ rule Trojan_MSIL_Perseus_PSPL_2147848881_0
         $x_2_1 = {00 02 0a 28 26 ?? ?? ?? 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 0b 28 ?? ?? ?? 0a 0c 08 28 ?? ?? ?? 0a 07 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 0d 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 13 04 06 09 11 04 28 ?? ?? ?? 06 13 05 11 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -339,6 +351,7 @@ rule Trojan_MSIL_Perseus_APR_2147850289_0
         $x_1_3 = "CMDrShellSTUB" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -360,6 +373,7 @@ rule Trojan_MSIL_Perseus_PSSS_2147851256_0
         $x_2_1 = {17 28 2f 00 00 06 13 08 11 08 02 1a 02 8e 69 1a 59 6f 72 00 00 0a 28 41 00 00 06 0c de 2d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -383,6 +397,7 @@ rule Trojan_MSIL_Perseus_GNP_2147851567_0
         $x_1_3 = "zFS3X48n9q35dZaE55D4yy7Z7S23NkPRbhB5GfhDt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -405,6 +420,7 @@ rule Trojan_MSIL_Perseus_KA_2147890154_0
         $x_10_2 = {11 07 6e 17 6a d6 20 ?? 00 00 00 6a 5f b8 13 07 11 06 09 11 07 84 95 d7 6e 20 ?? 00 00 00 6a 5f b8 13 06 09 11 07 84 95 0a 09 11 07 84 09 11 06 84 95 9e 09 11 06 84 06 9e 11 05 07 02 07 91 09 09 11 07 84 95 09 11 06 84 95 d7 6e 20 ?? 00 00 00 6a 5f b7 95 61 86 9c 07 17 d6 0b 07 11 0a 31 9f}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -426,6 +442,7 @@ rule Trojan_MSIL_Perseus_AP_2147891443_0
         $x_1_1 = {0c 16 0d 2b 22 08 09 9a 13 04 11 04 6f 94 00 00 0a 2c 10 11 04 6f 95 00 00 0a 6f 2c 00 00 0a 10 01 2b 0a 09 17 58 0d 09 08 8e 69 32 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -448,6 +465,7 @@ rule Trojan_MSIL_Perseus_KAA_2147891725_0
         $x_5_2 = {b7 17 da 91 1f 70 61 0c 1f 0a 2b 6a 07}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -469,6 +487,7 @@ rule Trojan_MSIL_Perseus_PTAK_2147894738_0
         $x_2_1 = {72 97 00 00 70 72 9d 00 00 70 6f 13 00 00 0a 72 a1 00 00 70 72 a7 00 00 70 6f 13 00 00 0a 72 ab 00 00 70 72 b1 00 00 70 6f 13 00 00 0a 28 ?? 00 00 0a 13 07}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -498,6 +517,7 @@ rule Trojan_MSIL_Perseus_MA_2147901836_0
         $x_1_9 = "IDADemo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -520,6 +540,7 @@ rule Trojan_MSIL_Perseus_NITA_2147945267_0
         $x_2_2 = {72 c0 01 00 70 28 ?? 00 00 0a 74 28 00 00 01 13 0f 11 0f 6f ?? 00 00 0a 74 29 00 00 01 13 10 11 10 6f ?? 00 00 0a 73 2f 00 00 0a 6f ?? 00 00 0a 13 11 73 31 00 00 0a 13 12 11 12 11 11 6f ?? 00 00 0a 00 11 12 6f ?? 00 00 0a 6f ?? 00 00 0a 16 6f ?? 00 00 0a 6f ?? 00 00 0a 13 13 02 7b 0b 00 00 04 1f 1e 6f ?? 00 00 0a 00 02 7b 08 00 00 04 72 6f 02 00 70 6f ?? 00 00 0a 00 28 ?? 00 00 0a 72 9d 02 00 70 11 05 11 06 72 fd 00 00 70 28 ?? 00 00 0a 28 ?? 00 00 0a 13 14 11 14 17 18 73 37 00 00 0a 13 1d 00 11 13 28 ?? 00 00 0a 13 1e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Porest_2147708300_0
         $x_1_4 = "Mozilla/5.0 (Windows NT 6.1; Win32; x86; rv:20.0) Gecko/20100101 Firefox/20.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

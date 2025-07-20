@@ -17,6 +17,7 @@ rule Trojan_Win32_Foidan_A_2147670418_0
         $x_3_3 = {8a 00 3c eb 74 19 3c e9 74 15 3c e8 74 11 3c 68 74 0d 68 88 13 00 00 ff 15 ?? ?? ?? ?? eb dc}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Trojan_Win32_Foidan_B_2147683223_0
         $x_3_5 = {8b 40 08 8a 00 3c eb 74 ?? 3c e9 74 ?? 3c e8 74 ?? 33 c9 3c 68 0f 94 c1 8b c1}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -18,6 +18,7 @@ rule PWS_Win32_QQthief_L_2147711571_0
         $x_1_3 = {25 73 33 32 2e 64 6c 6c [0-4] 55 73 65 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

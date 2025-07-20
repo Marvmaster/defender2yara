@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Nekav_A_2147635771_0
         $x_1_2 = {6c 34 31 46 72 44 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? 6c 38 6c 55 58 44 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

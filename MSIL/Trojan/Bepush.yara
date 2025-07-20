@@ -19,6 +19,7 @@ rule Trojan_MSIL_Bepush_B_2147681662_0
         $x_10_5 = {08 09 8e 69 fe 04 13 09 11 09 3a a1 fe ff ff 7e 11 00 00 04 16 fe 01 13 09 11 09 2d 12 00 7e 08 00 00 04 72 ?? ?? 00 70 28 ?? 00 00 0a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule Trojan_MSIL_Bepush_B_2147681662_1
         $x_1_9 = "FyPlayer01.Properties" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_MSIL_Bepush_C_2147685203_0
         $x_1_4 = "user_pref(\"browser.startup.homepage\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Trojan_MSIL_Bepush_A_2147687564_0
         $x_1_9 = "showmaskonnn.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -133,6 +137,7 @@ rule Trojan_MSIL_Bepush_A_2147687564_1
         $x_1_11 = "Create log123..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -158,6 +163,7 @@ rule Trojan_MSIL_Bepush_F_2147690866_0
         $x_1_6 = "FHdPlayer3.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +187,7 @@ rule Trojan_MSIL_Bepush_H_2147696491_0
         $x_1_4 = "\\Mozila\\force.au3" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +208,7 @@ rule Trojan_MSIL_Bepush_I_2147697089_0
         $x_1_1 = {73 00 61 00 62 00 69 00 74 00 60 00 65 00 6b 00 [0-6] 61 00 75 00 [0-6] 75 00 70 00 [0-6] 66 00 6f 00 72 00 63 00 65 00 [0-6] 72 00 65 00 67 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

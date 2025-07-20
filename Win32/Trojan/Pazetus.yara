@@ -16,6 +16,7 @@ rule Trojan_Win32_Pazetus_RD_2147894976_0
         $x_1_1 = {da 97 68 ce e7 6c ae f8 c6 dd 7a 51 f8 fb a0 9d 0c 14 8d 20 14 02 92 9c 6c 82 e8 cd 3d d0 e4 33 c9 c7 17 e2 01 18 ca fc 8a de de 75 9e 5a 06 d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

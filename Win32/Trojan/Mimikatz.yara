@@ -16,6 +16,7 @@ rule Trojan_Win32_Mimikatz_BL_2147836632_0
         $x_2_1 = {8a 04 39 84 c0 74 09 3c be 74 05 34 be 88 04 39 41 3b ce 72}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Mimikatz_RPX_2147837580_0
         $x_1_6 = "URLOpenBlockingStreamW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win32_FkCryptor_SD_2147734521_0
         $x_1_6 = "If you're thinking about cheating - don't. We will detect that" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

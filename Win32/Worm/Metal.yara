@@ -17,6 +17,7 @@ rule Worm_Win32_Metal_A_2147682511_0
         $x_1_3 = {61 75 74 6f 72 75 6e 43 [0-8] 52 45 47 49 53 54 52 41 52 5f 56 49 52 55 53 [0-8] 66 69 72 6d 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

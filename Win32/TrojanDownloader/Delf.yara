@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Delf_KL_2147514122_0
         $x_1_5 = "tyming load" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule TrojanDownloader_Win32_Delf_GC_2147582896_0
         $x_1_10 = {50 6a 00 6a 00 68 ?? ?? ?? ?? 6a 00 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule TrojanDownloader_Win32_Delf_CCA_2147583443_0
         $x_1_6 = "shellexecute=GameSetup.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule TrojanDownloader_Win32_Delf_CCA_2147583443_1
         $x_10_4 = "cmd /c del /a autorun.inf" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_10_*))) or
             (all of ($x*))
@@ -126,6 +130,7 @@ rule TrojanDownloader_Win32_Delf_2147594504_0
         $x_1_8 = "http://www.softuu.cn/setup/setup.asp?id=%s&pcid=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -154,6 +159,7 @@ rule TrojanDownloader_Win32_Delf_TG_2147594940_0
         $x_1_6 = "AppEvents\\Schemes\\Apps\\Explorer\\Navigating\\.Current" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -182,6 +188,7 @@ rule TrojanDownloader_Win32_Delf_TB_2147596401_0
         $x_1_6 = "Software\\Borland\\Delphi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -208,6 +215,7 @@ rule TrojanDownloader_Win32_Delf_TH_2147596437_0
         $x_1_7 = "urlmon.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -229,6 +237,7 @@ rule TrojanDownloader_Win32_Delf_AY_2147596523_0
         $x_1_2 = {00 00 00 00 b0 7e 40 00 55 8b ec 83 c4 f0 b8 d8 7e 40 00 e8 ec c4 ff ff 33 d2 b8 ?? 7f 40 00 e8 d0 fe ff ff ba ?? 7f 40 00 b8 ?? ?? 40 00 e8 21 fe ff ff 84 c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +260,7 @@ rule TrojanDownloader_Win32_Delf_AZ_2147596524_0
         $x_1_3 = {ff ff 6a 00 6a 00 8d 4d ?? 66 ba ?? ?? ?? ?? ?? 40 00 e8 ?? ?? ff ff 8b 45 ?? e8 ?? ?? ff ff 50 a1 ?? a8 40 00 e8 ?? ?? ff ff 50 6a 00 e8 ?? ?? ff ff 8d 4d ?? 66 ba ?? ?? ?? ?? ?? 40 00 e8 ?? ?? ff ff 8b 45 ?? 50 8d 4d ?? 66 ba ?? ?? ?? ?? ?? 40 00 e8 ?? ?? ff ff 8b 45 ?? 5a e8 ?? ?? ff ff 8d 4d ?? 66 ba ?? ?? ?? ?? ?? 40 00 e8 ?? fd ff ff 8b 45 ?? 33 d2 e8 ?? ?? ff ff 33 c0 5a 59 59 64 89 10 68 ?? ?? 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -278,6 +288,7 @@ rule TrojanDownloader_Win32_Delf_ZZ_2147596933_0
         $x_1_7 = "hk1.0.0.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -303,6 +314,7 @@ rule TrojanDownloader_Win32_Delf_TJ_2147597036_0
         $x_1_6 = "Portions Copyright (c) 1999,2003 Avenger by NhT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -332,6 +344,7 @@ rule TrojanDownloader_Win32_Delf_TL_2147597201_0
         $x_1_5 = "Software\\registry_admi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -377,6 +390,7 @@ rule TrojanDownloader_Win32_Delf_RAE_2147597873_0
         $x_1_26 = "http://ro-member1.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -402,6 +416,7 @@ rule TrojanDownloader_Win32_Delf_DA_2147597875_0
         $x_2_6 = {56 65 72 43 6c 73 69 64 2e 65 78 65 00 00 00 00 77 69 6e 64 6f 77 78 00 53 74 61 72 74 48 6f 6f 6b 32 00 00 53 74 6f 70 48 6f 6f 6b 32}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -440,6 +455,7 @@ rule TrojanDownloader_Win32_Delf_TN_2147598475_0
         $x_100_15 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -485,6 +501,7 @@ rule TrojanDownloader_Win32_Delf_BA_2147598549_0
         $x_1_26 = {8b 45 cc 50 8d 45 e8 50 8d 45 c4 e8 ?? ?? ?? ?? ff 75 c4 68 ?? ?? ?? ?? ff 75 f0 8d 45 c8 ba 03 00 00 00 e8 ?? ?? ?? ?? 8b 55 c8 b9 ?? ?? ?? ?? b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? a1 ?? ?? ?? ?? ff 30 68 ?? ?? ?? ?? ff 75 f0 68 ?? ?? ?? ?? 8d 45 c0 ba 04 00 00 00 e8 ?? ?? ?? ?? 8b 45 c0 e8 ?? ?? ?? ?? 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -510,6 +527,7 @@ rule TrojanDownloader_Win32_Delf_KB_2147598799_0
         $x_1_6 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -537,6 +555,7 @@ rule TrojanDownloader_Win32_Delf_KA_2147599408_0
         $x_1_8 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -563,6 +582,7 @@ rule TrojanDownloader_Win32_Delf_TU_2147599471_0
         $x_1_7 = "Toolhelp32ReadProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -591,6 +611,7 @@ rule TrojanDownloader_Win32_Delf_TV_2147599852_0
         $x_1_9 = "IEBHO.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -626,6 +647,7 @@ rule TrojanDownloader_Win32_Delf_HA_2147599928_0
         $x_1_16 = "SetSecurityInfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -661,6 +683,7 @@ rule TrojanDownloader_Win32_Delf_HA_2147599928_1
         $x_1_16 = "SetEntriesInAclA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -686,6 +709,7 @@ rule TrojanDownloader_Win32_Delf_TX_2147599937_0
         $x_10_6 = {33 c0 55 68 ?? ?? 40 00 ff 30 89 20 e8 ?? ?? ff ff 6a 01 68 ?? ?? 40 00 e8 ?? ?? ff ff b8 ?? ?? 40 00 ba ?? ?? 40 00 e8 ?? ?? ff ff b8 ?? ?? 40 00 ba ?? ?? 40 00 e8 ?? ?? ff ff b8 01 00 00 00 e8 ?? ?? ff ff 8b 04 85 ?? ?? 40 00 ba ?? ?? 40 00 e8 ?? ?? ff ff 84 c0 74 e1 6a 00 68 ?? ?? 40 00 e8 ?? ?? ff ff 33 c0 5a 59 59 64 89 10 68 ?? ?? 40 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -734,6 +758,7 @@ rule TrojanDownloader_Win32_Delf_GD_2147600117_0
         $x_1_26 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -761,6 +786,7 @@ rule TrojanDownloader_Win32_Delf_KD_2147600321_0
         $x_1_8 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -787,6 +813,7 @@ rule TrojanDownloader_Win32_Delf_KC_2147600322_0
         $x_1_7 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -819,6 +846,7 @@ rule TrojanDownloader_Win32_Delf_UB_2147601111_0
         $x_1_13 = "EnumCalendarInfoA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -842,6 +870,7 @@ rule TrojanDownloader_Win32_Delf_BCJ_2147601307_0
         $x_1_4 = {53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e 53 65 72 76 69 63 65 73 00 00 00 ff ff ff ff 04 00 00 00 73 72 73 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -867,6 +896,7 @@ rule TrojanDownloader_Win32_Delf_RAP_2147601537_0
         $x_5_6 = "c:\\windows\\system32\\windowsupdate.scr" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_5_*))) or
             (all of ($x*))
@@ -892,6 +922,7 @@ rule TrojanDownloader_Win32_Delf_RAP_2147601537_1
         $x_1_3 = {7c 44 6f 77 6e 6c 6f 61 64 44 69 72 7c 00 00 00 ff ff ff ff 0a 00 00 00 7c 53 65 74 75 70 44 69 72 7c 00 00 ff ff ff ff 09 00 00 00 7c 52 4b 69 74 44 69 72 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -925,6 +956,7 @@ rule TrojanDownloader_Win32_Delf_GE_2147602325_0
         $x_1_14 = {33 d2 33 c0 e8 ?? ?? ff ff ba ?? ?? 45 00 b8 ?? ?? 45 00 e8 ?? ?? ff ff 84 c0 74 0c 33 d2 b8 ?? ?? 45 00 e8 ?? ?? ff ff ba ?? ?? 45 00 b8 ?? ?? 45 00 e8 ?? ?? ff ff 84 c0 74 0c 33 d2 b8 ?? ?? 45 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -947,6 +979,7 @@ rule TrojanDownloader_Win32_Delf_RAS_2147602398_0
         $x_1_3 = "WinExec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -974,6 +1007,7 @@ rule TrojanDownloader_Win32_Delf_RAW_2147602656_0
         $x_1_5 = {89 45 f8 33 c0 55 68 ?? ?? ?? ?? 64 ff 30 64 89 20 6a 00 6a 00 6a 00 6a 00 8b ?? e8 ?? ?? ?? ?? 50 8b 45 f8 50 e8 ?? ?? ?? ?? 89 45 f4 33 c0 55 68 ?? ?? ?? ?? 64 ff 30 64 89 20 56 68 00 04 00 00 8d 85 f0 fb ff ff 50 8b 45 f4 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -998,6 +1032,7 @@ rule TrojanDownloader_Win32_Delf_RAY_2147602783_0
         $x_10_5 = {55 8b ec 81 c4 a8 fa ff ff 53 56 57 8b fa 8b d8 8d 75 f4 6a 00 6a 00 6a 00 6a 00 68 ?? ?? ?? ?? e8 ?? ?? ff ff 89 45 fc 33 c0 55 68 ?? ?? ?? ?? 64 ff 30 64 89 20 6a 00 68 00 00 00 80 6a 00 6a 00 8b c3 e8 ?? ?? ff ff 50 8b 45 fc 50 e8 ?? ?? ff ff 89 45 f8 33 c0 55 68 ?? ?? ?? ?? 64 ff 30 64 89 20 8b d7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1024,6 +1059,7 @@ rule TrojanDownloader_Win32_Delf_ZBA_2147603276_0
         $x_1_4 = {68 74 74 70 3a 2f 2f 73 73 ?? 2e 62 79 65 74 68 6f 73 74 31 33 2e 63 6f 6d 2f 43 6f 6e 66 69 67 75 72 61 63 6f 65 73 2e 69 6e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1049,6 +1085,7 @@ rule TrojanDownloader_Win32_Delf_ZBB_2147603506_0
         $x_5_6 = {8d 44 24 04 50 e8 ?? ?? ?? ?? 8b c3 8b d4 b9 00 01 00 00 e8 ?? ?? ?? ?? 81 c4 00 01 00 00 5b c3 8b c0 55 8b ec 6a 00 6a 00 53 33 c0 55 68 ?? ?? ?? ?? 64 ff 30 64 89 20 b2 01 a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? b9 ?? ?? ?? ?? b2 01}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1078,6 +1115,7 @@ rule TrojanDownloader_Win32_Delf_ZDE_2147604747_0
         $x_1_7 = "GetWindowsDirectoryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1102,6 +1140,7 @@ rule TrojanDownloader_Win32_Delf_UD_2147604846_0
         $x_1_5 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1124,6 +1163,7 @@ rule TrojanDownloader_Win32_Delf_ZA_2147605145_0
         $x_1_3 = {6a 00 6a 00 6a 00 53 e8 ?? ?? ff ff 83 e8 04 69 15 ?? ?? 40 00 0b 02 00 00 2b c2 50 53 e8 ?? ?? ff ff a1 ?? ?? 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1147,6 +1187,7 @@ rule TrojanDownloader_Win32_Delf_ZDG_2147605625_0
         $x_2_4 = {8b 45 f4 50 ba ?? ?? ?? ?? b9 ?? ?? ?? ?? 8b 45 ?? 8b 18 ff 53 0c 8b 45 e4 50 ba ?? ?? ?? ?? b9 ?? ?? ?? ?? 8b 45 ?? 8b 18 ff 53 04 83 7d e0 00 74 ?? 6a 00 8b 45 e0 e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? eb 0c b8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1176,6 +1217,7 @@ rule TrojanDownloader_Win32_Delf_CG_2147605631_0
         $x_1_6 = {84 c0 74 0c 6a 00 68 ?? ?? 44 00 e8 ?? ?? fb ff 68 c4 09 00 00 e8 ?? ?? fb ff ba ?? ?? 44 00 b8 ?? ?? 44 00 e8 ?? ?? ff ff 84 c0 74 0c 6a 00 68 ?? ?? 44 00 e8 ?? ?? fb ff 6a 00 68 ?? ?? 44 00 e8 ?? ?? fb ff e8 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1203,6 +1245,7 @@ rule TrojanDownloader_Win32_Delf_AV_2147605810_0
         $x_1_8 = "if_p.click();" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1224,6 +1267,7 @@ rule TrojanDownloader_Win32_Delf_UH_2147605989_0
         $x_1_2 = {68 74 74 70 3a 2f 2f 63 61 73 68 62 61 63 6b 2e 6a 2d 6e 61 76 65 72 32 2e 63 6f 6d 2f 65 78 65 2f 75 72 6c 32 2e 68 74 6d 6c 00 00 6f 70 65 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1255,6 +1299,7 @@ rule TrojanDownloader_Win32_Delf_BL_2147609315_0
         $x_1_12 = "http://www.info3344.cn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_100_*) and 3 of ($x_10_*))) or
             (all of ($x*))
@@ -1282,6 +1327,7 @@ rule TrojanDownloader_Win32_Delf_BN_2147609455_0
         $x_10_5 = "%SystemRoot%\\System32\\svchost.exe -k wnttech" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1303,6 +1349,7 @@ rule TrojanDownloader_Win32_Delf_CN_2147610992_0
         $x_1_2 = {c3 64 6f 77 6e 6c 6f 61 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1329,6 +1376,7 @@ rule TrojanDownloader_Win32_Delf_CT_2147612689_0
         $x_1_7 = "shellexecutea" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1356,6 +1404,7 @@ rule TrojanDownloader_Win32_Delf_EC_2147614115_0
         $x_4_5 = {97 8b 8b 8f c5 d0 d0 8c 96 93 89 9e 91 9e 8c 85 cb cd d1 98 90 90 98 93 9a 8f 9e 98 9a 8c d1 9c 90 92 d0 86 d1 8b 87 8b}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -1385,6 +1434,7 @@ rule TrojanDownloader_Win32_Delf_ED_2147614116_0
         $x_1_6 = "54A4312941F3AD8223663582F5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1411,6 +1461,7 @@ rule TrojanDownloader_Win32_Delf_DE_2147616617_0
         $x_1_7 = "\\system\\svchost.vbs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1440,6 +1491,7 @@ rule TrojanDownloader_Win32_Delf_DI_2147616814_0
         $x_3_6 = {2c 01 72 08 74 15 fe c8 74 20 eb 2b}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -1473,6 +1525,7 @@ rule TrojanDownloader_Win32_Delf_DP_2147616897_0
         $x_1_10 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 1 of ($x_4_*) and 4 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_6_*) and 2 of ($x_4_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1511,6 +1564,7 @@ rule TrojanDownloader_Win32_Delf_DS_2147618083_0
         $x_1_6 = {54 77 6f 4c 6f 61 64 65 72 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1536,6 +1590,7 @@ rule TrojanDownloader_Win32_Delf_DT_2147618157_0
         $x_1_2 = {68 74 74 70 3a 2f 2f 00 73 69 74 65 3a 00 00 00 53 74 61 72 74 20 50 61 67 65 00 00 53 6f 66 74 57 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 49 6e 74 65 72 6e 65 74 20 45 78 70 6c 6f 72 65 72 5c 4d 61 69 6e 00 00 00 64 6f 77 6e 3a 00 00 00 ff ff ff ff 04 00 00 00 54 65 6d 70 00 00 00 00 ff ff ff ff 04 00 00 00 2e 65 78 65 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1560,6 +1615,7 @@ rule TrojanDownloader_Win32_Delf_UP_2147618441_0
         $x_1_5 = "Xiaoyezi_CoolMe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1584,6 +1640,7 @@ rule TrojanDownloader_Win32_Delf_EF_2147619166_0
         $x_1_2 = {58 63 6e 67 67 4e 73 6e 68 7e 7f 6e 4a 00 00 00 73 68 65 6c 6c 33 32 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1605,6 +1662,7 @@ rule TrojanDownloader_Win32_Delf_GG_2147621227_0
         $x_1_2 = {66 74 70 20 2d 73 3a 51 2e 64 61 74 0d 0a 63 6c 73 0d 0a 63 61 6c 63 2e 6a 70 67 0d 0a 64 65 6c 20 51 2e 64 61 74 0d 0a 64 65 6c 20 25 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1630,6 +1688,7 @@ rule TrojanDownloader_Win32_Delf_FC_2147621419_0
         $x_1_6 = {57 69 6e 53 76 63 45 78 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1657,6 +1716,7 @@ rule TrojanDownloader_Win32_Delf_GI_2147622139_0
         $x_1_5 = {69 6e 65 74 5f 61 64 64 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1682,6 +1742,7 @@ rule TrojanDownloader_Win32_Delf_GJ_2147622141_0
         $x_1_6 = {64 65 6c 61 79 [0-15] 72 75 6e [0-48] 68 74 74 70 3a 2f 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1707,6 +1768,7 @@ rule TrojanDownloader_Win32_Delf_GL_2147624070_0
         $x_1_6 = {52 50 8d 46 48 50 e8 ?? ?? ff ff 83 f8 ff 0f 84 ?? ?? 00 00 89 06 66 81 7e 04 b3 d7 0f 85 ?? ?? 00 00 66 ff 4e 04 6a 00 ff 36 e8 ?? ?? ff ff 40 0f 84 ?? ?? 00 00 2d 81 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1731,6 +1793,7 @@ rule TrojanDownloader_Win32_Delf_GM_2147624073_0
         $x_1_5 = {dd 5c 24 10 9b a1 ?? ?? ?? 00 e8 ?? ?? ?? ff dc 44 24 10 83 c4 f8 dd 1c 24 9b 8d 44 24 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1754,6 +1817,7 @@ rule TrojanDownloader_Win32_Delf_HE_2147626548_0
         $x_1_4 = "CreateFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1777,6 +1841,7 @@ rule TrojanDownloader_Win32_Delf_HH_2147626719_0
         $x_1_4 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1797,6 +1862,7 @@ rule TrojanDownloader_Win32_Delf_HJ_2147626988_0
         $x_1_1 = {43 3a 5c 57 69 6e 64 6f 77 73 5c 53 79 73 74 65 6d 33 32 5c 74 2e 65 78 65 00 00 00 55 8b ec 33 c0 55 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1818,6 +1884,7 @@ rule TrojanDownloader_Win32_Delf_HT_2147627071_0
         $x_1_2 = {68 74 74 70 3a 2f 2f 77 77 77 2e 69 72 66 77 70 2e 6f 72 67 2f 69 6d 61 67 65 73 2f 64 6c 6b 31 2e 67 69 66 00 00 00 00 43 3a 5c 57 69 6e 6d 73 67 72 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1840,6 +1907,7 @@ rule TrojanDownloader_Win32_Delf_HM_2147627511_0
         $x_1_3 = {64 89 20 68 c0 77 43 67 6a ff 6a 00 e8 07 db ff ff a3 58 bb 43 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1867,6 +1935,7 @@ rule TrojanDownloader_Win32_Delf_UZ_2147627611_0
         $x_1_8 = "msn.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1893,6 +1962,7 @@ rule TrojanDownloader_Win32_Delf_ZDH_2147627810_0
         $x_1_4 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1917,6 +1987,7 @@ rule TrojanDownloader_Win32_Delf_KW_2147627835_0
         $x_1_5 = "SVCHOST" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1940,6 +2011,7 @@ rule TrojanDownloader_Win32_Delf_HW_2147628209_0
         $x_5_4 = "windows plusbag" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_3_*))) or
             (all of ($x*))
@@ -1967,6 +2039,7 @@ rule TrojanDownloader_Win32_Delf_HY_2147628225_0
         $x_1_5 = {24 37 33 38 37 33 35 37 34 34 37 34 31 37 35 38 38 30 38 37 39 30 37 38 39 38 31 32 37 33 36 37 35 34 37 33 36 00 00 05 54 45 64 69 74 08 55 72 6c 5f 6c 69 6e 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1988,6 +2061,7 @@ rule TrojanDownloader_Win32_Delf_IE_2147629900_0
         $x_1_2 = "2W1P1StG2Y1E1Q1T2Z1P1CtF" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2013,6 +2087,7 @@ rule TrojanDownloader_Win32_Delf_IL_2147630866_0
         $x_1_6 = "CreateMutexA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2036,6 +2111,7 @@ rule TrojanDownloader_Win32_Delf_IR_2147631504_0
         $x_1_4 = "/filtect.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2065,6 +2141,7 @@ rule TrojanDownloader_Win32_Delf_IU_2147631709_0
         $x_1_7 = "sent009.hpg.com.br/msnsend.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2090,6 +2167,7 @@ rule TrojanDownloader_Win32_Delf_IY_2147632100_0
         $x_1_3 = "satplg.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2120,6 +2198,7 @@ rule TrojanDownloader_Win32_Delf_LJ_2147632894_0
         $x_1_11 = "\\Media\\smss.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 6 of ($x_1_*))) or
             ((4 of ($x_10_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -2149,6 +2228,7 @@ rule TrojanDownloader_Win32_Delf_LK_2147632895_0
         $x_1_6 = {00 74 75 72 62 6f 5f 64 62 5c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2174,6 +2254,7 @@ rule TrojanDownloader_Win32_Delf_JO_2147633646_0
         $x_1_3 = "dw0.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2195,6 +2276,7 @@ rule TrojanDownloader_Win32_Delf_JP_2147633672_0
         $x_1_2 = {48 6c 69 6e 6b 4e 61 76 69 67 61 74 65 53 74 72 69 6e 67 00 ?? 00 55 52 4c 44 6f 77 6e 6c 6f 61 64 54 6f 46 69 6c 65 41}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2218,6 +2300,7 @@ rule TrojanDownloader_Win32_Delf_JR_2147633728_0
         $x_3_4 = "fantasia2010.com.br/hylex1.swf" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_3_*))) or
@@ -2247,6 +2330,7 @@ rule TrojanDownloader_Win32_Delf_RAF_2147634349_0
         $x_1_6 = "c.jf52.com/code/LL_count.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -2270,6 +2354,7 @@ rule TrojanDownloader_Win32_Delf_JX_2147635836_0
         $x_2_4 = {68 d0 07 00 00 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 68 cf 09 00 00 e8 ?? ?? ?? ?? 6a 00 ff 36 68}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -2298,6 +2383,7 @@ rule TrojanDownloader_Win32_Delf_VC_2147635923_0
         $x_2_5 = "ys-f.ys168.com/" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -2325,6 +2411,7 @@ rule TrojanDownloader_Win32_Delf_KK_2147636792_0
         $x_1_4 = {68 74 74 70 3a 2f 2f 77 77 77 2e 77 65 62 2d 65 73 74 2e 63 6f 6d 2f [0-8] 2e 6a 70 67}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2348,6 +2435,7 @@ rule TrojanDownloader_Win32_Delf_VD_2147637246_0
         $x_1_4 = "%s\\s%d.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -2376,6 +2464,7 @@ rule TrojanDownloader_Win32_Delf_KY_2147637626_0
         $x_1_5 = "KuoDouSetup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2399,6 +2488,7 @@ rule TrojanDownloader_Win32_Delf_LM_2147637711_0
         $x_1_4 = {43 6e 49 45 2e 74 6d 70 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 6e 2e 74 6d 70 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 6e 2e 65 78 65 ?? ?? ?? 64 6f 77 6e 32 ?? ?? ?? 6d 79 69 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2421,6 +2511,7 @@ rule TrojanDownloader_Win32_Delf_LN_2147637719_0
         $x_1_3 = {43 6e 4e 75 6f 49 45 2e 74 6d 70 ?? ?? ?? ?? ?? ?? ?? ?? ?? 63 6e 2e 74 6d 70 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 63 6e 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2444,6 +2535,7 @@ rule TrojanDownloader_Win32_Delf_LO_2147637758_0
         $x_1_4 = {25 64 00 00 64 6b 65 ?? ?? ?? ?? ?? ?? ?? ?? ?? 78 7a 7a 2f ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 63 74 66 6d 6f 6e 5f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2466,6 +2558,7 @@ rule TrojanDownloader_Win32_Delf_LP_2147637759_0
         $x_1_3 = {63 6e 73 65 74 75 70 73 2e 74 6d 70 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 63 6e 49 45 2e 74 6d 70 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 63 6e 49 45 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2488,6 +2581,7 @@ rule TrojanDownloader_Win32_Delf_LQ_2147637850_0
         $x_1_3 = {63 6e 69 65 73 65 74 75 70 2e 74 6d 70 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 63 6e 4e 75 49 45 73 2e 74 6d 70 ?? ?? ?? ?? ?? ?? ?? ?? ?? 63 6e 4e 49 45 73 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2510,6 +2604,7 @@ rule TrojanDownloader_Win32_Delf_LR_2147637921_0
         $x_1_3 = {43 41 50 41 2d 43 45 4c 55 4c 41 52 00 00 00 00 55 8b ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2533,6 +2628,7 @@ rule TrojanDownloader_Win32_Delf_LR_2147637921_1
         $x_1_4 = {63 6e 69 65 73 65 74 75 70 2e 74 6d 70 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 63 6e 4e 75 6f 49 45 73 2e 74 6d 70 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 63 6e 4e 75 6f 49 45 73 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2556,6 +2652,7 @@ rule TrojanDownloader_Win32_Delf_LS_2147637968_0
         $x_1_4 = {43 6e 49 45 2e 74 6d 70 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 25 64 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 63 6e 2e 74 6d 70 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 63 6e 2e 65 78 65 ?? ?? 6c 6d 30 32 ?? ?? ?? ?? 6d 79 69 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2578,6 +2675,7 @@ rule TrojanDownloader_Win32_Delf_LT_2147638066_0
         $x_1_3 = {8b 45 ec c1 e0 06 03 d8 89 5d ec 83 c7 06 83 ff 08 7c 48 83 ef 08 8b cf 8b 5d ec d3 eb 8b cf b8 01 00 00 00 d3 e0 50 8b 45 ec 5a 8b ca 99 f7 f9 89 55 ec 81 e3 ff 00 00 80 79 08 4b 81 cb 00 ff ff ff 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2600,6 +2698,7 @@ rule TrojanDownloader_Win32_Delf_LT_2147638066_1
         $x_1_3 = {74 65 73 74 2e 35 32 63 6f 6d 6e 65 74 63 6e 2e 63 6f 6d ?? ?? ?? ?? ?? ?? ?? ?? ?? 68 74 74 70 3a 2f 2f 25 73 2f 74 6f 6f 6c 73 2e 74 78 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2623,6 +2722,7 @@ rule TrojanDownloader_Win32_Delf_LU_2147638598_0
         $x_2_4 = "0TYY@FPGFEGZS\\YP0Im|tz;pmp" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2649,6 +2749,7 @@ rule TrojanDownloader_Win32_Delf_MI_2147640293_0
         $x_1_4 = "Cara de Pau" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2671,6 +2772,7 @@ rule TrojanDownloader_Win32_Delf_MS_2147640980_0
         $x_1_3 = "HTTP/1.0 200 OK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2693,6 +2795,7 @@ rule TrojanDownloader_Win32_Delf_ZST_2147642137_0
         $x_1_3 = {3f 74 74 6c 3d ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 26 76 3d ?? ?? ?? ?? ?? ?? ?? ?? ?? 26 73 3d ?? ?? ?? ?? ?? ?? ?? ?? ?? 26 6e 3d 10 00 78 2e 61 73 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2714,6 +2817,7 @@ rule TrojanDownloader_Win32_Delf_NB_2147642448_0
         $x_5_2 = "R@*#u*@*n**DL*L3@#*2.|e*x@e* S*hell*|*3#2.D*@L*@L, Co*nt|*r@*ol#_R@*u*|n*@D#*LL" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2736,6 +2840,7 @@ rule TrojanDownloader_Win32_Delf_ZSA_2147642536_0
         $x_1_3 = {43 6e 49 45 2e 74 6d 70 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 63 6e 2e 74 6d 70 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 63 6e 2e 65 78 65 ?? ?? 6c 6d 30 32 ?? ?? ?? ?? 6d 79 69 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2759,6 +2864,7 @@ rule TrojanDownloader_Win32_Delf_AXZ_2147642700_0
         $x_1_4 = "\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2781,6 +2887,7 @@ rule TrojanDownloader_Win32_Delf_ND_2147642811_0
         $x_4_3 = "http://333.e26.cn/admin/writelog.aspx?Action=%s&Owner=%s&IP=%s&Username=%s&ComputerName=%s&Os=%s&LogDate=%s&Memo=%s" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2801,6 +2908,7 @@ rule TrojanDownloader_Win32_Delf_NH_2147643225_0
         $x_1_1 = {53 8b d8 ba ?? ?? ?? ?? b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 84 c0 74 11 ba ?? ?? ?? ?? b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 84 c0 6a 01 6a 00 6a 00 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 8b c3 e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 6a 01 6a 00 6a 00 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 8b c3 e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 00 e8 ?? ?? ?? ?? 5b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2822,6 +2930,7 @@ rule TrojanDownloader_Win32_Delf_NJ_2147643368_0
         $x_1_2 = {24 64 65 6c 69 6d 6f 6c 65 30 2e 62 61 74 00 00 ff ff ff ff 04 00 00 00 3a 74 72 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2845,6 +2954,7 @@ rule TrojanDownloader_Win32_Delf_ZWH_2147643506_0
         $x_1_4 = "/ d l . d r o p b o x . c o m / u / 2 0 2 0 6 2 0 / f i n e p r o x y . e x e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2869,6 +2979,7 @@ rule TrojanDownloader_Win32_Delf_NK_2147643508_0
         $x_10_5 = "\\setop3010.exe" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))
@@ -2894,6 +3005,7 @@ rule TrojanDownloader_Win32_Delf_NK_2147643508_1
         $x_1_3 = {8b 14 98 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 85 c0 7f 16 a1 ?? ?? ?? ?? 8b 14 98 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 85 c0 7e 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2918,6 +3030,7 @@ rule TrojanDownloader_Win32_Delf_NO_2147644406_0
         $x_1_5 = "wdc.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2944,6 +3057,7 @@ rule TrojanDownloader_Win32_Delf_ZWR_2147644697_0
         $x_1_3 = {17 00 00 00 5c 73 74 61 72 74 5c 44 4e 46 43 6f 6d 70 6f 6e 65 6e 74 2e 44 4c 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2971,6 +3085,7 @@ rule TrojanDownloader_Win32_Delf_ZXC_2147645095_0
         $x_1_8 = "http://firestweb.com/loja/social/3.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
@@ -2999,6 +3114,7 @@ rule TrojanDownloader_Win32_Delf_NT_2147645116_0
         $x_1_5 = "dl_dir2.qq.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3024,6 +3140,7 @@ rule TrojanDownloader_Win32_Delf_NY_2147645388_0
         $x_2_3 = "http://dl.dropbox.com/" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3048,6 +3165,7 @@ rule TrojanDownloader_Win32_Delf_NZ_2147645491_0
         $x_1_5 = "count1.log" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3074,6 +3192,7 @@ rule TrojanDownloader_Win32_Delf_OA_2147645578_0
         $x_1_4 = "\\msn.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -3112,6 +3231,7 @@ rule TrojanDownloader_Win32_Delf_OK_2147646467_0
         $x_1_16 = ":'1T<#HO+" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -3133,6 +3253,7 @@ rule TrojanDownloader_Win32_Delf_PN_2147649109_0
         $x_1_2 = {6b 00 2e 00 65 00 78 00 65 00 00 [0-16] 68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 6f 00 72 00 69 00 6f 00 6e 00 6c 00 6f 00 64 00 7a 00 2e 00 70 00 6c 00 2f 00 69 00 6d 00 61 00 67 00 65 00 73 00 2f 00 62 00 61 00 6e 00 6e 00 65 00 72 00 73 00 2f 00 [0-4] 2e 00 67 00 69 00 66 00 [0-4] 6f 00 70 00 65 00 6e 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3156,6 +3277,7 @@ rule TrojanDownloader_Win32_Delf_PP_2147649516_0
         $x_1_4 = "sys32\\Msn.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3184,6 +3306,7 @@ rule TrojanDownloader_Win32_Delf_QC_2147651886_0
         $x_1_9 = "63E475F57E869FA5BC4DD66DF8080309010203031C" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -3204,6 +3327,7 @@ rule TrojanDownloader_Win32_Delf_QE_2147652156_0
         $x_1_1 = {2f 6d 6f 6e 74 61 67 65 2e 6a 70 67 50 00 ff ff ff ff 09 00 00 00 73 65 74 75 70 2e 65 78 65 00 00 00 ff ff ff ff 2c 00 00 00 68 74 74 70 3a 2f 2f 64 6c 2e 64 72 6f 70 62 6f 78 2e 63 6f 6d 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3227,6 +3351,7 @@ rule TrojanDownloader_Win32_Delf_QG_2147652962_0
         $x_1_4 = {50 6a 00 e8 ?? ?? ?? ?? 33 c0 5a 59 59 64 89 10 eb ?? e9 ?? ?? ?? ?? e8 ?? ?? ?? ?? 68 e8 03 00 00 e8 ?? ?? ?? ?? 8b 45 fc 8b 80 18 03 00 00 66 be eb ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3249,6 +3374,7 @@ rule TrojanDownloader_Win32_Delf_QL_2147653478_0
         $x_1_3 = {2f 61 72 71 75 69 76 6f [0-5] 2e 7a 69 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3269,6 +3395,7 @@ rule TrojanDownloader_Win32_Delf_QM_2147653483_0
         $x_1_1 = {7d 24 6a 00 6a 23 68 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? b8 ?? ?? ?? ?? ba ?? ?? ?? ?? b9 00 01 00 00 e8 ?? ?? ?? ?? 8d 4d e4 ba 01 00 00 00 a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 6a 00 6a 00 6a 00 6a 00 68 ?? ?? ?? ?? a1 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? a3 ?? ?? ?? ?? 33 c0 55 68 ?? ?? ?? ?? 64 ff 30 64 89 20 8d 45 d8 b9 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3292,6 +3419,7 @@ rule TrojanDownloader_Win32_Delf_QS_2147653861_0
         $x_1_4 = {d9 8b 00 ff ce 85 00 f9 d2 86 00 ed c1 92 00 f2 cc 9a 00 fa d9 94 00 e9 e2 9b 00 fe e6 9a 00 c6 c0 aa 00 c3 d8 ad 00 db c3 b4 00 e8 c5 a7 00 f3 c8 aa 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3313,6 +3441,7 @@ rule TrojanDownloader_Win32_Delf_QU_2147653918_0
         $x_1_2 = {8d 45 f8 ba ?? ?? ?? 00 e8 ?? ?? ?? ff 8b 55 f8 8b 83 0c 03 00 00 8b ce e8 ?? ?? ?? ff 8b c6 e8 ?? ?? ?? ff 8b 83 ?? 03 00 00 b2 01 e8 ?? ?? ?? ff 6a 05 68 ?? ?? ?? 00 e8 ?? ?? ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3334,6 +3463,7 @@ rule TrojanDownloader_Win32_Delf_QW_2147654728_0
         $x_1_2 = {e8 6e 5b fd ff 83 f8 01 1b db 43 c6 45 d7 00 84 db 75 3c 8b 55 ec b8 28 fe 44 00 e8 83 53 fb ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3357,6 +3487,7 @@ rule TrojanDownloader_Win32_Delf_QX_2147654796_0
         $x_1_4 = "win.winbk2cl.com/md/ch.html?MAC=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3379,6 +3510,7 @@ rule TrojanDownloader_Win32_Delf_QZ_2147655231_0
         $x_1_3 = "DecryptMessage" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3403,6 +3535,7 @@ rule TrojanDownloader_Win32_Delf_TE_2147664549_0
         $x_1_5 = "Code: %d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -3425,6 +3558,7 @@ rule TrojanDownloader_Win32_Delf_ZXX_2147708754_0
         $x_1_2 = {6a 05 6a 00 6a 00 a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? 50 68 ?? ?? ?? ?? 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3447,6 +3581,7 @@ rule TrojanDownloader_Win32_Delf_ZXZ_2147708773_0
         $x_1_2 = "msiexec /q /i" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3469,6 +3604,7 @@ rule TrojanDownloader_Win32_Delf_ZYA_2147717383_0
         $x_1_2 = {6a 05 6a 00 6a 00 a1 ?? ?? ?? 00 e8 ?? ?? ?? ff 50 68 ?? ?? ?? 00 6a 00 e8 ?? ?? ?? ff 8d 55 d8 b8 ?? ?? ?? 00 e8 ?? ?? ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3496,6 +3632,7 @@ rule TrojanDownloader_Win32_Delf_2147800053_0
         $x_1_8 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3519,6 +3656,7 @@ rule TrojanDownloader_Win32_Delf_2147800053_1
         $x_1_4 = "sellbuytraff.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3542,6 +3680,7 @@ rule TrojanDownloader_Win32_Delf_2147800053_2
         $x_1_4 = {43 3a 5c 41 72 71 75 69 76 6f 73 20 64 65 20 70 72 6f 67 72 61 6d 61 73 5c 4d 53 4e 20 4d 65 73 73 65 6e 67 65 72 5c 44 65 76 69 63 65 20 4d 61 6e 61 67 65 72 5c 6d 73 6e 67 72 5c [0-8] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3566,6 +3705,7 @@ rule TrojanDownloader_Win32_Delf_2147800053_3
         $x_1_5 = "zhqbdf16.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3588,6 +3728,7 @@ rule TrojanDownloader_Win32_Delf_2147800053_4
         $x_5_3 = "Software\\Microsoft\\Windows\\CurrentVersion\\RuD" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             ((1 of ($x_10_*))) or
@@ -3620,6 +3761,7 @@ rule TrojanDownloader_Win32_Delf_2147800053_5
         $x_100_9 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1000_*) and 1 of ($x_100_*) and 2 of ($x_5_*))) or
             ((3 of ($x_1000_*) and 2 of ($x_100_*))) or
@@ -3647,6 +3789,7 @@ rule TrojanDownloader_Win32_Delf_RK_2147804287_0
         $x_1_4 = "opera_r774h4f" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3676,6 +3819,7 @@ rule TrojanDownloader_Win32_Delf_PAFJ_2147918849_0
         $x_1_9 = "procmon.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

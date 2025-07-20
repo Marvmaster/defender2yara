@@ -18,6 +18,7 @@ rule Backdoor_Win32_Mutihack_A_2147636928_0
         $x_2_4 = "bbs.MutiHack.com" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

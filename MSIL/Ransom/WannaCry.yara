@@ -19,6 +19,7 @@ rule Ransom_MSIL_WannaCry_AYA_2147922981_0
         $x_1_4 = ".WNCRY" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_MSIL_WannaCry_MBZ_2147942166_0
         $x_1_5 = "FAKE WANNA CRY" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

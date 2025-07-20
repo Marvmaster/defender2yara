@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Obfuse_GA_2147761918_0
         $x_1_3 = "History of Tibet-Ladakh Relations and Their Modern Implications.docx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

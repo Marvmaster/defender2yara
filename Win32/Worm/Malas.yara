@@ -30,6 +30,7 @@ rule Worm_Win32_Malas_2147597738_0
         $x_1_16 = "SetProcessShutdownParameters" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 3 of ($x_10_*) and 3 of ($x_1_*))) or
             ((3 of ($x_100_*) and 4 of ($x_10_*))) or
@@ -62,6 +63,7 @@ rule Worm_Win32_Malas_A_2147612655_0
         $x_1_8 = {43 00 6f 00 6d 00 6d 00 61 00 6e 00 64 00 20 00 50 00 72 00 6f 00 6d 00 70 00 74 00 2e 00 6c 00 6e 00 6b 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -93,6 +95,7 @@ rule Worm_Win32_Malas_B_2147656270_0
         $x_1_6 = "autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

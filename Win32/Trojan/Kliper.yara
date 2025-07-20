@@ -18,6 +18,7 @@ rule Trojan_Win32_Kliper_A_2147695989_0
         $x_1_4 = {e1 0b 5e 0f 8f a8 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

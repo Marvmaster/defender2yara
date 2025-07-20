@@ -50,6 +50,7 @@ rule TrojanDownloader_Win32_Tibs_2147800188_0
         $x_1_36 = "%c%c%c%c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 8 of ($x_1_*))) or
             ((6 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -290,6 +291,7 @@ rule TrojanDownloader_Win32_Tibs_T_2147803940_0
         $x_1_3 = {42 00 49 00 54 00 53 00 00 00 00 00 52 00 70 00 63 00 53 00 73 00 00 00 61 00 64 00 76 00 61 00 70 00 69 00 33 00 32 00 2e 00 64 00 6c 00 6c 00 00 00 00 00 6f 00 6c 00 65 00 33 00 32 00 2e 00 64 00 6c 00 6c 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -314,6 +316,7 @@ rule TrojanDownloader_Win32_Tibs_A_2147804157_0
         $x_10_5 = {68 50 4f 53 54 58 ab b0 20 aa 8b 75 ?? f3 a4 68 20 48 54 54 58 ab 68 50 2f ?? 2e 58 ab b0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_10_*))) or

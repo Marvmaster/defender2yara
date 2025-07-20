@@ -16,6 +16,7 @@ rule Trojan_Win32_Golisy_A_2147657909_0
         $x_1_2 = {33 c9 8a 88 99 01 00 00 51 8b 55 ?? 33 c0 8a 82 98 01 00 00 50 8b 4d 00 33 d2 8a 91 97 01 00 00 52 8b 45 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

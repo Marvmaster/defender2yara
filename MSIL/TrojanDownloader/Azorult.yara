@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_Azorult_A_2147824426_0
         $x_1_2 = {08 11 08 08 11 08 91 11 04 11 08 09 5d 91 61 d2 9c 1f 09 13 0f 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

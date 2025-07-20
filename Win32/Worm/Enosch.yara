@@ -17,6 +17,7 @@ rule Worm_Win32_Enosch_A_2147681154_0
         $x_1_3 = {6d 61 6d 61 6d 6d 6d 61 6d 61 6d 61 6d 40 79 61 68 6f 6f 2e 63 6f 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

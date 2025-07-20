@@ -23,6 +23,7 @@ rule Ransom_MSIL_Somwar_PAA_2147818111_0
         $x_1_8 = "All you filles have been encrypted by a ransomware." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

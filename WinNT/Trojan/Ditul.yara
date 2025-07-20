@@ -23,6 +23,7 @@ rule Trojan_WinNT_Ditul_D_2147597690_0
         $x_5_9 = {74 61 8b 1f 0f 20 c0 25 ff ff fe ff 0f 22 c0 8b 46 1c 6a 0a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_3_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_3_*) and 4 of ($x_2_*))) or

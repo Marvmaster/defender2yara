@@ -19,6 +19,7 @@ rule Trojan_Win64_Keylogiz_A_2147917647_0
         $x_1_4 = "Keylogger-main/main.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Wunkay_A_2147621370_0
         $x_1_6 = {00 07 47 e2 fb 68 ?? ?? 00 10 64 ff 35 00 00 00 00 64 89 25 00 00 00 00 e8 ?? 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

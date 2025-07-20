@@ -26,6 +26,7 @@ rule TrojanSpy_Win32_Bancrat_A_2147692931_0
         $x_1_12 = "SolicitSenha" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

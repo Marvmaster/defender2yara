@@ -26,6 +26,7 @@ rule Trojan_Linux_Meterp_Gen_2147795278_0
         $x_1_12 = "mettlesploit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

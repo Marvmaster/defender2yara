@@ -17,6 +17,7 @@ rule Worm_Win32_Ahkarun_A_2147608449_0
         $x_1_3 = {2c 20 4c 69 73 74 2c 20 52 45 4d 4f 56 41 42 4c 45 0d 0a 46 69 6c 65 44 65 6c 65 74 65 2c 20 25 57 69 6e 64 69 72 25 5c 74 65 6d 70 5c 6f 75 74 70 75 74 2e 74 6d 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Worm_Win32_Ahkarun_A_2147608449_1
         $x_1_4 = {54 45 4d 50 5c 69 70 2e 74 6d 70 0d 0a 55 72 6c 44 6f 77 6e 6c 6f 61 64 54 6f 46 69 6c 65 2c 68 74 74 70 3a 2f 2f 77 77 77 2e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

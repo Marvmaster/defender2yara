@@ -17,6 +17,7 @@ rule Trojan_Win32_FakeUpdate_AFU_2147909731_0
         $x_1_2 = {49 30 00 00 c7 45 90 49 30 00 00 c7 45 90 49 30 00 00 c7 45 90 49 30 00 00 c7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win64_StealthWorm_DA_2147924485_0
         $x_1_6 = "Failed to delete directory:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

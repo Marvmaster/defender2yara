@@ -19,6 +19,7 @@ rule TrojanSpy_Win64_Stilachi_A_2147935089_0
         $x_1_5 = {44 6c 6c 47 65 74 43 6c 61 73 73 4f 62 6a 65 63 74 [0-64] 73 71 6c 69 74 65 33 5f 61 67 67 72 65 67 61 74 65 5f 63 6f 6e 74 65 78 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

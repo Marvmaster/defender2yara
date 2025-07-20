@@ -20,6 +20,7 @@ rule Trojan_Win32_Genbhv_A_2147741352_0
         $x_1_6 = "Conuserfig.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Genbhv_D_2147745509_0
         $x_1_2 = {40 49 83 f8 10 7c f3 06 00 00 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

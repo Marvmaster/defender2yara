@@ -19,6 +19,7 @@ rule Ransom_Win32_Molock_A_2147716337_0
         $x_1_4 = "Your disk have a lock!Please input the unlock password!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win32_Molock_MAK_2147794242_0
         $x_1_6 = "shell\\open\\command" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

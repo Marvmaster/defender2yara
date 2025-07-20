@@ -23,6 +23,7 @@ rule Backdoor_WinNT_Phdet_A_2147670386_0
         $x_1_9 = {f3 aa 8b 02 25 ff ff ff fd 0d 00 00 00 08 89 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Backdoor_WinNT_Phdet_B_2147670387_0
         $x_1_4 = {25 00 f0 ff ff 06 00 8b ?? ?? 8b ?? 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -76,6 +78,7 @@ rule Backdoor_WinNT_Phdet_A_2147670388_0
         $x_1_7 = "RulesData" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -103,6 +106,7 @@ rule Backdoor_WinNT_Phdet_B_2147681682_0
         $x_1_3 = "_PYALOAD" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

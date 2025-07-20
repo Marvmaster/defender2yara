@@ -21,6 +21,7 @@ rule Backdoor_WinNT_Nuwar_B_2147595771_0
         $x_1_6 = {13 01 00 30 90 ?? ?? 01 00 40 3b c1 72 ef}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Backdoor_WinNT_Nuwar_A_2147595783_0
         $x_1_11 = "KeServiceDescriptorTable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_2_*) and 1 of ($x_1_*))) or
             ((9 of ($x_2_*))) or
@@ -86,6 +88,7 @@ rule Backdoor_WinNT_Nuwar_C_2147595864_0
         $x_10_8 = "PsCreateSystemThread" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -109,6 +112,7 @@ rule Backdoor_WinNT_Nuwar_E_2147601230_0
         $x_1_1 = {83 65 fc 00 33 c0 85 c9 76 11 8a 15 ?? ?? 01 00 30 90 ?? ?? 01 00 40 3b c1 72 ef 53 8b 1d ?? ?? 01 00 6a 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

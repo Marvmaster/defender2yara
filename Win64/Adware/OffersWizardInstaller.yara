@@ -17,6 +17,7 @@ rule Adware_Win64_OffersWizardInstaller_206930_0
         $x_1_3 = {02 25 25 5c 64 72 69 76 65 72 73 00 6e 65 74 68 66 64 72 76 2e 73 79 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

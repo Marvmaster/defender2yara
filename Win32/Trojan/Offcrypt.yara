@@ -18,6 +18,7 @@ rule Trojan_Win32_Offcrypt_A_2147607882_0
         $x_1_4 = {54 58 4f 53 65 72 76 69 63 65 00 00 5c 45 78 65 63 6c 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

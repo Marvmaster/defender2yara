@@ -26,6 +26,7 @@ rule Worm_Win32_Muhu_B_2147601501_0
         $x_2_12 = "Filesetattrib,+SH,C:\\ntdetec1,1,1" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

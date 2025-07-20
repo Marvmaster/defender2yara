@@ -31,6 +31,7 @@ rule Backdoor_Win32_Zekapab_A_2147712368_0
         $x_1_16 = "/UpdateCertificate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

@@ -20,6 +20,7 @@ rule Trojan_Win32_Hecsem_A_2147616933_0
         $x_1_5 = {00 73 6d 63 63 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

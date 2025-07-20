@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Peguese_A_2147658162_0
         $x_1_2 = {70 72 6f 6a 65 63 74 31 2e 63 70 6c 00 43 50 6c 41 70 70 6c 65 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanSpy_Win32_Peguese_B_2147658163_0
         $x_1_2 = {70 6a 63 74 32 2e 63 70 6c 00 43 50 6c 41 70 70 6c 65 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanSpy_Win32_Peguese_C_2147658164_0
         $x_1_4 = {6a 30 56 8d 95 ?? fe ff ff b8 ?? ?? ?? ?? e8 ?? ?? ff ff 8b 85 ?? fe ff ff e8 ?? ?? ?? ?? 50 53 e8 ?? ?? ?? ?? 6a 00 6a 00 6a 10 53 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

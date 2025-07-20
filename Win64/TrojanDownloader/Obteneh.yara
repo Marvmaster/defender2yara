@@ -21,6 +21,7 @@ rule TrojanDownloader_Win64_Obteneh_A_2147905703_0
         $x_1_6 = "C:/windows_update/main.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

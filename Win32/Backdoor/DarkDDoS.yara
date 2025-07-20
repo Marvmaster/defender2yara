@@ -16,6 +16,7 @@ rule Backdoor_Win32_DarkDDoS_A_2147632608_0
         $x_3_2 = "Status: [ Icmp - Attack Enabled ]" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

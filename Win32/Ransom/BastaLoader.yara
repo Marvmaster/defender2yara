@@ -39,6 +39,7 @@ rule Ransom_Win32_BastaLoader_LK_2147842678_0
         $x_1_3 = {8b 45 d4 8b 4d d0 8a 11 88 10 8b 45 fc 8b 08 89 4d cc 8b 55 fc 8b 02 83 c0 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -61,6 +62,7 @@ rule Ransom_Win32_BastaLoader_LKA_2147845245_0
         $x_1_2 = "VisibleEntry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +84,7 @@ rule Ransom_Win32_BastaLoader_MA_2147846019_0
         $x_5_1 = {83 c4 08 85 c0 75 ?? 8b 45 fc 0f b6 48 5a 85 c9 75 ?? c7 45 f8 01 00 00 00 eb ?? c7 45 f8 00 00 00 00 8b 55 fc 8a 45 f8 88 42 5a 8b e5 5d c3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +130,7 @@ rule Ransom_Win32_BastaLoader_BA_2147849431_0
         $x_1_1 = {13 d6 66 8b 10 66 89 55 ?? 8b 45 ?? 83 c0 ?? 89 45 ?? 0f b7 4d ?? 8b 55 ?? c1 ea ?? 8b 45 ?? c1 e0 ?? 0b d0 03 ca 33 4d ?? 89 4d ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +152,7 @@ rule Ransom_Win32_BastaLoader_NF_2147894599_0
         $x_1_1 = {88 14 01 33 c0 8b 15 ?? ?? ?? ?? 40 2b 05 ?? ?? ?? ?? 42 2b 05 ?? ?? ?? ?? 01 05 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 2b 0d ?? ?? ?? ?? a1 ?? ?? ?? ?? 31 0d ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 88 1c 02 ff 05 ?? ?? ?? ?? 81 fe ?? ?? ?? ?? 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +175,7 @@ rule Ransom_Win32_BastaLoader_BE_2147899918_0
         $x_1_2 = {f8 01 2a bb ?? ?? ?? ?? 94 2b 92 ?? ?? ?? ?? fc 2a 7f ?? 34 ?? 20 02 d2 05 ?? ?? ?? ?? 21 ac fb ?? ?? ?? ?? 01 7c 71 ?? 1e 8d 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

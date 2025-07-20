@@ -19,6 +19,7 @@ rule Backdoor_MSIL_NanoBot_B_2147755696_0
         $x_1_4 = "Yoda-Coffee3" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Backdoor_MSIL_NanoBot_D_2147755697_0
         $x_1_5 = "newworldorder" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -70,6 +72,7 @@ rule Backdoor_MSIL_NanoBot_PA_2147765607_0
         $x_1_3 = {8e 69 5d 91 09 11 ?? 09 8e 69 5d 91 61 [0-16] 17 d6 [0-8] 8e 69 5d 91 da 20 [0-8] d6 20 [0-8] 5d b4 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Backdoor_MSIL_NanoBot_AN_2147822815_0
         $x_1_3 = "ExecuteCommandAsAdmin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Backdoor_MSIL_NanoBot_SK_2147851081_0
         $x_2_1 = {08 11 04 07 11 04 18 5a 18 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a d2 9c 00 11 04 17 58 13 04 11 04 08 8e 69 fe 04 13 05 11 05 2d d4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule Backdoor_MSIL_NanoBot_SM_2147917842_0
         $x_2_1 = {19 2c 0d 2b 0d 72 a5 00 00 70 2b 0d 2b 12 2b 17 de 1b 73 55 00 00 0a 2b ec 28 56 00 00 0a 2b ec 6f 57 00 00 0a 2b e7 0a 2b e6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

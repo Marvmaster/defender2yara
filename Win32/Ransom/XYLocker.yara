@@ -20,6 +20,7 @@ rule Ransom_Win32_XYLocker_2147812627_0
         $x_1_5 = "then ALL your files will be gone" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win32_Fakecorr_2147622862_0
         $x_1_7 = "to repair all corrupted files." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule Trojan_Win32_Fakecorr_A_2147622876_0
         $x_1_6 = "Please, register your copy of FileFix Professional 2009 to repair all corrupted files. Click here to open Buy now page." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

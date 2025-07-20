@@ -16,6 +16,7 @@ rule Trojan_Win32_Futsurn_A_2147632412_0
         $x_1_2 = {81 7d c0 00 0c ee 92 75 0a 6a 02 ff 75 e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

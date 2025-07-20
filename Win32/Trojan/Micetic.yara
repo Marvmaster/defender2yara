@@ -19,6 +19,7 @@ rule Trojan_Win32_Micetic_A_2147658653_0
         $x_1_4 = {80 3b e9 75 04 33 c0 eb 6a e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

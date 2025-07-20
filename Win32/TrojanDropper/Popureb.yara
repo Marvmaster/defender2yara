@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Popureb_A_2147646126_0
         $x_1_2 = {81 c1 00 28 00 00 83 d2 00 81 e9 00 02 00 00 83 da 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

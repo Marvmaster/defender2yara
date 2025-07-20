@@ -19,6 +19,7 @@ rule Ransom_MSIL_BBRansomware_DA_2147780370_0
         $x_1_4 = "Success Decrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

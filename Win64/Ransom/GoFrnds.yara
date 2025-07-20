@@ -19,6 +19,7 @@ rule Ransom_Win64_GoFrnds_YAR_2147913435_0
         $x_10_4 = ".frnds" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

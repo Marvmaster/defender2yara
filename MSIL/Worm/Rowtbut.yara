@@ -20,6 +20,7 @@ rule Worm_MSIL_Rowtbut_A_2147636714_0
         $x_1_6 = {53 74 61 72 74 53 59 4e 46 6c 6f 6f 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Worm_MSIL_Rowtbut_B_2147638389_0
         $x_1_9 = "?action=getcomm&hwid=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

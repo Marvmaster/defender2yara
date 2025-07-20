@@ -18,6 +18,7 @@ rule Trojan_Win64_Ursu_SIB_2147806403_0
         $x_1_3 = {44 0f be 09 45 85 c9 74 ?? 45 85 c0 74 ?? 41 83 f9 61 45 8d 51 ?? 45 0f 43 ca 41 89 c2 41 c1 e2 ?? 44 03 d0 43 8d 04 11 4c 8d 49 02 48 ff c1 85 d2 74 ?? 4c 89 c9 44 0f be 09 45 85 c9 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win64_Ursu_EC_2147916819_0
         $x_1_4 = "m4/u_YT0wH1Kwy8LoT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

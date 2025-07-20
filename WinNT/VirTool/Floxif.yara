@@ -16,6 +16,7 @@ rule VirTool_WinNT_Floxif_A_2147696618_0
         $x_1_2 = {8d 41 05 53 8a 51 02 84 d2 74 08 30 50 ff 8a 51 02 30 10 8a 50 ff 8a 18 f6 d2 f6 d3 88 50 ff 88 18 84 d2 75 04 84 db 74 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

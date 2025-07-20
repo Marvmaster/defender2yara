@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Pron_XFX_2147621414_0
         $x_1_4 = "adult-dougaga.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

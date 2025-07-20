@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Heracles_SIBA_2147794727_0
         $x_1_1 = {fe 0e 01 00 72 ?? ?? ?? ?? fe 0e 02 00 73 ?? ?? ?? ?? fe 0e 03 00 fe 0c 01 00 28 ?? ?? ?? ?? 6f ?? ?? ?? ?? fe 0e 04 00 38 ?? ?? ?? ?? fe 0d 04 00 28 ?? ?? ?? ?? fe 0e 05 00 fe 0c 05 00 28 ?? ?? ?? ?? fe 0c 02 00 28 ?? ?? ?? ?? da fe 0e 06 00 fe 0c 03 00 fe 0c 06 00 28 ?? ?? ?? ?? 6f ?? ?? ?? ?? 26 [0-16] fe 0d 04 00 28 ?? ?? ?? ?? fe 0e 07 00 fe 0c 07 00 3a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_MSIL_Heracles_ARA_2147837798_0
         $x_2_1 = {11 04 11 05 09 11 05 09 8e 69 5d 91 08 11 05 91 61 d2 6f ?? ?? ?? 0a 11 05 17 58 13 05 11 05 08 8e 69 32 dc}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule TrojanDownloader_MSIL_Heracles_ARAC_2147840697_0
         $x_5_1 = {11 04 09 06 09 8e 69 5d 91 08 06 91 61 d2 6f ?? ?? ?? 0a 06 1a 2c 04 17 58 0a 06 08 8e 69 32 e0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +82,7 @@ rule TrojanDownloader_MSIL_Heracles_SR_2147841041_0
         $x_1_1 = {09 08 11 04 08 8e 69 5d 91 07 11 04 91 61 d2 6f 15 00 00 0a 11 04 17 58 13 04 11 04 07 8e 69 32 df}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +104,7 @@ rule TrojanDownloader_MSIL_Heracles_SS_2147841042_0
         $x_1_1 = {09 11 04 18 5b 07 11 04 18 6f 05 00 00 0a 1f 10 28 06 00 00 0a 9c 11 04 18 58 13 04 11 04 08 32 df}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +126,7 @@ rule TrojanDownloader_MSIL_Heracles_SU_2147844064_0
         $x_1_1 = {0d 16 13 04 2b 1a 09 08 11 04 08 8e 69 5d 91 07 11 04 91 61 d2 6f 13 00 00 0a 11 04 17 58 13 04 11 04 07 8e 69 32 df}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +148,7 @@ rule TrojanDownloader_MSIL_Heracles_ARBE_2147846653_0
         $x_5_1 = {06 07 02 07 6f ?? ?? ?? 0a 7e ?? ?? ?? 04 07 1f 10 5d 91 61 07 20 ff 00 00 00 5d 28 ?? ?? ?? 06 61 28 ?? ?? ?? 06 9d 07 17 58 0b 07 02 6f ?? ?? ?? 0a 32 cc}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +170,7 @@ rule TrojanDownloader_MSIL_Heracles_CXJK_2147849617_0
         $x_1_1 = {68 00 74 00 74 00 70 00 73 00 3a 00 2f 00 2f 00 63 00 72 00 79 00 70 00 74 00 31 00 2e 00 70 00 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -184,6 +192,7 @@ rule TrojanDownloader_MSIL_Heracles_CXF_2147851251_0
         $x_1_1 = {28 0b 00 00 0a 25 18 6f 0c 00 00 0a 25 18 6f 0d 00 00 0a 25 02 6f 0e 00 00 0a 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +214,7 @@ rule TrojanDownloader_MSIL_Heracles_VK_2147852422_0
         $x_2_1 = {08 8d 17 00 00 01 13 04 09 11 04 16 08 6f 13 00 00 0a 26 11 04 28 01 00 00 2b 28 02 00 00 2b 13 05 de 14}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -226,6 +236,7 @@ rule TrojanDownloader_MSIL_Heracles_VM_2147891703_0
         $x_2_1 = {11 09 11 04 5d 13 0a 11 09 11 05 5d 13 0b 08 11 0a 91 13 0c 09 11 0b 6f ?? ?? ?? 0a 13 0d 08 11 09 17 58 11 04 5d 91 13 0e 11 0c 11 0d 61 11 0e 59 20 00 01 00 00 58 13 0f 08 11 0a 11 0f 20 00 01 00 00 5d d2 9c 11 09 17 59 13 09 11 09 16 2f af}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -247,6 +258,7 @@ rule TrojanDownloader_MSIL_Heracles_VL_2147892532_0
         $x_2_1 = {07 09 07 8e 69 5d 91 08 09 08 6f ?? ?? ?? 0a 5d 6f ?? ?? ?? 0a 61 07 09 17 58 07 8e 69 5d 91 59 20 00 01 00 00 58 13 07 07 09 07 8e 69 5d 11 07 20 00 01 00 00 5d d2 9c 09 15 58 0d 09 16 fe 04 16 fe 01 13 08 11 08 2d b7}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -280,6 +292,7 @@ rule TrojanDownloader_MSIL_Heracles_CCEB_2147896586_0
         $x_1_13 = "Windows\\System32\\drivers\\etc\\hosts" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -302,6 +315,7 @@ rule TrojanDownloader_MSIL_Heracles_VO_2147897433_0
         $x_2_2 = "NEXUS.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -324,6 +338,7 @@ rule TrojanDownloader_MSIL_Heracles_VP_2147901223_0
         $x_2_2 = "$LimeUSB\\LimeUSB.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -345,6 +360,7 @@ rule TrojanDownloader_MSIL_Heracles_VQ_2147902567_0
         $x_2_1 = {06 08 5d 0d 07 09 91 11 05 06 1f 16 5d 91 61 13 09 11 09 07 06 17 58 08 5d 91 59 20 00 01 00 00 58 20 00 01 00 00 5d 13 0a 07 09 11 0a d2 9c 06 17 58 0a 06 08 11 06 17 58 5a fe 04 13 0b 11 0b 2d be}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -367,6 +383,7 @@ rule TrojanDownloader_MSIL_Heracles_VS_2147915518_0
         $x_2_2 = "$aad35a1c-f41e-4829-af28-9388073c34f6" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -390,6 +407,7 @@ rule TrojanDownloader_MSIL_Heracles_VT_2147917677_0
         $x_1_3 = "tempuri.org/DataSetAAAAAAAAA.xsd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -411,6 +429,7 @@ rule TrojanDownloader_MSIL_Heracles_VU_2147917685_0
         $x_2_1 = {07 06 06 9e 06 17 58 0a 06 20 ff 00 00 00 fe 03 16 fe 01 13 0d 11 0d 2d e7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -432,6 +451,7 @@ rule TrojanDownloader_MSIL_Heracles_VU_2147917685_1
         $x_2_1 = {91 2b 3a 08 07 6f 19 00 00 0a 5d 6f 1a 00 00 0a 61 d2 9c 16 2d df 1a 2c dc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -453,6 +473,7 @@ rule TrojanDownloader_MSIL_Heracles_SI_2147917731_0
         $x_5_1 = {72 b8 02 00 70 11 0a 6f ?? ?? ?? 0a 72 c4 02 00 70 11 05 6f ca 00 00 0a 72 d6 02 00 70 11 06 6f ?? ?? ?? 0a 13 0c 11 0c 72 ea 02 00 70 28 ?? ?? ?? 0a 11 07 6f 19 00 00 0a 28 c9 00 00 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -474,6 +495,7 @@ rule TrojanDownloader_MSIL_Heracles_PAZ_2147917930_0
         $x_4_1 = {25 26 0b 72 [0-4] 07 28 ?? ?? ?? 06 25 26 0c 08 02 28 ?? ?? ?? 06 74 ?? ?? ?? ?? 28 ?? ?? ?? 06 0a 2b 00 06 2a}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -495,6 +517,7 @@ rule TrojanDownloader_MSIL_Heracles_VV_2147921708_0
         $x_2_1 = {07 72 15 00 00 70 6f 18 00 00 0a 0a dd 0d 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -518,6 +541,7 @@ rule TrojanDownloader_MSIL_Heracles_VV_2147921708_1
         $x_2_3 = "VQP.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -539,6 +563,7 @@ rule TrojanDownloader_MSIL_Heracles_SAK_2147923166_0
         $x_2_1 = {11 05 12 06 28 1d 00 00 0a 09 08 11 04 18 6f 1e 00 00 0a 1f 10 28 1f 00 00 0a 6f 20 00 00 0a dd 0f 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -560,6 +585,7 @@ rule TrojanDownloader_MSIL_Heracles_PRA_2147927164_0
         $x_2_1 = {73 24 00 00 0a 0a 06 02 03 72 0d 00 00 70 28 25 00 00 0a 6f 26 00 00 0a de 0a 06 2c 06 06 6f 27 00 00 0a dc de 0e 28 28 00 00 0a 02 03 28 04 00 00 06 de 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -585,6 +611,7 @@ rule TrojanDownloader_MSIL_Heracles_AYA_2147927994_0
         $x_1_5 = "CreateStartupShortcut" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -612,6 +639,7 @@ rule TrojanDownloader_MSIL_Heracles_AYC_2147927996_0
         $x_1_7 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win64_SilkLoader_MA_2147849574_0
         $x_1_1 = {6b c8 34 41 8a c0 41 ff c0 2a c1 04 35 41 30 01 49 ff c1 41 83 f8 16 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

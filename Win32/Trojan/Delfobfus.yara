@@ -23,6 +23,7 @@ rule Trojan_Win32_Delfobfus_A_2147605348_0
         $x_10_9 = {64 ff 30 64 89 20 0b 00 55 8b ec 33 c0 55 68}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule Trojan_Win32_Delfobfus_C_2147606865_0
         $x_1_6 = {83 fd 21 75 07 bd 01 00 00 00 eb 06 83 fd 21 74 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_2_*))) or

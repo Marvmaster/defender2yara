@@ -17,6 +17,7 @@ rule Trojan_MSIL_Scarsi_NEAA_2147836092_0
         $x_1_2 = "Samsung" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_Scarsi_ABEJ_2147836112_0
         $x_1_4 = "GetResponseStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_MSIL_Scarsi_ABGU_2147837959_0
         $x_1_5 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_MSIL_Scarsi_ABIP_2147838866_0
         $x_1_5 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_MSIL_Scarsi_AS_2147839029_0
         $x_1_1 = {13 04 16 0a 2b 17 11 04 09 06 09 8e 69 5d 91 08 06 91 61 d2 6f ?? ?? ?? 0a 06 17 58 0a 06 08 8e 69 32 e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_MSIL_Scarsi_AS_2147839029_1
         $x_1_1 = {2b f1 0b 2b f8 02 50 06 91 16 2c 18 26 02 50 06 02 50 07 91 9c 02 50 07 08 9c 06 17 58 0a 07 17 59 0b 2b 03 0c 2b e6 06 07 32 da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Trojan_MSIL_Scarsi_ABIO_2147839120_0
         $x_1_4 = "Ajtbtbctc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +185,7 @@ rule Trojan_MSIL_Scarsi_RB_2147839382_0
         $x_1_1 = {09 06 11 04 06 8e 69 5d 91 08 11 04 91 61 d2 6f ?? 00 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +209,7 @@ rule Trojan_MSIL_Scarsi_NCS_2147839767_0
         $x_1_3 = "WindowsFormsApp1.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -224,6 +233,7 @@ rule Trojan_MSIL_Scarsi_MBBM_2147839787_0
         $x_1_3 = "KKDEWHJJUDHIS44" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -248,6 +258,7 @@ rule Trojan_MSIL_Scarsi_MB_2147840361_0
         $x_2_4 = "Enqueue" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -270,6 +281,7 @@ rule Trojan_MSIL_Scarsi_MC_2147840705_0
         $x_1_2 = "SkipVerification" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -291,6 +303,7 @@ rule Trojan_MSIL_Scarsi_CAA_2147841055_0
         $x_10_1 = {6f 25 00 00 0a 1f 10 28 ?? ?? ?? ?? 6f ?? ?? ?? ?? 08 18 58 0c 08 06 1a 2c f9 32 da 07 6f 28 00 00 0a 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +325,7 @@ rule Trojan_MSIL_Scarsi_ABJZ_2147841602_0
         $x_5_1 = {11 04 09 06 09 8e 69 5d 91 08 06 91 61 d2 6f ?? ?? ?? 0a 06 17 58 0a 06 08 8e 69 32 e3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -333,6 +347,7 @@ rule Trojan_MSIL_Scarsi_ASI_2147843166_0
         $x_1_1 = {1e 2d 14 26 06 18 5b 8d ?? ?? ?? 01 18 2d 0b 26 16 1a 2d 09 26 2b 21 0a 2b ea 0b 2b f3 0c 2b f5 07 08 18 5b 02 08 18 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a 9c 08 18 58 0c 08 06 32 e4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -356,6 +371,7 @@ rule Trojan_MSIL_Scarsi_ABHY_2147849942_0
         $x_1_3 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -377,6 +393,7 @@ rule Trojan_MSIL_Scarsi_AAEW_2147850713_0
         $x_5_1 = {09 8e 69 17 da 13 0b 16 13 0c 2b 1b 11 04 11 0c 09 11 0c 9a 1f 10 28 ?? 00 00 0a 6f ?? 00 00 0a 00 11 0c 17 d6 13 0c 11 0c 11 0b 31 df}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -401,6 +418,7 @@ rule Trojan_MSIL_Scarsi_ABTN_2147896752_0
         $x_1_4 = "Lo+ad" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -424,6 +442,7 @@ rule Trojan_MSIL_Scarsi_MA_2147900026_0
         $x_2_3 = "Interrupted" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -445,6 +464,7 @@ rule Trojan_MSIL_Scarsi_DSAA_2147902494_0
         $x_5_1 = {16 0d 2b 1f 00 07 09 8f ?? 00 00 01 13 04 11 04 11 04 47 02 09 6a 06 6e 5d d4 91 61 d2 52 00 09 17 d6 0d 09 08 fe 02 16 fe 01 13 05 11 05 2d d4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

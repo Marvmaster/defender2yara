@@ -27,6 +27,7 @@ rule Trojan_Win32_Foremurad_2147729861_0
         $x_1_12 = {5e 41 5d 41 5c 5f 5e 5d c3 48 8b c4 48 89 58 08 48 89 68 10 48 89 70 18 57 48 81 ec 80 00 00 00 48 8b fa 33 d2 49 8b f0 48 8b e9 44 8d 42 58 48 8d 48 98 41 8b d9 e8 4a 02 00 00 44 8b 1f 41 8b c3 0b c3 83 f8 ff 76 07 b8 f0 d8 ff ff eb 5f 48 8d 4c 24 20 48 89 74 24 20 89 5c 24 28 48 89 6c 24 30 44 89 5c 24 38 e8 85 d6 ff ff 85 c0 75 3e 8d 50 04 48 8d 4c 24 20 e8 58 fc ff ff 48 8d 4c 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDownloader_Win64_ZeGost_CCHZ_2147905792_0
         $x_1_1 = {0f b6 01 fe c8 88 01 48 ff c1 48 ff ca 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

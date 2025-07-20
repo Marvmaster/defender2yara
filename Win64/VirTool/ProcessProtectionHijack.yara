@@ -17,6 +17,7 @@ rule VirTool_Win64_ProcessProtectionHijack_A_2147935717_0
         $x_1_3 = {4c 89 7c 24 48 4c 89 7c 24 58 4d 8b f0 f3 0f 7f 44 24 64 44 89 7c 24 74 48 8b ea 48 8b d9 c7 44 24 60 04 00 00 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

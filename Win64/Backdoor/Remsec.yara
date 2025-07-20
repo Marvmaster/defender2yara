@@ -16,6 +16,7 @@ rule Backdoor_Win64_Remsec_G_2147716726_0
         $x_10_1 = {56 55 8b ec be ?? ?? ?? ?? 50 ad 8b c8 ad ff e1 c9 5e ff e0 ff 20 8b f0 eb ef 8f 00 8b 00 eb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Win64_Remsec_A_2147716735_0
         $x_10_6 = "InitializeChangeNotify" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Backdoor_Win64_Remsec_C_2147716736_0
         $x_10_2 = {8d 88 00 00 00 3a}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Backdoor_Win64_Remsec_D_2147716737_0
         $x_10_4 = {e9 9b f5 c6 ac e9 87 a9 9b bb 87 a3 88}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule Backdoor_Win64_Remsec_E_2147716738_0
         $x_10_21 = {46 00 69 00 6c 00 65 00 44 00 65 00 73 00 63 00 72 00 69 00 70 00 74 00 69 00 6f 00 6e 00 00 00 00 00 57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 20 00 44 00 65 00 73 00 6b 00 74 00 6f 00 70 00 20 00 53 00 79 00 73 00 74 00 65 00 6d 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1000_*) and 1 of ($x_10_*))) or
             (all of ($x*))
@@ -156,6 +161,7 @@ rule Backdoor_Win64_Remsec_I_2147716739_0
         $x_10_4 = {83 c4 04 60 e8 ?? 00 00 00 e9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +183,7 @@ rule Backdoor_Win64_Remsec_J_2147716740_0
         $x_10_1 = {6b 67 61 74 65 2e 64 6c 6c 00 69 6e 69 74 32 00 6d 61 69 6e 32 00 76 65 72 73 69 6f 6e 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

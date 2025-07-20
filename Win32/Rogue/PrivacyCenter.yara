@@ -17,6 +17,7 @@ rule Rogue_Win32_PrivacyCenter_140760_0
         $x_1_3 = "/newinstall/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Rogue_Win32_PrivacyCenter_140760_1
         $x_1_2 = {5c 75 49 45 5f 42 48 4f 2e 70 61 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Rogue_Win32_PrivacyCenter_140760_2
         $x_1_5 = " Your security is under threat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Rogue_Win32_PrivacyCenter_140760_3
         $x_1_4 = "mailto: support@realgoldsoft.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Rogue_Win32_PrivacyCenter_140760_4
         $x_1_4 = {43 00 6f 00 6f 00 6b 00 69 00 65 00 20 00 63 00 61 00 6e 00 20 00 63 00 6f 00 6e 00 74 00 61 00 69 00 6e 00 20 00 79 00 6f 00 75 00 72 00 20 00 70 00 72 00 69 00 76 00 61 00 74 00 65 00 20 00 69 00 6e 00 66 00 6f 00 72 00 6d 00 61 00 74 00 69 00 6f 00 6e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -133,6 +138,7 @@ rule Rogue_Win32_PrivacyCenter_140760_5
         $x_1_3 = {ba 76 02 00 00 8b c3 e8 ?? ?? ?? ?? ba 5f 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -153,6 +159,7 @@ rule Rogue_Win32_PrivacyCenter_140760_6
         $x_1_1 = {ba 07 00 00 00 e8 ?? ?? ?? ?? c3 e9 ?? ?? ?? ?? eb eb 5b e8 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0d 00 00 00 75 6e 69 6e 73 74 61 6c 6c 2e 65 78 65 00 00 00 53 61 66 65 74 79 20 43 65 6e 74 65 72 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule Rogue_Win32_PrivacyCenter_140760_7
         $x_1_4 = "r2soft/install-" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -203,6 +211,7 @@ rule Rogue_Win32_PrivacyCenter_140760_8
         $x_1_5 = "Privacy Center" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -226,6 +235,7 @@ rule Rogue_Win32_PrivacyCenter_140760_9
         $x_3_4 = "the lastest" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -254,6 +264,7 @@ rule Rogue_Win32_PrivacyCenter_140760_10
         $x_1_5 = "\\Privacy center\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -278,6 +289,7 @@ rule Rogue_Win32_PrivacyCenter_140760_11
         $x_1_5 = {08 97 c1 00 00 00 50 8b 87 35 01 00 00 29 c8 50 57 8d bf 29 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -301,6 +313,7 @@ rule Rogue_Win32_PrivacyCenter_140760_12
         $x_2_4 = "127.0.0.1/RunAntivirus\" target=\"_self" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -327,6 +340,7 @@ rule Rogue_Win32_PrivacyCenter_140760_13
         $x_1_3 = "unsupported software licenses. View the system reports now." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -357,6 +371,7 @@ rule Rogue_Win32_PrivacyCenter_140760_14
         $x_1_11 = "SOFTWARE\\SafetyCenter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -396,6 +411,7 @@ rule Rogue_Win32_PrivacyCenter_140760_15
         $x_1_11 = {3d e2 00 00 00 7f 54 0f 84 ?? ?? ?? ?? 83 f8 6c 7f 2b 0f 84 ?? ?? ?? ?? 83 e8 66}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -425,6 +441,7 @@ rule Rogue_Win32_PrivacyCenter_140760_16
         $x_1_5 = "Traces of discreditable files (for example, the history of visiting adult sites) and security exposure have been found" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -465,6 +482,7 @@ rule Rogue_Win32_PrivacyCenter_140760_17
         $x_1_21 = "This Trojan sends email spam to your address book contacts." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -530,6 +548,7 @@ rule Rogue_Win32_PrivacyCenter_140760_18
         $x_1_38 = "\\ACommander.lnk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -581,6 +600,7 @@ rule Rogue_Win32_PrivacyCenter_140760_19
         $x_1_28 = "Attention! Security module has not completed removal of unsafe files." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -645,6 +665,7 @@ rule Rogue_Win32_PrivacyCenter_140760_20
         $x_2_37 = "llatsniwen2r" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

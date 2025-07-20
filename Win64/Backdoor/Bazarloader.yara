@@ -25,6 +25,7 @@ rule Backdoor_Win64_Bazarloader_STA_2147767122_0
         $x_1_11 = {48 8b 00 48 b9 00 00 00 00 ff ff ff ff 48 8b 40 30 48 23 c1 48 89 ?? ?? ?? 48 8b ?? ?? ?? 8b 40 08 48 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 4 of ($x_1_*))) or
             ((4 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule Backdoor_Win64_Bazarloader_SSA_2147787444_0
         $x_5_3 = {4c 8b 4c 24 28 44 89 ea 4c 89 e1 44 8b 44 24 24 48 89 bc 24 b0 00 00 00 89 b4 24 a8 00 00 00 89 9c 24 a0 00 00 00 48 83 c4 50 5b 5e 5f 41 5c 41 5d 48 ff e0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

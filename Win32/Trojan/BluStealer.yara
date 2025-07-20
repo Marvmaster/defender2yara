@@ -21,6 +21,7 @@ rule Trojan_Win32_BluStealer_ER_2147828068_0
         $x_1_6 = "Templates\\Stub\\Project1.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

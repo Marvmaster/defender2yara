@@ -21,6 +21,7 @@ rule Trojan_Win32_Mistcloak_SK_2147837777_0
         $x_1_6 = "ServerGetUsbDevStatus" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

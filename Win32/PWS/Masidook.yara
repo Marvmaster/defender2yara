@@ -20,6 +20,7 @@ rule PWS_Win32_Masidook_A_2147641210_0
         $x_2_6 = {f3 a5 8b c8 83 e1 03 f3 a4 e8 ?? ?? ff ff 85 c0 74 7f b9 06 00 00 00 33 c0 8d 7c 24 50 8d 54 24 50 f3 ab 8d 4c 24 2c c7 44 24 50 18 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

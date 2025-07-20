@@ -17,6 +17,7 @@ rule Trojan_MSIL_Vahodon_A_2147685534_0
         $x_1_3 = {00 53 42 00 42 53 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_MSIL_Vahodon_B_2147686215_0
         $x_1_10 = "cmd.exe /k ping 0 & del \"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -73,6 +75,7 @@ rule Trojan_MSIL_Vahodon_C_2147706579_0
         $x_1_5 = "konek" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -99,6 +102,7 @@ rule Trojan_MSIL_Vahodon_D_2147716574_0
         $x_1_4 = {00 53 42 00 42 53 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

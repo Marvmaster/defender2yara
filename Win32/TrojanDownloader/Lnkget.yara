@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Lnkget_AR_2147691585_0
         $x_1_3 = {5b 75 10 68 a8 61 00 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

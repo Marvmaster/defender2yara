@@ -21,6 +21,7 @@ rule VirTool_WinNT_Koobface_D_2147724160_0
         $x_1_6 = {00 49 00 6e 00 74 00 65 00 72 00 6e 00 61 00 6c 00 4e 00 61 00 6d 00 65 00 00 00 46 00 49 00 4f 00 33 00 32 00 2e 00 73 00 79 00 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -54,6 +55,7 @@ rule VirTool_WinNT_Koobface_E_2147724161_0
         $x_11_13 = "\\Device\\TcpFilter" wide //weight: 11
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_11_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -89,6 +91,7 @@ rule VirTool_WinNT_Koobface_E_2147724161_1
         $x_1_12 = {83 7d c8 02 0f 84 ?? ?? ?? ?? 6a 03 58 6a 07 89 85 48 fd ff ff 89 85 4c fd ff ff 89 85 50 fd ff ff 89 85 54 fd ff ff 58 53 c7 85 00 fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 1 of ($x_1_*))) or
             ((5 of ($x_5_*))) or
@@ -118,6 +121,7 @@ rule VirTool_WinNT_Koobface_C_2147724162_0
         $x_1_5 = "\\Device\\PodmenaFD" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +145,7 @@ rule VirTool_WinNT_Koobface_A_2147724164_0
         $x_1_3 = {2d 90 01 22 00 74 58 83 e8 04 74 46 83 e8 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +170,7 @@ rule VirTool_WinNT_Koobface_B_2147724165_0
         $x_1_4 = {81 e9 9c 01 22 00 74 12 83 e9 08 75 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -191,6 +197,7 @@ rule VirTool_WinNT_Koobface_F_2147724166_0
         $x_1_3 = ":\\dnsblocker\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

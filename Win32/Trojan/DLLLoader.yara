@@ -17,6 +17,7 @@ rule Trojan_Win32_DLLLoader_EC_2147833705_0
         $x_1_2 = "qbot4\\dll_dropper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

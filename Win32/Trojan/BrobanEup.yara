@@ -16,6 +16,7 @@ rule Trojan_Win32_BrobanEup_A_2147690447_0
         $x_1_2 = {8b 03 3d 48 45 41 44 74 ?? 3d 50 4f 53 54 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_BrobanEup_A_2147690447_1
         $x_1_3 = {8b 4f 28 03 4d ?? 53 6a 11 68 ?? ?? ?? ?? 50 ff 75 08 89 0d ?? ?? ?? ?? ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -67,6 +69,7 @@ rule Trojan_Win32_BrobanEup_A_2147690447_2
         $x_1_7 = "segundavia" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_Win32_BrobanEup_A_2147690447_3
         $x_1_8 = {8b 02 3d 34 30 39 2d 0f 84 3d 01 00 00 3d 33 34 31 2d 0f 84 32 01 00 00 3d 36 35 32 2d 0f 84 27 01 00 00 3d 33 39 39 2d 0f 84 1c 01 00 00 3d 34 37 37 2d 0f 84 11 01 00 00 3d 31 30 34 2d 0f 84 06 01 00 00 3d 30 37 30 2d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

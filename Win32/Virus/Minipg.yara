@@ -19,6 +19,7 @@ rule Virus_Win32_Minipg_B_2147733762_0
         $x_1_4 = {8b 45 f0 8b 55 dc 01 c2 8b 45 f0 03 45 dc 0f b6 00 34 4a 88 02 8d 45 dc ff 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

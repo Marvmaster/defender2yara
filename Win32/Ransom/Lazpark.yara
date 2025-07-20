@@ -20,6 +20,7 @@ rule Ransom_Win32_Lazpark_DA_2147775564_0
         $x_1_5 = "fake.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

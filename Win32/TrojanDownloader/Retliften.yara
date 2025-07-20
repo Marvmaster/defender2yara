@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Retliften_B_2147783052_0
         $x_10_6 = "http://110.42.4.180" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -48,6 +49,7 @@ rule TrojanDownloader_Win32_Retliften_C_2147783059_0
         $x_10_5 = "atsv2,.=5)790/;05(9;1367" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

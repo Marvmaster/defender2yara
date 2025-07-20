@@ -17,6 +17,7 @@ rule Trojan_Win32_SmokeLdr_GA_2147777692_0
         $x_10_2 = {88 14 0f 3d 03 02 00 00 75 ?? 89 35 ?? ?? ?? ?? 41 3b c8 72}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_SmokeLdr_GB_2147777693_0
         $x_10_2 = {30 04 1f 47 3b fe [0-2] 5f 81 fe 71 11 00 00 5e 5d 5b}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_SmokeLdr_GC_2147777778_0
         $x_10_2 = {88 14 0f 3d 03 02 00 00 75 ?? 89 35 ?? ?? ?? ?? 41 3b c8 72}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_SmokeLdr_GD_2147777948_0
         $x_10_2 = {88 14 0f 3d 03 02 00 00 75 ?? 89 35 ?? ?? ?? ?? 41 3b c8 72}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_Win32_SmokeLdr_GE_2147778105_0
         $x_10_2 = {3d 03 02 00 00 75 ?? 89 35 ?? ?? ?? ?? 41 3b c8 32 00 8b 15 ?? ?? ?? ?? 8a 94 0a ?? ?? ?? ?? 8b ?? ?? ?? ?? ?? 88 14}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +132,7 @@ rule Trojan_Win32_SmokeLdr_GF_2147778192_0
         $x_10_2 = {3d 03 02 00 00 75 [0-9] 41 3b c8 32 00 8b 15 ?? ?? ?? ?? 8a 94 0a ?? ?? ?? ?? 8b ?? ?? ?? ?? ?? 88 14}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +156,7 @@ rule Trojan_Win32_SmokeLdr_GH_2147778350_0
         $x_1_3 = {88 0c 02 8b 0d ?? ?? ?? ?? 81 f9 03 02 00 00 75 ?? 89 ?? ?? ?? ?? ?? 40 3b ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -175,6 +182,7 @@ rule Trojan_Win32_SmokeLdr_GI_2147778458_0
         $x_1_2 = {8a 04 0f 88 04 0e 81 fa 03 02 00 00 75 ?? 89 ?? ?? ?? ?? ?? 41 3b ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +205,7 @@ rule Trojan_Win32_SmokeLdr_GJ_2147778868_0
         $x_1_2 = {88 0c 32 3d 03 02 00 00 46 3b f0 8b 15 ?? ?? ?? ?? 8a 8c 32 ?? ?? ?? ?? 8b 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

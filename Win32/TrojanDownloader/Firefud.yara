@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Firefud_A_2147659625_0
         $x_1_3 = "http://www.powerdomein.nl/nld/administrator/backups/firewallc.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

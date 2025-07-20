@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Rispere_2147602873_0
         $x_5_4 = "la.546*9" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
             ((2 of ($x_10_*))) or

@@ -19,6 +19,7 @@ rule HackTool_Win32_ProductKey_2147658877_0
         $x_1_5 = "DigitalProductID" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule HackTool_Win32_ProductKey_G_2147762512_0
         $x_1_4 = "Product key was not found" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_UacComTestFile_A_2147691593_0
         $x_1_5 = "192f2f0c-34ee-4b48-89c8-d4d6a9ff7204" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

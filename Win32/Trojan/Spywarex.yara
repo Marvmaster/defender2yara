@@ -20,6 +20,7 @@ rule Trojan_Win32_Spywarex_EC_2147920192_0
         $x_1_5 = "bholoader.win32.release.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

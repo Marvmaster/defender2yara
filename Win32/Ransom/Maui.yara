@@ -23,6 +23,7 @@ rule Ransom_Win32_Maui_A_2147825995_0
         $x_1_9 = {83 c4 1c 81 3f 54 50 52 43 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

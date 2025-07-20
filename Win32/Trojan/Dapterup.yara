@@ -19,6 +19,7 @@ rule Trojan_Win32_Dapterup_A_2147684349_0
         $x_2_4 = {8a 54 01 ff 30 14 01 49 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Trojan_Win32_Dapterup_A_2147684350_0
         $x_2_4 = {8a 4c 30 ff 30 0c 30 83 e8 01 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -73,6 +75,7 @@ rule Trojan_Win32_Dapterup_A_2147684351_0
         $x_2_4 = {8a 54 08 ff 30 14 08 48 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -98,6 +101,7 @@ rule Trojan_Win32_Dapterup_A_2147686915_0
         $x_2_2 = {25 64 2f 25 64 2f 25 64 20 25 30 32 64 3a 25 30 32 64 3a 25 30 32 64 00 5b 25 73 5d 3a 5b 25 73 5d 3a 5b 25 69 5d 3a 5b 25 73 5d 3a 5b 25 73 5d 3a 5b 25 69 5d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

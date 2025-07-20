@@ -24,6 +24,7 @@ rule TrojanDownloader_Win64_RedLineStealer_A_2147891364_0
         $x_2_9 = ".xsph.ru/" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

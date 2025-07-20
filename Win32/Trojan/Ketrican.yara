@@ -17,6 +17,7 @@ rule Trojan_Win32_Ketrican_MA_2147849573_0
         $x_1_2 = "localhost&client_secret=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

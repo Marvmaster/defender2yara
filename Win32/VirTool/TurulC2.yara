@@ -27,6 +27,7 @@ rule VirTool_Win32_TurulC2_A_2147897137_0
         $x_1_12 = "U3dpdGNoaW5nIHRvIHdz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

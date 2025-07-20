@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_PurelogStealer_RFAK_2147925940_0
         $x_1_3 = "http://46.8.237.66/spool02/Odgcgoez.wav" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

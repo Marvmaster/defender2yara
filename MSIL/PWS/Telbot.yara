@@ -25,6 +25,7 @@ rule PWS_MSIL_Telbot_GA_2147807553_0
         $x_1_10 = "Chrome" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

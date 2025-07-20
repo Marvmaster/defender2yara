@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Qqdrop_B_2147650929_0
         $x_1_6 = {c6 44 24 0c ?? c6 44 24 0d ?? c6 44 24 0e ?? c6 44 24 0f ?? c6 44 24 10 ?? c6 44 24 11 ?? c6 44 24 12 ?? c6 44 24 13 ?? c6 44 24 14 ?? c6 44 24 15 ?? c6 44 24 16 ?? c6 44 24 17 ?? c6 44 24 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

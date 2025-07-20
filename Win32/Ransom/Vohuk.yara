@@ -20,6 +20,7 @@ rule Ransom_Win32_Vohuk_PA_2147837679_0
         $x_1_5 = "Decryption of your files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Vohuk_PC_2147902101_0
         $x_1_1 = {03 c7 89 45 ?? 89 85 ?? ?? ?? ?? 33 c2 c1 c0 ?? 89 45 ?? 89 45 ?? 03 c1 33 f8 89 45 ?? 89 45 ?? 8b 45 ?? c1 c7 07 89 7d d8 89 bd ?? ?? ?? ?? 8b 7d ec 03 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

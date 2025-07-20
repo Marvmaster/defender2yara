@@ -19,6 +19,7 @@ rule Ransom_MSIL_Hydracrypt_AHY_2147850643_0
         $x_1_4 = "DisableTaskMgr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

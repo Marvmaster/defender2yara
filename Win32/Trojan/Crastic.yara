@@ -17,6 +17,7 @@ rule Trojan_Win32_Crastic_A_2147681452_0
         $x_1_2 = {63 73 72 73 73 2e 64 6c 6c 00 52 75 6e 64 6c 6c 33 32 57 00 53 65 72 76 69 63 65 4d 61 69 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Crastic_B_2147681453_0
         $x_1_2 = {80 3c 01 5c 75 06 42 83 fa 01 77 79 40 3b c6 72 e2 83 fa 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Crastic_C_2147688029_0
         $x_1_2 = {63 73 72 73 73 2e 64 6c 6c 00 52 75 6e 64 6c 6c 33 32 4d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win32_Crastic_C_2147708079_0
         $x_1_5 = {83 c4 10 3b f8 76 0c 8a 4c 30 ff 30 0c 30 40 3b c7 72 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -111,6 +115,7 @@ rule Trojan_Win32_Crastic_D_2147708080_0
         $x_2_4 = {8b ff 8a 88 ?? ?? ?? ?? 30 88 ?? ?? ?? ?? 48 75 f1 33 c9 83 f8 04 37 00 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*))) or
             ((2 of ($x_10_*))) or

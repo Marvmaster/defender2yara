@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Talsab_A_2147637346_0
         $x_1_4 = {26 63 6f 6e 74 65 75 64 6f 3d 00 [0-16] 50 4f 53 54 20 2f 31 73 74 65 6d 61 69 6c 2e 70 68 70 20 48 54 54 50 2f 31 2e 31}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule TrojanSpy_Win32_Talsab_B_2147641488_0
         $x_2_4 = "sifreli2" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanSpy_Win32_Talsab_C_2147648043_0
         $x_2_3 = "&conteudo=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

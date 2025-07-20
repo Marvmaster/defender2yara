@@ -17,6 +17,7 @@ rule Trojan_Win32_Mebroot_GMF_2147888460_0
         $x_1_2 = "%sibm%05d.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

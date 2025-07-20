@@ -18,6 +18,7 @@ rule Trojan_Win32_Neconyd_A_2147682400_0
         $x_1_4 = {66 83 38 00 56 8b f1 8b c8 74 08 41 41 66 83 39 00 75 f8 0f b7 16 66 89 11 41 41 46 46 66 85 d2 75 f1 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Neconyd_A_2147682400_1
         $x_1_4 = "ioEoe NEd1uiw" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -26,6 +26,7 @@ rule Ransom_Win32_Rantest_A_2147723010_0
         $x_1_12 = {4f 00 72 00 69 00 67 00 69 00 6e 00 61 00 6c 00 46 00 69 00 6c 00 65 00 6e 00 61 00 6d 00 65 00 [0-6] 57 00 65 00 61 00 6b 00 43 00 72 00 79 00 70 00 74 00 6f 00 72 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_500_*) and 1 of ($x_1_*))) or
             (all of ($x*))

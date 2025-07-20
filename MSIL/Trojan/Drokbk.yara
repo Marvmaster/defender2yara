@@ -19,6 +19,7 @@ rule Trojan_MSIL_Drokbk_A_2147820259_0
         $x_1_4 = "Provides Kernel Compatibility With User Session-Management Service." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_Drokbk_B_2147820260_0
         $x_1_2 = "c:\\programdata\\Interop Services" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win64_MinuInc_V_2147754997_0
         $x_2_1 = "MinuetsOs Inc" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

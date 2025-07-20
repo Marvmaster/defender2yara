@@ -19,6 +19,7 @@ rule TrojanProxy_MSIL_Banker_A_2147658453_0
         $x_1_5 = "PROXY xsenha" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanProxy_MSIL_Banker_B_2147661320_0
         $x_1_3 = "function FindProxyForURL(url, host)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule TrojanProxy_MSIL_Banker_D_2147679597_0
         $x_10_14 = "&netCard=" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_30_*) and 3 of ($x_20_*))) or
             ((1 of ($x_40_*) and 4 of ($x_30_*) and 2 of ($x_20_*) and 1 of ($x_10_*))) or
@@ -161,6 +164,7 @@ rule TrojanProxy_MSIL_Banker_E_2147679608_0
         $x_20_10 = "xupa11 xupa12 xupa4" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 2 of ($x_40_*) and 4 of ($x_20_*))) or
             ((2 of ($x_50_*) and 5 of ($x_20_*))) or
@@ -200,6 +204,7 @@ rule TrojanProxy_MSIL_Banker_G_2147679872_0
         $x_1_7 = "*citibank*" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or

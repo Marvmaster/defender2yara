@@ -18,6 +18,7 @@ rule Trojan_Win32_Tinxy_A_2147616670_0
         $x_1_4 = "http=127.0.0.1:9090" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

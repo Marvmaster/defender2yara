@@ -20,6 +20,7 @@ rule Ransom_MSIL_Dowviki_A_2147726237_0
         $x_2_6 = "Vindows.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

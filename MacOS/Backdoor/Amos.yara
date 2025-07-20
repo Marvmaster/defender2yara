@@ -17,6 +17,7 @@ rule Backdoor_MacOS_Amos_CJ_2147930751_0
         $x_1_2 = {42 0f b6 0c 22 42 0f b6 44 22 01 8d 79 d0 b2 d0 40 b6 d0 40 80 ff 0a 72 ?? 8d 79 bf 40 b6 c9 40 80 ff 06 72 ?? 8d 79 9f 40 b6 a9 40 80 ff 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

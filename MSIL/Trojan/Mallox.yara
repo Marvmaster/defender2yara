@@ -18,6 +18,7 @@ rule Trojan_MSIL_Mallox_NEAA_2147842567_0
         $x_1_3 = "Stwxrnz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Mallox_SK_2147892527_0
         $x_2_1 = {07 72 01 00 00 70 6f 04 00 00 0a 6f 05 00 00 0a 6f 06 00 00 0a 6f 07 00 00 0a 6f 08 00 00 0a 0a dd 0d 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_Mallox_SL_2147899869_0
         $x_2_2 = "rvaht.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_MSIL_Mallox_SM_2147914437_0
         $x_2_1 = {16 2d 1c 15 2c 19 08 07 09 18 6f 12 00 00 0a 1f 10 28 13 00 00 0a 6f 14 00 00 0a 09 18 58 0d 09 07 6f 15 00 00 0a 16 2d 1d 32 d5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_MSIL_Mallox_ND_2147915617_0
         $x_1_7 = "DynamicInvoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

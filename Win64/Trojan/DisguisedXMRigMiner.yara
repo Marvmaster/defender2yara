@@ -22,6 +22,7 @@ rule Trojan_Win64_DisguisedXMRigMiner_SG_2147908721_0
         $x_1_7 = "dxsetup.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win64_DisguisedXMRigMiner_MX_2147942375_0
         $x_1_2 = "Golang-Updater" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

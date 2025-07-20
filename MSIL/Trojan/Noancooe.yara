@@ -22,6 +22,7 @@ rule Trojan_MSIL_Noancooe_D_2147720453_0
         $x_1_7 = {77 00 69 00 72 00 65 00 73 00 68 00 61 00 72 00 6b 00 ?? ?? 46 00 69 00 64 00 64 00 6c 00 65 00 72 00 ?? ?? 57 00 50 00 45 00 20 00 50 00 52 00 4f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_Noancooe_AJ_2147741682_0
         $x_1_1 = {28 04 00 00 06 28 01 00 00 0a 28 02 00 00 0a 6f 03 00 00 0a 14 14 6f 04 00 00 0a 26 16 28 05 00 00 0a dd 06 00 00 00 26 dd 00 00 00 00 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_MSIL_Noancooe_GEBBA_2147813204_0
         $x_10_1 = {2b 26 16 0b 07 45 05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 00 00 0a 00 00 00 d0 02 00 00 06 26 19 0b 2b dc}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

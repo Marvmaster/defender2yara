@@ -16,6 +16,7 @@ rule Backdoor_MSIL_Malpos_A_2147706620_0
         $x_1_2 = {44 45 56 2d 50 4f 49 4e 54 01 09 30 2d 39 41 2d 5a 61 2d 7a 01 00 01 09 30 2d 39 41 2d 5a 61 2d 7a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

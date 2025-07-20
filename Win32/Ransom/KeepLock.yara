@@ -18,6 +18,7 @@ rule Ransom_Win32_KeepLock_A_2147696433_0
         $x_1_4 = {5c 43 72 79 70 74 6f 41 70 70 5c 62 75 69 6c 64 5c 62 69 6e 5c 52 65 6c 65 61 73 65 5c 53 65 6c 66 44 65 73 74 72 6f 79 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Win32_KeepLock_A_2147696433_1
         $x_1_9 = "use it or goodbye forever!!!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

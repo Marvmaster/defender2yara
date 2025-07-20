@@ -20,6 +20,7 @@ rule Trojan_Win32_Bohu_A_2147641681_0
         $x_1_5 = "\\baidu\\dsetup.exe install" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

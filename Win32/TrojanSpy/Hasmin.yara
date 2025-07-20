@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Hasmin_A_2147647346_0
         $x_1_4 = "dXNlcl9wcmVmKCJuZXR3b3JrLnByb3h5LmF1dG9jb25maWdfdXJs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*))) or
             (all of ($x*))

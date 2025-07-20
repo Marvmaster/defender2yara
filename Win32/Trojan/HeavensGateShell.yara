@@ -16,6 +16,7 @@ rule Trojan_Win32_HeavensGateShell_YAA_2147901111_0
         $x_1_1 = {8b 4e 20 8b 46 28 31 04 11 83 c2 04 3b 56 24 72 ef}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Wykcores_A_2147643782_0
         $x_1_2 = {80 38 2a 74 22 46 40 4a 75 f6 eb 1b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Convagent_GMC_2147904766_0
         $x_1_4 = "GProc0INkExiTt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

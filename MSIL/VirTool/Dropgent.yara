@@ -18,6 +18,7 @@ rule VirTool_MSIL_Dropgent_2147748545_0
         $x_1_3 = ".item();$item.Document.Application.ShellExecute(\"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

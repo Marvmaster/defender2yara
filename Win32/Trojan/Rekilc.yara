@@ -26,6 +26,7 @@ rule Trojan_Win32_Rekilc_A_2147705717_0
         $x_2_12 = {c7 45 cc 20 c5 6f 62 66 c7 45 d0 1e a4 66 c7 45 d2 cf 11 ff d6 b9 31 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -63,6 +64,7 @@ rule Trojan_Win32_Rekilc_B_2147710060_0
         $n_100_13 = {43 00 72 00 61 00 66 00 74 00 79 00 21 00 [0-32] 50 00 6c 00 61 00 79 00 20 00 41 00 67 00 61 00 69 00 6e 00}  //weight: -100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((6 of ($x_1_*))) or
@@ -115,6 +117,7 @@ rule Trojan_Win32_Rekilc_C_2147719692_0
         $x_2_24 = {53 00 65 00 6c 00 65 00 63 00 74 00 20 00 2a 00 20 00 66 00 72 00 6f 00 6d 00 20 00 57 00 69 00 6e 00 33 00 32 00 5f 00 50 00 72 00 6f 00 63 00 65 00 73 00 73 00 [0-16] 77 00 69 00 6e 00 6d 00 67 00 6d 00 74 00 73 00 3a 00 [0-16] 45 00 78 00 65 00 63 00 51 00 75 00 65 00 72 00 79 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or

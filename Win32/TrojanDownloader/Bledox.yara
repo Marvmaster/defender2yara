@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Bledox_B_2147678771_0
         $x_1_4 = "\\cf_.bin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

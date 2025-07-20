@@ -17,6 +17,7 @@ rule Trojan_Win32_Svelta_A_2147627562_0
         $x_1_3 = {66 69 72 65 66 6f 78 2e 65 78 65 00 69 65 78 70 6c 6f 72 65 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

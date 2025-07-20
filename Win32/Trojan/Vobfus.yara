@@ -18,6 +18,7 @@ rule Trojan_Win32_Vobfus_C_2147651004_0
         $x_1_4 = "vbexeList1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Vobfus_DEA_2147761738_0
         $x_1_1 = {8b c3 d3 e0 03 fb c1 eb 05 03 9d ?? fd ff ff 03 85 ?? fd ff ff 89 bd ?? fd ff ff 89 45 f8 8b 85 ?? fd ff ff 31 45 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win32_Vobfus_2147809627_0
         $x_2_10 = "qthqvpbi.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win32_Vobfus_BD_2147836913_0
         $x_1_2 = "nuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\UCKH" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_Win32_Vobfus_BE_2147837293_0
         $x_1_2 = {85 55 42 1c 84 46 ad bb 7d 93 aa 54 5a 35 00 77 12 3a 56 fa 69 49 87 86 e5 fc bd d0 96 b0 e7 e5 b0 5a 7e 64 69 43 80 cd 97 c3 1f 21 d5 16 71}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_Win32_Vobfus_BK_2147852482_0
         $x_1_4 = {3d fb fc fa a0 68 10 a7 38 08 00 2b 33 71 b5 22 3d fb fc fa a0 68 10 a7 38 08 00 2b 33 71 b5 02 00 00 00 0c 5d 40 00 1c 5d 40 00 00 00 00 00 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_Win32_Vobfus_MBFH_2147898359_0
         $x_1_2 = {71 40 00 00 f8 30 00 00 ff ff ff 08 00 00 00 01 00 00 00 01 00 00 00 e9 00 00 00 3c 6a 40 00 3c 6a 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +188,7 @@ rule Trojan_Win32_Vobfus_MBYK_2147915220_0
         $x_1_1 = {f8 26 40 00 d8 15 40 00 10 f1 30 00 00 ff ff ff 08 00 00 00 01 00 00 00 01 00 01 00 e9 00 00 00 30 12 40 00 c8 13 40 00 70 11 40 00 78 00 00 00 7f 00 00 00 89 00 00 00 8a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +210,7 @@ rule Trojan_Win32_Vobfus_MBXW_2147925117_0
         $x_1_1 = {60 2f 41 00 2c 39 40 00 12 f0 30 00 00 ff ff ff 08 00 00 00 01 00 00 00 01 00 01 00 e9 00 00 00 00 37 40 00 e4 37 40 00 74 36 40 00 78 00 00 00 81 00 00 00 8a 00 00 00 8b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

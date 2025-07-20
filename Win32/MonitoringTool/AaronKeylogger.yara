@@ -18,6 +18,7 @@ rule MonitoringTool_Win32_AaronKeylogger_234360_0
         $x_1_4 = "http://everbot.pl/cs/reg.php?id=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win64_Dbadur_GCM_2147929128_0
         $x_10_1 = {32 f1 4e 12 76 ?? 20 41 76 ?? 20 41 76 ?? 20 41 7f e8 ?? ?? ?? ?? 20 41 24 e5 25 40 6e ?? 20 41 24 e5 24 40 7c ?? 20 41 24 e5 23}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

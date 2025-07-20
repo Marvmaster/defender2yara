@@ -21,6 +21,7 @@ rule Worm_Win32_Mariofev_A_2147607910_0
         $x_1_7 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -54,6 +55,7 @@ rule Worm_Win32_Mariofev_A_2147608044_0
         $x_2_10 = "ModCommunication.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_2_*))) or
             (all of ($x*))
@@ -81,6 +83,7 @@ rule Worm_Win32_Mariofev_B_2147616589_0
         $x_1_5 = {33 32 00 6e 76 [0-4] 33 32 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -107,6 +110,7 @@ rule Worm_Win32_Mariofev_C_2147616590_0
         $x_1_4 = "Windows NT\\CURRENTVERSION\\WINDOWS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +136,7 @@ rule Worm_Win32_Mariofev_A_2147618336_0
         $x_1_5 = {6b 65 5f 54 65 72 6d 69 6e 61 74 65 4b 65 72 6e 65 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

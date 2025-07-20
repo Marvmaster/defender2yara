@@ -16,6 +16,7 @@ rule Trojan_Win64_TinplateLoader_B_2147919488_0
         $x_1_1 = {7b 7d 6e 6a c7 84 24 ?? ?? ?? ?? 34 35 6b 64 c7 84 24 ?? ?? ?? ?? 61 64 61 30 c7 84 24 ?? ?? ?? ?? 73 6c 66 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Radthief_GVA_2147935569_0
         $x_1_1 = {8b 45 cc 30 04 37 46 8b 45 d8 8b 7d d4 83 45 c4 11 89 45 bc 2b c7 89 75 b4 3b f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule Trojan_Win32_AcidBox_B_2147836218_0
         $x_1_10 = {66 c7 44 24 ?? 45 76 66 c7 44 24 ?? 6f 74 66 c7 44 24 ?? 66 79 c7 44 24 ?? 42 46 45 5f 66 c7 44 24 ?? 65 6e 66 c7 44 24 ?? 5f 00 c6 44 24 ?? 74 c6 44 24 ?? 5f c6 44 24 ?? 4e c6 44 24 ?? 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule Trojan_Win32_AcidBox_C_2147836219_0
         $x_1_8 = {48 8b 41 10 3b 90 f4 00 00 00 1b ?? 25 09 03 06 a0 89 04 24 eb 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

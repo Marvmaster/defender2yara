@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_Seimon_A_2147598869_0
         $x_2_9 = {25 73 5c 65 6c 2e 64 61 74 00 00 00 25 57 49 4e 44 4f 57 53}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -59,6 +60,7 @@ rule TrojanDownloader_Win32_Seimon_D_2147610550_0
         $x_1_10 = "%s\\%d.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 7 of ($x_1_*))) or
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or

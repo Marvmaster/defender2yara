@@ -40,6 +40,7 @@ rule Virus_Win32_VB_AZ_2147581363_0
         $x_1_26 = "Wah, anda benar2 mendukung kebangkitan programmer2 baru indonesia. Awal sukses dari jahil2 kaya gini toh!!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (15 of ($x*))
 }
 
@@ -93,6 +94,7 @@ rule Virus_Win32_VB_CV_2147594472_0
         $x_2_34 = "shell\\explore\\command=" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_4_*) and 5 of ($x_2_*) and 21 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_4_*) and 6 of ($x_2_*) and 19 of ($x_1_*))) or
@@ -241,6 +243,7 @@ rule Virus_Win32_VB_CZ_2147600203_0
         $x_1_4 = {c7 85 50 ff ff ff ?? ?? ?? ?? 6a 08 5e 89 b5 48 ff ff ff 8d 95 48 ff ff ff 8d 4d a8 e8 1e e8 ff ff c7 85 60 ff ff ff ?? ?? ?? ?? 89 b5 58 ff ff ff 8d 95 58 ff ff ff 8d 4d b8 e8 ?? ?? ff ff 8d 45 d4 89 85 70 ff ff ff c7 85 68 ff ff ff 0b 40 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

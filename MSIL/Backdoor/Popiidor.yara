@@ -24,6 +24,7 @@ rule Backdoor_MSIL_Popiidor_A_2147686760_0
         $x_1_10 = {75 72 6c 00 72 75 6e 68 69 64 64 65 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Backdoor_MSIL_Popiidor_A_2147686760_1
         $x_1_8 = "$$$EMPTY$$$$" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

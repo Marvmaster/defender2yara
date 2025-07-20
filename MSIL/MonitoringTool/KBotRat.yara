@@ -20,6 +20,7 @@ rule MonitoringTool_MSIL_KBotRat_233581_0
         $x_1_6 = "kBotClient" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

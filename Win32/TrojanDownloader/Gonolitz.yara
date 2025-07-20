@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Gonolitz_A_2147647599_0
         $x_1_7 = "html2fpdf/font/makefont/files" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

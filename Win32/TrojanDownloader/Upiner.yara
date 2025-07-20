@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Upiner_A_2147681100_0
         $x_1_4 = "786464602A3F3F" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

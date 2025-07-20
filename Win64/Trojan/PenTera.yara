@@ -19,6 +19,7 @@ rule Trojan_Win64_PenTera_EH_2147826938_0
         $x_1_4 = "/c ping -n 20 127.0.0.1 > nul & del" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_PenTera_AB_2147843949_0
         $x_5_1 = {44 0f b6 5c 24 ?? 44 0f b6 54 24 ?? 48 83 c7 03 44 89 dd 44 89 d6 41 c1 fa 02 c1 fd 04 41 c1 e3 04 41 83 e2 0f 41 89 ec 0f b6 6c 24 ?? 45 01 da c1 e6 06 41 83 e4 03 40 02 74 24 ?? 44 88 57 ?? 45 31 db 41 8d 2c ac 40 88 77 ?? 40 88 6f ?? 4c 39 cb 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win64_PenTera_LK_2147844209_0
         $x_1_5 = "9PEPayload" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

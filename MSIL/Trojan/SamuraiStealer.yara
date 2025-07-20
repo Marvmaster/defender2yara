@@ -23,6 +23,7 @@ rule Trojan_MSIL_SamuraiStealer_DA_2147907508_0
         $x_1_8 = "get_Logins" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_MSIL_SamuraiStealer_SK_2147919613_0
         $x_1_3 = "get_Cookies" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MSIL_PowerkatzInj_RS_2147899223_0
         $x_1_3 = "InjectDLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

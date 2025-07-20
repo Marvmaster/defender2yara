@@ -16,6 +16,7 @@ rule BrowserModifier_Win32_Diplugem_213571_0
         $x_1_2 = {74 02 eb 35 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 74 02 eb 27 c7 45 fc 00 00 00 00 eb 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule BrowserModifier_Win32_Diplugem_213571_1
         $x_1_2 = "%s?q=%08X&t=%08X&p=%d&v=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule BrowserModifier_Win32_Diplugem_213571_2
         $x_1_5 = "/pid=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -88,6 +91,7 @@ rule BrowserModifier_Win32_Diplugem_213571_3
         $x_1_5 = {33 d2 81 3d ?? ?? ?? ?? 8f c3 ab b9 0f 45 ca 3b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule BrowserModifier_Win32_Diplugem_213571_4
         $x_1_3 = {b9 04 01 00 00 29 c1 8d 84 45 d4 fb ff ff 89 4c 24 04 89 04 24 c7 44 24 0c 04 00 00 00 c7 44 24 08 ?? ?? ?? ?? e8 ?? ?? ?? ?? 89 34 24 ff 15 ?? ?? ?? ?? 83 ec 04 89 45 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule BrowserModifier_Win32_Diplugem_213571_5
         $x_1_4 = {c1 e9 02 fc f3 a5 8b 44 24 04 8b 64 24 08 89 44 24 20 9d 61 ff e0 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule BrowserModifier_Win32_Diplugem_213571_6
         $x_1_4 = {8b c6 23 c7 f7 d8 25 20 83 b8 ed d1 ee 33 f0 49 75 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -179,6 +186,7 @@ rule BrowserModifier_Win32_Diplugem_213571_7
         $x_1_4 = {8b 4d 10 33 4d 18 89 4d 10 8b 55 14 0f af 55 10 89 55 14 8b 45 10 03 45 14 89 45 10 8b 4d 10 0f af 4d 1c 8b 55 fc 03 0a 8b 45 fc 89 08 eb ?? 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +209,7 @@ rule BrowserModifier_Win32_Diplugem_213571_8
         $x_1_3 = {05 05 00 00 00 b9 04 00 00 00 8d 55 8c c7 45 8c 00 00 00 00 89 14 24 89 44 24 04 c7 44 24 08 04 00 00 00 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? b9 01 00 00 00 e8 ?? ?? ?? ?? 89 14 24 c7 44 24 04 01 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -223,6 +232,7 @@ rule BrowserModifier_Win32_Diplugem_213571_9
         $x_1_3 = "INI-enc:new(BASE64X|META)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -248,6 +258,7 @@ rule BrowserModifier_Win32_Diplugem_213571_10
         $x_1_3 = {0f b6 74 37 01 89 d7 81 f7 ff ff ff ff 89 f3 21 fb 81 f6 ff ff ff ff 21 f2 09 d3 88 da 8b b5 ?? ?? ?? ?? 8b bd ?? ?? ?? ?? 88 14 37}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -274,6 +285,7 @@ rule BrowserModifier_Win32_Diplugem_213571_11
         $x_1_4 = {81 e2 03 00 00 80 79 05 4a 83 ca fc 42 8b 85 9c fe ff ff 8d 0c d5 00 00 00 00 d3 e8 43 30 06 42 46 3b df 72 db}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +311,7 @@ rule BrowserModifier_Win32_Diplugem_213571_12
         $x_10_6 = {8d 45 f8 50 ff 15 ?? ?? ?? ?? 8b 4d f8 8b 45 fc 6a 00 81 c1 00 80 c1 2a 68 80 96 98 00 15 21 4e 62 fe 50 51 e8 ?? ?? ?? ?? 83 fa 07 7c 0e 7f 07 3d ff 6f 40 93 76 05 83 c8 ff 8b d0 8b 4d 08 85 c9 74 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -325,6 +338,7 @@ rule BrowserModifier_Win32_Diplugem_213571_13
         $x_1_4 = {2d 00 2d 00 65 00 78 00 74 00 65 00 6e 00 73 00 69 00 6f 00 6e 00 73 00 2d 00 6f 00 6e 00 2d 00 63 00 68 00 72 00 6f 00 6d 00 65 00 2d 00 75 00 72 00 6c 00 73 00 20 00 2d 00 2d 00 74 00 65 00 73 00 74 00 2d 00 74 00 79 00 70 00 65 00 20 00 2d 00 2d 00 73 00 69 00 6c 00 65 00 6e 00 74 00 2d 00 64 00 65 00 62 00 75 00 67 00 67 00 65 00 72 00 2d 00 65 00 78 00 74 00 65 00 6e 00 73 00 69 00 6f 00 6e 00 2d 00 61 00 70 00 69 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -349,6 +363,7 @@ rule BrowserModifier_Win32_Diplugem_213571_14
         $x_1_5 = "E:%d create memlog" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -375,6 +390,7 @@ rule BrowserModifier_Win32_Diplugem_213571_15
         $x_1_4 = {5c 70 72 6f 64 75 63 74 69 6f 6e ?? 72 65 63 6f 6d 70 69 6c 65 [0-1] 5c 6d 75 6c 74 69 6e 73 74 61 6c 6c 65 72 5c [0-8] 5c 72 65 63 6f 6d 70 69 6c 65 5c ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 5c 62 69 6e 5c 52 65 6c 65 61 73 65 2e 4d 69 6e 69 6d 61 6c 5c 6f 66 66 69 63 65 72 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -401,6 +417,7 @@ rule BrowserModifier_Win32_Diplugem_213571_16
         $x_1_4 = {b8 01 00 00 00 c7 44 24 74 00 00 00 00 8b 0d ?? ?? ?? ?? 89 0c 24 c7 44 24 04 01 00 00 00 89 44 24 60 e8 ?? ?? ?? ?? 89 44 24 74 8b 44 24 74 89 44 24 7c c7 44 24 64 ?? ?? ?? ?? 8b 44 24 64 89 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -428,6 +445,7 @@ rule BrowserModifier_Win32_Diplugem_213571_17
         $x_1_5 = "\"installer_id\": \"%InstallerID%\",\"session_id\": \"%SessionID%\",\"affiliate_id\": \"%AffiliateID%\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -451,6 +469,7 @@ rule BrowserModifier_Win32_Diplugem_213571_18
         $x_1_4 = {8b 40 05 8b 8c 24 a0 00 00 00 89 e2 c7 42 0c 00 00 00 00 c7 42 08 00 00 00 00 89 0a 89 42 10 c7 42 04 3f 00 0f 00 a1 ?? ?? ?? ?? ff d0 83 ec 14 b9 ?? ?? ?? ?? ba ?? ?? ?? ?? 89 84 24 ?? ?? ?? ?? 81 bc 24 ?? ?? ?? ?? 00 00 00 00 0f 44 ca 89 8c 24 ?? ?? ?? ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -477,6 +496,7 @@ rule BrowserModifier_Win32_Diplugem_213571_19
         $x_1_7 = "installer\\step0.ini" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -507,6 +527,7 @@ rule BrowserModifier_Win32_Diplugem_213571_20
         $x_1_8 = "Cancel for abourt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -538,6 +559,7 @@ rule BrowserModifier_Win32_Diplugem_213571_21
         $x_1_12 = "\\Uninstall\\{E7D895EF-039F-5F07-A148-D5E3BCF728D3}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -564,6 +586,7 @@ rule BrowserModifier_Win32_Diplugem_213571_22
         $x_1_7 = "m_webBrowser.QueryControl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -594,6 +617,7 @@ rule BrowserModifier_Win32_Diplugem_213571_23
         $x_1_8 = "CUninstaller::UninstallCommandline: UninstallString='%s'" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -623,6 +647,7 @@ rule BrowserModifier_Win32_Diplugem_213571_24
         $x_1_7 = "CBrowserHost::CreateHostWindow: before CreateWebBrowser" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -652,6 +677,7 @@ rule BrowserModifier_Win32_Diplugem_213571_25
         $x_1_7 = "CUninstaller::UninstallCommandline: UninstallString='%s'" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -681,6 +707,7 @@ rule BrowserModifier_Win32_Diplugem_213571_26
         $x_1_10 = {0f b6 14 16 8b b5 ?? ?? ?? ?? 89 f7 81 c7 01 00 00 00 [0-6] 8b bd ?? ?? ?? ?? 0f b6 74 37 01 31 f2 88 d3 8b 95 [0-10] 88 1c 16 8b 95 ?? ?? ?? ?? 8b b5 ?? ?? ?? ?? 0f b6 36 39 f2 0f 44 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -711,6 +738,7 @@ rule BrowserModifier_Win32_Diplugem_213571_27
         $x_1_7 = "killall_fullpath: proc:'%s' idx:%d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

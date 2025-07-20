@@ -17,6 +17,7 @@ rule Trojan_MSIL_CoinStealer_MBDN_2147845677_0
         $x_1_2 = "ECNGrm81DXfmTAQi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_CoinStealer_SK_2147891913_0
         $x_1_4 = "btcgen.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

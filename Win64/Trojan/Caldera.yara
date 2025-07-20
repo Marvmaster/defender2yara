@@ -17,6 +17,7 @@ rule Trojan_Win64_Caldera_RTS_2147926538_0
         $x_1_2 = "db3411641532182693481445312558207660913467407226562" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

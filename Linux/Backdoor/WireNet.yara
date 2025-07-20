@@ -23,6 +23,7 @@ rule Backdoor_Linux_WireNet_A_2147815026_0
         $x_1_8 = "%s/.xinitrc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

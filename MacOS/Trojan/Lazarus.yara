@@ -18,6 +18,7 @@ rule Trojan_MacOS_Lazarus_A_2147899717_0
         $x_1_3 = {c9 02 08 8b 0a 05 00 91 28 81 40 39 08 01 13 4a 28 81 00 39 e8 03 0a aa 9f 02 0a eb 21 ff ff 54}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

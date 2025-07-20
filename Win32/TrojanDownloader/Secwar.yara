@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Secwar_A_2147628529_0
         $x_1_3 = "http://www.securewarrior.com/securewarrior.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

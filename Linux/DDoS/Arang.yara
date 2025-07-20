@@ -18,6 +18,7 @@ rule DDoS_Linux_Arang_A_2147827558_0
         $x_1_3 = "0f Death - Member" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

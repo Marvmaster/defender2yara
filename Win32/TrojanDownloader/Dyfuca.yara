@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Dyfuca_AB_2147608446_0
         $x_25_9 = "ver=%s&rid=%s&cls=%s" ascii //weight: 25
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 6 of ($x_25_*))) or
             ((2 of ($x_100_*) and 2 of ($x_25_*))) or

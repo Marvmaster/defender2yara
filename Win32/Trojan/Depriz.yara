@@ -19,6 +19,7 @@ rule Trojan_Win32_Depriz_B_2147718364_0
         $x_1_4 = {72 00 64 00 73 00 61 00 64 00 6d 00 69 00 6e 00 00 00 72 00 65 00 67 00 73 00 79 00 73 00 00 00 73 00 69 00 67 00 76 00 65 00 72 00 00 00 72 00 6f 00 75 00 74 00 65 00 6d 00 61 00 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Depriz_C_2147718403_0
         $x_1_7 = "Wow64DisableWow64FsRedirection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Trojan_Win32_Depriz_E_2147718876_0
         $x_1_5 = "ntertmgr64.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_Win32_Depriz_F_2147719573_0
         $x_1_5 = "ntertmgr64.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

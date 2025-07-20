@@ -30,6 +30,7 @@ rule Trojan_MSIL_DataStealer_MK_2147758522_0
         $x_1_15 = "Select * from Win32_ComputerSystem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 10 of ($x_1_*))) or
             (all of ($x*))

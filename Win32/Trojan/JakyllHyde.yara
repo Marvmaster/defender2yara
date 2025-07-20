@@ -21,6 +21,7 @@ rule Trojan_Win32_JakyllHyde_SA_2147744264_0
         $x_1_6 = "/drag0n/Specs/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -50,6 +51,7 @@ rule Trojan_Win32_JakyllHyde_DEA_2147757865_0
         $x_1_3 = "altered.twilightparadox.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

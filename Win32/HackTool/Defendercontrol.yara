@@ -19,6 +19,7 @@ rule HackTool_Win32_Defendercontrol_2147746246_0
         $x_1_5 = "Hide Window on Startup" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule HackTool_Win32_Defendercontrol_B_2147796445_0
         $x_1_3 = "UPX0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule HackTool_Win32_Defendercontrol_C_2147796446_0
         $x_1_5 = "AutoIt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
@@ -117,6 +120,7 @@ rule HackTool_Win32_Defendercontrol_S_2147818787_0
         $x_1_9 = {77 69 6e 73 74 61 30 5c 64 65 66 61 75 6c 74 00 73 2d 31 2d 35 2d 31 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

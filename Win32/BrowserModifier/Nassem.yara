@@ -20,6 +20,7 @@ rule BrowserModifier_Win32_Nassem_139056_0
         $x_2_6 = "\\Drivers\\pub.dll" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

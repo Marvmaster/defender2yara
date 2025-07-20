@@ -16,6 +16,7 @@ rule PWS_Win32_Chif_A_2147626271_0
         $x_1_2 = {81 3b 50 61 73 73 75 ee 83 c3 04 8d bd b8 fd ff ff 43 66 81 3b 3c 2f 74 0a 8a 03 88 07 47 c6 07 00 eb ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule VirTool_WinNT_Citeary_A_2147627643_0
         $x_1_3 = {fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 8b 03 89 04 8a 0f 20 c0 0d 00 00 01 00 0f 22 c0 fb eb 71}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule VirTool_WinNT_Citeary_B_2147629606_0
         $x_1_4 = {fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 [0-255] 0f 20 c0 0d 00 00 01 00 0f 22 c0 fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

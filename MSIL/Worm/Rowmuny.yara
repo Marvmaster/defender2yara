@@ -22,6 +22,7 @@ rule Worm_MSIL_Rowmuny_A_2147632776_0
         $x_1_8 = {5c 00 41 00 64 00 6d 00 69 00 6e 00 24 00 5c 00 [0-18] 2e 00 73 00 63 00 72 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

@@ -17,6 +17,7 @@ rule Trojan_Win64_MythStealer_BSA_2147945148_0
         $x_7_2 = "myth.cocukporno.lol/screen | Victim" ascii //weight: 7
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

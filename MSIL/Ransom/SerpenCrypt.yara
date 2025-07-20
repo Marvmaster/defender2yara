@@ -41,6 +41,7 @@ rule Ransom_MSIL_SerpenCrypt_A_2147719885_0
         $x_1_26 = {00 5c 24 72 65 63 79 63 6c 65 2e 62 69 6e 5c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -68,6 +69,7 @@ rule Ransom_MSIL_SerpenCrypt_B_2147721051_0
         $x_1_8 = "System.Reflection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

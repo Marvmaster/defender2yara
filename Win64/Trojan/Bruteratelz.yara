@@ -17,6 +17,7 @@ rule Trojan_Win64_Bruteratelz_A_2147919883_0
         $x_1_2 = {49 89 ca 4c 89 c8 ff 64 24 28 49 89 ca 48 8b 44 24 30 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

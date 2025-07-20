@@ -21,6 +21,7 @@ rule Backdoor_Win32_Canoswei_A_2147648367_0
         $x_1_7 = "www.weiss-cannon.de" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

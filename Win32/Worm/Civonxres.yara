@@ -22,6 +22,7 @@ rule Worm_Win32_Civonxres_A_2147706940_0
         $x_1_8 = "4lk5lk435kl435kl4j5l43j5l4k5l43k5l3kl3545kl4ejhg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or

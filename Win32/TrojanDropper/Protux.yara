@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Protux_A_2147628666_0
         $x_1_4 = {5c 68 6f 6e 67 00 00 00 68 6f 6e 67 7a 69 6e 73 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDropper_Win32_Protux_B_2147645446_0
         $x_1_4 = {52 65 67 51 24 75 65 72 79 56 61 6c 75 25 65 45 78 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -66,6 +68,7 @@ rule TrojanDropper_Win32_Protux_B_2147645446_1
         $x_1_3 = {5c 68 6f 6e 00 00 00 00 68 6f 6e 67 7a 69 6e 73 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

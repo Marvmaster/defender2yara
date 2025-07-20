@@ -18,6 +18,7 @@ rule Worm_Win32_Korpu_A_2147601278_0
         $x_2_4 = "Apa yang kulakukan tak dapat kumaafkan" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 2 of ($x_2_*))) or
             (all of ($x*))

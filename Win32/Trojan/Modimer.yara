@@ -16,6 +16,7 @@ rule Trojan_Win32_Modimer_A_2147726279_0
         $x_1_2 = {2f 6d 79 2e 64 61 74 00 52 55 4e 00 48 41 53 48}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

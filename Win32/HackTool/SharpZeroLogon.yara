@@ -32,6 +32,7 @@ rule HackTool_Win32_SharpZeroLogon_2147764484_0
         $x_1_18 = "ServerChallenge" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((16 of ($x_1_*))) or
             ((1 of ($x_2_*) and 14 of ($x_1_*))) or

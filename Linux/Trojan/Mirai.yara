@@ -19,6 +19,7 @@ rule Trojan_Linux_Mirai_2147740141_0
         $x_1_4 = "echo -e \"/bin/busybox telnetd -p9000 -l/bin/sh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Linux_Mirai_SP_2147745811_0
         $x_1_4 = "killer_pid" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Linux_Mirai_B_2147745823_0
         $x_1_5 = "attack_get_opt_ip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Linux_Mirai_C_2147745826_0
         $x_1_4 = "/usr/bin/dnssmasq" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_Linux_Mirai_A_2147746220_0
         $x_2_2 = "FUCKT/" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Trojan_Linux_Mirai_G_2147751579_0
         $x_1_3 = "GET /shell?cd%20%2Ftmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_Linux_Mirai_L_2147752889_0
         $x_1_3 = "t0talc0ntr0l4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -183,6 +190,7 @@ rule Trojan_Linux_Mirai_M_2147757324_0
         $x_1_3 = "diag_ping_admin_en.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -208,6 +216,7 @@ rule Trojan_Linux_Mirai_YB_2147761399_0
         $x_1_5 = "view/IPV6/ipv6networktool/traceroute/ping.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -236,6 +245,7 @@ rule Trojan_Linux_Mirai_YC_2147762353_0
         $x_1_5 = "46.101.157.90/666.sh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -264,6 +274,7 @@ rule Trojan_Linux_Mirai_SD_2147808331_0
         $x_2_4 = "/bin/busybox" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -291,6 +302,7 @@ rule Trojan_Linux_Mirai_V_2147816313_0
         $x_5_7 = {63 64 20 2f 76 61 72 2f 72 75 6e 20 7c 7c 20 63 64 20 2f 6d 6e 74 20 7c 7c 20 63 64 20 2f 64 61 74 61 20 7c 7c 20 63 64 20 2f 72 6f 6f 74 20 7c 7c 20 63 64 20 2f 3b 20 77 67 65 74 20 68 74 74 70 3a 2f 2f 25 73 2f [0-9] 20 2d 4f 20 [0-9] 3b 20 62 75 73 79 62 6f 78 20 77 67 65 74 20 68 74 74 70 3a 2f 2f 25 73 2f [0-9] 20 2d 4f 20 [0-9] 3b 20 63 75 72 6c 20 68 74 74 70 3a 2f 2f 25 73 2f [0-9] 20 2d 4f 20 [0-9] 3b 20 63 68 6d 6f 64 20 37 37 37 20 [0-9] 3b 20 2e 2f [0-9] 3b 20 72 6d 20 2d 72 66}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -317,6 +329,7 @@ rule Trojan_Linux_Mirai_AA_2147817789_0
         $x_1_4 = "/etc/config/hosts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -340,6 +353,7 @@ rule Trojan_Linux_Mirai_CC_2147817790_0
         $x_2_4 = "/system/system/bin/" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_4_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((1 of ($x_4_*) and 2 of ($x_3_*))) or
@@ -367,6 +381,7 @@ rule Trojan_Linux_Mirai_DD_2147817791_0
         $x_2_4 = "lost connection with CNC" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*))) or
@@ -392,6 +407,7 @@ rule Trojan_Linux_Mirai_FA_2147818206_0
         $x_1_2 = "BOTKILL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -413,6 +429,7 @@ rule Trojan_Linux_Mirai_FF_2147818281_0
         $x_5_2 = "/x20/x29/x73/x26/x76/x74/x27/x37/x37/x36/x36/x37/x32/x71/x30/x29/x28/x2C/x22/x35/x3F/x37/x37/x3F/x76/x20/x31/x3D/x76/x32/x28/x27/x74/x3F/x23/x74/x75/x29/x30/x77/x77/x31/x71/x24/x29/x35/x28/x33/x3F/x26" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -436,6 +453,7 @@ rule Trojan_Linux_Mirai_HH_2147818282_0
         $x_2_4 = "/bin/busybox cat /proc/cpuinfo" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
             (all of ($x*))
@@ -462,6 +480,7 @@ rule Trojan_Linux_Mirai_II_2147818283_0
         $x_2_4 = "Binded and listening on address" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -487,6 +506,7 @@ rule Trojan_Linux_Mirai_B_2147819270_0
         $x_1_5 = "YRF%6udCJFG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -509,6 +529,7 @@ rule Trojan_Linux_Mirai_W_2147831779_0
         $x_1_2 = {f8 13 02 b0 ab e2 0a f4 e4 13 02 b0 61 6a e4 1b c0 b0 40 8a f8 1b 80 b0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -534,6 +555,7 @@ rule Trojan_Linux_Mirai_X_2147906333_0
         $x_1_5 = "POST /cdn-cgi/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -562,6 +584,7 @@ rule Trojan_Linux_Mirai_Y_2147908958_0
         $x_1_4 = ".mdebug.abi32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -591,6 +614,7 @@ rule Trojan_Linux_Mirai_AA_2147908960_0
         $x_1_5 = "post /cdn-cgi/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or

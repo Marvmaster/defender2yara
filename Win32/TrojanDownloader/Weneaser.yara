@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Weneaser_A_2147626322_0
         $x_1_7 = "download" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

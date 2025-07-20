@@ -16,6 +16,7 @@ rule Trojan_Win64_SpyStealer_SA_2147902117_0
         $x_1_1 = {48 8b 44 24 ?? 0f be 00 85 c0 74 2b 48 8b 44 24 ?? 0f b6 00 8b 0c 24 33 c8 8b c1 89 04 24 48 8b 44 24 ?? 48 ff c0 48 89 44 24 ?? 69 04 24 ?? ?? ?? ?? 89 04 24 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

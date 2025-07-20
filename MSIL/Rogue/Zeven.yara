@@ -19,6 +19,7 @@ rule Rogue_MSIL_Zeven_154230_0
         $x_1_5 = "\\Win7 AV\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

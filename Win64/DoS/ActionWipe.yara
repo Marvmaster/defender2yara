@@ -17,6 +17,7 @@ rule DoS_Win64_ActionWipe_B_2147905634_0
         $x_100_2 = "PhysicalDrive%d  Write MBR %s" wide //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

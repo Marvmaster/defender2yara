@@ -19,6 +19,7 @@ rule Ransom_Linux_GwisinLocker_A_2147829398_0
         $x_2_5 = {89 d0 44 0f b6 da 0f b6 de c1 ea 10 c1 e8 18 46 0f b6 1c 1e 0f b6 d2 0f b6 04 06 0f b6 14 16 41 8b 04 80 41 8b 14 90 c1 c8 08 43 33 04 98 44 0f b6 1c 1e c1 c2 10 47 8b 1c 98 41 c1 c3 08 44 31 d8 31 d0 89 87 f0 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or

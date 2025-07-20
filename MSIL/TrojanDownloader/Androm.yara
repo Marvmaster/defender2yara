@@ -19,6 +19,7 @@ rule TrojanDownloader_MSIL_Androm_SIB_2147798220_0
         $x_1_4 = {73 74 75 62 5f [0-16] 2e [0-16] 72 73 72 63}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule TrojanDownloader_MSIL_Androm_CXD_2147842144_0
         $x_5_2 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 34 00 35 00 2e 00 39 00 33 00 2e 00 32 00 30 00 31 00 2e 00 36 00 32 00 2f}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule TrojanDownloader_MSIL_Androm_AND_2147896989_0
         $x_1_3 = "PowerShell command executed" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Muldrop_C_2147607468_0
         $x_10_7 = "RegWrite" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDropper_Win32_Muldrop_V_2147741519_0
         $x_2_2 = {63 00 6d 00 64 00 20 00 2f 00 63 00 20 00 72 00 f9 00 6e 00 61 00 6d 00 65 00 20 00 22 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

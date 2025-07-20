@@ -18,6 +18,7 @@ rule PWS_Win32_Chyup_A_2147628247_0
         $x_1_4 = {32 31 00 00 ff ff ff ff 01 00 00 00 3a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -44,6 +45,7 @@ rule PWS_Win32_Chyup_B_2147629614_0
         $x_1_3 = "&opt=grab" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -69,6 +71,7 @@ rule PWS_Win32_Chyup_C_2147647383_0
         $x_1_3 = {66 ba d2 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

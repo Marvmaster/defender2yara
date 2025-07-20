@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Stocde_A_2147718611_0
         $x_1_4 = {2e 65 78 65 00 00 00 68 74 74 70 3a 2f 2f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Backdoor_Win32_Grifwin_A_2147627314_0
         $x_1_3 = {4c 6f 77 4c 65 76 65 6c 4d 6f 75 73 65 50 72 6f 63 00 00 00 4c 6f 77 4c 65 76 65 6c 4b 65 79 62 6f 61 72 64 50 72 6f 63 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

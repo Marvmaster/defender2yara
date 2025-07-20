@@ -18,6 +18,7 @@ rule Ransom_Linux_Soleenya_A3_2147908288_0
         $x_2_4 = ".slnya" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

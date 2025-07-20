@@ -19,6 +19,7 @@ rule Tool_Win32_MpTestModerateRemove_2147697698_0
         $x_1_5 = "312b2df8-fa68-4893-9f72-f1fbbf2a9b4c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

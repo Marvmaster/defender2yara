@@ -23,6 +23,7 @@ rule Worm_Win32_Emold_D_2147611299_0
         $x_3_8 = {6f 70 65 6e 3d 73 79 73 74 65 6d 2e 65 78 65 0d 0a 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 4 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or

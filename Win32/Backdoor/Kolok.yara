@@ -19,6 +19,7 @@ rule Backdoor_Win32_Kolok_A_2147660361_0
         $x_10_5 = {74 61 73 6b 6d 67 72 2e 65 78 65 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*))) or

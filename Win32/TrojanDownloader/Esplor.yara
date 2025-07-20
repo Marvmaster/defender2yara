@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Esplor_A_2147627341_0
         $x_1_5 = "C:\\Program Files\\vstart.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

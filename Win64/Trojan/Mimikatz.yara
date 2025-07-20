@@ -21,6 +21,7 @@ rule Trojan_Win64_Mimikatz_D_2147829739_0
         $x_1_6 = "shaykhelislamov/Documents/Codetest/testproject/main/exec.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win64_Mimikatz_RPZ_2147902279_0
         $x_1_1 = {49 89 c6 48 89 7c 24 40 48 89 74 24 48 48 63 70 3c 8b 54 30 50 31 c9 41 b8 00 30 00 00 41 b9 04 00 00 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win64_Mimikatz_AMCV_2147928847_0
         $x_1_4 = "Please input ip. eg, /ip:xx.XXX.xx.x or /ip:xxx.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

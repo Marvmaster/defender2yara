@@ -17,6 +17,7 @@ rule Trojan_Win64_LsassDumper_SA_2147895417_0
         $x_1_2 = {44 30 00 48 8d 40 ?? 48 83 ea ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

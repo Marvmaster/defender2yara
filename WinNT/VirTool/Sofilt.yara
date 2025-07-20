@@ -17,6 +17,7 @@ rule VirTool_WinNT_Sofilt_A_2147629942_0
         $x_1_3 = {89 45 04 8d 45 04 50 e8 ?? ?? ?? ?? 85 c0 74 05 8b 45 04 eb 3a ff 75 24 ff 75 20 ff 75 1c ff 75 18 ff 75 14 ff 75 10 e8 00 00 00 00 58 e8 06 00 00 00 50 e8 1e 00 00 00 e8 00 00 00 00 58 83 c0 05 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

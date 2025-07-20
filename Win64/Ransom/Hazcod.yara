@@ -22,6 +22,7 @@ rule Ransom_Win64_Hazcod_AA_2147836603_0
         $x_1_7 = "os.(*Process).Kill" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

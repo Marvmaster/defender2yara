@@ -19,6 +19,7 @@ rule HackTool_Linux_BruteForce_A_2147926123_0
         $x_1_4 = "masjesuscan/exploit/tplink.Cve20231389" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

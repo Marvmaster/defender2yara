@@ -20,6 +20,7 @@ rule VirTool_Win64_Delunhokesz_A_2147917411_0
         $x_1_5 = {49 89 c8 48 89 c1 ?? ?? ?? ?? ?? 8b 55 8c 48 8b 45 b0 8b 40 08 41 89 c2 48 8b 45 b0 8b 40 0c 89 c1 48 8b 45 e0 48 01 c8 48 89 c1 ?? ?? ?? ?? 49 89 c1 41 89 d0 4c 89 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

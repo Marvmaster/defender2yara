@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Maran_AU_2147597097_0
         $x_1_6 = {07 00 00 00 77 69 6e 78 70 6e 70 00 ff ff ff ff 03 00 00 00 65 78 65 00 ff ff ff ff 01 00 00 00 5c 00 00 00 41 75 64 69 6f 20 41 64 61 70 74 65 72 00 00 00 56 47 41 44 6f 77 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

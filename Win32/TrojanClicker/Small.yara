@@ -18,6 +18,7 @@ rule TrojanClicker_Win32_Small_E_2147583509_0
         $x_1_4 = "Program Files\\Internet Explorer\\iexplore.exe nwframe.net/fr/?id=us" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule TrojanClicker_Win32_Small_JD_2147602507_0
         $x_1_10 = "DisableRegistryTools" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule TrojanClicker_Win32_Small_JE_2147630297_0
         $x_1_3 = "http://festival23234.com/flash.php?mode=1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule TrojanClicker_Win32_Small_AAR_2147745754_0
         $x_10_8 = "WinExec" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_40_*) and 2 of ($x_10_*) and 3 of ($x_5_*))) or
             ((1 of ($x_40_*) and 3 of ($x_10_*) and 1 of ($x_5_*))) or

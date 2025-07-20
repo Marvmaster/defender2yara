@@ -28,6 +28,7 @@ rule Trojan_MSIL_StealerPacker_2147771496_0
         $x_1_13 = "SetCompatibleTextRenderingDefault" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +68,7 @@ rule Trojan_MSIL_StealerPacker_2147771496_1
         $x_1_19 = "CallingConvention" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

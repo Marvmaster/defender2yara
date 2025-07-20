@@ -22,6 +22,7 @@ rule Ransom_Win32_Shieldcrypt_A_2147719660_0
         $x_1_8 = "net stop vss" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -69,6 +70,7 @@ rule Ransom_Win32_Shieldcrypt_A_2147719660_1
         $x_1_25 = "Windows SmartScreen Updater" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

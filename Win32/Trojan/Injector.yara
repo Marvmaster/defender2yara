@@ -16,6 +16,7 @@ rule Trojan_Win32_Injector_B_2147626549_0
         $x_1_2 = "omjB6EN11Lv8RQUsr8XZSflhh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Injector_X_2147651842_0
         $x_1_2 = {33 db 8d 0c 5d ?? ?? ?? ?? 91 2d [0-16] 3b c2 75 ?? 8d 92 6f 8c ff ff eb ?? 2b 15 ?? ?? ?? ?? 3b c2 76 [0-48] 5d ff e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Injector_AB_2147655957_0
         $x_1_4 = "There's no room for a new section :(" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Trojan_Win32_Injector_AK_2147658636_0
         $x_1_2 = {83 c4 0c 8d 4c 24 18 51 68 03 01 00 00 ff d0 85 c0 74 ?? 8b 0d ?? ?? ?? ?? 33 c0 c6 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +106,7 @@ rule Trojan_Win32_Injector_AN_2147659626_0
         $x_1_2 = {83 c1 01 89 8d 64 fd ff ff 8b 95 fc fe ff ff 0f b7 42 06 39 85 64 fd ff ff 7d 58 8b 8d 68 fd ff ff 8b 51 3c 8b 45 0c 8d 8c 10 f8 00 00 00 8b 95 64 fd ff ff 6b d2 28 03 ca 89 8d 60 fd ff ff 6a 00 8b 85 60 fd ff ff 8b 48 10 51 8b 95 60 fd ff ff 8b 45 0c 03 42 14 50 8b 8d 60 fd ff ff 8b 55 10 03 51 0c 52 8b 45 08 8b 08 51}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Trojan_Win32_Injector_AJ_2147660364_0
         $x_1_7 = {75 03 83 c0 20 88 06 46 80 3e 00 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -148,6 +154,7 @@ rule Trojan_Win32_Injector_BC_2147694221_0
         $x_1_1 = "86!85!49!192!100!139!112!48!139!118!12!139!118!28!139!110!8!139!126!32!139!54!56!71!24!117!243" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +176,7 @@ rule Trojan_Win32_Injector_BH_2147708716_0
         $x_1_1 = {8a 5c 38 ff 33 5d e4 8b 55 f0 8b c3 e8 ?? ?? ?? ?? 8b d8 8d 45 d4 8b d3 e8 ?? ?? ?? ?? 8b 55 d4 8d 45 ec e8 ?? ?? ?? ?? 8b 45 e4 89 45 f0 83 c6 02 8b 45 fc e8 ?? ?? ?? ?? 3b f0 7c 81}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +198,7 @@ rule Trojan_Win32_Injector_YB_2147709398_0
         $x_1_1 = {8b 45 08 03 85 ?? ?? ff ff 8a 00 32 84 95 f4 fb ff ff 8b 4d 08 03 8d ?? ?? ff ff 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +220,7 @@ rule Trojan_Win32_Injector_BI_2147709405_0
         $x_1_1 = {33 d0 89 95 ?? ?? ff ff db 85 ?? ?? ff ff de c1 e8 ?? ?? 00 00 8b 0d ?? ?? ?? ?? 03 8d ?? ?? ff ff 88 01 18 00 8b 95 ?? ?? ff ff 33 95 ?? ?? ff ff 8b 85 ?? ?? ff ff 2b 85 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +242,7 @@ rule Trojan_Win32_Injector_BJ_2147709418_0
         $x_1_1 = {33 ca 83 f1 ?? 8b ?? ?? 6b c0 ?? 99 be}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -253,6 +264,7 @@ rule Trojan_Win32_Injector_BK_2147709419_0
         $x_1_1 = {31 fb 8b 7c ?? ?? 31 fb 33 5c ?? ?? 8b 7c ?? ?? 31 fb 89 5c ?? ?? 68 01 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -274,6 +286,7 @@ rule Trojan_Win32_Injector_YC_2147709648_0
         $x_1_1 = {f7 f1 0f be 92 ?? ?? ?? ?? 8b 45 08 03 45 ?? 0f b6 08 33 ca 8b 55 08 03 55 ?? 88 0a e8 ?? ?? ?? ?? 8b 4d 08 03 4d ?? 0f b6 11 33 d0 8b 45 08 03 45 ?? 88 10 8b 4d 08 03 4d ?? 8b 55 08 03 55 ?? 8a 02 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -324,6 +337,7 @@ rule Trojan_Win32_Injector_YL_2147710122_0
         $x_1_5 = "FUCK OFF!!!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -347,6 +361,7 @@ rule Trojan_Win32_Injector_YQ_2147710493_0
         $x_1_3 = {43 75 72 72 65 6e 74 55 73 65 72 00 73 61 6e 64 00 00 00 00 76 6d 77 61 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -369,6 +384,7 @@ rule Trojan_Win32_Injector_YG_2147710755_0
         $x_1_2 = {8a 0a 84 c9 74 15 32 0e 2a 4d fc fe c9 ff 45 fc 88 0c 10 42 39 7d fc 72 e7 eb 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -391,6 +407,7 @@ rule Trojan_Win32_Injector_YO_2147711072_0
         $x_1_2 = {8b d1 81 e2 ?? ?? ?? ?? 79 05 4a 83 ?? ?? 42 f7 da 1a d2 bf ?? ?? ?? ?? 80 e2 ?? fe c2 8a c2 f6 e9 8a d8 8b c1 99 f7 ff 8a 82 ?? ?? ?? ?? 2a d8 8a 04 31 02 c3 88 04 31 8b ?? ?? ?? 41 3b c8 7c bf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -411,6 +428,7 @@ rule Trojan_Win32_Injector_BH_2147711101_0
         $x_1_1 = {df e0 f6 c4 ?? 75 ed (d0|d1) d8 dd 05 c0 30 40 00 e8 a3 08 00 00 33 f6 8a d8 89 75 fc bf 20 30 40 00 db 45 fc dc 1d c0 25 40 00 df e0 f6 c4 41 75 12}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -435,6 +453,7 @@ rule Trojan_Win32_Injector_YH_2147711328_0
         $x_5_4 = {89 c3 be 20 2b 40 00 81 fe 20 2b 40 00 73 0d ff 16 83 c6 04 81 fe 20 2b 40 00 72 f3}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -461,6 +480,7 @@ rule Trojan_Win32_Injector_YR_2147711330_0
         $x_1_3 = {8b 5c 24 0c 83 c3 ?? 89 5c 24 0c 8b 5c 24 0c 8b 7c 24 ?? 83 c7 fe 39 fb 0f 8e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -483,6 +503,7 @@ rule Trojan_Win32_Injector_YV_2147711331_0
         $x_1_2 = {89 45 08 75 cd 2e 00 8b 35 ?? ?? ?? ?? 33 d2 8a 5c 0e ff f7 f7 49 8a 04 16 88 1c 16 8b 15 ?? ?? ?? ?? 88 04 0a c1 45 08 07 8b 45 08 2b c7 2d ?? ?? ?? ?? 85 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -504,6 +525,7 @@ rule Trojan_Win32_Injector_ZD_2147712304_0
         $x_1_1 = {a0 34 30 40 00 ?? d8 88 45 ff 89 5d f8 db 45 f8 dc 1d e8 20 40 00 df e0 9e 76 15 dd 05 e0 20 40 00 90 51 8d 85 ?? ?? ff ff dd 1c 24 ff d0 59 59 8a 83 20 30 40 00 8d 8c 1d ?? ?? ff ff 32 45 ff 3c 3a 89 01 77 04 fe c8 88 01 43 eb bd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -526,6 +548,7 @@ rule Trojan_Win32_Injector_ZO_2147712629_0
         $x_1_2 = {8b 55 f8 8b 02 33 85 ?? ?? ?? ff 8b 4d f8 89 01 5f 5e 5b 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -548,6 +571,7 @@ rule Trojan_Win32_Injector_ZY_2147714856_0
         $x_1_2 = {88 19 8b 4d ?? 0f b6 00 03 ca 0f b6 d3 03 c2 8b df 99 f7 fb 8a 04 32 30 01 ff 45 ?? 8b 45 ?? 3b 45 ?? 72 ad}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -570,6 +594,7 @@ rule Trojan_Win32_Injector_ZS_2147716108_0
         $x_1_2 = {5b 8b 15 50 70 46 00 52 ff d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -592,6 +617,7 @@ rule Trojan_Win32_Injector_ZV_2147716109_0
         $x_1_2 = {23 19 83 e9 ?? f7 d3 8d 5b ?? c1 cb 09 d1 c3 01 fb 8d 5b ff 53 5f c1 c7 09 d1 cf 89 1e f8 83 d6 04 f8 83 d0 04 eb cf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -615,6 +641,7 @@ rule Trojan_Win32_Injector_YF_2147717109_0
         $x_1_3 = {8b 45 08 8b 00 ff 75 08 ff 50 08 8b 45 fc 8b 4d ec 64 89 0d 00 00 00 00 5f 5e 5b c9 c2 04 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -637,6 +664,7 @@ rule Trojan_Win32_Injector_CR_2147726560_0
         $x_1_2 = {8a 14 0f 88 11 41 4e 75 f7 8b 0d ?? ?? ?? ?? 8d 84 08 ?? ?? ?? ?? a3 ?? ?? ?? ?? ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -660,6 +688,7 @@ rule Trojan_Win32_Injector_AAA_2147727017_0
         $x_1_3 = {6a 00 6a 00 6a 24 6a 00 6a 00 6a 00 ff 95 ?? ?? ff ff 50 6a 00 ff 95 ?? ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -682,6 +711,7 @@ rule Trojan_Win32_Injector_B1_2147730077_0
         $x_1_3 = "vrThhVOMilu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -707,6 +737,7 @@ rule Trojan_Win32_Injector_A_2147740729_0
         $x_1_2 = {8d 49 00 8a 04 0a 34 ?? 88 01 83 c1 01 83 ef 01 75 f1 8d 4c 24 1c 51 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -730,6 +761,7 @@ rule Trojan_Win32_Injector_B_2147740948_0
         $x_1_3 = {81 e7 ff 00 00 00 89 7c b4 14 8b 5c 8c 14 03 df 81 e3 ff 00 00 80 79 08 4b 81 cb 00 ff ff ff 43 8a 5c 9c 14 30 1c 2a 42 3b d0 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -751,6 +783,7 @@ rule Trojan_Win32_Injector_DSK_2147744215_0
         $x_2_1 = {8b 45 e0 33 d2 b9 04 00 00 00 f7 f1 8b 45 e8 0f be 0c 10 8b 55 e0 0f b6 82 ?? ?? ?? ?? 33 c1 8b 4d e0 88 81 ?? ?? ?? ?? eb c4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -773,6 +806,7 @@ rule Trojan_Win32_Injector_PA_2147744731_0
         $x_1_2 = {69 c9 fd 43 03 00 56 89 0d ?? ?? ?? ?? 81 05 ?? ?? ?? ?? ?? ?? ?? 00 81 3d ?? ?? ?? ?? ?? ?? 00 00 8b 35 ?? ?? ?? ?? 75 06 00 8b 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -796,6 +830,7 @@ rule Trojan_Win32_Injector_MR_2147750940_0
         $x_1_3 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -818,6 +853,7 @@ rule Trojan_Win32_Injector_MR_2147750940_1
         $x_1_2 = {06 0b 07 13 ?? 11 ?? 0d 09 2c ?? 09 72 ?? ?? ?? 70 28 ?? ?? ?? 0a 2d ?? 2b ?? 2b ?? 07 28 ?? ?? ?? 06 74 ?? ?? ?? 01 0c 08 28 ?? ?? ?? 06 00 2b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -841,6 +877,7 @@ rule Trojan_Win32_Injector_MS_2147750941_0
         $x_1_3 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -871,6 +908,7 @@ rule Trojan_Win32_Injector_2147751258_0
         $x_1_9 = "something( %lf ) is happening over there %lf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -895,6 +933,7 @@ rule Trojan_Win32_Injector_MU_2147751655_0
         $x_1_1 = {66 0f 58 c1 [0-32] 66 0f 6e e6 [0-16] 66 0f 6e e9 [0-10] 0f 57 ec [0-16] 66 0f 7e e9 [0-21] 39 c1 [0-32] 0f 77 [0-16] 46 [0-16] 8b 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -916,6 +955,7 @@ rule Trojan_Win32_Injector_C_2147754904_0
         $x_1_1 = {85 c0 39 db 85 c0 39 db ff 34 0f 85 c0 d9 d0 85 c0 31 34 24 85 c0 39 db 85 c0 8f 04 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -942,6 +982,7 @@ rule Trojan_Win32_Injector_D_2147754958_0
         $x_1_6 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -965,6 +1006,7 @@ rule Trojan_Win32_Injector_KA_2147761975_0
         $x_1_4 = "C:\\TEMP\\Fluck_32.tmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -991,6 +1033,7 @@ rule Trojan_Win32_Injector_MW_2147772402_0
         $x_1_6 = "MSH_WHEELSUPPORT_MSG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1016,6 +1059,7 @@ rule Trojan_Win32_Injector_MY_2147774293_0
         $x_1_5 = "IUnknown_AddRef_Proxy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1041,6 +1085,7 @@ rule Trojan_Win32_Injector_MZ_2147774295_0
         $x_1_5 = "mixerGetID" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1067,6 +1112,7 @@ rule Trojan_Win32_Injector_MBK_2147781346_0
         $x_1_6 = "Microsoft.NET\\Framework\\v4.0.30319\\RegSvcs.EXE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1092,6 +1138,7 @@ rule Trojan_Win32_Injector_EPMB_2147783317_0
         $x_1_5 = "ec2ndm4seaw7dmc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1115,6 +1162,7 @@ rule Trojan_Win32_Injector_ACL_2147787057_0
         $x_1_3 = {8b 45 f0 03 45 d8 2d ?? ?? ?? ?? 83 c0 04 89 45 fc 89 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1137,6 +1185,7 @@ rule Trojan_Win32_Injector_EPQX_2147787059_0
         $x_1_2 = {d2 d2 d2 d2 83 ea 00 81 34 2f ?? ?? ?? ?? 83 e8 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1161,6 +1210,7 @@ rule Trojan_Win32_Injector_EPQX_2147787059_1
         $x_1_4 = "Temporisers4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1185,6 +1235,7 @@ rule Trojan_Win32_Injector_MA_2147787625_0
         $x_2_4 = {89 3e c7 84 24 7c ff ff ff 00 00 00 00 83 fa 0a 83 f9 3f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*))) or
@@ -1212,6 +1263,7 @@ rule Trojan_Win32_Injector_MA_2147787625_1
         $x_1_2 = "Loader.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1238,6 +1290,7 @@ rule Trojan_Win32_Injector_MA_2147787625_2
         $x_1_6 = "WNetAddConnection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1260,6 +1313,7 @@ rule Trojan_Win32_Injector_ZA_2147787628_0
         $x_1_2 = {66 85 db 31 f5 84 c0 31 2c 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1281,6 +1335,7 @@ rule Trojan_Win32_Injector_DD_2147788162_0
         $x_1_1 = {87 5c 7f 17 f7 e6 87 35 7f 2a f7 01 87 24 7f 40 f7 a8 87 86 7f 59 f7 78 87 19 7f 37 f7 8d 87 69 7f af f7 a0 87 fb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1302,6 +1357,7 @@ rule Trojan_Win32_Injector_DE_2147788163_0
         $x_1_1 = {29 71 07 30 60 87 5f 20 ae 8b 03 6e 47 a5 22 24 0b 16 6c 44 80 ac 5b 3a fd 9d b6 2c 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1324,6 +1380,7 @@ rule Trojan_Win32_Injector_GI_2147788250_0
         $x_1_2 = {be 00 00 00 00 01 c3 81 c3 7d ab 0f 17 b8 86 3b c0 52 01 c0 81 e8 2a 4c f3 36 31 17 48 09 db 48 81 c7 02 00 00 00 f7 d3 29 d8 39 cf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1345,6 +1402,7 @@ rule Trojan_Win32_Injector_ZC_2147788254_0
         $x_1_1 = {31 33 81 ea ?? ?? ?? ?? 01 d2 81 c0 01 00 00 00 43 29 c2 ba ?? ?? ?? ?? 09 d2 39 cb 75 c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1366,6 +1424,7 @@ rule Trojan_Win32_Injector_RAQ_2147794197_0
         $x_1_1 = {f4 01 00 00 75 05 [0-32] c3 80 00 [0-32] e8 ?? 00 00 00 [0-32] 31 [0-32] 39 ?? (7c|75) [0-32] c3 [0-32] 8d [0-32] 8b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1387,6 +1446,7 @@ rule Trojan_Win32_Injector_MRTY_2147794543_0
         $x_1_1 = "f946338be1333933d1193f3339696" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1409,6 +1469,7 @@ rule Trojan_Win32_Injector_MRVF_2147794613_0
         $x_1_2 = {b7 04 00 ff 04 28 ff 05 01 00 24 02 00 0d 14 00 03 00 08 28 ff 0d 50 00 04 00 6c 00 ff 5e 18 00 04 00 71 dc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1430,6 +1491,7 @@ rule Trojan_Win32_Injector_YTRE_2147794614_0
         $x_1_1 = "pMM:DocumentID>adobe:docid:photoshop:e4a3f931-627e-11dc-ba81-9bfb3cc4cbdf</xapMM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1456,6 +1518,7 @@ rule Trojan_Win32_Injector_STRR_2147794617_0
         $x_1_6 = "XDriverGetStatus OpenService()" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1477,6 +1540,7 @@ rule Trojan_Win32_Injector_LPP_2147794618_0
         $x_1_1 = {33 bc b6 9c 33 bc b6 9c 33 bc b6 9c 5c a3 bc 9c 37 bc b6 9c 5c a3 b2 9c 31 bc b6 9c 33 bc b7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1498,6 +1562,7 @@ rule Trojan_Win32_Injector_CVBN_2147794620_0
         $x_1_1 = {89 c8 bf 04 00 00 00 99 f7 ff 8b 7d e0 8a 04 17 30 04 0b 41 39 f1 7c e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1519,6 +1584,7 @@ rule Trojan_Win32_Injector_CVBN_2147794620_1
         $x_1_1 = {66 8b 84 55 04 ff ff ff 33 c8 8b 95 f8 fe ff ff 81 e2 ff ff 00 00 33 ca f7 d1 8b 85 f8 fe ff ff 25 ff ff 00 00 8b 55 08 88 0c 02 66 8b 85 fc fe ff ff 66 05 01 00 66 89 85 fc fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1541,6 +1607,7 @@ rule Trojan_Win32_Injector_RPA_2147795761_0
         $x_1_2 = {83 7d 0c 00 74 1a 8b 4d fc c6 01 00 8b 55 fc 83 c2 01 89 55 fc 8b 45 0c 83 e8 01 89 45 0c eb e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1563,6 +1630,7 @@ rule Trojan_Win32_Injector_MPYY_2147795819_0
         $x_1_2 = {32 f0 23 2e 1c 27}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1584,6 +1652,7 @@ rule Trojan_Win32_Injector_RPW_2147796515_0
         $x_1_1 = {3d c4 00 00 00 83 fb 1a 31 db 83 f8 00 83 fa 0d 33 1c 0e 83 fa 57 83 fb 5d 09 1c 08 81 fb a3 00 00 00 81 f9 fa 00 00 00 31 3c 08 83 f8 11 81 fb 9b 00 00 00 81 e9 42 02 00 00 83 f9 21 83 f9 1b 81 c1 3d 02 00 00 90 83 f9 1a 41 7d b3 83 f8 02 81 fa d5 00 00 00 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1613,6 +1682,7 @@ rule Trojan_Win32_Injector_RPW_2147796515_1
         $x_1_9 = {40 00 ff d0 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1634,6 +1704,7 @@ rule Trojan_Win32_Injector_RPW_2147796515_2
         $x_1_1 = {81 c2 02 00 00 00 [0-16] 39 ca 7e 30 00 [0-32] 8a 1a [0-16] 88 1e [0-16] 46}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1655,6 +1726,7 @@ rule Trojan_Win32_Injector_KRT_2147797362_0
         $x_1_1 = {00 05 b8 0b d8 09 bf 04 ef 01 12 25 00 ff 03 1b 00 00 00 05 05 00 4c 69 73 74 33 00 08 04 b8 0b d8 09 bf 04 c2 01 11 24 00 ff 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1676,6 +1748,7 @@ rule Trojan_Win32_Injector_IOP_2147797363_0
         $x_1_1 = {30 09 21 12 1d 38 39 17 2d 1c 0c 19 09 38 1e 09 30 02 0c 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1698,6 +1771,7 @@ rule Trojan_Win32_Injector_MRVU_2147797366_0
         $x_1_2 = {43 d3 77 aa 4c 81 b3 5b 75 3e a1 17 e7 fa 9a de 7d bb 47}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1720,6 +1794,7 @@ rule Trojan_Win32_Injector_MPY_2147797779_0
         $x_1_2 = {33 71 b5 86 8e bf c7 50 7e 90 41 8e 94 26 00 83 0f 56 59 2a 3d fb fc fa a0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1741,6 +1816,7 @@ rule Trojan_Win32_Injector_RPX_2147797924_0
         $x_1_1 = {31 db 83 fa 29 83 f9 43 33 1c 0e 83 fb 50 83 fa 76 09 1c 08 83 f8 6d 81 fa aa 00 00 00 31 3c 08 83 fb 4d 81 f9 91 00 00 00 81 e9 42 02 00 00 83 f8 36 81 f9 97 00 00 00 81 c1 3d 02 00 00 3d f1 00 00 00 81 fa 8a 00 00 00 41 7d b2 81 f9 bf 00 00 00 81 fa db 00 00 00 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1762,6 +1838,7 @@ rule Trojan_Win32_Injector_RTG_2147798659_0
         $x_1_1 = {88 45 ff 0f b6 45 ff 33 45 f8 88 45 ff 0f b6 45 ff 83 c0 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1783,6 +1860,7 @@ rule Trojan_Win32_Injector_INK_2147798664_0
         $x_1_1 = {ff 0c 00 00 00 32 37 34 39 41 38 45 43 42 34 30 32 00 00 00 00 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1805,6 +1883,7 @@ rule Trojan_Win32_Injector_RPD_2147805655_0
         $x_1_2 = {c1 e0 03 0b d0 88 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1826,6 +1905,7 @@ rule Trojan_Win32_Injector_DFE_2147806252_0
         $x_1_1 = {f7 3b 87 aa 7f 2c f7 0f 87 4c 7f 17 f7 79 87 e3 7f 96 f7 86 87 98 7f de f7 91 87 6c 7f e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1847,6 +1927,7 @@ rule Trojan_Win32_Injector_JNK_2147807576_0
         $x_1_1 = {33 00 08 04 40 0b 98 0d bf 04 c2 01 11 0a 00 ff 03 26 00 00 00 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1868,6 +1949,7 @@ rule Trojan_Win32_Injector_JNK_2147807576_1
         $x_1_1 = {66 8b 10 66 3b 11 0f 85 1b 03 00 00 66 3b d3 74 19 66 8b 50 02 66 3b 51 02 0f 85 08 03 00 00 83 c0 04 83 c1 04 66 3b d3 75 d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1889,6 +1971,7 @@ rule Trojan_Win32_Injector_RPQ_2147807727_0
         $x_1_1 = {54 50 46 30 06 54 46 6f 72 6d 33 05 46 6f 72 6d 33 04 4c 65 66 74 03 c0 00 03 54 6f 70 02 7c 05 57 69 64 74 68 03 88 04 06 48 65 69 67 68 74 03 58 02 07 43 61 70 74 69 6f 6e 06 05 46 6f 72 6d 33 05 43 6f 6c 6f 72 07 09 63 6c 42 74 6e 46 61 63 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1910,6 +1993,7 @@ rule Trojan_Win32_Injector_RPV_2147807730_0
         $x_1_1 = {54 50 46 30 06 54 46 6f 72 6d 32 05 46 6f 72 6d 32 04 4c 65 66 74 03 ee 00 03 54 6f 70 03 a8 00 05 57 69 64 74 68 03 f8 02 06 48 65 69 67 68 74 03 cf 01 07 43 61 70 74 69 6f 6e 06 05 46 6f 72 6d 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1932,6 +2016,7 @@ rule Trojan_Win32_Injector_RPZ_2147807732_0
         $x_1_2 = {88 04 32 46 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1953,6 +2038,7 @@ rule Trojan_Win32_Injector_RPG_2147807855_0
         $x_1_1 = {31 18 81 c2 9f bd 7a b1 40 81 ee 01 00 00 00 81 ee 44 84 a8 a5 39 c8 75 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1974,6 +2060,7 @@ rule Trojan_Win32_Injector_RPH_2147807856_0
         $x_1_1 = {e8 24 00 00 00 31 13 [0-16] 81 c3 01 00 00 00 [0-16] 39 c3 75 da}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1995,6 +2082,7 @@ rule Trojan_Win32_Injector_RPI_2147807857_0
         $x_1_1 = {31 3e 29 c1 48 81 c6 04 00 00 00 [0-16] 39 de 75 e4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2016,6 +2104,7 @@ rule Trojan_Win32_Injector_RPJ_2147807858_0
         $x_1_1 = {21 db 31 0a [0-16] 81 c2 01 00 00 00 39 fa 75 d4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2037,6 +2126,7 @@ rule Trojan_Win32_Injector_RPK_2147807859_0
         $x_1_1 = {39 c9 74 01 ea 31 32 [0-16] 81 c2 04 00 00 00 [0-16] 39 ca 75 e5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2058,6 +2148,7 @@ rule Trojan_Win32_Injector_RPL_2147807860_0
         $x_1_1 = {39 db 74 01 ea 31 10 [0-16] 81 c0 04 00 00 00 [0-16] 39 f8 75 e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2079,6 +2170,7 @@ rule Trojan_Win32_Injector_RPM_2147807861_0
         $x_1_1 = {74 01 ea 31 1e [0-16] 81 c6 04 00 00 00 [0-32] 39 fe 75 dc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2105,6 +2197,7 @@ rule Trojan_Win32_Injector_TH_2147808812_0
         $x_1_6 = "GetTickCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2127,6 +2220,7 @@ rule Trojan_Win32_Injector_ARA_2147834298_0
         $x_1_2 = {8b 45 0c 8a 19 0f b6 14 08 0f b6 c3 03 fa 03 c7 8b fe 99 f7 ff 8b 45 08 8b fa 8a 14 38 03 c7 88 11 41 ff 4d 10 88 18 75 d7 5f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2153,6 +2247,7 @@ rule Trojan_Win32_Injector_ARA_2147834298_1
         $x_2_6 = "fuckyou2" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2174,6 +2269,7 @@ rule Trojan_Win32_Injector_SE_2147888538_0
         $x_1_1 = {89 02 8b 45 ?? 03 45 ?? 89 45 ?? 6a ?? e8 ?? ?? ?? ?? 8b 55 ?? 03 55 ?? 2b d0 8b 45 ?? 31 10 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b d8 8b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2195,6 +2291,7 @@ rule Trojan_Win32_Injector_ABI_2147899448_0
         $x_2_1 = {2b c1 66 87 d2 66 0b d2 80 ee c0 2b f1 8b 4d c8 66 0f a3 da 66 8b d1 f8 66 c1 ea 05 66 2b ca 66 0f bc d1 f6 da 66 0f c1 d2 8b 55 f4 85 ca 81 fd e9 47}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2216,6 +2313,7 @@ rule Trojan_Win32_Injector_NIT_2147927359_0
         $x_4_1 = {53 bb 6c d6 41 00 68 34 5e 40 00 e8 e0 ff ff ff 89 03 68 44 5e 40 00 8b 03 50 e8 d9 ff ff ff a3 b0 d6 41 00 68 54 5e 40 00 8b 03 50 e8 c7 ff ff ff a3 ac d6 41 00 68 68 5e 40 00 8b 03 50 e8 b5 ff ff ff a3 b4 d6 41 00 68 7c 5e 40 00 8b 03 50 e8 a3 ff ff ff a3 d0 d6 41 00 68 88 5e 40 00 8b 03 50 e8 91 ff ff ff a3 d8 d6 41 00 68 9c 5e 40 00 8b 03 50 e8 7f ff ff ff a3 e8 d6 41 00 68 b8 5e 40 00 8b 03 50 e8 6d ff ff ff a3 ec d6 41 00 68 c8 5e 40 00 8b 03 50 e8 5b ff ff ff a3 f0 d6 41 00 68 d8 5e 40 00 8b 03 50 e8 49 ff ff ff a3 f4 d6 41 00 68 e8 5e 40 00 8b 03}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2237,6 +2335,7 @@ rule Trojan_Win32_Injector_BA_2147931029_0
         $x_5_1 = {2b f9 57 31 1f 83 c7 04 ?? ?? ?? ?? ?? 8b 3c 24 4d c0 e9 55 8b 3c 24}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2258,6 +2357,7 @@ rule Trojan_Win32_Injector_EAXW_2147932234_0
         $x_5_1 = {8a 14 06 8b d8 32 d1 d1 eb 83 c0 02 88 94 1c 20 02 00 00 3d 70 17 00 00 72 e6}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2279,6 +2379,7 @@ rule Trojan_Win32_Injector_EAVX_2147935742_0
         $x_5_1 = {8a 4e fb 33 c0 8d 49 00 8a 14 06 8b d8 32 d1 d1 eb 83 c0 02 88 94 1c 20 02 00 00 3d 70 17 00 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2300,6 +2401,7 @@ rule Trojan_Win32_Injector_PAQD_2147939603_0
         $x_2_1 = {8b 55 fc 8b 32 33 c0 85 f6 7e ?? 8b 55 08 8a 14 10 30 14 07 40 3b c6 7c ?? 83 45 fc 04 83 c7 19 81 7d fc}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

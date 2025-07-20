@@ -23,6 +23,7 @@ rule Trojan_MSIL_DcRat_NE_2147828115_0
         $x_1_8 = "ms-settings" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_MSIL_DcRat_NEA_2147828743_0
         $x_1_6 = "MSASCui.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_MSIL_DcRat_NEB_2147830088_0
         $x_1_1 = {00 00 04 06 91 20 ad 02 00 00 59 d2 9c 00 06 17 58 0a 06 7e ?? 00 00 04 8e 69 fe 04 0b 07 2d d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_MSIL_DcRat_NEC_2147832563_0
         $x_1_6 = "get_Is64BitOperatingSystem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +127,7 @@ rule Trojan_MSIL_DcRat_NED_2147833503_0
         $x_1_7 = "ProcessWindowStyle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +151,7 @@ rule Trojan_MSIL_DcRat_NEAA_2147835726_0
         $x_5_3 = "pDAdB3l3wA3XugWFNdq" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +176,7 @@ rule Trojan_MSIL_DcRat_NEAB_2147838572_0
         $x_2_4 = "nazaMW487.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -193,6 +200,7 @@ rule Trojan_MSIL_DcRat_NEAC_2147838650_0
         $x_2_3 = "Powered by SmartAssembly 8.1.2.4975" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +229,7 @@ rule Trojan_MSIL_DcRat_NEAD_2147838734_0
         $x_2_8 = "WriteRawDataToTxtFile2_RPI_epos" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -242,6 +251,7 @@ rule Trojan_MSIL_DcRat_RD_2147839881_0
         $x_1_1 = {a2 25 1a 72 37 03 00 70 a2 25 1b 7e c2 00 00 04 28 dc 00 00 0a 28 07 02 00 06 a2 25 1c 72 9e 09 00 70 a2 25 1d 06 a2 25 1e 72 71 00 00 70 a2 28 f8 00 00 0a 0b 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -270,6 +280,7 @@ rule Trojan_MSIL_DcRat_NEAF_2147841309_0
         $x_2_8 = "System.Reflection.Emit" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -294,6 +305,7 @@ rule Trojan_MSIL_DcRat_NEAG_2147842566_0
         $x_1_4 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -317,6 +329,7 @@ rule Trojan_MSIL_DcRat_NEAE_2147843322_0
         $x_2_3 = "Eziriz's \".NET Reactor\"" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -338,6 +351,7 @@ rule Trojan_MSIL_DcRat_NEAH_2147844544_0
         $x_10_1 = {00 28 1b 00 00 06 0a 28 12 00 00 0a 06 6f 13 00 00 0a 28 14 00 00 0a 28 0f 00 00 06 0b dd 03 00 00 00 26 de db 07 2a}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -368,6 +382,7 @@ rule Trojan_MSIL_DcRat_NZA_2147928807_0
         $x_1_10 = "Select * from AntivirusProduct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -389,6 +404,7 @@ rule Trojan_MSIL_DcRat_PLLBH_2147929808_0
         $x_10_1 = {07 09 02 09 91 06 08 91 61 09 20 00 01 00 00 5d 61 d2 9c 08 07 09 91 06 8e 69 5d 58 06 8e 69 5d 0c 09 17 58 0d 09 02 8e 69 32 d5}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +428,7 @@ rule Trojan_MSIL_DcRat_ZTY_2147941595_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -433,6 +450,7 @@ rule Trojan_MSIL_DcRat_ZNR_2147946241_0
         $x_10_1 = {06 11 06 11 05 6f ?? 00 00 0a 13 07 09 11 04 20 ff 00 00 00 12 07 28 ?? 00 00 0a 59 1f 72 61 d2 9c 11 06 17 58 13 06 11 04 17 58 13 04 11 06 07 2f 07 11 04 09 8e 69 32 c7 11 05 17 58 13 05 11 05 08 32 b7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

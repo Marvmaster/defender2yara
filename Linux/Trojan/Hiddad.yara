@@ -18,6 +18,7 @@ rule Trojan_Linux_Hiddad_A_2147829506_0
         $x_1_3 = {c3 6a 61 38 42 00 03 4a c2 6a 21 38 21 04 00 91 e2 03 03 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Linux_Hiddad_B_2147830451_0
         $x_1_3 = {4c 8b 44 24 18 48 89 c1 48 8b 54 24 10 48 89 df 48 8b 34 24 e8 d7 e3 ff ff e9 5d fd ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_AgarthaClipper_A_2147900182_0
         $x_2_1 = {0a 11 04 28 ?? 00 00 06 28 ?? 00 00 06 28 ?? 00 00 2b 6f ?? 00 00 0a 28 ?? 00 00 2b 02 7b ?? 00 00 04 6f ?? 00 00 0a 28 ?? 00 00 06 26 14 14 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

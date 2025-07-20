@@ -20,6 +20,7 @@ rule Backdoor_Win32_Ipamad_A_2147592628_0
         $x_1_6 = {43 72 65 61 74 65 20 53 65 72 76 65 72 00 62 74 73 72 76 00 43 6f 6e 6e 65 63 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

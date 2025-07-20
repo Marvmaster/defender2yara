@@ -18,6 +18,7 @@ rule Backdoor_Win32_Magdrome_A_2147678345_0
         $x_1_4 = "74.82.166.115" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

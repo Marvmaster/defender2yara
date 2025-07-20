@@ -26,6 +26,7 @@ rule Backdoor_Win32_Fynloski_F_2147633745_0
         $x_15_12 = {80 fb 31 75 0d 8d ?? ?? b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 80 fb 32 75 0d 8d ?? ?? b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 80 fb 33 75 0d 8d ?? ?? b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 80 fb 34 75 0d 8d ?? ?? b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 80 fb 35 75 0d}  //weight: 15, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -54,6 +55,7 @@ rule Backdoor_Win32_Fynloski_A_2147640184_0
         $x_1_6 = {5a 59 59 64 89 10 68 4d 52 47 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -90,6 +92,7 @@ rule Backdoor_Win32_Fynloski_A_2147640184_1
         $n_10_13 = "Comet RAT Legacy is already active in your system" ascii //weight: -10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((4 of ($x_1_*))) or
@@ -126,6 +129,7 @@ rule Backdoor_Win32_Fynloski_K_2147685042_0
         $x_1_11 = "DDOSUDPFLOOD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +155,7 @@ rule Backdoor_Win32_Fynloski_M_2147687071_0
         $x_1_6 = {30 04 32 46 ff 4d ?? 43 81 e3 ff 00 00 80}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -237,6 +242,7 @@ rule Backdoor_Win32_Fynloski_R_2147696363_0
         $n_100_17 = "Comet RAT Legacy is already active in your system" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (6 of ($x*))
 }
@@ -261,6 +267,7 @@ rule Backdoor_Win32_Fynloski_N_2147723898_0
         $x_1_3 = {63 3a 5c 75 73 65 72 73 5c 67 67 67 61 73 5c 64 65 73 6b 74 6f 70 5c 73 64 73 73 64 65 65 77 5c [0-16] 5c 73 64 64 66 73 64 5c 72 65 6c 65 61 73 65 5c 73 64 64 66 73 64 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -290,6 +297,7 @@ rule Backdoor_Win32_Fynloski_PA_2147742275_0
         $x_1_6 = "UntScreenCapture" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +320,7 @@ rule Backdoor_Win32_Fynloski_AA_2147754737_0
         $x_1_2 = {89 ff 4b 75 fb 5f 00 6a 00 6a 00 6a 00 6a 00 e8 ?? ?? ?? ?? 4b 75 f0 [0-79] bb ?? ?? ?? ?? 89 ff 4b 75 fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

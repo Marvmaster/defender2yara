@@ -20,6 +20,7 @@ rule Trojan_Win32_Batpenr_A_2147763780_0
         $x_1_5 = "del /f /s /q %userprofile%\\Desktop\\*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

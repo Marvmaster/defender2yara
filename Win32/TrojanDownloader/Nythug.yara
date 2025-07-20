@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Nythug_A_2147630363_0
         $x_1_6 = "http://217.114.215.211/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Nythug_B_2147630379_0
         $x_1_4 = {5c 53 4d 53 63 76 68 6f 73 74 2e 65 78 65 00 68 74 74 70 3a 2f 2f 70 6c 65 78 63 6f 2e 63 6f 2e 63 63 2f 73 74 6c 63 32 2f 69 63 6d 6e 74 72 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

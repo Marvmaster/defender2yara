@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_FakeQQ_A_2147630901_0
         $x_1_4 = {6e 65 74 2f [0-16] 2e 61 73 70 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

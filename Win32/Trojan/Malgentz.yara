@@ -17,6 +17,7 @@ rule Trojan_Win32_Malgentz_AT_2147920880_0
         $x_1_2 = {55 8b ec 81 ec b8 27 00 00 53 56 57 53 81 cb 80 33 01 00 81 eb 67 64 00 00 81 c3 1a 22 01 00 5b 50 57 83 c4 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

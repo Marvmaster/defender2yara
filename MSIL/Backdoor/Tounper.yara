@@ -19,6 +19,7 @@ rule Backdoor_MSIL_Tounper_A_2147730580_0
         $x_1_4 = "yandexnumber" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Worm_Win32_Mirkspot_A_2147647973_0
         $x_1_9 = {61 75 67 75 73 74 6f 2e 74 75 72 69 73 74 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

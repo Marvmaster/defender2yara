@@ -25,6 +25,7 @@ rule Backdoor_Win32_Koceg_A_2147602234_0
         $x_1_10 = {6d 69 6e 69 5f 61 76 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule Backdoor_Win32_Koceg_B_2147602235_0
         $x_1_1 = {83 f8 6e 75 0d ff 75 10 ff 75 0c e8 ?? ?? ff ff 59 59 ff b5 ?? f7 ff ff ff 15 ?? ?? ?? ?? 0f b7 c0 83 f8 15 0f 85 ?? 01 00 00 8b 45 0c 0f be 00 83 f8 55 75 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -120,6 +122,7 @@ rule Backdoor_Win32_Koceg_B_2147605903_0
         $x_4_49 = "vbs.php" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_3_*) and 8 of ($x_2_*) and 30 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_4_*) and 2 of ($x_3_*) and 8 of ($x_2_*) and 29 of ($x_1_*))) or
@@ -1037,6 +1040,7 @@ rule Backdoor_Win32_Koceg_C_2147608228_0
         $x_1_12 = {26 6c 69 64 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 7 of ($x_1_*))) or
             ((2 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -1068,6 +1072,7 @@ rule Backdoor_Win32_Koceg_D_2147608481_0
         $x_1_5 = "%%%02X" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -1100,6 +1105,7 @@ rule Backdoor_Win32_Koceg_E_2147610472_0
         $x_1_8 = {8b 45 08 03 45 ?? 0f be 00 0f be 4d fc 33 ?? 8b 4d f8 03 4d f4 88 41 fe eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1127,6 +1133,7 @@ rule Backdoor_Win32_Koceg_F_2147621291_0
         $x_2_4 = {33 45 0c 8b 4d 08 03 4d fc 88 01 eb d5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

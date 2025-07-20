@@ -22,6 +22,7 @@ rule Backdoor_Win32_VBbot_T_2147574837_0
         $x_2_8 = "ollead" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_2_*))) or
             ((4 of ($x_10_*))) or

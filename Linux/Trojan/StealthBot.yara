@@ -29,6 +29,7 @@ rule Trojan_Linux_StealthBot_2147808232_0
         $x_1_15 = "ZwUnmapViewOfSection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((9 of ($x_4_*) and 2 of ($x_2_*))) or

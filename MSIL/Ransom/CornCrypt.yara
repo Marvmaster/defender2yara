@@ -16,6 +16,7 @@ rule Ransom_MSIL_CornCrypt_B_2147719882_0
         $x_1_2 = "below to other people, if two or more people will install this file and pay, we will decrypt your files for free." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_MSIL_CornCrypt_PA_2147775468_0
         $x_1_4 = "fuckunicorn" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

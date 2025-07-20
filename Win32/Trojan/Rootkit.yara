@@ -20,6 +20,7 @@ rule Trojan_Win32_Rootkit_F_2147510223_0
         $x_1_6 = {a1 c4 42 00 10 68 48 42 00 10 ff d0 89 45 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -46,6 +47,7 @@ rule Trojan_Win32_Rootkit_F_2147510223_1
         $x_1_3 = {8d 44 00 02 50 8d 85 ?? ?? ff ff 50 68 08 20 22 00 ff 35 ?? ?? 40 00 ff 15 ?? ?? 40 00 eb 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Rootkit_L_2147598269_0
         $x_1_2 = {68 c8 00 00 00 ff d3 8b ?? ?? ?? 8b 0d ?? ?? ?? ?? 40 3b c8 89 ?? ?? ?? 7e 26 8b ?? ?? ?? 6a 03 ff d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_Win32_Rootkit_R_2147600463_0
         $x_1_8 = {8b c8 03 0d ?? ?? 01 00 83 ca ff e8 ?? ?? ff ff 3d 5b f0 6a c7 74 15 3d 45 30 34 01 74 0e 3d 45 d0 fa 58 74 07 5d ff 25 14 09 01 00 e8 ?? ?? ff ff b8 34 00 00 c0 5d c2 2c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +172,7 @@ rule Trojan_Win32_Rootkit_AF_2147604903_0
         $x_1_55 = "H.data" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1000_*) and 35 of ($x_1_*))) or
             ((3 of ($x_1000_*))) or
@@ -193,6 +198,7 @@ rule Trojan_Win32_Rootkit_C_2147609451_0
         $x_1_2 = {68 40 1f 00 00 6a 02 ff 76 20 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +225,7 @@ rule Trojan_Win32_Rootkit_C_2147616224_0
         $x_1_6 = "Software\\Microsoft\\Windows\\CurrentVersion\\Setup\\poop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -245,6 +252,7 @@ rule Trojan_Win32_Rootkit_GF_2147619084_0
         $x_1_4 = "processhide.sys" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -274,6 +282,7 @@ rule Trojan_Win32_Rootkit_D_2147619328_0
         $x_1_10 = "HELOWOLD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +307,7 @@ rule Trojan_Win32_Rootkit_D_2147619328_1
         $x_1_5 = {43 00 6f 00 6d 00 70 00 61 00 6e 00 79 00 4e 00 61 00 6d 00 65 00 00 00 00 00 4d 00 69 00 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00 20 00 43 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +331,7 @@ rule Trojan_Win32_Rootkit_HI_2147627945_0
         $x_1_4 = {eb 0f 83 25 d8 ?? ?? 10 00 b8 ?? ?? 00 10 c3 33 f6 83 4d fc ff 39 35 ?? ?? 01 10 0f 84 ?? ?? 00 00 e8 ?? ?? 00 00 8b 0d ?? ?? 01 10 6a 50 ff 35 ?? ?? 01 10 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -346,6 +357,7 @@ rule Trojan_Win32_Rootkit_EA_2147888612_0
         $x_1_5 = "IoFreeMdl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -370,6 +382,7 @@ rule Trojan_Win32_Rootkit_GTL_2147919927_0
         $x_1_4 = "ExAcquireFastMutex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -401,6 +414,7 @@ rule Trojan_Win32_Rootkit_EK_2147920391_0
         $x_1_7 = "recount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))

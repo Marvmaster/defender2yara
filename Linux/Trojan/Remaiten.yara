@@ -28,6 +28,7 @@ rule Trojan_Linux_Remaiten_DS_2147796740_0
         $x_1_13 = "SYN flooder from the original KTN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (12 of ($x*))
 }
 

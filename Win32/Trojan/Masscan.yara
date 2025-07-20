@@ -20,6 +20,7 @@ rule Trojan_Win32_Masscan_STE_2147773357_0
         $x_1_6 = "subject[SomeOrganizationalUnit]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

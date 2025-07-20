@@ -22,6 +22,7 @@ rule Backdoor_Win32_ATMRippery_A_2147717125_0
         $x_1_8 = "2.CLEAN LOGS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))

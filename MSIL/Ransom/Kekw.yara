@@ -17,6 +17,7 @@ rule Ransom_MSIL_Kekw_AA_2147752400_0
         $x_1_2 = "repos\\KEKW\\obj\\Debug\\KEKW.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

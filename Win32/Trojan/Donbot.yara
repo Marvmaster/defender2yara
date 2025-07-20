@@ -18,6 +18,7 @@ rule Trojan_Win32_Donbot_A_2147647577_0
         $x_1_4 = "Max-Threads: " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Donbot_A_2147647577_1
         $x_1_3 = {8b 44 24 10 30 0c 06 57 43 e8 ?? ?? ?? ?? 59 3b d8 72 e7 8b 44 24 10 f6 14 06 50 46 e8 ?? ?? ?? ?? 59 3b f0 72 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule TrojanDropper_Win32_Idicaf_C_2147610458_0
         $x_1_8 = "%s\\%d_install.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

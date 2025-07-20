@@ -16,6 +16,7 @@ rule Trojan_Win32_Poison_RPS_2147835817_0
         $x_1_1 = {8b 4d d0 83 c1 01 89 4d d0 83 7d d0 0d 73 17 8b 55 d0 33 c0 8a 44 15 e0 35 cc 00 00 00 8b 4d d0 88 44 0d e0 eb da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Poison_EM_2147850225_0
         $x_1_5 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_Poison_NA_2147928891_0
         $x_1_8 = "logins.json" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_Win32_Poison_NB_2147928892_0
         $x_1_10 = "CreateMutexA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

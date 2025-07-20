@@ -19,6 +19,7 @@ rule Worm_Win32_Xtrat_B_2147694636_0
         $x_1_5 = "UnitKeylogger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Worm_Win32_Xtrat_B_2147694637_0
         $x_1_6 = {45 64 69 74 53 76 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Worm_Win32_Xtrat_B_2147694640_0
         $x_1_6 = {55 6e 69 74 49 6e 6a 65 63 74 53 65 72 76 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -98,6 +101,7 @@ rule Worm_Win32_Xtrat_B_2147696723_0
         $x_1_4 = {55 6e 69 74 43 6f 6e 65 78 61 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +127,7 @@ rule Worm_Win32_Xtrat_D_2147696945_0
         $x_1_6 = "EGUI.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +153,7 @@ rule Worm_Win32_Xtrat_E_2147697739_0
         $x_1_6 = "UnitKeylogger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +179,7 @@ rule Worm_Win32_Xtrat_F_2147706282_0
         $x_1_6 = {5c 00 54 00 6d 00 70 00 53 00 6f 00 6c 00 75 00 74 00 69 00 6f 00 6e 00 32 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +204,7 @@ rule Worm_Win32_Xtrat_G_2147715811_0
         $x_1_5 = "XTREME" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

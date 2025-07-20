@@ -22,6 +22,7 @@ rule PWS_Win32_Zengtu_A_2147582297_0
         $x_1_8 = "agtz.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +59,7 @@ rule PWS_Win32_Zengtu_H_2147601540_0
         $x_2_17 = "shizongrisini" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_2_*) and 6 of ($x_1_*))) or
             ((8 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -94,6 +96,7 @@ rule PWS_Win32_Zengtu_B_2147601541_0
         $n_15_11 = "update.ggsafe.com/" ascii //weight: -15
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -125,6 +128,7 @@ rule PWS_Win32_Zengtu_C_2147601542_0
         $x_1_6 = "Pass=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +155,7 @@ rule PWS_Win32_Zengtu_D_2147601543_0
         $x_1_7 = "image/pjpeg, application/vnd.ms-excel," ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +181,7 @@ rule PWS_Win32_Zengtu_E_2147601544_0
         $x_1_6 = "&Pass=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -200,6 +206,7 @@ rule PWS_Win32_Zengtu_F_2147601545_0
         $x_1_5 = "Send OK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -226,6 +233,7 @@ rule PWS_Win32_Zengtu_G_2147601546_0
         $x_1_7 = "StartHook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

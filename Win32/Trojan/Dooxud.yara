@@ -17,6 +17,7 @@ rule Trojan_Win32_Dooxud_A_2147644889_0
         $x_1_3 = {45 52 52 00 32 4b 38 00 57 4e 37}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

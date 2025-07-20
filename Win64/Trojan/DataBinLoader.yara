@@ -16,6 +16,7 @@ rule Trojan_Win64_DataBinLoader_A_2147895346_0
         $x_1_2 = {4e 6f 20 6b 65 79 20 69 6e 20 61 72 67 73 21 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

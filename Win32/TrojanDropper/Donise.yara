@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Donise_A_2147611155_0
         $x_1_3 = {72 73 79 6e 63 69 6e 69 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

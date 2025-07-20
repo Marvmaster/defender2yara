@@ -17,6 +17,7 @@ rule Worm_Win32_IRCbot_C_2147637880_0
         $x_1_3 = {57 00 69 00 6e 00 55 00 70 00 64 00 61 00 74 00 65 00 20 00 53 00 65 00 63 00 75 00 72 00 69 00 74 00 79 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Worm_Win32_IRCbot_F_2147641938_0
         $x_4_3 = " :[DDOS] Attack Started " wide //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Worm_Win32_IRCbot_I_2147649448_0
         $x_1_8 = "[SSYN]: Flooding %s:%s for %s seconds." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Worm_Win32_IRCbot_K_2147651765_0
         $x_1_7 = {83 fa 6a 7d 25 6a 0c 6a 32 0f b6 85 37 fe ff ff 6b c0 64 05 ?? ?? ?? ?? 50 8d 8d 38 fe ff ff 51}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Worm_Win32_IRCbot_M_2147653500_0
         $x_1_8 = "<<.|.4WGet Error.|..4>>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule Worm_Win32_IRCbot_O_2147684419_0
         $x_1_6 = "Scanner already running" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

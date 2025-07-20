@@ -15,6 +15,7 @@ rule BrowserModifier_Win32_Vonteera_205893_0
         $x_1_1 = {8d 85 a0 fd ff ff 50 68 04 01 00 00 ff 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? 8d 85 a0 fd ff ff 68 22 01 00 00 50 e8 ?? ?? ?? ?? 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule BrowserModifier_Win32_Vonteera_205893_1
         $x_1_3 = "$_IDispEventLocator@$00$1?DIID_DWebBrowserEvents" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule BrowserModifier_Win32_Vonteera_205893_2
         $x_1_4 = "script.id = \"adnetworkme_js\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule BrowserModifier_Win32_Vonteera_205893_3
         $x_1_6 = "/output:\"sn.txt\" bios get serialnumber" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule BrowserModifier_Win32_Vonteera_205893_4
         $x_1_6 = "hjmjt.kkp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule BrowserModifier_Win32_Vonteera_205893_5
         $x_1_5 = "www.adfactorytech.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -161,6 +167,7 @@ rule BrowserModifier_Win32_Vonteera_205893_6
         $x_1_5 = "/Delete /tn \"mium0d\" /f" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule BrowserModifier_Win32_Vonteera_205893_7
         $x_1_5 = "console.log('Injected to', tab.url);" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

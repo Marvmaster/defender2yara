@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_GameHack_ABB_2147907646_0
         $x_1_3 = "SRU_Internal_Loader.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

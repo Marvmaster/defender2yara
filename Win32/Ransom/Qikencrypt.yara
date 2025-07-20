@@ -21,6 +21,7 @@ rule Ransom_Win32_Qikencrypt_A_2147692941_0
         $x_2_7 = "chickenkiller.com" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule Ransom_Win32_Qikencrypt_C_2147697657_0
         $x_2_8 = {2f 69 6e 64 65 78 2e 70 68 70 3f 61 63 74 3d 73 26 73 3d 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Tinxy_A_2147621436_0
         $x_1_3 = "%sser%sp%sf%sne%srk.%sox%sype%s1);" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

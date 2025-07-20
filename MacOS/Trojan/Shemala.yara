@@ -16,6 +16,7 @@ rule Trojan_MacOS_Shemala_A_2147752819_0
         $x_3_2 = {48 b8 00 00 00 00 00 00 00 00 48 be 28 20 00 00 00 00 00 00 bf 07 00 00 00 41 b9 02 10 00 00 41 ba ff ff ff ff 89 bd b8 df ff ff 48 89 c7 44 8b 9d b8 df ff ff 44 89 da 44 89 c9 45 89 d0 49 89 c1}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

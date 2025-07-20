@@ -20,6 +20,7 @@ rule Trojan_Win32_Chanitor_A_2147689277_0
         $x_1_6 = {66 c7 44 38 fd 65 78 c6 44 38 ff 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

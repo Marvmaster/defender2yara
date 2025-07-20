@@ -21,6 +21,7 @@ rule Trojan_Win32_Kimsuk_A_2147683162_0
         $x_1_6 = {8d 49 00 0f be 14 39 03 f2 8b c6 c1 e8 0e c1 e6 12 03 f0 8b c1 47 8d 58 01 8a 10 40 84 d2 75 f9 2b c3 3b f8 72 dd 3b 74 24 24 74 0f 8b 44 24 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Kimsuk_B_2147683181_0
         $x_1_2 = {0f be 04 1a 03 f0 8b fa 8b ce 33 c0 c1 e9 0e c1 e6 12 03 f1 83 c9 ff 43 f2 ae f7 d1 49 3b d9 72 df}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Kimsuk_C_2147705911_0
         $x_1_2 = {ff b0 f6 a2 f5 b4 e6 a3 ff bc d3 ba d4 a7 d3 b2 d5 b0 c2 9e c8 ad df ac c5 aa c4 f1 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

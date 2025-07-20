@@ -20,6 +20,7 @@ rule Worm_Win32_Goldrv_A_2147690375_0
         $x_2_6 = {64 6c 76 65 72 73 69 6f 6e 2e 70 68 70 3f 69 64 3d [0-32] 64 6c 75 70 64 61 74 65 2e 64 61 74}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_2_*))) or

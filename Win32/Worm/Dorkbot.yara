@@ -16,6 +16,7 @@ rule Worm_Win32_Dorkbot_A_160375_0
         $x_1_2 = "nAndr huttaP.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule Worm_Win32_Dorkbot_A_160375_1
         $x_1_1 = {30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 00 00 00 00 38 00 16 00 01 00 43 00 6f 00 6d 00 70 00 61 00 6e 00 79 00 4e 00 61 00 6d 00 65 00 00 00 00 00 44 00 6e 00 4b 00 41 00 73 00 65 00 65 00 59 00 4f 00 55 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Worm_Win32_Dorkbot_A_160375_2
         $x_1_3 = {83 c4 0c 53 8d 45 f8 50 68 00 04 00 00 8d 8d ?? ?? ff ff 51 6a 0c 8d 55 ?? 52 68 00 14 2d 00 56 c7 85 ?? ?? ff ff 00 04 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Worm_Win32_Dorkbot_A_160375_3
         $x_1_3 = "dD1B20A40-59D5-101B-A3C9-08002B2F49FB" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +106,7 @@ rule Worm_Win32_Dorkbot_A_160375_4
         $x_1_3 = "t9368265E-85FE-11d1-8BE3-0000F8754DA1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Worm_Win32_Dorkbot_A_160411_0
         $x_1_8 = {69 65 67 72 61 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -155,6 +161,7 @@ rule Worm_Win32_Dorkbot_I_162906_0
         $x_1_2 = {c7 85 a0 fd ff ff 83 00 00 00 c7 85 98 fd ff ff 02 00 00 00 8d 95 98 fd ff ff 8b 45 d8 6a 23 59 2b 48 14 c1 e1 04 8b 45 d8 8b 40 0c 03 c8 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule Worm_Win32_Dorkbot_I_162906_1
         $x_1_2 = {74 13 8b 4d fc 03 4d f8 0f be 11 f7 d2 8b 45 fc 03 45 f8 88 10 eb 92}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -200,6 +208,7 @@ rule Worm_Win32_Dorkbot_I_162906_2
         $x_1_5 = {6a 00 6a 02 8b f8 c7 44 24 20 28 01 00 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -224,6 +233,7 @@ rule Worm_Win32_Dorkbot_I_162906_3
         $x_5_5 = {76 4e 80 3e 53 75 18 80 7e 01 44 75 12 80 7e 02 47 75 0c 68}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -247,6 +257,7 @@ rule Worm_Win32_Dorkbot_I_162906_4
         $x_1_1 = {25 73 2e 70 32 31 2d 3e 20 4d 65 73 73 61 67 65 20 68 69 6a 61 63 6b 65 64 21 00 00 6d 73 6e 6d 73 67 00 00 6d 73 6e 69 6e 74 00 00 62 61 64 64 72 00 00 00 58 2d 4d 4d 53 2d 49 4d 2d 46 6f 72 6d 61 74 3a 00 00 00 00 43 41 4c 20 25 64 20 25 32 35 36 73 00 00 00 00 6d 73 6e 75 00 00 00 00 44 6f 6e 65 20 66 72 73 74 0a 00 00 6e 67 72 2d 3e 62 6c 6f 63 6b 73 69 7a 65 3a 20 25 64 0a 00 62 6c 6f 63 6b 5f 73 69 7a 65 3a 20 25 64 0a 00 4e 74 46 72 65 65 56 69 72 74 75 61 6c 4d 65 6d 6f 72 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -271,6 +282,7 @@ rule Worm_Win32_Dorkbot_I_162906_5
         $x_1_5 = "attrib -s -h %%cd%%%s & xcopy /F /S /Q /H /R /Y %%cd%%%s %%temp%%\\%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -315,6 +327,7 @@ rule Worm_Win32_Dorkbot_I_162906_6
         $x_1_21 = {69 65 67 72 61 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((12 of ($x_1_*))) or
             ((1 of ($x_2_*) and 10 of ($x_1_*))) or
@@ -344,6 +357,7 @@ rule Worm_Win32_Dorkbot_T_167070_0
         $x_1_1 = {57 03 46 3c ff b4 30 08 01 00 00 8b 8c 30 0c 01 00 00 8d 84 30 f8 00 00 00 03 ce 51 8b 40 0c 03 43 34 50 ff ?? ?? ff ?? ?? 0f b7 43 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -366,6 +380,7 @@ rule Worm_Win32_Dorkbot_AI_179348_0
         $x_1_3 = "1ocuments and Settings\\Usuario\\1scritorio\\Ex\\Ex.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -387,6 +402,7 @@ rule Worm_Win32_Dorkbot_AK_180858_0
         $x_1_2 = {6a 32 ff d6 6a 00 6a 09 53 ff 75 ?? ff d7 6a 32 ff d6 6a 02 6a 10 e8 ?? ?? ?? ?? 59 59 6a 32 ff d6 6a 00 6a 0d 53 ff 75 ?? ff d7 6a 32 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -415,6 +431,7 @@ rule Worm_Win32_Dorkbot_AM_181585_0
         $x_1_9 = {54 68 65 72 65 20 77 65 72 65 20 6e 6f 20 66 6f 6c 64 65 72 73 20 6f 6e 20 74 68 65 20 55 53 42 20 64 72 69 76 65 20 74 6f 20 69 6e 66 65 63 74 21 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -442,6 +459,7 @@ rule Worm_Win32_Dorkbot_AN_182693_0
         $x_1_3 = {6a 07 68 00 08 00 00 ff d0 8d 45 ?? 50 (6a|33) [0-1] (53|56) e8 ?? ?? ?? ?? 8d 45 ?? 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -463,6 +481,7 @@ rule Worm_Win32_Dorkbot_AR_196511_0
         $x_1_2 = {6a 00 6a 01 8d 45 ff 50 ff 75 0c c6 45 ff 00 6a ff ff 15 ?? ?? ?? ?? 85 c0 78 ?? 80 7d ff e9 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -485,6 +504,7 @@ rule Worm_Win32_Dorkbot_AT_197341_0
         $x_10_3 = {6a 00 6a 09 68 00 01 00 00 57 ff d6 6a 32 ff d3 6a 00 6a 09 68 01 01 00 00 57 ff d6 6a 32 ff d3 6a 00 6a 02}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -512,6 +532,7 @@ rule Worm_Win32_Dorkbot_AV_200818_0
         $x_1_4 = "(facepalm)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -536,6 +557,7 @@ rule Worm_Win32_Dorkbot_AY_202547_0
         $x_1_5 = {8b 04 be 6a 2d 59 66 3b 08 75 ?? 0f b7 40 02 83 f8 64 74 ?? 83 f8 75 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -611,6 +633,7 @@ rule Worm_Win32_Dorkbot_AZ_209562_0
         $x_1_6 = "this photo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -665,6 +688,7 @@ rule Worm_Win32_Dorkbot_BA_233601_0
         $x_1_3 = {8b fa 85 c0 c1 ff 02 c1 e7 02 8b f9 c0 fe 04 c0 e6 04 87 df d0 ef d0 e7 f7 d2 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -21,6 +21,7 @@ rule Trojan_Win32_SVCREADY_DA_2147827259_0
         $x_1_6 = "W4Zb9bKml9" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

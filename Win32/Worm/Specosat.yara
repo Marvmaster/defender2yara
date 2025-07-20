@@ -21,6 +21,7 @@ rule Worm_Win32_Specosat_A_2147649067_0
         $x_1_7 = ".DownExecFile->" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

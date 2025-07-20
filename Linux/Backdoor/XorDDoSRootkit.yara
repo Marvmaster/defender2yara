@@ -26,6 +26,7 @@ rule Backdoor_Linux_XorDDoSRootkit_A_2147818256_0
         $x_2_12 = "kO_copy_from_user" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

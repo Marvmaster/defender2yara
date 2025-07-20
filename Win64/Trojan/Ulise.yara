@@ -23,6 +23,7 @@ rule Trojan_Win64_Ulise_NE_2147830317_0
         $x_1_8 = "GetClipboardData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win64_Ulise_AP_2147831293_0
         $x_4_1 = {f6 d2 32 54 04 30 41 32 d0 44 03 c7 41 88 11 4c 03 cf 45 3b c2 7c}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win64_Ulise_MA_2147840704_0
         $x_1_3 = "DllInstall" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Win64_Ulise_DS_2147852095_0
         $x_1_2 = {71 58 40 71 5b 54 42 68 6e 0b 65 78 3c 00 00 00 71 58 40 51 5b 54 42 37 72 61 6d 63 5d 59 5a 56 4a 66 79 5a 4e 62 7d 3f 60 58 5e 5f 55 47 16 64 5d 5a 4f 49 55 49 47 1f 03 20 30 43 00 00 00 00 72 61 6d 75 5b 5a 52 68 6c 4b 4f 58 57 62}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Trojan_Win64_Ulise_GMX_2147893318_0
         $x_10_1 = {48 63 04 24 48 8b 4c 24 28 0f be 04 01 89 44 24 04 8b 04 24 99 b9 3b 00 00 00 f7 f9 8b c2 83 c0 3a 8b 4c 24 04 33 c8 8b c1 48 63 0c 24 48 8b 54 24 20 88 04 0a}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_Win64_Ulise_A_2147906573_0
         $x_2_1 = {e6 4f d2 2a 26 48 28 6e 16 a3 ?? ?? ?? ?? ?? ?? ?? ?? 32 50 b9 30 55 d9 54 8a d4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +159,7 @@ rule Trojan_Win64_Ulise_AI_2147917654_0
         $x_2_2 = {f7 e9 03 d1 c1 fa 08 8b c2 c1 e8 1f 03 d0 b8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_Win64_Ulise_NS_2147923057_0
         $x_1_4 = "SleepConditionVariable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -204,6 +212,7 @@ rule Trojan_Win64_Ulise_AMCP_2147927577_0
         $x_1_7 = "Application Data\\sysappec.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_3_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 3 of ($x_3_*))) or
@@ -229,6 +238,7 @@ rule Trojan_Win64_Ulise_ARAZ_2147928717_0
         $x_2_1 = {83 e9 55 f7 e9 c1 fa 03 8b c2 c1 e8 1f 03 d0 6b d2 1a 2b ca 80 c1 61 41 88 09}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -250,6 +260,7 @@ rule Trojan_Win64_Ulise_AUL_2147941838_0
         $x_1_1 = {8b 45 fc 48 63 d0 48 8b 45 e0 48 01 d0 0f b6 10 8b 45 fc 48 63 c8 48 8b 45 e0 48 01 c8 83 f2 55 88 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

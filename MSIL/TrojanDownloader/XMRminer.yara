@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_XMRminer_AMNC_2147837451_0
         $x_1_1 = {06 02 07 1e 6f ?? ?? ?? 0a 25 26 18 28 ?? ?? ?? 0a 25 26 6f ?? ?? ?? 0a 00 00 07 1e 58 0b 07 02 6f ?? ?? ?? 0a 25 26 fe 04 0c 08 2d d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

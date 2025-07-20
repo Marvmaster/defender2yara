@@ -17,6 +17,7 @@ rule Trojan_Win32_Loki_SA_2147735573_0
         $x_1_2 = {b0 39 8b d3 8b fe 03 fa 8b 15 ?? ?? ?? ?? 8a 92 ?? ?? ?? ?? [0-4] 32 d0 88 17 83 05 ?? ?? ?? ?? 02 [0-4] 43 81 fb 38 5e 00 00 75 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Loki_XR_2147752621_0
         $x_1_1 = {32 c2 88 01 c3 8d 40 00 55 8b ec 51 53 56 57 6a ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a ?? e8 ?? ?? ?? ?? 8b f8 8b f7 33 c0 89 45 ?? bb ?? ?? ?? ?? 8b ce b2 ?? 8a 03 e8 ?? ?? ?? ?? 83 c6 ?? 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule VirTool_Win64_Nitematz_B_2147787160_0
         $x_1_5 = {48 89 6c 24 30 48 8d ?? ?? ?? ?? ?? ?? c7 44 24 28 ?? 00 00 00 45 33 c9 45 33 c0 c7 44 24 20 03 00 00 00 ba 00 00 00 80 ff 15 ?? ?? ?? ?? 48 83 f8 ff 75 0d ff c3 3b df}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

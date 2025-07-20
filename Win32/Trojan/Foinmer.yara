@@ -17,6 +17,7 @@ rule Trojan_Win32_Foinmer_A_2147676007_0
         $x_1_3 = "var in_hosts = {'my.mail.ru' :" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Foinmer_B_2147676008_0
         $x_1_2 = "builder\\ie\\Release\\BHOinCPP.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Redsacm_A_2147622608_0
         $x_1_3 = {eb 14 68 88 13 00 00 ff 15 ?? ?? ?? ?? eb 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

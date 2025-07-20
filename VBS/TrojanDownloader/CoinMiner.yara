@@ -18,6 +18,7 @@ rule TrojanDownloader_VBS_CoinMiner_BT_2147727354_0
         $x_1_3 = "RANDOM=CreateObject(\"WinHttp.WinHttpRequest.5.1\")" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

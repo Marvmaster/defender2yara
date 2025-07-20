@@ -16,6 +16,7 @@ rule Trojan_MSIL_Harvbot_B_2147706588_0
         $x_1_2 = {70 00 63 00 6e 00 61 00 6d 00 65 00 3d 00 ?? ?? 26 00 62 00 6f 00 74 00 76 00 65 00 72 00 3d 00 ?? ?? 26 00 63 00 6f 00 75 00 6e 00 74 00 72 00 79 00 3d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

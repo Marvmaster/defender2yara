@@ -23,6 +23,7 @@ rule PWS_Win64_Hesperbot_A_2147690345_0
         $x_1_9 = {49 8b c0 48 c1 f8 05 83 e1 1f 49 8b 04 c2 48 6b c9 58 4c 8b 14 01 49 83 fa ff 74 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

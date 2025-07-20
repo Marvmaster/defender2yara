@@ -18,6 +18,7 @@ rule Ransom_Win64_Jabaxsta_A_2147728734_0
         $x_20_4 = "Projects From Ryuk" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win64_Jabaxsta_B_2147730123_0
         $x_1_6 = {63 00 73 00 72 00 73 00 73 00 2e 00 65 00 78 00 65 00 [0-16] 65 00 78 00 70 00 6c 00 6f 00 72 00 65 00 72 00 2e 00 65 00 78 00 65 00 [0-16] 6c 00 73 00 61 00 61 00 73 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

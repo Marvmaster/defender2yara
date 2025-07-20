@@ -17,6 +17,7 @@ rule Trojan_MSIL_UsbSpreader_2147740441_0
         $x_1_3 = "dG9ycmVudA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

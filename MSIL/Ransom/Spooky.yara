@@ -16,6 +16,7 @@ rule Ransom_MSIL_Spooky_DD_2147741934_0
         $x_1_2 = {63 72 79 62 6c 65 [0-5] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

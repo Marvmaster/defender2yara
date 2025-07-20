@@ -18,6 +18,7 @@ rule Worm_Win32_Thorpiex_A_2147687094_0
         $x_1_4 = {53 65 6e 64 20 4d 65 73 73 61 67 65 20 74 6f 20 47 72 6f 75 70 [0-32] 41 54 4c 3a 30 30 38 39 30 41 39 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

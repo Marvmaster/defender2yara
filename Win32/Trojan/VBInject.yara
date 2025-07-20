@@ -18,6 +18,7 @@ rule Trojan_Win32_VBInject_K_2147642470_0
         $x_1_4 = {43 00 6f 00 6d 00 70 00 61 00 6e 00 79 00 4e 00 61 00 6d 00 65 00 00 00 00 00 4d 00 69 00 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00 20 00 4c 00 6f 00 61 00 64 00 65 00 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_VBInject_N_2147644293_0
         $x_1_4 = "/C start explorer.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -65,6 +67,7 @@ rule Trojan_Win32_VBInject_P_2147645585_0
         $x_1_2 = {70 50 72 6f 79 00 50 72 6f 6a 65 63 74 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Win32_VBInject_S_2147656154_0
         $x_1_5 = {c7 45 fc 03 00 00 00 c7 45 ?? 00 00 00 00 c7 45 ?? 02 00 00 00 8d 45 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 83 c4 0c c7 45 fc 04 00 00 00 68 ff 00 00 00 8b 55 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? c7 45 fc 05 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -112,6 +116,7 @@ rule Trojan_Win32_VBInject_T_2147661149_0
         $x_1_1 = {09 40 00 00 e8 ?? ?? f8 ff 66 3d ff ff 74 05 e8 ?? ff ff ff 56 56}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_Win32_VBInject_DS_2147740553_0
         $x_1_1 = {ff 34 08 5b 66 0f 6e d3 [0-32] e8 [0-4] f6 [0-32] 66 0f 7e 14 08 [0-16] 83 e9 fc 81 f9 ?? ?? ?? ?? 75 ?? f6 [0-16] c3 f6 [0-16] 66 0f ef d1 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule Trojan_Win32_VBInject_BS_2147743794_0
         $x_1_1 = {8b d8 8b 16 33 c9 8b 42 0c 8b 95 48 ff ff ff 8a 0c 10 8b 45 d8 25 ff 00 00 00 8b d7 33 c8 81 e2 ff 00 00 00 33 ca ff 15 ?? ?? ?? ?? 8b 0e 8b 51 0c 88 04 1a 8b 45 dc 8b 5d e0 03 c7 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule Trojan_Win32_VBInject_BS_2147743794_1
         $x_1_2 = {b9 ee ff ff 00 d9 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +206,7 @@ rule Trojan_Win32_VBInject_BS_2147743794_2
         $x_1_2 = {eb 0c ff 15 ?? ?? ?? ?? 89 85 60 ff ff ff 8b 4d d8 ff 15 ?? ?? ?? ?? 8b 4d 08 8b 11 8b 4a 0c 8b 95 60 ff ff ff 88 04 11 c7 45 fc 25 00 00 00 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +231,7 @@ rule Trojan_Win32_VBInject_BS_2147743794_3
         $x_1_4 = "uYkImp0VgsVowU97gc1xeSraUnFyL64" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +253,7 @@ rule Trojan_Win32_VBInject_BA_2147744752_0
         $x_1_1 = {c1 f9 1f 8b d1 33 c8 33 d7 3b ca 7f 1f 8b 4d 0c 8b 09 8b 51 0c 8b 79 14 2b d7 8a cb 8d 3c 02 8a 14 02 33 ca 33 c8 03 c6 88 0f eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -264,6 +275,7 @@ rule Trojan_Win32_VBInject_CB_2147745856_0
         $x_1_1 = {66 8b cf 66 83 c1 06 66 0f b6 04 02 66 99 0f 80 ?? ?? ?? ?? 66 f7 f9 66 8b ca 8b 13 8b 42 0c 8b 95 ?? ?? ?? ?? 66 0f b6 04 10 33 c8 ff 15 ?? ?? ?? ?? 8b 0b 8b 51 0c 88 04 32 b8 01 00 00 00 66 03 c7 bf 02 00 00 00 0f 80}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -285,6 +297,7 @@ rule Trojan_Win32_VBInject_CB_2147745856_1
         $x_1_1 = {66 33 c0 8a c1 8b 4d ?? 66 89 04 79 8b 45 ?? 8b 00 8b 58 ?? 8b 48 ?? 2b cb 8d 04 11 8b 4d ?? 66 8b 1c 79 66 03 1c 71 66 83 e3 0f 79 ?? 66 4b 66 83 cb f0 66 43 0f bf db 8a 0c 59 30 08 03 95 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -306,6 +319,7 @@ rule Trojan_Win32_VBInject_CD_2147747970_0
         $x_1_1 = {2b cb 8d 04 11 8b 4d b8 66 8b 1c 79 66 03 1c 71 66 83 e3 0f 79 ?? 66 4b 66 83 cb f0 66 43 0f bf db 8a 0c 59 8a 18 32 d9 88 18 8b 85 6c ff ff ff 03 d0 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -327,6 +341,7 @@ rule Trojan_Win32_VBInject_CZ_2147748503_0
         $x_1_1 = {2b f2 3b f1 72 ?? ff ?? eb ?? ff ?? 8b f0 8b 45 08 8b 08 8b 85 10 ff ff ff 8b 51 0c 66 0f b6 0c 02 8b 55 b4 66 33 0c 7a ff 15 ?? ?? ?? ?? 8b 4d 08 8b 11 8b 4a 0c 88 04 31 8b 4d cc b8 01 00 00 00 03 c1 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +366,7 @@ rule Trojan_Win32_VBInject_CF_2147749294_0
         $x_1_4 = "vNFXTl9p6kEQaaalI141" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -376,6 +392,7 @@ rule Trojan_Win32_VBInject_HA_2147749825_0
         $x_1_5 = "Ad34jUFpZ09QhDWFzJ145" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -407,6 +424,7 @@ rule Trojan_Win32_VBInject_AM_2147755539_0
         $x_1_11 = "Assays6" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -439,6 +457,7 @@ rule Trojan_Win32_VBInject_VA_2147755778_0
         $x_1_12 = "frmLogin1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +480,7 @@ rule Trojan_Win32_VBInject_AA_2147756457_0
         $x_1_2 = {8f 04 18 eb 01 ?? eb 01 ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -490,6 +510,7 @@ rule Trojan_Win32_VBInject_AV_2147757230_0
         $x_1_9 = "scassi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -516,6 +537,7 @@ rule Trojan_Win32_VBInject_AVI_2147758178_0
         $x_1_6 = "pawer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -542,6 +564,7 @@ rule Trojan_Win32_VBInject_AVP_2147759090_0
         $x_1_6 = "Belows" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -563,6 +586,7 @@ rule Trojan_Win32_VBInject_MR_2147776805_0
         $x_1_1 = {89 d1 83 f8 [0-8] 81 [0-5] 01 ?? 83 [0-2] 3d [0-4] 8b ?? 3d [0-4] 83 [0-2] 81 [0-5] 81 [0-5] 3d [0-4] c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -591,6 +615,7 @@ rule Trojan_Win32_VBInject_VA_2147782405_0
         $x_3_8 = "WNetGetUserA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -617,6 +642,7 @@ rule Trojan_Win32_VBInject_PO_2147788124_0
         $x_1_6 = "FileZilla Project" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -638,6 +664,7 @@ rule Trojan_Win32_VBInject_EA_2147788926_0
         $x_1_1 = {31 f0 83 c6 01 31 f0 3b 84 24 18 01 00 00 75 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -664,6 +691,7 @@ rule Trojan_Win32_VBInject_E_2147813754_0
         $x_3_6 = "DecryptString" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -688,6 +716,7 @@ rule Trojan_Win32_VBInject_MA_2147819640_0
         $x_1_4 = "gethostbyname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -712,6 +741,7 @@ rule Trojan_Win32_VBInject_MA_2147819640_1
         $x_1_4 = "yyLWUOjEncpVgWglQKpjdAU" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -734,6 +764,7 @@ rule Trojan_Win32_VBInject_BAD_2147925685_0
         $x_2_2 = {25 66 f1 46 90 35 be f4 5a 4c 08 91 e7 e0 ee 57}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -756,6 +787,7 @@ rule Trojan_Win32_VBInject_BSA_2147927432_0
         $x_1_2 = "vermi.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))
@@ -785,6 +817,7 @@ rule Trojan_Win32_VBInject_BSA_2147927432_1
         $x_5_6 = "Landesausstellungsgeb" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -813,6 +846,7 @@ rule Trojan_Win32_VBInject_BSA_2147927432_2
         $x_5_8 = "Pflegetiere6" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -835,6 +869,7 @@ rule Trojan_Win32_VBInject_NIT_2147929716_0
         $x_1_2 = "VBA6.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -860,6 +895,7 @@ rule Trojan_Win32_VBInject_EM_2147932658_0
         $x_1_5 = "Launcher for Zapret New\\Project1.vbp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -881,6 +917,7 @@ rule Trojan_Win32_VBInject_MBQ_2147933332_0
         $x_1_1 = {fc 22 40 00 00 f8 30 00 00 ff ff ff 08 00 00 00 01 00 00 00 01 00 00 00 e9 00 00 00 18 22 40 00 10 22 40 00 24 18 40 00 78 00 00 00 81 00 00 00 8a 00 00 00 8b [0-33] 50 72 6f 6a 65 63 74 31 00 50 72 6f 6a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -907,6 +944,7 @@ rule Trojan_Win32_VBInject_EN_2147933737_0
         $x_1_6 = "dsFxkZoI8" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

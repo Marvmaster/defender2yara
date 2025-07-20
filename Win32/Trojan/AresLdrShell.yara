@@ -18,6 +18,7 @@ rule Trojan_Win32_AresLdrShell_LK_2147845763_0
         $x_1_3 = {8b 42 04 03 47 08 8b 4a fc 03 cb 8a 04 30 88 04 31 46 3b 32 72 ea}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

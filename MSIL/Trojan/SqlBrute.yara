@@ -21,6 +21,7 @@ rule Trojan_MSIL_SqlBrute_A_2147788131_0
         $x_1_6 = "winlogon.Resources.sqlMssql.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_MSIL_Bodegun_AMKD_2147832249_0
         $x_1_1 = {06 0b 16 0c 2b 62 07 08 9a 0d 00 09 6f ?? ?? ?? 0a 13 05 12 05 fe 16 16 00 00 01 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Bodegun_MBJZ_2147893084_0
         $x_1_3 = "virusthing2.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_Bodegun_KAA_2147895802_0
         $x_5_2 = "http://pwn.uphero.com/" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_MSIL_Bodegun_PGB_2147936853_0
         $x_4_2 = "would you like to stop the infection?" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

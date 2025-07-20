@@ -43,6 +43,7 @@ rule TrojanSpy_AndroidOS_Pegasus_A_2147786255_0
         $x_1_3 = "/adinfo?gi=%s&bf=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

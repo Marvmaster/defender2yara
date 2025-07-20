@@ -20,6 +20,7 @@ rule Trojan_MSIL_Discord_MB_2147810502_0
         $x_3_5 = "set_SecurityProtocol" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Trojan_MSIL_Discord_MB_2147810502_1
         $x_1_10 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +81,7 @@ rule Trojan_MSIL_Discord_MC_2147813791_0
         $x_1_9 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +107,7 @@ rule Trojan_MSIL_Discord_M_2147821696_0
         $x_1_5 = "wallet.id.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule Trojan_MSIL_Discord_N_2147821697_0
         $x_1_5 = "MyWebServicesObjectProvider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +161,7 @@ rule Trojan_MSIL_Discord_ABG_2147824765_0
         $x_1_7 = "RegistryKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -180,6 +186,7 @@ rule Trojan_MSIL_Discord_ARA_2147847796_0
         $x_2_1 = {02 07 02 8e b7 5d 02 07 02 8e b7 5d 91 03 07 03 8e b7 5d 91 61 02 07 17 d6 02 8e b7 5d 91 da 20 00 01 00 00 d6 20 00 01 00 00 5d b4 9c 07 15 d6 0b 07 16 2f cb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +213,7 @@ rule Trojan_MSIL_Discord_GUF_2147896108_0
         $x_1_6 = "\\Release\\thetastealer.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +235,7 @@ rule Trojan_MSIL_Discord_ARAZ_2147936375_0
         $x_2_1 = {11 05 11 06 91 13 07 09 11 07 61 0d 11 06 17 58 13 06 11 06 11 05 8e 69 32 e6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

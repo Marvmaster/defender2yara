@@ -38,6 +38,7 @@ rule Trojan_Win32_Figyek_A_2147695285_0
         $x_1_24 = {2e 67 69 66 00 [0-10] 72 75 6e 6d 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

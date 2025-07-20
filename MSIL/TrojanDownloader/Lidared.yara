@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_Lidared_A_2147697351_0
         $x_1_3 = "/tongji.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

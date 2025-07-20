@@ -24,6 +24,7 @@ rule PUA_Win32_FusionCore_C_266656_0
         $x_1_10 = "FUS_OFFER_CAPTION_PREFIX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Banzornk_A_2147691678_0
         $x_1_3 = {8b 4d 0c c1 e9 02 8b 45 10 8b 5d 14 85 c9 74 0a 31 06 01 1e 83 c6 04 49 eb f2 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

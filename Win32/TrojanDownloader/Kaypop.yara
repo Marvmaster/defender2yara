@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Kaypop_A_2147683582_0
         $x_1_5 = {2e 25 64 2f 6c 6f 67 2f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

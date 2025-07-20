@@ -24,6 +24,7 @@ rule Backdoor_Win32_Masteseq_AC_2147599764_0
         $x_1_10 = "SOFTWARE\\Numega" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

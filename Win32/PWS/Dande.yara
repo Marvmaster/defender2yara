@@ -16,6 +16,7 @@ rule PWS_Win32_Dande_A_2147651317_0
         $x_1_2 = {8b 95 f8 fd ff ff b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 85 c0 7e 07 8b 45 0c 89 30 33 db 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Bergat_A_2147688198_0
         $x_1_4 = "[Execute]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

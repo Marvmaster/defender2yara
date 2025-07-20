@@ -38,6 +38,7 @@ rule Ransom_Win32_VB_Globster_2147724512_0
         $x_2_24 = "Supersuperior" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (15 of ($x*))
 }
 

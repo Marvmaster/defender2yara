@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Stasky_B_2147801628_0
         $x_1_6 = {c7 45 fc 00 00 00 00 e4 02 c7 45 fc fe ff ff ff 32 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

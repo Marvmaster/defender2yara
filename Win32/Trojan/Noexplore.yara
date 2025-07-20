@@ -16,6 +16,7 @@ rule Trojan_Win32_Noexplore_A_2147615326_0
         $x_1_2 = {2e 74 6d 70 00 74 6d 70 66 69 6c 65 00 62 61 74 63 68 66 69 6c 65 2e 62 61 74 00 2e 62 61 74 00 2e 00 00 64 65 6c 20 22}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

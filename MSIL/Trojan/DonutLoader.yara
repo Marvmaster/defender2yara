@@ -16,6 +16,7 @@ rule Trojan_MSIL_DonutLoader_EAEP_2147935748_0
         $x_5_1 = {02 12 02 7b 0f 00 00 04 28 07 00 00 0a 2c 0a 12 02 7b 08 00 00 04 0a 2b 0a 07 12 02 28 ?? ?? ?? 06 2d dd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

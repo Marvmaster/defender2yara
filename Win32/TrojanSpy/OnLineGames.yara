@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_OnLineGames_2147605885_0
         $x_1_4 = "Software\\Tencent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanSpy_Win32_OnLineGames_2147605885_1
         $x_1_5 = {47 45 54 00 52 65 66 65 72 65 72 00 71 64 5f 62 61 6c 61 6e 63 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

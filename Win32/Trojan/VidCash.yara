@@ -23,6 +23,7 @@ rule Trojan_Win32_VidCash_17738_0
         $x_1_9 = "set OUTDIR=%windir%" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_4_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -57,6 +58,7 @@ rule Trojan_Win32_VidCash_17738_1
         $x_2_6 = ".hop.clickbank.net" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -79,6 +81,7 @@ rule Trojan_Win32_VidCash_17738_2
         $x_2_3 = "Recomendations:     Click Yes to get all available antispyware software." wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

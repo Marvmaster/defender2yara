@@ -17,6 +17,7 @@ rule TrojanDropper_Linux_Mayday_A_2147825981_0
         $x_1_2 = {99 b8 15 2b 39 43 c1 6b 54 f1 03 d9 03 9c da f5 19 59 07 94 b2 69 7d a9 f5 1c 87 2d 30 e5 72 df}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

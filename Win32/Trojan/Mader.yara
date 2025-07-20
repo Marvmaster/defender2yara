@@ -18,6 +18,7 @@ rule Trojan_Win32_Mader_A_2147606638_0
         $x_1_3 = {74 31 80 38 79 75 12 80 78 01 65 75 0c 80 78 02 73 75 06 89 7c 24 14 eb 1a 53 e8 ?? ?? ff ff 85 c0 59 75 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_MSIL_Masslogger_VN_2147758432_0
         $x_1_1 = {01 25 16 7e ?? ?? ?? 04 a2 25 17 7e ?? ?? ?? 04 a2 25 18 72 ?? ?? ?? 70 a2 73 ?? ?? ?? 06 0a 02 28 ?? ?? ?? 06 00 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_Masslogger_VN_2147758432_1
         $x_1_1 = {70 0c 19 8d ?? ?? ?? 01 25 16 06 a2 25 17 07 a2 25 18 08 a2 73 ?? ?? ?? 06 0d 2a 10 00 7e ?? ?? ?? 04 0a 7e ?? ?? ?? 04 0b 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_MSIL_Masslogger_VN_2147758432_2
         $x_1_1 = {91 61 d2 9c 1e 00 fe ?? ?? 00 fe ?? ?? 00 fe ?? ?? 00 fe ?? ?? 00 91 fe ?? ?? 00 61 fe ?? ?? 00 fe ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_MSIL_Masslogger_VN_2147758432_3
         $x_1_2 = {0b 14 0c 19 8d ?? ?? ?? 01 25 16 06 a2 25 17 07 a2 25 18 72 ?? ?? ?? 70 a2 73 ?? ?? ?? 06 0d 2a 0b 00 7e ?? ?? ?? 04 0a 7e ?? ?? ?? 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_MSIL_Masslogger_VN_2147758432_4
         $x_1_6 = "TASKKILkilll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule Trojan_MSIL_Masslogger_K_2147758915_0
         $x_1_6 = "jtnJD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule Trojan_MSIL_Masslogger_SS_2147769638_0
         $x_1_20 = "BlockCopy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -200,6 +207,7 @@ rule Trojan_MSIL_Masslogger_A_2147770246_0
         $x_1_8 = "Chrome/FirewallProduct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -229,6 +237,7 @@ rule Trojan_MSIL_Masslogger_GG_2147773252_0
         $x_1_6 = "HOOK/MEMORY6" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -264,6 +273,7 @@ rule Trojan_MSIL_Masslogger_GG_2147773252_1
         $x_1_12 = "BotKiller" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -300,6 +310,7 @@ rule Trojan_MSIL_Masslogger_MS_2147777850_0
         $x_1_13 = "fileToolStripMenuItem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -322,6 +333,7 @@ rule Trojan_MSIL_Masslogger_HHQ_2147935728_0
         $x_5_2 = {25 16 0f 00 28 ?? 00 00 0a 9c 25 17 0f 00 28 ?? 00 00 0a 9c 25 18 0f 00 28 ?? 00 00 0a 9c 0c 16 0d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -343,6 +355,7 @@ rule Trojan_MSIL_Masslogger_SWA_2147936226_0
         $x_2_1 = {00 11 06 11 0f 11 0f 1b 5a 20 bb 00 00 00 61 d2 9c 00 11 0f 17 58 13 0f 11 0f 11 06 8e 69 fe 04 13 10 11 10 2d da}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -365,6 +378,7 @@ rule Trojan_MSIL_Masslogger_MBV_2147937104_0
         $x_1_2 = {4b 00 49 00 00 09 4c 00 6f 00 61 00 64 00 00 21 47 00 65 00 74 00 45 00 78 00 70 00 6f 00 72 00 74 00 65 00 64 00 54 00 79 00 70 00 65 00 73 00 00 25 4c 00 6f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -388,6 +402,7 @@ rule Trojan_MSIL_Masslogger_ZSY_2147939137_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -410,6 +425,7 @@ rule Trojan_MSIL_Masslogger_ZET_2147942956_0
         $x_5_2 = {9c 2b 21 19 8d ?? 00 00 01 25 16 03 6f ?? 01 00 0a 9c 25 17 03 6f ?? 01 00 0a 9c 25 18 03 6f ?? 01 00 0a 9c 73 ?? 01 00 0a 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule VirTool_Win64_Rubird_A_2147923512_0
         $x_1_2 = {0f b6 45 00 88 45 d0 0f 28 45 e0 0f 28 4d f0 0f 29 4d c0 0f 29 45 b0 ?? ?? ?? ?? 31 c9 31 d2 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

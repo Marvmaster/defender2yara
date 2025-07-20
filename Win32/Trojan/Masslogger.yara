@@ -16,6 +16,7 @@ rule Trojan_Win32_Masslogger_MR_2147771423_0
         $x_1_2 = {74 27 fe c0 04 8f fe c8 2c 9e 2c 2f 2c 78 fe c8 04 85 fe c0 fe c8 fe c8 34 b9 2c 1e 04 e1 88 81 [0-4] 83 c1 01 8a 81 [0-4] 81 f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

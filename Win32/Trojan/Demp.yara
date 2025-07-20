@@ -16,6 +16,7 @@ rule Trojan_Win32_Demp_EH_2147829635_0
         $x_2_1 = {8a 16 8d 76 01 0f b6 44 37 ff 02 c2 02 d8 0f b6 c3 03 c8 ff 8d f8 fe ff ff 0f b6 01 88 46 ff 88 11 8b 8d f4 fe ff ff 75 d7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Demp_KAA_2147852101_0
         $x_1_3 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

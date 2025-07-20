@@ -18,6 +18,7 @@ rule Trojan_Win32_TimbreStealer_ZH_2147910872_0
         $x_1_4 = {8b 46 3c 85 c0 74 2f 8b 54 30 7c 85 d2 74 27 8b 44 30 78 85 c0 74 1f 8d 4c 24 1c 51 52 8d 14 30 8b ce e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_TimbreStealer_BAA_2147934268_0
         $x_4_1 = {0f b6 ca 0f b6 04 28 03 c7 03 c8 0f b6 f9 8a 44 3c 18 88 44 34 18 46 88 54 3c 18 81 fe ?? ?? ?? ?? 72 d4}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_TimbreStealer_BAB_2147944115_0
         $x_2_1 = {0f b6 c0 0f b6 44 04 ?? 32 44 2b ff 88 43 ff 83 ee 01 75 30}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

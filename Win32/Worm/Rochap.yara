@@ -20,6 +20,7 @@ rule Worm_Win32_Rochap_B_2147651325_0
         $x_1_6 = "Linha Atual SMTP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

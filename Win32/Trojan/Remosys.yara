@@ -16,6 +16,7 @@ rule Trojan_Win32_Remosys_C_2147731206_0
         $x_1_2 = "cmd.exe /C i.cmd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

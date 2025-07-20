@@ -16,6 +16,7 @@ rule VirTool_MSIL_AsmInject_A_2147691110_0
         $x_1_2 = "|Self Inject|False|False|" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule VirTool_MSIL_AsmInject_A_2147691110_1
         $x_1_2 = "|Self Inject|False|False|" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule VirTool_MSIL_AsmInject_A_2147691110_2
         $x_1_2 = "InjectionLibrary" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule VirTool_MSIL_AsmInject_B_2147691331_0
         $x_1_6 = "IsWireshark" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule VirTool_MSIL_AsmInject_C_2147692840_0
         $x_1_1 = {16 0a 2b 1f 02 06 8f ?? 00 00 01 25 71 00 00 00 01 03 06 03 8e 69 5d 91 61 d2 81 00 00 00 01 06 17 58 0a 06 02 8e 69 32 db 02 28 ?? 00 00 0a 6f ?? 00 00 0a 14 7e ?? 00 00 04 6f ?? 00 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +128,7 @@ rule VirTool_MSIL_AsmInject_E_2147692848_0
         $x_1_1 = "Coded for ParCrypter. Revision" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +149,7 @@ rule VirTool_MSIL_AsmInject_G_2147695605_0
         $x_1_1 = "Dexter_crypt2.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +170,7 @@ rule VirTool_MSIL_AsmInject_H_2147705944_0
         $x_1_1 = {09 4c 00 6f 00 61 00 64 00 00 15 45 00 6e 00 74 00 72 00 79 00 70 00 6f 00 69 00 6e 00 74 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -186,6 +194,7 @@ rule VirTool_MSIL_AsmInject_I_2147711022_0
         $x_1_4 = "Confuser" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

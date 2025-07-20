@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Passem_A_2147678893_0
         $x_4_3 = "\\mssap32.dll" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

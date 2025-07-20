@@ -22,6 +22,7 @@ rule Trojan_MSIL_NetWire_AD_2147775614_0
         $x_1_7 = "Google\\Chrome\\User Data\\Default\\Login Data" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_MSIL_NetWire_RD_2147832521_0
         $x_3_6 = {7e a5 00 00 0a 72 ?? ?? ?? ?? 17 28 ?? ?? ?? ?? 72 ?? ?? ?? ?? 17 6f a6 00 00 0a 72 ?? ?? ?? ?? 6f a7 00 00 0a 38 ?? ?? ?? ?? dd 16 00 00 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_MSIL_NetWire_NWQ_2147835150_0
         $x_1_2 = "OIY54Y55ZBEQ44GF4F57N5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_MSIL_NetWire_NWE_2147844513_0
         $x_1_3 = "WindowsApplication1.My" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Trojan_MSIL_NetWire_CSWO_2147846468_0
         $x_1_3 = "zIzmmezdizaztzelzyzThey" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Trojan_MSIL_NetWire_MAAQ_2147848458_0
         $x_1_1 = {11 04 11 05 11 08 16 32 10 08 11 08 1f 27 58 1f 4e 5d 6f ?? 00 00 0a 2b 05 11 04 11 05 93 9d 11 05 17 58 13 05 11 05 11 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Trojan_MSIL_NetWire_NNW_2147892300_0
         $x_1_2 = "Fljezeu" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

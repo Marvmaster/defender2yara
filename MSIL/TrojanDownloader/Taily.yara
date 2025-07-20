@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Taily_A_2147725136_0
         $x_1_3 = "iplogger.com/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule TrojanDownloader_MSIL_Taily_B_2147725148_0
         $x_2_7 = "\\steam\\Shell\\Open\\Command" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

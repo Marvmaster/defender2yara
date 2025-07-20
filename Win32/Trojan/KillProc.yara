@@ -18,6 +18,7 @@ rule Trojan_Win32_KillProc_A_2147628528_0
         $x_1_4 = "TransactNamedPipe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -44,6 +45,7 @@ rule Trojan_Win32_KillProc_BD_2147837419_0
         $x_2_2 = "SogouPinyin.local" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_KillProc_DAL_2147849959_0
         $x_2_2 = {5c ae 52 36 a6 49 31 d8 d6 8e 16 15 d5 f1 b5 74 01 a1 8b 54 80 cc 82 de b5 be aa 05 73 c3 af 50 fa 74}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_KillProc_MA_2147921689_0
         $x_1_4 = "EnableLUA /t REG_DWORD /d 0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -116,6 +120,7 @@ rule Trojan_Win32_KillProc_NS_2147929304_0
         $x_1_3 = "kill123" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

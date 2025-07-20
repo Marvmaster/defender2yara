@@ -15,6 +15,7 @@ rule Trojan_Win32_Petya_G_2147718806_0
         $x_10_1 = {81 e6 3c 3d 35 03 e8 ?? ?? ?? ?? 81 f2 ae 51 f1 08 85 c0 70}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Petya_EB_2147839898_0
         $x_1_6 = "Rumold Ransomware.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

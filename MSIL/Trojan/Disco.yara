@@ -23,6 +23,7 @@ rule Trojan_MSIL_Disco_DA_2147805215_0
         $x_1_8 = "LoopB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_MSIL_Disco_DB_2147805216_0
         $x_1_8 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_MSIL_Disco_RE_2147841118_0
         $x_1_3 = "SendMessageToDiscord" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Trojan_MSIL_Disco_RE_2147841118_1
         $x_1_4 = "take_screenshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Trojan_MSIL_Disco_NEAA_2147841887_0
         $x_2_3 = "Pmluxjjwfxk.bmp" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule Trojan_MSIL_Disco_DAC_2147842017_0
         $x_1_4 = "a62f44d77141426e9fa216f32d0cd0c1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +174,7 @@ rule Trojan_MSIL_Disco_NEAC_2147842211_0
         $x_1_3 = "TripleDESCryptoServiceProvider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +203,7 @@ rule Trojan_MSIL_Disco_GFM_2147842592_0
         $x_1_8 = "furkisgay" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +228,7 @@ rule Trojan_MSIL_Disco_SP_2147844275_0
         $x_1_4 = "Succesfully injected!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -241,6 +250,7 @@ rule Trojan_MSIL_Disco_SK_2147894241_0
         $x_2_1 = {00 07 09 07 8e 69 5d 02 07 09 07 8e 69 5d 91 08 09 08 6f ?? ?? ?? 0a 5d 6f ?? ?? ?? 0a 61 28 ?? ?? ?? 0a d2 07 09 17 58 07 8e 69 5d 91 28 ?? ?? ?? 0a d2 59 20 00 01 00 00 58 28 ?? ?? ?? 06 28 ?? ?? ?? 0a d2 9c 00 09 15 58 0d 09 16 fe 04 16 fe 01 13 07 11 07 2d a8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -262,6 +272,7 @@ rule Trojan_MSIL_Disco_SPQF_2147899642_0
         $x_4_1 = {06 03 07 6f ?? ?? ?? 0a 04 61 d1 6f ?? ?? ?? 0a 26 00 07 17 58 0b 07 03 6f ?? ?? ?? 0a fe 04 0c 08 2d dc}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -283,6 +294,7 @@ rule Trojan_MSIL_Disco_MVA_2147903549_0
         $x_1_1 = {02 28 1a 00 00 0a 72 7d 00 00 70 72 8b 00 00 70 28 0a 00 00 06 28 1b 00 00 0a 1b 28 0e 00 00 06 14 16 28 1c 00 00 0a 0a de 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -307,6 +319,7 @@ rule Trojan_MSIL_Disco_GNW_2147904163_0
         $x_1_4 = "startkeylogger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

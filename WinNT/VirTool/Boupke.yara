@@ -17,6 +17,7 @@ rule VirTool_WinNT_Boupke_A_2147605817_0
         $x_1_2 = {e9 d9 00 00 00 68 41 df 5c 02 ff 15 ?? ?? 01 00 50 51 52 56 57 fa 0f 20 c0 89 45 fc 25 ff ff fe ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

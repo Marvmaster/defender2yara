@@ -19,6 +19,7 @@ rule Trojan_Win32_Regmbu_2147607874_0
         $x_1_5 = {42 47 20 57 69 6e 64 6f 77 73 32 00 49 45 58 50 4c 4f 52 45 52 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

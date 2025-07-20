@@ -17,6 +17,7 @@ rule Trojan_Win64_MedusaLocker_YAC_2147932552_0
         $x_12_2 = {48 8b c3 49 f7 f7 48 8b 06 0f b6 0c 0a 41 32 0c 18 88 0c 03 48 ff c3}  //weight: 12, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

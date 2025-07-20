@@ -16,6 +16,7 @@ rule Trojan_Win32_WipMBR_B_2147660572_0
         $x_1_2 = {66 8b 08 83 c0 02 66 85 c9 75 f5 2b c2 d1 f8 8a 44 47 fe 88 44 24 08 2c 30 3c 09 77 ?? 8d 4b ?? 80 f9 09 77 ?? 83 7c 24 0c 09 77 ?? 8d 44 24 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_WipMBR_A_2147660604_0
         $x_1_4 = {15 af 52 f0 a0 ff ca 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

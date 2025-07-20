@@ -15,6 +15,7 @@ rule Worm_Win32_Vobfus_E_2147628204_0
         $x_1_1 = {f5 2e 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f5 74 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f5 68 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f5 65 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f5 69 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f5 6d 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f5 61 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f5 67 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f5 65 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f5 70 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f5 61 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f5 72 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f5 6c 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f5 6f 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f5 75 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? f5 72 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Worm_Win32_Vobfus_F_2147628592_0
         $x_5_6 = {50 72 6f 63 65 73 73 33 32 4e 65 78 74 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 3 of ($x_5_*))) or
             ((1 of ($x_15_*) and 2 of ($x_5_*))) or
@@ -68,6 +70,7 @@ rule Worm_Win32_Vobfus_G_2147628815_0
         $x_1_4 = {f4 58 fc 0d f5 00 00 00 00 04 ?? ?? ?? ?? [0-2] f4 59 fc 0d f5 01 00 00 00 04 ?? ?? ?? ?? [0-2] f4 59 fc 0d f5 02 00 00 00 04 ?? ?? ?? ?? [0-5] f4 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -95,6 +98,7 @@ rule Worm_Win32_Vobfus_I_2147631105_0
         $x_1_4 = {a9 f3 00 01 c1 e7 04 60 ff 9d fb 12 fc 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Worm_Win32_Vobfus_M_2147631417_0
         $x_1_5 = {6b 65 72 6e 65 6c 33 32 00 00 00 00 0d 00 00 00 4c 6f 61 64 4c 69 62 72 61 72 79 57 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule Worm_Win32_Vobfus_N_2147631772_0
         $x_1_5 = {50 72 6f 63 65 73 73 33 32 4e 65 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             ((3 of ($x_5_*))) or
@@ -170,6 +176,7 @@ rule Worm_Win32_Vobfus_O_2147631936_0
         $x_1_4 = {fe 8e 01 00 00 00 10 00 80 08 28 ?? ?? 00 00 f5 00 00 00 00 6c ?? ?? 52 28 ?? ?? 00 00 f5 01 00 00 00 6c ?? ?? 52 6c ?? ?? fd 69 ?? ?? f5 02 00 00 00 6c ?? ?? 52 28 ?? ?? 00 00 f5 03 00 00 00 6c ?? ?? 52 28 ?? ?? 00 00 f5 04 00 00 00 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -199,6 +206,7 @@ rule Worm_Win32_Vobfus_A_2147636661_0
         $x_1_9 = {f5 05 00 00 00 ae 71 6c ff 02 00 f5 38 00 00 00 04 ?? ff 0a ?? 00 08 00 04 ?? ff f5 42 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -222,6 +230,7 @@ rule Worm_Win32_Vobfus_B_2147636701_0
         $x_1_3 = {f5 00 00 00 00 f5 40 00 00 00 3e ?? ?? 46 ?? ?? 04 ?? ?? 0a ?? ?? ?? ?? 04 ?? ?? 60 31 ?? ?? 2f ?? ?? 36 ?? ?? ?? ?? ?? ?? 00 ?? 1b [0-5] f4 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -245,6 +254,7 @@ rule Worm_Win32_Vobfus_C_2147636886_0
         $x_1_3 = {fb 12 fc 0d 6c ?? ?? 80 ?? ?? fc a0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -287,6 +297,7 @@ rule Worm_Win32_Vobfus_D_2147637688_0
         $n_100_22 = "\\DynaTouch" wide //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (3 of ($x*))
 }
@@ -311,6 +322,7 @@ rule Worm_Win32_Vobfus_Y_2147637813_0
         $x_1_4 = "vb.drivelistbox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -333,6 +345,7 @@ rule Worm_Win32_Vobfus_Z_2147637924_0
         $x_1_3 = {f5 70 00 00 00 04 ?? ?? 0a ?? ?? ?? ?? 04 ?? ?? fb ef ?? ?? f5 6c 00 00 00 0b ?? ?? ?? ?? 46 ?? ?? fb ef ?? ?? f5 61 00 00 00 04 ?? ?? 0a ?? ?? ?? ?? 04 ?? ?? fb ef ?? ?? f5 79 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -353,6 +366,7 @@ rule Worm_Win32_Vobfus_AB_2147638284_0
         $x_1_1 = {1b ce 00 2a 23 ?? ?? 1b cf 00 2a 23 ?? ?? 1b d0 00 2a 23 ?? ?? 1b d1 00 2a 23 ?? ?? 1b ce 00 2a 23 ?? ?? 1b cf 00 2a 23 ?? ?? 1b d2 00 2a 23 ?? ?? 1b d3 00 2a 23 ?? ?? 1b d4 00 2a 23 ?? ?? 1b d2 00 2a 23 ?? ?? 1b d1 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -376,6 +390,7 @@ rule Worm_Win32_Vobfus_AC_2147638390_0
         $x_1_4 = {fe 8e 01 00 00 00 10 00 80 08 28 ?? ?? 00 00 f5 00 00 00 00 6c ?? ?? 52 28 ?? ?? 00 00 f5 01 00 00 00 6c ?? ?? 52 6c ?? ?? fd 69 ?? ?? f5 02 00 00 00 6c ?? ?? 52 28 ?? ?? 00 00 f5 03 00 00 00 6c ?? ?? 52 28 ?? ?? 00 00 f5 04 00 00 00 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -398,6 +413,7 @@ rule Worm_Win32_Vobfus_AD_2147638539_0
         $x_1_3 = {04 48 ff 04 44 ff 05 ?? ?? 24 ?? ?? 0d 14 00 1a 00 08 44 ff 0d 58 00 1b 00 04 ?? ?? 10 38 00 14 00 04 ?? ?? f4 01 2b 3e ff 10 64 00 14 00 04 ?? ?? 6c 40 ff 1b ?? ?? 2a 23 34 ff 6c 38 ff 2a fd c7 2c ff 6c 48 ff 76 50 00 f5 01 00 00 80 59 30 ff 10 20 00 14 00 32}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -426,6 +442,7 @@ rule Worm_Win32_Vobfus_AH_2147638656_0
         $x_1_5 = {47 00 00 00 [0-8] 02 00 00 00 4d 00 00 00 02 00 00 00 46 00 00 00 02 00 00 00 4e 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -449,6 +466,7 @@ rule Worm_Win32_Vobfus_AJ_2147638763_0
         $x_3_4 = {47 00 00 00 02 00 00 00 74 00 00 00 02 00 00 00 4d 00 00 00 02 00 00 00 64 00 00 00 02 00 00 00 46 00 00 00 02 00 00 00 69 00 00 00 02 00 00 00 4e 00 00 00 02 00 00 00 61 00 00 00 02 00 00 00 6d 00 00 00 02 00 00 00 57 00 00 00 04 00 00 00 20 00 2f 00 00 00 00 00 02 00 00 00 7a 00 00 00 02 00 00 00 31 00 00 00 02 00 00 00 63 00 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -476,6 +494,7 @@ rule Worm_Win32_Vobfus_E_2147641663_0
         $x_1_3 = {3c 00 00 00 59 01 00 00 c0 30 00 00 c8 19}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -502,6 +521,7 @@ rule Worm_Win32_Vobfus_AW_2147642664_0
         $x_1_4 = {07 08 00 04 00 52 [0-6] 1b ?? 00 1b ?? 00 2a 23 ?? ?? 1b ?? 00 2a fd ?? 08 ?? ?? ?? 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -522,6 +542,7 @@ rule Worm_Win32_Vobfus_AX_2147642787_0
         $x_1_1 = {3a 54 ff 67 00 fd f0 08 00 20 00 00 89 94 08 00 c8 01 1b 16 00 2a 23 30 ff 1b 14 00 2a 23 24 ff 1b 12 00 2a 23 20 ff 1b 72 00 2a 23 1c ff 1b 73 00 2a 23 18 ff 1b 74 00 2a 23 14 ff 1b 71 00 2a 23 10 ff 1b 75 00 2a 23 0c ff 1b 76 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -545,6 +566,7 @@ rule Worm_Win32_Vobfus_BF_2147643543_0
         $x_1_4 = {80 10 00 04 2c ff 34 6c 2c ff 08 78 ff 0d 50 00 ?? 01 6c 2c ff 6c 10 00 fc 58 2f 2c ff 00 26 f5 c8 5c 00 00 07 08 00 04 00 40 04 44 ff 0a 17 00 08 00 04 44 ff f5 05 2a 00 00 07 08 00 04 00 52 35 44 ff 00 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -569,6 +591,7 @@ rule Worm_Win32_Vobfus_BI_2147643696_0
         $x_1_2 = {ff 75 b4 8d 45 ac 50 e8 ?? ?? ?? ?? 50 ff 75 d8 e8 ?? ?? ?? ?? 89 45 88 ff 75 ac 8d 45 b4 50 e8 ?? ?? ?? ?? 8b 45 88 89 45 d4 8d 4d ac e8 ?? ?? ?? ?? c7 45 fc ?? 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -603,6 +626,7 @@ rule Worm_Win32_Vobfus_F_2147643991_0
         $x_3_14 = {8b 51 08 69 d2 ac 00 00 00 0f}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 7 of ($x_1_*))) or
             ((1 of ($x_5_*) and 8 of ($x_1_*))) or
@@ -632,6 +656,7 @@ rule Worm_Win32_Vobfus_BQ_2147644465_0
         $x_1_1 = {8d 55 84 8b 85 2c ff ff ff c1 e0 04 8b 0d ?? ?? ?? ?? 03 c8 ff 15 ?? ?? 40 00 c7 45 fc 1a 00 00 00 e8 ?? ?? 03 00 c7 45 fc 1b 00 00 00 e8 ?? ?? 02 00 c7 45 fc 1c 00 00 00 c7 45 8c 24 51 40 00 c7 45 84 08 00 00 00 c7 85 2c ff ff ff 6f 44 00 00 81 bd 2c ff ff ff 61 ea 00 00 73 0c c7 85 94 fe ff ff 00 00 00 00 eb 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -655,6 +680,7 @@ rule Worm_Win32_Vobfus_G_2147644669_0
         $x_1_3 = {c1 e1 04 8b 15 ?? ?? ?? ?? 03 d1 8b 85 ?? ?? ff ff c1 e0 04 8b 0d ?? ?? ?? ?? 03 c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -680,6 +706,7 @@ rule Worm_Win32_Vobfus_I_2147645535_0
         $x_1_5 = "VB.Frame" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -703,6 +730,7 @@ rule Worm_Win32_Vobfus_J_2147645847_0
         $x_5_3 = {68 00 00 00 40 6a 00 ff 15 ?? ?? 40 00 ff 15 ?? ?? 40 00 38 00 0f bf ?? dc 89 [0-5] db [0-5] dd ?? ?? ff ff ff 8b ?? ?? ff ff ff ?? 8b ?? ?? ff ff ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -726,6 +754,7 @@ rule Worm_Win32_Vobfus_CF_2147646248_0
         $x_1_4 = {ff ff 02 00 00 00 8d 95 ?? ?? ff ff 8b 4d ?? b8 06 00 00 00 2b 41 14 c1 e0 04 8b 4d ?? 8b 49 0c 03 c8 ff 15 ?? ?? 40 00 8d 55 ?? 52 ff 15 ?? ?? 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -752,6 +781,7 @@ rule Worm_Win32_Vobfus_K_2147646571_0
         $x_1_3 = {f4 58 fc 0d [0-10] f4 5b fc 0d 01 80 f4 50 fc 0d 02 30 f3 c3 00 fc 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -774,6 +804,7 @@ rule Worm_Win32_Vobfus_CI_2147646799_0
         $x_1_3 = {6a 74 8d 85 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 6a 61 e8 ?? ?? ?? ?? 89 85 [0-14] 6a 73 8d 85 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 6a 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -794,6 +825,7 @@ rule Worm_Win32_Vobfus_CJ_2147646852_0
         $x_1_1 = {c7 45 fc 03 00 00 00 6a 00 6a 04 6a 01 6a 00 8d 45 b0 50 6a 10 68 80 08 00 00 ff 15 ?? ?? ?? ?? 83 c4 1c c7 45 a8 ?? ?? ?? ?? c7 45 a0 03 40 00 00 8d 55 a0 8b 4d b0 33 c0 2b 41 14 c1 e0 04 8b 4d b0 8b 49 0c 03 c8 ff 15 ?? ?? ?? ?? 8d 55 08 89 55 98 c7 45 90 03 40 00 00 8d 55 90 8b 45 b0 b9 01 00 00 00 2b 48 14 c1 e1 04 8b 45 b0 8b 40 0c 03 c8 ff 15 ?? ?? ?? ?? 8d 4d 0c 89 4d 88 c7 45 80 03 40 00 00 8d 55 80 8b 45 b0 b9 02 00 00 00 2b 48 14 c1 e1 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -816,6 +848,7 @@ rule Worm_Win32_Vobfus_CL_2147647019_0
         $x_1_3 = {6a 6c 8d 8d ?? ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 6a 2e [0-7] ff 15 ?? ?? ?? ?? 6a 6f ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -842,6 +875,7 @@ rule Worm_Win32_Vobfus_L_2147647673_0
         $x_1_6 = {50 66 b9 c3 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -871,6 +905,7 @@ rule Worm_Win32_Vobfus_M_2147648292_0
         $x_1_5 = {50 66 b9 5b 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -895,6 +930,7 @@ rule Worm_Win32_Vobfus_N_2147649039_0
         $x_2_4 = {83 c4 1c 8b 45 08 ff 30 e8 ?? ?? ?? ?? 89 45 ?? c7 85 ?? ?? ?? ?? 03 00 00 00 8d b5 ?? ?? ?? ?? 6a 00 ff 75 ?? e8 ?? ?? ?? ?? 8b c8 8b d6 e8 ?? ?? ?? ?? 8d 45 ?? 50 ff 35 ?? ?? ?? ?? ff 35 ?? ?? ?? ?? e8 ?? ?? ?? ?? 89 85 ?? ?? ?? ?? 8d 45 ?? 50 6a 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
             (all of ($x*))
@@ -922,6 +958,7 @@ rule Worm_Win32_Vobfus_DE_2147649108_0
         $x_1_5 = "Messanger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -944,6 +981,7 @@ rule Worm_Win32_Vobfus_DG_2147649737_0
         $x_1_3 = {6a 04 6a 0d 8b 45 fc 50 68 34 02 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -972,6 +1010,7 @@ rule Worm_Win32_Vobfus_O_2147650517_0
         $x_1_8 = {b9 a4 00 00 00 ff 15 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 03 8d ?? ?? ff ff 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -999,6 +1038,7 @@ rule Worm_Win32_Vobfus_DP_2147651459_0
         $x_1_4 = {50 8d 45 e8 50 ff 15 ?? ?? ?? ?? 8b f0 68 ?? ?? ?? ?? 56 8b 0e ff 91 ?? ?? ?? ?? 3b c7 db e2 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1024,6 +1064,7 @@ rule Worm_Win32_Vobfus_P_2147652775_0
         $x_2_5 = {c1 e1 04 8b (85 ?? ?? ?? ??|45 ??) 8b 40 ?? 03 c8 e8 ?? ?? ?? ?? 8d (85 ?? ?? ?? ??|45 ??) 50 ff 75 ?? 8d 45 ?? 50 8d 45 ?? 50 e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 89 85 ?? ?? ?? ?? 8d (85 ?? ?? ?? ??|45 ??) 50 6a 00 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
             ((2 of ($x_5_*))) or
@@ -1050,6 +1091,7 @@ rule Worm_Win32_Vobfus_Q_2147652847_0
         $x_2_2 = {8b c8 8b d6 e8 ?? ?? ?? ?? 8d 85 ?? ?? ?? ?? 50 8d 45 ?? 50 8d 45 ?? 50 e8 ?? ?? ?? ?? 50 ff 35 ?? ?? ?? ?? e8 ?? ?? ?? ?? 89 85 ?? ?? ?? ?? 8d 85 ?? ?? ?? ?? 50 6a 00 e8 ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 89 45 ?? 8d 4d ?? e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1075,6 +1117,7 @@ rule Worm_Win32_Vobfus_R_2147652960_0
         $x_2_5 = {c3 00 8d 45 04 00 66 c7 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((1 of ($x_20_*) and 1 of ($x_5_*))) or
@@ -1126,6 +1169,7 @@ rule Worm_Win32_Vobfus_S_2147653726_0
         $x_7_27 = {c3 00 8d 55 04 00 66 c7 45}  //weight: 7, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_7_*) and 1 of ($x_1_*))) or
@@ -1154,6 +1198,7 @@ rule Worm_Win32_Vobfus_T_2147653762_0
         $x_2_3 = {c1 e1 04 8b (85 ?? ?? ?? ??|45 ??) 8b 40 ?? 03 c8 e8 ?? ?? ?? ?? 8d (85 ?? ?? ?? ??|45 ??) 50 ff 75 ?? 8d 45 ?? 50 8d 45 ?? 50 e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 89 85 ?? ?? ?? ?? 8d (85 ?? ?? ?? ??|45 ??) 50 6a 00 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
             ((2 of ($x_5_*))) or
@@ -1182,6 +1227,7 @@ rule Worm_Win32_Vobfus_U_2147656487_0
         $x_1_4 = {f5 00 00 00 00 f5 ff ff ff ff 04 ?? ?? fe 8e 00 00 00 00 10 00 80 08 04 ?? ?? 94 08 00 ?? ?? 94 08 00 ?? ?? 5e ?? ?? ?? ?? 71 ?? ?? 04 ?? ?? 5a 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1204,6 +1250,7 @@ rule Worm_Win32_Vobfus_V_2147658167_0
         $x_2_2 = {50 6a 00 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? c7 45 fc 14 00 00 00 8d 45 ?? 50 e8 ?? ?? ?? ?? 89 45 ?? c7 45 fc 15 00 00 00 6a 00 6a 02 6a 01 6a 00 8d 45 ?? 50 6a 10 68 80 08 00 00 e8 ?? ?? ?? ?? 83 c4 ?? c7 45 ?? 02 00 00 00 c7 45 ?? 02 00 00 00 8d 75 ?? 6a 00 ff 75 ?? e8 ?? ?? ?? ?? 8b c8 8b d6 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1230,6 +1277,7 @@ rule Worm_Win32_Vobfus_W_2147658210_0
         $x_1_6 = {00 00 4e 00 6f 00 41 00 75 00 74 00 6f 00 55 00 70 00 64 00 61 00 74 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1256,6 +1304,7 @@ rule Worm_Win32_Vobfus_X_2147662835_0
         $x_1_6 = {62 63 64 66 67 68 6a 6b 6c 6d 6e 70 71 72 73 74 76 77 78 79 7a [0-16] 69 63 6f [0-16] 74 61 73 6b [0-16] 70 72 6f 63}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1289,6 +1338,7 @@ rule Worm_Win32_Vobfus_Y_2147670895_0
         $x_1_13 = {f5 2b 23 00 00 3e ?? ?? 23}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1311,6 +1361,7 @@ rule Worm_Win32_Vobfus_MV_2147671934_0
         $x_1_3 = "jjomvumm" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1333,6 +1384,7 @@ rule Worm_Win32_Vobfus_MW_2147671935_0
         $x_1_3 = "uujzctkr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1360,6 +1412,7 @@ rule Worm_Win32_Vobfus_Z_2147678656_0
         $x_1_7 = "oq2*mckxjbnof}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -1387,6 +1440,7 @@ rule Worm_Win32_Vobfus_ABD_2147708325_0
         $x_1_8 = "taskkill /f /im avira_antivir_personal.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1412,6 +1466,7 @@ rule Worm_Win32_Vobfus_AI_2147826897_0
         $x_1_5 = "www.Arvinder.co.uk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1434,6 +1489,7 @@ rule Worm_Win32_Vobfus_AP_2147830407_0
         $x_2_2 = {43 00 ee 2f 43 00 38 30 43 00 82 30 43 00 cc 30 43}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1456,6 +1512,7 @@ rule Worm_Win32_Vobfus_BD_2147835263_0
         $x_2_2 = {30 41 00 c5 30 41 00 e6 30 41 00 02 31 41 00 23 31 41 00 44 31 41 00 65 31 41 00 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1477,6 +1534,7 @@ rule Worm_Win32_Vobfus_HNS_2147905903_0
         $x_2_1 = {ea 77 a4 72 41 98 a4 72 07 05 a2 72 86 93 a3 72 f9 09 a3 72 ee 6a a4 72 37 05 a2 72 8d 72 a4 72 fd a0 94 72 31 68 a4 72 44 c2 a0 72 9b 6a a2 72 29 19 a2 72 62 72 a4 72 fa 56 a2 72 88 be a0 72}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1499,6 +1557,7 @@ rule Worm_Win32_Vobfus_G_2147924426_0
         $x_1_2 = "Virus asli buatan Ambon Manise-Maluku" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

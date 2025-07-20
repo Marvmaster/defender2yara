@@ -36,6 +36,7 @@ rule Ransom_Win32_Crituck_A_2147718314_0
         $x_2_22 = {80 38 70 75 ?? 80 78 01 6d 75 ?? 80 78 02 3d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

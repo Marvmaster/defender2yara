@@ -19,6 +19,7 @@ rule Backdoor_WinNT_Turla_B_2147691957_0
         $x_1_4 = "FwpsStreamInjectAsync0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_WinNT_Turla_A_2147691972_0
         $x_1_2 = {76 1b 8a 04 0e 88 04 0f 6a 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Backdoor_WinNT_Turla_C_2147691973_0
         $x_1_4 = {48 8d 4c 24 40 33 d2 41 b8 04 01 00 00 e8 ?? ?? ?? ?? 44 8b 5f 30 4c 8d 0d ?? ?? ?? ?? 4c 8d 05 ?? ?? ?? ?? 48 8d 4c 24 40 ba 03 01 00 00 44 89 5c 24 20 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

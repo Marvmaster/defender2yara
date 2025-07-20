@@ -17,6 +17,7 @@ rule Trojan_Linux_Symbiote_B_2147822296_0
         $x_1_2 = {8b 45 e8 0f b6 84 05 c0 fb ff ff 84 c0 75 0c 48 8b 45 e8 c6 84 05 c0 fb ff ff 20 8b 45 d0 48 98 48 03 45 c0 48 8b 55 e8 0f b6 94 15 c0 fb ff ff 88 10 83 45 d0 01 48 83 45 e8 01 48 8b 45 e8 48 3b 45 d8 7c ba}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 

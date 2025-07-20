@@ -24,6 +24,7 @@ rule Trojan_Win32_Exus_A_2147653408_0
         $x_1_10 = "fuck999" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
             (all of ($x*))

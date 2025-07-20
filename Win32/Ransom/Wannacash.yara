@@ -19,6 +19,7 @@ rule Ransom_Win32_Wannacash_PA_2147746015_0
         $x_1_4 = ".doc .docx .xls .xlsx .xlst .ppt .pptx .accdb .rtf .pub .epub .pps .ppsm .pot .pages .odf .odt .ods .pdf .djvu .html .rtf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Win32_Wannacash_SA_2147748548_0
         $x_1_7 = "aHR0cHM6Ly9pcGxvZ2dlci5vcmc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

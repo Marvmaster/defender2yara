@@ -21,6 +21,7 @@ rule Trojan_Win64_T1552_004_PrivateKeys_A_2147846077_0
         $x_10_7 = "sekurlsa::backupkeys" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

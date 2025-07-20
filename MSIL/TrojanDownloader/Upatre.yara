@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Upatre_2147721960_0
         $x_1_2 = {b7 17 da 11 04 da 02 11 04 91 ?? 61 ?? 11 04 ?? 8e b7 5d 91 61 9c 11 04 17 d6 13 04 11 04 11 05 31 db ?? 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

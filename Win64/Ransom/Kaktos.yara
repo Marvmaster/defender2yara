@@ -24,6 +24,7 @@ rule Ransom_Win64_Kaktos_A_2147845986_0
         $x_1_9 = "email: cactus@mexicomail.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

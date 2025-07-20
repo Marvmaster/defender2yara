@@ -19,6 +19,7 @@ rule VirTool_WinNT_Knockex_B_2147598252_0
         $x_1_5 = "KeServiceDescriptorTable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule VirTool_WinNT_Knockex_D_2147598255_0
         $x_1_3 = {8d 45 9c 50 ff 75 a0 68 30 80 12 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

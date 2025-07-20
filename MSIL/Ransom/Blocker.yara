@@ -20,6 +20,7 @@ rule Ransom_MSIL_Blocker_A_2147767706_0
         $x_1_5 = "\\BLOCK\\obj\\Debug\\BLOCK.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_MSIL_Blocker_DA_2147768406_0
         $x_1_5 = "black hat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_MSIL_Blocker_DA_2147768406_1
         $x_1_5 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Ransom_MSIL_Blocker_AB_2147846813_0
         $x_1_1 = {0b 2b f8 02 20 93 47 9a 75 28 ?? ?? ?? 06 06 73 1f 00 00 0a 06 6f ?? ?? ?? 0a 17 59 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 20 f8 47 9a 75 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 1b 2d 08 26 26 07 17 58 0b 2b 07 28 ?? ?? ?? 06 2b f3 07 1f 14 32 b7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Ransom_MSIL_Blocker_PADX_2147911301_0
         $x_1_4 = "mspaint.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Ransom_MSIL_Blocker_SPZM_2147911493_0
         $x_4_1 = {13 13 11 1d 11 09 91 13 20 11 1d 11 09 11 ?? 11 ?? 61 11 1b 19 58 61 11 31 61 d2 9c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Ransom_MSIL_Blocker_SPGF_2147913751_0
         $x_1_1 = {07 09 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 0a 13 04 11 04 16 25 2d 1b 32 08 08 11 04 6f ?? 00 00 0a 09 18 58 0d 09 1c 2c fb 1c 2c f8 07 6f ?? 00 00 0a 32 cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +185,7 @@ rule Ransom_MSIL_Blocker_SM_2147925860_0
         $x_2_1 = {00 14 0a 73 03 00 00 0a 72 01 00 00 70 28 04 00 00 0a 6f 05 00 00 0a 0a 06 0b dd 0d 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

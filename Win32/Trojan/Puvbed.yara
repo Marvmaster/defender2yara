@@ -19,6 +19,7 @@ rule Trojan_Win32_Puvbed_A_2147601194_0
         $x_1_5 = {57 69 6e 74 65 6c 55 70 64 61 74 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

@@ -18,6 +18,7 @@ rule Ransom_Win32_NemptyCrypt_SK_2147754753_0
         $x_1_3 = {30 0c 37 83 ee 01 0f 89 ?? ?? ff ff 50 00 f7 a5 ?? ff ff ff 8b 85 ?? ff ff ff 81 85 ?? ?? ff ff ?? ?? ?? ?? 81 6d ?? ?? ?? ?? ?? 81 85 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

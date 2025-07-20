@@ -17,6 +17,7 @@ rule Trojan_Win64_r77RootKit_A_2147850683_0
         $x_2_2 = "R77.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_r77RootKit_C_2147850684_0
         $x_2_4 = "\\.\\pipe\\$77childproc" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

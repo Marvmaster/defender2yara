@@ -20,6 +20,7 @@ rule Trojan_Win32_Ronefen_A_2147749429_0
         $x_1_5 = {77 00 69 00 6e 00 6d 00 67 00 6d 00 74 00 00 00 65 72 72 6f 72 00 00 00 52 00 65 00 61 00 6c 00 74 00 65 00 6b 00 20 00 48 00 44 00 20 00 41 00 75 00 64 00 69 00 6f 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

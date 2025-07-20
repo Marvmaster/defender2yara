@@ -16,6 +16,7 @@ rule Trojan_MSIL_Wiper_E_2147731896_0
         $x_1_2 = "pure_goof.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

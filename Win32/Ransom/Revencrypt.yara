@@ -29,6 +29,7 @@ rule Ransom_Win32_Revencrypt_A_2147720434_0
         $x_1_15 = "agntsvc.exeisqlplussvc.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or

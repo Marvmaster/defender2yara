@@ -20,6 +20,7 @@ rule PWS_Win32_Sukwidon_A_2147647279_0
         $x_1_6 = {49 45 3a 50 73 77 50 72 6f 74 65 63 74 65 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

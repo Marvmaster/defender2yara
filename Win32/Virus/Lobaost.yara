@@ -17,6 +17,7 @@ rule Virus_Win32_Lobaost_A_2147665273_0
         $x_1_3 = {68 10 27 00 00 e8 12 5b fe ff e8 05 e6 ff ff e8 98 fc ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

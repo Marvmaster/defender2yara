@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Cadux_B_2147611083_0
         $x_1_3 = {67 65 74 73 6e 33 32 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Cadux_A_2147615893_0
         $x_1_3 = {44 00 3a 00 5c 00 4d 00 61 00 73 00 74 00 65 00 72 00 5c 00 62 00 62 00 5f 00 73 00 6f 00 66 00 74 00 5c 00 6e 00 6f 00 74 00 5f 00 65 00 73 00 74 00 5c 00 62 00 62 00 5f 00 62 00 68 00 6f 00 5c 00 56 00 42 00 42 00 48 00 4f 00 2e 00 76 00 62 00 70 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

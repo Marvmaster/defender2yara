@@ -16,6 +16,7 @@ rule Trojan_MSIL_CyberGate_NE_2147830089_0
         $x_1_1 = {00 00 04 17 9a 28 ?? 00 00 0a 28 ?? 00 00 0a 7e 15 00 00 04 28 ?? 00 00 0a 28 ?? 00 00 06 80 18 00 00 04 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_CyberGate_EM_2147847117_0
         $x_5_1 = {d6 20 00 01 00 00 5d 0b 11 05 11 09 91 13 04 11 05 11 09 11 05 07 91 9c 11 05 07 11 04 9c 11 05 11 09 91 11 05 07 91 d6 20 00 01 00 00 5d 0c 03 50 11 0a 03 50 11 0a 91 11 05 08 91 61}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_MSIL_CyberGate_ACG_2147894251_0
         $x_1_1 = {0c 16 0b 2b 4c 16 13 04 2b 37 03 11 04 07 6f ?? 00 00 0a 0a 08 12 00 28 ?? 00 00 0a 6f ?? 00 00 0a 08 12 00 28 ?? 00 00 0a 6f ?? 00 00 0a 08 12 00 28 ?? 00 00 0a 6f ?? 00 00 0a 11 04 17 d6 13 04 11 04 03 6f ?? 00 00 0a 17 da 31 bd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +82,7 @@ rule Trojan_MSIL_CyberGate_KAA_2147898342_0
         $x_5_1 = {03 09 91 07 1f 1f 5f 62 09 28 ?? 00 00 06 08 58 13 04 06 08 06 08 91 11 04 28 ?? 00 00 06 d2 9c 09 17 58 0d 09 03 8e 69 32 d6}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +105,7 @@ rule Trojan_MSIL_CyberGate_KPAA_2147907709_0
         $x_1_2 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

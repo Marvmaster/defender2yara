@@ -19,6 +19,7 @@ rule Trojan_Win32_Fakerean_PA_2147743177_0
         $x_1_4 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

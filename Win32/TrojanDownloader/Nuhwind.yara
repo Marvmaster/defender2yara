@@ -25,6 +25,7 @@ rule TrojanDownloader_Win32_Nuhwind_A_2147596373_0
         $x_1_11 = "URLDownloadToCacheFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

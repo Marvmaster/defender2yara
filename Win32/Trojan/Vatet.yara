@@ -18,6 +18,7 @@ rule Trojan_Win32_Vatet_B_2147751647_0
         $x_1_3 = {2e 64 61 74 00 5c 5c [0-9] 2e [0-9] 2e [0-9] 2e [0-9] 5c [0-144] 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Vatet_D_2147752884_0
         $x_2_4 = {2e 64 61 74 00 5c 5c [0-9] 2e [0-9] 2e [0-9] 2e [0-9] 5c [0-144] 5c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_Vatet_SZS_2147755408_0
         $x_1_7 = {5c 5c 31 39 32 2e 31 36 38 2e [0-3] 2e [0-3] 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -99,6 +102,7 @@ rule Trojan_Win32_Vatet_ZZ_2147760241_0
         $x_1_8 = {68 00 00 00 80 68 [0-32] ff 15 80 01 88 [0-9] 3b ?? 72 8a [0-4] (32|34) ?? ?? ?? (32|34) ?? ?? ?? (32|34)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule Trojan_Win32_Vatet_ZA_2147760388_0
         $x_1_1 = {68 00 00 00 10 ?? ff 15 ?? ?? ?? ?? 8b ?? 83 ?? ff [0-6] 6a 00 6a 00 6a 00 6a 04 6a 00 ?? ff 15 08 01 0f 10 ?? ?? 66 0f f8 ?? 66 0f ef ?? 66 0f f8 ?? 0f 11 ?? ?? 83 ?? 10 3b ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Trojan_Win32_Vatet_2147772456_0
         $x_1_1 = {8a 04 39 2c 68 34 32 2c 12 34 32 2c 12 34 32 2c 12 34 32 04 44 34 32 2c 68 34 32 2c 56 34 32 04 44 34 32 2c 68 34 32 04 44 34 32 04 44 34 32 04 44 34 32 2c 12 34 32 2c 12 34 32 2c 12 34 32 88 04 39 41 3b ca 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +168,7 @@ rule Trojan_Win32_Vatet_SZ_2147788067_0
         $x_100_2 = {74 02 eb ea ?? ff ?? e8 d4 ff ff ff 22 00 eb 27 ?? 8b ?? 83 ?? 04 8b ?? 31 ?? 83 ?? 04 ?? 8b ?? 31 ?? 89 ?? 31 ?? 83 ?? 04 83 ?? 04 31}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

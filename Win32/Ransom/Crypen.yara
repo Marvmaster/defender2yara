@@ -20,6 +20,7 @@ rule Ransom_Win32_Crypen_A_2147696046_0
         $x_1_6 = {00 43 4e 4c 6f 63 6b 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

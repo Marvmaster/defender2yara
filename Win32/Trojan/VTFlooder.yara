@@ -19,6 +19,7 @@ rule Trojan_Win32_VTFlooder_BYF_2147827188_0
         $x_1_4 = "4d1ee14a3191ba1afde5261326dcd7e81793afacb6aa7e46d0b467bc6ebcd367" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

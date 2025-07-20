@@ -20,6 +20,7 @@ rule Ransom_Win32_FrLocker_YAC_2147938530_0
         $x_20_5 = "BgIAAACkAABSU0ExAAgAAAEAAQCdcgo95dJtPqeSc2znLeC8Kp7ciM5DJMTK" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

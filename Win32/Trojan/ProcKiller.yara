@@ -22,6 +22,7 @@ rule Trojan_Win32_ProcKiller_B_2147758153_0
         $x_1_7 = "taskkill /f /t /im FirewallControlPanel.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_ProcKiller_C_2147762698_0
         $x_1_5 = "vb6chs.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

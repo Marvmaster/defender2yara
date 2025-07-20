@@ -17,6 +17,7 @@ rule Ransom_Win32_Laksbades_A_2147712315_0
         $x_1_3 = {2e 00 70 00 68 00 70 00 [0-128] 64 00 65 00 63 00 72 00 79 00 70 00 74 00 2e 00 68 00 74 00 6d 00 6c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Ransom_Win32_Laksbades_A_2147712315_1
         $x_2_7 = "hul.vab" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_2_*))) or
             ((2 of ($x_4_*) and 1 of ($x_2_*))) or

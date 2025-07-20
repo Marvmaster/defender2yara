@@ -17,6 +17,7 @@ rule Trojan_Win32_Minix_NLA_2147896863_0
         $x_1_2 = "Ym.YjQA2e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

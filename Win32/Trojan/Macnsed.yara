@@ -17,6 +17,7 @@ rule Trojan_Win32_Macnsed_A_2147646944_0
         $x_1_3 = "|*@*|" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

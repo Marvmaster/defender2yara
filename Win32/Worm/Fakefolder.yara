@@ -18,6 +18,7 @@ rule Worm_Win32_Fakefolder_A_2147642696_0
         $x_1_4 = {00 57 69 6e 53 78 53 5c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Worm_Win32_Fakefolder_B_2147642697_0
         $x_1_4 = {00 57 69 6e 53 78 53 5c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

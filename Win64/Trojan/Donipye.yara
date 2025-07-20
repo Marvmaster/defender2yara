@@ -19,6 +19,7 @@ rule Trojan_Win64_Donipye_STH_2147781261_0
         $x_1_5 = {43 63 32 6b 3d 0a f9 32 43 31 86 18 20 72 00 82 42 10 41 16 d8 f2 48 34 73 49}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_Donipye_STZ_2147781286_0
         $x_1_3 = {7d 7e 7c 7e c7 44 ?? ?? 78 6c 3e 7b 66 c7 44 ?? ?? 62 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

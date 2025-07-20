@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Maxinull_C_2147814866_0
         $x_1_6 = "ProxyOverride" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

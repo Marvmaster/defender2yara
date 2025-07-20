@@ -21,6 +21,7 @@ rule Trojan_Win32_SpyAgent_2147753605_0
         $x_1_6 = "DELETE FROM cookie" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_SpyAgent_MD_2147806284_0
         $x_1_6 = "Ubisoft Connect" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule Trojan_Win32_SpyAgent_MB_2147808459_0
         $x_1_11 = "ReadCookie" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +107,7 @@ rule Trojan_Win32_SpyAgent_RPL_2147809591_0
         $x_1_6 = ".becircl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +134,7 @@ rule Trojan_Win32_SpyAgent_R_2147899226_0
         $x_1_6 = "RED.oo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

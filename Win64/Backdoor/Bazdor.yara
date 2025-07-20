@@ -20,6 +20,7 @@ rule Backdoor_Win64_Bazdor_B_2147786764_0
         $x_3_5 = "cbdjvxrpoivxwfrvajh." ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

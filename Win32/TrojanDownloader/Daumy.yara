@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Daumy_A_2147645591_0
         $x_5_9 = {8b 50 08 51 8b 48 04 52 8b 10 51 52 8d 44 24 14 68 ?? ?? ?? ?? 50}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))

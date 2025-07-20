@@ -55,6 +55,7 @@ rule Worm_MSIL_Tawsebot_A_2147632777_0
         $x_1_41 = {74 78 74 49 6e 66 65 63 74 65 64 50 63 69 6e 66 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -93,6 +94,7 @@ rule Worm_MSIL_Tawsebot_B_2147637305_0
         $x_1_19 = "\\tesla\\files" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 4 of ($x_10_*) and 2 of ($x_1_*))) or
             ((3 of ($x_100_*) and 5 of ($x_10_*))) or
@@ -121,6 +123,7 @@ rule Worm_MSIL_Tawsebot_C_2147646969_0
         $x_2_4 = "StealerLog" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

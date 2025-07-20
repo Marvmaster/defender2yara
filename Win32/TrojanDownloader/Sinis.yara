@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Sinis_C_2147643937_0
         $x_1_7 = "/cfg/crypt1.php?id=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or

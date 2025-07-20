@@ -21,6 +21,7 @@ rule PWS_Win32_Yahmali_A_2147599699_0
         $x_2_7 = {66 3d 00 80 74 0d 6a 10}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

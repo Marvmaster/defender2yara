@@ -16,6 +16,7 @@ rule Trojan_Win32_AppinHangOver_LKA_2147896574_0
         $x_1_1 = {b9 00 10 40 00 36 80 31 0e 41 81 f9 7d 06 44 00 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

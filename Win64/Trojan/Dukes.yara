@@ -16,6 +16,7 @@ rule Trojan_Win64_Dukes_MA_2147849922_0
         $x_5_1 = {99 f7 f9 88 d0 88 44 24 07 48 8b 44 24 08 0f b7 4c 24 04 8a 04 08 88 44 24 03 48 8b 44 24 08 0f b6 4c 24 07 8a 14 08 48 8b 44 24 08 0f b7 4c 24 04}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

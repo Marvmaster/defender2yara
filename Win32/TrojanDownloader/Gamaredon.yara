@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Gamaredon_SK_2147837882_0
         $x_1_4 = "SelfDelete=\"1\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Gamaredon_SL_2147902960_0
         $x_1_4 = "SelfDelete=\"1\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -32,6 +32,7 @@ rule Trojan_MSIL_DarkNeuron_B_2147724727_0
         $x_1_17 = "neuron_service" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -59,6 +60,7 @@ rule Trojan_MSIL_DarkNeuron_C_2147724728_0
         $x_1_4 = {1d 12 81 21 1d 12 81 21 1d 12 81 21 1d 12 81 21 1d 12 81 21 1d 12 81 21 1d 12 81 21 1d 12 81 21 1d 12 81 21 1d 12 81 21 1d 12 81}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +91,7 @@ rule Trojan_MSIL_DarkNeuron_D_2147724729_0
         $x_1_10 = {43 6f 6d 6d 61 6e 64 54 69 ?? 65 57 61 69 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule VirTool_WinNT_Buso_A_2147599387_0
         $x_1_2 = {74 08 c7 02 10 00 00 c0 eb 57 56 8b 75 10 3b f7 74 48 39 7d 14 74 43 8b 4d 14 c1 e9 02 8b c1 c1 e0 02 3b 45 14 75 33 fa 0f 20 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

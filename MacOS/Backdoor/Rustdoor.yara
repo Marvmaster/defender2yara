@@ -21,6 +21,7 @@ rule Backdoor_MacOS_Rustdoor_A_2147903499_0
         $x_1_6 = "pkill-15com.apple.dockpersistent-apps" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (5 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Backdoor_MacOS_Rustdoor_B_2147903500_0
         $x_1_5 = "programsrc/persistence.rs/Users//Library/LaunchAgents.plistsrc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Backdoor_MacOS_Rustdoor_C_2147914719_0
         $x_1_4 = "lib.rslaunchctlunload-wFailed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Backdoor_MacOS_Rustdoor_D_2147914720_0
         $x_1_3 = "plistpkill-15com.apple.dockpersistent-apps" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Backdoor_MacOS_Rustdoor_E_2147921853_0
         $x_1_3 = "commandtaskkilldownload" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

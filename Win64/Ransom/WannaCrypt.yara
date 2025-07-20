@@ -19,6 +19,7 @@ rule Ransom_Win64_WannaCrypt_PF_2147909570_0
         $x_1_4 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule PWS_Win64_HighCount_A_2147910858_0
         $x_1_5 = "SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation\\NetworkProvider" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -46,6 +47,7 @@ rule PWS_Win64_HighCount_B_2147910859_0
         $x_1_2 = "1f2a047b-96d8-488e-bc9b-1d5e00000000" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

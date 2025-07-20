@@ -22,6 +22,7 @@ rule Trojan_Win32_Paruto_A_2147686765_0
         $x_1_8 = {55 70 64 76 61 4d 64 00 55 70 64 76 61 4d 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Paruto_2147689770_0
         $x_1_4 = {83 c9 ff 33 c0 f2 ae f7 d1 49 83 f9 40 0f 83 ?? ?? 00 00 85 d2 0f 8e ?? ?? 00 00 81 fa ff ff 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

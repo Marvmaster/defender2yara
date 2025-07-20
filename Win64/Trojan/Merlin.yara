@@ -22,6 +22,7 @@ rule Trojan_Win64_Merlin_A_2147925715_0
         $x_1_7 = "WaitTime" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

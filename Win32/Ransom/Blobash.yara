@@ -17,6 +17,7 @@ rule Ransom_Win32_Blobash_A_2147690504_0
         $x_10_3 = "Lock.rar" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

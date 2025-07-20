@@ -19,6 +19,7 @@ rule Trojan_Win32_Bazarldr_MK_2147773065_0
         $x_2_4 = {0f b6 c0 83 e8 [0-1] 8d 04 80 03 c0 99 f7 fb 8d 42 [0-1] 99 f7 fb 88 94 0d [0-4] 41 83 f9 [0-1] 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win64_Marte_KAD_2147902500_0
         $x_1_1 = {89 ca 0f b7 c0 49 83 c2 ?? c1 e2 ?? 01 d0 01 c1 41 0f b7 42}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_Marte_AMBE_2147903243_0
         $x_1_3 = "WaitForSingleObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win64_Marte_CCHT_2147903434_0
         $x_1_1 = {01 d0 01 c0 01 d0 29 c1 89 ca 48 63 c2 0f b6 44 05 ?? 44 31 c0 89 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win64_Marte_SPDG_2147928856_0
         $x_1_4 = "TNNhxyn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_Win64_Marte_GA_2147933923_0
         $x_1_1 = {49 63 c9 4d 8d 52 ?? 49 3b c8 49 8b d6 48 0f 45 d0 0f b6 44 14 ?? 41 30 42 ff 41 8b c6 49 3b c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

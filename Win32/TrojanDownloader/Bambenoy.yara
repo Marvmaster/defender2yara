@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_Bambenoy_A_2147624203_0
         $x_1_10 = "\\FtpTest\\FtpTest\\FtpTest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

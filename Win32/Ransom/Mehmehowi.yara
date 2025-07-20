@@ -17,6 +17,7 @@ rule Ransom_Win32_Mehmehowi_A_2147691912_0
         $x_1_3 = {ff ff 6a 10 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

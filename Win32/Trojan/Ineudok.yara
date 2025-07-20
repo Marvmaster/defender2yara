@@ -18,6 +18,7 @@ rule Trojan_Win32_Ineudok_A_2147641386_0
         $x_1_4 = "thd32.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

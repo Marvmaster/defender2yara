@@ -18,6 +18,7 @@ rule Ransom_MacOS_Filecoder_YA_2147758575_0
         $x_1_3 = "toidievitceffe/libpersist/rennur.c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (2 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_MacOS_Filecoder_YB_2147759369_0
         $x_1_7 = "virtual_mchn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (5 of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Ransom_MacOS_Filecoder_YC_2147761694_0
         $x_1_4 = "INFECTOR MAIN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (3 of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Ransom_MacOS_Filecoder_A_2147817558_0
         $x_1_4 = " rihofoj@zainmax.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Ransom_MacOS_Filecoder_YD_2147923773_0
         $x_1_2 = {48 89 f8 48 89 f3 48 83 ec 28 48 83 e4 f0 48 89 44 24 18 48 89 5c 24 20 48 8d 3d 81 56 8d 00 48 8d 9c 24 00 00 ff ff 48 89 5f 10 48 89 5f 18 48 89 1f 48 89 67 08 b8 00 00 00 00 0f a2 83 f8 00 74 2c 81 fb 47 65 6e 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

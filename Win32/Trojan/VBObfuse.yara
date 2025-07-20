@@ -22,6 +22,7 @@ rule Trojan_Win32_VBObfuse_ARA_2147745820_0
         $x_3_7 = "OkZ8k1uaUw86" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule Trojan_Win32_VBObfuse_AFF_2147749952_0
         $x_1_1 = {32 c3 88 06 5e 5b c3 [0-31] e8 [0-47] 43 81 fb c2 55 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_Win32_VBObfuse_SK_2147750021_0
         $x_1_3 = "E1Bd2zfRKM8" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Trojan_Win32_VBObfuse_SS_2147750022_0
         $x_1_3 = "rkWf4MLq114" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Trojan_Win32_VBObfuse_SA_2147750023_0
         $x_1_4 = "G18UVJSb59" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule Trojan_Win32_VBObfuse_SB_2147750044_0
         $x_1_4 = "zJocRkx78" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +174,7 @@ rule Trojan_Win32_VBObfuse_SC_2147750045_0
         $x_1_3 = "EfsBPhVJ27pAN9t3GPGWEldmEPxqCAs187" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +197,7 @@ rule Trojan_Win32_VBObfuse_CS_2147750050_0
         $x_1_2 = {31 f2 81 fe 36 b1 0d 9e 75 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -215,6 +223,7 @@ rule Trojan_Win32_VBObfuse_SD_2147750116_0
         $x_1_5 = "CbUa4zSayQ0aGl6gr8195" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -239,6 +248,7 @@ rule Trojan_Win32_VBObfuse_SE_2147750117_0
         $x_1_4 = "aRdkbZB6iypouXvpJzR6JCOcQlHui128" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -264,6 +274,7 @@ rule Trojan_Win32_VBObfuse_SM_2147750669_0
         $x_1_5 = "MyAHb189" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -290,6 +301,7 @@ rule Trojan_Win32_VBObfuse_SN_2147750670_0
         $x_1_2 = {ff 34 17 f7 c7 c4 73 9c 34 f7 c7 f7 e1 c8 4d 5b 66 81 ff 84 91 f7 c2 a2 54 2b 18 31 f3 3d d0 9b 27 b1 f7 c2 03 2e 2b e0 01 1c 10 66 81 fa a2 ef 81 fb 60 84 b8 ef 83 c2 04 f7 c3 3b 08 a5 85 a9 44 ea 3f 78 81 fa 7c 3d 00 00 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -318,6 +330,7 @@ rule Trojan_Win32_VBObfuse_SO_2147750722_0
         $x_1_8 = "qEbpWIoNXi2VHZpGZFY61" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -348,6 +361,7 @@ rule Trojan_Win32_VBObfuse_SZ_2147750966_0
         $x_1_5 = "Forfriskheartstringsnonindustrial" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -374,6 +388,7 @@ rule Trojan_Win32_VBObfuse_ARG_2147750975_0
         $x_1_6 = {81 f6 50 82 ea 2c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -401,6 +416,7 @@ rule Trojan_Win32_VBObfuse_ACE_2147752229_0
         $x_1_4 = "oy7oel014pgx3rnmgo1floytt4o8eghapzuon70fhru0lnlsvl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -422,6 +438,7 @@ rule Trojan_Win32_VBObfuse_SV_2147752460_0
         $x_1_1 = "RYiW7rnBMReUrpbykyAVzV101" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -457,6 +474,7 @@ rule Trojan_Win32_VBObfuse_SKK_2147752637_0
         $x_1_15 = "jUgKSezeqHXU213" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -487,6 +505,7 @@ rule Trojan_Win32_VBObfuse_SSV_2147752643_0
         $x_1_5 = "mQfD8jGYjjfT24xAqFA8" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -513,6 +532,7 @@ rule Trojan_Win32_VBObfuse_SCO_2147752789_0
         $x_1_6 = "rNol9YbbiKsRV52wW178" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -539,6 +559,7 @@ rule Trojan_Win32_VBObfuse_SSA_2147753013_0
         $x_1_6 = "NYM33PEqjiPncuO0Rb4raFAjzLBsOiDT9sJ1M130" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -565,6 +586,7 @@ rule Trojan_Win32_VBObfuse_RA_2147755686_0
         $x_2_6 = "DepuraTrFD.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -592,6 +614,7 @@ rule Trojan_Win32_VBObfuse_CY_2147899298_0
         $x_1_3 = {01 1c 10 81 fa 39 5f 87 8b 75 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -616,6 +639,7 @@ rule Trojan_Win32_VBObfuse_SY_2147899299_0
         $x_1_4 = "Sekstenaar7" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule VirTool_Win64_Primasz_A_2147850169_0
         $x_1_3 = {4c 8b 10 48 8d ?? ?? ?? ?? ?? 48 8b 45 b8 49 89 d1 41 b8 40 00 00 00 ba 06 00 00 00 48 89 c1 41 ?? ?? 89 85 2c ff ff ff c6 85 2b ff ff ff 00 8b 85 2c ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

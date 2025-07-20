@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Deecaw_A_2147598381_0
         $x_2_7 = "ldcore_" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
             ((5 of ($x_2_*))) or

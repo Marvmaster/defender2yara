@@ -18,6 +18,7 @@ rule Spammer_Win32_Wanameil_2147716327_0
         $x_10_4 = {52 43 50 54 20 54 4f 3a 3c 00 00 00 4d 41 49 4c 20 46 52 4f 4d 3a 3c 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

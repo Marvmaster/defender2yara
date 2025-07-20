@@ -17,6 +17,7 @@ rule Trojan_MSIL_SoldierAudio_A_2147844032_0
         $x_1_2 = {41 00 75 00 64 00 69 00 6f 00 43 00 61 00 72 00 64 00 [0-1] 44 00 72 00 69 00 76 00 65 00 72 00 [0-1] 53 00 65 00 72 00 76 00 69 00 63 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

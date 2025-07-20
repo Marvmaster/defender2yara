@@ -26,6 +26,7 @@ rule Backdoor_Win32_Amerced_A_2147609128_0
         $x_1_12 = "Daemon.VolumeControl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (11 of ($x*))
 }
 

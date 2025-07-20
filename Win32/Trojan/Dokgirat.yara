@@ -16,6 +16,7 @@ rule Trojan_Win32_Dokgirat_A_2147730332_0
         $x_1_2 = {8a 14 39 80 c2 ?? 80 f2 ?? 88 14 39 41 3b ce 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Dokgirat_D_2147896537_0
         $x_1_3 = {80 34 38 50 40 3b c6 7c f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

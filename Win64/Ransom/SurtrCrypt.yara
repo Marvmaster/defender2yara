@@ -19,6 +19,7 @@ rule Ransom_Win64_SurtrCrypt_PA_2147814360_0
         $x_1_4 = {5c 44 72 6f 70 70 65 72 5c [0-4] 5c [0-16] 5c 44 72 6f 70 70 65 72 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

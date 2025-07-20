@@ -18,6 +18,7 @@ rule Backdoor_Win64_Vawtrak_A_2147681338_0
         $x_1_4 = {c1 c8 03 69 c0 fd 43 03 00 41 bf c3 9e 26 00 be 00 00 ff 7f 41 03 c7 44 8b e0 89 ?? ?? ?? ?? ?? 44 23 e6 85 c0 75 ?? ff 15 ?? ?? ?? ?? c1 c8 03 69 c0 fd 43 03 00 41 bd ff 7f 00 00 41 03 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Backdoor_Win64_Vawtrak_A_2147681338_1
         $x_3_8 = {83 38 02 74 05 83 38 04 75 53 81 3a 47 45 54 20 75 08 41 b9 01 00 00 00 eb 24 81 3a 50 55 54 20 75 08 41 b9 03 00 00 00 eb 14 81 3a 50 4f 53 54 75 2b 80 7a 04 20 75 25}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -74,6 +76,7 @@ rule Backdoor_Win64_Vawtrak_C_2147707515_0
         $x_1_6 = "PID: %u [%0.2u:%0.2u:%0.2u]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

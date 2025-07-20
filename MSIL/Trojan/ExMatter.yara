@@ -16,6 +16,7 @@ rule Trojan_MSIL_ExMatter_MA_2147896637_0
         $x_1_1 = {16 fe 01 2b 01 16 0c 08 2c 05 00 17 0d de 16 00 16 0d de 11 26 00 7e ?? ?? ?? 04 28 ?? ?? ?? 0a 00 16 0d de}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

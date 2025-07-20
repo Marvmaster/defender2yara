@@ -32,6 +32,7 @@ rule Worm_Win32_Sheka_A_2147602781_0
         $x_1_18 = "pc homepage" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_10_*) and 1 of ($x_1_*))) or
             ((12 of ($x_10_*))) or

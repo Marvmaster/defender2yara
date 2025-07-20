@@ -23,6 +23,7 @@ rule VirTool_Win64_Helcesz_A_2147890407_0
         $x_1_8 = ".Cookies" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

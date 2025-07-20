@@ -17,6 +17,7 @@ rule Trojan_Win64_LuciferLoader_A_2147909842_0
         $x_2_2 = {30 14 08 48 ff c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

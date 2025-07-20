@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Dembr_A_2147680008_0
         $x_1_5 = "Mrxivzep$)h$mw$wix$Wyggiww% hs{r" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Dembr_B_2147680011_0
         $x_1_5 = {57 69 76 7a 6d 67 69 51 65 6d 72 00 6d 72 6d 32 68 70 70 7d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

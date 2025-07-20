@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Odrtre_A_2147598112_0
         $x_1_2 = {81 c4 00 01 00 00 be ?? ?? 40 00 ad 83 f8 01 74 2e 83 f8 02 74 75 83 f8 03 0f 84 b7 00 00 00 83 f8 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDropper_Win32_Odrtre_B_2147598158_0
         $x_1_2 = {81 c4 00 01 00 00 be ?? ?? 40 00 ad 83 f8 01 0f 84 2d 01 00 00 83 f8 02 0f 84 cc 00 00 00 83 f8 03 74 2c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

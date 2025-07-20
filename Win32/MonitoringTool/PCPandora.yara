@@ -15,6 +15,7 @@ rule MonitoringTool_Win32_PCPandora_18032_0
         $x_1_1 = "pcpandora" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

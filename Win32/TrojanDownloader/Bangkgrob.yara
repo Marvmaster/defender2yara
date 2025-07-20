@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Bangkgrob_A_2147692732_0
         $x_1_8 = "/xp.bck" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or

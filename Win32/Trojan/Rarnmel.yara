@@ -17,6 +17,7 @@ rule Trojan_Win32_Rarnmel_A_2147626959_0
         $x_1_3 = {83 f8 01 74 0d 68 c8 00 00 00 ff d7 46 83 fe 14 7c e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

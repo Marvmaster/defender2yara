@@ -17,6 +17,7 @@ rule TrojanDownloader_Linux_PythonAgent_D_2147845998_0
         $x_1_2 = {48 8d 35 54 25 00 00 48 89 fb e8 90 dc ff ff 48 89 05 29 56 20 00 48 85 c0 0f 84 12 06 00 00 48 8d 35 4e 25 00 00 48 89 df e8 71 dc ff ff 48 89 05 02 56 20 00 48 85 c0 0f 84 19 06 00 00 48 8d 35 4c 25 00 00 48 89 df e8 52 dc ff ff 48 89 05 db 55 20 00 48 85 c0 0f 84 e7 05 00 00 48 8d 35 3b 25 00 00 48 89 df e8 33 dc ff ff 48 89 05 b4 55 20 00 48 85 c0 0f 84 01 06 00 00 48 8d 35 35 25 00 00 48 89 df e8 14 dc ff ff 48 89 05 8d 55 20 00 48 85 c0 0f 84 cf 05 00 00 48 8d 35 24 25 00 00 48 89 df e8 f5 db ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

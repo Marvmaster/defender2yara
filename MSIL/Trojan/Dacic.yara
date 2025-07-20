@@ -17,6 +17,7 @@ rule Trojan_MSIL_Dacic_SK_2147895743_0
         $x_2_2 = "\\charmhost\\obj\\Release\\charmhost.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Dacic_GMN_2147907889_0
         $x_1_2 = "PLoader.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_Dacic_ND_2147916581_0
         $x_3_2 = "67134.90134.56.09" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_MSIL_Dacic_ARA_2147920666_0
         $x_2_1 = {58 11 09 fe 02 16 fe 01 13 0a 11 0a 2c 0c 00 08 09 6f ?? ?? ?? 0a 00 00 2b 2a 00 11 09 08 6f ?? ?? ?? 0a 59 13 0b 11 0b 16 fe 02 13 0c 11 0c 2c 12 00 08 09 16 11 0b 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 00 00 09 6f ?? ?? ?? 0a 00 11 07 17 58 13 07 00 11 07 07 6f ?? ?? ?? 0a fe 04 13 0d 11 0d 3a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_MSIL_Dacic_SL_2147923796_0
         $x_1_3 = "Showcard Gothic" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Trojan_MSIL_Dacic_NI_2147926462_0
         $x_1_5 = "NetworkCredential" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Trojan_MSIL_Dacic_ASMA_2147934911_0
         $x_4_7 = "Gcq1LsRGcq1LseGcq1LsaGcq1LsdGcq1LsPGcq1LsrGcq1LsoGcq1LscGcq1LseGcq1LssGcq1LssGcq1LsMGcq1LseGcq1LsmGcq1LsoGcq1LsrGcq1LsyGcq1Ls" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Ransom_MSIL_Ghocwalcrypt_A_2147709115_0
         $x_1_7 = ".CWall" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_MSIL_Ghocwalcrypt_B_2147709219_0
         $x_1_6 = ".krypted" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Seruda_A_2147682387_0
         $x_1_4 = {f7 f9 6a 00 68 00 04 00 00 8a c2 8a c8 8a e9 8b c1 c1 e0 10 66 8b c1 b9 00 01 00 00 f3 ab}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

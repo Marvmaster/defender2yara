@@ -21,6 +21,7 @@ rule TrojanProxy_Win32_Potukorp_D_2147709725_0
         $x_1_7 = {68 01 03 00 80 6a 00 68 05 00 00 00 68 01 03 00 80 6a 00 68 ?? 00 00 00 68 02 00 00 00 bb cc 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

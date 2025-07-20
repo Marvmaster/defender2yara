@@ -20,6 +20,7 @@ rule Backdoor_Win32_Agobot_A_2147594988_0
         $x_1_6 = "#enc#MiniDumpWriteDump" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

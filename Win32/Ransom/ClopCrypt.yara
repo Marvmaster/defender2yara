@@ -16,6 +16,7 @@ rule Ransom_Win32_ClopCrypt_PA_2147765499_0
         $x_1_1 = {81 c1 00 20 00 00 89 4d ?? 8b 95 ?? ?? ff ff 2b 55 98 89 95 ?? ?? ff ff 8b 45 ?? 99 b9 00 c0 0f 00 f7 f9 89 45 ?? 8b 55 ?? 81 c2 00 10 00 00 89 55 ?? 8b 85 ?? ?? ff ff 33 85 ?? ?? ff ff 89 85 ?? ?? ff ff 8b 4d ?? 81 c1 00 f0 ff 0f 89 4d ?? c1 85 ?? ?? ff ff 07 8b 55 ?? 81 ea cc 34 00 00 89 55 ?? 8b 85 ?? ?? ff ff 33 85 ?? ?? ff ff 89 85 ?? ?? ff ff 8b 4d ?? 8b 55 ?? 8b 85 ?? ?? ff ff 89 04 8a e9 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Ransom_Win32_ClopCrypt_PA_2147765499_1
         $x_1_3 = ".CI_0P" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

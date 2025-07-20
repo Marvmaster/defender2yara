@@ -19,6 +19,7 @@ rule HackTool_Win64_ChrmCred_2147798494_0
         $x_1_4 = "https://api.ipify.org" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

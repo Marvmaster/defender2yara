@@ -24,6 +24,7 @@ rule Worm_Win32_Bancos_A_2147599808_0
         $x_1_10 = "C:\\Arquivos de programas" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 1 of ($x_4_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -54,6 +55,7 @@ rule Worm_Win32_Bancos_B_2147605813_0
         $x_1_8 = "gostei muito dessa foto..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -84,6 +86,7 @@ rule Worm_Win32_Bancos_D_2147621519_0
         $x_1_6 = "C:\\Archivos de programa\\Lavasoft" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -111,6 +114,7 @@ rule Worm_Win32_Bancos_F_2147622120_0
         $x_1_4 = ":\\autorun.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +146,7 @@ rule Worm_Win32_Bancos_G_2147622611_0
         $x_1_12 = "confgAuthentic.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 2 of ($x_5_*) and 2 of ($x_1_*))) or
             ((7 of ($x_10_*) and 3 of ($x_5_*))) or

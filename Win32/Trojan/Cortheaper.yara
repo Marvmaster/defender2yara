@@ -18,6 +18,7 @@ rule Trojan_Win32_Cortheaper_A_2147642807_0
         $x_2_4 = "rer\\VIEW SOURCE EDITOR\\EDITOR NAME" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

@@ -17,6 +17,7 @@ rule Trojan_MSIL_Vipkeylogger_CE_2147941920_0
         $x_1_2 = {1b 13 04 38 ?? 01 00 00 03 6f ?? 00 00 0a 04 fe 04 16 fe 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_Vipkeylogger_AVK_2147945330_0
         $x_1_1 = {16 13 40 2b 44 00 11 3e 11 40 19 5f 91 13 41 11 41 16 60 11 41 fe 01 13 42 11 42 13 43 11 43 2c 21 00 03 11 41 6f ?? 00 00 0a 00 11 1e 11 3f 5a 11 40 58 13 44 11 07 11 44 11 41 6f ?? 00 00 0a 00 00 00 11 40 17 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

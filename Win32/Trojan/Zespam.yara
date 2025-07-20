@@ -16,6 +16,7 @@ rule Trojan_Win32_Zespam_A_2147681109_0
         $x_1_2 = {66 8b 11 66 89 55 ?? 0f b7 45 ?? 50 e8 ?? ?? ?? ?? 83 c4 04 0f b7 c8 33 4d ?? 81 e1 ff 00 00 00 8b 55 ?? c1 ea 08 33 14 8d ?? ?? ?? ?? 89 55 ?? 8b 45 ?? 83 c0 02 89 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

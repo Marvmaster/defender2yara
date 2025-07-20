@@ -19,6 +19,7 @@ rule HackTool_MSIL_BruteForce_G_2147756503_0
         $x_2_4 = "KMS Activator" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule HackTool_MSIL_BruteForce_ARA_2147915620_0
         $x_1_6 = "Remaining Combo.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

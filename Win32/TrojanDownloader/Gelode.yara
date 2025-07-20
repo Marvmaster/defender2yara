@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Gelode_A_2147658967_0
         $x_1_2 = "073110116101114110101116082101097100070105108101" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

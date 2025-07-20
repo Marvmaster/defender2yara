@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Forpi_A_2147645590_0
         $x_3_5 = {8b c0 53 33 db 6a 00 e8 ?? ?? ?? ?? 83 f8 07 75 1c 6a 01 e8 ?? ?? ?? ?? 25 00 ff 00 00 3d 00 0d 00 00 74 07 3d 00 04 00 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Forpi_B_2147646604_0
         $x_1_5 = "tj.wanleishi.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Cadlotcorg_A_2147718877_0
         $x_1_4 = {58 3a 5c 00 58 3a 5c 00 53 79 73 74 65 6d 44 72 69 76 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Cadlotcorg_B_2147719192_0
         $x_1_5 = "C:\\Program Files\\Common Files\\System\\*" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

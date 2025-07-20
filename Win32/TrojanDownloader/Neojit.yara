@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Neojit_A_2147654841_0
         $x_1_2 = {c7 40 4c 80 10 00 00 c7 40 50 7c 08 00 00 ba ?? ?? ?? ?? 89 50 54 eb ?? 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Neojit_A_2147654841_1
         $x_1_4 = {00 44 6f 77 6e 6c 6f 61 64 20 75 72 6c 20 3d 20 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule TrojanDownloader_Win32_Neojit_A_2147654841_2
         $x_1_4 = {8b 45 fc c6 00 68 (e9|eb) 8b 45 fc 40 89 18 (e9|eb) 8b 45 fc 83 c0 05 c6 00 c3 (e9|eb) ff 55 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_10_*))) or

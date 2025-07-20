@@ -47,6 +47,7 @@ rule Worm_Win32_Licu_2147580883_0
         $x_1_33 = "c$\\Windows\\All Users\\Men" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (28 of ($x*))
 }
 

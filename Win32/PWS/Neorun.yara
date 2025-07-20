@@ -19,6 +19,7 @@ rule PWS_Win32_Neorun_A_2147657564_0
         $x_1_5 = {ac 33 06 03 89 45 ?? c7 45 ?? 16 65 fa 10 89 45 ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule PWS_Win32_Neorun_B_2147657565_0
         $x_1_6 = "Neo,welcome to the desert of real." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

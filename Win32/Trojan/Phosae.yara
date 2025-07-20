@@ -16,6 +16,7 @@ rule Trojan_Win32_Phosae_B_2147724756_0
         $x_1_1 = "0x87a145f2, 0x9044, 0x4edd, 0xb9, 0x9f, 0xc0, 0xe9, 0x21, 0xa0, 0xf8, 0x51" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

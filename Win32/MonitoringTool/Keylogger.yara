@@ -22,6 +22,7 @@ rule MonitoringTool_Win32_Keylogger_168221_0
         $x_1_8 = {6c 6f 67 2e 64 69 63 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule MonitoringTool_Win32_Keylogger_D_228143_0
         $x_1_4 = {7b 42 61 63 6b 73 70 61 63 65 7d [0-16] 7b 45 6e 74 65 72 7d [0-16] 7b 53 70 61 63 65 7d [0-16] 7b 50 72 69 6e 74 20 53 63 72 65 65 6e 7d [0-16] 7b 53 63 72 6f 6c 6c 20 4c 6f 63 6b 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

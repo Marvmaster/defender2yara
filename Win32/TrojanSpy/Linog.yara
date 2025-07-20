@@ -25,6 +25,7 @@ rule TrojanSpy_Win32_Linog_A_2147666409_0
         $x_1_11 = "system32\\net view > c:\\windows\\temp\\a1.tmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_1_*))) or
             ((1 of ($x_2_*) and 7 of ($x_1_*))) or

@@ -19,6 +19,7 @@ rule Trojan_Win32_Taidder_A_2147650560_0
         $x_1_5 = {b9 1a 00 00 00 31 d2 f7 f1 89 d7 83 c7 20 81 f7 a1 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule Trojan_Win64_PyGreedy_YAA_2147921054_0
         $x_1_9 = "b_socket.pyd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

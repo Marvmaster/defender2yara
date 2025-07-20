@@ -28,6 +28,7 @@ rule BrowserModifier_Win32_SearcherSmart_133055_0
         $x_1_14 = "Search panel" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 7 of ($x_1_*))) or
             ((5 of ($x_2_*) and 5 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule Trojan_Win32_RiseProStealer_PA_2147896832_0
         $x_1_1 = {0f b6 44 0d ?? 50 e8 [0-4] 88 44 0d ?? 41 83 f9 ?? 72 ?? 8d 45 ?? 50 56 ff ?? 5f a3 [0-4] 5e 8b e5 5d c3 [0-16] 55 8b ec 8a 45 08 34 33 5d c2 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_RiseProStealer_YAA_2147896861_0
         $x_2_2 = {8b ca 83 e1 0f b8 1d 8c 7c ee 83 f9 0f ba 40 bf fe f6 0f 43 cf c1 e1 02 e8 ?? ?? ?? ?? 8b 55 f0 24 0f 8d 4a 1d 32 c1 32 c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_RiseProStealer_PB_2147896931_0
         $x_1_1 = {f6 17 8b c3 8b d8 8b f6 33 f6 33 f6 8b de 33 f6 8b c3 33 f6 80 07 ?? 8b f6 8b db 8b d8 33 f0 33 db 33 f3 8b f3 33 de 33 c6 80 2f ?? 8b de 8b c0 8b d8 33 db 33 f3 8b c0 8b c6 33 f0 33 f3 f6 2f 47 e2 ab}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win32_RiseProStealer_PC_2147896951_0
         $x_1_1 = {8b ca 23 ce b8 [0-4] 3b ce ba [0-4] 0f 43 ce c1 e1 02 e8 [0-4] 8b 55 fc 24 0f 8d 4a ?? 32 c1 32 c3 88 44 15 ?? 42 89 55 fc 83 fa ?? 72 ?? 0f 57 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +105,7 @@ rule Trojan_Win32_RiseProStealer_ARA_2147897510_0
         $x_2_1 = {69 4c 9d 00 91 e9 d1 5b 8b c1 c1 e8 18 33 c1 69 c8 91 e9 d1 5b 89 4c 24 28 85 d2 75 1c f6 c3 01 74 17 8d 47 fd 3b d8 7e 10}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +127,7 @@ rule Trojan_Win32_RiseProStealer_DA_2147897565_0
         $x_1_1 = {69 0c b3 95 e9 d1 5b 46 69 ff 95 e9 d1 5b 8b c1 c1 e8 18 33 c1 69 c8 95 e9 d1 5b 33 f9 3b f5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +149,7 @@ rule Trojan_Win32_RiseProStealer_A_2147898301_0
         $x_2_1 = {8b c2 d3 e8 8b 4d ?? 8d 34 13 81 c3 ?? ?? ?? ?? 03 45 ?? 33 c6 33 c8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +171,7 @@ rule Trojan_Win32_RiseProStealer_YAB_2147899045_0
         $x_1_1 = {70 5a 37 59 8b 45 d8 8b 4d dc c5 fe 6f 85 ?? ?? ?? ?? 89 85 ?? ?? ?? ?? 8d 85 ?? ?? ?? ?? 89 8d ?? ?? ?? ?? c5 fd ef 85 ?? ?? ?? ?? 50 c5 fd 7f 85 ?? ?? ?? ?? 57 c5 f8 77 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +198,7 @@ rule Trojan_Win32_RiseProStealer_AD_2147899885_0
         $x_1_6 = "\\.\\Global\\oreans32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -215,6 +224,7 @@ rule Trojan_Win32_RiseProStealer_AD_2147899885_1
         $x_1_5 = "faield sendpacket" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -241,6 +251,7 @@ rule Trojan_Win32_RiseProStealer_AB_2147900206_0
         $x_1_6 = "faield sendpacket" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -266,6 +277,7 @@ rule Trojan_Win32_RiseProStealer_AC_2147900289_0
         $x_1_5 = "lazeryoungthug" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -290,6 +302,7 @@ rule Trojan_Win32_RiseProStealer_GSA_2147900567_0
         $x_1_1 = {8b c1 d1 e8 33 db 8a 5c 85 c8 8a 9b ?? ?? ?? ?? 30 5c 85 cc 33 db 8a 5c 85 c9 8a 9b ?? ?? ?? ?? 30 5c 85 cd 33 db 8a 5c 85 ca 8a 9b 14 b7 63 01 30 5c 85 ce 33 db 8a 5c 85 cb 8a 9b 14 b7 63 01 30 5c 85 cf 40 8b d9 4b 2b d8 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +325,7 @@ rule Trojan_Win32_RiseProStealer_B_2147903169_0
         $x_2_2 = {5e 01 f2 01 1a 5a 68}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -337,6 +351,7 @@ rule Trojan_Win32_RiseProStealer_RHA_2147904547_0
         $x_1_5 = {50 00 72 00 6f 00 64 00 75 00 63 00 74 00 4e 00 61 00 6d 00 65 00 ?? ?? ?? ?? 41 00 79 00 33 00 49 00 6e 00 66 00 6f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -364,6 +379,7 @@ rule Trojan_Win32_RiseProStealer_RHB_2147905641_0
         $x_1_7 = {4f 00 72 00 69 00 67 00 69 00 6e 00 61 00 6c 00 46 00 69 00 6c 00 65 00 6e 00 61 00 6d 00 65 00 ?? ?? 4d 00 53 00 42 00 75 00 69 00 6c 00 64 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -390,6 +406,7 @@ rule Trojan_Win32_RiseProStealer_RHC_2147906245_0
         $x_2_6 = {50 45 00 00 4c 01 05 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0b 01 0e 22 00 9e 10 00 00 6c 03 ?? ?? ?? ?? ?? ?? ?? 3a 00 00 10 00 00 00 b0 10}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -416,6 +433,7 @@ rule Trojan_Win32_RiseProStealer_RHD_2147906811_0
         $x_2_6 = {50 45 00 00 4c 01 07 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0b 01 0e 22 00 ?? 10 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 10 00 00 00 ?? 10 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -440,6 +458,7 @@ rule Trojan_Win32_RiseProStealer_RHE_2147907079_0
         $x_2_4 = {50 45 00 00 4c 01 05 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0b 01 0e 22 00 ?? 10 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 10 00 00 00 ?? 10 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -464,6 +483,7 @@ rule Trojan_Win32_RiseProStealer_RHG_2147910128_0
         $x_2_4 = {53 74 61 72 74 00 53 74 65 61 6c 65 72 43 6c 69 65 6e 74 2e 65 78 65}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -488,6 +508,7 @@ rule Trojan_Win32_RiseProStealer_RHH_2147910354_0
         $x_1_4 = {50 00 72 00 6f 00 64 00 75 00 63 00 74 00 4e 00 61 00 6d 00 65 00 ?? ?? ?? ?? 47 00 6c 00 61 00 72 00 79 00 20 00 55 00 74 00 69 00 6c 00 69 00 74 00 69 00 65 00 73 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -510,6 +531,7 @@ rule Trojan_Win32_RiseProStealer_C_2147912976_0
         $x_2_2 = {8b 8d 18 ff ff ff 8b c1 8b bd 14 ff ff ff 2b c7 c1 f8 ?? 69 c0 ab aa aa aa c7 85 3c ff ff ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -535,6 +557,7 @@ rule Trojan_Win32_RiseProStealer_RHF_2147913361_0
         $x_1_5 = {50 00 72 00 6f 00 64 00 75 00 63 00 74 00 4e 00 61 00 6d 00 65 00 ?? ?? ?? ?? 41 00 79 00 33 00 49 00 6e 00 66 00 6f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -556,6 +579,7 @@ rule Trojan_Win32_RiseProStealer_ADG_2147918115_0
         $x_1_1 = {64 a1 30 00 00 00 8b 48 0c 89 8d 74 fd ff ff 8b 95 74 fd ff ff 8b 42 0c 89 85 70 fd ff ff 8b 8d 70 fd ff ff 89 8d d8 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

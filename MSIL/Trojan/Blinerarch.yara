@@ -18,6 +18,7 @@ rule Trojan_MSIL_Blinerarch_A_2147681038_0
         $x_1_4 = "jQuery(function($){$('#za_phone').mask(" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Blinerarch_AT_2147681051_0
         $x_1_5 = "77.221.149.219" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_MSIL_Blinerarch_AZ_2147681052_0
         $x_1_4 = {5c 5f 5a 69 70 41 72 63 68 69 76 65 [0-3] 5c 72 65 73 5c 74 65 6d 70 5c 70 61 63 6b 65 64 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_MSIL_Blinerarch_AY_2147681053_0
         $x_1_5 = "phone').mask(" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_MSIL_Blinerarch_AV_2147681054_0
         $x_1_3 = "ukr_mask" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule Trojan_MSIL_Blinerarch_AW_2147681055_0
         $x_1_2 = "ZipFlash.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Trojan_MSIL_Blinerarch_BB_2147681056_0
         $x_1_8 = "sSVpa4bE3y/jbg+ezDbDbzVC" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -183,6 +190,7 @@ rule Trojan_MSIL_Blinerarch_BC_2147681057_0
         $x_2_5 = {a0 16 d6 16 e2 16 eb 16 e3 16 e2 16 e6 16 d9 16 dd 16 a9 16 e8 16 f1 16 e9 16 f2 16 e8 16 e2 16 e2 16 f4 16 b1 16 e9 16 fd 16 eb 16}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -212,6 +220,7 @@ rule Trojan_MSIL_Blinerarch_AX_2147681058_0
         $x_2_6 = {63 00 69 00 5f 00 73 00 65 00 73 00 73 00 69 00 6f 00 6e 00 3d 00 28 00 5b 00 5e 00 3b 00 5d 00 2b 00 29 00 60 00 73 00 65 00 6e 00 64 00 5f 00 73 00 [0-31] 65 00 6d 00 61 00 69 00 6c 00 00 [0-31] 70 00 68 00 6f 00 6e 00 65 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -243,6 +252,7 @@ rule Trojan_MSIL_Blinerarch_BA_2147681059_0
         $x_1_8 = "('#za_phone').mask" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -266,6 +276,7 @@ rule Trojan_MSIL_Blinerarch_AU_2147681060_0
         $x_1_4 = "http://0x6D788052:81" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*))) or
             (all of ($x*))

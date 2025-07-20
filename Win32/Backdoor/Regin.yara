@@ -20,6 +20,7 @@ rule Backdoor_Win32_Regin_F_2147691717_0
         $x_1_5 = "{44fdg23a-1522-6f9e-d05d-1aaf0176138a}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Backdoor_Win32_Regin_G_2147691718_0
         $x_1_4 = " filespec|!sys!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

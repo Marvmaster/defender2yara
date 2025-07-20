@@ -18,6 +18,7 @@ rule Trojan_Win64_Dcstl_PDE_2147827840_0
         $x_1_3 = {0a 25 16 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 7d ?? ?? ?? 04 16 13 09 72 ?? ?? ?? 70 13 0a 17 13 0b 16 13 0c 28 ?? ?? ?? 0a 13 0d 38}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win64_Dcstl_MA_2147834233_0
         $x_2_7 = "internal/assert/calltracker" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_DiceLoader_KM_2147772421_0
         $x_1_2 = {49 63 c0 8a 84 38 ?? ?? ?? ?? 41 32 01 43 88 44 0a ?? 49 ff c1 41 ff c0 b8 43 08 21 84 41 f7 e8 41 03 d0 c1 fa 04 8b c2 c1 e8 1f 03 d0 6b c2 1f 44 2b c0 41 83 eb 01 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

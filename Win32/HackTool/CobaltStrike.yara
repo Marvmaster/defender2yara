@@ -53,6 +53,7 @@ rule HackTool_Win32_CobaltStrike_A_2147763652_0
         $x_10_8 = {68 00 00 10 00 [0-60] 50 68 7f 66 04 40 ff 76 1c [0-8] 81 7d fc fc ff 0f 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -187,6 +188,7 @@ rule HackTool_Win32_CobaltStrike_B_2147777015_0
         $n_100_10 = "HackTool:" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -220,6 +222,7 @@ rule HackTool_Win32_CobaltStrike_C_2147777016_0
         $n_100_10 = "HackTool:" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -253,6 +256,7 @@ rule HackTool_Win32_CobaltStrike_D_2147777017_0
         $n_100_10 = "HackTool:" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -314,6 +318,7 @@ rule HackTool_Win32_CobaltStrike_F_2147797949_0
         $n_100_9 = {f7 7f 00 00 2a 00 00 00 00 00 00 00 ff ff ff ff}  //weight: -100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (1 of ($x*))
 }
@@ -336,6 +341,7 @@ rule HackTool_Win32_CobaltStrike_G_2147798572_0
         $n_100_2 = {70 3f 00 47 0e 00 00 1c 04 00 00 e0 01 24 00 64 55 55 55 55 56 56 56 56}  //weight: -100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -381,6 +387,7 @@ rule HackTool_Win32_CobaltStrike_H_2147811537_0
         $x_1_1 = {4d 5a 52 45 e8 00 00 00 00 5b 89 df 55 89 e5 81 c3 45 7d 00 00 ff d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -402,6 +409,7 @@ rule HackTool_Win32_CobaltStrike_I_2147844519_0
         $x_1_2 = {8a 10 40 84 d2 75 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? e9 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -423,6 +431,7 @@ rule HackTool_Win32_CobaltStrike_K_2147902923_0
         $x_1_2 = {8b 3b f7 f6 01 cf 41 8a 44 13 0c 30 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

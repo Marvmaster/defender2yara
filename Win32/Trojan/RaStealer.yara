@@ -16,6 +16,7 @@ rule Trojan_Win32_RaStealer_PAA_2147837634_0
         $x_1_1 = {8b c6 c1 e8 05 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 0c 8b 45 f4 01 45 0c 8b c6 c1 e0 04 03 45 f0 8d 0c 33 33 c1 33 45 0c 81 c3 ?? ?? ?? ?? 2b f8 ff 4d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_RaStealer_PAB_2147839274_0
         $x_1_1 = {d3 e8 8b 4d c8 89 45 fc 8d 45 fc e8 ?? ?? ?? ?? 8b 45 fc 33 45 f0 89 1d ?? ?? ?? ?? 31 45 f8 8b 45 f8 29 45 f4 81 45 e0 ?? ?? ?? ?? ff 4d dc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_RaStealer_PAC_2147839429_0
         $x_1_2 = {fe c3 8b c1 0f b6 cb 8d 14 8e 8b 4d 0c 89 55 ec 8b 09 eb ?? 8b 55 f4 8b c1 8b 4d 0c fe c3 8b 09 03 ca 0f b6 d3 8d 14 96 89 55 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

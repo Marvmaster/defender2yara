@@ -18,6 +18,7 @@ rule TrojanSpy_MSIL_Grieftylo_A_2147706073_0
         $x_1_4 = "L_0c: call void [mscorlib]System.IO.File::Copy(string, string)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

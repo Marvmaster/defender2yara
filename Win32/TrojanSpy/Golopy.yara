@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Golopy_A_2147720968_0
         $x_1_2 = {5b 25 73 5d 20 2d 20 25 64 3a 25 64 3a 25 64 20 25 64 2f 25 64 2f 25 64 [0-16] 3c 42 53 3e 00 3c 54 61 62 3e 00 3c 45 6e 74 65 72 3e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

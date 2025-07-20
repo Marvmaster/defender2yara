@@ -17,6 +17,7 @@ rule Trojan_Win32_Bimstru_A_2147616537_0
         $x_1_3 = {c6 01 e9 8b 55 08 83 c2 01 89 55 08 8b 45 10 83 c0 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

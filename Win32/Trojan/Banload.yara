@@ -18,6 +18,7 @@ rule Trojan_Win32_Banload_D_2147686130_0
         $x_1_4 = {34 36 32 35 30 36 32 31 44 44 37 37 00 00 00 00 55 8b ec 33 c0 55 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Banload_E_2147695225_0
         $x_1_3 = {8b 10 50 b9 ad de ef be 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Banload_R_2147735718_0
         $x_1_3 = "\"*chacha20poly1305.chacha20poly1305" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_Banload_YQM_2147794522_0
         $x_1_4 = "GetTempPathA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Trojan_Win32_Banload_MA_2147809799_0
         $x_1_4 = "CapsLock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_Win32_Banload_RPX_2147892875_0
         $x_1_1 = {83 c0 04 83 c0 14 56 8b f0 8d 7c 24 28 b9 38 00 00 00 f3 a5 5e 6a 40 68 00 30 00 00 8b 5c 24 64 53 6a 00 ff 56 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +161,7 @@ rule Trojan_Win32_Banload_ARA_2147900674_0
         $x_2_4 = "C:\\HWID.txt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_Win32_Banload_MBFW_2147905877_0
         $x_1_2 = {4c 15 40 00 4c 15 40 00 08 15 40 00 78 00 00 00 80 00 00 00 8a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

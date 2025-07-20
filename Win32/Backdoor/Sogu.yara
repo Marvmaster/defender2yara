@@ -18,6 +18,7 @@ rule Backdoor_Win32_Sogu_A_2147720579_0
         $x_1_3 = "SafeSvc.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

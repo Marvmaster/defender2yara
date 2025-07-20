@@ -23,6 +23,7 @@ rule Ransom_Win32_Motocos_2147781895_0
         $x_1_8 = "EncryptLockFiles" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

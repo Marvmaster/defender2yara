@@ -20,6 +20,7 @@ rule PWS_MSIL_GameThief_PA_2147754965_0
         $x_1_5 = "Spammer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule PWS_MSIL_GameThief_PB_2147754966_0
         $x_1_6 = "Hack" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

@@ -18,6 +18,7 @@ rule Trojan_WinNT_Omexo_A_2147626896_0
         $x_3_4 = {74 0a 8d 72 34 b9 02 00 00 00 f3 a5 89 d7 68 90 7d 33 50 e8 6a 00 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -45,6 +46,7 @@ rule Trojan_WinNT_Omexo_D_2147631677_0
         $x_1_4 = {17 00 ca 5a 59 5a 5a 5a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_WinNT_Omexo_F_2147645482_0
         $x_1_4 = {17 00 ca 5a 59 5a 5a 5a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

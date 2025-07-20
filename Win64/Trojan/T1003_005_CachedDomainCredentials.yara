@@ -15,6 +15,7 @@ rule Trojan_Win64_T1003_005_CachedDomainCredentials_A_2147846082_0
         $x_10_1 = "lsadump::cache" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

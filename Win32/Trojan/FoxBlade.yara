@@ -18,6 +18,7 @@ rule Trojan_Win32_FoxBlade_C_2147814011_0
         $x_1_3 = {8d 4e fc 8b 01 33 c2 8b 11 4f 89 06 8d 31 85 ff 7f ee 8b 13 81 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

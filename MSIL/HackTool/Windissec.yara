@@ -20,6 +20,7 @@ rule HackTool_MSIL_Windissec_L_2147898972_0
         $x_1_5 = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule HackTool_MSIL_Windissec_NL_2147898974_0
         $x_1_4 = "sc delete faceit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

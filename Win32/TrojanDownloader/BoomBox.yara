@@ -35,6 +35,7 @@ rule TrojanDownloader_Win32_BoomBox_A_2147781392_0
         $x_1_20 = {41 31 00 32 00 33 00 64 00 6f 00 33 00 79 00 ?? 00 72 00 33 00 37 00 38 00 6f 00 35 00 74 00 33 00 34 00 6f 00 6e 00 66 00 37 00 74 00 33 00 ?? 00 35 00 37 00 33 00 74 00 66 00 6f 00 37 00 33 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -65,6 +66,7 @@ rule TrojanDownloader_Win32_BoomBox_A_2147782075_0
         $x_3_10 = "DownloadFile" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

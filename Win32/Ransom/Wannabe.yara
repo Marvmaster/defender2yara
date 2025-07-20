@@ -19,6 +19,7 @@ rule Ransom_Win32_Wannabe_SD_2147754148_0
         $x_1_4 = {43 3a 5c 74 65 6d 70 5f [0-32] 5c 00 2e 7a 69 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

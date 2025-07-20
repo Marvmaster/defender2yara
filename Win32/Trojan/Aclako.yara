@@ -18,6 +18,7 @@ rule Trojan_Win32_Aclako_A_2147658274_0
         $x_1_3 = {80 3f 4d 0f 85 ?? ?? ?? ?? 80 7f 01 5a 0f 85 ?? ?? ?? ?? be 04 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Aclako_B_2147663913_0
         $x_1_8 = {47 6c 6f 62 61 6c 5c 52 54 5f 4d 41 49 4e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or

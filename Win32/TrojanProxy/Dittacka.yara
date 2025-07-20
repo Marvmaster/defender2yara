@@ -25,6 +25,7 @@ rule TrojanProxy_Win32_Dittacka_A_2147727866_0
         $x_2_11 = {66 0f d6 45 ?? 66 0f d6 45 ?? ff 15 ?? ?? ?? ?? 66 89 45 ?? b8 02 00 00 00 6a 00 66 89 45 ?? ff 15 ?? ?? ?? ?? 6a 04 89 45 ?? 8d 45 ?? 50 6a 04 68 ff ff 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or

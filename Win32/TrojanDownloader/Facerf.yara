@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Facerf_A_2147630494_0
         $x_2_4 = {3d 00 c8 00 00 0f 86 ?? ?? ?? ?? 6a 06}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

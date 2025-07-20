@@ -18,6 +18,7 @@ rule Trojan_Win32_Yektel_C_126222_0
         $x_1_4 = {9d 83 f8 00 74 05 88 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Yektel_F_132998_0
         $x_2_4 = {e8 df fe ff ff 83 7d f0 00 0f 84 e1 00 00 00 0f b6 05 05 00 b8 01 00 00 80}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

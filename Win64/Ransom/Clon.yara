@@ -19,6 +19,7 @@ rule Ransom_Win64_Clon_ISG_2147817166_0
         $x_1_4 = "Beidso3jfdsjhjkHU#e2342fwr2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

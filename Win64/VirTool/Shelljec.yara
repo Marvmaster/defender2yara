@@ -20,6 +20,7 @@ rule VirTool_Win64_Shelljec_A_2147841300_0
         $x_1_5 = {ba ff ff ff ff 48 8b ce ff 15 ?? ?? ?? ?? 48 8b 0d a3 29 00 00 48 8d ?? ?? ?? ?? ?? e8 ?? ?? ?? ?? 48 8b c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

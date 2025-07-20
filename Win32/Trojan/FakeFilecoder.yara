@@ -18,6 +18,7 @@ rule Trojan_Win32_FakeFilecoder_PA_2147749617_0
         $x_1_3 = {54 6f 20 72 65 74 72 69 65 76 65 20 74 68 65 20 70 72 69 76 61 74 65 20 6b 65 79 2e 20 79 6f 75 20 6e 65 65 64 20 74 6f 20 70 61 79 20 [0-4] 20 62 69 74 63 6f 69 6e 73 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_FakeFilecoder_GJO_2147848985_0
         $x_1_4 = "PAY THE RANSOM IN ORDER FOR US TO CONSIDER GIVING YOU THE KEY" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

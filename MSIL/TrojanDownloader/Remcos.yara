@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Remcos_NY_2147828706_0
         $x_1_1 = {09 08 06 08 8e 69 5d 91 07 06 91 61 d2 6f ?? 00 00 0a 06 17 58 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_MSIL_Remcos_BJ_2147829363_0
         $x_1_4 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule TrojanDownloader_MSIL_Remcos_SRP_2147834834_0
         $x_2_1 = {0a 16 0b 2b 1a 13 04 2b f1 06 07 6f ?? ?? ?? 0a 13 05 11 04 11 05 6f ?? ?? ?? 0a 07 17 58 0b 07 06 6f ?? ?? ?? 0a 32 e1 14 11 04 28 ?? ?? ?? 2b 0a de 17}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule TrojanDownloader_MSIL_Remcos_SPL_2147836050_0
         $x_3_3 = "/207.167.64.122/Fvkpkpw.bmp" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule TrojanDownloader_MSIL_Remcos_SPLA_2147836552_0
         $x_1_5 = "Pqtxfdejoynxfqunprtqg" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule TrojanDownloader_MSIL_Remcos_MBBI_2147839698_0
         $x_1_5 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +161,7 @@ rule TrojanDownloader_MSIL_Remcos_ARA_2147844014_0
         $x_2_1 = {72 0d 00 00 70 28 05 00 00 06 0a 28 05 00 00 0a 06 6f 06 00 00 0a 28 07 00 00 0a 28 03 00 00 06 0b dd 03 00 00 00 26 de d6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule TrojanDownloader_MSIL_Remcos_CXJK_2147849618_0
         $x_1_1 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 38 00 30 00 2e 00 36 00 36 00 2e 00 37 00 35 00 2e 00 33 00 37 00 2f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +205,7 @@ rule TrojanDownloader_MSIL_Remcos_RDJ_2147889343_0
         $x_2_1 = {07 72 01 00 00 70 28 02 00 00 0a 72 33 00 00 70 28 02 00 00 0a 6f 03 00 00 0a 0c 14 0d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +227,7 @@ rule TrojanDownloader_MSIL_Remcos_CCGV_2147900873_0
         $x_1_1 = {0c 2b 0b 72 ?? ?? ?? ?? 2b 0b 2b 10 de 2b 73 ?? ?? ?? ?? 2b ee 28 ?? 00 00 0a 2b ee 0a 2b ed 08 2c 06 08 6f ?? 00 00 0a 1d 2c f7 19 2c f1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -240,6 +250,7 @@ rule TrojanDownloader_MSIL_Remcos_ARM_2147922893_0
         $x_1_2 = "files.catbox.moe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -264,6 +275,7 @@ rule TrojanDownloader_MSIL_Remcos_PZJM_2147936655_0
         $x_1_4 = "GetTempFileName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

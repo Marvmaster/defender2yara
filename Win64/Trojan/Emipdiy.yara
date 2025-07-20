@@ -20,6 +20,7 @@ rule Trojan_Win64_Emipdiy_B_2147815180_0
         $x_1_6 = "\\Windows Mail\\wabmig.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or
@@ -51,6 +52,7 @@ rule Trojan_Win64_Emipdiy_CM_2147816177_0
         $x_3_6 = "RegisterShellHookWindow" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Trojan_Win64_Emipdiy_CN_2147896089_0
         $x_3_6 = "SELECT * FROM Win32_ComputerSystemProduct" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

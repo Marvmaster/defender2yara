@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Allsum_2147804049_0
         $x_1_6 = "DestroyAcceleratorTable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_Allsum_2147804049_1
         $x_1_5 = "SHOW AD Plugin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -72,6 +74,7 @@ rule TrojanDownloader_Win32_Allsum_2147804049_2
         $x_10_6 = "GetLastActivePopup" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -102,6 +105,7 @@ rule TrojanDownloader_Win32_Allsum_2147804049_3
         $x_2_8 = "plugincall_plugin_liveupdate_checkwebpage" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 5 of ($x_2_*))) or
             ((1 of ($x_4_*) and 5 of ($x_2_*))) or

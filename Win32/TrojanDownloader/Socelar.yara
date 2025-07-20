@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Socelar_PK_2147742195_0
         $x_1_6 = {75 72 6c 64 6f 77 6e 6c 6f 61 64 74 6f 66 69 6c 65 2c 25 6d 61 73 6b 31 25 2c 63 3a 5c 77 69 6e 64 6f 77 73 [0-32] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

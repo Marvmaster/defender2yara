@@ -26,6 +26,7 @@ rule TrojanSpy_Win32_Ovislev_A_2147679146_0
         $x_30_12 = "\\triploader.vbp" wide //weight: 30
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_30_*) and 1 of ($x_20_*) and 7 of ($x_10_*))) or
             ((1 of ($x_30_*) and 2 of ($x_20_*) and 5 of ($x_10_*))) or

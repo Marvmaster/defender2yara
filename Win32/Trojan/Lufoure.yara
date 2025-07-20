@@ -32,6 +32,7 @@ rule Trojan_Win32_Lufoure_A_2147574094_0
         $x_1_17 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 11 of ($x_1_*))) or
             ((3 of ($x_2_*) and 9 of ($x_1_*))) or

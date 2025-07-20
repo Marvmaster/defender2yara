@@ -16,6 +16,7 @@ rule Trojan_MSIL_Ursnif_RB_2147842524_0
         $x_1_1 = {16 0a 2b 26 00 03 74 ?? ?? ?? ?? 72 ?? ?? ?? ?? 20 ?? ?? ?? ?? 14 14 14 6f ?? ?? ?? ?? 2c 02 de 0e de 03 26 de 00 06 17 58 0a 06 1f 0a 32 d5 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_Ursnif_MBEG_2147848928_0
         $x_1_7 = "RijndaelManaged" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

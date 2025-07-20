@@ -17,6 +17,7 @@ rule Trojan_Win32_DriverUpdater_A_2147730864_0
         $x_1_3 = "\\FAKE_DIR\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

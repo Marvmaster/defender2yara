@@ -17,6 +17,7 @@ rule Trojan_Win64_Shelood_MBXY_2147925373_0
         $x_1_2 = {48 89 44 24 28 c6 44 24 60 7e c6 44 24 61 69 c6 44 24 62 a3 c6 44 24 63 33 c6 44 24 64 30 c6 44 24 65 33 c6 44 24 66 33 c6 44 24 67 33 c6 44 24 68 37}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

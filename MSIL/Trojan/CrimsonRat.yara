@@ -16,6 +16,7 @@ rule Trojan_MSIL_CrimsonRat_YNB_2147828104_0
         $x_1_1 = {02 07 91 28 ?? ?? ?? 0a 0c 06 07 08 9d 00 07 17 58 0b 07 02 8e 69 fe 04 13 04 11 04 2d e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_CrimsonRat_AYN_2147832619_0
         $x_1_3 = "aridsplyar" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_MSIL_CrimsonRat_AFFT_2147834470_0
         $x_1_1 = {02 03 04 05 28 ?? ?? ?? 06 0b 07 2c 04 17 0c 2b 14 00 06 17 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_MSIL_CrimsonRat_MA_2147848599_0
         $x_1_6 = "usaer_info" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_MSIL_CrimsonRat_ABPT_2147896712_0
         $x_1_3 = "Countdown.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_MSIL_CrimsonRat_PSEC_2147899359_0
         $x_1_4 = "WriteLine" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule Trojan_MSIL_CrimsonRat_NC_2147932478_0
         $x_1_3 = "$24a6f560-a346-46b0-aafb-d801ee261903" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_MSIL_CrimsonRat_A_2147935989_0
         $x_2_1 = {8d 31 00 00 01 0a 02 02 7b 2d 00 00 04 06 16 1b 6f c7 00 00 0a 7d 35 00 00 04 06 16 28 c8 00 00 0a 0b 07 8d 31 00 00 01 0c 16 0d 07 13 04 2b 42}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +206,7 @@ rule Trojan_MSIL_CrimsonRat_ACR_2147941080_0
         $x_2_1 = {2b 41 00 11 04 02 7b ?? 00 00 04 30 04 11 04 2b 06 02 7b ?? 00 00 04 13 05 02 02 7b ?? 00 00 04 09 06 11 05 6f ?? 00 00 0a 7d ?? 00 00 04 06 02 7b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +228,7 @@ rule Trojan_MSIL_CrimsonRat_AMS_2147941541_0
         $x_2_1 = {0a 00 06 0d 16 13 04 2b 37 09 11 04 9a 0b 00 07 6f ?? 00 00 0a 2c 0e 07 6f ?? 00 00 0a 18 fe 01 16 fe 01 2b 01 17 0c 08}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -240,6 +250,7 @@ rule Trojan_MSIL_CrimsonRat_ACN_2147941565_0
         $x_2_1 = {07 2b 06 02 7b ?? 00 00 04 13 09 02 7b ?? 00 00 04 11 06 08 11 09 6f ?? 00 00 0a 00 08 11 09 d6 0c 07 11 09 da 0b 00 07 16 fe 02 13 0b 11 0b 2d c6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -261,6 +272,7 @@ rule Trojan_MSIL_CrimsonRat_ACO_2147941643_0
         $x_2_1 = {16 fe 01 13 07 11 07 2d 0b 02 72 ?? 00 00 70 7d ?? 00 00 04 72 ?? 05 00 70 28 ?? 00 00 0a 13 04 02 7b ?? 00 00 04 72 ?? 00 00 70 28 ?? 00 00 0a 16 fe 01 13 07 11 07 2d 0b 02 72 ?? 00 00 70 7d ?? 00 00 04 11 04 8e 69 17 fe 01}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -282,6 +294,7 @@ rule Trojan_MSIL_CrimsonRat_ACA_2147942038_0
         $x_2_1 = {13 06 2b 40 11 06 02 7b ?? 00 00 04 30 04 11 06 2b 06 02 7b ?? 00 00 04 13 08 02 7b ?? 00 00 04 11 04 11 05 11 08 6f ?? 00 00 0a 11 05 11 08 58 13 05 11 06 11 08 59 13 06 02 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -303,6 +316,7 @@ rule Trojan_MSIL_CrimsonRat_AB_2147944980_0
         $x_1_1 = {01 0b 02 02 7b 24 00 00 04 07 16 1b 6f ?? 00 00 0a 7d 1e 00 00 04 07 16 28 ?? 00 00 0a 0c 08 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

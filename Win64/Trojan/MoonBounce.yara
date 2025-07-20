@@ -18,6 +18,7 @@ rule Trojan_Win64_MoonBounce_A_2147811487_0
         $x_1_4 = {48 8d 83 e0 01 00 00 4c 8d 8b c0 01 00 00 48 89 ?? ?? ?? 4c 8d 83 80 01 00 00 48 8d 93 1c 01 00 00 48 8b cb 48 89 ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

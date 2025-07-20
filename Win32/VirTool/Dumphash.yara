@@ -19,6 +19,7 @@ rule VirTool_Win32_Dumphash_A_2147912787_0
         $x_1_4 = {8b e5 5d c3 6a 00 6a 00 6a 00 6a 02 50 56 53 ?? ?? ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

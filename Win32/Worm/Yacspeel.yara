@@ -22,6 +22,7 @@ rule Worm_Win32_Yacspeel_A_2147618451_0
         $x_1_7 = "{1AEFA55F-60A6-4817-B2D5-12E2E48617F4}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

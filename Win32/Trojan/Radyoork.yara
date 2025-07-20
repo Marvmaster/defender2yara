@@ -18,6 +18,7 @@ rule Trojan_Win32_Radyoork_A_2147685508_0
         $x_1_4 = {83 e2 03 03 c2 c1 f8 02 83 e8 01 0f 80 be 02 00 00 33 f6 89 45 98 89 75 dc 3b f0 0f 8f 44 02 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_4_*) and 1 of ($x_2_*))) or

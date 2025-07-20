@@ -18,6 +18,7 @@ rule Worm_Win32_Subivix_2147603679_0
         $x_1_2 = "nyzu@45" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule Worm_Win32_Subivix_2147603680_0
         $x_1_2 = {66 83 f8 03 74 0c 66 83 f8 04 74 06 66 83 f8 02 75 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Dllhijacker_A_2147734618_0
         $x_1_4 = "\\STUDIO\\1059- virus.win.trojan" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Dllhijacker_PAA_2147778063_0
         $x_1_5 = "C:\\Windows\\setup.vbs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_Dllhijacker_DG_2147816547_0
         $x_1_5 = "CreateMutexW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

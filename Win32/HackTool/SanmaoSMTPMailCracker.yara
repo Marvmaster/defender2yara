@@ -16,6 +16,7 @@ rule HackTool_Win32_SanmaoSMTPMailCracker_A_2147707439_0
         $x_1_2 = "EHLO ylmf-pc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

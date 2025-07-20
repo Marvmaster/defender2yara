@@ -18,6 +18,7 @@ rule Trojan_Win32_Kuluoz_A_2147655628_0
         $x_1_3 = {83 c4 18 81 bd ?? ?? ff ff 00 00 20 03 0f 8d ?? ?? 00 00 8b 85 ?? ?? ff ff 8a c8 f6 d1 80 e1 01 88 8d ?? ?? ff ff 0f 85 ?? ?? 00 00 8b 8d ?? ?? ff ff 85 c9 0f 84 ?? ?? 00 00 c1 e8 02 a8 01 74 ?? 8b 11 8b 42 34 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -44,6 +45,7 @@ rule Trojan_Win32_Kuluoz_B_2147657317_0
         $x_1_2 = {56 6a f1 50 ff 15 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 51 ff 15 ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? 68 10 27 00 00 ff d6 eb f7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

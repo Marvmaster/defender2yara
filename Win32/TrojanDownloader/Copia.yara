@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Copia_A_2147622428_0
         $x_1_4 = {32 2e 30 33 00 55 50 58 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

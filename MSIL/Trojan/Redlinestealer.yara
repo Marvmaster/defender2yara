@@ -17,6 +17,7 @@ rule Trojan_MSIL_Redlinestealer_YKUF_2147822405_0
         $x_1_2 = {2d 0d 26 16 2d cb 16 fe 02 0c 08 2d d9 2b 03 0b 2b f1 06 6f ?? ?? ?? 0a 28 ?? ?? ?? 2b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_Redlinestealer_UD_2147825448_0
         $x_1_6 = "Roaming\\TReplaceokReplaceenReplaces.tReplacext" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_MSIL_Redlinestealer_SK_2147900855_0
         $x_2_2 = "$d17b41c9-3955-4890-95b8-887aac006e0b" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_MSIL_Redlinestealer_SL_2147905076_0
         $x_2_3 = "Telegraphically Nil" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Trojan_MSIL_Polazert_ADF_2147779588_0
         $x_2_7 = "EncryptXor" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +60,7 @@ rule Trojan_MSIL_Polazert_2147795859_0
         $x_1_17 = "-ExecutionPolicy bypass" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +88,7 @@ rule Trojan_MSIL_Polazert_M_2147814744_0
         $x_3_7 = "IjmW0zvWjgKIQNRFbZkg" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +114,7 @@ rule Trojan_MSIL_Polazert_NL_2147822003_0
         $x_1_5 = "RSACryptoServiceProvider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +137,7 @@ rule Trojan_MSIL_Polazert_NM_2147822847_0
         $x_1_2 = "SbygmWjfiwehybpml" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +161,7 @@ rule Trojan_MSIL_Polazert_NU_2147823620_0
         $x_1_3 = {57 1f a2 1d 09 02 00 00 00 fa 25 33 00 16 00 00 01 00 00 00 47 00 00 00 13 00 00 00 2d 01 00 00 e3 01 00 00 af 00 00 00 04 00 00 00 87 00 00 00 16 00 00 00 dc 01 00 00 8c 00 00 00 01 00 00 00 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -177,6 +183,7 @@ rule Trojan_MSIL_Polazert_ARA_2147836781_0
         $x_2_1 = {25 47 06 09 91 61 d2 52 09 17 58 06 8e 69 32 04 16 0d 2b 04 09 17 58 0d 08 17 58 0c 08 07 8e 69 32 d7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +205,7 @@ rule Trojan_MSIL_Polazert_ARA_2147836781_1
         $x_2_1 = {6a 0c 17 0d 2b 1c 00 07 08 5d 16 6a fe 01 16 fe 01 13 04 11 04 2d 05 00 16 0d 2b 15 08 17 6a 58 0c 00 08 08 5a 07 fe 02 16 fe 01 13 04 11 04 2d d5 08 17 6a fe 04 16 fe 01 13 04 11 04 2d 02 2b 0b 07 17 6a 58 0b 00 17 13 04 2b 95}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -231,6 +239,7 @@ rule Trojan_MSIL_Polazert_DA_2147837053_0
         $x_1_13 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_40_*) and 10 of ($x_1_*))) or
             ((2 of ($x_40_*))) or
@@ -262,6 +271,7 @@ rule Trojan_MSIL_Polazert_RS_2147837787_0
         $x_1_7 = "get_MachineName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -290,6 +300,7 @@ rule Trojan_MSIL_Polazert_RSD_2147839939_0
         $x_1_5 = "ReadByte" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +329,7 @@ rule Trojan_MSIL_Polazert_A_2147889118_0
         $x_2_8 = "1OZXctT2JqZWN0IFN5c3RlbS5TZWN1cml0eS5DcnlwdG9ncmFwaHkuQWVzQ3J5cHRvU2VydmljZVByb3ZpZGVy" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

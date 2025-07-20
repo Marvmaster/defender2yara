@@ -17,6 +17,7 @@ rule Trojan_Win32_CerberCrypt_A_2147840691_0
         $x_1_2 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_CerberCrypt_B_2147847645_0
         $x_2_1 = {0f b6 10 8b 45 08 03 45 ?? 0f b6 08 33 ca 8b 55 ?? 03 55 d4 88 0a e9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_CerberCrypt_C_2147847964_0
         $x_2_1 = {8a 0c 02 8b 55 ?? 03 55 ?? 8b 45 ?? 8a 04 10 32 c1 88 02}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_CerberCrypt_D_2147906001_0
         $x_2_3 = {6a 40 68 00 30 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_Win32_CerberCrypt_E_2147906334_0
         $x_2_3 = {47 90 49 83 f9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +131,7 @@ rule Trojan_Win32_CerberCrypt_F_2147906438_0
         $x_2_1 = {8a 06 90 32 c2 90 88 07 90 42 90 46 47 49 83 f9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +153,7 @@ rule Trojan_Win32_CerberCrypt_G_2147906652_0
         $x_2_1 = {32 c2 88 07 90 42 90 46}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +175,7 @@ rule Trojan_Win32_CerberCrypt_H_2147908912_0
         $x_2_1 = {8a 06 32 c2 90 88 07 90 42 46 90}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +197,7 @@ rule Trojan_Win32_CerberCrypt_I_2147909100_0
         $x_2_1 = {8a 06 32 c2 88 07 46 47 49 90 83 f9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +220,7 @@ rule Trojan_Win32_CerberCrypt_J_2147910807_0
         $x_2_2 = {6a 40 90 68 00 10 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +243,7 @@ rule Trojan_Win32_CerberCrypt_K_2147910898_0
         $x_2_2 = {8a 06 90 32 c2 88 07}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -255,6 +266,7 @@ rule Trojan_Win32_CerberCrypt_L_2147911015_0
         $x_2_2 = {8a 06 90 32 c2 90 88 07}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

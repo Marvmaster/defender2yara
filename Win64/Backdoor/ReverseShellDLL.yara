@@ -18,6 +18,7 @@ rule Backdoor_Win64_ReverseShellDLL_A_2147757234_0
         $x_1_3 = {45 58 49 54 53 48 45 4c 4c 0d 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

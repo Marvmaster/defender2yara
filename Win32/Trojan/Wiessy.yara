@@ -20,6 +20,7 @@ rule Trojan_Win32_Wiessy_A_2147606800_0
         $x_1_6 = {f3 a5 66 81 7c 24 ?? 4d 5a 75 54 8b 44 24 ?? 8d 48 18 3b d9 72 49 8b 0d ?? ?? ?? 00 8d 1c 01 03 da 8b d3 8b 02 8b 4a 04 89 44 24 ?? 8b 42 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -52,6 +53,7 @@ rule Trojan_Win32_Wiessy_B_2147606804_0
         $x_1_9 = "idag.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or

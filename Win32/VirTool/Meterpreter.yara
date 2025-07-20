@@ -22,6 +22,7 @@ rule VirTool_Win32_Meterpreter_A_2147754324_0
         $x_1_7 = "_try_to_fork" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +74,7 @@ rule VirTool_Win32_Meterpreter_2147765144_0
         $x_1_2 = {48 31 c9 41 ba 45 83 56 07 ff d5 48 31 c9 41 ba f0 b5 a2 56 ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +98,7 @@ rule VirTool_Win32_Meterpreter_J_2147844471_0
         $x_1_3 = {21 43 50 a4 f8 73 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

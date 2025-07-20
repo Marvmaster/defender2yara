@@ -17,6 +17,7 @@ rule Trojan_Win64_Cometer_DD_2147786218_0
         $x_10_2 = {48 01 d0 0f b6 08 8b 45 fc 48 63 d0 48 8b 45 20 48 01 d0 0f b6 10 8b 45 f8 4c 63 c0 48 8b 45 10 4c 01 c0 31 ca 88 10}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win64_Cometer_AM_2147786448_0
         $x_3_6 = "IsProcessorFeaturePresent" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

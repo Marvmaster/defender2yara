@@ -18,6 +18,7 @@ rule Trojan_MSIL_Kuhaname_A_2147720535_0
         $x_1_4 = {4d 79 47 72 6f 75 70 43 6f 6c 6c 65 63 74 69 6f 6e 41 74 74 72 69 62 75 74 65 00 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

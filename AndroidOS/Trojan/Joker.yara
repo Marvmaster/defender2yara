@@ -282,6 +282,7 @@ rule Trojan_AndroidOS_Joker_O_2147807747_0
         $x_1_3 = "63006F006D002E006500780061006D0070006C0065002E006200610073006500" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

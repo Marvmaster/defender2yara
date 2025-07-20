@@ -17,6 +17,7 @@ rule Worm_Win32_Poenon_A_2147647885_0
         $x_1_3 = "label=PENDRIVE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Worm_Win32_Poenon_A_2147647885_1
         $x_1_5 = "label=PENDRIVE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Worm_Win32_Poenon_B_2147650342_0
         $x_1_4 = "creater of this" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Worm_Win32_Poenon_C_2147650448_0
         $x_1_3 = "\\Desktop\\WormWin32  Poenon." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

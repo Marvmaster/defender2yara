@@ -17,6 +17,7 @@ rule Trojan_Win32_Gontu_B_2147627708_0
         $x_1_2 = {42 72 6f 77 73 65 72 48 65 6c 70 65 72 2e 64 6c 6c [0-4] 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))

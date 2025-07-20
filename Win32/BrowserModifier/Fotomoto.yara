@@ -22,6 +22,7 @@ rule BrowserModifier_Win32_Fotomoto_17662_0
         $x_1_8 = "shopping_pop_interval" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +60,7 @@ rule BrowserModifier_Win32_Fotomoto_17662_1
         $x_1_18 = "related_popups_enabled" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 13 of ($x_1_*))) or
             ((2 of ($x_3_*) and 10 of ($x_1_*))) or
@@ -91,6 +93,7 @@ rule BrowserModifier_Win32_Fotomoto_B_132791_0
         $x_1_7 = "#fixed_update" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

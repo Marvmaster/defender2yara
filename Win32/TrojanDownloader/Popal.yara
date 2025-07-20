@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Popal_A_2147689624_0
         $x_4_2 = "http://www.menaon.com/downloo/pop3.exe" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Worm_Win32_Nimda_Q_2147620492_0
         $x_1_7 = "http://members.xoom.com/m53group" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

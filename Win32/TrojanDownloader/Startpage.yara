@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Startpage_CA_2147640533_0
         $x_1_3 = {2e 37 36 35 33 32 31 2e 69 6e 66 6f 3a ?? ?? ?? ?? 2f 73 6d 73 2f 78 78 78}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

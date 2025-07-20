@@ -19,6 +19,7 @@ rule Ransom_Win32_Pottieq_A_2147708495_0
         $x_2_5 = {5c 52 75 6e [0-16] 2e 65 78 65 [0-16] 43 6f 6e 74 72 6f 6c 20 50 61 6e 65 6c 5c 44 65 73 6b 74 6f 70 [0-16] 2e 62 6d 70 [0-16] 57 61 6c 6c 70 61 70 65 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

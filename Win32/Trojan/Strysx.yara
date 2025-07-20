@@ -16,6 +16,7 @@ rule Trojan_Win32_Strysx_A_2147599284_0
         $x_1_2 = {8d 7c 24 10 e8 ?? ff ff ff 8d 44 24 18 50 8b cf e8 ?? fe ff ff 8b 70 04 59 6a 00 8d 44 24 10 50 56 e8 ?? ?? 00 00 59 40 50 56 ff 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Strysx_B_2147599285_0
         $x_1_4 = {73 41 73 55 73 65 72 00 5c 5c 2e 5c 50 69 70 65 5c [0-32] 00 53 4d 54 50 20 53 65 72 76 65 72 00 50 4f 50 33 20 53 65 72 76 65 72 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -66,6 +68,7 @@ rule Trojan_Win32_Strysx_C_2147599286_0
         $x_1_4 = {74 6f 63 6f 6c 2e 63 70 70 00 00 00 2e 6c 6f 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

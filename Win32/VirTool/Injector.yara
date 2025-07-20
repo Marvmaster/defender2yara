@@ -15,6 +15,7 @@ rule VirTool_Win32_Injector_2147565599_0
         $x_1_1 = {0f b6 59 0d 33 d2 8b c7 f7 f3 8a 59 0c 8a c2 f6 69 0e 8a 16 02 c3 32 d0 88 16 8b 41 04 46 47 3b f8 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule VirTool_Win32_Injector_2147565599_1
         $x_1_3 = {eb 66 83 65 d0 00 6a 2e 5a 8b 4d c0 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule VirTool_Win32_Injector_2147565599_2
         $x_1_2 = {0f 9d c2 83 e2 01 0b 55 fc 74 2f 8b 0d 64 90 40 00 81 c1 21 0d 00 00 a1 84 90 40 00 99 f7 f9 0f bf 0d 8a 90 40 00 3b d1 7d 10 0f be 05 91 90 40 00 33 05 68 90 40 00 89 45 fc a1 84 90 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule VirTool_Win32_Injector_B_2147607830_0
         $x_10_20 = {c7 44 24 10 40 00 00 00 c7 44 24 0c 00 30 00 00 8b 45 ?? 89 44 24 08 8b 45 ?? 8b 40 1c 89 44 24 04 8b 45 ?? 89 04 24 (e8|a1 ?? ?? ?? ??)}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*))) or
@@ -128,6 +132,7 @@ rule VirTool_Win32_Injector_C_2147607913_0
         $x_1_5 = "SwapMouseButtons" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -158,6 +163,7 @@ rule VirTool_Win32_Injector_F_2147608604_0
         $x_5_7 = {0f b7 40 06 39 05 ?? ?? ?? ?? 7d 10 00 a1 00 40 a3 00 a1}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             ((1 of ($x_10_*))) or
@@ -187,6 +193,7 @@ rule VirTool_Win32_Injector_I_2147609183_0
         $x_1_5 = {0f b7 55 06 40 83 c7 28 3b c2 89 44 24 ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -216,6 +223,7 @@ rule VirTool_Win32_Injector_O_2147616022_0
         $x_1_6 = {85 c0 74 0e 6a 00 50 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -238,6 +246,7 @@ rule VirTool_Win32_Injector_Q_2147616964_0
         $x_1_2 = {8d 85 f8 fb ff ff b9 00 01 00 00 89 10 42 83 c0 04 3b d1 7c f6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -261,6 +270,7 @@ rule VirTool_Win32_Injector_R_2147616965_0
         $x_1_3 = {5a 77 55 6e 6d 61 70 56 69 65 77 4f 66 53 65 63 74 69 6f 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -284,6 +294,7 @@ rule VirTool_Win32_Injector_S_2147617367_0
         $x_1_3 = {68 2b 02 00 00 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -311,6 +322,7 @@ rule VirTool_Win32_Injector_T_2147621666_0
         $x_1_4 = {0f 31 2b c6 25 00 f0 ff ff 0c 05 33 c9 0f 00 c1 03 c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -338,6 +350,7 @@ rule VirTool_Win32_Injector_V_2147622106_0
         $x_1_4 = {0f af c6 8d 4c 01 01 8d 44 02 01 a3 ?? ?? ?? ?? 0f b7 55 06 43 83 c7 28 3b da 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -361,6 +374,7 @@ rule VirTool_Win32_Injector_W_2147622484_0
         $x_1_3 = {eb 0b 8b 4f 10 03 c8 89 8d ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -384,6 +398,7 @@ rule VirTool_Win32_Injector_X_2147622974_0
         $x_1_3 = {8b 6c 24 14 33 db 66 39 5d 06 76 ?? 57 8b 7c 24 28 83 c7 08 8b 07 85 c0 74 ?? 33 d2 f7 f1 85 d2 8b 15 ?? ?? ?? ?? 75 ?? 8b 07 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +427,7 @@ rule VirTool_Win32_Injector_AD_2147627354_0
         $x_1_8 = "ResumeThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -440,6 +456,7 @@ rule VirTool_Win32_Injector_AE_2147627680_0
         $x_1_2 = {3f e9 d7 21 33 db c7 45 ?? 0e a6 09 b7 64 8b 1d 30 00 00 00 c7 45 ?? 5e 64 c5 e7 8b 5b 0c 8b 5b 14 c7 45 ?? 0b 56 e0 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -464,6 +481,7 @@ rule VirTool_Win32_Injector_AF_2147627755_0
         $x_1_4 = {35 14 13 00 00 35 14 13 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -489,6 +507,7 @@ rule VirTool_Win32_Injector_AG_2147627757_0
         $x_1_2 = {80 80 34 76 40 00 fb 84 e7 d1 e1 4a c7 c1 19 78 5b b2 64 8d 0d 21 60 a3 da 0f c1 ca 69 c8 29 48 eb 02 40 3d 5f 03 00 00 72 d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -510,6 +529,7 @@ rule VirTool_Win32_Injector_AI_2147628807_0
         $x_1_1 = {8b 08 89 4d ?? 8d 95 ?? ?? ff ff 52 6a 00 55 9c 51 87 e9 b9 de fa 00 00 81 f9 ee ff c0 00 74 fa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -535,6 +555,7 @@ rule VirTool_Win32_Injector_AL_2147630524_0
         $x_1_5 = {56 4d 57 41 52 45 00 51 45 4d 55 00 56 42 4f 58 00 56 49 52 54 55 41 4c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -564,6 +585,7 @@ rule VirTool_Win32_Injector_AN_2147631023_0
         $x_1_5 = {3d 4d 5a 00 00 74 07 33 c0 e9 ?? ?? ?? ?? 8b 4d f0 8b 55 0c 03 51 3c 89 95 ?? ?? ff ff 8b 85 ?? ?? ff ff 81 38 50 45 00 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -590,6 +612,7 @@ rule VirTool_Win32_Injector_AP_2147631262_0
         $x_1_2 = {83 c0 08 50 ff (75 ??|b5 ?? ?? ?? ??) ff 15 ?? ?? ?? ?? [0-32] 08 01 01 01 01 01 01 02 05 50 51 52 53 56 57 6a 00 68 00 00 00 00 ff (70|71|72|73|76|77) 50 ff (75 ??|b5 ?? ?? ?? ??) ff (75 ??|b5 ?? ?? ?? ??) ff (75 ??|b5 ?? ?? ?? ??) ff 15 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -616,6 +639,7 @@ rule VirTool_Win32_Injector_AR_2147631738_0
         $x_1_6 = {66 8b 51 06 39 95 ?? ?? ff ff 7d ?? 8b 85 ?? ?? ff ff 8b 48 3c 8b 95 00 ff ff 6b d2 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -639,6 +663,7 @@ rule VirTool_Win32_Injector_AS_2147632013_0
         $x_1_3 = {eb 0d 81 fe ff 00 00 00 75 05 be 01 00 00 00 [0-8] 89 ff 43 4f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -662,6 +687,7 @@ rule VirTool_Win32_Injector_AW_2147633552_0
         $x_1_3 = "cmd.exe /c del" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -685,6 +711,7 @@ rule VirTool_Win32_Injector_AX_2147637536_0
         $x_1_3 = {6b c9 28 03 4d 0c 8d 84 01 f8 00 00 00 89 85 f0 fc ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -707,6 +734,7 @@ rule VirTool_Win32_Injector_BA_2147637552_0
         $x_1_3 = {ff d6 f6 c3 01 6a 00 6a 00 6a 00 74 17 8a 8b ?? ?? 40 00 32 0d ?? ?? 40 00 80 f1 ?? 88 8b ?? ?? 40 00 eb 13 8a 83 ?? ?? 40 00 8a d3 80 c2 ?? 32 c2 88 83 ?? ?? 40 00 ff d6 43 81 fb 27 3a 00 00 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -730,6 +758,7 @@ rule VirTool_Win32_Injector_T_2147637748_0
         $x_1_4 = {e8 e8 72 f4 e8 83 c4 04 66 9d eb 01 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -758,6 +787,7 @@ rule VirTool_Win32_Injector_X_2147640820_0
         $x_1_5 = {8b 45 08 03 05 ?? ?? ?? 00 89 45 dc b9 00 00 00 00 ff 65 dc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -784,6 +814,7 @@ rule VirTool_Win32_Injector_Z_2147641669_0
         $x_1_3 = {83 c5 0d 89 6f 01 c6 47 0a c2 66 c7 47 0b 04 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -808,6 +839,7 @@ rule VirTool_Win32_Injector_AA_2147641804_0
         $x_1_5 = ":\\SVN\\360tcpview\\Release\\360TcpView.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -834,6 +866,7 @@ rule VirTool_Win32_Injector_BC_2147642655_0
         $x_1_3 = {32 10 32 d1 88 10 8b 45 ?? 40 3b c6 89 45 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -859,6 +892,7 @@ rule VirTool_Win32_Injector_BD_2147642658_0
         $x_1_5 = {6b c0 28 8b 49 3c 05 f8 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -885,6 +919,7 @@ rule VirTool_Win32_Injector_BE_2147643337_0
         $x_1_2 = {68 f6 3f 48 90 ff 35}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -911,6 +946,7 @@ rule VirTool_Win32_Injector_BF_2147643351_0
         $x_1_6 = {40 00 ff e2 5a 05 00 52 8d 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -934,6 +970,7 @@ rule VirTool_Win32_Injector_BG_2147644273_0
         $x_1_3 = {77 8d 00 c6 85 ?? ?? ?? ?? 51 8d 00 c6 85 ?? ?? ?? ?? 75 8d 00 c6 85 ?? ?? ?? ?? 65 8d 00 c6 85 ?? ?? ?? ?? 72 8d 00 c6 85 ?? ?? ?? ?? 79 8d 00 c6 85 ?? ?? ?? ?? 53 8d 00 c6 85 ?? ?? ?? ?? 79}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -957,6 +994,7 @@ rule VirTool_Win32_Injector_BH_2147644683_0
         $x_1_3 = {89 d0 c1 e0 02 01 d0 c1 e0 03 8d 04 01 05 f8 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -979,6 +1017,7 @@ rule VirTool_Win32_Injector_AC_2147645286_0
         $x_1_3 = {8b 4d f4 03 4d ?? 88 01 8b 55 ?? 83 c2 01 89 55 ?? 83 7d f8 40 7c 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1005,6 +1044,7 @@ rule VirTool_Win32_Injector_BI_2147645690_0
         $x_1_6 = {4c 64 72 47 65 74 50 72 6f 63 65 64 75 72 65 41 64 64 72 65 73 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1031,6 +1071,7 @@ rule VirTool_Win32_Injector_BZ_2147645935_0
         $x_1_4 = {6a 00 ff 70 54 ff 75 0c ff 70 34}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1057,6 +1098,7 @@ rule VirTool_Win32_Injector_BJ_2147646376_0
         $x_1_3 = {8a 1c 06 88 54 24 18 88 1c 01 8b 5c 24 18 88 14 06 33 d2 8a 14 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1079,6 +1121,7 @@ rule VirTool_Win32_Injector_BK_2147647243_0
         $x_1_2 = {0f b6 47 04 83 c7 04 (35|83) [0-4] 50 56 68 ?? ?? ?? 00 68 00 01 00 00 56}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1102,6 +1145,7 @@ rule VirTool_Win32_Injector_BO_2147648026_0
         $x_1_3 = {3a 5c 70 72 6f 6a 65 63 74 73 5c 74 63 72 79 70 74 5f 63 6c 32 5c 74 63 72 79 70 74 5f 63 6c 32 5c 52 65 6c 65 61 73 65 5c 73 5f (6c|68 69) 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1124,6 +1168,7 @@ rule VirTool_Win32_Injector_AD_2147648250_0
         $x_1_3 = {68 74 74 70 5c 73 68 65 6c 6c 5c 6f 70 65 6e 5c 63 6f 6d 6d 61 6e 64 00 52 65 61 64 50 72 6f 63 65 73 73 4d 65 6d 6f 72 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1147,6 +1192,7 @@ rule VirTool_Win32_Injector_BP_2147648397_0
         $x_1_3 = {0f b7 40 02 39 85 ?? ?? ff ff 7d 3f 8b 85 ?? ?? ff ff 6b c0 28 8b 4d f0 ff 74 01 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1169,6 +1215,7 @@ rule VirTool_Win32_Injector_BQ_2147648634_0
         $x_1_2 = {ad 03 c3 ab e2 fa 8b 74 24 08 33 d2 4a 42 ad 03 c3 6a 00 50 e8 34 00 00 00 2b 44 24 28 75 ee d1 e2 03 54 24 0c 0f b7 02 d1 e0 d1 e0 03 44 24 04 8b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1190,6 +1237,7 @@ rule VirTool_Win32_Injector_AG_2147648662_0
         $x_1_2 = {f8 04 72 0d 8b 4d 08 51 ff 95 04 ff ff ff 83 c4 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1211,6 +1259,7 @@ rule VirTool_Win32_Injector_AI_2147649310_0
         $x_1_2 = {68 d3 82 08 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1232,6 +1281,7 @@ rule VirTool_Win32_Injector_BS_2147649331_0
         $x_1_1 = "C:\\Work\\DPacker64\\Release\\DExeStub32.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1255,6 +1305,7 @@ rule VirTool_Win32_Injector_AJ_2147649406_0
         $x_1_4 = {68 1b c6 46 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1281,6 +1332,7 @@ rule VirTool_Win32_Injector_BT_2147649709_0
         $x_1_3 = {38 47 18 75 f3 80 3f 6b 74 07 80 3f 4b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1304,6 +1356,7 @@ rule VirTool_Win32_Injector_AN_2147650181_0
         $x_1_4 = "C:\\Programme\\DUFFY\\loreley\\VB6.OLB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1328,6 +1381,7 @@ rule VirTool_Win32_Injector_BU_2147650238_0
         $x_1_4 = {83 7d fc 02 74 08 83 7d fc 03 74 14 eb 17 8b 45 0c ff 30 8b 45 0c 8b 48 10 e8 ?? ?? ?? ?? eb 07 33 c0 40 eb 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1350,6 +1404,7 @@ rule VirTool_Win32_Injector_AQ_2147651486_0
         $x_1_3 = {4e 65 77 5f 56 61 6c 75 65 00 00 00 50 65 72 63 65 6e 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1374,6 +1429,7 @@ rule VirTool_Win32_Injector_AR_2147651517_0
         $n_100_5 = "Core Technologies Consulting, LLC" wide //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -1400,6 +1456,7 @@ rule VirTool_Win32_Injector_BW_2147653240_0
         $x_1_2 = {4b 85 db 75 ?? bb ?? ?? ?? ?? a1 ?? ?? ?? ?? 50 b8 02 e8 ?? ?? ?? ?? 50 ff d3 33 c0 5a 59 59 64 89 10 68 ?? ?? ?? ?? 8d 45 cc ba 09 00 00 00 e8 ?? ?? ?? ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1423,6 +1480,7 @@ rule VirTool_Win32_Injector_BD_2147655891_0
         $x_1_4 = {33 c9 b9 06 41 40 00 8a 01 3c 99 75 02 eb 0b 2b 05 04 10 40 00 88 01 41 eb ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1446,6 +1504,7 @@ rule VirTool_Win32_Injector_BD_2147655891_1
         $x_1_4 = {ff 1a 0f 8c ?? 00 00 00 83 bd ?? ff ff ff 33 0f 8f ?? 00 00 00 c7 45 fc ?? 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_14_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1471,6 +1530,7 @@ rule VirTool_Win32_Injector_BF_2147656257_0
         $x_1_3 = {be 00 00 f0 05 56 ff 15 ?? ?? f0 05 50 ff 15 ?? ?? f0 05 85 c0 74 df 53 8b 5d 08 68 00 80 00 00 ff 75 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1498,6 +1558,7 @@ rule VirTool_Win32_Injector_BY_2147656306_0
         $x_1_7 = {64 a1 30 00 00 00 83 c0 68 3e 8b 00 83 f8 70 74 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1528,6 +1589,7 @@ rule VirTool_Win32_Injector_BY_2147658298_0
         $x_1_6 = {0f 31 8b d8 0f 31 2b c3 50 83 f8 01 74 f2 58 3d 00 02 00 00 72 09 c7 45 fc 01 00 00 00 eb 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1553,6 +1615,7 @@ rule VirTool_Win32_Injector_BY_2147658298_1
         $x_1_6 = {c7 45 78 58 59 59 59 b8 59 50 00 00 66 11 45 7c 6a 06 58 33 c9 3b fb 7e 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1580,6 +1643,7 @@ rule VirTool_Win32_Injector_CB_2147658615_0
         $x_1_5 = {83 fb 2e 0f 85 ?? ?? ?? ?? ff 44 24 0c 8b 6c 24 0c 0f b6 5d 00 83 fb 64 74 0f 8b 6c 24 0c 0f b6 5d 00 83 fb 65 74 02 eb 07 b8 01 00 00 00 eb 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1608,6 +1672,7 @@ rule VirTool_Win32_Injector_CG_2147659044_0
         $x_1_6 = {c6 45 c8 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1631,6 +1696,7 @@ rule VirTool_Win32_Injector_CI_2147659222_0
         $x_1_4 = {02 00 01 00 8d 85 ?? ?? ff ff 50 ff b5 ?? ?? ff ff ff 55 ec 64 a1 30 00 00 00 8b 40 0c 8b 40 14 8b 40 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1654,6 +1720,7 @@ rule VirTool_Win32_Injector_CJ_2147659610_0
         $x_1_4 = {c7 45 78 58 59 59 59 b8 59 50 00 00 66 11 45 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1680,6 +1747,7 @@ rule VirTool_Win32_Injector_CL_2147659902_0
         $x_1_4 = {8b 45 28 89 84 24 ?? ?? ?? ?? 8b 5d 34 03 9c 24 ?? ?? ?? ?? 53}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1704,6 +1772,7 @@ rule VirTool_Win32_Injector_CL_2147659902_1
         $x_10_5 = {83 fb 2e 0f 85 ?? ?? ?? ?? ff 44 24 0c 8b 6c 24 0c 0f b6 5d 00 83 fb 64 74 0f 8b 6c 24 0c 0f b6 5d 00 83 fb 65 74 02 eb 07 b8 01 00 00 00 eb 02}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1729,6 +1798,7 @@ rule VirTool_Win32_Injector_CB_2147660079_0
         $x_1_2 = {6a 04 68 00 10 00 00 6a 04 53 ff d0 8b f8 89 bd ?? ff ff ff c7 07 07 00 01 00 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1749,6 +1819,7 @@ rule VirTool_Win32_Injector_CY_2147661507_0
         $x_1_1 = {68 8b 8c e4 d1 56 8b d8 e8 ?? ?? ?? ?? 68 6b 43 15 20 56 89 45 68 e8 ?? ?? ?? ?? 68 ea 56 5c b8 56 89 45 5c e8 ?? ?? ?? ?? 68 6a 34 4f a2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1773,6 +1844,7 @@ rule VirTool_Win32_Injector_CF_2147661665_0
         $x_1_4 = {e8 06 00 00 00 6e 74 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1797,6 +1869,7 @@ rule VirTool_Win32_Injector_CZ_2147661837_0
         $x_1_2 = {50 6a 00 ff d6 8b f0 e8 00 00 00 00 58 89 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1820,6 +1893,7 @@ rule VirTool_Win32_Injector_DA_2147661841_0
         $x_1_4 = {64 a1 30 00 00 00 83 c0 68 3e 8b 00 83 f8 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1846,6 +1920,7 @@ rule VirTool_Win32_Injector_CP_2147663155_0
         $x_1_6 = {68 00 80 00 00 eb 68 72 14 00 00 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1871,6 +1946,7 @@ rule VirTool_Win32_Injector_DF_2147663191_0
         $x_1_3 = {88 08 a1 18 fc 40 00 40 a3 18 fc 40 00 eb c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1894,6 +1970,7 @@ rule VirTool_Win32_Injector_CQ_2147663669_0
         $x_1_3 = {8d 45 fc eb 0f 81 ?? ?? ff ff e9 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1921,6 +1998,7 @@ rule VirTool_Win32_Injector_CR_2147663670_0
         $x_1_4 = {8d 45 fc eb eb e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1946,6 +2024,7 @@ rule VirTool_Win32_Injector_DI_2147664065_0
         $x_1_3 = {8b d8 8d 55 b8 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 45 b8 8b d6 b9 01 00 00 00 e8 ?? ?? ?? ?? 48 75 2a a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1970,6 +2049,7 @@ rule VirTool_Win32_Injector_CS_2147664272_0
         $x_1_4 = {8d 45 fc eb eb eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1992,6 +2072,7 @@ rule VirTool_Win32_Injector_CT_2147664553_0
         $x_1_2 = {05 b0 00 00 00 89 18 c7 45 ?? 00 00 00 00 c7 45 ?? 74 65 78 74 c7 45 ?? 64 43 6f 6e c7 45 ?? 68 72 65 61 c7 45 ?? 53 65 74 54}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2018,6 +2099,7 @@ rule VirTool_Win32_Injector_CU_2147664554_0
         $x_1_6 = {68 00 00 00 00 68 00 00 00 00 68 00 00 00 00 8d 6c 24 ?? ff 75 54 ff b4 24 ?? ?? ?? ?? ff 75 34}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2042,6 +2124,7 @@ rule VirTool_Win32_Injector_CV_2147664555_0
         $x_1_4 = {8d 45 fc eb eb (eb|e9)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2063,6 +2146,7 @@ rule VirTool_Win32_Injector_DM_2147664921_0
         $x_1_2 = {66 3b b5 78 ff ff ff 0f 8f bb 00 00 00 0f bf fe}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2086,6 +2170,7 @@ rule VirTool_Win32_Injector_DP_2147665075_0
         $x_1_4 = {8b 47 28 03 45 f0 89 85 7c ff ff ff 8d 85 cc fe ff ff 50 8b 45 e0 50 e8 ?? ?? ?? ?? 8b 45 e0 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2107,6 +2192,7 @@ rule VirTool_Win32_Injector_DU_2147678885_0
         $x_1_2 = {64 a1 30 00 00 00 83 c0 68 3e 8b 00 83 f8 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2130,6 +2216,7 @@ rule VirTool_Win32_Injector_DF_2147679127_0
         $x_1_3 = {89 03 83 c6 04 8b 5d ?? 03 de 8b 85 ?? ?? ?? ?? 89 03 83 c6 04 3b 75 ?? 73 02 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2154,6 +2241,7 @@ rule VirTool_Win32_Injector_DX_2147679169_0
         $x_1_5 = {f5 cf ee d5 d6 da cb ed d2 de cc f4 dd e8 de d8 cf d2 d4 d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2181,6 +2269,7 @@ rule VirTool_Win32_Injector_DH_2147679236_0
         $x_1_3 = {ff d0 03 45 ?? c7 00 5c 2a 2e 64 c7 40 04 6c 6c 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2206,6 +2295,7 @@ rule VirTool_Win32_Injector_DZ_2147679569_0
         $x_1_6 = {75 73 65 72 69 6e 69 74 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2233,6 +2323,7 @@ rule VirTool_Win32_Injector_DI_2147679943_0
         $x_1_4 = {8a 10 88 14 06 40 84 d2 75 f6 83 c7 0c 66 c7 41 0a eb fe 89 79 01 5f b8 01 00 00 00 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2256,6 +2347,7 @@ rule VirTool_Win32_Injector_DJ_2147680242_0
         $x_1_3 = {40 93 d6 40 00 00 00 00 00 54 d1 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2290,6 +2382,7 @@ rule VirTool_Win32_Injector_DL_2147680280_0
         $x_1_14 = {8b 50 78 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -2312,6 +2405,7 @@ rule VirTool_Win32_Injector_DP_2147681499_0
         $x_1_2 = {8d 6c 24 48 0f bf 45 06 39 c3 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2334,6 +2428,7 @@ rule VirTool_Win32_Injector_DP_2147681499_1
         $x_1_2 = {68 08 00 00 00 68 01 00 00 00 68 04 00 00 00 e8 ?? ?? 00 00 c7 05 ?? ?? ?? 00 00 00 80 3f 68 19 79 24 4e e8 ?? ?? 00 00 d8 0d ?? ?? ?? 00 d8 05 ?? ?? ?? 00 d9 fa 83 ec 04 d9 1c 24 e8 ?? ?? 00 00 dd d8 d9 05 ?? ?? 40 00 d8 05 ?? ?? 40 00 d9 1d ?? ?? 40 00 d9 05 ?? ?? 40 00 d8 1d ?? ?? 40 00 df e0 f6 c4 40 74 b6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2361,6 +2456,7 @@ rule VirTool_Win32_Injector_DQ_2147681613_0
         $x_1_7 = {56 8b 0e fc [0-15] 64 8b 89}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -2384,6 +2480,7 @@ rule VirTool_Win32_Injector_DR_2147681685_0
         $x_1_3 = {ff ff 02 00 01 00 04 00 c7 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2408,6 +2505,7 @@ rule VirTool_Win32_Injector_DT_2147681775_0
         $x_1_1 = {b8 ff ff ff 7f 31 c9 39 c8 75 0a 74 0e bb 00 00 00 00 89 1b c3 48 39 c8 eb ed c3 b9 ff ff ff 7f 90 e2 fd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2430,6 +2528,7 @@ rule VirTool_Win32_Injector_DU_2147681816_0
         $x_1_2 = {69 27 6d 20 6e 6f 74 20 61 20 6d 61 67 69 63 20 62 75 74 20 74 68 65 20 6e 75 6d 62 65 72 20 79 6f 75 20 63 68 6f 69 63 65 20 77 61 73 3a 0a 0a 20 25 69 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2453,6 +2552,7 @@ rule VirTool_Win32_Injector_DV_2147682212_0
         $x_1_3 = {56 56 d6 41 00 00 00 00 40 16 d4 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2480,6 +2580,7 @@ rule VirTool_Win32_Injector_EJ_2147682836_0
         $x_1_7 = {83 c1 01 33 [0-5] 03 c1 88 ?? ff 8b ?? ?? 8a ?? ff 88 ?? ?? ?? 40 00 8b ?? ?? 83 c1 01 89 ?? ?? 81 7d ?? ?? 10 00 00 7d 05 e9 ?? ff ff ff c7 45 ?? ?? ?? 40 00 ff 55 ?? 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2502,6 +2603,7 @@ rule VirTool_Win32_Injector_EC_2147683182_0
         $x_1_2 = {30 0e 46 4f 75 ce 33 c0 bf ?? ?? ?? ?? b9 40 00 00 00 fc f3 ab}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2524,6 +2626,7 @@ rule VirTool_Win32_Injector_ED_2147683789_0
         $x_1_2 = {0f be 8c 05 88 ec ff ff 8b 55 f0 83 c2 01 83 f2 ?? 03 ca 88 4d ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2547,6 +2650,7 @@ rule VirTool_Win32_Injector_EF_2147684425_0
         $x_1_3 = {03 ca 88 4d fe 30 00 8b 95 ?? ?? ff ff 83 c2 01 (81 f2 ?? ?? ?? ??|83 f2 ??) 88 95 ?? ?? ff ff 8b 85 ?? ?? ff ff 0f b6 8c 05 ?? ?? ff ff 0f be 95 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2571,6 +2675,7 @@ rule VirTool_Win32_Injector_EK_2147684436_0
         $x_1_4 = {c7 00 07 00 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2595,6 +2700,7 @@ rule VirTool_Win32_Injector_EG_2147684459_0
         $x_1_1 = {8a 4d f9 30 8c 38 9c f6 ff ff 40 3d 1d 09 00 00 7c ee 8d 85 9c f6 ff ff ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2619,6 +2725,7 @@ rule VirTool_Win32_Injector_EL_2147684461_0
         $x_1_4 = {c7 00 07 00 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2644,6 +2751,7 @@ rule VirTool_Win32_Injector_EM_2147684498_0
         $x_1_2 = {8b 45 fc 3b 45 0c 7d 2c 8b 4d 08 03 4d fc 0f b6 09 8b 45 fc 99 f7 7d 14 8b 45 10 0f be 14 10 33 ca 8b 45 08 03 45 fc 88 08 8b 4d fc 83 c1 01 89 4d fc eb cc 8b e5 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2668,6 +2776,7 @@ rule VirTool_Win32_Injector_EN_2147684557_0
         $x_1_4 = {c7 01 07 00 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2691,6 +2800,7 @@ rule VirTool_Win32_Injector_EE_2147684647_0
         $x_1_3 = {83 c0 01 89 45 ?? 81 7d 00 80 0f 00 00 0f 85 ?? ?? ff ff [0-96] ff (55 ??|95 ?? ?? ?? ??) 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -2719,6 +2829,7 @@ rule VirTool_Win32_Injector_EH_2147684781_0
         $x_1_4 = {8b 42 28 03 05 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 89 81 b0 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2743,6 +2854,7 @@ rule VirTool_Win32_Injector_EI_2147685093_0
         $x_1_4 = {8b 00 05 00 10 00 00 8b 48 fc 32 cd 80 f9 10 75 f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2766,6 +2878,7 @@ rule VirTool_Win32_Injector_EQ_2147685129_0
         $x_1_3 = {8d 43 34 50 8b 87 a4 00 00 00 83 c0 08 50 ff 75 dc ff 56 10 8b 43 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2787,6 +2900,7 @@ rule VirTool_Win32_Injector_ER_2147685388_0
         $x_1_1 = {83 e8 04 0f 6e 07 0f 6e ce 0f ef c1 0f 7e 07 83 c7 04 85 c0 75 ea}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2812,6 +2926,7 @@ rule VirTool_Win32_Injector_EP_2147685456_0
         $x_1_6 = {8d 85 dd 82 ff ff 33 c9 8a 08 33 4e 04 88 08 40 4a 75 f3 8d 85 dd 82 ff ff ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2838,6 +2953,7 @@ rule VirTool_Win32_Injector_EQ_2147685956_0
         $x_1_7 = {32 04 13 aa e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2861,6 +2977,7 @@ rule VirTool_Win32_Injector_ES_2147686275_0
         $x_1_3 = {35 36 73 67 6a 73 66 67 6a 35 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2883,6 +3000,7 @@ rule VirTool_Win32_Injector_ET_2147687128_0
         $x_1_2 = {6a 02 6a 00 53 ff 15 ?? ?? ?? ?? 53 8d be bc 08 00 00 ff 15 ?? ?? ?? ?? 53 89 07 ff 15 ?? ?? ?? ?? 8b 07 53 40 50 8d 86 c0 08 00 00 6a 01 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2906,6 +3024,7 @@ rule VirTool_Win32_Injector_EU_2147687129_0
         $x_1_3 = {00 59 41 70 70 2e 45 58 45 [0-2] 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2931,6 +3050,7 @@ rule VirTool_Win32_Injector_EV_2147687132_0
         $x_1_2 = {6a 03 6a 00 6a 01 68 00 00 00 80 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 89 85 ?? ?? ?? ?? 6a 00 8b 85 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 89 45 ?? 6a 01 8b 4d ?? 81 c1 00 04 00 00 51 ff 15 ?? ?? ?? ?? 83 c4 08 89 85 ?? ?? ?? ?? 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2952,6 +3072,7 @@ rule VirTool_Win32_Injector_EX_2147687855_0
         $x_1_1 = {53 56 57 89 8d ?? ?? ff ff c6 85 ?? ?? ff ff 6d c6 85 ?? ?? ff ff 79 c6 85 ?? ?? ff ff 61 c6 85 ?? ?? ff ff 70 c6 85 ?? ?? ff ff 70 c6 85 ?? ?? ff ff 2e c6 85 ?? ?? ff ff 65 c6 85 ?? ?? ff ff 78 c6 85 ?? ?? ff ff 65 c6 85 ?? ?? ff ff 00 68 ?? ?? ?? ?? 8d 85 ?? ?? ff ff 50 ff 15 ?? ?? ?? ?? 83 c4 08 89 45 ?? 83 7d ?? 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2975,6 +3096,7 @@ rule VirTool_Win32_Injector_EU_2147688111_0
         $x_1_4 = {8b 45 e4 03 45 e8 0f be 08 33 ca 8b 55 e4 03 55 e8 88 0a e9 ?? ?? ?? ?? 8b 45 e4 eb ?? 33 c0 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2997,6 +3119,7 @@ rule VirTool_Win32_Injector_EX_2147689085_0
         $x_1_3 = {97 33 c0 2d ?? ?? ?? ?? ab 35 ?? ?? ?? ?? ab 05 ?? ?? ?? ?? ab 35 ?? ?? ?? ?? ab}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3022,6 +3145,7 @@ rule VirTool_Win32_Injector_FC_2147689427_0
         $x_1_5 = {f3 aa c6 85 ?? ?? ?? ?? 69 c6 85 ?? ?? ?? ?? 72 c6 85 ?? ?? ?? ?? 74 c6 85 ?? ?? ?? ?? 75 c6 85 ?? ?? ?? ?? 61 c6 85 ?? ?? ?? ?? 6c c6 85 ?? ?? ?? ?? 41 c6 85 ?? ?? ?? ?? 6c c6 85 ?? ?? ?? ?? 6c c6 85 ?? ?? ?? ?? 6f c6 85 ?? ?? ?? ?? 63 c6 85 ?? ?? ?? ?? 45 c6 85 ?? ?? ?? ?? 78 c6 85 ?? ?? ?? ?? 56}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -3048,6 +3172,7 @@ rule VirTool_Win32_Injector_FD_2147690189_0
         $x_1_2 = {83 bd 34 fe ff ff 28 7d 20 e8 ?? ?? ?? ?? 25 01 00 00 80 79 05 48 83 c8 fe 40 8b 8d 34 fe ff ff 89 84 8d a8 fe ff ff eb c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3073,6 +3198,7 @@ rule VirTool_Win32_Injector_EY_2147690219_0
         $x_1_6 = {c6 06 50 c6 46 01 24 c6 46 02 78 e8 ?? 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3094,6 +3220,7 @@ rule VirTool_Win32_Injector_FC_2147690804_0
         $x_1_2 = {66 c7 40 12 c9 3b 66 c7 40 16 08 74 66 c7 40 18 02 8b 66 c7 40 1a 00 c3 66 c7 40 0a 24 04 66 c7 40 08 8b 44 66 c7 40 0c 83 c0 66 c7 40 0e 08 8b 66 c7 40 10 00 31 66 c7 40 14 4c 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3121,6 +3248,7 @@ rule VirTool_Win32_Injector_FE_2147690917_0
         $x_1_7 = {0f b7 46 06 ff 45 fc 59 83 c7 28 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -3155,6 +3283,7 @@ rule VirTool_Win32_Injector_FF_2147690995_0
         $x_1_14 = {52 65 61 64 50 01 02 72 52 6f 63 65 73 73 4d 65 6d 6f 72 79}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_16_*))) or
@@ -3187,6 +3316,7 @@ rule VirTool_Win32_Injector_FH_2147691811_0
         $x_4_8 = {8b 48 74 ff d1 83 7d 18 00 74 0a 8b 55 18 8b 45 fc 89 02 eb 0d}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 6 of ($x_1_*))) or
             ((1 of ($x_6_*) and 4 of ($x_1_*))) or
@@ -3218,6 +3348,7 @@ rule VirTool_Win32_Injector_FK_2147693635_0
         $x_1_7 = {68 05 d1 3d 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -3242,6 +3373,7 @@ rule VirTool_Win32_Injector_FL_2147693692_0
         $x_1_2 = {67 42 79 44 c7 ?? ?? 75 60 40 7f c7 ?? ?? 73 75 43 43 c7 ?? ?? 1d 75 7d 7f c7 ?? ?? 40 49 ce cf c7 ?? ?? ce cf cf cf e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3266,6 +3398,7 @@ rule VirTool_Win32_Injector_FI_2147694057_0
         $x_1_4 = {0f b7 49 06 39 c8 0f 8d 35 01 00 00 8b 84 24 ?? ?? ?? ?? 8b 40 3c 03 84 24 ?? ?? ?? ?? 8b 8c 24 ?? ?? ?? ?? 0f af 8c 24 ?? ?? ?? ?? 01 c8 89 84 24 f8 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3289,6 +3422,7 @@ rule VirTool_Win32_Injector_FN_2147694687_0
         $x_2_4 = {89 02 b9 07 00 00 00 be ?? ?? 00 10 8d bd ?? ?? ff ff f3 a5 66 a5 a4 33 c9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or
             (all of ($x*))
@@ -3313,6 +3447,7 @@ rule VirTool_Win32_Injector_FQ_2147694862_0
         $x_1_2 = {ff 75 c0 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b d0 8d 4d c0 e8 ?? ?? ?? ?? ff 75 c0 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b d0 8d 4d c0 e8 ?? ?? ?? ?? ff 75 c0 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b d0 8d 4d c0 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3353,6 +3488,7 @@ rule VirTool_Win32_Injector_FQ_2147694862_1
         $x_2_21 = {81 ec 0b 01 00 00 [0-6] 0f [0-16] 44 [0-6] 0f [0-56] ad [0-6] 0f [0-24] 8b 9c 24 10 01 00 00 [0-24] 39 18 [0-24] 75 (d0|2d|f0)}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -3382,6 +3518,7 @@ rule VirTool_Win32_Injector_FO_2147694958_0
         $x_1_6 = {6a 40 68 00 10 00 00 68 00 28 00 00 6a 00 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3402,6 +3539,7 @@ rule VirTool_Win32_Injector_FR_2147695048_0
         $x_1_1 = "6090\\E890\\4E90\\0090\\0090\\0090\\6B90\\0090\\6590\\0090\\7290\\0090\\6E90\\0090\\6590\\0090\\6C90\\0090\\3390\\0090\\3290" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3446,6 +3584,7 @@ rule VirTool_Win32_Injector_FS_2147695084_0
         $x_1_3 = "prompt.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3469,6 +3608,7 @@ rule VirTool_Win32_Injector_FS_2147695084_1
         $x_1_4 = {43 6f 6e 66 69 67 2e 69 6e 69 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3492,6 +3632,7 @@ rule VirTool_Win32_Injector_FS_2147695084_2
         $x_1_1 = {c6 45 c4 2f c6 45 c5 63 c6 45 c6 20 c6 45 c7 70 c6 45 c8 69 c6 45 c9 6e c6 45 ca 67 c6 45 cb 20 c6 45 cc 31 c6 45 cd 32 c6 45 ce 37 c6 45 cf 2e [0-128] c6 45 e1 33 c6 45 e2 32 c6 45 e3 2e c6 45 e4 65 c6 45 e5 78 c6 45 e6 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3514,6 +3655,7 @@ rule VirTool_Win32_Injector_FP_2147695168_0
         $x_1_3 = {c7 00 07 00 01 00 8d 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3536,6 +3678,7 @@ rule VirTool_Win32_Injector_FU_2147695694_0
         $n_100_3 = "hr_decryptor\\bin\\HRDecrypter.pdb" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -3559,6 +3702,7 @@ rule VirTool_Win32_Injector_FT_2147696233_0
         $x_1_3 = "RevdFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3581,6 +3725,7 @@ rule VirTool_Win32_Injector_FT_2147696233_1
         $x_1_3 = "CreaOeFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3603,6 +3748,7 @@ rule VirTool_Win32_Injector_FT_2147696233_2
         $x_1_3 = "kernel32.dVl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3624,6 +3770,7 @@ rule VirTool_Win32_Injector_FW_2147696421_0
         $x_1_2 = {b0 00 00 00 8d 85 ?? ?? ff ff 05 96 00 00 00 89 44 24 04 8b 85 ?? ?? ff ff 89 04 24 8b 85 ?? ?? ff ff ff d0 02 00 89 90}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3645,6 +3792,7 @@ rule VirTool_Win32_Injector_FZ_2147696594_0
         $x_1_2 = {00 53 63 75 6c 6b 73 00 53 63 75 6c 6b 73 40 32 38 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3668,6 +3816,7 @@ rule VirTool_Win32_Injector_FZ_2147696594_1
         $x_1_4 = {00 53 74 65 72 6e 75 6d 00 5f 5f 5f 43 50 50 64 65 62 75 67 48 6f 6f 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3690,6 +3839,7 @@ rule VirTool_Win32_Injector_FZ_2147696594_2
         $x_1_3 = {be 84 a0 40 00 8d bd ?? ?? ff ff b9 ?? 00 00 00 f3 a5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3710,6 +3860,7 @@ rule VirTool_Win32_Injector_GA_2147696614_0
         $x_1_1 = {c6 85 cc fd ff ff 72 c6 85 cd fd ff ff 7a c6 85 ce fd ff ff 7a c7 85 3c ff ff ff d0 01 00 00 c6 85 c3 fd ff ff 7d c7 45 d8 00 00 00 00 c7 45 d8 00 00 00 00 eb 34 c7 85 38 ff ff ff 57 01 00 00 8d 95 c3 fd ff ff 8b 45 d8 01 d0 8a 00 83 f0 16 8d 8d c3 fd ff ff 8b 55 d8 01 ca 88 02 c7 85 34 ff ff ff 12 00 00 00 ff 45 d8 83 7d d8 0b 0f 9e c0 84 c0 75 c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3731,6 +3882,7 @@ rule VirTool_Win32_Injector_GB_2147696646_0
         $x_1_2 = "TMPNETLOAD" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3752,6 +3904,7 @@ rule VirTool_Win32_Injector_GC_2147696830_0
         $x_1_2 = {51 51 83 c0 28 dd 1c 24 ff d0 59 59 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3775,6 +3928,7 @@ rule VirTool_Win32_Injector_GE_2147696959_0
         $x_1_4 = {c6 45 dc 6e c6 45 dd 74 c6 45 de 64 c6 45 df 6c c6 45 e0 6c c6 45 e1 00 8d 45 dc 50 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3796,6 +3950,7 @@ rule VirTool_Win32_Injector_GF_2147697056_0
         $x_1_2 = {81 fd 21 ff 21 ff 75 00 00 81 fd 21 ff 21 ff 8b 2f [0-32] 46 [0-32] 31 f5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3821,6 +3976,7 @@ rule VirTool_Win32_Injector_GG_2147697232_0
         $x_1_6 = {66 c7 85 08 ff ff ff 2e 00 66 c7 85 0a ff ff ff 54 00 66 c7 85 0c ff ff ff 4d 00 66 c7 85 0e ff ff ff 50 00 66 89 9d 10 ff ff ff ff 55 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3843,6 +3999,7 @@ rule VirTool_Win32_Injector_GK_2147697792_0
         $x_1_3 = {89 d0 c1 e0 02 01 d0 8d 14 85 00 00 00 00 01 d0 8d 55 ?? 01 d0 01 c8 2d ?? ?? 00 00 88 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3866,6 +4023,7 @@ rule VirTool_Win32_Injector_FM_2147705497_0
         $x_1_3 = {e8 22 00 00 00 b0 0d 49 00 ea 00 0a 01 24 01 88 01 07 02 fa 02 3f 03 fb 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3886,6 +4044,7 @@ rule VirTool_Win32_Injector_GL_2147705510_0
         $x_1_1 = {01 d0 0f b6 08 8b 45 ?? 99 f7 7d ?? 89 d0 89 c2 8b 45 10 01 d0 0f b6 00 31 c8 8d 8d ?? ?? ff ff 8b 55 ?? 01 ca 88 02 83 45 ?? 01 8b 45 ?? 99 f7 7d ?? 89 d0 85 c0 75 07 c7 45 ?? 00 00 00 00 83 45 ?? 01 8b 45 ?? 3b 45 ?? 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3910,6 +4069,7 @@ rule VirTool_Win32_Injector_FO_2147705960_0
         $x_3_4 = {0f b6 8c 04 20 06 00 00 8b 94 24 40 05 00 00 8b b4 24 78 08 00 00 89 84 24 10 01 00 00 89 d0 99 f7 fe 8b 84 24 84 08 00 00 0f b6 04 10 31 c1 88 cb 8b 84 24 10 01 00 00 88 9c 04 20 06 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3934,6 +4094,7 @@ rule VirTool_Win32_Injector_FQ_2147705962_0
         $x_3_4 = {89 d0 03 45 14 8a 00 31 c8 88 03 8b 85 5c ff ff ff 89 c3 03 9d e4 fe ff ff 8b 85 5c ff ff ff 03 85 e4 fe ff ff 8a 08 8b 85 5c ff ff ff 99 f7 bd 3c ff ff ff 89 d0 03 45 14 8a 00 31 c8 88 03}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3957,6 +4118,7 @@ rule VirTool_Win32_Injector_GS_2147705966_0
         $x_2_4 = {66 a1 f0 e1 00 10 0f bf c8 66 a1 08 e2 00 10 88 c2 66 a1 20 e1 00 10 88 d3 28 c3 88 d8 88 84 0d a1 fc ff ff c7 85 78 fd ff ff 06 01 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3981,6 +4143,7 @@ rule VirTool_Win32_Injector_GY_2147706310_0
         $x_2_5 = {74 05 03 c2 50 eb f3 89 45 0c 89 45 10 b9 01 00 00 00 ff 55 e8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -4009,6 +4172,7 @@ rule VirTool_Win32_Injector_AEK_2147706400_0
         $x_1_5 = {40 48 74 12 47 47 8b 45 f8 ff 45 f8 47 8b 4d f4 47 40 3b c1 72 c5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -4030,6 +4194,7 @@ rule VirTool_Win32_Injector_HB_2147706694_0
         $x_1_2 = {31 32 66 0f fd d2 [0-32] 83 c2 04 0f d5 c1 [0-21] 39 5a fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4052,6 +4217,7 @@ rule VirTool_Win32_Injector_HD_2147706952_0
         $x_1_3 = {03 c1 03 c2 4e 4e 4e 0f b7 00 8b 4e 1e 8d 04 81 4e 8b 4d fc 03 c1 8b 00 03 c1 eb c8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -4073,6 +4239,7 @@ rule VirTool_Win32_Injector_HE_2147707118_0
         $x_1_2 = {32 d8 88 9c 3d [0-34] f7 6d d8 c1 fa 08 8b c2 c1 e8 1f 03 d0 02 84 15 ?? ?? ?? ?? 3c 05 8d 8c 15 ?? ?? ?? ?? 77 [0-24] f7 6d e0 c1 fa 03 8b c2 c1 e8 1f 03 d0 8a 94 15 ?? ?? ?? ?? fe ca 88 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4094,6 +4261,7 @@ rule VirTool_Win32_Injector_HF_2147707125_0
         $x_1_2 = {2b d6 83 ea 3b 8b cf 2b ce 83 e9 3b 0f b6 f2 8b e9 2b ee 83 ed 04 85 c0 a3 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 89 2d ?? ?? ?? ?? 0f 84 ?? ?? ?? ?? 0f b6 d3 2b ca 68 ?? ?? ?? ?? 83 e9 04 50 89 0d ?? ?? ?? ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4116,6 +4284,7 @@ rule VirTool_Win32_Injector_HG_2147707165_0
         $x_1_3 = {8d 4c 02 08 89 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 83 c2 3b 0f b7 05 88 a4 42 00 2b d0 89 55 e8 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 83 c4 04 8b 7d ec 46 be ?? ?? ?? ?? 57 03 f3 81 ee ?? ?? ?? ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4139,6 +4308,7 @@ rule VirTool_Win32_Injector_HH_2147707188_0
         $x_1_4 = {eb dd 8b 8d a8 fe ff ff 8b 55 f4 03 51 28 89 55 cc ff 55 cc 6a 00 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -4161,6 +4331,7 @@ rule VirTool_Win32_Injector_HI_2147707304_0
         $x_1_3 = {8b d0 8d 8d 0c fd ff ff ff d6 50 ff d7 8b d0 8d 8d 08 fd ff ff ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4185,6 +4356,7 @@ rule VirTool_Win32_Injector_HJ_2147707383_0
         $x_1_5 = {8b 45 e0 50 8b 0d f4 14 42 00 ff d1 33 d2 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4208,6 +4380,7 @@ rule VirTool_Win32_Injector_HK_2147707384_0
         $x_1_4 = {83 c0 03 89 85 1c ff ff ff 58 8b 85 1c ff ff ff 50 ff 95 14 ff ff ff 8b 85 0c ff ff ff c9 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4230,6 +4403,7 @@ rule VirTool_Win32_Injector_HL_2147707385_0
         $x_1_3 = {39 f1 0f 81 aa 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4253,6 +4427,7 @@ rule VirTool_Win32_Injector_HM_2147707386_0
         $x_1_4 = {8b 45 64 2b 45 58 6a f6 83 e8 05 89 43 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4276,6 +4451,7 @@ rule VirTool_Win32_Injector_HO_2147707507_0
         $x_1_4 = {80 79 44 00 75 0c 80 b9 88 00 00 00 00 75 03 33 c0 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4301,6 +4477,7 @@ rule VirTool_Win32_Injector_HP_2147707510_0
         $x_1_6 = {eb d3 47 d9 18 e6 e6 90 90 ee 70 8a 58 b0 d4 99 4c 0b 1a b2 fd 87 f1 17 ab 28 95 65 52 6e 33 3b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4324,6 +4501,7 @@ rule VirTool_Win32_Injector_HQ_2147707512_0
         $x_1_4 = {74 16 48 8b f0 51 57 fc f3 a4 5f 59 03 f9 42 42 42 42 43 43 43 43 eb df}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4347,6 +4525,7 @@ rule VirTool_Win32_Injector_HY_2147708054_0
         $x_1_4 = {83 c7 04 8b 03 83 c3 04 89 07 83 c7 04 8b 5d d8 ff 33 ff 15 ?? ?? ?? ?? 90 90 90 90 39 65 d4 74 0d 68 06 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4367,6 +4546,7 @@ rule VirTool_Win32_Injector_IA_2147708501_0
         $x_1_1 = {56 50 c6 45 ?? 6d c6 45 ?? 79 c6 45 ?? 61 c6 45 ?? 70 c6 45 ?? 70 c6 45 ?? 2e c6 45 ?? 65 c6 45 ?? 78 c6 45 ?? 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4389,6 +4569,7 @@ rule VirTool_Win32_Injector_IB_2147708502_0
         $x_1_3 = {c6 45 fe 30 c6 45 fc 78 c6 45 fd 41 c6 45 ff 61 0f be 45 fe 8b 4d 08 0f b6 11 3b c2 0f 85 ?? ?? ?? ?? 0f be 45 fc 8b 4d 08 0f b6 51 01 3b c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -4410,6 +4591,7 @@ rule VirTool_Win32_Injector_BG_2147708691_0
         $x_1_1 = {0f b6 54 1a ff 33 d7 88 54 18 ff 8d 45 f4 ba ?? ?? ?? ?? e8 ?? ?? ?? ?? 43 4e 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4432,6 +4614,7 @@ rule VirTool_Win32_Injector_IC_2147708699_0
         $x_1_3 = {81 e1 ff ff 00 00 81 f9 d0 07 00 00 7d 04 b0 01 eb 42}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -4453,6 +4636,7 @@ rule VirTool_Win32_Injector_ID_2147708752_0
         $x_1_1 = {0f be 5c 24 ?? 0f be 7c 24 ?? 31 fb 8b 7c 24 ?? 31 fb 33 5c 24 ?? 8b 7c 24 ?? 31 fb 89 d8 88 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4474,6 +4658,7 @@ rule VirTool_Win32_Injector_IE_2147708753_0
         $x_1_1 = {8b ce 03 c8 8a 09 88 0c 02 8d 48 01 33 4b 04 51 33 c9 8a 0c 02 5f 2b cf 88 0c 02 8d 48 01 33 0b 51 33 c9 8a 0c 02 5f 2b cf 88 0c 02 40 ?? ?? ?? ?? ?? ?? 75 cb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4495,6 +4680,7 @@ rule VirTool_Win32_Injector_IF_2147708964_0
         $x_1_2 = {81 7d ec 13 7b 83 12 7f 41 8b 45 ec 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4516,6 +4702,7 @@ rule VirTool_Win32_Injector_IG_2147709603_0
         $x_1_2 = {33 32 35 38 38 37 38 39 24 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4542,6 +4729,7 @@ rule VirTool_Win32_Injector_IH_2147709651_0
         $x_1_6 = {8b 45 08 8b 88 94 03 00 00 e9 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4565,6 +4753,7 @@ rule VirTool_Win32_Injector_MRG_2147712010_0
         $x_1_3 = {6a 40 68 00 30 00 00 8b 45 1c 50 6a 00 8b 8d ?? ?? ff ff 51 ff 15 ?? ?? 40 00 89 85 ?? ?? ff ff 83 bd ?? ?? ff ff 00 74 1a 8b 95 ?? ?? ff ff 52 8b 45 18 50 8b 4d 10 51 8b 8d ?? ?? ff ff e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4589,6 +4778,7 @@ rule VirTool_Win32_Injector_MRH_2147712300_0
         $x_1_4 = {b6 08 66 d1 eb 66 d1 d8 73 09 66 35 20 83 66 81 f3 b8 ed fe ce 75 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4611,6 +4801,7 @@ rule VirTool_Win32_Injector_IM_2147714800_0
         $x_1_3 = {8b 45 ec 03 45 f4 0f be 08 33 4d f0 8b 55 ec 03 55 f4 88 0a eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4633,6 +4824,7 @@ rule VirTool_Win32_Injector_IV_2147717747_0
         $x_1_3 = {89 e1 89 41 04 8d [0-6] 89 01 e8 ?? ?? ff ff 83 ec 08 89 [0-8] 89 e0 c7 00 4e 7d 40 00 e8 ?? ?? ff ff 83 ec 04 83 f8 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4657,6 +4849,7 @@ rule VirTool_Win32_Injector_GF_2147718798_0
         $x_1_4 = {66 8b 51 06 0f ?? ?? ?? ?? 89 ?? ?? ?? 8b 49 54 8b ?? ?? ?? 51 8b ?? ?? ?? 52 8b ?? ?? ?? 51 52 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4682,6 +4875,7 @@ rule VirTool_Win32_Injector_JG_2147718993_0
         $x_1_3 = {c7 45 f4 73 62 69 65 c7 45 f8 64 6c 6c 2e c7 45 fc 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -4703,6 +4897,7 @@ rule VirTool_Win32_Injector_JK_2147719228_0
         $x_1_2 = "kernetbreakdownl32::tbreakdownVitbreakdownrttbreakdownualAtbreakdownltbreakdownloc(" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4725,6 +4920,7 @@ rule VirTool_Win32_Injector_JR_2147720156_0
         $x_1_3 = {50 8b ff 8b c9 8b ff c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4747,6 +4943,7 @@ rule VirTool_Win32_Injector_KP_2147732288_0
         $x_1_3 = {ff 06 81 3e ?? ?? ?? ?? 75 f3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4768,6 +4965,7 @@ rule VirTool_Win32_Injector_CQ_2147733008_0
         $x_1_1 = {50 6a 40 68 00 60 00 00 68 80 68 41 00 ff 15 ?? ?? ?? 00 51 53 8d 05 ?? ?? ?? 00 33 c9 8a 1c 08 80 f3 bb f6 d3 80 f3 84 88 1c 08 41 81 f9 51 5f 00 00 75 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4790,6 +4988,7 @@ rule VirTool_Win32_Injector_CP_2147733086_0
         $x_1_2 = {8b ce c1 e1 04 03 8d ?? ?? ff ff 33 c1 8b 8d ?? ?? ff ff 81 85 ?? ?? ff ff 47 86 c8 61 03 ce 33 c1 2b f8 ff 85 ?? ?? ff ff 83 bd ?? ?? ff ff 20 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4813,6 +5012,7 @@ rule VirTool_Win32_Injector_KP_2147733103_0
         $x_1_3 = {88 9c 24 1e 02 00 00 c6 84 24 1f 02 00 00 61 c6 84 24 20 02 00 00 64 c6 84 24 21 02 00 00 43 c6 84 24 22 02 00 00 6f c6 84 24 23 02 00 00 6e c6 84 24 24 02 00 00 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4864,6 +5064,7 @@ rule VirTool_Win32_Injector_KR_2147734613_0
         $x_1_4 = {81 3c 24 e3 59 00 00 75 [0-32] 8b c7 e8 ?? ?? ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4885,6 +5086,7 @@ rule VirTool_Win32_Injector_KL_2147750266_0
         $x_1_1 = {8b 45 fc 03 45 f0 73 ?? e8 ?? ?? ?? ?? 8a 00 88 45 f7 8b 45 f0 89 45 f8 ?? ?? 80 75 f7 ?? ?? ?? 8b 45 fc 03 45 f8 73 ?? e8 ?? ?? ?? ?? 8a 55 f7 88 10 ?? ff 45 f0 81 7d f0 ?? ?? ?? ?? 75 ?? 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4909,6 +5111,7 @@ rule VirTool_Win32_Injector_SBR_2147753986_0
         $x_1_4 = "acquire credentials" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4930,6 +5133,7 @@ rule VirTool_Win32_Injector_FGT_2147807572_0
         $x_1_1 = {d0 59 b4 38 4d 87 31 5f 9c f1 0a c5 6b c9 72 38 12}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

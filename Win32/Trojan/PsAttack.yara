@@ -19,6 +19,7 @@ rule Trojan_Win32_PsAttack_D_2147729885_0
         $x_2_5 = {49 6e 76 69 73 69 53 68 65 6c 6c 50 72 6f 66 69 6c 65 72 2e 44 6c 6c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77 00 44 6c 6c 47 65 74 43 6c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

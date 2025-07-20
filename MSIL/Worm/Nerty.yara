@@ -18,6 +18,7 @@ rule Worm_MSIL_Nerty_B_2147652278_0
         $x_1_4 = {31 7b 00 48 00 61 00 76 00 65 00 41 00 4e 00 69 00 63 00 65 00 44 00 61 00 79 00 2d 00 54 00 65 00 61 00 6d 00 4d 00 65 00 72 00 71 00 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

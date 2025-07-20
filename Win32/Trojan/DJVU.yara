@@ -16,6 +16,7 @@ rule Trojan_Win32_DJVU_GN_2147893838_0
         $x_1_1 = {8b d0 8b c8 c1 ea 05 03 54 24 2c c1 e1 04 03 4c 24 24 03 c3 33 d1 33 d0 2b fa 8b cf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_DJVU_IP_2147894695_0
         $x_1_1 = {8b cb c1 e1 04 03 4c 24 34 8b c3 c1 e8 05 03 44 24 2c 8d 14 2b 33 ca 89 44 24 18 89 4c 24 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

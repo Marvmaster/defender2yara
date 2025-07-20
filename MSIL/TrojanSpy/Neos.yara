@@ -16,6 +16,7 @@ rule TrojanSpy_MSIL_Neos_A_2147653906_0
         $x_1_2 = "Victim Computer Name:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

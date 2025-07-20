@@ -22,6 +22,7 @@ rule Backdoor_MacOS_Mokes_2147741433_0
         $x_1_8 = "jikenick12and67.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (7 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Backdoor_MacOS_Mokes_A_2147741434_0
         $x_1_9 = "/keys/bot" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Backdoor_MacOS_Mokes_B_2147756467_0
         $x_1_4 = "/ccXXXXXX.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (3 of ($x*))
 }
 

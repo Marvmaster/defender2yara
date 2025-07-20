@@ -22,6 +22,7 @@ rule TrojanSpy_MSIL_Xmatlog_A_2147688966_0
         $x_1_8 = "regengellememetodu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

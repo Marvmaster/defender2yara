@@ -17,6 +17,7 @@ rule Ransom_MSIL_JigsawCrypt_PA_2147809583_0
         $x_1_2 = "jigsaw-ransomware" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

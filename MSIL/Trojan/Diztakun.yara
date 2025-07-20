@@ -19,6 +19,7 @@ rule Trojan_MSIL_Diztakun_A_2147712472_0
         $x_1_4 = {06 02 08 6f ?? ?? ?? ?? 28 ?? ?? ?? ?? 1b 58 28 ?? ?? ?? ?? 28 ?? ?? ?? ?? 28 ?? ?? ?? ?? 0a 08 17 58 0c 08 09 31 d9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_Diztakun_AZ_2147840099_0
         $x_2_1 = {07 08 9a 0d 09 75 23 00 00 01 13 04 11 04 2d 36 09 75 39 00 00 01 2c 0a 09 a5 39 00 00 01 13 05 2b 58 09 75 3d 00 00 01 2c 0a 09 a5 3d 00 00 01 13 06 2b 57 09 75 3e 00 00 01 2c 75 09 a5 3e 00 00 01 13 07 2b 5c 06 11 04 06}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_MSIL_Diztakun_ARA_2147847411_0
         $x_2_6 = "C:\\ProgramData\\mtaku\\weblist.fatih" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_MSIL_Diztakun_ADT_2147848816_0
         $x_1_4 = "Easy-ToolKit.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule Trojan_MSIL_Diztakun_CCHT_2147903949_0
         $x_1_10 = "DisableScriptScanning" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule Trojan_MSIL_Diztakun_SG_2147912187_0
         $x_1_3 = "excludedownload.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +175,7 @@ rule Trojan_MSIL_Diztakun_NS_2147927268_0
         $x_1_6 = "jsmhToolChest.5.0B29.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -192,6 +199,7 @@ rule Trojan_MSIL_Diztakun_ND_2147933525_0
         $x_1_3 = "OnlineExam.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

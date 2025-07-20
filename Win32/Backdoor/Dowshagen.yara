@@ -19,6 +19,7 @@ rule Backdoor_Win32_Dowshagen_A_2147647392_0
         $x_10_5 = "Shadow Batch Virus Generator" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

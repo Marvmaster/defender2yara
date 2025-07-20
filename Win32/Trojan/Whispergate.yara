@@ -17,6 +17,7 @@ rule Trojan_Win32_Whispergate_J_2147810462_0
         $x_10_2 = {c7 04 24 64 50 40 00 e8 b6 25 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Whispergate_RPY_2147844736_0
         $x_1_7 = "-WindowStyle Hidden" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Whispergate_RPX_2147904759_0
         $x_1_1 = {89 c1 89 d8 ba 00 00 00 00 f7 f1 8b 45 0c 01 d0 0f b6 00 32 45 e7 88 06 83 45 f4 01 8b 45 08 89 04 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

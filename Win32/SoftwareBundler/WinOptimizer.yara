@@ -22,6 +22,7 @@ rule SoftwareBundler_Win32_WinOptimizer_206677_0
         $x_1_8 = {45 77 69 6e 68 65 6c 70 65 72 ?? ?? ?? 56 63 6c 2e 46 69 6c 65 43 74 72 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule SoftwareBundler_Win32_WinOptimizer_206677_1
         $x_1_10 = {5c 00 73 00 79 00 73 00 74 00 65 00 6d 00 5f 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -83,6 +85,7 @@ rule SoftwareBundler_Win32_WinOptimizer_206677_2
         $x_1_13 = {6e 00 65 00 77 00 76 00 65 00 72 00 5f 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 5f 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -115,6 +118,7 @@ rule SoftwareBundler_Win32_WinOptimizer_206677_3
         $x_1_13 = {6e 00 65 00 77 00 76 00 65 00 72 00 5f 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 5f 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -148,6 +152,7 @@ rule SoftwareBundler_Win32_WinOptimizer_206677_4
         $x_1_14 = {83 7b 38 00 75 0a 83 7b 3c 00 75 04 33 c9 eb 02 b1 01 ba ?? ?? ?? ?? 8b c6 8b 18 ff 53 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Thamcower_A_2147638636_0
         $x_1_5 = {70 69 6f 6e 65 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_Thamcower_B_2147638809_0
         $x_1_4 = {63 68 75 70 61 61 6e 6d 61 72 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanDownloader_Win32_Thamcower_C_2147638810_0
         $x_1_3 = {63 68 75 70 61 61 6e 6d 61 72 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

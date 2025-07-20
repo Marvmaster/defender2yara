@@ -17,6 +17,7 @@ rule Trojan_Win64_ShellCodeExec_DA_2147923763_0
         $x_1_2 = {48 ff c6 48 89 7c 24 38 48 89 7c 24 30 c7 44 24 28 05 00 00 00 48 8d 45 0f 48 89 44 24 20 45 8b cc 4c 8d 45 93 33 d2 8b 4d b7 e8 73 2e 00 00 44 8b f0 85 c0 0f 84 1b 01 00 00 48 89 7c 24 20 4c 8d 4d 97 44 8b c0 48 8d 55 0f 4c 8b 65 e7 49 8b cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_ShellCodeExec_DB_2147923764_0
         $x_1_2 = {83 ec 60 41 83 ca ff 45 33 c0 48 8b f1 44 38 02 74 19 41 83 f8 40 73 13 41 8a 04 10 42 88 44 04 20 41 ff c0 41 80 3c 10 00 75 e7 41 8d 40 fc 42 c6 44 04 20 00 80 7c 04 20 2e 74 2a 42 c6 44 04 20 2e 41 ff c0 42 c6 44 04 20 64 41 ff c0 42 c6 44 04 20 6c 41 ff c0 41 8d 40 01 42 c6 44 04 20 6c c6 44 04 20 00 65 48 8b 04 25 30 00 00 00 48 8b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

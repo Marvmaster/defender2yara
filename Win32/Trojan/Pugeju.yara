@@ -24,6 +24,7 @@ rule Trojan_Win32_Pugeju_A_2147600456_0
         $x_1_10 = {74 4d 68 59 10 40 00 68 ?? ?? 40 00 68 ?? ?? 40 00 68 ?? ?? 40 00 68 ?? ?? 40 00 68 ?? ?? 40 00 68 ?? ?? 40 00 e9 ?? ?? 00 00 68 7c 10 40 00 07 00 83 3d ?? ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Trojan_Win32_Pugeju_C_2147605460_0
         $x_1_7 = {c3 50 51 53 52 9c 66 8c c8 66 83 f8 1b 75 3b 33 c0 0f a2 81}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))

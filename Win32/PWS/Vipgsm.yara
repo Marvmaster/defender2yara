@@ -32,6 +32,7 @@ rule PWS_Win32_Vipgsm_V_2147600064_0
         $x_1_18 = "TcpCheckInit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

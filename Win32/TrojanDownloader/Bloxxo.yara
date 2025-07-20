@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Bloxxo_A_2147627321_0
         $x_1_4 = "blomc202.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

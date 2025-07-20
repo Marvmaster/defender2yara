@@ -21,6 +21,7 @@ rule Backdoor_Win32_Nioupale_A_2147689430_0
         $x_1_7 = {74 65 78 74 3d 49 44 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

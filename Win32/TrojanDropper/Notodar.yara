@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Notodar_A_2147690097_0
         $x_1_4 = {68 00 00 00 08 89 45 f0 6a 40 8d 45 f0 50 8d 45 d8 50 68 1f 00 0f 00 8d 45 f8 50 c7 45 d8 18 00 00 00 89 7d dc c7 45 e4 02 00 00 00 89 7d e0 89 7d e8 89 7d ec 89 7d f4 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

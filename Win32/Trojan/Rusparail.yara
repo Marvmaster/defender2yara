@@ -19,6 +19,7 @@ rule Trojan_Win32_Rusparail_A_2147637258_0
         $x_3_5 = {49 45 58 50 4c 4f 50 45 2e 45 58 45 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             ((3 of ($x_3_*))) or

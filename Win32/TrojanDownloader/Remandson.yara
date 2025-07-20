@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_Remandson_A_2147649803_0
         $x_1_10 = {5b 43 4f 55 4e 54 5d 00 69 65 78 70 6c 6f 72 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

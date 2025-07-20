@@ -26,6 +26,7 @@ rule Backdoor_MSIL_Geratid_A_2147655352_0
         $x_1_11 = "SetRATID" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_200_*) and 3 of ($x_4_*) and 2 of ($x_1_*))) or
             ((2 of ($x_200_*) and 4 of ($x_4_*))) or
@@ -57,6 +58,7 @@ rule Backdoor_MSIL_Geratid_A_2147655353_0
         $x_2_7 = "(New String(){\"AdobeARM.exe\"})" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 1 of ($x_2_*))) or
             (all of ($x*))

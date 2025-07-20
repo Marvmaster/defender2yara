@@ -17,6 +17,7 @@ rule Trojan_MSIL_NetSupportRat_ANR_2147941428_0
         $x_5_2 = "185.149.146.73" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

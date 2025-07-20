@@ -18,6 +18,7 @@ rule Trojan_Win32_Winusp_A_2147661743_0
         $x_1_4 = "?i=%s&m=u&f=0&d=%d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Trojan_Win64_BitGoLoader_A_2147912274_0
         $x_1_7 = "h1:UQHMgLO+TxOElx5B5HZ4hJQsoJ/PvUvKRhJHDQXO8P8=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

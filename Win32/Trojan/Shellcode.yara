@@ -16,6 +16,7 @@ rule Trojan_Win32_Shellcode_GPA_2147902460_0
         $x_4_1 = {8d 74 26 00 89 c1 83 e1 1f 0f b6 0c 0c 30 0c 02 83 c0 01 39 c3 75 ed}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Shellcode_EARU_2147934425_0
         $x_5_1 = {8b d6 c1 ea 05 89 55 fc 8b 45 e4 01 45 fc 8b 45 f4 c1 e6 04 03 75 dc 8d 0c 03 33 f1}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win32_Shellcode_EART_2147934426_0
         $x_5_1 = {8b 55 fc 33 d6 2b fa 81 c3 ?? ?? ?? ?? 83 6d ec 01 89 7d f0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

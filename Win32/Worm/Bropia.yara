@@ -22,6 +22,7 @@ rule Worm_Win32_Bropia_A_2147583052_0
         $x_3_7 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 66 00 6c 00 61 00 67 00 72 00 61 00 73 00 62 00 62 00 62 00 37 00 2e 00 [0-64] 2f 00 42 00 42 00 42 00 37 00 2e 00 68 00 74 00 6d 00 6c 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Worm_Win32_Bropia_B_2147583255_0
         $x_1_10 = "Mr.X - Msn Soldier" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -84,6 +86,7 @@ rule Worm_Win32_Bropia_C_2147583256_0
         $x_1_9 = "explorer http://memberservices.passport.net/memberservice.srf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_5_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 5 of ($x_5_*))) or
@@ -115,6 +118,7 @@ rule Worm_Win32_Bropia_D_2147583257_0
         $x_1_7 = "wanna see me in summer pool at our house http://strategosvideo4.com/1547.avi.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

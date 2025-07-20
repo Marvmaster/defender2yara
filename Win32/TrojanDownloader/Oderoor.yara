@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Oderoor_A_2147611487_0
         $x_3_6 = {83 c0 0f eb 01 40 80 38 20 74 fa 8a 08 89 5c 24 ?? 3a cb 74 ?? 8b f0 8a c1 2c ?? 3c ?? 77}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_3_*))) or

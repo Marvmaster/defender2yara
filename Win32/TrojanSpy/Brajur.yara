@@ -33,6 +33,7 @@ rule TrojanSpy_Win32_Brajur_A_2147605493_0
         $x_1_19 = "</senha>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 12 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or

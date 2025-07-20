@@ -29,6 +29,7 @@ rule PWS_Win32_Sagic_2147582341_0
         $x_1_13 = "Firewall" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((12 of ($x_1_*))) or
             ((1 of ($x_2_*) and 10 of ($x_1_*))) or

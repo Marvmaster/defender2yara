@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Notodar_A_2147689227_0
         $x_1_6 = {8b f0 85 f6 74 12 56 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 2b f7 59 03 c6 ff d0 5f 33 c0 5e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

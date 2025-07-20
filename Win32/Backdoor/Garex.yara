@@ -21,6 +21,7 @@ rule Backdoor_Win32_Garex_A_2147693309_0
         $x_2_6 = "{AC634028-9BF2-4a68-8C93-F515DA893779}" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_2_*))) or
             ((2 of ($x_4_*) and 1 of ($x_2_*))) or

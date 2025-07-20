@@ -20,6 +20,7 @@ rule Trojan_MSIL_Growtopia_ATR_2147779930_0
         $x_4_5 = "Discord" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*))) or
             ((1 of ($x_5_*) and 2 of ($x_4_*))) or
@@ -51,6 +52,7 @@ rule Trojan_MSIL_Growtopia_LF_2147783782_0
         $x_1_5 = "Save.dat not found" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_MSIL_Growtopia_RJ_2147838421_0
         $x_1_2 = "Growtopia" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_MSIL_Growtopia_PSUJ_2147852525_0
         $x_2_1 = {72 01 00 00 70 28 ?? 00 00 0a 26 72 15 00 00 70 73 0f 00 00 0a 0a 06 72 33 00 00 70 6f ?? 00 00 0a 00 06 72 4a 0a 00 70 6f ?? 00 00 0a 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Trojan_MSIL_Growtopia_PAT_2147888530_0
         $x_1_2 = "discord.com/api/webhooks/1007285810468507658/g4q5Mp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule Trojan_MSIL_Growtopia_ADF_2147896065_0
         $x_3_7 = "discordapp" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*) and 1 of ($x_3_*))) or
             ((1 of ($x_5_*) and 2 of ($x_4_*) and 1 of ($x_3_*))) or
@@ -174,6 +180,7 @@ rule Trojan_MSIL_Growtopia_PTCE_2147896859_0
         $x_2_1 = {72 19 00 00 70 a2 25 19 08 6f 02 00 00 06 a2 25 1a 72 31 00 00 70 a2 28 ?? 00 00 0a 6f 1e 00 00 0a 26}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -199,6 +206,7 @@ rule Trojan_MSIL_Growtopia_PAAB_2147899474_0
         $x_1_5 = "C:\\WINDOWS\\system32\\drivers\\VBoxMouse.sys" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +228,7 @@ rule Trojan_MSIL_Growtopia_ARA_2147936698_0
         $x_2_1 = {07 08 06 08 91 72 ?? ?? ?? 70 08 72 ?? ?? ?? 70 6f ?? ?? ?? 0a 5d 6f ?? ?? ?? 0a 61 d2 9c 00 08 17 58 0c 08 06 8e 69 fe 04 13 06 11 06 2d d0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

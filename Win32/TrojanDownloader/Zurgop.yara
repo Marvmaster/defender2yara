@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Zurgop_C_2147731791_0
         $x_1_3 = {69 72 73 2e c7 81 ?? ?? ?? ?? 69 72 77 2e c7 81 ?? ?? ?? ?? 31 61 66 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_Zurgop_YT_2147906770_0
         $x_1_6 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

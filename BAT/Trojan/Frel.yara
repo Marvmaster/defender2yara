@@ -20,6 +20,7 @@ rule Trojan_BAT_Frel_A_2147650171_0
         $x_1_6 = "echo Code PIN correct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Worm_MSIL_Mattim_A_2147695526_0
         $x_1_4 = "/Config.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

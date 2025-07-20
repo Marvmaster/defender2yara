@@ -24,6 +24,7 @@ rule Backdoor_MSIL_Zutwoxy_A_2147654736_0
         $x_1_10 = "BOTKILLER" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

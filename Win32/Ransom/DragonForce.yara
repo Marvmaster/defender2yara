@@ -21,6 +21,7 @@ rule Ransom_Win32_DragonForce_SB_2147942133_0
         $x_1_6 = "Nul & Del /f" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

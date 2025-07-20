@@ -23,6 +23,7 @@ rule TrojanSpy_Win32_Iedown_A_2147599348_0
         $x_1_8 = "http://203.223.159.229/~user1/errors/db3.php?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

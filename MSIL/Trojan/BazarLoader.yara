@@ -19,6 +19,7 @@ rule Trojan_MSIL_BazarLoader_AC_2147798146_0
         $x_3_4 = "System.Security.Cryptography.AesCryptoServiceProvider" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_MSIL_BazarLoader_RPF_2147811602_0
         $x_1_7 = "CreateInstance" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

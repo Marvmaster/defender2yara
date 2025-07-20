@@ -40,6 +40,7 @@ rule HackTool_Win32_ProcTerminator_A_2147905927_0
         $x_1_26 = "filwfp.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (25 of ($x*))
 }
 
@@ -62,6 +63,7 @@ rule HackTool_Win32_ProcTerminator_B_2147906402_0
         $x_1_3 = {5b 2d 5d 20 45 72 72 6f 72 21 20 46 61 69 6c 65 64 20 74 6f 20 77 72 69 74 65 20 64 72 69 ?? 65 72 20 62 79 74 65 73 3a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

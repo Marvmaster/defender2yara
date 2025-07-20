@@ -21,6 +21,7 @@ rule Backdoor_Win32_ProxyBot_C_2147642413_0
         $x_2_7 = "ARE_YOU_ALIVE" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or
             ((1 of ($x_5_*) and 1 of ($x_4_*))) or
@@ -53,6 +54,7 @@ rule Backdoor_Win32_ProxyBot_D_2147649704_0
         $x_1_8 = "proxyChecker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -84,6 +86,7 @@ rule Backdoor_Win32_ProxyBot_D_2147649704_1
         $x_1_9 = ":555/sorttable.js></script>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -113,6 +116,7 @@ rule Backdoor_Win32_ProxyBot_E_2147653879_0
         $x_1_10 = {48 45 4c 4f [0-5] 4d 41 49 4c [0-5] 46 52 4f 4d [0-5] 52 43 50 54 [0-5] 54 4f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

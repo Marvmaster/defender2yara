@@ -22,6 +22,7 @@ rule TrojanDropper_Win32_Conhook_A_2147800914_0
         $x_2_8 = {0f af c8 0f af 4d f0 0f af 4d f0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_2_*))) or
             (all of ($x*))

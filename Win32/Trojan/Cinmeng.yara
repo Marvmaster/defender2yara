@@ -18,6 +18,7 @@ rule Trojan_Win32_Cinmeng_B_2147607470_0
         $x_1_4 = {38 38 41 46 2d 31 33 44 35 2d ?? ?? ?? ?? 2d ?? ?? ?? ?? 2d 39 46 42 38 38 36 39 38 43 46 43 31 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Cinmeng_C_2147622026_0
         $x_1_6 = {68 2c 5a d0 00 8d 4d d0 e8 f6 a2 ff ff 3b f3 74 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Cinmeng_17576_0
         $x_2_1 = {5c 00 44 00 6f 00 73 00 44 00 65 00 76 00 69 00 63 00 65 00 73 00 5c 00 61 00 63 00 70 00 69 00 64 00 69 00 73 00 6b 00 00 00 00 00 49 00 6d 00 61 00 67 00 65 00 50 00 61 00 74 00 68 00 00 00 ?? ?? 01 00 ?? ?? 01 00 ?? ?? 01 00 ?? ?? 01 00 5c 00 77 00 69 00 6e 00 6c 00 69 00 62 00 20 00 2e 00 64 00 6c 00 6c 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_Cinmeng_17576_1
         $x_1_6 = "SOFTWARE\\Microsoft\\IDSCNP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Win32_Cinmeng_17576_2
         $x_2_2 = "\\winlib .dll" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule Trojan_Win32_Cinmeng_17576_3
         $x_10_4 = {5f 5e 5b c9 c2 08 00 [0-1] 5c 00 42 00 61 00 73 00 65 00 4e 00 61 00 6d 00 65 00 64 00 4f 00 62 00 6a 00 65 00 63 00 74 00 73 00 5c 00 55 00 49 00 44 00 5f 00 31 00 33 00 32 00 39 00 31 00 34 00 37 00 36 00 30 00 32 00 5f 00 4d 00 49 00 45 00 45 00 76 00 65 00 6e 00 74 00 00 00 55 8b ec 83 ec 0c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Trojan_Win32_Cinmeng_17576_4
         $x_1_6 = "IEHelper1Setup Version 1.0" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -193,6 +200,7 @@ rule Trojan_Win32_Cinmeng_17576_5
         $x_5_12 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Browser Helper Objects\\{16B770A0-0E87-4278-B748-2460D64A8386}" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 4 of ($x_2_*))) or
             ((2 of ($x_5_*) and 3 of ($x_2_*))) or

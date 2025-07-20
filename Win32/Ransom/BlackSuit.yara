@@ -20,6 +20,7 @@ rule Ransom_Win32_BlackSuit_AB_2147847897_0
         $x_1_5 = "encryptor\\Release\\encryptor.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_BlackSuit_YY_2147895349_0
         $x_1_1 = {33 c0 89 45 98 8b 45 ec 8b 55 d4 01 02 8b 45 c4 03 45 90 03 45 ec 03 45 98 89 45 a4 [0-16] 8b 5d a4 2b d8 [0-16] 2b d8 [0-16] 2b d8 8b 45 d4 31 18 83 45 ec 04 83 45 d4 04 8b 45 ec 3b 45 d0 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Ransom_Win32_BlackSuit_AZ_2147900072_0
         $x_10_3 = "readme.blacksuit.txt" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -91,6 +94,7 @@ rule Ransom_Win32_BlackSuit_RHA_2147905840_0
         $x_2_4 = {b8 01 00 00 00 c2 0c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_WinNT_Killfiles_R_2147605558_0
         $x_1_3 = "\\Device\\HarddiskVolume1\\Arquivos de Programas\\GbPlugin\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_WinNT_Killfiles_EU_2147630185_0
         $x_1_11 = "aswmon.sys" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_1_*))) or
             (all of ($x*))

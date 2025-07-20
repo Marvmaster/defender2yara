@@ -19,6 +19,7 @@ rule Ransom_Win32_Amnesia_SK_2147759793_0
         $x_5_4 = "HOW TO DECRYPT FILES.TXT" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Ransom_Win32_Amnesia_MK_2147759810_0
         $n_100_8 = "vmss2core.exe" wide //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_10_*) and 2 of ($x_5_*) and 2 of ($x_2_*))) or
@@ -72,6 +74,7 @@ rule Ransom_Win32_Amnesia_MKV_2147853224_0
         $x_1_1 = {40 89 45 e8 0f b6 84 9d e4 fb ff ff 8b 55 e8 8b 94 95 e4 fb ff ff 89 94 9d e4 fb ff ff 0f b6 c0 8b 55 e8 89 84 95 e4 fb ff ff 8b 84 9d e4 fb ff ff 8b 55 e8 03 84 95 e4 fb ff ff 25 ?? ?? ?? ?? 79 ?? 48 0d 00 ff ff ff 40 0f b6 84 85 e4 fb ff ff 8b 55 f0 30 04 32 46 ff 4d e4 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

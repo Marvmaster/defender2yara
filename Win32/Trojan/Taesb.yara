@@ -18,6 +18,7 @@ rule Trojan_Win32_Taesb_B_2147617143_0
         $x_1_3 = {5a 68 10 de 02 11 68 14 de 02 11 52 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_Win32_Taesb_C_2147617273_0
         $x_1_3 = {5a 68 10 de 02 11 68 14 de 02 11 52 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

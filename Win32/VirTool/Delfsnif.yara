@@ -20,6 +20,7 @@ rule VirTool_Win32_Delfsnif_2147597477_0
         $x_4_6 = "VirtualAllocEx" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_4_*) and 3 of ($x_2_*))) or
             ((1 of ($x_5_*) and 2 of ($x_4_*) and 1 of ($x_2_*))) or

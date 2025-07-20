@@ -16,6 +16,7 @@ rule Trojan_Win32_BrobanLaw_A_2147692532_0
         $x_1_2 = {b8 01 02 00 00 e8 b0 94 e8 ff 05 ce 77 00 00 50 e8 f5 1c e9 ff e8 a8 64 ff ff 33 c0 5a 59 59 64 89 10 68 55 b2 57 00 c3 e9 4d ac e8 ff eb f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_BrobanLaw_A_2147692532_1
         $x_1_3 = {ba c4 06 00 00 e8 ?? ?? ?? ?? b8 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? ba 3c 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Roopy_LK_2147847070_0
         $x_1_1 = {31 31 4f 81 c1 04 00 00 00 39 c1 75 ee 57}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

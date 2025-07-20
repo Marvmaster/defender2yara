@@ -20,6 +20,7 @@ rule VirTool_Win32_DllInjector_C_2147759306_0
         $x_1_6 = {3c 33 c9 41 b8 00 30 00 00 ?? 03 ?? 44 8d 49 40 [0-16] ff d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

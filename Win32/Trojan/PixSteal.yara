@@ -20,6 +20,7 @@ rule Trojan_Win32_PixSteal_A_2147667405_0
         $x_1_6 = {77 61 73 69 74 6e 65 77 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*) and 2 of ($x_2_*))) or

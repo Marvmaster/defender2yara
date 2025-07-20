@@ -19,6 +19,7 @@ rule Trojan_Win32_Wapomi_A_2147899202_0
         $x_2_4 = {c7 45 94 57 69 6e 45 c7 45 98 78 65 63}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

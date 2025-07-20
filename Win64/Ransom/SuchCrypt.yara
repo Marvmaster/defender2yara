@@ -22,6 +22,7 @@ rule Ransom_Win64_SuchCrypt_PA_2147756926_0
         $x_1_7 = "such-crypt/main.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

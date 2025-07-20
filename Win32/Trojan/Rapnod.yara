@@ -21,6 +21,7 @@ rule Trojan_Win32_Rapnod_A_2147652018_0
         $x_1_7 = "C:\\Windows\\system32\\drivers\\etc\\hosts" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_MacOS_Macma_A_2147798722_0
         $x_1_3 = "Mutex::~Mutex() pthread_mutex_destroy error,code=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_MacOS_Macma_A_2147799120_0
         $x_1_6 = "CDDSMacFileListReply" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -69,6 +71,7 @@ rule Backdoor_MacOS_Macma_E_2147930748_0
         $x_1_2 = {31 c0 89 c7 b8 01 00 00 00 f2 0f 10 45 d0 f2 0f 11 45 e8 f2 0f 10 45 c8 f2 0f 11 45 e0 48 c7 45 c0 04 00 00 00 48 c7 45 b8 08 00 00 00 0f 28 05 c2 2d 00 00 f3 0f 7e 4d c0 66 0f 62 c8 66 0f 28 05 c1 2d 00 00 66 0f 5c c8 66 0f 7c c9 f2 0f 10 45 e8 f2 0f 59 c8 f2 0f 10 05 b8 2d 00 00 0f 28 d1 f2 0f 5c d0 f2 48 0f 2c ca}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

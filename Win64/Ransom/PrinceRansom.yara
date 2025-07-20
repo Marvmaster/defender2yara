@@ -20,6 +20,7 @@ rule Ransom_Win64_PrinceRansom_YAA_2147918525_0
         $x_1_5 = "not modify or rename encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win64_PrinceRansom_MX_2147935759_0
         $x_1_4 = "setWallpaper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

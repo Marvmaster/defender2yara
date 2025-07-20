@@ -15,6 +15,7 @@ rule Backdoor_MacOS_GetShell_A_2147658605_0
         $x_2_1 = {b8 61 00 00 02 6a 02 5f 6a 01 5e 48 31 d2 0f 05 49 89 c4 48 89 c7 b8 62 00 00 02 48 31 f6 56 48 be ?? ?? ?? ?? ?? ?? ?? ?? 56 48 89 e6 6a 10 5a 0f 05 4c 89 e7 b8 5a 00 00 02 48 31 f6 0f 05 b8 5a 00 00 02 48 ff c6 0f 05 48 31 c0 b8 3b 00 00 02 e8 08 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_MacOS_GetShell_A_2147658605_1
         $x_1_8 = {66 b8 02 10 50 31 c0 b0 07 50 56 52 52 b0 c5 cd 80 72 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (2 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Backdoor_MacOS_GetShell_B_2147750812_0
         $x_1_3 = "_shellcode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

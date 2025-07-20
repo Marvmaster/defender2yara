@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Stration_SQ_2147607963_0
         $x_1_6 = {72 78 2d 66 72 6f 6d 2d 77 61 72 65 68 6f 75 73 65 33 2e 63 6f 6d 2f [0-10] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -18,6 +18,7 @@ rule Trojan_Win32_Razy_V_2147743607_0
         $x_1_3 = {8d 41 03 32 c2 30 81 ?? ?? ?? ?? 41 83 f9 ?? 7c ef}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Razy_S_2147744055_0
         $x_1_4 = "http://xzsite.chujz.com/soft/ad.html" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_Win32_Razy_T_2147744068_0
         $x_1_11 = "wireshark" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Trojan_Win32_Razy_MR_2147760725_0
         $x_1_2 = {8b 45 08 03 30 8b 4d 08 89 31 68 ?? ?? ?? ?? 6a 00 ff 15 ?? ?? ?? ?? 05 ?? ?? ?? ?? 8b 55 08 8b 0a 2b c8 8b 55 08 89 0a 5e 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Trojan_Win32_Razy_G_2147761913_0
         $x_10_1 = {21 c0 31 1a 42 81 c0 ?? ?? ?? ?? 29 c8 39 fa 75 df c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_Win32_Razy_SIBB_2147797099_0
         $x_1_2 = {8b 44 24 28 39 04 24 73 ?? 8b 04 24 48 89 44 24 ?? 33 d2 8b 04 24 b9 ?? ?? ?? ?? f7 f1 8b c2 8b c0 48 8b 4c 24 30 0f be 04 01 48 8b 4c 24 20 48 8b 54 24 01 0f b6 0c 11 33 c8 8b c1 8b 0c 24 48 8b 54 24 20 88 04 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Trojan_Win32_Razy_CC_2147811421_0
         $x_2_1 = {39 db 74 01 ea 31 0e 29 f8 81 c6 04 00 00 00 29 c0 81 e8 92 2f 63 8b 39 de 75 e5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +188,7 @@ rule Trojan_Win32_Razy_CD_2147811422_0
         $x_2_2 = {74 01 ea 31 01 81 c1 04 00 00 00 81 c7 [0-4] bb [0-4] 39 f1 75 e4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -203,6 +211,7 @@ rule Trojan_Win32_Razy_CG_2147812748_0
         $x_2_2 = {31 1a 83 ec 04 c7 04 24 [0-4] 5f 29 c1 81 c2 04 00 00 00 39 f2 75 e2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -224,6 +233,7 @@ rule Trojan_Win32_Razy_CH_2147812749_0
         $x_2_1 = {01 ea 31 13 81 c7 [0-4] 81 c3 04 00 00 00 4e 39 c3 75 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -246,6 +256,7 @@ rule Trojan_Win32_Razy_CJ_2147813106_0
         $x_2_2 = {01 ea 31 1e 09 c9 81 ea [0-4] 81 c6 04 00 00 00 21 d2 39 fe 75 e5}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -268,6 +279,7 @@ rule Trojan_Win32_Razy_CK_2147813294_0
         $x_2_2 = {42 09 df 4b 81 eb 19 ec 0b 91 81 fa cf 50 00 01 75 c1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -289,6 +301,7 @@ rule Trojan_Win32_Razy_CM_2147813503_0
         $x_10_1 = {01 f7 31 01 09 de 81 eb ?? ?? ?? ?? 81 c1 ?? ?? ?? ?? 81 ef ?? ?? ?? ?? 29 db 39 d1 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -311,6 +324,7 @@ rule Trojan_Win32_Razy_CN_2147813504_0
         $x_2_2 = {31 39 83 ec 04 89 14 24 5a 41 39 d9 75 e5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -333,6 +347,7 @@ rule Trojan_Win32_Razy_CQ_2147813953_0
         $x_2_2 = {31 08 01 ff 40 21 df 21 df 39 f0 75 d7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -355,6 +370,7 @@ rule Trojan_Win32_Razy_CR_2147813954_0
         $x_2_2 = {31 16 46 09 df 09 db 39 c6 75 e0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -377,6 +393,7 @@ rule Trojan_Win32_Razy_CL_2147814125_0
         $x_2_2 = {31 1f 81 c7 04 00 00 00 81 c2 [0-4] 29 f1 39 c7 75 e7}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -398,6 +415,7 @@ rule Trojan_Win32_Razy_GZS_2147814242_0
         $x_10_1 = {21 f8 47 bb ?? ?? ?? ?? 81 c0 ?? ?? ?? ?? e8 ?? ?? ?? ?? 21 c7 01 c0 31 1a 48 81 c0 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 81 e8 c6 34 00 c0 09 c0 39 f2 75 d1 29 f8 c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -419,6 +437,7 @@ rule Trojan_Win32_Razy_GN_2147814246_0
         $x_10_1 = {31 39 29 d2 68 c3 b6 f8 44 8b 14 24 83 c4 ?? 81 c1 ?? ?? ?? ?? 81 ea ?? ?? ?? ?? 39 f1 75 cf}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -440,6 +459,7 @@ rule Trojan_Win32_Razy_GX_2147814613_0
         $x_10_1 = {68 d8 85 40 00 5a e8 ?? ?? ?? ?? 81 c7 ?? ?? ?? ?? 81 c7 ?? ?? ?? ?? 31 11 81 c1 ?? ?? ?? ?? b8 ?? ?? ?? ?? 29 c0 39 d9 75 d6}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +481,7 @@ rule Trojan_Win32_Razy_GV_2147814815_0
         $x_10_1 = {42 31 19 41 09 f2 39 c1 75 ec 21 d2 c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -482,6 +503,7 @@ rule Trojan_Win32_Razy_GR_2147814964_0
         $x_10_1 = {5a 01 d8 e8 ?? ?? ?? ?? 48 21 db 31 16 43 68 ?? ?? ?? ?? 8b 1c 24 83 c4 04 81 c6 ?? ?? ?? ?? 81 c0 ?? ?? ?? ?? 39 fe 75 d2}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -503,6 +525,7 @@ rule Trojan_Win32_Razy_CS_2147815029_0
         $x_2_1 = {ea 31 33 b9 [0-4] 81 c3 04 00 00 00 21 c9 81 ea [0-4] 39 c3 75 e2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -525,6 +548,7 @@ rule Trojan_Win32_Razy_CU_2147815112_0
         $x_2_2 = {31 32 01 c0 42 89 c9 39 fa 75 dc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -546,6 +570,7 @@ rule Trojan_Win32_Razy_QQ_2147815162_0
         $x_10_1 = {29 ff 01 ff e8 ?? ?? ?? ?? 31 33 81 e8 ?? ?? ?? ?? 43 81 c7 ?? ?? ?? ?? 09 c7 39 cb 75 dd}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -567,6 +592,7 @@ rule Trojan_Win32_Razy_CV_2147815326_0
         $x_2_1 = {31 19 89 d0 41 81 c2 [0-4] 52 5a 39 f1 75 db}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -588,6 +614,7 @@ rule Trojan_Win32_Razy_K_2147815550_0
         $x_10_1 = {ba e8 b4 52 2e 29 ca 31 38 40 09 c9 39 f0 75 dd}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -609,6 +636,7 @@ rule Trojan_Win32_Razy_CW_2147815680_0
         $x_2_1 = {31 16 81 c6 01 00 00 00 09 ff 29 c9 39 c6 75 e2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -630,6 +658,7 @@ rule Trojan_Win32_Razy_S_2147815758_0
         $x_10_1 = {03 fa 34 eb 5f 81 c3 ?? ?? ?? ?? 81 fb f4 01 00 00 75 05 bb ?? ?? ?? ?? 01 f9 29 ff c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -651,6 +680,7 @@ rule Trojan_Win32_Razy_QP_2147815942_0
         $x_10_1 = {09 f0 31 1f 81 c7 ?? ?? ?? ?? 01 c0 29 f6 39 d7 75 e2 81 ee ?? ?? ?? ?? 01 c6 c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -672,6 +702,7 @@ rule Trojan_Win32_Razy_AD_2147816061_0
         $x_10_1 = {09 c0 bf d8 85 40 00 e8 ?? ?? ?? ?? 31 3b 81 c3 ?? ?? ?? ?? 81 e8 ?? ?? ?? ?? 39 cb 75 e4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -693,6 +724,7 @@ rule Trojan_Win32_Razy_GE_2147816292_0
         $x_10_1 = {bf d8 85 40 00 01 c2 e8 ?? ?? ?? ?? 21 d2 31 3e 46 09 d2 40 39 de 75 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -714,6 +746,7 @@ rule Trojan_Win32_Razy_D_2147816520_0
         $x_10_1 = {29 cf 81 ef ?? ?? ?? ?? 31 10 09 c9 40 4f 81 ef ?? ?? ?? ?? 39 d8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -735,6 +768,7 @@ rule Trojan_Win32_Razy_XB_2147817133_0
         $x_10_1 = {c1 24 15 27 16 39 f6 74 01 ea 31 33 4a 81 c0 ?? ?? ?? ?? 81 c3 ?? ?? ?? ?? 39 fb 75 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -756,6 +790,7 @@ rule Trojan_Win32_Razy_XA_2147817374_0
         $x_5_1 = {31 08 81 ea ?? ?? ?? ?? 09 ff 81 c0 ?? ?? ?? ?? 81 ef ?? ?? ?? ?? 01 d6 39 d8 75 df 83 ec 04 89 34 24 5a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -777,6 +812,7 @@ rule Trojan_Win32_Razy_FX_2147817568_0
         $x_10_1 = {31 19 81 ea ?? ?? ?? ?? 81 e8 01 00 00 00 81 c1 04 00 00 00 29 f6 39 f9 75 e1}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -798,6 +834,7 @@ rule Trojan_Win32_Razy_VN_2147819358_0
         $x_10_1 = {64 95 71 67 68 ?? ?? ?? ?? 58 4f 81 e9 ?? ?? ?? ?? e8 ?? ?? ?? ?? 31 06 81 c6 ?? ?? ?? ?? 89 c9 39 de 75 e0 68 ?? ?? ?? ?? 5f c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -819,6 +856,7 @@ rule Trojan_Win32_Razy_RPY_2147819975_0
         $x_1_1 = {31 06 81 c1 8a 91 ac 6f 81 c6 04 00 00 00 39 d6 75 e9 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -841,6 +879,7 @@ rule Trojan_Win32_Razy_RPY_2147819975_1
         $x_1_2 = {31 02 81 c2 04 00 00 00 21 fb 39 f2 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -862,6 +901,7 @@ rule Trojan_Win32_Razy_UE_2147824986_0
         $x_10_1 = {31 3e 21 c2 29 c2 81 c6 ?? ?? ?? ?? 39 ce ?? ?? 29 d2 c3 09 da}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -883,6 +923,7 @@ rule Trojan_Win32_Razy_UF_2147825152_0
         $x_10_1 = {89 de 81 c3 ?? ?? ?? ?? 31 0a 21 de 29 db 81 c2 ?? ?? ?? ?? 4b 39 c2 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -904,6 +945,7 @@ rule Trojan_Win32_Razy_AZY_2147842896_0
         $x_1_1 = {12 1f 33 99 ?? ?? ?? ?? f8 cf 2b f4 8b 4b 6c 89 ec 06 d3 cd a7 8d 76 f7 03 6a 95 61 5b 18 5b 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -925,6 +967,7 @@ rule Trojan_Win32_Razy_GNP_2147851594_0
         $x_10_1 = {56 5b 81 c7 ?? ?? ?? ?? 31 16 89 f9 01 df 81 c6 04 00 00 00 39 c6}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -950,6 +993,7 @@ rule Trojan_Win32_Razy_DS_2147852320_0
         $x_1_5 = {db 68 c0 b0 67 b7 3b c9 68 af ef 04 e8 a6 50 b0 ee 10 08 16 ee e4 8f ff 3c 08 47 21 f2 95 6a b7 01 7e d6 ec ec 58 ec 68 a4 7f 1d e8 5e 7f 00 01 b6 d8 2c d8 85 0a 20 32 08 fc ed 9e 39 5c 5c 6c fa 44 8b 8d 22 8d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -971,6 +1015,7 @@ rule Trojan_Win32_Razy_AMAB_2147852457_0
         $x_1_1 = {8b 45 f8 83 c0 01 89 45 f8 8b 4d f8 3b 4d 0c 7d ?? 8b 45 f8 99 f7 7d f4 8b 45 f0 8a 0c 10 88 4d ff 8b 55 08 03 55 f8 0f be 02 0f be 4d ff 33 c1 8b 55 08 03 55 f8 88 02 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -992,6 +1037,7 @@ rule Trojan_Win32_Razy_KA_2147890150_0
         $x_10_1 = {8b 0b 01 f6 09 f0 81 e1 ?? ?? ?? ?? 81 e8 ?? ?? ?? ?? 21 d2 31 0f 21 c2 81 c0 ?? ?? ?? ?? 40 47 89 f0 ba ?? ?? ?? ?? 21 d2 81 c3 ?? ?? ?? ?? f7 d6 29 d0 81 ff}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1013,6 +1059,7 @@ rule Trojan_Win32_Razy_NR_2147893668_0
         $x_5_1 = {30 00 00 00 83 ec ?? 75 05 74 03 33 bd ?? ?? ?? ?? 83 c4 04 eb 06 4c 29 c0 eb 05 2a eb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1035,6 +1082,7 @@ rule Trojan_Win32_Razy_NR_2147893668_1
         $x_3_2 = {24 0f c1 e0 ?? 66 8b 07 83 c7 ?? eb e2 8b ae c0 65 0b 00 8d be ?? ?? ?? ?? bb 00 10 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1057,6 +1105,7 @@ rule Trojan_Win32_Razy_NR_2147893668_2
         $x_5_2 = {31 3e f7 d3 89 d9 21 c9 81 c6 ?? ?? ?? ?? 81 c1 01 00 00 00 21 c9 49 39 c6 0f 8c 96 ff ff ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1078,6 +1127,7 @@ rule Trojan_Win32_Razy_SPDR_2147895166_0
         $x_1_1 = {68 d8 85 40 00 5a e8 ?? ?? ?? ?? 29 cf 31 16 81 c6 01 00 00 00 81 ef ba f0 a8 bc 21 c9 39 de 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1100,6 +1150,7 @@ rule Trojan_Win32_Razy_AMBA_2147895215_0
         $x_1_2 = {8b 1b 29 c0 81 e3 ff 00 00 00 42 81 fa f4 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1122,6 +1173,7 @@ rule Trojan_Win32_Razy_AMBA_2147895215_1
         $x_1_2 = {8d 1c 1f 8b 1b 29 c6 81 e3 ff 00 00 00 89 f6 81 c7 01 00 00 00 09 c6 81 c6 ?? ?? ?? ?? 81 ff f4 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1143,6 +1195,7 @@ rule Trojan_Win32_Razy_SPDX_2147895921_0
         $x_1_1 = {b9 e0 ea 40 00 bf d2 d5 63 a9 e8 ?? ?? ?? ?? 29 fb 31 0a 01 df 47 81 c2 01 00 00 00 47 89 fb 39 c2 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1165,6 +1218,7 @@ rule Trojan_Win32_Razy_NRA_2147897179_0
         $x_1_2 = "ibillingsystems" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1187,6 +1241,7 @@ rule Trojan_Win32_Razy_ARA_2147897709_0
         $x_2_2 = "\\WINDOWS\\SYSTEM32\\Cum 4 Sluts-uninstall.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1208,6 +1263,7 @@ rule Trojan_Win32_Razy_SPDE_2147898106_0
         $x_4_1 = {31 13 46 81 c3 04 00 00 00 39 cb 75 ee}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1229,6 +1285,7 @@ rule Trojan_Win32_Razy_GAB_2147898391_0
         $x_10_1 = {08 68 10 60 10 30 28 a8 ?? ?? ?? ?? b0 f8 a0 ?? ?? ?? ?? 40 d0 38 a0 ?? ?? ?? ?? 30 88 ?? ?? ?? ?? e0 ?? 88 d0 88 50 b0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1250,6 +1307,7 @@ rule Trojan_Win32_Razy_CCGM_2147900473_0
         $x_1_1 = {8b 47 28 31 06 83 c6 04 3b 37 0f 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1272,6 +1330,7 @@ rule Trojan_Win32_Razy_GMX_2147901115_0
         $x_10_2 = {21 cb 09 c1 81 c0 ?? ?? ?? ?? 31 16 01 c9 81 c1 ?? ?? ?? ?? 81 c6 ?? ?? ?? ?? 09 c9 bb ?? ?? ?? ?? 40 81 c7 ?? ?? ?? ?? 21 db 29 c3 01 c9 81 fe}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1296,6 +1355,7 @@ rule Trojan_Win32_Razy_EC_2147907536_0
         $x_1_4 = {f1 28 04 00 00 50 b3 02 00 30 04 00 00 f0 3b 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1320,6 +1380,7 @@ rule Trojan_Win32_Razy_NA_2147912532_0
         $x_1_4 = "Elevating privileges to SYSTEM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1343,6 +1404,7 @@ rule Trojan_Win32_Razy_NE_2147925338_0
         $x_1_3 = "is.ooffs.xyz" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1369,6 +1431,7 @@ rule Trojan_Win32_Razy_BSA_2147926366_0
         $x_1_6 = "Trying to kill MEMZ will cause your system to be" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))
@@ -1393,6 +1456,7 @@ rule Trojan_Win32_Razy_PGR_2147937929_0
         $x_5_1 = {83 ec 04 c7 04 24 ?? ?? ?? ?? 59 09 f6 ?? ?? ?? ?? ?? 31 10 81 c0 ?? ?? ?? ?? 46 39 d8 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1414,6 +1478,7 @@ rule Trojan_Win32_Razy_PGR_2147937929_1
         $x_5_1 = {66 bb e0 2c 8d 15 ?? ?? ?? ?? 87 cb c1 db 0a 89 d7 ?? 33 f7 c1 e3 0d 33 d8 81 f2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1435,6 +1500,7 @@ rule Trojan_Win32_Razy_PGR_2147937929_2
         $x_5_1 = {89 4d b4 8a 10 8b 45 e8 89 c1 81 c1 ?? ?? ?? ?? 89 4d e8 8a 75 cb 80 c6 4f 88 75 cb 88 10 8b 45 d8 8b 4d b0 01 c8 89 45 d8 eb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1458,6 +1524,7 @@ rule Trojan_Win32_Razy_ARZ_2147939574_0
         $x_1_3 = {c6 45 98 57 c6 45 99 69 c6 45 9a 6e c6 45 9b 45 c6 45 9c 78 c6 45 9d 65 c6 45 9e 63}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1480,6 +1547,7 @@ rule Trojan_Win32_Razy_PGZ_2147940189_0
         $x_1_2 = {2e 64 61 74 61 00 00 00 00 ?? 09 00 00 ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00 e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1501,6 +1569,7 @@ rule Trojan_Win32_Razy_AYR_2147940861_0
         $x_1_1 = {09 fa 83 ec 04 c7 04 24 ?? ?? ?? ?? 09 d1 81 e9 ?? ?? ?? ?? 21 fe ff d3 81 c7 ?? ?? ?? ?? 42 29 d7 5b 89 ca f7 d6 89 d7 68 ?? ?? ?? ?? 46 09 f2 f7 d2 50 42 29 d1 ff d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1526,6 +1595,7 @@ rule Trojan_Win32_Razy_C_2147945058_0
         $x_1_5 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1547,6 +1617,7 @@ rule Trojan_Win32_Razy_PGRZ_2147946036_0
         $x_5_1 = {25 3f 75 75 3d 75 3f f4 d6 75 3d 1b 75 75 75 5a 1f 6e 24 3f 4a 1f 3d f4 7d 75 3d f4 75 9d 6e 75 80 02 00 00 bd 75 97 bd 3f ac a9 01 91 25 76 86 91 cd 73 a5 a5 2d a4 b6 ea 02 08 18 9b 81}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

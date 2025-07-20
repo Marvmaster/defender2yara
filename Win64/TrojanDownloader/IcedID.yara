@@ -22,6 +22,7 @@ rule TrojanDownloader_Win64_IcedID_ADC_2147782081_0
         $x_3_7 = "DllRegisterServer" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule TrojanDownloader_Win64_IcedID_ADC_2147782081_1
         $x_3_7 = "EnumSystemLocalesW" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule TrojanDownloader_Win64_IcedID_ZZ_2147786592_0
         $x_1_1 = {41 8a 04 33 41 0f b6 d3 44 8d 42 01 83 e2 03 41 83 e0 03 42 8a 4c 85 e0 02 4c 95 e0 32 c1 42 8b 4c 85 e0 41 88 04 1b 83 e1 07 8b 44 95 e0 49 ff c3 d3 c8 ff c0 89 44 95 e0 83 e0 07 8a c8 42 8b 44 85 e0 d3 c8 ff c0 42 89 44 85 e0 48 8b 5d c8 4c 3b 5d d0 73 06 48 8b 75 c0 eb a4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule TrojanDownloader_Win64_IcedID_ZY_2147786594_0
         $x_1_3 = {0f b6 c8 49 ff c0 8b c1 83 e1 0f 48 c1 e8 04 0f be 04 10 66 43 89 04 4b 0f be 04 11 66 43 89 44 4b 02 49 83 c1 02 41 8a 00 84 c0 75 d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule TrojanDownloader_Win64_IcedID_ZX_2147786596_0
         $x_1_1 = {56 48 81 ec b0 00 00 00 31 c0 89 c1 c7 ?? ?? ?? ?? ?? ?? ?? 8b ?? ?? ?? ?? ?? 35 ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? c7 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 8b ?? ?? ?? ?? ?? 89 ?? ?? ?? c7 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 8b ?? ?? ?? ?? ?? 35 ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? c7 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 48 8b ?? ?? ?? ?? ?? 8b ?? ?? ?? ?? ?? 41 89 ?? 48 89 ?? ?? ?? 4c 89 ?? 41 b8 00 30 00 00 41 b9 04 00 00 00 4c 8b ?? ?? ?? 41 ff d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule TrojanDownloader_Win64_IcedID_CA_2147786727_0
         $x_1_2 = {45 09 d3 44 88 5c 24 ?? c7 44 24 ?? ?? ?? ?? ?? 8a 4c 24 ?? 44 0f b6 d1 8a 4c 24 ?? 0f b6 f1 44 31 d6 40 88 74 24 ?? c7 44 24 ?? ?? ?? ?? ?? 8a 4c 24 ?? 80 c1 01 88 4c 24 ?? c7 44 24 ?? ?? ?? ?? ?? 8a 4c 24 ?? 48 8b 44 24 ?? 88 08 c7 44 24 ?? ?? ?? ?? ?? 48 8b 44 24 ?? 48 05 01 00 00 00 48 89 44 24 ?? c7 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule TrojanDownloader_Win64_IcedID_ZW_2147786820_0
         $x_100_2 = {83 e2 03 41 83 e0 03 [0-1] 8a ?? ?? ?? [0-1] 02 ?? ?? ?? [0-1] 32 [0-2] 42 8b 4c ?? ?? 41 88 04 1b 83 e1 07 8b 44 ?? ?? 49 ff c3 d3 c8 ff c0 89 44 ?? ?? 83 e0 07 8a c8 42 8b 44 ?? ?? d3 c8 ff c0 42 89 44 ?? ?? 48 8b [0-3] 4c 3b [0-3] 73}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +182,7 @@ rule TrojanDownloader_Win64_IcedID_ZV_2147789199_0
         $x_100_2 = {8d 81 59 2e 00 00 d1 c8 d1 c8 c1 c8 02 35 1d 15 00 00 c1 c0 02 d1 c0 c3}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +205,7 @@ rule TrojanDownloader_Win64_IcedID_GIM_2147810960_0
         $x_10_2 = {8a 53 01 c0 e2 03 8a 0b 80 e1 07 0a d1 c0 e2 03 8a 43 ff 24 07 0a d0 43 88 14 08 4c 03 c7 48 8d 5b 03 49 81 f8 00 04 00 00 0f 8d 98 00 00 00 4c 8b 0d 57 bb 01 00 eb c8}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +227,7 @@ rule TrojanDownloader_Win64_IcedID_VP_2147819441_0
         $x_10_1 = {41 0f b6 d3 44 8d 42 01 83 e2 ?? 41 83 e0 ?? 42 8a 44 84 40 02 44 94 40 43 32 04 33 42 8b 4c 84 40 41 88 04 1b 83 e1 07 8b 44 94 40 49 ff c3 d3 c8 ff c0 89 44 94 40 83 e0 ?? 8a c8 42 8b 44 84 40 d3 c8 ff c0 42 89 44 84 40 48 8b 5c 24 28 4c 3b 5c 24 30 73 07 4c 8b 74 24 20 eb a3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -242,6 +252,7 @@ rule TrojanDownloader_Win64_IcedID_ZU_2147840525_0
         $x_10_5 = {48 83 ec 28 ba 01 00 00 00 83 c9 ff ff 15 ?? ?? ?? ?? eb f0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

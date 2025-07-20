@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Goldun_BX_2147803334_0
         $x_1_7 = "redirect_fake.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule TrojanSpy_Win32_Goldun_BY_2147803800_0
         $x_1_12 = "gold.php?id=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -83,6 +85,7 @@ rule TrojanSpy_Win32_Goldun_BZ_2147803801_0
         $x_1_6 = {20 3b 20 54 68 65 42 61 74 20 70 61 73 73 77 6f 72 64 73 0d 0a 00 47 45 54}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -107,6 +110,7 @@ rule TrojanSpy_Win32_Goldun_CB_2147803802_0
         $x_1_5 = {63 65 6d 00 65 62 61 6e 6b 69 6e 74 65 72 00 00 63 6c 69 65 6e 74 5f 00 63 70 73 69 6e 74 65 72 6e 65 74 62 61 6e 6b 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -131,6 +135,7 @@ rule TrojanSpy_Win32_Goldun_FB_2147803828_0
         $x_5_5 = "SOFTWARE\\Microsoft\\Internet Account Manager\\Accounts" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -161,6 +166,7 @@ rule TrojanSpy_Win32_Goldun_FC_2147803829_0
         $x_1_8 = "srvswc2.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_5_*))) or
             (all of ($x*))
@@ -191,6 +197,7 @@ rule TrojanSpy_Win32_Goldun_C_2147803844_0
         $x_1_7 = {3b fb 74 3d 53 68 80 00 00 00 6a 02 53 6a 01 68 00 00 00 40 68 f0 11 40 00 ff 15 34 10 40 00 8b f0 83 fe ff 75 04 32 c0 eb 19}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -217,6 +224,7 @@ rule TrojanSpy_Win32_Goldun_FO_2147803978_0
         $x_2_7 = "_pass.txt" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -262,6 +270,7 @@ rule TrojanSpy_Win32_Goldun_2147804056_0
         $x_1_21 = {64 6f 77 6e 6c 6f 61 64 2e 6d 63 61 66 65 65 2e 63 6f 6d 00 64 6f 77 6e 6c 6f 61 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 6 of ($x_1_*))) or
             ((5 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -330,6 +339,7 @@ rule TrojanSpy_Win32_Goldun_B_2147804057_0
         $x_1_8 = "bankofamerica.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -363,6 +373,7 @@ rule TrojanSpy_Win32_Goldun_FM_2147804130_0
         $x_30_8 = "POP3 Password" ascii //weight: 30
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_30_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_30_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -395,6 +406,7 @@ rule TrojanSpy_Win32_Goldun_FM_2147804130_1
         $x_20_8 = "URLDownloadToFileA" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_20_*) and 2 of ($x_5_*))) or

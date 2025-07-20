@@ -24,6 +24,7 @@ rule Trojan_Win32_Glecia_A_2147624771_0
         $x_1_9 = {26 63 5b 5d 3d 26 74 5b 5d 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

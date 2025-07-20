@@ -19,6 +19,7 @@ rule Ransom_MSIL_FafsbCrypt_PA_2147942250_0
         $x_2_4 = "\\Hacker.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

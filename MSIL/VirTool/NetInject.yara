@@ -24,6 +24,7 @@ rule VirTool_MSIL_NetInject_A_2147692861_0
         $x_1_10 = "IsWireshark" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule VirTool_MSIL_NetInject_B_2147694943_0
         $x_1_1 = {68 85 02 a0 60 e8 ?? ?? ff ff 68 84 2a ab 54 50 e8 ?? ?? ff ff ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule VirTool_MSIL_NetInject_B_2147694943_1
         $x_1_3 = "GetDelegateForFunctionPointer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

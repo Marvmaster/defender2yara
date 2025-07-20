@@ -18,6 +18,7 @@ rule Trojan_Win64_Dordpmal_A_2147938582_0
         $x_1_4 = "adasdasasdasasd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

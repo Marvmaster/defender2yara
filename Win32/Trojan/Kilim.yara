@@ -20,6 +20,7 @@ rule Trojan_Win32_Kilim_A_2147681703_0
         $x_1_6 = "&Window Spy" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Kilim_B_2147682103_0
         $x_2_6 = {4b 43 4a 43 48 48 43 58 48 4b 4a 5f 43 2c 20 2d 31 0d 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -72,6 +74,7 @@ rule Trojan_Win32_Kilim_A_2147682199_0
         $x_1_3 = "%direXX%\\%king%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Trojan_Win32_Kilim_C_2147682449_0
         $x_1_4 = "IfInString, A_ScriptDir, FlashTopia" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_Win32_Kilim_B_2147684199_0
         $x_1_4 = "RegExReplace(YandexPref, \"\\\\\\\\Twains" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -152,6 +157,7 @@ rule Trojan_Win32_Kilim_D_2147684666_0
         $x_1_14 = {2b 53 48 00 25 41 5f 41 70 70 44 61 74 61 25 5c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -179,6 +185,7 @@ rule Trojan_Win32_Kilim_E_2147684667_0
         $x_1_8 = {54 77 61 69 6e 73 5f 36 34 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +213,7 @@ rule Trojan_Win32_Kilim_G_2147684897_0
         $x_5_8 = {63 68 72 6f 6d 65 2e 65 78 65 00 [0-15] 62 72 6f 77 73 65 72 2e 65 78 65}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 2 of ($x_5_*))) or
             ((2 of ($x_50_*) and 1 of ($x_10_*))) or
@@ -233,6 +241,7 @@ rule Trojan_Win32_Kilim_G_2147684897_1
         $x_1_3 = "Local Settings\\Application Data\\Google\\Chrome\\User Data\\Default\\Preferences" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +281,7 @@ rule Trojan_Win32_Kilim_G_2147684897_2
         $x_1_20 = {69 64 6b 65 79 00 00 00 6d 61 6e 69 66 65 73 74 78 00 00 00 70 72 65 66 65 72 65 6e 63 65 73 78}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -299,6 +309,7 @@ rule Trojan_Win32_Kilim_H_2147685155_0
         $x_1_8 = "%A_Temp%\\xupdate.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -326,6 +337,7 @@ rule Trojan_Win32_Kilim_I_2147685191_0
         $x_1_4 = "AppData%\\Smart Player Installer.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -352,6 +364,7 @@ rule Trojan_Win32_Kilim_L_2147685219_0
         $x_1_4 = "cryware@outlook.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -376,6 +389,7 @@ rule Trojan_Win32_Kilim_J_2147686345_0
         $x_1_5 = "\\winregist.er" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -404,6 +418,7 @@ rule Trojan_Win32_Kilim_K_2147687174_0
         $x_1_9 = {44 65 63 72 79 70 74 42 79 74 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -433,6 +448,7 @@ rule Trojan_Win32_Kilim_C_2147691364_0
         $x_1_9 = "taskkill /IM opera.exe /F" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -458,6 +474,7 @@ rule Trojan_Win32_Kilim_P_2147691383_0
         $x_1_3 = "taskkill /IM chrome.exe /F" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -482,6 +499,7 @@ rule Trojan_Win32_Kilim_T_2147693068_0
         $x_1_5 = "wget.exe -O \"%A_AppData%\\arsiv.exe\" \"%Php_Link%arsiv_link\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -511,6 +529,7 @@ rule Trojan_Win32_Kilim_D_2147693089_0
         $x_1_6 = "taskkill /IM browser.exe /F" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -541,6 +560,7 @@ rule Trojan_Win32_Kilim_U_2147694448_0
         $x_1_7 = "GetDownload(Php_Link . \"js\", \"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -566,6 +586,7 @@ rule Trojan_Win32_Kilim_V_2147694449_0
         $x_1_6 = {47 65 74 44 6f 77 6e 6c 6f 61 64 28 22 68 74 74 70 3a 2f 2f 77 68 6f 73 2e 61 6d 75 6e 67 2e 75 73 2f 70 69 6e 67 6a 73 2f 3f 6b 3d [0-15] 2c 20 22 70 69 6e 67 6a 73 2e 6a 73 22}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -594,6 +615,7 @@ rule Trojan_Win32_Kilim_W_2147695176_0
         $x_1_6 = {47 65 74 44 6f 77 6e 6c 6f 61 64 28 22 68 74 74 70 3a 2f 2f [0-16] 2f 79 65 6e 69 2e 65 78 65 22 2c 20 22 79 65 6e 69 2e 65 78 65 22 2c 20 31 2c 20 31 29}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -620,6 +642,7 @@ rule Trojan_Win32_Kilim_AB_2147697618_0
         $x_1_7 = "\\Secure Preferences" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -648,6 +671,7 @@ rule Trojan_Win32_Kilim_AB_2147697618_1
         $x_1_9 = {23 31 31 34 00 00 00 00 68 74 74 70 73 3a 2f 2f 77 77 77 2e 67 6f 6f 67 6c 65 2e 63 6f 6d 2f 63 68 72 6f 6d 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -673,6 +697,7 @@ rule Trojan_Win32_Kilim_AC_2147717057_0
         $x_1_5 = {66 65 69 64 6f 77 6e 73 2e 63 6f 6d 2f [0-32] 2e 70 68 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

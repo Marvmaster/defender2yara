@@ -16,6 +16,7 @@ rule Virus_Win32_Virlock_PAGC_2147931022_0
         $x_4_1 = {8a 06 32 c2 90 88 07 42 46 90 47 49 e9}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Virus_Win32_Virlock_PAGD_2147931023_0
         $x_2_2 = {8b f8 8b df ?? b9 c0 03 00 00 e9 ?? ?? ?? ?? ba 30 00 00 00 8a 06 ?? 32 c2 ?? e9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

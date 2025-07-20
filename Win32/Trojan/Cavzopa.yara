@@ -17,6 +17,7 @@ rule Trojan_Win32_Cavzopa_A_2147621050_0
         $x_1_3 = {8b 43 0c 50 33 c0 8a 43 04 0f be 53 06 8d 14 52 8d 14 d5 ?? ?? ?? ?? 8b 04 82 50 e8 ?? ?? ?? ?? 8b 43 08 50 e8 ?? ?? ?? ?? 83 7d fc 00 75 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

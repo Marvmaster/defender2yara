@@ -18,6 +18,7 @@ rule Trojan_Linux_PondRat_A_2147922949_0
         $x_1_3 = {4c 89 ef e8 ed ec ff ff 31 c0 83 3b 00 0f 94 c0 48 81 c4 a0 01 00 00 5b 5d 41 5c 41 5d 41 5e c3 0f 1f 44 00 00 48 81 c4 a0 01 00 00 b8 01 00 00 00 5b 5d 41 5c 41 5d 41 5e c3 0f 1f 00 b9 40 89 84 00 ba 00 89 84 00 be 1d 1e 59 00 48 89 e7 31 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

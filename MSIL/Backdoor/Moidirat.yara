@@ -21,6 +21,7 @@ rule Backdoor_MSIL_Moidirat_A_2147689426_0
         $x_1_7 = {00 57 52 4b 00 41 73 73 65 6d 62 6c 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

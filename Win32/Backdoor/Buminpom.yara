@@ -28,6 +28,7 @@ rule Backdoor_Win32_Buminpom_A_2147640962_0
         $x_1_14 = "//ifRandom" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             (all of ($x*))

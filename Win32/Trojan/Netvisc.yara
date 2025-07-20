@@ -19,6 +19,7 @@ rule Trojan_Win32_Netvisc_A_2147653530_0
         $x_1_5 = {c6 44 24 04 54 c6 44 24 05 6e c6 44 24 06 65 c6 44 24 07 74 c6 44 24 08 73 c6 44 24 09 76 c6 44 24 0a 63 88 44 24 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

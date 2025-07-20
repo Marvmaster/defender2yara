@@ -18,6 +18,7 @@ rule Trojan_MSIL_CeeInject_AC_2147716340_0
         $x_1_3 = {06 d3 08 58 06 d3 08 58 47 07 d3 08 02 28 04 00 00 06 8e 69 5d 58 47 61 d2 52 08 17 58 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_CeeInject_AD_2147719015_0
         $x_1_3 = {65 00 72 00 72 00 6f 00 72 00 [0-96] 2e 00 50 00 6e 00 67 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_MSIL_CeeInject_AE_2147719134_0
         $x_1_3 = {52 65 74 00 43 61 6c 6c 00 43 61 6c 6c 76 69 72 74 [0-16] 2e 50 6e 67}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

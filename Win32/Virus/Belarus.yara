@@ -19,6 +19,7 @@ rule Virus_Win32_Belarus_A_2147721289_0
         $x_1_4 = "C:\\WINDOWS\\system32\\freizer.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

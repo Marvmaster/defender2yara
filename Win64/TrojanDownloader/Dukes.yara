@@ -16,6 +16,7 @@ rule TrojanDownloader_Win64_Dukes_DA_2147842386_0
         $x_1_1 = {49 8b 45 08 48 83 e8 10 48 39 c8 76 ?? 48 89 c8 31 d2 4c 8b 4c 24 50 48 f7 74 24 58 49 8b 45 00 41 8a 14 11 32 54 08 10 89 c8 41 0f af c0 31 c2 88 14 0b 48 ff c1 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

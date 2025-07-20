@@ -16,6 +16,7 @@ rule Trojan_MSIL_Ratx_SM_2147851331_0
         $x_2_1 = {00 11 04 11 07 09 11 07 91 08 11 07 08 8e 69 5d 91 61 d2 9c 00 11 07 17 58 13 07 11 07 09 8e 69 fe 04 13 08 11 08 2d d8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_Ratx_SN_2147851332_0
         $x_2_1 = {07 06 08 06 18 5a 18 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a d2 9c 06 17 58 0a 06 07 8e 69 fe 04 13 05 11 05 2d db}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_MSIL_Ratx_SP_2147921712_0
         $x_1_3 = "RouterConfig.tsv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

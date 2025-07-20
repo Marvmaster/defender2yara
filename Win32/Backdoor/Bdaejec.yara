@@ -21,6 +21,7 @@ rule Backdoor_Win32_Bdaejec_A_2147679593_0
         $x_1_7 = {51 8b 4d f8 d3 4d fc 59 8b 5d 08 8b 4d fc 33 cb f7 d1 03 cb 03 0a 89 08 8b c2 3b 45 f4 72 be}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

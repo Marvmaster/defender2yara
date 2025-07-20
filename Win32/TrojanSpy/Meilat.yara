@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Meilat_A_2147678411_0
         $x_1_5 = {2f 65 6e 76 69 61 6d 61 69 6c 2e 70 68 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule TrojanSpy_Win32_Meilat_B_2147678412_0
         $x_1_15 = {2f 73 65 74 5f 6f 6e 6c 69 6e 65 5f 6c 6f 67 69 6e 2e 70 68 70 3f 6e 61 6d 65 70 63 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

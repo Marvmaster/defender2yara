@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Vareids_A_2147628231_0
         $x_1_3 = {03 f8 0f b7 47 06 40 40 6b c0 05 03 47 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

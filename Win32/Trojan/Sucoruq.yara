@@ -19,6 +19,7 @@ rule Trojan_Win32_Sucoruq_A_2147697017_0
         $x_1_5 = {75 0c c7 83 bc 01 00 00 46 27 00 00 eb 0d 8b 55 fc 8b c3 8b 08 ff 91 80 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or

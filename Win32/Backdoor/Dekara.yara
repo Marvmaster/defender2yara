@@ -26,6 +26,7 @@ rule Backdoor_Win32_Dekara_A_2147649509_0
         $x_1_12 = {2e 68 61 72 64 63 6f 72 65 70 6f 72 6e 2e 63 6f 6d 2f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or

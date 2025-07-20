@@ -24,6 +24,7 @@ rule TrojanSpy_Win32_Batcrakil_A_2147638551_0
         $x_2_10 = {6a 41 ba 41 41 41 41 59 8b c2 bf ?? ?? ?? ?? 6a 41 f3 ab}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

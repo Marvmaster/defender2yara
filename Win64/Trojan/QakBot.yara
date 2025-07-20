@@ -21,6 +21,7 @@ rule Trojan_Win64_QakBot_RPE_2147818245_0
         $x_1_6 = "PluginInit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win32_NetWorm_DSK_2147744497_0
         $x_1_6 = "This place is not enough for us !" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

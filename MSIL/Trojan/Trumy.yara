@@ -18,6 +18,7 @@ rule Trojan_MSIL_Trumy_A_2147685480_0
         $x_1_4 = "eklenti" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Trumy_A_2147685480_1
         $x_1_5 = "\\Google\\Chrome\\User Data\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

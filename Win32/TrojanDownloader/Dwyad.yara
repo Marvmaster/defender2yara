@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Dwyad_A_2147716604_0
         $x_1_4 = {3a 5a 6f 6e 65 2e 49 64 65 6e 74 69 66 69 65 72 00 00 00 00 ff ff ff ff ?? 00 00 00 [0-48] 68 74 74 70 3a 2f 2f [0-48] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Lyinos_A_2147681523_0
         $x_1_2 = {ff 30 8f 86 b0 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

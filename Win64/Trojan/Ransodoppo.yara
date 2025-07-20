@@ -20,6 +20,7 @@ rule Trojan_Win64_Ransodoppo_STA_2147779006_0
         $x_1_6 = {56 69 72 74 75 61 6c 41 6c 6c 6f 63 45 78 00 00 6b 65 72 6e 65 6c 33 32 00 00 00 00 21 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -46,6 +47,7 @@ rule Trojan_Win64_Ransodoppo_LK_2147843796_0
         $x_1_2 = {03 14 24 8b 0c 24 48 8b 44 24 20 89 14 08 8b 14 24 8b 0c 24 81 c1 e9 03 00 00 48 8b 44 24 20 8b 14 10 33 d1 8b 0c 24 48 8b 44 24 20 89 14 08 eb b2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

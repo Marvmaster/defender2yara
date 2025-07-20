@@ -23,6 +23,7 @@ rule Trojan_Win32_Micrass_A_2147692653_0
         $x_1_9 = {6c 00 6f 00 61 00 64 00 2e 00 64 00 61 00 74 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

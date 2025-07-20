@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Tikoog_A_2147726566_0
         $x_1_2 = {99 f7 f9 03 45 ?? 89 45 ?? eb cf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

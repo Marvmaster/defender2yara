@@ -18,6 +18,7 @@ rule VirTool_Win32_Heroinz_A_2147832711_0
         $x_1_3 = "heroinn_util\\src\\packet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

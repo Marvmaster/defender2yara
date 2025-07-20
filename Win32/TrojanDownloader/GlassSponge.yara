@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_GlassSponge_A_2147895700_0
         $x_1_2 = "main.(*PowerShell).uzmRestoring" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

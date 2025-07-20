@@ -17,6 +17,7 @@ rule Trojan_Win32_Foosace_I_2147694135_0
         $x_1_2 = {67 53 68 61 72 65 64 49 6e 66 6f 00 75 00 73 00 65 00 72 00 33 00 32 00 2e 00 64 00 6c 00 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Foosace_J_2147694516_0
         $x_1_4 = {66 33 55 fc 66 d1 ea 0f b7 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Foosace_C_2147694677_0
         $x_1_4 = {49 6e 69 74 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_Foosace_C_2147694677_1
         $x_2_5 = "\\chkdbg.log" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or
             ((1 of ($x_6_*) and 1 of ($x_2_*))) or
@@ -119,6 +123,7 @@ rule Trojan_Win32_Foosace_D_2147694678_0
         $x_1_4 = {2f 63 68 65 63 6b 2f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule Trojan_Win32_Foosace_D_2147694678_1
         $x_2_4 = "\\chkdbg.log" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or
             (all of ($x*))
@@ -170,6 +176,7 @@ rule Trojan_Win32_Foosace_E_2147694679_0
         $x_2_4 = "~xh/ch.cgi" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +205,7 @@ rule Trojan_Win32_Foosace_E_2147694679_1
         $x_1_8 = {8a c3 03 db 03 db 03 db 8b fe 2b fb 89 7d e8 bf 01 00 00 00 2b fb 89 7d ec 02 c0 bf 03 00 00 00 2b fb 02 c0 89 7d 0c 02 c0 bf 02 00 00 00 2b fb 88 45 13 8d 04 0b 89 7d 14 8b 7d 0c 8a 5d 13 02 d9 8b 4d 14 03 c8 03 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -227,6 +235,7 @@ rule Trojan_Win32_Foosace_F_2147694680_0
         $x_1_5 = "Err open key %.8x-%s:%.8x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -252,6 +261,7 @@ rule Trojan_Win32_Foosace_B_2147696869_0
         $x_1_5 = {64 6c 6c 2e 64 6c 6c 00 49 6e 69 74 31 00 53 65 72 76 69 63 65 4d 61 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -280,6 +290,7 @@ rule Trojan_Win32_Foosace_A_2147696870_0
         $x_1_5 = {6e 65 74 75 69 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -303,6 +314,7 @@ rule Trojan_Win32_Foosace_K_2147705792_0
         $x_1_3 = {8b 82 e0 00 00 00 ff d0 83 c4 14 8d 4d ?? 51 8b 15 ?? ?? ?? ?? 8b 42 10 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -351,6 +363,7 @@ rule Trojan_Win32_Foosace_M_2147724939_0
         $x_1_3 = {4d 4e 4f 45 50 00 32 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

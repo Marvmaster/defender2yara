@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Blz_A_2147626104_0
         $x_1_5 = {68 d4 31 40 00 50 ff 15 18 20 40 00 56 56 56 6a 01 68 14 31 40 00 ff 15 20 32 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

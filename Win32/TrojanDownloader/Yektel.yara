@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Yektel_H_116917_0
         $x_1_6 = "Downloading toolbar" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_Yektel_A_124145_0
         $x_1_2 = {66 3d 19 04 74 06 66 3d 22 04 75 ?? a1 ?? ?? ?? ?? 8b 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanDownloader_Win32_Yektel_B_124368_0
         $x_2_3 = {19 04 74 0b 66 81 3d ?? ?? ?? ?? 22 04 75 1f a1 ?? ?? ?? ?? 8b 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

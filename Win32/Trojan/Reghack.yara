@@ -21,6 +21,7 @@ rule Trojan_Win32_Reghack_A_2147623462_0
         $x_1_7 = "[HKEY_CURRENT_CONFIG\\SYSTEM]9" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

@@ -20,6 +20,7 @@ rule Trojan_MacOS_OpinionSpy_2147735636_0
         $x_1_6 = "Please complete this short survey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_MacOS_OpinionSpy_A_2147745382_0
         $x_1_4 = "/private/tmp/installtmp/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_MacOS_OpinionSpy_B_2147745472_0
         $x_1_4 = "/var/run/.osm_pqm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_MacOS_OpinionSpy_C_2147746265_0
         $x_1_4 = "Macmeter load cmd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Trojan_MacOS_OpinionSpy_D_2147747835_0
         $x_1_5 = "rules.securestudies.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 
@@ -140,6 +145,7 @@ rule Trojan_MacOS_OpinionSpy_E_2147747852_0
         $x_1_3 = "swizzlesafari" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_MacOS_OpinionSpy_F_2147748623_0
         $x_1_4 = "dpd.securestudies.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule Trojan_MacOS_OpinionSpy_G_2147748723_0
         $x_1_3 = "ZXT_MAC/Bundles/Download" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -211,6 +219,7 @@ rule Trojan_MacOS_OpinionSpy_H_2147753223_0
         $x_1_4 = "uninstallhelpertool" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -235,6 +244,7 @@ rule Trojan_MacOS_OpinionSpy_I_2147753469_0
         $x_1_4 = "/tmp/tmpFile.XXXXXX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -261,6 +271,7 @@ rule Trojan_MacOS_OpinionSpy_J_2147759287_0
         $x_1_3 = "poDemo.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -290,6 +301,7 @@ rule Trojan_MacOS_OpinionSpy_A_2147814035_0
         $x_1_9 = "/tmp/tmpFile.XXXXXX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

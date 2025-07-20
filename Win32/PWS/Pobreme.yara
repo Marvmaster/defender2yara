@@ -21,6 +21,7 @@ rule PWS_Win32_Pobreme_A_2147633331_0
         $x_1_6 = "taskkill /F /IM msnmsgr.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

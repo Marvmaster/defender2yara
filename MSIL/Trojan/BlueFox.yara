@@ -20,6 +20,7 @@ rule Trojan_MSIL_BlueFox_RDA_2147837815_0
         $x_1_5 = "72b26e23ed4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

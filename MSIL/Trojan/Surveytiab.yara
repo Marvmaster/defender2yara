@@ -19,6 +19,7 @@ rule Trojan_MSIL_Surveytiab_A_2147711303_0
         $x_1_5 = "0CIU-SWG63-ACMJ7-FFF35-SLK8" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or

@@ -20,6 +20,7 @@ rule Ransom_Win32_Mole_PA_2147745537_0
         $x_1_5 = ".FILE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Ransom_Win32_Mole_YAB_2147852141_0
         $x_1_7 = ".MOLE02" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Ransom_Win32_Mole_DA_2147891321_0
         $x_1_2 = {33 c9 81 e9 52 15 48 10 8b 0d ?? ?? ?? ?? 03 35 ?? ?? ?? ?? f7 5d d8 83 c3 04 49 0f 85 06 00 89 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

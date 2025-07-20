@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_GeniusBox_223731_0
         $x_1_4 = "C:\\Projects\\Extensions\\BHO\\Install\\Release\\gb_ex_install.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

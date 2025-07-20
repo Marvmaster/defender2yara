@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Gamarue_A_2147679427_0
         $x_1_3 = "\\Release\\ADropper.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDropper_Win32_Gamarue_G_2147682167_0
         $x_1_2 = {8a 08 40 3a cb 75 f9 2b c2 8b c8 0f 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanDropper_Win32_Gamarue_H_2147682245_0
         $x_1_2 = {8a 0c 30 80 e9 ?? 32 ca ff 44 24 ?? 88 0c 30 39 7c 24 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule TrojanDropper_Win32_Gamarue_J_2147682678_0
         $x_1_2 = {8a 0c 38 f6 d1 80 c1 ?? 32 ca 88 0c 38 8b 85 ?? ?? ff ff 40 89 85 ?? ?? ff ff 3b 85 ?? ?? ff ff 72 de}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

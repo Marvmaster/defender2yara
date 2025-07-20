@@ -18,6 +18,7 @@ rule HackTool_Win64_NanoDump_LK_2147895701_0
         $x_1_3 = {88 05 7e 8c 08 00 8b 45 fc 48 63 d0 48 8b 45 10 48 01 d0 44 0f b6 00 0f b6 4d fb 8b 45 fc 48 63 d0 48 8b 45 10 48 01 d0 44 89 c2 31 ca 88 10 83 45 fc 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

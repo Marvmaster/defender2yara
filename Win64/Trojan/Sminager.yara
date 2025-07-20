@@ -17,6 +17,7 @@ rule Trojan_Win64_Sminager_AA_2147920526_0
         $x_10_2 = "you agree to use the resources of your PC (CPU and / or graphics card load is possible from 5% to 100%)" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_GoKrypt_DW_2147888221_0
         $x_1_2 = {08 0a 20 f1 c0 11 8a 15 7c b4 b9 d4 8b 3f 1d 31 7c 08 d5 1d 4a 40 ed 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_GoKrypt_AB_2147893964_0
         $x_2_3 = "mMTQ4ODlkYTQxYjgwMDIwMDAwMDQ5ODlmOTQxYmExMjk2ODllMmZmZDU0ODgzYzQyMDg1YzA3NGI2NjY4Y" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win64_GoKrypt_AC_2147895113_0
         $x_2_3 = "UDRbotTOMtkuf7TTJQPiSVjdRZqUmi1oGe5fUs2hLww=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win64_GoKrypt_AC_2147895113_1
         $x_1_4 = "HjMWZ4y6kC.kLyjAIXkYa9k" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

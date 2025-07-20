@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Vundo_E_2147608160_0
         $x_1_1 = {36 35 2e 32 34 74 33 37 31 30 08 be 9f e8 bd c0 24 3f 63 6d 70 3d 74 76 c3 9c 6b 5f 75 cb 64 37}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDropper_Win32_Vundo_I_2147629111_0
         $x_1_3 = {66 c7 85 d8 fe ff ff d4 07 66 c7 85 da fe ff ff 08 00 66 c7 85 dc fe ff ff 03 00 66 c7 85 de fe ff ff 12 00 66 c7 85 e0 fe ff ff 0d 00 66 c7 85 e2 fe ff ff 00 00 66 c7 85 e4 fe ff ff 00 00 66 c7 85 e6 fe ff ff 00 00 8d 45 f8 50 8d 8d d8 fe ff ff 51 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule TrojanDropper_Win32_Vundo_J_2147633580_0
         $x_1_3 = {6a 0f 59 8b f7 83 c2 61 66 89 17 33 d2 f7 f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule TrojanDropper_Win32_Vundo_K_2147648056_0
         $x_1_2 = {89 55 e0 8b c2 c1 e8 18 c1 e2 08 0b c2 89 45 e0 2b c1 89 45 e0 33 c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule TrojanDropper_Win32_Vundo_M_2147649843_0
         $x_1_8 = {81 f9 0b aa 18 2f 0f 84 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -207,6 +212,7 @@ rule TrojanDropper_Win32_Vundo_R_2147658032_0
         $x_1_77 = {89 bc 02 00 10 00 00 c1 ee 13 0b f1 8b df 81 c6 24 81 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -235,6 +241,7 @@ rule TrojanDropper_Win32_Vundo_AA_2147681306_0
         $x_1_9 = {0f c8 89 45 f8 c7 45 ec b9 79 37 9e 8b 4d ec 0f af 4d f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -262,6 +269,7 @@ rule TrojanDropper_Win32_Vundo_AB_2147684724_0
         $x_1_4 = {81 ff 75 61 6c 46 75 ?? 81 fb 72 65 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

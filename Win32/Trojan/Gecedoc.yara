@@ -20,6 +20,7 @@ rule Trojan_Win32_Gecedoc_A_2147609612_0
         $x_2_6 = {8d 44 00 02 50 8b 4d 10 51 6a 01 6a 00 8b 55 0c 52 8b 45 f8 50 ff 15 [0-2] 40 00 85 c0 75 09 c7 45 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or

@@ -17,6 +17,7 @@ rule Ransom_Win32_Voidlock_A_2147696948_0
         $x_1_3 = "%s.vernost" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_MSIL_Noobcrypt_A_2147717279_0
         $x_1_4 = "payment.moj88w62BXxu96R0W762H0748s8q91YB43O165Sa3fN1274kJ28UX4.restaurantintim.ro" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

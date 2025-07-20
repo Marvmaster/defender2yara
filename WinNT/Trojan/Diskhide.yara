@@ -17,6 +17,7 @@ rule Trojan_WinNT_Diskhide_A_2147649315_0
         $x_1_3 = {3d 50 00 07 00 74 ?? 3d 04 0c 2d 00 74 ?? 3d a0 00 07 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

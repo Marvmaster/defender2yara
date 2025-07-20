@@ -22,6 +22,7 @@ rule Rogue_Win32_Fakeinit_132837_0
         $x_1_8 = {23 2f 6c 69 6e 6b 23 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule Rogue_Win32_Fakeinit_132837_1
         $x_1_7 = "RCPT exploit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -84,6 +86,7 @@ rule Rogue_Win32_Fakeinit_132837_2
         $x_1_8 = "Blocked suspicious attempts:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -128,6 +131,7 @@ rule Rogue_Win32_Fakeinit_132837_3
         $x_1_21 = "Config Mutex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_2_*) and 14 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_4_*) and 1 of ($x_2_*) and 14 of ($x_1_*))) or
@@ -168,6 +172,7 @@ rule Rogue_Win32_Fakeinit_132837_4
         $x_1_7 = "Highly recommended to destroy them immediately." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -188,6 +193,7 @@ rule Rogue_Win32_Fakeinit_132837_5
         $x_1_1 = {81 c3 22 00 00 00 55 8b d2 33 ce 47 fc 5d 50 8b c2 58 8d 2d ?? ?? ?? ?? 81 d5 ?? ?? ?? ?? 8d 05 ?? ?? ?? ?? 33 d4 d6 d6 81 fb ?? ?? ?? ?? 75 d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -209,6 +215,7 @@ rule Rogue_Win32_Fakeinit_132837_6
         $x_1_2 = {81 e9 25 00 00 00 33 e9 ff f6 81 f8 ab fe 13 00 5b f7 d2 d6 81 f9 fc 61 c9 c3 75 e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +239,7 @@ rule Rogue_Win32_Fakeinit_132837_7
         $x_1_4 = {73 6f 72 64 65 72 2e 64 6c 6c 00 00 69 65 78 70 6c 6f 72 65 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -270,6 +278,7 @@ rule Rogue_Win32_Fakeinit_132837_8
         $x_2_15 = "/cgi-bin/ware.cgi?adv=%s" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -302,6 +311,7 @@ rule Rogue_Win32_Fakeinit_132837_9
         $x_2_7 = {57 00 61 00 72 00 6e 00 69 00 6e 00 67 00 21 00 20 00 4e 00 65 00 77 00 20 00 76 00 65 00 72 00 73 00 69 00 6f 00 6e 00 20 00 6f 00 66 00 20 00 44 00 61 00 74 00 61 00 62 00 61 00 73 00 65 00 73 00 20 00 69 00 73 00 20 00 61 00 76 00 61 00 6c 00 69 00 61 00 62 00 6c 00 65 00 21 00 0d 00 0a 00 57 00 6f 00 75 00 6c 00 64 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

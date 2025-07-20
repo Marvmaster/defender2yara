@@ -21,6 +21,7 @@ rule Backdoor_MSIL_RogueRobin_YA_2147733886_0
         $x_1_6 = "canonical name|mx|namerserver|mail server|address" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

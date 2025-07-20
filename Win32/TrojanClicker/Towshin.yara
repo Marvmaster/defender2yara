@@ -18,6 +18,7 @@ rule TrojanClicker_Win32_Towshin_A_2147624769_0
         $x_1_4 = {00 00 64 00 6f 00 77 00 73 00 5c 00 63 00 75 00 72 00 72 00 65 00 6e 00 74 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

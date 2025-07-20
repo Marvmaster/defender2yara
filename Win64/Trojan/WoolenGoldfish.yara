@@ -17,6 +17,7 @@ rule Trojan_Win64_WoolenGoldfish_LK_2147844208_0
         $x_1_2 = "c:\\wrappers\\agent_wrapper\\wrapper_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

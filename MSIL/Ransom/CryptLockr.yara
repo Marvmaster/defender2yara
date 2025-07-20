@@ -19,6 +19,7 @@ rule Ransom_MSIL_CryptLockr_PA_2147819824_0
         $x_1_4 = "Your data is encrypted with a unique encryption algorythm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

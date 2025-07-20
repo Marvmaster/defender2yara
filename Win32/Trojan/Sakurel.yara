@@ -17,6 +17,7 @@ rule Trojan_Win32_Sakurel_C_2147711948_0
         $x_1_2 = {31 c0 8a 04 0b 3c 00 74 09 38 d0 74 05 30 d0 88 04 0b 83 f9 00 74 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Sakurel_C_2147711948_1
         $x_1_2 = {ff 74 24 10 b2 54 e8 ?? ?? ?? ?? ff 74 24 14 80 c2 f8 8b f0 e8 ?? ?? ?? ?? ff 74 24 18 b2 45 8b d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Sakurel_B_2147711949_0
         $x_2_4 = {68 f4 01 00 00 ff 15 ?? ?? ?? ?? 81 c3 00 90 01 00 3b 9d ?? ?? ff ff 0f 86 ?? ?? ff ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -91,6 +94,7 @@ rule Trojan_Win32_Sakurel_B_2147711949_1
         $x_1_4 = {68 f4 01 00 00 ff 15 ?? ?? ?? ?? 81 c5 00 90 01 00 3b eb 0f 86}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_Win32_Sakurel_D_2147711950_0
         $x_1_4 = "cmd.exe /c rundll32 \"%s\" Player %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win32_Fifesock_C_2147645309_0
         $x_1_6 = {66 83 38 00 74 19 8d 45 fc c1 00 07 8b 45 f8 0f b7 10 8d 45 fc 31 10 8d 45 f8 83 00 02 eb de 8b 45 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

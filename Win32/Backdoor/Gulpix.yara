@@ -23,6 +23,7 @@ rule Backdoor_Win32_Gulpix_MA_2147805566_0
         $x_1_8 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Backdoor_Win32_Gulpix_GNK_2147916866_0
         $x_10_1 = {30 f8 43 00 ee f7 43 00 ee f7 43 ?? ee f7 43 00 fe f7 43 ?? 30 f8 43 00 30 f8 43 00 14 f8 43 00 24 f8 43 00 30}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

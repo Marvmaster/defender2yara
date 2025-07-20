@@ -16,6 +16,7 @@ rule VirTool_WinNT_Wopla_A_2147602457_0
         $x_1_2 = {72 27 83 65 0c 00 85 f6 76 1b ff 37 e8 ?? ?? 00 00 83 c7 04 84 c0 74 08 ff 45 0c 39 75 0c 72 ea 39 75 0c 72 04 83 63 18 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule VirTool_WinNT_Wopla_B_2147602458_0
         $x_1_2 = {ff 34 88 e8 ?? ?? ff ff 8b 4d 10 89 01 8b 45 08 0f 22 c0 fb b0 01 eb 02 32 c0 5d c2 0c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

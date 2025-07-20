@@ -20,6 +20,7 @@ rule Trojan_MSIL_Sofacy_S_2147730884_0
         $x_1_5 = "Working: {0}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

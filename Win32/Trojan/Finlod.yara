@@ -23,6 +23,7 @@ rule Trojan_Win32_Finlod_A_2147757906_0
         $x_1_9 = "\\REGISTRY\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

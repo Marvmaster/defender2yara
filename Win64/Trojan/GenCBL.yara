@@ -16,6 +16,7 @@ rule Trojan_Win64_GenCBL_ARA_2147897645_0
         $x_2_1 = {8d 41 f6 30 44 0c 20 48 ff c1 48 83 f9 08 72 f0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_GenCBL_ARA_2147897645_1
         $x_2_1 = {8d 42 04 30 44 15 e0 48 ff ?? 48 83 fa ?? 72 f0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

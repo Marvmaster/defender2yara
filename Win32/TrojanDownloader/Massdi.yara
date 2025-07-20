@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Massdi_C_2147645961_0
         $x_1_3 = {5b 41 62 6f 72 74 5d 20 b7 c5 c6 fa b0 b2 d7 b0 a3 ac 0d 0a 20 5b 52 65 74 72 79 5d 20 d6 d8 d0 c2 b3 a2 ca d4 d0 b4 c8 eb ce c4 bc fc fe a3 ac bb f2 0d 0a 20 5b 49 67 6e 6f 72 65 5d 20 ba f6 c2 d4 d5 e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Brontok_A_2147707237_0
         $x_5_4 = {6a 00 c7 45 e0 04 00 02 80 c7 45 d8 0a 00 00 00 89 75 b0 c7 45 a8 08 40 00 00 ff 15 94 11 40 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Trojan_Win32_Brontok_AMMB_2147904395_0
         $x_1_3 = {53 01 52 00 53 00 62 00 63 00 54 00 55 00 64 00 65 00 4e 00 56 00 57 00 66 00 67 00 4e 00 58 00 59 00 62 00 63 00 4e 00 5a 00 52 00 62 00 63 00 64 00 52 00 52 00 53 00 65 00 66 00 67 00 68 00 7e 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

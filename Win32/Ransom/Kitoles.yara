@@ -20,6 +20,7 @@ rule Ransom_Win32_Kitoles_A_2147723554_0
         $x_1_6 = "bitcoin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule Ransom_Win32_Kitoles_A_2147723554_1
         $x_2_4 = "HOW TO RECOVER ENCRYPTED FILES - decrypts@airmail.cc.TXT" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Ransom_Win32_Kitoles_AB_2147750265_0
         $x_1_1 = "[/MESSAGE][MELT][TASKNAME]sysem.exe[/TASKNAME][AUTOEXEC][ONCEELEVATE][README]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

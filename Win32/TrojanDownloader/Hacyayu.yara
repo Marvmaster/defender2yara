@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Hacyayu_A_2147653439_0
         $x_1_5 = {26 73 74 61 74 75 73 3d (67 6f|6e 6f 66 69)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

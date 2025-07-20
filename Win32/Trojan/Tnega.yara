@@ -18,6 +18,7 @@ rule Trojan_Win32_Tnega_AKV_2147753198_0
         $x_1_3 = "y/bboxfu<', 'that3.e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Tnega_RM_2147759253_0
         $x_1_2 = {8b 54 24 04 8b 52 28 8b c6 03 d0 89 15 ?? ?? ?? ?? 6a 00 6a 01 50 ff 15 00 3f 00 90 90}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Tnega_SK_2147761750_0
         $x_1_7 = "C:\\TEMP\\2890.tmp\\viebobpspa_autologon_admin.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_Win32_Tnega_A_2147765428_0
         $x_3_6 = "WriteConsoleW" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +138,7 @@ rule Trojan_Win32_Tnega_TA_2147771282_0
         $x_1_21 = "PJVoIMuQ0v79atX1NViWxq99neINkxs9" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +169,7 @@ rule Trojan_Win32_Tnega_MR_2147771699_0
         $x_1_10 = "EmptyClipboard" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -188,6 +194,7 @@ rule Trojan_Win32_Tnega_MR_2147771699_1
         $x_1_1 = {0f b6 c2 03 c8 0f b6 c1 8b 0d [0-4] 0f b6 84 05 [0-4] 30 04 19 43 3b 9d [0-4] 72 1e 00 0f b6 84 3d [0-4] 88 84 35 [0-4] 88 94 3d [0-4] 0f b6 8c 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +217,7 @@ rule Trojan_Win32_Tnega_2147772211_0
         $x_1_1 = {03 c8 0f b6 ?? 8b [0-5] 0f [0-7] 30 [0-2] 43 3b [0-5] 72 21 00 0f [0-7] 88 [0-6] 88 [0-6] 0f [0-7] 0f b6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -239,6 +247,7 @@ rule Trojan_Win32_Tnega_MS_2147772262_0
         $x_1_9 = "CsrFreeCaptureBuffer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -269,6 +278,7 @@ rule Trojan_Win32_Tnega_MU_2147776997_0
         $x_1_10 = "Dbreak" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +308,7 @@ rule Trojan_Win32_Tnega_MV_2147776998_0
         $x_1_9 = "DefenderCSP.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -336,6 +347,7 @@ rule Trojan_Win32_Tnega_MW_2147778672_0
         $x_1_18 = "RegisterDragDrop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -363,6 +375,7 @@ rule Trojan_Win32_Tnega_QW_2147778829_0
         $x_5_4 = {65 2b 30 30 30 00 00 00 31 23 53 4e 41 4e}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -384,6 +397,7 @@ rule Trojan_Win32_Tnega_PRF_2147782972_0
         $x_1_1 = {89 5d fc 8b 45 fc 8a 14 38 8b 4d f8 c0 ca 03 32 91 ?? ?? ?? ?? 6a 0c 88 14 38 8d 41 01 99 59 f7 f9 ff 45 fc 89 55 f8 39 75 fc 7c d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -405,6 +419,7 @@ rule Trojan_Win32_Tnega_MD_2147787637_0
         $x_1_1 = {5c 1e 00 88 0a 05 6b 67 1a 45 12 3a 87 ac 17 5a 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -427,6 +442,7 @@ rule Trojan_Win32_Tnega_FUV_2147789156_0
         $x_1_2 = {50 c7 44 24 ?? 74 00 70 00 c7 44 24 ?? 73 00 3a 00 c7 44 24 ?? 2f 00 2f 00 c7 44 24 ?? 61 00 2e 00 c7 44 24 ?? 67 00 6f 00 c7 44 24 ?? 61 00 74 00 c7 44 24 ?? 67 00 61 00 c7 44 24 ?? 6d 00 65 00 c7 44 24 ?? 2e 00 63 00 c7 44 24 ?? 6f 00 2f 00 c7 44 24 ?? 75 00 73 00 c7 44 24 ?? 65 00 72 00 c7 44 24 ?? 66 00 2f 00 c7 44 24 ?? 64 00 61 00 c7 44 24 ?? 74 00 2f 00 c7 84 24 ?? ?? ?? ?? ?? ?? ?? ?? c7 44 24 ?? 2f 00 73 00 c7 44 24 ?? 71 00 6c 00 c7 44 24 ?? 69 00 74 00 c7 44 24 ?? 65 00 2e 00 c7 44 24 ?? 64 00 61 00 c7 44 24 ?? 74 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -453,6 +469,7 @@ rule Trojan_Win32_Tnega_ADJ_2147794586_0
         $x_1_6 = "addInstallImpression.php?key=125478824515ADNxu2ccbwe&ip=&oid=12" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -474,6 +491,7 @@ rule Trojan_Win32_Tnega_MC_2147795414_0
         $x_1_1 = {31 03 43 81 c2 3a 82 84 37 81 c7 de 6b ea e2 39 f3 75 ?? 09 d2 09 d2 c3 26 00 b8 ?? ?? ?? ?? 47 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -501,6 +519,7 @@ rule Trojan_Win32_Tnega_MC_2147795414_1
         $x_1_7 = "Cadave.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -522,6 +541,7 @@ rule Trojan_Win32_Tnega_BC_2147797478_0
         $x_1_1 = {8b 07 d2 c5 36 66 8b 08 85 e7 81 c7 02 00 00 00 f9 66 85 c0 66 f7 c4 55 0f 66 89 0f 66 0f b3 f9 66 c1 e9 83 8d ad fc ff ff ff 0f 9e c5 c1 f1 c1 66 0f ba f1 8a 8b 4c 25 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -550,6 +570,7 @@ rule Trojan_Win32_Tnega_MM_2147797777_0
         $x_1_8 = "OhTTij5lmnomlkjst\\Xuh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -571,6 +592,7 @@ rule Trojan_Win32_Tnega_UJK_2147797983_0
         $x_1_1 = {0f b6 c2 33 d2 03 c6 f7 f1 8d 0c 3e 46 8a 04 0b 8a 92 ?? ?? ?? ?? 32 c2 88 01 b9 1e 00 00 00 3b 75 f8 72 dc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -593,6 +615,7 @@ rule Trojan_Win32_Tnega_DSAD_2147797984_0
         $x_1_2 = {8b f8 0f a3 c1 33 fb 8b 1c 24 49 33 5c 24 04 49 0f c0 c9 8b cf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -614,6 +637,7 @@ rule Trojan_Win32_Tnega_C_2147798254_0
         $x_1_1 = {8b 45 f0 8b 4d f4 01 c1 8b 45 f0 8b 55 08 01 c2 8b 45 f0 89 4d ec 8b 4d f8 89 55 e8 99 f7 f9 8b 45 fc 01 d0 8b 4d e8 0f be 09 0f be 10 31 d1 8b 45 ec 88 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -639,6 +663,7 @@ rule Trojan_Win32_Tnega_AC_2147798316_0
         $x_3_5 = "ME_ADAudit.exe" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -660,6 +685,7 @@ rule Trojan_Win32_Tnega_CC_2147805597_0
         $x_1_1 = {f6 5e 5e d3 2a f2 d2 45 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -681,6 +707,7 @@ rule Trojan_Win32_Tnega_DBV_2147808920_0
         $x_1_1 = {64 31 00 04 01 0c 00 46 41 4c 44 4c 45 4d 4d 45 4e 45 53 00 04 60 09 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -704,6 +731,7 @@ rule Trojan_Win32_Tnega_GMS_2147810962_0
         $x_1_3 = "DonWS2_32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -725,6 +753,7 @@ rule Trojan_Win32_Tnega_CA_2147811072_0
         $x_10_1 = {39 ff 74 01 ea 31 06 81 c1 [0-4] 2c 81 c1 [0-4] 81 c6 04 00 00 00 81 c2 [0-4] 49 39 fe 75 dc}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -753,6 +782,7 @@ rule Trojan_Win32_Tnega_GIS_2147811649_0
         $x_1_8 = "ShellExecute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -774,6 +804,7 @@ rule Trojan_Win32_Tnega_GP_2147815053_0
         $x_10_1 = {d8 85 40 00 5b be ?? ?? ?? ?? 21 c6 e8 ?? ?? ?? ?? 50 58 31 1f 47 48 81 c6 ?? ?? ?? ?? 39 cf 75 de}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -795,6 +826,7 @@ rule Trojan_Win32_Tnega_QQ_2147815161_0
         $x_10_1 = {8b 34 24 83 c4 04 29 c6 e8 ?? ?? ?? ?? 46 31 1a 81 ee ?? ?? ?? ?? 42 56 8b 04 24 83 c4 04 39 ca 75 d7 29 f0 09 c0 c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -816,6 +848,7 @@ rule Trojan_Win32_Tnega_G_2147815388_0
         $x_10_1 = {31 17 09 d9 81 c7 ?? ?? ?? ?? 39 c7 75 ed 4e 81 eb ?? ?? ?? ?? c3 09 db 21 c9 00 00 09 c1 43 39 fe 75 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -837,6 +870,7 @@ rule Trojan_Win32_Tnega_QR_2147815789_0
         $x_10_1 = {81 c2 ea 5a b3 7c 31 03 b9 ?? ?? ?? ?? 01 c9 43 39 f3 75 e2}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -858,6 +892,7 @@ rule Trojan_Win32_Tnega_AA_2147816017_0
         $x_10_1 = {8b 04 24 83 c4 04 81 c0 ?? ?? ?? ?? e8 ?? ?? ?? ?? 31 17 89 c9 47 81 e9 ?? ?? ?? ?? 83 ec 04 89 0c 24 58 39 f7 75 cf}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -879,6 +914,7 @@ rule Trojan_Win32_Tnega_AG_2147816459_0
         $x_10_1 = {81 ea 01 00 00 00 4a 31 19 4a 81 c6 ?? ?? ?? ?? 41 39 c1 75 da 29 f2 c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -902,6 +938,7 @@ rule Trojan_Win32_Tnega_XO_2147816563_0
         $x_1_3 = {31 34 81 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -923,6 +960,7 @@ rule Trojan_Win32_Tnega_F_2147816644_0
         $x_10_1 = {68 d8 85 40 00 5b 81 e9 ?? ?? ?? ?? e8 ?? ?? ?? ?? 31 1f 47 09 ce 39 d7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -952,6 +990,7 @@ rule Trojan_Win32_Tnega_MA_2147818449_0
         $x_1_9 = "D$$eHan" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -974,6 +1013,7 @@ rule Trojan_Win32_Tnega_WM_2147818587_0
         $x_10_2 = {31 07 09 d1 81 eb ?? ?? ?? ?? 81 c7 ?? ?? ?? ?? 39 f7 75 e7 c3 81 c3 f7 23 8e 2b ff 21 f2 39 c3 75 e5}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -997,6 +1037,7 @@ rule Trojan_Win32_Tnega_RK_2147818903_0
         $x_1_3 = "q</2nK*>De!'7p/V" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1023,6 +1064,7 @@ rule Trojan_Win32_Tnega_RK_2147818903_1
         $x_1_6 = "JGRvbWFpbiA9ICJyZC5nby50aCINCiRwYXNzd29yZCA9ICJyZHBANTV3MHJkIiB8IENvbnZlcnR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1047,6 +1089,7 @@ rule Trojan_Win32_Tnega_AK_2147818914_0
         $x_1_4 = "LdrUnlockLoaderLock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1073,6 +1116,7 @@ rule Trojan_Win32_Tnega_AK_2147818914_1
         $x_1_6 = "Please run a virus-check" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1095,6 +1139,7 @@ rule Trojan_Win32_Tnega_AE_2147819017_0
         $x_1_2 = {89 e7 81 c7 04 00 00 00 81 ef 04 00 00 00 33 3c 24 31 3c 24 33 3c 24 5c 89 2c 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1119,6 +1164,7 @@ rule Trojan_Win32_Tnega_MB_2147819115_0
         $x_1_4 = "DeleteFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1141,6 +1187,7 @@ rule Trojan_Win32_Tnega_HM_2147847401_0
         $x_1_2 = {6a 04 68 00 30 00 00 68 00 c2 eb 0b 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1162,6 +1209,7 @@ rule Trojan_Win32_Tnega_PRG_2147849596_0
         $x_1_1 = {8b 4d f8 83 c1 01 89 4d f8 8b 55 f8 3b 55 ec 73 47 8b 45 f4 03 45 f8 8a 08 88 4d ff 8b 55 e0 03 55 e8 8a 02 88 45 fe 0f b6 4d ff c1 f9 03 0f b6 55 ff c1 e2 05 0b ca 0f b6 45 fe 33 c8 8b 55 f4 03 55 f8 88 0a 8b 45 e8 83 c0 01 99 b9 ?? ?? ?? ?? f7 f9 89 55 e8 eb a8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

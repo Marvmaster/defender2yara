@@ -16,6 +16,7 @@ rule Worm_Win32_Palevo_2147641581_0
         $x_1_2 = "/ldr/client.php?family=bank" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

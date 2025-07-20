@@ -19,6 +19,7 @@ rule Worm_Win32_Tuhoseg_A_2147647496_0
         $x_1_5 = {e8 0b 00 00 00 72 75 6e 32 5f 31 2e 62 61 74 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

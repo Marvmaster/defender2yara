@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Hokeydaph_A_2147647289_0
         $x_1_5 = "Elevation:Administrator!new:{3ad05575-8857-4850-9277-11b85bdb8e09}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*))) or
             ((2 of ($x_4_*))) or

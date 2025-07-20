@@ -21,6 +21,7 @@ rule Ransom_Win32_DMALocker_A_2147709052_0
         $x_1_7 = "HOW TO PAY US AND UNLOCK YOUR FILES?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Win32_DMALocker_B_2147712019_0
         $x_2_6 = "DMA Locker" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -89,6 +91,7 @@ rule Ransom_Win32_DMALocker_B_2147712019_1
         $x_1_20 = "\\select.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

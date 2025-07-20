@@ -18,6 +18,7 @@ rule Trojan_Win32_CoinMiner_D_2147669163_0
         $x_1_4 = "-o http://rr.btcmp.com:8332 -u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_CoinMiner_F_2147671007_0
         $x_1_1 = {73 5c 4a 61 76 61 0d 0a 73 76 63 68 6f 73 74 20 2d 75 20 [0-32] 20 68 74 74 70 3a 2f 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_CoinMiner_2147672528_0
         $x_2_7 = "/create /tn WindowsService /tr " wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -90,6 +93,7 @@ rule Trojan_Win32_CoinMiner_2147672528_1
         $x_1_3 = "C:\\Work\\Xmrig\\Release\\Setup_v2.03.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_Win32_CoinMiner_J_2147680416_0
         $x_1_3 = "cmd.exe /c taskkill.exe /f /im mscomsys.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Trojan_Win32_CoinMiner_R_2147682929_0
         $x_1_5 = "midstate|data|hash1|target" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_Win32_CoinMiner_R_2147682929_1
         $x_1_9 = "lite.coin-pool.com:8339" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -192,6 +199,7 @@ rule Trojan_Win32_CoinMiner_Z_2147686024_0
         $x_1_5 = "post b64single(base64Encode(cld)) to url" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -217,6 +225,7 @@ rule Trojan_Win32_CoinMiner_AC_2147688640_0
         $x_1_6 = {68 74 74 70 3a 2f 2f 67 2d 73 2e 63 6f 6f 6c 2f 76 65 72 [0-5] 2e 70 68 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -242,6 +251,7 @@ rule Trojan_Win32_CoinMiner_AL_2147707183_0
         $x_1_3 = "\\NsCpuCNMiner64.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -266,6 +276,7 @@ rule Trojan_Win32_CoinMiner_AV_2147708430_0
         $x_3_4 = "Wallet Stealer\\BWS-Stub\\Release\\BWS-Stub.pdb" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -295,6 +306,7 @@ rule Trojan_Win32_CoinMiner_AZ_2147710203_0
         $x_1_5 = "scripts\\miner.lua" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -322,6 +334,7 @@ rule Trojan_Win32_CoinMiner_AZ_2147710203_1
         $x_1_4 = "\\svchost\\obj\\Debug\\svchost.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -346,6 +359,7 @@ rule Trojan_Win32_CoinMiner_BB_2147716648_0
         $x_1_4 = "2f6b38380d6ef35cd94bdd1b" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -371,6 +385,7 @@ rule Trojan_Win32_CoinMiner_BB_2147716648_1
         $x_1_5 = "HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -400,6 +415,7 @@ rule Trojan_Win32_CoinMiner_BC_2147717431_0
         $x_1_5 = "start Windows" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -422,6 +438,7 @@ rule Trojan_Win32_CoinMiner_BF_2147719115_0
         $x_1_2 = {6a 00 6a 00 ff 15 ?? ?? ?? 10 50 68 ?? ?? ?? 10 6a 0d ff 15 ?? ?? ?? 10 a3 ?? ?? ?? 10 83 3d ?? ?? ?? 10 00 75 08 83 c8 ff e9 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -447,6 +464,7 @@ rule Trojan_Win32_CoinMiner_BH_2147720065_0
         $x_1_5 = "Mozilla/4.0 (compatible)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -471,6 +489,7 @@ rule Trojan_Win32_CoinMiner_BI_2147720217_0
         $x_1_4 = "google123.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -494,6 +513,7 @@ rule Trojan_Win32_CoinMiner_BK_2147721169_0
         $x_1_3 = {64 00 2e 00 74 00 6f 00 70 00 34 00 74 00 6f 00 70 00 2e 00 6e 00 65 00 74 00 2f 00 [0-31] 2e 00 6a 00 70 00 67 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -541,6 +561,7 @@ rule Trojan_Win32_CoinMiner_BT_2147722625_0
         $x_2_4 = "Shell.Run \"\"\"cmd.exe\"\" /C" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -570,6 +591,7 @@ rule Trojan_Win32_CoinMiner_BL_2147722747_0
         $x_1_5 = "http://103.49.146.132/OpenCL.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -594,6 +616,7 @@ rule Trojan_Win32_CoinMiner_BV_2147723287_0
         $x_1_4 = {6a 00 6a 04 8b 55 ?? 83 c2 34 52 8b 45 ?? 8b 88 a4 00 00 00 83 c1 08 51 8b 95 ?? ?? ?? ?? 52 ff 95}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -619,6 +642,7 @@ rule Trojan_Win32_CoinMiner_BW_2147723499_0
         $x_1_5 = "-a cryptonight -o stratum+tcp://" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -647,6 +671,7 @@ rule Trojan_Win32_CoinMiner_OF_2147723991_0
         $x_2_4 = "LS1kb25hdGUtbGV2ZWw9MQ==" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -675,6 +700,7 @@ rule Trojan_Win32_CoinMiner_OF_2147723991_1
         $x_1_4 = {54 61 73 6b 6d 67 72 2e 65 78 65 00 74 61 73 6b 6d 67 72 2e 65 78 65 00 50 72 6f 63 65 73 73 48 61 63 6b 65 72 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -700,6 +726,7 @@ rule Trojan_Win32_CoinMiner_OF_2147723991_2
         $x_1_5 = {54 00 61 00 73 00 6b 00 6d 00 67 00 72 00 2e 00 65 00 78 00 65 00 00 00 41 00 6e 00 56 00 69 00 72 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -725,6 +752,7 @@ rule Trojan_Win32_CoinMiner_BZ_2147724270_0
         $x_1_1 = {44 3a 5c 70 72 69 76 5c 77 6f 72 6b 5c 6c 6f 6c 6f 6c 6f 5c 6d 61 6c 77 6d 6d 6d [0-32] 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -749,6 +777,7 @@ rule Trojan_Win32_CoinMiner_CF_2147724500_0
         $x_1_4 = "Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -773,6 +802,7 @@ rule Trojan_Win32_CoinMiner_OM_2147724558_0
         $x_1_4 = "stratum+tcp://xmr.pool.minergate.com:45560" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -818,6 +848,7 @@ rule Trojan_Win32_CoinMiner_CG_2147724980_0
         $x_1_3 = "defender.Kill()" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -846,6 +877,7 @@ rule Trojan_Win32_CoinMiner_OR_2147724990_0
         $x_2_5 = {00 00 4e 00 49 00 48 00 49 00 4c 00 4d 00 73 00 49 00 4e 00 45 00 52 00 61 00 61 00 73 00 73 00 64 00 61 00 61 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -873,6 +905,7 @@ rule Trojan_Win32_CoinMiner_OV_2147725056_0
         $x_1_3 = {4e 61 6d 65 73 70 61 63 65 0b 44 6f 77 6e 6c 6f 61 64 44 4c 4c 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -898,6 +931,7 @@ rule Trojan_Win32_CoinMiner_OW_2147725085_0
         $x_1_5 = "add_Shutdown" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -945,6 +979,7 @@ rule Trojan_Win32_CoinMiner_OY_2147725105_0
         $x_2_5 = {54 65 6d 70 4d 6f 64 65 0d 0a 53 69 6c 65 6e 74 3d 31}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -973,6 +1008,7 @@ rule Trojan_Win32_CoinMiner_OT_2147725135_0
         $x_1_4 = {70 00 72 00 6f 00 63 00 65 00 78 00 70 00 2e 00 65 00 78 00 65 00 [0-6] 70 00 72 00 6f 00 63 00 65 00 78 00 70 00 36 00 34 00 2e 00 65 00 78 00 65 00 [0-6] 70 00 72 00 6b 00 69 00 6c 00 6c 00 65 00 72 00 2e 00 65 00 78 00 65 00 [0-6] 4b 00 69 00 6c 00 6c 00 50 00 72 00 6f 00 63 00 65 00 73 00 73 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -998,6 +1034,7 @@ rule Trojan_Win32_CoinMiner_PD_2147725214_0
         $x_1_5 = {54 61 73 6b 6d 67 72 2e 65 78 65 00 74 61 73 6b 6d 67 72 2e 65 78 65 00 50 72 6f 63 65 73 73 48 61 63 6b 65 72 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1022,6 +1059,7 @@ rule Trojan_Win32_CoinMiner_PE_2147725216_0
         $x_1_5 = {61 74 74 72 69 62 20 2b 73 20 2b 68 20 22 43 3a 5c [0-64] 2e 65 78 65 22}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1044,6 +1082,7 @@ rule Trojan_Win32_CoinMiner_PF_2147725220_0
         $x_1_2 = {43 72 65 61 74 65 54 6f 6f 6c 68 65 6c 70 33 32 53 6e 61 70 73 68 6f 74 28 29 b5 f7 d3 c3 ca a7 b0 dc 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1088,6 +1127,7 @@ rule Trojan_Win32_CoinMiner_DP_2147725372_0
         $x_1_2 = {69 20 2d 4f 20 [0-128] 3a 78 20 2d 6b 20 2d 2d 6d 61 78 2d 63 70 75 2d 75 73 61 67 65 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1111,6 +1151,7 @@ rule Trojan_Win32_CoinMiner_PK_2147725453_0
         $x_1_3 = "stratum+tcp://get.bi-chi.com:3333 -u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1137,6 +1178,7 @@ rule Trojan_Win32_CoinMiner_PK_2147725453_1
         $x_1_6 = "/SC MINUTE /MO 1 /F /Create /TN" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1185,6 +1227,7 @@ rule Trojan_Win32_CoinMiner_PU_2147725644_0
         $x_1_2 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1210,6 +1253,7 @@ rule Trojan_Win32_CoinMiner_PP_2147725645_0
         $x_1_5 = {69 70 6c 6f 67 67 65 72 2e 63 6f 6d 00 00 00 00 68 74 74 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1234,6 +1278,7 @@ rule Trojan_Win32_CoinMiner_PW_2147725673_0
         $x_1_4 = "/C ping 127.0.0.1 -n 6 & taskkill -f /im conime.exe /im" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1259,6 +1304,7 @@ rule Trojan_Win32_CoinMiner_PW_2147725673_1
         $x_1_5 = "access sina blog ok, host: %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1282,6 +1328,7 @@ rule Trojan_Win32_CoinMiner_PQ_2147725791_0
         $x_1_3 = {31 37 2e 33 2e 37 31 33 31 2e 31 31 35 00 4d 69 63 72 6f 73 6f 66 74 20 4f 6e 65 44 72 69 76 65 00 25 73 2f 25 73 20 28 57 69 6e 64 6f 77 73 20 4e 54 20 25 6c 75 2e 25 6c 75 00 29 20 6c 69 62 75 76 2f 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1305,6 +1352,7 @@ rule Trojan_Win32_CoinMiner_CA_2147726025_0
         $x_1_3 = "cpuminer-multi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1329,6 +1377,7 @@ rule Trojan_Win32_CoinMiner_QD_2147726126_0
         $x_1_4 = "\\xbooster\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1379,6 +1428,7 @@ rule Trojan_Win32_CoinMiner_QE_2147726236_0
         $x_1_6 = "--cpu-priority=0 --donate-level=1 -o {POOL_ADDRESS}:{POOL_PORT}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1409,6 +1459,7 @@ rule Trojan_Win32_CoinMiner_QG_2147726256_0
         $x_1_7 = {5c 00 4d 00 69 00 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1436,6 +1487,7 @@ rule Trojan_Win32_CoinMiner_QH_2147726299_0
         $x_1_3 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1493,6 +1545,7 @@ rule Trojan_Win32_CoinMiner_CY_2147726391_0
         $x_1_16 = "{f1d447af-1ba2-4af0-9584-8183fc87d66a}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -1527,6 +1580,7 @@ rule Trojan_Win32_CoinMiner_CQ_2147726436_0
         $x_1_1 = "WindowsUpdater.exe -l luckpool.org" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1552,6 +1606,7 @@ rule Trojan_Win32_CoinMiner_QJ_2147726500_0
         $x_1_6 = "-a, --algo=algo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1579,6 +1634,7 @@ rule Trojan_Win32_CoinMiner_CZ_2147726774_0
         $x_1_4 = "method\":\"submit\",\"params\":{\"id\":\"%s\",\"job_id" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1602,6 +1658,7 @@ rule Trojan_Win32_CoinMiner_DA_2147726799_0
         $x_1_4 = {58 4d 52 69 67 00 00 00 25 73 2f 25 73 20 28 57 69 6e 64 6f 77 73 20 4e 54 20 25 6c 75 2e 25 6c 75 00 00 00 29}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1627,6 +1684,7 @@ rule Trojan_Win32_CoinMiner_DA_2147726799_1
         $x_1_6 = "idle_poll_interval" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1650,6 +1708,7 @@ rule Trojan_Win32_CoinMiner_DA_2147726799_2
         $x_1_4 = {58 4d 52 69 67 00 00 00 25 73 2f 25 73 20 28 57 69 6e 64 6f 77 73 20 4e 54 20 25 6c 75 2e 25 6c 75 00 00 00 29}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1672,6 +1731,7 @@ rule Trojan_Win32_CoinMiner_QM_2147727043_0
         $x_1_2 = "CPU.exe -a cryptonight -o stratum+tcp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1719,6 +1779,7 @@ rule Trojan_Win32_CoinMiner_QN_2147727385_0
         $x_1_3 = "cryptonight -o stratum+tcp://pool.minexmr.com:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1748,6 +1809,7 @@ rule Trojan_Win32_CoinMiner_QN_2147727385_1
         $x_1_9 = "SELECT * FROM Win32_process where name" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 3 of ($x_5_*))) or
@@ -1798,6 +1860,7 @@ rule Trojan_Win32_CoinMiner_QO_2147727414_0
         $x_1_3 = "\\MSBuild\\Services.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1821,6 +1884,7 @@ rule Trojan_Win32_CoinMiner_QO_2147727414_1
         $x_1_3 = "Usage: xmrig [OPTIONS]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1847,6 +1911,7 @@ rule Trojan_Win32_CoinMiner_QO_2147727414_2
         $x_1_6 = "taskkill /f /im" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1874,6 +1939,7 @@ rule Trojan_Win32_CoinMiner_QK_2147727891_0
         $x_1_3 = "AutoRunApp.vbs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1944,6 +2010,7 @@ rule Trojan_Win32_CoinMiner_QY_2147728303_0
         $x_1_5 = "CPU load" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1966,6 +2033,7 @@ rule Trojan_Win32_CoinMiner_RA_2147728370_0
         $x_1_2 = "Intel Storage Service" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1990,6 +2058,7 @@ rule Trojan_Win32_CoinMiner_RB_2147728486_0
         $x_1_4 = {8d 48 25 30 4c 04 ?? 40 83 f8 02 72 f3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2059,6 +2128,7 @@ rule Trojan_Win32_CoinMiner_RH_2147728722_0
         $x_1_4 = "bitcoincash" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2086,6 +2156,7 @@ rule Trojan_Win32_CoinMiner_2147729734_0
         $x_5_7 = "XMRig" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -2114,6 +2185,7 @@ rule Trojan_Win32_CoinMiner_DD_2147729888_0
         $x_1_6 = "F:\\calculator\\Hasher\\hasher-ng\\bin\\Win32\\Release\\dssec.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -2137,6 +2209,7 @@ rule Trojan_Win32_CoinMiner_CL_2147730430_0
         $x_1_3 = {00 6d 69 6e 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2162,6 +2235,7 @@ rule Trojan_Win32_CoinMiner_DE_2147730431_0
         $x_1_5 = "nicehash.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2190,6 +2264,7 @@ rule Trojan_Win32_CoinMiner_DV_2147731332_0
         $x_1_5 = {8b 45 08 85 c0 74 16 83 78 14 00 75 10 8b 48 34 85 c9 74 09 83 78 18 00 74 03 5d ff e1 83 c8 ff 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2212,6 +2287,7 @@ rule Trojan_Win32_CoinMiner_AE_2147731355_0
         $x_1_3 = "svchost.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2239,6 +2315,7 @@ rule Trojan_Win32_CoinMiner_DG_2147731739_0
         $x_1_7 = "49hnmvTh3gHFZVQjMXpFWfKuvF1SgDGWCQRMhStgEg6vhtJfQ8RdSAf3TYr3FoZCYyDyNainwwzRmPanT1ucBx1y5vaRXBM.r9n" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2262,6 +2339,7 @@ rule Trojan_Win32_CoinMiner_AF_2147733393_0
         $x_1_4 = "Trend Micro Titanium" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2285,6 +2363,7 @@ rule Trojan_Win32_CoinMiner_DH_2147733530_0
         $x_1_3 = "stratum+tcp://yescrypt.na.mine.zpool.ca:6233" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2311,6 +2390,7 @@ rule Trojan_Win32_CoinMiner_DH_2147733530_1
         $x_1_6 = "CopyMoneroToDstPath faild, %s delete faild by:%d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2338,6 +2418,7 @@ rule Trojan_Win32_CoinMiner_DL_2147733574_0
         $x_3_7 = {63 73 63 72 69 70 74 20 2f 2f 62 20 2f 2f 6e 6f 6c 6f 67 6f 20 25 74 6d 70 25 2f [0-32] 2e 76 62 73}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -2368,6 +2449,7 @@ rule Trojan_Win32_CoinMiner_DM_2147734137_0
         $x_1_4 = "blackmoon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2391,6 +2473,7 @@ rule Trojan_Win32_CoinMiner_QS_2147734620_0
         $x_1_3 = {2d 2d 76 61 72 69 61 74 69 6f 6e 20 32 30 20 2d 2d 6c 6f 77 20 2d 6f 20 [0-32] 20 2d 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2416,6 +2499,7 @@ rule Trojan_Win32_CoinMiner_QT_2147734626_0
         $x_1_5 = {69 6e 73 74 61 6c 6c 00 64 64 6f 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2439,6 +2523,7 @@ rule Trojan_Win32_CoinMiner_SA_2147734919_0
         $x_1_4 = "System32\\drivers\\cspsvc.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2462,6 +2547,7 @@ rule Trojan_Win32_CoinMiner_SC_2147735461_0
         $x_1_3 = {64 a1 18 00 00 00 8b 40 30 80 78 02 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2508,6 +2594,7 @@ rule Trojan_Win32_CoinMiner_DY_2147735469_0
         $x_1_4 = "updata.reboot@gmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -2535,6 +2622,7 @@ rule Trojan_Win32_CoinMiner_RD_2147735972_0
         $x_1_3 = {2d 2d 64 6f 6e 61 74 65 2d 6c 65 76 65 6c [0-16] 2d 2d 6d 61 78 2d 63 70 75 2d 75 73 61 67 65 [0-16] 2d 6f [0-80] 2d 75 [0-80] 2d 70 [0-80] 2d 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2569,6 +2657,7 @@ rule Trojan_Win32_CoinMiner_DA_2147740133_0
         $x_1_14 = "@taskmgr.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (13 of ($x*))
 }
 
@@ -2597,6 +2686,7 @@ rule Trojan_Win32_CoinMiner_GG_2147745134_0
         $x_1_8 = "SELECT CommandLine FROM Win32_Process WHERE ProcessId = " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2624,6 +2714,7 @@ rule Trojan_Win32_CoinMiner_BM_2147745439_0
         $x_1_4 = "SYSTEM\\CurrentControlSet\\Services\\%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2655,6 +2746,7 @@ rule Trojan_Win32_CoinMiner_RS_2147756269_0
         $x_1_8 = "Khsopeyrkdmva" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -2679,6 +2771,7 @@ rule Trojan_Win32_CoinMiner_RM_2147787411_0
         $x_1_4 = "LoadLibraryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2706,6 +2799,7 @@ rule Trojan_Win32_CoinMiner_QS_2147807545_0
         $x_3_7 = "CreateWaitableTimerExW" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2731,6 +2825,7 @@ rule Trojan_Win32_CoinMiner_XO_2147808512_0
         $x_1_6 = "LC_DATA2_L" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -2765,6 +2860,7 @@ rule Trojan_Win32_CoinMiner_GD_2147811466_0
         $x_1_10 = "stc.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -2787,6 +2883,7 @@ rule Trojan_Win32_CoinMiner_AL_2147815005_0
         $x_2_2 = {31 3a 8b df 2b d9 8b 32 21 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2809,6 +2906,7 @@ rule Trojan_Win32_CoinMiner_CB_2147817137_0
         $x_2_2 = {89 db 31 10 4b 41 01 db 40 01 cb 39 f8 75 d9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2830,6 +2928,7 @@ rule Trojan_Win32_CoinMiner_DF_2147821124_0
         $x_2_1 = {33 d0 8b 4d f0 c1 e9 05 03 4d d8 33 d1 8b 45 d4 2b c2 89 45 d4 8b 4d e8 2b 4d dc 89 4d e8 e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2857,6 +2956,7 @@ rule Trojan_Win32_CoinMiner_RDE_2147841307_0
         $x_1_7 = "Win32_VideoController" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2889,6 +2989,7 @@ rule Trojan_Win32_CoinMiner_RPQ_2147845191_0
         $x_1_12 = "avast" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2912,6 +3013,7 @@ rule Trojan_Win32_CoinMiner_ABS_2147850827_0
         $x_1_3 = "E:\\CryptoNight\\bitmonero-master\\src\\miner\\x64\\CPU-Release\\Crypto.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2934,6 +3036,7 @@ rule Trojan_Win32_CoinMiner_ABAS_2147851295_0
         $x_1_2 = "-a m7 -o stratum+tcp://xcnpool.1gh.com:7333 -u CJJkVzjx8GNtX4z395bDY4GFWL6Ehdf8kJ.SERVER%RANDOM% -p x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2955,6 +3058,7 @@ rule Trojan_Win32_CoinMiner_RPY_2147852905_0
         $x_1_1 = {55 8b ec 51 53 57 e8 95 b1 04 00 68 2a 03 00 00 e8 8b c2 20 00 8b 0d d0 26 66 00 83 c4 04 03 c8 89 0d d0 26 66 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2979,6 +3083,7 @@ rule Trojan_Win32_CoinMiner_MAI_2147900138_0
         $x_1_4 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3004,6 +3109,7 @@ rule Trojan_Win32_CoinMiner_ASC_2147900738_0
         $x_1_5 = "FaQuMAQiyxyQgPrACtCRGvJQJStecOuHSBPjmhew" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3030,6 +3136,7 @@ rule Trojan_Win32_CoinMiner_ASD_2147901076_0
         $x_1_6 = {62 05 b5 22 d0 46 4b 2f 6f 20 4f 03 28 b5 ac de 63 20 0f 20 0f ac de 63}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3052,6 +3159,7 @@ rule Trojan_Win32_CoinMiner_NC_2147901180_0
         $x_1_2 = "del /f /s /q" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3077,6 +3185,7 @@ rule Trojan_Win32_CoinMiner_CCIB_2147912816_0
         $x_1_5 = "98 49 121 105 51 97 112 112 112 56 51 99 106 120 119 106 119 120 54 104 57 52 97 106 49 106 49 115 117 117 103 121 107 122 104 56 122 99 101 56 105 50 109 52 107 56 100 50 54 57 98 50 121 100 54 100 56 48 48 56 122 105 121 50" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3098,6 +3207,7 @@ rule Trojan_Win32_CoinMiner_MC_2147914353_0
         $x_1_1 = {8b d3 c1 ea 08 8b 88 cc 00 00 00 a1 98 a2 08 10 88 14 08 ff 05 98 a2 08 10 8b 15 d4 99 05 10 8b 86 90 00 00 00 8b 8a b0 00 00 00 81 c1 3b 30 f8 ff 03 c1 09 82 c0 00 00 00 8b 46 78 8b 8e cc 00 00 00 88 1c 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3121,6 +3231,7 @@ rule Trojan_Win32_CoinMiner_GXT_2147924062_0
         $x_5_3 = {8b f4 8b 85 ?? ?? ?? ?? 50 8b 8d ?? ?? ?? ?? 51 ff 15 ?? ?? ?? ?? 3b f4 e8 ?? ?? ?? ?? 8b f4 8b 85 ?? ?? ?? ?? 50 ff 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3143,6 +3254,7 @@ rule Trojan_Win32_CoinMiner_ACM_2147925085_0
         $x_2_2 = {8b d9 8b f2 8b d3 57 8d 7a 02 8d 64 24 00 66 8b 02 83 c2 02 66 85 c0 75 f5 8b ce 2b d7 d1 fa 8d 79 02 66 8b 01 83 c1 02 66 85 c0 75 f5 2b cf 8d 42 01 d1 f9 ba 02 00 00 00 03 c1 33 c9 f7 e2 0f 90 c1 f7 d9 0b c8 51}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3168,6 +3280,7 @@ rule Trojan_Win32_CoinMiner_HNAB_2147930739_0
         $x_1_5 = {2e 74 65 78 74 00 00 00 64 08 02 00 00 10 00 00 00 10 02 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 60 2e 64 61 74 61 00 00 00 b0 0a 00 00 00 20 02 00 00 10 00 00 00 20 02 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3199,6 +3312,7 @@ rule Trojan_Win32_CoinMiner_HNAC_2147931547_0
         $x_1_8 = {00 00 00 00 5c 78 6d 72 69 67 2e 65 78 65 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((3 of ($x_5_*))) or
@@ -3228,6 +3342,7 @@ rule Trojan_Win32_CoinMiner_GNT_2147932222_0
         $x_5_2 = {30 53 1d 2c 7c b3 e7 4a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3250,6 +3365,7 @@ rule Trojan_Win32_CoinMiner_PBD_2147939605_0
         $x_2_2 = "yyrutifnvc" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3271,6 +3387,7 @@ rule Trojan_Win32_CoinMiner_TL_2147940772_0
         $x_1_1 = {8b 8d cc f8 ff ff 51 6a 01 68 cd 0d 6e 52 8b 95 c4 fd ff ff 52 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3292,6 +3409,7 @@ rule Trojan_Win32_CoinMiner_ETL_2147944192_0
         $x_1_1 = {89 c1 89 c8 d1 e8 ba 43 08 21 84 f7 e2 89 d0 c1 e8 04 6b c0 3e 29 c1 89 c8 0f b6 80 c0 92 94 62 88 03 83 45 f4 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

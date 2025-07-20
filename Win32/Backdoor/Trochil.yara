@@ -64,6 +64,7 @@ rule Backdoor_Win32_Trochil_A_2147708431_0
         $n_10_48 = "C:\\Program Files\\Paladin\\Logs\\Log.paladin" ascii //weight: -10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (5 of ($x*))
 }
@@ -176,6 +177,7 @@ rule Backdoor_Win32_Trochil_D_2147708665_0
         $x_1_21 = {00 49 4e 53 00 44 45 4c 00 48 4f 4d 45 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or

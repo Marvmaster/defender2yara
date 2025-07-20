@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Drixed_B_2147690025_0
         $x_1_3 = {00 2e 73 64 61 74 61 00 00 20 00 00 00 2e 4b 42 00 44 69 73 70 6c 61 79 4e 61 6d 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Drixed_B_2147690025_1
         $x_1_3 = {c7 40 08 f7 28 9e 50 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanDownloader_Win32_Drixed_D_2147691035_0
         $x_1_5 = "S:\\Work\\_bin\\Release-Win32\\loader.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -88,6 +91,7 @@ rule TrojanDownloader_Win32_Drixed_E_2147692488_0
         $x_1_3 = {80 30 aa 42 3b d6 7c ef}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule TrojanDownloader_Win32_Drixed_F_2147692661_0
         $x_1_4 = {8d 78 10 8b 45 ?? 8b 55 ?? 33 07 33 57 04 83 65 0c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

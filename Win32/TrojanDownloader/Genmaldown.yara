@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Genmaldown_SB_2147753343_0
         $x_1_4 = "b861cb56458cfd731647525dd097ff16" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

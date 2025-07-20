@@ -20,6 +20,7 @@ rule Ransom_MSIL_Juwon_A_2147731693_0
         $x_1_5 = "jw ransomware and can not be accessed. To recover, you must enter" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Hioles_A_2147646322_0
         $x_1_2 = {6a 40 6a 00 6a 01 8d 4d f4 51 6a 00 6a 00 6a 00 8d 55 ec 52 8b 45 f8 50 8b 4d e8 51 ff 55 f0 85 c0 7c ?? 6a 00 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Hioles_B_2147648225_0
         $x_1_2 = {8b 14 11 03 d1 03 d0 c1 ca 03 41 8b c2 3b 4c 24 08 72 e9 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_Hioles_D_2147648779_0
         $x_1_3 = {8b 0b 81 f9 47 45 54 20 74 ?? 81 f9 50 4f 53 54 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Hioles_C_2147652997_0
         $x_1_4 = {8d 4e 08 89 4c 24 10 8b 4c 24 10 0f b7 09 66 8b d9 66 c1 eb 0c 66 85 db 74 ?? 66 83 fb 03 75 0b 23 cf 03 0e 03 4d 08 01 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_Win32_Hioles_GMX_2147900773_0
         $x_10_1 = {88 c2 80 e2 ?? 20 de 88 cc 80 e4 ?? 20 dd 08 f2 08 ec 30 e2 88 95 ?? ?? ?? ?? 08 c8 34 ff 88 85 ?? ?? ?? ?? 8a 85 ?? ?? ?? ?? 8a 8d ?? ?? ?? ?? 8a 95 ?? ?? ?? ?? 80 ca 00 20 d1 08 c8 a8 01 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

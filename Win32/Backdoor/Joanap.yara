@@ -17,6 +17,7 @@ rule Backdoor_Win32_Joanap_B_2147705780_0
         $x_1_2 = {68 30 75 00 00 8d 44 24 0c 6a 04 50 56 c7 44 24 18 00 10 00 00 e8 ?? ?? 00 00 83 c4 14 83 f8 ff 0f ?? ?? 00 00 00 8d 4c 24 08 51 e8 ?? ?? ff ff 6a 00 68 30 75 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_Win32_Joanap_B_2147705780_1
         $x_1_2 = {68 30 75 00 00 8d 44 24 0c 6a 04 50 56 c7 44 24 18 00 10 00 00 e8 ?? ?? 00 00 83 c4 14 83 f8 ff 0f ?? ?? 00 00 00 8d 4c 24 08 51 e8 ?? ?? ff ff 6a 00 68 30 75 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Backdoor_Win32_Joanap_A_2147705781_0
         $x_1_4 = "%%s\\%%s%%0%dd.%%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -89,6 +92,7 @@ rule Backdoor_Win32_Joanap_D_2147705818_0
         $x_1_3 = "RT_RCDATA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Backdoor_Win32_Joanap_D_2147705818_1
         $x_1_3 = "RT_RCDATA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule Backdoor_Win32_Joanap_E_2147705836_0
         $x_1_3 = "%s\\oem*.*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -158,6 +164,7 @@ rule Backdoor_Win32_Joanap_E_2147705836_1
         $x_1_3 = "%s\\oem*.*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -180,6 +187,7 @@ rule Backdoor_Win32_Joanap_F_2147706500_0
         $x_1_2 = {64 65 6c 20 2f 61 20 22 25 73 22 [0-16] 69 66 20 65 78 69 73 74 20 22 25 73 22 20 67 6f 74 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +209,7 @@ rule Backdoor_Win32_Joanap_G_2147706501_0
         $x_1_1 = {52 70 63 73 73 00 [0-10] 25 73 5c 25 73 [0-10] 77 61 75 73 65 72 76 2e 64 6c 6c 00 64 2e 62 61 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +234,7 @@ rule Backdoor_Win32_Joanap_H_2147707755_0
         $x_1_4 = {5f 5e 88 41 0e 5d 88 11 33 c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -251,6 +261,7 @@ rule Backdoor_Win32_Joanap_I_2147707756_0
         $x_1_6 = {00 43 6f 6e 74 65 6e 74 20 6c 65 6e 67 74 68 3a 20 31 30 30 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -279,6 +290,7 @@ rule Backdoor_Win32_Joanap_K_2147720492_0
         $x_10_4 = "%s?action=CmdRes&u=%I64u&err=exec-%d" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -302,6 +314,7 @@ rule Backdoor_Win32_Joanap_L_2147720494_0
         $x_10_3 = {b8 4d 5a 00 00 49 8b d9 4d 8b e8 4c 8b f2 4c 8b e1 66 39 01 74 ?? b9 c1 00 00 00 ff 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

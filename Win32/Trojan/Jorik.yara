@@ -18,6 +18,7 @@ rule Trojan_Win32_Jorik_B_2147681356_0
         $x_1_4 = "cmd.exe /c \"%s\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Jorik_MA_2147819026_0
         $x_1_2 = {f4 01 00 00 9c e3 40 00 00 00 00 00 80 19 42 00 e0 81 45 00 e8 74 00 00 08 90 45 00 f6 50 40 00 00 90 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Jorik_MB_2147824225_0
         $x_1_4 = ".icm\\PersistentHandler" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

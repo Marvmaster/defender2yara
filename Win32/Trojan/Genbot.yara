@@ -17,6 +17,7 @@ rule Trojan_Win32_Genbot_RPX_2147888149_0
         $x_1_2 = {8b f4 6a 40 68 00 10 00 00 8b 45 0c 50 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

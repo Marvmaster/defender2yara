@@ -20,6 +20,7 @@ rule Trojan_Win64_Regin_D_2147692608_0
         $x_1_5 = {80 00 46 2f bb 01 00 00 00 80 00 46 34 33 d2 80 00 46 36 8d 4b 01 80 00 46 39 44 8b c3 80 00 46 3c e8 ?? ?? ?? ?? 80 00 46 41 8d 4b 03 80 00 46 44 45 33 c0 80 00 46 47 33 d2 80 00 46 49 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win64_Regin_B_2147696092_0
         $x_1_2 = "\\\\.\\PhysicalDrive%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

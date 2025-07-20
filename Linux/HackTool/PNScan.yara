@@ -23,6 +23,7 @@ rule HackTool_Linux_PNScan_A_2147767152_0
         $x_1_8 = "car /proc/self/exe | %s printf 512 /tmp/slime >> /etc/init.d/rcS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

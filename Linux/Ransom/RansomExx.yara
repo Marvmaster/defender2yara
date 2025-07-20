@@ -24,6 +24,7 @@ rule Ransom_Linux_RansomExx_A_2147810327_0
         $x_1_9 = "BFC02A208B37E9B96A9ABFFCCED1086B8865B672540E54B0EBD9811F87C4EEE14B99BEAD988" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule Ransom_Linux_RansomExx_B_2147810328_0
         $x_1_3 = {48 be 58 58 58 58 58 58 58 58 58 bf 58 58 58 58 58 58 58 58 58 89 30 48 89 78 08 c7 40 10 58 58 58 58 c6 40 14 00 48 8d 95 60 ff ff ff 48 8b 45 f8 48 89 d6 48 89 c7 e8 c8 eb 01 00 83 f8 ff 74 0f 48 8b 45 f8 48 89 c7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

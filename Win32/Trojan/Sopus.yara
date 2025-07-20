@@ -24,6 +24,7 @@ rule Trojan_Win32_Sopus_A_2147723335_0
         $x_1_10 = "philipostendorf.de" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -67,6 +68,7 @@ rule Trojan_Win32_Sopus_B_2147723336_0
         $x_1_21 = "onyx.deepdns.cryptostorm.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 10 of ($x_1_*))) or
             (all of ($x*))

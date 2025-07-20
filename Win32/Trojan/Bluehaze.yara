@@ -18,6 +18,7 @@ rule Trojan_Win32_Bluehaze_SK_2147837776_0
         $x_1_3 = "cmd.exe /C reg add HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run /v ACNTV /t REG_SZ /d \"Rundll32.exe SHELL32.DLL,ShellExec_RunDLL \"C:\\Users\\Public\\Libraries\\CNNUDTV\\DateCheck.exe\"\" /f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

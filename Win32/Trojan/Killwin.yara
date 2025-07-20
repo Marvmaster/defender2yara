@@ -18,6 +18,7 @@ rule Trojan_Win32_Killwin_C_2147624813_0
         $x_1_4 = "IRAQ_RESISTANCE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_Win32_Killwin_D_2147638048_0
         $x_1_3 = "shutdown -r -t 15 -f -c \"Bye-Bye" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

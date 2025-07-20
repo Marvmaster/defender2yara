@@ -71,6 +71,7 @@ rule TrojanClicker_Win32_QingDL_17732_0
         $x_1_57 = "http://ys.cn.yahoo.com/mohu/index.html?p=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 2 of ($x_4_*) and 47 of ($x_1_*))) or
             ((4 of ($x_5_*) and 50 of ($x_1_*))) or

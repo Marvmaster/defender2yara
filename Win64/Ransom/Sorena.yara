@@ -19,6 +19,7 @@ rule Ransom_Win64_Sorena_2147750930_0
         $x_1_4 = "sorena Virus" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Upatre_DSK_2147750141_0
         $x_2_2 = {89 d0 0f b6 80 ?? ?? ?? ?? 89 c1 8b 55 f4 8b 45 08 01 d0 0f b6 55 e7 31 ca 88 10 83 45 f4 01 8b 45 f4 3b 45 0c 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Upatre_DHA_2147754111_0
         $x_1_1 = {c1 e9 02 8b 06 83 c6 04 bb 08 08 08 08 31 d8 89 07 83 c7 04 83 e9 01 83 f9 00 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Upatre_ACS_2147793334_0
         $x_10_2 = {76 0f 8a 94 01 ?? ?? ?? ?? 88 14 30 40 3b c7 72 f1}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win32_Upatre_ACM_2147793335_0
         $x_3_4 = "/error/9mor.exe" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_Win32_Upatre_ACD_2147793358_0
         $x_10_2 = {8b d0 50 4a 8b fa 03 fe 88 0f 58}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Trojan_Win32_Upatre_AMN_2147793413_0
         $x_3_4 = "Updates downloader" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Trojan_Win32_Upatre_AA_2147793771_0
         $x_10_2 = {8b 56 08 6b c0 2c 89 4c 10 1c 8b 06 8b 56 08 6b c0 2c 89 4c 10 20}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +181,7 @@ rule Trojan_Win32_Upatre_EF_2147794004_0
         $x_10_2 = {8b 4f ff 8a cd eb d9 47 4b 8b c3 c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +206,7 @@ rule Trojan_Win32_Upatre_MD_2147821962_0
         $x_1_4 = ":\\TEMP\\hcbnaf.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +230,7 @@ rule Trojan_Win32_Upatre_MA_2147823657_0
         $x_3_3 = {8b 45 fc c1 e1 02 03 c1 8b 00 c3}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -245,6 +255,7 @@ rule Trojan_Win32_Upatre_MB_2147823659_0
         $x_1_4 = "hummy.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +279,7 @@ rule Trojan_Win32_Upatre_MF_2147828808_0
         $x_1_3 = "kilf.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -292,6 +304,7 @@ rule Trojan_Win32_Upatre_MG_2147831537_0
         $x_1_4 = "/images/new/TARGTsp.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -314,6 +327,7 @@ rule Trojan_Win32_Upatre_MH_2147833617_0
         $x_5_2 = "hfdfjdk.exe" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -335,6 +349,7 @@ rule Trojan_Win32_Upatre_RB_2147838873_0
         $x_1_1 = {8d 43 01 0f b6 d8 8a 14 3b 0f b6 c2 03 c1 0f b6 c8 89 4d f8 0f b6 04 39 88 04 3b 88 14 39 0f b6 0c 3b 0f b6 c2 03 c8 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 41 0f b6 04 39 8b 4d fc 30 04 0e 46 8b 4d f8 3b 75 08 72 b6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -356,6 +371,7 @@ rule Trojan_Win32_Upatre_RPA_2147839253_0
         $x_1_1 = {83 c4 04 50 56 56 83 2c 24 01 01 04 24 5e 8b 36 56 59 58 8b f0 58 83 ea 01 80 f1 f1 c0 c1 05 80 e9 05 8a d8 fe cb 80 e3 01 32 cb 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -377,6 +393,7 @@ rule Trojan_Win32_Upatre_AUP_2147847590_0
         $x_1_1 = {51 8a 06 46 8a 0f 32 c1 88 07 47 59 4b 74 07 49 75 ee 5b 5b 5f c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -398,6 +415,7 @@ rule Trojan_Win32_Upatre_AUP_2147847590_1
         $x_1_1 = {20 45 20 20 00 6a 6a 30 40 68 68 ?? ?? ?? ?? ec 56 57 8b 7d 0c 33 c0 8b c8 8b 75 08 8a 0e 8a 07 3b c1 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -421,6 +439,7 @@ rule Trojan_Win32_Upatre_ME_2147901376_0
         $x_1_3 = ":\\TEMP\\samhe.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -445,6 +464,7 @@ rule Trojan_Win32_Upatre_MC_2147901450_0
         $x_1_4 = "henis.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -466,6 +486,7 @@ rule Trojan_Win32_Upatre_HNS_2147905870_0
         $x_2_1 = {c5 00 2c 86 08 d0 14 4a 4a c3 f2 ee 45 15 64 23 3d e0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -487,6 +508,7 @@ rule Trojan_Win32_Upatre_HNS_2147905870_1
         $x_1_1 = {8b 14 96 89 14 81 eb db 8b 45 f8 c1 e0 02 89 45 fc 8b 4d fc 89 4d f0 eb 09 8b 55 f0 83 c2 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -509,6 +531,7 @@ rule Trojan_Win32_Upatre_A_2147906078_0
         $x_2_2 = {53 6a 01 57 56 ff 15 ?? 21 40 00 55 6a 01 57 56 ff 15 ?? 21 40 00 55 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -530,6 +553,7 @@ rule Trojan_Win32_Upatre_GZY_2147906138_0
         $x_10_1 = {08 00 5e 03 00 00 00 00 00 60 e8 ?? ?? ?? ?? 5d 81 ed 10 00 00 00 81 ed ?? ?? ?? ?? e9 ?? ?? ?? ?? 6f 21 e3 0b b8 ?? ?? ?? ?? 03 c5 81 c0 ?? ?? ?? ?? b9 ?? ?? ?? ?? ba ?? ?? ?? ?? 30 10}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -551,6 +575,7 @@ rule Trojan_Win32_Upatre_CCJF_2147917082_0
         $x_5_1 = {31 d2 2b 13 f7 da 8d 5b 04 f7 d2 8d 52 f0 c1 ca 02 c1 ca 06 31 fa 83 c2 ff 52 5f c1 c7 02 c1 c7 06 89 11 83 c1 04 8d 76 fc 85 f6 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -572,6 +597,7 @@ rule Trojan_Win32_Upatre_BAA_2147935614_0
         $x_2_1 = {33 db 8a 06 c6 04 1f ff 20 04 1f 46 47 49 eb eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -593,6 +619,7 @@ rule Trojan_Win32_Upatre_BAA_2147935614_1
         $x_5_1 = {8b 09 47 8b c1 59 33 d0 59 8b c2 5a 88 27 4a 8b c2 46 85 c0 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -617,6 +644,7 @@ rule Trojan_Win32_Upatre_MR_2147945547_0
         $x_1_4 = "C:\\TEMP\\gffos.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

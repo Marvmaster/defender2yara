@@ -18,6 +18,7 @@ rule Trojan_Win32_Chinoxy_A_2147644034_0
         $x_1_4 = {00 43 6f 6e 74 72 6f 6c 53 65 72 76 69 63 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Chinoxy_B_2147717059_0
         $x_1_5 = "@echo kjyuyutuytnfgfhghd>>fsewewfrtretrwwe.ewe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Chinoxy_PA_2147751943_0
         $x_1_3 = "\\tasks\\infokey.dat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

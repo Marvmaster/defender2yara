@@ -16,6 +16,7 @@ rule Trojan_Win64_FrostLizzard_C_2147925362_0
         $x_1_1 = {48 89 44 24 40 33 d2 48 8b 44 24 40 8b 48 ?? e8 4e fd ff ff 48 89 84 24 ?? 00 00 00 48 ?? 44 24 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

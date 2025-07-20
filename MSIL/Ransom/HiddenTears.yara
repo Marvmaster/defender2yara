@@ -20,6 +20,7 @@ rule Ransom_MSIL_HiddenTears_DK_2147773495_0
         $x_1_5 = ".locked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Ransom_MSIL_HiddenTears_AYA_2147929769_0
         $x_1_7 = "FileEncryption" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Ransom_MSIL_HiddenTears_SUR_2147930139_0
         $x_1_4 = "GetFilesAndEncrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -102,6 +105,7 @@ rule Ransom_MSIL_HiddenTears_AYB_2147930965_0
         $x_1_7 = "CreateEncryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule Ransom_MSIL_HiddenTears_AYC_2147940215_0
         $x_1_5 = "SendEncryptedKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

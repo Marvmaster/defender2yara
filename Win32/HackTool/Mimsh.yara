@@ -16,6 +16,7 @@ rule HackTool_Win32_Mimsh_2147690317_0
         $x_1_2 = "tinyurl.com/mnq854e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

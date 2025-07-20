@@ -18,6 +18,7 @@ rule Backdoor_Win32_CobaltStrikeLoader_D_2147779325_0
         $x_1_3 = "\\regedit.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Backdoor_Win32_CobaltStrikeLoader_PAA_2147781871_0
         $x_1_10 = "testfile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Backdoor_Win32_CobaltStrikeLoader_CM_2147793650_0
         $x_1_3 = "*(p + %d) : %f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +125,7 @@ rule Backdoor_Win32_CobaltStrikeLoader_HC_2147795438_0
         $x_1_2 = "!This is a Windows NT windowed dynamic link library" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +149,7 @@ rule Backdoor_Win32_CobaltStrikeLoader_HCA_2147799434_0
         $x_1_3 = "!This is a Windows NT windowed dynamic link library" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -171,6 +176,7 @@ rule Backdoor_Win32_CobaltStrikeLoader_MS_2147818471_0
         $x_1_2 = {8a 88 e0 0b 01 10 80 f1 3e 88 8c 05 dc fc ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

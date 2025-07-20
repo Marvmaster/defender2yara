@@ -16,6 +16,7 @@ rule VirTool_Win64_Angomod_A_2147734169_0
         $x_1_2 = {b9 80 25 00 00 66 39 08 73 09 48 8b bf 90 03 00 00 eb 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

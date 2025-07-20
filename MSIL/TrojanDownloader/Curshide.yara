@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Curshide_A_2147729510_0
         $x_1_3 = "http://cannotjavac.com/pte/linkwindowscrush.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

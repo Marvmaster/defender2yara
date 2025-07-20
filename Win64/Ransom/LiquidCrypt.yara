@@ -21,6 +21,7 @@ rule Ransom_Win64_LiquidCrypt_PB_2147809037_0
         $x_1_6 = {5c 63 70 70 45 6e 64 5c [0-16] 5c 63 70 70 45 6e 64 78 36 34 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

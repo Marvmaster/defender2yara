@@ -18,6 +18,7 @@ rule Backdoor_Win32_Wkysol_A_2147617808_0
         $x_5_4 = {31 39 39 39 30 38 31 37 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_2_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Backdoor_Win32_Wkysol_B_2147649835_0
         $x_1_7 = "PID:%5d    PATH:%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -73,6 +75,7 @@ rule Backdoor_Win32_Wkysol_D_2147652108_0
         $x_1_2 = {70 2f 6b 79 73 5f 61 6c 6c 6f 77 5f 67 65 74 2e 61 73 70 3f 6e 61 6d 65 3d 00 00 00 65 78 70 6c 6f 72 65 72 2e 65 78 65 00 00 00 00 25 73 00 00 70 64 74 70 72 65 74 74 79 2e 74 6d 70 00 00 00 67 64 74 70 72 65 74 74 79 2e 74 6d 70 00 00 00 70 74 70 72 65 74 74 79 2e 74 6d 70 00 00 00 00 67 74 70 72 65 74 74 79 2e 74 6d 70 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +109,7 @@ rule Backdoor_Win32_Wkysol_E_2147652176_0
         $x_2_14 = {73 63 64 6c 6c 00 00 00 73 63 65 78 65 00 00 00 75 72 6c 00 73 6c 65 65 70 74 69 6d 65 00 00 00 73 72 76 5f 69 6e 66 6f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -136,6 +140,7 @@ rule Backdoor_Win32_Wkysol_F_2147652183_0
         $x_1_6 = "WTF\\Config.wtf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -161,6 +166,7 @@ rule Backdoor_Win32_Wkysol_I_2147657594_0
         $x_1_2 = {8b 87 a0 01 00 00 83 e8 06 74 ?? 83 e8 03 74 ?? 83 e8 06 74 ?? 83 e8 08 74 ?? 48 74 ?? 83 e8 04 8d 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -186,6 +192,7 @@ rule Backdoor_Win32_Wkysol_J_2147659619_0
         $x_1_6 = {8d 55 a8 52 53 53 53 53 53 53 68 20 02 00 00 6a 20 6a 02 8d 45 dc 50 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

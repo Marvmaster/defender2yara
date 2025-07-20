@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Pusrac_A_2147603161_0
         $x_1_4 = "ShellExecuteExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

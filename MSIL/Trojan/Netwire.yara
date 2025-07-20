@@ -23,6 +23,7 @@ rule Trojan_MSIL_Netwire_KZD_2147814763_0
         $x_2_8 = "FromBase64String" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule Trojan_MSIL_Netwire_KJX_2147814766_0
         $x_2_10 = "FromBase64String" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_MSIL_Netwire_LJX_2147814767_0
         $x_10_1 = {17 8d 5e 00 00 01 25 16 1f 23 9d 28 ?? ?? ?? 0a 20 00 01 00 00 14 14 17 8d 10 00 00 01 25 16 02 a2 28 ?? ?? ?? 0a 74 48 00 00 01 0a 2b 00 06 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +104,7 @@ rule Trojan_MSIL_Netwire_GLB_2147814769_0
         $x_2_7 = "HCVQuestionnaire" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +132,7 @@ rule Trojan_MSIL_Netwire_SOR_2147815340_0
         $x_1_7 = "AutoJack.View.EngineView.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +157,7 @@ rule Trojan_MSIL_Netwire_MOR_2147815341_0
         $x_7_4 = {17 8d 59 00 00 01 25 16 1f 20 9d 28 ?? ?? ?? 0a 20 00 01 00 00 14 14 17 8d 10 00 00 01 25 16 02 a2 6f ?? ?? ?? 0a 74 30 00 00 01 0a 2b 00 06 2a}  //weight: 7, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +185,7 @@ rule Trojan_MSIL_Netwire_ASQ_2147815343_0
         $x_1_7 = "Invoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +213,7 @@ rule Trojan_MSIL_Netwire_TSQ_2147815344_0
         $x_1_7 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +235,7 @@ rule Trojan_MSIL_Netwire_IRJ_2147818346_0
         $x_1_1 = {73 d6 12 00 06 0b 07 03 16 28 ?? ?? ?? 0a 6f ?? ?? ?? 06 28 ?? ?? ?? 0a 14 72 9a c8 00 70 72 a6 c8 00 70 72 aa c8 00 70 28 ?? ?? ?? 0a 72 b2 c8 00 70 72 b8 c8 00 70 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 18 8d 17 00 00 01 25 17 18 8d 17 00 00 01 25 16 05 a2 25 17 04 a2 a2 14 14 14 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 0a 2b 00 06 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +260,7 @@ rule Trojan_MSIL_Netwire_YZS_2147820394_0
         $x_1_4 = {8c 17 00 00 01 a2 11 08 14 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +282,7 @@ rule Trojan_MSIL_Netwire_AMFA_2147823106_0
         $x_1_1 = {20 16 f8 00 00 0c 2b 11 06 08 20 00 01 00 00 28 ?? ?? ?? 06 0a 08 15 58 0c 08 16 fe 04 16 fe 01 0d 09 2d e4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -293,6 +304,7 @@ rule Trojan_MSIL_Netwire_FICC_2147824707_0
         $x_1_1 = {07 11 0b 8f 10 00 00 01 25 71 10 00 00 01 7e 01 00 00 04 11 0b 1f 10 5d 91 61 d2 81 10 00 00 01 00 11 0b 17 58 13 0b 11 0b 07 8e 69 fe 04 13 0e 11 0e 2d cb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +330,7 @@ rule Trojan_MSIL_Netwire_TENW_2147824911_0
         $x_1_5 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -339,6 +352,7 @@ rule Trojan_MSIL_Netwire_BAM_2147825128_0
         $x_1_1 = {02 07 02 8e b7 5d 02 07 02 8e b7 5d 91 08 07 08 8e b7 5d 91 61 02 07 17 58 02 8e b7 5d 91 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 07 15 58 0b 07 16 2f cb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -361,6 +375,7 @@ rule Trojan_MSIL_Netwire_FCG_2147825956_0
         $x_1_2 = {8e b7 5d 91 61 8c ?? ?? ?? 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -382,6 +397,7 @@ rule Trojan_MSIL_Netwire_XNR_2147825960_0
         $x_1_1 = {06 08 8f 0a 00 00 01 25 47 03 08 1f 10 5d 91 61 d2 52 00 08 17 d6 0c 08 07 fe 02 16 fe 01 0d 09 2d dd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -404,6 +420,7 @@ rule Trojan_MSIL_Netwire_JQK_2147825961_0
         $x_1_2 = {7e 18 00 00 04 8e b7 5d 91 61 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -429,6 +446,7 @@ rule Trojan_MSIL_Netwire_NTW_2147827638_0
         $x_1_5 = "B8D25T" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -450,6 +468,7 @@ rule Trojan_MSIL_Netwire_SEF_2147827640_0
         $x_1_1 = {06 11 04 02 11 04 91 03 11 04 03 8e b7 5d 91 61 07 11 04 07 8e b7 5d 91 61 9c 11 04 17 d6 13 04 11 04 11 05 31 da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -471,6 +490,7 @@ rule Trojan_MSIL_Netwire_CR_2147828107_0
         $x_1_1 = {91 61 d2 9c 11 05 17 58 16 2d 04 13 05 11 05 06 8e 69 32 dd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -497,6 +517,7 @@ rule Trojan_MSIL_Netwire_NTA_2147828206_0
         $x_1_6 = "CompressionMode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -521,6 +542,7 @@ rule Trojan_MSIL_Netwire_BWFA_2147828290_0
         $x_1_4 = "G4G15" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -543,6 +565,7 @@ rule Trojan_MSIL_Netwire_WYM_2147829490_0
         $x_1_2 = "asfsafsafs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -568,6 +591,7 @@ rule Trojan_MSIL_Netwire_NEA_2147829570_0
         $x_1_5 = "ObfuscatedByGoliath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -595,6 +619,7 @@ rule Trojan_MSIL_Netwire_NEB_2147829895_0
         $x_1_7 = "aELxsuBREvr7KkRcMS2fiRoaY" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -617,6 +642,7 @@ rule Trojan_MSIL_Netwire_NEC_2147830478_0
         $x_1_2 = "SXdHTGR3T0E0V1hkWXdDSFEzMTlNOEw1R0t0aGpFY3k=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -639,6 +665,7 @@ rule Trojan_MSIL_Netwire_NEE_2147832258_0
         $x_2_2 = "Load" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -673,6 +700,7 @@ rule Trojan_MSIL_Netwire_NEF_2147832263_0
         $x_1_14 = "WaitBag" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -694,6 +722,7 @@ rule Trojan_MSIL_Netwire_AN_2147832526_0
         $x_1_1 = {13 09 11 0a 6f ?? 00 00 0a 13 0b 2b 19 11 0a 11 09 6f ?? 00 00 0a 0d 08 09 28 ?? 00 00 0a d6 0c 11 09 17 d6 13 09 11 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -717,6 +746,7 @@ rule Trojan_MSIL_Netwire_AN_2147832526_1
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -741,6 +771,7 @@ rule Trojan_MSIL_Netwire_AGX_2147834666_0
         $x_1_4 = "DnsRip" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -765,6 +796,7 @@ rule Trojan_MSIL_Netwire_AIFT_2147835047_0
         $x_1_4 = "IntelReaderLibrary" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -790,6 +822,7 @@ rule Trojan_MSIL_Netwire_EXTF_2147837443_0
         $x_1_5 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -813,6 +846,7 @@ rule Trojan_MSIL_Netwire_NEAA_2147840466_0
         $x_1_3 = "Invoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -835,6 +869,7 @@ rule Trojan_MSIL_Netwire_NEAB_2147840467_0
         $x_5_2 = "L0Mgc2NodGFza3MgL2NyZWF0ZSAvdG4gXGtaR0dIIC90ciAi" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -857,6 +892,7 @@ rule Trojan_MSIL_Netwire_NEAC_2147840979_0
         $x_5_2 = "SmartAssembly.Attributes" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -883,6 +919,7 @@ rule Trojan_MSIL_Netwire_IFA_2147896144_0
         $x_1_6 = "ToInt32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -904,6 +941,7 @@ rule Trojan_MSIL_Netwire_CH_2147941361_0
         $x_2_1 = {6a 5f 6d 0b 11 04 06 95 13 06 11 04 06 11 04 07 95 9e 11 04 07 11 06 9e 09 11 07 02 11 07 91 11 04 11 04 06 95 11 04 07 95 58 6e 20 ?? ?? ?? ?? 6a 5f 69 95 61 d2 9c 00 11 07 17 58}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

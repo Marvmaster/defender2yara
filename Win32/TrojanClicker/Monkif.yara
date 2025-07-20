@@ -17,6 +17,7 @@ rule TrojanClicker_Win32_Monkif_A_2147621080_0
         $x_1_3 = {63 6f 6e 66 69 67 2e 64 6c 6c 00 49 6e 76 6f 6b 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

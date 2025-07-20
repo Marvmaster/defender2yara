@@ -17,6 +17,7 @@ rule Trojan_MSIL_Bazarloader_MBEB_2147848735_0
         $x_1_2 = {13 12 20 01 e8 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

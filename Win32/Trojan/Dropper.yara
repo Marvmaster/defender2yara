@@ -19,6 +19,7 @@ rule Trojan_Win32_Dropper_AI_2147799481_0
         $x_1_4 = "GetTickCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Dropper_AA_2147806304_0
         $x_1_2 = {8a 14 37 8b c7 25 3f 00 00 80 79 05 48 83 c8 c0 40 8b 4d fc 47 0f b6 04 08 02 c2 02 d8 0f b6 cb 0f b6 04 31 88 44 37 ff 88 14 31 81 ff 00 01 00 00 7c cd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Dropper_CD_2147811173_0
         $x_1_2 = {33 d9 03 f1 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_Dropper_2147812534_0
         $x_2_3 = "Local\\Temp\\dca966acd88e0f153d618b8e5840f75be03b3823de7dde6396423edb10cf47a8Srv.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

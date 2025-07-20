@@ -20,6 +20,7 @@ rule Backdoor_Win32_IISBackdoor_A_2147777389_0
         $x_1_6 = "No Creds Found" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

@@ -18,6 +18,7 @@ rule TrojanProxy_Win32_Donbot_A_2147629391_0
         $x_1_4 = {48 45 4c 4f 20 25 73 ?? ?? ?? 4d 41 49 4c 20 46 52 4f 4d 3a 3c 25 73 3e ?? ?? ?? 52 43 50 54 20 54 4f 3a 3c 25 73 3e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

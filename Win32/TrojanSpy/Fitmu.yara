@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Fitmu_A_2147801497_0
         $x_1_3 = {2b f0 8a 14 06 30 94 04 ?? ?? ?? ?? 40 3b c1 7c f1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

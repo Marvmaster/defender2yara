@@ -22,6 +22,7 @@ rule Trojan_Win32_Disstl_DD_2147785331_0
         $x_3_7 = "GetLongPathNameA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_Disstl_AP_2147798303_0
         $x_1_5 = "Passwords.txt not found" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_Disstl_CG_2147808325_0
         $x_1_2 = {bb 1c 52 90 eb 01 b7 e9 c1 01 00 00 eb 02 f3 02 8b 02 eb 01 f3 33 42 04 72 47}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

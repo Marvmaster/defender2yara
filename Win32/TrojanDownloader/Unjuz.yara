@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Unjuz_A_2147649014_0
         $x_3_6 = {8b 4d cc 8b 11 8b 4d cc 8b 42 4c ff d0 8b 4d cc 89 8d 88 fb ff ff 8b 95 88 fb ff ff 89 95 8c fb ff ff 83 bd 8c fb ff ff 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

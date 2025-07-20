@@ -18,6 +18,7 @@ rule PWS_Win32_Kuluoz_A_2147657373_0
         $x_1_3 = "|(ftps:\\/\\/))?(?<NHost>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

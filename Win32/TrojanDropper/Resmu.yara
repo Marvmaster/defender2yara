@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Resmu_A_2147637449_0
         $x_1_4 = "ndisrd_m.inf -c s -i nt_ndisrd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Ropest_E_2147688178_0
         $x_1_3 = {68 74 74 70 3a 2f 2f 77 77 77 2e 6c 69 76 65 6a 6f 75 72 6e 61 6c 2e 63 6f 6d 2f 73 65 61 72 63 68 2f 3f 68 6f 77 3d 74 6d 26 61 72 65 61 3d 64 65 66 61 75 6c 74 26 71 3d 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Ropest_E_2147688178_1
         $x_1_6 = {69 c0 51 2d 9e cc c1 c0 0f 69 c0 93 35 87 1b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -71,6 +73,7 @@ rule Trojan_Win32_Ropest_J_2147691470_0
         $x_1_5 = {3d 40 1a cd 00 0f 84 3f 01 00 00 3d 08 c5 bb 6c 0f 84 34 01 00 00 3d 82 16 4e 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_Win32_Ropest_K_2147695442_0
         $x_1_6 = {81 38 21 43 46 47}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Xploder_GNE_2147925057_0
         $x_5_2 = {10 1e 95 0d ?? ?? ?? ?? e4 ?? 51 d0 55 ?? 30 3f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

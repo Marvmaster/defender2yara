@@ -21,6 +21,7 @@ rule Trojan_Win32_Rpdactaele_A_2147728914_0
         $x_10_7 = "RpcBindingSetAuthInfoExW" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Trojan_Win32_Rpdactaele_C_2147728916_0
         $x_10_5 = "ZwSetInformationFile" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

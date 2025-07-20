@@ -32,6 +32,7 @@ rule Backdoor_Win32_Gaobot_B_2147584869_0
         $x_1_17 = "g_pInstaller" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -62,6 +63,7 @@ rule Backdoor_Win32_Gaobot_C_2147584871_0
         $x_1_10 = "UGLY BOT 1.0 by eric and vice" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

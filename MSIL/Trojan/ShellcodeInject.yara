@@ -19,6 +19,7 @@ rule Trojan_MSIL_ShellcodeInject_AX_2147905008_0
         $x_1_4 = {28 52 01 00 06 13 04 11 04 16 8d 50 00 00 01 33 01 2a 1f 10 8d 50 00 00 01 13 05 28 87 00 00 0a 25 17 6f 88 00 00 0a 25 18 6f 89 00 00 0a 25 09 6f 8a 00 00 0a 25 11 05 6f 8b 00 00 0a 6f 8c 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_MSIL_ShellcodeInject_CFN_2147941803_0
         $x_1_5 = "worker factory start routine, bytesWritten" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -45,6 +45,7 @@ rule Backdoor_MSIL_Zqorat_A_2147725667_0
         $x_1_31 = "XpOrHigher" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((20 of ($x_1_*))) or
             ((1 of ($x_2_*) and 18 of ($x_1_*))) or

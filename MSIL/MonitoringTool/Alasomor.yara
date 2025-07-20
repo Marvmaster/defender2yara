@@ -29,6 +29,7 @@ rule MonitoringTool_MSIL_Alasomor_A_232545_0
         $x_1_15 = "SendScreenRecords" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (13 of ($x*))
 }
 

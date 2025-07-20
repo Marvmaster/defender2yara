@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Popagerty_A_2147649303_0
         $x_1_3 = {64 6f 77 6e 2e 70 6f 70 2d 75 70 67 75 69 64 65 2e 63 6f 6d 2f 73 65 74 75 70 2f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

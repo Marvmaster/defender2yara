@@ -19,6 +19,7 @@ rule HackTool_Win32_PowerSploit_A_2147725414_0
         $x_1_5 = {bb 47 13 72 6f 6a 00 53 ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule HackTool_Win32_PowerSploit_A_2147725414_1
         $x_1_5 = {bb 47 13 72 6f 6a 00 59 41 89 da ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

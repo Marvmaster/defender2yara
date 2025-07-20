@@ -16,6 +16,7 @@ rule Trojan_Win32_ValidAlpha_A_2147916850_0
         $x_100_1 = {66 c7 00 ab cd c6 40 02 ef ?? 03 00 00 00 48 89 c1 ?? 03 00 00 00}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_ValidAlpha_B_2147916851_0
         $x_100_4 = "main.SelfDelete" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

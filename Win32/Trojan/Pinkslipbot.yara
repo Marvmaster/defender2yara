@@ -17,6 +17,7 @@ rule Trojan_Win32_Pinkslipbot_PA_2147734880_0
         $x_1_2 = {28 cd 88 6c 04 ?? 01 d0 83 f8 0e 89 44 24 ?? 0f 84 ?? ?? ?? ?? eb ?? 31 c0 8d 4c 24 ?? 89 4c 24 ?? 89 44 24 ?? eb 1f 00 8b 44 24 ?? 8a 0c 05 ?? ?? ?? 00 8b 94 24 ?? ?? ?? ?? 81 f2 ?? ?? ?? ?? 8a 2c 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Pinkslipbot_RPM_2147832970_0
         $x_1_1 = {8b 45 e8 8b 55 ec 01 02 8b 45 d8 03 45 b0 03 45 e8 89 45 b4 6a 00 e8 ?? ?? ?? ?? 03 45 b4 8b 55 ec 31 02 83 45 e8 04 83 45 ec 04 8b 45 e8 3b 45 e4 72 cd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

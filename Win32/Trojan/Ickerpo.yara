@@ -19,6 +19,7 @@ rule Trojan_Win32_Ickerpo_A_2147633488_0
         $x_1_5 = "RazorMint" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

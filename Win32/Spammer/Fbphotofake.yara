@@ -22,6 +22,7 @@ rule Spammer_Win32_Fbphotofake_A_2147639793_0
         $x_1_8 = "%s?act=fb_stat&num=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

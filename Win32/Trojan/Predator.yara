@@ -17,6 +17,7 @@ rule Trojan_Win32_Predator_J_2147731128_0
         $x_1_2 = {55 8b ec 8a 01 f6 d0 32 45 08 5d c2 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Predator_R_2147740927_0
         $x_2_2 = {88 14 01 40 3b 05 ?? ?? ?? ?? 72 e1 13 00 8b 0d ?? ?? ?? ?? 8a 94 01 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 88 14 01}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Predator_R_2147740927_1
         $x_2_2 = {8a c1 24 fc c0 e0 04 0a 44 33 01 8a d9 80 e1 f0 02 c9 02 c9 0a 0c 2e c0 e3 06 0a 5c 2e 02 88 0c 3a 42 88 04 3a 42 88 1c 3a 83 c6 04 42 3b 35 ?? ?? ?? ?? 72 bb 10 00 8b 1d ?? ?? ?? ?? 8a 4c 33 03 8b 2d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_Predator_R_2147740927_2
         $x_1_2 = {eb 07 8b 45 ?? 40 89 45 ?? 8b 45 ?? 3b 45 ?? 7d 2a 8b 45 ?? 03 45 ?? 0f be 00 89 45 ?? e8 ?? ?? ?? ?? 89 45 ?? 8b 45 ?? 33 45 ?? 89 45 ?? 8b 45 ?? 03 45 ?? 8a 4d ?? 88 08 eb c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_Win32_Predator_R_2147740927_3
         $x_5_5 = {0b ca 88 4d ?? 1a 00 c1 e2 ?? ?? ?? ?? ?? ?? ?? ?? 25}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +134,7 @@ rule Trojan_Win32_Predator_DSK_2147741175_0
         $x_3_1 = {8a 41 03 8a d0 8a d8 80 e2 f0 80 e3 fc c0 e2 02 0a 11 c0 e0 06 0a 41 02 c0 e3 04 0a 59 01 8b 4d f4 88 14 0f 47 88 1c 0f}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Trojan_Win32_Predator_BM_2147741577_0
         $x_1_3 = {b8 85 c5 0a 00 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +181,7 @@ rule Trojan_Win32_Predator_BS_2147741861_0
         $x_1_2 = {8b 4d d8 8b d6 d3 ea 8b 4d e8 03 55 bc 8d 04 31 33 d8 81 3d ?? ?? ?? ?? c1 10 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -224,6 +232,7 @@ rule Trojan_Win32_Predator_PA_2147744583_0
         $x_1_2 = {89 55 ec 25 1b 07 d0 4d 81 6d ec 88 eb 73 22 bb 87 d5 7c 3a 81 45 ec 8c eb 73 22 8b 4d ec 8b c7 d3 e0 8b cf c1 e9 05 03 4d ?? 03 45 ?? 89 15 ?? ?? ?? ?? 33 c1 8b 4d f4 03 cf 33 c1 29 45 f0 a1 ?? ?? ?? ?? 3d ?? ?? 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -272,6 +281,7 @@ rule Trojan_Win32_Predator_PB_2147745542_0
         $x_1_3 = {40 83 f8 0d 73 06 8a 4c 24 ?? eb f0 04 00 30 4c 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -294,6 +304,7 @@ rule Trojan_Win32_Predator_GJ_2147745836_0
         $x_1_2 = {ff e2 8b 04 24 50 00 31 1c 0a [0-4] 3b 4c 24 04 [0-4] 7d ?? [0-4] [0-4] 83 c1 04 [0-4] eb ?? 8b e5 [0-4] 5d [0-4] 5b [0-4] ff e2 8b 04 24 [0-4] c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -316,6 +327,7 @@ rule Trojan_Win32_Predator_GK_2147745840_0
         $x_1_2 = {8b 4d e0 03 4d dc 89 4d e0 8b 55 e0 f7 d2 89 55 e0 8b 45 e0 35 90 01 01 00 00 00 89 45 e0 8b 4d dc 8a 55 e0 88 91 90 01 03 00 e9 9a fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -340,6 +352,7 @@ rule Trojan_Win32_Predator_PVD_2147747955_0
         $x_2_4 = {8b 45 08 03 45 fc 0f be 18 e8 ?? ?? ?? ?? 33 d8 8b 45 08 03 45 fc 88 18 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -372,6 +385,7 @@ rule Trojan_Win32_Predator_B_2147749172_0
         $x_1_12 = "3C886FF3-2669-4AA2-A8FB-3F6759A77548" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -427,6 +441,7 @@ rule Trojan_Win32_Predator_DHA_2147749896_0
         $x_1_1 = {83 f9 0c 73 18 8a 44 0d ?? 32 c2 f6 d0 88 44 0d 00 41 89 8d ?? ?? ?? ?? 8a 55 ?? eb e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -455,6 +470,7 @@ rule Trojan_Win32_Predator_PVS_2147750846_0
         $x_1_8 = {33 d8 8b 45 d0 03 45 d8 88 18 eb 05 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -510,6 +526,7 @@ rule Trojan_Win32_Predator_AA_2147751835_0
         $x_1_5 = {30 4c 05 f5 40 83 f8 0a 73 05 8a 4d f4 eb f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -533,6 +550,7 @@ rule Trojan_Win32_Predator_MR_2147752089_0
         $x_1_3 = "5BcA44BbCAa4Ae5B6cDbB456cB6babc6Bae6DADbD5C6f5" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -554,6 +572,7 @@ rule Trojan_Win32_Predator_MS_2147752600_0
         $x_1_1 = {89 02 5f 5d c3 65 00 8b 02 a3 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 83 e9 ?? 89 0d ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 83 c1 [0-25] c7 05 ?? ?? ?? ?? ?? ?? ?? ?? a1 ?? ?? ?? ?? 01 05 [0-8] 8b 15 ?? ?? ?? ?? a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -808,6 +827,7 @@ rule Trojan_Win32_Predator_2147753524_0
         $x_1_1 = {89 02 5f 5d c3 65 00 8b 02 a3 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 83 e9 ?? 89 0d ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 83 c1 [0-20] 33 c1 ?? ?? c7 05 [0-20] 8b 15 ?? ?? ?? ?? a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1146,6 +1166,7 @@ rule Trojan_Win32_Predator_SM_2147754372_0
         $x_1_7 = "\\NordVPN\\NordVPN*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1552,6 +1573,7 @@ rule Trojan_Win32_Predator_EDS_2147780656_0
         $x_10_2 = {30 04 33 81 ff 91 05 00 00 75 2e 6a 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1576,6 +1598,7 @@ rule Trojan_Win32_Predator_EQW_2147780658_0
         $x_5_4 = {81 fe 2b ac 01 00 7f 09 46 81 fe ba 2d bc 1e 7c d2}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1651,6 +1674,7 @@ rule Trojan_Win32_Predator_CB_2147816307_0
         $x_1_4 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1672,6 +1696,7 @@ rule Trojan_Win32_Predator_RPW_2147824773_0
         $x_1_1 = {6a 45 66 89 45 a2 58 6a 55 66 89 45 b0 58 6a 69 66 89 45 b2 58 6a 56 66 89 45 b4 58 6a 6e 66 89 45 b6 58 66 89 45 b8 6a 42 58 66 89 45 ba 6a 71 58 66 89 45 bc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1693,6 +1718,7 @@ rule Trojan_Win32_Predator_RPY_2147892990_0
         $x_1_1 = {50 6a 0e 8d 45 ec 83 c1 0e 50 57 89 4d ee ff d6 6a 00 8d 45 0c 50 8b 43 20 8d 04 85 28 00 00 00 50 53 57 ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1721,6 +1747,7 @@ rule Trojan_Win32_Predator_EFG_2147896068_0
         $x_3_8 = "FlushFileBuffers" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

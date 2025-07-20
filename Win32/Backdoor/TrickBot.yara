@@ -16,6 +16,7 @@ rule Backdoor_Win32_TrickBot_ZZD_2147766677_0
         $x_1_1 = "<moduleconfig><needinfo name=\"id\"/><needinfo name=\"ip\"/></moduleconfig>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

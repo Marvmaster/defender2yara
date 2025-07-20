@@ -16,6 +16,7 @@ rule Trojan_Win64_CoffeeBean_A_2147930498_0
         $x_1_1 = {69 69 69 78 20 51 12 81 80 17 12 34 10 67 11 14 16 13 33 21 39 49 45 13 85 10 87 22 96 10 64 46}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

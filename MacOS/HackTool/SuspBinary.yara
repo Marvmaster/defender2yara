@@ -22,6 +22,7 @@ rule HackTool_MacOS_SuspBinary_V_2147908412_0
         $x_1_8 = "edr_attacks_path" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (5 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule HackTool_MacOS_SuspBinary_A_2147908478_0
         $x_1_6 = "edr_attacks_path" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (5 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule HackTool_MacOS_SuspBinary_B_2147908479_0
         $x_1_6 = "CYMULATE_EDR_MUTEX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (5 of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule HackTool_MacOS_SuspBinary_X_2147908626_0
         $x_1_2 = "CymulateCoinMinerCore" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (1 of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule HackTool_MacOS_SuspBinary_P_2147908640_0
         $x_1_5 = "Caller is Reverse P/Invoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

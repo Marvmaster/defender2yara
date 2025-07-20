@@ -19,6 +19,7 @@ rule Trojan_MSIL_disco_RDA_2147894435_0
         $x_1_4 = "IsUserAdministrator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

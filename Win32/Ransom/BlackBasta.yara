@@ -19,6 +19,7 @@ rule Ransom_Win32_BlackBasta_PA_2147845203_0
         $x_1_4 = "Your data are stolen and encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

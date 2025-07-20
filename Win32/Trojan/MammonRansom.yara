@@ -21,6 +21,7 @@ rule Trojan_Win32_MammonRansom_YAN_2147929986_0
         $x_1_6 = {69 6e 20 63 61 73 65 20 6f 66 20 6e 6f 20 61 6e 73 77 65 72 20 62 61 63 6b 75 70 20 65 6d 61 69 6c 3a [0-32] 40 67 6d 61 69 6c 2e 63 6f 6d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))

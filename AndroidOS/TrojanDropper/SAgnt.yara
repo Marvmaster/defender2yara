@@ -63,6 +63,7 @@ rule TrojanDropper_AndroidOS_SAgnt_G_2147822252_0
         $x_1_2 = {0f b6 84 1d 00 ?? ?? ?? 8d 8b ?? 03 00 00 89 74 24 04 32 04 39 83 c7 01 0f be c0 89 04 24 e8 ?? f6 ff ff 3b 7c 24 28 b8 00 00 00 00 0f 44 f8 83 c5 01 81 fd ?? ?? 01 00 75 c6 89 34 24 e8 ?? f6 ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -156,6 +157,7 @@ rule TrojanDropper_AndroidOS_SAgnt_A_2147828536_0
         $x_1_5 = "getJavaCaller(%p)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -308,6 +310,7 @@ rule TrojanDropper_AndroidOS_SAgnt_R_2147937712_0
         $x_1_4 = "01357kTDFXWUHJP;K#jQG" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -335,6 +338,7 @@ rule TrojanDropper_AndroidOS_SAgnt_T_2147937713_0
         $x_1_3 = {6f 64 45 50 37 5f 6a 63 6c 61 73 73 50 31 30 5f 6a 6d 65 74 68 6f 64 49 44 7a 00 4a 61 76 61 5f 6b 5f 77 7a 5f 68 73 00 4a 61 76 61 5f 6b 5f 77 7a 5f 68 73 32 00 4a 61 76 61 5f 6b 5f 77 7a 5f 6d 30 00 66 6f 70 65 6e 00 66 77 72 69 74 65 00 66 63 6c 6f 73 65 00 4a 61 76 61 5f 6b 5f 77 7a 5f 6d 31 00 4a 61 76 61 5f 6b 5f 77 7a 5f 6d 32 00 5f 5a 4e 37 5f 4a 4e 49 45 6e 76 31 33 43 61 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -380,6 +384,7 @@ rule TrojanDropper_AndroidOS_SAgnt_U_2147943338_0
         $x_1_3 = {34 27 13 93 2f e9 9b 13 33 74 a0 7d 7c 80 34 94 58 27 51 0a b2 9b bc 37 86 d6 5b e4 47 bb 69 5f d3 8b 87 63 95 32 16 90 91 42 ec 6a 5b 78 0c a0 b4 99 04 25 f7 b4 7b 29 4f 74 f6 da 63 60 2b 1e ed 21 d9 5f eb 9e 50 76 9a 02 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

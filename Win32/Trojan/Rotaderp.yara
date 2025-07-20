@@ -15,6 +15,7 @@ rule Trojan_Win32_Rotaderp_B_2147767221_0
         $x_2_1 = "/c if not %computername% == DESKTOP-QO5QU33" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

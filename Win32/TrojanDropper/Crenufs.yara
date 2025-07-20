@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Crenufs_A_2147644030_0
         $x_1_3 = {3a 66 75 6e 63 73 69 7a 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

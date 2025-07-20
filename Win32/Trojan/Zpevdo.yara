@@ -19,6 +19,7 @@ rule Trojan_Win32_Zpevdo_AS_2147789250_0
         $x_3_4 = "Usestay" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

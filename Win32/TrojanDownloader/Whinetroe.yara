@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Whinetroe_A_2147623514_0
         $x_1_2 = {4d 53 48 54 4d 4c 44 45 2e 44 4c 4c 00 44 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

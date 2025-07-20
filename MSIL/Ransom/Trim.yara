@@ -26,6 +26,7 @@ rule Ransom_MSIL_Trim_2147725269_0
         $x_2_12 = "\\RESTORE_triple_m__FILES.html" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

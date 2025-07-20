@@ -25,6 +25,7 @@ rule Ransom_Win32_Milicry_A_2147717247_0
         $x_1_11 = "sage.notice\\shell\\open\\command" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -89,6 +90,7 @@ rule Ransom_Win32_Milicry_B_2147719569_0
         $x_1_5 = {00 64 61 74 00 6d 78 30 00 63 64 00 70 64 62 00 78 71 78 00 6f 6c 64 00 63 6e 74 00 72 74 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +117,7 @@ rule Ransom_Win32_Milicry_C_2147721191_0
         $x_10_6 = "mbfce24rgn65bx3g" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -145,6 +148,7 @@ rule Ransom_Win32_Milicry_F_2147721821_0
         $x_1_6 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartPage" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

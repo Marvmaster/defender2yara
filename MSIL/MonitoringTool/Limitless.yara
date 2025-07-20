@@ -19,6 +19,7 @@ rule MonitoringTool_MSIL_Limitless_199546_0
         $x_1_5 = "FTPUpload" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule MonitoringTool_MSIL_Limitless_199546_1
         $x_1_4 = "FTPUpload" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule MonitoringTool_MSIL_Limitless_199546_2
         $x_1_5 = "createLowLevelKeyboardHook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

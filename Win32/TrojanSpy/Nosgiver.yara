@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Nosgiver_A_2147617883_0
         $x_1_6 = "%s\\system32\\sigveri" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

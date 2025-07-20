@@ -19,6 +19,7 @@ rule PWS_Win32_Sypak_A_2147653765_0
         $x_2_5 = {50 6a 01 53 6a 26 53 ff 15 ?? ?? ?? ?? 8d bd ?? fe ff ff 4f 8d 9b 00 00 00 00 8a 47 01 47 3a c3 75 f8 b9 05 00 00 00 be ?? ?? ?? ?? f3 a5 68 03 01 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

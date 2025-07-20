@@ -18,6 +18,7 @@ rule Ransom_Win32_Gremcrypt_A_2147717147_0
         $x_1_4 = "encrypted_list.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

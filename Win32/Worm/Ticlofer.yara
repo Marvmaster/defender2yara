@@ -16,6 +16,7 @@ rule Worm_Win32_Ticlofer_A_2147629049_0
         $x_1_2 = {84 c0 74 21 bb 02 00 00 00 b8 08 00 00 00 e8 ?? ?? ?? ?? 8b 14 85 ?? ?? ?? ?? 8d 45 fc e8 ?? ?? ?? ?? 4b 75 e4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

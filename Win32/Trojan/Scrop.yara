@@ -20,6 +20,7 @@ rule Trojan_Win32_Scrop_BM_2147771230_0
         $x_1_5 = "Microsoft\\Windows\\Start Menu\\Programs\\Startup\\SecProcessingWindowsSystem.lnk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

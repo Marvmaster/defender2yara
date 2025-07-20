@@ -20,6 +20,7 @@ rule Ransom_Win32_Wadhrama_A_2147720056_0
         $x_1_5 = "delete shadows /all /quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -97,6 +98,7 @@ rule Ransom_Win32_Wadhrama_B_2147726308_0
         $x_2_19 = "B040A3ED27C166CBC4E8D0E1286347F3.MOLE66" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_2_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*))) or
@@ -122,6 +124,7 @@ rule Ransom_Win32_Wadhrama_ME_2147916400_0
         $x_2_1 = {99 f7 f9 0f af 45 ?? 03 c6 8b 4d ?? 8d 04 c1 89 45 ?? 8a 45 ?? 32 c3 88 45 ?? 66 83 7d ?? 00 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

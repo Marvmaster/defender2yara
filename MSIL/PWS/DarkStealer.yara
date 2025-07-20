@@ -23,6 +23,7 @@ rule PWS_MSIL_DarkStealer_AD_2147764924_0
         $x_1_8 = "sha512" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +74,7 @@ rule PWS_MSIL_DarkStealer_AD_2147764924_1
         $x_50_30 = "set_CreateNoWindow" ascii //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_50_*) and 13 of ($x_1_*))) or
             (all of ($x*))

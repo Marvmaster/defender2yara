@@ -18,6 +18,7 @@ rule Trojan_Win32_Takil_A_2147643226_0
         $x_1_4 = "Reg Add \"HKCU\\Control Panel\\Mouse\" /v SwapMouseButtons" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

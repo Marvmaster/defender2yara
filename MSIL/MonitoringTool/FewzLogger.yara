@@ -17,6 +17,7 @@ rule MonitoringTool_MSIL_FewzLogger_205391_0
         $x_1_3 = "Ankama Shield Stealer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

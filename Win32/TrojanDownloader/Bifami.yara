@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Bifami_A_2147685938_0
         $x_1_3 = "\\atieclx.vbs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

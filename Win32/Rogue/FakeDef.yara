@@ -17,6 +17,7 @@ rule Rogue_Win32_FakeDef_194688_0
         $x_1_3 = "{red}INFECTED: {inf}{}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Rogue_Win32_FakeDef_194688_1
         $x_1_2 = {ff 50 04 89 45 fc 83 7d fc 00 0f 84 ?? ?? 00 00 8b 45 ?? 83 c0 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Rogue_Win32_FakeDef_194688_2
         $x_1_4 = {bf 19 00 02 00 57 33 db 53 68 ?? ?? ?? ?? 68 02 00 00 80 ff d6 85 c0 0f ?? ?? ?? ?? ?? 8d ?? ?? 50 57 53 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

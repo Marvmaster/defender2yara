@@ -16,6 +16,7 @@ rule Trojan_Win64_MBRDestroy_RDA_2147852853_0
         $x_2_1 = {4c 8d 4c 24 40 48 c7 44 24 20 00 00 00 00 48 8b c8 48 8d 15 ?? ?? ?? ?? 41 b8 00 02 00 00 48 8b d8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

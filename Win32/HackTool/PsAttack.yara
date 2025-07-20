@@ -15,6 +15,7 @@ rule HackTool_Win32_PsAttack_A_2147716542_0
         $x_1_1 = "AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

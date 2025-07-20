@@ -18,6 +18,7 @@ rule Trojan_MSIL_Gotup_A_2147723323_0
         $x_1_3 = "E19AD4B2580B={0}&EFF0BCFAA={1}&HC619F6C1A={2}&A27BF6210={3}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

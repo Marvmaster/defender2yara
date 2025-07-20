@@ -23,6 +23,7 @@ rule VirTool_Win32_GoSecDmpz_A_2147890119_0
         $x_1_8 = "ntdsFileLocation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

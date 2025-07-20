@@ -16,6 +16,7 @@ rule Trojan_Win32_Maudon_A_2147734730_0
         $x_1_2 = {5c 74 65 6d 70 5c 61 2e 70 73 31 00 63 6d 64 2e 65 78 65 00 6f 70 65 6e 00 00 00 00 00 00 00 00 2f 43 20 63 3a 5c 77 69 6e 64 6f 77 73 5c 65 78 70 6c 6f 72 65 72 2e 65 78 65 20 73 68 65 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

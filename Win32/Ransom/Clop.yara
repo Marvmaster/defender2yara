@@ -16,6 +16,7 @@ rule Ransom_Win32_Clop_A_2147733496_0
         $x_1_1 = {ff ff ff 48 03 00 00 73 ?? 8b ?? ?? ff ff ff 8b ?? ?? ?? ?? ?? ?? 89 ?? ?? ff ff ff c7 85 ?? ?? ?? ?? 00 00 00 00 [0-6] 89 ?? ?? ff ff ff 8b ?? ?? ff ff ff 2b ?? ?? ff ff ff 89 ?? ?? ff ff ff 8b ?? ?? ff ff ff 83 ?? 50 89 ?? ?? ff ff ff c1 85 ?? ff ff ff 05 8b ?? ?? ff ff ff 33 ?? ?? ff ff ff 89 ?? ?? ff ff ff 8b ?? ?? ff ff ff 8b [0-5] 8b ?? ?? ff ff ff 89 ?? ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Ransom_Win32_Clop_E_2147741619_0
         $x_10_12 = "CIopReadMe.txt" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -75,6 +77,7 @@ rule Ransom_Win32_Clop_GG_2147742096_0
         $x_1_4 = {f7 e6 8b c6 c1 ea ?? 8b ca c1 e1 ?? 03 ca 03 c9 2b c1 8a 80 ?? ?? ?? ?? 30 04 1e 46 3b f7 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Ransom_Win32_Clop_B_2147742344_0
         $x_1_1 = {73 56 8b 55 cc 8b 45 dc 8b 0c 90 89 4d 94 8b 15 ?? ?? ?? ?? 89 55 98 8b 45 94 2b 45 cc 89 45 94 8b 4d e4 83 e9 ?? 89 4d e4 8b 55 94 33 55 98 89 55 94 8b 45 e4 2d ?? ?? ?? ?? 89 45 e4 c1 45 94 07 8b 4d 94 33 4d 98 89 4d 94 8b 55 cc 8b 45 f8 8b 4d 94 89 0c 90 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Ransom_Win32_Clop_PA_2147748542_0
         $x_1_2 = {81 c1 00 a0 ba 0b 89 4d c4 c1 85 [0-4] 09 8b 55 c4 81 ea ab 5a 05 00 89 55 c4 8b 85 [0-4] 33 85 [0-4] 89 85 [0-4] 8b 4d c4 81 c1 ab 5a 15 00 89 4d c4 8b 95 [0-4] 2b 55 [0-2] 89 95 [0-4] 8b 45 c4 2d 00 f0 ff 0f 89 45 c4 8b 4d [0-2] 8b 55 [0-2] 8b 85 [0-4] 89 04 8a e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Ransom_Win32_Clop_MR_2147750151_0
         $x_1_1 = {89 14 81 e9 46 00 33 85 ?? ?? ?? ?? 89 85 [0-20] c1 85 [0-8] 8b 95 ?? ?? ?? ?? 33 95 ?? ?? ?? ?? 89 95 ?? ?? ?? ?? 8b 45 ?? 8b 4d ?? 8b 95}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +168,7 @@ rule Ransom_Win32_Clop_PB_2147750889_0
         $x_1_4 = "%s runrun" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +198,7 @@ rule Ransom_Win32_Clop_PB_2147750889_1
         $x_1_9 = "&HDGF$W#GSRGHREGRW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -223,6 +231,7 @@ rule Ransom_Win32_Clop_PB_2147750889_2
         $x_10_8 = {0f b6 14 10 03 ca 81 e1 ff 00 00 00 8b 45 f8 0f b6 0c ?? 8b 55 08 03 55 ?? 0f b6 02 33 c1 8b 4d 08 03 4d ?? 88 01 e9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -253,6 +262,7 @@ rule Ransom_Win32_Clop_PC_2147750927_0
         $x_10_6 = {b9 4f 00 00 00 66 89 4d ?? ba 43 00 00 00 66 89 55 ?? b8 58 00 00 00 66 89 45 ?? [0-128] b8 2e 00 00 00 66 89 85 ?? ?? ?? ?? b9 44 00 00 00 66 89 8d ?? ?? ?? ?? ba 4c 00 00 00 66 89 95 ?? ?? ?? ?? b8 4c 00 00 00 66 89 85 ?? ?? ?? ?? [0-128] b8 2e 00 00 00 66 89 45 ?? b9 43 00 00 00 66 89 4d ?? ba 49 00 00 00 66 89 55 ?? b8 4f 00 00 00 66 89 45 ?? b9 50 00 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -279,6 +289,7 @@ rule Ransom_Win32_Clop_PE_2147765482_0
         $x_1_6 = {2e 00 4f 00 c7 [0-6] 43 00 58 00 [0-26] c7 [0-6] 2e 00 63 00 c7 [0-6] 68 00 6d 00 [0-26] c7 [0-6] 2e 00 43 00 c7 [0-6] 49 00 30 00 66 89 [0-42] c7 [0-6] 2e 00 6d 00 c7 [0-6] 73 00 69 00 [0-26] c7 [0-6] 2e 00 44 00 c7 [0-6] 4c 00 4c 00 [0-26] c7 [0-6] 2e 00 45 00 c7 [0-6] 58 00 45 00 [0-26] c7 [0-6] 2e 00 69 00 c7 [0-6] 63 00 6f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -309,6 +320,7 @@ rule Ransom_Win32_Clop_SL_2147771149_0
         $x_1_6 = "%s\\README_README.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -334,6 +346,7 @@ rule Ransom_Win32_Clop_DX_2147771150_0
         $x_1_5 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -359,6 +372,7 @@ rule Ransom_Win32_Clop_DA_2147772038_0
         $x_1_5 = "-----BEGIN PUBLIC KEY-----" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -383,6 +397,7 @@ rule Ransom_Win32_Clop_ZA_2147774331_0
         $x_1_4 = "%s%s.CIIp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -434,6 +449,7 @@ rule Ransom_Win32_Clop_SIB_2147807749_0
         $x_1_31 = "net stop BackupExecAgentAccelerator /y" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 15 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -462,6 +478,7 @@ rule Ransom_Win32_Clop_PBE_2147844029_0
         $x_4_4 = {33 ca 0b 0d ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 0f be 05 ?? ?? ?? ?? 0f bf 4d f0 03 c1 0f bf 55 f8 03 c2 0f bf 55 f0 8b 0d ?? ?? ?? ?? d3 fa 33 c2 0f be 0d ?? ?? ?? ?? 23 c8 88 0d}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -483,6 +500,7 @@ rule Ransom_Win32_Clop_H_2147846466_0
         $x_1_2 = ".C_I_0P" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -508,6 +526,7 @@ rule Ransom_Win32_Clop_MA_2147846893_0
         $x_1_5 = "README_README.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -536,6 +555,7 @@ rule Ransom_Win32_Clop_AA_2147848422_0
         $x_1_8 = "-----END PUBLIC KEY-----" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -557,6 +577,7 @@ rule Ransom_Win32_Clop_I_2147849111_0
         $x_1_2 = "ChangerWifi" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -585,6 +606,7 @@ rule Ransom_Win32_Clop_LKV_2147899303_0
         $x_1_8 = "Cl0pReadMe.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -612,6 +634,7 @@ rule Ransom_Win32_Clop_AMCU_2147928447_0
         $x_1_4 = "AAA_READ_AAA.TXT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -49,6 +49,7 @@ rule Backdoor_Win64_TurlaCarbon_2147849677_0
         $x_1_35 = "[ERROR-INJ] AdjustTokenPrivileges failed. ReturnValue: " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +80,7 @@ rule Backdoor_Win64_TurlaCarbon_O_2147849700_0
         $x_1_11 = {73 79 73 74 65 6d 5f 70 69 70 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Bewymids_A_2147640367_0
         $x_1_3 = {8a 14 08 02 d0 80 c2 5a 32 d0 88 14 08 40 3b 44 24 08 7c ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

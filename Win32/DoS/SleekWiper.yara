@@ -23,6 +23,7 @@ rule DoS_Win32_SleekWiper_A_2147943066_0
         $x_10_8 = {81 f9 4e 54 46 53 75 ?? 3d 20 20 20 20}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))

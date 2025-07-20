@@ -30,6 +30,7 @@ rule Backdoor_Win32_Cozer_A_2147697669_0
         $x_2_15 = "^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

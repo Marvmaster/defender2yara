@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Wuprad_A_2147629883_0
         $x_1_3 = {8b 44 24 04 ff 24 95 ?? ?? ?? ?? 68 ?? ?? ?? ?? 51 68 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 83 c4 10 b8 01 00 00 00 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

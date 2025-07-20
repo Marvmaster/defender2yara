@@ -23,6 +23,7 @@ rule Worm_Win32_Ganub_DR_2147616667_0
         $x_1_9 = "sory 4 everything" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or

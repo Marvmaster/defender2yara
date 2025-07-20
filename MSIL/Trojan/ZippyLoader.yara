@@ -19,6 +19,7 @@ rule Trojan_MSIL_ZippyLoader_NEAA_2147839971_0
         $x_2_4 = "Microsoft\\Vault\\TaskMaster.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

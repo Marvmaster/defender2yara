@@ -18,6 +18,7 @@ rule Trojan_Win32_Mirsonk_A_2147683843_0
         $x_1_4 = {7b 49 82 e6 43 89 84 56 0d 34 75 fc f8 49 c7 3b 58 da f5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

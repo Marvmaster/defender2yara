@@ -16,6 +16,7 @@ rule Trojan_Win32_MiniPocket_A_2147926519_0
         $x_100_1 = {8b c7 8b d7 8b cf 35 07 18 00 65 81 f2 31 e0 bf 08 81 f1 11 9b 24 15}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

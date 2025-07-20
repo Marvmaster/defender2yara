@@ -18,6 +18,7 @@ rule Ransom_MSIL_BansomQare_A_2147731340_0
         $x_1_4 = "Ooops , Your file have been encrypted!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

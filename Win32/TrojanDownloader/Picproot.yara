@@ -29,6 +29,7 @@ rule TrojanDownloader_Win32_Picproot_A_2147696245_0
         $x_2_14 = {68 d0 07 00 00 ff 15 ?? ?? ?? 10 83 ff 02 75 22 56 ff 15 ?? ?? ?? 10 8b f8 68 30 75 00 00 ff 15 ?? ?? ?? 10 57 ff 15 ?? ?? ?? 10 56 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

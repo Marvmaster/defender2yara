@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Plimrost_B_2147690960_0
         $x_1_4 = {f4 3e eb 6e ?? ?? b3 fb e6 e5 70 ?? ?? 35 ?? ?? 6b ?? ?? f4 1a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanSpy_Win32_Plimrost_D_2147718086_0
         $x_1_2 = "<PrivateImplementationDetails>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

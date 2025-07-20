@@ -28,6 +28,7 @@ rule Trojan_Win32_XSharkRat_PA_2147745221_0
         $x_1_13 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 [0-37] 2e 00 30 00 30 00 30 00 77 00 65 00 62 00 68 00 6f 00 73 00 74 00 61 00 70 00 70 00 2e 00 63 00 6f 00 6d 00 2f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule Worm_Win32_Zombaque_A_2147638845_0
         $x_1_10 = "darthvader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_TinyDow_A_2147838237_0
         $x_2_2 = "start /min cmd /c" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

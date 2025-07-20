@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Fiwd_A_2147608743_0
         $x_1_4 = {73 6f 63 6b 73 2e 65 78 65 00 74 69 6d 65 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanProxy_Win32_Dosenjo_A_2147803989_0
         $x_1_4 = {25 73 26 69 70 3d 25 73 26 6d 6f 64 65 3d 25 73 26 64 6c 6c 3d 25 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -47,6 +48,7 @@ rule TrojanProxy_Win32_Dosenjo_B_2147804126_0
         $x_1_6 = "User-Agent: Mozilla Compatible Ppc Linker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule TrojanProxy_Win32_Dosenjo_C_2147804146_0
         $x_2_6 = {3f 71 75 65 72 79 3d 00 2f 66 75 6c 6c 73 65 61 72 63 68 00 53 70 65 63 69 61 6c 3a 53 65 61 72 63 68 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -103,6 +106,7 @@ rule TrojanProxy_Win32_Dosenjo_D_2147804147_0
         $x_1_7 = "\\SverjnyyCbyvpl\\FgnaqneqCebsvyr\\TybonyylBcraCbegf\\Yvfg\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or

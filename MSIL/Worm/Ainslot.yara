@@ -21,6 +21,7 @@ rule Worm_MSIL_Ainslot_A_2147683897_0
         $x_2_7 = {20 80 02 00 00 20 e0 01 00 00 28 ?? ?? ?? ?? 74 ?? ?? ?? ?? 0d 12 03 1f 50}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

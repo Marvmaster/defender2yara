@@ -18,6 +18,7 @@ rule Ransom_Win32_MegaCortex_A_2147735596_0
         $x_2_4 = "call mou_jvsoS1-2.cmd %1% cipher wmic" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_2_*))) or
             (all of ($x*))

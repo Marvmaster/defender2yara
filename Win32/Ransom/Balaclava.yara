@@ -27,6 +27,7 @@ rule Ransom_Win32_Balaclava_AR_2147765496_0
         $x_1_12 = "Internet Explorer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))

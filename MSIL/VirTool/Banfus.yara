@@ -16,6 +16,7 @@ rule VirTool_MSIL_Banfus_A_2147697365_0
         $x_1_2 = "cdpapxalZZZsssAAAvbccdpapxalZZZss" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

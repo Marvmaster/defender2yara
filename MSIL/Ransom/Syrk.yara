@@ -19,6 +19,7 @@ rule Ransom_MSIL_Syrk_AD_2147742382_0
         $x_1_5 = "DisableAntiSpyware" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_MSIL_Syrk_ST_2147762526_0
         $x_1_6 = "*.Syrk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

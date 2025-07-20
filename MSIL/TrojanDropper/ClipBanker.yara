@@ -22,6 +22,7 @@ rule TrojanDropper_MSIL_ClipBanker_A_2147830886_0
         $x_1_7 = "ResourceManager" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

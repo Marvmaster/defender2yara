@@ -22,6 +22,7 @@ rule Trojan_Win32_Matcash_17557_0
         $x_1_8 = "GetWindowsDirectoryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win32_Matcash_17557_1
         $x_1_7 = {46 00 69 00 6c 00 65 00 44 00 65 00 73 00 63 00 72 00 69 00 70 00 74 00 69 00 6f 00 6e 00 00 00 00 00 75 00 70 00 64 00 61 00 74 00 65 00 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -80,6 +82,7 @@ rule Trojan_Win32_Matcash_17557_2
         $x_1_6 = "%sUpdateWords\\%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +109,7 @@ rule Trojan_Win32_Matcash_17557_3
         $x_1_7 = {77 61 69 74 00 00 00 00 65 78 65 63 75 74 65 00 68 69 64 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*) and 3 of ($x_2_*))) or
@@ -136,6 +140,7 @@ rule Trojan_Win32_Matcash_17557_4
         $x_1_7 = "SystemBiosDate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_3_*))) or
@@ -169,6 +174,7 @@ rule Trojan_Win32_Matcash_17557_5
         $x_3_10 = "http://www.comfm.com" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_10_*) and 3 of ($x_3_*))) or
             (all of ($x*))
@@ -198,6 +204,7 @@ rule Trojan_Win32_Matcash_17557_6
         $x_1_7 = "check.php?mac=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -229,6 +236,7 @@ rule Trojan_Win32_Matcash_C_98631_0
         $x_1_7 = "SystemBiosDate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_3_*))) or
@@ -263,6 +271,7 @@ rule Trojan_Win32_Matcash_D_98632_0
         $x_3_10 = "http://www.comfm.com" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_10_*) and 3 of ($x_3_*))) or
             (all of ($x*))
@@ -291,6 +300,7 @@ rule Trojan_Win32_Matcash_E_98633_0
         $x_1_5 = {75 70 6c 2e 6c 62 00 00 63 70 76}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -324,6 +334,7 @@ rule Trojan_Win32_Matcash_KU_117584_0
         $x_1_10 = "InetGet2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -355,6 +366,7 @@ rule Trojan_Win32_Matcash_I_126530_0
         $x_1_8 = "http://ksn.a" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -382,6 +394,7 @@ rule Trojan_Win32_Matcash_J_127504_0
         $x_1_4 = "35A04FBA9CD6660C66C764" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -407,6 +420,7 @@ rule Trojan_Win32_Matcash_K_127902_0
         $x_1_2 = {83 7d f0 00 74 1a 80 7d 13 0a 75 05 c6 06 0a eb 1c 6a 01 6a ff ff 75 14 e8 e0 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -434,6 +448,7 @@ rule Trojan_Win32_Matcash_G_133074_0
         $x_1_7 = "InternetShortcut.W" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or

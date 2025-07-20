@@ -23,6 +23,7 @@ rule TrojanSpy_MSIL_Taktace_A_2147690024_0
         $x_1_9 = {62 79 74 65 73 5f 70 65 72 5f 64 6e 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

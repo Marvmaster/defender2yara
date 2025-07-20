@@ -19,6 +19,7 @@ rule Trojan_Win32_Relbma_A_2147605680_0
         $x_1_5 = "Microsoft Security Guard\" binterval" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win32_Relbma_A_2147605681_0
         $x_2_9 = {63 6c 61 73 73 3d 79 73 63 68 74 74 6c 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or

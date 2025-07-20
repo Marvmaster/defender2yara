@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Lopelmoc_A_2147640284_0
         $x_1_3 = {6b c0 3c 69 c0 e8 03 00 00 50 ff 15 ?? ?? ?? ?? 8b 8d ?? ?? ff ff d1 e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Exgectow_A_2147711520_0
         $x_1_3 = {2d d2 13 40 00 8b 4d [0-8] 2b c8 [0-8] 89 4d [0-8] 8d [0-8] 50 6a 40 b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

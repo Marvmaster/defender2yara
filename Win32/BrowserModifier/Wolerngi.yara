@@ -19,6 +19,7 @@ rule BrowserModifier_Win32_Wolerngi_228033_0
         $x_1_5 = "cmd.exe /c net start GSafe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule BrowserModifier_Win32_Wolerngi_228033_1
         $x_1_9 = "desprotetordelinks.me/services/update.php?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*) and 2 of ($x_1_*))) or
             (all of ($x*))

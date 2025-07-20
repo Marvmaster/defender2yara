@@ -19,6 +19,7 @@ rule Trojan_MSIL_Threnper_A_2147684109_0
         $x_1_5 = "-p operation11" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -45,6 +46,7 @@ rule Trojan_MSIL_Threnper_B_2147684114_0
         $x_1_3 = "scvhost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))

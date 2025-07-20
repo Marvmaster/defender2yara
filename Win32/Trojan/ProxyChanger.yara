@@ -17,6 +17,7 @@ rule Trojan_Win32_ProxyChanger_D_2147681402_0
         $x_1_3 = "POST /includes/arena-infect/conta_infects.php HTTP/1.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_ProxyChanger_GNE_2147924651_0
         $x_5_2 = {e5 ec bb e2 f8 35 f3 42 69 7b cb 41 7f 6b 36 1c 42 47 a3 4f ba 9e f5 8b 29 b5 95 b3 0d 12 e7 31 d2 78 4b ea}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

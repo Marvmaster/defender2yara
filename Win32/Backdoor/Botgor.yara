@@ -25,6 +25,7 @@ rule Backdoor_Win32_Botgor_A_2147611532_0
         $x_1_11 = "*purchase*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 6 of ($x_1_*))) or
             ((4 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -58,6 +59,7 @@ rule Backdoor_Win32_Botgor_B_2147611533_0
         $x_3_10 = {c7 45 f4 b9 79 37 9e c7 45 ec 20 00 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_20_*) and 1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((4 of ($x_20_*) and 2 of ($x_3_*))) or

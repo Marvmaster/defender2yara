@@ -19,6 +19,7 @@ rule Trojan_Win32_NetWire_YL_2147741010_0
         $x_1_5 = "start /b \"\" cmd /c del \"%%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_NetWire_RA_2147742273_0
         $x_1_4 = "ipconfig.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_NetWire_RA_2147742273_1
         $x_1_5 = "DARKEYED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -101,6 +104,7 @@ rule Trojan_Win32_NetWire_RA_2147742273_2
         $x_1_10 = "RegEnumKeyExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule Trojan_Win32_NetWire_DSK_2147742754_0
         $x_2_1 = {81 c2 59 11 00 00 a1 ?? ?? ?? ?? 8b ca a3 ?? ?? ?? ?? 31 0d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b ff c7 05 ?? ?? ?? ?? 00 00 00 00 01 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +151,7 @@ rule Trojan_Win32_NetWire_DW_2147743305_0
         $x_1_4 = "%s\\%s.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -248,6 +254,7 @@ rule Trojan_Win32_NetWire_D_2147744064_0
         $x_1_5 = "FP_NO_HOST_CHECK=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -314,6 +321,7 @@ rule Trojan_Win32_NetWire_BD_2147746107_0
         $x_1_12 = "encryptedPassword" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -335,6 +343,7 @@ rule Trojan_Win32_NetWire_A_2147753707_0
         $x_5_1 = {48 85 c0 66 3d 1b 60 83 f6 00 85 c0 85 c0 85 c0 85 c0 83 f6 00 66 3d 33 51 85 c0 be [0-8] 83 f6 00 85 c0 66 3d 10 fb 66 3d bb 3f 66 3d a7 27 85 c0 83 f6 00 83 f6 00 66 3d 1c b3 83 f6 00 66 3d 94 70 66 3d 2d 09 81 c6 [0-8] 83 f6 00 83 f6 00 66 3d 8e 6c 85 c0 85 c0 83 f6 00 85 c0 83 f6 00 39 30 66 0f 6e fe 75 94}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -358,6 +367,7 @@ rule Trojan_Win32_NetWire_AP_2147834216_0
         $x_1_3 = "sQ0sid\\CYYWQR56.fli" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -379,6 +389,7 @@ rule Trojan_Win32_NetWire_MA_2147838775_0
         $x_10_1 = {11 74 14 8b 0c 17 88 ae 86 e8 9f 82 1b 76 04 82 1d 75 12 af 06 6e 21 ce 9c 7c}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -400,6 +411,7 @@ rule Trojan_Win32_NetWire_GHK_2147844266_0
         $x_10_1 = {0f b6 04 31 30 86 ?? ?? ?? ?? 8b 45 f4 8d 88 ?? ?? ?? ?? b8 ?? ?? ?? ?? 03 ce f7 e1 2b ca d1 e9 03 ca c1 e9 05 6b c1 26 b9 ?? ?? ?? ?? 2b c8 0f b6 04 31 30 86 ?? ?? ?? ?? 83 c6 ?? 81 fe ?? ?? ?? ?? 0f 82}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

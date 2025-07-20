@@ -16,6 +16,7 @@ rule Trojan_Win64_NimLoadCrypt_LK_2147846055_0
         $x_1_1 = {48 89 d8 48 89 d9 48 c1 f8 ?? 48 c1 f9 10 31 d8 31 c8 48 89 d9 48 c1 f9 ?? 31 c8 30 44 ?? ?? 48 83 c3 01 4c 39 c3 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

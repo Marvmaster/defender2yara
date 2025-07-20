@@ -19,6 +19,7 @@ rule Trojan_MSIL_LockScreen_D_2147717111_0
         $x_1_4 = {69 00 6e 00 73 00 74 00 61 00 6c 00 6c 00 70 00 61 00 63 00 6b 00 61 00 67 00 65 00 [0-16] 47 00 6f 00 6f 00 67 00 6c 00 65 00 2e 00 52 00 65 00 73 00 6f 00 75 00 72 00 63 00 65 00 73 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_MSIL_LockScreen_G_2147747951_0
         $x_1_6 = "The product key looks similar to this:..PRODUCT KEY" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_MSIL_LockScreen_AHU_2147781321_0
         $x_3_7 = "CBTRWE6N3NV5N35P" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_MSIL_LockScreen_ALX_2147786324_0
         $x_1_4 = "Computer_Unlocked.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule Trojan_MSIL_LockScreen_ALS_2147851890_0
         $x_1_4 = "blue_skull" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule Trojan_MSIL_LockScreen_ARA_2147925648_0
         $x_2_3 = "DisableTaskMgr" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_3_*))) or
@@ -170,6 +176,7 @@ rule Trojan_MSIL_LockScreen_MA_2147926199_0
         $x_1_3 = "herobrine" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -195,6 +202,7 @@ rule Trojan_MSIL_LockScreen_MA_2147926199_1
         $x_5_5 = "Alphi.exe" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -225,6 +233,7 @@ rule Trojan_MSIL_LockScreen_MA_2147926199_2
         $x_9_7 = "$66f5aaad-111e-4f3b-b102-79aba497989b" ascii //weight: 9
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_7_*) and 3 of ($x_1_*))) or
             ((1 of ($x_7_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -255,6 +264,7 @@ rule Trojan_MSIL_LockScreen_NL_2147927400_0
         $x_1_2 = "Nyan Cat.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -285,6 +295,7 @@ rule Trojan_MSIL_LockScreen_EA_2147936280_0
         $x_1_10 = "DECRYPT FILES" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

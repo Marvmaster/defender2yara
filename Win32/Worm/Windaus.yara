@@ -19,6 +19,7 @@ rule Worm_Win32_Windaus_G_2147642804_0
         $x_1_5 = "helo me.somepalace.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

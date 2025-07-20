@@ -18,6 +18,7 @@ rule Trojan_Win32_Beahny_A_2147735020_0
         $x_1_4 = "C:\\\\windows\\temp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

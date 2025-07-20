@@ -21,6 +21,7 @@ rule Ransom_MSIL_Emmyware_SK_2147944111_0
         $x_1_6 = "WhatHappenLabel.Text" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

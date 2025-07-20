@@ -18,6 +18,7 @@ rule Trojan_Win32_Trilark_A_2147745293_0
         $x_1_3 = {83 e9 08 d1 e9 03 fd 33 f6 85 c9 7e ?? 0f b7 44 72 08 8b e8 81 e5 00 f0 00 00 81 fd 00 30 00 00 75 ?? 8b 6c 24 10 25 ff 0f 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -21,6 +21,7 @@ rule Trojan_MSIL_VayneRat_CXJP_2147888469_0
         $x_1_6 = "password_value" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

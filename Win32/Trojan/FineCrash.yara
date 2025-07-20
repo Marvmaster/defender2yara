@@ -18,6 +18,7 @@ rule Trojan_Win32_FineCrash_A_2147902369_0
         $x_2_3 = {45 33 f6 44 89 74 24 ?? c7 45 ?? 43 00 3a 00 c7 45 ?? 5c 00 00 00 44 89 74 24}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

@@ -20,6 +20,7 @@ rule Ransom_Win64_Lynx_YAE_2147944778_0
         $x_10_5 = "R29vZCBhZnRlcm5vb24sIHdlIGFyZSBMeW54IEdyb3VwLg0K" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Ransom_Win64_Lynx_YAF_2147944779_0
         $x_10_7 = "lynxchat" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule HackTool_MSIL_MoDiRat_2147689436_0
         $x_1_7 = "MoDi RAT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

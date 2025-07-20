@@ -22,6 +22,7 @@ rule Trojan_MSIL_DarkStealer_DB_2147773115_0
         $x_1_7 = "CS.Report1.rdlc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_MSIL_DarkStealer_NU_2147819175_0
         $x_1_5 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_MSIL_DarkStealer_RPN_2147821971_0
         $x_1_1 = {03 04 08 5d 91 07 04 1f 16 5d 91 61 28 1f 00 00 0a 03 04 17 58 08 5d 91 28 20 00 00 0a 59 06 58 06 5d d2 0d 2b 00 09 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_MSIL_DarkStealer_RPN_2147821971_1
         $x_1_8 = "\\\\screens\\\\misc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_MSIL_DarkStealer_NI_2147823618_0
         $x_1_3 = "GetDelegateForFunctionPointer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +154,7 @@ rule Trojan_MSIL_DarkStealer_RHB_2147906792_0
         $x_2_10 = {50 45 00 00 4c 01 03 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0b 01 50 ?? ?? ?? ?? ?? 00 76 02 ?? ?? ?? ?? ?? ?? ?? 05 00 00 20}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule Trojan_MSIL_DarkStealer_ASJ_2147919719_0
         $x_1_3 = "192.168.100.51\\Public\\MapDrive\\Public" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

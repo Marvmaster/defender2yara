@@ -18,6 +18,7 @@ rule Trojan_Win32_KoiLoader_GQZ_2147914803_0
         $x_1_3 = "OpenVPN.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_KoiLoader_GX_2147915512_0
         $x_1_3 = "OpenVPN.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_KoiLoader_C_2147943600_0
         $x_2_2 = {0f b7 45 ec 6b c8 ?? 8b 55 e8 8b 44 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Huntsou_18137_0
         $x_3_4 = "cook5**rrr)]\\d_p)^jh*n:" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Trojan_Win32_Huntsou_18137_1
         $x_3_6 = "cook5**rrr)]\\d_p)^jh*n:" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*))) or
             ((1 of ($x_3_*) and 4 of ($x_2_*))) or
@@ -81,6 +83,7 @@ rule Trojan_Win32_Huntsou_18137_2
         $x_20_12 = "cook5**rrr)]\\d_p)^jh*n:" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_10_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_10_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or

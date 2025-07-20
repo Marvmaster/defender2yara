@@ -18,6 +18,7 @@ rule Trojan_Win32_Pleror_A_2147678471_0
         $x_1_4 = {61 74 74 72 69 62 20 2d 68 20 2d 72 20 2d 61 20 2d 73 20 22 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

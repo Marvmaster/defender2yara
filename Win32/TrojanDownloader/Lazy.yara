@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Lazy_RDB_2147839570_0
         $x_2_1 = {83 c0 01 89 45 fc 81 7d fc 10 04 00 00 73 18 8b 4d fc 0f b6 91 ?? ?? ?? ?? 83 f2 61 8b 45 fc}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

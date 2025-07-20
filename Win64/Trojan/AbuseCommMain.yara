@@ -18,6 +18,7 @@ rule Trojan_Win64_AbuseCommMain_A_2147824255_0
         $x_1_4 = "\\tox\\3085B89A0C515D2FB124D645906F5D3DA5CB97CEBEA975959AE4F95302A04E1D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_AbuseCommMain_B_2147824926_0
         $x_1_4 = "\\tox\\8BEDC411012A33BA34F49130D0F186993C6A32DAD8976F6A5D82C1ED23054C05.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win64_AbuseCommMain_C_2147824930_0
         $x_1_4 = "\\tox\\3728E933284CE638D06FCF1CBE921096E102508BD370D6D23137D3271EE57338.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win64_AbuseCommMain_D_2147824934_0
         $x_1_4 = "\\tox\\81B2B719AB9BDDCE9116776FA01956C2D4BB8A7CA5464592593F9A25DA1F9117.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Trojan_Win64_AbuseCommMain_E_2147824938_0
         $x_1_4 = "\\tox\\6F548F217897AA4140FB4C514C8187F2FFDBA3CAFC83795DEE2FBCA369E68900.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_Win64_AbuseCommMain_F_2147826169_0
         $x_1_4 = "\\tox\\35F36AF07A7FD5232EB10F69DB4A6FB4AFA54A88357F0CD23816A6756FAA6F1E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule Trojan_Win64_AbuseCommMain_G_2147826173_0
         $x_1_4 = "\\tox\\6C5AD4057E594E090E0C987B3089F74335DA75F04B7403E0575663C261349569.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -179,6 +186,7 @@ rule Trojan_Win64_AbuseCommMain_H_2147826982_0
         $x_1_4 = "\\tox\\0FF26770BFAEAD95194506E6970CC1C395B04159038D785DE316F05CE6DE6732.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -202,6 +210,7 @@ rule Trojan_Win64_AbuseCommMain_I_2147826986_0
         $x_1_4 = "\\tox\\BBA99964ECC6CA4A8B6460FB0CB45AD8781AC01D94F6F6DBF9B9D1202BAF1822.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -225,6 +234,7 @@ rule Trojan_Win64_AbuseCommMain_J_2147827311_0
         $x_1_4 = "\\tox\\F17A21223580DBB02D4FA592B5568B09594B7A90BA21C31534BF2EF7D3082C29.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -248,6 +258,7 @@ rule Trojan_Win64_AbuseCommMain_K_2147827315_0
         $x_1_4 = "\\tox\\10D20B109E895D2FBC70F11E9A775825E9397B0B89FE00FDD96BA8158F8A542A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -271,6 +282,7 @@ rule Trojan_Win64_AbuseCommMain_L_2147827319_0
         $x_1_4 = "\\tox\\891176DC3A1523F997D84069748364BD68505DA42153B1D1BF784AFB9DADBE51.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -294,6 +306,7 @@ rule Trojan_Win64_AbuseCommMain_M_2147827323_0
         $x_1_4 = "\\tox\\D5D9827F7186A50EABC1FBFD3DE8101792F187C584DA9D3D9DEAADBE23DCB16E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -317,6 +330,7 @@ rule Trojan_Win64_AbuseCommMain_N_2147827327_0
         $x_1_4 = "\\tox\\070AD41653BADCD8CFE9EEBDC363107BA87DB5C3E56F2EE8A261F8B70EF61F0A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -340,6 +354,7 @@ rule Trojan_Win64_AbuseCommMain_O_2147827331_0
         $x_1_4 = "\\tox\\885800AB83209EB47A9FC6C667224DB9B0DC02EEE1105229AC22E4F1D6A2125E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -363,6 +378,7 @@ rule Trojan_Win64_AbuseCommMain_P_2147827979_0
         $x_1_4 = "\\tox\\AB4FEBA9CABBD9E98CBF6745592B0E1C34F91492FD8D02AD802F92C893F49B20.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -386,6 +402,7 @@ rule Trojan_Win64_AbuseCommMain_Q_2147829190_0
         $x_1_4 = "\\tox\\ABF25D000C5375AA30743D32E30C60B603048117B99CFF0C8ECC1EB53F9C7958.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -409,6 +426,7 @@ rule Trojan_Win64_AbuseCommMain_R_2147829304_0
         $x_1_4 = "\\tox\\4F152368FB89FA84E292D30C007046511FE12FE35D4C0AEA74A15FB0E5A90848.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -432,6 +450,7 @@ rule Trojan_Win64_AbuseCommMain_S_2147829308_0
         $x_1_4 = "\\tox\\671263E7BC06103C77146A5ABB802A63F53A42B4C4766329A5F04D2660C99A36.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -455,6 +474,7 @@ rule Trojan_Win64_AbuseCommMain_T_2147829450_0
         $x_1_4 = "\\tox\\A2DCDE8AAC5AB15F552621CF24A44A708EDFD0C89E22AE77087FA1E2F4FA057A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -478,6 +498,7 @@ rule Trojan_Win64_AbuseCommMain_U_2147829454_0
         $x_1_4 = "\\tox\\AEBC11812927786A9A05D3BC5849359BA58601586F4FF356E0CE7EDE218DA002.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -501,6 +522,7 @@ rule Trojan_Win64_AbuseCommMain_V_2147830246_0
         $x_1_4 = "\\tox\\E906C710E15BCB045AD06338132ADB4591BFCE0107B66CFA64DD26A24931DE60.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -524,6 +546,7 @@ rule Trojan_Win64_AbuseCommMain_W_2147830348_0
         $x_1_4 = "\\tox\\88245BB83F14FD2EC517E3B09E56F968C1C4CD8162D5E534AD09438712E8D85D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -547,6 +570,7 @@ rule Trojan_Win64_AbuseCommMain_X_2147830544_0
         $x_1_4 = "\\tox\\D3404141459BC7206CC4AFEC16A3403F262C0937A732C12644E7CA97F0615201.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -570,6 +594,7 @@ rule Trojan_Win64_AbuseCommMain_Y_2147831035_0
         $x_1_4 = "\\tox\\E4769B1DEF6167C65799E7FA724004E97F6AC5F7C65F9DFF05F6674C5BAA3E42.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -593,6 +618,7 @@ rule Trojan_Win64_AbuseCommMain_Z_2147831039_0
         $x_1_4 = "\\tox\\C135F524E4C75FA00B5620F4286FFE7906E459673A64800EF20D944863946E1F.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -616,6 +642,7 @@ rule Trojan_Win64_AbuseCommMain_AA_2147831043_0
         $x_1_4 = "\\tox\\007A21A27C39CC64D9AB066A9A71B7B0BE575EE9D287189235BB1F376438150B.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -639,6 +666,7 @@ rule Trojan_Win64_AbuseCommMain_AB_2147831047_0
         $x_1_4 = "\\tox\\0EDC46A1C7F449FE1B056633F33A665E070968FE708845B9CC7F0EADCC49921D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -662,6 +690,7 @@ rule Trojan_Win64_AbuseCommMain_AC_2147831051_0
         $x_1_4 = "\\tox\\899D28D0C43BBF7FE3E4FE5B0CB80914BE4ADA8780A04AFCF6249A95ABA10170.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -685,6 +714,7 @@ rule Trojan_Win64_AbuseCommMain_AD_2147831055_0
         $x_1_4 = "\\tox\\3488458145EB62D7D3947E3811234F4663D9B5AEEF6584AB08A2099A7F946664.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -708,6 +738,7 @@ rule Trojan_Win64_AbuseCommMain_AE_2147831059_0
         $x_1_4 = "\\tox\\78DB22E30C48561EF8B63AFF7702B237A4797017EBC3630853CF6F11F8706A3A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -731,6 +762,7 @@ rule Trojan_Win64_AbuseCommMain_AF_2147831063_0
         $x_1_4 = "\\tox\\37790E2D198DFD20C9D2887D4EF7C3E2951BB84248D192689B64DCCA3C8BD808.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -754,6 +786,7 @@ rule Trojan_Win64_AbuseCommMain_AG_2147832085_0
         $x_1_4 = "\\tox\\1F2F83AA634455DE2FF21DE1CFBF3D5963E666FCFDDA18D3071D2B5F27012F7E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -777,6 +810,7 @@ rule Trojan_Win64_AbuseCommMain_AH_2147832475_0
         $x_1_4 = "\\tox\\92392B907E97561DEDB20D1005D20910334AD3E72B8E1AB003BB1F4A53FFB072.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -800,6 +834,7 @@ rule Trojan_Win64_AbuseCommMain_AI_2147833373_0
         $x_1_4 = "\\tox\\C1BDC6949510F7879F0782A3286392BFCC124E3393BD66592D84EEF135421D47.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -823,6 +858,7 @@ rule Trojan_Win64_AbuseCommMain_AJ_2147835204_0
         $x_1_4 = "\\tox\\047C485EF868D556627D71E891C2D112BD2594912B1DFE1C1AE0E1405D8A3364.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -846,6 +882,7 @@ rule Trojan_Win64_AbuseCommMain_AK_2147841747_0
         $x_1_4 = "\\tox\\0A07A62A3C798ED0A5225E2F56EA6EEECE5B97BBD86EA7A68A8F6A43FB5C9502.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -869,6 +906,7 @@ rule Trojan_Win64_AbuseCommMain_AL_2147841751_0
         $x_1_4 = "\\tox\\D6C324719AD0AA50A54E4F8DED8E8220D8698DD67B218B5429466C40E7F72657.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -892,6 +930,7 @@ rule Trojan_Win64_AbuseCommMain_AM_2147841755_0
         $x_1_4 = "\\tox\\AB33BC51AFAC64D98226826E70B483593C81CB22E6A3B504F7A75348C38C862F.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -915,6 +954,7 @@ rule Trojan_Win64_AbuseCommMain_AN_2147841968_0
         $x_1_4 = "\\tox\\70A6C767835311185DB9A53970FE18D30A4F876B11E470BE99A4B399C712316B.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -938,6 +978,7 @@ rule Trojan_Win64_AbuseCommMain_AO_2147841972_0
         $x_1_4 = "\\tox\\4A7F41CC6A5B87AF99450066F313C224D4E0E5501414670A8C5B802403E6292F.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -961,6 +1002,7 @@ rule Trojan_Win64_AbuseCommMain_AP_2147844843_0
         $x_1_4 = "\\tox\\EBBB598994F84A48470423157C23FD9E76CD7AA05BE5602BDB50E13CA82F7838.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -984,6 +1026,7 @@ rule Trojan_Win64_AbuseCommMain_AQ_2147844847_0
         $x_1_4 = "\\tox\\A746E398A5BC9AD9F281F5D10CF861546092D0F2107F12EA9F107EFB7D21CA41.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1007,6 +1050,7 @@ rule Trojan_Win64_AbuseCommMain_AR_2147844851_0
         $x_1_4 = "\\tox\\A4B3B0845DA242A64BF17E0DB4278EDF85855739667D3E2AE8B89D5439015F07.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1030,6 +1074,7 @@ rule Trojan_Win64_AbuseCommMain_AS_2147844855_0
         $x_1_4 = "\\tox\\2065307A4522EBFA9C862DB7C20033B71D882EBA11D0E14208721BD1EC64551C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1053,6 +1098,7 @@ rule Trojan_Win64_AbuseCommMain_AT_2147844859_0
         $x_1_4 = "\\tox\\9FE0CA434933D63AA72E6037F87AF3E1FBBE698346268CCDE6CCC30E037EC602.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1076,6 +1122,7 @@ rule Trojan_Win64_AbuseCommMain_AU_2147845179_0
         $x_1_4 = "\\tox\\E58D2154A7CAA8172E8AD15159AF1B1B3322E50A35D5821A29BC48D25143D33F.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1099,6 +1146,7 @@ rule Trojan_Win64_AbuseCommMain_AV_2147845183_0
         $x_1_4 = "\\tox\\A4D33CD121274DF98FB5C256E44562ED61E1BE5333BCC9D7605960499E3C6F1B.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1122,6 +1170,7 @@ rule Trojan_Win64_AbuseCommMain_AW_2147845187_0
         $x_1_4 = "\\tox\\A5852A300E402AD8AA973E1147D024FFE7DCF34BCC203C7B9DFB8560A3B10361.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1145,6 +1194,7 @@ rule Trojan_Win64_AbuseCommMain_AX_2147845913_0
         $x_1_4 = "\\tox\\7367B422CD7498D5F2AAF33F58F67A332F8520CF0279A5FBB4611E0121AE421A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1168,6 +1218,7 @@ rule Trojan_Win64_AbuseCommMain_AY_2147846947_0
         $x_1_4 = "\\tox\\E3213A199CDA7618AC22486EFECBD9F8E049AC36094D56AC1BFBE67EB9C3CF23.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1191,6 +1242,7 @@ rule Trojan_Win64_AbuseCommMain_AZ_2147846960_0
         $x_1_4 = "\\tox\\0ACA3AD2BD96541F66616CC088342107CF9F28997C1F697E50864393B8B82913.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1214,6 +1266,7 @@ rule Trojan_Win64_AbuseCommMain_BA_2147847184_0
         $x_1_4 = "\\tox\\6B76005FF5B3739B44CE38F0F4452C0DF2433F7B44B522DCD17B6151A6617744.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1237,6 +1290,7 @@ rule Trojan_Win64_AbuseCommMain_BB_2147847677_0
         $x_1_4 = "\\tox\\71FE82F1B76CAFD9A75E71B42CBA46824DBF0F1F3506ABF8EE0CB7BF40F73D4A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1260,6 +1314,7 @@ rule Trojan_Win64_AbuseCommMain_BC_2147847681_0
         $x_1_4 = "\\tox\\2FE7DA695F96154B1EC5AE05E9BBBACDF976FC5FFD9D1D4FDC34B79DBA02A432.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1283,6 +1338,7 @@ rule Trojan_Win64_AbuseCommMain_BD_2147849195_0
         $x_1_4 = "\\tox\\3F2A79CEDC9328540DF8E75682A36DA326E612ABBF9CBA6FC510EAF53D2EE608.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1306,6 +1362,7 @@ rule Trojan_Win64_AbuseCommMain_BE_2147849199_0
         $x_1_4 = "\\tox\\8F0E308CB4D9F1F3F80EC93A4C566B8CFCCAB0967F0637C00ED3079C37235652.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1329,6 +1386,7 @@ rule Trojan_Win64_AbuseCommMain_BF_2147849658_0
         $x_1_4 = "\\tox\\DBA5908245E3067FDA9B0C0D6FEEADC3D3C965A29AC340CA14D539924700DC53.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1352,6 +1410,7 @@ rule Trojan_Win64_AbuseCommMain_BG_2147849868_0
         $x_1_4 = "\\tox\\E9CD65687463F67F64937E961DD723DC82C79CB548375AAE8AA4A0698D356C5E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1375,6 +1434,7 @@ rule Trojan_Win64_AbuseCommMain_BH_2147849872_0
         $x_1_4 = "\\tox\\7043099A06D401A1F441F2FAD54FC2072A52FD6D250893B73C372448FAFDCE08.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1398,6 +1458,7 @@ rule Trojan_Win64_AbuseCommMain_BI_2147850060_0
         $x_1_4 = "\\tox\\77A904360EA7D74268E7A4F316865F1703D2D7A6AF28C9ECFACED69CD09C8610.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1421,6 +1482,7 @@ rule Trojan_Win64_AbuseCommMain_BJ_2147850064_0
         $x_1_4 = "\\tox\\84032B92D37C888FD3572909059BD6FA77612DD4FE62B4587A48DE33322AB67E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1444,6 +1506,7 @@ rule Trojan_Win64_AbuseCommMain_BK_2147850835_0
         $x_1_4 = "\\tox\\8B7C5C04B7431200645C9E190BB1EFABBFB3826810AAFCFF01ACF9B4080E5502.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1467,6 +1530,7 @@ rule Trojan_Win64_AbuseCommMain_BL_2147851103_0
         $x_1_4 = "\\tox\\BC9132FAE386CD10790AB21400CF248D56DFEC29E5403C144ACCA8D426D68B33.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1490,6 +1554,7 @@ rule Trojan_Win64_AbuseCommMain_BM_2147851924_0
         $x_1_4 = "\\tox\\126E30C4CC9DE90F79D1FA90830FDC2069A2E981ED26B6DC148DA8827FB3D63A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1513,6 +1578,7 @@ rule Trojan_Win64_AbuseCommMain_BN_2147852258_0
         $x_1_4 = "\\tox\\A7B9AD23F5AC4AB5404BFDE1E67CE0797F4FFD1C79D8A539E17406A55D5ED93B.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1536,6 +1602,7 @@ rule Trojan_Win64_AbuseCommMain_BO_2147853056_0
         $x_1_4 = "\\tox\\78E21CFF7AA85F713C1530AEF2E74E62830BEE77238F4B0A73E5E3251EAD5642.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1559,6 +1626,7 @@ rule Trojan_Win64_AbuseCommMain_BP_2147853060_0
         $x_1_4 = "\\tox\\81A9E67702D5AB17E1CF43296D6FAE7EB8DE6B2DDD69D58404CB19477CCA6B64.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1582,6 +1650,7 @@ rule Trojan_Win64_AbuseCommMain_BQ_2147853437_0
         $x_1_4 = "\\tox\\9096AD7062A4232F5AA31C2F7C4DF0AC1EAD10B78D40A6A3328AD142A42B555E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1605,6 +1674,7 @@ rule Trojan_Win64_AbuseCommMain_BR_2147853441_0
         $x_1_4 = "\\tox\\4AE245548F2A225882951FB14E9BF87EE01A0C10AE159B99D1EA62620D91A372.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1628,6 +1698,7 @@ rule Trojan_Win64_AbuseCommMain_BS_2147888320_0
         $x_1_4 = "\\tox\\A5F2F6058F70CE5953DC475EE6AF1F97FC6D487ABEBAE76915075E3A53525B1D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1651,6 +1722,7 @@ rule Trojan_Win64_AbuseCommMain_BT_2147888554_0
         $x_1_4 = "\\tox\\3C9D49B928FDC3C15F0314217623A71B865909B308576B4B0D10AEA62C98677B.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1674,6 +1746,7 @@ rule Trojan_Win64_AbuseCommMain_BU_2147888558_0
         $x_1_4 = "\\tox\\4F15236BFB89FA84E292D30C007046511FE12FE35D4C0AEA74A15FB0E5A90848.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1697,6 +1770,7 @@ rule Trojan_Win64_AbuseCommMain_BV_2147888562_0
         $x_1_4 = "\\tox\\192D52C7C18F3D2693ED2453E64C53EC0CCF0255AB2291F019B65BA84442B313.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1720,6 +1794,7 @@ rule Trojan_Win64_AbuseCommMain_BW_2147888566_0
         $x_1_4 = "\\tox\\0A6F992E1372DB4F245595424A7436EBB610775D6ADDC4D568ACC2AF5D315221.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1743,6 +1818,7 @@ rule Trojan_Win64_AbuseCommMain_BX_2147888570_0
         $x_1_4 = "\\tox\\3FA4D7B4989C059F50B12F28313210ADF04EE9DFE6C2F2AD1048048E92BD4D21.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1766,6 +1842,7 @@ rule Trojan_Win64_AbuseCommMain_BY_2147888742_0
         $x_1_4 = "\\tox\\9E1DEB410719C2CD0730E914BA2138795230F318A9EFBA6A5B43E722E9F76028.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1789,6 +1866,7 @@ rule Trojan_Win64_AbuseCommMain_BZ_2147888746_0
         $x_1_4 = "\\tox\\87F021ADD4DD69217D3D5BB3B42DAB52F362D8ABE2A831CFE381D3C72BB0AC03.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1812,6 +1890,7 @@ rule Trojan_Win64_AbuseCommMain_CA_2147888750_0
         $x_1_4 = "\\tox\\CFAC328D48B8A1499A1E67423F60E502A22557558CEEDD77A1A3DE59B2144C38.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1835,6 +1914,7 @@ rule Trojan_Win64_AbuseCommMain_CB_2147888754_0
         $x_1_4 = "\\tox\\75CD9D0B5D0E632A8850B619193E2DC69E55B5697B174D691C4CC72A88636E48.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1858,6 +1938,7 @@ rule Trojan_Win64_AbuseCommMain_CC_2147888758_0
         $x_1_4 = "\\tox\\D9A671DF6C004AA4850099AFDBA18DD1193B61A386745CD1DED8DEBBB36E0255.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1881,6 +1962,7 @@ rule Trojan_Win64_AbuseCommMain_CD_2147888845_0
         $x_1_4 = "\\tox\\AA7774431263F51F9043515C84C3186D7D685FEBC5AEA490272C75AE61473114.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1904,6 +1986,7 @@ rule Trojan_Win64_AbuseCommMain_CE_2147888849_0
         $x_1_4 = "\\tox\\274D8D5543770DADEEEE88E2B719C149462BF71AB0394EE5FF7FEBF22569EA64.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1927,6 +2010,7 @@ rule Trojan_Win64_AbuseCommMain_CF_2147888853_0
         $x_1_4 = "\\tox\\6B494AC81C1ADFA4AD8DFFB3862F45EDB79703FDC8EE4C86B01956D17024EF5D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1950,6 +2034,7 @@ rule Trojan_Win64_AbuseCommMain_CG_2147888857_0
         $x_1_4 = "\\tox\\839A2C1203F1C5D22579B2F646105A7FE8859A42160D4944543A77A38585FA1F.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1973,6 +2058,7 @@ rule Trojan_Win64_AbuseCommMain_CH_2147888861_0
         $x_1_4 = "\\tox\\30EE99903253BC5AE3D404A58AFE28BA373FE73E258A6537C68D7DA4E44E1368.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1996,6 +2082,7 @@ rule Trojan_Win64_AbuseCommMain_CI_2147888965_0
         $x_1_4 = "\\tox\\A1684234F478AF4A32CF9539D997C324D5CEC14F9474A83544ABEFFD133C286F.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2019,6 +2106,7 @@ rule Trojan_Win64_AbuseCommMain_CJ_2147888969_0
         $x_1_4 = "\\tox\\2B41B398739E6BECE4E93EAFA0C665E3680C8C7B75C566A44C99C710BB524741.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2042,6 +2130,7 @@ rule Trojan_Win64_AbuseCommMain_CK_2147888973_0
         $x_1_4 = "\\tox\\B79A7B0B31CF36361487D7CB6E7874132B056528D8AA4146424A7D1ECA72BC44.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2065,6 +2154,7 @@ rule Trojan_Win64_AbuseCommMain_CL_2147888977_0
         $x_1_4 = "\\tox\\B2F873769EB6B508EBC2103DDEB7366CEFB7B09AB8314DAD0C43461690726866.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2088,6 +2178,7 @@ rule Trojan_Win64_AbuseCommMain_CM_2147889561_0
         $x_1_4 = "\\tox\\FDF86CB226833382CE6C1C4A75C9F92BFD7CCA0F2AA6A890E0E67328B653FE20.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2111,6 +2202,7 @@ rule Trojan_Win64_AbuseCommMain_CN_2147890156_0
         $x_1_4 = "\\tox\\777BB9F3522655CC91E0B48E256475A7633E12CCBF8C9EF2910413F9812CF416.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2134,6 +2226,7 @@ rule Trojan_Win64_AbuseCommMain_CO_2147890160_0
         $x_1_4 = "\\tox\\69EB2511167FBE9E68546A93278FD52B7BA8F3F3529D5EEFBD63A513A2E73C3C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2157,6 +2250,7 @@ rule Trojan_Win64_AbuseCommMain_CP_2147890377_0
         $x_1_4 = "\\tox\\B02838FD4FF823665F855FF713659B87186B9AD90C40F148977DC51352BDB43B.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2180,6 +2274,7 @@ rule Trojan_Win64_AbuseCommMain_CQ_2147890381_0
         $x_1_4 = "\\tox\\2FFB95F4FDA76FBAD57BC1984F132304185BDF82DB42152B5E4E81D977B7E518.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2203,6 +2298,7 @@ rule Trojan_Win64_AbuseCommMain_CR_2147890570_0
         $x_1_4 = "\\tox\\BAED7AD40C392D20A6F6857912720B14E69CD01BB1D6E5C0B904EE4BE26E9D13.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2226,6 +2322,7 @@ rule Trojan_Win64_AbuseCommMain_CS_2147890574_0
         $x_1_4 = "\\tox\\9F653109E6CFA1890999C1C581500618005F6789D974FB67ED66B98ABF7D0732.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2249,6 +2346,7 @@ rule Trojan_Win64_AbuseCommMain_CT_2147891235_0
         $x_1_4 = "\\tox\\5FEB774F4CF3A15FC392C3CC90313B964353D2CE9239B878F279BDF80B25CE57.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2272,6 +2370,7 @@ rule Trojan_Win64_AbuseCommMain_CU_2147891749_0
         $x_1_4 = "\\tox\\30D1B4FAB9287E9C54969DB3F17A402A0BDFA9BCD45B3B2BDA5688EE879BA770.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2295,6 +2394,7 @@ rule Trojan_Win64_AbuseCommMain_CV_2147891753_0
         $x_1_4 = "\\tox\\68D93E04CD13FB660DBB8C6672183373C577AF957B78E7FEFFD561EFF7BD110C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2318,6 +2418,7 @@ rule Trojan_Win64_AbuseCommMain_CW_2147891757_0
         $x_1_4 = "\\tox\\C3CC4E254DEF87B28FD67818F5E446BB23C89B402FACA36B49C0EECFC75AA058.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2341,6 +2442,7 @@ rule Trojan_Win64_AbuseCommMain_CX_2147891761_0
         $x_1_4 = "\\tox\\09B950550CAD95899AC17C0B1384CD55C9BD81396B19EFFE2E80839D641D3221.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2364,6 +2466,7 @@ rule Trojan_Win64_AbuseCommMain_CY_2147892601_0
         $x_1_4 = "\\tox\\0421BD35FA5A5849FB9BEB1595DBBE239DDE19B46B0B8BD73EDD1107C245B46C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2387,6 +2490,7 @@ rule Trojan_Win64_AbuseCommMain_CZ_2147893020_0
         $x_1_4 = "\\tox\\BC3723356CBA89461914C536F047F0E66C20FBC4134FC5E46ABCEFF768D7DC1C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2410,6 +2514,7 @@ rule Trojan_Win64_AbuseCommMain_DA_2147893024_0
         $x_1_4 = "\\tox\\D8E29F22B9582F1E7A180A28F0DD90627A1220DD7E90559450B9AAEA64669D0D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2433,6 +2538,7 @@ rule Trojan_Win64_AbuseCommMain_DB_2147893203_0
         $x_1_4 = "\\tox\\5B85F0F52F989C42FE18A08351D4B9F50D7A9832DBE4A068346DE35D5CF8F410.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2456,6 +2562,7 @@ rule Trojan_Win64_AbuseCommMain_DC_2147893207_0
         $x_1_4 = "\\tox\\37737C5A90A32D6417DC12A01CA6A5B8496F7AB1AAAC5CF89AD398B713A1163F.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2479,6 +2586,7 @@ rule Trojan_Win64_AbuseCommMain_DD_2147893217_0
         $x_1_4 = "\\tox\\B761680E23F2EBB5F6887D315EBD05B2D7C365731E093B49ADB059C3DCCAA30C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2502,6 +2610,7 @@ rule Trojan_Win64_AbuseCommMain_DE_2147893278_0
         $x_1_4 = "\\tox\\0371CD54F80CBB490ED8E14001F82D6AC9C7FA298E7DB38F6F645028C96AA561.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2525,6 +2634,7 @@ rule Trojan_Win64_AbuseCommMain_DF_2147893531_0
         $x_1_4 = "\\tox\\8F804D66441DF4A210CF43C1B9C074823C7A8D1AE3ACF3215F7EC303717A0E42.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2548,6 +2658,7 @@ rule Trojan_Win64_AbuseCommMain_DG_2147893978_0
         $x_1_4 = "\\tox\\E21185C273FF3BBAF0522224502D79EAFBC91DAA3F6167DA771E86B49DD0F238.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2571,6 +2682,7 @@ rule Trojan_Win64_AbuseCommMain_DH_2147893982_0
         $x_1_4 = "\\tox\\461E4844E177B98FA19053599289ECCCA128D319E725152FCA5A040A5D22A122.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2594,6 +2706,7 @@ rule Trojan_Win64_AbuseCommMain_DI_2147895123_0
         $x_1_4 = "\\tox\\F1D0F45DBC3F4CA784D5D0D0DD8ADCD31AB5645BE00293FE6302CD0381F6527A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2617,6 +2730,7 @@ rule Trojan_Win64_AbuseCommMain_DJ_2147895143_0
         $x_1_4 = "\\tox\\49D46141AF71989E7986FEE3A3417058AB55A63F3A27FB8094148248F4899A10.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2640,6 +2754,7 @@ rule Trojan_Win64_AbuseCommMain_DK_2147895507_0
         $x_1_4 = "\\tox\\657CB615E462F4D82AA8A0EACE0EAA9B9F0C0E168898585B638569608226441C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2663,6 +2778,7 @@ rule Trojan_Win64_AbuseCommMain_DL_2147895692_0
         $x_1_4 = "\\tox\\C589F5D0AF2DF14EAFF5DAA494C8FB59F14D320BB31CF65E8D2BE4C8B98E764A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2686,6 +2802,7 @@ rule Trojan_Win64_AbuseCommMain_DM_2147896587_0
         $x_1_4 = "\\tox\\B2DECD2A54DD80C0E48ABB0F98A5A09E71393A303AD4B2AEF8498CA6C9EEE628.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2709,6 +2826,7 @@ rule Trojan_Win64_AbuseCommMain_DN_2147896591_0
         $x_1_4 = "\\tox\\DE9F011510DD644D626456BE395A8A5857CB669F1982AC3A954575CA7E35E100.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2732,6 +2850,7 @@ rule Trojan_Win64_AbuseCommMain_DO_2147896595_0
         $x_1_4 = "\\tox\\2AECDEAAF9C4EBECAF787C971DC882E5270CBCB23E646027B814FAA60607CF6E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2755,6 +2874,7 @@ rule Trojan_Win64_AbuseCommMain_DP_2147896599_0
         $x_1_4 = "\\tox\\12628E802B0C063E33AAB49BF53A41755CF00422723B0C122F1108A2B8436F54.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2778,6 +2898,7 @@ rule Trojan_Win64_AbuseCommMain_DQ_2147897106_0
         $x_1_4 = "\\tox\\2731CB3EA9E8A1F2822C3D0DD5A7FD9955DE0C99E77A05C246D42E301D93A648.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2801,6 +2922,7 @@ rule Trojan_Win64_AbuseCommMain_DR_2147897110_0
         $x_1_4 = "\\tox\\A72D3895FF672D121212CBAE9B17A23504DFCC4443C835057BB9FC128A7F9023.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2824,6 +2946,7 @@ rule Trojan_Win64_AbuseCommMain_DS_2147897114_0
         $x_1_4 = "\\tox\\E13442A06BED50DC366E0EACEDD493BBF4DEC090ACF31A702E3EEFE15FCB225D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2847,6 +2970,7 @@ rule Trojan_Win64_AbuseCommMain_DT_2147897221_0
         $x_1_4 = "\\tox\\AA47F8CA532A6D71528143A4F9A3016E1BA07E155FE41DEBBEA94E2B2ED8546A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2870,6 +2994,7 @@ rule Trojan_Win64_AbuseCommMain_DU_2147898499_0
         $x_1_4 = "\\tox\\A2BE792BBE8077482156DC950840EA5F1CB0F8AB1C403BF6DDF863489C7CC60E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2893,6 +3018,7 @@ rule Trojan_Win64_AbuseCommMain_DV_2147898503_0
         $x_1_4 = "\\tox\\E24F024A739BF4CC1A40FD970A11154D231FB5DF0D401C17E4C2439AA7903463.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2916,6 +3042,7 @@ rule Trojan_Win64_AbuseCommMain_DW_2147898507_0
         $x_1_4 = "\\tox\\AD529139F9C08CECFF34C92A6D4D03324B8CD450BC0BEEDC071297BBCB596E59.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2939,6 +3066,7 @@ rule Trojan_Win64_AbuseCommMain_DX_2147898511_0
         $x_1_4 = "\\tox\\90AD660309EDF9786F15C85EE20F7BBEB82A4D727A0B619E9FE791F5CA049E09.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2962,6 +3090,7 @@ rule Trojan_Win64_AbuseCommMain_DY_2147898515_0
         $x_1_4 = "\\tox\\7FEBE7DA5E3FADF691ABC60DE0F15D4EEC0BF089845487631594822F4F516222.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2985,6 +3114,7 @@ rule Trojan_Win64_AbuseCommMain_DZ_2147898519_0
         $x_1_4 = "\\tox\\B7A49CA7FF4A5DFE23DD437A9C81C430831AE0FE99B389E6A2991BC38915B272.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3008,6 +3138,7 @@ rule Trojan_Win64_AbuseCommMain_EA_2147898523_0
         $x_1_4 = "\\tox\\0BF0BA66030916F61BB7D9E954FB98A8F973DB6531F18EB6CEE006D7E275B906.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3031,6 +3162,7 @@ rule Trojan_Win64_AbuseCommMain_EB_2147898527_0
         $x_1_4 = "\\tox\\7CB85C41D6E3FC9602FB8D79B955820AC4EEF41F29F2177B9750C129935F216F.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3054,6 +3186,7 @@ rule Trojan_Win64_AbuseCommMain_EC_2147898731_0
         $x_1_4 = "\\tox\\D27A7B3711CD1442A8FAC19BB5780FF291101F6286A62AD21E5F7F08BD5F5F1B.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3077,6 +3210,7 @@ rule Trojan_Win64_AbuseCommMain_ED_2147898735_0
         $x_1_4 = "\\tox\\7DFFA421CF18F77F3BB974A27646DE9DD985C1943584B48433BEB4A96F118621.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3100,6 +3234,7 @@ rule Trojan_Win64_AbuseCommMain_EE_2147899152_0
         $x_1_4 = "\\tox\\02C75E60211314F4A69C323A3CE334D75C72CD8C742F3ED168447405C541DF05.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3123,6 +3258,7 @@ rule Trojan_Win64_AbuseCommMain_EF_2147900279_0
         $x_1_4 = "\\tox\\1C054B722BCBF41A918EF3C485712742088F5C3E81B2FDD91ADEA6BA55F4A856.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3146,6 +3282,7 @@ rule Trojan_Win64_AbuseCommMain_EG_2147900283_0
         $x_1_4 = "\\tox\\A6FA4856508F2198468A7FCB4F194D7B52BE632364D81CCE6F4DAD6FABBF3A49.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3169,6 +3306,7 @@ rule Trojan_Win64_AbuseCommMain_EH_2147902726_0
         $x_1_4 = "\\tox\\98D120C9033653042E290627914B890A3291013F7377A976A028051C52440C71.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3192,6 +3330,7 @@ rule Trojan_Win64_AbuseCommMain_EI_2147903397_0
         $x_1_4 = "\\tox\\59052DE8288FE054576FB2D8ADE27E35AD9269F5AB4BED99BDC019B81D40B97C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3215,6 +3354,7 @@ rule Trojan_Win64_AbuseCommMain_EJ_2147903950_0
         $x_1_4 = "\\tox\\E5BBFAD2DB3FB497EA03612B2428F927FD8A9B3333D524FD51D43B029B787057.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3238,6 +3378,7 @@ rule Trojan_Win64_AbuseCommMain_EK_2147904884_0
         $x_1_4 = "\\tox\\ECBFA0EB44135FDB09BDE1F5EE8F95CE3F1009385CCA2FF3FEF4CB09C15BA854.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3261,6 +3402,7 @@ rule Trojan_Win64_AbuseCommMain_EL_2147905296_0
         $x_1_4 = "\\tox\\B29F3EB9D89D940BFB8293B67977B9A24F74E2EDCF854AE7376D1BCE2BC85B70.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3284,6 +3426,7 @@ rule Trojan_Win64_AbuseCommMain_EM_2147905300_0
         $x_1_4 = "\\tox\\4D598799696AD5399FABF7D40C4D1BE9F05D74CFB311047D7391AC0BF64BED47.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3307,6 +3450,7 @@ rule Trojan_Win64_AbuseCommMain_EN_2147905304_0
         $x_1_4 = "\\tox\\5596A55062A4232F5AA55C2F7C4DF0AC1EAD10B78D4055A3328AD142A42B555E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3330,6 +3474,7 @@ rule Trojan_Win64_AbuseCommMain_EO_2147905567_0
         $x_1_4 = "\\tox\\6520A79F5A832F9D4238C2C2841D89A3246F7EF2B0185C735267D7D41F5D9129.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3353,6 +3498,7 @@ rule Trojan_Win64_AbuseCommMain_EP_2147905835_0
         $x_1_4 = "\\tox\\8D545FF434C6B990054C6181BFB409CBE394A697EB703877499F97AD4462A811.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3376,6 +3522,7 @@ rule Trojan_Win64_AbuseCommMain_EQ_2147905936_0
         $x_1_4 = "\\tox\\7C35408411AEEBD53CDBCEBAB167D7B22F1E66614E89DFCB62EE835416F60E1B.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3399,6 +3546,7 @@ rule Trojan_Win64_AbuseCommMain_ER_2147906023_0
         $x_1_4 = "\\tox\\A8AD0FD4C931CDAA1408D5A60CBF38CEDF46B41E19A8A55E4EF1F1848AF3416A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3422,6 +3570,7 @@ rule Trojan_Win64_AbuseCommMain_ES_2147906139_0
         $x_1_4 = "\\tox\\2793D009872AF80ED9B1A461F7B9BD6209744047DC1707A42CB622053716AD4B.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3445,6 +3594,7 @@ rule Trojan_Win64_AbuseCommMain_ET_2147906143_0
         $x_1_4 = "\\tox\\AEA72DFCF492037A6D15755A74645C7D8E674E342BACA9F9070A3FB74117EC31.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3468,6 +3618,7 @@ rule Trojan_Win64_AbuseCommMain_EU_2147906147_0
         $x_1_4 = "\\tox\\BD0FC8C016657DE254C0F48AA3472E11B8C92F96DAF66F971ABF5B8AE7409E2F.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3491,6 +3642,7 @@ rule Trojan_Win64_AbuseCommMain_EW_2147907281_0
         $x_1_4 = "\\tox\\4CDE9AA5707C619C241A2F27E0F3378E6A5CC6AD031EADC40C36F1F300DB8D5B.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3514,6 +3666,7 @@ rule Trojan_Win64_AbuseCommMain_EX_2147907285_0
         $x_1_4 = "\\tox\\9A8B9576F0B3846B4CA8B4FAF9F50F633CE731BBC860E76C09ED31FC1A1ACF2A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3537,6 +3690,7 @@ rule Trojan_Win64_AbuseCommMain_EY_2147907289_0
         $x_1_4 = "\\tox\\358AC0F6C813DD4FD243524F040E2F77969278274BD8A8945B5041A249786E32.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3560,6 +3714,7 @@ rule Trojan_Win64_AbuseCommMain_EZ_2147907333_0
         $x_1_4 = "\\tox\\285CFEC2BC80A8A698B3E4E0C86A0FCB329569DAA16EA11FD028774E26BDD97D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3583,6 +3738,7 @@ rule Trojan_Win64_AbuseCommMain_FA_2147907401_0
         $x_1_4 = "\\tox\\DCBB9DDEA640A6A68FD8205B7C160D6F91FF9C3B0AE73ABDB6D426543BCAFA7A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3606,6 +3762,7 @@ rule Trojan_Win64_AbuseCommMain_FB_2147907405_0
         $x_1_4 = "\\tox\\BE34052204E43C950AF5114D0B52F359C8FED65BFBD7B80097B96FD554362334.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3629,6 +3786,7 @@ rule Trojan_Win64_AbuseCommMain_FC_2147907409_0
         $x_1_4 = "\\tox\\14607D9D78CDD2CE718B6C7F4C4087A6F8EE37E37EA93830B6D02AA0DDB88266.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3652,6 +3810,7 @@ rule Trojan_Win64_AbuseCommMain_FD_2147907748_0
         $x_1_4 = "\\tox\\ED27769A3F1FCD0A16D9D40776770ACFD694BDEDBD7D926F28A77C185792B852.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3675,6 +3834,7 @@ rule Trojan_Win64_AbuseCommMain_FE_2147908362_0
         $x_1_4 = "\\tox\\B346F0ECF601FC1E2EF530602790B1EDA7A61E1AE23110C68F513F9F9646C910.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3698,6 +3858,7 @@ rule Trojan_Win64_AbuseCommMain_FF_2147909573_0
         $x_1_4 = "\\tox\\1097C77415E419164E4E5229CF57B19586C2F30C1050306BF4127CDC6391D44D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3721,6 +3882,7 @@ rule Trojan_Win64_AbuseCommMain_FG_2147909577_0
         $x_1_4 = "\\tox\\1D1C4B6CC456727CFD622AC25E4E81FF3826AECD75A4E8A21E4D293EBBB2A14D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3744,6 +3906,7 @@ rule Trojan_Win64_AbuseCommMain_FH_2147909581_0
         $x_1_4 = "\\tox\\9796CE1E72A8874D594F6573F44C94FB649473B4194DCD80C406BFE88E4B3662.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3767,6 +3930,7 @@ rule Trojan_Win64_AbuseCommMain_FI_2147909585_0
         $x_1_4 = "\\tox\\A7D21906457B8877A15F4AD0F236242FE431966C3D17B14A8E8CD15B4B60B56E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3790,6 +3954,7 @@ rule Trojan_Win64_AbuseCommMain_FJ_2147910394_0
         $x_1_4 = "\\tox\\91A120F1D2E4A2DAEA82E3043D98AFE58DAAFC1A639ADFB624C45D9BDA148D22.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3813,6 +3978,7 @@ rule Trojan_Win64_AbuseCommMain_FK_2147910396_0
         $x_1_4 = "\\tox\\3C588D36EF676201701B0B8EA1F8046E0B2372EBCF900008E80B0DE02F39DD25.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3836,6 +4002,7 @@ rule Trojan_Win64_AbuseCommMain_FL_2147910714_0
         $x_1_4 = "\\tox\\A466C1720D92FF9A57241E24BA38E2AF9896FCD250FCC85E7E43E05871FB655C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3859,6 +4026,7 @@ rule Trojan_Win64_AbuseCommMain_FM_2147910718_0
         $x_1_4 = "\\tox\\88A612B3887D57A7FA3D48F5E3EDF952E4BE48E0972FC6456FBBCFF198CC8620.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3882,6 +4050,7 @@ rule Trojan_Win64_AbuseCommMain_FN_2147910865_0
         $x_1_4 = "\\tox\\36F186C6FDCAAC0CF122E234B5D15F3F42F73568745F251C1306D71EBCA96817.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3905,6 +4074,7 @@ rule Trojan_Win64_AbuseCommMain_FO_2147911106_0
         $x_1_4 = "\\tox\\6C532A1EEBC9225639D91BDECFE9F7B0ADC0582083C5C0BE188F43CC0F482A40.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3928,6 +4098,7 @@ rule Trojan_Win64_AbuseCommMain_FP_2147911431_0
         $x_1_4 = "\\tox\\A7A86A6C92CC034E621B58C4DDDD3542957C8019A141C6F4D138D8451882654A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3951,6 +4122,7 @@ rule Trojan_Win64_AbuseCommMain_FQ_2147911561_0
         $x_1_4 = "\\tox\\2D164BEB09DF775C543F52C7AD8755B96FBB3A19C8AEAB0C93EFCE3C74E4A703.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3974,6 +4146,7 @@ rule Trojan_Win64_AbuseCommMain_FR_2147911565_0
         $x_1_4 = "\\tox\\A504DF3588EC05145E2C42EF8F214F3246D5E3526B05ECCC21EDC6783992C43E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3997,6 +4170,7 @@ rule Trojan_Win64_AbuseCommMain_FS_2147911569_0
         $x_1_4 = "\\tox\\14CEE2E9F5B0F5D10378ED08C7C52552EF425D12CB03EE7462E938AE82735F2B.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4020,6 +4194,7 @@ rule Trojan_Win64_AbuseCommMain_FT_2147911573_0
         $x_1_4 = "\\tox\\F01DE6CE6E065F6D4D1022311EBD62238ECC0B06127EB7DD72B8CEE084CFBA42.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4043,6 +4218,7 @@ rule Trojan_Win64_AbuseCommMain_FU_2147911701_0
         $x_1_4 = "\\tox\\F6B2E01CFA4D3F2DB75E4EDD07EC28BF793E541A9674C3E6A66E1CDA9D931A13.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4066,6 +4242,7 @@ rule Trojan_Win64_AbuseCommMain_FV_2147913880_0
         $x_1_4 = "\\tox\\DDD155B43289399E7770F6B8F6AD5D6F5197FAD60F2F823797116AC36A0DEA02.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4089,6 +4266,7 @@ rule Trojan_Win64_AbuseCommMain_FW_2147913884_0
         $x_1_4 = "\\tox\\10FCD323158B14E6BD41CB00CB98AD8E8FE0C9D9B78150F008350BCAC84C1B5D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4112,6 +4290,7 @@ rule Trojan_Win64_AbuseCommMain_FX_2147913888_0
         $x_1_4 = "\\tox\\1E62672989582C08F5C5F1B0185ACF4281A571CE4115C0EB019B972187B18855.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4135,6 +4314,7 @@ rule Trojan_Win64_AbuseCommMain_FY_2147915540_0
         $x_1_4 = "\\tox\\9500B1A73716BCF40745086F7184A33EA0141B7D3F852431C8FDD2E1E8FAF927.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4158,6 +4338,7 @@ rule Trojan_Win64_AbuseCommMain_FZ_2147916039_0
         $x_1_4 = "\\tox\\6055FA73B7D94FE77A34502A664D95A439F18A72C0042915A7EEBE09F4ACF023.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4181,6 +4362,7 @@ rule Trojan_Win64_AbuseCommMain_GA_2147917461_0
         $x_1_4 = "\\tox\\D4CDADA0C4345AFDE8A1FD2731D9B367D635330273E25FB1DBFD468608F15404.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4204,6 +4386,7 @@ rule Trojan_Win64_AbuseCommMain_GB_2147917465_0
         $x_1_4 = "\\tox\\141C8F13F4B7A4C2EED05A29186AE10F8E849AE4AC2C3E7B167FD27B316E026A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4227,6 +4410,7 @@ rule Trojan_Win64_AbuseCommMain_GC_2147919466_0
         $x_1_4 = "\\tox\\983E2254D2BDC97E9EE54216C50F12706D3AF0FD6FD19596B676925ECA38FA2C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4250,6 +4434,7 @@ rule Trojan_Win64_AbuseCommMain_GD_2147919691_0
         $x_1_4 = "\\tox\\960D9814EFBFC89823219ECCD31B173B1CB9975E181FFD2AF539E09A2CDE7E65.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4273,6 +4458,7 @@ rule Trojan_Win64_AbuseCommMain_GE_2147920299_0
         $x_1_4 = "\\tox\\5700F2F2B10F590AAEEE1C6FA0410CA40A6CD08852B7A1FA26A37A6A06E1A40C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4296,6 +4482,7 @@ rule Trojan_Win64_AbuseCommMain_GF_2147920303_0
         $x_1_4 = "\\tox\\C2572C8DE4E77D02E8FFC0F9F96FD0F18CCD19C0B6D45E1EA7EFE26203D8DB03.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4319,6 +4506,7 @@ rule Trojan_Win64_AbuseCommMain_EV_2147920489_0
         $x_1_4 = "\\tox\\B9B74A412D44C19EEA0343F6146B6C7139221B86390D5597EBE9A2E4FB987A39.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4342,6 +4530,7 @@ rule Trojan_Win64_AbuseCommMain_GG_2147921809_0
         $x_1_4 = "\\tox\\DAF390020DB15B4D2822803CC3F4D69EC81D37552B485037261D688F8901665A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4365,6 +4554,7 @@ rule Trojan_Win64_AbuseCommMain_GH_2147921813_0
         $x_1_4 = "\\tox\\605399A938178E58CC9CB73F1D9836DAEC173361DBDA1CB98B8C018B2FC23352.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4388,6 +4578,7 @@ rule Trojan_Win64_AbuseCommMain_GI_2147921817_0
         $x_1_4 = "\\tox\\B093BC843B18EC65A664B83BB7AAE424FE36A17D8520591812D5BA940CC30E45.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4411,6 +4602,7 @@ rule Trojan_Win64_AbuseCommMain_GJ_2147921821_0
         $x_1_4 = "\\tox\\E230E1322C9C327955926CF965AF386914FA4F67A1516BE93CB7693CE4AC8009.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4434,6 +4626,7 @@ rule Trojan_Win64_AbuseCommMain_GK_2147921825_0
         $x_1_4 = "\\tox\\15F496730D19CBF0301FA08BAD9477F04FEEC4AE477C5AC4F164ABC8FC22F71D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4457,6 +4650,7 @@ rule Trojan_Win64_AbuseCommMain_GL_2147921829_0
         $x_1_4 = "\\tox\\F934F9839465E92E23A755562178404F189D185EDBA96076865713FBD643E95E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4480,6 +4674,7 @@ rule Trojan_Win64_AbuseCommMain_GM_2147922182_0
         $x_1_4 = "\\tox\\3797455B219CC74EB503399F0E70C57F19FC7BA58A5D36C80264FFA465A4FD21.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4503,6 +4698,7 @@ rule Trojan_Win64_AbuseCommMain_GN_2147923355_0
         $x_1_4 = "\\tox\\D7A5E0027572764BE600925712D079472FF950F954553FF07E823FF1D068C312.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4526,6 +4722,7 @@ rule Trojan_Win64_AbuseCommMain_GO_2147924542_0
         $x_1_4 = "\\tox\\18EB92BD6E4B55B60CC913088F952B7123D0612A5FCE67C2EDF40AAB687E2904.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4549,6 +4746,7 @@ rule Trojan_Win64_AbuseCommMain_GP_2147924546_0
         $x_1_4 = "\\tox\\8C3995AF7ACD721D8180C19A2C41E7D46C51049BE1871F5784864178BBC18B08.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4572,6 +4770,7 @@ rule Trojan_Win64_AbuseCommMain_GQ_2147924770_0
         $x_1_4 = "\\tox\\EF404FB3FC9AC9032A868ED87493D2946D96EFA83DFC6184053CA8289A27FC6C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4595,6 +4794,7 @@ rule Trojan_Win64_AbuseCommMain_GR_2147924901_0
         $x_1_4 = "\\tox\\94D11E694A924ECB88D42C2A6412BC980C2744B5FFF784EE6097416C98D97461.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4618,6 +4818,7 @@ rule Trojan_Win64_AbuseCommMain_GS_2147925087_0
         $x_1_4 = "\\tox\\14F335E436E62F32720218B99A9DB77EE69AEC3AC8CBEAB0D68CEE67BE89A930.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4641,6 +4842,7 @@ rule Trojan_Win64_AbuseCommMain_GT_2147925703_0
         $x_1_4 = "\\tox\\28A28E8137979256397197744C175BDAB423B3D05C49E49D2F4C94FE06924310.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4664,6 +4866,7 @@ rule Trojan_Win64_AbuseCommMain_GU_2147925707_0
         $x_1_4 = "\\tox\\898923FE0699CFE1EFD17773425DECB080840877C29F883D389D6880B2B96173.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4687,6 +4890,7 @@ rule Trojan_Win64_AbuseCommMain_GV_2147925711_0
         $x_1_4 = "\\tox\\19A549A57160F384CF4E36EE1A24747ED99C623C48EA545F343296FB7092795D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4710,6 +4914,7 @@ rule Trojan_Win64_AbuseCommMain_GW_2147926791_0
         $x_1_4 = "\\tox\\DB6E39D48AEF442A219248F82B2C101FFFCA7DADA77CD9BDE31C886FDECFFB58.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4733,6 +4938,7 @@ rule Trojan_Win64_AbuseCommMain_GX_2147926992_0
         $x_1_4 = "\\tox\\D29B43234FD74DC8383AAEA2BDAB5CBE95BA290B930F631E2C65573201A7FD12.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4756,6 +4962,7 @@ rule Trojan_Win64_AbuseCommMain_GY_2147928547_0
         $x_1_4 = "\\tox\\320D6F294A59A1F5AD586599F21058E279929F9D2B4B6C64A3A1789E7FF4C819.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4779,6 +4986,7 @@ rule Trojan_Win64_AbuseCommMain_GZ_2147929639_0
         $x_1_4 = "\\tox\\EAF10F898A86588D593D442A596117983178A7A6ED27882486D7D9C4F8750B3D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4802,6 +5010,7 @@ rule Trojan_Win64_AbuseCommMain_HA_2147929738_0
         $x_1_4 = "\\tox\\AE1C5E273C1B6DDE068DC57B10A7023591C910D1FAAA16E40593D0EEBBD0BE30.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4825,6 +5034,7 @@ rule Trojan_Win64_AbuseCommMain_HB_2147930222_0
         $x_1_4 = "\\tox\\FC5AF6BC0F44FFA33A962DDBB3DECE9115BB2080007A8AA13C6A598237D67F16.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4848,6 +5058,7 @@ rule Trojan_Win64_AbuseCommMain_HC_2147931625_0
         $x_1_4 = "\\tox\\20A32ABC1E4EC6D53861D7202E730501EE5E950EB1FE96A0CADB7C231F44C959.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4871,6 +5082,7 @@ rule Trojan_Win64_AbuseCommMain_HD_2147931629_0
         $x_1_4 = "\\tox\\34BA12E4BE532885BAD25BDC4EFA0BCC4145B76B58A90E0C4E2A80D37A5A9F30.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4894,6 +5106,7 @@ rule Trojan_Win64_AbuseCommMain_HE_2147931633_0
         $x_1_4 = "\\tox\\D10202E688A76AAFA8B41BADB1354B8EA0CDB1A5CBEBDABDAEE4375509B8E371.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4917,6 +5130,7 @@ rule Trojan_Win64_AbuseCommMain_HF_2147931637_0
         $x_1_4 = "\\tox\\0A79401ECEB69C74FD9831002B97635A13BFDF90C33A83A8EE7014199B1ED05B.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4940,6 +5154,7 @@ rule Trojan_Win64_AbuseCommMain_HG_2147931641_0
         $x_1_4 = "\\tox\\64C2EB66670181B9057E8FD4299032EA89599943E7D36A508CB9DC9CB0513126.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4963,6 +5178,7 @@ rule Trojan_Win64_AbuseCommMain_HH_2147931645_0
         $x_1_4 = "\\tox\\AA4D0D135044A1A35A00BF24E453EC93702B5B0279935B9F709E76A155236630.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4986,6 +5202,7 @@ rule Trojan_Win64_AbuseCommMain_HI_2147931649_0
         $x_1_4 = "\\tox\\D48F8A0B1CE7181EE010FC85EEA0CA92D191A42163A1029C37C04B0BB5A71637.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5009,6 +5226,7 @@ rule Trojan_Win64_AbuseCommMain_HJ_2147931653_0
         $x_1_4 = "\\tox\\E4037039EB2D2F52A2B29E783C52FF6FC0E4D29D38611111C19A5E300F82FB0E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5032,6 +5250,7 @@ rule Trojan_Win64_AbuseCommMain_HK_2147931831_0
         $x_1_4 = "\\tox\\07BF3802C93C42739CFD0328A830801C7182C73D2FFC28E76681C6EFFC85A478.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5055,6 +5274,7 @@ rule Trojan_Win64_AbuseCommMain_HL_2147931835_0
         $x_1_4 = "\\tox\\204E91D375BADE81DC528EFCC105A5D046DB92FCC4B75F08E151053DCD8D5025.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5078,6 +5298,7 @@ rule Trojan_Win64_AbuseCommMain_HM_2147931839_0
         $x_1_4 = "\\tox\\284AFB03BA5BF6D13B3E92B5111E16F5140255075AC0C2775698965895AC5A7D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5101,6 +5322,7 @@ rule Trojan_Win64_AbuseCommMain_HN_2147931843_0
         $x_1_4 = "\\tox\\37070FA85465C92677007577543F09C5B67F8211CCF2C16660D40F94B6847C4A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5124,6 +5346,7 @@ rule Trojan_Win64_AbuseCommMain_HO_2147931847_0
         $x_1_4 = "\\tox\\3CC7CCEF369D6A7A4F6CAD11D12D7DE671909962944A7D034282F1F7B54F9D35.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5147,6 +5370,7 @@ rule Trojan_Win64_AbuseCommMain_HP_2147931851_0
         $x_1_4 = "\\tox\\57309B4FFB75A04AAAE491451CA128035B78C22AF220F24BDA3CFE0D393ACC18.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5170,6 +5394,7 @@ rule Trojan_Win64_AbuseCommMain_HQ_2147931855_0
         $x_1_4 = "\\tox\\6A301ED6E5D3435A3086C99E892F03DD2322D38737A59AE7B2A0E57FC341D967.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5193,6 +5418,7 @@ rule Trojan_Win64_AbuseCommMain_HR_2147931859_0
         $x_1_4 = "\\tox\\6ACB63BA5CE3181B447E9865418497D258550BD88828D460333207EB5BD38D7F.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5216,6 +5442,7 @@ rule Trojan_Win64_AbuseCommMain_HS_2147931863_0
         $x_1_4 = "\\tox\\B86FC08132BB71B087740EFA1BE61E3E03117C76E21473F7A4BBAD2FC0FEAA13.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5239,6 +5466,7 @@ rule Trojan_Win64_AbuseCommMain_HT_2147931867_0
         $x_1_4 = "\\tox\\E547F7D79733C2C43ACEF824A3208043DEF9F2C372604F662B4BFAEE480FE779.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5262,6 +5490,7 @@ rule Trojan_Win64_AbuseCommMain_HU_2147932097_0
         $x_1_4 = "\\tox\\061AA6BDE8F6DE6C92F0D6E077359BF6911FCAF80030E82B3A3DB65E63C80113.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5285,6 +5514,7 @@ rule Trojan_Win64_AbuseCommMain_HV_2147932101_0
         $x_1_4 = "\\tox\\D671ACD243E7B93732A54D09CCE7A41B59F3D655AA01CB94CFDB3E16A1ACFB02.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5308,6 +5538,7 @@ rule Trojan_Win64_AbuseCommMain_HW_2147932105_0
         $x_1_4 = "\\tox\\E269EA3B12BB0FC371E63700D4458E0465497A67D8B933B3D797454C02AB390C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5331,6 +5562,7 @@ rule Trojan_Win64_AbuseCommMain_HX_2147932109_0
         $x_1_4 = "\\tox\\6AC5E4FF4999D889C1349A1964F2FCD639FCD4023E4D57673072FB1E6232221C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5354,6 +5586,7 @@ rule Trojan_Win64_AbuseCommMain_HY_2147932113_0
         $x_1_4 = "\\tox\\7F7CF80A00593E5A789523299A0A1AB6CBFB472EC3A3FD9BFC7B01922A98C30C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5377,6 +5610,7 @@ rule Trojan_Win64_AbuseCommMain_HZ_2147932537_0
         $x_1_4 = "\\tox\\28F633BF7F6E7E5E97726FF65F0A268F219468A35EA14B00F2A728CE66D54D34.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5400,6 +5634,7 @@ rule Trojan_Win64_AbuseCommMain_IA_2147932541_0
         $x_1_4 = "\\tox\\6D8560C20E277B28E7C290A678F891F1D2FB32402C0AE80DA18CB2C06F94F644.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5423,6 +5658,7 @@ rule Trojan_Win64_AbuseCommMain_IB_2147933135_0
         $x_1_4 = "\\tox\\ADA6E26332F26451E45768179C771CA87A7F0F4E234DA8D882888F505494925D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5446,6 +5682,7 @@ rule Trojan_Win64_AbuseCommMain_IC_2147933139_0
         $x_1_4 = "\\tox\\D85CCD3DEBA9003CF3083B474976E281F056603C1CE55BC496F5ED88D068606A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5469,6 +5706,7 @@ rule Trojan_Win64_AbuseCommMain_ID_2147933143_0
         $x_1_4 = "\\tox\\3BBD6F23D4691C0C7613F9365E947A3CF7F0454CD792364E2A311EF80934C167.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5492,6 +5730,7 @@ rule Trojan_Win64_AbuseCommMain_IE_2147933147_0
         $x_1_4 = "\\tox\\3F7419E14A3039416E0A226F8D2EDF948A983298DF29A8E9A360CDD089414066.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5515,6 +5754,7 @@ rule Trojan_Win64_AbuseCommMain_IF_2147933151_0
         $x_1_4 = "\\tox\\46CA5EEC55A16767B7F8293DB18F753D1BF60C536747EFD115035DDA40948427.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5538,6 +5778,7 @@ rule Trojan_Win64_AbuseCommMain_IG_2147933155_0
         $x_1_4 = "\\tox\\620C7A54EC212FB482A684BA74381C3623CCE4D0E27FAE348688F65E0F0F6B6A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5561,6 +5802,7 @@ rule Trojan_Win64_AbuseCommMain_IH_2147933159_0
         $x_1_4 = "\\tox\\74773DBD4085BA39A1643CFA561488124771BE839961793DA10245560E1F2D3A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5584,6 +5826,7 @@ rule Trojan_Win64_AbuseCommMain_II_2147933163_0
         $x_1_4 = "\\tox\\90FDB446C1B8D204DE4EE3E393FD636C18798E744A34060C418EF96FD2C37C56.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5607,6 +5850,7 @@ rule Trojan_Win64_AbuseCommMain_IJ_2147933167_0
         $x_1_4 = "\\tox\\B053968BBB63D64FE16CFC98AD114E9B2AB85DB5F2D6DA09D31B707868E01005.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5630,6 +5874,7 @@ rule Trojan_Win64_AbuseCommMain_IK_2147933171_0
         $x_1_4 = "\\tox\\BB3DEA31D39FAEF4E3286ED92DF5892E2A5966DAE28468A7BE8B72D54829A60F.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5653,6 +5898,7 @@ rule Trojan_Win64_AbuseCommMain_IL_2147933175_0
         $x_1_4 = "\\tox\\C1DD64D0994AEAA297225CD94D1A6842819C74319A85350913AB9A82678C001E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5676,6 +5922,7 @@ rule Trojan_Win64_AbuseCommMain_IM_2147933179_0
         $x_1_4 = "\\tox\\E546611D2EFC92779973F7A270ACB77AD325A061B69F5D474608E8F9FFED2803.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5699,6 +5946,7 @@ rule Trojan_Win64_AbuseCommMain_IN_2147933183_0
         $x_1_4 = "\\tox\\EC6C1CE4914376904D32257187618E8CC0C5DA6CA98F96FB08E99A75672C1B44.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5722,6 +5970,7 @@ rule Trojan_Win64_AbuseCommMain_IO_2147933187_0
         $x_1_4 = "\\tox\\F9342B8E15A0978EC2CEA5A9B9CD43F9110082256195A77F7031A2CEC8E8F871.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5745,6 +5994,7 @@ rule Trojan_Win64_AbuseCommMain_IP_2147933725_0
         $x_1_4 = "\\tox\\24B03A9DA26336AF573D1DA2D67782C40975A64EFE2E118FE6209049E0F6E655.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5768,6 +6018,7 @@ rule Trojan_Win64_AbuseCommMain_IQ_2147934242_0
         $x_1_4 = "\\tox\\EFE31926F41889DBF6588F27A2EC3A2D7DEF7D2E9E0A1DEFD39B976A49C11F0E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5791,6 +6042,7 @@ rule Trojan_Win64_AbuseCommMain_IR_2147934246_0
         $x_1_4 = "\\tox\\E83CD54EAAB0F31040D855E1ED993E2AC92652FF8E8742D3901580339D135C6E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5814,6 +6066,7 @@ rule Trojan_Win64_AbuseCommMain_IS_2147934366_0
         $x_1_4 = "\\tox\\9453686EAB63923D1C35C92DDE5E61A6534DD067B5448C1C8D996A460B92CA50.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5837,6 +6090,7 @@ rule Trojan_Win64_AbuseCommMain_IT_2147935784_0
         $x_1_4 = "\\tox\\FEE914521FB507AB978107ACE3B69B4CA41DA89859408BAE23E1512E8C2E614A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5860,6 +6114,7 @@ rule Trojan_Win64_AbuseCommMain_IU_2147935788_0
         $x_1_4 = "\\tox\\570D7C5DE6B5CDB2D2E9D866C7511301E5566D988B7FA341F30CC3B81A29AE40.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5883,6 +6138,7 @@ rule Trojan_Win64_AbuseCommMain_IV_2147937408_0
         $x_1_4 = "\\tox\\0995EB69C04148B6DFBC4775B090834F6E05C36944C6770625984A9A2A2FC23B.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5906,6 +6162,7 @@ rule Trojan_Win64_AbuseCommMain_IW_2147937412_0
         $x_1_4 = "\\tox\\11D0F394AB8F6F0ECD1321A3743A22D7FC149DB03B505C29B2E541BCC480AF37.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5929,6 +6186,7 @@ rule Trojan_Win64_AbuseCommMain_IX_2147937416_0
         $x_1_4 = "\\tox\\179ECED0DCE8C07CDFBEA3F290B80B3B6F8BE1500A773F45396CF39183EB5845.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5952,6 +6210,7 @@ rule Trojan_Win64_AbuseCommMain_IY_2147937420_0
         $x_1_4 = "\\tox\\1EE7194E5F5699163B8B875F272B780FB72FE49C0F21705BF0335698853CC35A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5975,6 +6234,7 @@ rule Trojan_Win64_AbuseCommMain_IZ_2147937424_0
         $x_1_4 = "\\tox\\349426AEB4CD3338C9A1AAE88D2F61EA53F0D9E9EB547060D66777CB84CB2702.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5998,6 +6258,7 @@ rule Trojan_Win64_AbuseCommMain_JA_2147937428_0
         $x_1_4 = "\\tox\\48FC6C22548154CC2C19495A56A69E7FBDB8D3C13EBF4D526BD49746B72E1B4D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6021,6 +6282,7 @@ rule Trojan_Win64_AbuseCommMain_JB_2147937432_0
         $x_1_4 = "\\tox\\4BA82D3C2DEEC79996BF9B06BD91B5C98BB11F6D3B1E269668B2FAC1F538BA65.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6044,6 +6306,7 @@ rule Trojan_Win64_AbuseCommMain_JC_2147937436_0
         $x_1_4 = "\\tox\\7D514FF4BADC574BE0C71DD2D01370F3377CBE820BBDE79A6F0A0D46C4F8D75C.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6067,6 +6330,7 @@ rule Trojan_Win64_AbuseCommMain_JD_2147937440_0
         $x_1_4 = "\\tox\\7DA3575AC5D57B3B5B93914DEF1E87AAD80319C2F5779F68B53A329AD7C1DE45.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6090,6 +6354,7 @@ rule Trojan_Win64_AbuseCommMain_JE_2147937444_0
         $x_1_4 = "\\tox\\A990C13C53C7C926595A144AC3C3919C64CF2CBE300F77EA969383ED785BCD22.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6113,6 +6378,7 @@ rule Trojan_Win64_AbuseCommMain_JF_2147937448_0
         $x_1_4 = "\\tox\\CE1604BCC1D5B7543AFAB646518363E926F33EA97F5DA5C77CDAF38633A25E43.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6136,6 +6402,7 @@ rule Trojan_Win64_AbuseCommMain_JG_2147937452_0
         $x_1_4 = "\\tox\\CF62DD142C7FBC8E79ECB16973DA572E918D6A8D69B4E163A91EFF91A0D0674B.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6159,6 +6426,7 @@ rule Trojan_Win64_AbuseCommMain_JH_2147937456_0
         $x_1_4 = "\\tox\\D2CA90BD5028C4DDE223E20674062AD45C6629D666FBFC9C4ECDCE2493700069.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6182,6 +6450,7 @@ rule Trojan_Win64_AbuseCommMain_JI_2147937460_0
         $x_1_4 = "\\tox\\F7FACEB9D3F06F8A45896C03A7D88B5D3090CEE38D3EF908BCDE83BC65E2CA30.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6205,6 +6474,7 @@ rule Trojan_Win64_AbuseCommMain_JJ_2147937464_0
         $x_1_4 = "\\tox\\FB9B2B31E76E2672AE7F14F3F394B3064529B5762B329F602C422D0D75009E6A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6228,6 +6498,7 @@ rule Trojan_Win64_AbuseCommMain_JK_2147937468_0
         $x_1_4 = "\\tox\\FD38D64D730DFD46889E569AE6BB2681431692BD7FB038EFECA7E8B044CF511E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6251,6 +6522,7 @@ rule Trojan_Win64_AbuseCommMain_JL_2147939913_0
         $x_1_4 = "\\tox\\0C8E5B45C57AE244E9C904C5BC74F73306937469D9CEA22541CA69AC162B8D42.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6274,6 +6546,7 @@ rule Trojan_Win64_AbuseCommMain_JM_2147940257_0
         $x_1_4 = "\\tox\\E8481B6E149862EEEA79668EBBC50B96A6B6529C5DDD905491E2F838EF7D174F.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6297,6 +6570,7 @@ rule Trojan_Win64_AbuseCommMain_JN_2147942770_0
         $x_1_4 = "\\tox\\9D97F166730F865F793E2EA07B173C742A6302879DE1B0BBB03817A5A04B572F.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6320,6 +6594,7 @@ rule Trojan_Win64_AbuseCommMain_JO_2147942965_0
         $x_1_4 = "\\tox\\BBF77F0461AEE151529EC77FBFD38D5818AAED1DC6A9E6AD65D96717453B7921.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6343,6 +6618,7 @@ rule Trojan_Win64_AbuseCommMain_JP_2147942969_0
         $x_1_4 = "\\tox\\644D8416E1695DC98593DFB5E55CF50F209327665D28655164511E2482D0F80B.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6366,6 +6642,7 @@ rule Trojan_Win64_AbuseCommMain_JQ_2147942973_0
         $x_1_4 = "\\tox\\AF9C4725A434490923A9F4C32B5F9003ED77428AD82AF86E757120F743A96D28.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6389,6 +6666,7 @@ rule Trojan_Win64_AbuseCommMain_JR_2147944074_0
         $x_1_4 = "\\tox\\DC9D709BD034A7CC6BE02E58E1159B724FB4A75BBDD47D53CFF86724A60BB223.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6412,6 +6690,7 @@ rule Trojan_Win64_AbuseCommMain_JS_2147944571_0
         $x_1_4 = "\\tox\\457BB4E5DF0E650509322CA894758D925A568828090A3449D5AEEED30E9B8E18.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6435,6 +6714,7 @@ rule Trojan_Win64_AbuseCommMain_JT_2147945162_0
         $x_1_4 = "\\tox\\AFD02E37CDA7D994F7E91FE7ACE71DE2E88F5C49233D3EFAB3210554629A6E5E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6458,6 +6738,7 @@ rule Trojan_Win64_AbuseCommMain_JU_2147945799_0
         $x_1_4 = "\\tox\\BFC836EBAE06450FDD36B63170F121F44ADADFF2DAFAAFA41314B6778F600350.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6481,6 +6762,7 @@ rule Trojan_Win64_AbuseCommMain_JV_2147945803_0
         $x_1_4 = "\\tox\\EC99BD5A36DE69144F5402C832B5413295323FC7C12259C53E4AA6D5BC2D4E6D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6504,6 +6786,7 @@ rule Trojan_Win64_AbuseCommMain_JW_2147946173_0
         $x_1_4 = "\\tox\\50FA856FE57D6A299A738A0D1E19E69EAF2C5409D617919580242BACAFC88A1D.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6527,6 +6810,7 @@ rule Trojan_Win64_AbuseCommMain_JX_2147946255_0
         $x_1_4 = "\\tox\\6A340207246B47E37F6D094D2236E5C6242B6E4461EEF8021FED2C9855240C3E.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6550,6 +6834,7 @@ rule Trojan_Win64_AbuseCommMain_JY_2147946441_0
         $x_1_4 = "\\tox\\535F403A2EA2DC71A392E18D7DB77FEF70845C0B7E5B9114CD30D30187030437.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6573,6 +6858,7 @@ rule Trojan_Win64_AbuseCommMain_JZ_2147946501_0
         $x_1_4 = "\\tox\\B26253E0A8F87CBBA29519E7295397631326D94162D29F9A2B1CAE6899791210.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6596,6 +6882,7 @@ rule Trojan_Win64_AbuseCommMain_KA_2147946505_0
         $x_1_4 = "\\tox\\23B35DB9AC6DEFD7F2EF445F3F8B1DB1B046756605110AC7C73AF90ED7952B5A.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6619,6 +6906,7 @@ rule Trojan_Win64_AbuseCommMain_KB_2147946879_0
         $x_1_4 = "\\tox\\6A1448416828F6D1F3BA7814E7F7E7D7C0A3C21FE7447F547430513F2E0A0441.hstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

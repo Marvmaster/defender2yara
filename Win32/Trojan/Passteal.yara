@@ -16,6 +16,7 @@ rule Trojan_Win32_Passteal_OTY_2147797880_0
         $x_1_1 = {83 f1 10 c6 85 5e ff ff ff 01 c1 f9 03 89 8d ac fd ff ff c6 45 a8 01 89 4d ac}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Passteal_MA_2147815734_0
         $x_2_7 = "IsProcessorFeaturePresent" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

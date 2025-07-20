@@ -20,6 +20,7 @@ rule Backdoor_MacOS_X_Tsunami_A_2147650894_0
         $x_3_6 = {0f af c8 c7 85 ac fb ff ff 7b 51 c3 b8 8b 85 ac fb ff ff f7 e9 8d 04 0a 89 c2 c1 fa 0f 89 c8 c1 f8 1f 89 d3 29 c3}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

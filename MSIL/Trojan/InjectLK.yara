@@ -17,6 +17,7 @@ rule Trojan_MSIL_InjectLK_DA_2147740498_0
         $x_1_2 = {02 06 8f 0d 00 00 01 25 47 03 06 03 8e 69 5d 91 61 d2 52 1b 0c 2b b4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule Trojan_MSIL_SpyAgent_PA_2147751989_0
         $x_1_10 = "KeylogSubject" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -56,6 +57,7 @@ rule Trojan_MSIL_SpyAgent_MA_2147796704_0
         $x_1_11 = "get_NameOfBrowser" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +93,7 @@ rule Trojan_MSIL_SpyAgent_MC_2147808552_0
         $x_1_15 = "MemoryStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +115,7 @@ rule Trojan_MSIL_SpyAgent_SP_2147840115_0
         $x_5_1 = {07 06 07 8e 69 5d 02 06 08 07 28 ?? ?? ?? 06 9c 06 15 58 0a 06 16 fe 04 16 fe 01 13 05 11 05 2d df}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +137,7 @@ rule Trojan_MSIL_SpyAgent_SPAZ_2147841673_0
         $x_5_1 = {11 05 06 09 06 9a 1f 10 28 ?? ?? ?? 0a 9c 06 17 58 0a 06 09 8e 69 fe 04 13 0b 11 0b 2d e2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +159,7 @@ rule Trojan_MSIL_SpyAgent_SB_2147920863_0
         $x_1_1 = {07 08 9a 6f 4e 00 00 0a 72 db 07 00 70 28 3b 00 00 0a 2c 64 07 08 9a 6f 50 00 00 0a 0d 09 28 ?? ?? ?? 0a 72 5b 08 00 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +184,7 @@ rule Trojan_MSIL_SpyAgent_CCJB_2147921007_0
         $x_1_4 = {28 58 00 00 0a 09 72 ?? ?? 00 70 28 39 00 00 0a 11 0e 72 ?? ?? 00 70 11 0f 72 ?? ?? 00 70 28 59 00 00 0a 28 5a 00 00 0a 11 0d 28 5b 00 00 0a de 10 13 12 11 12 6f 2f 00 00 0a 28 30 00 00 0a de 00 11 0c 17 58 13 0c 11 0c 11 06 8e 69 3f f8 fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +209,7 @@ rule Trojan_MSIL_SpyAgent_NIT_2147922108_0
         $x_1_4 = "chkUACExploit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -229,6 +237,7 @@ rule Trojan_MSIL_SpyAgent_CA_2147927332_0
         $x_1_7 = "IsProxyDetectedUsingRegistry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

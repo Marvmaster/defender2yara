@@ -20,6 +20,7 @@ rule Trojan_MSIL_InterStealer_RPX_2147892554_0
         $x_1_5 = "&&&&va&&&&&&&" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

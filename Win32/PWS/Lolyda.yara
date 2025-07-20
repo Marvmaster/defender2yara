@@ -26,6 +26,7 @@ rule PWS_Win32_Lolyda_C_2147599187_0
         $x_3_12 = {55 8b ec 81 c4 a4 fb ff ff eb 21 6a 00 6a 00 6a 00 6a 00 e8 0e 01 00 00 6a 00 6a 00 6a 00 6a 00 e8 01 01 00 00 56 57 e8 72 01 00 00 e8 bd fe ff ff 68 04 01 00 00 8d 85 b8 fc ff ff 50 6a 00 e8 18 01 00 00 68 00 02 00 00 8d 85 bc fd ff ff 50 e8 2b 01 00 00 68 00 30 40 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 3 of ($x_1_*))) or
             ((7 of ($x_10_*) and 1 of ($x_3_*))) or
@@ -52,6 +53,7 @@ rule PWS_Win32_Lolyda_D_2147599188_0
         $x_1_3 = "%s?server=%s&gameid=%s&pass=%s&pin=%s&wupin=%s&role=%s&equ=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule PWS_Win32_Lolyda_E_2147599190_0
         $x_1_1 = {10 8d 85 fc fe ff ff 50 e8 ?? ?? 00 00 0b c0 0f 85 ?? 01 00 00 ff b5 e0 fe ff ff 6a 08 e8 ?? ?? 00 00 89 85 a4 fc ff ff 0b c0 0f 84 04 00 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule PWS_Win32_Lolyda_F_2147599191_0
         $x_1_1 = {85 c0 74 27 33 ff 81 3c 37 23 fe 4e f7 75 11 83 7c 37 08 00 74 0a 81 7c 37 0c 84 14 1a af 74 2c 06 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule PWS_Win32_Lolyda_H_2147605342_0
         $x_1_1 = {8d 85 e8 fe ff ff 50 68 ?? ?? ?? ?? e8 ?? ?? 00 00 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8 ?? ?? 00 00 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 75 fc e8 ?? ?? 00 00 0b c0 74 73 89 45 f8 50 ff 75 fc e8 ?? ?? 00 00 89 45 f0 ff 75 f8 ff 75 fc e8 ?? ?? 00 00 0b c0 74 55 50 e8 ?? ?? 00 00 0b c0 74 4b 89 45 ec 6a 00 6a 20 6a 02 6a 00 6a 00 68 00 00 00 40 68 ?? ?? ?? ?? e8 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule PWS_Win32_Lolyda_I_2147607583_0
         $x_1_4 = "\\Device\\devHBKernel" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*))) or
             (all of ($x*))
@@ -163,6 +169,7 @@ rule PWS_Win32_Lolyda_J_2147607777_0
         $x_1_6 = "\\userdata\\currentserver.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -187,6 +194,7 @@ rule PWS_Win32_Lolyda_K_2147611395_0
         $x_1_2 = "\\Device\\devHBKernel32" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +218,7 @@ rule PWS_Win32_Lolyda_N_2147611823_0
         $x_1_4 = {48 42 4b 65 72 6e 65 6c 33 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -232,6 +241,7 @@ rule PWS_Win32_Lolyda_O_2147611829_0
         $x_1_3 = "account=%s&server=%s&pswimagecount=%d&pswimageindex=%d&pswimageda" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -253,6 +263,7 @@ rule PWS_Win32_Lolyda_P_2147611830_0
         $x_1_2 = "server=%s&account=%s&password1=%s&password2=%s&levels=%s&cash=%s&" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -277,6 +288,7 @@ rule PWS_Win32_Lolyda_S_2147612701_0
         $x_1_5 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +311,7 @@ rule PWS_Win32_Lolyda_X_2147616914_0
         $x_2_3 = {83 fb 47 72 30 83 fb 49 76 22 83 fb 4a 76 26 83 fb 4d 76 15 83 fb 4e 76 1c 83 fb 51 76 08 83 fb 52 75 12}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -325,6 +338,7 @@ rule PWS_Win32_Lolyda_T_2147617421_0
         $x_4_4 = "AppInit_DLLs" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*))) or
             ((1 of ($x_10_*) and 1 of ($x_4_*))) or
@@ -351,6 +365,7 @@ rule PWS_Win32_Lolyda_Y_2147618162_0
         $x_1_3 = {6a 00 6a 4a ff 75 fc e8 ?? ?? ?? ?? 6a 10 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 75 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -375,6 +390,7 @@ rule PWS_Win32_Lolyda_V_2147618420_0
         $x_1_5 = {66 ad b9 03 00 00 00 ba 3d 00 00 00 83 6d fc 02 86 c4 c1 c0 10 86 c4 50 25 00 00 00 fc c1 c0 06 8a 80 ?? ?? ?? ?? aa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -397,6 +413,7 @@ rule PWS_Win32_Lolyda_W_2147618488_0
         $x_1_3 = {83 c4 0c 8b 45 10 03 45 e8 c6 00 e9 8b 45 0c 03 45 e8 8b 55 10 03 55 e8 2b c2 8b d0 83 ea 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -422,6 +439,7 @@ rule PWS_Win32_Lolyda_A_2147618896_0
         $x_1_5 = "&cash=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -449,6 +467,7 @@ rule PWS_Win32_Lolyda_Z_2147618912_0
         $x_1_5 = {25 73 3f 25 73 00 46 6f 72 74 68 67 6f 6e 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -475,6 +494,7 @@ rule PWS_Win32_Lolyda_AJ_2147620096_0
         $x_1_7 = {09 00 00 00 6f 66 66 6c 69 6e 65 6f 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -501,6 +521,7 @@ rule PWS_Win32_Lolyda_AA_2147621468_0
         $x_1_2 = {55 8b ec 57 56 51 8b 7d 08 8b 75 0c 8b 4d 10 0b c9 74 07 ac 32 45 14 aa e2 f9 59 5e 5f c9 c2 10 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -523,6 +544,7 @@ rule PWS_Win32_Lolyda_AB_2147622136_0
         $x_1_3 = "&zone=%s&server=%s&name=%s&pass=%s&" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -549,6 +571,7 @@ rule PWS_Win32_Lolyda_AC_2147622353_0
         $x_5_7 = "&zone=%s&server=%s&name=%s&pass" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -576,6 +599,7 @@ rule PWS_Win32_Lolyda_AE_2147624115_0
         $x_1_5 = {c6 06 e9 2b c6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -599,6 +623,7 @@ rule PWS_Win32_Lolyda_AF_2147624189_0
         $x_1_4 = "Acc@&#ep@&#t:@&#*/*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -624,6 +649,7 @@ rule PWS_Win32_Lolyda_AG_2147624234_0
         $x_2_6 = {8a 14 08 80 ea ?? 88 11 41 4e 75 f4 5e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -653,6 +679,7 @@ rule PWS_Win32_Lolyda_AK_2147624365_0
         $x_1_6 = {c6 06 e9 2b c6 [0-2] 83 e8 05 89 46 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -680,6 +707,7 @@ rule PWS_Win32_Lolyda_AL_2147624457_0
         $x_1_4 = {68 04 c0 00 08 56 89 5d fc ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -708,6 +736,7 @@ rule PWS_Win32_Lolyda_AM_2147624588_0
         $x_1_9 = "&js=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -738,6 +767,7 @@ rule PWS_Win32_Lolyda_AM_2147624588_1
         $x_1_11 = "norespond" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -766,6 +796,7 @@ rule PWS_Win32_Lolyda_AN_2147624834_0
         $x_1_3 = {68 d0 07 00 00 ff 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 85 c0 74 ec a0 ?? ?? ?? ?? 84 c0 74 e3 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -795,6 +826,7 @@ rule PWS_Win32_Lolyda_AO_2147625843_0
         $x_1_7 = "/wmrmb.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -824,6 +856,7 @@ rule PWS_Win32_Lolyda_AP_2147625849_0
         $x_1_5 = "MiniSniffer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -847,6 +880,7 @@ rule PWS_Win32_Lolyda_AQ_2147625882_0
         $x_1_4 = {83 c0 09 89 45 0c eb 03 8b 45 0c 8b 48 fc 2b 08 83 e9 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -873,6 +907,7 @@ rule PWS_Win32_Lolyda_AS_2147626921_0
         $x_1_4 = {61 63 74 69 6f 6e 3d 75 70 26 7a 74 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -900,6 +935,7 @@ rule PWS_Win32_Lolyda_AT_2147627867_0
         $x_1_5 = {20 5a c7 1a 9f 43 72 ca 37 33 77 c7 e0 c5 43 fb ff fa}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -928,6 +964,7 @@ rule PWS_Win32_Lolyda_AU_2147629105_0
         $x_1_9 = "?d10=%s&d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -956,6 +993,7 @@ rule PWS_Win32_Lolyda_AW_2147629677_0
         $x_1_4 = {eb 08 eb 06 aa e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -983,6 +1021,7 @@ rule PWS_Win32_Lolyda_AX_2147631774_0
         $x_1_4 = "%s~%06x.~~~" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1005,6 +1044,7 @@ rule PWS_Win32_Lolyda_AY_2147632060_0
         $x_1_3 = "?s=%s&u=%s&" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1031,6 +1071,7 @@ rule PWS_Win32_Lolyda_AZ_2147632512_0
         $x_1_7 = "regs.$vr32.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1058,6 +1099,7 @@ rule PWS_Win32_Lolyda_BA_2147633533_0
         $x_1_4 = {25 68 73 3f 61 63 74 3d 26 64 31 30 3d 25 68 73 26 64 38 30 3d 25 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1080,6 +1122,7 @@ rule PWS_Win32_Lolyda_BB_2147636400_0
         $x_1_3 = "%s~~%06x.~~~" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1103,6 +1146,7 @@ rule PWS_Win32_Lolyda_BC_2147636766_0
         $x_1_4 = "mibao.asp?act=&" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1129,6 +1173,7 @@ rule PWS_Win32_Lolyda_BD_2147638821_0
         $x_2_7 = {be 80 00 00 00 8d 85 ?? ?? ?? ?? 56 50 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? c6 45 ?? 2e c6 45 ?? 5c c6 45 ?? 75 c6 45 ?? 73 c6 45 ?? 65 c6 45 ?? 72 c6 45 ?? 5c c6 45 ?? 75 c6 45 ?? 69 c6 45 ?? 63 c6 45 ?? 6f c6 45 ?? 6d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1157,6 +1202,7 @@ rule PWS_Win32_Lolyda_BE_2147640964_0
         $x_1_3 = "ac=up&zzz=ol&dd2=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1181,6 +1227,7 @@ rule PWS_Win32_Lolyda_BF_2147643712_0
         $x_1_2 = {53 50 8d 45 cc 6a 15 50 ff 75 e8 ff d7 6a 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1203,6 +1250,7 @@ rule PWS_Win32_Lolyda_BF_2147643712_1
         $x_1_3 = {6a 0e 83 c3 36 51 50 66 c7 45 ?? 42 4d 89 5d ?? 66 89 7d ?? 66 89 7d ?? c7 45 ?? 36 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1233,6 +1281,7 @@ rule PWS_Win32_Lolyda_BI_2147651460_0
         $x_1_8 = "xy2.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -1261,6 +1310,7 @@ rule PWS_Win32_Lolyda_BJ_2147656168_0
         $x_1_6 = {25 73 5c 25 73 5f 25 64 2e 62 6d 70 [0-5] 53 48 45 4c 4c 48 4f 4f 4b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1287,6 +1337,7 @@ rule PWS_Win32_Lolyda_BK_2147672516_0
         $x_4_4 = "d00=%s&d01=%s&d30=%s&d32=%d&d40=%d&d10=%s&d11=%s&d12=%s&d21=%s&d50=%s" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

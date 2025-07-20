@@ -22,6 +22,7 @@ rule Trojan_Win32_Viewsure_A_2147761932_0
         $x_3_7 = "%s\\PoPc.dll" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Trojan_Win32_Viewsure_D_2147761933_0
         $x_1_1 = {43 72 65 61 74 65 44 43 41 00 00 00 47 64 69 33 32 2e 64 6c 6c 00 00 00 4d 69 63 72 6f 73 6f 66 74 20 58 50 53 20 44 6f 63 75 6d 65 6e 74 20 57 72 69 74 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_Win32_Viewsure_E_2147761934_0
         $x_1_5 = "cmd.exe /c %ws" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

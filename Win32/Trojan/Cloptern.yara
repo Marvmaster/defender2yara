@@ -18,6 +18,7 @@ rule Trojan_Win32_Cloptern_A_2147725808_0
         $x_1_3 = ",start1 /exc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Trojan_Win32_Cloptern_B_2147725809_0
         $x_1_3 = {50 72 6f 6a 65 63 74 31 2e 63 70 6c 00 73 74 61 72 74 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

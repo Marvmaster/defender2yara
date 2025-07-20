@@ -17,6 +17,7 @@ rule Trojan_MSIL_Dcrat_ZAT_2147942841_0
         $x_5_2 = {23 07 02 7b ?? 01 00 04 09 91 58 03 09 06 5d 91 58 20 00 01 00 00 5d 0b 02 09 07 28 ?? 00 00 06 09 17 58 0d 09 20 00 01 00 00 32 d5}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

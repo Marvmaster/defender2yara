@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Fucobha_A_2147648514_0
         $x_2_7 = {8a 1c 0a 32 5c 35 ?? 46 3b f0 88 19 75 02 33 f6 41 4f 75 ec}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule TrojanSpy_Win32_Fucobha_A_2147648514_1
         $x_10_5 = {8a 4f 01 83 c7 01 3a cb 75 f6 8b c8 c1 e9 02 f3 a5 8b c8 83 e1 03 f3 a4 8d [0-4] 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))

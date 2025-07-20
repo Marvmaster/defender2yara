@@ -21,6 +21,7 @@ rule Backdoor_Win32_Bedep_A_2147690257_0
         $x_1_7 = {c7 40 60 45 76 38 12}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

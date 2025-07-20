@@ -24,6 +24,7 @@ rule Backdoor_Win32_GraceWire_D_2147731973_0
         $x_1_9 = "target_module_load_external" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -50,6 +51,7 @@ rule Backdoor_Win32_GraceWire_E_2147735026_0
         $x_1_2 = "er0ewjflk3qrhj81" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Backdoor_Win32_GraceWire_F_2147743222_0
         $x_1_6 = "-------- [Current config]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

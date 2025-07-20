@@ -22,6 +22,7 @@ rule Ransom_Win64_Alvaro_MA_2147890035_0
         $x_1_7 = "alvarodecrypt@outlook.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

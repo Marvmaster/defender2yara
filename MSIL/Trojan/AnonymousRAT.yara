@@ -16,6 +16,7 @@ rule Trojan_MSIL_AnonymousRAT_RDA_2147920030_0
         $x_2_1 = {06 02 6f 2d 00 00 0a 18 8d 2f 00 00 01 25 16 1f 0a 9d 25 17 1f 0d 9d 17 6f 2e 00 00 0a 0b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

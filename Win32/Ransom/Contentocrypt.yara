@@ -19,6 +19,7 @@ rule Ransom_Win32_Contentocrypt_A_2147719969_0
         $x_2_5 = {2e 65 78 65 20 44 [0-16] 65 6c 65 74 [0-16] 65 20 53 68 61 [0-16] 64 6f 77 73 20 2f 41 [0-16] 6c 6c 20 2f 51 [0-16] 75 69 65 74}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

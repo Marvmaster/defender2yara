@@ -18,6 +18,7 @@ rule VirTool_Win32_ShellDownloader_A_2147758796_0
         $x_1_3 = {b8 02 00 00 00 66 89 85 80 bf ff ff 8b 46 0c 6a 10 8b 00 8b 00 89 85 84 bf ff ff 8d 85 ?? ?? ?? ?? 50 57 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

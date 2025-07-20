@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Gamaredon_MA_2147762078_0
         $x_1_7 = {52 75 6e 50 72 6f 67 72 61 6d 3d 22 68 69 64 63 6f 6e 3a 6e 6f 77 61 69 74 3a 63 6d 64 20 2f 63 20 69 66 20 6e 6f 74 20 65 78 69 73 74 20 68 6f 73 74 6e 61 6d 65 20 28 6e 6f 64 65 20 73 65 72 76 69 63 65 20 ?? ?? ?? 2e ?? ?? ?? 2e ?? ?? ?? 2e ?? ?? ?? 29 22}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

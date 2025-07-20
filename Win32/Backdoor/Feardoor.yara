@@ -26,6 +26,7 @@ rule Backdoor_Win32_Feardoor_2147573281_0
         $x_1_12 = "_Oscar_PersistantCombo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule VirTool_Win32_Obfuscator_C_2147578151_0
         $x_1_5 = {81 f1 de c0 ad 0b ff 75 ?? ff 75 ?? 50 51 ff 75 ?? 68 ?? ?? ?? ?? ff 75 ?? ff 35 ?? ?? ?? ?? 58 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule VirTool_Win32_Obfuscator_2147584956_0
         $x_1_1 = {8b 4d c0 2b 4d c0 89 4d c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule VirTool_Win32_Obfuscator_2147584956_1
         $x_1_1 = {0f b7 c0 69 c0 01 01 00 00 50 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +82,7 @@ rule VirTool_Win32_Obfuscator_2147584956_2
         $x_1_1 = {0f 31 8b d8 0f 31 2b c3 50 83 f8 01 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +103,7 @@ rule VirTool_Win32_Obfuscator_2147584956_3
         $x_1_1 = {83 c0 68 3e 8b 00 83 f8 70 74 06 00 64 a1 30 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +126,7 @@ rule VirTool_Win32_Obfuscator_2147584956_4
         $x_1_3 = {ff 74 27 2b fe 8d 95}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +149,7 @@ rule VirTool_Win32_Obfuscator_2147584956_5
         $x_1_3 = {d0 8b c2 81 ef d2 02 96 49 f7 d8 89 7d fc 74 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -167,6 +174,7 @@ rule VirTool_Win32_Obfuscator_2147584956_6
         $x_1_5 = {00 40 49 3b c6 7c f2 07 00 8a 11 88 90}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +204,7 @@ rule VirTool_Win32_Obfuscator_2147584956_7
         $n_100_10 = {50 00 72 00 6f 00 64 00 75 00 63 00 74 00 4e 00 61 00 6d 00 65 00 00 00 00 00 42 00 61 00 74 00 74 00 6c 00 65 00 20 00 6f 00 66 00 20 00 45 00 6d 00 70 00 69 00 72 00 65 00 73 00}  //weight: -100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (2 of ($x*))
 }
@@ -217,6 +226,7 @@ rule VirTool_Win32_Obfuscator_N_2147593546_0
         $x_1_1 = {60 e8 06 00 00 00 8b 64 24 08 eb 0c ?? ?? 64 ff ?? 64 89 ?? cc [0-32] 64 8f [0-16] e8 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -238,6 +248,7 @@ rule VirTool_Win32_Obfuscator_S_2147598106_0
         $x_1_2 = {66 33 f6 66 81 3e 4d 5a 75 f5 89 75 00 be 00 00 ?? ?? 2b 75 00 89 75 1c c7 45 20 ?? ?? ?? ?? c7 45 24 ?? ?? ?? ?? 33 c0 64 8b 78 20 64 8b 40 30 8b 40 0c 8b 40 1c ff 70 08 8f 45 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -264,6 +275,7 @@ rule VirTool_Win32_Obfuscator_T_2147598276_0
         $x_1_7 = "\\options.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -284,6 +296,7 @@ rule VirTool_Win32_Obfuscator_R_2147598364_0
         $x_1_1 = {6a 04 6a 00 6a 00 68 ff ff fb ff ff 15 ?? ?? ?? ?? 85 c0 7e 08 6a 00 (e8 ?? ?? ?? ?? ??|ff 15 ?? ?? ?? ??) a1 ?? ?? ?? ?? 31 05 ?? ?? ?? ?? 31 05 ?? ?? ?? ?? 33 c9 39 0d ?? ?? ?? ?? 76 18 a1 ?? ?? ?? ?? 8a 15 ?? ?? ?? ?? 03 c1 30 10 41 3b 0d ?? ?? ?? ?? 72 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -313,6 +326,7 @@ rule VirTool_Win32_Obfuscator_Q_2147598455_0
         $x_10_10 = "hdPtrhdReahIsBaTW" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_10_*))) or
             ((2 of ($x_100_*))) or
@@ -337,6 +351,7 @@ rule VirTool_Win32_Obfuscator_V_2147599905_0
         $x_1_1 = {8b 2c 08 2c 08 8b 45 45 90 8b 45 45 90 8b 45 45 90 8b 45 45 90 90 8b 45 45 e9 c9 f8 fe ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -357,6 +372,7 @@ rule VirTool_Win32_Obfuscator_W_2147600277_0
         $x_1_1 = {8b 44 24 fc 2d ?? ?? ?? ?? 8d 80 ?? ?? ?? ?? 48 66 81 38 50 45 75 f8 8b f8 48 66 81 38 4d 5a 75 f8 8b bf 80 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -384,6 +400,7 @@ rule VirTool_Win32_Obfuscator_Y_2147601091_0
         $x_1_8 = {8b ec 83 c4 f0 53 56 b8 e8 3f 00 10 e8 7a f6 ff ff be 68 66 00 10 33 c0 55 68 db 40 00 10 64 ff 30 64 89 20 e8 fa f8 ff ff ba ec 40 00 10 8b c6 e8 f2 fa ff ff 8b d8 b8 6c 66 00 10 8b 16 e8 88 f2 ff ff b8 6c 66 00 10 e8 76 f2 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -404,6 +421,7 @@ rule VirTool_Win32_Obfuscator_AB_2147603112_0
         $x_3_1 = {83 c7 01 bb 02 00 00 00 e8 f8 00 00 00 73 d5 e8 f1 00 00 00 73 54 33 c0 e8 e8 00 00 00 0f 83 a7 00 00 00 e8 dd 00 00 00 13 c0 e8 d6 00 00 00 13 c0 e8 cf 00 00 00 13 c0 e8 c8 00 00 00 13 c0 74 15}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -424,6 +442,7 @@ rule VirTool_Win32_Obfuscator_AB_2147603112_1
         $x_3_1 = {83 c7 01 bb 02 00 00 00 e8 1f 01 00 00 73 c9 e8 18 01 00 00 73 60 33 c0 e8 0f 01 00 00 0f 83 c2 00 00 00 e8 04 01 00 00 13 c0 e8 fd 00 00 00 13 c0 e8 f6 00 00 00 13 c0 e8 ef 00 00 00 13 c0 74 21 eb 04}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -451,6 +470,7 @@ rule VirTool_Win32_Obfuscator_AF_2147604958_0
         $x_1_8 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -473,6 +493,7 @@ rule VirTool_Win32_Obfuscator_AG_2147604965_0
         $x_1_3 = {33 c0 55 68 ?? ?? 00 10 64 ff 30 64 89 20 6a 0a 68 ?? ?? 00 10 a1 ?? ?? 00 10 50 e8 ?? ?? ff ff 8b d8 53 a1 ?? ?? 00 10 50 e8 ?? ?? ff ff 8b f8 53 a1 ?? ?? 00 10 50 e8 ?? ?? ff ff 8b ?? ?? e8 ?? ?? ff ff 8b ?? 85 ?? 74 26 8b d7 4a b8 ?? ?? 00 10 e8 ?? ?? ff ff b8 ?? ?? 00 10 e8 ?? ?? ff ff 8b cf 8b ?? e8 ?? ?? ff ff ?? e8 ?? ?? ff ff 8d 4d ec ba ?? ?? 00 10 a1 ?? ?? 00 10 e8 ?? ?? ff ff 8b 55 ec b8 ?? ?? 00 10 e8 ?? ?? ff ff b8 ?? ?? 00 10 e8 ?? ?? ff ff e8 ?? ?? ff ff 33 c0 5a 59 59 64 89 10 68 ?? ?? 00 10 8d 45 ec e8 ?? ?? ff ff c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -506,6 +527,7 @@ rule VirTool_Win32_Obfuscator_HD_2147605039_0
         $x_2_14 = "(InputFile will be rewritten if no OutputFile given)" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -531,6 +553,7 @@ rule VirTool_Win32_Obfuscator_AI_2147605328_0
         $x_1_6 = {8b f8 b9 e5 00 00 00 f3 a4 ff e0 8b 3c 24 03 7f 3c 8b f7 8b 7f 34 8b 76 50 03 f7 57 ff 54 24 08 68 00 80 00 00 6a 00 57 ff 54 24 14 6a 40 68 00 30 00 00 68 00 00 01 00 57 ff 54 24 1c 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -556,6 +579,7 @@ rule VirTool_Win32_Obfuscator_AK_2147605340_0
         $x_1_3 = {8b 7d 08 0f b6 1f 09 db 74 0c f7 e3 d1 e0 35 ?? ?? ?? ?? 47 eb ed 89 45 fc 61 8b 45 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -576,6 +600,7 @@ rule VirTool_Win32_Obfuscator_AL_2147605517_0
         $x_1_1 = {eb 06 56 52 55 4c 5a 00 [0-32] 8b 04 24 83 e8 4f 68 ?? ?? ?? ?? ff d0 [0-255] c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -596,6 +621,7 @@ rule VirTool_Win32_Obfuscator_AM_2147605717_0
         $x_1_1 = {60 61 9c 9d 50 53 51 59 5b 58 74 02 75 00 e9 00 00 00 00 68 ?? ?? ?? ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -620,6 +646,7 @@ rule VirTool_Win32_Obfuscator_AP_2147605766_0
         $x_2_5 = {40 00 ff e0 09 00 35 ?? ?? ?? ?? 8d 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -645,6 +672,7 @@ rule VirTool_Win32_Obfuscator_AQ_2147605904_0
         $x_1_1 = {81 c3 00 00 01 00 81 fb 00 00 ?? ?? 75 05 bb 00 00 ?? ?? e8 ?? ?? ?? ?? 83 f9 00 74 de 8b cb 81 c1 00 00 ?? ?? 66 81 39 4d 5a 75 cf 8b 41 3c 03 c1 8b 40 78 83 f8 00 74 c2 03 c1 8b 50 0c 03 d1 81 3a 4b 45 52 4e 75 b3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -665,6 +693,7 @@ rule VirTool_Win32_Obfuscator_AT_2147606367_0
         $x_1_1 = {68 58 58 58 58 6b db ?? ff d4 50 8b 40 ?? 05 ?? ?? ?? ?? 0f 85 ?? ?? ?? ?? b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -715,6 +744,7 @@ rule VirTool_Win32_Obfuscator_AV_2147606370_0
         $x_2_31 = "NTOSKRNL.EXE" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -739,6 +769,7 @@ rule VirTool_Win32_Obfuscator_AX_2147606497_0
         $x_1_5 = {55 8b ec 87 e5 5d e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_1_*))) or
@@ -764,6 +795,7 @@ rule VirTool_Win32_Obfuscator_AY_2147606498_0
         $x_1_1 = {83 f8 02 75 06 81 c2 00 02 00 00 51 8b 4f 10 83 f8 02 75 06 81 e9 00 02 00 00 57 bf c8 00 00 00 8b f1 e8 27 00 00 00 8b c8 5f b8 ?? ?? ?? ?? 03 c5 e8 24 00 00 00 59 49 eb b1 59 83 c7 28 49 eb 8a 8b 85 ?? ?? ?? ?? 89 44 24 1c 61 ff e0 56 57 4f f7 d7 23 f7 8b c6 5f 5e c3 60 83 f0 05 40 90 48 83 f0 05 8b f0 8b fa 60 e8 0b 00 00 00 61 83 c7 08 83 e9 07 e2 f1 61 c3 57 8b 1f 8b 4f 04 68 b9 79 37 9e 5a 42 8b c2 48 c1 e0 05 bf 20 00 00 00 4a 8b eb c1 e5 04 2b cd 8b 6e 08 33 eb 2b cd 8b eb c1 ed 05 33 e8 2b cd 2b 4e 0c 8b e9 c1 e5 04 2b dd 8b 2e 33 e9 2b dd 8b e9 c1 ed 05 33 e8 2b dd 2b 5e 04 2b c2 4f 75 c8 5f 89 1f 89 4f 04 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -784,6 +816,7 @@ rule VirTool_Win32_Obfuscator_AZ_2147606499_0
         $x_1_1 = {8a d2 8a 07 90 4f 3c 00 74 f6 47 83 ec 08 68 60 02 00 00 8a d2 6a 40 ff 53 e8 90 89 04 24 8d 05 21 10 40 00 50 8a d2 ff 53 f0 8d 15 09 10 40 00 52 50 ff 53 ec 8a d2 89 44 24 04 33 c0 8a d2 8a 07 90 96 83 c7 fc 8b 07 2b f8 8a d2 8b 2f 90 83 c7 04 8b c7 8b cd 8a d2 c0 4c 08 ff 04 90 80 74 01 ff 98 e2 f1 8a d2 ff 34 24 68 04 01 00 00 ff 53 fc 57 58 03 c5 50 90 ff 74 24 04 ff 53 dc 6a 00 68 80 00 00 00 8a d2 6a 02 6a 00 6a 00 68 00 00 00 40 50 ff 53 f8 40 74 46 8a d2 48 50 56 8a d2 6a 00 8a d2 54 83 2c 24 50 90 55 57 50 ff 53 e4 5e ff 53 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -804,6 +837,7 @@ rule VirTool_Win32_Obfuscator_BD_2147607400_0
         $x_1_1 = {eb 00 33 d2 b8 ?? ?? ?? ?? 33 c9 bb ?? ?? ?? ?? 81 fa ac 26 00 00 75 02 28 03 43 c1 e8 08 41 83 f9 04 75 0a b8 ?? ?? ?? ?? b9 00 00 00 00 81 fb ?? ?? ?? ?? 72 da 42 81 fa 1b 27 00 00 76 c5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -826,6 +860,7 @@ rule VirTool_Win32_Obfuscator_BE_2147607449_0
         $x_1_3 = {51 68 00 04 00 00 68 00 00 00 00 01 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 74 08 ?? ?? 5f 59 f3 a4 eb f2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -846,6 +881,7 @@ rule VirTool_Win32_Obfuscator_BF_2147607594_0
         $x_1_1 = {33 ff 24 01 b8 ?? ?? ?? ?? 33 c9 bb ?? ?? 40 00 81 ff 06 27 00 00 75 02 28 03 43 c1 e8 08 41 83 f9 04 75 0a b8 ?? ?? ?? ?? b9 00 00 00 00 81 fb ?? ?? 40 00 72 da 47 81 ff 11 27 00 00 76 c5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -866,6 +902,7 @@ rule VirTool_Win32_Obfuscator_BG_2147607679_0
         $x_1_1 = {c7 04 24 00 00 00 00 b8 ?? ?? ?? ?? 33 c9 c7 44 24 ?? ?? ?? 40 00 81 3c 24 ?? 27 00 00 75 06 8b 54 24 ?? 28 02 ff 44 24 ?? c1 e8 08 41 83 f9 04 75 0a b8 ?? ?? ?? ?? b9 00 00 00 00 81 7c 24 ?? ?? ?? 40 00 72 d0 ff 04 24 81 3c 24 ?? 27 00 00 76 b5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -887,6 +924,7 @@ rule VirTool_Win32_Obfuscator_BK_2147608022_0
         $x_1_2 = {61 9d c3 83 ec 54 8b fc 8b 76 0c 8b d7 ac 84 c0 74 03 aa eb f8 e8 0b 00 00 00 20 6e 6f 74 20 66 6f 75 6e 64 00 5e ac aa}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -907,6 +945,7 @@ rule VirTool_Win32_Obfuscator_BL_2147608041_0
         $x_1_1 = {64 8b 05 30 00 00 00 89 45 fc 8b 45 fc 83 c0 0c 8b 00 83 c0 0c 8b 00 83 c0 18 8b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -929,6 +968,7 @@ rule VirTool_Win32_Obfuscator_BL_2147608041_1
         $x_1_3 = {6a 01 68 44 33 22 11 b8 dd cc bb aa ff d0 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -949,6 +989,7 @@ rule VirTool_Win32_Obfuscator_BL_2147608041_2
         $x_1_1 = {33 c0 8b 04 24 66 33 c0 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 8b fc 66 81 38 4d 5a 75 13 8b 50 ?? 81 fa 00 10 00 00 77 08 66 81 3c 10 50 45 74 07 2d 00 00 01 00 eb df 50 8b 74 10 ?? 03 f0 83 c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -969,6 +1010,7 @@ rule VirTool_Win32_Obfuscator_BP_2147608488_0
         $x_1_1 = {50 c7 04 24 ?? ?? ?? ?? 5a 31 f9 66 8b 3a 66 47 66 89 3a 81 ef ?? ?? ?? ?? 66 83 02 01 4f 41 83 c2 01 e8 07 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -989,6 +1031,7 @@ rule VirTool_Win32_Obfuscator_BQ_2147608543_0
         $x_1_1 = {66 8b 39 66 83 c7 01 66 89 39 01 d7 50 29 c2 5a 66 8b 11 66 83 c2 01 66 89 11 81 e3 ?? ?? ?? ?? e8 11 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1010,6 +1053,7 @@ rule VirTool_Win32_Obfuscator_BU_2147608887_0
         $x_10_2 = {e8 00 00 00 00 58 8b f0 2d ?? ?? ?? ?? 89 ?? ?? ff ff ff 81 ?? 00 f0 ff ff 89 ?? ?? ff ff ff 8b ?? ?? 81 ?? 00 f0 ff ff 66 ?? ?? 4d 5a 74}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1030,6 +1074,7 @@ rule VirTool_Win32_Obfuscator_BV_2147608979_0
         $x_10_1 = {33 c0 66 8b 02 3d 4d 5a 00 00 74 ?? 33 c0 e9 ?? ?? 00 00 8b 8d ?? ?? ff ff 8b 55 ?? 03 51 3c 89 95 ?? ?? ff ff 8b 85 ?? ?? ff ff 81 38 50 45 00 00 74 ?? 33 c0 e9 ?? ?? 00 00 6a 40 68 00 10 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1050,6 +1095,7 @@ rule VirTool_Win32_Obfuscator_BX_2147609178_0
         $x_1_1 = {81 c3 00 00 01 00 81 fb 00 00 00 80 75 05 bb 00 00 f0 bf e8 ?? ?? ?? ?? 83 f8 00 74 e3 66 81 3b 4d 5a 75 dc 8b 43 3c 03 c3 66 81 38 50 45 75 d0 f6 40 17 20 74 ca 8b 40 78 03 c3 8b 50 0c 03 d3 81 3a 4b 45 52 4e 75 b8 81 7a 04 45 4c 33 32 75 af}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1072,6 +1118,7 @@ rule VirTool_Win32_Obfuscator_BZ_2147609463_0
         $x_1_3 = "huenchFreqhancehformhyPerhQuerT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1093,6 +1140,7 @@ rule VirTool_Win32_Obfuscator_CD_2147609812_0
         $x_1_2 = {79 4f ad 33 99 66 cf 11 b7 0c 00 aa 00 60 d3 93 02 00 00 00 5c 00 00 00 08 00 00 00 2e 00 65 00 78 00 65 00 00 00 00 [0-32] 7c 00 7c 00 7c 00 00 00 06 00 00 00 74 00 6d 00 70 00 00 00 10 00 00 00 5c 00 74 00 6d 00 70 00 2e 00 65 00 78 00 65 00 00 00 00 00 08 00 00 00 70 00 61 00 73 00 73 00 00 00 00 00 0c 00 08 00 00 00 00 00 00 00 00 00 56 42 41 36 2e 44 4c 4c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1119,6 +1167,7 @@ rule VirTool_Win32_Obfuscator_CE_2147610110_0
         $x_1_7 = "ReadProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_200_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1143,6 +1192,7 @@ rule VirTool_Win32_Obfuscator_CF_2147610421_0
         $x_1_2 = {81 f8 00 7d 00 00 [0-16] 0f 83 ?? 00 00 00 [0-24] 80 fc 05 [0-16] 0f 83 ?? 00 00 00 [0-24] 81 f8 7f 00 00 00 [0-16] 0f 87 ?? 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1165,6 +1215,7 @@ rule VirTool_Win32_Obfuscator_CG_2147610423_0
         $x_1_3 = {31 d2 64 ff 32 64 89 22 cd 03 8b 64 24 08 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1196,6 +1247,7 @@ rule VirTool_Win32_Obfuscator_CH_2147610451_0
         $x_1_12 = {03 44 24 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -1242,6 +1294,7 @@ rule VirTool_Win32_Obfuscator_CK_2147610687_0
         $x_1_24 = {8d 64 24 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_3_*) and 16 of ($x_1_*))) or
             ((3 of ($x_4_*) and 1 of ($x_3_*) and 15 of ($x_1_*))) or
@@ -1305,6 +1358,7 @@ rule VirTool_Win32_Obfuscator_CO_2147611156_0
         $x_1_4 = {69 f6 6d 4e c6 41 81 c6 39 30 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1329,6 +1383,7 @@ rule VirTool_Win32_Obfuscator_CQ_2147611465_0
         $x_1_1 = {64 ff 35 00 00 00 00 64 89 25 00 00 00 00 cd 2d c3 64 8f 05 00 00 00 00 83 c4 04 ff 64 24 20 08 00 80 37 ?? 68 [0-80] 85 ?? 74 07 80 ?? 00 ?? ?? eb f5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1351,6 +1406,7 @@ rule VirTool_Win32_Obfuscator_CR_2147611502_0
         $n_2_3 = "LUTCREATORABOUTFORM" wide //weight: -2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -1373,6 +1429,7 @@ rule VirTool_Win32_Obfuscator_CT_2147611589_0
         $x_1_2 = {c3 75 04 89 ?? ff 04 00 eb 0a 80}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1417,6 +1474,7 @@ rule VirTool_Win32_Obfuscator_CV_2147611843_0
         $x_1_25 = "Wscript.Shell" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 14 of ($x_1_*))) or
             (all of ($x*))
@@ -1442,6 +1500,7 @@ rule VirTool_Win32_Obfuscator_CW_2147612070_0
         $x_1_3 = {83 e6 03 75 12 8b 5d 10 66 01 da 6b d2 ?? 66 f7 (d2|da) c1 (c2|ca) ?? 89 55 10 30 10 40 c1 ca ?? e2 df c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1462,6 +1521,7 @@ rule VirTool_Win32_Obfuscator_CX_2147612241_0
         $x_1_1 = {b3 02 41 b0 10 e8 ?? 00 00 00 10 c0 0f 83 f3 ff ff ff 0f 85 ?? 00 00 00 aa e9 ?? ff ff ff e8 ?? 00 00 00 29 d9 0f 85 ?? 00 00 00 e8 ?? 00 00 00 e9 [0-32] 9c [0-16] 9d [0-16] 9c [0-16] 9d [0-16] 9c [0-16] 9d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1484,6 +1544,7 @@ rule VirTool_Win32_Obfuscator_CZ_2147612671_0
         $x_1_3 = {47 65 74 50 72 6f 63 41 64 64 72 65 73 73 00 00 00 00 00 00 31 d2 31 c0 56 80 3e 00 74 0a a6 74 f8 ae 75 fd 5e 42 eb f0 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1505,6 +1566,7 @@ rule VirTool_Win32_Obfuscator_DA_2147612705_0
         $x_1_2 = {03 c2 ff e0 b1 15 00 00 60 e8 00 00 00 00 5e 83 ee 0a 8b 06 03 c2 8b 08 89 4e f3 83 ee 0f 56 52 8b f0 ad ad 03 c2 8b d8 6a 04 bf 00 10 00 00 57 57 6a 00 ff 53 08 5a 59 bd 00 80 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1526,6 +1588,7 @@ rule VirTool_Win32_Obfuscator_DF_2147614205_0
         $x_1_2 = {b9 04 00 00 00 0f 31 89 04 24 89 54 24 04 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1546,6 +1609,7 @@ rule VirTool_Win32_Obfuscator_DI_2147616003_0
         $x_1_1 = {55 57 56 53 e8 0d 00 00 00 6b 65 72 6e 65 6c 33 32 2e 64 6c 6c 00 68 70 65 86 b1 ?? ?? 00 00 00 ff d0 e8 17 00 00 00 52 65 67 69 73 74 65 72 53 65 72 76 69 63 65 50 72 6f 63 65 73 73 00 50 68 ff 1f 7c c9 e8 ?? 00 00 00 ff d0 0b c0 74 07 8c c9 0a ed 75 01 ?? e8 9d ff ff ff 8b 5c 24 fc 66 33 db 8b c3 03 40 3c 0f b7 50 14 8d 54 10 18 8b 42 34 03 c3 05 ?? ?? 00 00 8b cb 41 50 51 68 2f 6f 06 10 e8 ?? 00 00 00 54 54 6a 40 ff 72 30 ff 72 34 01 1c 24 ff d0 58 59 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1570,6 +1634,7 @@ rule VirTool_Win32_Obfuscator_DN_2147616769_0
         $x_2_5 = {e8 00 00 00 00 58 25 00 f0 ff ff 05 00 12 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -1601,6 +1666,7 @@ rule VirTool_Win32_Obfuscator_DP_2147617366_0
         $x_1_7 = {4c 8d 88 00 60 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1625,6 +1691,7 @@ rule VirTool_Win32_Obfuscator_DR_2147617654_0
         $x_1_1 = {e8 00 00 00 00 58 25 00 00 ff ff 66 8b 00 66 35 de c0 66 3d 93 9a 74 07 2d 00 00 01 00 eb e7 25 00 00 ff ff 89 45 fc 8b 45 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1646,6 +1713,7 @@ rule VirTool_Win32_Obfuscator_DS_2147617680_0
         $x_1_2 = {81 fb 7c 00 00 00 (74|??) 06 00 81 (e8|2d|ff)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1672,6 +1740,7 @@ rule VirTool_Win32_Obfuscator_DT_2147617745_0
         $x_1_7 = {8d 88 00 60 00 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -1696,6 +1765,7 @@ rule VirTool_Win32_Obfuscator_DU_2147618146_0
         $x_1_1 = {83 c4 08 6a 00 68 ?? 3a 5c ?? 54 ff d0 83 c4 08 83 f8 01 75 01 cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1717,6 +1787,7 @@ rule VirTool_Win32_Obfuscator_DX_2147618209_0
         $x_1_2 = {ff d0 59 ba ?? ?? ?? ?? f7 d2 8b b2 4c 00 00 00 21 ef f7 d2 41 29 ef 8b 01 81 f2 bd a8 46 0d 29 f0 85 c0 75 ed}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1737,6 +1808,7 @@ rule VirTool_Win32_Obfuscator_DQ_2147618297_0
         $x_1_1 = {e8 00 00 00 00 58 25 00 00 ff ff 66 8b 00 66 35 ?? ?? 66 3d ?? ?? 74 07 2d 00 00 01 00 eb ?? 25 00 00 ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1757,6 +1829,7 @@ rule VirTool_Win32_Obfuscator_DZ_2147618354_0
         $x_1_1 = {e8 01 00 00 00 c3 31 ff 89 e5 83 ec ?? 8d (55|5d|4d) [0-26] ff 15 ?? ?? ?? ?? 31 (d2|db|c9) 88 (c2|c3|c1) 89 ec 01 (d7|df|cf) 81 ef ?? 00 00 00 81 ff ?? ?? ?? ?? 7c (a0|2d|e0) [0-10] 6a 40 68 00 30 00 00 68 ?? ?? ?? 00 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1778,6 +1851,7 @@ rule VirTool_Win32_Obfuscator_DW_2147618460_0
         $x_1_2 = {ff d2 59 ba ?? ?? ?? ?? f7 d2 8b 3a f7 d0 4a 41 21 d6 8b 01 81 ea a5 6a cd 83 31 f8 85 c0 75 ee}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1800,6 +1874,7 @@ rule VirTool_Win32_Obfuscator_EA_2147618582_0
         $x_1_3 = {c7 45 cc 56 69 72 74 c1 ef 00 81 c6 1d e7 82 16 bf ed f4 24 94 c7 45 d0 75 61 6c 50 81 c3 ec c8 02 ac 81 c2 30 0a 7a bc 87 ce c7 45 d4 72 6f 74 65 33 fa 89 fe c7 45 d8 63 74 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1824,6 +1899,7 @@ rule VirTool_Win32_Obfuscator_EI_2147619190_0
         $x_1_2 = {6a 00 6a 00 8d 45 e8 50 8d 45 ec 50 ff 15 ?? 20 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1845,6 +1921,7 @@ rule VirTool_Win32_Obfuscator_EQ_2147619834_0
         $x_1_2 = {b8 28 78 00 00 03 3d ?? ?? 40 00 2b 1d ?? ?? 40 00 03 3d ?? ?? 40 00 81 c0 c9 27 00 00 03 3d ?? ?? 40 00 29 01 03 5c 24 20 77 0e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1865,6 +1942,7 @@ rule VirTool_Win32_Obfuscator_ER_2147621044_0
         $x_1_1 = {bb 04 00 00 00 83 eb 02 ba 15 12 40 00 f7 d3 f7 db 81 fc 54 45 02 00 30 1a 83 ea 05 90 83 c2 06 81 fa 15 1a 41 00 75 e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1885,6 +1963,7 @@ rule VirTool_Win32_Obfuscator_ER_2147621044_1
         $x_1_1 = {64 a1 30 00 00 00 8b 40 0c 8b 40 1c 8b 00 8b 40 08 89 45 ?? 8b 45 ?? 25 00 00 ff ff 81 38 4d 5a ?? ?? 74 ?? 2d 00 00 01 00 eb ?? 89 45 ?? e8 00 00 00 00 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1905,6 +1984,7 @@ rule VirTool_Win32_Obfuscator_FB_2147621138_0
         $x_1_1 = {24 1c 61 c2 08 00 55 1c 8b ec 83 83 28 80 65 ff 80 53 56 57 00 6a 01 33 f6 81 7d 0c d8 70 7c e0 5b 1c 89 75 f8 cc 5d f0 06 e8 81 ec 03 dc 00 1e f4 73 07 6a 02 e9 41 63 08 38 8b 7d a8 b9 36 1f ce 10 b8 0c 04 0a 83 01 ca ff f3 ab 8b 45 10 cc 4d 14 63 89 0c 03 c1 78 0a d8 1d 5e 0c 33 30 c9 3b 16 0f 84 13 a3 31 79 1c 0f b6 38 c1 e6 61 0b f7 40 41 86 37 83 f9 05 59 33 7c df 52 20 df 2c 84 7d 70 1c 0c 0f 86 ef 07 50 eb 50 03 82 5b cc bc f4 30 f8 c3 9e 08 83 e7 1d 9c e0 04 06 c7 81 fa 34 e0 01 3c 8d 34 1a 73 21 b5 22 55 be 07 24 4d 41 18 c1 e1 08 cd e2 86 b0 cb 40 89 1e c7 a9 8b 06 21 da c1 eb fc 0f af 18 d8 39 5d 3e 83 80 67 01 50 bf 0a 82 b0 b0 2b f8 59 0c c1 ef 05 03 b2 d3 c7 6c 45 ff b5 e8 0a 82 3e 97 03 08 8d 04 40 28 c8 0a 82 3d f8 07 0a 84 30 d8 88 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1932,6 +2012,7 @@ rule VirTool_Win32_Obfuscator_EB_2147621491_0
         $x_1_8 = {c7 45 d4 72 6f 74 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -1957,6 +2038,7 @@ rule VirTool_Win32_Obfuscator_EM_2147621589_0
         $x_1_6 = {24 fc c7 04 24 ?? ?? ?? ?? e8 ?? ?? 00 00 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1984,6 +2066,7 @@ rule VirTool_Win32_Obfuscator_ET_2147622034_0
         $x_1_5 = {94 c8 37 09 01 00 (b8|2d|bf)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -2010,6 +2093,7 @@ rule VirTool_Win32_Obfuscator_EU_2147622035_0
         $x_1_3 = {68 00 30 14 13 ff 15 ?? ?? 14 13 0b 00 8d 45 ?? 50 6a 40 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2032,6 +2116,7 @@ rule VirTool_Win32_Obfuscator_EJ_2147622429_0
         $x_1_3 = {83 eb 33 89 da b9 02 00 00 00 51 ff 15 1c 80 40 00 8b 3c 24 5f 39 d3 74 03 83 ef 0b ff 15 00 80 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2054,6 +2139,7 @@ rule VirTool_Win32_Obfuscator_EO_2147622607_0
         $x_1_3 = {c7 45 db 73 6c 6f 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2078,6 +2164,7 @@ rule VirTool_Win32_Obfuscator_IS_2147622764_0
         $x_1_5 = {8d 45 e4 50 6a 40 68 ?? ?? ?? 00 68 00 30 40 00 ff 15 ?? 20 40 00 68 00 30 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2099,6 +2186,7 @@ rule VirTool_Win32_Obfuscator_IT_2147623102_0
         $x_1_2 = "@aSplitter;C:\\WINDOWS\\system32;C:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2120,6 +2208,7 @@ rule VirTool_Win32_Obfuscator_EP_2147623116_0
         $x_1_2 = {8b 0a 39 c1 74 07 01 d9 42 31 c6 eb f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2140,6 +2229,7 @@ rule VirTool_Win32_Obfuscator_EY_2147623749_0
         $x_1_1 = {0f b7 cf 0f a4 f7 64 0f a5 f7 47 11 e9 b9 a4 d7 3e 09 3a c6 f2 d1 d1 0f b7 fd 8b cd c7 c1 04 b7 9e e9 0f be c6 8b cd 0f a4 f7 b4 f7 c3 44 f7 de 29 38 f0 0f c1 c8 f2 f7 c3 84 37 1e 69 8a c6 47 47 eb 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2163,6 +2253,7 @@ rule VirTool_Win32_Obfuscator_FH_2147624380_0
         $x_1_4 = {68 3e f6 96 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -2191,6 +2282,7 @@ rule VirTool_Win32_Obfuscator_FI_2147625237_0
         $x_4_5 = {0f be 4d ff 33 c8 88 4d ff 8b 55 0c 8a 45 ff 88 02}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2214,6 +2306,7 @@ rule VirTool_Win32_Obfuscator_FJ_2147625294_0
         $x_1_1 = {55 8b ec 83 c4 f4 53 57 56 90 68 11 10 40 00 90 c3 90 0f 31 52 90 58 83 f8 0a 0f 82 24 00 00 00 90 ff 15 ?? ?? ?? ?? 52 64 a1 18 00 00 00 8b 40 30 66 8b 80 ac 00 00 00 81 04 24 56 10 40 00 66 29 04 24 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2237,6 +2330,7 @@ rule VirTool_Win32_Obfuscator_FM_2147625503_0
         $x_1_4 = {68 00 00 ff ff 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2268,6 +2362,7 @@ rule VirTool_Win32_Obfuscator_FN_2147625565_0
         $x_1_8 = {81 f9 c0 03 00 00 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 2 of ($x_1_*))) or
             ((1 of ($x_6_*) and 1 of ($x_2_*))) or
@@ -2297,6 +2392,7 @@ rule VirTool_Win32_Obfuscator_FO_2147625627_0
         $x_1_5 = {8b 78 04 81 3b 03 00 00 80 74 07 b8 00 00 00 00 eb 0b ff 87 b8 00 00 00 b8 ff ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -2326,6 +2422,7 @@ rule VirTool_Win32_Obfuscator_FQ_2147625857_0
         $x_1_6 = {81 f9 44 03 00 00 0f 85 33 00 [0-48] 80 34 31}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2349,6 +2446,7 @@ rule VirTool_Win32_Obfuscator_FR_2147625861_0
         $x_2_4 = {66 0f 1f 84 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_3_*))) or
@@ -2374,6 +2472,7 @@ rule VirTool_Win32_Obfuscator_FS_2147625895_0
         $x_1_2 = {83 f9 00 75 ?? 58 ff e0 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2395,6 +2494,7 @@ rule VirTool_Win32_Obfuscator_GA_2147626425_0
         $x_1_2 = {66 31 c0 30 c0 30 db 30 ff b9 ?? ?? ?? ?? e2 fe 31 c0 31 c9 31 db}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2420,6 +2520,7 @@ rule VirTool_Win32_Obfuscator_FW_2147626501_0
         $x_1_6 = {81 f8 2e 00 00 c0 0f 84}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -2447,6 +2548,7 @@ rule VirTool_Win32_Obfuscator_FW_2147626501_1
         $x_1_8 = {35 82 fa 50 4b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2469,6 +2571,7 @@ rule VirTool_Win32_Obfuscator_FY_2147626701_0
         $x_1_3 = {6a 00 ff d0 01 85 ?? ?? ?? ?? 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2495,6 +2598,7 @@ rule VirTool_Win32_Obfuscator_GB_2147626782_0
         $x_2_7 = {ff 0c 24 ff 0c 24 81 2c 24 29 e7 97 00 ff 0c 24 58}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -2519,6 +2623,7 @@ rule VirTool_Win32_Obfuscator_GC_2147626892_0
         $x_1_1 = {e9 0c ff ff ff ?? ?? ?? ?? 55 8b ec 53 56 57 8b 75 08 8b 7d 0c 8b 5d 10 33 d2 03 df a4 3b fb 73 4a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2543,6 +2648,7 @@ rule VirTool_Win32_Obfuscator_GD_2147626893_0
         $x_1_5 = {3d 82 78 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -2564,6 +2670,7 @@ rule VirTool_Win32_Obfuscator_GD_2147626893_1
         $x_1_2 = {e8 1d 00 00 00 8b 4c 24 0c 8b 91 b0 00 00 00 4a 75 07 83 81 b8 00 00 00 03 89 91 b0 00 00 00 33 c0 c3 33 c9 64 ff 31 64 89 21 ?? 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2584,6 +2691,7 @@ rule VirTool_Win32_Obfuscator_GG_2147627683_0
         $x_1_1 = {0f 6e c0 0f 6e ca 0f 73 f0 [0-2] 0f ef c1 0f 6e cf 0f 7e ce ad 0f 6e d0 ad 0f 6e d8 0f 73 f2 [0-2] 0f ef d3 0f ef d0 0f 7e d0 ab 0f 73 d2 [0-2] 0f 7e d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2604,6 +2712,7 @@ rule VirTool_Win32_Obfuscator_GH_2147627730_0
         $x_1_1 = {18 00 00 00 8b ?? 30 8b ?? 54 8b ?? 04 8b ?? 04 8b ?? 04 81 ?? 20 00 20 00 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2626,6 +2735,7 @@ rule VirTool_Win32_Obfuscator_GI_2147627897_0
         $x_1_3 = {83 7d ec 08 73 39 83 7d ec 04 75 06 83 7d f4 7f 76 2d 83 7d ec 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2646,6 +2756,7 @@ rule VirTool_Win32_Obfuscator_GK_2147627915_0
         $x_1_1 = {29 e8 01 ca 01 eb 89 d8 68 7c ea 00 00 ff 15 ?? ?? 41 00 68 8b 30 41 00 8d 14 30 8d 83 89 00 00 00 5a 8d 14 08 8d 04 10 68 06 b6 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2666,6 +2777,7 @@ rule VirTool_Win32_Obfuscator_GL_2147628012_0
         $x_1_1 = {75 00 bb 04 00 00 00 83 eb 02 ba 74 12 40 00 f7 d3 f7 db 81 fc 54 45 02 00 30 1a 83 ea 03 90 83 c2 04 81 fa 74 2e 40 00 75 e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2687,6 +2799,7 @@ rule VirTool_Win32_Obfuscator_GM_2147628039_0
         $x_1_2 = {0f b6 30 6b c9 21 33 ce ff c0 68 ff ff ff ff 01 54 a4 00 5a 0f 85 e6 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2711,6 +2824,7 @@ rule VirTool_Win32_Obfuscator_GN_2147628093_0
         $x_1_5 = {3b 45 14 0f 85 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -2739,6 +2853,7 @@ rule VirTool_Win32_Obfuscator_GO_2147628129_0
         $x_3_5 = {0f 01 e0 41 83 f9 02}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -2772,6 +2887,7 @@ rule VirTool_Win32_Obfuscator_GQ_2147628193_0
         $x_1_9 = {40 30 06 46 81 fe ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -2802,6 +2918,7 @@ rule VirTool_Win32_Obfuscator_GS_2147628425_0
         $x_1_7 = "GetBkMode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 4 of ($x_1_*))) or
             ((3 of ($x_4_*))) or
@@ -2846,6 +2963,7 @@ rule VirTool_Win32_Obfuscator_GT_2147628466_0
         $x_3_21 = {80 7c 24 05 69 0f 84}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -2874,6 +2992,7 @@ rule VirTool_Win32_Obfuscator_GU_2147628507_0
         $x_1_3 = {68 00 08 00 00 6a 08 ff 75 ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2900,6 +3019,7 @@ rule VirTool_Win32_Obfuscator_GV_2147628522_0
         $x_1_4 = {ff 77 50 ff 77 34 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -2924,6 +3044,7 @@ rule VirTool_Win32_Obfuscator_GW_2147628604_0
         $x_1_1 = {66 81 38 4d 5a 74 07 2d 00 00 01 00 eb f2 40 81 38 ff 75 18 8d 75 f7 81 78 04 45 10 ff 75 75 ee 48 80 38 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2944,6 +3065,7 @@ rule VirTool_Win32_Obfuscator_GX_2147628621_0
         $x_1_1 = {60 60 9c bb 34 27 00 00 50 89 f8 31 ff 5b 9d 61 9c 60 9c bb 34 27 00 00 50 89 f8 31 ff 5b 9d 61 bb 34 27 00 00 60 9c bb 34 27 00 00 50 89 f8 31 ff 5b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2967,6 +3089,7 @@ rule VirTool_Win32_Obfuscator_GY_2147628676_0
         $x_1_4 = {68 ff ff ff ff 01 (84|8c|9c|94|ac|a4|b4|bc) (24|64|a4|e4) 00 00 00 00 (8f (c0|c1|c2|c3|c4|c5|c6|c7)|(58|59|5a|5b|5c|5d|5e|5f))}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2993,6 +3116,7 @@ rule VirTool_Win32_Obfuscator_HA_2147628760_0
         $x_2_4 = {0f 70 ca ff 0f 77}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3018,6 +3142,7 @@ rule VirTool_Win32_Obfuscator_HB_2147628792_0
         $x_1_3 = {2e 64 6c 6c 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3038,6 +3163,7 @@ rule VirTool_Win32_Obfuscator_HC_2147628803_0
         $x_1_1 = {68 cd 2e eb 08 58 2d c4 2e eb 08 eb f4 86 e0 91 0f c9 81 e9 4c d9 01 00 03 ca eb 02 cc e9 ff d1 34 35 83 e0 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3059,6 +3185,7 @@ rule VirTool_Win32_Obfuscator_HF_2147628831_0
         $x_1_2 = {8b 09 81 c1 ?? ?? ?? ?? 01 d3 51 01 f6 68 ?? ?? ?? ?? c7 85 f4 ff ff ff 21 ff ff ff 8b 5d f8 5b 81 e8 ?? ?? ?? ?? 8d 43 5c c1 eb 05 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3081,6 +3208,7 @@ rule VirTool_Win32_Obfuscator_HG_2147628863_0
         $x_2_3 = {ac 3c 41 72 06 3c 5a 77 02 04 20 aa e2 f2 81 7d ?? 6b 65 72 6e 75 c7 81 7d ?? 65 6c 33 32 75 be 81 7d ?? 2e 64 6c 6c 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3104,6 +3232,7 @@ rule VirTool_Win32_Obfuscator_HH_2147628880_0
         $x_1_1 = {8b 5d ec 8b 3f 83 ee ae 2b d3 c1 e7 08 03 75 f4 8b ce 81 c7 ?? ?? ?? ?? b9 04 00 00 00 01 f6 b9 ?? ?? ?? ?? 01 de 39 89 a4 00 00 00 74 ef 8b ca 57 68 ?? ?? ?? ?? be 51 ff ff ff 2b 75 f0 5a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3124,6 +3253,7 @@ rule VirTool_Win32_Obfuscator_HJ_2147628993_0
         $x_1_1 = {f7 d5 89 ee 81 f3 14 00 00 00 89 ee f7 d5 4d 75 ef 81 f3 13 00 00 00 81 f3 1e 00 00 00 33 1f ?? 89 dd 89 ed 89 2f 83 c7 02 47 47 ?? 81 c2 02 00 00 00 4a ?? 49 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3145,6 +3275,7 @@ rule VirTool_Win32_Obfuscator_HL_2147629044_0
         $x_1_2 = {ba 65 e7 f8 75 f2 02 00 81}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3167,6 +3298,7 @@ rule VirTool_Win32_Obfuscator_HM_2147629072_0
         $x_1_3 = {8b 55 0c 8b 04 b7 31 02 ff 32 ff 75 08 e8 dc ff ff ff 8b 55 10 31 02 8b 02 8b 4d 0c 51 8b 09 89 0a 59 89 01 4e 83 fe 01 77 d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3188,6 +3320,7 @@ rule VirTool_Win32_Obfuscator_HP_2147629361_0
         $x_1_2 = {a1 6c 02 fe 7f [0-6] 3c 06 74 ?? ba}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3208,6 +3341,7 @@ rule VirTool_Win32_Obfuscator_HP_2147629361_1
         $x_1_1 = {8d 7f 5d 89 7d 08 4e b9 03 6c 80 00 8d 3c 24 2b ca 01 f8 81 f3 ?? ?? ?? ?? 8b 1c 24 4f db e2 9b be ?? ?? ?? ?? 03 df 0f 01 e0 03 c0 3d 16 c6 00 00 72 08 8b 7d 08 ff d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3231,6 +3365,7 @@ rule VirTool_Win32_Obfuscator_HQ_2147629401_0
         $x_1_4 = {50 64 ff 35 00 00 00 00 64 89 25 00 00 00 00 b9 ?? ?? ?? ?? 81 e9 ?? ?? ?? ?? 0f 0b 64 8f 05 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3253,6 +3388,7 @@ rule VirTool_Win32_Obfuscator_HR_2147629402_0
         $x_1_3 = {6a 61 6a 66 8b 04 ?? ?? ?? ?? ?? ff d0 59 59 85 c0 0f 85 ?? ?? ?? ?? 56 8b (05 ?? ?? ?? ??|04 ?? ?? ?? ?? ??) ff d0 85 c0 0f 84 ?? ?? ?? ?? 83 7d 0c 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3273,6 +3409,7 @@ rule VirTool_Win32_Obfuscator_HS_2147629446_0
         $x_1_1 = {0f 01 e0 03 c0 3d ?? ?? 00 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3293,6 +3430,7 @@ rule VirTool_Win32_Obfuscator_HU_2147630037_0
         $x_1_1 = {80 7a 78 6a 74 ?? 80 7a 47 89 74 ?? 80 7a 49 3b 74 ?? cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3314,6 +3452,7 @@ rule VirTool_Win32_Obfuscator_HW_2147630243_0
         $x_1_2 = {ba 00 00 00 00 01 fa b8 ?? ?? ?? ?? 01 f8 89 c7 89 44 24 04 be ?? ?? ?? ?? 01 c6 80 38 00 75 05 8a 0a 88 08 42 40 39 c6 75 f1 e8 04 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3334,6 +3473,7 @@ rule VirTool_Win32_Obfuscator_YA_2147630499_0
         $x_1_1 = {8b 3d dc 70 40 00 81 f7 ?? ?? ?? ?? 89 3d dc 70 40 00 31 0a 8b 1d 2b 70 40 00 81 cb ?? ?? ?? ?? 89 1d 2b 70 40 00 29 0a 81 2a ?? ?? ?? ?? f7 12 81 02 ?? ?? ?? ?? 81 32 ?? ?? ?? ?? 8b 35 14 72 40 00 31 d6 89 35 14 72 40 00 f7 12 c1 0a ?? 8b 3d 59 72 40 00 31 cf 89 3d 59 72 40 00 83 c2 04 48 0f 85 99 ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3354,6 +3494,7 @@ rule VirTool_Win32_Obfuscator_HY_2147630652_0
         $x_1_1 = {be 08 00 00 00 ?? ?? cd 2a ?? ?? cd 2a ?? ?? 74 fa ?? ?? ?? ?? cd 2a ?? ?? cd 2a ?? ?? 74 fa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3374,6 +3515,7 @@ rule VirTool_Win32_Obfuscator_IB_2147631184_0
         $x_1_1 = {ba 00 50 01 00 92 e8 1f 00 00 00 8b 54 24 0c 8b 82 b0 00 00 00 48 75 09 6a f5 59 29 8a b8 00 00 00 89 82 b0 00 00 00 33 c0 c3 33 c9 64 ff 31 64 89 21 29 05 00 10 40 00 83 c4 08 f4 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3396,6 +3538,7 @@ rule VirTool_Win32_Obfuscator_IC_2147631371_0
         $x_1_3 = {b8 00 00 00 27 ?? ?? ?? ?? ?? 33 c0 c3 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 64 8f 05 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3420,6 +3563,7 @@ rule VirTool_Win32_Obfuscator_ID_2147631415_0
         $x_1_5 = {81 38 8b ff 8b ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -3445,6 +3589,7 @@ rule VirTool_Win32_Obfuscator_IE_2147631425_0
         $x_1_2 = {ff d6 55 68 00 80 00 00 6a 00 56 ff 15 ?? ?? ?? ?? 59 85 c0 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3466,6 +3611,7 @@ rule VirTool_Win32_Obfuscator_IF_2147631706_0
         $x_1_2 = {8b 58 3c 66 8b 44 03 16 66 25 00 20 74 05 e8 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3488,6 +3634,7 @@ rule VirTool_Win32_Obfuscator_IG_2147631755_0
         $x_1_3 = {c7 07 ad 33 c2 d3 c7 47 04 c2 ab e2 f8 66 c7 47 08 ff e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3508,6 +3655,7 @@ rule VirTool_Win32_Obfuscator_IH_2147631938_0
         $x_1_1 = {31 d2 47 66 8b 17 31 f6 81 c8 ?? ?? ?? ?? 83 e8 ?? 81 e8 ?? ?? ?? ?? 0b b5 a8 fd ff ff 46 85 f6 74 1c 31 c0 23 85 c8 fe ff ff 2b 85 e0 fe ff ff 46 31 c6 29 f0 2b 85 a4 fe ff ff 21 45 90 09 c6 81 ea ?? ?? ?? ?? 75 b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3530,6 +3678,7 @@ rule VirTool_Win32_Obfuscator_II_2147632289_0
         $x_1_3 = {8d 64 24 00 8b 1d ?? ?? ?? ?? e8 15 ff ff ff 32 44 3e 10 83 c7 01 88 44 3b ff 8b 0d ?? ?? ?? ?? 83 c1 f0 3b f9 72 dd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3553,6 +3702,7 @@ rule VirTool_Win32_Obfuscator_IJ_2147632394_0
         $x_1_4 = {64 a1 00 00 00 00 50 64 89 25 00 00 00 00 68 ?? ?? ?? ?? 33 c0 f7 f0 09 00 50 51 52 53 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -3578,6 +3728,7 @@ rule VirTool_Win32_Obfuscator_IK_2147632413_0
         $x_1_3 = {c6 40 04 75 c6 40 02 72 c6 40 06 6c c6 40 03 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3601,6 +3752,7 @@ rule VirTool_Win32_Obfuscator_IK_2147632413_1
         $x_1_4 = {8b 40 3c 01 c8 89 c2 8b 98 c0 00 00 00 85 db 60 0f 84 ?? ?? ?? ?? e8 15 00 00 00 54 6c 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3624,6 +3776,7 @@ rule VirTool_Win32_Obfuscator_IY_2147632459_0
         $x_1_4 = {81 38 8b ff 8b ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -3648,6 +3801,7 @@ rule VirTool_Win32_Obfuscator_IL_2147632836_0
         $x_1_1 = {a1 e8 02 fe 7f [0-8] 0b c0 6a 1c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3673,6 +3827,7 @@ rule VirTool_Win32_Obfuscator_IM_2147632873_0
         $x_1_6 = {ff ff 74 c6 85 ?? ?? ff ff 54 c6 85 ?? ?? ff ff 65 c6 85 ?? ?? ff ff 6d c6 85 ?? ?? ff ff 70 c6 85 ?? ?? ff ff 50 c6 85 ?? ?? ff ff 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -3696,6 +3851,7 @@ rule VirTool_Win32_Obfuscator_IN_2147632956_0
         $x_1_1 = {8d 34 08 8b 34 b3 2b 74 82 10 33 34 82 56 8d 34 08 8b 7d fc 8d 3c b7 5e 89 37 8b 74 82 20 01 34 82 8b 74 82 30 01 74 82 10 40 83 f8 04 72 d1 83 c1 04 3b 4d 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3716,6 +3872,7 @@ rule VirTool_Win32_Obfuscator_IO_2147633376_0
         $x_1_1 = {b8 f5 ff 00 00 01 f0 89 85 40 fd ff ff 89 85 c4 fd ff ff 89 ?? c7 85 d0 fd ff ff ?? 00 00 00 c7 85 d1 fd ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3736,6 +3893,7 @@ rule VirTool_Win32_Obfuscator_JC_2147633561_0
         $x_1_1 = {53 8b d9 e2 fb b9 ?? ?? ?? ?? 5b e2 fd 59 51 b9 ?? ?? ?? ?? 53 8b d9 51 b9 ?? ?? ?? ?? 8b d9 e2 fc 59 5b e2 ef 59 06 00 51 b9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3758,6 +3916,7 @@ rule VirTool_Win32_Obfuscator_JD_2147633738_0
         $x_1_3 = {66 ad 86 c4 66 33 45 ?? 83 6d ?? ?? ff 45 ?? 66 ab e2 ed}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3780,6 +3939,7 @@ rule VirTool_Win32_Obfuscator_IU_2147633759_0
         $x_1_3 = {6a 40 68 00 30 00 00 51 6a 00 68 4a 0d ce 09 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3802,6 +3962,7 @@ rule VirTool_Win32_Obfuscator_JE_2147633874_0
         $x_1_3 = {66 81 3c 18 50 45 (75|0f 85) [0-6] 18 78}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3823,6 +3984,7 @@ rule VirTool_Win32_Obfuscator_IW_2147635843_0
         $x_1_2 = {ff d1 c9 c3 ba ?? ?? ?? ?? 89 d1 31 d2 41 42 81 fa ?? ?? ?? ?? 75 f6 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3847,6 +4009,7 @@ rule VirTool_Win32_Obfuscator_JG_2147636376_0
         $x_1_5 = {8b c8 03 49 3c 81 c1 a0 00 00 00 8b 09 81 f9 00 00 06 00 77 ?? cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3868,6 +4031,7 @@ rule VirTool_Win32_Obfuscator_JH_2147636396_0
         $x_1_2 = {30 03 46 89 75 ec 3b 75 2c 72 b8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3892,6 +4056,7 @@ rule VirTool_Win32_Obfuscator_JJ_2147637267_0
         $x_1_5 = {ff ff 8c 2c 24 03 00 68 ?? ?? ?? ?? ?? ?? ?? [0-22] c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -3917,6 +4082,7 @@ rule VirTool_Win32_Obfuscator_JL_2147637282_0
         $x_1_3 = {29 4c 24 20 8b 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3939,6 +4105,7 @@ rule VirTool_Win32_Obfuscator_JL_2147637282_1
         $x_1_3 = {50 33 c2 5a ab 83 e9 03 e2 df}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3959,6 +4126,7 @@ rule VirTool_Win32_Obfuscator_JL_2147637282_2
         $x_1_1 = {83 f9 03 75 [0-2] b8 ?? ?? ?? ?? [0-2] [0-2] 8b 88 ?? ?? ?? ?? [0-2] [0-2] 03 88 ?? ?? ?? ?? [0-2] [0-2] 0f b6 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3979,6 +4147,7 @@ rule VirTool_Win32_Obfuscator_JL_2147637282_3
         $x_1_1 = {b8 4b 13 0b 80 ?? ?? 8b 88 b5 ec f2 ff ?? ?? 03 88 d5 ef f2 ff ?? ?? 0f b6 c9 ?? ?? 83 f9 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4009,6 +4178,7 @@ rule VirTool_Win32_Obfuscator_JL_2147637282_4
         $x_1_11 = {01 42 04 eb 2b c8 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -4039,6 +4209,7 @@ rule VirTool_Win32_Obfuscator_JL_2147637282_5
         $x_1_7 = {83 e9 04 eb 75 51 [0-4] [0-4] ad [0-4] [0-4] b9 ?? ?? ?? ?? [0-4] [0-4] 83 c0 ?? [0-4] [0-4] 2b c2 [0-4] [0-4] ab [0-4] [0-4] 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4077,6 +4248,7 @@ rule VirTool_Win32_Obfuscator_JL_2147637282_6
         $x_1_19 = {8d 0c 08 c1 e9 02 8b c3 0f be c9 33 07 33 c1 34}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4100,6 +4272,7 @@ rule VirTool_Win32_Obfuscator_JK_2147637283_0
         $x_1_4 = {0f b6 3f c1 e1 08 09 f9 c1 e0 08 ff 45 f8 89 4d 0c e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -4127,6 +4300,7 @@ rule VirTool_Win32_Obfuscator_JK_2147637283_1
         $x_1_8 = {5f 83 ef 05 55 8b ec 81 c4 ?? ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4148,6 +4322,7 @@ rule VirTool_Win32_Obfuscator_JM_2147637332_0
         $x_1_2 = {6a 00 f9 0f 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4168,6 +4343,7 @@ rule VirTool_Win32_Obfuscator_JN_2147637419_0
         $x_1_1 = {8b ff 3b c1 74 ?? 75 ?? c1 ?? 20 c1 ?? 20 [0-12] e9 [0-2] 00 00 8b ff 55 8b ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4189,6 +4365,7 @@ rule VirTool_Win32_Obfuscator_JO_2147637488_0
         $x_1_2 = {c3 2b 7c 24 28 89 7c 24 1c 61 c2 08 00 56 69 72 74 75 61 6c 50 72 6f 74 65 63 74 00 56 69 72 74 75 61 6c 46 72 65 65 00 6b 65 72 6e 65 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4212,6 +4389,7 @@ rule VirTool_Win32_Obfuscator_JP_2147637772_0
         $x_2_4 = {24 83 c4 04 29 ?? 8b ?? 08 03 ?? f8 c6 ?? 00 30 ?? 8b ?? fc ?? 89 ?? fc 83 7d fc 01 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -4236,6 +4414,7 @@ rule VirTool_Win32_Obfuscator_JQ_2147637996_0
         $x_1_1 = {33 05 f8 02 fe 7f 35 55 00 00 c0 60}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4256,6 +4435,7 @@ rule VirTool_Win32_Obfuscator_JV_2147638457_0
         $x_1_1 = {c6 40 05 67 c6 40 02 74 c6 00 47 c6 40 03 52 c6 40 04 65 c6 40 01 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4277,6 +4457,7 @@ rule VirTool_Win32_Obfuscator_JX_2147638988_0
         $x_1_2 = {c6 85 ea fe ff ff 43 c6 85 eb fe ff ff 6c c6 85 ec fe ff ff 61 c6 85 ed fe ff ff 73 c6 85 ee fe ff ff 73 c6 85 ef fe ff ff 4f c6 85 f0 fe ff ff 62 c6 85 f1 fe ff ff 6a c6 85 f2 fe ff ff 65 c6 85 f3 fe ff ff 63 c6 85 f4 fe ff ff 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4297,6 +4478,7 @@ rule VirTool_Win32_Obfuscator_JY_2147639043_0
         $x_1_1 = {a9 8b 08 00 06 00 c7 85 ?? ?? ff ff 00 02 83 bd 01 ff ff 00 0f 84 ?? ?? 00 00 [0-255] c7 85 ?? ?? ff ff ?? ?? 00 00 00 02 ff b5 06 ff ff 68 07 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4318,6 +4500,7 @@ rule VirTool_Win32_Obfuscator_JZ_2147639106_0
         $x_1_2 = {83 c7 02 46 e9 81 fe ?? ?? ?? ?? 0f 84 03 7d f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4338,6 +4521,7 @@ rule VirTool_Win32_Obfuscator_KA_2147639132_0
         $x_1_1 = {64 8b 15 18 00 00 00 [0-32] 8b 52 30 [0-255] cd 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4360,6 +4544,7 @@ rule VirTool_Win32_Obfuscator_KC_2147639745_0
         $x_1_3 = {3d 04 d0 17 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4381,6 +4566,7 @@ rule VirTool_Win32_Obfuscator_KC_2147639745_1
         $x_1_2 = {03 ea 01 2c 24 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4401,6 +4587,7 @@ rule VirTool_Win32_Obfuscator_KD_2147639834_0
         $x_1_1 = {68 d8 1c 0c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4423,6 +4610,7 @@ rule VirTool_Win32_Obfuscator_KE_2147639842_0
         $x_1_3 = {c7 45 f0 01 00 00 00 1c 00 c7 45 e0 ?? 00 00 00 c7 45 e4 ?? 00 00 00 c7 45 e8 ?? 00 00 00 c7 45 ec ?? 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4445,6 +4633,7 @@ rule VirTool_Win32_Obfuscator_KF_2147640300_0
         $x_1_3 = {a9 00 00 ff 00 05 01 01 01 01 05 f8 f9 eb e9 68 ?? ?? ?? ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4466,6 +4655,7 @@ rule VirTool_Win32_Obfuscator_KG_2147640334_0
         $x_1_2 = {33 c0 40 74 11 a1 ?? ?? ?? ?? 3b 05 ?? ?? ?? ?? 75 02 eb 02 eb ea}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4488,6 +4678,7 @@ rule VirTool_Win32_Obfuscator_KH_2147640344_0
         $x_1_3 = {68 c8 12 11 97 50 e8 ?? ?? ?? ?? ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -4512,6 +4703,7 @@ rule VirTool_Win32_Obfuscator_KJ_2147640497_0
         $x_1_5 = {8d 54 01 02 8b 45 c4 03 45 f4 33 10 8b 4d c4 03 4d f4 89 11 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -4536,6 +4728,7 @@ rule VirTool_Win32_Obfuscator_KN_2147640839_0
         $x_1_1 = {ac 34 55 3c c5 74 26 3c 99 74 22 3c 98 74 1e 3c bd 74 1a 3c bc 74 16 3c be 74 12 3c a1 74 0e 3c af 74 0a 3c ae 74 06 3c 5a 74 02 e2 d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4558,6 +4751,7 @@ rule VirTool_Win32_Obfuscator_KO_2147640887_0
         $x_1_3 = {0f b7 51 06 6b d2 28 8d 84 10 38 01 00 00 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -4581,6 +4775,7 @@ rule VirTool_Win32_Obfuscator_KP_2147640920_0
         $x_1_4 = {a8 e1 02 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4601,6 +4796,7 @@ rule VirTool_Win32_Obfuscator_KQ_2147641077_0
         $x_1_1 = {81 f9 07 92 8e 2a 74 ?? 81 f9 da 12 44 ca 74 ?? 81 f9 83 e1 14 ce}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4621,6 +4817,7 @@ rule VirTool_Win32_Obfuscator_KV_2147641288_0
         $x_1_1 = {6a 04 6a 02 ?? ff 15 ?? ?? ?? ?? 83 c4 10 8b 45 f0 2d ?? ?? ?? ?? 89 45 f0 85 c0 0f 85 ?? ?? ff ff ff 15 ?? ?? ?? ?? 83 f8 7e 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4643,6 +4840,7 @@ rule VirTool_Win32_Obfuscator_KW_2147641326_0
         $x_1_3 = {83 fa 0f 0f 83}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4664,6 +4862,7 @@ rule VirTool_Win32_Obfuscator_KX_2147641342_0
         $x_1_2 = {ad 8b f8 ad 8b c8 83 f8 08 7e 2a 29 4d cc 83 e9 08 d1 e9 33 c0 66 ad 8b d0 c1 ea 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4685,6 +4884,7 @@ rule VirTool_Win32_Obfuscator_KS_2147641465_0
         $x_1_2 = {8b 06 83 c6 04 eb 2d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4706,6 +4906,7 @@ rule VirTool_Win32_Obfuscator_LL_2147641554_0
         $x_1_2 = {32 d2 01 d8 29 c1 43 8a 53 ff 3a 15 ?? ?? ?? 00 75 ?? 8a 53 01 3a 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4729,6 +4930,7 @@ rule VirTool_Win32_Obfuscator_MC_2147641596_0
         $x_1_4 = {8b 4d fc 8b c1 99 83 e2 07 03 c2 8b 55 08 c1 f8 03 03 c2 81 e1 07 00 00 80 ?? ?? 49 83 c9 f8 41 83 45 fc 05 d3 e6 09 30 43 3b 5d 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4753,6 +4955,7 @@ rule VirTool_Win32_Obfuscator_MP_2147641629_0
         $x_1_5 = {76 4c bf 4c 6c 4c ba 4c 44 4c b5 4c 77 4c b0 4c 5b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -4774,6 +4977,7 @@ rule VirTool_Win32_Obfuscator_MZ_2147641662_0
         $x_1_2 = {64 ff 35 00 00 00 00 64 89 25 00 00 00 00 50 8b c3 33 c0 58 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4795,6 +4999,7 @@ rule VirTool_Win32_Obfuscator_MZ_2147641662_1
         $x_1_2 = {c1 c7 07 83 c7 02 03 f8 80 3e 00 75 f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4819,6 +5024,7 @@ rule VirTool_Win32_Obfuscator_NN_2147641819_0
         $x_1_5 = "beautiful flowers here" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -4839,6 +5045,7 @@ rule VirTool_Win32_Obfuscator_NR_2147641908_0
         $x_1_1 = {8b 45 b4 0f b7 40 06 39 45 a4 7d 41 8b 45 a4 6b c0 28 8b 4d b4 8d 84 01 f8 00 00 00 89 45 a0 8b 45 a0 8b 4d f4 03 48 14 89 4d ec 8b 45 a0 8b 4d d0 03 48 0c 89 4d c4 8b 45 a0 ff 70 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4860,6 +5067,7 @@ rule VirTool_Win32_Obfuscator_NT_2147642100_0
         $x_1_2 = {00 f2 36 df 05 7d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4881,6 +5089,7 @@ rule VirTool_Win32_Obfuscator_NU_2147642329_0
         $x_1_2 = {52 6a 02 e8 ?? ?? ?? ff 83 c4 04 50 e8 ?? ?? ?? ff 83 c4 04 50 6a 02 e8 ?? ?? ?? ff 83 c4 04 50 e8 ?? ?? ?? 00 83 c4 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4902,6 +5111,7 @@ rule VirTool_Win32_Obfuscator_NV_2147642586_0
         $x_1_2 = {ac d2 c8 aa 81 c1 15 cd 5b 07 4a 0b d2 75 f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -4924,6 +5134,7 @@ rule VirTool_Win32_Obfuscator_NV_2147642586_1
         $x_1_3 = {8a 0c 11 32 8c 85 c8 fb ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4945,6 +5156,7 @@ rule VirTool_Win32_Obfuscator_NW_2147643050_0
         $x_1_2 = {8b 44 24 14 8d ?? ?? e8 ?? ff ff ff 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4965,6 +5177,7 @@ rule VirTool_Win32_Obfuscator_NX_2147643107_0
         $x_1_1 = {83 f8 47 75 35 8b 45 08 0f be 40 03 83 f8 4d 75 29 8b 45 08 0f be 40 09 83 f8 46}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4987,6 +5200,7 @@ rule VirTool_Win32_Obfuscator_NY_2147643117_0
         $x_1_3 = {68 9d 73 e8 f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -5010,6 +5224,7 @@ rule VirTool_Win32_Obfuscator_OB_2147643497_0
         $x_1_1 = {66 33 f6 66 ba 4d 5a 66 ad 66 33 d0 74 08 81 ee 02 10 00 00 eb ed 8d 5e fe 8b 76 3a 66 ba 50 45 8d 34 1e 66 ad 66 33 d0 75 e4 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5031,6 +5246,7 @@ rule VirTool_Win32_Obfuscator_OE_2147644145_0
         $x_1_2 = {c6 45 40 7f c6 45 41 67 c6 45 42 43 88 5d 43 c7 45 68 00 20 00 00 89 5d 70 8b f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5052,6 +5268,7 @@ rule VirTool_Win32_Obfuscator_OF_2147644206_0
         $x_1_2 = {30 14 19 41 3b c8 75 f2 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5072,6 +5289,7 @@ rule VirTool_Win32_Obfuscator_OG_2147644227_0
         $x_1_1 = {0f b7 51 06 8b d9 81 c3 f8 00 00 00 c1 e0 1f d1 e0 f7 43 24 00 00 00 20 74 03 83 c8 01 f7 43 24 00 00 00 40 74 03 83 c8 02 f7 43 24 00 00 00 80 74 03 83 c8 04 f7 43 24 00 00 00 10 74 03 83 c8 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5094,6 +5312,7 @@ rule VirTool_Win32_Obfuscator_OH_2147644274_0
         $x_1_3 = {2b 7d 34 83 3c 08 00 8d 14 08 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -5114,6 +5333,7 @@ rule VirTool_Win32_Obfuscator_OI_2147644312_0
         $x_1_1 = {0f b7 43 14 ff 73 50 8d 7c 18 18 6a 00 ff 15 ?? ?? ?? ?? 89 45 ?? 85 c0 0f 84 ?? ?? ?? ?? ff 73 54 56 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5137,6 +5357,7 @@ rule VirTool_Win32_Obfuscator_OJ_2147644340_0
         $x_1_4 = {81 f2 c3 db 99 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5159,6 +5380,7 @@ rule VirTool_Win32_Obfuscator_OK_2147644477_0
         $x_2_3 = {eb 0f 58 2b 05 ?? ?? ?? 00 03 05 ?? ?? ?? 00 ff e0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -5183,6 +5405,7 @@ rule VirTool_Win32_Obfuscator_OL_2147644536_0
         $x_1_2 = {53 5b 53 5b 53 5b 53 5b 53 5b 53 5b 81 c4 04 00 00 00 52 33 d2 8b 54 24 04 52 23 d0 ba 10 00 00 00 31 54 24 0c 8b 54 24 0c 03 d4 8f 42 08 0b d1 5a 03 64 24 04 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5203,6 +5426,7 @@ rule VirTool_Win32_Obfuscator_OM_2147644605_0
         $x_1_1 = {68 01 00 00 7d 3c 8b 15 ?? ?? ?? ?? 33 c0 8a 02 8b 0d ?? ?? ?? ?? 33 d2 8a 11 33 c2 8b 0d ?? ?? ?? ?? 88 01 8b 15 ?? ?? ?? ?? 83 c2 01 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 83 c0 01 a3 ?? ?? ?? ?? eb b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5225,6 +5449,7 @@ rule VirTool_Win32_Obfuscator_ON_2147644850_0
         $x_1_3 = {3d 7c 58 54 b4 75 02 02 00 f7 d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -5245,6 +5470,7 @@ rule VirTool_Win32_Obfuscator_OO_2147644964_0
         $x_1_1 = {8a 0c 39 32 4c 02 ?? 8b 40 ?? 88 0c 07 8b 45 08 ff 40 ?? 8b 45 08 ff 80 ?? ?? 00 00 [0-2] 8b 45 08 83 78 ?? 04 72 ?? 89 ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5267,6 +5493,7 @@ rule VirTool_Win32_Obfuscator_OP_2147645250_0
         $x_1_3 = {eb 00 8b 15 ?? ?? ?? ?? 33 55 08 89 55 0c 0f b6 45 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5289,6 +5516,7 @@ rule VirTool_Win32_Obfuscator_OP_2147645250_1
         $x_1_3 = {6b 65 72 6e 65 6c 33 32 2e 64 6c 6c 00 47 6c 6f 62 61 6c ?? 6c 6c 6f 63}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -5309,6 +5537,7 @@ rule VirTool_Win32_Obfuscator_OQ_2147645385_0
         $x_1_1 = {ff d0 5e 8b 24 24 8b ad ?? ?? ?? 00 8d bd ?? ?? ?? 00 8a 06 8b 5e 01 88 07 89 5f 01 c6 06 e9 8d bd ?? ?? ?? 00 2b fe 83 ef 05 89 7e 01 89 b5 ?? ?? ?? 00 8b b5 ?? ?? ?? 00 83 c6 02 56 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5330,6 +5559,7 @@ rule VirTool_Win32_Obfuscator_OS_2147645409_0
         $x_1_2 = {81 7b 3c 00 10 00 00 77 ?? 03 5b 3c 8b 43 08 35 ?? ?? ?? ?? 3d ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5350,6 +5580,7 @@ rule VirTool_Win32_Obfuscator_OT_2147645410_0
         $x_1_1 = {bf 00 00 00 00 f7 d7 33 f8 f7 d7 6b db 00 ff 75 0c 53 53 53 68 3f 00 0f 00 ff 75 08 ff d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5370,6 +5601,7 @@ rule VirTool_Win32_Obfuscator_OU_2147645419_0
         $x_1_1 = {6a 00 6a 01 6a 02 6a 03 6a 04 6a 05 6a 06 6a 07 6a 08 ff d0 8d 35 ?? ?? ?? ?? 25 ff 00 00 00 2b f0 ff e6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5392,6 +5624,7 @@ rule VirTool_Win32_Obfuscator_OV_2147645440_0
         $x_1_3 = {6a 00 6a 01 [0-8] ff 55 ?? 8b ?? 0c 8b ?? ?? ?? ?? ?? 8d ?? ?? ?? ?? ?? ?? 89 ?? ?? 6a 00 8b ?? 08 ?? 6a 00 6a 00 ff 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5413,6 +5646,7 @@ rule VirTool_Win32_Obfuscator_OY_2147645529_0
         $x_1_2 = {c7 45 a4 00 00 00 00 8d ?? a4 6a 00 ff 15 ?? ?? ?? 00 35 00 40 0f 00 3d 02 40 0f c0 74 01 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5433,6 +5667,7 @@ rule VirTool_Win32_Obfuscator_OZ_2147645530_0
         $x_1_1 = {83 64 24 14 00 66 83 bc 24 c0 00 00 00 00 74 50 33 f6 8d bc 24 c0 00 00 00 68 00 02 00 00 53 ff 15 ?? ?? ?? ?? 6a 01 8d 86 ?? ?? ?? ?? 50 57 ff 15 ?? ?? ?? ?? 85 c0 0f 85 ?? ?? ?? ?? 68 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? ff 44 24 14 8b 74 24 14 03 f6 8d bc 34 c0 00 00 00 66 83 3f 00 75 b9 8d 44 24 78 50 6a 00 68 ?? ?? ?? ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5453,6 +5688,7 @@ rule VirTool_Win32_Obfuscator_PB_2147645566_0
         $x_1_1 = {83 c2 01 3b 15 ?? ?? ?? ?? 72 05 ba 00 00 00 00 3b 4d fc 72 02 eb 02 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5473,6 +5709,7 @@ rule VirTool_Win32_Obfuscator_PC_2147645573_0
         $x_1_1 = {46 23 f2 8b 4c b0 08 03 f9 23 fa 89 7d 08 8b 7c b8 08 8b 5d 08 89 7c b0 08 03 f9 23 fa 89 4c 98 08 8a 4c b8 08 8b 7d fc 32 0f 8b 5d f8 88 0c 3b 47 3b 7d f4 89 7d fc 8b 7d 08 75 c4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5493,6 +5730,7 @@ rule VirTool_Win32_Obfuscator_PD_2147645680_0
         $x_1_1 = {0b 00 54 00 45 00 58 00 54 00 49 00 4e 00 43 00 4c 00 55 00 44 00 45 00 03 00 34 00 33 00 31 00 04 00 34 00 33 00 31 00 56 00 05 00 34 00 33 00 31 00 56 00 56 00 06 00 34 00 33 00 31 00 56 00 56 00 56 00 07 00 34 00 33 00 31 00 56 00 56 00 56 00 56 00 08 00 34 00 33 00 31 00 56 00 56 00 56 00 56 00 56 00 09 00 34 00 33 00 31 00 56 00 56 00 56 00 56 00 56 00 56 00 01 00 36 00 00 00 44 3a 5c 4c 61 73 74 53 61 76 65 5c 52 65 64 50 69 6c 6c 43 72 79 70 74 65 72 0d 65 73 6f 75 72 63 65 2e 68 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5514,6 +5752,7 @@ rule VirTool_Win32_Obfuscator_PG_2147645743_0
         $x_1_2 = {8b 4d 08 51 e8 ?? ?? ?? ?? 8b 55 f4 89 15 44 43 40 00 5f 5e 5d 5b 83 c4 24 83 c4 08 ff 25 ?? ?? ?? ?? 33 c0 0f 85 ?? ?? ff ff 83 7d f8 00 74 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5535,6 +5774,7 @@ rule VirTool_Win32_Obfuscator_PH_2147645967_0
         $x_1_2 = {ff 31 ff 50 04 85 c0 8b 46 4c 75 08 81 00 ?? ?? 00 00 eb ?? 81 00 ?? ?? 00 00 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5556,6 +5796,7 @@ rule VirTool_Win32_Obfuscator_PJ_2147646008_0
         $x_1_2 = {ff d0 ff 35 ?? ?? ?? ?? a1 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 05 c4 11 00 00 ff d0 a1 ?? ?? ?? ?? ?? ?? ?? ?? 05 ?? ?? 00 00 ff d0 [0-32] 68 ?? ?? ?? ?? ff 74 24 ?? e8 ?? 00 00 00 ?? ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5577,6 +5818,7 @@ rule VirTool_Win32_Obfuscator_PK_2147646017_0
         $x_1_2 = {8b 4d f4 03 c8 89 4d f4 8b 55 f8 03 55 fc 8b 02 03 45 ec 8b 4d f8 03 4d fc 89 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5600,6 +5842,7 @@ rule VirTool_Win32_Obfuscator_PK_2147646017_1
         $x_1_4 = {39 08 0f 84 ?? ?? 00 00 [0-16] 8b d8 8b 03 [0-16] 8a 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5623,6 +5866,7 @@ rule VirTool_Win32_Obfuscator_PK_2147646017_2
         $x_1_4 = {48 8a 0c 30 [0-32] 80 e9 ?? d0 c9 88 0c 30 3b c3 0f 85 48 8a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5643,6 +5887,7 @@ rule VirTool_Win32_Obfuscator_PL_2147646134_0
         $x_1_1 = {8b 44 24 dc 85 c9 75 2d 0d 00 00 c0 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5693,6 +5938,7 @@ rule VirTool_Win32_Obfuscator_PM_2147646143_0
         $x_1_31 = {05 49 3e 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -5714,6 +5960,7 @@ rule VirTool_Win32_Obfuscator_PN_2147646169_0
         $x_1_2 = {05 00 5a 00 00 [0-16] 33 c7 66 3b 46 20 5f 5e 5b 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5735,6 +5982,7 @@ rule VirTool_Win32_Obfuscator_PN_2147646169_1
         $x_1_2 = {8d 7e 14 8b 37 8b d8 eb 3b f7 75 ?? 33 c0 5f 5b 5e c9 c2 04 00 8b 46 10 eb f4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5758,6 +6006,7 @@ rule VirTool_Win32_Obfuscator_PN_2147646169_2
         $x_2_4 = {8d 04 0a 8a d1 80 e2 03 c1 e8 04 f6 ea b2 fe 2a d0 00 14 0f ff 45 ?? 8b 55 ?? eb ?? 8b 45 ?? 83 c1 20 3b c8 72 ?? 8b 45 ?? 33 c9 85 c0 74}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -5784,6 +6033,7 @@ rule VirTool_Win32_Obfuscator_PN_2147646169_3
         $x_1_3 = {8a 0a 80 f9 ?? 75 ?? c6 00 00 8b 86 88 01 00 00 03 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -5809,6 +6059,7 @@ rule VirTool_Win32_Obfuscator_PO_2147646172_0
         $x_2_3 = {ff ff 57 8d 00 c6 85 ?? ?? ff ff 49 8d 00 c6 85 ?? ?? ff ff 4e 8d 00 c6 85 ?? ?? ff ff 53 8d 00 c6 85 ?? ?? ff ff 50 8d 00 c6 85 ?? ?? ff ff 4f 8d 00 c6 85 ?? ?? ff ff 4f 8d 00 c6 85 ?? ?? ff ff 4c 8d 00 c6 85 ?? ?? ff ff 2e 8d 00 c6 85 ?? ?? ff ff 44 8d 00 c6 85 ?? ?? ff ff 52 8d 00 c6 85 ?? ?? ff ff 56 8d 00 c6 85 ?? ?? ff ff 00 8d 85 ?? ?? ff ff 50 e8 ?? ?? 00 00 68 ?? ?? ?? ?? 50 e8 ?? ?? 00 00 8b f0 ff 75 fc}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -5834,6 +6085,7 @@ rule VirTool_Win32_Obfuscator_PP_2147646207_0
         $x_1_2 = {8d 7e 01 57 56 8d 4e ff 51 8d 56 fe 52 8d 4e fd 51 8d 56 fc 52 8d 4e fb 51 83 c6 fa 56 ff d0 3c 05 74 ?? 8d 54 24 14 52 8b f7 ff d3 68 ?? ?? ?? ?? 50 ff d5 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5855,6 +6107,7 @@ rule VirTool_Win32_Obfuscator_PQ_2147646267_0
         $x_1_2 = {40 00 0f 18 86}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5876,6 +6129,7 @@ rule VirTool_Win32_Obfuscator_PS_2147646352_0
         $x_1_2 = {e8 00 00 00 00 59 03 4d (b8|c0) 83 c1 09 ff e1 03 0a 0a 0a 50 50 50 50 50 50 50 50 50 50 52 52 52 52 52 52 52 52 52 52 53 53 53 53 53 53 53 53 53 53 8b 4d (bc|c4) 41 49 74 06 49 8b d1 42 89 0a ff d7 83 c4 08 [0-32] 8d 40 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5897,6 +6151,7 @@ rule VirTool_Win32_Obfuscator_PU_2147646391_0
         $x_1_2 = {81 14 24 89 0a 00 00 [0-4] ba fd a5 17 [0-4] 81 14 24 5e 34 9a e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5919,6 +6174,7 @@ rule VirTool_Win32_Obfuscator_PV_2147646422_0
         $x_1_3 = {32 4c 90 01 c1 e1 08 32 0c 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5942,6 +6198,7 @@ rule VirTool_Win32_Obfuscator_PV_2147646422_1
         $x_1_4 = {81 38 8b ff 90 33 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5966,6 +6223,7 @@ rule VirTool_Win32_Obfuscator_PV_2147646422_2
         $x_2_5 = {81 78 05 33 c0 c9 c2 0f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -5991,6 +6249,7 @@ rule VirTool_Win32_Obfuscator_PW_2147646510_0
         $x_1_2 = {89 45 fc 83 7d fc 05 75 ?? 68 ?? ?? ?? ?? 68 00 10 00 00 68 ?? ?? ?? ?? 6a 00 ff 15 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 8b 4d 08 89 81 ?? ?? 00 00 8b 55 08 c7 82 ?? ?? 00 00 57 00 00 00 eb 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6013,6 +6272,7 @@ rule VirTool_Win32_Obfuscator_PX_2147646526_0
         $x_1_3 = {56 57 64 8b 35 18 00 00 00 8d 76 30 6a 04 50 8d 80 ?? ?? ?? ?? 51 91}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -6038,6 +6298,7 @@ rule VirTool_Win32_Obfuscator_PX_2147646526_1
         $x_1_3 = {68 00 3e 96 bc ff b5 28 f4 ff ff e8 ?? ?? ?? ?? 8d ?? ?? ?? ?? ?? 8d ?? ?? ?? ?? ?? ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6060,6 +6321,7 @@ rule VirTool_Win32_Obfuscator_PX_2147646526_2
         $x_1_3 = {c6 85 50 fd ff ff 61 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? c6 85 51 fd ff ff 64 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? c6 85 52 fd ff ff 76 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? c6 85 53 fd ff ff 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6081,6 +6343,7 @@ rule VirTool_Win32_Obfuscator_PY_2147646607_0
         $x_1_2 = {03 42 3c 89 45 ?? 8b 4d ?? 8b 51 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6102,6 +6365,7 @@ rule VirTool_Win32_Obfuscator_QA_2147646709_0
         $x_1_2 = {6a 00 6a 01 8b 15 ?? ?? ?? ?? 52 ff 95 ?? fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6124,6 +6388,7 @@ rule VirTool_Win32_Obfuscator_QC_2147646736_0
         $x_1_3 = {8b 4d f4 8b 11 33 d6 03 d7 3b c2 0f 82 92}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -6148,6 +6413,7 @@ rule VirTool_Win32_Obfuscator_QD_2147646899_0
         $x_1_5 = {0d 00 ff ff ff 40 8a 44 85 90 30 04 1e 43 3b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -6170,6 +6436,7 @@ rule VirTool_Win32_Obfuscator_QF_2147646975_0
         $x_1_3 = {28 fd fe fc 4a fd fb fc 3d fd e7 fc 4f fd e4 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6192,6 +6459,7 @@ rule VirTool_Win32_Obfuscator_QG_2147647072_0
         $x_1_3 = {68 20 10 dc ba e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6216,6 +6484,7 @@ rule VirTool_Win32_Obfuscator_QG_2147647072_1
         $x_1_5 = {8b 04 88 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6238,6 +6507,7 @@ rule VirTool_Win32_Obfuscator_QG_2147647072_2
         $x_1_3 = {e4 96 78 33 15 3a 27 15 1a b2 fe 07 15 0e 06 3d 33}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6261,6 +6531,7 @@ rule VirTool_Win32_Obfuscator_QI_2147647250_0
         $x_1_4 = {64 c6 5b eb 7b 1f 17 17 2b 7b 1b 17 17 b0 3d 1b 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6284,6 +6555,7 @@ rule VirTool_Win32_Obfuscator_QJ_2147647259_0
         $x_1_4 = {e4 63 9c 6d fb fa 80 20 18 18 e4 3b 1e 1f 80 1c 18 18 3e 4d eb 26}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6305,6 +6577,7 @@ rule VirTool_Win32_Obfuscator_QK_2147647313_0
         $x_1_2 = {6a 40 68 00 30 00 00 68 58 04 00 00 6a 00 ff 55 ?? 89 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6329,6 +6602,7 @@ rule VirTool_Win32_Obfuscator_QL_2147647381_0
         $x_1_5 = {6a 0a 8b f0 59 f3 a5 8b 4d 50 01 59 0c ff 45 4c 83 c1 28 89 4d 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -6349,6 +6623,7 @@ rule VirTool_Win32_Obfuscator_QM_2147647401_0
         $x_1_1 = {ac 2a c2 fe c8 c0 c0 03 fe c8 2a c2 c0 c0 02 32 c2 d0 c8 02 c2 2c ?? fe c0 c0 c8 04 04 ?? c0 c0 02 fe c0 2c ?? 32 c2 d0 c8 2c ?? 32 c2 aa c1 c2 08 e2 cd 8f 44 24 1c 61 ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6372,6 +6647,7 @@ rule VirTool_Win32_Obfuscator_QN_2147647408_0
         $x_1_4 = {c1 e8 10 87 04 24 50 68 00 40 00 00 6a 00 ff 74 24 f8 51 ff 64 24 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -6397,6 +6673,7 @@ rule VirTool_Win32_Obfuscator_QN_2147647408_1
         $x_1_6 = "09-0a-s4355" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -6418,6 +6695,7 @@ rule VirTool_Win32_Obfuscator_QP_2147647480_0
         $x_2_2 = {89 85 84 fd ff ff 8b 45 f8 50 ff 95 84 fd ff ff 89 85 5c fe ff ff 8b 8d 5c fe ff ff 89 4d f0 8b 55 f0 8b 42 02 83 e8 36 89 45 fc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6442,6 +6720,7 @@ rule VirTool_Win32_Obfuscator_QR_2147647561_0
         $x_1_5 = {f7 45 f8 04 00 00 00 0f 84 ?? ?? ?? ?? 53}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -6465,6 +6744,7 @@ rule VirTool_Win32_Obfuscator_QT_2147647602_0
         $x_1_4 = {66 89 45 e0 6a 6c 58 66 89 45 e2 66 89 45 e4 33 c0 8d 4d dc 66 89 45 e6 88 45 da 8b 43 40 51 89 7d f8 c6 45 c4 4c c6 45 c5 64 c6 45 c6 72 c6 45 c7 46 c6 45 c8 69 c6 45 c9 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -6486,6 +6766,7 @@ rule VirTool_Win32_Obfuscator_QU_2147647611_0
         $x_1_2 = {8b 4d 08 51 8b 55 fc 8b 45 f8 8d 4c 10 04 51 e8 55 8b ec 51 8b 45 08 8b 08 2b 4d 0c 8b 55 08 89 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6509,6 +6790,7 @@ rule VirTool_Win32_Obfuscator_D_2147647738_0
         $x_1_3 = {8a 26 32 e0 88 26 46 c7 05 ?? ?? ?? 00 00 00 00 00 e2 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6534,6 +6816,7 @@ rule VirTool_Win32_Obfuscator_QW_2147647901_0
         $x_1_6 = "NDJKdjkhKJND" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -6559,6 +6842,7 @@ rule VirTool_Win32_Obfuscator_QY_2147647955_0
         $x_1_3 = {c7 02 9c 72 7a 83 c7 42 04 7f 79 7e 7c c7 42 08 61 73 73 8c c7 42 0c 71 60 60 61 66 c7 42 10 7c ce}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -6588,6 +6872,7 @@ rule VirTool_Win32_Obfuscator_QX_2147647959_0
         $x_5_7 = {33 c0 66 8b 42 02 2b 45 ?? 8b 4d ?? 03 4d ?? 66 89 41 02 06 00 8b 55 01 03 55 02}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((3 of ($x_5_*))) or
@@ -6614,6 +6899,7 @@ rule VirTool_Win32_Obfuscator_QZ_2147647963_0
         $x_1_3 = {42 65 65 70 00 00 b8 01 48 65 61 70 41 6c 6c 6f 63 00 59 01 47 65 74 50 72 6f 63 65 73 73 48 65 61 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -6635,6 +6921,7 @@ rule VirTool_Win32_Obfuscator_RA_2147648024_0
         $x_1_2 = {6a 40 68 00 30 00 00 68 ?? ?? 00 00 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6657,6 +6944,7 @@ rule VirTool_Win32_Obfuscator_RG_2147648167_0
         $x_10_3 = "\\JOKER-VAIO\\" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -6681,6 +6969,7 @@ rule VirTool_Win32_Obfuscator_RH_2147648204_0
         $x_1_2 = {57 00 48 00 47 00 46 00 4a 00 48 00 47 00 48 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6704,6 +6993,7 @@ rule VirTool_Win32_Obfuscator_RH_2147648204_1
         $x_1_4 = {2d 90 03 01 01 3a 38 31 02 41 83 f9 09 0f 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -6726,6 +7016,7 @@ rule VirTool_Win32_Obfuscator_RI_2147648230_0
         $x_2_3 = {8b e8 83 c4 04 33 f6 8d 4d 01 8b 07 8a 14 30 03 c6 88 51 ff 8a 40 01 88 01 83 c6 04 83 c1 02 3b 77 04 76}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6753,6 +7044,7 @@ rule VirTool_Win32_Obfuscator_RJ_2147648264_0
         $x_1_8 = {ac 32 c3 aa f7 c1 01 00 00 00 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -6776,6 +7068,7 @@ rule VirTool_Win32_Obfuscator_RK_2147648271_0
         $x_1_4 = {68 66 ae 5b 2d e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -6800,6 +7093,7 @@ rule VirTool_Win32_Obfuscator_RM_2147648378_0
         $x_1_2 = {8b 46 28 03 45 fc ff d0 68 00 80 00 00 6a 00 ff 75 fc e8 ?? ?? ?? ?? 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6822,6 +7116,7 @@ rule VirTool_Win32_Obfuscator_RN_2147648388_0
         $x_1_3 = {4f 50 45 4e 47 6c 33 32 2e 44 4c 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6846,6 +7141,7 @@ rule VirTool_Win32_Obfuscator_RN_2147648388_1
         $x_1_5 = {33 c6 03 c7 89 44 24 20 8b 44 24 14 33 c6 03 c7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -6869,6 +7165,7 @@ rule VirTool_Win32_Obfuscator_RO_2147648462_0
         $x_1_4 = {8b 38 2b d1 0b d7 89 10 33 d2 8b 7d ec 8b c2 83 e0 03 8d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -6889,6 +7186,7 @@ rule VirTool_Win32_Obfuscator_RP_2147648518_0
         $x_1_1 = {03 f8 c7 44 24 28 bb 4e 10 da 8d 85 ?? ?? 40 00 ff d0 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6910,6 +7208,7 @@ rule VirTool_Win32_Obfuscator_RQ_2147648626_0
         $x_1_2 = {89 85 38 ff ff ff 8b 85 38 ff ff ff 89 85 34 ff ff ff c7 45 fc 00 00 00 00 8b 8d 34 ff ff ff e8 ?? ?? ?? ?? 50 68 ?? ?? ?? ?? 8d 8d 3c ff ff ff 51 e8 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 8b 95 30 ff ff ff 89 95 2c ff ff ff c6 45 fc 01 8b 8d 2c ff ff ff e8 ?? ?? ?? ?? 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6930,6 +7229,7 @@ rule VirTool_Win32_Obfuscator_RR_2147648628_0
         $x_1_1 = {89 50 2e 89 48 39 8d 90 a7 02 00 00 8d 88 b6 02 00 00 89 50 44 89 48 4f c6 40 60 bf 8b 15 ?? ?? ?? ?? 89 50 61 c6 40 65 90}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6950,6 +7250,7 @@ rule VirTool_Win32_Obfuscator_RS_2147648638_0
         $x_1_1 = {ff 95 64 fe ff ff 83 bd 48 fe ff ff 10 76 0c c7 85 48 fe ff ff 40 00 00 00 eb 0a c7 85 48 fe ff ff 04 00 00 00 61 60}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6970,6 +7271,7 @@ rule VirTool_Win32_Obfuscator_SC_2147648919_0
         $x_2_1 = {83 ec 40 8b c4 8b 4c 24 48 51 6a 00 68 00 00 10 00 50 ff 15 ?? ?? ?? ?? ba ?? ?? ?? ?? 25 ff 00 00 00 03 54 24 44 8d 48 10 83 e0 48 03 d1 89 14 04 8b 04 24 8d 4c 24 08}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6992,6 +7294,7 @@ rule VirTool_Win32_Obfuscator_SD_2147648924_0
         $x_1_3 = {c0 c8 19 c0 c0 0e 2c 08 c0 c0 15 c0 c8 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7012,6 +7315,7 @@ rule VirTool_Win32_Obfuscator_SE_2147648937_0
         $x_1_1 = {3b 45 08 0f 85 ?? ?? 00 00 8b 52 04 8b 45 08 03 40 3c 8b 40 28 03 45 08 89 42 [0-32] e8 8d 64 24 [0-32] ff 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7035,6 +7339,7 @@ rule VirTool_Win32_Obfuscator_SF_2147648966_0
         $x_1_4 = {00 54 43 6e 65 72 76 65 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7057,6 +7362,7 @@ rule VirTool_Win32_Obfuscator_SH_2147648977_0
         $x_1_3 = {33 d2 f7 f1 39 55 f0 73 23 8b 45 f0 03 45 fc 33 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7081,6 +7387,7 @@ rule VirTool_Win32_Obfuscator_SI_2147648984_0
         $x_1_5 = {68 c6 bd 23 00 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -7104,6 +7411,7 @@ rule VirTool_Win32_Obfuscator_SJ_2147648988_0
         $x_1_4 = {64 73 6b 68 02 00 00 80}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -7125,6 +7433,7 @@ rule VirTool_Win32_Obfuscator_SK_2147648999_0
         $x_1_2 = {eb 09 8b 55 ?? 83 c2 04 89 55 ?? 81 7d ?? ?? ?? 00 00 0f 83 ?? ?? ?? ?? 8b 45 ?? 25 ff 00 00 00 83 f8 01 75 ?? 6a 00 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 89 45 ?? 83 7d ?? 00 74 ?? 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 89 45 ?? 83 7d ?? 00 74 ?? 6a 00 6a 00 8b 4d ?? 51 8b 55 ?? 52 ff 15 ?? ?? ?? ?? 89}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7150,6 +7459,7 @@ rule VirTool_Win32_Obfuscator_SL_2147649013_0
         $x_1_6 = {be 92 ac f7 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -7171,6 +7481,7 @@ rule VirTool_Win32_Obfuscator_SM_2147649052_0
         $x_1_2 = {32 ca ff 45 0c ff 45 08 83 7d 08 10 75 15 33 db 89 5d 08 eb 10 ff 45 0c 83 7d 0c 04 75 07 89 5d 0c eb 02 33 db 88 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7192,6 +7503,7 @@ rule VirTool_Win32_Obfuscator_SO_2147649345_0
         $x_1_2 = {8b 4d cc 83 e9 01 89 4d cc 83 7d cc 00 0f ?? ?? 00 00 00 8b 4d e8 83 c1 19 8b 75 ec 83 d6 00 8b 45 e4 25 ff 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7215,6 +7527,7 @@ rule VirTool_Win32_Obfuscator_SQ_2147649396_0
         $x_1_4 = {c7 45 b6 fa fe 11 fd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7238,6 +7551,7 @@ rule VirTool_Win32_Obfuscator_SS_2147649504_0
         $x_1_4 = {6d 73 64 75 6d 70 31 35 30 61 75 72 6f 2e 74 6d 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -7261,6 +7575,7 @@ rule VirTool_Win32_Obfuscator_ST_2147649507_0
         $x_1_4 = {eb 00 c7 45 ?? 17 de c0 de}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -7283,6 +7598,7 @@ rule VirTool_Win32_Obfuscator_SU_2147649552_0
         $x_1_3 = {8b 72 19 6a 04 68 00 30 00 00 81 c6 00 02 00 00 56 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -7304,6 +7620,7 @@ rule VirTool_Win32_Obfuscator_SV_2147649603_0
         $x_1_2 = {e2 db e9 4b f6 ff ff 59 5e a1 a2 10 10 00 30 06 eb e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7326,6 +7643,7 @@ rule VirTool_Win32_Obfuscator_SW_2147649793_0
         $x_1_3 = {10 40 00 bb 78 05 00 00 85 db 74 ?? 83 ?? 04 83 ?? 04 8b ?? fc 89 ?? ?? fe ff ff 83 ?? 04 81 ?? ?? ?? ?? ?? 89 d0 fb a4 81 ?? ?? ?? ?? ?? ac 89 a2 73 eb ?? e8 ?? ?? 00 00 5d c2 ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -7346,6 +7664,7 @@ rule VirTool_Win32_Obfuscator_SX_2147649801_0
         $x_1_1 = {ff d6 83 c0 19 64 ff 30 58 ff 70 34 58 83 c7 05 83 e8 06 03 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7367,6 +7686,7 @@ rule VirTool_Win32_Obfuscator_SZ_2147649896_0
         $x_1_2 = {6a 40 68 00 30 00 00 68 00 00 10 00 6a 00 ff 15 ?? ?? ?? ?? 8b f0 8d 45 fc 50 ff 75 14 8d 45 f8 ff 75 08 c6 06 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7392,6 +7712,7 @@ rule VirTool_Win32_Obfuscator_SY_2147649897_0
         $x_1_6 = {83 e9 01 83 f9 00 75 ?? 83 c3 ff 21 db 74 13 00 01 d8 b9 ?? ?? ?? ?? 35 ?? ?? ?? ?? d3 c0 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -7420,6 +7741,7 @@ rule VirTool_Win32_Obfuscator_TA_2147649911_0
         $x_1_5 = {eb 7f b2 08 2a d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -7441,6 +7763,7 @@ rule VirTool_Win32_Obfuscator_TD_2147650246_0
         $x_1_2 = {8b 4d f4 8b 91 a4 00 00 00 89 55 fc 8b 45 f4 8b 4d 08 03 88 a0 00 00 00 89 4d e8 8b 55 e8 89 55 e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7462,6 +7785,7 @@ rule VirTool_Win32_Obfuscator_TF_2147650444_0
         $x_1_2 = {c3 8b 44 24 10 83 c0 64 c7 00 c3 00 00 00 b8 00 00 00 00 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7485,6 +7809,7 @@ rule VirTool_Win32_Obfuscator_TG_2147650550_0
         $x_1_4 = {bf cc cc cc 0c 8a 1e 46 80 fb 20 74 f8 b5 00 80 fb 2d 74 62 80 fb 2b 74 5f 80 fb 24 74 5f 80 fb 78 74 5a 80 fb 58 74 55 80 fb 30 75 13 8a 1e 46 80 fb 78 74 48 80 fb 58 74 43 84 db 74 20 eb 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -7506,6 +7831,7 @@ rule VirTool_Win32_Obfuscator_TI_2147650693_0
         $x_1_2 = {00 54 43 6e 65 72 76 65 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7529,6 +7855,7 @@ rule VirTool_Win32_Obfuscator_TJ_2147650717_0
         $x_1_4 = {64 33 64 38 00 75 73 65 72 33 32 00 6e 74 64 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -7551,6 +7878,7 @@ rule VirTool_Win32_Obfuscator_TK_2147650783_0
         $x_1_3 = {8b 51 04 83 ea 08 d1 ea 89 55 f4 8b 45 08 83 c0 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7572,6 +7900,7 @@ rule VirTool_Win32_Obfuscator_TL_2147650872_0
         $x_1_2 = {8b 45 10 25 ff 00 00 00 85 c0 74 ?? 8b 4d 0c 8b 11 03 55 f8 8b 45 0c 89 10 eb ?? 8b 4d 0c 8b 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7592,6 +7921,7 @@ rule VirTool_Win32_Obfuscator_TN_2147650927_0
         $x_1_1 = {59 eb 00 5a 51 a1 ?? ?? ?? ?? eb 14 83 e0 fd 33 c1 05 bd 04 00 00 a3 ?? ?? ?? ?? c1 c8 10 eb 0c 8b c8 c1 e0 02 d1 c0 83 e0 fa eb e0 c1 c8 08 89 02 83 c2 04 c7 02 02 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7615,6 +7945,7 @@ rule VirTool_Win32_Obfuscator_TP_2147651003_0
         $x_1_4 = {52 b9 58 00 00 00 89 45 e4 ff d6 50 e8 56 07 00 00 8d 45 e8 b9 5b 00 00 00 50 ff d6 50 e8 45 07 00 00 8d 4d e8 51 b9 50 00 00 00 ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7636,6 +7967,7 @@ rule VirTool_Win32_Obfuscator_TQ_2147651030_0
         $x_1_2 = {0f b6 94 15 bc fe ff ff c1 e0 06 03 45 bc 41 c1 e0 06 03 c7 c1 e0 06 03 c2 3b 75 10 73 25 8b 7d 0c 8b d0 c1 ea 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7659,6 +7991,7 @@ rule VirTool_Win32_Obfuscator_TT_2147651230_0
         $x_1_4 = {eb 0a 80 f1 ?? 80 (c1|e9) ?? 88 08 40 42 8a 0a 80 f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -7679,6 +8012,7 @@ rule VirTool_Win32_Obfuscator_TV_2147651245_0
         $x_1_1 = {f3 a5 66 a5 a4 eb ?? (8b|ff|8f) [0-8] 83 c0 01 [0-16] 0f 73 ?? 6a 06 6a 00 6a 00 6a 00 68 c0 12 (40|00) (10|00) ff 15 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 83 f8 57 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7702,6 +8036,7 @@ rule VirTool_Win32_Obfuscator_TX_2147651274_0
         $x_1_4 = {0f be c9 c1 c0 07 33 c1 42 8a 0a 84 c9 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -7723,6 +8058,7 @@ rule VirTool_Win32_Obfuscator_TZ_2147651613_0
         $x_1_2 = {b8 0b f6 fd 7f 8b 80 ed 0c 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7743,6 +8079,7 @@ rule VirTool_Win32_Obfuscator_UA_2147651620_0
         $x_1_1 = {50 8b cc 8b 44 24 04 68 ?? 7b 07 00 ?? 68 00 00 02 00 51 ff 15 ?? ?? ?? ?? 8b c8 ba ?? ?? ?? ?? c1 e9 1c 03 14 24 c1 e0 04 03 c2 8d 4c 0c ?? 89 01 51 68 00 00 02 00 51 ff 15 ?? ?? ?? ?? 83 c4 ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7769,6 +8106,7 @@ rule VirTool_Win32_Obfuscator_UB_2147651629_0
         $x_3_7 = {c7 85 c4 fe ff ff 9c 07 00 00 c7 85 dc fe ff ff c5 2f 02 00 c7 85 e0 fe ff ff a1 a3 0a 00 c7 85 d4 fe ff ff 74 ce 02 00 6a 04 8d 85 d4 fe ff ff 50 8d 8d c4 fe ff ff 51 e8 2b f2 ff ff 8b 95 c4 fe ff ff 8b 85 c4 fe ff ff 83 e8 01 89 85 c4 fe ff ff 85 d2 0f 84 ae 00 00 00 8b b5 e0 fe ff ff 81 c6 92 b6 a9 00 6a 76 e8 db f3 ff ff 0f b7 c8 2b f1 6a 50 e8 cf f3 ff ff 0f b7 d0 03 95 dc fe ff ff 03 d6 89 95 dc fe ff ff 8b 85 dc fe ff ff 05 53 af 00 00 8b 8d e0 fe ff ff 2b c8 89 8d e0 fe ff ff c7 85 cc fe ff ff 04 27 00 00 8b 95 cc fe ff ff 8b 85 cc fe ff ff 83 e8 01 89 85 cc fe ff ff 85 d2 74 3d 6a 43 e8 7b f3 ff ff}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -7795,6 +8133,7 @@ rule VirTool_Win32_Obfuscator_TY_2147651637_0
         $x_1_3 = {83 c1 18 83 c1 18 64 8b 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -7819,6 +8158,7 @@ rule VirTool_Win32_Obfuscator_UC_2147651742_0
         $x_1_2 = {68 88 00 00 00 66 c7 00 01 00 ff 36 e8 ?? ?? ?? ?? 68 89 00 00 00 66 c7 00 c7 00 ff 36 e8 ?? ?? ?? ?? 68 8c 00 00 00 66 c7 00 eb 00 ff 36 e8 ?? ?? ?? ?? 68 8d 00 00 00 66 c7 00 7c 00 ff 36 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7839,6 +8179,7 @@ rule VirTool_Win32_Obfuscator_UF_2147651864_0
         $x_1_1 = {51 8a c8 d3 c0 59 51 8a c8 d3 c0 59 05 01 01 01 00 05 01 01 01 01 81 f9 ?? ?? ?? ?? 72 03 89 45 ?? e2 ?? 59 8b 5d ?? ac 32 c3 aa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7861,6 +8202,7 @@ rule VirTool_Win32_Obfuscator_UG_2147651878_0
         $x_1_3 = {8b 4d ec 33 ce 33 c6 8d 84 01 4a 25 00 00 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7882,6 +8224,7 @@ rule VirTool_Win32_Obfuscator_UG_2147651878_1
         $x_1_2 = {60 8b 4d fc 8b 75 f8 8b 7d f4 ad 89 c2 51 c1 e9 02 ad 31 d0 ab e2 fa 59 83 e1 03 83 f9 00 74 06 ac 32 c2 aa e2 fa 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7903,6 +8246,7 @@ rule VirTool_Win32_Obfuscator_UH_2147652037_0
         $x_1_2 = {29 d9 29 f3 89 5c 24 fc 40 8a 48 ff 3a 0d ?? ?? ?? ?? 75 d3 8a 48 01 3a 0d ?? ?? ?? ?? 75 c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7923,6 +8267,7 @@ rule VirTool_Win32_Obfuscator_UJ_2147652055_0
         $x_1_1 = {c2 7f b8 40 00 00 00 e8 16 00 8d 0d ?? ?? ?? ?? 89 4d f8 83 6d f8 78 8b 15 ?? ?? ?? ?? 8b 12 83}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7945,6 +8290,7 @@ rule VirTool_Win32_Obfuscator_UK_2147652078_0
         $x_1_3 = {ba 17 c3 05 00 81 c7 6e 03 00 00 2b ca 81 c2 04 7e 02 00 42 2d 77 71 08 00 c2 6c 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7968,6 +8314,7 @@ rule VirTool_Win32_Obfuscator_UK_2147652078_1
         $x_1_4 = {b8 a7 50 36 79 90 ba a9 c8 d7 80 8b 4d 10 47 39 07 74 03 49 75 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -7994,6 +8341,7 @@ rule VirTool_Win32_Obfuscator_UL_2147652091_0
         $x_1_7 = "XPXAXCXK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -8021,6 +8369,7 @@ rule VirTool_Win32_Obfuscator_UO_2147652243_0
         $x_1_3 = {31 c3 66 01 c3 c1 c3 07 e2 f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -8047,6 +8396,7 @@ rule VirTool_Win32_Obfuscator_US_2147652348_0
         $x_1_7 = {0c 20 c1 c2 ?? c1 c2 ?? c1 ca ?? c1 c2 ?? 32 d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -8069,6 +8419,7 @@ rule VirTool_Win32_Obfuscator_UT_2147652365_0
         $x_1_3 = {c6 42 7c 47 8b 45 08 c6 40 7d 65 8b 4d 08 c6 41 7e 74 8b 55 08 c6 42 7f 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8092,6 +8443,7 @@ rule VirTool_Win32_Obfuscator_UV_2147652505_0
         $x_1_4 = {68 62 67 8d a4 ff 75 e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -8117,6 +8469,7 @@ rule VirTool_Win32_Obfuscator_UW_2147652519_0
         $x_1_3 = {f8 f2 fc eb 00 0f 83 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -8142,6 +8495,7 @@ rule VirTool_Win32_Obfuscator_UX_2147652568_0
         $x_1_3 = {59 d1 c0 d1 e0 d1 c0 86 e0 80 e4 fb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -8163,6 +8517,7 @@ rule VirTool_Win32_Obfuscator_UY_2147652680_0
         $x_1_2 = {c7 00 02 00 02 00 6a 00 50 52 89 4d f4 ff d6 81 bd ?? ?? ff ff 01 00 34 00 e9 (74|0f 84)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -8185,6 +8540,7 @@ rule VirTool_Win32_Obfuscator_UZ_2147652712_0
         $x_1_3 = {ff 75 08 8f 46 18 ff 75 10 8f 46 1c ff 75 14 8f 46 20 eb 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -8207,6 +8563,7 @@ rule VirTool_Win32_Obfuscator_VA_2147652737_0
         $x_1_3 = "help.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -8230,6 +8587,7 @@ rule VirTool_Win32_Obfuscator_VA_2147652737_1
         $x_1_4 = {3b 01 01 88 01 a1 ?? 3b 01 01 25 f0 01 00 00 a3 ?? 3b 01 01 e9 ?? fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8252,6 +8610,7 @@ rule VirTool_Win32_Obfuscator_VB_2147652741_0
         $x_1_3 = {41 83 f9 12 7e cb b8 03 00 00 00 2d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8272,6 +8631,7 @@ rule VirTool_Win32_Obfuscator_VC_2147652778_0
         $x_1_1 = {8b d8 9c 80 0c 24 01 9d 0f 82 46 9c 80 0c 24 01 9d 0f 82 8b 83 ?? ?? ?? 00 9c 80 0c 24 01 9d 0f 82 03 83 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8293,6 +8653,7 @@ rule VirTool_Win32_Obfuscator_VC_2147652778_1
         $x_1_2 = {8b 02 3d 92 00 00 c0 7f 2c 74 5c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8315,6 +8676,7 @@ rule VirTool_Win32_Obfuscator_VC_2147652778_2
         $x_1_3 = {ac 8b d2 fc 09 c0 d0 c8 f6 d8 34 e1 fc d0 c0 fe c0 d0 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8340,6 +8702,7 @@ rule VirTool_Win32_Obfuscator_VC_2147652778_3
         $x_1_6 = {81 f9 b1 6b 89 31 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -8361,6 +8724,7 @@ rule VirTool_Win32_Obfuscator_VC_2147652778_4
         $x_1_2 = {8a 04 2a 33 d2 8a d3 03 d6 03 c2 25 ff 00 00 00 8b f0 8a 86 ?? ?? ?? ?? 88 81 ?? ?? ?? ?? 41 81 f9 00 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8382,6 +8746,7 @@ rule VirTool_Win32_Obfuscator_VC_2147652778_5
         $x_1_2 = {56 6a 01 e8 ?? ?? ?? ?? 83 3d ?? ?? ?? ?? 02 75 f0 eb 19 46 50 83 c0 78 48 b8 ?? ?? ?? ?? c7 00 00 00 00 00 58 e2 d3 e9 f7 d6 ff ff 59 5e a1 ?? ?? ?? ?? 8a 1e 32 d8 88 1e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8402,6 +8767,7 @@ rule VirTool_Win32_Obfuscator_QO_2147652787_0
         $x_1_1 = {b7 2d 40 00 0f 85 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? (30|31|32|33|36|37) 91 01 c0 (00|01|02|03|06|07) 21 03 80 (00|01|02|03|06|07)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8423,6 +8789,7 @@ rule VirTool_Win32_Obfuscator_VD_2147652894_0
         $x_10_2 = {68 26 80 ac c8 ff 75 e0 e8 ?? ?? ff ff 59 59 8b 4d d8 89 41 0c 68 5f 70 35 3a ff 75 e0 e8 ?? ?? ff ff}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8445,6 +8812,7 @@ rule VirTool_Win32_Obfuscator_VF_2147653223_0
         $x_1_3 = {8b 46 28 03 45 ec ff d0 68 00 80 00 00 6a 00 ff 75 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8466,6 +8834,7 @@ rule VirTool_Win32_Obfuscator_VH_2147653232_0
         $x_1_2 = {50 58 8b 02 2d ?? ?? ?? ?? 89 02 83 c2 04 e2 f2 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8487,6 +8856,7 @@ rule VirTool_Win32_Obfuscator_VG_2147653246_0
         $x_1_2 = {e2 bb 59 8b 1d ?? ?? 00 0d ac 90 32 c3 90 aa f7 c1 01 00 00 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8509,6 +8879,7 @@ rule VirTool_Win32_Obfuscator_VI_2147653362_0
         $x_1_3 = {03 c3 8d 14 08 02 cb 8a c1 80 e1 03 24 1f f6 e9 b1 fe 2a c8 00 0a 43 e9 ?? ?? ?? ?? 8b 45 f0 83 e9 80 89 4d 08 3b c8 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8530,6 +8901,7 @@ rule VirTool_Win32_Obfuscator_VJ_2147653477_0
         $x_1_2 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8553,6 +8925,7 @@ rule VirTool_Win32_Obfuscator_VO_2147653801_0
         $x_1_4 = {8b 85 dc fd ff ff 83 e0 f0 3d ?? 92 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -8579,6 +8952,7 @@ rule VirTool_Win32_Obfuscator_VP_2147653825_0
         $x_1_3 = {73 fa 0f b6 c0 8b 44 c1 04 e9 52 ff ff ff d0 e9 3a ca 73 fa 0f b6 c9 8b 04 c8 eb 81 d0 e9 3a ca 73 fa 0f b6 c9 8b 04 c8 eb ae 32 c0 5f c9 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8604,6 +8978,7 @@ rule VirTool_Win32_Obfuscator_VP_2147653825_1
         $x_1_6 = {8d 5f 15 89 4c 24 18 8d 44 24 08 50 8b 43 fc 03 44 24 18 6a 40 ff 33 50 ff 15 ?? ?? ?? ?? 83 f8 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8626,6 +9001,7 @@ rule VirTool_Win32_Obfuscator_VR_2147654034_0
         $x_1_3 = {8b 46 58 8d 4f 68 51 8b 4e 38 2b c8 51 50 ff 56 4c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8646,6 +9022,7 @@ rule VirTool_Win32_Obfuscator_VS_2147654053_0
         $x_1_1 = {4d 79 73 74 69 63 20 43 6f 6d 70 72 65 73 73 6f 72 00 05 00 (e8|e9)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8673,6 +9050,7 @@ rule VirTool_Win32_Obfuscator_VV_2147654070_0
         $x_1_8 = {89 45 e8 81 7d e8 fa 8f 02 00 7d 3c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -8694,6 +9072,7 @@ rule VirTool_Win32_Obfuscator_VW_2147654079_0
         $x_1_2 = {8b 46 38 8b 4e 34 8b 7e 4c 83 c3 68 53 2b c8 51 50 ff d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8715,6 +9094,7 @@ rule VirTool_Win32_Obfuscator_VX_2147654089_0
         $x_1_2 = {8b c0 c0 c0 02 8b d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8738,6 +9118,7 @@ rule VirTool_Win32_Obfuscator_VY_2147654127_0
         $x_1_4 = {c0 c0 02 8a d2 8a d2 8a d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -8761,6 +9142,7 @@ rule VirTool_Win32_Obfuscator_VZ_2147654154_0
         $x_1_1 = {64 a1 30 00 00 00 8b 40 0c 8b 40 1c 8b 40 08 e8 04 00 00 00 ?? ?? ?? ?? 59 ff 31}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8785,6 +9167,7 @@ rule VirTool_Win32_Obfuscator_WA_2147654190_0
         $x_2_5 = {c7 45 d4 58 50 58 41 c7 45 d8 58 43 58 4b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -8811,6 +9194,7 @@ rule VirTool_Win32_Obfuscator_WB_2147654208_0
         $x_1_3 = {0f 85 1c 02 00 00 8b 55 b4 3b 55 e4 0f 85 a6 00 00 00 8b 45 c4 2b 45 e4 83 c0 01 e9 07 02 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8832,6 +9216,7 @@ rule VirTool_Win32_Obfuscator_WE_2147654326_0
         $x_1_2 = {8a 08 33 d2 40 84 c9 74 75 81 f2 ?? ?? ?? ?? 0f b6 c9 c1 c2 0f 33 d1 8a 08 40 84 c9 75 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8854,6 +9239,7 @@ rule VirTool_Win32_Obfuscator_WF_2147654352_0
         $x_1_3 = {83 fb 03 7e 04 33 db eb 01 43 [0-3] c5 1e 00 00 7c ?? 8b [0-3] b8 ?? ?? ?? 00 8b f7 b9 c6 1e 00 00 2b f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8875,6 +9261,7 @@ rule VirTool_Win32_Obfuscator_WG_2147654440_0
         $x_1_2 = {8b 45 ec 03 45 f8 0f b6 08 03 4d f0 88 4d c7 8b 55 ec 03 55 f8 8a 45 c7 88 02 8b 4d f8 83 c1 02 89 4d f8 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8896,6 +9283,7 @@ rule VirTool_Win32_Obfuscator_WI_2147654529_0
         $x_1_2 = {8b 55 08 03 55 f4 8b 02 03 45 f4 8b 4d 08 03 4d f4 89 01 c7 45 fc 7c 00 00 00 8b 55 f4 81 c2 53 57 09 00 89 55 f8 c7 45 fc 7c 00 00 00 8b 45 08 03 45 f4 8b 08 33 4d f8 8b 55 08 03 55 f4 89 0a eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8917,6 +9305,7 @@ rule VirTool_Win32_Obfuscator_WI_2147654529_1
         $x_1_2 = {e8 1f 00 00 00 8b 44 24 08 50 8b 44 24 08 50 8b 44 24 08 50 31 c0 68 fe ca ad de e9 ?? 00 00 00 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8938,6 +9327,7 @@ rule VirTool_Win32_Obfuscator_WJ_2147654591_0
         $x_1_2 = {33 d2 8b c1 f7 f5 8b 44 24 14 0f be 14 02 33 c0 8a 81 [0-16] 03 d0 81 e2 ff 00 00 00 89 15 ?? ?? ?? ?? ff ?? 8b 0d ?? ?? ?? ?? 8a 99 ?? ?? ?? ?? ff ?? 8b ?? ?? ?? ?? ?? (a1 ?? ?? ?? ??|8b ?? ?? ?? ?? ??) 8a ?? ?? ?? ?? ?? 88 ?? ?? ?? ?? ?? (40 3d 00 01|41 81 f9 00 01) 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8958,6 +9348,7 @@ rule VirTool_Win32_Obfuscator_WK_2147654599_0
         $x_1_1 = {8b 4d f8 41 31 c0 83 e8 62 f7 d0 (39 c8|83) 75 [0-11] 32 d2 01 d8 29 c1 43 8a 53 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8978,6 +9369,7 @@ rule VirTool_Win32_Obfuscator_WL_2147654661_0
         $x_1_1 = {8b 5d fc 1b 4d ee f7 d1 31 c0 05 5e 09 00 00 40 39 c8 75 32 d2 01 d8 29 c1 43 8a 53 ff 20 d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8999,6 +9391,7 @@ rule VirTool_Win32_Obfuscator_WM_2147654719_0
         $x_1_2 = {64 66 8b ff 8d ?? ?? ?? 00 00 33 c0 ff b0 ?? ?? ?? ?? c2 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9020,6 +9413,7 @@ rule VirTool_Win32_Obfuscator_WN_2147654808_0
         $x_1_2 = {b9 00 24 00 00 8b 35 ?? ?? ?? ?? 81 c6 ca 01 00 00 8b fe 51 b9 d2 de 0e 00 8b 45 ?? d1 c0 89 45 ?? e2 f6 59 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9042,6 +9436,7 @@ rule VirTool_Win32_Obfuscator_WO_2147654836_0
         $x_10_3 = {29 18 68 fc e3 fe f8}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -9065,6 +9460,7 @@ rule VirTool_Win32_Obfuscator_WP_2147654958_0
         $x_1_1 = {32 d2 03 35 ?? ?? ?? ?? 29 ce 47 8a 57 ff 32 c9 3a 15 ?? ?? ?? ?? 75 c8 8a 57 01 32 1d ?? ?? ?? ?? 3a 15 ?? ?? ?? ?? 75 b7 c6 05 ?? ?? ?? 00 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9087,6 +9483,7 @@ rule VirTool_Win32_Obfuscator_WQ_2147655017_0
         $x_1_3 = {81 e9 6b 01 00 00 89 4d ac}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9111,6 +9508,7 @@ rule VirTool_Win32_Obfuscator_WR_2147655061_0
         $x_1_5 = {c0 c0 02 8a d2 8a d2 8a d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -9136,6 +9534,7 @@ rule VirTool_Win32_Obfuscator_WS_2147655171_0
         $x_1_3 = {c6 09 01 c2 00 00 10 00 90 90 90 90 90 90 90 90 90 90 90 90 90 ff 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9159,6 +9558,7 @@ rule VirTool_Win32_Obfuscator_WT_2147655184_0
         $x_1_4 = {8d 5e fe 84 ff 75 f1 8b 76 3a 66 ba 50 45 8d 34 1e 66 ad 66 33 d0 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -9185,6 +9585,7 @@ rule VirTool_Win32_Obfuscator_WU_2147655213_0
         $x_1_3 = {8b 48 24 03 0d ?? ?? ?? ?? 89 4d c0 c7 45 cc 00 00 00 00 56 8b 7d cc c1 e7 02 03 7d d8 8b 3f 03 3d ?? ?? ?? ?? 8b 4d c4 f3 a6 74 07 5e 83 45 cc 01 eb e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9206,6 +9607,7 @@ rule VirTool_Win32_Obfuscator_WU_2147655213_1
         $x_1_2 = {8b 48 20 03 0d ?? ?? ?? ?? 89 4d cc 8b 48 24 03 0d ?? ?? ?? ?? 89 4d b0 c7 45 c0 00 00 00 00 56 8b 7d c0 c1 e7 02 03 7d cc 8b 3f 03 3d ?? ?? ?? ?? 8b 4d b8 f3 a6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9228,6 +9630,7 @@ rule VirTool_Win32_Obfuscator_WV_2147655218_0
         $x_1_3 = {ff 70 50 6a 00 ff d1 89 45 fc 8b 45 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9251,6 +9654,7 @@ rule VirTool_Win32_Obfuscator_WW_2147655406_0
         $x_1_4 = {68 d3 ef f2 0d ff 75 08 8d 45 f4 50 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -9273,6 +9677,7 @@ rule VirTool_Win32_Obfuscator_WY_2147655713_0
         $x_1_3 = {ff ff 01 0c 24 05 00 49 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9294,6 +9699,7 @@ rule VirTool_Win32_Obfuscator_XA_2147655759_0
         $x_1_2 = {0f b6 d0 8b 45 fc 03 45 d4 0f be 08 33 ca 8b 55 fc 03 55 d4 88 0a eb d1 17 00 8b 4d d4 83 c1 01 89 4d d4 81 7d d4 ?? ?? ?? ?? 7d 1d e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9315,6 +9721,7 @@ rule VirTool_Win32_Obfuscator_XB_2147655850_0
         $x_1_2 = {89 45 e8 6a 00 68 2e 44 4c 4c 68 45 4c 33 32 68 4b 45 52 4e 54 8b c8 ff d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9339,6 +9746,7 @@ rule VirTool_Win32_Obfuscator_XD_2147656006_0
         $x_1_5 = "=RO<-" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -9361,6 +9769,7 @@ rule VirTool_Win32_Obfuscator_XE_2147656037_0
         $x_1_3 = {60 ae 0a 00 0f 82 ?? ?? ff ff 8b 1d 7c bb 40 00 ff d3 6a 00 ff 15 ?? 80 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -9412,6 +9821,7 @@ rule VirTool_Win32_Obfuscator_XI_2147656250_0
         $x_1_29 = {8b 44 c1 78 89 85 ?? ff ff ff 8b b5 ?? ff ff ff 8b 85 ?? ff ff ff 8b 95 ?? ff ff ff 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -9435,6 +9845,7 @@ rule VirTool_Win32_Obfuscator_XJ_2147656300_0
         $x_1_4 = {66 81 e9 0b fe e8 ff ff ff ff 02 00 (31|29) c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -9460,6 +9871,7 @@ rule VirTool_Win32_Obfuscator_XL_2147656377_0
         $x_1_2 = {c1 e7 06 03 c7 eb 0a 80 f1 ?? 80 c1 ?? 88 08 40 42 8a 0a 80 f9 ?? 75 ef c6 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9482,6 +9894,7 @@ rule VirTool_Win32_Obfuscator_XM_2147656457_0
         $x_1_3 = "<'|'>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9506,6 +9919,7 @@ rule VirTool_Win32_Obfuscator_XN_2147656529_0
         $x_1_5 = {0f 31 50 0f 31 5a 2b c2 3d 00 02 00 00 73 12}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -9528,6 +9942,7 @@ rule VirTool_Win32_Obfuscator_XO_2147656575_0
         $x_1_3 = {89 e5 e8 00 00 00 00 5a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9553,6 +9968,7 @@ rule VirTool_Win32_Obfuscator_XP_2147656589_0
         $x_1_6 = {64 ff 35 30 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_5_*))) or
@@ -9606,6 +10022,7 @@ rule VirTool_Win32_Obfuscator_XQ_2147656590_0
         $x_1_30 = {b9 4c 69 62 72 87 d2 90 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -9628,6 +10045,7 @@ rule VirTool_Win32_Obfuscator_XR_2147656611_0
         $x_1_3 = {50 c6 45 d4 58 e8 ?? ?? ?? ?? 8d 4d d4 51 c6 45 d4 59 e8 ?? ?? ?? ?? 8d 55 d4 52 c6 45 d4 59 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9650,6 +10068,7 @@ rule VirTool_Win32_Obfuscator_XS_2147656647_0
         $x_1_3 = {8a 17 32 d0 46 81 fe ?? ?? ?? ?? 88 17 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -9671,6 +10090,7 @@ rule VirTool_Win32_Obfuscator_XT_2147656660_0
         $x_1_2 = {89 c3 6a 02 6a 5f 6a 00 ff d6 50 ff d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9692,6 +10112,7 @@ rule VirTool_Win32_Obfuscator_XT_2147656660_1
         $x_1_2 = {85 c0 60 6a 01 e8 ?? ?? ?? ?? 61 e2 ae 8b 85 ?? ?? ff ff 05 ca 01 00 00 50 e8 ?? ?? ?? ?? c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9720,6 +10141,7 @@ rule VirTool_Win32_Obfuscator_XT_2147656660_2
         $x_1_9 = {64 8b 05 30 00 00 00 8b 40 0c 8b 40 0c 8b 00 8b 00 8b 40 18 89 45 ?? c6 45 [0-6] 50 c6 45 ?? 47 33 c0 (89 45 ??|89 c6) 8b 5d 00 8b 43 3c 03 c3 8b 50 78}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -9740,6 +10162,7 @@ rule VirTool_Win32_Obfuscator_YC_2147656680_0
         $x_1_1 = {8d 54 0c 04 c1 e1 04 03 c8 89 0a 83 c4 14 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9761,6 +10184,7 @@ rule VirTool_Win32_Obfuscator_XU_2147656703_0
         $x_1_2 = {d1 e0 50 81 c3 ?? ?? 00 00 05 ?? ?? 00 00 05 ?? ?? 00 00 81 c3 ?? ?? 00 00 81 c1 ?? ?? 00 00 e9 ?? ?? ff ff 81 e9 01 00 00 00 03 c1 81 c0 01 00 00 00 03 c3 81 c0 01 00 00 00 5f 81 c1 01 00 00 00 81 e9 01 00 00 00 83 c1 0c 81 eb 01 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9781,6 +10205,7 @@ rule VirTool_Win32_Obfuscator_XV_2147656798_0
         $x_1_1 = {66 ab aa 8b 3d ?? ?? ?? ?? 8d 45 ec 50 ff d7 8b 75 f8 81 e6 ff ff 00 00 83 fe 31 7e 05 83 ee 32 eb 03 83 c6 0a 8d 4d ec 51 ff d7 8b 55 f8 81 e2 ff ff 00 00 3b d6 75 ed 68 00 2e 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9803,6 +10228,7 @@ rule VirTool_Win32_Obfuscator_YE_2147656824_0
         $x_1_3 = {8d 0c 10 8d 34 02 8a d9 8b c2 c1 e8 04 24 03 80 e3 1f f6 eb 80 e1 03 f6 e9 b1 fe 2a c8 00 0c 3e ff 45 ec eb c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9825,6 +10251,7 @@ rule VirTool_Win32_Obfuscator_YE_2147656824_1
         $x_1_3 = {a0 93 94 40 00 c7 05 08 81 40 00 97 79 00 00 3c 25 0f 84 0f 00 00 00 b8 a5 0e 00 00 b8 ff 00 00 00 e9 8e 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -9845,6 +10272,7 @@ rule VirTool_Win32_Obfuscator_YF_2147656903_0
         $x_1_1 = {ff 50 78 85 c0 0f 85 94 00 00 00 8b 45 cc 8b 40 18 89 45 f4 8b 45 f4 8b 55 f8 89 42 40 3d 00 00 40 00 74 09 c7 42 2e 01 00 00 00 eb 07 c7 42 2e 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9866,6 +10294,7 @@ rule VirTool_Win32_Obfuscator_YG_2147656946_0
         $x_1_2 = {b9 89 d0 00 00 be 30 80 40 00 8b fb f3 a5 66 a5 a4 33 c9 8d 9b 00 00 00 00 f6 c1 03 74 0f 8a 14 19 32 15 c0 c5 43 00 80 f2 76 88 14 19}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -9888,6 +10317,7 @@ rule VirTool_Win32_Obfuscator_YI_2147657025_0
         $x_1_3 = {8a 57 01 32 1d ?? ?? ?? ?? 3a 15 ?? ?? ?? ?? 75 b2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9910,6 +10340,7 @@ rule VirTool_Win32_Obfuscator_YJ_2147657130_0
         $x_1_3 = "https:////dufisduhfkjshkdhf.com.au//sdufyiu#9879734" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9932,6 +10363,7 @@ rule VirTool_Win32_Obfuscator_YJ_2147657130_1
         $x_1_3 = {0f b6 54 32 ff 33 d3 88 54 30 ff 4b 85 db 75 e0 46 4f 75 d7 be ?? ?? ?? ?? b8 ?? ?? ?? ?? bb ?? ?? ?? ?? 30 18 4b 85 db 75 f9 40 4e 75 f0 8d 05 ?? ?? ?? ?? ff 35 ?? ?? ?? ?? ff d0 33 c0 5a 59 59 64 89 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -9956,6 +10388,7 @@ rule VirTool_Win32_Obfuscator_YL_2147657153_0
         $x_1_5 = {55 50 58 31 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 62 62 62 62 ?? ?? ?? ?? 63 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -9979,6 +10412,7 @@ rule VirTool_Win32_Obfuscator_YN_2147657256_0
         $x_2_4 = {80 f0 fa 02 73}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -10004,6 +10438,7 @@ rule VirTool_Win32_Obfuscator_YO_2147657261_0
         $x_1_3 = {8d 44 24 10 8a 54 24 01 88 50 01 c6 00 01 8d 54 24 10 8d 44 24 0c b1 02 e8 ?? ?? ?? ?? 8d 54 24 0c 8d 44 24 14 e8 ?? ?? ?? ?? 8d 44 24 10 8a 54 24 02 88 50 01 c6 00 01 8d 54 24 10 8d 44 24 14 b1 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10025,6 +10460,7 @@ rule VirTool_Win32_Obfuscator_YP_2147657289_0
         $x_1_2 = {40 00 43 43 58 31 0f 85 9a 01 00 00 83 3d ?? ?? 40 00 01 0f 85 8d 01 00 00 bf 82 09 00 00 be 48 c7 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10045,6 +10481,7 @@ rule VirTool_Win32_Obfuscator_YQ_2147657293_0
         $x_1_1 = {89 45 08 33 db ff d6 f6 c3 03 8b 4d 08 74 ?? 8a 14 0b 32 15 ?? ?? ?? ?? 80 f2 ?? 88 14 0b f6 c3 01 74 ?? 8a 04 0b 32 05 ?? ?? ?? ?? 34 ?? 88 04 0b 33 d2 8b c3 bf 03 00 00 00 f7 f7 85 d2 74 ?? 8a 14 0b 32 15 ?? ?? ?? ?? 80 f2 ?? 88 14 0b 43 81}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10066,6 +10503,7 @@ rule VirTool_Win32_Obfuscator_YR_2147657323_0
         $x_1_2 = {88 14 08 f6 c1 01 74 14 a1 e0 ?? (42|43) 00 8a 14 08 32 15 c0 ?? (42|43) 00 80 f2 74 88 14 08 41 81 f9 00 d0 07 00 7c a2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10089,6 +10527,7 @@ rule VirTool_Win32_Obfuscator_YS_2147657374_0
         $x_1_4 = {50 8b 42 0c 03 45 08 50 e8 57 00 00 00 83 c2 28 66 49 75 e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -10109,6 +10548,7 @@ rule VirTool_Win32_Obfuscator_YT_2147657393_0
         $x_1_1 = {f6 c1 01 74 14 a1 e8 (b1|c1) (42|43) 00 8a 14 (01|08) 32 15 c8 (b1|c1) (42|43) 00 80 f2 ?? 88 14 (01|08) 41 81 f9 88 e3 07 00 7c a2 8b 0d e8 (b1|c1) (42|43) 00 8d 44 24 ?? 50 6a 00 6a 00 51 6a 00 6a 00 ff 15 e0 (b0|c0) (42|43) 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10131,6 +10571,7 @@ rule VirTool_Win32_Obfuscator_YU_2147657394_0
         $x_1_3 = {8b 75 08 03 76 3c 8b 46 34 6a 40 68 00 30 00 00 ff 76 50 50 8b 45 0c ff 90}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -10152,6 +10593,7 @@ rule VirTool_Win32_Obfuscator_YX_2147657621_0
         $x_1_2 = {4c 4f 6c 69 57 79 49 61 4b 72 50 4e 77 30 30 30 30 30 31 4f 59 4b 4e 79 6e 61 4e 6f 4a 69 50 35 79 6f 4f 70 73 71 45 7f 48 56 6d 33 6d 75 6c 47}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10173,6 +10615,7 @@ rule VirTool_Win32_Obfuscator_YZ_2147657698_0
         $x_1_2 = {8b 75 08 03 76 3c 6a 40 68 00 30 00 00 ff 76 50 ff 76 34 ff 55 ?? 03 00 89 45 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10195,6 +10638,7 @@ rule VirTool_Win32_Obfuscator_ZB_2147657913_0
         $x_1_3 = {c7 44 24 68 58 59 59 59 c7 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10216,6 +10660,7 @@ rule VirTool_Win32_Obfuscator_ZC_2147657961_0
         $x_1_2 = {8b 7e 3c 68 4a 0d ce 09 e8 cf ff ff ff 85 c0 59 74 0f 6a 04 68 00 30 00 00 ff 74 37 50 6a 00 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -10239,6 +10684,7 @@ rule VirTool_Win32_Obfuscator_ZD_2147658196_0
         $x_1_4 = {79 66 69 75 6a 68 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10263,6 +10709,7 @@ rule VirTool_Win32_Obfuscator_ZE_2147658220_0
         $x_1_5 = {64 73 66 6b 6a 64 68 66 75 73 64 79 66 69 75 6a 68 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -10302,6 +10749,7 @@ rule VirTool_Win32_Obfuscator_ZG_2147658424_0
         $x_1_20 = {e8 00 00 00 00 58 89 45 ?? c6 45 ?? 5e 42 8b 45 ?? 03 c2 8b c8 49 8a 09 3a 4d ?? 75 f0 8a 08 3a 4d ?? 75 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -10323,6 +10771,7 @@ rule VirTool_Win32_Obfuscator_ZI_2147658512_0
         $x_1_2 = {60 ae 0a 00 0f 82 ?? ff ff ff ff (15|35) f4 ac 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10346,6 +10795,7 @@ rule VirTool_Win32_Obfuscator_ZJ_2147658540_0
         $x_1_4 = {28 01 d8 ff d0 50 ff 55 e8 cd 03 eb fc 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -10380,6 +10830,7 @@ rule VirTool_Win32_Obfuscator_ZL_2147658650_0
         $x_1_15 = {6a 08 68 45 01 00 00 68 c9 01 00 00 6a 07 68 f4 01 00 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -10400,6 +10851,7 @@ rule VirTool_Win32_Obfuscator_ZM_2147658730_0
         $x_1_1 = {0f b6 57 01 0f b6 4f 02 8d 84 80 10 ff ff ff 8d 54 42 d0 8d 04 92 8d 44 41 d0 0f b6 c0 c1 e0 02 e8 9e ff ff ff 43 83 c7 03 3b dd 7c d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10422,6 +10874,7 @@ rule VirTool_Win32_Obfuscator_ZN_2147658880_0
         $x_1_3 = {8d 50 01 8b 75 ec 0f af 56 04 8b 75 f4 0f b6 34 06 33 d6 8b 75 f4 88 14 06 43 40 49 75 da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -10443,6 +10896,7 @@ rule VirTool_Win32_Obfuscator_ZO_2147658925_0
         $x_1_2 = {c1 e3 10 b9 ff ff 00 00 53 e8 ?? ?? ?? ?? 3d ?? ?? ?? ?? 75 06 89 9d 54 fd ff ff 43 e2 ea 61 83 bd 54 fd ff ff 00 0f 84 aa 00 00 00 b9 00 24 00 00 c1 e9 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10465,6 +10919,7 @@ rule VirTool_Win32_Obfuscator_ZP_2147658959_0
         $x_1_3 = {ff d2 01 f0 ff 70 fc ff 70 f8 5a 58 3d 2e 65 78 65 74 05 3d 2e 45 58 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10485,6 +10940,7 @@ rule VirTool_Win32_Obfuscator_ZQ_2147658966_0
         $x_1_1 = {20 00 89 45 fc d1 e6 89 45 fc ff 16 03 00 be}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10506,6 +10962,7 @@ rule VirTool_Win32_Obfuscator_ZR_2147659011_0
         $x_1_2 = {8b 85 5c ff ff ff 23 85 58 ff ff ff 89 85 54 ff ff ff 31 b5 54 ff ff ff 8b 85 58 ff ff ff 33 85 54 ff ff ff 89 85 5c ff ff ff 31 bd 5c ff ff ff 8b 85 54 ff ff ff 23 85 5c ff ff ff 89 85 58 ff ff ff ff c6 81 fe ff ff 00 00 7e b4 ff c7 81 ff ff 0f 00 00 7e 9a e8 ?? ?? 00 00 6a 00 ba ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -10528,6 +10985,7 @@ rule VirTool_Win32_Obfuscator_ZT_2147659080_0
         $x_1_3 = {c1 c9 0c 21 4d fc 29 0d 06 52 41 00 8d 9f 9f 00 00 00 c1 db 19 c1 05 24 52 41 00 05 4b 83 fb 38 75 19 68 da 16 1e 00 8f 05 fc 51 41 00 ff 0d f6 54 41 00 6a 23 8f 05 e8 53 41 00 09 5d c4 be 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10549,6 +11007,7 @@ rule VirTool_Win32_Obfuscator_ZU_2147659099_0
         $x_1_2 = {6f 00 77 00 64 00 69 00 75 00 66 00 73 00 69 00 64 00 66 00 6a 00 6c 00 6b 00 73 00 61 00 64 00 6a 00 66 00 33 00 6c 00 61 00 73 00 6b 00 6a 00 6a 00 68 00 67 00 6a 00 6b 00 68 00 67 00 6b 00 6a 00 68 00 67 00 00 00 54 00 68 00 65 00 20 00 49 00 4f 00 53 00 74 00 72 00 61 00 72 00 74 00 75 00 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -10569,6 +11028,7 @@ rule VirTool_Win32_Obfuscator_ZW_2147659295_0
         $x_1_1 = {64 5c 74 65 73 74 31 32 33 5c ?? ?? (30|2d|39) (30|2d|39) 5c 52 65 6c 65 61 73 65 5c ?? ?? (30|2d|39) (30|2d|39) 2e 70 64 62 0a 00 (64|65) 3a 5c 44 6f 77 6e 6c 6f 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10591,6 +11051,7 @@ rule VirTool_Win32_Obfuscator_ZX_2147659313_0
         $x_1_3 = {c6 44 24 0b 6e c6 44 24 0e 33 c6 44 24 0f 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10612,6 +11073,7 @@ rule VirTool_Win32_Obfuscator_ZY_2147659346_0
         $x_1_2 = {0f a2 31 d8 3d 46 65 6e 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10633,6 +11095,7 @@ rule VirTool_Win32_Obfuscator_AAB_2147659895_0
         $x_1_2 = {4a 81 fa 6b 6c 33 32 74 ?? 53 81 fa 6b 6f 72 65 5b 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10654,6 +11117,7 @@ rule VirTool_Win32_Obfuscator_AAC_2147660025_0
         $x_1_2 = {f3 a5 89 45 ?? 8d 85 ?? ff ff ff 8b 48 04 03 08 03 c3 01 4d fc 4a 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10674,6 +11138,7 @@ rule VirTool_Win32_Obfuscator_AAC_2147660025_1
         $x_1_1 = {68 00 30 00 00 ff 76 50 ff 76 34 ff 55 ?? 85 c0 75 13 6a 40 68 00 30 00 00 ff 76 50 6a 00 ff 55 ?? 85 c0 74 75 89 45 ?? fc 56 8b 4e 54 8b 75 08 8b 7d ?? 33 c0 f3 a4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10697,6 +11162,7 @@ rule VirTool_Win32_Obfuscator_AAD_2147660033_0
         $x_1_4 = {b9 65 00 00 00 50 8d 05 ?? ?? ?? ?? 87 04 24 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10718,6 +11184,7 @@ rule VirTool_Win32_Obfuscator_AAI_2147660439_0
         $x_1_2 = {8a 1c 06 42 2a 9a ?? ?? ?? ?? 80 24 37 00 88 1c 37 83 ea 01 74 04 39 c0 74 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -10740,6 +11207,7 @@ rule VirTool_Win32_Obfuscator_AAJ_2147660581_0
         $x_1_3 = {8b 55 10 0f b6 12 c1 e2 18 8b 4d 10 0f b6 49 01 c1 e1 10 31 ca 8b 4d 10 0f b6 49 02 c1 e1 08 31 ca}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10760,6 +11228,7 @@ rule VirTool_Win32_Obfuscator_AAK_2147660637_0
         $x_1_1 = {f3 a4 33 c0 90 a8 01 8b 0d ?? ?? ?? ?? 74 11 8a 14 01 32 15 ?? ?? ?? ?? 80 f2 ?? 88 14 01 eb 0d 8a 1c 01 8a d0 80 c2 ?? 32 da 88 1c 01 40 3d ?? ?? ?? ?? 7c d0 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10781,6 +11250,7 @@ rule VirTool_Win32_Obfuscator_AAL_2147661123_0
         $x_5_2 = {8a 08 88 0a 8b 55 10 03 55 f8 0f b6 02 8b 4d 08 03 4d fc 0f b6 11 03 d0 8b 45 08 03 45 fc 88 10 83 7d f8 05 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10802,6 +11272,7 @@ rule VirTool_Win32_Obfuscator_AAP_2147661318_0
         $x_1_2 = {56 8b 74 24 1c 57 8d 5c 01 f9 c7 44 24 ?? 60 01 00 00 eb 05 a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 83 f9 07 74 29}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -10824,6 +11295,7 @@ rule VirTool_Win32_Obfuscator_AAR_2147661495_0
         $x_1_3 = {83 7d 14 00 75 08 83 c8 ff e9 ed 00 00 00 8b 4d 14 8b 01 89 45 f4 81 45 e0 42 c2 1e 87 83 7d 10 00 75 5a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -10845,6 +11317,7 @@ rule VirTool_Win32_Obfuscator_AAS_2147661497_0
         $x_1_2 = {b8 fb 81 ec bf f7 e1 89 d0 c1 e8 0e 89 45 08 8b 45 08 69 c0 5e 55 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10867,6 +11340,7 @@ rule VirTool_Win32_Obfuscator_ZG_2147661598_0
         $x_1_2 = {8b 30 4e 85 f6 7c 1d 46 33 c0 8b 55 ?? 0f b6 14 02 8b 8d ?? ff ff ff 33 51 04 8b 4d ?? 88 14 01 40 4e 75 e6 8b 45 ?? 89 85 ?? ff ff ff 8b 85 ?? ff ff ff 66 81 38 4d 5a 0f 85 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10891,6 +11365,7 @@ rule VirTool_Win32_Obfuscator_AAV_2147661659_0
         $x_1_5 = {33 d2 3b c1 0f (95|9f) c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -10914,6 +11389,7 @@ rule VirTool_Win32_Obfuscator_AAY_2147661973_0
         $x_1_4 = {3d db e3 05 be [0-12] 0f 85 [0-12] 81 7d d8 2a e1 05 be [0-12] 0f 85 [0-12] 8b 45 dc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -10935,6 +11411,7 @@ rule VirTool_Win32_Obfuscator_AAZ_2147662135_0
         $x_1_2 = {30 38 39 30 38 39 38 37 00 00 00 00 33 37 36 32 38 37 34 38 32 39}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10957,6 +11434,7 @@ rule VirTool_Win32_Obfuscator_ABA_2147662152_0
         $x_1_3 = {bf fc ff ff ff 2b ?? 2b ?? 5f 0f cf eb e0 [0-7] 68 ?? ?? ?? ?? 58 2e ff 10 ?? 83 ec ?? 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -10978,6 +11456,7 @@ rule VirTool_Win32_Obfuscator_ABC_2147662657_0
         $x_1_2 = {3b de 74 23 8d 45 fc 50 6a 40 ff 75 10 57 ff 15 ?? ?? ?? ?? 85 c0 74 0f ff 75 08 03 df ff d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11000,6 +11479,7 @@ rule VirTool_Win32_Obfuscator_ABD_2147662671_0
         $x_1_3 = {8a d9 c0 fb 04 80 e3 03 c0 e0 02 0a d8 8b 45 10 88 1c 07 47 8a 04 16 46 3c 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11021,6 +11501,7 @@ rule VirTool_Win32_Obfuscator_ABE_2147662946_0
         $x_1_2 = {c6 45 c8 6d c6 45 ca 78 c6 45 c9 70 8a 85 a6 fe ff ff 3a 45 c8 75 2b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11042,6 +11523,7 @@ rule VirTool_Win32_Obfuscator_ABF_2147662949_0
         $x_1_2 = {83 c4 04 69 c0 ?? (6d|6e) 00 00 50 68 ?? ?? 40 00 8b ?? 08 d1 (e0|e1|e2) d1 (e8|e9|ea) (50|51|52) ff 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11065,6 +11547,7 @@ rule VirTool_Win32_Obfuscator_ABG_2147662968_0
         $x_1_4 = {8b 46 28 03 85 ?? ?? ff ff ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -11087,6 +11570,7 @@ rule VirTool_Win32_Obfuscator_ABH_2147663274_0
         $x_2_3 = {c7 45 f4 dd 01 00 00 c6 45 fc 00 33 c0 66 89 45 fd c7 45 e8 c9 00 00 00 33 c9 8a 0d ?? ?? 42 00 83 c1 63 39 4d f8 74 1a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -11111,6 +11595,7 @@ rule VirTool_Win32_Obfuscator_ABI_2147663452_0
         $x_1_1 = {0f af d0 8b 45 e4 23 d0 c0 4d ff 04 89 55 d0 8b 45 c8 8a 55 ff 88 10 8b 45 f8 40 89 45 f8 3b 45 f4 0f 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11132,6 +11617,7 @@ rule VirTool_Win32_Obfuscator_ABJ_2147663597_0
         $x_1_2 = {0f ce 85 c3 83 da 73 c1 fe 62 c1 c7 46 0f ba f2 58 4f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11153,6 +11639,7 @@ rule VirTool_Win32_Obfuscator_ABK_2147663667_0
         $x_1_2 = {c7 45 fb 00 00 00 00 0f b6 4d 10 83 f9 00 75 02 eb 4e eb 19 8b 4d fb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11175,6 +11662,7 @@ rule VirTool_Win32_Obfuscator_ABL_2147663881_0
         $x_1_3 = {66 3b 48 06 73 4d 8b 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11198,6 +11686,7 @@ rule VirTool_Win32_Obfuscator_ABN_2147664104_0
         $x_1_4 = {6e 74 64 6c 6c 00 00 00 4e 74 41 6c 6c 6f 63 61 74 65 56 69 72 74 75 61 6c 4d 65 6d 6f 72 79 00 52 74 6c 41 63 71 75 69 72 65 50 65 62 4c 6f 63 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -11222,6 +11711,7 @@ rule VirTool_Win32_Obfuscator_ABO_2147664159_0
         $x_2_5 = "\\Borland\\Delphi" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -11246,6 +11736,7 @@ rule VirTool_Win32_Obfuscator_ABU_2147664337_0
         $x_1_2 = {88 55 ee 0f b6 4d fb 0f b6 55 ee 33 ca 88 4d fb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11267,6 +11758,7 @@ rule VirTool_Win32_Obfuscator_ABV_2147664350_0
         $x_1_2 = {41 8b c1 99 bb ?? ?? 00 00 f7 fb 81 fa ?? ?? 00 00 75 02 33 c9 45 8b c5 99 bb ?? ?? 00 00 ?? ?? 81 fa ?? ?? 00 00 75 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11288,6 +11780,7 @@ rule VirTool_Win32_Obfuscator_ABS_2147664435_0
         $x_1_2 = {3b 4d f7 76 02 eb ?? 8b 4d 08 03 4d fc 8a 45 fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11308,6 +11801,7 @@ rule VirTool_Win32_Obfuscator_ABY_2147664905_0
         $x_1_1 = {8a 14 18 03 c3 8b ce c1 e9 18 32 d1 47 81 ff 20 a1 07 00 88 10 7c c5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11329,6 +11823,7 @@ rule VirTool_Win32_Obfuscator_ABZ_2147664908_0
         $x_1_2 = {75 f1 68 3f 20 00 00 68 c3 06 00 00 68 28 91 40 00 e8 90 ff ff ff 83 c4 0c b8 28 91 40 00 ff d0 33 c0 5b 8b e5 5d c2 10 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11352,6 +11847,7 @@ rule VirTool_Win32_Obfuscator_ABZ_2147664908_1
         $x_1_4 = {2a 16 30 14 08 ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -11381,6 +11877,7 @@ rule VirTool_Win32_Obfuscator_ACA_2147665009_0
         $x_1_10 = {8b 4d 08 03 4d ec 8b 55 f0 89 91 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -11405,6 +11902,7 @@ rule VirTool_Win32_Obfuscator_ACE_2147665139_0
         $x_1_5 = {8d 73 0d 6a 64 59 0f a3 0b d6 73 01 ac aa e2 f6 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -11426,6 +11924,7 @@ rule VirTool_Win32_Obfuscator_ACF_2147665151_0
         $x_1_2 = {56 90 90 5f d1 c2 d1 ca 68 9b 00 00 00 59 85 c2 c1 c2 02 c1 ca 02 8d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11451,6 +11950,7 @@ rule VirTool_Win32_Obfuscator_ACD_2147665171_0
         $x_10_6 = "\\Borland\\Delphi" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -11474,6 +11974,7 @@ rule VirTool_Win32_Obfuscator_ACJ_2147666041_0
         $x_1_1 = {8b 4d fc 8b 55 0c 8d 44 0a ff a3 ?? ?? ?? ?? 8b 4d 0c 8b 55 fc 8d 44 0a ff a3 00 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11496,6 +11997,7 @@ rule VirTool_Win32_Obfuscator_ACK_2147666051_0
         $x_1_3 = {0f b6 d2 0f b6 94 15 38 ff ff ff c1 e0 06 03 45 b8 41 c1 e0 06 03 c7 c1 e0 06 03 c2 3b 75 10 73 25 8b 7d 0c 8b d0 c1 ea 10 88 14 3e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -11519,6 +12021,7 @@ rule VirTool_Win32_Obfuscator_ACL_2147666085_0
         $x_1_4 = {50 e8 f7 01 00 00 8d 70 02 56 e8 2c 00 00 00 83 e8 02 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -11540,6 +12043,7 @@ rule VirTool_Win32_Obfuscator_ACN_2147666533_0
         $x_1_2 = {33 f0 33 f8 03 fa 8d 94 37 ?? ?? ?? ?? 8b 75 ec 33 f0 03 f1 3b d6 0f 82 a0 ff ff ff 8b 45 f8 a3 ?? ?? ?? ?? 8b 45 f0 8b 0d ?? ?? ?? ?? 03 c1 21 45 fc a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 01 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11665,6 +12169,7 @@ rule VirTool_Win32_Obfuscator_ACP_2147666732_0
         $x_1_106 = {8b 44 24 08 8b 74 24 08 8b 36 31 30 8b 44 24 10 3b c8 07 00 33 06 a3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -11685,6 +12190,7 @@ rule VirTool_Win32_Obfuscator_ACQ_2147667235_0
         $x_1_1 = {33 c6 2d db ae 53 72 89 45 f8 8b 45 fc 8b 4d f8 33 c7 03 c3 3b c8 0f 85 1f 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11705,6 +12211,7 @@ rule VirTool_Win32_Obfuscator_ACR_2147667236_0
         $x_1_1 = {8b 08 8b 3d [0-32] 81 c1 f0 d0 f7 ff [0-16] 89 08 83 c0 04 4a 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11727,6 +12234,7 @@ rule VirTool_Win32_Obfuscator_ACS_2147667544_0
         $x_1_3 = {ff 77 38 68 00 40 02 00 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 83 c4 24 39 77 38 75 ?? 8d 05 ?? ?? ?? ?? 89 47 08 8d 05 ?? ?? ?? ?? 89 47 0c 8d 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -11750,6 +12258,7 @@ rule VirTool_Win32_Obfuscator_ACV_2147667889_0
         $x_1_4 = {8b 45 0c 23 45 c8 83 f8 00 74 05 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -11775,6 +12284,7 @@ rule VirTool_Win32_Obfuscator_ACV_2147667889_1
         $x_10_6 = "J:\\8756j.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -11819,6 +12329,7 @@ rule VirTool_Win32_Obfuscator_ACV_2147667889_2
         $x_1_22 = {24 02 00 75 05 e8 04 00 81 7d ?? d4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 1 of ($x_10_*))) or
@@ -11848,6 +12359,7 @@ rule VirTool_Win32_Obfuscator_ACW_2147668299_0
         $x_5_5 = {51 81 fa 6b 6f 72 65 59}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -11872,6 +12384,7 @@ rule VirTool_Win32_Obfuscator_ACX_2147668401_0
         $x_1_2 = {8b 4d 10 ff 51 10 89 45 e0 b8 00 00 00 00 b8 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -11902,6 +12415,7 @@ rule VirTool_Win32_Obfuscator_ACY_2147670563_0
         $n_100_11 = {8b 89 45 c4 8b 55 dc 8b 4a 3c 8b 45 f4 03 48 54 81 4d e8 80 07 5b 4a 51 8b 55 dc 81 75 e8 6a 4c 36 2a 52 8b 4d c4 51 e8}  //weight: -100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -11931,6 +12445,7 @@ rule VirTool_Win32_Obfuscator_ACZ_2147670583_0
         $x_1_5 = {ff 55 0c 89 45 ?? 89 45 ?? 83 ?? ff 75 0c c7 45 ?? 00 00 00 00 e9 ?? 00 00 00 8b ?? ?? 83 ?? 00 74 19 8b ?? ?? 8b ?? e8 03 ?? 89 ?? ?? 8b ?? ?? 8b ?? e8 03 ?? 10 89 ?? ?? eb 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -11952,6 +12467,7 @@ rule VirTool_Win32_Obfuscator_ADG_2147673744_0
         $x_1_2 = {ff 77 50 ff 77 34 ff 75 ?? ff d0 89 45 ?? 8d 85 ?? ?? ?? ?? c7 00 57 72 69 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -11974,6 +12490,7 @@ rule VirTool_Win32_Obfuscator_ADH_2147673909_0
         $x_1_3 = {03 48 28 89 0d ?? ?? ?? ?? 83 3d ?? ?? ?? ?? 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -11996,6 +12513,7 @@ rule VirTool_Win32_Obfuscator_ADL_2147676924_0
         $x_1_3 = {b9 fe ff 01 00 03 c3 33 45 08 d1 c0 43 e2 f6 89 44 24 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12017,6 +12535,7 @@ rule VirTool_Win32_Obfuscator_ADM_2147676927_0
         $x_1_2 = {03 76 3c 8b 46 34 6a 40 68 00 30 00 00 ff 76 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12038,6 +12557,7 @@ rule VirTool_Win32_Obfuscator_ADO_2147678263_0
         $x_1_2 = {8b 0c 83 33 4d ?? 8b 55 ?? 89 0c 93}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12062,6 +12582,7 @@ rule VirTool_Win32_Obfuscator_ADP_2147678315_0
         $x_1_5 = {c7 45 d0 5b 84 54 99 b8 68 89 a9 98 89 45 d4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -12099,6 +12620,7 @@ rule VirTool_Win32_Obfuscator_ADP_2147678315_1
         $x_1_18 = {8b 55 10 8d 3c 10 8a 07 8a 95 ?? ?? ?? ?? 02 d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -12123,6 +12645,7 @@ rule VirTool_Win32_Obfuscator_ADQ_2147678432_0
         $x_1_1 = {6a 00 51 6a 00 6a 00 56 6a 00 83 f8 00 75 02 ff 15 ?? ?? ?? ?? 8b c8 3d 00 00 10 00 36 72 ?? 8d 80}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12144,6 +12667,7 @@ rule VirTool_Win32_Obfuscator_ADT_2147678498_0
         $x_1_2 = {ff d6 8b 3d ?? ?? ?? ?? 50 ff d7 a3 18 00 c6 45 ?? 43 c6 45 ?? 6f c6 45 ?? 75 c6 45 ?? 6e c6 45 ?? 74 c6 45 ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12164,6 +12688,7 @@ rule VirTool_Win32_Obfuscator_ADU_2147678499_0
         $x_1_1 = {8b 45 f8 0f b7 44 70 fe 24 0f 8b 55 fc 0f b7 54 5a fe 80 e2 0f 32 c2 88 45 f3 8d 45 fc e8 ?? ?? ?? ?? 8b 55 fc 0f b7 54 5a fe 66 81 e2 f0 00 0f b6 4d f3 66 03 d1 66 89 54 58 fe 46 8b 45 f8 85 c0 74 05 83 e8 04 8b 00 3b c6 7d 05 be 01 00 00 00 43 4f 75 ab}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12185,6 +12710,7 @@ rule VirTool_Win32_Obfuscator_ADW_2147678675_0
         $x_1_2 = {68 02 00 00 80 ff 15 ?? ?? ?? ?? [0-255] 68 ?? 63 00 10 68 02 00 00 08 30 ff 15 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12207,6 +12733,7 @@ rule VirTool_Win32_Obfuscator_ADY_2147678748_0
         $x_1_3 = {e8 c3 06 00 00 83 c4 04 85 c0 74 0f 8b 55 08 6a 01 52 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -12231,6 +12758,7 @@ rule VirTool_Win32_Obfuscator_ADX_2147678793_0
         $x_1_2 = {0f b6 03 3c eb 0f 85 1c 00 00 00 0f b6 43 01 0f ba f0 07 0f 83 05 00 00 00 (2d 80 00|05 80 ff) 8d 44 03 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12254,6 +12782,7 @@ rule VirTool_Win32_Obfuscator_ADX_2147678793_1
         $x_2_4 = {8b 78 04 0f b6 18 0f b7 ca 66 0f be 3c 0f 66 33 fb 66 33 fa bb ff 00 00 00 66 23 fb 42 66 89 3c 4e 66 3b 50 02 72 d9 5f 5b 0f b7 40 02 33 c9 66 89 0c 46}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -12279,6 +12808,7 @@ rule VirTool_Win32_Obfuscator_ADZ_2147678844_0
         $x_1_2 = {6f 25 2b 30 ba 93 ec 98 bd 47 d8 bd 88 36 f3 1b f4 45 ef 35 c4 62 8a 3f f1 39 60 4b 9a 2b 46 1e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12300,6 +12830,7 @@ rule VirTool_Win32_Obfuscator_AEA_2147678889_0
         $x_1_2 = {a0 09 01 00 0f 8d af 00 00 00 66 c7 85 e0 f7 ff ff 4f 00 66 c7 85 e2 f7 ff ff 6e 00 c7 45 f4 f4 01 00 00 81 7d f4 f4 01 00 00 0f 85 84 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12322,6 +12853,7 @@ rule VirTool_Win32_Obfuscator_AEB_2147678938_0
         $x_1_3 = {70 17 00 00 7d 07 6a 00 ff 55 ?? eb e7 0e 00 eb 09 8b 45 ?? 83 c0 01 89 45 ?? 81 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -12345,6 +12877,7 @@ rule VirTool_Win32_Obfuscator_AEC_2147678948_0
         $x_1_1 = {55 8b ec 50 b8 07 00 00 00 81 c4 04 f0 ff ff 50 48 75 f6 8b 45 fc 81 c4 ?? f2 ff ff 53 56 57 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12366,6 +12899,7 @@ rule VirTool_Win32_Obfuscator_AEF_2147679008_0
         $x_1_2 = {c7 45 e0 a0 02 00 00 81 75 ec 9e 30 9e 39 eb 6c 33 c0 8a 45 fd 33 c9 8a 4d f3 f7 e9 88 45 fd e8 63 fe ff ff 69 45 dc de 33 48 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -12388,6 +12922,7 @@ rule VirTool_Win32_Obfuscator_AEH_2147679088_0
         $x_1_3 = {84 c0 74 1d a1 ?? 97 40 00 69 c0 fd 43 03 00 05 c3 9e 26 00 a3 ?? 97 40 00 c1 e8 10 32 04 37 88 06 83 c6 01 83 ad}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -12409,6 +12944,7 @@ rule VirTool_Win32_Obfuscator_PN_2147679091_0
         $x_1_1 = "_GiveThisToThatMan@12" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12430,6 +12966,7 @@ rule VirTool_Win32_Obfuscator_AEI_2147679179_0
         $x_2_2 = {8a 54 24 0f 0f b6 c3 8a 88 ?? ?? ?? ?? 02 0e 02 d1 0f b6 c2 8d 44 04 14 8b ce 88 54 24 0f e8 ?? ?? ?? ?? fe c3 80 fb ?? 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12453,6 +12990,7 @@ rule VirTool_Win32_Obfuscator_AEL_2147679258_0
         $x_1_4 = {74 29 8b 45 ?? 0f be 88 ?? ?? ?? ?? 8b 55 ?? 83 c2 01 83 f2 ?? 2b ca 8b 45 ?? 88 88 ?? ?? ?? ?? 8b 4d ?? 83 c1 01 89 4d ?? eb ce}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -12474,6 +13012,7 @@ rule VirTool_Win32_Obfuscator_AEO_2147679355_0
         $x_1_2 = {68 26 72 34 3b 68 c4 79 51 fb e8 1f 23 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12496,6 +13035,7 @@ rule VirTool_Win32_Obfuscator_AEN_2147679372_0
         $x_1_3 = {c7 45 dc e4 fd 52 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12518,6 +13058,7 @@ rule VirTool_Win32_Obfuscator_AEP_2147679388_0
         $x_1_3 = {68 9f 21 c2 5f e8 66 3a 00 00 dd d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -12539,6 +13080,7 @@ rule VirTool_Win32_Obfuscator_AEP_2147679388_1
         $x_2_2 = {33 fa 89 3c ?? 83 c1 04 81 (c2|ea) ?? ?? ?? ?? 40 81 f9 ?? ?? ?? ?? 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12559,6 +13101,7 @@ rule VirTool_Win32_Obfuscator_AEQ_2147679389_0
         $x_1_1 = {c7 44 24 0c 00 00 00 00 c7 44 24 08 ?? ?? ?? ?? c7 44 24 04 ?? ?? ?? ?? c7 04 24 ?? ff ff ff e8 ?? ?? ?? ?? 83 ec 10 4b 75 d1 31 c0 80 80 ?? ?? ?? ?? 48 40 3d ?? 06 00 00 75 f1 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? a1 ?? ?? ?? ?? ff d0 0a 00 bb ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12580,6 +13123,7 @@ rule VirTool_Win32_Obfuscator_AER_2147679392_0
         $x_1_2 = {83 e3 00 33 c0 ?? ?? 9c 00 00 c1 e0 08 b0 ?? 96 8d bb ?? ?? ?? ?? b9 00 04 00 00 ?? f3 a5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -12602,6 +13146,7 @@ rule VirTool_Win32_Obfuscator_AEU_2147679508_0
         $x_1_3 = {c6 05 40 55 01 10 03 c6 05 00 50 01 10 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12624,6 +13169,7 @@ rule VirTool_Win32_Obfuscator_AEV_2147679509_0
         $x_1_3 = {83 ec 28 c7 45 e0 7d df af 18 c7 45 ec c0 24 ce ba}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12645,6 +13191,7 @@ rule VirTool_Win32_Obfuscator_AEW_2147679532_0
         $x_1_2 = {8b 55 08 03 55 eb 8a 45 f7 88 02 8b 55 fc 03 55 ef 89 55 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12665,6 +13212,7 @@ rule VirTool_Win32_Obfuscator_AEY_2147679550_0
         $x_1_1 = {b9 85 04 00 00 03 4d 0c 81 e1 4e 61 bc 00 89 0d e0 7f 40 00 83 2d fd ad 40 00 01 0f 83 70 ff ff ff bb 08 43 00 00 2b 5d 14 89 1d f8 92 40 00 bb 0f 20 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12685,6 +13233,7 @@ rule VirTool_Win32_Obfuscator_AEZ_2147679588_0
         $x_1_1 = {73 15 66 8b 46 ?? 86 e0 66 89 46 00 83 c6 ?? 83 c3 02 e8 e2 ff ff ff 07 00 58 3b 9a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12705,6 +13254,7 @@ rule VirTool_Win32_Obfuscator_AFB_2147679635_0
         $x_1_1 = {68 60 61 51 00 58 b9 ?? ?? ?? ?? ba ?? ?? ?? ?? c7 80 00 12 00 00 ?? ?? ?? ?? 03 88 00 12 00 00 c7 80 04 12 00 00 ?? ?? ?? ?? 2b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12727,6 +13277,7 @@ rule VirTool_Win32_Obfuscator_AFC_2147679812_0
         $x_1_3 = {00 70 72 74 6b 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -12748,6 +13299,7 @@ rule VirTool_Win32_Obfuscator_AFD_2147679819_0
         $x_1_2 = {56 6a 02 5e 39 75 08 72 ?? 53 57 6a 02 5f 8d 1c 36}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12769,6 +13321,7 @@ rule VirTool_Win32_Obfuscator_AFD_2147679819_1
         $x_1_2 = {c7 44 24 08 00 04 00 00 c7 44 24 04 60 50 40 00 c7 04 24 00 00 00 00 ff 15 40 50 40 00 83 ec 0c 8d 7c 24 12 be ?? 40 40 00 b9 0e 00 00 00 f3 a4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12794,6 +13347,7 @@ rule VirTool_Win32_Obfuscator_AFE_2147679833_0
         $x_10_6 = {ff d6 50 ff d7 8d 4d d0 51 ff d0}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 2 of ($x_10_*))) or
             (all of ($x*))
@@ -12817,6 +13371,7 @@ rule VirTool_Win32_Obfuscator_AFF_2147679914_0
         $x_1_1 = {51 6a 40 6a 05 50 ff 55 fc 85 c0 74 3f a1 ?? ?? ?? ?? 8a 08 8b 7d f8 88 0d ?? ?? ?? ?? 8b 48 01 89 0d ?? ?? ?? ?? c6 00 e9 a1 ?? ?? ?? ?? b9 ?? ?? ?? ?? 2b c8 83 e9 05 68 ?? ?? ?? ?? 89 48 01 e8 ?? ?? ?? ?? 59 8d 4d ?? 51 ff d0 5f 5e 33 c0 c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12841,6 +13396,7 @@ rule VirTool_Win32_Obfuscator_AFG_2147679919_0
         $x_1_5 = {80 04 24 f2 8b 04 24 8b 40 01 83 c0 05 01 04 24 58 89 45 f0 8b 04 24 6a 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -12867,6 +13423,7 @@ rule VirTool_Win32_Obfuscator_F_2147680024_0
         $x_1_2 = {89 45 f0 ff 75 f0 81 45 fc b7 f1 bb de ff 15 ?? ?? ?? 00 89 45 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12887,6 +13444,7 @@ rule VirTool_Win32_Obfuscator_AFJ_2147680069_0
         $x_1_1 = {e8 01 00 00 00 c3 5d 81 ed 28 24 40 00 45 bb 00 00 00 00 be 00 00 00 00 8d bb 00 41 7a 00 57 33 c9 81 f9 00 04 00 00 74 38 83 f9 00 75 21 60 bb 00 00 00 00 be 00 00 00 00 8d bb 00 41 7a 00 8d 8b 73 03 00 00 bb 00 86 42 00 03 f3 f3 a5 61 8a 07 88 07 8a 47 01 88 47 01 83 c7 04 83 c1 04 eb c0 33 c9 81 f9 00 00 f0 00 74 19 81 f9 23 00 30 00 75 0e 5e 81 ee 00 00 01 00 b8 00 00 60 00 ff e6 41 eb df 00 00 00 00 00 00 00 00 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12909,6 +13467,7 @@ rule VirTool_Win32_Obfuscator_AFK_2147680103_0
         $x_1_3 = {47 65 74 50 c7 ?? ?? 72 6f 63 41 c7 ?? ?? 64 64 72 65 c7 ?? ?? 73 73 00 00 c7 ?? ?? 56 69 72 74 c7 ?? ?? 75 61 6c 50 c7 ?? ?? 72 6f 74 65 c7 ?? ?? 63 74 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -12931,6 +13490,7 @@ rule VirTool_Win32_Obfuscator_G_2147680121_0
         $x_1_2 = {55 8b ec 83 ec 6e 54 ff 15 ?? 10 40 00 c9 e9 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -12952,6 +13512,7 @@ rule VirTool_Win32_Obfuscator_AFO_2147680264_0
         $x_1_2 = {0f b6 14 07 d3 e2 31 c2 01 da 30 14 1e 40 39 45 ?? 77 ed 89 d8 ba 00 00 00 00 f7 75 ?? 8a 04 17 30 04 1e 43 39 5d ?? 76}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -12977,6 +13538,7 @@ rule VirTool_Win32_Obfuscator_AFP_2147680294_0
         $x_1_6 = "Try NtGetContextThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -13004,6 +13566,7 @@ rule VirTool_Win32_Obfuscator_AFS_2147680379_0
         $x_1_5 = {89 c1 ff b5 e0 fd ff ff [0-6] 67 3f 7a [0-6] 81 fa ?? 22 7a 3f 0f 84 [0-21] 75 2d 68 0f 84 ?? ?? 00 00 [0-4] fa ?? 7b 23 66}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -13028,6 +13591,7 @@ rule VirTool_Win32_Obfuscator_AFT_2147680430_0
         $x_5_5 = {41 44 3a 5c 50 72 6f 79 65 63 74 6f 31 2e 76 62 70 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -13051,6 +13615,7 @@ rule VirTool_Win32_Obfuscator_AFU_2147680972_0
         $x_1_1 = {58 89 45 f8 c6 06 59 c6 46 01 2a c6 46 02 38 33 c0 40 8b 17 03 d0 83 c2 02 8b 1f 03 d8 4b 8a 1b 3a 1e 75 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13082,6 +13647,7 @@ rule VirTool_Win32_Obfuscator_AFX_2147681083_0
         $x_1_12 = {56 68 00 80 00 00 e8 ?? ?? ?? ?? 68 00 80 00 00 8b f0 6a 00 56 e8 ?? ?? ?? ?? 8b 44 24 18 83 c4 10 (89 06|85 c0) 74 03 89 70 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -13102,6 +13668,7 @@ rule VirTool_Win32_Obfuscator_XXX_2147681098_0
         $x_1_1 = {8b 03 33 07 f7 d0 03 c1 2d 6a 2b 1e 97 89 06 83 c7 04 42 8b c2 2b 45 18 0f 85 13 00 00 00 33 d2 8b 7d 14 e9 09 00 00 00 5b 5e 5f 8b e5 5d c2 14 00 83 c3 04 83 c6 04 49 75 c6 eb ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13124,6 +13691,7 @@ rule VirTool_Win32_Obfuscator_AGA_2147681140_0
         $x_1_3 = {6a 00 6a 00 68 ?? ?? 40 00 6a 00 6a 00 ff 15 ?? ?? 40 00 89 45 ?? 6a ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -13147,6 +13715,7 @@ rule VirTool_Win32_Obfuscator_AGB_2147681325_0
         $x_1_1 = {35 14 f3 bb 51 89 02 83 c7 04 41 8b c1 2b 45 18 0f 85 05 00 00 00 e9 0b 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13169,6 +13738,7 @@ rule VirTool_Win32_Obfuscator_AGE_2147681382_0
         $x_1_3 = {68 b4 8b 96 4f e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -13194,6 +13764,7 @@ rule VirTool_Win32_Obfuscator_AGF_2147681395_0
         $x_1_3 = {83 ec 10 8b 15 0c 50 40 00 42 89 15 0c 50 40 00 39 d3 7f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13214,6 +13785,7 @@ rule VirTool_Win32_Obfuscator_AGH_2147681403_0
         $x_1_1 = {6a 02 8d 85 ?? ?? 00 00 50 57 ff d6 85 c0 75 ?? 8b 35 ?? ?? ?? 00 53 57 57 6a 02 57 6a 01 bb 00 00 00 80 53 8d 85 ?? ?? 00 00 50 ff d6 83 f8 ff 75 ?? 57 57 6a 03 57 6a 02 68 00 00 00 40 8d 85 ?? ?? 00 00 50 ff d6 83 f8 ff 75 ?? 57 57 6a 03 57 6a 01 53 8d 85 ?? ?? 00 00 50 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13235,6 +13807,7 @@ rule VirTool_Win32_Obfuscator_AGI_2147681442_0
         $x_1_2 = {51 6a 00 6a 00 68 ?? ?? 40 00 6a 00 6a 00 ff 15 ?? ?? 40 00 89 45 ?? 6a ff 8b 55 ?? 52 ff 15 ?? ?? 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13256,6 +13829,7 @@ rule VirTool_Win32_Obfuscator_AGJ_2147681489_0
         $x_1_2 = {8b 45 fc c1 c0 ?? 89 45 fc 8b 06 33 45 fc 89 06 83 ee 04 3b 75 08 73 e8 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13277,6 +13851,7 @@ rule VirTool_Win32_Obfuscator_AGM_2147681585_0
         $x_1_2 = {33 d2 f7 e3 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? ad 33 05 ?? ?? ?? ?? 89 (45|85) [0-4] a1 ?? ?? ?? ?? bb ?? ?? ?? ?? 33 d2 f7 e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13299,6 +13874,7 @@ rule VirTool_Win32_Obfuscator_AGO_2147681676_0
         $x_1_3 = {8a 06 88 07 46 47 49 eb ?? 33 db 8d bb 00 b1 6b 00 b9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13319,6 +13895,7 @@ rule VirTool_Win32_Obfuscator_AGO_2147681676_1
         $x_1_1 = {f3 a5 66 a5 83 c4 04 68 ?? ?? ?? 00 a4 ff 15 ?? ?? ?? 00 0f b7 ?? ?? ?? ?? 00 69 c0 f0 49 02 00 33 c9 85 c0 7e ?? 8b c1 99 be 03 00 00 00 f7 fe 85 d2 74 ?? 8a ?? ?? ?? ?? 00 a1 ?? ?? ?? 00 80 c2 ?? 30 14 08 0f b7 ?? ?? ?? ?? 00 69 c0 f0 49 02 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13341,6 +13918,7 @@ rule VirTool_Win32_Obfuscator_AGN_2147681679_0
         $x_1_3 = {33 c9 3d e9 00 00 00 0f 94 c1 88 ?? ?? ?? 40 00 c7 ?? ?? ?? 00 00 00 33 d2 8a ?? ?? ?? 40 00 83 fa 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13361,6 +13939,7 @@ rule VirTool_Win32_Obfuscator_AGP_2147681748_0
         $x_1_1 = {81 c9 63 39 00 00 c1 e9 0c 03 4d 08 8b 55 d0 8b 75 08 8a 04 06 88 44 11 fd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13394,6 +13973,7 @@ rule VirTool_Win32_Obfuscator_AGQ_2147681784_0
         $x_1_14 = {8a 13 88 11 41 43 48 75 ?? 03 3e 8b 75 ?? 83 c6 08 83 3e 00 89 75 ?? 8d 5e fc 75 ?? 8b 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -13415,6 +13995,7 @@ rule VirTool_Win32_Obfuscator_AGR_2147681800_0
         $x_1_2 = {64 a1 30 00 00 00 8b 88 0c 02 00 00 89 4d f8 85 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13437,6 +14018,7 @@ rule VirTool_Win32_Obfuscator_AGS_2147681848_0
         $x_1_3 = {8b 45 fc 3d 00 00 80 00 0f 86 ?? ?? ?? ?? 8b 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13459,6 +14041,7 @@ rule VirTool_Win32_Obfuscator_AGT_2147681858_0
         $x_1_3 = {c8 03 00 00 00 00 68 d3 8b ?? ?? ?? ?? 00 c7 ?? cc 03 00 00 c7 a7 e8 51}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13479,6 +14062,7 @@ rule VirTool_Win32_Obfuscator_AGU_2147681882_0
         $x_1_1 = {81 2c 24 43 fe 7d 12 8d ?? ?? ?? ?? ?? ?? 81 2c 24 93 21 de 65 8d [0-64] ad 56 e3 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13500,6 +14084,7 @@ rule VirTool_Win32_Obfuscator_AGV_2147681898_0
         $x_1_2 = {fe 09 00 00 fe 0e 00 00 fe 0c 00 00 20 90 ec 29 d8 66 65 20 e2 6f 19 66 61 20 77 83 30 be 61 65 65 3b ?? ?? ?? ?? fe 0c 00 00 20 8a 78 b6 93 66 66 20 7f 87 49 6c 61 65 65 65 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13521,6 +14106,7 @@ rule VirTool_Win32_Obfuscator_AGW_2147681900_0
         $x_1_2 = {04 20 ee 82 99 3c 20 82 00 20 d2 61 20 8e 06 96 0f 61 66 66 20 b7 1a c1 b7 61 66 20 db 7b e9 f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13541,6 +14127,7 @@ rule VirTool_Win32_Obfuscator_AGX_2147681941_0
         $x_1_1 = {c1 c7 07 66 ad 83 f8 61 72 08 83 f8 7a 77 03 83 e0 df 81 c7 a0 af 0b 00 03 f8 49 0b c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13562,6 +14149,7 @@ rule VirTool_Win32_Obfuscator_AGY_2147681947_0
         $x_1_2 = {8b 45 08 05 df 74 01 00 33 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13583,6 +14171,7 @@ rule VirTool_Win32_Obfuscator_AKI_2147681958_0
         $x_1_2 = {3b 91 bc 08 00 00 0f 83 9c 00 00 00 8b 45 ?? 03 45 ?? 33 c9 8a 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13613,6 +14202,7 @@ rule VirTool_Win32_Obfuscator_AKI_2147681958_1
         $x_1_11 = "msftedit.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -13638,6 +14228,7 @@ rule VirTool_Win32_Obfuscator_AGZ_2147681976_0
         $x_1_2 = {20 8b 3c 66 c3 20 ec c9 97 a0 61 20 a1 d1 52 c7 61 20 25 20 07 a1 61 66 66 20 8b 3b 9e 75 61 20 b5 45 e3 ae 61 66 20 78 85 26 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13660,6 +14251,7 @@ rule VirTool_Win32_Obfuscator_AHA_2147681977_0
         $x_1_3 = {20 a6 7a 00 43 61 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13680,6 +14272,7 @@ rule VirTool_Win32_Obfuscator_AHB_2147681991_0
         $x_1_1 = {54 52 41 53 48 5f 4c [0-5] 28 64 77 54 65 6d 70 31 2c 20 64 77 31 2c 20 64 77 32 29 3b 0d 0a 0d 0a 09 72 65 74 75 72 6e 3b 0d 0a 7d 0d 0a 0d 0a 23 65 6e 64 69 66 0d 0a 0d 0a 23 65 6c 73 65 0d 0a 76 6f 69 64 20 4f 62 66 75 73 63 61 74 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13701,6 +14294,7 @@ rule VirTool_Win32_Obfuscator_AHC_2147681996_0
         $x_1_2 = {2c 45 c0 c0 02 87 d2 87 d2 aa 8a ed d0 c4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13722,6 +14316,7 @@ rule VirTool_Win32_Obfuscator_AHC_2147681996_1
         $x_1_2 = {75 08 40 3d 00 e9 a4 35 75 d0 66 51 90 90 90 90 90 66 52 90 90 90 90 90 66 b9 5a 60 90 90 90 90 90 90 90 90 90 90 66 8b d1 90 90 90 90 90 e2 fe 90 90 90 90 90 66 8b ca 90 90 90 90 90 e2 e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13745,6 +14340,7 @@ rule VirTool_Win32_Obfuscator_AHD_2147681997_0
         $x_1_4 = {8a 19 3a 5d ?? 75 3b 8a 59 03 3a 5d ?? 75 33 8a 49 07 3a 4d ?? 75 2b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -13766,6 +14362,7 @@ rule VirTool_Win32_Obfuscator_AHF_2147682033_0
         $x_1_2 = {c6 45 ec 2a c6 45 f4 63 c7 45 e8 28 3a 00 00 c7 45 f0 31 62 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13787,6 +14384,7 @@ rule VirTool_Win32_Obfuscator_AHG_2147682061_0
         $x_1_2 = {55 8b ec 51 68 6a 8e 08 20 6a 01 e8 ?? ?? ?? ?? 83 c4 08 89 ?? ?? 8b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13809,6 +14407,7 @@ rule VirTool_Win32_Obfuscator_AHH_2147682062_0
         $x_2_3 = {a1 74 94 40 00 a3 28 94 40 00 a1 80 94 40 00 85 c0 0f 84 17 00 00 00 a1 80 94 40 00 8b 40 08 a3 78 94 40 00 a1 7c 94 40 00 a3 30 94 40 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13832,6 +14431,7 @@ rule VirTool_Win32_Obfuscator_AHH_2147682062_1
         $x_2_4 = {68 c2 01 00 00 be 58 96 40 00 56 ff 15 ?? 80 40 00 6a 65 58 66 89 44 24 08 68 84 94 40 00 ff 15 ?? 80 40 00 68 9c 94 40 00 6a 64 56 68 a4 94 40 00 68 ac 94 40 00 68 b4 94 40 00 ff 15 ?? 80 40 00 68 bc 94 40 00 ff 15 ?? 80 40 00 8d 44 24 14 89 44 24 0c 8d 45 04 a3 80 94 40 00 a1 80 94 40 00 8b 40 04 68 cc 94 40 00 68 d8 94 40 00 a3 74 94 40 00 ff 15 ?? 80 40 00 85 c0 0f 84 0b 00 00 00 68 e4 94 40 00 ff 15 ?? 80 40 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13860,6 +14460,7 @@ rule VirTool_Win32_Obfuscator_AHI_2147682079_0
         $x_4_9 = {8a 0c 01 80 f9 79 75 ?? ff [0-5] 8a [0-5] 02 da 32 d9 8b [0-5] 88 1c 01 85 ff 75 ?? 85 c0 75 ?? 83 [0-5] 03 81 [0-5] d0 07 00 00 7e ?? 81 [0-5] f4 01 00 00 7e 07 4f 74 04 03 c7 33 ff 83 fa 03 7e 0a 33 d2 eb 07 ?? e9 ?? fe ff ff}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -13889,6 +14490,7 @@ rule VirTool_Win32_Obfuscator_AHJ_2147682105_0
         $x_2_5 = {55 8b ec 83 e4 f8 81 ec 8c 00 00 00 c7 44 24 18 d6 d5 f6 ff c7 44 24 50 d1 d5 f6 ff c7 44 24 4c 87 20 00 00 a1 ?? ?? ?? 00 8b 4c 24 4c 25 02 20 00 00 0d 21 4b 00 00 33 d2 f7 f1 53 56 57 89 54 24 20 66 99 6a 00 ff 15 ?? ?? ?? 00 c6 44 24 30 cb 8a 44 24 30 0f b6 c8 b8 8b 00 00 00 99 f7 f9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13916,6 +14518,7 @@ rule VirTool_Win32_Obfuscator_AHK_2147682106_0
         $x_1_8 = {0f b6 4c 24 13 8b 54 24 30 01 d1 80 79 01 00 8a 11 75 0e 0f b6 ca}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -13937,6 +14540,7 @@ rule VirTool_Win32_Obfuscator_AHL_2147682151_0
         $x_10_2 = {8b 45 ec 8a 04 03 3a 45 08 74 44 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 43 0f b7 45 f4 83 c0 40 3b d8 0f 82}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13958,6 +14562,7 @@ rule VirTool_Win32_Obfuscator_AHN_2147682164_0
         $x_1_2 = {66 33 c0 66 81 38 4d 5a 74 07 2d 00 00 01 00 eb f2 89 85 ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 66 8b 48 3c 66 89 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -13980,6 +14585,7 @@ rule VirTool_Win32_Obfuscator_AHO_2147682181_0
         $x_1_3 = {83 c2 01 89 95 ?? ?? ?? ?? 81 bd ?? ?? ?? ?? ?? ?? 00 00 7d ?? 8b 85 ?? ?? ?? ?? 8b 8c 85 ?? ?? ?? ?? 33 8d ?? ?? ?? ?? 8b 95 ?? ?? ?? ?? 88 8a ?? ?? ?? ?? eb ?? b8 ?? ?? ?? ?? ff d0 06 00 8b 95}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -14000,6 +14606,7 @@ rule VirTool_Win32_Obfuscator_AHP_2147682192_0
         $x_1_1 = {eb ce 8b 45 98 33 c9 8a 4c 05 e4 03 4d a8 89 4d 94 8b 15 ?? ?? ?? ?? 83 c2 01 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 03 45 c8 8a 08 02 4d 94}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14020,6 +14627,7 @@ rule VirTool_Win32_Obfuscator_AHQ_2147682209_0
         $x_1_1 = {0f b6 11 83 fa 55 74 1c 8b 45 e8 0f b6 08 83 f9 6a 74 11 8b 55 e8 0f b6 02 3d ff 00 00 00 74 04 33 c0 eb 29 83 7d 08 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14040,6 +14648,7 @@ rule VirTool_Win32_Obfuscator_AHR_2147682214_0
         $x_1_1 = {69 c0 48 67 00 00 2b c7 33 c6 0f af c2 33 c1 39 45 f8 0f 82 91 ff ff ff 5b 5f 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14061,6 +14670,7 @@ rule VirTool_Win32_Obfuscator_AHS_2147682220_0
         $x_1_2 = {73 06 83 f8 7f 77 02 41 41 95 89 e8 b3 01 56 89 fe 29 c6 f3 a4 5e eb 8e 00 d2 75 05 8a 16 46 10 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14081,6 +14691,7 @@ rule VirTool_Win32_Obfuscator_AHU_2147682282_0
         $x_1_1 = {bb 12 56 19 00 fc 81 c3 fa 0f 00 00 43 33 d2 f7 e3 05 5f ec 6e 3c 90 fc 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14101,6 +14712,7 @@ rule VirTool_Win32_Obfuscator_AHU_2147682282_1
         $x_1_1 = {ad 90 89 45 e0 90 8b 45 dc bb d3 64 19 00 81 c3 3a 01 00 00 33 d2 f7 e3 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14122,6 +14734,7 @@ rule VirTool_Win32_Obfuscator_AHV_2147682284_0
         $x_1_2 = {8b 47 08 80 38 4d 59 59 0f 85 ?? ?? ?? ?? 80 78 01 5a 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14142,6 +14755,7 @@ rule VirTool_Win32_Obfuscator_AXA_2147682300_0
         $x_1_1 = {b8 73 00 00 00 8b 0d ?? ?? ?? 00 66 89 01 ba 6f 00 00 00 a1 00 00 66 89 50 02 b9 73 00 00 00 8b 15 00 00 66 89 4a 18 b8 73 00 00 00 8b 0d 00 00 66 89 41 1a ba 65 00 00 00 a1 00 00 66 89 50 1c b9 73 00 00 00 8b 15 00 00 66 89 4a 1e 68 ?? ?? ?? 00 a1 00 00 50 68 02 00 00 80 ff 15 ?? ?? ?? 00 85 c0 74 07 33 c0 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14163,6 +14777,7 @@ rule VirTool_Win32_Obfuscator_AHX_2147682368_0
         $x_1_2 = {cc cc cc cc 61 00 00 00 62 00 00 00 63 00 00 00 [0-15] 6c 64 61 70 5f 63 6f 75 6e 74 5f 76 61 6c 75 65 73 [0-15] 00 56 69 72 74 75 61 6c 50 72 6f 74 65 63 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14184,6 +14799,7 @@ rule VirTool_Win32_Obfuscator_AHY_2147682439_0
         $x_1_2 = {20 60 18 48 e6 66 66 20 bb e7 b7 19}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14206,6 +14822,7 @@ rule VirTool_Win32_Obfuscator_AHY_2147682439_1
         $x_1_3 = {8b ce 8b 1d 48 0e 41 00 2b c8 8a 09 c6 05 ac 0e 41 00 00 88 0d 1c 0e 41 00 8b 0d 1c 0e 41 00 81 e1 ff 00 00 00 d3 e3 89 1d 48 0e 41 00 33 db 8a 1c 30 2b cb 8b 1d 48 0e 41 00 d3 eb 83 f9 0b 89 0d 68 05 41 00 89 1d 48 0e 41 00 75 44 8b 15 70 05 41 00 6a 00 89 aa 00 10 00 00 a1 70 05 41 00 8b 0d 48 0e 41 00 8b 80 04 10 00 00 41 a3 70 05 41 00 89 0d 48 0e 41 00 89 a8 00 10 00 00 ff d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14226,6 +14843,7 @@ rule VirTool_Win32_Obfuscator_AIA_2147682461_0
         $x_1_1 = {33 db 8d bb 00 41 7a 00 b9 00 04 00 00 83 f9 00 74 0a 8a 07 34 55 49 88 07 47 75 f1 61 5e 87 fe ff d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14246,6 +14864,7 @@ rule VirTool_Win32_Obfuscator_AIB_2147682488_0
         $x_10_1 = "Coded by BRIAN KREBS for personal use only. I love my job" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14268,6 +14887,7 @@ rule VirTool_Win32_Obfuscator_AIC_2147682513_0
         $x_1_3 = {c7 45 e8 28 3a 00 00 c7 45 f0 31 62 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14288,6 +14908,7 @@ rule VirTool_Win32_Obfuscator_AID_2147682547_0
         $x_1_1 = {8a 5d 01 45 32 d9 88 5c 38 02 40 3b c6 7c ?? 85 ff c6 07 4d c6 47 01 5a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14310,6 +14931,7 @@ rule VirTool_Win32_Obfuscator_AIE_2147682557_0
         $x_1_3 = {8a 55 ff 88 95 ab f3 ff ff 8b 45 f0 8a 8d ab f3 ff ff 88 8c 05 b8 f3 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14330,6 +14952,7 @@ rule VirTool_Win32_Obfuscator_AIF_2147682602_0
         $x_1_1 = {8d 75 ef c6 45 e6 53 c6 45 e7 65 c6 45 e8 74 c6 45 e9 50 c6 45 ea 69 c6 45 eb 78 c6 45 ec 65 c6 45 ed 6c c6 45 ee 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14369,6 +14992,7 @@ rule VirTool_Win32_Obfuscator_AIG_2147682667_0
         $x_1_20 = {90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -14396,6 +15020,7 @@ rule VirTool_Win32_Obfuscator_AIH_2147682673_0
         $x_2_3 = {b8 53 00 00 00 8b 0d ?? ?? ?? 00 66 89 01 ba 4f 00 00 00 a1 ?? ?? ?? 00 66 89 50 02 b9 46 00 00 00 8b 15 ?? ?? ?? 00 66 89 4a 04 b8 54 00 00 00 8b 0d ?? ?? ?? 00 66 89 41 06 ba 57 00 00 00 a1 ?? ?? ?? 00 66 89 50 08 b9 41 00 00 00 8b 15 ?? ?? ?? 00 66 89 4a 0a b8 52 00 00 00 8b 0d ?? ?? ?? 00 66 89 41 0c ba 45 00 00 00 a1 ?? ?? ?? 00 66 89 50 0e b9 43 00 00 00 8b 15 ?? ?? ?? 00 66 89 4a 12 b8 6c 00 00 00 8b 0d ?? ?? ?? 00 66 89 41 14 ba 61 00 00 00 a1 ?? ?? ?? 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -14422,6 +15047,7 @@ rule VirTool_Win32_Obfuscator_AIJ_2147682764_0
         $x_1_3 = {45 4e 44 42 4c 4f 43 4b 64 00 00 00 63 00 00 00 72 65 74 79 6a 6b 6d 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14447,6 +15073,7 @@ rule VirTool_Win32_Obfuscator_AIK_2147682865_0
         $x_1_6 = {83 f8 10 eb 09 6a 00 6a ff e8 19 00 64 ff 30 64 89 20 68 00 01 00 00 8d 85 ?? ?? ff ff 50 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -14471,6 +15098,7 @@ rule VirTool_Win32_Obfuscator_AIL_2147682866_0
         $x_1_5 = {c7 85 58 ff ff ff 01 00 00 00 c7 c7 01 00 00 00 (90) (90) [0-16] c7 85 5c ff ff ff 01 00 00 00 (90) (90) [0-16] 31 c0 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -14493,6 +15121,7 @@ rule VirTool_Win32_Obfuscator_AIM_2147682917_0
         $x_1_3 = {0d 6f 79 47 65 74 44 65 76 43 61 70 73 57 00 00 57 00 69 00 6e 00 6d 00 6d 00 2e 00 64 00 6c 00 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14520,6 +15149,7 @@ rule VirTool_Win32_Obfuscator_AIN_2147682963_0
         $x_1_8 = {b8 44 44 44 00 b9 44 01 00 00 60 33 f6 8d b6 34 00 54 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -14544,6 +15174,7 @@ rule VirTool_Win32_Obfuscator_AIO_2147682972_0
         $x_1_1 = {40 00 b9 c8 00 00 00 30 06 46 e2 fb 8d 05 30 ?? 40 00 ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14566,6 +15197,7 @@ rule VirTool_Win32_Obfuscator_ADB_2147683253_0
         $x_1_3 = {41 6e 6f 74 68 65 72 53 74 72 69 6e 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14590,6 +15222,7 @@ rule VirTool_Win32_Obfuscator_ADB_2147683253_1
         $x_1_5 = {b8 e9 00 00 00 39 c1 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -14616,6 +15249,7 @@ rule VirTool_Win32_Obfuscator_ADB_2147683253_2
         $x_1_3 = "hour4house.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -14645,6 +15279,7 @@ rule VirTool_Win32_Obfuscator_ADB_2147683253_3
         $x_1_7 = "question6right.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -14674,6 +15309,7 @@ rule VirTool_Win32_Obfuscator_ADB_2147683253_4
         $x_1_6 = "pointbweek.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -14713,6 +15349,7 @@ rule VirTool_Win32_Obfuscator_ADB_2147683253_5
         $x_1_16 = {8b 49 48 89 4d ?? [0-64] 8b 6d 00 ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -14788,6 +15425,7 @@ rule VirTool_Win32_Obfuscator_ADB_2147683253_6
         $x_1_52 = {8b 40 4c 89 [0-43] 8b 40 50 89 [0-43] 8b 40 54 89 [0-43] 8b 41 44 89 [0-43] 8b 40 48}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_100_*))) or
@@ -14814,6 +15452,7 @@ rule VirTool_Win32_Obfuscator_WZ_2147683290_0
         $x_1_2 = {6a 40 8d 46 18 89 45 ?? 8b 40 38 68 00 30 00 00 50 6a 00 ff 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14835,6 +15474,7 @@ rule VirTool_Win32_Obfuscator_AIS_2147683348_0
         $x_1_2 = {6a 00 6a 00 68 00 04 00 00 ff 15 ?? ?? ?? ?? e8 ?? ?? ff ff 85 c0 75 13 8b 44 24 78 50 ff 15 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 8b f0 68 03 01 00 00 8d 8c 24 80 00 00 00 57 51 e8 ?? ?? 00 00 57 8d 94 24 8c 00 00 00 68 ?? ?? ?? ?? 52 89 2e ff d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14857,6 +15497,7 @@ rule VirTool_Win32_Obfuscator_AIT_2147683371_0
         $x_1_3 = "C:\\Ttdcs\\mbezCtm\\Brjibjwn\\Mbpzip\\mkWsK.shv" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14878,6 +15519,7 @@ rule VirTool_Win32_Obfuscator_AIU_2147683378_0
         $x_1_2 = {c7 45 f4 65 54 00 00 c7 45 f8 7a 0c 00 00 c7 45 fc df 34 00 00 8b 45 fc 8b 75 f8 69 c0 bf 09 00 00 33 d2 f7 f6 8b 55 f4 8b 75 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14899,6 +15541,7 @@ rule VirTool_Win32_Obfuscator_AIV_2147683405_0
         $x_1_2 = {89 45 f0 8b 45 fc 8b 40 28 03 45 f4 8b 55 f0 89 42 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14920,6 +15563,7 @@ rule VirTool_Win32_Obfuscator_AIW_2147683493_0
         $x_1_2 = {34 70 40 00 2b ?? 5c 71 40 00 [0-2] 30 70 40 00 03 ?? ?? 88 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14941,6 +15585,7 @@ rule VirTool_Win32_Obfuscator_AIX_2147683495_0
         $x_1_2 = {33 c0 66 8b 02 8b e8 81 e5 00 f0 00 00 81 fd 00 30 00 00 75 12 8b 29 25 ff 0f 00 00 03 c5 8b 2c 30 03 c6 03 ef 89 28 83 c2 02 4b 75 d3 8b 5c 24 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14962,6 +15607,7 @@ rule VirTool_Win32_Obfuscator_AIY_2147683601_0
         $x_1_2 = {64 8b 1d 18 00 00 00 89 1d [0-20] 8b ?? 30 ?? ?? ?? ?? ?? 8b ?? 0c a3 ?? ?? ?? ?? 8b ?? 1c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -14983,6 +15629,7 @@ rule VirTool_Win32_Obfuscator_AJA_2147683931_0
         $x_1_2 = {8b 7d fc 90 ff e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15005,6 +15652,7 @@ rule VirTool_Win32_Obfuscator_AJC_2147684140_0
         $x_1_3 = {b3 cd a1 b1 e5 fb 53 fa 2e ae 81 2b 5f db d7 1a 4e 31 62 31 65 bc b7 97 cb 11 43 6f a3 9d 97 14 48 f1 23 ed 21 7e 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -15025,6 +15673,7 @@ rule VirTool_Win32_Obfuscator_AJE_2147684267_0
         $x_1_1 = {8a 06 28 d8 aa 83 c6 01 49 83 f9 00 75 f2 8b 5c 24 04 89 d9 8b 5b 0c 89 d8 8b 5b 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15045,6 +15694,7 @@ rule VirTool_Win32_Obfuscator_AJF_2147684333_0
         $x_1_1 = {8d 37 8d 37 b9 22 00 00 00 42 81 fa 54 54 00 00 75 e8 08 00 33 d2 8d ba 00 00 60 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15069,6 +15719,7 @@ rule VirTool_Win32_Obfuscator_AJG_2147684356_0
         $x_1_5 = {51 8b 55 08 83 c2 04 52 68 00 00 20 00 8b 45 fc 50 68 02 01 00 00 ff 55 24 89 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -15093,6 +15744,7 @@ rule VirTool_Win32_Obfuscator_AJH_2147684368_0
         $x_1_5 = {81 ea 22 67 3f 7a 5a 0f 84 ?? ?? 00 00 52 81 ea 67 22 7a 3f 5a 0f 84 [0-8] 81 fa 28 6d 35 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15113,6 +15765,7 @@ rule VirTool_Win32_Obfuscator_AJK_2147684482_0
         $x_1_1 = {b9 a4 01 00 00 bb ?? ?? ?? ?? 31 1e 81 eb ?? ?? ?? ?? a5 e2 f5 83 c0 06 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15135,6 +15788,7 @@ rule VirTool_Win32_Obfuscator_AJM_2147684548_0
         $x_1_3 = {89 c3 ba 30 00 00 00 80 c3 02 81 f6 ?? ?? ?? ?? 31 f7 b9 ?? ?? ?? ?? 8a 06 00 d8 aa 83 c6 01 e2 f6 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15156,6 +15810,7 @@ rule VirTool_Win32_Obfuscator_AJN_2147684565_0
         $x_1_2 = {68 eb 2f 76 e0 e8 ?? ?? ?? ?? 68 5e ce d6 e9 89 45 e4 e8 ?? ?? ?? ?? 68 f2 79 36 18 89 45 e8 e8 ?? ?? ?? ?? 8b 7d 08 33 f6 89 45 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15177,6 +15832,7 @@ rule VirTool_Win32_Obfuscator_AJO_2147684628_0
         $x_1_2 = {b1 3f 3e 30 0c 06 40 92 92 87 e4 3b c7 8b ff 72 ef}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15197,6 +15853,7 @@ rule VirTool_Win32_Obfuscator_AJR_2147684686_0
         $x_1_1 = {58 48 50 8b c4 ff 10 06 00 ff 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15218,6 +15875,7 @@ rule VirTool_Win32_Obfuscator_AJP_2147684822_0
         $x_1_2 = {83 f9 6b 75 14 8d 0d 09 10 40 00 89 0d 00 09 41 00 8d 05 41 11 40 00 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15238,6 +15896,7 @@ rule VirTool_Win32_Obfuscator_AJU_2147684938_0
         $x_1_1 = {0f b6 f8 8d 7c 3d ?? 8a 17 80 f2 ?? 80 ea ?? 88 17 8b 55 ?? 8b 7d ?? 80 f2 ?? 80 ea ?? 02 c2 3c 08 72 dd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15260,6 +15919,7 @@ rule VirTool_Win32_Obfuscator_AJV_2147684960_0
         $x_1_3 = {68 33 00 32 00 68 65 00 6c 00 68 72 00 6e 00 68 6b 00 65 00 54 68 10 00 12 00 8b cc 6a 00 8b c4 6a 00 8b dc 53 51 50 6a 00 ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -15280,6 +15940,7 @@ rule VirTool_Win32_Obfuscator_AJY_2147685197_0
         $x_1_1 = {c6 04 17 41 eb ed 89 fb 89 f7 b9 ?? ?? ?? ?? 31 d2 ac 32 04 13 (42 aa|aa 42) 89 d0 31 d2 bd ?? ?? ?? ?? f7 f5 e2 ed}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15301,6 +15962,7 @@ rule VirTool_Win32_Obfuscator_AJZ_2147685233_0
         $x_1_2 = {66 8b 48 06 89 c2 81 c2 f8 00 00 00 ff 72 10 8b 42 14 03 45 f0 50 8b 42 0c 03 45 08 50 e8 ?? 00 00 00 83 c2 28 66 49 75 e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -15322,6 +15984,7 @@ rule VirTool_Win32_Obfuscator_AKB_2147685300_0
         $x_1_2 = {41 44 73 42 75 69 6c 64 45 6e 75 6d 65 72 61 74 6f 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15343,6 +16006,7 @@ rule VirTool_Win32_Obfuscator_AKC_2147685674_0
         $x_1_2 = {7c ac 8b 7e 34 3b df 74 74 8b 86 a0 00 00 00 85 c0 74 6a 8b 8e a4 00 00 00 85 c9 74 60}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15364,6 +16028,7 @@ rule VirTool_Win32_Obfuscator_AKD_2147685693_0
         $x_1_2 = {ac 3c c2 75 fb ac 3c 14 75 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15384,6 +16049,7 @@ rule VirTool_Win32_Obfuscator_AKE_2147686157_0
         $x_1_1 = {55 00 6e 00 69 00 78 00 20 00 66 00 69 00 6c 00 65 00 20 00 64 00 65 00 73 00 63 00 72 00 69 00 70 00 74 00 69 00 6f 00 6e 00 00 00 74 00 61 00 72 00 67 00 65 00 74 00 6a 00 6f 00 62 00 00 00 5c 5c 76 6d 77 61 72 65 2d 68 6f 73 74 3a 59 20 00 00 00 00 44 6f 6d 61 69 6e 42 69 67 53 70 61 63 65 20 72 65 73 75 6c 74 69 69 74 65 6d 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15404,6 +16070,7 @@ rule VirTool_Win32_Obfuscator_AKG_2147687030_0
         $x_1_1 = {64 a1 30 00 00 00 89 45 e4 58 8b 45 e4 83 78 64 02 73 07 33 c0 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15425,6 +16092,7 @@ rule VirTool_Win32_Obfuscator_AKG_2147687030_1
         $x_1_2 = "StormVirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -15447,6 +16115,7 @@ rule VirTool_Win32_Obfuscator_AKG_2147687030_2
         $x_1_3 = "StormVirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15467,6 +16136,7 @@ rule VirTool_Win32_Obfuscator_AKH_2147687070_0
         $x_1_1 = {8a 5c 3e 05 8d 74 3e 0a 8a 06 ?? d3 32 d0 8b 45 f8 83 c6 02 88 94 05 c4 f3 ff ff 40 3d ?? ?? ?? ?? 89 45 f8 7e e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15489,6 +16159,7 @@ rule VirTool_Win32_Obfuscator_AKK_2147687163_0
         $x_1_3 = {8b 86 8c 01 00 00 c1 e7 ?? 03 c7 eb 0a 80 f1 ?? 80 c1 ?? 88 08 40 42 8a 0a 80 f9 ?? 75 ef c6 00 00 8b 86 8c 01 00 00 03 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -15510,6 +16181,7 @@ rule VirTool_Win32_Obfuscator_AKP_2147688195_0
         $x_1_2 = {33 c0 8b c3 05 88 00 00 00 ff 10 85 d2 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15535,6 +16207,7 @@ rule VirTool_Win32_Obfuscator_AKQ_2147688263_0
         $x_1_6 = {46 75 63 6b 69 6e 67 20 4e 4f 44 33 32 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -15556,6 +16229,7 @@ rule VirTool_Win32_Obfuscator_AKR_2147688264_0
         $x_1_2 = {0f 31 2b 85 ?? ?? ff ff 89 85 ?? ?? ff ff (b8|c7 85)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15579,6 +16253,7 @@ rule VirTool_Win32_Obfuscator_AKU_2147688738_0
         $x_1_4 = {31 04 24 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -15599,6 +16274,7 @@ rule VirTool_Win32_Obfuscator_AKV_2147688770_0
         $x_1_1 = {68 e4 a9 52 09 8b 45 ?? 50 e8 ?? ?? ?? ?? 83 c4 08 89 45 ?? 83 7d ?? 00 74 ?? c7 45 13 00 64 a1 30 00 00 00 8b 40 0c 8b 40 1c 8b 40 08 89 45 ?? 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15619,6 +16295,7 @@ rule VirTool_Win32_Obfuscator_AKW_2147688813_0
         $x_1_1 = {68 21 43 34 12 b9 ff ff ff 77 8b 44 24 00 f7 d0 c1 c8 03 2b c1 89 04 24 49 75 ef 58 35}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15640,6 +16317,7 @@ rule VirTool_Win32_Obfuscator_AKX_2147688898_0
         $x_1_2 = {c3 4a 23 c2 90 f7 d2 42 03 c2 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15664,6 +16342,7 @@ rule VirTool_Win32_Obfuscator_AJB_2147689129_0
         $x_1_5 = {8b d0 8b 45 f8 0f b6 44 18 ff 33 d0 8d 45 f4 e8 ?? ?? ?? ?? 8b 55 f4 8b c7 e8 ?? ?? ?? ?? 83 c6 02 43 8b 45 f8 e8 ?? ?? ?? ?? 3b d8 7e 05 bb 01 00 00 00 8b 45 fc e8 ?? ?? ?? ?? 3b f0 7e 96}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15686,6 +16365,7 @@ rule VirTool_Win32_Obfuscator_ALA_2147689170_0
         $x_2_3 = {f3 a9 94 9d 9c 90 cd cd 51 db b3 83 f7 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15709,6 +16389,7 @@ rule VirTool_Win32_Obfuscator_ALA_2147689170_1
         $x_1_4 = {88 08 8b 45 f0 c1 e8 10 25 ff ff 00 00 0f b7 c0 89 45 e0 8b 45 f0 25 ff ff 00 00 0f b7 c0 25 ff 00 00 00 0f b6 c0 0f af 45 e0 03 45 f0 03 45 e0 89 45 e0 8b 45 e0 05 17 54 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -15739,6 +16420,7 @@ rule VirTool_Win32_Obfuscator_ALB_2147689207_0
         $x_1_8 = {24 08 ba 00 04 00 00 89 54 24 04 89 0c 24 ff d0 83 ec 10 31 c0 89 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_5_*))) or
@@ -15763,6 +16445,7 @@ rule VirTool_Win32_Obfuscator_ALF_2147689711_0
         $x_10_1 = {51 53 8b c1 56 c7 44 24 08 00 00 00 00 bb ?? ?? ?? ?? 8d 70 01 8a 10 83 c0 01 84 d2 75 f7 2b c6 8b f0 33 c0 85 f6 7e 0a 30 1c 08 83 c0 01 3b c6 7c f6 8b c1 c7 47 18 0f 00 00 00 c7 47 14 00 00 00 00 c6 47 04 00 8d 70 01 8d a4 24 00 00 00 00 8a 10 83 c0 01 84 d2 75 f7 2b c6 50 51 8b cf e8 1c fc ff ff 5e 8b c7 5b 59 c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15783,6 +16466,7 @@ rule VirTool_Win32_Obfuscator_ALM_2147690521_0
         $x_1_1 = {68 13 8e c0 09 50 e8 ?? ?? 00 00 8b 4d ?? 68 ee 38 83 0c 51 a3 ?? ?? 40 00 e8 ?? ?? 00 00 68 f2 5d d3 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15830,6 +16514,7 @@ rule VirTool_Win32_Obfuscator_ALM_2147690521_1
         $x_1_28 = {68 cc 04 7f 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((25 of ($x_1_*))) or
             ((1 of ($x_5_*) and 20 of ($x_1_*))) or
@@ -15860,6 +16545,7 @@ rule VirTool_Win32_Obfuscator_ALO_2147690831_0
         $x_1_3 = {03 d0 c6 45 ?? 47 c6 45 ?? 41 c6 45 ?? 50 8b 42 ?? 48 83 f8 00 72 5f 8b 72 ?? 03 37 8b c8 c1 e1 02 03 f1 8b 4e ?? 03 0f 8a 49 03 3a 4d ?? 75 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15880,6 +16566,7 @@ rule VirTool_Win32_Obfuscator_GTK_2147690940_0
         $x_1_1 = {53 89 e3 81 ec 80 00 00 00 89 e6 46 89 f7 [0-8] 6a 01 e8 ?? ?? ff ff 83 c4 04 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15903,6 +16590,7 @@ rule VirTool_Win32_Obfuscator_ALR_2147691866_0
         $x_1_4 = {83 ec 04 48 3d 0a 02 00 00 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -15924,6 +16612,7 @@ rule VirTool_Win32_Obfuscator_ALS_2147691928_0
         $x_1_2 = {8a 1b 3a 5f 02 75 ?? 89 b5 ?? ?? ?? ?? 83 c1 02 83 c1 14 8b d1 8b 85 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15945,6 +16634,7 @@ rule VirTool_Win32_Obfuscator_ALV_2147692578_0
         $x_1_2 = {83 f8 16 74 02 33 c0 83 c0 01 33 d0 8b d1 83 45 ?? 21 83 75 ?? 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15966,6 +16656,7 @@ rule VirTool_Win32_Obfuscator_ALX_2147693919_0
         $x_1_2 = {8b 42 08 89 45 e0 8b 4d f0 8b 51 0c 89 55 e8 ff 75 e8 ff 75 e0 ff 75 dc ff 75 e4 8b 45 fc ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -15997,6 +16688,7 @@ rule VirTool_Win32_Obfuscator_ALY_2147693922_0
         $x_3_12 = {ff 46 70 8b ?? 04 0f b7 ?? 06 39 ?? 70}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16018,6 +16710,7 @@ rule VirTool_Win32_Obfuscator_AMD_2147694151_0
         $x_1_2 = {8b 55 08 25 ff ff 00 00 8a 44 45 d8 8a 1c 11 32 d8 88 1c 11}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16038,6 +16731,7 @@ rule VirTool_Win32_Obfuscator_AME_2147694240_0
         $x_1_1 = {6a 00 ff d6 8b 45 f4 8a 0c 38 ff 05 ?? ?? ?? ?? 2a cb 80 f1 3f 02 cb 6a 00 88 0f ff d6 47 ff 4d fc 75 dd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16059,6 +16753,7 @@ rule VirTool_Win32_Obfuscator_AMI_2147694469_0
         $x_1_2 = {89 4b 10 89 43 0c 89 7b 08 89 73 04 66 8b 85 ?? ?? ?? ?? 0f b7 c8 89 0b ff d2 83 ec 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16080,6 +16775,7 @@ rule VirTool_Win32_Obfuscator_AMK_2147695001_0
         $x_1_2 = {55 8b ec b8 ?? ?? ?? ?? 6a 0f 03 c1 50 59 58 8f 05 ?? ?? ?? ?? 51 8b c8 41 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16101,6 +16797,7 @@ rule VirTool_Win32_Obfuscator_AML_2147695213_0
         $x_1_2 = {8b d0 50 56 bf ?? ?? ?? ?? 57 53 b8 1c 00 00 00 e8 10 00 b9 (16|2d|2f) 0d 00 00 a1 ?? ?? ?? ?? 50 b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16126,6 +16823,7 @@ rule VirTool_Win32_Obfuscator_AMM_2147695375_0
         $x_1_6 = {8b 55 f4 0f b6 14 02 33 57 04 8b 4d f4 88 14 01 40 4e 75 ec 8b 07 89 45 ec e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -16156,6 +16854,7 @@ rule VirTool_Win32_Obfuscator_AMO_2147695409_0
         $x_1_11 = {ba 24 9e 93 83}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -16178,6 +16877,7 @@ rule VirTool_Win32_Obfuscator_BZA_2147695430_0
         $x_1_3 = {33 c0 c6 45 ?? 46 c6 45 ?? 75 c6 45 ?? 63 c6 45 ?? 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16202,6 +16902,7 @@ rule VirTool_Win32_Obfuscator_AMQ_2147695454_0
         $x_1_5 = {33 50 04 87 d1 5a 51 51 83 04 24 f8 59 d1 e9 50 83 04 24 08 58 eb 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -16224,6 +16925,7 @@ rule VirTool_Win32_Obfuscator_AMR_2147695543_0
         $x_2_3 = {ff 4d 5a a0 17 03 00 00 00 ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16245,6 +16947,7 @@ rule VirTool_Win32_Obfuscator_AMV_2147696032_0
         $x_1_2 = {8b 48 08 8b 50 04 89 4d e8 89 55 ec 8b 45 08 50 8d 4d cc 51 ff 55 0c 83 c4 08 8d 4d cc e8 9f 27 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16267,6 +16970,7 @@ rule VirTool_Win32_Obfuscator_AMY_2147696073_0
         $x_2_3 = {8b 45 0c 2b 45 10 (05|2b|2d) ?? ?? ?? ?? 89 45 fc 68 ?? ?? 41 00 6a (06|2d|2f) 68 ?? ?? 41 00 b9 01 00 00 00 69 d1 ?? ?? 00 00 81 c2 ?? ?? 40 00 ff d2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -16292,6 +16996,7 @@ rule VirTool_Win32_Obfuscator_BZB_2147696172_0
         $x_1_2 = {8b 45 fc 33 c9 8a 88 ?? ?? ?? ?? 83 f1 30 8b 55 fc 88 8a ?? ?? ?? ?? 8b 45 fc 33 c9 8a 88 ?? ?? ?? ?? 83 e9 30 8b 55 fc 88 8a ?? ?? ?? ?? d9 05 ?? ?? ?? ?? d8 05 ?? ?? ?? ?? d8 05 ?? ?? ?? ?? d8 05 ?? ?? ?? ?? d9 1d ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16313,6 +17018,7 @@ rule VirTool_Win32_Obfuscator_BZC_2147696174_0
         $x_1_2 = {33 d2 b8 49 00 00 00 f7 f1 ba 2e 06 00 00 2b d0 b8 4d 5a 00 00 89 15 ?? ?? ?? ?? 66 39 45 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16335,6 +17041,7 @@ rule VirTool_Win32_Obfuscator_ANA_2147696206_0
         $x_1_3 = {83 7d 0c 01 0f 84 ?? ?? 00 00 83 7d 0c 02 0f 84 ?? ?? 00 00 81 7d 0c 13 01 00 00 0f 84 ?? ?? 00 00 83 7d 0c 05 0f 84 ?? ?? 00 00 81 7d 0c 95 05 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16357,6 +17064,7 @@ rule VirTool_Win32_Obfuscator_AOA_2147696259_0
         $x_1_3 = {8b 48 3c 81 e1 ff ff 00 00 41 83 c0 77 03 c1 8b 00 5e 8b fe 03 f0 59 8b 04 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16378,6 +17086,7 @@ rule VirTool_Win32_Obfuscator_ANB_2147696309_0
         $x_1_2 = {0f c8 03 c2 5a ab 83 e9 07 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16399,6 +17108,7 @@ rule VirTool_Win32_Obfuscator_BZD_2147696380_0
         $x_1_2 = {b9 4d 5a 00 00 dc 05 ?? ?? ?? ?? dc 0d ?? ?? ?? ?? dc 2d ?? ?? ?? ?? d9 1d ?? ?? ?? ?? 66 39 08 75 ?? 53 8b 58 3c 03 d8 81 3b 50 45 00 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16420,6 +17130,7 @@ rule VirTool_Win32_Obfuscator_BZE_2147696424_0
         $x_1_2 = {b9 4d 5a 00 00 dc 25 ?? ?? ?? ?? d9 1d ?? ?? ?? ?? 66 39 08 75 dd 53 8b 58 3c 03 d8 81 3b 50 45 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16440,6 +17151,7 @@ rule VirTool_Win32_Obfuscator_ANJ_2147696462_0
         $x_1_1 = {52 74 6c 44 c7 45 ?? 65 63 6f 6d c7 45 ?? 70 72 65 73 c7 45 ?? 73 42 75 66 66 c7 45 ?? 66 65 c6 45 ?? 72 c6 45 ?? 00 c7 45 ?? 6e 74 64 6c c7 45 ?? 6c 2e 64 6c c6 45 ?? 6c c6 45 ?? 00 60 e8 00 00 00 00 58 66 b8 00 00 66 bb 4d 5a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16465,6 +17177,7 @@ rule VirTool_Win32_Obfuscator_ANK_2147696480_0
         $x_1_6 = {2b 2f 00 47 65 74 50 72 6f 63 41 64 64 72 65 73 73 00 47 65 74 4d 6f 64 75 6c 65 48 61 6e 64 6c 65 41 00 4b 65 72 6e 65 6c 33 32 2e 64 6c 6c 00 53 68 65 6c 6c 33 32 2e 64 6c 6c 00 56 69 72 74 75 61 6c 50 72 6f 74 65 63 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -16486,6 +17199,7 @@ rule VirTool_Win32_Obfuscator_ANM_2147696642_0
         $x_1_2 = {8a 03 8b 95 ?? ?? ?? ?? 0f af d6 2b c2 88 85 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16507,6 +17221,7 @@ rule VirTool_Win32_Obfuscator_ANM_2147696642_1
         $x_1_2 = {33 c0 8a 03 8b 95 d4 b1 ff ff 8d 14 92 0f af d6 2b c2 88 85 da b1 ff ff eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16529,6 +17244,7 @@ rule VirTool_Win32_Obfuscator_ANM_2147696642_2
         $x_1_3 = {8a 03 8b 95 ?? ?? ?? ?? 0f af d6 2b c2 88 85 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -16552,6 +17268,7 @@ rule VirTool_Win32_Obfuscator_ANM_2147696642_3
         $x_1_4 = {33 c0 8a 03 8b 95 ?? ?? ff ff 8d 14 92 0f af d6 2b c2 88 85 ?? ?? ff ff eb 41}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -16573,6 +17290,7 @@ rule VirTool_Win32_Obfuscator_ANR_2147696837_0
         $x_1_2 = {74 12 ad 50 2d ?? ?? ?? ?? 0f c8 03 c2 5a ab 83 e9 03 e2 ?? 61 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16594,6 +17312,7 @@ rule VirTool_Win32_Obfuscator_BZF_2147696849_0
         $x_1_2 = {b9 4d 5a 00 00 d9 1d ?? ?? ?? 10 d9 05 ?? ?? ?? 10 d9 1d ?? ?? ?? 10 66 39 08 75 da 53 8b 58 3c 03 d8 81 3b 50 45 00 00 74 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16615,6 +17334,7 @@ rule VirTool_Win32_Obfuscator_ANS_2147696858_0
         $x_1_2 = {4b 83 c3 01 4b 83 c3 01 4b 83 c3 01 4b 83 c3 01 4e 46 4b 83 c3 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16636,6 +17356,7 @@ rule VirTool_Win32_Obfuscator_ANU_2147696970_0
         $x_1_2 = {47 43 99 7d 81 3d ?? ?? ?? 10 ee ab ed fe 75 05 e9 d0 f8 ff ff 06 00 81 05 ?? ?? ?? 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16661,6 +17382,7 @@ rule VirTool_Win32_Obfuscator_BZG_2147696973_0
         $x_10_6 = {c1 c8 19 0f be c9 31 c8 83 c2 01 0f b6 0a 84 c9 75 ee}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -16686,6 +17408,7 @@ rule VirTool_Win32_Obfuscator_BZH_2147696976_0
         $x_1_3 = {8b 45 0c 25 ff ff 00 00 0f b7 c0 25 ff 00 00 00 50 8b 45 08 03 45 fc 0f b6 00 50 e8 ?? fe ff ff 59 59 8b 4d 08 03 4d fc 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -16707,6 +17430,7 @@ rule VirTool_Win32_Obfuscator_ANV_2147697002_0
         $x_1_2 = {df e0 f6 c4 41 75 16 68 ?? ?? ?? ?? 6a 00 8d 94 24 ?? ?? 00 00 ff d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16728,6 +17452,7 @@ rule VirTool_Win32_Obfuscator_ANV_2147697002_1
         $x_1_2 = {b8 4d 5a 00 00 d9 1d ?? ?? ?? 10 66 39 45 00 74 17 81 3d ?? ?? ?? 10 00 36 00 00 75 07 c6 05 ?? ?? ?? 10 4a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16749,6 +17474,7 @@ rule VirTool_Win32_Obfuscator_ANW_2147697077_0
         $x_1_2 = {ff 45 f4 81 7d f4 ?? ?? ?? (01|2d|ff) 75 (d8|2d|f0) 20 00 [0-32] 90 90 [0-24] ff 45 f4 81 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16769,6 +17495,7 @@ rule VirTool_Win32_Obfuscator_ANX_2147697148_0
         $x_1_1 = {47 66 66 66 66 66 66 2e 0f 1f 84 00 00 00 00 00 0f be c0 0f b7 c0 89 04 24 89 f1 e8 ?? ?? ?? ?? 83 ec 04 8a 07 47 84 c0 75 e6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16795,6 +17522,7 @@ rule VirTool_Win32_Obfuscator_ANY_2147697166_0
         $x_1_7 = {6a 58 5a 0f 44 c2 a2 ?? ?? ?? ?? a1 ?? ?? ?? ?? 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -16821,6 +17549,7 @@ rule VirTool_Win32_Obfuscator_ANZ_2147697168_0
         $x_1_3 = {66 81 fd 00 fe 0f 82 ?? ?? ?? ?? 8b ?? 81 ?? 00 08 00 00 76 08 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16841,6 +17570,7 @@ rule VirTool_Win32_Obfuscator_AOE_2147697201_0
         $x_1_1 = {53 8b d8 56 53 51 8b 0f 8b 06 46 33 c8 8b c1 aa 59 4b 74 07 49 75 ee 5b 5e 5b c3 5b 2b f3 53 eb f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16864,6 +17594,7 @@ rule VirTool_Win32_Obfuscator_AOC_2147697203_0
         $x_3_4 = "\\Lot\\provides\\temporary\\URI\\miti.pdb" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -16887,6 +17618,7 @@ rule VirTool_Win32_Obfuscator_AOF_2147697206_0
         $x_1_1 = {8b 45 0c 25 ff ff 00 00 0f b7 c0 25 ff 00 00 00 50 8b 45 08 03 45 fc 0f b6 00 50 e8 ?? ?? ff ff 59 59 8b 4d 08 03 4d fc 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16908,6 +17640,7 @@ rule VirTool_Win32_Obfuscator_AOG_2147697207_0
         $x_1_2 = {6b 88 5c 24 ?? c6 44 24 ?? 72 c6 44 24 ?? 6e 88 5c 24 ?? c6 44 24 ?? 6c c6 44 24 ?? 33 c6 44 24 ?? 32 c6 44 24 ?? 2e c6 44 24 ?? 64 c6 44 24 ?? 6c c6 44 24 ?? 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16929,6 +17662,7 @@ rule VirTool_Win32_Obfuscator_AOH_2147697220_0
         $x_1_2 = {66 81 fd 00 fe 89 ec 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16949,6 +17683,7 @@ rule VirTool_Win32_Obfuscator_AOH_2147697220_1
         $x_1_1 = {8b f9 79 0c dd 05 ?? ?? ?? ?? dd 05 ?? ?? ?? ?? d9 c1 d8 e1 d8 c1 d8 c1 d8 c1 d8 e1 d8 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16970,6 +17705,7 @@ rule VirTool_Win32_Obfuscator_AOD_2147697226_0
         $x_1_2 = {df e0 f6 c4 41 75 ?? 68 ?? ?? ?? ?? 6a 00 8d 8d ?? ?? ff ff ff d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -16991,6 +17727,7 @@ rule VirTool_Win32_Obfuscator_AOI_2147697268_0
         $x_1_2 = {eb 0f 8b 85 ?? ?? ff ff 83 c0 01 89 85 00 ff ff 81 bd 00 ff ff ?? ?? ?? ?? 7d 11 8b 8d 00 ff ff 83 c1 01 89 8d 00 ff ff eb d4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17011,6 +17748,7 @@ rule VirTool_Win32_Obfuscator_AOJ_2147697277_0
         $x_1_1 = {33 c0 b2 32 85 f6 74 0d 30 14 38 8d 0c 38 40 fe c2 3b c6 72 f3 81 fb ff ff 01 00 74 0b 43 81 fb 00 00 00 01 7c da eb 15 33 c9 b2 33 85 f6 74 0d 30 14 39 8d 04 39 41 fe c2 3b ce 72 f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17031,6 +17769,7 @@ rule VirTool_Win32_Obfuscator_AOK_2147697278_0
         $x_1_1 = {56 8b 74 24 08 83 fe 08 7e ?? ff 15 ?? ?? ?? ?? 6a 2c ff 15 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 03 c1 8a 4c 24 10 03 c6 8a 10 32 d1 88 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17051,6 +17790,7 @@ rule VirTool_Win32_Obfuscator_AOP_2147697289_0
         $x_1_1 = {0f b6 08 83 e9 53 8b 55 e8 03 55 a4 88 0a eb d9 c7 45 fc ee ff 00 00 ff 75 ec 8b 45 e8 89 45 cc ff 55 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17072,6 +17812,7 @@ rule VirTool_Win32_Obfuscator_AOP_2147697289_1
         $x_1_2 = {ff d0 6a 40 68 00 30 00 00 [0-24] ff 54 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17092,6 +17833,7 @@ rule VirTool_Win32_Obfuscator_AON_2147697412_0
         $x_1_1 = {66 c7 00 6a 30 66 c7 40 02 5e 64 66 c7 40 04 ad 8b 66 c7 40 06 40 10 66 c7 40 08 8b 70 66 c7 40 0a 3c 0f 66 c7 40 0c b7 48 66 c7 40 0e 38 8b 66 c7 40 10 7c 24 66 c7 40 12 04 89 66 c7 40 14 4f fc 66 c7 40 16 fc f3 66 c7 40 18 a4 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17113,6 +17855,7 @@ rule VirTool_Win32_Obfuscator_AOR_2147697718_0
         $x_1_2 = {df e0 f6 c4 41 75 ?? 68 ?? ?? ?? ?? 8d 85 ?? ?? ff ff ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17135,6 +17878,7 @@ rule VirTool_Win32_Obfuscator_AOT_2147697783_0
         $x_1_3 = {2b 45 f8 05 ?? ?? ?? ?? a2 ?? ?? ?? ?? c6 05 ?? ?? ?? ?? ?? 0f b6 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -17157,6 +17901,7 @@ rule VirTool_Win32_Obfuscator_AOT_2147697783_1
         $x_1_3 = {7e 07 03 f1 41 3b ca 7c f9 [0-48] 81 e2 ff 01 00 00 03 c2 [0-48] ff 15 ?? ?? ?? ?? 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -17178,6 +17923,7 @@ rule VirTool_Win32_Obfuscator_APA_2147705495_0
         $x_1_2 = {e8 00 00 00 00 5b [0-64] (70|2d|7f) 06 (70|2d|7f) 04 [0-64] (70|2d|7f) 06 (70|2d|7f) 04 [0-127] 64 a1 30 00 00 00 [0-255] 8b 83 ?? ?? 00 00 50 ff 93 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -17200,6 +17946,7 @@ rule VirTool_Win32_Obfuscator_APB_2147705526_0
         $x_1_3 = {68 39 00 00 00 68 30 00 00 00 e8 ?? ?? ?? ?? 68 01 01 00 80}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17222,6 +17969,7 @@ rule VirTool_Win32_Obfuscator_APC_2147705592_0
         $x_1_3 = {7d 11 ff 55 ?? ff 55 00 8b 4d fc 83 c1 01 89 4d fc 80 00 [0-64] c6 45 e0 ?? c6 45 e1 ?? c6 45 e2 ?? c6 45 e3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -17243,6 +17991,7 @@ rule VirTool_Win32_Obfuscator_BZI_2147705722_0
         $x_2_2 = {d8 e2 80 f1 ?? 80 e9 ?? 88 88 ?? ?? ?? 10 d8 e1 40 d9 1d ?? ?? ?? 10 3d 00 2c 00 00 72 d6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17266,6 +18015,7 @@ rule VirTool_Win32_Obfuscator_AOS_2147705746_0
         $x_1_4 = {8b 45 f8 ff 45 f8 47 47 40 47 47 8b 4d f4 3b c1 72 c3 8b 45 f8 3b 45 f4 73 24 4e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -17290,6 +18040,7 @@ rule VirTool_Win32_Obfuscator_AOV_2147705758_0
         $x_1_5 = {8b 3f 81 ef 10 08 00 00 0f 86 ?? ?? ?? ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -17311,6 +18062,7 @@ rule VirTool_Win32_Obfuscator_AOX_2147705789_0
         $x_1_2 = {6a 00 6a 00 6a 00 [0-16] 6a 00 6a 00 6a 00 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17333,6 +18085,7 @@ rule VirTool_Win32_Obfuscator_AOY_2147705795_0
         $x_1_3 = {8a 11 88 14 03 8b 4d f8 8b 54 8d ac 42 89 54 8d ac 41 83 f9 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -17353,6 +18106,7 @@ rule VirTool_Win32_Obfuscator_APF_2147705828_0
         $x_1_1 = {6a 08 58 69 c0 ?? ?? 00 00 8b 4d ?? dd 05 ?? ?? 40 00 dd 1c 01 6a 08 58 69 c0 ?? ?? 00 00 8b 4d ?? dd 05 ?? ?? 40 00 dd 1c 01 6a 08 58 69 c0 ?? ?? 00 00 8b 4d ?? dd 05 ?? ?? 40 00 dd 1c 01 6a 08 58 69 c0 ?? ?? 00 00 8b 4d ?? dd 05 ?? ?? 40 00 dd 1c 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17374,6 +18128,7 @@ rule VirTool_Win32_Obfuscator_APM_2147705849_0
         $x_1_2 = {8b c6 46 41 8b 00 fe c0 3c 01 75 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17394,6 +18149,7 @@ rule VirTool_Win32_Obfuscator_APM_2147705849_1
         $x_1_1 = {73 16 8d 45 9c [0-24] eb d9 8b ?? 9c ff 02 02 01 65 9c e2 c7 45 c8 00 00 00 00 8b 4d fc 51 e8 ?? ?? ff ff 5f 5e 5b 8b e5 5d c2 04 00 55 8b ec a1 ?? ?? 40 00 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17416,6 +18172,7 @@ rule VirTool_Win32_Obfuscator_APM_2147705849_2
         $x_1_3 = {54 5f 41 89 07 51 58 [0-16] 8b 06 03 f2 89 07 03 fa e2 f6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -17442,6 +18199,7 @@ rule VirTool_Win32_Obfuscator_APM_2147705849_3
         $x_1_4 = {8b c8 41 8b 06 46 3c 00 75 f8 49 89 4d ?? 8b c1 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -17468,6 +18226,7 @@ rule VirTool_Win32_Obfuscator_APM_2147705849_4
         $x_1_3 = {47 8b 47 3b 4a 4f 23 c2 [0-24] 83 c1 77 03 c1 8b 00 5e 8b fe 03 f0 59 [0-32] 8b 04 31 03 f8 8b 46 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -17490,6 +18249,7 @@ rule VirTool_Win32_Obfuscator_APN_2147705920_0
         $x_1_3 = {d3 fa 8b ca d3 f8 a3 ?? ?? ?? ?? e8 ?? ?? ?? ff e8 ?? ?? ?? ff e8 ?? ?? ?? ff e8 ?? ?? ?? ff e8 ?? ?? ?? ff e8 ?? ?? ?? 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -17512,6 +18272,7 @@ rule VirTool_Win32_Obfuscator_APO_2147705998_0
         $x_1_3 = {8b 45 10 8b 65 08 8b 6d 0c ff e0 8b e5 5d c2 0c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17535,6 +18296,7 @@ rule VirTool_Win32_Obfuscator_APR_2147706040_0
         $x_1_4 = {6a 40 68 00 30 00 00 56 57 ff 15 ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17556,6 +18318,7 @@ rule VirTool_Win32_Obfuscator_APT_2147706071_0
         $x_1_2 = {6c 0c 00 43 74 ff 4b 4a 00 6c 74 ff f4 01 f4 ff fe 5d 20 00 f4 01 f4 01 0b 00 00 04 00 e7 04 74 ff f5 00 00 00 00 fc 76 f4 01 fd 3d 6c 74 ff f5 00 00 00 00 fb 3d 1c 3f 00 ff 2f 10 00 02 00 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17577,6 +18340,7 @@ rule VirTool_Win32_Obfuscator_APU_2147706121_0
         $x_1_2 = {8b b5 34 ff ff ff 89 f7 8b 85 44 ff ff ff bb 04 00 00 00 f6 f3 89 c1 8b 9d 54 ff ff ff ad 31 d8 ab e2 fa ff a5 34 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17597,6 +18361,7 @@ rule VirTool_Win32_Obfuscator_APX_2147706130_0
         $x_1_1 = {8b 3f 2b d2 81 c2 ?? ?? ?? ?? 2b d2 81 c2 00 [0-16] 89 7d fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17618,6 +18383,7 @@ rule VirTool_Win32_Obfuscator_APX_2147706130_1
         $x_1_2 = {84 c9 74 0c fe c1 88 08 8a 48 01 40 84 c9 75 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17639,6 +18405,7 @@ rule VirTool_Win32_Obfuscator_APX_2147706130_2
         $x_1_2 = {2b f6 81 c6 ?? ?? 00 00 81 ef 00 00 00 46}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17659,6 +18426,7 @@ rule VirTool_Win32_Obfuscator_APX_2147706130_3
         $x_1_1 = {e8 8b 45 ec 03 45 f0 89 45 ec [0-255] 68 ?? 34 00 00 e8 ?? ?? ?? ff [0-3] 8b (75|7d) ec [0-8] 81 (c0|2d|c7) ?? ?? ?? ?? (56|57) [0-3] 07 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17679,6 +18447,7 @@ rule VirTool_Win32_Obfuscator_APZ_2147706135_0
         $x_1_1 = {8b 4d 10 8b c9 8b 65 08 8b c9 8b 6d 0c ff e1 8b e5 5d c2 0c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17699,6 +18468,7 @@ rule VirTool_Win32_Obfuscator_AQC_2147706168_0
         $x_1_1 = {89 55 d0 8b 45 d0 2d ?? ?? ?? ?? 89 45 ec 8b 45 d0 2d ?? ?? ?? ?? 89 45 e0 8b 15 ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 55 e8 8b 45 0c 81 ea ?? ?? ?? ?? 8b 55 d0 81 c2 ?? ?? ?? ?? 23 c2 74 12 00 55 8b ec 83 ec 3c 8b 15 ?? ?? ?? ?? 81 ea}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17720,6 +18490,7 @@ rule VirTool_Win32_Obfuscator_AQB_2147706174_0
         $x_1_2 = {8b 0d 70 c1 40 00 b8 24 77 00 00 33 d2 f7 f1 8b 0d ?? ?? ?? ?? 8d 84 01 15 7a 00 00 c2 18 00 66 a1 ?? ?? ?? ?? b9 bd 29 00 00 66 2b c8 69 c9 17 77 00 00 66 8b c1 c2 14 00 8a 0d ?? ?? ?? ?? a1 ?? ?? ?? ?? d3 e8 8b 0d ?? ?? ?? ?? 2b c1 c1 e8 1b c2 1c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17741,6 +18512,7 @@ rule VirTool_Win32_Obfuscator_AQD_2147706175_0
         $x_1_2 = {66 89 4d f8 83 7d 14 78 7e 0e 0f bf 55 f8 81 f2 1c 3a 00 00 66 89 55 f8 81 7d 14 ec 00 00 00 7c 0d 0f bf 45 f8 25 27 69 00 00 66 89 45 f8 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17763,6 +18535,7 @@ rule VirTool_Win32_Obfuscator_AQE_2147706186_0
         $x_1_3 = {52 65 66 6c 65 63 74 2e 64 6c 6c 00 (41|2d|5a) [0-48] (41|2d|5a) [0-48] 2e 64 6c 6c 00 (41|2d|5a) [0-48] (41|2d|5a) [0-48] 2e 64 6c 6c 00 (41|2d|5a) [0-48] (41|2d|5a) [0-48] 2e 64 6c 6c 00 (41|2d|5a) [0-48] (41|2d|5a) [0-48] 2e 64 6c 6c 00 (41|2d|5a) [0-48] (41|2d|5a) [0-48] 2e 64 6c 6c 00 (41|2d|5a) [0-48] (41|2d|5a) [0-48] 2e 64 6c 6c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17786,6 +18559,7 @@ rule VirTool_Win32_Obfuscator_AQF_2147706190_0
         $x_1_4 = {8b 8d ec fe ff ff 8d 54 01 3e 66 89 95 dc fe ff ff 8b 45 f0 50 6a 40 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -17806,6 +18580,7 @@ rule VirTool_Win32_Obfuscator_APG_2147706271_0
         $x_1_1 = {0f b6 44 24 ?? 3c ?? 75 02 eb 1c 00 ff 15 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17827,6 +18602,7 @@ rule VirTool_Win32_Obfuscator_APH_2147706283_0
         $x_2_2 = {0f 31 89 55 f4 89 45 f0 ff 15 ?? ?? ?? ?? 0f 31 89 55 fc 89 45 f8 8b 45 f8 2b 45 f0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17848,6 +18624,7 @@ rule VirTool_Win32_Obfuscator_API_2147706290_0
         $x_1_2 = {83 c7 04 83 e9 04 8b 02 83 c2 04 89 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17870,6 +18647,7 @@ rule VirTool_Win32_Obfuscator_API_2147706290_1
         $x_2_3 = {e8 00 00 00 00 5b 89 de 81 eb ?? ?? ?? ?? 83 ee 05 8d 93 ?? ?? ?? ?? b9 ae 00 00 00 80 32 ?? 42 e2 fa}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -17894,6 +18672,7 @@ rule VirTool_Win32_Obfuscator_APJ_2147706364_0
         $x_1_2 = {31 13 ff 33 [0-3] 8f 05 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? [0-1] 31 13 83 eb 08 3d ac 04 00 00 73 08 83 c0 04 83 c3 04 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17917,6 +18696,7 @@ rule VirTool_Win32_Obfuscator_BZL_2147706508_0
         $x_1_4 = {89 07 58 47 48 47 47 47 (ab|6a) 5a 8b 06 (03 f2 89 07|89 07 03 fa) 49 75 f5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -17938,6 +18718,7 @@ rule VirTool_Win32_Obfuscator_BZM_2147706515_0
         $x_1_2 = {3d 00 00 09 00 0f 87 ?? 00 00 00 ba ?? ?? ?? ?? 3b c2 0f 87 ?? 00 00 00 cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17958,6 +18739,7 @@ rule VirTool_Win32_Obfuscator_APP_2147706556_0
         $x_1_1 = {ba 30 8d 01 00 52 f4 80 2d ?? ?? ?? ?? 36 5a 83 25 ?? ?? ?? ?? ?? 83 ea 01 75 ea}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -17979,6 +18761,7 @@ rule VirTool_Win32_Obfuscator_BZN_2147706687_0
         $x_1_2 = {8a 06 5e 59 4a 04 f9 8a d9 fe cb d1 cb 81 e3 00 00 00 a0 d1 c3 32 c3 34 f6 88 44 0e ff 83 e9 01 83 f9 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18000,6 +18783,7 @@ rule VirTool_Win32_Obfuscator_BZN_2147706687_1
         $x_1_2 = {8a 0e 5e 58 4b c0 c1 02 80 c1 f9 8a d0 fe ca 80 e2 01 32 ca 80 f1 03 88 4c 06 ff 2d 01 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18023,6 +18807,7 @@ rule VirTool_Win32_Obfuscator_BZN_2147706687_2
         $x_1_4 = {81 c6 f4 da ff ff ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -18046,6 +18831,7 @@ rule VirTool_Win32_Obfuscator_BZO_2147706690_0
         $x_1_4 = {75 45 6a 01 6a 00 ff 15 ?? ?? ?? ?? 85 c0 75 13 8d 55 e0 52 a1 ?? ?? ?? ?? 50 8b 4d f8 51 e8 ?? ?? ?? ?? 8a 55 e0 52 a1 ?? ?? ?? ?? 50 8b 4d fc 51 e8 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 83 c2 01 89 15 ?? ?? ?? ?? eb b2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -18067,6 +18853,7 @@ rule VirTool_Win32_Obfuscator_AQI_2147706703_0
         $x_1_2 = {da e9 df e0 f6 c4 44 32 00 d9 05 ?? ?? ?? 00 dc 0d ?? ?? ?? 00 d9 05 ?? ?? ?? 00 dc 0d ?? ?? ?? 00 d8 0d ?? ?? ?? 00 dc 0d ?? ?? ?? 00 dc 0d ?? ?? ?? 00 de c1 dd 05 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18088,6 +18875,7 @@ rule VirTool_Win32_Obfuscator_AQJ_2147706755_0
         $x_1_2 = {c7 45 fc 00 00 00 00 81 7d fc 40 42 0f 00 7d 17 ff 95 ?? ff ff ff ff 95 ?? ff ff ff 8b 4d fc 83 c1 01 89 4d fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18109,6 +18897,7 @@ rule VirTool_Win32_Obfuscator_BZP_2147706783_0
         $x_1_2 = {b8 00 f4 12 00 e9 e6 11 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18130,6 +18919,7 @@ rule VirTool_Win32_Obfuscator_BZP_2147706783_1
         $x_1_2 = {8b 55 f8 33 0a 8b 45 f8 89 08 5f 5e 8b e5 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18152,6 +18942,7 @@ rule VirTool_Win32_Obfuscator_BZQ_2147706822_0
         $x_1_3 = {75 0e 8b 45 f8 0f af c7 8d 0c 1b 2b c1 89 45 ec ff 45 f4 8b 45 f4 3b 45 0c 7c 89}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18172,6 +18963,7 @@ rule VirTool_Win32_Obfuscator_AQK_2147706829_0
         $x_1_1 = {00 54 5f 41 ab 51 58 6a 05 48 ab 5a 4a 8b 06 03 f2 89 07 03 fa e2 f6 06 00 41 8d 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18194,6 +18986,7 @@ rule VirTool_Win32_Obfuscator_AQL_2147706994_0
         $x_1_3 = {52 5a 89 c9 48 75 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -18220,6 +19013,7 @@ rule VirTool_Win32_Obfuscator_BZS_2147707070_0
         $x_1_4 = {75 0b 03 de 53 ff b5 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -18242,6 +19036,7 @@ rule VirTool_Win32_Obfuscator_AQN_2147707073_0
         $x_1_3 = {8a c3 32 45 17 85 ff 74 0b 8b 4d c8 8b 55 f0 88 04 11 eb 09 8b 45 c8 8b 4d f0 88 04 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18263,6 +19058,7 @@ rule VirTool_Win32_Obfuscator_AQO_2147707082_0
         $x_1_2 = {8b c3 99 2b c2 d1 f8 8b ce 2b cf 0f af c8 8b 44 24 10 8d 55 04 0f af ca 03 ce 0f af cb 03 cf 40 03 e9 3b 84 24 2c 02 00 00 89 44 24 10 7c 92}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18284,6 +19080,7 @@ rule VirTool_Win32_Obfuscator_AQP_2147707085_0
         $x_1_2 = {33 c9 41 2b cf 2b ce 8d 04 37 0f af c8 8b c3 0f af c7 03 c8 0f af cb 8b c6 c1 e0 02 03 c8 0f af 4d f4 03 f9 ff 45 f8 8b 45 f8 3b 45 0c 0f 8c 20 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18304,6 +19101,7 @@ rule VirTool_Win32_Obfuscator_AQQ_2147707086_0
         $x_1_1 = {23 f6 51 56 a9 f4 ee 21 37 5e 59 53 81 f5 00 00 00 00 5b b9 ?? ?? ?? 00 a9 0a b3 50 46 7e 02 22 ed}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18325,6 +19123,7 @@ rule VirTool_Win32_Obfuscator_AQQ_2147707086_1
         $x_1_2 = {8b 54 24 0c 88 04 10 8b c3 99 2b c2 d1 f8 8b ce 2b cf 0f af c8 8b 44 24 14 8d 50 04 0f af ca 03 ce 0f af cb 03 cf 03 c1 89 44 24 14 8b 44 24 0c 40 3b 45 0c 89 44 24 0c 0f 8c 3f ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18346,6 +19145,7 @@ rule VirTool_Win32_Obfuscator_AQR_2147707087_0
         $x_1_2 = {8b 06 83 c6 04 8b 5d ee 31 d8 89 07 83 c7 04 49 85 c9 75 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18368,6 +19168,7 @@ rule VirTool_Win32_Obfuscator_AQS_2147707088_0
         $x_1_3 = {55 89 e5 c9 c2 10 00 c3 c3 c3 c3 c3 c3 c3 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -18392,6 +19193,7 @@ rule VirTool_Win32_Obfuscator_AQS_2147707088_1
         $x_1_2 = {81 3d 0c dc 02 10 c5 19 00 00 0f 44 c2 a2 bc ed 02 10 8b 16 8b c2 c1 e8 1e 83 e0 01 8d 0c 48 8b c2 c1 e8 1f 8d 04 48 8b 7c 85 dc f7 c2 00 00 00 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18413,6 +19215,7 @@ rule VirTool_Win32_Obfuscator_AQT_2147707131_0
         $x_1_2 = {33 d2 f7 75 ec 8b 0d ?? ?? ?? ?? 0f be 14 11 8b 45 08 03 45 fc 0f be 08 33 ca 8b 55 08 03 55 fc 88 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18435,6 +19238,7 @@ rule VirTool_Win32_Obfuscator_AQT_2147707131_1
         $x_1_3 = {8b 85 18 ea ff ff 8d 34 02 0f af b5 d4 e9 ff ff 0f af f7 0f af f0 8b 85 04 ea ff ff 8d 0c 9b 03 f1 43 0f af de 40 3b 85 c0 e9 ff ff 89 9d f4 e9 ff ff 89 85 04 ea ff ff 0f 8c 17 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18458,6 +19262,7 @@ rule VirTool_Win32_Obfuscator_BZU_2147707352_0
         $x_1_4 = {8a 08 88 4d fc 8b 55 fc 81 e2 ff 00 00 00 33 c0 a0 70 45 41 00 33 d0 88 55 fc 8a 45 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -18480,6 +19285,7 @@ rule VirTool_Win32_Obfuscator_BZV_2147707353_0
         $x_1_3 = {68 00 10 00 00 ff 75 d6 6a 00 ff 95 00 ff ff ff 89 85 fc fe ff ff 8b 4d d6 8b 75 da 8b bd fc fe ff ff f3 a4 6a 40 68 00 10 00 00 ff 75 d6 6a 00 ff 95 00 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -18503,6 +19309,7 @@ rule VirTool_Win32_Obfuscator_BZW_2147707359_0
         $x_1_4 = {eb 09 8b 45 90 83 c0 01 89 45 90 8b 4d fc 03 4d fc 39 4d 90 73 3e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -18525,6 +19332,7 @@ rule VirTool_Win32_Obfuscator_BZX_2147707360_0
         $x_1_3 = {58 ff d0 6a 00 ff 95 7c fe ff ff 8b e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18545,6 +19353,7 @@ rule VirTool_Win32_Obfuscator_BZY_2147707377_0
         $x_1_1 = {81 34 24 57 44 12 ac 58 05 ?? ?? ?? ?? 8b 00 48 36 ff d0 b8 ?? ?? ?? ?? d1 e0 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18566,6 +19375,7 @@ rule VirTool_Win32_Obfuscator_AQV_2147707522_0
         $x_1_2 = {ff 75 f4 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 00 ?? ?? ?? ?? c7 05 00 ?? ?? ?? ?? c7 05 00 ?? ?? ?? ?? c7 05 00 ?? ?? ?? ?? [0-56] ff 75 f0 c7 05 00 ?? ?? ?? ?? c7 05 00 ?? ?? ?? ?? c7 05 00 ?? ?? ?? ?? c7 05 00 ?? ?? ?? ?? c7 05 00 ?? ?? ?? ?? [0-96] 6a 00 c7 05 00 ?? ?? ?? ?? c7 05 00 [0-255] ff 75 (f8|2d|fc) c3 89 45 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -18589,6 +19399,7 @@ rule VirTool_Win32_Obfuscator_AQW_2147707670_0
         $x_1_3 = {6a 00 6a 00 6a 00 68 80 00 00 00 6a 03 6a 00 6a 01 83 ec 04 c7 04 24 00 00 00 80 81 c7 7d 2b 00 00 83 ec 04 89 3c 24 33 db 81 c3 ?? ?? ?? ?? be ?? ?? ?? ?? ff 16}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -18611,6 +19422,7 @@ rule VirTool_Win32_Obfuscator_AQX_2147707715_0
         $x_1_3 = {8b 4d fc ff 55 fc eb [0-32] c7 45 ?? 00 00 00 00 eb 09 8b 4d ?? 83 c1 01 89 4d ?? 83 7d ?? ?? 7d [0-24] 8a 15 ?? ?? ?? ?? 80 ea 01 88 15 ?? ?? ?? ?? eb (d8|2d|e8)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -18632,6 +19444,7 @@ rule VirTool_Win32_Obfuscator_AQZ_2147707747_0
         $x_1_2 = {65 38 30 64 30 32 [0-8] 30 [0-2] 30 [0-2] 33 [0-2] 33 [0-2] 63 [0-2] 30 [0-2] 63 [0-2] 33 [0-2] 38 [0-2] 62 [0-2] 35 [0-2] 34 [0-2] 32 [0-2] 34 [0-2] 30 [0-2] 63 [0-2] 38 [0-2] 62 [0-2] 34 [0-2] 63 [0-2] 32 [0-2] 34 [0-2] 30 [0-2] 34 [0-2] 38 [0-2] 62 [0-2] 63 [0-2] 32 [0-2] 34 [0-2] 61 [0-2] 35 [0-2] 37 [0-2] 38 [0-2] 62 [0-2] 66 [0-2] 39 [0-2] 38 [0-2] 35 [0-2] 63 [0-2] 30 [0-2] 37 [0-2] 34 [0-2] 31 [0-2] 32}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -18653,6 +19466,7 @@ rule VirTool_Win32_Obfuscator_ARA_2147707792_0
         $x_1_2 = {66 b8 00 00 66 bb 4d 5a 66 39 18 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18674,6 +19488,7 @@ rule VirTool_Win32_Obfuscator_ARB_2147707896_0
         $x_1_2 = {b8 31 0c c3 30 f7 e9 c1 fa 04 8b c2 c1 e8 1f 03 c2 3b c7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18696,6 +19511,7 @@ rule VirTool_Win32_Obfuscator_AQY_2147708137_0
         $x_1_3 = {df e0 f6 c4 41 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18716,6 +19532,7 @@ rule VirTool_Win32_Obfuscator_ARF_2147708157_0
         $x_1_1 = {0f 31 89 55 f4 89 45 f0 ff 15 ?? ?? ?? ?? 0f 31 89 55 fc 89 45 f8 8b 45 f8 2b 45 f0 c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18736,6 +19553,7 @@ rule VirTool_Win32_Obfuscator_ARG_2147708287_0
         $x_1_1 = {4b 3a 5c 62 43 49 6e 58 55 63 6f 69 45 48 5c 65 4f 62 76 41 6d 64 54 69 50 77 73 5c 62 68 79 34 37 78 00 64 44 42 58 7a 47 79 73 74 73 00 5a 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18758,6 +19576,7 @@ rule VirTool_Win32_Obfuscator_CAE_2147708886_0
         $x_1_3 = {89 d2 90 89 f6 90 89 c9 90 4b 75 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -18779,6 +19598,7 @@ rule VirTool_Win32_Obfuscator_CAF_2147708985_0
         $x_1_1 = {eb d5 ff 75 c4 ff 55 fc 26 00 83 ?? 01 89 ?? dc 8b ?? dc 3b ?? bc 73 1a 8b ?? e4 03 ?? dc 33 ?? 8a ?? 81 ?? ?? 00 00 00 8b ?? fc 03 ?? dc 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18800,6 +19620,7 @@ rule VirTool_Win32_Obfuscator_CAG_2147709040_0
         $x_1_2 = {0f b7 49 02 89 4d [0-16] c7 45 ?? 00 00 00 00 89 45 ?? 8b 45 ?? 3b 45 ?? 73 (30|2d|50) 8b 45 ?? 8b 4d ?? 0f b6 04 01 [0-16] 8b 55 ?? 89 45 ?? 89 d0 31 d2 f7 35 ?? ?? ?? ?? 01 d1 0f b6 0c 0d ?? ?? ?? ?? 8b 55 ?? 29 ca 88 d3 8b 4d ?? 8b 55 ?? 88 1c 0a 8b 45 ?? 83 c0 01 89 45 ?? eb (a0|2d|c0)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -18821,6 +19642,7 @@ rule VirTool_Win32_Obfuscator_CAH_2147709209_0
         $x_1_2 = {57 0f 31 8b ff 89 55 f4 8b ff 89 45 f0 8b ff ff 15 ?? ?? ?? 00 0f 31 8b ff 89 55 fc 8b ff 89 45 f8 8b ff 8b 45 f8 2b 45 f0 8b 4d fc 1b 4d f4 5f c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18844,6 +19666,7 @@ rule VirTool_Win32_Obfuscator_ZAC_2147709237_0
         $x_1_3 = {6a 40 68 00 30 00 00 68 ?? ?? 00 00 6a 00 ff 15 ?? ?? ?? ?? a3 ?? ?? ?? ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18865,6 +19688,7 @@ rule VirTool_Win32_Obfuscator_ARI_2147709371_0
         $x_1_2 = {74 0c 8b 0d ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 6a 00 57 68 23 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18886,6 +19710,7 @@ rule VirTool_Win32_Obfuscator_CAI_2147709395_0
         $x_1_1 = {eb d8 c7 45 23 00 83 ?? 01 89 ?? ec 8b ?? ec 3b ?? cc 73 17 8b ?? f4 03 ?? ec 33 ?? 8a ?? 83 ?? 45 8b ?? fc 03 ?? ec 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18907,6 +19732,7 @@ rule VirTool_Win32_Obfuscator_ARJ_2147709397_0
         $x_1_1 = {83 c0 01 89 ?? ec 8b 4d ?? 3b 4d ?? 73 ?? 8b 55 ?? 03 55 ?? 33 c0 8a 02 05 ?? ?? ?? ?? 8b 4d ?? 03 4d ?? 88 01 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18928,6 +19754,7 @@ rule VirTool_Win32_Obfuscator_ARJ_2147709701_0
         $x_1_2 = {85 c0 75 05 e9 ?? ?? ?? ?? 8d 45 ?? 50 68 01 00 80 00 8b 4d ?? 51 68 0e 66 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18949,6 +19776,7 @@ rule VirTool_Win32_Obfuscator_ARK_2147709868_0
         $x_1_2 = {2b 4d f8 81 c1 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? 0f b6 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18969,6 +19797,7 @@ rule VirTool_Win32_Obfuscator_CAI_2147710009_0
         $x_1_1 = {6a 00 9d 8b d8 8d 85 ?? ?? ff ff 90 50 33 db 3e ff 15 ?? ?? ?? ?? 9c 58 90 8b d8 05 ?? ?? ?? ?? 2d 46 02 00 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -18991,6 +19820,7 @@ rule VirTool_Win32_Obfuscator_ZAF_2147710756_0
         $x_1_2 = {c6 45 c4 61 c6 45 c5 75 c6 45 c6 78 c6 45 c7 53 c6 45 c8 65 c6 45 c9 74 c6 45 ca 56 c6 45 cb 6f c6 45 cc 6c c6 45 cd 75 c6 45 ce 6d c6 45 cf 65 c6 45 d0 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -19011,6 +19841,7 @@ rule VirTool_Win32_Obfuscator_CAJ_2147710788_0
         $x_1_1 = {55 54 89 1d ?? ?? ?? ?? 8f 05 ?? ?? ?? ?? 8f 05 ?? ?? ?? ?? a1 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 89 3d ?? ?? ?? ?? ff e0 cc 0f 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -19620,6 +20451,7 @@ rule VirTool_Win32_Obfuscator_Pouletcrypt_2147711676_0
         $x_1_2 = {59 d3 c0 8a dc b4 00 d3 cb 59 49 75 ea c1 cb 18 52 29 d2 31 da 89 d0 5a 5b 59 c9 c2 04 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -19641,6 +20473,7 @@ rule VirTool_Win32_Obfuscator_QQ_2147711751_0
         $x_1_2 = {89 bd 5c ff ff ff 8b 5d e4 83 eb ?? c7 07 ?? ?? ?? ?? 03 fb c7 07 ?? ?? ?? ?? 03 fb c7 07 ?? ?? ?? ?? 03 fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))
@@ -19665,6 +20498,7 @@ rule VirTool_Win32_Obfuscator_CAL_2147711990_0
         $x_1_2 = {b8 cd cc cc cc f7 e1 c1 ea 03 8d 04 92 03 c0 8b d1 2b d0 8a 82 ?? ?? ?? ?? 30 04 39 41 3b ce 72 df}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -19688,6 +20522,7 @@ rule VirTool_Win32_Obfuscator_ZAH_2147714348_0
         $x_1_3 = {6a 40 68 00 30 00 00 52 6a 00 ff 17 8b f8 85 ff 0f 84 ?? ?? 00 00 0f b7 46 06 6b c8 28 0f b7 46 14 03 c8 8b 43 3c 83 c1 18 03 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -19713,6 +20548,7 @@ rule VirTool_Win32_Obfuscator_ZAI_2147716261_0
         $x_1_2 = {8a 44 24 46 88 5c 24 48 88 5c 24 4b 88 5c 24 4c c6 44 24 49 2e 88 44 24 4a c6 44 24 4d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -19736,6 +20572,7 @@ rule VirTool_Win32_Obfuscator_ZAK_2147716536_0
         $x_1_3 = {33 c9 8a 0c 10 81 e9 8b 00 00 00 75 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -19766,6 +20603,7 @@ rule VirTool_Win32_Obfuscator_QV_2147716824_0
         $x_1_8 = "agqyy.qyy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -19855,6 +20693,7 @@ rule VirTool_Win32_Obfuscator_QV_2147716824_1
         $x_1_67 = {68 fe 93 43 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((20 of ($x_1_*))) or
             ((1 of ($x_5_*) and 15 of ($x_1_*))) or
@@ -19884,6 +20723,7 @@ rule VirTool_Win32_Obfuscator_ZAL_2147718635_0
         $x_1_4 = {8a 10 88 11 a0 ?? ?? ?? 00 50 8b 4d ?? 51 8b 55 ?? 52 e8 ?? ?? ?? 00 83 c4 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -19911,6 +20751,7 @@ rule VirTool_Win32_Obfuscator_ZAM_2147718758_0
         $x_1_4 = "//::++**s3///f" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -19960,6 +20801,7 @@ rule VirTool_Win32_Obfuscator_CAN_2147719216_0
         $x_2_26 = {0f be 4d fb 0f be 55 fa 3b ca 74 07 b8 01 00 00 00 eb 07 e9 ?? ?? ff ff 33 c0 5e 8b e5 5d c2 08 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -20008,6 +20850,7 @@ rule VirTool_Win32_Obfuscator_CAP_2147732927_0
         $x_20_2 = {6a 40 ff b5 ?? ?? ?? ?? ff 35 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 89 9d ?? ?? ?? ?? c7 85 ?? ?? ?? ?? 20 00 00 00 8b 85 ?? ?? ?? ?? 03 c0 89 85 ?? ?? ?? ?? 46 3b b5 ?? ?? ?? ?? 72 ?? ff b5 ?? ?? ?? ?? e8 ?? ?? ?? ?? ff}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -20037,6 +20880,7 @@ rule VirTool_Win32_Obfuscator_CAP_2147732927_1
         $x_30_10 = {8b c7 c1 e8 05 03 45 ?? 8b cf c1 e1 04 03 4d ?? 33 c1 8d 0c 3b 33 c1 2b f0 8b c6 c1 e8 05 03 45 ?? 8b ce c1 e1 04 03 4d ?? 33 c1 8d 0c 33 33 c1 2b f8 81 c3 ?? ?? ?? ?? ff 4d ?? 75 ?? 8b 45 ?? 89 38 5f 89 70 04 5e 5b c9 c3}  //weight: 30, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_30_*) and 4 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_30_*) and 1 of ($x_10_*))) or
@@ -20085,6 +20929,7 @@ rule VirTool_Win32_Obfuscator_CAP_2147732927_2
         $x_3_24 = "nivokerakugisaza nikilibexuru bopegejor" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_3_*))) or
             ((1 of ($x_4_*) and 2 of ($x_3_*))) or
@@ -20151,6 +20996,7 @@ rule VirTool_Win32_Obfuscator_CAP_2147732927_3
         $x_4_33 = {6a 00 ff 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 00 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 81 bd ?? ?? ?? ?? ?? ?? ?? ?? 75 ?? ff 15 ?? ?? ?? ?? 81 bd}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -20186,6 +21032,7 @@ rule VirTool_Win32_Obfuscator_ARL_2147732940_0
         $x_2_5 = {3b 75 64 75 0d 03 75 68 03 7d 68 2b 4d 68 85 c9 74 13 ad 50 83 e8 0a 35}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -20213,6 +21060,7 @@ rule VirTool_Win32_Obfuscator_CAQ_2147733142_0
         $x_4_3 = {8a 44 0f 03 8a d0 80 e2 ?? c0 e2 ?? 0a 54 0f ?? 88 55 ?? 8a d0 24 ?? c0 e0 ?? 0a 04 0f c0 e2 ?? 0a 54 0f ?? 88 04 1e 8a 45 ?? 88 44 1e ?? 8b 45 ?? 88 54 1e ?? 83 c1 ?? 83 c6 ?? 3b 08 72}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -20266,6 +21114,7 @@ rule VirTool_Win32_Obfuscator_CA_2147745164_0
         $x_1_2 = "StartAsFrameProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -20287,6 +21136,7 @@ rule VirTool_Win32_Obfuscator_KO_2147754552_0
         $x_1_1 = {66 0b cf c0 e5 ?? 13 cc 8f 06 81 ef 04 00 00 00 d3 e9 66 1b ce 8b 0f 66 81 fe ?? ?? f5 66 85 f8 33 cb 66 f7 c3 ?? ?? e9 65 54}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -20308,6 +21158,7 @@ rule VirTool_Win32_Obfuscator_OA_2147754654_0
         $x_1_1 = {8b 85 30 fe ff ff 81 45 88 ?? ?? ?? ?? 81 6d ac ?? ?? ?? ?? 81 85 34 ff ff ff ?? ?? ?? ?? 8b 4d 08 03 4d 0c 0f be 11 0f b6 85 63 ff ff ff 33 d0 8b 4d 08 03 4d 0c 88 11 8b 55 0c 83 ea 01 89 55 0c e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -20329,6 +21180,7 @@ rule VirTool_Win32_Obfuscator_OS_2147754655_0
         $x_1_1 = {03 84 bd e4 fb ff ff 25 ff 00 00 80 79 07 48 0d 00 ff ff ff 40 [0-5] 8a 84 85 e4 fb ff ff 32 45 ef 8b 4d f0 88 01 [0-4] 42 ff 4d e4 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -20350,6 +21202,7 @@ rule VirTool_Win32_Obfuscator_KK_2147754833_0
         $x_1_1 = {8b 84 24 60 01 00 00 81 84 24 bc 01 00 00 ?? ?? ?? ?? 81 44 24 20 39 2d 8e 45 81 84 24 14 02 00 00 ?? ?? ?? ?? 81 ac 24 88 00 00 00 ?? ?? ?? ?? 81 ac 24 e0 01 00 00 ?? ?? ?? ?? b8 ?? ?? ?? ?? f7 a4 24 e0 00 00 00 8b 84 24 e0 00 00 00 81 84 24 9c 02 00 00 ?? ?? ?? ?? 81 6c 24 5c ?? ?? ?? ?? 81 84 24 44 02 00 00 ?? ?? ?? ?? 30 0c 37 83 ee 01 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -20370,6 +21223,7 @@ rule VirTool_Win32_Obfuscator_AYA_2147782880_0
         $x_2_1 = {8b c0 83 c2 01 8b c0 a1 ?? ?? ?? ?? 8b c0 8b ca 8b c0 8b d0 33 d1 8b c2 c7 05 ?? ?? ?? ?? 00 00 00 00 01 05 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 11}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

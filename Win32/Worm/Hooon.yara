@@ -21,6 +21,7 @@ rule Worm_Win32_Hooon_A_2147601746_0
         $x_1_6 = "del /q C:\\WINDOWS\\system32\\KillAll.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((3 of ($x_5_*))) or

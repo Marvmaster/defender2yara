@@ -29,6 +29,7 @@ rule Backdoor_Win32_Idicaf_A_2147627569_0
         $x_1_14 = "CreateRemoteThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
@@ -56,6 +57,7 @@ rule Backdoor_Win32_Idicaf_B_2147647668_0
         $x_1_3 = {5b 53 53 44 54 [0-1] 52 69 6e 67 30 [0-4] 3a 5d 20 25 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

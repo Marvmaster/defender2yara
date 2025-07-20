@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Seadido_A_2147638121_0
         $x_1_2 = {6a 1a 50 6a 00 ff 15 ?? ?? ?? ?? 8d 4c 24 08 51 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

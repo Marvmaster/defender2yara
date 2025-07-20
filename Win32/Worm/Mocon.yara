@@ -20,6 +20,7 @@ rule Worm_Win32_Mocon_A_2147624659_0
         $x_1_6 = "attrib +h +s +r" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*))) or
             (all of ($x*))

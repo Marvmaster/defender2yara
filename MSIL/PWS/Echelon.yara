@@ -23,6 +23,7 @@ rule PWS_MSIL_Echelon_GG_2147762587_0
         $x_1_8 = "Monero" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule PWS_MSIL_Echelon_GG_2147762587_1
         $x_1_6 = "Monero" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))

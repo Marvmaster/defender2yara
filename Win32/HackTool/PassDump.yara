@@ -21,6 +21,7 @@ rule HackTool_Win32_PassDump_A_2147720183_0
         $x_1_6 = "Can not copy Wand File" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

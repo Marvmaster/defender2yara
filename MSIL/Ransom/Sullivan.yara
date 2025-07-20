@@ -18,6 +18,7 @@ rule Ransom_MSIL_Sullivan_B_2147835754_0
         $x_1_4 = {43 00 72 00 65 00 61 00 74 00 65 00 41 00 65 00 73 00 46 00 69 00 6c ?? 65 00 20 00 2d 00 20 00 46 00 61 00 69 00 6c 00 75 00 72 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

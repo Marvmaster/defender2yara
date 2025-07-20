@@ -26,6 +26,7 @@ rule VirTool_Win32_Bruterat_A_2147825897_0
         $x_1_12 = "] Screenshot downloaded:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +59,7 @@ rule VirTool_Win32_Bruterat_B_2147829342_0
         $x_1_13 = "] Impersonated" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -90,6 +92,7 @@ rule VirTool_Win32_Bruterat_B_2147829342_1
         $x_1_13 = "] Syncing DC:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -123,6 +126,7 @@ rule VirTool_Win32_Bruterat_2147832604_0
         $x_1_13 = {22 00 2c 00 22 00 77 00 76 00 65 00 72 00 22 00 3a 00 22 00 [0-16] 22 00 2c 00 22 00 62 00 6c 00 64 00 22 00 3a 00 22 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -144,6 +148,7 @@ rule VirTool_Win32_Bruterat_SD_2147834560_0
         $x_1_2 = {41 5f 41 5e 41 5d 41 5c 41 5b 41 5a 41 59 41 58 5f 5e 5a 59 5b 58 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +170,7 @@ rule VirTool_Win32_Bruterat_D_2147893558_0
         $x_1_2 = {83 e8 01 66 81 38 4d 5a 75 f6 8b 50 ?? 8d 4a c0 81 f9 bf 03 00 00 77 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

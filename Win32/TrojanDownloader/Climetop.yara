@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Climetop_A_2147624309_0
         $x_1_5 = "complite.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Climetop_B_2147627116_0
         $x_1_5 = "{7849596a-48ea-486e-8937-a2a3009f31a9}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

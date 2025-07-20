@@ -21,6 +21,7 @@ rule Backdoor_MSIL_Rifeds_A_2147683995_0
         $x_1_7 = {04 73 54 00 00 0a 0a 17 8d 41 00 00 01 13 0a 11 0a 16 1f 5c 9d 11 0a 0c 03 08 6f 4c 00 00 0a 0d 72 1f 02 00 70 13 04 09 16 6f 4d 00 00 0a 6f 4e 00 00 0a 72 2b 02 00 70 28 4f 00 00 0a 2c 40 16 8c 2a 00 00 01 72 3b 02 00 70 28 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

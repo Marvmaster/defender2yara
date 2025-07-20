@@ -16,6 +16,7 @@ rule Trojan_MSIL_ResInject_MCF_2147946229_0
         $x_1_1 = {66 00 38 00 31 00 6e 00 4d 00 77 00 66 00 44 00 71 00 00 15 50 00 47 00 35 00 51 00 58 00 73 00 32 00 73 00 42 00 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

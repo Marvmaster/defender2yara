@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Ejik_F_2147607761_0
         $x_1_5 = {70 61 73 73 77 6f 72 64 [0-80] 75 73 65 72 6e 61 6d 65 [0-80] 50 61 73 73 77 6f 72 64 [0-80] 55 73 65 72 6e 61 6d 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 3 of ($x_5_*))) or
@@ -54,6 +55,7 @@ rule TrojanDownloader_Win32_Ejik_G_2147607893_0
         $x_1_12 = "windownewsups.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

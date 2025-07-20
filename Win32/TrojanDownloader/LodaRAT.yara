@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_LodaRAT_RDA_2147838103_0
         $x_1_5 = "Global\\3pc6RWOgectGTFqCowxjeGy3XIGPtLwNrsr2zDctYD4hAU5pj4GW7rm8gHrHyTB6" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Rebenok_A_2147621191_0
         $x_1_8 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             ((5 of ($x_10_*))) or

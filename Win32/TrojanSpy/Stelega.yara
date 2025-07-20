@@ -26,6 +26,7 @@ rule TrojanSpy_Win32_Stelega_MR_2147767760_0
         $x_1_11 = "Editing '%s'" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_7_*))) or

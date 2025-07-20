@@ -19,6 +19,7 @@ rule Ransom_Win64_Filecoder_BB_2147762732_0
         $x_1_4 = ".wncry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win64_Filecoder_DM_2147764840_0
         $x_1_5 = "This is a private ransomware developed by our team and there is no decryption file for it" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Ransom_Win64_Filecoder_DN_2147764911_0
         $x_1_4 = "teiuq/ lla/ swodahs eteled exe.nimdassv c/ dmc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Ransom_Win64_Filecoder_SS_2147766009_0
         $x_1_7 = "In order for us to send you the key and the application to decrypt your files, you will have to make a transfer of Bitcoins" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Ransom_Win64_Filecoder_MR_2147773374_0
         $x_1_6 = "When we verify the transfer we will send you the tool" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -150,6 +155,7 @@ rule Ransom_Win64_Filecoder_SB_2147773478_0
         $x_1_6 = "URLDownloadToFileW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -175,6 +181,7 @@ rule Ransom_Win64_Filecoder_PDT_2147807965_0
         $x_1_5 = {48 81 fa 3b 4a 00 00 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +203,7 @@ rule Ransom_Win64_Filecoder_SA_2147832327_0
         $x_1_1 = {48 8b 45 d8 0f b6 00 83 f0 15 89 c2 48 8b 45 d8 88 10 48 83 45 d8 01 83 45 d4 01 8b 45 d4 3b 45 bc 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -217,6 +225,7 @@ rule Ransom_Win64_Filecoder_DLK_2147832751_0
         $x_1_1 = {c6 44 24 3b 34 80 44 24 3b 3f eb 18 c6 44 24 3d 57 80 44 24 3d 0d eb 1a c6 44 24 39 75 80 44 24 39 00 eb d5 c6 44 24 3c 2c eb 00 80 44 24 3c 3c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -240,6 +249,7 @@ rule Ransom_Win64_Filecoder_PSS_2147833352_0
         $x_1_3 = "func_bane %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -265,6 +275,7 @@ rule Ransom_Win64_Filecoder_PAZ_2147839016_0
         $x_1_5 = "!RESTORE!.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -289,6 +300,7 @@ rule Ransom_Win64_Filecoder_PBC_2147843722_0
         $x_1_4 = {48 8b 45 d8 0f b6 00 83 f0 2c 89 c2 48 8b 45 d8 88 10 48 83 ?? ?? 01 83 45 d4 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -311,6 +323,7 @@ rule Ransom_Win64_Filecoder_PACR_2147899722_0
         $x_1_2 = "MalFFleR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -333,6 +346,7 @@ rule Ransom_Win64_Filecoder_PADR_2147904870_0
         $x_1_2 = {48 ff c6 88 17 48 ff c7 8a 16 01 db 75 0a 8b 1e 48 83 ee fc 11 db 8a 16 72 e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -356,6 +370,7 @@ rule Ransom_Win64_Filecoder_GA_2147905324_0
         $x_1_3 = "C:\\WINDOWS\\system32\\cmd.exe /c C:\\ransombear.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -378,6 +393,7 @@ rule Ransom_Win64_Filecoder_MKB_2147909537_0
         $x_1_2 = {61 6c 6c 20 66 69 6c 65 73 20 63 72 79 70 74 65 64 2c 20 65 78 69 74 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -402,6 +418,7 @@ rule Ransom_Win64_Filecoder_AWB_2147914308_0
         $x_1_4 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -426,6 +443,7 @@ rule Ransom_Win64_Filecoder_CCJB_2147915676_0
         $x_1_1 = {48 89 c1 48 89 df 48 8b 84 24 88 00 00 00 48 8b 5c 24 40 e8 ?? ?? ?? ?? 90 48 8d 05 19 88 00 00 bb 20 00 00 00 48 89 d9 e8 ?? ?? ?? ?? 48 89 84 24 c0 00 00 00 bb 20 00 00 00 48 89 d9 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 48 8b 4c 24 38 48 89 c7 48 89 de 31 c0 48 8b 9c 24 80 00 00 00 e8 ?? ?? ?? ?? 48 89 c1 48 89 df 48 8b b4 24 c0 00 00 00 41 b8 20 00 00 00 4d 89 c1 48 8b 84 24 80 00 00 00 48 8b 5c 24 38 e8 ?? ?? ?? ?? 48 b8 00 f2 05 2a 01 00 00 00 0f 1f 44 00 00 e8 ?? ?? ?? ?? 48 8b 84 24 80 00 00 00 48 8b 5c 24 38 e8 ?? ?? ?? ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -449,6 +467,7 @@ rule Ransom_Win64_Filecoder_ARA_2147917869_0
         $x_2_3 = "/c2/receiver" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -475,6 +494,7 @@ rule Ransom_Win64_Filecoder_GV_2147920833_0
         $x_1_6 = "main.Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -499,6 +519,7 @@ rule Ransom_Win64_Filecoder_NITA_2147924132_0
         $x_1_4 = "Oh no" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -523,6 +544,7 @@ rule Ransom_Win64_Filecoder_SWK_2147929367_0
         $x_1_4 = "/c vssadmin.exe delete shadows /all /quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -549,6 +571,7 @@ rule Ransom_Win64_Filecoder_SWJ_2147929694_0
         $x_1_3 = "Your files have been encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -574,6 +597,7 @@ rule Ransom_Win64_Filecoder_NITD_2147931302_0
         $x_1_5 = "onion/chat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -608,6 +632,7 @@ rule Ransom_Win64_Filecoder_NITD_2147931302_1
         $x_1_11 = "vmtoolsd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -635,6 +660,7 @@ rule Ransom_Win64_Filecoder_NITC_2147932226_0
         $x_1_7 = "antivirus solutions" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -660,6 +686,7 @@ rule Ransom_Win64_Filecoder_2147935029_0
         $x_5_1 = {48 01 d0 44 0f b6 00 48 8b 45 f8 48 8d 50 01 48 8b 45 10 48 01 d0 0f b6 08 48 8b 55 10 48 8b 45 f8 48 01 d0 44 89 c2 31 ca 88 10 48 83 45 ?? 01 48 8b 45 18 48 83 e8 01 48 39 45 f8 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -690,6 +717,7 @@ rule Ransom_Win64_Filecoder_UDP_2147937647_0
         $x_1_10 = "detect and stop AV & EDR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -714,6 +742,7 @@ rule Ransom_Win64_Filecoder_NIT_2147937965_0
         $x_1_4 = "killing Cmdexec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -738,6 +767,7 @@ rule Ransom_Win64_Filecoder_PAQ_2147939019_0
         $x_1_4 = "encv2.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -763,6 +793,7 @@ rule Ransom_Win64_Filecoder_CCJX_2147939639_0
         $x_1_5 = "while encrypting file:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -787,6 +818,7 @@ rule Ransom_Win64_Filecoder_PAHC_2147944542_0
         $x_1_4 = "cmd /c reg add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /v DelegateExecute /f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -810,6 +842,7 @@ rule Ransom_Win64_Filecoder_PAHD_2147944543_0
         $x_2_3 = "Ransomware" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -833,6 +866,7 @@ rule Ransom_Win64_Filecoder_PAHE_2147944645_0
         $x_1_3 = "<README_FILENAME>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -857,6 +891,7 @@ rule Ransom_Win64_Filecoder_PAHF_2147945091_0
         $x_1_4 = "Encrypting" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -880,6 +915,7 @@ rule Ransom_Win64_Filecoder_BMX_2147945108_0
         $x_1_3 = "Telegram Bot Client" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -905,6 +941,7 @@ rule Ransom_Win64_Filecoder_PAHG_2147946145_0
         $x_1_5 = "DisableTaskMgr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -933,6 +970,7 @@ rule Ransom_Win64_Filecoder_AMX_2147946340_0
         $x_1_4 = "Get-WmiObject Win32_ShadowCopy" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -955,6 +993,7 @@ rule Ransom_Win64_Filecoder_PZD_2147946435_0
         $x_2_2 = {66 69 6c 65 73 20 [0-50] 65 6e 63 72 79 70 74 65 64}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -982,6 +1021,7 @@ rule Ransom_Win64_Filecoder_YBC_2147946846_0
         $x_1_7 = "LockScreenClass" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1010,6 +1050,7 @@ rule Ransom_Win64_Filecoder_YBD_2147946847_0
         $x_1_8 = "wallet address" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1035,6 +1076,7 @@ rule Ransom_Win64_Filecoder_YBE_2147946848_0
         $x_1_5 = "Buy Bitcoin" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

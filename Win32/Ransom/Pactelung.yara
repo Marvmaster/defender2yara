@@ -19,6 +19,7 @@ rule Ransom_Win32_Pactelung_A_2147726444_0
         $x_1_5 = "/index.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

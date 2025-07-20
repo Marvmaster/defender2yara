@@ -23,6 +23,7 @@ rule TrojanDownloader_MSIL_Waultca_A_2147740855_0
         $x_1_8 = "whoami & systeminfo & ipconfig /all & arp /a" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -60,6 +61,7 @@ rule TrojanDownloader_MSIL_Waultca_B_2147744101_0
         $x_2_7 = "2E4B7C022329E5C21E47D55E8916F6AF852AABBBD1798F9E16985F22A8056646" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             ((1 of ($x_4_*))) or

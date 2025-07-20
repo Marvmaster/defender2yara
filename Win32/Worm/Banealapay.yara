@@ -20,6 +20,7 @@ rule Worm_Win32_Banealapay_A_2147647605_0
         $x_1_6 = {66 2d 11 00 0f bf c0 50 8d 45 ?? 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

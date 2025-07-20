@@ -16,6 +16,7 @@ rule Trojan_Win32_ZWrap_AB_2147767065_0
         $x_1_1 = {00 8a 0c 02 8b 44 ?? ?? 8b 7c ?? ?? 30 0c 38 40 3b 44 ?? ?? 89 44 ?? ?? 0f [0-6] 8b 44 ?? ?? 8a 54 ?? ?? 8a 4c ?? ?? 5f 5e 5d [0-16] c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

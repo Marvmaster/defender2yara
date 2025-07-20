@@ -29,6 +29,7 @@ rule Trojan_MSIL_Spacekito_A_2147685737_0
         $x_1_15 = {5f 61 70 70 6c 79 5f 66 66 00 5f 61 70 70 6c 79 5f 69 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -67,6 +68,7 @@ rule Trojan_MSIL_Spacekito_B_2147685743_0
         $x_1_19 = "\\files\\pluginCRXsm.zip" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -101,6 +103,7 @@ rule Trojan_MSIL_Spacekito_C_2147686769_0
         $x_1_15 = "mac=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +134,7 @@ rule Trojan_MSIL_Spacekito_D_2147686770_0
         $x_1_11 = "ExtensionFF.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -160,6 +164,7 @@ rule Trojan_MSIL_Spacekito_E_2147687438_0
         $x_1_10 = "ExtensionIE.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +194,7 @@ rule Trojan_MSIL_Spacekito_F_2147687469_0
         $x_1_10 = "ExtensionCH.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

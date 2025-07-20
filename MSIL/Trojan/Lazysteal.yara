@@ -16,6 +16,7 @@ rule Trojan_MSIL_Lazysteal_MBZT_2147905949_0
         $x_1_1 = {09 94 58 20 00 01 00 00 5d 94 0a 02 07 02 07 91 06 28 ?? ?? ?? 0a 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

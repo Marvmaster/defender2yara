@@ -19,6 +19,7 @@ rule Trojan_Win32_FormatC_I_2147611254_0
         $x_1_5 = "Borland C++ - Copyright 1996" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

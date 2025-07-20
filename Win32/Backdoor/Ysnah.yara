@@ -18,6 +18,7 @@ rule Backdoor_Win32_Ysnah_DD_2147725995_0
         $x_1_4 = {88 5d dd c6 45 ?? 30 c6 45 ?? 2e c6 45 ?? 30 c6 45 ?? 2e c6 45 ?? 30 c6 45 ?? 2e c6 45 ?? 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

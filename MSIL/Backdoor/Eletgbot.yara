@@ -21,6 +21,7 @@ rule Backdoor_MSIL_Eletgbot_A_2147888246_0
         $x_1_7 = "DQoz77iP4oOjIEZpbGUgPSA=(aHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdA==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_GandCrab_C_2147727994_0
         $x_1_4 = {f7 e9 03 d1 c1 fa 04 8b c2 c1 e8 1f 03 c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_GandCrab_B_2147741758_0
         $x_5_3 = "Release\\Varenyky.pdb" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*))) or
             (all of ($x*))
@@ -65,6 +67,7 @@ rule Trojan_Win32_GandCrab_PDSK_2147743506_0
         $x_2_2 = {8b 4d 08 a0 ?? ?? ?? ?? 30 04 0e 46 3b f7 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_GandCrab_DSK_2147744429_0
         $x_2_1 = {8a 55 fe 08 5d ?? 8a c2 83 25 ?? ?? ?? ?? 00 24 fc c0 e0 04 0a f8 81 3d ?? ?? ?? ?? 38 13 00 00 88 7d fc 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Trojan_Win32_GandCrab_VDSK_2147745355_0
         $x_2_4 = {33 c4 89 84 24 00 08 00 00 a1 ?? ?? ?? ?? 69 c0 fd 43 03 00 8d 0c 24 51 05 c3 9e 26 00 68 ?? ?? ?? ?? a3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -140,6 +145,7 @@ rule Trojan_Win32_GandCrab_PVS_2147745359_0
         $x_2_6 = {8a 4a 03 8a c1 24 fc 8a d9 80 e1 f0 c0 e1 02 0a 0a c0 e0 04 0a 42 01 c0 e3 06 0a 5a 02 88 0c 3e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -168,6 +174,7 @@ rule Trojan_Win32_GandCrab_KDS_2147748119_0
         $x_2_4 = {8a 82 20 ea 42 00 8a 8e 20 ea 42 00 88 86 20 ea 42 00 88 8a 20 ea 42 00 0f b6 9e 20 ea 42 00 0f b6 c1 03 d8 81 fa 2e 0c 00 00 73}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -192,6 +199,7 @@ rule Trojan_Win32_GandCrab_KSD_2147748121_0
         $x_2_4 = {8a 81 80 ef 42 00 8a 9a 80 ef 42 00 88 82 80 ef 42 00 81 f9 0a 0d 00 00 73 0c 00 8b 0d ?? ?? ?? ?? 8b 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -215,6 +223,7 @@ rule Trojan_Win32_GandCrab_DVK_2147748124_0
         $x_2_3 = {8a 54 24 18 03 cb 8d 04 31 8a 0c 31 32 ca 43 81 fb ec 05 00 00 88 08 0f 8e 06 00 8b 0d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -240,6 +249,7 @@ rule Trojan_Win32_GandCrab_KDV_2147748603_0
         $x_2_5 = "cGwLvA}$$WNN*hP5uV5pLcPxahwMLVKUDP@%LnfGG$WnHopvj$hdx3Q1fTdkCr#Q" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -265,6 +275,7 @@ rule Trojan_Win32_GandCrab_PVK_2147749239_0
         $x_2_5 = {8a 5c 24 1f 8a 44 24 12 0a df 88 04 2e 81 3d ?? ?? ?? ?? 41 04 00 00 75 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -290,6 +301,7 @@ rule Trojan_Win32_GandCrab_GD_2147753905_0
         $x_1_1 = {8d 34 07 e8 ?? ?? ?? ?? 30 06 47 3b 7c 24 ?? 7c 04 00 8b 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

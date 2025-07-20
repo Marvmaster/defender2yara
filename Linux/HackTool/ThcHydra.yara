@@ -20,6 +20,7 @@ rule HackTool_Linux_ThcHydra_A_2147799019_0
         $x_2_6 = "[STATUS] attack finished for %s" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

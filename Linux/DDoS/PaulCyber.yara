@@ -19,6 +19,7 @@ rule DDoS_Linux_PaulCyber_A_2147830764_0
         $x_1_4 = "Usage: ./ddos <ip> [<number of servers> [<startline from serverlist>]]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

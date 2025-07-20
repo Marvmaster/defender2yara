@@ -19,6 +19,7 @@ rule PWS_Win64_Tukrina_A_2147724969_0
         $x_2_4 = {b8 6b 00 00 00 b9 65 00 00 00 66 41 89 43 ?? b8 72 00 00 00 c6 44 24 ?? 20 66 41 89 43 ?? b8 6e 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

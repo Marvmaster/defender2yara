@@ -20,6 +20,7 @@ rule Backdoor_Win32_LimeRat_YA_2147733248_0
         $x_1_5 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

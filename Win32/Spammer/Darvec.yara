@@ -18,6 +18,7 @@ rule Spammer_Win32_Darvec_A_2147652975_0
         $x_1_4 = {45 4e 00 00 43 4e 00 00 25 73 5c 25 73 00 00 00 63 6f 6e 66 69 67 2e 69 6e 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

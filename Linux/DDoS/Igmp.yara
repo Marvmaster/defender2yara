@@ -19,6 +19,7 @@ rule DDoS_Linux_Igmp_A_2147822421_0
         $x_1_4 = "<spoof host> <target host> <number>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

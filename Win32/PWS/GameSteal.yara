@@ -20,6 +20,7 @@ rule PWS_Win32_GameSteal_A_2147583576_0
         $x_1_6 = "SetWindowsHookExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule PWS_Win32_GameSteal_B_2147583580_0
         $x_1_9 = {00 10 8d 48 05 a3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule PWS_Win32_GameSteal_C_2147584629_0
         $x_1_10 = "MsgHookOn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

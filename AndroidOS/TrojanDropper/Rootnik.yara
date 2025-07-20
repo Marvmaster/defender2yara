@@ -42,6 +42,7 @@ rule TrojanDropper_AndroidOS_Rootnik_C_2147822181_0
         $x_1_1 = {3b 1c a8 47 35 1c 82 46 00 28 1a d1 84 23 99 46 0a e0 23 68 4a 46 20 1c 9e 58 29 1c 42 46 3b 1c b0 47 00 28 18 d1 2e 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

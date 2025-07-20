@@ -20,6 +20,7 @@ rule VirTool_Win64_Hardetresz_A_2147921760_0
         $x_1_5 = {89 c0 48 89 45 f0 ba 00 00 00 00 b9 00 00 00 00 [0-22] 48 89 c1 [0-24] 89 c0 48 89 45 f0 ba 00 00 00 00 b9 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? 48 98 48 89 45 f0 b9 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

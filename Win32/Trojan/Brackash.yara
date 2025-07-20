@@ -19,6 +19,7 @@ rule Trojan_Win32_Brackash_A_2147602713_0
         $x_6_4 = {72 61 6e 64 6f 6d 66 75 6e 63 69 6f 6e 64 69 72 6d 65 6d 6f 72 79 68 61 74 65 00}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_6_*))) or
             ((1 of ($x_7_*) and 1 of ($x_6_*))) or
@@ -50,6 +51,7 @@ rule Trojan_Win32_Brackash_B_2147602714_0
         $x_1_5 = {72 61 6e 64 6f 6d 66 75 6e 63 69 6f 6e 64 69 72 6d 65 6d 6f 72 79 6c 69 6b 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_Win32_Brackash_A_2147608441_0
         $x_1_4 = {ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff 8b 06 e8 ?? ?? ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule Trojan_Win32_Brackash_C_2147609191_0
         $x_1_10 = "hate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_7_*) and 3 of ($x_1_*))) or
             (all of ($x*))

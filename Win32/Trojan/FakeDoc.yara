@@ -19,6 +19,7 @@ rule Trojan_Win32_FakeDoc_DSK_2147755555_0
         $x_1_4 = {83 f9 20 75 ?? 33 c9 eb ?? 41 42 3b d6 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -44,6 +45,7 @@ rule Trojan_Win32_FakeDoc_DSA_2147756454_0
         $x_2_1 = {8b c8 83 e1 03 8a 91 64 fb ?? ?? 8a 8c 06 28 0e ?? ?? 32 ca 88 88 28 0e ?? ?? 75 ?? 88 ?? ?? ?? ?? ?? 40 3b c7 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_FakeDoc_AF_2147838931_0
         $x_1_5 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

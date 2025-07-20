@@ -16,6 +16,7 @@ rule Trojan_Win32_Blokyst_A_2147742638_0
         $x_1_2 = "OnkyoblasterOS X-f5.99" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

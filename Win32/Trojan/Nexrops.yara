@@ -21,6 +21,7 @@ rule Trojan_Win32_Nexrops_A_2147705527_0
         $x_1_7 = "d09f2340818511d396f6aaf844c7e325" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

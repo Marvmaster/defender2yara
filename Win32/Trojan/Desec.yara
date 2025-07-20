@@ -22,6 +22,7 @@ rule Trojan_Win32_Desec_123956_0
         $x_2_8 = "_smoking_" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule Trojan_MSIL_Strela_DV_2147852521_0
         $x_1_1 = {06 17 58 08 5d 0b 02 7b 0a 00 00 04 06 ?? ?? ?? ?? ?? 0d 02 7b 0a 00 00 04 07 ?? ?? ?? ?? ?? 13 04 11 05 09 7b 08 00 00 04 11 04 7b 09 00 00 04 5a 11 04 7b 08 00 00 04 09 7b 09 00 00 04 5a 59 58 13 05 06 17 58 0a 06 08 32 b5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

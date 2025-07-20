@@ -16,6 +16,7 @@ rule Trojan_MSIL_LimeRAT_NEA_2147829569_0
         $x_1_1 = {70 18 18 28 ?? 00 00 06 0b 28 ?? 00 00 0a 07 6f ?? 00 00 0a 6f ?? 00 00 0a 14 14 6f ?? 00 00 0a 74 ?? 00 00 01 0c 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_LimeRAT_NEC_2147832294_0
         $x_5_1 = {02 03 02 4b 03 04 5f 03 66 05 5f 60 58 0e 07 0e 04 e0 95 58 7e bb 00 00 04 0e 06 17 59 e0 95 58 0e 05 28 cd 02 00 06 58 54 2a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_MSIL_LimeRAT_A_2147833973_0
         $x_1_6 = "GetTempPath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_MSIL_LimeRAT_MAAJ_2147848150_0
         $x_1_2 = "ConsoleApplication" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Dlef_CAG_2147635921_0
         $x_2_3 = "91.207.6.122" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

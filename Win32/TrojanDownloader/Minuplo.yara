@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Minuplo_A_2147693395_0
         $x_1_3 = "ni386755_3.fastdownload.nitrado.net/ir_updatex.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Minuplo_B_2147693396_0
         $x_1_3 = "miniupload.net/ir/url" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

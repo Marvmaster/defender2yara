@@ -20,6 +20,7 @@ rule Trojan_Win32_Trayntadd_2147728415_0
         $x_3_6 = {2f 2f 69 6e 64 65 78 2e 68 74 6d [0-5] 6d 2e 63 6f 6d 2f 2f 61 72 74 69 63 6c 65 73}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

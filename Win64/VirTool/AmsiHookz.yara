@@ -19,6 +19,7 @@ rule VirTool_Win64_AmsiHookz_A_2147836616_0
         $x_1_4 = {83 7c 24 48 01 75 ?? ff 15 ?? ?? ?? ?? b9 01 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

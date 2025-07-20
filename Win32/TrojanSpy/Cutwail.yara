@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Cutwail_A_2147598319_0
         $x_1_1 = {0f 84 b7 00 00 00 53 55 8b 2d ?? ?? ?? 13 56 68 ?? ?? ?? 13 83 c7 08 57 ff 15 ?? ?? ?? 13 85 c0 89 44 24 10 74 7a 80 3f 3c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule TrojanSpy_Win32_Cutwail_B_2147599385_0
         $x_1_13 = "B68BA487FDE5899A8A4BA40BF8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -77,6 +79,7 @@ rule TrojanSpy_Win32_Cutwail_C_2147600455_0
         $x_1_5 = {53 4d 54 50 44 52 56 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -105,6 +108,7 @@ rule TrojanSpy_Win32_Cutwail_D_2147606946_0
         $x_1_3 = {c6 45 fe 01 3c 0a 75 21 38 5d ff 74 1c 6a 08 41 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -131,6 +135,7 @@ rule TrojanSpy_Win32_Cutwail_E_2147609323_0
         $x_1_2 = {8a 0c 32 3a cb 74 09 84 c9 74 05 32 cb 88 0c 32 42 3b d0 7c eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

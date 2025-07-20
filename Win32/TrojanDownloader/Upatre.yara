@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Upatre_A_2147682923_0
         $x_1_2 = {8b 41 3c ff 75 ?? 03 c1 0f b7 (48|50) 06 6b (c9|d2) 28 8d 84 (01|02) d0 00 00 00 8b (70|78) 14 03 (70|78) 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_Upatre_A_2147682923_1
         $x_1_3 = {83 c4 10 56 68 80 00 00 00 6a 03 56 6a 01 68 00 00 00 80 53}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanDownloader_Win32_Upatre_D_2147683788_0
         $x_5_3 = {ba 01 00 ff ff 8b 45 ?? e8 ?? ?? ?? ?? 03 c2 2b c2 8b 08 80 f9 4d 75 ?? 80 fd 5a 75 ?? 53 e8 ?? ?? ?? ?? 41 56 57 41 66 39 08 75 ?? e8 ?? ?? ?? ?? 33 d2 8b 5d ?? 8b ca 4b}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -109,6 +112,7 @@ rule TrojanDownloader_Win32_Upatre_2147684158_0
         $x_1_4 = {bb 54 c1 13 1f 54 41 5f ab 41 51 58 48 ab 51 6a 04 8b c6 8b c8 8b 00 59 03 f1 59 2b c3 ab e2 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule TrojanDownloader_Win32_Upatre_E_2147684205_0
         $x_1_1 = {03 45 fc 8b d8 33 c0 43 8b 0b 40 81 e1 ff 00 00 00 85 c9 75 f2 48 3b 45 ?? 75 12 8b 07 03 45 ?? ff 75 ?? 50 e8 ?? 00 00 00 85 c0 74 0e 83 c7 04 ff 45 f8 8b 45 f8 3b 45 f4 72 c2 8b 45 f8 3b 45 f4 73 1f 8b 4e 24 03 c8 03 c8 8b 45 fc 03 c8 0f b7 01 8b 4e 1c 8d 04 81 8b 4d fc 8b 04 01 03 c1 eb 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +159,7 @@ rule TrojanDownloader_Win32_Upatre_F_2147684245_0
         $x_1_6 = {05 f0 00 00 00 ?? c8 ?? 03 ?? 8b 00 03 ?? 6a 1e ?? 83 ?? 02 8b 04 ?? ?? ff 06 02 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -176,6 +182,7 @@ rule TrojanDownloader_Win32_Upatre_G_2147684250_0
         $x_1_3 = {8b 4d d4 8b 7d e4 8b 45 e8 03 f8 8b 75 f4 fc f3 a4 5e 6a 00 68 80 00 00 00 6a 02 6a 00 6a 02 68 00 00 00 40 ff 75 f0 ff 55 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +225,7 @@ rule TrojanDownloader_Win32_Upatre_G_2147684250_1
         $x_1_23 = {8b 75 ce 89 f7 8b 45 e2 bb 04 00 00 00 f6 f3 89 c1 8b 5d f2 ad 31 d8 ab e2 fa ff 65 ce}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -240,6 +248,7 @@ rule TrojanDownloader_Win32_Upatre_H_2147684268_0
         $x_1_3 = {8b 45 b4 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -266,6 +275,7 @@ rule TrojanDownloader_Win32_Upatre_H_2147684268_1
         $x_1_7 = {c6 45 86 70 c6 45 87 41 c6 45 88 74 c6 45 89 74 c6 45 8a 72 c6 45 8b 69 c6 45 8c 62 c6 45 8d 75 c6 45 8e 74 c6 45 8f 65 c6 45 90 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -293,6 +303,7 @@ rule TrojanDownloader_Win32_Upatre_I_2147684388_0
         $x_2_8 = {00 55 70 64 61 74 65 73 20 64 6f 77 6e 6c 6f 61 64 65 72 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -321,6 +332,7 @@ rule TrojanDownloader_Win32_Upatre_L_2147684820_0
         $x_1_3 = {3d 5a 5a 50 00 0f ?? ?? 00 00 00 8b 45 ?? c1 e0 02 89 45 ?? 50 6a 08 ff 75 ?? ff 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -341,6 +353,7 @@ rule TrojanDownloader_Win32_Upatre_V_2147686646_0
         $x_1_1 = {8b 00 3d 5a 5a 50 00 0f 85 ?? ?? ?? ?? 8b 45 ?? c1 e0 02 89 45 ?? 50 6a 08 ff 75 ?? ff 55 ?? 85 c0 0f 84 ?? ?? ?? ?? 89 45 ?? 8b 45 ?? c1 e0 02 e8 00 00 00 00 59 83 c1 06 eb ?? 52 74 6c 44 65 63 6f 6d 70 72 65 73 73 42 75 66 66 65 72 00 6e 74 64 6c 6c 2e 64 6c 6c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -383,6 +396,7 @@ rule TrojanDownloader_Win32_Upatre_AA_2147686976_0
         $x_1_23 = "Conchita Wurst" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_1_*))) or
             ((1 of ($x_2_*) and 7 of ($x_1_*))) or
@@ -428,6 +442,7 @@ rule TrojanDownloader_Win32_Upatre_AF_2147689171_0
         $x_2_15 = {3d 64 64 72 65 e0 f6 67 e3 c1 46 46 46 ad 2d 73 73 3a 20}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -455,6 +470,7 @@ rule TrojanDownloader_Win32_Upatre_AH_2147689437_0
         $x_1_3 = {f3 a4 5e 51 68 80 00 00 00 6a 02 51 6a 02 68 00 00 00 40 ff 75 54}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -479,6 +495,7 @@ rule TrojanDownloader_Win32_Upatre_AI_2147689471_0
         $x_1_5 = {63 25 73 25 73 00 25 73 5c 25 73 00 6f 70 65 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -502,6 +519,7 @@ rule TrojanDownloader_Win32_Upatre_AJ_2147689534_0
         $x_1_4 = {25 73 25 73 00 25 73 5c 25 73 00 6f 70 65 6e 00 74 65 78 74 2f 2a 00 61 70 70 6c 69 63 61 74 69 6f 6e 2f 2a 00 47 45 54 00 4d 6f 7a 69 6c 6c 61 2f 34 2e 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -533,6 +551,7 @@ rule TrojanDownloader_Win32_Upatre_AK_2147689641_0
         $x_1_9 = {6a 34 58 66 ab 6a 2f 6a 31 58 66 ab 58 50 66 ab 8a c1 04 2f 40 66 ab}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -557,6 +576,7 @@ rule TrojanDownloader_Win32_Upatre_A_2147689809_0
         $x_1_4 = {00 74 65 78 74 2f 2a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -589,6 +609,7 @@ rule TrojanDownloader_Win32_Upatre_AL_2147689907_0
         $x_1_10 = {ab 49 75 fc 57 b9 ?? ?? ?? ?? 41 89 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -611,6 +632,7 @@ rule TrojanDownloader_Win32_Upatre_AM_2147690284_0
         $x_1_3 = {03 f2 51 57 8b 06 59 33 c1 89 06 03 f2 59 47 e2 f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -632,6 +654,7 @@ rule TrojanDownloader_Win32_Upatre_AN_2147690347_0
         $x_1_2 = {b0 53 66 ab b0 45 66 ab b0 52 66 ab 83 ee 07 66 ad 66 85 c0 74 12}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -654,6 +677,7 @@ rule TrojanDownloader_Win32_Upatre_AO_2147690667_0
         $x_2_3 = {43 3a 5c 54 45 4d 50 5c [0-6] 2e 65 78 65}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -676,6 +700,7 @@ rule TrojanDownloader_Win32_Upatre_AQ_2147690991_0
         $x_1_3 = {03 f2 51 57 8b 06 59 33 c1 89 06 03 f2 59 47 e2 f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -701,6 +726,7 @@ rule TrojanDownloader_Win32_Upatre_AR_2147691039_0
         $x_1_3 = {33 c0 66 ad 03 c3 ab e2 f7 91 6a 04 68 00 10 00 00 68 60 ee a6 00 50 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -726,6 +752,7 @@ rule TrojanDownloader_Win32_Upatre_C_2147691549_0
         $x_1_5 = {00 74 65 78 74 2f 2a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -748,6 +775,7 @@ rule TrojanDownloader_Win32_Upatre_AS_2147691619_0
         $x_1_3 = {8b c7 2b 45 00 3d 88 13 00 00 77 73 8b 4d ec 3b c9 75 bc 8b c8 8b 7d b4 8b 07 85 c0 75 b1 8b 75 00 8b 06 46 3d 64 64 72 65 e0 f6 67 e3 a1 46 46 46 ad 2d 73 73 3a 20 75 96}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -773,6 +801,7 @@ rule TrojanDownloader_Win32_Upatre_D_2147691671_0
         $x_1_5 = {00 74 65 78 74 2f 2a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -797,6 +826,7 @@ rule TrojanDownloader_Win32_Upatre_AU_2147691708_0
         $x_1_5 = "checkip.dyndns.org" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -821,6 +851,7 @@ rule TrojanDownloader_Win32_Upatre_AV_2147691721_0
         $x_5_5 = {ff 04 8a 66 b8 02 29 ff 55 28}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -846,6 +877,7 @@ rule TrojanDownloader_Win32_Upatre_AW_2147691755_0
         $x_1_6 = "checkip.dyndns.org" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -869,6 +901,7 @@ rule TrojanDownloader_Win32_Upatre_AX_2147692367_0
         $x_1_4 = {50 b0 2d 66 ab b0 53 66 ab b0 50 66 ab 58 04 2f fe c0 66 ab}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -902,6 +935,7 @@ rule TrojanDownloader_Win32_Upatre_BC_2147693872_0
         $x_1_14 = "rtldecompressbuffer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -933,6 +967,7 @@ rule TrojanDownloader_Win32_Upatre_BD_2147694088_0
         $x_1_6 = {25 73 25 73 00 25 73 5c 25 73 00 6f 70 65 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -954,6 +989,7 @@ rule TrojanDownloader_Win32_Upatre_BE_2147694331_0
         $x_1_2 = {b9 bb 01 00 00 85 c0 75 05 b9 50 00 00 00 51 8b 45 ec ff 55 24 8a cc ff 55 20 50 ff 75 3c ff 93 44 11 00 00 59 85 c0 e1 cd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -978,6 +1014,7 @@ rule TrojanDownloader_Win32_Upatre_BG_2147695000_0
         $x_1_5 = {fc f3 ab b8 46 00 00 00 59 57 48 48 ab 33 c0 ab e2 fd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1002,6 +1039,7 @@ rule TrojanDownloader_Win32_Upatre_BJ_2147695292_0
         $x_2_5 = {32 34 2e 31 35 39 2e 31 35 33 2e 31 35 33 00 2f 73 6f 6b 61 31 31 2e 70 6e 67}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1027,6 +1065,7 @@ rule TrojanDownloader_Win32_Upatre_BL_2147695348_0
         $x_1_6 = {b0 31 66 ab b0 2f 66 ab 8a c1 04 30 66 ab b0 2f 66 ab}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1054,6 +1093,7 @@ rule TrojanDownloader_Win32_Upatre_BL_2147695348_1
         $x_1_8 = {25 73 25 73 00 25 73 5c 25 73 00 6f 70 65 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1081,6 +1121,7 @@ rule TrojanDownloader_Win32_Upatre_BM_2147695383_0
         $x_1_3 = {8b c8 fe c1 fe c1 57 fe c1 fe c1 fc ab 49 75 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1103,6 +1144,7 @@ rule TrojanDownloader_Win32_Upatre_BN_2147695455_0
         $x_1_3 = {6a 04 68 00 10 00 00 68 e4 dc a7 00 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1127,6 +1169,7 @@ rule TrojanDownloader_Win32_Upatre_BN_2147695455_1
         $x_1_5 = {55 8b ec 33 c0 4e 55 40 40 40 4e 40 5f a5 49 75 fc e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1152,6 +1195,7 @@ rule TrojanDownloader_Win32_Upatre_BO_2147696033_0
         $x_1_6 = {66 b8 34 00 66 ab b0 31 66 ab b0 2f 66 ab 8b c1 04 30 b4 00 66 ab b0 2f 66 ab ff 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1174,6 +1218,7 @@ rule TrojanDownloader_Win32_Upatre_BT_2147696848_0
         $x_1_3 = {40 00 6a 06 ff 75 08 6a 1f 6a 64 68 9f 01 00 00 68 90 01 00 00 68 00 00 00 40 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1200,6 +1245,7 @@ rule TrojanDownloader_Win32_Upatre_BU_2147696925_0
         $x_1_4 = {b9 00 62 00 00 66 85 d2 f7 d2 80 c9 db 8b 4d e0 83 e9 01 89 4d e0 85 c0 76 a0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1225,6 +1271,7 @@ rule TrojanDownloader_Win32_Upatre_BV_2147696975_0
         $x_1_2 = {48 4f 4c 59 20 53 48 49 54 20 4d 59 0a 47 41 52 44 45 4e 27 53 20 4f 4e 20 46 49 52 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1250,6 +1297,7 @@ rule TrojanDownloader_Win32_Upatre_BW_2147697102_0
         $x_1_6 = {00 61 70 70 6c 69 63 61 74 69 6f 6e 2f 2a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1273,6 +1321,7 @@ rule TrojanDownloader_Win32_Upatre_BX_2147697212_0
         $x_1_4 = {c6 00 68 40 89 08 c6 40 04 c3 8b 85 4c ff ff ff 50 89 85 14 ff ff ff ff b5 6c ff ff ff ff 55 c4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1297,6 +1346,7 @@ rule TrojanDownloader_Win32_Upatre_BY_2147697343_0
         $x_1_5 = {ab 33 c0 ab e2 fd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1324,6 +1374,7 @@ rule TrojanDownloader_Win32_Upatre_F_2147705501_0
         $x_1_7 = {89 02 51 68 04 29 00 00 b9 0a 00 00 00 ff 55 78 6a 01 68 d0 07 00 00 ff 55 50 e9 c3 fc ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1347,6 +1398,7 @@ rule TrojanDownloader_Win32_Upatre_CC_2147706000_0
         $x_1_4 = {51 8b 0f ac 33 c1 aa 59 4b 75 04 5b 2b f3 53 49 75 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1369,6 +1421,7 @@ rule TrojanDownloader_Win32_Upatre_CF_2147706183_0
         $x_1_3 = {68 00 01 00 00 68 00 01 00 00 68 80 00 00 00 68 90 00 00 00 68 00 00 cf 00 68 00 70 40 00 68 2b 70 40 00 6a 00 ff 15 e4 80 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1391,6 +1444,7 @@ rule TrojanDownloader_Win32_Upatre_CL_2147706764_0
         $x_1_3 = {e8 00 00 00 00 5b 8b b3 ?? ?? 00 00 56 03 76 3c 66 a9 ?? ?? 57 57 6a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1413,6 +1467,7 @@ rule TrojanDownloader_Win32_Upatre_CO_2147706847_0
         $x_1_3 = {66 ad 52 03 d0 3b fa 72 04 41 5a eb f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1434,6 +1489,7 @@ rule TrojanDownloader_Win32_Upatre_CQ_2147706857_0
         $x_1_2 = {6a 39 68 01 01 00 00 6a 1d 6a 2d 68 00 00 cf 00 68 00 30 40 00 68 2b 30 40 00 6a 00 b9 69 88 5b 00 e8 ?? ?? ?? ?? 51 c3 85 c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1492,6 +1548,7 @@ rule TrojanDownloader_Win32_Upatre_CM_2147707080_0
         $x_1_3 = {ad 51 8b cb 2b c1 89 07 8b ca 03 f9 59 49 75 f0 [0-7] 68 [0-2] 00 00 40 48 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1513,6 +1570,7 @@ rule TrojanDownloader_Win32_Upatre_CP_2147707120_0
         $x_1_2 = {43 00 57 00 61 00 73 00 74 00 61 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1536,6 +1594,7 @@ rule TrojanDownloader_Win32_Upatre_S_2147741121_0
         $x_1_3 = "Hokeuj" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1560,6 +1619,7 @@ rule TrojanDownloader_Win32_Upatre_LQ_2147753640_0
         $x_1_4 = "\\Application Data\\conime.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1581,6 +1641,7 @@ rule TrojanDownloader_Win32_Upatre_DEA_2147761345_0
         $x_1_1 = {33 ed 8b c7 99 8b d9 2b d8 1b ea 2b de 1b 2d ?? ?? ?? ?? b8 9d ff ff ff 2b c7 89 35 ?? ?? ?? ?? 8b f3 2b c6 8b dd 8b 2d ?? ?? ?? ?? 03 c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1602,6 +1663,7 @@ rule TrojanDownloader_Win32_Upatre_DEB_2147762003_0
         $x_1_1 = {29 16 8a c1 b1 56 f6 e9 02 c2 83 ee 04 81 fe ?? ?? ?? ?? 8a c8 7f e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1624,6 +1686,7 @@ rule TrojanDownloader_Win32_Upatre_PAEE_2147913611_0
         $x_1_2 = {6a 00 68 e8 03 00 00 6a ff ff 15 ?? ?? ?? ?? 83 d1 7a 31 3d ?? ?? ?? ?? 11 cb 83 0d ?? ?? ?? ?? 25 ff 0c 24 75 da}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

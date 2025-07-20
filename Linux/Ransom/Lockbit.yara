@@ -17,6 +17,7 @@ rule Ransom_Linux_Lockbit_CD_2147930747_0
         $x_1_2 = {74 49 07 f5 dc 6a d1 e9 02 23 54 1c 43 f1 00 05 d1 e9 04 23 c1 e9 02 45 da e9 00 45 a4 18 45 eb 03 09 22 46 4b 46 c1 e9 04 23}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Ransom_Linux_Lockbit_CA_2147933283_0
         $x_1_2 = {e8 fb 9f ff ff 44 8b 18 44 89 df 44 89 5c 24 1c e8 db a5 ff ff 48 89 44 24 10 e8 71 a4 ff ff 4c 8b 4c 24 10 44 8b 44 24 1c 48 8d 74 24 38 48 89 c2 89 d9 bf 80 11 61 00 31 c0 e8 d1 62 00 00 eb 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Ransom_Linux_Lockbit_CE_2147945188_0
         $x_2_2 = {48 89 f8 48 89 f9 8a 11 48 ff c1 83 f2 ?? 88 51 ff 84 d2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

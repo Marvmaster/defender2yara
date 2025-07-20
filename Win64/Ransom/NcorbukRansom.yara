@@ -22,6 +22,7 @@ rule Ransom_Win64_NcorbukRansom_YAA_2147919387_0
         $x_1_7 = "to decrypt all files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

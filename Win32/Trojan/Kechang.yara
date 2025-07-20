@@ -18,6 +18,7 @@ rule Trojan_Win32_Kechang_A_2147741213_0
         $x_1_3 = "%s\\Temp\\d2fme.tmp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Kechang_B_2147741254_0
         $x_1_3 = "\\Temp\\d2fme.tmp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Kechang_C_2147741257_0
         $x_2_2 = "chart.healthcare-internet.com/index.html" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))
@@ -91,6 +94,7 @@ rule Trojan_Win32_Kechang_SP_2147744360_0
         $x_1_5 = "halimatoudi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Win32_Kechang_SR_2147746294_0
         $x_1_2 = {56 57 68 58 92 41 00 68 e8 f1 63 00 c7 05 e4 f1 43 00 [0-4] e8 6b 8f 00 00 83 c4 08 8d 44 24 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

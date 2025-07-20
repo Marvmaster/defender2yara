@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Seraph_PAAP_2147848843_0
         $x_1_4 = "://live.myl23.com/install.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_Win32_Seraph_PAAG_2147850038_0
         $x_1_2 = "imgcache.cloudservicesdevc.tk/picturess/2023/RDSv38.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanDownloader_Win32_Seraph_PABQ_2147894311_0
         $x_1_2 = "C:\\ProgramData\\2c2ao.png" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

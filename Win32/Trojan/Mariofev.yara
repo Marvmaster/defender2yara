@@ -20,6 +20,7 @@ rule Trojan_Win32_Mariofev_A_2147611940_0
         $x_1_6 = "NtQuerySystemInformation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Mariofev_2147617979_0
         $x_1_3 = {4d 46 43 34 32 2e 44 4c 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Trojan_Win32_Mariofev_2147617979_1
         $x_1_6 = "LoadResource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_6_*) and 1 of ($x_1_*))) or
@@ -99,6 +102,7 @@ rule Trojan_Win32_Mariofev_B_2147637994_0
         $x_1_4 = "Inject Core PROCESS = %s load module = %s RESULT = %i" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

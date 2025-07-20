@@ -17,6 +17,7 @@ rule Trojan_Win64_InjectorCrypt_SO_2147762008_0
         $x_1_2 = {48 8b c4 48 89 58 08 48 89 68 10 48 89 70 18 48 89 78 20 41 54 41 55 41 56 48 81 ec d0 00 00 00 4c 8b 15 ?? ?? ?? ?? 49 8b e9 4d 8b e0 4d 8b 9a ?? ?? ?? ?? 44 8b ea 4c 8b f1 4d 85 db 0f 84 ?? ?? ?? ?? 48 8d 4c 24 50 e8 ?? ?? ?? ?? 48 ?? ?? ?? ?? e8 ?? ?? ?? ?? 41 8b 92}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

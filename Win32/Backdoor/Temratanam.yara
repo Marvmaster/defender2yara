@@ -20,6 +20,7 @@ rule Backdoor_Win32_Temratanam_A_2147709079_0
         $x_1_6 = {54 65 61 6d 56 69 65 77 65 72 00 00 44 79 6e 47 61 74 65 49 6e 73 74 61 6e 63 65 4d 75 74 65 78}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*))) or
             (all of ($x*))

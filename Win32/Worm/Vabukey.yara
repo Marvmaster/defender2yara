@@ -21,6 +21,7 @@ rule Worm_Win32_Vabukey_A_2147640183_0
         $x_1_7 = {41 00 42 00 55 00 41 00 4c 00 41 00 53 00 41 00 44 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

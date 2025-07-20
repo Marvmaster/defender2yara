@@ -18,6 +18,7 @@ rule Backdoor_Win32_Dorbop_B_2147720570_0
         $x_1_3 = {64 6f 6f 72 6e 61 6d 65 3d 22 63 68 61 72 20 [0-31] 5b 5d 20 3d 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

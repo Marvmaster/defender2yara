@@ -20,6 +20,7 @@ rule Trojan_MSIL_KamiKakaBot_MA_2147848222_0
         $x_1_5 = "Kami.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

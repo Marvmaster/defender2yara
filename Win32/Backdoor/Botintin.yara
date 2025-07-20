@@ -22,6 +22,7 @@ rule Backdoor_Win32_Botintin_A_2147651686_0
         $x_1_8 = {3f 68 77 69 64 3d [0-2] 57 69 6e 64 6f 77 73 25 32 30 32 30 30 30 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

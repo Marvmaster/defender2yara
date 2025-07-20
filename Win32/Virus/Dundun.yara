@@ -18,6 +18,7 @@ rule Virus_Win32_Dundun_A_2147602334_0
         $x_1_3 = {f3 a4 83 c6 6c 6a 70 59 f3 a4 8b 85 e0 00 00 00 66 8b d8 c1 e8 10 5e 03 75 bd b9 ?? ?? 00 00 30 1e 30 3e 30 06 30 26 46 e2 f5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_MSIL_NominatusCrypto_PA_2147812993_0
         $x_1_4 = "\\EvilNominatusCrypto.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_MSIL_NominatusCrypto_KSG_2147819895_0
         $x_1_4 = ".exe >>autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Ransom_MSIL_NominatusCrypto_ABG_2147896629_0
         $x_1_10 = "NominatusCrypto" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

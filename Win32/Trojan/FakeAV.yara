@@ -22,6 +22,7 @@ rule Trojan_Win32_FakeAV_AG_2147819838_0
         $x_2_7 = "hutdownPtil" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_FakeAV_AK_2147896090_0
         $x_1_7 = "0C0M0S0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win32_FakeAV_ARAA_2147906264_0
         $x_2_1 = {83 f9 00 74 0a 8a 06 32 c3 88 06 46 49 eb f1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win32_FakeAV_NF_2147917703_0
         $x_2_2 = {83 7d f4 00 7e ?? 8b 45 ec 01 c0 0f b6 84 05 cc fb ff ff 0f be c0 c1 e0 04 89 c2 8b 45 ec}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_Win32_FakeAV_ASGT_2147919811_0
         $x_2_2 = {55 8b ec 83 ec 10 53 56 57 a0 ?? ?? 66 00 32 05 ?? ?? 66 00 a2 ?? ?? 66 00 33 c9 8a 0d ?? ?? 66 00 c1 f9 03 83 c9 01 89 4d f0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule Trojan_Win32_FakeAV_GPN_2147928973_0
         $x_1_1 = {55 8b ec 81 ec 80 04 00 00 53 56 57 89 95 80 fb ff ff 89 8d 84 fb ff ff c7 45 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Trojan_Win32_FakeAV_AFK_2147936583_0
         $x_2_2 = {8b 4d f4 89 4d a8 8b 55 c8 83 c2 01 89 55 c8 8b 45 c8 6b c0 03 89 45 b8 8b 4d a8 89 4d c4 8b 55 c4 03 55 ac 89 55 c4 8b 45 a0 50 8b 4d a8 03 4d ac 51 8b 55 fc 52}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +186,7 @@ rule Trojan_Win32_FakeAV_AFV_2147936688_0
         $x_2_2 = {ba 00 00 00 00 f7 f3 92 e8 ?? ?? ?? ?? 88 87 b0 67 40 00 4f 92 41 0b c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +209,7 @@ rule Trojan_Win32_FakeAV_NA_2147940056_0
         $x_1_2 = {8b 45 f0 31 45 f4 8b 45 0c 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

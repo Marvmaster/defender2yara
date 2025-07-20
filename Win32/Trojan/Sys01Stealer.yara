@@ -21,6 +21,7 @@ rule Trojan_Win32_Sys01Stealer_A_2147945825_0
         $x_1_7 = "$task->save_to_current_work" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

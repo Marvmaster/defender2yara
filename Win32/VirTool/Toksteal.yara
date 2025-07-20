@@ -21,6 +21,7 @@ rule VirTool_Win32_Toksteal_A_2147622711_0
         $x_1_7 = "DuplicateHandle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule VirTool_Win32_Toksteal_B_2147622712_0
         $x_2_6 = {4e 45 54 57 4f 52 4b 20 53 45 52 56 49 43 45 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*))) or
             ((1 of ($x_10_*))) or

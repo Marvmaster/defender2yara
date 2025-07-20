@@ -21,6 +21,7 @@ rule Trojan_MSIL_LokiAnti_J_2147743690_0
         $x_1_6 = "PROCESS_INFORMATION" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

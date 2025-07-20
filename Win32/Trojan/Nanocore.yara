@@ -17,6 +17,7 @@ rule Trojan_Win32_Nanocore_SD_2147734425_0
         $x_1_2 = {8b c6 03 c3 90 c6 00 e4 90 90 90 90 90 43 81 fb 2f 5c c3 1c 75 e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Nanocore_J_2147740902_0
         $x_1_3 = {78 da bc 7d 77 60 14 c5 f7 f8 de de dd ee d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Nanocore_ST_2147742708_0
         $x_1_2 = {8b 04 0a 01 f3 [0-4] 0f ef c0 [0-4] 0f ef c9 0f 6e c0 0f 6e 0b 0f ef c1 [0-4] 51 0f 7e c1 88 c8 [0-4] 59 29 f3 [0-4] 83 c3 01 75 ?? [0-4] 89 fb [0-4] [0-4] 89 04 0a [0-4] 83 c1 01 75 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_Win32_Nanocore_ST_2147742708_1
         $x_1_14 = "$c111d715-6318-415a-94de-be452823c839" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule Trojan_Win32_Nanocore_BY_2147744263_0
         $x_1_2 = {f7 ff ff 5b 4b [0-5] 8b 17 [0-5] 31 da [0-6] 39 ca 75 ?? [0-5] 6a ?? 6a 05 83 c4 08 16 17 eb 1a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +188,7 @@ rule Trojan_Win32_Nanocore_BA_2147745409_0
         $x_10_14 = "-el -s2 \"-d%s\" \"-sp%s\"" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -217,6 +223,7 @@ rule Trojan_Win32_Nanocore_BE_2147745813_0
         $x_10_14 = "CryptProtectMemory failed" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((12 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -249,6 +256,7 @@ rule Trojan_Win32_Nanocore_Q_2147748018_0
         $x_1_9 = "RestoreProtection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -312,6 +320,7 @@ rule Trojan_Win32_Nanocore_BF_2147748131_0
         $x_10_11 = "CryptProtectMemory failed" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -344,6 +353,7 @@ rule Trojan_Win32_Nanocore_BG_2147748622_0
         $x_1_12 = {68 00 a0 00 00 [0-80] ff d0 [0-48] b9 ?? ?? 00 00 [0-48] ff 34 0f [0-48] 31 34 24 [0-48] 8f 04 08 [0-48] 49 [0-80] 7d 80 [0-48] ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -365,6 +375,7 @@ rule Trojan_Win32_Nanocore_AKN_2147750277_0
         $x_1_1 = {ff d0 eb 08 [0-31] 81 7d ?? ?? ?? ?? ?? 75 ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 03 ff [0-239] 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 08 [0-255] 31 fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -398,6 +409,7 @@ rule Trojan_Win32_Nanocore_AC_2147759225_0
         $x_10_13 = "CryptProtectMemory failed" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -422,6 +434,7 @@ rule Trojan_Win32_Nanocore_OR_2147788921_0
         $x_1_1 = {8a 84 0d 60 e2 ff ff 81 f9 ?? ?? ?? ?? 74 42 34 69 04 ba 04 63 2c 45 fe c8 2c 3a fe c8 04 ef 04 7f 04 9f fe c0 fe c8 04 1e 2c bf fe c8 34 7b fe c8 fe c0 fe c0 04 5f 34 22 fe c8 04 37 04 27 2c 1a 34 7c fe c0 88 84 0d 60 e2 ff ff 83 c1 01 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -450,6 +463,7 @@ rule Trojan_Win32_Nanocore_NED_2147830477_0
         $x_1_8 = "Archiwum" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -471,6 +485,7 @@ rule Trojan_Win32_Nanocore_GPB_2147902427_0
         $x_5_1 = {f0 f9 fe ca 76 f0 3c a7 f0 f9 fe ca 76 f0 3c a7 41 55 33 21 45 41 30 36 4d a8 ff 73 24 a7 3c f6 7a 12 f1 67 ac c1 93 e7 6b 43 ca 52 a6 ad}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -493,6 +508,7 @@ rule Trojan_Win32_Nanocore_GPE_2147902562_0
         $x_5_2 = {54 23 04 20 68 20 11 32 54 23 04 20 68 20 11 32 41 55 33 21 45 41 30 36 4d a8 ff 73 24 a7 3c f6 7a 12 f1 67 ac c1 93 e7 6b 43 ca 52 a6 ad}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -516,6 +532,7 @@ rule Trojan_Win32_Nanocore_SG_2147903773_0
         $x_1_3 = "hurtling.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -537,6 +554,7 @@ rule Trojan_Win32_Nanocore_GPC_2147904983_0
         $x_5_1 = {8f e2 96 70 a3 b3 35 9f 8f e2 96 70 a3 b3 35 9f 41 55 33 21 45 41 30 36 4d a8 ff 73 24 a7 3c f6 7a 12 f1 67 ac c1 93 e7 6b 43 ca 52 a6 ad}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -559,6 +577,7 @@ rule Trojan_Win32_Nanocore_GPD_2147905022_0
         $x_5_2 = {88 8b 98 9b 3a 24 44 10 88 8b 98 9b 3a 24 44 10 41 55 33 21 45 41 30 36 4d a8 ff 73 24 a7 3c f6 7a 12 f1 67 ac c1 93 e7 6b 43 ca 52 a6 ad}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -633,6 +652,7 @@ rule Trojan_Win32_Nanocore_SCRE_2147937240_0
         $x_2_2 = "crossflowerpositionssystemssi" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -655,6 +675,7 @@ rule Trojan_Win32_Nanocore_BAA_2147940673_0
         $x_2_2 = {2a c8 8b 45 08 0a d1 8b 4d e8 8b 00 88 14 01 41 89 4d e8 81 ff ?? ?? ?? ?? 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

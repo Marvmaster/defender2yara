@@ -29,6 +29,7 @@ rule TrojanSpy_MSIL_Lesat_A_2147696050_0
         $x_1_15 = "%downloader%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -68,6 +69,7 @@ rule TrojanSpy_MSIL_Lesat_A_2147696050_1
         $x_1_20 = "Steal_Yahoo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

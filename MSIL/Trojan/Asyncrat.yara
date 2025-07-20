@@ -16,6 +16,7 @@ rule Trojan_MSIL_Asyncrat_VN_2147759220_0
         $x_1_1 = {08 07 02 07 91 11 ?? 61 09 06 91 61 d2 9c 06 03 6f ?? ?? ?? 0a 17 59 fe ?? 13 ?? 11 ?? 2c ?? 16 0a 2b ?? 06 17 58 0a 07 17 58 0b 07 02 8e 69 17 59 fe ?? 16 fe ?? 13 ?? 11 ?? 2d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Asyncrat_2147779243_0
         $x_1_3 = "us0QeIIyywHOnL1aEl.LLI7G23YMDKuEsuT7C" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_MSIL_Asyncrat_AMMC_2147904835_0
         $x_2_1 = {07 09 06 09 91 08 09 08 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 61 d2 9c 09 17 58 0d 09 06 8e 69 32 e0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Trojan_MSIL_Asyncrat_SWA_2147936847_0
         $x_2_1 = {7e 0e 00 00 04 2d 1c 28 ?? 00 00 06 14 fe 06 27 00 00 06 73 6d 00 00 0a 6f ?? 00 00 0a 17 80 0e 00 00 04 de 07 07 28 ?? 00 00 0a dc 7e 0d 00 00 04 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +106,7 @@ rule Trojan_MSIL_Asyncrat_PGA_2147942783_0
         $x_5_1 = {06 11 06 11 05 6f ?? 00 00 0a 13 07 09 11 04 20 ff 00 00 00 12 07 28 ?? 00 00 0a 59 1f 72 61 d2 9c 11 06 17 58 13 06 11 04 17 58 13 04 11 06 07 3c 0a 00 00 00 11 04 09 8e 69}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

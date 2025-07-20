@@ -17,6 +17,7 @@ rule VirTool_Win32_RogueP_A_2147758792_0
         $x_1_2 = {48 8b d5 48 8d 0d 19 9f 01 00 e8 ?? ?? ?? ?? 45 33 c0 ba d2 04 00 00 41 8d 48 01 ff ?? ?? ?? ?? ?? 85 c0 74 13 48 8d 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule VirTool_Win32_RogueP_B_2147758793_0
         $x_1_2 = {85 ff 0f 84 3b 01 00 00 48 8b 4d 88 ff ?? ?? ?? ?? ?? 85 c0 0f 84 29 01 00 00 ff ?? ?? ?? ?? ?? 8b d0 48 8d ?? ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

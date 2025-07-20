@@ -18,6 +18,7 @@ rule Trojan_Win32_Sopinar_A_2147693202_0
         $x_10_4 = {2d 00 75 00 20 00 2d 00 71 00 20 00 2d 00 6e 00 20 00 22 00 25 00 73 00 22 00 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -43,6 +44,7 @@ rule Trojan_Win32_Sopinar_B_2147693441_0
         $x_1_2 = "{861e4d8a-168b-4b90-a04f-34f72ee701e0}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Sopinar_C_2147705923_0
         $x_1_4 = {8a 0c 06 8d 40 01 80 f1 41 88 48 ff 4a 75 f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_Win32_Sopinar_D_2147707584_0
         $x_1_9 = {c7 06 6a 76 79 73 c7 46 04 63 6a 74 61 66 c7 46 08 76 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule Trojan_Win32_Sopinar_F_2147718416_0
         $x_1_4 = {c7 45 e8 72 00 6e 00 c7 45 ec 65 00 6c 00 c7 45 f0 33 00 32 00 c7 45 f4 2e 00 64 00 c7 45 f8 6c 00 6c 00 66 89 4d fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

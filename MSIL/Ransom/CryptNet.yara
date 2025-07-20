@@ -19,6 +19,7 @@ rule Ransom_MSIL_CryptNet_MA_2147847811_0
         $x_2_4 = {57 b5 02 3c 09 0f 00 00 00 00 00 00 00 00 00 00 02 00 00 00 8d 00 00 00 24}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

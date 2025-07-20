@@ -17,6 +17,7 @@ rule Trojan_Win32_RazXor_2147816562_0
         $x_1_2 = {81 c1 01 00 00 00 31 33 81 c3 01 00 00 00 39 fb 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

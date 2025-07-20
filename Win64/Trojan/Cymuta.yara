@@ -21,6 +21,7 @@ rule Trojan_Win64_Cymuta_AH_2147816598_0
         $x_3_6 = "AttacksLogs" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

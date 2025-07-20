@@ -16,6 +16,7 @@ rule Ransom_MSIL_Goduck_2147729986_0
         $x_10_2 = "Program.exe" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

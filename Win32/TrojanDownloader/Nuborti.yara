@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_Nuborti_A_2147683784_0
         $x_10_10 = "Bot.php" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 3 of ($x_20_*) and 5 of ($x_10_*))) or
             ((1 of ($x_100_*) and 1 of ($x_20_*) and 4 of ($x_10_*))) or

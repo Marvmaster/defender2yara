@@ -16,6 +16,7 @@ rule Trojan_Win32_Windam_A_2147659148_0
         $x_1_2 = {68 2f 75 00 00 8d 8d ?? ?? ff ff 6a 00 c7 45 fc 01 00 00 00 51 c6 85 ?? ?? ff ff 00 e8 ?? ?? ?? ?? 83 c4 0c 6a 00 6a 00 6a 00 6a 00 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 8b f8 85 ff 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

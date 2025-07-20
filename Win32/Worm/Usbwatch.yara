@@ -23,6 +23,7 @@ rule Worm_Win32_Usbwatch_A_2147602339_0
         $x_30_9 = {68 00 01 00 00 51 ff 15 ?? ?? 40 00 bf ?? ?? 40 00 83 c9 ff 33 c0 8d 94 24 ?? ?? 00 00 f2 ae f7 d1 2b f9 8b f7 8b d9 8b fa 83 c9 ff f2 ae 8b cb 4f c1 e9 02 f3 a5 8b cb 8d 84 24 ?? ?? 00 00 83 e1 03 50 f3 a4 8d [0-6] 51 e8 ?? ?? ff ff 83 c4 08 8d [0-6] 6a 00 52 ff 15}  //weight: 30, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 1 of ($x_30_*) and 3 of ($x_10_*))) or
             ((3 of ($x_100_*) and 2 of ($x_30_*))) or
@@ -53,6 +54,7 @@ rule Worm_Win32_Usbwatch_B_2147615812_0
         $x_1_7 = "645FF040-5081-101B-9F08-00AA002F954E" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

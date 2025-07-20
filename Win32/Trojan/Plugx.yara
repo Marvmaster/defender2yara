@@ -17,6 +17,7 @@ rule Trojan_Win32_Plugx_B_2147660507_0
         $x_1_3 = "NvSmart" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Plugx_C_2147663992_0
         $x_1_3 = {50 45 00 00 75 54 56 8b 71 28 57 8b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Plugx_D_2147694993_0
         $x_1_4 = {83 e8 05 88 5c 24 11 88 5c 24 12 88 5c 24 13 88 5c 24 14 89 44 24 11 8d 44 24 0c 50 6a 04 6a 05 56 c6 44 24 20 e9 89 35}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -90,6 +93,7 @@ rule Trojan_Win32_Plugx_E_2147695624_0
         $x_1_5 = {8b 45 f8 ff d0 6a ff e8 ?? ?? ?? ?? 6a ff e8 ?? ?? ?? ?? 6a ff e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Win32_Plugx_F_2147696446_0
         $x_1_3 = {2b c1 50 57 51 e8 d0 00 00 00 8b 35 ?? ?? ?? ?? 8d 85 f4 fe ff ff 83 c4 0c 68 ?? ?? ?? ?? 50 ff d6 68 ?? ?? ?? ?? 8d 85 f4 fe ff ff 50 ff d6 8d 45 fc 50 8d 55 f8 8d 8d f4 fe ff ff e8 b7 fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Trojan_Win32_Plugx_G_2147696500_0
         $x_1_3 = {8b fa c1 e7 07 c1 e3 09 bd 93 23 71 34 2b ef 03 d5 bf a4 c7 ad 46 2b fb 01 7c 24 14 8b 7c 24 20 8a d8 02 d9 02 da 89 54 24 1c 8a d3 8b 5c 24 14 02 d3 32 14 37 46}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_Win32_Plugx_G_2147696500_1
         $x_1_4 = {8b 0d 00 30 00 10 8d 81 ?? 30 00 10 83 c1 09 [0-16] c7 00 52 65 61 64 c7 40 04 46 69 6c 65 [0-48] 81 79 1c 18 00 1a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -182,6 +189,7 @@ rule Trojan_Win32_Plugx_V_2147731811_0
         $x_1_2 = {55 8b ec 81 ec 28 03 00 00 a3 ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 89 15 ?? ?? ?? ?? 89 1d ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 89 3d ?? ?? ?? ?? 66 8c 15 ?? ?? ?? ?? 66 8c 0d ?? ?? ?? ?? 66 8c 1d ?? ?? ?? ?? 66 8c 05 ?? ?? ?? ?? 66 8c 25 ?? ?? ?? ?? 66 8c 2d ?? ?? ?? ?? 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -204,6 +212,7 @@ rule Trojan_Win32_Plugx_V_2147731811_1
         $x_1_2 = {8b 45 fc 33 c9 85 c0 ?? ?? 8b 45 ?? 03 c6 03 d8 8a 54 0f ?? 32 13 41 3b 4d ?? 88 10 72 ?? 8b 5d ?? 8b 45 ?? 83 c0 ?? 3b f0 ?? ?? ff ?? ?? 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 59 59 46 3b 75 0c 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -226,6 +235,7 @@ rule Trojan_Win32_Plugx_AA_2147752059_0
         $x_1_2 = "SK_Parasite" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -248,6 +258,7 @@ rule Trojan_Win32_Plugx_2147840587_0
         $x_7_1 = {b8 90 04 46 00 50 64 ff 35 00 00 00 00 64 89 25 00 00 00 00 33 c0 89 08 50 45 43 6f 6d}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

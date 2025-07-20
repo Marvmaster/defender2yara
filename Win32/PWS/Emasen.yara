@@ -22,6 +22,7 @@ rule PWS_Win32_Emasen_A_2147687893_0
         $x_1_8 = "<SetupExe>kas.vbs</SetupExe>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_6_*) and 1 of ($x_1_*))) or
             (all of ($x*))

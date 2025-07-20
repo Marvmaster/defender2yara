@@ -23,6 +23,7 @@ rule Trojan_Win32_DarkCaracal_NEAA_2147841216_0
         $x_1_8 = "TDCP_blockcipher64" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

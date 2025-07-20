@@ -18,6 +18,7 @@ rule Trojan_MSIL_Trecstart_A_2147697147_0
         $x_1_4 = {69 75 62 65 61 6d 2e 65 78 65 00 69 75 62 65 61 6d 00 6d 73 63 6f 72 6c 69 62}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

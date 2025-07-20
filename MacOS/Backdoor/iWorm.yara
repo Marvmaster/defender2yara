@@ -24,6 +24,7 @@ rule Backdoor_MacOS_iWorm_A_2147735811_0
         $x_5_10 = "qwfojzlk.freehostia.com" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

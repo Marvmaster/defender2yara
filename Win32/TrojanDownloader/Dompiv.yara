@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Dompiv_A_2147628378_0
         $x_1_5 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 [0-32] 2f 00 7e 00 76 00 69 00 70 00 6d 00 6f 00 64 00 2f 00 70 00 75 00 62 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

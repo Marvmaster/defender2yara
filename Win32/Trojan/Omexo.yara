@@ -34,6 +34,7 @@ rule Trojan_Win32_Omexo_C_2147632119_0
         $x_1_20 = "sniff_log" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (14 of ($x*))
 }
 

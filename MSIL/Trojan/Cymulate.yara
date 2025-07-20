@@ -18,6 +18,7 @@ rule Trojan_MSIL_Cymulate_MBCI_2147849167_0
         $x_1_3 = "CymulateEDRRansom" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Cymulate_ACY_2147895793_0
         $x_1_1 = {0a 16 0b 02 28 6d 00 00 0a 16 fe 01 0c 08 2c 61 00 02 28 5a 00 00 0a 0d 09 2c 51 00 00 02 73 6e 00 00 0a 03 04 05 28 6f 00 00 0a 25 0a 13 04 00 06 16 6a 16 6a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

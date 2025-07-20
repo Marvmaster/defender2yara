@@ -17,6 +17,7 @@ rule TrojanProxy_Win32_Pramro_B_2147608875_0
         $x_1_3 = {68 6f 73 74 61 2e 65 78 65 00 73 74 72 63 73 70 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

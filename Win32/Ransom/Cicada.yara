@@ -20,6 +20,7 @@ rule Ransom_Win32_Cicada_DA_2147920620_0
         $x_1_5 = "taskkill /IM * /F" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Cicada_MKV_2147934897_0
         $x_5_1 = {83 c7 08 39 f9 75 ?? 85 d2 74 ?? 66 2e 0f 1f 84 00 00 00 00 00 0f 1f 40 00 0f b6 94 0c d8 00 00 00 30 14 08 41 39 cb 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

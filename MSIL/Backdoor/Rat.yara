@@ -23,6 +23,7 @@ rule Backdoor_MSIL_Rat_RHA_2147912213_0
         $x_2_8 = {ec 1f 00 00 01 00 40 40 00 00 01 00 20 00 28 42 00 00 02 00 30 30 00 00 01 00 20 00 a8 25 00 00 03 00 28 28 00 00 01 00 20 00 68 1a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

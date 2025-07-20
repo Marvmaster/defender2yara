@@ -28,6 +28,7 @@ rule PWS_MSIL_Infostealer_PAC_2147776893_0
         $x_1_13 = "System.Xml" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule PWS_MSIL_Infostealer_PAE_2147778065_0
         $x_1_5 = "discordcanary" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

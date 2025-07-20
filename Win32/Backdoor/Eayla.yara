@@ -17,6 +17,7 @@ rule Backdoor_Win32_Eayla_A_2147652423_0
         $x_1_3 = {c6 45 ec 4e c6 45 ed 56 c6 45 ee 43 c6 45 ef 41 c6 45 f0 67 c6 45 f1 65 c6 45 f2 6e c6 45 f3 74 c6 45 f4 2e c6 45 f5 6e c6 45 f6 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

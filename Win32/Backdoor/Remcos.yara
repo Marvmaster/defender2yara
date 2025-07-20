@@ -18,6 +18,7 @@ rule Backdoor_Win32_Remcos_A_2147731013_0
         $x_1_3 = "REMCOS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_Win32_Remcos_PA_2147742673_0
         $x_1_3 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Backdoor_Win32_Remcos_2147744086_0
         $x_1_1 = {89 c8 41 f7 e3 c1 ea 02 83 e2 fc 8d 04 92 f7 d8 0f b6 04 06 46 30 87 ?? ?? ?? ?? 47 75 e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Backdoor_Win32_Remcos_2147744086_1
         $x_1_16 = "IMAP Password" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (11 of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Backdoor_Win32_Remcos_WS_2147748024_0
         $x_1_1 = {66 69 6c 65 ?? ?? ?? 69 6e ?? ?? ?? ?? ?? 00 00 00 66 ?? 63 c1 a9 ?? ?? ?? ?? a9 ?? ?? ?? ?? 66 0f 6a d2 a9 ?? ?? ?? ?? a9 ?? ?? ?? ?? 0f 63 f7 a9 ?? ?? ?? ?? 31 1c 08 a9 ?? ?? ?? ?? a9 ?? ?? ?? ?? 66 0f 68 ef a9 ?? ?? ?? ?? a9 ?? ?? ?? ?? a9 ?? ?? ?? ?? 66 0f 6b f5 a9 ?? ?? ?? ?? a9 ?? ?? ?? ?? 66 0f 69 c5 a9 ?? ?? ?? ?? a9 ?? ?? ?? ?? 66 0f 6b f7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -140,6 +145,7 @@ rule Backdoor_Win32_Remcos_PS_2147754914_0
         $x_1_1 = {6e 03 0f 66 a9 fd 0e 66 a4 35 00 66 0f 98 10 66 ?? 0d 0e 66 2f 4e 0e 66 b9 22 0d 66 d7 a3 00 66 f6 6d 10 66 ?? 92 0f 66 30 6c 0e 66 ed ee 0e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +168,7 @@ rule Backdoor_Win32_Remcos_ARK_2147761620_0
         $x_1_2 = {8d a4 24 00 00 00 00 [0-31] 8b ?? ?? 70 24 41 00 33 ?? ?? 85 c9 89 [0-2] 74 [0-4] 83 c1 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -183,6 +190,7 @@ rule Backdoor_Win32_Remcos_ARK_2147761620_1
         $x_1_1 = {8b 55 f0 8b 45 ec e8 ?? ?? ?? ?? 8b d8 85 db 75 ?? 90 90 90 90 90 90 90 90 90 90 90 90 90 8b c6 8b 55 e8 e8 ?? ?? ?? ?? eb ?? ff 36 ef 00 90 90 90 90 90 90 90 90 90 90 90}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -208,6 +216,7 @@ rule Backdoor_Win32_Remcos_PB_2147772778_0
         $x_1_5 = "CreateTextFile" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -244,6 +253,7 @@ rule Backdoor_Win32_Remcos_GA_2147773587_0
         $x_1_16 = "\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System /v EnableLUA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -273,6 +283,7 @@ rule Backdoor_Win32_Remcos_ZJ_2147776657_0
         $x_1_6 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -297,6 +308,7 @@ rule Backdoor_Win32_Remcos_ZK_2147776658_0
         $x_1_4 = {43 00 3a 00 5c 00 54 00 45 00 4d 00 50 00 5c 00 [0-15] 2e 00 74 00 6d 00 70 00 2d 00 3e 00 43 00 3a 00 5c 00 54 00 45 00 4d 00 50 00 5c 00 [0-15] 2e 00 74 00 6d 00 70 00 5c 00 63 00 75 00 73 00 74 00 6f 00 6d 00 2e 00 69 00 6e 00 69 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -319,6 +331,7 @@ rule Backdoor_Win32_Remcos_ZL_2147777167_0
         $x_1_2 = "C:\\Users\\Public\\Libraries\\temp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -344,6 +357,7 @@ rule Backdoor_Win32_Remcos_ZO_2147778945_0
         $x_1_5 = "AVIStreamTimeToSample" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -365,6 +379,7 @@ rule Backdoor_Win32_Remcos_MM_2147787629_0
         $x_1_1 = {8b 01 0f b7 00 f6 c4 f9 74 1e 8b 1d ?? ?? ?? ?? 8b 1b 03 1d ?? ?? ?? ?? 66 25 ff 0f 0f b7 c0 03 d8 a1 ?? ?? ?? ?? 01 03 83 01 02 ff 05 ?? ?? ?? ?? 4a 75 cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -388,6 +403,7 @@ rule Backdoor_Win32_Remcos_MM_2147787629_1
         $x_2_3 = "Remcos restarted by watchdog!" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -414,6 +430,7 @@ rule Backdoor_Win32_Remcos_MM_2147787629_2
         $x_1_6 = "$15UEAEDC-EA00-45H8-8D67?8BD7CCTEAC70" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -466,6 +483,7 @@ rule Backdoor_Win32_Remcos_QW_2147795463_0
         $x_3_7 = "SysAllocStringByteLen" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -487,6 +505,7 @@ rule Backdoor_Win32_Remcos_BL_2147837070_0
         $x_2_1 = {c1 e0 07 0b d0 88 95 [0-4] 0f b6 8d [0-4] f7 d9 88 8d [0-4] 8b 95 [0-4] 8a 85 [0-4] 88 84 15 [0-4] e9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -510,6 +529,7 @@ rule Backdoor_Win32_Remcos_MA_2147896308_0
         $x_2_3 = ":/Users/Admin/AppData/Roaming/installer/installer/main.go" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -531,6 +551,7 @@ rule Backdoor_Win32_Remcos_GXB_2147911990_0
         $x_10_1 = {66 0f ef c1 0f 11 80 ?? ?? ?? ?? 0f 10 80 ?? ?? ?? ?? 66 0f ef c1 0f 11 80 ?? ?? ?? ?? 0f 10 80 ?? ?? ?? ?? 66 0f ef c1 0f 11 80 ?? ?? ?? ?? 0f 10 80 ?? ?? ?? ?? 66 0f ef c1 0f 11 80 ?? ?? ?? ?? 83 c0 40 3d 00 a4 08 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -553,6 +574,7 @@ rule Backdoor_Win32_Remcos_GZZ_2147942120_0
         $x_5_2 = {f0 64 a1 30 00 00 00 89 78 ?? 8b 42 ?? 03 c7 ff d0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

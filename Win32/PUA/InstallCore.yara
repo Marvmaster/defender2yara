@@ -45,6 +45,7 @@ rule PUA_Win32_InstallCore_R_266542_0
         $x_1_9 = "irsoGetDownloadedSize" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -65,6 +66,7 @@ rule PUA_Win32_InstallCore_M_267253_0
         $x_1_1 = {58 59 5a 50 68 52 75 6e 00 54 52 51 e8 07 00 00 00 90 ff d0 83 c4 04 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

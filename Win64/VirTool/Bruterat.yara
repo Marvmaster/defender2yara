@@ -17,6 +17,7 @@ rule VirTool_Win64_Bruterat_C_2147893557_0
         $x_1_3 = {66 45 85 d2 74 21 31 d2 31 c0 ?? 0f b7 c8 83 c0 ?? 45 0f b6 04 09 0f b7 ca 83 c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Backdoor_Win32_Crypminal_AR_2147819201_0
         $x_2_1 = {33 c0 40 3d 37 d0 55 04 75 f8 33 c0 69 d0 4e 09 00 00 40 3d 37 d0 55 04 75 f2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

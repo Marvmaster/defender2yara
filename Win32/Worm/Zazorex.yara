@@ -19,6 +19,7 @@ rule Worm_Win32_Zazorex_C_2147653314_0
         $x_1_5 = "captcha" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Worm_Win32_Zazorex_D_2147654364_0
         $x_1_2 = {50 ff 75 f8 ff 55 f0 8b 45 fc ff 70 04 8b 45 0c 68 ?? ?? ?? ?? ff 30 e8 ?? ?? ?? ?? 83 c4 24 ff 75 fc ff 55 f4 59 ff 75 f8 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Worm_Win32_Zazorex_E_2147661191_0
         $x_1_4 = {08 66 61 63 c7 45 ?? 65 62 6f 6f 66 c7 45 ?? 6b 00 c7 45 ?? 06 63 5f 75 c7 45 ?? 73 65 72 00 c7 (45 ??|85 ?? ?? ?? ??) 02 78 73 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

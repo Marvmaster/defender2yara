@@ -20,6 +20,7 @@ rule Trojan_Win32_Tougle_A_2147735477_0
         $x_1_5 = {00 62 69 74 73 61 64 6d 69 6e 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Backdoor_MSIL_XenoRat_BSA_2147927609_0
         $x_5_2 = {1b 30 06 00 84 0b 00 00 10 00 00 11 12 00 14 7d 04 00 00 04 14 0b 72 64 05 00 70 0c 08 18 28 32 00 00 0a 28 33 00 00 0a 16 28 34 00 00 0a 26 21 00 60 40 00 00 00 00 00 e0 0d 20 b7 50 00 00 13 04 11 04 8d}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_MSIL_XenoRat_BSA_2147927609_1
         $x_6_5 = "IAsyncStateMachine" ascii //weight: 6
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_6_*))) or
             ((2 of ($x_10_*) and 1 of ($x_6_*))) or

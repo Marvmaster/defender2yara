@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_Throng_A_2147622059_0
         $x_1_10 = "http://209.11.244.51/p.php?n=m" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

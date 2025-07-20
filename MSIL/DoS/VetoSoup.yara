@@ -18,6 +18,7 @@ rule DoS_MSIL_VetoSoup_A_2147817774_0
         $x_50_3 = "Process Monitor|Wireshark|Process Explor|NetWorx|NetLimiter|tcpdump|netcat|Network Monitor|Intercepter-NG" wide //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

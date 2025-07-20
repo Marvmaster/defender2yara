@@ -20,6 +20,7 @@ rule HackTool_Win64_Crdrpi_W_2147817639_0
         $x_1_5 = "OpenSCManagerA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

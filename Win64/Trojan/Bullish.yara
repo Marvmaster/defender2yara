@@ -20,6 +20,7 @@ rule Trojan_Win64_Bullish_A_2147939853_0
         $x_1_5 = "poepofjow" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win64_Bullish_B_2147939854_0
         $x_1_3 = "jJhqwhjhdq" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

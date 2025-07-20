@@ -17,6 +17,7 @@ rule Trojan_MSIL_Discordsteler_ASGB_2147897016_0
         $x_1_2 = {08 09 07 09 91 06 09 06 8e 69 5d 91 61 d2 9c 09 17 58 0d 09 07 8e 69 32 e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

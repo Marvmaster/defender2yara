@@ -24,6 +24,7 @@ rule Trojan_MSIL_Poullight_PA_2147753568_0
         $x_1_9 = "Yandex\\YandexBrowser\\User Data" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -54,6 +55,7 @@ rule Trojan_MSIL_Poullight_SA_2147755339_0
         $x_1_10 = "Bitcoin-Qt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

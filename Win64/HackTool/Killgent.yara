@@ -19,6 +19,7 @@ rule HackTool_Win64_Killgent_DA_2147928862_0
         $x_1_4 = "viragt64.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule HackTool_Win64_Killgent_RPA_2147929049_0
         $x_1_14 = "CreateServiceW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_10_*) and 5 of ($x_1_*))) or
             ((1 of ($x_100_*) and 4 of ($x_10_*))) or
@@ -80,6 +82,7 @@ rule HackTool_Win64_Killgent_ZB_2147929265_0
         $x_1_2 = {8b 55 cc 48 8b 4d d0 48 c7 85 ?? 01 00 00 00 00 00 00 48 c7 85 ?? 01 00 00 00 00 00 00 4c 8d 45 f0 41 b9 00 01 00 00 4c 8d 95 ?? 01 00 00 48 8d 85 ?? 01 00 00 45 31 db 4c 89 54 24 20 c7 44 24 28 04 00 00 00 48 89 44 24 30 48 c7 44 24 38 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -105,6 +108,7 @@ rule HackTool_Win64_Killgent_DC_2147935088_0
         $x_1_5 = "Disable process PID" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

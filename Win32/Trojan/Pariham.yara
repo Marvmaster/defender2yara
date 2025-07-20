@@ -20,6 +20,7 @@ rule Trojan_Win32_Pariham_A_2147706821_0
         $x_1_6 = {75 10 88 0c 02 b9 23 00 00 00 2b ca 8d 74 02 02 f3 a4 42 83 fa 23 72 b1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

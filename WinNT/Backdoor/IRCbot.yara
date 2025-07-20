@@ -19,6 +19,7 @@ rule Backdoor_WinNT_IRCbot_A_2147621127_0
         $x_1_4 = {73 79 73 74 65 6d 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

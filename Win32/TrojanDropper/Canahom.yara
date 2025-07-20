@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Canahom_A_2147597870_0
         $x_1_2 = {ad 8b f7 33 c2 42 3d 53 6f 66 74 75 f3 4a ac 32 c2 aa 83 c2 02 e2 f6 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -41,6 +41,7 @@ rule Backdoor_Win32_Delfsnif_B_2147582899_0
         $x_1_26 = "AdjustTokenPrivileges" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 10 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -73,6 +74,7 @@ rule Backdoor_Win32_Delfsnif_D_2147583427_0
         $x_5_9 = "WinExec" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_10_*) and 6 of ($x_5_*))) or
             ((1 of ($x_20_*) and 2 of ($x_10_*) and 4 of ($x_5_*))) or
@@ -109,6 +111,7 @@ rule Backdoor_Win32_Delfsnif_C_2147583507_0
         $x_1_12 = "type =-label-= to rename label to %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -146,6 +149,7 @@ rule Backdoor_Win32_Delfsnif_E_2147583508_0
         $n_100_14 = "AnVir Task Manager" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((3 of ($x_20_*) and 4 of ($x_5_*))) or
@@ -190,6 +194,7 @@ rule Backdoor_Win32_Delfsnif_F_2147593033_0
         $x_10_19 = "Winsock2Flood" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_50_*) and 3 of ($x_25_*) and 10 of ($x_10_*))) or
             ((2 of ($x_100_*) and 1 of ($x_50_*) and 4 of ($x_25_*) and 8 of ($x_10_*))) or
@@ -229,6 +234,7 @@ rule Backdoor_Win32_Delfsnif_B_2147602207_0
         $x_1_12 = "dllfile:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

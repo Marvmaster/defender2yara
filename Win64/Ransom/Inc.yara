@@ -22,6 +22,7 @@ rule Ransom_Win64_Inc_BAA_2147944405_0
         $x_1_7 = "EncryptionAlgoSALSA20AESEncryptionHeader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

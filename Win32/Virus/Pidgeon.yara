@@ -19,6 +19,7 @@ rule Virus_Win32_Pidgeon_A_2147649040_0
         $x_2_5 = {bb 01 00 00 00 8b 84 24 60 01 00 00 8b 30 83 fb 01 75 ?? 85 f6 74 ?? 8d 4c 24 10 51 56 ff 15 ?? ?? ?? 00 8b f8 eb ?? 85 f6 74 ?? 56 ff 15 ?? ?? ?? 00 8d 54 24 10 52 57 ff 15 ?? ?? ?? 00 8b f0 83 fe ff 75 ?? 33 f6 33 ff eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

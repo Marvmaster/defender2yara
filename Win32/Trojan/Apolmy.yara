@@ -16,6 +16,7 @@ rule Trojan_Win32_Apolmy_B_2147688977_0
         $x_1_2 = {b8 fb ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

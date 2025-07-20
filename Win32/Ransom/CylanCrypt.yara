@@ -20,6 +20,7 @@ rule Ransom_Win32_CylanCrypt_PAA_2147846219_0
         $x_1_5 = "SELECT * FROM Win32_ShadowCopy" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win32_CylanCrypt_PAB_2147847470_0
         $x_1_4 = {c1 c8 02 33 d0 8b 45 ?? 8b c8 23 45 ?? 0b 4d ?? 23 4d ?? 0b c8 8b 45 ?? 03 c6 03 ca 03 ce 89 45 ?? 8b f0 89 4d ?? c1 c0 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -71,6 +73,7 @@ rule Ransom_Win32_CylanCrypt_PAC_2147847471_0
         $x_1_4 = {0b c8 8b 85 ?? ?? ?? ?? 03 c6 03 ca 03 ce 89 85 ?? ?? ?? ?? 8b f0 89 8d ?? ?? ?? ?? c1 c0 07 8b d1 c1 ce 0b 33 f0 c1 ca 0d 8b 85 ?? ?? ?? ?? c1 c8 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

@@ -23,6 +23,7 @@ rule BrowserModifier_Win32_NavExcel_8860_0
         $x_1_9 = "An update for the NavExcel Search Toolbar is available." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -55,6 +56,7 @@ rule BrowserModifier_Win32_NavExcel_8860_1
         $x_1_13 = "The NavExcel Search Toolbar has been successfully uninstalled." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (11 of ($x*))
 }
 
@@ -98,6 +100,7 @@ rule BrowserModifier_Win32_NavExcel_8860_2
         $x_2_24 = "navexcel.com" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_2_*) and 16 of ($x_1_*))) or
             ((7 of ($x_2_*) and 14 of ($x_1_*))) or
@@ -124,6 +127,7 @@ rule BrowserModifier_Win32_NavExcel_8860_3
         $x_4_3 = "Please visit http://www.navexcel.com for support on this issue." ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

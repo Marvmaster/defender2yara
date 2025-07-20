@@ -21,6 +21,7 @@ rule Worm_Win32_Fakeon_A_2147708749_0
         $n_100_6 = "Autor David Farji - Concepto 201" wide //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or

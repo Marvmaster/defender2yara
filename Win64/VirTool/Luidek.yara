@@ -19,6 +19,7 @@ rule VirTool_Win64_Luidek_A_2147808500_0
         $x_1_4 = "lupo-server/core.Sessions" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

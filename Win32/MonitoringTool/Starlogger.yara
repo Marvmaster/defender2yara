@@ -18,6 +18,7 @@ rule MonitoringTool_Win32_Starlogger_160911_0
         $x_1_4 = "Desktop will be captured regularly." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

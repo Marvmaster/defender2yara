@@ -26,6 +26,7 @@ rule TrojanDownloader_Win32_AdoStream_A_2147596738_0
         $x_1_12 = "ExeScript Host" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

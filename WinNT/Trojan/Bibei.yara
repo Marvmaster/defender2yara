@@ -16,6 +16,7 @@ rule Trojan_WinNT_Bibei_A_2147651605_0
         $x_1_2 = {0f b7 55 f0 a1 ?? ?? ?? ?? 8b 08 8b 14 91 89 15 ?? ?? ?? ?? fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 0f b7 45 f0 8b 0d ?? ?? ?? ?? 8b 11 c7 04 82 ?? ?? ?? ?? 0f 20 c0 0d 00 00 01 00 0f 22 c0 fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_WinNT_Bibei_B_2147651628_0
         $x_1_2 = {eb 02 eb ab [0-31] 2e 00 73 00 79 00 73 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

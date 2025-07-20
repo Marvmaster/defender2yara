@@ -17,6 +17,7 @@ rule Trojan_Win32_Lidruval_A_2147631727_0
         $x_1_3 = {68 30 20 00 00 68 ?? ?? ?? ?? 8d 95 ?? ?? ff ff 52 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

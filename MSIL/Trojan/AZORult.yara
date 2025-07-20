@@ -17,6 +17,7 @@ rule Trojan_MSIL_AZORult_NYA_2147826548_0
         $x_1_2 = {95 a2 29 09 0b 00 00 00 ?? ?? ?? 00 16 00 00 01 00 00 00 3a 00 00 00 09 00 00 00 06 00 00 00 18 00 00 00 07 00 00 00 37 00 00 00 18 00 00 00 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

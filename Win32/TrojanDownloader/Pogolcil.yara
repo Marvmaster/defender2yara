@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Pogolcil_A_2147721509_0
         $x_1_5 = "https://107.151.152.220:5658" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Pogolcil_D_2147722502_0
         $x_1_4 = {45 78 69 74 50 72 6f 63 65 73 73 00 4c 6f 63 61 6c 20 41 70 70 57 69 7a 61 72 64 2d 47 65 6e 65 72 61 74 65 64 20 41 70 70 6c 69 63 61 74 69 6f 6e 73 00 00 44 42 00 00 49 4e 46 4f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule TrojanDownloader_Win32_Pogolcil_F_2147723216_0
         $x_1_6 = "\\ProxyGate\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule TrojanDownloader_Win32_Pogolcil_E_2147723315_0
         $x_1_3 = {74 0b 80 38 4d 75 06 80 78 01 5a 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule TrojanDownloader_Win32_Pogolcil_G_2147724782_0
         $x_1_2 = {0f be 39 4a 6a 08 41 5b 8b c7 33 c6 d1 ee a8 01 74 06 81 f6 20 83 b8 ed d1 ef 83 eb 01 75 e9 85 d2 75 dd 5f 5b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

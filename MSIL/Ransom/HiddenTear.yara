@@ -17,6 +17,7 @@ rule Ransom_MSIL_HiddenTear_A_2147723151_0
         $x_1_3 = {63 00 6d 00 64 00 2e 00 65 00 78 00 65 00 00 13 2f 00 63 00 20 00 73 00 74 00 61 00 72 00 74 00 20 00 00 03 5f 00 00 01 00 23 4b 00 65 00 79 00 4c 00 6f 00 67 00 67 00 65 00 72 00 20 00 53 00 74 00 61 00 72 00 74 00 65 00 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +61,7 @@ rule Ransom_MSIL_HiddenTear_A_2147723151_1
         $x_1_24 = "Bcdedit.exe /set {default} bootstatuspolicy ignoreallfailures" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 4 of ($x_1_*))) or
             ((5 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -90,6 +92,7 @@ rule Ransom_MSIL_HiddenTear_B_2147731323_0
         $x_1_6 = "Locker.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -111,6 +114,7 @@ rule Ransom_MSIL_HiddenTear_C_2147731336_0
         $x_1_2 = "\\obj\\Debug\\ScreenLocker.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +140,7 @@ rule Ransom_MSIL_HiddenTear_AA_2147752899_0
         $x_1_5 = "timeout 3 & del /f /q" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +164,7 @@ rule Ransom_MSIL_HiddenTear_TH_2147754741_0
         $x_1_3 = "Checking if you have payed." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -184,6 +190,7 @@ rule Ransom_MSIL_HiddenTear_RN_2147759226_0
         $x_5_5 = "reha_ransomware_650x381" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -219,6 +226,7 @@ rule Ransom_MSIL_HiddenTear_ST_2147762468_0
         $x_1_11 = "del /Q /F C:\\Program Files\\panda" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -243,6 +251,7 @@ rule Ransom_MSIL_HiddenTear_DB_2147769566_0
         $x_1_4 = ".LOCKED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +277,7 @@ rule Ransom_MSIL_HiddenTear_DC_2147772408_0
         $x_1_5 = "@tutanota.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -292,6 +302,7 @@ rule Ransom_MSIL_HiddenTear_DD_2147772562_0
         $x_1_4 = ".info.hta" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -316,6 +327,7 @@ rule Ransom_MSIL_HiddenTear_DE_2147772856_0
         $x_1_4 = "/C choice /C Y /N /D Y /T 1 & Del" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -343,6 +355,7 @@ rule Ransom_MSIL_HiddenTear_MK_2147773004_0
         $x_1_7 = "do not try to rename encrypted files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -368,6 +381,7 @@ rule Ransom_MSIL_HiddenTear_DF_2147773120_0
         $x_1_5 = "bootstatuspolicy ignoreallfailures" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -393,6 +407,7 @@ rule Ransom_MSIL_HiddenTear_DG_2147773121_0
         $x_1_5 = ".dark" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -416,6 +431,7 @@ rule Ransom_MSIL_HiddenTear_DI_2147773127_0
         $x_1_3 = "DECRYPT_ME_.TXT.locked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -440,6 +456,7 @@ rule Ransom_MSIL_HiddenTear_DJ_2147773177_0
         $x_1_4 = "netsh firewall set opmode disable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -466,6 +483,7 @@ rule Ransom_MSIL_HiddenTear_DH_2147774378_0
         $x_1_6 = "taskkill" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -493,6 +511,7 @@ rule Ransom_MSIL_HiddenTear_DL_2147774384_0
         $x_1_7 = "Malware_2._0.Payloads" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -520,6 +539,7 @@ rule Ransom_MSIL_HiddenTear_DM_2147777157_0
         $x_1_4 = "Office Updater" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -544,6 +564,7 @@ rule Ransom_MSIL_HiddenTear_DN_2147778688_0
         $x_1_4 = "hidden_tear" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -569,6 +590,7 @@ rule Ransom_MSIL_HiddenTear_PB_2147779695_0
         $x_1_5 = "\\IS_room_start.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -593,6 +615,7 @@ rule Ransom_MSIL_HiddenTear_DO_2147779982_0
         $x_1_4 = ".flyper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -618,6 +641,7 @@ rule Ransom_MSIL_HiddenTear_DP_2147780429_0
         $x_1_5 = "GetFiles" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -641,6 +665,7 @@ rule Ransom_MSIL_HiddenTear_PD_2147786694_0
         $x_1_3 = "Your Files have been encrypted" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -664,6 +689,7 @@ rule Ransom_MSIL_HiddenTear_PE_2147787293_0
         $x_1_3 = "\\README_DECRYPT.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -688,6 +714,7 @@ rule Ransom_MSIL_HiddenTear_PF_2147787728_0
         $x_1_4 = "All your important files are encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -715,6 +742,7 @@ rule Ransom_MSIL_HiddenTear_A_2147788487_0
         $x_1_7 = "tentativa.log" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -740,6 +768,7 @@ rule Ransom_MSIL_HiddenTear_DQ_2147789180_0
         $x_1_5 = "paymentTMR_Tick" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -763,6 +792,7 @@ rule Ransom_MSIL_HiddenTear_PG_2147808603_0
         $x_1_3 = "/UnlockYourFiles" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -786,6 +816,7 @@ rule Ransom_MSIL_HiddenTear_PH_2147808634_0
         $x_1_3 = "\\locky.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -809,6 +840,7 @@ rule Ransom_MSIL_HiddenTear_PK_2147808820_0
         $x_1_3 = "HELP_DECRYPT_FILES.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -833,6 +865,7 @@ rule Ransom_MSIL_HiddenTear_PL_2147809414_0
         $x_1_4 = "\\password.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -857,6 +890,7 @@ rule Ransom_MSIL_HiddenTear_PM_2147815356_0
         $x_1_4 = "\\Goodwill Encryptor.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -883,6 +917,7 @@ rule Ransom_MSIL_HiddenTear_MKV_2147853210_0
         $x_1_6 = "CreatePassword" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -904,6 +939,7 @@ rule Ransom_MSIL_HiddenTear_MKZ_2147853223_0
         $x_1_1 = {73 95 00 00 0a 0d 7e 74 00 00 04 38 ?? ?? ?? 00 20 00 01 00 00 38 dd 00 00 00 16 3a c3 00 00 00 7e 76 00 00 04 38 d7 00 00 00 20 80 00 00 00 38 d3 00 00 00 1b 2c cf 02 07 20 e8 03 00 00 73 96 00 00 0a 13 04 7e 7a 00 00 04 09 7e 78 00 00 04 11 04 7e 33 00 00 04 09 28 3d 00 00 06 1e 5b 28 a6 00 00 06 28 a9 00 00 06 7e 7c 00 00 04 09 7e 78 00 00 04 11 04 7e 35 00 00 04 09 28 3d 00 00 06 1e 5b 28 a6 00 00 06 28 a9 00 00 06 7e 7e 00 00 04 09 17 28 ac 00 00 06 08 7e 80 00 00 04 09 28 af 00 00 06 17 73 97 00 00 0a 13 05 7e 82 00 00 04 11 05 04 16 04 8e 69 28 b2 00 00 06 7e 2e 00 00 04 11 05 28 37 00 00 06 16 2d e0 de 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -925,6 +961,7 @@ rule Ransom_MSIL_HiddenTear_RDA_2147889175_0
         $x_2_1 = {0d 06 7e 01 00 00 04 09 7e 01 00 00 04 6f 3b 00 00 0a 5e 6f 3c 00 00 0a 6f 43 00 00 0a 26}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -946,6 +983,7 @@ rule Ransom_MSIL_HiddenTear_RDB_2147904597_0
         $x_2_1 = {5d 6f 1e 00 00 0a 61 d2 9c 08 17 58 0c 08 06 8e 69}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -971,6 +1009,7 @@ rule Ransom_MSIL_HiddenTear_SWA_2147927263_0
         $x_1_5 = "Your computer files have been encrypted!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -1001,6 +1040,7 @@ rule Ransom_MSIL_HiddenTear_BA_2147937749_0
         $x_1_6 = "crypto and instructions on how to decrypt the system" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1025,6 +1065,7 @@ rule Ransom_MSIL_HiddenTear_PDZ_2147941719_0
         $x_2_4 = "FileKrypter Encrypted FIle|*.filekrypter|All Files|*.*" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1049,6 +1090,7 @@ rule Ransom_MSIL_HiddenTear_AHT_2147946601_0
         $x_1_4 = "We take our work seriously and understand that your data may be sensitive or important" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

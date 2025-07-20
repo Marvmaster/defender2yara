@@ -18,6 +18,7 @@ rule Worm_Win32_Neeris_C_121219_0
         $x_1_3 = {68 88 13 00 00 ff 15 ?? ?? ?? ?? 45 83 fd 06 7c ?? 68 30 75 00 00 57 6a 01 53 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Worm_Win32_Neeris_AS_140396_0
         $x_10_5 = {73 61 6e 64 62 6f 78 00 76 6d 77 61 72 65}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -70,6 +72,7 @@ rule Worm_Win32_Neeris_D_146167_0
         $x_1_5 = "Cache-Control: no-cache,no-store,max-age=0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -96,6 +99,7 @@ rule Worm_Win32_Neeris_BK_202405_0
         $x_1_3 = "p1icka.stp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

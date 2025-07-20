@@ -18,6 +18,7 @@ rule Backdoor_Win32_Hera_A_2147735014_0
         $x_1_3 = "check_run_memory_module_interface" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

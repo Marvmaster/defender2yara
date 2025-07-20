@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Dihallo_A_2147803903_0
         $x_1_8 = "isdn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 4 of ($x_5_*))) or
             (all of ($x*))
@@ -53,6 +54,7 @@ rule TrojanDownloader_Win32_Dihallo_A_2147803903_1
         $x_5_9 = "&lscal=%#04d%#02d%#02d%#02d%#02d%#02d" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_5_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_7_*) and 2 of ($x_5_*) and 1 of ($x_3_*))) or

@@ -20,6 +20,7 @@ rule Trojan_Win32_DelShad_SK_2147759873_0
         $x_1_5 = "Yeah Yeah its 420 time" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_DelShad_DAX_2147888509_0
         $x_1_2 = {6b 82 4f bd 52 33 63 b2 af 49 91 3a 4f ad 33 99 66 cf 11 b7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_VaporRage_A_2147781394_0
         $x_2_5 = {8a 11 88 55 ff 83 45 f4 01 80 7d ff 00 75 ?? 8b 45 f4 2b 45 e8 89 45 e4 8b 4d e4 83 e9 01 39 4d f0 77 ?? 8b 55 0c 83 ea 01 39 55 f8 7d ?? 8b 45 08 03 45 f8 0f b6 08 8b 55 ec 03 55 f0 0f be 02 33 c8 8b 55 08 03 55 f8 88 0a 8b 45 f8 83 c0 01 89 45 f8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -54,6 +55,7 @@ rule TrojanDownloader_Win32_VaporRage_B_2147788504_0
         $x_3_10 = {83 f9 1a 8d 52 01 1b c0 23 c8 8a 44 17 ff 32 84 ?? ?? ?? ?? ?? 41 88 42 ff 4e 75 e4 8b 7c ?? ?? 68 ?? ?? ?? ?? e8 8b ?? ?? ?? 83 c4 04 6a 40 68 00 10 00 00 57 6a 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -87,6 +89,7 @@ rule TrojanDownloader_Win32_VaporRage_D_2147806298_0
         $x_1_7 = {31 ea 89 94 ?? ?? ?? 00 00 [0-48] 0f be ?? ?? ?? ?? 00 83 ?? ?? 88 ?? 88 ?? ?? ?? ?? 00 00 0f be ?? ?? ?? ?? 00 83 ?? ?? 88 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 83 ?? ?? 88 ca 88 ?? ?? ?? ?? 00 00 0f be ?? ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -108,6 +111,7 @@ rule TrojanDownloader_Win32_VaporRage_G_2147819366_0
         $x_100_1 = {44 0f b6 04 11 48 89 d0 83 e0 07 48 c1 e0 03 c4 c2 fb f7 c1 44 31 c0 88 04 11 48 ff c2 48 83 fa 1b 75}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

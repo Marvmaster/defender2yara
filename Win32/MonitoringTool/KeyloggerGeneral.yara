@@ -20,6 +20,7 @@ rule MonitoringTool_Win32_KeyloggerGeneral_7696_0
         $x_1_6 = {43 41 50 53 4c 4f 43 4b 4f 4e 00 00 46 6f 72 6d 4f 6e 74 6f 70 00 00 00 39 4f ad 33 99 66 cf 11 b7 0c 00 aa 00 60 d3 93 47 65 74 43 61 70 74 69 6f 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

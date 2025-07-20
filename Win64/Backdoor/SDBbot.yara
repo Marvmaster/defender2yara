@@ -19,6 +19,7 @@ rule Backdoor_Win64_SDBbot_A_2147919380_0
         $x_1_5 = "14.121.222.11" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Backdoor_Win64_SDBbot_C_2147919383_0
         $x_1_7 = "too many files open in system" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

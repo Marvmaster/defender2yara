@@ -17,6 +17,7 @@ rule Trojan_MSIL_StealC_CCES_2147897712_0
         $x_1_2 = {02 07 91 0c 03 07 03 6f ?? 00 00 0a 5d 6f ?? 00 00 0a d2 0d 08 09 28 ?? 01 00 06 13 04 06 07 11 04 9c 00 07 17 58 0b 07 02 8e 69 fe 04 13 05 11 05 2d cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_StealC_ASA_2147898581_0
         $x_1_1 = {17 da 0b 16 0c 2b 15 02 08 02 08 9a 03 72 3b 00 00 70 6f 42 00 00 0a a2 08 17 d6 0c 08 07 31 e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_MSIL_StealC_RDE_2147902137_0
         $x_2_1 = {08 59 09 59 20 00 01 00 00 5d 13 04 11 04 16}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_MSIL_StealC_A_2147902946_0
         $x_2_1 = {06 0b 07 8e 69 1f ?? 28 ?? ?? 00 06 2e ?? 08 15 31 ?? 07 28 ?? 00 00 2b 28 ?? 00 00 2b 0b 28 ?? ?? 00 06 07 28 ?? ?? 00 06 0d 07}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_MSIL_StealC_AE_2147903599_0
         $x_1_3 = "aR3nbf8dQp2feLmk31.lSfgApatkdxsVcGcrktoFd.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +129,7 @@ rule Trojan_MSIL_StealC_NB_2147905368_0
         $x_10_1 = {59 93 61 11 0b ?? 2c 00 00 1b 11 09 11 0c 58}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +152,7 @@ rule Trojan_MSIL_StealC_NB_2147905368_1
         $x_3_2 = {8d 37 00 00 01 80 ?? 00 00 04 7e ?? 00 00 04 16 fe 06 ?? 00 00 06 9b 7e 0b 00 00 04 17 fe 06 ?? 00 00 06 9b 7e ?? 00 00 04 18 fe 06 ?? 00 00 06 9b}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +175,7 @@ rule Trojan_MSIL_StealC_NC_2147906791_0
         $x_3_2 = {13 0b 2b b8 73 ?? 00 00 0a 13 06 1b 13 0b 2b ac 00 18 13 0b}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +198,7 @@ rule Trojan_MSIL_StealC_NC_2147906791_1
         $x_2_2 = "69fc8618-d6a2-4930-9b87-8efcfdee5cf2" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +220,7 @@ rule Trojan_MSIL_StealC_KAF_2147907245_0
         $x_1_1 = {00 06 09 93 07 09 07 8e 69 5d 93 59 20 00 01 00 00 59 20 00 01 00 00 5d 13 04 11 04 16 fe 04 13 05 11 05 2c 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +242,7 @@ rule Trojan_MSIL_StealC_B_2147907785_0
         $x_2_1 = {11 0b 11 0c 58 11 06 11 0c 91 52 11 0c 17 58 13 0c 11 0c 11 06 8e 69}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -254,6 +265,7 @@ rule Trojan_MSIL_StealC_NS_2147907897_0
         $x_3_2 = {07 1f 10 8d 37 00 00 01 25 d0 37 00 00 04 28 ?? 00 00 0a 6f ?? 00 00 0a 06 07 6f d8 00 00 0a}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -275,6 +287,7 @@ rule Trojan_MSIL_StealC_RDF_2147908240_0
         $x_2_1 = {06 28 58 00 00 06 28 5a 00 00 06 6f 33 00 00 0a 02 16 02 8e 69 6f 34 00 00 0a 0b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +311,7 @@ rule Trojan_MSIL_StealC_NL_2147908451_0
         $x_1_3 = "SplittyDev" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -320,6 +334,7 @@ rule Trojan_MSIL_StealC_NM_2147909804_0
         $x_1_2 = "industrialcustomtour" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -341,6 +356,7 @@ rule Trojan_MSIL_StealC_CCIG_2147911410_0
         $x_1_1 = {08 07 17 73 ?? ?? ?? ?? 0d 00 09 03 16 03 8e 69 6f ?? 00 00 0a 00 09 6f ?? 00 00 0a 00 00 de 0b 09 2c 07 09 6f ?? 00 00 0a 00 dc 08 6f ?? 00 00 0a 13 04 de 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -362,6 +378,7 @@ rule Trojan_MSIL_StealC_CCJB_2147917340_0
         $x_1_1 = {0c 08 07 08 6f ?? 00 00 0a 1e 5b 6f ?? 00 00 0a 6f ?? 00 00 0a 00 08 07 08 6f ?? 00 00 0a 1e 5b 6f ?? 00 00 0a 6f ?? 00 00 0a 00 73 ?? ?? ?? ?? 0d 09 08 6f ?? 00 00 0a 17 73 ?? ?? ?? ?? 13 04 11 04 02 16 02 8e 69 6f ?? 00 00 0a 00 11 04 6f ?? 00 00 0a 00 09 6f ?? 00 00 0a 13 05 11 05 13 06 2b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -383,6 +400,7 @@ rule Trojan_MSIL_StealC_KAG_2147918532_0
         $x_5_1 = {06 11 22 91 61 d2 81 ?? 00 00 01 11 08 17 58 13 08}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -407,6 +425,7 @@ rule Trojan_MSIL_StealC_MBXN_2147918548_0
         $x_1_4 = ".g.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -428,6 +447,7 @@ rule Trojan_MSIL_StealC_KAH_2147918744_0
         $x_5_1 = {06 11 21 91 61 d2 81 ?? 00 00 01 11 07 17 58 13 07}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -449,6 +469,7 @@ rule Trojan_MSIL_StealC_RDH_2147918932_0
         $x_2_1 = {02 11 13 8f 13 00 00 01 25 71 13 00 00 01 06 11 26 91 61 d2 81 13 00 00 01 11 13 17 58 13 13 11 13 02 8e 69}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -470,6 +491,7 @@ rule Trojan_MSIL_StealC_KAJ_2147919017_0
         $x_5_1 = {02 11 13 8f ?? 00 00 01 25 71 ?? 00 00 01 06 11 28 91 61 d2 81 ?? 00 00 01 11 13 17 58}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -496,6 +518,7 @@ rule Trojan_MSIL_StealC_EZ_2147921605_0
         $x_1_6 = "VQP.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -521,6 +544,7 @@ rule Trojan_MSIL_StealC_AYA_2147922987_0
         $x_1_5 = "Stub.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -547,6 +571,7 @@ rule Trojan_MSIL_StealC_AYA_2147922987_1
         $x_1_6 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -568,6 +593,7 @@ rule Trojan_MSIL_StealC_SAM_2147934105_0
         $x_1_1 = {7e 2d 01 00 04 28 40 03 00 06 28 25 00 00 0a 0a 06 28 26 00 00 0a 0b 07 16}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -589,6 +615,7 @@ rule Trojan_MSIL_StealC_SF_2147940857_0
         $x_1_1 = {63 d1 13 10 11 1f 11 09 91 13 28 11 1f 11 09 11 28 11 27 61 11 1c 19 58 61 11 32 61 d2 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

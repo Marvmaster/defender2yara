@@ -20,6 +20,7 @@ rule Backdoor_MSIL_Nanocoree_2147764052_0
         $x_1_5 = "QueueUserWorkItem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))

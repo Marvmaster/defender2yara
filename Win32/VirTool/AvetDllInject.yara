@@ -19,6 +19,7 @@ rule VirTool_Win32_AvetDllInject_G_2147742904_0
         $x_2_4 = {00 00 b8 01 00 00 00 03 00 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

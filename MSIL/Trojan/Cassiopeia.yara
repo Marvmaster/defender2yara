@@ -19,6 +19,7 @@ rule Trojan_MSIL_Cassiopeia_MBJ_2147838920_0
         $x_1_4 = "Split" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_Cassiopeia_ACA_2147905248_0
         $x_1_1 = {0a 06 18 6f 37 00 00 0a 06 6f 38 00 00 0a 13 04 02 0d 11 04 09 16 09 8e b7 6f 39 00 00 0a 0b de 11 de 0f 25 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

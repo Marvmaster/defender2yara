@@ -31,6 +31,7 @@ rule Trojan_Win32_Difism_2147573101_0
         $x_1_17 = "about:blank" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

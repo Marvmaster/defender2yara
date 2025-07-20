@@ -24,6 +24,7 @@ rule Backdoor_Win32_Dbot_A_2147597983_0
         $x_1_10 = "Winfire.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

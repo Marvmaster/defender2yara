@@ -25,6 +25,7 @@ rule Ransom_Win32_Enestedel_A_2147720082_0
         $x_5_10 = {05 00 40 00 46 02 00 80}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 2 of ($x_5_*))) or
             ((3 of ($x_100_*) and 1 of ($x_10_*))) or
@@ -55,6 +56,7 @@ rule Ransom_Win32_Enestedel_D_2147720083_0
         $x_10_6 = {01 40 0f bf 15 05 00 0f bf 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_30_*) and 2 of ($x_10_*))) or
             ((1 of ($x_40_*) and 1 of ($x_10_*))) or
@@ -87,6 +89,7 @@ rule Ransom_Win32_Enestedel_C_2147720086_0
         $x_10_7 = {01 10 0f be 0d 05 00 0f bf 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_30_*) and 2 of ($x_10_*))) or
             ((2 of ($x_30_*))) or
@@ -119,6 +122,7 @@ rule Ransom_Win32_Enestedel_E_2147720087_0
         $x_5_8 = {00 10 0f be d2 05 00 0f b7 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_30_*) and 4 of ($x_5_*))) or
             ((1 of ($x_30_*) and 1 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -148,6 +152,7 @@ rule Ransom_Win32_Enestedel_F_2147720088_0
         $x_10_3 = {10 67 0f be 05 05 00 0f be 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +178,7 @@ rule Ransom_Win32_Enestedel_G_2147720106_0
         $x_100_5 = {68 00 10 00 00 [0-5] ff 54 [0-12] c7 [0-2] 07 00 01 00}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -204,6 +210,7 @@ rule Ransom_Win32_Enestedel_B_2147720107_0
         $x_10_11 = {00 10 0f bf 0d 05 00 0f be 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*))) or
             ((1 of ($x_30_*) and 1 of ($x_10_*))) or
@@ -234,6 +241,7 @@ rule Ransom_Win32_Enestedel_I_2147720139_0
         $x_100_6 = {00 10 0f bf 0d 05 00 0f bf 35}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -270,6 +278,7 @@ rule Ransom_Win32_Enestedel_K_2147720176_0
         $x_10_16 = {00 10 0f be 15 05 00 0f be 0d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 4 of ($x_10_*))) or
             ((3 of ($x_100_*))) or
@@ -300,6 +309,7 @@ rule Ransom_Win32_Enestedel_L_2147720177_0
         $x_10_6 = {02 00 40 00 02 00 81}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -327,6 +337,7 @@ rule Ransom_Win32_Enestedel_J_2147720198_0
         $x_10_7 = {00 10 0f be 15 05 00 0f be 0d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +362,7 @@ rule Ransom_Win32_Enestedel_N_2147720226_0
         $x_10_4 = {6a 50 6a 03 ?? 6a 01 68 00 00 00 80 68 [0-8] ff d0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*))) or
             (all of ($x*))
@@ -378,6 +390,7 @@ rule Ransom_Win32_Enestedel_O_2147720227_0
         $x_10_4 = {00 10 0f bf 15 05 00 0f bf 0d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -402,6 +415,7 @@ rule Ransom_Win32_Enestedel_O_2147720227_1
         $x_1_4 = {80 b8 05 00 40 00 4d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -431,6 +445,7 @@ rule Ransom_Win32_Enestedel_P_2147720265_0
         $x_10_6 = {00 10 0f be 05 05 00 0f be 0d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*))) or
             (all of ($x*))
@@ -455,6 +470,7 @@ rule Ransom_Win32_Enestedel_Q_2147720284_0
         $x_10_1 = {55 8b ec 83 e4 f8 e8 ?? 00 00 00 e8 ?? 00 00 00 33 c0 [0-24] 19 c8 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -481,6 +497,7 @@ rule Ransom_Win32_Enestedel_R_2147720285_0
         $x_20_6 = {53 6a 50 6a 03 53 6a 01 68 00 00 00 80 68 ?? ?? 00 10 ff}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_10_*))) or
             ((1 of ($x_100_*) and 1 of ($x_20_*))) or
@@ -516,6 +533,7 @@ rule Ransom_Win32_Enestedel_S_2147720386_0
         $x_10_11 = {c7 03 07 00 01 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1000_*) and 2 of ($x_100_*) and 1 of ($x_10_*))) or
             ((1 of ($x_1000_*) and 3 of ($x_100_*))) or
@@ -550,6 +568,7 @@ rule Ransom_Win32_Enestedel_U_2147720451_0
         $x_10_9 = {00 10 0f be 35 05 00 0f be 0d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_100_*) and 1 of ($x_10_*))) or
             (all of ($x*))
@@ -608,6 +627,7 @@ rule Ransom_Win32_Enestedel_T_2147720461_0
         $x_20_35 = {50 6a 50 6a 03 50 6a 01 68 00 00 00 80 68 ?? ?? 00 10 ff}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*))) or
             ((1 of ($x_20_*) and 4 of ($x_10_*))) or
@@ -637,6 +657,7 @@ rule Ransom_Win32_Enestedel_V_2147720527_0
         $x_10_5 = {06 00 40 00 46}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_10_*))) or
             ((3 of ($x_100_*))) or
@@ -664,6 +685,7 @@ rule Ransom_Win32_Enestedel_V_2147720527_1
         $x_1_3 = {6a 04 8b f0 57 c7 06 00 80 00 00 ff 55 ?? 6a 04 57 89 45 ?? c7 00 01 00 00 00 ff 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -697,6 +719,7 @@ rule Ransom_Win32_Enestedel_W_2147720534_0
         $x_10_10 = {00 10 52 0f be 05 ?? ?? 00 10 50 e8 05 00 0f bf 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 4 of ($x_10_*))) or
             ((4 of ($x_100_*))) or
@@ -726,6 +749,7 @@ rule Ransom_Win32_Enestedel_X_2147720595_0
         $x_10_5 = {6a 1e 6a 40 ff 15 ?? ?? 00 10}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 1 of ($x_10_*))) or
             (all of ($x*))
@@ -757,6 +781,7 @@ rule Ransom_Win32_Enestedel_Z_2147720597_0
         $x_10_8 = {00 10 0f be 15 05 00 0f (be|bf) 0d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 1 of ($x_10_*))) or
             (all of ($x*))

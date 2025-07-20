@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_BabylonRAT_A_2147915194_0
         $x_4_3 = "powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -26,6 +26,7 @@ rule PWS_Win32_Raccoon_GG_2147773588_0
         $x_1_11 = "/f & erase" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

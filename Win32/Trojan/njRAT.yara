@@ -48,6 +48,7 @@ rule Trojan_Win32_njRAT_DA_2147899386_0
         $x_1_8 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

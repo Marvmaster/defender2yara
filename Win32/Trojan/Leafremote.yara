@@ -20,6 +20,7 @@ rule Trojan_Win32_Leafremote_A_2147728356_0
         $x_10_6 = "failed w/err 0x%08lx" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

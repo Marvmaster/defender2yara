@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Seponan_A_2147930180_0
         $x_2_5 = {b9 35 00 00 00 be ?? ?? ?? ?? f3 a5 8d 88 d4 00 00 00 8d 04 12 50 ff 75 ?? 51 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

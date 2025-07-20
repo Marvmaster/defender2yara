@@ -16,6 +16,7 @@ rule Trojan_Win32_RhadamanthysStealer_EH_2147846341_0
         $x_6_1 = {8b 44 24 14 03 c5 33 c7 33 c1 2b f0 89 44 24 14 8b c6 c1 e0 04}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

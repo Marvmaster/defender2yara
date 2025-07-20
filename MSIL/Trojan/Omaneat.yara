@@ -16,6 +16,7 @@ rule Trojan_MSIL_Omaneat_KAAE_2147920819_0
         $x_1_1 = {08 09 1a 5a 59 7e ?? 00 00 04 1f 7a 7e ?? 00 00 04 1f 7a 93 05 61 20 ?? 00 00 00 5f 9d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

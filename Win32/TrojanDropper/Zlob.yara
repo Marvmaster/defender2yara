@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Zlob_2147594502_0
         $x_1_3 = {45 6e 5a 50 18 7c c0 3e 47 65 72 9f 2e 44 4c 4c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDropper_Win32_Zlob_A_2147599596_0
         $x_1_7 = "Nullsoft Install System" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

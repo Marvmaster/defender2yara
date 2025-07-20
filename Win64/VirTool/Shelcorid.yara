@@ -18,6 +18,7 @@ rule VirTool_Win64_Shelcorid_A_2147849675_0
         $x_1_4 = {48 8b c4 48 89 58 08 48 89 68 10 48 89 70 18 48 89 78 20 41 56 48 83 ec 10 65 ?? ?? ?? ?? ?? ?? ?? ?? 8b e9 45 33 f6 48 8b 50 18 4c 8b 4a 10 4d 8b 41 30 4d 85 c0 0f 84 ?? ?? ?? ?? 41 0f 10 41 58 49 63 40 3c 41 8b d6 4d 8b 09 f3 0f 7f 04 24 46 8b 9c 00 88 00 00 00 45 85 db ?? ?? 48 8b 04 24 48 c1 e8 10 66 44 3b f0 ?? ?? 48 8b 4c 24 08 44 0f b7 d0 0f be 01 c1 ca 0d 80 39 61 ?? ?? 83 c2 e0 03 d0 48 ff c1 49 83 ea 01 ?? ?? 4f 8d 14 18 45 8b de 41 8b 7a 20 49 03 f8 45 39 72 18 ?? ?? 8b 37 41 8b de 49 03 f0 48 8d 7f 04 0f be 0e 48 ff c6 c1 cb 0d 03 d9 84 c9 ?? ?? 8d 04 13 3b c5 ?? ?? 41 ff c3 45 3b 5a 18 ?? ?? e9 ?? ?? ?? ?? 41 8b 42 24 43 8d 0c 1b 49 03 c0 0f b7 14 01 41 8b 4a 1c 49 03 c8 8b 04 91 49 03 c0 ?? ?? 33 c0 48 8b 5c 24 20 48 8b 6c 24 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +66,7 @@ rule VirTool_Win64_Shelcorid_B_2147914728_0
         $x_1_2 = {52 74 6c 41 c7 45 ?? 64 64 46 75 c7 45 ?? 6e 63 74 69 c7 45 ?? 6f 6e 54 61 66 c7 ?? ?? 62 6c e8 ?? ?? ?? ?? b9 b5 41 d9 5e 48 8b d8 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +94,7 @@ rule VirTool_Win64_Shelcorid_B_2147914728_1
         $x_1_8 = {b9 33 00 9e 95}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -123,6 +126,7 @@ rule VirTool_Win64_Shelcorid_B_2147914728_2
         $x_1_8 = {b9 33 00 9e 95}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or

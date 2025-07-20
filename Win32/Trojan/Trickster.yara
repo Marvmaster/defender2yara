@@ -17,6 +17,7 @@ rule Trojan_Win32_Trickster_A_2147730835_0
         $x_1_3 = "1.HKe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Trickster_DD_2147748437_0
         $x_1_6 = "Trainer_Desperados.EXE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Ransom_Win32_GanWasteCrypt_SN_2147757963_0
         $x_2_2 = {55 8b ec 53 8b 25 ?? ?? ?? 00 58 8b e8 ff 35 ?? ?? ?? 00 ff 35 ?? ?? ?? 00 8b 1d ?? ?? ?? 00 ff e3 5b 5d c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

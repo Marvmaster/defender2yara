@@ -22,6 +22,7 @@ rule MonitoringTool_Win32_DesktopScout_196640_0
         $x_1_8 = "[Tab]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule MonitoringTool_Win32_DesktopScout_196640_1
         $x_1_8 = "TDiskLogger.Created" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule MonitoringTool_Win32_DesktopScout_196640_2
         $x_1_10 = "modscr\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

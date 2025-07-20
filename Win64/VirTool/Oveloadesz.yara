@@ -18,6 +18,7 @@ rule VirTool_Win64_Oveloadesz_A_2147894335_0
         $x_1_3 = {4c 8b c0 48 8d ?? ?? ?? ?? ?? e8 ?? ?? ?? ?? 45 33 c9 48 89 74 24 30 89 74 24 28 48 8d ?? ?? ?? ?? ?? ba 00 00 00 40 48 89 7c 24 48 89 74 24 50 45 ?? ?? ?? c7 44 24 20 03 00 00 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

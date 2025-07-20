@@ -20,6 +20,7 @@ rule Ransom_Win64_TeslaCrypt_AB_2147907453_0
         $x_1_5 = "CreateTapePartition" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

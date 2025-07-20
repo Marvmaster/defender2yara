@@ -19,6 +19,7 @@ rule Ransom_Win32_Spade_DA_2147766857_0
         $x_1_4 = "so if you want your files dont be shy feel free to contact us and do an agreement on price" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Ransom_Win32_Spade_DB_2147767269_0
         $x_1_8 = "!INFO.HTA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

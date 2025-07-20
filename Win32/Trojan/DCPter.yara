@@ -18,6 +18,7 @@ rule Trojan_Win32_DCPter_A_2147649490_0
         $x_1_3 = {53 61 74 79 61 6d 65 76 61 20 4a 61 79 61 74 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

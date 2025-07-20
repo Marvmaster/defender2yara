@@ -17,6 +17,7 @@ rule Trojan_Win32_Chadivendo_STA_2147779209_0
         $x_1_3 = {80 4f 00 00 00 5f ff ff ff ff 47 6c 6f 62 61 6c 5c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Chadivendo_STB_2147779210_0
         $x_1_4 = {80 4f 00 00 00 5f ff ff ff ff 47 6c 6f 62 61 6c 5c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Chadivendo_STC_2147779211_0
         $x_1_3 = {5c 54 65 6d 70 5c 65 64 67 ?? ?? ?? ?? 2e 74 6d 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win32_Chadivendo_STD_2147779219_0
         $x_1_3 = "f2032.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_Win32_Chadivendo_STE_2147779250_0
         $x_1_3 = {53 65 72 76 69 63 65 52 65 73 70 6f 6e 63 65 2e 64 6c 6c 00 53 65 72 76 69 63 65 4d 61 69 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

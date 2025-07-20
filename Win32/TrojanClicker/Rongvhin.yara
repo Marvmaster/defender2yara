@@ -17,6 +17,7 @@ rule TrojanClicker_Win32_Rongvhin_C_2147683955_0
         $x_1_3 = "Loading,Please Wait........" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

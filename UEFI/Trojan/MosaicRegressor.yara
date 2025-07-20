@@ -25,6 +25,7 @@ rule Trojan_UEFI_MosaicRegressor_A_2147765815_0
         $x_10_11 = "device is dirty, will now sync\\n" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))

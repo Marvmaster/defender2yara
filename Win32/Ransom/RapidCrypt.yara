@@ -19,6 +19,7 @@ rule Ransom_Win32_RapidCrypt_PA_2147808525_0
         $x_1_4 = "How Recovery Files.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

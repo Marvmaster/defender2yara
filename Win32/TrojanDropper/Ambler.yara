@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Ambler_E_2147650189_0
         $x_1_2 = {88 06 0f be 43 01 0f be 4c 2f 01 50 51 e8 ?? ?? ?? ?? 88 46 01 0f be 53 02 0f be 44 2f 02 52 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

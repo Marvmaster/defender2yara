@@ -18,6 +18,7 @@ rule Ransom_Win32_Mafia_A_2147728634_0
         $x_1_4 = ".MAFIA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanClicker_MSIL_Ezbro_B_2147689348_0
         $x_1_7 = "minion=true constants={0}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanClicker_MSIL_Ezbro_C_2147690660_0
         $x_1_3 = {68 00 50 61 74 68 00 47 65 74 46 75 6c 6c 50 61 74 68 00 4f 70 65 6e 52 65 61 64 00 45 78 63 65 70 74 69 6f 6e 00 2e 63 63 74 6f 72 00 45 6e 63 6f 64 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

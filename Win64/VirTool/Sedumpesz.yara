@@ -20,6 +20,7 @@ rule VirTool_Win64_Sedumpesz_A_2147847731_0
         $x_1_5 = {48 8b f8 ff 15 ?? ?? ?? ?? 48 8b 4c 24 40 41 b9 02 00 00 00 4c 89 74 24 30 8b d0 4c 89 74 24 28 4c 8b c7 4c 89 74 24 20 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

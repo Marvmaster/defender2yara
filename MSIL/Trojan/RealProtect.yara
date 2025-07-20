@@ -23,6 +23,7 @@ rule Trojan_MSIL_RealProtect_CM_2147838430_0
         $x_1_8 = "drivers/etc/hosts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

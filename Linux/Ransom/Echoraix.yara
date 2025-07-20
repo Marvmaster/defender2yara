@@ -20,6 +20,7 @@ rule Ransom_Linux_Echoraix_SB_2147808333_0
         $x_1_5 = "main.makesecret" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

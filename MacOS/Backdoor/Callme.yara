@@ -18,6 +18,7 @@ rule Backdoor_MacOS_Callme_A_2147815020_0
         $x_1_3 = {89 3c 00 00 88 0b 02 14 88 4b 02 54 7c 00 4a 78 98 0b 02 14 60 00 00 00 60 00 00 00 60 00 00 00 89 3c 00 00 3b 9c 00 01 7c 42 4a 78 98 4b 02 54 39 6b 00 01 42 00 ff cc 38 00 00 00 38 21 00 b0 90 1f 02 94 80 01 00 08 bb 81 ff f0 7c 08 03 a6 4e 80 00 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

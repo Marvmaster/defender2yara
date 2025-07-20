@@ -17,6 +17,7 @@ rule Backdoor_Win32_Doumol_A_2147610924_0
         $x_1_3 = {8b 95 58 ff ff ff 8b c6 8b 08 ff 51 38 43 83 fb 0a 75 94}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

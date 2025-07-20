@@ -17,6 +17,7 @@ rule Backdoor_Win32_Rifdoor_A_2147731953_0
         $x_1_2 = "Troy Source Code\\tcp1st\\rifle\\Release\\rifle.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_Win32_Rifdoor_B_2147734116_0
         $x_1_2 = "C:\\ProgramData\\AhnLab\\AhnSvc.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Backdoor_Win32_Rifdoor_RPZ_2147833390_0
         $x_1_8 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Backdoor_Win32_Rifdoor_GFM_2147842285_0
         $x_1_4 = "\\ProgramData\\Update\\WwanSvc.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Backdoor_Win32_Rifdoor_BSA_2147927158_0
         $x_1_2 = "\\Data\\My Projects\\Troy Source Code\\tcp1st\\rifle\\Release\\rifle.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Votead_2147619203_0
         $x_5_5 = {50 00 4f 00 53 00 54 00 00 00 00 00 0c 00 00 00 72 00 77 00 5f 00 69 00 64 00 3d 00 00 00 00 00 0a 00 00 00 26 00 6b 00 65 00 79 00 3d}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*))) or
             ((3 of ($x_10_*))) or

@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Gendwnurl_J_2147718552_0
         $x_1_4 = {70 6f 77 65 72 73 68 65 6c 6c 2e 65 78 65 20 22 49 45 58 20 28 28 6e 65 77 2d 6f 62 6a 65 63 74 20 6e 65 74 2e 77 65 62 63 6c 69 65 6e 74 29 2e 64 6f 77 6e 6c 6f 61 64 73 74 72 69 6e 67 28 27 68 74 74 70 [0-48] 73 68 65 6c 6c 63 6f 64 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_Gendwnurl_Y_2147719501_0
         $x_1_3 = {33 c0 89 45 ?? 89 45 08 00 c6 45 ?? ?? c6 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule TrojanDownloader_Win32_Gendwnurl_BB_2147723181_0
         $x_1_3 = {4f 00 70 00 65 00 6e 00 ?? ?? ?? ?? 53 00 65 00 6e 00 64 00 ?? ?? ?? ?? 72 00 65 00 61 00 64 00 79 00 53 00 74 00 61 00 74 00 65 00 ?? ?? ?? ?? 72 00 65 00 73 00 70 00 6f 00 6e 00 73 00 65 00 54 00 65 00 78 00 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule TrojanDownloader_Win32_Gendwnurl_BL_2147725159_0
         $x_1_2 = "URLDownloadToFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule TrojanDownloader_Win32_Gendwnurl_BN_2147727044_0
         $x_1_2 = {53 65 74 57 6f 72 6b 69 6e 67 44 69 72 2c 20 25 41 70 70 44 61 74 61 25 0a 55 52 4c 44 6f 77 6e 6c 6f 61 64 54 6f 46 69 6c 65 2c 20 68 74 74 70 3a 2f 2f 37 38 2e 31 34 30 2e 32 32 30 2e 31 37 35 2f [0-32] 2c [0-16] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule TrojanDownloader_Win32_Gendwnurl_BQ_2147727793_0
         $x_1_4 = "injRun" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -159,6 +165,7 @@ rule TrojanDownloader_Win32_Gendwnurl_BT_2147729036_0
         $x_1_3 = {42 81 c3 aa 00 00 00 83 f3 48 30 1a e2 f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -180,6 +187,7 @@ rule TrojanDownloader_Win32_Gendwnurl_BU_2147729249_0
         $x_1_1 = {62 69 74 73 61 64 6d 69 6e 20 2f 74 72 61 6e 73 66 65 72 20 6d 79 6a 6f 62 20 2f 64 6f 77 6e 6c 6f 61 64 20 2f 70 72 69 6f 72 69 74 79 20 68 69 67 68 20 68 74 74 70 3a 2f 2f 39 32 2e 36 33 2e 31 39 37 2e 36 30 2f 76 6e 63 2e 65 78 65 20 25 74 65 6d 70 25 5c [0-32] 2e 65 78 65 26 73 74 61 72 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Pterdo_YAI_2147913541_0
         $x_1_1 = {0f b6 02 8b 4d ec 03 4d e0 0f b6 51 ff 33 c2 8b 4d ec 03 4d e0 88 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

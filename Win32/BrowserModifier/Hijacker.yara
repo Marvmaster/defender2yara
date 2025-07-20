@@ -19,6 +19,7 @@ rule BrowserModifier_Win32_Hijacker_G_155824_0
         $x_1_5 = "javascript" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win64_MagniSyscall_A_2147848624_0
         $x_1_4 = {e8 00 00 00 00 58 48 83 e8 05 48 2d ?? ?? ?? 00 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_MagniSyscall_A_2147848624_1
         $x_1_4 = {e8 00 00 00 00 58 48 83 e8 05 48 2d ?? ?? ?? 00 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

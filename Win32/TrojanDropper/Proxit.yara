@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Proxit_A_2147629555_0
         $x_1_4 = {20 00 64 00 65 00 6c 00 65 00 74 00 65 00 20 00 52 00 61 00 73 00 41 00 75 00 74 00 6f 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

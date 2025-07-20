@@ -18,6 +18,7 @@ rule Trojan_Win32_TExploreAV_2147723147_0
         $x_1_4 = {55 52 4c 2e 55 52 5f 00 fd 9f 80 00 4e 75 6c 6c 73 6f 66 74 20 49 6e 73 74 61 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_TExploreAV_2147723147_1
         $x_1_4 = ">Dudosos/Suspects" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_TExploreAV_2147723147_2
         $x_1_4 = "Instalador TExplore Antivirus" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

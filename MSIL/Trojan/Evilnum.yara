@@ -16,6 +16,7 @@ rule Trojan_MSIL_Evilnum_SWA_2147929695_0
         $x_2_1 = {00 09 08 6f 14 00 00 0a 6f ?? 00 00 0a 26 11 04 6f ?? 00 00 0a 09 6f ?? 00 00 0a 00 09 16 09 6f ?? 00 00 0a 6f ?? 00 00 0a 26 00 17 13 05 2b d0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_Evilnum_SWB_2147929696_0
         $x_2_1 = {00 09 08 6f 20 00 00 0a 6f 21 00 00 0a 26 11 04 6f 22 00 00 0a 09 6f 23 00 00 0a 00 09 16 09 6f 24 00 00 0a 6f 25 00 00 0a 26 00 17 13 05 2b d0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

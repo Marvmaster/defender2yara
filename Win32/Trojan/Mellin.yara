@@ -19,6 +19,7 @@ rule Trojan_Win32_Mellin_A_2147618508_0
         $x_1_5 = {c7 45 b8 b0 3a 40 00 c7 45 b0 08 00 00 00 8d 55 b0 8d 4d c4 ff 15 10 11 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

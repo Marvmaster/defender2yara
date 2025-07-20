@@ -16,6 +16,7 @@ rule Trojan_WinNT_Parchood_A_2147647957_0
         $x_1_2 = {e4 50 8d 05 0f 00 6a 00 6a 00 8d 45 e8 50 68 ff 03 1f 00 8d 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

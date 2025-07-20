@@ -18,6 +18,7 @@ rule Backdoor_Win32_Spiderpig_A_2147777970_0
         $x_10_4 = {55 6a 00 68 00 01 80 84 6a 00 6a 00 68 ?? ?? ?? 00 68 ?? ?? ?? 00 68 ?? ?? ?? 00 53 c7 44 24 3c 80 33 80 80 ff 15 ?? ?? ?? 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -18,6 +18,7 @@ rule Trojan_Win32_Meteit_A_2147646658_0
         $x_1_4 = {3c 7c 3e 61 64 76 [0-2] 3c 7c 3e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Meteit_B_2147652095_0
         $x_1_2 = "whoismistergreen.com/runk/c.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Meteit_C_2147652521_0
         $x_1_9 = "<|>sol_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -93,6 +96,7 @@ rule Trojan_Win32_Meteit_D_2147655081_0
         $x_1_2 = {c7 45 fc bb bb 00 00 81 7d fc aa aa 00 00 72 04 83 65 fc 00 8b 45 ?? 8b 4d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_Win32_Meteit_E_2147670416_0
         $x_1_3 = {ff 10 33 c0 39 43 08 0f 85 ?? ?? ?? ?? ba ?? ?? ?? ?? 89 45 f8 2b d6 89 45 fc 89 55 f0 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -139,6 +144,7 @@ rule Trojan_Win32_Meteit_F_2147679993_0
         $x_1_2 = {8b 7d 0c 81 e1 ff 0f 00 00 03 cb 01 39 8b 48 04 ff 45 08 83 e9 08 42 d1 e9 42 39 4d 08 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -161,6 +167,7 @@ rule Trojan_Win32_Meteit_H_2147689977_0
         $x_1_3 = {f7 d0 0b f0 23 ce 88 4d f5 8b 45 b0 03 85 d4 fe ff ff 8a 4d f5 88 88 d8 13 00 00 e9 21 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule HackTool_Win64_SplitPace_A_2147829391_0
         $x_100_8 = "main.(*Client).RandomSleep" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule HackTool_Win64_SplitPace_B_2147829392_0
         $x_100_1 = {49 83 f8 0a 75 29 48 be 64 69 73 63 6f 6e 6e 65 0f 1f 84 00 00 00 00 00 48 39 37 0f 85 07 fe ff ff}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

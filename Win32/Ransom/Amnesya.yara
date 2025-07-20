@@ -20,6 +20,7 @@ rule Ransom_Win32_Amnesya_SK_2147761370_0
         $x_5_5 = "[/TASKNAME][AUTOEXEC][README]HOW TO RECOVE" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

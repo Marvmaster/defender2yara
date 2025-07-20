@@ -16,6 +16,7 @@ rule Backdoor_Linux_Powbot_A_2147689305_0
         $x_1_2 = {38 39 2e 32 33 38 2e 31 35 30 2e 31 35 34 00 56 79 70 6f 72 00 77 6f 70 62 6f 74 20 68 61 73 20 73 74 61 72 74 65 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_CosmicDuke_CCIE_2147908906_0
         $x_1_1 = {53 68 28 21 40 00 bf f4 20 40 00 57 ff 75 fc ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

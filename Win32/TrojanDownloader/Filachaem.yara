@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Filachaem_A_2147599604_0
         $x_1_3 = "down_1_file: !fila net! - kachaem url=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

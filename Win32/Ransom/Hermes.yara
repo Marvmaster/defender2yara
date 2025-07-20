@@ -18,6 +18,7 @@ rule Ransom_Win32_Hermes_A_2147727857_0
         $x_1_3 = "\\users\\Public\\window.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Ransom_Win32_Hermes_MAK_2147796979_0
         $x_1_13 = "cmd.exe /C ping 1.1.1.1 -n 10 -w 3000 > Nul & Del /f /q \"%s\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -81,6 +83,7 @@ rule Ransom_Win32_Hermes_MBK_2147797821_0
         $x_10_10 = {68 65 72 6d 65 73 5c [0-16] 5c 62 69 6e 5f 68 64 72 5f 63 6f 6d 6d 6f 6e 2e 70 62 2e 63 63}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             ((3 of ($x_10_*))) or

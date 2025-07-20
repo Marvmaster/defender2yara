@@ -25,6 +25,7 @@ rule TrojanSpy_Win32_Dobestel_A_2147688424_0
         $x_1_11 = "01AA1F54BCb343e5bfdabc054ab45d67.tmp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

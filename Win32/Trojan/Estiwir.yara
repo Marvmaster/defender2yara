@@ -18,6 +18,7 @@ rule Trojan_Win32_Estiwir_A_2147679094_0
         $x_1_4 = "%d%d%d%d%d.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Estiwir_B_2147688173_0
         $x_1_4 = {8a 14 01 80 f2 ?? 88 10 40 4e 75 f4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

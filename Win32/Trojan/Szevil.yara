@@ -15,6 +15,7 @@ rule Trojan_Win32_Szevil_A_2147729692_0
         $x_1_1 = ".RegWrite \"HKEY_CURRENT_USER\\Software\\ZeroEvil\", result, \"REG_SZ\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

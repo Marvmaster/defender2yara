@@ -31,6 +31,7 @@ rule Worm_Win32_Lashplay_A_2147604934_0
         $x_1_16 = "rename flashplay.dll flashplay.dll_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

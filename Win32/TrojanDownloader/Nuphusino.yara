@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Nuphusino_A_2147641978_0
         $x_1_3 = {73 6f 70 68 69 61 5c 53 6f 70 68 69 61 5c 53 6f 70 68 69 61 5c 52 65 6c 65 61 73 65 5c 53 6f 70 68 69 61 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

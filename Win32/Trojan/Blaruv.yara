@@ -18,6 +18,7 @@ rule Trojan_Win32_Blaruv_A_2147682057_0
         $x_1_4 = "blackrev" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

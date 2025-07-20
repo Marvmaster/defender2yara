@@ -48,6 +48,7 @@ rule Trojan_MSIL_FareitLoader_2147768090_0
         $x_50_33 = "{11111-22222-50001-00002}" wide //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

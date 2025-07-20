@@ -20,6 +20,7 @@ rule Trojan_Win32_Fakeantispypro_2147624346_0
         $x_1_6 = "ASProSB.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Fakeantispypro_2147624346_1
         $x_1_5 = {42 6c 61 6e 6b 41 63 74 69 76 65 58 2e 4f 43 58 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77 00 44 6c 6c 47 65 74 43 6c 61 73 73 4f 62 6a 65 63 74 00 44 6c 6c 52 65 67 69 73 74 65 72 53 65 72 76 65 72 00 44 6c 6c 55 6e 72 65 67 69 73 74 65 72 53 65 72 76 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_Fakeantispypro_2147624346_2
         $x_1_5 = "AntiSpyware Pro-WindowController" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

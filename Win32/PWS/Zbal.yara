@@ -22,6 +22,7 @@ rule PWS_Win32_Zbal_A_2147688560_0
         $x_5_8 = {33 c9 52 c7 45 bc 53 00 65 00 c7 45 c0 44 00 65 00 c7 45 c4 62 00 75 00 c7 45 c8 67 00 50 00 c7 45 cc 72 00 69 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule PWS_Win32_Zbal_B_2147690125_0
         $x_1_3 = "starayamoskva" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule PWS_Win32_Zbal_C_2147716910_0
         $x_1_5 = {77 00 61 00 6c 00 6c 00 65 00 74 00 2e 00 64 00 61 00 74 00 00 00 00 00 65 00 6c 00 65 00 63 00 74 00 72 00 75 00 6d 00 2e 00 64 00 61 00 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

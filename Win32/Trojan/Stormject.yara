@@ -18,6 +18,7 @@ rule Trojan_Win32_Stormject_A_2147659327_0
         $x_10_4 = {50 ff d3 ff d0 80 65 ?? 00 8b c8 c6 45 ?? 55 c6 45 ?? 70 c6 45 ?? 64 c6 45 ?? 61 c6 45 ?? 74 c6 45 ?? 65}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

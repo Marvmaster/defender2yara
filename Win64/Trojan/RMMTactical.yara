@@ -22,6 +22,7 @@ rule Trojan_Win64_RMMTactical_A_2147830452_0
         $x_1_7 = "AmidaWare LLC" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

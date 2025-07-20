@@ -17,6 +17,7 @@ rule Trojan_Win32_Sirefef_A_142985_0
         $x_1_3 = {c7 44 24 10 01 00 01 80 ff 74 24 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +64,7 @@ rule Trojan_Win32_Sirefef_B_142986_0
         $x_1_5 = {03 c1 25 ff 00 00 00 8a 84 05 ?? ?? ?? ?? 03 fe 30 07 46 3b f2 7c b2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -111,6 +113,7 @@ rule Trojan_Win32_Sirefef_A_142991_0
         $x_1_4 = {4c 6f 63 61 74 69 6f 6e 3a 20 68 74 74 70 3a 2f 2f 25 2e 2a 73 [0-5] 73 65 61 72 63 68 2e 79 61 68 6f 6f 2e 63 6f 6d [0-5] 77 77 77 2e 67 6f 6f 67 6c 65 [0-5] 73 65 61 72 63 68 2e 6c 69 76 65 2e 63 6f 6d [0-5] 79 61 6e 64 65 78 2e 72 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -166,6 +169,7 @@ rule Trojan_Win32_Sirefef_B_142992_0
         $x_1_5 = "0D086A5D-67D9-470f-9168-0968FF33BFD9" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -223,6 +227,7 @@ rule Trojan_Win32_Sirefef_C_143037_0
         $x_1_4 = "Referer: %S%S" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +273,7 @@ rule Trojan_Win32_Sirefef_C_147968_0
         $x_1_2 = {eb 0b 81 38 78 56 4f 23 74 09 8b 40 04 3b c3 75 f1 eb 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -315,6 +321,7 @@ rule Trojan_Win32_Sirefef_G_159678_0
         $x_1_7 = {5c 00 73 00 79 00 73 00 74 00 65 00 6d 00 72 00 6f 00 6f 00 74 00 5c 00 73 00 79 00 73 00 74 00 65 00 6d 00 33 00 32 00 5c 00 64 00 72 00 69 00 76 00 65 00 72 00 73 00 5c 00 25 00 73 00 2e 00 73 00 79 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -365,6 +372,7 @@ rule Trojan_Win32_Sirefef_162658_0
         $x_1_5 = "rundll32.exe \"%s\\%x%x.cpl\",BeginTask *%I64d*%x*%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -390,6 +398,7 @@ rule Trojan_Win32_Sirefef_162658_1
         $x_1_6 = "stat.php?w=%u&i=%s&a=%u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -470,6 +479,7 @@ rule Trojan_Win32_Sirefef_H_165676_0
         $x_1_4 = {50 50 68 00 00 40 00 6a 05 50 50 50 54 68 80 02 40 00 68 00 00 10 00 54 ff 15 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -515,6 +525,7 @@ rule Trojan_Win32_Sirefef_I_166222_0
         $x_1_3 = {83 c4 0c 6a 40 68 00 10 00 00 8d 45 fc 50 57 8d 85 ?? ?? ff ff 50 ff 75 08 c7 85 ?? ?? ff ff 02 00 01 00 89 75 fc ff 15 ?? ?? ?? ?? 85 c0 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -559,6 +570,7 @@ rule Trojan_Win32_Sirefef_J_166574_0
         $x_1_3 = {81 7d 0c 73 65 6e 64 74 ?? 81 7d 0c 72 65 63 76 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -604,6 +616,7 @@ rule Trojan_Win32_Sirefef_P_167506_0
         $x_1_4 = {c6 06 e8 6a 07 56 c6 46 05 eb c6 46 06 ?? ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -662,6 +675,7 @@ rule Trojan_Win32_Sirefef_Q_167528_0
         $x_1_9 = "*\\shellex\\ContextMenuHandlers\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -726,6 +740,7 @@ rule Trojan_Win32_Sirefef_S_167778_0
         $x_1_3 = {3d 05 00 00 80 74 cf 33 ff 3b c7 0f 8c a7 00 00 00 33 db 43 39 5e 04 0f 85 9b 00 00 00 8b 46 08 83 f8 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -771,6 +786,7 @@ rule Trojan_Win32_Sirefef_V_167993_0
         $x_1_4 = "SkinuxWindow" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -821,6 +837,7 @@ rule Trojan_Win32_Sirefef_AB_170819_0
         $x_1_2 = {49 4e 42 52 36 34 2e 64 6c 6c 00 41 63 63 65 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -863,6 +880,7 @@ rule Trojan_Win32_Sirefef_AD_171077_0
         $x_1_2 = {83 c6 14 8b 46 0c 85 c0 75 ?? e9 ?? 00 00 00 8b 5e 10 8b 06 03 5d 08 03 45 08 eb 1d 78 15 8b 55 08 8d 74 11 02 6a 12 bf ?? ?? ?? ?? 59 33 d2 f3 a6 74 11 83 c3 04 83 c0 04 8b 08 85 c9 75 dd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -905,6 +923,7 @@ rule Trojan_Win32_Sirefef_AF_171537_0
         $x_1_2 = {0f b7 71 0e 0f b7 41 0c 83 65 f8 00 8d 44 c1 10 85 f6 74 49 8b ce c1 e1 03 2b ca 03 c8 3b 4d fc 73 3b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -951,6 +970,7 @@ rule Trojan_Win32_Sirefef_AG_171641_0
         $x_2_6 = "%wZ\\Software\\%08x" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1007,6 +1027,7 @@ rule Trojan_Win32_Sirefef_AK_173488_0
         $x_1_4 = {d1 37 0c 1e 3f a3 64 1e 2b d7 a6 ea c7 e7 18 c1 10 00 00 a4 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1051,6 +1072,7 @@ rule Trojan_Win32_Sirefef_AL_173532_0
         $x_1_2 = {74 1e 68 02 01 00 00 eb 0e ff 75 f4 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1094,6 +1116,7 @@ rule Trojan_Win32_Sirefef_AN_174344_0
         $x_1_3 = "&aid=%u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1136,6 +1159,7 @@ rule Trojan_Win32_Sirefef_AQ_174871_0
         $x_1_2 = {83 fa 0c 75 2d 8b 50 06 33 d1 89 15 ?? ?? ?? ?? 8b d6 66 33 50 0a 66 89 15 ?? ?? ?? ?? 8b 10 33 d1 89 15 ?? ?? ?? ?? 66 33 70 04 66 89 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1179,6 +1203,7 @@ rule Trojan_Win32_Sirefef_BE_182401_0
         $x_1_3 = {b8 31 c0 00 00 66 89 03 b8 6a 01 00 00 66 89 43 02 c6 43 04 68 83 4b 05 ff 66 c7 43 09 50 50 66 c7 43 0b 50 50 c6 43 0d e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1222,6 +1247,7 @@ rule Trojan_Win32_Sirefef_BT_198725_0
         $x_1_2 = "800000cb.@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1243,6 +1269,7 @@ rule Trojan_Win32_Sirefef_BW_199124_0
         $x_1_2 = {8d 46 0c 50 6a 00 ff 15 ?? ?? ?? ?? 85 c0 74 0e 83 60 08 00 c7 00 01 00 00 00 89 70 04 c3 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1264,6 +1291,7 @@ rule Trojan_Win32_Sirefef_CD_199498_0
         $x_1_2 = {81 fb 41 50 33 32 75 0b 8b 5e 04 83 fb 18 72 03 8b 46 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

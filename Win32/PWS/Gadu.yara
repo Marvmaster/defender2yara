@@ -18,6 +18,7 @@ rule PWS_Win32_Gadu_A_2147640918_0
         $x_1_3 = "a z Gadu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule PWS_Win32_Gadu_J_2147654694_0
         $x_1_6 = "SELECT * FROM logins LIMIT 1 OFFSET" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

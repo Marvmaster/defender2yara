@@ -20,6 +20,7 @@ rule Ransom_Linux_BlackSuit_A_2147846362_0
         $x_1_5 = "ps -Cc|grep vmsyslogd > PS_syslog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

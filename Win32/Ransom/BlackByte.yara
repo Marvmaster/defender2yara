@@ -24,6 +24,7 @@ rule Ransom_Win32_BlackByte_SA_2147812958_0
         $x_5_10 = "main.pognali" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

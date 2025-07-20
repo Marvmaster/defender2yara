@@ -19,6 +19,7 @@ rule Trojan_Win64_GadgetBoy_B_2147811735_0
         $x_1_4 = "Qspdftt43Ofyu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*))) or

@@ -16,6 +16,7 @@ rule Trojan_Win64_RecordBreaker_EC_2147841725_0
         $x_7_1 = {31 c0 44 89 ca 41 33 14 80 88 14 01 48 ff c0 48 83 f8 0e 75 ed}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

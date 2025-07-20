@@ -24,6 +24,7 @@ rule Virus_Win32_Delf_F_2147594588_0
         $x_1_10 = "FindFirstFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Virus_Win32_Delf_M_2147594653_0
         $x_1_5 = "GameHouse.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

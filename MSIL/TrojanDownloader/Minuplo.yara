@@ -21,6 +21,7 @@ rule TrojanDownloader_MSIL_Minuplo_A_2147692362_0
         $x_1_7 = "miniupload.net/ir/s2.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

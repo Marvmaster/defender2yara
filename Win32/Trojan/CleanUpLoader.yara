@@ -23,6 +23,7 @@ rule Trojan_Win32_CleanUpLoader_DA_2147918699_0
         $x_1_8 = "Copy Details To Clipboard" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_Win32_CleanUpLoader_DB_2147919580_0
         $x_1_8 = "Copy Details To Clipboard" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

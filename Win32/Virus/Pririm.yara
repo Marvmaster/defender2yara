@@ -18,6 +18,7 @@ rule Virus_Win32_Pririm_A_2147924686_0
         $x_1_3 = {33 8c d5 88 61 c9 cb 82 40 3d 49 c0 a9 b2 44 92 89 02 0c a7 42 bc d4 d0 e1 a3 04 ae ef ad 45 e5 ee 76 1d 57 19 fa 0a 23 63 1a f0 1b 69 e9 de a4 07 33 09 24 c7 af 42 05 44 58 23 67 a8 1c 1a b0 8a a1 02 be 3e 94 34 6b 1c b9 da 36 1e 49 ea 68 1d 88 7c d0 57 3b 48 f4 06 ab ca e7 21 17 ef 37 e9 53 cd 29 27 05 40 0b d2 ab c2 b9 cc 8d d4 d5 a4 32 45 5d aa 02 f6 a4 69 92 3e 33 93 55 e7 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_Win64_Gocoder_P_2147744704_0
         $x_1_6 = "Write me if you want to return your files - I can do it very quickly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_5_*))) or
@@ -50,6 +51,7 @@ rule Ransom_Win64_Gocoder_A_2147746169_0
         $x_1_6 = "main.makeReadmeFile.func1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

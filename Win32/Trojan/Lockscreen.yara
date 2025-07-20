@@ -16,6 +16,7 @@ rule Trojan_Win32_Lockscreen_MA_2147841998_0
         $x_10_1 = {c1 e9 04 0a d1 88 14 24 c7 06 01 00 00 00 8a 50 02 80 fa 3d 74 ?? ff 06 8a 0c bd 70 d4 51 00 c1 e1 04 33 db 8a da 8b 1c 9d 70 d4 51 00 c1 eb 02 0a cb 88 4c 24 01 8a 48 03 80 f9 3d 74}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Lockscreen_AMMD_2147905528_0
         $x_2_6 = "AntiWinLockerTray.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

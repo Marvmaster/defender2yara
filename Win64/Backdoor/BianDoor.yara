@@ -19,6 +19,7 @@ rule Backdoor_Win64_BianDoor_B_2147851921_0
         $x_1_5 = {2f 73 6f 63 6b 73 35 2e 67 6f 00 6f 75 74 2f [0-50] 61 6d 61 7a 6f 6e 61 77 73 2e 63 6f 6d 2f [0-15] 2d [0-15] 2f 63 6c 69 65 6e 74 2f 6d 61 69 6e 2e 67 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_Win64_BianDoor_D_2147903395_0
         $x_1_1 = {00 36 34 2e 64 6c 6c 00 45 6e 74 72 79 00 5f 63 67 6f 5f 64 75 6d 6d 79 5f 65 78 ?? 6f 72 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Backdoor_Win64_BianDoor_H_2147922181_0
         $x_1_1 = {00 36 34 2e 64 6c 6c 00 45 6e 74 72 79 00 5f 63 67 6f 5f 64 75 ?? 6d 79 5f 65 78 ?? 6f 72 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

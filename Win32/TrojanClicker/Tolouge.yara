@@ -17,6 +17,7 @@ rule TrojanClicker_Win32_Tolouge_A_2147681410_0
         $x_1_3 = {8d 4e 44 88 46 50 66 89 5e 34 ff 15 ?? ?? ?? ?? 66 c7 46 3a 73 00 66 c7 46 3c 9b 00 66 c7 46 3e 0a 00 66 c7 46 40 0e 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanClicker_Win32_Tolouge_2147682319_0
         $x_1_8 = {42 00 61 00 6e 00 6e 00 65 00 72 00 20 00 63 00 61 00 72 00 67 00 61 00 6e 00 64 00 6f 00 20 00 63 00 6f 00 72 00 72 00 65 00 63 00 74 00 61 00 6d 00 65 00 6e 00 74 00 65 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 54 00 69 00 6d 00 65 00 72 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or
             (all of ($x*))

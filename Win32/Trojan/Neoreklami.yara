@@ -18,6 +18,7 @@ rule Trojan_Win32_Neoreklami_RF_2147847148_0
         $x_1_3 = "npb xvca xgbvcgetl skwkqawi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Neoreklami_RE_2147847149_0
         $x_1_2 = {d3 f8 99 89 84 24 ?? ?? 00 00 89 94 24 ?? ?? 00 00 ff b4 24 ?? ?? 00 00 ff b4 24 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Neoreklami_MBYR_2147915221_0
         $x_1_1 = {77 77 6f 74 67 4b 48 5a 53 74 74 4f 62 49 7a 00 54 63 49 48 44 42 54 51 68 6c 48 4e 65 50 64 62 65 6a 5a 77 77 71 43 00 66 4e 44 47 4a 4a 59 4a 48 76 58 42 64 71 47 46 79 58 00 00 70 4f 78 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Neoreklami_EC_2147922680_0
         $x_7_1 = {2b 1e c1 fb 02 8b c3 d1 e8 2b d0 3b d3 73 04 33 db eb 02 03 d8 3b d9 0f 42 d9}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule Trojan_Win32_Neoreklami_MBWD_2147927705_0
         $x_1_2 = {2c da 16 96 f8 f2 c1 41 16 59 aa ed 88 36 b1 b0 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

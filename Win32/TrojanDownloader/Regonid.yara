@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Regonid_A_2147642627_0
         $x_1_7 = {48 4b 45 59 5f 4c 4f 43 41 4c 5f 4d 41 43 48 49 4e 45 5c 25 73 5c 25 73 [0-16] 52 65 67 69 73 74 72 61 74 69 6f 6e 49 44}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Regonid_B_2147648357_0
         $x_1_3 = {f7 da 1b d2 81 e2 b7 1d c1 04 03 c0 33 c2 49 75 e7 50 b1 20 89 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule TrojanDownloader_Win32_Regonid_B_2147648357_1
         $x_1_5 = "microsoft corporation" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule TrojanDownloader_Win32_Regonid_A_2147659130_0
         $x_1_10 = {00 68 64 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             ((3 of ($x_10_*))) or

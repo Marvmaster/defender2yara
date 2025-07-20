@@ -48,6 +48,7 @@ rule Backdoor_Win32_Rbot_A_2147792042_0
         $x_1_33 = "Yahoo! User ID" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_50_*) and 8 of ($x_10_*) and 20 of ($x_1_*))) or
             ((4 of ($x_50_*) and 9 of ($x_10_*) and 10 of ($x_1_*))) or
@@ -247,6 +248,7 @@ rule Backdoor_Win32_Rbot_2147792324_0
         $x_2_176 = "Servstrict access to the IPC$" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((20 of ($x_1_*))) or
@@ -326,6 +328,7 @@ rule Backdoor_Win32_Rbot_B_2147792349_0
         $x_1_11 = "User: (%s) P\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_3_*) and 6 of ($x_1_*))) or
             ((1 of ($x_5_*) and 4 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -362,6 +365,7 @@ rule Backdoor_Win32_Rbot_C_2147792350_0
         $x_1_12 = "rundll32.exe %s,start" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 8 of ($x_1_*))) or
             ((4 of ($x_3_*) and 5 of ($x_1_*))) or
@@ -387,6 +391,7 @@ rule Backdoor_Win32_Rbot_G_2147792383_0
         $x_1_1 = {0f b7 c0 99 b9 01 04 00 00 f7 f9 52 ff 15 ?? ?? ?? ?? [0-7] 68 78 56 34 12 60 00 [0-48] c6 45 ?? 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -408,6 +413,7 @@ rule Backdoor_Win32_Rbot_H_2147792384_0
         $x_1_1 = {8b 06 03 d8 50 8d 46 da 50 8d 85 ?? ?? ff ff 68 ?? ?? ?? 00 50 e8 ?? ?? ?? 00 8d 85 ?? ?? ff ff 57 50 8d 85 ?? ?? ff ff 50 e8 ?? ?? ?? ?? 83 c6 3c 83 c4 1c 83 7e f8 00 75 c6 5e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -429,6 +435,7 @@ rule Backdoor_Win32_Rbot_I_2147792386_0
         $x_1_1 = {89 8d f8 fb ff ff 8b 85 fc fd ff ff 6b c0 3c ff b0 ?? ?? ?? 00 8b 85 fc fd ff ff 6b c0 3c 05 ?? ?? ?? 00 50 68 ?? ?? ?? 00 8d 85 00 fe ff ff 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -451,6 +458,7 @@ rule Backdoor_Win32_Rbot_ST_2147792399_0
         $x_1_3 = {8b f3 81 e6 f0 00 00 00 83 fe 40 77 ?? 6a 00 68 80 00 00 00 6a 02 6a 00 c1 ee 04 8b 04 b5 ?? ?? ?? 00 50 68 00 00 00 c0 8b c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -473,6 +481,7 @@ rule Backdoor_Win32_Rbot_D_2147792400_0
         $x_1_2 = {b9 2f 00 00 00 8d 75 08 8b fc f3 a5 e8 ?? ?? ?? ?? 81 c4 c0 00 00 00 68 f4 01 00 00 ff 15 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -495,6 +504,7 @@ rule Backdoor_Win32_Rbot_PN_2147792407_0
         $x_1_3 = "Zebra0" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -517,6 +527,7 @@ rule Backdoor_Win32_Rbot_F_2147792410_0
         $x_1_2 = {eb 35 81 bd a8 00 00 00 8b 00 00 00 75 0e ff 75 fc ff 75 f8 (53|56) e8 ?? ?? ?? ?? eb 18 81 bd a8 00 00 00 bd 01 00 00 75 12}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -542,6 +553,7 @@ rule Backdoor_Win32_Rbot_QM_2147792414_0
         $x_1_6 = {7a 79 62 6f 74 2e 6f 66 66 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -565,6 +577,7 @@ rule Backdoor_Win32_Rbot_SV_2147792445_0
         $x_1_4 = "BoT|" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

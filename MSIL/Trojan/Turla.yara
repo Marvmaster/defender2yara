@@ -16,6 +16,7 @@ rule Trojan_MSIL_Turla_PGT_2147943227_0
         $x_5_1 = {43 00 67 00 39 00 55 00 63 00 6d 00 46 00 75 00 63 00 33 00 42 00 76 00 63 00 6e 00 51 00 75 00 63 00 48 00 4a 00 76 00 64 00 47 00 38 00 53 00 44 00 30 00 31 00 76 00 5a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

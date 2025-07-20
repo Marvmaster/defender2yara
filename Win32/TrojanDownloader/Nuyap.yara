@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Nuyap_A_2147653910_0
         $x_1_2 = {8a 1c 08 80 f3 90 88 1c 08 40 3b c2 7c f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

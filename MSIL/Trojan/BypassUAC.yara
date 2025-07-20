@@ -16,6 +16,7 @@ rule Trojan_MSIL_BypassUAC_GNF_2147898086_0
         $x_10_1 = {06 0a 02 28 ?? ?? ?? 06 0b 07 8e 69 8d 1d 00 00 01 0c 16 0d 2b 13 08 09 07 09 91 06 09 06 8e 69 5d 91 61 d2 9c 09 17 58 0d 09 07 8e 69 32 e7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_BypassUAC_SGA_2147904862_0
         $x_2_1 = "\\Dofus2\\Module_Ankama_Connection.dat" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_MSIL_BypassUAC_SG_2147906456_0
         $x_1_3 = "/run /tn \\Microsoft\\Windows\\DiskCleanup\\SilentCleanup /I" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Trojan_MSIL_BypassUAC_RP_2147913282_0
         $x_1_1 = {fe 0c 03 00 20 04 00 00 00 fe 01 39 05 00 00 00 38 05 00 00 00 38 5e ff ff ff 28 20 00 00 06 28 1f 00 00 06 60 28 21 00 00 06 60 28 22 00 00 06 60 28 23 00 00 06 60 39 06 00 00 00 14 28 24 00 00 0a dd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_MSIL_BypassUAC_NB_2147916239_0
         $x_1_8 = "/get-remote-shell" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Trojan_MSIL_BypassUAC_NC_2147918386_0
         $x_1_7 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +168,7 @@ rule Trojan_MSIL_BypassUAC_NG_2147925555_0
         $x_1_6 = "DOWNLOADFILE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

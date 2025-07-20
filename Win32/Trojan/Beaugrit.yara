@@ -17,6 +17,7 @@ rule Trojan_Win32_Beaugrit_EB_2147748462_0
         $x_1_2 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

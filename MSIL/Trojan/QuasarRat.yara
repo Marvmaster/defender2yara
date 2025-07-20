@@ -20,6 +20,7 @@ rule Trojan_MSIL_QuasarRat_NE_2147828113_0
         $x_1_5 = "3NpbmcAU3lzdGVtLkRyY" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_MSIL_QuasarRat_NEA_2147828114_0
         $x_1_4 = "powershell" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_MSIL_QuasarRat_NEC_2147833833_0
         $x_3_6 = "ReverseProxyDisconnect" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_MSIL_QuasarRat_NEAA_2147836088_0
         $x_10_1 = {0a 00 06 04 28 09 00 00 2b 7d aa 00 00 04 03 06 fe 06 80 01 00 06 73 f1 00 00 0a 28 0a 00 00 2b 28 09 00 00 2b 0b}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_MSIL_QuasarRat_NEAB_2147837074_0
         $x_2_4 = "targetallah" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -140,6 +145,7 @@ rule Trojan_MSIL_QuasarRat_NEAD_2147840579_0
         $x_1_5 = "GetExecutingAssembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_MSIL_QuasarRat_NEAG_2147841520_0
         $x_2_4 = "payload.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +198,7 @@ rule Trojan_MSIL_QuasarRat_CNU_2147842146_0
         $x_1_7 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -215,6 +223,7 @@ rule Trojan_MSIL_QuasarRat_NEAH_2147842280_0
         $x_2_4 = "GetExecutingAssembly" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -239,6 +248,7 @@ rule Trojan_MSIL_QuasarRat_NEAJ_2147842564_0
         $x_1_4 = "DebuggerHiddenAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -261,6 +271,7 @@ rule Trojan_MSIL_QuasarRat_NEAK_2147843186_0
         $x_5_2 = "Recrypted" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -285,6 +296,7 @@ rule Trojan_MSIL_QuasarRat_NEAM_2147843444_0
         $x_1_4 = "$$method0x6000317-1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -308,6 +320,7 @@ rule Trojan_MSIL_QuasarRat_NEAN_2147843627_0
         $x_2_3 = "WScript.Shell" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -331,6 +344,7 @@ rule Trojan_MSIL_QuasarRat_NEAP_2147844433_0
         $x_2_3 = "by BLD Dilanga" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -352,6 +366,7 @@ rule Trojan_MSIL_QuasarRat_RPY_2147845896_0
         $x_1_1 = {02 08 02 8e 69 5d ?? ?? ?? ?? ?? 02 08 02 8e 69 5d 91 07 08 07 8e 69 5d 91 61 ?? ?? ?? ?? ?? 02 08 18 58 17 59 02 8e 69 5d 91 59 20 ff 00 00 00 58 19 58 18 59 20 00 01 00 00 5d d2 9c 08 17 58 1a 2d 38 26 08 6a 02 8e 69 17 59 6a 06 17 58 6e 5a 31 ad}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -381,6 +396,7 @@ rule Trojan_MSIL_QuasarRat_RPZ_2147848113_0
         $x_1_9 = "FROM AntivirusProduct" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -402,6 +418,7 @@ rule Trojan_MSIL_QuasarRat_NN_2147901470_0
         $x_5_1 = {61 13 0f 26 16 13 0a 38 2f ?? ?? ?? 11 04 11 0a 8f 47 ?? ?? ?? 25 71 47 ?? ?? ?? 11 08 11 09 5a 11 0c 58 ?? ?? ?? ?? ?? ?? ?? ?? ?? 33 61 5e d2 61 d2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -423,6 +440,7 @@ rule Trojan_MSIL_QuasarRat_LL_2147902546_0
         $x_5_1 = {59 13 0a 26 11 07 11 07 8e 69 1c 59 91 ?? ?? ?? ?? 8e 69 1b 59 91 1e 62 60 11 07 11 07 8e 69 19 59 91}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -444,6 +462,7 @@ rule Trojan_MSIL_QuasarRat_NA_2147904791_0
         $x_5_1 = {93 61 1f 61 5f 9c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -465,6 +484,7 @@ rule Trojan_MSIL_QuasarRat_AMAI_2147914692_0
         $x_1_1 = {06 09 06 09 91 11 ?? 61 20 00 01 00 00 5d d2 9c 06 09 06 09 91}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -487,6 +507,7 @@ rule Trojan_MSIL_QuasarRat_AMAC_2147925923_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -508,6 +529,7 @@ rule Trojan_MSIL_QuasarRat_SCW_2147937380_0
         $x_2_1 = {7e 18 00 00 04 28 f5 04 00 06 80 18 00 00 04 7e 08 00 00 04 28 f5 04 00 06 80 08 00 00 04 7e 09 00 00 04 28 f5 04 00 06 80 09 00 00 04}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -530,6 +552,7 @@ rule Trojan_MSIL_QuasarRat_SIPM_2147939381_0
         $x_2_2 = {11 06 06 16 06 8e 69 6f 0b 00 00 0a 11 06 6f 0c 00 00 0a 11 05 6f 0d 00 00 0a 28 0e 00 00 0a 6f 0f 00 00 0a 14 14 6f 10 00 00 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -551,6 +574,7 @@ rule Trojan_MSIL_QuasarRat_SEBA_2147939383_0
         $x_2_1 = {7e 0b 00 00 04 0c 08 0b 07 1f 29 2e 12 2b 00 07 1f 2a 2e 02 2b 12 1f 26 80 0b 00 00 04 2b 09 1f 25 80 0b 00 00 04 2b 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -572,6 +596,7 @@ rule Trojan_MSIL_QuasarRat_SLUY_2147944193_0
         $x_2_1 = {da 0d 16 13 04 2b 4d 07 11 04 91 08 1b 20 88 13 00 00 6f e1 00 00 0a d8 28 92 00 00 0a 16 fe 01 13 05 11 05}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -593,6 +618,7 @@ rule Trojan_MSIL_QuasarRat_KAT_2147946240_0
         $x_1_1 = {28 2e 01 00 0a 13 09 11 09 06 6f 2f 01 00 0a 6f 30 01 00 0a 00 11 09 06 6f 2f 01 00 0a 6f 31 01 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

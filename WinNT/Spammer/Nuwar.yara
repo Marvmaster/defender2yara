@@ -20,6 +20,7 @@ rule Spammer_WinNT_Nuwar_A_2147595778_0
         $x_1_5 = {66 81 38 4d 5a 74 07 2d 00 10 00 00 eb f2 c3 55 8b ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

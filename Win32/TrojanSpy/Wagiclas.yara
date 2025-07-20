@@ -24,6 +24,7 @@ rule TrojanSpy_Win32_Wagiclas_A_2147667656_0
         $x_20_10 = "SUBPKTFJaoC" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_300_*) and 2 of ($x_25_*) and 3 of ($x_20_*))) or
             ((1 of ($x_300_*) and 1 of ($x_30_*) and 4 of ($x_20_*))) or
@@ -67,6 +68,7 @@ rule TrojanSpy_Win32_Wagiclas_B_2147678680_0
         $x_1_8 = "FFGjif31" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

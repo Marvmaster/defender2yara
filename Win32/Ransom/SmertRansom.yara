@@ -21,6 +21,7 @@ rule Ransom_Win32_SmertRansom_YAF_2147917663_0
         $x_1_6 = "wuauserv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win32_SmertRansom_MX_2147919947_0
         $x_1_4 = "wuauserv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

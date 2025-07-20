@@ -28,6 +28,7 @@ rule Trojan_Win32_Woripecs_A_2147632233_0
         $x_1_13 = "%do_cpuinfo%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule Backdoor_Win32_RaspberryRobin_PA_2147841108_0
         $x_1_1 = {ac 32 02 aa 42 49 [0-10] 85 c9 80 3a 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

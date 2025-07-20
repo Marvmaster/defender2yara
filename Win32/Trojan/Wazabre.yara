@@ -16,6 +16,7 @@ rule Trojan_Win32_Wazabre_A_122214_0
         $x_1_2 = {66 c7 05 02 70 40 00 06 00 66 c7 05 06 70 40 00 11 00 66 c7 05 08 70 40 00 12 00 66 c7 05 0a 70 40 00 25 00 68 ?? ?? 40 00 68 ?? ?? 40 00 e8 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

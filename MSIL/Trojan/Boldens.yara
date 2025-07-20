@@ -17,6 +17,7 @@ rule Trojan_MSIL_Boldens_A_2147706813_0
         $x_1_3 = {50 00 4f 00 53 00 54 00 ?? ?? 6e 00 61 00 6d 00 65 00 3d 00 4a 00 69 00 6d 00 26 00 61 00 67 00 65 00 3d 00 32 00 37 00 26 00 70 00 69 00 7a 00 7a 00 61 00 3d 00 73 00 75 00 61 00 73 00 61 00 67 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

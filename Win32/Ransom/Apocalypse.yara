@@ -20,6 +20,7 @@ rule Ransom_Win32_Apocalypse_A_2147718607_0
         $x_1_5 = {59 6f 75 20 77 69 6c 6c 20 68 61 76 65 20 74 6f 20 6f 72 64 65 72 20 74 68 65 20 55 6e 6c 6f 63 6b 2d 50 61 73 73 77 6f 72 64 20 61 6e 64 20 74 68 65 20 [0-21] 20 44 65 63 72 79 70 74 69 6f 6e 20 53 6f 66 74 77 61 72 65 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

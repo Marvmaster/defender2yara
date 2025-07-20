@@ -20,6 +20,7 @@ rule TrojanDownloader_MSIL_SnakeKeyLogger_RDD_2147842396_0
         $x_2_5 = {07 09 07 8e 69 5d 91 06 09 91 61 d2 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_MSIL_SnakeKeyLogger_RDF_2147845146_0
         $x_1_4 = "Odwalsitpbhqxuugmqfopjm" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule TrojanDownloader_MSIL_SnakeKeyLogger_RDE_2147896467_0
         $x_1_6 = "Mwnrenwqeonpfva" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule TrojanDownloader_MSIL_SnakeKeyLogger_RK_2147939356_0
         $x_1_3 = "yYBUA3LsPtLfx9UdR7.SGCU8x3RS0HdW3ntkH" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

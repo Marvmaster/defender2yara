@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Dyfrop_B_2147683376_0
         $x_1_2 = {68 55 38 b4 07 e8 0c 37 00 00 83 c4 08 89 45 fc 8b 4d fc 51 8b 55 0c 52 8b 45 18 50 8b 4d 10 51 68 0c da ae 50 8b 55 fc 52 e8 72 11 00 00 83 c4 18 89 45 fc 8b 45 fc 2d b8 99 4a 14 2b 05 d4 30 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanDownloader_MSIL_Muxif_A_2147694674_0
         $x_1_5 = "win32_logicaldisk.deviceid=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

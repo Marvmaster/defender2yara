@@ -19,6 +19,7 @@ rule Trojan_Win32_Mobsularch_A_2147680309_0
         $x_5_5 = "/customers/app_launch.php?id_project=" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

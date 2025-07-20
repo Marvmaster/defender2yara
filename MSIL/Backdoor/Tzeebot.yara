@@ -18,6 +18,7 @@ rule Backdoor_MSIL_Tzeebot_B_2147690396_0
         $x_10_4 = "TinyZBot" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

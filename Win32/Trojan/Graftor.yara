@@ -17,6 +17,7 @@ rule Trojan_Win32_Graftor_DSK_2147742181_0
         $x_2_2 = {8a 54 24 12 8a 44 24 11 88 14 2e 80 e3 c0 08 5c 24 13 88 44 2e 01 81 3d a4 bf 46 00 08 07 00 00 c7 05 98 bf 46 00 d6 26 f2 ce c7 05 9c bf 46 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Graftor_SIBC_2147806067_0
         $x_1_3 = {33 c0 39 44 24 0c 7e ?? 56 8b 74 24 0c 8b d0 c1 fa ?? 8a c8 8a 14 32 80 e1 ?? d2 fa 8b 4c 24 08 80 e2 ?? 88 14 08 40 3b 44 24 10 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Graftor_CA_2147814338_0
         $x_1_2 = {50 6a 00 ff 15 [0-4] 81 ff c0 c6 2d 00 76 1a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win32_Graftor_CB_2147814342_0
         $x_1_2 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Trojan_Win32_Graftor_ABS_2147851291_0
         $x_1_6 = "software\\microsoft\\windows nt\\currentversion\\winlogon" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_Win32_Graftor_GNZ_2147852911_0
         $x_1_3 = "@DnCWkjz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Trojan_Win32_Graftor_GMH_2147889534_0
         $x_1_4 = "VMProtect end" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +185,7 @@ rule Trojan_Win32_Graftor_SPDX_2147897798_0
         $x_4_1 = {b9 14 8a 43 00 81 c3 70 22 0c ee 81 c3 67 26 6c 9d bb 57 37 53 02 e8 ?? ?? ?? ?? bb c4 5e 62 4a 29 fb 47 31 0e bb 5d 00 45 9e 81 c6 01 00 00 00 68 56 82 44 79 8b 3c 24 83 c4 04 4b 57 5b 39 d6 75 be}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -199,6 +207,7 @@ rule Trojan_Win32_Graftor_AMBG_2147899777_0
         $x_2_1 = {8b c1 33 d2 f7 f7 8a 44 14 ?? 30 04 31 41 a1 ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? 2b c6 3b c8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +231,7 @@ rule Trojan_Win32_Graftor_A_2147903172_0
         $x_2_3 = {0f bf c0 33 d8 8d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -246,6 +256,7 @@ rule Trojan_Win32_Graftor_B_2147903174_0
         $x_2_4 = "cmd.exe /c net stop WinDefend" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -270,6 +281,7 @@ rule Trojan_Win32_Graftor_GPA_2147904589_0
         $x_1_4 = {e8 79 a8 fc a1 64 01 7a 0c 4f 59 a5 0d 80 5f 88 72 0e 84 13 22 2a 10 7d 8b 63 7c 1b 89 08 21 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -291,6 +303,7 @@ rule Trojan_Win32_Graftor_HNA_2147907540_0
         $x_4_1 = {4e 0e 71 b5 bf 97 33 e1 3a de 7b 6a 19 80 2d 74 19 c9 f6 c2 83 8d 4c 49 0b e9 ?? ?? ?? ?? 53 48 45 4c 4c 33 32 2e 44 4c 4c 00 d2 c0 18 e0 b0 2e 68 51 89 e9 36 f9 f8 e9 f8 28 00 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +325,7 @@ rule Trojan_Win32_Graftor_ARA_2147913513_0
         $x_2_1 = {8a 5c 04 10 80 f3 1a 88 5c 04 10 40 83 f8 05 72 ef}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -333,6 +347,7 @@ rule Trojan_Win32_Graftor_ARA_2147913513_1
         $x_2_1 = {8b 10 8a 14 1a 8b 4d 10 30 14 31 ff 00 39 38 75 03}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -354,6 +369,7 @@ rule Trojan_Win32_Graftor_C_2147921682_0
         $x_2_1 = {f7 d2 d3 f1 c0 c1 ?? 33 da 03 ea 0a c9 8b 84 31 ?? ?? ?? ?? 8d b4 0e ?? ?? ?? ?? c1 e9 ?? 0f b7 d1 87 4c ?? ?? 33 c3 d3 f2 0f 99 c2 0f c8 40 35 ?? ?? ?? ?? 66 03 ca c1 c8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -375,6 +391,7 @@ rule Trojan_Win32_Graftor_MKV_2147924864_0
         $x_5_1 = {02 ca 0f b6 c9 02 c1 0f b6 c0 8d 44 83 04 8a 08 30 0f 8b 08 8b 85 ?? ?? ?? ?? 31 08 8b 0e 03 8d ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 31 08 ff 85 ?? ?? fe ff 81 bd ?? ?? fe ff 38 3d 49 00 0f 8c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -397,6 +414,7 @@ rule Trojan_Win32_Graftor_NG_2147925324_0
         $x_2_2 = {8d 55 c4 33 c0 e8 ?? ?? fe ff 8b 45 c4 b9 03 00 00 00 ba 01 00 00 00 e8 ?? ?? ff ff 8b 55 c8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -419,6 +437,7 @@ rule Trojan_Win32_Graftor_AWFA_2147928080_0
         $x_1_2 = "stttdelzzz.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -440,6 +459,7 @@ rule Trojan_Win32_Graftor_BA_2147931027_0
         $x_8_1 = {83 c4 04 8b 45 f8 33 d2 b9 0e 00 00 00 f7 f1 8b 45 f4 0f b6 0c 10 8b 55 f8 0f b6 82 ?? ?? ?? ?? 33 c1 8b 4d f8 88 81}  //weight: 8, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +481,7 @@ rule Trojan_Win32_Graftor_BAA_2147932665_0
         $x_2_1 = {03 55 e4 8b 45 e4 8d 8c 10 54 1e 00 00 03 4d e4 89 4d e4 8b 0d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -482,6 +503,7 @@ rule Trojan_Win32_Graftor_PG_2147936653_0
         $x_2_1 = {ff d6 8b c8 33 d2 8b c3 f7 f1 8b 45 ?? 8b 4d ?? 03 c3 43 8a 92 ?? ?? ?? ?? 32 14 01 88 10 83 fb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -503,6 +525,7 @@ rule Trojan_Win32_Graftor_BAB_2147936774_0
         $x_2_1 = {f6 d2 02 d0 80 f2 01 d0 c2 f6 d2 80 c2 7f 88 90 ?? ?? ?? ?? 40 3d 05 4e 00 00 72 de}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -524,6 +547,7 @@ rule Trojan_Win32_Graftor_BAC_2147937531_0
         $x_2_1 = {f6 d1 80 c1 42 80 f1 a3 80 c1 4b 80 f1 e7 88 8c 1d ?? ?? ?? ?? 83 c3 01 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -547,6 +571,7 @@ rule Trojan_Win32_Graftor_SEFT_2147938420_0
         $x_2_3 = "dazaboravimnasve" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

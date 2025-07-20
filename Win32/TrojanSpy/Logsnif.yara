@@ -27,6 +27,7 @@ rule TrojanSpy_Win32_Logsnif_2147573858_0
         $x_1_13 = "SetThreadAffinityMask" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 10 of ($x_1_*))) or
             ((2 of ($x_3_*) and 7 of ($x_1_*))) or
@@ -75,6 +76,7 @@ rule TrojanSpy_Win32_Logsnif_A_2147593635_0
         $x_1_23 = "KeServiceDescriptorTable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_150_*) and 1 of ($x_25_*) and 4 of ($x_5_*) and 15 of ($x_1_*))) or
             ((1 of ($x_150_*) and 1 of ($x_25_*) and 5 of ($x_5_*) and 10 of ($x_1_*))) or
@@ -132,6 +134,7 @@ rule TrojanSpy_Win32_Logsnif_D_2147593803_0
         $x_1_30 = "Send OK!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_50_*) and 1 of ($x_5_*) and 20 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_50_*) and 2 of ($x_5_*) and 15 of ($x_1_*))) or
@@ -187,6 +190,7 @@ rule TrojanSpy_Win32_Logsnif_E_2147593826_0
         $x_3_30 = "WSAStartup" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_2_*) and 23 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_2_*) and 21 of ($x_1_*))) or
@@ -243,6 +247,7 @@ rule TrojanSpy_Win32_Logsnif_F_2147599749_0
         $x_10_8 = "GetForegroundWindow" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_3_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*) and 3 of ($x_3_*))) or
@@ -268,6 +273,7 @@ rule TrojanSpy_Win32_Logsnif_FH_2147611021_0
         $x_1_2 = {6a 00 90 90 90 90 90 90 ff d0 ff 56 04 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

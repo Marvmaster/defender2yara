@@ -17,6 +17,7 @@ rule TrojanProxy_Win32_Verind_A_2147616004_0
         $x_1_3 = {67 e3 0b 8b f0 ad 31 05 ?? ?? ?? ?? e2 f7 5e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

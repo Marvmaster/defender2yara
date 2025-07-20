@@ -17,6 +17,7 @@ rule Worm_Win32_Currted_A_2147650647_0
         $x_1_3 = {73 68 65 6c 6c 65 78 65 63 75 74 65 3d 43 3a 5c 57 69 6e 64 6f 77 73 5c 73 79 73 74 65 6d 33 32 5c 4d 69 63 72 6f 73 6f 66 74 5c 43 61 6e 61 64 61 2e 65 78 65 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

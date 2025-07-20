@@ -16,6 +16,7 @@ rule Ransom_Win32_CylanceLoader_IJ_2147915595_0
         $x_1_1 = {68 30 22 40 00 6a 01 33 f6 56 ff 15 2c 20 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Ransom_Win32_CylanceLoader_MKB_2147929698_0
         $x_5_1 = {2b fb 33 f6 8b 45 ?? 8d 0c 1e 8a 04 30 46 32 04 0f 88 01 3b f2 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

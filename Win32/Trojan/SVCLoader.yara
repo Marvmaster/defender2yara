@@ -22,6 +22,7 @@ rule Trojan_Win32_SVCLoader_AM_2147820357_0
         $x_1_7 = "LoadLibraryC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_SVCLoader_EM_2147827804_0
         $x_1_4 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

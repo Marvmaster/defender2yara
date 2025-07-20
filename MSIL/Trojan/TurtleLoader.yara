@@ -18,6 +18,7 @@ rule Trojan_MSIL_TurtleLoader_NT_2147899463_0
         $x_1_3 = "zhudongfangyu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_TurtleLoader_CNQ_2147904366_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

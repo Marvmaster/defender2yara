@@ -30,6 +30,7 @@ rule Backdoor_Win32_QQpass_2147572244_0
         $x_1_16 = "regedit.notepad.taskmgr.ctfmon.userinit." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

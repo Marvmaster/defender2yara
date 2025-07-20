@@ -17,6 +17,7 @@ rule Ransom_Linux_Crygodof_A_2147743625_0
         $x_1_3 = {6d 61 69 6e 2e 45 6e 63 46 69 6c 65 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

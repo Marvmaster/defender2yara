@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Tropats_A_2147601364_0
         $x_1_3 = {80 bd 83 00 00 00 00 c6 85 82 00 00 00 01 75 99 8b 45 7c 83 f8 08 0f 84 f5 02 00 00 83 f8 09 0f 84 ec 02 00 00 83 f8 11 0f 84 e3 02 00 00 83 f8 1b 0f 84 da 02 00 00 83 f8 70 7c 09 83 f8 7b 0f 8e cc 02 00 00 83 f8 2c 0f 84 c3 02 00 00 83 f8 2d 0f 84 ba 02 00 00 83 f8 2e 0f 84 b1 02 00 00 83 f8 21 7c 09 83 f8 24 0f 8e a3 02 00 00 83 f8 5b 0f 84 9a 02 00 00 83 f8 5c 0f 84 91 02 00 00 3b c3 0f 84 89 02 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

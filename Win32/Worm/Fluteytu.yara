@@ -17,6 +17,7 @@ rule Worm_Win32_Fluteytu_A_2147646070_0
         $x_1_3 = {80 38 2e 0f 84 ?? ?? ff ff ba 07 00 00 00 8b 45 fc e8 ?? ?? ?? ?? 8d 45 fc ba}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

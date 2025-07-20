@@ -17,6 +17,7 @@ rule PWS_MSIL_Crasarm_A_2147688831_0
         $x_1_3 = "password_value" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

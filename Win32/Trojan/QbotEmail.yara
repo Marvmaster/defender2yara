@@ -23,6 +23,7 @@ rule Trojan_Win32_QbotEmail_A_2147763211_0
         $x_1_8 = "%s\\EmailStorage_%s-%s_%u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

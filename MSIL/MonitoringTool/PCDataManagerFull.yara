@@ -17,6 +17,7 @@ rule MonitoringTool_MSIL_PCDataManagerFull_205046_0
         $x_1_3 = "Please find the System Activities Log recorded and created by PC Data Manager" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

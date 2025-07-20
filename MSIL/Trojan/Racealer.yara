@@ -26,6 +26,7 @@ rule Trojan_MSIL_Racealer_DA_2147779226_0
         $x_1_11 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*) and 8 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_5_*) and 3 of ($x_1_*))) or
@@ -63,6 +64,7 @@ rule Trojan_MSIL_Racealer_DB_2147779227_0
         $x_1_13 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*) and 8 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_5_*) and 3 of ($x_1_*))) or
@@ -105,6 +107,7 @@ rule Trojan_MSIL_Racealer_DC_2147779337_0
         $x_1_17 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*) and 8 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_5_*) and 3 of ($x_1_*))) or
@@ -143,6 +146,7 @@ rule Trojan_MSIL_Racealer_DD_2147779973_0
         $x_1_13 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 3 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -178,6 +182,7 @@ rule Trojan_MSIL_Racealer_DE_2147780582_0
         $x_1_11 = "Debugger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +215,7 @@ rule Trojan_MSIL_Racealer_DF_2147780810_0
         $x_1_12 = "Debugger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +240,7 @@ rule Trojan_MSIL_Racealer_2147783162_0
         $x_1_3 = "_PexesoWait" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -258,6 +265,7 @@ rule Trojan_MSIL_Racealer_BM_2147795784_0
         $x_3_4 = "DownloadData" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -282,6 +290,7 @@ rule Trojan_MSIL_Racealer_BS_2147795785_0
         $x_3_4 = "FromBase64String" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -314,6 +323,7 @@ rule Trojan_MSIL_Racealer_MA_2147809311_0
         $x_1_12 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -335,6 +345,7 @@ rule Trojan_MSIL_Racealer_AAOB_2147889510_0
         $x_5_1 = {06 20 a0 16 00 00 28 ?? 00 00 06 58 0a 06 20 a4 16 00 00 28 ?? 00 00 06 5d 0a 08 11 06 06 94 58 0c 08 20 a8 16 00 00 28 ?? 00 00 06 5d 0c 11 06 06 94 13 04 11 06 06 11 06 08 94 9e 11 06 08 11 04 9e 11 06 11 06 06 94 11 06 08 94 58 20 ac 16 00 00 28 ?? 00 00 06 5d 94 0d 11 07 07 02 07 91 09 61 d2 9c 07 20 b0 16 00 00 28 ?? 00 00 06 58 0b 07 02 28 ?? 00 00 06 25 26 69 32 83}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

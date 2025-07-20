@@ -22,6 +22,7 @@ rule Ransom_MSIL_Crypren_A_2147745841_0
         $x_5_7 = "0badc0debadc0de10badc0debadc0de1" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

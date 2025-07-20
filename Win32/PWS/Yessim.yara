@@ -20,6 +20,7 @@ rule PWS_Win32_Yessim_2147605562_0
         $x_5_6 = {73 69 6d 00 79 65 73 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or

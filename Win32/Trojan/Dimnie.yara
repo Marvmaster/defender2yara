@@ -23,6 +23,7 @@ rule Trojan_Win32_Dimnie_B_2147691729_0
         $x_1_9 = {0f b6 d1 c1 e2 18 89 10 8a d1 80 e2 80 83 c0 04 f6 da 1a d2 80 e2 1b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule Trojan_Win32_Dimnie_C_2147696797_0
         $x_2_4 = {49 6b 7a 5e c7 45 ?? 7c 61 6d 6b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -82,6 +84,7 @@ rule Trojan_Win32_Dimnie_E_2147716820_0
         $x_1_7 = "sysadmin Curly travel Lucas" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_8_*) and 2 of ($x_2_*))) or
@@ -110,6 +113,7 @@ rule Trojan_Win32_Dimnie_G_2147718516_0
         $x_1_5 = {c7 45 f4 61 65 69 6f 33 db 66 c7 45 f8 75 00 c7 45 dc 62 63 64 66 c7 45 e0 67 68 6a 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

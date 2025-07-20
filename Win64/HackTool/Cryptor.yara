@@ -20,6 +20,7 @@ rule HackTool_Win64_Cryptor_JZ_2147904603_0
         $x_1_5 = "myfile.txt.enc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

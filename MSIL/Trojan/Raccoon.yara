@@ -23,6 +23,7 @@ rule Trojan_MSIL_Raccoon_A_2147794525_0
         $x_1_8 = "IsLogging" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_MSIL_Raccoon_TX_2147796644_0
         $x_1_6 = "5nIHRoZSBwcm9ncmFtIHRvIGZpeCB0aGlzIHByb2JsZW0u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Trojan_MSIL_Raccoon_RC_2147837605_0
         $x_1_2 = "Vehicle Management Database.accdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_MSIL_Raccoon_AR_2147838079_0
         $x_2_1 = {16 0a 2b 6a 00 28 04 00 00 06 73 1a 00 00 0a 0b 73 15 00 00 0a 0c 07 16 73 1b 00 00 0a 73 1c 00 00 0a 0d 09 08 6f 17 00 00 0a de 0a 09 2c 06 09 6f 1d 00 00 0a dc 08 6f 18 00 00 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule Trojan_MSIL_Raccoon_CND_2147842012_0
         $x_1_10 = "Memory" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule Trojan_MSIL_Raccoon_NRC_2147842651_0
         $x_1_2 = "internal.annotations.GuardedBy.module23" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +171,7 @@ rule Trojan_MSIL_Raccoon_PSIS_2147844985_0
         $x_2_1 = {0a 06 28 6e 00 00 0a 25 26 0b 28 6f 00 00 0a 07 16 07 8e 69 6f 70 00 00 0a 25 26 0a 28 16 00 00 0a 06 6f 1d 00 00 0a 0c 1f 61 6a 08 28 90 00 00 06 25 26 80 31 00 00 04 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -186,6 +193,7 @@ rule Trojan_MSIL_Raccoon_ABXU_2147847772_0
         $x_5_1 = {06 1a 58 4a 02 8e 69 5d 7e ?? 00 00 04 02 06 1a 58 4a 02 8e 69 5d 91 07 06 1a 58 4a 07 8e 69 5d 91 61 28 ?? 00 00 06 02 06 1a 58 4a 17 58 02 8e 69 5d 91 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 06 1a 58 06 1a 58 4a 17 58 54 06 1a 58 4a 6a 02 8e 69 17 59 6a 06 4b 17 58 6e 5a 31 9c 0f 00 02 8e 69 17 59 28 ?? 00 00 2b 02 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

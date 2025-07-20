@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Wark_A_2147632430_0
         $x_1_2 = {76 16 8d 4c ?? ?? e8 ?? ?? 00 00 8a 14 2e 32 d0 88 14 2e 46 3b f3 72 ea}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

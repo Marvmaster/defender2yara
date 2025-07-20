@@ -17,6 +17,7 @@ rule TrojanDropper_Win64_Foosace_A_2147710121_0
         $x_1_2 = {66 69 6c 65 78 6f 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

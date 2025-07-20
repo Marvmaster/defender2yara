@@ -18,6 +18,7 @@ rule Trojan_MSIL_GrowtopiaKeylogger_A_2147836643_0
         $x_2_3 = {09 11 04 11 05 11 06 73 ?? 00 00 0a 13 0a 20 ?? ?? 00 00 17 58 28 0d 00 00 06 20 ?? ?? 00 00 73 ?? 00 00 0a 13 0b 11 0b 17 20 ?? ?? 00 00 28 2b 00 00 06 11 0b 11 07 11 08 73}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

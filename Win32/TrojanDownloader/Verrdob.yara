@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Verrdob_A_2147650947_0
         $x_1_7 = "py0EPDNdpdAE8vHdpiNEpvHgTvUhpdN7pisEpJ" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

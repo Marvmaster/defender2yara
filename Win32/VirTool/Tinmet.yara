@@ -17,6 +17,7 @@ rule VirTool_Win32_Tinmet_A_2147755735_0
         $x_1_3 = {83 c4 0c a3 ?? ?? ?? 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

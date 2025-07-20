@@ -17,6 +17,7 @@ rule Trojan_Win32_TrickbotCrypt_SO_2147762946_0
         $x_1_2 = {8a 0a 03 c1 8b 4d ?? 33 d2 f7 31 89 55 ?? 8b 15 ?? ?? ?? ?? 8b 02 8b 4d ?? 33 d2 8a 14 01 8b 45 ?? 03 45 ?? 33 c9 8a 08 33 d1 a1 ?? ?? ?? ?? 8b 08 8b 45 18 88 14 08 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_TrickbotCrypt_NO_2147763122_0
         $x_1_2 = {33 d2 8a 14 ?? 8b c3 25 ff 00 00 00 03 ea 03 c5 33 d2 f7 35 ?? ?? ?? ?? 46 47 8b ea 8a 04 29 88 1c 29 88 47 ?? a1 ?? ?? ?? ?? 3b f0 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_TrickbotCrypt_NO_2147763122_1
         $x_1_3 = {8b 55 f0 83 c2 01 89 55 ?? 8b 45 ?? 83 c0 02 89 45 ?? 8b 4d ?? 8b 51 ?? 83 ea 08 d1 ea 39 55 f0 73 ?? 8b 45 ?? 0f b7 08 c1 f9 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_TrickbotCrypt_SQ_2147763969_0
         $x_2_1 = {33 d2 8d 41 ?? f7 f7 6a 00 8b f2 33 d2 89 75 ?? 6a 00 0f b6 04 1e 03 45 ?? f7 f7 0f b6 04 1e 89 55 ?? 8a 0c 1a 88 04 1a 88 0c 1e 0f b6 c1 0f b6 0c 1a 33 d2 03 c1 f7 f7 8b f2 ff 15 ?? ?? ?? ?? 8b 4d ?? 8b 55 ?? 0f b6 04 0a 32 04 1e 88 01 41 ff 4d ?? 89 4d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_Win32_TrickbotCrypt_SQ_2147763969_1
         $x_2_2 = {50 6a 00 e8 ?? ?? ?? ?? 89 85 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 8d 95 ?? ?? ?? ?? 8d 85 ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 52 50 8d 4d ?? 8d 55 ?? 51 8d 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +132,7 @@ rule Trojan_Win32_TrickbotCrypt_SD_2147764058_0
         $x_1_2 = {6a 40 68 00 30 00 00 68 01 08 00 00 b9 0b 00 00 00 be ?? ?? ?? ?? 8d 7c 24 ?? 6a 00 f3 a5 ff 15 ?? ?? ?? ?? 8b f0 e8 ?? ?? ?? ?? 85 c0 75 ?? 68 00 08 00 00 56 68 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +154,7 @@ rule Trojan_Win32_TrickbotCrypt_SE_2147764095_0
         $x_2_1 = {31 c0 83 c9 ff 8b 7d ?? f2 ae f7 d1 49 89 d8 31 d2 f7 f1 8a 04 16 8b 55 ?? 32 04 1a 8b 55 ?? 88 04 1a ff 05 ?? ?? ?? ?? 8b 1d ?? ?? ?? ?? 3b 5d ?? 75 ?? 5b 5e 5f 5d c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +177,7 @@ rule Trojan_Win32_TrickbotCrypt_SE_2147764095_1
         $x_1_2 = {ff d6 59 0d 00 10 00 00 50 ff 74 24 ?? 6a 00 ff d7 8b f0 85 f6 74 ?? ff 74 24 ?? 56 6a ?? 68 ?? ?? ?? ?? ff 74 24 ?? 53 ff 54}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -192,6 +200,7 @@ rule Trojan_Win32_TrickbotCrypt_SV_2147766274_0
         $x_1_2 = {53 56 8b 4c 24 ?? 8b 54 24 ?? 8b 74 24 ?? 8b 7c 24 ?? 85 d2 74 ?? ac 52 30 07 5a 4a 47 e2 ?? 5e 5b 33 c0 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +223,7 @@ rule Trojan_Win32_TrickbotCrypt_SV_2147766274_1
         $x_1_2 = {75 04 32 c0 eb ?? 8b 4d ?? 8b 11 52 8b 45 ?? 50 8b 4d ?? 51 6a 00 6a 01 6a 00 8b 55 ?? 52 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -237,6 +247,7 @@ rule Trojan_Win32_TrickbotCrypt_SV_2147766274_2
         $x_1_3 = {83 c4 04 89 b4 24 ?? ?? 00 00 89 9c 24 ?? ?? 00 00 88 9c 24 ?? ?? 00 00 39 bc 24 ?? ?? 00 00 72 10 8b 8c 24 ?? ?? 00 00 51 e8 ?? ?? 00 00 83 c4 04 89 b4 24 ?? ?? 00 00 89 9c 24 ?? ?? 00 00 88 9c 24 ?? 00 00 00 39 bc 24 ?? 00 00 00 72 ?? 8b 54 24 ?? 52 e8 ?? ?? ?? ?? 83 c4 04 89 b4 24 ?? 00 00 00 89 5c 24 ?? 88 5c 24 ?? 39 bc 24 ?? 00 00 00 72 10 8b 84 24 ?? 00 00 00 50 e8 ?? ?? 00 00 83 c4 04 89 b4 24 ?? 00 00 00 89 9c 24 ?? 00 00 00 88 9c 24 ?? 00 00 00 39 bc 24 ?? ?? 00 00 0f 82 ?? ?? 00 00 8b 8c 24 ?? ?? 00 00 51 e9 ?? ?? 00 00 ff d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -260,6 +271,7 @@ rule Trojan_Win32_TrickbotCrypt_SN_2147766802_0
         $x_1_3 = {0f b6 54 24 ?? a1 ?? ?? ?? ?? 8a 0c 02 8b 44 24 ?? 30 0c 03 8b 44 24 ?? 43 3b d8 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -281,6 +293,7 @@ rule Trojan_Win32_TrickbotCrypt_KM_2147772833_0
         $x_1_1 = {81 c2 3b 15 00 00 89 95 ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 2b 85 ?? ?? ?? ?? 89 85 ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 81 e9 00 f0 0f 0f 89 8d ?? ?? ?? ?? 8b 95 ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 89 0c ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -303,6 +316,7 @@ rule Trojan_Win32_TrickbotCrypt_SP_2147773313_0
         $x_2_2 = {50 51 6a 11 ff 15 ?? ?? ?? ?? 8b 95 ?? ?? ?? ?? 8b 45 ?? 8b 8d ?? ?? ?? ?? 83 c4 ?? 52 50 51 e8 ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? c7 85 ?? ?? ?? ?? 01 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -325,6 +339,7 @@ rule Trojan_Win32_TrickbotCrypt_SS_2147775165_0
         $x_1_2 = {8b c7 2b 44 24 ?? 3b c8 73 ?? 83 f9 3c 72 ?? 83 f9 3e 76 ?? c6 02 00 eb ?? 8a 03 88 02 41 43 42 85 f6 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

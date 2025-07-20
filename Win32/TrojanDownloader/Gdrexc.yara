@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Gdrexc_YA_2147734998_0
         $x_1_3 = "drive.google.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

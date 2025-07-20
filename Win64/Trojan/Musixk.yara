@@ -19,6 +19,7 @@ rule Trojan_Win64_Musixk_A_2147817253_0
         $x_1_5 = {65 48 8b 04 25 60 00 00 00 83 b8 18 01 00 00 06 74 0e 83 b8 18 01 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -47,6 +48,7 @@ rule Trojan_Win64_Musixk_B_2147817254_0
         $x_1_4 = {65 48 8b 04 25 60 00 00 00 83 b8 18 01 00 00 06 74 0e 83 b8 18 01 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

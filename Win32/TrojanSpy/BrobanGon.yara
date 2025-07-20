@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_BrobanGon_A_2147690448_0
         $x_1_8 = "boletoRegistradoDdaForm" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

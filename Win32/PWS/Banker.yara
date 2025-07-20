@@ -24,6 +24,7 @@ rule PWS_Win32_Banker_B_2147623522_0
         $x_1_10 = "thalixinhainvia@isbt.com.br" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule PWS_Win32_Banker_A_2147640323_0
         $x_2_4 = {49 43 42 43 00 00 00 00 ff ff ff ff 03 00 00 00 43 4d 42 00 ff ff ff ff 03 00 00 00 43 43 42 00 ff ff ff ff 03 00 00 00 42 4f 43}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -77,6 +79,7 @@ rule PWS_Win32_Banker_D_2147645766_0
         $x_2_5 = {35 ae ca 7b c3 ff 25 ?? ?? ?? ?? 8b c0 53 33 db 6a 00 e8 ee ff ff ff 83 f8 07 75 1c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -106,6 +109,7 @@ rule PWS_Win32_Banker_G_2147647735_0
         $x_1_6 = "hotmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule PWS_Win32_Banker_L_2147649347_0
         $x_1_4 = "USER %s@%s@%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -156,6 +161,7 @@ rule PWS_Win32_Banker_M_2147649640_0
         $x_2_5 = {35 ae ca 7b c3 ff 25 ?? ?? ?? ?? 8b c0 53 33 db 6a 00 e8 ee ff ff ff 83 f8 07 75 1c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -180,6 +186,7 @@ rule PWS_Win32_Banker_S_2147654139_0
         $x_1_5 = {8b 55 cc b8 ?? ?? ?? 00 e8 ?? ?? ?? ?? 85 c0 0f 85 ?? ?? 00 00 8d 45 c8 8b d3 e8 ?? ?? ?? ?? 8b 55 c8 b8 ?? ?? ?? 00 e8 ?? ?? ?? ?? 85 c0 75 3a 8d 45 c4 8b d3 e8 ?? ?? ?? ?? 8b 55 c4 b8 c0 42 4d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -204,6 +211,7 @@ rule PWS_Win32_Banker_U_2147680128_0
         $x_1_5 = "Tkiloko" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -231,6 +239,7 @@ rule PWS_Win32_Banker_UC_2147721100_0
         $x_1_7 = {00 4f 50 45 52 41 20 50 41 53 53 57 4f 52 44 53 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -253,6 +262,7 @@ rule PWS_Win32_Banker_UD_2147730158_0
         $x_1_2 = {8a 44 02 ff 32 d8 33 d2 8a d0 32 9a ?? ?? ?? ?? 32 9a ?? ?? ?? ?? 32 9a ?? ?? ?? ?? 32 9a ?? ?? ?? ?? 32 9a ?? ?? ?? ?? 32 9a ?? ?? ?? ?? 32 c3 8b d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -279,6 +289,7 @@ rule PWS_Win32_Banker_YA_2147731142_0
         $x_1_6 = "BEGIN CLIPBOARD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -305,6 +316,7 @@ rule PWS_Win32_Banker_YB_2147731404_0
         $x_1_6 = "reg add HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

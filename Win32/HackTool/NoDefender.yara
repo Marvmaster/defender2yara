@@ -19,6 +19,7 @@ rule HackTool_Win32_NoDefender_A_2147912208_0
         $x_1_5 = "github.com/es3n1n/no-defender" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

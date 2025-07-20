@@ -16,6 +16,7 @@ rule Trojan_WinNT_Flosyt_A_2147650256_0
         $x_1_2 = {83 7c 24 04 05 75 0e 8b 74 24 08 8b 3c 24 c7 04 24 ?? ?? ?? ?? ff 25 ?? ?? ?? ?? 85 c0 75 ?? eb ?? 03 36 39 46 3c 74 ?? 8b 56 3c 81 3a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

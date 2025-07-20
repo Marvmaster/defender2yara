@@ -17,6 +17,7 @@ rule Trojan_Win32_Phave_KK_2147946086_0
         $x_5_2 = {8b 45 f4 3b 45 0c 73 33 8b 55 08 8b 45 f4 8d 0c 02 8b 55 08 8b 45 f4 01 d0 0f b6 00 89 c3 8b 45 f4 ba 00 00 00 00 f7 75 f0 8b 45 10 01 d0 0f b6 00 31 d8 88 01 83 45 f4 01}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

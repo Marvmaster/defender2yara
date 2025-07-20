@@ -19,6 +19,7 @@ rule Trojan_Win32_XPack_CZZ_2147841194_0
         $x_1_4 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_XPack_NP_2147896919_0
         $x_1_2 = "xXxdxjx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_XPack_NP_2147896919_1
         $x_3_2 = {83 c1 58 81 fa ?? ?? ?? ?? 89 44 24 18 89 4c 24 ?? 72 00 8b 44 24 14 8b 4c 24 ?? 89 08 8b 54 24}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win32_XPack_NC_2147897172_0
         $x_1_2 = "98te.4y" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

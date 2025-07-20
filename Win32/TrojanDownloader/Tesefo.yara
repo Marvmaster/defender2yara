@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Tesefo_A_2147606016_0
         $x_1_2 = {ba 08 02 00 00 b8 12 00 00 00 e8 ?? ?? ?? ?? 50 8b 03 50 e8 ?? ?? ?? ?? 6a 00 8d 45 fc 50 6a 3e 8d 85 ca fa ff ff 50 8b 03 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

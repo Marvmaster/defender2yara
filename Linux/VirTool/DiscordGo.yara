@@ -22,6 +22,7 @@ rule VirTool_Linux_DiscordGo_A_2147888110_0
         $x_1_7 = "github.com/gorilla/websocket" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

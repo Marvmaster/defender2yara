@@ -19,6 +19,7 @@ rule Trojan_Win32_Midie_SIB_2147806066_0
         $x_5_4 = {64 a1 30 00 00 00 89 7c 24 ?? 8b 40 0c 8b 68 14 89 6c 24 ?? 85 ed 0f 84 ?? ?? ?? ?? 66 90 8b 75 28 33 c9 0f b7 55 24 [0-10] 0f b6 3e c1 c9 ?? 80 3e 61 72 03 83 c1 ?? 81 c2 ff ff 00 00 03 cf 46 66 85 d2 75 ?? 81 f9 ?? ?? ?? ?? 0f 85}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule Trojan_Win32_Midie_SIBF_2147810219_0
         $x_1_3 = {6a 40 57 8d 8d ?? ?? ?? ?? 51 ff d0 6a 00 68 80 00 00 00 6a 03 6a 00 6a 07 68 00 00 00 80 8d 85 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 6a 00 8d 4d ?? 51 57 8d 8d 00 51 50 ff 15 ?? ?? ?? ?? b9 00 00 00 00 8a 84 0d 00 81 f9 ?? ?? ?? ?? 74 ?? [0-5] 04 2d 34 24 [0-8] 2c 77 [0-8] 04 ea [0-5] 34 65 88 84 0d 00 83 c1 01 8a 84 0d 00 81 f9 07 b0 00 b9 00 00 00 00 8d 85 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_Midie_SIBG_2147810220_0
         $x_1_3 = {b9 00 00 00 00 8a 84 0d ?? ?? ?? ?? 81 f9 ?? ?? ?? ?? 74 ?? [0-5] 04 ?? [0-8] 2c af [0-5] 2c 95 88 84 0d 00 83 c1 01 8a 84 0d 00 81 f9 01 b0 00 b9 00 00 00 00 68 ?? ?? ?? ?? 68 ?? 0d ff 15 ?? 0d 50 ff 15 ?? 0d 8d 4d ?? 51 6a ?? 56 8d 8d 00 51 ff d0 8d 85 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_Midie_SIBH_2147810221_0
         $x_1_2 = {33 c9 85 db 74 ?? 8a 04 39 [0-10] 34 ?? [0-10] 04 ?? 34 ?? 88 04 39 41 3b cb 72 ?? 6a 00 57 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_Win32_Midie_SIBH_2147810221_1
         $x_1_2 = {6a 40 68 00 ?? 00 00 8b d8 53 6a 00 ff 15 ?? ?? ?? ?? 6a 00 8b f8 8d 45 ?? 50 53 57 56 ff 15 ?? ?? ?? ?? 33 c9 85 db 74 ?? 8a 04 39 [0-32] 34 ?? [0-32] 34 ?? [0-32] 34 ?? 88 04 39 41 3b cb 72 ?? 6a 00 6a 00 57 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule Trojan_Win32_Midie_SIBH_2147810221_2
         $x_1_3 = {6a 40 57 8d 8d ?? ?? ?? ?? 51 ff d0 6a 00 68 80 00 00 00 6a 03 6a 00 6a 07 68 00 00 00 80 8d 85 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 6a 00 8d 4d ?? 51 57 8d 8d 00 51 50 ff 15 ?? ?? ?? ?? b9 00 00 00 00 8a 84 0d 00 81 f9 ?? ?? ?? ?? 74 ?? [0-5] 2c 14 34 84 [0-8] 2c e6 04 5f 34 2f 2c aa [0-8] 88 84 0d 00 83 c1 01 8a 84 0d 00 81 f9 07 b0 00 b9 00 00 00 00 8d 85 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Trojan_Win32_Midie_SIBJ_2147810222_0
         $x_1_2 = {33 c9 85 db 74 ?? 8a 04 39 [0-32] 34 a2 [0-32] fe c0 34 4f [0-32] 88 04 39 41 3b cb 72 ?? 6a 00 57 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +186,7 @@ rule Trojan_Win32_Midie_SIBJ_2147810222_1
         $x_1_2 = {51 56 8d 8d ?? ?? ?? ?? 51 50 ff 15 ?? ?? ?? ?? b9 00 00 00 00 8a 84 0d 00 81 f9 ?? ?? ?? ?? 74 ?? [0-8] 04 ?? [0-8] 34 ?? [0-5] 04 ?? 34 ?? [0-5] 88 84 0d 00 83 c1 01 8a 84 0d 00 81 f9 03 b0 00 b9 00 00 00 00 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 8d 4d ?? 51 6a 40 56 8d 8d 00 51 ff d0 8d 85 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +210,7 @@ rule Trojan_Win32_Midie_SIBK_2147810320_0
         $x_1_3 = {68 80 00 00 00 6a 03 56 6a 07 68 00 00 00 80 50 ff 15 ?? ?? ?? ?? 56 8d 4d ?? be ?? ?? ?? ?? 51 56 8d 8d ?? ?? ?? ?? 51 50 ff 15 ?? ?? ?? ?? b9 00 00 00 00 8a 84 0d 03 81 f9 02 74 ?? [0-8] 2c ?? [0-8] 34 ?? [0-21] 2c ?? [0-5] 04 ?? 88 84 0d 03 83 c1 01 8a 84 0d 03 81 f9 02 b0 00 b9 00 00 00 00 68 ?? ?? ?? ?? 68 ?? 16 ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 8d 4d ?? 51 6a 40 56 8d 8d 03 51 ff d0 8d 85 03 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +234,7 @@ rule Trojan_Win32_Midie_SIBM_2147810321_0
         $x_1_3 = {b9 00 00 00 00 8a 84 0d ?? ?? ?? ?? 81 f9 ?? ?? ?? ?? 74 ?? [0-8] 04 ?? [0-8] 2c ?? [0-8] 34 ?? [0-8] 88 84 0d 00 83 c1 01 8a 84 0d 00 81 f9 01 b0 00 b9 00 00 00 00 68 ?? ?? ?? ?? 68 ?? 10 ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 8d 4d ?? 51 6a 40 56 8d 8d 00 51 ff d0 8d 85 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -248,6 +258,7 @@ rule Trojan_Win32_Midie_SIBN_2147810322_0
         $x_1_3 = {6a 40 57 8d 8d ?? ?? ?? ?? 51 ff d0 6a 00 68 80 00 00 00 6a 03 6a 00 6a 07 68 00 00 00 80 8d 85 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 6a 00 8d 4d ?? 51 57 8d 8d 00 51 50 ff 15 ?? ?? ?? ?? b9 00 00 00 00 8a 84 0d 00 81 f9 ?? ?? ?? ?? 74 ?? 2c ?? [0-8] 34 ?? [0-6] 04 ?? [0-8] 2c ?? 88 84 0d 00 83 c1 01 8a 84 0d 00 81 f9 07 b0 00 b9 00 00 00 00 8d 85 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -270,6 +281,7 @@ rule Trojan_Win32_Midie_SIBP_2147810688_0
         $x_1_2 = {52 6a 40 68 ?? ?? ?? ?? 8d 85 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? b9 00 00 00 00 8a 84 0d 01 81 f9 00 74 ?? [0-8] 04 ?? 34 ?? [0-8] 04 f7 [0-8] 88 84 0d 01 83 c1 01 8a 84 0d 01 81 f9 00 b0 00 b9 00 00 00 00 8d 8d 01 ff d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -292,6 +304,7 @@ rule Trojan_Win32_Midie_SINQ_2147810689_0
         $x_1_2 = {50 6a 40 68 ?? ?? ?? ?? 8d 8d ?? ?? ?? ?? 51 ff 15 ?? ?? ?? ?? b9 00 00 00 00 8a 84 0d 01 81 f9 00 74 ?? [0-8] fe c8 34 ?? [0-8] 04 ?? fe c0 [0-8] 34 ?? 88 84 0d 01 83 c1 01 8a 84 0d 01 81 f9 00 b0 00 b9 00 00 00 00 8d 95 01 ff d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -314,6 +327,7 @@ rule Trojan_Win32_Midie_SIBR_2147810690_0
         $x_1_2 = {50 6a 40 68 ?? ?? ?? ?? 8d 8d ?? ?? ?? ?? 51 ff 15 ?? ?? ?? ?? b9 00 00 00 00 8a 84 0d 01 81 f9 00 74 ?? [0-8] 34 ?? 04 ?? [0-5] 2c ?? [0-8] 04 ?? 34 ?? 88 84 0d 01 83 c1 01 8a 84 0d 01 81 f9 00 b0 00 b9 00 00 00 00 8d 95 01 ff d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -336,6 +350,7 @@ rule Trojan_Win32_Midie_SIBJ1_2147812431_0
         $x_1_2 = {33 c9 85 db 74 ?? 8a 04 39 [0-32] 2c ?? [0-32] 04 ?? [0-32] 88 04 39 41 3b cb 72 ?? 6a 00 57 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -357,6 +372,7 @@ rule Trojan_Win32_Midie_SIBG3_2147812542_0
         $x_1_1 = {b9 00 00 00 00 8a 81 ?? ?? ?? ?? 81 f9 ?? ?? ?? ?? 74 ?? [0-32] 34 ?? 2c ?? [0-32] 34 ?? [0-32] 04 ?? [0-32] 88 81 00 83 c1 01 8a 81 00 81 f9 01 b0 00 b9 00 00 00 00 8d 45 ?? 50 6a 40 68 01 68 00 ff 15 ?? ?? ?? ?? b9 00 ff d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -380,6 +396,7 @@ rule Trojan_Win32_Midie_SIBG14_2147814067_0
         $x_1_3 = {6a 40 68 00 30 00 00 8b d8 53 57 ff 15 ?? ?? ?? ?? 6a 00 8b f8 8d 45 ?? 50 53 57 56 ff 15 ?? ?? ?? ?? 33 c9 85 db 74 ?? 8a 04 39 [0-10] 34 ?? [0-10] 2c ?? [0-10] 88 04 39 41 3b cb 72 ?? 6a 00 6a 00 57 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -403,6 +420,7 @@ rule Trojan_Win32_Midie_SIBG15_2147814068_0
         $x_1_3 = {6a 40 68 00 30 00 00 8b d8 53 57 ff 15 ?? ?? ?? ?? 6a 00 8b f8 8d 45 ?? 50 53 57 56 ff 15 ?? ?? ?? ?? 33 c9 85 db 74 ?? 8a 04 39 [0-10] 34 ?? [0-10] 34 ?? [0-10] 34 ?? [0-10] 88 04 39 41 3b cb 72 ?? 6a 00 6a 00 57 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -424,6 +442,7 @@ rule Trojan_Win32_Midie_SIBH1_2147814660_0
         $x_2_1 = {6a 40 68 00 ?? 00 00 8b d8 53 6a 00 ff 15 ?? ?? ?? ?? 6a 00 8b f8 8d 45 ?? 50 53 57 56 ff 15 ?? ?? ?? ?? 33 c9 85 db 74 ?? 8a 04 39 [0-32] 34 ?? [0-32] 34 ?? [0-32] 04 ?? 88 04 39 41 3b cb 72 eb 6a 00 6a 00 57 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -445,6 +464,7 @@ rule Trojan_Win32_Midie_SIBH2_2147814661_0
         $x_2_1 = {6a 40 68 00 ?? 00 00 8b d8 53 6a 00 ff 15 ?? ?? ?? ?? 6a 00 8b f8 8d 45 ?? 50 53 57 56 ff 15 ?? ?? ?? ?? 33 d2 85 db 74 ?? 8a 0c 3a [0-32] 80 f1 ?? [0-32] 88 04 3a 42 3b d3 72 ?? 6a 00 6a 00 57 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -466,6 +486,7 @@ rule Trojan_Win32_Midie_SIBH3_2147815015_0
         $x_1_1 = {6a 40 68 00 ?? 00 00 8b d8 53 6a 00 ff 15 ?? ?? ?? ?? 6a 00 8b f8 8d 45 ?? 50 53 57 56 ff 15 ?? ?? ?? ?? 33 c9 85 db 74 1a [0-16] 8a 04 39 [0-32] 04 ?? [0-32] 34 ?? [0-32] 88 04 39 41 3b cb 72 ?? 6a 00 6a 00 57 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -487,6 +508,7 @@ rule Trojan_Win32_Midie_SIBQ_2147815016_0
         $x_1_1 = {0f 10 04 0b 0f 28 cb 66 0f fc c8 66 0f f8 ca 66 0f f8 cc 66 0f ef cd 66 0f ef ce 66 0f ef cf 66 0f ef 0d ?? ?? ?? ?? 66 0f fc ca 66 0f fc 0d ?? ?? ?? ?? 66 0f ef 0d ?? ?? ?? ?? 66 0f f8 0d ?? ?? ?? ?? 0f 11 0c 0b 0f 10 44 0b 10 66 0f fc c3 66 0f f8 c2 66 0f f8 c4 66 0f ef c5 66 0f ef c6 66 0f ef c7 66 0f ef 05 00 66 0f fc c2 66 0f fc 05 01 66 0f ef 05 02 66 0f f8 05 03 0f 11 44 0b 10 83 c1 20 3b ca 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -510,6 +532,7 @@ rule Trojan_Win32_Midie_GNC_2147850660_0
         $x_1_3 = "_FileExcists@4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -532,6 +555,7 @@ rule Trojan_Win32_Midie_GMH_2147889382_0
         $x_1_2 = "Boudle_ftp2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -554,6 +578,7 @@ rule Trojan_Win32_Midie_GMC_2147897361_0
         $x_1_2 = "Ch7Demo6" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -576,6 +601,7 @@ rule Trojan_Win32_Midie_NM_2147900809_0
         $x_1_2 = "MJPGC.TMP" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -598,6 +624,7 @@ rule Trojan_Win32_Midie_MBFW_2147906463_0
         $x_1_2 = {5f 63 67 6f 5f 64 75 6d 6d 79 5f 65 78 70 6f 72 74 00 6d 69 6b 79 2e 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -621,6 +648,7 @@ rule Trojan_Win32_Midie_NB_2147909353_0
         $x_2_3 = "MSIGame" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -642,6 +670,7 @@ rule Trojan_Win32_Midie_SPHT_2147909808_0
         $x_1_1 = {6a 40 68 00 30 00 00 68 81 71 02 00 6a 00 ff 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -663,6 +692,7 @@ rule Trojan_Win32_Midie_YZ_2147912031_0
         $x_1_1 = {88 54 24 13 8a 94 30 6c c9 43 00 2a d3 32 54 24 13 83 c0 01 3b c1 88 94 30 6b c9 43 00 7c e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -684,6 +714,7 @@ rule Trojan_Win32_Midie_SSB_2147917734_0
         $x_1_1 = {e8 b7 12 00 00 c6 45 fc 02 8b 45 10 50 8b 4d 0c 83 c9 02 51 8b 55 08 52 8b 4d f0 83 c1 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -705,6 +736,7 @@ rule Trojan_Win32_Midie_MBXP_2147918352_0
         $x_1_1 = {55 8b ec 6a ff 68 ?? b2 65 00 68 ?? 5e 65 00 64 a1 00 00 00 00 50 64 89 25 00 00 00 00 83 ec 58 53 56 57 89 65 e8 ff 15 00 b1 65 00 33 d2 8a d4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -726,6 +758,7 @@ rule Trojan_Win32_Midie_GNM_2147919721_0
         $x_10_1 = {89 d8 bb 99 00 00 00 ?? 31 c3 80 07 ?? 80 2f ?? ?? 89 d8 bb ?? ?? ?? ?? ?? 31 c3 f6 2f 47 e2}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -748,6 +781,7 @@ rule Trojan_Win32_Midie_GNM_2147919721_1
         $x_5_2 = {6a 00 6a 04 8b 4d 08 83 c1 0c 51 8b 55 d8 52 ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? eb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -769,6 +803,7 @@ rule Trojan_Win32_Midie_VPAA_2147920355_0
         $x_5_1 = {8b 44 24 0c 8b 15 e4 71 00 10 03 c1 8a 14 32 30 10 46 41 3b 0f 72 e2}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -790,6 +825,7 @@ rule Trojan_Win32_Midie_WRX_2147920954_0
         $x_5_1 = {34 1e 30 1f 66 83 e8 10 66 03 ca 03 c1 66 03 44 24 ?? 66 8b c8 8b 7d fc 47 89 7d fc 8a 44 24 cc 66 33 4c 24 d4 b0 28 2a 4c 24 e0 03 4c 24 f5 83 6d f8 01 0f 85}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -811,6 +847,7 @@ rule Trojan_Win32_Midie_MKV_2147920975_0
         $x_5_1 = {2b c2 66 8b 44 24 c6 66 83 c1 4c 03 7d f0 88 17 66 33 d0 8b d1 66 8b 44 24 ?? 80 c1 0c 80 e9 15 34 1e 30 1f 66 83 e8 10 66 03 ca 03 c1 66 03 44 24 a0 66 8b c8 8b 7d fc}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -832,6 +869,7 @@ rule Trojan_Win32_Midie_AMX_2147925098_0
         $x_1_1 = {f6 17 58 50 89 c0 35 85 00 00 00 90 80 07 63 80 2f 27 58 50 89 c0 35 85 00 00 00 90 f6 2f 47}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -854,6 +892,7 @@ rule Trojan_Win32_Midie_SEF_2147937991_0
         $x_1_2 = "dummyWindowClass" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -875,6 +914,7 @@ rule Trojan_Win32_Midie_A_2147945991_0
         $x_1_1 = {50 68 06 00 02 00 6a 00 68 a0 41 00 10 68 01 00 00 80 ff 15 04 30 00 10 85 c0 75 23 51 ?? b9 a1 06 00 00 59 68 05 15 00 00 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

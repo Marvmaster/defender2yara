@@ -16,6 +16,7 @@ rule Trojan_Win32_Mucc_AN_2147837902_0
         $x_2_1 = {68 10 a7 38 08 00 2b 33 71 b5 aa 4b d3 a4 88 e3 0c 4a bd 18 fa d2 15 [0-4] 3d fb fc fa a0 68 10 a7 38 08 00 2b 33 71 b5 7b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

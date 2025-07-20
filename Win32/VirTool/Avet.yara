@@ -19,6 +19,7 @@ rule VirTool_Win32_Avet_12_2147844470_0
         $x_1_4 = {81 e9 00 10 00 00 83 09 00 2d 00 10 00 00 3d 00 10 00 00 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule VirTool_Win32_Avet_14_2147844678_0
         $x_1_3 = {8b 84 24 98 28 00 00 8b 84 84 34 28 00 00 8d ?? ?? ?? 8b 94 24 98 28 00 00 c1 e2 0a 01 ca 89 14 24 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Worm_Win32_Bundiso_A_2147707787_0
         $x_1_4 = "\\Sanchitha\\Desktop\\virus" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

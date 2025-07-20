@@ -17,6 +17,7 @@ rule Trojan_Win32_Fariet_Inj_2147788935_0
         $x_1_2 = {8b 45 f0 89 45 ec 8b 45 fc 03 45 ec 73 05 e8 a9 43 f9 ff c6 00 b7 ff 45 f0 ff 4d e8 75 e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Fariet_KR_2147793435_0
         $x_1_1 = {ff 33 d2 89 ?? ?? ?? ?? 00 33 c0 a3 88 bb 46 00 e8 f6 32}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

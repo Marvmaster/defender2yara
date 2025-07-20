@@ -27,6 +27,7 @@ rule Trojan_MSIL_Obfuscator_PF_2147747862_0
         $x_1_12 = "PingReply" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_MSIL_Obfuscator_WFL_2147758046_0
         $x_1_2 = "$5D627E47-66E3-4635-B9C2-49AC0B5EC0D9" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

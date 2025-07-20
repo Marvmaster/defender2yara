@@ -21,6 +21,7 @@ rule Trojan_Win32_Hexzone_A_2147615621_0
         $x_1_6 = "1408E208-2AC1-42D3-9F10-78A5B36E05AC" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

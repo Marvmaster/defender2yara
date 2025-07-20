@@ -26,6 +26,7 @@ rule Trojan_Win32_Grandoreiro_DA_2147816485_0
         $x_1_11 = "MILORDEEEEEEEEEEEEEEEEEEEEE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -53,6 +54,7 @@ rule Trojan_Win32_Grandoreiro_F_2147828242_0
         $x_10_5 = "BLOQUERACESSOBANKINTER" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Trojan_Win32_Grandoreiro_2147836140_0
         $x_7_1 = {34 00 73 00 49 00 41 00 41 00 41 00 41 00 41 00 41 00 41 00 45 00 41 00 46 00 32 00 54 [0-5] 53 00 33 00 65 00 62 00 4d 00 42}  //weight: 7, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Trojan_Win32_Grandoreiro_2147838139_0
         $x_7_1 = {79 6e 6a 78 68 7c 00 00 ff ff ff ff 0f 00 00 00 57 69 6e 53 65 76 65 6e 55 70 64 61 74 65 72 00 55 8b ec b9 7a 00 00 00 6a 00 6a 00 49 75 f9 51 89 45 fc 8b 45 fc e8 2d ce fe ff 8d 85 a4 fe ff ff 8b 15 5c a1 40 00 [0-5] fe ff 33 c0 55 68 36 7f 41 00 64 ff 30 64 89 20 68 00 01 00 00 8d 85 a4 fd ff ff 50 6a 00 e8 47 e9 fe ff 8d 95 50 fc ff ff b8 4c 7f 41}  //weight: 7, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_Win32_Grandoreiro_2147838141_0
         $x_7_1 = {90 31 13 90 90 90 83 c3 04 90 90 90 90 39 cb 90 90 90 90 7c eb}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Trojan_Win32_Grandoreiro_2147838845_0
         $x_7_1 = {33 c0 55 68 b4 08 4a 00 64 ff 30 64 89 20 8b 45 fc e8 c6 fc ff ff 33 c0 5a 59 59 64 89 10 eb 15 e9 63 54 f6 ff 8b 55 fc 8b 45 fc e8 d0 00 00 00 e8 ab 58 f6 ff 8b 45 fc 80 b8 a4 00 00 00 00 74 bf}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_Win32_Grandoreiro_2147838846_0
         $x_7_1 = {33 c0 55 68 ab 89 45 00 64 ff 30 64 89 20 8b 45 fc e8 9b fd ff ff 33 c0 5a 59 59 64 89 10 eb 15 e9 2c bf fa ff 8b 55 fc 8b 45 fc e8 a9 00 00 00 e8 2c c3 fa ff 8b 45 fc 80 b8 a4 00 00 00 00 74 bf}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule Trojan_Win32_Grandoreiro_2147838847_0
         $x_7_1 = {be 00 b0 41 00 8d be 00 60 fe ff 57 89 e5 8d 9c 24 80 c1 ff ff 31 c0 50 39 dc 75 fb 46 46 53 68 94 23 02 00 57 83 c3 04 53 68 2f 96 00 00 56 83 c3 04 53 50 c7 03 03 00 02}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +215,7 @@ rule Trojan_Win32_Grandoreiro_2147838849_0
         $x_7_1 = {55 8b ec 51 53 56 57 89 4d fc 8b da 8b f0 8b c3 ff 50 f4 8b d8 8b 45 fc 89 18 33 c0 55 68 4a 88 45 00 64 ff 30 64 89 20 8b ce 83 ca ff 8b c3 8b 38 ff 57 2c 33 c0 5a 59 59 64 89 10 eb 16 e9 8d c0 fa ff}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -229,6 +238,7 @@ rule Trojan_Win32_Grandoreiro_2147838850_0
         $x_7_1 = {74 53 33 f6 3b c3 76 21 68 ff 00 00 00 6a 01 e8 2e 3b 00 00 50 53 e8 27 3b 00 00 83 c4 10 88 04 3e 8b 45 f0 46 3b f0 72 df}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +261,7 @@ rule Trojan_Win32_Grandoreiro_2147839278_0
         $x_7_1 = {74 0f 8b 55 ec 0f af 55 fc 8b 45 fc 2b c2 89 45 fc 8b 4d e4 03 4d f4 8a 55 e0 88 11 8b 45 fc 0f af 45 ec 8b 4d fc 2b c8 89 4d fc ba 84 a7 45 00 83 7d ec 34 75 13 8b 55 fc 33 c9 3b 55 fc 0f 9d c1 8b 45 ec d3 e0 89 45 ec 8b 4d ec 33 4d ec 8b 55 fc d3 e2 89 55 fc e9 ff fe ff ff}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -273,6 +284,7 @@ rule Trojan_Win32_Grandoreiro_2147839279_0
         $x_7_1 = {55 8b ec 81 ec 1c 02 00 00 8b 45 08 89 85 f4 fd ff ff 8b 4d 0c 89 8d e4 fd ff ff c7 85 e8 fd ff ff 05 00 00 00 c7 85 f0 fd ff ff c0 90 43 00 8b 95 f4 fd ff ff 3b 95 e4 fd ff ff 73 14 c7 85 e8 fd ff ff 05 00 00 00 8b 85 f4 fd ff ff eb 12 eb 10 c7 85 e8 fd ff ff 05 00 00 00 8b 85 e4 fd ff ff 8b e5 5d}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -295,6 +307,7 @@ rule Trojan_Win32_Grandoreiro_2147839280_0
         $x_7_1 = {ff 25 a4 41 42 00 90 90 00 00 00 00 ff 25 b0 41 42 00 90 90 00 00 00 00 ff 25 b4 41 42 00 90 90 00 00 00 00 ff 25 b8 41 42 00 90 90 00 00 00 00 ff 25 bc 41 42 00}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -317,6 +330,7 @@ rule Trojan_Win32_Grandoreiro_2147839685_0
         $x_7_1 = {2b 09 28 a0 2e 06 57 14 16 9a 26 16 2d f9 fe 09 00 00 28 2b 00 00 0a 2a}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -339,6 +353,7 @@ rule Trojan_Win32_Grandoreiro_2147839686_0
         $x_7_1 = {33 c0 66 ad 03 c3 ab e2 f7 91 6a 04 68 00 10 00 00 68 60 ee a6 00 50 ff 93 14 11 00 00 85 c0 74 e9}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -361,6 +376,7 @@ rule Trojan_Win32_Grandoreiro_2147840829_0
         $x_7_1 = {55 8b ec 51 8b 45 08 a3 6f 42 40 00 68 c4 30 40 00 ff 15 60 30 40 00 6a 00 8b 4d 08 51 6a 00 6a 00 6a 00 68 00 00 00 80 6a 00 68 00 00 00 80 68 00 00 cf 00 68 00 40 40 00 68 0c 40 40 00 6a 00 ff 15 80 30 40 00 89 45 fc 83 7d fc 00 75 04 33 c0 eb 1b 6a 00 8b 55 fc 52 ff 15 84 30 40 00 8b 45 fc 50 ff 15 88 30 40 00 b8 01 00 00 00 8b e5 5d c3}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -388,6 +404,7 @@ rule Trojan_Win32_Grandoreiro_EC_2147841586_0
         $x_1_7 = "CreateToolhelp32Snapshot" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -410,6 +427,7 @@ rule Trojan_Win32_Grandoreiro_2147841654_0
         $x_7_1 = {76 34 2e 30 2e 33 30 33 31 39 00 00 00 00 05 00 6c 00 00 00 64 03 00 00 23 7e 00 00 d0 03 00 00 fc 03 00 00 23 53 74 72 69 6e 67 73 00 00 00 00 cc 07 00 00 e4}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -432,6 +450,7 @@ rule Trojan_Win32_Grandoreiro_2147844893_0
         $x_7_1 = {74 1c 57 8b fa 8b c1 2b f9 89 75 08 ?? ?? ?? 07 89 10 83 c0 04 ff 4d 08 75 f3 8b 55 fc 5f 03 f6}  //weight: 7, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -454,6 +473,7 @@ rule Trojan_Win32_Grandoreiro_2147845838_0
         $x_7_1 = {56 b9 00 00 00 00 ff 55 08 50 56 ff 95 88 00 00 00 83 c4 18 33 c0 50 68 80 00 00 00 6a 03 50 6a 01 68 00 00 00 80 57 ff 55 5c 83 f8 ff 74 e5}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -476,6 +496,7 @@ rule Trojan_Win32_Grandoreiro_NG_2147896738_0
         $x_1_2 = "Bilsync.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -499,6 +520,7 @@ rule Trojan_Win32_Grandoreiro_DV_2147901043_0
         $x_1_3 = {8b de 8b 45 e4 40 40 89 45 e4 8b 45 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -522,6 +544,7 @@ rule Trojan_Win32_Grandoreiro_PAEX_2147914493_0
         $x_2_3 = "19.7.4674.11" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -544,6 +567,7 @@ rule Trojan_Win32_Grandoreiro_PAEY_2147915373_0
         $x_2_2 = {8b 04 24 57 89 e7 81 c7 04 00 00 00 81 c7 04 00 00 00 33 3c 24 31 3c 24 33 3c 24 8b 24 24 e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -567,6 +591,7 @@ rule Trojan_Win32_Grandoreiro_PAFD_2147918101_0
         $x_2_3 = "19.7.4674.1" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -594,6 +619,7 @@ rule Trojan_Win32_Grandoreiro_AB_2147924172_0
         $x_1_7 = {8b 0a 83 f9 40 7d 06 89 44 8a 04 ff 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -621,6 +647,7 @@ rule Trojan_Win32_Grandoreiro_GMX_2147940657_0
         $x_1_7 = "txSHrJrERMQXhFphJ.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

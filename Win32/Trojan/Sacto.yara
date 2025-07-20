@@ -23,6 +23,7 @@ rule Trojan_Win32_Sacto_A_2147696333_0
         $x_1_8 = ".51vip.biz" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_Sacto_B_2147712013_0
         $x_1_4 = "\\MSN.lnk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

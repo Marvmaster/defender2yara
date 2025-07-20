@@ -17,6 +17,7 @@ rule Trojan_Win32_Pikboclick_A_2147679020_0
         $x_1_3 = {76 00 61 00 72 00 20 00 41 00 64 00 4c 00 69 00 6e 00 6b 00 33 00 20 00 3d 00 20 00 22 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Ransom_MSIL_GandCrab_B_2147728527_0
         $x_1_7 = "all your personal files have been encrypted" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Ransom_MSIL_GandCrab_A_2147728628_0
         $x_1_6 = "who_accepts_bitcoins_as_payment" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

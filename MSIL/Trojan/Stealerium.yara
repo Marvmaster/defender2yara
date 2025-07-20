@@ -17,6 +17,7 @@ rule Trojan_MSIL_Stealerium_GMX_2147901138_0
         $x_5_2 = {25 16 1f 2c 9d 6f ?? ?? ?? 0a 0b 07 07 8e 69 17 59 9a 0c 06}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_Stealerium_SPP_2147944907_0
         $x_1_1 = {11 02 11 03 11 00 11 03 91 11 04 11 03 11 04 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 61 d2 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

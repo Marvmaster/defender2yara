@@ -18,6 +18,7 @@ rule Trojan_MSIL_BazaarLoader_OSH_2147922631_0
         $x_1_3 = "F00B95BA-951B-4AE5-B42D-E1641C5169B8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

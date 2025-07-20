@@ -18,6 +18,7 @@ rule TrojanProxy_Win32_Wermud_A_2147626924_0
         $x_1_4 = {b1 74 b3 70 b2 3a 50 57 c7 45 00 00 00 00 00 33 f6 c6 44 24 20 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

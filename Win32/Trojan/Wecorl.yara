@@ -19,6 +19,7 @@ rule Trojan_Win32_Wecorl_A_2147615813_0
         $x_1_4 = {e8 18 00 00 00 53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 44 72 6d 5c 00 68 02 00 00 80}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Ransom_MSIL_Glock_A_2147688981_0
         $x_2_7 = {7e 31 00 00 04 6f ?? 00 00 06 2d 02 16 2a 17 28 1b 00 00 0a 03 6f 01 00 00 06 28 1c 00 00 0a 2c 0d 03 6f 03 00 00 06 28 1c 00 00 0a 2c 02 16 2a 73 1d 00 00 0a 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_AsukaStealer_GVA_2147942782_0
         $x_1_1 = {f7 75 30 8a 14 0a 8d 8d 48 ff ff ff 32 14 3e e8 f6 81 00 00 47 3b 7d 18 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

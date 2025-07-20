@@ -20,6 +20,7 @@ rule Backdoor_MSIL_Draliz_A_2147692465_0
         $x_1_6 = "httprun" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

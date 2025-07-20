@@ -16,6 +16,7 @@ rule Trojan_Win32_Skeeyah_D_2147709416_0
         $x_1_1 = {8b 4d 0c 8a 0c 0f 8b 45 08 30 0c 18 8d 47 01 99 f7 7d fc 8b fa ff d6 43 3b 5d 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Skeeyah_E_2147712175_0
         $x_1_1 = {8b 7c 24 2c 31 fb 33 5c 24 04 8b 7c 24 10 31 fb 89 d8 88 44 24 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Skeeyah_Y_2147741346_0
         $x_1_4 = "Policies\\System\\DisableRegistryTools" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_Skeeyah_NS_2147893193_0
         $x_1_9 = "uy*:M" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

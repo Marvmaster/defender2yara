@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Sinowal_A_2147630077_0
         $x_1_2 = {8a 02 88 45 fb [0-16] 8a 55 fb 88 11 8b 45 ?? 05 ?? ?? ?? ?? 89 45 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_Win32_Sinowal_A_2147630077_1
         $x_1_2 = {8a 02 88 45 fb [0-16] 8a 55 fb 88 11 8b 45 ?? 83 c0 ?? 89 45 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule TrojanDownloader_Win32_Sinowal_A_2147630077_2
         $x_1_3 = {e9 34 01 00 00 0f b7 45 14 3d bb 01 00 00 75 0c 8b 4d f8 81 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule TrojanDownloader_Win32_Sinowal_B_2147633927_0
         $x_1_3 = {81 c9 00 07 00 00 83 f1 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule TrojanDownloader_Win32_Sinowal_E_2147653473_0
         $x_1_3 = {8f 45 f5 50 8f 45 f9 66 89 45 fd 55 2b eb 8b eb 5d 3b f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

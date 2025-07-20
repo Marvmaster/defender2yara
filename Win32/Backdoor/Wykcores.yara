@@ -17,6 +17,7 @@ rule Backdoor_Win32_Wykcores_A_2147643781_0
         $x_1_3 = "SOFTWARE\\Classes\\Sxl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

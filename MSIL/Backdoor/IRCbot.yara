@@ -23,6 +23,7 @@ rule Backdoor_MSIL_IRCbot_E_2147653339_0
         $x_1_9 = "PRIVMSG {0} :Machinename: {1}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Backdoor_MSIL_IRCbot_F_2147653387_0
         $x_1_5 = "$RECYCLE.BIN\\svchost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -77,6 +79,7 @@ rule Backdoor_MSIL_IRCbot_I_2147685667_0
         $x_1_8 = "!usb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +110,7 @@ rule Backdoor_MSIL_IRCbot_I_2147685667_1
         $x_1_11 = "!visit" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -131,6 +135,7 @@ rule Backdoor_MSIL_IRCbot_J_2147695998_0
         $x_1_5 = "tcpsmash" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -153,6 +158,7 @@ rule Backdoor_MSIL_IRCbot_K_2147709688_0
         $x_1_2 = {63 74 66 6d 6f 6e 2e 65 78 65 00 00 72 73 6d 61 69 6e 2e 65 78 65 00 00 33 36 30 54 72 61 79 2e 65 78 65 00 54 65 6e 49 6e 66 65 63 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +189,7 @@ rule Backdoor_MSIL_IRCbot_M_2147725373_0
         $x_1_10 = "DownloadRun" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -209,6 +216,7 @@ rule Backdoor_MSIL_IRCbot_L_2147733602_0
         $x_1_3 = "StartKeyLogger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

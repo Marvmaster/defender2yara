@@ -20,6 +20,7 @@ rule Backdoor_Win32_IRCbot_FH_2147790373_0
         $x_1_6 = "shell=verb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Backdoor_Win32_IRCbot_M_2147790381_0
         $x_1_4 = {6a 05 8d 85 ?? ?? ff ff 50 8b 8d ?? ?? ff ff 51 e8 40 00 c6 85 ?? ?? ff ff c8 c6 85 ?? ?? ff ff 00 c6 85 ?? ?? ff ff 04 c6 85 ?? ?? ff ff 00 c6 85 ?? ?? ff ff 60}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Backdoor_Win32_IRCbot_DL_2147792023_0
         $x_1_13 = {00 55 44 50 53 74 61 72 74 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Backdoor_Win32_IRCbot_EW_2147792025_0
         $x_1_2 = "%s\\removeMe%i%i%i%i.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +129,7 @@ rule Backdoor_Win32_IRCbot_FU_2147792026_0
         $x_1_9 = {5b 7b 23 7d 5d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or
@@ -153,6 +158,7 @@ rule Backdoor_Win32_IRCbot_GQ_2147792027_0
         $x_1_5 = "login_password=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -179,6 +185,7 @@ rule Backdoor_Win32_IRCbot_FZ_2147792028_0
         $x_1_4 = {ff d3 33 d2 b9 34 00 00 00 f7 f1 8b c6 83 e0 07 46 3b f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -211,6 +218,7 @@ rule Backdoor_Win32_IRCbot_AF_2147792114_0
         $x_1_13 = "MethCallEngine" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -239,6 +247,7 @@ rule Backdoor_Win32_IRCbot_A_2147792326_0
         $x_1_8 = "PRIVMSG " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -303,6 +312,7 @@ rule Backdoor_Win32_IRCbot_OE_2147792330_0
         $x_4_45 = {8b ec 50 52 51 ba 82 27 00 00 b8 50 bf 14 13 89 45 fc 81 45 fc cc 52 ff ff 8b 4d fc 8b 01 35 d7 d7 d7 d7 89 01 83 45 fc 04 4a 75 ed 59 5a 58}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((30 of ($x_1_*))) or
             ((1 of ($x_4_*) and 26 of ($x_1_*))) or
@@ -334,6 +344,7 @@ rule Backdoor_Win32_IRCbot_C_2147792334_0
         $x_1_7 = "(NTS tats):" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -362,6 +373,7 @@ rule Backdoor_Win32_IRCbot_D_2147792335_0
         $x_1_8 = ":Restarting bot." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -389,6 +401,7 @@ rule Backdoor_Win32_IRCbot_E_2147792336_0
         $x_1_7 = "DCC Shell connection established with %s..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -432,6 +445,7 @@ rule Backdoor_Win32_IRCbot_CC_2147792339_0
         $x_1_24 = "lol lol lol :shadowbot2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 6 of ($x_5_*) and 15 of ($x_1_*))) or
             ((1 of ($x_15_*) and 1 of ($x_10_*) and 4 of ($x_5_*) and 15 of ($x_1_*))) or
@@ -467,6 +481,7 @@ rule Backdoor_Win32_IRCbot_OP_2147792341_0
         $x_1_2 = {4d 44 41 54 41 31 00 00 4d 44 41 54 41 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -493,6 +508,7 @@ rule Backdoor_Win32_IRCbot_OY_2147792342_0
         $x_1_7 = {25 73 5b 25 73 5d 00 5f 00 00 00 00 53 51 43 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -522,6 +538,7 @@ rule Backdoor_Win32_IRCbot_R_2147792344_0
         $x_1_9 = ":Ftpserver set to: %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -550,6 +567,7 @@ rule Backdoor_Win32_IRCbot_CV_2147792345_0
         $x_1_9 = "PRIVMSG Root :" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -580,6 +598,7 @@ rule Backdoor_Win32_IRCbot_B_2147792352_0
         $x_1_10 = "killprocess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -635,6 +654,7 @@ rule Backdoor_Win32_IRCbot_OU_2147792353_0
         $x_1_32 = "siehe meine fotos hihi :p" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_7_*) and 20 of ($x_1_*))) or
             ((4 of ($x_10_*) and 17 of ($x_1_*))) or
@@ -669,6 +689,7 @@ rule Backdoor_Win32_IRCbot_PR_2147792358_0
         $x_1_8 = "DoS_Connect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -691,6 +712,7 @@ rule Backdoor_Win32_IRCbot_CL_2147792359_0
         $x_1_3 = "jGjSjMjVjIjRjP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -715,6 +737,7 @@ rule Backdoor_Win32_IRCbot_QA_2147792360_0
         $x_1_5 = "join %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -742,6 +765,7 @@ rule Backdoor_Win32_IRCbot_HI_2147792361_0
         $x_1_5 = "/MOTD command" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -772,6 +796,7 @@ rule Backdoor_Win32_IRCbot_G_2147792362_0
         $x_1_10 = "\\LINK.EXE.M" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -803,6 +828,7 @@ rule Backdoor_Win32_IRCbot_I_2147792363_0
         $x_1_8 = {26 66 74 70 20 2d 6e 20 2d 76 20 2d 73 3a 69 6b 20 26 64 65 6c 20 69 6b 20 26 25 73 20 26 65 78 69 74 00 00 00 25 73 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -844,6 +870,7 @@ rule Backdoor_Win32_IRCbot_AN_2147792370_0
         $x_50_22 = {6e 65 74 20 73 68 61 72 65 20 2f 64 65 6c 65 74 65 20 ?? 24}  //weight: 50, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1000_*) and 2 of ($x_100_*) and 3 of ($x_40_*) and 8 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_1000_*) and 2 of ($x_100_*) and 3 of ($x_40_*) and 9 of ($x_10_*))) or
@@ -913,6 +940,7 @@ rule Backdoor_Win32_IRCbot_KX_2147792371_0
         $x_1_6 = "NICK BotBotBot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -935,6 +963,7 @@ rule Backdoor_Win32_IRCbot_GL_2147792372_0
         $x_1_3 = "[%s|%s%c]%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -960,6 +989,7 @@ rule Backdoor_Win32_IRCbot_GM_2147792373_0
         $x_1_6 = "irc.heckbig.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -986,6 +1016,7 @@ rule Backdoor_Win32_IRCbot_QN_2147792374_0
         $x_1_4 = "USER H4X0R-B0T \"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1011,6 +1042,7 @@ rule Backdoor_Win32_IRCbot_FI_2147792377_0
         $x_1_3 = "flood on %s:%s for %s seconds" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1036,6 +1068,7 @@ rule Backdoor_Win32_IRCbot_FI_2147792377_1
         $x_1_6 = ":Install.Remove(): %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1062,6 +1095,7 @@ rule Backdoor_Win32_IRCbot_SX_2147792378_0
         $x_1_3 = {5b 69 72 63 5d 0d 0a 6a 3d 6a 6f 69 6e 0d 0a 6e 3d 6e 69 63 6b 0d 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1083,6 +1117,7 @@ rule Backdoor_Win32_IRCbot_F_2147792380_0
         $x_1_1 = {ff ff 60 6a 00 6a 00 6a 00 6a ff ff 15 ?? ?? ?? 00 85 c0 74 08 6a 00 ff 15 20 00 c6 85 ?? ?? ff ff c8 c6 85 ?? ?? ff ff 00 c6 85 ?? ?? ff ff 04 c6 85 ?? ?? ff ff 00 c6 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1104,6 +1139,7 @@ rule Backdoor_Win32_IRCbot_H_2147792381_0
         $x_1_1 = {b9 a0 05 00 00 40 40 f7 f1 66 83 65 ?? 00 33 c0 b9 ff 01 00 00 f3 ab 66 ab 69 d2 60 ea 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1125,6 +1161,7 @@ rule Backdoor_Win32_IRCbot_J_2147792387_0
         $x_1_1 = {33 c0 64 03 40 30 78 0c 8b 40 0c 8b 70 1c ad 8b 40 08 eb 09 8b 40 0a 00 00 43 3a 5c 55 2e 65 78 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1146,6 +1183,7 @@ rule Backdoor_Win32_IRCbot_K_2147792388_0
         $x_1_1 = {eb 05 e8 f9 ff ff ff 5b 31 c9 66 b9 ff ff 80 73 0e ff 43 e2 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1167,6 +1205,7 @@ rule Backdoor_Win32_IRCbot_N_2147792389_0
         $x_1_1 = {e8 ed 00 00 00 ff 36 68 09 12 d6 63 e8 f7 00 00 00 89 46 08 e8 a2 00 00 00 ff 76 04 68 6b d0 2b ca}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1193,6 +1232,7 @@ rule Backdoor_Win32_IRCbot_P_2147792391_0
         $x_1_6 = "NvCplDaemon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1223,6 +1263,7 @@ rule Backdoor_Win32_IRCbot_S_2147792396_0
         $x_1_5 = "SMBr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1244,6 +1285,7 @@ rule Backdoor_Win32_IRCbot_L_2147792401_0
         $x_1_1 = {6a 03 57 8d 5e 1c 6a 01 68 00 00 00 80 53 ff 56 04 89 45 fc 8d 86 20 01 00 00 50 57 57 ff 56 08 89 45 08 ff 56 0c 3d b7 00 00 00 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1275,6 +1317,7 @@ rule Backdoor_Win32_IRCbot_O_2147792402_0
         $x_20_11 = {59 85 c0 59 74 ?? 68 d0 07 00 00 ?? ?? ?? ?? ?? ?? 81 ec 28 01 00 00 8d 75 ?? 6a 4a 59 8b fc ff 75 ?? f3 a5 e8 ?? ?? ?? ?? 81 c4 2c 01 00 00 8b 45 ?? 83 c0 08 89 45 ?? 39 18 75}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*))) or
             (all of ($x*))
@@ -1300,6 +1343,7 @@ rule Backdoor_Win32_IRCbot_CK_2147792405_0
         $x_1_3 = {6e 64 65 74 65 63 74 2e 73 79 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1322,6 +1366,7 @@ rule Backdoor_Win32_IRCbot_T_2147792406_0
         $x_1_2 = {8a 44 18 ff 8b cb 83 e1 7f 32 c1 8b 4d f8 8b 7d e0 0f b6 4c 39 ff 03 c9 c1 e9 02 32 c1 32 d0 88 55 ef 8b c3 83 e0 01 85 c0 75 1a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1348,6 +1393,7 @@ rule Backdoor_Win32_IRCbot_BH_2147792409_0
         $x_1_7 = "MS08-067" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -1386,6 +1432,7 @@ rule Backdoor_Win32_IRCbot_V_2147792412_0
         $x_1_13 = "Download Command = %s [URL] [Location]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -1423,6 +1470,7 @@ rule Backdoor_Win32_IRCbot_U_2147792413_0
         $x_1_11 = "Ping Timeout? (%d-%d)%d/%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -1455,6 +1503,7 @@ rule Backdoor_Win32_IRCbot_W_2147792415_0
         $x_1_6 = "\\google_cache%s.tmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1480,6 +1529,7 @@ rule Backdoor_Win32_IRCbot_FE_2147792416_0
         $x_1_6 = ":!update" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1510,6 +1560,7 @@ rule Backdoor_Win32_IRCbot_X_2147792417_0
         $x_2_10 = {56 6a 01 56 6a 11 ff d3 56 56 56 6a (76|56) ff 15 ?? ?? ?? ?? 50 ff d3 56 6a 03 6a 2d 6a 11 ff d3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -1543,6 +1594,7 @@ rule Backdoor_Win32_IRCbot_Q_2147792418_0
         $x_1_9 = "Remote Proxy Chain Is Taking Place" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -1572,6 +1624,7 @@ rule Backdoor_Win32_IRCbot_Q_2147792418_1
         $x_1_9 = "Everything That Has A Beginning Has An End" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -1607,6 +1660,7 @@ rule Backdoor_Win32_IRCbot_AQ_2147792428_0
         $x_1_16 = "Killed all threads" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1640,6 +1694,7 @@ rule Backdoor_Win32_IRCbot_BF_2147792430_0
         $x_1_11 = "d0wnloading" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1668,6 +1723,7 @@ rule Backdoor_Win32_IRCbot_BG_2147792431_0
         $x_1_6 = "ise32.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*))) or
             (all of ($x*))
@@ -1693,6 +1749,7 @@ rule Backdoor_Win32_IRCbot_EV_2147792437_0
         $x_1_3 = {83 cb 01 c6 44 24 2a 50 c6 44 24 2b 49 c6 44 24 2c 4e c6 44 24 2d 47 c6 44 24 2e 00 ff d6 83 c4 08 85 c0 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1715,6 +1772,7 @@ rule Backdoor_Win32_IRCbot_GS_2147792438_0
         $x_1_3 = "ddos.status" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1738,6 +1796,7 @@ rule Backdoor_Win32_IRCbot_DR_2147792439_0
         $x_1_4 = {49 6e 74 65 72 6e 65 74 20 53 65 63 75 72 69 74 79 20 53 65 72 76 69 63 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -1771,6 +1830,7 @@ rule Backdoor_Win32_IRCbot_Y_2147792443_0
         $x_1_9 = "ping 0.0.0.0>nul" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -1798,6 +1858,7 @@ rule Backdoor_Win32_IRCbot_FP_2147792446_0
         $x_1_8 = "#minecraft" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 4 of ($x_1_*))) or
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -1825,6 +1886,7 @@ rule Backdoor_Win32_IRCbot_AB_2147792447_0
         $x_1_3 = {59 39 45 f8 73 1b 8b 45 08 03 45 fc 8b 4d f8 8a 00 32 81 ?? ?? 40 00 8b 4d 08 03 4d fc 88 01 eb ce}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1847,6 +1909,7 @@ rule Backdoor_Win32_IRCbot_AA_2147792452_0
         $x_1_2 = {75 21 6a 3f 8d 45 c0 68 ?? ?? 40 00 50 e8 ?? ?? 00 00 ff 75 10 8d 45 c0 ff 75 10 50 68 ?? ?? 40 00 eb 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1870,6 +1933,7 @@ rule Backdoor_Win32_IRCbot_SZ_2147792460_0
         $x_1_4 = "MKTUN %s%.8X %u %d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1893,6 +1957,7 @@ rule Backdoor_Win32_IRCbot_AE_2147792472_0
         $x_1_4 = {8b 48 34 51 ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1921,6 +1986,7 @@ rule Backdoor_Win32_IRCbot_2147792477_0
         $x_1_8 = "ping 0.0.0.0>nul" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

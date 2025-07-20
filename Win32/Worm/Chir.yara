@@ -17,6 +17,7 @@ rule Worm_Win32_Chir_D_2147600725_0
         $x_1_3 = {76 14 80 7d ?? 00 74 08 8a 4d ?? 02 c8 30 0c 18 40 3b 45 ?? 72 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

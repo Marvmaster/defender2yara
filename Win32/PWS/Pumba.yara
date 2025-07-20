@@ -20,6 +20,7 @@ rule PWS_Win32_Pumba_C_2147705634_0
         $x_4_6 = {33 db 8a 5c 38 ff 33 5d ?? 3b 5d ?? 7f 0b 81 c3 ff 00 00 00 2b 5d ?? eb 03 03 00 8b 45}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))

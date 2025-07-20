@@ -19,6 +19,7 @@ rule Ransom_MSIL_Yikes_PAA_2147796531_0
         $x_1_4 = "\\___RECOVER__FILES__.yikes.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

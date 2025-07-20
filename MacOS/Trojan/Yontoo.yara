@@ -20,6 +20,7 @@ rule Trojan_MacOS_Yontoo_A_2147745045_0
         $x_2_6 = {ff 15 38 60 02 00 48 31 8d 35 41 60 02 00 4c 89 e7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

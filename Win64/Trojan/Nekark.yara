@@ -17,6 +17,7 @@ rule Trojan_Win64_Nekark_EC_2147850518_0
         $x_1_2 = "bjzcknpjq|zbznwhwdgaolyqxzkhpwdlbjjc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_Nekark_NIT_2147928821_0
         $x_1_3 = "Stop reversing the program" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win64_Nekark_NN_2147940430_0
         $x_1_10 = "Cartelle aggiunte alle esclusioni di Windows Defender" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

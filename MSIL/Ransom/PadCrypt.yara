@@ -17,6 +17,7 @@ rule Ransom_MSIL_PadCrypt_A_2147774319_0
         $x_1_3 = "_Encrypted$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

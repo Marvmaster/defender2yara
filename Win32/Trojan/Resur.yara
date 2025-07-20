@@ -20,6 +20,7 @@ rule Trojan_Win32_Resur_LK_2147839037_0
         $x_1_5 = "plusone.google.com/_/+1/confirm?hl=en&url=http//efigureout.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

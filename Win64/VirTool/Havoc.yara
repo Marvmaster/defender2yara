@@ -17,6 +17,7 @@ rule VirTool_Win64_Havoc_E_2147929297_0
         $x_1_3 = {48 81 ec f8 04 00 00 48 8d 7c 24 78 44 89 8c 24 58 05 00 00 48 8b ac 24 60 05 00 00 4c 8d 6c 24 78 f3 ab b9 59 00 00 00 48 c7 44 24 70 00 00 00 00 c7 44 24 78 68 00 00 00 c7 84 24 b4 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

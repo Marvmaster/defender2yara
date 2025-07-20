@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Ceekat_B_2147626698_0
         $x_1_3 = {c6 00 55 b8 ?? ?? ?? ?? e8 ?? ?? ff ff c6 40 01 44}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

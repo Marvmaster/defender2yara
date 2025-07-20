@@ -20,6 +20,7 @@ rule BrowserModifier_Win32_DCToolbar_17970_0
         $x_1_6 = "Error processing XML file: " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))

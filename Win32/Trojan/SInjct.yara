@@ -19,6 +19,7 @@ rule Trojan_Win32_SInjct_2147795794_0
         $x_1_4 = {48 8b 8c 24 ?? ?? ?? ?? 83 ca ff ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

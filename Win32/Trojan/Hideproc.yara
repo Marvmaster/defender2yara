@@ -20,6 +20,7 @@ rule Trojan_Win32_Hideproc_E_2147639707_0
         $x_1_6 = {0f 94 c2 f6 da 1b d2 85 d2 74 2c 8d 45 ec 50 6a 40 6a 04 53 e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 8d 45 ec 50 6a 04 8d 45 f4 50 53 e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? eb 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Hideproc_F_2147640479_0
         $x_1_3 = {6e 74 68 69 64 65 2e 64 6c 6c 00 48 69 64 65 50 72 6f 63 65 73 73 00 49 6e 73 74 61 6c 6c 48 6f 6f 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Hideproc_G_2147649497_0
         $x_1_2 = {83 c4 0c be a2 00 00 00 56 6a 10 5a 8d 4d f0 e8 ?? ?? ?? ?? 81 7d f0 6d d0 4e a2 75 3b 8b 45 f4 39 45 0c 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_Hideproc_H_2147694021_0
         $x_1_6 = "g_fun_ZwQuerySystemInformation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

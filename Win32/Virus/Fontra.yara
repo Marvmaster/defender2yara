@@ -17,6 +17,7 @@ rule Virus_Win32_Fontra_C_2147600079_0
         $x_1_3 = {8a 07 24 0f 8a 04 30 88 07 47 e2 f4 8b 3c 24 c6 07 7b c6 47 09 2d c6 47 0e 2d c6 47 13 2d c6 47 18 2d c6 47 25 7d c6 47 26 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

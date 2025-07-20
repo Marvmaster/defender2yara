@@ -22,6 +22,7 @@ rule Trojan_iPhoneOS_Conthie_A_2147771587_0
         $x_1_7 = "://180.215.254.23:9903/JYSystem/restInt/v3/collect/portal/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (5 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_iPhoneOS_Conthie_B_2147808041_0
         $x_1_4 = "107.151.194.116:8080" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (3 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Trojan_iPhoneOS_Conthie_E_2147837271_0
         $x_1_5 = "attemptsToRecreateUploadTasksForBackgroundSessions" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

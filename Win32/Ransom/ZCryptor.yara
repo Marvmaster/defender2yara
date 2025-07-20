@@ -21,6 +21,7 @@ rule Ransom_Win32_ZCryptor_A_2147712132_0
         $x_1_7 = {0f 1f 44 00 00 8d 41 2e 30 44 0d e4 41 83 f9 0b 72 f3 8d 45 e4 c6 45 ef 00 50 68 04 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

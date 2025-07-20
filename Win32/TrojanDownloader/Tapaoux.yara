@@ -15,6 +15,7 @@ rule TrojanDownloader_Win32_Tapaoux_A_2147651156_0
         $x_1_1 = {75 15 8b d7 47 81 fa 58 02 00 00 7f 0a 6a 64 ff 15 ?? ?? ?? ?? eb a9 8b 86}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

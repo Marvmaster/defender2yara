@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Lmir_ZX_2147583441_0
         $x_1_5 = {51 8d 44 24 00 6a 00 50 6a 00 68 3f 00 0f 00 6a 00 6a 00 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDropper_Win32_Lmir_S_2147609928_0
         $x_3_5 = {6a 02 57 6a f8 ff 75 08 ff d6 8d 45 ec 57 50 8d 45 fc 6a 04 50 ff 75 08 ff d3 57 ff 75 08}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -71,6 +73,7 @@ rule TrojanDropper_Win32_Lmir_D_2147616898_0
         $x_1_4 = {6a 01 53 e8 ?? ?? ?? ?? ff d0 6a 04 53 e8 ?? ?? ?? ?? 8b f0 6a 01 ff d6 0b c0 74 1f 50 6a 00 68 ff 0f 1f 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

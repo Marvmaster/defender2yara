@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Conbatib_A_2147625913_0
         $x_1_6 = {62 61 63 6f 6e 62 69 74 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or

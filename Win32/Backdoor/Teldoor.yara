@@ -18,6 +18,7 @@ rule Backdoor_Win32_Teldoor_C_2147630830_0
         $x_1_4 = "SUPPORT_388945a0 /del" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

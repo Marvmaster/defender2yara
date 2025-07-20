@@ -19,6 +19,7 @@ rule Trojan_Win32_Falstart_A_2147659622_0
         $x_1_5 = "read me.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

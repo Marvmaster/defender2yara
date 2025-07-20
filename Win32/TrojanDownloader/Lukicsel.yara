@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Lukicsel_A_2147629880_0
         $x_1_2 = {83 c0 07 50 8b f0 b4 2f ac 3c 00 74 04 38 e0 75 f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_Lukicsel_A_2147629880_1
         $x_1_3 = {66 b9 50 00 8b 55 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

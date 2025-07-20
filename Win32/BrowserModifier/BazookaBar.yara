@@ -21,6 +21,7 @@ rule BrowserModifier_Win32_BazookaBar_3050_0
         $x_1_7 = "Parasiteware Detector" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))

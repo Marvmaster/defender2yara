@@ -19,6 +19,7 @@ rule Trojan_Win32_FakeIA_C_133717_0
         $x_5_5 = {3c 74 69 74 6c 65 3e 49 6e 73 65 63 75 72 65 20 42 72 6f 77 73 69 6e 67 3a 20 4e 61 76 69 67 61 74 69 6f 6e 20 6f 6e 20 68 6f 6c 64 3c 2f 74 69 74 6c 65 3e 0d 0a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -44,6 +45,7 @@ rule Trojan_Win32_FakeIA_D_134174_0
         $x_1_1 = {45 6e 61 62 6c 65 20 50 72 6f 74 65 63 74 69 6f 6e 00 00 00 42 55 54 54 4f 4e 00 00 55 6e 62 6c 6f 63 6b 00 4b 65 65 70 20 42 6c 6f 63 6b 69 6e 67 00 00 00 43 6c 69 63 6b 20 74 6f 20 64 6f 77 6e 6c 6f 61 64 20 61 6e 64 20 61 63 74 69 76 61 74 65 20 70 72 6f 74 65 63 74 69 6f 6e 2e 00 00 53 54 41 54 49 43 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_FakeIA_E_134930_0
         $x_1_3 = {53 45 5f 53 48 55 54 44 4f 57 4e 5f 4e 41 4d 45 [0-16] 53 48 55 54 44 4f 57 4e 20 2d 72 20 2d 66 20 2d 74 [0-16] 64 65 6c [0-16] 2e 62 61 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_FakeIA_G_137084_0
         $x_3_5 = {84 c0 74 36 8b 15 ?? ?? ?? ?? 83 ea 04 b8 ?? ?? ?? ?? b9 04 00 00 00 e8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 10 a1 ?? ?? ?? ?? 83 c0 04 50 a1 ?? ?? ?? ?? 83 e8 04 50 e8}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*))) or
             ((1 of ($x_7_*))) or
@@ -121,6 +125,7 @@ rule Trojan_Win32_FakeIA_F_137085_0
         $x_1_8 = {78 65 72 6b 73 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -148,6 +153,7 @@ rule Trojan_Win32_FakeIA_J_140908_0
         $x_1_4 = "ZwQuerySystemInformation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule Trojan_Win32_FakeIA_I_140910_0
         $x_1_5 = {83 38 06 75 15 68 ?? ?? ?? ?? 8b 43 3c 50 e8 ?? ?? ?? ?? 85 c0 0f 94 c0 eb 13 68 ?? ?? ?? ?? 8b 43 3c 50 e8 ?? ?? ?? ?? 85 c0 0f 94 c0 84 c0 74 0e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -196,6 +203,7 @@ rule Trojan_Win32_FakeIA_K_141057_0
         $x_1_5 = {41 00 4c 00 4c 00 4f 00 57 00 54 00 48 00 49 00 53 00 50 00 4f 00 52 00 54 00 48 00 4f 00 56 00 45 00 52 00 0b 00 42 00 4c 00 4f 00 43 00 4b 00 41 00 4c 00 4c 00 49 00 50 00 53 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -220,6 +228,7 @@ rule Trojan_Win32_FakeIA_L_142962_0
         $x_1_2 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -244,6 +253,7 @@ rule Trojan_Win32_FakeIA_O_144767_0
         $x_1_5 = {c6 02 4c 8b 10 c6 42 01 53 8b 10 [0-48] 50 6a 00 6a 00 e8 ?? ?? ff ff 8b d8 e8 ?? ?? ff ff 85 c0 75 16 54 6a 00 6a 00 68 ?? ?? ?? ?? 6a 00 6a 00 e8 62 89 ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -273,6 +283,7 @@ rule Trojan_Win32_FakeIA_P_146261_0
         $x_1_5 = {83 fb 05 72 ?? 8b cb 8b d5 8b c7 e8 ?? ?? ?? ?? 8b c7 8b d0 03 d3 c6 02 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

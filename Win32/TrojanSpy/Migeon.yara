@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Migeon_A_2147697736_0
         $x_1_3 = "rundll32.exe %s,Player" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

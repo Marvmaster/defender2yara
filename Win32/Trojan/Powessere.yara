@@ -17,6 +17,7 @@ rule Trojan_Win32_Powessere_A_2147688591_0
         $x_1_3 = "iex ([Text.Encoding]::ASCII.GetString([Convert]::FromBase64String('{loader}')))\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Powessere_A_2147688591_1
         $x_2_3 = {8a 04 07 32 45 ff b1 08 2a cb 8a d0 d2 ea 8b cb d2 e0 0a d0 88 54 3e 01}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Powessere_A_2147688591_2
         $x_1_8 = {3a 2f 2f 25 73 2f 71 00 73 6f 66 74 77 61 72 65 5c 63 6c 61 73 73 65 73 5c 63 6c 73 69 64 5c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -233,6 +236,7 @@ rule Trojan_Win32_Powessere_B_2147690913_0
         $x_1_4 = {52 63 34 45 6e 63 6f 64 65 64 36 34 00 52 63 34 45 6e 63 6f 64 65 64 33 32 00 4a 61 76 61 53 63 72 69 70 74 00 43 6f 6d 6d 75 6e 69 63 61 74 65 00 72 75 6e 64 6c 6c 33 32 2e 65 78 65 20 76 62 73 63 72 69 70 74 3a 22 5c 2e 2e 5c 6d 73 68 74 6d 6c 2c 52 75 6e 48 54 4d 4c 41 70 70 6c 69 63 61 74 69 6f 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

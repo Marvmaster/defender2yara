@@ -18,6 +18,7 @@ rule Trojan_Win64_Tiggre_CMM_2147783651_0
         $x_1_3 = "oqcazu737w7m.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

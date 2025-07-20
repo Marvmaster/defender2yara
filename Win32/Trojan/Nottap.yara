@@ -17,6 +17,7 @@ rule Trojan_Win32_Nottap_A_2147787448_0
         $x_1_3 = "/certsrv/certfnsh.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Nottap_B_2147787449_0
         $x_1_4 = "Relaying NTLMSSP_CHALLENGE to client" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

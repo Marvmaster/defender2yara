@@ -20,6 +20,7 @@ rule Trojan_Win32_BngTap_A_2147752154_0
         $x_1_5 = "daenerys=%s&betriebssystem=%s&anwendung=%s&AV=%s&frankie=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

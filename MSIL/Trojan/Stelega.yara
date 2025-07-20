@@ -26,6 +26,7 @@ rule Trojan_MSIL_Stelega_PAA_2147773280_0
         $x_1_11 = ".zip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -54,6 +55,7 @@ rule Trojan_MSIL_Stelega_DB_2147777537_0
         $x_1_8 = "_Lambda$__" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Trojan_MSIL_Stelega_DC_2147779333_0
         $x_1_2 = {0a 0c 08 28 46 00 00 0a 72 ?? ?? ?? 70 16 28 5d 00 00 0a 16 fe 03 0d 09 39 fa 00 00 00 08 28 46 00 00 0a 72 ?? ?? ?? 70 15 16 28 5e 00 00 0a 0c 08 74 6a 00 00 01 17 28 60 00 00 0a 18 fe 01 13 04 11 04 39 bf 00 00 00 08 17 8d 19 00 00 01 25 16 16 8c 6c 00 00 01 a2 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +112,7 @@ rule Trojan_MSIL_Stelega_DF_2147779813_0
         $x_1_13 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*) and 8 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_5_*) and 3 of ($x_1_*))) or
@@ -140,6 +144,7 @@ rule Trojan_MSIL_Stelega_DG_2147779814_0
         $x_1_6 = "history_Mozilla Firefox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +168,7 @@ rule Trojan_MSIL_Stelega_DI_2147782975_0
         $x_1_3 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -184,6 +190,7 @@ rule Trojan_MSIL_Stelega_DJ_2147783079_0
         $x_10_1 = {16 0a 2b 13 03 06 03 06 91 06 20 48 0a 00 00 5d 61 d2 9c 06 17 58 0a 06 03 8e 69 32 e7 02 03 7d ?? ?? ?? 04 1f 58 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +214,7 @@ rule Trojan_MSIL_Stelega_DK_2147783080_0
         $x_1_3 = "xoredString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +241,7 @@ rule Trojan_MSIL_Stelega_DL_2147787432_0
         $x_1_6 = ".Locked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -265,6 +274,7 @@ rule Trojan_MSIL_Stelega_DN_2147793872_0
         $x_1_12 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -295,6 +305,7 @@ rule Trojan_MSIL_Stelega_DA_2147899381_0
         $x_1_6 = ".NRaSrame" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

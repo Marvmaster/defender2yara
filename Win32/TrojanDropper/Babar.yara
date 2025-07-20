@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Babar_A_2147691873_0
         $x_1_4 = "Babar64\\Babar64\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDropper_Win32_Babar_ARA_2147892683_0
         $x_2_1 = {89 f7 89 f0 31 db 83 c7 ?? 81 2e ?? ?? ?? ?? 83 c6 04 66 ba 5d e9 39 fe 7c ef}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

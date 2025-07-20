@@ -19,6 +19,7 @@ rule Ransom_MSIL_WanaCryptor_PAA_2147786663_0
         $x_1_4 = "schtasks" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_MSIL_Miner_KA_2147896234_0
         $x_10_2 = {08 1f 0f 6f ?? 00 00 0a 00 11 04 17 d6 13 04 11 04 09 31 ec}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_MSIL_Miner_HNA_2147907537_0
         $x_5_9 = {00 4d 61 6e 61 67 65 6d 65 6e 74 4f 62 6a 65 63 74 43 6f 6c 6c 65 63 74 69 6f 6e 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_5_*))) or
             ((1 of ($x_25_*) and 2 of ($x_10_*) and 1 of ($x_5_*))) or

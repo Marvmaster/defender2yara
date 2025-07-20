@@ -47,6 +47,7 @@ rule Trojan_Win32_RunningRAT_A_2147725911_0
         $x_1_32 = {00 00 00 00 74 65 6b 63 6f 73 65 73 6f 6c 63 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((15 of ($x_1_*))) or
             ((1 of ($x_3_*) and 12 of ($x_1_*))) or

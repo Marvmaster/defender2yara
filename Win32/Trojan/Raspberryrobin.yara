@@ -18,6 +18,7 @@ rule Trojan_Win32_Raspberryrobin_CI_2147851197_0
         $x_2_3 = "DxerctSxrctvy" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Raspberryrobin_AA_2147851199_0
         $x_1_6 = {8a 06 46 89 c0 53 83 c4 04 32 02 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 aa 42 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 49 85 c9 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Raspberryrobin_RA_2147851206_0
         $x_1_3 = "LnfuhTvtcr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_Raspberryrobin_RB_2147851207_0
         $x_1_3 = "OinufGcrtvyb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_Win32_Raspberryrobin_RC_2147851208_0
         $x_1_1 = {89 c0 ac 32 02 83 ec 04 c7 04 24 ?? ?? ?? ?? 83 c4 04 88 07 83 c7 01 56 83 c4 04 42 50 83 c4 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_Win32_Raspberryrobin_DA_2147851260_0
         $x_1_2 = "tdhyfjgy.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

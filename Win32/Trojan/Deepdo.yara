@@ -18,6 +18,7 @@ rule Trojan_Win32_Deepdo_17740_0
         $x_1_4 = "uid=%s&url=%s&" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Deepdo_17740_1
         $x_1_4 = "tn=deepbar" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Deepdo_17740_2
         $x_10_4 = {6f 70 65 6e 00 00 00 00 72 65 67 73 76 72 33 32 2e 65 78 65 00 00 00 00 20 22 25 73 25 73 22 20 2f 73 00 00 72 65 67 25 64 00 00 00 25 73 25 73 00 00 00 00 25 73 5c [0-16] 2e 74 6d 70 00 00 00 00 66 69 6c 65 25 64 00 00 75 72 6c 25 64 00 00 00 76 65 72 25 64 00 00 00 6d 61 69 6e}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -21,6 +21,7 @@ rule Trojan_Win32_Bodegun_EH_2147843311_0
         $x_1_6 = ".lockbit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Bodegun_GNF_2147896390_0
         $x_10_1 = {8b d0 83 e2 07 8a 4c 15 f8 30 0c 06 8d 54 15 f8 80 c1 1d 40 88 0a 3b c7}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

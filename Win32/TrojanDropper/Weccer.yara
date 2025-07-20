@@ -34,6 +34,7 @@ rule TrojanDropper_Win32_Weccer_A_2147583028_0
         $x_2_19 = "C:\\InjectedCode.part0" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_2_*))) or
             ((1 of ($x_3_*) and 10 of ($x_2_*))) or

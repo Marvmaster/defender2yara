@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Shluu_A_2147624240_0
         $x_1_3 = {f6 04 24 09 74 0d 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

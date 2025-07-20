@@ -18,6 +18,7 @@ rule Trojan_Win64_ReedBed_A_2147927914_0
         $x_1_4 = "send_pipe_ssl(): SSL_write(): SSL_ERROR_WANT_WRITE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_ReedBed_B_2147927915_0
         $x_1_1 = {4c 8b 71 30 41 bf 01 00 00 ?? 4c 23 f0 48 03 d9 45 2b e7 44 8b 5b 20 41 f7 d4 4c 8d 43 18 4d 0b de 48 8b f2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win64_ReedBed_AL_2147933585_0
         $x_2_2 = {33 d2 48 8b c1 b9 ?? 00 00 00 48 f7 f1 48 8b c2 b9 01 00 00 00 48 6b c9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win64_ReedBed_DA_2147933970_0
         $x_1_4 = {48 63 c8 48 8b c3 48 f7 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -110,6 +114,7 @@ rule Trojan_Win64_ReedBed_H_2147935144_0
         $x_1_2 = {48 8b cf 8b d0 80 39 42 75 ?? c6 01 2e 48 ff c1 48 83 ea 01 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

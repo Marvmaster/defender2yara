@@ -16,6 +16,7 @@ rule Trojan_Win32_Surpwall_A_2147735175_0
         $x_1_2 = {8b 0d 0c 4e 42 00 3b d8 75 04 3b ca 74 12 0f b7 c5 99 2b c3 1b d1 2b c6 1b d7 8b f0 8b fa eb 09 8b d6 6b d2 55 8b eb 2b ea 0f b7 c5 83 f8 13 74 39 83 f8 7c 74 26}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

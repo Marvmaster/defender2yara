@@ -20,6 +20,7 @@ rule Ransom_Win32_Eniqma_A_2147711707_0
         $x_1_6 = {2e 65 6e 69 67 6d 61 [0-8] 3a 5c 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

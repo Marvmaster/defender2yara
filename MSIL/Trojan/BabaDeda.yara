@@ -20,6 +20,7 @@ rule Trojan_MSIL_BabaDeda_NEAA_2147838272_0
         $x_2_5 = "/dev/disk/by-uuid" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

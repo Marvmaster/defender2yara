@@ -20,6 +20,7 @@ rule Worm_Win32_Wukill_A_2147583560_0
         $x_1_4 = "\\Xgtray.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -28,6 +28,7 @@ rule Backdoor_MSIL_DCRat_GA_2147819111_0
         $x_1_13 = "dplugin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Backdoor_MSIL_DCRat_2147825893_0
         $x_1_4 = "System.Security.Cryptography.AesCryptoServiceProvider" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Backdoor_MSIL_DCRat_RS_2147833671_0
         $x_1_1 = {2b 44 2b 45 2b 4a 2b 4b 18 5b 1e 2c 24 8d 1e 00 00 01 2b 42 16 2b 42 2b 1e 2b 41 2b 42 18 5b 2b 41 08 18 6f 22 00 00 0a 1f 10 28 23 00 00 0a 9c 08 18 58 16 2d fb 0c 08 18 2c cd 06 16 2d f3 32 d8 19 2c d5 07 2a 02 2b b9 6f 24 00 00 0a 2b b4 0a 2b b3 06 2b b2 0b 2b bb 0c 2b bb 07 2b bc 08 2b bb 02 2b bc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Backdoor_MSIL_DCRat_AM_2147835174_0
         $x_1_4 = "Antivirus:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Backdoor_MSIL_DCRat_B_2147843173_0
         $x_2_2 = {20 40 42 0f 00 5e 0b de}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Backdoor_MSIL_DCRat_SP_2147844276_0
         $x_1_2 = "cMDTM.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +171,7 @@ rule Backdoor_MSIL_DCRat_D_2147844635_0
         $x_2_4 = "DCRat.Code" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule Backdoor_MSIL_DCRat_SPD_2147845025_0
         $x_1_2 = "BuildInstallationTweaksPlugin.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +218,7 @@ rule Backdoor_MSIL_DCRat_F_2147845488_0
         $x_2_3 = "BZip2" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -231,6 +240,7 @@ rule Backdoor_MSIL_DCRat_SPG_2147847221_0
         $x_1_1 = {09 6f 08 00 00 0a 0b 07 72 53 00 00 70 6f ?? ?? ?? 0a a5 0a 00 00 01 13 04 12 04 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 0c 08 28 ?? ?? ?? 06 26 09 6f 0c 00 00 0a 2d cb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -254,6 +264,7 @@ rule Backdoor_MSIL_DCRat_G_2147852761_0
         $x_1_3 = "ProcessWindowStyle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -277,6 +288,7 @@ rule Backdoor_MSIL_DCRat_H_2147852773_0
         $x_1_3 = "UNCONDITIONAL_MATCHLEN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +310,7 @@ rule Backdoor_MSIL_DCRat_MA_2147896257_0
         $x_1_1 = {a2 0a 02 28 ?? ?? ?? 0a 06 16 9a 03 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 7d ?? ?? ?? 04 02 06 18 9a 02 7b ?? ?? ?? 04 73 ?? ?? ?? 06 06 17 9a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -319,6 +332,7 @@ rule Backdoor_MSIL_DCRat_KAA_2147898416_0
         $x_5_1 = {00 11 04 11 0a 02 11 0a 91 03 11 0a 03 6f ?? 00 00 0a 5d 28 ?? 00 00 06 61 d2 9c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -341,6 +355,7 @@ rule Backdoor_MSIL_DCRat_I_2147899095_0
         $x_2_2 = "DarkCrystal RAT" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +378,7 @@ rule Backdoor_MSIL_DCRat_J_2147899096_0
         $x_2_2 = "DarkCrystal RAT" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -387,6 +403,7 @@ rule Backdoor_MSIL_DCRat_K_2147899714_0
         $x_2_4 = "DarkCrystal RAT" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -411,6 +428,7 @@ rule Backdoor_MSIL_DCRat_L_2147899788_0
         $x_2_4 = "DarkCrystal RAT" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -436,6 +454,7 @@ rule Backdoor_MSIL_DCRat_MB_2147900161_0
         $x_1_5 = "Xke4Hr1b6dpqQlljFp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -459,6 +478,7 @@ rule Backdoor_MSIL_DCRat_SPF_2147901616_0
         $x_1_3 = "eBqg1qYY2MBJc40AiZ.t1oQwgWNtVa1T4XkgM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -482,6 +502,7 @@ rule Backdoor_MSIL_DCRat_M_2147902540_0
         $x_1_3 = "lzmat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -504,6 +525,7 @@ rule Backdoor_MSIL_DCRat_PADQ_2147905183_0
         $x_1_2 = {fe 0e 15 00 fe 0c 15 00 fe 0c 15 00 20 11 00 00 00 64 61 fe 0e 15 00 fe 0c 15 00 fe 0c 11 00 58 fe 0e 15 00 fe 0c 15 00 fe 0c 15 00 20 0f 00 00 00 62 61 fe 0e 15 00 fe 0c 15 00 fe 0c 12 00 58 fe 0e 15 00 fe 0c 15 00 fe 0c 15 00 20 17 00 00 00 64 61 fe 0e 15 00 fe 0c 15 00 fe 0c 15 00 58 fe 0e 15 00 fe 0c 12 00 20 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -533,6 +555,7 @@ rule Backdoor_MSIL_DCRat_YY_2147910969_0
         $x_10_9 = "{11111-22222-40001-00002}" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -560,6 +583,7 @@ rule Backdoor_MSIL_DCRat_RHA_2147911323_0
         $x_2_7 = {50 45 00 00 4c 01 03 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0b 01 06 00 00 5a 16 00 00 06 00 00 00 00 00 00 6e 79 16}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -589,6 +613,7 @@ rule Backdoor_MSIL_DCRat_RHC_2147916588_0
         $x_2_9 = {50 45 00 00 4c 01 03 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0b 01 06 00 00 34 0c 00 00 06 00 00 00 00 00 00 2e 53 0c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -610,6 +635,7 @@ rule Backdoor_MSIL_DCRat_GZZ_2147941219_0
         $x_10_1 = {01 25 16 72 ?? 00 00 70 72 ?? 00 00 70 72 ?? 00 00 70 28 ?? 00 00 0a a2 25 17 72 ?? 00 00 70 72 ?? 00 00 70 72 ?? 00 00 70 28 ?? 00 00 0a a2 25 18 72 ?? 00 00 70 72 ?? 00 00 70 72 ?? 01 00 70 28 ?? 00 00 0a a2 25 19 72 ?? 01 00 70 72 ?? 00 00 70 72 ?? 01 00 70 28 ?? 00 00 0a a2 25 1a 72 ?? 01 00 70 72 ?? 00 00 70 72 ?? 01 00 70 28 ?? 00 00 0a a2 25 1b 72 ?? 01 00 70 72 ?? 00 00 70 72 ?? 01 00 70 28 ?? 00 00 0a a2 7e}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -631,6 +657,7 @@ rule Backdoor_MSIL_DCRat_BAA_2147945623_0
         $x_2_1 = {11 05 02 16 02 8e 69 ?? ?? 00 00 0a 11 05 ?? ?? 00 00 0a 11 04 ?? ?? 00 00 0a 0b dd 1e 00 00 00 11 05 39 07 00 00 00 11 05 ?? ?? 00 00 0a dc 11 04 39 07 00 00 00 11 04 ?? ?? 00 00 0a dc 09 ?? ?? 00 00 0a dd 0d 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

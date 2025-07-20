@@ -18,6 +18,7 @@ rule Trojan_Win32_Asbit_JL_2147837994_0
         $x_1_3 = "$73fc3849-3bb9-44bf-92c6-85dd7991691c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

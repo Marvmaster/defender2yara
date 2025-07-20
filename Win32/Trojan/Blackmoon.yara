@@ -23,6 +23,7 @@ rule Trojan_Win32_Blackmoon_CA_2147805528_0
         $x_1_8 = "QueryPerformanceCounter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_Blackmoon_AP_2147829921_0
         $x_1_6 = "www.taobao.com/webww/ww.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_Blackmoon_ARA_2147837909_0
         $x_2_3 = "BlackMoon RunTime Error:" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_Win32_Blackmoon_ARA_2147837909_1
         $x_1_2 = "coderpub" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_Win32_Blackmoon_RPQ_2147850591_0
         $x_1_1 = {0f b6 39 c1 ef 02 c1 e2 06 8d 54 17 01 8b f8 41 2b fa 8b da c1 ee 05 4e 8a 17 88 10 8a 57 01 88 50 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Trojan_Win32_Blackmoon_RPY_2147903446_0
         $x_1_1 = {8d 54 17 01 8b f8 41 2b fa 8b da c1 ee 05 4e 8a 17 88 10 8a 57 01 88 50 01 83 c0 02 83 c7 02 8a 17 88 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Trojan_Win32_Blackmoon_NB_2147913575_0
         $x_2_3 = "BlackMoon RunTime Error" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -180,6 +187,7 @@ rule Trojan_Win32_Blackmoon_MBXH_2147916277_0
         $x_1_1 = {31 30 34 38 35 37 36 38 39 31 [0-89] 80 56 40 00 00 00 00 00 00 4d 40 01 00 00 00 00 00 00 00 64 73 31 35 5f 36 65 31 76 35 65 77 39 5f 37 34 79}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +210,7 @@ rule Trojan_Win32_Blackmoon_NC_2147917179_0
         $x_1_2 = "/*rep1021lace*/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +236,7 @@ rule Trojan_Win32_Blackmoon_PPDW_2147921870_0
         $x_1_5 = "jqMfBieXoEUDXAzZ.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -259,6 +269,7 @@ rule Trojan_Win32_Blackmoon_PUW_2147923242_0
         $x_1_12 = "//api.bar.163.com/netbar-api/api/open/gameDataV2/queryMatchResult" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -281,6 +292,7 @@ rule Trojan_Win32_Blackmoon_ARAF_2147926914_0
         $x_2_2 = "://dll-1300355179.cos.ap-shanghai.myqcloud.com/" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -302,6 +314,7 @@ rule Trojan_Win32_Blackmoon_GAS_2147939648_0
         $x_1_1 = {89 5d bc 8b 5d bc 8a 03 25 ff 00 00 00 89 45 b4 db 45 b4 dd 5d b4 dd 45 b4 db 45 f4 dd 5d ac dc 65 ac db 45 f8 dd 5d a4 dc 65 a4 dd 5d 9c dd 45 9c e8 97 fd ff ff 68 01 01 00 80 6a 00 50 68 01 00 00 00 bb 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -326,6 +339,7 @@ rule Trojan_Win32_Blackmoon_AYA_2147940216_0
         $x_1_4 = "schtasks /create /tn XN-DTZY /TR C:\\Windows\\SysWOW64\\VIP.exe /delay" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -347,6 +361,7 @@ rule Trojan_Win32_Blackmoon_SRA_2147940710_0
         $x_2_1 = {03 d8 89 5d e4 8b 5d e4 8a 03 25 ff 00 00 00 89 45 f4 db 45 fc dd 5d e0 dd 45 e0 dc 25 1b 32 49 00 dd 5d d8 dd 45 d8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

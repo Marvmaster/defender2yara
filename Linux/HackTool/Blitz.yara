@@ -30,6 +30,7 @@ rule HackTool_Linux_Blitz_Gen_2147842705_0
         $x_1_16 = "find ../../dota3.tar.gz. Proceeding without upload:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

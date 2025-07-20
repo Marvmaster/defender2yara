@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Vividi_A_2147651843_0
         $x_1_6 = "Accept-Language: en-us;q=0.5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             (all of ($x*))

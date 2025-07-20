@@ -18,6 +18,7 @@ rule Worm_MSIL_Vonriamt_A_2147686548_0
         $x_1_4 = {43 52 44 50 00 43 52 44 50 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

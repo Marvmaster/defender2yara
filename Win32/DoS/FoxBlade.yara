@@ -19,6 +19,7 @@ rule DoS_Win32_FoxBlade_A_2147813512_0
         $x_1_4 = {53 5a 44 44 [0-16] 4d 5a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule DoS_Win32_FoxBlade_F_2147832778_0
         $x_100_1 = {8b d7 8b ce e8 ?? ?? ?? ?? 46 83 fe 64 7e ec 8b d7 b9 ?? ?? ?? ?? e8 ?? ?? ?? ?? 57 68 ?? ?? ?? ?? ba ?? ?? ?? ?? c7 45 ?? 5c 00 5c 00 8d 4d c4 c7 45 ?? 3f 00 5c 00}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win32_Stealergen_VHO_2147808279_0
         $x_2_6 = "Accept-Language: zh-cn" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

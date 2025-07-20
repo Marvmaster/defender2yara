@@ -21,6 +21,7 @@ rule Backdoor_Win32_DCRAT_JP_2147826417_0
         $x_1_6 = "ICBfX18gICAgICAgICAgIF8gICAgICBfX18gICAgICAgICAgICAgX" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

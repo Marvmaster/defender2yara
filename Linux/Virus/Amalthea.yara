@@ -17,6 +17,7 @@ rule Virus_Linux_Amalthea_A_2147650205_0
         $x_1_3 = {3b 0a 09 63 68 61 72 20 68 61 73 68 65 6e 64 5b 5d 20 3d 20 22 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Virus_Linux_Amalthea_B_2147650468_0
         $x_1_3 = ";\\n\\tchar hashend[] =\\\"\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

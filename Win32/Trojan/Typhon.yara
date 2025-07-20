@@ -17,6 +17,7 @@ rule Trojan_Win32_Typhon_MBHI_2147851795_0
         $x_1_2 = {6c 74 78 71 6b 63 62 77 77 73 6a 62 6f 6e 70 00 72 76 78 67 64 79 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

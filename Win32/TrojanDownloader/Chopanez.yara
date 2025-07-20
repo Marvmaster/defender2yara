@@ -30,6 +30,7 @@ rule TrojanDownloader_Win32_Chopanez_A_2147803770_0
         $x_1_16 = "/mm2.exe mm2.exe %ACCOUNT%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_5_*) and 6 of ($x_2_*) and 3 of ($x_1_*))) or

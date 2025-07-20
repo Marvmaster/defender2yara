@@ -19,6 +19,7 @@ rule Ransom_Win32_EgregorLdr_A_2147777810_0
         $x_1_5 = "expand 16 byte k" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

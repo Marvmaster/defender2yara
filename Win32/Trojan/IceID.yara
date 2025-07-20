@@ -17,6 +17,7 @@ rule Trojan_Win32_IceID_AD_2147742844_0
         $x_1_2 = {8b d8 6b c0 ?? 2b de 83 c3 ?? 81 c1 ?? ?? ?? ?? 0f b7 db 89 0a 0f b7 2d ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 0f b7 cb 2b c1 8d 98 ?? ?? ?? ?? 0f b7 05 ?? ?? ?? ?? 03 c5 3d ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_IceID_GG_2147755510_0
         $x_1_2 = "VirtualAllocExNuma" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_IceID_SK_2147834140_0
         $x_1_4 = "uasifbyugashfjakshbass" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

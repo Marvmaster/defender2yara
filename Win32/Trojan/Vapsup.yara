@@ -19,6 +19,7 @@ rule Trojan_Win32_Vapsup_C_2147612236_0
         $x_1_5 = "toolSn.jsp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_Win32_Vapsup_E_2147617748_0
         $x_1_2 = {8b 55 f4 8b 45 08 0f b7 0c 50 83 f9 41 7c ?? 8b 55 f4 8b 45 08 0f b7 0c 50 83 f9 46 7f ?? 8b 55 f4 8b 45 08 0f b7 0c 50 83 e9 37 66 89 4d f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Vapsup_G_2147617918_0
         $x_1_3 = {8b 4d 0c 89 0c 24 e8 ?? ?? ff ff [0-3] 0f b7 c0 35 ?? ?? 00 00 89 45 98 8b 02 8b 40 f4 89 45 94 8b 55 94 b8 fe ff ff 1f 29 d0 83 f8 01 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -19,6 +19,7 @@ rule Virus_Win32_Nabucur_A_2147690213_0
         $x_1_4 = {31 06 83 c6 04 83 c1 04 81 f9 ?? ?? 00 00 7c f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Virus_Win32_Nabucur_B_2147691446_0
         $x_1_3 = {0f c8 93 0f cb 87 de 0f ce 87 f7 0f cf 41 3b ca 75 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

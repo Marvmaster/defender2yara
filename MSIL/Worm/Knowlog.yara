@@ -32,6 +32,7 @@ rule Worm_MSIL_Knowlog_A_2147656944_0
         $x_1_18 = "select * from win32_share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -54,6 +55,7 @@ rule Worm_MSIL_Knowlog_B_2147658516_0
         $x_1_3 = "DesverMalwarebytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule Worm_MSIL_Knowlog_C_2147670466_0
         $x_1_5 = {73 70 72 65 61 64 5f 30 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

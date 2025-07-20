@@ -18,6 +18,7 @@ rule Trojan_Win32_Newspy_A_2147697423_0
         $x_1_4 = "filename=\"file.raw\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Newspy_B_2147708679_0
         $x_1_1 = {8b c6 c1 e8 ?? 25 ?? ?? ?? ?? 33 d2 bb ?? ?? ?? ?? f7 f3 41 0a c3 2a c2 30 44 0f ff 8b 45 ?? 3b c8 72 d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Backdoor_MacOS_Gimmick_A_2147815683_0
         $x_1_5 = {74 74 70 73 3a 2f 2f [0-37] 2f 75 70 6c 6f 61 64 2f 64 72 69 76 65 2f 76 33 2f 66 69 6c 65 73 3f 61 6c 74 3d 6a 73 6f 6e 26 75 70 6c 6f 61 64 54 79 70 65 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

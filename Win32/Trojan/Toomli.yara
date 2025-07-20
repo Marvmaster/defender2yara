@@ -19,6 +19,7 @@ rule Trojan_Win32_Toomli_A_2147734225_0
         $x_1_4 = {72 75 6e 64 6c 6c 33 32 2e 65 78 65 20 22 25 73 22 2c 4e 53 50 53 74 61 72 74 75 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

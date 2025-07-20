@@ -34,6 +34,7 @@ rule HackTool_Win64_Mimikatz_A_2147723337_0
         $x_1_20 = "SELECT origin_url, username_value, password_value FROM logins" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -57,6 +58,7 @@ rule HackTool_Win64_Mimikatz_G_2147781484_0
         $x_1_3 = {48 8b da 83 f9 03 75 [0-64] 45 33 c9 45 33 c0 33 d2 b9 85 04 00 00 ff 15 ?? ?? ?? ?? 33 c0 48 83 c4 20 5b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +82,7 @@ rule HackTool_Win64_Mimikatz_G_2147781484_1
         $x_1_3 = {8b 45 33 41 bf 2c 17 5a e3 49 33 c7 48 89 03 0f 84 ?? ?? ?? ?? 48 8d 45 77 be 08 00 00 00 44 8b c6 48 89 44 24 20 48 8b d3 48 8d 4c 24 20 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule HackTool_Win64_Mimikatz_G_2147781484_2
         $x_1_3 = {48 8b da 83 f9 03 75 [0-64] 45 33 c9 45 33 c0 33 d2 b9 85 04 00 00 ff 15 ?? ?? ?? ?? 33 c0 48 83 c4 20 5b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule HackTool_Win64_Mimikatz_H_2147784025_0
         $x_1_4 = {ba 69 77 69 6b 48 8b cf ff 15 ?? ?? ?? ?? 8b de}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule HackTool_Win64_Mimikatz_H_2147784025_1
         $x_1_4 = "lsasrv!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +179,7 @@ rule HackTool_Win64_Mimikatz_B_2147827386_0
         $x_10_3 = {f6 45 24 02 0f 84 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -194,6 +201,7 @@ rule HackTool_Win64_Mimikatz_D_2147827387_0
         $x_10_2 = {24 43 72 64 41 48 ff 15}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +224,7 @@ rule HackTool_Win64_Mimikatz_I_2147827388_0
         $x_10_3 = {48 8b fa 48 8b f1 eb}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -237,6 +246,7 @@ rule HackTool_Win64_Mimikatz_K_2147827389_0
         $x_10_2 = {bb 03 00 00 c0 e9}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -259,6 +269,7 @@ rule HackTool_Win64_Mimikatz_C_2147830968_0
         $x_1_3 = "Benjamin DELPY" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -288,6 +299,7 @@ rule HackTool_Win64_Mimikatz_IB_2147850503_0
         $x_1_6 = "icekatz_run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +324,7 @@ rule HackTool_Win64_Mimikatz_G_2147937867_0
         $x_10_5 = {44 8b 45 80 85 c0 0f 84}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -335,6 +348,7 @@ rule HackTool_Win64_Mimikatz_H_2147937868_0
         $x_10_4 = {8d 50 14 8b ca 44 8d 48 01 44}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

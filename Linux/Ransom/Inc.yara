@@ -17,6 +17,7 @@ rule Ransom_Linux_Inc_A_2147913437_0
         $x_2_2 = {8b 45 fc 48 c1 e0 03 48 03 45 e8 48 8b 00 89 c2 8b 45 fc 48 c1 e0 03 48 03 45 e0 48 8b 00 31 d0 23 45 f8 89 45 f4 8b 45 fc 48 c1 e0 03}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

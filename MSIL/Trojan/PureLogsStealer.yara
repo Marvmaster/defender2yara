@@ -16,6 +16,7 @@ rule Trojan_MSIL_PureLogsStealer_APL_2147899424_0
         $x_1_1 = {13 07 11 06 11 07 16 1a 6f ?? 00 00 0a 26 11 07 16 28 ?? 00 00 0a 13 08 11 06 16 73 ?? 00 00 0a 13 09 11 09 08 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_PureLogsStealer_APL_2147899424_1
         $x_1_2 = "\\AppData\\Local\\Temporary Projects\\WindowsFormsApp1\\obj\\Debug\\iTalk.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_PureLogsStealer_A_2147907671_0
         $x_1_3 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_MSIL_PureLogsStealer_B_2147907965_0
         $x_2_1 = {11 00 11 06 28 ?? 00 00 2b 28 ?? 00 00 2b 16 11 06 8e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_MSIL_PureLogsStealer_C_2147920554_0
         $x_1_4 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_MSIL_PureLogsStealer_AYA_2147925542_0
         $x_1_5 = "xe87342ae14514b0f8263a61d5bbd2626" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

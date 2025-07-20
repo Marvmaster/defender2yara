@@ -15,6 +15,7 @@ rule VirTool_MSIL_Asemlod_A_2147696114_0
         $x_1_1 = {20 00 01 00 00 5a 13 ?? 11 ?? 17 58 13 ?? 11 ?? 11 ?? 32 ?? 09 11 ?? 07 11 ?? 91 5a 58 0d 11 ?? 17 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule VirTool_MSIL_Asemlod_B_2147696302_0
         $x_1_2 = {19 d8 18 d6 12 ?? 28 ?? ?? ?? ?? 9c 09 11 ?? 19 d8 17 d6 12 ?? 28 ?? ?? ?? ?? 9c 09 11 ?? 19 d8 12 ?? 28 ?? ?? ?? ?? 9c 11 ?? 17 d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -56,6 +58,7 @@ rule VirTool_MSIL_Asemlod_C_2147696303_0
         $x_1_1 = {70 00 2e 00 38 00 4f 00 84 76 84 76 79 00 84 76 84 76 84 76 84}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +79,7 @@ rule VirTool_MSIL_Asemlod_D_2147696308_0
         $x_1_1 = "4#D#5#A#9#0#0#0#0#3#0#0#0#0#0#0#0#4#0#0#0#0#0#0#F#F#F#F#" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

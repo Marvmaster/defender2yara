@@ -19,6 +19,7 @@ rule Trojan_Win32_Ahrocam_A_2147632850_0
         $x_5_5 = {85 c9 75 08 0f be 06 83 e8 55 eb 15 0f be 44 31 ff 03 c1 bd 5f 00 00 00 99 f7 fd 0f be 04 31 2b c2 83 f8 20 7d 03 83 c0 5f 88 04 39 41 3b cb 7c cf c6 04 39 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))

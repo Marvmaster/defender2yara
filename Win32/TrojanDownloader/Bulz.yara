@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Bulz_BU_2147889045_0
         $x_1_4 = "app.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

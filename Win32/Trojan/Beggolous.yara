@@ -18,6 +18,7 @@ rule Trojan_Win32_Beggolous_A_2147727728_0
         $x_10_4 = "D:\\Projects\\src\\bypassuac\\branches\\RegTool\\build\\Release\\regtool.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

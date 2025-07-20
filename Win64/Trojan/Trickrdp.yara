@@ -23,6 +23,7 @@ rule Trojan_Win64_Trickrdp_A_2147766725_0
         $x_1_8 = "rdp/domains" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win64_Trickrdp_B_2147766726_0
         $x_1_3 = {46 72 65 65 42 75 66 66 65 72 [0-4] 52 65 6c 65 61 73 65 [0-4] 53 74 61 72 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

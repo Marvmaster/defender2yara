@@ -17,6 +17,7 @@ rule Backdoor_MacOS_Longage_C_2147935081_0
         $x_1_2 = {81 09 00 0c 7c 43 e9 2e 7f a3 eb 78 90 0b 00 04 91 4b 00 08 91 0b 00 0c 88 09 00 18 80 49 00 10 81 49 00 14 98 0b 00 18 90 4b 00 10 91 4b 00 14 48 00 40 61 3c 40 00 00 7d 63 ea 14 39 22 5e 64 80 42 5e 64 80 09 00 04 81 49 00 08 81 09 00 0c 7c 43 e9 2e 7f a3 eb 78}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

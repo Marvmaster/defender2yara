@@ -16,6 +16,7 @@ rule Ransom_MSIL_Expboot_B_2147741045_0
         $x_1_2 = "ExpBoot.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

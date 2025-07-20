@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Stuxnet_A_2147635804_0
         $x_1_6 = {83 bd fc fe ff ff 02 75 17 83 bd f0 fe ff ff 05 73 09 83 bd f0 fe ff ff 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

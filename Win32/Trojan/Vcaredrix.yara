@@ -24,6 +24,7 @@ rule Trojan_Win32_Vcaredrix_A_2147658734_0
         $x_1_10 = "<EKeyword>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

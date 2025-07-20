@@ -23,6 +23,7 @@ rule Ransom_Win32_ZhenCrypt_AB_2147765899_0
         $x_1_8 = "Zhen!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_TiltBreakz_A_2147923633_0
         $x_1_2 = {32 43 59 01 28 ac 4d de f4 b0 e5 0f 5f 83 c2 62 88 d3 93 ed 4d 93 64 1f 5d d0 a7 5c 6e 33 b0 f7 b9 de a0 e6 79 c2 b4 87 dd 53 2a eb 82 56 66 85 05 0e 60 c3 d3 84 a4 5b e1 f5 45 22 b4 17 ce 52 73 cf 9c 8c 4a 14 15 ac 45 65 35 e2 e3 b9 08 e4 69 80 cc fb 57 63 90 01 cd c8 4b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

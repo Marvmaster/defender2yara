@@ -29,6 +29,7 @@ rule Worm_Win32_Mywife_2147555616_0
         $x_1_15 = {6c 28 00 f5 03 00 00 00 c7 6c 28 00 f5 04 00 00 00 c7 c5 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 7 of ($x_1_*))) or
             ((3 of ($x_2_*) and 5 of ($x_1_*))) or

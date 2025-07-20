@@ -18,6 +18,7 @@ rule Backdoor_Win32_Unomois_A_2147657466_0
         $x_1_4 = {0f b6 50 01 0f b6 78 02 83 e2 0f 03 d2 03 d2 c1 ef 06 0b d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Mimikatz_A_2147836959_0
         $x_1_7 = "://department.microsoftmiddlename.tk/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanDownloader_Win32_Mimikatz_RDA_2147838558_0
         $x_1_5 = "C:/Users/Public/Documents/RDSv1.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

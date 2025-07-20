@@ -16,6 +16,7 @@ rule Trojan_Win64_SparkRat_RTS_2147926712_0
         $x_1_1 = {48 b9 42 57 b3 bf 65 9c 7e 6a 48 ba a0 e3 b6 1f e5 d2 3e 1e 48 03 14 08 31 c9 48 ff e2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

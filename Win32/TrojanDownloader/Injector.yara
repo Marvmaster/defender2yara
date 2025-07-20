@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Injector_B_2147624397_0
         $x_1_3 = {8b 70 08 8b 3d ?? ?? 40 00 68 ?? ?? 40 00 68 83 00 00 00 56}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win32_Injector_C_2147624398_0
         $x_1_4 = "Mshucx.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule TrojanDownloader_Win32_Injector_ZA_2147925202_0
         $x_1_1 = {da 20 17 0d 6a cc 49 53 fe 54 b2 1f 52 79 08 71 59 b3 64 44 d0 5a 8b 19 95 6e 09 58 2e 4e 70 4d 9b 89 46 cf a4 5a 3c c5 74 5a ed c6 d3 bf 40 5c 79 9c bd 47 23 9b 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

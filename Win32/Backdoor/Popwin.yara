@@ -23,6 +23,7 @@ rule Backdoor_Win32_Popwin_A_2147581715_0
         $x_5_9 = {be 00 10 40 00 b9 04 00 00 00 8b f9 81 fe ?? ?? ?? ?? 7f 10 ac 47 04 18 2c 02 73 f0 29 3e 03 f1 03 f9 eb e8 ba 00 00 40 00 8d b2 ?? ?? 00 00 8b 46 0c 85 c0 [0-6] 03 c2 8b 7e 10 8b 1e 85 db 75 02 8b df 03 da 03 fa 52 57 50 ff 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule Backdoor_Win32_Popwin_C_2147583270_0
         $x_1_4 = "5.2.3790.1830" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Backdoor_Win32_Popwin_D_2147595113_0
         $x_1_2 = {6a 01 68 b8 0b 00 00 8d 85 ?? ?? ff ff 68 ?? ?? ?? ?? 50 be ?? ?? ?? ?? 53 56 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Backdoor_Win32_Popwin_E_2147595114_0
         $n_100_6 = "360safeupload_mutex" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -127,6 +131,7 @@ rule Backdoor_Win32_Popwin_F_2147601601_0
         $x_1_4 = {77 69 6e 6c 6f 67 6f 6e 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +155,7 @@ rule Backdoor_Win32_Popwin_H_2147601660_0
         $x_1_3 = {57 72 69 74 65 50 72 6f 63 65 73 73 4d 65 6d 6f 72 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +179,7 @@ rule Backdoor_Win32_Popwin_G_2147603661_0
         $x_1_3 = {70 6f 70 77 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -193,6 +200,7 @@ rule Backdoor_Win32_Popwin_C_2147603662_0
         $x_1_1 = {e8 56 f5 ff ff 8b ?? ?? 30 40 00 8b ?? ?? 30 40 00 8b ?? ?? 30 40 00 83 c4 0c 85 c0 74 19 50 6a 00 68 01 04 10 00 ff d7 8b e8 6a 01 55 ff d6 6a 00 55 ff d6 55 ff d3 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +226,7 @@ rule Backdoor_Win32_Popwin_G_2147630242_0
         $x_1_6 = {73 6c 65 65 70 74 69 6d 65 00 00 00 6e 6f 68 69 64 65 00 00 75 6b 65 79 00 00 00 00 70 6f 70 77 69 6e 00 00 61 64 73 63 6c 69 63 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -244,6 +253,7 @@ rule Backdoor_Win32_Popwin_I_2147640010_0
         $x_2_6 = "rtvscan" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_2_*))) or

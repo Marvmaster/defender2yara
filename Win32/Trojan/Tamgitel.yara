@@ -17,6 +17,7 @@ rule Trojan_Win32_Tamgitel_A_2147842608_0
         $x_1_3 = {57 37 df 52 c2 41 ?? 45 c2 41 ?? 67 c2 41 ?? 68 c2 41 ?? 51}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

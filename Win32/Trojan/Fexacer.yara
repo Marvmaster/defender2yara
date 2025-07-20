@@ -18,6 +18,7 @@ rule Trojan_Win32_Fexacer_A_2147626852_0
         $x_1_4 = "Software\\Microsoft\\MacAddress" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

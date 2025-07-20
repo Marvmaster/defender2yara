@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_SmaCod_A_2147718557_0
         $x_1_4 = {89 45 fc 85 c0 75 08 6a ff ff 15 ?? ?? ?? ?? 8b 45 fc ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_SmaCod_B_2147719068_0
         $x_1_3 = {83 7d fc 00 74 ?? ff 55 ?? 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -75,6 +77,7 @@ rule TrojanDownloader_Win32_SmaCod_C_2147719069_0
         $x_1_5 = {83 7d fc 00 74 ?? ff 55 ?? 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

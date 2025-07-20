@@ -21,6 +21,7 @@ rule Backdoor_MSIL_Soblacod_A_2147711488_0
         $x_1_7 = {23 00 7c 00 20 00 5b 00 [0-32] 5b 00 45 00 4e 00 54 00 45 00 52 00 5d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

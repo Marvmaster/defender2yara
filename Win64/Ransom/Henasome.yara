@@ -22,6 +22,7 @@ rule Ransom_Win64_Henasome_P_2147753158_0
         $x_1_7 = ":\\Windows\\System32\\cmdkey.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Win64_Henasome_MA_2147832359_0
         $x_1_4 = "SUATAUAVAWH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

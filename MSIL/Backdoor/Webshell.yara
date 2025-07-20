@@ -22,6 +22,7 @@ rule Backdoor_MSIL_Webshell_MBIH_2147889120_0
         $x_1_7 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_MSIL_Webshell_SPXF_2147911823_0
         $x_1_1 = {0b 73 1b 00 00 0a 06 06 6f ?? ?? ?? 0a 07 16 07 8e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Backdoor_MSIL_Webshell_MBXH_2147916534_0
         $x_1_3 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Backdoor_MSIL_Webshell_MBXT_2147922341_0
         $x_1_4 = "FastObjectFactory_app_web_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

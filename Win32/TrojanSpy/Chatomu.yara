@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Chatomu_A_2147709228_0
         $x_1_6 = {5c 00 77 00 2e 00 74 00 6d 00 70 00 [0-16] 63 00 61 00 6d 00 [0-16] 62 00 6c 00 6f 00 6b 00 7a 00 62 00 65 00 6c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

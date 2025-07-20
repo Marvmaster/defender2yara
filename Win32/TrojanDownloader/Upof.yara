@@ -25,6 +25,7 @@ rule TrojanDownloader_Win32_Upof_A_2147659025_0
         $x_10_11 = {0f 84 08 01 00 00 89 06 66 81 7e 04 b3 d7 0f 85 ?? ?? 00 00 66 ff 4e 04 6a 00 ff 36 e8 ?? ?? ?? ff 40 0f 84 ?? ?? 00 00 2d ?? ?? 00 00 73 ?? 31 c0 6a 00 6a 00 50 ff 36 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

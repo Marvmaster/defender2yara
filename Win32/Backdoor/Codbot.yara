@@ -25,6 +25,7 @@ rule Backdoor_Win32_Codbot_BY_2147583214_0
         $x_1_11 = "\\C$\\123456111111111111111.doc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

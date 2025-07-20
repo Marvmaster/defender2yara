@@ -21,6 +21,7 @@ rule VirTool_Win32_Myrddin_D_2147812764_0
         $x_1_7 = ").AddConn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -55,6 +56,7 @@ rule VirTool_Win32_Myrddin_D_2147812764_1
         $x_1_15 = ").RemoteSock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 

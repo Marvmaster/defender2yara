@@ -21,6 +21,7 @@ rule Trojan_Win32_KillAv_YA_2147733369_0
         $x_1_6 = "\\KasperSky Lab\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

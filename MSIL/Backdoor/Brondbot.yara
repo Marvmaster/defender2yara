@@ -20,6 +20,7 @@ rule Backdoor_MSIL_Brondbot_A_2147656002_0
         $x_1_6 = "UdpFlood" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

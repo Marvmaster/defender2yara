@@ -20,6 +20,7 @@ rule Trojan_Win32_Oficla_A_141584_0
         $x_1_6 = {0f b6 79 01 0f b6 4d ?? bb 01 00 00 00 89 d8 d3 e0 85 45 ?? 0f 85 ?? ?? ff ff 8b 45 ?? ba ff ff ff ff c1 f8 03 8d 0c c5 08 00 00 00 83 f9 20 74 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -47,6 +48,7 @@ rule Trojan_Win32_Oficla_B_143021_0
         $x_1_4 = {c7 44 24 04 ce fe a3 73 c7 04 24 37 09 84 36 e8 ?? ?? ?? ?? 8d 95 ?? ?? ?? ?? a3 ?? ?? ?? ?? 89 14 24 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win32_Oficla_C_143022_0
         $x_1_4 = {43 3a 5c 00 25 75 00 00 00 00 47 45 54 20 2f 25 73 20 48 54 54 50 2f 31 2e 31 0d 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win32_Oficla_E_143849_0
         $x_1_2 = {ff 53 04 8d 93 ?? ?? 00 00 83 ec 08 89 ?? ?? ff d0 83 e8 01 83 ec 04 83 f8 01 76 22}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_Win32_Oficla_E_143849_1
         $x_1_5 = {8b 45 0c 8b 5d 08 c7 44 24 04 c9 f8 00 00 c7 04 24 00 00 00 00 89 44 24 08 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -145,6 +150,7 @@ rule Trojan_Win32_Oficla_E_143849_2
         $x_2_8 = {83 f8 04 be 01 00 00 00 77 f6 ff 24 85 ?? ?? ?? ?? 8d 45 f3 b9 7c 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             ((5 of ($x_2_*))) or
@@ -173,6 +179,7 @@ rule Trojan_Win32_Oficla_F_144772_0
         $x_1_2 = {56 56 56 8d 45 fc 50 89 75 fc ff 15 ?? ?? 00 10 85 c0 74 16 56 56 68 ?? ?? 00 10 68 ?? ?? 00 10 56 e8 ?? ?? ?? ?? 85 c0 74 0d 68 ?? ?? ?? ?? ff 15 ?? ?? 00 10 eb c9 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +203,7 @@ rule Trojan_Win32_Oficla_H_146841_0
         $x_1_3 = {55 89 e5 83 ec 18 8d 45 ff c6 45 ff 00 89 04 24 e8 ?? ?? ?? ?? 83 ec 04 c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +227,7 @@ rule Trojan_Win32_Oficla_L_148111_0
         $x_1_4 = {30 01 83 c1 01 83 fa 10 75 ec 83 c3 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -240,6 +249,7 @@ rule Trojan_Win32_Oficla_M_148130_0
         $x_1_2 = {30 0c 02 40 83 f8 10 75 f1 83 c2 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -263,6 +273,7 @@ rule Trojan_Win32_Oficla_M_148130_1
         $x_1_4 = {69 6e 74 72 6f 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -286,6 +297,7 @@ rule Trojan_Win32_Oficla_N_148799_0
         $x_3_4 = {80 7b ff 3f 74 ?? c6 03 26 43 8b 17 83 3c d5 ?? ?? ?? ?? 05 74}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -308,6 +320,7 @@ rule Trojan_Win32_Oficla_O_148889_0
         $x_1_3 = {32 30 30 20 43 6f 6e 6e 65 63 74 69 6f 6e 20 65 73 74 61 62 6c 69 73 68 65 64 0d 0a 0d 0a 00 50 72 6f 78 79 2d 43 6f 6e 6e 65 63 74 69 6f 6e 3a 00 47 45 54 00 50 4f 53 54 00 50 55 54 00 48 45 41 44 00 43 4f 4e 4e 45 43 54}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -331,6 +344,7 @@ rule Trojan_Win32_Oficla_P_149166_0
         $x_1_4 = "inetmib1.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -357,6 +371,7 @@ rule Trojan_Win32_Oficla_Q_149334_0
         $x_1_4 = "&tm=1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -382,6 +397,7 @@ rule Trojan_Win32_Oficla_R_149335_0
         $x_1_2 = {30 0c 02 40 83 f8 10 75 f1 83 c2 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -404,6 +420,7 @@ rule Trojan_Win32_Oficla_S_149336_0
         $x_1_3 = {69 6e 74 72 6f 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -428,6 +445,7 @@ rule Trojan_Win32_Oficla_T_149855_0
         $x_1_5 = {75 73 65 72 69 6e 69 74 78 78 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             ((1 of ($x_20_*) and 1 of ($x_10_*))) or
@@ -454,6 +472,7 @@ rule Trojan_Win32_Oficla_V_152766_0
         $x_1_3 = {0d 00 00 00 80 ba ff e8 a4 35 89 d1 31 d2 f7 f1 81 c2 00 e1 f5 05 c6 45 ?? 25 c6 45 ?? 64 c6 45 ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -475,6 +494,7 @@ rule Trojan_Win32_Oficla_AB_156268_0
         $x_1_2 = {69 6e 74 72 6f 2e 64 6c 6c 00 44 6c 6c 4d 61 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -496,6 +516,7 @@ rule Trojan_Win32_Oficla_AC_156319_0
         $x_1_2 = {69 6e 74 72 6f 2e 64 6c 6c 00 44 6c 6c 4d 61 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -519,6 +540,7 @@ rule Trojan_Win32_Oficla_AE_156798_0
         $x_1_4 = {8b 14 87 01 da 80 3a 47 75 ea 80 7a 03 50 75 e4 80 7a 07 41 75 de}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -542,6 +564,7 @@ rule Trojan_Win32_Oficla_AG_157466_0
         $x_1_4 = "BitDefender 10" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -567,6 +590,7 @@ rule Trojan_Win32_Oficla_AI_159405_0
         $x_1_6 = {69 62 61 6e 6b 2e 61 6c 66 61 62 61 6e 6b 2e 72 75 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -593,6 +617,7 @@ rule Trojan_Win32_Oficla_AK_164091_0
         $x_1_3 = {0f be 00 83 f8 48 75 32 8b ?? ?? ?? ?? ?? 0f be 40 03 83 f8 74 75 23}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

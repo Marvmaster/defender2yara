@@ -20,6 +20,7 @@ rule Backdoor_Win32_Syskit_A_2147742883_0
         $x_10_6 = "C:\\Users\\sdfd\\Documents\\VisualStudio2015\\Projects\\BAK.net4\\BAK\\obj\\Release\\mscorsvw.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_2_*))) or
             ((2 of ($x_10_*))) or

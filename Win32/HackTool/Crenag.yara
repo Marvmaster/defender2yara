@@ -21,6 +21,7 @@ rule HackTool_Win32_Crenag_A_2147720931_0
         $x_1_7 = "Password: %ls" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

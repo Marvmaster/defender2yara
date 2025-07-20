@@ -19,6 +19,7 @@ rule Ransom_MSIL_Jcrypt_DA_2147772569_0
         $x_1_4 = "AFTER PAYMENT IS SENT YOUR FILES WILL BE DECRYPTED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_MSIL_Jcrypt_DB_2147773261_0
         $x_1_4 = ".jcrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Ransom_MSIL_Jcrypt_DC_2147774379_0
         $x_1_6 = ".daddycrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or

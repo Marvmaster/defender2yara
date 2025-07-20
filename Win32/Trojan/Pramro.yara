@@ -24,6 +24,7 @@ rule Trojan_Win32_Pramro_A_2147600633_0
         $x_1_10 = {4f 4b 5f 41 64 64 65 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule Trojan_Win32_Pramro_B_2147607410_0
         $x_1_3 = "NETSD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

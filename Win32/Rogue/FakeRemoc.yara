@@ -21,6 +21,7 @@ rule Rogue_Win32_FakeRemoc_140542_0
         $x_1_7 = {72 65 6c 65 61 73 65 5c 53 45 43 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule Rogue_Win32_FakeRemoc_140542_1
         $x_1_7 = "AntiSpywareMaster" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -82,6 +84,7 @@ rule Rogue_Win32_FakeRemoc_140542_2
         $x_1_9 = "naction=%d&" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -115,6 +118,7 @@ rule Rogue_Win32_FakeRemoc_140542_3
         $x_1_10 = {53 63 61 6e 52 65 70 6f 72 74 73 00 52 65 70 6f 72 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -147,6 +151,7 @@ rule Rogue_Win32_FakeRemoc_140542_4
         $x_1_9 = ">Order information:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -189,6 +194,7 @@ rule Rogue_Win32_FakeRemoc_140542_5
         $x_1_14 = "ShellHookName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -214,6 +220,7 @@ rule Rogue_Win32_FakeRemoc_140542_6
         $x_1_2 = {54 6f 74 61 6c 53 63 61 6e 43 6f 75 6e 74 [0-6] 49 6e 66 65 63 74 69 6f 6e 43 6f 75 6e 74 [0-6] 49 73 50 61 69 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -236,6 +243,7 @@ rule Rogue_Win32_FakeRemoc_140542_7
         $x_1_3 = {53 70 79 77 61 72 65 52 65 6d 6f 76 65 72 32 30 30 39 20 69 73 20 62 65 69 6e 67 20 64 6f 77 6e 6c 6f 61 64 65 64 20 74 6f 20 50 43 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -258,6 +266,7 @@ rule Rogue_Win32_FakeRemoc_140542_8
         $x_1_3 = "3A9377A6-BE7F-485D-908C-D44114691389" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -282,6 +291,7 @@ rule Rogue_Win32_FakeRemoc_140542_9
         $x_1_5 = "DownloadProductURL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -308,6 +318,7 @@ rule Rogue_Win32_FakeRemoc_140542_10
         $x_1_3 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -336,6 +347,7 @@ rule Rogue_Win32_FakeRemoc_140542_11
         $x_10_9 = "actn_password" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 3 of ($x_5_*))) or
             ((6 of ($x_10_*) and 1 of ($x_5_*))) or
@@ -362,6 +374,7 @@ rule Rogue_Win32_FakeRemoc_140542_12
         $x_1_3 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -392,6 +405,7 @@ rule Rogue_Win32_FakeRemoc_140542_13
         $x_1_11 = " partially erases .wma files on the comprom" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 4 of ($x_1_*))) or
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -422,6 +436,7 @@ rule Rogue_Win32_FakeRemoc_140542_14
         $x_1_6 = "STAT_URL=http://insf.quickinstallpack.com/?action={ACTION_ID}&qad=cln&qld={LID}&qaf={AFFID}&cnt={CNT}&lng={LNG}&order_id={OID}&lp={LP}&addt={ADDT}&pc_id={PC_ID}&err={ERR}&abbr={ABBR}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

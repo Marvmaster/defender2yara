@@ -19,6 +19,7 @@ rule Worm_MSIL_Nepinseft_A_2147640902_0
         $x_1_5 = "http://whatismyip.com/automation/n09230945.asp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Worm_MSIL_Nepinseft_B_2147640903_0
         $x_1_3 = "aHR0cDovL3doYXRpc215aXAuY29tL2F1dG9tYXRpb24vbjA5MjMwOTQ1LmFzcA=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

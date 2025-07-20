@@ -17,6 +17,7 @@ rule TrojanSpy_MSIL_KeyLogger_BR_2147706587_0
         $x_1_3 = "entradatrasera=hidad&key=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule TrojanSpy_MSIL_KeyLogger_BS_2147706673_0
         $x_1_12 = "DisableTaskMGR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule TrojanSpy_MSIL_KeyLogger_BT_2147706784_0
         $x_1_4 = "keybd_event" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule TrojanSpy_MSIL_KeyLogger_BU_2147706798_0
         $x_1_7 = "data source=192.168.0.2;user id=em;password" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule TrojanSpy_MSIL_KeyLogger_BV_2147706839_0
         $x_1_5 = "@gmail.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +152,7 @@ rule TrojanSpy_MSIL_KeyLogger_CH_2147717151_0
         $x_1_7 = "/severalcmds.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -178,6 +184,7 @@ rule TrojanSpy_MSIL_KeyLogger_MA_2147811901_0
         $x_1_11 = "HKEY_CLASSES_ROOT\\http\\shell\\open\\command" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +213,7 @@ rule TrojanSpy_MSIL_KeyLogger_MD_2147819712_0
         $x_1_8 = "get_CapsLock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -236,6 +244,7 @@ rule TrojanSpy_MSIL_KeyLogger_ME_2147819714_0
         $x_1_10 = "SendMail" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -257,6 +266,7 @@ rule TrojanSpy_MSIL_KeyLogger_SRP_2147835601_0
         $x_5_1 = {02 03 04 05 0e 04 0e 05 0e 06 28 ?? ?? ?? 06 2d 06 06 17 58 0a 2b 04 15 0b de 0c 06 1f 0a 31 e0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -279,6 +289,7 @@ rule TrojanSpy_MSIL_KeyLogger_ARA_2147848467_0
         $x_2_2 = "KEYLOGGER" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -305,6 +316,7 @@ rule TrojanSpy_MSIL_KeyLogger_ARA_2147848467_1
         $x_1_6 = "ICredentialsByHost" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -327,6 +339,7 @@ rule TrojanSpy_MSIL_KeyLogger_SK_2147906166_0
         $x_2_2 = "SfkLoader.Form1.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

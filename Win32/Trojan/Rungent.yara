@@ -17,6 +17,7 @@ rule Trojan_Win32_Rungent_A_2147735435_0
         $x_1_3 = "%s\\Microsofts HeIp\\template_%x.DATAHASH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

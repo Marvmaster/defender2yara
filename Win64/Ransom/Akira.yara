@@ -23,6 +23,7 @@ rule Ransom_Win64_Akira_PB_2147844371_0
         $x_1_8 = "D:\\vcprojects\\akira\\asio\\include\\asio\\impl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win64_Akira_AA_2147844607_0
         $x_2_2 = ".akira" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Ransom_Win64_Akira_CT_2147845697_0
         $x_1_4 = "Well, for now let's keep all the tears and resentment to ourselves and try to build a constructive dialogue" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Ransom_Win64_Akira_GID_2147846282_0
         $x_1_5 = "Well, for now let's keep all the tears and resentment to ourselves and try to build a constructive dialogue" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Ransom_Win64_Akira_MKV_2147846874_0
         $x_5_2 = "the internal infrastructure of your company is fully or partially dead, all your backups" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Ransom_Win64_Akira_B_2147849309_0
         $x_1_3 = "Moreover, we have taken a great amount of your corporate data prior to encryption." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Ransom_Win64_Akira_YAA_2147890058_0
         $x_1_1 = {83 e9 08 44 6b c1 22 41 f7 e8 41 03 d0 c1 fa 06 8b c2 c1 e8 1f 03 d0 6b c2 7f 44 2b c0 b8 ?? ?? ?? ?? 41 83 c0 7f 41 f7 e8 41 03 d0 c1 fa 06 8b c2 c1 e8 1f 03 d0 6b c2 7f 44 2b c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +188,7 @@ rule Ransom_Win64_Akira_PA_2147894708_0
         $x_1_2 = "akira_readme.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +210,7 @@ rule Ransom_Win64_Akira_CCDR_2147895769_0
         $x_1_1 = {2b c1 6b c8 ?? b8 ?? ?? ?? ?? f7 e9 03 d1 c1 fa ?? 8b c2 c1 e8 ?? 03 d0 6b c2 ?? 2b c8 83 c1 ?? b8 ?? ?? ?? ?? f7 e9 03 d1 c1 fa ?? 8b c2 c1 e8 ?? 03 d0 6b c2 ?? 2b c8 42 88 4c 05 c1 49 ff c0 49 83 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +236,7 @@ rule Ransom_Win64_Akira_ZA_2147904750_0
         $x_1_5 = "your corporate data prior to encryption" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -251,6 +261,7 @@ rule Ransom_Win64_Akira_AKR_2147911447_0
         $x_1_1 = {4d 8b c3 4d 8b d5 41 83 e5 3f 49 c1 fa 06 4e 8d 1c ed 00 00 00 00 4d 03 dd 41 8a 04 38 41 ff c1 4b 8b 8c d7 10 55 0f 00 49 03 c8 49 ff c0 42 88 44 d9 3e 49 63 c1 48 3b c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -274,6 +285,7 @@ rule Ransom_Win64_Akira_YAB_2147945775_0
         $x_10_3 = {48 89 ca 48 83 e2 03 44 8a 04 14 44 30 c0 88 04 0e 48 ff c1 4c 39 d1}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Worm_Win32_Nusump_A_2147637288_0
         $x_1_5 = {81 3f 2e 75 73 62 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Worm_Win32_Nusump_B_2147644649_0
         $x_1_12 = "resultado %u mails %u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win64_Zenpak_CCEJ_2147897302_0
         $x_1_2 = "payload.bin" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win64_Zenpak_CCHU_2147903509_0
         $x_1_1 = {41 b8 18 01 00 00 45 33 c9 48 8d 15 ?? ?? ?? ?? 48 8b c8 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

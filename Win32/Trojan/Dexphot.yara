@@ -50,6 +50,7 @@ rule Trojan_Win32_Dexphot_2147731153_0
         $x_1_1 = "ocessMdinocessMidssMininocessMindocessMininocessMinin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +72,7 @@ rule Trojan_Win32_Dexphot_2147731153_1
         $x_1_2 = {30 02 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 77 ?? 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 72 ?? 33 c9 b2 01 a1 1d 00 a0 ?? ?? ?? ?? 02 05 ?? ?? ?? ?? 02 05 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 03 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +97,7 @@ rule Trojan_Win32_Dexphot_2147731153_2
         $x_1_5 = {8b 00 83 78 28 00 0f 84 ?? ?? ?? ?? 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

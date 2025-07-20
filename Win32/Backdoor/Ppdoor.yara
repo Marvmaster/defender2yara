@@ -24,6 +24,7 @@ rule Backdoor_Win32_Ppdoor_2147602610_0
         $x_2_8 = "SRV_LOADER" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_2_*))) or
             ((3 of ($x_10_*))) or
@@ -59,6 +60,7 @@ rule Backdoor_Win32_Ppdoor_AV_2147603223_0
         $x_1_12 = "avguard.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

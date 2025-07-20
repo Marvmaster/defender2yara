@@ -20,6 +20,7 @@ rule BrowserModifier_Win64_Shafmia_365261_0
         $x_1_6 = "EdgeInstall.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule BrowserModifier_Win64_Shafmia_365261_1
         $x_1_7 = "set helper=%LocalAppdata%\\ServiceApp\\apps-helper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Backdoor_MSIL_Lyceum_JFV_2147828128_0
         $x_1_2 = "cyberclub.one" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Backdoor_Win32_Dograft_A_2147595124_0
         $x_3_9 = "/%d.asp?%c HTTP/1.1" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))

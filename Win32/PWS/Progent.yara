@@ -83,6 +83,7 @@ rule PWS_Win32_Progent_B_2147575706_0
         $x_3_68 = "Not Recorded!" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((25 of ($x_3_*) and 25 of ($x_1_*))) or
             ((26 of ($x_3_*) and 22 of ($x_1_*))) or

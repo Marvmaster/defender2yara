@@ -19,6 +19,7 @@ rule DoS_Win64_WalnutWipe_A_2147833459_0
         $x_100_4 = "-r -s -q c:\\* & shutdown -s -t 00 -f" wide //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

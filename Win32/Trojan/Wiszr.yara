@@ -18,6 +18,7 @@ rule Trojan_Win32_Wiszr_A_2147684725_0
         $x_1_4 = "dwm.exe -pool" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Wiszr_B_2147685590_0
         $x_1_5 = "dwm.exe -poolip=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Wiszr_C_2147686403_0
         $x_2_6 = {73 23 8b 4d c8 c1 e1 08 89 4d c8 8b 55 ec c1 e2 08 8b 45 d0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_2_*))) or
             ((1 of ($x_10_*) and 1 of ($x_4_*) and 1 of ($x_2_*))) or

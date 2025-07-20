@@ -21,6 +21,7 @@ rule Trojan_Win32_Obfuse_RA_2147755588_0
         $x_1_6 = "Q8aeHLTrd6yMuBi9XQVm82qTLLzE231" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_Win32_Obfuse_PR_2147933953_0
         $x_1_10 = "SOF_TWA_RE\\Mic_ro_soft\\Win_dows\\Cur_rent_Vers_ion\\_Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +86,7 @@ rule Trojan_Win32_Obfuse_PR_2147933953_1
         $x_1_13 = ".exe|" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +108,7 @@ rule Trojan_Win32_Obfuse_A_2147946016_0
         $x_1_2 = {c7 45 e4 47 65 74 54 c7 45 e8 69 63 6b 43 c7 45 ec 6f 75 6e 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

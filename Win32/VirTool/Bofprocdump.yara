@@ -19,6 +19,7 @@ rule VirTool_Win32_Bofprocdump_A_2147901296_0
         $x_1_5 = "bofstop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

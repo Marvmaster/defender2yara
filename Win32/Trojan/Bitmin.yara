@@ -19,6 +19,7 @@ rule Trojan_Win32_Bitmin_BM_2147838853_0
         $x_1_4 = "ping 127.0.0.1 -n 8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Bitmin_NB_2147895469_0
         $x_1_2 = "VC6_IN_VM_Dll_2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

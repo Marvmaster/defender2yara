@@ -16,6 +16,7 @@ rule Trojan_Win32_ShellcodeLauncher_RDA_2147901397_0
         $x_2_1 = {89 45 e0 8b f4 6a 40 68 00 10 00 00 8b 45 ec 50 6a 00 ff 15}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

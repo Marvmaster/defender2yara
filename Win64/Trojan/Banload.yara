@@ -32,6 +32,7 @@ rule Trojan_Win64_Banload_EC_2147907131_0
         $x_1_17 = "All seems fine for TLSCallbackProcess." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

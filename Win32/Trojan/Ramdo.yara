@@ -16,6 +16,7 @@ rule Trojan_Win32_Ramdo_A_2147684705_0
         $x_1_2 = {6a 03 6a 00 e8 ?? ?? ?? ?? 83 c4 0c 89 45 fc 8b 45 10 50 8b 4d 0c 51 8b 55 08 52 ff 55 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Ramdo_E_2147688104_0
         $x_1_5 = {89 85 bc fb ff ff 83 bd bc fb ff ff 00 76 0f c7 85 dc fd ff ff 01 00 00 00 e9 ?? ?? 00 00 eb ?? c7 85 b8 fb ff ff 08 02 00 00 83 bd d8 fd ff ff 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Ramdo_F_2147691714_0
         $x_1_4 = {68 27 a8 02 84 6a 03 6a 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -91,6 +94,7 @@ rule Trojan_Win32_Ramdo_G_2147691787_0
         $x_1_6 = {64 a1 30 00 00 00 89 45 ?? 8b 45 ?? 8b (40|48) 0c 89 (45|4d) ?? 8b (45|55) ?? 83 (c0|c2) 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -126,6 +130,7 @@ rule Trojan_Win32_Ramdo_H_2147692029_0
         $x_1_12 = {68 45 7d 80 db 6a 03 56 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -30,6 +30,7 @@ rule Ransom_MSIL_Sodinokibi_MA_2147817322_0
         $x_1_15 = "DecryptFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

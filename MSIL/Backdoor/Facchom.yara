@@ -24,6 +24,7 @@ rule Backdoor_MSIL_Facchom_A_2147687542_0
         $x_1_10 = "message=FileUploadCompleted&file=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

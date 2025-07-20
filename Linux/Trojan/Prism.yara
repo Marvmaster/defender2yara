@@ -17,6 +17,7 @@ rule Trojan_Linux_Prism_B_2147816690_0
         $x_1_2 = {bf 00 00 00 00 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 85 c0 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

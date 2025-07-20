@@ -20,6 +20,7 @@ rule Trojan_Win32_Nertof_A_2147716800_0
         $x_1_6 = "0=102030@@#####" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

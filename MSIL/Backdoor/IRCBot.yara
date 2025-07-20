@@ -18,6 +18,7 @@ rule Backdoor_MSIL_IRCBot_L_2147719794_0
         $x_1_4 = {21 00 62 00 61 00 6e 00 20 00 ?? ?? 21 00 64 00 6c 00 20 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

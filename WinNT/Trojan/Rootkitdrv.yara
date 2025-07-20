@@ -18,6 +18,7 @@ rule Trojan_WinNT_Rootkitdrv_B_2147647350_0
         $x_1_4 = "Hook ok!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

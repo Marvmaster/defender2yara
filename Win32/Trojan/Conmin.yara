@@ -19,6 +19,7 @@ rule Trojan_Win32_Conmin_A_2147664273_0
         $x_2_5 = " -t 6 -o http://mining.eligius.st:8337 -u" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

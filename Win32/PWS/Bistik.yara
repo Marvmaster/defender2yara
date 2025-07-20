@@ -18,6 +18,7 @@ rule PWS_Win32_Bistik_A_2147656927_0
         $x_1_4 = {61 70 70 6d 67 6d 74 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

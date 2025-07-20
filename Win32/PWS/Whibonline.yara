@@ -23,6 +23,7 @@ rule PWS_Win32_Whibonline_A_2147583268_0
         $x_1_8 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 6 of ($x_1_*))) or
             (all of ($x*))

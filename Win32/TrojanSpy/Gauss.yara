@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Gauss_A_2147660321_0
         $x_1_2 = {6a 02 57 6a 05 68 00 00 00 40 50 ff 15 ?? ?? ?? ?? 8b f0 83 fe ff 75 ?? ff 15 ?? ?? ?? ?? 8b d8 83 4d fc ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanSpy_Win32_Gauss_B_2147660322_0
         $x_1_2 = {50 6a 68 ff 15 ?? ?? ?? ?? 3b c6 0f 84 ?? ?? ?? ?? 83 f8 68 0f 87 ?? ?? ?? ?? 8d 85 f0 fe ff ff 50 89 75 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanSpy_Win32_Gauss_C_2147660323_0
         $x_1_4 = {68 80 00 00 00 68 00 00 00 40 8d 4d d4 51 8d 4d 98 e8 ?? ?? ?? ?? c6 45 fc 04 c6 45 fc 05 8d 4d 98 e8 ?? ?? ?? ?? c7 45 fc 04 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule TrojanSpy_Win32_Gauss_D_2147660324_0
         $x_1_2 = {83 78 18 08 56 57 8b f9 72 05 8b 40 04 eb 03 83 c0 04 6a 00 6a 00 6a 02 6a 00 6a 05 68 00 00 00 40 50 ff 15 ?? ?? ?? ?? 8b f0 83 fe ff 75 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule TrojanSpy_Win32_Gauss_E_2147660325_0
         $x_1_3 = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule TrojanSpy_Win32_Gauss_F_2147660326_0
         $x_1_3 = "creditlibanais" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule TrojanSpy_Win32_Gauss_A_2147660327_0
         $x_1_2 = {57 6a 0d e8 ?? ?? ?? 00 59 59 89 45 f0 c6 45 fc 05 85 c0 74 ?? 8b 4b 0c 83 60 08 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +181,7 @@ rule TrojanSpy_Win32_Gauss_G_2147660357_0
         $x_1_2 = {89 7d fc 50 8d 45 fc 68 86 0b 00 00 50 6a 65 57 89 7d ?? 89 7d ?? 89 7d ?? e8 07 0e 00 00 3b c7 74 0b 3d ea 00 00 00 0f 85 ?? ?? ?? ?? 6a 66 e8 ?? ?? ?? ?? 39 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +205,7 @@ rule TrojanSpy_Win32_Gauss_G_2147660357_1
         $x_1_3 = "target.lnk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +229,7 @@ rule TrojanSpy_Win32_Gauss_H_2147660358_0
         $x_1_3 = "target.lnk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

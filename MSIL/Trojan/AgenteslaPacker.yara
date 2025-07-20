@@ -25,6 +25,7 @@ rule Trojan_MSIL_AgenteslaPacker_2147780085_0
         $x_1_10 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +59,7 @@ rule Trojan_MSIL_AgenteslaPacker_2147780085_1
         $x_1_13 = "costura.costura.dll.compressed" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

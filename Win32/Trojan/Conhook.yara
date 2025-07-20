@@ -22,6 +22,7 @@ rule Trojan_Win32_Conhook_B_99907_0
         $x_1_8 = "Software\\Microsoft\\Rasap2K" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Trojan_Win32_Conhook_B_99907_1
         $x_1_4 = "Software\\Microsoft\\af%08x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))
@@ -78,6 +80,7 @@ rule Trojan_Win32_Conhook_B_99907_2
         $x_1_8 = "{40910BCF-0B02-417e-8C81-BC2124376133}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_5_*))) or
             ((3 of ($x_10_*) and 1 of ($x_5_*))) or
@@ -112,6 +115,7 @@ rule Trojan_Win32_Conhook_B_99907_3
         $x_1_11 = "F7EE3DF8-A9D0-47f2-9494-4DDE0B2F0475" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -145,6 +149,7 @@ rule Trojan_Win32_Conhook_B_99907_4
         $x_1_11 = "F7EE3DF8-A9D0-47f2-9494-4DDE0B2F0475" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -174,6 +179,7 @@ rule Trojan_Win32_Conhook_D_113087_0
         $x_1_7 = "http://65.243.103.58/trafc-2/rfe.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*))) or
             (all of ($x*))
@@ -201,6 +207,7 @@ rule Trojan_Win32_Conhook_D_113087_1
         $x_1_5 = {53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c (4a 75|4d 53 20 4a 75)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -236,6 +243,7 @@ rule Trojan_Win32_Conhook_C_114806_0
         $x_2_16 = "http://65.243.103.80/80" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 6 of ($x_1_*))) or
             ((5 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -276,6 +284,7 @@ rule Trojan_Win32_Conhook_G_115771_0
         $x_1_15 = "http://retssam.com/hm/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -301,6 +310,7 @@ rule Trojan_Win32_Conhook_I_121775_0
         $x_1_3 = {68 01 00 00 00 68 a6 7e c6 41}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -325,6 +335,7 @@ rule Trojan_Win32_Conhook_P_131451_0
         $x_4_5 = {44 4e 52 75 6e 00 44 4e 53 65 74 75 70 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77 00 44 6c 6c 47 65 74 43 6c 61 73 73 4f 62 6a 65 63 74 00 44 6c 6c 52 65 67 69 73 74 65 72 53 65 72 76 65 72 00 4e 6f 74 69 66 79 53 68 75 74 64 6f 77 6e 00 4e 6f 74 69 66 79 53 74 61 72 74 75 70 00}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
@@ -358,6 +369,7 @@ rule Trojan_Win32_Conhook_Q_138695_0
         $x_1_9 = "juan_track" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_50_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 1 of ($x_50_*) and 1 of ($x_1_*))) or

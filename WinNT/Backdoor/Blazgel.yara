@@ -16,6 +16,7 @@ rule Backdoor_WinNT_Blazgel_A_2147614434_0
         $x_1_2 = {74 43 8b 45 fc 66 8b 00 8b d8 66 81 e3 00 f0 66 81 fb 00 30 75 1e 25 ff 0f 00 00 ff 45 f4 03 01 8b 1c 30 2b 5f 1c 3b 5d 0c 75 09 66 81 7c 30 fe c7 05 74 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

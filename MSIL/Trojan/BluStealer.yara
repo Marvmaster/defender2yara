@@ -18,6 +18,7 @@ rule Trojan_MSIL_BluStealer_NX_2147828209_0
         $x_1_3 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_BluStealer_QH_2147828799_0
         $x_1_3 = ".lnk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_MSIL_BluStealer_RDA_2147833882_0
         $x_1_6 = "GetDomain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_MSIL_BluStealer_A_2147837084_0
         $x_2_3 = {00 00 01 25 16 1f 25 9d 6f 22 00 00 0a 06 00 00 00 04 17 8d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_MSIL_BluStealer_FAI_2147845047_0
         $x_1_4 = "Wallet info request - insert bitcoin wallet address" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

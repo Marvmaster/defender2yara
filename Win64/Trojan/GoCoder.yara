@@ -25,6 +25,7 @@ rule Trojan_Win64_GoCoder_MA_2147844481_0
         $x_1_10 = "email ITSEMAIL . i will send you decrytion tool" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

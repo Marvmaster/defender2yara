@@ -18,6 +18,7 @@ rule Ransom_MSIL_HakunaMatata_SWL_2147925455_0
         $x_1_3 = "$d4d54c73-c442-4f8a-a94c-614cbe7282f3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_MSIL_HakunaMatata_PDZ_2147945076_0
         $x_1_8 = "<RECURSIVE_DIRECTORY_LOOK>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

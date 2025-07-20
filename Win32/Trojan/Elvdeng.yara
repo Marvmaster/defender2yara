@@ -19,6 +19,7 @@ rule Trojan_Win32_Elvdeng_B_2147645569_0
         $x_1_5 = {3a 5c 70 6c 75 67 69 6e 01 00 2e 02 00 5c 72 65 6c 65 61 73 65 5c 65 78 65 74 77 6f 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Elvdeng_C_2147645570_0
         $x_1_4 = {3a 5c 70 6c 75 67 69 6e 01 00 2e 02 00 5c 72 65 6c 65 61 73 65 5c 65 78 65 74 68 72 65 65 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Elvdeng_D_2147645571_0
         $x_1_4 = {3a 5c 70 6c 75 67 69 6e 01 00 2e 02 00 5c 72 65 6c 65 61 73 65 5c 65 78 65 6f 6e 65 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_Elvdeng_E_2147645572_0
         $x_1_4 = {3a 5c 70 6c 75 67 69 6e 01 00 2e 02 00 5c 6c 69 62 5c 72 65 6c 65 61 73 65 5c 64 6c 6c 6f 6e 65 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

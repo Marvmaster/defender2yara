@@ -24,6 +24,7 @@ rule Trojan_Win32_Womcodi_2147607894_0
         $x_1_10 = "CCM@ROC\\AUOE^^CQHMVZTT[]]']}qmz" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -55,6 +56,7 @@ rule Trojan_Win32_Womcodi_A_2147616723_0
         $x_1_7 = "B8_bljb&lrn" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_3_*))) or

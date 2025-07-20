@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_WhisperGate_AWH_2147899882_0
         $x_1_1 = {c7 45 f4 a0 b0 40 00 c7 45 f0 c4 b0 40 00 8b 45 10 89 44 24 10 8b 45 0c 89 44 24 0c 8b 45 08 89 44 24 08 8b 45 f0 89 44 24 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

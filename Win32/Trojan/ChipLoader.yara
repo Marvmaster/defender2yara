@@ -16,6 +16,7 @@ rule Trojan_Win32_ChipLoader_RPX_2147912209_0
         $x_1_1 = {52 89 e2 81 c2 04 00 00 00 83 ea 04 87 14 24 5c 89 04 24 89 34 24 56 89 e6 81 c6 04 00 00 00 83 ee 04 87 34 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

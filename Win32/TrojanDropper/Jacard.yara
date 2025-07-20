@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Jacard_GXH_2147923963_0
         $x_10_1 = {0f b6 04 24 30 44 24 01 8d 54 24 01 8b c5 b9 ?? ?? ?? ?? e8 ?? ?? ?? ?? 43 4e}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

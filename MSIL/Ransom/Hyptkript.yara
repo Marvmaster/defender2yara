@@ -17,6 +17,7 @@ rule Ransom_MSIL_Hyptkript_A_2147716794_0
         $x_2_3 = "1463453536_vodafone" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

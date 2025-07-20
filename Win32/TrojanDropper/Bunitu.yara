@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Bunitu_C_2147682521_0
         $x_1_2 = {33 c9 51 50 ff 15 ?? ?? ?? ?? 33 c9 59 ff e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDropper_Win32_Bunitu_C_2147682521_1
         $x_1_8 = {77 49 45 65 ff 4a 84 07 09 e5 9d 81 09 a5 a0 81}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanDropper_Win32_Bunitu_G_2147697071_0
         $x_1_4 = {50 8b c8 8b 41 3c 8b 54 08 78 03 d1 8b 52 1c 8b 14 11 01 14 24 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -93,6 +96,7 @@ rule TrojanDropper_Win32_Bunitu_J_2147718220_0
         $x_1_3 = {8b d2 8b c9 8b d2 ba ?? ?? ?? ?? 8b d2 89 55 ?? 8b d2 83 45 ?? ?? 83 45 ?? ?? 83 6d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule TrojanDropper_Win32_Bunitu_K_2147723145_0
         $x_1_5 = "SYSTEM\\ControlSet001\\Services\\MBAMProtector" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -144,6 +149,7 @@ rule TrojanDropper_Win32_Bunitu_Q_2147723146_0
         $x_1_3 = {50 33 f6 81 c6 62 89 03 00 2b 35 ?? ?? ?? ?? bf af 60 00 00 e8 ?? ?? ?? ?? 66 03 c2 c1 e8 10 05 82 0e 00 00 83 c0 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +174,7 @@ rule TrojanDropper_Win32_Bunitu_XD_2147732006_0
         $x_1_5 = {ba 52 14 40 00 83 ea 02 52}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -190,6 +197,7 @@ rule TrojanDropper_Win32_Bunitu_BS_2147751630_0
         $x_1_2 = {81 e9 09 b5 00 00 51 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +220,7 @@ rule TrojanDropper_Win32_Bunitu_BS_2147751630_1
         $x_1_2 = {ba 06 00 00 00 85 d2 74 ?? a1 ?? ?? ?? ?? 3b 45 ?? 72 ?? eb ?? 8b 4d ?? 03 0d ?? ?? ?? ?? c6 01 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +243,7 @@ rule TrojanDropper_Win32_Bunitu_BS_2147751630_2
         $x_1_2 = {6a 06 6a 06 e8 ?? ?? ?? ?? 83 c4 08 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 83 2d ?? ?? ?? ?? 02 b8 69 00 00 00 8b 0d ?? ?? ?? ?? 66 89 01 ba 65 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -256,6 +266,7 @@ rule TrojanDropper_Win32_Bunitu_BA_2147752687_0
         $x_1_2 = {81 e9 09 b5 00 00 51 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -278,6 +289,7 @@ rule TrojanDropper_Win32_Bunitu_BD_2147752834_0
         $x_1_2 = {81 e9 09 b5 00 00 51 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +311,7 @@ rule TrojanDropper_Win32_Bunitu_MR_2147752877_0
         $x_1_1 = {5e 8b e5 5d c3 1e 00 03 05 ?? ?? ?? ?? 0f be ?? 30 f7 ?? 8b ?? f8 0f be ?? 2b ?? 8b ?? f8 88}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +334,7 @@ rule TrojanDropper_Win32_Bunitu_MS_2147753135_0
         $x_1_2 = "interface\\{" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -344,6 +358,7 @@ rule TrojanDropper_Win32_Bunitu_2147753613_0
         $x_1_2 = "interface\\{" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -365,6 +380,7 @@ rule TrojanDropper_Win32_Bunitu_MU_2147753629_0
         $x_2_1 = {55 8b ec 83 ec ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 8b 3d ?? ?? ?? ?? 33 d7 8b ca 8b c1 c7 45 ?? ?? ?? ?? ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 4d ?? 89 08 5f 8b e5 5d c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -386,6 +402,7 @@ rule TrojanDropper_Win32_Bunitu_MV_2147753751_0
         $x_1_1 = {89 11 5f 8b e5 5d c3 3c 00 50 8f 05 ?? ?? ?? ?? 8b 3d [0-15] 33 05 ?? ?? ?? ?? 8b [0-4] 89 15 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 8b 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -407,6 +424,7 @@ rule TrojanDropper_Win32_Bunitu_MW_2147754008_0
         $x_1_1 = {f7 da 8b 45 ?? 0f be 08 2b ca 8b 55 00 88 0a 5e 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -428,6 +446,7 @@ rule TrojanDropper_Win32_Bunitu_MX_2147754424_0
         $x_1_1 = {8b c7 33 05 ?? ?? ?? ?? 8b c8 8b d1 89 15 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 89 02 5f 8b e5 5d c3 13 00 50 8f 05 ?? ?? ?? ?? 8b 3d ?? ?? ?? ?? 89 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -450,6 +469,7 @@ rule TrojanDropper_Win32_Bunitu_MY_2147755596_0
         $x_1_2 = {33 d0 8b ca 8b c1 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 01 05 11 00 a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -471,6 +491,7 @@ rule TrojanDropper_Win32_Bunitu_MZ_2147755598_0
         $x_1_1 = {8b c8 8b d1 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 89 08 5f 5d c3 06 00 33 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -492,6 +513,7 @@ rule TrojanDropper_Win32_Bunitu_MA_2147756733_0
         $x_1_1 = {83 c4 08 eb ?? 8b 15 ?? ?? ?? ?? 52 e8 ?? ?? ?? ?? 83 c4 04 e8 ?? ?? ?? ?? 83 3d ?? ?? ?? ?? ?? 75 09 00 6a ?? 6a ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -513,6 +535,7 @@ rule TrojanDropper_Win32_Bunitu_MB_2147761849_0
         $x_1_1 = {8b d8 33 d9 8b ff c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 8b db 01 1d ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 89 08 5f 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -534,6 +557,7 @@ rule TrojanDropper_Win32_Bunitu_MC_2147767055_0
         $x_1_1 = {33 c6 2b c8 8b f1 c1 e6 ?? 03 75 ?? 8b c1 c1 e8 ?? 03 45 ?? 03 d9 33 f3 33 f0 c7 05 [0-8] 89 45 ?? 2b d6 8b 45 ?? 29 45 ?? 83 ef ?? 75 ?? 8b 45 ?? 5f 5e 89 10 89 48}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

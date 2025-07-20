@@ -25,6 +25,7 @@ rule BrowserModifier_Win32_Spesseo_236327_0
         $x_2_11 = {74 69 76 65 66 c7 85 ?? ?? ?? ?? 74 77 66 c7 85 ?? ?? ?? ?? 47 6f 66 c7 85 ?? ?? ?? ?? 70 65 c7 85 ?? ?? ?? ?? 6d 65 5c 4e 66 c7 85 ?? ?? ?? ?? 68 2e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -20,6 +20,7 @@ rule Worm_Win32_Muzkas_A_2147649349_0
         $x_1_6 = "javascheds" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Worm_Win32_Muzkas_B_2147655988_0
         $x_1_5 = {37 46 66 f5 76 57 26 17 c6 36 94 d5 26 f7 36 f7 64 95 c7 46 e7 26 57 46 e2 07 46 56 56 c7 07 84 f7 26 57 26 00 00 00 00 55 8b ec 6a 00 53 8b d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

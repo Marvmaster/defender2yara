@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Farnixco_A_2147611248_0
         $x_1_4 = {78 6f 63 6f 70 68 61 72 6f 6e 69 78 00 78 6f 63}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

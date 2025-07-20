@@ -20,6 +20,7 @@ rule TrojanDownloader_MSIL_Torwofun_B_2147697625_0
         $x_1_6 = {4c 00 69 00 74 00 65 00 44 00 42 00 5c 00 ?? ?? 43 00 72 00 79 00 70 00 74 00 6f 00 44 00 42 00 5c 00 ?? ?? 53 00 79 00 6e 00 63 00 20 00 42 00 61 00 63 00 6b 00 75 00 70 00 5c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule TrojanDownloader_MSIL_Torwofun_B_2147697625_1
         $x_1_6 = {4c 00 69 00 74 00 65 00 44 00 42 00 5c 00 ?? ?? 43 00 72 00 79 00 70 00 74 00 6f 00 44 00 42 00 5c 00 ?? ?? 53 00 79 00 6e 00 63 00 20 00 42 00 61 00 63 00 6b 00 75 00 70 00 5c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

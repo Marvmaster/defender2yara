@@ -22,6 +22,7 @@ rule Trojan_Win32_Dinwod_SB_2147752624_0
         $x_1_7 = "FBCookies.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -53,6 +54,7 @@ rule Trojan_Win32_Dinwod_A_2147783206_0
         $x_1_7 = "nice ass:*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +81,7 @@ rule Trojan_Win32_Dinwod_AM_2147813297_0
         $x_1_6 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +109,7 @@ rule Trojan_Win32_Dinwod_RPY_2147887410_0
         $x_1_7 = "Mozilla/4.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +132,7 @@ rule Trojan_Win32_Dinwod_NIT_2147939054_0
         $x_1_2 = {50 89 74 24 40 e8 63 62 01 00 83 c4 0c 68 20 71 43 00 ff 15 60 32 43 00 8b d8 3b de 89 5c 24 24 0f 84 d6 01 00 00 8b 35 5c 32 43 00 68 30 71 43 00 53 ff d6 68 4c 71 43 00 53 8b f8 ff d6 68 5c 71 43 00 53 8b e8 ff d6 85 c0 89 44 24 30 0f 84 a1 01 00 00 85 ed 0f 84 99 01 00 00 85 ff 0f 84 91 01 00 00 6a 00 6a 02 ff d7 8b f0 83 fe ff 89 74 24 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

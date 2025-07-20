@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Karagany_A_2147800837_0
         $x_1_5 = {65 64 65 7f 7c 77 21 73 7e 7f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Karagany_I_2147800988_0
         $x_1_4 = {2a 00 00 00 eb 09 8b 55 ?? 83 c2 01 89 55 ?? 83 7d ?? 2f 73 21}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -71,6 +73,7 @@ rule TrojanDownloader_Win32_Karagany_L_2147801503_0
         $x_1_2 = {ff 45 f8 8b 4d f8 8a 09 84 c9 75 d3 83 65 f8 00 8b ce eb 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule TrojanDownloader_Win32_Karagany_L_2147801503_1
         $x_1_2 = {89 48 08 c7 45 ?? b9 7b 59 42 c7 45 ?? 92 42 63 d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule TrojanDownloader_Win32_Karagany_E_2147801535_0
         $x_1_2 = {8d 04 40 8d 4c 41 45 8a 04 16 81 e1 ff ff 07 00 32 c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule TrojanDownloader_Win32_Karagany_D_2147804108_0
         $x_1_2 = {5c 6e 6f 72 6d 61 6c 69 7a 31 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule TrojanDownloader_Win32_Karagany_C_2147804149_0
         $x_1_4 = "Referer: http://vkontakte.ru/login.php?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -182,6 +189,7 @@ rule TrojanDownloader_Win32_Karagany_H_2147804179_0
         $x_1_2 = {64 8b 71 30 8b 76 0c 8b 76 1c 8b 46 08 89 45 fc 8b 7e 20 8b 36 80 3f 6b 74 07 80 3f 4b 74 02 eb e9 5f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +213,7 @@ rule TrojanDownloader_Win32_Karagany_F_2147804202_0
         $x_1_4 = {8b 51 04 83 ea 08 d1 ea 89 55 f4 8b 45 08 83 c0 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -228,6 +237,7 @@ rule TrojanDownloader_Win32_Karagany_N_2147804208_0
         $x_1_4 = {30 18 40 fe cb 84 db 75 02 b3 e5 e2 f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -251,6 +261,7 @@ rule TrojanDownloader_Win32_Karagany_GEM_2147810540_0
         $x_10_3 = {8b 45 20 8b 80 c8 01 00 00 8b 00 33 c6 2b c7 8b 45 20 75 16 8b 4d 20 8b 89 cc 01 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

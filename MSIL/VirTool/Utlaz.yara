@@ -23,6 +23,7 @@ rule VirTool_MSIL_Utlaz_A_2147816167_0
         $x_1_8 = "PSShell" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule VirTool_MSIL_Utlaz_C_2147816168_0
         $x_1_5 = "AtlasException" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

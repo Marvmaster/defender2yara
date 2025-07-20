@@ -15,6 +15,7 @@ rule MonitoringTool_Win32_Mipko_205563_0
         $x_1_1 = {52 00 45 00 46 00 4f 00 47 00 20 00 53 00 6f 00 66 00 74 00 77 00 61 00 72 00 65 00 00 22 00 46 00 69 00 6c 00 65 00 44 00 65 00 73 00 63 00 72 00 69 00 70 00 74 00 69 00 6f 00 6e 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

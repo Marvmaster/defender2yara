@@ -27,6 +27,7 @@ rule Trojan_Win32_Ouftap_A_2147605125_0
         $x_1_13 = "24h-Ok" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 10 of ($x_1_*))) or
             ((2 of ($x_8_*) and 2 of ($x_1_*))) or
@@ -56,6 +57,7 @@ rule Trojan_Win32_Ouftap_B_2147616541_0
         $x_1_6 = "SYSTEM\\CurrentControlSet\\Control\\CrashImage" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))

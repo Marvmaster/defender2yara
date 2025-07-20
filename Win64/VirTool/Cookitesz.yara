@@ -18,6 +18,7 @@ rule VirTool_Win64_Cookitesz_A_2147921763_0
         $x_1_3 = {44 8b 45 98 33 f6 ?? ?? ?? ?? ?? ?? ?? 48 89 75 a0 [0-20] 45 85 c0 ?? ?? ?? ?? ?? ?? 33 d2 b9 10 04 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule VirTool_Win64_Cookitesz_B_2147924963_0
         $x_1_4 = {4c 89 64 24 30 48 8b f0 48 85 c0 [0-17] 4c 8b ce ?? ?? ?? ?? ?? ?? ?? 48 89 44 24 20 48 8b cb ?? ?? ?? ?? ?? 85 c0 ?? ?? ?? ?? ?? ?? 4c 8b 74 24 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

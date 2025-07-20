@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Pterodo_A_2147720201_0
         $x_1_2 = "http://adobe.update-service.net/index.php?comp=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_Pterodo_B_2147720202_0
         $x_1_3 = {2e 64 6c 6c 00 62 69 74 44 65 66 65 6e 64 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule TrojanDownloader_Win32_Pterodo_K_2147730715_0
         $x_20_15 = ";!@Install@!UTF-8!" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*) and 1 of ($x_1_*))) or
             (all of ($x*))

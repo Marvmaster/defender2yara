@@ -16,6 +16,7 @@ rule PWS_Win32_Racealer_GKM_2147774296_0
         $x_1_1 = {b8 f8 94 08 00 01 45 ?? 8b 45 ?? 8a 04 30 8b 0d ?? ?? ?? ?? 88 04 31 81 3d ?? ?? ?? ?? 03 02 00 00 75 ?? 53 53 ff 15 ?? ?? ?? ?? 89 1d ?? ?? ?? ?? 46 3b 35 ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule PWS_Win32_Racealer_GKM_2147774296_1
         $x_1_17 = "wallets\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +93,7 @@ rule PWS_Win32_Racealer_GKM_2147774296_2
         $x_1_18 = {f6 d1 30 4c 15 ?? 42 83 fa 05 73 ?? 8a 4d ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +116,7 @@ rule PWS_Win32_Racealer_KM_2147776588_0
         $x_1_2 = {30 04 37 83 fb 19 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +148,7 @@ rule PWS_Win32_Racealer_RTH_2147779791_0
         $x_10_11 = "\\Software\\Microsoft\\Internet Account Manager\\Accounts" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))

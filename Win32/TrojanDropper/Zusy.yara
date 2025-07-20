@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Zusy_NITA_2147929288_0
         $x_1_2 = {6a 00 6a 02 e8 0b 16 00 00 8b e8 8d 44 24 10 50 55 c7 44 24 18 28 01 00 00 e8 f0 15 00 00 85 c0 74 5c 8d 4c 24 10 51 55 e8 db 15 00 00 85 c0 74 4d 8b bc 24 3c 01 00 00 8d 74 24 34 8b c7 8a 10 8a 1e 8a ca 3a d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

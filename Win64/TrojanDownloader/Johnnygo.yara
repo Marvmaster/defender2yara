@@ -19,6 +19,7 @@ rule TrojanDownloader_Win64_Johnnygo_A_2147825966_0
         $x_1_4 = "C:/Users/john/go/src/golang.org/x/sys/windows/svc/service.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

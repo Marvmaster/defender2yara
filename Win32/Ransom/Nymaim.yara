@@ -21,6 +21,7 @@ rule Ransom_Win32_Nymaim_A_2147672535_0
         $x_1_7 = {c6 43 08 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win32_Nymaim_B_2147678691_0
         $x_1_4 = {2f 6e 79 6d 61 69 6e 2f [0-15] 2f 69 6e 64 65 78 2e 70 68 70 3a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Ransom_Win32_Nymaim_D_2147684516_0
         $x_1_2 = {89 47 01 c6 47 05 c3 ff 75 ?? (56|57) 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8 40 00 c6 07 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Ransom_Win32_Nymaim_F_2147686321_0
         $x_1_3 = {59 83 e1 03 c1 e1 03 d3 cb 8a 07 30 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

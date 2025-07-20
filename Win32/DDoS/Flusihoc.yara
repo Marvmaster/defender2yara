@@ -26,6 +26,7 @@ rule DDoS_Win32_Flusihoc_A_2147706946_0
         $x_1_12 = {43 43 5f 46 6c 6f 6f 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

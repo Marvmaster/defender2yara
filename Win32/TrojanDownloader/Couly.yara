@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Couly_A_2147597061_0
         $x_1_6 = "URLDownloadToFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

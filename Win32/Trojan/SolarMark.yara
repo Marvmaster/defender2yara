@@ -17,6 +17,7 @@ rule Trojan_Win32_SolarMark_JLA_2147838725_0
         $x_1_2 = {00 bb 58 dd 44 00 8a 86 ?? ?? ?? 00 32 03 a2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

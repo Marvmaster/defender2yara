@@ -22,6 +22,7 @@ rule Backdoor_Win32_Bexelets_A_2147683153_0
         $x_1_8 = "BK.EXC." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

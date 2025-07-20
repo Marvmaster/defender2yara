@@ -17,6 +17,7 @@ rule Spammer_Win32_TMailer_A_2147720965_0
         $x_1_3 = {2f 00 6d 00 61 00 69 00 6c 00 2f 00 [0-8] 2e 00 74 00 78 00 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

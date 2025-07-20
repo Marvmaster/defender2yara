@@ -25,6 +25,7 @@ rule TrojanSpy_Win64_FauxperKeylogger_2147726588_0
         $x_1_11 = {43 6f 72 65 20 3d 20 4b 61 73 70 65 72 73 6b 79 [0-32] 53 65 63 75 72 69 74 79}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Spiloog_A_2147709997_0
         $x_1_3 = "SOFTWARE\\AVD_anvir_sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

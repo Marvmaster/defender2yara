@@ -20,6 +20,7 @@ rule Ransom_Win32_SpyroCrypt_PA_2147783641_0
         $x_1_5 = "netsh firewall set opmode mode=disable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

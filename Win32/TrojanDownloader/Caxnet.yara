@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Caxnet_B_2147628721_0
         $x_1_6 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

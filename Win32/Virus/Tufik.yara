@@ -15,6 +15,7 @@ rule Virus_Win32_Tufik_G_2147601131_0
         $x_3_1 = {55 8b ec 83 c4 fc 60 c7 45 fc 00 00 00 00 e8 00 00 00 00 5b 81 eb ?? 16 40 00 55 8d 83 ?? 17 40 00 50 8d 83 ?? 16 40 00 50 64 ff 35 00 00 00 00 64 89 25 00 00 00 00 8b 7d 08 81 e7 00 00 ff ff 66 81 3f 4d 5a 75 11 8b f7 03 76 3c 66 81 3e 50 45 75 05 89 7d fc eb 10}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Virus_Win32_Tufik_A_2147602395_0
         $x_1_4 = {50 68 06 00 02 00 6a 00 8d 83 ?? ?? ?? ?? 50 68 02 00 00 80 ff 93 ?? ?? ?? ?? 6a 50 8d 83 ?? ?? ?? ?? 50 6a 01 6a 00 8d 83 ?? ?? ?? ?? 50 ff b3 ?? ?? ?? ?? ff 93 ?? ?? ?? ?? ff b3 ?? ?? ?? ?? ff 93 ?? ?? ?? ?? 6a 00 6a 00 6a 00 8d 83 ?? ?? ?? ?? 50 6a 00 6a 00 ff 93 ?? ?? ?? ?? 5f 5e 5b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

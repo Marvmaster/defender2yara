@@ -16,6 +16,7 @@ rule Trojan_Win64_DonutLoader_TL_2147940639_0
         $x_1_1 = {41 b9 04 00 00 00 41 b8 00 30 00 00 31 c9 ba 00 00 50 00 ff d0 49 89 c5 48 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_DonutLoader_TL_2147940639_1
         $x_1_1 = {48 98 0f b6 4c 05 80 8b 85 84 00 00 00 48 63 d0 48 8b 85 a0 00 00 00 48 01 d0 44 89 c2 31 ca 88 10 83 85 84 00 00 00 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win64_DonutLoader_BG_2147943164_0
         $x_5_1 = {46 0f b6 0c 0a 45 89 c2 41 83 f2 ff 44 89 ca 44 21 d2 41 83 f1 ff 45 21 c8 44 09 c2 48 8b 00 48 8b 09 88 14 08}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +82,7 @@ rule Trojan_Win64_DonutLoader_ETL_2147944203_0
         $x_1_1 = {48 63 44 24 20 48 8d 0d 37 11 00 00 0f be 04 01 89 44 24 24 8b 44 24 20 99 83 e0 01 33 c2 2b c2 48 98 48 8b 4c 24 38 0f be 04 01 8b 4c 24 24 33 c8 8b c1 48 63 4c 24 20 48 8b 54 24 30 88 04 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +104,7 @@ rule Trojan_Win64_DonutLoader_C_2147944570_0
         $x_2_1 = {43 8b 14 91 39 c2 7e ?? 41 0f b6 14 00 41 8a 3c 03 48 ff c0 01 ca 48 63 d2 40 88 3c 16 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +132,7 @@ rule Trojan_Win64_DonutLoader_PCO_2147945189_0
         $x_1_7 = "restartAsAdmin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -152,6 +158,7 @@ rule Trojan_Win64_DonutLoader_GRR_2147945416_0
         $x_1_1 = {44 01 c2 0f b6 d2 44 29 c2 41 89 d3 48 63 d2 44 0f b6 04 14 46 88 04 14 88 0c 14 42 02 0c 14 0f b6 c9 0f b6 14 0c 30 13 48 83 c3 01 49 39 d9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

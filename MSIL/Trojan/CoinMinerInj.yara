@@ -19,6 +19,7 @@ rule Trojan_MSIL_CoinMinerInj_2147784686_0
         $x_1_4 = "--cinit-find-" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_MSIL_CoinMinerInj_2147784686_1
         $x_1_10 = "{%COMPUTERNAME%}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

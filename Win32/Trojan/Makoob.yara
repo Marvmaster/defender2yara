@@ -20,6 +20,7 @@ rule Trojan_Win32_Makoob_BM_2147849147_0
         $x_1_5 = "Unsetting\\Bagbens.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Makoob_SPGJ_2147893088_0
         $x_1_6 = "Bernoulli.cru" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_Makoob_NM_2147906168_0
         $x_2_3 = "filerede partshringsregelen knallerist" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Trojan_Win32_Makoob_GA_2147928958_0
         $x_1_6 = "draabningerne flaaningernes nonusing" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule Trojan_Win32_Makoob_SAH_2147934106_0
         $x_1_5 = "Skrabnsespils.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule Trojan_Win32_Makoob_SVMP_2147935333_0
         $x_1_4 = "dobbeltbevidstheds.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +174,7 @@ rule Trojan_Win32_Makoob_SLVM_2147937765_0
         $x_1_4 = "Lssene.Lou" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -194,6 +201,7 @@ rule Trojan_Win32_Makoob_GVA_2147938149_0
         $x_1_6 = "avledygtigheds" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +224,7 @@ rule Trojan_Win32_Makoob_SLOU_2147939186_0
         $x_2_2 = "screeningernes reversibilitet ekviperingshandler" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -238,6 +247,7 @@ rule Trojan_Win32_Makoob_SERY_2147939384_0
         $x_1_2 = "vort skoldende convoluta" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -260,6 +270,7 @@ rule Trojan_Win32_Makoob_SLYY_2147944892_0
         $x_2_2 = "syndebukkens busstoppestedets" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -282,6 +293,7 @@ rule Trojan_Win32_Makoob_SCE_2147944918_0
         $x_2_2 = "civiliser spikiest ekstranummer" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

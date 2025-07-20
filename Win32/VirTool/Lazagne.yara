@@ -21,6 +21,7 @@ rule VirTool_Win32_Lazagne_A_2147816169_0
         $x_1_6 = ".softwares.windows.lsa_secrets" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Ransom_Win64_Ransomhub_B_2147910975_0
         $x_1_3 = "LocalDisks bool \"json:\\\"local_disks\\\"\"; NetworkShares bool \"json:\\\"network_shares\\\"\";" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Ransom_Win64_Ransomhub_C_2147911916_0
         $x_1_1 = {43 00 6f 00 6e 00 66 00 69 00 67 00 2e 00 69 00 6e 00 69 00 00 ?? 00 00 42 00 49 00 4e 00 00 00 2d 70 61 73 73 00 00 00 70 61 73 73 3a 0a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

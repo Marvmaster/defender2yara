@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_RibDoor_A_2147743210_0
         $x_1_2 = "http://pastebin.com/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

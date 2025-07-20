@@ -20,6 +20,7 @@ rule TrojanDownloader_MSIL_Getete_A_2147706184_0
         $x_1_6 = "\\Desktop\\project\\DllSer\\Service\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

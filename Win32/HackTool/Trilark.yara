@@ -16,6 +16,7 @@ rule HackTool_Win32_Trilark_A_2147749453_0
         $x_1_1 = {25 73 00 00 77 62 00 00 54 68 65 20 66 69 6c 65 20 63 6f 77 62 6f 79 20 69 73 6e 27 74 20 74 68 65 72 65 21 00 00 00 00 72 62 00 00 63 6f 77 62 6f 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule HackTool_Win32_Trilark_B_2147749454_0
         $x_1_12 = "Recovery HTA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

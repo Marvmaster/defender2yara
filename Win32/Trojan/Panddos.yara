@@ -18,6 +18,7 @@ rule Trojan_Win32_Panddos_B_2147602285_0
         $x_1_4 = "Login success!Now, you have a system cmd shell^_^A ZA,A ZA,A ZA!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Panddos_C_2147630344_0
         $x_1_6 = "GET ^&&%$%$^%$#^&**(*((&*^%$##$%^&*(*&^%$%^&*.htm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_Win32_Lyposit_A_2147662967_0
         $x_1_5 = {fd ff b8 05 f6 ff 51 be 42 0c 51 be 42 0e 51 be 42 7b 46 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -52,6 +53,7 @@ rule Ransom_Win32_Lyposit_B_2147670482_0
         $x_2_10 = {5a 70 20 a9 40 7c 34 b2 6f 44 3b a8 57 7c 25 b5 6f 50 27 b4 41 76 3c b2 65 76 20 b5 5a 7c 3c 9a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*))) or
             (all of ($x*))
@@ -77,6 +79,7 @@ rule Ransom_Win32_Lyposit_C_2147681488_0
         $x_1_3 = {8b 45 08 8b 40 10 83 c4 14 be 01 00 00 80 83 f8 ff 74 07 3d 00 30 00 00 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -101,6 +104,7 @@ rule Ransom_Win32_Lyposit_D_2147684584_0
         $x_1_5 = {0f be 04 10 8b 4d 08 03 4d f8 0f be 09 33 c1 88 45 f6 8b 45 f8 33 d2 6a 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule HackTool_Linux_Keylogger_A_2147762820_0
         $x_1_5 = "keylogger.py" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

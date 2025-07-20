@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Otlard_A_2147622036_0
         $x_1_2 = {68 db d3 62 b5 89 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Otlard_B_2147631473_0
         $x_1_4 = {6d 73 78 73 6c 74 2e 64 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanDownloader_Win32_Otlard_D_2147658038_0
         $x_1_2 = "\\%c([^\\%c\\%c]+)\\%c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

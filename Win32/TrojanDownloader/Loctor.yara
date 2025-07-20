@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Loctor_A_2147626260_0
         $x_1_2 = {6a 00 ff 15 ?? ?? ?? ?? 89 85 ?? ?? ff ff c6 85 ?? ?? ff ff 02 c6 85 ?? ?? ff ff 00 8b 8d ?? ?? ff ff [0-2] ff 00 00 00 8b ?? ?? ?? ff ff [0-2] ff 00 00 00 3b ?? 0f 85 be 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

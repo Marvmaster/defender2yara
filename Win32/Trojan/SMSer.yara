@@ -20,6 +20,7 @@ rule Trojan_Win32_SMSer_B_2147624267_0
         $x_1_6 = "http://%s.com/registerguid.php?guid={%s}&wid=%d&u=%d&number=%d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_SMSer_B_2147624267_1
         $x_1_7 = "HttpSendRequestW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win32_SMSer_F_2147630880_0
         $x_1_5 = {00 44 69 73 61 62 6c 65 53 61 66 65 4d 6f 64 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -99,6 +102,7 @@ rule Trojan_Win32_SMSer_G_2147632281_0
         $x_1_6 = "*VBOX*" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

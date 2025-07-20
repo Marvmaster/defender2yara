@@ -18,6 +18,7 @@ rule Trojan_Win32_Dinwood_SP_2147753627_0
         $x_1_3 = "\\FBCookiesWin32\\Release" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Dinwood_RPX_2147896323_0
         $x_1_1 = {57 80 37 18 83 c7 04 6a 05 59 ad 31 07 83 c7 04 e2 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

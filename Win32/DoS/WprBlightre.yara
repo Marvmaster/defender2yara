@@ -20,6 +20,7 @@ rule DoS_Win32_WprBlightre_B_2147894424_0
         $x_1_5 = "[+] CPU cores: %d, Threads: %d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule DoS_Win32_WprBlightre_C_2147911327_0
         $x_1_7 = "[+] CPU cores: %d, Threads: %d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

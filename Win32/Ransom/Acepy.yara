@@ -16,6 +16,7 @@ rule Ransom_Win32_Acepy_MKV_2147935319_0
         $x_5_1 = {83 c4 04 89 45 e4 8b 45 f0 8b 4d e4 31 d2 f7 f1 8b 45 0c 01 d0 8b 4d e8 0f be 09 0f be 10 31 d1 8b 45 ?? 88 08 eb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

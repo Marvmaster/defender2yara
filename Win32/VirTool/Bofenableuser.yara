@@ -19,6 +19,7 @@ rule VirTool_Win32_Bofenableuser_A_2147901290_0
         $x_1_5 = "bofstop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

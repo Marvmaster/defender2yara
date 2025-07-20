@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Satacom_BB_2147823846_0
         $x_2_1 = {33 c2 8b 4d 08 8b 11 03 d0 03 55 10 8b 45 0c 8b 08 2b ca 8b 55 0c 89 0a 8b 45 08 8b 4d 0c 8b 11 89 10 83 7d ?? ?? 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_Win32_Satacom_ARA_2147830748_0
         $x_2_1 = {32 04 39 88 04 3b 47 3b 7d 18 72 cd}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule TrojanDownloader_Win32_Satacom_ARA_2147830748_1
         $x_2_1 = {fe c2 0f b6 d2 8b 4c ?? ?? 8d 04 0b 0f b6 d8 8b 44 ?? ?? 89 44 ?? ?? 89 4c ?? ?? 02 c8 0f b6 c1 8b 4d f8 8a 44 ?? ?? 30 04 ?? ?? 3b ?? fc 7c d0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule TrojanDownloader_Win32_Satacom_ARA_2147830748_2
         $x_1_2 = "Cheyenne1\"0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule TrojanDownloader_Win32_Satacom_ASG_2147889416_0
         $x_1_16 = "xVjmbeNt54ZO9DgQLe3EqavU3Vl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule TrojanDownloader_Win32_Satacom_A_2147896074_0
         $x_3_5 = "GetTempPathA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule TrojanDownloader_Win32_Satacom_FV_2147896104_0
         $x_1_2 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

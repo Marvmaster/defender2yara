@@ -17,6 +17,7 @@ rule Trojan_Win32_Dishigy_A_2147640674_0
         $x_1_3 = {c7 80 c8 01 00 00 db 05 00 00 8b 45 f8 83 c0 34 ba ?? ?? ?? ?? e8 ?? ?? ?? ?? b8 75 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Dishigy_B_2147642017_0
         $x_1_4 = "Mozilla/5.0 (Windows" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Dishigy_D_2147653386_0
         $x_1_4 = {8b 41 01 80 39 e9 74 0c 80 39 eb 75 0c 0f be c0 41 41 eb 03 83 c1 05 01 c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_Dishigy_E_2147656274_0
         $x_1_5 = "\\system32\\drivers\\svchost.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Win32_Dishigy_A_2147656348_0
         $x_1_2 = {69 45 f8 e7 03 00 00 50 e8 ?? ?? ?? ?? e9 ?? ?? ?? ?? b2 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule Trojan_Win32_Dishigy_H_2147681906_0
         $x_1_4 = "systemskey.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule Trojan_Win32_Dishigy_J_2147682954_0
         $x_1_3 = "login=[1000]&pass=[1000]&password=[50]&log=[50]&passwrd=[50]&user=[50]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule Trojan_Win32_Dishigy_K_2147706358_0
         $x_1_3 = "quinas Virtuais." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +206,7 @@ rule Trojan_Win32_Dishigy_K_2147706358_1
         $x_1_3 = {74 17 8d 55 f4 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 55 f4 8b c3 e8 ?? ?? ?? ?? 8d 55 f0 a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 45 f0 50 8d 55 ec b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 45 ec 5a e8 ?? ?? ?? ?? 84 c0 74 17 8d 55 e8 b8 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

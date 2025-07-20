@@ -17,6 +17,7 @@ rule VirTool_Win32_Bofadreq_A_2147901294_0
         $x_5_3 = "adcs_request SUCCESS" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

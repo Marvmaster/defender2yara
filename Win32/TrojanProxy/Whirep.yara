@@ -18,6 +18,7 @@ rule TrojanProxy_Win32_Whirep_B_2147610979_0
         $x_2_3 = {e8 0d 00 00 00 5c 73 79 73 72 65 73 74 2e 73 79 73 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

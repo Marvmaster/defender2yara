@@ -20,6 +20,7 @@ rule HackTool_Win32_Eqtonex_A_2147767771_0
         $x_1_5 = {72 65 63 76 53 6f 63 6b 65 74 00 73 65 6e 64 53 6f 63 6b 65 74 73 00 77 72 69 74 65 50 61 72 61 6d 73 54 6f 45 4d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

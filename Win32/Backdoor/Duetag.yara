@@ -21,6 +21,7 @@ rule Backdoor_Win32_Duetag_A_2147694150_0
         $x_1_7 = {00 44 6f 43 6c 69 65 6e 74 54 61 73 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

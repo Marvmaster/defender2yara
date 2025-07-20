@@ -18,6 +18,7 @@ rule VirTool_Win32_Swedrimesz_A_2147852611_0
         $x_1_3 = {8b 5c 24 20 57 53 56 e8 26 ?? ?? ?? 83 c4 0c 57 6a 00 53 e8 b5 ?? ?? ?? 83}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

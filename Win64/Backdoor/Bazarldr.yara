@@ -17,6 +17,7 @@ rule Backdoor_Win64_Bazarldr_MAK_2147775288_0
         $x_1_2 = {8d 0c d2 8b c1 c1 f8 [0-1] 33 c1 69 c0 [0-2] 00 00 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win64_Bazarldr_MAK_2147775288_1
         $x_1_3 = {8a 44 24 20 02 c1 30 44 0c [0-1] 49 03 ce 48 83 f9 [0-1] 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Backdoor_Win64_Bazarldr_MBK_2147775289_0
         $x_1_1 = {48 89 f0 48 c1 f8 [0-1] 41 [0-4] 49 [0-3] 48 39 d3 0f 83 [0-4] 48 89 f0 48 c1 f8 [0-1] 41 01 49 02 48 39 d3 0f 83 [0-4] 48 89 f0 48 83 c6 [0-1] 48 c1 f8 [0-1] 41 01 48 83 c3 [0-1] 48 39 df 0f 8e [0-4] 49 02 48 39 d3 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Backdoor_Win64_Bazarldr_MBK_2147775289_1
         $x_1_3 = {8d 6c ed 00 89 e9 c1 f9 [0-1] 31 e9 89 ce c1 e6 [0-1] 01 ce 81 fe [0-4] 74 [0-1] 48 83 c7 01 4c 39 ff 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Backdoor_Win64_Bazarldr_MDK_2147775319_0
         $x_1_3 = {89 d6 31 fe 89 f5 81 cd [0-4] 89 d3 81 cb [0-4] 44 21 f3 81 e6 [0-4] 09 de 44 21 f5 81 e2 [0-4] 09 ea 31 f2 89 d5 31 fd 81 e5 [0-4] 81 e2 [0-4] 09 ea 89 [0-3] 4c 01 e1 4c 89 e2 48 29 ca 4c 01 ea 48 f7 da 4a 8d 0c 2a 48 ff c1 48 ff c0 48 83 f8 [0-1] 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Backdoor_Win64_Bazarldr_MK_2147775422_0
         $x_1_1 = {0f af d0 89 d0 44 31 f8 25 [0-4] bd [0-4] 21 ea 09 c2 89 d0 31 e8 83 e0 fe 81 f2 [0-4] 09 c2 44 39 fa 0f 94 c0 0f 95 c2 83 f9 [0-1] 0f 9c c3 83 f9 [0-1] 0f 9f c1 20 c8 08 d1 20 d3 08 c3 89 c8 30 d8 b8 [0-4] ba [0-4] 0f 45 c2 84 db 89 c5 ba [0-4] 0f 45 ea 48 89 74 24 70 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Backdoor_Win64_Bazarldr_MK_2147775422_1
         $x_1_4 = {8b 06 48 8b 4c 24 [0-1] 45 33 c9 89 44 24 [0-1] 45 8d 41 [0-1] 33 d2 48 89 74 24 [0-1] 48 89 6c 24 [0-1] ff 15 [0-4] 85 c0 0f 95 c0 eb bd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule Backdoor_Win64_Bazarldr_MFK_2147775750_0
         $x_1_4 = "mgzJg#<Xgl0A!i+" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +206,7 @@ rule Backdoor_Win64_Bazarldr_MGK_2147775812_0
         $x_1_2 = {41 0f b6 11 b8 [0-4] 2b c2 44 8d 04 c0 41 8b c3 41 c1 e0 [0-1] 41 f7 e8 41 03 d0 c1 fa [0-1] 8b c2 c1 e8 [0-1] 03 d0 6b c2 [0-1] 44 2b c0 41 8b c3 41 83 c0 04 41 f7 e8 41 03 d0 c1 fa 02 8b c2 c1 e8 03 03 d0 6b c2 04 44 2b c0 45 88 01 49 ff c1 49 83 ea 01 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +234,7 @@ rule Backdoor_Win64_Bazarldr_MHK_2147775856_0
         $x_1_7 = "CLSID\\%1\\InProcServer32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -250,6 +260,7 @@ rule Backdoor_Win64_Bazarldr_MJK_2147775971_0
         $x_1_5 = {8b 06 48 8b 4c 24 [0-1] 45 33 c9 89 44 24 [0-1] 45 8d 41 [0-1] 33 d2 48 89 74 24 [0-1] 48 89 6c 24 [0-1] ff 15 [0-4] 85 c0 0f 95 c0 eb bd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -280,6 +291,7 @@ rule Backdoor_Win64_Bazarldr_DB_2147776086_0
         $x_1_10 = "WriteFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -317,6 +329,7 @@ rule Backdoor_Win64_Bazarldr_DC_2147776087_0
         $x_1_17 = "GetDesktopWindow" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -342,6 +355,7 @@ rule Backdoor_Win64_Bazarldr_MLK_2147776216_0
         $x_1_5 = "e:\\malta\\richeditgrid_src(1)\\Release\\RichEditGrid.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -367,6 +381,7 @@ rule Backdoor_Win64_Bazarldr_MNK_2147776220_0
         $x_1_5 = {48 8b 4c 24 50 45 33 c9 89 44 24 30 45 8d 41 01 33 d2 48 89 74 24 28 48 89 6c 24 20 ff 15 [0-4] 85 c0 0f 95 c0 eb 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -393,6 +408,7 @@ rule Backdoor_Win64_Bazarldr_MOK_2147776318_0
         $x_1_6 = "%s%s.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -414,6 +430,7 @@ rule Backdoor_Win64_Bazarldr_MPK_2147778715_0
         $x_1_1 = {41 0f b6 0a b8 [0-4] 83 e9 [0-1] 44 6b c1 [0-1] 41 f7 e8 41 03 d0 c1 fa [0-1] 8b c2 c1 e8 [0-1] 03 d0 6b c2 [0-1] 44 2b c0 b8 00 41 83 c0 05 41 f7 e8 41 03 d0 c1 fa 03 8b c2 c1 e8 04 03 d0 6b c2 05 44 2b c0 45 88 02 49 ff c2 49 83 eb 01 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -435,6 +452,7 @@ rule Backdoor_Win64_Bazarldr_MQK_2147780378_0
         $x_1_1 = {8b 44 24 24 99 41 f7 7e [0-1] 48 8b 07 48 63 4c 24 [0-1] 8a 04 08 49 8b 36 48 63 d2 8a 1c 16 89 da 44 30 ca 20 c2 44 30 c8 20 d8 08 d0 48 8b 54 24 [0-1] 48 8b 12 88 04 0a 8b 44 24 [0-1] ff c0 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -456,6 +474,7 @@ rule Backdoor_Win64_Bazarldr_MRK_2147781102_0
         $x_1_1 = {48 c1 e9 20 01 d1 83 c1 [0-1] 89 ce c1 ee [0-1] c1 f9 06 01 f1 89 ce c1 e6 07 29 f1 01 d1 83 c1 00 88 4c 04 [0-1] 48 ff c0 48 83 f8 [0-1] 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

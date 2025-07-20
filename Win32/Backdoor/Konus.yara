@@ -21,6 +21,7 @@ rule Backdoor_Win32_Konus_A_2147690861_0
         $x_1_7 = "%ws\\%ws.cfg" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Backdoor_Win32_Konus_B_2147729779_0
         $x_1_3 = "{C415D88B-D9A4-4A53-9345-1E60887E85B1}\\wat.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

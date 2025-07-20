@@ -20,6 +20,7 @@ rule Ransom_Win32_Sage_AA_2147853272_0
         $x_1_5 = "!Recovery_%s.html" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

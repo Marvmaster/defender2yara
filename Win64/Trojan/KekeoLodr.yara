@@ -17,6 +17,7 @@ rule Trojan_Win64_KekeoLodr_MK_2147839504_0
         $x_1_2 = {48 ff c3 42 88 54 37 10 83 e3 0f 49 ff c6 e9 22 00 48 8d 0d ?? ?? ?? ?? 42 8a 54 35 ?? 32 94 19}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

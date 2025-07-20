@@ -19,6 +19,7 @@ rule Trojan_MSIL_PassLoader_B_2147780113_0
         $x_1_5 = {47 65 74 50 61 73 73 77 6f 72 64 73 4c 69 73 74 00 47 65 74 53 65 72 76 69 63 65 73 4c 69 73 74 00 47 65 74 50 72 6f 63 65 73 73 4c 69 73 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

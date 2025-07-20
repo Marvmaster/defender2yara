@@ -26,6 +26,7 @@ rule BrowserModifier_Win32_ClientMan_3754_0
         $x_1_12 = "HttpQueryInfoA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule BrowserModifier_Win32_ClientMan_3754_1
         $x_1_4 = "explorer\\Browser Helper Objects\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

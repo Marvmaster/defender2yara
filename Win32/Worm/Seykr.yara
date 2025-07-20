@@ -17,6 +17,7 @@ rule Worm_Win32_Seykr_A_2147685086_0
         $x_1_3 = {00 26 73 74 61 72 74 20 65 78 70 6c 6f 72 65 72 20 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

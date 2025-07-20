@@ -16,6 +16,7 @@ rule Trojan_Win32_ReflectiveLoaderArtifact_A_2147784772_0
         $x_1_2 = {8e 4e 0e ec 74 ?? ?? aa fc 0d 7c 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win32_LemonDuck_A_2147777720_0
         $x_4_6 = {2f 74 6e 20 52 74 73 61 [0-2] 20 2f 46 20 2f 74 72 20 22 70 6f 77 65 72 73 68 65 6c 6c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or
             ((2 of ($x_4_*))) or

@@ -34,6 +34,7 @@ rule Backdoor_Win32_Dumador_2147555608_0
         $x_2_20 = "[Warning: the last formdata have one valid tan]" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or

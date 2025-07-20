@@ -19,6 +19,7 @@ rule Trojan_Win32_Phires_A_2147637766_0
         $x_1_5 = {5c d2 d7 c5 cc a3 a8 c3 e2 b7 d1 cd f8 c2 e7 d3 b2 c5 cc a3 a9 2e 6c 6e 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

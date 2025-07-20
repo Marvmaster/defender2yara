@@ -29,6 +29,7 @@ rule PWS_MSIL_Stealgen_GB_2147774356_0
         $x_1_14 = "Laser Card" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -62,6 +63,7 @@ rule PWS_MSIL_Stealgen_GA_2147777923_0
         $x_1_13 = "A310Logger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -93,6 +95,7 @@ rule PWS_MSIL_Stealgen_GD_2147778576_0
         $x_1_11 = "Glory_to_the_Great_Lenin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 9 of ($x_1_*))) or
             (all of ($x*))
@@ -127,6 +130,7 @@ rule PWS_MSIL_Stealgen_GF_2147778578_0
         $x_1_11 = "SQLite" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 9 of ($x_1_*))) or
             (all of ($x*))
@@ -161,6 +165,7 @@ rule PWS_MSIL_Stealgen_GE_2147780310_0
         $x_1_11 = "Eshelon Revolution Protector" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))

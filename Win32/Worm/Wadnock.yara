@@ -37,6 +37,7 @@ rule Worm_Win32_Wadnock_A_2147601587_0
         $x_1_22 = "!proc.kill.* tibs.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_6_*) and 4 of ($x_1_*))) or

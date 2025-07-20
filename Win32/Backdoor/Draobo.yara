@@ -17,6 +17,7 @@ rule Backdoor_Win32_Draobo_A_2147650514_0
         $x_1_3 = {6a 20 ff 37 ff 76 40 ff 50 3c 83 c7 04 4b 75 eb ff 76 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

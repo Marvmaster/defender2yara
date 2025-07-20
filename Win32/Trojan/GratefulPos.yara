@@ -26,6 +26,7 @@ rule Trojan_Win32_GratefulPos_A_2147729956_0
         $x_1_11 = "firefox.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

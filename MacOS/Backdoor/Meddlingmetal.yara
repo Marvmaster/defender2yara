@@ -17,6 +17,7 @@ rule Backdoor_MacOS_Meddlingmetal_A_2147745260_0
         $x_4_3 = "MSF_LICENSE" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))

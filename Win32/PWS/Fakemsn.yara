@@ -19,6 +19,7 @@ rule PWS_Win32_Fakemsn_E_2147646564_0
         $x_1_5 = "php.rodatnoc/moc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             ((3 of ($x_4_*))) or
@@ -48,6 +49,7 @@ rule PWS_Win32_Fakemsn_F_2147650577_0
         $x_1_6 = "baixaconfig true - conectado" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule PWS_Win32_Fakemsn_H_2147654660_0
         $x_1_3 = {0a 49 6e 76 69 73 69 76 65 6c 31 c0 03 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule PWS_Win32_Fakemsn_L_2147659438_0
         $x_1_4 = "Sign In" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule PWS_Win32_Fakemsn_P_2147660509_0
         $x_1_4 = {00 40 67 6d 61 69 6c 2e 63 6f 6d 00 [0-11] 00 70 72 61 71 75 65 6d 3d 00 [0-11] 00 70 72 61 71 75 65 6d 31 3d 00 [0-11] 00 70 72 61 71 75 65 6d 32 3d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule PWS_Win32_Fakemsn_R_2147660638_0
         $x_10_6 = "Windows Live Messenger" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))

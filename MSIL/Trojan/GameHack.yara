@@ -21,6 +21,7 @@ rule Trojan_MSIL_GameHack_AB_2147793978_0
         $x_3_6 = "Furky" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

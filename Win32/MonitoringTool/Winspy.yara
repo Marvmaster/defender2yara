@@ -23,6 +23,7 @@ rule MonitoringTool_Win32_Winspy_14230_0
         $x_1_9 = "Chat Logger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule MonitoringTool_Win32_Winspy_14230_1
         $x_2_5 = "Icon will not appear on Retail version" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             ((2 of ($x_4_*) and 1 of ($x_2_*))) or
@@ -79,6 +81,7 @@ rule MonitoringTool_Win32_Winspy_14230_2
         $x_2_6 = "KeyState" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((3 of ($x_5_*))) or
@@ -108,6 +111,7 @@ rule MonitoringTool_Win32_Winspy_14230_3
         $x_2_6 = "Date File Created: " wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +136,7 @@ rule MonitoringTool_Win32_Winspy_14230_4
         $x_2_5 = "win-spy" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or
@@ -160,6 +165,7 @@ rule MonitoringTool_Win32_Winspy_14230_5
         $x_2_5 = "\\dll32\\services.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or
             ((2 of ($x_4_*))) or
@@ -190,6 +196,7 @@ rule MonitoringTool_Win32_Winspy_14230_6
         $x_4_7 = "start Win-Spy" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*))) or
             (all of ($x*))
@@ -215,6 +222,7 @@ rule MonitoringTool_Win32_Winspy_14230_7
         $x_3_3 = "Remote User(logged on) will be prompted. Do you want to continue?" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

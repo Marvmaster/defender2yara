@@ -17,6 +17,7 @@ rule Backdoor_Win32_SpideyBot_AR_2147744220_0
         $x_1_2 = "bW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKCcuL2NvcmUuYXNhcicpOw==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

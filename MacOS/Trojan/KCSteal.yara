@@ -17,6 +17,7 @@ rule Trojan_MacOS_KCSteal_D_2147934759_0
         $x_1_2 = {55 48 89 e5 53 50 48 89 fb 48 83 c7 28 31 f6 e8 65 00 00 00 48 8d 7b 20 31 f6 e8 5a 00 00 00 48 8d 7b 18 31 f6 e8 4f 00 00 00 48 8d 7b 10 31 f6 e8 44 00 00 00 48 83 c3 08 48 89 df 31 f6 48 83 c4 08 5b 5d e9 30 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MacOS_KCSteal_C_2147935665_0
         $x_1_2 = {55 48 89 e5 53 50 48 89 fb 48 83 c7 28 31 f6 e8 71 00 00 00 48 8d 7b 20 31 f6 e8 66 00 00 00 48 8d 7b 18 31 f6 e8 5b 00 00 00 48 8d 7b 10 31 f6 e8 50 00 00 00 48 83 c3 08 48 89 df 31 f6 48 83 c4 08 5b 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

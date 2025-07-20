@@ -18,6 +18,7 @@ rule Trojan_MSIL_Bitminer_GP_2147853232_0
         $x_1_3 = "https://plus-ccmcleanerprog.ru/ddb64.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

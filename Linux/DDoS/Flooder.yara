@@ -22,6 +22,7 @@ rule DDoS_Linux_Flooder_A_2147766302_0
         $x_1_7 = "flood_vse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule DDoS_Linux_Flooder_Dx_2147795744_0
         $x_1_6 = "rand_cmwc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -82,6 +84,7 @@ rule DDoS_Linux_Flooder_SB_2147808336_0
         $x_2_14 = "Usage: %s [IP]" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -106,6 +109,7 @@ rule DDoS_Linux_Flooder_H_2147813587_0
         $x_1_4 = "mssql.c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -143,6 +147,7 @@ rule DDoS_Linux_Flooder_K_2147813589_0
         $x_1_17 = "Saldiri Basladi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -175,6 +180,7 @@ rule DDoS_Linux_Flooder_L_2147813593_0
         $x_1_7 = "UDPFLOOD Flood Start On started" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -204,6 +210,7 @@ rule DDoS_Linux_Flooder_M_2147813596_0
         $x_1_4 = "Attack should be started now." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -231,6 +238,7 @@ rule DDoS_Linux_Flooder_SV_2147814695_0
         $x_2_4 = "floodport" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -256,6 +264,7 @@ rule DDoS_Linux_Flooder_E_2147815378_0
         $x_1_5 = "Usage: %s <target IP/hostname>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -285,6 +294,7 @@ rule DDoS_Linux_Flooder_F_2147815379_0
         $x_1_9 = "Start Up DDOS..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -319,6 +329,7 @@ rule DDoS_Linux_Flooder_G_2147815380_0
         $x_1_14 = "Attacking Started.." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -343,6 +354,7 @@ rule DDoS_Linux_Flooder_I_2147815381_0
         $x_1_4 = "Start flooding ..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -367,6 +379,7 @@ rule DDoS_Linux_Flooder_B_2147819402_0
         $x_1_4 = "csum" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -389,6 +402,7 @@ rule DDoS_Linux_Flooder_B_2147828998_0
         $x_1_2 = {b8 e4 a1 04 08 c7 44 24 0c 00 00 00 00 89 44 24 08 c7 44 24 04 00 00 00 00 8d 44 24 34 89 04 24 e8 d5 e5 ff ff b8 3d a2 04 08 c7 44 24 0c 00 00 00 00 89 44 24 08 c7 44 24 04 00 00 00 00 c7 04 24 7c b9 04 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MSIL_Sambetoc_A_2147728349_0
         $x_10_4 = "get_Smbtouch_xml" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

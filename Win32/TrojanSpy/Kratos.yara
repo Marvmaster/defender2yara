@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Kratos_A_2147727439_0
         $x_1_4 = "XFxXYWxsZXRz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

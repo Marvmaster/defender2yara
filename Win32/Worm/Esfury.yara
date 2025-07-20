@@ -19,6 +19,7 @@ rule Worm_Win32_Esfury_A_2147634030_0
         $x_1_5 = "fni.nurotua" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -46,6 +47,7 @@ rule Worm_Win32_Esfury_B_2147636502_0
         $x_1_4 = "winlogon.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -73,6 +75,7 @@ rule Worm_Win32_Esfury_A_2147636744_0
         $x_1_4 = "mSpread_Msn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Worm_Win32_Esfury_T_2147643154_0
         $x_1_2 = {f4 02 eb b3 fb e6 ea f4 01 eb c8 35 ?? ff 1c 92 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +127,7 @@ rule Worm_Win32_Esfury_V_2147660259_0
         $x_1_10 = "T;mjj]flN]jkagfTJmf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -149,6 +154,7 @@ rule Worm_Win32_Esfury_X_2147661625_0
         $x_1_3 = {00 00 53 00 6f 00 66 00 74 00 77 00 61 00 72 00 65 00 5c 00 53 00 68 00 61 00 72 00 65 00 61 00 7a 00 61 00 5c 00 53 00 68 00 61 00 72 00 65 00 61 00 7a 00 61 00 5c 00 44 00 6f 00 77 00 6e 00 6c 00 6f 00 61 00 64 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

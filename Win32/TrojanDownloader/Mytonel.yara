@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Mytonel_A_2147695540_0
         $x_1_2 = "3dim700.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_Mytonel_A_2147695540_1
         $x_8_9 = {00 00 69 00 63 00 65 00 32 00 5c 00 74 00 65 00 73 00 74 00 2d 00 72 00 65 00 73 00 75 00 6c 00 74 00 2e 00 6c 00 6f 00 67 00 00 00}  //weight: 8, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_8_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -69,6 +71,7 @@ rule TrojanDownloader_Win32_Mytonel_C_2147696843_0
         $x_1_3 = {2e 00 70 00 68 00 70 00 3f 00 73 00 74 00 72 00 65 00 61 00 6d 00 49 00 64 00 3d 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule TrojanDownloader_Win32_Mytonel_C_2147696843_1
         $x_5_4 = {5c 00 63 00 72 00 79 00 70 00 74 00 73 00 65 00 72 00 76 00 69 00 63 00 65 00 32 00 5c 00 74 00 65 00 73 00 74 00 2d 00 72 00 65 00 73 00 75 00 6c 00 74 00 2e 00 6c 00 6f 00 67 00 00 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule TrojanDownloader_Win32_Mytonel_D_2147696846_0
         $x_2_5 = {00 44 4c 4c 69 73 74 2e 69 6e 69 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

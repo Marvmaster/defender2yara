@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Parkchicers_A_2147632563_0
         $x_1_4 = "Execute_Updater_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule TrojanDownloader_Win32_Parkchicers_B_2147632564_0
         $x_1_4 = "Installer.Setup_BHO_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -71,6 +73,7 @@ rule TrojanDownloader_Win32_Parkchicers_C_2147632565_0
         $x_1_3 = {66 ba 13 74 e8 ?? ?? ff ff 33 c0 5a 59 59 64 89 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule TrojanDownloader_Win32_Parkchicers_D_2147685951_0
         $x_1_5 = "count/install.php?pc=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -18,6 +18,7 @@ rule Ransom_MSIL_Hardbit_SK_2147893329_0
         $x_1_3 = "$540c4d38-7ff8-4851-bcb7-ca49604cb428" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

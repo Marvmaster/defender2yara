@@ -22,6 +22,7 @@ rule Trojan_MSIL_RocketXStealer_PA_2147753569_0
         $x_1_7 = "Browsers\\Passwords.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

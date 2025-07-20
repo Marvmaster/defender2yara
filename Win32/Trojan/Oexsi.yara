@@ -17,6 +17,7 @@ rule Trojan_Win32_Oexsi_A_2147605727_0
         $x_1_3 = {57 ff d6 59 85 c0 59 75 27 39 45 10 6a 21 74 0a ff 75 0c 68 ?? ?? 40 00 eb 08 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

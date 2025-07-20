@@ -23,6 +23,7 @@ rule Backdoor_Win32_Blopod_A_2147725376_0
         $x_1_8 = "taskkill /f /im " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or

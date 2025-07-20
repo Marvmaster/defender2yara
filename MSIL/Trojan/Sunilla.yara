@@ -21,6 +21,7 @@ rule Trojan_MSIL_Sunilla_A_2147742341_0
         $x_1_6 = "SetServiceRegistry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

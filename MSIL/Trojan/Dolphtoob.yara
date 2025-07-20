@@ -21,6 +21,7 @@ rule Trojan_MSIL_Dolphtoob_A_2147706139_0
         $x_1_7 = "4hrfienz.rfk.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or

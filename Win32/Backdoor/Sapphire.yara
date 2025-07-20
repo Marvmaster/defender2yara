@@ -29,6 +29,7 @@ rule Backdoor_Win32_Sapphire_SA_2147750692_0
         $x_1_14 = ">----------" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 6 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -61,6 +62,7 @@ rule Backdoor_Win32_Sapphire_SB_2147750693_0
         $x_1_5 = "Nview32 ApiSet Lib" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

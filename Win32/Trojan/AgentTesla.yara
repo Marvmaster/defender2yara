@@ -40,6 +40,7 @@ rule Trojan_Win32_AgentTesla_FE_2147741968_0
         $x_1_2 = {68 e0 5e 00 00 75 00 b9 ?? ?? ?? 41 [0-16] 81 c1 ?? ?? ?? ?? [0-16] 83 c6 02 [0-16] 4e [0-16] 8b 1f [0-16] 31 f3 [0-16] 39 cb 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +63,7 @@ rule Trojan_Win32_AgentTesla_ST_2147742093_0
         $x_1_2 = {68 80 54 00 00 [0-6] 5b ?? ?? 83 eb 02 [0-6] 83 eb 02 ?? ?? 8b 14 1f [0-24] 31 f2 [0-48] 09 14 18 [0-21] 7f [0-16] 89 c2 [0-16] c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +86,7 @@ rule Trojan_Win32_AgentTesla_BA_2147742540_0
         $x_1_2 = {0f 6f 06 0f [0-2] 83 [0-2] 83 [0-2] e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +108,7 @@ rule Trojan_Win32_AgentTesla_BA_2147742540_1
         $x_1_1 = {8b 45 f8 40 89 45 f8 81 7d f8 ?? ?? 00 00 73 2d 8b 45 f8 33 d2 6a 3b 59 f7 f1 8b 85 ?? ?? ff ff 0f be 04 10 8b 4d f8 0f b6 8c 0d ?? ?? ff ff 33 c8 8b 45 f8 88 8c 05 ?? ?? ff ff eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule Trojan_Win32_AgentTesla_SN_2147742570_0
         $x_1_1 = {8b 3a 83 ea ?? f7 df 83 ef 2b 83 ef 02 83 c7 01 29 c7 89 f8 c7 46 00 00 00 00 00 31 3e 8d 5b fc 83 c6 04 85 db 75 ?? 83 c4 04 8b 74 24 fc [0-16] 68 ?? ?? ?? ?? ff e6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +152,7 @@ rule Trojan_Win32_AgentTesla_SN_2147742570_1
         $x_10_1 = {e8 af 00 00 00 [0-6] b9 ?? ?? ?? ?? [0-6] 81 c1 31 90 48 00 [0-6] 83 c6 ?? [0-6] 4e [0-6] 4e [0-6] ff 37 [0-6] 31 34 24 [0-6] 5b [0-6] 39 cb 75 e3 [0-6] bb 20 61 00 00 [0-6] 83 eb ?? [0-6] 83 eb ?? [0-6] ff 34 1f [0-16] 8f 04 18 [0-16] 31 34 18 [0-64] 83 fb 00 7f b5}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +180,7 @@ rule Trojan_Win32_AgentTesla_SP_2147742706_0
         $x_8_7 = "LoadDotNetPE.dll" ascii //weight: 8
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 1 of ($x_6_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -199,6 +206,7 @@ rule Trojan_Win32_AgentTesla_GS_2147742869_0
         $x_1_2 = {55 8b ec 83 c4 f8 89 55 f8 89 45 fc [0-16] 8b 7d fc ff 75 f8 01 3c 24 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +228,7 @@ rule Trojan_Win32_AgentTesla_SR_2147743179_0
         $x_1_1 = {33 d2 83 fa ff [0-16] b8 ?? ?? 00 00 [0-21] 33 c0 [0-21] 8b d0 [0-32] 8a 92 ?? ?? ?? 00 88 55 fb [0-16] b2 ?? [0-16] 32 55 fb [0-16] 88 16 [0-16] 40 3d ?? ?? 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -242,6 +251,7 @@ rule Trojan_Win32_AgentTesla_SG_2147743206_0
         $x_1_2 = {bb 20 00 01 00 [0-10] 83 eb 03 a9 6b eb 50 3f 83 eb 01 [0-6] ff 34 1f [0-10] f7 c6 bf 3d 51 3f [0-6] 8f 04 18 [0-16] 31 34 18 [0-42] 81 f9 ?? ?? ?? ?? [0-6] 7f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -265,6 +275,7 @@ rule Trojan_Win32_AgentTesla_RS_2147743225_0
         $x_1_3 = {c3 8b 0c 24 83 c1 01 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +297,7 @@ rule Trojan_Win32_AgentTesla_CA_2147743286_0
         $x_10_1 = {83 fb 00 7f [0-16] 89 c2 [0-16] 52 [0-16] c3 80 00 bb ?? ?? ?? 00 [0-16] 83 eb 03 [0-6] 83 eb 01 [0-5] ff 34 1f [0-32] 8f 04 18 [0-21] 31 34 18 [0-64] 83 fb 00 7f [0-16] 89 c2 [0-16] 52 [0-16] c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -307,6 +319,7 @@ rule Trojan_Win32_AgentTesla_A_2147743635_0
         $x_1_1 = {46 51 fa f1 4b 6d ec fb 9f d9 6f 9b ea 37 df 0a 80 13 27 4e fa a3 a0 96 47 d9 8b d6 a9 75 17 02 40 3d a9 37 f5 18 65 2f 1a 03 8d 85 c6 44 63 43 00 a0 22 e5 06 40 4b f3 0e 53 69 e3 d2 91 26 8e da db fe a4 ed de d5 6a cd db 5b ac d0 4f 5b eb 1e ff 7a 1c bd 68 dd 85 3e d4 93 7a 8b a3 97 42 69 6c 0a fd 10 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -332,6 +345,7 @@ rule Trojan_Win32_AgentTesla_A_2147743635_1
         $x_1_5 = "niggabown22jan2024" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -355,6 +369,7 @@ rule Trojan_Win32_AgentTesla_A_2147743635_2
         $x_1_3 = {8b c8 03 ca 8b c2 b2 ?? 32 90 ?? ?? ?? 00 88 11 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -381,6 +396,7 @@ rule Trojan_Win32_AgentTesla_A_2147743635_3
         $x_1_6 = "e-China Petroleum & Chemical Corp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -417,6 +433,7 @@ rule Trojan_Win32_AgentTesla_A_2147743635_4
         $x_1_16 = "\\NETGATE Technologies\\BlackHawk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -471,6 +488,7 @@ rule Trojan_Win32_AgentTesla_SH_2147744148_0
         $x_1_2 = {89 0c 18 eb 00 20 4b [0-112] 4b [0-64] 4b [0-64] 4b [0-112] 8b 0c 1f [0-80] 31 f1 [0-112] 89 0c 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -525,6 +543,7 @@ rule Trojan_Win32_AgentTesla_PS_2147744958_0
         $x_1_2 = {8d 45 f0 50 e8 ?? ?? ?? ?? 89 c9 [0-48] 8d 45 e0 50 e8 ?? ?? ?? ?? 89 c9 8d 55 f0 8d 45 e0 e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -555,6 +574,7 @@ rule Trojan_Win32_AgentTesla_W_2147745216_0
         $x_1_10 = "\\%insfolder%\\%insname%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -576,6 +596,7 @@ rule Trojan_Win32_AgentTesla_GPY_2147745626_0
         $x_1_1 = {8a 54 05 f8 8d 04 0e 30 16 83 e0 03 30 56 04 8a 4c 05 f8 8d 43 ff 30 4e 01 83 e0 03 30 4e 05 8b 8d 10 fd ff ff 8a 44 05 f8 30 46 02 8b c3 83 e0 03 83 c3 06 8a 44 05 f8 30 46 03 81 ff e2 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -602,6 +623,7 @@ rule Trojan_Win32_AgentTesla_PB_2147746288_0
         $x_1_6 = {8a ca 80 f1 04 88 0c 02 42 81 fa 00 e1 f5 05 72 ef}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -683,6 +705,7 @@ rule Trojan_Win32_AgentTesla_PC_2147753146_0
         $x_1_2 = {8a 54 8c 0c 8b 7c b4 08 0f b6 d2 89 7c 8c 0c 89 54 b4 08 8b d0 83 e2 1f 0f b6 92 ?? ?? ?? 00 03 54 8c 10 03 f2 81 e6 ff 00 00 80 79 ?? 4e 81 ce 00 ff ff ff 46}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -704,6 +727,7 @@ rule Trojan_Win32_AgentTesla_DSK_2147753660_0
         $x_2_1 = {89 c1 83 e1 03 8a 4c 0c 04 30 88 ?? ?? ?? ?? 40 3d 05 5a 00 00 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -733,6 +757,7 @@ rule Trojan_Win32_AgentTesla_E_2147754443_0
         $x_1_9 = "C6KChynqziGYdkpHT66PCuLUP0S2MWc7J" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -784,6 +809,7 @@ rule Trojan_Win32_AgentTesla_BG_2147763063_0
         $x_1_2 = "LLD PDB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -842,6 +868,7 @@ rule Trojan_Win32_AgentTesla_RTH_2147783054_0
         $x_1_9 = "get_PDADataTableName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -864,6 +891,7 @@ rule Trojan_Win32_AgentTesla_HGA_2147795085_0
         $x_1_2 = {0f b6 7d df 89 f8 [0-5] 88 45 df 8a 45 df 8b 75 e0 88 04 35 [0-4] 8b 45 e0 83 c0 01 89 45 e0 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -886,6 +914,7 @@ rule Trojan_Win32_AgentTesla_HGB_2147796210_0
         $x_1_2 = {0f b6 45 ff f7 d8 88 45 ff 0f b6 45 ff 33 45 f8 88 45 ff 0f b6 45 ff 03 45 f8 88 45 ff 0f b6 45 ff f7 d8 88 45 ff 0f b6 45 ff f7 d0 88 45 ff 0f b6 45 ff 83 e8 6a 88 45 ff 8b 45 f8 8a 4d ff 88 88 ?? ?? ?? ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -908,6 +937,7 @@ rule Trojan_Win32_AgentTesla_ZAA_2147797019_0
         $x_1_2 = {89 04 24 c7 44 24 04 ?? ?? ?? ?? c7 44 24 08 40 00 00 00 8d 45 f0 89 44 24 0c ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -930,6 +960,7 @@ rule Trojan_Win32_AgentTesla_ZAB_2147797020_0
         $x_1_2 = {8d 45 f0 50 6a 40 68 ?? ?? ?? ?? 68 78 8c 00 10 ff 15 44 70 00 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -952,6 +983,7 @@ rule Trojan_Win32_AgentTesla_ZAD_2147797023_0
         $x_1_2 = {8d 45 f0 50 6a 40 68 ?? ?? ?? ?? 68 10 50 00 10 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -974,6 +1006,7 @@ rule Trojan_Win32_AgentTesla_QJL_2147797577_0
         $x_1_2 = {8d 45 f0 50 6a 40 68 ?? ?? ?? ?? 68 68 a0 00 10 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -996,6 +1029,7 @@ rule Trojan_Win32_AgentTesla_QJQ_2147797579_0
         $x_1_2 = {89 04 24 c7 44 24 04 ?? ?? ?? ?? c7 44 24 08 40 00 00 00 8d 45 f0 89 44 24 0c ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1018,6 +1052,7 @@ rule Trojan_Win32_AgentTesla_QKJ_2147798069_0
         $x_1_2 = {50 6a 40 68 ?? ?? ?? ?? 68 18 41 01 10 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1040,6 +1075,7 @@ rule Trojan_Win32_AgentTesla_ZBA_2147799630_0
         $x_1_2 = {50 6a 40 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1090,6 +1126,7 @@ rule Trojan_Win32_AgentTesla_CE_2147813931_0
         $x_1_2 = {33 d2 88 8c 0d [0-4] 8b c1 f7 75 ?? 8a 04 3a 88 84 0d [0-4] 41 81 f9 00 01 00 00 7c df}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1111,6 +1148,7 @@ rule Trojan_Win32_AgentTesla_RPC_2147816950_0
         $x_1_1 = {81 c2 e0 d5 00 00 [0-21] 33 c9 b1 1e [0-21] 80 34 11 ?? e2 fa [0-21] 64 ff 35 24 [0-21] 8f 42 0a [0-21] b1 ff [0-21] 52 e2 fd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1132,6 +1170,7 @@ rule Trojan_Win32_AgentTesla_RPD_2147816959_0
         $x_1_1 = {88 10 8b 4d fc 03 4d e0 0f b6 11 81 ea ?? ?? ?? ?? 8b 45 fc 03 45 e0 88 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1153,6 +1192,7 @@ rule Trojan_Win32_AgentTesla_RPD_2147816959_1
         $x_1_1 = {81 c2 e0 d5 00 00 [0-21] b1 1e [0-21] 80 34 11 ?? e2 fa [0-21] 64 ff 35 24 00 00 00 [0-21] 8f 42 0a [0-21] b1 ff 52 e2 fd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1174,6 +1214,7 @@ rule Trojan_Win32_AgentTesla_RPE_2147817194_0
         $x_1_1 = {30 33 47 4f 93 93 30 13 90 90 90 30 23 fc 30 03 f9 43 90 e2 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1195,6 +1236,7 @@ rule Trojan_Win32_AgentTesla_RPV_2147817975_0
         $x_1_1 = {33 d2 8d 7f 01 b9 3f 00 00 00 4e f7 f1 8a 44 15 a8 88 47 ff 85 f6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1218,6 +1260,7 @@ rule Trojan_Win32_AgentTesla_RPU_2147817985_0
         $x_1_3 = {80 f3 eb eb 05 [0-32] 8a 1c 38 eb d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1239,6 +1282,7 @@ rule Trojan_Win32_AgentTesla_RPP_2147818713_0
         $x_1_1 = {8b 00 8d 14 03 8b 45 f0 01 d0 29 c1 89 ca 8b 45 e4 89 10 8b 45 e4 8b 10 8b 45 e8 89 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1264,6 +1308,7 @@ rule Trojan_Win32_AgentTesla_EVX_2147822918_0
         $x_1_5 = "947\\Release\\947.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1285,6 +1330,7 @@ rule Trojan_Win32_AgentTesla_RPX_2147824774_0
         $x_1_1 = {f7 e1 c1 ea 03 8d 14 52 03 d2 03 d2 8b c1 2b c2 8a 90 f8 91 40 00 30 14 31 41 3b cf 72 dd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1306,6 +1352,7 @@ rule Trojan_Win32_AgentTesla_RPX_2147824774_1
         $x_1_1 = {ff d3 83 c4 0c 68 96 00 00 00 ff d6 83 ef 01 75 e6 bf 1e 00 00 00 90 6a 00 6a 00 68 ?? ?? ?? ?? ff d3 83 c4 0c 68 9b 00 00 00 ff d6 83 ef 01 75 e6 bf 0f 00 00 00 90 6a 00 6a 00 68 ?? ?? ?? ?? ff d3 83 c4 0c 68 9b 00 00 00 ff d6 83 ef 01 75 e6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1336,6 +1383,7 @@ rule Trojan_Win32_AgentTesla_RPX_2147824774_2
         $x_1_10 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1360,6 +1408,7 @@ rule Trojan_Win32_AgentTesla_RDH_2147835443_0
         $x_1_4 = "Microdot scholasticism" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1415,6 +1464,7 @@ rule Trojan_Win32_AgentTesla_CAK_2147840405_0
         $x_5_1 = {8b 45 fc 33 d2 f7 75 14 8b 45 10 0f b6 0c 10 8b 55 08 03 55 fc 0f b6 02 2b c1 8b 4d 08 03 4d fc 88 01 eb}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1436,6 +1486,7 @@ rule Trojan_Win32_AgentTesla_MBAT_2147841625_0
         $x_1_1 = {bf ab aa aa aa 66 2e 0f 1f 84 ?? ?? ?? ?? 00 0f 1f 40 00 89 c8 f7 e7 d1 ea 83 e2 fc 8d 04 52 89 ca 29 c2 0f b6 92 ?? ?? ?? ?? 30 14 0e f7 d8 0f b6 84 01 ?? ?? ?? ?? 30 44 0e 01 83 c1 02 39 cb 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1463,6 +1514,7 @@ rule Trojan_Win32_AgentTesla_GHS_2147845375_0
         $x_1_7 = "Command.com /c %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1543,6 +1595,7 @@ rule Trojan_Win32_AgentTesla_PRH_2147849728_0
         $x_1_4 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1567,6 +1620,7 @@ rule Trojan_Win32_AgentTesla_PRI_2147850104_0
         $x_1_4 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1591,6 +1645,7 @@ rule Trojan_Win32_AgentTesla_PRJ_2147850516_0
         $x_1_4 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1640,6 +1695,7 @@ rule Trojan_Win32_AgentTesla_Z_2147897369_0
         $x_2_1 = {8b c8 33 d2 8b c6 f7 f1 8b 45 ?? 8a 0c 02 8d 14 ?? 8b 45 ?? 46 8a 04 10 32 c1 88 02}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2085,6 +2141,7 @@ rule Trojan_Win32_AgentTesla_RVG_2147911509_0
         $x_1_6 = "appliable decalcifies blegfedt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -2199,6 +2256,7 @@ rule Trojan_Win32_AgentTesla_GH_2147926384_0
         $x_1_10 = "sletfilene" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2225,6 +2283,7 @@ rule Trojan_Win32_AgentTesla_GO_2147927844_0
         $x_1_6 = "hjertevarmes alfonsjagt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2275,6 +2334,7 @@ rule Trojan_Win32_AgentTesla_MR_2147946479_0
         $x_10_3 = {31 6f 31 a8 31 b4 31 ba ?? ?? ?? ?? 31 ed 31 f3 31 02 32 44 32 52 32 63 32}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

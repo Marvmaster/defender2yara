@@ -18,6 +18,7 @@ rule Trojan_Win32_Solarized_A_2147711952_0
         $x_1_3 = {eb 6b 17 f1 08 01 17 f1 10 00 2b 44 9b 6a 2b 44 bb 60}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

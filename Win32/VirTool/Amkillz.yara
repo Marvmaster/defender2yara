@@ -19,6 +19,7 @@ rule VirTool_Win32_Amkillz_B_2147844672_0
         $x_1_4 = {8b 85 84 fb ff ff 50 8b 4d c0 51 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

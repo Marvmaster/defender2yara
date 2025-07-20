@@ -23,6 +23,7 @@ rule VirTool_MSIL_Splori_A_2147689145_0
         $x_1_9 = {49 73 57 69 72 65 73 68 61 72 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

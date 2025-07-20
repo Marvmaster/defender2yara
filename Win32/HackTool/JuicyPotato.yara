@@ -21,6 +21,7 @@ rule HackTool_Win32_JuicyPotato_F_2147921594_0
         $x_3_6 = "JuicyPotatoNG" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

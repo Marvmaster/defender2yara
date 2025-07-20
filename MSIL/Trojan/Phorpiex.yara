@@ -17,6 +17,7 @@ rule Trojan_MSIL_Phorpiex_2147741594_0
         $x_1_2 = "YPEbchOPZXsx6QtWKuIZvIRWtGPU4" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

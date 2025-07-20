@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Nuwar_B_2147595774_0
         $x_1_6 = "wincom32.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (3 of ($x*))
 }
@@ -46,6 +47,7 @@ rule TrojanDropper_Win32_Nuwar_A_2147600049_0
         $x_1_5 = {81 e0 ff 00 00 00 [0-3] 88 45 ?? 8b 45 08 8b 4d fc 01 c8 0f b6 4d ?? 51 0f b6 4d ?? 51 89 45 [0-64] 88 01 (eb ??|e9 ?? ?? ?? ??) c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule TrojanDropper_Win32_Nuwar_B_2147601229_0
         $x_1_2 = {ff 75 14 ff 75 10 e8 ?? ?? ff ff 83 c4 ?? 39 ?? 73 18 e8 ?? ?? ff ff 50 0f b6 04 ?? 50 e8 ?? ?? ff ff 88 04 ?? ?? ?? ?? eb e4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule TrojanDropper_Win32_Nuwar_C_2147603728_0
         $x_1_3 = {8d 41 1b ff d0 85 c0 7c 13 8b 07 a3 ?? ?? ?? ?? 8b 06 a3 ?? ?? ?? ?? b8 03 00 00 40 5f 5e eb 21 ff 75 2c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

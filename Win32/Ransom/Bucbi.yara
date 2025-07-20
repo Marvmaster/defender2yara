@@ -20,6 +20,7 @@ rule Ransom_Win32_Bucbi_A_2147688496_0
         $x_1_6 = {80 b4 04 20 01 00 00 17 40 3d 86 02 00 00 72 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

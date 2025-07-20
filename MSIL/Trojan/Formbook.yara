@@ -17,6 +17,7 @@ rule Trojan_MSIL_Formbook_BA_2147753152_0
         $x_1_2 = {0a 0c 07 8e 69 8d ?? 00 00 01 0d 20 00 01 00 00 8d ?? 00 00 01 13 04 16 13 05 2b 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Formbook_PD_2147754178_0
         $x_2_2 = {00 04 05 5d 05 58 05 5d 0a 03 06 91 0b 07 0e ?? 61 0e ?? 59 20 00 02 00 00 58 0c 08 0d 2b 00 09 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_Formbook_PD_2147754178_1
         $x_1_2 = {0a 16 9a 13 ?? 11 ?? 72 ?? ?? ?? 70 20 00 01 00 00 14 14 1a 8d 01 00 00 01 13 ?? 11 ?? 16 [0-2] a2 11 ?? 17 [0-2] a2 11 ?? 18 [0-2] a2 11 [0-10] 6f ?? 00 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_MSIL_Formbook_VN_2147759242_0
         $x_1_1 = {01 25 16 72 ?? ?? ?? 70 a2 25 17 7e ?? ?? ?? 04 a2 25 18 7e ?? ?? ?? 04 a2 0a 06 28 ?? ?? ?? 0a 00 06 73 ?? ?? ?? 06 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_MSIL_Formbook_VN_2147759242_1
         $x_1_1 = {01 25 16 7e ?? ?? ?? 04 a2 25 17 7e ?? ?? ?? 04 a2 25 18 72 ?? ?? ?? 70 a2 0a 28 ?? ?? ?? 0a 28 ?? ?? ?? 06 28 ?? ?? ?? 06 28 ?? ?? ?? 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +129,7 @@ rule Trojan_MSIL_Formbook_VN_2147759242_2
         $x_1_1 = {5d 91 61 d2 81 ?? ?? ?? 01 00 06 17 58 0a 06 02 8e 69 fe ?? 0c 08 2d 15 00 02 06 8f ?? ?? ?? 01 25 71 ?? ?? ?? 01 7e ?? ?? ?? 04 06 1f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +151,7 @@ rule Trojan_MSIL_Formbook_VN_2147759242_3
         $x_1_1 = {0b 16 0b 2b ?? 00 02 07 8f ?? ?? ?? 01 25 71 ?? ?? ?? 01 06 07 1f ?? 5d 91 61 d2 81 ?? ?? ?? 01 00 07 17 58 0b 07 02 8e 69 fe ?? 0d 09 2d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +173,7 @@ rule Trojan_MSIL_Formbook_VN_2147759242_4
         $x_1_1 = {0a 00 02 72 ?? ?? ?? 70 7d ?? ?? ?? 04 02 72 ?? ?? ?? 70 7d ?? ?? ?? 04 02 19 8d ?? ?? ?? 01 25 16 02 7b ?? ?? ?? 04 a2 25 17 02 7b ?? ?? ?? 04 a2 7d ?? ?? ?? 04 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -188,6 +196,7 @@ rule Trojan_MSIL_Formbook_VN_2147759242_5
         $x_1_2 = {04 0b 07 16 7e ?? ?? ?? 04 a2 07 17 7e ?? ?? ?? 04 a2 06 6f ?? ?? ?? 0a 16 9a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -210,6 +219,7 @@ rule Trojan_MSIL_Formbook_VN_2147759242_6
         $x_1_2 = {01 0a 19 8d ?? ?? ?? 01 25 16 02 28 ?? ?? ?? 06 a2 25 17 02 28 ?? ?? ?? 06 a2 25 18 02 28 ?? ?? ?? 06 a2 0a 06 73 ?? ?? ?? 06 0b 2b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -234,6 +244,7 @@ rule Trojan_MSIL_Formbook_VN_2147759242_7
         $x_1_4 = "$486474cf-9038-41c2-855e-b7a6492b54ae" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -256,6 +267,7 @@ rule Trojan_MSIL_Formbook_VN_2147759242_8
         $x_1_2 = {01 25 16 7e ?? ?? ?? 04 a2 25 17 7e ?? ?? ?? 04 a2 25 18 72 ?? ?? ?? 70 a2 73 ?? ?? ?? 06 0a 2a 05 00 19 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -280,6 +292,7 @@ rule Trojan_MSIL_Formbook_MK_2147759892_0
         $x_1_4 = "MemoryStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -301,6 +314,7 @@ rule Trojan_MSIL_Formbook_SS_2147765265_0
         $x_1_1 = {72 6a 53 00 70 0a 06 28 51 00 00 06 72 ef 53 00 70 28 ?? ?? ?? 0a 28 ?? ?? ?? 2b 0b 73 1c 01 00 06 07 28 3f 01 00 06 28 28 00 00 0a 0c 73 9d 01 00 06 0d 09 73 83 01 00 06 28 ?? ?? ?? 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -336,6 +350,7 @@ rule Trojan_MSIL_Formbook_FH_2147767207_0
         $x_1_15 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 3 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -367,6 +382,7 @@ rule Trojan_MSIL_Formbook_FB_2147770189_0
         $x_1_7 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -399,6 +415,7 @@ rule Trojan_MSIL_Formbook_FC_2147770280_0
         $x_1_8 = "cookie_list.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 6 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -432,6 +449,7 @@ rule Trojan_MSIL_Formbook_AMP_2147773164_0
         $x_1_9 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -459,6 +477,7 @@ rule Trojan_MSIL_Formbook_DA_2147775558_0
         $x_1_7 = "Password" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -486,6 +505,7 @@ rule Trojan_MSIL_Formbook_DB_2147775559_0
         $x_1_7 = "Camry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -512,6 +532,7 @@ rule Trojan_MSIL_Formbook_DB_2147775559_1
         $x_1_6 = "CreateInstance" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -540,6 +561,7 @@ rule Trojan_MSIL_Formbook_DC_2147775560_0
         $x_1_8 = "SaveRecordToFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -564,6 +586,7 @@ rule Trojan_MSIL_Formbook_DD_2147775941_0
         $x_1_4 = "CreateInstance" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -591,6 +614,7 @@ rule Trojan_MSIL_Formbook_DD_2147775941_1
         $x_1_7 = "SonicMaster" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -618,6 +642,7 @@ rule Trojan_MSIL_Formbook_DF_2147775942_0
         $x_1_7 = "Milky Lane" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -644,6 +669,7 @@ rule Trojan_MSIL_Formbook_DJ_2147776071_0
         $x_1_6 = "123456" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -670,6 +696,7 @@ rule Trojan_MSIL_Formbook_DJ_2147776071_1
         $x_1_6 = "Logger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -696,6 +723,7 @@ rule Trojan_MSIL_Formbook_DH_2147776176_0
         $x_1_6 = "get_Connection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -724,6 +752,7 @@ rule Trojan_MSIL_Formbook_DI_2147776177_0
         $x_1_8 = "biblija.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -750,6 +779,7 @@ rule Trojan_MSIL_Formbook_DM_2147776465_0
         $x_1_6 = "DiseaseMstr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -778,6 +808,7 @@ rule Trojan_MSIL_Formbook_DN_2147776466_0
         $x_1_8 = "LockHolder" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -804,6 +835,7 @@ rule Trojan_MSIL_Formbook_DP_2147776467_0
         $x_1_6 = "LimerBoy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -830,6 +862,7 @@ rule Trojan_MSIL_Formbook_DQ_2147776580_0
         $x_1_6 = "DebuggerBrowsableState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -856,6 +889,7 @@ rule Trojan_MSIL_Formbook_DQ_2147776580_1
         $x_1_6 = "Interlocked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -883,6 +917,7 @@ rule Trojan_MSIL_Formbook_DV_2147776581_0
         $x_1_7 = "dnspy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -910,6 +945,7 @@ rule Trojan_MSIL_Formbook_DV_2147776581_1
         $x_1_7 = "Canon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -937,6 +973,7 @@ rule Trojan_MSIL_Formbook_DV_2147776581_2
         $x_1_7 = "get_Directory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -965,6 +1002,7 @@ rule Trojan_MSIL_Formbook_DO_2147776583_0
         $x_1_8 = ".\"4#7&<'A(F)I*L+N,P-U.Z" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -993,6 +1031,7 @@ rule Trojan_MSIL_Formbook_DS_2147776584_0
         $x_1_8 = "inchat.kro.kr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1022,6 +1061,7 @@ rule Trojan_MSIL_Formbook_DT_2147776585_0
         $x_1_9 = "GetDomain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1049,6 +1089,7 @@ rule Trojan_MSIL_Formbook_DU_2147776659_0
         $x_1_7 = "Adhar_Number" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1085,6 +1126,7 @@ rule Trojan_MSIL_Formbook_DW_2147776660_0
         $x_1_16 = "DebuggerHiddenAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 8 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1115,6 +1157,7 @@ rule Trojan_MSIL_Formbook_DX_2147776661_0
         $x_1_6 = "DebuggerBrowsableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1149,6 +1192,7 @@ rule Trojan_MSIL_Formbook_DY_2147776662_0
         $x_1_14 = "DebuggerHiddenAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 8 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1187,6 +1231,7 @@ rule Trojan_MSIL_Formbook_DZ_2147776663_0
         $x_1_14 = "SplashScreen1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 10 of ($x_1_*))) or
             (all of ($x*))
@@ -1218,6 +1263,7 @@ rule Trojan_MSIL_Formbook_ED_2147776884_0
         $x_1_8 = "DebuggerStepThroughAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -1249,6 +1295,7 @@ rule Trojan_MSIL_Formbook_ED_2147776884_1
         $x_1_8 = "get_CurrentDomain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1279,6 +1326,7 @@ rule Trojan_MSIL_Formbook_DK_2147776885_0
         $x_1_6 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1310,6 +1358,7 @@ rule Trojan_MSIL_Formbook_EA_2147776886_0
         $x_1_11 = "DebuggerHiddenAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1345,6 +1394,7 @@ rule Trojan_MSIL_Formbook_EB_2147776887_0
         $x_1_11 = "DebuggerBrowsableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1381,6 +1431,7 @@ rule Trojan_MSIL_Formbook_EC_2147776888_0
         $x_1_12 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 6 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1423,6 +1474,7 @@ rule Trojan_MSIL_Formbook_EF_2147777287_0
         $x_1_18 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 9 of ($x_1_*))) or
             ((1 of ($x_20_*) and 9 of ($x_1_*))) or
@@ -1466,6 +1518,7 @@ rule Trojan_MSIL_Formbook_EG_2147777288_0
         $x_1_16 = "connectionString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1496,6 +1549,7 @@ rule Trojan_MSIL_Formbook_DL_2147777538_0
         $x_1_6 = "up_to_10_domains" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1528,6 +1582,7 @@ rule Trojan_MSIL_Formbook_EH_2147777539_0
         $x_1_12 = "GetResourceString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1565,6 +1620,7 @@ rule Trojan_MSIL_Formbook_EK_2147777541_0
         $x_1_13 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1596,6 +1652,7 @@ rule Trojan_MSIL_Formbook_EM_2147777727_0
         $x_1_7 = "CreateInstance" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1624,6 +1681,7 @@ rule Trojan_MSIL_Formbook_EM_2147777727_1
         $x_1_8 = "DebuggerBrowsableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -1654,6 +1712,7 @@ rule Trojan_MSIL_Formbook_EM_2147777727_2
         $x_3_7 = "CommonDesignPatterns.introDotNetCoreWithMVC" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1684,6 +1743,7 @@ rule Trojan_MSIL_Formbook_EL_2147777741_0
         $x_1_10 = "GetInstance" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -1716,6 +1776,7 @@ rule Trojan_MSIL_Formbook_EI_2147778052_0
         $x_1_7 = "ClassLibrary1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1747,6 +1808,7 @@ rule Trojan_MSIL_Formbook_EJ_2147778053_0
         $x_1_11 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 3 of ($x_1_*))) or
@@ -1782,6 +1844,7 @@ rule Trojan_MSIL_Formbook_EN_2147778054_0
         $x_1_10 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 6 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1821,6 +1884,7 @@ rule Trojan_MSIL_Formbook_EP_2147778056_0
         $x_1_15 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1856,6 +1920,7 @@ rule Trojan_MSIL_Formbook_EQ_2147778059_0
         $x_1_11 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1886,6 +1951,7 @@ rule Trojan_MSIL_Formbook_EE_2147778079_0
         $x_1_6 = "1.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1915,6 +1981,7 @@ rule Trojan_MSIL_Formbook_EO_2147778226_0
         $x_1_9 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -1947,6 +2014,7 @@ rule Trojan_MSIL_Formbook_ER_2147778228_0
         $x_1_9 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1973,6 +2041,7 @@ rule Trojan_MSIL_Formbook_BK_2147778303_0
         $x_1_2 = {02 06 07 28 ?? 00 00 06 0c 08 03 04 28 ?? 00 00 06 00 00 07 17 58 0b 07 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2004,6 +2073,7 @@ rule Trojan_MSIL_Formbook_ES_2147778326_0
         $x_1_11 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -2036,6 +2106,7 @@ rule Trojan_MSIL_Formbook_ET_2147778400_0
         $x_1_8 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -2069,6 +2140,7 @@ rule Trojan_MSIL_Formbook_ET_2147778400_1
         $x_1_9 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2100,6 +2172,7 @@ rule Trojan_MSIL_Formbook_EU_2147778544_0
         $x_1_11 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 6 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -2139,6 +2212,7 @@ rule Trojan_MSIL_Formbook_EV_2147778548_0
         $x_1_15 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_20_*) and 3 of ($x_1_*))) or
@@ -2181,6 +2255,7 @@ rule Trojan_MSIL_Formbook_EW_2147778778_0
         $x_1_16 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -2216,6 +2291,7 @@ rule Trojan_MSIL_Formbook_EX_2147778852_0
         $x_1_11 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -2244,6 +2320,7 @@ rule Trojan_MSIL_Formbook_EY_2147779330_0
         $x_1_5 = {38 2a 00 00 00 20 ?? ?? ?? ?? fe 0e 00 00 fe 0c 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2274,6 +2351,7 @@ rule Trojan_MSIL_Formbook_EZ_2147779631_0
         $x_1_10 = "WebRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_30_*) and 1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((1 of ($x_30_*) and 2 of ($x_10_*))) or
@@ -2306,6 +2384,7 @@ rule Trojan_MSIL_Formbook_DE_2147779753_0
         $x_1_7 = "GetDomain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2333,6 +2412,7 @@ rule Trojan_MSIL_Formbook_AD_2147781868_0
         $x_1_7 = "metalshoopp.000webhostapp.com/WindowsFormsApp11.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2358,6 +2438,7 @@ rule Trojan_MSIL_Formbook_AA_2147784196_0
         $x_1_5 = "C:\\Users\\tataki\\Source\\Repos\\Pacman" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2379,6 +2460,7 @@ rule Trojan_MSIL_Formbook_SIBA_2147794730_0
         $x_1_1 = {0a 16 0b 72 ?? ?? ?? ?? 0c 00 2b ?? [0-6] 08 13 ?? 16 13 ?? 2b 34 11 03 11 04 6f ?? ?? ?? ?? 13 ?? 00 12 ?? 28 ?? ?? ?? ?? 13 ?? 07 17 58 0b 12 08 28 ?? ?? ?? ?? 13 ?? 06 11 0e 11 0b 6f ?? ?? ?? ?? 0a 00 11 04 17 58 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2400,6 +2482,7 @@ rule Trojan_MSIL_Formbook_KA_2147796993_0
         $x_10_1 = {00 11 04 11 07 11 09 58 17 58 17 59 11 08 11 0a 58 17 58 17 59 6f ?? 00 00 0a 13 0b 12 0b 28 ?? 00 00 0a 13 0c 09 08 11 0c 9c 08 17 58 0c 11 0a 17 58 13 0a 00 11 0a 17 fe 04 13 0d 11 0d 2d c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2422,6 +2505,7 @@ rule Trojan_MSIL_Formbook_LSH_2147807344_0
         $x_1_2 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2447,6 +2531,7 @@ rule Trojan_MSIL_Formbook_RPM_2147811604_0
         $x_1_5 = "-enc WwBUAGgAcgBlAGEA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2472,6 +2557,7 @@ rule Trojan_MSIL_Formbook_RPO_2147811606_0
         $x_1_5 = "Dmitmzunvrinzjpygdmeiobm" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2499,6 +2585,7 @@ rule Trojan_MSIL_Formbook_RPB_2147812379_0
         $x_1_7 = "DownloadString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2525,6 +2612,7 @@ rule Trojan_MSIL_Formbook_RPD_2147812381_0
         $x_1_6 = "NBCBCXNBNCBNCBMBNCXNCXNCNXBCNBX" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2551,6 +2639,7 @@ rule Trojan_MSIL_Formbook_RPE_2147812382_0
         $x_1_6 = "NBCBCXNBNCBNCBMBNCXNCXNCNXBCNBX" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2572,6 +2661,7 @@ rule Trojan_MSIL_Formbook_LKIN_2147813200_0
         $x_10_1 = {07 1a 5a 09 58 08 09 91 9c 00 09 17 58 0d 09 08 8e 69 fe 04 13 04 11 04 2d e0 00 07 17 58 0b 07 06 8e 69 fe 04 13 05 11 05 2d c1}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2593,6 +2683,7 @@ rule Trojan_MSIL_Formbook_MKIN_2147813201_0
         $x_10_1 = {73 05 00 00 0a 0a 73 06 00 00 0a 0b 06 28 ?? ?? ?? 06 6f ?? ?? ?? 0a 00 00 06 16 6f ?? ?? ?? 0a 0c 16 0d 38 14 00 00 00 08 09 91 13 04 00 07 11 04 6f ?? ?? ?? 0a 00 00 09 17 58 0d 09 08 8e 69 3f e3 ff ff ff 07 6f ?? ?? ?? 0a 00 07 13 05 38 00 00 00 00 11 05 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2619,6 +2710,7 @@ rule Trojan_MSIL_Formbook_MD_2147814240_0
         $x_1_6 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2645,6 +2737,7 @@ rule Trojan_MSIL_Formbook_MC_2147814545_0
         $x_1_6 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2671,6 +2764,7 @@ rule Trojan_MSIL_Formbook_RPA_2147814666_0
         $x_1_6 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2699,6 +2793,7 @@ rule Trojan_MSIL_Formbook_RPF_2147814959_0
         $x_1_8 = "WebRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2720,6 +2815,7 @@ rule Trojan_MSIL_Formbook_RPG_2147814960_0
         $x_1_1 = {08 09 07 09 07 8e 69 5d 91 06 09 91 61 d2 9c 09 13 04 11 04 17 58 0d 09 06 8e 69 32 e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2746,6 +2842,7 @@ rule Trojan_MSIL_Formbook_RPG_2147814960_1
         $x_1_6 = "Qgkktedezvnyzfmxmfdjxa" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2772,6 +2869,7 @@ rule Trojan_MSIL_Formbook_RPH_2147815044_0
         $x_1_6 = "GZipStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2799,6 +2897,7 @@ rule Trojan_MSIL_Formbook_RPH_2147815044_1
         $x_1_7 = "GetTypes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -2824,6 +2923,7 @@ rule Trojan_MSIL_Formbook_RPH_2147815044_2
         $x_1_5 = "GetByteArrayAsync" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2850,6 +2950,7 @@ rule Trojan_MSIL_Formbook_RPI_2147815045_0
         $x_1_6 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2882,6 +2983,7 @@ rule Trojan_MSIL_Formbook_RPI_2147815045_1
         $x_1_12 = "WebRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2909,6 +3011,7 @@ rule Trojan_MSIL_Formbook_ME_2147815841_0
         $x_1_7 = "set_Key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2938,6 +3041,7 @@ rule Trojan_MSIL_Formbook_MI_2147816209_0
         $x_2_9 = "InternetCheck" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_30_*) and 5 of ($x_5_*) and 1 of ($x_2_*))) or
             (all of ($x*))
@@ -2967,6 +3071,7 @@ rule Trojan_MSIL_Formbook_MJ_2147816620_0
         $x_1_6 = ".compressed" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2992,6 +3097,7 @@ rule Trojan_MSIL_Formbook_MP_2147817145_0
         $x_1_5 = "PingReply" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3018,6 +3124,7 @@ rule Trojan_MSIL_Formbook_MM_2147817201_0
         $x_1_6 = "DebuggerBrowsableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3043,6 +3150,7 @@ rule Trojan_MSIL_Formbook_MO_2147817204_0
         $x_1_5 = "Invoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3070,6 +3178,7 @@ rule Trojan_MSIL_Formbook_FLL_2147817410_0
         $x_1_7 = "x.rune-spectrals.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -3104,6 +3213,7 @@ rule Trojan_MSIL_Formbook_NUK_2147818657_0
         $x_1_10 = "dasdsad Completed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3125,6 +3235,7 @@ rule Trojan_MSIL_Formbook_HLUF_2147818769_0
         $x_1_1 = {20 16 f4 00 00 0c 2b 13 00 72 ?? ?? ?? 70 07 08 28 ?? ?? ?? 06 0b 00 08 15 58 0c 08 16 fe 04 16 fe 01 0d 09 2d e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3147,6 +3258,7 @@ rule Trojan_MSIL_Formbook_QBFA_2147818770_0
         $x_1_2 = "Voroni" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3178,6 +3290,7 @@ rule Trojan_MSIL_Formbook_NUM_2147819028_0
         $x_1_11 = "GetTypes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3199,6 +3312,7 @@ rule Trojan_MSIL_Formbook_RPP_2147819097_0
         $x_1_1 = {02 03 02 4b 03 04 5f 03 66 05 5f 60 58 0e 07 0e 04 e0 95 58 7e c7 00 00 04 0e 06 17 59 e0 95 58 0e 05 28 bd 02 00 06 58 54 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3222,6 +3336,7 @@ rule Trojan_MSIL_Formbook_NUW_2147819399_0
         $x_1_3 = {06 0b 00 08 15 58 0c 08 16 fe 04 16 fe 01 0d 09 2d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3246,6 +3361,7 @@ rule Trojan_MSIL_Formbook_NUX_2147819559_0
         $x_1_4 = "GetDelegateForFunctionPointer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3267,6 +3383,7 @@ rule Trojan_MSIL_Formbook_NVD_2147820220_0
         $x_1_1 = {0a 13 08 11 08 2c 10 00 06 11 07 6f ?? ?? ?? 06 28 ?? ?? ?? 0a 0a 00 11 06 6f ?? ?? ?? 06 72 ?? ?? ?? 70 28 ?? ?? ?? 0a 13 09 11 09 2c 10 00 06 11 07 6f ?? ?? ?? 06 28 ?? ?? ?? 0a 0a 00 11 06 6f ?? ?? ?? 06 72 ?? ?? ?? 70 28 ?? ?? ?? 0a 13 0a 11 0a 2c 10 00 06 11 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3288,6 +3405,7 @@ rule Trojan_MSIL_Formbook_NVD_2147820220_1
         $x_1_1 = {72 23 00 00 70 28 53 00 00 0a 0b 07 72 27 00 00 70 28 53 00 00 0a 0b 07 72 2b 00 00 70 28 53 00 00 0a 0b 07 72 17 00 00 70 28 53 00 00 0a 0b 07 72 2f 00 00 70 28 53 00 00 0a 0b 07 72 13 00 00 70 28 53 00 00 0a 0b 07 72 0f 00 00 70 28 53 00 00 0a 0b 07 72 33 00 00 70 28 53 00 00 0a 0b 07 72 37 00 00 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3310,6 +3428,7 @@ rule Trojan_MSIL_Formbook_NVG_2147820222_0
         $x_1_2 = "System.Reflection.Assembly" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3334,6 +3453,7 @@ rule Trojan_MSIL_Formbook_NV_2147820223_0
         $x_1_4 = "$240a5f33-9cca-469f-a591-3560338f8b34" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3355,6 +3475,7 @@ rule Trojan_MSIL_Formbook_ND_2147821108_0
         $x_5_1 = {11 0b 91 61 07 11 09 91 11 06 58 11 06 5d 59 d2 9c 00 11 05 17 58 13 05 11 05}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3379,6 +3500,7 @@ rule Trojan_MSIL_Formbook_ND_2147821108_1
         $x_1_4 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3401,6 +3523,7 @@ rule Trojan_MSIL_Formbook_NTW_2147822311_0
         $x_1_2 = {57 15 a2 09 09 1f 00 00 00 fa 25 33 00 16 00 00 01 00 00 00 3a 00 00 00 0b 00 00 00 0c 00 00 00 24 00 00 00 08 00 00 00 4a 00 00 00 53 00 00 00 19}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3426,6 +3549,7 @@ rule Trojan_MSIL_Formbook_NW_2147822312_0
         $x_1_5 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3450,6 +3574,7 @@ rule Trojan_MSIL_Formbook_NW_2147822312_1
         $x_1_4 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3471,6 +3596,7 @@ rule Trojan_MSIL_Formbook_NE_2147822942_0
         $x_5_1 = {08 8e 69 5d 91 9c 00 11 04 17 58}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3493,6 +3619,7 @@ rule Trojan_MSIL_Formbook_NE_2147822942_1
         $x_1_2 = "S0xKREtKTERTSkpTRCQ=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3518,6 +3645,7 @@ rule Trojan_MSIL_Formbook_NYE_2147826305_0
         $x_1_5 = "ssfsfddshfasff" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3539,6 +3667,7 @@ rule Trojan_MSIL_Formbook_NYF_2147826834_0
         $x_1_1 = {57 d4 02 fc c9 0e 00 00 00 fa 25 33 00 16 00 00 02 00 00 00 ?? 00 00 00 16 00 00 00 57 00 00 00 74 00 00 00 ?? 00 00 00 ?? 00 00 00 01 00 00 00 03 00 00 00 17 00 00 00 01 00 00 00 02 00 00 00 02 00 00 00 02 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3561,6 +3690,7 @@ rule Trojan_MSIL_Formbook_NZ_2147827604_0
         $x_1_2 = {02 00 00 d6 00 00 00 90 05 00 00 36 00 00 00 0c 00 00 00 22 01 00 00 3b 02 00 00 0a 00 00 00 01 00 00 00 06 00 00 00 08 00 00 00 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3585,6 +3715,7 @@ rule Trojan_MSIL_Formbook_NZ_2147827604_1
         $x_1_4 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3611,6 +3742,7 @@ rule Trojan_MSIL_Formbook_NEA_2147827667_0
         $x_1_6 = "Application.lnk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3633,6 +3765,7 @@ rule Trojan_MSIL_Formbook_PFA_2147827833_0
         $x_1_2 = {0a 06 72 55 16 00 70 20 00 01 00 00 14 14 17 8d ?? ?? ?? 01 25 16 02 a2 6f ?? ?? ?? 0a 0b 2b 00 07 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3655,6 +3788,7 @@ rule Trojan_MSIL_Formbook_PFC_2147827834_0
         $x_1_2 = {2b 3b 06 72 ?? ?? ?? 70 20 00 01 00 00 14 14 17 8d ?? ?? ?? 01 25 16 02 a2 6f ?? ?? ?? 0a 0b 08 20 ?? ?? ?? 1a 5a 20 ?? ?? ?? 49 61 2b b3 08 20 ?? ?? ?? 25 5a 20 ?? ?? ?? 87 61 2b a4 07 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3677,6 +3811,7 @@ rule Trojan_MSIL_Formbook_RPU_2147828537_0
         $x_1_2 = {09 08 11 04 08 8e 69 5d 91 06 11 04 91 61 d2 6f ?? 00 00 0a 11 04 17 58 13 04 11 04 06 8e 69 32 df}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3706,6 +3841,7 @@ rule Trojan_MSIL_Formbook_RPV_2147828538_0
         $x_1_9 = "DynamicInvoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3730,6 +3866,7 @@ rule Trojan_MSIL_Formbook_NEC_2147828741_0
         $x_1_4 = "992302676874375178" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3755,6 +3892,7 @@ rule Trojan_MSIL_Formbook_NED_2147828742_0
         $x_1_5 = "R2V0RW52aXJvbm1lbnRWYXJpYWJsZQ==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3779,6 +3917,7 @@ rule Trojan_MSIL_Formbook_NXW_2147830738_0
         $x_1_4 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3806,6 +3945,7 @@ rule Trojan_MSIL_Formbook_NXW_2147830738_1
         $x_1_7 = "YYYAYYYsYYYsYYYeYYYmYYYbYYYlYYYyYYY" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3830,6 +3970,7 @@ rule Trojan_MSIL_Formbook_NFN_2147831831_0
         $x_1_4 = "ColorTranslator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3857,6 +3998,7 @@ rule Trojan_MSIL_Formbook_NFN_2147831831_1
         $x_1_7 = "ColorTranslator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3885,6 +4027,7 @@ rule Trojan_MSIL_Formbook_NFN_2147831831_2
         $x_1_8 = "Split" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3908,6 +4051,7 @@ rule Trojan_MSIL_Formbook_RD_2147831856_0
         $x_1_3 = "Kulibing" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3933,6 +4077,7 @@ rule Trojan_MSIL_Formbook_NWF_2147832447_0
         $x_1_5 = "ColorTranslator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3955,6 +4100,7 @@ rule Trojan_MSIL_Formbook_RDB_2147832519_0
         $x_2_2 = {00 16 13 04 2b 31 00 08 09 11 04 6f 95 01 00 0a 13 05 08 09 11 04 6f 95 01 00 0a 13 06 11 06 28 96 01 00 0a 13 07 07 06 11 07 28 97 01 00 0a 9c 00 11 04 17 58 13 04 11 04 08 6f 98 01 00 0a fe 04 13 08 11 08 2d bf 06 17 58 0a 00 09 17 58 0d 09 08 6f 99 01 00 0a fe 04 13 09 11 09 2d a1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3977,6 +4123,7 @@ rule Trojan_MSIL_Formbook_RDC_2147833126_0
         $x_2_2 = {07 28 70 00 00 0a 28 ?? ?? ?? ?? 72 ?? ?? ?? ?? 6f 71 00 00 0a 80 ?? ?? ?? ?? 02 13 0b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4002,6 +4149,7 @@ rule Trojan_MSIL_Formbook_NEAA_2147834122_0
         $x_2_5 = "$$method0x6000395-1" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4027,6 +4175,7 @@ rule Trojan_MSIL_Formbook_NJS_2147834357_0
         $x_1_5 = "MatikkaPeli.Properties" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4050,6 +4199,7 @@ rule Trojan_MSIL_Formbook_NWU_2147835151_0
         $x_1_3 = "CreateInstance" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4072,6 +4222,7 @@ rule Trojan_MSIL_Formbook_NWV_2147835579_0
         $x_1_2 = "$13d44a0d-107c-473e-92f3-050b1678a80c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4094,6 +4245,7 @@ rule Trojan_MSIL_Formbook_NYB_2147835582_0
         $x_1_2 = "83-cb2b31a8c317" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4117,6 +4269,7 @@ rule Trojan_MSIL_Formbook_NZB_2147836036_0
         $x_1_3 = "WebServices" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4140,6 +4293,7 @@ rule Trojan_MSIL_Formbook_NZB_2147836036_1
         $x_1_3 = "39905fc75b33" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4164,6 +4318,7 @@ rule Trojan_MSIL_Formbook_NZB_2147836036_2
         $x_1_4 = "BLYAT EnBLYAT trBLYAT yPBLYAT oiBLYAT ntBLYAT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4186,6 +4341,7 @@ rule Trojan_MSIL_Formbook_NEAB_2147836094_0
         $x_2_2 = "M0r4p5mxZ0r4p5mx" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4207,6 +4363,7 @@ rule Trojan_MSIL_Formbook_RS_2147836439_0
         $x_5_1 = {11 04 06 09 06 09 8e 69 5d 91 08 06 91 61 d2 9c 06 17 58 0a 06 08 8e 69 32 e6}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4229,6 +4386,7 @@ rule Trojan_MSIL_Formbook_RS_2147836439_1
         $x_1_2 = {09 08 11 04 08 8e 69 5d 91 07 11 04 91 61 d2 6f 42 00 00 0a 11 04 17 58 13 04 11 04 07 8e 69 32 df}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4250,6 +4408,7 @@ rule Trojan_MSIL_Formbook_RS_2147836439_2
         $x_5_1 = {28 90 00 00 0a 28 8d 00 00 0a 16 16 11 09 11 08 18 28 99 00 00 06 28 8d 00 00 0a 18 28 99 00 00 06 28 91 00 00 0a 8c 59 00 00 01 a2 14 28 92 00 00 0a 1e}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4271,6 +4430,7 @@ rule Trojan_MSIL_Formbook_RS_2147836439_3
         $x_1_1 = {00 07 08 09 28 34 00 00 06 28 32 00 00 06 00 28 31 00 00 06 28 33 00 00 06 28 30 00 00 06 00 17 13 04 00 28 2f 00 00 06 d2 06 28 2d 00 00 06 00 00 00 09 17 58 0d 09 17 fe 04 13 05 11 05 2d c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4297,6 +4457,7 @@ rule Trojan_MSIL_Formbook_RDE_2147837542_0
         $x_1_6 = "CryptoObfuscator_Output" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4319,6 +4480,7 @@ rule Trojan_MSIL_Formbook_RDF_2147838458_0
         $x_1_2 = "MonteCarloCards" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4341,6 +4503,7 @@ rule Trojan_MSIL_Formbook_SJN_2147839348_0
         $x_1_2 = {28 48 00 00 0a d2 6f 49 00 00 0a 00 11 08 17 58 13 08 11 08 08 8e 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4364,6 +4527,7 @@ rule Trojan_MSIL_Formbook_RDG_2147839569_0
         $x_2_3 = {09 11 0b 8f 2e 00 00 01 25 4b 11 0c 61 54 11 0d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4387,6 +4551,7 @@ rule Trojan_MSIL_Formbook_NEAF_2147839974_0
         $x_2_3 = "154a1e24f234f6.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4411,6 +4576,7 @@ rule Trojan_MSIL_Formbook_AZ_2147839986_0
         $x_1_4 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4433,6 +4599,7 @@ rule Trojan_MSIL_Formbook_AZ_2147839986_1
         $x_1_2 = "48FW7C48EFBH58C9ZF5714" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4454,6 +4621,7 @@ rule Trojan_MSIL_Formbook_AOK_2147841229_0
         $x_1_1 = {2b 1c 12 10 28 ?? ?? ?? 0a 0d 2b 12 12 10 28 ?? ?? ?? 0a 0d 2b 08 12 10 28 ?? ?? ?? 0a 0d 11 05 09 6f ?? ?? ?? 0a 08 17 58 0c 08 11 07 fe 04 13 0c 11 0c 2d a4 07 17 58 0b 07 11 08 fe 04 13 0d 11 0d 2d 91}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4476,6 +4644,7 @@ rule Trojan_MSIL_Formbook_AOK_2147841229_1
         $x_1_2 = "qataris.agency/423" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4498,6 +4667,7 @@ rule Trojan_MSIL_Formbook_AOK_2147841229_2
         $x_1_2 = {02 03 04 6f ?? 00 00 0a 0a 0e 04 05 6f ?? 00 00 0a 59 0b 06 07 05 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4520,6 +4690,7 @@ rule Trojan_MSIL_Formbook_AOK_2147841229_3
         $x_1_2 = "formulario151122.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4542,6 +4713,7 @@ rule Trojan_MSIL_Formbook_NEAG_2147841518_0
         $x_5_2 = "System.Reflection.Assembly" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4563,6 +4735,7 @@ rule Trojan_MSIL_Formbook_KAB_2147841942_0
         $x_5_1 = {07 06 8e 69 5d 13 04 07 09 6f ?? 00 00 0a 5d 13 08 06 11 04 91 13 09 09 11 08 6f ?? 00 00 0a 13 0a 02 06 07 28 ?? 00 00 06 13 0b 02 11 09 11 0a 11 0b 28 ?? 00 00 06 13 0c 06 11 04 02 11 0c 28 ?? 00 00 06 9c 07 17 59 0b 07 16 fe 04 16 fe 01 13 0d 11 0d 2d aa}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4585,6 +4758,7 @@ rule Trojan_MSIL_Formbook_SPA_2147842204_0
         $x_2_2 = {72 a9 01 00 70 02 72 5f 00 00 70 17 8d 01 00 00 01 0d 09 16 07 8c 05 00 00 01 a2 09 28 ?? ?? ?? 06 0c 07 17 58 0b 72 75 01 00 70 06 72 c9 01 00 70 17 8d 01 00 00 01 13 04 11 04 16 08 a2 11 04 28 ?? ?? ?? 06 26 de b8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4608,6 +4782,7 @@ rule Trojan_MSIL_Formbook_NEAI_2147844053_0
         $x_2_3 = "Confuser.Core 1.6.0" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4630,6 +4805,7 @@ rule Trojan_MSIL_Formbook_AAS_2147845652_0
         $x_1_2 = "Part08c08pat08on" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4652,6 +4828,7 @@ rule Trojan_MSIL_Formbook_MBDB_2147846975_0
         $x_1_2 = {57 00 65 00 65 00 6e 00 67 00 00 35 53 00 79 00 73 00 74 00 65 00 6d 00 2e 00 52 00 65 00 66 00 6c 00 65 00 63 00 74 00 69 00 6f 00 6e 00 2e 00 41 00 73 00 73 00 65 00 6d 00 62 00 6c 00 79 00 00 09 4c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4675,6 +4852,7 @@ rule Trojan_MSIL_Formbook_AFN_2147846993_0
         $x_1_3 = "QuanLyBanGiay.CCM" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4696,6 +4874,7 @@ rule Trojan_MSIL_Formbook_MBCX_2147847212_0
         $x_1_1 = {6e 00 63 00 5a 00 36 00 6c 00 4d 00 51 00 2b 00 5a 00 58 00 4a 00 33 00 52 00 6a 00 51 00 75 00 2f 00 34 00 42 00 65 00 56 00 56 00 6a 00 74 00 65 00 61 00 57 00 66 00 53 00 68 00 79 00 39 00 4d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4718,6 +4897,7 @@ rule Trojan_MSIL_Formbook_ADF_2147847272_0
         $x_1_2 = "OPN1LW_v1._1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4740,6 +4920,7 @@ rule Trojan_MSIL_Formbook_AKF_2147847542_0
         $x_2_2 = {0a 16 13 07 2b 1c 00 06 11 07 11 07 1f 11 5a 11 07 18 62 61 20 aa 00 00 00 60 9e 00 11 07 17 58 13 07 11 07 06 8e 69 fe 04 13 08 11 08}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4762,6 +4943,7 @@ rule Trojan_MSIL_Formbook_AKF_2147847542_1
         $x_1_2 = "HarvestPigmentSequence" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4784,6 +4966,7 @@ rule Trojan_MSIL_Formbook_AKF_2147847542_2
         $x_1_2 = "SalesInventory" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4806,6 +4989,7 @@ rule Trojan_MSIL_Formbook_AIW_2147847543_0
         $x_1_2 = "OPN1LW_v1._1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4828,6 +5012,7 @@ rule Trojan_MSIL_Formbook_AIW_2147847543_1
         $x_1_2 = "DoAnBaoCao" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4850,6 +5035,7 @@ rule Trojan_MSIL_Formbook_AJK_2147847544_0
         $x_1_2 = "CuaHangDT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4872,6 +5058,7 @@ rule Trojan_MSIL_Formbook_AJK_2147847544_1
         $x_1_2 = "obstacle_avoidance1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4894,6 +5081,7 @@ rule Trojan_MSIL_Formbook_ALK_2147847545_0
         $x_1_2 = "QuanLyBanThuoc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4915,6 +5103,7 @@ rule Trojan_MSIL_Formbook_GIF_2147847869_0
         $x_10_1 = {08 72 07 a3 02 70 72 0b a3 02 70 6f ?? ?? ?? 0a 0c 06 08 72 11 a3 02 70 72 ed 02 00 70 6f ?? ?? ?? 0a 7d bf 00 00 04 16 06 7b bf 00 00 04 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 7e c1 00 00 04 25 2d 17 26 7e c0 00 00 04 fe 06 64 00 00 06 73 78 00 00 0a 25 80 c1 00 00 04 28 ?? ?? ?? 2b 06 fe 06 61 00 00 06 73 7a 00 00 0a 28 02 00 00 2b 28 03 00 00 2b 0d 28 ?? ?? ?? 0a 09 6f ?? ?? ?? 0a 13 04 11 04 6f ?? ?? ?? 0a 16 9a 6f ?? ?? ?? 0a 18 9a 13 05 11 05 16 8c 3a 00 00 01 02 7b 0f 00 00 04 13 08 11 08}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4937,6 +5126,7 @@ rule Trojan_MSIL_Formbook_AWM_2147847998_0
         $x_1_2 = "TuringMachineSimulation" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4958,6 +5148,7 @@ rule Trojan_MSIL_Formbook_MAAV_2147848529_0
         $x_10_1 = {37 00 45 00 79 00 66 00 35 00 49 00 4e 00 49 00 6e 00 61 00 62 00 72 00 44 00 46 00 68 00 48 00 45 00 2e 00 63 00 31 00 36 00 49 00 6b 00 30 00 32 00 4b 00 53 00 77 00 4c 00 6d 00 71 00 6f 00 42 00 46 00 44 00 79}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4979,6 +5170,7 @@ rule Trojan_MSIL_Formbook_PSPF_2147848880_0
         $x_2_1 = {00 72 18 1c 00 70 0a 06 72 56 1c 00 70 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 28 ?? ?? ?? 06 0b 07 0c 2b 00 08 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5000,6 +5192,7 @@ rule Trojan_MSIL_Formbook_MBFC_2147850098_0
         $x_1_1 = "pjqjipaeiasdpawaffeafa" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5022,6 +5215,7 @@ rule Trojan_MSIL_Formbook_MBFR_2147850542_0
         $x_1_2 = "79fa4dba-71fa-4780-a24c-b5493d2d61a0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5046,6 +5240,7 @@ rule Trojan_MSIL_Formbook_RDL_2147851865_0
         $x_1_4 = "Tmavwtyheiz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5067,6 +5262,7 @@ rule Trojan_MSIL_Formbook_PSUC_2147852362_0
         $x_2_1 = {00 02 28 07 00 00 0a 0a 28 08 00 00 0a 06 28 07 00 00 06 6f 09 00 00 0a 0b 2b 00 07 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5089,6 +5285,7 @@ rule Trojan_MSIL_Formbook_AGM_2147852536_0
         $x_1_2 = "Task1Simulation" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5111,6 +5308,7 @@ rule Trojan_MSIL_Formbook_AGCK_2147852540_0
         $x_1_2 = "OAnQuan" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5133,6 +5331,7 @@ rule Trojan_MSIL_Formbook_MBID_2147888930_0
         $x_1_2 = {58 00 00 05 58 00 31 00 00 05 58 00 32 00 00 0f 4d 00 6f 00 64 00 75 00 6c 00 65 00 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5154,6 +5353,7 @@ rule Trojan_MSIL_Formbook_PSWF_2147889172_0
         $x_2_1 = {11 00 6f 0c 00 00 0a 28 ?? 00 00 06 13 09 20 01 00 00 00 7e 5d 00 00 04 7b 63 00 00 04 3a b7 ff ff ff 26 20 01 00 00 00 38 ac ff ff ff 11 00 72 61 00 00 70 28 ?? 00 00 0a 28 ?? 00 00 06 20 03 00 00 00 38 91 ff ff ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5176,6 +5376,7 @@ rule Trojan_MSIL_Formbook_AGNM_2147889427_0
         $x_1_2 = "QuanLyKhoBanhKeo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5198,6 +5399,7 @@ rule Trojan_MSIL_Formbook_AJFM_2147889446_0
         $x_1_2 = "QuanLyKhoBanhKeo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5222,6 +5424,7 @@ rule Trojan_MSIL_Formbook_RDN_2147890116_0
         $x_1_4 = "Sys file" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5243,6 +5446,7 @@ rule Trojan_MSIL_Formbook_AMAA_2147891901_0
         $x_1_1 = {09 8e 69 5d 13 08 09 11 08 91 13 09 11 06 17 58 08 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5264,6 +5468,7 @@ rule Trojan_MSIL_Formbook_AMAA_2147891901_1
         $x_1_1 = {17 58 08 5d 13 ?? 07 11 ?? 02 07 11 ?? 91 11 ?? 61 07 11 ?? 91 59 28 ?? ?? 00 06 28 ?? ?? 00 ?? 9c [0-1] 11 ?? 17 58 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5285,6 +5490,7 @@ rule Trojan_MSIL_Formbook_AMAA_2147891901_2
         $x_5_1 = {11 08 09 5d 13 09 11 08 11 04 5d 13 0a 07 11 09 91 13 0b 08 11 0a 6f ?? 00 00 0a 13 0c 02 07 11 08 28 ?? 00 00 06 13 0d 02 11 0b 11 0c 11 0d 28 ?? 00 00 06 13 0e 07 11 09 11 0e 20 00 01 00 00 5d d2 9c 11 08 17 59 13 08 11 08 16 2f b2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5307,6 +5513,7 @@ rule Trojan_MSIL_Formbook_AMAB_2147892942_0
         $x_1_2 = {4c 00 6f 00 61 00 64 00 00 21 47 00 65 00 74 00 45 00 78 00 70 00 6f 00 72 00 74 00 65 00 64 00 54 00 79 00 70 00 65 00 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5328,6 +5535,7 @@ rule Trojan_MSIL_Formbook_AMAB_2147892942_1
         $x_5_1 = {11 04 07 8e 69 5d 13 05 11 04 08 6f ?? 00 00 0a 5d 13 06 07 11 05 91 13 07 08 11 06 6f ?? 00 00 0a 13 08 02 07 11 04 28 ?? 00 00 06 13 09 02 11 07 11 08 11 09 28 ?? 00 00 06 13 0a 07 11 05 02 11 0a 28 ?? 00 00 06 9c 11 04 17 59 13 04 11 04 16 2f ad}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5350,6 +5558,7 @@ rule Trojan_MSIL_Formbook_MBJZ_2147893070_0
         $x_1_2 = "e721ac8abe44" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5373,6 +5582,7 @@ rule Trojan_MSIL_Formbook_ASDY_2147893076_0
         $x_1_3 = {11 15 09 5d 13 16 11 15 11 04 5d 13 17 07 11 16 91 13 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5395,6 +5605,7 @@ rule Trojan_MSIL_Formbook_AKAO_2147894983_0
         $x_1_2 = "Prototype.DEACT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5416,6 +5627,7 @@ rule Trojan_MSIL_Formbook_AMBA_2147895535_0
         $x_1_1 = {07 11 09 11 0f 11 07 5d d2 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5439,6 +5651,7 @@ rule Trojan_MSIL_Formbook_AMBA_2147895535_1
         $x_1_3 = {11 0e 08 11 08 1f 16 5d 91 61 13 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5462,6 +5675,7 @@ rule Trojan_MSIL_Formbook_AMBA_2147895535_2
         $x_1_3 = {07 08 18 5b 02 08 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 0a 9c 00 08 18 58 0c 08 06 fe 04 0d 09 2d de}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5484,6 +5698,7 @@ rule Trojan_MSIL_Formbook_ASF_2147896127_0
         $x_1_2 = "QuanLyBanVeMayBay" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5507,6 +5722,7 @@ rule Trojan_MSIL_Formbook_RDH_2147896468_0
         $x_1_3 = "N556736" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5528,6 +5744,7 @@ rule Trojan_MSIL_Formbook_SQ_2147897487_0
         $x_2_1 = {00 11 09 11 05 5d 13 0a 11 09 17 58 13 0b 08 11 0a 91 13 0c 08 11 0a 11 0c 09 11 09 1f 16 5d 91 61 08 11 0b 11 05 5d 91 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 00 11 09 17 58 13 09 11 09 11 05 11 04 17 58 5a fe 04 13 0d 11 0d 2d b1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5552,6 +5769,7 @@ rule Trojan_MSIL_Formbook_RDO_2147897625_0
         $x_1_4 = "BaiBao" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5574,6 +5792,7 @@ rule Trojan_MSIL_Formbook_MBFM_2147899002_0
         $x_1_2 = {4d 56 65 00 63 75 72 72 65 6e 74 56 61 6c 75 65 00 70 73 56 61 6c 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5600,6 +5819,7 @@ rule Trojan_MSIL_Formbook_DR_2147899383_0
         $x_1_6 = "WebRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5621,6 +5841,7 @@ rule Trojan_MSIL_Formbook_NA_2147899700_0
         $x_3_1 = {93 61 1f 50 5f 9d 30 04 16 0c 2b b4 09 20 26 ?? ?? ?? 93 20 cb ?? ?? ?? 59 2b ee 03 2b 01 02 0a 06 2a}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5642,6 +5863,7 @@ rule Trojan_MSIL_Formbook_NNL_2147899703_0
         $x_5_1 = {0e 04 11 02 0e 05 58 03 11 02 04 58 91 02 28 9c ?? ?? ?? 11 03 11 00 5d 91 61 d2 9c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5663,6 +5885,7 @@ rule Trojan_MSIL_Formbook_NAL_2147899705_0
         $x_5_1 = {00 06 08 06 08 91 07 08 07 8e 69 5d 93 61 d2 9c 00 08 17 58 0c 08 06 8e 69 fe 04 0d 09 2d e1}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5684,6 +5907,7 @@ rule Trojan_MSIL_Formbook_KAC_2147900007_0
         $x_5_1 = {00 06 07 03 07 91 04 07 04 8e 69 5d 91 61 d2 9c 00 07 17 58 0b 07 03 8e 69 fe 04 0c 08 2d e1}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5705,6 +5929,7 @@ rule Trojan_MSIL_Formbook_CCGH_2147900258_0
         $x_1_1 = {0e 04 28 06 00 00 06 00 7e ?? ?? ?? ?? 6f ?? 00 00 0a 05 16 03 8e 69 6f ?? 00 00 0a 0a 06 28 ?? 00 00 0a 00 06 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5727,6 +5952,7 @@ rule Trojan_MSIL_Formbook_NN_2147900359_0
         $x_5_2 = {00 09 11 05 07 ?? ?? ?? ?? ?? 9c 00 11 05 17 58 13 05 11 05 11 04 fe 02 16 fe 01 13 06 11 06 2d df}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5748,6 +5974,7 @@ rule Trojan_MSIL_Formbook_PTEX_2147900384_0
         $x_2_1 = {6f 90 00 00 0a 17 73 6b 00 00 0a 25 02 16 02 8e 69 6f 91 00 00 0a 6f 92 00 00 0a 06}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5769,6 +5996,7 @@ rule Trojan_MSIL_Formbook_NM_2147901368_0
         $x_1_1 = {61 38 b1 f4 ff ff 07 11 0a 91 11 07 58 13 0d 07 11 09 11 0b 11 0c 61 11 0d 11 07 5d 59 d2 9c 11 0f 20 c1 67 4b 2e 5a 20 82 fd a3 32 61 38 85 f4 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5794,6 +6022,7 @@ rule Trojan_MSIL_Formbook_LA_2147901730_0
         $x_1_5 = "Mock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5815,6 +6044,7 @@ rule Trojan_MSIL_Formbook_AMBF_2147901912_0
         $x_1_1 = {91 61 07 11 ?? 20 ?? ?? ?? ?? 5d 91 11 ?? 58 11 ?? 5d 59 d2 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5838,6 +6068,7 @@ rule Trojan_MSIL_Formbook_RDP_2147902329_0
         $x_1_3 = "Xem_hinh_form" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5859,6 +6090,7 @@ rule Trojan_MSIL_Formbook_KAG_2147902340_0
         $x_1_1 = {91 61 06 11 ?? 20 00 ?? ?? 00 5d 91 20 00 ?? 00 00 58 20 00 ?? 00 00 5d 59 d2 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5881,6 +6113,7 @@ rule Trojan_MSIL_Formbook_KAE_2147902501_0
         $x_1_2 = {8e 69 5d 91 61 d2 52 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5902,6 +6135,7 @@ rule Trojan_MSIL_Formbook_XZ_2147902637_0
         $x_1_1 = {12 01 28 63 00 00 0a 0c 08 6f 56 00 00 06 00 12 01 28 64 00 00 0a 2d e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5923,6 +6157,7 @@ rule Trojan_MSIL_Formbook_KAF_2147902684_0
         $x_1_1 = {06 18 d8 0a 06 1f ?? fe ?? 0d 09 2c ?? 1f ?? 0a 00 06 1f ?? 5d 16 fe}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5944,6 +6179,7 @@ rule Trojan_MSIL_Formbook_KAH_2147902785_0
         $x_1_1 = {07 8e 69 5d 11 ?? 20 00 01 00 00 5d d2 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5966,6 +6202,7 @@ rule Trojan_MSIL_Formbook_MBFU_2147902907_0
         $x_1_2 = {72 00 00 05 65 00 73 00 00 05 6f 00 75 00 00 05 72 00 63 00 00 0d 39 00 30 00 75 00 6b 00 6a 00 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5987,6 +6224,7 @@ rule Trojan_MSIL_Formbook_SPCJ_2147903224_0
         $x_5_1 = {08 8e 69 6a 5d d4 91 61 28 ?? ?? ?? 0a 07 11 05 17 6a 58 07}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6008,6 +6246,7 @@ rule Trojan_MSIL_Formbook_RDQ_2147903909_0
         $x_2_1 = {11 0b d4 91 61 28 ?? ?? ?? ?? 07 11 09 08 6a 5d d4 91}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6029,6 +6268,7 @@ rule Trojan_MSIL_Formbook_RDR_2147904300_0
         $x_2_1 = {11 10 d4 91 61 07 11 0e 11 0c 6a 5d d4 91}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6050,6 +6290,7 @@ rule Trojan_MSIL_Formbook_CCHT_2147904392_0
         $x_1_1 = {11 0c 11 0d 61 13 0f 20 1c 00 00 00 fe 0e ?? 00 38}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6071,6 +6312,7 @@ rule Trojan_MSIL_Formbook_RDT_2147904587_0
         $x_2_1 = {61 07 11 06 17 6a 58 07 8e 69 6a 5d d4}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6092,6 +6334,7 @@ rule Trojan_MSIL_Formbook_KAI_2147904678_0
         $x_1_1 = {0a 61 07 11 ?? 17 6a 58 07 8e 69 6a 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6113,6 +6356,7 @@ rule Trojan_MSIL_Formbook_RDU_2147904691_0
         $x_2_1 = {11 04 11 10 d4 91 61 06 11 0f 11 08 6a 5d d4 91}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6134,6 +6378,7 @@ rule Trojan_MSIL_Formbook_AMMB_2147904784_0
         $x_2_1 = {5d d4 91 08 11 ?? 69 1f ?? 5d 6f ?? 00 00 0a 61 07 11}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6155,6 +6400,7 @@ rule Trojan_MSIL_Formbook_RDV_2147904847_0
         $x_2_1 = {61 11 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d 13 0b 07 11 09 11 08 6a 5d d4 11 0b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6176,6 +6422,7 @@ rule Trojan_MSIL_Formbook_RDW_2147905061_0
         $x_2_1 = {09 5d 13 07 07 11 07 91 08 11 06 1f 16 5d 91 61}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6197,6 +6444,7 @@ rule Trojan_MSIL_Formbook_RDX_2147905250_0
         $x_2_1 = {13 0c 11 0c 61 11 0b 59 20 00 01 00 00 58 20 ff 00 00 00 5f 13 0d 07 11 0a 11 0d d2 9c 11 0a 17 58 13 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6218,6 +6466,7 @@ rule Trojan_MSIL_Formbook_RDY_2147905342_0
         $x_2_1 = {13 0e 11 0e 61 11 0d 59 20 00 01 00 00 58 20 ff 00 00 00 5f 13 0f 07 11 07 11 0f d2 9c 11 07 17 58 13 07 11 0c 17 58 13 0c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6239,6 +6488,7 @@ rule Trojan_MSIL_Formbook_RDZ_2147905458_0
         $x_2_1 = {11 09 11 0b 61 11 0a 59 20 00 01 00 00 58 20 ff 00 00 00 5f 13 0c 07 11 04 11 0c d2 9c 11 04 17 58 13 04}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6260,6 +6510,7 @@ rule Trojan_MSIL_Formbook_RDAA_2147905549_0
         $x_2_1 = {13 0b 11 08 11 0b 61 11 0a 59 20 00 01 00 00 58 20 ff 00 00 00 5f 13 0c 07 09 11 0c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6281,6 +6532,7 @@ rule Trojan_MSIL_Formbook_RDAB_2147905620_0
         $x_2_1 = {13 08 11 08 61 11 07 59 20 00 01 00 00 58 20 ff 00 00 00 5f 13 09 06 07 11 09 d2 9c 07 17 58 0b 08 17 58 0c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6302,6 +6554,7 @@ rule Trojan_MSIL_Formbook_SDF_2147905683_0
         $x_4_1 = {58 07 8e 69 5d 91 13 06 08 11 05 08 8e 69 5d 91 13 07 07 11 05 07 11 05 91 11 07 61 11 06 59 20 00 01 00 00 58 20 ff 00 00 00 5f d2 9c}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6323,6 +6576,7 @@ rule Trojan_MSIL_Formbook_RDAC_2147905777_0
         $x_2_1 = {06 1f 16 5d 91 13 07 07 06 07 06 91 11 07 61 11 06 59 20 00 01 00 00 58 d2 9c 06 17 58 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6344,6 +6598,7 @@ rule Trojan_MSIL_Formbook_RDAD_2147905785_0
         $x_2_1 = {28 37 00 00 0a 59 d2 9c 11 04 17 58 13 04 11 04 11 07 8e 69}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6365,6 +6620,7 @@ rule Trojan_MSIL_Formbook_RDAE_2147906002_0
         $x_2_1 = {08 11 05 1f 16 5d 91 13 08 07 11 05 07 11 05 91 11 08 61 11 07 59 20 00 01 00 00 58 20 ff 00 00 00 5f d2 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6386,6 +6642,7 @@ rule Trojan_MSIL_Formbook_RDAF_2147906085_0
         $x_2_1 = {08 09 1f 16 5d 91 13 06 07 09 07 09 91 11 06 61 11 05 59 20 00 01 00 00 58 20 ff 00 00 00 5f d2 9c 09 17 58 0d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6407,6 +6664,7 @@ rule Trojan_MSIL_Formbook_KAJ_2147906250_0
         $x_1_1 = {0a 25 17 6f ?? 00 00 0a 25 18 6f ?? 00 00 0a 25 02 6f ?? 00 00 0a 25 03 6f ?? 00 00 0a 6f ?? 00 00 0a 04 16 04 8e 69 6f ?? 00 00 0a 10 02 04 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6428,6 +6686,7 @@ rule Trojan_MSIL_Formbook_MBZW_2147906991_0
         $x_1_1 = {07 8e 69 5d 91 59 20 00 01 00 00 58 d2 9c 07 11 [0-18] 91 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6449,6 +6708,7 @@ rule Trojan_MSIL_Formbook_RDAH_2147907725_0
         $x_2_1 = {07 75 09 00 00 1b 1f 18 9a 6f 41 00 00 0a 0c 08 74 0a 00 00 1b 28 03 00 00 2b 0d 1a 13 09}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6470,6 +6730,7 @@ rule Trojan_MSIL_Formbook_RDAI_2147908335_0
         $x_2_1 = {11 05 74 40 00 00 1b 6f 04 01 00 0a 28 0f 00 00 2b 28 10 00 00 2b 0a 06 74 41 00 00 1b 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6492,6 +6753,7 @@ rule Trojan_MSIL_Formbook_PADT_2147908434_0
         $x_1_2 = {28 aa 00 00 0a 9c 08 17 58 0c 00 08 07 8e 69 fe 04 13 07 11 07 2d 96}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6513,6 +6775,7 @@ rule Trojan_MSIL_Formbook_KAK_2147908737_0
         $x_1_1 = {08 17 58 11 ?? 5d 13 ?? 07 08 91 11 ?? 61 07 11 ?? 91 59 20 00 01 00 00 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6534,6 +6797,7 @@ rule Trojan_MSIL_Formbook_KAL_2147909412_0
         $x_1_1 = {00 06 08 03 08 91 07 08 07 8e 69 5d 91 61 d2 9c 00 08 17 58 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6555,6 +6819,7 @@ rule Trojan_MSIL_Formbook_SKI_2147909785_0
         $x_1_1 = {72 51 00 00 70 6f 41 00 00 0a 0b 16 0c 2b 16 00 06 08 0e 04 08 91 07 08 07 8e 69 5d 91 61 d2 9c 00 08 17 58 0c 08 04 8e 69 fe 04 0d 09 2d e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6578,6 +6843,7 @@ rule Trojan_MSIL_Formbook_RDAJ_2147909878_0
         $x_1_3 = "QiS6grnSOLTIgQV53nQOuw==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6599,6 +6865,7 @@ rule Trojan_MSIL_Formbook_RDAK_2147910065_0
         $x_2_1 = {08 5d 13 0f 07 11 0c 02 07 11 0c 91 11 0e 61 07 11 0f 91 59}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6620,6 +6887,7 @@ rule Trojan_MSIL_Formbook_RDAL_2147910391_0
         $x_2_1 = {6f 5b 00 00 0a 13 04 73 5c 00 00 0a 0c 08 11 04 17}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6641,6 +6909,7 @@ rule Trojan_MSIL_Formbook_RDAN_2147910572_0
         $x_2_1 = {58 08 5d 13 ?? 02 07 11 ?? 91 11 ?? 61 07 11 ?? 91 59 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6662,6 +6931,7 @@ rule Trojan_MSIL_Formbook_PADW_2147911277_0
         $x_2_1 = {06 07 02 07 91 04 07 04 8e 69 5d 91 61 d2 9c 00 07 17 58 0b 07 02 8e 69 fe 04 0c 08 2d e1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6683,6 +6953,7 @@ rule Trojan_MSIL_Formbook_RDAO_2147911473_0
         $x_2_1 = {02 07 06 91 11 ?? 61 07 06 17 58 09 5d 91}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6705,6 +6976,7 @@ rule Trojan_MSIL_Formbook_GPA_2147912246_0
         $x_1_2 = {17 58 07 8e 69 5d 91 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6726,6 +6998,7 @@ rule Trojan_MSIL_Formbook_RF_2147912351_0
         $x_5_1 = {14 91 08 11 ?? 08 8e 69 5d 91 61 d2 9c 00 11}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6747,6 +7020,7 @@ rule Trojan_MSIL_Formbook_PAEK_2147912687_0
         $x_2_1 = {13 05 11 06 09 11 06 11 04 95 9e 11 06 11 04 11 05 9e 07 11 0e d4 91 13 0f 11 06 09 95 11 06 11 04 95 58 d2 13 10 11 10 20 ff 00 00 00 5f d2 13 11 11 06 11 11 95 d2 13 12 11 07 11 0e d4 11 0f 6e 11 12 20 ff 00 00 00 5f 6a 61 d2 9c 00 11 0e 17 6a 58 13 0e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6768,6 +7042,7 @@ rule Trojan_MSIL_Formbook_PAET_2147913245_0
         $x_2_1 = {07 11 04 91 11 06 61 13 07 11 04 17 58 13 08 07 11 08 11 05 5d 91 13 09 20 00 01 00 00 13 0a 11 07 11 09 59 11 0a 58 11 0a 17 59 5f 13 0b 07 11 04 11 0b d2 9c 00 11 04 17 58 13 04}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6789,6 +7064,7 @@ rule Trojan_MSIL_Formbook_RDAP_2147913669_0
         $x_2_1 = {08 07 17 59 94 0d 08 07 94 09 59 06 7b 55 00 00 04 8e 69 59 13 04 06}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6810,6 +7086,7 @@ rule Trojan_MSIL_Formbook_RDAQ_2147914160_0
         $x_2_1 = {7e 04 00 00 04 06 91 03 06 03 8e 69 5d 91 61 d2 9c 00 06 17 58 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6831,6 +7108,7 @@ rule Trojan_MSIL_Formbook_RDAR_2147915012_0
         $x_2_1 = {07 09 91 11 07 61 13 1a 07 09 17 58 08 5d 91}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6852,6 +7130,7 @@ rule Trojan_MSIL_Formbook_AMAI_2147915081_0
         $x_1_1 = {06 02 16 03 8e 69 6f ?? 00 00 0a 0b 07 28 ?? 00 00 0a 0c 08 6f ?? 00 00 0a 0d 09 16 9a 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6873,6 +7152,7 @@ rule Trojan_MSIL_Formbook_AMAJ_2147915324_0
         $x_1_1 = {1f 16 5d 91 13 ?? 07 09 91 11 ?? 61 09 18 58 17 59 08 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6894,6 +7174,7 @@ rule Trojan_MSIL_Formbook_NBL_2147915612_0
         $x_1_1 = {07 09 07 8e 69 5d 91 08 09 08 6f 5e 00 00 0a 5d 6f 5f 00 00 0a 61 07 09 17 58 07 8e 69 5d 91 59 20 00 01 00 00 58 13 07 07 09 07 8e 69 5d 11 07 20 00 01 00 00 5d d2 9c 09 15 58 0d 09 16 2f c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6915,6 +7196,7 @@ rule Trojan_MSIL_Formbook_MBXM_2147915854_0
         $x_1_1 = {07 11 07 11 09 11 0b 59 20 00 01 00 00 58 20 ff 00 00 00 5f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6936,6 +7218,7 @@ rule Trojan_MSIL_Formbook_SGRG_2147916053_0
         $x_1_1 = {09 11 07 09 8e 69 5d 91 13 08 07 11 07 91 11 08 61 13 09 11 07 17 58 08 5d 13 0a 07 11 0a 91 13 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6957,6 +7240,7 @@ rule Trojan_MSIL_Formbook_AMAO_2147916083_0
         $x_1_1 = {8e 69 58 09 8e 69 5d 91 13 ?? 07 11 ?? 08 5d 08 58 08 5d 91 11 ?? 61 [0-5] 17 58 08 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6978,6 +7262,7 @@ rule Trojan_MSIL_Formbook_RDAS_2147916256_0
         $x_2_1 = {09 08 16 73 6d 00 00 0a 13 04 03 8e 69}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6999,6 +7284,7 @@ rule Trojan_MSIL_Formbook_AMAP_2147916312_0
         $x_1_1 = {07 06 58 06 5d 13 [0-15] 61 [0-15] 17 58 06 58 06 5d [0-32] 59 20 00 01 00 00 58 20 00 01 00 00 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7020,6 +7306,7 @@ rule Trojan_MSIL_Formbook_AMAR_2147916542_0
         $x_1_1 = {08 58 08 5d 91 [0-30] 08 5d 08 58 08 5d 91 [0-5] 61 [0-30] 20 00 01 00 00 5d [0-9] 20 00 01 00 00 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7041,6 +7328,7 @@ rule Trojan_MSIL_Formbook_AMAS_2147916729_0
         $x_1_1 = {5f 95 d2 13 [0-15] 61 [0-30] 20 ff 00 00 00 5f d2 9c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7062,6 +7350,7 @@ rule Trojan_MSIL_Formbook_KAM_2147916730_0
         $x_1_1 = {5f 95 d2 13 ?? ?? ?? ?? ?? 61 13 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 59 [0-14] 20 ff 00 00 00 5f d2 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7083,6 +7372,7 @@ rule Trojan_MSIL_Formbook_RDAT_2147917425_0
         $x_2_1 = {08 5d 13 0e 07 11 0e 91 13 0f 11 0f 11 0a 61 13 10 11 10 11 0d 59}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7104,6 +7394,7 @@ rule Trojan_MSIL_Formbook_GPB_2147917721_0
         $x_1_1 = {17 da 0c 16 0d 2b 17 07 09 07 09 6f ?? 00 00 0a 1f 33 61 b4 6f 94}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7125,6 +7416,7 @@ rule Trojan_MSIL_Formbook_KAO_2147917970_0
         $x_1_1 = {08 5d 08 58 08 5d 13 [0-15] 61 [0-5] 59 20 00 02 00 00 58 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7146,6 +7438,7 @@ rule Trojan_MSIL_Formbook_AMAC_2147918686_0
         $x_1_1 = {08 5d 08 58 13 [0-40] 08 5d 08 58 13 [0-30] 08 5d [0-30] 61 [0-40] 20 00 01 00 00 5d 20 00 04 00 00 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7167,6 +7460,7 @@ rule Trojan_MSIL_Formbook_RDAU_2147918799_0
         $x_2_1 = {16 03 6f 49 00 00 0a 8e 69 6f 4d 00 00 0a 28 08 00 00 2b 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7188,6 +7482,7 @@ rule Trojan_MSIL_Formbook_AMAD_2147918876_0
         $x_1_1 = {17 58 08 5d [0-15] 08 58 08 5d 91 [0-40] 5a 58 08 5d 13 [0-20] 61 [0-15] 59 20 00 02 00 00 58 13 [0-30] 20 00 01 00 00 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7209,6 +7504,7 @@ rule Trojan_MSIL_Formbook_AY_2147919379_0
         $x_5_1 = {07 11 06 11 07 6f ?? 00 00 0a 13 08 08 12 08 28 ?? 00 00 0a 6f ?? 00 00 0a 08 6f ?? 00 00 0a 20 ?? ?? ?? 00 2f 0d 08 12 08 28 ?? 00 00 0a 6f ?? 00 00 0a 08 6f ?? 00 00 0a 20 ?? ?? ?? 00 2f 0d 08 12 08 28 ?? 00 00 0a 6f ?? 00 00 0a 11 07 17 58 13 07 11 07 07 6f ?? 00 00 0a 32 a3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7230,6 +7526,7 @@ rule Trojan_MSIL_Formbook_RDAV_2147919771_0
         $x_2_1 = {07 6f 48 00 00 0a 28 49 00 00 0a 0c 08 6f 4a 00 00 0a 16 9a 0d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7252,6 +7549,7 @@ rule Trojan_MSIL_Formbook_AMAG_2147919823_0
         $x_1_2 = {08 12 07 28 ?? 00 00 0a 6f ?? 00 00 0a 00 11 0f 18 91 13 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7277,6 +7575,7 @@ rule Trojan_MSIL_Formbook_RDAW_2147920020_0
         $x_1_5 = "kingInCheck" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7298,6 +7597,7 @@ rule Trojan_MSIL_Formbook_OKA_2147920470_0
         $x_1_1 = {11 04 11 05 11 06 9e 11 04 11 07 95 11 04 11 05 95 58 20 ff 00 00 00 5f 13 13 11 04 11 13 95 d2 13 14 09 11 12 07 11 12 91 11 14 61 d2 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7319,6 +7619,7 @@ rule Trojan_MSIL_Formbook_SPSG_2147921748_0
         $x_1_1 = {04 18 fe 04 16 fe 01 0b 07 2c 0e 02 0f 01 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 04 19 fe 01 0c 08 2c 0e 02 0f 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7340,6 +7641,7 @@ rule Trojan_MSIL_Formbook_KAQ_2147921801_0
         $x_1_1 = {95 58 20 ff 00 00 00 5f [0-30] 95 61 28 ?? 00 00 0a 9c [0-35] 09 8e 69 32}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7361,6 +7663,7 @@ rule Trojan_MSIL_Formbook_KAR_2147922120_0
         $x_1_1 = {04 08 59 0d 09 16 30 03 16 2b 01 17 13 04 08 19 58 04 fe 02 16 fe 01 13 05 11 05 2c 07 11 04 17 fe 01 2b 01 16 13 06 11 06 2c 0f 00 03 07 28 ?? 00 00 06 00 00 38 ?? 00 00 00 00 09 17}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7382,6 +7685,7 @@ rule Trojan_MSIL_Formbook_AMN_2147923306_0
         $x_1_1 = {95 58 20 ff 00 00 00 5f 13 [0-30] 95 61 28 ?? 00 00 0a 9c 11 ?? 17 58 13 [0-15] 6e 09 8e 69 6a fe}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7403,6 +7707,7 @@ rule Trojan_MSIL_Formbook_PNEH_2147924300_0
         $x_10_1 = {00 02 06 07 28 ?? 00 00 06 0c 04 03 6f ?? 00 00 0a 59 0d 09 19 fe 04 16 fe 01 13 04 11 04 2c 2f 00 03 19 8d 5b 00 00 01 25 16 12 02 28 ?? 00 00 0a 9c 25 17 12 02 28 ?? 00 00 0a 9c 25 18 12 02 28 ?? 00 00 0a 9c 6f 75 00 00 0a 00 00 2b 41}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7424,6 +7729,7 @@ rule Trojan_MSIL_Formbook_RDAX_2147924458_0
         $x_2_1 = {07 02 6f 18 00 00 0a 16 02 6f 1a 00 00 0a 6f 1b 00 00 0a 28 05 00 00 2b 0c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7445,6 +7751,7 @@ rule Trojan_MSIL_Formbook_KAT_2147924639_0
         $x_1_1 = {06 07 5a 58 20 00 ?? 00 00 5e 13 05 04 08 03 08 91 05 09 95 61 d2 9c 04 08 91 11 05 58 1f 33 61 20 ?? 00 00 00 5f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7466,6 +7773,7 @@ rule Trojan_MSIL_Formbook_SVCF_2147925005_0
         $x_5_1 = {02 06 07 28 ?? 00 00 06 0c 04 03 6f ?? 00 00 0a 59 0d 03 08 09 28 ?? 00 00 06 03 08 09 28 ?? 00 00 06 03 6f ?? 00 00 0a 04 32 01 2a 07 17 58 0b 07 02 6f ?? 00 00 0a 32 c7}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7487,6 +7795,7 @@ rule Trojan_MSIL_Formbook_RDAY_2147925016_0
         $x_2_1 = {02 06 07 28 0c 00 00 06 0c 04 03 6f 1d 00 00 0a 59 0d 03 08 09}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7511,6 +7820,7 @@ rule Trojan_MSIL_Formbook_MBXX_2147925156_0
         $x_1_4 = "GetPixelColor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7535,6 +7845,7 @@ rule Trojan_MSIL_Formbook_MBXY_2147925167_0
         $x_1_4 = "GetPixelColor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7556,6 +7867,7 @@ rule Trojan_MSIL_Formbook_CCJN_2147925251_0
         $x_1_1 = {25 16 05 a2 28 ?? 00 00 0a 26 06 72 ?? ?? ?? ?? 18 18 8d ?? ?? ?? ?? 25 16 04 a2 25 17 05 a2 28 ?? 00 00 0a 0b 03 73 ?? ?? ?? ?? 0c 08 07 74 ?? 00 00 01 16 73 ?? 00 00 0a 0d 73 ?? 00 00 0a 13 04 00 09 11 04 6f ?? 00 00 0a 00 11 04 6f ?? 00 00 0a 13 05 de 23 11 04 2c 08 11 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7577,6 +7889,7 @@ rule Trojan_MSIL_Formbook_PNYH_2147925391_0
         $x_10_1 = {00 02 06 07 28 ?? ?? ?? ?? 0c 04 03 6f ?? ?? ?? ?? 59 0d 03 08 09 28 ?? ?? ?? ?? 00 00 07 17 58 0b 07 02 6f ?? ?? ?? ?? 2f 0b 03 6f ?? ?? ?? ?? 04 fe 04 2b 01 16 13 04 11 04 2d c4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7598,6 +7911,7 @@ rule Trojan_MSIL_Formbook_PMTH_2147926154_0
         $x_10_1 = {0a 00 06 06 6f ?? ?? ?? ?? 06 6f ?? ?? ?? ?? 6f ?? ?? ?? ?? 0b 73 ?? ?? ?? ?? 0c 08 07 17 73 ?? ?? ?? ?? 0d 00 09 02 16 02 8e 69 6f ?? ?? ?? ?? 00 09 6f ?? ?? ?? ?? 00 08 6f ?? ?? ?? ?? 13 04 dd}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7619,6 +7933,7 @@ rule Trojan_MSIL_Formbook_AMAE_2147926309_0
         $x_1_1 = {58 20 00 01 00 00 5e 13 [0-20] 17 13 [0-30] 95 61 d2 9c 11 [0-20] 17 58 13 [0-10] 07 8e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7641,6 +7956,7 @@ rule Trojan_MSIL_Formbook_AMCL_2147926916_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7663,6 +7979,7 @@ rule Trojan_MSIL_Formbook_AMCN_2147927108_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7686,6 +8003,7 @@ rule Trojan_MSIL_Formbook_AMCP_2147927591_0
         $x_2_3 = {4c 00 6f 00 67 00 69 00 6e 00 00 09 4c 00 6f 00 61 00 64 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7708,6 +8026,7 @@ rule Trojan_MSIL_Formbook_AMCQ_2147927749_0
         $x_1_2 = {01 25 16 11 05 1f 10 63 20 ff 00 00 00 5f d2 9c 25 17 11 05 1e 63 20 ff 00 00 00 5f d2 9c 25}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7730,6 +8049,7 @@ rule Trojan_MSIL_Formbook_KAU_2147927987_0
         $x_1_2 = {25 16 12 0a 28 ?? 00 00 0a 9c 25 17 12 0a 28 ?? 00 00 0a 9c 25 18 12 0a 28 ?? 00 00 0a 9c 11 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7752,6 +8072,7 @@ rule Trojan_MSIL_Formbook_PQIH_2147928002_0
         $x_5_2 = {25 16 12 0c 28 ?? 00 00 0a 9c 25 17 12 0c 28 ?? 00 00 0a 9c 25 18 12 0c 28 ?? 00 00 0a 9c 11 0e}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7774,6 +8095,7 @@ rule Trojan_MSIL_Formbook_PKNH_2147928170_0
         $x_4_2 = {30 02 2b 68 11 05 20 ?? 07 00 00 5a 11 09 61 13 05 08 1f 1f 62 08 1f 21 64 60 0c 03 19 8d ?? 00 00 01 25 16 12 06 28 ?? 00 00 0a 9c 25 17 12 06 28 ?? 00 00 0a 9c 25 18 12 06 28 ?? 00 00 0a 9c 11 08}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7796,6 +8118,7 @@ rule Trojan_MSIL_Formbook_AMCT_2147928220_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7819,6 +8142,7 @@ rule Trojan_MSIL_Formbook_KAV_2147928546_0
         $x_3_3 = "Olly" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7840,6 +8164,7 @@ rule Trojan_MSIL_Formbook_PLLSH_2147930700_0
         $x_10_1 = {04 19 32 50 0f 01 28 ?? 01 00 0a 1f 10 62 0f 01 28 ?? 01 00 0a 1e 62 60 0f 01 28 ?? 01 00 0a 60 0a 02 19 8d ?? 00 00 01 25 16 06 1f 10 63 20 ?? 00 00 00 5f d2 9c 25 17 06 1e 63 20 ?? 00 00 00 5f d2 9c 25 18 06 20 ?? 00 00 00 5f d2 9c 6f ?? 01 00 0a 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7861,6 +8186,7 @@ rule Trojan_MSIL_Formbook_PLIEH_2147931173_0
         $x_10_1 = {0a 1f 10 62 0f 00 28 ?? 00 00 0a 1e 62 60 0f 00 28 ?? 00 00 0a 60 0a 03 19 8d ?? 00 00 01 25 16 06 1f 10 63 20 ?? 00 00 00 5f d2 9c 25 17 06 1e 63 20 ?? 00 00 00 5f d2 9c 25 18 06 20 ?? 00 00 00 5f d2 9c 6f ?? 00 00 0a 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7883,6 +8209,7 @@ rule Trojan_MSIL_Formbook_KAW_2147931295_0
         $x_2_2 = {25 16 0f 00 28 ?? 00 00 0a 9c 25 17 0f 00 28 ?? 00 00 0a 9c 25 18 0f 00 28 ?? 00 00 0a 9c 0a 2b 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7904,6 +8231,7 @@ rule Trojan_MSIL_Formbook_AUJ_2147931781_0
         $x_1_1 = {03 11 05 9a 28 81 01 00 0a 20 98 00 00 00 da b4 13 06 09 11 06 6f 82 01 00 0a 00 11 05 17 d6 13 05 11 05 11 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7927,6 +8255,7 @@ rule Trojan_MSIL_Formbook_PLIOH_2147931917_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7950,6 +8279,7 @@ rule Trojan_MSIL_Formbook_NOS_2147932117_0
         $x_1_3 = {1f 7c 07 1b 5d 17 d6 ?? ?? 00 00 0a ?? ?? 00 00 0a 07 18 d6 0b 07 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7972,6 +8302,7 @@ rule Trojan_MSIL_Formbook_BO_2147936870_0
         $x_1_2 = {17 58 13 05 11 05 02 6f ?? 00 00 0a 2f 0b 03 6f ?? 00 00 0a 04 fe 04 2b 01 16}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7993,6 +8324,7 @@ rule Trojan_MSIL_Formbook_MKB_2147938291_0
         $x_5_1 = {11 0c 11 0b 6f a8 01 00 0a 58 13 0c 11 24 17 d6 13 24 11 24 20 40 42 0f 00 31 e5 11 05 19 11 05 18 9a 74 75 00 00 1b 11 06 28 ?? 02 00 0a 28 ?? 01 00 06 14 72 52 17 00 70 16 8d 01 00 00 01 14 14 14 28 ?? 00 00 0a 28 ?? 00 00 0a a2 23 00 00 00 00 00 00 00 00 13 0d 17 13 25 11 0d 11 25 6c 23 00 00 00 00 00 00 00 40 28 ?? 00 00 0a 58 13 0d 11 25 17 d6 13 25 11 25 20 a0 86 01 00 31 db}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8014,6 +8346,7 @@ rule Trojan_MSIL_Formbook_LLT_2147938376_0
         $x_5_1 = {06 72 61 00 00 70 28 0b 00 00 0a 6f 0c 00 00 0a 06 72 93 00 00 70 28 ?? 00 00 0a 6f 0d 00 00 0a 06 6f 0e 00 00 0a 03 16 03 8e 69 6f ?? 00 00 0a 0b dd 0d 00 00 00 06 39 06 00 00 00 06 6f 10 00 00 0a dc 07 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8035,6 +8368,7 @@ rule Trojan_MSIL_Formbook_GPPG_2147938493_0
         $x_4_1 = {0a 0f 00 28 ?? 00 00 0a 0f 00 28 ?? 00 00 0a 58 0f 00 28 ?? 00 00 0a 58 6c 23 00 00 00 00 00 e8 87 40 5b 23 00 00 00 00 00 00 59 40 5a 0b}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8057,6 +8391,7 @@ rule Trojan_MSIL_Formbook_WVG_2147939617_0
         $x_4_2 = {11 0e 02 11 0b 11 0d 6f ?? 00 00 0a 7d 3c 00 00 04 11 0e 04 11 0e 7b 3e 00 00 04 7b 3b 00 00 04 6f ?? 00 00 0a 59 7d 3d 00 00 04 11 17 20 d6 38 3e 23 5a 20 8e 2b d1 3b 61 38 ab fb ff ff}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8079,6 +8414,7 @@ rule Trojan_MSIL_Formbook_BR_2147940998_0
         $x_2_2 = {16 99 d2 9c 25 17}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8101,6 +8437,7 @@ rule Trojan_MSIL_Formbook_ZKV_2147941316_0
         $x_5_2 = {07 02 11 04 11 05 6f ?? 00 00 06 13 06 04 03 6f ?? 00 00 0a 59 13 07 11 07 19 28 ?? 00 00 06 13 08 11 08 2c 0d 00 03 11 06 28 ?? 00 00 06 00 00 2b 18 11 07 16 fe 02 13 09 11 09 2c 0d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8125,6 +8462,7 @@ rule Trojan_MSIL_Formbook_RA_2147941420_0
         $x_1_4 = "Phantom Dimension Software" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8146,6 +8484,7 @@ rule Trojan_MSIL_Formbook_ZIU_2147942175_0
         $x_10_1 = {11 04 15 5f 13 09 11 09 06 17 17 28 ?? 00 00 0a 5a 06 17 16 28 ?? 00 00 0a 26 16 58 06 17 18 28 ?? 00 00 0a 26 16 58 13 0a 02 11 08 11 0a 6f ?? 00 00 0a 13 0b 12 0b 28 ?? 00 00 0a 13 0c 12 0b 28 ?? 00 00 0a 13 0d 12 0b 28 ?? 00 00 0a 13 0e 04 03 6f ?? 00 00 0a 59 13 0f 11 0f 19 fe 04 16 fe 01 13 10 11 10 2c 54}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8167,6 +8506,7 @@ rule Trojan_MSIL_Formbook_ZNU_2147942286_0
         $x_10_1 = {26 16 58 06 17 18 28 ?? 00 00 0a 26 16 58 13 08 02 11 07 11 08 6f ?? 00 00 0a 13 09 12 09 28 ?? 00 00 0a 13 0a 12 09 28 ?? 00 00 0a 13 0b 12 09 28 ?? 00 00 0a 13 0c 04 03 6f ?? 00 00 0a 59 13 0d 11 0d 19 32 4f}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8189,6 +8529,7 @@ rule Trojan_MSIL_Formbook_CE_2147942337_0
         $x_2_2 = {4a 00 56 00 4e 00 4a 00 3a 00 41 00 44 00 3a 00 3a 00 41 00 42 00 3a 00 3a 00 41 00 50 00 37 00 37 00 59 00 3a 00 43 00 34 00 3a 00 3a 00 3a 00 3a 00 3a 00 41 00 43}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8210,6 +8551,7 @@ rule Trojan_MSIL_Formbook_CF_2147942400_0
         $x_5_1 = {5f 13 0b 02 11 0a 11 0b 6f ?? 01 00 0a 13 0c 12 0c 28 ?? 01 00 0a 16 61 d2 13 0d 12 0c 28 ?? 01 00 0a 16 61 d2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8231,6 +8573,7 @@ rule Trojan_MSIL_Formbook_SLER_2147942459_0
         $x_2_1 = {28 4f 00 00 06 28 2c 00 00 0a 0b 00 06 28 05 00 00 06 0c 08 39 0a 00 00 00 08 8e 16 fe 03 38 01 00 00 00 16 0d 09 39 0f 00 00 00 00 07 08 28 0a 00 00 06}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8252,6 +8595,7 @@ rule Trojan_MSIL_Formbook_ZSU_2147942638_0
         $x_10_1 = {03 11 07 6f ?? 00 00 0a 03 11 07 17 da 6f ?? 00 00 0a 28 ?? 00 00 0a 03 11 07 17 da 6f ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 13 08 08 11 08 6f ?? 00 00 0a 00 11 07 17 d6 13 07 11 07 11 06 31 be}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8273,6 +8617,7 @@ rule Trojan_MSIL_Formbook_ZZT_2147942840_0
         $x_10_1 = {26 02 11 13 11 14 6f ?? 01 00 0a 13 16 11 0b 11 15 12 16 28 ?? 01 00 0a 6f ?? 01 00 0a 12 16 28 ?? 01 00 0a 13 17 12 16 28 ?? 01 00 0a 13 18 12 16 28 ?? 01 00 0a 13 19 11 17 11 18 58 11 19 58 26 04 03 6f ?? 01 00 0a 59 25 17 28 ?? 01 00 0a 8d db 00 00 01 26 19 28 ?? 01 00 0a 13 1a 11 1a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8295,6 +8640,7 @@ rule Trojan_MSIL_Formbook_MCB_2147943899_0
         $x_2_2 = {36 00 44 00 35 00 38 00 36 00 39 00 37 00 34 00 00 0d 37 00 41 00 36 00 31 00 37 00 41}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8316,6 +8662,7 @@ rule Trojan_MSIL_Formbook_EHYZ_2147945215_0
         $x_2_1 = {06 61 d2 13 3a 12 38 ?? ?? ?? ?? ?? 06 61 d2 13 3b 11 39 07 1f 1f 5f 62 11 39 1e 07 59 1f 1f 5f 63 60 20 ff 00 00 00 5f 13 3c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8337,6 +8684,7 @@ rule Trojan_MSIL_Formbook_EKIW_2147946283_0
         $x_2_1 = {5a 0e 05 6c 5b ?? ?? ?? ?? ?? 02 5a 13 04 06 ?? ?? ?? ?? ?? 09 11 04 23 00 00 00 00 00 ?? ?? ?? 5a ?? ?? ?? ?? ?? 23 00 00 00 00 00 00 ?? ?? 5d d2 9c 09 17 58 0d 09 0e 05 32 ba}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

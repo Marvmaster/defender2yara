@@ -16,6 +16,7 @@ rule Backdoor_Win32_Booma_A_2147655729_0
         $x_1_2 = {0f bf 8d ef fe ff ff 89 8d 74 fc ff ff 8b 95 74 fc ff ff 83 ea 04 89 95 74 fc ff ff 83 bd 74 fc ff ff 05 0f 87 ?? ?? ?? ?? 8b 85 74 fc ff ff ff 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

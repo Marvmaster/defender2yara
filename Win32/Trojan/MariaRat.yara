@@ -19,6 +19,7 @@ rule Trojan_Win32_MariaRat_A_2147940909_0
         $x_1_4 = "cmd.exe /C ping " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

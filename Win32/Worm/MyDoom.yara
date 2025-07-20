@@ -24,6 +24,7 @@ rule Worm_Win32_MyDoom_EM_2147896860_0
         $x_1_9 = "ambatukam" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

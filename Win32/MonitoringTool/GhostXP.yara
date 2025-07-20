@@ -16,6 +16,7 @@ rule MonitoringTool_Win32_GhostXP_155877_0
         $x_1_2 = {44 61 74 61 44 65 49 6e 73 74 00 [0-16] 44 61 74 61 48 69 73 74 52 6f 7a 00 [0-16] 44 61 74 61 48 69 73 74 5a 61 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

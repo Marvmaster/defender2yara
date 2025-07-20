@@ -21,6 +21,7 @@ rule Trojan_Win32_Salgorea_A_2147694026_0
         $x_1_6 = {48 42 66 89 01 0f b7 84 55 fc f7 ff ff 8d 8c 55 fc f7 ff ff 33 db 66 3b d8 75 e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_Salgorea_B_2147707179_0
         $x_1_6 = {7b 00 35 00 35 00 46 00 31 00 35 00 34 00 43 00 30 00 2d 00 43 00 44 00 41 00 46 00 2d 00 34 00 35 00 43 00 34 00 2d 00 39 00 41 00 31 00 41 00 2d 00 00 00 38 00 35 00 32 00 46 00 46 00 35 00 31 00 46 00 39 00 35 00 31 00 45 00 00 00 00 00 7d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win32_Salgorea_VRR_2147741068_0
         $x_1_3 = "aNretupmoCteGmeW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win32_Salgorea_A_2147779264_0
         $x_1_2 = {01 23 45 67 c7 85 ?? ?? ?? ?? 89 ab cd ef c7 85 ?? ?? ?? ?? fe dc ba 98}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_Win32_Salgorea_C_2147783205_0
         $x_1_3 = {c7 45 c4 f7 9e 05 81}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Trojan_Win32_Salgorea_S_2147783379_0
         $x_1_1 = {f7 9e 05 81 c7 45 ?? 4f 91 31 af c7 45 ?? cf a0 8f dc c7 45 ?? 53 69 47 38 c7 45 ?? f3 c8 bd b6 c7 45 ?? b9 df 47 8f c7 45 ?? 22 7a f2 ce c7 45 ?? 61 c8 a5 a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_Win32_Salgorea_BJ_2147786251_0
         $x_1_4 = {68 3c 1b 00 00 8b 0d ?? ?? ?? ?? ?? ?? ?? ?? ?? 68 e0 63 a9 00 c7 46 10 ?? ?? ?? ?? 68 a8 c9 0e 10 68 ?? ?? ?? ?? 8a 81 98 00 00 00 0d 9d c3 83 9f 65 32 1e 4f 10 41 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

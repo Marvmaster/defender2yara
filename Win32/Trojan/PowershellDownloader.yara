@@ -20,6 +20,7 @@ rule Trojan_Win32_PowershellDownloader_RDB_2147838104_0
         $x_1_5 = "config_20.ps1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_PowershellDownloader_RDC_2147839572_0
         $x_1_4 = "hfgkytk655434" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

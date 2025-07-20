@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Frethog_S_2147596432_0
         $x_1_6 = "GetSystemDirectoryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_Frethog_C_2147615403_0
         $x_2_5 = {8d 45 d0 53 50 57 ff 75 08 ff 75 f0 ff 15 ?? ?? 00 10 01 7d 08 83 c6 08 ff 4d 0c 75 d3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -71,6 +73,7 @@ rule TrojanDownloader_Win32_Frethog_E_2147651200_0
         $x_1_3 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 77 00 77 00 77 00 2e [0-32] 2e 00 6e 00 65 00 74 00 2f 00 66 00 69 00 6c 00 65 00 2e 00 74 00 78 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

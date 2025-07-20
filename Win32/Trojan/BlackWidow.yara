@@ -16,6 +16,7 @@ rule Trojan_Win32_BlackWidow_GVE_2147934154_0
         $x_1_1 = {81 f9 07 38 05 00 [0-95] 31 d2 [0-95] f7 f3 [0-95] 8a 04 16 [0-95] 30 04 0f [0-95] 41 [0-95] 89 c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Darkes_A_2147643131_0
         $x_1_4 = "\\Policies\\System /v DisableTaskMgr /t REG_SZ /d 1 /f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

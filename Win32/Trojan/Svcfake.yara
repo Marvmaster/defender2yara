@@ -18,6 +18,7 @@ rule Trojan_Win32_Svcfake_A_2147616653_0
         $x_1_4 = {49 6e 73 74 61 6c 6c 4d 6f 64 75 6c 65 00 00 00 52 65 6d 6f 74 65 20 41 63 63 65 73 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

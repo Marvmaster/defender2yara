@@ -28,6 +28,7 @@ rule PWS_Win32_Ldpinch_2147806447_0
         $x_1_14 = "nections\\pbk\\rasphone.pbk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_1_*))) or
             ((1 of ($x_2_*) and 7 of ($x_1_*))) or
@@ -60,6 +61,7 @@ rule PWS_Win32_Ldpinch_DE_2147806620_0
         $x_10_8 = {83 c4 0c 57 57 68 9d 61 8a fa 57 e8}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -92,6 +94,7 @@ rule PWS_Win32_Ldpinch_CX_2147806766_0
         $x_1_10 = "*yahoo*.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -136,6 +139,7 @@ rule PWS_Win32_Ldpinch_2147806773_0
         $n_100_22 = "http://www.top-password.com/password-recovery-bundle.html" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((9 of ($x_1_*))) or
@@ -166,6 +170,7 @@ rule PWS_Win32_Ldpinch_C_2147806850_0
         $x_1_4 = "attrib -r -a -h -s %1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -202,6 +207,7 @@ rule PWS_Win32_Ldpinch_B_2147806854_0
         $x_1_13 = "wabimporter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or
@@ -228,6 +234,7 @@ rule PWS_Win32_Ldpinch_ZF_2147806855_0
         $x_1_3 = {eb 3c 6a 00 68 b8 17 40 00 ff 35 c0 17 40 00 68 d1 19 40 00 ff 35 cd 17 40 00 e8 7a 00 00 00 6a 00 68 bc 17 40 00 ff 35 c0 17 40 00 68 d1 19 40 00 ff 35 b0 17 40 00 e8 69 00 00 00 eb 00 ff 35 b0 17 40 00 e8 32 00 00 00 6a 01 6a 00 6a 00 68 b0 14 40 00 6a 00 6a 00 e8 54 00 00 00 e9 8b fd ff ff ff 35 cd 17 40 00 e8 0e 00 00 00 c3 e8 02 fd ff ff 6a 00 e8 0d 00 00 00 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -249,6 +256,7 @@ rule PWS_Win32_Ldpinch_CB_2147806857_0
         $x_1_2 = {46 54 65 e7 65 76 53 73 37 65 87 65 87 68 78 35 67 65 76 53 73 57 53 75 67 35 73 76 57 35 67 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -292,6 +300,7 @@ rule PWS_Win32_Ldpinch_UQ_2147806858_0
         $x_1_24 = "C:\\khkhnkuh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 17 of ($x_1_*))) or
             (all of ($x*))
@@ -328,6 +337,7 @@ rule PWS_Win32_Ldpinch_AF_2147806859_0
         $x_1_14 = {0b c0 75 7c 8d b5 ?? ?? ff ff 81 3e 68 74 74 70 75 6e 8d 85 ?? ?? ff ff 50 e8 ?? ?? 00 00 81 7c 30 fc 44 61 74 61 75 58 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +361,7 @@ rule PWS_Win32_Ldpinch_BK_2147806860_0
         $x_1_4 = {68 74 74 70 73 65 6e 64 2e 64 6c 6c 00 49 45 43 6c 65 61 6e 55 70 00 49 45 49 6e 69 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -386,6 +397,7 @@ rule PWS_Win32_Ldpinch_AH_2147806862_0
         $x_1_12 = "CAuthonticateHooker::Handler" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -413,6 +425,7 @@ rule PWS_Win32_Ldpinch_CQ_2147806863_0
         $x_1_5 = ".to//cdmod.html" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -437,6 +450,7 @@ rule PWS_Win32_Ldpinch_AV_2147806867_0
         $x_1_2 = {8b 74 07 09 03 75 f4 33 c9 39 4c 07 51 76 24 8a 50 08 02 55 ff 8a 04 31 f6 d0 32 d0 8a c1 ?? ?? f6 eb f6 d2 32 d0 88 14 31 8b 45 f8 41 3b 4c 07 51 72 dc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -468,6 +482,7 @@ rule PWS_Win32_Ldpinch_IE_2147806868_0
         $x_1_12 = "systemdna@Yahoo.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -494,6 +509,7 @@ rule PWS_Win32_Ldpinch_BR_2147806869_0
         $x_1_4 = {0f 31 8b d8 68 f4 01 00 00 e8 ?? ?? ?? 00 0f 31 2b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -517,6 +533,7 @@ rule PWS_Win32_Ldpinch_ZH_2147806874_0
         $x_1_4 = "365206988@qq.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -539,6 +556,7 @@ rule PWS_Win32_Ldpinch_ZT_2147806875_0
         $x_1_3 = "The Bat!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

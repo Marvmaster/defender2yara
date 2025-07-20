@@ -18,6 +18,7 @@ rule Trojan_Win32_Dogrobot_A_2147601391_0
         $x_5_3 = {b8 ff ff ff ff 0b db 74 15 8a 13 32 d0 0f b6 d2 c1 e8 08 33 04 95 ?? ?? ?? ?? 43 49 75 eb f7 d0 c3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Trojan_Win32_Dogrobot_B_2147601392_0
         $x_5_3 = {8b 75 0c 8b 46 60 81 78 0c 04 28 40 9c 57 89 4d fc 74 1a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*))) or
             (all of ($x*))
@@ -68,6 +70,7 @@ rule Trojan_Win32_Dogrobot_C_2147604869_0
         $x_1_1 = {83 7d 0c 09 76 19 83 7d 0c 14 73 13 66 c7 45 ?? 31 00 0f b7 45 0c 83 c0 26 66 89 45 ?? eb 2a 83 7d 0c 13 76 19 83 7d 0c 1e 73 13 66 c7 45 ?? 32 00 0f b7 45 0c 83 c0 1c 66 89 45 ?? eb 0b 0f b7 45 0c 83 c0 30 66 89 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win32_Dogrobot_D_2147604933_0
         $x_1_4 = {74 30 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Trojan_Win32_Dogrobot_E_2147605324_0
         $x_1_5 = "\\Device\\Harddisk0\\DR0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_Win32_Dogrobot_H_2147605360_0
         $x_1_1 = {7e 30 0f be 34 1f 83 fe 20 7c 22 83 fe 7e 7f 1d e8 ?? ?? ?? ?? 8d 04 40 b9 5f 00 00 00 c1 e0 05 8d 44 30 e0 99 f7 f9 80 c2 20 88 14 1f 47 3b fd 7c d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_Win32_Dogrobot_I_2147608067_0
         $x_1_5 = {8b 08 36 8a 5c 2e 08 02 d9 02 da 46 0f b6 d3 83 fe 04 8b 1c 97 89 18 89 0c 97 7c 02 33 f6 83 c0 04 ff 4d 0c 75 da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule Trojan_Win32_Dogrobot_A_2147611563_0
         $x_1_5 = "/f /im avp.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -214,6 +222,7 @@ rule Trojan_Win32_Dogrobot_J_2147617114_0
         $x_1_3 = {81 e5 00 f0 00 00 81 fd 00 30 00 00 75 31 8b 5c 24 10 8b 6c 24 28 43 25 ff 0f 00 00 89 5c 24 10 8b 19 03 c3 8b 1c 30 2b 5d 1c 8b 6c 24 2c 3b dd 75 09 66 81 7c 30 fe c7 05 74 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -239,6 +248,7 @@ rule Trojan_Win32_Dogrobot_B_2147617561_0
         $x_1_2 = "\\drivers\\RESSDT.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -264,6 +274,7 @@ rule Trojan_Win32_Dogrobot_D_2147618038_0
         $x_1_6 = "rundll32.exe %s, drop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -288,6 +299,7 @@ rule Trojan_Win32_Dogrobot_E_2147618535_0
         $x_1_5 = {9c 60 e8 00 00 00 00 5d 83 ed 07 8d 8d ?? ?? ff ff 80 39 01 0f 84 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -310,6 +322,7 @@ rule Trojan_Win32_Dogrobot_H_2147624449_0
         $x_1_3 = "\\??\\xzwinDOS" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -332,6 +345,7 @@ rule Trojan_Win32_Dogrobot_L_2147629087_0
         $x_1_2 = {6a 40 68 00 30 00 00 8b 43 0d 50 6a 00 ff 53 4f 89 45 cc 83 7d cc 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -356,6 +370,7 @@ rule Trojan_Win32_Dogrobot_G_2147641800_0
         $x_1_4 = "%c:\\Program files\\MSDN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

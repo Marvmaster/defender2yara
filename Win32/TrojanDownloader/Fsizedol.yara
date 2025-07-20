@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Fsizedol_A_2147709722_0
         $x_1_4 = "data=eyJ1dWlkIjoiIiwiYnVpbGQiOjYsIm9zIjoiV2luV2luZG93cyIsIm5hdCI6MH0=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

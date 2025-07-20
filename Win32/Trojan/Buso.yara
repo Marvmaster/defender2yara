@@ -16,6 +16,7 @@ rule Trojan_Win32_Buso_A_2147599386_0
         $x_1_2 = {74 72 56 88 18 ff 15 ?? ?? ?? ?? 38 1e 8b f8 8b c6 74 08 80 30 ?? 40 38 18 75 f8 8d 45 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

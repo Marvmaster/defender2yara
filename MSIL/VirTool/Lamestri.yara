@@ -15,6 +15,7 @@ rule VirTool_MSIL_Lamestri_2147705869_0
         $x_1_1 = "c:\\users\\administrator\\desktop\\cryptex\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Sanpec_A_2147608367_0
         $x_1_2 = {05 78 56 34 12 83 c4 ?? ?? c9 ?? ?? ?? ?? ?? [0-1] 7e ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 8a 54 15 ?? 32 14 ?? ?? 3b [0-2] 88 10 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_Sanpec_B_2147616726_0
         $x_1_10 = "%s/httpdocs/mm/%sComMand.sec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_5_*))) or
@@ -74,6 +76,7 @@ rule Trojan_Win32_Sanpec_C_2147618841_0
         $x_1_3 = "psec_once" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

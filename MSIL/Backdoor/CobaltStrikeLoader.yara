@@ -26,6 +26,7 @@ rule Backdoor_MSIL_CobaltStrikeLoader_F_2147781186_0
         $x_1_11 = "DeleteTask" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

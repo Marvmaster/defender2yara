@@ -17,6 +17,7 @@ rule Backdoor_MacOS_AppleJeus_A_2147734485_0
         $x_1_3 = {2f 76 61 72 2f 7a 64 69 66 66 73 65 63 00 46 69 6c 65 20 6f 70 65 6e 20 66 61 69 6c 65 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (2 of ($x*))
 }
 

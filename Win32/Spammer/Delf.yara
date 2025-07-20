@@ -18,6 +18,7 @@ rule Spammer_Win32_Delf_Q_2147684816_0
         $x_2_4 = "2altrfkindysadvnqw3nerasdf" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

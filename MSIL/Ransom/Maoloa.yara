@@ -16,6 +16,7 @@ rule Ransom_MSIL_Maoloa_UH_2147843239_0
         $x_1_1 = {11 00 6f 15 00 00 0a 11 03 16 11 03 8e 69 6f 16 00 00 0a 13 04 38 0c 00 00 00 28 09 00 00 06 13 03 38 da ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

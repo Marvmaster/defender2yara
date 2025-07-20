@@ -16,6 +16,7 @@ rule Trojan_Win64_AveMaria_CRHX_2147847981_0
         $x_1_1 = {48 8b c7 83 e0 0f 0f b6 04 10 f6 d0 30 04 39 48 ff c7 48 3b 3e 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

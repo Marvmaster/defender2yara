@@ -20,6 +20,7 @@ rule Worm_Win32_Yimfoca_A_2147643583_0
         $x_3_5 = {83 7d f4 07 73 1b 8b 45 fc 03 45 f8 8b 4d f4 8a 00 32 81 ?? ?? ?? ?? 8b 4d fc 03 4d f8 88 01 eb d8}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule Worm_Win32_Yimfoca_B_2147646102_0
         $x_1_7 = "Ping Timeout? (%d-%d)%d/%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_ValleyRAT_EC_2147913491_0
         $x_1_2 = {4e 00 54 00 55 00 53 00 45 00 52 00 2e 00 44 00 58 00 4d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanDownloader_Win32_ValleyRAT_EC_2147913491_1
         $x_1_10 = "xig.ppt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

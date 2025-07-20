@@ -18,6 +18,7 @@ rule MonitoringTool_Win32_Ardamax_14849_0
         $x_1_4 = {00 22 20 61 6c 74 3d 22 22 2f 3e 3c 2f 70 3e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule MonitoringTool_Win32_Ardamax_14849_1
         $x_1_3 = "%b_%d_%Y__%H_%M_%S.jpg" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule MonitoringTool_Win32_Ardamax_14849_2
         $x_1_5 = "SetKeyHook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             ((2 of ($x_4_*) and 1 of ($x_2_*))) or
@@ -95,6 +98,7 @@ rule MonitoringTool_Win32_Ardamax_14849_3
         $x_1_8 = {49 6e 69 74 69 61 6c 69 7a 65 43 72 69 74 69 63 61 6c 53 65 63 74 69 6f 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -125,6 +129,7 @@ rule MonitoringTool_Win32_Ardamax_14849_4
         $x_1_4 = "Keystrokes Log" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule MonitoringTool_Win32_Ardamax_14849_5
         $x_1_7 = "MapVirtualKeyW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_3_*))) or
@@ -181,6 +187,7 @@ rule MonitoringTool_Win32_Ardamax_14849_6
         $x_1_7 = "Local\\{0AB1FAA8-7B11-4291-BCCD-6669E8DD17F6}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or
             ((3 of ($x_4_*))) or
@@ -226,6 +233,7 @@ rule MonitoringTool_Win32_Ardamax_14849_7
         $x_1_22 = "Filtering Web Log..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 12 of ($x_1_*))) or
             (all of ($x*))
@@ -250,6 +258,7 @@ rule MonitoringTool_Win32_Ardamax_14849_8
         $x_1_2 = {56 85 c9 74 0b 8b 71 44 3b 35 ?? ?? ?? ?? 74 0c 8b 31 85 f6 74 12}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +281,7 @@ rule MonitoringTool_Win32_Ardamax_14849_9
         $x_2_3 = {55 8b ec 51 51 56 57 68 ?? ?? 00 10 33 ff 57 ff 15 ?? ?? 00 10 3b c7 74 0e 57 57 68 65 80 00 00 50 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -292,6 +302,7 @@ rule MonitoringTool_Win32_Ardamax_14849_10
         $x_1_1 = {74 0e 53 53 68 65 80 00 00 50 ff 15 ?? ?? ?? ?? [0-1] 68 ?? ?? ?? ?? be 04 01 00 00 56 ff 15 ?? ?? ?? ?? 8b 4d 08 8b 01 ff (10|50 ??) 53 68 80 00 00 00 6a 03 53 6a 01 68 00 00 00 80 50 ff 15 ?? ?? ?? ?? (a3 ?? ?? ?? ?? 83|83 f8 ff a3 ?? ?? ?? ??) 75 04 33 c0 eb 61 57 53 8d 4d f8 51 6a 04 8d 4d fc 51 50 ff 15 ?? ?? ?? ?? 8b 45 fc 2b c3 bf ?? ?? ?? ?? 74 0d 48 75 12 56 57 ff 15 ?? ?? ?? ?? eb 08 56 57 ff 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? 57 ff 15 ?? ?? ?? ?? 53 57 ff 15 ?? ?? ?? ?? 5f e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -316,6 +327,7 @@ rule MonitoringTool_Win32_Ardamax_14849_11
         $x_2_5 = {68 38 20 00 10 68 2c 20 00 10 ff 15 0c 20 00 10 50 ff 15 08 20 00 10 85 c0 a3 08 30 00 10 74 41 6a 00 6a 06 68 18 30 00 10 50 6a ff ff 15 04 20 00 10 6a 00 6a 06 68 10 30 00 10 ff 35 08 30 00 10 c6 05 10 30 00 10 68}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -339,6 +351,7 @@ rule MonitoringTool_Win32_Ardamax_14849_12
         $x_1_4 = {90 90 33 c0 ba 38 a1 00 01 39 45 08 75 0b 8b 4d 0c 8b 41 08 8d 51 0c eb 0f 83 7d 08 01 75 18 8b 45 0c 8d 50 14 8b 40 10 d1 e8 40 3d 03 01 00 00 72 05 b8 04 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +376,7 @@ rule MonitoringTool_Win32_Ardamax_14849_13
         $x_2_5 = {68 48 20 00 10 68 3c 20 00 10 ff 15 14 20 00 10 50 ff 15 10 20 00 10 85 c0 a3 34 30 00 10 74 5b 56 be 14 30 00 10 56 ff 15 08 20 00 10 6a 00 6a 06 68 2c 30 00 10 ff 35 34 30 00 10 6a ff ff 15 0c 20 00 10 6a 00 6a 06 68 0c 30 00 10 ff 35 34 30 00 10 [0-48] c6 05 0c 30 00 10 68}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -387,6 +401,7 @@ rule MonitoringTool_Win32_Ardamax_14849_14
         $x_2_5 = {68 4c 20 00 10 68 40 20 00 10 ff 15 18 20 00 10 50 ff 15 14 20 00 10 85 c0 a3 34 30 00 10 74 5d 56 be 14 30 00 10 56 ff 15 08 20 00 10 6a 00 6a 06 68 2c 30 00 10 ff 35 34 30 00 10 6a ff ff 15 10 20 00 10 6a 00 6a 06 68 0c 30 00 10 ff 35 34 30 00 10 [0-48] c6 05 0c 30 00 10 68}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +427,7 @@ rule MonitoringTool_Win32_Ardamax_14849_15
         $x_1_6 = "ShellExecuteW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -436,6 +452,7 @@ rule MonitoringTool_Win32_Ardamax_14849_16
         $x_1_5 = {90 90 33 d2 33 f6 39 55 0c 7e 19 83 fa 04 72 02 33 d2 8b 45 08 8a 4c 17 08 03 c6 30 08 42 46 3b 75 0c 7c e7 90 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (2 of ($x*))
 }
@@ -463,6 +480,7 @@ rule MonitoringTool_Win32_Ardamax_14849_17
         $x_1_7 = {41 4b 4c 4d 57 00 53 65 74 75 70 20 68 61 73 20 64 65 74 65 63 74 65 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -486,6 +504,7 @@ rule MonitoringTool_Win32_Ardamax_14849_18
         $x_1_4 = {46 46 50 66 8b 46 44 66 03 85 ?? ?? ff ff 0f b7 c0 50 53 ff 15 ?? ?? ?? ?? 89 85 e4 fd ff ff 3b c3 0f 84 ?? ?? 00 00 50 53 ff 15 ?? ?? ?? ?? 3b c3 0f 84 cb 01 00 00 50 ff 15 ?? ?? ?? ?? 89 85 ?? ?? ff ff 3b c3 0f 84 ?? ?? 00 00 ff b5 ?? ?? ff ff 53 ff 15 ?? ?? ?? ?? 03 f8 89 85 ?? ?? ff ff 57 39 9d ?? ?? ff ff 74 0e ff b5 ?? ?? ff ff e8 ?? ?? ?? ?? 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -516,6 +535,7 @@ rule MonitoringTool_Win32_Ardamax_14849_19
         $x_1_11 = "AKL.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 7 of ($x_1_*))) or
             ((2 of ($x_3_*) and 6 of ($x_1_*))) or
@@ -550,6 +570,7 @@ rule MonitoringTool_Win32_Ardamax_14849_20
         $x_1_10 = {71 0c 6a 02 eb 05 ff 71 0c 6a 01 ff 35 ?? ?? ?? 01 ff 35 ?? ?? ?? 01 ff 15 ?? ?? ?? 01 90 90 0f 00 90 90 8b 4d 08 8b 41 08 48 74 0a 48 75 1e ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -595,6 +616,7 @@ rule MonitoringTool_Win32_Ardamax_14849_21
         $x_1_22 = "Unknown \"%s\" Web Log file format." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -628,6 +650,7 @@ rule MonitoringTool_Win32_Ardamax_14849_22
         $x_2_14 = "Storing Web Log..." wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -667,6 +690,7 @@ rule MonitoringTool_Win32_Ardamax_14849_23
         $x_1_20 = ".001_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (18 of ($x*))
 }
 
@@ -718,6 +742,7 @@ rule MonitoringTool_Win32_Ardamax_14849_24
         $x_4_32 = "/order_akl.html" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((14 of ($x_2_*))) or
             ((1 of ($x_3_*) and 12 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -896,6 +921,7 @@ rule MonitoringTool_Win32_Ardamax_A_259768_0
         $x_1_5 = "unhookwindowshookex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

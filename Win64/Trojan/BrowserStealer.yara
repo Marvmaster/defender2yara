@@ -17,6 +17,7 @@ rule Trojan_Win64_BrowserStealer_RDA_2147842954_0
         $x_1_2 = "\\Mozilla\\Firefox\\Profiles" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule PWS_Win32_Karsh_A_2147596352_0
         $x_1_5 = {eb 13 43 72 65 61 74 65 52 65 6d 6f 74 65 54 68 72 65 61 64 00 83 c0 02 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

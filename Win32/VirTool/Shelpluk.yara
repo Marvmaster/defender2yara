@@ -19,6 +19,7 @@ rule VirTool_Win32_Shelpluk_A_2147817505_0
         $x_1_4 = {50 6a 40 6a 07 57 ff 15 ?? ?? ?? ?? 85 c0 ?? ?? 8b 45 ec 89 07 66 8b 45 f0 66 89 47 04 8a 45 f6 88 47 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

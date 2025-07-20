@@ -18,6 +18,7 @@ rule Trojan_Win64_LucisBlanks_AA_2147943611_0
         $x_1_4 = {70 72 6f 78 79 2e 6c 6f 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win64_LucisBlanks_AB_2147943612_0
         $x_1_5 = {00 5b 2b 5d 20 53 6f 63 6b 73 34 3a 20 63 6f 6e 6e 65 63 74 20 62 79 20 69 70 20 26 20 70 6f 72 74 20 74 68 72 65 61 64 3d 25 6c 6c 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

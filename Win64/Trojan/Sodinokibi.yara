@@ -16,6 +16,7 @@ rule Trojan_Win64_Sodinokibi_2147777660_0
         $x_1_1 = {55 8b ec e9 07 00 55 8b ec 8b 75 08 8b 7d 0c 8b 55 10 b1 07 ac e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

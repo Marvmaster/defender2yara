@@ -18,6 +18,7 @@ rule Trojan_MacOS_Cabowato_A_2147741418_0
         $x_10_4 = {3d ff 03 00 00 [0-6] 3d 00 03 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (3 of ($x*))
 }
 

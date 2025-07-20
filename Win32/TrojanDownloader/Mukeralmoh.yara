@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Mukeralmoh_STA_2147784131_0
         $x_1_4 = "/database_client2.xml" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Mukeralmoh_STB_2147784132_0
         $x_1_3 = "applib.hta" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanDownloader_Win32_Mukeralmoh_STC_2147784133_0
         $x_1_4 = "/92375234.xml" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

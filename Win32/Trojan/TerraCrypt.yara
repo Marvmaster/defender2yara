@@ -16,6 +16,7 @@ rule Trojan_Win32_TerraCrypt_LKB_2147848798_0
         $x_1_1 = {50 8b 5c 24 08 8b 6c 24 ?? 01 db 58 66 89 44 1d 00 8b 5c 24 ?? 43 89 5c 24 ?? 8b 5c 24 ?? 43 89 5c 24 ?? 8b 5c 24 ?? 3b 5c 24 ?? 7e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

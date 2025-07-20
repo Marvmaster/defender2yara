@@ -16,6 +16,7 @@ rule Trojan_Win32_Bingom_RM_2147793786_0
         $x_1_1 = {b8 ef 50 00 00 66 31 85 ?? ?? ?? ?? 6a 06 a5 59 66 8b 54 4d ?? 8d 44 4d ?? 66 31 10 49 3b cb 7f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

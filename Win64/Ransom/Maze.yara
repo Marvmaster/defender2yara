@@ -22,6 +22,7 @@ rule Ransom_Win64_Maze_GV_2147920832_0
         $x_1_7 = "os.(*Process).kill" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

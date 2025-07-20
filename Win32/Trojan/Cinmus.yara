@@ -21,6 +21,7 @@ rule Trojan_Win32_Cinmus_B_113677_0
         $x_1_7 = "msl.chnsystem.com " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule Trojan_Win32_Cinmus_E_121143_0
         $x_1_7 = "CreateMutexA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -79,6 +81,7 @@ rule Trojan_Win32_Cinmus_F_122043_0
         $x_1_7 = "CreateMutexA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -106,6 +109,7 @@ rule Trojan_Win32_Cinmus_H_122774_0
         $x_1_5 = "PsLookupProcessByProcessId" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -133,6 +137,7 @@ rule Trojan_Win32_Cinmus_I_123082_0
         $x_1_4 = {61 63 70 69 64 69 73 6b 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -160,6 +165,7 @@ rule Trojan_Win32_Cinmus_J_123769_0
         $x_2_4 = "\\BaseNamedObjects\\UID_1329147602_MIEEvent" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -188,6 +194,7 @@ rule Trojan_Win32_Cinmus_R_124309_0
         $x_1_6 = "RtlQueryRegistryValues" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -216,6 +223,7 @@ rule Trojan_Win32_Cinmus_S_124444_0
         $x_1_5 = {52 65 71 75 65 73 74 4e 65 77 4d 61 69 6e 62 6f 64 79 54 69 6d 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -237,6 +245,7 @@ rule Trojan_Win32_Cinmus_K_126093_0
         $x_1_2 = {e8 03 00 00 00 ?? ?? ?? 59 e9 01 00 00 00 ?? 83 c1 0a 51 c3 ?? ?? ?? ?? ?? 59 33 c0 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -259,6 +268,7 @@ rule Trojan_Win32_Cinmus_L_126125_0
         $x_1_3 = {74 03 75 01 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +296,7 @@ rule Trojan_Win32_Cinmus_N_134985_0
         $x_1_8 = "webbrowser" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -315,6 +326,7 @@ rule Trojan_Win32_Cinmus_O_139438_0
         $x_1_5 = {6f 72 67 5f 6d 64 35 3d 25 73 2c 20 63 61 6c 75 5f 6d 64 35 3d 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -342,6 +354,7 @@ rule Trojan_Win32_Cinmus_P_140874_0
         $x_1_4 = {72 03 73 01 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Inlev_A_2147681389_0
         $x_1_2 = {6a 01 ff 75 ?? ff 55 ?? (3b c6|83) 75 06 ff 75 ?? ff 55 ?? 6a 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Inlev_B_2147681594_0
         $x_1_4 = {68 26 80 ac c8 [0-4] c7 44 24 ?? 77 73 32 5f c7 44 24 ?? 33 32 2e 64 c7 44 24 ?? 6c 6c 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

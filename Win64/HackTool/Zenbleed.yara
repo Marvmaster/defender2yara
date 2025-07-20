@@ -17,6 +17,7 @@ rule HackTool_Win64_Zenbleed_A_2147852250_0
         $x_1_2 = {48 ff c9 66 0f 2a e0 66 0f 2a d8 66 0f 2a d0 66 0f 2a c8 66 0f 2a c0 c5 fd 6f c0 78 03 c5 f8 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

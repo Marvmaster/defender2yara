@@ -22,6 +22,7 @@ rule TrojanDropper_Win32_Chayka_A_2147616275_0
         $x_1_8 = "{64D45A93-00DD-41cb-A187-FF02A15AE32B}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

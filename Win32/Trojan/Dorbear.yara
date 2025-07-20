@@ -19,6 +19,7 @@ rule Trojan_Win32_Dorbear_A_2147708669_0
         $x_1_5 = {eb 4d 8d 45 f4 89 44 24 04 a1 ?? ?? ?? ?? 89 04 24 e8 ?? ?? ?? ?? c7 44 24 04 ?? ?? ?? ?? 89 04 24 89 c3 e8 ?? ?? ?? ?? 85 c0 74 16 c7 44 24 04 01 00 00 00 c7 04 24 00 00 00 00 e8 ?? ?? ?? ?? eb 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

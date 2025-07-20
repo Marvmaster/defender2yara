@@ -17,6 +17,7 @@ rule Trojan_Win32_Brolocker_A_2147632488_0
         $x_1_3 = {8b f0 68 80 ee 36 00 ff 15 ?? ?? 40 00 4e 75 f2 83 3d ?? ?? 40 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

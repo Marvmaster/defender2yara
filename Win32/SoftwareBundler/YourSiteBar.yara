@@ -18,6 +18,7 @@ rule SoftwareBundler_Win32_YourSiteBar_15049_0
         $x_3_4 = "ysb_m" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((1 of ($x_5_*) and 2 of ($x_3_*))) or

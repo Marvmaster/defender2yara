@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_BcryptInject_A_2147817807_0
         $x_1_6 = "del vir.bat /q" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

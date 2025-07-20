@@ -24,6 +24,7 @@ rule Backdoor_Win64_CoinFlip_A_2147946916_0
         $x_1_9 = "src\\runcommand.rs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

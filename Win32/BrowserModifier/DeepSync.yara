@@ -23,6 +23,7 @@ rule BrowserModifier_Win32_DeepSync_A_256238_0
         $x_1_9 = "do://revive" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule BrowserModifier_Win32_DeepSync_B_256239_0
         $x_1_6 = "force://update?from=sched" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule Spammer_Win32_Agent_AM_2147594943_0
         $x_1_11 = "proxy2.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_1_*))) or
             ((1 of ($x_2_*) and 7 of ($x_1_*))) or

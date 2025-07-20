@@ -21,6 +21,7 @@ rule Ransom_Win32_RaLock_YAA_2147906368_0
         $x_1_6 = "ransom" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

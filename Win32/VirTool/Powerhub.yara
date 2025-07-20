@@ -24,6 +24,7 @@ rule VirTool_Win32_Powerhub_A_2147842802_0
         $x_1_10 = {2e 44 6f 77 6e 6c 6f 61 64 53 74 72 69 6e 67 28 [0-2] 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

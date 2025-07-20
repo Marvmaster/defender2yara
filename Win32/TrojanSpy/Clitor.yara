@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Clitor_A_2147725366_0
         $x_1_6 = "cmd /v/c (set f=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

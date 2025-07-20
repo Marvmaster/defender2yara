@@ -20,6 +20,7 @@ rule HackTool_Linux_Logwiper_A_2147816821_0
         $x_1_5 = "chmod +x /tmp/mig.sh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

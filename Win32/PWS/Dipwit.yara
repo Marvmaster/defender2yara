@@ -18,6 +18,7 @@ rule PWS_Win32_Dipwit_A_2147627791_0
         $x_2_4 = {ad 33 c2 d3 c2 ab e2 f8 5f 51 6a 06 6a 02 51 51}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule PWS_Win32_Dipwit_B_2147633880_0
         $x_1_4 = {6a 00 6a 00 68 06 04 00 00 68 ee 01 13 00 ff 35 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -73,6 +75,7 @@ rule PWS_Win32_Dipwit_C_2147641363_0
         $x_1_5 = {d1 9b 93 93 f7 15 06 00 c7 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

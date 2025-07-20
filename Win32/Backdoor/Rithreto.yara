@@ -19,6 +19,7 @@ rule Backdoor_Win32_Rithreto_A_2147656246_0
         $x_1_5 = "worker_name" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

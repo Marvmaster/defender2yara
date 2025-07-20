@@ -18,6 +18,7 @@ rule Ransom_MSIL_Istola_A_2147726720_0
         $x_4_4 = "RansomBuilder1.0\\RansomBuilder1.0\\obj\\Debug\\RansomBuilder1.0.pdb" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or
             (all of ($x*))

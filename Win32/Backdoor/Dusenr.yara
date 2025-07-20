@@ -23,6 +23,7 @@ rule Backdoor_Win32_Dusenr_A_2147688619_0
         $x_2_9 = "114.114." ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_5_*) and 2 of ($x_2_*))) or
             (all of ($x*))

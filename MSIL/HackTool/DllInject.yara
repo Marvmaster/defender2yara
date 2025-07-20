@@ -20,6 +20,7 @@ rule HackTool_MSIL_DllInject_A_2147755889_0
         $x_1_5 = "Injecting, Please wait..." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

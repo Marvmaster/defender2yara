@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Lazy_RDF_2147890436_0
         $x_2_1 = {28 08 00 00 0a 6f 09 00 00 0a 6f 0a 00 00 0a 73 0b 00 00 0a 20 a2 10 40 05 6f 0c 00 00 0a 13 01}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_MSIL_Lazy_RP_2147915041_0
         $x_1_6 = "SoftwareInstaller.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanDownloader_MSIL_Lazy_NITA_2147921882_0
         $x_2_2 = {73 12 00 00 06 0a 00 06 73 2e 00 00 0a 7d 0a 00 00 04 72 af 01 00 70 02 28 ?? 00 00 2b 06 fe 06 13 00 00 06 73 30 00 00 0a 28 ?? 00 00 2b 28 ?? 00 00 2b 73 33 00 00 0a 0b 2b 00 07 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

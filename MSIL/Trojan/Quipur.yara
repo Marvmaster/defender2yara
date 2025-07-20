@@ -20,6 +20,7 @@ rule Trojan_MSIL_Quipur_A_2147697221_0
         $x_1_6 = {43 72 65 61 74 65 44 69 72 65 63 74 6f 72 79 00 50 72 6f 63 65 73 73 00 53 74 61 72 74 00 67 65 74 5f 45 78 65 63 75 74 61 62 6c 65 50 61 74 68 00 43 6f 70 79 46 69 6c 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

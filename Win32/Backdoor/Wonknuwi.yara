@@ -17,6 +17,7 @@ rule Backdoor_Win32_Wonknuwi_A_2147624519_0
         $x_1_3 = {55 6e 6b 6e 6f 77 00 00 57 69 6e 64 6f 77 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

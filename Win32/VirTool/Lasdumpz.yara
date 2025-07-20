@@ -19,6 +19,7 @@ rule VirTool_Win32_Lasdumpz_A_2147808498_0
         $x_1_4 = {48 33 c4 48 89 85 20 02 00 00 45 33 f6 ba 08 02 00 00 44 89 75 98 41 8d ?? ?? ff 15 ?? ?? ?? ?? 48 8b d8 48 85 c0 0f 84 ?? ?? ?? ?? 48 8d ?? ?? ?? 41 b9 19 00 02 00 45 33 c0 48 89 44 24 20 48 8d ?? ?? ?? ?? ?? 48 c7 c1 02 00 00 80 ff 15 ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule VirTool_Win32_Lasdumpz_B_2147937494_0
         $x_10_2 = "SECURITY\\Policy\\Secrets\\__GT__Decrypt" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

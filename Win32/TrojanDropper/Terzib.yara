@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Terzib_A_2147638687_0
         $x_1_2 = {00 77 62 00 00 25 73 5c 73 6d 63 67 75 69 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

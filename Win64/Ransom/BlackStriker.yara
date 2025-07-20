@@ -20,6 +20,7 @@ rule Ransom_Win64_BlackStriker_YBR_2147920122_0
         $x_1_5 = "library\\core\\src\\escape.rs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

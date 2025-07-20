@@ -23,6 +23,7 @@ rule Trojan_MSIL_Captavot_A_2147685539_0
         $x_10_9 = "CAPTCHA was rejected due to service overload" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

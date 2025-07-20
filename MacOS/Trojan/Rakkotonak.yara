@@ -15,6 +15,7 @@ rule Trojan_MacOS_Rakkotonak_A_2147745030_0
         $x_1_1 = {8a 00 32 03 88 45 04 00 48 8b 45 ?? ?? ?? ?? ?? 88 45 ?? 48 8d 55 ?? b9 01 00 00 00 4c 89 e6 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

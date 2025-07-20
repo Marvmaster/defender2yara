@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Zampol_A_2147727496_0
         $x_1_3 = "lib:=\"user32.dll\\CallWindowProcW\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

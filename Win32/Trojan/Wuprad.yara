@@ -23,6 +23,7 @@ rule Trojan_Win32_Wuprad_A_2147629902_0
         $x_1_9 = {ff d6 3d fd 2e 00 00 0f 84 ?? ?? ?? ?? ff d6 3d e7 2e 00 00 0f 84 ?? ?? ?? ?? 6a 31}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

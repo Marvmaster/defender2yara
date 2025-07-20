@@ -17,6 +17,7 @@ rule Ransom_MSIL_Crilock_A_2147684886_0
         $x_2_3 = {2e 72 65 73 6f 75 72 63 65 73 00 6d 73 75 6e 65 74 2e 66 72 6d 35 2e 72 65 73 6f 75 72 63 65 73 00 6d 73 75 6e 65 74 2e 66 72 6d 32 2e 72 65 73}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

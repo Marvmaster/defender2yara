@@ -27,6 +27,7 @@ rule TrojanSpy_MSIL_ExMatter_SA_2147838601_0
         $x_1_13 = {73 79 6e 63 [0-16] 2e 70 64 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -55,6 +56,7 @@ rule TrojanSpy_MSIL_ExMatter_G_2147937592_0
         $x_1_4 = {43 6c 69 65 6e 74 00 57 65 62 44 41 56 43 6c 69 65 6e 74 00 4f 62 6a 65 63 74 00 49 44 69 73 70 6f 73 61 62 6c 65 ?? 6d 5f 70 72 6f 70 46 69 6e 64 4d 65 74 68 6f 64 00 48 74 74 70 4d 65 74 68 6f 64 00 6d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

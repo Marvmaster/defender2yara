@@ -17,6 +17,7 @@ rule MonitoringTool_Win32_MsnSpyMaster_159498_0
         $x_1_3 = "Syncsoft Softwares ou seus fornecedores respon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule MonitoringTool_Win32_MsnSpyMaster_159498_1
         $x_4_3 = "http://www.syncsoft.com.br/es/spyonepro/help/" wide //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule MonitoringTool_Win32_MsnSpyMaster_159498_2
         $x_1_4 = "es sobre o Msn SpyMaster" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

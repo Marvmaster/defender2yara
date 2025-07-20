@@ -40,6 +40,7 @@ rule PWS_Win32_Azurlt_2147766724_0
         $x_1_25 = "Browsers\\Cookies" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -36,6 +36,7 @@ rule SupportScam_Win32_Screcwon_MA_2147944259_0
         $x_1_21 = "docs.viewyourstatementonline.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_1_*))) or
             ((2 of ($x_20_*))) or

@@ -23,6 +23,7 @@ rule Backdoor_Win32_Smadow_A_2147645576_0
         $x_1_8 = "my key is %S, my version is %u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule Backdoor_Win32_Smadow_B_2147646431_0
         $x_1_4 = "GET /dll/%u.dll HTTP/1.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

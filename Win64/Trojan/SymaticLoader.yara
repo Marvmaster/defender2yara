@@ -16,6 +16,7 @@ rule Trojan_Win64_SymaticLoader_RPV_2147835182_0
         $x_1_1 = {0f b6 01 48 8d 49 01 2c 0a 34 cc 88 41 ff 48 83 ea 01 75 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

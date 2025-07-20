@@ -20,6 +20,7 @@ rule Backdoor_WinNT_Haxdoor_A_2147624445_0
         $x_1_5 = {82 1c 05 46 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Kangkio_A_2147610899_0
         $x_2_4 = {b8 08 20 00 00 e8 ?? ?? 00 00 55 56 6a 01 6a 00 6a 00 68 44 30 40 00 68 3c 30 40 00 6a 00 ff 15 08 22 40 00 8b e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

@@ -17,6 +17,7 @@ rule Trojan_Win32_Apost_G_2147751808_0
         $x_1_2 = {a7 8a 1c 38 [0-16] 80 f3 [0-21] f6 d3 [0-16] 80 f3 [0-37] 88 1c 38}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

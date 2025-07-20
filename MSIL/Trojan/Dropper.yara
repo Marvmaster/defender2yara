@@ -16,6 +16,7 @@ rule Trojan_MSIL_Dropper_CSC_2147808174_0
         $x_10_1 = {02 07 91 03 07 91 fe 01 16 fe 01 0c 08 2c 02 16 0a 00 07 17 58 0b 07 02 8e 69 fe 04}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_MSIL_Dropper_SRK_2147809236_0
         $x_10_1 = {14 0a 02 13 06 11 06 13 05 11 05 72 17 00 00 70 28 ?? ?? ?? 0a 2d 2c 11 05 72 4d 00 00 70 28 ?? ?? ?? 0a 2d 2d 11 05 72 9b 00 00 70 28 ?? ?? ?? 0a 2d 2e 11 05 72 b1 00 00 70 28 ?? ?? ?? 0a 2d 2f 2b 3e 72 11 01 00 70 0b 07 28 ?? ?? ?? 0a 0a 2b 2f 72 fe df 05 70 0c 08 28 ?? ?? ?? 0a 0a 2b 20 72 0b 1b 07 70 0d 09 28 ?? ?? ?? 0a 0a 2b 11 72 20 76 0d 70 13 04 11 04 28 ?? ?? ?? 0a 0a 2b 00 06 28 ?? ?? ?? 06 0a 06 28 ?? ?? ?? 0a 13 07 de 07 26 00 14 13 07 de 00 11 07}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_MSIL_Dropper_PEGA_2147810534_0
         $x_10_1 = {72 87 00 00 70 28 ?? ?? ?? 0a 0a 28 ?? ?? ?? 0a 06 28 ?? ?? ?? 0a 39 d7 00 00 00 06 28 ?? ?? ?? 0a 3a 81 00 00 00 28 ?? ?? ?? 0a 06 28 ?? ?? ?? 0a 7e 36 00 00 0a 72 a1 00 00 70 17 6f ?? ?? ?? 0a 0b 07 72 fd 00 00 70 72 21 01 00 70 06 72 21 01 00 70 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 06 28 ?? ?? ?? 0a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +82,7 @@ rule Trojan_MSIL_Dropper_NEGA_2147810537_0
         $x_10_1 = {06 09 07 5d 17 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 16 93 13 0c 11 0b 09 11 0c 28 ?? ?? ?? 0a 9e 11 0a 09 09 9e 12 03 28 ?? ?? ?? 0a 09 17 da 28 ?? ?? ?? 0a 26 00 09 20 ff 00 00 00 fe 02 16 fe 01 13 12 11 12 2d bb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +104,7 @@ rule Trojan_MSIL_Dropper_ZEGA_2147810538_0
         $x_10_1 = {73 70 00 00 0a 0b 00 07 1f 10 8d 40 00 00 01 0c 08 16 17 9c 08 17 18 9c 08 18 19 9c 08 19 1a 9c 08 1a 1b 9c 08 1b 1c 9c 08 1c 1d 9c 08 1d 1e 9c 08 1e 1f 09 9c 08 1f 09 17 9c 08 1f 0a 18 9c 08 1f 0b 19 9c 08 1f 0c 1a 9c 08 1f 0d 1b 9c 08 1f 0e 1c 9c 08 1f 0f 1d 9c 08 6f ?? ?? ?? 0a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +127,7 @@ rule Trojan_MSIL_Dropper_NE_2147823572_0
         $x_1_2 = "0ODy7dr26gBqdm5pR28llXdIdojyoHFgBsCLEeS4W81c7zUyEo59vZ5dwiV7" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +153,7 @@ rule Trojan_MSIL_Dropper_PSK_2147831471_0
         $x_1_5 = "GetPublicKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +181,7 @@ rule Trojan_MSIL_Dropper_PSJ_2147899274_0
         $x_1_7 = "trafficlightgreen" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +205,7 @@ rule Trojan_MSIL_Dropper_PSP_2147899278_0
         $x_1_3 = "get_Assembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +227,7 @@ rule Trojan_MSIL_Dropper_ABW_2147913940_0
         $x_5_1 = {1f 59 9c 11 06 13 07 06 11 07 73 ?? ?? ?? 0a 13 08 11 05 11 08 11 05 6f ?? ?? ?? 0a 8e b7 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 11 05 11 08 11 05 6f ?? ?? ?? 0a 8e b7 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 73 ?? ?? ?? 0a 13 09 11 09 11 05 6f ?? ?? ?? 0a 17 73 ?? ?? ?? 0a 13 0a 11 04 28 ?? ?? ?? 0a 13 0b 11 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

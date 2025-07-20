@@ -16,6 +16,7 @@ rule Trojan_Win32_PikaBot_LK_2147847101_0
         $x_1_1 = {88 1c 01 8b 86 ?? ?? ?? 00 ff 86 ?? ?? ?? 00 48 31 05 ?? ?? ?? ?? 81 ff ?? ?? ?? ?? 0f 8c ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_PikaBot_SA_2147847565_0
         $x_1_1 = {0f b6 44 15 ?? 33 c8 3a d2 74 ?? 8b 45 ?? 8b 40 ?? eb ?? 8b 45 ?? 0f b6 4c 05 ?? 66 3b c0 74 ?? 89 45 ?? 8b 45 ?? e9 ?? ?? ?? ?? 8b 45 ?? 8b 00 e9 ?? ?? ?? ?? c9 c3 8b 45 ?? 40 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win32_PikaBot_LKA_2147847665_0
         $x_1_1 = {8a 04 33 30 06 46 83 ef 01 75 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +82,7 @@ rule Trojan_Win32_PikaBot_LKC_2147847820_0
         $x_1_1 = {8a 44 0d b0 34 ?? 88 84 0d ?? ?? ff ff 41 83 f9 0c 7c ed}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +105,7 @@ rule Trojan_Win32_PikaBot_SB_2147850299_0
         $x_1_2 = {8a 1c 08 8d 43 ?? 0f b6 c8 8d 53 ?? 80 fa ?? 0f b6 c3 0f 47 c8 8b 45 ?? 6b f6 ?? 0f be c9 03 f1 8b 4d ?? 40 89 45 ?? 3b c7 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +127,7 @@ rule Trojan_Win32_PikaBot_CCCB_2147892311_0
         $x_1_1 = {09 48 50 8b 88 ?? ?? ?? ?? 2b 48 10 01 0d ?? ?? ?? ?? b9 ?? ?? ?? ?? 8b 50 40 33 90 ?? ?? ?? ?? 2b ca 01 88 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 01 8a ?? ?? ?? ?? 81 ff ?? ?? ?? ?? 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +149,7 @@ rule Trojan_Win32_PikaBot_CCCE_2147892420_0
         $x_1_1 = {8b 1c 07 83 c7 ?? 0f af 59 ?? 8b 46 ?? 35 ?? ?? ?? ?? 0f af 81 ?? ?? ?? ?? 89 81 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 80 ?? ?? ?? ?? 33 86 ?? ?? ?? ?? 2d ?? ?? ?? ?? 01 46 ?? 8b 86 ?? ?? ?? ?? 33 46 ?? 8b 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +171,7 @@ rule Trojan_Win32_PikaBot_DS_2147893951_0
         $x_1_1 = {5e f7 f6 eb ?? 83 c3 ?? 53 3a ff 74 ?? 33 c8 8b 45 ?? eb ?? 8b 00 89 45 ?? e9 ?? ?? ?? ?? 8b 45 ?? 48 e9 ?? ?? ?? ?? 89 45 ?? e9 ?? ?? ?? ?? 8b 45 ?? eb ?? 03 41 ?? 39 45 ?? 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -186,6 +194,7 @@ rule Trojan_Win32_PikaBot_ES_2147893952_0
         $x_1_2 = "Crash" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +216,7 @@ rule Trojan_Win32_PikaBot_CCDB_2147894308_0
         $x_1_1 = {8b 45 e8 33 d2 eb ?? 0f b6 44 10 10 33 c8 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +240,7 @@ rule Trojan_Win32_PikaBot_KS_2147894440_0
         $x_1_3 = "Crash" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -256,6 +267,7 @@ rule Trojan_Win32_PikaBot_CCDG_2147894659_0
         $x_1_6 = {8b 45 e8 03 45 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -280,6 +292,7 @@ rule Trojan_Win32_PikaBot_CCDM_2147895042_0
         $x_1_4 = "Excpt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -302,6 +315,7 @@ rule Trojan_Win32_PikaBot_ZZ_2147895053_0
         $x_100_3 = {8d 47 01 0f b6 f8 8a 8c ?? ?? ?? ?? ?? 0f b6 d1 8d 04 1a 0f b6 d8 8a 84 ?? ?? ?? ?? ?? 88 84 ?? ?? ?? ?? ?? 88 8c ?? ?? ?? ?? ?? 0f b6 84 ?? ?? ?? ?? ?? 03 c2 0f b6 c0 8a 84 ?? ?? ?? ?? ?? 32 44 ?? ?? 88 84 ?? ?? ?? ?? ?? 46 83 fe}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -360,6 +374,7 @@ rule Trojan_Win32_PikaBot_SM_2147895418_0
         $x_1_2 = {0f b6 44 10 ?? 33 c8 eb ?? 21 5d ?? e9 ?? ?? ?? ?? 8b 45 ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -381,6 +396,7 @@ rule Trojan_Win32_PikaBot_YX_2147895527_0
         $x_1_1 = {8b 14 07 83 c7 04 a1 ?? ?? ?? ?? 8b 80 ?? ?? ?? ?? 33 46 ?? 35 ?? ?? ?? ?? 89 46 ?? a1 ?? ?? ?? ?? 05 ?? ?? ?? ?? 03 c1 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 5e ?? 0f af da 8b 88 ?? ?? ?? ?? 8b 86 ?? ?? ?? ?? 8b d3 c1 ea ?? 88 14 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -407,6 +423,7 @@ rule Trojan_Win32_PikaBot_CCDX_2147896371_0
         $x_1_6 = {40 89 45 e4 8b 45 e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -430,6 +447,7 @@ rule Trojan_Win32_PikaBot_CCET_2147897762_0
         $x_1_3 = {8b 45 f0 83 c0 01 89 45 f0 8b 4d f0 3b 4d f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -451,6 +469,7 @@ rule Trojan_Win32_PikaBot_CCFB_2147898613_0
         $x_1_1 = {89 10 8b 45 ?? 03 45 ?? 2d ?? ?? ?? ?? 03 45 ?? 8b 55 ?? 31 02 83 45 ?? ?? 83 45 ?? ?? 8b 45 ?? 3b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -472,6 +491,7 @@ rule Trojan_Win32_PikaBot_CCFD_2147898656_0
         $x_1_1 = {2b ca 8b 85 ?? ?? ?? ?? 0f b6 0c 08 8b 85 ?? ?? ?? ?? 33 d2 be ?? ?? ?? ?? f7 f6 0f b6 54 15 ?? 33 ca 8b 85 ?? ?? ?? ?? 2b 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -493,6 +513,7 @@ rule Trojan_Win32_PikaBot_CCFJ_2147899129_0
         $x_1_1 = {0f b6 0c 01 8b 85 ?? fe ff ff 33 d2 be ?? ?? ?? ?? f7 f6 0f b6 54 15 ?? 33 ca 8b 85 ?? fe ff ff 2b 85 ?? ff ff ff 03 85 ?? ff ff ff 8b 95 ?? ff ff ff 88 0c 02 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -514,6 +535,7 @@ rule Trojan_Win32_PikaBot_CCFK_2147899500_0
         $x_1_1 = {2b d0 8b 45 ?? 0f af 45 ?? 2b d0 03 55 ?? 03 55 ?? 2b 55 ?? 0f b6 54 15 ?? 33 ca 8b 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -539,6 +561,7 @@ rule Trojan_Win32_PikaBot_CCIA_2147906593_0
         $x_1_5 = {8b 45 e4 40 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

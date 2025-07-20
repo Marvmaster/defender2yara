@@ -18,6 +18,7 @@ rule Trojan_Win32_DragonRank_PA_2147926042_0
         $x_1_3 = "MJ12bot|msnbot|Yahoo|bingbot|google|YandexBot|DotBot" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

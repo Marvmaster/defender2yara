@@ -19,6 +19,7 @@ rule Trojan_Win32_Barsebey_A_2147682925_0
         $x_1_5 = "cnsyshost" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_102_*) and 1 of ($x_100_*) and 2 of ($x_1_*))) or
             (all of ($x*))

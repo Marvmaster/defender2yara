@@ -20,6 +20,7 @@ rule Backdoor_Linux_Apmod_A_2147678488_0
         $x_1_5 = "TAGS_FOR_INJECT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Linux_Apmod_A_2147717418_0
         $x_1_3 = {61 70 5f 72 65 67 69 73 74 65 72 5f 6f 75 74 70 75 74 5f 66 69 6c 74 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Backdoor_Linux_Apmod_A_2147824588_0
         $x_1_2 = {31 c0 48 85 ff 74 5c 31 f6 45 31 c0 31 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 

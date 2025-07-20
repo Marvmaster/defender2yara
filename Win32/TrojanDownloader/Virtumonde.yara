@@ -26,6 +26,7 @@ rule TrojanDownloader_Win32_Virtumonde_2147800913_0
         $x_1_12 = {53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 53 79 73 55 70 64 00 00 00 5f 75 70 64 61 74 65 2e 64 61 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_2_*) and 3 of ($x_1_*))) or
             ((8 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -57,6 +58,7 @@ rule TrojanDownloader_Win32_Virtumonde_2147800913_1
         $x_1_8 = "bar;va;nati;ca;cac;da;pa;sa;ibn;abs;abk;acb;act;mcd;ocm;rc;c;rdv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))

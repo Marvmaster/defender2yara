@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Stemas_A_2147615807_0
         $x_1_5 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule VirTool_Win64_Hebex_A_2147917413_0
         $x_1_4 = {48 89 54 24 30 c7 44 24 28 01 00 00 00 4c 89 6c 24 20 41 b9 17 00 00 00 45 33 c0 ?? ?? ?? ?? ?? ?? ?? 8b d8 ?? ?? ?? ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

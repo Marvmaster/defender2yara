@@ -16,6 +16,7 @@ rule TrojanDropper_MSIL_XWorm_OO_2147919113_0
         $x_1_1 = {08 02 28 25 00 00 0a 7e 09 00 00 04 15 16 28 26 00 00 0a 16 9a 28 17 00 00 06 28 ?? ?? ?? 0a de 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

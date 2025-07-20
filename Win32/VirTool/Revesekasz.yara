@@ -18,6 +18,7 @@ rule VirTool_Win32_Revesekasz_A_2147906326_0
         $x_1_3 = {89 45 e8 89 55 ec c7 45 f4 01 00 00 00 8b 45 e8 8b 55 ec 09 d0 85 c0 ?? ?? 8b 45 e8 8b 55 ec 89 44 24 0c 89 54 24 10 8b 45 0c 89 44 24 08 8b 45 f0 89 44 24 04 8b 45 08 89 04 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

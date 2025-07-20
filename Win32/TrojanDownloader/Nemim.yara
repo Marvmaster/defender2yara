@@ -25,6 +25,7 @@ rule TrojanDownloader_Win32_Nemim_A_2147679221_0
         $x_1_10 = {eb 04 f6 d3 22 d3 83 c0 02 4d 75 eb 8b 44 24 24 88 14 37 47 3b f8 7c d1 5d 5b 8b fe 83 c9 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

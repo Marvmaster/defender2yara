@@ -19,6 +19,7 @@ rule TrojanDropper_AndroidOS_SpyAgnt_A_2147824572_0
         $x_1_4 = "dalvik/system/DexClassLoader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -817,6 +817,7 @@ rule Trojan_AndroidOS_SpyBanker_U_2147934450_0
         $x_2_3 = {1d 52 24 e4 12 54 82 f5 0d ca f9 b9 e2 d1 f2 eb 6f 3f ed 25 fb d1 25 19 8d 34 6d 27 c0 d1 f2 eb e2 cb 62 82 d9 71 58 1c bb e3 92 7c c1 d0 5c b9 a0 d1 f2 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*))) or
             (all of ($x*))

@@ -21,6 +21,7 @@ rule Ransom_Win32_Aurora_PI_2147741540_0
         $x_2_7 = "\\Release\\Ransom.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -63,6 +64,7 @@ rule Ransom_Win32_Aurora_SIB_2147780092_0
         $x_1_18 = ".onion/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_5_*) and 7 of ($x_1_*))) or
             ((8 of ($x_5_*) and 2 of ($x_1_*))) or

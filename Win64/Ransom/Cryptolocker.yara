@@ -17,6 +17,7 @@ rule Ransom_Win64_Cryptolocker_MKV_2147926085_0
         $x_4_2 = {8b 02 41 2b c1 31 05 ?? ?? ?? ?? b8 80 75 78 00 2b c1 01 82 9c 00 00 00 8b 0d f2 ac 1d 00 01 0d ?? ?? ?? ?? 48 81 fb 80 b3 1a 00 0f 8c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

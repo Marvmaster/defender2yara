@@ -22,6 +22,7 @@ rule Backdoor_MSIL_Craexxe_A_2147719752_0
         $x_1_8 = "KeyLoggerPacket" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 2 of ($x_1_*))) or
             (all of ($x*))

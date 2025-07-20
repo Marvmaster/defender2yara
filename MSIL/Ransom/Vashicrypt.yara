@@ -23,6 +23,7 @@ rule Ransom_MSIL_Vashicrypt_A_2147722961_0
         $x_2_9 = "/C timeout 2 && Del /Q /F" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or

@@ -18,6 +18,7 @@ rule VirTool_Win64_Evelocresz_A_2147906323_0
         $x_1_3 = {48 89 5a 78 48 8b 41 08 48 83 80 f8 00 00 00 03 48 85 db ?? ?? 4d 85 c0 ?? ?? 48 81 7b c8 00 00 02 00 ?? ?? 83 7b d0 44 ?? ?? 48 b8 31 00 33 00 33 00 37 00 49 39 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

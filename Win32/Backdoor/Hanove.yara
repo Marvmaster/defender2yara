@@ -17,6 +17,7 @@ rule Backdoor_Win32_Hanove_A_2147650425_0
         $x_1_3 = {8b 10 8b c8 8b 42 0c ff d0 83 c0 10 89 07 6a 04 68 ?? ?? ?? ?? 8d 4c 24 14 c7 44 24 18 01 00 00 00 e8 ?? ?? ?? ?? 6a 02 68 ?? ?? ?? ?? 8d 4c 24 14 e8 ?? ?? ?? ?? 6a 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

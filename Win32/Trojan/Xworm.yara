@@ -26,6 +26,7 @@ rule Trojan_Win32_Xworm_A_2147895209_0
         $x_1_11 = "OfflineKeylogger Not EnabledOfflineKeylogger Not Enabled" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

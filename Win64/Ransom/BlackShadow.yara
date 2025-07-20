@@ -25,6 +25,7 @@ rule Ransom_Win64_BlackShadow_YAA_2147892102_0
         $x_1_10 = "-nodel" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

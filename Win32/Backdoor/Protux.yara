@@ -19,6 +19,7 @@ rule Backdoor_Win32_Protux_A_2147628667_0
         $x_1_4 = {57 69 6e 4e 54 20 00 00 5c 68 6f 6e 67 7a 71 75 69 74 2e 64 61 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Win32_Protux_B_2147645447_0
         $x_10_3 = {68 6f 6e 67 7a 69 6e 73 74 00 00 00 6a 71 79 2e 64 61 74 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))
@@ -68,6 +70,7 @@ rule Backdoor_Win32_Protux_B_2147645447_1
         $x_1_3 = {57 69 6e 4e 54 20 00 00 2d 4d 69 6e 69 42 75 69 6c 64 00 00 69 74 2e 64 61 74 00 00 7a 71 75 00 5c 68 6f 6e 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Backdoor_Win32_Protux_C_2147733524_0
         $x_1_5 = "~DF3bbs.tmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

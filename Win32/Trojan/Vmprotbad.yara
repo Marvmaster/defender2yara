@@ -22,6 +22,7 @@ rule Trojan_Win32_Vmprotbad_AMQ_2147787870_0
         $x_3_7 = "GetProcessAffinityMask" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

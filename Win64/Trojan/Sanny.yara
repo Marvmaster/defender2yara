@@ -17,6 +17,7 @@ rule Trojan_Win64_Sanny_A_2147730855_0
         $x_1_3 = "del /f /q NTWDBLIB.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

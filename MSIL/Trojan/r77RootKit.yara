@@ -19,6 +19,7 @@ rule Trojan_MSIL_r77RootKit_B_2147904879_0
         $x_2_4 = "/create /tn \"{1}\" /tr \"'{0}'\" /sc onlogon /rl HIGHEST" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

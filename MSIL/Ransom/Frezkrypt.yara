@@ -18,6 +18,7 @@ rule Ransom_MSIL_Frezkrypt_A_2147726469_0
         $x_2_4 = "All of your files have been encrypted!" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

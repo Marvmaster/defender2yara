@@ -22,6 +22,7 @@ rule TrojanProxy_Win32_Xorpix_A_2147576648_0
         $x_1_7 = "inet_addr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -56,6 +57,7 @@ rule TrojanProxy_Win32_Xorpix_B_2147576649_0
         $x_1_11 = "FindResourceA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 1 of ($x_3_*) and 3 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_6_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -87,6 +89,7 @@ rule TrojanProxy_Win32_Xorpix_E_2147600522_0
         $x_1_2 = {64 6c 6c 2e 64 6c 6c 00 70 72 6f 63 31 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +113,7 @@ rule TrojanProxy_Win32_Xorpix_G_2147611347_0
         $x_2_4 = {89 45 fc 68 e1 03 00 00 ff 75 fc 68 ?? ?? 00 10 e8 ?? ?? 00 00 b8 00 00 00 00 8b 7d fc 8a 07 6a 01 50 68 e0 03 00 00 ff 75 fc}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -149,6 +153,7 @@ rule TrojanProxy_Win32_Xorpix_D_2147803861_0
         $x_1_15 = "OpenSCManagerA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_300_*) and 2 of ($x_100_*) and 8 of ($x_1_*))) or
             ((2 of ($x_300_*) and 3 of ($x_100_*))) or

@@ -19,6 +19,7 @@ rule Trojan_MSIL_Styerlown_A_2147651531_0
         $x_1_5 = "C:\\WINDOWS\\svchost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Styerlown_B_2147654884_0
         $x_1_4 = "taskmngr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

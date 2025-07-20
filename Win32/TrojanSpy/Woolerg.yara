@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Woolerg_A_2147696440_0
         $x_1_4 = "107.6.181.11" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

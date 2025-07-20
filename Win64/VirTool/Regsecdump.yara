@@ -17,6 +17,7 @@ rule VirTool_Win64_Regsecdump_A_2147941245_0
         $x_1_3 = {8a 01 3a 04 11 ?? ?? 48 ff c1 49 ff c8 ?? ?? 48 33 c0 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

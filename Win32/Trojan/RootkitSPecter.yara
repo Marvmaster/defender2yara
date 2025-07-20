@@ -17,6 +17,7 @@ rule Trojan_Win32_RootkitSPecter_CB_2147806310_0
         $x_1_2 = {8b 44 24 04 03 c1 8a 10 80 ea 63 80 f2 61 41 3b 4c 24 08 88 10 7c e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

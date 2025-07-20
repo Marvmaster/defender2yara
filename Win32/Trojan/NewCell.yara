@@ -18,6 +18,7 @@ rule Trojan_Win32_NewCell_2147839213_0
         $x_1_4 = "Microsoft@ Windows@ Operating System" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule Trojan_Win32_NewCell_2147839213_1
         $x_5_10 = "e:\\Project\\newcell\\svc" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 6 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or

@@ -22,6 +22,7 @@ rule Trojan_Win32_Tedy_MA_2147834060_0
         $x_2_7 = "oncometric" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 2 of ($x_2_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule Trojan_Win32_Tedy_EM_2147847991_0
         $x_1_5 = "CreateDirectoryW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Trojan_Win32_Tedy_GMK_2147891590_0
         $x_1_7 = "ZodiacAide.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_Win32_Tedy_MBJV_2147893180_0
         $x_1_2 = {80 08 4a 00 e0 23 40 00 5f f8 b0 00 00 ff ff ff 08 00 00 00 01 00 00 00 02 00 04 00 e9 00 00 00 58 21 40 00 c4 2f 40 00 f0 1f 40 00 78 00 00 00 87 00 00 00 96 00 00 00 97}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Trojan_Win32_Tedy_GPC_2147893868_0
         $x_2_2 = "DownloadShellcode" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +151,7 @@ rule Trojan_Win32_Tedy_GK_2147894383_0
         $x_1_5 = "http://164.155.255.81/libcef.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +174,7 @@ rule Trojan_Win32_Tedy_NBL_2147897303_0
         $x_1_2 = {8b 8e 08 01 00 00 b8 c0 77 00 00 33 8e ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 2b c1 01 42 28 81 f7 8c 0f 00 00 8b c7 c7 86 08 01 00 00 ?? ?? ?? ?? 5f 5e 5d 5b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +197,7 @@ rule Trojan_Win32_Tedy_GPA_2147899065_0
         $x_3_2 = "CreateToolhelp32Snapshot" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -213,6 +221,7 @@ rule Trojan_Win32_Tedy_SPGQ_2147900207_0
         $x_1_3 = "abcdabcdabcdabcdabcdhttp://803.asx51.info:8080/20.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -236,6 +245,7 @@ rule Trojan_Win32_Tedy_AMME_2147906180_0
         $x_1_3 = "cmd /c cscript.exe /E:VBScript.Encode Msg.log" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -260,6 +270,7 @@ rule Trojan_Win32_Tedy_YAA_2147910535_0
         $x_1_1 = {8b 55 a8 2b d0 8b 45 ?? 31 10 83 45 ec 04 83 45 d4 04 8b 45 ec 3b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -282,6 +293,7 @@ rule Trojan_Win32_Tedy_RV_2147912492_0
         $x_1_2 = "\\output\\G2M_Dll.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -305,6 +317,7 @@ rule Trojan_Win32_Tedy_SPDB_2147915067_0
         $x_1_3 = "AAxFdKpurOQGDsNrD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -328,6 +341,7 @@ rule Trojan_Win32_Tedy_MBXT_2147920545_0
         $x_1_3 = {76 79 69 6d 67 77 75 00 75 74 77 6f 6c 6f 00 00 b9 a4 b3 cc 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -350,6 +364,7 @@ rule Trojan_Win32_Tedy_GPB_2147920583_0
         $x_1_2 = "jejyykuervqhewnzjohfyasspnkytioybxfq" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -379,6 +394,7 @@ rule Trojan_Win32_Tedy_EC_2147921625_0
         $x_1_9 = "innerhtml" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -403,6 +419,7 @@ rule Trojan_Win32_Tedy_PGGH_2147923567_0
         $x_1_4 = "ivnpFrICQCEKklCi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -425,6 +442,7 @@ rule Trojan_Win32_Tedy_AMX_2147925315_0
         $x_1_2 = "WindowsHandle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -447,6 +465,7 @@ rule Trojan_Win32_Tedy_ARAF_2147926915_0
         $x_2_2 = "c:\\x\\xxx.txt" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -468,6 +487,7 @@ rule Trojan_Win32_Tedy_NITA_2147931298_0
         $x_2_1 = {ff 36 8d 4c 24 10 e8 24 0c 00 00 83 f8 ff 75 58 83 c6 04 8d 44 24 40 3b f0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -499,6 +519,7 @@ rule Trojan_Win32_Tedy_ND_2147933077_0
         $x_1_11 = "EncryptByte" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -521,6 +542,7 @@ rule Trojan_Win32_Tedy_GNE_2147933343_0
         $x_5_2 = {40 00 00 40 2e 64 61 74 61 00 00 00 ?? ?? 00 00 00 60 00 00 00 ?? 00 00 00 60 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 c0 2e 76 6d 70 30 00 00 00 20 0e}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -543,6 +565,7 @@ rule Trojan_Win32_Tedy_ARAZ_2147937114_0
         $x_2_2 = "ahufgiuaguijasbiuaibuhaiuhb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -564,6 +587,7 @@ rule Trojan_Win32_Tedy_AB_2147939485_0
         $x_1_1 = {66 a9 00 80 0f 95 c0 8b 15 c0 97 6b 00 8b 12 32 82 d4 00 00 00 0f 84 fa 00 00 00 a1 14 f6 6b 00 8b 10 ff 52 08 a1 10 f6 6b 00 8b 58 08 4b 85 db 0f 8c ae 00 00 00 43 33 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -585,6 +609,7 @@ rule Trojan_Win32_Tedy_PGC_2147939901_0
         $x_5_1 = {40 32 e8 32 d8 40 32 f8 40 32 f0 40 80 f5 5a 80 f3 5a 40 80 f7 5a 40 88 2d}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -607,6 +632,7 @@ rule Trojan_Win32_Tedy_SCP_2147944457_0
         $x_1_2 = "exot1c.vercel.app/kxz-free/idk/msedge.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -629,6 +655,7 @@ rule Trojan_Win32_Tedy_LM_2147944503_0
         $x_10_2 = {0f 10 08 0f 28 c1 66 0f 73 d8 04 66 0f 7e c0 0f 28 c1 66 0f 73 d8 0c 66 0f 7e c1 2b c1 66 0f 7e c9 03 c6 66 0f 73 d9 08 8b b5 ec fe ff ff 99 2b c2 d1 f8 50 66 0f 7e c8 2b c8 8d 81 6a ff ff ff 03 c7 50 ff 36 e8 ?? ?? ?? ?? 83 c4 14 80 be d4 00 00 00 00 74 ?? 6a 01 ff 36}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -651,6 +678,7 @@ rule Trojan_Win32_Tedy_LMD_2147945735_0
         $x_10_2 = {8b 4d 0a 8d 7a 12 89 4a 0a 8b 44 24 10 89 42 0e 8b 4c 24 10 8b d1 8b f3 c1 e9 02 f3 a5 8b ca b8 01 00 00 00 83 e1 03 f3 a4 5f 5e 5d 5b 81 c4 14 01 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -672,6 +700,7 @@ rule Trojan_Win32_Tedy_MSM_2147946545_0
         $x_5_1 = {8b 01 69 f6 95 e9 d1 5b 69 c0 95 e9 d1 5b 8b d8 c1 eb 18 33 d8 69 db ?? ?? ?? ?? 33 f3 83 ea 04 83 c1 04 4f 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

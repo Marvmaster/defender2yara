@@ -17,6 +17,7 @@ rule Trojan_Win64_Insont_A_2147727586_0
         $x_1_3 = "\"inject\": \"<script>var home_link = \\\"https" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

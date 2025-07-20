@@ -20,6 +20,7 @@ rule Trojan_Win32_Hokobot_A_2147693380_0
         $x_1_5 = "\\serverhelp.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Hokobot_B_2147693381_0
         $x_1_6 = "http://maktoob.yahoo.com/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_Win32_Hokobot_A_2147693382_0
         $x_1_7 = "\\Application Data\\Microsoft\\Network\\Connections\\pbk\\rasphone.pbk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             ((6 of ($x_10_*))) or
@@ -104,6 +107,7 @@ rule Trojan_Win32_Hokobot_B_2147693383_0
         $x_1_5 = "PathProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +134,7 @@ rule Trojan_Win32_Hokobot_C_2147693384_0
         $x_1_5 = "SetWindowsHookExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

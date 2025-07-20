@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Gobundaz_A_2147688666_0
         $x_1_5 = "r2;38s-.29191.8-@/:s@=8<45@2></r" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_4_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_4_*))) or
@@ -50,6 +51,7 @@ rule TrojanDownloader_Win32_Gobundaz_B_2147693405_0
         $x_5_8 = "r2;38s-.29191.8-@/:s@=8<45@2></r" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or

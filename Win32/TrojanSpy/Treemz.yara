@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Treemz_A_2147608696_0
         $x_2_7 = {03 ce 8a 84 85 f4 fb ff ff 30 01 46 81 fe 80 00 00 00 (72|7c)}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

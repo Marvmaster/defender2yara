@@ -28,6 +28,7 @@ rule Trojan_Win32_Babadeda_RPD_2147836244_0
         $x_1_13 = "taskkill /f /im cmd.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -54,6 +55,7 @@ rule Trojan_Win32_Babadeda_GMH_2147889331_0
         $x_1_6 = "Program Files\\AutoPatch.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

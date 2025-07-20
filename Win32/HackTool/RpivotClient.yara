@@ -27,6 +27,7 @@ rule HackTool_Win32_RpivotClient_A_2147836004_0
         $x_1_12 = "PYZ-00.pyz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

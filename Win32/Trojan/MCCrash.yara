@@ -19,6 +19,7 @@ rule Trojan_Win32_MCCrash_MA_2147836792_0
         $x_1_4 = "URLDownloadToFileW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

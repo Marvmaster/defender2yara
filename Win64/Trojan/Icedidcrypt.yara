@@ -18,6 +18,7 @@ rule Trojan_Win64_Icedidcrypt_GE_2147778606_0
         $x_10_3 = "DllRegisterServer" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_Icedidcrypt_GF_2147778607_0
         $x_10_3 = "DllRegisterServer" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win64_Icedidcrypt_GH_2147778666_0
         $x_10_3 = "DllRegisterServer" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win64_Icedidcrypt_GI_2147778802_0
         $x_10_3 = "DllRegisterServer" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Trojan_Win64_Icedidcrypt_GJ_2147778978_0
         $x_10_3 = "DllRegisterServer" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_Win64_Icedidcrypt_GJ_2147778978_1
         $x_10_3 = "DllRegisterServer" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Trojan_Win64_Icedidcrypt_GK_2147780478_0
         $x_10_4 = "PluginInit" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -181,6 +188,7 @@ rule Trojan_Win64_Icedidcrypt_GL_2147780537_0
         $x_10_4 = "PluginInit" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

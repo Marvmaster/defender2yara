@@ -17,6 +17,7 @@ rule TrojanDropper_MSIL_AsyncRat_NITA_2147943277_0
         $x_1_2 = {7e 01 00 00 04 28 ?? 00 00 06 13 0d 28 ?? 00 00 0a 13 0e 11 0e 72 87 00 00 70 28 ?? 00 00 0a 13 15 12 15 fe 16 16 00 00 01 6f 19 00 00 0a 11 0b 16 6f 1a 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 13 0f 11 0f 11 0d 28 ?? 00 00 0a 11 0f 28 ?? 00 00 0a 26}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

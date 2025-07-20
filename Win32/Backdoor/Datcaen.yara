@@ -16,6 +16,7 @@ rule Backdoor_Win32_Datcaen_A_2147661735_0
         $x_1_2 = {68 f4 01 00 00 ff 15 ?? ?? ?? ?? be 04 28 00 00 56 8d 45 ?? 53 50 e8 ?? ?? ?? ?? 83 c4 0c 53 53 53 53 53 ff 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

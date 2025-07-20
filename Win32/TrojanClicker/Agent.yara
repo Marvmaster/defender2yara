@@ -17,6 +17,7 @@ rule TrojanClicker_Win32_Agent_AA_2147550213_0
         $x_1_3 = "DownLoad Successfully" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanClicker_Win32_Agent_KA_2147599212_0
         $x_1_11 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule TrojanClicker_Win32_Agent_AAD_2147600989_0
         $x_1_9 = "SeDebugPrivilege" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule TrojanClicker_Win32_Agent_FB_2147641108_0
         $x_1_5 = "\\microinfo\\microinfo.dll.up" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule TrojanClicker_Win32_Agent_DF_2147641423_0
         $x_1_2 = {53 65 74 75 70 00 45 78 65 63 53 68 65 6c 6c 3a 20 00 43 6f 70 79 20 44 65 74 61 69 6c 73 20 54 6f 20 43 6c 69 70 62 6f 61 72 64 00 43 75 73 74 6f 6d 00 4e 61 6d 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +154,7 @@ rule TrojanClicker_Win32_Agent_EG_2147642220_0
         $x_1_9 = "ATTRIB -H -R -S -A c:\\GRLDR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -176,6 +182,7 @@ rule TrojanClicker_Win32_Agent_EM_2147642523_0
         $x_1_4 = "/count.asp?mac=%s&ver=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -201,6 +208,7 @@ rule TrojanClicker_Win32_Agent_EN_2147642527_0
         $x_1_3 = {51 51 d3 b0 d2 f4 c9 fd bc b6 b0 fc a3 ac c7 eb cf c2 d4 d8 b0 b2 d7 b0 a1 a3 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +233,7 @@ rule TrojanClicker_Win32_Agent_MZA_2147643698_0
         $x_1_5 = "%s?mac=%s&ver=%s&Os=%s&FileNum=%d&Num=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -250,6 +259,7 @@ rule TrojanClicker_Win32_Agent_S_2147646557_0
         $x_1_6 = "TrackPopupMenu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -276,6 +286,7 @@ rule TrojanClicker_Win32_Agent_Y_2147650159_0
         $x_1_4 = "nuold919" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +309,7 @@ rule TrojanClicker_Win32_Agent_Z_2147650296_0
         $x_2_3 = "&memParamID=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -322,6 +334,7 @@ rule TrojanClicker_Win32_Agent_AN_2147651890_0
         $x_1_5 = "thedreamsearch.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Cred_A_2147651813_0
         $x_1_5 = {8d 85 70 fe ff ff 50 ff d6 83 f8 ff 74 04 a8 10 74 31 8d 85 68 fd ff ff 50 ff d6 83 f8 ff 74 04 a8 10 74 1f 8d 85 58 fb ff ff 50 ff d6 83 f8 ff 74 04 a8 10 74 0d 8d 9d 50 f9 ff ff e8 17 fc ff ff 33 db 8b 35 ?? ?? ?? ?? 6a 01 8d 85 70 fe ff ff 50 8d 85 60 fc ff ff 50 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_Win32_Cred_B_2147652630_0
         $x_2_4 = {88 01 41 89 4d d0 38 19 75 e6 8b 4d ?? 68 ?? ?? ?? ?? 51 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

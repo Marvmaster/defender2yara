@@ -20,6 +20,7 @@ rule VirTool_Win64_Plashelln_A_2147844673_0
         $x_1_5 = {4c 8b 85 e0 00 00 00 ba 08 00 00 00 48 8b c8 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Youaru_A_2147611500_0
         $x_1_2 = {6a ff 6a 14 e8 ?? ?? ff ff fe cb 75 bc 8b 0e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

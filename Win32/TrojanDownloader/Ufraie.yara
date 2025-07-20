@@ -15,6 +15,7 @@ rule TrojanDownloader_Win32_Ufraie_A_2147598709_0
         $x_1_1 = {76 09 30 04 08 40 3b 45 fc 72 f7 66 8b 01 66 3d 5a 4d 74 13 66 3d 4d 5a 74 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_Win32_Ufraie_A_2147598709_1
         $x_1_7 = {bb 01 00 00 00 be 09 00 00 00 c7 45 cc 07 00 00 00 c7 45 c8 08 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanDownloader_Win32_Ufraie_A_2147598709_2
         $x_1_4 = "Y:\\qdgcBbmy\\kjlWvaN\\OSxfbvt\\ynafl\\vifIrz.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule TrojanDownloader_Win32_Ufraie_B_2147611593_0
         $x_2_11 = "idt=%08x&vmdev=%d&avf=%d" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

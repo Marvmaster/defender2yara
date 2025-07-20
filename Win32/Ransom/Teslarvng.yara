@@ -23,6 +23,7 @@ rule Ransom_Win32_Teslarvng_PB_2147787772_0
         $x_1_8 = "-is" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

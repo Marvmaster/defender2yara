@@ -20,6 +20,7 @@ rule Backdoor_Win32_Androm_MK_2147776153_0
         $x_1_5 = "http://stas258.narod.ru" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_Win32_Androm_CB_2147814339_0
         $x_2_1 = {4f 11 f6 30 ca 50 08 60 ?? 61 75 e5}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Backdoor_Win32_Androm_DA_2147817690_0
         $x_2_2 = "VirtualAlloc" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Backdoor_Win32_Androm_BG_2147825045_0
         $x_1_3 = {81 fe 2b ac 01 00 7e 08 81 fb e1 be f5 00 75 09 46 81 fe b6 2d bc 1e 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Backdoor_Win32_Androm_BT_2147830626_0
         $x_1_5 = "START br.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Backdoor_Win32_Androm_MA_2147833616_0
         $x_1_6 = "Screenshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -158,6 +164,7 @@ rule Backdoor_Win32_Androm_BC_2147835235_0
         $x_5_1 = {33 d2 8b c6 f7 75 08 8a 0c 1a 30 0c 3e 46 3b 75 10 72}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -180,6 +187,7 @@ rule Backdoor_Win32_Androm_AM_2147837980_0
         $x_1_2 = {27 19 21 30 13 86 ee ba ba bb 26 09 5a 21 26 ad 31 44 44 7a 04 eb 6a e3 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +210,7 @@ rule Backdoor_Win32_Androm_GCS_2147838513_0
         $x_1_2 = "3CreateMutex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -224,6 +233,7 @@ rule Backdoor_Win32_Androm_AO_2147840140_0
         $x_2_2 = "c:\\parche\\tictac.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -245,6 +255,7 @@ rule Backdoor_Win32_Androm_GHN_2147845125_0
         $x_10_1 = {56 57 8b 7d 10 33 f6 85 ff 74 0f 0f b6 0c 06 8a 0c 11 88 0c 06 46 3b f7 72 f1 5f 5e 5d c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +279,7 @@ rule Backdoor_Win32_Androm_GJO_2147848499_0
         $x_1_3 = ".ropf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -291,6 +303,7 @@ rule Backdoor_Win32_Androm_BP_2147849507_0
         $x_1_3 = "[Rename]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -315,6 +328,7 @@ rule Backdoor_Win32_Androm_GKZ_2147850148_0
         $x_1_4 = "@.ropf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -336,6 +350,7 @@ rule Backdoor_Win32_Androm_GNT_2147852223_0
         $x_10_1 = {0f b6 04 39 8a 04 10 88 04 39 41 81 f9 60 26 00 00 72 ?? 8b 15 ?? ?? ?? ?? 8b cb 0f b6 04 31 8a 04 10 88 04 31 41 81 f9 00 b4 05 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -357,6 +372,7 @@ rule Backdoor_Win32_Androm_BQ_2147889100_0
         $x_1_1 = {fe 45 ff 0f b6 75 ff 8a 14 06 00 55 fe 0f b6 4d fe 8a 1c 01 88 1c 06 88 14 01 0f b6 0c 06 0f b6 d2 03 ca 8b 55 f4 81 e1 ff 00 00 00 8a 0c 01 32 0c 3a 88 0f 47 ff 4d f8 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -378,6 +394,7 @@ rule Backdoor_Win32_Androm_GMA_2147900265_0
         $x_10_1 = {53 8b f8 66 c7 44 24 18 02 00 ff 15 ?? ?? ?? ?? 66 89 44 24 ?? 8b 47 0c 6a 10 8b 08 8d 44 24 ?? 50 8b 11 8b 4e 08 51 89 54 24 ?? ff 54 24}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -400,6 +417,7 @@ rule Backdoor_Win32_Androm_GMB_2147900276_0
         $x_5_2 = {8b f0 66 c7 44 24 ?? 02 00 ff 15 ?? ?? ?? ?? 66 89 44 24 16 8b 46 0c 68 ?? ?? ?? ?? 8b 08 8b 44 24 14 50 8b 11 89 54 24 20 ff 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -421,6 +439,7 @@ rule Backdoor_Win32_Androm_GMX_2147900759_0
         $x_10_1 = {8b f0 8b 44 24 ?? 50 ff 15 ?? ?? ?? ?? 8b 4c 24 ?? 8b f8 51 66 c7 44 24 ?? 02 00 ff d6 66 89 44 24 ?? 8b 57 ?? 68 ?? ?? ?? ?? 53 8b 02 8b 08 89 4c 24 ?? ff d5 8b 74 24 ?? 8d 54 24 ?? 6a 10 52 8b 4e ?? 51 ff d0 83 f8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -442,6 +461,7 @@ rule Backdoor_Win32_Androm_GMY_2147901114_0
         $x_10_1 = {8b 54 24 24 8b d8 52 ff 15 ?? ?? ?? ?? 8b e8 8b 44 24 28 50 66 c7 44 24 ?? 02 00 ff d3 66 89 44 24 12 8b 4d 0c 68 ?? ?? ?? ?? 8b 11 8b 0d ?? ?? ?? ?? 51 8b 02 89 44 24 1c ff d6 8b 4f 08 8d 54 24 10 6a 10}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -464,6 +484,7 @@ rule Backdoor_Win32_Androm_GXA_2147902932_0
         $x_5_2 = {8b fb 6a 40 68 78 da 04 00 f3 a5 53 ff 15}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -485,6 +506,7 @@ rule Backdoor_Win32_Androm_GXB_2147902940_0
         $x_10_1 = {8b f0 8b 44 24 24 50 ff 15 ?? ?? ?? ?? 8b 4c 24 28 8b f8 51 66 c7 44 24 14 02 00 ff d6 66 89 44 24 12 8b 57 0c 68 ?? ?? ?? ?? 53 8b 02 8b 08 89 4c 24 1c ff 15 ?? ?? ?? ?? 8b 4d 08 8d 54 24 10 6a 10 52 51 ff d0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -507,6 +529,7 @@ rule Backdoor_Win32_Androm_GXZ_2147903165_0
         $x_5_2 = {8b ca 83 e1 03 f3 a4 8b 7b 04 8b ?? ?? ?? ?? ?? 03 fd 89 7b 04 ff d6 6a 0a ff d6 6a 0a ff d6}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -528,6 +551,7 @@ rule Backdoor_Win32_Androm_CCHT_2147903238_0
         $x_1_1 = {b9 9b 00 00 00 be ?? ?? ?? ?? f3 a5 8b 35 28 30 40 00 c7 83 8c da 04 00 01 00 00 00 ff d6 6a 0a ff d6 6a 0a ff d6 6a 0a ff d6 6a 0a ff d6 8b cb e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

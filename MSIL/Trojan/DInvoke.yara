@@ -16,6 +16,7 @@ rule Trojan_MSIL_DInvoke_KAA_2147902503_0
         $x_1_1 = {04 1a 5d 1e 5a 1f 1f 5f 63 61 d1 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

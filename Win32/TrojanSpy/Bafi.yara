@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Bafi_A_2147652421_0
         $x_1_3 = {fa 02 6f dc 3f 10 c7 b9 1e a0 c6 85 94 4d 5e 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanSpy_Win32_Bafi_P_2147652637_0
         $x_1_6 = {00 6e 61 74 69 6f 6e 61 6c 63 69 74 79 63 61 72 64 73 65 72 76 69 63 65 73 6f 6e 6c 69 6e 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule TrojanSpy_Win32_Bafi_P_2147652637_1
         $x_1_15 = "bdagent.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 11 of ($x_1_*))) or
             ((2 of ($x_2_*) and 9 of ($x_1_*))) or
@@ -109,6 +112,7 @@ rule TrojanSpy_Win32_Bafi_C_2147652895_0
         $x_1_5 = {47 65 74 4b 65 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -134,6 +138,7 @@ rule TrojanSpy_Win32_Bafi_D_2147653575_0
         $x_1_3 = "_ifrm.htm" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +159,7 @@ rule TrojanSpy_Win32_Bafi_Q_2147656264_0
         $x_1_1 = {33 db 33 c0 99 8a 11 80 ca 20 03 c2 8d 49 02 66 39 19 75 ?? 3d e0 1e 00 00 75 ?? c7 44 3c ?? 01 00 00 80 c7 05 ?? ?? ?? ?? 01 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +184,7 @@ rule TrojanSpy_Win32_Bafi_Q_2147656264_1
         $x_1_5 = {84 c0 74 11 66 83 f8 61 7c 04 66 83 e8 20 03 d0 c1 c2 03 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +210,7 @@ rule TrojanSpy_Win32_Bafi_Q_2147656264_2
         $x_1_6 = {43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 45 78 70 6c 6f 72 65 72 5c 42 72 6f 77 73 65 72 20 48 65 6c 70 65 72 20 4f 62 6a 65 63 74 73 5c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -228,6 +236,7 @@ rule TrojanSpy_Win32_Bafi_E_2147658156_0
         $x_1_6 = "Adobe PDF Reader Link Helper" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -252,6 +261,7 @@ rule TrojanSpy_Win32_Bafi_E_2147658156_1
         $x_10_5 = {40 25 0f 00 00 80 79 ?? 48 83 c8 f0 40 8b 16 88 45 ff 8a 44 39 02 32 c3 88 04 11 8a 5c 39 02 41 3b ?? ?? 7c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -278,6 +288,7 @@ rule TrojanSpy_Win32_Bafi_E_2147658156_2
         $x_1_4 = "https://www.facebook.com/login.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -307,6 +318,7 @@ rule TrojanSpy_Win32_Bafi_F_2147658183_0
         $x_1_10 = {9c 9f d8 99 a4 b2 2d 2b 3d 10 42 59 f2 aa 89 f1 be c1 bc 7d d1 df f2 f0 70 43 05 1c e5 9d f2 5a d4 d7 8c 4d e5 f3 f4 f2 67 3a 30 47 d3 8b e5 4d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -333,6 +345,7 @@ rule TrojanSpy_Win32_Bafi_H_2147659675_0
         $x_10_3 = {01 09 0b 34 0b 83 25 1b 0c 12 c7 f8 d4 8e eb 8d}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -357,6 +370,7 @@ rule TrojanSpy_Win32_Bafi_I_2147659695_0
         $x_5_2 = {8d 13 0b 37 79 1f ed cf 78 ae 63 30 70 8f ec 94}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -383,6 +397,7 @@ rule TrojanSpy_Win32_Bafi_J_2147659893_0
         $x_2_7 = {73 00 68 00 6f 00 77 00 70 00 6f 00 70 00 75 00 70 00 00 00 3c 00 43 00 4c 00 45 00 41 00 52 00 3e 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -411,6 +426,7 @@ rule TrojanSpy_Win32_Bafi_M_2147660371_0
         $x_1_4 = {81 e1 0f 00 00 80 79 05 49 83 c9 f0 41 (8a ?? ?? (32 ?? 88 ?? ?? ??|88 ?? ?? ?? 32 ??)|88 ?? ?? (32 ?? 88 ?? ?? ??|8a ?? ?? ?? 32 ??)) 8b (??|?? ??) 88 ?? ?? 8a 03 03 03 03 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 3b ?? 0f b6 (?? ??|?? ?? ??) 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -435,6 +451,7 @@ rule TrojanSpy_Win32_Bafi_N_2147661266_0
         $x_10_5 = "F535DD2D-9339-48ED-A378-61084B1049AB" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_10_*))) or
             ((2 of ($x_100_*) and 1 of ($x_20_*))) or
@@ -474,6 +491,7 @@ rule TrojanSpy_Win32_Bafi_O_2147667327_0
         $x_2_16 = "C:\\WINDOWS\\SYSTEM32\\xmldm\\" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_2_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -505,6 +523,7 @@ rule TrojanSpy_Win32_Bafi_R_2147679561_0
         $x_1_7 = "UAs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_3_*))) or
             ((2 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or

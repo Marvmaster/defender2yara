@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Sibanner_A_2147712370_0
         $x_1_2 = {8b 55 f8 33 c0 8a 44 15 fc d1 f8 8b 4d f8 88 44 0d fc 8b 55 f8 8a 44 15 fc 0c 80 8b 4d f8 88 44 0d fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanSpy_Win32_Sibanner_A_2147712370_1
         $x_1_5 = "%s\\LSP%04d.%02d.%02d_%02d.%02d.%02d.tmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

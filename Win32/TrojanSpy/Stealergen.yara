@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Stealergen_MI_2147808210_0
         $x_1_2 = "test4\\e104\\Release\\e104.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

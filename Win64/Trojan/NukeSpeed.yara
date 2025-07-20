@@ -16,6 +16,7 @@ rule Trojan_Win64_NukeSpeed_MK_2147781101_0
         $x_1_1 = {0f b6 54 04 [0-1] 48 ff c0 42 32 [0-3] 48 83 f8 [0-1] 48 0f 44 c1 41 88 14 18 49 ff c0 49 83 f8 [0-1] 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_NukeSpeed_MK_2147781101_1
         $x_1_2 = {41 0f b6 4c 10 [0-1] 48 ff c2 41 32 cc 48 ff cf 88 4a ff 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win64_NukeSpeed_AZ_2147923453_0
         $x_1_4 = {ba 83 68 95 66 4e c9 f0 7b a9 b9 c1 b3 a3 08 9a 0d 69 6f 99 95 bc 69 9d 33 96 df 3f 62 6f 34 3b 65 11 ff 6c 0c 9d a8 2c 42 ff 37 26 31 cc 65 51 a1 c5 98 49 78 99 b5 73 df 7c bd 6a 3e 1c eb b0 c1 9e e6 59 d7 52 dc 3c 34 2d d6 c3 65 d5 a2 c3 c1 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

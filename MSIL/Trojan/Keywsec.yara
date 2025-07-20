@@ -22,6 +22,7 @@ rule Trojan_MSIL_Keywsec_A_2147665145_0
         $x_1_8 = "0/mac/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule Trojan_MSIL_Keywsec_B_2147674447_0
         $x_1_6 = "0/mac/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Trojan_MSIL_Keywsec_C_2147679879_0
         $x_1_6 = "aHR0cDov" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

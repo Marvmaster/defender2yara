@@ -16,6 +16,7 @@ rule Trojan_Win32_Zapchast_B_2147799408_0
         $x_1_1 = {8a 54 24 1b 88 54 24 15 0f be 44 24 15 85 c0 75 10 8b 8c 24 e4 00 00 00 89 8c 24 48 01 00 00 eb 1c 0f be 44 24 15 33 84 24 e4 00 00 00 ba 93 01 00 01 f7 e2 89 84 24 e4 00 00 00 eb a5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Zapchast_MB_2147807608_0
         $x_1_5 = "proxies.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_Zapchast_DE_2147808202_0
         $x_3_8 = "No-Exes-Found-To-Run" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_Zapchast_RF_2147812767_0
         $x_1_1 = {83 e4 f8 83 ec 24 8b 45 ?? 8b 4d ?? 83 f0 ?? 89 44 24 ?? 83 f1 00 89 4c 24 ?? c7 44 24 ?? 17 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_Win32_Zapchast_AH_2147816465_0
         $x_5_2 = "XYZX|ZTXT|XYZX|ZTXT|XYZX|ZTXT|XYZX|ZTXT|XYZX" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Trojan_Win32_Zapchast_ABS_2147849339_0
         $x_1_4 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_Win32_Zapchast_RG_2147891804_0
         $x_1_4 = "Zagejimojojoxiho.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +188,7 @@ rule Trojan_Win32_Zapchast_GA_2147896251_0
         $x_4_1 = {89 86 d0 00 00 00 89 7c 24 10 e8 7f 11 00 00 89 44 24 14 8b 44 24 20 2b c3 99 33 c2 2b c2 89 44 24 0c db 44 24 0c dc 0d ?? ?? ?? ?? e8 5d 11 00 00 db 44 24 2c db 44 24 10 89 44 24 0c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +210,7 @@ rule Trojan_Win32_Zapchast_AB_2147896945_0
         $x_10_1 = {33 d2 8b c1 f7 b5 f8 fe ff ff 0f b6 9c 0d fc fe ff ff 41 0f b6 14 3a 03 d3 03 f2 81 e6 ff 00 00 00 8a 84 35 fc fe ff ff 88 84 0d fb fe ff ff 88 9c 35 fc fe ff ff 81 f9 00 01 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -224,6 +233,7 @@ rule Trojan_Win32_Zapchast_GZZ_2147905377_0
         $x_5_2 = {10 3f 20 3f 32 3f 3a 3f 46 3f 58 3f}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

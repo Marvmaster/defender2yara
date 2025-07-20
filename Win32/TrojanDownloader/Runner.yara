@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Runner_SIB_2147794043_0
         $x_5_5 = {89 f7 89 f0 81 c7 ?? ?? ?? ?? 81 2e ?? ?? ?? ?? 83 c6 ?? 39 fe 7c ?? bb 00 00 00 00 53 50 e8 ?? ?? ?? ?? e9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*))) or
             ((1 of ($x_50_*))) or

@@ -19,6 +19,7 @@ rule Trojan_Win32_Elfapault_A_2147598567_0
         $x_1_5 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -58,6 +59,7 @@ rule Trojan_Win32_Elfapault_B_2147599340_0
         $x_4_16 = {8b d0 c1 fa 03 8a 14 32 8a c8 80 e1 07 d2 fa 80 e2 01 88 90 c0 76 41 00 40 83 f8 40 7c e2 33 c0 0f be 88 60 6f 40 00 8a 91 bf 76 41 00 0f be 88 61 6f 40 00 88 90 18 6f 41 00 8a 91 bf 76 41 00 0f be 88 62 6f 40 00 88 90 19 6f 41 00 8a 91 bf 76 41 00 0f be 88 63 6f 40 00 88 90 1a 6f 41 00 8a 91 bf 76 41 00 88 90 1b 6f 41 00 83 c0 04 83 f8 40 7c ac 8a 44 24 24 84 c0 8b 5c 24 20 ba 10 00 00 00 8b ca be 18 6f 41 00 bf c0 76 41 00 f3 a5 0f 85 91 00 00 00 a1}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_1_*))) or
             ((1 of ($x_4_*) and 5 of ($x_1_*))) or

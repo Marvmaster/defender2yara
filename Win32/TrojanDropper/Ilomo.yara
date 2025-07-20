@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Ilomo_A_2147600105_0
         $x_1_2 = "ExpandEnvironmentStringsA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDropper_Win32_Ilomo_C_2147621724_0
         $x_2_3 = {88 5d e1 c6 45 e2 6c 88 5d e3 88 5d e4 88 5d e5 66 c7 45 f0 18 00 66 c7 45 f2 1a 00 ff d0 8b 45 fc 5b c9 c3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -66,6 +68,7 @@ rule TrojanDropper_Win32_Ilomo_B_2147621725_0
         $x_1_5 = "CLSID\\{0002DF01-0000-0000-C000-000000000046}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or

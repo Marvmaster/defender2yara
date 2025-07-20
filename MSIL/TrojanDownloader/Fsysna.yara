@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Fsysna_SK_2147837076_0
         $x_1_1 = {11 06 11 0a 11 05 94 58 11 09 11 05 94 58 20 00 01 00 00 5d 13 06 11 0a 11 05 94 13 08 11 0a 11 05 11 0a 11 06 94 9e 11 0a 11 06 11 08 9e 11 05 17 58 13 05 11 05 20 00 01 00 00 32 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_MSIL_Fsysna_SL_2147844063_0
         $x_1_1 = {11 04 11 05 07 11 05 07 8e 69 5d 91 09 11 05 91 61 d2 9c 11 05 17 58 13 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule TrojanDownloader_MSIL_Fsysna_SQ_2147893572_0
         $x_2_1 = {00 02 7b 12 00 00 04 6f ?? ?? ?? 06 00 17 28 ?? ?? ?? 0a 00 00 06 17 58 0a 06 20 f4 01 00 00 fe 04 0b 07 2d db}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule TrojanDownloader_MSIL_Fsysna_SR_2147925575_0
         $x_2_2 = "Shiraza.Properties.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

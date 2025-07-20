@@ -19,6 +19,7 @@ rule Trojan_Win32_Keylogger_PA_2147741467_0
         $x_1_4 = "Windows Task Monitor.lnk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Trojan_Win32_Keylogger_PB_2147745185_0
         $x_1_13 = "get_Keyboard" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_5_*))) or
@@ -81,6 +83,7 @@ rule Trojan_Win32_Keylogger_PC_2147748588_0
         $x_1_4 = "smtp.gmail.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +108,7 @@ rule Trojan_Win32_Keylogger_AB_2147749273_0
         $x_1_4 = "GetAsyncKeyState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +134,7 @@ rule Trojan_Win32_Keylogger_PD_2147749282_0
         $x_1_5 = "MailAddressCollection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +159,7 @@ rule Trojan_Win32_Keylogger_PE_2147752192_0
         $x_1_4 = "MailAddressCollection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +184,7 @@ rule Trojan_Win32_Keylogger_PF_2147752361_0
         $x_1_4 = "smtp.gmail.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +209,7 @@ rule Trojan_Win32_Keylogger_SA_2147788514_0
         $x_5_5 = "[RightArrow]" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -223,6 +231,7 @@ rule Trojan_Win32_Keylogger_RPN_2147796929_0
         $x_1_1 = {0f b7 45 f6 89 04 24 e8 ?? ?? ?? ?? 83 ec 04 66 3d 01 80 0f 94 c0 84 c0 74 3d c7 44 24 04 ?? ?? ?? ?? c7 04 24 ?? ?? ?? ?? e8 ?? ?? ?? ?? 89 45 e8 0f b7 45 f6 89 44 24 08 c7 44 24 04 ?? ?? ?? ?? 8b 45 e8 89 04 24 e8 ?? ?? ?? ?? 8b 45 e8 89 04 24 e8 ?? ?? ?? ?? 66 ff 45 f4 66 ff 45 f6 66 83 7d f4 31 0f 96 c0 84 c0 75 95 c7 04 24 01 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -246,6 +255,7 @@ rule Trojan_Win32_Keylogger_RPO_2147797356_0
         $x_1_3 = "vmware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -271,6 +281,7 @@ rule Trojan_Win32_Keylogger_RPA_2147809256_0
         $x_1_5 = "GetAsyncKeyState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +309,7 @@ rule Trojan_Win32_Keylogger_AN_2147818876_0
         $x_1_7 = "cunbhai" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -325,6 +337,7 @@ rule Trojan_Win32_Keylogger_AO_2147818896_0
         $x_1_7 = "cunbhai" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -355,6 +368,7 @@ rule Trojan_Win32_Keylogger_AP_2147826268_0
         $x_1_10 = "WantToCle Log?" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -387,6 +401,7 @@ rule Trojan_Win32_Keylogger_AQ_2147828685_0
         $x_1_12 = "namebro" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -417,6 +432,7 @@ rule Trojan_Win32_Keylogger_BD_2147841157_0
         $x_1_10 = "C:\\Users\\%s\\AppData\\Local\\.windows_defender.conf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -445,6 +461,7 @@ rule Trojan_Win32_Keylogger_MA_2147842170_0
         $x_1_8 = "SetWindowsHookExW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -502,6 +519,7 @@ rule Trojan_Win32_Keylogger_DAL_2147849897_0
         $x_2_2 = {35 3c ff 1c 6a 05 f4 00 1c 16 05 fc c8 f4 00 1c 1d 05 fc c8 f4 00 1c 24 05 fc c8 f4 00 1c 2b 05 fc c8 f5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -527,6 +545,7 @@ rule Trojan_Win32_Keylogger_DL_2147851789_0
         $x_1_5 = "Log Submitted!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -553,6 +572,7 @@ rule Trojan_Win32_Keylogger_DO_2147853246_0
         $x_1_6 = "_uninsdm.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -578,6 +598,7 @@ rule Trojan_Win32_Keylogger_AMBE_2147899964_0
         $x_1_5 = "GetKeyNameTextA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -601,6 +622,7 @@ rule Trojan_Win32_Keylogger_AMBE_2147899964_1
         $x_1_3 = "(1|3)[1-9A-HJ-NP-Za-km-z]{26,34}$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -628,6 +650,7 @@ rule Trojan_Win32_Keylogger_ARA_2147906067_0
         $x_2_7 = "HttpSendRequestA" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 5 of ($x_2_*))) or
             ((2 of ($x_3_*) and 4 of ($x_2_*))) or
@@ -655,6 +678,7 @@ rule Trojan_Win32_Keylogger_AMAK_2147920547_0
         $x_1_3 = "GetComputerName Failed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -678,6 +702,7 @@ rule Trojan_Win32_Keylogger_PGL_2147939520_0
         $x_2_3 = "/sendMessage?chat_id=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

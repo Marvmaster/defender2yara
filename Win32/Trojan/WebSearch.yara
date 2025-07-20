@@ -20,6 +20,7 @@ rule Trojan_Win32_WebSearch_F_2147625865_0
         $x_1_6 = "yandex.ru" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

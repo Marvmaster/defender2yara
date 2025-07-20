@@ -21,6 +21,7 @@ rule Backdoor_Win32_Pugeshe_2147708105_0
         $x_1_6 = "linsening %d..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Backdoor_Win32_Rabasheeta_A_2147664983_0
         $x_1_3 = {4b 41 4b 49 4b 4f 5f 4c 45 4e 5f 4c 49 4d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

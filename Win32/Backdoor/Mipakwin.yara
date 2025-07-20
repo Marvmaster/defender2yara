@@ -26,6 +26,7 @@ rule Backdoor_Win32_Mipakwin_A_2147685663_0
         $x_1_12 = {50 00 43 00 2d 00 63 00 69 00 6c 00 6c 00 69 00 6e 00 20 00 41 00 6e 00 74 00 69 00 76 00 69 00 72 00 75 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (11 of ($x*))
 }
 

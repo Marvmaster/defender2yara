@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Danabot_E_2147733578_0
         $x_1_4 = {89 47 04 89 18 c6 05 74 ?? ?? ?? ?? 83 c3 10 8b c3 11 00 a1 ?? ?? ?? ?? c7 07 ?? ?? ?? ?? 89 1d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

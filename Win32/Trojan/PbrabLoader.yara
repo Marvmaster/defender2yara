@@ -16,6 +16,7 @@ rule Trojan_Win32_PbrabLoader_A_2147903171_0
         $x_2_1 = {0f b7 04 50 6b c0 ?? 0f b7 d7 66 2b c2 ba ?? ?? ?? ?? 66 2b 45 ?? 66 03 46 ?? 8b 75 ?? 66 2b c2 8b 55 ?? 83 c6 ?? 89 75 ?? 66 89 04 51 42 8b 7d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

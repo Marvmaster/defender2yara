@@ -19,6 +19,7 @@ rule Trojan_Win32_Squirdots_A_2147621445_0
         $x_1_5 = {72 00 65 00 67 00 73 00 76 00 72 00 33 00 32 00 20 00 55 00 52 00 4c 00 4d 00 4f 00 4e 00 2e 00 64 00 6c 00 6c 00 20 00 2f 00 75 00 20 00 2f 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

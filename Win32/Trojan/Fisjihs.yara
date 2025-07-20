@@ -17,6 +17,7 @@ rule Trojan_Win32_Fisjihs_A_2147603220_0
         $x_1_3 = "fileToCopy = fso.GetSpecialFolder(WindowsFolder).Path & \"\\system32\\drivers\\etc\\hosts\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

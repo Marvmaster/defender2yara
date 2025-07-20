@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_Qhost_D_2147679060_0
         $x_1_10 = {e9 84 00 00 00 c7 45 e4 00 00 00 00 6a 00 ff 75 e4 e8 63 e8 ff ff 89 45 e0 ff 75 e0 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

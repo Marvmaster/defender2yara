@@ -16,6 +16,7 @@ rule Trojan_Win32_Small_P_2147509960_0
         $x_1_2 = {eb 07 8b 08 8b 49 04 03 c8 8b 51 10 81 e2 ff f9 ff ff 53 81 ca 00 08 00 00 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Small_KJ_2147593301_0
         $x_1_7 = "ReadProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Small_SC_2147594016_0
         $x_10_3 = "WinExec" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win32_Small_BC_2147598153_0
         $x_1_1 = {b8 c0 68 47 00 e8 a5 2f f9 ff 84 c0 0f 84 8c 00 00 00 b8 f0 68 47 00 e8 93 2f f9 ff 84 c0 75 7e ba c0 68 47 00 b8 ec 9f 47 00 e8 b4 d0 f8 ff b8 ec 9f 47 00 e8 46 ce f8 ff e8 71 cc f8 ff 8d 55 b8 b8 1c 69 47 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_Win32_Small_ZDA_2147603630_0
         $x_1_2 = {64 65 6c 61 79 00 00 00 ff ff ff ff 07 00 00 00 7a 68 71 62 5f 64 66 00 ff ff ff ff 3f 00 00 00 53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 50 6f 6c 69 63 69 65 73 5c 45 78 70 6c 6f 72 65 72 5c 72 75 6e 00 ff ff ff ff 07 00 00 00 53 74 61 72 74 75 70 00 ff ff ff ff 40 00 00 00 53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 45 78 70 6c 6f 72 65 72 5c 53 68 65 6c 6c 20 46 6f 6c 64 65 72 73 00 00 00 00 ff ff ff ff 0b 00 00 00 5c 64 66 7a 68 71 62 2e 65 78 65 00 ff ff ff ff 02 00 00 00 66 6e 00 00 ff ff ff ff 06 00 00 00 64 65 6c 65 74 65 00 00 ff ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Trojan_Win32_Small_AG_2147606966_0
         $x_1_6 = "_WorkProc@4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +161,7 @@ rule Trojan_Win32_Small_CD_2147607450_0
         $x_1_6 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +188,7 @@ rule Trojan_Win32_Small_AM_2147609778_0
         $x_1_7 = "LoadResource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -208,6 +216,7 @@ rule Trojan_Win32_Small_CE_2147621793_0
         $x_1_3 = {6a 01 6a 00 68 ?? ?? 40 00 ff 35 ?? ?? 40 00 e8 ?? ?? 00 00 68 ac 33 40 00 e8 ?? ?? 00 00 6a 05 68 ?? ?? 40 00 e8 ?? 00 00 00 6a 00 e8 01 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +239,7 @@ rule Trojan_Win32_Small_CF_2147622759_0
         $x_1_3 = {ff d5 83 fb 02 7f 11 8b 84 24 ?? ?? 00 00 80 cc 01 89 84 24 ?? ?? 00 00 8b 54 24 ?? 8d 8c 24 ?? ?? 00 00 51 52 ff d7 8b 44 24 ?? 8b 4c 24 ?? 68 02 00 01 00 50 51 ff 15 ?? ?? 40 00 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +261,7 @@ rule Trojan_Win32_Small_CH_2147623981_0
         $x_1_2 = {0b c9 74 24 f7 43 24 00 00 00 20 74 1b 2b 4b 08 81 f9 24 04 00 00 76 10 81 4b 24 00 00 00 c0 81 43 08 24 04 00 00 eb 1b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +283,7 @@ rule Trojan_Win32_Small_CI_2147624290_0
         $x_1_2 = {81 eb 99 00 00 00 81 e9 11 54 08 7a 81 c3 b5 00 00 00 8b 1b 03 15 ?? ?? 40 00 83 c9 16 b8 28 00 00 00 83 e8 20 01 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -295,6 +307,7 @@ rule Trojan_Win32_Small_PU_2147624994_0
         $x_1_4 = "bholibs.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +331,7 @@ rule Trojan_Win32_Small_GL_2147637767_0
         $x_1_4 = {2e 74 78 74 00 00 00 00 ff ff ff ff 08 00 00 00 4f 48 48 62 68 50 72 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -341,6 +355,7 @@ rule Trojan_Win32_Small_GO_2147639891_0
         $x_1_4 = "%s\\distributer.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -366,6 +381,7 @@ rule Trojan_Win32_Small_GP_2147639892_0
         $x_1_5 = {7b 41 43 43 41 45 32 44 32 2d 30 35 ?? ?? 2d ?? ?? ?? ?? 2d 41 34 33 45 2d ?? ?? 44 31 38 42 42 37 39 39 ?? ?? 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -390,6 +406,7 @@ rule Trojan_Win32_Small_DJ_2147642561_0
         $x_1_5 = {8b ca c1 e2 07 c1 e9 19 0b ca 03 cf 8b ef 23 e9 8b d1 f7 d2 23 d3 0b d5 03 50 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +429,7 @@ rule Trojan_Win32_Small_DL_2147642928_0
         $x_1_3 = {66 c7 85 8e fb ff ff 6d 00 66 c7 85 90 fb ff ff 73 00 66 c7 85 92 fb ff ff 76 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -436,6 +454,7 @@ rule Trojan_Win32_Small_ZZE_2147643236_0
         $x_1_5 = {d6 b1 cf fa c9 cc b5 c7 c2 bd c6 f7 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -460,6 +479,7 @@ rule Trojan_Win32_Small_EL_2147654029_0
         $x_1_5 = {8a 08 40 84 c9 75 f9 2b c2 8b f0 8b 07 8b 48 04 8b 44 39 18 3b c3 7e 0d 3b c6 7e 09 2b c6 8b d8 89 45 e8 eb 03 89 5d e8 8d 55 e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -483,6 +503,7 @@ rule Trojan_Win32_Small_EO_2147655747_0
         $x_2_4 = "PXhbugg" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -506,6 +527,7 @@ rule Trojan_Win32_Small_EP_2147656181_0
         $x_1_4 = {53 6f 25 73 5c 25 73 5c 25 73 00 00 66 74 77 61 72 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -531,6 +553,7 @@ rule Trojan_Win32_Small_FG_2147667428_0
         $x_1_2 = {28 03 00 00 0a 0a 06 8e 69 16 30 16 72 ?? 00 00 70 28 04 00 00 0a 26 16 28 05 00 00 0a de 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -557,6 +580,7 @@ rule Trojan_Win32_Small_A_2147740708_0
         $x_1_6 = "Keylogger.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -579,6 +603,7 @@ rule Trojan_Win32_Small_SA_2147744715_0
         $x_1_2 = "Quitting" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -606,6 +631,7 @@ rule Trojan_Win32_Small_PB_2147752362_0
         $x_1_7 = "get_DefaultCredentials" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -636,6 +662,7 @@ rule Trojan_Win32_Small_ADF_2147781324_0
         $x_2_10 = "GetProcessImageFileNameA" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -657,6 +684,7 @@ rule Trojan_Win32_Small_SIB_2147781952_0
         $x_1_1 = {59 2b d6 8b fb 8a 0c 02 88 08 40 83 ef 01 75 ?? 33 c9 8b c1 83 e0 ?? 8a 80 ?? ?? ?? ?? 30 04 31 41 3b cb 72 ?? 8b ce e8 ?? ?? ?? ?? 64 8b 0d 30 00 00 00 89 41 08 8b 49 0c 8b 49 14 89 41 10 8b 48 3c 8b 4c 01 28 03 c8 ff d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -682,6 +710,7 @@ rule Trojan_Win32_Small_PA_2147786345_0
         $x_1_5 = "Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -703,6 +732,7 @@ rule Trojan_Win32_Small_ADGF_2147797365_0
         $x_1_1 = {2b c8 8d 04 3e 8d 04 87 03 cf 8a 04 18 46 32 45 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -729,6 +759,7 @@ rule Trojan_Win32_Small_AN_2147817971_0
         $x_1_6 = "scripting.filesystemobject" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -752,6 +783,7 @@ rule Trojan_Win32_Small_R_2147828382_0
         $x_1_3 = "http://www.massonne.de" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -773,6 +805,7 @@ rule Trojan_Win32_Small_EM_2147836902_0
         $x_5_1 = {83 c6 04 66 ba 31 df 39 fe 7c ef 66 bf ac e1}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -798,6 +831,7 @@ rule Trojan_Win32_Small_EM_2147836902_1
         $x_1_5 = "fureinaf.qyy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -823,6 +857,7 @@ rule Trojan_Win32_Small_AF_2147838619_0
         $x_1_5 = "2022060125.vbe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -844,6 +879,7 @@ rule Trojan_Win32_Small_MA_2147840370_0
         $x_5_1 = {8b 45 d8 c1 e6 12 ff 45 e4 c1 e0 0c 01 f0 8b 75 d4 c1 e6 06 01 f0 8b 75 e0 01 c8 89 c1 c1 e8 10 88 04 32 39 5d e4 73 28}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -866,6 +902,7 @@ rule Trojan_Win32_Small_EC_2147892109_0
         $x_2_2 = {39 c1 0f 84 2e 00 00 00 8b 45 fc 89 c1 40 89 45 fc c1 e1 02}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -898,6 +935,7 @@ rule Trojan_Win32_Small_EC_2147892109_1
         $x_1_12 = "AGENT.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -920,6 +958,7 @@ rule Trojan_Win32_Small_HNA_2147907878_0
         $x_1_2 = {51 6a 64 e8 ?? ?? ?? ?? 59 e2 f5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -942,6 +981,7 @@ rule Trojan_Win32_Small_ECP_2147941299_0
         $x_3_2 = {8a 0c 30 80 c1 fc ?? ?? ?? ?? 2a d1 8a 0c 30 02 ca 88 0c 30 40 3b c7}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -963,6 +1003,7 @@ rule Trojan_Win32_Small_C_2147945084_0
         $x_2_1 = {c3 55 89 e5 90 c9 68 ?? ?? ?? ?? c3 80 74 0a ff 20 e2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -988,6 +1029,7 @@ rule Trojan_Win32_Small_11283_0
         $x_1_6 = ".txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1020,6 +1062,7 @@ rule Trojan_Win32_Small_11283_1
         $x_1_8 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1046,6 +1089,7 @@ rule Trojan_Win32_Small_11283_2
         $x_1_2 = {55 8b ec 81 c4 ?? f8 ff ff 53 56 57 [0-1] 31 c0 50 b9 61 72 79 41 64 03 40 30 51 68 4c 69 62 72 78 0f 8b 40 0c 31 d2 8b 40 1c 8b 00 8b 40 08 eb 0d 8b 40 34 31 d2 8d 40 7c 31 d2 8b 40 3c b9 cf 6e 61 64 83 c1 7d 51 54 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

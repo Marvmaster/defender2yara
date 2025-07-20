@@ -17,6 +17,7 @@ rule Trojan_Win32_Pernefed_133372_0
         $x_1_3 = "C:\\WINDOWS\\pd.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Pernefed_133372_1
         $x_1_5 = {50 00 44 00 32 00 30 00 ?? ?? ?? ?? 4d 00 6f 00 6e 00 69 00 74 00 6f 00 72 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -67,6 +69,7 @@ rule Trojan_Win32_Pernefed_133372_2
         $x_1_3 = {ff ff ff ff 15 00 00 00 53 74 61 74 75 73 3a 20 53 63 61 6e 6e 69 6e 67 20 66 69 6c 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_Pernefed_133372_3
         $x_1_4 = "SoftWare\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -121,6 +125,7 @@ rule Trojan_Win32_Pernefed_133372_4
         $x_2_9 = {8a 45 08 2c 01 72 77 0f 84 99 00 00 00 fe c8 74 09 fe c8 74 39 e9 b2 00 00 00 ba}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -151,6 +156,7 @@ rule Trojan_Win32_Pernefed_133372_5
         $x_1_6 = {20 74 6f 20 63 6f 6d 70 6c 65 74 65 6c 79 20 72 65 6d 6f 76 65 20 50 65 72 66 65 63 74 20 44 65 66 65 6e 64 65 72 2e 00 [0-8] 5c 70 64 6d 6f 6e 69 74 6f 72 2e 65 78 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -185,6 +191,7 @@ rule Trojan_Win32_Pernefed_133372_6
         $x_1_11 = "SOFTWARE\\Microsoft\\PDefender" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

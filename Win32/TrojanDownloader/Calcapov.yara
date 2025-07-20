@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Calcapov_A_2147598771_0
         $x_1_4 = "URLDownloadToFil" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule TrojanDownloader_Win32_Calcapov_B_2147610313_0
         $x_1_4 = "URLDownloadToFil" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

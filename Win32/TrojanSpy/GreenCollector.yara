@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_GreenCollector_A_2147904755_0
         $x_1_2 = {65 72 72 6f 72 00 00 00 63 68 6f 6f 73 65 20 64 69 73 6b 20 69 6e 20 63 6d 64 20 61 72 67 75 6d 65 6e 74 73 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

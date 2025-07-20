@@ -20,6 +20,7 @@ rule Trojan_Win32_Tapaoux_A_2147630215_0
         $x_1_6 = "%s\\%s.lnk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Tapaoux_B_2147651157_0
         $x_1_6 = {54 b8 11 11 11 11 ff d0 90 90 90 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Tapaoux_C_2147651206_0
         $x_1_3 = {80 7c 24 1b 44 0f 84 40 01 00 00 6a 01 83 c7 04 6a 00 57 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win32_Tapaoux_L_2147690021_0
         $x_1_5 = {c6 45 fc 51 c6 45 fd 52 c6 45 fe 00 e8 ?? ?? ?? ?? 89 45 f0 83 c4 14 33 c0 39 75 f0 7e 0b 80 44 05 f4 13 40 3b 45 f0 7c f5 39 75 e8 7e 29 89 5d ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

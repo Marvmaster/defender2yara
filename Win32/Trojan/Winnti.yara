@@ -20,6 +20,7 @@ rule Trojan_Win32_Winnti_A_2147689666_0
         $x_1_5 = "\\svchost.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Winnti_E_2147689682_0
         $x_1_2 = "\\Driver\\Tcpip" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Winnti_G_2147689683_0
         $x_1_4 = {77 69 6e 64 30 77 73 00 53 59 53 54 45 4d 5c 43 75 72 72 65 6e 74 43 6f 6e 74 72 6f 6c 53 65 74 5c 53 65 72 76 69 63 65 73 5c 25 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_Winnti_B_2147689684_0
         $x_300_1 = {8a c8 80 e1 0f c0 e1 04 c0 e8 04 02 c8 88 0c ?? ?? 3b ?? 72 e6}  //weight: 300, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_Win32_Winnti_D_2147689686_0
         $x_1_4 = "DeleteMyself Over!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_Win32_Winnti_F_2147689687_0
         $x_1_7 = "CONNECT %s:%d HTTP/1.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -165,6 +171,7 @@ rule Trojan_Win32_Winnti_2147692926_0
         $x_1_3 = {8b 07 8b c8 8b d0 c1 e9 1d c1 ea 1e 8b f0 83 e1 01 83 e2 01 c1 ee 1f a9 00 00 00 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +197,7 @@ rule Trojan_Win32_Winnti_O_2147707047_0
         $x_10_5 = {6d 73 69 65 78 65 63 2e 65 78 65 00 74 61 67 00 76 65 72 00 67 72 6f 75 70 00 00 00 75 72 6c 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -216,6 +224,7 @@ rule Trojan_Win32_Winnti_Q_2147707050_0
         $x_1_3 = "\\i386\\HddInstall.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -238,6 +247,7 @@ rule Trojan_Win32_Winnti_N_2147711359_0
         $x_1_2 = {8a 04 31 34 [0-1] 8a d0 c0 e2 04 c0 e8 04 02 d0 88 14 31 8b 45 00 41 3b c8 72 e6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -263,6 +273,7 @@ rule Trojan_Win32_Winnti_U_2147717719_0
         $x_1_5 = {43 4f 4e 4e 45 43 54 20 25 73 3a 25 64 20 48 54 54 50 2f 31 2e 30 0d 0a 0d 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +297,7 @@ rule Trojan_Win32_Winnti_V_2147718073_0
         $x_1_3 = {33 36 30 41 [0-7] 6e 74 69 48 [0-7] 61 63 6b 65 [0-7] 72 36 34 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -309,6 +321,7 @@ rule Trojan_Win32_Winnti_ZD_2147741720_0
         $x_1_3 = {4a 7b 6c 68 c7 85 ?? ?? ?? ?? 7d 6c 59 7b c7 85 ?? ?? ?? ?? 66 6a 6c 7a 66 c7 85 ?? ?? ?? ?? 7a 48}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -336,6 +349,7 @@ rule Trojan_Win32_Winnti_EM_2147896941_0
         $x_1_7 = "Terminal Server\\Wds\\rdpwd\\Tds\\tcp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Yewlo_A_2147644297_0
         $x_1_5 = {43 00 3a 00 5c 00 54 00 45 00 4d 00 50 00 5c 00 73 00 76 00 63 00 68 00 6f 00 73 00 74 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

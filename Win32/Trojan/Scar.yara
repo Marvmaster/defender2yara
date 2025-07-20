@@ -23,6 +23,7 @@ rule Trojan_Win32_Scar_A_2147629464_0
         $x_10_9 = {db e2 9b 0f 01 e0 a8 08 75 f9 0f 01 e0 a8 02 74 f9 68 ?? ?? 40 00 e8 ?? ?? 00 00 6b c0 02 8b c8 a0 ?? ?? 40 00 8d 3d ?? ?? 40 00 80 3f 00 74 02 30 07}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Trojan_Win32_Scar_G_2147636676_0
         $x_1_3 = {6a 00 6a 00 68 00 04 00 00 (ff 35 ?? ?? ?? ?? e8 ?? ??|a1 ?? ?? ?? ?? 50 e8 ?? ?? 00 00 5f 5e 5b 8b) c2 10 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_Win32_Scar_J_2147637780_0
         $x_1_5 = {8b 8d ac 00 00 00 8b 10 2b 11 8b 85 cc 00 00 00 89 10 8b 85 d8 00 00 00 8b 08 33 4d 2c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_Win32_Scar_L_2147638416_0
         $x_1_8 = {5c 6d 73 75 70 64 61 74 65 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -129,6 +133,7 @@ rule Trojan_Win32_Scar_O_2147645118_0
         $x_1_6 = "system32\\drivers\\etc\\hosts" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +158,7 @@ rule Trojan_Win32_Scar_Q_2147650871_0
         $x_1_5 = "Founded items:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +180,7 @@ rule Trojan_Win32_Scar_R_2147651998_0
         $x_1_2 = {83 78 14 10 59 72 02 8b 00 56 50 ff d3 50 ff 15 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ff ff 8b 45 c0 b9 4d 5a 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +204,7 @@ rule Trojan_Win32_Scar_T_2147653628_0
         $x_1_4 = "Shadowline variant" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +228,7 @@ rule Trojan_Win32_Scar_U_2147655708_0
         $x_1_4 = {2b 55 08 8d 9b 88 00 00 00 8b 1b 33 c0 85 db 74 ?? 03 5d 08 83 3b 00 74 ?? 8b 33 8b 4b 04 83 e9 08 83 c3 08 0f b7 03 a9 00 30 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -241,6 +250,7 @@ rule Trojan_Win32_Scar_V_2147656875_0
         $x_1_2 = {c7 04 24 e0 93 04 00 b8 22 00 00 00 89 85 ?? ?? ff ff e8 ?? ?? ?? ?? ff 85 ?? ?? ff ff 83 ec 04 e9 ?? ?? ff ff 83 c5 18 8b 85 ?? ?? ff ff 8b 95 ?? ?? ff ff 83 f8 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -263,6 +273,7 @@ rule Trojan_Win32_Scar_AP_2147838113_0
         $x_1_2 = {2a 23 28 ff 1b 29 00 2a 23 24 ff 1b 26 00 2a 46 14 ff 0a 2a 00 08 00 74 0c ff 32 1c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -290,6 +301,7 @@ rule Trojan_Win32_Scar_EC_2147838538_0
         $x_1_7 = "Image File Execution Options\\regedit.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -316,6 +328,7 @@ rule Trojan_Win32_Scar_RD_2147839882_0
         $x_1_6 = "rox.wieczorniwymiatacze.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -341,6 +354,7 @@ rule Trojan_Win32_Scar_ABS_2147850826_0
         $x_1_5 = "\\Internet Explorer\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +377,7 @@ rule Trojan_Win32_Scar_NS_2147900589_0
         $x_5_2 = {e8 8c 10 00 00 8b c3 8d 4b ff 69 c0 ?? ?? ?? ?? c1 f9 02 8b d6 89 75 f8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -389,6 +404,7 @@ rule Trojan_Win32_Scar_MA_2147901656_0
         $x_1_6 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -411,6 +427,7 @@ rule Trojan_Win32_Scar_RC_2147905950_0
         $x_1_2 = {31 c0 50 31 c0 31 c9 41 40 d3 e0 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -432,6 +449,7 @@ rule Trojan_Win32_Scar_EADV_2147936812_0
         $x_5_1 = {0f b6 45 fe 8b 4d 08 03 4d f0 0f b6 11 33 d0 8b 45 08 03 45 f0 88 10}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -453,6 +471,7 @@ rule Trojan_Win32_Scar_EAHH_2147936987_0
         $x_5_1 = {f7 75 10 8b 45 0c 0f b6 14 10 03 ca 8b c1 99 b9 64 00 00 00 f7 f9 89 55 f4 8b 55 08 03 55 f8 8a 02 88 45 ff}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -474,6 +493,7 @@ rule Trojan_Win32_Scar_ASA_2147944134_0
         $x_1_1 = {c7 04 24 60 ea 00 00 e8 ?? ?? ?? ?? 83 ec 04 e8 ?? ?? ?? ?? 50 59 b8 e9 a2 8b 2e f7 e9 d1 fa 51 58 c1 f8 1f 29 c2 52 58 89 45 fc 8b 55 fc 52 58 c1 e0 02 01 d0 d1 e0 01 d0 29 c1 51 58 89 45 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

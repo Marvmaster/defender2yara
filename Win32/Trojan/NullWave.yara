@@ -19,6 +19,7 @@ rule Trojan_Win32_NullWave_A_2147831314_0
         $x_1_4 = {a5 32 f3 dc a1 79 18 25 72 f9 bb c6 f4 b5 8b 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_NullWave_B_2147831315_0
         $x_1_7 = "%s%C%C%X-" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or

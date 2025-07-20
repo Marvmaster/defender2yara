@@ -17,6 +17,7 @@ rule Trojan_Win64_Filesponger_EN_2147851363_0
         $x_5_2 = {45 33 c9 45 33 c0 ba a0 c5 7f 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

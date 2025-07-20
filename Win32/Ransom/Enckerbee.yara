@@ -16,6 +16,7 @@ rule Ransom_Win32_Enckerbee_2147716805_0
         $x_10_2 = "\\R980\\Release\\R980.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +65,7 @@ rule Ransom_Win32_Enckerbee_B_2147717518_0
         $x_3_5 = {6d 61 69 6c 69 6e 61 74 6f 72 2e 63 6f 6d 2f 69 6e 62 6f 78 32 2e 6a 73 70 3f 70 75 62 6c 69 63 5f 74 6f 3d 25 73 20 0a 0a 09 50 6c 65 61 73 65 20 77 61 69 74 20 75 70 20 74 6f 20 32 34 20 68 6f 75 72 73 20 66 6f 72 20 79 6f 75 72 20 64 65 63 72 79 70 74 20 6b 65 79 20 74 6f 20 61 72 72}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -92,6 +94,7 @@ rule Ransom_Win32_Enckerbee_B_2147717518_1
         $x_1_5 = "ADDRESS:  1HfaCTfwsVXDitg9SgV8cR8ujYs7ZcKkto" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

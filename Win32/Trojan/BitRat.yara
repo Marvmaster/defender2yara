@@ -19,6 +19,7 @@ rule Trojan_Win32_BitRat_NEE_2147831463_0
         $x_1_4 = "Patricia" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Worm_Win32_Moldyow_A_2147617629_0
         $x_4_5 = {de de 99 f7 7d 10 8b 45 0c 0f be 04 02 33 41 04 99 f7 fb}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*))) or
@@ -50,6 +51,7 @@ rule Worm_Win32_Moldyow_A_2147617629_1
         $x_1_7 = "CDROM(%s)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 4 of ($x_1_*))) or
             ((2 of ($x_4_*))) or

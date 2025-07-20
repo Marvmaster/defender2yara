@@ -20,6 +20,7 @@ rule HackTool_Win32_Win10Tweaker_2147810477_0
         $x_5_6 = "Win_10_Tweaker.Form1.resources" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

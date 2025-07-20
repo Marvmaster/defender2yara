@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Gravad_A_2147665950_0
         $x_1_4 = {6b 65 79 6c 6f 67 67 65 72 00 00 00 4d 6f 64 75 6c 65 31 00 63 44 69 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

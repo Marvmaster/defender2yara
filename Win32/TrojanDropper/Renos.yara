@@ -26,6 +26,7 @@ rule TrojanDropper_Win32_Renos_HH_2147804070_0
         $x_1_12 = {4d 53 56 43 50 36 30 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 10 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -66,6 +67,7 @@ rule TrojanDropper_Win32_Renos_H_2147804103_0
         $x_1_17 = {4d 53 56 43 50 36 30 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 10 of ($x_1_*))) or
             ((5 of ($x_2_*) and 8 of ($x_1_*))) or

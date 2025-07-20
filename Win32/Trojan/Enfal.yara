@@ -17,6 +17,7 @@ rule Trojan_Win32_Enfal_E_2147602710_0
         $x_5_3 = {8d 44 24 08 c7 44 24 08 28 01 00 00 50 56 e8 ?? ?? 00 00 85 c0 74 2d 8b 3d 0c 10 00 10 8d 4c 24 2c 51 68 ?? 20 00 10 ff d7 68 ?? ?? 00 10 68 ?? 20 00 10 ff d7 8d 54 24 08 52 56 e8 ?? ?? 00 00 85 c0 75 d9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Trojan_Win32_Enfal_F_2147602711_0
         $x_1_5 = {8d 45 fc 50 68 3f 00 0f 00 8d 86 ?? ?? ?? ?? 53 50 68 01 00 00 80 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -81,6 +83,7 @@ rule Trojan_Win32_Enfal_F_2147602711_1
         $x_1_18 = "txtfile\\shell\\open\\command" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_10_*) and 9 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_10_*) and 10 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -116,6 +119,7 @@ rule Trojan_Win32_Enfal_H_2147654496_0
         $x_1_5 = {2f 43 6d 77 68 69 74 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_SankieCrypt_SN_2147764994_0
         $x_1_4 = "http://5ndisjtu.c1.biz/data/get.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

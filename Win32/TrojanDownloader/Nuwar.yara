@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Nuwar_B_2147595775_0
         $x_2_8 = {77 69 6e 73 75 62 2e 78 6d 6c 00 57 69 6e 64 6f 77 73 53 75 62 56 65 72 73 69 6f 6e 00 00 55 52}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             ((5 of ($x_2_*))) or
@@ -49,6 +50,7 @@ rule TrojanDownloader_Win32_Nuwar_F_2147606290_0
         $x_2_4 = {8b 45 e0 2b 45 d8 3d b8 0b 00 00 73}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or

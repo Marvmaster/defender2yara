@@ -19,6 +19,7 @@ rule Backdoor_Win32_Wecoym_A_2147694930_0
         $x_1_5 = {50 52 49 56 4d 53 47 00 32 4b 00 00 58 50 00 00 32 4b 33 00 56 53 00 00 32 4b 38 00 57 37}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

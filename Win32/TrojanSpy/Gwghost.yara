@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Gwghost_M_2147602886_0
         $x_5_4 = {8b f0 6a 20 56 6a 00 6a 00 6a 00 68 00 04 00 00 e8 ?? ?? ?? ?? 48 03 f0 c6 06 20 46 6a 20 56 6a 00 6a 00 6a 00 68 00 04 00 00 e8 ?? ?? ?? ?? 48 03 f0 ba ?? ?? ?? ?? 8b c6 e8 ?? ?? ?? ?? 8b f0 6a 00 8d 55 f4 52 8d 85 ?? ?? ?? ?? 2b f0 56 50 53 e8 ?? ?? ?? ?? 6a 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

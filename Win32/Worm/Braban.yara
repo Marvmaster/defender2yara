@@ -15,6 +15,7 @@ rule Worm_Win32_Braban_B_2147583556_0
         $x_1_1 = {64 ff 30 64 89 20 8b 45 fc e8 ?? ?? ?? ?? 8b f0 85 f6 7e 2c bb 01 00 00 00 8d 45 f4 8b 55 fc 0f b6 54 1a ff 2b d3 81 ea 06 12 0f 00 e8 ?? ?? ?? ?? 8b 55 f4 8d 45 f8 e8 ?? ?? ?? ?? 43 4e 75 d9 8b c7 8b 55 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Worm_Win32_Braban_G_2147601380_0
         $x_2_8 = "AZIP32.DLL" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             ((5 of ($x_10_*) and 1 of ($x_2_*))) or

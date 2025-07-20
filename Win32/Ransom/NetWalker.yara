@@ -16,6 +16,7 @@ rule Ransom_Win32_NetWalker_S_2147751635_0
         $x_1_1 = {53 55 57 c7 44 ?? ?? 5c 00 76 00 c7 44 ?? ?? 73 00 73 00 c7 44 ?? ?? 61 00 64 00 c7 44 ?? ?? 6d 00 69 00 c7 44 ?? ?? 6e 00 2e 00 c7 44 ?? ?? 65 00 78 00 c7 44 ?? ?? 65 00 00 00 c7 44 ?? ?? 20 00 64 00 c7 44 ?? ?? 65 00 6c 00 c7 44 ?? ?? 65 00 74 00 c7 44 ?? ?? 65 00 20 00 c7 44 ?? ?? 73 00 68 00 c7 44 ?? ?? 61 00 64 00 c7 44 ?? ?? 6f 00 77 00 c7 44 ?? ?? 73 00 20 00 c7 44 ?? ?? 2f 00 61 00 c7 44 ?? ?? 6c 00 6c 00 c7 44 ?? ?? 20 00 2f 00 c7 44 ?? ?? 71 00 75 00 c7 44 ?? ?? 69 00 65 00 c7 44 ?? ?? 74 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Win32_NetWalker_GS_2147754253_0
         $x_1_7 = "pspath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -74,6 +76,7 @@ rule Ransom_Win32_NetWalker_MX_2147755326_0
         $x_1_8 = "exefile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Ransom_Win32_NetWalker_2147763406_0
         $x_1_1 = {0f b6 c2 03 c8 0f b6 c1 8b 4c 24 ?? 0f b6 04 ?? 30 04 0e 46 8b 4c 24 ?? 3b f5 72 c0 00 8d ?? 01 0f b6 ?? 8a 14 ?? 0f b6 c2 03 c1 0f b6 c8 89 4c 24 1c 0f b6 04 ?? 88 04 ?? 88 14 ?? 0f b6 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Ransom_Win32_NetWalker_2147763406_1
         $x_1_4 = "If you do not pay" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule Ransom_Win32_NetWalker_STA_2147766287_0
         $x_5_7 = {5c 00 76 00 c7 44 ?? ?? 73 00 73 00 c7 44 ?? ?? 61 00 64 00 c7 44 ?? ?? 6d 00 69 00 c7 44 ?? ?? 6e 00 2e 00 c7 44 ?? ?? 65 00 78 00 c7 44 ?? ?? 65 00 00 00 c7 44 ?? ?? 20 00 64 00 c7 44 ?? ?? 65 00 6c 00 c7 44 ?? ?? 65 00 74 00 c7 44 ?? ?? 65 00 20 00 c7 44 ?? ?? 73 00 68 00 c7 44 ?? ?? 61 00 64 00 c7 44 ?? ?? 6f 00 77 00 c7 44 ?? ?? 73 00 20 00 c7 44 ?? ?? 2f 00 61 00 c7 44 ?? ?? 6c 00 6c 00 c7 44 ?? ?? 20 00 2f 00 c7 44 ?? ?? 71 00 75 00 c7 44 ?? ?? 69 00 65 00 c7 44 ?? ?? 74 00 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_3_*))) or
             ((1 of ($x_5_*) and 2 of ($x_3_*))) or

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Bezigate_B_2147677752_0
         $x_1_4 = {00 00 70 00 6c 00 75 00 67 00 2e 00 64 00 61 00 74 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule Backdoor_Win32_Bezigate_B_2147677752_1
         $x_1_11 = {6d 00 79 00 70 00 61 00 73 00 73 00 00 00 00 00 70 00 6c 00 75 00 67 00 2e 00 64 00 61 00 74 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_3_*) and 7 of ($x_1_*))) or

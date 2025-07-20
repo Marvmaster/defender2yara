@@ -17,6 +17,7 @@ rule Trojan_Win32_Bolik_A_2147750445_0
         $x_2_2 = {8b 1e c1 cb 08 01 cb 01 cb 81 eb ?? ?? ?? ?? 01 fb 29 cb 81 e9 04 00 00 00 29 fb 89 1e 81 c6 04 00 00 00 81 f9 00 00 00 00 77}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

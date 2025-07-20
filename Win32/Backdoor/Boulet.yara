@@ -16,6 +16,7 @@ rule Backdoor_Win32_Boulet_G_2147747814_0
         $x_1_1 = {33 d2 8b c6 f7 f1 46 8a 92 ?? ?? ?? ?? 30 96 ?? ?? ?? ?? 81 fe ?? ?? ?? ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MSIL_SpideyBot_A_2147824424_0
         $x_1_3 = {0a 74 19 00 ?? 01 13 ?? 06 11 ?? 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 09 6f ?? ?? ?? 0a 2d de}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_SpideyBot_ASI_2147933739_0
         $x_2_2 = {0a 00 06 0b 16 0c 2b 6c 07 08 9a 0d 00 09 6f ?? 00 00 0a 03 28 ?? 00 00 0a 13 04 11 04 2c 50 00 09 6f ?? 00 00 0a 13 08 12 08}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -27,6 +27,7 @@ rule HackTool_Win32_DoorH_A_2147724633_0
         $x_1_12 = {2d 73 71 6c 0b 00 53 51 4c 20 78 70 5f 63 6d 64 73 68 65 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

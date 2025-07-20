@@ -19,6 +19,7 @@ rule MonitoringTool_Win32_SpyBuddy_11560_0
         $x_1_5 = "_hook]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule MonitoringTool_Win32_SpyBuddy_11560_1
         $x_1_5 = "%s%dc.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule MonitoringTool_Win32_SpyBuddy_11560_2
         $x_1_5 = "SetWindowsHookExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

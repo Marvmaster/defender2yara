@@ -17,6 +17,7 @@ rule Trojan_MacOS_Khekhe_A_2147923775_0
         $x_1_2 = {48 c7 45 d0 18 00 00 00 4c 89 e7 48 8d 75 d0 e8 5e 06 00 00 48 89 df 4c 89 ee e8 8d fa ff ff ff 20 48 8d 3d 67 db 16 00 e8 a7 b4 14 00 49 89 c6 48 c7 45 d0 19 00 00 00 4c 89 e7 48 8d 75 d0 e8 2e 06 00 00 48 89 df 4c 89 ee e8 5d fa ff ff eb 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

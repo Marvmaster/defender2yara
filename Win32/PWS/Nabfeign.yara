@@ -22,6 +22,7 @@ rule PWS_Win32_Nabfeign_A_2147583579_0
         $x_1_8 = "WindowsHookEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 1 of ($x_10_*) and 1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_20_*) and 1 of ($x_10_*) and 2 of ($x_4_*))) or
@@ -52,6 +53,7 @@ rule PWS_Win32_Nabfeign_B_2147583598_0
         $x_3_6 = {00 25 73 0a 00 ?? ?? ?? 5f (70|70) 00 [0-16] 01 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 2 of ($x_1_*))) or
             ((3 of ($x_3_*) and 1 of ($x_2_*))) or

@@ -28,6 +28,7 @@ rule Backdoor_Win32_Bifrose_2147487759_0
         $x_1_14 = {48 6f 74 6d 61 69 6c 00 48 54 54 50 4d 61 69 6c 20 55 73 65 72 20 4e 61 6d 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -57,6 +58,7 @@ rule Backdoor_Win32_Bifrose_A_2147573995_0
         $x_1_9 = "%c%d.%d.%d.%d|%s|%s|%s|%s|%s|%u|%i|%i|%u|" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -98,6 +100,7 @@ rule Backdoor_Win32_Bifrose_B_2147573996_0
         $x_1_13 = "Dns/IP 1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -120,6 +123,7 @@ rule Backdoor_Win32_Bifrose_DN_2147575925_0
         $x_1_3 = {68 94 02 00 00 8b 0d ?? ?? 40 00 51 68 94 02 00 00 8b 95 ?? ?? ?? ?? 52 8b 45 ?? 03 05 ?? ?? 40 00 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +148,7 @@ rule Backdoor_Win32_Bifrose_EF_2147593591_0
         $x_1_5 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +175,7 @@ rule Backdoor_Win32_Bifrose_C_2147597852_0
         $x_1_6 = "MSN Explorer Signup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 3 of ($x_1_*))) or
             ((1 of ($x_9_*))) or
@@ -205,6 +211,7 @@ rule Backdoor_Win32_Bifrose_D_2147598147_0
         $x_100_11 = {85 c0 0f 84 d4 f4 ff ff 68 f4 01 00 00 ff 15 ?? ?? ?? ?? 8b 85 ?? ?? ff ff 50 b9 02 01 00 00 81 ec ?? ?? 00 00 8d b5 ?? ?? ff ff 8b fc f3 a5 e8}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*))) or
             (all of ($x*))
@@ -230,6 +237,7 @@ rule Backdoor_Win32_Bifrose_AE_2147600018_0
         $x_1_3 = {43 00 3c 00 72 ?? ?? ?? 65 ?? ?? ?? 61 ?? ?? ?? 74 ?? ?? ?? 65 ?? ?? ?? 50 ?? ?? ?? 72 ?? ?? ?? 6f ?? ?? ?? 63 ?? ?? ?? 65 ?? ?? ?? 73 ?? ?? ?? 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -266,6 +274,7 @@ rule Backdoor_Win32_Bifrose_AE_2147600018_1
         $x_1_17 = "torWrite" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (16 of ($x*))
 }
 
@@ -287,6 +296,7 @@ rule Backdoor_Win32_Bifrose_EY_2147604940_0
         $x_1_2 = {56 33 f6 39 75 0b ?? 1b 8b 45 08 33 d2 8d 0c 06 8b c6 f7 75 14 8b 45 10 ?? 04 02 30 01 46 3b 75 0c 7c e5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -310,6 +320,7 @@ rule Backdoor_Win32_Bifrose_P_2147605876_0
         $x_1_4 = {0a 8b 94 fe e5 5e bd 65 aa 4c 31 27 58 34 38 a3 6c ff 01 22 43 ba 3e 51 b7 6e 80 91 02 26 32 06 45 ef 81 1d e8 de 31 f8 10 a8 18 47 aa df 14 12 29 30 71 23 08 e6 ac 9c 8d 3c 48 b0 33 a9 67 64 2c a3 fd ea df ea d8 06 9c 19 e7 63 c5 93 78 df}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -338,6 +349,7 @@ rule Backdoor_Win32_Bifrose_FI_2147609849_0
         $x_1_9 = "{9B71D88C-C598-4935-C5D1-43AA4DB90836}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -363,6 +375,7 @@ rule Backdoor_Win32_Bifrose_E_2147610584_0
         $x_1_2 = {6a 04 50 57 ff d6 81 75 ?? 68 a7 62 4d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -388,6 +401,7 @@ rule Backdoor_Win32_Bifrose_FT_2147616633_0
         $x_1_6 = "SeDebugPrivilege" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -417,6 +431,7 @@ rule Backdoor_Win32_Bifrose_FU_2147616891_0
         $x_1_7 = "SOFTWARE\\Microsoet\\Windows\\CurrentVersion\\App Paths\\iexplore.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -443,6 +458,7 @@ rule Backdoor_Win32_Bifrose_HM_2147627731_0
         $x_1_4 = {6b 61 76 73 76 63 2e 65 78 65 00 ?? 6b 61 76 2e 65 78 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -466,6 +482,7 @@ rule Backdoor_Win32_Bifrose_HH_2147630933_0
         $x_1_4 = {36 42 36 35 37 32 36 45 36 35 36 43 33 33 33 32 32 45 36 34 36 43 36 43 00 34 45 37 34 35 35 36 45 36 44}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -491,6 +508,7 @@ rule Backdoor_Win32_Bifrose_HO_2147631240_0
         $x_2_6 = "zixnnj11u01rhuwda18gc5003tr97s9w2p850j0cj5mborrzyh4532" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -514,6 +532,7 @@ rule Backdoor_Win32_Bifrose_HR_2147632479_0
         $x_3_1 = {41 00 2a 00 5c 00 41 00 43 00 3a 00 5c 00 55 00 73 00 65 00 72 00 73 00 5c 00 50 00 61 00 64 00 64 00 79 00 5c 00 44 00 65 00 73 00 6b 00 74 00 6f 00 70 00 5c 00 56 00 69 00 73 00 75 00 61 00 6c 00 20 00 42 00 61 00 73 00 69 00 63 00 20 00 36 00 5c 00 50 00 72 00 6f 00 6a 00 65 00 63 00 74 00 73 00 5c 00 46 00 55 00 44 00 20 00 90 00 72 00 79 00 70 00 74 00 65 00 72 00 5c 00 73 00 74 00 75 00 62 00 2e 00 76 00 62 00 70 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -539,6 +558,7 @@ rule Backdoor_Win32_Bifrose_F_2147632603_0
         $x_1_5 = "DisableSafeMode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -572,6 +592,7 @@ rule Backdoor_Win32_Bifrose_HU_2147636737_0
         $x_1_9 = "\\\\.\\RESS_DTDOS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -599,6 +620,7 @@ rule Backdoor_Win32_Bifrose_IC_2147643669_0
         $x_1_2 = {b8 4d 5a 00 00 66 39 01 74 04 33 c0 c9 c3 8b 41 3c 03 c1 81 38 50 45 00 00 75 ef 83 65 fc 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -622,6 +644,7 @@ rule Backdoor_Win32_Bifrose_IH_2147646125_0
         $x_1_4 = {59 59 8d 8d e4 fe ff ff 49 49 c6 04 08 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -644,6 +667,7 @@ rule Backdoor_Win32_Bifrose_IN_2147653876_0
         $x_1_3 = {c6 45 f5 3e eb 04 c6 45 f5 3f 0f b6 45 f6 83 f8 40 7e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -664,6 +688,7 @@ rule Backdoor_Win32_Bifrose_IO_2147654050_0
         $x_1_1 = "C:\\monstermo nst ermonste\\monstermonste\\rmonstermo\\nsterm ons\\termonstermons.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -685,6 +710,7 @@ rule Backdoor_Win32_Bifrose_IQ_2147654348_0
         $x_1_2 = {80 34 03 f3 ff d7 50 ff d6 8b 45 fc 80 34 03 c2 ff d7 50 ff d6 8b 45 fc 80 34 03 d4 43 3b 5d f8 72 d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -709,6 +735,7 @@ rule Backdoor_Win32_Bifrose_IQ_2147654348_1
         $x_1_5 = {25 00 63 00 3a 00 5c 00 2a 00 00 00 25 00 63 00 3a 00 5c 00 25 00 73 00 00 00 00 00 2e 00 65 00 78 00 65 00 00 00 00 00 2d 00 61 00 78 00 00 00 20 00 00 00 2d 00 61 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -733,6 +760,7 @@ rule Backdoor_Win32_Bifrose_CB_2147818040_0
         $x_1_4 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -754,6 +782,7 @@ rule Backdoor_Win32_Bifrose_ABF_2147895117_0
         $x_1_1 = {8b 45 e0 33 d2 52 50 8b c3 c1 e0 03 8d 04 80 99 03 04 24 13 54 24 04 83 c4 08 8b 55 fc 03 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Portop_A_2147742009_0
         $x_1_5 = "Mux: %s is existing,quit it!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule Trojan_Win32_Portop_B_2147742066_0
         $x_2_3 = "cmd /c start /b  /ru system /sc @echo off" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Backdoor_Win64_Donipye_STX_2147781287_0
         $x_2_5 = "WbemScripting.SWbemLocator" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

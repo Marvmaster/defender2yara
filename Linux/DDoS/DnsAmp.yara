@@ -20,6 +20,7 @@ rule DDoS_Linux_DnsAmp_A_2147818624_0
         $x_1_5 = "dns_server_count" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule DDoS_Linux_DnsAmp_B_2147825978_0
         $x_1_2 = {11 01 30 a0 e3 00 30 c4 e5 10 40 bd e8 1e ff 2f e1 b8 f9 08 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule VirTool_Win64_Augustesz_A_2147910769_0
         $x_1_4 = {0f b6 4c 24 24 84 c9 ?? ?? 48 85 db ?? ?? b9 01 00 00 00 ?? ?? 48 8b 8c 24 80 00 00 00 48 83 f9 1f 0f 9c c1 89 c8 48 81 c4 e8 02 00 00 5d c3 66}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

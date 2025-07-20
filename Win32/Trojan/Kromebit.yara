@@ -15,6 +15,7 @@ rule Trojan_Win32_Kromebit_A_2147696317_0
         $x_1_1 = {b3 63 52 50 88 5c 24 34 c6 44 24 35 68 c6 44 24 36 72 c6 44 24 37 6f c6 44 24 38 6d c6 44 24 39 65 c6 44 24 3a 2e c6 44 24 3b 65 c6 44 24 3c 78 c6 44 24 3d 65 c6 44 24 3e 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -35,6 +36,7 @@ rule Trojan_Win32_Kromebit_B_2147696318_0
         $x_1_1 = {b3 72 52 55 c6 44 24 34 63 c6 44 24 35 68 88 5c 24 36 c6 44 24 37 6f c6 44 24 38 6d c6 44 24 39 65 c6 44 24 3a 2e c6 44 24 3b 65 c6 44 24 3c 78 c6 44 24 3d 65 c6 44 24 3e 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Ransom_Linux_Deadbolt_B_2147925278_0
         $x_1_2 = {83 ff 1b 75 f6 b8 00 00 00 00 b9 01 00 00 00 4c 8d 1d aa ee 2b 00 f0 41 0f b1 0b 75 de 48 8b 0d cc e7 28 00 4c 8d 05 75 f9 2b 00 4c 8d 0d ce 08 00 00 48 8b 05 cf e6 28 00 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

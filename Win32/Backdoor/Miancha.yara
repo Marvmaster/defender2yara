@@ -17,6 +17,7 @@ rule Backdoor_Win32_Miancha_A_2147685193_0
         $x_1_3 = {43 6f 6e 31 00 00 00 00 43 6f 6e 33 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

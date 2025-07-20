@@ -16,6 +16,7 @@ rule Trojan_WinNT_Qsbot_A_2147641186_0
         $x_1_2 = {fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 a1 ?? ?? ?? ?? c7 00 ?? ?? ?? ?? a1 ?? ?? ?? ?? c7 00 ?? ?? ?? ?? 0f 20 c0 0d 00 00 01 00 0f 22 c0 fb c6 02 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

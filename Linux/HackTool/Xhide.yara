@@ -17,6 +17,7 @@ rule HackTool_Linux_Xhide_A_2147649978_0
         $x_3_2 = "Example: %s -s \"klogd -m 0\" -d -p test.pid ./egg bot.conf" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

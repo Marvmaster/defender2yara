@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Ohlat_A_2147678653_0
         $x_1_6 = {5c 41 74 61 6c 68 6f 5f 2e 70 69 66 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

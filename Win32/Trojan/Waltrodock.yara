@@ -17,6 +17,7 @@ rule Trojan_Win32_Waltrodock_A_2147652395_0
         $x_1_3 = {75 02 33 c0 41 81 f9 04 01 00 00 7c d9 1a 00 8a 90 ?? ?? ?? ?? 8a 9c 0c ?? ?? ?? ?? 32 da 40 83 f8 10 88 9c 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Waltrodock_B_2147652396_0
         $x_1_3 = {7d 2a 8d 43 ff 3b c8 8d 04 89 8d 34 c2 74 05 8b 46 34 eb 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Waltrodock_C_2147658613_0
         $x_4_3 = {32 da 40 83 f8 10 88 [0-6] 75 02 33 c0 41 81 f9 04 01 00 00 7c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))

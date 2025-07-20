@@ -19,6 +19,7 @@ rule Ransom_Win32_LockScreen_A_2147630457_0
         $x_1_4 = "plugin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win32_LockScreen_B_2147632476_0
         $x_1_4 = {53 00 6f 00 66 00 74 00 77 00 61 00 72 00 65 00 5c 00 4d 00 69 00 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00 5c 00 57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 20 00 4e 00 54 00 5c 00 43 00 75 00 72 00 72 00 65 00 6e 00 74 00 56 00 65 00 72 00 73 00 69 00 6f 00 6e 00 5c 00 57 00 69 00 6e 00 6c 00 6f 00 67 00 6f 00 6e 00 00 00 55 00 73 00 65 00 72 00 69 00 6e 00 69 00 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Ransom_Win32_LockScreen_H_2147636198_0
         $x_1_2 = {74 13 34 0e 66 0f b6 c0 42 66 89 01 8a 02 83 c1 02 3c 0e 75 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Ransom_Win32_LockScreen_H_2147636198_1
         $x_1_2 = {77 03 80 c1 ?? 0f be c9 69 c9 ?? 00 00 00 03 c8 c1 c1 ?? 8b c1 8a 0a 84 c9 75 dc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Ransom_Win32_LockScreen_H_2147636198_2
         $x_1_3 = {8b 31 3b 30 75 ?? 83 ea 04 83 c0 04 83 c1 04 83 fa 04 73 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Ransom_Win32_LockScreen_O_2147637730_0
         $x_2_8 = {55 ad 4c fc 48 2b 3f af 4d 52 50 9e 3a 8a 4b 89 3e d6 55 64 46 98 62 12 5c 1e 6b 73 68 4e 6c 0b 68 32 5f 07 6d af 55 c2 48 57 6e f6 6d 77 65 0f 68 72 68 06 64 77 19 e3 3e 60 71 a4 69 5c 6b d8 5e f1 6c 28 6c be 55 33 00 00 00 00 ff ff ff ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -161,6 +167,7 @@ rule Ransom_Win32_LockScreen_X_2147640546_0
         $x_1_3 = {b9 af 00 00 00 ba 97 00 00 00 e8 ?? ?? ?? ?? 33 c9 ba b3 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -184,6 +191,7 @@ rule Ransom_Win32_LockScreen_AB_2147640848_0
         $x_1_4 = "edom SOD ni nur eb tonnac margorp sihT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -206,6 +214,7 @@ rule Ransom_Win32_LockScreen_AN_2147641902_0
         $x_1_3 = {74 00 61 00 73 00 6b 00 6b 00 69 00 6c 00 6c 00 20 00 2f 00 46 00 20 00 2f 00 49 00 4d 00 20 00 74 00 61 00 73 00 6b 00 6d 00 67 00 72 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -229,6 +238,7 @@ rule Ransom_Win32_LockScreen_AO_2147641906_0
         $x_1_4 = {d0 e5 e4 e0 ea f2 ee f0 20 f0 e5 e5 f1 f2 f0 e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -251,6 +261,7 @@ rule Ransom_Win32_LockScreen_AR_2147642422_0
         $x_3_3 = {42 00 48 00 18 04 4d 00 41 00 48 00 18 04 45 00 21 00 21 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -273,6 +284,7 @@ rule Ransom_Win32_LockScreen_B_2147643778_0
         $x_1_2 = {0f b7 4c 02 02 83 c0 02 66 89 08 66 3b cb 75 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -295,6 +307,7 @@ rule Ransom_Win32_LockScreen_BA_2147644815_0
         $x_1_3 = {c2 e2 e5 e4 e8 f2 e5 20 f1 fe e4 e0 20 ea ee e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -319,6 +332,7 @@ rule Ransom_Win32_LockScreen_BD_2147646068_0
         $x_1_5 = {74 61 73 6b 6d 67 72 2e 65 78 65 00 6f 70 65 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -341,6 +355,7 @@ rule Ransom_Win32_LockScreen_BN_2147651932_0
         $x_1_3 = {65 78 70 6c 6f 72 65 72 2e 65 78 65 00 00 00 00 6f 70 65 6e 00 00 00 00 65 78 70 6c 6f 72 65 72 00 00 00 00 ff ff ff ff 0c 00 00 00 cd e5 e2 e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -367,6 +382,7 @@ rule Ransom_Win32_LockScreen_BO_2147651992_0
         $x_1_7 = {2f 41 63 74 69 76 65 58 00 00 ff ff ff ff 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -391,6 +407,7 @@ rule Ransom_Win32_LockScreen_BR_2147653150_0
         $x_10_5 = "taskkill /F /IM taskmgr.exe" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -418,6 +435,7 @@ rule Ransom_Win32_LockScreen_BV_2147654587_0
         $x_1_5 = "Chili Chew" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -444,6 +462,7 @@ rule Ransom_Win32_LockScreen_BW_2147655591_0
         $x_1_7 = {6a 13 8b 43 4c 50 8b 43 48 50 8b 43 44 50 8b 43 40 50 6a ff 8b c3 e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 8b 07 8b 70 44 8b c6 8b 17 03 42 4c 83 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -470,6 +489,7 @@ rule Ransom_Win32_LockScreen_BX_2147656170_0
         $x_1_3 = {80 fa 37 75 ?? 80 3d ?? ?? ?? ?? 36 75 ?? 80 3d ?? ?? ?? ?? 33 75 ?? 38 15 ?? ?? ?? ?? 0f 84 ?? ?? ?? ?? 8b c6 8d 70 01 8a 08 40 3a cb 75 ?? 2b c6 83 f8 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -495,6 +515,7 @@ rule Ransom_Win32_LockScreen_CG_2147658661_0
         $x_4_6 = {0d 09 06 08 59 61 d2 13 04 09 1e 63 08 61 d2 13 05 07 08 11 05 1e 62 11 04 60 d1 9d 08 17 58 0c 08 07 8e 69}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -523,6 +544,7 @@ rule Ransom_Win32_LockScreen_CL_2147660468_0
         $x_1_2 = {8b 45 0c 8b 55 08 85 d2 75 23 3d 04 02 00 00 74 07 3d 05 02 00 00 75 15 3d 05 02 00 00 75 07 6a 01 e8 ?? ?? ?? ?? b8 02 00 00 00 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -544,6 +566,7 @@ rule Ransom_Win32_LockScreen_CO_2147661226_0
         $x_1_2 = {6a 02 ff 15 ?? ?? ?? ?? 33 f6 46 3b 35 ?? ?? ?? ?? (74 ??|0f 84 ?? ?? ?? ??) 3c b5 ?? ?? ?? ?? 81 3f 68 74 74 70 75 03 83 c7 07 6a 2f 57 ff 15 ?? ?? ?? ?? 0b c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -570,6 +593,7 @@ rule Ransom_Win32_LockScreen_CZ_2147674489_0
         $x_1_7 = {5c 43 6f 6e 74 72 6f 6c 5c 53 61 66 65 42 6f 6f 74 5c 4d 00 ?? ?? ?? ?? 31 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -598,6 +622,7 @@ rule Ransom_Win32_LockScreen_DC_2147678611_0
         $x_1_6 = {3a 2f 2f 6c 6f 63 61 6c 2f 31 32 33 2e 73 77 66 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -622,6 +647,7 @@ rule Ransom_Win32_LockScreen_DD_2147678928_0
         $x_1_5 = "After paying the fine your computer will be unlocked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -645,6 +671,7 @@ rule Ransom_Win32_LockScreen_DF_2147679330_0
         $x_1_4 = {6c 6f 63 6b 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -672,6 +699,7 @@ rule Ransom_Win32_LockScreen_DF_2147679330_1
         $x_1_8 = {5c 00 74 00 65 00 73 00 74 00 5c 00 37 00 2d 00 36 00 34 00 2e 00 64 00 6c 00 6c 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -693,6 +721,7 @@ rule Ransom_Win32_LockScreen_DM_2147696879_0
         $x_1_2 = "C:\\Windows\\combat.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -718,6 +747,7 @@ rule Ransom_Win32_LockScreen_DN_2147697333_0
         $x_1_6 = {77 00 69 00 6e 00 6c 00 6f 00 63 00 6b 00 66 00 69 00 6c 00 65 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -741,6 +771,7 @@ rule Ransom_Win32_LockScreen_DO_2147705698_0
         $x_1_4 = "WINLOCK555\\RUBIN" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -764,6 +795,7 @@ rule Ransom_Win32_LockScreen_SA_2147740837_0
         $x_1_4 = "Cryptographic Locker" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -791,6 +823,7 @@ rule Ransom_Win32_LockScreen_LK_2147755307_0
         $x_1_7 = ":8083/welcome.do" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

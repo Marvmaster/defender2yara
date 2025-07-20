@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Formon_A_2147597365_0
         $x_1_5 = {25 64 2e 65 78 65 00 00 6c 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

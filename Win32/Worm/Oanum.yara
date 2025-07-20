@@ -40,6 +40,7 @@ rule Worm_Win32_Oanum_A_2147575033_0
         $x_1_25 = "CreateRemoteThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((18 of ($x_1_*))) or
             ((1 of ($x_2_*) and 16 of ($x_1_*))) or

@@ -19,6 +19,7 @@ rule Trojan_Win32_Sevfouive_A_2147742303_0
         $x_1_5 = {66 3d 04 00 74 ?? 66 3d 0e 00 74 ?? 66 3d 18 00 75 ?? 6a 00 6a 00 68 ?? ?? ?? ?? 6a 00 ff d6 e8 c8 ?? ?? ?? 85 c0 74 ?? e8 9f ?? ?? ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

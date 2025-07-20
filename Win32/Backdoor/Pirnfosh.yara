@@ -16,6 +16,7 @@ rule Backdoor_Win32_Pirnfosh_A_2147619313_0
         $x_1_2 = {8b f8 c1 e7 0c e8 ?? ?? 00 00 33 f8 c1 e7 08 e8 ?? ?? 00 00 25 ff 00 00 00 6a 04 33 f8 8d 45 fc 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

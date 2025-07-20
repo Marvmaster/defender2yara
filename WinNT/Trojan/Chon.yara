@@ -18,6 +18,7 @@ rule Trojan_WinNT_Chon_A_2147614396_0
         $x_1_3 = {83 4d f4 ff 33 ?? c7 45 f0 00 1f 0a fa 33 [0-8] 75 12 8d 45 f0 50 ?? ?? ff 15 ?? ?? 01 00 ?? 83 ?? 1e 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

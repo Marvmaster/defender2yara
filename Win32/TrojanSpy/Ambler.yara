@@ -51,6 +51,7 @@ rule TrojanSpy_Win32_Ambler_C_2147598281_0
         $x_1_37 = "commandscript" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((16 of ($x_1_*))) or
             ((1 of ($x_2_*) and 14 of ($x_1_*))) or
@@ -83,6 +84,7 @@ rule TrojanSpy_Win32_Ambler_D_2147598323_0
         $x_1_4 = {6a 02 5f c6 06 4d 39 7d f8 c6 46 01 5a 76 25 89 5d fc 29 75 fc 8b c7 6a 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -105,6 +107,7 @@ rule TrojanSpy_Win32_Ambler_E_2147598324_0
         $x_2_3 = {ff 75 0c ff d7 59 85 c0 59 75 10 68 ?? ?? ?? ?? ff 75 08 ff d7 59 85 c0 59 74 08 6a 01 58 e9 ?? 01 00 00 8a 45 0b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -136,6 +139,7 @@ rule TrojanSpy_Win32_Ambler_F_2147605171_0
         $x_2_9 = {25 30 32 64 25 30 32 64 25 30 32 64 5f 25 30 34 64 00 00 00 25 30 32 64 25 30 32 64 25 64}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -166,6 +170,7 @@ rule TrojanSpy_Win32_Ambler_K_2147628021_0
         $x_1_6 = "<RUN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -193,6 +198,7 @@ rule TrojanSpy_Win32_Ambler_L_2147637714_0
         $x_1_3 = {8b 45 08 8b cf 2b c7 8b d6 8a 1c 08 80 f3 0e 88 19 41 4a 75 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +222,7 @@ rule TrojanSpy_Win32_Ambler_N_2147638903_0
         $x_1_4 = "Order_sel.php?Cookie=MAC|" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -243,6 +250,7 @@ rule TrojanSpy_Win32_Ambler_Q_2147650190_0
         $x_1_4 = {00 6e 6f 6c 6f 67 00 00 00 61 62 00 00 64 6d 2e 63 6f 6d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -270,6 +278,7 @@ rule TrojanSpy_Win32_Ambler_R_2147652573_0
         $x_1_5 = {00 6e 6f 6c 6f 67 00 00 00 61 62 00 00 64 6d 2e 63 6f 6d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -301,6 +310,7 @@ rule TrojanSpy_Win32_Ambler_S_2147652945_0
         $x_1_8 = "security.warn_submit_insecure\",false" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or

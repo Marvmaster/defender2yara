@@ -21,6 +21,7 @@ rule Trojan_Win32_Plugax_A_2147683197_0
         $x_1_7 = {43 72 65 61 74 65 50 6c 75 67 69 6e 4f 62 6a 00 25 00 25 00 54}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Trojan_Win32_Plugax_B_2147691712_0
         $x_1_4 = {83 e1 03 6a 00 f3 aa 8b ce 8b f3 8b c1 8b fa c1 e9 02 f3 a5 8b c8 6a 00 83 e1 03 52 6a 00 6a 00 f3 a4 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

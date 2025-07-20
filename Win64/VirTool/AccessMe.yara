@@ -18,6 +18,7 @@ rule VirTool_Win64_AccessMe_A_2147755439_0
         $x_2_3 = "C:\\WINDOWS\\WindowsUpdate.log" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

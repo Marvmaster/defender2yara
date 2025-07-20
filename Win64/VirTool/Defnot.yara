@@ -17,6 +17,7 @@ rule VirTool_Win64_Defnot_A_2147941249_0
         $x_1_3 = "defender-disabler-ipc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

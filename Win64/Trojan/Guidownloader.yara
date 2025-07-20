@@ -15,6 +15,7 @@ rule Trojan_Win64_Guidownloader_A_2147911694_0
         $x_1_1 = {44 88 44 24 18 88 54 24 10 48 89 4c 24 08 0f be 44 24 10 f7 d0 0f ?? 4c 24 18 23 c1 0f be 4c 24 10 0f be 54 24 18 f7 d2 23 ca 0b c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

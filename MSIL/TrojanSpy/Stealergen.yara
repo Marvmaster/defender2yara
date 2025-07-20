@@ -27,6 +27,7 @@ rule TrojanSpy_MSIL_Stealergen_MC_2147799594_0
         $x_1_12 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +60,7 @@ rule TrojanSpy_MSIL_Stealergen_MD_2147799597_0
         $x_1_12 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +91,7 @@ rule TrojanSpy_MSIL_Stealergen_MF_2147806288_0
         $x_1_10 = "get_Key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +126,7 @@ rule TrojanSpy_MSIL_Stealergen_MG_2147807602_0
         $x_1_14 = "MemoryStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +157,7 @@ rule TrojanSpy_MSIL_Stealergen_MA_2147808208_0
         $x_1_10 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -183,6 +188,7 @@ rule TrojanSpy_MSIL_Stealergen_MH_2147808209_0
         $x_1_10 = "Base64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +220,7 @@ rule TrojanSpy_MSIL_Stealergen_ME_2147808837_0
         $x_1_11 = "GetResponse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -244,6 +251,7 @@ rule TrojanSpy_MSIL_Stealergen_MJ_2147808843_0
         $x_1_10 = "Debugger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -279,6 +287,7 @@ rule TrojanSpy_MSIL_Stealergen_ML_2147808965_0
         $x_1_15 = "Invoke" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -309,6 +318,7 @@ rule TrojanSpy_MSIL_Stealergen_MM_2147808967_0
         $x_1_10 = "login_Load" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -343,6 +353,7 @@ rule TrojanSpy_MSIL_Stealergen_MO_2147808969_0
         $x_1_14 = "drivers/etc/hosts" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -375,6 +386,7 @@ rule TrojanSpy_MSIL_Stealergen_MQ_2147809051_0
         $x_1_12 = "UnhookWindowsHookEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -405,6 +417,7 @@ rule TrojanSpy_MSIL_Stealergen_MR_2147809313_0
         $x_1_10 = "VirtualMachineRemoteDebuggerAttach" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -434,6 +447,7 @@ rule TrojanSpy_MSIL_Stealergen_2147809798_0
         $x_1_8 = "radPayDebit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -462,6 +476,7 @@ rule TrojanSpy_MSIL_Stealergen_MS_2147810503_0
         $x_1_8 = "Skillbrains" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -491,6 +506,7 @@ rule TrojanSpy_MSIL_Stealergen_MU_2147810504_0
         $x_1_9 = "set_Key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

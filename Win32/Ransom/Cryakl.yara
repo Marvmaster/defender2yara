@@ -20,6 +20,7 @@ rule Ransom_Win32_Cryakl_A_2147726244_0
         $x_1_6 = "{ENCRYPTSTART}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule Ransom_Win32_Cryakl_G_2147759634_0
         $x_1_4 = "<title>CryLock</title>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Ransom_Win32_Cryakl_PAA_2147809535_0
         $x_1_4 = "software\\microsoft\\windows\\currentversion\\run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

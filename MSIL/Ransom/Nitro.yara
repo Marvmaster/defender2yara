@@ -21,6 +21,7 @@ rule Ransom_MSIL_Nitro_DA_2147780451_0
         $x_1_6 = "is tampered" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_MSIL_Nitro_PAA_2147794172_0
         $x_1_4 = "FormUrlEncodedContent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Ransom_MSIL_Nitro_MVT_2147900599_0
         $x_1_3 = "d5e87439-21e6-4567-a877-6ad9bee00dc9" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

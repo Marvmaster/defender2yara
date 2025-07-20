@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Lowdogat_A_2147610066_0
         $x_1_4 = {75 0b 5f 33 c0 5e 81 c4 08 01 00 00 c3 81 ff 88 13 00 00 76 0b 8d 4c 24 0c 51 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_MSIL_SatQueen_2147750147_0
         $x_1_5 = "c3RhcnQgY21kLmV4ZQ0KJHByb2NpZD1HZXQtUHJvY2VzcyAtTmFtZSBjbWQqICB8c2VsZWN0IC1leHBhbmQgaWQNCg0KJ" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

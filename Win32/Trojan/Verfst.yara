@@ -18,6 +18,7 @@ rule Trojan_Win32_Verfst_A_2147619281_0
         $x_1_4 = "Author:Yuh-Chen Chen" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Smasarch_A_2147680249_0
         $x_1_4 = "URL Parts Error" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Smasarch_C_2147681280_0
         $x_2_8 = "send a Premium <SMS> with keyword <{smsalias}>" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -75,6 +77,7 @@ rule Trojan_Win32_Smasarch_B_2147681281_0
         $x_1_5 = {43 68 61 71 75 65 20 53 4d 53 20 63 6f fb 74 65 20 31 2c 35 30 20 45 75 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_Win32_Smasarch_E_2147681282_0
         $x_1_5 = "pantallacodigo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule Trojan_Win32_Smasarch_F_2147681283_0
         $x_1_4 = "Platform Kind=sms" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule Trojan_Win32_Smasarch_D_2147681284_0
         $x_1_3 = "captura.bmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -167,6 +173,7 @@ rule Trojan_Win32_Smasarch_AO_2147720733_0
         $x_1_3 = "captura.bmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

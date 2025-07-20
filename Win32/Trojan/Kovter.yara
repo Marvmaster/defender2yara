@@ -31,6 +31,7 @@ rule Trojan_Win32_Kovter_A_2147679327_0
         $x_1_17 = "Hyte342FJrOd9!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -55,6 +56,7 @@ rule Trojan_Win32_Kovter_B_2147681945_0
         $x_10_5 = {26 4f 53 62 69 74 3d [0-16] 00 26 61 66 66 5f 69 64 3d 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_10_*))) or
             ((2 of ($x_100_*))) or
@@ -89,6 +91,7 @@ rule Trojan_Win32_Kovter_C_2147684944_0
         $x_1_11 = {6d 73 68 74 61 20 22 6a 61 76 61 73 63 72 69 70 74 3a [0-16] 3d 6e 65 77 20 41 63 74 69 76 65 58 4f 62 6a 65 63 74 28 22 57 53 63 72 69 70 74 2e 53 68 65 6c 6c 22 29 3b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -115,6 +118,7 @@ rule Trojan_Win32_Kovter_E_2147688122_0
         $x_1_4 = {3e 00 3e 00 70 00 61 00 74 00 68 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -236,6 +240,7 @@ rule Trojan_Win32_Kovter_H_2147707267_0
         $x_5_1 = {8b 45 fc 8a 44 18 ff 24 0f 8b 55 f8 8a 54 32 ff 80 e2 0f 32 c2 88 45 f3 8d 45 fc e8 ?? ?? ?? ?? 8b 55 fc 8a 54 1a ff 80 e2 f0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -287,6 +292,7 @@ rule Trojan_Win32_Kovter_I_2147707411_0
         $x_1_5 = "if exist \"%S\" goto :REDO" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -312,6 +318,7 @@ rule Trojan_Win32_Kovter_I_2147707411_1
         $x_1_6 = {5c 41 70 70 44 61 74 61 5c 52 6f 61 6d 69 6e 67 5c [0-32] 2e 68 74 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -335,6 +342,7 @@ rule Trojan_Win32_Kovter_K_2147711063_0
         $x_1_3 = {00 43 72 61 76 61 74 57 61 72 72 61 67 61 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -361,6 +369,7 @@ rule Trojan_Win32_Kovter_M_2147711157_0
         $x_1_7 = {2e 52 75 6e 28 22 [0-16] 69 65 78 20 24 65 6e 76 3a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -463,6 +472,7 @@ rule Trojan_Win32_Kovter_S_2147740502_0
         $x_1_7 = "shell<<::>>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -492,6 +502,7 @@ rule Trojan_Win32_Kovter_S_2147740503_0
         $x_1_9 = "0x81,0x38,0x50,0x72,0x6F,0x63,0x75" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -534,6 +545,7 @@ rule Trojan_Win32_Kovter_RPT_2147828346_0
         $x_1_1 = {c7 00 f8 66 4d 98 [0-21] c7 00 65 f2 0f fc [0-21] c7 00 e4 66 c9 66 [0-21] c7 00 66 0f e2 ed [0-21] c7 00 80 ef 5d 63 [0-21] c7 00 0b 13 a9 e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -556,6 +568,7 @@ rule Trojan_Win32_Kovter_LK_2147846770_0
         $x_1_2 = "222.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule Trojan_Win32_Popad_2147616265_0
         $x_1_10 = "LastADTC" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*) and 3 of ($x_2_*))) or

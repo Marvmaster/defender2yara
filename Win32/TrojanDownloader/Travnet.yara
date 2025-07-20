@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Travnet_B_2147723813_0
         $x_1_5 = "%sperf2012.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

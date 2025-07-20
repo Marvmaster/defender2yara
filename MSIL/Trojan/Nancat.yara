@@ -18,6 +18,7 @@ rule Trojan_MSIL_Nancat_MBFV_2147902909_0
         $x_1_3 = {11 01 11 09 11 0f 11 07 5d d2 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_Nancat_MBFV_2147902909_1
         $x_1_2 = "GdROWCvfPYl49jeJeH.HaCVjZ3hi7tI4uoy8N" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

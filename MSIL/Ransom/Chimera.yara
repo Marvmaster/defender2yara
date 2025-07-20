@@ -17,6 +17,7 @@ rule Ransom_MSIL_Chimera_AR_2147893305_0
         $x_1_2 = {02 17 9a 11 05 91 28 0f 00 00 06 61 09 02 18 9a 11 05 91 28 0f 00 00 06 61 11 04 02 19 9a 11 05 91 28 0f 00 00 06 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -27,6 +27,7 @@ rule PWS_MSIL_Phoenix_GG_2147798228_0
         $x_1_12 = "ftp.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 9 of ($x_1_*))) or
             (all of ($x*))

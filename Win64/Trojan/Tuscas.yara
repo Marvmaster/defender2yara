@@ -17,6 +17,7 @@ rule Trojan_Win64_Tuscas_D_2147794452_0
         $x_1_2 = {42 8d 04 12 0f b6 c8 41 8b 00 d3 c8 41 33 c3 2b c2 41 89 00 4d 8d 40 04 ff ca 75 e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule DoS_Win32_DragoWiper_C_2147944725_0
         $x_1_5 = {45 00 6e 00 63 00 72 00 79 00 70 00 74 00 65 00 64 00 20 00 66 00 69 00 6c 00 65 00 20 00 64 00 65 00 6c 00 65 00 74 00 65 00 64 00 3a 00 20 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule DoS_Win32_DragoWiper_D_2147944726_0
         $x_1_4 = "[-] Skipping unsupported file system:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -72,6 +74,7 @@ rule DoS_Win32_DragoWiper_A_2147944819_0
         $x_1_5 = {00 5b 49 4e 46 4f 5d 20 46 69 6c 65 20 64 61 74 61 20 65 6e 63 72 79 70 74 65 64 20 69 6e 20 6d 65 6d 6f 72 79 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule DoS_Win32_DragoWiper_B_2147944820_0
         $x_1_4 = "[-] Unable to open volume" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

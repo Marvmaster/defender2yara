@@ -20,6 +20,7 @@ rule Trojan_Win64_BumbleBeeLoader_AG_2147819249_0
         $x_1_5 = "CallNamedPipeA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win64_BumbleBeeLoader_AG_2147819249_1
         $x_1_7 = "CreateNamedPipeA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Trojan_Win64_BumbleBeeLoader_AG_2147819249_2
         $x_1_8 = "GetStartupInfoW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -106,6 +109,7 @@ rule Trojan_Win64_BumbleBeeLoader_AG_2147819249_3
         $x_1_7 = "GetCurrentDirectoryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +137,7 @@ rule Trojan_Win64_BumbleBeeLoader_AG_2147819249_4
         $x_1_7 = "GetStartupInfoW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +167,7 @@ rule Trojan_Win64_BumbleBeeLoader_AG_2147819249_5
         $x_1_9 = "GetStartupInfoW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -193,6 +199,7 @@ rule Trojan_Win64_BumbleBeeLoader_AG_2147819249_6
         $x_1_11 = "f21ba205858645ace1ac3dc8425bb0adee8dc7c8f7c410081c7aacf7ce363a75c37e352f4c0a83dd9dbca871c7dce" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +229,7 @@ rule Trojan_Win64_BumbleBeeLoader_AG_2147819249_7
         $x_1_9 = "fowls spiders rate frosty covering brutally numerals waving huge wedge broadcasting fill cow faithful intelligent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -249,6 +257,7 @@ rule Trojan_Win64_BumbleBeeLoader_AG_2147819249_8
         $x_2_7 = "dough shindy ralph brushed wolf behalf answered city reared recruit sufficiently constellation ski surplus rely foggy sparrow oyster pursuit interval Bible" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -287,6 +296,7 @@ rule Trojan_Win64_BumbleBeeLoader_AG_2147819249_9
         $x_1_18 = "CreateFileW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -309,6 +319,7 @@ rule Trojan_Win64_BumbleBeeLoader_SFDB_2147925458_0
         $x_1_2 = "enmy555xo79.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Gcleaner_AGL_2147927502_0
         $x_4_2 = "185.156.73.98" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Gcleaner_AGL_2147927502_1
         $x_1_2 = {80 35 30 0d 45 00 2e 80 35 31 0d 45 00 2e 80 35 32 0d 45 00 2e 80 35 33 0d 45 00 2e 80 35 34 0d 45 00 2e 80 35 35 0d 45 00 2e 80 35 36 0d 45 00 2e 80 35 37 0d 45 00 2e 80 35 38 0d 45 00 2e 34 2e a2 39 0d 45 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

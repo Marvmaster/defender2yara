@@ -16,6 +16,7 @@ rule Ransom_Linux_CerberRansom_A_2147895748_0
         $x_1_2 = "$Id: UPX 3.96 Copyright (C) 1996-2020 the UPX Team. All Rights Reserved. $" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

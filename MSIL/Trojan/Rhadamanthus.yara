@@ -17,6 +17,7 @@ rule Trojan_MSIL_Rhadamanthus_CAK_2147840408_0
         $x_2_2 = "cleaning.homesecuritypc.com/packages/Cmlvguceki.png" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_Rhadamanthus_ARD_2147846022_0
         $x_1_1 = {13 05 17 13 06 38 ?? ?? ?? 00 11 05 09 11 06 a3 07 00 00 01 6f ?? ?? ?? 0a 11 06 17 58 13 06 11 06 09 8e 69 32 e4 06 11 04 11 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_MSIL_Rhadamanthus_ABYX_2147848678_0
         $x_1_2 = "ReadAsByteArrayAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Trojan_MSIL_Rhadamanthus_AAUQ_2147894637_0
         $x_5_1 = {11 01 11 03 16 28 ?? 13 00 06 13 07 20 09 00 00 00 38 ?? ff ff ff 16 13 03 20 05 00 00 00 38 ?? ff ff ff 12 07 28 ?? 06 00 0a 13 05 20 02 00 00 00 38 ?? ff ff ff 73 ?? 05 00 0a 13 02 20 03 00 00 00 38 ?? ff ff ff 11 03 17 58 13 03 20 07 00 00 00 38 ?? ff ff ff 11 03 11 01 28 ?? 13 00 06 3f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +106,7 @@ rule Trojan_MSIL_Rhadamanthus_ABQD_2147896716_0
         $x_5_1 = {06 0b 07 6f ?? ?? ?? 0a 17 58 19 5b 0c 08 8d ?? ?? ?? 01 0d 16 13 05 2b 71 00 07 19 11 05 5a 6f ?? ?? ?? 0a 13 06 11 06 1f 39 fe 02 13 08 11 08 2c 0d 11 06 1f 41 59 1f 0a 58 d1 13 06 2b 08 11 06 1f 30 59 d1 13 06 07 19 11 05 5a 17 58 6f ?? ?? ?? 0a 13 07 11 07 1f 39 fe 02 13 09 11 09 2c 0d 11 07 1f 41 59 1f 0a 58 d1 13 07 2b 08 11 07 1f 30 59 d1 13 07}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

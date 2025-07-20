@@ -17,6 +17,7 @@ rule Trojan_MacOS_XCSSET_B_2147789300_0
         $x_1_3 = {48 b8 50 61 67 65 2e 67 65 74 48 89 ?? ?? 48 b8 43 6f 6f 6b 69 65 73 ef}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MacOS_XCSSET_J_2147794885_0
         $x_1_5 = "grep -q 'remote-debugging-port=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Linux_GTRevrs_A_2147810008_0
         $x_1_3 = {64 48 8b 0c 25 f8 ff ff ff 48 3b 61 10 0f 86 54 01 00 00 48 83 ec 60 48 89 6c 24 58 48 8d 6c 24 58 48 8b 4c 24 68 83 b9 40 01 00 00 ff 0f 85 fc 00 00 00 48 8b 54 24 78 48 89 d3 48 c1 e2 03 48 8d 42 05 48 89 44 24 48 48 ba ab aa aa aa aa aa aa aa 48 f7 ea 48 8d 54 da 05 48 8b 74 24 48 48 c1 fe 3f 48 c1 fa 02 48 29 f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule VirTool_Win64_FreizLoaz_A_2147835319_0
         $x_1_3 = {05 04 07 06 1b c3 0d 01 11 05 02 09 12 09 c2 0d 0f c7 0f 04 c8 0f 1a 02 05 e7 11 05 ea 11 10 e5 11 09 e6 11 10 d9 11 0f da 11 09 04 10 d9 0d 0c c8 0d 4a 00 02 0e 80 01 6f 7f 01 80 01 0e 7f 19 00 3c 29 37 14 38 05 37 04 38 38 37 0e 38 19 00 d6 12 18 02 11 fd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

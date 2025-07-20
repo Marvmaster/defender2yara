@@ -22,6 +22,7 @@ rule Backdoor_Win32_DarkView_A_2147599612_0
         $x_1_8 = {5c 53 68 65 6c 6c 5c 4f 70 65 6e 5c 43 6f 6d 6d 61 6e 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Backdoor_Win32_DarkView_B_2147642901_0
         $x_3_3 = "[Shell already closed]" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

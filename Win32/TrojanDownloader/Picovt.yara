@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Picovt_A_2147680156_0
         $x_1_2 = {ff d0 89 45 ?? c7 45 ?? 75 72 6c 6d c7 45 ?? 6f 6e 2e 64 66 c7 45 ?? 6c 6c c6 45 ?? 00 85 c0 74 ?? 8d 4d ?? 51 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

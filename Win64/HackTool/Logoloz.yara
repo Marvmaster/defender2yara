@@ -20,6 +20,7 @@ rule HackTool_Win64_Logoloz_DZ_2147926576_0
         $x_2_5 = "cQriyiUvjTwOHg8QZaPihLWeRAAVoCpE00IUPn0Bjt8" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

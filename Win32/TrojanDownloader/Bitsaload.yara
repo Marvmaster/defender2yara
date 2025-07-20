@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Bitsaload_MK_2147772085_0
         $x_10_3 = {68 74 74 70 73 3a 2f 2f 72 61 77 2e 67 69 74 68 75 62 75 73 65 72 63 6f 6e 74 65 6e 74 2e 63 6f 6d 2f [0-18] 2f 50 68 6f 65 6e 69 78 4d 69 6e 65 72 2e 65 78 65 20 2d 44 65 73 74 69 6e 61 74 69 6f 6e 20 [0-10] 2e 65 78 65 2c [0-10] 2e 65 78 65}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

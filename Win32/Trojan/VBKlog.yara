@@ -23,6 +23,7 @@ rule Trojan_Win32_VBKlog_EM_2147917923_0
         $x_1_8 = "proje cod injector_new method\\Extracter\\Standard.vbp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

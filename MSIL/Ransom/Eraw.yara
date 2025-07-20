@@ -20,6 +20,7 @@ rule Ransom_MSIL_Eraw_2147724454_0
         $x_25_6 = "C:\\SuccWare\\SuccWare\\obj\\Debug\\SuccWare.pdb" ascii //weight: 25
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*))) or
             ((1 of ($x_25_*))) or

@@ -21,6 +21,7 @@ rule Ransom_Win32_Haperlock_A_2147694619_0
         $x_1_7 = "processing %u subdirs..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win32_Haperlock_RT_2147810705_0
         $x_1_1 = {8b 9c 8d dc fb ff ff 89 9c 95 dc fb ff ff 89 b4 8d dc fb ff ff 01 f3 0f b6 db 8b 9c 9d dc fb ff ff 8b bd d0 fb ff ff 30 1c 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

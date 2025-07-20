@@ -20,6 +20,7 @@ rule Spammer_Win32_Spawl_A_2147621075_0
         $x_1_6 = {25 74 6f 5f 65 6d 61 69 6c 25 00 00 25 75 25 00 25 66 72 6f 6d 5f 6e 61 6d 65 25 00 25 73 75 62 6a 65 63 74 25 00 00 00 25 66 72 6f 6d 5f 65 6d 61 69 6c 25 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -57,6 +58,7 @@ rule Spammer_Win32_Spawl_B_2147621076_0
         $x_1_14 = "admin@smtp.yandex.ru" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_10_*))) or
             (all of ($x*))

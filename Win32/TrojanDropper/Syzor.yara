@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Syzor_A_2147621516_0
         $x_1_1 = {37 2c 6d 73 95 65 83 d4 1c 08 12 cb 40 16 5b c4 d9 07 61 00 a7 a3 36 13 c0 c7 32 a6 77 6a 00 3b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Worm_MSIL_Nyan_YA_2147741750_0
         $x_1_4 = "/C choice /C Y /N /D Y /T 1 & Del" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

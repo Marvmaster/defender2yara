@@ -17,6 +17,7 @@ rule Ransom_Win32_ChipRansom_YAA_2147853259_0
         $x_1_2 = {72 96 8b 15 ?? ?? ?? ?? 85 d2 75 ?? 8b 45 cc 8b 4d e0 3b c8 7e ?? 6b c9 45 03 4d e8 8b f0 0f af f0 03 ce 89 4d e8 8b 45 dc 40 3b 45 0c 89 45 dc 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

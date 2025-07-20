@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Anedl_A_2147651314_0
         $x_1_3 = {68 e8 03 00 00 e8 ?? ?? ?? ?? 6a 00 8d 45 ?? e8 ?? ?? ?? ?? ff 75 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

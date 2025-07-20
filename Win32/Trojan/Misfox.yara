@@ -18,6 +18,7 @@ rule Trojan_Win32_Misfox_A_2147707657_0
         $x_1_4 = "Global\\msiff0x1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

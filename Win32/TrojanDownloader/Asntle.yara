@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Asntle_A_2147720961_0
         $x_1_6 = "\\PH.vm -s -c -ctype process -cobject" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

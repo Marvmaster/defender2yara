@@ -16,6 +16,7 @@ rule Trojan_Win32_RustyStealer_ME_2147907648_0
         $x_1_1 = {c7 45 fc 19 00 00 00 8b c3 0f b6 0e f7 75 fc 41 0f af cb 8a 44 15 d8 30 81 77 af 00 10 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_RustyStealer_GKP_2147943659_0
         $x_10_1 = {ff d3 8b 37 68 ?? ?? ?? ?? 56 ff 15 ?? ?? ?? ?? 85 c0 0f 84 ?? ?? ?? ?? 89 c7 68 ?? ?? ?? ?? 56 ff d0 89 44 24 ?? 68 ?? ?? ?? ?? 56 ff d7 89 44 24 ?? 68 ?? ?? ?? ?? 56 ff d7 89 44 24 ?? 68 ?? ?? ?? ?? 89 74 24 ?? 56 89 7c 24 ?? ff d7}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

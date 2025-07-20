@@ -20,6 +20,7 @@ rule Ransom_Win32_Babuk_SG_2147773626_0
         $x_1_5 = "How To Restore Your Files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -55,6 +56,7 @@ rule Ransom_Win32_Babuk_SIB_2147779569_0
         $x_1_15 = "veeam" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 13 of ($x_1_*))) or
             ((1 of ($x_20_*) and 3 of ($x_1_*))) or
@@ -84,6 +86,7 @@ rule Ransom_Win32_Babuk_MK_2147784838_0
         $x_1_4 = "How To Restore Your Files.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +108,7 @@ rule Ransom_Win32_Babuk_ECCP_2147793189_0
         $x_1_1 = {81 7d b0 6e 67 20 64 0f 85 d5 04 00 00 81 7d b4 6f 6e 67 20 0f 85 c8 04 00 00 81 7d b8 6c 6f 6f 6b 0f 85 bb 04 00 00 81 7d bc 73 20 6c 69 0f 85 ae 04 00 00 81 7d c0 6b 65 20 68 0f 85 a1 04 00 00 81 7d c4 6f 74 20 64 0f 85 94 04 00 00 81 7d c8 6f 67 21 21 0f 85 87 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule Ransom_Win32_Babuk_RAN_2147904982_0
         $x_1_4 = "You will forever lose the reputation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +157,7 @@ rule Ransom_Win32_Babuk_ARA_2147912661_0
         $x_2_3 = ".txt can't be bigger than" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +182,7 @@ rule Ransom_Win32_Babuk_MKZ_2147942075_0
         $x_2_4 = "vssadmin.exe delete shadows /all /quiet" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +208,7 @@ rule Ransom_Win32_Babuk_KK_2147946089_0
         $x_2_5 = "How lame can u be ?" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_10_*))) or

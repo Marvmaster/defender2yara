@@ -16,6 +16,7 @@ rule Ransom_Win32_Dirthy_YAB_2147921112_0
         $x_1_1 = {8b 4d e4 89 4d d8 8b 55 d8 0f be 02 35 aa 00 00 00 8b 4d d8 88 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

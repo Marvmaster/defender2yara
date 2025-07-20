@@ -68,6 +68,7 @@ rule Trojan_MSIL_BMassKeyLogger_2147759964_0
         $x_1_53 = "SafeThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (40 of ($x*))
 }
 

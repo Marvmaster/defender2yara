@@ -18,6 +18,7 @@ rule Trojan_Win32_Rokratemb_A_2147730347_0
         $x_1_4 = "command =outFile &\" sysupdate\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

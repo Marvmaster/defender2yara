@@ -20,6 +20,7 @@ rule Trojan_MSIL_CrimsonRAT_A_2147750227_0
         $x_1_5 = "Debug\\verthirms.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_MSIL_CrimsonRAT_C_2147750564_0
         $x_1_4 = "Debug\\thnaviwa.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_MSIL_CrimsonRAT_PI_2147751807_0
         $x_1_4 = {5c 64 68 72 77 61 72 68 73 61 76 5c 64 68 72 77 61 72 68 73 61 76 5c 6f 62 6a 5c [0-16] 5c 64 68 72 77 61 72 68 73 61 76 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_MSIL_CrimsonRAT_B_2147760052_0
         $x_1_2 = "DESCryptoServiceProvider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_MSIL_CrimsonRAT_MBAT_2147838921_0
         $x_1_1 = {61 2b ca 11 06 11 05 08 6f ?? 00 00 0a 13 07 09 73 ?? 00 00 0a 13 08 11 08 11 07 16 73 ?? 00 00 0a 13 09 09 8e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

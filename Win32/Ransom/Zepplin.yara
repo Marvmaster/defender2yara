@@ -20,6 +20,7 @@ rule Ransom_Win32_Zepplin_A_2147754141_0
         $x_1_5 = "bcdedit /set {default} bootstatuspolicy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Ransom_Win32_Zepplin_B_2147754142_0
         $x_1_8 = ".txt;.doc;.docx;.intex;.pdf;.zip;.rar;.onetoc;" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

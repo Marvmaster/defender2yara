@@ -18,6 +18,7 @@ rule Backdoor_Win64_Escad_AA_2147707535_0
         $x_1_3 = {7a 61 77 71 2e 62 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Backdoor_Win64_Escad_F_2147707753_0
         $x_1_10 = {00 70 65 72 2d 75 73 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

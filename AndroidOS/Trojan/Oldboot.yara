@@ -18,6 +18,7 @@ rule Trojan_AndroidOS_Oldboot_A_2147685105_0
         $x_1_4 = {3a 38 30 39 30 2f 69 6e 73 74 61 6c 6c 61 70 70 2e 64 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

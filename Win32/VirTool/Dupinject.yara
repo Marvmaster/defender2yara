@@ -17,6 +17,7 @@ rule VirTool_Win32_Dupinject_A_2147633514_0
         $x_1_3 = {6a 00 6a 20 6a 01 6a 00 6a 03 68 00 00 00 c0 ff 35 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 85 c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

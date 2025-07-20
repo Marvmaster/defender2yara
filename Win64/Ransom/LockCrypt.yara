@@ -19,6 +19,7 @@ rule Ransom_Win64_LockCrypt_PB_2147793917_0
         $x_1_4 = "winsta0\\default" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win64_LockCrypt_PC_2147797015_0
         $x_1_3 = "/Bnyar8RsK04ug" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Ransom_Win64_LockCrypt_PA_2147946499_0
         $x_2_3 = "YOUR FILES HAVE BEEN ENCRYPTED!" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

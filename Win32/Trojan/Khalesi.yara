@@ -17,6 +17,7 @@ rule Trojan_Win32_Khalesi_RL_2147773162_0
         $x_1_2 = {83 c4 04 8b 4d ?? 83 e1 01 8b 15 ?? ?? ?? ?? 0f af 8a ?? ?? ?? ?? 33 c1 89 45 ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Khalesi_RW_2147798401_0
         $x_1_1 = {b8 04 00 00 00 c1 e0 00 8b 4d ?? 8b 14 01 89 55 ?? c7 45 ?? b9 79 37 9e 8b 45 ?? c1 e0 05 89 45 ?? c7 45 ?? 00 00 00 00 eb ?? 8b 4d ?? 83 c1 01 89 4d ?? 83 7d ?? 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_Khalesi_RM_2147799400_0
         $x_1_1 = {99 83 e2 03 03 c2 c1 f8 02 89 45 ?? 8b 4d ?? 81 c1 c6 04 00 00 89 4d ?? 8b 55 ?? 81 3a 72 f3 01 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win32_Khalesi_CA_2147813501_0
         $x_2_1 = {89 d9 31 3e 01 db 21 cb 81 c6 01 00 00 00 39 c6 75 e3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +106,7 @@ rule Trojan_Win32_Khalesi_CB_2147816559_0
         $x_2_2 = {31 07 41 01 c9 81 c7 01 00 00 00 39 f7 75 e7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -129,6 +134,7 @@ rule Trojan_Win32_Khalesi_RDA_2147836066_0
         $x_1_7 = "open %s type cdaudio alias cd wait shareable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +157,7 @@ rule Trojan_Win32_Khalesi_MA_2147836280_0
         $x_1_2 = {02 f8 69 1e ?? ?? ?? ?? 48 0f 00 ff cc 31 [0-12] 9b 96 f1 ba ?? ?? ?? ?? 81 ff ?? ?? ?? ?? f0 47 9f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +182,7 @@ rule Trojan_Win32_Khalesi_MA_2147836280_1
         $x_1_4 = "PostMessage" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +219,7 @@ rule Trojan_Win32_Khalesi_ARA_2147837756_0
         $x_2_16 = "discord.gg/d6RGMKCrj6" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +242,7 @@ rule Trojan_Win32_Khalesi_AP_2147839635_0
         $x_1_2 = {0e 48 0b 76 af 8a 32 c9 21 fa 47 30 9c f1 3c 72 c2 2f e7 d3 96 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -254,6 +264,7 @@ rule Trojan_Win32_Khalesi_GHA_2147843670_0
         $x_10_1 = {31 17 89 c3 81 c7 ?? ?? ?? ?? 48 39 f7 75 ec 81 e8 ?? ?? ?? ?? 21 c9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -278,6 +289,7 @@ rule Trojan_Win32_Khalesi_DAL_2147851322_0
         $x_1_4 = {4c 2b 86 79 94 d4 da 31 6a 91 02 02 02 02 02 53 53 92 c2 52 85 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +311,7 @@ rule Trojan_Win32_Khalesi_CCDW_2147896340_0
         $x_1_1 = {31 17 29 ce 81 c7 ?? ?? ?? ?? 39 c7 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -320,6 +333,7 @@ rule Trojan_Win32_Khalesi_RPX_2147898668_0
         $x_1_1 = {59 31 32 42 89 cf 01 cf 39 c2 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -341,6 +355,7 @@ rule Trojan_Win32_Khalesi_GAN_2147899902_0
         $x_10_1 = {01 d3 31 39 89 d2 21 d3 81 c1 01 00 00 00 39 f1}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +378,7 @@ rule Trojan_Win32_Khalesi_GMA_2147900266_0
         $x_10_2 = {31 16 81 c6 04 00 00 00 4b 57 59 39 c6}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -384,6 +400,7 @@ rule Trojan_Win32_Khalesi_GZZ_2147901847_0
         $x_10_1 = {31 c0 c7 04 24 02 00 00 00 c7 44 24 ?? 2c 02 00 00 e8 ?? ?? ?? ?? 51 89 c3 51 8d 74 24 ?? 89 04 24 89 74 24 ?? e8 ?? ?? ?? ?? 52 52 85 c0 75 ?? 31 c0 eb ?? 89 74 24 ?? 89 1c 24 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -405,6 +422,7 @@ rule Trojan_Win32_Khalesi_EC_2147903131_0
         $x_5_1 = {df 42 ea 31 38 81 c0 04 00 00 00 39 d0 75 ef 41 01 de c3}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -427,6 +445,7 @@ rule Trojan_Win32_Khalesi_HNS_2147905839_0
         $x_1_2 = {0f b6 44 7e ?? c1 e3 ?? 89 04 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -449,6 +468,7 @@ rule Trojan_Win32_Khalesi_HNA_2147908322_0
         $x_1_2 = {8b 0c 24 83 c4 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -471,6 +491,7 @@ rule Trojan_Win32_Khalesi_PGK_2147946038_0
         $x_5_2 = {2e 74 65 78 74 00 00 00 00 20 00 00 00 90 0a 00 00 14 00 00 00 30 04 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 42}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Backdoor_Win32_Beastdoor_DQ_2147595290_0
         $x_5_8 = "Shut Down:[" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Backdoor_Win32_Beastdoor_DS_2147596029_0
         $x_1_5 = "Toolhelp32ReadProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Backdoor_Win32_Beastdoor_DT_2147596030_0
         $x_1_7 = "plain; charset=\"iso-8859" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -100,6 +103,7 @@ rule Backdoor_Win32_Beastdoor_O_2147603606_0
         $x_10_6 = {53 56 57 55 83 c4 f8 ?? ?? ?? ?? 89 04 24 ?? ?? 8b 14 24 e8 ?? ?? ?? ?? ?? ?? 8b 45 00 e8 ?? ?? ?? ?? 66 85 c0 76 44 66 89 44 24 04 66 bb 01 00 ?? ?? e8 ?? ?? ?? ?? 0f b7 fb 8b 55 00 8a 54 3a ff 0f b7 ce c1 e9 08 32 d1 88 54 38 ff 8b 04 24 0f b6 44 38 ff 66 03 f0 66 69 c6 f1 aa 66 05 bd 54 ?? ?? 43 66 ff 4c 24 04 75 c5 59 5a 5d 5f 5e 5b c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -130,6 +134,7 @@ rule Backdoor_Win32_Beastdoor_DU_2147606713_0
         $x_1_8 = "*pass*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -160,6 +165,7 @@ rule Backdoor_Win32_Beastdoor_S_2147626481_0
         $x_1_6 = {42 45 47 49 4e 20 43 4c 49 50 42 4f 41 52 44 [0-10] 45 4e 44 20 43 4c 49 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -183,6 +189,7 @@ rule Backdoor_Win32_Beastdoor_P_2147627917_0
         $x_1_4 = {3a 32 30 38 32 0d 0a 3a 32 30 38 33 0d 0a 3a 32 30 38 36 0d 0a 3a 32 30 38 37}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

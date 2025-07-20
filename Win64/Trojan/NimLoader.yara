@@ -17,6 +17,7 @@ rule Trojan_Win64_NimLoader_RCB_2147909043_0
         $x_5_2 = {48 8b 54 24 48 48 89 83 68 20 00 00 48 81 83 70 20 00 00 00 10 00 00 48 89 70 10 48 c7 00 e8 0f 00 00 48 c7 40 08 18 00 00 00 48 8b 8b 68 20 00 00 4c 8b 41 08 48 29 11 4e 8d 0c 01 49 01 d0 4c 89 41 08 4c 89 c9}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_NimLoader_A_2147913505_0
         $x_2_1 = {48 8b 44 24 ?? 49 8b 0c f7 4c 89 f2 48 d3 fa 30 54 18 ?? 48 83 fe}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

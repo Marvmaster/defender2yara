@@ -21,6 +21,7 @@ rule Trojan_MSIL_RedlineStealer_GR_2147815756_0
         $x_1_6 = "Ebuzczkipwbedwf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_RedlineStealer_RPJ_2147819207_0
         $x_1_1 = {28 2d 00 00 0a 0a 12 00 23 00 00 00 00 00 00 24 40 28 2e 00 00 0a 0b 2b 23 08 2d 20 20 00 00 00 00 7e 41 00 00 04 7b 2c 00 00 04 2d 2f 45 02 00 00 00 23 00 00 00 df ff ff ff 2b 21 07 28 2d 00 00 0a 28 2f 00 00 0a 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +82,7 @@ rule Trojan_MSIL_RedlineStealer_RPJ_2147819207_1
         $x_1_18 = "MemoryStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule Trojan_MSIL_RedlineStealer_MBAL_2147840181_0
         $x_1_3 = "IMvxProducer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +128,7 @@ rule Trojan_MSIL_RedlineStealer_PSJB_2147844778_0
         $x_2_1 = {28 22 26 00 06 0b 07 1f 20 8d 25 00 00 01 25 d0 36 14 00 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 07 1f 10 8d 25 00 00 01 25 d0 37 14 00 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 06 07 6f ?? ?? ?? 0a 17 73 ?? ?? ?? 0a 0c 08 02 16 02 8e 69 6f ce 00 00 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule Trojan_MSIL_RedlineStealer_PSAO_2147899286_0
         $x_1_7 = "System.Security.Cryptography.HMACMD5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -180,6 +186,7 @@ rule Trojan_MSIL_RedlineStealer_PSBI_2147899324_0
         $x_1_9 = "DarkYellowToByteArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -206,6 +213,7 @@ rule Trojan_MSIL_RedlineStealer_RPY_2147900595_0
         $x_1_1 = {71 1f 00 00 01 20 9a 00 00 00 61 d2 81 1f 00 00 01 02 50 06 8f 1f 00 00 01 25 71 1f 00 00 01 1f 40 58 d2 81 1f 00 00 01 02 50 06 8f 1f 00 00 01 25 71 1f 00 00 01 1f 43 59 d2 81 1f 00 00 01 02 50 06 8f 1f 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -237,6 +245,7 @@ rule Trojan_MSIL_RedlineStealer_RPY_2147900595_1
         $x_1_11 = "QueryAV" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -258,6 +267,7 @@ rule Trojan_MSIL_RedlineStealer_RPZ_2147900596_0
         $x_1_1 = {81 1d 00 00 01 02 50 06 8f 1d 00 00 01 25 71 1d 00 00 01 20 af 00 00 00 59 d2 81 1d 00 00 01 02 50 06 8f 1d 00 00 01 25 71 1d 00 00 01 20 e8 00 00 00 58 d2 81 1d 00 00 01 02 50 06 8f 1d 00 00 01 25 71 1d 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -279,6 +289,7 @@ rule Trojan_MSIL_RedlineStealer_RPX_2147902014_0
         $x_1_1 = {00 08 17 58 20 00 01 00 00 5d 0c 09 06 08 91 58 20 00 01 00 00 5d 0d 06 08 91 13 07 06 08 06 09 91 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -300,6 +311,7 @@ rule Trojan_MSIL_RedlineStealer_RPX_2147902014_1
         $x_1_1 = {26 20 06 00 00 00 38 f2 fb ff ff 16 13 04 20 05 00 00 00 fe 0e 03 00 38 dd fb ff ff 1f 0a 13 00 20 06 00 00 00 38 d3 fb ff ff 11 00 11 0a 3e 56 ff ff ff 20 0a 00 00 00 38 c0 fb ff ff 11 04 17 58 13 04 20 1e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +333,7 @@ rule Trojan_MSIL_RedlineStealer_NA_2147904133_0
         $x_5_1 = {02 08 91 0d 08 1f 09 5d ?? ?? 03 11 04 9a 13 05 02 08 11 05 09}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -342,6 +355,7 @@ rule Trojan_MSIL_RedlineStealer_NB_2147904513_0
         $x_5_1 = {11 04 07 17 ?? ?? 00 00 0a 11 06 91 1b 61 b4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +377,7 @@ rule Trojan_MSIL_RedlineStealer_NC_2147905365_0
         $x_5_1 = {38 15 00 00 00 00 02 06 8f ?? 00 00 01 25 47 03 06 91 61 d2 52 00 06 17 59 0a 06 16 fe 04 16 fe 01 0b 07 3a dd ff ff ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -384,6 +399,7 @@ rule Trojan_MSIL_RedlineStealer_AMAA_2147909780_0
         $x_1_1 = {0a 09 08 91 09 07 91 58 20 00 01 00 00 5d 13 ?? 03 11 ?? 8f ?? 00 00 01 25 71 ?? 00 00 01 09 11 ?? 91 61 d2 81 ?? 00 00 01 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -407,6 +423,7 @@ rule Trojan_MSIL_RedlineStealer_NE_2147916587_0
         $x_4_3 = "9A0668AA-2E7F-4FFD-A690-21D53CF99999" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -428,6 +445,7 @@ rule Trojan_MSIL_RedlineStealer_KAM_2147919567_0
         $x_1_1 = {03 08 02 04 08 1e 5d 9a 28 ?? 00 00 0a 03 08 91 28 ?? 00 00 06 28 ?? 00 00 0a 9c 08 17 d6 0c 08 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -450,6 +468,7 @@ rule Trojan_MSIL_RedlineStealer_AMAI_2147920021_0
         $x_2_2 = {6e 5b 26 02 11 ?? 8f ?? 00 00 01 25 71 ?? 00 00 01 06 11 ?? 91 61 d2 81 ?? 00 00 01 11 ?? 17 58 13 ?? 11 ?? 02 8e 69 3f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -472,6 +491,7 @@ rule Trojan_MSIL_RedlineStealer_AMH_2147922555_0
         $x_4_2 = {0a 26 16 13 ?? 12 ?? 28 ?? 00 00 0a 28 ?? 00 00 0a 13 ?? 03 11 ?? 91 13 ?? 06 11 ?? 91 13 ?? 11 ?? 11 ?? 61 d2 13}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -495,6 +515,7 @@ rule Trojan_MSIL_RedlineStealer_SZA_2147929054_0
         $x_1_3 = "$3eb20253-9dc7-4119-9a16-5cb763e8e3e8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -518,6 +539,7 @@ rule Trojan_MSIL_RedlineStealer_SZA_2147929054_1
         $x_1_3 = {00 11 04 11 14 8f 60 00 00 01 25 47 11 0e 11 14 1e 5a 1f 1f 5f 63 d2 61 d2 52 00 11 14 17 58 13 14 11 14 1a fe 04 13 15 11 15 2d d4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -539,6 +561,7 @@ rule Trojan_MSIL_RedlineStealer_EHIZ_2147945213_0
         $x_2_1 = {06 07 20 d2 04 00 00 5a 61 0a 06 07 ?? ?? ?? ?? ?? 5a ?? ?? ?? ?? ?? 5d 58 0a 06 17 62 06 1f 1f 63 60 0a 07 17 58 0b 07 1f 0a 32 d4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -560,6 +583,7 @@ rule Trojan_MSIL_RedlineStealer_ENWL_2147945217_0
         $x_2_1 = {6c 5b 13 22 1f 50 13 53 ?? ?? ?? ?? ?? ?? ?? ?? 00 00 11 21 1f 64 5d 58 13 23 22 a0 1a cf 3f 11 21 6b 5a 13 24 11 55 1f 72 91 1f 56 58 13 53}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

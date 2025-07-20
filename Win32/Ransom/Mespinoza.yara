@@ -24,6 +24,7 @@ rule Ransom_Win32_Mespinoza_SA_2147913041_0
         $x_1_10 = {8b c3 2b c2 89 47 14 8b 75 08 8b ce e8 ?? ?? ?? ?? 84 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Ransom_Win32_Mespinoza_SB_2147913042_0
         $x_1_4 = "Every byte on any types of your devices was encrypted." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             (all of ($x*))

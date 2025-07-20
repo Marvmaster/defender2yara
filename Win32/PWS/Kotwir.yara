@@ -19,6 +19,7 @@ rule PWS_Win32_Kotwir_A_2147598352_0
         $x_5_5 = "&strPassword=" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

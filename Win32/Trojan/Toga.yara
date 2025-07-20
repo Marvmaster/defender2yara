@@ -18,6 +18,7 @@ rule Trojan_Win32_Toga_2147696168_0
         $x_1_3 = {6a 00 6a 01 8b 45 f4 50 8b 45 f0 ff 50 04 85 c0 75 0a 8b 45 f0 33 d2 89 50 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Toga_2147696168_1
         $x_1_3 = {8b 55 e0 89 45 bc 52 c7 45 b4 03 00 00 00 ff d7 8b c8 8b c6 99 f7 f9 c7 45 c4 03 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Loah_2147593813_0
         $x_1_9 = {bf 01 00 00 80 57 ff d6 6a 04 8d 45 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

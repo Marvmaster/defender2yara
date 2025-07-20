@@ -17,6 +17,7 @@ rule Backdoor_Win32_Mecklow_A_2147641447_0
         $x_1_3 = {ff ff 2a c6 85 ?? ?? ff ff 2a c6 85 ?? ?? ff ff 5b c6 85 ?? ?? ff ff 53 c6 85 ?? ?? ff ff 54}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

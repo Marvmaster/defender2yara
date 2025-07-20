@@ -16,6 +16,7 @@ rule Ransom_Win64_DireWolf_A_2147942757_0
         $x_1_2 = {6d 61 69 6e 2e 65 6e 63 72 79 70 74 46 69 6c 65 2e 66 75 6e 63 32 00 6d 61 69 6e 2e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

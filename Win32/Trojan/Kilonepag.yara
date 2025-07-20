@@ -19,6 +19,7 @@ rule Trojan_Win32_Kilonepag_A_2147634535_0
         $x_1_5 = {25 37 36 25 32 45 25 37 39 25 36 31 25 36 46 25 33 36 25 33 33 25 32 45 25 36 33 25 36 46 25 36 44 2f 63 6f 6e 66 69 67 2e 61 73 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_Win64_AnonCrypt_PA_2147943877_0
         $x_1_4 = "This program can only run in Israel.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

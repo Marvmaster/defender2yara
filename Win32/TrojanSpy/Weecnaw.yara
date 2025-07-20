@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Weecnaw_D_2147734557_0
         $x_1_4 = "%TEMP%\\loopc.cmd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanSpy_Win32_Weecnaw_G_2147742534_0
         $x_1_2 = {3a 29 55 51 00 ae 11 1f 22 ad 78 0e 97 e3 f5 80 e0 58 88 5a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanSpy_Win32_Weecnaw_GC_2147760763_0
         $x_1_2 = {80 34 01 70 [0-16] 41 89 d3 [0-32] 39 d9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule TrojanSpy_Win32_Weecnaw_GN_2147760764_0
         $x_1_2 = {04 1f 1d 7e ?? ?? ?? 04 6f ?? ?? ?? 0a 0a 02 4a 06 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

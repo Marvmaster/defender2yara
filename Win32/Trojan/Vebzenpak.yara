@@ -16,6 +16,7 @@ rule Trojan_Win32_Vebzenpak_AE_2147752228_0
         $x_1_1 = {0f 7e d2 81 [0-37] [0-21] 46 [0-21] 8b 17 [0-21] 0f 6e fe [0-21] 0f 6e d2 [0-21] 0f ef d7 [0-21] c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Vebzenpak_GM_2147754835_0
         $x_1_7 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_Win32_Vebzenpak_B_2147755563_0
         $x_1_11 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Trojan_Win32_Vebzenpak_GG_2147756751_0
         $x_1_1 = {8b 0f 0f ee ca [0-48] 89 0c 24 [0-48] 02 ca 31 34 24 [0-32] 02 ca [0-64] 89 0c 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_Win32_Vebzenpak_F_2147759960_0
         $x_1_4 = "HUcPTuhgJIx1fauvVTilNmTRHEjVKWo6a8GSfU176" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -140,6 +145,7 @@ rule Trojan_Win32_Vebzenpak_GV_2147760992_0
         $x_1_1 = {8b 1c 0a 50 [0-32] 81 f3 [0-48] f7 d7 [0-32] 89 1c 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +171,7 @@ rule Trojan_Win32_Vebzenpak_C_2147762081_0
         $x_1_5 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -186,6 +193,7 @@ rule Trojan_Win32_Vebzenpak_KA_2147763501_0
         $x_10_1 = {8b 1c 17 81 fb ?? ?? ?? ?? 81 fb ?? ?? ?? ?? 31 f3 81 ff ?? ?? ?? ?? 81 fb ?? ?? ?? ?? 01 1c 10 81 fa ?? ?? ?? ?? 81 fb ?? ?? ?? ?? 83 c2 04}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +220,7 @@ rule Trojan_Win32_Vebzenpak_RT_2147782451_0
         $x_1_6 = "IsSystemResumeAutomatic" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -235,6 +244,7 @@ rule Trojan_Win32_Vebzenpak_RF_2147786467_0
         $x_1_3 = "definitionsjongleri" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -261,6 +271,7 @@ rule Trojan_Win32_Vebzenpak_AF_2147787516_0
         $x_3_6 = "gethostbyname" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +297,7 @@ rule Trojan_Win32_Vebzenpak_ADF_2147896066_0
         $x_4_5 = "TALKWORTHY" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*))) or
             ((1 of ($x_5_*) and 2 of ($x_4_*))) or

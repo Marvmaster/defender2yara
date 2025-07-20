@@ -16,6 +16,7 @@ rule Trojan_Linux_Meterpreter_B_2147844883_0
         $x_1_1 = {eb 0c 5e 56 31 1e ad 01 c3 85 c0 75 f7 c3 e8 ef ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Linux_Meterpreter_C_2147890020_0
         $x_1_1 = {48 31 c9 48 81 e9 ef ff ff ff 48 8d 05 ef ff ff ff 48 bb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

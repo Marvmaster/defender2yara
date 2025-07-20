@@ -26,6 +26,7 @@ rule TrojanDownloader_Win32_Baser_A_2147596939_0
         $x_5_12 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

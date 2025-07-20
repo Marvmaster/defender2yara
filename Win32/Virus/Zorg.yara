@@ -18,6 +18,7 @@ rule Virus_Win32_Zorg_B_2147710508_0
         $x_1_3 = {7c 1f bf 04 00 00 00 41 2d 00 00 64 a7 81 da b3 b6 e0 0d 73 f2 49 05 00 00 64 a7 81 d2 b3 b6 e0 0d 89 45 e0 89 55 e4 df 6d e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

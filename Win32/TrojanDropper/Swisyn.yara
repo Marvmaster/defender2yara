@@ -42,6 +42,7 @@ rule TrojanDropper_Win32_Swisyn_A_2147629833_0
         $x_1_28 = "@gs`OqdcknEk`hbdoRsdFGR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (25 of ($x*))
 }
 
@@ -65,6 +66,7 @@ rule TrojanDropper_Win32_Swisyn_C_2147631913_0
         $x_1_4 = "fspDthojsuTfdsvptfSeJc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -88,6 +90,7 @@ rule TrojanDropper_Win32_Swisyn_D_2147643155_0
         $x_4_4 = "@rrdbnqOds`dqB" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +115,7 @@ rule TrojanDropper_Win32_Swisyn_F_2147657464_0
         $x_1_5 = "Pin this program to taskbar" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +142,7 @@ rule TrojanDropper_Win32_Swisyn_G_2147670890_0
         $x_1_7 = {00 63 73 62 6f 79 62 69 6e 64 2e 61 75 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

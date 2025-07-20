@@ -21,6 +21,7 @@ rule TrojanClicker_Win32_Lnkwinkap_A_2147638679_0
         $x_2_7 = {43 3a 5c 50 72 6f 67 72 61 6d 20 46 69 6c 65 73 5c 57 69 6e 50 63 61 70 [0-16] 2e 65 78 65 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

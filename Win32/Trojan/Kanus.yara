@@ -18,6 +18,7 @@ rule Trojan_Win32_Kanus_A_2147655032_0
         $x_1_4 = {33 4d 00 33 c0 8a c1 89 4c 24 10 33 db 83 ed 04 25 ff 00 00 00 8b d0 8b c1 c1 e8 08 8a d8 c1 e8 08 8b c8 c1 e9 08 81 e1 ff 00 00 00 8b 4c 8e 48 25 ff 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

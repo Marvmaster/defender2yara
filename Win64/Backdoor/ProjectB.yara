@@ -15,6 +15,7 @@ rule Backdoor_Win64_ProjectB_A_2147850586_0
         $x_1_1 = {42 6f 74 4e 65 74 2e 64 6c 6c 00 44 65 66 61 75 6c 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

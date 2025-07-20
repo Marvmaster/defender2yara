@@ -16,6 +16,7 @@ rule Trojan_MSIL_Nekark_MBDA_2147844514_0
         $x_1_1 = {72 cf 17 00 70 6f ?? 00 00 0a 74 ?? 00 00 01 72 db 17 00 70 72 df 17 00 70 6f ?? 00 00 0a 72 e5 17 00 70 72 e9 17 00 70 6f ?? 00 00 0a 17 8d ?? 00 00 01 25 16 1f 24 9d 6f ce 00 00 0a 0b 07 8e 69 8d ?? 00 00 01 0c 16 13 04 2b 17}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_Nekark_2147847152_0
         $x_1_4 = "TWljcm9zb2Z0Kg==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -66,6 +68,7 @@ rule Trojan_MSIL_Nekark_MBFQ_2147899006_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_MSIL_Nekark_KAA_2147900307_0
         $x_5_1 = {07 08 07 8e 69 5d 1f 09 58 1f 0c 58 1f 15 59 91 61 28 ?? 00 00 0a 03 08 20 ?? ?? 00 00 58 20 ?? ?? 00 00 59 03 8e 69 5d 91 59 20 ?? 00 00 00 58 17 58 20 00 ?? 00 00 5d d2 9c 08 17 58 0c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_MSIL_Nekark_HDAA_2147904771_0
         $x_5_1 = {59 91 61 02 08 20 ?? ?? 00 00 58 20 ?? ?? 00 00 59 02 8e 69 5d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +134,7 @@ rule Trojan_MSIL_Nekark_IIAA_2147905610_0
         $x_5_1 = {8e 69 5d 1f 09 58 1f 0c 58 1f 15 59 91 61 04 08 20 ?? 02 00 00 58 20 ?? 02 00 00 59 1b 59 1b 58 04 8e 69 5d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +157,7 @@ rule Trojan_MSIL_Nekark_NK_2147911680_0
         $x_1_2 = "ExclusionPath.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +181,7 @@ rule Trojan_MSIL_Nekark_ZKAA_2147923420_0
         $x_2_3 = {03 11 06 75 03 00 00 1b 11 07 74 04 00 00 1b 11 08 94 91 6f ?? 00 00 0a 1e 13 0e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -200,6 +208,7 @@ rule Trojan_MSIL_Nekark_NM_2147927269_0
         $x_1_6 = "black solution solve" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +236,7 @@ rule Trojan_MSIL_Nekark_AYA_2147929764_0
         $x_1_7 = "if you break at least one rule, you computer death" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -250,6 +260,7 @@ rule Trojan_MSIL_Nekark_PKM_2147936652_0
         $x_2_3 = "browser|opera|msedge|chrome|firefox|brave|vivaldi" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -275,6 +286,7 @@ rule Trojan_MSIL_Nekark_AYB_2147942954_0
         $x_1_5 = "MoveAndHideFiles" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

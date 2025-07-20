@@ -23,6 +23,7 @@ rule PWS_Win32_Sifre_A_2147688933_0
         $x_3_9 = "\\Sifreler.txt" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 1 of ($x_5_*) and 1 of ($x_3_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_15_*) and 2 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or

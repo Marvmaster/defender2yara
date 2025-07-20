@@ -17,6 +17,7 @@ rule Trojan_Win64_Bazarldr_ZZ_2147767144_0
         $x_1_3 = {48 89 44 24 30 e8 6c 04 00 00 b9 33 00 9e 95 48 89 44 24 28 4c 8b e0 e8 5a 04 00 00 48 63 7d 3c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_Bazarldr_ZZ_2147772812_0
         $x_1_4 = {4c 8b c7 48 8b d8 33 c0 48 85 db 48 8b cb 0f 45 d0 89 15 [0-4] 48 8b d6 e8 [0-4] 48 8b 74 24 38 48 8b c3 48 8b 5c 24 30 48 83 c4 ?? 5f c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win64_Bazarldr_ZY_2147773506_0
         $x_1_4 = {81 e1 2c 61 0e ee 33 c1 41 0f b6 08 85 c9 0f 85 67 ff ff ff f7 d0 3b c7 74 27 41 ff c2 49 83 c1 04 44 3b d3 0f 82 31 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win64_Bazarldr_MR_2147777415_0
         $x_1_8 = {48 0f b7 02 8b 4a 02 48 8b 52 06 66 41 89 02 41 89 4a 02 49 89 52 06 49 8b c3 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 6 of ($x_1_*))) or
             ((1 of ($x_6_*) and 1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -121,6 +125,7 @@ rule Trojan_Win64_Bazarldr_ZV_2147787740_0
         $x_10_6 = {00 00 00 00 01 00 00 80 00 00 00 80 00 00 00 01 00 01}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_StrelaStealer_PQA_2147850678_0
         $x_1_2 = {45 31 d4 41 09 f0 41 83 f0 ?? 81 cb ?? ?? ?? ?? 41 21 d8 45 09 c4 45 89 e8 41 83 f0 ?? 41 81 e0 ?? ?? ?? ?? 41 89 fa 41 81 f2 ?? ?? ?? ?? 45 21 d5 44 89 e6 83 f6 ff 81 e6 ?? ?? ?? ?? 45 21 d4 45 09 e8 44 09 e6 41 31 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_StrelaStealer_MA_2147851420_0
         $x_5_1 = {41 89 c8 41 81 e8 ?? ?? ?? ?? 41 81 c0 ?? ?? ?? ?? 41 81 c0 ?? ?? ?? ?? 41 89 c1 45 29 c1 41 89 c0 41 81 e8 ?? ?? ?? ?? 45 01 c1 41 89 c0 45 29 c8 41 81 e8 ?? ?? ?? ?? 41 81 e8 ?? ?? ?? ?? 41 81 c0 ?? ?? ?? ?? 41 81 e8 ?? ?? ?? ?? 41 81 e8 ?? ?? ?? ?? 41 81 c0 ?? ?? ?? ?? 83 e8 01 41 01 c0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win64_StrelaStealer_DA_2147851904_0
         $x_1_2 = {48 89 c1 48 81 c1 01 00 00 00 48 89 8d ?? ?? ?? ?? 8a 10 48 8b 85 ?? ?? ?? ?? 48 89 c1 48 81 c1 01 00 00 00 48 89 8d ?? ?? ?? ?? 88 10 e9 07 00 48 8b 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win64_StrelaStealer_RF_2147852438_0
         $x_1_3 = "CwPEYQDtiojhbfPDTeLevmduTtbJJZIBnnckJZwSbZqeAA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -111,6 +115,7 @@ rule Trojan_Win64_StrelaStealer_DAW_2147852477_0
         $x_1_5 = {6f 75 74 2e 64 6c 6c 00 65 6e 74 72 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -140,6 +145,7 @@ rule Trojan_Win64_StrelaStealer_DW_2147890338_0
         $x_1_5 = "ch21t2ng3n246_68x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +168,7 @@ rule Trojan_Win64_StrelaStealer_GPAA_2147895078_0
         $x_2_2 = {78 00 78 2e 31 00 78 2e 31 31 00 78 2e 33 00 78 2e 35 00 78 2e 37 00 78 2e 39 00 79 00 79 2e 31 30 00 79 2e 31 32 00 79 2e 32 00 79 2e 34 00 79 2e 36 00 79 2e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -184,6 +191,7 @@ rule Trojan_Win64_StrelaStealer_GPAB_2147896936_0
         $x_2_2 = {67 42 75 66 00 78 00 78 2e 31 00 78 2e 31 31 00 78 2e 31 33 00 78 2e 33 00 78 2e 35 00 78 2e 37 00 78 2e 39 00 79 00 79 2e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +213,7 @@ rule Trojan_Win64_StrelaStealer_DAS_2147900748_0
         $x_2_1 = {41 80 f2 ff 40 80 f6 00 44 88 cf 40 80 e7 00 40 20 f3 45 88 d6 41 80 e6 00 41 20 f3 40 08 df 45 08 de 44 30 f7 45 08 d1 41 80 f1 ff 40 80 ce 00 41 20 f1 44 08 cf 40 f6 c7 01 0f 85}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +236,7 @@ rule Trojan_Win64_StrelaStealer_GPAC_2147900833_0
         $x_2_2 = {00 6f 75 74 2e 64 6c 6c 00 78 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -248,6 +258,7 @@ rule Trojan_Win64_StrelaStealer_DAT_2147901370_0
         $x_2_1 = {44 88 de 40 80 f6 ff 40 80 e6 01 40 b7 01 41 88 fe 41 80 f6 01 45 88 df 45 20 f7 44 08 fe}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +283,7 @@ rule Trojan_Win64_StrelaStealer_ASDA_2147901459_0
         $x_1_4 = {41 08 fc 45 08 f5 45 30 ec 45 08 d9 41 80 f1 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -293,6 +305,7 @@ rule Trojan_Win64_StrelaStealer_ASDB_2147901460_0
         $x_2_1 = {48 29 c4 48 8d ac 24 80 00 00 00 31 c0 8b 0d a3 [0-2] 00 8b 15 a9 [0-2] 00 41 [0-16] 41 ?? c0 [0-4] 41 81}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -314,6 +327,7 @@ rule Trojan_Win64_StrelaStealer_ASDC_2147901494_0
         $x_2_1 = {55 41 57 41 56 41 55 41 54 56 57 53 b8 ?? ?? 00 00 e8 [0-3] 00 48 29 c4 48 8d ac 24 80 00 00 00 31 c0 8b 0d a3 ?? ?? 00 8b 15 a9 ?? ?? 00 41 89 [0-8] 41}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -335,6 +349,7 @@ rule Trojan_Win64_StrelaStealer_GPAE_2147901647_0
         $x_4_1 = {41 09 d9 09 fd 41 31 e9 44 89 cf 83 f7 ff 81 f7 ff ff ff ff 83 e7 ff 44 89 d3 81 f3 ff ff ff ff 81 e3 ff ff ff ff 44 89 d5 81 f5 ff ff ff ff 81 e5 ff ff ff ff 09 eb 83 f3 ff 44 89 d5}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -356,6 +371,7 @@ rule Trojan_Win64_StrelaStealer_ASCD_2147902019_0
         $x_5_1 = {41 57 41 56 41 55 41 54 56 57 55 53 48 81 ec ?? ?? ?? 00 c7 84 24 ?? ?? ?? 00 00 00 00 00 81 bc 24 ?? ?? ?? 00 cc 0c 00 00 0f ?? ?? ?? 00 00 e9 00 00 00 00 31 c0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -377,6 +393,7 @@ rule Trojan_Win64_StrelaStealer_ASDE_2147902417_0
         $x_5_1 = {55 41 57 41 56 41 55 41 54 56 57 53 48 81 ec [0-3] 00 48 8d ac 24 80 00 00 00 e8 [0-3] 00 c7 85 [0-3] 00 00 00 00 00 c7 85 [0-3] 00 00 00 00 00 31 c0 8b 0d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -399,6 +416,7 @@ rule Trojan_Win64_StrelaStealer_GPAG_2147902473_0
         $x_2_2 = {00 6f 75 74 2e 64 6c 6c 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -421,6 +439,7 @@ rule Trojan_Win64_StrelaStealer_GPAF_2147902606_0
         $x_2_2 = {00 6f 75 74 2e 64 6c 6c 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -442,6 +461,7 @@ rule Trojan_Win64_StrelaStealer_ASDF_2147903154_0
         $x_5_1 = {41 57 41 56 41 55 41 54 56 57 55 53 b8 ?? ?? 00 00 e8 ?? ?? ?? 00 48 29 c4 c7 84 24 ?? ?? 00 00 00 00 00 00 81 bc 24 ?? ?? 00 00 cc 0c 00 00 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -465,6 +485,7 @@ rule Trojan_Win64_StrelaStealer_GPAJ_2147904033_0
         $x_5_3 = {80 f3 ff 80 e3 00 40 b6 01 40 88 f7 40 80 f7 00 45 88 d6 41 20 fe 41 88 f7 41 80 f7 01 41 80 e7 00 40 80 e7 01 44 08 f3 41 08 ff 44 30 fb 44 88 df 40 80 f7 ff 40 80 e7 01 41 88 f6 41 80 f6 01 45 88 df 45 20 f7 44 08 ff 41 88}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -487,6 +508,7 @@ rule Trojan_Win64_StrelaStealer_ASDG_2147905232_0
         $x_5_2 = {41 57 41 56 41 55 41 54 56 57 55 53 48 81 ec ?? ?? 00 00 48 8d 84 24 ?? ?? 00 00 48 89 c1 48 8d 15 ?? ?? ?? 00 41 b8 04 00 00 00 e8 ?? ?? ?? 00 48 8d 0d ?? ?? ?? 00 48 89 ca 48 81 c2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -508,6 +530,7 @@ rule Trojan_Win64_StrelaStealer_GPAK_2147906411_0
         $x_1_1 = {41 09 f2 44 09 df 41 31 fa 45 89 d3 41 83 f3 ff 89 ce 44 31 de 21 ce 45 89 cb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -530,6 +553,7 @@ rule Trojan_Win64_StrelaStealer_GPAD_2147910326_0
         $x_1_2 = {00 6f 75 74 2e 64 6c 6c 00 6d 61 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -558,6 +582,7 @@ rule Trojan_Win64_StrelaStealer_GPAX_2147910327_0
         $x_1_8 = "%s%s\\key4.db" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -579,6 +604,7 @@ rule Trojan_Win64_StrelaStealer_ZX_2147913904_0
         $x_1_1 = {48 8b 85 b8 06 00 00 48 8b 8d 20 01 00 00 48 8b 11 48 8b 8d b0 06 00 00 48 83 ec 20 48 89 4d 80 48 89 c1 48 8b 45 80 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -601,6 +627,7 @@ rule Trojan_Win64_StrelaStealer_CCJA_2147914590_0
         $x_1_2 = {03 00 01 00 00 00 01 00 00 00 01 00 00 00 28 ?? 03 00 2c ?? 03 00 30 ?? 03 00 a0 15 00 00 3a ?? 03 00 00 00 6f 75 74 2e 64 6c 6c 00 44 6c 6c 52 65 67 69 73 74 65 72 53 65 72 76 65 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -622,6 +649,7 @@ rule Trojan_Win64_StrelaStealer_GND_2147914768_0
         $x_10_1 = {55 41 57 41 56 41 55 41 54 56 57 53 48 81 ec ?? ?? ?? ?? 48 8d ac 24 ?? ?? ?? ?? c7 85 ?? ?? ?? ?? ?? ?? ?? ?? 8b 85 ?? ?? 00 00 89 c1 81 e9 ?? ?? ?? ?? 89 85 ?? ?? ?? ?? 0f 84 ?? ?? ?? ?? e9 00 00 00 00 8b 85 ?? ?? ?? ?? 2d ?? ?? ?? ?? 0f 84 ?? ?? ?? ?? e9 00 00 00 00 8b 85 ?? ?? 00 00 2d ?? ?? ?? ?? 0f 84}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -645,6 +673,7 @@ rule Trojan_Win64_StrelaStealer_ASG_2147914802_0
         $x_1_3 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -670,6 +699,7 @@ rule Trojan_Win64_StrelaStealer_GNF_2147915024_0
         $x_10_1 = {41 57 41 56 56 57 53 48 81 ec ?? ?? ?? ?? 48 8d ac 24 ?? ?? ?? ?? c7 45 ?? ?? ?? ?? ?? 8b 45 ?? 89 c1 81 e9 ?? ?? ?? ?? 89 45 ?? 0f 84 ?? ?? ?? ?? e9 00 00 00 00 8b 45 ?? 2d ?? ?? ?? ?? 0f 84 ?? ?? ?? ?? e9 00 00 00 00 8b 45 ?? 2d ?? ?? ?? ?? 0f 84 ?? ?? ?? ?? e9 00 00 00 00 8b 45 ?? 2d ?? ?? ?? ?? 0f 84 ?? ?? ?? ?? e9 00 00 00 00 8b 45 ?? 2d ?? ?? ?? ?? 0f 84}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -706,6 +736,7 @@ rule Trojan_Win64_StrelaStealer_ASI_2147915382_0
         $x_1_16 = {41 b8 04 00 00 00 e8 ?? ?? 00 00 48 8d 0d ?? ?? 00 00 48 89 ca 48 81 c2 14 27 00 00 48 81 c1 04 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -733,6 +764,7 @@ rule Trojan_Win64_StrelaStealer_GPAL_2147915389_0
         $x_1_3 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -758,6 +790,7 @@ rule Trojan_Win64_StrelaStealer_ASR_2147915426_0
         $x_1_1 = {48 63 d0 48 89 d0 48 c1 e0 02 48 01 d0 48 c1 e0 03 4c 01 c0 48 8b 40 08 48 8d 55 f8 49 89 d1 45 89 d0 48 89 ca 48 89 c1 48 8b 05 49 72 02 00 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -779,6 +812,7 @@ rule Trojan_Win64_StrelaStealer_MBXH_2147915964_0
         $x_5_1 = {38 30 00 00 01 00 00 00 01 00 00 00 01 00 00 00 45 30 00 00 49 30 00 00 4d 30 00 00 50 72 6f 6a 65 63 74 31 2e 64 6c 6c [0-32] 65 6e 74 72 79 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -803,6 +837,7 @@ rule Trojan_Win64_StrelaStealer_ASJ_2147915974_0
         $x_1_4 = "entry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -830,6 +865,7 @@ rule Trojan_Win64_StrelaStealer_CCJC_2147915992_0
         $x_1_3 = "entry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -858,6 +894,7 @@ rule Trojan_Win64_StrelaStealer_ASK_2147916020_0
         $x_1_4 = "entry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -884,6 +921,7 @@ rule Trojan_Win64_StrelaStealer_GZM_2147916022_0
         $x_10_2 = {89 c2 81 e2 ?? ?? ?? ?? 42 0f b6 54 ?? ?? 30 14 01 48 83 c0 ?? 4c 39 c8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -906,6 +944,7 @@ rule Trojan_Win64_StrelaStealer_CCJD_2147916028_0
         $x_1_2 = "entry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -929,6 +968,7 @@ rule Trojan_Win64_StrelaStealer_DB_2147916055_0
         $x_1_3 = "entry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_1_*))) or
             ((2 of ($x_50_*))) or
@@ -955,6 +995,7 @@ rule Trojan_Win64_StrelaStealer_ASL_2147916133_0
         $x_1_2 = "c8d79d55-6723-4d85-9f23-7252e2e2bff1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -980,6 +1021,7 @@ rule Trojan_Win64_StrelaStealer_ASL_2147916133_1
         $x_1_5 = "entry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -1009,6 +1051,7 @@ rule Trojan_Win64_StrelaStealer_ASM_2147916224_0
         $x_1_5 = "entry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -1035,6 +1078,7 @@ rule Trojan_Win64_StrelaStealer_ASN_2147916715_0
         $x_1_2 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1057,6 +1101,7 @@ rule Trojan_Win64_StrelaStealer_GPAN_2147916981_0
         $x_1_2 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1080,6 +1125,7 @@ rule Trojan_Win64_StrelaStealer_GPX_2147924451_0
         $x_1_3 = {45 6e 74 72 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1103,6 +1149,7 @@ rule Trojan_Win64_StrelaStealer_GPX_2147924451_1
         $x_1_3 = {45 6e 74 72 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1126,6 +1173,7 @@ rule Trojan_Win64_StrelaStealer_ASQ_2147926889_0
         $x_1_3 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1152,6 +1200,7 @@ rule Trojan_Win64_StrelaStealer_GTT_2147926982_0
         $x_1_6 = "/c systeminfo >" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1177,6 +1226,7 @@ rule Trojan_Win64_StrelaStealer_GA_2147927841_0
         $x_1_5 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1199,6 +1249,7 @@ rule Trojan_Win64_StrelaStealer_GN_2147928229_0
         $x_1_2 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1225,6 +1276,7 @@ rule Trojan_Win64_StrelaStealer_NSB_2147929010_0
         $x_1_6 = "yYnGNxeMh{fgoxETJ{fbeJtza\\YccxNEmxnhhYvaI" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1249,6 +1301,7 @@ rule Trojan_Win64_StrelaStealer_GF_2147929473_0
         $x_1_4 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1271,6 +1324,7 @@ rule Trojan_Win64_StrelaStealer_A_2147935982_0
         $x_1_2 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1300,6 +1354,7 @@ rule Trojan_Win64_StrelaStealer_GVA_2147936310_0
         $x_3_9 = {39 34 2e 31 35 39 2e 31 31 33 2e [0-3] 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1322,6 +1377,7 @@ rule Trojan_Win64_StrelaStealer_PGS_2147940182_0
         $x_1_2 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1343,6 +1399,7 @@ rule Trojan_Win64_StrelaStealer_AB_2147945007_0
         $x_1_1 = {0f af d0 f6 c2 01 0f 94 44 24 36 ba 16 c9 84 07 b8 95 81 79 a6 0f 44 c2 83 f9 0a 0f 9c 44 24 37 0f 4c c2 ba}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

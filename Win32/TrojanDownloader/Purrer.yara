@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Purrer_A_2147594571_0
         $x_1_3 = {8a 5d 0c 83 c6 04 32 d8 8b 06 88 19 41 83 f8 ff 75 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

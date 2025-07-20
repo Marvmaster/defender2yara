@@ -26,6 +26,7 @@ rule Spammer_Win32_Mailbot_Q_2147574512_0
         $x_1_12 = "realhelo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -56,6 +57,7 @@ rule Spammer_Win32_Mailbot_K_2147600323_0
         $x_1_11 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

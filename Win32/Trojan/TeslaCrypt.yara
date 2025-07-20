@@ -17,6 +17,7 @@ rule Trojan_Win32_TeslaCrypt_DA_2147819397_0
         $x_2_2 = {8a 44 24 4a 8a 4c 24 6c 30 c8 8b 54 24 10 f7 d2 8b 74 24 14 f7 d6 89 74 24 78 89 54 24 7c 24 01 88 44 24}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_TeslaCrypt_GHC_2147843803_0
         $x_1_6 = "Unable to get SeDebugPrivileges, may be unable to clean up child processes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_TeslaCrypt_ARAX_2147931744_0
         $x_2_1 = {8d 0c c5 00 00 00 00 c1 e8 1d 0b c1 a3 f0 e6 42 00 8a 0a 80 c9 20 80 c9 20 88 4d 0c 8b 4d 0c 81 e1 ff 00 00 00 33 c1 42 a3 f0 e6 42 00 89 15 f4 e6 42 00 80 3a 00 75 c8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win32_TeslaCrypt_ARA_2147944005_0
         $x_2_1 = {8a 0e 84 c9 74 15 32 4d ff 8b 45 08 2a ca fe c9 88 0c 33 42 46 3b d7 72 e7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

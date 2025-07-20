@@ -22,6 +22,7 @@ rule Rogue_Win32_Wadebooc_210234_0
         $x_1_8 = "Software\\AdwCleaner" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

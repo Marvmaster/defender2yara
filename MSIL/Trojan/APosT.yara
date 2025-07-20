@@ -21,6 +21,7 @@ rule Trojan_MSIL_APosT_MA_2147811264_0
         $x_1_6 = "kjgsdogfewof" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_APosT_SK_2147945332_0
         $x_2_2 = "RPE3.Properties.Resources.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

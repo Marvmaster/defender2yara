@@ -18,6 +18,7 @@ rule TrojanProxy_Win32_Delf_G_2147583856_0
         $x_1_4 = "&usenames=1&smartpic=1&rand=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanProxy_Win32_Delf_I_2147584616_0
         $x_1_5 = "http://www.gooo.ru" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule TrojanProxy_Win32_Delf_AN_2147594774_0
         $x_1_10 = "ServicePackFiles" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule TrojanProxy_Win32_Delf_AM_2147595750_0
         $x_1_7 = "RANDOM_PICTURE_ID_FOR_ATTACHMENT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule TrojanProxy_Win32_Delf_W_2147598487_0
         $x_1_5 = {4f 70 65 6e 57 61 62 46 69 6c 65 [0-16] 44 6f 77 6e 6c 6f 61 64 46 69 6c 65 [0-16] 4e 6f 6d 65 43 6f 6d 70 75 74 61 64 6f 72 [0-16] 44 65 6c 65 74 65 46 69 6c 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -149,6 +154,7 @@ rule TrojanProxy_Win32_Delf_R_2147624427_0
         $x_1_6 = "httpGetCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

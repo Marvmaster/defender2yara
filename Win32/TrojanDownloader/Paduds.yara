@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Paduds_A_2147803996_0
         $x_1_6 = {5c 73 79 73 74 65 6d 5c 63 6d 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

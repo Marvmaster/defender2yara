@@ -30,6 +30,7 @@ rule Trojan_Win32_Greener_A_2147606624_0
         $x_1_16 = "EonFLux" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_3_*) and 9 of ($x_1_*))) or
             ((2 of ($x_100_*) and 2 of ($x_3_*) and 6 of ($x_1_*))) or

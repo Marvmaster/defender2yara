@@ -24,6 +24,7 @@ rule Worm_Win32_Kulsibot_A_2147609532_0
         $x_5_9 = {03 d9 81 e3 ff 00 00 00 8a 4c 1c ?? 8a 1c 28 32 d9 88 1c 28 40 3b c2 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 5 of ($x_1_*))) or
             ((3 of ($x_5_*))) or

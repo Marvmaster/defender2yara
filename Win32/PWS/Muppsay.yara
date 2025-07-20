@@ -18,6 +18,7 @@ rule PWS_Win32_Muppsay_B_2147626216_0
         $x_1_4 = "\\SystemRoot\\temp\\system.bin" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

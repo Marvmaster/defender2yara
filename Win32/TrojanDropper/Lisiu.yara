@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Lisiu_A_2147630965_0
         $x_1_1 = {8d 4c 24 14 6a 00 51 8d 54 24 1b 8b f0 6a 01 52 56 c6 44 24 27 4d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

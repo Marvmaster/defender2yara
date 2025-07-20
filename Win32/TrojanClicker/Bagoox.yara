@@ -20,6 +20,7 @@ rule TrojanClicker_Win32_Bagoox_A_2147706484_0
         $x_1_6 = "document.body.insertBefore(e, document.body.children.item(0))" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

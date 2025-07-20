@@ -19,6 +19,7 @@ rule Backdoor_Win32_Venik_A_2147647064_0
         $x_1_5 = "Provides support for media palyer. This service can't be stoped." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Win32_Venik_D_2147682010_0
         $x_1_4 = {57 69 6e 48 65 6c 70 33 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Backdoor_Win32_Venik_CnC_2147690744_0
         $x_1_1 = {3d 16 00 00 20 0f 87 07 01 00 00 0f 84 cc 00 00 00 3d 12 00 00 20 77 7d 74 65 3d 06 00 00 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Backdoor_Win32_Venik_F_2147691047_0
         $x_3_5 = {00 68 6d 50 72 6f 78 79 21 3d 20 4e 55 4c 4c 0d 0a 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -112,6 +116,7 @@ rule Backdoor_Win32_Venik_G_2147693443_0
         $x_1_4 = {53 65 63 75 72 69 74 79 00 00 00 00 41 70 70 6c 69 63 61 74 69 6f 6e 00 70 75 6f 72 47 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Backdoor_Win32_Venik_G_2147693443_1
         $x_2_5 = {00 68 6d 50 72 6f 78 79 21 3d 20 4e 55 4c 4c 0d 0a 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -163,6 +169,7 @@ rule Backdoor_Win32_Venik_H_2147694851_0
         $x_1_5 = {63 6d 64 2e 65 78 65 00 2f 63 20 70 69 6e 67 20 31 32 37 2e 30 2e 30 2e 31 20 2d 6e 20 31 20 26 26 20 64 65 6c 20 2f 66 2f 71 20 22 25 73 22}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule Backdoor_Win32_Venik_I_2147696653_0
         $x_2_5 = "RegSetValueEx(Svchost\\krnlsrvc)" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -217,6 +225,7 @@ rule Backdoor_Win32_Venik_J_2147696654_0
         $x_1_7 = {99 59 f7 f9 8b 4d 08 8a 44 15 e4 88 04 0e 46 3b f3 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 3 of ($x_10_*))) or
@@ -245,6 +254,7 @@ rule Backdoor_Win32_Venik_K_2147696934_0
         $x_1_5 = {3c 2f 63 6f 64 65 3e 00 3c 63 6f 64 65 3e 00 00 47 45 54 20 2f 69 6e 64 65 78 2e 70 68 70 3f 69 70 3d 25 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -267,6 +277,7 @@ rule Backdoor_Win32_Venik_L_2147696967_0
         $x_1_3 = {2e 48 4c 2e ff 7b 00 00 63 6d 64 2e 65 78 65 00 2f 63 20 70 69 6e 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -289,6 +300,7 @@ rule Backdoor_Win32_Venik_G_2147709392_0
         $x_1_2 = "%s%4d.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -314,6 +326,7 @@ rule Backdoor_Win32_Venik_P_2147721525_0
         $x_1_5 = {fe ff ff 53 c6 85 ?? fe ff ff 65 c6 85 ?? fe ff ff 72 c6 85 ?? fe ff ff 76 c6 85 ?? fe ff ff 69 c6 85 ?? fe ff ff 63 c6 85 ?? fe ff ff 65 c6 85 ?? fe ff ff 73 c6 85 ?? fe ff ff 5c c6 85 ?? fe ff ff 25 c6 85 ?? fe ff ff 73 88 9d ?? fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -342,6 +355,7 @@ rule Backdoor_Win32_Venik_R_2147722429_0
         $x_1_5 = {3c 2f 63 6f 64 65 3e 00 3c 63 6f 64 65 3e 00 00 47 45 54 20 2f 69 6e 64 65 78 2e 70 68 70 3f 69 70 3d 25 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -369,6 +383,7 @@ rule Backdoor_Win32_Venik_S_2147727200_0
         $x_1_7 = {41 64 64 72 65 73 73 20 25 64 20 3a 20 25 73 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -428,6 +443,7 @@ rule Backdoor_Win32_Venik_B_2147734224_0
         $x_1_4 = {25 73 5c 25 73 65 78 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -456,6 +472,7 @@ rule Backdoor_Win32_Venik_E_2147734226_0
         $x_1_8 = {8b 44 24 08 8a 08 32 ca 02 ca 88 08 40 4e 75 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (3 of ($x*))
 }

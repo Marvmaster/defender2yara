@@ -18,6 +18,7 @@ rule PWS_Win32_Predator_E_2147729855_0
         $x_1_3 = "\\Application Data\\zpar.zip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule PWS_Win32_Predator_F_2147735720_0
         $x_1_4 = {83 f9 0c 73 1f 8a 84 0d ?? ?? ?? ?? 32 c2 88 84 0d ?? ?? ?? ?? 41 89 8d ?? ?? ?? ?? 8a 95 ?? ?? ?? ?? eb dc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule PWS_Win32_Predator_2147748099_0
         $x_1_2 = {0f b6 84 34 ?? ?? ?? ?? 0f b6 c9 03 c8 0f b6 c1 0f b6 84 04 ?? ?? ?? ?? 30 44 3c 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule PWS_Win32_Predator_KM_2147752006_0
         $x_1_1 = {c1 e9 05 03 8d ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? 8b ?? ?? ?? ?? ?? 31 ?? ?? ?? ?? ?? 81 3d ?? ?? ?? ?? 72 07 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule PWS_Win32_Predator_KM_2147752006_1
         $x_1_1 = {03 ce 89 4d e0 8b ce c1 e9 05 03 4d ?? 89 45 ?? 89 1d ?? ?? ?? ?? 89 1d ?? ?? ?? ?? 8b 45 e0 31 45 fc 81 3d ?? ?? ?? ?? 72 07 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule PWS_Win32_Predator_KM_2147752006_2
         $x_1_2 = {8a 04 0e 88 04 11 41 3b cb 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +159,7 @@ rule PWS_Win32_Predator_KM_2147752006_3
         $x_1_5 = "CookieList.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule PWS_Win32_Predator_KM_2147752006_4
         $x_1_3 = {c1 e9 05 03 4c 24 ?? c7 05 ?? ?? ?? ?? b4 1a 3a df 89 44 24 ?? 89 35 ?? ?? ?? ?? 89 35 ?? ?? ?? ?? 8b 44 24 ?? 31 44 24 ?? 81 3d ?? ?? ?? ?? 72 07 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -197,6 +205,7 @@ rule PWS_Win32_Predator_BS_2147752596_0
         $x_1_1 = {c1 e1 04 03 8d ?? ?? ?? ?? 03 d3 89 8d ?? ?? ?? ?? 8b cb c1 e9 05 03 8d ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 95 ?? ?? ?? ?? 89 3d ?? ?? ?? ?? 89 3d ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 31 85 ?? ?? ?? ?? 81 3d ?? ?? ?? ?? 72 07 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +227,7 @@ rule PWS_Win32_Predator_GKM_2147778648_0
         $x_1_1 = {c1 e8 05 03 44 24 ?? 33 d0 89 1d ?? ?? ?? ?? 8d 04 3e 33 d0 2b ea 8b 15 ?? ?? ?? ?? 81 fa d5 01 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -239,6 +249,7 @@ rule PWS_Win32_Predator_GKM_2147778648_1
         $x_1_1 = {69 c0 fd 43 03 00 05 c3 9e 26 00 a3 ?? ?? ?? ?? 8a 0d ?? ?? ?? ?? 30 0c 37 83 fb 19 75 ?? 6a 00 8d 54 24 ?? 52 6a 00 6a 00 6a 00 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -260,6 +271,7 @@ rule PWS_Win32_Predator_GKM_2147778648_2
         $x_1_1 = {69 c0 fd 43 03 00 05 c3 9e 26 00 a3 ?? ?? ?? ?? 8a 0d ?? ?? ?? ?? 30 0c 1e 83 ff 19 75 ?? 6a 00 6a 00 6a 00 6a 00 ff 15 ?? ?? ?? ?? 55 6a 00 6a 00 ff 15 ?? ?? ?? ?? 46 3b f7 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -288,6 +300,7 @@ rule PWS_Win32_Predator_RT_2147779017_0
         $x_10_8 = "http://esmxc01.top/download.php?file=lv.exe" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -320,6 +333,7 @@ rule PWS_Win32_Predator_RTA_2147779024_0
         $x_1_9 = "files\\information.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Esendi_B_2147730224_0
         $x_10_5 = {33 ff b8 c5 9d 1c 81 8b d5 8d 4d ?? 3b cd 1b db 83 e3 fc 83 c3 04 3b e9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_Esendi_C_2147730314_0
         $x_10_6 = {81 e1 ff ff ff 7f 33 c8 8b c1 24 01 0f b6 c0 f7 d8 1b c0 d1 e9 25 df b0 08 99}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 1 of ($x_10_*))) or
             ((3 of ($x_20_*))) or

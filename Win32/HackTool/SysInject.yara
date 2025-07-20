@@ -21,6 +21,7 @@ rule HackTool_Win32_SysInject_A_2147756961_0
         $x_1_6 = {52 00 69 00 6b 00 69 00 42 00 4c 00 69 00 54 00 7a 00 [0-16] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

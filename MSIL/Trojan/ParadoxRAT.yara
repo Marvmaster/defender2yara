@@ -17,6 +17,7 @@ rule Trojan_MSIL_ParadoxRAT_APR_2147942922_0
         $x_2_2 = {0d 16 0c 2b 65 09 08 9a 0a 06 6f ?? 00 00 0a 6f ?? 00 00 0a 02 16 28 ?? 00 00 0a 16 33 48 06 6f ?? 00 00 0a 6f ?? 00 00 0a 28 ?? 00 00 0a 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Potao_A_2147645579_0
         $x_1_2 = {48 8d bd fe fe ff ff 8d b5 fc fe ff ff 89 45 fc 33 d2 2b fb 8b c3 2b f3 8a 08 66 c7 44 07 ff 00 00 80 f9 0d 75 05 88 0c 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

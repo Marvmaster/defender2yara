@@ -17,6 +17,7 @@ rule Trojan_Win32_FolSoc_A_2147852343_0
         $x_2_2 = {6a 00 68 00 20 00 00 8d 84 24 c0 01 00 00 50 ff 35 3c 45 40 00 ff 15 64 30 40 00 85 c0 0f 8e ?? ?? ?? ?? 50 8d 8c 24 bc 01 00 00 51 8b 0d ?? ?? ?? ?? 81 c1 ?? ?? ?? ?? 03 ce 51 8b cf}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Kirssao_A_2147693823_0
         $x_1_4 = "3+3t7urv7+7v7+/f9/j3+N/3+Pf43/Dt7uvs6er38Orv7fjq34vw7O/u7/ffiq" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -16,6 +16,7 @@ rule Trojan_Win32_Tovtaker_RB_2147838507_0
         $x_1_1 = {99 be 64 00 00 00 f7 fe 0f b6 54 15 ?? 33 ca 88 4d ?? 66 0f be 45 ?? 0f b7 c8 51 8b 4d 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

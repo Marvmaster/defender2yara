@@ -18,6 +18,7 @@ rule Trojan_Win64_CavernToffee_A_2147891623_0
         $x_1_3 = {4e 74 41 6c c7 45 ?? 6c 6f 63 61 c7 45 ?? 74 65 56 69 c7 45 ?? 72 74 75 61 c7 45 ?? 6c 4d 65 6d c7 45 ?? 6f 72 79 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_CavernToffee_D_2147891624_0
         $x_1_2 = {43 72 65 61 c7 45 ?? 74 65 54 68 c7 45 ?? 72 65 61 64 88 5d ?? e8 ?? ?? ?? ?? 48 21 5c 24 ?? 4c 8b cf 21 5c 24 ?? 4c 8b c6 33 d2 33 c9 ff d0 48 8b d8 48 83 f8 ff 74 1c 48 8d 4d ?? c7 45 ?? 4e 74 43 6c c7 45 ?? 6f 73 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win64_CavernToffee_E_2147891625_0
         $x_1_1 = {5c 00 44 00 48 8d 55 ?? 66 44 89 75 ?? 48 8d 4d ?? c7 45 ?? 65 00 76 00 c7 45 ?? 69 00 63 00 c7 45 ?? 65 00 5c 00 c7 45 ?? 48 00 74 00 c7 45 ?? 74 00 70 00 c7 45 ?? 5c 00 43 00 c7 45 ?? 6f 00 6d 00 c7 45 ?? 6d 00 75 00 c7 45 ?? 6e 00 69 00 c7 45 ?? 63 00 61 00 c7 45 ?? 74 00 69 00 c7 45 ?? 6f 00 6e 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

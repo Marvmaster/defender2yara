@@ -18,6 +18,7 @@ rule Ransom_MSIL_Ramsil_SK_2147754390_0
         $x_1_3 = "Files encrypted are as follows:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Recslurp_A_2147660048_0
         $x_1_4 = {6a 3b 89 d8 40 50 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_Win32_Recslurp_B_2147687996_0
         $x_1_4 = "MachineParamCPUU" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -71,6 +73,7 @@ rule TrojanDownloader_Win32_Recslurp_B_2147687996_1
         $x_1_8 = {53 56 b8 42 23 00 00 ba ?? ?? ?? ?? 33 db e8 ?? ?? ?? ?? 8b f0 83 fe ff 75 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -108,6 +111,7 @@ rule TrojanDownloader_Win32_Recslurp_F_2147720586_0
         $x_2_18 = {8b 07 81 c6 30 75 00 00 85 c0 74 3c 6b c0 18}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or

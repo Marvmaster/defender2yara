@@ -20,6 +20,7 @@ rule Trojan_Win32_Gupboot_A_2147666819_0
         $x_1_6 = "Read GBP Data failed" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule Trojan_Win32_Gupboot_B_2147678996_0
         $x_8_7 = {bf 5f 47 42 50 39 7b 04 74 34}  //weight: 8, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_8_*) and 1 of ($x_2_*))) or
             ((3 of ($x_8_*))) or
@@ -76,6 +78,7 @@ rule Trojan_Win32_Gupboot_A_2147681702_0
         $x_1_3 = {5c 00 2a 00 2e 00 2a 00 [0-10] 25 00 64 00 2e 00 25 00 64 00 2e 00 25 00 64 00 2e 00 25 00 64 00 [0-10] 5f 75 6e 69 6e 73 65 70 2e 62 61 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

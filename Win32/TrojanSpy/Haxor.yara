@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Haxor_A_2147612387_0
         $x_1_8 = "ThreadDeleta" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))

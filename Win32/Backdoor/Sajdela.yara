@@ -21,6 +21,7 @@ rule Backdoor_Win32_Sajdela_A_2147644339_0
         $x_2_7 = {41 74 68 65 6e 65 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_EyeStye_2147631910_0
         $x_1_3 = {2a 44 72 6f 70 70 65 72 2a 20 3a 20 42 4f 54 5f 56 45 52 53 49 4f 4e 20 3d 20 25 64 2c 20 50 49 44 20 3d 20 25 64 2c 20 73 7a 4d 6f 64 75 6c 65 46 69 6c 65 4e 61 6d 65 20 3d 20 22 25 73 22 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

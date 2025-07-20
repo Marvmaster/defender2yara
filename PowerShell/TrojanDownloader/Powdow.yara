@@ -19,6 +19,7 @@ rule TrojanDownloader_PowerShell_Powdow_AR_2147753661_0
         $x_2_4 = {68 74 74 70 3a 2f 2f 32 31 37 2e 38 2e 31 31 37 2e 36 33 2f [0-10] 2e 65 78 65 20 25 74 65 6d 70 25 5c [0-15] 2e 65 78 65 26 73 74 61 72 74 20 25 74 65 6d 70 25 5c 01 2e 65 78 65}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MSIL_Crypter_X_2147759492_0
         $x_2_3 = "Fare" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_Crypter_MA_2147915580_0
         $x_1_5 = "clone certificate" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

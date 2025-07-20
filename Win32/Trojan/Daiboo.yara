@@ -33,6 +33,7 @@ rule Trojan_Win32_Daiboo_A_2147582088_0
         $n_100_19 = "Webroot Secure Anywhere" wide //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (12 of ($x*))
 }

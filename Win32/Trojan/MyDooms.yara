@@ -17,6 +17,7 @@ rule Trojan_Win32_MyDooms_LKA_2147896839_0
         $x_1_2 = {81 2a 6a 17 62 3c eb 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

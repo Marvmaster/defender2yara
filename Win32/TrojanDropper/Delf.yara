@@ -22,6 +22,7 @@ rule TrojanDropper_Win32_Delf_ZA_2147576989_0
         $x_100_8 = " goto try1" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1000_*) and 5 of ($x_100_*))) or
             (all of ($x*))
@@ -51,6 +52,7 @@ rule TrojanDropper_Win32_Delf_RAG_2147600580_0
         $x_1_7 = "cmd.exe /c del" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule TrojanDropper_Win32_Delf_RAG_2147600583_0
         $x_1_5 = "Thread32Next" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule TrojanDropper_Win32_Delf_DJ_2147603605_0
         $x_1_5 = "\\vbrun32.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule TrojanDropper_Win32_Delf_SS_2147610990_0
         $x_1_2 = {66 b9 02 00 ba fc ff ff ff a1 ?? ?? ?? ?? 8b 18 ff 53 08 ba ?? ?? ?? ?? b9 04 00 00 00 a1 ?? ?? ?? ?? e8 ?? ?? ff ff 8d 95 ?? ?? ff ff b8 ?? ?? ?? ?? e8 ?? ?? ff ff 83 3d ?? ?? ?? ?? 00 75 8d 95 ?? ?? ff ff b8 ?? ?? ?? ?? e8 ?? ?? ff ff 33 c9 8b 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 18 ff 53 08 8d 95 ?? ?? ff ff b8 ?? ?? ?? ?? e8 ?? ?? ff ff e9 a1 ?? ?? ?? ?? e8 ?? ?? ff ff 8b d8 a1 ?? ?? ?? ?? e8 ?? ?? ff ff 83 e8 04 3b d8 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule TrojanDropper_Win32_Delf_TD_2147611799_0
         $x_1_1 = {0e 50 72 6f 63 75 72 61 44 72 69 76 65 72 73 ?? ?? ?? ?? ?? ?? 04 44 69 63 6f ?? ?? ?? ?? ?? ?? 0a 43 72 69 41 72 71 75 69 76 6f ?? ?? ?? ?? ?? ?? 0c 41 62 72 65 50 72 6f 63 65 73 73 6f ?? ?? ?? ?? ?? ?? 0a 46 6f 72 6d 43 72 65 61 74 65 ?? ?? ?? ?? ?? ?? 05 53 74 61 72 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +171,7 @@ rule TrojanDropper_Win32_Delf_TE_2147621503_0
         $x_1_5 = {74 51 0f b6 75 fb 85 f6 7e 49 b8 13 00 00 00 e8 ?? ?? ?? ff 0f b6 90 ?? ?? ?? 00 8d 45 f4 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -191,6 +198,7 @@ rule TrojanDropper_Win32_Delf_TF_2147622810_0
         $x_1_4 = {6b 6e 72 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -216,6 +224,7 @@ rule TrojanDropper_Win32_Delf_CZ_2147623051_0
         $x_1_3 = {33 db 8b c3 99 f7 3d ?? ?? ?? ?? a1 ?? ?? ?? ?? 0f b6 04 10 8b 15 ?? ?? ?? ?? 0f b6 14 1a 2b d0 81 c2 00 01 00 00 81 e2 ff 00 00 80 79 08 4a 81 ca 00 ff ff ff 42 a1 ?? ?? ?? ?? 88 14 18 43 ?? 75 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -238,6 +247,7 @@ rule TrojanDropper_Win32_Delf_DM_2147623052_0
         $x_1_3 = {8b f8 85 ff 0f 84 a2 00 00 00 57 a1 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 8b d8 85 db 0f 84 8c 00 00 00 53 e8 ?? ?? ?? ?? 8b e8 85 ed 75 08 53 e8 ?? ?? ?? ?? eb 78 6a 00 68 80 00 00 00 6a 02 6a 00 6a 00 68 00 00 00 40 56 e8 ?? ?? ?? ?? 8b f0 83 fe ff 75 0f 8b c3 e8 ?? ?? ?? ?? 53 e8 ?? ?? ?? ?? eb 4a 57 a1 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 8b f8 6a 00 8d 44 24 04 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -259,6 +269,7 @@ rule TrojanDropper_Win32_Delf_DP_2147624762_0
         $x_1_2 = {6a 01 6a 00 6a 00 8d 45 fc e8 ?? ?? ff ff 8d 45 fc 8b 15 ?? ?? ?? ?? e8 ?? ?? ff ff 8b 45 fc e8 ?? ?? ff ff 50 6a 00 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -282,6 +293,7 @@ rule TrojanDropper_Win32_Delf_DV_2147627228_0
         $x_1_4 = {2d 66 75 63 6b 20 22 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -304,6 +316,7 @@ rule TrojanDropper_Win32_Delf_EI_2147647005_0
         $x_3_3 = "Pro_Bind" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -326,6 +339,7 @@ rule TrojanDropper_Win32_Delf_EM_2147652189_0
         $x_3_3 = "\\ssinitar.exe" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -350,6 +364,7 @@ rule TrojanDropper_Win32_Delf_BL_2147734588_0
         $x_1_4 = "/index/getcfg?id=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

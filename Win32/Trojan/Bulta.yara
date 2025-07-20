@@ -16,6 +16,7 @@ rule Trojan_Win32_Bulta_RPH_2147829270_0
         $x_1_1 = {01 44 24 1c 8b 44 24 1c 89 44 24 18 8b 44 24 14 8b 4c 24 20 d3 e8 89 44 24 10 8b 44 24 3c 01 44 24 10 8b 4c 24 10 33 4c 24 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Bulta_RPY_2147853022_0
         $x_1_2 = {8b 84 24 74 08 00 00 8b 54 24 14 89 78 04 5f 5e 5d 89 10 5b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

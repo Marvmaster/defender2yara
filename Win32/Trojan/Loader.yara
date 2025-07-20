@@ -15,6 +15,7 @@ rule Trojan_Win32_Loader_ZZ_2147778496_0
         $x_1_1 = {50 8b 55 fc 68 20 30 2d 6d 8f 45 f4 68 61 57 7a 74 8f 45 f0 8d 82 ?? ?? ?? ?? ff d0 54 ff d0 8b d8 8b 55 fc 68 20 30 2d 6d 8f 45 f4 68 65 1d 22 74 8f 45 f0 8d 82 ?? ?? ?? ?? ff d0 54 53 ff d0 85 c0 75 fc 58 48 75 b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule Trojan_Win32_Loader_ZY_2147778497_0
         $x_1_2 = {0a 00 00 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? b8 ?? ?? ?? ?? ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -57,6 +59,7 @@ rule Trojan_Win32_Loader_BAA_2147944357_0
         $x_2_1 = {8b 07 8d 0c 88 8b 45 f8 03 c2 33 d2 01 01 8b 01 b9 2a 00 00 00 89 45 f0 03 45 f8 01 04 9e 8b 04 9e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

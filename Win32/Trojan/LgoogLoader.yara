@@ -16,6 +16,7 @@ rule Trojan_Win32_LgoogLoader_MA_2147828811_0
         $x_1_1 = {89 45 c8 8b 45 c4 03 45 fc 89 45 cc 8b 45 f8 03 45 f4 39 45 d0 73 ?? 8b 45 c8 03 45 d0 8b 4d cc 03 4d d0 8a 11 88 10 8b 45 d0 83 c0 01 89 45 d0 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_LgoogLoader_EH_2147834814_0
         $x_1_6 = "nadique.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_LgoogLoader_GCW_2147838561_0
         $x_10_1 = {0f b6 02 33 c1 8b 0d ?? ?? ?? ?? 03 4d c4 88 01 eb 32 00 0f b6 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 03 55}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

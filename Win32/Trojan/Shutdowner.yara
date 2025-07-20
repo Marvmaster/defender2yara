@@ -18,6 +18,7 @@ rule Trojan_Win32_Shutdowner_L_2147643336_0
         $x_1_4 = "del /f /q C:\\WINDOWS\\system32\\*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

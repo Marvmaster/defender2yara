@@ -22,6 +22,7 @@ rule PWS_Win32_Spynoon_DLG_2147787479_0
         $x_1_7 = "e-mail ig_zub@ukr.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule PWS_Win32_Spynoon_STR_2147787480_0
         $x_1_5 = "RT__23f2e20U" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Worm_Win32_Pemtaka_A_2147710918_0
         $x_1_2 = "__C4A38EF4_2234_4035_B1D4_8BA0D4182180__" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

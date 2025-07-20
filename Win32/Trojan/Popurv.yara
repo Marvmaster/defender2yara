@@ -18,6 +18,7 @@ rule Trojan_Win32_Popurv_A_2147712923_0
         $x_1_4 = "PopupURL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

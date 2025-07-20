@@ -17,6 +17,7 @@ rule Adware_AndroidOS_Zadmo_A_346678_0
         $x_1_2 = {44 40 08 9d eb 18 1b 19 79 4c 1b 19 f3 41 1c 18 01 b4 08 bc 53 40 63 40 14 9d 69 18 c9 18 75 4b c9 18 f9 41 09 19 c3 43 0b 43 63 40 0d 9d aa 18 d2 18 71 4b d2 18 1a 23 04 93 da 41 52 18 e3 43 13 43 4b 40 09 9d 28 18 c0 18 6c 4b c0 18 16 23 03 93 d8 41 83 18 c8 43 18 43 50 40 06 9d 2c 19 20 18 67 4c 00 19 11 24 09 94 e0 41 c4 18 d0 43 20 43 58 40 0c 9f 79 18 08 18 62 49 40 18 0b 26 f0 41 0d 96 07 19 d8 43 38 43 60 40 07 99 8a 18 10 18 5d 4a 80 18 04 99 c8 41 c2 19 e0 43 10 43 78 40 0f 99 cb 18 18 18 58 4b c0 18 03 9d e8 41 83 18 f8 43 18 43 50 40 0a 99 0c 19 20 18 54 4c 00 19 09 99 c8 41 c4 18 d0 43 20 43 58 40 12 99 cf 19 38 18 4f 4f c0 19 f0 41 07 19 d8 43 38 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Adware_AndroidOS_Zadmo_B_346679_0
         $x_1_3 = {ea d8 99 b9 0c f1 9f 38 93 97 85 d9 69 90 be 9f 8f 2f 61 4b 0d 98 91 ff 28 66 46 e0 a6 b2 95 fc 5b c3 1f d7 5c 51 02 88 5e e9 3a 34 23 90 7c 6d d9 2b a2 41 b2 1b ca 9a d2 e7 e0 b5 b9 6f f0 ee d4 4b 11 3f 2c e5 35 09 29 ef 8f bd 2a d2 8e 63 b0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Adware_AndroidOS_Zadmo_C_346983_0
         $x_1_2 = {41 0e d0 15 48 0e c0 15 02 46 0e cc 15 48 0e d0 15 48 0e c0 15 4d 0e c8 15 41 0e cc 15 41 0e d0 15 48 0e c0 15 43 0e c8 15 41 0e cc 15 44 0e d0 15 48 0e c0 15 47 0e c4 15 4e 0e c8 15 41 0e cc 15 42 0e d0 15 48 0e c0 15 5f 0e c4 15 41 0e c8 15 41 0e cc 15 42 0e d0 15 48 0e c0 15 43 0e c4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 

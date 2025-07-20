@@ -23,6 +23,7 @@ rule Worm_Win32_Muenbot_A_2147616302_0
         $x_1_8 = ":[iNFO] Trying to manually root" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

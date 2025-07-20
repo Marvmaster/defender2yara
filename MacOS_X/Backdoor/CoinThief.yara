@@ -20,6 +20,7 @@ rule Backdoor_MacOS_X_CoinThief_A_2147685454_0
         $x_2_6 = "POST \\/([^ ]*) HTTP\\/1\\.([01]).*Content-Length: ([0-9]+).*%@%@" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Backdoor_MacOS_X_CoinThief_B_2147685638_0
         $x_2_7 = "POST \\/([^ ]*) HTTP\\/1\\.([01]).*Content-Length: ([0-9]+).*%@%@" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (6 of ($x*))
 }
 

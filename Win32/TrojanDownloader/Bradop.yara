@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Bradop_B_2147648934_0
         $x_1_5 = {4d 41 49 4e 49 43 4f 4e 00 00 00 00 31 30 39 38 37 37 32 38 38 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule TrojanDownloader_Win32_Bradop_A_2147656233_0
         $x_9_4 = {70 46 3a 46 2f 46 2f [0-2] 32 [0-2] 30 [0-2] 30 [0-2] 2e [0-2] 39 [0-2] 38 [0-2] 2e [0-2] 31 [0-2] 33 [0-2] 36 [0-2] 2e [0-2] 37 [0-2] 32}  //weight: 9, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_9_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*))) or
@@ -71,6 +73,7 @@ rule TrojanDownloader_Win32_Bradop_C_2147663248_0
         $x_1_3 = {b9 01 04 00 00 e8 ?? ?? ?? ?? 8b 85 fc f9 ff ff b9 0f 00 00 00 33 d2 e8 ?? ?? ?? ff 8b 85 00 fa ff ff 50 8d 95 f8 f9 ff ff b8 ?? ?? ?? ?? e8 ?? ?? ff ff 8b 95 f8 f9 ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

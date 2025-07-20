@@ -21,6 +21,7 @@ rule Trojan_Win32_Pususcret_A_2147710920_0
         $x_1_7 = "FGKVVVVV]jqtvz$(2>GLWdhikww%+:FL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

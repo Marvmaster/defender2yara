@@ -16,6 +16,7 @@ rule Trojan_Win32_Prikormka_A_2147720132_0
         $x_1_2 = {88 07 eb 09 8a 54 39 ff 32 d0 88 14 39 41 3b cb 72 db 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

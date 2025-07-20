@@ -17,6 +17,7 @@ rule Trojan_MSIL_Seraph_F_2147783880_0
         $x_10_2 = {20 00 01 00 00 5d 0c 07 09 94 13 04 07 09 07 08 94 9e 07 08 11 04 9e 07 07 09 94 07 08 94 58 20 00 01 00 00 5d 94 13 08 11 06 06 ?? 06 91 11 08 61 d2 9c 06 17 58 0a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Seraph_MS_2147784714_0
         $x_1_2 = {11 01 11 01 11 ?? 94 11 ?? 11 ?? 94 58 20 ?? ?? ?? ?? 5d 94 13 ?? ?? ?? ?? ?? ?? 11 ?? 11 ?? 11 ?? 94 58 13 ?? 20 ?? ?? ?? ?? ?? ?? ?? ?? ?? 11 ?? 11 ?? 03 11 ?? 91 11 ?? 61 d2 9c 38}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_MSIL_Seraph_BU_2147788130_0
         $x_1_9 = "_06_Sad" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Trojan_MSIL_Seraph_A_2147793423_0
         $x_1_7 = "get_KeySize" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Trojan_MSIL_Seraph_B_2147793424_0
         $x_1_6 = "Semovmxzecptzr.Nwplwqujavdprwp.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule Trojan_MSIL_Seraph_QQ_2147795465_0
         $x_3_4 = "niaMllDroC_" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +179,7 @@ rule Trojan_MSIL_Seraph_BI_2147796171_0
         $x_1_8 = "FromBase64String" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -200,6 +207,7 @@ rule Trojan_MSIL_Seraph_G_2147799396_0
         $x_1_7 = "Convert" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +229,7 @@ rule Trojan_MSIL_Seraph_JNT_2147805549_0
         $x_1_1 = {02 06 7b 05 00 00 04 09 9e 02 03 06 7b 05 00 00 04 17 59 28 06 00 00 06 02 06 7b 05 00 00 04 17 58 04 28 06 00 00 06 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -250,6 +259,7 @@ rule Trojan_MSIL_Seraph_RG_2147837099_0
         $x_1_9 = "blvnzcwqe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -271,6 +281,7 @@ rule Trojan_MSIL_Seraph_SPQX_2147839453_0
         $x_4_1 = {06 06 4a 17 58 54 06 4a 07 8e 69 32 da 06 1a 58 16 52 de 30 73 3a 00 00 0a 2b bc}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -294,6 +305,7 @@ rule Trojan_MSIL_Seraph_RDA_2147839573_0
         $x_1_3 = "Desire.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +330,7 @@ rule Trojan_MSIL_Seraph_NFS_2147840173_0
         $x_1_4 = "bgwft" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -339,6 +352,7 @@ rule Trojan_MSIL_Seraph_SPAK_2147840304_0
         $x_5_1 = {09 06 09 8e 69 5d 91 08 06 91 61 d2 6f ?? ?? ?? 0a 06 17 58 0a 06 08 8e 69 32 e3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -360,6 +374,7 @@ rule Trojan_MSIL_Seraph_SPAG_2147840774_0
         $x_4_1 = {91 06 04 1f 16 5d 91 61 28 ?? ?? ?? 0a 03 04 17 58 03 8e 69 5d 91 28 ?? ?? ?? 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 0b 2b 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -382,6 +397,7 @@ rule Trojan_MSIL_Seraph_SPP_2147841494_0
         $x_1_2 = "Deeulbwjcv.Wdwkxeyaqaulcjiydowzeq" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -404,6 +420,7 @@ rule Trojan_MSIL_Seraph_DAB_2147841515_0
         $x_1_2 = "ToByte" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -428,6 +445,7 @@ rule Trojan_MSIL_Seraph_DAC_2147842016_0
         $x_1_4 = "Substring" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -453,6 +471,7 @@ rule Trojan_MSIL_Seraph_SPSP_2147842178_0
         $x_4_1 = {11 04 06 09 06 09 8e 69 5d 91 08 06 91 61 d2 9c 18 2c}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -475,6 +494,7 @@ rule Trojan_MSIL_Seraph_NES_2147842249_0
         $x_1_2 = "Calculatrice VB.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -496,6 +516,7 @@ rule Trojan_MSIL_Seraph_SPQ_2147842360_0
         $x_4_1 = {09 08 11 04 08 8e 69 5d 91 07 11 04 91 61 d2 6f ?? ?? ?? 0a 11 04 17 58 13 04 11 04 07 8e 69 32 df}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -519,6 +540,7 @@ rule Trojan_MSIL_Seraph_DAV_2147842557_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -541,6 +563,7 @@ rule Trojan_MSIL_Seraph_DAW_2147843837_0
         $x_2_2 = "WindowsFormsApp56.Properties.Resources" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -562,6 +585,7 @@ rule Trojan_MSIL_Seraph_PSKC_2147843940_0
         $x_2_1 = {28 0f 00 00 06 0a 28 0e 00 00 0a 06 6f 0f 00 00 0a 28 07 00 00 06 74 02 00 00 1b 28 06 00 00 06 0b dd 03 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -584,6 +608,7 @@ rule Trojan_MSIL_Seraph_DAX_2147844726_0
         $x_2_2 = "Bhbvtawafmh" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -605,6 +630,7 @@ rule Trojan_MSIL_Seraph_SPAZ_2147845024_0
         $x_4_1 = {2b 1b 16 2c 1f 26 7e ?? ?? ?? 04 2b 1a 16 2b 1a 8e 69 2b 19 17 2c 04 2b 1b 2b 1c de 20 28 ?? ?? ?? 06 2b de 0a 2b df 06 2b e3 06 2b e3 28 ?? ?? ?? 06 2b e0 06 2b e2 0b 2b e1 26 de c2}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -626,6 +652,7 @@ rule Trojan_MSIL_Seraph_PSKQ_2147845492_0
         $x_2_1 = {72 63 00 00 70 28 08 00 00 06 0b 28 1a 00 00 0a 07 6f 1b 00 00 0a 72 ab 00 00 70 7e 1c 00 00 0a 6f 1d 00 00 0a 28 1e 00 00 0a 0c de 17}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -648,6 +675,7 @@ rule Trojan_MSIL_Seraph_NLM_2147845769_0
         $x_1_2 = "Jepesbryqph" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -669,6 +697,7 @@ rule Trojan_MSIL_Seraph_FAG_2147845934_0
         $x_5_1 = {11 01 18 5b 8d ?? 00 00 01 13 02 38 ?? ff ff ff 11 00 28 ?? 00 00 06 13 01 38 ?? ff ff ff 11 02 11 03 18 5b 11 00 11 03 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 06 9c 20 03 00 00 00 38}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -690,6 +719,7 @@ rule Trojan_MSIL_Seraph_FAI_2147845935_0
         $x_5_1 = {11 02 2a 11 04 18 5b 8d ?? 00 00 01 13 02 20 04 00 00 00 38 ?? ff ff ff 11 03 18 58 13 03 38 ?? ff ff ff 11 02 11 03 18 5b 11 00 11 03 18 28 ?? 00 00 06 1f 10 28 ?? 00 00 0a 9c 38}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -711,6 +741,7 @@ rule Trojan_MSIL_Seraph_FAU_2147845949_0
         $x_5_1 = {17 2d 22 26 28 ?? 00 00 0a 06 6f ?? 00 00 0a 28 ?? 00 00 0a 1b 2d 11 26 02 07 28 ?? 00 00 06 18 2d 09 26 de 0c 0a 2b dc 0b 2b ed 0c 2b f5 26 de c9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -732,6 +763,7 @@ rule Trojan_MSIL_Seraph_SPD_2147846050_0
         $x_3_1 = {09 16 11 06 11 06 25 17 58 13 06 28 ?? ?? ?? 0a 11 06 06 1a 58 4a 31 e8}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -753,6 +785,7 @@ rule Trojan_MSIL_Seraph_PSKY_2147846127_0
         $x_2_1 = {72 4f 00 00 70 28 27 00 00 06 13 01 20 00 00 00 00 7e ?? ?? ?? 04 7b ?? ?? ?? 04 39 0f 00 00 00 26 20 ?? ?? ?? 00 38 04 00 00 00 fe 0c 02 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? 38 00 00 00 00 28 ?? ?? ?? 06 11 01 6f ?? ?? ?? 0a 72 8d 00 00 70 7e ?? ?? ?? 0a 6f ?? ?? ?? 0a 28 ?? ?? ?? 06 13 03 38 00 00 00 00 dd 93 ff ff ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -777,6 +810,7 @@ rule Trojan_MSIL_Seraph_AS_2147846436_0
         $x_2_4 = "del C:\\Users\\%username%\\AppData\\Local\\Microsoft\\Windows\\History\\ /f /s /q" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -799,6 +833,7 @@ rule Trojan_MSIL_Seraph_AS_2147846436_1
         $x_1_2 = {02 8e 69 17 59 13 03 38 0e 00 00 00 11 00 11 03 3c 4b 00 00 00 38 17 00 00 00 38 ed ff ff ff 38 49 00 00 00 02 11 00 02 11 03 91 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -820,6 +855,7 @@ rule Trojan_MSIL_Seraph_FAT_2147846455_0
         $x_5_1 = {0c 26 16 25 2d 0a 2d 07 1e 2c 0a de 3b 2b 14 19 25 2c f0 2c e3 2b eb 2b 11 2b df 2b 14 2b dd 2b 17 2b db 2b 1a 16 2d e0 2b e5 28 ?? 00 00 06 2b e8 28 ?? 00 00 2b 2b e5 28 ?? 00 00 2b 2b e2 0a 2b e3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -841,6 +877,7 @@ rule Trojan_MSIL_Seraph_PSNG_2147846480_0
         $x_2_1 = {2b 28 7e 0b 00 00 04 20 74 be 66 06 2b 1f 2b 24 2b 29 1d 2c eb 16 2d 10 2b 24 2b 29 2b 2a 2b 2f 2b 34 28 01 00 00 2b 0b de 39 02 2b d5 28 08 00 00 06 2b da 28 38 00 00 06 2b d5 0a 2b d4 28 60 00 00 0a 2b d5 06 2b d4 6f 61 00 00 0a 2b cf 28 62 00 00 0a 2b ca 28 02 00 00 2b 2b c5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -867,6 +904,7 @@ rule Trojan_MSIL_Seraph_GIF_2147846541_0
         $x_1_6 = "Axdmsayx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -889,6 +927,7 @@ rule Trojan_MSIL_Seraph_NS_2147846587_0
         $x_1_2 = "Dezxgbj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -911,6 +950,7 @@ rule Trojan_MSIL_Seraph_NS_2147846587_1
         $x_1_2 = "Jxunhca.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -933,6 +973,7 @@ rule Trojan_MSIL_Seraph_NS_2147846587_2
         $x_1_2 = "Cuuoksbdd.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -955,6 +996,7 @@ rule Trojan_MSIL_Seraph_NS_2147846587_3
         $x_1_2 = "Vpwbhlureu.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -977,6 +1019,7 @@ rule Trojan_MSIL_Seraph_GAS_2147848007_0
         $x_1_2 = "aR3nbf8dQp2feLmk31.lSfgApatkdxsVcGcrktoFd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -998,6 +1041,7 @@ rule Trojan_MSIL_Seraph_GAP_2147848012_0
         $x_5_1 = {16 2d df 2b f3 2b dd 00 7e ?? 00 00 04 7e ?? 00 00 04 28 ?? 00 00 06 28 ?? 00 00 06 28 ?? 00 00 06 28 ?? 00 00 06 28 ?? 00 00 06 16 2c 08 26 2b 00 16 2d d4 de c2 0a 2b f6 26 2b 00 de ba}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1019,6 +1063,7 @@ rule Trojan_MSIL_Seraph_PSPD_2147848072_0
         $x_2_1 = {28 30 00 00 06 28 32 00 00 06 74 42 00 00 01 28 31 00 00 06 74 04 00 00 1b 28 2e 00 00 06 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1041,6 +1086,7 @@ rule Trojan_MSIL_Seraph_NSE_2147848979_0
         $x_1_2 = "EvadingSpoofer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1062,6 +1108,7 @@ rule Trojan_MSIL_Seraph_NSE_2147848979_1
         $x_5_1 = {72 01 00 00 70 28 ?? 00 00 0a 6f ?? 00 00 0a 06 72 ?? 00 00 70 28 ?? 00 00 0a 6f ?? 00 00 0a 06 06 6f ?? 00 00 0a 06 6f ?? 00 00 0a 6f ?? 00 00 0a 0b 73 ?? 00 00 0a 0c 28 ?? 00 00 06 75 ?? 00 00 1b 73 ?? 00 00 0a 0d 09 07 16 73 18 00 00 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1083,6 +1130,7 @@ rule Trojan_MSIL_Seraph_GKH_2147849815_0
         $x_10_1 = {0c 07 08 16 1a 6f ?? ?? ?? 0a 26 08 16 28 ?? ?? ?? 0a 0d 07 16 73 0b 00 00 0a 13 04 09 8d 07 00 00 01 13 05 11 04 11 05 16 09 6f ?? ?? ?? 0a 26 11 05 13 06}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1104,6 +1152,7 @@ rule Trojan_MSIL_Seraph_AACV_2147849945_0
         $x_4_1 = {0a 0b 1a 8d ?? 00 00 01 0c 07 08 16 1a 6f ?? 00 00 0a 26 08 16 28 ?? 00 00 0a 0d 07 16 73 ?? 00 00 0a 13 04 09 8d ?? 00 00 01 13 05 11 04 11 05 16 09 6f ?? 00 00 0a 26 11 05 13 06 dd ?? 00 00 00 11 04 39 ?? 00 00 00 11 04 6f ?? 00 00 0a dc}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1125,6 +1174,7 @@ rule Trojan_MSIL_Seraph_GAQ_2147850111_0
         $x_5_1 = {08 13 04 16 13 05 11 04 12 05 28 ?? 00 00 0a 08 07 09 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 0a 6f ?? 00 00 0a dd ?? 00 00 00 11 05 39 ?? 00 00 00 11 04 28 ?? 00 00 0a dc 09 18 58 0d 09 07 6f ?? 00 00 0a 32 bb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1148,6 +1198,7 @@ rule Trojan_MSIL_Seraph_AAGA_2147851075_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1171,6 +1222,7 @@ rule Trojan_MSIL_Seraph_AAGI_2147851204_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1194,6 +1246,7 @@ rule Trojan_MSIL_Seraph_AAGL_2147851290_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1215,6 +1268,7 @@ rule Trojan_MSIL_Seraph_SXC_2147851313_0
         $x_3_1 = {06 20 00 01 00 00 6f ?? ?? ?? 0a 06 7e 01 00 00 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 06 7e 02 00 00 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 06 06 6f ?? ?? ?? 0a 06 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 0b 14 0c 38 44 00 00 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1238,6 +1292,7 @@ rule Trojan_MSIL_Seraph_AAGX_2147851521_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1261,6 +1316,7 @@ rule Trojan_MSIL_Seraph_AAHE_2147851611_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1282,6 +1338,7 @@ rule Trojan_MSIL_Seraph_SDX_2147851821_0
         $x_4_1 = {06 20 00 01 00 00 6f ?? ?? ?? 0a 06 72 01 00 00 70 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 06 72 5b 00 00 70 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 06 06 6f ?? ?? ?? 0a 06 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 0b 73 0a 00 00 0a 0c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1303,6 +1360,7 @@ rule Trojan_MSIL_Seraph_AAHX_2147851861_0
         $x_5_1 = {06 20 00 01 00 00 6f ?? 00 00 0a 06 20 8a 66 01 1b 28 ?? 00 00 06 28 ?? 00 00 0a 6f ?? 00 00 0a 06 20 b9 66 01 1b 28 ?? 00 00 06 28 ?? 00 00 0a 6f ?? 00 00 0a 06 06 6f ?? 00 00 0a 06 6f ?? 00 00 0a 6f ?? 00 00 0a 13 04 73 ?? 00 00 0a 0c 08 11 04 17 73 ?? 00 00 0a 0d 14 0b 2b 06 28 ?? 00 00 06 0b 07 2c f7 09 07 16 07 8e 69 6f ?? 00 00 0a 08 6f ?? 00 00 0a 13 05 de 18}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1326,6 +1384,7 @@ rule Trojan_MSIL_Seraph_AAHY_2147851868_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1349,6 +1408,7 @@ rule Trojan_MSIL_Seraph_AAHZ_2147851967_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1372,6 +1432,7 @@ rule Trojan_MSIL_Seraph_AAIL_2147852115_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1394,6 +1455,7 @@ rule Trojan_MSIL_Seraph_SDR_2147852122_0
         $x_1_2 = "get_MetadataToken" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1417,6 +1479,7 @@ rule Trojan_MSIL_Seraph_AAIM_2147852194_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1439,6 +1502,7 @@ rule Trojan_MSIL_Seraph_AAIY_2147852444_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1461,6 +1525,7 @@ rule Trojan_MSIL_Seraph_AAJA_2147852455_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1484,6 +1549,7 @@ rule Trojan_MSIL_Seraph_AAJK_2147852643_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1507,6 +1573,7 @@ rule Trojan_MSIL_Seraph_AAJR_2147852769_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1530,6 +1597,7 @@ rule Trojan_MSIL_Seraph_AAJV_2147852840_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1551,6 +1619,7 @@ rule Trojan_MSIL_Seraph_AAJY_2147852863_0
         $x_5_1 = {11 06 11 06 11 00 94 11 06 11 02 94 58 20 00 01 00 00 5d 94 13 03 38 ?? ff ff ff 11 02 11 06 11 00 94 58 13 02 38 ?? 00 00 00 11 06 11 00 94 13 04 38}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1574,6 +1643,7 @@ rule Trojan_MSIL_Seraph_ASCU_2147852925_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1596,6 +1666,7 @@ rule Trojan_MSIL_Seraph_AAKB_2147852951_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1619,6 +1690,7 @@ rule Trojan_MSIL_Seraph_AAKH_2147852986_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1642,6 +1714,7 @@ rule Trojan_MSIL_Seraph_AAKS_2147853144_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1665,6 +1738,7 @@ rule Trojan_MSIL_Seraph_AAKT_2147853145_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1688,6 +1762,7 @@ rule Trojan_MSIL_Seraph_AAKZ_2147887405_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1709,6 +1784,7 @@ rule Trojan_MSIL_Seraph_AALF_2147888138_0
         $x_5_1 = {06 8e 69 8d ?? 00 00 01 0b 16 0c 38 ?? 00 00 00 07 08 06 08 91 72 ?? 00 00 70 28 ?? 00 00 0a 59 d2 9c 08 17 58 0c 08 06 8e 69 32 e4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1730,6 +1806,7 @@ rule Trojan_MSIL_Seraph_SPWR_2147888630_0
         $x_4_1 = {0b 73 0b 00 00 0a 0c 08 07 17 73 0c 00 00 0a 0d 28 ?? ?? ?? 06 16 9a 75 01 00 00 1b 13 04 09 11 04 16 11 04 8e 69}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1751,6 +1828,7 @@ rule Trojan_MSIL_Seraph_AANB_2147889012_0
         $x_5_1 = {07 08 06 08 91 7e ?? 01 00 04 7e ?? 00 00 04 20 7f be 66 06 28 ?? 02 00 06 28 ?? 03 00 06 59 d2 9c 08 17 58 16 2c 12 26 08 06 8e 69 32 d2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1772,6 +1850,7 @@ rule Trojan_MSIL_Seraph_AANL_2147889107_0
         $x_5_1 = {25 11 02 7e ?? 00 00 04 28 ?? 01 00 06 25 17 7e ?? 00 00 04 28 ?? 01 00 06 25 18 7e ?? 00 00 04 28 ?? 01 00 06 25 11 00 7e ?? 00 00 04 28 ?? 01 00 06 7e ?? 00 00 04 28 ?? 01 00 06 11 04 16 11 04 8e 69 7e ?? 00 00 04 28 ?? 01 00 06 13 03}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1795,6 +1874,7 @@ rule Trojan_MSIL_Seraph_AANO_2147889301_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1818,6 +1898,7 @@ rule Trojan_MSIL_Seraph_AANR_2147889323_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1840,6 +1921,7 @@ rule Trojan_MSIL_Seraph_AANS_2147889398_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1861,6 +1943,7 @@ rule Trojan_MSIL_Seraph_AMAA_2147889486_0
         $x_1_1 = {11 01 11 03 11 00 11 03 91 72 ?? 00 00 70 28 ?? 00 00 06 59 d2 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1883,6 +1966,7 @@ rule Trojan_MSIL_Seraph_AMAA_2147889486_1
         $x_1_2 = "HttpClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1907,6 +1991,7 @@ rule Trojan_MSIL_Seraph_AANZ_2147889494_0
         $x_1_4 = "ReadAsByteArrayAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1930,6 +2015,7 @@ rule Trojan_MSIL_Seraph_NSA_2147889500_0
         $x_1_3 = "ppburatp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1954,6 +2040,7 @@ rule Trojan_MSIL_Seraph_AAOD_2147890070_0
         $x_1_4 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1977,6 +2064,7 @@ rule Trojan_MSIL_Seraph_AAOH_2147890073_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2000,6 +2088,7 @@ rule Trojan_MSIL_Seraph_AAOK_2147890076_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2023,6 +2112,7 @@ rule Trojan_MSIL_Seraph_AAOO_2147890080_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2045,6 +2135,7 @@ rule Trojan_MSIL_Seraph_ASDV_2147890405_0
         $x_1_2 = {11 10 1e 63 d1 13 10 11 1c 11 09 91 13 25 11 1c 11 09 11 23 11 25 61 19 11 19 58 61 11 35 61 d2 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2067,6 +2158,7 @@ rule Trojan_MSIL_Seraph_AAPD_2147891204_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2090,6 +2182,7 @@ rule Trojan_MSIL_Seraph_ASDW_2147891258_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2111,6 +2204,7 @@ rule Trojan_MSIL_Seraph_ASDX_2147891286_0
         $x_1_1 = {13 04 02 1f 10 11 04 16 02 8e 69 1f 10 da 28 ?? 00 00 0a 00 00 73 ?? 00 00 0a 13 05 11 05 07 6f ?? 00 00 0a 00 11 05 17 6f ?? 00 00 0a 00 11 05 09 6f ?? 00 00 0a 00 00 11 05 6f ?? 00 00 0a 13 06 11 06 11 04 16 11 04 8e 69 6f ?? 00 00 0a 13 07 11 07 0a de}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2134,6 +2228,7 @@ rule Trojan_MSIL_Seraph_AAPG_2147891329_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2157,6 +2252,7 @@ rule Trojan_MSIL_Seraph_AAPI_2147891380_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2179,6 +2275,7 @@ rule Trojan_MSIL_Seraph_AMAE_2147891394_0
         $x_5_2 = {11 2e 11 14 11 0e 11 14 91 9d 11 14 17 58 13 14 11 14 11 1b 32 ea}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2202,6 +2299,7 @@ rule Trojan_MSIL_Seraph_AAPO_2147891481_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2225,6 +2323,7 @@ rule Trojan_MSIL_Seraph_AAPU_2147891579_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2247,6 +2346,7 @@ rule Trojan_MSIL_Seraph_SPAD_2147891645_0
         $x_2_2 = {11 05 07 6f ?? ?? ?? 0a 00 11 05 17 6f ?? ?? ?? 0a 00 11 05 09 6f ?? ?? ?? 0a 00 00 11 05 6f ?? ?? ?? 0a 13 06 11 06}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2270,6 +2370,7 @@ rule Trojan_MSIL_Seraph_AAPV_2147891677_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2293,6 +2394,7 @@ rule Trojan_MSIL_Seraph_AAPZ_2147891680_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2316,6 +2418,7 @@ rule Trojan_MSIL_Seraph_AAQG_2147891819_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2339,6 +2442,7 @@ rule Trojan_MSIL_Seraph_AAQI_2147891929_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2362,6 +2466,7 @@ rule Trojan_MSIL_Seraph_AAQK_2147891963_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2385,6 +2490,7 @@ rule Trojan_MSIL_Seraph_AAQX_2147892174_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2407,6 +2513,7 @@ rule Trojan_MSIL_Seraph_AARE_2147892353_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2430,6 +2537,7 @@ rule Trojan_MSIL_Seraph_AARO_2147892472_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2451,6 +2559,7 @@ rule Trojan_MSIL_Seraph_AAQC_2147892499_0
         $x_5_1 = {11 01 11 01 11 03 94 11 01 11 02 94 58 20 00 01 00 00 5d 94 13 08}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2473,6 +2582,7 @@ rule Trojan_MSIL_Seraph_AMAC_2147892659_0
         $x_1_2 = {11 2c 11 16 11 14 11 16 91 9d 11 16 17 58 13 16 11 16 11 19 32 ea}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2495,6 +2605,7 @@ rule Trojan_MSIL_Seraph_AMAF_2147892660_0
         $x_1_2 = {0a 0b 14 0c 2b 0c 00 28 ?? 00 00 06 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2519,6 +2630,7 @@ rule Trojan_MSIL_Seraph_AARZ_2147892712_0
         $x_1_4 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2540,6 +2652,7 @@ rule Trojan_MSIL_Seraph_ASAT_2147892758_0
         $x_5_1 = {01 0d 08 09 16 1a 6f ?? 00 00 0a 26 09 16 28 ?? 00 00 0a 13 04 08 16 73 ?? 00 00 0a 13 05 11 04 8d ?? 00 00 01 13 06 11 05 11 06 16 11 04 6f ?? 00 00 0a 26 11 06 13 07}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2561,6 +2674,7 @@ rule Trojan_MSIL_Seraph_AASB_2147892771_0
         $x_5_1 = {0a 06 06 6f ?? 02 00 0a 06 6f ?? 02 00 0a 6f ?? 02 00 0a 13 04 73 ?? 00 00 0a 0b 28 ?? 0e 00 06 75 ?? 00 00 1b 73 ?? 01 00 0a 0c 08 11 04 16 73 ?? 02 00 0a 0d 09 07 6f ?? 02 00 0a 07 6f ?? 00 00 0a 13 05 de 1f 09 6f ?? 00 00 0a dc}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2584,6 +2698,7 @@ rule Trojan_MSIL_Seraph_AASK_2147892970_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2605,6 +2720,7 @@ rule Trojan_MSIL_Seraph_ASDY_2147893075_0
         $x_1_1 = {0a 0c 14 0d 2b 0c 00 28 ?? 00 00 06 0d de 03 26 de 00 09 2c f1 73 ?? 00 00 0a 13 04 09 73 ?? 00 00 0a 13 05 11 05 08 16 73 ?? 00 00 0a 13 06 11 06 11 04 6f ?? 00 00 0a 11 04 6f ?? 00 00 0a 0a de}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2626,6 +2742,7 @@ rule Trojan_MSIL_Seraph_AASW_2147893157_0
         $x_5_1 = {07 08 06 08 91 7e ?? 00 00 04 59 d2 9c 08 17 58 0c 08 06 8e 69 32 e9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2647,6 +2764,7 @@ rule Trojan_MSIL_Seraph_AASX_2147893158_0
         $x_5_1 = {0a 25 08 28 ?? 04 00 06 25 17 28 ?? 04 00 06 25 18 28 ?? 04 00 06 25 06 28 ?? 04 00 06 28 ?? 04 00 06 07 16 07 8e 69 28 ?? 04 00 06 0d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2668,6 +2786,7 @@ rule Trojan_MSIL_Seraph_SPXH_2147893313_0
         $x_4_1 = {06 07 02 07 91 72 ?? ?? ?? 70 28 ?? ?? ?? 0a 59 d2 9c 07 17 58 0b 07 02 8e 69 32 e4}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2691,6 +2810,7 @@ rule Trojan_MSIL_Seraph_AATG_2147893424_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2712,6 +2832,7 @@ rule Trojan_MSIL_Seraph_AATH_2147893425_0
         $x_5_1 = {06 07 02 07 91 20 aa fb 13 b6 28 ?? 00 00 06 28 ?? 00 00 0a 59 d2 9c 07 17 58 0b 07 02 8e 69 32 df}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2733,6 +2854,7 @@ rule Trojan_MSIL_Seraph_AATJ_2147893483_0
         $x_5_1 = {16 13 04 38 ?? 00 00 00 08 11 04 16 6f ?? 00 00 0a 13 05 12 05 28 ?? 00 00 0a 13 06 09 11 06 6f ?? 00 00 0a 11 04 17 58 13 04 11 04 08 6f ?? 00 00 0a 32 d4 09 6f ?? 00 00 0a 13 07}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2754,6 +2876,7 @@ rule Trojan_MSIL_Seraph_AATN_2147893568_0
         $x_5_1 = {0a 0d 09 07 16 73 ?? 00 00 0a 13 04 2b 12 2b 14 2b 15 7e ?? 00 00 04 2b 15 2b 16 14 2b 1a de 45 11 04 2b ea 08 2b e9 6f ?? 00 00 0a 2b e4 08 2b e8 6f ?? 00 00 0a 2b e3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2775,6 +2898,7 @@ rule Trojan_MSIL_Seraph_AATS_2147893825_0
         $x_5_1 = {07 08 06 08 91 7e ?? 00 00 04 7e ?? 00 00 04 20 f8 be 66 06 28 ?? 02 00 06 28 ?? 03 00 06 59 d2 9c 08 17 58 16 2c 15 26 08 06 8e 69 16 2d f4 32 cf}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2797,6 +2921,7 @@ rule Trojan_MSIL_Seraph_AATU_2147893826_0
         $x_1_2 = "GetPixel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2818,6 +2943,7 @@ rule Trojan_MSIL_Seraph_AATV_2147893827_0
         $x_5_1 = {16 0b 2b 1b 06 07 02 07 91 20 b4 f0 97 4e 28 ?? 00 00 06 28 ?? 00 00 0a 59 d2 9c 07 17 58 0b 07 02 8e 69 32 df}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2839,6 +2965,7 @@ rule Trojan_MSIL_Seraph_AATW_2147893834_0
         $x_5_1 = {16 0b 2b 1b 06 07 02 07 91 20 37 7f 26 0e 28 ?? 00 00 06 28 ?? 00 00 0a 59 d2 9c 07 17 58 0b 07 02 8e 69 32 df}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2861,6 +2988,7 @@ rule Trojan_MSIL_Seraph_AATZ_2147893904_0
         $x_1_2 = "GetPixel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2883,6 +3011,7 @@ rule Trojan_MSIL_Seraph_AMAG_2147893946_0
         $x_5_2 = {11 2c 11 16 11 14 11 16 91 9d 17 11 16 58 13 16 11 16 11 19 32 ea}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2904,6 +3033,7 @@ rule Trojan_MSIL_Seraph_AMBA_2147893948_0
         $x_1_1 = {11 0a 11 07 11 05 11 07 28 ?? 00 00 06 20 ?? ?? 00 00 61 d1 9d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2925,6 +3055,7 @@ rule Trojan_MSIL_Seraph_AMBA_2147893948_1
         $x_5_1 = {11 06 11 03 11 01 11 03 91 11 00 59 d2 9c 20 ?? 00 00 00 38 ?? ff ff ff 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2947,6 +3078,7 @@ rule Trojan_MSIL_Seraph_AMBA_2147893948_2
         $x_1_2 = {11 33 11 13 11 0f 11 13 91 9d 17 11 13 58 13 13 11 13 11 1f 32 ea}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2968,6 +3100,7 @@ rule Trojan_MSIL_Seraph_SPAL_2147894265_0
         $x_3_1 = {09 06 02 28 ?? ?? ?? 06 14 14 14 6f ?? ?? ?? 0a 26 00 16 2d ea}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2989,6 +3122,7 @@ rule Trojan_MSIL_Seraph_SPDD_2147894377_0
         $x_4_1 = {2b 15 2b 16 14 2b 1a de 45 11 04 2b ea 08 2b e9 6f ?? ?? ?? 0a 2b e4 08 2b e8 6f ?? ?? ?? 0a 2b e3 6f ?? ?? ?? 0a 2b df 11 04 2c 07}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3010,6 +3144,7 @@ rule Trojan_MSIL_Seraph_AAUO_2147894557_0
         $x_5_1 = {11 01 11 03 16 28 ?? 00 00 06 13 0b 20 02 00 00 00 38 ?? ff ff ff 12 0b 28 ?? 00 00 0a 13 05 20 02 00 00 00 7e ?? 09 00 04 7b ?? 0a 00 04 3a ?? ff ff ff 26 20 06 00 00 00 38 ?? ff ff ff 11 0a 28 ?? 00 00 06 13 09}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3031,6 +3166,7 @@ rule Trojan_MSIL_Seraph_AAUP_2147894621_0
         $x_5_1 = {0a 25 11 02 28 ?? 01 00 06 25 17 6f ?? 00 00 0a 25 18 28 ?? 01 00 06 25 11 00 28 ?? 01 00 06 6f ?? 00 00 0a 11 01 16 11 01 8e 69 28 ?? 01 00 06 13 03}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3055,6 +3191,7 @@ rule Trojan_MSIL_Seraph_ASDZ_2147894680_0
         $x_1_4 = "Gecqvlzrgyrqfssiz" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3076,6 +3213,7 @@ rule Trojan_MSIL_Seraph_AAUV_2147894957_0
         $x_5_1 = {11 07 11 01 03 11 01 91 11 03 61 d2 9c 38 ?? 00 00 00 11 02 11 09 11 01 94 58 11 05 11 01 94 58 20 00 01 00 00 5d 13 02 38}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3100,6 +3238,7 @@ rule Trojan_MSIL_Seraph_AAUW_2147894958_0
         $x_1_4 = "Wegfijrg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3121,6 +3260,7 @@ rule Trojan_MSIL_Seraph_SPGW_2147894978_0
         $x_4_1 = {13 04 07 11 04 16 73 ?? ?? ?? 0a 0c 08 02 7b ?? ?? ?? 04 6f ?? ?? ?? 0a 02 7b ?? ?? ?? 04 6f ?? ?? ?? 0a 13 05 de 6c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3144,6 +3284,7 @@ rule Trojan_MSIL_Seraph_AAUX_2147894985_0
         $x_2_3 = "Gqqcdwcdbgolvktnfdn" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3167,6 +3308,7 @@ rule Trojan_MSIL_Seraph_AAVA_2147895062_0
         $x_2_3 = "Wglwwkblvi" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3190,6 +3332,7 @@ rule Trojan_MSIL_Seraph_AAUU_2147895075_0
         $x_1_3 = "Piusrhg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3213,6 +3356,7 @@ rule Trojan_MSIL_Seraph_AAVO_2147895475_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3241,6 +3385,7 @@ rule Trojan_MSIL_Seraph_ASFO_2147895491_0
         $x_1_8 = "25cnlnzenytwsfmhextq86ncmhehgceu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3263,6 +3408,7 @@ rule Trojan_MSIL_Seraph_AAVQ_2147895496_0
         $x_1_2 = "ReadAsByteArrayAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3285,6 +3431,7 @@ rule Trojan_MSIL_Seraph_AAVU_2147895555_0
         $x_1_2 = "GetPixel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3306,6 +3453,7 @@ rule Trojan_MSIL_Seraph_AAVX_2147895715_0
         $x_5_1 = {94 58 02 7b ?? 00 00 0a 02 7b ?? 00 00 0a 94 58 20 00 01 00 00 5d 7d ?? 00 00 0a 38 ?? 00 00 00 02 03 8e 69 8d ?? 00 00 01 7d ?? 00 00 0a 38 ?? ff ff ff 02 02 7b ?? 00 00 0a 02 7b ?? 00 00 0a 94 7d ?? 00 00 0a 20 01 00 00 00 7e ?? 00 00 04 39 ?? fd ff ff 26 20 00 00 00 00 38 ?? fd ff ff 02 7b ?? 00 00 0a 02 7b ?? 00 00 0a 03 02 7b ?? 00 00 0a 91 02 7b ?? 00 00 0a 61 d2 9c 38}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3327,6 +3475,7 @@ rule Trojan_MSIL_Seraph_AAVY_2147895730_0
         $x_5_1 = {94 58 20 00 01 00 00 5d 7d ?? 00 00 0a 20 08 00 00 00 38 ?? fd ff ff 02 02 7b ?? 00 00 0a 17 58 7d ?? 00 00 0a 20 01 00 00 00 7e ?? 00 00 04 3a ?? fd ff ff 26 38 ?? fd ff ff 02 7b ?? 00 00 0a 02 7b ?? 00 00 0a 03 02 7b ?? 00 00 0a 91 02 7b ?? 00 00 0a 61 d2 9c 20 09 00 00 00 7e ?? 00 00 04 39 ?? fd ff ff 26 38 ?? fd ff ff 02 03 8e 69 8d ?? 00 00 01 17 3a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3350,6 +3499,7 @@ rule Trojan_MSIL_Seraph_AAWB_2147895826_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3371,6 +3521,7 @@ rule Trojan_MSIL_Seraph_AAWF_2147895934_0
         $x_5_1 = {0a 0c 14 fe ?? ?? 00 00 06 73 ?? 00 00 0a 28 ?? 00 00 06 17 2c ec 28 ?? 00 00 06 75 ?? 00 00 1b 73 ?? 00 00 0a 0d 09 07 16 73 ?? 00 00 0a 13 04 11 04 08 16 2c 16 26 26 7e ?? 00 00 04 08 6f ?? 00 00 0a 14 16 2c 0c 26 26 26 de 34 6f ?? 00 00 0a 2b e5 6f ?? 00 00 0a 2b f0 11 04 2c 07 11 04 6f ?? 00 00 0a dc}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3395,6 +3546,7 @@ rule Trojan_MSIL_Seraph_GFA_2147896113_0
         $x_2_4 = "Invoke" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3416,6 +3568,7 @@ rule Trojan_MSIL_Seraph_ASP_2147896126_0
         $x_1_1 = {16 15 2d 03 26 2b 3f 0a 2b fb 00 28 16 00 00 06 17 2d 26 26 28 0b 00 00 0a 07 6f 0c 00 00 0a 72 4b 00 00 70 7e 0d 00 00 0a 6f 0e 00 00 0a 28 0f 00 00 0a 16 2c 06 26 de 13 0b 2b d8 0c 2b f8 26 de 00 06 17 58 0a 06 1b 32 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3438,6 +3591,7 @@ rule Trojan_MSIL_Seraph_GPA_2147896252_0
         $x_2_2 = {11 00 11 00 1f 0c 64 61 13 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3461,6 +3615,7 @@ rule Trojan_MSIL_Seraph_AAWI_2147896258_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3483,6 +3638,7 @@ rule Trojan_MSIL_Seraph_AMAB_2147896269_0
         $x_1_2 = {41 70 70 44 6f 6d 61 69 6e 00 67 65 74 5f 43 75 72 72 65 6e 74 44 6f 6d 61 69 6e 00 47 65 74 44 61 74 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3504,6 +3660,7 @@ rule Trojan_MSIL_Seraph_KAB_2147896282_0
         $x_5_1 = {11 02 11 01 11 02 11 01 93 20 ?? 00 00 00 61 02 61 d1 9d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3525,6 +3682,7 @@ rule Trojan_MSIL_Seraph_KAC_2147896401_0
         $x_5_1 = {11 00 11 02 02 11 02 91 72 ?? 00 00 70 28 ?? 00 00 0a 59 d2 9c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3547,6 +3705,7 @@ rule Trojan_MSIL_Seraph_KAC_2147896401_1
         $x_5_2 = "http://104.194.128.170" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3568,6 +3727,7 @@ rule Trojan_MSIL_Seraph_GP_2147896643_0
         $x_4_1 = {11 1e 11 09 11 23 11 27 61 11 1d 19 58 61 11 32 61 d2 9c}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3590,6 +3750,7 @@ rule Trojan_MSIL_Seraph_ABYE_2147896755_0
         $x_1_2 = "WindowsFormsApp75.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3611,6 +3772,7 @@ rule Trojan_MSIL_Seraph_AMBC_2147896946_0
         $x_1_1 = {11 06 11 07 11 05 11 07 28 ?? ?? 00 06 20 ?? ?? 00 00 61 d1 9d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3632,6 +3794,7 @@ rule Trojan_MSIL_Seraph_AAXA_2147897022_0
         $x_5_1 = {11 02 11 03 11 01 11 03 91 11 04 59 d2 9c 20 01 00 00 00 7e ?? 02 00 04 7b ?? 02 00 04 3a ?? fe ff ff 26 20 02 00 00 00 38 ?? fe ff ff 72 2f 00 00 70 28 ?? 00 00 0a 13 04}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3653,6 +3816,7 @@ rule Trojan_MSIL_Seraph_AAXH_2147897301_0
         $x_5_1 = {03 8e 69 5d 18 58 1b 58 1d 59 03 08 03 8e 69 5d 91 07 08 07 8e 69 5d 18 58 1b 58 1d 59 91 61 28 ?? 00 00 0a 03 08 20 89 10 00 00 58 20 88 10 00 00 59 03 8e 69 5d 91 59 20 ff 00 00 00 58 17 58 20 00 01 00 00 5d d2 9c 08 17 58 0c 08 6a 03 8e}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3676,6 +3840,7 @@ rule Trojan_MSIL_Seraph_AAXI_2147897407_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3697,6 +3862,7 @@ rule Trojan_MSIL_Seraph_AMBG_2147897542_0
         $x_2_1 = {11 1e 11 09 11 24 11 21 61 19 11 18 58 61 11}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3719,6 +3885,7 @@ rule Trojan_MSIL_Seraph_AAXS_2147897619_0
         $x_1_2 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3740,6 +3907,7 @@ rule Trojan_MSIL_Seraph_SPQN_2147897629_0
         $x_1_1 = {0a 06 16 06 8e 69 28 ?? ?? ?? 0a 06 0b dd ?? ?? ?? 00 26 de e5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3762,6 +3930,7 @@ rule Trojan_MSIL_Seraph_AAXX_2147897633_0
         $x_1_2 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3783,6 +3952,7 @@ rule Trojan_MSIL_Seraph_AAYF_2147898087_0
         $x_5_1 = {11 0a 11 09 11 02 11 09 91 11 08 11 09 11 08 28 ?? ?? 00 06 5d 6f ?? ?? 00 0a 61 d2 9c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3804,6 +3974,7 @@ rule Trojan_MSIL_Seraph_SPQF_2147898283_0
         $x_4_1 = {8d 2d 00 00 01 25 16 1f 2c 9d 28 ?? ?? ?? 0a 0d 7e ?? ?? ?? 0a 13 04 16 13 05 16 13 06 16 13 07 2b 1f}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3825,6 +3996,7 @@ rule Trojan_MSIL_Seraph_SPDF_2147898284_0
         $x_4_1 = {06 08 91 0d 06 08 06 07 08 59 17 59 91 9c 06 07 08 59 17 59 09 9c 08 17 58 0c 08 07 18 5b 32 e0}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3846,6 +4018,7 @@ rule Trojan_MSIL_Seraph_AAYI_2147898290_0
         $x_5_1 = {06 16 2c 43 26 06 8e 69 1c 2c 19 16 2d 2f 8d ?? 00 00 01 16 2c 34 26 16 15 2d 32 26 15 2c e6 06 8e 69 17 59 16 2c 29 26 2b 14 07 08 06 09 91 9c 08 16 2d d4 17 58 16 2c 1a 26 09 17 59 0d 09 16 2f e8 07 13 04 de 15 0a 2b bb 0b 2b ca 0c 2b cc 0d 2b d5 0c 2b e4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3868,6 +4041,7 @@ rule Trojan_MSIL_Seraph_AMBE_2147898292_0
         $x_1_2 = {06 09 16 07 6f ?? 00 00 0a 26 1e 13 08 2b bd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3889,6 +4063,7 @@ rule Trojan_MSIL_Seraph_AAYT_2147898585_0
         $x_5_1 = {06 09 91 13 04 06 09 06 07 09 59 17 59 91 9c 06 07 09 59 17 59 11 04 9c 09 17 58 0d 09 08 32 e0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3910,6 +4085,7 @@ rule Trojan_MSIL_Seraph_AAYV_2147898600_0
         $x_5_1 = {16 0a 2b 1c 11 04 06 08 06 91 20 b4 74 14 a6 28 ?? 00 00 06 28 ?? 00 00 0a 59 d2 9c 06 17 58 0a 06 08 8e 69 32 de}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3933,6 +4109,7 @@ rule Trojan_MSIL_Seraph_AAYZ_2147898683_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3956,6 +4133,7 @@ rule Trojan_MSIL_Seraph_AAZB_2147898685_0
         $x_1_3 = "GetByteArrayAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3977,6 +4155,7 @@ rule Trojan_MSIL_Seraph_AAZE_2147898706_0
         $x_5_1 = {07 08 06 09 91 9c 08 17 25 2c f1 58 0c 09 17 25 2c ea 59 0d 09 16 2f e8 07 13 04 de 30}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3998,6 +4177,7 @@ rule Trojan_MSIL_Seraph_SSPP_2147898792_0
         $x_4_1 = {06 09 91 13 04 06 09 06 07 09 59 17 59 91 9c 06 07 09 59 17 59 11 04 9c 09 17 58 0d}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4020,6 +4200,7 @@ rule Trojan_MSIL_Seraph_SG_2147898801_0
         $x_2_2 = "//downloadfilekee.lol/" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4041,6 +4222,7 @@ rule Trojan_MSIL_Seraph_AAZM_2147898894_0
         $x_5_1 = {50 08 02 50 06 08 59 17 59 91 9c 02 50 06 08 59 17 59 09 9c 16 2d 14 16 2d da 08 17 58 0c 16 2d d5}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4064,6 +4246,7 @@ rule Trojan_MSIL_Seraph_AAZP_2147898896_0
         $x_1_3 = "GetByteArrayAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4086,6 +4269,7 @@ rule Trojan_MSIL_Seraph_AAZR_2147898986_0
         $x_2_2 = {11 00 11 01 11 07 59 17 59 11 08 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4108,6 +4292,7 @@ rule Trojan_MSIL_Seraph_AAYB_2147899009_0
         $x_2_2 = {11 08 11 02 11 09 11 02 91 11 04 61 d2 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4130,6 +4315,7 @@ rule Trojan_MSIL_Seraph_AAZS_2147899049_0
         $x_2_2 = {02 50 11 00 11 02 59 17 59 11 03 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4151,6 +4337,7 @@ rule Trojan_MSIL_Seraph_AAZT_2147899063_0
         $x_5_1 = {02 50 08 91 0d 02 50 08 02 50 06 08 59 17 59 91 9c 02 50 06 08 59 17 59 09 9c 08 17 58 0c 08 07 32 de}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4173,6 +4360,7 @@ rule Trojan_MSIL_Seraph_AAZX_2147899203_0
         $x_2_2 = {02 50 11 02 02 50 11 00 11 02 59 17 59 91}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4195,6 +4383,7 @@ rule Trojan_MSIL_Seraph_AAZZ_2147899229_0
         $x_2_2 = {02 50 11 00 11 04 59 17 59 11 03 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4216,6 +4405,7 @@ rule Trojan_MSIL_Seraph_AAAA_2147899250_0
         $x_5_1 = {02 08 02 8e 69 5d 1f 0f 59 1f 0f 58 02 08 02 8e 69 5d 91 07 08 07 8e 69 5d 1f 09 58 1f 0a 58 1f 13 59 91 61 28 ?? 00 00 0a 02 08 20 89 10 00 00 58 20 88 10 00 00 59 02 8e 69 5d 91 59 20 ff 00 00 00 58 17 58 20 00 01 00 00 5d d2 9c 08 17 58 0c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4238,6 +4428,7 @@ rule Trojan_MSIL_Seraph_AAAC_2147899442_0
         $x_1_2 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4260,6 +4451,7 @@ rule Trojan_MSIL_Seraph_AAAG_2147899650_0
         $x_1_2 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4282,6 +4474,7 @@ rule Trojan_MSIL_Seraph_AAAI_2147899654_0
         $x_2_2 = {11 06 11 01 11 03 59 17 59 11 05 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4304,6 +4497,7 @@ rule Trojan_MSIL_Seraph_AAAL_2147899731_0
         $x_1_2 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4326,6 +4520,7 @@ rule Trojan_MSIL_Seraph_AAAN_2147899814_0
         $x_2_2 = {11 06 11 01 11 02 59 17 59 11 03 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4347,6 +4542,7 @@ rule Trojan_MSIL_Seraph_ADAA_2147900164_0
         $x_5_1 = {0b 2b 2e 16 2b 2e 2b 33 2b 38 16 2d 09 2b 09 2b 0a 6f ?? 00 00 0a de 10 08 2b f4 07 2b f3 08 2c 06 08 6f ?? 00 00 0a dc 07 6f ?? 00 00 0a 0d de 2e 06 2b cf 73 ?? 00 00 0a 2b cb 73 ?? 00 00 0a 2b c6 0c 2b c5}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4368,6 +4564,7 @@ rule Trojan_MSIL_Seraph_SSSP_2147900209_0
         $x_4_1 = {2b 1e 11 0d 6f ?? ?? ?? 0a 13 25 11 0c 11 25 11 15 59 61 13 0c 11 15 11 0c 19 58 1e 63 59 13 15 11 0d 6f ?? ?? ?? 06 2d d9 de 0c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4389,6 +4586,7 @@ rule Trojan_MSIL_Seraph_AEAA_2147900217_0
         $x_5_1 = {07 08 07 8e 69 5d 1f 09 58 1f 0b 58 1f 14 59 91 61 28 ?? 00 00 0a ?? 08 20 89 10 00 00 58 20 88 10 00 00 59 ?? 8e 69 5d 91 59 20 ff 00 00 00 58 17 58 20 00 01 00 00 5d d2 9c 08 17 58 0c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4410,6 +4608,7 @@ rule Trojan_MSIL_Seraph_AAAV_2147900420_0
         $x_5_1 = {16 0a 2b 1c 11 04 06 08 06 91 20 ?? ?? ?? ?? 28 ?? 00 00 06 28 ?? ?? 00 0a 59 d2 9c 06 17 58 0a 06 08 8e 69 32 de}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4431,6 +4630,7 @@ rule Trojan_MSIL_Seraph_AQAA_2147900608_0
         $x_5_1 = {02 50 08 91 0d 02 50 08 02 50 06 08 59 17 59 91 9c 02 50 06 08 59 17 59 09 9c 08 17 58 0c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4453,6 +4653,7 @@ rule Trojan_MSIL_Seraph_ARAA_2147900609_0
         $x_1_2 = "GetByteArrayAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4474,6 +4675,7 @@ rule Trojan_MSIL_Seraph_AVAA_2147900793_0
         $x_5_1 = {06 17 58 0a 06 1b 32 f8 03 75 ?? 00 00 1b 28 ?? 00 00 2b 28 ?? 00 00 2b 28 ?? 00 00 0a 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4495,6 +4697,7 @@ rule Trojan_MSIL_Seraph_PTGF_2147900866_0
         $x_2_1 = {38 ea fa ff ff 11 01 28 ?? 00 00 06 11 07 28 ?? 00 00 06 28 ?? 00 00 06 6f 32 00 00 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4516,6 +4719,7 @@ rule Trojan_MSIL_Seraph_BAAA_2147900886_0
         $x_5_1 = {07 08 06 08 91 7e ?? 00 00 04 59 d2 9c 08 17 58 0c 08 06 8e 69 32 e9 07 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4537,6 +4741,7 @@ rule Trojan_MSIL_Seraph_BFAA_2147900975_0
         $x_5_1 = {03 75 01 00 00 1b 28 ?? 00 00 2b 28 ?? 00 00 2b 28 ?? 00 00 0a 2a 11 01 17 58 13 01}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4558,6 +4763,7 @@ rule Trojan_MSIL_Seraph_BJAA_2147901004_0
         $x_5_1 = {06 08 06 07 08 59 17 59 91 9c 06 07 08 59 17 59 09 9c 08 17}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4579,6 +4785,7 @@ rule Trojan_MSIL_Seraph_BKAA_2147901045_0
         $x_5_1 = {16 0a 2b 0e 02 06 02 06 91 1f 7b 61 d2 9c 06 17 58 0a 06 02 8e 69 32 ec}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4600,6 +4807,7 @@ rule Trojan_MSIL_Seraph_SPDU_2147901196_0
         $x_4_1 = {0a 2b d9 06 2b e0 0a 2b e4 06 2b e3 03 2b e5 28 ?? ?? ?? 2b 2b e5 28 ?? ?? ?? 2b 2b e0 28 1a}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4621,6 +4829,7 @@ rule Trojan_MSIL_Seraph_BTAA_2147901262_0
         $x_5_1 = {2b 1c de 20 28 ?? 00 00 06 2b e5 0a 2b e4 06 2b e6 06 2b e6 28 ?? 00 00 0a 2b e3 06 2b e2 0b 2b e1 26 de c3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4642,6 +4851,7 @@ rule Trojan_MSIL_Seraph_SPDV_2147901365_0
         $x_5_1 = {06 28 01 00 00 2b 28 02 00 00 2b 28 51 00 00 0a 02 7b 15 00 00 04 03 04 58 07 58 6f 8d 00 00 06 6f 52 00 00 0a 28 03 00 00 2b 25 2d 02}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4663,6 +4873,7 @@ rule Trojan_MSIL_Seraph_CCAA_2147901455_0
         $x_5_1 = {11 08 28 02 00 00 2b 28 ?? 00 00 2b 13 08 20 01 00 00 00 7e ?? 00 00 04 7b ?? 00 00 04 3a ?? ff ff ff 26}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4684,6 +4895,7 @@ rule Trojan_MSIL_Seraph_SPCX_2147901597_0
         $x_5_1 = {03 73 36 00 00 0a 28 ?? ?? ?? 0a 0c 08 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 0d 09 06 6f ?? ?? ?? 0a 06 6f ?? ?? ?? 0a 13 04 11 04 13 07 de 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4705,6 +4917,7 @@ rule Trojan_MSIL_Seraph_CMAA_2147901706_0
         $x_5_1 = {06 16 06 8e 69 28 ?? 00 00 0a 38 ?? 00 00 00 07 16 3c ?? 00 00 00 28 ?? 00 00 06 38 ?? 00 00 00 28 ?? 00 00 06 06 28 ?? 00 00 0a 0c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4726,6 +4939,7 @@ rule Trojan_MSIL_Seraph_SPPX_2147901908_0
         $x_5_1 = {0a 07 18 5d 2d 07 28 ?? ?? ?? 06 2b 05 28 ?? ?? ?? 06 06 16 06 8e 69 28 ?? ?? ?? 0a 2b 10 07 16 2f 07}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4748,6 +4962,7 @@ rule Trojan_MSIL_Seraph_AMCC_2147901982_0
         $x_1_2 = {06 1f 20 58 28 ?? 00 00 0a 52 06 1f 20 58 46 2c 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4769,6 +4984,7 @@ rule Trojan_MSIL_Seraph_CYAA_2147902018_0
         $x_5_1 = {16 0b 2b 0e 06 07 02 07 91 1f 7b 61 d2 9c 07 17 58 0b 07 02 8e 69 32 ec}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4791,6 +5007,7 @@ rule Trojan_MSIL_Seraph_DHAA_2147902221_0
         $x_1_2 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4813,6 +5030,7 @@ rule Trojan_MSIL_Seraph_DIAA_2147902284_0
         $x_1_2 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4834,6 +5052,7 @@ rule Trojan_MSIL_Seraph_SPPY_2147902323_0
         $x_4_1 = {38 00 00 00 00 11 09 28 ?? ?? ?? 2b 28 ?? ?? ?? 2b 13 09 20}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4862,6 +5081,7 @@ rule Trojan_MSIL_Seraph_ASBA_2147902396_0
         $x_1_8 = "Deliveroo VM" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4883,6 +5103,7 @@ rule Trojan_MSIL_Seraph_SPYU_2147902839_0
         $x_4_1 = {08 15 31 0c 07 28 ?? ?? ?? 2b 28 02 00 00 2b 0b}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4904,6 +5125,7 @@ rule Trojan_MSIL_Seraph_EQAA_2147903179_0
         $x_5_1 = {59 91 61 03 08 20 8a 10 00 00 58 20 89 10 00 00 59 03 8e 69 5d 1f 09 58 1f 0e 58 1f 17 59 91 59 20 fe 00 00 00 58 18 58 20 00 01 00 00 5d d2 9c 08 17 58 0c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4925,6 +5147,7 @@ rule Trojan_MSIL_Seraph_EVAA_2147903183_0
         $x_5_1 = {59 91 61 04 08 20 8a 10 00 00 58 20 89 10 00 00 59 04 8e 69 5d 1f 09 58 1f 0d 58 1f 16 59 91 59 20 fe 00 00 00 58 18 58 20 00 01 00 00 5d d2 9c 08 17 58}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4946,6 +5169,7 @@ rule Trojan_MSIL_Seraph_FFAA_2147903193_0
         $x_5_1 = {8e 69 5d 1f 09 58 1f 0b 58 1f 14 59 91 07 08 07 8e 69 5d 1f 09 58 1f 0b 58 1f 14 59 91 61 ?? 08 20 8a 10 00 00 58 20 89 10 00 00 59}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4967,6 +5191,7 @@ rule Trojan_MSIL_Seraph_FPAA_2147903415_0
         $x_5_1 = {59 91 61 03 08 20 8b 10 00 00 58 20 8a 10 00 00 59 03 8e 69 5d 1f 09 58 1f 0c 58 1f 15 59 91 59 20 fe 00 00 00 58 18 58 20 00 01 00 00 5d d2 9c 08 17 58}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4988,6 +5213,7 @@ rule Trojan_MSIL_Seraph_FTAA_2147903562_0
         $x_5_1 = {11 00 16 11 00 8e 69 28 ?? 00 00 0a 20 00 00 00 00 7e ?? 00 00 04 7b}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5009,6 +5235,7 @@ rule Trojan_MSIL_Seraph_SPCZ_2147903567_0
         $x_4_1 = {0a 07 02 11 09 06 28 ?? ?? ?? 06 6f ?? ?? ?? 0a 11 08 17 58 13 08 11 08 11 05 8e 69 32 ad}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5030,6 +5257,7 @@ rule Trojan_MSIL_Seraph_GBAA_2147903766_0
         $x_5_1 = {14 13 04 2b 14 00 28 ?? 00 00 06 13 04 11 04 28 ?? 00 00 0a de 03 26 de 00 11 04 2c e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5051,6 +5279,7 @@ rule Trojan_MSIL_Seraph_SPDC_2147903834_0
         $x_5_1 = {73 01 00 00 0a 72 01 00 00 70 28 ?? ?? ?? 0a 0a 06 16 06 8e 69 28 ?? ?? ?? 0a dd 09 00 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5072,6 +5301,7 @@ rule Trojan_MSIL_Seraph_SPBP_2147904143_0
         $x_5_1 = {0b 06 07 28 ?? ?? ?? 2b 28 ?? ?? ?? 2b 16 07 8e 69 6f ?? ?? ?? 0a de 03 26}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5094,6 +5324,7 @@ rule Trojan_MSIL_Seraph_MBZB_2147904267_0
         $x_1_2 = {49 53 68 61 70 65 00 43 69 72 63 6c 65 00 52 65 73 6f 75 72 63 65 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5115,6 +5346,7 @@ rule Trojan_MSIL_Seraph_GMAA_2147904283_0
         $x_5_1 = {06 17 58 0a 06 20 00 01 00 00 5d 0a 08 11 06 06 94 58 0c 08 20 00 01 00 00 5d 0c 11 06 06 94 13 04 11 06 06 11 06 08 94 9e 11 06 08 11 04 9e 11 06 11 06 06 94 11 06 08 94 58 20 00 01 00 00 5d 94 0d 11 07 07 03 07 91 09 61 d2 9c 07 17 58 0b 07 03 8e 69 3f}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5136,6 +5368,7 @@ rule Trojan_MSIL_Seraph_GRAA_2147904387_0
         $x_5_1 = {59 91 61 04 08 20 ?? ?? 00 00 58 20 ?? ?? 00 00 59 04 8e 69 5d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5157,6 +5390,7 @@ rule Trojan_MSIL_Seraph_GUAA_2147904470_0
         $x_5_1 = {11 05 11 03 28 ?? 00 00 2b 28 ?? 00 00 2b 16 11 03 8e 69}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5178,6 +5412,7 @@ rule Trojan_MSIL_Seraph_HEAA_2147904829_0
         $x_5_1 = {02 00 0a 0a 06 28 ?? ?? 00 0a 02 06 28 ?? 02 00 0a 7d ?? 00 00 04 de 03 26 de 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5199,6 +5434,7 @@ rule Trojan_MSIL_Seraph_HNAA_2147904954_0
         $x_5_1 = {11 01 11 04 11 00 11 04 91 11 02 11 04 11 02 28 ?? 00 00 06 5d 28 ?? 00 00 06 61 d2 9c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5220,6 +5456,7 @@ rule Trojan_MSIL_Seraph_SPBN_2147905292_0
         $x_5_1 = {09 11 05 16 73 ?? ?? ?? 0a 13 04 11 04 08 6f ?? ?? ?? 0a 08 6f ?? ?? ?? 0a 0b de 20}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5241,6 +5478,7 @@ rule Trojan_MSIL_Seraph_HZAA_2147905332_0
         $x_5_1 = {0a 07 07 6f ?? 00 00 0a 07 6f ?? 00 00 0a 6f ?? 00 00 0a 0c 2b 0c 00 28 ?? 00 00 06 0a de 03 26 de 00 06 2c f1 73 ?? 00 00 0a 0d 06 73 ?? 00 00 0a 13 04 11 04 08 16 73 ?? 00 00 0a 13 05 11 05 09 6f ?? 00 00 0a 09 6f ?? 00 00 0a 0a de 2c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5262,6 +5500,7 @@ rule Trojan_MSIL_Seraph_IAAA_2147905333_0
         $x_5_1 = {91 07 06 1a 58 4a 07 8e 69 5d 1f 09 58 1f 0c 58 1f 15 59 91 61 03 06 1a 58 4a 20 ?? ?? 00 00 58 20 ?? ?? 00 00 59 03 8e 69 5d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5283,6 +5522,7 @@ rule Trojan_MSIL_Seraph_IRAA_2147905866_0
         $x_5_1 = {16 0d 38 16 00 00 00 08 09 07 09 91 72 01 00 00 70 28 ?? 00 00 0a 59 d2 9c 09 17 58 0d 09 07 8e 69 32 e4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5304,6 +5544,7 @@ rule Trojan_MSIL_Seraph_KAE_2147907696_0
         $x_1_1 = {07 08 06 08 91 7e ?? ?? 00 04 59 d2 9c 08 17 58 0c 08 06 8e 69 32 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5327,6 +5568,7 @@ rule Trojan_MSIL_Seraph_KNAA_2147907704_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5348,6 +5590,7 @@ rule Trojan_MSIL_Seraph_SPDH_2147907726_0
         $x_1_1 = {5d 91 61 11 [0-10] 91 59 20 00 01 00 00 58 d2 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5369,6 +5612,7 @@ rule Trojan_MSIL_Seraph_SPFV_2147908220_0
         $x_1_1 = {06 02 07 6f 7e 00 00 0a 03 07 6f 7e 00 00 0a 61 60 0a 07 17 58 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5391,6 +5635,7 @@ rule Trojan_MSIL_Seraph_MSAA_2147910276_0
         $x_1_2 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5419,6 +5664,7 @@ rule Trojan_MSIL_Seraph_ZY_2147910583_0
         $x_1_8 = "d58e08cd-3b9b-4e9b-b04a-2c9ef8faab75" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5443,6 +5689,7 @@ rule Trojan_MSIL_Seraph_ARA_2147910757_0
         $x_1_4 = "Invoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5464,6 +5711,7 @@ rule Trojan_MSIL_Seraph_SSXP_2147910851_0
         $x_4_1 = {7e 02 00 00 04 08 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 2c 06 08 6f ?? ?? ?? 0a de 03 26 de 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5486,6 +5734,7 @@ rule Trojan_MSIL_Seraph_OVAA_2147912494_0
         $x_1_2 = "GetByteArrayAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5507,6 +5756,7 @@ rule Trojan_MSIL_Seraph_UBAA_2147919099_0
         $x_5_1 = {59 1d 58 1d 59 91 61 03 06 1a 58 4a 20 10 02 00 00 58 20 0f 02 00 00 59 03 8e 69 5d 1f 09 58 1f 0d 58 1f 16 59 1b 58 1b 59 91 59 20 fc 00 00 00 58 1a 58 20 00 01 00 00 5d d2 9c 06 1a 58 06 1a 58 4a 17 58 54}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5528,6 +5778,7 @@ rule Trojan_MSIL_Seraph_UIAA_2147919389_0
         $x_5_1 = {0a 0b 07 20 ?? 77 00 00 28 ?? 01 00 06 28 ?? 00 00 0a 20 ?? 77 00 00 28 ?? 01 00 06 28 ?? 00 00 0a 6f ?? 00 00 0a 0c 73 ?? 00 00 0a 0d 09 08 17 73 ?? 00 00 0a 13 04 11 04 06 16 06 8e 69 6f ?? 00 00 0a 09 6f ?? 00 00 0a 0a de 0c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5549,6 +5800,7 @@ rule Trojan_MSIL_Seraph_UZAA_2147919933_0
         $x_5_1 = {91 61 04 08 20 0f 02 00 00 58 20 0e 02 00 00 59 18 59 18 58 04 8e 69 5d 1f 09 58 1f 0b 58 1f 14 59 91 59 20 fb 00 00 00 58 1b 58 20 00 01 00 00 5d d2 9c 08 17 58}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5570,6 +5822,7 @@ rule Trojan_MSIL_Seraph_SPXF_2147928388_0
         $x_1_1 = {07 09 02 09 91 06 08 93 28 ?? ?? ?? 0a 61 d2 9c 08 17 58 0c 09 17 58 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5592,6 +5845,7 @@ rule Trojan_MSIL_Seraph_AYMA_2147935100_0
         $x_1_2 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5613,6 +5867,7 @@ rule Trojan_MSIL_Seraph_AWUA_2147942065_0
         $x_5_1 = {16 13 04 2b 1f 08 11 04 07 11 04 91 09 11 04 09 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 61 d2 9c 11 04 17 58 13 04 11 04 07 8e 69 32 da 06 08 6f ?? 00 00 0a 06 16 6f ?? 00 00 0a 13 05 de 03 26 de 93 11 05 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

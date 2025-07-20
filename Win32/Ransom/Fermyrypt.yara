@@ -18,6 +18,7 @@ rule Ransom_Win32_Fermyrypt_A_2147722827_0
         $x_2_4 = {0f b6 04 07 33 c6 c1 ee 08 0f b6 c0 33 34 83 8b 44 24 10 33 f2 47 3b fd 7c e6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

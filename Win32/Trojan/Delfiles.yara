@@ -19,6 +19,7 @@ rule Trojan_Win32_Delfiles_Q_2147639016_0
         $x_1_5 = "taskkill /f /t /im" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -18,6 +18,7 @@ rule Trojan_Win32_Stoberox_A_2147651091_0
         $x_1_4 = {c1 e9 02 f3 a5 0f b7 53 06 8d 83 f8 00 00 00 8b 48 10 8b 70 14 8b 78 0c 03 75 e8 03 7d e0 f3 a4 83 c0 28 4a 75 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Stoberox_B_2147672221_0
         $x_1_2 = {8b 7d fc 8b 77 3c 85 f6 74 ?? 33 d2 66 ad 84 c0 74 11 3c 41 72 06 3c 5a 77 02 0c 20 c1 c2 03 32 d0 eb e9 8b 75 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

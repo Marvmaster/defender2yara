@@ -18,6 +18,7 @@ rule Trojan_Win32_RagnarLocker_A_2147753437_0
         $x_1_3 = "bootsect.bak" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

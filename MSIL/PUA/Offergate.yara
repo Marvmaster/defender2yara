@@ -18,6 +18,7 @@ rule PUA_MSIL_Offergate_J_259985_0
         $x_1_3 = {0a 13 09 12 09 fe 16 ?? 00 00 01 6f ?? 00 00 0a 72 ?? ?? 00 70 28 ?? 00 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanClicker_Win32_Midie_MBXV_2147923612_0
         $x_1_1 = {98 18 40 00 13 f8 30 00 00 ff ff ff 08 00 00 00 01 00 00 00 02 00 01 00 e9 00 00 00 48 14 40 00 e8 14 40 00 ec 10 40 00 78 00 00 00 80 00 00 00 87 00 00 00 88}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

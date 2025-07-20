@@ -16,6 +16,7 @@ rule Trojan_Win32_Leivion_A_2147725335_0
         $x_1_2 = {83 c0 04 ff d0 c7 45 f4 00 00 00 00 eb 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule Trojan_Win32_Leivion_E_2147727845_0
         $x_1_1 = {28 0b 00 00 0a 11 05 16 20 bf 00 00 00 9c 11 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -57,6 +59,7 @@ rule Trojan_Win32_Leivion_G_2147728043_0
         $x_1_2 = {4d 00 48 00 68 00 6d 00 59 00 79 00 77 00 77 00 65 00 47 00 55 00 34 00 4c 00 44 00 42 00 34 00 4f 00 44 00 6b 00 73 00 4d 00 48 00 67 00 77 00 4d 00 43 00 77 00 77 00 65 00 44 00 41 00 77 00 4c 00 44 00 42 00 34 00 4d 00 44 00 41 00 73 00 4d 00 48 00 67 00 32 00 4d 00 43 00 77 00 77 00 65 00 44 00 67 00 35 00 4c 00 44 00 42 00 34 00 5a 00 54 00 55 00 73 00 4d 00 48 00 67 00 7a 00 4d 00 53 00 77 00 77 00 65 00 47 00 51 00 79 00 4c 00 44 00 42 00 34 00 4e 00 6a 00 51 00 73 00 4d 00 48 00 67 00 34 00 59 00 69 00 77 00 77 00 65 00 44 00 55 00 79 00 4c 00 44 00 42 00 34 00 4d 00 7a 00 41 00 73 00 4d 00 48}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -78,6 +81,7 @@ rule Trojan_Win32_Leivion_I_2147728052_0
         $x_1_2 = {fc e8 89 00 00 00 60 89 e5 31 d2 64 8b 52 30 8b 52 0c 8b 52 14 8b 72 28 0f b7 4a 26 31 ff 31 c0 ac 3c 61 7c 02 2c 20 c1 cf 0d 01 c7 e2 f0 52 57 8b 52 10 8b 42 3c 01 d0 8b 40 78 85 c0 74 4a 01 d0 50 8b 48 18 8b 58 20 01 d3 e3 3c 49 8b 34 8b 01 d6 31 ff 31 c0 ac c1 cf 0d 01 c7 38 e0 75 f4 03 7d f8 3b 7d 24 75 e2 58 8b 58 24 01 d3 66 8b 0c 4b 8b 58 1c 01 d3 8b 04 8b 01 d0 89 44 24 24 5b 5b 61 59 5a 51 ff e0 58 5f 5a 8b 12 eb 86 5d 68 33 32 00 00 68 77 73 32 5f 54 68 4c 77 26 07 ff d5 b8 90 01 00 00 29 c4 54 50 68 29 80 6b 00 ff d5 50 50 50 50 40 50 40 50 68 ea 0f df e0 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -124,6 +128,7 @@ rule Trojan_Win32_Leivion_L_2147728117_0
         $x_1_2 = {c7 44 24 0c 40 00 00 00 c7 44 24 08 00 10 00 00 89 44 24 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +151,7 @@ rule Trojan_Win32_Leivion_O_2147728187_0
         $x_1_3 = {63 74 20 3d 20 6b 65 72 6e 65 6c 33 32 2e 43 72 65 61 74 65 54 68 72 65 61 64 0a 63 74 3a 74 79 70 65 73 7b 20 72 65 74 20 3d 20 27 69 6e 74 27 2c 20 61 62 69 20 3d 20 27 73 74 64 63 61 6c 6c 27 2c 20 27 69 6e 74 27 2c 20 27 69 6e 74 27 2c 20 27 69 6e 74 27 2c 20 27 69 6e 74 27 2c 20 27 69 6e 74 27 2c 20 27 72 65 66 20 69 6e 74 27 7d 0a 68 74 20 3d 20 63 74 28 30 2c 20 30 2c 20 70 74 72 2c 20 30 2c 20 30 2c 20 30 29}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +176,7 @@ rule Trojan_Win32_Leivion_S_2147729339_0
         $x_10_5 = {b9 bf 00 00 00 88 0a 88 42 01 31 c0 88 42 02 31 c0 88 42 03 31 c0}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

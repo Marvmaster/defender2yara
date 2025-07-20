@@ -18,6 +18,7 @@ rule Trojan_MacOS_X_DaclsRAT_A_2147754803_0
         $x_1_3 = {63 68 65 63 6b 00 7b 22 72 65 73 75 6c 74 22 3a 22 6f 6b 22 7d 00 73 61 76 65 00 73 65 73 73 69 6f 6e 5f 69 64 00 76 61 6c 75 65 00 25 59 2d 25 6d 2d 25 64 20 25 58 00 53 43 41 4e 09 25 73 09 25 64 2e 25 64 2e 25 64 2e 25 64 09 25 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (1 of ($x*))
 }
 

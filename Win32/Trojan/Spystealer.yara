@@ -17,6 +17,7 @@ rule Trojan_Win32_Spystealer_VZ_2147819903_0
         $x_10_2 = {2e 00 00 00 c7 44 24 ?? 00 ac 01 00 c7 44 24 ?? 20 c0 4b 00 c7 04 24 ?? ?? ?? ?? 89 85 54 ff ff ff}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Backdoor_Win32_Zapchast_D_2147617814_0
         $x_10_8 = "+H +S @$&%02\\temp\\spool" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*))) or
             (all of ($x*))

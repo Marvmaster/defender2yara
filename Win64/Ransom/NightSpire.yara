@@ -20,6 +20,7 @@ rule Ransom_Win64_NightSpire_BA_2147944525_0
         $x_1_5 = "onionmail.org" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win64_NightSpire_YAF_2147945133_0
         $x_1_5 = "Go build ID:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

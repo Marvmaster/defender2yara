@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Neup_A_2147642276_0
         $x_1_7 = {00 67 67 5f 73 70 69 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or

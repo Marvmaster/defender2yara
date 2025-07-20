@@ -16,6 +16,7 @@ rule Ransom_Win32_NordCrypter_YAA_2147915635_0
         $x_1_1 = {0f 43 f3 33 d2 f7 75 fc 47 8a 04 32 8b 55 f8 32 04 0a 8b 55 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

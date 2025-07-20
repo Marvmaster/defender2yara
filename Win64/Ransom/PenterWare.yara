@@ -17,6 +17,7 @@ rule Ransom_Win64_PenterWare_GS_2147898764_0
         $x_1_2 = "vssadmin.exe delete shadows /all /quiet /?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

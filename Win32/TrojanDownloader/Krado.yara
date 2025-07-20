@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Krado_A_2147681883_0
         $x_10_8 = {fe 65 00 00 00 03 00 c7 44 (41|43|46|47)}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))

@@ -18,6 +18,7 @@ rule Trojan_Win32_WmRAT_GA_2147928645_0
         $x_2_3 = {6a 00 b8 04 00 00 00 2b c6 50 8d 0c 3e 51 52 ff ?? 83 f8 ff ?? ?? 03 f0 83 fe 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

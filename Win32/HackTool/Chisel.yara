@@ -20,6 +20,7 @@ rule HackTool_Win32_Chisel_A_2147778169_0
         $x_1_6 = "chisel.pid" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule HackTool_Win32_Chisel_B_2147781462_0
         $x_1_5 = "invalidlookup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

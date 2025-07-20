@@ -18,6 +18,7 @@ rule Trojan_Win32_AtlasClipper_SK_2147850740_0
         $x_2_3 = "https://t.me/atlasclipper_channel" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

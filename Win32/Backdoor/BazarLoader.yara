@@ -28,6 +28,7 @@ rule Backdoor_Win32_BazarLoader_2147775170_0
         $x_1_13 = "Fuck Def" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

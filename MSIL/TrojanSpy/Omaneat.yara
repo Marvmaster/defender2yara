@@ -28,6 +28,7 @@ rule TrojanSpy_MSIL_Omaneat_A_2147695700_0
         $x_1_14 = {11 05 1a 5c 58 11 05 11 05 65 58 1f 1e 62 33 0d 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -59,6 +60,7 @@ rule TrojanSpy_MSIL_Omaneat_B_2147697422_0
         $x_1_12 = "Proactive Anti-Malware could not be enabled because this client does not use Luminosity's startup!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -82,6 +84,7 @@ rule TrojanSpy_MSIL_Omaneat_C_2147706930_0
         $x_1_4 = "LuminosityCryptoMiner" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -104,6 +107,7 @@ rule TrojanSpy_MSIL_Omaneat_H_2147717382_0
         $x_1_2 = {03 50 06 03 50 06 91 02 7b ?? ?? ?? ?? 06 02 7b ?? ?? ?? ?? 8e 69 5d 91 61 28 ?? ?? ?? ?? 9c 06 17 58 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule TrojanSpy_MSIL_Omaneat_I_2147718890_0
         $x_1_5 = "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

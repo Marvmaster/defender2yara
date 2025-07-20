@@ -19,6 +19,7 @@ rule Trojan_Win32_DyCode_A_2147639888_0
         $x_1_5 = {53 48 45 4c 4c 00 00 00 43 4f 44 45 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -44,6 +45,7 @@ rule Trojan_Win32_DyCode_C_2147642520_0
         $x_1_2 = {66 bf 80 00 be ef 00 00 00 bf fb 00 00 00 b9 a5 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_DyCode_D_2147642618_0
         $x_1_3 = {c1 c0 07 03 ?? 41 80 39 00 e9 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

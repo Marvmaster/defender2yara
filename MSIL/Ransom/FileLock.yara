@@ -18,6 +18,7 @@ rule Ransom_MSIL_FileLock_A_2147729942_0
         $x_1_4 = "/c vssadmin.exe delete shadows /all /quiet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Ransom_MSIL_FileLock_B_2147731405_0
         $x_1_2 = "b03f5f7f11d50a3aPADPAD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

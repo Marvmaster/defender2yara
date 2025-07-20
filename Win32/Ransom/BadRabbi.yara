@@ -19,6 +19,7 @@ rule Ransom_Win32_BadRabbi_SL_2147756908_0
         $x_2_4 = "This is your recovery key:" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_2_*))) or
             (all of ($x*))

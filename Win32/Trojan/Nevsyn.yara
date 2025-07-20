@@ -19,6 +19,7 @@ rule Trojan_Win32_Nevsyn_A_2147654885_0
         $x_1_5 = "synserver" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

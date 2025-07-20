@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Neptaven_A_2147598386_0
         $x_1_6 = {53 68 80 00 00 00 6a 02 53 6a 01 68 00 00 00 40 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

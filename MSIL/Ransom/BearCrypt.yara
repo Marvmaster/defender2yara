@@ -21,6 +21,7 @@ rule Ransom_MSIL_BearCrypt_SK_2147753434_0
         $x_1_6 = "MaMo434376 Protector" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Ransom_MSIL_BearCrypt_SM_2147753438_0
         $x_1_8 = ".iso" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_5_*) and 4 of ($x_1_*))) or
             ((1 of ($x_20_*) and 3 of ($x_5_*))) or

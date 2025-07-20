@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_LummaStealer_CCFF_2147898893_0
         $x_1_1 = {89 ca 83 e2 ?? 0f b6 54 14 ?? 32 54 0e ?? 88 14 0e 8d 51 ?? 83 e2 ?? 0f b6 54 14 ?? 32 54 0e ?? 88 54 0e ?? 83 c1 ?? 39 c8 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

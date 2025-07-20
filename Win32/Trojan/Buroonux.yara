@@ -19,6 +19,7 @@ rule Trojan_Win32_Buroonux_A_2147687791_0
         $x_1_5 = {c6 44 24 1c 77 c6 44 24 1d 73 88 44 24 1e c6 44 24 1f 5f c6 44 24 20 33 88 44 24 21}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

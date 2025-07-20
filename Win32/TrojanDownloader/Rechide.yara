@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Rechide_A_2147647477_0
         $x_1_6 = "http://%s/%s?h=%s-%x&r=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Ransom_Win64_MoroccanDragon_AMD_2147942327_0
         $x_4_6 = "case_id.txt" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

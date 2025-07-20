@@ -17,6 +17,7 @@ rule DoS_Win32_SharpWipe_B_2147849476_0
         $x_10_2 = {50 00 68 00 c7 45 ?? 79 00 73 00 c7 45 ?? 69 00 63 00 c7 45 ?? 61 00 6c 00 c7 45 ?? 44 00 72 00 c7 45 ?? 69 00 76 00 c7 45 ?? 65 00 25 00 c7 45 ?? 75 00 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule DoS_Win32_SharpWipe_C_2147919946_0
         $x_1_12 = "\\\\.\\PhysicalDrive9" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

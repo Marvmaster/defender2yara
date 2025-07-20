@@ -36,6 +36,7 @@ rule TrojanSpy_Win32_Swisyn_A_2147629832_0
         $x_1_22 = "[Clipboard]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((16 of ($x_1_*))) or
             ((1 of ($x_2_*) and 14 of ($x_1_*))) or
@@ -79,6 +80,7 @@ rule TrojanSpy_Win32_Swisyn_A_2147629834_0
         $x_3_10 = {ff b5 c8 fe ff ff 68 ?? ?? ?? ?? ff b5 ec fe ff ff ff b5 ec fe ff ff ff b5 ec fe ff ff 68 ?? ?? ?? ?? ff b5 d0 fe ff ff ff b5 d4 fe ff ff ff b5 d0 fe ff ff ff b5 d0 fe ff ff ff b5 d8 fe ff ff 68 ?? ?? ?? ?? ff b5 cc fe ff ff ff b5 dc fe ff ff ff b5 e4 fe ff ff ff b5 e0 fe ff ff 68 ?? ?? ?? ?? ff b5 f4 fe ff ff ff b5 cc fe ff ff 68}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -108,6 +110,7 @@ rule TrojanSpy_Win32_Swisyn_B_2147630783_0
         $x_1_6 = "Process Monitor - Sysinternals: www.sysinternals.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +135,7 @@ rule TrojanSpy_Win32_Swisyn_C_2147631139_0
         $x_1_5 = "dnf.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +160,7 @@ rule TrojanSpy_Win32_Swisyn_D_2147632021_0
         $x_1_5 = "\\log.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -187,6 +192,7 @@ rule TrojanSpy_Win32_Swisyn_E_2147632169_0
         $x_1_7 = "{Arrow_Up}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -212,6 +218,7 @@ rule TrojanSpy_Win32_Swisyn_F_2147636463_0
         $x_1_3 = "\\win.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -235,6 +242,7 @@ rule TrojanSpy_Win32_Swisyn_H_2147643666_0
         $x_1_4 = "Resim cek:__" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

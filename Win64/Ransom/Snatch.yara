@@ -22,6 +22,7 @@ rule Ransom_Win64_Snatch_PVA_2147756271_0
         $x_1_7 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Ransom_Win64_Snatch_PA_2147757434_0
         $x_1_5 = "decrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Ransom_Win64_Snatch_A_2147762658_0
         $x_1_1 = {48 81 fb 00 08 00 00 0f 86 04 02 00 00 80 3d b6 13 31 00 01 75 11 89 f0 09 f8 a9 07 00 00 00 74 06 48 89 d9 f3 a4 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Ransom_Win64_Snatch_X_2147763771_0
         $x_1_3 = "BEGIN RSA PUBLIC KEY" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Ransom_Win64_Snatch_PB_2147764813_0
         $x_1_4 = "http.http2ClientConn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Ransom_Win64_Snatch_MA_2147893390_0
         $x_5_2 = {c1 e8 08 48 8b 0d ?? ?? ?? ?? 48 63 49 50 48 8b 15 ?? ?? ?? ?? 48 8b 92 98 00 00 00 88 04 0a 48 8b 05 ?? ?? ?? ?? 8b 40 50 ff c0 48 8b 0d ?? ?? ?? ?? 89 41 50 48 8b 05 ?? ?? ?? ?? 8b 40 2c 83 f0 0a 48 8b 0d ?? ?? ?? ?? 8b 89 b0 00 00 00 0b c8 8b c1}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -161,6 +167,7 @@ rule Ransom_Win64_Snatch_PC_2147917344_0
         $x_4_4 = "All your data has been encrypted by me" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

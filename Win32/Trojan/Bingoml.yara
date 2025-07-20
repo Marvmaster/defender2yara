@@ -16,6 +16,7 @@ rule Trojan_Win32_Bingoml_BBX_2147795455_0
         $x_1_1 = {30 01 8d 04 0e 83 e0 0f 0f b6 80 ?? ?? ?? ?? 30 41 01 8d 04 0f 83 e0 0f 0f b6 80 ?? ?? ?? ?? 30 41 02 8d 04 0b 83 e0 0f 8d 49 04 0f b6 80 ?? ?? ?? ?? 30 41 ff 81 fa 00 42 01 00 72 b4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Bingoml_R_2147823105_0
         $x_1_3 = "windowscer.shop/admin/login.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Bingoml_HPPO_2147826864_0
         $x_1_2 = "haGAStuxt.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Bingoml_RA_2147828649_0
         $x_1_1 = {8b 4d fc 8b 55 08 0f b7 0c 4a 8b 45 fc 33 d2 be ?? 00 00 00 f7 f6 83 c2 31 33 ca 8b 55 fc 8b 45 f8 66 89 0c 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Win32_Bingoml_MA_2147834997_0
         $x_2_7 = "S  u  r  e" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule Trojan_Win32_Bingoml_RDA_2147836251_0
         $x_2_5 = {0f b6 04 39 41 33 c6 c1 ee 08 25 ff 00 00 00 33 b4 85 00 fc ff ff 3b ca}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +161,7 @@ rule Trojan_Win32_Bingoml_GAB_2147898381_0
         $x_10_1 = {e5 f0 fc e7 c7 45 ?? a7 ea e7 89 33 c0 80 74 05 ec 89 40 83 f8 0c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_FreshCam_A_2147925346_0
         $x_100_2 = {81 fb 77 dd 41 b1 8b 5e 08 75}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

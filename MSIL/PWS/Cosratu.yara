@@ -21,6 +21,7 @@ rule PWS_MSIL_Cosratu_A_2147724989_0
         $x_1_6 = {00 43 72 65 61 74 65 43 6f 6d 70 61 74 69 62 6c 65 42 69 74 6d 61 70 00 46 72 6f 6d 48 62 69 74 6d 61 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

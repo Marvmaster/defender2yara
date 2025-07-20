@@ -21,6 +21,7 @@ rule Trojan_Win64_Infostealer_NA_2147924596_0
         $x_1_6 = "htzp://" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

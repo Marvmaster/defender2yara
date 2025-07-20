@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Wobotork_A_2147686266_0
         $x_1_2 = "Set oShell = WScript.CreateObject(\"WScript.Shell\"):oShell.Exec(" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

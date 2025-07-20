@@ -22,6 +22,7 @@ rule Ransom_Win64_GhostLocker_YAA_2147896151_0
         $x_1_7 = {49 83 c2 10 4c 8d 5b 01 4c 89 d3 4d 89 c1 49 89 f0 4c 89 de 48 39 f1 7e ?? 49 89 da 4c 8b 5b 08 4d 85 db 75 ?? 48 89 f3 4c 89 c6 4d 89 c8 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

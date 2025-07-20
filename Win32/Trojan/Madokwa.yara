@@ -16,6 +16,7 @@ rule Trojan_Win32_Madokwa_CCIB_2147912714_0
         $x_1_1 = {8b ce 2b c8 03 cb 0f b6 44 0c ?? 8b ce 32 85 ?? ?? ?? ?? 88 47 ?? b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Madokwa_YAA_2147915336_0
         $x_1_3 = {56 69 72 74 c7 45 90 01 01 75 61 6c 50 c7 45 90 01 01 72 6f 74 65 c7 45 90 01 01 63 74 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -63,6 +65,7 @@ rule Trojan_Win32_Madokwa_MKZ_2147915526_0
         $x_1_1 = {46 8a 84 35 d8 fe ff ff 88 84 3d ?? ?? ?? ?? 88 8c 35 d8 fe ff ff 0f b6 84 3d ?? ?? ?? ?? 03 c2 8b 55 f8 0f b6 c0 8a 84 05 d8 fe ff ff 30 04 13 43 3b 5d dc 72 9e eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win32_Madokwa_MKV_2147915527_0
         $x_1_2 = {ba db 77 00 00 03 8d f0 fe ff ff 89 8d a7 fe ff ff 33 55 d6 89 8d 71 ff ff ff 8b 45 b4 b9 7d 08 00 00 3b 05 ?? ?? ?? ?? 78}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

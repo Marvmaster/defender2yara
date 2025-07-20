@@ -21,6 +21,7 @@ rule Ransom_MSIL_Hakbit_F_2147753699_0
         $x_1_6 = "GVhc2UgY2FyZWZ1bGx5IHJlYWQgdGhlIHRleHQgbm90ZSBsb2NhdGVkIGluIHlvdXIgZGVza3RvcC4uLg==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +71,7 @@ rule Ransom_MSIL_Hakbit_SK_2147753710_0
         $x_1_29 = "CheckRemoteDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 5 of ($x_2_*) and 11 of ($x_1_*))) or
             ((3 of ($x_5_*) and 3 of ($x_2_*) and 10 of ($x_1_*))) or
@@ -170,6 +172,7 @@ rule Ransom_MSIL_Hakbit_HZ_2147755083_0
         $x_1_6 = "QWxsIHlvdXIgZmlsZXMgd2VyZSBlbmNyeXB0ZWQsIGlmIHlvdSB3YW50IHRvIGdldCB0aGVtIGFsbCBiYWNrLCBwb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -194,6 +197,7 @@ rule Ransom_MSIL_Hakbit_PA_2147771605_0
         $x_1_4 = "\\HOW_TO_DECYPHER_FILES.hta" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

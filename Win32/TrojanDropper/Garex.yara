@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Garex_A_2147693308_0
         $x_2_5 = "-release -tcbp" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*))) or

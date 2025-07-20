@@ -29,6 +29,7 @@ rule Ransom_Win32_Dekcolkrypt_A_2147726467_0
         $x_2_15 = "Enter Correct Key to decrypt your files" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

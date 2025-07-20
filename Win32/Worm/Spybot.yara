@@ -26,6 +26,7 @@ rule Worm_Win32_Spybot_2147555602_0
         $x_2_12 = "zoneallarm_pro_crack.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -61,6 +62,7 @@ rule Worm_Win32_Spybot_BY_2147600651_0
         $x_1_9 = "RegSetValueExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))

@@ -22,6 +22,7 @@ rule Worm_Win32_Kelvir_B_2147602735_0
         $x_1_7 = "~C:\\Program Files\\MSN Messenger\\msnmsgr.exe\\2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -53,6 +54,7 @@ rule Worm_Win32_Kelvir_C_2147621248_0
         $x_1_8 = {44 6f 77 6e 6c 6f 61 64 46 69 6c 65 41 6e 64 52 75 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 3 of ($x_1_*))) or
             ((2 of ($x_100_*) and 1 of ($x_3_*))) or
@@ -81,6 +83,7 @@ rule Worm_Win32_Kelvir_D_2147647323_0
         $x_1_4 = "MessengerAPI" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

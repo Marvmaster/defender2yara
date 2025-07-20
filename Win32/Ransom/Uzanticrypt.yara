@@ -19,6 +19,7 @@ rule Ransom_Win32_Uzanticrypt_PAA_2147798227_0
         $x_1_4 = ".UZANTICRYPT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

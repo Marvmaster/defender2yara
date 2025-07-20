@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Screem_AR_2147748472_0
         $x_1_3 = "vdpoaqrvytayoaygk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

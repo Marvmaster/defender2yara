@@ -17,6 +17,7 @@ rule PWS_Win32_Fareit_2147806423_0
         $x_1_3 = {73 6f 66 74 77 61 72 65 5c 77 69 6e 72 61 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule PWS_Win32_Fareit_2147806423_1
         $x_1_5 = {48 57 49 44 [0-5] 7b 25 30 38 58 2d 25 30 34 58 2d 25 30 34 58 2d 25 30 32 58 25 30 32 58 2d 25 30 32 58 25 30 32 58 25 30 32 58 25 30 32 58 25 30 32 58 25 30 32 58 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -88,6 +90,7 @@ rule PWS_Win32_Fareit_AD_2147806424_0
         $x_1_1 = {59 ff 34 0e bb ?? ?? ?? ?? 5a 31 da 89 14 08 [0-144] 83 e9 04 7d ?? ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +112,7 @@ rule PWS_Win32_Fareit_AD_2147806424_1
         $x_1_1 = {6a 40 68 00 10 00 00 68 ?? ?? ?? ?? 6a 00 ff d0 25 00 a1 ?? ?? ?? ?? 48 66 81 38 4d 5a 75 f8 05 ?? ?? ?? ?? 8b 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +134,7 @@ rule PWS_Win32_Fareit_AD_2147806424_2
         $x_1_1 = {83 f9 00 7f ff 00 49 [0-8] 49 [0-8] 49 [0-8] 49 [0-16] ff 34 0f [0-48] 31 34 24 [0-48] 8f 04 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule PWS_Win32_Fareit_AD_2147806424_3
         $x_1_1 = {bb 40 42 0f 00 [0-37] 81 c3 0d 18 81 00 [0-37] 39 18 75 [0-96] ff d3 [0-16] e8 ?? ?? 00 00 [0-16] b9 41 41 41 41 [0-16] 46 [0-10] ff 37 [0-10] 31 34 24 [0-21] bb 00 60 00 00 [0-21] 83 eb 04 [0-16] ff 34 1f [0-10] 31 f2 [0-10] 89 14 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule PWS_Win32_Fareit_C_2147806607_0
         $x_1_1 = {f7 d8 1b ff 68 ?? ?? ?? 00 81 e7 00 00 04 00 ff d6 f7 d8 1b f6 33 db 53 81 e6 ?? ?? ?? 00 56 57 ff 15 ?? ?? ?? 00 89 45 fc 8d 45 f4 50 89 5d f4 89 5d f8 ff 15 ?? ?? ?? 00 8b 7d f8 0b 7d f4 56 f7 df 1b ff 53 ff 75 fc 81 e7 [0-10] ff 15 ?? ?? ?? 00 8b f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +203,7 @@ rule PWS_Win32_Fareit_G_2147806618_0
         $x_1_4 = {00 43 6c 69 65 6e 74 20 48 61 73 68 00 53 54 41 54 55 53 2d 49 4d 50 4f 52 54 2d 4f 4b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -221,6 +229,7 @@ rule PWS_Win32_Fareit_L_2147806772_0
         $x_10_5 = {8b d0 d1 e2 b9 09 00 00 00 d1 ea 73 ?? 81 f2 31 92 a9 fc 81 f2 11 11 11 11}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -250,6 +259,7 @@ rule PWS_Win32_Fareit_E_2147806788_0
         $x_10_6 = {eb 2d 8b 17 8b 45 08 25 ff 7f ff ff 39 42 04 75 1b 6a 00 8d 42 08 50 68 ?? ?? ?? ?? ff 32 e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -276,6 +286,7 @@ rule PWS_Win32_Fareit_SM_2147806801_0
         $x_2_1 = {8b d0 83 e2 01 85 d2 75 0e 8b d3 03 d0 73 05 e8 60 d1 f8 ff 80 32 9c 40 3d bc 18 01 00 75 e1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -297,6 +308,7 @@ rule PWS_Win32_Fareit_SM_2147806801_1
         $x_1_1 = {bb 01 00 00 00 90 90 90 90 8b c2 03 c3 90 90 90 c6 00 94 90 90 90 90 43 81 fb 7f 2f 4b 22 75 e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +330,7 @@ rule PWS_Win32_Fareit_SM_2147806801_2
         $x_2_1 = {89 f6 89 f6 89 f6 8b c1 be 03 00 00 00 33 d2 f7 f6 85 d2 75 1e 89 f6 89 f6 8b c3 03 c1 73 05 e8 4f af f9 ff 89 f6 89 f6 89 f6 89 f6 89 f6 80 30 27 89 f6 89 f6 41 81 f9 a1 f7 00 00 75 c2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -339,6 +352,7 @@ rule PWS_Win32_Fareit_SM_2147806801_3
         $x_1_1 = {89 f6 89 f6 89 f6 89 f6 8b c1 bb 03 00 00 00 33 d2 f7 f3 85 d2 75 28 89 f6 89 f6 89 f6 8b d6 03 d1 89 f6 89 f6 89 f6 89 f6 b0 29 89 f6 89 f6 89 f6 89 f6 89 f6 30 02 89 f6 89 f6 89 f6 89 f6 89 f6 89 f6 89 f6 41 81 f9 16 1f 01 00 75 b2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -361,6 +375,7 @@ rule PWS_Win32_Fareit_SM_2147806801_4
         $x_2_2 = {85 c0 76 20 8b c8 83 e1 03 85 c9 75 0e 8a 0a 80 f1 f5 8b 5d fc 03 d8 88 0b eb 09 8b 4d fc 03 c8 8a 1a 88 19 40 42 3d a1 7c 00 00 75 d3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -383,6 +398,7 @@ rule PWS_Win32_Fareit_SM_2147806801_5
         $x_1_2 = {89 f6 89 f6 89 f6 8b c1 be 03 00 00 00 33 d2 f7 f6 85 d2 75 1e 89 f6 89 f6 8b c3 03 c1 73 05 e8 4f af f9 ff 89 f6 89 f6 89 f6 89 f6 89 f6 80 30 [0-4] 89 f6 89 f6 41 81 f9 [0-4] 75 c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))
@@ -410,6 +426,7 @@ rule PWS_Win32_Fareit_SM_2147806801_6
         $x_1_4 = {83 f9 00 74 11 83 7d fc 04 75 0b c7 45 fc 00 00 00 00 80 34 01 [0-4] 8b 7d fc 47 89 7d fc 41 89 d3 39 d9 75 dc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))
@@ -437,6 +454,7 @@ rule PWS_Win32_Fareit_VE_2147806802_0
         $x_1_4 = {8d 81 63 bc ae 1e 8a 03 50 b8 ?? ?? ?? ?? 3d ?? ?? ?? ?? 0f 85 ?? ?? ?? ?? 58 68 ?? ?? ?? ?? 83 c4 ?? 89 0c 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -463,6 +481,7 @@ rule PWS_Win32_Fareit_V_2147806803_0
         $x_1_2 = {8b 85 50 f6 ff ff 40 89 85 ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 3b 45 94 73 ?? 8b 45 ec 89 85 ?? ?? ?? ?? ff b5 ?? ?? ?? ?? ff b5 ?? ?? ?? ?? ff 75 e8 e8 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -493,6 +512,7 @@ rule PWS_Win32_Fareit_V_2147806803_1
         $x_1_10 = "TgMyKnOKCGoF0eKMmjlKwUytznzsMrvpUp29" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -522,6 +542,7 @@ rule PWS_Win32_Fareit_VK_2147806804_0
         $x_1_6 = {8b 94 24 20 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -544,6 +565,7 @@ rule PWS_Win32_Fareit_VK_2147806804_1
         $x_1_2 = {58 52 81 ca ?? ?? ?? ?? 5a 51 81 f1 ?? ?? ?? ?? 59 8f 04 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -567,6 +589,7 @@ rule PWS_Win32_Fareit_VK_2147806804_2
         $x_1_3 = {31 34 24 68 03 00 83 c4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -594,6 +617,7 @@ rule PWS_Win32_Fareit_2147806805_0
         $x_1_7 = {81 c2 1e 23 8e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -615,6 +639,7 @@ rule PWS_Win32_Fareit_2147806805_1
         $x_1_1 = {31 c9 8b 1c 0a 81 f3 ?? ?? ?? ?? 89 1c 08 f8 83 c1 04 81 f9 ?? ?? ?? ?? 75 ?? ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -636,6 +661,7 @@ rule PWS_Win32_Fareit_2147806805_2
         $x_1_1 = {83 d9 04 0f 8d ?? ?? ff ff 00 02 89 1c 08 00 02 81 f3 00 02 8b 1c 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -658,6 +684,7 @@ rule PWS_Win32_Fareit_2147806805_3
         $x_1_2 = {83 fb 00 7f c0 00 83 eb 04 [0-32] ff 34 1f [0-32] 8f 04 18 [0-32] 31 34 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -680,6 +707,7 @@ rule PWS_Win32_Fareit_2147806805_4
         $x_1_2 = {83 f9 00 7f 20 00 09 1c 08 50 00 31 f3 30 00 8b 1c 0f 10 00 49 10 00 49 10 00 49 10 00 49}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -703,6 +731,7 @@ rule PWS_Win32_Fareit_2147806805_5
         $x_1_3 = {83 fb 00 0f 85 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -726,6 +755,7 @@ rule PWS_Win32_Fareit_2147806805_6
         $x_1_3 = {83 c7 04 66 ff 00 83 c2 04 ff 00 83 c4 04 ff 00 89 0c 18 ff 00 8b 0c 24 ff 00 31 34 24 ff 00 ff 37}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -750,6 +780,7 @@ rule PWS_Win32_Fareit_2147806805_7
         $x_1_4 = {8f 04 18 85 ff 00 ff 31 [0-255] 31 34 24 [0-255] 8f 04 18 [0-255] 83 c2 04 [0-255] 83 c7 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -771,6 +802,7 @@ rule PWS_Win32_Fareit_VD_2147806806_0
         $x_1_1 = {47 43 4e 75 0b 00 8b cf b2 [0-8] 8a 03 32 c2 88 01 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -795,6 +827,7 @@ rule PWS_Win32_Fareit_F_2147806856_0
         $x_1_4 = "Tibia" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -822,6 +855,7 @@ rule PWS_Win32_Fareit_A_2147806870_0
         $x_1_7 = {7b 25 30 38 58 2d 25 30 34 58 2d 25 30 34 58 2d 25 30 32 58 25 30 32 58 2d 25 30 32 58 25 30 32 58 25 30 32 58 25 30 32 58 25 30 32 58 25 30 32 58 7d 00 (??|?? ??|?? ?? ??|?? ?? ?? ??|?? ?? ?? ?? ??|?? ?? ?? ?? ?? ??|?? ?? ?? ?? ?? ?? ??|?? ?? ?? ?? ?? ?? ?? ??|?? ?? ?? ?? ?? ?? ?? ?? ??|?? ?? ?? ?? ?? ?? ?? ?? ?? ??|?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??|?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??|?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??|?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??|?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??) 48 57 49 44 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -845,6 +879,7 @@ rule PWS_Win32_Fareit_B_2147806871_0
         $x_1_3 = {44 00 3a 00 5c 00 44 00 4b 00 4a 00 4b 00 4a 00 5c 00 2e 00 5c 00 44 00 4b 00 4a 00 4b 00 4a 00 53 00 5c 00 2e 00 2e 00 5c 00 4b 00 44 00 4a 00 4b 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -870,6 +905,7 @@ rule PWS_Win32_Fareit_D_2147806872_0
         $x_2_5 = {00 5c 49 70 73 77 69 74 63 68 5c 57 53 5f 46 54 50 00 5c 77 69 6e 2e 69 6e 69 00 2e 69 6e 69 00 57 53 5f 46 54 50 00 44 49 52 00 78 44 45 46 44 49 52 00 43 55 54 45 46 54 50 00 51 43 48 69 73 74 6f 72 79 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -894,6 +930,7 @@ rule PWS_Win32_Fareit_K_2147806873_0
         $x_1_4 = {69 6e 65 74 63 6f 6d 6d 20 73 65 72 76 65 72 20 70 61 73 73 77 6f 72 64 73 00 6f 75 74 6c 6f 6f 6b 20 61 63 63 6f 75 6e 74 20 6d 61 6e 61 67 65 72 20 70 61 73 73 77 6f 72 64 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -919,6 +956,7 @@ rule PWS_Win32_Fareit_AJ_2147806876_0
         $x_1_5 = "SiteServer %d\\Remote Directory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -945,6 +983,7 @@ rule PWS_Win32_Fareit_BB_2147806877_0
         $x_1_3 = {0f b6 04 07 33 c1 c1 e9 08 0f b6 c0 33 0c 85 ?? ?? ?? ?? 47 8b 45 ?? 3b fb 72 e5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -989,6 +1028,7 @@ rule PWS_Win32_Fareit_SU_2147806879_0
         $x_1_2 = {b9 00 5f 00 00 [0-16] 49 [0-16] 8b 1c 0f [0-16] 53 [0-32] 31 34 24 [0-37] 8f 04 08 [0-21] 83 f9 00 7f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1011,6 +1051,7 @@ rule PWS_Win32_Fareit_SV_2147806880_0
         $x_1_2 = {68 e0 5e 00 00 [0-16] 59 [0-16] 49 [0-16] 8b 1c 0f [0-16] 53 [0-32] 31 34 24 [0-37] 8f 04 08 [0-21] 83 f9 00 7f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1032,6 +1073,7 @@ rule PWS_Win32_Fareit_Delph_2147806881_0
         $x_1_1 = {8a 55 f7 88 10 [0-5] 8d 45 f8 e8 ?? ?? ff ff 30 00 8a 16 [0-5] 80 f2 ?? 88 55 f7 [0-5] 8a 55 f7 88 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1054,6 +1096,7 @@ rule PWS_Win32_Fareit_Delph_2147806882_0
         $x_1_1 = {8a 1a 80 f3 ?? 88 5d f7 [0-5] 8b 5d f8 8b fb 8a 5d f7 88 1f [0-48] 03 4d fc ff d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1077,6 +1120,7 @@ rule PWS_Win32_Fareit_Delph_2147806883_0
         $x_1_2 = {8b 45 fc 03 45 f8 [0-7] 8a 13 [0-4] 80 f2 ?? [0-4] 88 10 [0-7] 8d 45 ?? e8 ?? ?? ff ff [0-7] 43 4e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1098,6 +1142,7 @@ rule PWS_Win32_Fareit_G_2147806884_0
         $x_1_1 = {8a 00 c3 53 8b d8 6a 00 e8 ?? ?? ?? ?? 90 90 8b c3 34 ?? 90 90 5b c3 53 56 57 55 51 8b da 8b f0 54 6a 40 68 ?? ?? ?? ?? 56 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1120,6 +1165,7 @@ rule PWS_Win32_Fareit_G_2147806884_1
         $x_1_2 = {00 00 59 83 e9 04 e8 ?? ff ff ff 83 e9 03 e0 f6 e8 ?? ff ff ff ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1141,6 +1187,7 @@ rule PWS_Win32_Fareit_H_2147806885_0
         $x_1_1 = {5e 31 c9 b9 00 [0-79] ff 34 0e [0-255] 31 04 24 [0-255] 0f 8d ?? ?? ff ff [0-159] ff e4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1163,6 +1210,7 @@ rule PWS_Win32_Fareit_H_2147806885_1
         $x_1_2 = {33 c0 89 06 33 c0 55 68 ?? ?? ?? ?? 64 ff 30 64 89 20 ff 75 fc 90 58 90 f7 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1185,6 +1233,7 @@ rule PWS_Win32_Fareit_J_2147806886_0
         $x_1_2 = {5f 01 c8 56 81 d6 ?? ?? ?? ?? 81 d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1207,6 +1256,7 @@ rule PWS_Win32_Fareit_J_2147806886_1
         $x_1_2 = {33 c0 5a 59 59 64 89 10 68 ?? ?? ?? ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1229,6 +1279,7 @@ rule PWS_Win32_Fareit_DA_2147806887_0
         $x_5_2 = {b9 f0 5f 00 00 [0-16] 49 [0-16] ff 34 0f [0-16] 5b [0-16] 31 f3 [0-37] 09 1c 08 [0-16] 83 f9 00 7f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1251,6 +1302,7 @@ rule PWS_Win32_Fareit_SF_2147806888_0
         $x_1_2 = {b9 70 2b 41 41 [0-5] 81 c1 d1 15 00 00 [0-5] 46 [0-32] 8b 1f [0-5] 31 f3 [0-5] 39 cb 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1276,6 +1328,7 @@ rule PWS_Win32_Fareit_SF_2147806888_1
         $x_1_5 = "DiTMKY8ykQSpCykGjhWIO61" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -1303,6 +1356,7 @@ rule PWS_Win32_Fareit_A_2147806889_0
         $x_1_3 = "PonZPtAJ0jHE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1325,6 +1379,7 @@ rule PWS_Win32_Fareit_A_2147806889_1
         $x_10_2 = {6a 40 ff d0 e8 ?? ?? ?? ?? 5e 81 c6 ?? ?? ?? ?? 68 ?? ?? ?? ?? 59 83 e9 04 e8 ?? ?? ?? ?? 83 e9 03 e0 f6 e8 ?? ?? ?? ?? ff e0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1358,6 +1413,7 @@ rule PWS_Win32_Fareit_A_2147806889_2
         $x_1_13 = {8f 04 18 66 ff 00 ff 37 [0-255] 31 34 24 [0-255] 8f 04 18 [0-255] 83 c2 04 [0-255] 83 c7 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1382,6 +1438,7 @@ rule PWS_Win32_Fareit_B_2147806890_0
         $x_1_4 = {bb 00 10 40 00 [0-48] 8b 03 [0-48] bb [0-64] 81 c3 [0-64] 39 18 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1412,6 +1469,7 @@ rule PWS_Win32_Fareit_B_2147806890_1
         $x_1_10 = {31 34 24 eb ff 00 ff (31|37) [0-255] 31 34 24 [0-255] 8f 04 (10|18) [0-255] 83 c2 04 [0-255] 83 c7 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1434,6 +1492,7 @@ rule PWS_Win32_Fareit_C_2147806891_0
         $x_1_2 = "GCNu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1458,6 +1517,7 @@ rule PWS_Win32_Fareit_C_2147806891_1
         $x_5_4 = {b9 f0 5f 00 00 [0-16] 83 e9 04 [0-32] 8b 14 0f [0-16] 33 14 24 [0-16] 89 14 08 [0-16] 83 f9 00 7f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -1491,6 +1551,7 @@ rule PWS_Win32_Fareit_C_2147806891_2
         $x_1_10 = {8b 0c 24 66 ff 00 31 34 24 [0-255] 01 0c 18 [0-255] 83 c4 04 [0-255] 83 c2 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1519,6 +1580,7 @@ rule PWS_Win32_Fareit_N_2147806892_0
         $x_1_8 = "shell32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1541,6 +1603,7 @@ rule PWS_Win32_Fareit_N_2147806892_1
         $x_1_2 = {31 34 24 85 ff 00 ff 37 [0-255] 31 34 24 [0-255] 85 d2 [0-255] 8b 0c 24 [0-48] 01 0c 18 [0-255] 83 c4 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1568,6 +1631,7 @@ rule PWS_Win32_Fareit_O_2147806893_0
         $x_1_7 = {ff 34 0f 79 [0-32] 31 34 24 [0-32] 8f 04 08 [0-32] 49}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1592,6 +1656,7 @@ rule PWS_Win32_Fareit_Q_2147806894_0
         $x_1_4 = {31 34 24 66 ff 00 ff 37 [0-255] 31 34 24 [0-255] 8b 0c 24 [0-255] 85 c0 [0-255] 01 0c 18 [0-255] 83 c4 04 [0-255] 83 c2 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1619,6 +1684,7 @@ rule PWS_Win32_Fareit_R_2147806895_0
         $x_1_7 = {31 34 24 85 ff 00 ff 37 [0-255] 31 34 24 [0-255] 89 0c 10 [0-255] 83 c2 04 [0-255] 83 c7 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1643,6 +1709,7 @@ rule PWS_Win32_Fareit_S_2147806896_0
         $x_1_4 = {ff 34 1f eb [0-64] 58 [0-160] 35 [0-160] 89 04 1f [0-160] 83 c3 04 [0-160] 39 d3 03 01 02 02 75 0f 85 75 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1667,6 +1734,7 @@ rule PWS_Win32_Fareit_T_2147806897_0
         $x_1_4 = {31 34 24 85 ff 00 ff 37 [0-255] 31 34 24 [0-255] (8b|89) 0c 10 [0-255] 83 c2 04 [0-255] 83 c7 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1694,6 +1762,7 @@ rule PWS_Win32_Fareit_W_2147806898_0
         $x_1_7 = {83 c2 04 eb ff 00 31 f1 [0-255] e8 [0-255] 83 c2 04 [0-255] 83 d7 04 [0-255] 0f 85 [0-255] 51 [0-255] 8f 04 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1721,6 +1790,7 @@ rule PWS_Win32_Fareit_X_2147806899_0
         $x_1_7 = {83 d7 04 85 [0-64] e9 ff 00 83 ?? 04 40 00 01 0b 40 00 01 d3 60 00 5b 30 00 50 ff 00 31 f1 30 00 8b 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1744,6 +1814,7 @@ rule PWS_Win32_Fareit_Y_2147806900_0
         $x_1_3 = {31 34 24 eb 50 00 ff 37 [0-255] 31 34 24 [0-255] 59 [0-255] (83|83) [0-255] 51 [0-255] 8f 04 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1767,6 +1838,7 @@ rule PWS_Win32_Fareit_AA_2147806901_0
         $x_1_3 = {83 c1 04 14 ff 02 (14 14 14|00 00 00) ff 02 8f 04 08 ff 02 81 34 24 ff 02 ff 34 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1791,6 +1863,7 @@ rule PWS_Win32_Fareit_AB_2147806902_0
         $x_1_4 = {89 0c 24 85 [0-64] 31 34 24 [0-64] 59 [0-64] 89 0c 18 [0-64] 83 c2 04 [0-64] 83 c7 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1818,6 +1891,7 @@ rule PWS_Win32_Fareit_AC_2147806903_0
         $x_1_7 = {11 0c 18 3d 00 02 8b 0f [0-255] 00 00 00 00 00 00 [0-255] 31 f1 [0-255] 11 0c 18 [0-255] 83 (c2|d2) 04 [0-255] 83 (d7|c7) 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1842,6 +1916,7 @@ rule PWS_Win32_Fareit_AF_2147806904_0
         $x_1_4 = {89 0c 24 66 40 00 8b 0f [0-160] 31 34 24 [0-80] 59 [0-80] 89 0c 18 [0-80] 83 c2 04 [0-80] 83 d7 04 [0-80] eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1864,6 +1939,7 @@ rule PWS_Win32_Fareit_AG_2147806905_0
         $x_1_2 = {ff 34 08 3d [0-64] 81 34 24 [0-64] 8f 04 08 [0-64] 83 c1 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1887,6 +1963,7 @@ rule PWS_Win32_Fareit_AH_2147806906_0
         $x_1_3 = {31 34 24 66 ff 00 ff 37 [0-255] 59 [0-255] 89 0c 18 [0-255] 83 (d2|c2) 04 [0-255] 83 (d7|c7) 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1916,6 +1993,7 @@ rule PWS_Win32_Fareit_AI_2147806907_0
         $x_1_9 = {83 c7 04 85 ff 00 83 c2 04 ff 00 (09|31) 0c 10 ff 00 31 f1 ff 00 59 ff 00 ff 31}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1939,6 +2017,7 @@ rule PWS_Win32_Fareit_AJ_2147806908_0
         $x_1_3 = {38 62 3c 0a 71 [0-255] 81 f7 [0-255] 31 3c 08 [0-255] 49 [0-64] 49 [0-64] 49 [0-64] 49}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1961,6 +2040,7 @@ rule PWS_Win32_Fareit_AK_2147806909_0
         $x_1_2 = {31 34 24 66 40 00 ff 37 [0-255] 59 [0-255] (89|09) 0c 18 [0-255] 83 (c2|d2) 04 [0-255] 83 (d7|c7) 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1982,6 +2062,7 @@ rule PWS_Win32_Fareit_AM_2147806910_0
         $x_1_1 = {8a 1a 80 f3 ?? 8b f9 03 f8 73 05 [0-10] 88 1f [0-32] 40 42 3d [0-16] 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2004,6 +2085,7 @@ rule PWS_Win32_Fareit_AQ_2147806911_0
         $x_1_2 = {89 c9 80 34 01 [0-64] 41 [0-80] 39 d9 [0-64] 75 [0-80] 05 ?? ?? 00 00 [0-80] ff e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2024,6 +2106,7 @@ rule PWS_Win32_Fareit_AM_2147806912_0
         $x_1_1 = {54 6a 40 68 78 59 00 00 57 e8 aa 2e fa ff [0-4] 33 d2 33 c0 89 04 24 b8 [0-5] 8b f7 03 f2 [0-3] 8a 08 [0-3] 80 f1 4e [0-3] 88 0e [0-13] ff 04 24 40 81 3c 24 79 59 00 00 75 d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2046,6 +2129,7 @@ rule PWS_Win32_Fareit_BA_2147806913_0
         $x_1_2 = {4c 00 65 00 67 00 61 00 6c 00 43 00 6f 00 70 00 79 00 72 00 69 00 67 00 68 00 74 00 00 00 49 00 6e 00 73 00 75 00 6c 00 61 00 74 00 69 00 6f 00 6e 00 20 00 70 00 72 00 6f 00 63 00 65 00 73 00 73 00 20 00 56 00 4c 00 43 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2072,6 +2156,7 @@ rule PWS_Win32_Fareit_K_2147806914_0
         $x_1_6 = "Hokeypokey4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2098,6 +2183,7 @@ rule PWS_Win32_Fareit_K_2147806914_1
         $n_1_6 = "kernel32.dll" ascii //weight: -1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2124,6 +2210,7 @@ rule PWS_Win32_Fareit_E_2147806915_0
         $x_1_1 = {00 33 c2 8b 8d ?? ff ff ff 8b 15 ?? ?? ?? 00 89 04 8a c7 45 fc 06 00 00 00 a1 ?? ?? ?? 00 99 6a 01 59 f7 f9 83 f2 01 89 55 84 c7 85 7c ff ff ff 03 00 00 00 8d 95 7c ff ff ff 8d 4d 9c e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2149,6 +2236,7 @@ rule PWS_Win32_Fareit_F_2147806916_0
         $x_1_5 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2173,6 +2261,7 @@ rule PWS_Win32_Fareit_I_2147806917_0
         $x_1_4 = {58 31 f2 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2198,6 +2287,7 @@ rule PWS_Win32_Fareit_L_2147806918_0
         $x_1_5 = "file%d.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2224,6 +2314,7 @@ rule PWS_Win32_Fareit_M_2147806919_0
         $x_1_6 = "SPACIEST" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2246,6 +2337,7 @@ rule PWS_Win32_Fareit_P_2147806920_0
         $x_1_2 = {03 04 24 8b c8 a3 ?? ?? ?? ?? 8b 44 24 08 c1 e9 ?? 30 08 19 00 a1 ?? ?? ?? ?? c7 04 24 ?? ?? ?? ?? 81 04 24 ?? ?? ?? ?? 69 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2268,6 +2360,7 @@ rule PWS_Win32_Fareit_P_2147806920_1
         $x_1_2 = {8b 44 24 0c 01 44 24 04 89 0c 24 c1 24 24 04 01 14 24 03 4c 24 10 89 4c 24 10 8b 44 24 10 31 04 24 8b 44 24 04 31 04 24 8b 04 24 83 c4 ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2292,6 +2385,7 @@ rule PWS_Win32_Fareit_AE_2147806921_0
         $x_1_4 = {0f 6e fe 81 [0-21] 0f 6e da [0-21] 31 f2 [0-21] c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2316,6 +2410,7 @@ rule PWS_Win32_Fareit_VB_2147806922_0
         $x_1_4 = "dMjHvgR9YEG82Dmj2luAy01y7cbe02kXuQnE9Vcd22" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2344,6 +2439,7 @@ rule PWS_Win32_Fareit_DEA_2147806923_0
         $x_1_8 = "CrEpGaXlFaqMZpcbXqN79" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2367,6 +2463,7 @@ rule PWS_Win32_Fareit_DEB_2147806924_0
         $x_1_3 = "Agerhnsjagten2" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2391,6 +2488,7 @@ rule PWS_Win32_Fareit_RP_2147806925_0
         $x_1_4 = "{74FF1730-B1F2-4D88-926B-1568FAE61DB7}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2415,6 +2513,7 @@ rule PWS_Win32_Fareit_RT_2147806926_0
         $x_1_4 = "www.Arvinder.co.uk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2440,6 +2539,7 @@ rule PWS_Win32_Fareit_RTU_2147806927_0
         $x_1_5 = "outlook account manager passwords" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -2465,6 +2565,7 @@ rule PWS_Win32_Fareit_MR_2147806928_0
         $x_1_1 = {8a 1a 80 f3 ?? 88 5d [0-6] 8b 5d ?? 8b fb 8a 5d ?? 88 1f [0-4] 83 c6 ?? 73 ?? e8 [0-12] 42 49 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2493,6 +2594,7 @@ rule PWS_Win32_Fareit_MS_2147806929_0
         $x_1_8 = "form_password_control" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -2515,6 +2617,7 @@ rule PWS_Win32_Fareit_2147806930_0
         $x_1_1 = {89 c0 8a 45 ?? 30 45 ?? 89 db 89 db 8b 45 ?? 8a 55 ?? 88 10 06 00 8a 45 ?? 88 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2536,6 +2639,7 @@ rule PWS_Win32_Fareit_MU_2147806931_0
         $x_2_1 = {8b c6 03 c7 [0-1] a3 [0-6] 88 15 [0-5] 8b 0d [0-4] a0 [0-4] 88 01 [0-3] 47 81 ff [0-4] 75 12 00 8b c7 [0-4] 8a [0-5] 32 d3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2557,6 +2661,7 @@ rule PWS_Win32_Fareit_MW_2147806932_0
         $x_1_1 = {29 cb 83 c3 ?? 8d 0b c1 c1 ?? d1 c9 6a ?? 8f 02 01 1a 8d 52 ?? 83 ef ?? ?? ?? ?? 8d 1d ?? ?? ?? ?? 8d 9b 09 00 83 ee ?? 83 c3 ?? c1 cb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2584,6 +2689,7 @@ rule PWS_Win32_Fareit_SC_2147806933_0
         $x_1_7 = {66 81 fb 15 18 85 ff 81 fa 0c bb 00 00 eb 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2614,6 +2720,7 @@ rule PWS_Win32_Fareit_SW_2147806934_0
         $x_1_6 = "HiiAKrixjKBfFtg34V73DRMYsYTo3OHfYOHu112" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2635,6 +2742,7 @@ rule PWS_Win32_Fareit_SI_2147806935_0
         $x_1_1 = {89 0b 85 ff 66 81 ff d3 c7 eb 03 00 00 00 83 c2 04 66 81 fb f7 9a 3d a3 a2 5f 1e eb 08 00 00 00 00 00 00 00 00 83 c7 04 66 3d 0f f5 66 81 fb 22 65 eb 09 00 00 00 00 00 00 00 00 00 81 fa f4 b9 00 00 74 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2656,6 +2764,7 @@ rule PWS_Win32_Fareit_HL_2147806936_0
         $x_1_1 = {01 f3 51 b9 00 00 00 00 01 d9 31 01 59 5b 51 b9 ?? ?? ?? ?? 01 f1 68 ?? ?? ?? ?? 89 04 24 b8 ?? ?? ?? ?? 01 c8 01 18 58 59 55 89 04 24 b8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2677,6 +2786,7 @@ rule PWS_Win32_Fareit_JK_2147806937_0
         $x_1_1 = {50 e8 f9 fe ?? ?? ba ?? ?? ?? ?? b8 ?? ?? ?? ?? 31 c9 80 34 01 fd 41 89 c9 39 d1 [0-2] 75 ?? 05 ?? ?? ?? ?? ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2707,6 +2817,7 @@ rule PWS_Win32_Fareit_MK_2147806938_0
         $x_2_10 = "SELECT * FROM AntiVirusProduct" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2728,6 +2839,7 @@ rule PWS_Win32_Fareit_SMBD_2147806939_0
         $x_1_1 = {0f b7 14 71 8d 7a bf 83 ff 19 0f 87 03 00 00 00 83 c2 20 66 89 14 71 46 3b f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2749,6 +2861,7 @@ rule PWS_Win32_Fareit_ZT_2147806940_0
         $x_1_1 = {43 43 8b 32 42 42 42 42 8a 06 88 07 46 47 49 75 f7 0f b7 0b 81 f9 7a 17 00 00 72 e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2770,6 +2883,7 @@ rule PWS_Win32_Fareit_VBB_2147806941_0
         $x_1_1 = {0b ff ab 4a 0b ff ab 4a 0c ff ab 4a 0b ff ab 4a 0c ff ab 4a 0b ff ab 4a 0b ff ab 49 0c ff ab 4a 0b ff ab 4a 0c ff ab 4a 0b ff ab 4a 0b ff ab 4a 0c ff ab 4a 0b ff ab 4a 0c ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2805,6 +2919,7 @@ rule PWS_Win32_Fareit_STEF_2147806942_0
         $x_1_15 = "RtlMoveMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

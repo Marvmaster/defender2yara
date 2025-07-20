@@ -20,6 +20,7 @@ rule Ransom_Win32_Jexcrypt_A_2147708557_0
         $x_1_6 = "work\\ml1\\Release" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

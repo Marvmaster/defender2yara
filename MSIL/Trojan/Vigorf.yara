@@ -29,6 +29,7 @@ rule Trojan_MSIL_Vigorf_MA_2147806282_0
         $x_1_14 = "FileStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

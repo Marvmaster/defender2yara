@@ -26,6 +26,7 @@ rule HackTool_Win32_Mexlib_A_2147827201_0
         $x_1_11 = "?AVsqldb_see@@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

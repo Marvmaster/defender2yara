@@ -24,6 +24,7 @@ rule TrojanSpy_MSIL_AgentTesla_2147727614_0
         $x_1_8 = "<br><span style=font-style:normal;text-decoration:none;text-transform:none;color:#FF0000;><strong>[clipboard]</strong></span>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanSpy_MSIL_AgentTesla_2147729168_0
         $x_1_3 = {00 00 06 0a 06 7e ?? 00 00 04 16 6f ?? 00 00 0a 20 20 a7 00 00 59 7d ?? 00 00 04 7e ?? 00 00 04 17 6f ?? 00 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule TrojanSpy_MSIL_AgentTesla_2147730683_0
         $x_2_3 = "ConfuserEx v1.0.0" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -92,6 +95,7 @@ rule TrojanSpy_MSIL_AgentTesla_2147730683_1
         $x_1_1 = {16 0a 16 0b 2b 2d 03 25 4b 04 06 1f 0f 5f 95 61 54 04 06 1f 0f 5f 04 06 1f 0f 5f 95 03 25 1a 58 10 01 4b 61 20 84 e2 03 78 58 9e 06 17 58 0a 07 17 58 0b 07 02 37 cf 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule TrojanSpy_MSIL_AgentTesla_AQ_2147754029_0
         $x_1_14 = "log.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +154,7 @@ rule TrojanSpy_MSIL_AgentTesla_RA_2147755782_0
         $x_3_3 = ".rsrq" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +181,7 @@ rule TrojanSpy_MSIL_AgentTesla_SM_2147755805_0
         $x_1_6 = "DatabaseManager.FrmMenu.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -204,6 +211,7 @@ rule TrojanSpy_MSIL_AgentTesla_B_2147832623_0
         $x_2_9 = "SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +233,7 @@ rule TrojanSpy_MSIL_AgentTesla_AA_2147839748_0
         $x_2_1 = {13 04 16 13 05 2b 37 11 04 11 05 9a 13 06 09 72 bc 06 00 70 11 06 07 11 06 6f 36 00 00 0a 28 10 00 00 0a 28 37 00 00 0a 72 77 00 00 70 28 14 00 00 0a 28 15 00 00 0a 0d 11 05 17 d6 13 05 11 05 11 04 8e 69 32 c1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -249,6 +258,7 @@ rule TrojanSpy_MSIL_AgentTesla_NB_2147892222_0
         $x_1_4 = "gXckg6e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

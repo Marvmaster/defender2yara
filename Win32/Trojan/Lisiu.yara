@@ -16,6 +16,7 @@ rule Trojan_Win32_Lisiu_A_2147630964_0
         $x_1_2 = {0f b6 ca d2 e0 0a d8 ff 45 fc 83 7d fc 08 88 1c 37 75 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))

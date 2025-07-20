@@ -16,6 +16,7 @@ rule Trojan_Win32_SystemBc_YAC_2147896605_0
         $x_1_1 = {8b 55 cc 03 55 ac 03 55 e8 2b d0 8b 45 d8 31 10 83 45 ?? 04 83 45 d8 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Sality_R_2147600458_0
         $x_1_4 = "\\%d.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Sality_PADQ_2147907483_0
         $x_1_2 = {f3 f7 c1 6b f5 14 5a 8a f7 03 e0 81 ff f4 b1 00 00 74 02 23 f0 81 ec ab f1 ff ff 8a d6 c7 c3 ba a0 75 d2 0c 96 84 ee 84 c0 0f af cf 42 81 fb 35 04 00 00 0f 82 85 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Shevonelo_STA_2147776235_0
         $x_1_7 = {68 9d ec 5a 86 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

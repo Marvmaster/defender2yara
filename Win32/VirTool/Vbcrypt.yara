@@ -20,6 +20,7 @@ rule VirTool_Win32_Vbcrypt_A_2147606767_0
         $x_1_6 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule VirTool_Win32_Vbcrypt_B_2147606869_0
         $x_1_5 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule VirTool_Win32_Vbcrypt_C_2147608082_0
         $x_1_5 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule VirTool_Win32_Vbcrypt_K_2147623540_0
         $x_1_3 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule VirTool_Win32_Vbcrypt_P_2147624590_0
         $x_1_2 = "\\AY:\\code\\prog\\my\\myprog.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule VirTool_Win32_Vbcrypt_Q_2147624594_0
         $x_1_3 = "Hello anti virus companys, this is backdoor.win32.D4rkDays, Thank you for your attention" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +161,7 @@ rule VirTool_Win32_Vbcrypt_AD_2147628328_0
         $x_1_3 = ":\\Documents and Settings\\Logan\\Desktop\\Crypter's\\Source's\\Novo Projeto\\Stub\\stub.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +185,7 @@ rule VirTool_Win32_Vbcrypt_D_2147636162_0
         $x_1_3 = {cd 46 21 74 54 65 68 53 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -200,6 +208,7 @@ rule VirTool_Win32_Vbcrypt_CO_2147645147_0
         $x_1_3 = {46 53 6c 69 70 6e 6f 72 62 00 00 00 4d 53 6c 69 70 6e 6f 72 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +231,7 @@ rule VirTool_Win32_Vbcrypt_CT_2147645926_0
         $x_1_3 = {83 c4 14 0f bf 95 bc fe ff ff 85 d2 0f 84 55 1d 00 00 c7 45 fc 04 00 00 00 e8 ?? ?? ff ff c7 45 fc 05 00 00 00 83 3d ?? ?? 40 00 00 75 1c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -245,6 +255,7 @@ rule VirTool_Win32_Vbcrypt_DG_2147647292_0
         $x_1_4 = {8b d0 8d 4d cc ff d7 8b 4d d0 50 51 ff d3 8b d0 8d 4d c8 ff d7 50 68 68 1b 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +279,7 @@ rule VirTool_Win32_Vbcrypt_DM_2147647769_0
         $x_1_4 = {50 6a 10 68 80 08 00 00 ff d3 83 c4 1c b8 02 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -290,6 +302,7 @@ rule VirTool_Win32_Vbcrypt_H_2147647876_0
         $x_1_2 = {e9 e9 e9 e9 cc cc cc cc cc cc cc cc cc cc cc cc 9e 9e 9e 9e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -316,6 +329,7 @@ rule VirTool_Win32_Vbcrypt_DN_2147647898_0
         $x_1_7 = {83 c4 14 eb 52 b8 ?? ?? ?? ?? f7 d8 b9 ?? ?? ?? ?? 83 d1 00 f7 d9 89 ?? ?? ff ff ff 89 ?? ?? ff ff ff 6a 00 6a 00 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -339,6 +353,7 @@ rule VirTool_Win32_Vbcrypt_DP_2147648385_0
         $x_1_4 = {c7 45 fc 3f 00 00 00 c7 85 ?? ff ff ff 05 00 00 00 c7 85 ?? ff ff ff 02 00 00 00 c7 85 ?? ff ff ff 5f 00 00 00 c7 85 ?? ff ff ff 02 00 00 00 8d 45 b0 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -363,6 +378,7 @@ rule VirTool_Win32_Vbcrypt_DS_2147648807_0
         $x_1_5 = {8b 7d 08 8d 4d 94 8b 07 51 8d 4d e8 51 68 c2 8c 10 c5 ff 35 ?? ?? ?? 00 57 ff 50 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -388,6 +404,7 @@ rule VirTool_Win32_Vbcrypt_EA_2147650907_0
         $x_1_6 = "__vbazopyBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -408,6 +425,7 @@ rule VirTool_Win32_Vbcrypt_EB_2147651280_0
         $x_2_1 = {ff d6 8d 4d 80 6a 6c 51 ff d6 8d 95 60 ff ff ff 6a 58 52 ff d6 8d 85 40 ff ff ff 6a 78 50 ff d6 8d 8d 20 ff ff ff 6a 5a 51 ff d6 6a 71 8d 95 00 ff ff ff 52 ff d6 8d 85 e0 fe ff ff 6a 33 50 ff d6 8d 8d c0 fe ff ff 6a 69 51 ff d6 8d 95 a0 fe ff ff 6a 53 52 ff d6 8d 85 80 fe ff ff 6a 42 50 ff d6 8d 8d 60 fe ff ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -435,6 +453,7 @@ rule VirTool_Win32_Vbcrypt_EC_2147651310_0
         $x_1_8 = {49 6e 74 65 72 6e 65 74 47 65 74 43 6f 6e 6e 65 63 74 65 64 53 74 61 74 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -461,6 +480,7 @@ rule VirTool_Win32_Vbcrypt_EF_2147652918_0
         $x_1_1 = {50 51 c7 85 60 ff ff ff 03 80 00 00 ff 15 ?? ?? ?? ?? 66 85 c0 [0-16] 52 50 89 bd ?? ?? ?? ?? 89 bd ?? ?? ?? ?? ff d3 8b 4d 0c 50 8b 11 52 ff 15 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 66 8b 4d ?? 8d 55 ?? 66 89 8d ?? ?? ?? ?? 8d 85 ?? ?? ?? ?? 52 8d 8d ?? ?? ?? ?? 50 51 89 bd ?? ?? ?? ?? ff 15 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 52 50 ff 15 ?? ?? ?? ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -482,6 +502,7 @@ rule VirTool_Win32_Vbcrypt_EG_2147652963_0
         $x_1_2 = {40 db e2 89 85 ?? ?? ?? ?? 83 bd ?? ?? ?? ?? 00 7d 23 6a 40 68 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 8d [0-32] ff 15 ?? ?? ?? ?? ?? 8d ?? ?? ?? ?? ?? ?? 8d ?? ?? ?? ?? ?? ?? ff 15 ?? ?? ?? ?? ?? 8d ?? ?? ?? ?? ?? ?? 8d ?? ?? ?? ?? ?? ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -502,6 +523,7 @@ rule VirTool_Win32_Vbcrypt_EH_2147652968_0
         $x_1_1 = {c7 85 58 ff ff ff 08 00 00 00 c7 45 c0 01 00 00 00 89 75 b8 c7 85 78 ff ff ff 08 40 00 00 ff 15 ?? ?? ?? ?? 8d ?? ?? ?? ?? ?? 6a 01 8d ?? ?? ?? ?? 8d ?? ?? ?? ?? c7 85 ?? ?? ff ff 01 00 00 00 89 b5 ?? ff ff ff ff 15 ?? ?? ?? ?? ?? 8d ?? ?? ?? ?? ?? 8d ?? ?? ?? ?? ff 15 ?? ?? ?? ?? ?? ff 15 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 83 c4 10 66 3b f3 0f 8c ?? ?? ?? ?? 66 6b ff 40 66 8b 45 dc 0f 80 ?? ?? ?? ?? 66 03 fe 0f 80 ?? ?? ?? ?? 66 05 06 00 0f 80 ?? ?? ?? ?? 66 3d 08 00 89 45 dc 0f 8c ?? ?? ?? ?? 0f bf f7 8d 55 dc 66 2d 08 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

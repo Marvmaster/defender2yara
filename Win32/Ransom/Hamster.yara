@@ -19,6 +19,7 @@ rule Ransom_Win32_Hamster_AA_2147799277_0
         $x_1_4 = "How To decrypt.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

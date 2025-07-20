@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Kroshka_A_2147620628_0
         $x_1_7 = "Microsoft Corporation All Rights Reserved" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             ((6 of ($x_10_*))) or

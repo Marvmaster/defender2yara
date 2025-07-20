@@ -21,6 +21,7 @@ rule Ransom_Win64_Razrusheniye_YAB_2147921077_0
         $x_1_6 = "decrypt these files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

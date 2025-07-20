@@ -18,6 +18,7 @@ rule Backdoor_Win32_Lisuife_A_2147694245_0
         $x_1_3 = {b9 80 96 98 00 f7 f9 03 f2 56 e8 ?? ?? ?? ?? 83 c4 04 e8 ?? ?? ?? ?? 99 b9 60 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Backdoor_Win32_Lisuife_B_2147694339_0
         $x_1_3 = "i`m wait" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

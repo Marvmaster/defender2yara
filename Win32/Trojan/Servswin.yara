@@ -19,6 +19,7 @@ rule Trojan_Win32_Servswin_A_2147623110_0
         $x_1_5 = "hh_mm_ss_tt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

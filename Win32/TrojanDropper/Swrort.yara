@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Swrort_ASW_2147896764_0
         $x_1_2 = {8b 45 f8 89 44 24 08 c7 44 24 04 ec 79 49 00 8b 45 f4 89 04 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

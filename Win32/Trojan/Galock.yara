@@ -16,6 +16,7 @@ rule Trojan_Win32_Galock_A_2147679913_0
         $x_1_2 = {8d 4c 10 18 89 4d ?? 8b 55 ?? 8b 45 ?? 03 42 60 89 45 ?? 8b 4d 0c c1 e9 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

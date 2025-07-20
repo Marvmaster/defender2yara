@@ -19,6 +19,7 @@ rule Trojan_Win32_Regrun_A_2147608174_0
         $x_1_5 = "UserRestart" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Regrun_B_2147611548_0
         $x_1_5 = "TerminateProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

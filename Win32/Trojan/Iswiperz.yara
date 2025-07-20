@@ -17,6 +17,7 @@ rule Trojan_Win32_Iswiperz_AB_2147924173_0
         $x_1_2 = {47 36 ee 36 4d 37 a8 37 16 38 35 38 66 38 be 39 f8 3a 13 3b 29 3b 3f 3b 47 3b 40 3f 00 00 00 50 01 00 38 00 00 00 43 30 73 30 36 33 3b 33 4d 33 6b 33 7f 33 85 33 2d 34 70 34 a3 34 d2 34 42 38 b1 38 d6 38 12 3a 41 3b c7 3b e4 3b 01 3c 1e 3c 3b 3c 65 3c 00 00 00 60 01 00 4c 01 00 00 3c 31 48 31 54 31 58 31 5c 31 60 31 64 31 68 31 74 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

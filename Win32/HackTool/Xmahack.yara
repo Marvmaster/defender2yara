@@ -18,6 +18,7 @@ rule HackTool_Win32_Xmahack_A_2147648800_0
         $x_1_4 = "Failed to Write DLL to Process!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Ransom_Win32_Raid_A_2147726462_0
         $x_1_7 = "Dont try to use third-party decryptor tools because it will destroy your files." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

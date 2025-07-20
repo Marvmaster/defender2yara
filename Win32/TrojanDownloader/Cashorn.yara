@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Cashorn_A_2147610969_0
         $x_2_6 = {2f 64 6f 77 6e 6c 6f 61 64 2f 72 75 6e 5f 64 6c 69 73 74 2e 74 78 74 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or

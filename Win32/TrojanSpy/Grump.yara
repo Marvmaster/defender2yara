@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Grump_A_2147627362_0
         $x_1_2 = "InstallRootkit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

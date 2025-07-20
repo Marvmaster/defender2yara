@@ -17,6 +17,7 @@ rule Trojan_MSIL_FareIt_MBZS_2147905671_0
         $x_1_2 = "ordder2.Properties.Resources.resource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_FareIt_SWA_2147931288_0
         $x_2_2 = {fe 0c 03 00 45 01 00 00 00 21 00 00 00 38 1c 00 00 00 11 05 28 ?? 00 00 06 20 00 00 00 00 28 ?? 00 00 06 39 dc ff ff ff 26 38 d2 ff ff ff dc}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

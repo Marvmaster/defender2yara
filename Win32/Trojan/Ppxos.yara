@@ -18,6 +18,7 @@ rule Trojan_Win32_Ppxos_A_2147679646_0
         $x_1_4 = "/tj.php?id=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

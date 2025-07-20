@@ -26,6 +26,7 @@ rule TrojanDropper_Win32_NetRat_V_2147754849_0
         $x_1_11 = {43 3a 5c 54 45 4d 50 5c [0-21] 2e 74 6d 70 5c 62 6c 6f 77 66 69 73 68 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

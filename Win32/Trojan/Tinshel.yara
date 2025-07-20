@@ -19,6 +19,7 @@ rule Trojan_Win32_Tinshel_A_2147730506_0
         $x_1_4 = "%d.%d.%d.%d %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

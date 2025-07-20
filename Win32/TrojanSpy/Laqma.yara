@@ -35,6 +35,7 @@ rule TrojanSpy_Win32_Laqma_A_2147598667_0
         $x_1_21 = "InternetCloseHandle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 4 of ($x_25_*) and 5 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -59,6 +60,7 @@ rule TrojanSpy_Win32_Laqma_B_2147598671_0
         $x_1_2 = {ff d3 80 3e 21 75 37 80 7e 01 45 75 31 80 7e 02 58 75 2b 80 7e 03 21 75 25 51 8d 46 04 8b cc 50 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_DcRat_PAL_2147931478_0
         $x_1_2 = {80 30 11 48 8d 40 01 ff c1 83 f9 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

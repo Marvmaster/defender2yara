@@ -44,6 +44,7 @@ rule Trojan_Win32_DarkComet_AME_2147844797_0
         $x_1_1 = {8b 45 d4 8b 4d e8 2b 48 14 8b 45 d4 8b 40 0c 8b 55 d8 8b 75 e4 2b 72 14 8b 55 d8 8b 52 0c 8a 04 08 32 04 32 8b 4d d4 8b 55 e8 2b 51 14 8b 4d d4 8b 49 0c 88 04 11 8b 45 e4 40 89 45 e4 8b 45 e4 3b 45 e0 7e 04 83 65 e4 00 8b 45 e8 40 89 45 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +66,7 @@ rule Trojan_Win32_DarkComet_ADK_2147894002_0
         $x_1_1 = {32 34 00 01 31 00 00 02 31 36 00 01 32 00 00 01 38 00 00 01 33 00 00 01 34 00 00 03 31 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +88,7 @@ rule Trojan_Win32_DarkComet_ADK_2147894002_1
         $x_1_1 = {03 f2 81 e6 ff 00 00 80 79 ?? 4e 81 ce 00 ff ff ff 46 0f b6 94 b5 fc fb ff ff 8b b5 f4 fb ff ff 30 14 06 40 3b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +110,7 @@ rule Trojan_Win32_DarkComet_ADK_2147894002_2
         $x_1_1 = {50 6a 00 53 68 4c 28 1c 13 6a 00 6a 00 e8 dd 4f f8 ff db 6d e8 d8 25 24 2b 1c 13 db 7d e8 9b db 6d e8 d8 1d 1c 2b 1c 13 9b df e0 9e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +132,7 @@ rule Trojan_Win32_DarkComet_ADK_2147894002_3
         $x_1_1 = {8b ee 33 eb 23 e9 33 ee 03 fd 03 c7 8b f8 c1 e7 0c c1 e8 14 0b f8 03 f9 8b c7 8b 7a 08 03 3d 98 17 49 00 8b eb 33 e9 23 e8 33 eb 03 fd 03 f7 8b fe c1 e7 11 c1 ee 0f 0b fe 03 f8 8b f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule Trojan_Win32_DarkComet_ADK_2147894002_4
         $x_1_3 = "Keylogger is up and running" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +182,7 @@ rule Trojan_Win32_DarkComet_ADK_2147894002_5
         $x_1_5 = "BTRESULTHTTP Flood|Http Flood task finished" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +204,7 @@ rule Trojan_Win32_DarkComet_ADC_2147897606_0
         $x_1_1 = {51 50 6a 00 0f 29 84 24 ?? ?? ?? ?? ff d7 6a 00 6a 00 6a 00 8d 84 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +228,7 @@ rule Trojan_Win32_DarkComet_ADC_2147897606_1
         $x_1_3 = {8d 45 f8 50 6a 00 53 68 68 09 49 00 6a 00 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -241,6 +250,7 @@ rule Trojan_Win32_DarkComet_ADR_2147899803_0
         $x_1_1 = {52 56 50 ff d3 85 c0 75 12 8d 4c 24 10 51 ff d5 8d 54 24 10 52 ff 15 20 f1 40 00 6a 00 6a 00 6a 00 8d 44 24 1c 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +278,7 @@ rule Trojan_Win32_DarkComet_ND_2147910571_0
         $x_1_7 = "7JAtomA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -289,6 +300,7 @@ rule Trojan_Win32_DarkComet_ADE_2147912276_0
         $x_1_1 = {50 6a 00 53 68 2c 88 48 00 6a 00 6a 00 e8 ?? ?? ?? ?? db 6d e8 d8 25 ac 8a 48 00 db 7d e8 9b db 6d e8 d8 1d a4 8a 48 00 9b df e0 9e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -310,6 +322,7 @@ rule Trojan_Win32_DarkComet_AKM_2147912711_0
         $x_1_1 = {50 6a 00 53 68 d8 36 15 00 6a 00 6a 00 e8 8b 40 f8 ff db 6d e8 d8 25 b0 39 15 00 db 7d e8 9b db 6d e8 d8 1d a8 39 15 00 9b df e0 9e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -331,6 +344,7 @@ rule Trojan_Win32_DarkComet_MBXX_2147921643_0
         $x_10_1 = {30 25 40 00 98 12 40 00 00 f0 30 00 00 ff ff ff 08 00 00 00 01 00 00 00 00 00 00 00 e9 00 00 00 28 11 40 00 28 11 40 00 ec 10 40 00 78 00 00 00 80}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -353,6 +367,7 @@ rule Trojan_Win32_DarkComet_MBXY_2147922177_0
         $x_1_2 = {e9 00 00 00 68 74 41 00 d4 73 41 00 68 3b 40 00 78 00 00 00 86 00 00 00 8e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -374,6 +389,7 @@ rule Trojan_Win32_DarkComet_ADO_2147942474_0
         $x_1_1 = {8b 45 14 8b 55 08 03 c2 89 45 f8 8b 01 03 45 0c 8b ce 99 f7 f9 8b 45 f8 8a 8c 95 94 fb ff ff 30 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -398,6 +414,7 @@ rule Trojan_Win32_DarkComet_AKD_2147945772_0
         $x_2_4 = "Please restart your router or your PC to make sure it's connected to the internet" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -419,6 +436,7 @@ rule Trojan_Win32_DarkComet_AMDK_2147945899_0
         $x_1_1 = {8d 95 fc fb ff ff 52 8d 85 f4 fb ff ff 50 8d 4d fc 51 8d 95 f0 fb ff ff 52 68 00 04 00 00 8d 85 f0 f7 ff ff 50 68 e4 22 41 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

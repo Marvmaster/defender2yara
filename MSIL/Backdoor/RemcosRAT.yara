@@ -18,6 +18,7 @@ rule Backdoor_MSIL_RemcosRAT_A_2147837687_0
         $x_2_3 = {00 00 01 25 16 20 ?? ?? ?? 00 28 ?? ?? 00 06 a2 14 14 28 ?? 00 00 0a 28 ?? 00 00 0a 13 01 38}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

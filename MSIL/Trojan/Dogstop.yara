@@ -18,6 +18,7 @@ rule Trojan_MSIL_Dogstop_A_2147639538_0
         $x_1_4 = {4d 79 41 70 70 6c 69 63 61 74 69 6f 6e 00 4b 39 52 65 6d 6f 76 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

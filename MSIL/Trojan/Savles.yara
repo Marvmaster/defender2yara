@@ -22,6 +22,7 @@ rule Trojan_MSIL_Savles_A_2147681967_0
         $x_1_8 = "=resu&" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_MSIL_Savles_B_2147685537_0
         $x_1_8 = "Wm5WdVkzUnBiMjRtWTIxa1BRPT0=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

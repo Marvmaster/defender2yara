@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Nitol_A_2147838018_0
         $x_2_1 = {89 64 24 0c 68 19 00 ff 15 04 ?? 40 00 8b f0 68 ?? ?? 40 00 56 ff 15 10 ?? 40 00 51 8b f8 8b cc}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_Nitol_C_2147896370_0
         $x_2_2 = {c6 45 b8 56 c6 45 b9 69 c6 45 ba 72 c6 45 bb 74 c6 45 bc 75 c6 45 bd 61 c6 45 be 6c c6 45 bf 41 c6 45 c0 6c c6 45 c1 6c c6 45 c2 6f c6 45 c3 63}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

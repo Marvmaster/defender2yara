@@ -17,6 +17,7 @@ rule Trojan_Win32_lokibot_SI_2147731698_0
         $x_1_2 = {8b c2 03 c3 [0-16] c6 00 ?? [0-16] 43 81 fb ?? ?? ?? ?? 75 ?? [0-16] 8b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_lokibot_SI_2147731698_1
         $x_1_3 = {55 8b ec 83 c4 f8 89 55 fc 89 45 f8 [0-16] 8b 7d fc 03 7d f8 ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_lokibot_RPC_2147795855_0
         $x_1_2 = {ff 45 80 8b 45 80 3b 45 0c 0f 8c ?? ?? ?? ?? 8b 4d f8 5f 5e 33 cd 5b e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win32_lokibot_RPD_2147795856_0
         $x_1_2 = {8b 49 04 80 79 0f 00 75 12 8b 16 3b 51 08 75 0b 89 0e 8b 49 04 80 79 0f 00 74 ee 89 0e c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_Win32_lokibot_RPE_2147795857_0
         $x_1_1 = {8b 44 24 28 03 c2 8a 0c 38 39 9c 24 c0 00 00 00 74 07 b8 d0 39 57 00 2b c2 42 88 08 3b d6 7c e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +131,7 @@ rule Trojan_Win32_lokibot_RPE_2147795857_1
         $x_1_1 = {73 16 00 00 06 0a 00 06 72 64 01 00 70 7d 0d 00 00 04 28 08 00 00 06 06 fe 06 17 00 00 06 73 19 00 00 0a 28 01 00 00 2b 28 02 00 00 2b 0b 07 28 03 00 00 06 6f 1c 00 00 0a 0c 12 02 28 1d 00 00 0a 00 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +155,7 @@ rule Trojan_Win32_lokibot_RPG_2147796180_0
         $x_1_3 = {8a 14 06 88 10 40 49 75 f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

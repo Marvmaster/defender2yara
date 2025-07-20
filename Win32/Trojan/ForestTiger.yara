@@ -17,6 +17,7 @@ rule Trojan_Win32_ForestTiger_A_2147892515_0
         $x_100_2 = {ba 55 b9 db 02 84 c9 74 ?? 8d 64 24 00 8b fa 8b da c1 e7 05 c1 fb 02 0f be c9 03 fb 03 f9 8a 4e 01 46 33 d7}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_ForestTiger_B_2147892516_0
         $x_100_2 = "uTYNkfKxHiZrx3KJ" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule VirTool_WinNT_Emold_A_2147610390_0
         $x_1_7 = {25 ff ff fe ff 0f 22 c0 8b 45 ?? 8b 55 ?? ?? ?? f0 87 10 ?? ?? 8b 45 ?? 0f 22 c0 fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule VirTool_WinNT_Emold_B_2147628257_0
         $x_1_3 = {fa 0f 20 c0 8b d2 89 44 ?? ?? 8b d2 25 ff ff fe ff 0f 22 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule VirTool_WinNT_Emold_C_2147628327_0
         $x_1_4 = {30 14 30 83 c0 01 3b c1 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

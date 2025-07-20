@@ -17,6 +17,7 @@ rule Virus_Win32_Trats_G_2147600887_0
         $x_1_3 = {53 56 57 68 ?? ?? ?? ?? 8d 44 24 10 50 6a 68 6a 00 ff 15 ?? ?? ?? ?? 8b 1d ?? ?? ?? ?? 8d 4c 24 0c 51 ff d3 8b f0 33 ff 85 f6 75 ?? 8d 54 24 0c 52 e8 ?? ?? ff ff 83 c4 04 84 c0 74 ?? 8d 44 24 0c 50 ff d3 8b f0 85 f6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

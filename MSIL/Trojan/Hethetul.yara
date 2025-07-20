@@ -17,6 +17,7 @@ rule Trojan_MSIL_Hethetul_A_2147773732_0
         $x_1_2 = "Users\\Hac TooL\\Desktop\\Het\\Het" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

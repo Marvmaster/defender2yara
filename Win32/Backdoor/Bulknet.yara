@@ -19,6 +19,7 @@ rule Backdoor_Win32_Bulknet_MA_2147829199_0
         $x_1_4 = "InternetConnectW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

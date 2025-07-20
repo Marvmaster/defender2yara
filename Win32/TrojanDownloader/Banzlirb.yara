@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Banzlirb_A_2147692731_0
         $x_1_7 = "/download/segundo.zip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or
@@ -48,6 +49,7 @@ rule TrojanDownloader_Win32_Banzlirb_B_2147694341_0
         $x_1_3 = {2e 7a 6c 69 62 [0-32] 2e 65 78 65 [0-32] 41 56 49 53 4f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -16,6 +16,7 @@ rule Trojan_Win32_Latrodectus_C_2147919790_0
         $x_1_1 = {48 63 d8 41 8b c0 f7 e9 d1 fa 8b c2 c1 e8 1f 03 d0 41 8b c0 f7 ea d1 fa 8b c2 c1 e8 1f 03 d0 41 8b c0 f7 ea d1 fa 8b c2 c1 e8 1f 03 d0 41 8b c0 f7 ea 41 8b c0 d1 fa 8b ca}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Latrodectus_A_2147931460_0
         $x_1_6 = {69 04 24 93 01 00 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

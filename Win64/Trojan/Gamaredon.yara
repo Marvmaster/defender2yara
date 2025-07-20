@@ -17,6 +17,7 @@ rule Trojan_Win64_Gamaredon_2147841655_0
         $x_7_1 = {48 c7 c1 01 00 00 80 e8 ?? ?? ?? ff 4c 8d 05 ff 0c 00 00 48 8d 15 00 0d 00 00 48 c7 c1 01 00 00 80 e8 cc fd ff ff 4c 8d 8c 24 e0 00 00 00 4c 8d}  //weight: 7, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win64_Gamaredon_ZA_2147903804_0
         $x_1_5 = ".DeleteFile(\"C:\\Documents and Settings\\Administrator\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

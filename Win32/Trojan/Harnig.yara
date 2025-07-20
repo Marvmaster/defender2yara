@@ -19,6 +19,7 @@ rule Trojan_Win32_Harnig_A_90331_0
         $x_2_4 = {65 78 70 6c 6f 72 65 72 2e 65 78 65 00 00 00 00 6b 65 72 6e 65 6c 33 32 2e 64 6c 6c 00 00 00 00 49 73 50 72 6f 63 65 73 73 6f 72 46 65 61 74 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -55,6 +56,7 @@ rule Trojan_Win32_Harnig_B_90332_0
         $x_1_12 = "GetSystemDefaultLangID" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -102,6 +104,7 @@ rule Trojan_Win32_Harnig_C_91511_0
         $x_1_17 = "GetSystemDirectoryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 

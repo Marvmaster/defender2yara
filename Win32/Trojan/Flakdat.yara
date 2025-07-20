@@ -18,6 +18,7 @@ rule Trojan_Win32_Flakdat_A_2147694816_0
         $x_1_4 = "\\fkl.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

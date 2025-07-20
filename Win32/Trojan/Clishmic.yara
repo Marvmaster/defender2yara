@@ -19,6 +19,7 @@ rule Trojan_Win32_Clishmic_A_2147640445_0
         $x_1_5 = {6b 65 79 73 2f 71 75 65 72 69 65 73 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

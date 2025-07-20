@@ -19,6 +19,7 @@ rule TrojanClicker_Win32_ClickTrans_2147721045_0
         $x_1_5 = "Click x = %d,y = %d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

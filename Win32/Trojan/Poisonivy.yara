@@ -16,6 +16,7 @@ rule Trojan_Win32_Poisonivy_MBXR_2147918937_0
         $x_1_1 = {b0 25 40 00 78 12 40 00 00 f0 30 00 00 ff ff ff 08 00 00 00 01 00 00 00 00 00 00 00 e9 00 00 00 0c 11 40 00 0c 11 40 00 d0 10 40 00 78 00 00 00 80}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

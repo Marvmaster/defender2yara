@@ -36,6 +36,7 @@ rule Trojan_MSIL_Nomercy_SYD_2147827846_0
         $x_1_21 = "Sending webcam snapshot..." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

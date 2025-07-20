@@ -17,6 +17,7 @@ rule Backdoor_Win64_CobaltStrike_MYK_2147784057_0
         $x_1_2 = {01 fa 81 c2 [0-4] 0f bf d2 69 d2 [0-4] c1 ea 10 01 f2 83 c2 [0-1] 21 ca 89 d7 c1 ef 0f c1 ea 06 01 fa 89 d7 c1 e7 07 29 fa 01 f2 83 c2 02 88 54 04 20 48 ff c0 48 83 f8 [0-1] 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_Win64_CobaltStrike_AA_2147787524_0
         $x_10_2 = {55 48 89 e5 48 83 ec 10 48 89 4d 10 48 89 55 18 4c 89 45 20 4c 89 4d 28 c7 45 fc}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Backdoor_Win64_CobaltStrike_UID_2147799068_0
         $x_1_7 = "2e2e2e2e-2e2e-2e2e-2e2e-2e2e2e2e2e2e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Backdoor_Win64_CobaltStrike_MAK_2147805251_0
         $x_1_3 = {83 c3 01 b8 [0-4] 45 8b c3 45 2b c5 41 83 c3 01 f7 e3 c1 ea [0-1] b8 [0-4] 69 d2 [0-4] 2b da 4c 63 d3 45 0f b6 0c 3a 45 03 e1 41 f7 e4 c1 ea [0-1] 69 d2 [0-4] 44 2b e2 49 63 cc 0f b6 04 39 41 88 04 3a 44 88 0c 39 41 0f b6 0c 3a 41 03 c9 b8 [0-4] f7 e1 c1 ea [0-1] 69 d2 [0-4] 2b ca 48 63 c1 0f b6 0c 38 41 30 0c 30 48 83 ed 01 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Backdoor_Win64_CobaltStrike_MCK_2147808362_0
         $x_1_1 = {33 c9 49 63 d2 49 3b d1 4d 8d 5b 01 48 0f 45 ce 42 0f b6 04 01 48 8d 71 01 41 30 43 ff 33 c0 49 3b d1 41 0f 45 c2 ff c3 44 8d 50 01 48 63 c3 48 3b c7 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

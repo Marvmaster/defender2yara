@@ -19,6 +19,7 @@ rule Trojan_MSIL_Artel_AB_2147903121_0
         $x_1_4 = "dllguest.Bypass" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

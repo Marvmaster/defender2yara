@@ -24,6 +24,7 @@ rule Ransom_Win64_Mallox_CCCM_2147892846_0
         $x_1_9 = "SOFTWARE\\Raccine" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Ransom_Win64_Mallox_AMAA_2147909699_0
         $x_1_7 = ".mallox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Ransom_Win64_Mallox_MKB_2147909723_0
         $x_1_1 = {48 98 41 8b 4c 83 fc 8b c1 c1 e8 1e 33 c1 69 c0 65 89 07 6c 03 d0 49 63 c0 41 89 14 83}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +104,7 @@ rule Ransom_Win64_Mallox_AMA_2147915511_0
         $x_1_9 = "SYSTEM\\CurrentControlSet\\Services\\EventLog\\Application\\Raccine" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule Ransom_Win64_Mallox_C_2147946172_0
         $x_1_5 = "FILE RECOVERY.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

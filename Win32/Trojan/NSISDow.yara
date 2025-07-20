@@ -20,6 +20,7 @@ rule Trojan_Win32_NSISDow_A_2147851339_0
         $x_2_5 = "9khso82n" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

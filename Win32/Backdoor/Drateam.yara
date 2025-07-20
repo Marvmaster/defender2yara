@@ -21,6 +21,7 @@ rule Backdoor_Win32_Drateam_A_2147619074_0
         $x_1_6 = {68 01 02 00 00 ?? e8 ?? ?? ?? ?? 6a 00 6a 00 68 02 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Backdoor_Win32_Drateam_B_2147631537_0
         $x_1_4 = "MS-DOS Carry out and Fail!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Backdoor_Win32_Drateam_B_2147640472_0
         $x_1_4 = {43 4f 4e 4e 45 43 54 45 44 3f 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Pozz_A_2147631510_0
         $x_1_3 = {50 50 6a 03 50 50 68 c9 cb 08 c0 81 2c 24 c9 cb 08 00 68 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

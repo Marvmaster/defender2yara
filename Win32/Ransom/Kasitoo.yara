@@ -34,6 +34,7 @@ rule Ransom_Win32_Kasitoo_A_2147726238_0
         $x_1_19 = "del /Q /F /S %s$recycle.bin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_1_*))) or
             ((1 of ($x_3_*) and 8 of ($x_1_*))) or

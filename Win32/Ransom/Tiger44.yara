@@ -22,6 +22,7 @@ rule Ransom_Win32_Tiger44_XT_2147773324_0
         $x_1_7 = "ATTENTION !!! THIS IS YOUR PERSONAL ID WICH YOU HAVE TO SEND IN FIRST LETTER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Cyspetel_A_2147642412_0
         $x_3_4 = "[ureg]=\"1\"&" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

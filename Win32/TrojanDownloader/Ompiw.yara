@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Ompiw_A_2147634218_0
         $x_1_2 = {89 59 10 8a 5c 31 04 30 1c 38 8b 59 10 40 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

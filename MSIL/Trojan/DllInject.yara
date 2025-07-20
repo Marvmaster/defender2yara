@@ -20,6 +20,7 @@ rule Trojan_MSIL_DllInject_A_2147759386_0
         $x_1_5 = "Invoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule Trojan_MSIL_DllInject_D_2147759388_0
         $x_1_2 = "AndroidStudio" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_MSIL_DllInject_I_2147759689_0
         $x_10_3 = "AndroidStudio.dll" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -98,6 +101,7 @@ rule Trojan_MSIL_DllInject_J_2147761180_0
         $x_1_7 = "StartGame" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -134,6 +138,7 @@ rule Trojan_MSIL_DllInject_BAE_2147798540_0
         $x_1_8 = "KrnlUI-main\\KrnlUI\\obj\\Release\\KrnlUI.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +169,7 @@ rule Trojan_MSIL_DllInject_CB_2147828664_0
         $x_1_10 = "finj.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +195,7 @@ rule Trojan_MSIL_DllInject_CC_2147831372_0
         $x_1_5 = "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Browser Helper Objects" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +223,7 @@ rule Trojan_MSIL_DllInject_NEAA_2147836724_0
         $x_1_7 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -241,6 +249,7 @@ rule Trojan_MSIL_DllInject_NEAB_2147837434_0
         $x_1_5 = "Management consultant" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -263,6 +272,7 @@ rule Trojan_MSIL_DllInject_AD_2147838880_0
         $x_1_2 = "Updater" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -287,6 +297,7 @@ rule Trojan_MSIL_DllInject_MA_2147840323_0
         $x_1_4 = "Roblox_Executor_WolfCheats.Properties" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +323,7 @@ rule Trojan_MSIL_DllInject_MA_2147840323_1
         $x_1_5 = "scripts_Load" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -333,6 +345,7 @@ rule Trojan_MSIL_DllInject_MBCQ_2147844454_0
         $x_1_1 = {11 06 59 17 58 6f ?? 00 00 0a 13 07 11 05 11 07 1b 8d ?? 00 00 01 13 0a 11 0a 16 72 3d 01 00 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -355,6 +368,7 @@ rule Trojan_MSIL_DllInject_MBDZ_2147845785_0
         $x_1_2 = "Ldaadpdlkqo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -377,6 +391,7 @@ rule Trojan_MSIL_DllInject_MBCC_2147845796_0
         $x_1_2 = "Askglqenlhu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -399,6 +414,7 @@ rule Trojan_MSIL_DllInject_MBFF_2147849966_0
         $x_1_2 = "c253521f3d03" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -420,6 +436,7 @@ rule Trojan_MSIL_DllInject_JB_2147895549_0
         $x_1_1 = {6f 10 00 00 0a 2c 3e 72 0b 00 00 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

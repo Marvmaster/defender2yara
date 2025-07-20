@@ -21,6 +21,7 @@ rule HackTool_Win64_EasyKatz_2147748669_0
         $x_1_7 = "[*] Authentication Id : %d ; %d (%08x:%08x)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

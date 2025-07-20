@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Gployin_A_2147721631_0
         $x_1_3 = "software\\microsoft\\windows\\currentVersion\\run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

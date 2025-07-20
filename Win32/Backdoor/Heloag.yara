@@ -19,6 +19,7 @@ rule Backdoor_Win32_Heloag_A_2147628547_0
         $x_1_5 = {68 89 13 00 00 68 ?? ?? ?? ?? 8b 48 10 51 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule Backdoor_Win32_Heloag_B_2147632888_0
         $x_1_4 = "%s\\%d-%d-%d-%d-%d.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

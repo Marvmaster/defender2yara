@@ -18,6 +18,7 @@ rule Trojan_Win32_Visero_A_2147682638_0
         $x_1_4 = "Bitte aktualisieren Sie Ihre Zahlungsdaten" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

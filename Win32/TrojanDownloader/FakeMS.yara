@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_FakeMS_A_2147630055_0
         $x_1_3 = {73 11 2b 45 f4 33 d2 b9 10 0e 00 00 f7 f1 83 f8 01 eb 12 2b 45 f4 33 d2 b9 80 51 01 00 f7 f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

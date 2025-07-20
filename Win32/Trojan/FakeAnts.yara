@@ -17,6 +17,7 @@ rule Trojan_Win32_FakeAnts_122479_0
         $x_1_3 = {72 b2 ff 44 24 0a 81 7c 24 0a 75 27 00 00 76 8f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_FakeAnts_122479_1
         $x_3_5 = {8b 7c 24 10 b9 06 00 00 00 be 38 20 40 00 f3 a5 17 00 30 20 40 00 ?? ?? ?? ?? ?? 10 30 40 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -66,6 +68,7 @@ rule Trojan_Win32_FakeAnts_122479_2
         $x_1_1 = {53 8b dc 83 ec 20 c7 44 24 ?? 00 00 00 00 b8 ?? ?? ?? ?? c7 44 24 ?? ?? ?? ?? ?? c7 44 24 ?? 00 00 00 00 8b 7c 24 ?? 28 07 81 7c 24 04 ?? 27 00 00 74 06 8b 7c 24 ?? 00 07 ff 44 24 ?? c1 e8 08 ff 44 24 ?? 83 7c 24 ?? 04 75 0d b8 ?? ?? ?? ?? c7 44 24 ?? 00 00 00 00 81 7c 24 ?? ?? ?? ?? ?? 72 c1 ff 44 24 ?? 81 7c 24 ?? ?? ?? 00 00 76 9e 8b e3 5b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_FakeAnts_122479_3
         $x_1_2 = {27 00 00 74 06 8b 7c 24 ?? 00 ?? ff 44 24 ?? c1 ?? 08 ff 44 24 ?? 83 7c 24 ?? 04 75 0d ?? ?? ?? ?? ?? c7 44 24 ?? 00 00 00 00 81 7c 24 ?? ?? ?? ?? ?? 72 c1 ff 44 24 ?? 81 7c 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Win32_FakeAnts_122479_4
         $x_1_3 = {41 72 65 20 79 6f 75 20 61 62 73 6f 6c 75 74 65 6c 79 20 73 75 72 65 20 79 6f 75 20 64 6f 20 4e 4f 54 20 77 61 6e 74 20 74 6f 20 63 6f 6e 74 69 6e 75 65 3f 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))
@@ -134,6 +139,7 @@ rule Trojan_Win32_FakeAnts_122479_5
         $x_11_3 = {5e 8b 3e be ?? ?? ?? ?? 01 fe b9 ?? ?? ?? ?? 31 d2 f9 8a 16 83 fa 00 74 0b 80 f2 ?? 83 fa 00 74 03 88 16 f8 f9 46 e2 e9 f8}  //weight: 11, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_Win32_FakeAnts_122479_6
         $x_6_7 = {5a 2b be 9c 91 be be be b7 7b 44 b8 75 37 b9 77 39 b8 74 36 b6 71 31 b3 6c 2a b0 67 22 ae 62 1c ac 5f 16 ab 5d 14 aa 5a 11 a8 59 0e a7 58 0d a7}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_6_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -188,6 +195,7 @@ rule Trojan_Win32_FakeAnts_122479_7
         $x_1_4 = {27 00 00 74 06 8b ?? 24 ?? 00 ?? ff 44 24 ?? c1 [0-5] ff 44 24 ?? 83 7c 24 ?? 04 75 0d ?? ?? ?? ?? ?? c7 44 24 ?? 00 00 00 00 81 7c 24 ?? ?? ?? ?? ?? 72 ?? ff 44 24 ?? 81 7c 24 ?? ?? 27 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -212,6 +220,7 @@ rule Trojan_Win32_FakeAnts_122479_8
         $x_1_5 = "antivirus.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -246,6 +255,7 @@ rule Trojan_Win32_FakeAnts_122479_9
         $x_2_12 = "Backdoor.Agobot.gen" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_2_*))) or
             ((1 of ($x_15_*))) or

@@ -24,6 +24,7 @@ rule Trojan_MSIL_AgentWrap_AB_2147767062_0
         $x_1_9 = "Webcam not found!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

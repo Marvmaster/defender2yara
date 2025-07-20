@@ -19,6 +19,7 @@ rule HackTool_Win64_Moniap_A_2147718070_0
         $x_1_5 = "Usage: Remarks string" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule HackTool_Win64_Moniap_B_2147718071_0
         $x_1_3 = {2d 74 73 68 61 63 6b 20 25 64 20 25 73 25 73 [0-8] 4d 53 41 53 47 75 69 2e 65 78 65 [0-16] 50 72 6f 67 72 61 6d 44 61 74 61 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 53 74 61 72 74 20 4d 65 6e 75 5c 50 72 6f 67 72 61 6d 73 5c 53 74 61 72 74 75 70 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

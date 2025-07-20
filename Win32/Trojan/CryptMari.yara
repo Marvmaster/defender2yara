@@ -17,6 +17,7 @@ rule Trojan_Win32_CryptMari_SA_2147742813_0
         $x_1_2 = {5c 41 64 6d 69 6e 69 73 74 72 61 74 6f 72 5c 44 65 73 6b 74 6f 70 5c 63 72 70 74 72 5c 62 61 73 65 5c [0-2] 5c 73 74 75 62 5c 52 65 6c 65 61 73 65 5c 73 74 75 62 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

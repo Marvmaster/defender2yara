@@ -19,6 +19,7 @@ rule Ransom_MSIL_Crydap_A_2147709171_0
         $x_1_5 = {24 66 61 30 37 38 30 64 33 2d 62 31 34 35 2d 34 32 34 33 2d 38 36 62 39 2d 66 31 63 36 62 37 62 38 61 31 32 30 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Retefe_A_2147685321_0
         $x_1_3 = {8b 51 04 8b 84 15 ?? ff ff ff a8 06 75 5b 8b 8c 15 ?? ff ff ff 8b 11 8b 52 28 6a 01 6a 02 56 56 8d 45 ?? 50 ff d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

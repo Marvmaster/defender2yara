@@ -25,6 +25,7 @@ rule Worm_Win32_Renama_A_2147600670_0
         $x_1_11 = "%s, Namamu termasuk dalam daftar terrorist..!!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))

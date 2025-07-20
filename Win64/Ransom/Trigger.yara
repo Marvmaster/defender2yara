@@ -21,6 +21,7 @@ rule Ransom_Win64_Trigger_F_2147749990_0
         $x_1_7 = "main.writeLog.func1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Miniduke_SPP_2147836052_0
         $x_2_3 = "AdobeTray.dll" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Miniduke_GHC_2147845727_0
         $x_1_3 = "javacc.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Miniduke_GNI_2147851239_0
         $x_1_2 = "ClientUI.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

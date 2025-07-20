@@ -18,6 +18,7 @@ rule VirTool_Win32_Tamfer_A_2147818516_0
         $x_1_3 = {4c 8b d1 b8 ?? 00 00 00 0f 05 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

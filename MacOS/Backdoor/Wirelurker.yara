@@ -17,6 +17,7 @@ rule Backdoor_MacOS_Wirelurker_A_2147734486_0
         $x_1_3 = {2e 67 6c 6f 62 61 6c 75 70 64 61 74 65 2e 70 6c 69 73 74 00 6e 6f 00 79 65 73 00 68 74 74 70 3a 2f 2f 77 77 77 2e [0-30] 2e 63 6f 6d 2f 6d 61 63 5f 6c 6f 67 2f 3f 61 70 70 69 64 3d 25 40 2b 2b 25 40 2b 2b 25}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (1 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_MacOS_Wirelurker_A_2147734486_1
         $x_1_3 = "rm -rf /var/db/launchd.db/com.apple.launchd/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

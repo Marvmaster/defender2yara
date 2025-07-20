@@ -18,6 +18,7 @@ rule Trojan_Win32_Wingbird_C_2147723909_0
         $x_1_3 = {31 d2 5a 0f 84 ?? ?? ?? ?? cc cc cc cc cc 8b ff 55 8b ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

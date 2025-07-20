@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Zemot_A_2147687059_0
         $x_2_5 = "UpdateFlashPlayer_" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Zemot_B_2147687062_0
         $x_1_3 = {89 08 c7 40 04 ?? ?? ?? ?? c7 40 08 ?? ?? ?? ?? 8b 56 04 8b 4e 0c 2b 4a 34 81 c1 ?? ?? ?? ?? 74 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule TrojanDownloader_Win32_Zemot_E_2147687937_0
         $x_1_8 = {b9 de c0 0d 60 39 4e 08 75 11 39 48 04 75 0c 8b 4e 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -132,6 +135,7 @@ rule TrojanDownloader_Win32_Zemot_A_2147694651_0
         $x_1_2 = {8b 78 04 0f b6 18 0f b7 ca 66 0f be 3c 0f 66 33 fb 66 33 fa bb ff 00 00 00 66 23 fb 42 66 89 3c 4e 66 3b 50 02 72 d9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

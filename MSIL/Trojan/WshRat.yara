@@ -17,6 +17,7 @@ rule Trojan_MSIL_WshRat_AWS_2147902955_0
         $x_1_2 = "WSHRat.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

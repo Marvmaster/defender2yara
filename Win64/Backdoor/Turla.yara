@@ -18,6 +18,7 @@ rule Backdoor_Win64_Turla_B_2147691970_0
         $x_1_3 = "%I64uC%uK%uN0.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_Win64_Turla_Z_2147731735_0
         $x_1_3 = "PipeRelations::Pipe_NO_CONNECT_TO_GAYZER" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Backdoor_Win64_Turla_SA_2147760472_0
         $x_1_1 = {66 85 c0 75 ?? 8b cb 49 8b d1 4c 8b 05 ?? ?? ?? ?? 4d 2b c1 0f 1f 44 00 00 8b c1 25 ff 00 00 80 7d 09 ff c8 0d 00 ff ff ff ff c0 42 32 04 02 34 ?? 88 02 ff c1 48 ff c2 83 f9 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Backdoor_Win64_Turla_SK_2147760473_0
         $x_2_2 = {48 c7 45 a0 ?? ?? ?? ?? 48 89 7d 98 66 89 7d 88 48 8d 55 e8 48 83 7d ?? ?? 48 0f 43 55 e8 45 33 c0 33 c9 ff 15 ?? ?? ?? ?? 48 c7 45 80 ?? ?? ?? ?? 48 89 7c 24 78 66 89 7c 24 68 49 83 c9 ff 45 33 c0 48 8d 55 e8 48 8d 4c 24 68 e8 ?? ?? ?? ?? 48 8d 4c 24 68 e8 ?? ?? ?? ?? 84 c0 75 ?? e8 ?? ?? ?? ?? 33 c9 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Backdoor_Win64_Turla_B_2147767376_0
         $x_1_6 = "Why the f*ck not" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule Backdoor_Win64_Turla_A_2147767377_0
         $x_1_5 = "*.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -161,6 +167,7 @@ rule Backdoor_Win64_Turla_DA_2147767380_0
         $x_1_6 = "If this service is disabled, any services that explicitly depend on it will fail to start." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

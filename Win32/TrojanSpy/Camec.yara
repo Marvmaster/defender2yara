@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Camec_A_2147637865_0
         $x_1_2 = "58474D40430A1F1F474747435E1E52425154554353" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanSpy_Win32_Camec_AP_2147652488_0
         $x_1_4 = "66737B7D7414717715767C766577" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanSpy_Win32_Camec_AQ_2147655210_0
         $x_1_6 = "6E0B6650475D545A15515C1879720218" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -92,6 +95,7 @@ rule TrojanSpy_Win32_Camec_AR_2147655365_0
         $x_1_5 = "extrato" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Backdoor_MSIL_Splori_A_2147689105_0
         $x_5_6 = {2e 65 78 65 00 3c 4d 6f 64 75 6c 65 3e 00 5f 5f 00 5f 5f 5f 00 5f 5f 5f 5f 00 5f 5f 5f 5f 5f 00 5f 5f 5f 5f 5f 5f 00 5f 5f 5f 5f 5f 5f 5f 00 5f}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 2 of ($x_5_*))) or
@@ -51,6 +52,7 @@ rule Backdoor_MSIL_Splori_A_2147689105_1
         $x_1_8 = {15 3a 3f 36 73 21 36 35 3f 36 30 27 36 37 73 3a 3d 27 3c 73 00 36 3f 35 73 00 26 30 30 36 20 20 35 26 3f 3f 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

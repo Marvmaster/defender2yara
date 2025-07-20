@@ -19,6 +19,7 @@ rule BrowserModifier_Win32_Feedcath_228678_0
         $x_10_5 = "\\thent-team\\ie\\Binaries\\Content" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

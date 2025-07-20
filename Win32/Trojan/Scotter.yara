@@ -17,6 +17,7 @@ rule Trojan_Win32_Scotter_A_2147727796_0
         $x_1_2 = {00 55 46 6c 4a 53 55 6c 4a 53 55 6c 4a 53 55 6c 4a 53 55 6c 4a 53 55 6c 4a 4e 31 46 61 61 6b 46 59 55 44 42 42 4d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

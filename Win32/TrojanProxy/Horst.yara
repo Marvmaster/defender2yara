@@ -20,6 +20,7 @@ rule TrojanProxy_Win32_Horst_A_2147574313_0
         $x_1_6 = {6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule TrojanProxy_Win32_Horst_P_2147574433_0
         $x_1_9 = "back.reznaz.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule TrojanProxy_Win32_Horst_B_2147574442_0
         $x_1_6 = "GetProcessShutdownParameters" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +121,7 @@ rule TrojanProxy_Win32_Horst_C_2147575174_0
         $x_100_24 = "sdr0000-0001" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_100_*))) or
             (all of ($x*))
@@ -151,6 +155,7 @@ rule TrojanProxy_Win32_Horst_YA_2147594779_0
         $x_1_11 = "Enter the characters in the image  below without any spaces:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -178,6 +183,7 @@ rule TrojanProxy_Win32_Horst_E_2147596677_0
         $x_1_7 = "Personal Firewall" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -204,6 +210,7 @@ rule TrojanProxy_Win32_Horst_U_2147605076_0
         $x_1_7 = "X-Forwarded-For: %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -233,6 +240,7 @@ rule TrojanProxy_Win32_Horst_YC_2147606411_0
         $x_1_4 = {8b 55 0c 03 55 14 8a 02 88 45 fe 6a 00 ff 15 ?? ?? ?? 00 6a 00 ff 15 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -255,6 +263,7 @@ rule TrojanProxy_Win32_Horst_YD_2147606457_0
         $x_1_3 = {c7 44 24 10 30 75 00 00 ff d6 6a 00 ff d6 6a 00 ff d6 [0-32] 50 68 06 10 00 00 68 ff ff 00 00 57 ff d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -279,6 +288,7 @@ rule TrojanProxy_Win32_Horst_F_2147616047_0
         $x_1_4 = {25 73 00 6e 76 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

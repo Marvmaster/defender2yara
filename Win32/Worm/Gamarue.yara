@@ -23,6 +23,7 @@ rule Worm_Win32_Gamarue_A_2147649318_0
         $x_1_9 = {ac 84 c0 74 09 0c 23 32 d0 c1 c2 11 eb f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 4 of ($x_1_*))) or
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule Worm_Win32_Gamarue_B_2147649931_0
         $x_1_4 = {64 8b 1d 30 00 00 00 8b 5b 0c 8b 5b 0c 83 c3 24 8b 5b 04 6a 00 68 80 00 00 00 6a 03 6a 00 6a 01 68 00 00 00 80 53}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -84,6 +86,7 @@ rule Worm_Win32_Gamarue_C_2147650797_0
         $x_5_14 = "U3lzdGVtLmV4ZQ==" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 9 of ($x_1_*))) or
             ((2 of ($x_5_*) and 6 of ($x_1_*))) or
@@ -114,6 +117,7 @@ rule Worm_Win32_Gamarue_D_2147652494_0
         $x_1_4 = {ac 84 c0 74 09 0c ?? 32 d0 c1 c2 ?? eb fe}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -137,6 +141,7 @@ rule Worm_Win32_Gamarue_E_2147652912_0
         $x_1_4 = {64 8b 1d 30 00 00 00 8b 5b 0c 8b 5b 0c 8b 1b 8b 1b 83 c3 18 8b 1b e8 00 00 00 00 5a 81 ea ?? ?? ?? ?? 8d b2 ?? ?? ?? ?? 8d 7d fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -163,6 +168,7 @@ rule Worm_Win32_Gamarue_F_2147653472_0
         $x_1_7 = {8b 75 08 81 7e 03 70 3a 2f 2f 75 03 8d 76 07 56 ff 75 ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -190,6 +196,7 @@ rule Worm_Win32_Gamarue_I_2147656754_0
         $x_1_8 = {8b c8 8b 45 0c 89 38 f3 a4 b0 e9 aa 8d 46 ?? 2b c7 ab}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -211,6 +218,7 @@ rule Worm_Win32_Gamarue_M_2147665882_0
         $x_1_2 = {83 e9 0e 74 2d 83 e9 3e 8b 75 14 74 08 81 e9 c4 00 00 00 eb 04 83 7e 08 fb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -258,6 +266,7 @@ rule Worm_Win32_Gamarue_N_2147679217_0
         $x_2_28 = {73 78 72 73 68 64 2e 64 6c 6c 00 (63 72|6b 72) 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*))) or
             ((1 of ($x_10_*))) or
@@ -283,6 +292,7 @@ rule Worm_Win32_Gamarue_S_2147680361_0
         $x_1_2 = {65 78 70 6c 6f 72 65 00 64 00 65 00 73 00 6b 00 00 00 00 00 74 00 6f 00 70 00 2e 00 69 00 6e 00 69 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -303,6 +313,7 @@ rule Worm_Win32_Gamarue_T_2147681935_0
         $x_1_1 = {0f b6 08 83 f1 4e [0-2] 39 ?? ?? ?? ?? ?? 76 14 8a 14 30 32 d1 80 c2 ?? 88 14 30 46 3b 35 ?? ?? ?? ?? 72 ec ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -323,6 +334,7 @@ rule Worm_Win32_Gamarue_U_2147681937_0
         $x_1_1 = {83 f0 4e 39 0d 40 30 00 10 76 14 8a 14 0e 32 d0 80 c2 42 88 14 0e 41 3b 0d 40 30 00 10 72 ec ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -343,6 +355,7 @@ rule Worm_Win32_Gamarue_V_2147682002_0
         $x_1_1 = {32 d1 80 c2 42 88 14 30 46 3b 35 ?? ?? ?? ?? 72 e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -365,6 +378,7 @@ rule Worm_Win32_Gamarue_W_2147682094_0
         $x_1_3 = {64 65 73 6b 74 6f 70 2e 69 6e 69 00 6f 00 70 00 65 00 6e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -390,6 +404,7 @@ rule Worm_Win32_Gamarue_B_2147682184_0
         $x_1_1 = {3d 07 fd e5 4c 0f 84 ?? ?? 00 00 3d 6c 32 81 81 0f 84 ?? ?? 00 00 3d af 33 e2 31 0f 84 ?? ?? 00 00 3d f6 7d d4 91 0f 84 ?? ?? 00 00 3d 54 dc cd e8 0f 84 ?? ?? 00 00 3d 6c 6d 8c 00 0f 84 ?? ?? 00 00 3d 0e ba d0 a8 0f 84 ?? ?? 00 00 3d 0e 3c ef a4 0f 84 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -411,6 +426,7 @@ rule Worm_Win32_Gamarue_B_2147682184_1
         $x_1_1 = {3d 32 44 dd 99 0f 84 ?? ?? 00 00 3d b4 9d 85 2d 0f 84 ?? ?? 00 00 3d ce 0d 34 64 0f 84 ?? ?? 00 00 3d 74 44 c5 63 0f 84 ?? ?? 00 00 3d 8b 9c 9c 34 0f 84 ?? ?? 00 00 3d ce eb 46 34 0f 84 ?? ?? 00 00 3d fe b1 a9 5b 0f 84 ?? ?? 00 00 3d f3 be e2 3c 0f 84 ?? ?? 00 00 3d 2b f0 46 3d 0f 84 ?? ?? 00 00 3d f7 10 ae 77 0f 84 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -431,6 +447,7 @@ rule Worm_Win32_Gamarue_X_2147682237_0
         $x_1_1 = {73 1f 8b 15 ?? ?? ?? ?? 03 55 ?? 0f b6 02 33 45 ?? 03 45 fc 8b 0d ?? ?? ?? ?? 03 4d ?? 88 01 eb cd ff 15 ?? ?? ?? ?? 81 7d 14 00 70 00 00 75 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -456,6 +473,7 @@ rule Worm_Win32_Gamarue_Z_2147682244_0
         $x_1_6 = {c6 45 d4 64 c6 45 d5 65 c6 45 d6 73 c6 45 d7 6b c6 45 d8 74 c6 45 d9 6f c6 45 da 70 c6 45 db 2e c6 45 dc 69 c6 45 dd 6e c6 45 de 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -476,6 +494,7 @@ rule Worm_Win32_Gamarue_AA_2147682250_0
         $x_1_1 = {73 1f 8b 15 ?? ?? ?? ?? 03 55 ?? 0f b6 02 33 45 ?? 03 45 fc 8b 0d ?? ?? ?? ?? 03 4d ?? 88 01 eb cd ff 15 ?? ?? ?? ?? 81 7d 14 ff ff ff 07 75 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -499,6 +518,7 @@ rule Worm_Win32_Gamarue_AB_2147682301_0
         $x_10_4 = {6a 40 68 00 10 00 00 68 00 10 00 00 6a 00 ff 55}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -524,6 +544,7 @@ rule Worm_Win32_Gamarue_AJ_2147682937_0
         $x_1_3 = {4e 8d 50 01 8a 08 40 84 c9 75 f9 2b c2 8b c8 0f 31 89}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -581,6 +602,7 @@ rule Worm_Win32_Gamarue_AM_2147687862_0
         $x_1_6 = {35 4e 1a 4d a5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -638,6 +660,7 @@ rule Worm_Win32_Gamarue_AN_2147688539_0
         $x_1_4 = {8b 45 fc c7 84 05 e0 fe ff ff 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -688,6 +711,7 @@ rule Worm_Win32_Gamarue_AO_2147689396_0
         $x_5_5 = {ac 8a c8 3c 0f 74 0f 66 81 7e ff cd 20 75 0a 46 ad}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             (all of ($x*))
@@ -713,6 +737,7 @@ rule Worm_Win32_Gamarue_AP_2147690726_0
         $x_1_3 = {ac 8a c8 3c 0f 74 0f 66 81 7e ff cd 20 75 0a 46 ad}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -738,6 +763,7 @@ rule Worm_Win32_Gamarue_AS_2147693197_0
         $x_1_6 = "{\"id\":%lu,\"tid\":%lu,\"err\":%lu,\"w32\":%lu}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -788,6 +814,7 @@ rule Worm_Win32_Gamarue_AT_2147695665_0
         $x_2_3 = {2b f3 8d 04 0b 2b f1 83 ee 05 83 c1 05 c6 00 e9 89 70 01 81 f9 00 40 00 00 77 ?? ff [0-3] 8b [0-3] 8b 45 ?? 8d 04 c8 8d 48 04 83 39 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -947,6 +974,7 @@ rule Worm_Win32_Gamarue_AU_2147696544_0
         $x_2_15 = {3a 25 6c 75 [0-4] 62 69 64 [0-4] 3a 25 6c 75 [0-4] 6f 73 [0-4] 3a 25 6c 75 [0-4] 6c 61 [0-4] 3a 25 6c 75 [0-4] 72 67 [0-4] 3a 25 6c 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1003,6 +1031,7 @@ rule Worm_Win32_Gamarue_AV_2147705491_0
         $x_1_2 = {eb 4e f7 d3 f7 d3 8b d9 0f a5 d3 81 f3 e9 08 ab c2 0f ba ff 21 0f a5 f7 13 dd c1 e3 d1 8b dd 33 d9 0f cb bb c1 80 43 fa}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1153,6 +1182,7 @@ rule Worm_Win32_Gamarue_BA_2147719658_0
         $x_1_7 = "obj=%S;%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1184,6 +1214,7 @@ rule Worm_Win32_Gamarue_BE_2147726561_0
         $x_1_5 = {50 6a 0e e8 ?? ?? ?? 00 8d 85 ?? ?? ?? ff 50 ff 75 08 ff d3 89 46 ?? 8d 85 ?? ?? ?? ff 50 6a 0f e8 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1207,6 +1238,7 @@ rule Worm_Win32_Gamarue_AR_2147743442_0
         $x_1_3 = "IndexerVolumeGuid" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1229,6 +1261,7 @@ rule Worm_Win32_Gamarue_OS_2147744667_0
         $x_1_2 = "iygmygjkxtyu.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1255,6 +1288,7 @@ rule Worm_Win32_Gamarue_G_2147765133_0
         $x_2_6 = "zWNowiVfKAQdSv" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*))) or
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or
@@ -1285,6 +1319,7 @@ rule Worm_Win32_Gamarue_G_2147765133_1
         $x_2_6 = "gwaWdFvvocQ" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or
             ((2 of ($x_5_*))) or
@@ -1314,6 +1349,7 @@ rule Worm_Win32_Gamarue_DK_2147787523_0
         $x_3_5 = "0.1J1Q1Z1f1n1u1|" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

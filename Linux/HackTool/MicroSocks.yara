@@ -18,6 +18,7 @@ rule HackTool_Linux_MicroSocks_A_2147820253_0
         $x_1_3 = {48 89 45 f8 48 8d 95 c0 fd ff ff 48 8b 75 f8 8b 7d dc b9 00 01 00 00 e8 ?? ?? ff ff 0f b7 55 f2 48 8b 85 a8 fd ff ff 8b 70 1c 48 8d 85 d0 fe ff ff 48 8d 8d c0 fd ff ff 41 89 d1 49 89 c0 89 f2 be 58 2b 40 00 bf 02 00 00 00 b8 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 

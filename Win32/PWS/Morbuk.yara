@@ -18,6 +18,7 @@ rule PWS_Win32_Morbuk_A_2147636405_0
         $x_1_4 = {68 6b 62 2e 64 6c 6c 00 45 6e 64 48 6f 6f 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

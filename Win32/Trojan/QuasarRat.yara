@@ -21,6 +21,7 @@ rule Trojan_Win32_QuasarRat_NEAI_2147843347_0
         $x_2_6 = "DisableRealtimeMonitoring" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

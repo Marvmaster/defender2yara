@@ -28,6 +28,7 @@ rule Trojan_Win64_VMPAgent_RP_2147914355_0
         $x_10_13 = "Crash with CreateJobObject, AssignProcessToJobObject, TerminateJobObject" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

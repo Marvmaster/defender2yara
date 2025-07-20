@@ -16,6 +16,7 @@ rule Trojan_Win32_Genie_A_2147936277_0
         $x_1_1 = {b8 74 66 48 00 50 64 ff 35 00 00 00 00 64 89 25 00 00 00 00 33 c0 89 08 50 45 43 6f 6d 70 61 63 74 32 00 7a b3 7d f7 64 ae}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

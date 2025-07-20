@@ -26,6 +26,7 @@ rule MonitoringTool_Win32_HandyKeylogger_17510_0
         $x_1_12 = "Handy Keylogger registration..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

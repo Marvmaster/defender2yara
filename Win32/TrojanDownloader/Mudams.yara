@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Mudams_A_2147691753_0
         $x_1_5 = {35 00 32 00 31 00 2e 00 65 00 78 00 65 00 [0-8] 77 00 69 00 6e 00 64 00 69 00 72 00 [0-8] 5c 00 73 00 79 00 73 00 74 00 65 00 6d 00 33 00 32 00 5c 00 64 00 72 00 69 00 76 00 65 00 72 00 73 00 5c 00 [0-8] 35 00 32 00 31 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_Mudams_B_2147693899_0
         $x_1_6 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 31 00 31 00 34 00 2e 00 31 00 31 00 30 00 2e 00 31 00 34 00 33 00 2e 00 39 00 32 00 3a 00 38 00 30 00 39 00 39 00 2f 00 [0-5] 2f 00 [0-16] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or

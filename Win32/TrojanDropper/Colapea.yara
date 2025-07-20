@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Colapea_A_2147624338_0
         $x_1_4 = "WE SILINEE, QUICKER," ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

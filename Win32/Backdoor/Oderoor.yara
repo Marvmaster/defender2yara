@@ -25,6 +25,7 @@ rule Backdoor_Win32_Oderoor_A_2147598033_0
         $x_1_10 = {68 61 72 76 65 73 74 00 65 6d 61 69 6c 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 5 of ($x_1_*))) or
             ((4 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -67,6 +68,7 @@ rule Backdoor_Win32_Oderoor_D_2147605657_0
         $x_2_17 = "cCdipsuxX%" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 5 of ($x_2_*))) or
@@ -133,6 +135,7 @@ rule Backdoor_Win32_Oderoor_H_2147624995_0
         $x_1_3 = {8d 45 ac 50 8d 45 bc 50 6a 00 6a 00 6a 04 6a 00 6a 00 6a 00 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -158,6 +161,7 @@ rule Backdoor_Win32_Oderoor_M_2147682601_0
         $x_1_6 = {81 ec 24 04 00 00 83 65 fc 00 53 56 57 8b d8 8d 79 fc 8a 03 43 3c 25 75 71 33 f6 88 45 dc 46 8a 03 88 44 35 dc 0f be 44 35 dc 43 46 50 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

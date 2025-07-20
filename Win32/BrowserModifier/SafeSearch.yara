@@ -19,6 +19,7 @@ rule BrowserModifier_Win32_SafeSearch_10771_0
         $x_1_5 = "/search/index.html?srch=%s&pin=%s&ccinfo=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

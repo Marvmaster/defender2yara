@@ -21,6 +21,7 @@ rule Ransom_Win32_BabukLocker_MK_2147772002_0
         $x_1_6 = "ecdh_pub_k.bin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Ransom_Win32_BabukLocker_MK_2147772002_1
         $x_10_8 = "How To Restore Your Files.txt" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

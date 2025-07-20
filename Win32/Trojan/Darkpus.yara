@@ -18,6 +18,7 @@ rule Trojan_Win32_Darkpus_A_2147656140_0
         $x_1_4 = "TBotThread_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

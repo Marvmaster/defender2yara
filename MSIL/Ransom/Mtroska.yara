@@ -23,6 +23,7 @@ rule Ransom_MSIL_Mtroska_ST_2147762163_0
         $x_1_8 = "Attempts to self-decrypting files will result in the loss of your data" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

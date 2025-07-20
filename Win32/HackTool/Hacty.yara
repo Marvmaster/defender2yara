@@ -41,6 +41,7 @@ rule HackTool_Win32_Hacty_A_2147602259_0
         $x_2_26 = "You cannot delete protected files/folders! Instead, your attempt has been logged :)" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_2_*) and 2 of ($x_1_*))) or
             ((10 of ($x_2_*))) or
@@ -135,6 +136,7 @@ rule HackTool_Win32_Hacty_B_2147602260_0
         $x_2_13 = "--force      : load SeDebugPrivilege to break into target process" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_2_*))) or
             ((1 of ($x_3_*) and 7 of ($x_2_*))) or

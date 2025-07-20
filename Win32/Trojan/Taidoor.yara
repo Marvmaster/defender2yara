@@ -16,6 +16,7 @@ rule Trojan_Win32_Taidoor_C_2147761251_0
         $x_3_1 = {4d 65 6d 6f 72 79 4c 6f 61 64 2e 64 6c 6c 00 4d 79 53 74 61 72 74 00 53 65 72 76 69 63 65 4d 61 69 6e 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

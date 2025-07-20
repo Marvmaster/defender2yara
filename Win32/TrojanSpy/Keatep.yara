@@ -15,6 +15,7 @@ rule TrojanSpy_Win32_Keatep_A_2147605728_0
         $x_1_1 = {74 25 83 bd ?? ?? ff ff 15 74 1c 81 bd ?? ?? ff ff 49 08 00 00 74 10 81 bd ?? ?? ff ff 49 08 00 00 0f 85 ?? ?? 00 00 8b ?? ?? 0f be ?? 83 ?? 55 74 0b 8b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanSpy_Win32_Keatep_B_2147616019_0
         $x_2_5 = {68 74 74 70 00 00 00 00 61 6e 67 65 6c 00 00 00 00 47 6c 6f 62 61 6c 55 73 65 72 4f 66 66 6c 69 6e 65}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 2 of ($x_2_*))) or
             (all of ($x*))
@@ -66,6 +68,7 @@ rule TrojanSpy_Win32_Keatep_C_2147618918_0
         $x_1_5 = {8d 85 e4 ea ?? ?? 50 68 3f 00 0f 00 6a 00 8b 0d ?? ?? ?? 00 51 68 01 00 00 80 ff 15 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule TrojanSpy_Win32_Keatep_E_2147649743_0
         $x_1_4 = {26 72 65 64 69 72 65 63 74 5f 74 6f 3d 00 00 00 50 4f 53 54 [0-143] 77 70 2d 6c 6f 67 69 6e 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

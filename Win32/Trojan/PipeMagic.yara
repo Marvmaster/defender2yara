@@ -26,6 +26,7 @@ rule Trojan_Win32_PipeMagic_2147937661_0
         $x_1_11 = "%SYSTEMROOT%\\hh.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_Win32_PipeMagic_C_2147937662_0
         $x_1_5 = {33 c9 89 4d d8 89 4d dc 89 4d e0 66 c7 45 e4 00 01 89 4d f8 3c 5a 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

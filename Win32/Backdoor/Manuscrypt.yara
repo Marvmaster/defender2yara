@@ -17,6 +17,7 @@ rule Backdoor_Win32_Manuscrypt_AM_2147828358_0
         $x_1_2 = {50 8d 75 c4 c6 45 e4 43 c6 45 e5 72 c6 45 e6 65 c6 45 e7 61 c6 45 e8 74 c6 45 e9 65 88 5d ea c6 45 d4 57 c6 45 d5 69 c6 45 d6 6e c6 45 d7 33 c6 45 d8 32 c6 45 d9 5f c6 45 da 50 c6 45 db 72 c6 45 dc 6f c6 45 dd 63 c6 45 de 65 c6 45 df 73 c6 45 e0 73 88 5d e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

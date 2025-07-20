@@ -16,6 +16,7 @@ rule Trojan_MSIL_Genmalmil_2147708949_0
         $x_1_2 = "Powered by SmartAssembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

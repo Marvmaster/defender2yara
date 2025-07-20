@@ -24,6 +24,7 @@ rule Trojan_Win32_LightNeuron_D_2147794412_0
         $n_12_9 = "simpleValidate" ascii //weight: -12
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -60,6 +61,7 @@ rule Trojan_Win32_LightNeuron_A_2147834554_0
         $x_1_12 = "ZIP_FILE_NAME" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

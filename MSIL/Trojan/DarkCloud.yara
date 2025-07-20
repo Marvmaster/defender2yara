@@ -17,6 +17,7 @@ rule Trojan_MSIL_DarkCloud_ABVN_2147846881_0
         $x_1_2 = "BeijingJinJingZheng.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_DarkCloud_ABVZ_2147846970_0
         $x_5_1 = {16 0d 2b 21 00 07 09 18 6f ?? ?? 00 0a 1f 10 28 ?? ?? 00 0a d2 13 05 08 11 05 6f ?? ?? 00 0a 00 09 18 58 0d 00 09 07 6f ?? 00 00 0a fe 04 13 06 11 06 2d d0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_MSIL_DarkCloud_ABXM_2147847557_0
         $x_5_1 = {16 0d 2b 3f 00 16 13 04 2b 24 00 08 09 11 04 6f ?? 00 00 0a 13 0b 07 11 05 12 0b 28 ?? 00 00 0a 9c 11 05 17 58 13 05 00 11 04 17 58 13 04 11 04 08 6f ?? 00 00 0a fe 04 13 0c 11 0c 2d cc}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_MSIL_DarkCloud_AAFD_2147850720_0
         $x_1_3 = "Main_Project" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule Trojan_MSIL_DarkCloud_AAGY_2147851538_0
         $x_1_2 = "reFAdgmmfbFAApAdapAraAmIkmAoAgjlFnhIcbk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +130,7 @@ rule Trojan_MSIL_DarkCloud_AAIH_2147852065_0
         $x_5_1 = {07 11 06 07 8e 69 5d 07 11 06 07 8e 69 5d 91 08 11 06 1f 16 5d 6f ?? 00 00 0a 61 28 ?? 00 00 0a 07 11 06 17 58 07 8e 69 5d 91 28 ?? 00 00 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 00 11 06 15 58 13 06 11 06 16 fe 04 16 fe 01 13 07 11 07 2d ac}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +152,7 @@ rule Trojan_MSIL_DarkCloud_AAIT_2147852330_0
         $x_5_1 = {06 07 06 8e 69 5d 06 07 06 8e 69 5d 91 11 04 07 1f 16 5d 6f ?? 00 00 0a 61 28 ?? 00 00 0a 06 07 17 58 06 8e 69 5d 91 28 ?? 00 00 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 07 15 58 0b 07 16 fe 04 16 fe 01 13 07 11 07 2d b4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +175,7 @@ rule Trojan_MSIL_DarkCloud_AAOE_2147890071_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +198,7 @@ rule Trojan_MSIL_DarkCloud_AAQD_2147892500_0
         $x_1_2 = "4d4a38f9-8dcf-4b2a-b475-5af0c3ab1314" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +221,7 @@ rule Trojan_MSIL_DarkCloud_AAZV_2147899114_0
         $x_2_2 = {02 50 11 02 02 50 11 00 11 02 59 17 59 91 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +243,7 @@ rule Trojan_MSIL_DarkCloud_AAZW_2147899854_0
         $x_2_1 = "Invoice_FTFAC355.A_" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -255,6 +266,7 @@ rule Trojan_MSIL_DarkCloud_BUAA_2147901267_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +288,7 @@ rule Trojan_MSIL_DarkCloud_CRAA_2147901934_0
         $x_5_1 = {07 11 09 11 0b 11 0c 61 11 0d 11 07 5d 59 d2 9c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -297,6 +310,7 @@ rule Trojan_MSIL_DarkCloud_DZAA_2147902711_0
         $x_5_1 = {0a 25 26 0a 06 28 ?? 00 00 0a 0b 28 ?? 00 00 06 25 26 28 ?? 00 00 0a 25 26 0c 16 28 ?? 00 00 06 28 ?? 00 00 06 25 26 13 04 11 04 1a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +332,7 @@ rule Trojan_MSIL_DarkCloud_GWAA_2147904499_0
         $x_5_1 = {11 04 11 03 28 ?? 00 00 2b 28 ?? 00 00 2b 16 11 03 8e 69}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -339,6 +354,7 @@ rule Trojan_MSIL_DarkCloud_NHAA_2147911066_0
         $x_5_1 = {11 05 1f 09 5d 16 fe 01 13 06 11 06 2c 0c 02 11 05 02 11 05 91 1f 36 61 b4 9c 11 05 17 d6 13 05 11 05 11 04 31 da}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -361,6 +377,7 @@ rule Trojan_MSIL_DarkCloud_RP_2147914572_0
         $x_10_2 = {26 16 73 06 00 00 06 0a 06 28 14 00 00 0a 7d 02 00 00 04 06 02 7d 03 00 00 04 06 15 7d 01 00 00 04 06 7c 02 00 00 04 12 00 28 01 00 00 2b 06 7c 02 00 00 04 28 16 00 00 0a 2a}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -383,6 +400,7 @@ rule Trojan_MSIL_DarkCloud_AQBA_2147924528_0
         $x_2_2 = {01 25 16 0f 01 28 ?? 00 00 0a 9c 25 17 0f 01 28 ?? 00 00 0a 9c 25 18 0f 01 28 ?? 00 00 0a 9c 6f ?? 00 00 0a 00 00 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -406,6 +424,7 @@ rule Trojan_MSIL_DarkCloud_AWBA_2147924757_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -431,6 +450,7 @@ rule Trojan_MSIL_DarkCloud_AOCA_2147925646_0
         $x_1_5 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -452,6 +472,7 @@ rule Trojan_MSIL_DarkCloud_SZJF_2147927610_0
         $x_4_1 = {d1 13 0f 11 1c 11 09 91 13 ?? 11 ?? 11 ?? 11 ?? 11 ?? 61 19 11 1d 58 61 11 35 61 d2 9c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -474,6 +495,7 @@ rule Trojan_MSIL_DarkCloud_AKD_2147932609_0
         $x_1_2 = "oshi.at/VVDd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -495,6 +517,7 @@ rule Trojan_MSIL_DarkCloud_AMDG_2147932610_0
         $x_1_1 = {0a 0c 08 07 17 73 ?? 00 00 0a 0d 09 03 16 03 8e 69 6f ?? 00 00 0a 08 6f ?? 00 00 0a 13 04 dd 44 00 73 ?? 00 00 0a 0a 06 72 ?? ?? 00 70 28 ?? 00 00 0a 72 ?? ?? 00 70 28 ?? 00 00 0a 6f ?? 00 00 0a 0b 73 ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -517,6 +540,7 @@ rule Trojan_MSIL_DarkCloud_AAB_2147933280_0
         $x_1_2 = {0a 9c 25 17 0f 00 28 ?? 00 00 0a 9c 25 18 0f 00 28 ?? 00 00 0a 9c 0a 16 0b 2b 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -540,6 +564,7 @@ rule Trojan_MSIL_DarkCloud_ACLA_2147933301_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -563,6 +588,7 @@ rule Trojan_MSIL_DarkCloud_MKZ_2147933524_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -586,6 +612,7 @@ rule Trojan_MSIL_DarkCloud_AZLA_2147934035_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -607,6 +634,7 @@ rule Trojan_MSIL_DarkCloud_DLZ_2147934160_0
         $x_5_1 = {0c 72 c1 01 00 70 28 23 00 00 0a 0d 72 f3 01 00 70 28 ?? 00 00 0a 13 04 73 24 00 00 0a 13 05 73 25 00 00 0a 13 06 11 06 11 05 09 11 04 6f 26 00 00 0a 17 73 ?? 00 00 0a 13 07 2b 16 2b 18 16 2b 18 8e 69 2b 17 17 16 2c 1a 26 2b 1a 2b 1c 13 08 de 70 11 07 2b e6 08 2b e5 08 2b e5 6f ?? 00 00 0a 2b e2 0b 2b e4 11 06 2b e2 6f 29 00 00 0a 2b dd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -629,6 +657,7 @@ rule Trojan_MSIL_DarkCloud_HHL_2147935564_0
         $x_5_2 = {03 04 58 1f 0a 5d 6b 22 00 00 20 41 5b 26 02 03 04 6f ?? 00 00 0a 0e 04 05 6f ?? 00 00 0a 59 0b 07 05}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -650,6 +679,7 @@ rule Trojan_MSIL_DarkCloud_EABE_2147935738_0
         $x_5_1 = {73 07 00 00 0a 6f 08 00 00 0a 6f 09 00 00 0a 0c 73 0a 00 00 0a 0d 08 09 6f 0b 00 00 0a 09 6f 0c 00 00 0a 0a de 14 09 2c 06 09 6f 0d 00 00 0a dc}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -673,6 +703,7 @@ rule Trojan_MSIL_DarkCloud_A_2147936265_0
         $x_1_3 = "2373d37f-9d97-4097-b706-3c8581d40cda" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -694,6 +725,7 @@ rule Trojan_MSIL_DarkCloud_LVT_2147938398_0
         $x_5_1 = {02 8e 69 17 da 13 04 16 13 05 2b 22 11 05 1e 5d 16 fe 01 13 06 11 06 2c 0f 02 11 05 02 11 05 91 20 ?? 00 00 00 61 b4 9c 11 05 17 d6 13 05 11 05 11 04 31 d8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -716,6 +748,7 @@ rule Trojan_MSIL_DarkCloud_AIRA_2147939340_0
         $x_2_2 = {01 25 16 02 7c ?? 00 00 04 28 ?? 00 00 0a 9c 25 17 02 7c ?? 00 00 04 28 ?? 00 00 0a 9c 25 18 02 7c ?? 00 00 04 28 ?? 00 00 0a 9c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -737,6 +770,7 @@ rule Trojan_MSIL_DarkCloud_ABTA_2147940913_0
         $x_5_1 = {0a 0c 1a 8d ?? 00 00 01 0d 08 09 16 09 8e 69 6f ?? 00 00 0a 26 09 16 28 ?? 00 00 0a 13 04 08 16 73 ?? 00 00 0a 13 05 2b 3e 8d ?? 00 00 01 2b 3b 16 2b 3c 2b 15 2b 3c 2b 3e 2b 40 2b 42 2b 44 2b 46 59 6f ?? 00 00 0a 58 13 07 1c 2c 09 11 07 11 04 17 2c f3 32 df 11 06}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -760,6 +794,7 @@ rule Trojan_MSIL_DarkCloud_ARTA_2147941252_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -781,6 +816,7 @@ rule Trojan_MSIL_DarkCloud_AXTA_2147941415_0
         $x_5_1 = {0a 0c 1a 8d ?? 00 00 01 0d 08 09 16 09 8e 69 6f ?? 00 00 0a 26 09 16 28 ?? 00 00 0a 13 04 08 16 73 ?? 00 00 0a 13 05 2b 3e 8d ?? 00 00 01 2b 3b 16 2b 3c 2b 15 2b 3c 2b 3e 2b 40 2b 42 2b 44 2b 46 59 6f ?? 00 00 0a 58 13 07 1c 2c 09 11 07 11 04 17 2c f3 32 df 72 ?? ?? 00 70 11 06 03 28 ?? 00 00 06 17 0b}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -804,6 +840,7 @@ rule Trojan_MSIL_DarkCloud_AKUA_2147941704_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -827,6 +864,7 @@ rule Trojan_MSIL_DarkCloud_AOVA_2147942377_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -850,6 +888,7 @@ rule Trojan_MSIL_DarkCloud_AQVA_2147942431_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -871,6 +910,7 @@ rule Trojan_MSIL_DarkCloud_MRE_2147942475_0
         $x_5_1 = {08 02 7b 06 00 00 04 6f ?? 00 00 0a 08 6f ?? 00 00 0a 0d 73 2d 00 00 0a 13 04 11 04 09 17 73 2e 00 00 0a 13 05 2b 32 2b 34 16 2b 34 8e 69 2b 33 2b 38 2b 3a 2b 3f 2b 41 2b 46 11 06 03 72 3e 02 00 70 28 ?? 00 00 06 05 72 62 02 00 70 6f ?? 00 00 0a 17 0b dd 80 00 00 00 11 05 2b ca 06 2b c9 06 2b c9 6f ?? 00 00 0a 2b c6 11 05 2b c4 6f ?? 00 00 0a 2b bf 11 04 2b bd 6f ?? 00 00 0a 2b b8 13 06 2b b6}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -892,6 +932,7 @@ rule Trojan_MSIL_DarkCloud_AFWA_2147943192_0
         $x_5_1 = {02 11 11 11 16 6f ?? 00 00 0a 13 17 73 ?? 00 00 0a 13 18 11 18 72 ?? ?? 00 70 11 11 11 16 73 ?? 00 00 0a 6f ?? 00 00 0a 11 18 72 ?? ?? 00 70 28 ?? 00 00 0a 8c ?? 00 00 01 6f ?? 00 00 0a 11 18 72 ?? ?? 00 70 72 ?? ?? 00 70 11 09 1e 5d 13 1f 12 1f 28 ?? 00 00 0a 28 ?? 00 00 0a 6f ?? 00 00 0a 11 18 72 ?? ?? 00 70 11 10 8c ?? 00 00 01 6f ?? 00 00 0a 11 0e 11 18 6f ?? 00 00 0a 12 17 28 ?? 00 00 0a 13 19 12 17 28 ?? 00 00 0a 13 1a 12 17 28 ?? 00 00 0a 13 1b 1b 8d ?? 00 00 01 25 16}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -914,6 +955,7 @@ rule Trojan_MSIL_DarkCloud_AIXA_2147944420_0
         $x_2_2 = {11 03 17 58 13 03 20}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -937,6 +979,7 @@ rule Trojan_MSIL_DarkCloud_SKC_2147945411_0
         $x_1_3 = "UPA_HELPER.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -960,6 +1003,7 @@ rule Trojan_MSIL_DarkCloud_AB_2147945968_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -982,6 +1026,7 @@ rule Trojan_MSIL_DarkCloud_GTD_2147946777_0
         $x_1_2 = "Confuser.Core" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

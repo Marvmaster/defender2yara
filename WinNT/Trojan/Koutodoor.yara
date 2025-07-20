@@ -23,6 +23,7 @@ rule Trojan_WinNT_Koutodoor_A_2147615626_0
         $x_1_9 = "Start Page" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_WinNT_Koutodoor_B_2147625825_0
         $x_1_2 = {ff 75 fc 8d 85 fc fe ff ff 50 e8 55 8b ec 57 33 ff 39 7d 14 7e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_WinNT_Koutodoor_C_2147625922_0
         $x_1_4 = {ff 75 0c ff 75 08 6a 20 68 40 56 01 00 e8 55 8b ec 56 57 33 ff 39 7d 14 0f 8e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_WinNT_Koutodoor_D_2147629053_0
         $x_1_3 = {5c 73 79 73 74 65 6d 72 6f 6f 74 5c 73 79 73 74 65 6d 33 32 5c 25 73 00 4b 65 53 65 72 76 69 63 65 44 65 73 63 72 69 70 74 6f 72 54 61 62 6c 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_WinNT_Koutodoor_E_2147630004_0
         $x_1_6 = {99 f7 7d 0c 8a 45 ff 32 04 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or

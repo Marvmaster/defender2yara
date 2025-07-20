@@ -21,6 +21,7 @@ rule Ransom_MSIL_BlackClaw_DEA_2147756614_0
         $x_1_6 = "/C choice /C Y /N /D Y /T 3 & Del \"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

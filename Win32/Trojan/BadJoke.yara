@@ -26,6 +26,7 @@ rule Trojan_Win32_BadJoke_PA_2147744904_0
         $x_1_11 = "some.png" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 6 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -57,6 +58,7 @@ rule Trojan_Win32_BadJoke_PA_2147744904_1
         $x_1_5 = "#MAKEMALWAREGREATAGAIN" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -84,6 +86,7 @@ rule Trojan_Win32_BadJoke_AM_2147817632_0
         $x_1_7 = "start box.vbs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +108,7 @@ rule Trojan_Win32_BadJoke_RDA_2147845700_0
         $x_2_1 = {c1 e0 0d 33 c2 8b c8 c1 e9 11 33 c8 8b f9 c1 e7 05 33 f9 8b c7 c1 e0 0d 33 c7 8b c8 c1 e9 11 33 c8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule Trojan_Win32_BadJoke_RDB_2147851744_0
         $x_2_1 = {8a 0a 8b 55 ec 8a 54 15 cf 31 ca 88 10}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule Trojan_Win32_BadJoke_GH_2147905025_0
         $x_1_5 = "press Yes to start it. Do you want to execute this malware, resulting in an unusable machine?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule Trojan_Win32_BadJoke_EARZ_2147934439_0
         $x_5_1 = {8b c2 83 c2 02 d3 e8 32 c1 88 84 0d 78 56 fc ff 41 81 fa 38 53 07 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -193,6 +200,7 @@ rule Trojan_Win32_BadJoke_EARZ_2147934439_1
         $x_5_1 = {8b d0 8b c8 c1 e9 08 0a c8 c1 ea 09 0a d0 02 d1 8b c8 c1 e9 07 0a c8 02 d1 8b c8 c1 e9 06 22 c8 02 d1 88 94 05 f8 59 f1 ff 40 3d 00 a6 0e 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +222,7 @@ rule Trojan_Win32_BadJoke_DAA_2147935401_0
         $x_5_1 = {89 c1 8b 45 fc c1 f8 0b 09 c8 21 d0 89 c2 89 d0 c1 e0 02 01 d0 8d 14 85 00 00 00 00 01 d0 c1 e0 02 89 c2 8b 45 fc 8d 0c 00 8b 45 10 01 c8 66 89 10 83 45 fc 01}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -235,6 +244,7 @@ rule Trojan_Win32_BadJoke_DAB_2147935402_0
         $x_5_1 = {89 c1 d3 eb 89 d8 83 e0 03 89 c1 d3 ea 89 d0 89 c1 8d 95 ?? ?? ?? ?? 8b 45 f4 01 d0 88 08 83 45 f4 01 81 7d f4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -256,6 +266,7 @@ rule Trojan_Win32_BadJoke_EAOC_2147935739_0
         $x_5_1 = {8b d0 0f be c8 c1 ea 0e 8b d8 80 e2 0e c1 eb 05 0f be d2 0f af d1 8a c8 22 cb 02 c9 02 d1 2a d3 88 94 05 78 56 fc ff 40 3d 80 a9 03 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -277,6 +288,7 @@ rule Trojan_Win32_BadJoke_EAQL_2147935749_0
         $x_5_1 = {d1 88 94 05 78 56 fc ff 40 3d 80 a9 03 00 72}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +310,7 @@ rule Trojan_Win32_BadJoke_EAPX_2147936236_0
         $x_5_1 = {88 8c 1d 78 56 fc ff 43 81 fb ?? ?? ?? ?? ?? ?? 8d 85 78 56 fc ff c7 85 44 56 fc ff 80 a9 03 00 89 85 40 56 fc ff 8d 85 40 56 fc ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -319,6 +332,7 @@ rule Trojan_Win32_BadJoke_EAMG_2147936238_0
         $x_5_1 = {22 c2 88 84 0d 78 56 fc ff 41 81 f9 80 a9 03 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -340,6 +354,7 @@ rule Trojan_Win32_BadJoke_EALQ_2147936242_0
         $x_5_1 = {88 9c 35 78 56 fc ff 46 81 fe 80 a9 03 00 ?? ?? 8d 85 78 56 fc ff c7 85 44 56 fc ff 80 a9 03 00 89 85 40 56 fc ff 8d 85 40 56 fc ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -364,6 +379,7 @@ rule Trojan_Win32_BadJoke_SPLS_2147936308_0
         $x_1_4 = "SELECT * FROM Win32_OperatingSystem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -385,6 +401,7 @@ rule Trojan_Win32_BadJoke_EAGM_2147936730_0
         $x_5_1 = {88 84 0d f8 f3 fa ff 41 81 f9 fe 0b 05 00 ?? ?? ?? ?? f8 f3 fa ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -406,6 +423,7 @@ rule Trojan_Win32_BadJoke_EASX_2147936731_0
         $x_5_1 = {88 94 05 f8 f3 fa ff 40 3d fe 0b 05 00 ?? ?? ?? ?? f8 f3 fa ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -427,6 +445,7 @@ rule Trojan_Win32_BadJoke_ABD_2147936996_0
         $x_1_1 = {ff d0 83 ec 04 c7 44 24 04 00 00 00 00 c7 04 24 02 ?? ?? ?? ?? ?? ?? ?? ?? 83 ec 08 89 45 f4 c7 44 24 08 2c 02 00 00 c7 44 24 04 00 00 00 00 8d 85 c8 fd ff ff 89 04 24 e8 ?? ?? ?? ?? c7 85 c8 fd ff ff 2c 02 00 00 8d 85 c8 fd ff ff 89 44 24 04 8b 45 f4 89 04 24 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -448,6 +467,7 @@ rule Trojan_Win32_BadJoke_EAOU_2147938599_0
         $x_5_1 = {8d 95 5e 56 fc ff 8b 45 f4 01 d0 88 08 83 45 f4 01 81 7d f4 80 a9 03 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -469,6 +489,7 @@ rule Trojan_Win32_BadJoke_EAZ_2147938603_0
         $x_5_1 = {32 d0 2a d0 88 90 80 f8 42 00 40 3d 05 52 00 00 72}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -490,6 +511,7 @@ rule Trojan_Win32_BadJoke_EALB_2147940170_0
         $x_5_1 = {29 c2 8d 8d e2 59 f1 ff 8b 45 f4 01 c8 88 10 83 45 f4 01 81 7d f4 00 a6 0e 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -512,6 +534,7 @@ rule Trojan_Win32_BadJoke_PGB_2147942774_0
         $x_5_2 = {8b ca 4d 8d 40 ?? c1 e9 ?? 8b c2 c1 e8 ?? 32 c8 8b c2 c1 e8 ?? 0a c8 0f be c2 0f be c9 ff c2 0f af c8 0f b6 c1 02 c0 02 c8 c0 e1 ?? 41 88 48 ?? 81 fa ?? ?? ?? ?? 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Yokumlog_A_2147710753_0
         $x_1_4 = "\\System /v DisableTaskMgr /t REG_DWORD /d 1 /f" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

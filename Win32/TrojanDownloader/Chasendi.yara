@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Chasendi_A_2147726834_0
         $x_1_7 = "82.163.143.176;82.163.142.178" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_Chasendi_A_2147726834_1
         $x_1_6 = {3d 87 1c 00 00 89 45 e4 0f 85 2b ff ff ff 8b 55 e0 8d 4a 01 8d 04 c9 89 cf 8d 04 40 8b 84 02 ?? ?? ?? ?? 85 c0 0f 85 be fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

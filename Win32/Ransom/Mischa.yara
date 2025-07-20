@@ -23,6 +23,7 @@ rule Ransom_Win32_Mischa_A_2147711821_0
         $x_1_9 = {00 5c 24 52 65 63 79 63 6c 65 2e 42 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

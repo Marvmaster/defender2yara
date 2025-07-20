@@ -23,6 +23,7 @@ rule Backdoor_Win32_Nethief_Y_2147622857_0
         $x_1_9 = "thief_Version.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Backdoor_Win32_Nethief_AA_2147623650_0
         $x_1_5 = "6F9852E6-D501-4ffe-B065-F57C3F7B9870" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*))) or
             (all of ($x*))
@@ -75,6 +77,7 @@ rule Backdoor_Win32_Nethief_AA_2147623651_0
         $x_1_5 = {8b 4e 1c 8b 56 18 51 8b 4c 24 2c 52 8b 54 24 2c 51 8b 4c 24 2c 52 51 53 8b c8 e8 ?? ?? ?? ?? b8 01 00 00 00 8b 4c 24 0c 64 89 0d 00 00 00 00 5f 5e 5b 83 c4 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

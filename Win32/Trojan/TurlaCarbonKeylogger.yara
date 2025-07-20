@@ -19,6 +19,7 @@ rule Trojan_Win32_TurlaCarbonKeylogger_2147849684_0
         $x_1_5 = "Error getting temp path:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

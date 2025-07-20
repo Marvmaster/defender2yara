@@ -19,6 +19,7 @@ rule Trojan_Win32_Korlia_A_2147650346_0
         $x_1_5 = "SvcHostDLL.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_Korlia_B_2147654262_0
         $x_2_11 = "WINDOWS\\tasks\\lsass.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 5 of ($x_1_*))) or
             ((3 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -78,6 +80,7 @@ rule Trojan_Win32_Korlia_C_2147679090_0
         $x_1_5 = {2f 61 2e 61 73 70 3f 69 64 3d 25 73 25 73 00 74 65 6d 70 73 2e 69 6e 69 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Trojan_Win32_Korlia_D_2147679173_0
         $x_1_5 = {73 6f 63 6b 73 3d 00 00 67 6f 70 68 65 72 3d 00 68 74 74 70 73 3d 00 00 68 74 74 70 3d 00 00 00 66 74 70 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

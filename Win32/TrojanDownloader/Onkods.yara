@@ -89,6 +89,7 @@ rule TrojanDownloader_Win32_Onkods_C_2147804151_0
         $x_1_75 = {6a 04 6a 32 8d 54 24 ?? ?? 52 e8 ?? ?? ?? ?? 83 c4 10 [0-64] 83 ?? 64 83 [0-3] 01 [0-64] 6a 04 6a 32 8d 44 24 ?? 50 8d 4c 24 ?? 51 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_100_*))) or
@@ -116,6 +117,7 @@ rule TrojanDownloader_Win32_Onkods_A_2147804180_0
         $x_1_4 = {0f b7 45 fc 83 c0 01 0f b7 4d 10 99 f7 f9 66 89 55 fc 0f b7 45 ?? 0f b7 55 fc 0f b6 4c 15 ?? 03 c1 0f b7 4d 10 99 f7 f9 66 89 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -139,6 +141,7 @@ rule TrojanDownloader_Win32_Onkods_A_2147804180_1
         $x_10_4 = {8b c6 99 f7 fd 8a 5c 34 ?? 8b 44 24 ?? 46 0f be 14 02}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_10_*))) or

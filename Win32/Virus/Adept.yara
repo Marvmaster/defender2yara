@@ -15,6 +15,7 @@ rule Virus_Win32_Adept_A_2147621455_0
         $x_1_1 = {55 6a 00 83 ec 28 8b ec 60 55 6a 78 68 50 78 2e 61 54 e8 ?? ?? ?? ?? 58 58 5f 8d 77 34 6a 0a 59 f3 a5 61 6a 00 e8 ?? ?? ?? ?? 5d c2 28 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Virus_Win32_Adept_A_2147621459_0
         $x_2_4 = "ShellBotR" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

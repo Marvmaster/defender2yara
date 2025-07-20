@@ -18,6 +18,7 @@ rule Ransom_MSIL_Covitse_PI_2147751513_0
         $x_1_3 = "\\COVID-19.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Backdoor_Win32_Losfondup_A_2147621032_0
         $x_1_6 = "No AntiInject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_6_*) and 1 of ($x_1_*))) or
@@ -50,6 +51,7 @@ rule Backdoor_Win32_Losfondup_B_2147673421_0
         $x_1_6 = "net localgroup Administrators \"LOCAL SERVlCE\" /add" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Backdoor_Win32_Losfondup_C_2147678967_0
         $x_1_3 = {68 23 01 00 00 8d 84 24 24 01 00 00 50 57 8b 03 50 e8 ?? ?? ?? ?? c7 44 24 0c 07 00 01 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

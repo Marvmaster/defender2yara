@@ -17,6 +17,7 @@ rule Worm_Win32_Texbot_A_2147671269_0
         $x_1_3 = {00 6d 6f 64 52 75 6e 41 70 70 4d 65 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

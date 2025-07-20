@@ -20,6 +20,7 @@ rule Trojan_Win32_Piver_A_2147709808_0
         $x_1_6 = {49 50 52 49 50 [0-8] 53 79 73 57 4f 57 36 34 [0-8] 73 79 73 74 65 6d 33 32 [0-10] 73 63 20 63 72 65 61 74 65 20 25 73 20 62 69 6e 50 61 74 68 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_MSIL_Falock_A_2147716233_0
         $x_1_4 = "CODE_DOWNLOAD_DISABLED" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_MSIL_Falock_B_2147723290_0
         $x_2_6 = "SHADOW_COPY_DIRS" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))

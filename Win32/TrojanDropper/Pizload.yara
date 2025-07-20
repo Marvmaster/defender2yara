@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Pizload_B_2147610867_0
         $x_1_4 = {77 75 61 75 63 6c 74 2e 65 78 65 00 43 72 65 61 74 65 52 65 6d 6f 74 65 54 68 72 65 61 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

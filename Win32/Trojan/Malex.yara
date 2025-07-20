@@ -20,6 +20,7 @@ rule Trojan_Win32_Malex_ASG_2147917448_0
         $x_1_5 = "reboot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Malex_GNN_2147918723_0
         $x_5_2 = {8a 16 32 d0 88 16 46 8d 14 37 83 fa 08}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Malex_AMX_2147928584_0
         $x_1_2 = {83 c4 1c ff 35 20 59 42 00 68 80 8d 42 00 68 28 9c 41 00 e8 ?? ?? ?? ?? 83 c4 0c 68 28 9c 41 00 68 a4 8d 42 00 68 30 97 41 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

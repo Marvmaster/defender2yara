@@ -18,6 +18,7 @@ rule Trojan_Win32_Balisdat_A_2147617716_0
         $x_1_3 = "land\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Balisdat_B_2147648439_0
         $x_1_3 = "//:quui" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Balisdat_D_2147652791_0
         $x_1_3 = {50 6a 00 6a 00 e8 ?? ?? ?? ?? a1 ?? ?? ?? ?? c7 00 01 00 00 00 a1 ?? ?? ?? ?? 8b 00 8b 80 ?? 03 00 00 b2 01 e8 ?? ?? ?? ?? eb 1f a1 ?? ?? ?? ?? c7 00 02 00 00 00 a1 ?? ?? ?? ?? 8b 00 8b 80 03 03 00 00 b2 01 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -89,6 +92,7 @@ rule Trojan_Win32_Balisdat_D_2147653912_0
         $x_1_2 = "fzf.otn\\tsfxjse\\:D" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

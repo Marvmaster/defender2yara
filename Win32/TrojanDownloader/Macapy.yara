@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Macapy_A_2147721097_0
         $x_1_3 = {8d 0c 9e 03 4c 37 20 74 16 8b 09 03 ce e8 ?? ?? ?? ff 8b d0 e8 ?? ?? ?? ff 3b 44 ?? ?? 74 14 43 3b 5c 37 18 72 da}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

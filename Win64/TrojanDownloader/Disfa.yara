@@ -19,6 +19,7 @@ rule TrojanDownloader_Win64_Disfa_ARAC_2147901662_0
         $x_2_4 = "&Window Spy" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

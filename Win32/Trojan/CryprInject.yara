@@ -17,6 +17,7 @@ rule Trojan_Win32_CryprInject_SN_2147758055_0
         $x_2_2 = {c6 44 24 2a 33 c6 44 24 24 6b c6 44 24 2c 00 c6 44 24 14 56 c6 44 24 17 74 c6 44 24 1d 6c c6 44 24 25 65 c7 44 24 10 ?? ?? ?? ?? c6 44 24 29 6c b9 4a 01 00 00 39 05 ?? ?? ?? ?? 75 0b 8b d1 66 39 15 ?? ?? ?? ?? 74}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

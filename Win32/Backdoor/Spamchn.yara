@@ -19,6 +19,7 @@ rule Backdoor_Win32_Spamchn_2147624699_0
         $x_1_5 = "218.7.120.70" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_Win32_Spamchn_A_2147639970_0
         $x_1_5 = "svchost" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or

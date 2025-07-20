@@ -21,6 +21,7 @@ rule Trojan_Win32_SilverSword_A_2147696094_0
         $x_1_6 = "cmd /c systeminfo >> \"%s\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

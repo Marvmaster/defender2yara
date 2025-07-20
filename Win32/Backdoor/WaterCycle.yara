@@ -26,6 +26,7 @@ rule Backdoor_Win32_WaterCycle_A_2147750351_0
         $x_2_11 = {f7 e6 8b c6 c1 ea 03 8d 0c 92 03 c9 2b c1 8a 44 ?? ?? 30 04 1e 46 3b f7}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or

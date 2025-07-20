@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Blol_C_2147619595_0
         $x_2_6 = {63 6d 64 2e 65 78 65 20 2f 63 20 72 65 6e 20 5c 53 79 73 74 65 6d 33 32 5c 68 61 68 61 68 61 [0-5] 6a 75 6d 70 65 72 72 2e 65 78 65}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

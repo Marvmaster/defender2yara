@@ -21,6 +21,7 @@ rule Ransom_MSIL_ArtemonCrypt_PA_2147775128_0
         $x_1_6 = "Trojan.Ransom.Artemon.A RANSOMWARE! 2021" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Worm_Win32_Yames_A_2147648339_0
         $x_1_3 = {45 00 3a 00 5c 00 79 00 6d 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

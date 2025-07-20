@@ -18,6 +18,7 @@ rule Trojan_Win32_Surinfub_A_2147679376_0
         $x_1_4 = "function(){var d = document, h = d.getElementsByTagName('head')[0], s = d.createElement('script');" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

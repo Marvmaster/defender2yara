@@ -18,6 +18,7 @@ rule Ransom_Win64_FunkSec_CCJT_2147929816_0
         $x_1_3 = "Set-MpPreference -DisableRealtimeMonitoring" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win64_FunkSec_GNM_2147930150_0
         $x_1_4 = "Do NOT attempt to tamper with files or systems" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

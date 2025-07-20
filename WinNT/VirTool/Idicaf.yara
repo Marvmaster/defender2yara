@@ -18,6 +18,7 @@ rule VirTool_WinNT_Idicaf_A_2147607513_0
         $x_1_4 = {42 72 65 61 6b 49 6e 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule VirTool_WinNT_Idicaf_B_2147607514_0
         $x_1_4 = {43 72 61 63 6b 4d 65 2e 73 79 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -71,6 +73,7 @@ rule VirTool_WinNT_Idicaf_C_2147610136_0
         $x_1_3 = {85 c9 74 13 8b 50 40 3b ca 74 0c 89 15 ?? ?? ?? ?? 89 48 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule VirTool_Win64_Paloadesz_A_2147853086_0
         $x_1_5 = {c7 45 68 61 6d 73 69 c7 45 6c 2e 64 6c 6c c6 45 70 00 c7 85 d8 00 00 00 41 6d 73 69 c7 85 dc 00 00 00 53 63 61 6e c7 85 e0 00 00 00 42 75 66 66 66 c7 85 e4 00 00 00 65 72 c6 85 e6 00 00 00 00 ff 15 ?? ?? ?? ?? 48 ?? ?? ?? ff 15 ?? ?? ?? ?? 48}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

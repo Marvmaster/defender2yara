@@ -22,6 +22,7 @@ rule Trojan_Win32_Donkaykay_B_2147751732_0
         $x_3_7 = "~Tall1net19.tmp" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -51,6 +52,7 @@ rule Trojan_Win32_Donkaykay_H_2147933569_0
         $x_1_3 = {50 6a 40 56 57 ff 15 ?? ?? ?? ?? ff d7 68 00 80 00 00 6a 00 57 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

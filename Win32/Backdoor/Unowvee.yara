@@ -23,6 +23,7 @@ rule Backdoor_Win32_Unowvee_STB_2147782873_0
         $x_1_9 = {43 6f 6d 6d 61 6e 64 00 4e 45 57 00 54 41 53 4b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -75,6 +76,7 @@ rule Backdoor_Win32_Unowvee_LOWFIA_2147782953_0
         $x_1_3 = {6e 6e 6a 6a c7 [0-10] 6a 68 62 6e c7 [0-10] 4b 76 30 30 c7 [0-10] 6d 35 47 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -100,6 +102,7 @@ rule Backdoor_Win32_Unowvee_LOWFIB_2147782954_0
         $x_1_6 = "\\KnownDlls\\crypt32.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

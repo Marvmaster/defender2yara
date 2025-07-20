@@ -25,6 +25,7 @@ rule Trojan_MSIL_ElysiumStealer_DA_2147779169_0
         $x_1_10 = "Decrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 6 of ($x_1_*))) or
             ((3 of ($x_20_*))) or
@@ -58,6 +59,7 @@ rule Trojan_MSIL_ElysiumStealer_DB_2147779632_0
         $x_1_9 = "Decrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_10_*) and 6 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_10_*))) or
@@ -93,6 +95,7 @@ rule Trojan_MSIL_ElysiumStealer_DC_2147779971_0
         $x_1_11 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 5 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 2 of ($x_20_*))) or
@@ -127,6 +130,7 @@ rule Trojan_MSIL_ElysiumStealer_DD_2147780074_0
         $x_1_9 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -161,6 +165,7 @@ rule Trojan_MSIL_ElysiumStealer_DE_2147780334_0
         $x_1_10 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -193,6 +198,7 @@ rule Trojan_MSIL_ElysiumStealer_DG_2147780443_0
         $x_1_8 = "Caramele" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -223,6 +229,7 @@ rule Trojan_MSIL_ElysiumStealer_DH_2147780580_0
         $x_1_10 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -255,6 +262,7 @@ rule Trojan_MSIL_ElysiumStealer_DJ_2147780655_0
         $x_1_8 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -283,6 +291,7 @@ rule Trojan_MSIL_ElysiumStealer_DK_2147780815_0
         $x_1_8 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -313,6 +322,7 @@ rule Trojan_MSIL_ElysiumStealer_DL_2147781295_0
         $x_1_10 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -346,6 +356,7 @@ rule Trojan_MSIL_ElysiumStealer_DM_2147781550_0
         $x_1_9 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -376,6 +387,7 @@ rule Trojan_MSIL_ElysiumStealer_DN_2147781552_0
         $x_1_10 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -410,6 +422,7 @@ rule Trojan_MSIL_ElysiumStealer_DO_2147781674_0
         $x_1_10 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -441,6 +454,7 @@ rule Trojan_MSIL_ElysiumStealer_DP_2147781828_0
         $x_1_7 = "Resolve" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -470,6 +484,7 @@ rule Trojan_MSIL_ElysiumStealer_DQ_2147781864_0
         $x_1_9 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -502,6 +517,7 @@ rule Trojan_MSIL_ElysiumStealer_DR_2147781865_0
         $x_1_9 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -534,6 +550,7 @@ rule Trojan_MSIL_ElysiumStealer_DS_2147782066_0
         $x_1_9 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -566,6 +583,7 @@ rule Trojan_MSIL_ElysiumStealer_DT_2147782198_0
         $x_1_9 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -598,6 +616,7 @@ rule Trojan_MSIL_ElysiumStealer_DU_2147782464_0
         $x_1_9 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -630,6 +649,7 @@ rule Trojan_MSIL_ElysiumStealer_DV_2147782669_0
         $x_1_9 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -662,6 +682,7 @@ rule Trojan_MSIL_ElysiumStealer_DW_2147782671_0
         $x_1_9 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -694,6 +715,7 @@ rule Trojan_MSIL_ElysiumStealer_DX_2147782974_0
         $x_1_9 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -727,6 +749,7 @@ rule Trojan_MSIL_ElysiumStealer_DY_2147783082_0
         $x_1_10 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -760,6 +783,7 @@ rule Trojan_MSIL_ElysiumStealer_DZ_2147783202_0
         $x_1_9 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -793,6 +817,7 @@ rule Trojan_MSIL_ElysiumStealer_EA_2147783312_0
         $x_1_10 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -826,6 +851,7 @@ rule Trojan_MSIL_ElysiumStealer_EB_2147783694_0
         $x_1_9 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -859,6 +885,7 @@ rule Trojan_MSIL_ElysiumStealer_EC_2147783749_0
         $x_1_10 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -892,6 +919,7 @@ rule Trojan_MSIL_ElysiumStealer_ED_2147783877_0
         $x_1_9 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -924,6 +952,7 @@ rule Trojan_MSIL_ElysiumStealer_EE_2147783878_0
         $x_1_9 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -959,6 +988,7 @@ rule Trojan_MSIL_ElysiumStealer_EG_2147788237_0
         $x_1_12 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_10_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -996,6 +1026,7 @@ rule Trojan_MSIL_ElysiumStealer_EF_2147788431_0
         $x_1_13 = "eshelon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_10_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1030,6 +1061,7 @@ rule Trojan_MSIL_ElysiumStealer_EH_2147793312_0
         $x_1_10 = "Resolve" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1067,6 +1099,7 @@ rule Trojan_MSIL_ElysiumStealer_EI_2147793873_0
         $x_1_13 = "Resolve" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1102,6 +1135,7 @@ rule Trojan_MSIL_ElysiumStealer_EJ_2147793875_0
         $x_1_11 = "Invoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 9 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1138,6 +1172,7 @@ rule Trojan_MSIL_ElysiumStealer_EK_2147793876_0
         $x_1_12 = "Invoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_10_*) and 7 of ($x_1_*))) or
             ((1 of ($x_50_*) and 2 of ($x_10_*))) or

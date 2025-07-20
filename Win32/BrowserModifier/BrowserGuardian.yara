@@ -16,6 +16,7 @@ rule BrowserModifier_Win32_BrowserGuardian_203491_0
         $x_1_2 = "Oops, something changed in your proxy settings" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

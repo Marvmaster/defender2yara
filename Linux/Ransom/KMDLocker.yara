@@ -18,6 +18,7 @@ rule Ransom_Linux_KMDLocker_A_2147847299_0
         $x_1_3 = "/opt/agelocker/agelocker.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

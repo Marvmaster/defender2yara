@@ -18,6 +18,7 @@ rule Trojan_Win32_Storup_B_2147658398_0
         $x_1_4 = {5a 77 53 65 74 49 6e 66 6f 72 6d 61 74 69 6f 6e 50 72 6f 63 65 73 73 00 78 78 78 2e 6a 70 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_Storup_D_2147665215_0
         $x_1_10 = {8a 08 80 c1 2e 8b 95 f4 fe ff ff 03 95 b4 f8 ff ff 88 0a eb a5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -73,6 +75,7 @@ rule Trojan_Win32_Storup_H_2147683426_0
         $x_1_4 = {5c 00 00 00 2a 00 00 00 2e 00 64 00 6c 00 6c 00 00 00 00 00 73 00 68 00 65 00 6c 00 6c 00 33 00 32 00 2e 00 64 00 6c 00 6c 00 00 00 5c 00 69 00 65 00 66 00 72 00 61 00 6d 00 65 00 2e 00 64 00 6c 00 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_Win32_Storup_I_2147683494_0
         $x_1_4 = {00 2e 00 64 00 61 00 74 00 00 40 00 [0-32] (00 5c 00 6d 00 73 00 68 00 74 00 6d 00 6c 00 2e 00 64 00 6c 00 6c|00 5c 00 69 00 65 00 66 00 72 00 61 00 6d 00 65 00 2e 00 64 00 6c 00 6c)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

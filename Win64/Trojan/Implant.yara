@@ -17,6 +17,7 @@ rule Trojan_Win64_Implant_A_2147890065_0
         $x_2_2 = {48 8b 4c 24 ?? 48 8d 84 24 ?? ?? ?? ?? 48 89 44 24 ?? 45 33 c9 48 8b 84 24 ?? ?? ?? ?? 45 33 c0 33 d2 48 89 44 24}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_Implant_B_2147892636_0
         $x_2_4 = "Hit me 1st!" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win64_Implant_C_2147896554_0
         $x_2_5 = {c7 45 ef 77 69 6e 64 c7 45 f3 6f 77 73 2e c7 45 f7 73 74 6f 72 c7 45 fb 61 67 65 2e c7 45 ff 64 6c 6c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

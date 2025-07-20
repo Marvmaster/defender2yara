@@ -16,6 +16,7 @@ rule Trojan_Win32_Scrwban_A_2147841351_0
         $x_1_1 = "download?cid=4BFA286866B1C02A&resid=4BFA286866B1C02A%21105&authkey=ALs3JGaXia7oul4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

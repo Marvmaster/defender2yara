@@ -18,6 +18,7 @@ rule Trojan_MSIL_Cordimik_ABEZ_2147838436_0
         $x_1_3 = "NebStub.Form1.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

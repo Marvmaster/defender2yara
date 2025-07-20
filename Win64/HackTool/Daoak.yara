@@ -20,6 +20,7 @@ rule HackTool_Win64_Daoak_A_2147729833_0
         $x_1_6 = {8b 47 10 89 85 e8 fc ff ff 0f b6 4b 27 39 c8 74 21 77 0b 3a 43 26 0f 82 24 02 00 00 eb 14 f6 43 24 02 0f 84 18 02 00 00 29 c8 6b c0 18 48 01 c2 89 c8 40 80 e4 f0 0f ba e1 00 73 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

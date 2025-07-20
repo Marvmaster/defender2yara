@@ -19,6 +19,7 @@ rule HackTool_Win32_ProcHack_SGA_2147896512_0
         $x_1_4 = "ialdnwxf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

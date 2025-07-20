@@ -34,6 +34,7 @@ rule Backdoor_Win32_Pahador_ABG_2147595172_0
         $x_1_19 = "InternetGetConnectedState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 9 of ($x_1_*))) or
             (all of ($x*))
@@ -73,6 +74,7 @@ rule Backdoor_Win32_Pahador_ABI_2147595192_0
         $x_1_16 = "<br><b>[<i> Pulpit</i>]</b><br>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

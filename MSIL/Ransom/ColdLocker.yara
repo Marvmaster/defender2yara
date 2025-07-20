@@ -19,6 +19,7 @@ rule Ransom_MSIL_ColdLocker_DA_2147765425_0
         $x_1_4 = "\\ColdLocker\\obj\\Release\\ColdLocker.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

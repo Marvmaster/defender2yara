@@ -19,6 +19,7 @@ rule Trojan_Win32_DLLoader_EM_2147931459_0
         $x_1_4 = "powershell -command \"iex (gc ('C:\\ProgramData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

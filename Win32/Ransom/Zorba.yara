@@ -17,6 +17,7 @@ rule Ransom_Win32_Zorba_AA_2147756267_0
         $x_1_2 = "Your documents, photos, databases and other important files are encrypted and have the extension: .ZRB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

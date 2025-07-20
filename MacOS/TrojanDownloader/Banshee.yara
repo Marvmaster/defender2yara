@@ -17,6 +17,7 @@ rule TrojanDownloader_MacOS_Banshee_A_2147923948_0
         $x_1_2 = {48 8b 0d 9f 06 00 00 48 8b 09 48 3b 4d e8 75 7a 48 81 c4 80 01 00 00 5b 41 5e 5d c3 48 b8 ce 70 a5 00 bc 05 cb 65 48 8d b5 70 fe ff ff 48 89 06 c6 46 08 6c 48 8b 1b 4c 8d b5 88 fe ff ff 4c 89 f7 e8 ec 02 00 00 41 f6 06 01 74 09 48 8b 95 98 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_MacOS_Banshee_B_2147933109_0
         $x_1_2 = {88 0d 80 52 e8 63 00 39 08 00 00 90 08 39 3c 91 08 01 40 f9 e8 0b 00 f9 73 02 40 f9 f4 a3 00 91 e8 a3 00 91 e0 43 00 91 65 00 00 94 e8 ff c0 39 e9 17 40 f9 1f 01 00 71 28 b1 94 9a e8 7f 00 a9 e0 03 13 aa e1 03 13 aa 9b 00 00 94}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win32_Uleux_A_2147689178_0
         $x_1_7 = "S_T_A_R_T_S_N_I_F_F_E_R_!_@_@_!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

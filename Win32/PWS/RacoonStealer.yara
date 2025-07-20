@@ -57,6 +57,7 @@ rule PWS_Win32_RacoonStealer_MK_2147780036_0
         $x_50_42 = "wallets" ascii //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_50_*) and 10 of ($x_1_*))) or
             ((12 of ($x_50_*))) or

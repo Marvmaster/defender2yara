@@ -20,6 +20,7 @@ rule Ransom_Win32_Dharma_PAA_2147793524_0
         $x_1_5 = "start cmd.exe /c taskkill /t /f /im" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

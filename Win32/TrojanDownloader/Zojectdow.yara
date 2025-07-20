@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Zojectdow_STA_2147779320_0
         $x_1_2 = {56 69 72 74 75 61 6c 50 72 6f 74 65 63 74 00 00 00 00 00 00 00 00 [0-160] 63 65 72 74 2e 63 6f 6d 2f 44 69 67 69 43 65 72 74 41 73 73 75 72 65 64 49 44 52 6f 6f 74 43 41 2e 63 72 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Zojectdow_STB_2147779377_0
         $x_5_4 = {c6 00 2e 8b 4d ?? 83 c1 01 89 ?? ?? ?? ?? ?? c6 02 70 8b [0-16] c6 01 73 8b [0-16] c6 00 31}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -65,6 +67,7 @@ rule TrojanDownloader_Win32_Zojectdow_STB_2147779377_1
         $x_5_4 = {c6 02 2e 8b 45 ?? 83 c0 01 89 ?? ?? ?? ?? ?? c6 01 70 8b [0-16] c6 00 73 8b [0-16] c6 02 31}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

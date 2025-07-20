@@ -20,6 +20,7 @@ rule Worm_VBS_Vailik_A_2147692622_0
         $x_1_6 = "sBotData = HEXEncode(sXOR(sGetID & \"::\" & sGetOS & \"::\" & sGetUserPC & \"::\" & sGetRAM & \"::\" & sGetAV & \"::\" & IsUsb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

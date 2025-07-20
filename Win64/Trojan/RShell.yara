@@ -17,6 +17,7 @@ rule Trojan_Win64_RShell_AHB_2147946221_0
         $x_2_2 = {c7 05 6c 45 00 00 68 00 00 00 c7 05 9e 45 00 00 01 01 00 00 48 89 05 bb 45 00 00 48 89 05 ac 45 00 00 48 89 05 9d 45 00 00 48 b8 ?? ?? ?? ?? ?? ?? ?? 00 48 89 44 24 51}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

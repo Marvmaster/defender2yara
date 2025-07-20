@@ -21,6 +21,7 @@ rule Trojan_MSIL_SpyQuasar_MA_2147796702_0
         $x_1_6 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_MSIL_SpyQuasar_MB_2147808842_0
         $x_1_7 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

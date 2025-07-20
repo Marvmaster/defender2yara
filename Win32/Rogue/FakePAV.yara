@@ -17,6 +17,7 @@ rule Rogue_Win32_FakePAV_154123_0
         $x_1_3 = "input type='hidden' name='subId' value=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Rogue_Win32_FakePAV_154123_1
         $x_1_4 = "Your unique activation code:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Rogue_Win32_FakePAV_154123_2
         $x_1_6 = "ExecuteFile=\"3yo4wo7q1jn6257.exe\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -92,6 +95,7 @@ rule Rogue_Win32_FakePAV_154123_3
         $x_1_4 = "Your unique activation code is:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -119,6 +123,7 @@ rule Rogue_Win32_FakePAV_154123_4
         $x_1_5 = "Peak Protection 2010" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule Rogue_Win32_FakePAV_154123_5
         $x_1_6 = "/activate.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -165,6 +171,7 @@ rule Rogue_Win32_FakePAV_154123_6
         $x_1_2 = {50 6a 00 6a 00 6a 20 6a 00 6a 00 6a 00 83 7d ?? 00 74 ?? 8b 55 ?? eb ?? ba ?? ?? ?? ?? 52 6a 00 ff 15 ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -186,6 +193,7 @@ rule Rogue_Win32_FakePAV_154123_7
         $x_1_2 = {8b 55 f8 8b c3 8b 08 ff 51 38 8d 45 f0 e8 ?? ?? ?? ?? ff 75 f0 68 ?? ?? ?? 00 ff 75 fc 8d 45 f4 ba 03 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +218,7 @@ rule Rogue_Win32_FakePAV_154123_8
         $x_1_5 = "torrents" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +243,7 @@ rule Rogue_Win32_FakePAV_154123_9
         $x_1_5 = {6d 73 63 6f 6e 66 69 67 00 6d 62 61 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -256,6 +266,7 @@ rule Rogue_Win32_FakePAV_154123_10
         $x_1_3 = {6a 00 6a 00 6a 1a 6a 00 e8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 00 6a 00 6a 25 6a 00 e8 ?? ?? ?? ?? 66 c7 85 ?? ?? ?? ?? 54 00 8d 45 ?? e8 ?? ?? ?? ?? 8b c8 a1 ?? ?? ?? ?? ff 85 ?? ?? ?? ?? ba 05 00 00 00 8b 18 ff 53 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -279,6 +290,7 @@ rule Rogue_Win32_FakePAV_154123_11
         $x_1_4 = {56 69 72 75 73 20 6e 61 6d 65 3a 00 53 65 63 75 72 69 74 79 20 52 69 73 6b 3a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -301,6 +313,7 @@ rule Rogue_Win32_FakePAV_154123_12
         $x_2_3 = {6a 00 6a 00 8d 45 fc e8 ?? ?? ?? ?? 8d 45 fc 50 8d 4d f8 ba 03 00 00 00 b8 a8 1d 4c 00 e8 ?? ?? ?? ?? 8b 55 f8 58 e8 ?? ?? ?? ?? 8b 45 fc 50 a1 44 13 4d 00 50 6a 00 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -323,6 +336,7 @@ rule Rogue_Win32_FakePAV_154123_13
         $x_1_3 = {6a 00 6a 00 6a 1a 6a 00 e8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 00 6a 00 6a 25 6a 00 e8 ?? ?? ?? ?? 66 c7 85 ?? ?? ?? ?? 3c 00 8d 45 ?? e8 ?? ?? ?? ?? 8b c8 ff 85 ?? ?? ?? ?? ba 05 00 00 00 8b 06 8b 18 ff 53 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +365,7 @@ rule Rogue_Win32_FakePAV_154123_14
         $x_1_9 = {72 75 6e 61 73 00 64 66 64 67 64 66 67 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -375,6 +390,7 @@ rule Rogue_Win32_FakePAV_154123_15
         $x_1_5 = {c7 76 5d dc c8 ca 5a 7b 9b e9 99 e1 f8 91 b4 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -398,6 +414,7 @@ rule Rogue_Win32_FakePAV_154123_16
         $x_1_4 = {53 74 72 69 6e 67 47 72 69 64 31 44 72 61 77 43 65 6c 6c [0-10] 54 53 79 73 49 6e 66 6f 46 72 61 6d 65 [0-80] 50 72 69 76 61 63 79 00 70 72 69 76 61 63 79 00 63 6f 6e 66 69 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -419,6 +436,7 @@ rule Rogue_Win32_FakePAV_154123_17
         $x_1_2 = "was launched succesfully but it was forced to shut down due to security reasons." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -446,6 +464,7 @@ rule Rogue_Win32_FakePAV_154123_18
         $x_6_8 = {29 f1 d1 e9 09 d2 78 1a 29 ca 76 16 29 d6 66 b8 ?? 00 29 d6 01 d1 eb ?? 66 89 04 56 4a}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_6_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -479,6 +498,7 @@ rule Rogue_Win32_FakePAV_154123_19
         $x_1_11 = "i_LMD_INSPECTOR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -511,6 +531,7 @@ rule Rogue_Win32_FakePAV_154123_20
         $x_2_8 = {ba 02 00 00 00 e8 ?? ?? ?? ?? 59 84 c9 74 0f 6a 00 8b 8d ?? ?? ff ff 51 ff 15 ?? ?? ?? ?? 66 c7 46 10 3c 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
@@ -543,6 +564,7 @@ rule Rogue_Win32_FakePAV_154123_21
         $x_2_7 = {0f b7 10 33 55 f8 66 89 10 83 c0 02 4b 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -574,6 +596,7 @@ rule Rogue_Win32_FakePAV_154123_22
         $x_1_7 = {59 29 f1 d1 e9 09 d2 78 1a 29 ca 76 16 29 d6 66 b8 30 00 29 d6 01 d1 eb 04 66 89 04 56 4a 75 f9 66 89 06 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -607,6 +630,7 @@ rule Rogue_Win32_FakePAV_154123_23
         $x_1_14 = {72 75 6e 61 73 00 64 66 64 67 64 66 67 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -635,6 +659,7 @@ rule Rogue_Win32_FakePAV_154123_24
         $x_1_5 = {0b 54 46 6f 72 6d 5f 61 6c 65 72 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -664,6 +689,7 @@ rule Rogue_Win32_FakePAV_154123_25
         $x_1_10 = "MoneyFlatInactiveColor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -691,6 +717,7 @@ rule Rogue_Win32_FakePAV_154123_26
         $x_2_8 = {3d b7 00 00 00 0f 85 ?? ?? 00 00 8b 0d ?? ?? ?? ?? 51 6a 00 e8 ?? ?? ?? ?? 8b d8 85 db 0f 84 ?? ?? 00 00 66 c7 45 ?? ?? 00 8d 45 ?? 8b 55 ?? e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -728,6 +755,7 @@ rule Rogue_Win32_FakePAV_154123_27
         $x_1_13 = {78 da ed 9d 77 9c 5c 57 79 f7 7f e7 dc 32 bd 6f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_5_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -762,6 +790,7 @@ rule Rogue_Win32_FakePAV_154123_28
         $x_2_7 = "ThinkPoint" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -796,6 +825,7 @@ rule Rogue_Win32_FakePAV_154123_29
         $x_3_15 = {4c e1 c5 26 64 51 8b 90 64 40 3f c8 48 c9 4a 5a}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -831,6 +861,7 @@ rule Rogue_Win32_FakePAV_154123_30
         $x_1_10 = {50 6a 00 68 30 00 00 02 e8 ?? ?? ?? ?? 8b f0 66 c7 45 ?? 48 00 85 f6 0f 84 ?? ?? 00 00 68 04 01 00 00 8d 85 ?? ?? ?? ff 50 56 ff 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -874,6 +905,7 @@ rule Rogue_Win32_FakePAV_154123_31
         $x_2_19 = "@@Autorun@Finalize" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_2_*) and 1 of ($x_1_*))) or
             ((7 of ($x_2_*))) or
@@ -905,6 +937,7 @@ rule Rogue_Win32_FakePAV_154123_32
         $x_1_6 = {76 00 65 00 72 00 73 00 69 00 6f 00 6e 00 20 00 6f 00 66 00 20 00 73 00 6f 00 66 00 74 00 77 00 61 00 72 00 65 00 20 00 6f 00 72 00 20 00 6e 00 65 00 65 00 64 00 20 00 61 00 6e 00 64 00 20 00 75 00 70 00 64 00 61 00 74 00 65 00 20 00 6f 00 72 00 20 00 61 00 64 00 64 00 2d 00 6f 00 6e 00 20 00 74 00 6f 00 20 00 66 00 75 00 6e 00 63 00 74 00 69 00 6f 00 6e 00 20 00 70 00 72 00 6f 00 70 00 65 00 72 00 6c 00 79 00 2e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -942,6 +975,7 @@ rule Rogue_Win32_FakePAV_154123_33
         $x_1_14 = {25 2a 73 20 25 64 2c 25 64 00 50 69 6e 67 [0-16] 68 74 74 70 50 61 79 66 6f 72 6d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -985,6 +1019,7 @@ rule Rogue_Win32_FakePAV_154123_34
         $x_1_15 = "ristics modul" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -1025,6 +1060,7 @@ rule Rogue_Win32_FakePAV_154123_35
         $x_1_11 = {57 57 6a 1a 57 ff d6 68 ?? ?? ?? ?? 57 57 6a 25 57 ff d6 bd 1c 01 00 00 55 57 be ?? ?? ?? ?? 56 e8 ?? ?? ?? ?? 83 c4 0c 56}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1067,6 +1103,7 @@ rule Rogue_Win32_FakePAV_154123_36
         $x_10_23 = {6a 00 6a 00 6a 1a 6a 00 ff 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 00 6a 00 6a 25 6a 00 ff 15 ?? ?? ?? ?? 68 1c 01 00 00 6a 00 68 ?? ?? ?? ?? e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -1121,6 +1158,7 @@ rule Rogue_Win32_FakePAV_154123_37
         $x_1_30 = {59 29 f1 d1 e9 09 d2 78 1a 29 ca 76 16 29 d6 66 b8 30 00 29 d6 01 d1 eb 04 66 89 04 56 4a 75 f9 66 89 06 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1178,6 +1216,7 @@ rule Rogue_Win32_FakePAV_154123_38
         $n_10_38 = "disinstalla ImmoPK" wide //weight: -10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((4 of ($x_1_*))) or
@@ -1231,6 +1270,7 @@ rule Rogue_Win32_FakePAV_154123_39
         $x_2_28 = {83 c1 02 66 89 8d ?? ?? ?? ?? c7 85 ?? ?? ?? ?? 18 00 00 00 c7 85 ?? ?? ?? ?? 00 00 00 00 c7 85 ?? ?? ?? ?? 40 00 00 00 8d 95 ?? ?? ?? ?? 89 95 ?? ?? ?? ?? c7 85 ?? ?? ?? ?? 00 00 00 00 c7 85 ?? ?? ?? ?? 00 00 00 00 8d 85 ?? ?? ?? ?? 50 68 3f 00 0f 00 8d 8d ?? ?? ?? ?? 51 ff 15 ?? ?? ?? ?? 89 85 ?? ?? ?? ?? 83 3d ?? ?? ?? ?? 00 74 17 8d 55 ?? 52 8b 85 ?? ?? ?? ?? 50 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1298,6 +1338,7 @@ rule Rogue_Win32_FakePAV_154123_40
         $x_2_43 = {50 6a 00 6a 01 e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 00 80 78 57 00 75 ?? a1 ?? ?? ?? ?? 8b 00 80 78 57 00 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1387,6 +1428,7 @@ rule Rogue_Win32_FakePAV_154123_41
         $x_1_62 = "tst\\\\exe-" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1489,6 +1531,7 @@ rule Rogue_Win32_FakePAV_154123_42
         $x_2_78 = {25 00 73 00 20 00 22 00 25 00 73 00 57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 5c 00 43 00 75 00 72 00 72 00 65 00 6e 00 74 00 56 00 65 00 72 00 73 00 69 00 6f 00 6e 00 5c 00 25 00 73 00 22 00 20 00 2f 00 76 00 20 00 22 00 63 00 74 00 66 00 6d 00 6f 00 6e 00 22 00 20 00 2f 00 74 00 20 00 52 00 45 00 47 00 5f 00 53 00 5a 00 20 00 2f 00 64 00 20 00 22 00 25 00 73 00 22 00 20 00 2f 00 66 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

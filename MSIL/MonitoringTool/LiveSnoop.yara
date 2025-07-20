@@ -19,6 +19,7 @@ rule MonitoringTool_MSIL_LiveSnoop_205390_0
         $x_1_5 = "LiveSnoop_Agent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

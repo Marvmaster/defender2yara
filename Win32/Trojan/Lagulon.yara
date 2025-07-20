@@ -20,6 +20,7 @@ rule Trojan_Win32_Lagulon_A_2147690387_0
         $x_1_6 = {41 64 6f 62 65 20 52 65 70 6f 72 74 20 53 65 72 76 69 63 65 00 00 00 00 73 74 61 72 74 75 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

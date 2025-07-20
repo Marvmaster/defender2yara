@@ -18,6 +18,7 @@ rule Trojan_MSIL_Mobazug_A_2147688074_0
         $x_1_4 = "/Kaspersky;component/MainPage.xaml" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

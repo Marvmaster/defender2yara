@@ -19,6 +19,7 @@ rule Trojan_Win32_Healsock_2147616264_0
         $x_1_5 = "/temp/settings/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Trojan_Win32_Healsock_2147616264_1
         $x_1_6 = {57 53 43 57 72 69 74 65 50 72 6f 76 69 64 65 72 4f 72 64 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

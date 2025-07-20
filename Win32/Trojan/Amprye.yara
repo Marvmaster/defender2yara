@@ -19,6 +19,7 @@ rule Trojan_Win32_Amprye_A_2147641427_0
         $x_1_5 = {45 4e 44 49 4e 54 45 43 45 50 54 56 41 52 49 41 42 4c 45 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

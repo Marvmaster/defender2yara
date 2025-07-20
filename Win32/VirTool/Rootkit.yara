@@ -19,6 +19,7 @@ rule VirTool_Win32_Rootkit_BW_2147636735_0
         $x_1_5 = "mRoot\\system32\\kernel32.dl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

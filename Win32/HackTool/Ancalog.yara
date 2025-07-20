@@ -20,6 +20,7 @@ rule HackTool_Win32_Ancalog_A_2147717900_0
         $x_1_6 = "Silent DOC Exploit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule HackTool_Win32_Ancalog_B_2147717902_0
         $x_1_13 = "YourMacroExploit.doc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule HackTool_Win32_Ancalog_C_2147717903_0
         $x_1_3 = "Use this software only for educational purposes and penetration tests. No illegal activities!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule HackTool_Win32_Ancalog_D_2147717924_0
         $x_1_3 = "/For penetration tests only!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -49,6 +49,7 @@ rule Backdoor_Win32_SixMuch_A_2147628456_0
         $x_1_35 = "InternetGetCookieA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 30 of ($x_1_*))) or
             ((2 of ($x_10_*) and 30 of ($x_1_*))) or

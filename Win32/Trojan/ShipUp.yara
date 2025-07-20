@@ -16,6 +16,7 @@ rule Trojan_Win32_ShipUp_DSK_2147753716_0
         $x_2_1 = {8b 55 f8 8b 02 33 45 ?? 8b 4d f8 89 01 c7 45 ?? 8e c3 66 00 8b e5 5d c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_ShipUp_BK_2147852483_0
         $x_2_6 = ".themida" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -69,6 +71,7 @@ rule Trojan_Win32_ShipUp_GNW_2147852751_0
         $x_1_3 = "n7PNdhhteS/C" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_Win32_ShipUp_GMQ_2147892858_0
         $x_1_4 = "IeESi.Wi@i" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Trojan_Win32_ShipUp_GMX_2147893310_0
         $x_1_3 = ".vmp0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -139,6 +144,7 @@ rule Trojan_Win32_ShipUp_GZY_2147906309_0
         $x_1_3 = "bfpemvhu.vcd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_Win32_ShipUp_GZY_2147906309_1
         $x_10_1 = {8b 55 c4 89 55 cc 8b 45 dc 89 45 fc 8b 4d c8 89 4d ec 8b 55 c4 89 55 f4 8b 45 c4 89 45 d8 8b 4d ec 89 4d e0 8b 55 d8 89 55 f8 8b 45 f8 8b 08 33 4d e0 8b 55 f8 89 0a c7 45 c0 41 3c 00 00 8b e5 5d c3}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -182,6 +189,7 @@ rule Trojan_Win32_ShipUp_GZN_2147907953_0
         $x_5_2 = {26 32 19 54 94 56 b7 2c b3 11 81 b3 ?? ?? ?? ?? 6c f3 48 84 31 9b ?? ?? ?? ?? 48 13 23 13 29}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -204,6 +212,7 @@ rule Trojan_Win32_ShipUp_ASF_2147908978_0
         $x_1_2 = {81 f2 2f 45 12 62 66 f7 c6 59 1c 85 d2 f7 d2 81 f2 69 70 62 50 85 cb 33 da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

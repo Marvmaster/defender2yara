@@ -18,6 +18,7 @@ rule Virus_Win32_Funlove_4070_2147601061_0
         $x_1_4 = {c7 00 2a 2e 2a 00 8d bb 00 12 00 00 8d b3 00 10 00 00 57 56 e8 ?? ?? 00 00 83 f8 ff 74 40 89 45 fc f6 07 10 74 3e 80 7f 2c 2e 74 17 8b f7 83 c6 2c 8b 7d 08 a4 80 3e 00 75 fa b0 5c aa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

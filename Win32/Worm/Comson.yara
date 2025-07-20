@@ -17,6 +17,7 @@ rule Worm_Win32_Comson_A_2147643228_0
         $x_1_3 = {75 06 39 7c 08 04 74 ?? 40 3b ?? 72 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

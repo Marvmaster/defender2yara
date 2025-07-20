@@ -19,6 +19,7 @@ rule Worm_Win32_Picsys_BQ_2147889104_0
         $x_1_4 = {55 50 58 31 00 61 23 a4 00 e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Worm_Win32_Picsys_ASC_2147898606_0
         $x_1_8 = "teen hottie geting buttfucked.mpg.pif" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

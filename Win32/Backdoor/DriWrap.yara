@@ -19,6 +19,7 @@ rule Backdoor_Win32_DriWrap_SD_2147765582_0
         $x_1_4 = {33 c9 2b d0 8d ?? ?? 33 ?? 0f b7 [0-4] 66 89 [0-4] 66 3b ?? 74 [0-8] 41 3b ?? 7e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

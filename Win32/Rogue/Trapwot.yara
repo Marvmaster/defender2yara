@@ -20,6 +20,7 @@ rule Rogue_Win32_Trapwot_206303_0
         $x_1_6 = "MDefender.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule Rogue_Win32_Trapwot_206303_1
         $x_1_5 = "TrgGrzcCnguN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -74,6 +76,7 @@ rule Rogue_Win32_Trapwot_206303_2
         $x_1_4 = {52 75 6e 49 6e 76 61 6c 69 64 53 69 67 6e 61 74 75 72 65 73 00 00 00 00 43 68 65 63 6b 45 78 65 53 69 67 6e 61 74 75 72 65 73 00 00 6e 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -101,6 +104,7 @@ rule Rogue_Win32_Trapwot_206303_3
         $x_3_5 = {6a 04 68 00 30 00 00 50 6a 00 8b ?? ff 15 ?? ?? ?? ?? 89 ?? 8b 4c ?? 54 51 53 50 e8 ?? ?? ?? ?? 8b ?? 03 40 3c 08 00 [0-1] 8b ?? 3c 8b 44 ?? 50}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -130,6 +134,7 @@ rule Rogue_Win32_Trapwot_206303_4
         $x_1_6 = {73 00 74 00 6f 00 70 00 53 00 63 00 61 00 6e 00 00 00 00 00 67 00 65 00 74 00 41 00 64 00 76 00 49 00 64 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -161,6 +166,7 @@ rule Rogue_Win32_Trapwot_206303_5
         $x_1_9 = {67 65 74 5f 74 77 6f 3f 76 3d [0-2] 26 61 3d [0-3] 26 75 3d ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 26 69 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_16_*))) or
@@ -199,6 +205,7 @@ rule Rogue_Win32_Trapwot_206303_6
         $x_3_15 = {66 8b 38 ba ?? ?? ?? ?? 66 2b fa ba ?? ?? ?? ?? 66 33 fa ba ?? ?? ?? ?? 66 3b fa 75}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -240,6 +247,7 @@ rule Rogue_Win32_Trapwot_206303_7
         $x_2_18 = {8a 50 01 80 f2 ?? 80 c2 ?? 80 fa ?? (0f 85|75)}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

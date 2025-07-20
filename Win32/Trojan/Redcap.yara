@@ -16,6 +16,7 @@ rule Trojan_Win32_Redcap_A_2147754485_0
         $x_1_1 = {8b ca 2b cf f7 df 8b 09 89 4e 08 8b 54 3a fc 8b fa 2b f9 89 7e 0c 76 1b 33 ff 33 f6 46 83 ff 15 7f 0b 8a 1c 38 03 fe 30 19 03 ce eb 02 33 ff 3b ca 72 ea 33 c0 5e 5f 5b c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Redcap_AP_2147833537_0
         $x_1_6 = "Sendkeys" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_Redcap_BA_2147844824_0
         $x_2_7 = "NGVSXHRuZmMbyrvWww" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Trojan_Win32_Redcap_BB_2147845619_0
         $x_1_8 = "GetLogicalDrives" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Trojan_Win32_Redcap_RJ_2147849646_0
         $x_1_4 = {51 6a 00 6a 00 6a 04 6a 01 6a 00 6a 00 6a 00 8d 8d 70 ff ff ff 51 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -146,6 +151,7 @@ rule Trojan_Win32_Redcap_AMAA_2147890318_0
         $x_1_5 = "Wrong JPEG library" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +202,7 @@ rule Trojan_Win32_Redcap_GNZ_2147925894_0
         $x_1_3 = "MyUnregisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -217,6 +224,7 @@ rule Trojan_Win32_Redcap_MBWG_2147928370_0
         $x_1_1 = {55 8b ec 83 c4 f0 b8 4c d1 43 00 e8 30 9a fc ff 33 c0 55 68 75 07 44 00 64 ff 30 64 89 20 e8 ad bc ff ff 33 c0 5a 59 59 64 89 10 68 7c 07 44 00 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -238,6 +246,7 @@ rule Trojan_Win32_Redcap_MKV_2147928644_0
         $x_5_1 = {81 ea d4 7f 00 00 81 ea 37 bd 00 00 e8 0a 00 00 00 00 4c 40 ?? 4f 34 3a 32 46 35 83 c4 04 81 e2 5d 1d 01 00 5a 56 56}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -260,6 +269,7 @@ rule Trojan_Win32_Redcap_ARD_2147934636_0
         $x_2_2 = {8b 06 33 c9 89 44 24 24 8a 4c 24 27 33 d2 83 c6 04 8a 54 24 26 8b 0c 8d ec 38 41 00 33 0c 95 ec 3c 41 00 33 d2 8a d4 25 ff 00 00 00 33 0c 95 ec 40 41 00 8b 14 85 ec 44 41 00 33 ca 4f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

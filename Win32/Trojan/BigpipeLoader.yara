@@ -18,6 +18,7 @@ rule Trojan_Win32_BigpipeLoader_MA_2147835131_0
         $x_1_3 = "NtQueryInformationProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_BigpipeLoader_MB_2147835133_0
         $x_10_2 = {8b 45 f8 8b 4d f4 01 06 2b c8 01 03 89 4d f4 85 c9 75 d9}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

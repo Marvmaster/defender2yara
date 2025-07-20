@@ -19,6 +19,7 @@ rule Worm_Win32_Culler_R_2147597130_0
         $x_1_5 = {c7 45 fc 0c 00 00 00 6a 01 8b 55 08 8b 02 8b 4d 08 51 ff 90 ?? 07 00 00 c7 45 fc 0d 00 00 00 c7 45 bc 04 00 02 80 c7 45 b4 0a 00 00 00 8d 55 b4 52 68 ?? ?? 40 00 ff 15 ?? 10 40 00 8d 4d b4 ff 15 ?? 10 40 00 c7 45 fc 0e 00 00 00 c7 45 bc 04 00 02 80 c7 45 b4 0a 00 00 00 8d 45 b4 50 68 ?? ?? 40 00 ff 15 ?? 10 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Fakemsn_I_2147653187_0
         $x_3_3 = "www.invasaohacking.com" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

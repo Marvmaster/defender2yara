@@ -18,6 +18,7 @@ rule Trojan_Win32_Sloddat_A_2147685288_0
         $x_2_4 = {72 65 74 2c 64 2b 77 6f 32 72 68 63 64 2b 71 5f 69 65 6e 5e 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

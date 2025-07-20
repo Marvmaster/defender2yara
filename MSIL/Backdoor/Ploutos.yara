@@ -23,6 +23,7 @@ rule Backdoor_MSIL_Ploutos_A_2147725175_0
         $x_1_8 = "tcpflood" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -54,6 +55,7 @@ rule Backdoor_MSIL_Ploutos_B_2147725176_0
         $x_1_6 = {44 6f 77 6e 6c 6f 61 64 46 69 6c 65 00 4c 6f 61 64 41 6e 64 53 74 61 72 74 46 69 6c 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

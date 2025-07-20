@@ -17,6 +17,7 @@ rule Trojan_MSIL_PowDownload_NEAA_2147839876_0
         $x_5_2 = "LILUZIVERT.exe" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

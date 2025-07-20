@@ -16,6 +16,7 @@ rule Constructor_Win32_Cuteqq_2147649496_0
         $x_4_2 = "var Orh2=window[\"Math\"][\"random\"]()*rRaGEykU1;" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

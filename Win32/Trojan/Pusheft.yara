@@ -19,6 +19,7 @@ rule Trojan_Win32_Pusheft_A_2147697769_0
         $x_2_5 = {89 48 08 8b 55 08 8b 42 04 03 45 a0 89 45 88 8b 4d 88 8a 55 8c 88 11 e9 4b fd ff ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -23,6 +23,7 @@ rule Backdoor_Win32_Dalbot_2147648246_0
         $x_1_9 = "clientkey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

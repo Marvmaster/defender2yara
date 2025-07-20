@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Kryptik_RDC_2147840145_0
         $x_2_3 = {d3 c3 0f c9 d2 dd 8b 4d ?? 02 d9 66 ?? ?? ?? ?? 3b fc 32 d3 0f 93 c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

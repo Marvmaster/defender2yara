@@ -19,6 +19,7 @@ rule Ransom_Win32_Zorro_AA_2147853418_0
         $x_1_4 = "\\Ransomware\\zorro\\Zorro\\Zorro\\obj\\Release\\Zorro.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

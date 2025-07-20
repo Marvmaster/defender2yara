@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_NsisDownloadz_A_2147923639_0
         $x_1_2 = {60 28 c1 3b 8c ea a9 c4 3c 25 24 c8 ec fd 42 1e 7c cd 28 c1 64 50 59 b0 54 07 d4 7b 99 fe a5 8c 00 fd c7 93 be aa 4d 7d 12 04 33 ec aa d2 fb 6c 03 4f 75 0e 97 95 a0 ec e7 0d 8d fb 75 24 dd 93 7e 8a 73 b5 8a 61 5a 42 83}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

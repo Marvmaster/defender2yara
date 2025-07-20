@@ -19,6 +19,7 @@ rule Backdoor_Win32_Degrub_A_2147708497_0
         $x_1_5 = "keylogger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

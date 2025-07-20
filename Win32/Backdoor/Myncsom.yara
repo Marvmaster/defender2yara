@@ -18,6 +18,7 @@ rule Backdoor_Win32_Myncsom_2147936059_0
         $x_1_4 = ".hj6n" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_Win32_Myncsom_2147936059_1
         $x_1_4 = "Wombat Gaming Wallet" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

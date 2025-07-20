@@ -19,6 +19,7 @@ rule Backdoor_MacOS_Gmera_A_2147783473_0
         $x_2_4 = "IyEgL2Jpbi9iYXNoCgpmdW5jdGlvbiByZW1vdmVfc3BlY19jaGFyKCl7CiAgICBlY2hvICIkMSIgfCB0ciAtZGMgJ1s6YWxudW06XS5ccicgfCB0ciAnWzp1cHBlcjpdJyAnWzpsb3dlcjpdJwp9Cgp3aG9hbWk9IiQocmVtb3ZlX3NwZWNfY2hhciBgd2hvYW1pYCkiCm" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

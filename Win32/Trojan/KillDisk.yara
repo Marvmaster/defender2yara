@@ -15,6 +15,7 @@ rule Trojan_Win32_KillDisk_H_2147619520_0
         $x_1_1 = {03 00 42 41 54 ?? ?? ?? ?? 40 65 63 68 6f 20 6f 66 66 [0-8] 64 65 6c 20 25 73 79 73 74 65 6d 64 72 69 76 65 25 [0-16] 73 68 75 74 64 6f 77 6e 20 2d 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_KillDisk_K_2147628323_0
         $x_1_3 = {68 00 02 00 00 57 56 ff 15 ?? ?? ?? ?? 85 c0 74 5a 81 7c 24 14 00 02 00 00 72 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_KillDisk_L_2147641609_0
         $x_3_4 = {8d 15 1b 30 40 00 6a 00 51 68 00 ?? 00 00 52 53 e8}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_KillDisk_N_2147718941_0
         $x_10_6 = "vssadmin delete shadows /all /quiet" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -117,6 +121,7 @@ rule Trojan_Win32_KillDisk_YA_2147731869_0
         $x_1_7 = "DisableScanOnRealtimeEnable" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_7_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -143,6 +148,7 @@ rule Trojan_Win32_KillDisk_ARA_2147925942_0
         $x_2_3 = "Run malware" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_Win32_KillDisk_EAEB_2147936234_0
         $x_5_1 = {8b ca c1 e9 10 d3 ea 8b 8d dc ac f8 ff 8b c1 c1 e8 06}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule Trojan_Win32_KillDisk_EEB_2147941313_0
         $x_2_1 = {22 d0 88 94 05 ?? ?? ?? ?? 40 3d 80 a9 03 00 72 ?? ?? ?? ?? ?? ?? ?? c7 85}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

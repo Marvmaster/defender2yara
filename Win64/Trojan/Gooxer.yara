@@ -21,6 +21,7 @@ rule Trojan_Win64_Gooxer_A_2147825969_0
         $x_1_6 = "expand 32-byte kexpand 32-byte k" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

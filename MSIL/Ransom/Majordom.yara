@@ -19,6 +19,7 @@ rule Ransom_MSIL_Majordom_YAA_2147933194_0
         $x_1_4 = "Majordom V4.0\\client\\majordom\\obj\\Debug\\majordom.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

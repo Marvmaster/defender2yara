@@ -18,6 +18,7 @@ rule Trojan_Win32_Chenf_A_2147686313_0
         $x_1_4 = "deleteself" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

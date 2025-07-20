@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Ifnapod_C_2147603483_0
         $x_1_3 = {57 4c 45 76 65 6e 74 4c 6f 67 6f 66 66 00 57 4c 45 76 65 6e 74 4c 6f 67 6f 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanSpy_Win32_Ifnapod_A_2147603495_0
         $x_1_4 = {49 6e 73 74 61 6c 6c 46 00 49 6e 73 74 61 6c 6c 46 4e 44 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule TrojanSpy_Win32_Ifnapod_B_2147603496_0
         $x_1_3 = {5f 50 72 6f 67 5f 48 6f 6f 6b 41 6c 6c 41 70 70 73 40 38 00 66 6e 44 4c 4c 00 66 6e 46 4e 44 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Linux_Turla_A_2147772779_0
         $x_1_4 = "File already exist on remote filesystem" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Linux_Turla_HA_2147833803_0
         $x_1_8 = "Remote VS is empty !" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -71,6 +73,7 @@ rule Trojan_Linux_Turla_XO_2147836689_0
         $x_10_2 = {53 48 8d 82 74 38 00 00 4c 8d 82 6c 38 00 00 89 fb 48 89 f7 48 83 ec 10 85 c9 48 8d 8a 24 28 00 00 4c 8d 4c 24 0c 4c 0f 45 c0 48 63 d3 c7 44 24 0c 00 00 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_Linux_Turla_B_2147849465_0
         $x_1_4 = "Alter lastlog entry : wipe l [username] [tty] [time] [host]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_Linux_Turla_C_2147849466_0
         $x_1_2 = "execl failed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule Trojan_Linux_Turla_D_2147849467_0
         $x_1_11 = "mygid=-%d-" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -170,6 +176,7 @@ rule Trojan_Linux_Turla_E_2147849468_0
         $x_1_6 = "No good line" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

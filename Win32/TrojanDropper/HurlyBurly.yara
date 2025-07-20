@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_HurlyBurly_A_2147741598_0
         $x_2_3 = "(C) Microsofts Corporation." wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

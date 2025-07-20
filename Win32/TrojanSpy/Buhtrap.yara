@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Buhtrap_A_2147718114_0
         $x_1_5 = "Max: %ls, Total: %s, Min: %d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule TrojanSpy_Win32_Buhtrap_A_2147718860_0
         $x_1_5 = {00 00 52 00 65 00 74 00 75 00 72 00 6e 00 56 00 61 00 6c 00 75 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -72,6 +74,7 @@ rule TrojanSpy_Win32_Buhtrap_B_2147741096_0
         $x_1_4 = "inetcomm server passwords" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

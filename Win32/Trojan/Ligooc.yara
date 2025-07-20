@@ -17,6 +17,7 @@ rule Trojan_Win32_Ligooc_GM_2147755492_0
         $x_1_2 = {33 c0 8a 44 3c ?? 81 e1 ?? ?? ?? ?? 03 c1 [0-48] 8a 45 ?? 83 c4 ?? 8a 54 14 ?? 32 c2 88 45 ?? 8b 44 24 [0-32] 89 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Ligooc_DA_2147779722_0
         $x_1_7 = "GetCurrentThreadId" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

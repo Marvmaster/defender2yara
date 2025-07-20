@@ -18,6 +18,7 @@ rule Backdoor_Win32_Mangwam_A_2147660417_0
         $x_1_4 = {6d 61 63 68 69 6e 65 69 64 2e 70 68 70 3f 63 68 65 63 6b 73 74 72 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

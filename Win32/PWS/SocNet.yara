@@ -16,6 +16,7 @@ rule PWS_Win32_SocNet_2147628854_0
         $x_1_2 = {0e 00 00 00 20 2f 53 54 41 52 54 20 51 51 55 49 4e 3a 00 00 ff ff ff ff 09 00 00 00 20 50 57 44 48 41 53 48 3a 00 00 00 ff ff ff ff 07 00 00 00 20 2f 53 54 41 54 3a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

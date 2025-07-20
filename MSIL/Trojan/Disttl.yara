@@ -18,6 +18,7 @@ rule Trojan_MSIL_Disttl_QX_2147794523_0
         $x_1_3 = "Discord" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

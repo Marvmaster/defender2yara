@@ -20,6 +20,7 @@ rule Backdoor_Win32_Mirai_A_2147719921_0
         $x_1_6 = "/delete /f /tn msinfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -105,6 +106,7 @@ rule Backdoor_Win32_Mirai_A_2147722027_0
         $x_1_61 = {75 65 73 70 ?? ?? ?? 65 6d 6f 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

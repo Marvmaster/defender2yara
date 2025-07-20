@@ -19,6 +19,7 @@ rule VirTool_Win32_BopToolz_B_2147844666_0
         $x_1_4 = {83 c4 08 a3 10 ?? ?? ?? 8d 45 ?? 50 68 02 00 00 80 ff 35 ?? ?? ?? ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

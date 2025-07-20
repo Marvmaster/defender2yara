@@ -19,6 +19,7 @@ rule Trojan_Win32_Derusbi_G_2147691848_0
         $x_100_4 = "ZhuDongFangYu.exe" wide //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Derusbi_H_2147691849_0
         $x_5_5 = "Global\\fcKRxxx" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_3_*))) or
             ((2 of ($x_5_*) and 1 of ($x_3_*))) or
@@ -74,6 +76,7 @@ rule Trojan_Win32_Derusbi_B_2147693985_0
         $x_1_4 = {33 db 3b c3 75 04 33 c0 eb 1d 8d 4c 24 18 51 33 f6 ff d0 0f b7 44 24 18 83 f8 06 74 05 83 f8 09 75 03 33 f6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_Win32_Derusbi_F_2147693986_0
         $x_1_5 = {47 45 54 20 68 74 74 70 3a 2f 2f 00 25 5b 5e 3a 5d 3a 25 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -125,6 +129,7 @@ rule Trojan_Win32_Derusbi_C_2147693987_0
         $x_1_6 = "Dom4!nUserP4ss" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -147,6 +152,7 @@ rule Trojan_Win32_Derusbi_D_2147693988_0
         $x_1_2 = {6a 40 68 00 10 00 00 68 00 50 00 00 6a 00 ff 15 ?? ?? ?? ?? 89 45 fc 33 c0 8a 88 ?? ?? ?? ?? 80 f1 ?? 88 8c 05 bc ec ff ff 40 3d ?? 13 00 00 7c e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +177,7 @@ rule Trojan_Win32_Derusbi_E_2147693989_0
         $x_1_4 = {5b 49 4e 53 5d 00 5b 44 45 4c 5d 00 5b 45 4e 44 5d 00 5b 48 4f 4d 45 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -197,6 +204,7 @@ rule Trojan_Win32_Derusbi_J_2147712656_0
         $x_1_2 = "varus_service_x86.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

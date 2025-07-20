@@ -19,6 +19,7 @@ rule Ransom_Win32_Mapo_2147748097_0
         $x_1_4 = "STRICTLY FORBIDDEN TO USE NON-ORIGIN DECRYPTION TOOLS OR MODIFYING ENCRYPTED FILES" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

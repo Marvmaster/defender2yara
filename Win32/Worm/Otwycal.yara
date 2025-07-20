@@ -17,6 +17,7 @@ rule Worm_Win32_Otwycal_A_2147606451_0
         $x_1_2 = {2e c6 84 24 ?? ?? 00 00 65 c6 84 24 ?? ?? 00 00 78 c6 84 24 ?? ?? 00 00 74 88 84 24 ?? ?? 00 00 c6 84 24 ?? ?? 00 00 64 c6 84 24 ?? ?? 00 00 6f c6 84 24 ?? ?? 00 00 77 c6 84 24 ?? ?? 00 00 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

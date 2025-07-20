@@ -17,6 +17,7 @@ rule Trojan_Win64_Alevaul_DA_2147943959_0
         $x_10_2 = {44 89 4c 24 60 44 89 54 24 64 48 8b ce 49 8b c0 48 f7 e1 48 8b c1 48 ff c1 48 c1 ea 02 48 6b d2 0d 48 2b c2 8a 44 05 88 30 44 0c 5f 48 83 f9 13}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win64_Alevaul_DB_2147943960_0
         $x_5_6 = {48 63 c8 49 ff c1 0f b6 44 0c 18 43 32 44 0b ff 41 88 41 ff 49 ff ca}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
@@ -71,6 +73,7 @@ rule Trojan_Win64_Alevaul_GDI_2147943982_0
         $x_10_3 = {49 03 f9 49 03 d1 3b c0 75 30 33 c9 8a 1a 84 db ?? ?? d1 c1 69 c1 f2 6d 00 00 80 fb 61 0f b6 cb 89 44 24 20 8d 43 e0 0f b6 c0 0f 43 c8 30 4c 24 20 8b 4c 24 20 48 ff c2}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             ((1 of ($x_10_*))) or

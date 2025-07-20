@@ -19,6 +19,7 @@ rule DDoS_Linux_Hestra_A_2147818617_0
         $x_1_4 = "Fux0ring %s on port %d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

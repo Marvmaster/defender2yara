@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Kebster_A_2147689342_0
         $x_1_9 = {f3 a5 8b ca 50 83 e1 03 f3 a4 8d 44 24 18 50 68 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 8d 4c 24 10 6a 00 51 ff d5 68 10 27 00 00 ff 15 ?? ?? ?? ?? 8d 54 24 10 68 80 00 00 00 52 ff 15 ?? ?? ?? ?? 8d 44 24 10 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

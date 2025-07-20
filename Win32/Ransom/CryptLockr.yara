@@ -19,6 +19,7 @@ rule Ransom_Win32_CryptLockr_PB_2147828911_0
         $x_1_4 = "\\Documents\\WindowsPowerShell\\Modules\\Cipher" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

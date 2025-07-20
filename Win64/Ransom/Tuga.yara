@@ -19,6 +19,7 @@ rule Ransom_Win64_Tuga_YAQ_2147902635_0
         $x_10_4 = {79 59 54 59 55 66 1f 17 6e 79 6c 15 0c 20 6c 12}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -46,6 +47,7 @@ rule Ransom_Win64_Tuga_DA_2147905279_0
         $x_1_3 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Ransom_Win64_Tuga_GDR_2147905388_0
         $x_1_3 = "./emailSender.ps1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Ransom_Win64_Tuga_SKH_2147913915_0
         $x_1_3 = "owner dead" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

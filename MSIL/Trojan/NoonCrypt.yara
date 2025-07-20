@@ -17,6 +17,7 @@ rule Trojan_MSIL_NoonCrypt_SK_2147756848_0
         $x_2_2 = {20 00 01 00 00 8d 39 00 00 01 80 cd 01 00 04 16 0b 38 4e 00 00 00 00 07 6a 0a 1e 0c 38 29 00 00 00 00 06 17 6a 5f 17 6a fe 01 0d 09 39 10 00 00 00 06 17 64 20 20 83 b8 ed 6e 61 0a 38 04 00 00 00 06 17 64 0a 00 08 17 59 0c 08 16 fe 02 13 04 11 04 3a ca ff ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

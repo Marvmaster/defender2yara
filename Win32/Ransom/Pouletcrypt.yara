@@ -16,6 +16,7 @@ rule Ransom_Win32_Pouletcrypt_A_2147711671_0
         $x_2_2 = {b9 01 00 00 00 e8 ?? ?? ?? ff ff 0d ?? ?? ?? 00 8b ?? 8b 15 ?? ?? ?? 00 80 7c 10 ff 21 74 d6 [0-48] 85 c0 7e 17 ba 01 00 00 00 8b 0d ?? ?? ?? 00 80 7c 11 ff 2f 75 01}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

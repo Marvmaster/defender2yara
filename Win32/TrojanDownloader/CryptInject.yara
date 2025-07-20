@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_CryptInject_BG_2147827779_0
         $x_1_4 = "sremoveMe%i%i%i%i.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_CryptInject_BH_2147827805_0
         $x_1_5 = "UPX1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

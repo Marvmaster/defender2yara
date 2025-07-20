@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Rhadamanthus_CA_2147840681_0
         $x_1_3 = {68 74 74 70 3a 2f 2f 63 6c 65 61 6e 69 6e 67 2e 68 6f 6d 65 73 65 63 75 72 69 74 79 70 63 2e 63 6f 6d 2f 70 61 63 6b 61 67 65 73 2f [0-31] 2e 70 6e 67}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

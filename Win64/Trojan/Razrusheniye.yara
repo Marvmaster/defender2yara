@@ -20,6 +20,7 @@ rule Trojan_Win64_Razrusheniye_YAN_2147929697_0
         $x_1_5 = "system will be just as new" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

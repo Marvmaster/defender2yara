@@ -18,6 +18,7 @@ rule Backdoor_Win32_Doubickit_A_2147679531_0
         $x_1_4 = {83 b8 24 36 00 00 00 74 7b 8d 55 c8 52 6a 00 6a 02 8b 4d fc ff b1 2c 36 00 00 8b 45 fc ff b0 28 36 00 00 8b 55 fc ff b2 24 36 00 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

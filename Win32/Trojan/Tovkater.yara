@@ -21,6 +21,7 @@ rule Trojan_Win32_Tovkater_A_2147731356_0
         $x_1_7 = "fghjrtyu.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Tovkater_B_2147731360_0
         $x_1_5 = "msimn.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

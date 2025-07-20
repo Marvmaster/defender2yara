@@ -18,6 +18,7 @@ rule Backdoor_Linux_Bew_A_2147824589_0
         $x_1_3 = {8a 14 03 84 d2 75 f5 c6 04 01 00 5b 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 

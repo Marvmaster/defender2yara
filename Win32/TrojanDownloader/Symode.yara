@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Symode_A_2147679087_0
         $x_1_2 = {69 c0 fd 43 03 00 05 c3 9e 26 00 a3 b8 73 40 00 c7 45 f8 10 00 00 00 0f b7 0d fe 74 40 00 83 f9 09 75 09 8b 55 f8 83 c2 08 89 55 f8 a1 b8 73 40 00 8b 4d f8 d3 e8 89 45 f8 8b 0d c8 73 40 00 03 4d fc 0f be 11 33 55 f8 a1 c8 73 40 00 03 45 fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

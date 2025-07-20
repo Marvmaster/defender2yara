@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_PurpleFox_A_2147894589_0
         $x_2_2 = {57 ff d6 bf ?? ?? ?? ?? 8b d8 57 ff 15 ?? ?? ?? ?? ff d6 2b c3 3b c7 5f 5e 5b 0f 9c c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

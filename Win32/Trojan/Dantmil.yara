@@ -18,6 +18,7 @@ rule Trojan_Win32_Dantmil_A_2147646568_0
         $x_1_4 = "D0564EF474CF921D3A462FB8" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -43,6 +44,7 @@ rule Trojan_Win32_Dantmil_C_2147647886_0
         $x_1_2 = {8d 85 fc fe ff ff 50 6a 10 68 80 08 00 00 e8 ?? ?? ?? ?? 83 c4 1c c7 85 f4 fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

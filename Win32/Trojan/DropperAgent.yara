@@ -22,6 +22,7 @@ rule Trojan_Win32_DropperAgent_PA_2147752181_0
         $x_1_7 = "Your Computer Has Been Trashed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

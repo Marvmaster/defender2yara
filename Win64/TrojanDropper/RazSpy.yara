@@ -18,6 +18,7 @@ rule TrojanDropper_Win64_RazSpy_ARA_2147919391_0
         $x_2_3 = "explorer_injected=success" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule VirTool_Win64_Difrisz_A_2147847728_0
         $x_1_3 = {48 8b 78 50 48 8b 8d 20 01 00 00 48 8b 95 28 01 00 00 48 8b c2 48 2b c1 48 3b f8 77 35 48 ?? ?? ?? 48 89 85 20 01 00 00 48 8d ?? ?? ?? ?? ?? 48 83 fa 10 48 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

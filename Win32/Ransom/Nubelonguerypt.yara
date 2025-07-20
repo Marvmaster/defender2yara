@@ -18,6 +18,7 @@ rule Ransom_Win32_Nubelonguerypt_A_2147722904_0
         $x_1_4 = "*.e|*.doc|*.jpg|*.png|*.txt|*.pdf|*.wps" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

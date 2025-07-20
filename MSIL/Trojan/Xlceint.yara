@@ -20,6 +20,7 @@ rule Trojan_MSIL_Xlceint_A_2147728358_0
         $x_1_5 = "TryUacTrick" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Trojan_MSIL_Xlceint_A_2147786660_0
         $x_3_10 = "add_OnHotKeysDownOnce" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

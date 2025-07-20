@@ -18,6 +18,7 @@ rule Ransom_Win32_Veecrypt_A_2147721259_0
         $x_1_4 = {44 00 3a 00 5c 00 00 00 43 00 3a 00 5c 00 00 00 45 00 3a 00 5c 00 00 00 46 00 3a 00 5c 00 00 00 4f 00 70 00 65 00 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

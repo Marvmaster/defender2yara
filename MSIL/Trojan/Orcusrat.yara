@@ -25,6 +25,7 @@ rule Trojan_MSIL_Orcusrat_ADN_2147779929_0
         $x_4_10 = "gET_TaskName" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_4_*))) or
             ((1 of ($x_5_*) and 5 of ($x_4_*))) or
@@ -60,6 +61,7 @@ rule Trojan_MSIL_Orcusrat_ADT_2147779931_0
         $x_3_10 = "set_TaskSchedulerTaskName" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_3_*))) or
             ((1 of ($x_4_*) and 4 of ($x_3_*))) or

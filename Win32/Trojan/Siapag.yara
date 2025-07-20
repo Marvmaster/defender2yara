@@ -18,6 +18,7 @@ rule Trojan_Win32_Siapag_A_2147616858_0
         $x_1_3 = "IsGamePlayer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))

@@ -16,6 +16,7 @@ rule VirTool_Win32_SvcStealer_A_2147915056_0
         $x_1_1 = "GDUuHQoGE0krKw8VGg4GFzUkCxkEHw5UIR0ZJgUEMTM4HQoZKEkyGQ4AFw==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

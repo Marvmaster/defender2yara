@@ -41,6 +41,7 @@ rule Trojan_Win32_Laziok_A_2147693752_0
         $x_1_25 = "verif.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

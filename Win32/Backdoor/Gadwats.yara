@@ -22,6 +22,7 @@ rule Backdoor_Win32_Gadwats_A_2147729222_0
         $x_1_8 = "[W] Starting agent..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

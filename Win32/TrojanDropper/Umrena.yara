@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Umrena_B_2147609485_0
         $x_1_1 = {40 90 00 83 c1 01 3d 55 40 56 7c f2 31 c0 8d 85 00 ac 1e 50 68 04 01 00 00 e8 53 40 55 83 cf 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDropper_Win32_Umrena_F_2147649605_0
         $x_1_3 = {01 f1 77 69 6e 74 68 75 6d 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

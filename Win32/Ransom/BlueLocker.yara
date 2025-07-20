@@ -21,6 +21,7 @@ rule Ransom_Win32_BlueLocker_MK_2147805854_0
         $x_1_6 = "DO NOT MODIFY or try to RECOVER any files yourself" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule TrojanSpy_Win32_Bholog_B_2147696324_0
         $x_1_10 = {4c 6f 67 69 6e 53 75 63 63 65 65 64 65 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -55,6 +56,7 @@ rule TrojanSpy_Win32_Bholog_B_2147696324_1
         $x_2_6 = "\\dekhtesd_heinsd\\fdfdf.vbp" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +88,7 @@ rule TrojanSpy_Win32_Bholog_B_2147710063_0
         $x_1_11 = {53 00 65 00 6c 00 65 00 63 00 74 00 [0-32] 2e 00 2a 00 [0-16] 46 00 72 00 6f 00 6d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -114,6 +117,7 @@ rule TrojanSpy_Win32_Bholog_C_2147716927_0
         $x_1_8 = {4d 6f 64 75 6c 65 31 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -140,6 +144,7 @@ rule TrojanSpy_Win32_Bholog_D_2147728055_0
         $x_1_6 = "cmd.exe /c" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))

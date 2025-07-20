@@ -16,6 +16,7 @@ rule Backdoor_Linux_GetShell_A_2147658604_0
         $x_1_2 = {89 e1 43 cd 80 5b 99 b6 0c b0 03 cd 80}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Backdoor_Linux_GetShell_A_2147797444_0
         $x_1_2 = {31 db f7 e3 53 43 53 6a 02 b0 66 89 e1 cd 80 97 5b 68 ?? ?? ?? ?? 68 02 00 ?? ?? 89 e1 6a 66 58 50 51 57 89 e1 43 cd 80 b2 07 b9 00 10 00 00 89 e3 c1 eb 0c c1 e3 0c b0 7d cd 80 5b 89 e1 99 b6 0c b0 03 cd 80 ff e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Backdoor_Linux_GetShell_B_2147797447_0
         $x_1_4 = {50 51 53 b3 03 89 e1 cd 80 52 68 6e 2f 73 68 68 2f 2f 62 69 89 e3 52 53 89 e1 b0 0b cd 80}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Backdoor_Linux_GetShell_B_2147819332_0
         $x_1_4 = {6a 0a 5e 31 db f7 e3 53 43 53 6a 02 b0 66 89 e1 cd 80 97 5b 68 a4 5c dd 9e 68 02 00 11 5c 89 e1 6a 66 58 50 51 57 89 e1 43 cd 80 85 c0 79 19 4e 74 3d 68 a2 00 00 00 58 6a 00 6a 05 89 e3 31 c9 cd 80 85 c0 79 bd eb 27 b2 07 b9 00 10 00 00 89 e3 c1 eb 0c c1 e3 0c b0 7d cd 80 85 c0 78 10 5b 89 e1 99 b2 6a b0 03 cd 80 85 c0 78 02 ff e1 b8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Backdoor_Linux_GetShell_C_2147835607_0
         $x_1_1 = {00 02 00 03 00 01 00 00 00 54 80 04 08 34 00 00 00 00 00 00 00 00 00 00 00 34 00 20 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 80 04 08 00 80 04 08 ea 00 00 00 80 01 00 00 07 00 00 00 00 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Backdoor_Linux_GetShell_I_2147890018_0
         $x_1_1 = "metasploit:Az/dIsj4p4IRc:0:0::/:/bin/sh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -149,6 +155,7 @@ rule Backdoor_Linux_GetShell_K_2147893551_0
         $x_1_1 = {80 04 08 00 80 04 08 56 01 00 00 58 02 00 00 07 00 00 00 00 10 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

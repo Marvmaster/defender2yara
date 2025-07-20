@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_VXIDL_2147804050_0
         $x_1_4 = {00 00 8b 55 10 66 81 3a 4d 5a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_VXIDL_2147804050_1
         $x_1_7 = "SeDebugPrivilege" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((3 of ($x_4_*) and 1 of ($x_1_*))) or

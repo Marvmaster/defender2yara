@@ -24,6 +24,7 @@ rule Virus_Win32_Xiaoho_2147609933_0
         $x_2_10 = {8b 35 f0 12 40 00 57 6a 01 8d 45 b4 6a 40 50 ff d6 83 c4 10 66 81 7d b4 4d 5a 75 e0 6a 00 ff 75 f0 57 ff 15 ec 12 40 00 57 6a 01 8d 85 bc fe ff ff 68 f8 00 00 00 50 ff d6 83 c4 1c 81 bd bc fe ff ff 50 45 00 00 75 05 6a 01 5e eb 02}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or

@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Exwamp_A_2147630574_0
         $x_1_2 = {74 07 c1 cf 0d 01 c7 eb f2 3b 7c 24 14 75 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

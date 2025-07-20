@@ -21,6 +21,7 @@ rule Trojan_Win32_Ligsetrac_A_2147626098_0
         $x_1_6 = {c7 00 ff ff ff ff 8d 45 ec c7 00 f0 f0 f0 f0 8d 45 f0 c7 00 f0 f0 f0 f0 8d 45 f4 c7 00 f0 f0 f0 f0 8d 45 f8 66 c7 00 f0 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

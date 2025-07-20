@@ -19,6 +19,7 @@ rule Trojan_Linux_Silex_A_2147793493_0
         $x_1_4 = "people selling spots on botnets" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

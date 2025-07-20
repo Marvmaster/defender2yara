@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_RemcosRAT_A_2147892025_0
         $x_2_1 = {8b c8 0f b7 c3 8b ea 99 03 c8 13 d5 33 c0 33 c8 33 d7 8b f9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

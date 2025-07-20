@@ -19,6 +19,7 @@ rule Trojan_Win32_SpectreRat_ASP_2147932018_0
         $x_4_4 = "76E894005c2DE86E40b032a0931D2ABC05C6eB36ACb1C18F5b640aD24Bbc9454" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

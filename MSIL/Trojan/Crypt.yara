@@ -17,6 +17,7 @@ rule Trojan_MSIL_Crypt_V_2147743791_0
         $x_1_2 = "Rock_Paper_Scissors" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_MSIL_Crypt_AC_2147789436_0
         $x_1_7 = "get_StartupPath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_MSIL_Crypt_MA_2147810506_0
         $x_1_9 = "2a86c7c2-3153-40ac-a264-405cca3623bb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule Trojan_MSIL_Crypt_MB_2147811262_0
         $x_1_7 = "$$method0x6000332-1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

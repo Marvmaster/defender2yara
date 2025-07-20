@@ -17,6 +17,7 @@ rule SoftwareBundler_Win32_Pokavampo_222268_0
         $x_1_3 = "&pr=vo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule SoftwareBundler_Win32_Pokavampo_222268_1
         $x_1_4 = "context.download-ap.com:5555/mta" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

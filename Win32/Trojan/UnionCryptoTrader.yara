@@ -19,6 +19,7 @@ rule Trojan_Win32_UnionCryptoTrader_2147750008_0
         $x_3_4 = "UnionCrypto Corporation. All Rights Reserved" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

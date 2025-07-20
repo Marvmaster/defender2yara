@@ -17,6 +17,7 @@ rule Trojan_Win32_Medfos_A_2147655194_0
         $x_1_3 = {69 ff c8 00 00 00 (57|e9) (a2 ?? ?? ?? ??|e9 a2 ?? ?? ?? ??) (ff 15|e9)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Medfos_A_2147655194_1
         $x_1_3 = {69 c0 e8 03 00 00 (a3 ?? ?? ?? ??|e9 a3 ?? ?? ?? ??) (c3|e9)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Medfos_B_2147655403_0
         $x_10_5 = {c7 45 f4 2e 00 00 00 (89|e9 (89|e9 89)) (6a 0a|e9 (6a 0a|e9)) (8d|e9 8d) (50|e9) (8b cb|e9 (8b cb|e9))}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -90,6 +93,7 @@ rule Trojan_Win32_Medfos_B_2147655403_1
         $x_10_5 = {c7 45 fc 2e 00 00 00 (33 db|e9 (33 db|e9)) (6a 0a|e9 (6a 0a|e9)) (8d|e9 8d) (50|e9) (8b|e9 (8b|e9 8b))}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -115,6 +119,7 @@ rule Trojan_Win32_Medfos_T_2147662972_0
         $x_1_3 = {c6 45 fa 78 c6 45 fb 65 c6 45 fc 00 66 ab 33 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -145,6 +150,7 @@ rule Trojan_Win32_Medfos_V_2147665059_0
         $x_1_7 = {2f 57 69 6e 44 61 74 61 25 64 2e 64 6c 6c 3f 44 41 54 41 2d 53 54 58 2d 32 2a 30 78 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -172,6 +178,7 @@ rule Trojan_Win32_Medfos_X_2147671593_0
         $x_10_4 = {8d 44 30 02 (80|e9 80) ((0f 85 ?? ?? ?? ??|e9 0f 85 ?? ?? ?? ??)|(75 ??|e9 75 ??)) (03|e9 03)}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -200,6 +207,7 @@ rule Trojan_Win32_Medfos_AF_2147680404_0
         $x_1_6 = {05 00 00 ff 16 89 85 09 00 8b b5 ?? ?? ?? ?? 81 c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -233,6 +241,7 @@ rule Trojan_Win32_Medfos_AF_2147680404_1
         $x_1_11 = {81 c7 a4 05 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*) and 3 of ($x_10_*))) or
@@ -261,6 +270,7 @@ rule Trojan_Win32_Medfos_AK_2147682013_0
         $x_1_5 = {68 e7 8a d3 2c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

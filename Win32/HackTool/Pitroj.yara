@@ -17,6 +17,7 @@ rule HackTool_Win32_Pitroj_A_2147719214_0
         $x_1_3 = "This tool was build by Prabhat Awasthi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

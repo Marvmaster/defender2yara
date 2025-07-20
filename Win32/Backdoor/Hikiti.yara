@@ -18,6 +18,7 @@ rule Backdoor_Win32_Hikiti_I_2147693112_0
         $x_1_3 = "info.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_Win32_Hikiti_J_2147693115_0
         $x_1_1 = {01 75 f6 85 12 00 8d 14 85 00 00 00 00 2b ?? 8b ?? 31 ?? 83 ?? 04 83 19 00 8d ?? fb c1 ?? 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Backdoor_Win32_Hikiti_E_2147693122_0
         $x_100_1 = {8a 10 84 d2 75 04 40 c2 04 00 8a ca 53 32 ca 88 08 40 33 c9 8a 1c 01 32 da 88 1c 01 74 09 41 81 f9 ?? ?? 00 00 7c ed}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Backdoor_Win32_Hikiti_F_2147693123_0
         $x_20_9 = {8b 38 83 c0 04 33 fd 4a 89 78 fc 75 f3}  //weight: 20, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             ((1 of ($x_15_*) and 2 of ($x_10_*))) or
@@ -121,6 +125,7 @@ rule Backdoor_Win32_Hikiti_C_2147693126_0
         $x_1_4 = {77 00 37 00 66 00 77 00 2e 00 69 00 6e 00 66 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -145,6 +150,7 @@ rule Backdoor_Win32_Hikiti_D_2147693128_0
         $x_1_4 = "Open backdoor error." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -167,6 +173,7 @@ rule Backdoor_Win32_Hikiti_N_2147693129_0
         $x_1_2 = {c1 e8 02 40 8b d0 c1 e2 02 2b ca 8b f9 31 1e 83 c6 04 48 75 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +198,7 @@ rule Backdoor_Win32_Hikiti_N_2147693129_1
         $x_1_4 = "CreatePipe hReadPipeShell & hWritePipeHandle error = %s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +224,7 @@ rule Backdoor_Win32_Hikiti_O_2147693130_0
         $x_1_5 = "CreatePipe hReadPipeShell & hWritePipeHandle error = %s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -238,6 +247,7 @@ rule Backdoor_Win32_Hikiti_K_2147693131_0
         $x_1_2 = {8a 25 25 42 28 28 20 1c 1c 1c 15 15 15 0e 0e 0e 05 05 05 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -264,6 +274,7 @@ rule Backdoor_Win32_Hikiti_L_2147693132_0
         $x_1_6 = {2e 64 6c 6c 00 6c 61 75 6e 63 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -292,6 +303,7 @@ rule Backdoor_Win32_Hikiti_M_2147693133_0
         $x_1_8 = "*****Hidden:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_1_*))) or
             ((2 of ($x_20_*))) or

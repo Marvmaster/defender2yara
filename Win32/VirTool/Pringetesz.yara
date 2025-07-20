@@ -18,6 +18,7 @@ rule VirTool_Win32_Pringetesz_A_2147901807_0
         $x_1_3 = {ff 74 24 28 68 c0 34 40 00 ?? ?? ?? ?? ?? 83 c4 08 ?? ?? ?? ?? 6a 00 68 cd 01 00 00 50 ff 74 24 34 ff 74 24 34 ?? ?? ?? ?? a3 74 53 40 00 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_MSIL_SnakekeyLogger_AMAY_2147917384_0
         $x_1_1 = {17 58 08 5d 08 58 08 5d [0-40] 08 5d 08 58 [0-30] 61 [0-15] 58 20 00 01 00 00 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

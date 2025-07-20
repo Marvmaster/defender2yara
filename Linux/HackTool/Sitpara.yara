@@ -19,6 +19,7 @@ rule HackTool_Linux_Sitpara_A_2147822865_0
         $x_1_4 = "constantly flood" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

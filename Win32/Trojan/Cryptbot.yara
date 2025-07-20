@@ -20,6 +20,7 @@ rule Trojan_Win32_Cryptbot_YL_2147744621_0
         $x_1_5 = "FilePasswords.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Cryptbot_GLM_2147808278_0
         $x_1_5 = "CryptUnprotectData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win32_Cryptbot_GNM_2147810544_0
         $x_1_5 = "Ykernel32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win32_Cryptbot_BPD_2147927767_0
         $x_1_1 = {eb 08 0f 6a 2a 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Win32_Cryptbot_ACB_2147932183_0
         $x_2_2 = "oSabnN" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule Trojan_Win32_Cryptbot_YLH_2147932985_0
         $x_1_1 = {eb 08 0f 0a 64 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

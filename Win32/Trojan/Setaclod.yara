@@ -18,6 +18,7 @@ rule Trojan_Win32_Setaclod_A_2147697199_0
         $x_1_4 = {b8 56 55 55 55 f7 ee 8b c2 c1 e8 1f 03 c2 8d 14 40 8b c6 2b c2 75 08 ba ff ff 00 00 66 01 11 83 f8 01 75 04 66 83 01 03 83 f8 02 75 03 66 01 01 83 c1 02 46 66 83 39 00 75 c6 5e c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

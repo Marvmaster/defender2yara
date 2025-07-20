@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Reshcau_A_2147630306_0
         $x_1_3 = {b8 1d 00 00 00 e8 ?? ?? ?? ?? 40 ba ?? ?? ?? ?? 8a 44 02 ff 88 03 43 4e 75 e6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

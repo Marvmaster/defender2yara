@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Remcos_PI_2147754274_0
         $x_1_2 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_Remcos_VB_2147793665_0
         $x_1_1 = {a3 0f c4 fe 63 e8 d3 6a e7 d0 70 e6 cd 6a e7 d0 6a e7 d0 4d d1 ed 4c cd ee 4a ce ef 4e d0 ee 52 cf ec 46 d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule TrojanDownloader_Win32_Remcos_ARO_2147894365_0
         $x_1_1 = {0f b7 db 03 c3 8b 1d ?? ?? ?? ?? 01 18 8d 99 5e 03 00 00 69 db 91 03 00 00 8d 04 08 83 01 02 4a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

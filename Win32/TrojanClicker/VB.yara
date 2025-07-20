@@ -22,6 +22,7 @@ rule TrojanClicker_Win32_VB_OO_2147598463_0
         $x_1_8 = {53 00 6f 00 66 00 74 00 77 00 61 00 72 00 65 00 5c 00 4d 00 69 00 63 00 72 00 6f 00 73 00 6f 00 66 00 74 00 5c 00 49 00 6e 00 74 00 65 00 72 00 6e 00 65 00 74 00 20 00 45 00 78 00 70 00 6c 00 6f 00 72 00 65 00 72 00 5c 00 4d 00 61 00 69 00 6e 00 00 00 14 00 00 00 53 00 74 00 61 00 72 00 74 00 20 00 50 00 61 00 67 00 65 00 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule TrojanClicker_Win32_VB_JO_2147598595_0
         $x_1_12 = "regsvr32 /s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule TrojanClicker_Win32_VB_IG_2147602437_0
         $x_1_5 = {5c 00 57 00 49 00 4e 00 44 00 4f 00 57 00 53 00 2e 00 56 00 42 00 50 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule TrojanClicker_Win32_VB_OS_2147606454_0
         $x_1_1 = "http://nexoa.com/rankboost.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule TrojanClicker_Win32_VB_OT_2147606910_0
         $x_1_2 = {74 00 65 00 72 00 6e 00 65 00 74 00 45 00 78 00 70 00 6c 00 6f 00 72 00 65 00 72 00 2e 00 41 00 70 00 70 00 6c 00 69 00 63 00 61 00 74 00 69 00 6f 00 6e 00 00 00 00 00 56 00 69 00 73 00 69 00 62 00 6c 00 65 00 00 00 26 00 00 00 68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 77 00 77 00 77 00 2e 00 33 00 36 00 30 00 74 00 6a 00 2e 00 63 00 6e 00 00 00 4e 00 61 00 76 00 69 00 67 00 61 00 74 00 65 00 00 00 00 00 2c 00 00 00 68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 77 00 77 00 77 00 2e 00 69 00 6e 00 66 00 6f 00 65 00 61 00 73 00 79 00 2e 00 63 00 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule TrojanClicker_Win32_VB_GB_2147609693_0
         $x_1_6 = "MyFireClick" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -166,6 +172,7 @@ rule TrojanClicker_Win32_VB_M_2147623721_0
         $x_1_4 = ":*:Enabled:SVCHOST.EXE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -188,6 +195,7 @@ rule TrojanClicker_Win32_VB_GE_2147626456_0
         $x_1_3 = {2f 00 75 00 70 00 64 00 61 00 74 00 65 00 00 00 18 00 00 00 52 00 65 00 67 00 73 00 76 00 72 00 33 00 32 00 20 00 2f 00 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +220,7 @@ rule TrojanClicker_Win32_VB_CU_2147638430_0
         $x_1_5 = "deleteurlcacheentry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -234,6 +243,7 @@ rule TrojanClicker_Win32_VB_JT_2147643126_0
         $x_1_3 = "doubleclick" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -257,6 +267,7 @@ rule TrojanClicker_Win32_VB_DF_2147647280_0
         $x_1_4 = "referer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +297,7 @@ rule TrojanClicker_Win32_VB_DH_2147647907_0
         $x_1_10 = "responseBody" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -309,6 +321,7 @@ rule TrojanClicker_Win32_VB_DI_2147648798_0
         $x_1_4 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -330,6 +343,7 @@ rule TrojanClicker_Win32_VB_DN_2147652979_0
         $x_1_2 = "VGVycmE=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -352,6 +366,7 @@ rule TrojanClicker_Win32_VB_DQ_2147654838_0
         $x_1_3 = "http://adf.ly" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -375,6 +390,7 @@ rule TrojanClicker_Win32_VB_JF_2147695429_0
         $x_1_4 = {53 65 74 42 72 6f 77 73 65 72 4d 75 74 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -401,6 +417,7 @@ rule TrojanClicker_Win32_VB_ZI_2147717741_0
         $x_1_6 = {0b c0 74 02 ff e0 68 ?? ?? ?? ?? b8 ?? ?? ?? ?? ff d0 ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -423,6 +440,7 @@ rule TrojanClicker_Win32_VB_ZK_2147733006_0
         $x_1_2 = "cmd /c start iexplore.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -447,6 +465,7 @@ rule TrojanClicker_Win32_VB_EC_2147925139_0
         $x_1_4 = "taskmgr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

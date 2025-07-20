@@ -16,6 +16,7 @@ rule Trojan_Win32_Enchanim_A_2147647691_0
         $x_1_2 = {81 38 06 00 01 40 74 ?? 8b 50 0c 80 3a f8 74 ?? 80 3a e4 74 ?? 80 3a ec 0f 84 ?? ?? ?? ?? 80 3a ed 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Enchanim_A_2147651862_0
         $x_1_2 = {b2 7a 88 14 ?? c1 ea 08 ?? 78 09 83 ?? 03 75 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_Enchanim_B_2147658637_0
         $x_1_1 = {39 45 0c 74 0d 83 c6 04 47 ff 4d fc 75 df 31 c0 eb 1d 8b 55 f8 8b 42 24 03 45 08 0f b7 3c 78 8b 72 1c 03 75 08 8b 04 be 85 c0 74 03 03 45 08 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Trojan_Win32_Enchanim_D_2147671017_0
         $x_4_3 = {b2 7a 88 14 ?? c1 ea 08 ?? 78 09 83 ?? 03 75 d2}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))

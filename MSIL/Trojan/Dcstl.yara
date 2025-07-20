@@ -20,6 +20,7 @@ rule Trojan_MSIL_Dcstl_ABD_2147833101_0
         $x_1_5 = "Anti HTTP Debugger" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_MSIL_Dcstl_ABBH_2147834309_0
         $x_1_9 = "tenor" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_MSIL_Dcstl_ABCQ_2147835242_0
         $x_1_3 = "CryingWolf.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_MSIL_Dcstl_NF_2147836557_0
         $x_1_4 = "LoWiBot" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_MSIL_Dcstl_NDY_2147836560_0
         $x_1_3 = "DownloadString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +152,7 @@ rule Trojan_MSIL_Dcstl_NA_2147837608_0
         $x_1_8 = "SpreadMode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +177,7 @@ rule Trojan_MSIL_Dcstl_NKL_2147838701_0
         $x_1_4 = "accesskey_h1565933142" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -194,6 +201,7 @@ rule Trojan_MSIL_Dcstl_NP_2147838855_0
         $x_1_3 = "GCleaner.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -217,6 +225,7 @@ rule Trojan_MSIL_Dcstl_NDT_2147839727_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -240,6 +249,7 @@ rule Trojan_MSIL_Dcstl_NEAE_2147839870_0
         $x_2_3 = "AbaddonStub.Start" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -262,6 +272,7 @@ rule Trojan_MSIL_Dcstl_NEAF_2147840210_0
         $x_2_2 = "C:\\Windows\\Logs" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -291,6 +302,7 @@ rule Trojan_MSIL_Dcstl_MA_2147841606_0
         $x_2_9 = "SendMessageToDiscord" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -320,6 +332,7 @@ rule Trojan_MSIL_Dcstl_MB_2147841775_0
         $x_1_9 = "SendMs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -342,6 +355,7 @@ rule Trojan_MSIL_Dcstl_NDG_2147842652_0
         $x_1_2 = "CompilerModule.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +377,7 @@ rule Trojan_MSIL_Dcstl_PSLG_2147846130_0
         $x_2_1 = {08 18 28 bd 00 00 0a 28 ?? ?? ?? 0a 25 26 72 f7 0a 00 70 28 ?? ?? ?? 0a 25 26 6f ?? ?? ?? 0a 25 26 0d 28 ?? ?? ?? 0a 25 26 72 7a 0b 00 70 28 6c 00 00 0a 25 26}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -384,6 +399,7 @@ rule Trojan_MSIL_Dcstl_PSMZ_2147846285_0
         $x_2_1 = {8e 69 28 1f 00 00 0a 07 2a 28 0b 00 00 06 2b ce 0a 2b cd 28 20 00 00 0a 2b ce 06 2b cd 6f 21 00 00 0a 2b c8 28 05 00 00 06 2b c3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -405,6 +421,7 @@ rule Trojan_MSIL_Dcstl_PSOZ_2147847873_0
         $x_2_1 = {00 73 1a 00 00 0a 0a 72 16 01 00 70 17 73 1b 00 00 0a 0b 06 07 28 ?? ?? ?? 0a 72 d7 01 00 70 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 28 ?? ?? ?? 0a 72 d7 01 00 70 28 ?? ?? ?? 0a 28 1e 00 00 0a 26 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -426,6 +443,7 @@ rule Trojan_MSIL_Dcstl_PSPC_2147847896_0
         $x_2_1 = {00 28 7d 00 00 0a 02 6f ?? ?? ?? 0a 0a 28 ?? ?? ?? 0a 03 6f ?? ?? ?? 0a 0b 06 73 ?? ?? ?? 0a 0c 08 07 6f ?? ?? ?? 0a 28 ?? ?? ?? 06 0d 2b 00 09 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -447,6 +465,7 @@ rule Trojan_MSIL_Dcstl_PSRU_2147850756_0
         $x_2_1 = {28 0a 00 00 06 73 0f 00 00 0a 72 4a 01 00 70 72 07 02 00 70 6f 18 00 00 0a 72 07 02 00 70 28 09 00 00 06 72 3f 02 00 70 28 19 00 00 0a 26 72 87 02 00 70 28 19 00 00 0a 26 72 d5 02 00 70 28 19 00 00 0a 26 16 28 1a 00 00 0a 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -469,6 +488,7 @@ rule Trojan_MSIL_Dcstl_NST_2147852197_0
         $x_1_2 = "AIO_Tool.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -494,6 +514,7 @@ rule Trojan_MSIL_Dcstl_CR_2147892367_0
         $x_1_5 = "DcWebHook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -515,6 +536,7 @@ rule Trojan_MSIL_Dcstl_PTBU_2147896532_0
         $x_2_1 = {72 14 01 00 70 28 ?? 00 00 0a 10 00 73 2a 00 00 0a 0b 02 28 ?? 00 00 0a 0c 16 0d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -536,6 +558,7 @@ rule Trojan_MSIL_Dcstl_PTBZ_2147896766_0
         $x_2_1 = {0a 72 fd 03 00 70 28 ?? 00 00 0a 6f 17 00 00 0a 0a 72 48 05 00 70 0b 72 52 05 00 70}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -557,6 +580,7 @@ rule Trojan_MSIL_Dcstl_PTCL_2147897164_0
         $x_2_1 = {17 73 39 00 00 0a 7e 02 00 00 04 6f 3a 00 00 0a 13 05 11 04 11 05 16 11 05 8e 69 6f 3b 00 00 0a 00 00 de 0d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -578,6 +602,7 @@ rule Trojan_MSIL_Dcstl_PTCM_2147897165_0
         $x_2_1 = {09 2c 07 09 6f 46 00 00 0a 00 dc 28 ?? 00 00 0a 08 6f 5f 00 00 0a 6f 60 00 00 0a 13 04 de 16}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -599,6 +624,7 @@ rule Trojan_MSIL_Dcstl_PTCN_2147897166_0
         $x_2_1 = {06 07 9a 0c 00 08 28 ?? 00 00 0a 0d 02 04 09 28 ?? 00 00 0a 6f 1f 00 00 0a 13 04 11 04 6f 20 00 00 0a 13 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -630,6 +656,7 @@ rule Trojan_MSIL_Dcstl_PSAK_2147899284_0
         $x_1_11 = "SKLSboZDCdXBqKMhjfU" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -653,6 +680,7 @@ rule Trojan_MSIL_Dcstl_PSET_2147899364_0
         $x_1_3 = "WriteLine" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -674,6 +702,7 @@ rule Trojan_MSIL_Dcstl_EAAA_2147902724_0
         $x_5_1 = {13 04 11 04 13 05 11 05 28 ?? 00 00 0a 13 06 28 ?? 00 00 06 28 ?? 00 00 0a 13 07 1a 8d ?? 00 00 01 25 16 20 08 00 00 00 28 ?? 00 00 06 a2 25 17 7e ?? 00 00 0a a2 25 18 11 06 a2 25 19 17 8c ?? 00 00 01 a2 13 08}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -695,6 +724,7 @@ rule Trojan_MSIL_Dcstl_OUAA_2147912483_0
         $x_5_1 = {07 11 04 91 11 05 61 13 06 11 04 17 58 07 8e 69 5d 13 07 07 11 07 91 13 08 11 06 11 08 59 13 09 07 11 04 11 09 20 00 01 00 00 58 20 ff 00 00 00 5f d2 9c 00 11 04 17 58 13 04}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -718,6 +748,7 @@ rule Trojan_MSIL_Dcstl_ZHAA_2147923325_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -742,6 +773,7 @@ rule Trojan_MSIL_Dcstl_ASKA_2147941512_0
         $x_1_4 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

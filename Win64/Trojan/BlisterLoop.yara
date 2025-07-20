@@ -15,6 +15,7 @@ rule Trojan_Win64_BlisterLoop_A_2147833253_0
         $x_1_1 = {b8 ff ff ff 7f 41 bc 01 00 00 00 89 45 40 f0 ff 4d 40 49 2b c4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

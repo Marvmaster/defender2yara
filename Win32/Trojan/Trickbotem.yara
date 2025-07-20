@@ -22,6 +22,7 @@ rule Trojan_Win32_Trickbotem_A_2147766702_0
         $x_1_7 = "StartOutlook(): ShellExecuteW()  %S %S" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

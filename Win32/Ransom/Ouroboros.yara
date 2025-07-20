@@ -17,6 +17,7 @@ rule Ransom_Win32_Ouroboros_GG_2147744467_0
         $x_1_2 = {5c 6d 6f 74 68 65 72 66 75 63 6b 65 72 5c [0-15] 5c 6d 6f 74 68 65 72 66 75 63 6b 65 72 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Ouroboros_PA_2147749658_0
         $x_1_4 = "All Your Files Has Been Encrypted" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

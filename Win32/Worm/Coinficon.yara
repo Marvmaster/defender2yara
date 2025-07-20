@@ -19,6 +19,7 @@ rule Worm_Win32_Coinficon_A_2147712479_0
         $x_2_5 = {c7 04 24 10 27 00 00 c7 85 ?? ?? ff ff ff ff ff ff e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or

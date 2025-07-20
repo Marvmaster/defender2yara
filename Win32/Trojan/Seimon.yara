@@ -21,6 +21,7 @@ rule Trojan_Win32_Seimon_A_2147600393_0
         $x_1_6 = "href=\"%CLICKURL\" target=\"_blank\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             (all of ($x*))

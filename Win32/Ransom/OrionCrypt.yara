@@ -18,6 +18,7 @@ rule Ransom_Win32_OrionCrypt_PA_2147778704_0
         $x_1_3 = "contact info@oreans.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

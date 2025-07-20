@@ -20,6 +20,7 @@ rule HackTool_Win32_Scanly_A_2147753573_0
         $x_1_5 = "[Found:] %s Port: %d open." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

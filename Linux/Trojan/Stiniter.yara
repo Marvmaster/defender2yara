@@ -19,6 +19,7 @@ rule Trojan_Linux_Stiniter_A_2147655367_0
         $x_1_5 = "read fd isset" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Linux_Stiniter_A_2147655367_1
         $x_1_5 = "/system/bin/ts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Linux_Stiniter_A_2147655367_2
         $x_1_5 = "tgloader-android" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

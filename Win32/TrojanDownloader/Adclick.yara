@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Adclick_2147618731_0
         $x_1_5 = {00 63 6c 69 63 6b 63 79 63 6c 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -18,6 +18,7 @@ rule Trojan_Win32_Unfender_A_2147626262_0
         $x_1_4 = "Antivirus Software" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

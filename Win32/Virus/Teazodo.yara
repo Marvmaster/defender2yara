@@ -25,6 +25,7 @@ rule Virus_Win32_Teazodo_A_2147637429_0
         $x_2_11 = "\\code\\downloaderinstaller\\" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

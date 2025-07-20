@@ -18,6 +18,7 @@ rule Trojan_Win32_Morto_C_2147651266_0
         $x_1_4 = {53 65 53 68 75 74 64 6f 77 6e 50 72 69 76 69 6c 65 67 65 00 62 72 6b 6c 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Morto_D_2147651267_0
         $x_1_3 = {47 6c 6f 62 61 6c 5c 5f 4d 4f 54 4f [0-5] 5f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

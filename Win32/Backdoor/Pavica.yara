@@ -18,6 +18,7 @@ rule Backdoor_Win32_Pavica_B_2147688862_0
         $x_2_3 = {b9 02 00 00 00 58 5a 6a 00 52 50 e8 ?? ?? ff ff e2 f3 eb c3 29 00 83 3d ?? ?? ?? 00 01 0f 84 ?? ?? ff ff e8 ?? fe ff ff 68 ?? ?? 00 07 81 2c 24 ?? ?? 00 07 68 ?? ?? 00 07 52 68 ?? ?? 00 07}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

@@ -18,6 +18,7 @@ rule Trojan_Win32_SusImageFileOptions_MK_2147946866_0
         $n_1_4 = "aa06e39e-7876-4ba3-beez-42bd80ff362f" wide //weight: -1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -41,6 +42,7 @@ rule Trojan_Win32_SusImageFileOptions_MK_2147946866_1
         $x_1_3 = {73 62 73 69 6d 75 6c 61 74 69 6f 6e 5f 73 62 5f 90 02 ff 5f 62 73 5f 90 02 ff 5f 67 72 65 65 6e 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

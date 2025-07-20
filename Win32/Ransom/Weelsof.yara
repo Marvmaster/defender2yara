@@ -21,6 +21,7 @@ rule Ransom_Win32_Weelsof_A_2147655996_0
         $x_2_7 = {8a 16 8a ca 80 e2 0f c0 e9 04 80 f9 09 53 0f 9e c3 fe cb 80 e3 07 80 c3 30 02 d9 80 fa 09 0f 9e c1 fe c9 80 e1 07 80 c1 30 02 ca 88 18 88 48 01}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule Ransom_Win32_Weelsof_C_2147658320_0
         $x_4_9 = {fe c2 0f b6 f2 88 90 00 01 00 00 0f b6 14 06 00 90 01 01 00 00 0f b6 90 01 01 00 00 (0f b6 14 02 8a|8a 1c 06 0f b6) 88 14 06 0f b6 90 01 01 00 00 88 1c 02 8a 90 00 01 00 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_4_*) and 4 of ($x_1_*))) or
@@ -80,6 +82,7 @@ rule Ransom_Win32_Weelsof_E_2147659379_0
         $x_1_4 = {6a 00 68 00 f7 0c 84 6a 00 6a 00 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

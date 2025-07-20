@@ -20,6 +20,7 @@ rule Trojan_MSIL_ProCheck_A_2147745053_0
         $x_1_5 = "UHJvZmlsZUNoZWNrJA==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

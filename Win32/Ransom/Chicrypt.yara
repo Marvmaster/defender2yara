@@ -22,6 +22,7 @@ rule Ransom_Win32_Chicrypt_A_2147707376_0
         $x_1_8 = "Sie wurden Opfer der Chimera Malware." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

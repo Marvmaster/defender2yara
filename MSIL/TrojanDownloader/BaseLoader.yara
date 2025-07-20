@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_BaseLoader_GNF_2147896970_0
         $x_1_3 = "AikaDDS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

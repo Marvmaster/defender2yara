@@ -17,6 +17,7 @@ rule VirTool_Win32_Rekcap_A_2147778748_0
         $x_1_3 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule VirTool_Win32_Rekcap_B_2147779039_0
         $x_1_1 = {6a 40 52 51 a3 ?? ?? ?? ?? ff d0 50 00 68 ?? ?? ?? ?? 50 [0-35] ff 15 ?? ?? ?? ?? 8b ?? ?? ?? ?? ?? 8d ?? ?? ?? 8b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

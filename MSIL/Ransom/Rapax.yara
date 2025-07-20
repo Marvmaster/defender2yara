@@ -21,6 +21,7 @@ rule Ransom_MSIL_Rapax_YAA_2147914748_0
         $x_1_6 = "restore access to your files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

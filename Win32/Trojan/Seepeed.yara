@@ -18,6 +18,7 @@ rule Trojan_Win32_Seepeed_A_2147719217_0
         $x_1_4 = {00 64 6c 6c 2e 64 6c 6c 00 53 76 63 4d 61 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

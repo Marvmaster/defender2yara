@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Buckhs_A_2147636778_0
         $x_1_9 = {25 73 5f 72 74 77 6f 72 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

@@ -27,6 +27,7 @@ rule TrojanDownloader_MSIL_Aftudoro_A_2147668194_0
         $x_1_13 = "Winamp_Mode.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_30_*) and 3 of ($x_5_*))) or
             ((1 of ($x_100_*) and 1 of ($x_40_*) and 1 of ($x_30_*) and 1 of ($x_5_*))) or

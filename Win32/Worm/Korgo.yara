@@ -45,6 +45,7 @@ rule Worm_Win32_Korgo_2147555610_0
         $x_1_31 = "http://%s/index.php?id=%s&scn=%d&inf=%d&ver=19.2&cnt=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((20 of ($x_1_*))) or
             ((1 of ($x_2_*) and 18 of ($x_1_*))) or
@@ -84,6 +85,7 @@ rule Worm_Win32_Korgo_B_2147649380_0
         $x_2_5 = {ff d6 8d 45 e8 33 ff 50 57 6a 01 ff 75 08 57 57 53 ff 55 ec 3b c7 74 ?? 50 ff d6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

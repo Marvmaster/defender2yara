@@ -17,6 +17,7 @@ rule TrojanClicker_Win32_Ilafor_A_2147612629_0
         $x_1_3 = {2a 71 3d 2a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

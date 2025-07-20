@@ -17,6 +17,7 @@ rule Worm_Win32_VB_EB_2147575487_0
         $x_1_3 = {73 00 70 00 72 00 65 00 61 00 64 00 62 00 79 00 6c 00 61 00 6e 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Worm_Win32_VB_ZC_2147582719_0
         $x_1_12 = "Games.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -88,6 +90,7 @@ rule Worm_Win32_VB_2147594069_0
         $x_10_18 = "DisableTaskMgr" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_500_*) and 1 of ($x_100_*) and 14 of ($x_10_*))) or
             ((1 of ($x_500_*) and 2 of ($x_100_*) and 4 of ($x_10_*))) or
@@ -119,6 +122,7 @@ rule Worm_Win32_VB_AT_2147594780_0
         $x_1_7 = "\\sold.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -161,6 +165,7 @@ rule Worm_Win32_VB_AT_2147594780_1
         $x_1_23 = "copyme" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (18 of ($x*))
 }
 
@@ -194,6 +199,7 @@ rule Worm_Win32_VB_CB_2147594860_0
         $x_1_14 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_10_*) and 3 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*) and 2 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -226,6 +232,7 @@ rule Worm_Win32_VB_BCA_2147595732_0
         $x_10_7 = "wscript.shell" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_5_*))) or
             ((3 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -263,6 +270,7 @@ rule Worm_Win32_VB_ZE_2147595958_0
         $x_1_14 = "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\test" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_20_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -296,6 +304,7 @@ rule Worm_Win32_VB_FP_2147597941_0
         $x_100_11 = "C:\\Program Files\\Microsoft Visual Studio\\VB98\\VB6.OLB" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -323,6 +332,7 @@ rule Worm_Win32_VB_GA_2147597965_0
         $x_1_5 = "CurrentVersion\\Run /v WindowsLogon /t REG_SZ /d C:\\WINDOWS\\winlogon.exe /" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +361,7 @@ rule Worm_Win32_VB_FS_2147600336_0
         $x_1_9 = "Fw: Response Urgent.." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_6_*) and 1 of ($x_1_*))) or
@@ -378,6 +389,7 @@ rule Worm_Win32_VB_FS_2147600515_0
         $x_2_4 = "document.writeln(runexe);" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -428,6 +440,7 @@ rule Worm_Win32_VB_BS_2147601202_0
         $x_1_27 = "Winamp.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 16 of ($x_1_*))) or
             (all of ($x*))
@@ -457,6 +470,7 @@ rule Worm_Win32_VB_FV_2147605928_0
         $x_1_7 = "VBA6.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -483,6 +497,7 @@ rule Worm_Win32_VB_FT_2147606004_0
         $x_1_7 = "http://www.geocities.com/superdown2008" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -512,6 +527,7 @@ rule Worm_Win32_VB_YBT_2147606184_0
         $x_1_6 = "/system/wincirl.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -539,6 +555,7 @@ rule Worm_Win32_VB_YBW_2147607739_0
         $x_1_5 = "MSNCleaner" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -568,6 +585,7 @@ rule Worm_Win32_VB_AQ_2147609208_0
         $x_1_7 = "SYSTEMIL.EXE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -600,6 +618,7 @@ rule Worm_Win32_VB_AS_2147609913_0
         $x_1_10 = "Win24DLL.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -630,6 +649,7 @@ rule Worm_Win32_VB_GC_2147611494_0
         $x_1_8 = "Peyman_ahwaz@yahoo.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -663,6 +683,7 @@ rule Worm_Win32_VB_UJ_2147614207_0
         $x_1_11 = "sd.run(Path + exename" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -691,6 +712,7 @@ rule Worm_Win32_VB_UL_2147621039_0
         $x_1_9 = "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\explorer\\advanced\\hidden" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -735,6 +757,7 @@ rule Worm_Win32_VB_XFX_2147621431_0
         $x_1_22 = "durjana\\lsass.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -762,6 +785,7 @@ rule Worm_Win32_VB_UM_2147623121_0
         $x_1_8 = "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\\HideFileExt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -786,6 +810,7 @@ rule Worm_Win32_VB_BT_2147624071_0
         $x_1_5 = {8b 55 d4 52 68 ?? ?? 40 00 ff 15 ?? ?? 40 00 f7 d8 1b c0 40 f7 d8 66 89 85 70 ff ff ff c7 85 68 ff ff ff 0b 00 00 00 8d 45 ac 50 8d 8d 78 ff ff ff 51 8d 55 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -819,6 +844,7 @@ rule Worm_Win32_VB_VX_2147627494_0
         $x_1_14 = "window.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -843,6 +869,7 @@ rule Worm_Win32_VB_CM_2147628936_0
         $x_1_5 = "-/mails-" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -869,6 +896,7 @@ rule Worm_Win32_VB_FX_2147629320_0
         $x_1_7 = ":\\Copy of mon\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -896,6 +924,7 @@ rule Worm_Win32_VB_A_2147629625_0
         $x_1_7 = {6f 00 70 00 65 00 6e 00 3d 00 [0-16] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -925,6 +954,7 @@ rule Worm_Win32_VB_FY_2147630049_0
         $x_1_10 = "G:\\autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -953,6 +983,7 @@ rule Worm_Win32_VB_DZ_2147630764_0
         $x_1_9 = "Del Uninstall.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -978,6 +1009,7 @@ rule Worm_Win32_VB_JK_2147648878_0
         $x_1_3 = "Start Menu\\Programs\\Startup\\winlogon.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1000,6 +1032,7 @@ rule Worm_Win32_VB_JL_2147649481_0
         $x_1_3 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 [0-32] 2f 00 6d 00 6d 00 2f 00 30 00 33 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1027,6 +1060,7 @@ rule Worm_Win32_VB_JN_2147652811_0
         $x_1_8 = "drivekill" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -1053,6 +1087,7 @@ rule Worm_Win32_VB_P2P_2147653396_0
         $x_1_6 = "\\BearShare\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1079,6 +1114,7 @@ rule Worm_Win32_VB_XA_2147655131_0
         $x_1_7 = "KaV300XP" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1102,6 +1138,7 @@ rule Worm_Win32_VB_AA_2147745431_0
         $x_1_3 = {8b 45 08 ff 30 e8 ?? ?? ?? ?? 8b 4d 80 03 8d ?? ?? ff ff 8a 18 32 19 ff b5 ?? ?? ff ff 8b 45 08 ff 30 e8 ?? ?? ?? ?? 88 18 eb 02 eb ?? e9 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

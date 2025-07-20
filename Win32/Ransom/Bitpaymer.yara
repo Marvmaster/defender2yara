@@ -18,6 +18,7 @@ rule Ransom_Win32_Bitpaymer_2147728448_0
         $x_2_4 = "{3E5FC7F9-9A51-4367-9063-A120244FBEC7}" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -46,6 +47,7 @@ rule Ransom_Win32_Bitpaymer_SA_2147744585_0
         $x_1_4 = "nyankees" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Ransom_Win32_Bitpaymer_SIB_2147806326_0
         $x_1_2 = {8b 45 10 8b 4d 0c 8b 55 08 31 f6 c7 44 24 ?? ?? ?? ?? ?? 83 f8 00 89 44 24 ?? 89 4c 24 ?? 89 54 24 ?? 89 74 24 ?? 74 ?? 8b 44 24 05 8b 4c 24 00 ba 0a 9c 2c 41 29 ca 8b 4c 24 03 8a 1c 01 [0-21] 8b 74 24 04 88 1c 06 [0-16] 01 d0 [0-10] 8b 4c 24 02 39 c8 89 44 24 05 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

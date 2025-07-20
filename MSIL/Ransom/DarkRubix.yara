@@ -20,6 +20,7 @@ rule Ransom_MSIL_DarkRubix_S_2147752002_0
         $x_1_5 = "If you had problem sent email to sudeio@geto.tk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

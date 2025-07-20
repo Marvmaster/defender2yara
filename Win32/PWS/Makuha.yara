@@ -22,6 +22,7 @@ rule PWS_Win32_Makuha_A_2147688999_0
         $x_6_8 = {c6 44 24 24 3a c6 44 24 25 38 88 54 24 27 88 54 24 2a c6 44 24 2b 6c c6 44 24 2c 69 c6 44 24 2d 6e 88 44 24 2e c6 44 24 2f 61 c6 44 24 30 73 c6 44 24 31 70 c6 44 24 32 00}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_5_*) and 3 of ($x_2_*))) or

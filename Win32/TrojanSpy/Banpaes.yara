@@ -23,6 +23,7 @@ rule TrojanSpy_Win32_Banpaes_A_2147596606_0
         $x_1_8 = "Runtime error     at 00000000" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

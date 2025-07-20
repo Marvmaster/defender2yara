@@ -21,6 +21,7 @@ rule VirTool_Win32_Kerbrute_A_2147797321_0
         $x_1_6 = "session.buildKrb5Template" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

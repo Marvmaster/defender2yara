@@ -28,6 +28,7 @@ rule Trojan_Win32_Fmoratk_A_2147684227_0
         $x_1_14 = {63 3a 5c 74 65 6d 70 5c 6a 2e 62 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

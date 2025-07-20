@@ -56,6 +56,7 @@ rule Trojan_Win32_Liewar_2147575165_0
         $x_1_42 = "show2.php?id=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (34 of ($x*))
 }
 

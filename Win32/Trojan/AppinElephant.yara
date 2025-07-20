@@ -18,6 +18,7 @@ rule Trojan_Win32_AppinElephant_LKV_2147896840_0
         $x_1_3 = "Sending ipconfig.exe output" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

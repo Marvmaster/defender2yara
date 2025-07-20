@@ -18,6 +18,7 @@ rule Ransom_Win32_Pyunsam_SA_2147760551_0
         $x_1_3 = "Unlock Me After Payment" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Ransom_Win32_Pyunsam_DA_2147760620_0
         $x_1_11 = "rem /////////////////////////////////////////////////////////////////////////PA-b2edecompile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

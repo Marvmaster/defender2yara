@@ -18,6 +18,7 @@ rule Trojan_MSIL_JellyfishLoader_AJL_2147917658_0
         $x_1_3 = "jellyfish\\JellyfishLoader\\obj\\x64\\Release\\qemu-ga.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

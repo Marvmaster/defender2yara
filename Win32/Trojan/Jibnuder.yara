@@ -18,6 +18,7 @@ rule Trojan_Win32_Jibnuder_A_2147623084_0
         $x_1_3 = {33 c0 8a 04 3e 8d 57 01 03 d2 33 c2 33 d2 8a d3 33 c2 88 04 3e 84 c0 75 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

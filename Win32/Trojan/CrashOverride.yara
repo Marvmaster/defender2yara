@@ -18,6 +18,7 @@ rule Trojan_Win32_CrashOverride_B_2147726160_0
         $x_5_3 = "haslo.dat" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_Win32_CrashOverride_C_2147726161_0
         $x_5_13 = {4d 6f 64 65 6c 00 43 4f 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -81,6 +83,7 @@ rule Trojan_Win32_CrashOverride_A_2147726162_0
         $x_1_10 = "SRV_WSUS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((5 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -124,6 +127,7 @@ rule Trojan_Win32_CrashOverride_A_2147726162_1
         $x_1_19 = "wuauclt.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 14 of ($x_1_*))) or
             (all of ($x*))

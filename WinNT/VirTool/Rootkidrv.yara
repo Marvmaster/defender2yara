@@ -16,6 +16,7 @@ rule VirTool_WinNT_Rootkidrv_KG_2147618082_0
         $x_1_2 = {65 78 70 6c 6f 72 65 72 2e 65 78 65 00 00 00 00 64 61 65 6d 6f 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

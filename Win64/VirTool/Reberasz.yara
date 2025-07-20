@@ -17,6 +17,7 @@ rule VirTool_Win64_Reberasz_A_2147906324_0
         $x_1_2 = {48 c7 44 24 58 12 00 14 00 48 89 44 24 60 ?? ?? ?? ?? ?? ?? ?? ?? ?? 48 c7 45 b8 30 00 00 00 48 89 45 c8 ?? ?? ?? ?? ?? ?? ?? 48 8b 44 24 38 0f 57 c0 45 33 c9 48 89 45 c0 ba 00 00 00 10 48 c7 45 d0 40 00 00 00 f3 0f 7f 45 d8 48 89 7c 24 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

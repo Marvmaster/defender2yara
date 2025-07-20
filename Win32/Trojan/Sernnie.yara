@@ -19,6 +19,7 @@ rule Trojan_Win32_Sernnie_SK_2147898862_0
         $x_1_4 = "\\OK\\BOT\\nb.exe +s +h +r" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_Win32_Amrakdow_A_2147786280_0
         $x_1_4 = "KARMA-AGREE.t" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Win32_Amrakdow_B_2147793950_0
         $x_1_3 = "-CYPHEREDDD.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

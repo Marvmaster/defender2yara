@@ -17,6 +17,7 @@ rule Trojan_Win64_Sidlodll_DA_2147926704_0
         $x_1_2 = {48 63 c8 48 8b c3 48 f7 e1 48 c1 ea 04 48 6b c2 13 48 2b c8 49 0f af cf 0f b6 44 0d ?? 43 32 44 31 fc 41 88 41 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win64_Sidlodll_DB_2147926705_0
         $x_1_6 = "rc4Key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win64_Sidlodll_DC_2147927628_0
         $x_1_6 = "me).Invoke('*e-*press*',1,$TRUE))(Variable U3).Value.((Variable I16).Value).Invoke((Get-Variable 7 -Value))" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_10_*))) or

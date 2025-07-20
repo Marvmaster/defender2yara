@@ -18,6 +18,7 @@ rule Trojan_Win32_Imsproad_A_2147653746_0
         $x_1_4 = "\\ICQ7.7\\ICQ.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

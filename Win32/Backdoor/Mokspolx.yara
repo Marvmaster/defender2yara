@@ -18,6 +18,7 @@ rule Backdoor_Win32_Mokspolx_A_2147644686_0
         $x_1_4 = {c7 84 24 9c 00 00 00 58 5a 4b 00 33 c9 8d 70 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

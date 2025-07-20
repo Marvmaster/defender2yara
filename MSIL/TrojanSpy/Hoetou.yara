@@ -21,6 +21,7 @@ rule TrojanSpy_MSIL_Hoetou_A_2147708559_0
         $x_1_7 = {53 65 6e 64 49 73 4f 4e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanSpy_MSIL_Hoetou_B_2147708561_0
         $x_1_4 = "BytescoutScreenCapturingLib" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule TrojanSpy_MSIL_Hoetou_C_2147708563_0
         $x_1_8 = "sBuild1.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule TrojanSpy_MSIL_Hoetou_D_2147709687_0
         $x_1_6 = "sBuild1.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +127,7 @@ rule TrojanSpy_MSIL_Hoetou_E_2147711059_0
         $x_1_7 = "pluginwititle" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

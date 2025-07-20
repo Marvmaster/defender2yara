@@ -19,6 +19,7 @@ rule Ransom_MSIL_Jasmin_DA_2147785226_0
         $x_1_4 = "bytesToBeEncrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_MSIL_Jasmin_DB_2147788437_0
         $x_1_4 = "jasmin@123" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

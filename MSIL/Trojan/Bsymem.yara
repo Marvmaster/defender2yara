@@ -23,6 +23,7 @@ rule Trojan_MSIL_Bsymem_W_2147782477_0
         $x_3_8 = "/C powershell Add-MpPreference -ExclusionExtension .exe -Force" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_MSIL_Bsymem_ADA_2147783529_0
         $x_3_4 = "CheckFile" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_MSIL_Bsymem_NEAA_2147838074_0
         $x_1_5 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Trojan_MSIL_Bsymem_NB_2147839769_0
         $x_1_5 = "Bandizip" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Trojan_MSIL_Bsymem_NBY_2147841372_0
         $x_1_2 = "Moietykors" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -140,6 +145,7 @@ rule Trojan_MSIL_Bsymem_SPCS_2147847945_0
         $x_3_1 = {0c 08 07 6f ?? ?? ?? 0a 07 6f ?? ?? ?? 0a 28 ?? ?? ?? 2b 28 ?? ?? ?? 2b 28 ?? ?? ?? 0a 72 01 00 00 70 6f ?? ?? ?? 0a 0d d0 22 00 00 01 28 ?? ?? ?? 0a 09 72 4d 00 00 70 28 ?? ?? ?? 0a 16 8d 10 00 00 01 6f ?? ?? ?? 0a 26 de 1e}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +168,7 @@ rule Trojan_MSIL_Bsymem_AAMO_2147888801_0
         $x_1_2 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -184,6 +191,7 @@ rule Trojan_MSIL_Bsymem_AMAA_2147889484_0
         $x_1_2 = {47 00 65 00 74 00 4d 00 65 00 74 00 68 00 6f 00 64 00 00 11 44 00 65 00 6c 00 65 00 74 00 65 00 4d 00 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

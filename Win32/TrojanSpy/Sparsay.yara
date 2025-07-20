@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Sparsay_A_2147624840_0
         $x_1_6 = {73 71 6c 61 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

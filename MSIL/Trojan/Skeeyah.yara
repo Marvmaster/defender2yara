@@ -18,6 +18,7 @@ rule Trojan_MSIL_Skeeyah_NS_2147925222_0
         $x_2_3 = "casa 54" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

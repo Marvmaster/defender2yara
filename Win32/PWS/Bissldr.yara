@@ -17,6 +17,7 @@ rule PWS_Win32_Bissldr_A_2147656094_0
         $x_1_3 = "PC_INFO_GET" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

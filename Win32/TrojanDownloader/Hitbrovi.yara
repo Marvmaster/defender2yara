@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Hitbrovi_A_2147696641_0
         $x_2_6 = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

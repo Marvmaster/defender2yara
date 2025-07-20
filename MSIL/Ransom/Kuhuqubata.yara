@@ -18,6 +18,7 @@ rule Ransom_MSIL_Kuhuqubata_A_2147707676_0
         $x_2_4 = "\\Desktop\\README!!!.txt" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

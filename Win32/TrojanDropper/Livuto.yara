@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Livuto_2147604764_0
         $x_1_2 = {80 c9 ff 2a 08 47 81 ff ?? ?? ?? ?? 88 08 72 ea}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDropper_Win32_Livuto_A_2147612730_0
         $x_2_3 = {ff 51 1c 85 c0 75 5d 8b 45 fc 50 8b 08 ff 51 14 8b 45 fc 8d 55 ?? 52 8d 55 ?? 8b 08 52 6a 01 50 ff 51 0c 85 c0 75 3d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

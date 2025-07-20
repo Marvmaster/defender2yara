@@ -18,6 +18,7 @@ rule VirTool_Win32_Mimispoolz_A_2147793782_0
         $x_1_3 = {63 00 6d 00 64 00 2e 00 65 00 78 00 65 00 00 00 77 00 69 00 6e 00 73 00 74 00 61 00 30 00 5c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

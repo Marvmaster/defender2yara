@@ -18,6 +18,7 @@ rule TrojanClicker_Win32_Wesurf_A_2147610061_0
         $x_5_3 = {68 a8 61 00 00 e8 ?? ?? ff ff e8 ?? ?? ff ff 68 e8 03 00 00 e8 ?? ?? ff ff e8 ?? ?? ff ff 68 e8 03 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_WinNT_Mediyes_A_2147627881_0
         $x_1_3 = {8b 44 24 08 8b 4c 24 04 2b c8 83 e9 05 89 48 01 c6 00 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -41,6 +42,7 @@ rule Trojan_WinNT_Mediyes_B_2147654758_0
         $x_1_2 = {66 83 f9 46 75 a6 0f b7 48 0a 66 83 f9 6f 74 06 66 83 f9 4f 75 96 0f b7 48 0c 66 83 f9 78 74 06 66 83 f9 58 75 86 66 83 78 0e 2e 0f 85 7b ff ff ff 0f b7 48 10 66 83}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_WinNT_Mediyes_C_2147655196_0
         $x_1_3 = {80 38 0e 0f 85 ?? ?? ?? ?? 8b 40 0c c7 43 1c 4c 08 00 00 b9 68 c0 22 00 3b c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

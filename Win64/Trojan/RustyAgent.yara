@@ -19,6 +19,7 @@ rule Trojan_Win64_RustyAgent_SK_2147892452_0
         $x_1_4 = "rstMYPATH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanSpy_MSIL_CoinSteal_A_2147724823_0
         $x_1_3 = "dsciuyizhiuuc.php?type=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanSpy_MSIL_CoinSteal_B_2147724890_0
         $x_1_4 = "get_Screenshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule TrojanSpy_MSIL_CoinSteal_E_2147725451_0
         $x_1_5 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule TrojanSpy_MSIL_CoinSteal_F_2147726559_0
         $x_1_6 = "IsValidBitcoinAddress" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule TrojanSpy_MSIL_CoinSteal_G_2147728119_0
         $x_1_5 = "}{_+$*!#%^)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -145,6 +150,7 @@ rule TrojanSpy_MSIL_CoinSteal_H_2147730058_0
         $x_1_4 = "^[13][a-km-zA-HJ-NP-Z1-9]{25,34}$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -172,6 +178,7 @@ rule TrojanSpy_MSIL_CoinSteal_I_2147730673_0
         $x_1_3 = "^(1|3)[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz].*$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Maskload_A_2147622487_0
         $x_1_3 = {8a 14 08 80 f2 ?? 88 14 08 40 83 f8 0c 7c f1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

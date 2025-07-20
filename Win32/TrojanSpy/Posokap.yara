@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Posokap_A_2147708718_0
         $x_2_3 = {5c 6d 6d 6f 6e 2e 70 64 62 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -23,6 +23,7 @@ rule Trojan_MSIL_Zapchast_RDA_2147836832_0
         $x_1_8 = "WWpOQ01HRlhPWFZqTXpFd1pVaFJQUT09" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_MSIL_Zapchast_MBAT_2147838922_0
         $x_1_1 = {74 00 62 00 67 00 68 00 67 00 74 00 72 00 66 00 62 00 67 00 66 00 62 00 67 00 66 00 62 00 67 00 64 00 74 00 64 00 68 00 62 00 64 00 67 00 72 00 62 00 66 00 66 00 74 00 62 00 67 00 68 00 67 00 74 00 72 00 66 00 62 00 67 00 66 00 62 00 67 00 66 00 62 00 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_MSIL_Zapchast_PSYI_2147891919_0
         $x_2_1 = {73 36 00 00 0a 25 28 ?? 00 00 0a 6f 38 00 00 0a 72 92 01 00 70 28 ?? 00 00 0a 6f 3a 00 00 0a 0a 06 72 ea 01 00 70 72 f0 01 00 70 6f 3b 00 00 0a 0a 72 f4 01 00 70 0b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_MSIL_Zapchast_PSYJ_2147891920_0
         $x_2_1 = {6f 35 01 00 0a 17 73 66 01 00 0a 0c 08 02 16 02 8e 69 6f 85 01 00 0a 08 6f 9b 00 00 0a 06 6f 8e 00 00 0a 0d 09 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_MSIL_Zapchast_PSZX_2147894283_0
         $x_2_1 = {11 11 6f 1f 00 00 0a 13 12 11 0e 28 ?? 00 00 0a 13 13 00 20 00 04 00 00 8d 24 00 00 01 13 14 2b 0f 00 11 12 11 14 16 11 15 6f 21 00 00 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Trojan_MSIL_Zapchast_PSZZ_2147894284_0
         $x_2_1 = {73 37 00 00 0a 0a 03 02 28 ?? 00 00 0a 28 ?? 00 00 0a 0b 06 02 07 6f 38 00 00 0a 00 00 de 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +155,7 @@ rule Trojan_MSIL_Zapchast_PSQL_2147897149_0
         $x_2_1 = {2f 1f 73 0a 00 00 0a 0a 06 72 0f 00 00 70 6f ?? ?? ?? 0a 06 17 6f ?? ?? ?? 0a 06 28 ?? ?? ?? 0a 26 de 0e 0b 07 28 ?? ?? ?? 0a 28 0f 00 00 0a de 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +177,7 @@ rule Trojan_MSIL_Zapchast_PTAC_2147899415_0
         $x_2_1 = {02 6f 37 00 00 06 6f a1 00 00 0a a2 00 08 1a 72 d5 02 00 70 a2 00 08 28 ?? 00 00 0a 18 16 15 28 ?? 00 00 0a 26 00 06}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +205,7 @@ rule Trojan_MSIL_Zapchast_AMBF_2147899657_0
         $x_1_7 = "WebClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +231,7 @@ rule Trojan_MSIL_Zapchast_AMBH_2147900302_0
         $x_1_5 = "WebClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +253,7 @@ rule Trojan_MSIL_Zapchast_ELO_2147942194_0
         $x_2_1 = {11 0c 11 10 58 11 13 11 13 8e 69 12 01 6f 20 00 00 06 2d 06 73 0b 00 00 0a 7a 11 0d 1f 28 58 13 0d 11 0f 17 58 13 0f 11 0f 11 0e 32 84}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

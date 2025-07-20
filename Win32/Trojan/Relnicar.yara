@@ -18,6 +18,7 @@ rule Trojan_Win32_Relnicar_A_2147723825_0
         $x_10_3 = "expand.exe -F:* \"%s\"" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Relnicar_A_2147723825_1
         $x_10_3 = "sessionth=%d; uidth=%d; codeth=%d; sizeth=%d; length=%d;" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Relnicar_A_2147723825_2
         $x_10_2 = {b9 69 00 00 00 66 89 0c 45 [0-4] 68 00 00 00 80 b9 6f 00 00 00 68 [0-4] 66 89 0c 45}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

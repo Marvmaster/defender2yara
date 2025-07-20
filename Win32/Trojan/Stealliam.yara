@@ -22,6 +22,7 @@ rule Trojan_Win32_Stealliam_A_2147617690_0
         $x_5_8 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

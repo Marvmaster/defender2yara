@@ -17,6 +17,7 @@ rule Trojan_Win64_FaceLight_B_2147932407_0
         $x_5_2 = {33 d2 41 b8 00 00 a0 00 48 8b c8 48 8b f8 e8}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

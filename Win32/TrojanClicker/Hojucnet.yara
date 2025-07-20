@@ -26,6 +26,7 @@ rule TrojanClicker_Win32_Hojucnet_A_2147628149_0
         $x_1_12 = "TongJi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

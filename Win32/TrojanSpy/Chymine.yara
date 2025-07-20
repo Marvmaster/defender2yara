@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Chymine_A_2147636565_0
         $x_1_6 = "%d.%d.%d.%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or

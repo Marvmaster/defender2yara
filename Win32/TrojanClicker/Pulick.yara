@@ -19,6 +19,7 @@ rule TrojanClicker_Win32_Pulick_B_2147687802_0
         $x_1_5 = {33 ff 89 7d fc 57 68 ?? ?? ?? ?? 8d 4d 10 e8 ?? ?? ?? ?? 83 ce ff 3b c6 0f 8f ?? ?? ?? ?? 57 68 ?? ?? ?? ?? 8d 4d 10 e8 ?? ?? ?? ?? 3b c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule TrojanClicker_Win32_Pulick_C_2147689197_0
         $x_1_10 = "adultadworld" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 6 of ($x_1_*))) or
             ((2 of ($x_3_*) and 3 of ($x_1_*))) or

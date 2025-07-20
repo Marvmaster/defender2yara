@@ -16,6 +16,7 @@ rule VirTool_MSIL_Ranos_A_2147685538_0
         $x_1_2 = {2f 04 b1 03 3f 04 30 01 ac 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

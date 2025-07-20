@@ -21,6 +21,7 @@ rule Trojan_Win32_Bukosonet_A_2147689586_0
         $x_1_7 = {50 4f 53 54 00 00 00 00 2f 67 72 2d 6d 61 69 6c 2f 65 72 72 2e 70 68 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

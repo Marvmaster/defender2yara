@@ -17,6 +17,7 @@ rule Ransom_Win32_AvaddonCrypt_SN_2147758155_0
         $x_2_2 = {55 8b ec 53 8b 25 ?? ?? ?? ?? 58 8b e8 a1 ?? ?? ?? ?? 50 a1 ?? ?? ?? ?? 50 8b 1d ?? ?? ?? ?? ff e3 5b 5d c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Ransom_Win32_AvaddonCrypt_SN_2147758155_1
         $x_1_2 = {0f b6 0c 0a f7 d9 8b 55 ?? 0f b6 04 02 2b c1 8b 4d ?? 03 4d ?? 03 4d ?? 8b 55 ?? 88 04 0a c7 45 f0 ?? ?? ?? ?? 8b 45 ?? 83 c0 01 89 45 ?? e9 ?? ?? ?? ?? 8b e5 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Ransom_Win32_AvaddonCrypt_SM_2147761091_0
         $x_1_2 = {55 8b ec 83 ec 3c c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 ff 15 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 8b 45 ?? 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Ransom_Win32_AvaddonCrypt_SO_2147761991_0
         $x_2_1 = {55 8b ec 83 ec ?? c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 c7 45 ?? 01 00 00 00 00 02 8b ?? ?? [0-4] ff 15 ?? ?? ?? ?? 8b ?? ?? [0-4] ff 15 ?? ?? ?? ?? 8b ?? ?? [0-4] ff 15 ?? ?? ?? ?? 8b ?? ?? [0-4] ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

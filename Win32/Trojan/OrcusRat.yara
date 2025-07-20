@@ -17,6 +17,7 @@ rule Trojan_Win32_OrcusRat_MBXQ_2147918550_0
         $x_2_2 = {64 1b 40 00 00 f0 30 00 00 ff ff ff 08 00 00 00 01 00 00 00 03 00 00 00 e9 00 00 00 d0 15 40 00 d8 14 40 00 f0 13 40 00 78 00 00 00 80}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

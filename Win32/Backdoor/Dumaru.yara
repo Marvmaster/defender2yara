@@ -21,6 +21,7 @@ rule Backdoor_Win32_Dumaru_A_2147583261_0
         $x_1_6 = {64 76 70 64 2e 44 4c 4c 00 4d 48 6f 6f 6b 00 4d 55 6e 48 6f 6f 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

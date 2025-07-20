@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Meteit_A_2147646659_0
         $x_1_3 = {83 c4 14 8d 85 ?? ?? ff ff 68 ?? ?? ?? ?? 50 8d 45 ?? 50 ff 15 ?? ?? ?? ?? 8d 85 ?? ?? ff ff 50 8d 85 ?? ?? ff ff 50 ff 15 ?? ?? ?? ?? 83 f8 ff 74 09 8d 85 ?? ?? ff ff 50 ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDropper_Win32_Meteit_D_2147648909_0
         $x_1_4 = {2b c8 b8 ab aa aa 2a f7 e9 d1 fa 8b c2 c1 e8 1f 03 d0 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

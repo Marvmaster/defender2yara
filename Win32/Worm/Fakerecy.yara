@@ -19,6 +19,7 @@ rule Worm_Win32_Fakerecy_A_2147611057_0
         $x_1_5 = "shellexecute=Recycled\\Recycled\\ctfmon.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

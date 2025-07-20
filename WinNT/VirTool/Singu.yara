@@ -17,6 +17,7 @@ rule VirTool_WinNT_Singu_A_2147616868_0
         $x_1_2 = {6a 01 58 5e c9 c2 08 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

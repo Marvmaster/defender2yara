@@ -20,6 +20,7 @@ rule Backdoor_MacOS_BlackHol_C_2147745016_0
         $x_1_5 = "PhishWindow.PhishWindow" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Backdoor_MacOS_BlackHol_A_2147793135_0
         $x_1_12 = "RemoteAddress.Get" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -88,6 +90,7 @@ rule Backdoor_MacOS_BlackHol_B_2147813354_0
         $x_1_10 = "fipvictim.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (5 of ($x*))
 }
 

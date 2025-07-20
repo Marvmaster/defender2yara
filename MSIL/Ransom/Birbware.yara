@@ -17,6 +17,7 @@ rule Ransom_MSIL_Birbware_A_2147729938_0
         $x_1_3 = {61 00 70 00 61 00 6f 00 77 00 6a 00 64 00 73 00 6f 00 64 00 69 00 75 00 6a 00 39 00 28 00 2f 00 29 00 3d 00 28 00 2f 00 31 00 34 00 6a 00 6c 00 71 00 6b 00 73 00 6a 00 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

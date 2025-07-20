@@ -20,6 +20,7 @@ rule Ransom_Win32_RanzyLock_AA_2147785327_0
         $x_1_5 = "vmickvpexchange" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

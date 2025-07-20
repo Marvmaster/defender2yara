@@ -22,6 +22,7 @@ rule TrojanClicker_Win32_Frosparf_A_2147686797_0
         $x_1_8 = "FAPCF TOOL\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*) and 2 of ($x_1_*))) or
             ((1 of ($x_8_*) and 1 of ($x_4_*) and 2 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule TrojanClicker_Win32_Frosparf_C_2147689351_0
         $x_1_5 = "225,224,7843,227,7841,259,7855,7857" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule TrojanClicker_Win32_Frosparf_D_2147691423_0
         $x_1_8 = "kichhoathack.html" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((1 of ($x_4_*) and 4 of ($x_1_*))) or
@@ -109,6 +112,7 @@ rule TrojanClicker_Win32_Frosparf_D_2147691423_1
         $x_1_7 = ".net/p/adfly.html" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -133,6 +137,7 @@ rule TrojanClicker_Win32_Frosparf_E_2147695703_0
         $x_2_5 = "CROSSFIRE TOOL" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +161,7 @@ rule TrojanClicker_Win32_Frosparf_F_2147696627_0
         $x_1_4 = "InetCpl.cpl,ClearMyTracksByProcess" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -184,6 +190,7 @@ rule TrojanClicker_Win32_Frosparf_G_2147696758_0
         $x_1_5 = "patcher_cf2.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

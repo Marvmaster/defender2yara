@@ -20,6 +20,7 @@ rule Trojan_Win32_Proscks_A_2147616627_0
         $x_1_5 = {3c 2f 77 65 62 75 72 6c 3e [0-4] 57 65 62 53 74 61 72 74 41 63 74 69 6f 6e [0-2] 3c 67 65 74 55 73 65 64 4c 6f 61 6e 44 61 74 61 3e [0-4] 3c 2f 67 65 74 55 73 65 64 4c 6f 61 6e 44 61 74 61 3e [0-4] 3c 63 6d 64 5f 77 65 62 43 6f 3e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Proscks_B_2147618049_0
         $x_1_5 = "proxy pwd=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win32_Proscks_C_2147618052_0
         $x_1_5 = {45 78 70 6f 72 74 00 58 6f 72 44 61 74 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

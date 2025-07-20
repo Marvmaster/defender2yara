@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Downeks_SK_2147838534_0
         $x_1_3 = "Heuristic.Susp.Bat (" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

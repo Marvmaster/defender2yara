@@ -23,6 +23,7 @@ rule Trojan_MSIL_Startun_AS_2147786449_0
         $x_3_8 = "GetExecutingAssembly" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Trojan_MSIL_Startun_BL_2147812539_0
         $x_1_9 = "The key-logger is already running" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_MSIL_Startun_SPH_2147846380_0
         $x_1_1 = {03 17 8d 50 00 00 01 25 16 1f 3d 9d 6f ?? ?? ?? 0a 13 06 11 06 17 9a 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 13 04 11 06 16 9a 6f ?? ?? ?? 0a 72 e9 02 00 70 28 ?? ?? ?? 0a 13 07 11 07 2c 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_MSIL_Startun_PTJG_2147903520_0
         $x_2_1 = {6f 36 00 00 0a 13 05 73 37 00 00 0a 13 06 11 06 08 20 96 00 00 00 20 c8 00 00 00 6f 2c 00 00 0a 6a 28 ?? 00 00 06 6f 38 00 00 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule Trojan_MSIL_Startun_NR_2147934127_0
         $x_1_4 = "EstaInstaladoElCert" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

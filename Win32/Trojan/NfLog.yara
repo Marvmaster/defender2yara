@@ -23,6 +23,7 @@ rule Trojan_Win32_NfLog_A_2147642622_0
         $x_1_9 = "?par=comedata" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_NfLog_A_2147644875_0
         $x_1_6 = {53 76 63 57 69 6e 65 74 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

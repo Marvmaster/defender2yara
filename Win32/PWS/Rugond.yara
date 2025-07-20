@@ -20,6 +20,7 @@ rule PWS_Win32_Rugond_A_2147697710_0
         $x_1_6 = "wlzhuzhu.com/ksreg_server/uplogs.php?softcode=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

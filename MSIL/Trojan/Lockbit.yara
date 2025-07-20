@@ -16,6 +16,7 @@ rule Trojan_MSIL_Lockbit_SAD_2147919114_0
         $x_1_1 = {72 44 69 00 70 0b 73 ?? ?? ?? 0a 0c 08 07 6f bb 00 00 0a 6f bc 00 00 0a 6f ?? ?? ?? 0a 6f be 00 00 0a 0d 09 6f bf 00 00 0a 13 04 11 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

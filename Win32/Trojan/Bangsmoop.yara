@@ -20,6 +20,7 @@ rule Trojan_Win32_Bangsmoop_A_2147655542_0
         $x_1_6 = {0f b7 47 14 [0-2] 8d 74 38 18 6a 28 56}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

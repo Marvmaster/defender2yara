@@ -18,6 +18,7 @@ rule VirTool_WinNT_Almanahe_A_2147607861_0
         $x_1_3 = {89 7d fc 74 8b eb 19 3b 7d 1c 75 09 c7 45 30 06 00 00 80 eb 0b 6a 00 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule VirTool_WinNT_Almanahe_D_2147609345_0
         $x_1_3 = "E:\\DLMon5\\arp8023\\obj\\i386\\eth8023.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

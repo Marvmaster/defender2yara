@@ -19,6 +19,7 @@ rule Ransom_MSIL_AvasCrypt_PA_2147815042_0
         $x_1_4 = "Waiting... {0}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win32_Potatohttploader_B_2147757907_0
         $x_1_6 = "_Handler" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Potatohttploader_C_2147757908_0
         $x_1_5 = "shutdown failed with error: %d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Potatohttploader_D_2147758774_0
         $x_1_4 = "\\Program" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

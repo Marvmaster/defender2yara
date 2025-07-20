@@ -18,6 +18,7 @@ rule Trojan_Win32_Mewpet_A_2147652560_0
         $x_1_3 = "?cpu=%5.2f&mem=%5.2f&p=%d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

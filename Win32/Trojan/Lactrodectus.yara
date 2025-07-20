@@ -16,6 +16,7 @@ rule Trojan_Win32_Lactrodectus_Z_2147941686_0
         $x_1_1 = {f8 2b 75 0f b8 3e 00 00 00 66 89 44 24 24 e9 89}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

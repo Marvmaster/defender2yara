@@ -16,6 +16,7 @@ rule Worm_Win32_Sality_A_2147606698_0
         $x_1_1 = {4d 0f 85 31 01 00 00 0f be ?? d8 f6 ff ff 83 ?? 5a 0f 85 21 01 00 00 83 bd e8 f6 ff ff 02 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Worm_Win32_Sality_AT_2147632614_0
         $x_1_2 = {83 fa 50 7e 29 e8 ?? ?? ?? ?? 25 ff ff 00 00 99 b9 3c 00 00 00 f7 f9 8b 14 95 ?? ?? ?? ?? 52 8d 85 00 fc ff ff 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Worm_Win32_Sality_AU_2147636658_0
         $x_1_5 = {73 65 73 73 69 6f 6e 00 53 4f 46 54 57 41 52 45 5c 7a 72 66 6b 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

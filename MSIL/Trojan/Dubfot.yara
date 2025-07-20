@@ -18,6 +18,7 @@ rule Trojan_MSIL_Dubfot_A_2147707721_0
         $x_1_4 = "/botnet/kontrol.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

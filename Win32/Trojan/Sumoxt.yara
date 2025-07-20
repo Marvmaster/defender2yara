@@ -18,6 +18,7 @@ rule Trojan_Win32_Sumoxt_A_2147643644_0
         $x_1_4 = "i=suying&t=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

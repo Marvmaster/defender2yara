@@ -20,6 +20,7 @@ rule TrojanDownloader_Win64_LummaStealer_CCJX_2147940447_0
         $x_1_5 = "http://77.223.119.85/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

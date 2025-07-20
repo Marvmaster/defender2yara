@@ -19,6 +19,7 @@ rule Trojan_Win64_Cobalt_DF_2147809383_0
         $x_3_4 = "appDomain.Load_3bad" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_Cobalt_AMAB_2147896267_0
         $x_1_1 = {8b 04 24 ff c0 89 04 24 83 3c 24 21 7d ?? 48 63 04 24 48 8b 4c 24 28 0f be 04 01 89 44 24 04 8b 04 24 99 b9 ?? ?? ?? ?? f7 f9 8b c2 83 c0 32 8b 4c 24 04 33 c8 8b c1 48 63 0c 24 48 8b 54 24 20 88 04 0a eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

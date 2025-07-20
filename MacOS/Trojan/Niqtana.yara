@@ -19,6 +19,7 @@ rule Trojan_MacOS_Niqtana_B_2147815023_0
         $x_1_4 = {89 f9 31 d1 31 f0 09 c8 85 c0 74 09 c7 45 e4 ff ff ff ff eb 36 c7 45 f0 ef be ad de c7 44 24 08 04 00 00 00 8d 45 f0 89 44 24 04 8b 45 08 89 04 24 e8 fb 17 00 00 83 f8 04 74 09 c7 45 e4 ff ff ff ff eb 07 c7 45 e4 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (3 of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Bredolab_B_2147799819_0
         $x_1_6 = "Entity-Info" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_Bredolab_X_2147799820_0
         $x_1_1 = {8a 14 06 02 14 24 32 d3 88 14 06 40 3d 58 1b 00 00 75 ed 5a 5e 5b c3 07 00 e8 ?? ?? ?? ?? 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule TrojanDownloader_Win32_Bredolab_AC_2147803106_0
         $x_1_5 = {3d 7b 8d a8 f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule TrojanDownloader_Win32_Bredolab_AA_2147803107_0
         $x_1_3 = {2f 6e 65 77 2f 63 6f 6e 74 72 6f 6c 6c 65 72 2e 70 68 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -114,6 +118,7 @@ rule TrojanDownloader_Win32_Bredolab_A_2147803981_0
         $x_1_1 = {80 36 ef 46 e2 fa 8b 0d ?? ?? 40 00 8b 35 ?? ?? 40 00 80 3e 0d 75 03 c6 06 00 80 3e 0a 75 03 c6 06 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule TrojanDownloader_Win32_Bredolab_F_2147804122_0
         $x_1_4 = "ction=report&guid=0&rnd=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -167,6 +173,7 @@ rule TrojanDownloader_Win32_Bredolab_B_2147804142_0
         $x_2_6 = "/loaderbb.php" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -199,6 +206,7 @@ rule TrojanDownloader_Win32_Bredolab_D_2147804198_0
         $x_1_8 = {45 6e 74 69 74 79 2d 49 6e 66 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

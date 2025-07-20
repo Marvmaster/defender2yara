@@ -23,6 +23,7 @@ rule VirTool_Win64_Pentegesz_A_2147919102_0
         $x_1_8 = ").Hostname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

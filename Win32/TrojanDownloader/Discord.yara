@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Discord_ARAQ_2147908938_0
         $x_4_3 = "bypass -WindowStyle hidden -file" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

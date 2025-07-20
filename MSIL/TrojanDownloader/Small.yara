@@ -21,6 +21,7 @@ rule TrojanDownloader_MSIL_Small_H_2147656829_0
         $x_1_7 = "\\suehprom\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule TrojanDownloader_MSIL_Small_P_2147716652_0
         $x_1_5 = {6d 00 6d 00 6c 00 75 00 63 00 65 00 2e 00 63 00 6f 00 6d 00 2f 00 2f 00 [0-48] 2e 00 74 00 78 00 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -75,6 +77,7 @@ rule TrojanDownloader_MSIL_Small_Q_2147717432_0
         $x_1_3 = {5c 00 74 00 6d 00 70 00 5c 00 69 00 64 00 [0-8] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +104,7 @@ rule TrojanDownloader_MSIL_Small_T_2147719007_0
         $x_1_6 = "VolumeSerialNumber" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -127,6 +131,7 @@ rule TrojanDownloader_MSIL_Small_GM_2147759951_0
         $x_1_2 = {02 03 6f 1e 00 00 0a 7e ?? ?? ?? 04 03 7e ?? ?? ?? 04 6f ?? ?? ?? 0a 5d 6f ?? ?? ?? 0a 61 d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -150,6 +155,7 @@ rule TrojanDownloader_MSIL_Small_GA_2147760280_0
         $x_1_3 = {1f fe 0d 18 [0-16] 73 ?? ?? ?? 0a 72 ?? ?? ?? 70 [0-32] 0a 73 ?? ?? ?? 0a [0-16] d0 ?? ?? ?? 01 28 ?? ?? ?? 0a 72 ?? ?? ?? 70 [0-32] 0a 16 8c ?? ?? ?? 01 17 8d ?? ?? ?? 01 [0-32] 6f ?? ?? ?? 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -183,6 +189,7 @@ rule TrojanDownloader_MSIL_Small_CDS_2147781753_0
         $x_2_13 = "http analyzer stand-alone" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +218,7 @@ rule TrojanDownloader_MSIL_Small_AB_2147793979_0
         $x_3_8 = "capx" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -236,6 +244,7 @@ rule TrojanDownloader_MSIL_Small_MA_2147809186_0
         $x_1_5 = "DebuggableAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -257,6 +266,7 @@ rule TrojanDownloader_MSIL_Small_ARAC_2147845925_0
         $x_2_1 = {06 09 06 09 91 03 11 04 91 08 1d 5f 62 d2 11 04 61 09 d6 20 ff 00 00 00 5f 61 b4 9c 11 04 17 d6 13 04 11 04 11 06 31 d8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -278,6 +288,7 @@ rule TrojanDownloader_MSIL_Small_ABVQ_2147846883_0
         $x_4_1 = {0c 08 16 02 7b ?? 00 00 04 28 ?? 00 00 0a a2 00 08 14 14 14 28 ?? 00 00 0a 28 ?? 00 00 0a 0a 06 28 ?? 00 00 0a 72 ?? ?? 00 70 18 16 8d ?? 00 00 01 28 ?? 00 00 0a 28 ?? 00 00 0a 0b 07 74 ?? 00 00 01 72 ?? ?? 00 70 14 6f ?? 00 00 0a 26 00 2a}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +310,7 @@ rule TrojanDownloader_MSIL_Small_ASM_2147847934_0
         $x_1_1 = {13 08 16 13 09 2b 43 11 08 11 09 9a 0d 00 09 6f ?? ?? ?? 0a 72 a5 00 00 70 6f ?? ?? ?? 0a 16 fe 01 13 0a 11 0a 2d 1c 00 12 02 08 8e 69 17 58 28 ?? ?? ?? 2b 00 08 08 8e 69 17 59 09 6f ?? ?? ?? 0a a2 00 00 11 09 17 58 13 09 11 09 11 08 8e 69 fe 04 13 0a 11 0a 2d af}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -320,6 +332,7 @@ rule TrojanDownloader_MSIL_Small_ASM_2147847934_1
         $x_1_1 = {0a 06 25 28 ?? 00 00 0a 17 8d ?? 00 00 01 25 16 72 ?? 00 00 70 a2 28 ?? 00 00 0a 02 7b ?? 00 00 0a 28 ?? 00 00 0a 7d ?? 00 00 0a 18 8d ?? 00 00 01 25 16 72 ?? 00 00 70 a2 25 17 16 8c ?? 00 00 01 a2 16 16 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -342,6 +355,7 @@ rule TrojanDownloader_MSIL_Small_ARAU_2147892011_0
         $x_2_2 = {04 20 ff 00 00 00 5f 2b 1d 03 6f ?? ?? ?? 0a 0c 2b 17 08 06 08 06 93 02 7b ?? ?? ?? 04 07 91 04 60 61 d1 9d 2b 03 0b 2b e0 06 17 59 25 0a 16 2f 02 2b 05 2b dd 0a 2b c8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -367,6 +381,7 @@ rule TrojanDownloader_MSIL_Small_SG_2147900662_0
         $x_1_5 = "BeginInvoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -388,6 +403,7 @@ rule TrojanDownloader_MSIL_Small_MVA_2147902834_0
         $x_1_1 = {73 18 00 00 0a 11 0b 7b 11 00 00 04 28 19 00 00 0a 28 02 00 00 06 2b 34}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -410,6 +426,7 @@ rule TrojanDownloader_MSIL_Small_MVB_2147903175_0
         $x_1_2 = "DownloadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -432,6 +449,7 @@ rule TrojanDownloader_MSIL_Small_MVC_2147905770_0
         $x_1_2 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -453,6 +471,7 @@ rule TrojanDownloader_MSIL_Small_MV_2147907304_0
         $x_1_1 = {17 8d 11 00 00 01 25 16 72 50 03 00 70 a2 28 15 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -475,6 +494,7 @@ rule TrojanDownloader_MSIL_Small_SGA_2147913706_0
         $x_1_2 = "pr0t0typ3" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -496,6 +516,7 @@ rule TrojanDownloader_MSIL_Small_SLE_2147917732_0
         $x_1_1 = {06 72 63 00 00 70 02 6f 1c 00 00 0a 26 00 de 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -517,6 +538,7 @@ rule TrojanDownloader_MSIL_Small_ABR_2147923698_0
         $x_5_1 = {72 01 00 00 70 0a 28 02 00 00 06 00 28 04 00 00 0a 72 04 01 00 70 28 05 00 00 0a 0b 07 28 06 00 00 0a 26 72 9f 01 00 70 07 72 4c 02 00 70 28 05 00 00 0a 28 03 00 00 06 00 72 68 02 00 70 07 72 15 03 00 70 28 05 00 00 0a 28 03 00 00 06 00 72 31 03 00 70 07 28 07 00 00 0a 0c 72 d2 03 00 70 08 28 08 00 00 0a 26 20 60 ea 00 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -539,6 +561,7 @@ rule TrojanDownloader_MSIL_Small_CCJC_2147923754_0
         $x_1_2 = {07 06 07 06 93 02 7b ?? ?? ?? ?? 04 20 ?? ?? ?? ?? 20 ?? ?? ?? ?? 61 66 5f 91 04 60 61 d1 9d 06 1d 66 18 63 66 59 25 0a 20 ?? ?? ?? ?? 65 20 ?? ?? ?? ?? 61 65 66 1c 62 2f c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

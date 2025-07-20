@@ -16,6 +16,7 @@ rule Trojan_Win32_DllLoader_NEAA_2147834124_0
         $x_10_1 = {0b d5 41 89 96 e0 00 00 00 69 47 3c 47 c0 2c 64 3b c8 75 ec}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_DllLoader_CCJT_2147930877_0
         $x_1_2 = {ff d6 83 ec 14 85 c0 75 ?? c7 04 24 ?? ?? ?? ?? ff d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

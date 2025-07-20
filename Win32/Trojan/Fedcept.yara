@@ -17,6 +17,7 @@ rule Trojan_Win32_Fedcept_A_2147647544_0
         $x_1_3 = {46 00 52 00 65 00 64 00 [0-6] 25 00 73 00 3f 00 55 00 49 00 44 00 3d 00 25 00 73 00 26 00 57 00 49 00 4e 00 56 00 45 00 52 00 3d 00 25 00 78 00 25 00 30 00 32 00 78 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Fedcept_B_2147647591_0
         $x_1_4 = "\" goto self_del_l64" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -72,6 +74,7 @@ rule Trojan_Win32_Fedcept_C_2147648115_0
         $x_1_9 = {49 00 4e 00 46 00 45 00 43 00 54 00 45 00 44 00 5f 00 50 00 08 00 4d 00 41 00 4c 00 46 00 4f 00 55 00 4e 00 44 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Asorult_BB_2147741211_0
         $x_1_1 = {85 c0 75 14 a1 ?? ?? ?? ?? b9 ?? ?? ?? ?? 03 c8 03 c3 8a 14 19 88 14 30 a1 ?? ?? ?? ?? 8a 0d ?? ?? ?? ?? 03 c3 03 c6 8a 10 32 d1 43 81 fb da 04 00 00 88 10 7e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Carriso_A_2147722501_0
         $x_1_4 = {43 68 65 63 6b [0-4] 57 69 6e 33 32 [0-4] 50 6c 75 67 69 6e [0-4] 53 65 72 76 65 72 [0-4] 43 6c 6f 75 64 [0-4] 4f 72 61 63 6c 65 [0-4] 4e 56 49 44 49 41 [0-4] 41 75 64 69 6f [0-4] 41 76 69 72 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

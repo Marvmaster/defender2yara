@@ -18,6 +18,7 @@ rule Trojan_Win32_Androm_E_2147730708_0
         $x_1_3 = {8b 06 03 c3 73 05 e8 [0-6] 50 ff 15 [0-6] 90 ff 06 81 3e [0-6] 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Androm_DA_2147740350_0
         $x_1_1 = {68 41 41 41 41 [0-4] 59 [0-4] 46 [0-4] 8b 17 [0-4] 31 f2 66 ?? ?? ?? ?? 39 ca 75 ?? [0-32] b9 ?? ?? ?? ?? [0-6] 83 e9 04 [0-4] 8b 14 0f [0-4] 56 [0-4] 33 14 24 [0-4] 5e [0-4] 89 14 08 [0-4] 83 f9 00 7f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Androm_V_2147743792_0
         $x_2_2 = {8b 45 e4 8b 4d ?? 83 e1 ?? 0f be 04 08 8b 4d ?? 0f b6 14 0d ?? ?? ?? ?? 31 c2 88 d3 88 1c 0d ?? ?? ?? ?? 8b 45 ?? 83 c0 ?? 89 45 ?? e9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win32_Androm_VB_2147751316_0
         $x_1_4 = "mW9C6rNuksNAVfU1CrRQlXp8SlttBi226" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_Win32_Androm_DSK_2147754589_0
         $x_2_1 = {8b 44 24 30 8b 8c 24 ?? ?? ?? ?? 89 38 5f 5e 89 68 04 5d 5b 33 cc e8 ?? ?? ?? ?? 81 c4 2c 08 00 00 c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Trojan_Win32_Androm_BA_2147756613_0
         $x_1_2 = {33 c0 55 68 ?? ?? ?? ?? 64 ff 30 64 89 20 b9 00 00 00 00 91 f7 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +156,7 @@ rule Trojan_Win32_Androm_KE_2147759446_0
         $x_1_3 = "$5a2177b8-a9d5-46b3-92ea-94bdedff72d5" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +178,7 @@ rule Trojan_Win32_Androm_VD_2147761765_0
         $x_1_1 = {8b de 03 d9 [0-64] 8b c1 bf ?? ?? ?? ?? 33 d2 f7 f7 85 d2 [0-64] 80 33 [0-64] 41 81 f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +204,7 @@ rule Trojan_Win32_Androm_A_2147763712_0
         $x_1_5 = "Dh2SJmBRPQlDZ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +227,7 @@ rule Trojan_Win32_Androm_RR_2147763894_0
         $x_1_2 = {ff ff b8 00 00 00 00 f7 f0 89 f6 89 f6 89 f6 [0-47] 8b c6 5e 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -240,6 +250,7 @@ rule Trojan_Win32_Androm_AF_2147767244_0
         $x_1_2 = {f3 0f 10 ed 33 db a1 [0-6] 03 c3 73 ?? e8 [0-6] 8a 00 [0-6] f3 0f 10 c9 f3 0f 10 e4 34 ?? 8b 15 [0-6] 03 d3 73 ?? e8 [0-6] 88 02 f3 0f 10 db f3 0f 10 ed f3 0f 10 ff 43 81 fb ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -263,6 +274,7 @@ rule Trojan_Win32_Androm_R_2147779070_0
         $x_1_3 = {33 d7 33 c2 2b f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -287,6 +299,7 @@ rule Trojan_Win32_Androm_RW_2147786814_0
         $x_1_1 = {83 c2 01 89 95 ?? ?? ?? ?? 83 bd ?? ?? ?? ?? 05 7d ?? 8b 85 ?? ?? ?? ?? 99 b9 03 00 00 00 f7 f9 8b 45 ?? 0f be 0c 10 8b 95 ?? ?? ?? ?? 0f b6 44 15 ?? 33 c1 8b 8d ?? ?? ?? ?? 88 44 0d ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -311,6 +324,7 @@ rule Trojan_Win32_Androm_RT_2147788937_0
         $x_1_4 = "2c49f800-c2dd-11cf-9ad6-0080c7e7b78d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -333,6 +347,7 @@ rule Trojan_Win32_Androm_SIBA_2147794852_0
         $x_1_2 = {57 c7 04 e4 ff ff 0f 00 59 56 31 34 e4 09 0c e4 [0-208] 83 ec fc [0-208] 81 e1 00 00 00 00 8b 0c e4 83 c4 04 [0-208] 53 83 24 e4 00 01 0c e4 [0-208] 83 ec fc [0-208] 8f 45 ?? 8b 4d 05 8f 45 ?? 8b 45 07 50 c7 04 e4 ?? ?? ?? ?? 52 83 24 e4 00 09 04 e4 52 83 24 e4 00 01 0c e4 [0-208] 81 e1 00 00 00 00 8b 0c e4 83 c4 04 81 e0 00 00 00 00 8f 45 ?? 03 45 0b 8f 83 ?? ?? ?? ?? [0-208] c7 45 ?? 00 00 00 00 ff 75 0f 09 0c e4 [0-208] 81 e1 00 00 00 00 8b 0c e4 83 c4 04 8f 45 ?? 8b 45 12 21 8b 0d 56 83 24 e4 00 09 04 e4 [0-208] 8f 45 ?? 8b 45 16 89 7d ?? 89 c7 03 bb 0d 57 8b 7d 18 8f 83 0d [0-208] ff a3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -363,6 +378,7 @@ rule Trojan_Win32_Androm_UTK_2147794923_0
         $x_1_10 = "fremmedbgers" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -384,6 +400,7 @@ rule Trojan_Win32_Androm_AES_2147795453_0
         $x_1_1 = {c1 fa 05 0f b6 45 ff c1 e0 03 0b d0 88 55 ff 0f b6 4d ff 2b 4d f8 88 4d ff 0f b6 55 ff 81 f2 84 00 00 00 88 55 ff 0f b6 45 ff 83 c0 4a 88 45 ff 0f b6 4d ff f7 d9 88 4d ff 0f b6 55 ff 83 c2 6f 88 55 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -411,6 +428,7 @@ rule Trojan_Win32_Androm_FC_2147805865_0
         $x_1_7 = "Menneskekrligstes8" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -433,6 +451,7 @@ rule Trojan_Win32_Androm_RPI_2147831535_0
         $x_1_2 = {0f af ca 0f af ce 0f af cf 0f af 4c 24 50 8b f9 89 7c 24 20 8a 8c 24 80 00 00 00 32 4c 24 27 3b c3 88 4c 24 27}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -454,6 +473,7 @@ rule Trojan_Win32_Androm_RC_2147831659_0
         $x_1_1 = {8d 54 24 08 52 6a 40 68 78 da 04 00 56 ff d0 6a 00 6a 00 56 56 6a 00 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -476,6 +496,7 @@ rule Trojan_Win32_Androm_RC_2147831659_1
         $x_1_2 = {33 d2 8b c6 f7 f3 8a 0c 2a 30 0c 3e 46 3b 74 24 18 72 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -497,6 +518,7 @@ rule Trojan_Win32_Androm_RA_2147832809_0
         $x_1_1 = {6b c8 00 0f be 54 0d f4 b8 01 00 00 00 c1 e0 00 0f be 4c 05 f4 c1 f9 04 8d 14 91 8b 45 ec 03 45 f8 88 10 8b 4d f8 83 c1 01 89 4d f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -519,6 +541,7 @@ rule Trojan_Win32_Androm_GBR_2147833893_0
         $x_1_2 = {8a 4d ff 4e 33 c0 fe 4d fe 80 7d fe 04 0f 94 c0 83 f0 0c 09 45 c8 0f be c1 83 e8 0d 74 09 85 d2 74 05 33 c0 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -541,6 +564,7 @@ rule Trojan_Win32_Androm_RG_2147833960_0
         $x_1_2 = {33 d2 8b c6 f7 f3 8a 0c ?? 30 0c 3e 46 [0-6] 3b [0-6] 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -562,6 +586,7 @@ rule Trojan_Win32_Androm_RH_2147835248_0
         $x_1_1 = {c1 c9 0d 8b c1 c3 [0-32] 0f be ca 80 fa 61 7c 03 83 e9 20 03 c1 46 8a 16 84 d2 75 e3 [0-160] 33 d2 8b c6 f7 75 ?? 8a 0c 1a 30 0c 3e 46 3b 75 ?? 72 ed}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -583,6 +608,7 @@ rule Trojan_Win32_Androm_AN_2147838077_0
         $x_2_1 = {66 89 85 02 ff ff ff ba ?? ?? ?? ?? 66 89 95 00 ff ff ff b8 ?? ?? ?? ?? 6b c8 00 8b 55 88 8b 42 0c 8b 0c 01 8b 11 89 95 04 ff ff ff 6a ?? 8d 85 00 ff ff ff 50 8b 4d ec 51}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -605,6 +631,7 @@ rule Trojan_Win32_Androm_RB_2147838395_0
         $x_1_2 = {cc cc c1 c9 0d 8b c1 c3 cc cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -626,6 +653,7 @@ rule Trojan_Win32_Androm_RB_2147838395_1
         $x_1_1 = {8b 45 f4 83 c0 01 89 45 f4 81 7d f4 ff 00 00 00 7d 0b 8b 4d f0 33 4d f4 89 4d f0 eb e3 8b 55 f0 33 55 ec 83 f2 0f 8b 45 08 03 45 fc 88 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -648,6 +676,7 @@ rule Trojan_Win32_Androm_CAB_2147840575_0
         $x_1_2 = "SetBoundsRect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -675,6 +704,7 @@ rule Trojan_Win32_Androm_EC_2147841585_0
         $x_1_7 = "ReadEventLogA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -701,6 +731,7 @@ rule Trojan_Win32_Androm_EC_2147841585_1
         $x_1_6 = "ieReturnSourceServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -726,6 +757,7 @@ rule Trojan_Win32_Androm_EH_2147846235_0
         $x_1_5 = "GetAcceptExSockaddrs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -747,6 +779,7 @@ rule Trojan_Win32_Androm_RJ_2147849451_0
         $x_1_1 = {0f b6 c0 83 c8 60 03 c7 03 c0 42 8b f8 8a 02 84 c0 75 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -770,6 +803,7 @@ rule Trojan_Win32_Androm_RPX_2147850293_0
         $x_1_3 = "output_32.bin" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -793,6 +827,7 @@ rule Trojan_Win32_Androm_MBHX_2147888496_0
         $x_1_3 = "kunjsfuzjnsdmmxzw" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -814,6 +849,7 @@ rule Trojan_Win32_Androm_NAM_2147892431_0
         $x_5_1 = {74 3a 8b 8d ?? ?? ?? ?? 2b cb 03 4d 10 33 c0 40 3b c8 0f 86 a5 01 00 00 6a 02 8d 85 44 e5 ff ff 53 50 e8 48 aa}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -835,6 +871,7 @@ rule Trojan_Win32_Androm_EM_2147894982_0
         $x_5_1 = {8a 98 30 80 40 00 32 d9 88 98 30 80 40 00 40 83 f8 08 7c ec}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -856,6 +893,7 @@ rule Trojan_Win32_Androm_EM_2147894982_1
         $x_5_1 = {8b fb c1 e9 02 f3 a5 8b ca 83 e1 03 85 c0 f3 a4 75 0b 5f 5e 5d 5b 81 c4 04 06 00 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -877,6 +915,7 @@ rule Trojan_Win32_Androm_EM_2147894982_2
         $x_5_1 = {8b f8 8b d1 81 c6 90 da 04 00 8b df c1 e9 02 f3 a5 8b ca 83 e1 03 f3 a4 5f 5e 85 db 5b 75 03}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -899,6 +938,7 @@ rule Trojan_Win32_Androm_NA_2147896735_0
         $x_1_2 = "inquire_v1XpT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -922,6 +962,7 @@ rule Trojan_Win32_Androm_ES_2147900271_0
         $x_1_3 = "hdietrich2@hotmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -943,6 +984,7 @@ rule Trojan_Win32_Androm_AMAF_2147901265_0
         $x_1_1 = {8b 45 ec 31 45 fc 33 55 fc 89 55 d0 8b 45 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -964,6 +1006,7 @@ rule Trojan_Win32_Androm_BKL_2147928081_0
         $x_1_1 = {be a5 15 4f 0b 1c 09 30 65 89 7a f4 3c 91}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -986,6 +1029,7 @@ rule Trojan_Win32_Androm_BKL_2147928081_1
         $x_1_2 = {8b 45 e8 89 45 e4 8b 45 e4 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1007,6 +1051,7 @@ rule Trojan_Win32_Androm_EAMG_2147928922_0
         $x_5_1 = {0f b7 14 41 0f be 45 97 03 d0 8b 8d f0 fe ff ff 03 4d a0 88 11}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1029,6 +1074,7 @@ rule Trojan_Win32_Androm_RAA_2147937530_0
         $x_1_2 = {83 a5 60 ff ff ff 00 8b 45 a4 89 85 68 ff ff ff 83 65 a4 00 8b 95 68 ff ff ff 8d 4d a0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1050,6 +1096,7 @@ rule Trojan_Win32_Androm_AD_2147944983_0
         $x_1_1 = {8a 4d ff bf b4 53 40 00 88 4d e0 83 c9 ff 33 c0 89 75 e4 f2 ae f7 d1 49 89 75 e8 51 68 b4 53 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

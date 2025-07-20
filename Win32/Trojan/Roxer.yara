@@ -17,6 +17,7 @@ rule Trojan_Win32_Roxer_EC_2147838539_0
         $x_7_2 = {69 c9 0d 66 19 00 33 d2 6a 19 5f 81 c1 5c f3 6e 3c 8b c1 f7 f7 80 c2 61 88 94 35 f4 fd ff ff}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Roxer_CCAJ_2147889448_0
         $x_1_1 = {f7 e6 c1 ea ?? 8d 04 92 8b d6 2b d0 8a 04 95 ?? ?? ?? ?? 30 86 ?? ?? ?? ?? 46 3b f1 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

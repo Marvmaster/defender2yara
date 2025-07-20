@@ -17,6 +17,7 @@ rule Worm_Win32_Emudbot_A_2147647667_0
         $x_1_3 = "shell\\Auto\\command=autorun.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

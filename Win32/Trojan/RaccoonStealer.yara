@@ -16,6 +16,7 @@ rule Trojan_Win32_RaccoonStealer_DA_2147775327_0
         $x_1_1 = {8b d5 c1 ea 05 c7 05 ?? ?? ?? ?? 84 10 d6 cb c7 05 ?? ?? ?? ?? ff ff ff ff 89 54 24 ?? 8b 84 24 ?? ?? ?? ?? 01 44 24 ?? 8b 44 24 ?? 33 c7 33 c6 2b d8 81 3d ?? ?? ?? ?? 17 04 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_RaccoonStealer_D_2147786323_0
         $x_1_7 = "wd3dwerewolioldsd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_RaccoonStealer_I_2147787431_0
         $x_1_2 = {55 8b ec 83 [0-21] c6 05 ?? ?? ?? ?? 6f c6 05 ?? ?? ?? ?? 69 c6 05 ?? ?? ?? ?? 56 c6 05 ?? ?? ?? ?? 7e c6 05 ?? ?? ?? ?? 7e c6 05 ?? ?? ?? ?? 6c [0-16] c7 45 ?? ?? ?? ?? 00 c6 05 ?? ?? ?? ?? 65 c6 05 ?? ?? ?? ?? 50 c6 05 ?? ?? ?? ?? 00 c6 05 ?? ?? ?? ?? 7c c6 05 ?? ?? ?? ?? 63 c6 05 ?? ?? ?? ?? 61 c6 05 ?? ?? ?? ?? 74 c6 05 ?? ?? ?? ?? 72 c6 05 ?? ?? ?? ?? 75 ?? ?? ?? ?? ?? ?? ?? 83 e8 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_RaccoonStealer_RPB_2147814812_0
         $x_1_1 = {c7 04 24 00 00 00 00 a1 ?? ?? ?? ?? 01 04 24 b8 d6 38 00 00 01 04 24 8b 0c 24 8b 84 24 90 00 00 00 8a 14 01 8b 0d ?? ?? ?? ?? 88 14 01 81 c4 8c 00 00 00 c2 04 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_Win32_RaccoonStealer_RPX_2147848253_0
         $x_1_1 = {c6 45 d0 61 c6 45 d1 6b c6 45 d2 68 c6 45 d3 6a c6 45 d4 66 c6 45 d5 77 c6 45 d6 78 c6 45 d7 6d c6 45 d8 73 c6 45 d9 49}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Trojan_Win32_RaccoonStealer_CCBK_2147891549_0
         $x_1_1 = {8b 02 8d 52 ?? 03 c7 89 04 8b 41 3b ce 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

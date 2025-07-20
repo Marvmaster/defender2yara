@@ -22,6 +22,7 @@ rule Trojan_MSIL_Clipbanker_RAA_2147760780_0
         $x_1_7 = "add_Click" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_MSIL_Clipbanker_NBA_2147838856_0
         $x_1_3 = "/create /sc MINUTE /mo 3 /tn" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_MSIL_Clipbanker_NCB_2147843462_0
         $x_1_2 = "RoobetCrash" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_MSIL_Clipbanker_NCB_2147843462_1
         $x_1_2 = "sssc.g.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Trojan_MSIL_Clipbanker_AMAB_2147890315_0
         $x_1_12 = "^41001[0-9]?[\\d\\- ]{7,11}$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +147,7 @@ rule Trojan_MSIL_Clipbanker_SPBN_2147909806_0
         $x_5_1 = {0a 07 03 6f ?? ?? ?? 0a 07 04 6f ?? ?? ?? 0a 73 e3 00 00 0a 0c 07 6f ?? ?? ?? 0a 0d 08 09 17 73 e5 00 00 0a 13 04}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_MSIL_Clipbanker_KAE_2147913974_0
         $x_1_1 = {fe 0c 03 00 fe 0c 04 00 6f ?? 00 00 0a fe 0e 05 00 00 fe 0c 01 00 fe 0c 05 00 fe 0c 00 00 fe 0c 02 00 25 20 01 00 00 00 58 fe 0e 02 00 6f ?? 00 00 0a 61 d2 6f ?? 00 00 0a 00 fe 0c 02 00 fe 0c 00 00 6f ?? 00 00 0a 5d fe 0e 02 00 00 fe 0c 04 00 20 01 00 00 00 58 fe 0e 04 00 fe 0c 04 00 fe 0c 03 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +196,7 @@ rule Trojan_MSIL_Clipbanker_NITA_2147942582_0
         $x_1_6 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

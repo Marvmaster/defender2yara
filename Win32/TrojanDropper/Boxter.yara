@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Boxter_PAA_2147775610_0
         $x_10_5 = "@shift /0" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_MSIL_PrivateLoader_A_2147837874_0
         $x_2_1 = {11 03 14 20 ?? 00 00 00 28 ?? 00 00 06 20 ?? 01 00 00 28 ?? 00 00 06 72 01 00 00 70 28 ?? 00 00 06 16 8d ?? 00 00 01 14 14 14 28 ?? 00 00 0a 13 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_PrivateLoader_B_2147849050_0
         $x_2_3 = "aR3nbf8dQp2feLmk31.lSfgApatkdxsVcGcrktoFd.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_MSIL_PrivateLoader_APL_2147892458_0
         $x_1_1 = {25 18 18 8c ?? 00 00 01 a2 25 19 18 8d 1f 00 00 01 25 17 18 8d 1f 00 00 01 25 16 11 06 a2 25 17 02 7b 1b 00 00 04 17 8d 1f 00 00 01 25 16 1c 8c ?? 00 00 01 a2 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_MSIL_PrivateLoader_SG_2147906259_0
         $x_1_2 = "ScrubCrypt.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_MSIL_PrivateLoader_MBXQ_2147918551_0
         $x_1_3 = "RJWxLgXCn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +131,7 @@ rule Trojan_MSIL_PrivateLoader_RDK_2147921744_0
         $x_2_1 = {28 3d 00 00 0a 28 3e 00 00 0a 1a 8d 1e 00 00 01 25 16 28 3f 00 00 0a a2 25 17}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +155,7 @@ rule Trojan_MSIL_PrivateLoader_YOAA_2147922589_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -180,6 +187,7 @@ rule Trojan_MSIL_PrivateLoader_NV_2147923481_0
         $x_1_11 = "AddUserToRemoteDesktopGroup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

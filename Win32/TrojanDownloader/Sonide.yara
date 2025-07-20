@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Sonide_A_2147651685_0
         $x_1_9 = {34 63 88 46 13 8d 46 15 5b 8d a4 24 00 00 00 00 0f b6 50 fb 30 50 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

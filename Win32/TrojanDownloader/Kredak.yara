@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Kredak_2147689810_0
         $x_2_4 = "[AKED!]" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

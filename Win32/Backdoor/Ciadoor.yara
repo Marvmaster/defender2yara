@@ -60,6 +60,7 @@ rule Backdoor_Win32_Ciadoor_2147568555_0
         $x_5_46 = " Objects\\{E14DCE67-8FB7-4721-8149-179BAA4D792C}" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((35 of ($x_1_*))) or
             ((1 of ($x_2_*) and 33 of ($x_1_*))) or
@@ -120,6 +121,7 @@ rule Backdoor_Win32_Ciadoor_B_2147592534_0
         $x_1_20 = "&password=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 16 of ($x_1_*))) or
             ((1 of ($x_10_*) and 11 of ($x_1_*))) or
@@ -150,6 +152,7 @@ rule Backdoor_Win32_Ciadoor_C_2147792382_0
         $x_2_5 = {10 20 07 0a fe 2f 50 02 00 02 00 02 00 03 13 f8 04 c8 b4 ff 0b 80 01 00 00 19 68 ff 08 68 ff 0d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_6_*) and 1 of ($x_1_*))) or

@@ -29,6 +29,7 @@ rule PWS_MSIL_HawkEye_GG_2147777408_0
         $x_1_14 = "Bank" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 6 of ($x_1_*))) or
             ((2 of ($x_20_*))) or

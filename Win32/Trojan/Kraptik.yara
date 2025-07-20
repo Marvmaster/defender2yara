@@ -17,6 +17,7 @@ rule Trojan_Win32_Kraptik_B_2147630498_0
         $x_1_2 = {6a 05 21 d9 8b d1 bf 3d 46 04 00 57 ff 15 ?? ?? 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

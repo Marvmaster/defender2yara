@@ -20,6 +20,7 @@ rule PWS_Win32_MSNer_A_2147648054_0
         $x_1_6 = "SYSTEM\\CurrentControlSet\\Services\\NTice\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

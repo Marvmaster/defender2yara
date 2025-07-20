@@ -17,6 +17,7 @@ rule Trojan_Win64_Khalesi_AM_2147817184_0
         $x_3_2 = "KrrQFWGYWN" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win64_Khalesi_DA_2147817355_0
         $x_1_7 = "GetModuleFileNameA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -74,6 +76,7 @@ rule Trojan_Win64_Khalesi_AN_2147817363_0
         $x_2_6 = "GetModuleFileNameA" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule Trojan_Win64_Khalesi_DB_2147817803_0
         $x_1_6 = "GetModuleFileNameA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +138,7 @@ rule Trojan_Win64_Khalesi_CCGG_2147900549_0
         $x_1_14 = "Enter License :" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +161,7 @@ rule Trojan_Win64_Khalesi_GNZ_2147901242_0
         $x_10_2 = {56 53 48 83 ec 50 48 8b 2d ?? ?? ?? ?? 45 31 c9 45 31 c0 31 d2 48 8b 45 00 48 89 44 24 48 31 c0 48 8d 74 24 3c 31 c0 48 89 cf 48 89 74 24 20 31 c9 89 44 24 3c e8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +183,7 @@ rule Trojan_Win64_Khalesi_AMMB_2147904303_0
         $x_1_1 = {4c 39 cf 74 ?? 8d 45 01 99 f7 fe 4c 63 ea 42 0f b6 84 2c ?? ?? ?? ?? 4b 8d 0c 2a 4c 89 ed 44 01 e0 99 f7 fe 4c 63 f2 4b 8d 14 32 4d 89 f4 e8 ?? ?? ?? ?? 42 8a 8c 34 ?? ?? ?? ?? 42 02 8c 2c ?? ?? ?? ?? 0f b6 c9 8a 84 0c ?? ?? ?? ?? 41 30 01 49 ff c1 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +205,7 @@ rule Trojan_Win64_Khalesi_RK_2147905865_0
         $x_1_1 = {48 39 d0 74 14 49 89 c0 41 83 e0 1f 46 8a 04 ?? 44 30 04 01 48 ff c0 eb e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +228,7 @@ rule Trojan_Win64_Khalesi_RU_2147912244_0
         $x_1_2 = "Imgui Design V3\\Imgui Design V3\\Imgui Design V3\\examples\\Exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +252,7 @@ rule Trojan_Win64_Khalesi_RZ_2147912416_0
         $x_1_3 = {33 d2 41 8b fe 41 8b de 8d 4a 02 ff 15 ?? ?? ?? 00 48 8d 54 24 20 c7 44 24 20 30 01 00 00 48 8b c8 48 8b f0 ff 15 ?? ?? ?? 00 48 8d 54 24 20 48 8b ce ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -266,6 +276,7 @@ rule Trojan_Win64_Khalesi_ARAZ_2147929778_0
         $x_1_3 = "WaitForSingleObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

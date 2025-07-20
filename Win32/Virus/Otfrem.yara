@@ -22,6 +22,7 @@ rule Virus_Win32_Otfrem_EM_2147912935_0
         $x_1_7 = "OTifVTa!XkX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

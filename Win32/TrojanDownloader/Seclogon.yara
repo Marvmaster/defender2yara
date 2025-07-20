@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Seclogon_A_2147629028_0
         $x_1_3 = {6a 00 8d 45 e4 50 8b 45 fc 89 45 ec c6 45 f0 11 8d 55 ec 33 c9 b8 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

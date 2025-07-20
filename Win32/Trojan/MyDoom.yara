@@ -16,6 +16,7 @@ rule Trojan_Win32_MyDoom_RF_2147891470_0
         $x_1_1 = {89 c1 29 d9 83 c1 0d b8 4f ec c4 4e f7 e9 c1 fa 03 89 c8 c1 f8 1f 29 c2 8d 04 52 8d 04 82 01 c0 29 c1 0f be 54 29 d8 eb 42}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

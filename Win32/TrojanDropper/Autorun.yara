@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Autorun_AC_2147649769_0
         $x_1_4 = "%drive% md %%x:\\Sounds" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

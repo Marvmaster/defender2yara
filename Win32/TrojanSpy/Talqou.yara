@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Talqou_A_2147648600_0
         $x_1_4 = {81 ec 8c 00 00 00 83 4d fc ff ?? 8b 5e 3c ?? 8b 7c 33 78 03 fe 8b 47 20 8b 4f 18 03 c6 89 45 f4 89 4d f8 85 c9 75 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

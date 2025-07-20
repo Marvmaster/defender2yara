@@ -19,6 +19,7 @@ rule TrojanDropper_MSIL_Agent_A_2147626399_0
         $x_1_5 = {06 17 1f 5a 9c 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -46,6 +47,7 @@ rule TrojanDropper_MSIL_Agent_E_2147646244_0
         $x_3_4 = "\" goto Repeat" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

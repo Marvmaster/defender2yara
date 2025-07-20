@@ -22,6 +22,7 @@ rule TrojanDownloader_MSIL_Stealer_ABF_2147824759_0
         $x_1_7 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

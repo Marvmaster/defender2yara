@@ -28,6 +28,7 @@ rule Trojan_WinNT_WebHijack_KB_2147719988_0
         $x_1_14 = "TDI.SYS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((13 of ($x_1_*))) or
             ((1 of ($x_3_*) and 10 of ($x_1_*))) or

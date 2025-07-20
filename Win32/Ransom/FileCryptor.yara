@@ -20,6 +20,7 @@ rule Ransom_Win32_FileCryptor_G_2147753632_0
         $x_1_5 = "TouchMeNot_.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Win32_FileCryptor_H_2147755292_0
         $x_1_6 = "bitcoin" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Ransom_Win32_FileCryptor_I_2147758457_0
         $x_1_8 = "GetEncryptionThreads" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule Ransom_Win32_FileCryptor_J_2147759077_0
         $x_1_6 = "del /f /s /q \"C:\\Program Files\\WindowsApps" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +129,7 @@ rule Ransom_Win32_FileCryptor_K_2147759661_0
         $x_1_5 = "ods,xar,xlr,xls,xlsb,xlsm,xlsx,xlt,xltm,xltx,asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule Ransom_Win32_FileCryptor_M_2147761155_0
         $x_1_6 = "Payment is accepted only in bitcoin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -177,6 +183,7 @@ rule Ransom_Win32_FileCryptor_N_2147761990_0
         $x_1_6 = "/c taskkill /im explorer.exe /f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -201,6 +208,7 @@ rule Ransom_Win32_FileCryptor_P_2147763575_0
         $x_1_4 = "Desktop\\README.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -229,6 +237,7 @@ rule Ransom_Win32_FileCryptor_O_2147764344_0
         $x_1_8 = {46 6f 72 20 44 45 43 52 59 50 54 [0-32] 20 77 72 69 74 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -252,6 +261,7 @@ rule Ransom_Win32_FileCryptor_Q_2147764792_0
         $x_1_3 = {8d 4d e8 03 cf 8a 04 08 32 01 47 88 04 0a 8b 45 fc 3b fe 72 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -277,6 +287,7 @@ rule Ransom_Win32_FileCryptor_R_2147766837_0
         $x_1_5 = "ESTE ARCHIVO ESTA MUY BIEN ENCRYPTADO NO TRATES" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -302,6 +313,7 @@ rule Ransom_Win32_FileCryptor_PC_2147768471_0
         $x_1_5 = "\\Start Menu\\Programs\\Startup\\README.html" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -326,6 +338,7 @@ rule Ransom_Win32_FileCryptor_PB_2147771216_0
         $x_1_4 = {5c 43 6f 62 61 6c 74 5c [0-16] 5c [0-16] 5c 43 6c 69 65 6e 74 5c 43 6f 62 61 6c 74 2e 43 6c 69 65 6e 74 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -378,6 +391,7 @@ rule Ransom_Win32_FileCryptor_W_2147772551_0
         $x_1_8 = "DCPbase64" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -403,6 +417,7 @@ rule Ransom_Win32_FileCryptor_MK_2147773938_0
         $x_1_5 = "your files will be DESTROYED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -424,6 +439,7 @@ rule Ransom_Win32_FileCryptor_PAC_2147780152_0
         $x_1_1 = {c1 e0 08 33 c7 bf ff 00 00 00 c1 e0 08 33 c3 c1 e0 08 33 45 fc 89 04 b5 90 b4 41 00 c1 c0 08 89 04 b5 90 b0 41 00 c1 c0 08 89 04 b5 90 c0 41 00 c1 c0 08 89 04 b5 68 a3 41 00 46 81 fe 00 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -452,6 +468,7 @@ rule Ransom_Win32_FileCryptor_PAB_2147783538_0
         $x_2_8 = {c6 45 fc 05 b9 ?? ?? ?? ?? 8b 75 e4 8b c6 66 0f 1f 44 00 00 66 8b 10 66 3b 11 75 1e 66 85 d2 74 15 66 8b 50 02 66 3b 51 02}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -482,6 +499,7 @@ rule Ransom_Win32_FileCryptor_MA_2147808457_0
         $x_10_6 = "Your files are unrecoverable, good job cleaning!" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -510,6 +528,7 @@ rule Ransom_Win32_FileCryptor_MAK_2147810020_0
         $x_1_4 = "Your Personal CODE:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -537,6 +556,7 @@ rule Ransom_Win32_FileCryptor_MAK_2147810020_1
         $x_1_7 = "encryptHDD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -564,6 +584,7 @@ rule Ransom_Win32_FileCryptor_MBK_2147810021_0
         $x_1_7 = "net stop McAfeeEngineService /y" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -593,6 +614,7 @@ rule Ransom_Win32_FileCryptor_PT_2147817476_0
         $x_1_5 = {2e 00 73 00 63 00 72 00 [0-4] 2e 00 63 00 6d 00 64 00 [0-4] 2e 00 64 00 6c 00 6c 00 [0-4] 2e 00 62 00 61 00 74 00 [0-4] 2e 00 63 00 70 00 6c 00 [0-4] 2e 00 73 00 79 00 73 00 [0-4] 2e 00 6d 00 73 00 63 00 [0-4] 2e 00 63 00 6f 00 6d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_MSIL_CryptoLocker_DA_2147772878_0
         $x_1_4 = "ransomware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_MSIL_CryptoLocker_DA_2147772878_1
         $x_1_5 = "123456" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Ransom_MSIL_CryptoLocker_DB_2147772880_0
         $x_1_4 = ".locked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Ransom_MSIL_CryptoLocker_DB_2147772880_1
         $x_1_4 = "WU9VUiBQRVJTT05BTCBJREVOVElGSUNBVElPTjog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule Ransom_MSIL_CryptoLocker_DC_2147772923_0
         $x_1_6 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule Ransom_MSIL_CryptoLocker_DC_2147772923_1
         $x_1_6 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +175,7 @@ rule Ransom_MSIL_CryptoLocker_DD_2147773119_0
         $x_1_5 = "DECRYPT FILES" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -194,6 +201,7 @@ rule Ransom_MSIL_CryptoLocker_DD_2147773119_1
         $x_1_5 = "DisableTaskMgr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -221,6 +229,7 @@ rule Ransom_MSIL_CryptoLocker_DE_2147773125_0
         $x_1_4 = "Files Decrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -245,6 +254,7 @@ rule Ransom_MSIL_CryptoLocker_DE_2147773125_1
         $x_1_4 = "BitcoinAddress" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -269,6 +279,7 @@ rule Ransom_MSIL_CryptoLocker_DF_2147773186_0
         $x_1_4 = "CreateEncryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -295,6 +306,7 @@ rule Ransom_MSIL_CryptoLocker_DF_2147773186_1
         $x_1_6 = "encryptedFiles" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -323,6 +335,7 @@ rule Ransom_MSIL_CryptoLocker_DG_2147773297_0
         $x_1_4 = "FileEncrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -353,6 +366,7 @@ rule Ransom_MSIL_CryptoLocker_DG_2147773297_1
         $x_1_10 = "adm_64" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_40_*) and 3 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_40_*) and 1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -385,6 +399,7 @@ rule Ransom_MSIL_CryptoLocker_DH_2147773298_0
         $x_5_6 = "UmFzb213YXJlMi4wJA==" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_40_*) and 1 of ($x_10_*) and 1 of ($x_5_*))) or
             ((1 of ($x_40_*) and 2 of ($x_10_*))) or
@@ -416,6 +431,7 @@ rule Ransom_MSIL_CryptoLocker_DH_2147773298_1
         $x_1_6 = "ConfuserEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -440,6 +456,7 @@ rule Ransom_MSIL_CryptoLocker_DI_2147775158_0
         $x_1_4 = "/C vssadmin.exe delete shadows /all /quiet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -472,6 +489,7 @@ rule Ransom_MSIL_CryptoLocker_DI_2147775158_1
         $x_1_12 = "_Encrypted$" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_40_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_40_*) and 2 of ($x_5_*))) or
@@ -502,6 +520,7 @@ rule Ransom_MSIL_CryptoLocker_DJ_2147775308_0
         $x_1_5 = "fuck360" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -530,6 +549,7 @@ rule Ransom_MSIL_CryptoLocker_DJ_2147775308_1
         $x_1_8 = "Como_Recuperar_Tus_Ficheros.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_20_*) and 1 of ($x_10_*) and 2 of ($x_5_*))) or

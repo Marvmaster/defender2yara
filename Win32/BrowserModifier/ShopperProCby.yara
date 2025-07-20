@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_ShopperProCby_208154_0
         $x_5_4 = "ChromeInstaller::EnableExtensionUnpack - Extension is successfully enabled" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_3_*))) or
             ((2 of ($x_5_*) and 1 of ($x_3_*))) or

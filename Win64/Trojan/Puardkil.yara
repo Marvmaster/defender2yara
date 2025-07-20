@@ -18,6 +18,7 @@ rule Trojan_Win64_Puardkil_A_2147734322_0
         $x_1_4 = "48 8D 05 ?? ?? ?? ?? ?? 89 ?? 08 01 00 00" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

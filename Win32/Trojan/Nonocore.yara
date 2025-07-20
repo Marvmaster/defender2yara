@@ -16,6 +16,7 @@ rule Trojan_Win32_Nonocore_SX_2147739723_0
         $x_1_1 = {59 f7 f9 0f af 45 ?? 89 45 ?? 0f b6 45 ?? 33 45 ?? 88 45 ?? 8b 45 ?? 03 45 ?? 8b 4d ?? 83 c1 ?? 0f af 4d ?? 03 c1 8b 4d ?? 03 4d ?? c1 e1 ?? 2b c1 03 45 ?? 89 45 ?? 8d 85 ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

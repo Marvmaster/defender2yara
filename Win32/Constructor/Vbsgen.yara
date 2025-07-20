@@ -20,6 +20,7 @@ rule Constructor_Win32_Vbsgen_A_2147643227_0
         $x_1_6 = "IE.AddressBar = False" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))

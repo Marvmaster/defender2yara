@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Codumwis_B_2147706069_0
         $x_1_4 = "SoHuVA_4.2.0.16-c204900003-ng-nti-tp-s-x.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

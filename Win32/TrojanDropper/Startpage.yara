@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Startpage_DE_2147616894_0
         $x_1_4 = "C:\\Program Files\\Internet Explorer\\iexplore.exe http://" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule TrojanDropper_Win32_Startpage_GG_2147631285_0
         $x_1_14 = "notepad.png" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -75,6 +77,7 @@ rule TrojanDropper_Win32_Startpage_B_2147636923_0
         $x_1_2 = {b8 66 06 00 00 39 45 10 be 88 08 00 00 75 17 50 ff 75 08 ff d7 6a 00 68 f4 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule TrojanDropper_Win32_Startpage_AB_2147642514_0
         $x_1_6 = "1nkfile\\shellex\\IconHandler" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -124,6 +128,7 @@ rule TrojanDropper_Win32_Startpage_ZA_2147642530_0
         $x_1_5 = "dianxin.online.cq.cn/api/taobao/index.htm" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +153,7 @@ rule TrojanDropper_Win32_Startpage_E_2147647011_0
         $x_1_5 = "www.1166f.com/?pop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -17,6 +17,7 @@ rule Ransom_Linux_LockBit_A_2147811314_0
         $x_2_2 = {44 0f b6 c9 45 0f b6 89 ?? ?? 42 00 41 c1 e1 18 44 31 c8 41 89 c9 41 c1 e9 10 45 0f b6 c9 45 0f b6 89 ?? ?? 42 00 41 c1 e1 08 44 31 c8 31 c7 89 82 a0 00 00 00 83 f0 36 31 fe 41 89 78 14 89 f2 41 89 70 18 31 ca 0f b6 ce}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Linux_LockBit_B_2147845304_0
         $x_1_3 = "bootsect.bak" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Ransom_Linux_LockBit_C_2147901586_0
         $x_1_3 = {ba ff ff ff ff be 01 00 00 00 48 89 ef e8 c1 fd fe ff 85 c0 79 2c 41 8b 04 24 83 f8 04 74 e1 83 f8 0b 74 dc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Ransom_Linux_LockBit_D_2147907541_0
         $x_2_2 = {0f b6 f7 89 ff 45 33 01 45 89 ed 4c 89 f0 44 33 04 b5 a0 6a 43 00 89 ce 0f b6 c4 c1 ee 10 40 0f b6 f6 44 33 04 b5 a0 6e 43 00 41 0f b6 f6 8b 34 b5 a0 66 43 00 33 34 bd a0 72 43 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Ransom_Linux_LockBit_E_2147909860_0
         $x_1_3 = {31 c0 48 85 ff 74 1c 66 83 3f 00 48 89 fa 74 13 48 83 c2 02 66 83 3a 00 75 f6 48 89 d0 48 29 f8 48 d1 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Ransom_Linux_LockBit_F_2147916314_0
         $x_1_2 = {0f 84 2a 00 00 00 e8 a6 1b 00 00 48 89 c2 b8 60 b4 43 00 48 8b 4c 24 18 48 8d 9c 24 10 11 00 00 48 89 de 48 89 c7 b8 00 00 00 00 e8 87 1b 00 00 48 8b 44 24 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Ransom_Linux_LockBit_I_2147918606_0
         $x_1_2 = {48 83 c4 08 5b 5d 41 5c 41 5d c3 e8 66 ee ff ff 83 38 23 74 cb 90 e8 5b ee ff ff 83 38 23 74 c0 48 89 d8 eb db}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

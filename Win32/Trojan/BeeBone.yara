@@ -23,6 +23,7 @@ rule Trojan_Win32_BeeBone_RPM_2147837013_0
         $x_1_8 = "SCHTASKS /DELETE /TN" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

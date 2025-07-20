@@ -19,6 +19,7 @@ rule Ransom_MSIL_GhostCrypt_PAA_2147809445_0
         $x_1_4 = "killme.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

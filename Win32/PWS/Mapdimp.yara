@@ -16,6 +16,7 @@ rule PWS_Win32_Mapdimp_C_2147611046_0
         $x_1_2 = {6a f4 ff 75 fc ff 15 ?? ?? ?? ?? 3d 9c 10 01 00 75 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule PWS_Win32_Mapdimp_A_2147611900_0
         $x_1_3 = {c7 45 f0 64 26 74 3d c7 45 f4 25 73 26 71 c7 45 f8 3d 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule PWS_Win32_Mapdimp_B_2147611901_0
         $x_1_3 = {83 c0 f8 8b cb f7 f1 01 5d ?? 83 c4 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule PWS_Win32_Mapdimp_D_2147615066_0
         $x_1_4 = {c7 45 ec 5f 4d 42 00 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -109,6 +113,7 @@ rule PWS_Win32_Mapdimp_E_2147615067_0
         $x_1_4 = {c7 45 ec 5f 4d 42 00 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -135,6 +140,7 @@ rule PWS_Win32_Mapdimp_F_2147615068_0
         $x_1_4 = {c7 45 ec 5f 4d 42 00 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))

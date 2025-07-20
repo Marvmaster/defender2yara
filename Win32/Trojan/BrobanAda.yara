@@ -18,6 +18,7 @@ rule Trojan_Win32_BrobanAda_A_2147688034_0
         $x_1_4 = "706C7567696E6368726F6D652E7A6970" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

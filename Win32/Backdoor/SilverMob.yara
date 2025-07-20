@@ -21,6 +21,7 @@ rule Backdoor_Win32_SilverMob_A_2147724641_0
         $x_1_6 = "\" goto loop" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_1_*))) or
             ((1 of ($x_20_*) and 1 of ($x_10_*))) or

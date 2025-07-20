@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Syten_A_2147696770_0
         $x_5_5 = "tby9yMG67O3vAanIvq8Bvr7f8O3u6+zp6vff+O/479/47/jv3+vs6+nt9/j36iUXdnsMEt+L8Ozv6e3" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or

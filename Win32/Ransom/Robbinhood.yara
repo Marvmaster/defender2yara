@@ -18,6 +18,7 @@ rule Ransom_Win32_Robbinhood_B_2147759247_0
         $x_1_3 = {8a 0c 37 80 e9 ?? 88 0c 30 46 3b f5 7c ba}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win32_Robbinhood_B_2147759247_1
         $x_10_6 = "function.enc_robbin_hood" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_Win32_Robbinhood_B_2147759247_2
         $x_10_6 = "Go build ID: \"GbDR9syJNsY0KEkc2yeo/WxCLZBUe_KSPefUo9FaI/iK00GaI0oV_ZuXJMjnzq/gfJBwJ_2fRFj5LH7GU_Q\"" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Ransom_Win32_Robbinhood_C_2147759248_0
         $x_5_3 = "_Square\\up\\winlogon.exe" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -120,6 +124,7 @@ rule Ransom_Win32_Robbinhood_A_2147759249_0
         $x_1_5 = "cmd.exe /c sc.exe stop ReportServer$SYSTEM_BGC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

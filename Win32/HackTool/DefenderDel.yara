@@ -29,6 +29,7 @@ rule HackTool_Win32_DefenderDel_SA_2147834558_0
         $x_1_15 = "wdnisdrv.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 7 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -64,6 +65,7 @@ rule HackTool_Win32_DefenderDel_SB_2147834559_0
         $x_1_12 = "wdnisdrv.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))

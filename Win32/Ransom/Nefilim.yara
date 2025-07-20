@@ -17,6 +17,7 @@ rule Ransom_Win32_Nefilim_GM_2147754444_0
         $x_1_2 = "/c WmIc ShaDowcoPY delEte" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Nefilim_PA_2147757433_0
         $x_1_4 = "\\sosat' kiki\\devka\\Release\\TELEGRAM.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

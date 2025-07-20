@@ -21,6 +21,7 @@ rule Trojan_Win32_Pubavid_A_2147634183_0
         $x_10_7 = {8b f1 99 f7 fe 8b 75 f8 8a 84 95 ?? ?? ff ff 30 06 ff 45 14 8b 45 14 3b 45 10 72 95 8b 45 08}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((3 of ($x_5_*))) or
@@ -50,6 +51,7 @@ rule Trojan_Win32_Pubavid_B_2147637334_0
         $x_1_3 = {42 41 56 31 44 4c 4c 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

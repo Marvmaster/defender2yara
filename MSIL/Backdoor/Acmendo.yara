@@ -24,6 +24,7 @@ rule Backdoor_MSIL_Acmendo_A_2147727041_0
         $x_1_9 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or

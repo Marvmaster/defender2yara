@@ -23,6 +23,7 @@ rule Trojan_Win32_Angosay_A_2147725680_0
         $x_1_9 = ":8080/getlogo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             ((1 of ($x_20_*))) or

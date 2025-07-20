@@ -16,6 +16,7 @@ rule TrojanDownloader_Win64_CobaltStrike_PE_2147828690_0
         $x_1_1 = {48 63 c9 48 03 c1 8b 0d ?? ?? ?? ?? 0f af 0d ?? ?? ?? ?? 48 63 c9 48 03 c1 48 63 0d ?? ?? ?? ?? 48 03 c1 48 63 0d ?? ?? ?? ?? 48 2b c1 48 63 0d ?? ?? ?? ?? 48 03 4c 24 ?? 0f b6 04 01 8b 4c 24 04 33 c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_Win64_CobaltStrike_A_2147893470_0
         $x_2_1 = {0f b7 4c 42 02 66 3b 4c 47 02 75 ?? 48 83 c0 02 48 83 f8 0d 74 ?? 0f b7 0c 42 66 3b 0c 47 74 ?? 48 8d 55 10 48 8b cb ff 15 ?? ?? ?? ?? 85 c0 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanDownloader_Win64_CobaltStrike_B_2147893503_0
         $x_2_3 = {48 63 c8 0f b6 44 0c ?? 41 30 00 ff c2 49 ff c0 48 63 c2 48 3b c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule TrojanDownloader_Win64_CobaltStrike_CCGB_2147900132_0
         $x_1_1 = {48 89 85 68 bd 0d 00 48 8b 8d 68 bd 0d 00 48 8d 15 14 2f 00 00 45 31 c0 45 31 c9 c7 44 24 20 00 00 00 80 48 c7 44 24 28 00 00 00 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule TrojanDownloader_Win64_CobaltStrike_GLG_2147911091_0
         $x_1_4 = "User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +131,7 @@ rule TrojanDownloader_Win64_CobaltStrike_RJD_2147931071_0
         $x_1_1 = {48 8b 55 10 48 8b 45 f8 48 01 d0 0f b6 08 8b 45 18 41 89 c0 48 8b 55 e8 48 8b 45 f8 48 01 d0 44 31 c1 89 ca 88 10 48 83 45 f8 01 48 8b 45 f8 48 3b 45 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

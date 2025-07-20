@@ -16,6 +16,7 @@ rule Ransom_Win32_Urausy_A_2147659866_0
         $x_1_2 = {b9 06 00 00 00 f3 ab c7 85 ?? ?? ff ff 18 00 00 00 c7 85 ?? ?? ff ff 40 00 00 00 8d 8d ?? ?? ff ff 8d 95 ?? ?? ff ff 8d 45 f8 51 52 6a 3a 50 68 ?? ?? 00 00 e8 ?? ?? ?? ?? 09 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Ransom_Win32_Urausy_C_2147670619_0
         $x_1_2 = {83 c9 ff 31 c0 f2 66 af c7 47 fa 6e 00 69 00 c7 47 f6 2e 00 69 00 56 ff 93 ?? ?? ?? ?? c7 47 fa 61 00 74 00 c7 47 f6 2e 00 64 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Ransom_Win32_Urausy_E_2147680191_0
         $x_1_3 = {c7 01 00 10 00 00 6a 40 68 00 10 00 00 51 50 57 6a ff ff 93 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Ransom_Win32_Urausy_E_2147680191_1
         $x_1_3 = {68 04 01 00 00 56 8b ?? e4 01 00 00 ff d0 e8 ?? 00 00 00 ff ?? 70 01 00 00 ff 14 24 ff ?? 80 01 00 00 6a 00 56 ff ?? 24 08 50 ff ?? 70 01 00 00 ff 14 24 58 58 [0-15] 68 00 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Ransom_Win32_Urausy_E_2147680191_2
         $x_2_6 = {40 00 c7 45 ?? ?? 18 00 00 c7 45 ?? 3a 00 00 00 c7 45 ?? 10 00 00 00 8b ?? ?? ?? 40 00 89 ?? d4 c7 45 ?? 00 00 40 00 c7 45 fc ?? ?? ?? ?? c7 45 c0 ?? ?? 00 00 8f 45 bc c7 45 ?? 00 00 00 00 eb 09 8b 55 b8 83 c2 01 89 55 b8 83 7d b8 0a 73 0b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -134,6 +139,7 @@ rule Ransom_Win32_Urausy_I_2147688124_0
         $x_1_5 = {26 6c 74 3b 00 26 67 74 3b 00 26 61 6d 70 3b 00 47 65 74 4d 6f 64 75 6c 65 46 69 6c 65 4e 61 6d 65 41}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

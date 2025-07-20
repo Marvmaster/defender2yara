@@ -16,6 +16,7 @@ rule Trojan_Win32_Encoder_A_2147657413_0
         $x_2_2 = "0586308904327131" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Encoder_B_2147671326_0
         $x_2_2 = "81825095086403177709" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Encoder_B_2147671326_1
         $x_1_4 = {7e 04 c6 45 fb 01 13 00 81 7d ?? 00 04 00 00 7d 0a 83 7d ?? 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

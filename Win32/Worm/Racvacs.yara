@@ -19,6 +19,7 @@ rule Worm_Win32_Racvacs_A_2147640889_0
         $x_1_5 = {f6 12 42 e2 fb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_GhostRat_BAK_2147843973_0
         $x_5_2 = {8b 4d bc 89 4d e4 6a 04 68 00 10 00 00 8b 55 e4 52 6a 00 ff 15}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_GhostRat_EH_2147846472_0
         $x_1_6 = "/c schtasks /create /sc onlogon /tn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_GhostRat_RP_2147911516_0
         $x_1_6 = "266b547cc0ad48a44c180346fd5a4619" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_GhostRat_ZL_2147914669_0
         $x_1_1 = {64 a1 30 00 00 00 e9 f5 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_Win32_GhostRat_IJ_2147915524_0
         $x_1_1 = {89 c7 01 9e 68 10 00 00 c7 40 0c 00 00 00 00 c7 40 10 00 00 00 00 89 58 04 c7 00 01 00 00 00 89 70 08 c1 f8 0c 8d 96 80 10 00 00 89 f1 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_Win32_GhostRat_AGH_2147918283_0
         $x_2_2 = "176.221.16.167" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +161,7 @@ rule Trojan_Win32_GhostRat_BSA_2147927065_0
         $x_1_2 = "STMEditor.Document" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_Win32_GhostRat_NIM_2147928745_0
         $x_1_2 = {64 a1 30 00 00 00 8b 40 0c 8b 70 1c ad 8b 40 08 8b f8 8b e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +209,7 @@ rule Trojan_Win32_GhostRat_AGR_2147933071_0
         $x_4_4 = "WINDOWS\\GGTALL\\GGTupdate.exe" wide //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -224,6 +233,7 @@ rule Trojan_Win32_GhostRat_INS_2147935298_0
         $x_1_3 = "Dkcsk.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

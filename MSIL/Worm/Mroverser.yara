@@ -18,6 +18,7 @@ rule Worm_MSIL_Mroverser_A_2147697417_0
         $x_1_4 = "R7TYj9WXMGK6QWP6+AKdymAznk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))

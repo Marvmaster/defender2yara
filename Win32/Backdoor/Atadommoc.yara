@@ -18,6 +18,7 @@ rule Backdoor_Win32_Atadommoc_A_2147634090_0
         $x_1_4 = {25 73 20 63 6c 69 65 6e 74 20 73 74 6f 70 70 65 64 [0-10] 25 73 20 63 6c 69 65 6e 74 20 73 74 61 72 74 65 64 [0-10] 65 78 65 [0-10] 31 37 38 2e 31 37 2e 31 36 33 2e 31 30 36}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_Win32_Atadommoc_B_2147641428_0
         $x_1_6 = "ForkInSpool():" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -69,6 +71,7 @@ rule Backdoor_Win32_Atadommoc_C_2147647287_0
         $x_1_3 = {63 6f 6d 6d 6f 6e 2e 64 61 74 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

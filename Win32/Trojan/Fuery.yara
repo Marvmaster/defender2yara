@@ -19,6 +19,7 @@ rule Trojan_Win32_Fuery_ASN_2147893186_0
         $x_1_4 = {68 1b 64 21 01 51 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

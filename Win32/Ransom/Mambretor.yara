@@ -17,6 +17,7 @@ rule Ransom_Win32_Mambretor_A_2147717347_0
         $x_10_3 = {68 00 64 00 30 00 00 00 73 74 61 72 74 20 68 61 72 64 20 64 72 69 76 65 20 65 6e 63}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Win32_Mambretor_A_2147717347_1
         $x_2_4 = {59 4f 55 52 49 44 3a 20 31 32 33 [0-16] 00 00 00 00 [0-16] 70 61 73 73 77 6f 72 64 20 69 6e 63 6f 72 72 65 63 74}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*))) or
@@ -70,6 +72,7 @@ rule Ransom_Win32_Mambretor_C_2147717878_0
         $x_1_7 = "& taskkill /im Mount.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -93,6 +96,7 @@ rule Ransom_Win32_Mambretor_E_2147718618_0
         $x_10_1 = "C:\\Users\\public.Unkonw\\Desktop\\CRP_95_08_30_v3\\CRP\\Release\\Mount.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Ransom_Win32_Mambretor_D_2147723055_0
         $x_1_7 = "2C:\\xampp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

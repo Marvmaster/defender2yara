@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Dinwod_B_2147711169_0
         $x_1_4 = "c:\\windows\\friendl.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule TrojanDropper_Win32_Dinwod_C_2147721145_0
         $x_2_7 = "Global\\_Net__thin" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or

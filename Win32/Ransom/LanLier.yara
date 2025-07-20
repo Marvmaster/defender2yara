@@ -20,6 +20,7 @@ rule Ransom_Win32_LanLier_R_2147734902_0
         $x_1_5 = "[BACKUPS][DRIVES][SHARES][EXTENSION]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

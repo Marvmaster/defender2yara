@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Small_ALH_2147574434_0
         $x_1_6 = "system32\\drivers\\%s.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDropper_Win32_Small_OT_2147593294_0
         $x_1_1 = {8b 85 c0 fe ff ff 40 89 85 c0 fe ff ff 8b 85 c0 fe ff ff 3b 45 e4 73 3b 8b 85 c0 fe ff ff 69 c0 ?? ?? ?? ?? 0f af 85 c0 fe ff ff 8b 8d c0 fe ff ff 69 c9 ?? ?? ?? ?? 03 c8 8b 45 e8 03 85 c0 fe ff ff 8a 00 32 c1 8b 4d e8 03 8d c0 fe ff ff 88 01 eb ad ff 75 e8 e8 ?? ?? ?? ?? 59 89 85 c4 fe ff ff 83 bd c4 fe ff ff 00 75 04 33 c0 eb 4b 68 ?? ?? ?? ?? ff b5 c4 fe ff ff e8 ?? ?? ?? ?? 59 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule TrojanDropper_Win32_Small_DAN_2147600179_0
         $x_1_6 = "dllcache\\beep.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule TrojanDropper_Win32_Small_NBV_2147601054_0
         $x_5_3 = "c:\\ntlcs.exe" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -114,6 +118,7 @@ rule TrojanDropper_Win32_Small_NBW_2147601148_0
         $x_1_5 = {be f4 10 40 00 8d bd a0 fc ff ff a5 66 a5 a4 33 c0 8d bd a7 fc ff ff aa 68 fc 10 40 00 8d 85 a0 fc ff ff 50 ff 15 ?? ?? ?? ?? 8d 45 c4 50 ff 15 ?? ?? ?? ?? 85 c0 74 2e 6a 40 ff 75 fc ff 15 ?? ?? ?? ?? 6a 01 ff 75 fc ff 15 ?? ?? ?? ?? 6a 00 8d 85 b0 fd ff ff 50 6a 05 6a 04 ff 15 ?? ?? ?? ?? 33 c0 40 eb 20 6a 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule TrojanDropper_Win32_Small_NBX_2147606749_0
         $x_1_3 = {83 c6 03 83 c7 03 83 f9 08 72 cc f3 a5 ff 24 95 ?? ?? 00 10 8d 49 00 23 d1 8a 06 88 07 8a 46 01 c1 e9 02 88 47 01 83 c6 02 83 c7 02 83 f9 08 72 a6 f3 a5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule TrojanDropper_Win32_Small_AJS_2147607790_0
         $x_1_1 = {ff 53 f8 40 74 46 48 86 e4 50 56 6a 00 54 86 e4 83 2c 24 50 55 57 86 f6 50 ff 53 e4 5e 9b ff 53 f4 8b 54 24 04 86 f6 8b 04 24 6a 01 6a 00 6a 00 50 6a 00 9b 6a 00 ff d2 86 e4 03 fd 90 57 ff 53 e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -180,6 +187,7 @@ rule TrojanDropper_Win32_Small_FI_2147609558_0
         $x_1_5 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +214,7 @@ rule TrojanDropper_Win32_Small_N_2147616874_0
         $x_1_6 = "AcroRd32.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -232,6 +241,7 @@ rule TrojanDropper_Win32_Small_PM_2147624761_0
         $x_1_3 = {8b 55 08 03 55 fc 8a 02 2c ?? 8b 4d 08 03 4d fc 88 01 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -255,6 +265,7 @@ rule TrojanDropper_Win32_Small_DK_2147832932_0
         $x_1_3 = "Couldn't get IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +287,7 @@ rule TrojanDropper_Win32_Small_ARA_2147896555_0
         $x_2_1 = {73 18 0f b6 84 24 bc 00 00 00 30 02 89 f8 42 03 84 24 bd 00 00 00 39 c2 eb e6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +310,7 @@ rule TrojanDropper_Win32_Small_PABT_2147897556_0
         $x_1_2 = {8b 55 08 03 55 fc 0f be 02 33 45 0c 8b 4d f4 03 4d fc 88 01 8b 55 fc 83 c2 01 89 55 fc 8b 45 f0 89 45 ec 8b 4d f0 83 e9 01 89 4d f0 83 7d ec 00 75 ce}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -319,6 +332,7 @@ rule TrojanDropper_Win32_Small_PACT_2147900200_0
         $x_2_1 = {8a 46 04 8a c8 80 e1 01 0f b6 7e 05 fe c9 f6 d9 1b c9 24 08 2c 08 41 f6 d8 89 4c 24 18 1b c0 40 89 44 24 10 0f b6 46 06 c1 e7 08 03 f8 0f b6 46 07 c1 e7 08 03 f8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -341,6 +355,7 @@ rule TrojanDropper_Win32_Small_PACV_2147900201_0
         $x_1_2 = "Infected" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +378,7 @@ rule TrojanDropper_Win32_Small_HNS_2147904415_0
         $x_1_2 = {6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

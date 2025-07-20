@@ -41,6 +41,7 @@ rule Backdoor_Win32_Cycbot_B_2147789622_0
         $x_3_27 = {b8 28 01 00 00 39 06 75 ?? 8b 4d ?? 3b cb 74 08 3b 8e 08 01 00 00 75 ?? 8b 8d ?? ?? ff ff 3b cb 74 08 8b 96 0c 01 00 00 89 11 39 5d ?? 75}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -74,6 +75,7 @@ rule Backdoor_Win32_Cycbot_C_2147792403_0
         $x_1_5 = "at %d:%d \"%s\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -102,6 +104,7 @@ rule Backdoor_Win32_Cycbot_A_2147792444_0
         $x_1_5 = {c6 45 ac 56 88 5d ad c6 45 ae 53 88 5d af c6 45 b0 5f 88 5d b1 c6 45 b2 56 88 5d b3 c6 45 b4 45}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

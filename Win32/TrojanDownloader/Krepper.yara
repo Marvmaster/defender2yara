@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_Krepper_2147799824_0
         $x_2_10 = "mm.exe mm4.exe %ACCOUNT%" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 7 of ($x_2_*))) or
             ((2 of ($x_3_*) and 6 of ($x_2_*))) or

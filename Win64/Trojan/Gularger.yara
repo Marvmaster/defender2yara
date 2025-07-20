@@ -17,6 +17,7 @@ rule Trojan_Win64_Gularger_G_2147749584_0
         $x_2_2 = {44 0f b6 5c 24 21 48 8b 44 24 38 42 0f b6 14 18 0f b6 4c 24 20 48 8b 44 24 38 0f b6 0c 08 8b c2 03 c1 99 81 e2 ff 00 00 00 03 c2 25 ff 00 00 00 2b c2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

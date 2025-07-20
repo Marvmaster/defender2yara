@@ -23,6 +23,7 @@ rule Ransom_Win32_TxDot_AB_2147766218_0
         $x_1_8 = "The PRICE depends on how quickly you do it" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

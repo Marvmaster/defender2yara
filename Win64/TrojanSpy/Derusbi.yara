@@ -19,6 +19,7 @@ rule TrojanSpy_Win64_Derusbi_2147711364_0
         $x_1_4 = "rundll32 \"%s\", Run32 %s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

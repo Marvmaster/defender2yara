@@ -18,6 +18,7 @@ rule Ransom_Win64_BastaLoader_AA_2147842876_0
         $x_1_3 = "VisibleEntry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Win64_BastaLoader_NE_2147894438_0
         $x_1_2 = {31 3a 3a 9c 59 ?? ?? ?? ?? ec d3 c7 42 63 43}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Ransom_Win64_BastaLoader_KF_2147899735_0
         $x_1_2 = {89 c8 3b 70 ?? 30 89 ?? ?? ?? ?? 29 aa ?? ?? ?? ?? 89 c8 00 89 ?? ?? ?? ?? 89 c0 05 ?? ?? ?? ?? 0d ?? ?? ?? ?? 0d ?? ?? ?? ?? 0d ?? ?? ?? ?? 69 be ?? ?? ?? ?? ?? ?? ?? ?? 7b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

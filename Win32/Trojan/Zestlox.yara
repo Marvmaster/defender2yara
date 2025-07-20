@@ -16,6 +16,7 @@ rule Trojan_Win32_Zestlox_A_2147614113_0
         $x_1_2 = {69 6e 73 73 2f 4e 65 77 56 65 72 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Zestlox_C_2147620379_0
         $x_1_4 = "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

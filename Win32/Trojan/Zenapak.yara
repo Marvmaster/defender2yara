@@ -19,6 +19,7 @@ rule Trojan_Win32_Zenapak_CCCJ_2147892629_0
         $x_1_4 = {66 00 65 00 6d 00 61 00 6c 00 65 00 73 00 61 00 69 00 64 00 4c 00 36 00 68 00 48}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Zenapak_CCCK_2147892640_0
         $x_1_4 = {6b 00 69 00 6e 00 64 00 73 00 65 00 63 00 6f 00 6e 00 64 00 39 00 4d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Zenapak_CCCQ_2147893066_0
         $x_1_4 = "sVUnderfirmament" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_Zenapak_CCDI_2147894771_0
         $x_1_1 = {01 da 81 c2 ?? ?? ?? ?? 0f b7 12 31 f2 8b b5 ?? ?? ?? ?? 01 ce 89 34 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Win32_Zenapak_CCDZ_2147896557_0
         $x_1_1 = {0f b7 c7 0f b7 ce 31 d8 8b 9d ?? ?? ?? ?? 31 d9 8b 9d ?? ?? ?? ?? 01 d8 8b 9d ?? ?? ?? ?? 01 d9 81 c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Trojan_Win32_Zenapak_CCEN_2147897374_0
         $x_1_1 = {01 c2 81 c2 ?? ?? ?? ?? 8b 03 0f b7 12 31 c2 01 ca 81 fe ?? ?? ?? ?? 89 d0 89 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

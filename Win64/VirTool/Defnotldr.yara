@@ -18,6 +18,7 @@ rule VirTool_Win64_Defnotldr_A_2147941786_0
         $x_1_4 = "--verbose" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

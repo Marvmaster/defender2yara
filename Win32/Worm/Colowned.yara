@@ -34,6 +34,7 @@ rule Worm_Win32_Colowned_A_2147643064_0
         $x_2_20 = {75 70 64 61 74 65 66 75 63 6b 65 72 75 70 64 61 74 65 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or

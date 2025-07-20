@@ -18,6 +18,7 @@ rule Ransom_MSIL_Deniz_K_2147750882_0
         $x_1_3 = {65 00 76 00 62 00 [0-5] 74 00 6d 00 70 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

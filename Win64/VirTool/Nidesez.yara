@@ -20,6 +20,7 @@ rule VirTool_Win64_Nidesez_A_2147853079_0
         $x_1_5 = {48 8b c2 89 4d 04 48 8d ?? ?? ?? ?? ?? 48 89 4d 88 0f 11 45 a4 48 8b 08 0f 11 45 b4 0f 11 45 c4 0f 11 45 d4 0f 11 45 e4 0f 11 45 f4 0f 11 44 24 78 ff 15 ?? ?? ?? ?? 48}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

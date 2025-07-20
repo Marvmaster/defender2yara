@@ -23,6 +23,7 @@ rule Backdoor_Win64_Dridex_AX_2147786455_0
         $x_3_8 = "SetupQuerySpaceRequiredOnDriveW" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Backdoor_Win64_Dridex_AY_2147787521_0
         $x_3_6 = "MprAdminUserGetInfo" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

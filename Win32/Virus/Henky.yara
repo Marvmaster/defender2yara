@@ -18,6 +18,7 @@ rule Virus_Win32_Henky_A_2147602538_0
         $x_1_3 = {8b 04 24 66 33 c0 80 38 4d 74 ?? 2d 00 10 00 00 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

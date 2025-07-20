@@ -20,6 +20,7 @@ rule Rogue_Win32_FakeSecSen_128264_0
         $x_1_6 = "TheSpyBot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Rogue_Win32_FakeSecSen_128264_1
         $x_1_8 = "Internet connection is unavailable." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -72,6 +74,7 @@ rule Rogue_Win32_FakeSecSen_128264_2
         $x_1_2 = "IE Antivir" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Rogue_Win32_FakeSecSen_128264_3
         $x_1_4 = "Loading..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule Rogue_Win32_FakeSecSen_128264_4
         $x_1_6 = {35 34 35 00 53 4f 46 54 57 41 52 45 5c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -147,6 +152,7 @@ rule Rogue_Win32_FakeSecSen_128264_5
         $x_1_4 = {07 04 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? eb 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 4f 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ea 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 06 00 4c 00 31 00 2e 00 47 00 49 00 46 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -174,6 +180,7 @@ rule Rogue_Win32_FakeSecSen_128264_6
         $x_4_8 = {83 f8 06 0f 85 ?? ?? 00 00 14 00 6a 04 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 00 ff 15}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 4 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -209,6 +216,7 @@ rule Rogue_Win32_FakeSecSen_128264_7
         $x_1_8 = "&advid=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -262,6 +270,7 @@ rule Rogue_Win32_FakeSecSen_128264_8
         $x_8_30 = {78 e6 a9 e7 9e 7c 82 91 47 3d 80 06 5a a5 2c 0d ac 12 cd 39 9d 74 32 09 2a a0 00 f3 48 25 60 5a 62 8e 2c be f4 a2 8a 22 c1 04 5a 8f 0e 07 e8 a0}  //weight: 8, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((10 of ($x_1_*))) or

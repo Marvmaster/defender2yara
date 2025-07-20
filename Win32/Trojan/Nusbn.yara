@@ -20,6 +20,7 @@ rule Trojan_Win32_Nusbn_B_2147696281_0
         $x_5_6 = "222.186.60.89:1123" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

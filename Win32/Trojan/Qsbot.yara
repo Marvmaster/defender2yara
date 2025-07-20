@@ -16,6 +16,7 @@ rule Trojan_Win32_Qsbot_A_2147641185_0
         $x_1_2 = {0f b7 10 66 89 14 06 83 c0 02 66 85 d2 75 f1 6a 00 8d 54 24 0c 52 6a 00 6a 00 68 ?? 0c 00 00 8d 41 04 8b 09 50 68 00 24 22 00 51 ff 15 ?? ?? ?? ?? 85 c0 0f 95 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

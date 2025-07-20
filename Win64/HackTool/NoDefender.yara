@@ -18,6 +18,7 @@ rule HackTool_Win64_NoDefender_MBYK_2147914467_0
         $x_1_3 = "/runassvc /rpcserver /wsc_name" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

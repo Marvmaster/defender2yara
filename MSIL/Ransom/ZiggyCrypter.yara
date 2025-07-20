@@ -19,6 +19,7 @@ rule Ransom_MSIL_ZiggyCrypter_PA_2147771809_0
         $x_1_4 = "Ziggy Ransomware" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

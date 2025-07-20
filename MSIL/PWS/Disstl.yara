@@ -22,6 +22,7 @@ rule PWS_MSIL_Disstl_ABJ_2147829606_0
         $x_1_7 = "Q29yb25vdmlydXMuQ29yb25vdmlydXM=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule PWS_MSIL_Disstl_AD_2147838634_0
         $x_1_4 = "Windows\\ClipperClipboard.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

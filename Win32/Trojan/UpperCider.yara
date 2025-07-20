@@ -17,6 +17,7 @@ rule Trojan_Win32_UpperCider_A_2147730356_0
         $x_1_2 = {5e 8a 10 30 11 40 41 4e 75 ?? 4f 75 02 00 6a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_UpperCider_B_2147730357_0
         $x_10_5 = {6a 00 68 14 04 00 03 6a 00 6a 00 6a 00 8d [0-6] 6a 00 ff 15 ?? ?? ?? ?? 85 c0 74 ?? ?? ?? ?? ?? 6a 40 68 00 30 00 00 57 6a 00 52 ff 15 [0-27] 6a 00 57 50 56 51 ff 15 ?? ?? ?? ?? 85 c0 [0-8] 6a 00 6a 00 6a 00 56 6a 00 6a 00 52 ff 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_3_*))) or
             ((1 of ($x_10_*) and 2 of ($x_3_*))) or
@@ -72,6 +74,7 @@ rule Trojan_Win32_UpperCider_C_2147730358_0
         $x_5_4 = {83 e8 04 83 c1 04 83 c7 04 83 f8 04 73 ?? 85 c0 74 ?? 8a 19 3a 1f 75 ?? 83 f8 01 76 ?? 8a 59 01 3a 5f 01 75 ?? 83 f8 02 76 ?? 8a 41 02 3a 47 02 75 ?? 5b b8 ?? ?? ?? ?? 5f 2b c6}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_3_*))) or
             ((2 of ($x_5_*))) or

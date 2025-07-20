@@ -26,6 +26,7 @@ rule TrojanDownloader_Win32_Nekotimed_A_2147648268_0
         $x_2_12 = "soft_lock" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*) and 5 of ($x_2_*))) or
             ((4 of ($x_4_*) and 3 of ($x_2_*))) or

@@ -17,6 +17,7 @@ rule Worm_Win32_Kzerab_A_2147615791_0
         $x_2_3 = {81 7d fc 09 0a 00 00 73 3b c7 45 f8 00 00 00 00 eb 09 8b 4d f8 83 c1 01 89 4d f8 83 7d f8 04 73 21}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))

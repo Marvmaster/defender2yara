@@ -17,6 +17,7 @@ rule Worm_Win32_Nekav_C_2147635772_0
         $x_1_3 = {fe 45 ff 80 7d ff 5b 0f 85 ?? ?? ?? ?? 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

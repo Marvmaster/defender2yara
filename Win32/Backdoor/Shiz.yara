@@ -17,6 +17,7 @@ rule Backdoor_Win32_Shiz_DF_2147821123_0
         $x_1_2 = {8b 44 24 0c 33 db 8a de 8d 0c 06 8a 04 06 32 d8 66 0f b6 c0 03 c2 ba bf 58 00 00 69 c0 93 31 00 00 2b d0 46 3b 74 24 10 88 19 72 d4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

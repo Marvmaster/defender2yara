@@ -19,6 +19,7 @@ rule Ransom_MSIL_HydraCrypt_DA_2147774380_0
         $x_1_4 = "Algorithms used are AES and RSA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_MSIL_HydraCrypt_DB_2147774382_0
         $x_1_6 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Ransom_MSIL_HydraCrypt_DC_2147774383_0
         $x_1_4 = "Fucked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Ransom_MSIL_HydraCrypt_PA_2147808421_0
         $x_1_3 = "\\HYDRA.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

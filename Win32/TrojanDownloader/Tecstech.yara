@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Tecstech_A_2147724557_0
         $x_1_4 = {54 69 6d 65 72 31 00 00 54 69 6d 65 72 32 00 00 54 69 6d 65 72 33}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

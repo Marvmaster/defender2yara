@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Keodoct_A_2147709650_0
         $x_1_5 = "\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

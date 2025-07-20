@@ -19,6 +19,7 @@ rule Ransom_MSIL_TRIPLEM_DA_2147766855_0
         $x_1_4 = "DECRYPT_FILES.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

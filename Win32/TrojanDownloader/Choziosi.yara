@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Choziosi_A_2147809950_0
         $x_1_6 = "deScramble" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -48,6 +49,7 @@ rule TrojanDownloader_Win32_Choziosi_VS_2147819690_0
         $x_1_4 = "deScramble" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

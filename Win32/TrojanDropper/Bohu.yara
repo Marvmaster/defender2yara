@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Bohu_A_2147641422_0
         $x_1_5 = "msfsg.exe uncompress -s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDropper_Win32_Bohu_B_2147641801_0
         $x_1_4 = "svr.asp?t=uuplay&u=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -66,6 +68,7 @@ rule TrojanDropper_Win32_Bohu_GNX_2147852655_0
         $x_10_1 = {41 00 f0 a1 41 00 9b a2 41 00 9b a2 41 00 1a a2 41 00 2a a2 41 00 9b a2 41 00 a4 a2 41 00 a4 a2 41 00 8e a1 41 00 8e a1 41 00 9c a1 41 00 9b a2 41 00 a6 a1 41 00 a6 a1 41 00 9b a2 41 00 9b a2 41 00 9b a2}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

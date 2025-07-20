@@ -17,6 +17,7 @@ rule Ransom_Win32_TeslaCryptPacker_2147809325_0
         $x_1_2 = {85 d2 74 09 8b 45 ?? ?? 45 ?? 89 45 ?? 8b 4d ?? ?? 4d ?? 85 c9 74 09 8b 55 ?? ?? 55 ?? 89 55 ?? 8b 45 ?? ?? 45 ?? 85 c0 74 09 8b 4d ?? ?? 4d ?? 89 4d ?? 8b 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win32_Runwaprep_A_2147716534_0
         $x_1_6 = {8b ce 8a 14 06 80 f2 23 ff 45 d0 88 14 01 40 83 f8 14 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

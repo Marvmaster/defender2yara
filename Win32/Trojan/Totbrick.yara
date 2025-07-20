@@ -19,6 +19,7 @@ rule Trojan_Win32_Totbrick_A_2147717914_0
         $x_1_5 = {47 00 45 00 54 00 00 00 2f 00 25 00 73 00 2f 00 25 00 73 00 2f 00 30 00 2f 00 25 00 73 00 2f 00 25 00 73 00 2f 00 25 00 73 00 2f 00 25 00 73 00 2f 00 25 00 73 00 2f 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             ((2 of ($x_4_*) and 1 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule Trojan_Win32_Totbrick_C_2147719039_0
         $x_1_3 = {83 c0 41 66 89 04 53 8b 45 fc 66 83 3c 43 46 76 0c b9 e9 ff 00 00 66 01 0c 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Totbrick_D_2147719655_0
         $x_1_2 = {46 80 3e 23 75 21 8d 46 01 50 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_Totbrick_2147721993_0
         $x_1_2 = {89 54 24 08 b8 ?? 00 00 00 89 44 24 04 ba 14 00 00 00 89 54 24 0c 51 e9 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule Trojan_Win32_Totbrick_H_2147725005_0
         $x_3_16 = {74 33 8b 4d 10 8b 55 0c 57 8d 45 fc 50 a1 ?? ?? ?? ?? 51 8b 88 ec 00 00 00 52 56 ff d1}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -198,6 +203,7 @@ rule Trojan_Win32_Totbrick_2147741162_0
         $x_1_2 = {8b c3 2b c1 83 c0 03 8b d0 0f af d3 69 d2 ?? ?? ?? ?? 81 c7 ?? ?? ?? ?? 89 7d 00 39 15 ?? ?? ?? ?? a3 ?? ?? ?? ?? 77}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +228,7 @@ rule Trojan_Win32_Totbrick_2147741162_1
         $x_1_4 = {33 d2 8b c1 f7 f3 0f b6 04 2a 8b 54 8c 10 03 c7 03 c2 8b f8 81 e7 ?? ?? ?? ?? 79}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -272,6 +279,7 @@ rule Trojan_Win32_Totbrick_AD_2147742847_0
         $x_1_2 = {8b 44 24 14 8b 15 ?? ?? ?? ?? 89 10 a1 ?? ?? ?? ?? 0f af 05 ?? ?? ?? ?? 3d ?? ?? ?? ?? 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

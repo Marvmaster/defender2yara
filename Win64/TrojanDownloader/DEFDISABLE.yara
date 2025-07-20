@@ -20,6 +20,7 @@ rule TrojanDownloader_Win64_DEFDISABLE_DA_2147913277_0
         $x_1_5 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

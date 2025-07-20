@@ -17,6 +17,7 @@ rule Trojan_Win64_Reflexon_LK_2147847993_0
         $x_1_2 = {50 72 6f 6a 65 63 74 [0-4] 5f 42 79 70 61 73 73 48 6f 6f 6b 5c 78 36 34 5c 52 65 6c 65 61 73 65 5c 50 72 6f 6a 65 63 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

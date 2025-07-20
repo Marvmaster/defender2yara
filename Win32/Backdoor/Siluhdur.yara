@@ -17,6 +17,7 @@ rule Backdoor_Win32_Siluhdur_A_2147608546_0
         $x_1_2 = {83 7c c2 08 00 74 24 8b 06 8d 04 80 8b 17 8b 44 c2 08 8b 15 ?? ?? ?? ?? 8b 52 38 e8 ?? ?? ff ff 03 05 ?? ?? ?? ?? a3 ?? ?? ?? ?? ff 06 4b 0f 85 ?? ff ff ff c7 05 ?? ?? ?? ?? 07 00 01 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

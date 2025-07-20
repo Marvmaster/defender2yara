@@ -16,6 +16,7 @@ rule MonitoringTool_Win32_FamilyKeylogger_5185_0
         $x_5_2 = "mailto:suport@spyarsenal.com?subject=FKL4" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule MonitoringTool_Win32_FamilyKeylogger_5185_1
         $x_1_3 = {c7 05 0c 21 01 10 00 00 00 00 68 c0 a1 00 10 8d 8d 0e 00 80 bd 20 ?? ff ff 0d 75 ?? 83 fb 01 75 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? fe ff ff 51 ff 15 14 a0 00 10 68 00 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule MonitoringTool_Win32_FamilyKeylogger_5185_2
         $x_1_6 = "SysVContoller32" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or

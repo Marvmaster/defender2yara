@@ -25,6 +25,7 @@ rule Backdoor_MSIL_Cooatut_A_2147687565_0
         $x_1_11 = "RemoteAudio" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

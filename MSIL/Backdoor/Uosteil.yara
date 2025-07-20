@@ -19,6 +19,7 @@ rule Backdoor_MSIL_Uosteil_A_2147709917_0
         $x_1_5 = {4d 65 6c 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Backdoor_MSIL_Uosteil_A_2147709917_1
         $x_1_7 = "/C choice /C Y /N /D Y /T 3 & Del \"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

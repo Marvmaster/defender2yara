@@ -17,6 +17,7 @@ rule Trojan_WinNT_Wador_A_2147649314_0
         $x_1_3 = {3d 80 21 10 80 74 ?? 3d 84 21 10 80 74 ?? 3d 88 21 10 80 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

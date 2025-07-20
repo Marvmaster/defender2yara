@@ -18,6 +18,7 @@ rule Backdoor_MSIL_AveMariaRAT_A_2147835967_0
         $x_1_3 = "ToWin32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Backdoor_MSIL_AveMariaRAT_B_2147835973_0
         $x_1_7 = "NtWriteVirtualMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Backdoor_MSIL_AveMariaRAT_C_2147837517_0
         $x_2_3 = {00 00 01 a2 14 14 14 28 ?? 00 00 0a 28 ?? 00 00 0a 6f ?? ?? 00 0a 0b 00 18 8d ?? 00 00 01 25 17 16 8d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Backdoor_MSIL_AveMariaRAT_D_2147837528_0
         $x_1_6 = "HttpWebRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Worm_MSIL_Dureelie_A_2147685582_0
         $x_1_7 = "synSocket" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

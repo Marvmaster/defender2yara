@@ -21,6 +21,7 @@ rule TrojanDropper_MSIL_Golbla_A_2147692123_0
         $x_1_7 = {07 11 04 02 11 04 91 06 11 04 06 8e b7 5d 91 09 d6 20 ff 00 00 00 5f 61 b4 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule Trojan_MSIL_Growpia_AA_2147769836_0
         $x_1_9 = "\\AppData\\Roaming\\Services.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

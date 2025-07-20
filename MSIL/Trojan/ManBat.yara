@@ -16,6 +16,7 @@ rule Trojan_MSIL_ManBat_KAA_2147905521_0
         $x_1_1 = {11 04 11 08 11 04 11 08 91 07 11 08 91 61 9c 11 08 17 d6 13 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

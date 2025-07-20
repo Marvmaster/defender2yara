@@ -18,6 +18,7 @@ rule Trojan_Win32_Sosdein_A_2147646261_0
         $x_1_4 = "%d~CPU/%u~MHz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

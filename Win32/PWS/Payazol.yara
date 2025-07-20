@@ -24,6 +24,7 @@ rule PWS_Win32_Payazol_A_2147646909_0
         $x_8_10 = {8b 08 ff 51 68 a1 ?? ?? 49 00 8b 00 8b 80 14 03 00 00 8b 80 20 02 00 00 8b 55 fc 8b 08 ff 51 38 a1}  //weight: 8, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 6 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_8_*) and 4 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -72,6 +73,7 @@ rule PWS_Win32_Payazol_B_2147648090_0
         $x_1_22 = "counter.sina.com.cn/ip" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_2_*) and 8 of ($x_1_*))) or
             ((1 of ($x_4_*) and 9 of ($x_2_*) and 8 of ($x_1_*))) or

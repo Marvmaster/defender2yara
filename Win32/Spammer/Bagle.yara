@@ -53,6 +53,7 @@ rule Spammer_Win32_Bagle_2147580902_0
         $x_1_39 = "Kaspersky" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((32 of ($x_1_*))) or
             ((1 of ($x_2_*) and 30 of ($x_1_*))) or

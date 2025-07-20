@@ -19,6 +19,7 @@ rule Ransom_MSIL_DarkCrypt_PAA_2147797958_0
         $x_1_4 = "Important Things Are Encrypted" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_MSIL_Zenpack_KAA_2147921803_0
         $x_1_2 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

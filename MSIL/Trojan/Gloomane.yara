@@ -18,6 +18,7 @@ rule Trojan_MSIL_Gloomane_SK_2147902823_0
         $x_2_3 = "FuckTheSystem Copyright" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

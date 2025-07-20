@@ -26,6 +26,7 @@ rule Ransom_MSIL_BlackSkull_YAA_2147911749_0
         $x_1_11 = "Recover_Your_Files.html" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

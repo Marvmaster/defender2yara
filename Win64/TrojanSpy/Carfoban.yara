@@ -31,6 +31,7 @@ rule TrojanSpy_Win64_Carfoban_A_2147716466_0
         $x_1_17 = "bra*de*sco" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or

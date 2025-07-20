@@ -20,6 +20,7 @@ rule HackTool_Win32_Rdpbrute_2147648831_0
         $x_1_6 = {25 64 2e 25 64 2e 25 64 2e 25 64 2d 25 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule HackTool_Win32_Rdpbrute_B_2147648843_0
         $x_1_5 = {43 20 25 73 20 2d 20 25 73 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

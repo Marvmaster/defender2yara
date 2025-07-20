@@ -18,6 +18,7 @@ rule Ransom_Win32_Sorikrypt_A_2147712433_0
         $x_2_4 = {83 fa 10 75 02 33 d2 ac 32 04 1a aa 42 49 75 f0 61}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

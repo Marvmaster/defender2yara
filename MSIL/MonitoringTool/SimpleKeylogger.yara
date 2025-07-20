@@ -18,6 +18,7 @@ rule MonitoringTool_MSIL_SimpleKeylogger_205052_0
         $x_1_4 = "Click To view KeyStroke Report" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule MonitoringTool_MSIL_SimpleKeylogger_205052_1
         $x_1_5 = "Start logging all keyboard activities" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

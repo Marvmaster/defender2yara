@@ -17,6 +17,7 @@ rule Trojan_Win32_Bocinex_A_2147654778_0
         $x_1_2 = "dload.asia:8332/ -u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Bocinex_B_2147656837_0
         $x_5_4 = ".exe -g yes -o http://" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

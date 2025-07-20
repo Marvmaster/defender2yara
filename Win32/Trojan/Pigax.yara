@@ -20,6 +20,7 @@ rule Trojan_Win32_Pigax_A_2147621727_0
         $x_1_5 = {66 89 45 10 66 81 7d 10 94 01 75 0e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -20,6 +20,7 @@ rule Ransom_MSIL_TinyEvil_DA_2147772265_0
         $x_1_5 = "Encrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

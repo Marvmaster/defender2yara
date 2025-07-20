@@ -26,6 +26,7 @@ rule Worm_Win32_Respup_A_2147611359_0
         $x_1_12 = "Drive F:\\ infected" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

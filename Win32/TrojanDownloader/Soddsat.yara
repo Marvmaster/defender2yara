@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Soddsat_A_2147654603_0
         $x_1_2 = {44 3a 5c 77 69 6e 64 6f 73 2e 64 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

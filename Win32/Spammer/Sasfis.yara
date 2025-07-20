@@ -28,6 +28,7 @@ rule Spammer_Win32_Sasfis_A_2147628791_0
         $x_1_14 = "User-Agent: KMail/1.9.7" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 5 of ($x_1_*))) or
             ((6 of ($x_2_*) and 3 of ($x_1_*))) or

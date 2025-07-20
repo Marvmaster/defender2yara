@@ -20,6 +20,7 @@ rule TrojanDownloader_MSIL_Seluoz_A_2147685789_0
         $x_1_6 = "dlurl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

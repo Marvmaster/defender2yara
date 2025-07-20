@@ -16,6 +16,7 @@ rule Trojan_Win32_Prometei_CCIR_2147936494_0
         $x_1_1 = {8a d9 02 da 30 18 85 c9 74 ?? 40 8d 98 ?? ?? ?? ?? 49 03 d7 3b de 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Prometei_APR_2147936605_0
         $x_1_6 = "sqhost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

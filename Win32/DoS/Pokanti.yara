@@ -17,6 +17,7 @@ rule DoS_Win32_Pokanti_A_2147617985_0
         $x_1_3 = "VirBok3p" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

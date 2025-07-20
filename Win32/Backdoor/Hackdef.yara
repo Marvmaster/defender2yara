@@ -120,6 +120,7 @@ rule Backdoor_Win32_Hackdef_A_2147792329_0
         $x_2_105 = {5c 5c 2e 5c 6d 61 69 6c 73 6c 6f 74 5c [0-6] 62 63 63}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 14 of ($x_1_*))) or
             ((3 of ($x_2_*) and 12 of ($x_1_*))) or
@@ -217,6 +218,7 @@ rule Backdoor_Win32_Hackdef_C_2147792432_0
         $x_2_13 = "LockServiceDatabase" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_3_*) and 6 of ($x_2_*))) or
             ((5 of ($x_3_*) and 5 of ($x_2_*))) or
@@ -256,6 +258,7 @@ rule Backdoor_Win32_Hackdef_AR_2147792475_0
         $x_1_14 = "cmd.exe /C taskkill /F /IM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -288,6 +291,7 @@ rule Backdoor_Win32_Hackdef_AV_2147792476_0
         $x_1_12 = "URLDownloadToFileW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

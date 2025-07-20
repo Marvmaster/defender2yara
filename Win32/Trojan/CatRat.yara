@@ -17,6 +17,7 @@ rule Trojan_Win32_CatRat_A_2147755477_0
         $x_1_2 = {8b 45 fc 99 f7 7d dc 8b 45 88 0f be 0c 10 8b 55 d8 03 55 fc 0f be 02 33 c1 8b 4d d8 03 4d fc 88 01 eb c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_CatRat_B_2147755491_0
         $x_1_2 = {ff ff ff 65 c6 45 ?? 6c c6 85 ?? ff ff ff 6e c6 45 ?? 32 c6 45 ?? 6f c6 45 ?? 75 c6 45 ?? 69 8d 85 ?? ff ff ff 50 ff 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_CatRat_C_2147755493_0
         $x_1_3 = {8b 45 fc 99 f7 7d dc 8b 45 88 0f be 0c 10 8b 55 d8 03 55 fc 0f be 02 33 c1 8b 4d d8 03 4d fc 88 01 eb c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

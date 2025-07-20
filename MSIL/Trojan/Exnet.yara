@@ -18,6 +18,7 @@ rule Trojan_MSIL_Exnet_AAIC_2147833493_0
         $x_1_3 = "sqlsrvs.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Exnet_ABPT_2147843314_0
         $x_1_4 = "GAdminLib" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_MSIL_Exnet_AE_2147846425_0
         $x_1_1 = {28 1e 00 00 0a 0a 02 6f d5 00 00 0a 2c 2a 28 1e 00 00 0a 06 28 d6 00 00 0a 0b 12 01 28 d7 00 00 0a 03 6c 36 07 02 6f d8 00 00 0a 2a 20 e8 03 00 00 28 c5 00 00 0a 2b ce}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_MSIL_Exnet_AX_2147848100_0
         $x_1_2 = "varesaint.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_MSIL_Exnet_PSVG_2147888132_0
         $x_2_1 = {00 02 8e 69 18 da 0b 73 ?? 00 00 0a 0c 07 0d 16 13 04 2b 1a 08 02 11 04 9a 28 ?? 00 00 0a 1f 59 da b4 6f ?? 00 00 0a 00 11 04 17 d6 13 04}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule Trojan_MSIL_Exnet_NE_2147894990_0
         $x_1_6 = "mf_addcredit.Properties" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule Trojan_MSIL_Exnet_PSED_2147899360_0
         $x_1_4 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_MSIL_Exnet_KAA_2147924317_0
         $x_1_1 = {06 08 02 07 17 28 ?? 00 00 0a 28 ?? 00 00 0a 61 28 ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 0a 07 17 58 b5 0b 07 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +209,7 @@ rule Trojan_MSIL_Exnet_SWA_2147925456_0
         $x_1_4 = "HooksDetection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +231,7 @@ rule Trojan_MSIL_Exnet_EAQE_2147939539_0
         $x_5_1 = {02 50 07 02 50 8e b7 5d 02 50 07 02 50 8e b7 5d 91 03 07 03 8e b7 5d 91 61 02 50 07 17 d6 02 50 8e b7 5d 91 da 20 00 01 00 00 d6 20 00 01 00 00 5d b4 9c 07 17 d6 0b 07 08 31 c5}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +253,7 @@ rule Trojan_MSIL_Exnet_MKV_2147939575_0
         $x_5_1 = {06 07 6f 21 00 00 0a 02 8e 69 07 8e 69 59 8d 18 00 00 01 0c 02 07 8e 69 08 16 08 8e 69 28 ?? 00 00 0a 06 17 6f ?? 00 00 0a 06 18 6f ?? 00 00 0a 08 73 24 00 00 0a 0d 09 06 6f ?? 00 00 0a 16 73 26 00 00 0a 13 04}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

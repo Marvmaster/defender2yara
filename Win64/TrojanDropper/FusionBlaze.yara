@@ -18,6 +18,7 @@ rule TrojanDropper_Win64_FusionBlaze_A_2147725398_0
         $x_1_3 = {6f 72 7a 5f 53 43 47 65 74 4e 65 74 73 76 63 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

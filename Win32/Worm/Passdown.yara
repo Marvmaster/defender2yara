@@ -16,6 +16,7 @@ rule Worm_Win32_Passdown_2147605074_0
         $x_1_2 = {4f 8d 4f 01 8a 47 01 47 84 c0 75 f8 a1 ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 07 a1 ?? ?? ?? ?? 89 57 04 8a 15 ?? ?? ?? ?? 89 47 08 8d 84 24 ?? ?? 00 00 50 51 88 57 0c ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

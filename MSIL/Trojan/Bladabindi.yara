@@ -19,6 +19,7 @@ rule Trojan_MSIL_Bladabindi_PA_2147744898_0
         $x_10_4 = {0a 0b 06 6f ?? 00 00 0a [0-2] 73 ?? 00 00 0a 0c 08 07 6f ?? 00 00 0a [0-2] 08 04 6f ?? 00 00 0a [0-2] 08 05 6f ?? 00 00 0a [0-2] 08 6f ?? 00 00 0a [0-2] 02 16 02 8e 69 6f ?? 00 00 0a [0-2] 0d 08 6f ?? 00 00 0a [0-2] 09 13 04 11 04 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_Bladabindi_A_2147746000_0
         $x_3_1 = {e0 a4 96 e0 a4 a6 e0 a4 9a e0 a4 8b e0 a4 94 e0 a4 8f e0 a4 8f e0 a4 aa e0 a4 9a e0 a4 b7 e0 a4 a6 e0 a4 8f e0 a4 96 e0 a4 98 e0 a4 87 e0 a4 8f e0 a4 af e0 a4 a1 e0 a4 87 e0 a4 a8 e0 a4 aa e0 a4 ac e0 a4 ae e0 a4 9f e0 a4 b7 e0 a4 ad e0 a4 97 e0 a4 a3 e0 a4 a8 e0 a4 af 2e 65 78 65}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_MSIL_Bladabindi_A_2147746000_1
         $x_1_5 = ":processsshackerrrrrr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_MSIL_Bladabindi_A_2147746000_2
         $x_1_7 = "USBService.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_MSIL_Bladabindi_AG_2147754169_0
         $x_1_2 = {08 11 05 02 11 05 91 07 61 06 09 91 61 b4 9c 09 7e 72 01 00 04 6f 6a 00 00 0a 17 da 33 04 16 0d 2b 04 09 17 d6 0d 11 05 17 d6 13 05 11 05 11 04 31 ce}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Trojan_MSIL_Bladabindi_SBR_2147755683_0
         $x_1_3 = "TllBTiBDQVQ=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -161,6 +167,7 @@ rule Trojan_MSIL_Bladabindi_SBR_2147755683_1
         $x_1_4 = "Cryptography.RijndaelManaged" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule Trojan_MSIL_Bladabindi_SBR_2147755683_2
         $x_1_6 = "toqe.downloader.business" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -216,6 +224,7 @@ rule Trojan_MSIL_Bladabindi_DA_2147758771_0
         $x_3_6 = "GetHINSTANCE" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -237,6 +246,7 @@ rule Trojan_MSIL_Bladabindi_M_2147760279_0
         $x_1_1 = {72 01 00 00 70 0a 17 0b 07 2c 43 73 ?? ?? ?? 0a 0c 73 ?? ?? ?? 0a 0d 09 17 6f ?? ?? ?? 0a 09 72 ?? ?? ?? 70 6f ?? ?? ?? 0a 09 72 ?? ?? ?? 70 06 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 08 09 6f ?? ?? ?? 0a 08 6f ?? ?? ?? 0a 26 08 6f ?? ?? ?? 0a 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -259,6 +269,7 @@ rule Trojan_MSIL_Bladabindi_DB_2147778550_0
         $x_1_2 = {0d 1b 8d 16 00 00 01 13 05 11 05 16 09 6f 1e 00 00 0a 6f 1f 00 00 0a a2 11 05 17 28 20 00 00 0a a2 11 05 18 09 6f 21 00 00 0a a2 11 05 19 28 20 00 00 0a a2 11 05 1a 09 6f 22 00 00 0a a2 11 05 28 23 00 00 0a 28 24 00 00 0a 26 de 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -282,6 +293,7 @@ rule Trojan_MSIL_Bladabindi_DC_2147778775_0
         $x_1_3 = {a2 25 1f 1f 11 1d a2 25 1f 20 11 18 a2 28 39 00 00 0a 28 3a 00 00 0a 13 0d 28 3b 00 00 0a 11 0d 6f 3c 00 00 0a 13 33 20 e1 2a 79 2f 80 0c 00 00 04 11 33 20 b8 99 ec 89 80 1e 00 00 04 6f 3d 00 00 0a 14 14 6f 3e 00 00 0a 74 2a 00 00 01 13 05 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -304,6 +316,7 @@ rule Trojan_MSIL_Bladabindi_DD_2147778776_0
         $x_1_2 = {a2 00 09 1b 28 31 00 00 06 a2 00 09 28 01 00 00 0a 0a 06 28 02 00 00 0a 0b 28 03 00 00 0a 07 6f 04 00 00 0a 6f 05 00 00 0a 14 14 6f 06 00 00 0a 28 07 00 00 0a 0c 00 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -326,6 +339,7 @@ rule Trojan_MSIL_Bladabindi_DE_2147778779_0
         $x_1_2 = {28 23 00 00 0a 72 ?? ?? ?? 70 28 24 00 00 0a 09 28 25 00 00 0a 00 28 23 00 00 0a 72 ?? ?? ?? 70 28 24 00 00 0a 28 26 00 00 0a 26 28 27 00 00 0a 00 00 de 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -347,6 +361,7 @@ rule Trojan_MSIL_Bladabindi_DF_2147778920_0
         $x_1_1 = {13 06 11 06 6f 24 00 00 0a 72 ?? ?? ?? 70 72 ?? ?? ?? 70 6f 25 00 00 0a 72 ?? ?? ?? 70 72 ?? ?? ?? 70 6f 25 00 00 0a 13 07 11 07 6f 24 00 00 0a 28 03 00 00 06 28 26 00 00 0a 72 ?? ?? ?? 70 28 06 00 00 06 13 08 11 08 17 28 02 00 00 06 00 00 06 17 58 0a 06 17 fe 04 13 0a 11 0a 3a da fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -376,6 +391,7 @@ rule Trojan_MSIL_Bladabindi_RMA_2147779790_0
         $x_10_9 = "\\Documents\\Pass Vault\\KeysDecrypted.txt" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -405,6 +421,7 @@ rule Trojan_MSIL_Bladabindi_DJ_2147781866_0
         $x_1_6 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -434,6 +451,7 @@ rule Trojan_MSIL_Bladabindi_DI_2147781913_0
         $x_1_9 = "BinaryToString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -465,6 +483,7 @@ rule Trojan_MSIL_Bladabindi_AH_2147781937_0
         $x_3_7 = "get_CurrentDomain" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_3_*))) or
             (all of ($x*))
@@ -493,6 +512,7 @@ rule Trojan_MSIL_Bladabindi_OZ_2147782038_0
         $x_1_5 = "MD5CryptoServiceProvider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -517,6 +537,7 @@ rule Trojan_MSIL_Bladabindi_DL_2147782067_0
         $x_1_4 = "CreateInstance" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -542,6 +563,7 @@ rule Trojan_MSIL_Bladabindi_JK_2147782200_0
         $x_1_5 = "Payload" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -567,6 +589,7 @@ rule Trojan_MSIL_Bladabindi_ABF_2147782675_0
         $x_3_5 = "Emit" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -590,6 +613,7 @@ rule Trojan_MSIL_Bladabindi_DP_2147783081_0
         $x_1_3 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -617,6 +641,7 @@ rule Trojan_MSIL_Bladabindi_BF_2147786794_0
         $x_1_7 = "QlQdwCH6y" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -643,6 +668,7 @@ rule Trojan_MSIL_Bladabindi_ASD_2147787520_0
         $x_3_6 = {fa 01 33 00 16 00 00 01 00 00 00 25 00 00 00 04 ?? ?? ?? ?? ?? ?? ?? 0a}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -670,6 +696,7 @@ rule Trojan_MSIL_Bladabindi_EV_2147794269_0
         $x_3_7 = "FromBase64String" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -692,6 +719,7 @@ rule Trojan_MSIL_Bladabindi_BTGF_2147794615_0
         $x_1_2 = {00 12 00 fe 15 05 00 00 02 12 00 02 28 1a 00 00 0a 7d 06 00 00 04 12 00 06 7b 06 00 00 04 6f 1b 00 00 0a 7d 07 00 00 04 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -719,6 +747,7 @@ rule Trojan_MSIL_Bladabindi_QW_2147794960_0
         $x_3_7 = "$this.Text" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -741,6 +770,7 @@ rule Trojan_MSIL_Bladabindi_OEOE_2147795092_0
         $x_1_2 = {06 0a 06 02 7d ?? ?? ?? 04 00 16 06 7b ?? ?? ?? 04 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 7e ?? ?? ?? 04 25 2d 17 26 7e ?? ?? ?? 04 fe ?? ?? ?? ?? 06 73 ?? ?? ?? 0a 25 80 ?? ?? ?? 04 28 ?? ?? ?? 2b 06 fe ?? ?? ?? ?? 06 73 ?? ?? ?? 0a 28 ?? ?? ?? 2b 28 ?? ?? ?? 2b 0b 2b 00 07 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -767,6 +797,7 @@ rule Trojan_MSIL_Bladabindi_DY_2147795227_0
         $x_1_6 = "GetManifestResourceStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -806,6 +837,7 @@ rule Trojan_MSIL_Bladabindi_SWER_2147795745_0
         $x_1_19 = "ClipboardType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -838,6 +870,7 @@ rule Trojan_MSIL_Bladabindi_OEGH_2147795820_0
         $x_1_12 = "https://cdn.discordapp.com/attachment" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -859,6 +892,7 @@ rule Trojan_MSIL_Bladabindi_SWERRER_2147795821_0
         $x_1_1 = {c5 81 c0 93 00 00 00 b9 ca 05 00 00 ba ?? ?? ?? ?? 30 10 40 49 0f 85 f6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -881,6 +915,7 @@ rule Trojan_MSIL_Bladabindi_AB_2147797105_0
         $x_1_2 = "ziroland game.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -903,6 +938,7 @@ rule Trojan_MSIL_Bladabindi_AB_2147797105_1
         $x_1_2 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -929,6 +965,7 @@ rule Trojan_MSIL_Bladabindi_AB_2147797105_2
         $x_3_6 = "download_link" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -963,6 +1000,7 @@ rule Trojan_MSIL_Bladabindi_EA_2147797347_0
         $x_1_14 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -989,6 +1027,7 @@ rule Trojan_MSIL_Bladabindi_EB_2147797348_0
         $x_3_2 = "ZSDRTGHUJKLOIKJHGF" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1023,6 +1062,7 @@ rule Trojan_MSIL_Bladabindi_EB_2147797348_1
         $x_1_14 = "Activator" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -1056,6 +1096,7 @@ rule Trojan_MSIL_Bladabindi_V_2147797787_0
         $x_1_9 = "SetAutoRun" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1083,6 +1124,7 @@ rule Trojan_MSIL_Bladabindi_OET_2147797878_0
         $x_1_7 = "$e0c16aab-f66b-41a0-b61a-199b9a0de959" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1110,6 +1152,7 @@ rule Trojan_MSIL_Bladabindi_STRR_2147808056_0
         $x_1_7 = "$f665918b-b2a4-4bb3-968d-7570b46fb478" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1140,6 +1183,7 @@ rule Trojan_MSIL_Bladabindi_STRR_2147808056_1
         $x_1_10 = "$8ba29b8d-a627-45c0-aaff-a7076793538f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1169,6 +1213,7 @@ rule Trojan_MSIL_Bladabindi_MC_2147809191_0
         $x_1_9 = "set_Key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1190,6 +1235,7 @@ rule Trojan_MSIL_Bladabindi_XKS_2147809848_0
         $x_10_1 = {73 40 00 00 0a 0a 00 06 28 ?? ?? ?? 06 8d 3a 00 00 01 25 d0 b6 01 00 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 06 28 ?? ?? ?? 06 8d 3a 00 00 01 25 d0 b7 01 00 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 06 6f ?? ?? ?? 0a 02 28 ?? ?? ?? 06 02 8e 69 6f ?? ?? ?? 0a 0b de 10 06 14 fe 01 0c 08 2d 07 06 6f ?? ?? ?? 0a 00 dc 00 07 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1215,6 +1261,7 @@ rule Trojan_MSIL_Bladabindi_SNGM_2147809850_0
         $x_2_5 = {00 7a 7a 7a 7a 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1236,6 +1283,7 @@ rule Trojan_MSIL_Bladabindi_DNGM_2147809851_0
         $x_10_1 = {0b 07 72 0d 00 00 70 15 16 28 ?? ?? ?? 0a 0c 00 08 8e 69 17 da 17 d6 8d 2a 00 00 01 0d 08 8e 69 18 da 13 04 16 13 05 2b 15 00 09 11 05 08 11 05 9a 28 ?? ?? ?? 0a 9c 00 11 05 17 d6 13 05 11 05 11 04 fe 02 16 fe 01 13 06 11 06 2d dc 09 13 07 2b 00 11 07 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1262,6 +1310,7 @@ rule Trojan_MSIL_Bladabindi_JNGM_2147809852_0
         $x_1_6 = {00 72 61 6a 61 77 69 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1283,6 +1332,7 @@ rule Trojan_MSIL_Bladabindi_LKS_2147810916_0
         $x_10_1 = {11 08 11 09 11 07 11 0a 25 17 58 13 0a 91 08 61 d2 9c 09 17 5f 17 33 07 11 0a 11 04 58 13 0a 08 1b 64 08 1f 1b 62 60 1d 5a 0c 09 17 64 09 1f 1f 62 60 0d 11 09 17 58 13 09 11 09 6a 20 00 2e 08 00 6a 32 bc}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1304,6 +1354,7 @@ rule Trojan_MSIL_Bladabindi_GRM_2147810917_0
         $x_10_1 = {73 23 01 00 0a 0a 00 06 28 ?? ?? ?? 06 8d 8f 00 00 01 25 d0 d0 00 00 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 06 28 ?? ?? ?? 06 8d 8f 00 00 01 25 d0 d1 00 00 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 06 6f ?? ?? ?? 0a 02 28 ?? ?? ?? 06 02 8e 69 6f ?? ?? ?? 0a 0b de 10 06 14 fe 01 0c 08 2d 07 06 6f ?? ?? ?? 0a 00 dc 00 07 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1325,6 +1376,7 @@ rule Trojan_MSIL_Bladabindi_ZAREGA_2147811640_0
         $x_10_1 = {13 06 11 06 20 00 01 00 00 6f ?? ?? ?? 0a 11 06 17 6f ?? ?? ?? 0a 11 06 0c 03 2d 11 08 07 1f 10 6f ?? ?? ?? 0a 06 6f ?? ?? ?? 0a 2b 0f 08 07 1f 10 6f ?? ?? ?? 0a 06 6f ?? ?? ?? 0a 0d 73 31 00 00 0a 13 04 11 04 09 17 73 32 00 00 0a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1346,6 +1398,7 @@ rule Trojan_MSIL_Bladabindi_HYAL_2147813523_0
         $x_10_1 = {07 11 05 03 11 05 91 06 61 09 08 91 61 b4 9c 08 04 6f ?? ?? ?? 0a 17 da fe 01 13 07 11 07 2c 04 16 0c 2b 05 00 08 17 d6 0c 00 11 05 17 d6 13 05 11 05 11 06 13 08 11 08 31 c6}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1367,6 +1420,7 @@ rule Trojan_MSIL_Bladabindi_SSQ_2147815744_0
         $x_10_1 = {72 01 00 00 70 0a 06 28 ?? ?? ?? 2b 28 ?? ?? ?? 2b 73 15 00 00 0a 20 bc 9e 00 00 1f 30 28 ?? ?? ?? 0a 0b 07 28 ?? ?? ?? 06 0c 08 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 14 14 6f ?? ?? ?? 0a 26 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1392,6 +1446,7 @@ rule Trojan_MSIL_Bladabindi_AW_2147816701_0
         $x_3_5 = "HttpClient" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1422,6 +1477,7 @@ rule Trojan_MSIL_Bladabindi_MR_2147817026_0
         $x_1_10 = "Invoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1450,6 +1506,7 @@ rule Trojan_MSIL_Bladabindi_RPF_2147817196_0
         $x_1_8 = "filemon" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1478,6 +1535,7 @@ rule Trojan_MSIL_Bladabindi_RPG_2147817197_0
         $x_1_8 = "Mayonnaise" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1499,6 +1557,7 @@ rule Trojan_MSIL_Bladabindi_BIL_2147817274_0
         $x_1_1 = {11 0a 11 06 11 0b 94 d6 11 07 11 0b 94 d6 20 00 01 00 00 5d 13 0a 11 06 11 0b 94 13 0e 11 06 11 0b 11 06 11 0a 94 9e 11 06 11 0a 11 0e 9e 12 0b 28 ?? ?? ?? 0a 11 0b 17 da 28 ?? ?? ?? 0a 26 00 11 0b 20 ff 00 00 00 fe 02 16 fe 01 13 0f 11 0f 2d ae}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1525,6 +1584,7 @@ rule Trojan_MSIL_Bladabindi_RPK_2147817370_0
         $x_1_6 = "Invoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1555,6 +1615,7 @@ rule Trojan_MSIL_Bladabindi_RPL_2147817490_0
         $x_1_10 = "SpecialFolder" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1576,6 +1637,7 @@ rule Trojan_MSIL_Bladabindi_ZXH_2147817944_0
         $x_1_1 = {0a 00 06 1e 8d ?? ?? ?? 01 25 d0 ?? ?? ?? 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 06 1f 18 8d ?? ?? ?? 01 25 d0 ?? ?? ?? 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 06 6f ?? ?? ?? 0a 02 16 02 8e 69 6f ?? ?? ?? 0a 0b de 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1602,6 +1664,7 @@ rule Trojan_MSIL_Bladabindi_AM_2147818258_0
         $x_1_6 = "get_Khaki" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1628,6 +1691,7 @@ rule Trojan_MSIL_Bladabindi_AM_2147818258_1
         $x_2_6 = "ConfusedByAttribute" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1649,6 +1713,7 @@ rule Trojan_MSIL_Bladabindi_NQG_2147818340_0
         $x_1_1 = {72 41 00 00 70 0a 73 1e 00 00 0a 0b 16 0c 2b 37 00 06 28 ?? ?? ?? 0a 0d 03 08 94 06 6f ?? ?? ?? 0a 20 80 00 00 00 61 5b 13 04 11 04 09 20 00 01 00 00 5a 16 60 59 d2 13 05 07 11 05 6f ?? ?? ?? 0a 00 00 08 17 58 0c 08 03 8e 69 fe 04 13 06 11 06 2d bd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1670,6 +1735,7 @@ rule Trojan_MSIL_Bladabindi_UXO_2147818341_0
         $x_1_1 = {07 11 04 02 11 04 91 06 11 04 06 8e b7 5d 91 61 08 11 04 08 8e b7 5d 91 61 9c 11 04 17 d6 13 04 11 04 11 05 31 da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1696,6 +1762,7 @@ rule Trojan_MSIL_Bladabindi_ME_2147819025_0
         $x_1_6 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1717,6 +1784,7 @@ rule Trojan_MSIL_Bladabindi_RPN_2147819258_0
         $x_1_1 = {04 20 ff 00 00 00 5f 2b 1d 03 6f 7c 00 00 0a 0c 2b 17 08 06 08 06 93 02 7b 11 00 00 04 07 91 04 60 61 d1 9d 2b 03 0b 2b e0 06 17 59 25 0a 16 2f 02 2b 05 2b dd 0a 2b c8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1739,6 +1807,7 @@ rule Trojan_MSIL_Bladabindi_NU_2147819703_0
         $x_1_2 = {57 95 a2 29 09 0b 00 00 00 fa 01 33 00 16 00 00 01 00 00 00 56 00 00 00 09 00 00 00 0f 00 00 00 17 00 00 00 05 00 00 00 76 00 00 00 18 00 00 00 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1762,6 +1831,7 @@ rule Trojan_MSIL_Bladabindi_NV_2147820300_0
         $x_2_3 = {08 6e 17 6a d6 20 ff 00 00 00 6a 5f b8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1785,6 +1855,7 @@ rule Trojan_MSIL_Bladabindi_NV_2147820300_1
         $x_1_3 = "332be4d89650" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1806,6 +1877,7 @@ rule Trojan_MSIL_Bladabindi_RPE_2147820301_0
         $x_1_1 = {1f 6c 9c 06 1e 1f 61 9c 06 1f 09 1f 75 9c 06 1f 0a 1f 72 9c 06 1f 0b 1f 65 9c 06 1f 0c 1f 6e 9c 06 1f 0d 1f 74 9c 06 1f 0e 1f 70 9c 06 1f 0f 1f 72 9c 06 1f 10 1f 6f 9c 06 1f 11 1f 74 9c 06 1f 12 1f 65 9c 06 1f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1829,6 +1901,7 @@ rule Trojan_MSIL_Bladabindi_NW_2147820440_0
         $x_1_3 = "280da54e2344" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1850,6 +1923,7 @@ rule Trojan_MSIL_Bladabindi_NG_2147822940_0
         $x_10_1 = {02 03 02 4b 03 04 61 05 61 58 0e 07 0e 04 95 58 7e 30 00 00 04 0e 06 17 59 95 58 0e 05 28 ?? 02 00 06 58 54}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1872,6 +1946,7 @@ rule Trojan_MSIL_Bladabindi_NG_2147822940_1
         $x_1_2 = {15 a2 09 09 1f 00 00 00 fa 25 33 00 16 00 00 01 00 00 00 7b 00 00 00 10 00 00 00 35 00 00 00 86 00 00 00 44 00 00 00 d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1894,6 +1969,7 @@ rule Trojan_MSIL_Bladabindi_EWL_2147823953_0
         $x_1_2 = {c5 69 97 38 00 7e 30 59 c5 7e 30 44 c5 7e 30 37 00 7e 30 7e 30 69 97 59 c5 7e 30 4c c5 69 97 35 00 35 00 69 97 69 97 35 00 33 00 32 00 69 97}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1918,6 +1994,7 @@ rule Trojan_MSIL_Bladabindi_B_2147824022_0
         $x_1_4 = "Folder\\Folder.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1940,6 +2017,7 @@ rule Trojan_MSIL_Bladabindi_NEC_2147824174_0
         $x_1_2 = "pyvelrU+SBPM/2MWEftieA==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1961,6 +2039,7 @@ rule Trojan_MSIL_Bladabindi_OEK_2147824715_0
         $x_1_1 = {0b 07 06 1f 10 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 07 06 1f 10 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 07 6f ?? ?? ?? 0a 02 16 02 8e 69 6f ?? ?? ?? 0a 0c 08 8e 69 1f 10 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1983,6 +2062,7 @@ rule Trojan_MSIL_Bladabindi_NEI_2147825937_0
         $x_1_2 = "RegAsm.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2005,6 +2085,7 @@ rule Trojan_MSIL_Bladabindi_NYK_2147827608_0
         $x_1_2 = {15 a2 15 09 01 00 00 00 fa 25 33 00 16 00 00 01 00 00 00 4e 00 00 00 21 00 00 00 20 00 00 00 3c 03 00 00 12 00 00 00 77 00 00 00 16 00 00 00 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2026,6 +2107,7 @@ rule Trojan_MSIL_Bladabindi_NEJ_2147827665_0
         $x_1_1 = {13 04 02 1f 0c 11 04 16 09 28 bd 00 00 0a 12 04 09 28 04 00 00 2b 06 07 08 28 b9 00 00 0a 11 04 6f be 00 00 0a 73 4b 00 00 06 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2050,6 +2132,7 @@ rule Trojan_MSIL_Bladabindi_ABO_2147827752_0
         $x_1_4 = "taskkill" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2075,6 +2158,7 @@ rule Trojan_MSIL_Bladabindi_NYL_2147827886_0
         $x_1_5 = "ConfuserEx v1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2098,6 +2182,7 @@ rule Trojan_MSIL_Bladabindi_NEG_2147828124_0
         $x_1_3 = "RegAsm.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2123,6 +2208,7 @@ rule Trojan_MSIL_Bladabindi_NEK_2147829225_0
         $x_1_5 = "$$method0x6000012-1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2145,6 +2231,7 @@ rule Trojan_MSIL_Bladabindi_NX_2147830429_0
         $x_1_2 = "a.top4top.io/p_2428mn69" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2169,6 +2256,7 @@ rule Trojan_MSIL_Bladabindi_NEM_2147830642_0
         $x_1_4 = "SELECT * FROM FirewallProduct" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2192,6 +2280,7 @@ rule Trojan_MSIL_Bladabindi_NEO_2147831357_0
         $x_1_3 = "LOST.DIR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2215,6 +2304,7 @@ rule Trojan_MSIL_Bladabindi_PSC_2147831468_0
         $x_1_3 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2241,6 +2331,7 @@ rule Trojan_MSIL_Bladabindi_NEP_2147833296_0
         $x_2_6 = "lmc1_MarkEntityFly" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2267,6 +2358,7 @@ rule Trojan_MSIL_Bladabindi_MF_2147834998_0
         $x_1_6 = "Screenshot" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2295,6 +2387,7 @@ rule Trojan_MSIL_Bladabindi_NWZ_2147835581_0
         $x_1_8 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2318,6 +2411,7 @@ rule Trojan_MSIL_Bladabindi_NZC_2147836543_0
         $x_1_3 = "585-8f03-332c5b5db41f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2339,6 +2433,7 @@ rule Trojan_MSIL_Bladabindi_S_2147838415_0
         $x_6_1 = {85 c9 7c 2a 8b 35 88 2c 41 00 b8 67 66 66 66 f7 e9 c1 fa 02 8b c2 c1 e8 1f 03 c2 8b 15 24 20 41 00 8d 04 80 03 c0 2b d0 8a 04 0a 30 04 0e 41 3b 0d a0 2c 41 00 76 c9}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2360,6 +2455,7 @@ rule Trojan_MSIL_Bladabindi_S_2147838415_1
         $x_1_1 = {73 34 00 00 0a 72 47 01 00 70 28 35 00 00 0a 17 8d 28 00 00 01 25 16 1f 3a 9d 6f 36 00 00 0a 0a 06 8e 69 17 da 0c 16 0b 2b 14 06 16 9a 80 0e 00 00 04 06 17 9a 80 18 00 00 04 07 17 d6 0b 07 08 31 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2385,6 +2481,7 @@ rule Trojan_MSIL_Bladabindi_SC_2147838497_0
         $x_1_5 = "C:\\Users\\xD\\source\\repos\\SHELL\\SHELL\\obj\\Release\\SHELL.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2408,6 +2505,7 @@ rule Trojan_MSIL_Bladabindi_NEAA_2147838573_0
         $x_2_3 = "Powered by SmartAssembly 8.1.0.4892" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2430,6 +2528,7 @@ rule Trojan_MSIL_Bladabindi_RDA_2147839822_0
         $x_1_2 = "BasedAntiVT.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2453,6 +2552,7 @@ rule Trojan_MSIL_Bladabindi_NEAB_2147840113_0
         $x_2_3 = "m_f5f5698b1df04fb2a59b2feb2086e3c7" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2476,6 +2576,7 @@ rule Trojan_MSIL_Bladabindi_BU_2147840122_0
         $x_1_3 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2498,6 +2599,7 @@ rule Trojan_MSIL_Bladabindi_MBBM_2147841889_0
         $x_1_2 = "22A2C6EAF80DFC8FD8D8A2" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2519,6 +2621,7 @@ rule Trojan_MSIL_Bladabindi_EH_2147843801_0
         $x_5_1 = {02 07 02 8e 69 5d 02 07 02 8e 69 5d 91 08 07 08 8e 69 5d 91 61 02 07 17 58 02 8e 69 5d 91 59}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2540,6 +2643,7 @@ rule Trojan_MSIL_Bladabindi_ABD_2147843997_0
         $x_1_1 = {20 00 0c 00 00 28 ?? ?? ?? 0a 06 03 6f ?? ?? ?? 0a 0b 07 8e 69 16 31 04 07 0c de 0e 14 0c de 0a 06 2c 06 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2561,6 +2665,7 @@ rule Trojan_MSIL_Bladabindi_ABD_2147843997_1
         $x_2_1 = {7e 0d 00 00 04 a2 11 12 18 28 ?? ?? ?? 0a 13 0f 12 0f 28 ?? ?? ?? 06 a2 11 12 19 7e 0d 00 00 04 a2 11 12 1a 7e 0e 00 00 04 13 10 12 10 28 ?? ?? ?? 06 a2 11 12 1b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2582,6 +2687,7 @@ rule Trojan_MSIL_Bladabindi_PSJZ_2147844438_0
         $x_2_1 = {28 2b 00 00 0a 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 72 77 00 00 70 15 16 28 ?? ?? ?? 0a 80 0b 00 00 04 7e 0b 00 00 04 17 9a 28 ?? ?? ?? 0a 72 e5 00 00 70 28 11 00 00 06 80 0c 00 00 04 20 e4 04 00 00 28 ?? ?? ?? 0a 7e 0b 00 00 04 17 9a 6f ?? ?? ?? 0a 26 7e 0c 00 00 04 28 12 00 00 06 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2604,6 +2710,7 @@ rule Trojan_MSIL_Bladabindi_MBDH_2147844946_0
         $x_1_2 = "6a8ab81f7b3a" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2625,6 +2732,7 @@ rule Trojan_MSIL_Bladabindi_PSIU_2147844986_0
         $x_2_1 = {00 20 98 3a 00 00 28 ?? ?? ?? 0a 00 28 0c 00 00 06 0a 20 98 3a 00 00 28 ?? ?? ?? 0a 00 06 72 33 00 00 70 72 67 00 00 70 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 0b 20 98 3a 00 00 28 33 00 00 0a 00 02 07 28 14 00 00 06 00 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2649,6 +2757,7 @@ rule Trojan_MSIL_Bladabindi_ABRM_2147845549_0
         $x_3_4 = "iW9w8DsHAomrjYpRwi.iihBjoh62YiGXsMgBR" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2670,6 +2779,7 @@ rule Trojan_MSIL_Bladabindi_SPH_2147846054_0
         $x_1_1 = {0b 73 40 00 00 0a 0c 73 41 00 00 0a 0d 08 09 28 ?? ?? ?? 0a 02 28 ?? ?? ?? 06 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 08 18 6f ?? ?? ?? 0a 08 6f ?? ?? ?? 0a 07 13 04 11 04 16 11 04 8e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2692,6 +2802,7 @@ rule Trojan_MSIL_Bladabindi_ABTR_2147846301_0
         $x_1_2 = "DeflateStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2714,6 +2825,7 @@ rule Trojan_MSIL_Bladabindi_MBCL_2147846347_0
         $x_1_2 = "9cade42e-5cc5-44ea-9892-da164d028a0e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2735,6 +2847,7 @@ rule Trojan_MSIL_Bladabindi_MBDZ_2147846388_0
         $x_1_1 = {0a 18 da 6b 28 ?? 00 00 0a 5a 28 ?? 00 00 0a 22 ?? ?? ?? 3f 58 6b 6c 28 ?? 00 00 0a b7 13 05 11 04 06 11 05 6f ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 13 04 11 06 17 d6 13 06 11 06 11 07 31 ba}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2756,6 +2869,7 @@ rule Trojan_MSIL_Bladabindi_PSMS_2147847618_0
         $x_2_1 = {6f 43 00 00 0a 26 72 1f 00 00 70 28 ?? ?? ?? 0a 00 28 06 00 00 06 6f ?? ?? ?? 0a 72 43 00 00 70 72 1f 00 00 70 6f ?? ?? ?? 0a 00 73 ?? ?? ?? 0a 0c 08 6f ?? ?? ?? 0a 72 1f 00 00 70 6f ?? ?? ?? 0a 00 08 6f ?? ?? ?? 0a 26 72 1f 00 00 70 28 44 00 00 0a 00 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2777,6 +2891,7 @@ rule Trojan_MSIL_Bladabindi_PSMQ_2147848852_0
         $x_2_1 = {2b 22 28 18 00 00 0a 02 6f 19 00 00 0a 0a 06 28 1a 00 00 0a 0b 08 20 c4 43 a6 58 5a 20 33 24 e4 8e 61 2b c1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2799,6 +2914,7 @@ rule Trojan_MSIL_Bladabindi_NTE_2147849142_0
         $x_1_2 = "aufdemwegzurhaltestelle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2820,6 +2936,7 @@ rule Trojan_MSIL_Bladabindi_PSQT_2147849817_0
         $x_2_1 = {6f 89 01 00 0a 72 d4 01 00 70 6f a4 01 00 0a 73 a0 01 00 0a 25 6f 9b 01 00 0a 16 6a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2841,6 +2958,7 @@ rule Trojan_MSIL_Bladabindi_MBFP_2147850181_0
         $x_1_1 = {13 06 11 06 2c 4c 07 06 28 ?? 00 00 0a 72 63 01 00 70 03 18 8c ?? 00 00 01 06 28 ?? 00 00 0a 17 8c ?? 00 00 01 28 ?? 00 00 0a 28 ?? 00 00 0a 18 28 ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a b4 9c 00 06 11 05 12 00 28 ?? 00 00 0a 13 06 11 06 2d b4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2863,6 +2981,7 @@ rule Trojan_MSIL_Bladabindi_AADS_2147850997_0
         $x_1_2 = "WindowsFormsApp1.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2884,6 +3003,7 @@ rule Trojan_MSIL_Bladabindi_PSSQ_2147851186_0
         $x_2_1 = {00 28 ba 00 00 0a 03 28 ac 00 00 0a 6f af 00 00 0a 0a 2b 00 06 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2906,6 +3026,7 @@ rule Trojan_MSIL_Bladabindi_AAHC_2147851569_0
         $x_1_2 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2929,6 +3050,7 @@ rule Trojan_MSIL_Bladabindi_AAHH_2147851623_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2952,6 +3074,7 @@ rule Trojan_MSIL_Bladabindi_MBHK_2147852001_0
         $x_1_3 = "sS.Resources.resource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2975,6 +3098,7 @@ rule Trojan_MSIL_Bladabindi_AAIP_2147852224_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2997,6 +3121,7 @@ rule Trojan_MSIL_Bladabindi_NBI_2147852425_0
         $x_1_2 = "SEEDCRACKER.g.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3020,6 +3145,7 @@ rule Trojan_MSIL_Bladabindi_MBHU_2147852879_0
         $x_1_3 = "CM_Links.Properties.Resources.resource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3042,6 +3168,7 @@ rule Trojan_MSIL_Bladabindi_AAME_2147888526_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3068,6 +3195,7 @@ rule Trojan_MSIL_Bladabindi_MBIB_2147888673_0
         $x_1_6 = "CreateInstance" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3089,6 +3217,7 @@ rule Trojan_MSIL_Bladabindi_SPL_2147889140_0
         $x_1_1 = {0d 1a 8d 38 00 00 01 0b 11 04 11 04 6f ?? ?? ?? 0a 1b 6a da 6f ?? ?? ?? 0a 11 04 07 16 1a 6f ?? ?? ?? 0a 26 07 16 28 ?? ?? ?? 0a 0c 11 04 16 6a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3110,6 +3239,7 @@ rule Trojan_MSIL_Bladabindi_MBEN_2147889314_0
         $x_1_1 = {0a 0d 1e 8d ?? 00 00 01 0a 09 28 ?? 00 00 0a 03 6f ?? 00 00 0a 6f ?? 00 00 0a 13 04 11 04 16 06 16 1e 28 ?? 00 00 0a 00 07 06 6f ?? 00 00 0a 00 07 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3133,6 +3263,7 @@ rule Trojan_MSIL_Bladabindi_ABAA_2147890137_0
         $x_1_3 = {fe 0c 00 00 fe 09 00 00 fe 0c 00 00 4a 61 58 fe 0e 00 00 20 07 00 00 00 fe 0e 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3156,6 +3287,7 @@ rule Trojan_MSIL_Bladabindi_MBIO_2147891281_0
         $x_1_3 = "WindowsApplication2.Resources.resource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3178,6 +3310,7 @@ rule Trojan_MSIL_Bladabindi_NBD_2147891419_0
         $x_1_2 = "tmpC394.tmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3200,6 +3333,7 @@ rule Trojan_MSIL_Bladabindi_MBJC_2147891594_0
         $x_1_2 = "9b-270ae327a12" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3221,6 +3355,7 @@ rule Trojan_MSIL_Bladabindi_KA_2147891724_0
         $x_10_1 = {2b 42 2b 1f 2b 41 2b 42 2b 43 08 91 72 ?? 00 00 70 28 ?? 00 00 0a 59 d2 9c 16 2d 0d 08 17 25 2c 05 58 0c 08 06 8e}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3242,6 +3377,7 @@ rule Trojan_MSIL_Bladabindi_GP_2147891924_0
         $x_4_1 = {fe 0e 2d 00 fe 0c 29 00 fe 0c 29 00 1b 62 61 fe 0e 29 00 fe 0c 29 00 fe 0c 2a 00 58 fe 0e 29 00 fe 0c 29 00 fe 0c 29 00 1f 15 62 61 fe 0e 29 00 fe 0c 29 00 fe 0c 2c 00 58 fe 0e 29 00 fe 0c 29 00 fe 0c 29 00 19 64 61 fe 0e 29 00 fe 0c 29 00 fe 0c 2d 00 58 fe 0e 29 00 fe 0c 28 00 1f 15 62 fe 0c 28 00 58 fe 0c 2a 00 61 fe 0c 29 00 59}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3264,6 +3400,7 @@ rule Trojan_MSIL_Bladabindi_MBJI_2147892085_0
         $x_1_2 = "471b-96f8-aa4ba8af9efb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3289,6 +3426,7 @@ rule Trojan_MSIL_Bladabindi_MBJK_2147892086_0
         $x_1_5 = "MD5CryptoServiceProvider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3311,6 +3449,7 @@ rule Trojan_MSIL_Bladabindi_ASDX_2147893815_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3332,6 +3471,7 @@ rule Trojan_MSIL_Bladabindi_SPQI_2147895322_0
         $x_2_1 = {07 08 02 08 91 06 08 06 8e 69 5d 91 61 d2 9c 08 28 ?? ?? ?? 06 58 0c 08 02 8e 69 3f e0 ff ff ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3353,6 +3493,7 @@ rule Trojan_MSIL_Bladabindi_ASFO_2147895490_0
         $x_5_1 = {8e 69 fe 04 2c 38 2b 76 08 07 08 93 0d 09 20 ff 00 00 00 5f 06 25 17 58 0a 61 1e 62 09 1e 63 06 25 17 58 0a 61 d2 60 d1 9d 18 2b 99 08 17 58 16 3a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3374,6 +3515,7 @@ rule Trojan_MSIL_Bladabindi_SPQN_2147895919_0
         $x_4_1 = {07 08 07 08 91 02 08 1f 10 5d 91 61 9c 08 17 58 0c 08 09 31 eb}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3395,6 +3537,7 @@ rule Trojan_MSIL_Bladabindi_SLT_2147896141_0
         $x_10_1 = {02 0a 16 2b 01 16 45 04 00 00 00 02 00 00 00 07 00 00 00 0e 00 00 00 13 00 00 00 2b 26 03 0b 17 2b e4 06 8e 69 0c 18 2b dd 16 0d 19 2b d8 2b 17 07 09 07 09 91 06 09 08 5d 91 28 ?? ?? ?? 06 9c 1a 2b c3 09 17 58 0d 09 07 8e 69 32 e3 07 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3416,6 +3559,7 @@ rule Trojan_MSIL_Bladabindi_PTBW_2147896541_0
         $x_2_1 = {28 06 00 00 0a 03 50 6f 04 00 00 0a 0a 06 28 ?? 00 00 0a 0b 07 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3437,6 +3581,7 @@ rule Trojan_MSIL_Bladabindi_PTCJ_2147897095_0
         $x_2_1 = {6f 20 00 00 06 6f 4e 00 00 0a 02 72 fb 00 00 70 6f 45 00 00 0a 02 72 fb 00 00 70 6f 4f 00 00 0a 02 16 6f 50 00 00 0a 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3458,6 +3603,7 @@ rule Trojan_MSIL_Bladabindi_PTDM_2147898328_0
         $x_2_1 = {08 6f 10 00 00 0a 69 8d 14 00 00 01 0a 08 06 16 06 8e 69 6f 11 00 00 0a 26 de 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3479,6 +3625,7 @@ rule Trojan_MSIL_Bladabindi_PTEA_2147899013_0
         $x_2_1 = {72 62 03 00 70 28 ?? 00 00 0a 26 02 28 ?? 01 00 0a 0a 28 ?? 01 00 0a 06 16 06 8e 69 6f 68 01 00 0a 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3503,6 +3650,7 @@ rule Trojan_MSIL_Bladabindi_DQ_2147899391_0
         $x_1_4 = "VigenereDecrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3524,6 +3672,7 @@ rule Trojan_MSIL_Bladabindi_ABB_2147900257_0
         $x_1_1 = {0a 0d 00 00 07 08 16 20 00 10 00 00 6f ?? 00 00 0a 13 04 11 04 16 fe 02 13 05 11 05 2c 0b 09 08 16 11 04 6f ?? 00 00 0a 00 00 11 04 16 fe 02 13 05 11 05 2d cf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3545,6 +3694,7 @@ rule Trojan_MSIL_Bladabindi_PTFM_2147900623_0
         $x_2_1 = {72 c5 00 00 70 6f 04 00 00 0a 28 ?? 00 00 06 28 ?? 00 00 0a 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3566,6 +3716,7 @@ rule Trojan_MSIL_Bladabindi_SPDU_2147901614_0
         $x_4_1 = {16 0b 7e 0e 00 00 04 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 2c 2d 28 ?? ?? ?? 06 13 07 06 11 07 16 28 ?? ?? ?? 0a 16 2e 1a 11 07 0a 72 8d 05 00 70 7e 21 00 00 04 11 07 28 ?? ?? ?? 0a 28 ?? ?? ?? 06 26 de 0f}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3587,6 +3738,7 @@ rule Trojan_MSIL_Bladabindi_CWAA_2147902011_0
         $x_5_1 = {16 0c 2b 2d 02 08 6f ?? 00 00 0a 03 08 03 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 61 0d 07 72 ?? ?? 00 70 09 28 ?? 00 00 0a 6f ?? 00 00 0a 26 08 17 58 0c 08 02 6f ?? 00 00 0a 32 ca}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3608,6 +3760,7 @@ rule Trojan_MSIL_Bladabindi_MBFT_2147902316_0
         $x_1_1 = {67 69 c2 84 64 54 54 60 54 54 54 54 58 54 54 54 54 42 42 4b 54 54 5f 7a 54 54 54 54 54 54 54 54 54 64 54 54 54 54 54 54}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3629,6 +3782,7 @@ rule Trojan_MSIL_Bladabindi_GPA_2147902464_0
         $x_5_1 = {07 84 95 11 ?? 08 84 95 d7 6e 20 ?? ?? 00 00 6a 5f b7 95 61 86 9c 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3650,6 +3804,7 @@ rule Trojan_MSIL_Bladabindi_MBFU_2147902476_0
         $x_1_1 = "TVqQ==M====E====//8==Lg=========Q===============================================g=====4fug4=t=nNI" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3672,6 +3827,7 @@ rule Trojan_MSIL_Bladabindi_GPB_2147902604_0
         $x_5_2 = {91 09 61 07 11 ?? 91 61 b4 9c 11}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3695,6 +3851,7 @@ rule Trojan_MSIL_Bladabindi_GPC_2147902893_0
         $x_1_3 = {52 65 76 65 72 73 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3718,6 +3875,7 @@ rule Trojan_MSIL_Bladabindi_MBFV_2147902908_0
         $x_1_3 = "hbQ4ox6YeZt50KPF0BaN" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3744,6 +3902,7 @@ rule Trojan_MSIL_Bladabindi_ND_2147903522_0
         $x_5_6 = {11 0c 25 17 58 13 0c 93 11 ?? 61 60 13 07 11 19}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3770,6 +3929,7 @@ rule Trojan_MSIL_Bladabindi_NE_2147903524_0
         $x_5_6 = {11 0c 25 17 58 13 0c 93 11 ?? 61 60 13 07 11 30}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3796,6 +3956,7 @@ rule Trojan_MSIL_Bladabindi_NE_2147903524_1
         $x_1_6 = "System.Security.Cryptography" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3817,6 +3978,7 @@ rule Trojan_MSIL_Bladabindi_PTJN_2147903868_0
         $x_2_1 = {b7 16 6f 33 00 00 0a 13 0b 06 08 16 11 0b 6f 15 00 00 0a 06 6f 18 00 00 0a 07 33 22}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3840,6 +4002,7 @@ rule Trojan_MSIL_Bladabindi_NB_2147904134_0
         $x_1_3 = "cxzcxzxcz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3862,6 +4025,7 @@ rule Trojan_MSIL_Bladabindi_NB_2147904134_1
         $x_2_2 = {8d 05 00 00 01 13 07 11 07 16 16 8c 4e 00 00 01 a2 00 11 07 14 28 1a 01 00 0a 74 18 00 00 1b 6f f4 01 00 06}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3884,6 +4048,7 @@ rule Trojan_MSIL_Bladabindi_NB_2147904134_2
         $x_1_2 = "BPNIGLWZHAQJ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3906,6 +4071,7 @@ rule Trojan_MSIL_Bladabindi_GPD_2147904471_0
         $x_5_2 = "T#V#q#Q#A#A#M#A#A#A#A#E#A#A#A#A#" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3927,6 +4093,7 @@ rule Trojan_MSIL_Bladabindi_RDB_2147905291_0
         $x_2_1 = {02 11 04 17 28 9a 00 00 0a 13 0b 08 11 07 06 11 0b 28 9b 00 00 0a 11 09 61}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3949,6 +4116,7 @@ rule Trojan_MSIL_Bladabindi_ASGE_2147905952_0
         $x_1_2 = {13 17 11 17 2c 2a 02 11 04 17 28 ?? 00 00 0a 13 0b 08 11 07 06 11 0b 28 ?? 00 00 0a 11 09 61 28 ?? 00 00 0a 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3970,6 +4138,7 @@ rule Trojan_MSIL_Bladabindi_PSTI_2147906120_0
         $x_2_1 = {2b 09 28 b8 9b 3c 3c 14 16 9a 26 16 2d f9 28 3b 04 00 06 28 25 01 00 06 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3991,6 +4160,7 @@ rule Trojan_MSIL_Bladabindi_ABL_2147906608_0
         $x_1_1 = {07 09 07 91 06 07 06 08 8c 40 00 00 01 80 01 00 00 04 8e 69 5d 91 07 08 d6 20 68 d6 5d 31 80 10 00 00 04 06 8e 69 d6 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4022,6 +4192,7 @@ rule Trojan_MSIL_Bladabindi_HNA_2147907739_0
         $x_1_11 = {00 4e 74 53 65 74 49 6e 66 6f 72 6d 61 74 69 6f 6e 50 72 6f 63 65 73 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4048,6 +4219,7 @@ rule Trojan_MSIL_Bladabindi_NH_2147910551_0
         $x_1_6 = "SELECT * FROM FirewallProduct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4070,6 +4242,7 @@ rule Trojan_MSIL_Bladabindi_ASL_2147910568_0
         $x_1_2 = "c3R1YnN0dWI=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4095,6 +4268,7 @@ rule Trojan_MSIL_Bladabindi_NK_2147915267_0
         $x_1_5 = "Invoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4118,6 +4292,7 @@ rule Trojan_MSIL_Bladabindi_NM_2147915269_0
         $x_1_3 = "eb3c99ae-4ab0-4043-9bd0-2fbcbed02fdd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4141,6 +4316,7 @@ rule Trojan_MSIL_Bladabindi_NP_2147917944_0
         $x_1_3 = "ShopChop#6936" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4166,6 +4342,7 @@ rule Trojan_MSIL_Bladabindi_NP_2147917944_1
         $x_1_5 = "Microsoft\\Windows\\Windows.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4189,6 +4366,7 @@ rule Trojan_MSIL_Bladabindi_NT_2147918732_0
         $x_1_3 = "audacity_win" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4213,6 +4391,7 @@ rule Trojan_MSIL_Bladabindi_NQ_2147920138_0
         $x_1_4 = "Microsoft\\Windows\\Windows.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4234,6 +4413,7 @@ rule Trojan_MSIL_Bladabindi_NS_2147920139_0
         $x_5_1 = {02 03 02 4b 03 04 61 05 61 58 0e 07 0e 04 e0 95 58 7e 44 03 00 04 0e 06 17 59 e0 95 58 0e 05 28 3f 05 00 06 58 54 2a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4256,6 +4436,7 @@ rule Trojan_MSIL_Bladabindi_MBXS_2147920579_0
         $x_2_2 = {74 69 6f 6e 00 76 69 64 65 6f 73 6f 66 74}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4278,6 +4459,7 @@ rule Trojan_MSIL_Bladabindi_MBXV_2147924088_0
         $x_1_2 = "sdfsdfs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4299,6 +4481,7 @@ rule Trojan_MSIL_Bladabindi_KAAG_2147924329_0
         $x_1_1 = {59 0d 06 09 03 08 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 0a 25 26 07 09 07 8e 69 5d 91 61 d2 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4324,6 +4507,7 @@ rule Trojan_MSIL_Bladabindi_AYA_2147926817_0
         $x_1_5 = "WhyYouReverseMe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4352,6 +4536,7 @@ rule Trojan_MSIL_Bladabindi_AYB_2147927993_0
         $x_1_8 = "CreateEncryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4373,6 +4558,7 @@ rule Trojan_MSIL_Bladabindi_EABQ_2147932236_0
         $x_5_1 = {00 06 23 00 00 00 00 00 00 3a 40 07 6f a0 00 00 0a 5a 23 00 00 00 00 00 40 50 40 58 28 a1 00 00 0a 28 a2 00 00 0a 28 a3 00 00 0a 0d 12 03 28 a4 00 00 0a 28 60 00 00 0a 0a 00 08 17 58 0c 08 1b fe 04 13 04 11 04 3a b5 ff ff ff}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4394,6 +4580,7 @@ rule Trojan_MSIL_Bladabindi_EAU_2147934434_0
         $x_5_1 = {06 08 9a 6f 5a 00 00 0a 02 16 28 33 00 00 0a 16 33 04 06 08 9a 2a 08 17 d6 0c 08 09 31 e2}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4416,6 +4603,7 @@ rule Trojan_MSIL_Bladabindi_AXMA_2147935099_0
         $x_1_2 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4442,6 +4630,7 @@ rule Trojan_MSIL_Bladabindi_AYC_2147935295_0
         $x_1_6 = "WriteAllBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4463,6 +4652,7 @@ rule Trojan_MSIL_Bladabindi_SWA_2147935622_0
         $x_2_1 = {11 05 16 11 04 11 07 11 06 28 1f 00 00 0a 11 07 11 06 58 13 07 07 11 05 16 20 00 01 00 00 6f 20 00 00 0a 25 13 06 16 30 d7 20 61 ff 6f 00 13 08 06 13 0d 16 13 0e 2b 1a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4485,6 +4675,7 @@ rule Trojan_MSIL_Bladabindi_PKMZ_2147936651_0
         $x_2_2 = {de 00 00 08 28 ?? 00 00 0a 0d 09 14 72 79 00 00 70 16 8d 03 00 00 01 14 14 14 28 ?? 00 00 0a 14 72 8f 00 00 70 18 8d 03 00 00 01 13 0c 11 0c 16 14 a2 00 11 0c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4506,6 +4697,7 @@ rule Trojan_MSIL_Bladabindi_GPPA_2147938484_0
         $x_1_1 = {7a 06 14 6f ?? 00 00 0a 75 ?? 00 00 01 0b 07 14 28 ?? 00 00 0a 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4527,6 +4719,7 @@ rule Trojan_MSIL_Bladabindi_GPPB_2147938485_0
         $x_1_1 = "R///e///////g/A//////s/m/./e////x/////e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4548,6 +4741,7 @@ rule Trojan_MSIL_Bladabindi_SLWA_2147941055_0
         $x_2_1 = {13 05 11 05 72 ?? 01 00 70 6f 30 00 00 0a 11 05 72 ?? 01 00 70 6f 31 00 00 0a 11 05 17 6f 32 00 00 0a 11 05 17}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4569,6 +4763,7 @@ rule Trojan_MSIL_Bladabindi_SLAW_2147941504_0
         $x_2_1 = {12 02 2b 27 72 dd 00 00 70 2b 27 80 17 00 00 04 7e 17 00 00 04 14 2b 21 2c 0c 7e 17 00 00 04 2b 1f 80 18 00 00 04 de 2f 07 2b d5 28 d8 00 00 0a 2b d2 28 d9 00 00 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4590,6 +4785,7 @@ rule Trojan_MSIL_Bladabindi_GRR_2147946029_0
         $x_1_1 = {72 59 01 00 70 6f 2a 00 00 0a 0a 06 72 5f 01 00 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

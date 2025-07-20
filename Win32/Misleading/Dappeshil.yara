@@ -18,6 +18,7 @@ rule Misleading_Win32_Dappeshil_240851_0
         $x_1_4 = {53 68 69 65 6c 64 41 70 70 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Misleading_Win32_Dappeshil_240851_1
         $x_1_4 = "IeSavedPasswordScanner" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Misleading_Win32_Dappeshil_240851_2
         $x_1_5 = "get_FiftyFixed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Misleading_Win32_Dappeshil_240851_3
         $x_1_6 = "labelname=PC Cleaning Utility&appver=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Misleading_Win32_Dappeshil_240851_4
         $x_1_7 = "SOFTWARE\\ShieldApps\\PC Privacy Shield" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -142,6 +147,7 @@ rule Misleading_Win32_Dappeshil_240851_5
         $x_1_7 = "SOFTWARE\\ShieldApps\\PC Registry Shield" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

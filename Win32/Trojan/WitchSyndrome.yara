@@ -35,6 +35,7 @@ rule Trojan_Win32_WitchSyndrome_A_2147904797_0
         $x_4_20 = "get_AllKeys" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 10 of ($x_4_*))) or
             ((2 of ($x_20_*) and 5 of ($x_4_*))) or
@@ -83,6 +84,7 @@ rule Trojan_Win32_WitchSyndrome_B_2147904798_0
         $x_1_23 = "btnEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -112,6 +114,7 @@ rule Trojan_Win32_WitchSyndrome_C_2147904799_0
         $x_1_9 = "System.Data.SqlClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

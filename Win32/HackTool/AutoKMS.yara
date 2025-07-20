@@ -17,6 +17,7 @@ rule HackTool_Win32_AutoKMS_2147685180_0
         $x_1_3 = {5c 6b 00 6d 00 73 00 20 00 76 00 6c 00 20 00 61 00 6c 00 6c 00 c0 6f 3b 6d e5 5d 77 51 c6 96 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule HackTool_Win32_AutoKMS_2147685180_1
         $x_1_3 = "secr9tos" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule HackTool_Win32_AutoKMS_2147685180_2
         $x_1_8 = "kms.digiboy.ir" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -94,6 +97,7 @@ rule HackTool_Win32_AutoKMS_2147685180_3
         $x_1_5 = "KMS_Emulation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule HackTool_Win32_AutoKMS_2147685180_4
         $x_1_6 = "Program Files\\Windows Defender\\MsMpEng.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -154,6 +159,7 @@ rule HackTool_Win32_AutoKMS_2147685180_5
         $x_2_16 = {00 35 35 30 34 31 2d 30 30 31 36 38 2d 33 30 35 2d 58 58 58 58 58 58 2d 30 33 2d 31 30 33 33 2d 56 56 56 56 2e 30 30 30 30 2d 44 44 44 59 59 59 59 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -181,6 +187,7 @@ rule HackTool_Win32_AutoKMS_B_2147730148_0
         $x_1_4 = "SppExtComObjPatcher-kms\\Debug\\x64\\KMS.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +218,7 @@ rule HackTool_Win32_AutoKMS_C_2147731000_0
         $x_1_11 = {40 24 26 25 ?? ?? 5c 6b 6d 73 64 6c 6c 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -236,6 +244,7 @@ rule HackTool_Win32_AutoKMS_D_2147731321_0
         $x_1_2 = "Setup=KMSpico-setup.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -258,6 +267,7 @@ rule HackTool_Win32_AutoKMS_D_2147731321_1
         $x_1_3 = "[SppExtComObj Hook B] Hooking Success" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -282,6 +292,7 @@ rule HackTool_Win32_AutoKMS_SA_2147741757_0
         $x_1_4 = "Starting KMSEmulator service (ServiceName: %s)..." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -307,6 +318,7 @@ rule HackTool_Win32_AutoKMS_E_2147743252_0
         $x_1_5 = "InstallAutoKMS" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -333,6 +345,7 @@ rule HackTool_Win32_AutoKMS_NK_2147744620_0
         $x_1_6 = "@KMSServerService" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -356,6 +369,7 @@ rule HackTool_Win32_AutoKMS_HNB_2147929004_0
         $x_2_3 = {00 00 6b 00 6d 00 73 00 38 00 2e 00 4d 00 53 00 47 00 75 00 69 00 64 00 65 00 73 00 2e 00 63 00 6f 00 6d 00 3a 00 31 00 36 00 38 00 38 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

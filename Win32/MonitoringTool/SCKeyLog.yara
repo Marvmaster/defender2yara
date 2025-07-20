@@ -21,6 +21,7 @@ rule MonitoringTool_Win32_SCKeyLog_10817_0
         $x_3_7 = "KLShared" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 3 of ($x_1_*))) or
             ((3 of ($x_3_*))) or
@@ -51,6 +52,7 @@ rule MonitoringTool_Win32_SCKeyLog_10817_1
         $x_4_7 = "NextPart_000_01C19920.83032BC7" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_4_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_4_*) and 1 of ($x_1_*))) or
@@ -101,6 +103,7 @@ rule MonitoringTool_Win32_SCKeyLog_10817_2
         $x_3_26 = "!tubsufe" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((15 of ($x_1_*))) or
             ((1 of ($x_2_*) and 13 of ($x_1_*))) or

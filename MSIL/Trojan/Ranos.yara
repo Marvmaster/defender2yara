@@ -17,6 +17,7 @@ rule Trojan_MSIL_Ranos_A_2147685692_0
         $x_1_3 = "Now Executing Custom Application..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_Ranos_OJC_2147823556_0
         $x_1_1 = {06 11 05 b7 08 11 05 18 6a d8 b7 18 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a 9c 11 05 17 6a d6 13 05 11 05 11 06 31 da}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

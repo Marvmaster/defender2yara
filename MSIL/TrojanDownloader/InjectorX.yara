@@ -19,6 +19,7 @@ rule TrojanDownloader_MSIL_InjectorX_RDB_2147896726_0
         $x_1_4 = "d2485e62400e49205f286574889ce4b1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

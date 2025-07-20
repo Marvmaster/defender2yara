@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Cutwail_B_2147596614_0
         $x_1_1 = {ff ff 6a 35 8d ?? ?? fb ff ff ?? e8 ?? ?? 00 00 83 c4 08 68 28 30 40 00 68 3f 00 0f 00 6a 00 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule TrojanDropper_Win32_Cutwail_A_2147596631_0
         $x_1_2 = {83 ec 04 53 56 57 8b 4d 08 ?? ?? 49 49 0f b6 09 89 4d fc 8b 7d 0c 56 ff 15 ?? ?? ?? ?? ?? ?? 89 1f 83 c7 04 e8 ?? ?? ?? ?? 56 53 ff 15 ?? ?? ?? ?? 89 07 83 c7 04 e8 ?? ?? ?? ?? 3c 00 75 ea 46 ff 4d fc 83 7d fc 00 75 cd ?? ?? 5f 5e 5b c9 c2 08 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -56,6 +58,7 @@ rule TrojanDropper_Win32_Cutwail_C_2147596653_0
         $x_1_1 = {74 3d 68 a0 12 00 01 50 e8 e7 fe ff ff 6a 01 8d 85 f4 fd ff ff 50 6a 65 53 e8 78 fd ff ff 56 8d 85 dc fc ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule TrojanDropper_Win32_Cutwail_D_2147596921_0
         $x_1_6 = "SetThreadContext" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -107,6 +111,7 @@ rule TrojanDropper_Win32_Cutwail_A_2147596922_0
         $x_1_2 = {8b 00 03 c6 05 80 00 00 00 8b 18 03 de 8b 43 0c 03 45 08 50 ff 15 [0-6] 89 45 fc 8b 33 03 75 08 8b 7b 10 03 7d 08 8b 0e 03 4d 08 41 41 51 ff 75 fc ff 15 ?? ?? ?? ?? 89 07 83 c6 04 83 c7 04 83 3e 00 75 e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +132,7 @@ rule TrojanDropper_Win32_Cutwail_F_2147597037_0
         $x_1_1 = {ff 35 f8 23 40 00 ff 15 ?? ?? 40 00 c7 86 b0 00 00 00 (2a|3a) 10 40 00 56 ff 35 f8 23 40 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +154,7 @@ rule TrojanDropper_Win32_Cutwail_G_2147597272_0
         $x_1_2 = {68 50 62 14 13 8d 4c 24 10 51 8d 94 24 18 01 00 00 68 40 62 14 13 52 e8 d5 02 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -170,6 +177,7 @@ rule TrojanDropper_Win32_Cutwail_H_2147597828_0
         $x_1_3 = {c3 8d b5 2c fd ff ff c7 06 02 00 01 00 56 ff 75 fc ff 15 ?? ?? 40 00 8b 45 0c 8d 0e 81 c1 b0 00 00 00 89 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -190,6 +198,7 @@ rule TrojanDropper_Win32_Cutwail_I_2147598113_0
         $x_1_1 = {56 56 68 00 24 a4 9c 57 ff 15 ?? ?? 00 01 57 ff 15 ?? ?? 00 01 eb 28 68 ?? ?? 00 01 50 e8 ?? ?? ff ff 6a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +219,7 @@ rule TrojanDropper_Win32_Cutwail_J_2147598114_0
         $x_1_1 = {9c 71 9c 40 01 81 83 10 34 50 b0 81 3d 00 04 0c e5 50 c0 c1 04 12 28 58 c4 a1 40 01 06 10 28 60}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -231,6 +241,7 @@ rule TrojanDropper_Win32_Cutwail_O_2147598321_0
         $x_1_2 = {10 52 e8 ed fe ff ff 83 c4 08 68 c8 00 00 00 8b 45 fc 50 68 ?? 51 00 10 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -263,6 +274,7 @@ rule TrojanDropper_Win32_Cutwail_R_2147598431_0
         $x_1_13 = {eb 03 e8 61 6c 8d 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -292,6 +304,7 @@ rule TrojanDropper_Win32_Cutwail_V_2147599824_0
         $x_1_4 = {6a 40 b9 0b 00 00 00 8b c1 05 00 30 00 00 50 29 0c 24 ff 73 50 50 8d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -313,6 +326,7 @@ rule TrojanDropper_Win32_Cutwail_U_2147599876_0
         $x_1_2 = {75 0f 83 0d ?? ?? ?? ?? 01 ff 15 ?? ?? ?? ?? eb 05 a1 ?? ?? ?? ?? 69 c0 ?? ?? ?? ?? a3 ?? ?? ?? ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -336,6 +350,7 @@ rule TrojanDropper_Win32_Cutwail_W_2147599916_0
         $x_1_4 = {0f 85 19 ff ff ff 33 c0 c9 c3 8d ?? ?? ?? ?? ?? 64 8b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -362,6 +377,7 @@ rule TrojanDropper_Win32_Cutwail_E_2147600356_0
         $x_1_7 = "drivers\\netdtect.sys" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -389,6 +405,7 @@ rule TrojanDropper_Win32_Cutwail_Y_2147601662_0
         $x_1_5 = {33 f6 0b f0 c1 e6 03 8d 1d ?? ?? ?? ?? ff 93 ?? ?? ?? ?? 8b e5 8d 15 ?? ?? ?? ?? ff 92 ?? ?? ?? ?? b9 ?? ?? ?? ?? 03 c1 03 c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -411,6 +428,7 @@ rule TrojanDropper_Win32_Cutwail_Z_2147603607_0
         $x_1_3 = {b9 2f 0a ab 3d 81 c1 ae c2 10 6d 8b 45 fc 83 c0 04 39 08 75 f9 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -445,6 +463,7 @@ rule TrojanDropper_Win32_Cutwail_AA_2147605015_0
         $x_1_15 = {64 a1 30 00 00 00 8b 40 0c 8b 40 1c 8b 4d d0 3b 48 08 74 04 8b 00 eb f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -469,6 +488,7 @@ rule TrojanDropper_Win32_Cutwail_AB_2147605027_0
         $x_1_1 = {8b 5d ec 8b f3 8b 5b 3c 03 de 8a 43 06 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? [0-48] 8b 75 0c 8b 7d 10 8b 4d 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -491,6 +511,7 @@ rule TrojanDropper_Win32_Cutwail_AC_2147605331_0
         $x_1_3 = {31 03 83 e9 02 49 49 7c 08 03 45 ?? 83 c3 04 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -517,6 +538,7 @@ rule TrojanDropper_Win32_Cutwail_AD_2147605944_0
         $x_1_7 = "FindResourceA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -539,6 +561,7 @@ rule TrojanDropper_Win32_Cutwail_E_2147606365_0
         $x_1_2 = {68 00 24 6c 9d ff 74 24 24 89 44 24 24 89 7c 24 20 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -567,6 +590,7 @@ rule TrojanDropper_Win32_Cutwail_AG_2147608398_0
         $x_1_9 = "StartShell" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -590,6 +614,7 @@ rule TrojanDropper_Win32_Cutwail_AH_2147608840_0
         $x_1_4 = {8b f0 83 c6 c4 8b 08 8b 4c 31 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -614,6 +639,7 @@ rule TrojanDropper_Win32_Cutwail_AJ_2147609389_0
         $x_1_1 = {33 d2 4a 43 8b 03 2d ?? ?? ?? ?? 3b c1 75 f4 42 83 fa ?? 75 ee 83 eb 07 80 3b 90 74 01 43}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -639,6 +665,7 @@ rule TrojanDropper_Win32_Cutwail_AL_2147609615_0
         $x_1_6 = {e8 0b 00 00 00 90 e8 25 00 00 00 5b ff d0 53 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -662,6 +689,7 @@ rule TrojanDropper_Win32_Cutwail_H_2147609904_0
         $x_1_3 = {8d 45 e0 50 8d 45 cc 50 55 54 5d 51 83 65 fc 00 eb 09 ff 75 fc 58 40 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -684,6 +712,7 @@ rule TrojanDropper_Win32_Cutwail_AO_2147610126_0
         $x_1_3 = {43 61 6e 63 65 6c 49 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -706,6 +735,7 @@ rule TrojanDropper_Win32_Cutwail_AR_2147619890_0
         $x_1_3 = {80 38 90 74 01 40 83 ec 08 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -728,6 +758,7 @@ rule TrojanDropper_Win32_Cutwail_AW_2147632846_0
         $x_1_3 = {0f b7 54 18 06 8b 4c 18 28 03 c3 8d 14 92 8d ?? d0 d0 00 00 00 03 cb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -754,6 +785,7 @@ rule TrojanDropper_Win32_Cutwail_K_2147688299_0
         $x_1_3 = {8b 45 f0 33 d2 b9 3d 00 00 00 f7 f1 8b 45 08 03 45 f8 8a 8a ?? ?? ?? ?? 88 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -801,6 +833,7 @@ rule TrojanDropper_Win32_Cutwail_CCIO_2147924733_0
         $x_5_1 = {b8 ab aa aa aa f7 e6 8b c6 c1 ea 04 8d 0c 52 c1 e1 03 2b c1 8a 4c 04 14 8b 44 24 10 32 8e ?? ?? ?? ?? 88 0c 06 46 3b 74 24 2c 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

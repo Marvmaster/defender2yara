@@ -28,6 +28,7 @@ rule Trojan_Win32_Conycspa_C_2147593995_0
         $x_1_14 = "jpg/jpg.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule VirTool_MSIL_QuasarRAT_ASC_2147731546_0
         $x_1_2 = {8e b7 2f 26 ?? 16 30 00 ?? ?? 8e b7 17 da ?? da 02 ?? 91 02 02 8e b7 17 da 91 61 ?? ?? ?? 8e b7 5d 91 61 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

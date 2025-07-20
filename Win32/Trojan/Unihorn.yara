@@ -20,6 +20,7 @@ rule Trojan_Win32_Unihorn_A_2147633090_0
         $x_1_6 = "oid=%d&s=%d&u=%s&cid=%s-%08X&ru=%d&rt=%d&t=%d&bid=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

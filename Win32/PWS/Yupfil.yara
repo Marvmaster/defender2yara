@@ -16,6 +16,7 @@ rule PWS_Win32_Yupfil_A_2147647497_0
         $x_1_2 = {6c 6c 7a 68 75 63 65 62 61 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule PWS_Win32_Yupfil_B_2147647498_0
         $x_2_4 = {c7 07 0c 00 00 00 e8 ?? ?? ?? ?? 83 c3 01 83 c7 14 3b 1e 7c ea}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

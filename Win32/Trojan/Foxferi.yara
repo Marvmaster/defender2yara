@@ -18,6 +18,7 @@ rule Trojan_Win32_Foxferi_A_2147645215_0
         $x_1_4 = "/C REG ADD HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce /F" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))

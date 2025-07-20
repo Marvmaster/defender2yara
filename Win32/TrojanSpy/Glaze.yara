@@ -15,6 +15,7 @@ rule TrojanSpy_Win32_Glaze_A_2147598325_0
         $x_1_1 = {6a 02 5f c6 06 4d 39 7d f8 c6 46 01 5a 76 23 89 5d fc 29 75 fc 8b c7 bb ff 00 00 00 99 f7 fb 8b 45 fc 8d 0c 37 8a 04 08 32 c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -35,6 +36,7 @@ rule TrojanSpy_Win32_Glaze_B_2147598326_0
         $x_1_1 = {66 8b 43 02 50 ff 15 ?? ?? 00 10 66 3d 15 00 (75|0f) [0-5] ff 73 04 ff 15 ?? ?? 00 10 80 a5 ?? ff ff ff 00 6a 31 8b ?? 59 33 c0 8d bd ?? ff ff ff f3 ab 66 ab aa [0-1] 8d 85 ?? ff ff ff 68 ?? ?? 00 10 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule TrojanSpy_Win32_Glaze_C_2147611350_0
         $x_1_5 = {57 53 50 53 74 61 72 74 75 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or

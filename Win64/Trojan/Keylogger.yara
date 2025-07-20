@@ -33,6 +33,7 @@ rule Trojan_Win64_Keylogger_BH_2147844444_0
         $x_1_18 = "Downloads\\mals\\winkl\\keylogger\\src\\Keylogger\\x64\\Release\\Keylogger.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -56,6 +57,7 @@ rule Trojan_Win64_Keylogger_RR_2147895939_0
         $x_5_3 = "Software\\def9b6cd3f2b0c43097dfbc918862b82" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +82,7 @@ rule Trojan_Win64_Keylogger_RB_2147896980_0
         $x_1_4 = "Keylogger is up and running" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -19,6 +19,7 @@ rule TrojanDownloader_MSIL_Cryflas_B_2147681067_0
         $x_1_5 = "Windows\\svchost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_4_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule TrojanDownloader_MSIL_Cryflas_C_2147681068_0
         $x_1_6 = "Windows\\svchost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_2_*))) or
             ((1 of ($x_10_*) and 1 of ($x_4_*) and 1 of ($x_2_*))) or

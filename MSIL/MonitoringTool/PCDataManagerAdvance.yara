@@ -17,6 +17,7 @@ rule MonitoringTool_MSIL_PCDataManagerAdvance_205043_0
         $x_1_3 = "DRPU PC Management - Advanced Report" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

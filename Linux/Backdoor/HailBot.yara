@@ -19,6 +19,7 @@ rule Backdoor_Linux_HailBot_A_2147946729_0
         $x_1_4 = {f4 02 a2 8f 00 00 00 ae 04 00 10 26 fc ff 02 16 21 20 c0 02 1c 00 a2 8e 04 03 a3 8f 25 10 57 00 fc 02 a5 8f 1c 00 a2 ae 28 00 a0 af 10 00 a3 af 21 30 00 00 21 c8 c0 03 09 f8 20 03 21 38 00 00 21 18 40 00 ff ff 02 24 18 00 bc 8f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

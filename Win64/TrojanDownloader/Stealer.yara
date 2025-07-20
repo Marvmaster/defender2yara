@@ -18,6 +18,7 @@ rule TrojanDownloader_Win64_Stealer_WE_2147910317_0
         $x_1_3 = "loader.bin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win64_Stealer_WQ_2147910318_0
         $x_1_3 = "jerry.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -69,6 +71,7 @@ rule TrojanDownloader_Win64_Stealer_WZ_2147910319_0
         $x_1_2 = "payload.bin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule TrojanDownloader_Win64_Stealer_AB_2147910547_0
         $x_1_2 = "payload.bin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule TrojanDownloader_Win64_Stealer_GA_2147928063_0
         $x_1_3 = "TEMP=C:\\TEMP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

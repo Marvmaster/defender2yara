@@ -19,6 +19,7 @@ rule Ransom_MacOS_Mabouia_A_2147745270_0
         $x_1_4 = "/mabouia/catcher.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_MacOS_Mabouia_B_2147911018_0
         $x_1_2 = {73 67 40 88 75 b0 c6 45 b1 00 c6 45 b2 01 c6 45 b3 01 c7 45 ec 00 00 00 00 48 c7 45 e4 00 00 00 00 48 c7 45 dc 00 00 00 00 48 c7 45 d4 00 00 00 00 48 c7 45 cc 00 00 00 00 48 c7 45 c4 00 00 00 00 48 c7 45 bc 00 00 00 00 48 c7 45 b4 00 00 00 00 48 8d 75 b0 e8 38 ff ff ff 48 3b 5d f0 75 0e 31 c0 48 83 c4 48 5b 5d c3 e8 e6 81 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

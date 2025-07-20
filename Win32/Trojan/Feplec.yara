@@ -17,6 +17,7 @@ rule Trojan_Win32_Feplec_A_2147628029_0
         $x_2_3 = {8b 00 ff d0 8b f0 60 3b 1d ?? ?? ?? ?? 0f 85 94 00 00 00 83 fe 32 0f 8e 8b 00 00 00 8d 45 f8 8b d7 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

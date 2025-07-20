@@ -24,6 +24,7 @@ rule Worm_Win32_Heoyon_A_2147654221_0
         $x_1_10 = {6f 70 65 6e 66 6c 61 73 68 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or

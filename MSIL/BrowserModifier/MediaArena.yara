@@ -20,6 +20,7 @@ rule BrowserModifier_MSIL_MediaArena_363871_0
         $x_2_6 = "MyPdfManager.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule BrowserModifier_MSIL_MediaArena_363871_1
         $x_1_6 = "BLBeacon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -76,6 +78,7 @@ rule BrowserModifier_MSIL_MediaArena_363871_2
         $x_1_9 = "favicon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +108,7 @@ rule BrowserModifier_MSIL_MediaArena_363871_3
         $x_1_10 = "wisewebsearch.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +136,7 @@ rule BrowserModifier_MSIL_MediaArena_363871_4
         $x_1_8 = "Exception in PayloadUtils.DefaultBrowserDetails(): {1}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +168,7 @@ rule BrowserModifier_MSIL_MediaArena_363871_5
         $x_1_12 = "Step 9 : Gracefully closed edge" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -194,6 +200,7 @@ rule BrowserModifier_MSIL_MediaArena_363871_6
         $x_1_12 = "advertisements based on your searches" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 7 of ($x_1_*))) or
             ((2 of ($x_3_*) and 6 of ($x_1_*))) or
@@ -228,6 +235,7 @@ rule BrowserModifier_MSIL_MediaArena_365687_0
         $x_1_6 = "FreePDFPlusInst" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -254,6 +262,7 @@ rule BrowserModifier_MSIL_MediaArena_365687_1
         $x_1_6 = "edge://settings/searchEngines" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -283,6 +292,7 @@ rule BrowserModifier_MSIL_MediaArena_365687_2
         $x_1_9 = "PDF Central" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +322,7 @@ rule BrowserModifier_MSIL_MediaArena_365687_3
         $x_1_9 = "PdfManager" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -342,6 +353,7 @@ rule BrowserModifier_MSIL_MediaArena_365687_4
         $n_100_10 = "Uninstall.exe" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }

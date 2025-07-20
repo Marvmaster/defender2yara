@@ -16,6 +16,7 @@ rule Trojan_Win32_Nabucur_AA_2147742608_0
         $x_1_2 = {56 69 72 74 75 61 6c 41 6c 6c 6f 63 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

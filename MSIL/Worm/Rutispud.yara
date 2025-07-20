@@ -20,6 +20,7 @@ rule Worm_MSIL_Rutispud_A_2147637951_0
         $x_1_6 = {1f 41 00 72 00 65 00 20 00 79 00 6f 00 75 00 20 00 73 00 74 00 75 00 70 00 69 00 64 00 3f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Worm_MSIL_Rutispud_B_2147638326_0
         $x_2_5 = "windows_7full.scr" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or

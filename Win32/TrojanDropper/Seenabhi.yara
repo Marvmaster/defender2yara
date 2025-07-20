@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Seenabhi_A_2147688338_0
         $x_1_4 = {c6 45 c8 70 c6 45 c9 73 c6 45 ca 6c c6 45 cb 6f c6 45 cc 67 c6 45 cd 2e c6 45 ce 74 c6 45 cf 78 c6 45 d0 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

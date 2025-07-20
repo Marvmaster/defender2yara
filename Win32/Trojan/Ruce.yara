@@ -22,6 +22,7 @@ rule Trojan_Win32_Ruce_A_2147628999_0
         $x_1_7 = {21 40 23 24 25 5e 00 00 65 78 65 00 4e 65 74 00 63 6d 64 2e 65 78 65 00 64 69 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_5_*))) or
             ((2 of ($x_50_*))) or
@@ -50,6 +51,7 @@ rule Trojan_Win32_Ruce_B_2147629007_0
         $x_1_4 = {6f 72 65 72 5c 49 45 58 50 4c 4f 52 45 2e 45 58 45 22 20 2d 6e 6f 68 6f 6d 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

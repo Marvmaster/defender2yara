@@ -23,6 +23,7 @@ rule Trojan_Win64_T1134_AccessTokenManipulation_A_2147846089_0
         $x_10_9 = "token::run" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

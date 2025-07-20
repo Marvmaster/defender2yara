@@ -19,6 +19,7 @@ rule PWS_MSIL_Ebot_A_2147655738_0
         $x_1_5 = "hookstruct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

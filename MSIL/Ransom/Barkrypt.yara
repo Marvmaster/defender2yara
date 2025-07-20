@@ -40,6 +40,7 @@ rule Ransom_MSIL_Barkrypt_A_2147726533_0
         $x_10_26 = "hackerBoi\\hackerBoi\\obj\\Debug\\hackerBoi.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((15 of ($x_1_*))) or
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or

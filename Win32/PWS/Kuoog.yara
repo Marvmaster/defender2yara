@@ -17,6 +17,7 @@ rule PWS_Win32_Kuoog_A_2147631837_0
         $x_1_3 = "us=%s&ps=%s&lv=%d&qu=%s&se=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

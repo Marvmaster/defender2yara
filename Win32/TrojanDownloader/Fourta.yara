@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Fourta_A_2147603540_0
         $x_1_2 = {ff 85 d0 fe fe ff 81 bd d0 fe fe ff 6c 07 00 00 72 e7 ff 85 f4 ff fe ff 81 bd f4 ff fe ff 90 5f 01 00 72 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

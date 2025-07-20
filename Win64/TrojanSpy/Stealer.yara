@@ -17,6 +17,7 @@ rule TrojanSpy_Win64_Stealer_PAGM_2147937178_0
         $x_2_2 = {8d 0c 1f 80 e1 07 c0 e1 03 49 8b d1 48 d3 ea 30 57 ff 40 0f b6 cf 41 2a c8 80 e1 07 c0 e1 03 49 8b d1 48 d3 ea 30 17 48 83 c7 02 48 8d 04 3b 48 83 f8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanSpy_Win64_Stealer_ARA_2147937688_0
         $x_2_1 = {0f b6 c8 4d 8b c2 80 e1 07 c0 e1 03 49 d3 e8 46 30 04 08 48 ff c0 48 83 f8 33 72 e4}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

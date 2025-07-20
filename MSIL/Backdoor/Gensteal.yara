@@ -30,6 +30,7 @@ rule Backdoor_MSIL_Gensteal_A_2147688972_0
         $x_1_16 = "/AUTOSERV/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 

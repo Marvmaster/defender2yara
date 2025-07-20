@@ -17,6 +17,7 @@ rule HackTool_Linux_LinPeas_D_2147911936_0
         $x_2_2 = {5e 40 59 99 ac c4 fb e9 c0 e1 e2 c1 cb 04 56 fd 31 53 2a 3e fc 48 90 db b2 4c 29 1e 76 94 58 1c 79 e5 0a bb 2b df a2 88 e9 4a 2e cb 27 95 51 0f 81 62 d8 44 b7 c7 6a 5a d4 e2 91 74 21 bd 54 a8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

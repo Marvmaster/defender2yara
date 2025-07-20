@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_GuLoader_SN_2147761523_0
         $x_20_7 = "MSVBVM60.DLL" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -56,6 +57,7 @@ rule TrojanDownloader_Win32_GuLoader_SN_2147761523_1
         $x_1_11 = "MiusyLaTroio" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))

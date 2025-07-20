@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Dapato_M_2147721444_0
         $x_1_2 = {49 ff c0 42 80 3c 03 00 75 f6 49 83 c0 02 48 8d 4c 24 20 48 8b d3 e8 ?? ?? ?? ?? 33 d2 48 8d 4c 24 20 ff 15 ?? ?? ?? ?? 48 8b 8c 24 20 02 00 00 48 33 cc e8 ?? ?? ?? ?? 48 81 c4 30 02 00 00 5b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDropper_Win32_Dapato_V_2147740886_0
         $x_1_4 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule TrojanDropper_Win32_Dapato_BH_2147827944_0
         $x_2_1 = {01 c1 8b 45 f8 8b 55 08 01 c2 8b 45 f8 89 4d f4 b9 20 00 00 00 89 55 f0 99 f7 f9 b8 00 20 40 00 01 d0 8b 4d f0 0f be 09 0f be 10 31 d1 8b 45 f4 88 08 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule TrojanDropper_Win32_Dapato_SV_2147888672_0
         $x_2_3 = {56 4c c9 dc 36 41 ec 6e 2a 60 5a 28 aa 51 f9 17 b6 23 26 18 98 33 72 e7 e2 ec e9 19 a5 64 24 7f 60 3a 2d ea 93 e6 09 ae f0 61 14 0f 4d 40 4b 37}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule TrojanDropper_Win32_Dapato_GNX_2147903161_0
         $x_1_4 = "Atomic Wallet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

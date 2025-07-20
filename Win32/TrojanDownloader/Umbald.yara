@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Umbald_A_2147650391_0
         $x_1_5 = {2f 50 61 6e 65 6c 2f 62 6f 74 2e 70 68 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

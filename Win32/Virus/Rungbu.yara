@@ -45,6 +45,7 @@ rule Virus_Win32_Rungbu_C_2147582180_0
         $x_1_30 = "Bugs Bunny say \"What's up doc?\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((20 of ($x_1_*))) or
             ((1 of ($x_2_*) and 18 of ($x_1_*))) or

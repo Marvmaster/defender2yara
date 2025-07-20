@@ -18,6 +18,7 @@ rule Ransom_Linux_Babyk_C_2147847532_0
         $x_1_3 = {48 8b 55 d8 48 8b 45 e0 48 89 d1 ba 00 00 a0 00 be 01 00 00 00 48 89 c7 e8 a2 fc ff ff 48 89 45 c8 48 8b 45 c8 48 01 45 c0 48 83 7d c8 00 0f 84 86 00 00 00 48 8b 4d c8 48 8b 55 e0 48 8b 5d e0 48 8d 85 60 fe ff ff 48 89 de 48 89 c7 e8 8b a7 00 00 48 8b 45 c8 48 f7 d8 48 89 c1 48 8b 45 d8 ba 01 00 00 00 48 89 ce 48 89 c7 e8 7f fb ff ff 48 8b 4d d8 48 8b 55 c8 48 8b 45 e0 be 01 00 00 00 48 89 c7 e8 96 fc ff ff 48 81 7d c0 ff ff ff 1f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

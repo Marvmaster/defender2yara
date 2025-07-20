@@ -24,6 +24,7 @@ rule Trojan_Win32_FakeSheld_131471_0
         $x_1_10 = {25 64 20 75 70 64 61 74 65 64 20 64 65 66 69 6e 69 74 69 6f 6e 73 20 64 6f 77 6e 6c 6f 61 64 65 64 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Rmeasi_A_2147666212_0
         $x_1_2 = {6a 00 6a 00 ff 15 ?? ?? ?? ?? c7 45 ?? cf 07 00 00 eb 81 7d 01 cf 07 00 00 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

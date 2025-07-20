@@ -26,6 +26,7 @@ rule TrojanSpy_Win32_Spynoon_STEL_2147782388_0
         $x_1_11 = ".rdata$zzzdbg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -55,6 +56,7 @@ rule TrojanSpy_Win32_Spynoon_STE_2147899300_0
         $x_1_9 = "qneqcvgfyux" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

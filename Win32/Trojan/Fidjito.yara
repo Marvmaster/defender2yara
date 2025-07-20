@@ -17,6 +17,7 @@ rule Trojan_Win32_Fidjito_A_2147649832_0
         $x_1_3 = {8d 44 24 0c 50 6a 04 56 6a 09 53 c7 06 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

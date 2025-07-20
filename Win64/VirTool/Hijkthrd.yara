@@ -16,6 +16,7 @@ rule VirTool_Win64_Hijkthrd_A_2147941244_0
         $x_1_2 = {56 48 8b f4 48 83 e4 f0 48 83 ec 20 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

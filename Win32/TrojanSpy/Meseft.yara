@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Meseft_2147647657_0
         $x_1_4 = "X-Nigger-%c: %u%u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

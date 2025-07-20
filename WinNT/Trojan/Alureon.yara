@@ -22,6 +22,7 @@ rule Trojan_WinNT_Alureon_C_133874_0
         $x_1_8 = {c4 e8 40 4c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_WinNT_Alureon_D_134074_0
         $x_1_10 = {76 0d 8a d1 80 c2 54 30 14 31 41 3b c8 72 f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -81,6 +83,7 @@ rule Trojan_WinNT_Alureon_E_142490_0
         $x_1_7 = {5c 00 72 00 65 00 67 00 69 00 73 00 74 00 72 00 79 00 5c 00 6d 00 61 00 63 00 68 00 69 00 6e 00 65 00 5c 00 73 00 79 00 73 00 74 00 65 00 6d 00 5c 00 63 00 75 00 72 00 72 00 65 00 6e 00 74 00 63 00 6f 00 6e 00 74 00 72 00 6f 00 6c 00 73 00 65 00 74 00 5c 00 65 00 6e 00 75 00 6d 00 5c 00 72 00 6f 00 6f 00 74 00 5c 00 6c 00 65 00 67 00 61 00 63 00 79 00 5f 00 [0-16] 2e 00 73 00 79 00 73 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +108,7 @@ rule Trojan_WinNT_Alureon_143835_0
         $x_10_5 = {0f b6 54 98 08 8b 5c 24 18 32 54 0b 01 46 88 51 01 81 e6 ff 00 00 00 8b 54 b0 08 03 fa 81 e7 ff 00 00 00 8b 5c b8 08}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -137,6 +141,7 @@ rule Trojan_WinNT_Alureon_B_143886_0
         $x_1_10 = "HtkVqtkwlsTtvznvp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 6 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -165,6 +170,7 @@ rule Trojan_WinNT_Alureon_F_144379_0
         $x_1_5 = {68 61 6c 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +196,7 @@ rule Trojan_WinNT_Alureon_G_144687_0
         $x_1_6 = {68 96 f7 de b5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -215,6 +222,7 @@ rule Trojan_WinNT_Alureon_H_145930_0
         $x_1_6 = {39 16 74 14 8b 03 0b 43 04 75 2d 8b fe 32 c0 b9 00 04 00 00 f3 aa}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -242,6 +250,7 @@ rule Trojan_WinNT_Alureon_I_146894_0
         $x_1_8 = "\\filesystem\\ntfs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -266,6 +275,7 @@ rule Trojan_WinNT_Alureon_A_147611_0
         $x_1_4 = {60 50 0f 01 4c 24 fe 5e 8b 5e 04 66 8b 1e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -293,6 +303,7 @@ rule Trojan_WinNT_Alureon_B_149799_0
         $x_1_3 = {50 68 00 00 00 80 8d 45 ?? 50 b8 ?? ?? ?? ?? ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -315,6 +326,7 @@ rule Trojan_WinNT_Alureon_L_153304_0
         $x_1_3 = {8b 43 0c 56 57 8b f8 8b 45 0c be ?? ?? ?? ?? b9 00 02 00 00 f3 a4 5f 5e 8b 0b 85 c9 74 ?? ff 73 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -335,6 +347,7 @@ rule Trojan_WinNT_Alureon_P_155696_0
         $x_1_1 = {09 d8 08 c0 0f 85 ?? ?? 00 80 6a 00 ff 15 ?? ?? 01 00 68 ?? ?? 00 00 6a 00 ff 15 ?? ?? 01 00 a3 ?? ?? 01 00 89 c7 be ?? ?? 01 00 bb ?? ?? 00 00 a5 31 5f fc 81 c3 ?? ?? 00 00 81 fe ?? ?? 01 00 0f 85 ea ff ff ff ff 15 ?? ?? 01 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -356,6 +369,7 @@ rule Trojan_WinNT_Alureon_S_158264_0
         $x_1_2 = "[injects_end]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -378,6 +392,7 @@ rule Trojan_WinNT_Alureon_X_164622_0
         $x_1_3 = {8b 45 fc 0f b7 00 8b d0 81 e2 00 f0 00 00 bb 00 30 00 00 66 3b d3 75 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -401,6 +416,7 @@ rule Trojan_WinNT_Alureon_Z_165679_0
         $x_1_4 = {75 0e 8b f8 be ?? ?? ?? ?? b9 00 02 00 00 f3 a4 5f 5e 8b 03 85 c0 74 ?? 8b 4b 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -423,6 +439,7 @@ rule Trojan_WinNT_Alureon_AA_167854_0
         $x_1_3 = "[injects_end]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -445,6 +462,7 @@ rule Trojan_WinNT_Alureon_AA_167854_1
         $x_1_3 = "%s\\ph.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -467,6 +485,7 @@ rule Trojan_WinNT_Alureon_AB_172757_0
         $x_1_3 = {3b 46 18 0f 82 ?? ?? ff ff 83 45 ?? 04 ff 4d ?? 0f 85 ?? ?? ff ff ff 4d ?? 0f 85 fb fe ff ff 8b 45 ?? 8b 55 08 8b 4d ?? 89 50 18 8b 71 58 89 70 40 8b 71 28 03 f2 5f 89 70 1c 8b 49 08 5e 89 48 44}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -489,6 +508,7 @@ rule Trojan_WinNT_Alureon_FO_174008_0
         $x_1_3 = {c7 06 84 6a 62 73 c7 46 04 5f 61 66 64 c7 46 08 59 63 63 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -510,6 +530,7 @@ rule Trojan_WinNT_Alureon_DB_196399_0
         $x_1_2 = {8b 0a 03 ce 33 ff eb 0e 0f bf 19 69 ff ?? ?? ?? ?? 03 fb 41 33 db 38 19 75 ee 39 7d 0c 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

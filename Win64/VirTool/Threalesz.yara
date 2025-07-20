@@ -18,6 +18,7 @@ rule VirTool_Win64_Threalesz_A_2147921774_0
         $x_1_3 = {48 8b 95 e8 04 00 00 48 8b 85 f8 04 00 00 41 b9 00 80 00 00 41 b8 00 00 00 00 48 89 c1 [0-35] b9 d0 07 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? 48 8b 85 00 05 00 00 48 89 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

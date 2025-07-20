@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Beebone_A_171880_0
         $x_10_7 = {ff 94 08 00 ?? 00 5e ?? 00 04 00 71 ?? ff f5 00 00 00 00 f5 00 00 00 00 6c ?? ff 6c ?? ff f5 00 00 00 00 f5 00 00 00 00 0a ?? 00 18 00 3c 07 00 5e ?? 00 04 00 71}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule TrojanDownloader_Win32_Beebone_B_171924_0
         $x_10_5 = {89 45 c8 ff 35 ?? ?? ?? ?? e8 ?? ?? ff ff 89 45 c4 6a 00 6a 00 ff 75 c4 ff 75 c8 6a 00 6a 00 e8 ?? ?? ff ff e8 ?? ?? ff ff 8d 4d dc e8 ?? ?? ff ff c7 45 fc 06 00 00 00 6a 01}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_10_*))) or
@@ -77,6 +79,7 @@ rule TrojanDownloader_Win32_Beebone_AY_172829_0
         $x_2_4 = {81 69 e2 93 09 c1 b0 40 be f7 ab 48 48 35 c4 b7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -101,6 +104,7 @@ rule TrojanDownloader_Win32_Beebone_EU_182236_0
         $x_1_2 = {ff ff 08 00 00 00 6a 63 e8 ?? ?? ?? ?? 89 85 ?? ?? ff ff c7 85 ?? ?? ff ff 08 00 00 00 6a 6f e8 ?? ?? ?? ff 89 85 ?? ?? ff ff c7 85 ?? ?? ff ff 08 00 00 00 6a 6d e8 ?? ?? ?? ff 89 85 ?? ?? ff ff c7 85 ?? ?? ff ff 08 00 00 00 6a 3a e8 ?? ?? ?? ff 89 85 ?? ?? ff ff c7 85 ?? ?? ff ff 08 00 00 00 6a 34}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule TrojanDownloader_Win32_Beebone_C_193275_0
         $x_1_8 = "snxhk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -157,6 +162,7 @@ rule TrojanDownloader_Win32_Beebone_C_193275_1
         $x_1_8 = "snxhk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -181,6 +187,7 @@ rule TrojanDownloader_Win32_Beebone_D_194978_0
         $x_1_4 = "8B4C240851<PATCH1>E8<PATCH2>5989016631C0C3" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -211,6 +218,7 @@ rule TrojanDownloader_Win32_Beebone_E_195665_0
         $x_1_6 = ":.dl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*))) or
             (all of ($x*))
@@ -248,6 +256,7 @@ rule TrojanDownloader_Win32_Beebone_F_197971_0
         $x_1_14 = "autorun" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_1_*))) or
             ((1 of ($x_2_*) and 7 of ($x_1_*))) or
@@ -285,6 +294,7 @@ rule TrojanDownloader_Win32_Beebone_G_198317_0
         $x_1_9 = {2e 00 65 00 78 00 65 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 2f 00 [0-48] 2f 00 ?? ?? ?? ?? ?? ?? 68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -307,6 +317,7 @@ rule TrojanDownloader_Win32_Beebone_H_205720_0
         $x_1_2 = {2f 00 63 00 20 00 74 00 61 00 73 00 6b 00 6c 00 69 00 73 00 74 00 26 00 26 00 64 00 65 00 6c 00 20 00 ?? ?? 02 00 00 00 5c 00 ?? ?? 02 00 00 00 3f 00 ?? ?? 02 00 00 00 7c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Linux_Dakkatoni_Az_2147761880_0
         $x_1_3 = "/tmp/.mine" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Linux_Dakkatoni_P_2147809145_0
         $x_1_6 = "key=%s&host_name=%s&cpu_count=%d&os_type=%s&core_count=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Linux_Dakkatoni_B_2147900992_0
         $x_1_2 = {88 dd c7 3b 19 69 78 86 ce be 1c 97 63 a8 f2 33 f7 46 25 d3 81 fe 16 4f 00 8d 47 fc b5 1f f9 7a 66 f2 8a 5a 4b 63 4d b4 e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

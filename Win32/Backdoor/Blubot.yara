@@ -21,6 +21,7 @@ rule Backdoor_Win32_Blubot_A_2147705623_0
         $x_1_7 = "prv_attack" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

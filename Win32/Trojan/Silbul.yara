@@ -18,6 +18,7 @@ rule Trojan_Win32_Silbul_A_2147654628_0
         $x_1_4 = "blxQb2xpY2llc1xTeXN0ZW0iIC9mIC92IERpc2FibGVSZWdpc3RyeVRvb2xzI" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

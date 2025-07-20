@@ -20,6 +20,7 @@ rule Trojan_Win32_RevengeHotels_SP_2147745760_0
         $x_1_5 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_RevengeHotels_SQ_2147745761_0
         $x_1_5 = "SendBlaster" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

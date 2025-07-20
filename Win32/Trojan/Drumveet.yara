@@ -19,6 +19,7 @@ rule Trojan_Win32_Drumveet_B_2147811723_0
         $x_1_4 = "echo systeminfo:systeminfo >>1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

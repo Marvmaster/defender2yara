@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Deftrap_A_2147683392_0
         $x_1_3 = {64 a1 18 00 00 00 8b 40 30 0f b6 40 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Ransom_Win32_Korasom_A_2147722424_0
         $x_1_3 = "karo.ReadMe.html" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

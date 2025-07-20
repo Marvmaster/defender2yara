@@ -19,6 +19,7 @@ rule VirTool_Win64_Cerbz_A_2147844663_0
         $x_1_4 = {48 89 44 24 30 48 8d ?? ?? ?? ?? ?? 48 89 44 24 28 48 8b 85 b8 00 00 00 48 89 44 24 20 4c 8b 8d 98 00 00 00 41 b8 08 00 00 00 8b 55 74 48 8b 8d a8 01 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

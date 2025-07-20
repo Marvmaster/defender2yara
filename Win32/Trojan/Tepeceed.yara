@@ -18,6 +18,7 @@ rule Trojan_Win32_Tepeceed_A_2147681122_0
         $x_1_4 = "%04d.%02d.%02d.%02d.%02d.%02d.jpg" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

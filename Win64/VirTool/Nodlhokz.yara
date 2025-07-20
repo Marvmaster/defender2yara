@@ -20,6 +20,7 @@ rule VirTool_Win64_Nodlhokz_A_2147844664_0
         $x_1_5 = {48 c1 e7 05 ff 15 ?? ?? ?? ?? 4c 8b ?? ?? ?? ?? ?? 4c 8b cf 48 8b c8 33 d2 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

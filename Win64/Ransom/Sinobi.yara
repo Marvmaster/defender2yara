@@ -21,6 +21,7 @@ rule Ransom_Win64_Sinobi_YAC_2147946137_0
         $x_10_6 = "Enable silent encryption (no extension and notes will be added)" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

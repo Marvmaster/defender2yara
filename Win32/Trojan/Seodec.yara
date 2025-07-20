@@ -21,6 +21,7 @@ rule Trojan_Win32_Seodec_A_2147691147_0
         $x_1_7 = {26 73 69 64 3d 00 26 75 69 64 3d 00 26 69 64 3d 00 26 73 64 3d 76 65 72 [0-2] 2e [0-5] 2d 00 26 6d 61 63 3d 00 3f 69 70 3d [0-64] 3f 75 69 64 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Odelns_A_2147694248_0
         $x_1_3 = {81 fd 02 02 00 00 0f 85 b6 00 00 00 ff d6 8b f0 a1 ?? ?? ?? 00 3b c6 0f 84 a5 00 00 00 8d 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

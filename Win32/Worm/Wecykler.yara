@@ -21,6 +21,7 @@ rule Worm_Win32_Wecykler_A_2147665943_0
         $x_1_7 = {b8 4f ec c4 4e f7 e1 c1 ea 03 6b d2 e6 03 ca 83 c4 04 f6 c3 01 89 4c 24 04 75 05 83 c1 41 eb 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

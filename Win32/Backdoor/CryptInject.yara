@@ -20,6 +20,7 @@ rule Backdoor_Win32_CryptInject_2147742899_0
         $x_1_5 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Win32_CryptInject_MBHG_2147851807_0
         $x_1_2 = {c4 dd 4e 00 df f8 30 00 00 ff ff ff 08 00 00 00 01 00 00 00 03 00 00 00 e9 00 00 00 4c d6 4e 00 00 d3 4e 00 28 32 40 00 78}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

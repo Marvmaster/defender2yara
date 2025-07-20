@@ -16,6 +16,7 @@ rule Trojan_MSIL_SpyKeylogger_A_2147746071_0
         $x_1_1 = {11 06 72 dd 00 00 70 6f 1d 00 00 0a 26 08 16 08 6f 1a 00 00 0a 6f 1b 00 00 0a 26 08 07 6f 1d 00 00 0a 26 11 06 11 05 08 28 03 00 00 06 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_SpyKeylogger_AMAB_2147852931_0
         $x_1_3 = "Clipboard" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

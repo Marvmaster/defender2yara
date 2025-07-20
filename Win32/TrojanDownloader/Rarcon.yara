@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Rarcon_A_2147654795_0
         $x_1_5 = {73 74 61 72 74 2f 6d 69 6e 20 00 00 6f 6b 2e 62 61 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule TrojanDownloader_Win32_Rarcon_B_2147656464_0
         $x_1_12 = "uname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

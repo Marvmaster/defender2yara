@@ -17,6 +17,7 @@ rule Backdoor_Win32_Briba_A_2147660508_0
         $x_1_3 = {80 3e 47 75 0c 80 7e 01 49 75 06 80 7e 02 46 74 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_Briba_B_2147690112_0
         $x_1_4 = {80 3e 47 75 0c 80 7e 01 49 75 06 80 7e 02 46 74 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Backdoor_Win32_Briba_C_2147690113_0
         $x_1_4 = "%\"93;;dey2/2wur$u{" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

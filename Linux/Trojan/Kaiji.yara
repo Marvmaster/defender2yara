@@ -19,6 +19,7 @@ rule Trojan_Linux_Kaiji_A_2147764476_0
         $x_1_4 = "KeyLogWriter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Linux_Kaiji_A_2147764476_1
         $x_1_5 = "crypto/cipher.NewCFBDecrypter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Linux_Kaiji_B_2147793495_0
         $x_1_5 = "crypto/cipher.NewCFBDecrypter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -99,6 +102,7 @@ rule Trojan_Linux_Kaiji_C_2147832060_0
         $x_1_6 = "syscall.sendfile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -124,6 +128,7 @@ rule Trojan_Linux_Kaiji_D_2147911019_0
         $x_1_2 = {15 80 ff ed 00 00 00 00 ff aa 00 50 ff a1 00 40 ff a9 00 08 ff a8 00 10 ff ab 00 18 0c 00 48 ce 00 00 00 00 93 a1 00 20 14 20 00 0a 00 00 00 00 df a1 00 40 df a3 00 58 df a4 00 38 93 a5 00 2f df a6 00 88 df a7 00 60 df a8 00 70 10 00 ff da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -146,6 +151,7 @@ rule Trojan_Linux_Kaiji_E_2147928899_0
         $x_1_2 = {9e e6 00 eb c4 03 9f e5 04 00 8d e5 10 10 a0 e3 08 10 8d e5 f1 e8 00 eb 30 00 9d e5 04 00 8d e5 28 00 9d e5 01 00 40 e2 08 00 8d e5 eb e8 00 eb 9c 03 9f e5 04 00 8d e5 20 10 a0 e3 08 10 8d e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -171,6 +177,7 @@ rule Trojan_Linux_Kaiji_F_2147929990_0
         $x_1_5 = "main.attack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -199,6 +206,7 @@ rule Trojan_Linux_Kaiji_G_2147935643_0
         $x_1_8 = "main.Ares_ipspoof" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (6 of ($x*))
 }
 

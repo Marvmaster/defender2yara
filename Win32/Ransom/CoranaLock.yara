@@ -17,6 +17,7 @@ rule Ransom_Win32_CoranaLock_SK_2147757768_0
         $x_2_2 = {31 fa 5f 6a 08 8f 45 fc d1 c0 8a fc 8a e6 d1 cb ff 4d fc 75 ?? 53 8f 45 f8 ff 75 f8 58 aa 49 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

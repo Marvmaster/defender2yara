@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Seveto_A_2147654502_0
         $x_1_2 = {6a 00 6a 00 6a 00 6a 00 6a 00 8b 45 fc e8 ?? ?? ff ff 50 6a 00 6a 02 68 10 01 00 00 68 ff 01 0f 00 56 53 8b 45 f8 50 e8 ?? ?? ff ff 8b d8 33 c0 89 45 f4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_Win32_Seveto_A_2147660061_0
         $x_1_5 = "C:\\WINDOWS\\svcs.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Unruy_GZZ_2147905544_0
         $x_5_2 = {ba 05 ac 3d 5c 30 10 40 49 0f 85}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Unruy_GZY_2147905790_0
         $x_5_2 = {8a 66 7b f3 91 ba ?? ?? ?? ?? 34 e9 13 26 01 56 7b 1b 70 71 30 3a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Unruy_GZX_2147905821_0
         $x_10_1 = {48 96 1a 01 01 b9 ?? ?? ?? ?? 67 bf ?? ?? ?? ?? 12 8a ?? ?? ?? ?? a3 ?? ?? ?? ?? 6d ?? 32 27 64 e0 f9 34 f4 ?? 01 5c 51 4f 14 7c 0d ?? ?? ?? ?? 4f 87 61 83}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule VirTool_Win32_Backstab_B_2147899793_0
         $x_1_4 = {33 c4 89 84 24 c4 08 00 00 8b 45 0c 0f 10 ?? ?? ?? ?? 00 56 57 89 44 24 1c a1 ?? ?? ?? 00 68 f4 01 00 00 89 84 24 c4 04 00 00 ?? ?? ?? ?? ?? ?? ?? 6a 00 50 0f 11 84 24 bc 04 00 00 e8 ?? ?? 00 00 83 c4 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

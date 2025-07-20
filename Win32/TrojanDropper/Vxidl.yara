@@ -22,6 +22,7 @@ rule TrojanDropper_Win32_Vxidl_A_2147595638_0
         $x_1_7 = "SeDebugPrivilege" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or

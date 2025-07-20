@@ -17,6 +17,7 @@ rule Trojan_Win64_UslKeylogger_A_2147894252_0
         $x_2_2 = {48 63 85 d4 00 00 00 48 8d 0d 83 e5 fe ff 0f b6 84 01 74 1c 01 00 8b 84 81 34 1c 01 00 48 03 c1 ff ?? 4c 8d 05 ?? ?? 00 00 48 8d 15 ?? ?? 00 00 48 8b 4d 08 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

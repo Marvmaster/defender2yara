@@ -18,6 +18,7 @@ rule TrojanDownloader_AndroidOS_Hydra_A_2147744325_0
         $x_1_3 = "_AAssetManager_fromJava" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule TrojanDownloader_AndroidOS_Hydra_B_2147811132_0
         $x_25_13 = "MYDEBUG: res.data() %d" ascii //weight: 25
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((4 of ($x_25_*))) or
             ((1 of ($x_30_*) and 3 of ($x_25_*))) or

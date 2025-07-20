@@ -18,6 +18,7 @@ rule Ransom_MSIL_KawaiiCrypt_PA_2147830940_0
         $x_1_3 = "\\Anime.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_MSIL_KawaiiCrypt_ST_2147830979_0
         $x_1_4 = "decryption key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

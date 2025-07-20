@@ -42,6 +42,7 @@ rule Trojan_Win32_AutoInj_GZN_2147916388_0
         $x_10_1 = {32 19 a8 bf 9d 8c 5b 6c ed f0 34 30 bb b0 63 98 6c ?? ?? 6b 18 95 7c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

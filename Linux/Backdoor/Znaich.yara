@@ -20,6 +20,7 @@ rule Backdoor_Linux_Znaich_A_2147818200_0
         $x_1_5 = "Multihop attempted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

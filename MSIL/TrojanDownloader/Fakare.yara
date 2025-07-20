@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Fakare_A_2147722493_0
         $x_1_3 = "svchosti.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

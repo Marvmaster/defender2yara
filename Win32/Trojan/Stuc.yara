@@ -20,6 +20,7 @@ rule Trojan_Win32_Stuc_A_2147688825_0
         $x_1_6 = "%s%02d%s.%u.qmail@%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

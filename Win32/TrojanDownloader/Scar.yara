@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Scar_C_2147638316_0
         $x_1_4 = {30 30 30 2b 2b 2b ?? 66 69 72 65 68 61 63 6b 72 ?? 73 6d 74 70 2e 71 71 2e 63 6f 6d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanDownloader_Win32_Scar_D_2147653807_0
         $x_1_10 = "NaverAdminAPI.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 5 of ($x_1_*))) or
             ((4 of ($x_100_*))) or
@@ -72,6 +74,7 @@ rule TrojanDownloader_Win32_Scar_ARA_2147916355_0
         $x_2_1 = {8a 84 2a d4 54 40 00 8b fe 34 01 83 c9 ff 88 82 d4 54 40 00 33 c0 42 f2 ae f7 d1 49 3b d1 72 e0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

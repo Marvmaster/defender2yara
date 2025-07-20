@@ -22,6 +22,7 @@ rule Worm_MSIL_Hukbro_A_2147696885_0
         $x_1_8 = "usbtracking" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

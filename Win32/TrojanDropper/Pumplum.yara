@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Pumplum_B_2147626747_0
         $x_2_3 = {c6 44 24 22 4d c6 44 24 23 5a ff 15 ?? ?? ?? ?? 8b f0 83 fe ff 75 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

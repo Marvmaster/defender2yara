@@ -18,6 +18,7 @@ rule Trojan_Win32_RasDialer_2147499978_0
         $x_1_4 = "HOST=dxju,1100,mpe80./." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Trojan_Win32_RasDialer_N_2147608548_0
         $x_1_6 = "porn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -76,6 +78,7 @@ rule Trojan_Win32_RasDialer_O_2147608794_0
         $x_1_8 = "udpinfo.creanet.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -108,6 +111,7 @@ rule Trojan_Win32_RasDialer_N_2147609960_0
         $x_1_9 = "SpeakerMode_Dial" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -136,6 +140,7 @@ rule Trojan_Win32_RasDialer_P_2147609962_0
         $x_1_6 = "SOFTWARE\\Microsoft\\RAS AutoDial\\Default" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

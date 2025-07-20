@@ -18,6 +18,7 @@ rule MonitoringTool_Win32_FreeKeylogger_17558_0
         $x_1_4 = "Do you want to clear logs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

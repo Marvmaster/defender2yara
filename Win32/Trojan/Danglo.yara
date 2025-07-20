@@ -18,6 +18,7 @@ rule Trojan_Win32_Danglo_A_2147647903_0
         $x_1_4 = "LIBGCCW32-EH-2-SJLJ-GTHR-MINGW32" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

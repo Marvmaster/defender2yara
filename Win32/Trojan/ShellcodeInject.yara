@@ -16,6 +16,7 @@ rule Trojan_Win32_ShellcodeInject_ZX_2147914001_0
         $x_1_1 = {80 34 18 2d 40 3b c7 72 f7 60 ff 95 8c fd ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_ShellcodeInject_AMZ_2147922792_0
         $x_1_1 = {31 d2 f7 74 24 2c 8b 44 24 18 0f be 0c 11 31 c8 88 c2 8b 84 24 44 01 00 00 8b 4c 24 28 88 14 08 8b 44 24 28 83 c0 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

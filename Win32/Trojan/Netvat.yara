@@ -20,6 +20,7 @@ rule Trojan_Win32_Netvat_C_2147654508_0
         $x_1_6 = "svcnet32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule Trojan_Win32_Netvat_E_2147657974_0
         $x_1_3 = "%s\\vvpvs.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_Netvat_E_2147657975_0
         $x_1_2 = "ivus8.*oaprcdap/{jbr/kgp98" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

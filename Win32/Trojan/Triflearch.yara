@@ -21,6 +21,7 @@ rule Trojan_Win32_Triflearch_A_2147692980_0
         $x_1_7 = "/v_install?sid=13398&ovr=$__OVR&browser=$__BROWSER&guid=$__GUID&sig=$__SIG" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Trojan_Win32_Triflearch_B_2147693836_0
         $x_2_5 = "/v_install?sid=13398&guid=$__GUID&sig=$__SIG&browser=$__BROWSER&ovr=$__OVR" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

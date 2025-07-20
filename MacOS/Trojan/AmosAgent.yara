@@ -17,6 +17,7 @@ rule Trojan_MacOS_AmosAgent_PS_2147920905_0
         $x_1_3 = "73797374656d5f70726f66696c6572205350536f667477617265446174615479706520535048617264776172654461746154797065" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Ldrbanker_A_2147735235_0
         $x_5_6 = "/otlook.jpg" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -45,6 +46,7 @@ rule TrojanSpy_Win32_Ldrbanker_B_2147735236_0
         $x_1_2 = "/dblog" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

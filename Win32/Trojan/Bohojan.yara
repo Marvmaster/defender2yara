@@ -19,6 +19,7 @@ rule Trojan_Win32_Bohojan_A_2147692457_0
         $x_1_5 = "Catching url for redirection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

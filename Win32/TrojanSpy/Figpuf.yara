@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Figpuf_A_2147626150_0
         $x_1_5 = {68 00 28 00 00 8d 85 24 d7 ff ff 50 56 ff 15 ?? ?? ?? ?? 85 c0 7f e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

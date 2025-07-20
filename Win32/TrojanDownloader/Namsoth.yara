@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Namsoth_A_2147629008_0
         $x_1_5 = {43 6f 6e 6e 65 63 74 69 6f 6e 20 43 6f 6d 69 6e 67 21 0a 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

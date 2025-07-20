@@ -19,6 +19,7 @@ rule Ransom_MSIL_Cryptolocker_PDA_2147776487_0
         $x_1_4 = "Bitcoin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_MSIL_Cryptolocker_PDA_2147776487_1
         $x_1_4 = "ConfuserEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Ransom_MSIL_Cryptolocker_PDA_2147776487_2
         $x_1_4 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Ransom_MSIL_Cryptolocker_PDA_2147776487_3
         $x_1_4 = "EncryptDirectory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Ransom_MSIL_Cryptolocker_PDA_2147776487_4
         $x_1_5 = "_Encrypted$" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -140,6 +145,7 @@ rule Ransom_MSIL_Cryptolocker_PDA_2147776487_5
         $x_1_4 = "Wrong Key Bitch" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Ransom_MSIL_Cryptolocker_PDA_2147776487_6
         $x_1_4 = "CreateEncryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -188,6 +195,7 @@ rule Ransom_MSIL_Cryptolocker_PDA_2147776487_7
         $x_1_4 = "ExtensionsToEncrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +220,7 @@ rule Ransom_MSIL_Cryptolocker_PDA_2147776487_8
         $x_1_4 = "INFO.hta" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -236,6 +245,7 @@ rule Ransom_MSIL_Cryptolocker_PDB_2147776593_0
         $x_1_4 = ".jcrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -260,6 +270,7 @@ rule Ransom_MSIL_Cryptolocker_PDB_2147776593_1
         $x_1_4 = "Crapsomware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -284,6 +295,7 @@ rule Ransom_MSIL_Cryptolocker_PDB_2147776593_2
         $x_1_4 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -308,6 +320,7 @@ rule Ransom_MSIL_Cryptolocker_PDC_2147776669_0
         $x_1_4 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -332,6 +345,7 @@ rule Ransom_MSIL_Cryptolocker_PDC_2147776669_1
         $x_1_4 = ".cryptshield" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -356,6 +370,7 @@ rule Ransom_MSIL_Cryptolocker_PDD_2147776900_0
         $x_1_4 = "Decrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -380,6 +395,7 @@ rule Ransom_MSIL_Cryptolocker_PDD_2147776900_1
         $x_1_4 = "Wrong.Hahaha." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -404,6 +420,7 @@ rule Ransom_MSIL_Cryptolocker_PDD_2147776900_2
         $x_1_4 = "Encrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -428,6 +445,7 @@ rule Ransom_MSIL_Cryptolocker_PDD_2147776900_3
         $x_1_4 = "Recovery Information.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -452,6 +470,7 @@ rule Ransom_MSIL_Cryptolocker_PDD_2147776900_4
         $x_1_4 = ".WeSt Net Fake" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -476,6 +495,7 @@ rule Ransom_MSIL_Cryptolocker_PDD_2147776900_5
         $x_1_4 = ".onion" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -500,6 +520,7 @@ rule Ransom_MSIL_Cryptolocker_PDD_2147776900_6
         $x_1_4 = "Your files are all now decrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -525,6 +546,7 @@ rule Ransom_MSIL_Cryptolocker_PDD_2147776900_7
         $x_1_5 = "Debugger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -550,6 +572,7 @@ rule Ransom_MSIL_Cryptolocker_PDE_2147776990_0
         $x_1_5 = "Stalin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -574,6 +597,7 @@ rule Ransom_MSIL_Cryptolocker_PDE_2147776990_1
         $x_1_4 = "@mail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -597,6 +621,7 @@ rule Ransom_MSIL_Cryptolocker_PDF_2147777302_0
         $x_1_3 = "ARTEMON RANSOMWARE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -622,6 +647,7 @@ rule Ransom_MSIL_Cryptolocker_PDF_2147777302_1
         $x_1_5 = "deReadMe!!!.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -646,6 +672,7 @@ rule Ransom_MSIL_Cryptolocker_PDF_2147777302_2
         $x_1_4 = "CreateEncryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -671,6 +698,7 @@ rule Ransom_MSIL_Cryptolocker_PDF_2147777302_3
         $x_1_5 = "bytesToBeEncrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -696,6 +724,7 @@ rule Ransom_MSIL_Cryptolocker_PDF_2147777302_4
         $x_1_5 = "@protonmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -720,6 +749,7 @@ rule Ransom_MSIL_Cryptolocker_PDF_2147777302_5
         $x_1_4 = "EncryptedFileList" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -745,6 +775,7 @@ rule Ransom_MSIL_Cryptolocker_PDG_2147777401_0
         $x_1_5 = "Zer0Byte" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -770,6 +801,7 @@ rule Ransom_MSIL_Cryptolocker_PDG_2147777401_1
         $x_1_5 = "blocky" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -796,6 +828,7 @@ rule Ransom_MSIL_Cryptolocker_PDG_2147777401_2
         $x_1_6 = "CFAL Hack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -819,6 +852,7 @@ rule Ransom_MSIL_Cryptolocker_PDH_2147777545_0
         $x_1_3 = "SELECT * FROM Win32_DiskDrive" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -843,6 +877,7 @@ rule Ransom_MSIL_Cryptolocker_PDH_2147777545_1
         $x_1_4 = "Decrypt Files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -867,6 +902,7 @@ rule Ransom_MSIL_Cryptolocker_PDH_2147777545_2
         $x_1_4 = "ToBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -892,6 +928,7 @@ rule Ransom_MSIL_Cryptolocker_PDH_2147777545_3
         $x_1_5 = ".crypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -916,6 +953,7 @@ rule Ransom_MSIL_Cryptolocker_PDH_2147777545_4
         $x_1_4 = "FileEncrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -940,6 +978,7 @@ rule Ransom_MSIL_Cryptolocker_PDI_2147777653_0
         $x_1_4 = ".HANTA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -967,6 +1006,7 @@ rule Ransom_MSIL_Cryptolocker_PDI_2147777653_1
         $x_1_7 = "RSAKey.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -990,6 +1030,7 @@ rule Ransom_MSIL_Cryptolocker_PDJ_2147777745_0
         $x_1_3 = "HANTA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1014,6 +1055,7 @@ rule Ransom_MSIL_Cryptolocker_PDJ_2147777745_1
         $x_1_4 = "@protonmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1038,6 +1080,7 @@ rule Ransom_MSIL_Cryptolocker_PDJ_2147777745_2
         $x_1_4 = "GetExtension" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1062,6 +1105,7 @@ rule Ransom_MSIL_Cryptolocker_PDJ_2147777745_3
         $x_1_4 = ".encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1085,6 +1129,7 @@ rule Ransom_MSIL_Cryptolocker_PDK_2147777834_0
         $x_1_3 = "V2luZG93c0Zvcm1zQXBwMSU=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1109,6 +1154,7 @@ rule Ransom_MSIL_Cryptolocker_PDK_2147777834_1
         $x_1_4 = "DisableTaskMgr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1137,6 +1183,7 @@ rule Ransom_MSIL_Cryptolocker_PDK_2147777834_2
         $x_1_8 = "Build" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1160,6 +1207,7 @@ rule Ransom_MSIL_Cryptolocker_PDL_2147778068_0
         $x_1_3 = ".RENSENWARE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1184,6 +1232,7 @@ rule Ransom_MSIL_Cryptolocker_PDL_2147778068_1
         $x_1_4 = "No files decrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1208,6 +1257,7 @@ rule Ransom_MSIL_Cryptolocker_PDL_2147778068_2
         $x_1_4 = ".ncovid" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1232,6 +1282,7 @@ rule Ransom_MSIL_Cryptolocker_PDL_2147778068_3
         $x_1_4 = ".onion" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1256,6 +1307,7 @@ rule Ransom_MSIL_Cryptolocker_PDL_2147778068_4
         $x_1_4 = "rdpunlocker1@cock.li" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1280,6 +1332,7 @@ rule Ransom_MSIL_Cryptolocker_PDL_2147778068_5
         $x_1_4 = ".Crypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1304,6 +1357,7 @@ rule Ransom_MSIL_Cryptolocker_PDL_2147778068_6
         $x_1_4 = "@protonmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1328,6 +1382,7 @@ rule Ransom_MSIL_Cryptolocker_PDL_2147778068_7
         $x_1_4 = "READ_ME_FILE_ENCRYPTED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1351,6 +1406,7 @@ rule Ransom_MSIL_Cryptolocker_PDM_2147778166_0
         $x_1_3 = "SNSLOCKER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1375,6 +1431,7 @@ rule Ransom_MSIL_Cryptolocker_PDM_2147778166_1
         $x_1_4 = "EncryptedKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1399,6 +1456,7 @@ rule Ransom_MSIL_Cryptolocker_PDM_2147778166_2
         $x_1_4 = "DisableTaskMgr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1424,6 +1482,7 @@ rule Ransom_MSIL_Cryptolocker_PDM_2147778166_3
         $x_1_5 = "GetDirectories" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1448,6 +1507,7 @@ rule Ransom_MSIL_Cryptolocker_PDM_2147778166_4
         $x_1_4 = "Decrypting your files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1471,6 +1531,7 @@ rule Ransom_MSIL_Cryptolocker_PDN_2147778230_0
         $x_1_3 = "ExtensionsToEncrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1494,6 +1555,7 @@ rule Ransom_MSIL_Cryptolocker_PDN_2147778230_1
         $x_1_3 = "/C sc delete VSS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1520,6 +1582,7 @@ rule Ransom_MSIL_Cryptolocker_PDN_2147778230_2
         $x_1_6 = "ToBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1543,6 +1606,7 @@ rule Ransom_MSIL_Cryptolocker_PDO_2147778332_0
         $x_1_3 = "Encryption Completed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1568,6 +1632,7 @@ rule Ransom_MSIL_Cryptolocker_PDO_2147778332_1
         $x_1_5 = "ToBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1595,6 +1660,7 @@ rule Ransom_MSIL_Cryptolocker_PDO_2147778332_2
         $x_1_7 = "Acvi cqaqltgf jj dgoe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1618,6 +1684,7 @@ rule Ransom_MSIL_Cryptolocker_PDQ_2147778552_0
         $x_1_3 = "RansomNote" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1642,6 +1709,7 @@ rule Ransom_MSIL_Cryptolocker_PDQ_2147778552_1
         $x_1_4 = ".locked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1666,6 +1734,7 @@ rule Ransom_MSIL_Cryptolocker_PDQ_2147778552_2
         $x_1_4 = "EncryptFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1689,6 +1758,7 @@ rule Ransom_MSIL_Cryptolocker_PDQ_2147778552_3
         $x_1_3 = "JigsawRansomware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1712,6 +1782,7 @@ rule Ransom_MSIL_Cryptolocker_PDQ_2147778552_4
         $x_1_3 = "BTC wallet:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1737,6 +1808,7 @@ rule Ransom_MSIL_Cryptolocker_PDQ_2147778552_5
         $x_1_5 = "OPEN_ME_TO_RESTORE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1761,6 +1833,7 @@ rule Ransom_MSIL_Cryptolocker_DK_2147779637_0
         $x_1_4 = "wannadie" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1793,6 +1866,7 @@ rule Ransom_MSIL_Cryptolocker_DK_2147779637_1
         $x_1_12 = "bytesToBeEncrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 3 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -1835,6 +1909,7 @@ rule Ransom_MSIL_Cryptolocker_DL_2147779723_0
         $x_1_15 = "Ransomware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 3 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 4 of ($x_5_*))) or
@@ -1875,6 +1950,7 @@ rule Ransom_MSIL_Cryptolocker_DM_2147779724_0
         $x_1_12 = "EncryptFileFully" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_10_*) and 2 of ($x_5_*))) or
@@ -1913,6 +1989,7 @@ rule Ransom_MSIL_Cryptolocker_DN_2147779868_0
         $x_1_12 = "BTC address:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 3 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -1952,6 +2029,7 @@ rule Ransom_MSIL_Cryptolocker_DO_2147779921_0
         $x_1_12 = "HugeMe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -1986,6 +2064,7 @@ rule Ransom_MSIL_Cryptolocker_DP_2147780069_0
         $x_1_8 = "Bitcoin wallet:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2028,6 +2107,7 @@ rule Ransom_MSIL_Cryptolocker_DQ_2147780331_0
         $x_1_16 = "ransom.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*) and 4 of ($x_3_*) and 2 of ($x_1_*))) or
             ((4 of ($x_20_*))) or
@@ -2069,6 +2149,7 @@ rule Ransom_MSIL_Cryptolocker_DR_2147780431_0
         $x_1_12 = "No files to encrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2102,6 +2183,7 @@ rule Ransom_MSIL_Cryptolocker_RM_2147780486_0
         $x_1_7 = "UnlockYourFiles.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2134,6 +2216,7 @@ rule Ransom_MSIL_Cryptolocker_DS_2147780505_0
         $x_1_12 = "VM Detected" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2168,6 +2251,7 @@ rule Ransom_MSIL_Cryptolocker_DT_2147780807_0
         $x_1_8 = "@protonmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2210,6 +2294,7 @@ rule Ransom_MSIL_Cryptolocker_DV_2147780809_0
         $x_1_16 = "ransomware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*) and 4 of ($x_3_*) and 2 of ($x_1_*))) or
             ((4 of ($x_20_*))) or
@@ -2247,6 +2332,7 @@ rule Ransom_MSIL_Cryptolocker_DU_2147780813_0
         $x_1_8 = "GetTempPath" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2285,6 +2371,7 @@ rule Ransom_MSIL_Cryptolocker_DW_2147781294_0
         $x_1_12 = "start encryprion" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2315,6 +2402,7 @@ rule Ransom_MSIL_Cryptolocker_DY_2147781549_0
         $x_1_4 = "No files to encrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2340,6 +2428,7 @@ rule Ransom_MSIL_Cryptolocker_DZ_2147781553_0
         $x_1_5 = "DecryptAllFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2364,6 +2453,7 @@ rule Ransom_MSIL_Cryptolocker_RW_2147782859_0
         $x_1_4 = "read_it.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2398,6 +2488,7 @@ rule Ransom_MSIL_Cryptolocker_EA_2147784151_0
         $x_1_14 = "EncryptFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*) and 4 of ($x_3_*) and 2 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -2428,6 +2519,7 @@ rule Ransom_MSIL_Cryptolocker_EB_2147784154_0
         $x_1_3 = ".arsium" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2459,6 +2551,7 @@ rule Ransom_MSIL_Cryptolocker_EC_2147784155_0
         $x_1_8 = "FreezeMouse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2499,6 +2592,7 @@ rule Ransom_MSIL_Cryptolocker_ED_2147784680_0
         $x_1_14 = "READ_ME_PLZ.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 4 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -2534,6 +2628,7 @@ rule Ransom_MSIL_Cryptolocker_EE_2147784681_0
         $x_1_8 = "LockScreen" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2568,6 +2663,7 @@ rule Ransom_MSIL_Cryptolocker_EF_2147784683_0
         $x_1_8 = "warning.BackgroundImage" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2606,6 +2702,7 @@ rule Ransom_MSIL_Cryptolocker_EG_2147785188_0
         $x_1_12 = "NoCry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2644,6 +2741,7 @@ rule Ransom_MSIL_Cryptolocker_EH_2147785189_0
         $x_1_12 = "@protonmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2681,6 +2779,7 @@ rule Ransom_MSIL_Cryptolocker_EI_2147786212_0
         $x_1_11 = "GetRandomFileName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2719,6 +2818,7 @@ rule Ransom_MSIL_Cryptolocker_EJ_2147786437_0
         $x_1_12 = "_Encrypted$" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2757,6 +2857,7 @@ rule Ransom_MSIL_Cryptolocker_EK_2147787200_0
         $x_1_12 = "ConfuserEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2799,6 +2900,7 @@ rule Ransom_MSIL_Cryptolocker_EL_2147787201_0
         $x_1_16 = ".Legion" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*) and 4 of ($x_3_*) and 2 of ($x_1_*))) or
             ((4 of ($x_20_*))) or
@@ -2840,6 +2942,7 @@ rule Ransom_MSIL_Cryptolocker_EM_2147787598_0
         $x_1_12 = "ransom.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2874,6 +2977,7 @@ rule Ransom_MSIL_Cryptolocker_EN_2147787599_0
         $x_1_8 = "RSA_Keys.pub" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -2904,6 +3008,7 @@ rule Ransom_MSIL_Cryptolocker_PAC_2147787688_0
         $x_1_4 = "READ_THIS_TO_DECRYPT." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2928,6 +3033,7 @@ rule Ransom_MSIL_Cryptolocker_EP_2147787698_0
         $x_1_4 = "GetFiles" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2952,6 +3058,7 @@ rule Ransom_MSIL_Cryptolocker_PAD_2147787775_0
         $x_1_4 = "bitcoin to this address" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2984,6 +3091,7 @@ rule Ransom_MSIL_Cryptolocker_EO_2147787832_0
         $x_1_12 = "DisableTaskMgr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -3026,6 +3134,7 @@ rule Ransom_MSIL_Cryptolocker_EQ_2147788264_0
         $x_1_16 = ".onion" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*) and 4 of ($x_3_*) and 2 of ($x_1_*))) or
             ((4 of ($x_20_*))) or
@@ -3063,6 +3172,7 @@ rule Ransom_MSIL_Cryptolocker_ER_2147788486_0
         $x_1_8 = "Encryption Complete" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -3101,6 +3211,7 @@ rule Ransom_MSIL_Cryptolocker_ES_2147789268_0
         $x_1_12 = "EncryptedKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -3132,6 +3243,7 @@ rule Ransom_MSIL_Cryptolocker_EU_2147793098_0
         $x_1_5 = "ro@tb@la@u.@eu@:1@53" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3158,6 +3270,7 @@ rule Ransom_MSIL_Cryptolocker_EV_2147793142_0
         $x_1_6 = "EncryptedKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -3191,6 +3304,7 @@ rule Ransom_MSIL_Cryptolocker_EW_2147793344_0
         $x_1_8 = "EncryptedKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -3224,6 +3338,7 @@ rule Ransom_MSIL_Cryptolocker_EX_2147793345_0
         $x_1_7 = "/_/_/_/_/_/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3248,6 +3363,7 @@ rule Ransom_MSIL_Cryptolocker_PAG_2147794519_0
         $x_1_4 = "friendly.cyber.criminal" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3273,6 +3389,7 @@ rule Ransom_MSIL_Cryptolocker_PAI_2147795376_0
         $x_1_5 = "kill virus" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3297,6 +3414,7 @@ rule Ransom_MSIL_Cryptolocker_PAL_2147798424_0
         $x_1_4 = "ALL OF YOUR FILES HAVE BEEN ENCRYPTED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3321,6 +3439,7 @@ rule Ransom_MSIL_Cryptolocker_PAM_2147808901_0
         $x_1_4 = "All of your files have been encrypted!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3352,6 +3471,7 @@ rule Ransom_MSIL_Cryptolocker_MA_2147809797_0
         $x_1_11 = "get_DP_Keygen" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3376,6 +3496,7 @@ rule Ransom_MSIL_Cryptolocker_AA_2147895896_0
         $x_1_4 = "Encrypt Desktop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3405,6 +3526,7 @@ rule Ransom_MSIL_Cryptolocker_DX_2147899389_0
         $x_1_9 = "ransom.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 2 of ($x_3_*))) or
@@ -3436,6 +3558,7 @@ rule Ransom_MSIL_Cryptolocker_AYA_2147922983_0
         $x_1_5 = "RemoveFromStartup.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

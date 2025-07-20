@@ -21,6 +21,7 @@ rule VirTool_Win32_Mook_A_2147605587_0
         $x_20_6 = {8a 07 83 e0 0f bb [0-4] 03 d8 8a 0b 88 0e 46 8a 07 25 f0 00 00 00 c1 e8 04 bb [0-4] 03 d8 8a 0b 88 0e ff 4d fc 83 7d fc 00 74 04 47 46 eb cd}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_5_*))) or
             ((1 of ($x_20_*) and 1 of ($x_5_*))) or

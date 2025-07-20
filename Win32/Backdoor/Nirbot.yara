@@ -40,6 +40,7 @@ rule Backdoor_Win32_Nirbot_2147582763_0
         $x_2_26 = "\\\\%s\\pipe\\browser" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_2_*) and 8 of ($x_1_*))) or
             ((7 of ($x_2_*) and 6 of ($x_1_*))) or

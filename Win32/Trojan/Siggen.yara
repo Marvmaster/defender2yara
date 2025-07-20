@@ -17,6 +17,7 @@ rule Trojan_Win32_Siggen_GR_2147814963_0
         $x_10_2 = {88 45 ef 0f be 45 ef 89 45 f4 8b 45 10 31 45 f4 8b 45 f4 88 45 ef 8a 55 ef 8b 45 e4 88 10}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

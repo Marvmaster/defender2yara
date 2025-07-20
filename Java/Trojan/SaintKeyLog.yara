@@ -19,6 +19,7 @@ rule Trojan_Java_SaintKeyLog_2147744720_0
         $x_1_4 = "saint/email/SendEmail" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

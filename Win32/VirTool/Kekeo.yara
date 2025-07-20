@@ -23,6 +23,7 @@ rule VirTool_Win32_Kekeo_B_2147805713_0
         $x_1_9 = "base64({0}.kirbi)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

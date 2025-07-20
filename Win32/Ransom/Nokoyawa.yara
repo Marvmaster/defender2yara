@@ -16,6 +16,7 @@ rule Ransom_Win32_Nokoyawa_MK_2147843063_0
         $x_1_1 = {99 f7 f9 8b 45 ?? 8a 14 10 8b 4d ?? 8b 45 ?? 32 14 01 8b 4d ?? 8b 45 ?? 88 14 08 ff 45 ?? 8b 55 ?? 3b 55 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

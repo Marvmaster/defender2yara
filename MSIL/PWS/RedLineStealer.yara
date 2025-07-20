@@ -29,6 +29,7 @@ rule PWS_MSIL_RedLineStealer_KMG_2147772883_0
         $x_1_14 = "ROwindows defender sucksOT\\SecurityCentewindows defender sucksr2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Cropo_A_2147597896_0
         $x_1_2 = {8b 45 f8 8b 88 ?? ?? 40 00 8b 45 0c 6a ff e8 ?? ?? 00 00 85 c0 59 74 5f 8b 55 08 56 8d bd e4 fb ff ff e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

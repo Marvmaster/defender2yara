@@ -20,6 +20,7 @@ rule HackTool_Linux_InviteFlood_B_2147921687_0
         $x_1_5 = "SIP PAYLOAD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule HackTool_Linux_InviteFlood_A_2147922749_0
         $x_1_2 = {83 ec 28 8b 45 0c 89 c2 c1 fa 1f c1 ea 1c 01 d0 c1 f8 04 89 45 ec 8b 45 0c 89 c2 c1 fa 1f c1 ea 1c 01 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

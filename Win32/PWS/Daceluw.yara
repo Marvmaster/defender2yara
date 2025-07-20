@@ -16,6 +16,7 @@ rule PWS_Win32_Daceluw_A_2147684911_0
         $x_1_2 = {c7 45 dc 25 73 2d 25 88 5d e1 66 c7 45 e2 58 25 88 5d e5 66 c7 45 e6 58 25 88 5d e9 66 c7 45 ea 58 25 88 5d ed 66 c7 45 ee 58 25 88 5d f1 66 c7 45 f2 58 25 88 5d f5 66 c7 45 f6 58 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

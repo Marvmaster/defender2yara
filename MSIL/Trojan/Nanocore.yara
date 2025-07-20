@@ -17,6 +17,7 @@ rule Trojan_MSIL_Nanocore_B_2147741473_0
         $x_1_3 = "SIxLjAiIGVuY29kaW5nP" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_MSIL_Nanocore_SA_2147752350_0
         $x_1_3 = "0.4.7.2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_MSIL_Nanocore_PR_2147752393_0
         $x_1_5 = "allice9554.000webhostapp.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_MSIL_Nanocore_NA_2147771297_0
         $x_1_2 = "CinemaManagement.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Trojan_MSIL_Nanocore_RG_2147773578_0
         $x_1_6 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -139,6 +144,7 @@ rule Trojan_MSIL_Nanocore_AC_2147779430_0
         $x_1_3 = {73 73 73 73 73 00 52 65 76 65 72 73 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_MSIL_Nanocore_AD_2147779977_0
         $x_1_4 = {73 73 73 73 73 00 52 65 76 65 72 73 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -195,6 +202,7 @@ rule Trojan_MSIL_Nanocore_RM_2147783053_0
         $x_1_12 = "*/*G*/*e*/*t*/*M*/*e*/*t*/*h*/*o*/*d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -229,6 +237,7 @@ rule Trojan_MSIL_Nanocore_MFP_2147787472_0
         $x_1_14 = "BlockCopy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 8 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -255,6 +264,7 @@ rule Trojan_MSIL_Nanocore_SDSD_2147787477_0
         $x_1_2 = {0a 0a 06 02 28 ?? ?? ?? 06 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +286,7 @@ rule Trojan_MSIL_Nanocore_FEGA_2147810535_0
         $x_10_1 = {19 8d 13 00 00 01 13 09 11 09 16 02 a2 11 09 17 16 8c 05 00 00 01 a2 11 09 18 02 8e b7 8c 05 00 00 01 a2 11 09 13 0a 11 0a 14 14 19 8d 01 00 00 01 13 0b 11 0b 16 17 9c 11 0b 17 16 9c 11 0b 18 16 9c 11 0b 17}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -297,6 +308,7 @@ rule Trojan_MSIL_Nanocore_LTD_2147820113_0
         $x_1_1 = {0a 16 0b 38 21 00 00 00 7e 30 00 00 04 07 9a 06 28 ?? ?? ?? 0a 39 0b 00 00 00 7e 31 00 00 04 74 19 00 00 01 2a 07 17 58 0b 07 7e 30 00 00 04 8e 69 3f d2 ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +330,7 @@ rule Trojan_MSIL_Nanocore_GZO_2147822402_0
         $x_1_1 = {06 07 08 92 08 20 29 0e 00 00 5d 61 d2 6f ?? ?? ?? 0a 00 00 08 17 58 0c 08 07 8e 69 fe 04 0d 09 2d dd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -339,6 +352,7 @@ rule Trojan_MSIL_Nanocore_PPQ_2147822403_0
         $x_1_1 = {07 08 07 08 91 03 08 1f 10 5d 91 61 9c 08 17 d6 0c 08 09 31 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -360,6 +374,7 @@ rule Trojan_MSIL_Nanocore_BMN_2147824710_0
         $x_1_1 = {06 0b 02 07 8f 04 00 00 01 25 47 03 06 04 6f ?? ?? ?? 0a 5d 91 06 1b 58 03 8e 69 58 1f 1f 5f 63 20 96 00 00 00 5f d2 61 d2 52 06 17 58 0a 06 02 8e 69 32 cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -382,6 +397,7 @@ rule Trojan_MSIL_Nanocore_WGN_2147824711_0
         $x_1_2 = {17 d6 02 8e 69 5d 91 da 20 00 01 00 00 d6 20 00 01 00 00 5d b4 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -403,6 +419,7 @@ rule Trojan_MSIL_Nanocore_ZQWF_2147824712_0
         $x_1_1 = {20 00 01 00 00 6f ?? ?? ?? 0a 00 09 08 6f ?? ?? ?? 0a 00 09 18 6f ?? ?? ?? 0a 00 09 6f ?? ?? ?? 0a 06 16 06 8e 69 6f ?? ?? ?? 0a 13 04 16 13 05 2b 00 16 13 06 2b 00 16 13 07 2b 00 16 13 08 2b 00 16 13 09 2b 00 16 13 0a 2b 00 16 13 0b 2b 00 16 13 0c 2b 00 11 04 28 ?? ?? ?? 06 74 36 00 00 01 6f ?? ?? ?? 0a 17 9a 80 02 00 00 04 23 66 66 66 66 66 66 28 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -424,6 +441,7 @@ rule Trojan_MSIL_Nanocore_COER_2147825957_0
         $x_1_1 = {7e 11 00 00 04 73 be 00 00 0a 72 ad 03 00 70 6f ?? ?? ?? 0a 74 0f 00 00 1b 0a 06 28 ?? ?? ?? 06 0b 07 72 dd 03 00 70 28 ?? ?? ?? 06 74 4d 00 00 01 6f ?? ?? ?? 0a 1a 9a 80 10 00 00 04 23 d1 37 b7 3b 43 62 20 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -447,6 +465,7 @@ rule Trojan_MSIL_Nanocore_ABH_2147827393_0
         $x_1_3 = "CAccPropServicesClass.IAccPropServer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -473,6 +492,7 @@ rule Trojan_MSIL_Nanocore_ABH_2147827393_1
         $x_1_6 = "CompressionMode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -497,6 +517,7 @@ rule Trojan_MSIL_Nanocore_AGO_2147827639_0
         $x_1_4 = "YUG54G5EA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -522,6 +543,7 @@ rule Trojan_MSIL_Nanocore_ABV_2147827750_0
         $x_1_5 = "ReadBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -543,6 +565,7 @@ rule Trojan_MSIL_Nanocore_CEZ_2147828737_0
         $x_1_1 = {0d 09 1f 21 fe 04 16 fe 01 09 1f 7e fe 02 16 fe 01 5f 13 06 11 06 2c 20 11 04 1f 21 09 1f 0e d6 1f 5e 5d d6 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -567,6 +590,7 @@ rule Trojan_MSIL_Nanocore_RIYF_2147828798_0
         $x_1_4 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -593,6 +617,7 @@ rule Trojan_MSIL_Nanocore_ABF_2147829926_0
         $x_1_6 = "$912efa92-610b-40f2-a282-22d1b6f64e01" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -614,6 +639,7 @@ rule Trojan_MSIL_Nanocore_NEC_2147829996_0
         $x_1_1 = {72 17 00 00 70 28 ?? 00 00 06 0b 07 16 07 8e 69 28 ?? 00 00 0a 00 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -641,6 +667,7 @@ rule Trojan_MSIL_Nanocore_NLY_2147830016_0
         $x_1_7 = "ComputeHash" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -669,6 +696,7 @@ rule Trojan_MSIL_Nanocore_ABC_2147830425_0
         $x_1_8 = "RS55Q74D7H7GH" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -694,6 +722,7 @@ rule Trojan_MSIL_Nanocore_ABL_2147830993_0
         $x_1_5 = "PoKeMapV6.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -720,6 +749,7 @@ rule Trojan_MSIL_Nanocore_ABL_2147830993_1
         $x_1_6 = "$5de54877-24a9-4309-940e-a706f33533e8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -745,6 +775,7 @@ rule Trojan_MSIL_Nanocore_ABW_2147831801_0
         $x_1_5 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -770,6 +801,7 @@ rule Trojan_MSIL_Nanocore_ABD_2147832232_0
         $x_1_5 = "GZipStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -793,6 +825,7 @@ rule Trojan_MSIL_Nanocore_NEE_2147832380_0
         $x_5_3 = "ncviewer.exe" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -818,6 +851,7 @@ rule Trojan_MSIL_Nanocore_ABT_2147832740_0
         $x_1_5 = "GetTypes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -842,6 +876,7 @@ rule Trojan_MSIL_Nanocore_ABT_2147832740_1
         $x_1_4 = "Hierarchy.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -868,6 +903,7 @@ rule Trojan_MSIL_Nanocore_ABO_2147832741_0
         $x_1_6 = "$55d1056d-ef79-4736-a141-0e3632843054" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -892,6 +928,7 @@ rule Trojan_MSIL_Nanocore_ABAH_2147833554_0
         $x_1_4 = "red_love" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -915,6 +952,7 @@ rule Trojan_MSIL_Nanocore_ABAP_2147833561_0
         $x_1_3 = "KenPhasFuckedksajd44" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -940,6 +978,7 @@ rule Trojan_MSIL_Nanocore_ABAV_2147833563_0
         $x_1_5 = "Advanced_Html_Editor.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -962,6 +1001,7 @@ rule Trojan_MSIL_Nanocore_AEOCG_2147833821_0
         $x_1_2 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -986,6 +1026,7 @@ rule Trojan_MSIL_Nanocore_ABCG_2147834858_0
         $x_1_4 = "NewPaint.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1009,6 +1050,7 @@ rule Trojan_MSIL_Nanocore_ABCK_2147835239_0
         $x_1_3 = "D774Z478V4S7392GGBH54G" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1032,6 +1074,7 @@ rule Trojan_MSIL_Nanocore_ABCL_2147835240_0
         $x_1_3 = "Aeeee" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1054,6 +1097,7 @@ rule Trojan_MSIL_Nanocore_ABCW_2147835245_0
         $x_1_2 = "WinFormsPersianDatePicker.CO2" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1080,6 +1124,7 @@ rule Trojan_MSIL_Nanocore_ABCX_2147835246_0
         $x_2_6 = "P53YSCYRBVHHUP8G47B75Y" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1102,6 +1147,7 @@ rule Trojan_MSIL_Nanocore_ABDD_2147835712_0
         $x_1_2 = "TrafficSimulation.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1125,6 +1171,7 @@ rule Trojan_MSIL_Nanocore_ABDF_2147835714_0
         $x_1_3 = "EbooksManager.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1147,6 +1194,7 @@ rule Trojan_MSIL_Nanocore_ABDG_2147835715_0
         $x_1_2 = "P53YSCYRBVHHUP8G47B75Y" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1169,6 +1217,7 @@ rule Trojan_MSIL_Nanocore_ABDR_2147835776_0
         $x_1_2 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1192,6 +1241,7 @@ rule Trojan_MSIL_Nanocore_ABDW_2147835934_0
         $x_1_3 = "SystemManager.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1216,6 +1266,7 @@ rule Trojan_MSIL_Nanocore_ABEN_2147836113_0
         $x_1_4 = "GetResponseStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1237,6 +1288,7 @@ rule Trojan_MSIL_Nanocore_ABFF_2147837167_0
         $x_5_1 = {07 06 11 07 9a 1f 10 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 11 07 17 58 13 07 11 07 20 ?? ?? ?? 00 fe 04 13 08 11 08 2d d9 28 ?? ?? ?? 0a 07 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 0c 08}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1262,6 +1314,7 @@ rule Trojan_MSIL_Nanocore_ABGB_2147837426_0
         $x_1_5 = "11M11e1t1111h111o1d111011" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1284,6 +1337,7 @@ rule Trojan_MSIL_Nanocore_ABGT_2147837958_0
         $x_1_2 = "HoqueLtd.ResO" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1306,6 +1360,7 @@ rule Trojan_MSIL_Nanocore_ABHB_2147837961_0
         $x_1_2 = "App.Aplicattion.ReCS" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1328,6 +1383,7 @@ rule Trojan_MSIL_Nanocore_ABJW_2147839042_0
         $x_1_2 = "WFA_Yacht_Dice.DSSDWE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1352,6 +1408,7 @@ rule Trojan_MSIL_Nanocore_ABKQ_2147839359_0
         $x_1_4 = "UrlTokenDecode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1377,6 +1434,7 @@ rule Trojan_MSIL_Nanocore_NEAA_2147840316_0
         $x_1_5 = "nW4lBacjpc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1401,6 +1459,7 @@ rule Trojan_MSIL_Nanocore_RDA_2147840519_0
         $x_1_4 = "--Qdj$;a:9pDsb@ =} k|u9g\\&." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1424,6 +1483,7 @@ rule Trojan_MSIL_Nanocore_NCE_2147840803_0
         $x_1_3 = "qtjiZSSiWlGAf3SavB.FJr54K84g6drqE3j0u" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1445,6 +1505,7 @@ rule Trojan_MSIL_Nanocore_CAJ_2147841120_0
         $x_5_1 = {26 2b 32 11 04 11 05 02 11 05 91 06 61 08 09 91 61 b4 9c 09 16 2d 12 03 6f ?? 00 00 0a 17 da 33 07 16 16 2c 59 26 2b 07 09 17 25 2c c0 d6 0d 11 05 17 d6 13 05}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1467,6 +1528,7 @@ rule Trojan_MSIL_Nanocore_ABLZ_2147841278_0
         $x_1_2 = "TryaAgain.Chunks" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1489,6 +1551,7 @@ rule Trojan_MSIL_Nanocore_ABMA_2147841279_0
         $x_1_2 = "NSC.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1511,6 +1574,7 @@ rule Trojan_MSIL_Nanocore_ABMD_2147841280_0
         $x_1_2 = "kbWar.Lego" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1533,6 +1597,7 @@ rule Trojan_MSIL_Nanocore_ABMF_2147841281_0
         $x_1_2 = "Nth.Eindhoven.Fontys.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1555,6 +1620,7 @@ rule Trojan_MSIL_Nanocore_NC_2147842250_0
         $x_1_2 = "zUKC.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1576,6 +1642,7 @@ rule Trojan_MSIL_Nanocore_ANO_2147842894_0
         $x_1_1 = {0c 16 0d 2b 17 07 09 09 d2 9c 08 09 06 09 06 16 6f ?? ?? ?? 0a 5d 91 9c 09 17 58 0d 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1597,6 +1664,7 @@ rule Trojan_MSIL_Nanocore_ANO_2147842894_1
         $x_1_1 = {0d 16 0b 2b 49 16 0c 2b 2c 09 07 08 6f ?? 00 00 0a 26 09 07 08 6f ?? 00 00 0a 13 08 11 08 28 ?? 00 00 0a 13 09 11 05 11 04 11 09 28 ?? 00 00 0a 9c 08 17 58 0c 08 09 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1620,6 +1688,7 @@ rule Trojan_MSIL_Nanocore_ANO_2147842894_2
         $x_1_3 = "TemperatureConverter" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1642,6 +1711,7 @@ rule Trojan_MSIL_Nanocore_ABPW_2147843317_0
         $x_1_2 = "Cache_Simulation.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1663,6 +1733,7 @@ rule Trojan_MSIL_Nanocore_ABLQ_2147843437_0
         $x_5_1 = {0b 03 04 03 8e 69 5d 91 07 04 1f 16 5d 91 61 28 ?? ?? ?? 0a 03 04 17 58 03 8e 69 5d 91 28 ?? ?? ?? 0a 59 06 58 06 5d d2 0c 08 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1686,6 +1757,7 @@ rule Trojan_MSIL_Nanocore_ABLR_2147843438_0
         $x_1_3 = "MemoryStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1707,6 +1779,7 @@ rule Trojan_MSIL_Nanocore_ABLV_2147843440_0
         $x_5_1 = {0b 03 8e 69 0c 03 04 08 5d 91 07 04 1f 16 5d 91 61 28 ?? ?? ?? 0a 03 04 17 58 08 5d 91 28 ?? ?? ?? 0a 59 06 58 06 5d d2 0d 09 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1730,6 +1803,7 @@ rule Trojan_MSIL_Nanocore_ABMS_2147843708_0
         $x_1_3 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1752,6 +1826,7 @@ rule Trojan_MSIL_Nanocore_ABMM_2147844698_0
         $x_3_2 = {56 00 6f 00 6c 00 76 00 6f 00 53 00 36 00 30 00 2e 00 50 00 72 00 6f 00 70 00 65 00 72 00 74 00 69 00 65 00 73 00 2e 00 52 00 65 00 73 00 6f 00 75 00 72 00 63 00 65 00 73}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1775,6 +1850,7 @@ rule Trojan_MSIL_Nanocore_ABMQ_2147845130_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1798,6 +1874,7 @@ rule Trojan_MSIL_Nanocore_ABMR_2147845131_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1821,6 +1898,7 @@ rule Trojan_MSIL_Nanocore_ABRU_2147845553_0
         $x_1_3 = "HelloWPFApp.Properties" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1845,6 +1923,7 @@ rule Trojan_MSIL_Nanocore_ABRB_2147845864_0
         $x_1_4 = "ReadAsByteArrayAsync" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1869,6 +1948,7 @@ rule Trojan_MSIL_Nanocore_ABSY_2147846103_0
         $x_1_4 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1893,6 +1973,7 @@ rule Trojan_MSIL_Nanocore_ABTA_2147846104_0
         $x_1_4 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1914,6 +1995,7 @@ rule Trojan_MSIL_Nanocore_ABVM_2147846880_0
         $x_5_1 = {0a 14 17 8d ?? 00 00 01 25 16 07 a2 6f ?? 00 00 0a 73 ?? 00 00 0a 0c 75 ?? 00 00 1b 0d 16 13 04 38 ?? 00 00 00 09 11 04 91 13 05 08 11 05 6f ?? 00 00 0a 11 04 17 58 13 04 11 04 09 8e 69 32 e5 08 28 ?? 00 00 2b 6f ?? 00 00 0a 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1935,6 +2017,7 @@ rule Trojan_MSIL_Nanocore_ABVY_2147847208_0
         $x_5_1 = {0d 09 8e 69 8d ?? 00 00 01 13 04 07 08 08 6f ?? 00 00 0a 13 05 09 73 ?? 00 00 0a 13 06 00 11 06 11 05 16 73 ?? 00 00 0a 13 07 00 11 07 11 04 16 11 04 8e 69 6f ?? 00 00 0a 26 11 07 6f ?? 00 00 0a 00 11 07}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1956,6 +2039,7 @@ rule Trojan_MSIL_Nanocore_ABXE_2147847268_0
         $x_5_1 = {08 8e 69 8d ?? 00 00 01 0d 16 13 07 2b 15 09 11 07 08 11 07 9a 1f 10 28 ?? ?? 00 0a 9c 11 07 17 58 13 07 11 07 08 8e 69 fe 04 13 08 11 08 2d de}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1978,6 +2062,7 @@ rule Trojan_MSIL_Nanocore_ABVD_2147847374_0
         $x_1_2 = "39f35d17-2c86-48a1-a280-f77fb3e5248e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2001,6 +2086,7 @@ rule Trojan_MSIL_Nanocore_NAC_2147847507_0
         $x_1_3 = "ProcessWindowStyle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2022,6 +2108,7 @@ rule Trojan_MSIL_Nanocore_ABXF_2147847609_0
         $x_4_1 = {16 13 04 2b 34 16 13 05 2b 1f 07 11 04 11 05 6f ?? 00 00 0a 13 06 08 12 06 28 ?? 00 00 0a 6f ?? 00 00 0a 11 05 17 58 13 05 11 05 07 6f ?? 00 00 0a 32 d7}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2044,6 +2131,7 @@ rule Trojan_MSIL_Nanocore_MAAJ_2147848149_0
         $x_1_2 = {00 0a 13 06 11 06 16 2e 0e 11 04 11 06 d6 13 04 08 11 06 d6 0c 2b c4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2069,6 +2157,7 @@ rule Trojan_MSIL_Nanocore_GAM_2147848225_0
         $x_1_5 = {63 00 45 00 47 00 6a 00 49 00 56 00 41 00 77 00 4a 00 4c 00 56 00 41 00 4d 00 61 00 30 00 31 00 67 00 51 00 41 00 51 00 49 00 61 00 30 00 31 00 67 00 51 00 41 00 41 00 51 00 61 00 57 00 52 00 41 00 43 00 42 00 42 00 67 00 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2090,6 +2179,7 @@ rule Trojan_MSIL_Nanocore_ABYL_2147848243_0
         $x_5_1 = {2b 2b 2b 30 1b 2c f9 1e 2c f6 2b 2b 2b 30 2b 31 2b 36 75 ?? 00 00 1b 2b 36 19 2c 0f 16 2d e1 2b 31 16 2b 31 8e 69 28 ?? 00 00 0a 07 2a 28 ?? 00 00 06 2b ce 0a 2b cd 28 ?? 00 00 0a 2b ce 06 2b cd 6f ?? 00 00 0a 2b c8 28 ?? 00 00 06 2b c3 0b 2b c7 07 2b cc 07 2b cc}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2112,6 +2202,7 @@ rule Trojan_MSIL_Nanocore_NCA_2147848257_0
         $x_1_2 = "QuanLyBangDiaCD.Properties" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2134,6 +2225,7 @@ rule Trojan_MSIL_Nanocore_ABXR_2147848551_0
         $x_1_2 = "4D5A90" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2155,6 +2247,7 @@ rule Trojan_MSIL_Nanocore_ABZZ_2147848839_0
         $x_5_1 = {08 11 0a 11 09 6f ?? 00 00 0a 13 0b 16 13 0c 11 05 11 08 9a 13 0e 11 0e 13 0d 11 0d 72 b7 09 00 70 28 ?? 00 00 0a 2d 1e 11 0d 72 bb 09 00 70 28 ?? 00 00 0a 2d 1b 11 0d 72 bf 09 00 70 28 ?? 00 00 0a 2d 18 2b 21 12 0b 28 ?? 00 00 0a 13 0c 2b 16 12 0b 28 ?? 00 00 0a 13 0c 2b 0b 12 0b 28 ?? 00 00 0a 13 0c 2b 00 07 11 0c 6f ?? 00 00 0a 00 00 11 0a 17 58 13 0a 11 0a 09 fe 04 13 0f 11 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2177,6 +2270,7 @@ rule Trojan_MSIL_Nanocore_ABZV_2147849001_0
         $x_1_2 = "DataBasePracticalJob" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2199,6 +2293,7 @@ rule Trojan_MSIL_Nanocore_NN_2147849601_0
         $x_1_2 = "fsdgsrxd.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2221,6 +2316,7 @@ rule Trojan_MSIL_Nanocore_MBEW_2147849633_0
         $x_1_2 = "Afy3iJ3h6MWYXN" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2242,6 +2338,7 @@ rule Trojan_MSIL_Nanocore_AADC_2147849649_0
         $x_6_1 = {11 05 17 8d ?? 00 00 01 25 16 1f 2d 9d 6f ?? 00 00 0a 0c 08 8e 69 8d ?? 00 00 01 0d 16 0a 2b 11 09 06 08 06 9a 1f 10 28 ?? 00 00 0a 9c 06 17 58 0a 06 08 8e 69 fe 04 13 09 11 09 2d e3}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2263,6 +2360,7 @@ rule Trojan_MSIL_Nanocore_PSQW_2147849905_0
         $x_2_1 = {6f d2 00 00 0a 6f d3 00 00 0a 28 21 02 00 06 38 1e 00 00 00 00 11 03 11 02 16 11 07 6f d4 00 00 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2284,6 +2382,7 @@ rule Trojan_MSIL_Nanocore_AACL_2147849943_0
         $x_4_1 = {01 25 16 07 8c ?? 00 00 01 a2 25 17 11 04 1e 61 8c ?? 00 00 01 a2 14 28 ?? 00 00 0a 1a 13 07 38 ?? fe ff ff 1f 0c 13 07 38 ?? fe ff ff 07 17 d6 0b 16 13 07 38 ?? fe ff ff 07 08 fe 04 13 05 11 05 2d 08 18 13 07 38 ?? fe ff ff 1c 2b f6 02}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2305,6 +2404,7 @@ rule Trojan_MSIL_Nanocore_AAEF_2147850209_0
         $x_5_1 = {02 11 01 02 8e 69 5d 02 11 01 02 8e 69 5d 91 11 00 11 01 11 00 8e 69 5d 91 61 28 ?? 00 00 06 02 11 01 17 58 02 8e 69 5d 91 28 ?? 00 00 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d 28 ?? 00 00 0a 9c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2329,6 +2429,7 @@ rule Trojan_MSIL_Nanocore_RDB_2147850260_0
         $x_1_4 = "HHHgVPL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2351,6 +2452,7 @@ rule Trojan_MSIL_Nanocore_NNC_2147850313_0
         $x_1_2 = "Klepassfile" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2373,6 +2475,7 @@ rule Trojan_MSIL_Nanocore_NR_2147850314_0
         $x_1_2 = "BBNMK873" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2395,6 +2498,7 @@ rule Trojan_MSIL_Nanocore_NRN_2147850315_0
         $x_1_2 = "BBNMK873" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2416,6 +2520,7 @@ rule Trojan_MSIL_Nanocore_AAER_2147850708_0
         $x_5_1 = {06 0a 06 7e ?? 00 00 04 16 6f ?? 00 00 0a 20 39 05 00 00 59 7d ?? 00 00 04 7e ?? 00 00 04 17 6f ?? 00 00 0a 06 fe ?? ?? 03 00 06 73 ?? 00 00 0a 28 ?? 00 00 2b 28 ?? 00 00 2b 73 ?? 00 00 0a 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2439,6 +2544,7 @@ rule Trojan_MSIL_Nanocore_AAFA_2147850717_0
         $x_1_3 = "ISDnkRJZgkB5BF3N" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2461,6 +2567,7 @@ rule Trojan_MSIL_Nanocore_NNE_2147851267_0
         $x_1_2 = "NNnH76" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2483,6 +2590,7 @@ rule Trojan_MSIL_Nanocore_NCC_2147851391_0
         $x_1_2 = "Cmuvk.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2504,6 +2612,7 @@ rule Trojan_MSIL_Nanocore_AAIK_2147852106_0
         $x_5_1 = {07 8e 69 8d ?? 00 00 01 0d 16 13 04 38 ?? 00 00 00 09 11 04 07 11 04 91 06 11 04 06 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 61 d2 9c 11 04 17 58 13 04 11 04 07 8e 69 32 da}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2525,6 +2634,7 @@ rule Trojan_MSIL_Nanocore_AAKD_2147852964_0
         $x_5_1 = {11 05 08 8e 69 5d 13 06 08 11 06 91 13 07 09 11 05 1f 16 5d 6f ?? 00 00 0a d2 13 08 08 11 05 17 58 08 8e 69 5d 91 13 09 11 07 11 08 61 11 09 20 00 01 00 00 58 20 00 01 00 00 5d 59 13 0a 08 11 06 11 0a d2 9c 00 11 05 17 59 13 05 11 05 16 fe 04 16 fe 01 13 0b 11 0b 2d a5}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2546,6 +2656,7 @@ rule Trojan_MSIL_Nanocore_AALX_2147888477_0
         $x_5_1 = {07 09 07 8e 69 5d 07 09 07 8e 69 5d 91 08 09 08 28 ?? 00 00 06 5d 28 ?? 00 00 06 61 28 ?? 00 00 06 07 09 17 58 07 8e 69 5d 91 28 ?? 00 00 06 59 20 00 01 00 00 58 20 00 01 00 00 5d 28 ?? 00 00 06 d2 9c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2569,6 +2680,7 @@ rule Trojan_MSIL_Nanocore_MBID_2147888931_0
         $x_1_3 = {fa 25 33 00 16 00 00 01 00 00 00 0b 00 00 00 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2590,6 +2702,7 @@ rule Trojan_MSIL_Nanocore_PSWE_2147889171_0
         $x_2_1 = {72 ad 02 00 70 11 04 28 ?? 00 00 0a 6f ?? 00 00 0a 00 1f 7b 28 ?? 00 00 0a 00 28 04 00 00 06 6f ?? 00 00 0a 6f ?? 00 00 0a 6f ?? 00 00 0a 72 ad 02 00 70 11 04 28 ?? 00 00 0a 28 ?? 00 00 0a 26 1f 7b 28 ?? 00 00 0a 00 de 0e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2613,6 +2726,7 @@ rule Trojan_MSIL_Nanocore_AAPH_2147891331_0
         $x_1_3 = "$$$$$$$$$$C$$$$$$$$$$$$reat$$$$$$$eIn$$$$$$$$$$stan$$$$$$$$$$$ce" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2635,6 +2749,7 @@ rule Trojan_MSIL_Nanocore_AAPN_2147891702_0
         $x_1_2 = "1a2f2329-7bc5-461d-b9e2-3d8a5f080819" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2657,6 +2772,7 @@ rule Trojan_MSIL_Nanocore_AASS_2147893072_0
         $x_1_2 = "Gl.L9" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2678,6 +2794,7 @@ rule Trojan_MSIL_Nanocore_AAVF_2147895184_0
         $x_5_1 = {11 04 11 07 11 02 11 07 91 20 e7 ad e7 fa 28 ?? 00 00 06 28 ?? 00 00 0a 59 d2 9c 20 0e 00 00 00 38 ?? fe ff ff 11 07 17 58 13 07}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2700,6 +2817,7 @@ rule Trojan_MSIL_Nanocore_ABOQ_2147896335_0
         $x_1_2 = "FormSimVille" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2724,6 +2842,7 @@ rule Trojan_MSIL_Nanocore_ABOV_2147896337_0
         $x_1_4 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2747,6 +2866,7 @@ rule Trojan_MSIL_Nanocore_ABOW_2147896338_0
         $x_1_3 = "WebsiteReviewSimulation.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2770,6 +2890,7 @@ rule Trojan_MSIL_Nanocore_ABLP_2147896450_0
         $x_1_3 = "PCMBinBuilder.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2794,6 +2915,7 @@ rule Trojan_MSIL_Nanocore_ABDB_2147896489_0
         $x_1_4 = "TransformFinalBlock" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2818,6 +2940,7 @@ rule Trojan_MSIL_Nanocore_ABBB_2147896520_0
         $x_1_4 = "35e0983c16574f9a9933f6a0d62fd656" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2845,6 +2968,7 @@ rule Trojan_MSIL_Nanocore_ABBV_2147896523_0
         $x_1_7 = "Tuma.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2867,6 +2991,7 @@ rule Trojan_MSIL_Nanocore_ABQB_2147896715_0
         $x_1_2 = "UniverseSimulator.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2888,6 +3013,7 @@ rule Trojan_MSIL_Nanocore_PTEI_2147899427_0
         $x_2_1 = {28 03 00 00 06 0d 09 28 ?? 00 00 0a 13 04 11 04 28 ?? 00 00 0a 13 05 07 11 05 6f 4b 00 00 0a 00 07 13 06}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2909,6 +3035,7 @@ rule Trojan_MSIL_Nanocore_ARA_2147899449_0
         $x_2_1 = {0a 02 8e 69 18 5a 06 8e 69 58 0b 2b 3d 00 02 07 02 8e 69 5d 02 07 02 8e 69 5d 91 06 07 06 8e 69 5d 91 61 28 ?? ?? ?? ?? 02 07 17 58 02 8e 69 5d 91 28 ?? ?? ?? ?? 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 00 07 15 58 0b 07 16 fe 04 16 fe 01 0c 08 2d b8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2930,6 +3057,7 @@ rule Trojan_MSIL_Nanocore_CGAA_2147901539_0
         $x_5_1 = {59 91 61 28 ?? ?? 00 06 ?? 08 20 88 10 00 00 58 20 87 10 00 00 59 ?? 8e 69 5d 91 59 20 fb 00 00 00 58 1b 58 20 00 01 00 00 5d d2 9c 08 17 58 0c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2952,6 +3080,7 @@ rule Trojan_MSIL_Nanocore_GPA_2147902467_0
         $x_5_2 = "wmWLWYvtUaqfWil" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2975,6 +3104,7 @@ rule Trojan_MSIL_Nanocore_EXAA_2147903185_0
         $x_1_3 = {11 01 11 0b 91 11 08 58 13 0e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2997,6 +3127,7 @@ rule Trojan_MSIL_Nanocore_FBAA_2147903189_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3018,6 +3149,7 @@ rule Trojan_MSIL_Nanocore_RDC_2147908437_0
         $x_2_1 = {11 08 75 02 00 00 1b 11 09 11 07 11 0a 25 17 58 13 0a 91 08 61 d2 9c 11 14}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3039,6 +3171,7 @@ rule Trojan_MSIL_Nanocore_AMAM_2147915695_0
         $x_1_1 = {8e 69 5d 91 13 [0-15] 61 [0-30] 17 58 08 5d [0-50] 59 20 00 01 00 00 58 20 ff 00 00 00 5f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3060,6 +3193,7 @@ rule Trojan_MSIL_Nanocore_AMA_2147921784_0
         $x_1_1 = {0a 0d 09 13 04 11 04 06 11 04 6f ?? 00 00 0a 1e 5b 6f ?? 00 00 0a 6f ?? 00 00 0a 11 04 06 11 04 6f ?? 00 00 0a 1e 5b 6f ?? 00 00 0a 6f ?? 00 00 0a 08 11 04 6f ?? 00 00 0a 17 73 ?? 00 00 0a 13 05 11 05 02 16 02 8e 69 6f ?? 00 00 0a 11 05 6f ?? 00 00 0a 07 6f ?? 00 00 0a 13 06 de 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3081,6 +3215,7 @@ rule Trojan_MSIL_Nanocore_ZPAA_2147924274_0
         $x_5_1 = {08 18 5b 1f 10 59 0d 06 09 03 08 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 0a 25 26 07 09 07 8e 69 5d 91 61 d2 9c 08 18 58 0c 08 03 6f ?? 00 00 0a 32 b2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3103,6 +3238,7 @@ rule Trojan_MSIL_Nanocore_NH_2147927401_0
         $x_1_2 = "sZIp.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3124,6 +3260,7 @@ rule Trojan_MSIL_Nanocore_AMAF_2147927684_0
         $x_1_1 = {11 19 11 0a 11 29 11 22 61 11 1e 19 58 61 11 2c 61 d2 9c 11 22 13 1e 17 11 0a 58 13 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3146,6 +3283,7 @@ rule Trojan_MSIL_Nanocore_MX_2147933714_0
         $x_1_2 = "7a4427c2-4773-477e-8f1b-69ac01ffa85a" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3170,6 +3308,7 @@ rule Trojan_MSIL_Nanocore_ATRA_2147939796_0
         $x_1_4 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Virus_Win32_Shodi_J_2147709417_0
         $x_1_2 = {61 6d 73 00 6f 67 72 00 53 68 6f 68 64 69 57 69 74 68 50 72 6f 67 72 61 6d 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Virus_Win32_Shodi_F_2147905394_0
         $x_1_2 = "USR_Shohdi_Photo_USR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

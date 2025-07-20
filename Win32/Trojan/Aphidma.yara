@@ -17,6 +17,7 @@ rule Trojan_Win32_Aphidma_A_2147598669_0
         $x_1_3 = {66 ba 50 00 b8 ?? ?? 40 00 e8 ?? ?? ff ff 83 f8 ff 75 34 66 ba 50 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Trojan_Win32_Aphidma_B_2147605629_0
         $x_10_8 = "Software\\Microsoft\\Internet Account Manager\\Accounts" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

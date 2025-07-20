@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_MiniKeyLog_E_2147574437_0
         $x_2_5 = " 2002-2007 by blue-series" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

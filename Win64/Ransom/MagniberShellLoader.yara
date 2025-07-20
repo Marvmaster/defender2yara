@@ -17,6 +17,7 @@ rule Ransom_Win64_MagniberShellLoader_LK_2147842677_0
         $x_1_2 = {66 c7 40 f0 0f 05 c6 40 f2 c3 48 c7 40 20 0b 00 00 00 c7 40 d8 00 10 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

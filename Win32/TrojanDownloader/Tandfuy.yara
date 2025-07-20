@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Tandfuy_A_2147684327_0
         $x_1_3 = {85 c0 75 04 83 c4 ?? c3 8b 4c 24 ?? 53 6a 00 6a 00 6a 00 6a 00 51 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_Tandfuy_B_2147684328_0
         $x_1_2 = {85 f6 89 74 24 ?? 75 05 5e 83 c4 ?? c3 8b 44 24 ?? 53 6a 00 6a 00 6a 00 6a 00 50 56 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule TrojanDownloader_Win32_Tandfuy_C_2147687579_0
         $x_1_4 = {2b c2 4f 8a 4f 01 47 84 c9 75 f8 8b c8 c1 e9 02 8b f2 f3 a5 8b c8 8d 54 24 08 83 e1 03 52 f3 a4 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

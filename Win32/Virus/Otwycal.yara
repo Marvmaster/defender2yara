@@ -22,6 +22,7 @@ rule Virus_Win32_Otwycal_A_2147606371_0
         $x_1_7 = {50 53 ff d5 ab eb e7 c3 00 50 0e 00 00 10 00 00 f0 01 00 00 10 00 00 00 60 60 23 13 73 95 23 13 5f 00 00 00 60 00 00 e0 00 10 15 13 a8 95 23 13 00 b0 00 00 00 60 0e 00 d0 36 00 00 00 02 00 00 90 4c 15 13 ff 4f 23 13 d0 96 23 13 60 00 00 e0 69 55 23 13 fc 0f 15 13 00 10 00 00 00 10 0f 00 f0 01 00 00 10 00 00 00 40 95 23 13 43 95 23 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Virus_Win32_Otwycal_B_2147606738_0
         $x_1_1 = {68 2c 01 00 00 ff 75 38 ff 55 10 6a 00 68 2e 65 78 74 68 64 6f 77 73 68 5c 77 69 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanSpy_Win64_RustyStealer_B_2147946254_0
         $x_1_2 = {49 c1 e0 30 0f b6 d2 48 c1 e2 28 4c 09 c2 0f b6 c0 48 c1 e0 20 48 09 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

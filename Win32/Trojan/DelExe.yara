@@ -18,6 +18,7 @@ rule Trojan_Win32_DelExe_C_2147633338_0
         $x_2_4 = "REN *.DOC *.js" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or

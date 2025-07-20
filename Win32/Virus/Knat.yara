@@ -16,6 +16,7 @@ rule Virus_Win32_Knat_2147609892_0
         $x_1_2 = {e8 00 00 00 00 83 2c 24 7a 5d 68 00 10 00 00 e8 ?? ?? 00 00 0b c0 0f 84 ?? ?? 00 00 97 68 00 08 00 00 57 56 e8 ?? ?? 00 00 66 83 3f 00 0f 84 ?? ?? 00 00 50 57}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

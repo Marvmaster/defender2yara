@@ -17,6 +17,7 @@ rule VirTool_Win64_Bypatchsz_A_2147916122_0
         $x_1_2 = {49 3b 66 10 ?? ?? 55 48 89 e5 48 83 ec 20 48 89 44 24 30 48 89 c3 31 c9 31 ff [0-18] 48 8b 54 24 30 48 89 14 24 ?? ?? ?? ?? ?? 45 0f 57 ff 4c 8b 35 51 55 14 00 65 4d 8b 36 4d 8b 36 8b 44 24 08 48 83 c4 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

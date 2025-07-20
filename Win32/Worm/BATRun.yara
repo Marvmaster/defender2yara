@@ -19,6 +19,7 @@ rule Worm_Win32_BATRun_DA_2147888101_0
         $x_1_4 = "for /r \\ %%a in (folder.exe) do copy \"d:\\folder.exe\" %%a" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Sednit_A_2147764632_0
         $x_1_3 = "RT/ \"IUgubeD\\tfosorciM\\swodniW\" NT/ 4 OM/ ETUNIM CS/ etaerC/ sksathcs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule Trojan_Win32_Sednit_LK_2147845870_0
         $x_1_1 = {8a 04 02 32 44 39 ?? 32 ?? ?? 88 04 1f 4f 8b 0e 83 ff ff 7f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

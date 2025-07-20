@@ -17,6 +17,7 @@ rule Ransom_Win32_Qbot_PBA_2147840047_0
         $x_1_2 = {8b 45 fc 0f b6 44 10 ?? 33 c8 66 3b ed 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

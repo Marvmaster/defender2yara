@@ -20,6 +20,7 @@ rule Worm_Win32_Kasatall_A_2147633095_0
         $x_1_6 = "Flash Game 2007\\Setup Game.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

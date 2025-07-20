@@ -20,6 +20,7 @@ rule Trojan_Win32_Gudra_A_2147707017_0
         $x_1_6 = "GudrFile" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

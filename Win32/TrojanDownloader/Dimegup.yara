@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Dimegup_A_2147682847_0
         $x_1_4 = {8b c7 33 d2 f7 75 14 8b 45 0c 0f b6 04 02 03 06 03 c3 8b d9 99 f7 fb 8a 06 47 88 45 ff 8b da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

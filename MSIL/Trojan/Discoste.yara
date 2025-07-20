@@ -16,6 +16,7 @@ rule Trojan_MSIL_Discoste_RS_2147833672_0
         $x_5_1 = {00 02 07 18 6f 0f 00 00 0a 0c 06 08 1f 10 28 10 00 00 0a 6f 11 00 00 0a 26 00 07 18 58 0b 07 02 6f 0c 00 00 0a fe 04 13 04 11 04 2d d3}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Discoste_RS_2147833672_1
         $x_1_3 = {02 28 07 00 00 06 0a 28 21 00 00 0a 06 6f 22 00 00 0a 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Ransom_MSIL_Chaos_AFF_2147832253_0
         $x_1_1 = {26 09 0e 04 6f ?? ?? ?? 0a 26 09 0e 05 6f ?? ?? ?? 0a 26 09 0e 06 8c 28 00 00 01 6f ?? ?? ?? 0a 26 02 50 28 ?? ?? ?? 0a 13 04 11 04 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Ransom_MSIL_Chaos_NITA_2147939927_0
         $x_1_3 = {a2 13 06 28 ?? 00 00 0a 13 07 00 11 06 13 0d 16 13 0e 2b 1a 11 0d 11 0e 9a 13 0f 00 11 0f 06 11 05 28 ?? 00 00 06 00 00 11 0e 17 58 13 0e 11 0e 11 0d 8e 69 32 de}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Ransom_MSIL_Chaos_ACH_2147946600_0
         $x_1_3 = "10.30.10.243" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

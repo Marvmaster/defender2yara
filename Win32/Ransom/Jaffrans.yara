@@ -23,6 +23,7 @@ rule Ransom_Win32_Jaffrans_A_2147721435_0
         $x_1_8 = "JAFF DECRYPTOR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -90,6 +91,7 @@ rule Ransom_Win32_Jaffrans_B_2147721599_0
         $x_2_10 = {ff d3 ff d3 3d 16 00 09 80 0f 85 ?? ?? ?? ?? 68 08 00 00 f0 6a 18 57 57 8d 4d fc 51 ff d6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Rochap_K_2147628586_0
         $x_1_2 = {63 6f 6e 74 61 64 6f 72 2e 64 6c 6c 00 63 61 72 72 65 67 61 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_Win32_Rochap_P_2147636210_0
         $x_1_2 = {8b 45 ec e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 89 45 fc ff 75 f8 ff 75 f4 ff 55 fc 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule TrojanDownloader_Win32_Rochap_R_2147651322_0
         $x_1_2 = {89 45 fc ff 75 ?? ff 75 [0-14] ff 55 ?? 33 c0 5a 59 59 64 89 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule TrojanDownloader_Win32_Rochap_T_2147651801_0
         $x_1_6 = "ubutuppc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

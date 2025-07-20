@@ -18,6 +18,7 @@ rule Trojan_Win32_Appavkill_A_2147749946_0
         $x_1_3 = "cmd.exe /C ping 1.1.1.1 -n 1 -w 3000 > Nul & Del /f /q \"%s\" & sc delete WindowsDeviceACL" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

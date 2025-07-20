@@ -16,6 +16,7 @@ rule TrojanDownloader_Win64_Mikey_ARAC_2147851983_0
         $x_2_1 = {48 ff c7 f7 eb 8b c2 c1 e8 1f 03 d0 0f b6 c2 02 c0 02 d0 0f b6 c3 ff c3 2a c2 04 02 00 44 37 ff 49 3b f8 7c d6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_Win64_Mikey_ARA_2147923023_0
         $x_2_1 = {83 c8 ff ff c1 48 8d 52 01 2a 42 ff 88 42 ff 48 63 c1 48 83 f8 ?? 72 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

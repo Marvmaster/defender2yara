@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Ifnapod_A_2147603494_0
         $x_1_2 = {c6 85 01 ff ff ff 4e c6 85 00 ff ff ff 57 ff 15 2f 00 6a 3a be ?? ?? ?? 00 8d bd 00 ff ff ff f3 a5 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_Win64_Cactus_PB_2147846650_0
         $x_1_4 = "schtasks.exe /create /sc MINUTE /mo 5 /rl HIGHEST" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MSIL_Menorah_AMN_2147899166_0
         $x_1_3 = {0a 16 0b 2b 1a 06 07 02 07 91 03 07 03 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 61 d2 9c 07 17 58 0b 07 02 8e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

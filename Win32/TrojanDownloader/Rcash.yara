@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Rcash_A_2147605519_0
         $x_1_7 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

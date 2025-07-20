@@ -18,6 +18,7 @@ rule Ransom_Win32_FileCrypt_A_2147751700_0
         $x_1_3 = "5tyj7f3xss6kdrgc.onion" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Win32_FileCrypt_MK_2147761201_0
         $x_1_5 = "xlock.ico" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_Win32_FileCrypt_AI_2147851342_0
         $x_1_7 = "hellohowareyou@cock.li" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

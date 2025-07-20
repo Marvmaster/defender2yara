@@ -18,6 +18,7 @@ rule Trojan_MSIL_Chopper_AB_2147794348_0
         $x_2_3 = "Response.Write(new ActiveXObject(\"WScript.Shell\").Exec(\"cmd.exe /c ipconfig /all\").StdOut.ReadAll());" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -44,6 +45,7 @@ rule Trojan_MSIL_Chopper_AC_2147794443_0
         $x_1_2 = "LaTkWfI64XeDAXZS6pU1KrsvLAcGH7AZOQXjrFkT816RnFYJQR" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_MSIL_Chopper_AD_2147794444_0
         $x_1_2 = "JScriptEvaluate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_MSIL_Chopper_AE_2147795878_0
         $x_1_2 = "JScriptEvaluate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_MSIL_Chopper_EWM_2147824723_0
         $x_1_6 = "%6c%28%79%29%3b%7d%65%6c%73%65%7b%52%65%73%70%6f%6e%73%65%2e%52%65%64%69%72%65%63%74%28%22%2f%6f%77%61%2f%61%75%74" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Trojan_MSIL_Chopper_ACR_2147845732_0
         $x_1_3 = "__Render__control1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Trojan_MSIL_Chopper_MAAA_2147847528_0
         $x_1_2 = {57 17 a2 03 09 00 00 00 00 fa 25 33 00 16 00 00 01 00 00 00 27 00 00 00 05 00 00 00 04 00 00 00 17 00 00 00 04 00 00 00 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -180,6 +187,7 @@ rule Trojan_MSIL_Chopper_SPD_2147890122_0
         $x_4_1 = {0a 0a 02 6f 12 00 00 0a 28 ?? ?? ?? 0a 74 ?? ?? ?? 01 7b ?? ?? ?? 0a 25 16 03 a2 25 17 04 a2 25 18 06 a2 26 02}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +209,7 @@ rule Trojan_MSIL_Chopper_PTGX_2147901331_0
         $x_2_1 = {d0 03 00 00 02 72 b7 03 00 70 72 e1 03 00 70 16 8d 0f 00 00 01 1a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

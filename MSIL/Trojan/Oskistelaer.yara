@@ -17,6 +17,7 @@ rule Trojan_MSIL_Oskistelaer_AKI_2147832247_0
         $x_1_2 = {0d 02 09 17 8d 05 00 00 01 13 06 11 06 16 72 57 00 00 70 a2 00 11 06 14 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

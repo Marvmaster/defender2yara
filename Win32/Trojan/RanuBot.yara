@@ -16,6 +16,7 @@ rule Trojan_Win32_RanuBot_AA_2147750908_0
         $x_1_1 = "OzVw39yjF4RfsVcgmi6c/eYrahwfiLWrlP_ug-KBM/nuOCmPKFOG2BGYHbu1eA/NgrxeIRJRBOKkzs_VmFM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

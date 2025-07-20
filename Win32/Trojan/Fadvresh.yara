@@ -17,6 +17,7 @@ rule Trojan_Win32_Fadvresh_A_2147648479_0
         $x_1_3 = {be 4e 02 00 00 3b d6 7e ?? 8b d6 89 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

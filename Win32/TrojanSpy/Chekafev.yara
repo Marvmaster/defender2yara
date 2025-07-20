@@ -27,6 +27,7 @@ rule TrojanSpy_Win32_Chekafev_C_2147634566_0
         $x_1_13 = "barclient.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 6 of ($x_1_*))) or
             ((6 of ($x_2_*) and 4 of ($x_1_*))) or

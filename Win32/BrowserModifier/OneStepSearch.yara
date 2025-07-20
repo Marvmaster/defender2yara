@@ -21,6 +21,7 @@ rule BrowserModifier_Win32_OneStepSearch_18033_0
         $x_2_7 = "GetCommandLineA" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_3_*) and 2 of ($x_2_*))) or
             ((2 of ($x_10_*) and 3 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -54,6 +55,7 @@ rule BrowserModifier_Win32_OneStepSearch_18033_1
         $x_6_10 = "Update and control for OneStep Search" ascii //weight: 6
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_7_*) and 4 of ($x_6_*))) or
             ((3 of ($x_7_*) and 2 of ($x_6_*))) or
@@ -83,6 +85,7 @@ rule BrowserModifier_Win32_OneStepSearch_18033_2
         $x_1_4 = {4f 6e 65 53 74 65 70 2e 2e 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_5_*))) or
@@ -108,6 +111,7 @@ rule BrowserModifier_Win32_OneStepSearch_18033_3
         $x_1_2 = {25 ff ff 00 00 bb 69 90 00 00 f7 e3 8b 1d ?? ?? 40 00 c1 eb 10 03 c3 a3 ?? ?? 40 00 a1 ?? ?? 40 00 25 ff ff 00 00 bb 69 90 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +135,7 @@ rule BrowserModifier_Win32_OneStepSearch_18033_4
         $x_1_4 = {53 00 65 00 61 00 72 00 63 00 68 00 49 00 6e 00 4f 00 6e 00 65 00 53 00 74 00 65 00 70 00 20 00 53 00 6f 00 66 00 74 00 77 00 61 00 72 00 65 00 20 00 41 00 63 00 74 00 69 00 76 00 61 00 74 00 65 00 64 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -160,6 +165,7 @@ rule BrowserModifier_Win32_OneStepSearch_B_127825_0
         $x_1_7 = {43 6f 6d 6d 61 6e 64 00 49 6e 73 74 61 6c 6c 00 4d 61 69 6e 00 53 65 72 76 69 63 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +193,7 @@ rule BrowserModifier_Win32_OneStepSearch_B_127825_1
         $x_1_8 = {43 6f 6d 6d 61 6e 64 00 49 6e 73 74 61 6c 6c 00 4d 61 69 6e 00 53 65 72 76 69 63 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -217,6 +224,7 @@ rule BrowserModifier_Win32_OneStepSearch_C_134931_0
         $x_1_8 = {43 6f 6d 6d 61 6e 64 00 49 6e 73 74 61 6c 6c 00 4d 61 69 6e 00 53 65 72 76 69 63 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Phaetp_B_2147815485_0
         $x_1_3 = {55 8b ec 81 ec 1c 01 00 00 56 68 24 31 00 10 8d 85 e4 fe ff ff 50 c6 45 ec 00 c6 45 e8 00 c7 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

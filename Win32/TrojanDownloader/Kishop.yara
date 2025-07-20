@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Kishop_A_2147682611_0
         $x_1_2 = {3b 45 0c 73 21 8b 45 ?? 8a 00 34 ?? 8b 4d ?? 88 01 8b 45 ?? 8a 00 34 ?? 8b 4d ?? 88 01 8b 45 ?? 40 89 45 ?? eb d0 c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

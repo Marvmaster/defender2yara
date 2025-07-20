@@ -18,6 +18,7 @@ rule Ransom_Win32_Aicat_A_2147809789_0
         $x_3_3 = "\\Rx2o7d.txt" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

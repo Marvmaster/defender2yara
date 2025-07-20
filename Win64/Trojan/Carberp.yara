@@ -19,6 +19,7 @@ rule Trojan_Win64_Carberp_A_2147682247_0
         $x_1_5 = {56 6e 63 44 4c 4c 2e 64 6c 6c 00 56 6e 63 53 72 76 57 6e 64 50 72 6f 63 00 56 6e 63 53 74 61 72 74 53 65 72 76 65 72 00 56 6e 63 53 74 6f 70 53 65 72 76 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -22,6 +22,7 @@ rule Trojan_MSIL_Gamarue_A_2147781322_0
         $x_4_7 = "jlyBm3H2yk5UanXO65e8nSVYecp60t4bZbcOic0AHIA==itter" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_MSIL_Gamarue_MBXU_2147923387_0
         $x_1_3 = {5a 65 6e 4d 61 70 2e 65 78 65 00 6d 73 63 6f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

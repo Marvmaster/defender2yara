@@ -19,6 +19,7 @@ rule VirTool_Win64_PoolParty_A_2147898363_0
         $x_1_4 = "PoolPartyJob" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule VirTool_Win64_PoolParty_B_2147898495_0
         $x_1_5 = {4c 8b f8 48 89 45 b8 48 8d ?? ?? ?? ?? ?? e8 ?? ?? ?? ?? 48 8b f8 48 89 45 c0 e8 ?? ?? ?? ?? 44 8b e0 89 45 c8 41 83 ce 20 41 b8 40 00 00 00 48 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

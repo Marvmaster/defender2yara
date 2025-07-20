@@ -16,6 +16,7 @@ rule Trojan_Win64_CymRan_ACN_2147895868_0
         $x_1_1 = {53 55 56 57 41 54 41 56 41 57 48 83 ec 30 33 ed 48 8b da 4c 8b f9 48 85 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_CymRan_ACA_2147895882_0
         $x_1_1 = {48 8b 44 24 40 48 83 b8 b8 00 00 00 ff 74 1f ff 15 84 89 03 00 83 f8 06 75 12 48 8b 44 24 40 48 c7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win64_CymRan_B_2147897695_0
         $x_2_4 = "objShell.Run(\"cmd.exe /c" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win64_CymRan_C_2147900835_0
         $x_2_4 = "CymulateCredsStealNSpread" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_Win64_CymRan_ACY_2147903341_0
         $x_1_2 = {48 8d 0c 80 48 8d 05 f4 98 03 00 48 8d 0c c8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

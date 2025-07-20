@@ -19,6 +19,7 @@ rule Worm_Win32_Rokhshah_A_2147606770_0
         $x_1_5 = {44 69 73 61 62 6c 65 54 61 73 6b 4d 67 72 00 00 61 75 74 6f 72 75 6e 2e 69 6e 66 00 53 79 73 74 65 6d 52 6f 6f 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

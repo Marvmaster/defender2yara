@@ -16,6 +16,7 @@ rule Trojan_Win64_Kluch_A_2147682450_0
         $x_1_2 = {fa fe 91 81 81 83 91 80 9f 80 9e e1 e5 e5 f9 00 85 81 85 91 80 9f 80 9e e1 e5 e5 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win64_Kluch_B_2147684024_0
         $x_2_8 = {41 c6 43 e1 e9 41 c6 43 e2 7c 41 c6 43 e3 bf 41 c6 43 e4 4f 41 c6 43 e5 7a 41 c6 43 e6 6e 41 c6 43 e7 8f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             (all of ($x*))

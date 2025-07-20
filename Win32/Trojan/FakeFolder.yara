@@ -20,6 +20,7 @@ rule Trojan_Win32_FakeFolder_EM_2147845978_0
         $x_1_5 = "ClClipboard" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -46,6 +47,7 @@ rule Trojan_Win32_FakeFolder_DT_2147887423_0
         $x_1_2 = {62 0f a8 13 f1 20 56 73 9b 88 c9 82 13 de 92 08 8a ad 88 d4 44 e4 5e bf 87 47 22 c9 db dc 95 06 cd 8f 17 97 84 a3 fd 6b cd 75 96 a0 7e 19 f0 e4 e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

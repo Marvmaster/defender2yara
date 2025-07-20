@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Yorcuts_A_2147725864_0
         $x_1_5 = {8a 06 2a 01 79 02 04 5e 04 20 88 02 8a 41 01 42 41 84 c0 75 02 8b cb 8a 46 01 46 84 c0 75 e1 83 c9 ff 33 c0 f2 ae f7 d1 49 5f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

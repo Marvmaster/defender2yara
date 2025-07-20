@@ -17,6 +17,7 @@ rule Trojan_Win64_Fuery_SIB_2147807571_0
         $x_1_2 = {43 0f b6 14 02 45 0f b6 08 49 ff c0 84 c0 0f 84 ?? ?? ?? ?? 8b cd b8 ?? ?? ?? ?? f8 f9 d3 c0 f8 80 f9 ?? 40 02 c5 f9 49 81 fe ?? ?? ?? ?? 32 d0 8a 84 24 ?? ?? ?? ?? 48 ff c5 f9 84 d2 0f 84 ?? ?? ?? ?? 41 3a d1 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

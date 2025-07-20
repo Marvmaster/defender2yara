@@ -19,6 +19,7 @@ rule Trojan_Win32_Ziconarch_A_2147680202_0
         $x_1_5 = "Sending SMS you agree with the user agreement." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

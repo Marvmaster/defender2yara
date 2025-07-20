@@ -18,6 +18,7 @@ rule Trojan_Linux_Whirpool_A_2147849234_0
         $x_1_3 = "plain_connect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

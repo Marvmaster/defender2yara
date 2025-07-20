@@ -17,6 +17,7 @@ rule Trojan_MSIL_REMLoader_RPV_2147834354_0
         $x_1_2 = {5d d2 9c 00 07 15 58 0b 07 16 fe 04 16 fe 01 0c 08 2d b8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

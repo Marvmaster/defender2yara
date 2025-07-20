@@ -22,6 +22,7 @@ rule TrojanDropper_Win32_Steam_E_2147601803_0
         $x_1_8 = "GetAndReadSteamAccountInformation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

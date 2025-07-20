@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_SilentRoute_A_2147944484_0
         $x_1_3 = {41 75 74 68 52 ?? 6d 6f 74 65 00 53 54 41 54 68 72 65 61 64 41 74 74 72 69 62 75 74 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

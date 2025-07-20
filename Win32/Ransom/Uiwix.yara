@@ -23,6 +23,7 @@ rule Ransom_Win32_Uiwix_A_2147721484_0
         $x_1_8 = {0f b6 1a 3a 5d ff 75 08 0f b6 01 88 45 fe eb 07 40 41 42 3c 3e 75 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

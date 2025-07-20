@@ -18,6 +18,7 @@ rule Trojan_Win32_Sofacy_A_2147725787_0
         $x_10_3 = {65 6e 4b 65 c7 ?? ?? 79 45 78 57 88 5d d5}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Sofacy_B_2147725788_0
         $x_10_3 = {79 25 09 09 22 40 0c 70 0c 0f 5e 2c}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

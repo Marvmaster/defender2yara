@@ -26,6 +26,7 @@ rule Trojan_Win32_MotePro_18066_0
         $x_1_12 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_3_*) and 8 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -54,6 +55,7 @@ rule Trojan_Win32_MotePro_18066_1
         $x_1_5 = "Disable Script Debugger" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -82,6 +84,7 @@ rule Trojan_Win32_MotePro_18066_2
         $x_2_6 = "<center><iframe width=%d height=%d frameborder=0 SCROLLING=no src=\"%s\"></iframe></center>" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_3_*))) or
@@ -112,6 +115,7 @@ rule Trojan_Win32_MotePro_18066_3
         $x_3_7 = "http://www.e-jok.cn/cnfg/" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -143,6 +147,7 @@ rule Trojan_Win32_MotePro_18066_4
         $x_2_8 = {61 62 6f 75 74 3a 62 6c 61 6e 6b 00 00 00 00 42 75 74 74 6f 6e 50 6f 70 75 70 4b 69 6c 6c 65 72}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or

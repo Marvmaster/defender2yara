@@ -21,6 +21,7 @@ rule BrowserModifier_Win32_Maibeeser_241045_0
         $x_1_7 = "olk alkdjf dsaa d oakjlsfd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule BrowserModifier_Win32_Maibeeser_241045_1
         $x_2_12 = {5c 52 65 6c 65 61 73 65 5c 77 69 6e 73 72 63 73 72 76 2e 70 64 62 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

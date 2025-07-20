@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_Streespyer_A_2147628878_0
         $x_1_6 = {5b 68 73 52 65 73 6f 6c 76 69 6e 67 5d [0-12] 5b 68 73 43 6f 6e 6e 65 63 74 69 6e 67 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule TrojanSpy_Win32_Streespyer_D_2147628917_0
         $x_1_3 = {8b 45 10 0f b6 00 8b 55 0c 0f b6 44 02 ff 8b 55 10 0f b6 52 01 8b 4d 0c 0f b6 54 11 ff 03 c2 8b 55 10 0f b6 52 02 8b 4d 0c 0f b6 54 11 ff 03 c2 89 45 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

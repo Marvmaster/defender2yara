@@ -22,6 +22,7 @@ rule Trojan_MSIL_Mimikatz_BA_2147798415_0
         $x_1_7 = "GZipStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_MSIL_Mimikatz_NWO_2147835149_0
         $x_1_6 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -73,6 +75,7 @@ rule Trojan_MSIL_Mimikatz_ASAU_2147849752_0
         $x_5_1 = {02 11 04 11 05 6f ?? 00 00 0a 13 08 12 08 28 ?? 00 00 0a 28 ?? 00 00 0a 13 06 16 13 07 2b 1f 11 06 11 07 91 13 09 07 08 11 09 06 08 06 8e 69 5d 91 61 d2 9c 08 17 58 0c 11 07 17 58 13 07 11 07 11 06 8e 69 32 d9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Worm_Win32_Morto_A_2147648848_0
         $x_1_4 = {53 59 53 54 c7 45 ?? 45 4d 5c 57}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule Worm_Win32_Morto_B_2147649411_0
         $x_1_3 = {6a 08 50 c7 45 b0 4b 00 65 00 c7 45 b4 72 00 6e 00 c7 45 b8 65 00 6c 00 c7 45 bc 33 00 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Worm_Win32_Morto_C_2147649883_0
         $x_1_4 = {53 59 53 54 c7 45 ?? 45 4d 5c 57}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -100,6 +103,7 @@ rule Worm_Win32_Morto_D_2147650875_0
         $x_3_9 = {c7 45 f4 4d 61 69 6e c7 45 f8 54 68 72 65 ff 30 c7 45 fc 61 64 00 00 ff 15}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -126,6 +130,7 @@ rule Worm_Win32_Morto_E_2147651244_0
         $x_1_3 = {ff 45 fc 83 45 f8 04 8b 45 fc 83 45 f4 02 3b 46 18 0f 82 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

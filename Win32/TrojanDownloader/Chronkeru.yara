@@ -28,6 +28,7 @@ rule TrojanDownloader_Win32_Chronkeru_A_2147689653_0
         $x_1_14 = "Mxf0mGFAFMIFJgbxq7I=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or

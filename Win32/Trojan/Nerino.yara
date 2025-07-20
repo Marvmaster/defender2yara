@@ -18,6 +18,7 @@ rule Trojan_Win32_Nerino_A_2147727481_0
         $x_1_3 = "schtasks.exe /create /tn System\\SystemUpdate" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

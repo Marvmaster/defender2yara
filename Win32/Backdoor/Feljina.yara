@@ -33,6 +33,7 @@ rule Backdoor_Win32_Feljina_A_2147636168_0
         $x_1_19 = "tmpshangji" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 14 of ($x_1_*))) or
             ((2 of ($x_4_*) and 12 of ($x_1_*))) or

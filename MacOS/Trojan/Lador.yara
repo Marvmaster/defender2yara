@@ -19,6 +19,7 @@ rule Trojan_MacOS_Lador_B_2147828865_0
         $x_1_4 = "github.com/denisbrodbeck/machineid.extractID" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule Trojan_MacOS_Lador_C_2147923950_0
         $x_1_2 = {65 48 8b 0c 25 30 00 00 00 48 3b 61 10 76 43 48 83 ec 28 48 89 6c 24 20 48 8d 6c 24 20 48 8b 44 24 30 48 89 04 24 48 8b 44 24 38 48 89 44 24 08 48 c7 44 24 10 0c 00 00 00 e8 82 d6 fa ff 48 8b 44 24 18 48 89 44 24 40 48 8b 6c 24 20 48 83 c4 28 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_MacOS_Lador_D_2147933249_0
         $x_1_2 = {48 83 ec 28 48 89 1c 24 4c 89 64 24 08 4c 89 6c 24 10 4c 89 74 24 18 4c 89 7c 24 20 48 8b 17 65 48 89 14 25 30 00 00 00 fc e8 d2 f1 fc ff 48 8b 1c 24 4c 8b 64 24 08 4c 8b 6c 24 10 4c 8b 74 24 18 4c 8b 7c 24 20 31 c0 48 83 c4 28 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

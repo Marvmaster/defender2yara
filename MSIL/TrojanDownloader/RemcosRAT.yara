@@ -27,6 +27,7 @@ rule TrojanDownloader_MSIL_RemcosRAT_B_2147824431_0
         $x_1_12 = "GetMethod" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 10 of ($x_1_*))) or
             (all of ($x*))
@@ -59,6 +60,7 @@ rule TrojanDownloader_MSIL_RemcosRAT_D_2147826061_0
         $x_1_9 = "GetMethods" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -90,6 +92,7 @@ rule TrojanDownloader_MSIL_RemcosRAT_G_2147829377_0
         $x_1_8 = "DynamicInvoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +116,7 @@ rule TrojanDownloader_MSIL_RemcosRAT_H_2147834225_0
         $x_1_3 = "GetResponse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +142,7 @@ rule TrojanDownloader_MSIL_RemcosRAT_I_2147837684_0
         $x_1_5 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +170,7 @@ rule TrojanDownloader_MSIL_RemcosRAT_C_2147844620_0
         $x_1_7 = "ToList" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -192,6 +198,7 @@ rule TrojanDownloader_MSIL_RemcosRAT_A_2147844633_0
         $x_1_7 = "NextBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

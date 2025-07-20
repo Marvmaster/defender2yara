@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Ropenda_A_2147696516_0
         $x_1_2 = {25 73 3f 76 3d 25 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

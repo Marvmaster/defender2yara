@@ -19,6 +19,7 @@ rule Trojan_Win32_Adpclient_2147608709_0
         $x_1_5 = "g39948ent:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

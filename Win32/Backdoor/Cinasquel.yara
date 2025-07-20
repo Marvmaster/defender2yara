@@ -23,6 +23,7 @@ rule Backdoor_Win32_Cinasquel_A_2147678322_0
         $x_10_9 = {8b 84 24 b0 00 00 00 83 e8 04 [0-16] 48 74 ?? 48 8d 54 24 48}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_2_*))) or
             ((2 of ($x_10_*))) or
@@ -51,6 +52,7 @@ rule Backdoor_Win32_Cinasquel_B_2147685116_0
         $x_2_5 = {5c 63 6e 61 31 32 [0-16] 2e 64 6c 6c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

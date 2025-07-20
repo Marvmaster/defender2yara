@@ -29,6 +29,7 @@ rule Backdoor_Win32_Small_2147491548_0
         $x_1_15 = "-idx 2 -ip  open" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 7 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_50_*) and 8 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -59,6 +60,7 @@ rule Backdoor_Win32_Small_IR_2147600680_0
         $x_1_6 = {46 53 54 53 57 20 00 4c 4c 44 54 20 00 4c 4c 44 54 20 77 6f 72 64 00 4c 4d 53 57 20 00 4c 4d 53 57 20 77 6f 72 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +86,7 @@ rule Backdoor_Win32_Small_IT_2147602091_0
         $x_1_6 = "AdjustTokenPrivileges" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +111,7 @@ rule Backdoor_Win32_Small_MC_2147602205_0
         $x_1_5 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +135,7 @@ rule Backdoor_Win32_Small_CN_2147602410_0
         $x_1_4 = "TurnOffFirewall" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +158,7 @@ rule Backdoor_Win32_Small_BO_2147623054_0
         $x_1_3 = {68 00 10 00 00 25 00 f0 ff ff 50 6a 00 6a 04 (52|ff 35 ?? ?? ?? ??) ff 15 ?? ?? 00 10 8b cf c1 e9 0c 81 e1 ff 03 00 00 8b 0c 88 f7 c1 01 00 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +180,7 @@ rule Backdoor_Win32_Small_CG_2147624581_0
         $x_1_2 = {5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 57 69 6e 6c 6f 67 6f 6e 00 2e 64 6c 6c 00 67 65 6e 72 61 6c 00 64 6c 6c 69 6e 6b 65 72 00 45 78 70 6c 6f 72 65 72 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +203,7 @@ rule Backdoor_Win32_Small_VB_2147629507_0
         $x_1_3 = {53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 50 6f 6c 69 63 69 65 73 5c 45 78 70 6c 6f 72 65 72 [0-5] 25 73 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +228,7 @@ rule Backdoor_Win32_Small_BP_2147642434_0
         $x_1_5 = {f7 d1 2b f9 8b d1 87 f7 c1 e9 02 8b c7 f3 a5 8b ca 83 e1 03 f3 a4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -261,6 +270,7 @@ rule Backdoor_Win32_Small_BR_2147643385_0
         $x_1_21 = "exe.tnegadb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 12 of ($x_1_*))) or
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
@@ -291,6 +301,7 @@ rule Backdoor_Win32_Small_BR_2147643386_0
         $x_1_7 = "360tray.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

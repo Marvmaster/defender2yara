@@ -21,6 +21,7 @@ rule TrojanDownloader_MSIL_Faksost_B_2147722763_0
         $x_1_6 = "DownloadFile" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

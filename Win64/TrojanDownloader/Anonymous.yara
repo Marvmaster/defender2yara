@@ -21,6 +21,7 @@ rule TrojanDownloader_Win64_Anonymous_EC_2147922601_0
         $x_1_6 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

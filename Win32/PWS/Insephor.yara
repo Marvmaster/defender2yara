@@ -17,6 +17,7 @@ rule PWS_Win32_Insephor_A_2147605490_0
         $x_5_3 = {6a 02 6a 00 6a 00 53 e8 ?? ?? ?? ?? 89 04 24 6a 00 6a 00 8b 44 24 08 2d (e0|f4) 00 00 00 50 53 e8 ?? ?? ?? ?? 6a 00 8d 44 24 04 50 68 (e0|f4) 00 00 00 56 53 e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -41,6 +42,7 @@ rule PWS_Win32_Insephor_B_2147609935_0
         $x_1_2 = {83 3a 01 0f 85 ?? ?? ?? ?? 83 c0 20 66 8b 18 66 c7 42 04 6b 00 66 c7 42 06 4e 00 66 83 fb 6b 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

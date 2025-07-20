@@ -16,6 +16,7 @@ rule Trojan_Win32_dorifel_RDA_2147845698_0
         $x_2_1 = {8a 0e 84 c9 74 ?? 6a 01 83 e9 41 58 d3 e0 56 33 f8 ff 15 ?? ?? ?? ?? 8d 74 06 01 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

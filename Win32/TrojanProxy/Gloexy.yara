@@ -17,6 +17,7 @@ rule TrojanProxy_Win32_Gloexy_A_2147646055_0
         $x_1_3 = {3b c6 0f 84 ?? ?? ?? ?? 83 7d bc 04 c7 45 fc 00 01 00 84 75 07 c7 45 fc 00 01 80 84 53 56 ff 75 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

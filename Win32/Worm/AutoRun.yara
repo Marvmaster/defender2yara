@@ -24,6 +24,7 @@ rule Worm_Win32_AutoRun_XXY_2147724667_0
         $x_1_9 = "Auto Mail Sender -> Active" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 3 of ($x_1_*))) or
             ((6 of ($x_2_*) and 1 of ($x_1_*))) or

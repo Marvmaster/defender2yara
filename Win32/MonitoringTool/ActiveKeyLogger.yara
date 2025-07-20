@@ -16,6 +16,7 @@ rule MonitoringTool_Win32_ActiveKeyLogger_1622_0
         $x_1_2 = {54 69 6d 65 3a [0-16] 57 69 6e 64 6f 77 20 54 69 74 6c 65 3a [0-16] 4b 65 79 73 74 72 6f 6b 65 73 3a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule MonitoringTool_Win32_ActiveKeyLogger_1622_1
         $x_2_4 = {54 6f 74 61 6c 57 69 6e [0-16] 41 63 74 69 76 65 20 4b 65 79 20 4c 6f 67 67 65 72 3a 20 4b 65 79 73 74 72 6f 6b 65 73}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*))) or
             (all of ($x*))

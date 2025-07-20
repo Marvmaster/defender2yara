@@ -19,6 +19,7 @@ rule Backdoor_Win32_Midie_A_2147762577_0
         $x_10_4 = {50 5f b9 08 00 00 00 f3 a6 75 ef}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

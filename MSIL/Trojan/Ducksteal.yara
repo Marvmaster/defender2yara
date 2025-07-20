@@ -19,6 +19,7 @@ rule Trojan_MSIL_Ducksteal_SK_2147834142_0
         $x_1_4 = "UpdaterTriggerPHP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Ducksteal_SL_2147834143_0
         $x_1_3 = "cunprotectdata.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

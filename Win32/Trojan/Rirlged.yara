@@ -20,6 +20,7 @@ rule Trojan_Win32_Rirlged_B_2147602401_0
         $x_1_5 = "!*_*->seven-eleven<-*_*!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Rirlged_A_2147610056_0
         $x_1_4 = "!*_*->seven-eleven<-*_*!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

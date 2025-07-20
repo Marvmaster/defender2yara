@@ -18,6 +18,7 @@ rule Ransom_Win32_Samas_2147727291_0
         $x_1_4 = "SELECT * FROM Win32_OperatingSystem" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule MonitoringTool_Win32_AnyKeylogger_203881_0
         $x_1_7 = "{shift}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

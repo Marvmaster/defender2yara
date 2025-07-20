@@ -19,6 +19,7 @@ rule Trojan_MSIL_ZulsyCrypt_A_2147839111_0
         $x_1_4 = "get_EntryPoint" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

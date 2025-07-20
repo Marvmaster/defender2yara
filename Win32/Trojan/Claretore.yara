@@ -18,6 +18,7 @@ rule Trojan_Win32_Claretore_A_2147653677_0
         $x_1_3 = "$mid=%S&uid=%d&version=%s$" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Claretore_I_2147664391_0
         $x_1_3 = {0f 31 52 50 68 94 e3 40 00 8d 85 fc fb ff ff 68 04 01 00 00 50 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Claretore_L_2147680043_0
         $x_2_6 = "\\[Release.Win32]Clicker.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

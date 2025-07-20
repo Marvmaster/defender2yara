@@ -18,6 +18,7 @@ rule Backdoor_Win32_Mielit_A_2147648311_0
         $x_1_4 = "H45JY4387G5634H7TYNHC783H54735HD4HC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_MSIL_CoinGrabber_MK_2147810334_0
         $x_1_5 = "Bitcoin-Grabber" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

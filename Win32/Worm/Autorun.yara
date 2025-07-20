@@ -21,6 +21,7 @@ rule Worm_Win32_Autorun_A_2147596271_0
         $x_1_7 = "\\Windows\\CurrentVersion\\Policies" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule Worm_Win32_Autorun_C_2147597127_0
         $x_1_4 = "copytodrives" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Worm_Win32_Autorun_C_2147597127_1
         $x_1_8 = "HKEY_DYN_DATA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +112,7 @@ rule Worm_Win32_Autorun_D_2147597187_0
         $x_1_15 = "Verclsid.eXE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -138,6 +142,7 @@ rule Worm_Win32_Autorun_D_2147597187_1
         $x_1_7 = "SHGetSpecialFolderLocation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +171,7 @@ rule Worm_Win32_Autorun_K_2147598172_0
         $x_1_9 = "explorer.exe \"http://www.symantec.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -195,6 +201,7 @@ rule Worm_Win32_Autorun_L_2147598175_0
         $x_1_6 = "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\\Folder\\Hidden\\NOHIDDEN\" /v CheckedValue /t REG_dword /d 00000002 /f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -230,6 +237,7 @@ rule Worm_Win32_Autorun_G_2147598469_0
         $x_100_12 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -255,6 +263,7 @@ rule Worm_Win32_Autorun_N_2147598582_0
         $x_10_3 = "wget \"http://virae.org/trojanhorsegallery/get.php" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -281,6 +290,7 @@ rule Worm_Win32_Autorun_X_2147599578_0
         $x_1_7 = "svchost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -311,6 +321,7 @@ rule Worm_Win32_Autorun_Y_2147600065_0
         $x_1_8 = "Flower.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -337,6 +348,7 @@ rule Worm_Win32_Autorun_NV_2147600202_0
         $x_1_7 = "8koo.cn/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -361,6 +373,7 @@ rule Worm_Win32_Autorun_NW_2147600414_0
         $x_1_5 = "/johnteen/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -384,6 +397,7 @@ rule Worm_Win32_Autorun_NY_2147600540_0
         $x_1_4 = {6a 05 68 14 ca 40 00 8d 45 e0 e8 cd a3 ff ff 8b 45 e0 8a 10 8d 45 e4 e8 24 79 ff ff ff 75 e4 68 30 ca 40 00 8d 45 e8 ba 03 00 00 00 e8 77 7a ff ff 8b 45 e8 e8 a7 7b ff ff 50 e8 79 90 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -406,6 +420,7 @@ rule Worm_Win32_Autorun_OC_2147601378_0
         $x_1_3 = {64 72 69 76 65 72 2e 65 78 65 00 00 ff ff ff ff 0b 00 00 00 61 75 74 6f 72 75 6e 2e 69 6e 66}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -428,6 +443,7 @@ rule Worm_Win32_Autorun_OD_2147601486_0
         $x_1_3 = "Thay doi gia tri Registry khong thanh cong." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -451,6 +467,7 @@ rule Worm_Win32_Autorun_OE_2147601494_0
         $x_1_4 = "Program Files\\Internet Explorer\\Connection Wizard\\SVCHOST.EXE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -474,6 +491,7 @@ rule Worm_Win32_Autorun_AJ_2147601511_0
         $x_1_4 = "E:\\Virus\\borra" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -502,6 +520,7 @@ rule Worm_Win32_Autorun_AW_2147601659_0
         $x_1_8 = "Explorer\\Advanced\\Folder\\HideFileExt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_6_*) and 3 of ($x_1_*))) or
             ((1 of ($x_20_*) and 1 of ($x_6_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -536,6 +555,7 @@ rule Worm_Win32_Autorun_AX_2147602305_0
         $x_6_7 = {89 c3 83 c3 12 80 3b 7a 0f 84 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 15}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -564,6 +584,7 @@ rule Worm_Win32_Autorun_AY_2147602314_0
         $x_1_2 = {f7 d8 1b c0 f7 d8 23 f0 f7 de 1b f6 f7 de 8b 45 d8 50 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? f7 d8 1b c0 f7 d8 23 f0 85 f6 75 50 c7 45 fc 0a 00 00 00 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -588,6 +609,7 @@ rule Worm_Win32_Autorun_AZ_2147602315_0
         $x_10_4 = {83 f8 02 0f 85 ?? ?? 00 00 8b 3d ?? ?? ?? ?? 68 ?? ?? ?? ?? 56 ff d7 83 c4 08 85 c0 0f 85 ?? ?? 00 00 68 ?? ?? ?? ?? 56 ff d7 83 c4 08 85 c0 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -617,6 +639,7 @@ rule Worm_Win32_Autorun_OF_2147602396_0
         $x_1_6 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -645,6 +668,7 @@ rule Worm_Win32_Autorun_BA_2147602411_0
         $x_1_8 = "gods must be cr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -673,6 +697,7 @@ rule Worm_Win32_Autorun_BJ_2147602421_0
         $x_1_5 = {63 00 3a 00 5c 00 72 00 65 00 63 00 69 00 63 00 6c 00 61 00 6a 00 65 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -697,6 +722,7 @@ rule Worm_Win32_Autorun_BB_2147602422_0
         $x_1_4 = "c:\\windows\\Seacon.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -721,6 +747,7 @@ rule Worm_Win32_Autorun_BC_2147602423_0
         $x_1_4 = "\\system32\\secpol.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -745,6 +772,7 @@ rule Worm_Win32_Autorun_BD_2147602424_0
         $x_1_4 = "Shell\\open=Scan all virus" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -770,6 +798,7 @@ rule Worm_Win32_Autorun_BE_2147602425_0
         $x_1_5 = "SubFolders" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -794,6 +823,7 @@ rule Worm_Win32_Autorun_BF_2147602426_0
         $x_1_4 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -818,6 +848,7 @@ rule Worm_Win32_Autorun_BI_2147602427_0
         $x_1_4 = "autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -842,6 +873,7 @@ rule Worm_Win32_Autorun_BK_2147602524_0
         $x_1_4 = {00 00 44 00 72 00 69 00 76 00 65 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -870,6 +902,7 @@ rule Worm_Win32_Autorun_BL_2147602568_0
         $x_1_8 = "%c:\\bit@uom.vbs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_15_*) and 2 of ($x_1_*))) or
             ((2 of ($x_15_*) and 1 of ($x_4_*))) or
@@ -902,6 +935,7 @@ rule Worm_Win32_Autorun_BM_2147602780_0
         $x_1_8 = "perefic.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -934,6 +968,7 @@ rule Worm_Win32_Autorun_BN_2147602874_0
         $x_1_9 = "Shell\\Open\\Command=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -962,6 +997,7 @@ rule Worm_Win32_Autorun_BO_2147602948_0
         $x_1_4 = {53 4d 53 53 20 20 2d 20 5b 20 4c 69 62 72 65 20 41 2e 5a 2e 56 2e 20 56 65 72 73 69 6f 6e 20 20 30 2e 02 00 20 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -991,6 +1027,7 @@ rule Worm_Win32_Autorun_AY_2147603025_0
         $x_1_6 = "ping 127.0.0.1 -n 3" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1013,6 +1050,7 @@ rule Worm_Win32_Autorun_OH_2147603410_0
         $x_1_3 = "\\autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1039,6 +1077,7 @@ rule Worm_Win32_Autorun_BK_2147603428_0
         $x_1_7 = "C:%cWINDOWS%cpchealth%chelpctr%cbinaries%cmsconfig.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1068,6 +1107,7 @@ rule Worm_Win32_Autorun_E_2147604693_0
         $x_10_7 = {50 50 c6 40 fb e9 83 68 fc 06 2b 40 03 51 b9 ?? ?? ?? ?? 81 34 08 ?? ?? ?? ?? e2 f7 59 c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1091,6 +1131,7 @@ rule Worm_Win32_Autorun_BP_2147604759_0
         $x_1_4 = "kdcoms.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1121,6 +1162,7 @@ rule Worm_Win32_Autorun_BQ_2147604936_0
         $x_1_8 = "NotStartX" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1149,6 +1191,7 @@ rule Worm_Win32_Autorun_BS_2147604996_0
         $x_1_9 = "Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1182,6 +1225,7 @@ rule Worm_Win32_Autorun_BR_2147605002_0
         $x_100_11 = {33 c9 51 51 51 51 51 51 33 c0 55 68 ?? ?? ?? ?? 64 ff 30 64 89 20 6a 00 6a 00 8d 45 fc e8 ?? ?? ?? ?? 8d 45 fc 50 8d 45 f4 8b 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 45 f4 8d 55 f8 e8 ?? ?? ?? ?? 8b 55 f8 58 e8 ?? ?? ?? ?? 8b 45 fc e8 ?? ?? ?? ?? 50 a1 ?? ?? ?? ?? 50 6a 00 e8 ?? ?? ?? ?? 85 c0 75 3e 6a 01 8d 45 f0}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1208,6 +1252,7 @@ rule Worm_Win32_Autorun_BP_2147605055_0
         $x_1_6 = "YOU ARE iNFECTED BY RAVO_5002" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1234,6 +1279,7 @@ rule Worm_Win32_Autorun_BT_2147605068_0
         $x_1_7 = "shellexecute=AutoRun.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1260,6 +1306,7 @@ rule Worm_Win32_Autorun_BT_2147605069_0
         $x_1_7 = {4e 75 6d 62 65 72 3d 00 ff ff ff ff 0a 00 00 00 26 50 61 73 73 57 6f 72 64 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1282,6 +1329,7 @@ rule Worm_Win32_Autorun_OI_2147605409_0
         $x_1_3 = {66 75 63 6b 77 65 62 00 2f 2a 28 26 2a 5e 54 47 48 2a 4a 49 48 47 5e 26 2a 28 26 5e 25 2a 28 2a 29 4f 4b 29 28 2a 26 5e 25 24 45 44 52 47 46 25 26 5e 2e 68 74 6d 6c 00 47 45 54 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1304,6 +1352,7 @@ rule Worm_Win32_Autorun_OK_2147605422_0
         $x_1_3 = {52 61 62 62 69 74 31 39 37 35 5f 30 33 5f 32 33 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 52 61 62 62 69 74 5f 31 39 37 35 30 33 32 33}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1328,6 +1377,7 @@ rule Worm_Win32_Autorun_CM_2147605591_0
         $x_1_5 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1352,6 +1402,7 @@ rule Worm_Win32_Autorun_BO_2147605830_0
         $x_1_5 = "Windows Messenger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1377,6 +1428,7 @@ rule Worm_Win32_Autorun_OM_2147606085_0
         $x_6_6 = {57 69 6e 64 6f 77 73 55 70 64 61 74 65 72 00 00 57 69 6e 55 70 64 74 65 72 2e 65 78 65}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1404,6 +1456,7 @@ rule Worm_Win32_Autorun_CA_2147606503_0
         $x_1_5 = "taskkill /f /im explorer.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1430,6 +1483,7 @@ rule Worm_Win32_Autorun_ON_2147606598_0
         $x_10_7 = "RasEnumConnectionsA" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1462,6 +1516,7 @@ rule Worm_Win32_Autorun_OP_2147606988_0
         $x_1_10 = "\\NetHood\\*.*" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 6 of ($x_1_*))) or
             ((2 of ($x_4_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -1492,6 +1547,7 @@ rule Worm_Win32_Autorun_OQ_2147606990_0
         $x_1_3 = "4D36E967-E325-11CE-BFC1-08002BE10318" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1516,6 +1572,7 @@ rule Worm_Win32_Autorun_OR_2147607526_0
         $x_1_5 = {66 72 6d 56 61 6c 67 61 00 0d 01 0a 00 54 61 73 6b 4b 69 6c 6c 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1539,6 +1596,7 @@ rule Worm_Win32_Autorun_XFO_2147607555_0
         $x_1_1 = {2e 00 78 00 6c 00 73 00 [0-255] 65 00 78 00 70 00 6c 00 6f 00 72 00 65 00 72 00 [0-255] 41 00 55 00 54 00 4f 00 52 00 55 00 4e 00 2e 00 49 00 4e 00 46 00 [0-16] 5b 00 41 00 75 00 74 00 6f 00 52 00 75 00 6e 00 5d 00 [0-16] 6f 00 70 00 65 00 6e 00 3d 00 [0-16] 73 00 68 00 65 00 6c 00 6c 00 65 00 78 00 65 00 63 00 75 00 74 00 65 00 3d 00 [0-16] 73 00 68 00 65 00 6c 00 6c 00 5c 00 41 00 75 00 74 00 6f 00 5c 00 63 00 6f 00 6d 00 6d 00 61 00 6e 00 64 00 3d 00 [0-16] 73 00 68 00 65 00 6c 00 6c 00 3d 00 41 00 75 00 74 00 6f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1566,6 +1624,7 @@ rule Worm_Win32_Autorun_OS_2147607605_0
         $x_1_8 = "open=CSRSS.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1598,6 +1657,7 @@ rule Worm_Win32_Autorun_CC_2147607880_0
         $x_1_10 = "TXOService" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 5 of ($x_3_*))) or
             (all of ($x*))
@@ -1630,6 +1690,7 @@ rule Worm_Win32_Autorun_CD_2147607989_0
         $x_1_10 = "Attachments" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1663,6 +1724,7 @@ rule Worm_Win32_Autorun_CI_2147608505_0
         $x_1_14 = "CLSID={645FF040-5081-101B-9F08-00AA002F954E}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1691,6 +1753,7 @@ rule Worm_Win32_Autorun_CJ_2147608509_0
         $x_1_6 = "Shellexecute=MS-DOS.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1723,6 +1786,7 @@ rule Worm_Win32_Autorun_CR_2147608710_0
         $x_1_10 = "C:/windows/system/servidor.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1754,6 +1818,7 @@ rule Worm_Win32_Autorun_CS_2147609010_0
         $x_1_9 = "regedit.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1790,6 +1855,7 @@ rule Worm_Win32_Autorun_CU_2147609058_0
         $x_1_14 = "copy %0 %windir%\\system32\\logon.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 12 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
@@ -1818,6 +1884,7 @@ rule Worm_Win32_Autorun_OT_2147609072_0
         $x_1_4 = {00 00 4e 00 6f 00 44 00 72 00 69 00 76 00 65 00 73 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1842,6 +1909,7 @@ rule Worm_Win32_Autorun_OT_2147609110_0
         $x_1_5 = "%sautorun.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1866,6 +1934,7 @@ rule Worm_Win32_Autorun_OU_2147609112_0
         $x_1_5 = {43 4c 53 49 44 3d 7b 36 34 35 46 46 30 34 30 2d 35 30 38 31 2d 31 30 31 42 2d 39 46 30 38 2d 30 30 41 41 30 30 32 46 39 35 34 45 7d [0-16] 3a 5c 52 65 63 79 63 6c 65 64 5c 41 75 74 6f 52 75 6e 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1890,6 +1959,7 @@ rule Worm_Win32_Autorun_OV_2147609147_0
         $x_1_5 = {6a 04 52 6a 04 6a 00 8d 45 ?? 68 ?? ?? ?? ?? 50 c7 45 cc 00 00 00 00 ff d7 8b 4d ?? 50 51 e8 ?? ?? ff ff ff d6 8d 4d ?? ff d3 8b 55 ?? 52 e8 ?? ?? ff ff ff d6 68 ?? ?? ?? ?? eb 19}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1923,6 +1993,7 @@ rule Worm_Win32_Autorun_XFP_2147609209_0
         $x_1_14 = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\\Folder\\Hidden\\SHOWALL\\CheckedValue" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 8 of ($x_1_*))) or
             ((3 of ($x_5_*) and 3 of ($x_1_*))) or
@@ -1953,6 +2024,7 @@ rule Worm_Win32_Autorun_CX_2147609270_0
         $x_1_5 = "shell\\Explore\\command = " wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1984,6 +2056,7 @@ rule Worm_Win32_Autorun_CY_2147609271_0
         $x_1_8 = "sURLFileName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2026,6 +2099,7 @@ rule Worm_Win32_Autorun_CW_2147609409_0
         $x_100_20 = {8b 44 24 10 8d 0c 06 8b c6 99 f7 fb 8a 44 3a 04 30 01 46 3b 74 24 14 7c e7}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 9 of ($x_10_*) and 1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((1 of ($x_100_*) and 9 of ($x_10_*) and 2 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -2061,6 +2135,7 @@ rule Worm_Win32_Autorun_CX_2147609556_0
         $x_1_11 = "del \"%SystemRoot%\\System32\\Restore\" /f /a /q" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_100_*) and 4 of ($x_10_*))) or
@@ -2089,6 +2164,7 @@ rule Worm_Win32_Autorun_CX_2147609557_0
         $x_10_5 = {2f 76 20 41 6e 74 69 76 69 72 75 7a 20 2f 64 20 25 77 69 6e 64 69 72 25 5c 73 79 73 74 65 6d 5c [0-8] 2e 65 78 65}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2113,6 +2189,7 @@ rule Worm_Win32_Autorun_CX_2147609557_1
         $x_10_5 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2145,6 +2222,7 @@ rule Worm_Win32_Autorun_CY_2147609571_0
         $x_1_13 = "baby123" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2175,6 +2253,7 @@ rule Worm_Win32_Autorun_CZ_2147609681_0
         $x_1_8 = "\\realsched\\TageHaider.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2203,6 +2282,7 @@ rule Worm_Win32_Autorun_DA_2147609682_0
         $x_1_6 = "http://cc.wzxqy.com/tt/mm.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2228,6 +2308,7 @@ rule Worm_Win32_Autorun_DB_2147609736_0
         $x_1_6 = "shell\\AutoOpen\\command=.\\MSOCache\\90000804-6000-11D3-8CFE-0150048383C0\\KB915866.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2250,6 +2331,7 @@ rule Worm_Win32_Autorun_DB_2147609736_1
         $x_1_3 = "if not exist F:\\ (goto GW)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))
@@ -2280,6 +2362,7 @@ rule Worm_Win32_Autorun_DC_2147609769_0
         $x_1_8 = "\\system32\\MSWINSCK.OCX" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2309,6 +2392,7 @@ rule Worm_Win32_Autorun_DE_2147609852_0
         $x_1_7 = "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*))) or
             (all of ($x*))
@@ -2338,6 +2422,7 @@ rule Worm_Win32_Autorun_DF_2147609869_0
         $x_1_7 = "\\cmd.exe /e /t /g everyone" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -2364,6 +2449,7 @@ rule Worm_Win32_Autorun_OZ_2147609910_0
         $x_1_4 = {44 69 73 61 62 6c 65 54 61 73 6b 6d 67 72 [0-16] 44 69 73 61 62 6c 65 52 65 67 69 73 74 72 79 54 6f 6f 6c 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2393,6 +2479,7 @@ rule Worm_Win32_Autorun_DH_2147609994_0
         $x_1_7 = "\\Data.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*))) or
             (all of ($x*))
@@ -2421,6 +2508,7 @@ rule Worm_Win32_Autorun_DI_2147610140_0
         $x_1_5 = "SubFolders" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -2449,6 +2537,7 @@ rule Worm_Win32_Autorun_DI_2147610190_0
         $x_1_9 = "So im still here..well, i have a surprise waiting for the My Documents Folder!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2478,6 +2567,7 @@ rule Worm_Win32_Autorun_DP_2147610506_0
         $x_1_7 = "Autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2504,6 +2594,7 @@ rule Worm_Win32_Autorun_DQ_2147610516_0
         $x_1_7 = "VPTray.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2529,6 +2620,7 @@ rule Worm_Win32_Autorun_DR_2147610517_0
         $x_1_6 = "http://" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2554,6 +2646,7 @@ rule Worm_Win32_Autorun_DV_2147610518_0
         $x_1_6 = "AUTORUN.INF" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2580,6 +2673,7 @@ rule Worm_Win32_Autorun_DW_2147610527_0
         $x_1_7 = "Process32First" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2607,6 +2701,7 @@ rule Worm_Win32_Autorun_EA_2147610538_0
         $x_1_8 = "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\NoFolderOptions" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2631,6 +2726,7 @@ rule Worm_Win32_Autorun_EB_2147610539_0
         $x_1_5 = "QMsg.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2658,6 +2754,7 @@ rule Worm_Win32_Autorun_DZ_2147610541_0
         $x_1_8 = "WinExec" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2682,6 +2779,7 @@ rule Worm_Win32_Autorun_DX_2147610542_0
         $x_1_5 = "HideFileExt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2708,6 +2806,7 @@ rule Worm_Win32_Autorun_EC_2147610543_0
         $x_1_7 = "Kill_Proc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -2735,6 +2834,7 @@ rule Worm_Win32_Autorun_EE_2147610585_0
         $x_1_8 = "450D8FBA-AD25-11D0-98A8-0800361B1103" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2760,6 +2860,7 @@ rule Worm_Win32_Autorun_EH_2147610701_0
         $x_1_6 = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\360Safetray" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2787,6 +2888,7 @@ rule Worm_Win32_Autorun_EI_2147610702_0
         $x_1_8 = "kbdoxhelp.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2814,6 +2916,7 @@ rule Worm_Win32_Autorun_EK_2147610703_0
         $x_1_8 = {73 68 65 6c 6c 5c 41 75 74 6f 5c 63 6f 6d 6d 61 6e 64 3d [0-8] 2e 63 6f 6d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2837,6 +2940,7 @@ rule Worm_Win32_Autorun_EN_2147610705_0
         $x_1_4 = {ff 15 40 70 40 00 6a 07 8d ?? ?? ?? 50 ff d7 68 ?? ?? ?? ?? 6a 68 6a 00 ff 15 44 70 40 00 8b f0 85 f6 0f ?? ?? ?? 00 00 56 6a 00 ff 15 48 70 40 00 56 6a 00 ?? ?? ?? ?? ff 15 4c 70 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2866,6 +2970,7 @@ rule Worm_Win32_Autorun_ES_2147610732_0
         $x_1_10 = "C:\\WINDOWS\\SYSTEM32\\QQ2007\\QQ.ex0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2892,6 +2997,7 @@ rule Worm_Win32_Autorun_EO_2147610734_0
         $x_1_7 = "DisableTaskMgr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2921,6 +3027,7 @@ rule Worm_Win32_Autorun_EQ_2147610735_0
         $x_1_10 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2950,6 +3057,7 @@ rule Worm_Win32_Autorun_ER_2147610736_0
         $x_1_10 = "del %0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2981,6 +3089,7 @@ rule Worm_Win32_Autorun_EU_2147610737_0
         $x_1_12 = "SOFTWARE\\TENCENT\\QQ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3008,6 +3117,7 @@ rule Worm_Win32_Autorun_EV_2147610738_0
         $x_1_8 = "http://www.netwang.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3030,6 +3140,7 @@ rule Worm_Win32_Autorun_EV_2147610738_1
         $x_1_3 = "dolphin61.dll MsgStart" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3056,6 +3167,7 @@ rule Worm_Win32_Autorun_EY_2147610843_0
         $x_1_7 = "ch Khoa AntiVirus" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3082,6 +3194,7 @@ rule Worm_Win32_Autorun_EZ_2147610844_0
         $x_1_7 = "All [*.dll] will be deleted.Sorry your PC was infected with Gollum Virus" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3105,6 +3218,7 @@ rule Worm_Win32_Autorun_FA_2147610945_0
         $x_1_4 = "regwrite" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3131,6 +3245,7 @@ rule Worm_Win32_Autorun_FB_2147610947_0
         $x_1_7 = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\USBplice" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3157,6 +3272,7 @@ rule Worm_Win32_Autorun_FC_2147610948_0
         $x_1_7 = "Command=rundll32.exe .\\\\%s,InstallM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -3184,6 +3300,7 @@ rule Worm_Win32_Autorun_FE_2147610951_0
         $x_1_8 = "shell\\explore\\command" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3207,6 +3324,7 @@ rule Worm_Win32_Autorun_PA_2147611288_0
         $x_1_4 = {ce f7 c4 cf c3 f1 d7 e5 b4 f3 d1 a7 d4 f8 be ad b5 c4 42 42 53}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -3236,6 +3354,7 @@ rule Worm_Win32_Autorun_FL_2147611324_0
         $x_1_7 = ":*:Enabled:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
@@ -3263,6 +3382,7 @@ rule Worm_Win32_Autorun_FN_2147611352_0
         $x_1_3 = "N-1-5-21-1895222279-3129831995-389225551-6003" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3283,6 +3403,7 @@ rule Worm_Win32_Autorun_XFR_2147611367_0
         $x_1_1 = {65 78 65 00 2a 73 68 65 6c 6c 65 78 43 6f 6e 74 65 78 74 4d 65 6e 75 48 61 6e 64 6c 65 72 73 4b 61 73 70 65 72 73 6b 79 20 41 6e 74 69 2d 56 69 72 75 73 00 63 6d 64 20 2f 63 20 52 45 47 20 41 44 44 20 5c 5c 2e 5c 48 4b 4c 4d 5c 53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e 20 2f 76 20 77 69 6e 33 32 20 2f 74 20 52 45 47 5f 53 5a 20 2f 64 20 25 73 00 00 57 69 6e 33 32 00 00 00 53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3308,6 +3429,7 @@ rule Worm_Win32_Autorun_PB_2147611391_0
         $x_1_6 = "\\Project\\Fuck\\Project1.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3334,6 +3456,7 @@ rule Worm_Win32_Autorun_BR_2147611562_0
         $x_1_6 = "REG add HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System /v DisableRegistryTools /t REG_DWORD /d 1 /f" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3363,6 +3486,7 @@ rule Worm_Win32_Autorun_PC_2147611633_0
         $x_1_7 = "Software\\Microsoft\\Internet Explorer\\Main\\FormSuggest Passwords" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             ((3 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -3391,6 +3515,7 @@ rule Worm_Win32_Autorun_PD_2147611678_0
         $x_1_5 = {2d 66 6c 61 73 68 [0-10] 49 43 4f 4e 3d 73 68 65 6c 6c 33 32 2e 64 6c 6c 2c 34}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3414,6 +3539,7 @@ rule Worm_Win32_Autorun_GG_2147612316_0
         $x_1_4 = {4c 6f 6f 70 2c 20 25 75 73 65 72 70 72 6f 66 69 6c 65 25 5c 4c 6f 63 61 6c 20 53 65 74 74 69 6e 67 73 5c 54 65 6d 70 6f 72 61 72 79 20 49 6e 74 65 72 6e 65 74 20 46 69 6c 65 73 5c 2a 2e 6a 70 67 2c 31 2c 31 0d 0a 7b 0d 0a 49 66 20 41 5f 4c 6f 6f 70 66 69 6c 65 6e 61 6d 65 20 63 6f 6e 74 61 69 6e 73 20 55 70 64 61 74 65 4b 42}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3441,6 +3567,7 @@ rule Worm_Win32_Autorun_PI_2147612736_0
         $x_1_8 = "w5335a0.ath.cx" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -3469,6 +3596,7 @@ rule Worm_Win32_Autorun_YB_2147615108_0
         $x_1_4 = "qqm.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3496,6 +3624,7 @@ rule Worm_Win32_Autorun_PL_2147615353_0
         $x_1_5 = "SYSANALYSIS.EXE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3521,6 +3650,7 @@ rule Worm_Win32_Autorun_PR_2147616370_0
         $x_1_6 = "ShellExecute=FOUND.007.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3544,6 +3674,7 @@ rule Worm_Win32_Autorun_PS_2147616416_0
         $x_1_4 = "shellexecute=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3570,6 +3701,7 @@ rule Worm_Win32_Autorun_PT_2147616448_0
         $x_1_7 = "HKEY_LOCAL_MACHINE\\MariaJose\\Infectados" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -3593,6 +3725,7 @@ rule Worm_Win32_Autorun_GV_2147616826_0
         $x_1_4 = "http://%c%c%c.%c%c%c%c%c%c.%c%c%c/%c.%c%c%c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3617,6 +3750,7 @@ rule Worm_Win32_Autorun_GX_2147616846_0
         $x_1_5 = {5b 25 73 25 5d 00 5b 25 70 25 5d 00 5b 25 66 25 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3647,6 +3781,7 @@ rule Worm_Win32_Autorun_GY_2147616966_0
         $x_1_11 = "\\response.exe modules" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -3678,6 +3813,7 @@ rule Worm_Win32_Autorun_GZ_2147617002_0
         $x_1_9 = "Autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -3701,6 +3837,7 @@ rule Worm_Win32_Autorun_QA_2147617362_0
         $x_1_4 = {c7 45 fc 2f 00 00 00 66 83 7d dc 03 74 05 e9 ?? ?? 00 00 c7 45 fc 32 00 00 00 8b 45 08 83 78 34 00 75 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3728,6 +3865,7 @@ rule Worm_Win32_Autorun_PP_2147617849_0
         $x_1_8 = "rejoice" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -3753,6 +3891,7 @@ rule Worm_Win32_Autorun_HO_2147618260_0
         $x_1_2 = {65 63 68 6f 20 5b 61 75 74 6f 72 75 6e 5d 20 3e 3e 20 25 25 ?? 3a 5c 41 75 74 6f 72 75 6e 2e 69 6e 66}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3777,6 +3916,7 @@ rule Worm_Win32_Autorun_HT_2147618763_0
         $x_1_5 = "%s /c rd %c:\\RECYCLER\\%s /s/q" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3801,6 +3941,7 @@ rule Worm_Win32_Autorun_XFV_2147618908_0
         $x_1_5 = "012483 10v3 H3r51.58y.pct" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3825,6 +3966,7 @@ rule Worm_Win32_Autorun_HX_2147618929_0
         $x_1_5 = "f126.com/go/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -3853,6 +3995,7 @@ rule Worm_Win32_Autorun_HU_2147619015_0
         $x_1_6 = "Administrador de tareas de Windows" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -3878,6 +4021,7 @@ rule Worm_Win32_Autorun_QG_2147619316_0
         $x_1_2 = "Autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3902,6 +4046,7 @@ rule Worm_Win32_Autorun_QI_2147619515_0
         $x_1_5 = "\\Windows\\CurrentVersion\\Run\\avpx" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -3925,6 +4070,7 @@ rule Worm_Win32_Autorun_QH_2147619516_0
         $x_1_4 = {44 6f 47 65 74 57 69 6e 6c 6f 67 6f 6e 50 69 64 21 [0-4] 53 65 44 65 62 75 67 50 72 69 76 69 6c 65 67 65 [0-4] 4f 70 65 6e 50 72 6f 63 65 73 73 21}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3951,6 +4097,7 @@ rule Worm_Win32_Autorun_IB_2147619778_0
         $x_1_7 = "c:\\windows\\system32\\ICL.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3973,6 +4120,7 @@ rule Worm_Win32_Autorun_IC_2147619825_0
         $x_1_3 = "SoftWare\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3995,6 +4143,7 @@ rule Worm_Win32_Autorun_JK_2147620502_0
         $x_1_3 = "shutdown /s /f /t 10 /c \".:::[SORRY]:::.\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4019,6 +4168,7 @@ rule Worm_Win32_Autorun_KB_2147620632_0
         $x_5_5 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -4045,6 +4195,7 @@ rule Worm_Win32_Autorun_KC_2147620637_0
         $x_1_4 = "autorun.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4069,6 +4220,7 @@ rule Worm_Win32_Autorun_KF_2147620708_0
         $x_1_5 = "Autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4095,6 +4247,7 @@ rule Worm_Win32_Autorun_QL_2147620716_0
         $x_1_4 = "shellexecute=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4119,6 +4272,7 @@ rule Worm_Win32_Autorun_LB_2147621004_0
         $x_5_5 = "SCVH0ST.EXE" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -4146,6 +4300,7 @@ rule Worm_Win32_Autorun_LC_2147621009_0
         $x_1_5 = {61 00 74 00 74 00 72 00 69 00 62 00 20 00 2b 00 72 00 20 00 2b 00 73 00 20 00 2b 00 68 00 [0-4] 3a 00 5c 00 70 00 69 00 61 00 6f 00 79 00 61 00 6f 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))
@@ -4172,6 +4327,7 @@ rule Worm_Win32_Autorun_QU_2147621022_0
         $x_1_4 = "SVCH0ST.EXE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4198,6 +4354,7 @@ rule Worm_Win32_Autorun_RD_2147621059_0
         $x_1_7 = "DisableRegistryTools" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -4222,6 +4379,7 @@ rule Worm_Win32_Autorun_JA_2147621073_0
         $x_1_5 = "explorer http" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4247,6 +4405,7 @@ rule Worm_Win32_Autorun_XFX_2147621244_0
         $x_1_6 = "dats.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -4276,6 +4435,7 @@ rule Worm_Win32_Autorun_RE_2147621274_0
         $x_1_7 = "shell\\explore\\Command=RECYCLER\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -4304,6 +4464,7 @@ rule Worm_Win32_Autorun_YC_2147622427_0
         $x_1_6 = "madtorrents.info/payloads/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_5_*))) or
             (all of ($x*))
@@ -4330,6 +4491,7 @@ rule Worm_Win32_Autorun_QZ_2147622743_0
         $x_1_4 = "shell\\open\\command=SysWin32.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4352,6 +4514,7 @@ rule Worm_Win32_Autorun_QAB_2147622830_0
         $x_10_3 = "TWormUSB" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4374,6 +4537,7 @@ rule Worm_Win32_Autorun_QAC_2147622868_0
         $x_10_3 = {53 65 74 4b 42 48 6f 6f 6b 45 6e 40 40 59 41 5f 4e 58 5a [0-4] 3f 53 65 74 4d 53 48 6f 6f 6b 40 40 59 41 5f 4e 58 5a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4402,6 +4566,7 @@ rule Worm_Win32_Autorun_LD_2147623000_0
         $x_1_9 = "\\security\\uvchost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -4429,6 +4594,7 @@ rule Worm_Win32_Autorun_JP_2147623015_0
         $x_1_4 = "sovihcra rev arap ateprac rirbA=noitca" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4452,6 +4618,7 @@ rule Worm_Win32_Autorun_MA_2147623122_0
         $x_1_4 = "Send E-Mail" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4476,6 +4643,7 @@ rule Worm_Win32_Autorun_QAD_2147623198_0
         $x_1_5 = {73 00 68 00 65 00 6c 00 00 00 00 00 0a 00 00 00 6c 00 5c 00 6f 00 70 00 65 00 00 00 0c 00 00 00 6e 00 5c 00 43 00 6f 00 6d 00 6d 00 00 00 00 00 1e 00 00 00 61 00 6e 00 64 00 3d 00 69 00 6e 00 73 00 74 00 61 00 6c 00 6c 00 2e 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4498,6 +4666,7 @@ rule Worm_Win32_Autorun_QAE_2147623459_0
         $x_1_3 = ":\\Films.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4527,6 +4696,7 @@ rule Worm_Win32_Autorun_JT_2147623746_0
         $x_1_10 = "software\\microsoft\\windows\\currentversion\\run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -4553,6 +4723,7 @@ rule Worm_Win32_Autorun_JV_2147623976_0
         $x_1_4 = {f5 27 00 00 00 6c 2c ff 1b 7e 00 2a 23 24 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4581,6 +4752,7 @@ rule Worm_Win32_Autorun_JW_2147624026_0
         $x_1_9 = "wH22vou10Dr0I3" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4602,6 +4774,7 @@ rule Worm_Win32_Autorun_RL_2147624114_0
         $x_1_2 = "shell/autoplay/command=NewFolder.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4623,6 +4796,7 @@ rule Worm_Win32_Autorun_RM_2147624253_0
         $x_1_2 = {5b 41 75 74 6f 52 75 6e 5d 0d 0a 6f 70 65 6e 3d 2e 5c 4d 53 4f 43 61 63 68 65 5c 39 30 30 30 30 38 30 34 2d 36 30 30 30 2d 31 31 44 33 2d 38 43 46 45 2d 30 31 35 30 30 34 38 33 38 33 43 39 5c 4b 42 39 31 35 38 36 35 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4646,6 +4820,7 @@ rule Worm_Win32_Autorun_JZ_2147624322_0
         $x_1_4 = "Autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -4672,6 +4847,7 @@ rule Worm_Win32_Autorun_LF_2147624325_0
         $x_1_4 = "shell\\Auto\\command=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4693,6 +4869,7 @@ rule Worm_Win32_Autorun_LG_2147624340_0
         $x_1_2 = {5b 41 75 74 6f 52 75 6e 5d 00 53 68 65 6c 6c 45 78 65 63 75 74 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4718,6 +4895,7 @@ rule Worm_Win32_Autorun_RP_2147624451_0
         $x_1_6 = "HideFileExt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4742,6 +4920,7 @@ rule Worm_Win32_Autorun_RQ_2147624521_0
         $x_1_5 = {73 00 68 00 65 00 6c 00 6c 00 5c 00 66 00 69 00 6e 00 64 00 5c 00 63 00 6f 00 6d 00 6d 00 61 00 6e 00 64 00 3d 00 62 00 6f 00 6f 00 74 00 2e 00 65 00 78 00 65 00 00 00 18 00 00 00 5c 00 41 00 55 00 54 00 4f 00 52 00 55 00 4e 00 2e 00 49 00 4e 00 46 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4767,6 +4946,7 @@ rule Worm_Win32_Autorun_LL_2147624596_0
         $x_10_6 = "\\svchost32.exe" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4788,6 +4968,7 @@ rule Worm_Win32_Autorun_LQ_2147624711_0
         $x_1_2 = {41 00 3a 00 00 00 00 00 04 00 00 00 42 00 3a 00 00 00 00 00 08 00 00 00 66 00 69 00 6c 00 65 00 00 00 00 00 08 00 00 00 57 00 33 00 32 00 2e 00 00 00 00 00 0a 00 00 00 2e 00 57 00 6f 00 72 00 6d 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4812,6 +4993,7 @@ rule Worm_Win32_Autorun_LS_2147624790_0
         $x_1_5 = "Este arquivo cont" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4837,6 +5019,7 @@ rule Worm_Win32_Autorun_LV_2147625036_0
         $x_1_6 = "DisableRegistryTools" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -4864,6 +5047,7 @@ rule Worm_Win32_Autorun_RU_2147625543_0
         $x_1_5 = "Format C: [-] ." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4886,6 +5070,7 @@ rule Worm_Win32_Autorun_RV_2147625549_0
         $x_1_3 = {5e 21 00 04 00 71 78 ff 00 0e 6c 78 ff f5 03 00 00 00 c7 1c 5a 01 00 2a 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4907,6 +5092,7 @@ rule Worm_Win32_Autorun_TO_2147625687_0
         $x_1_2 = "A:\\lieke.ex" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4932,6 +5118,7 @@ rule Worm_Win32_Autorun_RZ_2147626446_0
         $x_1_6 = "fasm.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4953,6 +5140,7 @@ rule Worm_Win32_Autorun_MI_2147626506_0
         $x_1_2 = {44 3a 00 45 3a 00 46 3a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4975,6 +5163,7 @@ rule Worm_Win32_Autorun_UB_2147627109_0
         $x_1_3 = {5b 61 75 74 6f 72 75 6e 5d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5000,6 +5189,7 @@ rule Worm_Win32_Autorun_UC_2147627130_0
         $x_1_6 = "c:\\file.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5024,6 +5214,7 @@ rule Worm_Win32_Autorun_UD_2147627187_0
         $x_1_5 = "Z`tunsto\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -5050,6 +5241,7 @@ rule Worm_Win32_Autorun_XGB_2147627385_0
         $x_1_3 = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5076,6 +5268,7 @@ rule Worm_Win32_Autorun_MZ_2147627721_0
         $x_1_7 = "/new.asp?id" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5098,6 +5291,7 @@ rule Worm_Win32_Autorun_NA_2147627725_0
         $x_1_3 = {b8 19 00 00 00 e8 ?? ?? ?? ?? 83 c0 05 99 3b 15 ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5124,6 +5318,7 @@ rule Worm_Win32_Autorun_YG_2147627751_0
         $x_1_7 = "776C6F2E657865" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -5153,6 +5348,7 @@ rule Worm_Win32_Autorun_NB_2147627948_0
         $x_1_5 = "C:\\TEMP\\\\autorun.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5173,6 +5369,7 @@ rule Worm_Win32_Autorun_NE_2147628053_0
         $x_1_1 = {41 75 74 6f 72 55 4e 5d 0d 0a 4f 70 65 4e 3d 0d 0a 73 48 65 4c 6c 5c 6f 50 65 4e 5c 43 4f 6d 6d 61 6e 44 3d 52 45 43 59 43 4c 45 52 5c 53 59 53 54 45 4d 2e 2e 5c 52 45 43 59 43 4c 45 52 0d 0a 73 68 65 6c 4c 5c 45 58 70 6c 4f 72 65 5c 43 4f 6d 6d 61 4e 44 3d 52 45 43 59 43 4c 45 52 5c 53 59 53 54 45 4d 2e 2e 5c 52 45 43 59 43 4c 45 52 0d 0a 73 68 65 6c 4c 5c 66 49 6e 44 5c 43 4f 4d 6d 41 6e 44 3d 52 45 43 59 43 4c 45 52 5c 53 59 53 54 45 4d 2e 2e 5c 52 45 43 59 43 4c 45 52}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5199,6 +5396,7 @@ rule Worm_Win32_Autorun_UG_2147628106_0
         $x_1_7 = "Microsoft Corporation. All rights reserved." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5222,6 +5420,7 @@ rule Worm_Win32_Autorun_NH_2147628366_0
         $x_1_4 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5247,6 +5446,7 @@ rule Worm_Win32_Autorun_NI_2147628543_0
         $x_1_6 = "attrib.exe +s +r +h \"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -5274,6 +5474,7 @@ rule Worm_Win32_Autorun_NL_2147628687_0
         $x_1_4 = {5f 00 23 00 57 00 46 00 54 00 23 00 5f 00 00 00 16 00 00 00 24 00 46 00 43 00 52 00 43 00 65 00 72 00 72 00 6f 00 72 00 24 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5296,6 +5497,7 @@ rule Worm_Win32_Autorun_UK_2147628816_0
         $x_1_3 = {5b 41 75 74 6f 52 75 6e 5d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5317,6 +5519,7 @@ rule Worm_Win32_Autorun_NO_2147628826_0
         $x_1_2 = "If ProcessExists(\"Explorer.exe\")=0 Then ShellExecute(\"Explorer.exe\", \"\", @WindowsDir,\"open\")" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5341,6 +5544,7 @@ rule Worm_Win32_Autorun_NP_2147628827_0
         $x_1_5 = "TCamera" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5364,6 +5568,7 @@ rule Worm_Win32_Autorun_NQ_2147628903_0
         $x_1_4 = "Sysyer." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5390,6 +5595,7 @@ rule Worm_Win32_Autorun_UM_2147628979_0
         $x_1_7 = "Taskkill /im" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5417,6 +5623,7 @@ rule Worm_Win32_Autorun_UN_2147628983_0
         $x_1_8 = "Password" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5439,6 +5646,7 @@ rule Worm_Win32_Autorun_NR_2147628997_0
         $x_1_3 = {5c 61 75 74 6f 72 75 6e 2e 69 6e 66 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -5464,6 +5672,7 @@ rule Worm_Win32_Autorun_VA_2147629408_0
         $x_1_3 = "__vbaFileOpen" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5487,6 +5696,7 @@ rule Worm_Win32_Autorun_RY_2147629789_0
         $x_1_4 = "system32\\drivers\\etc\\svchost.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5510,6 +5720,7 @@ rule Worm_Win32_Autorun_UO_2147629816_0
         $x_1_4 = {57 00 32 00 46 00 31 00 64 00 47 00 39 00 79 00 64 00 57 00 35 00 64 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -5537,6 +5748,7 @@ rule Worm_Win32_Autorun_VC_2147630382_0
         $x_1_4 = "and all Indonesian VM/VC" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5565,6 +5777,7 @@ rule Worm_Win32_Autorun_VG_2147630452_0
         $x_1_9 = "getobject(\"WinNT://./\"&i&\",user\")" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -5589,6 +5802,7 @@ rule Worm_Win32_Autorun_VR_2147630693_0
         $x_1_5 = "RavMon.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5614,6 +5828,7 @@ rule Worm_Win32_Autorun_VQ_2147630701_0
         $x_1_6 = "showLoginNotification(aNotifyBox, \"password-save\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5635,6 +5850,7 @@ rule Worm_Win32_Autorun_WA_2147630767_0
         $x_1_2 = {43 80 fb 7b 0f 85 ?? ff ff ff 6a 04 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5664,6 +5880,7 @@ rule Worm_Win32_Autorun_WB_2147630775_0
         $x_1_10 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5688,6 +5905,7 @@ rule Worm_Win32_Autorun_WE_2147631288_0
         $x_1_5 = "C:\\WINDOWS\\SYSTEM32\\MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5710,6 +5928,7 @@ rule Worm_Win32_Autorun_WL_2147631566_0
         $x_1_3 = "urldownloadtofile, http://microsoft.com/windows/, winupdchk%rnn%.log" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5733,6 +5952,7 @@ rule Worm_Win32_Autorun_WN_2147631785_0
         $x_2_4 = "\\Hacking Tools\\KEYLOGGER PROJECT" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -5760,6 +5980,7 @@ rule Worm_Win32_Autorun_WS_2147632382_0
         $x_1_5 = "shell\\explore\\Command=msdumprep.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5781,6 +6002,7 @@ rule Worm_Win32_Autorun_WZ_2147632654_0
         $x_1_2 = {f5 69 00 00 00 04 ?? fe 0a ?? ?? ?? ?? 04 ?? fe fb ef ?? fe f5 6e 00 00 00 04 84 fe 0a ?? ?? ?? ?? 04 ?? fe fb ef ?? fe f5 66 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5806,6 +6028,7 @@ rule Worm_Win32_Autorun_XE_2147632879_0
         $x_1_6 = {53 00 6f 00 66 00 74 00 77 00 61 00 72 00 65 00 5c 00 41 00 6e 00 74 00 69 00 44 00 6f 00 64 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -5834,6 +6057,7 @@ rule Worm_Win32_Autorun_XF_2147632881_0
         $x_1_4 = "Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5856,6 +6080,7 @@ rule Worm_Win32_Autorun_XI_2147632955_0
         $x_1_3 = {28 14 ff 61 00 04 48 ff 28 24 ff 7a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5880,6 +6105,7 @@ rule Worm_Win32_Autorun_XM_2147633028_0
         $x_1_5 = "ShowSuperHidden" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -5903,6 +6129,7 @@ rule Worm_Win32_Autorun_YN_2147633508_0
         $x_1_4 = "\\autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5925,6 +6152,7 @@ rule Worm_Win32_Autorun_YR_2147634360_0
         $x_1_3 = "autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5952,6 +6180,7 @@ rule Worm_Win32_Autorun_YU_2147635728_0
         $x_1_8 = "Processo terminado..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -5976,6 +6205,7 @@ rule Worm_Win32_Autorun_YV_2147635740_0
         $x_3_5 = "Explorer.exe C:\\Windows\\System32\\ctfmon_.exe" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -6005,6 +6235,7 @@ rule Worm_Win32_Autorun_YZ_2147636069_0
         $x_1_5 = {53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 45 78 70 6c 6f 72 65 72 5c 41 64 76 61 6e 63 65 64 00 48 69 64 64 65 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -6034,6 +6265,7 @@ rule Worm_Win32_Autorun_ZC_2147636407_0
         $x_2_7 = {8a 04 0b f6 d0 88 01 8b c7 46 41 8d 78 01 8a 10 40 84 d2 75 f9 2b c7 3b f0 72 e2 8b 4d 08 5b 5f 88 14 0e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -6062,6 +6294,7 @@ rule Worm_Win32_Autorun_ZE_2147636468_0
         $x_1_5 = "\\morpheus\\my shared folder\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -6091,6 +6324,7 @@ rule Worm_Win32_Autorun_ZG_2147636517_0
         $x_2_5 = "AntiParallelsDesktop" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -6121,6 +6355,7 @@ rule Worm_Win32_Autorun_ZH_2147636669_0
         $x_1_7 = "ResumeThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6145,6 +6380,7 @@ rule Worm_Win32_Autorun_ZH_2147636669_1
         $x_2_5 = "shell\\explore\\Command=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -6175,6 +6411,7 @@ rule Worm_Win32_Autorun_ZH_2147636669_2
         $x_1_6 = "USB||*||Infected Drive " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -6203,6 +6440,7 @@ rule Worm_Win32_Autorun_ZI_2147636750_0
         $x_2_6 = "rapidshare.com/cgi-bin/upload.cgi?rsuploadid=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -6231,6 +6469,7 @@ rule Worm_Win32_Autorun_ZJ_2147636995_0
         $x_1_5 = "sou.com/bmw" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -6262,6 +6501,7 @@ rule Worm_Win32_Autorun_ZJ_2147636995_1
         $x_3_8 = "rundli32.exe" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -6291,6 +6531,7 @@ rule Worm_Win32_Autorun_ZW_2147639038_0
         $x_1_5 = {4e 6f 46 69 6c 65 4d 65 6e 75 3c 00 53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 50 6f 6c 69 63 69 65 73 5c 45 78 70 6c 6f 72 65 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6314,6 +6555,7 @@ rule Worm_Win32_Autorun_AAA_2147639326_0
         $x_1_4 = "c:\\windows\\system32\\suchost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6337,6 +6579,7 @@ rule Worm_Win32_Autorun_AAI_2147640328_0
         $x_1_4 = "ICWorm\\Release\\ICWorm.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6360,6 +6603,7 @@ rule Worm_Win32_Autorun_AAK_2147640510_0
         $x_1_4 = "net.exe stop " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6382,6 +6626,7 @@ rule Worm_Win32_Autorun_AAN_2147640750_0
         $x_1_3 = "s\\System\" \"DisableTaskMgr\" \"1\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6405,6 +6650,7 @@ rule Worm_Win32_Autorun_ABJ_2147642254_0
         $x_1_4 = ": L3Ts kiLL BILL ;)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6430,6 +6676,7 @@ rule Worm_Win32_Autorun_ABO_2147643105_0
         $x_1_6 = "autorun.inf" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -6455,6 +6702,7 @@ rule Worm_Win32_Autorun_ABP_2147643193_0
         $x_1_6 = "shell\\explore\\Command=windowsxp.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6476,6 +6724,7 @@ rule Worm_Win32_Autorun_ABR_2147643672_0
         $x_1_2 = "action=Explore USB-drive files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6499,6 +6748,7 @@ rule Worm_Win32_Autorun_ABS_2147643806_0
         $x_1_4 = "netware work " ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6523,6 +6773,7 @@ rule Worm_Win32_Autorun_XGK_2147644196_0
         $x_1_5 = "attrib +H %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -6549,6 +6800,7 @@ rule Worm_Win32_Autorun_ACE_2147645361_0
         $x_1_4 = "%%t\\IPC$\\debug.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6577,6 +6829,7 @@ rule Worm_Win32_Autorun_XEK_2147646392_0
         $x_1_9 = "ShElL\\OpeN\\DeFaUlT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -6603,6 +6856,7 @@ rule Worm_Win32_Autorun_ACM_2147646502_0
         $x_1_7 = "XGFjbHVpLmRsbA==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -6630,6 +6884,7 @@ rule Worm_Win32_Autorun_ACN_2147646684_0
         $x_1_5 = "PRIVMSG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -6671,6 +6926,7 @@ rule Worm_Win32_Autorun_ACT_2147647395_0
         $x_1_18 = "....\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 5 of ($x_5_*) and 5 of ($x_1_*))) or
             ((5 of ($x_10_*) and 6 of ($x_5_*))) or
@@ -6698,6 +6954,7 @@ rule Worm_Win32_Autorun_ACU_2147647571_0
         $x_1_4 = {8d 85 b4 fe ff ff 50 8b 45 fc e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 89 45 f4 83 7d f4 ff 74 0f c6 45 fb 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6720,6 +6977,7 @@ rule Worm_Win32_Autorun_ACW_2147647744_0
         $x_1_3 = {41 00 75 00 54 00 6f 00 72 00 55 00 6e 00 5d 00 00 00 00 00 1a 00 00 00 53 00 68 00 45 00 6c 00 4c 00 65 00 78 00 45 00 63 00 55 00 74 00 65 00 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6742,6 +7000,7 @@ rule Worm_Win32_Autorun_ADL_2147650721_0
         $x_1_3 = {bb 00 10 40 00 89 db 52 90 5a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6764,6 +7023,7 @@ rule Worm_Win32_Autorun_ADS_2147651678_0
         $x_1_3 = {bb 00 10 40 00 89 db 52 90 5a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6787,6 +7047,7 @@ rule Worm_Win32_Autorun_ADU_2147651681_0
         $x_1_4 = {bb 00 10 40 00 89 db cd 03 90 90}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -6820,6 +7081,7 @@ rule Worm_Win32_Autorun_ADZ_2147652561_0
         $x_1_11 = {48 65 72 70 65 73 4d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_1_*))) or
             ((1 of ($x_2_*) and 7 of ($x_1_*))) or
@@ -6849,6 +7111,7 @@ rule Worm_Win32_Autorun_AEA_2147652816_0
         $x_1_6 = "[autorun]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6873,6 +7136,7 @@ rule Worm_Win32_Autorun_AEB_2147652844_0
         $x_1_5 = "nuR\\noisreVtnerruC\\swodniW\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6896,6 +7160,7 @@ rule Worm_Win32_Autorun_AEC_2147652877_0
         $x_1_4 = "MSInfo\\Recycled.scr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6921,6 +7186,7 @@ rule Worm_Win32_Autorun_AED_2147652879_0
         $x_2_5 = {8b 06 3d 36 36 36 36 0f 84 ?? ?? ?? ?? 3d 37 37 37 37 0f 84 ?? ?? ?? ?? 3d 39 39 39 39 0f 84 ?? ?? ?? ?? 46 8a 06 84 c0 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6947,6 +7213,7 @@ rule Worm_Win32_Autorun_AEG_2147653140_0
         $x_1_7 = "[autorun]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6972,6 +7239,7 @@ rule Worm_Win32_Autorun_AEH_2147653189_0
         $x_1_6 = "[autorun]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6996,6 +7264,7 @@ rule Worm_Win32_Autorun_AEK_2147653229_0
         $x_1_5 = {5c 00 50 00 6f 00 6c 00 69 00 63 00 69 00 65 00 73 00 5c 00 53 00 79 00 73 00 74 00 65 00 6d 00 22 00 20 00 [0-37] 20 00 64 00 69 00 73 00 61 00 62 00 6c 00 65 00 72 00 65 00 67 00 69 00 73 00 74 00 72 00 79 00 74 00 6f 00 6f 00 6c 00 73 00 20 00 2f 00 64 00 20 00 31 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7019,6 +7288,7 @@ rule Worm_Win32_Autorun_AEL_2147653269_0
         $x_6_4 = "c:\\TSTP\\winlogon.exe" ascii //weight: 6
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -7046,6 +7316,7 @@ rule Worm_Win32_Autorun_AEM_2147653296_0
         $x_2_5 = "Windows 7 Crack" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -7074,6 +7345,7 @@ rule Worm_Win32_Autorun_AEO_2147653599_0
         $x_1_5 = {26 00 75 00 6e 00 3d 00 [0-8] 26 00 65 00 78 00 65 00 3d 00 [0-8] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7095,6 +7367,7 @@ rule Worm_Win32_Autorun_AEQ_2147653754_0
         $x_7_2 = "http://wukuen520.web113.hzfwq.com/daojiaoshihao/Dg_Kun-doc.exe" ascii //weight: 7
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7120,6 +7393,7 @@ rule Worm_Win32_Autorun_AER_2147653824_0
         $x_4_6 = "regfile\\shell\\open\\command" wide //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7144,6 +7418,7 @@ rule Worm_Win32_Autorun_AET_2147654041_0
         $x_3_5 = {80 e3 7f eb 1e f6 04 31 40 74 05 80 cb 20 eb 13 80 e3 df eb 0e f6 04 31 20 74 05 80 cb 40 eb 03 80 e3 bf 99 2b c2 d1 f8 85 c0 0f 8f 45 ff ff ff 88 1c 31 41 3b cf 0f 8c 32 ff ff ff}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -7176,6 +7451,7 @@ rule Worm_Win32_Autorun_AEU_2147654250_0
         $x_1_8 = "\\NewVerSion.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -7201,6 +7477,7 @@ rule Worm_Win32_Autorun_AEW_2147654874_0
         $x_1_3 = {4e 00 65 00 77 00 46 00 6f 00 6c 00 64 00 65 00 72 00 2e 00 65 00 78 00 65 00 ?? ?? 61 00 75 00 74 00 6f 00 72 00 75 00 6e 00 2e 00 69 00 6e 00 66 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7227,6 +7504,7 @@ rule Worm_Win32_Autorun_UL_2147655464_0
         $x_1_7 = "[autorun]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7251,6 +7529,7 @@ rule Worm_Win32_Autorun_AEY_2147656123_0
         $x_1_5 = "xcopy BDV.exe C:\\RECYCLER\\S-1-5-~1\\BDV\\ /h /k /y" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -7275,6 +7554,7 @@ rule Worm_Win32_Autorun_AFA_2147656127_0
         $x_1_5 = "<bks>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7300,6 +7580,7 @@ rule Worm_Win32_Autorun_AFC_2147656258_0
         $x_1_6 = "FileZilla\\recentservers.xml" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -7326,6 +7607,7 @@ rule Worm_Win32_Autorun_AFV_2147658204_0
         $x_1_4 = "Fail Err0r.." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7349,6 +7631,7 @@ rule Worm_Win32_Autorun_AGC_2147659301_0
         $x_1_4 = "shutdown.exe -s -t" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -7372,6 +7655,7 @@ rule Worm_Win32_Autorun_AGD_2147659400_0
         $x_1_4 = "del %%0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -7398,6 +7682,7 @@ rule Worm_Win32_Autorun_AGE_2147659919_0
         $x_1_4 = "\\com1.{20D04FE0-3AEA-1069-A2D8-08002B30309D}\\driveinfo.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7429,6 +7714,7 @@ rule Worm_Win32_Autorun_AGG_2147660297_0
         $x_1_12 = "IP Address List:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7462,6 +7748,7 @@ rule Worm_Win32_Autorun_AGI_2147663212_0
         $x_10_14 = "gods must be creazy!" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_10_*) and 4 of ($x_1_*))) or
             ((1 of ($x_100_*) and 3 of ($x_10_*))) or
@@ -7489,6 +7776,7 @@ rule Worm_Win32_Autorun_AGJ_2147663533_0
         $x_1_4 = "fpco.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -7516,6 +7804,7 @@ rule Worm_Win32_Autorun_AGK_2147663536_0
         $x_1_5 = "wjview32.com /s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -7543,6 +7832,7 @@ rule Worm_Win32_Autorun_AGR_2147671589_0
         $x_1_5 = "\\~bandu.tmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -7572,6 +7862,7 @@ rule Worm_Win32_Autorun_AGR_2147671589_1
         $x_1_7 = "\\mssign16.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -7596,6 +7887,7 @@ rule Worm_Win32_Autorun_AGT_2147677645_0
         $x_1_2 = {3a 00 5c 00 41 00 75 00 74 00 6f 00 72 00 75 00 6e 00 2e 00 69 00 6e 00 66 00 00 00 1a 00 00 00 3a 00 5c 00 41 00 75 00 74 00 6f 00 72 00 75 00 6e 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7617,6 +7909,7 @@ rule Worm_Win32_Autorun_AGT_2147677645_1
         $x_1_2 = "You system infected by Slash Worm!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7640,6 +7933,7 @@ rule Worm_Win32_Autorun_AGY_2147678528_0
         $x_1_4 = "ShowSuperHidden /t REG_DWORD /d 0 /f" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7661,6 +7955,7 @@ rule Worm_Win32_Autorun_AGZ_2147678534_0
         $x_1_2 = {5c 5c 31 39 32 2e 31 36 38 2e 30 2e [0-3] 5c 73 65 63 72 65 74 2e 65 78 65 [0-3] 5c 5c 31 39 32 2e 31 36 38 2e 30 2e [0-3] 5c 73 65 63 72 65 74 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7685,6 +7980,7 @@ rule Worm_Win32_Autorun_AHA_2147679363_0
         $x_1_5 = {41 75 74 6f 72 75 6e 2e 69 6e 66 00 5b 61 75 74 6f 72 75 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7709,6 +8005,7 @@ rule Worm_Win32_Autorun_LF_2147720822_0
         $x_1_4 = {70 69 6e 67 20 2d 6c 20 31 30 32 34 30 [0-64] 20 3e 6e 75 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7758,6 +8055,7 @@ rule Worm_Win32_Autorun_AJA_2147735185_0
         $x_1_6 = "DisableBehaviorMonitoring" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7782,6 +8080,7 @@ rule Worm_Win32_Autorun_DU_2147742805_0
         $x_1_4 = "KillAV" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7806,6 +8105,7 @@ rule Worm_Win32_Autorun_KA_2147745741_0
         $x_1_4 = "CurrentVersion\\Policies\\Explorer\\DisallowRun" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7827,6 +8127,7 @@ rule Worm_Win32_Autorun_AQ_2147830406_0
         $x_5_1 = {33 41 00 ab 33 41 00 d4 33 41 00 e0 33 41 00 09 34 41 00 1a 35 41 00 3f 35 41}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

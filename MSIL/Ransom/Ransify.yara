@@ -28,6 +28,7 @@ rule Ransom_MSIL_Ransify_BB_2147853277_0
         $x_1_14 = ".asm" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_20_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -56,6 +57,7 @@ rule Ransom_MSIL_Ransify_BC_2147853278_0
         $x_10_6 = "PDF_Invoice_" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +92,7 @@ rule Ransom_MSIL_Ransify_BD_2147853279_0
         $x_1_15 = ".doc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_20_*) and 5 of ($x_1_*))) or
             (all of ($x*))

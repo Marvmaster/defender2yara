@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Almanahe_A_2147609321_0
         $x_1_2 = {81 38 50 45 00 00 0f 85 d2 00 00 00 8b 4d dc 0f b7 51 14 8b 45 dc 8d 4c 10 18 89 8d d4 ef ff ff c7 45 fc 00 00 00 00 c7 85 d0 ef ff ff 00 00 00 00 eb 1e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

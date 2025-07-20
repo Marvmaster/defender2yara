@@ -22,6 +22,7 @@ rule Trojan_Win32_Gonlyn_A_2147678473_0
         $x_1_8 = {4f 6e 6c 79 4f 6e 65 4c 57 4b 4b 77 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

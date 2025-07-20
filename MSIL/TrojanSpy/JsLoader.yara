@@ -21,6 +21,7 @@ rule TrojanSpy_MSIL_JsLoader_SA_2147748615_0
         $x_3_6 = "Here could be" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

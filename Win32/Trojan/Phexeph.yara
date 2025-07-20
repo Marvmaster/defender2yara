@@ -17,6 +17,7 @@ rule Trojan_Win32_Phexeph_A_2147658621_0
         $x_1_3 = "if (VirtualBx ==\"ANTIVIRUS\"){exit;}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

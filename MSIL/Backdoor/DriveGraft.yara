@@ -18,6 +18,7 @@ rule Backdoor_MSIL_DriveGraft_C_2147936012_0
         $x_1_3 = "{0}\"{1}\"{2}&top=1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

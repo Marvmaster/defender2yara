@@ -19,6 +19,7 @@ rule Ransom_MSIL_BrickCrypt_PA_2147817659_0
         $x_1_4 = "DON'T TOUCH THIS FILE!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

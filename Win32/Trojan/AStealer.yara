@@ -23,6 +23,7 @@ rule Trojan_Win32_AStealer_GA_2147776488_0
         $x_1_8 = "JDOWNLOADER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

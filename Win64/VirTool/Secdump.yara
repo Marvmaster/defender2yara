@@ -19,6 +19,7 @@ rule VirTool_Win64_Secdump_A_2147910498_0
         $x_1_4 = {ba 10 04 00 00 [0-20] 85 c0 [0-33] ba 04 01 00 00 [0-18] 4c 89 74 24 30 ?? ?? ?? ?? ?? ?? ?? c7 44 24 28 80 00 00 00 45 33 c9 45 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

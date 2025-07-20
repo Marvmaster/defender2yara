@@ -16,6 +16,7 @@ rule Ransom_Win32_VirLock_RPX_2147905132_0
         $x_1_1 = {8a 06 90 32 c2 90 88 07 90 42 90 46 90 e9 00 00 00 00 47 90 49}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Ransom_Win32_VirLock_RPY_2147905133_0
         $x_1_1 = {8a 06 32 c2 90 88 07 42 90 46 47 90 49 90 83 f9 00 0f 85 e9 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

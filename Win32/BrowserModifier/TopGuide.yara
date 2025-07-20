@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_TopGuide_195947_0
         $x_1_4 = {54 6f 70 47 75 69 64 65 2e 64 6c 6c 00 00 00 00 53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule BrowserModifier_Win32_TopGuide_195947_1
         $x_1_6 = {53 45 41 52 43 48 5f 4b 45 59 57 4f 52 44 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

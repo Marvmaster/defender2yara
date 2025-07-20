@@ -26,6 +26,7 @@ rule Ransom_Win32_NefilimGo_PA_2147782991_0
         $x_1_11 = "at  fp= is  lr: of  on  pc= sp: sp=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Ransom_Win32_NefilimGo_PB_2147793167_0
         $x_1_5 = "at  fp= is  lr: of  on  pc= sp: sp=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

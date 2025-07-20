@@ -16,6 +16,7 @@ rule Trojan_Win64_CobaltStike_YBD_2147931723_0
         $x_11_1 = {01 03 b8 01 00 00 00 2b c1 01 43 18 8b 05 ?? ?? ?? ?? 33 05 ?? ?? ?? ?? 83 c0 fa 03 c1 48 63 8b ?? ?? ?? ?? 89 83 ?? ?? ?? ?? 0f b6 43}  //weight: 11, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

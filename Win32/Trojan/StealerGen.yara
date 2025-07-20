@@ -23,6 +23,7 @@ rule Trojan_Win32_StealerGen_DKL_2147808592_0
         $x_2_8 = "YONAMIKORUFENI" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_StealerGen_HNU_2147809085_0
         $x_1_3 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

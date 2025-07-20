@@ -18,6 +18,7 @@ rule VirTool_Win32_Injedehesz_A_2147902650_0
         $x_1_3 = {89 c1 e8 9a ?? ?? ?? 89 c2 ?? ?? ?? ?? ?? ?? 89 44 24 10 c7 44 24 0c 3f 00 0f 00 c7 44 24 08 00 00 00 00 89 54 24 04 c7 04 24 01 00 00 80 ?? ?? ?? ?? ?? 83 ec 14 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

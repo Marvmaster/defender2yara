@@ -18,6 +18,7 @@ rule Trojan_Win32_Waprox_A_2147652715_0
         $x_1_4 = {4d 61 63 68 69 6e 65 47 75 69 64 00 62 6c 6f 77 6a 6f 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -44,6 +45,7 @@ rule Trojan_Win32_Waprox_A_2147656678_0
         $x_1_2 = {8b 43 5c 99 f7 f9 80 c2 5a 88 56 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

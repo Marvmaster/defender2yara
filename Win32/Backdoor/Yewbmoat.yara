@@ -24,6 +24,7 @@ rule Backdoor_Win32_Yewbmoat_2147606610_0
         $x_1_10 = "usrsvpia.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

@@ -19,6 +19,7 @@ rule Trojan_Win32_Buzus_H_2147645563_0
         $x_1_5 = "Ersms_JK.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Trojan_Win32_Buzus_EB_2147836641_0
         $x_1_6 = "kolinsky" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Trojan_Win32_Buzus_BD_2147836687_0
         $x_2_2 = {34 00 37 00 34 00 32 00 35 00 34 00 34 00 34 00 34 00 39 00 35 00 33 00 00 00 5f 5f 76}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

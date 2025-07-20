@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Binal_A_2147696416_0
         $x_1_3 = {66 81 3b 4d 5a 0f 85 ?? ?? 00 00 [0-64] 81 3f 50 45 00 00 0f 85 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

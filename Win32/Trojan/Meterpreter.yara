@@ -17,6 +17,7 @@ rule Trojan_Win32_Meterpreter_A_2147721925_0
         $x_1_3 = {5d 68 74 74 70 00 68 77 69 6e 68 54 68 ?? ?? ?? ?? ff d5 31 db 53 53 53 53 53 68 ?? ?? ?? ?? ff d5 53 68 52 11 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Meterpreter_I_2147723084_0
         $x_1_2 = {00 5f 65 78 65 63 5f 73 68 65 6c 6c 63 6f 64 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Meterpreter_J_2147723085_0
         $x_1_2 = {00 5f 65 78 65 63 5f 73 68 65 6c 6c 63 6f 64 65 36 34 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Meterpreter_F_2147723359_0
         $x_1_2 = {6a 00 6a 04 8d 45 8c 50 6a 07 68 ff ff ff ff ff 55 94 83 7d 8c 00 0f 84 0a 00 00 00 6a 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1622,6 +1626,7 @@ rule Trojan_Win32_Meterpreter_C_2147725332_0
         $x_1_2 = {68 33 32 00 00 68 77 73 32 5f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1647,6 +1652,7 @@ rule Trojan_Win32_Meterpreter_C_2147725332_1
         $x_1_5 = {b9 58 a4 53 e5 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1672,6 +1678,7 @@ rule Trojan_Win32_Meterpreter_C_2147725332_2
         $x_1_5 = {68 12 96 89 e2 ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1697,6 +1704,7 @@ rule Trojan_Win32_Meterpreter_C_2147725332_3
         $x_1_5 = {68 0b 2f 0f 30 ff d5 57 68 c6 96 87 52 ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1722,6 +1730,7 @@ rule Trojan_Win32_Meterpreter_C_2147725332_4
         $x_1_5 = {68 58 a4 53 e5 ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1748,6 +1757,7 @@ rule Trojan_Win32_Meterpreter_C_2147725332_5
         $x_1_6 = {ff e1 e8 00 00 00 00 bb f0 b5 a2 56 6a 00 53 ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1773,6 +1783,7 @@ rule Trojan_Win32_Meterpreter_C_2147725332_6
         $x_1_5 = {5d 68 6e 65 74 00 68 77 69 6e 69 54 68 4c 77 26 07 ff d5 e8 ?? ?? 00 00 68 74 74 70 3a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1799,6 +1810,7 @@ rule Trojan_Win32_Meterpreter_C_2147725332_7
         $x_1_6 = {68 2d 06 18 7b ff d5 85 c0 75 [0-32] 68 58 a4 53 e5 ff d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1826,6 +1838,7 @@ rule Trojan_Win32_Meterpreter_C_2147725332_8
         $x_1_7 = {68 b7 e9 38 ff ff d5 [0-8] 68 74 ec 3b e1 ff d5 [0-8] 68 75 6e 4d 61 ff d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1850,6 +1863,7 @@ rule Trojan_Win32_Meterpreter_C_2147725332_9
         $x_1_4 = {57 61 69 74 46 6f 72 53 69 6e 67 6c 65 4f 62 6a 65 63 74 29 2c 20 28 [0-8] 20 40 28 5b 49 6e 74 50 74 72 5d 2c 20 5b 49 6e 74 33 32 5d 29 29 29 2e 49 6e 76 6f 6b 65 28 24 [0-8] 2c 30 78 66 66 66 66 66 66 66 66 29}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1875,6 +1889,7 @@ rule Trojan_Win32_Meterpreter_L_2147725362_0
         $x_1_6 = "%TEMP%\\hook.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1901,6 +1916,7 @@ rule Trojan_Win32_Meterpreter_L_2147725362_1
         $x_1_7 = "KiwiAndRegistryTools" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1927,6 +1943,7 @@ rule Trojan_Win32_Meterpreter_L_2147725362_2
         $x_1_7 = {72 75 6e 64 6c 6c 33 32 2e 65 78 65 20 25 73 2c 61 20 2f 70 3a 25 73 00 2f 74 3a 30 78 25 30 38 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1953,6 +1970,7 @@ rule Trojan_Win32_Meterpreter_E_2147727230_0
         $x_1_6 = {89 e6 50 50 50 50 40 50 40 50 68 ea 0f df e0 ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1978,6 +1996,7 @@ rule Trojan_Win32_Meterpreter_F_2147727241_0
         $x_1_5 = {bb f0 b5 a2 56 6a 00 53 ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2006,6 +2025,7 @@ rule Trojan_Win32_Meterpreter_G_2147727245_0
         $x_1_8 = {57 68 00 20 00 00 53 56 68 6c 29 24 7e ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -2031,6 +2051,7 @@ rule Trojan_Win32_Meterpreter_H_2147727254_0
         $x_1_5 = {b4 0c 50 51 57 51 66 b9 c0 38 ff e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2056,6 +2077,7 @@ rule Trojan_Win32_Meterpreter_I_2147727257_0
         $x_1_5 = "http:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2083,6 +2105,7 @@ rule Trojan_Win32_Meterpreter_K_2147727308_0
         $x_1_3 = {66 b9 57 05 ff d6 50 b4 0c 50 53 57 53 66 b9 c0 38 ff e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2106,6 +2129,7 @@ rule Trojan_Win32_Meterpreter_K_2147727308_1
         $x_1_3 = {66 b9 33 ce ff d6 89 e1 50 b4 0c 50 51 57 51 66 b9 c0 38 ff e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2132,6 +2156,7 @@ rule Trojan_Win32_Meterpreter_K_2147727308_2
         $x_1_6 = {50 b4 0c 50 53 57 53 66 b9 c0 38 ff e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -2159,6 +2184,7 @@ rule Trojan_Win32_Meterpreter_L_2147727867_0
         $x_1_7 = {ff 75 00 68 72 fe b3 16 ff 55 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -2186,6 +2212,7 @@ rule Trojan_Win32_Meterpreter_M_2147727987_0
         $x_1_3 = {6a 40 68 00 30 00 00 ff 77 50 ff 77 34 ff 75 a8 ff 15 ?? ?? ?? 00 89 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2209,6 +2236,7 @@ rule Trojan_Win32_Meterpreter_M_2147728094_0
         $x_1_3 = {66 8b 0c 4b 8b 58 1c 01 d3 8b 04 8b 01 d0 89 44 24 24 5b 5b 61 59 5a 51 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2238,6 +2266,7 @@ rule Trojan_Win32_Meterpreter_N_2147728142_0
         $x_1_9 = {83 f9 01 75 0c 51 eb 1c 8b 44 24 1c ff d0 89 c2 59 51 8b 4c bd 00 e8 ?? ?? ?? ?? 59 50 47 e2 e0 89 e5 eb 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -2272,6 +2301,7 @@ rule Trojan_Win32_Meterpreter_O_2147728145_0
         $x_1_8 = {58 8b 58 24 01 d3 66 8b 0c 4b 8b 58 1c 01 d3 8b 04 8b 01 d0 89 44 24 24 5b 5b 61 59 5a 51 ff e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 5 of ($x_1_*))) or
@@ -2304,6 +2334,7 @@ rule Trojan_Win32_Meterpreter_P_2147728159_0
         $x_1_6 = {8b 6c 24 24 8b 45 3c 8b 54 28 78 01 ea 8b 4a 18 8b 5a 20 01 eb e3 34 49 8b 34 8b 01 ee 31 ff 31 c0 fc ac}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2332,6 +2363,7 @@ rule Trojan_Win32_Meterpreter_Q_2147728162_0
         $x_2_4 = {ff d3 ad 3d ?? ?? ?? ?? 75 dd ff e6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2364,6 +2396,7 @@ rule Trojan_Win32_Meterpreter_R_2147728190_0
         $x_1_9 = {ac 66 50 3c 55 75 f9 89 e1 31 c0 50 50 51 53 8b 13 8b 4a 50 ff d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2395,6 +2428,7 @@ rule Trojan_Win32_Meterpreter_J_2147729421_0
         $x_1_7 = {68 00 10 00 00 56 6a 00 68 58 a4 53 e5 ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -2418,6 +2452,7 @@ rule Trojan_Win32_Meterpreter_O_2147729928_0
         $x_1_4 = {68 f4 00 8e cc ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2441,6 +2476,7 @@ rule Trojan_Win32_Meterpreter_O_2147729928_1
         $x_1_4 = {c7 04 24 52 f3 e2 51 e8 ?? ?? ?? ?? c7 04 24 5f 78 54 ee}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2466,6 +2502,7 @@ rule Trojan_Win32_Meterpreter_O_2147729928_2
         $x_1_6 = {6a 00 59 bb e0 1d 2a 0a 41 89 da ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -2488,6 +2525,7 @@ rule Trojan_Win32_Meterpreter_O_2147729928_3
         $x_1_3 = {bb 47 13 72 6f 6a 00 59 41 89 da ff d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2511,6 +2549,7 @@ rule Trojan_Win32_Meterpreter_O_2147729928_4
         $x_1_4 = {ff e0 5f 5f 5a 8b 12 eb 8d 5d 8d 85 ?? 00 00 00 50 68 4c 77 26 07 ff d5 bb f0 b5 a2 56 68 a6 95 bd 9d ff d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2534,6 +2573,7 @@ rule Trojan_Win32_Meterpreter_2147750887_0
         $x_1_3 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2558,6 +2598,7 @@ rule Trojan_Win32_Meterpreter_RPX_2147844724_0
         $x_1_1 = {89 f9 89 de 8a 06 30 07 47 66 81 3f ?? ?? 74 08 46 80 3e ?? 75 ee eb ea}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2583,6 +2624,7 @@ rule Trojan_Win32_Meterpreter_RPX_2147844724_1
         $x_1_5 = "viper.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2606,6 +2648,7 @@ rule Trojan_Win32_Meterpreter_CRXM_2147850221_0
         $x_1_3 = {f8 3b 7d 24 75 e0 58 8b 58 24 01 d3 66 8b 0c 4b 8b 58 1c 01 d3 8b 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2627,6 +2670,7 @@ rule Trojan_Win32_Meterpreter_RPZ_2147897077_0
         $x_1_1 = {5b 5b 61 59 5a 51 ff e0 58 5f 5a 8b 12 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2648,6 +2692,7 @@ rule Trojan_Win32_Meterpreter_IG_2147911679_0
         $x_1_1 = {0f b6 db 8a 94 1d ?? ?? ?? ?? 88 94 05 ?? ?? ?? ?? 89 fa 88 94 1d ?? ?? ?? ?? 02 94 05 ?? ?? ?? ?? 0f b6 d2 8a 94 15 ?? ?? ?? ?? 30 11 41 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2671,6 +2716,7 @@ rule Trojan_Win32_Meterpreter_SZ_2147921608_0
         $x_2_3 = "exec_shellcode64 called" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

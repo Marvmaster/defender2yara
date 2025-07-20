@@ -18,6 +18,7 @@ rule Worm_Win32_Duptwux_A_2147646117_0
         $x_1_4 = {80 3c 3e 4d 0f 85 ?? ?? ?? ?? 80 7c 3e 05 73 0f 85 ?? ?? ?? ?? 80 7c 3e 08 74 0f 85 ?? ?? ?? ?? 80 7c 3e 0c 6e 0f 85 ?? ?? ?? ?? 80 7c 3e 0f 77}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Loipaoc_A_2147686495_0
         $x_1_4 = {1f 1d 12 00 1a 28 ?? 00 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

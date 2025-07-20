@@ -24,6 +24,7 @@ rule Backdoor_Win32_LittleWitch_AA_2147792376_0
         $x_1_10 = "WARNING" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_50_*) and 5 of ($x_1_*))) or
             (all of ($x*))

@@ -19,6 +19,7 @@ rule Trojan_WinNT_Dulom_A_2147653756_0
         $x_1_5 = {83 7d 0c 00 75 ?? 83 7d 18 00 74 ?? 8b 4d 14 0f b7 11 85 d2 74 ?? c7 45 f8 05 00 00 80 8b 45 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_WinNT_Dulom_B_2147653757_0
         $x_1_5 = {89 45 e0 c7 45 e4 ?? ?? ?? ?? c7 45 b4 ?? ?? ?? ?? 6a 1e 8d 4d b8 51 6a 01 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6a 01 ff 15 ?? ?? ?? ?? 89 45 e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

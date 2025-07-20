@@ -20,6 +20,7 @@ rule Backdoor_MSIL_Hamaetot_A_2147685788_0
         $x_1_6 = "&receive=upload&uploadtype=webcam&filename=webcam.jpg" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

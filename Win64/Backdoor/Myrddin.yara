@@ -18,6 +18,7 @@ rule Backdoor_Win64_Myrddin_B_2147796216_0
         $x_1_4 = {48 85 c9 0f 85 ?? 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

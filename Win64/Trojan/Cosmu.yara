@@ -16,6 +16,7 @@ rule Trojan_Win64_Cosmu_EC_2147915234_0
         $x_7_1 = {a5 32 ab 32 a5 32 a6 32 97 32 9f 32 65 32 64 32 8e 32 9b 32 9f 32 93 32 99 32 97 32 a4 32 97 32 a5 32 60 32}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

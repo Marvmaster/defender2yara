@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_BlackMoon_YA_2147741457_0
         $x_1_2 = "BlackMoon RunTime Error" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

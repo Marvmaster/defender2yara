@@ -17,6 +17,7 @@ rule Trojan_Win32_Coapk_ASG_2147894620_0
         $x_1_2 = {09 d8 81 eb 5f 55 46 1b 31 0e 83 ec 04 c7 04 24 78 e9 02 6d 5b 46 81 c3 01 00 00 00 39 d6 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

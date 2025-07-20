@@ -20,6 +20,7 @@ rule Ransom_Win32_Daxxed_A_2147717735_0
         $x_1_6 = "ReadMe.TxT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

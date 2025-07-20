@@ -19,6 +19,7 @@ rule Spammer_Win32_Frotmael_A_2147639542_0
         $x_1_5 = "Fake Email:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

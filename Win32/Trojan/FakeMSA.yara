@@ -20,6 +20,7 @@ rule Trojan_Win32_FakeMSA_A_2147598341_0
         $x_2_6 = {31 00 30 00 30 00 31 00 00 00 00 00 08 00 00 00 31 00 30 00 30 00 34 00 00 00 00 00 08 00 00 00 31}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 4 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or

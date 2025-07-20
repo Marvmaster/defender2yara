@@ -19,6 +19,7 @@ rule Backdoor_Win32_Wavipeg_A_2147686613_0
         $x_1_5 = {3c 42 4b 3e 00 3c 44 4f 57 4e 3e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Backdoor_Win32_Wavipeg_B_2147687503_0
         $x_1_9 = "%s?enc&comp=%s&ext=sysinfo.txt&upload_text=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_VBKrypt_AA_2147745187_0
         $x_1_4 = "_ford.jpg" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_VBKrypt_AB_2147745432_0
         $x_1_2 = "Funcxcvcxvxc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_VBKrypt_GG_2147745517_0
         $x_1_2 = "\\Darins.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win32_VBKrypt_GA_2147745518_0
         $x_1_2 = "BMGDocumenter" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_Win32_VBKrypt_CA_2147745621_0
         $x_1_2 = "controrAX.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +134,7 @@ rule Trojan_Win32_VBKrypt_GB_2147745634_0
         $x_1_2 = {8b c8 8b c3 03 ca 99 f7 f9 8d 45 ?? 50 8b da ff 15 [0-4] 8b [0-8] 32 ?? 8d [0-3] ff 15 [0-4] 8b 8d [0-4] 8d 55 ?? 52 88 1c 08 8d 45 ?? 50 6a 02 ff 15 [0-7] b8 [0-4] 83 c4 0c 96 00 33 db 8a 1c 0a 8d 55 b4 52 ff d7 0f bf 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -153,6 +159,7 @@ rule Trojan_Win32_VBKrypt_AC_2147749244_0
         $x_1_4 = {83 c4 04 83 fb 00 0f 85 ?? ?? ff ff e9 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +186,7 @@ rule Trojan_Win32_VBKrypt_AD_2147750146_0
         $x_1_6 = "Classic Aeroplane Game" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +214,7 @@ rule Trojan_Win32_VBKrypt_AD_2147750146_1
         $x_1_7 = "Lawhand6" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +236,7 @@ rule Trojan_Win32_VBKrypt_AE_2147750329_0
         $x_1_1 = {66 0f 57 c8 81 [0-255] 39 18 75 [0-255] ff d0 [0-255] 8b 1c 17 [0-16] 31 f3 [0-16] 11 1c 10 [0-16] 83 c2 04 [0-16] 81 fa ?? ?? 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -249,6 +259,7 @@ rule Trojan_Win32_VBKrypt_AF_2147750890_0
         $x_1_2 = {8b 14 0a f7 c7 [0-255] ff d2 [0-255] ff 37 [0-47] 5b [0-47] 31 f3 [0-63] 8f 04 10 [0-47] 83 c2 04 [0-79] 81 fa ?? ?? 00 00 0f 85 ?? ?? ff ff [0-79] ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -270,6 +281,7 @@ rule Trojan_Win32_VBKrypt_AG_2147753249_0
         $x_1_1 = {31 f1 85 c0 85 ff eb [0-255] 66 ?? ?? ?? ?? 89 0b eb [0-111] 83 c2 04 85 d2 66 ?? ?? ?? ?? eb [0-111] 83 c7 04 66 ?? ?? ?? ?? 81 ff ?? ?? ?? ?? eb [0-111] 81 fa ?? ?? 00 00 0f 85 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -291,6 +303,7 @@ rule Trojan_Win32_VBKrypt_QO_2147754382_0
         $x_1_1 = {83 04 24 00 57 83 c7 01 5f c1 e7 00 c1 ee 00 83 c7 00 83 c7 00 d9 d0 83 04 24 00 33 3c 24 4a 83 c2 01 c1 ee 00 83 c7 00 f8 83 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -317,6 +330,7 @@ rule Trojan_Win32_VBKrypt_AI_2147754404_0
         $x_1_6 = "ISOGENOU" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -338,6 +352,7 @@ rule Trojan_Win32_VBKrypt_AH_2147754555_0
         $x_1_1 = {ff 37 81 fa ?? ?? ?? ?? 66 [0-31] 59 [0-31] e8 ?? ?? 00 00 [0-111] 89 0b [0-31] 83 c2 04 [0-31] 83 c7 04 [0-111] e9 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -362,6 +377,7 @@ rule Trojan_Win32_VBKrypt_AJ_2147754740_0
         $x_1_4 = "programafregning" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -384,6 +400,7 @@ rule Trojan_Win32_VBKrypt_AK_2147754820_0
         $x_1_2 = {66 0f 63 d2 81 f7 ?? ?? ?? ?? 0f 6a fe 66 0f 67 eb 0f 6b f7 0f 6b d2 0f 6b c9 0f 68 c2 66 0f 6a d5 0f 63 d1 66 0f 68 ec 66 0f 6a f1 0f 6b f0 0f 6a d8 57 66 0f 67 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -410,6 +427,7 @@ rule Trojan_Win32_VBKrypt_AL_2147754824_0
         $x_1_6 = "SMILEHULLER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -435,6 +453,7 @@ rule Trojan_Win32_VBKrypt_AM_2147755384_0
         $x_1_5 = "I0fFCYuL7nOj4UhY7ZEj4tpCEw8" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -462,6 +481,7 @@ rule Trojan_Win32_VBKrypt_AM_2147755384_1
         $x_3_7 = "VB.Timer" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -488,6 +508,7 @@ rule Trojan_Win32_VBKrypt_AN_2147755631_0
         $x_1_6 = "Scrophulariaceous4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -514,6 +535,7 @@ rule Trojan_Win32_VBKrypt_AO_2147755634_0
         $x_1_6 = "ASTROPHYSICIST" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -540,6 +562,7 @@ rule Trojan_Win32_VBKrypt_AP_2147755753_0
         $x_1_6 = "NONAPPEALINGLY" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -562,6 +585,7 @@ rule Trojan_Win32_VBKrypt_AP_2147755753_1
         $x_1_2 = {46 33 f8 25 f7 05 44 f5 99 fe 21 a1 fb ad 6f 3f c3 53 32 60 a5 99 9e 4d fd 1e 23 36 0a 58 44 13 43 6f 7e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -588,6 +612,7 @@ rule Trojan_Win32_VBKrypt_AR_2147755809_0
         $x_1_6 = "forecastleman" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -616,6 +641,7 @@ rule Trojan_Win32_VBKrypt_AS_2147755926_0
         $x_1_8 = "CWOKrfRNTqZJqVllQe4uzOgihv4yHSfkI8PPG120" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_6_*))) or
@@ -641,6 +667,7 @@ rule Trojan_Win32_VBKrypt_AT_2147756275_0
         $x_1_1 = {89 0c 24 eb 1f 00 8b 0f eb [0-31] 89 0c 24 eb [0-31] 31 34 24 eb [0-31] 59 eb [0-31] 83 c2 04 eb [0-31] 83 d7 04 eb [0-31] 81 fa ?? ?? 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -667,6 +694,7 @@ rule Trojan_Win32_VBKrypt_AV_2147756420_0
         $x_1_6 = "TILLADELSERNE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -694,6 +722,7 @@ rule Trojan_Win32_VBKrypt_AX_2147756485_0
         $x_1_7 = "CANDOUR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_6_*))) or
@@ -724,6 +753,7 @@ rule Trojan_Win32_VBKrypt_AZ_2147756979_0
         $x_1_6 = "KENDERES" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -747,6 +777,7 @@ rule Trojan_Win32_VBKrypt_BA_2147758805_0
         $x_1_3 = {50 52 ff d7 50 a1 ?? ?? ?? ?? 50 6a 00 ff 15 ?? ?? ?? ?? 8d 4d c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -773,6 +804,7 @@ rule Trojan_Win32_VBKrypt_BB_2147760449_0
         $x_1_6 = "Tekstbehandlingssystemets3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -795,6 +827,7 @@ rule Trojan_Win32_VBKrypt_BC_2147761341_0
         $x_1_2 = {6a 00 ff d0 68 ?? ?? ?? ?? 5a 31 c9 81 c9 ?? ?? ?? ?? 8b 34 0a 89 34 08 81 34 08 ?? ?? ?? ?? 83 c1 fc 7d ee ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -821,6 +854,7 @@ rule Trojan_Win32_VBKrypt_BE_2147762362_0
         $x_1_6 = "AARSAGSB" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -845,6 +879,7 @@ rule Trojan_Win32_VBKrypt_BE_2147762362_1
         $x_1_4 = "EASY-HIDE-Ip vpn" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -872,6 +907,7 @@ rule Trojan_Win32_VBKrypt_BG_2147764692_0
         $x_1_7 = {39 c6 ff 34 0a [0-79] 81 f7 [0-31] 89 3c 08 [0-31] 83 e9 04 7d [0-31] ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -893,6 +929,7 @@ rule Trojan_Win32_VBKrypt_BI_2147765647_0
         $x_1_1 = {0b 34 0a 0f 67 c1 [0-95] 81 f6 ?? ?? ?? ?? 0f 69 e5 [0-255] 89 34 08 0f 63 d8 [0-79] 49 [0-255] 49 [0-255] 49 [0-255] 49 0f 8d ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -914,6 +951,7 @@ rule Trojan_Win32_VBKrypt_BH_2147766626_0
         $x_1_1 = {c1 e1 00 8b 99 [0-31] 53 [0-31] 81 34 24 [0-31] 8f 04 08 [0-31] 41 [0-47] 83 c1 f8 7d [0-31] ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -939,6 +977,7 @@ rule Trojan_Win32_VBKrypt_BD_2147766775_0
         $x_1_5 = "Program Files\\COMODO" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -960,6 +999,7 @@ rule Trojan_Win32_VBKrypt_BJ_2147767154_0
         $x_1_1 = {4b 43 4f 47 0f 6e 04 0a 4a 42 ?? 0f 6e cb 4f 47 4b 43 0f ef c1 4f 47 4f 47 0f 7e c7 49 41 4f 47 89 3c 08 4e 46 4e 46 83 e9 28 f8 ?? 83 c1 2c 4f 47 4e 46 81 f9 ?? ?? 00 00 75 c5 4f 47 4f 47 ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -986,6 +1026,7 @@ rule Trojan_Win32_VBKrypt_BL_2147767248_0
         $x_1_6 = "RACEMOCAR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1007,6 +1048,7 @@ rule Trojan_Win32_VBKrypt_BK_2147768345_0
         $x_1_1 = {8b 1c 0a fc 50 [0-31] c1 fb 00 81 f3 ?? ?? ?? ?? eb [0-79] c1 ca 00 83 f6 00 c1 fb 00 c1 e1 00 89 1c 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1032,6 +1074,7 @@ rule Trojan_Win32_VBKrypt_BP_2147771572_0
         $x_1_5 = "href" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1055,6 +1098,7 @@ rule Trojan_Win32_VBKrypt_BQ_2147772837_0
         $x_1_3 = "For Hacking" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1079,6 +1123,7 @@ rule Trojan_Win32_VBKrypt_BR_2147772838_0
         $x_1_4 = "Collision Detection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1103,6 +1148,7 @@ rule Trojan_Win32_VBKrypt_BF_2147788058_0
         $x_1_4 = "Clero.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1127,6 +1173,7 @@ rule Trojan_Win32_VBKrypt_DS_2147788488_0
         $x_2_4 = {0d 14 00 00 1e 00 27 2e 35 3c 44 4b 52 59 60 68 6f 00 78 7f 86 8e 95 9c 00 a4 ac}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1152,6 +1199,7 @@ rule Trojan_Win32_VBKrypt_DS_2147788488_1
         $x_1_5 = "lesedivosic dicr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1177,6 +1225,7 @@ rule Trojan_Win32_VBKrypt_AVS_2147794357_0
         $x_2_5 = "Celleslims" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1203,6 +1252,7 @@ rule Trojan_Win32_VBKrypt_DA_2147816263_0
         $x_3_6 = "Form_Load" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1229,6 +1279,7 @@ rule Trojan_Win32_VBKrypt_DZ_2147892257_0
         $x_1_6 = "8gUkcj1nO2EgOXMrbzHyO0JkCHludPYFPXkrZQAFcwNhGWUdbYIP8jVEblpPUvAFC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

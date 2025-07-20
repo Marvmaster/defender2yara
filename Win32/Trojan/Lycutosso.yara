@@ -18,6 +18,7 @@ rule Trojan_Win32_Lycutosso_A_2147697273_0
         $x_1_4 = {80 e1 06 0f be c9 f7 d9 1b c9 f7 d1 85 c8 0f 84 ?? 00 00 00 8d 74 24 30 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

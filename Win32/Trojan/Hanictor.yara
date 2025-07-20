@@ -17,6 +17,7 @@ rule Trojan_Win32_Hanictor_VAN_2147789539_0
         $x_1_2 = {83 c0 04 89 45 ?? c7 45 ?? 01 10 00 00 c7 45 ?? c4 00 00 00 8b 45 ?? 2d 84 00 00 00 50 8b 45 ?? 48 50 8b 45 ?? 03 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Hanictor_FHM_2147794859_0
         $x_1_2 = {53 f7 e1 8b d8 8b 44 24 08 f7 64 24 14 03 d8 8b 44 24 08 f7 e1 03 d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Hanictor_VAM_2147798507_0
         $x_1_2 = {33 7d 14 83 ef 6f 33 7d 0c 2b fe 83 c7 5c 81 f7 a0 ef 8b ce 89 7d fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

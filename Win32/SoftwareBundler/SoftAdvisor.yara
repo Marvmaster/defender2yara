@@ -18,6 +18,7 @@ rule SoftwareBundler_Win32_SoftAdvisor_168093_0
         $x_1_4 = {5c 49 6e 73 74 61 6c 6c 5c 52 50 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

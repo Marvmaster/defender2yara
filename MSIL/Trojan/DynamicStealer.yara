@@ -27,6 +27,7 @@ rule Trojan_MSIL_DynamicStealer_CT_2147843348_0
         $x_1_12 = "PasswordStealer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

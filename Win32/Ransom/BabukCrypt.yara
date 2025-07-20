@@ -19,6 +19,7 @@ rule Ransom_Win32_BabukCrypt_PA_2147777550_0
         $x_1_4 = "\\How To Restore Your Files.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Win32_BabukCrypt_PB_2147783720_0
         $x_1_4 = ".babyk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Ransom_Win32_BabukCrypt_PF_2147784111_0
         $x_1_5 = "Software\\WLkt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

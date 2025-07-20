@@ -20,6 +20,7 @@ rule Backdoor_Win32_Tupwond_B_2147614441_0
         $x_1_6 = "---FindPass---" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

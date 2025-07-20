@@ -18,6 +18,7 @@ rule Ransom_MSIL_Scott_DA_2147774386_0
         $x_1_3 = "i will destroy the key and you will never get it good luck" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

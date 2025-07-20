@@ -27,6 +27,7 @@ rule Trojan_Win32_Iniriror_A_2147612798_0
         $x_20_12 = {40 99 89 45 e0 89 55 e4 c7 45 e8 bb bb bb bb c7 45 ec aa aa aa aa 8d 55 e0 b9 10 00 00 00 8b c6}  //weight: 20, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 4 of ($x_3_*) and 5 of ($x_1_*))) or
             ((2 of ($x_20_*) and 5 of ($x_3_*) and 2 of ($x_1_*))) or

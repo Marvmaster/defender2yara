@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Iespy_H_2147592811_0
         $x_2_8 = "ShellExecuteA" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*))) or
             (all of ($x*))

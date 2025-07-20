@@ -18,6 +18,7 @@ rule VirTool_Win32_BruterShell_A_2147899112_0
         $x_1_4 = {c7 44 24 04 aa fc 0d 7c [0-128] c7 44 24 04 bd ca 3b d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule VirTool_Win32_BruterShell_A_2147899112_1
         $x_1_6 = {c7 44 24 04 89 4d 39 8c 89 44 24 08 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

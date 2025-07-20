@@ -26,6 +26,7 @@ rule BrowserModifier_Win32_Clodaconas_233693_0
         $x_1_12 = "uninstallFx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule BrowserModifier_Win32_Clodaconas_233693_1
         $x_1_6 = "5da059a482fd494db3f252126fbc3d5b" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -85,6 +87,7 @@ rule BrowserModifier_Win32_Clodaconas_233693_2
         $x_1_10 = "00:0C:29" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -113,6 +116,7 @@ rule BrowserModifier_Win32_Clodaconas_233693_3
         $x_1_9 = "MbbDaliGsmDevice SetDns : An exception occurred while trying to set the DNS:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

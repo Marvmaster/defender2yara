@@ -22,6 +22,7 @@ rule MonitoringTool_Win32_MsnSpybox_148855_0
         $x_1_8 = "Para visualizar o Msn Spybox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or

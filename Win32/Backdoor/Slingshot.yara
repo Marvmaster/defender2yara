@@ -23,6 +23,7 @@ rule Backdoor_Win32_Slingshot_A_2147726433_0
         $x_2_8 = {74 06 8b 11 51 ff 52 08 53 53 53 8d 44 24 1c 50 89 5c 24 20 ff d6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule Trojan_Win32_NetInjector_CPS_2147843350_0
         $x_5_1 = {8b 45 fc 99 bf ?? ?? ?? ?? f7 ff 8b 45 08 0f be 04 10 69 c0 89 0b 00 00 6b c0 ?? 99 83 e2 ?? 03 c2 c1 f8 ?? 6b c0 ?? 83 e0 ?? 33 f0 03 ce 8b 55 0c 03 55 fc 88 0a 0f be 45 fb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Worm_Win32_Looked_2147598082_0
         $x_30_9 = "WNetAddConnection2A" ascii //weight: 30
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_30_*) and 2 of ($x_6_*) and 1 of ($x_4_*) and 2 of ($x_2_*))) or
             (all of ($x*))

@@ -23,6 +23,7 @@ rule VirTool_WinNT_Vefisi_A_2147597815_0
         $x_2_8 = "KeServiceDescriptorTable" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule VirTool_WinNT_Vefisi_H_2147597995_0
         $x_4_6 = {25 77 73 0a 00 55 8b ec 83 ec 34 53 56 8b 75 24 57 33 ff 89 7d fc 89 3e 89 7e 04}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

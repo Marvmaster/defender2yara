@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Dofoil_A_2147650460_0
         $x_1_3 = {8b f8 8a 0f 80 f9 0d 74 12 80 f9 0a 74 0d 84 c9 74 09 8a 4f 01 47 80 f9 0d 75 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Smac_B_2147716508_0
         $x_1_5 = "&sres=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule TrojanDownloader_Win32_Smac_C_2147716548_0
         $x_1_8 = "[Execute failed!]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

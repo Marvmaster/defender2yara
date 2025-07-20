@@ -17,6 +17,7 @@ rule Backdoor_Win32_Babmote_A_2147644914_0
         $x_3_3 = "\" &&  goto try ||shutdown -r -t 0" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

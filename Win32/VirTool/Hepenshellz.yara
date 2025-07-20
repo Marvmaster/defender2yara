@@ -19,6 +19,7 @@ rule VirTool_Win32_Hepenshellz_B_2147844676_0
         $x_1_4 = {50 8b 85 28 ff ff ff 50 8b 8d 04 ff ff ff 51 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win32_Zasilk_A_2147625876_0
         $x_1_7 = "0100 4D 5A 36 01 01 00" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

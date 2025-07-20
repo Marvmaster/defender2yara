@@ -111,6 +111,7 @@ rule TrojanDownloader_Win32_Promon_A_2147575248_0
         $x_2_96 = {37 35 72 6c 6d 6f 6e 00 00 00 00 00 00 13 00 00 00 55 52 4c 44 6f 77 6e 6c 6f 61 64 54 6f 46 69 6c 65 41}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((15 of ($x_1_*))) or
             ((1 of ($x_2_*) and 13 of ($x_1_*))) or

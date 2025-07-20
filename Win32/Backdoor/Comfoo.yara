@@ -16,6 +16,7 @@ rule Backdoor_Win32_Comfoo_B_2147643783_0
         $x_1_2 = "\\\\.\\DevCtrlKrnl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_Comfoo_C_2147655750_0
         $x_1_5 = "\\\\.\\DevCtrlKrnl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -71,6 +73,7 @@ rule Backdoor_Win32_Comfoo_D_2147669238_0
         $x_1_9 = {63 3a 5c 74 65 6d 70 5c 61 62 63 61 62 63 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

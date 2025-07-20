@@ -21,6 +21,7 @@ rule Ransom_MSIL_Swappa_A_2147689076_0
         $x_1_7 = "decryptservice@" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Ransom_MSIL_Swappa_B_2147694716_0
         $x_1_3 = "Otkupnina sada iznosi" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

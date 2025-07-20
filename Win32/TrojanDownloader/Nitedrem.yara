@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Nitedrem_A_2147679110_0
         $x_2_4 = "6C5157422D1B5946330A5956375C575B7E5C5646375454596540" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule TrojanDownloader_Win32_Nitedrem_D_2147687838_0
         $x_1_6 = "iminfornexyinggagahhjkashd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule TrojanDownloader_Win32_Nitedrem_E_2147694713_0
         $x_1_4 = {00 00 30 00 33 00 38 00 35 00 42 00 31 00 36 00 39 00 42 00 34 00 46 00 42 00 34 00 36 00 44 00 46 00 39 00 33 00 41 00 31 00 34 00 41 00 46 00 33 00 39 00 46 00 34 00 35 00 46 00 34 00 30 00 42 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule TrojanDownloader_Win32_Nitedrem_F_2147712467_0
         $x_1_6 = {2e 00 63 00 6c 00 6f 00 75 00 64 00 66 00 72 00 6f 00 6e 00 74 00 2e 00 6e 00 65 00 74 00 2f 00 [0-16] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

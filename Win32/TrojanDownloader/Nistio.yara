@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Nistio_A_2147647734_0
         $x_1_2 = {31 30 33 34 00 31 30 33 39 00 31 30 32 38 00 31 32 35 36 00 ff ?? 80 20 00 [0-15] fd ?? 80 5c 69 6e 65 74 63 2e 64 6c 6c 00 2f 65 6e 64 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

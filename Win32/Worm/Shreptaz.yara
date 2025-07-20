@@ -18,6 +18,7 @@ rule Worm_Win32_Shreptaz_A_2147633379_0
         $x_1_4 = "tinyurl.com/n2anvs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

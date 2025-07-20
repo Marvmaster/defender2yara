@@ -18,6 +18,7 @@ rule Trojan_MSIL_Aenjaris_A_2147720095_0
         $x_1_3 = "serverjarvis.sytes.net/resource_vir/command.php?version=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_MSIL_Aenjaris_S_2147827337_0
         $x_1_7 = "Windows Update" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_MSIL_Aenjaris_AEN_2147944107_0
         $x_4_4 = "add \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"KeybordDriver\" /t REG_SZ /d" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Backdoor_Linux_Sshdkit_C_2147825988_0
         $x_1_2 = {66 83 3f 0a 48 89 fa 75 3b 83 7f 08 00 75 35 83 7f 0c 00 75 2f 81 7f 10 00 00 ff ff 75 26 44 8b 4f 14 66 44 8b 47 02 b9 04 00 00 00 31 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

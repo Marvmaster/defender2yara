@@ -23,6 +23,7 @@ rule Backdoor_MacOS_X_Kitmos_A_2147681629_0
         $x_2_9 = "/lang.php" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (8 of ($x*))
 }
 

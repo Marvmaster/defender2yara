@@ -17,6 +17,7 @@ rule DDoS_Win32_Orbit_A_2147682884_0
         $x_1_3 = {26 63 61 3d 33 00 00 00 26 63 61 3d 31 00 00 00 26 70 74 3d 00 00 00 00 26 63 61 3d 30 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

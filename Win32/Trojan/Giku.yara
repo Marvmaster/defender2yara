@@ -20,6 +20,7 @@ rule Trojan_Win32_Giku_A_2147631842_0
         $x_1_6 = "\\G%c%clu%cin\\%cb\\%cbp%ci%c3.g%cp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

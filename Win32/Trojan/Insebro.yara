@@ -15,6 +15,7 @@ rule Trojan_Win32_Insebro_A_133721_0
         $x_1_1 = {68 24 01 01 00 68 ?? ?? 00 10 8b 44 24 34 68 ?? ?? 00 10 50 ff 15 ?? ?? 00 10 83 f8 06 0f 84 6d 01 00 00 8b 4e 08 6a 00 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule Trojan_Win32_Insebro_B_139296_0
         $x_1_2 = "Navigation blocked</title>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win32_Insebro_C_139500_0
         $x_1_3 = "res://iehostcx32.dll/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

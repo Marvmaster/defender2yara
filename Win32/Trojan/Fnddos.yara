@@ -17,6 +17,7 @@ rule Trojan_Win32_Fnddos_2147642980_0
         $x_1_3 = "Trojan.Win32.OnlineGames.DasDNF" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

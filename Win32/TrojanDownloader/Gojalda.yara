@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Gojalda_A_2147652748_0
         $x_1_5 = {2b 44 24 04 c6 01 e9 83 e8 05 8b d0 c1 ea 08 88 51 02 8b d0 88 41 01 c1 ea 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

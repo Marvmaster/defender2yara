@@ -23,6 +23,7 @@ rule Ransom_Linux_RagnarLocker_B_2147812804_0
         $x_1_8 = {55 31 ed 89 e8 53 48 81 ec e8 01 00 00 48 8d 7c 24 0c 48 c7 04 24 41 00 00 00 4c 8d 64 24 0c f3 ab 48 8d 7c 24 2c b1 08 f3 ab 48 8d 7c 24 4c b1 08 f3 ab 48 8d bc 24 ec 00 00 00 b1 3d f3 ab bf 01 03 00 00 e8 ?? ?? ff ff 48 85 c0 48 89 c3 75 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (7 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Ransom_Linux_RagnarLocker_C_2147891956_0
         $x_1_4 = "Cooperating with the FBI, CISA and so on" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Ransom_Linux_RagnarLocker_D_2147892374_0
         $x_1_6 = ".onion/client/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

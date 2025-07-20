@@ -17,6 +17,7 @@ rule Trojan_Win64_SlipHammer_A_2147945130_0
         $x_1_2 = "Warning: File size mismatch after filling! Expected" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Socelars_SB_2147742480_0
         $x_1_7 = "Chrome\\User Data\\Default\\Cookies" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -57,6 +58,7 @@ rule TrojanSpy_Win32_Socelars_KA_2147763105_0
         $x_1_12 = "extensions.settings.fiknnmcbhfmchidhlmmgoklkeogmbcmd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +83,7 @@ rule TrojanSpy_Win32_Socelars_SBR_2147768097_0
         $x_1_4 = "SELECT host_key, name, value, encrypted_value" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +111,7 @@ rule TrojanSpy_Win32_Socelars_PAA_2147783625_0
         $x_1_7 = "mutexmutex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +145,7 @@ rule TrojanSpy_Win32_Socelars_G_2147793029_0
         $x_1_13 = "\"CreditCard\":" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 10 of ($x_1_*))) or
             (all of ($x*))

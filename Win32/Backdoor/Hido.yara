@@ -26,6 +26,7 @@ rule Backdoor_Win32_Hido_A_2147604741_0
         $x_2_11 = "219.232.224.126" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

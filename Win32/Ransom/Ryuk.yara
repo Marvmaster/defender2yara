@@ -21,6 +21,7 @@ rule Ransom_Win32_Ryuk_S_2147731377_0
         $x_1_6 = {b8 67 66 66 66 f7 e9 c1 fa 02 8b c2 c1 e8 1f 03 d0 8d 04 92 03 c0 2b c8 83 f9 09 7e ?? 83 c1 57 eb ?? 83 c1 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win32_Ryuk_2147734607_0
         $x_1_5 = "write full address of file, example" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_Win32_Ryuk_2147734607_1
         $x_4_6 = "-e,--encrypt option needed" wide //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -96,6 +99,7 @@ rule Ransom_Win32_Ryuk_B_2147741518_0
         $x_1_4 = "C:\\mypath\\somepath\\somefile.xls" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             (all of ($x*))
@@ -119,6 +123,7 @@ rule Ransom_Win32_Ryuk_AA_2147742729_0
         $x_1_1 = "RyukReadMe.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -140,6 +145,7 @@ rule Ransom_Win32_Ryuk_C_2147747880_0
         $x_1_1 = {0b 0b 00 00 75 33 00 8b 4d ?? 2b 4d ?? 89 4d ?? 8b 55 ?? c1 e2 04 89 55 ?? 8b 45 ?? 03 45 ?? 89 45 ?? 8b 4d ?? 03 4d ?? 89 4d ?? 8b 55 ?? c1 ea 05 89 55 ?? 81 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -168,6 +174,7 @@ rule Ransom_Win32_Ryuk_SB_2147749354_0
         $x_1_8 = "FindNextFileW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +196,7 @@ rule Ransom_Win32_Ryuk_BS_2147749793_0
         $x_1_1 = {6a 00 6a 00 ff 15 ?? ?? ?? ?? 8b 44 24 ?? 6a 23 33 d2 5b 8d 0c 06 8b c6 f7 f3 8b 44 24 ?? 8a 04 02 30 01 46 3b 74 24 ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +218,7 @@ rule Ransom_Win32_Ryuk_DHA_2147750748_0
         $x_10_1 = {8b c1 99 f7 7d 0c 8a 04 97 28 04 31 41 3b 4d 14 7c ee}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +243,7 @@ rule Ransom_Win32_Ryuk_AA_2147751390_0
         $x_1_4 = "PIMAGE_TLS_CALLBACK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -281,6 +291,7 @@ rule Ransom_Win32_Ryuk_AS_2147751929_0
         $x_1_2 = "JohnDoe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -306,6 +317,7 @@ rule Ransom_Win32_Ryuk_DA_2147761953_0
         $x_1_5 = "we will publish all private data on http://conti.news/TEST" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -332,6 +344,7 @@ rule Ransom_Win32_Ryuk_ZB_2147763439_0
         $x_1_6 = "Ntrtscan" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -360,6 +373,7 @@ rule Ransom_Win32_Ryuk_MZ_2147763690_0
         $x_1_4 = "marketcryptopartners.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -383,6 +397,7 @@ rule Ransom_Win32_Ryuk_BY_2147764334_0
         $x_1_3 = "shutdown -s -t 7? -c &quot;A VIRUS IS TAKING OVER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -406,6 +421,7 @@ rule Ransom_Win32_Ryuk_PA_2147766766_0
         $x_1_3 = "yuAAQERWEARDFGSFdgtgfgSZXAWQFAs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -430,6 +446,7 @@ rule Ransom_Win32_Ryuk_SA_2147766770_0
         $x_1_4 = {0f b6 c0 0f b6 12 01 d0 31 d2 f7 f5 8a ?? ?? ?? 8b ?? ?? ?? 02 04 ?? 8b ?? ?? ?? 32 04 ?? 8b ?? ?? ?? 88 04 ?? 47 3b ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -455,6 +472,7 @@ rule Ransom_Win32_Ryuk_2147767170_0
         $x_1_5 = "RYUKTM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -480,6 +498,7 @@ rule Ransom_Win32_Ryuk_2147767170_1
         $x_1_5 = "NtQueryInformationProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -501,6 +520,7 @@ rule Ransom_Win32_Ryuk_2147767170_2
         $x_1_1 = {83 c0 01 89 45 ?? 8b 4d ?? 3b 4d ?? 7d ?? 8b 45 ?? 99 f7 7d ?? 8b 45 ?? 8b 0c 90 89 4d ?? 8b 55 ?? 03 55 ?? 8a 02 88 45 ?? 60 33 c0 8a 45 ?? 33 c9 8b 4d ?? d2 c8 88 45 ?? 61 8b 4d ?? 03 4d ?? 8a 55 ?? 88 11 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -526,6 +546,7 @@ rule Ransom_Win32_Ryuk_DB_2147767180_0
         $x_1_5 = "del /s /f /q c:\\*.VHD c:\\*.bac c:\\*.bak c:\\*.wbcat c:\\*.bkf c:\\Backup*.* c:\\backup*.* c:\\*.set c:\\*.win c:\\*.dsk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -550,6 +571,7 @@ rule Ransom_Win32_Ryuk_A_2147768567_0
         $x_1_4 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -576,6 +598,7 @@ rule Ransom_Win32_Ryuk_BX_2147769574_0
         $x_1_6 = "KISSES_TO_MCAFEE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -597,6 +620,7 @@ rule Ransom_Win32_Ryuk_PI_2147773658_0
         $x_1_1 = {83 c1 01 89 4d ?? 81 ?? ?? ?? ?? 00 00 0f [0-5] 8b 55 ?? 0f b6 82 ?? ?? ?? ?? 89 45 ?? 8b 4d ?? 81 ?? a3 00 00 00 89 4d ?? 8b 55 ?? 83 c2 01 89 55 ?? 8b 45 ?? f7 d0 89 45 ?? 8b 4d ?? 33 4d ?? 89 4d ?? 8b 55 ?? 81 ?? a3 00 00 00 89 55 ?? 8b 45 ?? 03 45 ?? 89 45 ?? 8b 4d ?? 81 ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -646,6 +670,7 @@ rule Ransom_Win32_Ryuk_ZZ_2147782814_0
         $x_100_2 = {55 8b ec 83 ec ?? 53 (33 c9 56 57|56 57) [0-32] 99 f7 7d 0c 8b ?? ?? (89|8b) ?? ?? (89|8b) [0-10] 88 45 ff 60 33 c0 8a 45 ff 33 c9 8b 4d f4 d2 c8 88 45 ff 61 8b}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -667,6 +692,7 @@ rule Ransom_Win32_Ryuk_ZU_2147783741_0
         $x_100_2 = {8b 45 fc 83 c0 01 89 45 fc 83 7d fc 5a 7d 45 33 c9 8b 55 fc c1 e2 05 03 55 08 89 0a 89 4a 04 89 4a 08 89 4a 0c 89 4a 10 89 4a 14 89 4a 18 89 4a 1c 8b 45 fc c1 e0 05 8b 4d 08 8b 55 fc 89 54 01 18 8b 45 fc c1 e0 05 8b 4d 08 c7 44 01 1c 00 00 00 00 eb ac}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -718,6 +744,7 @@ rule Ransom_Win32_Ryuk_MKV_2147901364_0
         $x_1_3 = "$torlink = '" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Ragterneb_A_2147631863_0
         $x_1_4 = "\\userid.dat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Ragterneb_B_2147631864_0
         $x_1_5 = "\\userid.dat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -29,6 +29,7 @@ rule TrojanSpy_Win32_Sercofy_A_2147633504_0
         $x_3_15 = {c7 04 24 00 00 00 00 8a 06 84 c0 0f 84 b0 00 00 00 3c 25 74 03 a4 eb e8 8a 46 01 3c 64 74 5d}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_3_*) and 7 of ($x_1_*))) or

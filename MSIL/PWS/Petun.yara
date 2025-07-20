@@ -19,6 +19,7 @@ rule PWS_MSIL_Petun_A_2147642806_0
         $x_1_5 = "RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -44,6 +45,7 @@ rule PWS_MSIL_Petun_B_2147646586_0
         $x_1_2 = "Microsoft\\Protect\\Credentials" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

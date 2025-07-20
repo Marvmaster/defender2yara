@@ -19,6 +19,7 @@ rule Ransom_Win32_Jabaxsta_A_2147728857_0
         $x_10_5 = {64 65 6c 20 2f 73 20 2f 66 20 2f 71 20 ?? 3a 5c 2a 2e 56 48 44 20 ?? 3a 5c 2a 2e 62 61 63 20 ?? 3a 5c 2a 2e 62 61 6b 20 ?? 3a 5c 2a 2e 77 62 63 61 74 20 ?? 3a 5c 2a 2e 62 6b 66 20 ?? 3a 5c 42 61 63 6b 75 70 2a 2e 2a 20 ?? 3a 5c 62 61 63 6b 75 70 2a 2e 2a 20 ?? 3a 5c 2a 2e 73 65 74 20 ?? 3a 5c 2a 2e 77 69 6e 20 ?? 3a 5c 2a 2e 64 73 6b}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_10_*))) or
             ((2 of ($x_20_*))) or
@@ -47,6 +48,7 @@ rule Ransom_Win32_Jabaxsta_C_2147730121_0
         $x_1_4 = {72 51 4a 62 47 44 44 77 77 46 47 69 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Ransom_Win32_Jabaxsta_D_2147730122_0
         $x_1_8 = "tapSrZdjfNvFMdmZyoPfOLSRQUpulnwuWWgWovDwAgFZCAanopzefqETZVUaBFJvhkLWBxBpKXAvaZasPkQAcIvuidpEwb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

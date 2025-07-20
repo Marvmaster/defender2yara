@@ -20,6 +20,7 @@ rule Ransom_Win32_AnteFrigus_2147750284_0
         $x_1_5 = "Your files on this computer have been encrypted due to security issues" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win32_AnteFrigus_SK_2147759305_0
         $x_5_5 = "- personal key:" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

@@ -16,6 +16,7 @@ rule Trojan_Win32_Farfli_PF_2147709189_0
         $x_1_2 = {53 5b 90 8b e5 90 5d 33 c9 c6 45 fc 52 66 89 4d fd c6 45 fd 75 88 4d ff c6 45 fe 6e 90 55 8b ec 41 49 83 c4 09 83 ec 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Farfli_DSK_2147752581_0
         $x_2_1 = {8b 45 08 8a 4d 13 8a 10 32 d1 02 d1 88 10 40 89 45 08}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win32_Farfli_RSK_2147753848_0
         $x_1_1 = {8a 1c 30 8b 55 10 30 1c 32 8a 14 32 30 14 30 8a 14 30 8b 5d 10 30 14 33 48 ff 45 10 8b d0 2b 55 10 83 fa 01 7d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win32_Farfli_PA_2147754829_0
         $x_1_2 = {4a 81 ca 00 ff ff ff 42 89 55 f4 8b 55 0c 03 55 ec 8b 45 08 03 45 f4 8a 0a 32 08 8b 55 0c 03 55 ec 88 0a e9 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule Trojan_Win32_Farfli_A_2147756642_0
         $x_2_4 = "kinh.xmcxmr.com" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +130,7 @@ rule Trojan_Win32_Farfli_GC_2147760613_0
         $x_1_1 = {88 1c 32 89 55 ?? 8d 04 32 8b 45 ?? 03 c8 0f b6 04 37 0f b6 d3 03 c2 [0-48] 8a 04 32 30 01 ff 45 ?? 8b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule Trojan_Win32_Farfli_GC_2147760613_1
         $x_1_9 = "softWARE\\Microsoft\\Windows NT\\CurrentVersion\\SvcHost" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule Trojan_Win32_Farfli_GKM_2147779948_0
         $x_1_2 = {8b f8 8b 46 ?? 03 44 24 ?? 52 50 57 e8 ?? ?? ?? ?? 89 7e ?? 83 c4 0c 8b 4c 24 ?? 8b 11 8b 44 24 ?? 0f b7 4a ?? 83 c0 01 83 c6 28 3b c1 89 44 24 ?? 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -199,6 +207,7 @@ rule Trojan_Win32_Farfli_GA_2147782759_0
         $x_1_3 = "SVP7.PNG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +229,7 @@ rule Trojan_Win32_Farfli_MES_2147788930_0
         $x_1_1 = {8b 55 08 03 55 fc 8a 02 04 86 8b 4d 08 03 4d fc 88 01 8b 55 08 03 55 fc 8a 02 34 ?? 8b 4d 08 03 4d fc 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -241,6 +251,7 @@ rule Trojan_Win32_Farfli_EGZV_2147793439_0
         $x_1_1 = {66 83 fe 02 75 02 33 f6 8a 14 39 0f b7 c6 80 ea 7a 8a 44 45 fc 32 c2 46 88 04 39 41 3b 4d 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -262,6 +273,7 @@ rule Trojan_Win32_Farfli_MESS_2147793772_0
         $x_1_1 = {20 69 6e 20 44 4f 53 20 6d 6f 64 65 2e 0d 0d 0a 24 ?? ?? ?? ?? ?? ?? ?? ce 11 3d fa 8a 70 53 a9 8a 70 53 a9 8a 70 53 a9 49 7f 0e a9 80 70 53 a9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +298,7 @@ rule Trojan_Win32_Farfli_MA_2147794526_0
         $x_1_4 = {88 84 05 ec ?? ?? ?? 40 3b c6 72 f4 8a 45 ?? c6 85 ec ?? ?? ?? ?? 84 c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -310,6 +323,7 @@ rule Trojan_Win32_Farfli_MA_2147794526_1
         $x_1_4 = "InitCommonControls" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -332,6 +346,7 @@ rule Trojan_Win32_Farfli_DT_2147794589_0
         $x_1_2 = {8b 54 24 08 53 8a 1a 88 19 41 42 84 db 75 f6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -357,6 +372,7 @@ rule Trojan_Win32_Farfli_DZ_2147794590_0
         $x_1_5 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -383,6 +399,7 @@ rule Trojan_Win32_Farfli_DX_2147794591_0
         $x_1_6 = "Game Over QQ : 4648150" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -406,6 +423,7 @@ rule Trojan_Win32_Farfli_ZQ_2147794593_0
         $x_1_3 = "skybluehacker@yahoo.com.cn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -428,6 +446,7 @@ rule Trojan_Win32_Farfli_MC_2147795095_0
         $x_1_2 = {8a 14 08 8b 2f 8b da 81 e3 ?? ?? ?? ?? 03 dd 03 f3 81 e6 ?? ?? ?? ?? 79 08 4e 81 ce ?? ?? ?? ?? 46 8a 1c 0e 83 c7 04 88 1c 08 40 3d ?? ?? ?? ?? 88 14 0e 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -454,6 +473,7 @@ rule Trojan_Win32_Farfli_MC_2147795095_1
         $x_1_6 = "IsWow64Process" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -479,6 +499,7 @@ rule Trojan_Win32_Farfli_BE_2147795103_0
         $x_1_5 = "Eidolon.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -506,6 +527,7 @@ rule Trojan_Win32_Farfli_CS_2147795471_0
         $x_1_7 = "knsdtray.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -529,6 +551,7 @@ rule Trojan_Win32_Farfli_AA_2147795841_0
         $x_1_3 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -552,6 +575,7 @@ rule Trojan_Win32_Farfli_CV_2147796158_0
         $x_1_3 = {67 42 a2 e4 28 22 69 32 4d 14 1b 44 e8 8d 35 9d 17 19 0b 43 dc 34 9c 7f 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -576,6 +600,7 @@ rule Trojan_Win32_Farfli_CV_2147796158_1
         $x_1_4 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -598,6 +623,7 @@ rule Trojan_Win32_Farfli_AF_2147796160_0
         $x_1_2 = {8b c7 8b cf c1 f8 05 83 e1 1f 8b 04 85 a0 1d 43 00 8d 04 c8 8b 0b 89 08 8a 4d 00 88 48 04 47 45 83 c3 04 3b fe 7c ba}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -620,6 +646,7 @@ rule Trojan_Win32_Farfli_AB_2147796537_0
         $x_1_2 = {8b 0b 8b 73 04 8b 7c 24 18 8b d1 03 f7 8b f8 c1 e9 02 f3 a5 8b ca 83 e1 03 f3 a4 89 43 f8 8b 4c 24 20 8b 44 24 10 40 83 c3 28 8b 11 33 c9 89 44 24 10 66 8b 4a 06 3b c1 0f 8c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -641,6 +668,7 @@ rule Trojan_Win32_Farfli_AB_2147796537_1
         $x_2_1 = {bb e9 7e f3 64 48 09 57 56 53 ff d0 08 0c e8 15 ff 00 bb db fb 5c 82 b0 4e 0f 24 0a 4c 33 89 45 af b9 dd}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -663,6 +691,7 @@ rule Trojan_Win32_Farfli_AB_2147796537_2
         $x_1_2 = "File created successfully." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -685,6 +714,7 @@ rule Trojan_Win32_Farfli_AG_2147796538_0
         $x_2_2 = {6a 00 6a 00 ff 15 ?? ?? ?? ?? 6a ff 50 ff 15 ?? ?? ?? ?? 68 2c 01 00 00 ff 15 ?? ?? ?? ?? 32 c0 c3 cc}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -715,6 +745,7 @@ rule Trojan_Win32_Farfli_MB_2147796698_0
         $x_1_10 = "[End]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -741,6 +772,7 @@ rule Trojan_Win32_Farfli_MB_2147796698_1
         $x_1_6 = "GetThreadPriority" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -767,6 +799,7 @@ rule Trojan_Win32_Farfli_MD_2147796699_0
         $x_1_6 = "SetThreadContext" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -789,6 +822,7 @@ rule Trojan_Win32_Farfli_MD_2147796699_1
         $x_1_2 = "Serpiei" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -813,6 +847,7 @@ rule Trojan_Win32_Farfli_ME_2147796701_0
         $x_1_4 = "ScreenToClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -835,6 +870,7 @@ rule Trojan_Win32_Farfli_ME_2147796701_1
         $x_1_2 = {b9 41 00 00 00 33 c0 8d 7c 24 64 8d 54 24 64 f3 ab bf ?? ?? ?? ?? 83 c9 ff f2 ae f7 d1 2b f9 c7 44 24 60 00 00 00 00 8b c1 8b f7 8b fa c1 e9 02 f3 a5 8b c8 33 c0 83 e1 03 f3 a4 8d 7c 24 64 83 c9 ff f2 ae f7 d1 49 51 8d 4c 24 68 51}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -858,6 +894,7 @@ rule Trojan_Win32_Farfli_MH_2147796714_0
         $x_1_3 = {8b c3 33 d2 f7 75 10 8b 45 0c 88 1c 33 43 0f b6 04 02 89 07 83 c7 04 3b d9 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -883,6 +920,7 @@ rule Trojan_Win32_Farfli_MH_2147796714_1
         $x_1_5 = "Ctrl+PageDown" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -910,6 +948,7 @@ rule Trojan_Win32_Farfli_CQ_2147796823_0
         $x_1_7 = "SHGetSpecialFolderPathA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -931,6 +970,7 @@ rule Trojan_Win32_Farfli_CT_2147796944_0
         $x_1_1 = {8b 45 0c f7 d8 89 45 0c b8 34 00 00 00 99 f7 7d 0c 83 c0 06 89 45 fc 8b 4d fc 69 c9 b9 79 37 9e 89 4d f4 8b 55 08 33 c0 8a 02 89 45 ec 8b 4d f4 c1 e9 02 83 e1 03 89 4d f0 8b 55 0c 83 ea 01 89 55 f8 eb 09 8b 45 f8 83 e8 01 89 45 f8 83 7d f8 00 76 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -956,6 +996,7 @@ rule Trojan_Win32_Farfli_FA_2147797671_0
         $x_1_5 = "http://www.1.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -979,6 +1020,7 @@ rule Trojan_Win32_Farfli_AW_2147797755_0
         $x_1_3 = {8b 0b 8b 73 04 8b 7c 24 18 8b d1 03 f7 8b f8 c1 e9 02 f3 a5 8b ca 83 e1 03 f3 a4 89 43 f8 8b 4c 24 20 8b 44 24 10 40 83 c3 28 8b 11 33 c9 89 44 24 10 66 8b 4a 06 3b c1 0f 8c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1001,6 +1043,7 @@ rule Trojan_Win32_Farfli_FG_2147797997_0
         $x_1_2 = "DatePickerDemo.EXE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1022,6 +1065,7 @@ rule Trojan_Win32_Farfli_DFD_2147799513_0
         $x_1_1 = {8a 44 1e 01 8a 14 39 46 32 d0 8b c1 88 14 39 99 bd 05 00 00 00 f7 fd 85 d2 75 02 33 f6 8b 44 24 18 41 3b c8 7c da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1048,6 +1092,7 @@ rule Trojan_Win32_Farfli_AH_2147805263_0
         $x_3_6 = "SleepConditionVariableCS" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1070,6 +1115,7 @@ rule Trojan_Win32_Farfli_MO_2147805567_0
         $x_1_2 = {56 8b 74 24 0c 57 56 e8 ?? ?? ?? ?? ff 4e 04 59 78 0f 8b 0e 8a 44 24 0c 0f b6 f8 88 01 ff 06 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1096,6 +1142,7 @@ rule Trojan_Win32_Farfli_CBG_2147806312_0
         $x_1_6 = "GetTickCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1129,6 +1176,7 @@ rule Trojan_Win32_Farfli_MR_2147807601_0
         $x_1_13 = "GetAsyncKeyState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1157,6 +1205,7 @@ rule Trojan_Win32_Farfli_MP_2147807760_0
         $x_1_8 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1180,6 +1229,7 @@ rule Trojan_Win32_Farfli_FC_2147807786_0
         $x_1_3 = {8a 1c 30 8b 55 10 30 1c 32 8a 14 32 30 14 30 8a 14 30 8b 5d 10 30 14 33 48 ff 45 10 8b d0 2b 55 10 83 fa 01 7d da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1206,6 +1256,7 @@ rule Trojan_Win32_Farfli_MJ_2147808461_0
         $x_1_6 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1240,6 +1291,7 @@ rule Trojan_Win32_Farfli_MM_2147808462_0
         $x_1_14 = "LockResource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1262,6 +1314,7 @@ rule Trojan_Win32_Farfli_MV_2147808966_0
         $x_1_2 = {8a 4c 0e 08 88 4c 02 08 8b 55 f8 8b 42 04 8b 4d f8 8a 55 ff 88 54 01 08 8b 45 f8 8b 48 04 8b 55 f8 0f b6 44 0a 08 8b 4d f8 8b 11 8b 4d f8 0f b6 54 11 08 03 c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1284,6 +1337,7 @@ rule Trojan_Win32_Farfli_TI_2147809196_0
         $x_1_2 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1305,6 +1359,7 @@ rule Trojan_Win32_Farfli_RPZ_2147809255_0
         $x_1_1 = {8a 11 02 d0 32 d0 02 d0 32 d0 88 11}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1326,6 +1381,7 @@ rule Trojan_Win32_Farfli_RPZ_2147809255_1
         $x_1_1 = {8b 10 8b 40 10 33 ff 03 c2 33 d2 8b c8 2b ce 3b f0 0f 47 ca 89 4d 0c 85 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1347,6 +1403,7 @@ rule Trojan_Win32_Farfli_RPZ_2147809255_2
         $x_1_1 = {85 c9 76 11 8d 44 24 0c 50 52 51 8b 4f e4 51 ff 15 ?? ?? ?? ?? 8b 13 0f b7 42 06 45 83 c7 28 3b e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1368,6 +1425,7 @@ rule Trojan_Win32_Farfli_RPZ_2147809255_3
         $x_1_1 = {c6 44 24 28 4b c6 44 24 2a 52 c6 44 24 2b 4e c6 44 24 2d 4c c6 44 24 2e 33 c6 44 24 2f 32 c6 44 24 30 2e c6 44 24 31 64 88 44 24 32 88 44 24 33 c6 44 24 34 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1395,6 +1453,7 @@ rule Trojan_Win32_Farfli_MS_2147809308_0
         $x_1_7 = {8d 95 6c ff ff ff 52 6a 00 68 03 00 1f 00 ff 15 ?? ?? ?? ?? 8b f0 85 f6 75 ?? 68 c8 00 00 00 ff 15 ?? ?? ?? ?? 47 81 ff e8 03 00 00 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1420,6 +1479,7 @@ rule Trojan_Win32_Farfli_CBF_2147810302_0
         $x_1_5 = "GetTickCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1441,6 +1501,7 @@ rule Trojan_Win32_Farfli_B_2147811679_0
         $x_1_1 = {9c 60 e8 00 00 00 00 5d b8 07 00 00 00 2b e8 8d b5 19 fe ff ff 8b 06 83 f8 00 74 11 8d b5 41 fe ff ff 8b 06 83 f8 01 0f 84 4b 02 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1468,6 +1529,7 @@ rule Trojan_Win32_Farfli_CK_2147811826_0
         $x_1_7 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1491,6 +1553,7 @@ rule Trojan_Win32_Farfli_CI_2147812209_0
         $x_2_3 = "VirtualAlloc" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1513,6 +1576,7 @@ rule Trojan_Win32_Farfli_MY_2147812290_0
         $x_1_2 = "itoldyouso" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1540,6 +1604,7 @@ rule Trojan_Win32_Farfli_MZ_2147812733_0
         $x_1_7 = "/forcerun" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1570,6 +1635,7 @@ rule Trojan_Win32_Farfli_MAA_2147812736_0
         $x_1_10 = "maindll.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1594,6 +1660,7 @@ rule Trojan_Win32_Farfli_CL_2147813104_0
         $x_1_4 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1618,6 +1685,7 @@ rule Trojan_Win32_Farfli_MAZ_2147813150_0
         $x_1_4 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1642,6 +1710,7 @@ rule Trojan_Win32_Farfli_MAZ_2147813150_1
         $x_1_4 = "@.themida" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1666,6 +1735,7 @@ rule Trojan_Win32_Farfli_MAC_2147813453_0
         $x_1_4 = {79 6d ee b0 b0 e8 2e 7a 9b b5 f3 32 e7 c4 2b 9c e0 85 da 87 f7 2a 71 79 eb c1 aa c5 dd 0e c9 f1 ea 14 9f 91 3c af b2 0c 8d c4 53 f9 9c ce 99 f4 0e dc 7c 22 b6 43 96 cc 48 9c 34 bd da d1 c5 4e df 43 d6 50 58 5e 25 3d 79 21 6d 55 03 68 0f a9 03 ff a9 1e c1 d7 38 fd 09 d4 6f 91 26 19 45 e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1694,6 +1764,7 @@ rule Trojan_Win32_Farfli_MAD_2147813455_0
         $x_1_8 = "Process32First" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1722,6 +1793,7 @@ rule Trojan_Win32_Farfli_MAE_2147813456_0
         $x_1_8 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1748,6 +1820,7 @@ rule Trojan_Win32_Farfli_MAF_2147813457_0
         $x_1_6 = "LockServiceDatabase" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1776,6 +1849,7 @@ rule Trojan_Win32_Farfli_MAH_2147813458_0
         $x_1_8 = "UnhookWindowsHookEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1804,6 +1878,7 @@ rule Trojan_Win32_Farfli_MAI_2147813792_0
         $x_1_8 = "keybd_event" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1834,6 +1909,7 @@ rule Trojan_Win32_Farfli_MAJ_2147813793_0
         $x_1_10 = "[INSERT]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1864,6 +1940,7 @@ rule Trojan_Win32_Farfli_MAL_2147813794_0
         $x_1_10 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1886,6 +1963,7 @@ rule Trojan_Win32_Farfli_CM_2147813930_0
         $x_1_2 = {32 c2 02 c8 8b 45 ?? 32 d9 00 1c 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1911,6 +1989,7 @@ rule Trojan_Win32_Farfli_RPM_2147814100_0
         $x_1_5 = "d3MyXzMyLmRsbA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1935,6 +2014,7 @@ rule Trojan_Win32_Farfli_CO_2147814341_0
         $x_1_4 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -1963,6 +2043,7 @@ rule Trojan_Win32_Farfli_AK_2147814642_0
         $x_1_4 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1985,6 +2066,7 @@ rule Trojan_Win32_Farfli_AL_2147815297_0
         $x_2_2 = "ServiceMain" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2008,6 +2090,7 @@ rule Trojan_Win32_Farfli_AM_2147815301_0
         $x_1_3 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2039,6 +2122,7 @@ rule Trojan_Win32_Farfli_MAM_2147815334_0
         $x_1_11 = "Yow! Bad host lookup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2066,6 +2150,7 @@ rule Trojan_Win32_Farfli_AO_2147815824_0
         $x_1_7 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2088,6 +2173,7 @@ rule Trojan_Win32_Farfli_AR_2147815913_0
         $x_2_2 = "C:\\input.txt" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2111,6 +2197,7 @@ rule Trojan_Win32_Farfli_AU_2147816086_0
         $x_1_3 = "%s.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2137,6 +2224,7 @@ rule Trojan_Win32_Farfli_AV_2147816087_0
         $x_1_6 = "ServiceMain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2164,6 +2252,7 @@ rule Trojan_Win32_Farfli_AP_2147816191_0
         $x_1_3 = "fuckyou" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2186,6 +2275,7 @@ rule Trojan_Win32_Farfli_QT_2147816257_0
         $x_1_2 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2207,6 +2297,7 @@ rule Trojan_Win32_Farfli_DA_2147816262_0
         $x_10_1 = {b9 01 00 00 00 66 3b cb 75 02 33 db 80 04 3e 86 6a 00 ff d5 6a 00 ff d5 6a 00 ff d5 0f b7 d3 8a 44 54 14 30 04 3e 46 43 3b 74 24 10 7c d2}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2229,6 +2320,7 @@ rule Trojan_Win32_Farfli_DA_2147816262_1
         $x_1_2 = "360\\360Safe\\SB360.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2251,6 +2343,7 @@ rule Trojan_Win32_Farfli_MAQ_2147816489_0
         $x_1_2 = {8b 45 08 8a 08 32 4d ec 8b 55 08 88 0a 8b 45 08 8a 08 02 4d ec 8b 55 08 88 0a b8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2273,6 +2366,7 @@ rule Trojan_Win32_Farfli_AQ_2147816558_0
         $x_2_2 = {23 de 30 0a 8d 1d [0-4] fb 6b 0e ?? 19 e1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2300,6 +2394,7 @@ rule Trojan_Win32_Farfli_F_2147816643_0
         $x_1_7 = "LoadResource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2327,6 +2422,7 @@ rule Trojan_Win32_Farfli_AT_2147816816_0
         $x_1_7 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2354,6 +2450,7 @@ rule Trojan_Win32_Farfli_AD_2147817120_0
         $x_1_7 = {62 62 62 62 62 62 62 62 62 62 00 63 63 63 63 63}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2379,6 +2476,7 @@ rule Trojan_Win32_Farfli_AX_2147819103_0
         $x_1_5 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2401,6 +2499,7 @@ rule Trojan_Win32_Farfli_AY_2147819131_0
         $x_2_2 = "VirtualAlloc" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2423,6 +2522,7 @@ rule Trojan_Win32_Farfli_AZ_2147819390_0
         $x_2_2 = "VirtualAlloc" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2445,6 +2545,7 @@ rule Trojan_Win32_Farfli_BA_2147821729_0
         $x_1_2 = "sjaklej4ijalkbnlksjlksjkg.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2467,6 +2568,7 @@ rule Trojan_Win32_Farfli_BB_2147822929_0
         $x_1_2 = {50 8b c3 8b c3 58 83 ea 01 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2488,6 +2590,7 @@ rule Trojan_Win32_Farfli_BC_2147823212_0
         $x_2_1 = {8a 10 80 f2 15 80 c2 15 88 10 40 83 ee 01 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2515,6 +2618,7 @@ rule Trojan_Win32_Farfli_BD_2147823633_0
         $x_1_7 = "Wang" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2539,6 +2643,7 @@ rule Trojan_Win32_Farfli_BJ_2147826859_0
         $x_1_4 = "fuckyou" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2561,6 +2666,7 @@ rule Trojan_Win32_Farfli_BL_2147827262_0
         $x_1_2 = "ServiceMain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2583,6 +2689,7 @@ rule Trojan_Win32_Farfli_BM_2147827282_0
         $x_1_2 = "admind.f3322.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2608,6 +2715,7 @@ rule Trojan_Win32_Farfli_BK_2147827616_0
         $x_1_5 = "GetTickCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2633,6 +2741,7 @@ rule Trojan_Win32_Farfli_BN_2147827672_0
         $x_1_5 = "[Scroll Lock]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2657,6 +2766,7 @@ rule Trojan_Win32_Farfli_BO_2147827777_0
         $x_1_4 = "[Print Screen]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2678,6 +2788,7 @@ rule Trojan_Win32_Farfli_RPW_2147828539_0
         $x_1_1 = {33 c0 8a 1e 8b d0 81 e2 ff ff 00 00 8a 54 54 0c 32 d1 32 d3 40 f6 d2 88 16 41 46 66 3b cf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2699,6 +2810,7 @@ rule Trojan_Win32_Farfli_BP_2147828568_0
         $x_2_1 = {8a 14 01 80 ea 76 80 f2 23 88 14 01 41 3b ce 7c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2720,6 +2832,7 @@ rule Trojan_Win32_Farfli_BQ_2147828574_0
         $x_2_1 = {8b 55 fc 8a 1c 11 80 f3 36 88 1c 11 8b 55 fc 8a 1c 11 80 c3 12 88 1c 11 8b 55 fc 8a 1c 11 80 c3 bc 88 1c 11 8b 55 fc 8a 1c 11 80 f3 18 88 1c 11 41 3b c8 7c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2742,6 +2855,7 @@ rule Trojan_Win32_Farfli_BS_2147828691_0
         $x_2_2 = "cracked by ximo" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2764,6 +2878,7 @@ rule Trojan_Win32_Farfli_BT_2147828973_0
         $x_2_2 = {8a 14 01 80 ea 46 80 f2 19 88 14 01 41 3b ce 7c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2786,6 +2901,7 @@ rule Trojan_Win32_Farfli_BU_2147829178_0
         $x_1_2 = "PluginMe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2810,6 +2926,7 @@ rule Trojan_Win32_Farfli_BV_2147829295_0
         $x_1_4 = "Connect OK!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2833,6 +2950,7 @@ rule Trojan_Win32_Farfli_BW_2147829562_0
         $x_1_3 = "103.59.103.16/SHELL.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2862,6 +2980,7 @@ rule Trojan_Win32_Farfli_BX_2147829563_0
         $x_1_9 = "Program Files\\Ru%d.EXE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2887,6 +3006,7 @@ rule Trojan_Win32_Farfli_BY_2147829918_0
         $x_1_5 = "vmp0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2910,6 +3030,7 @@ rule Trojan_Win32_Farfli_DB_2147830715_0
         $x_1_3 = "C:\\1.jpg" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2935,6 +3056,7 @@ rule Trojan_Win32_Farfli_BZ_2147830839_0
         $x_1_5 = "ekimhuqcroanflvzgdjtxypswb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2958,6 +3080,7 @@ rule Trojan_Win32_Farfli_DC_2147830942_0
         $x_1_3 = "C:\\TEMP\\syslog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2979,6 +3102,7 @@ rule Trojan_Win32_Farfli_RPT_2147832127_0
         $x_1_1 = {8d 0c 06 8b 44 24 1c 0f be 04 07 99 f7 fb 8b c6 80 c2 4f 30 11 59 99 f7 f9 47 85 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3000,6 +3124,7 @@ rule Trojan_Win32_Farfli_RPT_2147832127_1
         $x_1_1 = {0f b7 8c 55 f4 fd ff ff 83 f9 3b 74 08 83 f9 64 74 03 83 f1 1b 66 89 8c 55 ec fb ff ff 42 3b d0 7c de}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3021,6 +3146,7 @@ rule Trojan_Win32_Farfli_AAD_2147833807_0
         $x_5_1 = {8a 04 3a 34 30 2c 49 88 04 3a 42 3b d3 7c f1}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3046,6 +3172,7 @@ rule Trojan_Win32_Farfli_MAV_2147835155_0
         $x_1_5 = "QueryPerformanceCounter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3071,6 +3198,7 @@ rule Trojan_Win32_Farfli_MAU_2147835822_0
         $x_1_5 = "QueryPerformanceCounter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3093,6 +3221,7 @@ rule Trojan_Win32_Farfli_MAS_2147836277_0
         $x_5_2 = {91 2b db cc 5c 5c 9c 8a c7 07 02 ?? ?? ?? ?? ?? 00 00 00 8f ?? ?? ?? ?? cc ab 66 e1 2f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3118,6 +3247,7 @@ rule Trojan_Win32_Farfli_MAT_2147836278_0
         $x_1_5 = "SEGetLicenseUserInfoW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3140,6 +3270,7 @@ rule Trojan_Win32_Farfli_MAW_2147836529_0
         $x_1_2 = {67 fc 92 f5 04 ad 49 66 8b c2 f6 dc 3a e5 66 0f bb d8 52 66 0f a3 e0 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3166,6 +3297,7 @@ rule Trojan_Win32_Farfli_MAX_2147836996_0
         $x_1_6 = "WTSSendMessageW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3192,6 +3324,7 @@ rule Trojan_Win32_Farfli_MAY_2147837861_0
         $x_1_6 = "WTSSendMessageW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3213,6 +3346,7 @@ rule Trojan_Win32_Farfli_CZ_2147838504_0
         $x_5_1 = {8b 55 fc 81 e2 ?? ?? ?? ?? 8b 45 08 03 45 e0 8a 08 32 4c 55 ec 8b 55 08 03 55 e0 88 0a 66 8b 45 fc 66 05 01 00 66 89 45 fc eb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3236,6 +3370,7 @@ rule Trojan_Win32_Farfli_MAR_2147840322_0
         $x_1_3 = {83 ed 04 88 2c 24 89 45 00 c6 04 24 7e 88 0c 24 9c 8d 64 24 24 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3263,6 +3398,7 @@ rule Trojan_Win32_Farfli_EC_2147842699_0
         $x_1_7 = "opcpu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3291,6 +3427,7 @@ rule Trojan_Win32_Farfli_EC_2147842699_1
         $x_1_8 = "Client hook" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3314,6 +3451,7 @@ rule Trojan_Win32_Farfli_MF_2147843132_0
         $x_2_3 = "https://note.youdao.com/yws/public/resource/d443b2f84ff00a25620bd5562b07a800/xmlnote" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3339,6 +3477,7 @@ rule Trojan_Win32_Farfli_EM_2147843920_0
         $x_1_5 = "47.242.89.34" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3374,6 +3513,7 @@ rule Trojan_Win32_Farfli_EM_2147843920_1
         $x_1_15 = "FUCK YOU" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3396,6 +3536,7 @@ rule Trojan_Win32_Farfli_MG_2147843954_0
         $x_5_2 = {51 51 51 51 51 51 51 51 51 51 51 51 51 51 51 51 51 51 51 51 51 51 51 51 01 14 51 51 1d 50 55 51 9b b6 ab 32 51 51 51 51 51 51}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3432,6 +3573,7 @@ rule Trojan_Win32_Farfli_BAJ_2147843963_0
         $x_1_16 = "guduo.xyz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (15 of ($x*))
 }
 
@@ -3460,6 +3602,7 @@ rule Trojan_Win32_Farfli_BAK_2147843964_0
         $x_1_8 = "FUCK YOU" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3482,6 +3625,7 @@ rule Trojan_Win32_Farfli_BAL_2147844298_0
         $x_1_2 = "115.28.72.212:5760/850lobby.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3510,6 +3654,7 @@ rule Trojan_Win32_Farfli_RPQ_2147844744_0
         $x_1_8 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3532,6 +3677,7 @@ rule Trojan_Win32_Farfli_BAM_2147844813_0
         $x_2_2 = {2b f2 8b f8 8a 04 39 8d 49 01 34 51 88 41 ff 83 ee 01 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3557,6 +3703,7 @@ rule Trojan_Win32_Farfli_BAN_2147844941_0
         $x_1_5 = "tg://setlanguage?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3582,6 +3729,7 @@ rule Trojan_Win32_Farfli_BAO_2147845021_0
         $x_1_5 = {83 c4 08 6a 05 68 b4 51 40 00 68 0c 54 40 00 68 e8 51 40 00 68 ac 51 40 00 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3603,6 +3751,7 @@ rule Trojan_Win32_Farfli_RPX_2147845326_0
         $x_1_1 = {09 c9 01 ff 8d 14 02 8b 12 81 e2 ff 00 00 00 81 c0 01 00 00 00 09 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3624,6 +3773,7 @@ rule Trojan_Win32_Farfli_RPX_2147845326_1
         $x_1_1 = {31 33 81 ea 01 00 00 00 bf ?? ?? ?? ?? 43 29 ff 4f 39 c3 75 d5 01 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3645,6 +3795,7 @@ rule Trojan_Win32_Farfli_RPX_2147845326_2
         $x_1_1 = {5a 57 5b 01 fb e8 ?? 00 00 00 81 ef 01 00 00 00 21 df 31 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3666,6 +3817,7 @@ rule Trojan_Win32_Farfli_RPX_2147845326_3
         $x_1_1 = {8b 45 f8 83 c0 01 89 45 f8 8b 4d ff 81 e1 ff 00 00 00 8b 55 fe 81 e2 ff 00 00 00 0b ca 85 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3687,6 +3839,7 @@ rule Trojan_Win32_Farfli_RPX_2147845326_4
         $x_1_1 = {8b d8 89 5c 24 50 85 db 74 78 33 c0 80 34 30 63 40 3d 8c 03 00 00 72 f4 8d 44 24 14 50 6a 00 6a 00 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3709,6 +3862,7 @@ rule Trojan_Win32_Farfli_RPX_2147845326_5
         $x_1_2 = "hdietrich2@hotmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3730,6 +3884,7 @@ rule Trojan_Win32_Farfli_RPX_2147845326_6
         $x_1_1 = {c6 44 24 2c 4b c6 44 24 2e 52 c6 44 24 2f 4e c6 44 24 31 4c c6 44 24 32 33 c6 44 24 33 32 c6 44 24 34 2e c6 44 24 35 64 c6 44 24 38 00 c6 44 24 1c 56 c6 44 24 1d 69 c6 44 24 1e 72 c6 44 24 1f 74 c6 44 24 20 75 c6 44 24 21 61 c6 44 24 23 41 c6 44 24 26 6f c6 44 24 27 63 c6 44 24 28 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3755,6 +3910,7 @@ rule Trojan_Win32_Farfli_BAQ_2147845548_0
         $x_1_5 = "[Print Screen]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3780,6 +3936,7 @@ rule Trojan_Win32_Farfli_BAP_2147845740_0
         $x_1_5 = "[Ilsepr]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3802,6 +3959,7 @@ rule Trojan_Win32_Farfli_BAR_2147846118_0
         $x_2_2 = {50 c6 44 24 36 52 c6 44 24 37 4e c6 44 24 39 4c c6 44 24 3a 33 c6 44 24 3b 32 c6 44 24 3c 2e c6 44 24 3d 64 c6 44 24 3e 6c c6 44 24 3f 6c c6 44 24 40 00 c6 44 24 28 56 c6 44 24 29 69 c6 44 24 2a 72 88 5c 24 2b c6 44 24 2c 75 c6 44 24 2d 61 c6 44 24 2e 6c c6 44 24 2f 46 c6 44 24 30 72 c6 44 24 31 65 c6 44 24 32 65 c6 44 24 33 00 ff d6 8b 3d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3823,6 +3981,7 @@ rule Trojan_Win32_Farfli_BAS_2147846143_0
         $x_5_1 = {8b 4d f0 83 c1 01 89 4d f0 83 7d f0 10 7d 1b 8b 55 f0 0f b6 44 15 a4 8b 4d f0 0f be 54 0d c0 33 d0 8b 45 f0 88 54 05 c0 eb}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3847,6 +4006,7 @@ rule Trojan_Win32_Farfli_BAT_2147846660_0
         $x_1_4 = "154.221.27.200/360.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3871,6 +4031,7 @@ rule Trojan_Win32_Farfli_BAV_2147847090_0
         $x_1_4 = "154.211.13.11" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3895,6 +4056,7 @@ rule Trojan_Win32_Farfli_BAU_2147847190_0
         $x_5_1 = {83 65 c4 00 6a 6b 53 c7 45 b4 30 00 00 00 c7 45 b8 03 00 00 00 c7 45 bc [0-4] 89 5d c8 ff d6 68 00 7f 00 00 6a 00 89 45 cc ff 15 [0-4] 6a 6c ff 75 c8 89 45 d0 c7 45 d4 06 00 00 00 c7 45 d8 6d 00 00 00 89 7d dc ff d6}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3918,6 +4080,7 @@ rule Trojan_Win32_Farfli_GHJ_2147847995_0
         $x_1_3 = "\\KLSNIF.key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3940,6 +4103,7 @@ rule Trojan_Win32_Farfli_BAW_2147848227_0
         $x_2_2 = "cloudservicesdevc.tk/picturess/2023" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3962,6 +4126,7 @@ rule Trojan_Win32_Farfli_BAX_2147848228_0
         $x_2_2 = {8b cb 2b cf 8a 14 01 80 f2 62 88 10 40 4e 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3987,6 +4152,7 @@ rule Trojan_Win32_Farfli_BAY_2147848394_0
         $x_1_5 = "Users\\Public\\Downloads\\1.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4008,6 +4174,7 @@ rule Trojan_Win32_Farfli_RPY_2147849503_0
         $x_1_1 = {57 8d 45 fc 50 ff 36 ff d3 3d 0d 00 00 c0 74 24 83 c6 04 83 c7 10 81 fe}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4029,6 +4196,7 @@ rule Trojan_Win32_Farfli_RPY_2147849503_1
         $x_1_1 = {31 1e 29 c0 46 29 c0 47 39 ce 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4050,6 +4218,7 @@ rule Trojan_Win32_Farfli_RPY_2147849503_2
         $x_1_1 = {29 c0 31 37 01 db 81 c7 01 00 00 00 39 d7 75 e0 21 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4071,6 +4240,7 @@ rule Trojan_Win32_Farfli_RPY_2147849503_3
         $x_1_1 = {09 fe 29 ff 8d 04 02 8b 00 81 c7 01 00 00 00 81 e0 ff 00 00 00 81 c2 01 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4092,6 +4262,7 @@ rule Trojan_Win32_Farfli_DAM_2147849982_0
         $x_5_1 = {8a 01 32 c2 02 c2 88 01 41 83 ee 01 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4116,6 +4287,7 @@ rule Trojan_Win32_Farfli_DAM_2147849982_1
         $x_1_4 = "[Backspace]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4141,6 +4313,7 @@ rule Trojan_Win32_Farfli_DAN_2147850271_0
         $x_1_5 = "39.109.126.107/360.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4169,6 +4342,7 @@ rule Trojan_Win32_Farfli_DAO_2147850600_0
         $x_1_5 = "OTA5MDkwOTAtNDQ4Yi0wNDI0LTU2OGItZjE1MGU4YTMwYTAw" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4191,6 +4365,7 @@ rule Trojan_Win32_Farfli_DAP_2147850618_0
         $x_2_2 = {8d 45 e0 50 51 c7 45 e0 43 72 65 61 c7 45 e4 74 65 45 76 c7 45 e8 65 6e 74 41 88 5d ec ff d7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4220,6 +4395,7 @@ rule Trojan_Win32_Farfli_DAQ_2147850628_0
         $x_1_9 = "SELECT * FROM AntiVirusProduct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4246,6 +4422,7 @@ rule Trojan_Win32_Farfli_DAR_2147851320_0
         $x_1_6 = {33 00 36 00 30 00 53 00 61 00 66 00 65 00 2e 00 65 00 78 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4270,6 +4447,7 @@ rule Trojan_Win32_Farfli_DAT_2147851786_0
         $x_1_4 = {45 e8 89 65 f0 83 38 00 75 25 8d 4d c0 68 b0 6c 40 00 51 c6 45 fc 0c c7 45 c0 42 00 00 00 e8 e9 26 00 00 b8 39 24 40 00 c3 b8 74 24 40 00 c3 b8 45 24 40 00 c3 8b 55 ec 8b 4d e8 b8 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4295,6 +4473,7 @@ rule Trojan_Win32_Farfli_DAS_2147851800_0
         $x_1_5 = "c:\\%s.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4319,6 +4498,7 @@ rule Trojan_Win32_Farfli_DAV_2147852484_0
         $x_1_4 = "PluginMe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4342,6 +4522,7 @@ rule Trojan_Win32_Farfli_DAW_2147852758_0
         $x_1_3 = "taskkill /IM 360tray.exe /F" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4367,6 +4548,7 @@ rule Trojan_Win32_Farfli_DAX_2147888473_0
         $x_1_5 = "index[3].txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4391,6 +4573,7 @@ rule Trojan_Win32_Farfli_DAY_2147888654_0
         $x_1_4 = "Cdefghij Lmnopqrst Vwxyabc Efghijkl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4412,6 +4595,7 @@ rule Trojan_Win32_Farfli_GMH_2147889125_0
         $x_10_1 = {66 83 f9 0c ?? ?? 33 c9 0f b7 d1 8a 54 55 e4 30 14 07 40 41 3b c6}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4437,6 +4621,7 @@ rule Trojan_Win32_Farfli_ASDA_2147890340_0
         $x_1_5 = "cuckoo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4459,6 +4644,7 @@ rule Trojan_Win32_Farfli_GME_2147890444_0
         $x_1_2 = "BrowserConfigFileInfoA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4483,6 +4669,7 @@ rule Trojan_Win32_Farfli_DAU_2147891266_0
         $x_1_4 = "C:\\ProgramData\\ProgramData.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4504,6 +4691,7 @@ rule Trojan_Win32_Farfli_ASDB_2147891789_0
         $x_1_1 = {6a 01 c7 45 ?? 79 6f 75 72 c7 45 ?? 46 75 6e 63 c7 45 ?? 74 69 6f 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4525,6 +4713,7 @@ rule Trojan_Win32_Farfli_RG_2147891881_0
         $x_1_1 = {53 90 90 90 90 8b 55 fc 80 04 11 7a 90 90 90 90 8b 55 fc 8a 1c 11 80 f3 19 88 1c 11 41 3b c8 7c e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4547,6 +4736,7 @@ rule Trojan_Win32_Farfli_ASDC_2147892256_0
         $x_1_2 = "C:\\Program Files\\Common Files\\scvhost.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4569,6 +4759,7 @@ rule Trojan_Win32_Farfli_DAZ_2147892760_0
         $x_1_2 = {50 c7 84 24 ?? ?? 00 00 43 3a 5c 50 c7 84 24 ?? ?? 00 00 72 6f 67 72 c7 84 24 ?? ?? 00 00 61 6d 20 46 c7 84 24 ?? ?? 00 00 69 6c 65 73 c7 84 24 ?? ?? 00 00 20 28 78 38 c7 84 24 ?? ?? 00 00 36 29 5c 4d c7 84 24 ?? ?? 00 00 69 63 72 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4595,6 +4786,7 @@ rule Trojan_Win32_Farfli_NF_2147893872_0
         $x_1_6 = "Okbyqce.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4616,6 +4808,7 @@ rule Trojan_Win32_Farfli_Z_2147894036_0
         $x_2_1 = {8d 86 0c 01 00 00 8b ce 50 e8 ?? ?? 00 00 8b 1d ?? ?? ?? ?? 8d be 0c 02 00 00 57 ff d3 6a 5c 57 ff 15 ?? ?? ?? ?? 59 89 45 f0 85 c0 59}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4639,6 +4832,7 @@ rule Trojan_Win32_Farfli_ASDF_2147895194_0
         $x_1_3 = "fuckyou" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4661,6 +4855,7 @@ rule Trojan_Win32_Farfli_ASDF_2147895194_1
         $x_1_2 = "VGBLgtVRfwCtwdN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4683,6 +4878,7 @@ rule Trojan_Win32_Farfli_ASDD_2147895488_0
         $x_1_2 = {ff 43 c6 85 [0-2] ff ff 6f c6 85 [0-2] ff ff 6e c6 85 [0-2] ff ff 6e c6 85 [0-2] ff ff 65 c6 85 [0-2] ff ff 63 c6 85 [0-2] ff ff 74 c6 85 [0-2] ff ff 47 c6 85 [0-2] ff ff 72 c6 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4705,6 +4901,7 @@ rule Trojan_Win32_Farfli_ASDE_2147895489_0
         $x_1_2 = {c6 44 24 18 43 c6 44 24 19 72 c6 44 24 1b 61 88 4c 24 1c c6 44 24 1e 45 c6 44 24 1f 76 c6 44 24 21 6e 88 4c 24 22 c6 44 24 23 41 88 5c 24 24 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4731,6 +4928,7 @@ rule Trojan_Win32_Farfli_ASDE_2147895489_1
         $x_2_6 = {5b 50 61 75 73 65 20 42 72 65 61 6b 5d 00 00 00 5b 53 68 69 66 74 5d 00 5b 41 6c 74 5d 00 00 00 5b 43 4c 45 41 52 5d 00 5b 42 41 43 4b 53 50 41 43 45 5d 00 5b 44 45 4c 45 54 45 5d 00 00 00 00 5b 49 4e 53 45 52 54 5d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4755,6 +4953,7 @@ rule Trojan_Win32_Farfli_ASDG_2147895720_0
         $x_1_4 = "[Pause Break]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4778,6 +4977,7 @@ rule Trojan_Win32_Farfli_ASDG_2147895720_1
         $x_1_3 = "Fuck" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4803,6 +5003,7 @@ rule Trojan_Win32_Farfli_GW_2147896103_0
         $x_1_5 = "cYreenQillm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4824,6 +5025,7 @@ rule Trojan_Win32_Farfli_Y_2147897330_0
         $x_2_1 = {68 30 58 02 10 56 e8 ?? ?? 00 00 83 c4 08 85 c0 0f 85 ?? ?? 00 00 68 44 58 02 10 56 e8 ?? ?? 00 00 83 c4 08 85 c0 0f 85 ?? ?? 00 00 68 60 58 02 10 56 e8 ?? ?? 00 00 83 c4 08 85 c0 0f 85 ?? ?? 00 00 68 70 58 02 10 56 e8 ?? ?? 00 00 83 c4 08 85 c0 0f 85}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4845,6 +5047,7 @@ rule Trojan_Win32_Farfli_X_2147899585_0
         $x_2_1 = {99 f7 f9 8b 45 ?? 8b 3d ?? ?? ?? ?? 8b ca 33 d2 33 c8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4866,6 +5069,7 @@ rule Trojan_Win32_Farfli_CCGC_2147900136_0
         $x_1_1 = {0f 10 01 83 c0 ?? 0f 57 c1 66 0f fc c1 0f 11 01 0f 10 41 ?? 0f 57 c1 66 0f fc c1 0f 11 41 ?? 0f 10 41 ?? 0f 57 c1 66 0f fc c1 0f 11 41 ?? 0f 10 41 ?? 0f 57 c1 66 0f fc c1 0f 11 41 ?? 83 c1 ?? 3b c7 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4898,6 +5102,7 @@ rule Trojan_Win32_Farfli_CCGD_2147900140_0
         $x_1_12 = "HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4919,6 +5124,7 @@ rule Trojan_Win32_Farfli_CCGE_2147900194_0
         $x_1_1 = {c6 45 ec 4b c6 45 ed 45 c6 45 ee 52 c6 45 ef 4e c6 45 f0 45 c6 45 f1 4c c6 45 f2 33 c6 45 f3 32 c6 45 f4 2e c6 45 f5 64 c6 45 f6 6c c6 45 f7 6c 88 5d f8 c6 45 d0 43 c6 45 d1 72 c6 45 d2 65 c6 45 d3 61 c6 45 d4 74 c6 45 d5 65 c6 45 d6 54 c6 45 d7 6f c6 45 d8 6f c6 45 d9 6c c6 45 da 68 c6 45 db 65 c6 45 dc 6c c6 45 dd 70 c6 45 de 33 c6 45 df 32 c6 45 e0 53 c6 45 e1 6e c6 45 e2 61 c6 45 e3 70 c6 45 e4 73 c6 45 e5 68 c6 45 e6 6f c6 45 e7 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4941,6 +5147,7 @@ rule Trojan_Win32_Farfli_CCGF_2147900210_0
         $x_1_2 = {68 f8 f5 40 00 68 70 f6 40 00 68 80 f6 40 00 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4962,6 +5169,7 @@ rule Trojan_Win32_Farfli_ASDI_2147900316_0
         $x_5_1 = {2b cf 8a 14 01 80 f2 62 88 10 40 4e 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4984,6 +5192,7 @@ rule Trojan_Win32_Farfli_VR_2147900481_0
         $x_1_2 = {38 a7 8b 4e 24 c3 26 2c 8b 41 0c c3 22 8d 50 ff c3 4c 89 51 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5005,6 +5214,7 @@ rule Trojan_Win32_Farfli_CCGZ_2147901041_0
         $x_1_1 = {33 f6 33 ff 8a 87 ?? ?? ?? ?? 30 86 ?? ?? ?? ?? 47 6a 00 ff d3 b8 ?? ?? ?? ?? f7 e6 c1 ea 02 8d 0c 92 8b d6 2b d1 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5032,6 +5242,7 @@ rule Trojan_Win32_Farfli_MAN_2147901638_0
         $x_1_7 = "CreateMutexA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5056,6 +5267,7 @@ rule Trojan_Win32_Farfli_MAK_2147901655_0
         $x_1_4 = "SetThreadContext" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5078,6 +5290,7 @@ rule Trojan_Win32_Farfli_ML_2147901833_0
         $x_1_2 = {8b 4e 54 8b 74 24 3c 55 8b 7e 3c 03 cf 8b f8 8b d1 c1 e9 02 f3 a5 8b ca 83 e1 03 f3 a4 8b 4c 24 40 8b 74 24 1c 56 51 8b 51 3c 03 c2 89 45 00 89 58 34 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5100,6 +5313,7 @@ rule Trojan_Win32_Farfli_ASDJ_2147902480_0
         $x_2_2 = "SystemRoot%\\System32\\svchost.exe -k sougou" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5123,6 +5337,7 @@ rule Trojan_Win32_Farfli_ASDK_2147902993_0
         $x_1_3 = "fuckyou" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5147,6 +5362,7 @@ rule Trojan_Win32_Farfli_ASDL_2147903145_0
         $x_1_4 = "WaitForSingleObject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5169,6 +5385,7 @@ rule Trojan_Win32_Farfli_ASDM_2147904371_0
         $x_5_2 = {6a 04 68 00 20 00 00 8b 45 d0 8b 48 50 51 8b 55 d0 8b 42 34 50 ff 15}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5190,6 +5407,7 @@ rule Trojan_Win32_Farfli_CCHZ_2147905362_0
         $x_1_1 = {8b e5 5d c3 6a 00 6a 02 c7 85 ?? ?? ?? ?? 2c 02 00 00 ff 15 ?? ?? ?? ?? 8b f8 83 ff ff 0f 84 ?? ?? 00 00 8d 85 ?? ?? ?? ?? 50 57 ff 15 ?? ?? 42 00 8b 35 ?? ?? 42 00 85 c0 74 59 8b 1d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5212,6 +5430,7 @@ rule Trojan_Win32_Farfli_ASDN_2147905951_0
         $x_5_2 = {6a 40 68 00 30 00 00 50 6a 00 ff 15 ?? ?? ?? ?? 8b f0 68 c0 67 0f 00 8d 85 ?? ?? ?? ff 50 56 e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5233,6 +5452,7 @@ rule Trojan_Win32_Farfli_W_2147906161_0
         $x_2_1 = {f6 d8 fe ca fe c0 d0 da 34 ?? 84 f7 c1 da ?? f8 28 da 30 c3 fe ca 66 0f bd d6 0f b6 c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5254,6 +5474,7 @@ rule Trojan_Win32_Farfli_V_2147906187_0
         $x_2_1 = {0f bc fd 01 ff 29 d1 f7 d8 8d 45 ?? 66 0f ac e7 ?? d3 cf 24 fc 66 0f be f8 66 0f ad cf 66 81 df ?? ?? 29 c8 66 f7 d7 66 0f be f8 66 0f cf 66 0f be fa 89 c4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5275,6 +5496,7 @@ rule Trojan_Win32_Farfli_U_2147908462_0
         $x_2_1 = {6d 4d c1 50 ?? ?? c0 bf ?? ?? ?? ?? ?? 24 ?? fd ad 22 ff 69 a6 ?? ?? ?? ?? ?? ?? ?? ?? 3b c4 ce f8 58 d4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5297,6 +5519,7 @@ rule Trojan_Win32_Farfli_T_2147908476_0
         $x_2_2 = {8d 3b fa ed 28 20 c9 27 96 11 98}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5319,6 +5542,7 @@ rule Trojan_Win32_Farfli_ASDO_2147909315_0
         $x_5_2 = {1d 06 26 94 7d 27 ed 15 10 43 10 55 bd 67 5b 53 a5 ba 20 74 8c a0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5341,6 +5565,7 @@ rule Trojan_Win32_Farfli_ASGH_2147912493_0
         $x_2_2 = {50 88 55 c3 c6 45 b4 72 c6 45 b5 75 c6 45 b6 6e c6 45 b7 64 c6 45 b8 6c c6 45 b9 6c c6 45 ba 33 c6 45 bb 32 c6 45 bc 2e 88 5d bd c6 45 be 78 88 5d bf 51}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5362,6 +5587,7 @@ rule Trojan_Win32_Farfli_RZ_2147912873_0
         $x_1_1 = {55 8b ec 5d e9 00 00 00 00 55 8b ec 53 56 57 83 cf ff e8 37 74 ed ff 8b f0 e8 ec 87 ed ff ff 75 14 8b 58 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5383,6 +5609,7 @@ rule Trojan_Win32_Farfli_AFF_2147913853_0
         $x_1_1 = {0f b6 0b 89 c2 83 c3 01 c1 ea 04 31 c8 c0 e9 04 83 e0 0f 33 14 85 e0 a6 44 00 89 d0 31 ca 83 e2 0f c1 e8 04 33 04 95 e0 a6 44 00 39 de}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5411,6 +5638,7 @@ rule Trojan_Win32_Farfli_RP_2147917722_0
         $x_1_8 = "HARDWARE\\DESCRIPTION\\System\\BIOS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5443,6 +5671,7 @@ rule Trojan_Win32_Farfli_RP_2147917722_1
         $x_1_12 = "strcpy_s(CommandLine, CommandLineSize, cmdexe)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5465,6 +5694,7 @@ rule Trojan_Win32_Farfli_MKV_2147918906_0
         $x_5_2 = {8b 4d 0c 8b c6 83 e0 03 8a 04 08 30 04 1e 46 3b f2 7c f0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5486,6 +5716,7 @@ rule Trojan_Win32_Farfli_GNN_2147919079_0
         $x_10_1 = {8d 45 ec 50 bf ?? ?? ?? ?? 57 8d 85 ?? ?? ?? ?? 50 56 8b 35 ?? ?? ?? ?? ?? ?? 39 5d ec ?? ?? 53 ff 75 ec 8d 85 ?? ?? ?? ?? 50 8d 85 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 8d 45 ec 50 57 8d 85 ?? ?? ?? ?? 50 ff 75 e8 ff d6 85 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5507,6 +5738,7 @@ rule Trojan_Win32_Farfli_ASDH_2147920616_0
         $x_5_1 = {8b 45 08 8a 10 8a 4d ef 32 d1 02 d1 88 10 40 89 45 08 c7 45 fc 01 00 00 00 b8}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5528,6 +5760,7 @@ rule Trojan_Win32_Farfli_ARA_2147923217_0
         $x_2_1 = {f7 7d 08 b8 ?? ?? ?? ?? 80 c2 3d 30 14 31 8b ce f7 e6 c1 ea 03 8d 04 92 03 c0 2b c8 f7 d9 1b c9 46 23 d9 3b f7}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5551,6 +5784,7 @@ rule Trojan_Win32_Farfli_ARA_2147923217_1
         $x_2_3 = {8b 45 10 8a 04 02 30 01 46 eb e0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -5573,6 +5807,7 @@ rule Trojan_Win32_Farfli_AHG_2147929180_0
         $x_5_2 = {6a 04 68 00 10 00 00 53 6a 00 ff 15 ?? ?? ?? 00 8b ce 8b f8 e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5594,6 +5829,7 @@ rule Trojan_Win32_Farfli_EAG_2147939210_0
         $x_5_1 = {8a 0a 32 4d ef 02 4d ef 88 0a 42 89 55 08 c3}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

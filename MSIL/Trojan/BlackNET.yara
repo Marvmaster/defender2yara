@@ -25,6 +25,7 @@ rule Trojan_MSIL_BlackNET_CTP_2147843349_0
         $x_1_10 = "Sputnik\\Sputnik\\User Data" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

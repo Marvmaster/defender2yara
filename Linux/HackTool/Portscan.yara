@@ -17,6 +17,7 @@ rule HackTool_Linux_Portscan_B_2147828991_0
         $x_1_2 = {48 8b 45 c0 48 89 45 c8 48 8b 45 c8 0f b6 40 09 3c 11 75 a0 48 8b 45 c8 0f b6 00 83 e0 0f 0f b6 c0 c1 e0 02 66 89 45 ae 0f b7 55 ae 48 8b 45 c0 48 01 d0 48 89 45 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule HackTool_Linux_Portscan_C_2147829078_0
         $x_1_4 = {c7 45 b0 10 00 00 00 48 8d 4d b0 48 8d 55 e0 48 8b 75 c0 8b 45 b4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

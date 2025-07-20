@@ -25,6 +25,7 @@ rule Backdoor_Win32_GGDoor_A_2147576654_0
         $x_100_10 = "pass ie" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

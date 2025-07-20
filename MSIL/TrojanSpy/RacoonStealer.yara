@@ -24,6 +24,7 @@ rule TrojanSpy_MSIL_RacoonStealer_2147765662_0
         $x_1_9 = "_AtExit64" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule TrojanSpy_MSIL_RacoonStealer_PA_2147766207_0
         $x_1_8 = "_AtExit64" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Backdoor_Win32_Littlemetp_A_2147749530_0
         $x_1_4 = "tinymet.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +90,7 @@ rule Backdoor_Win32_Littlemetp_AA_2147895836_0
         $x_2_1 = {33 c0 89 45 ?? 8b 45 ?? 8b 55 ?? 01 02 8b 45 ?? 03 45 ?? 03 45 ?? 03 45 ?? 89 45 ?? 6a 00 e8 [0-4] 8b 5d ?? 2b d8 6a 00 e8 [0-4] 2b d8 8b 45 ?? 31 18 83 45 [0-2] 83 45 [0-2] 8b 45 ?? 3b 45 ?? 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

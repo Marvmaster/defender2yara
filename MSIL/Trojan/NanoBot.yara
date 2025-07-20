@@ -28,6 +28,7 @@ rule Trojan_MSIL_NanoBot_D_2147730018_0
         $x_1_13 = "/Create /TN" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (11 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_MSIL_NanoBot_DH_2147744161_0
         $x_1_1 = {00 20 64 06 83 67 02 5a 0a 06 1f 0b 63 0b 02 06 1f 1f 5f 63 0c 28 ?? ?? ?? ?? 00 07 08 58 0d 09 13 04 2b 00 11 04 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Trojan_MSIL_NanoBot_MR_2147775825_0
         $x_1_6 = "Bitmap" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Trojan_MSIL_NanoBot_DA_2147780436_0
         $x_1_3 = "{0} with speed{1} km/h" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Trojan_MSIL_NanoBot_DB_2147780439_0
         $x_1_3 = "{0} with speed{1} km/h" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +165,7 @@ rule Trojan_MSIL_NanoBot_MFP_2147783941_0
         $x_1_19 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +191,7 @@ rule Trojan_MSIL_NanoBot_S_2147787624_0
         $x_1_5 = {57 15 02 08 09 03 00 00 00 fa 01 33 00 16 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +217,7 @@ rule Trojan_MSIL_NanoBot_QA_2147796260_0
         $x_3_5 = "StoreOperationSetDeploymentMetadata" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -231,6 +239,7 @@ rule Trojan_MSIL_NanoBot_KA_2147806333_0
         $x_10_1 = {00 08 11 04 02 11 04 91 07 61 06 09 91 61 d2 9c 09 03 6f ?? 00 00 0a 17 59 fe 01 13 05 11 05 2c 04 16 0d 2b 04 09 17 58 0d 00 11 04 17 58 13 04 11 04 02 8e 69 fe 04 13 06 11 06 2d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -257,6 +266,7 @@ rule Trojan_MSIL_NanoBot_ABS_2147829925_0
         $x_1_6 = "$B1624E43-F6A8-46A5-9248-8218CCE1C403" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -284,6 +294,7 @@ rule Trojan_MSIL_NanoBot_MB_2147833619_0
         $x_1_7 = "/xC timexout /nobrxeak /t 19" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -306,6 +317,7 @@ rule Trojan_MSIL_NanoBot_MBAV_2147838984_0
         $x_1_2 = "0Q2hhbmdlZD5iX181Xz><><PHJpY2hUZXh" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -329,6 +341,7 @@ rule Trojan_MSIL_NanoBot_BAY_2147840123_0
         $x_1_3 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +364,7 @@ rule Trojan_MSIL_NanoBot_FAS_2147845791_0
         $x_2_2 = {0a 5d b4 9c 09 15 d6 0d 09 16 2f c1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -376,6 +390,7 @@ rule Trojan_MSIL_NanoBot_EH_2147846473_0
         $x_1_5 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -398,6 +413,7 @@ rule Trojan_MSIL_NanoBot_ASCN_2147888507_0
         $x_1_2 = "Geometri_Odev.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -421,6 +437,7 @@ rule Trojan_MSIL_NanoBot_BH_2147924952_0
         $x_1_3 = "BIPew524seeyzz.iAzcxenzuyu00w" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -445,6 +462,7 @@ rule Trojan_MSIL_NanoBot_ATFA_2147928025_0
         $x_1_4 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

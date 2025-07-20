@@ -16,6 +16,7 @@ rule Trojan_Win32_FormBook_P_2147742959_0
         $x_1_1 = {8b d8 03 d9 73 ?? e8 ?? ?? ?? ?? 80 33 e9 41 4a 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_FormBook_YL_2147744178_0
         $x_1_3 = "WinWord.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_FormBook_MR_2147744812_0
         $x_1_1 = {8b 55 f4 8b 45 08 01 ?? 0f [0-2] 0f [0-2] 89 [0-2] 8b [0-2] 8b [0-2] 01 ?? 0f [0-2] 8b [0-2] 89 ?? 8b [0-2] 8b [0-2] 01 ?? 31 ?? 89 ?? 88 ?? 8b [0-2] 89 [0-2] 83 [0-3] 8b [0-2] 3b [0-2] 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Trojan_Win32_FormBook_E_2147748721_0
         $x_10_1 = {81 c1 92 ab 00 00 05 25 7f 00 00 48 f7 d3 81 e2 14 0c 01 00 f7 d1 58 b9 14 c4 00 00 4a 42 48 f7 d1 05 a2 66 00 00 41 25 8b 0a 01 00 3d b9 0a 00 00 74 06 ba 67 43 00 00 59 4b 5b 81 f1 81 f0 00 00 81 f1 b8 52 00 00 81 c1 a1 f6 00 00 c2 1b 1d}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_Win32_FormBook_E_2147748721_1
         $x_3_7 = "WebBlack" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +134,7 @@ rule Trojan_Win32_FormBook_C_2147748737_0
         $x_10_1 = {81 e9 de d1 00 00 f7 d0 81 e3 a2 ae 00 00 43 05 65 1b 01 00 81 e3 be 3b 00 00 81 c3 8b 0a 01 00 5a 81 ea 6c 2c 00 00 81 e1 41 0c 00 00 81 c2 40 54 00 00 25 56 40 00 00 81 f1 e9 5b 00 00 48 81 ea c8 e5 00 00 3d c9 55 00 00 74 12 49 5a 81 e1 6b 04 01 00 59 81 f2 d9 10 00 00 c2 6a 4c}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +156,7 @@ rule Trojan_Win32_FormBook_C_2147748737_1
         $x_1_1 = {83 e9 04 ba ?? ?? ?? ?? b8 ?? ?? ?? ?? 31 04 0f f7 da f8 11 d1 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +178,7 @@ rule Trojan_Win32_FormBook_YP_2147749947_0
         $x_1_1 = {88 02 83 45 ?? ?? ?? ?? e8 ?? ?? ?? ?? ff 45 ?? 41 81 7d [0-16] 8a 01 34 ?? 88 45 ?? 8b 55 ?? 8a 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -195,6 +203,7 @@ rule Trojan_Win32_FormBook_N_2147750090_0
         $x_3_4 = {35 a8 d6 00 6a eb}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -252,6 +261,7 @@ rule Trojan_Win32_FormBook_M_2147750132_0
         $x_2_32 = "O7Fl0PxfjNqv9xsrO1" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -288,6 +298,7 @@ rule Trojan_Win32_FormBook_H_2147750160_0
         $x_3_3 = {8f 04 08 39 db}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +323,7 @@ rule Trojan_Win32_FormBook_K_2147750163_0
         $x_3_4 = {8b 34 0a 0f 64 d5 [0-65] 81 f6 [0-80] 89 34 08}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -340,6 +352,7 @@ rule Trojan_Win32_FormBook_BS_2147750180_0
         $x_1_4 = "rp7kaXyXBQq1IQJupKlP4UB5pQd170" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -366,6 +379,7 @@ rule Trojan_Win32_FormBook_BS_2147750180_1
         $x_1_6 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -389,6 +403,7 @@ rule Trojan_Win32_FormBook_R_2147750332_0
         $x_2_3 = {81 f1 d8 79 24 d6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -422,6 +437,7 @@ rule Trojan_Win32_FormBook_S_2147750598_0
         $x_2_9 = "Officialese6" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_2_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -449,6 +465,7 @@ rule Trojan_Win32_FormBook_T_2147750732_0
         $x_1_2 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -472,6 +489,7 @@ rule Trojan_Win32_FormBook_U_2147750824_0
         $x_1_3 = "EtCes0mfY2QoX35YAnKh0mn0cSPU09Z34" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -495,6 +513,7 @@ rule Trojan_Win32_FormBook_V_2147750825_0
         $x_1_3 = "Tp546gnRXdgjufwH77JNTSB4JFs4fR1esloL49oS188" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -518,6 +537,7 @@ rule Trojan_Win32_FormBook_W_2147750826_0
         $x_1_3 = "WDDBhbETAWALhgGsoAZ1CnlQAnXxkZQV61Vun207" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -539,6 +559,7 @@ rule Trojan_Win32_FormBook_Y_2147750828_0
         $x_1_1 = {8a 45 ff ff 75 f8 5a 30 02 ff 45 f8 49 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -567,6 +588,7 @@ rule Trojan_Win32_FormBook_AA_2147750879_0
         $x_1_8 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -589,6 +611,7 @@ rule Trojan_Win32_FormBook_AD_2147751133_0
         $x_1_2 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -611,6 +634,7 @@ rule Trojan_Win32_FormBook_AD_2147751133_1
         $x_10_2 = {55 8b ec 83 ec 20 a1 ?? ?? ?? ?? 33 c5 89 45 fc a1 ?? ?? ?? ?? 53 56 57 a8 01 75 17 83 c8 01 6a 0c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -636,6 +660,7 @@ rule Trojan_Win32_FormBook_AE_2147751134_0
         $x_1_5 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -658,6 +683,7 @@ rule Trojan_Win32_FormBook_AF_2147751135_0
         $x_5_2 = {83 7d 0c 00 74 1a 8b 4d fc c6 01 00 8b 55 fc 83 c2 01 89 55 fc 8b 45 0c 83 e8 01 89 45 0c eb e0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -680,6 +706,7 @@ rule Trojan_Win32_FormBook_AF_2147751135_1
         $x_1_2 = "CreateFileW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -707,6 +734,7 @@ rule Trojan_Win32_FormBook_AF_2147751135_2
         $x_1_7 = "ebMUe2038935785" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -733,6 +761,7 @@ rule Trojan_Win32_FormBook_AG_2147751406_0
         $x_4_1 = {66 0f 58 c1 [0-16] 66 0f 74 c1 [0-16] 66 0f 6e e6 [0-16] 66 0f 6e e9 [0-16] 0f 57 ec [0-16] 66 0f 7e e9 [0-16] 39 c1 74}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -754,6 +783,7 @@ rule Trojan_Win32_FormBook_AH_2147751458_0
         $x_10_1 = {88 14 08 8b 45 e4 8b 4d d4 8a 14 08 80 c2 01 88 14 08 8b 45 e4 8b 4d d4 0f b6 34 08 89 f3 83 f3 36 88 1c 08 8b 45 e4 8b 4d d4}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -776,6 +806,7 @@ rule Trojan_Win32_FormBook_AH_2147751458_1
         $x_5_2 = {64 a1 30 00 00 00 8b 40 0c 8b 40 14 8b 00 8b 00 8b 40 10 c3}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -797,6 +828,7 @@ rule Trojan_Win32_FormBook_AH_2147751458_2
         $x_3_1 = {81 eb 86 d9 00 00 58 bb a2 ae 00 00 f7 d2 40 40 f7 d2 81 f3 96 24 01 00 81 eb f4 75 00 00 81 e1 d3 6f 00 00 b8 30 51 00 00 59 81 e1 c7 2d 01 00 48 3d 40 9c 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -818,6 +850,7 @@ rule Trojan_Win32_FormBook_AH_2147751458_3
         $x_1_1 = {66 0f 58 c1 [0-16] 66 0f 74 c1 [0-16] 66 0f 6e e6 [0-16] 66 0f 6e e9 [0-16] 0f 57 ec [0-16] 66 0f 7e e9 [0-16] 39 c1 [0-16] 0f 77 [0-16] 46 [0-16] 8b 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -844,6 +877,7 @@ rule Trojan_Win32_FormBook_AH_2147751458_4
         $x_3_6 = "ImmDestroyContext" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -869,6 +903,7 @@ rule Trojan_Win32_FormBook_AL_2147751610_0
         $x_1_5 = "fmJSpTotadYoH122" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -891,6 +926,7 @@ rule Trojan_Win32_FormBook_AM_2147751611_0
         $x_3_2 = {89 45 f4 6a 40 68 00 30 00 00 8b 55 f4 52 6a 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -913,6 +949,7 @@ rule Trojan_Win32_FormBook_AM_2147751611_1
         $x_3_2 = {83 c4 08 89 45 f0 6a 40 68 00 30 00 00 8b 4d f4}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -937,6 +974,7 @@ rule Trojan_Win32_FormBook_AM_2147751611_2
         $x_2_4 = "Harquebuses" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -961,6 +999,7 @@ rule Trojan_Win32_FormBook_AM_2147751611_3
         $x_1_4 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -992,6 +1031,7 @@ rule Trojan_Win32_FormBook_AM_2147751611_4
         $x_1_11 = "CryptMsgCountersignEncoded" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1013,6 +1053,7 @@ rule Trojan_Win32_FormBook_AN_2147751612_0
         $x_6_1 = {8a 04 33 2c 33 34 1c 2c 64 34 03 2c 02 88 04 33 46 81 fe de 14 00 00 72 e7}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1035,6 +1076,7 @@ rule Trojan_Win32_FormBook_AN_2147751612_1
         $x_3_2 = {83 c4 08 8b f8 6a 40 68 00 30 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1057,6 +1099,7 @@ rule Trojan_Win32_FormBook_AN_2147751612_2
         $x_3_2 = {89 4d f4 8b 55 f8 8b 45 08 03 42 24}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1081,6 +1124,7 @@ rule Trojan_Win32_FormBook_AN_2147751612_3
         $x_1_4 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1102,6 +1146,7 @@ rule Trojan_Win32_FormBook_AO_2147751613_0
         $x_1_1 = {8a 01 88 45 ?? 8b 55 ?? 8a 45 ?? 88 02 b0 ?? 30 02 83 45 fc ?? 73 ?? e8 ?? ?? ?? ?? ff 45 ?? 41 81 7d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1124,6 +1169,7 @@ rule Trojan_Win32_FormBook_AP_2147751614_0
         $x_1_2 = {83 c4 0c 6a 40 68 00 30 00 00 8b 55 e0 52 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1145,6 +1191,7 @@ rule Trojan_Win32_FormBook_AP_2147751614_1
         $x_1_1 = {66 0f 58 c1 [0-16] 66 0f 74 c1 [0-16] 66 0f 6e e6 [0-16] 66 0f 6e e9 [0-16] 0f 57 ec [0-16] 66 0f 7e e9 [0-16] 39 c1 [0-37] 0f 77 [0-16] 46 [0-21] 8b 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1166,6 +1213,7 @@ rule Trojan_Win32_FormBook_AQ_2147751815_0
         $x_1_1 = {88 02 ff 45 ?? ff 45 ?? 41 81 7d [0-16] 8a 01 34 ?? 88 45 ?? 8b 55 ?? 8a 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1188,6 +1236,7 @@ rule Trojan_Win32_FormBook_AQ_2147751815_1
         $x_1_2 = {83 c4 24 6a 40 68 00 30 00 00 53 56 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1215,6 +1264,7 @@ rule Trojan_Win32_FormBook_AW_2147751900_0
         $x_1_7 = "igtF8gfmcU3ZuJCnmltZ52" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1242,6 +1292,7 @@ rule Trojan_Win32_FormBook_AY_2147751990_0
         $x_1_7 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1265,6 +1316,7 @@ rule Trojan_Win32_FormBook_BA_2147752054_0
         $x_1_3 = "flydesprringsgrenadierialnetherlanderbesnrelsenskontroltasts" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1287,6 +1339,7 @@ rule Trojan_Win32_FormBook_BB_2147752456_0
         $x_5_2 = {83 ec 14 31 c9 39 c1 0f 85 05 00 00 00 e9}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1309,6 +1362,7 @@ rule Trojan_Win32_FormBook_BB_2147752456_1
         $x_2_2 = {6a 40 68 00 30 00 00 68 00 09 3d 00 33 f6 56 ff d7 85 c0 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1331,6 +1385,7 @@ rule Trojan_Win32_FormBook_BB_2147752456_2
         $x_1_2 = {0f 7e da 66 [0-48] [0-48] 46 [0-48] 8b 17 [0-32] 0f 6e fe [0-37] [0-37] 0f 6e da [0-37] 0f ef df}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1356,6 +1411,7 @@ rule Trojan_Win32_FormBook_BC_2147752457_0
         $x_1_5 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1384,6 +1440,7 @@ rule Trojan_Win32_FormBook_BD_2147752458_0
         $x_1_8 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1409,6 +1466,7 @@ rule Trojan_Win32_FormBook_BE_2147752459_0
         $x_1_5 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1430,6 +1488,7 @@ rule Trojan_Win32_FormBook_BG_2147752515_0
         $x_1_1 = {8b cf b2 46 8a 03 32 c2 88 01 [0-16] c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1451,6 +1510,7 @@ rule Trojan_Win32_FormBook_BJ_2147752634_0
         $x_1_1 = {39 c2 0f b7 c9 [0-37] [0-37] 46 [0-37] 8b 17 [0-32] [0-32] 0f 6e da [0-32] 31 f2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1472,6 +1532,7 @@ rule Trojan_Win32_FormBook_BK_2147752635_0
         $x_1_1 = {ff 34 0a f8 [0-48] 31 3c 24 [0-48] 8f 04 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1496,6 +1557,7 @@ rule Trojan_Win32_FormBook_BN_2147752823_0
         $x_1_4 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1517,6 +1579,7 @@ rule Trojan_Win32_FormBook_BF_2147752850_0
         $x_1_1 = {8f 04 31 d9 [0-48] 8b 04 32 [0-48] bf [0-48] 31 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1544,6 +1607,7 @@ rule Trojan_Win32_FormBook_BO_2147752851_0
         $x_1_7 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1565,6 +1629,7 @@ rule Trojan_Win32_FormBook_BP_2147752852_0
         $x_1_1 = {39 c2 0f b7 [0-37] [0-16] 46 [0-37] ff 37 [0-37] [0-16] 0f 6e da [0-37] 31 f2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1593,6 +1658,7 @@ rule Trojan_Win32_FormBook_BR_2147753093_0
         $x_1_8 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1619,6 +1685,7 @@ rule Trojan_Win32_FormBook_L_2147753532_0
         $x_3_6 = {31 3c 08 81 fa}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_3_*))) or
@@ -1651,6 +1718,7 @@ rule Trojan_Win32_FormBook_BU_2147753533_0
         $x_1_7 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -1681,6 +1749,7 @@ rule Trojan_Win32_FormBook_BV_2147753534_0
         $x_1_6 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1711,6 +1780,7 @@ rule Trojan_Win32_FormBook_SU_2147753579_0
         $x_1_10 = "TBrVzLunJ5vLDt234" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -1744,6 +1814,7 @@ rule Trojan_Win32_FormBook_ST_2147753586_0
         $x_1_8 = "FGMIeRQ07d1ZQdKU164bHLaR3N5ld172" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -1778,6 +1849,7 @@ rule Trojan_Win32_FormBook_SV_2147753664_0
         $x_1_9 = "Injuryrowingsfodmiavetidsfl4" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -1812,6 +1884,7 @@ rule Trojan_Win32_FormBook_BW_2147753801_0
         $x_1_8 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1838,6 +1911,7 @@ rule Trojan_Win32_FormBook_SS_2147753828_0
         $x_5_6 = {51 8b 0f eb 01 ba eb 01 ff 6a 00 eb 01 ac eb 01 b0 89 0c 24 eb 01 02 eb 01 62 31 34 24 eb 01 f1 eb 01 09 59}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1869,6 +1943,7 @@ rule Trojan_Win32_FormBook_SS_2147753828_1
         $x_1_8 = {00 00 8f 04 18 85 d2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -1897,6 +1972,7 @@ rule Trojan_Win32_FormBook_SS_2147753828_2
         $x_1_8 = "B9dRDyJjnh50kwaxMktDz0DP9X222" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -1933,6 +2009,7 @@ rule Trojan_Win32_FormBook_SC_2147753829_0
         $x_1_11 = "DwgMcsLuzZp8eyomfGJuHZ7HcqejJQ5zKKOoteA72" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1960,6 +2037,7 @@ rule Trojan_Win32_FormBook_BX_2147753860_0
         $x_1_2 = {33 d2 8a 55 ?? 33 c2 [0-32] [0-16] 8b 55 ?? 88 02 [0-32] ff 45 [0-16] ff 4d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1981,6 +2059,7 @@ rule Trojan_Win32_FormBook_Q_2147753906_0
         $x_1_1 = {8d 1c 08 80 33 c7 41 4a 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2002,6 +2081,7 @@ rule Trojan_Win32_FormBook_CA_2147754285_0
         $x_10_1 = {c7 45 f0 00 84 d7 17 8b 45 e4 89 45 f4 83 7d f0 00 74 16 8b 45 f4 c6 00 00 8b 45 f4 40 89 45 f4 8b 45 f0 48 89 45 f0 eb e4}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2023,6 +2103,7 @@ rule Trojan_Win32_FormBook_CA_2147754285_1
         $x_10_1 = {fb d9 58 00 00 74 0d c2 55 d0 c2 6b bc bb 87 49 00 00 5a 43 81 c2 4f 2f 01 00 81 eb 4f 77 01 00 05 5f 7a 01 00 b9 45 85 00 00 bb 5b 71 00 00 81 c1 a7 27 01 00 b9 3f 2c 01 00 5a f7 d0 81 e2 19 3d 01 00 4a c2 1f de 42 48 4a c2 1a ad}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2045,6 +2126,7 @@ rule Trojan_Win32_FormBook_CB_2147754286_0
         $x_5_2 = {b9 00 7c 28 e8 c6 84 08 00 84 d7 17 00 41 75 f5}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2072,6 +2154,7 @@ rule Trojan_Win32_FormBook_CC_2147754287_0
         $x_3_7 = "CoTaskMemAlloc" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2098,6 +2181,7 @@ rule Trojan_Win32_FormBook_PI_2147754453_0
         $x_1_6 = {83 c4 04 e8 ?? ?? ?? 00 8b f8 33 c9 89 7d ?? 85 db 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))
@@ -2123,6 +2207,7 @@ rule Trojan_Win32_FormBook_PJ_2147754454_0
         $x_1_2 = {0f b6 06 46 85 c0 74 24 bb 00 00 00 00 53 31 14 e4 5a 6a 08 8f 45 fc d1 c0 8a fc 8a e6 d1 cb ff 4d fc 75 f3 53 8f 45 f8 ff 75 f8 58 aa 49 75 d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2145,6 +2230,7 @@ rule Trojan_Win32_FormBook_AR_2147754455_0
         $x_1_2 = {8b c1 33 d2 f7 f6 41 8a 82 ?? ?? ?? ?? 30 81 ?? ?? ?? ?? 3b cf 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))
@@ -2181,6 +2267,7 @@ rule Trojan_Win32_FormBook_CE_2147754549_0
         $x_1_13 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((12 of ($x_1_*))) or
             ((1 of ($x_12_*))) or
@@ -2206,6 +2293,7 @@ rule Trojan_Win32_FormBook_MK_2147754696_0
         $x_1_1 = {56 85 c0 33 0c 24 66 85 db 5e 85 d2 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2233,6 +2321,7 @@ rule Trojan_Win32_FormBook_CI_2147755562_0
         $x_1_7 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2266,6 +2355,7 @@ rule Trojan_Win32_FormBook_CJ_2147755632_0
         $x_1_13 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2287,6 +2377,7 @@ rule Trojan_Win32_FormBook_CM_2147755921_0
         $x_1_1 = {83 f9 00 74 11 83 7d fc 04 [0-32] c7 45 [0-32] 80 34 01 ?? ff 45 fc 41}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2309,6 +2400,7 @@ rule Trojan_Win32_FormBook_CO_2147755922_0
         $x_1_2 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2330,6 +2422,7 @@ rule Trojan_Win32_FormBook_CP_2147756404_0
         $x_1_1 = {30 14 30 83 f9 ?? 75 ?? 33 c9 eb ?? 41 40 3b c7 [0-21] 8a 91}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2359,6 +2452,7 @@ rule Trojan_Win32_FormBook_CQ_2147756478_0
         $x_1_9 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2380,6 +2474,7 @@ rule Trojan_Win32_FormBook_CR_2147756479_0
         $x_1_1 = {88 02 ff 45 ?? 81 7d [0-48] [0-48] 8b 45 ?? 83 e0 [0-48] 8b 45 ?? 8a 80 [0-32] 34 ?? 8b 55 ?? 03 55 ?? 88 02 [0-48] 8b 45 ?? 8a 80 [0-32] 8b 55 ?? 03 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2410,6 +2505,7 @@ rule Trojan_Win32_FormBook_CR_2147756479_1
         $x_1_10 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2431,6 +2527,7 @@ rule Trojan_Win32_FormBook_CS_2147757484_0
         $x_1_1 = {8a 54 0d e4 8b 7d 9c 30 14 38 83 f9 [0-48] 33 c9 [0-32] 41 40 3b c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2455,6 +2552,7 @@ rule Trojan_Win32_FormBook_KB_2147758576_0
         $x_1_5 = "$45eb8ae2-7e88-43c3-83ea-3f00c927d88c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2476,6 +2574,7 @@ rule Trojan_Win32_FormBook_DE_2147760926_0
         $x_1_1 = {8a 45 ff 88 45 ?? 8a 45 ?? 34 ?? 88 45 ?? 03 11 [0-48] 8a 45 ?? 88 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2504,6 +2603,7 @@ rule Trojan_Win32_FormBook_EA_2147761569_0
         $x_1_8 = "MSVBVM60.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2525,6 +2625,7 @@ rule Trojan_Win32_FormBook_GV_2147761900_0
         $x_1_1 = {31 c9 81 c9 ?? ?? ?? ?? 8b 34 0a 89 34 08 81 34 08 ?? ?? ?? ?? 83 c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2546,6 +2647,7 @@ rule Trojan_Win32_FormBook_SM_2147770351_0
         $x_2_1 = {81 34 24 4a 5b 7d 82 81 3c 24 89 2a ac 60 81 3c 24 af 1f b3 ac 8f 04 08 81 3c 24 1d 1d 44 49 81 7d 00 40 00 b2 8c 01 d9 81 3c 24 33 4b 73 1c 81 7d 00 b2 3b da 19 81 f9 30 73 00 00 75 a3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2605,6 +2707,7 @@ rule Trojan_Win32_FormBook_AMP_2147782993_0
         $x_1_11 = "ShellExecuteA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2639,6 +2742,7 @@ rule Trojan_Win32_FormBook_AMP_2147782993_1
         $x_1_14 = "Qkkbal" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -2660,6 +2764,7 @@ rule Trojan_Win32_FormBook_PRF_2147786870_0
         $x_1_1 = {88 18 40 83 ee 01 75 f8 33 c9 8a 81 08 ?? 42 00 c0 c8 03 32 83 70 e4 41 00 88 81 08 00 42 00 8d 43 01 6a 0d 99 5e f7 fe 41 b8 ?? ?? 00 00 8b da 3b c8 72 d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2739,6 +2844,7 @@ rule Trojan_Win32_FormBook_NE_2147798992_0
         $x_1_1 = {81 f1 cb 00 00 00 88 4d db 0f b6 75 db c1 fe 05 0f b6 7d db c1 e7 03 89 f3 09 fb 88 5d db 0f b6 75 db 89 c1 29 f1 88 4d db 0f b6 75 db 89 f1 83 f1 15 88 4d db 0f b6 75 db 89 f1 83 f1 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2816,6 +2922,7 @@ rule Trojan_Win32_FormBook_EM_2147813927_0
         $x_10_1 = {b9 81 a8 00 00 25 ce 86 00 00 40 59 3d 3a b3 00 00 74 06 49 b9 66 8b 00 00 41 81 ea b2 b1 00 00 81 e9 08 82 01 00 f7 d2 bb 7c 77 00 00 81 e2 45 85 00 00 81 e1 a1 f6 00 00 b8 a0 86 01 00 43 81 e9 ed 64 01 00 40 5b f7 d0 59 48 81 f1 bc 13 01 00 ba 7c bf 00 00 81 e3 75 66 01 00 c2 dd 19}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2838,6 +2945,7 @@ rule Trojan_Win32_FormBook_GA_2147813935_0
         $x_1_2 = {25 e8 eb 00 00 81 c1 ee d4 00 00 42 81 f1 92 63 00 00 81 f3 dd 61 01 00 81 f1 3b 23 00 00 f7 d2 c2 90 83 81 c1 90 83 01 00 81 f2 82 18 00 00 b9 2e 71 01 00 4a 05 a2 66 00 00 49 81 fb c2 b4 00 00 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2864,6 +2972,7 @@ rule Trojan_Win32_FormBook_EC_2147814123_0
         $x_3_6 = "TaskbarCreated" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2885,6 +2994,7 @@ rule Trojan_Win32_FormBook_DM_2147814559_0
         $x_10_1 = {5b 81 f9 1a 65 00 00 74 10 59 40 2d 1e 26 01 00 81 c2 2e 71 01 00 49 40 58 58 b8 41 0c 00 00 81 ea c7 2d 01 00 f7 d0 c2 56 88 59 81 c2 b3 69 00 00 81 e3 a2 66 00 00 bb f3 05 01 00 f7 d3 3d 6b 04 01 00 74 14}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2906,6 +3016,7 @@ rule Trojan_Win32_FormBook_MC_2147814638_0
         $x_10_1 = {81 e3 e8 eb 00 00 81 e1 8d 32 00 00 f7 d3 c2 51 57 5b 81 c1 c7 75 01 00 49 81 c3 f3 bd 00 00 b8 61 12 00 00 81 f3 97 94 00 00 81 fa 81 a8 00 00 74 0f 41 f7 d1 c2 2e 71 b9 67 43 00 00 48 c2 1f de 81 f2 9d 35 00 00 4b bb 05 31 00 00 c2 70 35}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2928,6 +3039,7 @@ rule Trojan_Win32_FormBook_ER_2147820476_0
         $x_2_2 = {89 45 e8 c7 04 24 80 74 d2 1a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2949,6 +3061,7 @@ rule Trojan_Win32_FormBook_ABFJ_2147837445_0
         $x_1_1 = {88 55 ff 0f b6 4d ff 2b 4d f0 88 4d ff 0f b6 55 ff c1 fa ?? 0f b6 45 ff c1 e0 ?? 0b d0 88 55 ff 0f b6 4d ff f7 d1 88 4d ff 0f b6 55 ff 83 ea ?? 88 55 ff 0f b6 45 ff f7 d8 88 45 ff 8b 4d e8 03 4d f0 8a 55 ff 88 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2970,6 +3083,7 @@ rule Trojan_Win32_FormBook_AKR_2147837713_0
         $x_1_1 = {8a 04 3b 04 04 34 8a 04 74 34 be 04 30 34 9b 2c 67 34 3d 88 04 3b 47 3b 7d fc 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2992,6 +3106,7 @@ rule Trojan_Win32_FormBook_AESL_2147837829_0
         $x_1_2 = "CreateFileW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3014,6 +3129,7 @@ rule Trojan_Win32_FormBook_MBO_2147837951_0
         $x_1_2 = {89 45 f0 6a 40 68 00 30 00 00 8b 55 f0 52 6a 00 ff 15 ?? ?? ?? ?? 89 45 f8 6a 00 8d 45 d8 50 8b 4d f0 51 8b 55 f8 52 8b 45 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3036,6 +3152,7 @@ rule Trojan_Win32_FormBook_AEL_2147838075_0
         $x_1_2 = "CreateFileW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3058,6 +3175,7 @@ rule Trojan_Win32_FormBook_MBT_2147838097_0
         $x_1_2 = {68 00 30 00 00 8b d8 53 6a 00 ff d7 8b 55 10 6a 00 8d 4d fc 51 53 8b f8 57 52 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3080,6 +3198,7 @@ rule Trojan_Win32_FormBook_MBAM_2147838708_0
         $x_1_2 = {6a 00 8b 4d ec 51 e8 cb 8f 00 00 83 c4 0c 6a 40 68 00 30 00 00 8b 55 e8 52 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3101,6 +3220,7 @@ rule Trojan_Win32_FormBook_EB_2147839733_0
         $x_4_1 = {fe c8 fe c0 fe c0 fe c0 34 6b fe c0 2c 1c fe c0 fe c0 fe c0 34 7f 04 71 fe c0 2c 57}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3122,6 +3242,7 @@ rule Trojan_Win32_FormBook_EB_2147839733_1
         $x_4_1 = {88 37 80 e2 d4 88 d4 20 c4 30 d0 08 e0 88 47 01 0f b6 47 02 88 c4 89 c2 80 f4 d5 80 e2 90 20 c4 f6 d0 24 45 08 c2 80 f2 90}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3143,6 +3264,7 @@ rule Trojan_Win32_FormBook_AFM_2147841505_0
         $x_1_1 = {8b 44 24 0c 03 c1 89 44 24 10 8b c1 99 6a 0c 5e f7 fe 8b 74 24 10 8a 82 ?? ?? ?? ?? 30 06 41 3b cf}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3164,6 +3286,7 @@ rule Trojan_Win32_FormBook_AFM_2147841505_1
         $x_1_1 = {89 f6 89 f6 89 f6 89 f6 89 f6 8b 4d fc 03 cf 89 f6 89 f6 8a 10 89 f6 89 f6 89 f6 89 f6 32 55 fa 88 11 89 f6 8a 55 fb 30 11 89 f6 89 f6 89 f6 89 f6 47 40 4e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3185,6 +3308,7 @@ rule Trojan_Win32_FormBook_AROO_2147841580_0
         $x_1_1 = {89 f0 f7 e1 d1 ea 83 e2 ?? 8d 04 52 f7 d8 8a 84 06 ?? ?? ?? ?? 30 04 33 46 39 f7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3206,6 +3330,7 @@ rule Trojan_Win32_FormBook_GFE_2147841694_0
         $x_10_1 = {04 13 34 65 2c 03 2c 81 04 68 34 b9 04 25 34 56 2c 79 2c bb 34 b5 88 84 0d ?? ?? ?? ?? 83 c1 ?? eb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3227,6 +3352,7 @@ rule Trojan_Win32_FormBook_GFG_2147841706_0
         $x_10_1 = {34 5c 04 7d fe c0 04 01 04 ca 34 72 fe c0 04 82 04 7f 34 7f 2c 92 34 62 2c 08 fe c0 04 4f fe c0 88 84 0d ?? ?? ?? ?? 83 c1 ?? eb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3248,6 +3374,7 @@ rule Trojan_Win32_FormBook_AFN_2147842160_0
         $x_1_1 = {8b 45 c0 89 45 bc 8b 45 dc b9 ?? ?? ?? ?? 99 f7 f9 8b 45 bc 0f b6 34 10 8b 45 cc 8b 4d dc 0f b6 14 08 31 f2 88 14 08 8b 45 dc 83 c0 01 89 45 dc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3269,6 +3396,7 @@ rule Trojan_Win32_FormBook_ARN_2147842161_0
         $x_1_1 = {8b 45 f8 99 b9 ?? ?? ?? ?? f7 f9 8b 45 e4 0f b6 0c 10 8b 55 dc 03 55 f8 0f b6 02 33 c1 8b 4d dc 03 4d f8 88 01 8b 55 f8 83 c2 01 89 55 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3290,6 +3418,7 @@ rule Trojan_Win32_FormBook_ATA_2147843571_0
         $x_1_1 = {51 53 50 56 ff 15 ?? ?? ?? ?? 8b 4d 10 8a 04 39 2c 2d 34 40 04 0c 34 b8 fe c8 88 04 39 47 3b fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3311,6 +3440,7 @@ rule Trojan_Win32_FormBook_GB_2147843580_0
         $x_1_1 = {0c 07 8e 69 8d ?? ?? ?? 01 0d 16 13 05 2b 1a 00 09 11 05 07 11 05 91 08 11 05 08 8e 69 5d 91 61 d2 9c 00 11 05 17 58 13 05 11 05 07 8e 69 fe 04 13 06 11 06 2d d9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3349,6 +3479,7 @@ rule Trojan_Win32_FormBook_SISN_2147845368_0
         $x_1_18 = {4d 0c 6b c9 30 01 c8 8b 4d f4 8b 49 60 0f b7 55 0c 83 c2 01 6b d2 30 01 d1 8b 55 f4 8b 52 5c 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3370,6 +3501,7 @@ rule Trojan_Win32_FormBook_AFB_2147849823_0
         $x_1_1 = {50 ff d6 68 ?? ?? ?? ?? 53 a3 08 c9 43 00 ff d7 50 ff d6 68 ?? ?? ?? ?? 53 a3 0c c9 43 00 ff d7 50 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3391,6 +3523,7 @@ rule Trojan_Win32_FormBook_AFB_2147849823_1
         $x_1_1 = {33 f6 33 c9 b8 ?? ?? ?? ?? f7 e9 c1 fa ?? 8b c2 c1 e8 ?? 03 c2 8d 04 80 03 c0 03 c0 8b d1 2b d0 8a 04 3a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3412,6 +3545,7 @@ rule Trojan_Win32_FormBook_AFB_2147849823_2
         $x_5_1 = {8b 47 54 46 8a 40 03 30 44 1e ff 0f b6 4c 1e ff 8b 47 54 8a 50 02 32 d1 88 54 1e ff 8b 47 54 8a 48 01 32 ca 88 4c 1e ff 8b 47 54 8a 00 32 c1 88 44 1e ff}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3433,6 +3567,7 @@ rule Trojan_Win32_FormBook_AFK_2147852185_0
         $x_1_1 = {8b ca 83 e1 0f 42 8a 0c 19 88 4c 02 ff 3b d7 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3454,6 +3589,7 @@ rule Trojan_Win32_FormBook_AFK_2147852185_1
         $x_1_1 = {8a 5e 02 88 4e 02 88 5c 02 02 0f b6 4e 02 8b 55 0c 02 cb 0f b6 c9 0f b6 4c 01 02 32 cf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3475,6 +3611,7 @@ rule Trojan_Win32_FormBook_AFK_2147852185_2
         $x_1_1 = {c6 44 24 06 5f c6 44 24 0c 79 c6 44 24 03 65 c6 44 24 04 6c c6 44 24 08 6f c6 44 24 0e 63 c6 04 24 48 c6 44 24 0a 69 c6 44 24 01 53 c6 44 24 0f 6f c6 44 24 07 4e c6 44 24 0d 49 c6 44 24 02 68 c6 44 24 0b 66 c6 44 24 11 41 c6 44 24 05 6c c6 44 24 09 74 c6 44 24 10 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3496,6 +3633,7 @@ rule Trojan_Win32_FormBook_AFK_2147852185_3
         $x_1_1 = {c7 85 14 ff ff ff 7b 00 30 00 c7 85 18 ff ff ff 30 00 30 00 c7 85 1c ff ff ff 30 00 30 00 c7 85 20 ff ff ff 31 00 30 00 c7 85 24 ff ff ff 43 00 2d 00 c7 85 28 ff ff ff 30 00 30 00 c7 85 2c ff ff ff 30 00 30 00 c7 85 30 ff ff ff 2d 00 30 00 c7 85 34 ff ff ff 30 00 30 00 c7 85 38 ff ff ff 30 00 2d 00 c7 85 3c ff ff ff 43 00 30 00 c7 85 40 ff ff ff 30 00 30 00 c7 85 44 ff ff ff 2d 00 30 00 c7 85 48 ff ff ff 30 00 30 00 c7 85 4c ff ff ff 30 00 30 00 c7 85 50 ff ff ff 30 00 30 00 c7 85 54 ff ff ff 30 00 30 00 c7 85 58 ff ff ff 30 00 34 00 c7 85 5c ff ff ff 36 00 7d 00 c7 45 d0 01 00 00 00 89 7d d4 c7 45 e4 00 01 00 00 89 45 e0 ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3521,6 +3659,7 @@ rule Trojan_Win32_FormBook_HNS_2147889119_0
         $x_6_5 = {72 00 69 00 67 00 68 00 74 00 00 00 43 00 6f 00 70 00 79 00 72 00 69 00 67 00 68 00 74 00 20 00 74 00 72 00 69 00 73 00 61 00 63 00 63 00 68 00 61 00 72 00 69 00 64 00 65 00 00 00 ?? ?? ?? ?? 01 00 4c}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             ((1 of ($x_6_*) and 2 of ($x_1_*))) or
@@ -3547,6 +3686,7 @@ rule Trojan_Win32_FormBook_AMF_2147893058_0
         $x_1_1 = {fe c0 32 c1 c0 c0 02 2a c1 c0 c0 03 04 56 f6 d0 2c 19 34 18 f6 d8 d0 c8 04 0a f6 d0 02 c1 d0 c0 2a c1 34 92}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3568,6 +3708,7 @@ rule Trojan_Win32_FormBook_MBKC_2147893901_0
         $x_1_1 = {8d 41 01 f7 ef 8a 86 ?? ?? ?? ?? c0 c0 05 32 81 ?? ?? ?? ?? 88 86 ?? ?? ?? ?? 89 d0 c1 e8 1f c1 fa 02 01 c2 8d 04 52 8d 04 82 f7 d8 01 c1 41 46 75 ce}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3589,6 +3730,7 @@ rule Trojan_Win32_FormBook_MBKE_2147893902_0
         $x_1_1 = {73 49 8b 55 f8 8a 82 ?? ?? ?? ?? 88 45 ff 8b 4d e4 03 4d f4 8a 11 88 55 fe 0f b6 45 ff c1 f8 03 0f b6 4d ff c1 e1 05 0b c1 0f b6 55 fe 33 c2 8b 4d f8 88 81 ?? ?? ?? ?? 8b 45 f4 83 c0 01 99 b9 ?? ?? ?? ?? f7 f9 89 55 f4 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3616,6 +3758,7 @@ rule Trojan_Win32_FormBook_QE_2147896082_0
         $x_3_7 = "vxfvacf" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3716,6 +3859,7 @@ rule Trojan_Win32_FormBook_AFR_2147910320_0
         $x_1_1 = {33 db 89 45 a8 33 ff 8b 0d ?? ?? ?? ?? 0f af cb b8 7f e0 07 7e f7 e9 c1 fa 05 8d 73 01 8b c2 8b ce 0f af 0d ?? ?? ?? ?? c1 e8 1f 03 c2 89 45 ec b8 7f e0 07 7e f7 e9 c1 fa 05 8b ca c1 e9 1f 03 ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3795,6 +3939,7 @@ rule Trojan_Win32_FormBook_NF_2147912072_0
         $x_3_2 = {33 c0 38 01 74 0d 8d 49 00 80 7c 08 01 ?? 8d 40 01 75 f6 33 c9 66}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3873,6 +4018,7 @@ rule Trojan_Win32_FormBook_Z_2147916944_0
         $x_1_2 = {04 83 c4 0c 83 06 07 5b 5f 5e 8b e5 5d c3 8b 17 03 55 0c 6a 01 83}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3895,6 +4041,7 @@ rule Trojan_Win32_FormBook_Z_2147916944_1
         $x_1_2 = {1a d2 80 e2 af 80 c2 7e eb 2a 80 fa 2f 75 11 8a d0 80 e2 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3925,6 +4072,7 @@ rule Trojan_Win32_FormBook_Z_2147916944_2
         $x_1_10 = {56 68 03 01 00 00 8d 85 95 fe ff ff 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3947,6 +4095,7 @@ rule Trojan_Win32_FormBook_AFO_2147919711_0
         $x_1_2 = {6a 00 6a 00 6a 00 8d 85 74 fd ff ff 50 ff 15 ?? ?? ?? ?? 85 c0 74 3b a1 ?? ?? ?? ?? 0f af 45 c8 03 45 cc a3 ?? ?? ?? ?? 8b 45 98 48}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4468,6 +4617,7 @@ rule Trojan_Win32_FormBook_ZC_2147940907_0
         $x_1_3 = {68 53 d8 7f 8c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

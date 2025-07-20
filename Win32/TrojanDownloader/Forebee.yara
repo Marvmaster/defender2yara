@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Forebee_A_2147610326_0
         $x_1_2 = {83 c1 4b 89 0d ?? ?? 40 00 8b ce e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

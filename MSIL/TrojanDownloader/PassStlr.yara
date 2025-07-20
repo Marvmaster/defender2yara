@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_PassStlr_SA_2147735259_0
         $x_1_3 = "$2aab27fc-44c3-45d9-ab10-a55166cf202b" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

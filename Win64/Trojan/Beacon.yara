@@ -16,6 +16,7 @@ rule Trojan_Win64_Beacon_RDA_2147892587_0
         $x_2_1 = {83 e2 03 8a 54 15 00 41 32 14 04 88 14 03 48 ff c0 39 f8 89 c2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_Beacon_RDB_2147902911_0
         $x_2_1 = {48 89 c1 83 e1 07 41 8a 0c 0a 41 30 0c 01 48 ff c0 eb e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

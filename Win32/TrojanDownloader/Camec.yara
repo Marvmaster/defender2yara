@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Camec_A_2147637845_0
         $x_1_4 = "1E564155" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule TrojanDownloader_Win32_Camec_G_2147650648_0
         $x_1_11 = "CurrentVersion\\Explorer\\Browser Helper Objects" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 7 of ($x_1_*))) or
             ((1 of ($x_5_*) and 6 of ($x_1_*))) or
@@ -79,6 +81,7 @@ rule TrojanDownloader_Win32_Camec_E_2147652417_0
         $x_1_4 = {8b 55 28 8b 02 89 85 e0 fe ff ff 89 b5 d8 fe ff ff 8b 47 6c 8b 48 34 89 8d d0 fe ff ff 89 b5 c8 fe ff ff 8b 50 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule TrojanDownloader_Win32_Camec_I_2147652487_0
         $x_1_2 = "697559465C50" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule TrojanDownloader_Win32_Camec_K_2147653903_0
         $x_1_3 = "wCBGbaRKwZ0GwCRswC0mJCwVwgcGbaRswCDGwaBQwCJGpSRKwSsmwkj4wZjGpapkwSTmwSjuwZJCpkj4wZ0mJkjuwCcmJCRnwZTGJaBgwSTmpD" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

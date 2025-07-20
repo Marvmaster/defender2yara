@@ -18,6 +18,7 @@ rule Backdoor_Win32_Pigskarb_A_2147695046_0
         $x_1_4 = {8b 0e 83 c4 10 85 c9 74 0f 83 f9 0f 74 0a 83 f9 17 74 05 83 f9 12 75 ?? e8 ?? ?? ?? ?? 85 c0 75 01 47 e8 ?? ?? ?? ?? 33 d2 b9 e8 03 00 00 f7 f1 83 c2 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Worm_Win32_Vexral_A_2147649386_0
         $x_1_5 = "GTalk Instant Message" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

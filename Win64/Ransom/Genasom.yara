@@ -18,6 +18,7 @@ rule Ransom_Win64_Genasom_AR_2147754406_0
         $x_1_3 = "decrypt all your files after paying the ransom" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

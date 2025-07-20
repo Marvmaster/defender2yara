@@ -21,6 +21,7 @@ rule Rogue_MSIL_Toprot_168906_0
         $x_1_7 = "AV.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

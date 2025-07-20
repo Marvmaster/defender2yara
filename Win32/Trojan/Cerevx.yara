@@ -16,6 +16,7 @@ rule Trojan_Win32_Cerevx_A_2147661325_0
         $x_1_2 = {5c 6a 61 76 61 25 73 2e 65 78 65 [0-16] 5c 6a 61 76 61 77 25 73 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

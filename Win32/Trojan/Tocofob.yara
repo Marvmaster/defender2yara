@@ -18,6 +18,7 @@ rule Trojan_Win32_Tocofob_A_2147659886_0
         $x_1_4 = "ICMP DDoS Status" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

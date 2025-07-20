@@ -17,6 +17,7 @@ rule Ransom_Win64_ContiCrypt_PE_2147782093_0
         $x_1_2 = {33 c9 8a 44 0d ?? 0f b6 c0 83 e8 ?? 6b c0 ?? 99 f7 fb 8d ?? ?? 99 f7 fb 88 54 0d ?? 41 83 f9 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Ransom_Win64_ContiCrypt_PG_2147782097_0
         $x_1_1 = {33 c0 8a 04 38 41 b8 ?? ?? ?? ?? 32 c3 80 c3 ?? 88 01 0f b6 c3 48 ff c1 84 db 41 0f 44 c0 ff c2 8a d8 8b c2 48 3b 44 24 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Ransom_Win64_ContiCrypt_PM_2147812311_0
         $x_1_3 = "Your system is LOCKED." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Ransom_Win64_ContiCrypt_SL_2147834448_0
         $x_1_5 = "RSA2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

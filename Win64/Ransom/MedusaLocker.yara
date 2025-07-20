@@ -20,6 +20,7 @@ rule Ransom_Win64_MedusaLocker_SIB_2147807750_0
         $x_10_5 = {8a 06 48 ff c6 88 07 48 ff c7 bb [0-4] 00 d2 75 ?? 8a 16 48 ff c6 10 d2 73 ?? 00 d2 75 ?? 8a 16 48 ff c6 10 d2 73 ?? 31 c0 00 d2 75 ?? 8a 16 48 ff c6 10 d2 0f 83 ?? ?? ?? ?? 00 d2 75 ?? 8a 16 48 ff c6 10 d2 11 c0 00 d2 75 ?? 8a 16 48 ff c6 10 d2 11 c0 00 d2 75 ?? 8a 16 48 ff c6 10 d2 11 c0 00 d2 75 ?? 8a 16 48 ff c6 10 d2 11 c0 74 ?? 57 89 c0 48 29 c7 8a 07 5f 88 07 48 ff c7 bb ?? ?? ?? ?? eb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_2_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule Ransom_Win64_MedusaLocker_YAA_2147893956_0
         $x_1_2 = "SOFTWARE\\PAIDMEMES" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Ransom_Win64_MedusaLocker_AMLK_2147929200_0
         $x_1_2 = {48 8d 4c 24 50 48 83 7c 24 68 07 48 0f 47 4c 24 50 4c 8d 44 24 70 48 8d 55 80 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Ransom_Win64_MedusaLocker_DDZ_2147934181_0
         $x_5_1 = {33 d2 48 8b c3 49 f7 f7 48 8b 06 0f b6 0c 0a 41 32 0c 18 88 0c 03 48 ff c3 48 3b dd 72 d2}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Ransom_Win64_MedusaLocker_MLM_2147935595_0
         $x_1_3 = "taskkill /f /im explorer.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule Ransom_Win64_MedusaLocker_ZIN_2147935827_0
         $x_5_1 = {48 8d 53 40 48 8b cb e8 ?? ?? ?? ?? 48 8b c5 48 89 ab 80 00 00 00 0f b6 44 18 40 30 07 48 ff c7 48 ff 83 80 00 00 00 48 83 ee 01 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +159,7 @@ rule Ransom_Win64_MedusaLocker_A_2147936646_0
         $x_1_1 = {45 33 ff 45 33 c9 4c 89 7c 24 30 45 33 c0 c7 44 24 28 80 00 00 00 ba 00 00 00 c0 c7 44 24 20 01 00 00 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +181,7 @@ rule Ransom_Win64_MedusaLocker_MZT_2147938677_0
         $x_5_1 = {33 c0 48 c7 83 80 ?? ?? ?? ?? ?? ?? ?? 0f b6 44 18 40 30 07 48 ff c7 48 ff 83 80 00 00 00 48 83 ee 01 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

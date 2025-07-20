@@ -18,6 +18,7 @@ rule Trojan_MSIL_Purelogs_HHE_2147935339_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_Purelogs_PGP_2147940787_0
         $x_4_2 = {52 00 65 00 61 00 64 00 41 00 73 00 42 00 79 00 74 00 65 00 41 00 72 00 72 00 61 00 79 00 41 00 73 00 79 00 6e 00 63 00 00 11 47 00 65 00 74 00 41 00 73 00 79 00 6e 00 63}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

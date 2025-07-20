@@ -20,6 +20,7 @@ rule Trojan_Win32_Banker_BD_2147633322_0
         $x_1_6 = "Token inv" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Banker_BF_2147648926_0
         $x_1_2 = {0d 0a 73 65 74 20 2d ?? ?? ?? ?? 2d 3d ?? 0d 0a 73 65 74 20 2d ?? ?? ?? ?? 2d 3d ?? 0d 0a 25 2d ?? ?? ?? ?? 2d 25 25 2d ?? ?? ?? ?? 2d 25 25}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_Win32_Banker_K_2147655887_0
         $x_1_14 = "key=HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule Trojan_Win32_Banker_L_2147655993_0
         $x_1_7 = {8b 44 24 04 8b 77 fc e8 4f fe ff ff 8b 7c 24 04 8b 07 89 04 24 d1 e6 03 37 4b eb 0a e8 ca f1 ff ff 89 04 24 89 c6 8b 44 9c 1c 89 f2 85 c0 74 0c 8b 48 fc d1 e1 01 ce e8 97 ce ff ff 4b 75 e7 8b 14 24 8b 44 24 04 85 ff 75 0c 85 d2 74 03 ff 4a f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule Trojan_Win32_Banker_VB_2147678774_0
         $x_1_7 = {26 00 6d 00 6f 00 64 00 65 00 3d 00 38 00 36 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -150,6 +155,7 @@ rule Trojan_Win32_Banker_U_2147685074_0
         $x_1_5 = {49 8d 44 11 ff 3b c2 72 25 8a 08 80 f9 20 74 0a 80 f9 a1 75 15 38 48 ff 75 10 84 c9 7d 05 83 e8 02 eb 01 48 3b c2 73 e1 eb 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule Trojan_Win32_Banker_Z_2147694661_0
         $x_1_3 = "TMethodImplementationIntercept" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -194,6 +201,7 @@ rule Trojan_Win32_Banker_AF_2147697250_0
         $x_1_3 = "121AE933C65DA3B0778187" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -221,6 +229,7 @@ rule Trojan_Win32_Banker_AG_2147705765_0
         $x_1_8 = "Banco Ita? - Feito Para Voc" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -249,6 +258,7 @@ rule Trojan_Win32_Banker_S_2147730436_0
         $x_1_8 = "\\SOFTWARE\\Microsoft\\Internet Explorer\\Low Rights\\ElevationPolicy" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -270,6 +280,7 @@ rule Trojan_Win32_Banker_RA_2147761892_0
         $x_1_1 = {42 83 fa 08 7c 34 00 8b c6 81 c6 ?? ?? ?? ?? 35 ?? ?? ?? ?? 69 c8 ?? ?? ?? ?? 81 f1 ?? ?? ?? ?? 8b c1 c1 e8 0d 33 c1 69 c8 ?? ?? ?? ?? 8b c1 c1 e8 0f 33 c1 89 84 94}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -292,6 +303,7 @@ rule Trojan_Win32_Banker_AMK_2147787114_0
         $x_10_2 = {8b 04 24 01 d8 69 c0 75 da 81 64 89 04 24 8b 04 24 01 d8 69 c0 75 da 81 64 89 04 24}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -313,6 +325,7 @@ rule Trojan_Win32_Banker_RPB_2147807734_0
         $x_1_1 = {81 c7 14 cb 88 01 8b 54 24 10 6b ce 27 89 38 8b c2 2b c1 2b c3 83 c0 04 8d 88 3f ff ff ff 03 ce 81 f9 0e 1d 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -337,6 +350,7 @@ rule Trojan_Win32_Banker_ARE_2147899445_0
         $x_1_4 = "cmd.exe /c net start Spooler" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -361,6 +375,7 @@ rule Trojan_Win32_Banker_ARG_2147899446_0
         $x_3_4 = "Extreme Injector.exe" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -383,6 +398,7 @@ rule Trojan_Win32_Banker_MV_2147906179_0
         $x_1_2 = {a1 64 a6 45 00 a3 6c 8d 45 00 68 5c 8d 45 00 e8 34 52 fb ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -417,6 +433,7 @@ rule Trojan_Win32_Banker_RHA_2147912667_0
         $x_2_14 = {50 45 00 00 4c 01 0a ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0b 01 02 19 00 ?? 28 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -439,6 +456,7 @@ rule Trojan_Win32_Banker_EM_2147932894_0
         $x_1_2 = "filiation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -460,6 +478,7 @@ rule Trojan_Win32_Banker_MBS_2147934924_0
         $x_1_1 = {36 35 34 36 34 35 72 72 72 72 40 6d 61 69 6c 2e 72 75 00 37 36 37 38 37 6a 68 6a 68 40 6d 61 69 6c 2e 72 75 00 73 6d 74 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -489,6 +508,7 @@ rule Trojan_Win32_Banker_16459_0
         $x_1_10 = "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Browser Helper Objects" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_5_*) and 1 of ($x_3_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -518,6 +538,7 @@ rule Trojan_Win32_Banker_16459_1
         $x_1_6 = "bancanetempresarial.banamex.com.mx" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -561,6 +582,7 @@ rule Trojan_Win32_Banker_16459_2
         $x_1_24 = "svhootss.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 7 of ($x_10_*) and 14 of ($x_1_*))) or
             (all of ($x*))

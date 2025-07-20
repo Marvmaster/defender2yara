@@ -21,6 +21,7 @@ rule Backdoor_MSIL_Maslioc_A_2147688947_0
         $x_1_7 = "Stresser_ON" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

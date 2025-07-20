@@ -17,6 +17,7 @@ rule Trojan_Win32_Venik_SIB_2147787621_0
         $x_1_2 = {8b 44 24 04 33 c9 39 4c 24 ?? 7e ?? 8a 14 01 80 f2 ?? 80 c2 ?? 88 14 01 41 3b 4c 24 00 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

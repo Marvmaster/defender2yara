@@ -20,6 +20,7 @@ rule Trojan_MacOS_Empyre_B_2147750318_0
         $x_1_5 = "CklWPWFbMDo0XTtkYXRhPWFbNDpdO2tleT1JVisnR144VkpFMSVlUFc9KEsvXWk1cWp5bHdGb30tclFBbjwnO1MsaixvdXQ9cmFuZ2UoMjU2KSwwLFtdCm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

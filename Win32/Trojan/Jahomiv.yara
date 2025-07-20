@@ -17,6 +17,7 @@ rule Trojan_Win32_Jahomiv_A_2147722879_0
         $x_1_3 = {c1 e8 10 88 06 46 8b c3 c1 e8 08 88 06 46 88 1e 46 33 db 88 5d 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Smordess_A_2147719201_0
         $x_1_2 = "(New-Object -com Shell.Application).ShellExecute('mess.exe')" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

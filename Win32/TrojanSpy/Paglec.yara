@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Paglec_A_2147626689_0
         $x_1_4 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

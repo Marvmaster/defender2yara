@@ -15,6 +15,7 @@ rule TrojanProxy_Win32_Thunker_F_2147607862_0
         $x_1_1 = {7f 0d ff 44 24 10 83 7c 24 10 05 7c ?? eb 08 c7 44 24 18 01 00 00 00 68 ?? ?? 00 10 68 ?? 31 00 10 0d 00 ff ?? 55 e8 ?? (02|03) 00 00 83 c4 34 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

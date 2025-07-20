@@ -17,6 +17,7 @@ rule Trojan_Win32_BlackCatRsm_A_2147914869_0
         $x_1_3 = {64 72 6f 70 2d 64 72 61 67 [0-80] 64 72 6f 70 2d 74 61 72 67 65 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_Win64_GoZikma_PA_2147811431_0
         $x_3_4 = {0f b6 5c 04 ?? 31 da 88 94 04 ?? ?? ?? ?? 40 3d ca 01 00 00 7d}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

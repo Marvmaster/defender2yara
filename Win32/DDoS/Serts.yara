@@ -16,6 +16,7 @@ rule DDoS_Win32_Serts_A_2147717834_0
         $x_1_2 = "*\\AD:\\Software\\Hacking Tools\\DDOS tools\\STRESS\\BBHH-DoS\\Project1.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

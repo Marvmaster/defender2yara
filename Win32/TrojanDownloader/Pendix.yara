@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Pendix_C_2147602440_0
         $x_1_2 = {68 5c 10 40 00 [0-5] 68 1c 10 40 00 [0-5] e8 41 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

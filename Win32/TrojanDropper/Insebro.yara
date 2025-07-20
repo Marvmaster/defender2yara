@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Insebro_A_2147800775_0
         $x_1_3 = "Navigation blocked</title>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule TrojanDropper_Win32_Insebro_A_2147804184_0
         $x_1_8 = {c7 06 ff 00 00 00 8b 06 e8 ?? ?? ?? ?? 8b d8 56 53 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

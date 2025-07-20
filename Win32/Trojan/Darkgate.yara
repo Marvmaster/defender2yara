@@ -17,6 +17,7 @@ rule Trojan_Win32_Darkgate_IP_2147895643_0
         $x_1_2 = {8a 1a 8a 4e 06 eb e8 8a 5c 31 06 32 1c 11}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Darkgate_YAB_2147928173_0
         $x_10_2 = {48 48 48 58 31 d2 f7 f3 8a 04 16 30 04 0f}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Darkgate_YAC_2147932096_0
         $x_11_1 = {2d 67 12 13 00 01 87 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 80 ?? ?? ?? ?? 33 87 ?? ?? ?? ?? 83 e8 ?? 31 87 ?? ?? ?? ?? 8b 87 ?? ?? ?? ?? 0f af 87}  //weight: 11, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Trojan_Win32_Darkgate_YAD_2147932828_0
         $x_11_1 = {61 30 04 0f 66 0f 57 c9 41 f2 0f 5f c8 89 c8 66 0f 55 c1}  //weight: 11, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

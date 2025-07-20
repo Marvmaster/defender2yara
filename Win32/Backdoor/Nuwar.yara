@@ -24,6 +24,7 @@ rule Backdoor_Win32_Nuwar_A_2147790242_0
         $x_2_10 = "Windoss NT" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -57,6 +58,7 @@ rule Backdoor_Win32_Nuwar_C_2147792375_0
         $x_1_6 = {81 7d f8 00 00 00 01 0f 85 ?? 01 00 00 f6 45 f4 cc 74 ?? 8b 4d e4 66 81 39 4d 5a 0f 85 ?? 01 00 00 8b 41 3c 03 c1 81 38 50 45 00 00 0f 85 ?? 01 00 00 66 81 78 18 0b 01 0f 85 ?? 01 00 00 2b d9 66 83 78 06 00 0f b7 48 14 8d 4c 01 18 0f 86 ?? 01 00 00 8b 41 0c 3b d8 72 ?? 8b 51 08 03 d0 3b da 73 ?? f6 41 27 80}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule Backdoor_Win32_Nuwar_A_2147792379_0
         $x_1_1 = {8d 45 f4 50 8d b3 ?? ?? ?? 00 ff 36 e8 ?? ?? 00 00 59 50 ff 36 ff 75 f8 ff d7 6a 00 8d 45 f4 50 6a 02 8d 45 fc 50 ff 75 f8 c6 45 fc 0d c6 45 fd 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Backdoor_Win32_Nuwar_D_2147792404_0
         $x_1_5 = {67 00 63 00 61 00 73 00 73 00 65 00 72 00 76 00 2e 00 65 00 78 00 65 00 00 00 00 00 69 00 63 00 6d 00 6f 00 6e 00 2e 00 65 00 78 00 65 00 00 00 69 00 6e 00 65 00 74 00 75 00 70 00 64 00 2e 00 65 00 78 00 65 00 00 00 6e 00 6f 00 64 00 33 00 32 00 6b 00 72 00 6e 00 2e 00 65 00 78 00 65 00 00 00 00 00 6e 00 6f 00 64 00 33 00 32 00 72 00 61 00 2e 00 65 00 78 00 65 00 00 00 70 00 61 00 76 00 66 00 6e 00 73 00 76 00 72 00 2e 00 65 00 78 00 65 00 00 00 00 00 61 00 76 00 67 00 2e 00 65 00 78 00 65 00 00 00 61 00 76 00 67 00 73 00 63 00 61 00 6e 00 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

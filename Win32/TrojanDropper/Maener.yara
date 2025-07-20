@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Maener_A_2147688932_0
         $x_5_5 = {8b c3 c1 e8 10 88 06 8b c3 c1 e8 08 88 46 01 88 5e 02 83 c6 03 bb 01 00 00 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or

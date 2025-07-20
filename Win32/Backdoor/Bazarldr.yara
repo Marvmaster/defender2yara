@@ -20,6 +20,7 @@ rule Backdoor_Win32_Bazarldr_AB_2147775810_0
         $x_1_5 = "All files (*.*)|*.*||" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Backdoor_Win32_Bazarldr_AC_2147775811_0
         $x_1_4 = "DllCanUnloadNow" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Backdoor_Win32_Bazarldr_DA_2147776085_0
         $x_1_6 = "string too long" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Backdoor_Win32_Bazarldr_AD_2147776130_0
         $x_1_1 = {be 08 0f b6 55 ?? 33 ca a1 ?? ?? ?? ?? 03 45 ?? 88 08 e9 13 00 41 8a 89 ?? ?? ?? ?? 88 4d ?? a1 ?? ?? ?? ?? 03 45 ?? 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

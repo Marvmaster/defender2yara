@@ -24,6 +24,7 @@ rule Trojan_Win32_Sluegot_A_2147646618_0
         $x_2_10 = {8a 11 88 17 8a 10 33 db 88 11 88 18 8d 85 f4 fe ff ff 50 ff 15 a0 40 40 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule Trojan_Win32_Sluegot_B_2147646757_0
         $x_1_4 = "%s%s&mid=%s&pgid=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Trojan_Win32_Sluegot_C_2147646758_0
         $x_1_6 = "messagepiecelength:%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -106,6 +109,7 @@ rule Trojan_Win32_Sluegot_D_2147679639_0
         $x_1_6 = "rands=%s&acc=%s&" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

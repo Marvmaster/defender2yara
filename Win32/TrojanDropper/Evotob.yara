@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Evotob_A_2147691632_0
         $x_1_5 = "RunYourMalwareHere" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDropper_Win32_Evotob_A_2147692186_0
         $x_1_2 = "\\Windows Defender\\Exclusions\\Processes  \" /v svchost.exe /t  REG_DWORD /d 0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule TrojanDropper_Win32_Evotob_B_2147693849_0
         $x_1_7 = "RunYourMalwareHere" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -125,6 +128,7 @@ rule TrojanDropper_Win32_Evotob_C_2147694109_0
         $x_2_3 = {3d 00 10 00 00 74 ?? 3d 00 20 00 00 72 ?? 3d 00 30 00 00 73 ?? 43 eb ?? 3d 00 30 00 00 72 ?? 6a 02 eb ?? 3d 00 40 00 00 72 ?? 6a 03}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

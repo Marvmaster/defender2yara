@@ -19,6 +19,7 @@ rule Backdoor_MacOS_X_iWorm_A_2147689384_0
         $x_1_5 = {28 66 6f 72 20 67 65 6e 65 72 61 74 6f 72 29 00 28 66 6f 72 20 73 74 61 74 65 29 00 28 66 6f 72 20 63 6f 6e 74 72 6f 6c 29 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

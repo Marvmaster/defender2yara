@@ -22,6 +22,7 @@ rule Trojan_Win32_Phoetel_ST_2147742935_0
         $x_1_7 = "Mozilla\\SeaMonkey\\Profiles" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

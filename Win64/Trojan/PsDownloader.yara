@@ -19,6 +19,7 @@ rule Trojan_Win64_PsDownloader_CAMO_2147847643_0
         $x_1_4 = "C:\\WINDOWS\\system32\\cmd.exe /c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win64_PsDownloader_CH_2147941771_0
         $x_2_4 = "powershell -WindowStyle Hidden -ExecutionPolicy Bypass -File" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

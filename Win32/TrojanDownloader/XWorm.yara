@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_XWorm_CBV_2147851145_0
         $x_1_4 = "https://paste.ee/r/Y6rkf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

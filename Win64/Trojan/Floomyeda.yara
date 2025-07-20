@@ -17,6 +17,7 @@ rule Trojan_Win64_Floomyeda_C_2147731239_0
         $x_10_3 = "T$TiCwxV@12Tr22253" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_Floomyeda_D_2147731240_0
         $x_10_4 = "wcnbis_x32.dll" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*))) or
             (all of ($x*))

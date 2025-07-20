@@ -21,6 +21,7 @@ rule Worm_Win32_Catchdens_A_2147640343_0
         $x_1_7 = {6a 61 58 6a 75 66 89 45 ?? 58 6a 74 66 89 45 ?? 58 6a 6f 66 89 45 ?? 58 6a 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

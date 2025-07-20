@@ -18,6 +18,7 @@ rule Trojan_Win32_Kaicorn_A_2147733552_0
         $x_1_3 = {5c 00 55 00 6e 00 69 00 63 00 6f 00 72 00 6e 00 2d 00 [0-48] 63 00 6d 00 64 00 20 00 2f 00 63 00 20 00 72 00 ?? ?? 6e 00 61 00 6d 00 65 00 20 00 22 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

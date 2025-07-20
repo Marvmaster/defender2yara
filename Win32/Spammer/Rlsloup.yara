@@ -37,6 +37,7 @@ rule Spammer_Win32_Rlsloup_A_2147574511_0
         $x_1_23 = "postmaster@usa.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 16 of ($x_1_*))) or
             ((4 of ($x_2_*) and 14 of ($x_1_*))) or
@@ -73,6 +74,7 @@ rule Spammer_Win32_Rlsloup_A_2147574511_1
         $x_1_10 = "WS2_32.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
@@ -100,6 +102,7 @@ rule Spammer_Win32_Rlsloup_B_2147616454_0
         $x_1_4 = "/bn/comgate.xhtml?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

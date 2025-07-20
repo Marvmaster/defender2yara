@@ -19,6 +19,7 @@ rule VirTool_Win64_Refledumpesz_A_2147924244_0
         $x_1_4 = {44 8b c3 33 d2 [0-33] 33 d2 48 8b c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

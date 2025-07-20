@@ -22,6 +22,7 @@ rule Trojan_MSIL_Gentromal_B_2147734623_0
         $x_1_8 = {00 00 0a 13 0b 11 0b 16 3e 19 00 00 00 11 05 16 11 0b 6f 5f 00 00 0a 13 0a 11 05 11 0b 17 58 6f 60 00 00 0a 13 05 09 07 11 0a 11 05 11 06 28 0d 00 00 06 20 00 01 00 00 6a 5e 69 28 0f 00 00 06 dd 06 00 00 00 26 dd 00 00 00 00 28 0e 00 00 06 2a 00 00 00 01 10 00 00 00 00 5f 02 5a b9 02 06 3f 00 00 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

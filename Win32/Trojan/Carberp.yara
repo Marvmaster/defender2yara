@@ -19,6 +19,7 @@ rule Trojan_Win32_Carberp_I_2147648222_0
         $x_1_5 = "s&statpass=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Carberp_I_2147648222_1
         $x_1_7 = {74 65 78 74 c7 84 24 ?? ?? ?? ?? 64 43 6f 6e c7 84 24 ?? ?? ?? ?? 68 72 65 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_Win32_Carberp_I_2147648222_2
         $x_1_9 = "%s.toolgot.com:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_4_*) and 4 of ($x_1_*))) or
@@ -105,6 +108,7 @@ rule Trojan_Win32_Carberp_B_2147681817_0
         $x_1_5 = {56 6e 63 44 4c 4c 2e 64 6c 6c 00 56 6e 63 53 72 76 57 6e 64 50 72 6f 63 00 56 6e 63 53 74 61 72 74 53 65 72 76 65 72 00 56 6e 63 53 74 6f 70 53 65 72 76 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -135,6 +139,7 @@ rule Trojan_Win32_Carberp_K_2147707001_0
         $x_1_11 = "fail=1&task_id=%S" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -160,6 +165,7 @@ rule Trojan_Win32_Carberp_BW_2147718201_0
         $x_1_5 = {77 69 6e 00 2c 73 65 72 76 65 72 00 2c 78 36 34 [0-4] 2c 78 38 36 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -189,6 +195,7 @@ rule Trojan_Win32_Carberp_BX_2147718546_0
         $x_1_4 = "monhost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -215,6 +222,7 @@ rule Trojan_Win32_Carberp_BY_2147718560_0
         $x_1_3 = {00 73 65 72 76 65 72 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -241,6 +249,7 @@ rule Trojan_Win32_Carberp_BZ_2147720554_0
         $x_1_6 = "monhost.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -267,6 +276,7 @@ rule Trojan_Win32_Carberp_GHG_2147847764_0
         $x_10_1 = {8b 55 fc 0f be 82 ?? ?? ?? ?? 8b 4d fc 83 c1 01 81 f1 89 00 00 00 2b c1 8b 55 fc 88 82 ?? ?? ?? ?? 8b 45 fc 83 c0 01 89 45 fc e9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

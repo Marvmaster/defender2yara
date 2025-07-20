@@ -18,6 +18,7 @@ rule VirTool_Win64_Contenesz_A_2147918050_0
         $x_1_3 = {48 89 4c 24 08 48 89 54 24 10 55 57 48 83 ec 48 ?? ?? ?? ?? 48 8b 85 68 01 00 00 48 8b 00 48 8b 8d 68 01 00 00 ?? ?? ?? 48 8b d0 [0-25] 48 8b c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

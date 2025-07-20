@@ -17,6 +17,7 @@ rule Trojan_Win32_DiskFill_GZY_2147905928_0
         $x_5_2 = {34 4d 4b 52 a8 6f 72}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Ransom_Linux_LockFile_A_2147926124_0
         $x_1_2 = {4c 89 ff e8 fb ?? ?? ?? 31 d2 be 05 f5 54 00 4c 89 ff b9 05 00 00 00 e8 d7 ?? ?? ?? be a3 f4 54 00 48 8d bc 24 00 03 00 00 48 85 c0 b8 a7 f4 54 00 48 0f 45 f0 e8 a9 ?? ?? ?? 48 8b bc 24 60 05 00 00 48 8d 84 24 70 05 00 00 48 39 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Ransom_Win32_Cactus_LKV_2147846616_0
         $x_1_7 = "cAcTuS" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_NetWired_DSK_2147753271_0
         $x_1_2 = "iqA2vbXFZuUFjDH2C" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_NetWired_RC_2147794524_0
         $x_1_6 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

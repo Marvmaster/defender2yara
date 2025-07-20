@@ -109,6 +109,7 @@ rule TrojanDownloader_O97M_Donoff_2147689064_0
         $x_1_3 = "armorlight" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

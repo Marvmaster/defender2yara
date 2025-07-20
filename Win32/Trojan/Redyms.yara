@@ -18,6 +18,7 @@ rule Trojan_Win32_Redyms_A_2147678590_0
         $x_10_4 = {b8 00 01 08 84 75 05 b8 00 31 88 84 8b 57 04 6a 00 50 8b 45 ?? 6a 00 6a 00 6a 00 50 52 51 ff 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

@@ -19,6 +19,7 @@ rule Trojan_Win32_Virtumonde_O_111416_0
         $x_1_5 = "www.7adpower.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Trojan_Win32_Virtumonde_O_111416_1
         $x_10_7 = "66.220.17.157;search" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -82,6 +84,7 @@ rule Trojan_Win32_Virtumonde_O_111416_2
         $x_1_12 = "www.7adpower.com;" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -119,6 +122,7 @@ rule Trojan_Win32_Virtumonde_114805_0
         $x_1_15 = "WinSoftware\\Winantivirus 2005\\ActivationCode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_5_*) and 4 of ($x_1_*))) or
             ((4 of ($x_10_*) and 3 of ($x_5_*))) or
@@ -146,6 +150,7 @@ rule Trojan_Win32_Virtumonde_M_116855_0
         $x_1_4 = {77 61 74 63 68 65 72 5f 62 75 6e 64 6c 65 2e 64 6c 6c 00 53 74 61 72 74 75 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -204,6 +209,7 @@ rule Trojan_Win32_Virtumonde_M_116855_1
         $x_1_39 = {68 6a 74 5f 6d 75 74 61 6e 74 00 00 68 69 6a 61 63 6b 74 68 69 73 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (30 of ($x*))
 }
 

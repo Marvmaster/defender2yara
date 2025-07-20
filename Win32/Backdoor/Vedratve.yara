@@ -31,6 +31,7 @@ rule Backdoor_Win32_Vedratve_A_2147725626_0
         $x_1_16 = {64 46 57 70 5a 50 57 46 4e 67 4a 51 46 40 57 4c 51 5a 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 3 of ($x_1_*))) or
             ((6 of ($x_2_*) and 1 of ($x_1_*))) or

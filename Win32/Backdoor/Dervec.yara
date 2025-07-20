@@ -23,6 +23,7 @@ rule Backdoor_Win32_Dervec_2147651834_0
         $x_1_9 = {77 77 77 2e 62 61 69 64 75 2e 63 6f 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

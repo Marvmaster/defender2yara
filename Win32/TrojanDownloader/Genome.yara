@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Genome_A_2147630032_0
         $x_1_2 = "wangyou.2288.org" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_Genome_K_2147634173_0
         $x_1_3 = {8b 53 24 03 d0 66 8b 0c 4a 8b 53 1c 03 d0 8b 1c 8a 03 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanDownloader_Win32_Genome_AA_2147634353_0
         $x_1_7 = "Windows 114kti" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule TrojanDownloader_Win32_Genome_AB_2147634517_0
         $x_1_6 = "C:\\windows\\asex.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule TrojanDownloader_Win32_Genome_AD_2147636195_0
         $x_2_6 = "a1.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -142,6 +147,7 @@ rule TrojanDownloader_Win32_Genome_AK_2147644495_0
         $x_1_5 = ".zguwang.com/soft/a3p/PPTV(pplive)heima_0020.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +171,7 @@ rule TrojanDownloader_Win32_Genome_AL_2147644496_0
         $x_1_4 = {2e 78 75 6e 6c 65 69 31 00 00 30 30 2e 63 6f 6d 2f 6d 73 6e 2f 73 6f 66 74 77 61 72 65 2f 70 61 72 74 6e 65 72 2f 32 6d 2f 63 70 73 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -189,6 +196,7 @@ rule TrojanDownloader_Win32_Genome_U_2147645255_0
         $x_1_5 = "wdc.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -213,6 +221,7 @@ rule TrojanDownloader_Win32_Genome_Z_2147648169_0
         $x_1_2 = "\\ntsysdll.tmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -235,6 +244,7 @@ rule TrojanDownloader_Win32_Genome_AT_2147679673_0
         $x_1_3 = "dlinkddns.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

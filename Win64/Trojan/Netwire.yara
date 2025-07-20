@@ -18,6 +18,7 @@ rule Trojan_Win64_Netwire_RA_2147850574_0
         $x_1_3 = "shellcode2.bin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

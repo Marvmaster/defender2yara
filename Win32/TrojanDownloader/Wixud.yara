@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Wixud_A_2147597869_0
         $x_1_1 = {8a 10 80 fa 7e 0f 85 (d2|d4) 00 00 00 a3 ?? ?? 40 00 ff 05 ?? ?? 40 00 40 3b c8 0f 84 (be|c0) 00 00 00 8a 10 80 fa 7e 75 f0 c6 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDownloader_Win32_Wixud_B_2147600628_0
         $x_1_1 = {74 07 6a 00 e8 ?? ?? 00 00 bf ?? ?? 40 00 b9 ?? ?? ?? ?? a1 ?? ?? 40 00 01 44 8f fc e2 f5 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule TrojanDownloader_Win32_Wixud_C_2147619168_0
         $x_1_8 = {8b 00 3d 4e 45 57 20 0f 85 ?? ?? 00 00 c7 45 b4 00 00 00 00 8b 45 dc e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

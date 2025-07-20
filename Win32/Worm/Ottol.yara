@@ -19,6 +19,7 @@ rule Worm_Win32_Ottol_A_2147696941_0
         $x_1_5 = "hcurun" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Trojan_Win32_Donut_CB_2147839731_0
         $x_1_7 = "T3PR94FN" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Donut_AMAB_2147853389_0
         $x_1_2 = {03 cf 03 c6 c1 c7 05 33 f9 c1 c6 08 33 f0 c1 c1 10 03 c7 03 ce c1 c7 07 c1 c6 0d 33 f8 33 f1 c1 c0 10 83 6c 24 30 01 75 d7 8b 6c 24 28 89 4c 24 14 33 c9 89 74 24 20 89 7c 24 18 89 44 24 1c 8b 44 8d 00 31 44 8c 14 41 83 f9 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_Donut_YAB_2147945877_0
         $x_5_4 = {0f b6 cb 32 b9 ?? ?? ?? ?? 8a 6d ff 8a 48 f3 8d 70 04 8a 58 f4 32 cf 32 5d fe 42 88 48 03 8a 48 f5 32 4d fd 88 48 05 8a 48 f6 32 cd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule TrojanDownloader_Win32_Zeprotad_A_2147600910_0
         $x_1_11 = "set allowedprogram program = \"%s\" name = \"securesystd\" mode = ENABLE scope = ALL profile = ALL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 6 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or

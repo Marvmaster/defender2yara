@@ -19,6 +19,7 @@ rule VirTool_Win64_Herevesz_A_2147922942_0
         $x_1_4 = {33 c0 83 f8 01 [0-17] f2 0f 2a c0 f2 0f 5e 05 b4 35 05 00 f2 0f 59 44 24 48 f2 0f 59 05 96 35 05 00 f2 0f 5c 44 24 48 f2 0f 11 84 24 b0 00 00 00 f2 0f 10 84 24 a8 00 00 00 f2 0f 58 84 24 b0 00 00 00 f2 0f 59 05 75 35 05 00 f2 48 0f 2c c0 8b c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

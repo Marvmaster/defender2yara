@@ -18,6 +18,7 @@ rule VirTool_Win32_Vanti_B_2147604776_0
         $x_2_4 = {68 5c 64 72 69 e8 ?? ?? 00 00 8f 02 e8 [0-48] 68 76 65 72 73 e8 [0-80] 68 6e 74 66 73 e8 [0-48] 68 2e 73 79 73}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -43,6 +44,7 @@ rule VirTool_Win32_Vanti_B_2147606297_0
         $x_1_1 = {8b ec bb 00 [0-40] 81 c3 00 00 01 00 [0-80] 83 f9 00 74 [0-64] 66 81 (38|2d|3b) 4d 5a [0-80] 83 f8 00 [0-64] 81 3a 4b 45 52 4e [0-48] 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule VirTool_Win32_Vanti_C_2147609365_0
         $x_1_4 = {81 e6 ff ff 00 00 68 ?? ?? ?? ?? 33 c6 6a 00 68 03 00 1f 00 a3 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 85 c0 5e 0f 85 91 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

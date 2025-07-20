@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Ahrocam_B_2147654336_0
         $x_1_4 = "http-get-demo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

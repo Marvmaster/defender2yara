@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Tidotick_A_2147695870_0
         $x_1_2 = {00 0a 00 02 6f ?? 00 00 06 16 6f ?? 00 00 0a 00 72 ?? ?? 00 70 0a 1d 28 ?? 00 00 0a 72 ?? ?? 00 70 28 ?? 00 00 0a 0b 07 28 ?? 00 00 0a 0c 08 2c 07 07 28 ?? 00 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

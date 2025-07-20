@@ -22,6 +22,7 @@ rule Worm_Win32_Kangkio_A_2147610934_0
         $x_2_8 = {8b 01 83 f8 ff 74 1f 8b ac 24 ?? ?? 00 00 8b 35 ?? ?? 40 00 6a 00 6a 00 6a 10 55 ff d6 6a 00 6a 00 6a 02 55 ff d6 8d 4c 24 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

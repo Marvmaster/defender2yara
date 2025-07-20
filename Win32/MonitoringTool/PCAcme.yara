@@ -19,6 +19,7 @@ rule MonitoringTool_Win32_PCAcme_14879_0
         $x_1_5 = "copy of PC Acme" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

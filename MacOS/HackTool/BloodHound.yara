@@ -21,6 +21,7 @@ rule HackTool_MacOS_BloodHound_A_2147832769_0
         $x_1_6 = "D8xgwECY7CYvx+Y2n4sBz93Jn9JRvxdiyyo8CTfuKaY=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_MSIL_Convagent_ALR_2147832709_0
         $x_1_1 = {70 a2 25 17 28 ?? ?? ?? 0a a2 25 18 72 b3 03 00 70 a2 25 19 28 ?? ?? ?? 0a a2 25 1a 72 07 04 00 70 a2 25 1b 28 ?? ?? ?? 0a a2 25 1c 72 43 04 00 70 a2 25 1d 28 ?? ?? ?? 0a a2 25 1e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_Convagent_NCS_2147838209_0
         $x_1_2 = "xvid.Form1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MSIL_Convagent_NHD_2147838498_0
         $x_1_3 = "SELECT name FROM test1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_MSIL_Convagent_NCF_2147841371_0
         $x_1_3 = "TocToe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +109,7 @@ rule Trojan_MSIL_Convagent_PSJT_2147844435_0
         $x_2_1 = {09 8d 07 00 00 01 13 04 16 13 05 2b 22 08 28 08 00 00 0a 2d 1a 08 28 04 00 00 06 0a 11 04 11 05 06 1f 10 28 09 00 00 0a 9c 11 05 17 58 13 05}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +132,7 @@ rule Trojan_MSIL_Convagent_PSRI_2147850747_0
         $x_1_2 = "gwgalg0k" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +154,7 @@ rule Trojan_MSIL_Convagent_SPP_2147852766_0
         $x_4_1 = {17 8d 01 00 00 01 13 07 11 07 16 02 a2 11 07 0d 07 14 09 6f ?? ?? ?? 0a 13 04 11 04 14 fe 01 13 06 11 06 38 05 00 00 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +176,7 @@ rule Trojan_MSIL_Convagent_PSVQ_2147888535_0
         $x_2_1 = {02 7b 31 00 00 04 07 6f ?? 00 00 0a 1f ec 16 73 3d 00 00 06 6f ?? 00 00 06 2b 4f 02 7b 31 00 00 04 07 6f ?? 00 00 0a 1f 14 16}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +199,7 @@ rule Trojan_MSIL_Convagent_NC_2147891688_0
         $x_1_2 = "FirmaElettronicaDDT.frmFIRMA.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -213,6 +222,7 @@ rule Trojan_MSIL_Convagent_ACV_2147895326_0
         $x_1_2 = "visula studio\\bucle\\obj\\Debug\\bucle.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +244,7 @@ rule Trojan_MSIL_Convagent_PTCF_2147896999_0
         $x_2_1 = {02 7b 04 00 00 04 6f 36 00 00 0a 6f 28 00 00 0a 0a 02 72 f9 00 00 70 06 72 19 01 00 70 28 ?? 00 00 0a 28 ?? 00 00 06 00 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -255,6 +266,7 @@ rule Trojan_MSIL_Convagent_PTDQ_2147898471_0
         $x_2_1 = {02 7b 03 00 00 04 6f 17 00 00 0a 06 6f 18 00 00 0a 6f 19 00 00 0a 17}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +288,7 @@ rule Trojan_MSIL_Convagent_KAB_2147910962_0
         $x_1_1 = {07 08 91 04 58 d2 0d 07 08 17 58 91 04 58 d2 13 04 07 08 11 04 9c 07 08 17 58 09 9c 08 18 58 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -297,6 +310,7 @@ rule Trojan_MSIL_Convagent_SPBF_2147912759_0
         $x_4_1 = {16 0c 2b 29 00 06 08 8f 0c 00 00 01 25 71 0c 00 00 01 72 4b 00 00 70 08 1f 6e 5d 6f ?? 00 00 0a d2 61 d2 81 0c 00 00 01 00 08 17 58 0c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -319,6 +333,7 @@ rule Trojan_MSIL_Convagent_KAC_2147914905_0
         $x_3_2 = {56 00 6f 00 64 00 53 00 6d 00 6f 00 45 00 70 00 70 00 74 00 4e 00 31 00 7a 00 4f 00 63 00 69}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -340,6 +355,7 @@ rule Trojan_MSIL_Convagent_MX_2147925519_0
         $x_1_1 = {72 1f 01 00 70 07 72 cc 01 00 70 28 05 00 00 0a 28 03 00 00 06 00 72 e8 01 00 70 07 72 95 02 00 70 28 05 00 00 0a 28 03 00 00 06 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -362,6 +378,7 @@ rule Trojan_MSIL_Convagent_AMCU_2147928401_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -384,6 +401,7 @@ rule Trojan_MSIL_Convagent_AORA_2147939597_0
         $x_2_2 = {11 09 11 0c 11 05 11 02 11 05 59 6f ?? 00 00 0a 13 06}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -414,6 +432,7 @@ rule Trojan_MSIL_Convagent_NG_2147940552_0
         $x_1_10 = "Stop-Service WinDefend -Force" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -435,6 +454,7 @@ rule Trojan_MSIL_Convagent_AB_2147945022_0
         $x_1_1 = {08 20 a0 8e cd e8 58 0d 09 20 b2 4f 09 d2 59 16 16 61 61 16 62 2b b1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

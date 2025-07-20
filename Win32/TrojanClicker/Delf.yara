@@ -25,6 +25,7 @@ rule TrojanClicker_Win32_Delf_AT_2147598655_0
         $x_10_11 = "WebBrowser1.LocationURL" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule TrojanClicker_Win32_Delf_BA_2147600380_0
         $x_1_5 = "\\winlogin.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -76,6 +78,7 @@ rule TrojanClicker_Win32_Delf_BC_2147600631_0
         $x_1_5 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +108,7 @@ rule TrojanClicker_Win32_Delf_K_2147609709_0
         $x_1_10 = "CallNextHookEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 7 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -133,6 +137,7 @@ rule TrojanClicker_Win32_Delf_P_2147613103_0
         $x_1_5 = "klikaem na treidera" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +164,7 @@ rule TrojanClicker_Win32_Delf_R_2147618122_0
         $x_1_6 = "WebBrowser1BeforeNavigate2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -182,6 +188,7 @@ rule TrojanClicker_Win32_Delf_AV_2147630057_0
         $x_1_4 = {73 65 63 5f 72 65 66 65 72 65 72 3d [0-4] ff ff ff ff 09 00 00 00 76 6f 74 65 4f 6b 3d 6f 6b [0-32] 6e 61 6d 65 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +212,7 @@ rule TrojanClicker_Win32_Delf_S_2147635790_0
         $x_2_4 = "@@@Thunder IE Update@@@" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -232,6 +240,7 @@ rule TrojanClicker_Win32_Delf_MB_2147637358_0
         $x_1_4 = "window.confirm=function(){};window." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -258,6 +267,7 @@ rule TrojanClicker_Win32_Delf_U_2147654168_0
         $x_1_3 = {64 ff 30 64 89 20 8b 55 08 b8 ?? ?? ?? 00 e8 ?? ?? ?? ?? 85 c0 0f 84 2d 01 00 00 8b 55 08 b8 4c 03 4a 00 e8 ?? ?? ?? ?? 85 c0 0f 84 8e 00 00 00 8b 55 08 b8 4c 03 4a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -285,6 +295,7 @@ rule TrojanClicker_Win32_Delf_W_2147656323_0
         $x_1_8 = "WINDOWS/system32/cffmom.log" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -310,6 +321,7 @@ rule TrojanClicker_Win32_Delf_AR_2147711783_0
         $x_1_5 = {6f 00 70 00 65 00 6e 00 6c 00 6e 00 6b 00 00 00 00 00 00 00 68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 74 00 6f 00 6e 00 67 00 6a 00 69 00 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

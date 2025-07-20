@@ -17,6 +17,7 @@ rule Trojan_Win64_Strilix_A_2147727597_0
         $x_10_2 = {48 89 b8 08 01 00 00 c7 00 44 33 22 11 48 89 b0 d8 00 00 00 48 89 70 10 48 89 70 18 89 70 20 48 89 70 74}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win64_Strilix_B_2147727598_0
         $x_10_2 = {41 b8 8d 56 e6 8c 41 8b c0 f7 e9 03 d1 c1 fa 0b 8b c2 c1 e8 1f 03 d0 69 c2 89 0e 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win64_Strilix_C_2147744102_0
         $x_2_3 = "c:\\windows\\apphelp.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             ((1 of ($x_4_*))) or

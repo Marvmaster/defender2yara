@@ -21,6 +21,7 @@ rule Trojan_WinNT_Darkshell_C_2147652085_0
         $x_1_7 = "_darkshell\\i386\\DarkShell.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

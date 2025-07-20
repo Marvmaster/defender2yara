@@ -17,6 +17,7 @@ rule VirTool_Win32_Afrootix_2147608054_0
         $x_1_3 = "netstat.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule VirTool_Win32_Afrootix_2147608054_1
         $x_1_8 = "1.2.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -68,6 +70,7 @@ rule VirTool_Win32_Afrootix_C_2147616856_0
         $x_1_1 = {8b f0 89 1e [0-7] 8b d6 83 c2 05 8b c3 e8 ?? 00 00 00 8b d6 83 c2 04 88 02 c6 03 e9 8b c3 40 89 38 [0-7] 8d 45 f4 50 8b 45 f4 50 6a 05 53 e8 ?? ?? ff ff 83 c6 05 8b 45 fc 89 30 33 c0 5a 59 59 64 89 10 eb 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule VirTool_Win32_Afrootix_B_2147616857_0
         $x_1_2 = {8b d0 8b c6 e8 ?? ?? ff ff 89 45 f4 6a 0c 6a 00 8d 4d f0 ba ?? ?? 14 13 8b c6 e8 ?? ?? ff ff 85 c0 74 0f 50 e8 ?? ?? ff ff b3 01 6a 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

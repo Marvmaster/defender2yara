@@ -22,6 +22,7 @@ rule Backdoor_Win32_Nitol_2147720659_0
         $x_1_8 = "ProxyToBadClose" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Backdoor_Win32_Nitol_DX_2147819702_0
         $x_1_2 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Backdoor_Win32_Nitol_GIC_2147846148_0
         $x_1_2 = "C:\\Users\\16512\\Desktop\\yk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

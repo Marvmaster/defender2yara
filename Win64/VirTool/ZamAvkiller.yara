@@ -18,6 +18,7 @@ rule VirTool_Win64_ZamAvkiller_A_2147917293_0
         $x_1_4 = "DeviceIoControl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

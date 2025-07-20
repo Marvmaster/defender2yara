@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Genasom_B_2147631108_0
         $x_1_3 = {74 dc 00 00 00 83 c4 04 b8 2e 74 6d 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDropper_Win32_Genasom_C_2147694709_0
         $x_1_6 = "Bro&wse" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

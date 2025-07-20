@@ -18,6 +18,7 @@ rule Ransom_Win32_Nevada_A_2147842068_0
         $x_1_3 = "Couldn't delete shadow copies from volume!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Nevada_A_2147844300_0
         $x_2_4 = "UgZ29pbmcgdG8gcmVjb3ZlciB" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

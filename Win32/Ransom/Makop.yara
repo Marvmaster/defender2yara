@@ -17,6 +17,7 @@ rule Ransom_Win32_Makop_PA_2147750960_0
         $x_10_2 = {33 4c 24 10 89 7c 24 14 2b f1 89 74 24 18 81 f3 07 eb dd 13 81 6c 24 14 52 ef 6f 62 b8 41 e5 64 03 81 6c 24 14 68 19 2a 14 81 44 24 14 be 08 9a 76 8b 4c 24 14 8b c6 d3 e0 03 44 24 30 81 3d ?? ?? ?? ?? 1a 0c 00 00 89 44 24 10 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_Win32_Makop_SS_2147759315_0
         $x_1_4 = "DVomekil cofataloxowedos kofomujiloguru dokunuv zihatexope hopalitebo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Ransom_Win32_Makop_AY_2147761507_0
         $x_1_5 = "Xozifa sohupicowadico" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Ransom_Win32_Makop_SA_2147889069_0
         $x_1_1 = {8b d3 c1 ea ?? 03 54 24 ?? 89 54 24 ?? 8b 44 24 ?? 31 44 24 ?? 2b 7c 24 ?? 8b 44 24 ?? d1 6c 24 ?? 29 44 24 ?? ff 4c 24 ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

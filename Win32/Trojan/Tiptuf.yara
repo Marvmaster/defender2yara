@@ -18,6 +18,7 @@ rule Trojan_Win32_Tiptuf_A_2147637441_0
         $x_1_4 = "svchost.exe -k netsvcs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

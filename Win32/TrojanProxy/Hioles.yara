@@ -16,6 +16,7 @@ rule TrojanProxy_Win32_Hioles_A_2147646323_0
         $x_1_2 = {6a 16 50 ff 74 24 14 c7 00 ?? ?? ?? ?? c7 40 04 ?? ?? ?? ?? c6 40 08 ?? ff 15 ?? ?? ?? ?? 83 f8 16}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanProxy_Win32_Hioles_B_2147652996_0
         $x_1_2 = {50 ff 74 24 14 c7 00 85 b2 04 77 c7 40 04 ce 38 e0 33 c6 40 08 04 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

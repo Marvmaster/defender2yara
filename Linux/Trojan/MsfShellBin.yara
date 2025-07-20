@@ -17,6 +17,7 @@ rule Trojan_Linux_MsfShellBin_A_2147794796_0
         $x_1_3 = {0f 05 48 96 6a 2b 58 0f 05 50 56 5f 6a 09 58 99 b6 10 48 89 d6 4d 31 c9 6a 22 41 5a b2 07 0f 05 48 96 48 97 5f 0f 05 ff e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Linux_MsfShellBin_B_2147805397_0
         $x_1_3 = {6a 66 58 cd 80 d1 e3 b0 66 cd 80 57 43 b0 66 89 51 ?? cd 80 93 b6 0c b0 03 cd 80 87 df 5b b0 06 cd 80 ff e1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Linux_MsfShellBin_C_2147852975_0
         $x_1_3 = {51 50 89 e1 6a 66 58 cd 80 d1 e3 b0 66 cd 80 57 43 b0 66 89 51 04 cd 80 93}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Linux_MsfShellBin_D_2147852976_0
         $x_1_2 = {48 31 ff 48 31 db b3 18 48 29 dc 48 8d 14 24 48 c7 02 10 00 00 00 48 8d 74 24 08 6a 34 58 0f 05 48 ff c7 66 81 7e 02 ?? ?? 75 f0 48 ff cf 6a 02 5e 6a 21 58 0f 05 48 ff ce 79 f6 48 89 f3 bb 41 2f 73 68 b8 2f 62 69 6e 48 c1 eb 08 48 c1 e3 20 48 09 d8 50 48 89 e7 48 31 f6 48 89 f2 6a 3b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -102,6 +106,7 @@ rule Trojan_Linux_MsfShellBin_E_2147890087_0
         $x_1_1 = {31 db 53 43 53 6a 0a 89 e1 6a 66 58 cd 80 96 99 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 52 66 68 ?? ?? 66 68 0a 00 89 e1 6a 1c 51 56 89 e1 43 43 6a 66 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -124,6 +129,7 @@ rule Trojan_Linux_MsfShellBin_F_2147890088_0
         $x_1_3 = {31 db f7 e3 6a 06 6a 01 6a 0a 89 e1 b0 66 b3 01 cd 80 89 c6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -148,6 +154,7 @@ rule Trojan_Linux_MsfShellBin_G_2147891367_0
         $x_1_1 = {48 97 48 b9 ?? ?? ?? ?? ?? ?? ?? ?? 51 48 89 e6 6a 10 5a 6a 2a 58 0f 05 59 48 85 c0 79 ?? 49 ff c9 74 ?? 57 6a 23 58 6a ?? 6a ?? 48 89 e7 48 31 f6 0f 05 59 59 5f 48 85 c0 79 ?? 6a 3c 58 6a 01 5f 0f 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -168,6 +175,7 @@ rule Trojan_Linux_MsfShellBin_H_2147891368_0
         $x_1_1 = {6a 03 5e 6a 21 58 ff ce 0f 05 e0 ?? 6a 3b 58 99 48 bb 2f 62 69 6e 2f 73 68 00 53 54 5f 0f 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

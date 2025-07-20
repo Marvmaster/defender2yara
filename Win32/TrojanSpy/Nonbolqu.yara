@@ -31,6 +31,7 @@ rule TrojanSpy_Win32_Nonbolqu_A_2147690912_0
         $x_1_17 = "49CB6F84BF005E88E46AFC361060F40D3293B91130D267FF59FC" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Rebrela_A_2147651476_0
         $x_1_2 = {ff 56 04 8b d8 55 6a 08 53 ff 56 08 8d 96 ?? ?? 00 00 8b f8 52 6a 00 6a 06 ff 56 0c 6a 00 6a 00 6a 00 6a 06 50 ff 56 10 8b 8e ?? ?? 00 00 8d 96 ?? ?? 00 00 52 03 c8 6a 00 6a 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

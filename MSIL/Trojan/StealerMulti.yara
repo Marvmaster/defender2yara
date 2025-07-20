@@ -17,6 +17,7 @@ rule Trojan_MSIL_StealerMulti_RDA_2147835627_0
         $x_2_2 = {6f 16 00 00 0a 0d 02 28 ?? ?? ?? ?? 09 16 28 17 00 00 0a 13 06 02 28 ?? ?? ?? ?? 26 09 72 ?? ?? ?? ?? 20 14 01 00 00 14 11 06 14 6f 13 00 00 0a 13 07 11 07 74 26 00 00 01 28 11 00 00 0a 2b ?? 72 ?? ?? ?? ?? 28 11 00 00 0a 73 18 00 00 0a 7a 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_StealerMulti_RDB_2147844560_0
         $x_2_1 = {8e 69 5d 91 03 11 04 91 61 d2 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

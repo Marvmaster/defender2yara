@@ -19,6 +19,7 @@ rule SoftwareBundler_Win32_NetPumper_15103_0
         $x_2_5 = "BUILD\\ANTI-LEECH\\NetPumper\\NetPumper" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_2_*))) or
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 2 of ($x_2_*))) or

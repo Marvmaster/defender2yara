@@ -20,6 +20,7 @@ rule Trojan_Win32_Regin_D_2147692609_0
         $x_1_5 = {6a 01 6a 02 58 e8 ?? ?? ?? ?? 56 6a 04 58 e8 ?? ?? ?? ?? 59 59 e8 ?? ?? ?? ?? 6a 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

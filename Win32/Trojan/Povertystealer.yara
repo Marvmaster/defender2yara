@@ -16,6 +16,7 @@ rule Trojan_Win32_Povertystealer_ASK_2147931445_0
         $x_5_1 = {89 c1 83 e1 1f 0f b6 89 ?? ?? ?? 00 30 0c 06 40 3d ?? ?? ?? 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

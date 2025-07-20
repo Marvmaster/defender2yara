@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Lozpapi_A_2147648610_0
         $x_1_6 = {48 00 45 00 41 00 44 00 00 00 00 00 02 00 00 00 30 00 00 00 08 00 00 00 67 00 7a 00 69 00 70 00 00 00 00 00 0e 00 00 00 64 00 65 00 66}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_Lozpapi_B_2147657804_0
         $x_1_5 = {48 00 45 00 41 00 44 00 00 00 00 00 02 00 00 00 30 00 00 00 08 00 00 00 67 00 7a 00 69 00 70 00 00 00 00 00 0e 00 00 00 64 00 65 00 66}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

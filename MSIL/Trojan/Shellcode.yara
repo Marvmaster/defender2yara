@@ -16,6 +16,7 @@ rule Trojan_MSIL_Shellcode_SK_2147909721_0
         $x_2_1 = {00 06 07 06 07 91 20 a0 06 00 00 59 d2 9c 00 07 17 58 0b 07 06 8e 69 fe 04 13 0a 11 0a 2d e1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_Win32_Isda_A_2147689536_0
         $x_2_6 = {81 bd 10 ff ff ff 00 80 00 00 7c 09 c6 85 1f ff ff ff 20 eb 39 81 bd 10 ff ff ff 00 04 00 00 7e 26 81 bd 10 ff ff ff 00 80 00 00 7d 1a 8b 85 10 ff ff ff 85 c0 79 05 05 ff 03 00 00 c1 f8 0a 88 85 1f ff ff ff eb 07}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Ransom_Win32_Isda_A_2147689536_1
         $x_1_5 = {2f 63 6c 6f 73 65 2f 73 63 72 69 70 74 2e 70 68 70 00 00 00 ff ff ff ff ?? 00 00 00 68 74 74 70 3a 2f 2f [0-30] 2e 63 6f 6d 2f 6f 70 65 6e 2f 73 63 72 69 70 74 2e 70 68 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

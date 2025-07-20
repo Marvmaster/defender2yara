@@ -29,6 +29,7 @@ rule TrojanDownloader_Win32_Cbeplay_B_2147599377_0
         $x_1_14 = "SYSTEM\\CurrentControlSet\\Services\\CbEvtSvc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -57,6 +58,7 @@ rule TrojanDownloader_Win32_Cbeplay_B_2147601552_0
         $x_3_6 = "GetCurrentHwProfileW" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_40_*) and 2 of ($x_5_*) and 2 of ($x_3_*))) or
             (all of ($x*))
@@ -80,6 +82,7 @@ rule TrojanDownloader_Win32_Cbeplay_D_2147607923_0
         $x_1_1 = {81 c2 be 19 33 01 81 ff 02 21 00 00 74 78 76 15 89 f1 81 fe 56 ae 6f 02 4d be e7 37 8c 02 3a f4 f7 da 3b e9 f8 c1 d6 1c 33 cf f7 d1 f7 d9 33 f0 d6 c1 0b 1f b8 ac d7 43 00 f7 dd 85 c2 84 c4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -105,6 +108,7 @@ rule TrojanDownloader_Win32_Cbeplay_A_2147610965_0
         $x_10_5 = {6a 01 6a 1a 8d 4c 24 ?? 51 6a 00 ff 15 ?? ?? ?? ?? 85 c0 75 ?? ff 15 ?? ?? ?? ?? 8b f8 (eb ??|e9 ?? ?? ?? ??) 8b 96 34 02 00 00 52}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 2 of ($x_2_*))) or
             ((1 of ($x_10_*))) or
@@ -132,6 +136,7 @@ rule TrojanDownloader_Win32_Cbeplay_L_2147647422_0
         $x_1_4 = "/q /c for /l %%i in (1,1,4000000000) do if not exist \"%s\" (exit)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -156,6 +161,7 @@ rule TrojanDownloader_Win32_Cbeplay_M_2147648055_0
         $x_2_5 = "%s&ctl=%d&data=%s" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -182,6 +188,7 @@ rule TrojanDownloader_Win32_Cbeplay_O_2147649024_0
         $x_1_3 = {5c 5c 2e 5c 50 68 79 73 69 63 61 6c 44 72 69 76 65 25 64 [0-5] 73 76 63 68 6f 73 74 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +214,7 @@ rule TrojanDownloader_Win32_Cbeplay_P_2147649464_0
         $x_1_6 = {53 41 4d 50 4c 45 00 00 56 58 00 00 56 49 52 55 53 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -230,6 +238,7 @@ rule TrojanDownloader_Win32_Cbeplay_Q_2147657637_0
         $x_1_4 = {53 41 4d 50 4c 45 00 00 56 58 00 00 56 49 52 55 53 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +260,7 @@ rule TrojanDownloader_Win32_Cbeplay_R_2147679386_0
         $x_1_2 = {0f b7 0f 8b c1 25 00 f0 00 00 3d 00 30 00 00 75 14 81 e1 ff 0f 00 00 03 0a 3b 4e 50 77 ?? 8b 44 24 10 01 04 29 8b 4a 04 83 e9 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

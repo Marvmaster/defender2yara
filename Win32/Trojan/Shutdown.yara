@@ -21,6 +21,7 @@ rule Trojan_Win32_Shutdown_T_2147639035_0
         $x_1_7 = "reg add HKEY_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

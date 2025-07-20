@@ -16,6 +16,7 @@ rule Ransom_Win32_Sodinokibi_A_2147735617_0
         $x_1_2 = {33 c0 3d c4 36 4f 00 75 0c 8b 0d ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 40 3d f2 70 86 00 7c e5 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Ransom_Win32_Sodinokibi_C_2147741043_0
         $x_1_2 = "sysshadow" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Ransom_Win32_Sodinokibi_E_2147741161_0
         $x_1_4 = {40 00 8b 44 8e ?? 89 44 8f ?? 8b 44 8e ?? 89 44 8f ?? 8b 44 8e ?? 89 44 8f ?? 8b 44 8e ?? 89 44 8f ?? 8b 44 8e ?? 89 44 8f ?? 8b 44 8e ?? 89 44 8f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -105,6 +108,7 @@ rule Ransom_Win32_Sodinokibi_F_2147741307_0
         $x_1_1 = {2e 70 64 62 [0-32] 5c 74 6d 70 5f 0a 00 5c 62 69 6e 5c [0-21] 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule Ransom_Win32_Sodinokibi_PA_2147741555_0
         $x_1_4 = "sophos" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +157,7 @@ rule Ransom_Win32_Sodinokibi_AB_2147742227_0
         $x_1_4 = "BsAGUALgAgAFkAbwB1ACAAYwBhAG4AIABjAGgAZQBjAGsAIABpAHQAOgAgAGEAbABsACAAZgBpAGwAZQBzACAAbwBuACAAeQBvAHUAcgAgAHMAeQBzAHQAZQBtACAAaABhAHMAIABlAHgAdABlAG4AcwBpAG8AbgAgAHsARQBYAFQ" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -176,6 +182,7 @@ rule Ransom_Win32_Sodinokibi_SA_2147742450_0
         $x_5_5 = {ba 88 55 0c 00 a3 ?? ?? ?? ?? ?? ?? e8 [0-32] ba d0 56 00 00 c7 ?? ?? ?? ?? ?? ?? e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -212,6 +219,7 @@ rule Ransom_Win32_Sodinokibi_SA_2147742450_1
         $x_1_14 = {8b 47 30 13 f2 f7 6f 40 03 c8 13 f2 0f a4 ce 01 89 73 74 03 c9 89 4b 70 8b 47 30 f7 6f 48 8b c8 8b f2 8b 47 38 f7 6f 40 03 c8 13 f2 0f a4 ce 01 89 73 7c 03 c9 89 4b 78 8b 47 38 f7 6f 48 8b c8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +242,7 @@ rule Ransom_Win32_Sodinokibi_S_2147745544_0
         $x_1_2 = "tor browser" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -264,6 +273,7 @@ rule Ransom_Win32_Sodinokibi_2147749350_0
         $x_1_10 = "manual UAC b" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +296,7 @@ rule Ransom_Win32_Sodinokibi_RAA_2147755318_0
         $x_1_2 = {6a 00 6a 00 6a 00 8d 54 24 ?? 52 6a 00 ff 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 0f b6 80 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 25 ff 00 00 00 81 3d ?? ?? ?? ?? 21 06 00 00 a3 ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -309,6 +320,7 @@ rule Ransom_Win32_Sodinokibi_G_2147756777_0
         $x_1_3 = "AcgB5AHQAaABpAG4AZwAgAGYAbwByACAAcgBlAHMAdABvAHIAaQBuAGcALAAgAGIAdQB0ACAAcABsAGUAYQBzAGUAIABzAGgAbwB1AGwAZAAgAG4AbwB0ACAAaQBuAHQAZQByAGYAZQByAGUALgANAAoAIQAhACEAIAAhACEAIQAgACEAIQAhAAAA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -330,6 +342,7 @@ rule Ransom_Win32_Sodinokibi_DSA_2147757549_0
         $x_1_1 = {0f b6 8c 0d fc fe ff ff 0f b6 c2 03 c8 8b 45 14 0f b6 c9 8a 8c 0d fc fe ff ff 32 0c 07 88 08 40 89 45 14 8b 45 fc 83 eb 01 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +364,7 @@ rule Ransom_Win32_Sodinokibi_DSB_2147757550_0
         $x_1_1 = {0f b6 04 02 8b 55 0c 0f b6 c9 03 c8 0f b6 c1 8b 4d 08 8a 04 08 32 04 1a 88 03 43 8b 45 10 89 5d 14 83 ef 01 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -372,6 +386,7 @@ rule Ransom_Win32_Sodinokibi_SK_2147760158_0
         $x_1_1 = {8b 4d f4 8b d0 d3 e2 8b c8 c1 e9 05 03 4d d8 03 55 dc 89 35 ?? ?? ?? 00 33 d1 8b 4d f0 03 c8 33 d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -392,6 +407,7 @@ rule Ransom_Win32_Sodinokibi_TA_2147768139_0
         $x_5_1 = {8b 50 0c 83 c2 14 [0-32] 8b 7d 08 81 f7 ?? ?? ?? ?? 8b 59 28 6a 2b 58 89 45 fc 0f b7 33 66 85 f6 [0-16] 8d 46 bf 8d 5b 02 66 83 f8 19 77 03 83 ce 20 69 d2 0f 01 00 00 0f b7 c6 0f b7 33 03 d0 66 85 f6}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -413,6 +429,7 @@ rule Ransom_Win32_Sodinokibi_AD_2147779016_0
         $x_5_1 = {55 8b ec e9 07 00 55 8b ec 8b 75 08 8b 7d 0c 8b 55 10 b1 ?? ac}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -505,6 +522,7 @@ rule Ransom_Win32_Sodinokibi_SB_2147783804_0
         $x_1_3 = {8b 45 fc 89 45 f0 8b 4d ?? 83 c1 ?? 89 4d ?? 81 7d f0 ff 00 00 00 77 1f ba 01 00 00 00 6b c2 00 8b 4d ?? 0f b6 ?? ?? 33 55 ?? 89 55 ?? 83 7d f4 24 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -531,6 +549,7 @@ rule Ransom_Win32_Sodinokibi_SB_2147783804_1
         $x_1_7 = ":!:(:/:6:C:\\:m:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -558,6 +577,7 @@ rule Ransom_Win32_Sodinokibi_SC_2147913043_0
         $x_1_8 = {0c 89 46 0c 85 c0 75 2a 33 c0 eb 6c 8b 46 08 85 c0 74 62 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -579,6 +599,7 @@ rule Ransom_Win32_Sodinokibi_SD_2147913044_0
         $x_1_2 = {0f b6 c2 03 c8 8b 45 14 0f b6 c9 8a 8c 0d fc fe ff ff 32 0c 07 88 08 40 89 45 14 8b 45 fc 83 eb 01 75 aa}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -608,6 +629,7 @@ rule Ransom_Win32_Sodinokibi_SE_2147913045_0
         $x_1_10 = {83 e8 13 0f 84 61 06 00 00 83 e8 3d 0f 84 fa 02 00 00 f6 c2 04 74 11 80 f9 2c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

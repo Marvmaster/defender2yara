@@ -20,6 +20,7 @@ rule Ransom_Win32_Satan_S_2147749843_0
         $x_1_5 = "5ss5c@mail.ru" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Win32_Satan_AJY_2147773010_0
         $x_1_6 = "C:\\Program Files\\WebMoney\\[dbger@protonmail.com]__empty.dbger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Ransom_Win32_Satan_SIB_2147805926_0
         $x_1_5 = {83 c9 ff 85 db 74 ?? 0f b6 04 2e 33 c1 c1 e9 ?? 25 ?? ?? ?? ?? 33 0c 85 c0 83 41 00 46 3b f3 72 ?? [0-5] 8b c1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Ransom_Win32_Satan_AYA_2147940214_0
         $x_1_5 = "Failed to allocate memory for the ransom note." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

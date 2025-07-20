@@ -30,6 +30,7 @@ rule Ransom_Win32_Delcryset_A_2147723687_0
         $x_3_16 = {83 f8 02 74 0a 83 f8 03 74 05 83 f8 04 75 ?? 8d 45 f4 8b d3 e8 ?? ?? ?? ?? 8d 45 f4 ba 3c 73 4b 00 e8 ?? ?? ?? ?? 8b 55 f4 8b 06 8b 08 ff 51 3c 4b 83 fb 42 75}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_3_*) and 7 of ($x_1_*))) or

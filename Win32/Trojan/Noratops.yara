@@ -19,6 +19,7 @@ rule Trojan_Win32_Noratops_A_2147693817_0
         $x_1_4 = {6a 02 53 56 e8 ?? ?? ?? ?? 56 e8 ?? ?? ?? ?? bf 6c 0e 00 00 83 c4 10 3b c7 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

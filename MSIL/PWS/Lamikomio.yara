@@ -17,6 +17,7 @@ rule PWS_MSIL_Lamikomio_A_2147705935_0
         $x_6_3 = "santiagomunezfifa@gmail.com" ascii //weight: 6
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

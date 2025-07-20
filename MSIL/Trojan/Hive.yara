@@ -17,6 +17,7 @@ rule Trojan_MSIL_Hive_NEAA_2147836649_0
         $x_5_2 = "1A0571712A2F303411151A162C0A02322A2F2B7F" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

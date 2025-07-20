@@ -20,6 +20,7 @@ rule Backdoor_Win64_Hackdoor_A_2147708413_0
         $x_1_5 = "\\Device\\IPFILTERDRIVER" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Backdoor_Win64_Hackdoor_A_2147708413_1
         $x_1_9 = {48 b8 75 6e 6b 6e 6f 77 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

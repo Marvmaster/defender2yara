@@ -16,6 +16,7 @@ rule Backdoor_Win64_RoundWorm_A_2147922206_0
         $x_1_1 = {83 c5 03 48 63 cd 48 8b 46 ?? 48 3b c8 0f 82 ?? ?? ?? ?? 48 8b 56 ?? 48 83 fa 0f 76 2c 48 ff c2 48 8b 0e 48 81 fa 00 10 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

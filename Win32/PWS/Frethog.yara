@@ -24,6 +24,7 @@ rule PWS_Win32_Frethog_A_2147581999_0
         $x_1_10 = "LoadResource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 4 of ($x_1_*))) or
             ((5 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -54,6 +55,7 @@ rule PWS_Win32_Frethog_C_2147583439_0
         $x_1_7 = "Avenger by NhT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -85,6 +87,7 @@ rule PWS_Win32_Frethog_B_2147583513_0
         $x_1_9 = "LoadResource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_3_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_4_*) and 4 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -121,6 +124,7 @@ rule PWS_Win32_Frethog_G_2147584626_0
         $x_30_8 = "%s?a=%s&s=%s&u=%s&p=%s&pin=%s&r=%s&l=%d&m=%d" ascii //weight: 30
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_30_*) and 1 of ($x_8_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((1 of ($x_30_*) and 1 of ($x_8_*) and 2 of ($x_3_*))) or
@@ -159,6 +163,7 @@ rule PWS_Win32_Frethog_A_2147595041_0
         $x_2_13 = {f9 e5 e5 e1 ab be be}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_2_*) and 1 of ($x_1_*))) or
             ((9 of ($x_2_*))) or
@@ -191,6 +196,7 @@ rule PWS_Win32_Frethog_F_2147595118_0
         $x_2_9 = "soul.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_5_*) and 2 of ($x_2_*))) or
             (all of ($x*))
@@ -219,6 +225,7 @@ rule PWS_Win32_Frethog_G_2147595141_0
         $x_1_6 = {49 73 44 65 c7 45 ?? 62 75 67 67 c7 45 ?? 65 72 50 72 c7 45 ?? 65 73 65 6e c7 45 ?? 74 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -243,6 +250,7 @@ rule PWS_Win32_Frethog_H_2147595142_0
         $x_1_5 = "/post.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -280,6 +288,7 @@ rule PWS_Win32_Frethog_I_2147595143_0
         $x_1_18 = "=%s&r=%s&l=%d&m" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (17 of ($x*))
 }
 
@@ -308,6 +317,7 @@ rule PWS_Win32_Frethog_J_2147595277_0
         $x_1_9 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -339,6 +349,7 @@ rule PWS_Win32_Frethog_A_2147595688_0
         $x_1_11 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1000_*) and 7 of ($x_1_*))) or
             ((3 of ($x_1000_*))) or
@@ -381,6 +392,7 @@ rule PWS_Win32_Frethog_B_2147595689_0
         $n_500_18 = "Software\\Overwolf\\" wide //weight: -500
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_50_*) and 7 of ($x_1_*))) or
@@ -411,6 +423,7 @@ rule PWS_Win32_Frethog_K_2147595735_0
         $x_1_6 = "WSGAME" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -437,6 +450,7 @@ rule PWS_Win32_Frethog_L_2147595742_0
         $x_1_6 = "Q360SafeMonClass" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -465,6 +479,7 @@ rule PWS_Win32_Frethog_M_2147596158_0
         $x_1_9 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -491,6 +506,7 @@ rule PWS_Win32_Frethog_N_2147596311_0
         $x_1_7 = "qq.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -516,6 +532,7 @@ rule PWS_Win32_Frethog_N_2147596312_0
         $x_1_6 = "51343281" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -544,6 +561,7 @@ rule PWS_Win32_Frethog_N_2147596312_1
         $x_1_9 = "%s?srv=%s&id=%s&p=%s&s=%s&ss=%s&js=%s&gj=%s&dj=%d&yz=%d&jz=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -577,6 +595,7 @@ rule PWS_Win32_Frethog_O_2147596314_0
         $x_1_14 = "SendARP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -606,6 +625,7 @@ rule PWS_Win32_Frethog_O_2147596315_0
         $x_1_10 = "SOFTWARE\\Borland\\Delphi\\RTL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -632,6 +652,7 @@ rule PWS_Win32_Frethog_P_2147596316_0
         $x_1_7 = "Product_Notification" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -661,6 +682,7 @@ rule PWS_Win32_Frethog_P_2147596317_0
         $x_1_10 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -688,6 +710,7 @@ rule PWS_Win32_Frethog_S_2147596433_0
         $x_4_8 = "SetDIPSHook" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_4_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -717,6 +740,7 @@ rule PWS_Win32_Frethog_T_2147596434_0
         $x_1_3 = {c7 45 f4 20 57 6e 64 c7 45 f8 43 6c 61 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -741,6 +765,7 @@ rule PWS_Win32_Frethog_U_2147596577_0
         $x_1_5 = "c:\\ntldr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -787,6 +812,7 @@ rule PWS_Win32_Frethog_U_2147596577_1
         $x_1_27 = "UnHookWindow" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 4 of ($x_2_*) and 17 of ($x_1_*))) or
             ((3 of ($x_5_*) and 5 of ($x_2_*) and 15 of ($x_1_*))) or
@@ -825,6 +851,7 @@ rule PWS_Win32_Frethog_X_2147596687_0
         $x_1_5 = "CallNextHookEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -858,6 +885,7 @@ rule PWS_Win32_Frethog_S_2147596914_0
         $x_1_14 = "#32770" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (13 of ($x*))
 }
 
@@ -885,6 +913,7 @@ rule PWS_Win32_Frethog_Y_2147596927_0
         $x_1_8 = "CallNextHookEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -911,6 +940,7 @@ rule PWS_Win32_Frethog_F_2147596932_0
         $x_1_6 = "WriteFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_5_*))) or
@@ -937,6 +967,7 @@ rule PWS_Win32_Frethog_AA_2147596952_0
         $x_1_3 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -966,6 +997,7 @@ rule PWS_Win32_Frethog_G_2147597162_0
         $x_1_9 = "%s?u=%s&p=%s&cp=%s&s=%s&n=%s&l=%d&v=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 4 of ($x_10_*))) or
@@ -991,6 +1023,7 @@ rule PWS_Win32_Frethog_H_2147597251_0
         $x_1_1 = {68 03 01 00 00 50 56 ff 15 ?? ?? ?? ?? 8d 85 ?? ?? ff ff 6a 5c 50 ff 15 ?? ?? ?? ?? 8b f8 8d 45 f4 50 c7 45 f4 7a 68 65 6e 8d 5f 01 c7 45 f8 67 74 75 2e 53 c7 45 fc 64 61 74 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1039,6 +1072,7 @@ rule PWS_Win32_Frethog_H_2147597251_1
         $n_1000_28 = "AnVir Task Manager" wide //weight: -1000
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((5 of ($x_100_*) and 8 of ($x_50_*) and 6 of ($x_10_*))) or
@@ -1078,6 +1112,7 @@ rule PWS_Win32_Frethog_AB_2147597356_0
         $x_1_9 = "Twister.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1102,6 +1137,7 @@ rule PWS_Win32_Frethog_AC_2147599154_0
         $x_1_2 = "ReadProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))
@@ -1125,6 +1161,7 @@ rule PWS_Win32_Frethog_AD_2147599155_0
         $x_1_1 = {c1 eb 02 8b 4d 14 33 d2 8b 04 96 41 83 e1 1f d3 c0 33 c7 89 04 96 42 3b d3 75 ed 61 5f 5e 5b 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1145,6 +1182,7 @@ rule PWS_Win32_Frethog_AE_2147599156_0
         $x_1_1 = {ff ff 83 c4 04 85 c0 74 15 6a 01 e8 ?? ?? 00 00 83 c4 04 68 98 3a 00 00 ff 15 ?? ?? 40 00 6a 00 6a 00 6a 00 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1165,6 +1203,7 @@ rule PWS_Win32_Frethog_AF_2147599157_0
         $x_1_1 = {8b d1 c1 e9 02 f3 a5 8b ca 83 e1 03 f3 a4 c6 04 10 e9 8b cb 2b c8 83 e9 05 89 4c 10 01 c6 03 e9 8b 45 0c 2b c3 83 e8 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1191,6 +1230,7 @@ rule PWS_Win32_Frethog_AH_2147600617_0
         $x_1_7 = "SetWindowsHookExA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1220,6 +1260,7 @@ rule PWS_Win32_Frethog_AI_2147601010_0
         $x_3_6 = {6a 04 50 68 94 56 f7 01 57 ff d6 8d 45 10 50 6a 14 68}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1256,6 +1297,7 @@ rule PWS_Win32_Frethog_I_2147601754_0
         $x_1_11 = "CreateRemoteThread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 5 of ($x_1_*))) or
             ((4 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1289,6 +1331,7 @@ rule PWS_Win32_Frethog_AK_2147602109_0
         $x_1_6 = "#32770" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1312,6 +1355,7 @@ rule PWS_Win32_Frethog_AL_2147602286_0
         $x_5_4 = {8b 4d 14 33 d2 8b 04 96 41 83 e1 1f d3 c0 33 c7 89 04 96 42 3b d3}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_3_*))) or
             ((2 of ($x_5_*))) or
@@ -1337,6 +1381,7 @@ rule PWS_Win32_Frethog_AO_2147605604_0
         $x_1_2 = {6a 04 50 68 2b e0 22 00 ff 75 08 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1361,6 +1406,7 @@ rule PWS_Win32_Frethog_AO_2147605658_0
         $x_1_4 = {55 8b ec b8 0d 00 00 c0 c9 c2 10 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*))) or
@@ -1392,6 +1438,7 @@ rule PWS_Win32_Frethog_R_2147605756_0
         $x_1_8 = "D64AC2E4-40DD-90D9-95B1-0C60F7CA64BF" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1419,6 +1466,7 @@ rule PWS_Win32_Frethog_AP_2147606947_0
         $x_1_4 = {c7 45 f0 4c 6f 67 69 c7 45 f4 6e 5f 53 65 c7 45 f8 72 76 65 72 ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -1456,6 +1504,7 @@ rule PWS_Win32_Frethog_J_2147606994_0
         $x_1_13 = "VirtualProtectEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_3_*) and 2 of ($x_2_*) and 7 of ($x_1_*))) or
@@ -1484,6 +1533,7 @@ rule PWS_Win32_Frethog_AG_2147606997_0
         $x_1_3 = {8b 4d 14 8b 55 10 c7 00 1f 00 00 00 56 8b 01 03 c2 0f b6 50 03 0f b6 70 02 c1 e2 08 03 d6 0f b6 70 01 0f b6 00 c1 e2 08 03 d6 5e c1 e2 08 03 d0 8b 45 08 89 10 83 01 04 8b 00 c1 e8 1f 5d c2 10 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1507,6 +1557,7 @@ rule PWS_Win32_Frethog_AU_2147607002_0
         $x_1_4 = {78 79 6d 61 69 6e 2e 62 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1536,6 +1587,7 @@ rule PWS_Win32_Frethog_AW_2147607004_0
         $x_1_7 = {73 71 6d 6d 61 69 6c 00 73 71 6d 69 6d 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -1561,6 +1613,7 @@ rule PWS_Win32_Frethog_AZ_2147607007_0
         $x_1_3 = {6c 69 6e 2e 61 73 70 00 75 70 66 69 6c 65 2e 61 73 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1587,6 +1640,7 @@ rule PWS_Win32_Frethog_BL_2147607019_0
         $x_1_7 = "%s%s%s-%d.bmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1615,6 +1669,7 @@ rule PWS_Win32_Frethog_BM_2147607020_0
         $x_1_4 = "act=getpos&account=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1642,6 +1697,7 @@ rule PWS_Win32_Frethog_BN_2147607021_0
         $x_1_8 = "\\userdata\\currentserver.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -1665,6 +1721,7 @@ rule PWS_Win32_Frethog_BP_2147607023_0
         $x_1_4 = {6d c6 44 24 ?? 69 c6 44 24 ?? 62 c6 44 24 ?? 6f c6 44 24 ?? 3d 88 5c 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1687,6 +1744,7 @@ rule PWS_Win32_Frethog_BR_2147607025_0
         $x_1_3 = {83 c4 08 85 c0 74 ?? 6a 02 56 ff d7 8b f0 85 f6 75 d2 5f 8b c5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1710,6 +1768,7 @@ rule PWS_Win32_Frethog_BS_2147607026_0
         $x_1_4 = {00 64 6e 66 2e 65 78 65 00 45 72 72 6f 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1734,6 +1793,7 @@ rule PWS_Win32_Frethog_BU_2147607028_0
         $x_1_5 = "?action=getpos&Name=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1762,6 +1822,7 @@ rule PWS_Win32_Frethog_BW_2147607030_0
         $x_1_6 = {4d 69 62 61 6f 3d [0-15] 43 68 61 6e 67 3d [0-15] 44 69 61 6e 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1789,6 +1850,7 @@ rule PWS_Win32_Frethog_BY_2147607032_0
         $x_3_5 = {8b 45 f0 80 7c 18 fa e8 75 ?? 8b 45 f0 80 7c 18 f2 c6}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -1827,6 +1889,7 @@ rule PWS_Win32_Frethog_BZ_2147607033_0
         $x_1_13 = "DllModuleName" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_100_*) and 3 of ($x_5_*) and 1 of ($x_1_*))) or
             ((5 of ($x_100_*) and 4 of ($x_5_*))) or
@@ -1860,6 +1923,7 @@ rule PWS_Win32_Frethog_CA_2147607034_0
         $x_1_8 = "SoftWare\\Microsoft\\Windows\\CurrentVersion\\RUN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_4_*) and 1 of ($x_1_*))) or
@@ -1888,6 +1952,7 @@ rule PWS_Win32_Frethog_CB_2147607035_0
         $x_1_3 = {8a 07 c6 07 e9 8b 4f 01 89 4d 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1924,6 +1989,7 @@ rule PWS_Win32_Frethog_GF_2147607143_0
         $x_1_17 = "cabalmain.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 10 of ($x_1_*))) or
             (all of ($x*))
@@ -1948,6 +2014,7 @@ rule PWS_Win32_Frethog_K_2147607409_0
         $x_1_1 = {c1 eb 02 8b 4d 14 33 d2 90 8b 04 96 90 41 83 e1 1f d3 c0 33 c7 89 04 96 42 3b d3 75 eb 61 5f 5e 5b 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1970,6 +2037,7 @@ rule PWS_Win32_Frethog_MK_2147607586_0
         $x_1_3 = {73 76 63 68 6f 73 74 2e 64 6c 6c 00 41 52 00 47 65 74 56 65 72 00 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1994,6 +2062,7 @@ rule PWS_Win32_Frethog_MK_2147607586_1
         $x_1_5 = {73 22 2b 08 8d 45 e0 50 ff 75 f0 03 4d e4 ff 75 08 89 4d e0 e8 ?? ?? ?? ?? 83 c4 0c 83 c6 04 ff 45 f0 eb cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2021,6 +2090,7 @@ rule PWS_Win32_Frethog_ML_2147607587_0
         $x_1_3 = {8a d1 32 d0 3a cb 88 17 74 05 40 3b c6 72 e5 33 c0 8a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -2048,6 +2118,7 @@ rule PWS_Win32_Frethog_MM_2147609731_0
         $x_1_4 = {48 6f 6f 6b 6f 6e 00 00 48 6f 6f 6b 6f 66 66}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2077,6 +2148,7 @@ rule PWS_Win32_Frethog_MM_2147609732_0
         $x_1_5 = "game.DoPatch" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2102,6 +2174,7 @@ rule PWS_Win32_Frethog_MO_2147618080_0
         $x_1_6 = "/flash.asp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2129,6 +2202,7 @@ rule PWS_Win32_Frethog_NM_2147619310_0
         $x_10_5 = {68 22 74 af 00 68 22 74 a0 00 e8 ?? ?? 00 00 6a 06 68 ?? ?? 00 10 68 ?? ?? 00 10 68 3c 94 cf 00 68 3c 94 a9 00 e8 ?? ?? 00 00 6a 13 68 ?? ?? 00 10 68 ?? ?? 00 10 68 5a 45 b3 00 68 1a 68 a0 00 e8 ?? ?? 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2155,6 +2229,7 @@ rule PWS_Win32_Frethog_MK_2147624670_0
         $x_10_3 = {8b c3 6a 05 99 59 f7 f9 85 d2 75 ?? 8a 45 10 8a 0c 37 d0 e0 2a c8 88 0e eb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2178,6 +2253,7 @@ rule PWS_Win32_Frethog_MQ_2147638983_0
         $x_1_4 = {74 29 56 ff 15 ?? ?? ?? ?? 83 f8 03 75 0b 56 ff 75 ?? e8 ?? ?? ?? ?? 59 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2207,6 +2283,7 @@ rule PWS_Win32_Frethog_MR_2147639317_0
         $x_1_6 = {49 44 52 5f 44 4c 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -2237,6 +2314,7 @@ rule PWS_Win32_Frethog_MR_2147639317_1
         $x_1_6 = {2e 69 6e 69 [0-5] 54 53 53 61 66 65 45 64 69 74 2e 64 61 74 [0-5] 4c 6f 67 69 6e 43 74 72 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -2268,6 +2346,7 @@ rule PWS_Win32_Frethog_MR_2147639498_0
         $x_1_7 = "YAHOOJST+HOST:%s+IP:%s+USERID:%s+PASS:%s+Ver:%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2296,6 +2375,7 @@ rule PWS_Win32_Frethog_MS_2147639544_0
         $x_1_3 = {46 6f 72 74 68 67 6f 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2321,6 +2401,7 @@ rule PWS_Win32_Frethog_2147639968_0
         $x_1_5 = "MAIL FROM: <" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2350,6 +2431,7 @@ rule PWS_Win32_Frethog_MV_2147640559_0
         $x_1_4 = {80 7d 0b bf 76 06 80 7d 0b c4 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2374,6 +2456,7 @@ rule PWS_Win32_Frethog_NE_2147647944_0
         $x_2_5 = {8d 3c 02 33 f7 2b ce 8b 75 ec 81 c2 47 86 c8 61 85 f6 7f bd}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2404,6 +2487,7 @@ rule PWS_Win32_Frethog_NF_2147654103_0
         $x_1_7 = {54 53 53 61 66 65 45 64 69 74 2e 64 61 74 00 00 4c 6f 67 69 6e 43 74 72 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2430,6 +2514,7 @@ rule PWS_Win32_Frethog_NL_2147688493_0
         $x_1_7 = "wow.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

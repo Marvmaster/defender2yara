@@ -19,6 +19,7 @@ rule Ransom_MSIL_Loki_DA_2147771354_0
         $x_1_4 = ".loki" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_MSIL_Loki_DB_2147792968_0
         $x_1_4 = "How to obtain Bitcoins" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Ransom_MSIL_Loki_MBIS_2147890350_0
         $x_1_2 = "8845USB4Z554IHYF74YIDA" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win64_Androm_KK_2147837269_0
         $x_1_3 = "Release\\MFCLibrary3.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_Win64_Androm_LKH_2147839503_0
         $x_1_1 = {89 44 24 29 0f b6 44 24 20 c0 e0 02 c0 f9 04 0a c8 41 c0 e0 04 0f b6 c2 88 4c 24 28 c0 f8 02 49 8b cc c0 e2 06 41 0a c0 0a 54 24 23}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

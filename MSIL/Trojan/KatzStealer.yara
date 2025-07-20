@@ -21,6 +21,7 @@ rule Trojan_MSIL_KatzStealer_DA_2147942805_0
         $x_1_6 = "caminhovbs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

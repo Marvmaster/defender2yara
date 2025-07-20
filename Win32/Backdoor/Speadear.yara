@@ -18,6 +18,7 @@ rule Backdoor_Win32_Speadear_A_2147727788_0
         $x_1_4 = {49 6e 73 74 61 6c 6c 41 00 49 6e 73 74 61 6c 6c 42 00 49 6e 73 74 61 6c 6c 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

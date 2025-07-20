@@ -18,6 +18,7 @@ rule Virus_Win32_Tank_A_2147606111_0
         $x_1_3 = "X-Tank Agent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

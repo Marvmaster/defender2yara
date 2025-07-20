@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Reiten_2147633539_0
         $x_10_9 = "Nullsoft Install System" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or

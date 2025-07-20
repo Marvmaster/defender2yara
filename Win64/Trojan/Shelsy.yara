@@ -17,6 +17,7 @@ rule Trojan_Win64_Shelsy_B_2147828177_0
         $x_1_2 = {66 89 85 d4 02 00 00 c6 85 d0 02 00 00 4b 80 b5 d1 02 00 00 ?? 80 b5 d2 02 00 00 ?? 80 b5 d3 02 00 00 ?? 34 ?? 88 85 d4 02 00 00 80 b5 d5 02 00 00 ?? 48 8d 95 d0 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

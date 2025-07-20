@@ -24,6 +24,7 @@ rule Backdoor_WinNT_Farfli_A_2147595018_0
         $x_1_9 = "ZwWriteFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule Backdoor_WinNT_Farfli_B_2147595019_0
         $x_1_9 = "ZwCreateKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Backdoor_WinNT_Farfli_C_2147596675_0
         $x_1_1 = {ff 75 0c ff 75 08 e8 ?? fc ff ff 84 c0 58 8b e5 5d 74 11 aa bb cc dd ee ff aa aa aa aa ea bb bb bb bb 08 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Backdoor_WinNT_Farfli_E_2147601599_0
         $x_5_2 = {3d 24 0c 0b 83 74 29}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Backdoor_WinNT_Farfli_E_2147601599_1
         $x_1_3 = {83 c7 fd eb ?? 83 3d ?? ?? 01 00 ?? 76 ?? ff 15 ?? ?? 01 00 a1 ?? ?? 01 00 8b 38 83 [0-32] fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 8b ?? e4 8b 00 89 04 ?? 0f 20 c0 0d 00 00 01 00 0f 22 c0 fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule Backdoor_WinNT_Farfli_F_2147607366_0
         $x_1_5 = "PsSetCreateProcessNotifyRoutine" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +216,7 @@ rule Backdoor_WinNT_Farfli_H_2147609258_0
         $x_1_46 = "ntoskrnl.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_5_*) and 40 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_5_*) and 35 of ($x_1_*))) or
@@ -264,6 +271,7 @@ rule Backdoor_WinNT_Farfli_G_2147609259_0
         $x_4_29 = "ntoskrnl.exe" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 8 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_100_*) and 9 of ($x_2_*) and 2 of ($x_1_*))) or

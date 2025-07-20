@@ -19,6 +19,7 @@ rule Trojan_Win32_Dllhijack_GCM_2147928784_0
         $x_1_4 = "cmd.exe /B /c \"%s\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Dllhijack_GCN_2147928896_0
         $x_10_1 = {56 57 53 55 83 ec ?? 8b 3d ?? ?? ?? ?? 64 a1 18 00 00 00 8b 40 30 8b 58 0c 83 c3 0c 8b 13 3b d3 ?? ?? 33 ed 8b 72 ?? 8b cd 0f b7 06 85 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

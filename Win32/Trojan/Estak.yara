@@ -18,6 +18,7 @@ rule Trojan_Win32_Estak_EM_2147838001_0
         $x_1_3 = {81 ff f4 01 00 00 75 05 bf 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

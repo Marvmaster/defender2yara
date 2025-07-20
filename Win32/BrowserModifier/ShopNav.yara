@@ -25,6 +25,7 @@ rule BrowserModifier_Win32_ShopNav_11137_0
         $x_3_11 = "SrngInit.exe" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 5 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_3_*) and 4 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -60,6 +61,7 @@ rule BrowserModifier_Win32_ShopNav_11137_1
         $x_5_11 = {61 70 70 73 2e 77 65 62 73 65 72 76 69 63 65 68 6f 73 74 73 2e 63 6f 6d 00 00 00 00 62 6c 6f 67 2e 70 68 70}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 6 of ($x_1_*))) or
             ((1 of ($x_8_*) and 8 of ($x_1_*))) or

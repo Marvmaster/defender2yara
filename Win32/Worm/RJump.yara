@@ -16,6 +16,7 @@ rule Worm_Win32_RJump_2147575999_0
         $x_1_2 = {68 74 71 40 00 6a 00 ff d6 85 c0 74 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -54,6 +55,7 @@ rule Worm_Win32_RJump_F_2147581222_0
         $x_1_19 = "\\MDM.EXE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_40_*) and 2 of ($x_15_*) and 1 of ($x_5_*) and 12 of ($x_1_*))) or
             ((1 of ($x_40_*) and 2 of ($x_15_*) and 2 of ($x_5_*) and 7 of ($x_1_*))) or
@@ -93,6 +95,7 @@ rule Worm_Win32_RJump_J_2147593232_0
         $x_1_12 = "c:\\bittorrent.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 5 of ($x_10_*) and 2 of ($x_5_*))) or
             (all of ($x*))

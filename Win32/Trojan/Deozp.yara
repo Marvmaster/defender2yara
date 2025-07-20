@@ -16,6 +16,7 @@ rule Trojan_Win32_Deozp_A_2147681352_0
         $x_1_2 = {0f b7 06 c1 ea 06 69 d2 ?? ?? ?? ?? 03 ca 0f b7 56 02 03 c1 89 4d 08 0f b7 4e 06 8b d9 c1 e3 10 33 d9 83 fb 01 77 ?? 8b d9 c1 e3 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

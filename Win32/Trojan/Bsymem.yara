@@ -16,6 +16,7 @@ rule Trojan_Win32_Bsymem_DSK_2147755332_0
         $x_2_1 = {8b 4d fc 03 ce 30 01 b8 01 00 00 00 29 45 fc 39 7d fc 7d 05 00 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Bsymem_SQ_2147781659_0
         $x_1_4 = "Mezzo.accdr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Bsymem_RF_2147788441_0
         $x_1_1 = {83 c0 01 89 45 b4 8a 4d ec 88 4d ff 0f be 55 ff 85 d2 75 0b 8b 45 b0 89 85 bc fe ff ff eb 13 0f be 45 ff 33 45 b0 b9 93 01 00 01 f7 e1 89 45 b0 eb c3 81 bd bc fe ff ff 1b f9 d0 b3 75 3c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_Win32_Bsymem_CE_2147812745_0
         $x_1_4 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_Win32_Bsymem_AO_2147833310_0
         $x_10_1 = {8b 45 e8 8b 55 ec 01 02 8b 45 b8 03 45 e8 89 45 b4 8b 45 d8 03 45 b4 8b 55 ec 31 02 6a 00 e8 [0-4] 8b d8 8b 45 e8 83 c0 04 03 d8 6a 00 e8 [0-4] 2b d8 6a 00 e8 [0-4] 03 d8 6a 00 e8 [0-4] 2b d8 89 5d e8 8b 45 ec 83 c0 04 89 45 ec 8b 45 e8 3b 45 e4 72}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

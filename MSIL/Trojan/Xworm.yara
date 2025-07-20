@@ -19,6 +19,7 @@ rule Trojan_MSIL_Xworm_NEAA_2147844429_0
         $x_1_4 = "IntelliLock.Licensing" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Xworm_NEAB_2147844543_0
         $x_1_3 = "secondopen" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_MSIL_Xworm_KAD_2147905524_0
         $x_2_2 = "SecurityHealth.bin" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_MSIL_Xworm_KAE_2147910953_0
         $x_1_1 = {5f 63 13 04 08 11 04 60 d2 0c 07 11 05 25 20 01 00 00 00 58 13 05 08 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_MSIL_Xworm_KAG_2147917156_0
         $x_1_1 = {9a 0d 00 07 08 8f ?? 00 00 01 25 71 ?? 00 00 01 09 08 09 8e 69 5d 91 61 d2 81 ?? 00 00 01 00 11 07 17 58 13 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +132,7 @@ rule Trojan_MSIL_Xworm_SWJ_2147925453_0
         $x_2_1 = {00 20 00 40 00 00 6a 06 6f ?? 00 00 0a 06 6f ?? 00 00 0a 59 28 ?? 00 00 0a 69 13 06 06 11 04 16 11 06 6f ?? 00 00 0a 13 07 16 13 08 38 29 00 00 00 00 11 04 11 08 11 04 11 08 91 7e 11 00 00 04 11 05 91 61 08 11 05 91 61 d2 9c 11 05 17 58 09 5d 13 05 00 11 08 17 58 13 08 11 08 11 07 fe 04 13 09 11 09 3a c8 ff ff ff 07 11 04 16 11 07 6f ?? 00 00 0a 00 00 06 6f ?? 00 00 0a 06 6f ?? 00 00 0a fe 04 13 0a 11 0a 3a 73 ff ff ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +154,7 @@ rule Trojan_MSIL_Xworm_YAC_2147933902_0
         $x_10_1 = {09 59 08 1f 0a 5d 59 20 00 01 00 00 58 20 00 01 00 00 5d d1 13 04 07}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +176,7 @@ rule Trojan_MSIL_Xworm_SWB_2147937546_0
         $x_2_1 = {d0 49 00 00 01 28 ?? 00 00 0a 72 da 01 00 70 18 8d 1f 00 00 01 25 16 d0 17 00 00 01 28 ?? 00 00 0a a2 25 17 d0 1f 00 00 01 28 ?? 00 00 0a a2 28 ?? 00 00 0a 14 18 8d 07 00 00 01 25 16 02 8c 17 00 00 01 a2 25 17 03 a2 6f ?? 00 00 0a 74 42 00 00 01 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +198,7 @@ rule Trojan_MSIL_Xworm_SWC_2147937547_0
         $x_2_1 = {1f 10 8d 0e 00 00 01 13 07 09 28 ?? 00 00 0a 16 11 07 16 1a 28 ?? 00 00 0a 11 04 28 ?? 00 00 0a 16 11 07 1a 1a 28 ?? 00 00 0a 11 05 28 ?? 00 00 0a 16 11 07 1e 1a 28 ?? 00 00 0a 11 06 28 ?? 00 00 0a 16 11 07 1f 0c 1a 28 ?? 00 00 0a 11 07 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +220,7 @@ rule Trojan_MSIL_Xworm_SWD_2147939096_0
         $x_2_1 = {0c 08 6f 07 00 00 0a 0d 09 14 28 ?? 00 00 0a 2c 44 72 d4 aa 01 70 09 6f ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 09 6f ?? 00 00 0a 8e 69 2c 16 17 8d 01 00 00 01 13 07 11 07 16 16 8d 05 00 00 01 a2 11 07 2b 01 14 13 04 09 14 11 04 6f ?? 00 00 0a 26 2b 13 72 fc aa 01 70 72 5c ab 01 70 16 1f 10 28 ?? 00 00 0a 26 de 23}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +244,7 @@ rule Trojan_MSIL_Xworm_ZSS_2147945144_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -255,6 +266,7 @@ rule Trojan_MSIL_Xworm_PGW_2147945223_0
         $x_5_1 = {5d 16 fe 01 13 05 11 05 2c 0f 02 11 04 02 11 04 91 20 ?? 00 00 00 61 b4 9c 11 04 17 d6 13 04 11 04 09 31 d9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +288,7 @@ rule Trojan_MSIL_Xworm_PGW_2147945223_1
         $x_5_1 = {14 fe 06 38 00 00 06 73 ?? 00 00 0a 0a 06 14 73 ?? 00 00 0a 20 10 27 00 00 20 98 3a 00 00 6f ?? 00 00 0a 73 ?? 00 00 0a 20 10 27 00 00 20 98 3a 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +311,7 @@ rule Trojan_MSIL_Xworm_PGW_2147945223_2
         $x_5_2 = {11 27 06 61 06 61 d2 13 27 11 28 16 61 d2 13 28 11 29 06 61 06 61 d2 13 29}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

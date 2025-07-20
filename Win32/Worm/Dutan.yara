@@ -20,6 +20,7 @@ rule Worm_Win32_Dutan_A_2147605799_0
         $x_5_6 = "GetDriveTypeA" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 4 of ($x_10_*))) or
             (all of ($x*))

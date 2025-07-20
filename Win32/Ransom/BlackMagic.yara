@@ -18,6 +18,7 @@ rule Ransom_Win32_BlackMagic_PA_2147836421_0
         $x_1_3 = "Black Magic Has Targeted You!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Ransom_Win32_BlackMagic_A_2147836696_0
         $x_1_11 = "/api/public/api/test?ip=&status=0&cnt=100&type=server&num=11111170" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win64_QbotLoader_MD_2147846905_0
         $x_1_3 = "dllmain64.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

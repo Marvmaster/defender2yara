@@ -19,6 +19,7 @@ rule Backdoor_WinNT_Mansys_2147627423_0
         $x_1_5 = "\\\\.\\https" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

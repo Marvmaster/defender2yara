@@ -19,6 +19,7 @@ rule Trojan_Win32_Tofumanics_A_2147637829_0
         $x_1_5 = {4d 41 4c 57 41 52 45 00 [0-16] 45 53 53 45 4e 54 49 41 4c 53 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Tofumanics_B_2147638762_0
         $x_1_6 = {6c 6f 74 75 73 5c [0-16] 3a 5c 70 72 6f 67 72 61 6d 20 66 69 6c 65 73 5c 6e 6f 74 65 73 5c [0-16] 3a 5c 70 72 6f 67 72 61 6d 20 66 69 6c 65 73 5c 69 62 6d 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win32_Tofumanics_C_2147645149_0
         $x_1_6 = "gateway_result=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win32_Tofumanics_D_2147646067_0
         $x_1_4 = "/c erase \"C:\\WINDOWS\\system32\\drivers\\etc\\hosts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Snojan_AJS_2147842670_0
         $x_1_1 = {83 fe 10 8d 8d 98 91 ff ff 0f 43 c8 8a 07 83 c7 02 88 04 0b 8b 9d a8 91 ff ff 43 89 9d a8 91 ff ff 3b fa 74 0e 8b b5 ac 91 ff ff 8b 85 98 91 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Snojan_ASFQ_2147905956_0
         $x_1_5 = "ma num wa gyen orn hyzik %s en exec ween NODE%i" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

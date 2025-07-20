@@ -20,6 +20,7 @@ rule Trojan_Win32_MagicRAT_RS_2147833668_0
         $x_1_5 = "success self delete" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

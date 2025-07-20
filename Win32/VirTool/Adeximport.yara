@@ -19,6 +19,7 @@ rule VirTool_Win32_Adeximport_A_2147828024_0
         $x_1_4 = {8b 45 20 2b 45 28 89 c1 8b 55 28 48 8b 45 18 48 01 c2 4c 8d ?? ?? 48 8b 45 f0 48 c7 44 24 20 00 00 00 00 4d 89 c1 41 89 c8 48 89 c1 48 8b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

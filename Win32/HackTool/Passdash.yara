@@ -19,6 +19,7 @@ rule HackTool_Win32_Passdash_A_2147694166_0
         $x_1_4 = {2d 64 62 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

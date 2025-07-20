@@ -18,6 +18,7 @@ rule Ransom_MSIL_ApophisCrypt_PA_2147918930_0
         $x_1_3 = {5c 41 70 6f 70 68 69 73 5c [0-8] 5c [0-8] 5c 41 70 6f 70 68 69 73 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

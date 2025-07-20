@@ -20,6 +20,7 @@ rule MonitoringTool_MSIL_TBKeylogger_205024_0
         $x_1_6 = "UsbSendFilewatcher" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule MonitoringTool_MSIL_TBKeylogger_205024_1
         $x_1_6 = "Microsoft 2011" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

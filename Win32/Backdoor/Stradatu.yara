@@ -17,6 +17,7 @@ rule Backdoor_Win32_Stradatu_2147681809_0
         $x_1_3 = ":\\pjts2008\\SunTalk\\Release\\STalk_S.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_Stradatu_2147681809_1
         $x_1_4 = "RUheYodtaXyudTy4a3I5NjVxNkZxPR!!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Backdoor_Win32_Stradatu_2147681809_2
         $x_2_5 = "UNKNOW HOST TYPE" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -91,6 +94,7 @@ rule Backdoor_Win32_Stradatu_2147681809_3
         $x_1_5 = "at \"IP PORT\"!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Backdoor_Win32_Stradatu_2147681809_4
         $x_1_4 = "%a, %d %b %Y %H:%M:%S GMT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Backdoor_Win32_Stradatu_2147681809_5
         $x_1_4 = "l in another shell!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Backdoor_Win32_Stradatu_2147681809_6
         $x_1_4 = "ARE YOU SURE CLOSE CLIENT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -183,6 +190,7 @@ rule Backdoor_Win32_Stradatu_2147681809_7
         $x_1_4 = "%s goes to bed! Wish him a good sleep!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

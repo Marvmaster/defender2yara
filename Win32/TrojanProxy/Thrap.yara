@@ -23,6 +23,7 @@ rule TrojanProxy_Win32_Thrap_A_2147601393_0
         $x_1_8 = "Documentation and sources: http://www.security.nnov.ru/soft/3proxy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 3 of ($x_1_*))) or
             ((1 of ($x_6_*) and 1 of ($x_3_*) and 3 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule Trojan_Win64_ReflectiveLoader_EM_2147850298_0
         $x_5_1 = {4c 8d 3c 3a 49 83 c7 28 48 89 d6 48 01 fe 4c 89 7c 24 78 89 9c 24 80 00 00 00 48 89 4c 24 58 48 8d 04 31 48 83 c0 28 48 89 44 24 50 48 89 84 24 88 00 00 00 44 89 b4 24 90 00 00 00 48 8d 9c 24 98 00 00 00 48 c7 03 00 00 00 00 48 89 5c 24 20}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_ReflectiveLoader_RDA_2147914871_0
         $x_1_4 = "Failed to inject the DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

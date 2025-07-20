@@ -19,6 +19,7 @@ rule Backdoor_MSIL_Ruskill_ARK_2147849804_0
         $x_1_4 = "Users\\ICARUS\\Desktop\\Microsoft Edge.lnk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

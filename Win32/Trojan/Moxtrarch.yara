@@ -18,6 +18,7 @@ rule Trojan_Win32_Moxtrarch_A_2147680211_0
         $x_3_4 = "http://counter.moneyextre.me/addsubscription.php?abon=7" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

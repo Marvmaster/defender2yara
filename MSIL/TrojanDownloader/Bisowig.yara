@@ -22,6 +22,7 @@ rule TrojanDownloader_MSIL_Bisowig_A_2147658271_0
         $x_10_8 = "wingbiso.txt" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_50_*) and 3 of ($x_10_*))) or
             ((1 of ($x_100_*) and 1 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_10_*))) or
@@ -53,6 +54,7 @@ rule TrojanDownloader_MSIL_Bisowig_B_2147658723_0
         $x_1_6 = "PROXY y.futurehopesdie.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

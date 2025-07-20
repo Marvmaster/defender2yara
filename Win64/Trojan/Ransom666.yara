@@ -25,6 +25,7 @@ rule Trojan_Win64_Ransom666_A_2147794785_0
         $x_1_10 = "666.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

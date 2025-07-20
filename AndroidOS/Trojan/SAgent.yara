@@ -97,6 +97,7 @@ rule Trojan_AndroidOS_SAgent_H_2147839371_0
         $x_1_2 = {11 20 df f8 ?? a0 ff f7 ?? ec 00 21 11 22 83 46 ff f7 ?? ec b0 1c 59 46 6a 46 01 f0 ?? f8 80 21 6a 46 58 46 00 f0 ?? fd fa 44 da f8 ?? a0 00 21 80 22 50 46 ff f7 ?? ec 52 46 06 f1 ?? 01 80 23 68 46 ff f7 ?? fd 40 46 ff f7 ?? ec 06 f1 ?? 01 43 46 82 46 68 46 52 46 ff f7 ?? fd 41 46 01 22 3b 46 50 46 ff f7 ?? ec 38 46 ff f7 ?? ec 38 46}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 

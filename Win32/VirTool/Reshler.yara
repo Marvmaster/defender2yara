@@ -23,6 +23,7 @@ rule VirTool_Win32_Reshler_A_2147752783_0
         $x_1_9 = "/shell/shell_windows" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

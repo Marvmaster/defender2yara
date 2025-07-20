@@ -18,6 +18,7 @@ rule Ransom_Linux_Luna_A_2147828252_0
         $x_1_3 = "Luna.ini.exe.dll.lnk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

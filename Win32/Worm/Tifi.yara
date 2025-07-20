@@ -17,6 +17,7 @@ rule Worm_Win32_Tifi_B_2147622968_0
         $x_1_2 = "flashdrive.path &\"\\autorun.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

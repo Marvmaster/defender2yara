@@ -19,6 +19,7 @@ rule Ransom_Win32_Mohelocker_A_2147722803_0
         $x_100_4 = "__ENCAddToList" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

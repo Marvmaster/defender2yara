@@ -21,6 +21,7 @@ rule TrojanProxy_Win32_Tarayt_A_2147717970_0
         $x_1_7 = {79 65 55 21 48 6c 71 4d 50 43 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

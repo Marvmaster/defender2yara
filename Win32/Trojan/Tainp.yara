@@ -18,6 +18,7 @@ rule Trojan_Win32_Tainp_A_2147906084_0
         $x_2_3 = {ff 03 81 3b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

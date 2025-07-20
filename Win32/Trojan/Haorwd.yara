@@ -16,6 +16,7 @@ rule Trojan_Win32_Haorwd_B_2147731744_0
         $x_1_2 = {0f b6 14 06 0f b6 4c 06 ?? 88 55 ?? 0f b6 54 06 ?? 8a 44 06 ?? 88 4d ?? 8d 4d ?? 8d 75 ?? 8d 7d ?? 88 55 ?? e8 ?? ?? ?? ?? 0f b6 4d ?? 8b 45 ?? 0f b6 55 ?? 88 0c 03 0f b6 4d ?? 43 88 14 03 43 88 0c 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

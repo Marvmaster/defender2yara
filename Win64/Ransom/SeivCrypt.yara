@@ -18,6 +18,7 @@ rule Ransom_Win64_SeivCrypt_PA_2147838447_0
         $x_1_3 = {5c 41 72 74 4f 66 43 72 79 70 74 5c [0-21] 5c 45 4e 63 72 79 70 74 30 72 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

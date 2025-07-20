@@ -22,6 +22,7 @@ rule Trojan_Win32_MpTestSMSThreat_2147727342_0
         $x_1_8 = "dc5460db-1b91-47a0-95d7-c3e66fd65178" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

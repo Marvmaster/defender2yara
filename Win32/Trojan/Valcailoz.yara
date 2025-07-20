@@ -19,6 +19,7 @@ rule Trojan_Win32_Valcailoz_A_2147716302_0
         $x_1_5 = "cai.geduo.org" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))

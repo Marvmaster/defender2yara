@@ -24,6 +24,7 @@ rule TrojanDownloader_Win64_ShellcodeRunnerGo_C_2147926184_0
         $x_1_9 = "net/url.(*URL).Port" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

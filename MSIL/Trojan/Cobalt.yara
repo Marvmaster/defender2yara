@@ -28,6 +28,7 @@ rule Trojan_MSIL_Cobalt_MA_2147811902_0
         $x_1_13 = "CreateEncryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Trojan_MSIL_Cobalt_KA_2147892122_0
         $x_1_2 = "NcqevkYEUtMb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_MSIL_Cobalt_KAA_2147892127_0
         $x_5_2 = {11 28 11 0c 11 0d 11 0c 91 9d 17 11 0c 58 13 0c 11 0c 11 1a 32 ea}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

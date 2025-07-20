@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Phinit_A_2147622433_0
         $x_1_7 = "SYSTEM\\CurrentControlSet\\Services\\Eventlog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or
             ((3 of ($x_100_*) and 2 of ($x_3_*))) or
@@ -49,6 +50,7 @@ rule TrojanDownloader_Win32_Phinit_B_2147626778_0
         $x_1_5 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

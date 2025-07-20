@@ -16,6 +16,7 @@ rule TrojanDownloader_MSIL_Dae_A_2147731074_0
         $x_1_1 = {28 01 00 00 06 26 07 14 28 02 00 00 06 26 dd 03 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_MSIL_Dae_YA_2147731702_0
         $x_1_2 = "DownloadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanDownloader_MSIL_Dae_YB_2147731773_0
         $x_2_6 = "FileSplit" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

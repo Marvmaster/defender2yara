@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_FakeIA_A_2147799813_0
         $x_1_4 = "Insecure Browsing Error:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

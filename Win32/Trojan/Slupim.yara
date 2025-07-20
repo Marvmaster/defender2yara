@@ -15,6 +15,7 @@ rule Trojan_Win32_Slupim_A_2147605507_0
         $x_1_1 = {3b c3 74 0d 8b c8 e8 ?? ?? ff ff 89 44 24 (14|18) eb 04 89 5c 24 (14|18) 6a 0c ?? 0f 00 00 00 68 ?? ?? ?? 00 8d 8c 24 ?? 00 00 00 89 ?? 24 ?? 00 00 00 89 9c 24 ?? 00 00 00 88 9c 24 ?? 00 00 00 e8 ?? ?? fe ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Slupim_B_2147620371_0
         $x_1_5 = "HipImage" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

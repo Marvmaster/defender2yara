@@ -20,6 +20,7 @@ rule BrowserModifier_Win32_Qiwmonk_224670_0
         $x_1_6 = "HipsTray.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -57,6 +58,7 @@ rule BrowserModifier_Win32_Qiwmonk_224670_1
         $x_1_18 = {26 74 67 25 64 3d 25 64 00 00 00 00 25 73 3a 25 64 7c 00 00 26 76 65 72 3d 00 00 00 49 6e 73 74 61 6c 6c 44 61 74 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

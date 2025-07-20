@@ -17,6 +17,7 @@ rule Backdoor_Win32_SysJoker_AA_2147810764_0
         $x_1_2 = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDkfNl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))

@@ -36,6 +36,7 @@ rule Backdoor_Win32_Cocoazul_A_2147602392_0
         $x_1_21 = {50 4f 50 33 20 55 73 65 72 20 4e 61 6d 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_10_*) and 10 of ($x_1_*))) or
             (all of ($x*))

@@ -26,6 +26,7 @@ rule Backdoor_Win32_Redvoz_A_2147598348_0
         $x_1_12 = "*update \"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

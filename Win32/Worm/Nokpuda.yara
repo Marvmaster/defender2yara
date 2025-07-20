@@ -16,6 +16,7 @@ rule Worm_Win32_Nokpuda_A_2147644606_0
         $x_1_2 = {b3 43 8d 85 28 fe ff ff 8b d3 e8 ?? ?? ?? ?? 8d 85 28 fe ff ff ba ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 85 28 fe ff ff e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 83 f8 (02|04) 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Worm_Win32_Nokpuda_B_2147670673_0
         $x_1_8 = {68 74 74 70 66 6c 6f 6f 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 6 of ($x_1_*))) or
             ((2 of ($x_3_*) and 3 of ($x_1_*))) or

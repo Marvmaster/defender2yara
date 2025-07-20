@@ -17,6 +17,7 @@ rule Ransom_Win32_Eagle_C_2147839301_0
         $x_1_2 = {c7 44 24 08 0f 00 00 00 b8 01 02 04 08 f7 eb c7 44 24 0c 00 00 00 00 25 11 11 11 11 83 e2 01 89 04 24 89 54 24 04 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

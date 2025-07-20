@@ -21,6 +21,7 @@ rule VirTool_Win64_LocPoto_A_2147844660_0
         $x_1_6 = {b9 00 20 00 00 ff 15 ?? ?? ?? ?? 48 89 85 a8 00 00 00 b9 00 20 00 00 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

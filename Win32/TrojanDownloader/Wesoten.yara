@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Wesoten_A_2147614123_0
         $x_1_4 = "%04d%02d%02d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

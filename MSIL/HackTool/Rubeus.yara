@@ -20,6 +20,7 @@ rule HackTool_MSIL_Rubeus_RDA_2147848753_0
         $x_1_5 = "EncryptedPAData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule HackTool_MSIL_Rubeus_PSUM_2147897052_0
         $x_2_1 = {02 03 11 08 03 59 28 ?? 06 00 06 13 09 03 11 09 7b d4 02 00 04 58 10 01 11 07 11 09 6f ?? 01 00 0a 03 11 08 32 da}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

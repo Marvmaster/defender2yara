@@ -19,6 +19,7 @@ rule Worm_Win32_Bosidome_A_2147655892_0
         $x_1_5 = "JavaUpdate.exe /s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

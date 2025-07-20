@@ -24,6 +24,7 @@ rule Trojan_MSIL_NegaStealer_RPZ_2147842427_0
         $x_1_9 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

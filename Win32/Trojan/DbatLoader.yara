@@ -16,6 +16,7 @@ rule Trojan_Win32_DbatLoader_RP_2147911049_0
         $x_1_1 = {4e 63 32 35 ?? ?? ?? ?? ?? 5e 5e 4e 63 32 50 32 3e 5b 60 5d 23 32 50 32 3e 5b 60 5d 24 32 50 32 5a 66 66 62 65 2c 21 21}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

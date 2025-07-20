@@ -25,6 +25,7 @@ rule TrojanDownloader_Win32_Fomish_2147582017_0
         $x_1_11 = "EXE_DL2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

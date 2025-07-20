@@ -18,6 +18,7 @@ rule Backdoor_Win32_StoredBt_A_2147638960_0
         $x_2_4 = "InternalCommand: [btstop]" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or

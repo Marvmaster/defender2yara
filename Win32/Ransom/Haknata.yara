@@ -33,6 +33,7 @@ rule Ransom_Win32_Haknata_A_2147719870_0
         $x_1_18 = "if exist \"%S\" goto WaitAndDelete" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

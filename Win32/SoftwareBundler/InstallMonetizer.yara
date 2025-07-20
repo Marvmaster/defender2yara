@@ -20,6 +20,7 @@ rule SoftwareBundler_Win32_InstallMonetizer_199745_0
         $x_32_6 = {2f 49 4d 5f [0-3] 61 70 70 69 6e 74 65 72 61 63 74 [0-3] 2e 70 68 70}  //weight: 32, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_32_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -51,6 +52,7 @@ rule SoftwareBundler_Win32_InstallMonetizer_199745_1
         $x_50_9 = {2f 46 43 4c 5f 43 6f 5f [0-7] 72 65 6d 6f 74 65 [0-7] 2e 70 68 70}  //weight: 50, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -81,6 +83,7 @@ rule SoftwareBundler_Win32_InstallMonetizer_199745_2
         $x_32_8 = {2f 66 69 72 73 74 5f 63 61 6c 6c 5f [0-7] 2e 70 68 70}  //weight: 32, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_32_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -110,6 +113,7 @@ rule SoftwareBundler_Win32_InstallMonetizer_199745_3
         $x_32_7 = {68 74 74 70 3a 2f 2f 77 77 77 2e 05 00 05 00 2e 75 73 [0-2] 02 00 [0-19] 2e 70 68 70}  //weight: 32, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_32_*))) or
@@ -198,6 +202,7 @@ rule SoftwareBundler_Win32_InstallMonetizer_199745_4
         $x_32_65 = "/pts_prksh.php" ascii //weight: 32
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_32_*))) or

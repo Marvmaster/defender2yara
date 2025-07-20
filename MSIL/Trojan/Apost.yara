@@ -21,6 +21,7 @@ rule Trojan_MSIL_Apost_EM_2147895590_0
         $x_1_6 = "EtherShieldVM.Runtime" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_MSIL_Apost_NBL_2147896415_0
         $x_1_6 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_MSIL_Apost_NS_2147931769_0
         $x_2_2 = {72 01 00 00 70 0a 28 ?? 00 00 0a 0b 07 72 ?? 00 00 70 28 ?? 00 00 0a 0c 07 72 ?? 00 00 70 28 ?? 00 00 0a 0d 14 13 04 12 05 fe 15 03 00 00 02 12 06 fe 15 04 00 00 02 73 ?? 00 00 0a 13 07}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win64_Lightrail_EC_2147918703_0
         $x_2_3 = "VGAuth.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
             ((2 of ($x_5_*))) or

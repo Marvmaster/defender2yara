@@ -20,6 +20,7 @@ rule Trojan_Win32_WebShell_Y_2147828695_0
         $x_1_6 = "/contact.aspx" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_MSIL_BroPass_GHQ_2147845728_0
         $x_1_2 = "api.telegram.org/bot6196636801" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

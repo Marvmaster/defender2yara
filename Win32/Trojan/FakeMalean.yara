@@ -51,6 +51,7 @@ rule Trojan_Win32_FakeMalean_2147625004_0
         $x_1_37 = "CBDisableSounds" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 13 of ($x_5_*) and 15 of ($x_1_*))) or
             ((1 of ($x_20_*) and 13 of ($x_5_*) and 15 of ($x_1_*))) or

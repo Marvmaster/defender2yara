@@ -20,6 +20,7 @@ rule TrojanDownloader_MSIL_Gabrenehu_A_2147694468_0
         $x_1_6 = "nomedozip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or

@@ -17,6 +17,7 @@ rule Trojan_Win32_Enturp_A_2147650945_0
         $x_1_3 = {5b 45 4e 54 5d 0d 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))

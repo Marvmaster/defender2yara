@@ -17,6 +17,7 @@ rule Trojan_Win32_Fragtor_FL_2147799117_0
         $x_10_2 = {32 33 00 00 00 00 6f 39 32 32 00 00 00 00 55 8b ec 83 c4 f8 89 55 f8 89 45 fc 33 c0}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Fragtor_HBAI_2147808773_0
         $x_1_4 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Fragtor_SIB_2147813608_0
         $x_1_3 = {8a 08 80 c1 ?? 8b 55 ?? 03 55 ?? 88 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_Fragtor_SIBA_2147813609_0
         $x_1_3 = {88 0a 8b 45 ?? 03 45 ?? 0f b6 08 81 c1 ?? ?? ?? ?? 8b 55 00 03 55 01 88 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_Win32_Fragtor_EL_2147828893_0
         $x_1_5 = "cmd.exe /C ping 1.1.1.1 -n 1 -w 3000 > Nul & Warper.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_Win32_Fragtor_RD_2147839497_0
         $x_1_1 = {b8 95 20 4f 09 8b ce f7 ee d1 fa 8b c2 c1 e8 1f 03 c2 6b c0 37 2b c8 83 c1 35 66 31 8c 75 10 c2 ff ff 46 81 fe b6 1e 00 00 7c d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule Trojan_Win32_Fragtor_RC_2147844006_0
         $x_1_1 = {03 34 24 8a 6d 00 8a 0e 31 f6 30 cd 88 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_Win32_Fragtor_RC_2147844006_1
         $x_1_3 = "RLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -199,6 +207,7 @@ rule Trojan_Win32_Fragtor_GJT_2147850272_0
         $x_1_2 = "crvsx.zapto.org" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +229,7 @@ rule Trojan_Win32_Fragtor_KAA_2147851488_0
         $x_10_1 = {21 d2 8b 06 ba ?? ?? ?? ?? 81 c1 ?? ?? ?? ?? 81 e9 ?? ?? ?? ?? 81 e0 ?? ?? ?? ?? 4a f7 d7 31 03 81 c7 e8 2c e5 ef 29 f9 4a 43 09 d2 49 46 89 fa 21 d1 4f 81 fb}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -241,6 +251,7 @@ rule Trojan_Win32_Fragtor_KAB_2147852099_0
         $x_10_1 = {09 cb 8b 3e 81 c0 ?? ?? ?? ?? 09 db 81 e7 ?? ?? ?? ?? 21 cb 81 e8 ?? ?? ?? ?? 31 3a 01 db 89 d8 42 01 cb 09 c3 81 c6 ?? ?? ?? ?? 48 09 db 81 e9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -262,6 +273,7 @@ rule Trojan_Win32_Fragtor_SPK_2147852351_0
         $x_2_1 = {6a 40 68 00 10 00 00 68 74 12 00 00 6a 00 55 ff 15 ?? ?? ?? ?? 85 c0 0f 84}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -283,6 +295,7 @@ rule Trojan_Win32_Fragtor_KAE_2147890144_0
         $x_10_1 = {8b 0b 81 c0 ?? ?? ?? ?? 29 d7 81 e1 ?? ?? ?? ?? 81 ef ?? ?? ?? ?? f7 d2 31 0e f7 d2 29 fa 46 47 4f 43 29 c2 89 c7 81 fe}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -305,6 +318,7 @@ rule Trojan_Win32_Fragtor_KAE_2147890144_1
         $x_1_2 = "gcry_sexp_build_array" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -326,6 +340,7 @@ rule Trojan_Win32_Fragtor_B_2147890441_0
         $x_1_1 = {0f 29 44 24 60 0f 29 44 24 70 8b 91 ?? ?? ?? ?? 33 54 08 04 89 54 0c 64 83 c1 04 83 f9 20 72 ea}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -347,6 +362,7 @@ rule Trojan_Win32_Fragtor_B_2147890441_1
         $x_1_1 = {89 45 f8 8b c7 33 c9 ba 10 00 00 00 e8 ?? ?? ?? ?? 89 5f 0c 33 c0 89 47 04 c6 47 08 7f c6 47 09 01 33 c0 89 07 bb 30 00 00 00 8d ?? ?? 50 57 6a 00 e8 ?? ?? ?? ?? 8b f0 81 07 40 77 1b 00 4b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -368,6 +384,7 @@ rule Trojan_Win32_Fragtor_ARA_2147893463_0
         $x_2_1 = {8a 14 08 80 ea 7a 80 f2 19 88 14 08 40 3b c6 7c ef}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -389,6 +406,7 @@ rule Trojan_Win32_Fragtor_ARA_2147893463_1
         $x_2_1 = {6a 1a 99 59 f7 f9 83 c2 41 66 89 54 7d d4 47 83 ff 0a 7c e7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -410,6 +428,7 @@ rule Trojan_Win32_Fragtor_RG_2147893746_0
         $x_1_1 = {34 a6 4f 87 af 7a ea dc 60 43 40 1f 33 3c 3b 3a 0c b8 f5 9b ea ec 45 0c eb 59 3a f2 34 58 8b fe}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -431,6 +450,7 @@ rule Trojan_Win32_Fragtor_KAF_2147895887_0
         $x_5_1 = {8b 0a 4e 81 c6 ?? ?? ?? ?? 40 81 e1 ?? ?? ?? ?? 09 f6 4b 81 c6 ?? ?? ?? ?? 31 0f f7 d0 b8 ?? ?? ?? ?? 81 c7 ?? ?? ?? ?? 01 c3 01 f6 81 c2 ?? ?? ?? ?? 89 c3 4e 21 f0 81 ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -452,6 +472,7 @@ rule Trojan_Win32_Fragtor_KA_2147896230_0
         $x_10_1 = {8b 31 29 d3 01 df 81 e6 ?? ?? ?? ?? f7 d3 01 da 31 30 01 da 81 eb ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 40 43 21 d3 81 c1 ?? ?? ?? ?? 01 df 09 d7 81 f8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -473,6 +494,7 @@ rule Trojan_Win32_Fragtor_GPC_2147896250_0
         $x_4_1 = {b8 67 66 66 66 f7 ea c1 fa 02 8b c2 c1 e8 1f 03 c2 8b 55 fc 8a c8 c0 e0 02 02 c8 8a c2 02 c9 2a c1 04 30 30 44 15 f0 42 89 55 fc}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -495,6 +517,7 @@ rule Trojan_Win32_Fragtor_NFA_2147897196_0
         $x_1_2 = "MJPGC.TMP" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -522,6 +545,7 @@ rule Trojan_Win32_Fragtor_NFA_2147897196_1
         $x_1_7 = "sms-cat.de" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -543,6 +567,7 @@ rule Trojan_Win32_Fragtor_MKV_2147897904_0
         $x_1_1 = {0f b6 1c 03 32 18 83 c0 04 88 5c 28 fc 8b 5c 24 14 0f b6 1c 0b 32 58 fd 83 c1 04 88 59 fc 0f b6 58 fe 32 5f ff 83 c7 04 88 59 fd 0f b6 58 ff 32 5f fc ff 4c 24 18 88 59 fe 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -564,6 +589,7 @@ rule Trojan_Win32_Fragtor_AFG_2147898089_0
         $x_1_1 = {8b 06 03 05 88 65 41 00 6a 00 6a 04 68 88 65 41 00 50 57 ff d3 83 c6 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -585,6 +611,7 @@ rule Trojan_Win32_Fragtor_AFG_2147898089_1
         $x_1_1 = {8b ca c1 f9 06 83 e2 3f 6b d2 38 8b 0c 8d 48 8f 50 00 88 44 11 29 8b 0b 8b c1 c1 f8 06 83 e1 3f 6b d1 38 8b 0c 85 48 8f 50 00 8b 45 14 c1 e8 10 32 44 11 2d 24 01 30 44 11 2d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -606,6 +633,7 @@ rule Trojan_Win32_Fragtor_AFG_2147898089_2
         $x_1_1 = {0f b6 05 70 48 01 10 a2 10 53 01 10 0f b6 05 71 48 01 10 a2 11 53 01 10 0f b6 05 72 48 01 10 a2 12 53 01 10 0f b6 05 73 48 01 10 a2 13 53 01 10 0f b6 05 74 48 01 10 a2 14 53 01 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -628,6 +656,7 @@ rule Trojan_Win32_Fragtor_AFG_2147898089_3
         $x_2_2 = {2a 2c 7f 3a 51 a0 0c b6 81 28 09 be 9f cb b7 81 2c 0b 30 34 88 81 38 17 40 cb e5 72 f9 0b 44 48 4c 50 38 80 00 9f 54 8b c1 bc a0 f1 7e c1 df b1 da c2 6a 08 59 8b fe f3 ab}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -649,6 +678,7 @@ rule Trojan_Win32_Fragtor_KAG_2147898863_0
         $x_5_1 = {99 f7 ff 0f b6 81 ?? ?? ?? ?? c0 c8 03 32 82 ?? ?? ?? ?? 88 81 ?? ?? ?? ?? 8d 42 01 99}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -671,6 +701,7 @@ rule Trojan_Win32_Fragtor_NF_2147899073_0
         $x_1_2 = "WkV21TSav" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -693,6 +724,7 @@ rule Trojan_Win32_Fragtor_NF_2147899073_1
         $x_1_2 = "GZGLXT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -718,6 +750,7 @@ rule Trojan_Win32_Fragtor_NF_2147899073_2
         $x_1_5 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -743,6 +776,7 @@ rule Trojan_Win32_Fragtor_NF_2147899073_3
         $x_1_5 = "THE CREATOR IS NOT RESPONSIBLE FOR ANY DAMAGE MADE USING THIS MALWARE!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -764,6 +798,7 @@ rule Trojan_Win32_Fragtor_AMBI_2147900303_0
         $x_2_1 = {09 da 09 fe 31 f2 88 14 08}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -787,6 +822,7 @@ rule Trojan_Win32_Fragtor_NFR_2147900602_0
         $x_2_3 = "OWjuxD" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -812,6 +848,7 @@ rule Trojan_Win32_Fragtor_NFR_2147900602_1
         $x_1_5 = "fjiej.log" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -834,6 +871,7 @@ rule Trojan_Win32_Fragtor_ASFA_2147902863_0
         $x_5_2 = {41 75 74 6f 52 75 6e 00 43 50 55 5f 49 64 65 6e 74 69 66 69 63 61 74 69 6f 6e 00 44 4c 4c 5f 49 6e 6a 65 63 74 69 6f 6e 00 44 65 62 75 67 67 65 72 5f 49 64 65 6e 74 69 66 69 63 61 74 69 6f 6e 00 44 65 63 6f 64 65 5f 42 61 73 65 36 34 00 44 65 6c 65 74 65 5f 46 69 6c 65 00 44 65 6c 65 74 65 5f 49 74 73 65 6c 66 00 4c 6f 61 64 5f 46 72 6f 6d 5f 46 69 6c 65 00 52 75 6e 5f 46 72 6f 6d 5f 4d 65 6d 6f 72 79 00 53 74 72 69 6e 67 5f 58 4f 52}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -856,6 +894,7 @@ rule Trojan_Win32_Fragtor_AMMC_2147904957_0
         $x_2_2 = {5f 44 65 62 75 67 67 65 72 5f 49 64 65 6e 74 69 66 69 63 61 74 69 6f 6e 00 5f 43 50 55 5f 49 64 65 6e 74 69 66 69 63 61 74 69 6f 6e 00 5f 53 74 72 69 6e 67 5f 58 4f 52 00 5f 44 4c 4c 5f 49 6e 6a 65 63 74 69 6f 6e 00 5f 4c 6f 61 64 5f 46 72 6f 6d 5f 46 69 6c 65 00 5f 44 65 63 6f 64 65 5f 42 61 73 65 36 34 00 5f 52 75 6e 5f 46 72 6f 6d 5f 4d 65 6d 6f 72 79 00 5f 44 65 6c 65 74 65 5f 46 69 6c 65}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -878,6 +917,7 @@ rule Trojan_Win32_Fragtor_GZZ_2147905285_0
         $x_1_2 = ".imports" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -904,6 +944,7 @@ rule Trojan_Win32_Fragtor_HNS_2147905555_0
         $x_1_6 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -928,6 +969,7 @@ rule Trojan_Win32_Fragtor_AMME_2147905808_0
         $x_1_4 = "xcvuybir_suifw" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -949,6 +991,7 @@ rule Trojan_Win32_Fragtor_HIN_2147905834_0
         $x_1_1 = {8b ca 8b c3 0f a4 c1 0d c1 e0 0d 33 d1 8b 4c 24 10 33 d8 8b c3 0f ac d0 ?? 32 c3 30 04 0f 41 89 4c 24 ?? 83 f9 0e 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -973,6 +1016,7 @@ rule Trojan_Win32_Fragtor_NA_2147905914_0
         $x_5_4 = "ibudod_sodogv" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -997,6 +1041,7 @@ rule Trojan_Win32_Fragtor_NB_2147905915_0
         $x_5_4 = "gcry_pk_encrypt" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1022,6 +1067,7 @@ rule Trojan_Win32_Fragtor_NC_2147905987_0
         $x_5_5 = "gcry_pk_encrypt" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1047,6 +1093,7 @@ rule Trojan_Win32_Fragtor_AMMF_2147906060_0
         $x_1_5 = "sdgioeasgjh_ajwsdfjsad_dws" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1069,6 +1116,7 @@ rule Trojan_Win32_Fragtor_FA_2147906231_0
         $x_1_2 = "bsiouegjhesuhg_saegiueash" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1091,6 +1139,7 @@ rule Trojan_Win32_Fragtor_ND_2147906432_0
         $x_5_2 = "gcry" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1114,6 +1163,7 @@ rule Trojan_Win32_Fragtor_M_2147906532_0
         $x_1_3 = "PhysicalDrive0" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1136,6 +1186,7 @@ rule Trojan_Win32_Fragtor_MBZW_2147907266_0
         $x_1_2 = {83 3d dc 23 42 00 00 8a 91 f8 53 41 00 75 08 a1 f4 27 42 00 88 14 01 41 3b cf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1158,6 +1209,7 @@ rule Trojan_Win32_Fragtor_NE_2147907459_0
         $x_5_2 = "gcry" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1182,6 +1234,7 @@ rule Trojan_Win32_Fragtor_KUAA_2147907910_0
         $x_1_4 = "vbusughs_surghsurh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1206,6 +1259,7 @@ rule Trojan_Win32_Fragtor_KXAA_2147907982_0
         $x_1_4 = "vbhjdurhg_esuhgshe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1227,6 +1281,7 @@ rule Trojan_Win32_Fragtor_RP_2147909704_0
         $x_1_1 = {8a 85 9c bd ff ff 30 84 0d 9d bd ff ff 41 83 f9 17 72 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1248,6 +1303,7 @@ rule Trojan_Win32_Fragtor_SPGG_2147909767_0
         $x_1_1 = {01 45 f8 8b 45 f8 33 45 f4 31 45 fc 8b 45 fc 29 45 e8 8b 4d d4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1269,6 +1325,7 @@ rule Trojan_Win32_Fragtor_ENG_2147910323_0
         $x_1_1 = {60 e8 00 00 00 00 5d 81 ed 06 00 00 00 81 ed d0 1a 38 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1295,6 +1352,7 @@ rule Trojan_Win32_Fragtor_RU_2147910797_0
         $x_1_6 = "cxzcxzce2222" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1316,6 +1374,7 @@ rule Trojan_Win32_Fragtor_ASGI_2147910798_0
         $x_2_1 = {50 6a 40 68 ?? ?? 00 00 57 ff 15 [0-9] 8d b5 ?? ?? ff ff 8b cf 2b f7 ba}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1339,6 +1398,7 @@ rule Trojan_Win32_Fragtor_GXY_2147911298_0
         $x_1_3 = "Kiss to h3r p33zy a$$" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1362,6 +1422,7 @@ rule Trojan_Win32_Fragtor_KAH_2147911310_0
         $x_1_3 = "VisiugfseuihAsrgseiugs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1385,6 +1446,7 @@ rule Trojan_Win32_Fragtor_SPXB_2147911492_0
         $x_2_3 = "Rafgafahufghauhghgh" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1406,6 +1468,7 @@ rule Trojan_Win32_Fragtor_ENI_2147911498_0
         $x_1_1 = {60 e8 00 00 00 00 5d 81 ed 10 00 00 00 81 ed 0c db b5 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1429,6 +1492,7 @@ rule Trojan_Win32_Fragtor_OCAA_2147911930_0
         $x_1_3 = "YoisgsiurhAiusrhguihse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1453,6 +1517,7 @@ rule Trojan_Win32_Fragtor_SPZB_2147912059_0
         $x_1_4 = "Voiasafoaeg8hsauv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1476,6 +1541,7 @@ rule Trojan_Win32_Fragtor_OYAA_2147912538_0
         $x_1_3 = "Nsgfoisjgfosiegoisj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1505,6 +1571,7 @@ rule Trojan_Win32_Fragtor_ASGH_2147912577_0
         $x_2_9 = "Roasuehgfaui3D" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1527,6 +1594,7 @@ rule Trojan_Win32_Fragtor_NG_2147913019_0
         $x_1_2 = "_pcre_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1553,6 +1621,7 @@ rule Trojan_Win32_Fragtor_NG_2147913019_1
         $x_1_6 = "KillCmdExe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1575,6 +1644,7 @@ rule Trojan_Win32_Fragtor_NH_2147913020_0
         $x_1_2 = "_pcre_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1599,6 +1669,7 @@ rule Trojan_Win32_Fragtor_AH_2147915365_0
         $x_1_4 = "formplat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1620,6 +1691,7 @@ rule Trojan_Win32_Fragtor_AMAR_2147916536_0
         $x_1_1 = {8b 14 b0 8b 44 24 ?? 81 c2 ?? ?? ?? ?? 8b 4c b0 ?? 8b 44 24 ?? 8a 04 01 8d 4c 24 ?? 30 02 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1647,6 +1719,7 @@ rule Trojan_Win32_Fragtor_NI_2147916585_0
         $x_1_7 = "Decryption Completed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1674,6 +1747,7 @@ rule Trojan_Win32_Fragtor_NK_2147916586_0
         $x_1_7 = "Decryption Completed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1699,6 +1773,7 @@ rule Trojan_Win32_Fragtor_AMAU_2147916901_0
         $x_1_1 = {8b 14 b8 8b 44 ?? 24 03 54 24 ?? 8b 4c b8 ?? 8b 44 24 ?? 8a 04 01 8d 4c 24 ?? 30 02 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1720,6 +1795,7 @@ rule Trojan_Win32_Fragtor_MBXP_2147918466_0
         $x_1_1 = {8b ec 6a ff 68 ?? f6 4b 00 68 ?? 94 4b 00 64 a1 00 00 00 00 50 64 89 25 00 00 00 00 83 ec 58 53 56 57 89 65 e8 ff 15 ?? f2 4b 00 33 d2 8a d4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1741,6 +1817,7 @@ rule Trojan_Win32_Fragtor_MBXQ_2147918682_0
         $x_1_1 = {55 8b ec 6a ff 68 ?? 06 4c 00 68 ?? a3 4b 00 64 a1 00 00 00 00 50 64 89 25 00 00 00 00 83 ec 58 53 56 57 89 65 e8 ff 15 ?? 02 4c 00 33 d2 8a d4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1763,6 +1840,7 @@ rule Trojan_Win32_Fragtor_DA_2147919033_0
         $x_1_2 = {8a 4d 08 89 c3 8b 45 08 52 ba 01 00 00 00 d3 e2 25 ff 01 00 00 c1 f8 05 09 54 83 08 8b 5d fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1784,6 +1862,7 @@ rule Trojan_Win32_Fragtor_DB_2147921438_0
         $x_1_1 = {8b 45 f0 05 ?? ?? ?? ?? 0f b6 00 8b 55 f4 81 c2 ?? ?? ?? ?? 88 02 83 45 f4 01 8b 55 b0 8b 45 ac 01 d0 01 45 f0 8b 45 f0 3d ff 57 0a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1807,6 +1886,7 @@ rule Trojan_Win32_Fragtor_BG_2147921653_0
         $x_1_3 = "AYZSsn@Y_mK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1828,6 +1908,7 @@ rule Trojan_Win32_Fragtor_RFAK_2147926045_0
         $x_1_1 = {60 e8 00 00 00 00 5d 81 ed 10 00 00 00 81 ed 14 02 9c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1849,6 +1930,7 @@ rule Trojan_Win32_Fragtor_BSA_2147926248_0
         $x_10_1 = {8b 95 2c ff ff ff 8b c1 2b d1 81 fa 00 10 00 00 72 14 8b 49 fc 83 c2 23 2b c1 83 c0 fc 83 f8 1f 0f 87 d8 06 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1876,6 +1958,7 @@ rule Trojan_Win32_Fragtor_GA_2147927845_0
         $x_1_7 = "CryptDestroyKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1897,6 +1980,7 @@ rule Trojan_Win32_Fragtor_JT_2147927923_0
         $x_1_1 = {60 e8 00 00 00 00 5d 81 ed 10 00 00 00 81 ed c4 a2 9c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1918,6 +2002,7 @@ rule Trojan_Win32_Fragtor_BHB_2147927999_0
         $x_1_1 = {eb 08 0f 3a 2b 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1939,6 +2024,7 @@ rule Trojan_Win32_Fragtor_BKL_2147928026_0
         $x_1_1 = {eb 08 0f 44 2b 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1960,6 +2046,7 @@ rule Trojan_Win32_Fragtor_MBWH_2147928854_0
         $x_1_1 = {20 4d 24 00 60 97 24 00 05 00 b1 00 00 00 00 00 2c b3 98 7c ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 a0 0f 00 00 00 00 00 00 00 00 00 00 30 97 24 00 90 97 24 00 05 00 b1 00 00 00 00 00 2c b3 98 7c ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 a0 0f 00 00 00 00 00 00 00 00 00 00 60 97 24 00 a0 a7 24 00 01 02 b1 00 00 00 00 00 46 61 69 6c 65 64 20 74 6f 20 6f 70 65 6e 20 63 6f 6e 66 69 67 20 66 69 6c 65 3a 20 70 61 79 6c 6f 61 64 2e 69 6e 69 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1985,6 +2072,7 @@ rule Trojan_Win32_Fragtor_NO_2147929606_0
         $x_1_5 = "XpixvMajSoEhuKmchSSRy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2011,6 +2099,7 @@ rule Trojan_Win32_Fragtor_BB_2147931028_0
         $x_1_3 = "fghdftiyhsabfuDFERKF" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2032,6 +2121,7 @@ rule Trojan_Win32_Fragtor_LLV_2147931124_0
         $x_5_1 = {01 d0 0f af c3 bb cb ff ff ff 83 f0 a7 81 f6 d4 6d 01 00 a2 ?? ?? ?? ?? 69 c1 d4 6d 01 00 29 d6 81 f6 f7 16 0a e9 09 f8 0f af c3 bb cd ff ff ff 83 f0 02 a2 ?? ?? ?? ?? 89 d0 81 e2 d8 a4 fe ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2053,6 +2143,7 @@ rule Trojan_Win32_Fragtor_GKN_2147931261_0
         $x_1_1 = {89 c8 0f af c2 02 04 32 30 04 19 42 80 3c 32 00 75 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2074,6 +2165,7 @@ rule Trojan_Win32_Fragtor_AUJ_2147931425_0
         $x_1_1 = {8b 45 0c 8b 4d 08 c7 45 ec 01 00 00 00 c7 45 f0 f4 ab 48 00 89 4d f4 89 45 f8 8d 45 ec 66 c7 45 fc 01 00 50 e8 61 0e ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2095,6 +2187,7 @@ rule Trojan_Win32_Fragtor_LS_2147932196_0
         $x_1_1 = {60 e8 00 00 00 00 5d 81 ed 10 00 00 00 81 ed ec c2 39 00 e9 04 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2116,6 +2209,7 @@ rule Trojan_Win32_Fragtor_MZP_2147932751_0
         $x_5_1 = {33 c0 8b d0 0f be c8 c1 ea 05 8a da 32 d0 22 d8 0f be d2 0f af d1 02 d8 22 da 32 d8 88 5c 04 ?? 40 3d 00 71 02 00 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2139,6 +2233,7 @@ rule Trojan_Win32_Fragtor_BU_2147932882_0
         $x_1_3 = {52 65 71 75 65 73 74 2e 64 6c 6c 00 63 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2160,6 +2255,7 @@ rule Trojan_Win32_Fragtor_JZP_2147932964_0
         $x_5_1 = {32 c2 88 45 f3 8d 45 fc e8 f9 af f6 ff 8b 55 fc 8a 54 1a ff 80 e2 f0 8a 4d f3 02 d1 88 54 18 ff 46 8b 45 ?? e8 85 ad f6 ff 3b f0 7e}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2182,6 +2278,7 @@ rule Trojan_Win32_Fragtor_NR_2147933074_0
         $x_2_2 = {eb 05 8a d9 88 5d e7 ff 75 dc e8 a5 05 00 00 59 e8 30 07 00 00 8b f0 33 ff 39 3e 74 1b 56 e8 fd 04 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2205,6 +2302,7 @@ rule Trojan_Win32_Fragtor_NFE_2147933279_0
         $x_1_3 = "SIDF.json" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2226,6 +2324,7 @@ rule Trojan_Win32_Fragtor_AAB_2147933404_0
         $x_1_1 = {01 c8 8a 00 88 c1 8b 45 ?? 88 c3 8b 45 ?? 01 d8 0f b6 c0 8d 1c 85 00 00 00 00 8b 45 ?? 01 d8 8b 00 31 c8 88 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2247,6 +2346,7 @@ rule Trojan_Win32_Fragtor_GNQ_2147933523_0
         $x_10_1 = {0f b6 84 11 ?? ?? ?? ?? 33 f6 8b 55 ?? c1 e0 ?? 89 45 ?? 8b d8 0f b6 04 37 6a 04 8a 84 18 ?? ?? ?? ?? 30 04 32 46 58 3b f0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2269,6 +2369,7 @@ rule Trojan_Win32_Fragtor_AAC_2147933719_0
         $x_1_2 = {4b 65 72 6e c7 45 ?? 65 6c 33 32 c7 45 ?? 2e 64 6c 6c 88 5d ?? c7 45 ?? 41 64 76 61 c7 45 ?? 70 69 33 32 c7 45 ?? 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2290,6 +2391,7 @@ rule Trojan_Win32_Fragtor_EN_2147934825_0
         $x_6_1 = {55 8b ec 8b 45 08 85 c0 78 0a 83 f8 1a 7d 0a 83 c0 41 5d c3}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2311,6 +2413,7 @@ rule Trojan_Win32_Fragtor_GVA_2147934994_0
         $x_1_1 = {8a 02 8d 52 01 c0 c8 04 8d 49 01 34 a5 46 88 41 ff 8b 45 44 03 c0 3b f0 72 e6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2333,6 +2436,7 @@ rule Trojan_Win32_Fragtor_GTK_2147935062_0
         $x_5_2 = {0f 91 c7 31 2c 24 5b 45 3b ea 48}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2357,6 +2461,7 @@ rule Trojan_Win32_Fragtor_CCJU_2147935181_0
         $x_1_4 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2379,6 +2484,7 @@ rule Trojan_Win32_Fragtor_C_2147936278_0
         $x_1_2 = "Coran2.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2401,6 +2507,7 @@ rule Trojan_Win32_Fragtor_NMB_2147936500_0
         $x_2_2 = {83 c4 18 84 c0 0f 94 c0 20 05 ?? ?? ?? ?? 8b 85 64 f5 ff ff 83 f8 08 72 13 40}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2422,6 +2529,7 @@ rule Trojan_Win32_Fragtor_PGF_2147939226_0
         $x_5_1 = {8b c8 c1 e9 1e 33 c8 69 c1 ?? ?? ?? ?? 03 c2 89 84 94 2c 01 00 00 42 81 fa 70 02 00 00 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2443,6 +2551,7 @@ rule Trojan_Win32_Fragtor_PGF_2147939226_1
         $x_5_1 = {66 0f a3 c8 0f bd c9 8a 06 66 f7 d1 30 d8 88 cd 60 fe c0 88 1c 24 0f 9b c1 d0 c8 8d 8b ?? ?? ?? ?? e9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2464,6 +2573,7 @@ rule Trojan_Win32_Fragtor_AM_2147942012_0
         $x_1_1 = {6a 00 6a 00 6a 00 6a 01 68 58 2a 47 00 ff 15 64 c1 45 00 8b d8 89 5d dc 85 db 0f 84 89 01 00 00 6a 00 68 00 01 00 80 6a 00 6a 00 68 80 2e 47 00 53 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2485,6 +2595,7 @@ rule Trojan_Win32_Fragtor_BAA_2147942112_0
         $x_2_1 = {2b d0 31 13 83 45 ec 04 83 c3 04 8b 45 ec 3b 45 dc 72 92}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2507,6 +2618,7 @@ rule Trojan_Win32_Fragtor_BF_2147942905_0
         $x_2_2 = {0f b6 4c 24 0b 32 4c 13 ff 88 4c 24 0b 8b 4c 24 0c 01 d1 89 4c 24 0c 89 f1 80 f9 4d 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2528,6 +2640,7 @@ rule Trojan_Win32_Fragtor_ZIN_2147943679_0
         $x_5_1 = {0f b7 c9 33 ca 89 1d ?? ?? ?? ?? 89 4c 24 54 8b 4c 24 28 d3 e7 89 7c 24 38 8b 7c 24 60 8b 94 24 98 00 00 00 8b 44 24 40 05 69 21 00 00 89 84 24 a8 00 00 00 8b 44 24 5c 0f af 44 24 20 89 44 24 5c 66 a3 ?? ?? ?? ?? 8b 84 24 84 00 00 00 0f b7 c0 39 44 24 38 7d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2552,6 +2665,7 @@ rule Trojan_Win32_Fragtor_ARAX_2147943931_0
         $x_2_4 = "VerQueryValueW" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2575,6 +2689,7 @@ rule Trojan_Win32_Fragtor_MR_2147944554_0
         $x_25_3 = {1f 93 ee 29 42 8a 27 67 13 bb ed 45 28 ad c0 14 83 c0}  //weight: 25, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2596,6 +2711,7 @@ rule Trojan_Win32_Fragtor_SPB_2147944908_0
         $x_3_1 = {88 1c 08 89 4a 04 33 c0 40 8b 95 ?? ?? ff ff 03 f8 e9}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2617,6 +2733,7 @@ rule Trojan_Win32_Fragtor_AO_2147945016_0
         $x_1_1 = {53 56 57 56 81 e6 b8 37 00 00 81 ce fe 4b 00 00 81 e6 1d 61 01 00 81 ee 00 21 00 00 5e 50 50 83 c4 04 81 e8 4b 46 00 00 81 f0 4e 0e 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2639,6 +2756,7 @@ rule Trojan_Win32_Fragtor_LM_2147945893_0
         $x_10_2 = {83 fa 67 75 ?? 8d 4c 00 01 8b d0 d3 e2 8d 48 01 85 c9 7e ?? 8d 49 00 0f af d0 03 d2 03 d2 03 d2 49 75 f4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2660,6 +2778,7 @@ rule Trojan_Win32_Fragtor_AG_2147945970_0
         $x_1_1 = {8b 0c 27 23 c0 33 cb 66 25 10 91 8b d0 41 42 0f 8c 01 99 eb ff 48 c7 44 24 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2681,6 +2800,7 @@ rule Trojan_Win32_Fragtor_AI_2147945977_0
         $x_1_1 = {c7 45 fc 04 00 00 00 8d 4d c8 c7 45 e0 00 00 00 00 2b ce c7 45 e4 00 00 00 00 b8 ?? ?? ?? ?? c7 45 e8 00 00 00 00 f7 e9 c1 fa 02 8b c2 c1 e8 1f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2704,6 +2824,7 @@ rule Trojan_Win32_Fragtor_KK_2147946088_0
         $x_5_3 = "Fe3048124832f0cef883941e6035e2bbbc237.exeFe" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

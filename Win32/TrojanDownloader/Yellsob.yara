@@ -15,6 +15,7 @@ rule TrojanDownloader_Win32_Yellsob_A_2147608589_0
         $x_1_1 = {76 2e 53 8b 5c 24 18 57 8a 44 14 10 8a 0c 1e 32 c8 8d 7c 24 10 88 0c 1e 83 c9 ff 33 c0 f2 ae f7 d1 8d 42 01 49 33 d2 f7 f1 46 3b f5 72 da}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_Yellsob_A_2147608589_1
         $x_1_4 = {4d 61 79 61 42 61 62 79 44 6c 6c 2e 64 6c 6c 00 43 6c 65 61 72 41 56 00 44 6f 57 6f 72 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

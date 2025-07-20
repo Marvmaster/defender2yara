@@ -16,6 +16,7 @@ rule Trojan_Win32_Skraer_A_2147682918_0
         $x_1_2 = {8b 75 08 57 8d 86 ?? ?? 00 00 50 8b 46 04 c7 45 ?? 00 00 00 00 ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

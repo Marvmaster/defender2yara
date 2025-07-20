@@ -18,6 +18,7 @@ rule Ransom_Win64_Cicada_DB_2147924190_0
         $x_1_4 = {77 69 6e 5f 65 6e 63 [0-2] 67 65 74 5f 76 61 6c 69 64 5f 64 72 69 76 65 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

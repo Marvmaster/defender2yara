@@ -17,6 +17,7 @@ rule Trojan_Win32_Stelega_AA_2147764351_0
         $x_1_2 = {8b 55 d0 83 c2 01 89 55 d0 81 7d d0 05 1a 00 00 0f 83 ?? ?? ?? ?? 8b 45 d0 8a 88 00 f0 40 00 88 4d df}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Stelega_MK_2147772471_0
         $x_1_1 = {b2 68 32 c8 2a d1 2a d0 c0 ca 02 32 d0 fe ca 02 d0 f6 d2 32 d0 d0 ca f6 da 32 d0 02 d0 d0 c2 80 f2 2c f6 d2 88 94 [0-5] 40 3d [0-2] 00 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Stelega_DE_2147779245_0
         $x_1_3 = "Ftbi}oMeakBqabzzrA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Stelega_RW_2147782387_0
         $x_1_1 = {ff 09 ff e8 ?? ?? ?? ?? 81 c7 ?? ?? ?? ?? 29 f8 31 0b 01 f8 09 c7 43 81 c0 12 6c ea ad}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Trojan_Win32_Stelega_RW_2147782387_1
         $x_1_5 = {89 ca 01 d2 81 c2 01 00 00 00 31 3b 81 ea 01 00 00 00 81 e9 56 51 f4 b4 01 f6 43 21 f2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_Win32_Stelega_RW_2147782387_2
         $x_1_4 = {29 fe 81 c7 1b 61 0d ee 01 f7 31 11 f7 d6 81 c1 02 00 00 00 29 ff 39 c1 7c ?? 29 ff 4e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -161,6 +167,7 @@ rule Trojan_Win32_Stelega_RW_2147782387_3
         $x_1_10 = {81 c7 8f b0 92 b7 89 cf 21 f9 e8 ?? ?? ?? ?? 81 c1 4c cd 46 cf 31 06 81 e9 8e c3 40 98 46 81 c7 01 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule Trojan_Win32_Stelega_RM_2147782681_0
         $x_1_4 = {83 c4 04 e8 ?? ?? ?? ?? 01 c9 09 c9 21 c9 31 16 bb 3f df eb 74 01 cb 4b 46 81}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -211,6 +219,7 @@ rule Trojan_Win32_Stelega_RM_2147782681_1
         $x_1_6 = "Cookies" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -238,6 +247,7 @@ rule Trojan_Win32_Stelega_RTH_2147783733_0
         $x_1_7 = {ba c2 d6 f7 9b e8 ?? ?? ?? ?? 21 c2 21 c0 48 31 19 81 c0 e7 16 00 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -260,6 +270,7 @@ rule Trojan_Win32_Stelega_RF_2147786743_0
         $x_1_2 = {81 c1 62 fe 43 51 81 e9 01 00 00 00 31 1f be 63 a3 dc 61 81 e9 30 31 01 56 f7 d1 47 89 c1 f7 d1 89 f1 81 c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -285,6 +296,7 @@ rule Trojan_Win32_Stelega_RF_2147786743_1
         $x_1_5 = "SHGetFolderPathA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -306,6 +318,7 @@ rule Trojan_Win32_Stelega_RT_2147788009_0
         $x_2_1 = {03 c2 83 e0 03 0f b6 80 ?? ?? ?? ?? 30 82 ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 8d 80 ?? ?? ?? ?? 03 c2 83 e0 03 0f b6 80 ?? ?? ?? ?? 30 82 ?? ?? ?? ?? 83 c2 06 81 fa a0 bb 0d 00 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -329,6 +342,7 @@ rule Trojan_Win32_Stelega_RT_2147788009_1
         $x_1_3 = "lEh9jEe@r@qDeFl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +365,7 @@ rule Trojan_Win32_Stelega_RT_2147788009_2
         $x_1_2 = {81 c1 8a 10 00 00 8b 55 ?? 8b 02 2b c1 8b 4d ?? 89 01 8b 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8d 4c 10 ?? 89 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? a3 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 83 c1 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -380,6 +395,7 @@ rule Trojan_Win32_Stelega_RMA_2147809867_0
         $x_10_9 = "mQ84aZIJtkk7D8uxuJE2yRd1bdnGeoNfOjB3" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -405,6 +421,7 @@ rule Trojan_Win32_Stelega_DP_2147819991_0
         $x_1_1 = {8b 44 24 08 8b 94 24 ?? ?? ?? ?? 8b 4c 24 0c 2b d0 03 ca 89 8c 24 ?? ?? ?? ?? 8b 4c 24 10 8b c2 d3 e8 89 94 24 ?? ?? ?? ?? 89 44 24 08 8b 84 24 ?? ?? ?? ?? 01 44 24 08 8b c2 c1 e0 04 03 84 24 ?? ?? ?? ?? 33 84 24 ?? ?? ?? ?? 81 3d ?? ?? ?? ?? 21 01 00 00 89 84 24 ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -426,6 +443,7 @@ rule Trojan_Win32_Stelega_RB_2147844002_0
         $x_1_1 = {88 4d ff 0f b6 55 ff 33 55 f8 88 55 ff 0f b6 45 ff 2b 45 f8 88 45 ff 0f b6 4d ff f7 d9 88 4d ff 0f b6 55 ff 33 55 f8 88 55 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -451,6 +469,7 @@ rule Trojan_Win32_Stelega_RI_2147849277_0
         $x_1_5 = "Moonchild Productions\\Pale Moon" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -472,6 +491,7 @@ rule Trojan_Win32_Stelega_EAXC_2147934437_0
         $x_5_1 = {b1 96 f6 d2 2a d0 c0 c2 03 02 d0 f6 da 80 f2 2b 80 ea 58 f6 d2 32 d0 c0 c2 02 02 d0 32 d0 2a ca 32 c8 88 88 ?? ?? ?? ?? 40 3d 05 50 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -493,6 +513,7 @@ rule Trojan_Win32_Stelega_EANX_2147938593_0
         $x_5_1 = {b1 09 f6 d0 32 c2 2a c8 80 f1 c6 2a ca d0 c9 80 f1 8e f6 d9 80 f1 a8 88 8a ?? ?? ?? ?? 42 81 fa 05 50 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

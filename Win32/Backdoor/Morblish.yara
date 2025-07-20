@@ -22,6 +22,7 @@ rule Backdoor_Win32_Morblish_A_2147706344_0
         $x_1_8 = {8b 45 fc 6a 05 40 59 99 f7 f9 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

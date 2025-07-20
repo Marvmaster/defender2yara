@@ -18,6 +18,7 @@ rule Trojan_Win32_TerraLoader_LK_2147848792_0
         $x_1_3 = {81 fb 4d 5a 00 00 74 0a 31 c0 0f be c0 e9 b3 03 00 00 8b 5c 24 08 8b 2c 24 03 5d 3c 89 5c 24 04 8b 6c 24 04 0f bf 5d 04 81 fb 4c 01 00 00 74 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

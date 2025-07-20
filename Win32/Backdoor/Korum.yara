@@ -19,6 +19,7 @@ rule Backdoor_Win32_Korum_A_2147652335_0
         $x_1_5 = "69y278yh4-dfg,l243j8904jhkl;,i" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Backdoor_Win32_Korum_A_2147652335_1
         $x_1_13 = "/SRV1/GTT/slave.cgi/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

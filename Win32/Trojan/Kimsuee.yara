@@ -17,6 +17,7 @@ rule Trojan_Win32_Kimsuee_A_2147735788_0
         $x_1_3 = "http://yuseung.elimbiz.com/sub/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

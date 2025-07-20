@@ -17,6 +17,7 @@ rule Trojan_Win32_KentGo_18139_0
         $x_2_3 = "Listener reads Remote Routing Information Protocol (RIP) packets" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_KentGo_18139_1
         $x_3_4 = "WS\\inf\\optkec.inf" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_2_*))) or
             (all of ($x*))
@@ -73,6 +75,7 @@ rule Trojan_Win32_KentGo_18139_2
         $x_3_11 = "http://dw.mtsou.com/" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 8 of ($x_1_*))) or
             ((3 of ($x_3_*) and 5 of ($x_1_*))) or

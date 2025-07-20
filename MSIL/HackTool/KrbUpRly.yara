@@ -20,6 +20,7 @@ rule HackTool_MSIL_KrbUpRly_A_2147817621_0
         $x_1_5 = "[+] Run the spawn method for SYSTEM shell:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule HackTool_MSIL_KrbUpRly_D_2147818005_0
         $x_1_3 = "[+] Impersonating user '{0}' to target SPN '{1}'" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule HackTool_MSIL_KrbUpRly_C_2147818217_0
         $x_3_8 = "krbrelayup" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or

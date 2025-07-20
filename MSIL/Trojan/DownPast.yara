@@ -20,6 +20,7 @@ rule Trojan_MSIL_DownPast_J_2147743632_0
         $x_1_5 = "LateCall" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

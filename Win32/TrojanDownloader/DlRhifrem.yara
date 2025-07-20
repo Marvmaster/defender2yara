@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_DlRhifrem_A_2147601497_0
         $x_1_3 = {c7 44 24 14 00 00 00 00 c7 44 24 10 00 00 00 00 c7 44 24 0c 00 00 00 00 c7 44 24 ?? ?? ?? 0c 61 c7 44 24 04 00 00 00 00 c7 04 24 00 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule TrojanDownloader_Win32_DlRhifrem_B_2147609264_0
         $x_1_5 = {41 64 6f 62 65 20 41 63 72 6f 62 61 74 20 52 65 61 64 65 72 28 74 6d 29 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

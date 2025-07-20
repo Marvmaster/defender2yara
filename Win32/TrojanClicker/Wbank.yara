@@ -23,6 +23,7 @@ rule TrojanClicker_Win32_Wbank_A_2147596371_0
         $x_1_9 = "go.netpia.com/nlia.asp?com=netpia_plugin&keyword=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

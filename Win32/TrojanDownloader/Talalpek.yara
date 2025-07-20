@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Talalpek_A_2147712209_0
         $x_1_8 = "\\5ed49bcf-286c-44b2-96af-6b8b567d3035" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -49,6 +50,7 @@ rule TrojanDownloader_Win32_Talalpek_B_2147716651_0
         $x_2_3 = {8b 55 f8 8b 02 33 85 ?? ?? ?? ff 8b 4d f8 89 01 8b e5 5d c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

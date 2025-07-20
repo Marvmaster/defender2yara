@@ -16,6 +16,7 @@ rule Trojan_Win64_Teeplex_A_2147705662_0
         $x_1_2 = {41 8b c1 41 ff c1 41 f7 f2 42 0f b6 04 1a 41 2a 40 ff 41 88 40 ff 44 3b ?? 72 df}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

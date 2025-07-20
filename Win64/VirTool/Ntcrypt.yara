@@ -17,6 +17,7 @@ rule VirTool_Win64_Ntcrypt_A_2147929497_0
         $x_1_3 = {83 ec 60 41 83 ca ff 45 33 c0 48 8b f1 44 38 02 74 19 41 83 f8 40 73 13 41 8a 04 10 42 88 44 04 20 41 ff c0 41 80 3c 10 00 75 e7 41 8d 40 fc 42 c6 44 04 20 00 80 7c 04 20 2e 74 2a 42 c6 44 04 20 2e 41 ff c0 42 c6 44 04 20 64 41 ff c0 42 c6 44 04 20 6c 41 ff c0 41 8d 40 01 42 c6 44 04 20 6c c6 44 04 20 00 65 48 8b 04 25 30 00 00 00 48 8b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

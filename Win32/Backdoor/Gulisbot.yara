@@ -19,6 +19,7 @@ rule Backdoor_Win32_Gulisbot_A_2147615394_0
         $x_10_4 = "aspergillus" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_2_*))) or
             (all of ($x*))

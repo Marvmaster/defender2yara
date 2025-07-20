@@ -18,6 +18,7 @@ rule Backdoor_Win32_Godo_A_2147669150_0
         $x_1_4 = {c7 06 0d 00 00 00 e8 4a 73 ff ff 83 7c 24 10 06 0f 85 d8 00 00 00 83 7c 24 14 02 75 2a 38 9c 24 a6 00 00 00 0f 85 2b 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_Godo_B_2147669168_0
         $x_1_3 = {68 ff 00 00 00 56 57 ff 15 ?? ?? ?? ?? 85 c0 74 06 39 5c 24 ?? 75 0b ff 15 ?? ?? ?? ?? 83 f8 6d 74 6e 8b 4c 24 0c 88 1c 31 3b f3 75 12 8b 54 24 1c 56 83 c2 14 33 c0 52 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

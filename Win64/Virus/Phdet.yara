@@ -16,6 +16,7 @@ rule Virus_Win64_Phdet_A_2147684803_0
         $x_1_2 = "9DD6AFA1-8646-4720-836B-EDCB10858701" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

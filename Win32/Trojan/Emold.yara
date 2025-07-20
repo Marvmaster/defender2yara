@@ -27,6 +27,7 @@ rule Trojan_Win32_Emold_A_2147609402_0
         $x_3_12 = {28 07 30 07 47 e2 f9 eb 0a 00 bf ?? ?? ?? ?? b9 ?? ?? 00 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -61,6 +62,7 @@ rule Trojan_Win32_Emold_B_2147610568_0
         $x_2_4 = {ab a1 ab a6 95 8d 9e 9b 85 8c 8c 75 70 86 9b 6f 70 86 8c 6f 6e ab 75 86 9e ab 75 8c 88 71 7b 75 8b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +87,7 @@ rule Trojan_Win32_Emold_C_2147610709_0
         $x_2_4 = {6a 00 6a 00 ff 15 ?? ?? 40 00 31 c0 5f 5e 5b c9 c2 10 00 ff 15 ?? ?? 40 00 89 c3 b8 ?? ?? 00 00 28 d8 b9 ?? ?? 40 00 29 d9 ff e1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

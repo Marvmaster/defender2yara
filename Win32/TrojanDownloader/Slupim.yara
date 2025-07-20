@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Slupim_A_2147602126_0
         $x_1_7 = {68 74 74 70 3a 2f 2f 25 73 2f 62 74 2e 70 68 70 3f 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_4_*))) or

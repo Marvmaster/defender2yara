@@ -28,6 +28,7 @@ rule VirTool_Win64_Nimbez_A_2147844993_0
         $x_1_13 = "@download" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

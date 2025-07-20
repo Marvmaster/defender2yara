@@ -20,6 +20,7 @@ rule Trojan_Win32_Mupad_A_2147705980_0
         $x_1_6 = {5c 00 64 00 65 00 76 00 69 00 63 00 65 00 5c 00 6d 00 75 00 70 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -47,6 +48,7 @@ rule Trojan_Win32_Mupad_B_2147721187_0
         $x_1_4 = "/index.htm;crypt=2570;g.purecontinue.ru" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -73,6 +75,7 @@ rule Trojan_Win32_Mupad_D_2147721194_0
         $x_1_3 = {6a 00 ff 15 ?? ?? 40 00 85 c0 75 10 c7 45 c8 ff ff ff ff b9 40 00 00 00 51 ff 75 c4 ba 00 13 00 00 52 6a 00 b8 00 00 00 00 40 83 7d b8 42}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Trojan_Win32_Mupad_D_2147721194_1
         $x_2_5 = {70 72 6f 74 6f 63 6f 6c 3d 76 35 [0-8] 26 65 68 3d [0-8] 26 76 3d [0-8] 6d 69 64 3d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule Trojan_Win32_Mupad_D_2147721194_2
         $x_1_4 = {6a 0a ff 15 ?? ?? 40 00 6a 00 ff 15 ?? ?? 40 00 85 c0 75 ?? a1 ?? ?? 40 00 89 45 b8 8b 4d b8 ff d1 a3 ?? ?? 4c 00 c7 45 b4 0c 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule Trojan_Win32_Mupad_E_2147721668_0
         $x_2_5 = {70 72 6f 74 6f 63 6f 6c 3d 76 35 [0-8] 26 65 68 3d [0-8] 26 76 3d [0-8] 6d 69 64 3d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -167,6 +173,7 @@ rule Trojan_Win32_Mupad_E_2147721668_1
         $x_1_4 = {6a 0a ff 15 ?? ?? 40 00 6a 00 ff 15 ?? ?? 40 00 85 c0 75 1c 8b [0-4] 40 00 89 ?? b8 8b ?? b8 ff d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -189,6 +196,7 @@ rule Trojan_Win32_Mupad_F_2147721679_0
         $x_1_3 = {52 59 ff 55 f0 a3 ?? ?? 4b 00 eb 0e 6a 00 6a 00 6a 00 6a 00 ff 15 ?? ?? 41 00 6a 00 ff 15 ?? ?? 41 00 c7 45 08 0a 00 00 00 6a 00 6a 00 6a 00 ff 15 ?? ?? 41 00 6a 00 6a 00 ff 15 ?? ?? 41 00 6a 0a 6a 00 6a 00 6a 00 ff 15 ?? ?? 41 00 b8 17 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +219,7 @@ rule Trojan_Win32_Mupad_G_2147722588_0
         $x_4_3 = {85 c0 75 09 b9 40 00 00 00 51 ff 75 c8 b9 70 13 00 00 51 b9 00 00 00 00 51 83 7d bc 42 74 ?? 6a 04 68 00 10 00 00 68 00 10 00 00 6a 00 ff 15}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             (all of ($x*))

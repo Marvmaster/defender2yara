@@ -18,6 +18,7 @@ rule VirTool_Win32_Kofeloadz_A_2147828025_0
         $x_1_3 = {83 f8 02 48 8b 4c 24 20 48 8b 54 24 38 41 b8 04 00 00 00 b8 40 00 00 00 44 0f 45 c0 48 03 ?? ?? ?? ?? ?? 48 89 4b 08 49 89 d9 48 89 53 10 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

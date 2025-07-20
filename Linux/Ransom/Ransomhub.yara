@@ -17,6 +17,7 @@ rule Ransom_Linux_Ransomhub_A_2147910974_0
         $x_1_3 = "missing value for -pass" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Linux_Ransomhub_D_2147922788_0
         $x_1_4 = {57 68 69 74 65 46 6f 6c 64 65 72 73 14 6a 73 6f 6e 3a 22 77 68 69 74 65 5f 66 6f 6c 64 65 72 73 22}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

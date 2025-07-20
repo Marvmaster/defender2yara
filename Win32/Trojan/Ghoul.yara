@@ -16,6 +16,7 @@ rule Trojan_Win32_Ghoul_AQ_2147830405_0
         $x_5_1 = {c7 05 9c f9 12 02 58 5d 06 02 c7 05 a0 f9 12 02 5c 5d 06 02 c7 05 a4 f9 12 02 60 5d 06 02 c7 05 ac f9 12 02 64 5d 06 02 c7 05 a8 f9 12 02 68 5d 06 02 c7 05 b4 f9 12 02 64 5d 06 02}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

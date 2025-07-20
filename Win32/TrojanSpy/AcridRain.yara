@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_AcridRain_A_2147730458_0
         $x_1_3 = {8b c1 33 d2 6a 0a 59 f7 f1 4f 8b c8 80 c2 30 88 17 85 c9 75 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

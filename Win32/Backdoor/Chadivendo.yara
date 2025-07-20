@@ -17,6 +17,7 @@ rule Backdoor_Win32_Chadivendo_STF_2147779251_0
         $x_1_3 = {68 74 74 70 3a 2f 2f 25 73 [0-32] 25 30 38 78 2e 74 78 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

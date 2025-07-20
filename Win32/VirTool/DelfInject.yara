@@ -23,6 +23,7 @@ rule VirTool_Win32_DelfInject_D_2147597437_0
         $n_100_8 = "/s \"C:\\SMGCatcher.dll\"" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -54,6 +55,7 @@ rule VirTool_Win32_DelfInject_M_2147597439_0
         $x_2_4 = {25 ff 00 00 80 79 07 48 0d 00 ff ff ff 40 8a 84 85 ?? ?? ff ff 8b 55 ?? 30 04 3a 47 ff 4d ?? 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -89,6 +91,7 @@ rule VirTool_Win32_DelfInject_I_2147597440_0
         $x_1_11 = {8b 45 fc 8a 44 38 ff 88 45 fb 8d 45 f4 8a 55 fb 80 ea 10 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +117,7 @@ rule VirTool_Win32_DelfInject_N_2147597443_0
         $x_1_5 = {8b 45 fc 8a 44 18 ff 24 0f 8b 55 ?? 8a 54 32 ff 80 e2 0f 32 c2 88 45 ?? 8d 45 ?? e8 ?? ?? ?? ?? 8b 55 ?? 8a 54 1a ff 80 e2 f0 8a 4d ?? 02 d1 88 54 18 ff 46}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -149,6 +153,7 @@ rule VirTool_Win32_DelfInject_O_2147597444_0
         $x_1_12 = {89 c3 83 fb ff 0f 84 ?? ?? 00 00 6a 00 53 e8 ?? ?? ?? ?? 89 c6 81 ee 00 5e 00 00 6a 00 6a 00 68 00 5e 00 00 53 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (11 of ($x*))
 }
 
@@ -174,6 +179,7 @@ rule VirTool_Win32_DelfInject_Q_2147597445_0
         $x_1_5 = {6a 40 68 00 30 00 00 8b 45 ?? 50 8b 45 ?? 8b 40 34 50 8b (85 ?? ??|45 ??) 50 (ff|e8)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -199,6 +205,7 @@ rule VirTool_Win32_DelfInject_U_2147597622_0
         $x_1_5 = {44 38 ff 88 45 fb 8d 45 f4 8a 55 fb 80 ea ?? e8 ?? ?? ?? ?? 8b 55 f4 8b c6 e8 ?? ?? ?? ?? 47 4b 75 da 04 00 8b 45 fc (8a|8b)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -222,6 +229,7 @@ rule VirTool_Win32_DelfInject_2147597831_0
         $x_1_1 = {68 06 40 00 00 68 99 99 99 c5 68 9a 99 99 99 68 16 89 53 40 68 0c 02 2b 87 68 5c c7 6b 40 68 8f c2 f5 28 68 a9 c9 57 40 68 8b 6c e7 fb 68 3d ea 6c 40 68 0a d7 a3 70 68 c0 0a 5c 40 68 98 6e 12 83 33 d2 33 c0 e8 1e 02 00 00 e9 72 ff ff ff e9 d4 fd ff ff f8 fc 42 66 c1 c7 b0 0b db f5 e9 c5 fd ff ff 33 c0 5a 59 59 64 89 10 68 d1 29 40 00 8d 45 f4 ba 03 00 00 00 e8 33 eb ff ff c3 e9 d9 e8 ff ff eb eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -246,6 +254,7 @@ rule VirTool_Win32_DelfInject_V_2147598208_0
         $x_1_4 = {8b 45 fc 33 db 8a 5c 38 ff 33 5d f8 8d 45 ec 8b d3 e8 ?? ?? ?? ?? 8b 55 ec 8d 45 f0 e8 ?? ?? ?? ?? 47 4e 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -272,6 +281,7 @@ rule VirTool_Win32_DelfInject_W_2147598209_0
         $x_1_2 = {8d 45 fc e8 ?? ?? ?? ?? 8b 55 fc 0f b6 54 32 ff (33|32) d3 88 54 30 ff 43 46 4f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -300,6 +310,7 @@ rule VirTool_Win32_DelfInject_K_2147598460_0
         $x_1_8 = {6a 40 68 00 30 00 00 8b 45 ?? 50 8b 45 ?? 8b 40 34 50 8b (85 ?? ??|45 ??) 50 (ff|e8)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -333,6 +344,7 @@ rule VirTool_Win32_DelfInject_L_2147598461_0
         $n_1_9 = "Please visit www.vaysoft.com to get more detail" ascii //weight: -1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -380,6 +392,7 @@ rule VirTool_Win32_DelfInject_X_2147598557_0
         $x_5_23 = {6a 28 8b 45 ?? 33 d2 52 50 8b ?? c1 e0 03 8d 04 80 99 03 04 24 13 54 24 04 83 c4 08 8b 55 ?? 8d 04 02 50}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((13 of ($x_1_*))) or
@@ -419,6 +432,7 @@ rule VirTool_Win32_DelfInject_S_2147598597_0
         $x_10_9 = {8d 44 30 ff 50 8b 45 fc 8a 44 30 ff 25 ff 00 00 00 33 d2 52 50 8b c3 99 03 45 e0 13 55 e4 33 04 24 33 54 24 04 83 c4 08 5a 88 02 43 46 4f 75}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -450,6 +464,7 @@ rule VirTool_Win32_DelfInject_Z_2147599229_0
         $x_5_5 = {8a 04 1f 24 0f 8b 55 ?? 8a 14 32 80 e2 0f 32 c2 8a 14 1f 80 e2 f0 02 d0 88 14 1f 46 8d 45 ?? 8b 55 ?? e8 ?? ?? ?? ?? 8b 45 ?? e8 ?? ?? ?? ?? 3b f0 7e 05 be 01 00 00 00 43 ff 4d ?? 75 c2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_3_*))) or
@@ -485,6 +500,7 @@ rule VirTool_Win32_DelfInject_AA_2147599272_0
         $x_5_11 = {8b 45 f8 8b 55 f0 8a 04 10 33 d2 8a 55 ef 8b 4d fc 32 04 11 8b 55 f4 8b 4d f0 88 04 0a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -512,6 +528,7 @@ rule VirTool_Win32_DelfInject_AB_2147599273_0
         $x_1_1 = {80 34 1f 32 8b c6 34 01 32 04 1f 34 00 34 01 34 32 88 04 1f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -568,6 +585,7 @@ rule VirTool_Win32_DelfInject_AC_2147599318_0
         $x_100_36 = {6a 40 68 00 30 00 00 8b 45 ?? 50 8b 43 34 50 8b 45 ?? 50 ff}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*))) or
@@ -603,6 +621,7 @@ rule VirTool_Win32_DelfInject_AE_2147599539_0
         $x_5_11 = {44 38 ff 88 45 fb 8d 45 f4 8a 55 fb 80 ea ?? e8 ?? ?? ?? ?? 8b 55 f4 8b c6 e8 ?? ?? ?? ?? 47 4b 75 da 04 00 8b 45 fc (8a|8b)}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 5 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -656,6 +675,7 @@ rule VirTool_Win32_DelfInject_AF_2147600449_0
         $n_15_27 = "Softplan\\Componentes\\MRU" ascii //weight: -15
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((3 of ($x_3_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -703,6 +723,7 @@ rule VirTool_Win32_DelfInject_AG_2147600586_0
         $x_1_3 = {8b 45 fc 8a 44 18 ff 24 0f 8b 55 ?? 8a 54 32 ff 80 e2 0f 32 c2 88 45 ?? 8d 45 ?? e8 ?? ?? ?? ?? 8b 55 ?? 8a 54 1a ff 80 e2 f0 8a 4d ?? 02 d1 88 54 18 ff 46}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -737,6 +758,7 @@ rule VirTool_Win32_DelfInject_H_2147601129_0
         $x_1_14 = "RtlDecompressBuffer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -770,6 +792,7 @@ rule VirTool_Win32_DelfInject_AH_2147602775_0
         $n_100_13 = "\\wPDF\\Source\\WPGenDC.pas" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -807,6 +830,7 @@ rule VirTool_Win32_DelfInject_AI_2147605392_0
         $x_1_12 = "DATA1" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -829,6 +853,7 @@ rule VirTool_Win32_DelfInject_AJ_2147605421_0
         $x_1_2 = {8b 45 fc e8 ?? ?? ?? ?? 50 8b c3 5a 8b ca 99 f7 f9 8b 45 fc 8a 04 10 88 06 43 46 81 fb 00 01 00 00 75 dd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -856,6 +881,7 @@ rule VirTool_Win32_DelfInject_AJ_2147605854_0
         $x_1_8 = {8b 37 03 75 f8 68 ?? ?? 00 10 56 e8 ?? ?? ff ff 85 c0 75 1b 8b 45 e8 8b 40 1c 8b 55 e0 0f b7 12 c1 e2 02 03 c2 03 45 f8 8b 00 89 45 d0 eb 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -877,6 +903,7 @@ rule VirTool_Win32_DelfInject_AK_2147606198_0
         $x_1_2 = {6a 40 68 00 30 00 00 8b 45 ?? 50 8b 43 34 50 8b 45 ?? 50 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -901,6 +928,7 @@ rule VirTool_Win32_DelfInject_AL_2147607575_0
         $x_1_4 = {81 e2 ff 00 00 00 81 fa e9 00 00 00 75 08 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))
@@ -925,6 +953,7 @@ rule VirTool_Win32_DelfInject_AK_2147607931_0
         $x_1_1 = {ba 2e 97 58 4f e8 ?? ?? ?? ff a3 ?? ?? ?? ?? 8d 45 e8 50 6a 04 8d 45 e4 50 8b 45 b8 83 c0 08 50 8b 45 f8 50 ff 15 ?? ?? ?? ?? 8b 45 e4 89 43 34 8d 45 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -947,6 +976,7 @@ rule VirTool_Win32_DelfInject_AM_2147608687_0
         $x_1_2 = {83 f8 02 74 05 83 f8 01 75 04 8a 0a 02 d9 40 42 3d ?? ?? 00 00 75 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -969,6 +999,7 @@ rule VirTool_Win32_DelfInject_AN_2147608880_0
         $x_1_2 = {89 14 24 8b e8 33 db 68 ?? ?? ?? ?? e8 ?? ?? ?? ff 8b f8 85 ff 74 23 68 ?? ?? ?? ?? 57 e8 ?? ?? ?? ff 8b f0 85 f6 74 0c 8b 04 24 50 55 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -996,6 +1027,7 @@ rule VirTool_Win32_DelfInject_AP_2147610411_0
         $x_5_7 = {ff ff 8b 45 f8 ff 30 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 ff 75 e8 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 8b 45 f8 ba 0e 00 00 00 e8 ?? ?? ?? ff 8b 45 f8 ff 30 6a 00 6a 00 6a 00 6a 00 6a 00 8b 45 f8 ba 06 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1017,6 +1049,7 @@ rule VirTool_Win32_DelfInject_AQ_2147616453_0
         $x_1_1 = {b8 28 6d 01 00 e8 ?? ?? ff ff 84 c0 0f 84 ca 17 00 00 83 3d ac 8b 01 00 00 0f 84 88 17 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1040,6 +1073,7 @@ rule VirTool_Win32_DelfInject_AS_2147623761_0
         $x_1_3 = {0f 3f 07 0b 36}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1062,6 +1096,7 @@ rule VirTool_Win32_DelfInject_AT_2147624038_0
         $x_1_2 = {b8 10 69 40 00 e8 90 d5 ff ff 33 c0 a3 d0 a6 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1084,6 +1119,7 @@ rule VirTool_Win32_DelfInject_AU_2147625858_0
         $x_1_2 = {32 c1 8b 4d f8 8b 7d e4 0f b6 4c 39 ff 03 c9 c1 e9 02 32 c1 32 d0 88 55 ef}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1107,6 +1143,7 @@ rule VirTool_Win32_DelfInject_AV_2147626089_0
         $x_1_3 = {69 70 74 6f 72 54 00 04 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1131,6 +1168,7 @@ rule VirTool_Win32_DelfInject_AW_2147626494_0
         $x_1_4 = {e4 bb 01 00 00 00 8b 45 f8 0f b6 44 18 ff 99 f7 fb 33 f2 43 ff 4d ?? 75 ed 81 fe ff 00 00 00 7e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1158,6 +1196,7 @@ rule VirTool_Win32_DelfInject_AX_2147627658_0
         $x_2_3 = {8b 45 e4 8b 50 28 8b 45 f4 03 d0 8b c2 c3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1192,6 +1231,7 @@ rule VirTool_Win32_DelfInject_AY_2147628542_0
         $x_1_11 = "76487-337-8429955-22614" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -1223,6 +1263,7 @@ rule VirTool_Win32_DelfInject_AZ_2147629013_0
         $x_1_4 = {7d 11 6a 01 8b 85 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? eb 75 6a 40 68 00 30 00 00 56 8b 45 f8 50 8b 85 ?? ?? ?? ?? 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1246,6 +1287,7 @@ rule VirTool_Win32_DelfInject_BA_2147629364_0
         $x_1_3 = {8b 50 28 8b 45 ?? 03 d0 8b c2 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1274,6 +1316,7 @@ rule VirTool_Win32_DelfInject_BB_2147629620_0
         $x_1_8 = "ReadProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -1302,6 +1345,7 @@ rule VirTool_Win32_DelfInject_BC_2147629890_0
         $x_1_5 = {3c e8 0f 84 ?? ?? 00 00 e8 ?? ?? ff ff 3c ff 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1330,6 +1374,7 @@ rule VirTool_Win32_DelfInject_BD_2147629933_0
         $n_10_8 = "TFHOWNOWMAIN" wide //weight: -10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1359,6 +1404,7 @@ rule VirTool_Win32_DelfInject_BE_2147630114_0
         $x_2_4 = {0f b7 78 06 4f 85 ff 72 ?? 47 33 db 8d 45 e8 50 8d 34 9b 8b 45 dc 8b 44 f0 10 50 8b 45 dc 8b 44 f0 14 03 45 fc 50}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1385,6 +1431,7 @@ rule VirTool_Win32_DelfInject_BG_2147630812_0
         $x_1_2 = {32 c2 88 45 f3 8d 45 fc e8 ?? ?? ?? ?? 8b 55 fc 0f b6 54 1a ff 80 e2 f0 0f b6 4d f3 02 d1 88 54 18 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1408,6 +1455,7 @@ rule VirTool_Win32_DelfInject_BH_2147631310_0
         $x_1_3 = {8b 47 3c 03 c7 89 45 ?? 8b 45 00 8b ?? 50 6a 04 68 00 30 00 00 ?? 8b 45 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1433,6 +1481,7 @@ rule VirTool_Win32_DelfInject_BJ_2147632317_0
         $x_1_5 = {8d 34 9b 8b 45 ?? 8b 44 f0 10 50 8b 45 ?? 8b 44 f0 14 03 45 ?? 50 8b 45 ?? 8b 44 f0 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1456,6 +1505,7 @@ rule VirTool_Win32_DelfInject_BP_2147633096_0
         $x_1_3 = {8b 45 f0 03 85 d8 fe ff ff 89 85 18 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1480,6 +1530,7 @@ rule VirTool_Win32_DelfInject_BQ_2147633712_0
         $x_1_4 = {81 3f 50 45 00 00 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1506,6 +1557,7 @@ rule VirTool_Win32_DelfInject_BR_2147633866_0
         $x_1_3 = {8b de 66 81 3b 4d 5a 0f 85 ?? ?? 00 00 [0-32] 8b c6 33 d2 52 50 8b 43 3c 99}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -1533,6 +1585,7 @@ rule VirTool_Win32_DelfInject_BT_2147634033_0
         $x_1_3 = {c6 03 57 c6 43 01 72 c6 43 02 69 c6 43 03 74 c6 43 04 65 c6 43 05 50 c6 43 06 72 c6 43 07 6f c6 43 08 63 c6 43 09 65 c6 43 0a 73 c6 43 0b 73 c6 43 0c 4d c6 43 0d 65 c6 43 0e 6d c6 43 0f 6f c6 43 10 72 c6 43 11 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1556,6 +1609,7 @@ rule VirTool_Win32_DelfInject_BU_2147634243_0
         $x_1_3 = {8d 34 9b 8b 45 ?? 8b 44 f0 10 50 8b 45 ?? 8b 44 f0 14 03 45 ?? 50 8b 45 ?? 8b 44 f0 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1580,6 +1634,7 @@ rule VirTool_Win32_DelfInject_BV_2147635808_0
         $x_1_4 = {3c e8 74 04 3c ff 75 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -1607,6 +1662,7 @@ rule VirTool_Win32_DelfInject_BX_2147643196_0
         $x_4_3 = "noitceSfOweiVpamnUtN" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1630,6 +1686,7 @@ rule VirTool_Win32_DelfInject_BY_2147643401_0
         $x_1_3 = {b9 f8 00 00 00 e8 ?? ?? ?? ?? 81 bd ?? ?? ff ff 50 45 00 00 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1653,6 +1710,7 @@ rule VirTool_Win32_DelfInject_CA_2147645355_0
         $x_1_3 = {2b 4d 08 8b 55 0c 90 66 81 3a 4d 5a 90 75 ?? 90 03 52 3c 90 81 3a 50 45 00 00 90 75 ?? 8b 52 78}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1675,6 +1733,7 @@ rule VirTool_Win32_DelfInject_CB_2147647367_0
         $x_3_2 = {55 8b ec 51 0f 00 45 fe 0f b7 45 fe 0d 00 00 ad de 59 5d c3}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1697,6 +1756,7 @@ rule VirTool_Win32_DelfInject_CC_2147647438_0
         $x_1_2 = {50 33 c9 ba ?? ?? ?? ?? b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 45 ?? e8 ?? ?? ?? ?? 50 53 ff 16 a3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1719,6 +1779,7 @@ rule VirTool_Win32_DelfInject_CD_2147648012_0
         $x_1_2 = {83 c0 02 89 45 f0 6a 04 68 00 30 00 00 ff 75 fc ff 75 f8 ff 75 f4 8b 45 f0 83 e8 02 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1743,6 +1804,7 @@ rule VirTool_Win32_DelfInject_CE_2147648546_0
         $x_1_4 = {a5 a5 68 e8 03 00 00 ff 55 f8 ff 75 fc ff 55 f0 83 f8 00 74 ed 6a 00 ff 55 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1769,6 +1831,7 @@ rule VirTool_Win32_DelfInject_CF_2147649112_0
         $x_1_2 = {68 f8 00 00 00 57 8b c3 03 46 3c 50 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1794,6 +1857,7 @@ rule VirTool_Win32_DelfInject_CF_2147649112_1
         $x_1_5 = {8a 04 30 a2 ?? ?? ?? ?? a0 00 c0 c8 ?? a2 00 a1 ?? ?? ?? ?? 8a 15 00 88 14 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1817,6 +1881,7 @@ rule VirTool_Win32_DelfInject_CG_2147650169_0
         $x_2_3 = {8d 7d dd a5 a5 a5 66 a5 a4 b8 01 00 00 00 33 d2 8a 55 dd 42 88 55 dd 48}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1842,6 +1907,7 @@ rule VirTool_Win32_DelfInject_CH_2147650223_0
         $x_1_2 = {33 c0 89 45 ?? 8b de 66 81 3b 4d 5a 0f 85 ?? ?? 00 00 8b fe 03 7b 3c 81 3f 50 45 00 00 0f 85 ?? ?? 00 00 8d 45 ?? 33 c9 ba 44 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1865,6 +1931,7 @@ rule VirTool_Win32_DelfInject_CI_2147650328_0
         $x_1_3 = {ff d5 50 ff 54 24 0c 83 c4 0c 5d 5f 5e 5b c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1887,6 +1954,7 @@ rule VirTool_Win32_DelfInject_U_2147650456_0
         $x_2_3 = {83 c0 78 8b 10 89 55 e0 03 50 04 89 55 dc 8b 45 e0 03 c3 8b 48 10}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))
@@ -1914,6 +1982,7 @@ rule VirTool_Win32_DelfInject_W_2147650654_0
         $x_10_5 = {48 5a 8b ca 99 f7 f9 42 a1 ?? ?? ?? 00 8a 44 10 ff 8b 15 ?? ?? ?? 00 8a 14 3a 32 c2 8b 15 ?? ?? ?? 00 88 04 3a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -1940,6 +2009,7 @@ rule VirTool_Win32_DelfInject_CJ_2147650664_0
         $x_1_3 = {8b 40 28 03 05 ?? ?? ?? ?? a3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1962,6 +2032,7 @@ rule VirTool_Win32_DelfInject_X_2147650863_0
         $x_1_3 = {bf cc cc cc 0c 8a 1e 46 80 fb 20 74 f8 b5 00 80 fb 2d 74 62 80 fb 2b 74 5f 80 fb 24 74 5f 80 fb 78 74 5a 80 fb 58 74 55 80 fb 30 75 13 8a 1e 46 80 fb 78 74 48 80 fb 58 74 43 84 db 74 20 eb 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1983,6 +2054,7 @@ rule VirTool_Win32_DelfInject_Y_2147651574_0
         $x_1_2 = {ff 4b 83 fb 04 75 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ff 8b d8 a1 ?? ?? ?? ?? ?? ?? ?? ?? ff 50 b8 ?? ?? ?? ?? ?? ?? ?? ?? ff 50 ff d3 33 c0 5a 59 59 64 89 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2006,6 +2078,7 @@ rule VirTool_Win32_DelfInject_CL_2147651788_0
         $x_1_3 = "i++t+e+P+r+o+ce++ssM+e+m+o+ry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2027,6 +2100,7 @@ rule VirTool_Win32_DelfInject_Z_2147651908_0
         $x_1_2 = {7c 31 8d 6f ff 89 d8 c1 e8 02 83 e0 07 29 c5 8a 06 46}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2050,6 +2124,7 @@ rule VirTool_Win32_DelfInject_CM_2147652016_0
         $x_1_3 = "cryptocode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2072,6 +2147,7 @@ rule VirTool_Win32_DelfInject_AB_2147652415_0
         $x_1_3 = {8a 54 1f ff 0f b7 ce c1 e9 08 32 d1 88 54 18 ff 33 c0 8a 44 1f ff 66 03 f0 66 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2097,6 +2173,7 @@ rule VirTool_Win32_DelfInject_AP_2147653152_0
         $x_1_6 = {51 4c 04 05 15 00 00 00 09 00 [0-48] 2f 66 79 66}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -2123,6 +2200,7 @@ rule VirTool_Win32_DelfInject_AD_2147654020_0
         $x_1_3 = {ff 46 0c 8b 45 f8 8b 08 85 c9 74 12 8b c1 33 d2 52 50 8b 46 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2146,6 +2224,7 @@ rule VirTool_Win32_DelfInject_CO_2147654264_0
         $x_1_3 = {8d 45 f8 50 6a 00 6a 00 68 78 8a 46 00 6a 00 6a 00 ff d3 e9 93 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2172,6 +2251,7 @@ rule VirTool_Win32_DelfInject_CP_2147654810_0
         $n_10_6 = "\\gdm\\delphi\\math\\" ascii //weight: -10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (3 of ($x*))
 }
@@ -2195,6 +2275,7 @@ rule VirTool_Win32_DelfInject_CQ_2147654925_0
         $x_1_2 = {8b 40 24 e8 ?? ?? ?? ?? 50 a1 ?? ?? ?? ?? 8b 40 10 50 a1 01 8b 40 0c 03 05 ?? ?? ?? ?? 50 a1 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 83 05 01 28 (43 3b 1d ?? ?? ?? ??|4b)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2217,6 +2298,7 @@ rule VirTool_Win32_DelfInject_CR_2147656702_0
         $x_1_2 = {ff d3 8b f0 81 c6 ?? ?? 00 00 eb ?? ff d3 ff d3 3b f0 77}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2240,6 +2322,7 @@ rule VirTool_Win32_DelfInject_CS_2147656757_0
         $x_1_3 = {8a 13 30 10 40 43 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2261,6 +2344,7 @@ rule VirTool_Win32_DelfInject_CU_2147657183_0
         $x_1_1 = {8b 52 3c 03 d0 83 c2 04 83 c2 14 8b 42 38 89 45 ?? 33 f6 6a 40 68 00 30 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2285,6 +2369,7 @@ rule VirTool_Win32_DelfInject_CV_2147658303_0
         $x_1_4 = {42 4b 0f 85 ?? ?? ff ff 5e 5b c3 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2308,6 +2393,7 @@ rule VirTool_Win32_DelfInject_CX_2147662045_0
         $x_1_3 = {03 42 28 8b 15 ?? ?? ?? ?? 8b 12 89 82 b0 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2331,6 +2417,7 @@ rule VirTool_Win32_DelfInject_CZ_2147669024_0
         $x_1_3 = {c1 e0 03 8d 04 80 99 03 04 24 13 54 24 04 83 c4 08 8b 15 ?? ?? ?? ?? 03 d0 8d 85 ?? ?? ?? ?? b9 28 00 00 00 31 00 81 c7 f8 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2358,6 +2445,7 @@ rule VirTool_Win32_DelfInject_AU_2147678968_0
         $x_1_8 = {44 69 73 61 62 6c 65 53 52 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 5c 53 79 73 74 65 6d 52 65 73 74 6f 72 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -2381,6 +2469,7 @@ rule VirTool_Win32_DelfInject_DA_2147681914_0
         $x_2_3 = {8b 40 3c 03 45 fc 89 45 ?? 8b 45 ?? 8b 58 50 6a 04 68 00 30 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2406,6 +2495,7 @@ rule VirTool_Win32_DelfInject_DB_2147682802_0
         $x_1_2 = {8b 80 c0 00 00 00 03 45 ?? 2d 00 10 00 00 05 00 02 00 00 89 45 ?? 8b 45 ?? 8b 55 ec 2b 50 34 81 ea 00 10 00 00 81 c2 00 02 00 00 89 55 fc 8b 45 ?? 8b 40 18 03 45 fc 89 45 ?? 6a 00 6a 01 6a 00 ff 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -2427,6 +2517,7 @@ rule VirTool_Win32_DelfInject_DC_2147682841_0
         $x_1_1 = {83 ef 1a 29 ff b8 2e 00 00 00 31 c0 83 ef 1a 29 ff b8 2e 00 00 00 31 c0 83 ef 1a 29 ff b8 2e 00 00 00 31 c0 83 ef 1a 29 ff b8 2e 00 00 00 31 c0 83 ef 1a 29 ff b8 2e 00 00 00 31 c0 4a 0f 85 0d fe ff ff 68 00 01 00 00 8d 85 f7 fd ff ff 50 6a 00 e8 ?? ?? ff ff 83 c0 10 83 f8 20 7f 09 6a 00 6a ff e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2449,6 +2540,7 @@ rule VirTool_Win32_DelfInject_DD_2147682992_0
         $x_1_2 = {68 7c 66 00 00 8b 45 f8 50 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2472,6 +2564,7 @@ rule VirTool_Win32_DelfInject_DE_2147682999_0
         $x_1_3 = {64 8b 05 30 00 00 00 8b 40 0c 8b 40 1c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2493,6 +2586,7 @@ rule VirTool_Win32_DelfInject_DI_2147694095_0
         $x_1_1 = {7f 04 00 00 75 e2 6a 40 68 00 30 00 00 68 7f 04 00 00 6a 00 e8 18 00 a1 ?? ?? ?? ?? 80 b0 ?? ?? ?? ?? f9 ff 05 ?? ?? ?? ?? 81 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2515,6 +2609,7 @@ rule VirTool_Win32_DelfInject_DJ_2147696971_0
         $x_1_2 = {8b 40 34 50 8b 45 d4 50 ff 15 ?? ?? ?? 00 85 c0 75 ?? b8 f4 01 00 00 e8 ?? ?? ff ff 6a 40 68 00 30 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2538,6 +2633,7 @@ rule VirTool_Win32_DelfInject_DL_2147697778_0
         $x_1_3 = {68 d2 c7 f0 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2559,6 +2655,7 @@ rule VirTool_Win32_DelfInject_DM_2147705541_0
         $x_1_2 = {56 89 c0 5e 4b 75 f9 05 00 bb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2580,6 +2677,7 @@ rule VirTool_Win32_DelfInject_AY_2147706509_0
         $x_1_2 = {68 00 01 00 00 b9 ?? ?? ?? ?? ba 20 00 00 00 b8 11 5a 00 00 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8d 95 ?? ?? ?? ?? b9 ?? ?? ?? ?? 8b c3 e8 ?? ?? ?? ?? 03 1d ?? ?? ?? ?? 89 5d fc ?? ?? ?? ?? ff 75 fc c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2602,6 +2700,7 @@ rule VirTool_Win32_DelfInject_DN_2147709402_0
         $x_1_2 = {bf 01 00 00 00 8b 45 fc e8 ?? ?? ?? ?? 8b 55 fc 0f b6 54 3a ff 33 c2 50 8b 45 f8 e8 ?? ?? ?? ?? 8b 55 f8 0f b6 54 1a ff 33 c2 5a 33 d0 8d 45 ?? e8 ?? ?? ?? ?? 8b 55 ?? 8d 45 f0 e8 ?? ?? ?? ?? 43 8b 45 f8 e8 ?? ?? ?? ?? 3b d8 7e 05 bb 01 00 00 00 47 4e 75 af}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2624,6 +2723,7 @@ rule VirTool_Win32_DelfInject_DO_2147712471_0
         $x_1_2 = {8d 55 e8 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 45 e8 8d 4d ec ba ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 55 ec b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 6a 00 6a 00 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2645,6 +2745,7 @@ rule VirTool_Win32_DelfInject_DP_2147719158_0
         $x_1_1 = {8b 45 fc e8 ?? ?? ?? ff 8b c8 8b 55 fc a1 ?? ?? ?? 00 e8 ?? ?? ?? ff 6a 40 68 00 30 00 00 53 6a 00 e8 ?? ?? ?? ff 8b f0 85 f6 74 70 8b cb 8b d6 8b 45 fc e8 ?? ?? ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2668,6 +2769,7 @@ rule VirTool_Win32_DelfInject_DM_2147732949_0
         $x_1_3 = {6a 30 59 64 8b 01 80 78 02 00 0f 85 07 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2691,6 +2793,7 @@ rule VirTool_Win32_DelfInject_DQ_2147732994_0
         $x_1_3 = "Software\\Borland\\Delphi\\Locales" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2713,6 +2816,7 @@ rule VirTool_Win32_DelfInject_DR_2147733084_0
         $x_1_2 = {03 03 89 06 8b 06 89 03 ff ?? ?? ?? 48 00 5a ?? ff e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

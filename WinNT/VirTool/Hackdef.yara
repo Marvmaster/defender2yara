@@ -41,6 +41,7 @@ rule VirTool_WinNT_Hackdef_A_2147732939_0
         $x_4_26 = {85 c0 7c 27 6a 08 8d 45 d0 50 6a 09 ff 75 e4 89 5d d4 ff 15}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_2_*))) or
             ((1 of ($x_3_*) and 9 of ($x_2_*))) or
@@ -119,6 +120,7 @@ rule VirTool_WinNT_Hackdef_C_2147732941_0
         $x_1_1 = {57 8b 7d 0c 8b 47 60 8b 48 04 89 0d ?? ?? 01 00 8b 40 0c 8b 77 0c 33 db 2d 00 20 22 00 89 9d f0 fb ff ff 0f 84 ?? 01 00 00 6a 04 59 2b c1 74 ?? 89 1e 89 4f 1c c7 [0-5] 10 00 00 c0 e9 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -140,6 +142,7 @@ rule VirTool_WinNT_Hackdef_D_2147732942_0
         $x_1_1 = {52 50 ff 15 ?? 06 01 00 89 45 f8 c7 45 fc ?? 04 01 00 8b 45 f8 8b 18 89 1d ?? 07 01 00 8b 5d fc 89 18 6a 04 ff 75 f8 ff 15 ?? 06 01 00 8b 45 f4 6a 04 83 c0 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -161,6 +164,7 @@ rule VirTool_WinNT_Hackdef_E_2147732943_0
         $x_1_1 = {2d 00 20 22 00 89 ?? ?? 0f 84 ?? ?? 00 00 6a 04 59 2b c1 74 ?? 89 ?? 89 ?? 1c c7 45 ?? 10 00 00 c0 e9 ?? 01 00 00 8b 06 8b 56 04 89 ?? 89 45 ?? 8d 45 ?? 50 8d 45 ?? 50 68 ff 0f 1f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +187,7 @@ rule VirTool_WinNT_Hackdef_F_2147732944_0
         $x_1_2 = {85 c0 0f 8c ?? 00 00 00 8b 85 ?? fb ff ff 66 83 38 05 75 ?? 66 83 78 02 70 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +211,7 @@ rule VirTool_WinNT_Hackdef_G_2147732945_0
         $x_1_3 = "\\DosDevices\\bconusb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))
@@ -230,6 +236,7 @@ rule VirTool_WinNT_Hackdef_H_2147732946_0
         $x_1_1 = {52 50 ff 15 ?? ?? 01 00 89 45 f8 c7 45 fc dc 05 01 00 8b 45 f8 8b 18 89 1d 28 0a 01 00 8b 5d fc 89 18 6a 04 ff 75 f8 ff 15 ?? ?? 01 00 8b 45 f4 83 c0 04 6a 04 50 8d 45 fc 50 ff d6 83 c4 0c 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +258,7 @@ rule VirTool_WinNT_Hackdef_I_2147732947_0
         $x_1_1 = {8b 5d 0c 56 57 8b 43 60 6a 01 5e 89 35 c4 09 01 00 8b 48 04 89 0d c8 09 01 00 89 35 c4 09 01 00 8b 40 0c 89 35 c4 09 01 00 8b 7b 0c 33 c9 2d 00 20 22 00 89 4d f8 89 35 ?? ?? 01 00 0f 84 ?? 01 00 00 6a 04 5a 2b c2 74 ?? 89 0f 89 53 1c c7 45 f8 10 00 00 c0 e9 ?? 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +280,7 @@ rule VirTool_WinNT_Hackdef_J_2147732948_0
         $x_1_1 = {8b 7d 0c 31 db 8b 47 60 89 5d f4 8b 48 04 89 0d 84 08 01 00 8b 40 0c 8b 77 0c 2d 00 20 22 00 0f 84 ?? 00 00 00 6a 04 59 29 c8 74 ?? 89 1e 89 4f 1c c7 45 f4 10 00 00 c0 e9 ?? ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +307,7 @@ rule VirTool_WinNT_Hackdef_BJ_2147732950_0
         $x_1_7 = "ZwSetInformationProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -332,6 +342,7 @@ rule VirTool_WinNT_Hackdef_B_2147732951_0
         $x_3_11 = "PsLookupProcessByProcessID" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_22_*) and 5 of ($x_3_*))) or
             ((6 of ($x_22_*))) or
@@ -357,6 +368,7 @@ rule VirTool_WinNT_Hackdef_DA_2147732952_0
         $x_1_2 = {68 f1 03 00 00 5b b8 00 00 23 fa ba 9e f8 3a 63 bf c1 a3 81 34}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

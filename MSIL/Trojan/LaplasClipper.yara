@@ -20,6 +20,7 @@ rule Trojan_MSIL_LaplasClipper_B_2147849328_0
         $x_2_5 = "RefreshRegex" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_LaplasClipper_C_2147849329_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

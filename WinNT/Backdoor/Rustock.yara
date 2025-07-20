@@ -21,6 +21,7 @@ rule Backdoor_WinNT_Rustock_F_2147792048_0
         $x_1_7 = "5B37FB3B-984D-1E57-FF38-AA681BE5C8D" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_9_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -50,6 +51,7 @@ rule Backdoor_WinNT_Rustock_A_2147792392_0
         $x_1_3 = {68 b7 a4 7b 0f 6a 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Backdoor_WinNT_Rustock_D_2147792411_0
         $x_1_3 = {3d de c0 ad de 75 0d 83 65 ?? 00 eb 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Backdoor_WinNT_Rustock_J_2147792434_0
         $x_1_3 = {8d 88 00 10 00 00 eb ?? 2b c8 eb ?? 66 81 38 8d 88 0f 84}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Backdoor_WinNT_Rustock_C_2147792435_0
         $x_1_4 = {0f b7 f8 66 81 e7 ff 0f 66 c1 e8 0c 83 f8 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Backdoor_WinNT_Rustock_E_2147792436_0
         $x_1_2 = {ff 75 f4 ff 15 ?? ?? 01 00 ff 75 f4 ff 15 ?? ?? 01 00 8d 85 88 f6 ff ff 50 8d 45 e0 50 ff d6 8d 45 e0 50 e8 ?? ?? ?? ?? 5f 5e b8 83 01 00 c0 5b c9 c2 08 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

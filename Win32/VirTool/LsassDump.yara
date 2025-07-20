@@ -18,6 +18,7 @@ rule VirTool_Win32_LsassDump_Q_2147827003_0
         $x_1_3 = {6c 73 61 73 72 76 2e 64 6c 6c 00 6d 73 76 31 5f 30 2e 64 6c 6c 00 74 73 70 6b 67 2e 64 6c 6c 00 77 64 69 67 65 73 74 2e 64 6c 6c 00 6b 65 72 62 65 72 6f 73 2e 64 6c 6c 00 6c 69 76 65 73 73 70 2e 64 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -43,6 +44,7 @@ rule VirTool_Win32_LsassDump_AF_2147924608_0
         $x_1_2 = {50 6a 20 ff ?? ?? ?? ?? ?? 50 ff ?? ?? ?? ?? ?? 8d ?? ?? ?? 50 ?? ?? ?? ?? ?? 6a 00 ff ?? ?? ?? ?? ?? 8b 44 24 60 8b 4c 24 64 6a 00 6a 00 6a 10 89 44 24 78 ?? ?? ?? ?? 50 6a 00 ff 74 24 50 c7 84 24 80 00 00 00 01 00 00 00 89 8c 24 88 00 00 00 c7 84 24 8c 00 00 00 02 00 00 00 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Xolondox_A_2147654036_0
         $x_4_7 = {c6 45 d4 63 c6 45 d5 6f c6 45 d6 6e c6 45 d7 69 c6 45 d8 6d}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 4 of ($x_1_*))) or
             ((2 of ($x_4_*))) or

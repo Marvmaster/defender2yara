@@ -19,6 +19,7 @@ rule Backdoor_Linux_Getshell_D_2147836796_0
         $x_1_4 = "crontab -l 2>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Linux_Getshell_E_2147850529_0
         $x_1_3 = {85 c0 79 44 4e 74 68 68 a2 00 00 00 58 6a 00 6a 05 89 e3 31 c9 cd 80 85 c0 79 bd eb 52 53 51 6a 00 6a 10 e8 10 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Backdoor_Linux_Getshell_F_2147850530_0
         $x_1_3 = {6a 3c 58 6a 01 5f 0f 05 6a 10 5a e8 10 00 00 00 88 e4 bb 86 70 51 4f cb b8 f1 d9 e5 9e 56 2f 0c 5e 48 31 c0 48 ff c0 0f 05 eb d5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (1 of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Backdoor_Linux_Getshell_G_2147850531_0
         $x_1_1 = {00 02 00 03 00 01 00 00 00 54 80 04 08 34 00 00 00 00 00 00 00 00 00 00 00 34 00 20 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 80 04 08 00 80 04 08 dd 01 00 00 66 03 00 00 07 00 00 00 00 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Backdoor_Linux_Getshell_H_2147850532_0
         $x_1_1 = {02 00 03 00 01 00 00 00 54 80 04 08 34 00 00 00 00 00 00 00 00 00 00 00 34 00 20 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 80 04 08 00 80 04 08 b3 00 00 00 12 01 00 00 07 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Backdoor_Linux_Getshell_J_2147889516_0
         $x_1_1 = {6a 3b 58 99 48 bb 2f 62 69 6e 2f 73 68 00 53 48 89 e7 68 2d 63 00 00 48 89 e6 52 e8 e9 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -149,6 +155,7 @@ rule Backdoor_Linux_Getshell_AB_2147903255_0
         $x_1_1 = {55 48 89 e5 48 83 ec 30 c7 45 fc 29 23 00 00 ba 00 00 00 00 be 01 00 00 00 bf 02 00 00 00 e8 d4 fe ff ff 89 45 f8 66 c7 45 e0 02 00 8b 45 fc 0f b7 c0 89 c7 e8 6e fe ff ff 66 89 45 e2 48 8d 05 37 0e 00 00 48 89 c7 e8 8b fe ff ff 89 45 e4 48 8d 4d e0 8b 45 f8 ba 10 00 00 00 48 89 ce 89 c7 e8 82 fe ff ff 8b 45 f8 be 00 00 00 00 89 c7 e8 43 fe ff ff 8b 45 f8 be 01 00 00 00 89 c7 e8 34 fe ff ff 8b 45 f8 be 02 00 00 00 89 c7 e8 25 fe ff ff 48 8d 05 ee 0d 00 00 48 89 45 d0 48 c7 45 d8 00 00 00 00 48 8d 45 d0 ba 00 00 00 00 48 89 c6 48 8d 05 cf 0d 00 00 48 89 c7 e8 07 fe ff ff b8 00 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

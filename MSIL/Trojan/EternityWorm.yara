@@ -16,6 +16,7 @@ rule Trojan_MSIL_EternityWorm_A_2147836961_0
         $x_2_1 = {00 00 01 25 16 20 ?? ?? 00 00 28 ?? ?? 00 06 a2 25 17 20 ?? ?? 00 00 28 ?? ?? 00 06 a2 14 14 14 28 ?? ?? 00 06 28 ?? 00 00 0a 13 01 38 0f 00 04 14 20 ?? ?? 00 00 28 ?? 02 00 06 18 8d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_EternityWorm_RDB_2147849148_0
         $x_1_2 = "eebd50f4-8cdc-4aba-8ffe-db1722d76aed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

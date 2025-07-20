@@ -36,6 +36,7 @@ rule Trojan_Win64_T1003_OsCredentialDumping_A_2147846084_0
         $x_10_22 = "lsadump::secrets" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule TrojanDropper_Win32_Crypaft_2147608149_0
         $x_5_11 = {43 72 79 70 74 6f 52 43 34 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 6 of ($x_1_*))) or
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or

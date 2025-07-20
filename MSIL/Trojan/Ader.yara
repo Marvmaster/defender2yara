@@ -16,6 +16,7 @@ rule Trojan_MSIL_Ader_SPQV_2147838119_0
         $x_6_1 = {06 16 06 16 95 07 16 95 5a 20 f1 13 22 1d 58 9e 06 17 06 17 95 07 17 95 58 20 a7 a4 be 03 61 9e}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_Ader_CM_2147838316_0
         $x_1_6 = "DecodingBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_MSIL_Ader_SPQ_2147840014_0
         $x_1_7 = "martinsrlk#7545" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_MSIL_Ader_SPS_2147841205_0
         $x_1_2 = "80.66.75.135" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_MSIL_Ader_PSID_2147843935_0
         $x_2_1 = {00 72 05 00 00 70 28 ?? ?? ?? 0a 74 13 00 00 01 0a 06 6f ?? ?? ?? 0a 74 32 00 00 01 0b 73 ?? ?? ?? 0a 0c 00 07 6f ?? ?? ?? 0a 08 6f ?? ?? ?? 0a 00 08 6f ?? ?? ?? 0a 80 03 00 00 04 00 de 0b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Trojan_MSIL_Ader_EC_2147850521_0
         $x_1_4 = "VmlydHVhbEJveA==(U2VsZWN0ICogZnJvbSBXaW4zMl9EaXNrRHJpdmU=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -157,6 +163,7 @@ rule Trojan_MSIL_Ader_SZ_2147898860_0
         $x_2_1 = {00 02 08 6f 34 00 00 0a 0d 09 06 08 59 61 d2 13 04 09 1e 63 08 61 d2 13 05 07 08 11 05 1e 62 11 04 60 d1 9d 00 08 17 58 0c 08 07 8e 69 fe 04 13 07 11 07 2d cb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +188,7 @@ rule Trojan_MSIL_Ader_PSDH_2147899355_0
         $x_1_4 = "Enumerable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +211,7 @@ rule Trojan_MSIL_Ader_PSDY_2147899358_0
         $x_1_2 = "DebuggingModes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -224,6 +233,7 @@ rule Trojan_MSIL_Ader_PSIC_2147899373_0
         $x_2_1 = {06 03 07 18 6f 16 00 00 0a 1f 10 28 17 00 00 0a 6f 18 00 00 0a 07 18 58 0b 07 03 6f 19 00 00 0a 32 de 06 6f 1a 00 00 0a 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -245,6 +255,7 @@ rule Trojan_MSIL_Ader_PSKP_2147899408_0
         $x_2_1 = {72 59 00 00 70 28 08 00 00 06 0a 28 1a 00 00 0a 06 6f 1b 00 00 0a 28 1c 00 00 0a 28 01 00 00 2b 28 02 00 00 2b 0b de 03 26 de d4}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_MSIL_Bumbulbee_NEAA_2147843441_0
         $x_5_2 = "botanicalcorp" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

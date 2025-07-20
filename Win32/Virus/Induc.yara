@@ -30,6 +30,7 @@ rule Virus_Win32_Induc_A_2147627628_0
         $x_1_16 = "$.pas$,r+$\\lib\\sysconst.$,$\"$+r+$\\bin\\dcc32.exe\" $);end;RegCloseKey(k);end; end;" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Virus_Win32_Induc_A_2147627628_1
         $x_1_2 = {bb 01 00 00 00 be ?? ?? ?? ?? 8b 16 8b c7 e8 ?? ?? ?? ff e8 ?? ?? ?? ff e8 ?? ?? ?? ff 83 c6 04 4b 75 e7 bb 17 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

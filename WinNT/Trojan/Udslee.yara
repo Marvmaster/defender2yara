@@ -18,6 +18,7 @@ rule Trojan_WinNT_Udslee_A_2147634498_0
         $x_1_3 = {76 62 69 66 75 65 6b 7a 6e 6d 40 67 6a 69 74 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

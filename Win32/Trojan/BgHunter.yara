@@ -18,6 +18,7 @@ rule Trojan_Win32_BgHunter_2147811720_0
         $x_5_2 = {0f b6 04 32 8d 76 01 34 64 88 46 ff 0f b6 44 37 ff 34 64 88 86 33 04 00 00 83 e9 01}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

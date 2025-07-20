@@ -16,6 +16,7 @@ rule Backdoor_MSIL_Noancooe_A_2147686450_0
         $x_1_2 = {1f 1d 12 00 1a 28 ?? 00 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_MSIL_Noancooe_A_2147686450_1
         $x_1_4 = {13 0e 11 0e 16 1f 58 9d 11 0e 17 1f 30 9d 11 0e 18 1f 58 9d 11 0e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Backdoor_MSIL_Noancooe_A_2147686450_2
         $x_10_6 = {06 1a 1f 0d 9c 06 1b 1f 15 9c 06 1c 1f 22 9c 06 1d 1f 37 9c}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -89,6 +92,7 @@ rule Backdoor_MSIL_Noancooe_B_2147686469_0
         $x_1_3 = {53 65 6e 64 54 6f 53 65 72 76 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Backdoor_MSIL_Noancooe_B_2147686469_1
         $x_1_5 = "NanoCore Client.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Backdoor_MSIL_Noancooe_C_2147689948_0
         $x_1_5 = "NanoCore Client" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -265,6 +271,7 @@ rule Backdoor_MSIL_Noancooe_D_2147694467_0
         $x_1_3 = {6f 0b 00 00 0a 28 0c 00 00 0a 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

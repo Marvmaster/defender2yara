@@ -18,6 +18,7 @@ rule Ransom_Win32_Mimic_MA_2147847147_0
         $x_2_3 = "Everything64.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win32_Mimic_MA_2147847147_1
         $x_1_7 = "ChaCha20 for x86, CRYPTOGAMS by" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_Win32_Mimic_DA_2147905035_0
         $x_1_5 = "Software\\Classes\\mimicfile\\shell\\open\\command" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Ransom_Win32_Mimic_ATZ_2147920882_0
         $x_1_3 = {33 c0 40 f0 0f c1 41 14 40 83 f8 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Ransom_Win32_Mimic_YAB_2147920969_0
         $x_1_8 = "-tail" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +154,7 @@ rule Ransom_Win32_Mimic_YAA_2147920971_0
         $x_1_8 = ";!@InstallEnd@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

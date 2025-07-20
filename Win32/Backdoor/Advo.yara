@@ -17,6 +17,7 @@ rule Backdoor_Win32_Advo_2147630779_0
         $x_1_3 = {c6 45 e1 6d c6 45 e2 73 c6 45 e3 61 c6 45 e4 63 c6 45 e5 6d c6 45 e6 33 c6 45 e7 32 c6 45 e8 2e c6 45 e9 64 c6 45 ea 72 c6 45 eb 76}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

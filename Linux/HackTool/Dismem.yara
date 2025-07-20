@@ -22,6 +22,7 @@ rule HackTool_Linux_Dismem_A_2147892400_0
         $x_1_7 = "/mm/transparent_hugepage/hpage_pmd_size" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
             ((3 of ($x_5_*))) or

@@ -16,6 +16,7 @@ rule Trojan_Win64_TempParticle_A_2147816926_0
         $x_100_1 = {44 2b c3 c6 03 e9 41 83 e8 05 ba 0a 00 00 00 44 89 43 01 48 8b cb 44 ?? ?? ?? ?? ff}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

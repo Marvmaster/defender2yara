@@ -16,6 +16,7 @@ rule Trojan_Win32_GhostRatCrypt_GA_2147775701_0
         $x_10_1 = {40 33 ff 89 45 ?? 57 8a 04 10 8a 14 0e 32 d0 88 14 0e ff 15 ?? ?? ?? ?? 8b c6 b9 ?? ?? ?? ?? 99 f7 f9 85 d2}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

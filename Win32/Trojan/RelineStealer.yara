@@ -16,6 +16,7 @@ rule Trojan_Win32_RelineStealer_RPB_2147798253_0
         $x_1_1 = {8b 95 2c f6 ff ff 21 ca 89 8d 04 f6 ff ff 8b 8d 2c f6 ff ff 89 95 00 f6 ff ff 8b 95 04 f6 ff ff 31 d1 8b 95 00 f6 ff ff 09 ca 88 d1 8b 95 a4 f8 ff ff 88 0c 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_RelineStealer_BXF_2147817795_0
         $x_10_2 = {dc c0 69 54 c7 45 ?? 98 c3 e4 01 c7 85 ?? ?? ?? ?? be 14 4a 0a c7 85 ?? ?? ?? ?? 32 f5 41 2a c7 85 ?? ?? ?? ?? 52 89 eb 0e c7 85 ?? ?? ?? ?? fc 7d 9a 60 c7 85 ?? ?? ?? ?? e5 9a 40 22 c7 85 ?? ?? ?? ?? 95 54 fe 1a c7 45 ?? 87 64 58 7c c7 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_RelineStealer_FM_2147818353_0
         $x_1_3 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win32_RelineStealer_FT_2147818498_0
         $x_1_3 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_Win32_RelineStealer_FU_2147818659_0
         $x_10_2 = {8b 45 08 83 c0 61 89 85 ?? ?? ?? ?? 8b 4d 08 83 c1 09 89 8d ?? ?? ?? ?? 8b 55 08 83 c2 3f 89 95 ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 3b 85 10 ff ff ff}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Trojan_Win32_RelineStealer_FV_2147818698_0
         $x_10_2 = {a0 7e 4f 00 03 05 ?? ?? ?? ?? 33 d2 b9 ?? ?? ?? ?? f7 f1 89 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8a 88 ?? ?? ?? ?? 88 0d ?? ?? ?? ?? a1 94 7e 4f 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +157,7 @@ rule Trojan_Win32_RelineStealer_VK_2147818979_0
         $x_1_3 = "Copyright (C) 2022, pozkarte" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -173,6 +180,7 @@ rule Trojan_Win32_RelineStealer_VA_2147819067_0
         $x_10_2 = {d2 e4 8b 07 33 c3 f7 d0 48 f5}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -194,6 +202,7 @@ rule Trojan_Win32_RelineStealer_XB_2147820288_0
         $x_10_1 = {8b 7c af fc 03 f8 5d 89 bd ?? ?? ?? ?? 33 db b8 ?? ?? ?? ?? 83 c0 ?? 64 8b 3c 03 8b 7f 0c 8b 77 14 8b 36 8b 36 8b 46 10 8b f8 03 78 ?? 8b 57 78 03 d0 8b 7a 20 03 f8 55 8b eb 8b 34 af 03 f0 45 81 3e ?? ?? ?? ?? ?? ?? 81 7e}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -215,6 +224,7 @@ rule Trojan_Win32_RelineStealer_UB_2147824704_0
         $x_10_1 = {6a 00 ff 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 4c 24 ?? 30 04 31 83 ff ?? 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

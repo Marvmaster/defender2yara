@@ -26,6 +26,7 @@ rule Worm_Win32_Wergimog_A_2147644653_0
         $x_1_12 = "LNK Infected" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -51,6 +52,7 @@ rule Worm_Win32_Wergimog_KA_2147851487_0
         $x_10_1 = {ff 75 10 33 ff e8 ?? ?? ?? ?? 85 c0 59 76 15 8b 45 10 50 8a 0c 07 30 0c 1e 47 e8 ?? ?? ?? ?? 3b f8 59 72 eb 8a 04 1e f6 d0 88 04 1e 46 3b 75 0c 72 ce}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

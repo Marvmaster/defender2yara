@@ -19,6 +19,7 @@ rule HackTool_Win64_ProductKey_G_2147765679_0
         $x_1_4 = "$$PRODUCKEY_TEMP_HIVE$$" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

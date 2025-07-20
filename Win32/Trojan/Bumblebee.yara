@@ -16,6 +16,7 @@ rule Trojan_Win32_Bumblebee_DD_2147830305_0
         $x_1_1 = {8b 45 f8 8b 4d bc 0f b7 14 41 8b 45 b8 8b 4d 0c 03 0c 90 89 4d e4 8b 55 f8 8b 45 bc 0f b7 0c 50 8b 55 b8 8b 45 08 03 04 8a 89 45 a8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Trojan_Win32_Bumblebee_PLS_2147831070_0
         $x_1_15 = "task_result" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +98,7 @@ rule Trojan_Win32_Bumblebee_A_2147852809_0
         $x_1_4 = {4f 00 00 00 48 8d ?? ?? ?? ?? ?? e8 ?? ?? ?? ?? ?? ?? ?? 48 8d ?? ?? ?? ?? ?? ba 4f 00 00 00 e8 ?? ?? ?? ?? ?? ?? ?? 48 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

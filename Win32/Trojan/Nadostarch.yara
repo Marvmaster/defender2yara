@@ -21,6 +21,7 @@ rule Trojan_Win32_Nadostarch_A_2147680212_0
         $x_3_7 = {a5 a4 c7 85 f8 de ff ff 03 35 46 46 c7 85 f8 df ff ff 03 35 46 46}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or

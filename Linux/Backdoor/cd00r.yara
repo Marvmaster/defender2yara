@@ -22,6 +22,7 @@ rule Backdoor_Linux_cd00r_A_2147836890_0
         $x_5_8 = "pcap_open_live: %s" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

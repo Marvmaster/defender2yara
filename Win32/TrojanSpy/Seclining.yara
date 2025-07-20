@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Seclining_A_2147610315_0
         $x_1_6 = {64 6f 69 63 61 72 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule TrojanSpy_Win32_Seclining_C_2147610316_0
         $x_1_2 = {78 6b 6c 30 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule TrojanSpy_Win32_Seclining_D_2147610317_0
         $x_3_3 = {75 49 c7 45 d4 71 7f 90 3c c7 45 cc 86 0a 51 4d c7 45 d0 24 2d f8 4a c7 45 c8 36 4a b3 23 c7 45 d8 ae 4a 77 53 8b 4d cc 0f af 4d d0 0b 4d c8 0b 4d d8 89 4d d4 83 7d 0c 00 74 09}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

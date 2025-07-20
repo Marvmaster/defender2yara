@@ -23,6 +23,7 @@ rule Trojan_MSIL_GenKryptik_ELPQ_2147758231_0
         $x_1_8 = "gra1.FormGame.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

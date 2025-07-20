@@ -23,6 +23,7 @@ rule Ransom_Win64_Qilin_B_2147917635_0
         $x_1_9 = "| ForEach-Object { Stop-VM -Name $_.Name -Force -Confirm:$false" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

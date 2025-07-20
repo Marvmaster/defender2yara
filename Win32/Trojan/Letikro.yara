@@ -18,6 +18,7 @@ rule Trojan_Win32_Letikro_A_2147633094_0
         $x_1_4 = "LEGO_MUTEX2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Trojan_Win32_Letikro_B_2147637565_0
         $x_3_4 = "Mimicker, FSB-POWER 2008-9" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or

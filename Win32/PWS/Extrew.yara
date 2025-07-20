@@ -17,6 +17,7 @@ rule PWS_Win32_Extrew_A_2147627979_0
         $x_1_3 = {25 73 5c 25 64 2e 57 57 57 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule PWS_Win32_Extrew_B_2147627980_0
         $x_1_2 = {68 e8 03 00 00 ff 15 ?? ?? ?? ?? 8b 75 ?? 81 fe 00 00 40 00 72 d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

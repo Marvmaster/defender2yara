@@ -17,6 +17,7 @@ rule MonitoringTool_Win32_eBlaster_4763_0
         $x_5_3 = "Your eBlaster Serial number is invalid." wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

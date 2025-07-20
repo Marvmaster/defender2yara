@@ -18,6 +18,7 @@ rule Backdoor_Win32_Nervos_A_2147633720_0
         $x_1_4 = "NF:%i,%X" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

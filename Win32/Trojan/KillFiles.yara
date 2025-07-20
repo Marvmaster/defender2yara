@@ -21,6 +21,7 @@ rule Trojan_Win32_KillFiles_AN_2147818986_0
         $x_1_6 = "File1_Click" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_KillFiles_RP_2147906276_0
         $x_10_4 = {8b 0e 66 41 d3 db 66 45 8b 5e 08 40 f6 d7 44 0f ab ef 49 81 c6 0a 00 00 00 36 66 45 89 19 40 80 ef 2d f5 48 81 ee 04 00 00 00 48 0f b7 ff 8b 3e f7 c1 ?? ?? ?? ?? 45 3a f8 41 33 f8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -70,6 +72,7 @@ rule Trojan_Win32_KillFiles_CCIN_2147924340_0
         $x_1_1 = {33 d2 8d 0c 3e 8b c6 46 f7 75 f4 8a 82 ?? ?? ?? ?? 8b 55 fc 32 04 0a 88 01 3b f3 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win32_KillFiles_TMX_2147944947_0
         $x_1_1 = {8a 0c 06 8d 41 01 fe c9 80 e2 01 0f b6 c0 0f b6 c9 0f 45 c8 8b 45 e4 88 0c 06 46 3b f7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win32_Srendiv_A_2147626117_0
         $x_1_7 = "%s -self" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_Srendiv_A_2147626117_1
         $x_1_9 = "stormliv.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

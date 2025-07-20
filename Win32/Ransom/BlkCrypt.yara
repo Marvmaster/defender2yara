@@ -20,6 +20,7 @@ rule Ransom_Win32_BlkCrypt_SL_2147772043_0
         $x_1_5 = "pay for code: InstantRansom@gmail.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

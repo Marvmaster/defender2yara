@@ -17,6 +17,7 @@ rule Backdoor_Win32_Lerif_A_2147682510_0
         $x_1_3 = {50 00 6c 00 7a 00 46 00 72 00 7a 00 [0-10] 46 00 55 00 43 00 4b 00 59 00 4f 00 55 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

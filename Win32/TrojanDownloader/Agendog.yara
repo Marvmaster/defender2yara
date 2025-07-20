@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Agendog_A_2147605988_0
         $x_1_4 = {68 74 74 70 3a 2f 2f 77 62 2e 78 69 61 7a 61 69 7a 68 65 2e 6e 65 74 2f 6e 2e 65 78 65 00 41 41 41 41}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))

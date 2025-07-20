@@ -25,6 +25,7 @@ rule Worm_Win32_Dilly_A_2147615327_0
         $x_1_11 = {ff ff ff ff 04 00 00 00 68 61 72 64 00 00 00 00 ff ff ff ff 04 00 00 00 70 6f 72 6e 00 00 00 00 ff ff ff ff 03 00 00 00 61 73 73 00 ff ff ff ff 05 00 00 00 64 69 6c 64 6f 00 00 00 ff ff ff ff 06 00 00 00 69 6e 63 65 73 74 00 00 ff ff ff ff 04 00 00 00 70 65 64 6f 00 00 00 00 ff ff ff ff 06 00 00 00 66 75 63 6b 65 64 00 00 ff ff ff ff 04 00 00 00 70 69 73 73 00 00 00 00 ff ff ff ff 05 00 00 00 6c 65 73 62 69 00 00 00 ff ff ff ff 05 00 00 00 67 69 72 6c 73 00 00 00 ff ff ff ff 06 00 00 00 61 6e 67 65 6c 73 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

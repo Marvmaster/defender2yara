@@ -21,6 +21,7 @@ rule Ransom_Win32_Morsp_ST_2147762665_0
         $x_1_6 = "After receiving bitcoins We will send you any you need to restore normal operation of your network" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

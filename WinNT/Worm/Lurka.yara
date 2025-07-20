@@ -17,6 +17,7 @@ rule Worm_WinNT_Lurka_A_2147597947_0
         $x_1_3 = {89 45 fc eb 3b c7 45 fc 06 00 00 80 eb 32 33 f6 39 35 ?? ?? 01 00 74 25 8d 45 e8 50 53 ff 75 30 e8 ?? ?? ff ff 84 c0 74 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

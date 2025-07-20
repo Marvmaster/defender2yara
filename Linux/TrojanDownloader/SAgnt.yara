@@ -20,6 +20,7 @@ rule TrojanDownloader_Linux_SAgnt_A_2147825990_0
         $x_1_5 = "ln -s /etc/init.d/taskgrm- /etc/rc.d/rc5.d/taskgrm-" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

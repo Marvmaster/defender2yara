@@ -17,6 +17,7 @@ rule Ransom_Win64_Magniber_ZZ_2147787867_0
         $x_1_3 = {40 30 39 41 03 ff 81 ff ff 00 00 00 41 0f 44 ff 49 03 cf 49 2b d7 75 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Ransom_Win64_Magniber_DA_2147788025_0
         $x_1_1 = {8b d6 45 8d 7c 24 01 48 8b d8 49 8b ce 40 30 39 41 03 ff 81 ff ff 00 00 00 41 0f 44 ff 49 03 cf 49 2b d7 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_Win64_Magniber_AD_2147809472_0
         $x_2_12 = {48 ff c6 e9 05 00 48 ff c6 48 ff c7 48 ff c1 48 81 f9 ?? ?? ?? ?? 8a 86 ?? ?? ?? ?? 32 86 ?? ?? ?? ?? 32 c2 8a d0 88 07 48 ff c6}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -98,6 +101,7 @@ rule Ransom_Win64_Magniber_2147816453_0
         $x_1_4 = {48 ff c6 eb 05 00 48 ff c6 48 ff c7 48 ff c2 48 81 fa ?? ?? 00 00 8a ae ?? ?? 00 00 32 e9 80 f5 ?? 88 2f 8a cd 48 ff c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -119,6 +123,7 @@ rule Ransom_Win64_Magniber_ADA_2147818567_0
         $x_1_1 = {48 ff c6 eb 05 00 48 ff c6 48 ff c7 48 ff c2 48 81 fa ?? ?? ?? ?? 8a ae ?? ?? ?? ?? 32 e8 80 f5 ?? 88 2f 8a c5 48 ff c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule Ransom_Win64_Magniber_A_2147836454_0
         $x_1_6 = " /i:../../../" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +175,7 @@ rule Ransom_Win64_Magniber_A_2147836454_1
         $x_1_6 = {2f 00 45 00 3a 00 56 00 42 00 53 00 63 00 72 00 69 00 70 00 74 00 2e 00 45 00 6e 00 63 00 6f 00 64 00 65 00 20 00 [0-4] 2e 00 2e 00 2f 00 2e 00 2e 00 2f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -194,6 +201,7 @@ rule Ransom_Win64_Magniber_A_2147836454_2
         $x_1_6 = {3c 2f 68 74 6d 6c 3e 00 e8 00 00 00 00 58 48 83 e8 05 48 2d ?? ?? 00 00 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +230,7 @@ rule Ransom_Win64_Magniber_PC_2147841939_0
         $x_1_8 = {48 ff c1 e9 cf 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +252,7 @@ rule Ransom_Win64_Magniber_CR_2147841940_0
         $x_1_1 = {48 ff c1 e9 50 ff ff ff 7a 5e 6f 0d 9b 8e 3e b7 2e 13 99 a2 c8 a2 da 45 86 5e eb 94 43 1a 5b 18 c8 1e 65 b3 5d df f7 db 56 8a d0 e9 40 ff ff ff 2f 36 90 06 e6 eb 05 bf 73 af 37 04 48 ff c6 e9 f8 fe ff ff d5 56 2c 56 a2 5e 21 ca 65 ed c6 d2 8a 86 ed 02 00 00 eb 15 ca d6 27 60 91 b5 0c 69 2a c7 dc 92 2c c4 f3 59 e9 49 fd ff ff 32 86 c0 02 00 00 e9 1f ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -265,6 +275,7 @@ rule Ransom_Win64_Magniber_PAA_2147842062_0
         $x_1_2 = {4c 8b fc eb 05 00 4c 8b fc 48 83 e4 ?? 48 8b ec 48 83 ec ?? 48 33 db 48 c7 c7 ?? ?? ?? ?? 48 89 7d ?? 48 89 5d ?? 49 c7 c6 ?? ?? ?? ?? 49 81 f6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +297,7 @@ rule Ransom_Win64_Magniber_PAB_2147842913_0
         $x_2_1 = {48 33 d2 eb 05 00 48 33 d2 32 c0 8a a6 ?? ?? ?? ?? 32 a6 ?? ?? ?? ?? 32 e0 8a c4 88 27 48 ff c6 48 ff c7 48 ff c2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +324,7 @@ rule Ransom_Win64_Magniber_A_2147848494_0
         $x_1_6 = {b9 4c 77 d6 07 e8 ?? ?? ?? ?? 48 8d [0-8] ff d0 b9 49 f7 02 78 4c 8b e0 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -337,6 +350,7 @@ rule Ransom_Win64_Magniber_PAC_2147848875_0
         $x_2_5 = {48 ff c6 eb 05 00 48 ff c6 ff 05 ?? ?? ?? ?? 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 8a 8a ?? ?? ?? ?? 32 8a ?? ?? ?? ?? 32 0d ?? ?? ?? ?? 88 0d ?? ?? ?? ?? 88 0e 48 ff c2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -362,6 +376,7 @@ rule Ransom_Win64_Magniber_B_2147849407_0
         $x_1_5 = {74 6d dd 6e c7 45 ?? 07 c0 75 4e 48 c7 ?? ?? 00 02 00 00 48 89 ?? ?? c7 44 ?? ?? 00 10 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -387,6 +402,7 @@ rule Ransom_Win64_Magniber_B_2147849407_1
         $x_1_5 = {74 6d dd 6e c7 45 ?? 07 c0 75 4e 48 c7 ?? ?? 00 02 00 00 48 89 ?? ?? c7 44 ?? ?? 00 10 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +428,7 @@ rule Ransom_Win64_Magniber_B_2147849407_2
         $x_1_5 = {74 6d dd 6e c7 45 ?? 07 c0 75 4e 48 c7 ?? ?? 00 02 00 00 48 89 ?? ?? c7 44 ?? ?? 00 10 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -433,6 +450,7 @@ rule Ransom_Win64_Magniber_PAI_2147851012_0
         $x_2_1 = {32 82 72 0c 00 00 32 05 ?? ?? ?? ?? 88 05 9e 3d 01 00 88 06 48 ff c2 48 ff c6 ff 05 ?? ?? ?? ?? 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 8a 82 8f 0c 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -454,6 +472,7 @@ rule Ransom_Win64_Magniber_GA_2147932059_0
         $x_1_1 = {8a a6 e1 09 00 00 32 e0 80 f4 fe 88 27 8a c4 48 ff c6 48 ff c7 48 ff c1 48 81 f9 8b 9c 00 00 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

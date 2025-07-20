@@ -20,6 +20,7 @@ rule Ransom_Win32_Rozbeh_AN_2147821833_0
         $x_1_5 = "Scanner.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

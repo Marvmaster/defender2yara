@@ -18,6 +18,7 @@ rule Trojan_Win64_Zariza_MX_2147926837_0
         $x_2_3 = "deco.dll" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule Trojan_Win64_Zariza_ARA_2147928716_0
         $x_2_1 = {48 8b 00 49 8b 4c 24 e8 8a 04 01 44 28 f0 48 8b 4c 24 30 42 88 04 31 49 ff c6 e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win64_Zariza_ARAZ_2147929329_0
         $x_2_1 = {48 8b 44 24 ?? 48 89 45 00 48 c7 45 08 04 00 00 00 44 88 0e 49 ff c1 4d 89 ec e9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

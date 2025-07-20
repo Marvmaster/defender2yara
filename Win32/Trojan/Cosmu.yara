@@ -21,6 +21,7 @@ rule Trojan_Win32_Cosmu_BG_2147827180_0
         $x_1_6 = "temp\\bot.log" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win32_Cosmu_AQ_2147830322_0
         $x_1_7 = "***BELARUS-VIRUS-MAKER***" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win32_Cosmu_ARA_2147836265_0
         $x_1_2 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Trojan_Win32_Cosmu_AN_2147837850_0
         $x_1_2 = {6c 45 78 65 63 75 74 65 45 78 00 00 18 35 40 00 28 35 40 00 00 00 04 00 78}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Trojan_Win32_Cosmu_EM_2147844977_0
         $x_1_5 = "bnWcseZrif" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Trojan_Win32_Cosmu_AC_2147847640_0
         $x_1_1 = {51 8d 54 24 3c 50 52 55 ff d3 8d 44 24 1c 8d 4c 24 34 50 68 ?? ?? ?? ?? 51 56 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_Win32_Cosmu_ASB_2147889135_0
         $x_1_2 = {9e 78 06 01 55 3a 83 83 dd 5d f9 73 2a 67 a4 e5 56 95 e9 af 16 1a 29 1d 0f 1d 07 bf 54 a7 72 ec 1a b4 9a e8 07 8f d9 72 ab 53 a9 e5 b5 db 48 e9 33 ca b7 88 a7 fa aa b7 5c c8 d0 b7 45 12 83 84 f0 0e 7e 8b 9c 68 22 39 40 38 40 13 6c 53 69 1d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -182,6 +189,7 @@ rule Trojan_Win32_Cosmu_ASC_2147901190_0
         $x_1_2 = {c9 c3 56 e8 0a 37 00 00 50 5e 09 f6 75 02 5e c3 ff 74 24 08 56 e8 40 fd ff ff f7 d8 1b c0 59 f7 d0 59 23 c6 5e c3 55 54 5d 51 51 8d 45 f8 50 ff 15 8c e0 40 00 8b 45 f8 8b 4d fc 6a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -209,6 +217,7 @@ rule Trojan_Win32_Cosmu_MA_2147901641_0
         $x_1_7 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +239,7 @@ rule Trojan_Win32_Cosmu_GPX_2147910299_0
         $x_4_1 = {8f 19 1a 23 d1 31 36 d1 55 2b 89 2d 82 c3 64 3b 00 e1 a1 ff 0f 27 db a9 70 5b 1d fd 7d ae 00 c6 44 63 2a 1c f0 53 2a dc 42 ac 04 06 17 34 17 29 ea b2 03 70 f7 3e 4c 9d bc 9e 17 76 05 99 46 3c 2f 5a 17 cf a3 06 c4 28 c7 bb 78 95 32 ac d9 dc 6b 10 82 99 e9 2d ff cd 37 01 a9 d2 74 ab 4f 37 a2 3e 5d ab f6 b1 cd b9 0b 44 30 c5 f7 f7 75 ab}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -255,6 +265,7 @@ rule Trojan_Win32_Cosmu_DA_2147913278_0
         $x_1_5 = ".files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -277,6 +288,7 @@ rule Trojan_Win32_Cosmu_RB_2147913659_0
         $x_1_2 = {b9 0a 00 00 00 33 c0 8d 7d c8 33 db f3 ab b9 0a 00 00 00 8d 7d 80 f3 ab a1 f0 a4 47 00 89 5d c4 3b c3 89 5d c0 89 5d bc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +310,7 @@ rule Trojan_Win32_Cosmu_GNE_2147924710_0
         $x_10_1 = {30 74 ea 2a 00 db 33 34 3a b1 94 ?? ?? 97 d2 60 13 f2 14 ?? 2a 2e}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

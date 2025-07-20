@@ -25,6 +25,7 @@ rule Trojan_Win64_Dedok_MA_2147918657_0
         $x_1_10 = "screenshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 8 of ($x_1_*))) or
             (all of ($x*))

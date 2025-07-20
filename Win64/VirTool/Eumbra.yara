@@ -22,6 +22,7 @@ rule VirTool_Win64_Eumbra_A_2147757236_0
         $x_1_8 = {c7 44 24 30 00 01 80 00 48 c7 44 24 28 00 00 00 00 48 c7 44 24 20 00 00 00 00 [0-32] 48 89 45 ?? 48 83 7d ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -55,6 +56,7 @@ rule VirTool_Win64_Eumbra_A_2147757236_1
         $x_1_10 = "{\"id\":\"%s\",\"opcode\":%d,\"data\":\"%s\"}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

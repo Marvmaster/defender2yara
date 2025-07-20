@@ -21,6 +21,7 @@ rule Worm_Win32_Banwarum_gen_A_2147573757_0
         $x_1_6 = {00 00 50 00 02 00 00 00 04 00 0f 00 ff ff 00 00 b8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*) and 2 of ($x_2_*))) or
@@ -61,6 +62,7 @@ rule Worm_Win32_Banwarum_gen_A_2147573758_0
         $x_1_15 = {41 00 b2 02 b0 02 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_2_*) and 2 of ($x_1_*))) or
             ((8 of ($x_2_*))) or

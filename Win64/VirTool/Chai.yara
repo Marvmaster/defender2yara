@@ -17,6 +17,7 @@ rule VirTool_Win64_Chai_A_2147907236_0
         $x_1_3 = {48 89 5c 24 38 44 8d 43 50 89 5c 24 30 ?? ?? ?? ?? ?? ?? ?? c7 44 24 28 03 00 00 00 45 33 c9 48 8b c8 48 89 5c 24 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

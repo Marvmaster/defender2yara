@@ -18,6 +18,7 @@ rule PWS_Win32_Yokoyou_A_2147611521_0
         $x_1_4 = {41 74 78 74 50 61 73 73 77 6f 72 64 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule PWS_Win32_Yokoyou_B_2147646208_0
         $x_1_6 = "Active%c%c%c%c." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))

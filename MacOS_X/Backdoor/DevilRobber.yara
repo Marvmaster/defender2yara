@@ -20,6 +20,7 @@ rule Backdoor_MacOS_X_DevilRobber_A_2147651032_0
         $x_3_6 = {be 81 80 80 80 53 31 db 89 d9 0f af cb 83 c1 17 89 c8 f7 e6 c1 ea 07 89 d0 c1 e0 08 29 d0 29 c1 88 0c 1f 43 81 fb 00 01 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -49,6 +50,7 @@ rule Backdoor_MacOS_X_DevilRobber_B_2147651614_0
         $x_3_7 = {89 e5 56 8b 75 08 53 8b 5d 0c 0f b6 04 16 84 c0 75 04 31 c0 eb 14 32 04 0a 88 04 13 42 81 fa 01 01 00 00 75 e5 b8 01 00 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*))) or

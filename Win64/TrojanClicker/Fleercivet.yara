@@ -18,6 +18,7 @@ rule TrojanClicker_Win64_Fleercivet_A_2147688791_0
         $x_1_4 = {00 63 6c 69 63 6b 65 72 36 34 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanClicker_Win64_Fleercivet_B_2147689891_0
         $x_1_7 = "aa19dff7[|]%08X[|]%s[|]%d[|]%s[|]127.0.0.1[|]%d[|]%d[|]%d.%d[|]%d[|]%d[|]%d[|]%d[|]%d[|]%d[|]%d[|]%d[|]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or

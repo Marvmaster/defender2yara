@@ -16,6 +16,7 @@ rule Backdoor_Win32_Fludupot_A_2147631488_0
         $x_1_2 = {53 65 6e 64 46 6c 6f 6f 64 [0-4] 53 74 6f 70 46 6c 6f 6f 64 [0-4] 53 74 61 72 74 54 43 50 [0-4] 53 74 6f 70 54 43 50 [0-4] 53 74 61 72 74 44 6f 53 [0-4] 53 74 6f 70 44 6f 53}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

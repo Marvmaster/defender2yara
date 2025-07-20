@@ -17,6 +17,7 @@ rule Trojan_Win64_SlickPlummet_A_2147944831_0
         $x_1_2 = "%s:%d:%s(): [+] Starting RawIo disk driver service.." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

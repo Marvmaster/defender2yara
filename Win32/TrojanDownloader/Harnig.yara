@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Harnig_2147800273_0
         $x_2_4 = {65 78 70 6c 6f 72 65 72 2e 65 78 65 00 00 00 00 6b 65 72 6e 65 6c 33 32 2e 64 6c 6c 00 00 00 00 49 73 50 72 6f 63 65 73 73 6f 72 46 65 61 74 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -48,6 +49,7 @@ rule TrojanDownloader_Win32_Harnig_O_2147803104_0
         $x_1_7 = "127.0.0.1 www.scanner.novirusthanks.org" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -73,6 +75,7 @@ rule TrojanDownloader_Win32_Harnig_S_2147803165_0
         $x_2_3 = {ff d6 8a 45 ?? 04 1d 88 45 ?? 8a 45 ?? 83 c4 0c 3a c3 75 06 c6 45 ?? 30 eb 05 04 13 88 45 ?? 0f b7 45 ?? 50 8d 45 ?? 68 ?? ?? ?? ?? 50 ff d6 8a 45 ?? 04 17}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -96,6 +99,7 @@ rule TrojanDownloader_Win32_Harnig_C_2147803330_0
         $x_1_1 = {46 66 8b 1a 66 83 c3 b2 66 89 1a 68 ba 1f 06 00 81 e8 ?? ?? ?? 00 71 01 46 5e 66 83 02 28 66 83 02 28 83 c2 01 42 53 c7 ?? ?? ?? ?? ?? 00 5e 39 f2 75 cd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule TrojanDownloader_Win32_Harnig_P_2147803630_0
         $x_1_1 = {ff 51 50 8b 45 fc 8b 08 8d 95 24 fd ff ff 52 8d 95 90 fe ff ff 52 50 ff 51 2c ?? ?? ?? ?? ?? ?? ?? ?? 81 bd cc fe ff ff 00 00 00 02 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 0f 01 4d f9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +147,7 @@ rule TrojanDownloader_Win32_Harnig_G_2147803768_0
         $x_7_5 = {8b 4d fc 3b 4e 18 5f 5b 75 09 33 c0 eb 13 0f b7 03 eb ed 8b 4d 08 8b 56 1c 8d 04 82 8b 04 08 03 c1}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_7_*))) or
             ((1 of ($x_9_*) and 2 of ($x_7_*))) or
@@ -194,6 +200,7 @@ rule TrojanDownloader_Win32_Harnig_D_2147803782_0
         $x_25_28 = {53 55 ff 15 ?? ?? ?? 00 bf ?? ?? ?? 00 83 c9 ff 33 c0 f2 ae f7 d1 2b f9 50 8b f7 8b d1 8b fd 83 c9 ff f2 ae 8b ca 4f c1 e9 02 f3 a5 8b ca 55 83 e1 03 f3 a4}  //weight: 25, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((19 of ($x_1_*))) or
             ((1 of ($x_2_*) and 17 of ($x_1_*))) or
@@ -255,6 +262,7 @@ rule TrojanDownloader_Win32_Harnig_E_2147803783_0
         $x_5_30 = {8a 17 8a ca 3a 10 75 1c 84 c9 74 12 8a 57 01 8a ca 3a 50 01 75 0e 47 47 40 40 84 c9 75 e2 33 ff 33 c0 eb 07 1b 0c 83 d8 ff 33 ff 3b c7}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((19 of ($x_1_*))) or
             ((1 of ($x_2_*) and 17 of ($x_1_*))) or
@@ -296,6 +304,7 @@ rule TrojanDownloader_Win32_Harnig_F_2147803784_0
         $x_5_9 = {00 56 57 8b 7c 24 ?? 57 33 f6 ff d3 85 c0 7e 0c 80 04 3e d1 57 46 ff d3 3b f0 7c f4 5f 5e 5b c2 04 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
@@ -346,6 +355,7 @@ rule TrojanDownloader_Win32_Harnig_I_2147803790_0
         $x_4_26 = {68 74 74 70 3a 2f 2f [0-16] 2e 62 69 7a 2f 70 72 6f 67 73 5f 65 78 65 2f [0-16] 2f [0-16] 2e 70 68 70 3f 61 64 76 3d}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((21 of ($x_1_*))) or
             ((1 of ($x_2_*) and 19 of ($x_1_*))) or
@@ -378,6 +388,7 @@ rule TrojanDownloader_Win32_Harnig_AB_2147803872_0
         $x_1_5 = {6a 08 59 6a 0c be ?? ?? ?? ?? 33 c0 56 8d 7d c8 68 ?? ?? ?? ?? f3 ab e8 ?? ?? ?? ff 83 c4 0c 56 8d 45 c8 50 ff 15 ?? ?? 40 00 8d 45 c8 50 e8 ?? ?? ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -403,6 +414,7 @@ rule TrojanDownloader_Win32_Harnig_EE_2147803965_0
         $x_50_6 = {55 8b ec 83 ec 44 56 ff 15 ?? ?? ?? ?? 8b f0 8a 06 3c 22 75 14 3c 22 74 08 8a 46 01 46 84 c0 75 f4 80 3e 22 75 0d 46 eb 0a 3c 20 7e 06 46 80 3e 20 7f fa 8a 06 84 c0 74 04 3c 20 7e e9 83 65 e8 00 8d 45 bc 50}  //weight: 50, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_50_*) and 2 of ($x_10_*))) or
@@ -432,6 +444,7 @@ rule TrojanDownloader_Win32_Harnig_K_2147803980_0
         $x_1_5 = {0f 01 4d f9 8b 45 fb 25 00 00 f0 ff 3d 00 00 c0 ff 75 04 c6 45 ff 01 0f b6 45 ff c9 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -457,6 +470,7 @@ rule TrojanDownloader_Win32_Harnig_N_2147804121_0
         $x_1_5 = "%u.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -484,6 +498,7 @@ rule TrojanDownloader_Win32_Harnig_P_2147804207_0
         $x_1_5 = "http://ccfairy.com/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

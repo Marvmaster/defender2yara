@@ -19,6 +19,7 @@ rule Backdoor_Linux_Rivl_A_2147827557_0
         $x_1_4 = "tcpreject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

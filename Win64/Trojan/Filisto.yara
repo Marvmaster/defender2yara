@@ -24,6 +24,7 @@ rule Trojan_Win64_Filisto_D_2147751734_0
         $x_1_9 = {00 4c 6f 61 64 65 72 46 75 6e 63 2e 64 6c 6c 00 49 6e 69 74 69 61 6c 69 7a 65 00 53 65 72 76 69 63 65 4d 61 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Trojan_Win64_Filisto_E_2147751735_0
         $x_1_6 = "m_client_head Base64Encode fail!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -77,6 +79,7 @@ rule Trojan_Win64_Filisto_C_2147912107_0
         $x_1_3 = "c:\\windows\\system32\\midimap.modmCallback" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Trojan_Win64_Filisto_K_2147932634_0
         $x_1_1 = {5c d4 00 00 [0-4] c7 81 60 d4 00 00 00 00 02 00 ?? ?? 68 d4 00 00 [0-7] (30|34|40) 28 01 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

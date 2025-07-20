@@ -17,6 +17,7 @@ rule Trojan_Win32_EventHorizon_A_2147832223_0
         $x_1_2 = {4c 8b 40 08 48 8d 15 ?? fa 0c 00 48 8d 4d d8 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

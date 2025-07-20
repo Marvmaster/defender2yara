@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Qhelp_A_2147597957_0
         $x_1_6 = "HttpQueryInfoA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

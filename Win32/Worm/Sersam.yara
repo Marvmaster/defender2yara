@@ -19,6 +19,7 @@ rule Worm_Win32_Sersam_A_2147659858_0
         $x_1_5 = "USBKey.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_MSIL_Onloc_2147724451_0
         $x_5_4 = "Lockon Ransomware.exe" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

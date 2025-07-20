@@ -21,6 +21,7 @@ rule Trojan_Linux_DaggerFly_A_2147925339_0
         $x_2_6 = {48 81 c4 00 04 00 00 5b 41 5c c9 c3 55 48 89 e5 41 54 53 48 81 ec 00 04 00 00 48 89 fb 48 89 b5 f8 fb ff ff 48 89 95 f0 fb ff ff 48 ?? ?? ?? ?? ?? ?? b8 00 00 00 00 ba 7d 00 00 00 48 89 f7 48 89 d1 f3 48 ab 48 83 bd f0 fb ff ff 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -49,6 +50,7 @@ rule Trojan_Linux_DaggerFly_B_2147934090_0
         $x_1_4 = "get magic_name" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

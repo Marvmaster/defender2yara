@@ -18,6 +18,7 @@ rule Trojan_Win32_Smominru_A_2147724993_0
         $x_1_4 = "c:\\windows\\debug\\lsmose.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

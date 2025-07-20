@@ -19,6 +19,7 @@ rule Trojan_MSIL_Malgent_MBAL_2147838669_0
         $x_1_4 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_Malgent_MBAO_2147838730_0
         $x_1_2 = {58 6e 36 34 43 71 6b 39 47 48 62 33 38 4d 63 41 72 31 77 32 00 00 05 01 00 01 00 00 29 01 00 24 34 62 37}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_MSIL_Malgent_PR_2147933223_0
         $x_1_9 = "gZZm0XrYdyIRihnH0golgTnw==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_MSIL_Malgent_PR_2147933223_1
         $x_1_9 = "l6PjPku2W0NahCbd36HRrMt3OvjY3svw1l1VAr63795ZSuvoliYrT76jhbTr4DE8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -123,6 +127,7 @@ rule Trojan_MSIL_Malgent_PGM_2147940785_0
         $x_2_4 = "PdfAttachProduction.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

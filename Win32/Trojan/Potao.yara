@@ -18,6 +18,7 @@ rule Trojan_Win32_Potao_A_2147645580_0
         $x_1_4 = {48 8d bd 02 ff ff ff 8d b5 00 ff ff ff 89 45 08 33 d2 2b fb 8b c3 2b f3 8a 08 66 c7 44 07 ff 00 00 80 f9 0d 75 05 88 0c 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Potao_B_2147648018_0
         $x_1_5 = {dd 1c 24 33 c0 ff d0 03 00 dd 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Potao_MKV_2147931752_0
         $x_5_1 = {2b c8 0f b6 4c 11 ff 30 0c 02 8b 73 0c 0f b7 53 ?? 0f b6 0c 06 2b d0 30 4c 32 ff 0f b7 4b 10 8b 53 0c 2b c8 40 0f b6 4c 11 ?? 30 4c 02 ff 0f b7 4b 10 d1 e9 3b c1 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule VirTool_Win32_Smestesz_A_2147907210_0
         $x_1_2 = {55 89 e5 83 ec 38 c7 44 24 18 00 00 00 00 c7 44 24 14 80 00 00 00 c7 44 24 10 04 00 00 00 c7 44 24 0c 00 00 00 00 c7 44 24 08 01 00 00 00 c7 44 24 04 00 00 00 80 8b 45 08 89 04 24 ?? ?? ?? ?? ?? 83 ec 1c 89 45 f4 83 7d f4 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

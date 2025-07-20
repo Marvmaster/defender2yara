@@ -17,6 +17,7 @@ rule Trojan_MacOS_GogoKChain_A_2147937781_0
         $x_1_2 = {48 8b 3d 14 33 00 00 48 8b 35 ed 32 00 00 48 8d 15 36 1f 00 00 4c 89 e1 31 c0 41 ff d7 48 89 c7 e8 f4 08 00 00 48 89 45 a0 48 8b 3d fb 32 00 00 48 8b 35 ec 31 00 00 48 8d 15 2d 1f 00 00 48 89 c1 45 31 c0 31 c0 41 ff d7 48 89 c7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

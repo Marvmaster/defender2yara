@@ -17,6 +17,7 @@ rule Trojan_Win32_Lukicsel_A_2147626997_0
         $x_1_3 = {74 2a 8b 04 24 50 6a 00 6a 10 e8 ?? ?? ?? ?? 8b d8 85 db 74 11 6a 00 6a 00 6a 00 8b 44 24 10 50 53 e8 ?? ?? ?? ?? 53 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Lukicsel_D_2147629881_0
         $x_3_4 = {85 f6 72 17 46 33 ff 53 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 85 c0 74 05 43 47 4e 75 ec 81 ff e8 03 00 00 75 04 33 db eb 06}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -68,6 +70,7 @@ rule Trojan_Win32_Lukicsel_E_2147630505_0
         $x_1_4 = {66 83 7b 12 00 74 0c 56 8b 4b 4c 8b d3 8b 43 14 ff 53 10 85 f6 75 0c ba 02 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_Win32_Lukicsel_F_2147637385_0
         $x_1_3 = {6a 00 6a 02 ff 15 ?? ?? ?? ?? 8b d8 85 db 75 ?? e8 ?? ?? ?? ?? 83 f8 02 75 05 e8 ?? ?? ?? ?? 68 e8 03 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_Win32_Lukicsel_G_2147638898_0
         $x_2_3 = {8d 45 08 e8 ?? ?? ?? ?? 32 06 88 07 46 47 4b 75 ef}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -137,6 +142,7 @@ rule Trojan_Win32_Lukicsel_H_2147640733_0
         $x_2_3 = {83 c0 34 03 d8 8d 55 ?? 8b c3 b9 04 00 00 00 e8 ?? ?? ?? ?? 8b 45 ?? 89 45 ?? 8b 5d ?? 83 ee 0a 85 f6 72 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -165,6 +171,7 @@ rule Trojan_Win32_Lukicsel_I_2147645345_0
         $x_10_5 = {32 06 88 07 46 47 4b 75 ef}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -190,6 +197,7 @@ rule Trojan_Win32_Lukicsel_J_2147646923_0
         $x_1_3 = "All Attacks Stopped!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +219,7 @@ rule Trojan_Win32_Lukicsel_L_2147657952_0
         $x_1_2 = {8d 45 08 e8 ?? ?? ?? ?? 32 06 88 07 46 47 4b 75 ef}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

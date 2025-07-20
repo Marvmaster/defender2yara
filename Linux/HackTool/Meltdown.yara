@@ -16,6 +16,7 @@ rule HackTool_Linux_Meltdown_A_2147927963_0
         $x_1_2 = "Checking whether system is affected by Variant 3: rogue data cache load (CVE-2017-5754), a.k.a MELTDOWN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

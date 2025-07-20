@@ -21,6 +21,7 @@ rule Ransom_Win64_Nokoyawa_AA_2147818738_0
         $x_5_7 = {3d 95 39 fb 78}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win64_Nokoyawa_AD_2147818751_0
         $x_1_3 = "Encrypt only selected file" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Ransom_Win64_Nokoyawa_A_2147818790_0
         $x_1_1 = {4e 4f 4b 4f 59 41 57 41 2e 65 78 ?? 20 28 45 6e 63 72 79 70 74 20 61 6c 6c 20 6c 6f 63 61 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Ransom_Win64_Nokoyawa_AB_2147819960_0
         $x_10_3 = {41 b9 18 00 00 00 4c 8d 44 ?? ?? ba 28 c0 53 00 48 8b 4c ?? ?? ff 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule Ransom_Win64_Nokoyawa_AC_2147819961_0
         $x_10_2 = {48 83 ec 28 48 83 3d ?? ?? ?? ?? 00 75 14 48 8d 0d ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 48 89 05 ?? ?? ?? ?? 48 83 3d ?? ?? ?? ?? 00 75 1b 48 8d 15 ?? ?? ?? ?? 48 8b 0d ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 48 89 05 ?? ?? ?? ?? 41 b9 02 00 00 00 44 8b 44 24 ?? 48 8b 54 24 ?? 33 c9 ff 15 ?? ?? ?? ?? 48 83 c4 28}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -128,6 +133,7 @@ rule Ransom_Win64_Nokoyawa_BA_2147827076_0
         $x_1_2 = "NOKOYAWA v2.0.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +155,7 @@ rule Ransom_Win64_Nokoyawa_AL_2147840944_0
         $x_1_1 = {41 8b c4 41 83 c4 01 49 83 c0 01 99 83 e2 0f 03 c2 83 e0 0f 2b c2 48 63 c8 48 8b 44 ?? ?? 42 0f b6 8c 31 ?? ?? ?? ?? 41 32 4c 00 ff 43 88 4c 18 ff 44 3b 64 ?? ?? 41 8b c4 41 83 c4 01 49 83 c0 01 99}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +178,7 @@ rule Ransom_Win64_Nokoyawa_AM_2147840953_0
         $x_1_2 = "RUST_BACKTRACE=full" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +205,7 @@ rule Ransom_Win64_Nokoyawa_AN_2147840954_0
         $x_1_6 = "/set {default} safeboot network" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

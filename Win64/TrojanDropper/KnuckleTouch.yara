@@ -16,6 +16,7 @@ rule TrojanDropper_Win64_KnuckleTouch_A_2147900043_0
         $x_100_1 = {69 f6 fd 43 03 00 33 d2 81 c6 c3 9e 26 00 8b c6 c1 e8 10 25 ff 7f 00 00 f6 c1 01 74}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

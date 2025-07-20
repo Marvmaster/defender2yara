@@ -24,6 +24,7 @@ rule HackTool_Win32_KMSActivator_A_2147743253_0
         $x_1_9 = "VirtualAllocEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule HackTool_Win32_KMSActivator_G_2147766464_0
         $x_1_4 = "Activator.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

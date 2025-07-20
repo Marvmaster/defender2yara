@@ -17,6 +17,7 @@ rule Trojan_Win32_Lebreat_HNA_2147907992_0
         $x_1_2 = {55 89 e5 83 ec ?? c7 04 24 ?? 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

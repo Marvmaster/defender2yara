@@ -20,6 +20,7 @@ rule Backdoor_Win32_Yordanyan_A_2147729834_0
         $x_1_6 = "I'm Updater!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Trojan_Win64_HurlyBurly_B_2147741599_0
         $x_2_6 = {00 73 6b 69 6e 5f 69 6e 73 74 61 6c 6c 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

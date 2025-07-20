@@ -24,6 +24,7 @@ rule Trojan_MSIL_Coinminer_GA_2147751997_0
         $x_1_9 = "Combine" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -51,6 +52,7 @@ rule Trojan_MSIL_Coinminer_SBR_2147760647_0
         $x_1_4 = "vihansoft.ir" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Trojan_MSIL_Coinminer_SBR_2147760647_1
         $x_1_4 = "dGFza21ncg" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +104,7 @@ rule Trojan_MSIL_Coinminer_SBR_2147760647_2
         $x_1_6 = "DownloadDLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule Trojan_MSIL_Coinminer_SBR_2147760647_3
         $x_1_6 = "WindowsRunner.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -160,6 +165,7 @@ rule Trojan_MSIL_Coinminer_SBR_2147760647_4
         $x_1_10 = "PredatorTheMiner.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -186,6 +192,7 @@ rule Trojan_MSIL_Coinminer_DA_2147782197_0
         $x_1_6 = "ConnectionList" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +223,7 @@ rule Trojan_MSIL_Coinminer_DA_2147782197_1
         $x_1_10 = "GetString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -247,6 +255,7 @@ rule Trojan_MSIL_Coinminer_UF_2147809031_0
         $x_1_11 = {00 69 6e 70 75 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +277,7 @@ rule Trojan_MSIL_Coinminer_JRIMI_2147812862_0
         $x_10_1 = {1f 64 73 53 00 00 0a 0a 73 54 00 00 0a 13 05 11 05 20 00 01 00 00 2b 18 11 05 17 2b 05 11 05 0b 2b 07 6f ?? ?? ?? 0a 2b f4 03 2d 02 2b 09 2b 3a 6f ?? ?? ?? 0a 2b e1}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -291,6 +301,7 @@ rule Trojan_MSIL_Coinminer_AVSF_2147818350_0
         $x_1_3 = "a8doSuDitOz1hZe#" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +332,7 @@ rule Trojan_MSIL_Coinminer_MF_2147823227_0
         $x_1_10 = "GetDrives" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -347,6 +359,7 @@ rule Trojan_MSIL_Coinminer_EB_2147835056_0
         $x_1_6 = "Q8gmtVog0EASfN4hD6.NHi3XjvYJAgn09IVuq" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +386,7 @@ rule Trojan_MSIL_Coinminer_RJ_2147838174_0
         $x_1_6 = "*HuTaoConfig*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -394,6 +408,7 @@ rule Trojan_MSIL_Coinminer_ABTX_2147839135_0
         $x_2_1 = {16 0a 2b 0e 20 e8 03 00 00 28 ?? ?? ?? 0a 06 17 58 0a 06 7e 06 00 00 04 28}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -420,6 +435,7 @@ rule Trojan_MSIL_Coinminer_WRA_2147896140_0
         $x_1_6 = "https://api.telegram.org/bot2112414722:AAGuX-HNbrmTUBCQ_UXlO4o-fJHerni8xUw/sendMessage?chat_id=-1001777723555&text=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -442,6 +458,7 @@ rule Trojan_MSIL_Coinminer_AIU_2147904180_0
         $x_1_2 = "/15.161.701.901//:ptth" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -463,6 +480,7 @@ rule Trojan_MSIL_Coinminer_CM_2147942319_0
         $x_1_1 = {02 03 07 58 91 0d 07 17 58 0b 09 20 80 00 00 00 5f 16 fe 01 13 05 11 05 2d 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

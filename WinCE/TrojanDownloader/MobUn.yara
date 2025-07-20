@@ -18,6 +18,7 @@ rule TrojanDownloader_WinCE_MobUn_A_2147643833_0
         $x_1_4 = {5c 53 72 76 55 70 64 61 74 65 72 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

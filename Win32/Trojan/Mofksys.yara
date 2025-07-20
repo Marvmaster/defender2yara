@@ -16,6 +16,7 @@ rule Trojan_Win32_Mofksys_EM_2147851996_0
         $x_5_1 = {c1 e9 02 31 02 83 c2 04 49 0f 85 f4 ff ff ff 5d c2 0c}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Mofksys_A_2147918569_0
         $x_1_2 = "lIEObject_DocumentComplete" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_Mofksys_B_2147918570_0
         $x_1_1 = "A*\\AF:\\RFD\\xNewCode\\xNewPro\\xT\\trjFN\\Project1.vbp" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

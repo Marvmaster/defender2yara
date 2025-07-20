@@ -18,6 +18,7 @@ rule Trojan_MSIL_BitRAT_BR_2147816565_0
         $x_1_3 = {08 28 6f 01 00 0a 28 76 01 00 0a 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_BitRAT_PBA_2147827836_0
         $x_1_5 = {48 ff 25 42 17 00 00 cc cc 48 89 5c 24 08 57 48 83 ec 30 33 db 4c 8d 4c 24 58 48 89 5c 24 20 41 8b f8 ff 15 ?? ?? ?? 00 85 c0 74 0b 3b 7c 24 58 75 05 bb 01 00 00 00 8b c3 48 8b 5c 24 40 48 83 c4 30 5f c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_MSIL_BitRAT_ABFZ_2147837425_0
         $x_1_5 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_MSIL_BitRAT_NAT_2147841232_0
         $x_1_3 = "Hiez" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_MSIL_BitRAT_B_2147841508_0
         $x_2_4 = "fsfffafad" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -139,6 +144,7 @@ rule Trojan_MSIL_BitRAT_NNB_2147841596_0
         $x_1_4 = "WinForms_SeeInnerException" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +168,7 @@ rule Trojan_MSIL_BitRAT_NIT_2147841597_0
         $x_1_3 = "BitRAT.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule Trojan_MSIL_BitRAT_NTB_2147842031_0
         $x_1_3 = "Sqgswympxpaekumacsvqyqi" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +214,7 @@ rule Trojan_MSIL_BitRAT_ABR_2147843999_0
         $x_1_1 = {16 0a 2b 1b 00 7e 48 00 00 04 06 7e 48 00 00 04 06 91 20 c0 02 00 00 59 d2 9c 00 06 17 58 0a 06 7e 48 00 00 04 8e 69 fe 04 0b 07 2d d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -229,6 +238,7 @@ rule Trojan_MSIL_BitRAT_AB_2147844461_0
         $x_1_3 = "Engo.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -250,6 +260,7 @@ rule Trojan_MSIL_BitRAT_FAS_2147846146_0
         $x_5_1 = {58 4a 07 8e 69 5d 91 61 28 ?? 01 00 06 03 06 1a 58 4a 1d 58 1c 59 03 8e 69 5d 91 59 20 fd 00 00 00 58 19 58 20 00 01 00 00 5d d2 9c 06 1a 58 06 1a 58 4a 17 58 54 06 1a 58 4a 6a 03 8e 69 17 59 16 2d fb 6a 06 4b 17 58 6e 5a 31 95 18 2c e7}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +283,7 @@ rule Trojan_MSIL_BitRAT_FAT_2147846147_0
         $x_5_2 = {03 08 03 8e 69 5d 7e ?? 00 00 04 03 08 03 8e 69 5d 91 07 08 07 8e 69 5d 91 61 28 ?? 00 00 06 03 08 1e 58 1d 59 03 8e 69 5d 91 59 20 ?? 00 00 00 58 18 58 20 00 01 00 00 5d d2 9c 08 17 58 16 2c 3f 26 08 6a 03 8e 69 15 2c fc 17 59 6a 06 17 58 16 2d fb}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -295,6 +307,7 @@ rule Trojan_MSIL_BitRAT_MBIB_2147889317_0
         $x_1_3 = "1.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -320,6 +333,7 @@ rule Trojan_MSIL_BitRAT_NIB_2147891166_0
         $x_1_2 = "Zanobe.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -342,6 +356,7 @@ rule Trojan_MSIL_BitRAT_C_2147891343_0
         $x_2_2 = "aspnet_wp" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -365,6 +380,7 @@ rule Trojan_MSIL_BitRAT_ABGY_2147896498_0
         $x_1_3 = "Ifeceyyy" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_MSIL_RedLinePacker_2147813639_0
         $x_1_3 = {7e 01 00 00 04 19 91 1f 18 62 60 6f 1c 00 00 0a 25 6f 1d 00 00 0a 8e 69 8d 06 00 00 01 13 04 11 04 8e 2c 05 11 04 16 02 a2 14 11 04 6f 1e 00 00 0a 13 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Frovserp_B_2147687508_0
         $x_1_5 = "PMLauncher.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

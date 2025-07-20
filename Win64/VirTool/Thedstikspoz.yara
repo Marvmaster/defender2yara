@@ -19,6 +19,7 @@ rule VirTool_Win64_Thedstikspoz_A_2147817502_0
         $x_1_4 = {48 89 7c 24 30 89 7c 24 28 c7 44 24 20 03 00 00 00 45 33 c9 ba 00 00 00 80 45 8d ?? ?? 48 8b 4b 08 ff 15 ?? ?? ?? ?? 4c 8b f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

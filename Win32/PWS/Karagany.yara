@@ -19,6 +19,7 @@ rule PWS_Win32_Karagany_A_2147806604_0
         $x_1_5 = {8b 13 8a 54 32 ff 80 f2 5c 88 54 30 ff 46 4f 75 ?? 8b 03 0f b6 70 02 8b 03 0f b6 78 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

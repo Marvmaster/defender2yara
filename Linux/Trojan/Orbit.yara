@@ -20,6 +20,7 @@ rule Trojan_Linux_Orbit_A_2147826080_0
         $x_1_5 = "sniff_ssh_session" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((3 of ($x_5_*))) or

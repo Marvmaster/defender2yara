@@ -39,6 +39,7 @@ rule Backdoor_Win32_Hilterat_Server_2147592551_0
         $x_1_24 = "Uploaded Successfully" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +85,7 @@ rule Backdoor_Win32_Hilterat_Client_2147592552_0
         $x_1_25 = "HitleRAT v1.0 Client" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

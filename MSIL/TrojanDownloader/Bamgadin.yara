@@ -29,6 +29,7 @@ rule TrojanDownloader_MSIL_Bamgadin_2147696086_0
         $x_1_15 = {61 00 75 00 74 00 6f 00 [0-4] 7b 00 30 00 7d 00 20 00 7b 00 31 00 7d 00 20 00 [0-4] 43 00 72 00 65 00 61 00 74 00 65 00 [0-4] 62 00 69 00 6e 00 50 00 61 00 74 00 68 00 3d 00 20 00 22 00 7b 00 30 00 7d 00 22 00 20 00 20 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((2 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -69,6 +70,7 @@ rule TrojanDownloader_MSIL_Bamgadin_A_2147707248_0
         $x_1_8 = "selcuk@globaltech.com.tr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or

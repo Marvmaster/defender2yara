@@ -16,6 +16,7 @@ rule Trojan_Win64_AsyncRat_RPX_2147902277_0
         $x_1_1 = {41 b9 40 00 00 00 31 c9 41 b8 00 10 00 00 ba d3 ca 00 00 ff 10 b9 d0 07 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_AsyncRat_RPY_2147902278_0
         $x_1_1 = {8b c2 c1 c9 08 41 03 c8 8b d3 41 33 c9 c1 ca 08 41 03 d1 41 c1 c0 03 41 33 d2 41 c1 c1 03 44 33 ca 44 33 c1 41 ff c2 41 8b db 44 8b d8 41 83 fa 1b 72 cd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win64_AsyncRat_CCHU_2147903527_0
         $x_1_1 = {4c 8d 8c 24 60 02 00 00 4c 8d 84 24 30 02 00 00 48 8d 15 ?? ?? 01 00 48 8d 0d ?? ?? 01 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win64_AsyncRat_ASC_2147922422_0
         $x_3_2 = {4d 89 c1 49 89 c8 48 89 c1 48 8b 05 5a 6b 00 00 ff d0 48 8b 85 78 04 00 00 48 8d 50 30 48 8b 85 70 04 00 00 48 8b 80 88 00 00 00 48 83 c0 10 48 89 c1 48 8b 85 40 04 00 00 48 c7 44 24 20 00 00 00 00 41 b9 08 00 00 00 49 89 d0 48 89 ca 48 89 c1}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_Win64_AsyncRat_ASC_2147922422_1
         $x_3_3 = "https://github.com/errias/XWorm-Rat-Remote-Administration-Tool-/raw/main/XWormUI.exe" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +130,7 @@ rule Trojan_Win64_AsyncRat_ASY_2147926329_0
         $x_1_2 = "loader\\x64\\Release\\Espio.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +153,7 @@ rule Trojan_Win64_AsyncRat_BSA_2147926523_0
         $x_10_2 = {31 d2 e8 bf 5c 06 00 48 8b 36 e8 8b 51 06 00 48 89 f1 89 c2 49 89 f8 e8 6e 4d 06 00 83 f8 ff 0f 84 98}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -169,6 +176,7 @@ rule Trojan_Win64_AsyncRat_BT_2147936628_0
         $x_1_2 = {4d 01 c1 49 81 c1 ?? 00 00 00 45 8b 11}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +199,7 @@ rule Trojan_Win64_AsyncRat_BU_2147937165_0
         $x_2_2 = {48 8b 45 e0 c7 05 ?? ?? ?? ?? ?? ?? 00 00 48 8b 4d f8 8a 14 01 4c 8b 45 e8 41 88 14 00 48 05 01 00 00 00 4c 8b 4d f0 4c 39 c8 48 89 45 e0 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +221,7 @@ rule Trojan_Win64_AsyncRat_CCJX_2147941161_0
         $x_5_1 = {33 d2 48 8b c7 49 f7 f6 49 8d 0c 39 41 0f b6 04 0a 42 32 04 02 88 01 48 ff c7 49 3b fd 72}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +243,7 @@ rule Trojan_Win64_AsyncRat_CCJY_2147942343_0
         $x_6_1 = {41 83 f1 85 45 88 4c 1b ff 48 ff c0 4c 89 de 48 39 05 ad e7 0f 00 7e ?? 4c 8b 0d 9c e7 0f 00 4c 8d 5e 01 45 0f b6 0c 01 4c 39 d9 73}  //weight: 6, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

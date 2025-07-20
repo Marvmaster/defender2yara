@@ -25,6 +25,7 @@ rule TrojanSpy_Win32_BrobanLaw_A_2147692521_0
         $x_1_11 = "CampoLivre" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

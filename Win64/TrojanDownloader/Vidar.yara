@@ -31,6 +31,7 @@ rule TrojanDownloader_Win64_Vidar_A_2147827732_0
         $x_1_16 = "ShellExecuteW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

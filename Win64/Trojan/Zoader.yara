@@ -22,6 +22,7 @@ rule Trojan_Win64_Zoader_ER_2147809570_0
         $x_3_7 = "powershell Invoke-WebRequest " ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

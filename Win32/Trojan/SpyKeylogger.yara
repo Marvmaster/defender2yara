@@ -20,6 +20,7 @@ rule Trojan_Win32_SpyKeylogger_SE_2147851243_0
         $x_1_5 = "GetWindowTextA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_SpyKeylogger_GPB_2147891582_0
         $x_2_2 = {08 1a 74 25 e8 42 c3 89 4b b8 48 24 2a 79 40 97 72 e1 2f 7c 0c 90 0e c8 c6 8f 06 b0 b6 74 5f aa ec f3 d7 b1 70 13 5f 81 8a 05 96 80 57 f4 20 4f e5 53 3f 49 dd 03 2f be 63 03 17 58 92 98 95 63}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_SpyKeylogger_DE_2147901574_0
         $x_1_6 = "Task Manager" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

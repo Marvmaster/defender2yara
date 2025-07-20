@@ -16,6 +16,7 @@ rule VirTool_Win64_Shadowdump_A_2147926328_0
         $x_1_2 = {4c 8b d1 b8 26 00 00 00 0f 05 c3 4c 8b d1 b8 0f 00 00 00 0f 05 c3 4c 8b d1 b8 55 00 00 00 0f 05 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

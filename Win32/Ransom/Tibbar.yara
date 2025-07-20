@@ -16,6 +16,7 @@ rule Ransom_Win32_Tibbar_A_2147724193_0
         $x_1_2 = {25 73 2c 23 32 20 25 73 00 00 00 41 44 4d 49 4e 24 00 00 63 73 63 63 2e 64 61 74 00 00 00 00 00 00 00 00 4f 00 6f 00 70 00 73 00 21 00 20 00 59 00 6f 00 75 00 72 00 20 00 66 00 69 00 6c 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule Ransom_Win32_Tibbar_A_2147724193_1
         $x_2_18 = "/Create /SC once /TN drogon /RU SYSTEM /TR" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or

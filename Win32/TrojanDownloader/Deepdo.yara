@@ -21,6 +21,7 @@ rule TrojanDownloader_Win32_Deepdo_2147618418_0
         $x_1_7 = "GetWindowsDirectoryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

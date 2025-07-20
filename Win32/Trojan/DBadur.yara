@@ -19,6 +19,7 @@ rule Trojan_Win32_DBadur_GPA_2147904985_0
         $x_1_4 = "injectData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

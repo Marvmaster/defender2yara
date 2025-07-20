@@ -24,6 +24,7 @@ rule Trojan_Win32_Yahamam_A_2147696246_0
         $x_2_9 = {00 53 57 31 68 5a 32 56 7a 4c 6d 70 77 5a 77 3d 3d 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

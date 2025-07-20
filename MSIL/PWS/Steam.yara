@@ -17,6 +17,7 @@ rule PWS_MSIL_Steam_A_2147653709_0
         $x_2_3 = {53 00 74 00 65 00 61 00 6d 00 20 00 49 00 6f 00 6e 00 6f 00 48 00 61 00 63 00 6b 00 65 00 72 00 20 00 76 00 [0-16] 42 00 79 00 20 00 49 00 6f 00 6e 00 6f 00 50 00 72 00 6f 00 78 00 79 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

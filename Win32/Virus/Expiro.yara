@@ -18,6 +18,7 @@ rule Virus_Win32_Expiro_D_2147599151_0
         $x_1_3 = {0f b6 45 10 39 c7 72 ?? 8a 04 3e 3c 2f 74 ?? 3c 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Virus_Win32_Expiro_F_2147645063_0
         $x_1_4 = {50 8b 38 ff 97 f8 00 00 00 89 (c3|c6)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -69,6 +71,7 @@ rule Virus_Win32_Expiro_G_2147660415_0
         $x_1_3 = {b9 0a 00 00 00 99 f7 f9 0f b6 14 15 ?? ?? ?? ?? 8b 7d ?? 31 d7 89 fa 8b 7d ?? 88 17 66 ff 45 fe}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -93,6 +96,7 @@ rule Virus_Win32_Expiro_CD_2147685148_0
         $x_1_2 = {e8 32 df ff ff e8 4d 91 ff ff e8 88 11 00 00 e8 c9 91 ff ff 68 0f 01 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Virus_Win32_Expiro_EA_2147708748_0
         $x_1_1 = {8b d1 8b 11 85 d2 81 f2 ?? ?? ?? ?? 39 d1 89 10 42 41 4f 41 4f 4f 41 41 4f 81 c0 04 00 00 00 83 ff 00 74 05 e9 d7 ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Virus_Win32_Expiro_EM_2147722965_0
         $x_1_2 = {8d 1a 8b 18 85 db 81 f3 ?? ?? ?? ?? 39 df 89 1f 8d 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Virus_Win32_Expiro_MH_2147729272_0
         $x_1_3 = {89 c1 03 3c 91 89 7d e4 b8 24 00 00 00 99 f7 fb 8b 7d f4 8b 3c 87 89 7d dc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -182,6 +189,7 @@ rule Virus_Win32_Expiro_MI_2147729319_0
         $x_1_3 = {b8 0a 00 00 00 99 f7 fb 89 45 f0 8b 45 20 03 45 18 01 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +213,7 @@ rule Virus_Win32_Expiro_MJ_2147729416_0
         $x_1_3 = {89 c7 8b 75 9c 8b 5d 90 b9 ff 00 00 00 99 f7 f9 88 14 33 ff 45 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +236,7 @@ rule Virus_Win32_Expiro_MK_2147729897_0
         $x_1_2 = {40 8b 06 85 c0 35 ?? ?? ?? ?? 39 c3 89 03 8d 06 4a 4a 4a 83 c3 04 81 c6 04 00 00 00 4a 85 d2 75 df}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -249,6 +259,7 @@ rule Virus_Win32_Expiro_ML_2147730055_0
         $x_1_2 = {40 8b 03 85 c1 35 ?? ?? ?? ?? 39 c3 89 06 8b c6 43 83 c6 04 83 e9 04 43 43 43 83 f9 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -271,6 +282,7 @@ rule Virus_Win32_Expiro_MP_2147730255_0
         $x_1_2 = {4f 8b 39 85 ff 81 f7 ?? ?? ?? ?? 3b df 89 3b 4f 4e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -293,6 +305,7 @@ rule Virus_Win32_Expiro_BAA_2147730406_0
         $x_1_2 = {41 8b 0e 85 c3 81 f1 ?? ?? ?? ?? 3b d9 89 08 89 c1 4b 4b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -315,6 +328,7 @@ rule Virus_Win32_Expiro_BAD_2147730427_0
         $x_1_2 = {8d 03 8b 06 85 c3 35 ?? ?? ?? ?? 39 c6 89 02 29 d8 83}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -337,6 +351,7 @@ rule Virus_Win32_Expiro_BAC_2147730766_0
         $x_1_2 = {4f 8b 3a 85 d8 81 f7 ?? ?? ?? ?? 3b c7 89 3b 8d 3a 48 48}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -361,6 +376,7 @@ rule Virus_Win32_Expiro_AA_2147849666_0
         $x_1_4 = {7b 00 22 00 6f 00 70 00 22 00 3a 00 20 00 22 00 68 00 73 00 22 00 2c 00 20 00 22 00 53 00 65 00 73 00 73 00 69 00 6f 00 6e 00 22 00 3a 00 20 00 7b 00 22 00 62 00 69 00 64 00 22 00 3a 00 20 00 22 00 [0-64] 22 00 2c 00 20 00 22 00 68 00 69 00 64 00 22 00 3a 00 20 00 22 00 [0-64] 22 00 2c 00 20 00 22 00 4d 00 61 00 69 00 6e 00 49 00 44 00 22 00 3a 00 20 00 31 00 2c 00 20 00 22 00 53 00 75 00 62 00 73 00 69 00 64 00 69 00 61 00 72 00 79 00 49 00 44 00 22 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -384,6 +400,7 @@ rule Virus_Win32_Expiro_NDP_2147850746_0
         $x_1_3 = {2e 72 65 6c 6f 63 00 00 00 [0-21] 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -405,6 +422,7 @@ rule Virus_Win32_Expiro_DB_2147851905_0
         $x_1_1 = {01 f1 8b 0a 85 c8 81 f1 ?? ?? ?? ?? 3b f1 89 0e 49 48 48 81 c6 04 00 00 00 48 48 81 c2 04 00 00 00 85 c0 75 db}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -426,6 +444,7 @@ rule Virus_Win32_Expiro_DC_2147852147_0
         $x_1_1 = {52 53 55 56 57 e8 ?? ?? ?? ?? 59 81 e9 ?? ?? ?? ?? bf ?? ?? ?? ?? 51 f7 91 f4 01 00 00 f7 91 d8 01 00 00 81 69 04 84 21 8d 64 81 b1 84 03 00 00 10 68 24 6a 81 b1 ?? ?? ?? ?? b3 02 c7 46 81 71 30 c1 14 44 57 f7 91 08 03 00 00 81 a9 c8 02 00 00 78 7a 6e 25}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -450,6 +469,7 @@ rule Virus_Win32_Expiro_EM_2147852532_0
         $x_3_4 = {81 c7 00 04 00 00 81 c2 00 04 00 00 81 ff 00 c0 08 00 0f 85}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_3_*))) or
@@ -478,6 +498,7 @@ rule Virus_Win32_Expiro_EB_2147852592_0
         $x_3_4 = {c0 08 00 0f 84 0f 00 81 ?? 00 04 00 00 81 ?? 00 04 00 00 81}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((2 of ($x_3_*))) or
@@ -503,6 +524,7 @@ rule Virus_Win32_Expiro_AB_2147888600_0
         $x_1_1 = {8b 43 20 2b ca 29 c1 c1 e9 01 8b c3 83 c0 24 8b 00 01 d0 01 c8 8b 08 81 e1 ?? ?? ?? ?? c1 e1 02 8b 43 1c 03 c1 01 d0 8b 08 bf ?? ?? ?? ?? 03 ca 52 8d 1d ?? ?? ?? ?? b8 00 40 09 00 56 03 de 51 54 57 50 53 ff d1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -525,6 +547,7 @@ rule Virus_Win32_Expiro_CCCF_2147892475_0
         $x_1_2 = {42 8d 13 8b 12 85 f9 81 f2 ?? ?? ?? ?? 3b da 4a 89 17 29 ca 83 e9 04 83 c7 04 83 c3 04 85 c9 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -547,6 +570,7 @@ rule Virus_Win32_Expiro_EK_2147899592_0
         $x_5_2 = {13 0f 84 41 01 00 00 0f 84 95 01 00 00 0f 85 8f 01 00 00 e9 0f 84 9e 00 00 00 47 3b 7c 1e 18 0f 82 70 01 00 00 0f 84 88 00 00 00 0f 85 82 00 00 00 00 00 00 00 57 56 83 ec 40 8b 44 24 54 8b 68 08 8b 38}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -568,6 +592,7 @@ rule Virus_Win32_Expiro_RPY_2147908372_0
         $x_1_1 = {51 01 ca 53 54 50 53 52 ff d7 5b 59 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -589,6 +614,7 @@ rule Virus_Win32_Expiro_AEX_2147923468_0
         $x_1_1 = {81 83 24 02 00 00 74 7a 35 0c f7 93 24 01 00 00 81 83 8c 03 00 00 ff 74 aa 09 81 b3 e0 01 00 00 9a 6b aa 32 81 b3 38 02 00 00 cd 41 5a 63 81 ab e4 00 00 00 ce 46 82 1f 81 ab fc 00 00 00 91 44 39 28 81 b3 d8 03 00 00 0a 13 e7 57 81 ab 7c 02 00 00 cf 4b 75 30 81 b3 b4 00 00 00 51 0c 29 32 81 83 dc 03 00 00 6b 7b d8 1f 81 83 c4 00 00 00 f1 59 98 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -611,6 +637,7 @@ rule Virus_Win32_Expiro_AER_2147928138_0
         $x_1_2 = {56 8d 45 f4 33 f6 50 68 19 00 02 00 56 68 60 43 40 00 68 02 00 00 80 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -632,6 +659,7 @@ rule Virus_Win32_Expiro_HNE_2147928179_0
         $x_1_1 = {53 50 01 d8 54 52 57 50 ff d6 58 5b 52 04 00 40 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -655,6 +683,7 @@ rule Virus_Win32_Expiro_HNT_2147931010_0
         $x_1_3 = {2e 72 65 6c 6f 63 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 40 00 00 60}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -679,6 +708,7 @@ rule Virus_Win32_Expiro_HNW_2147936833_0
         $x_5_1 = {2e 73 79 6d 74 61 62 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 e2}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -700,6 +730,7 @@ rule Virus_Win32_Expiro_HNW_2147936833_1
         $x_5_1 = {2e 72 73 72 63 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 40 00 00 40 2e 72 65 6c 6f 63 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 40 00 00 e2 00 00 00 00 00 00 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

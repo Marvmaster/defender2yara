@@ -24,6 +24,7 @@ rule Trojan_Win32_BHO_LI_2147601435_0
         $x_1_10 = "IETool.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -56,6 +57,7 @@ rule Trojan_Win32_BHO_LJ_2147601578_0
         $x_1_10 = "POST /search?q=%s HTTP/1.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -84,6 +86,7 @@ rule Trojan_Win32_BHO_2147602518_0
         $x_1_4 = "HttpSendRequestA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +113,7 @@ rule Trojan_Win32_BHO_2147602518_1
         $x_1_7 = "HttpOpenRequestA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +138,7 @@ rule Trojan_Win32_BHO_X_2147602577_0
         $x_1_5 = "InternetCrackUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -160,6 +165,7 @@ rule Trojan_Win32_BHO_Y_2147603697_0
         $x_1_3 = "IE(AL(\"%s\"," ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +203,7 @@ rule Trojan_Win32_BHO_A_2147606288_0
         $x_1_18 = {51 8a 44 24 03 53 56 57 a2 ?? c5 40 00 bf ?? c0 40 00 83 c9 ff 33 c0 33 d2 33 f6 f2 ae f7 d1 49}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +227,7 @@ rule Trojan_Win32_BHO_F_2147609618_0
         $x_1_4 = "73A7FFA7-AA3A-49E5-A777-713B7DB78E9C" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -246,6 +254,7 @@ rule Trojan_Win32_BHO_K_2147611022_0
         $x_1_7 = "Internet Explorer_Server" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -272,6 +281,7 @@ rule Trojan_Win32_BHO_Q_2147615788_0
         $x_1_4 = "whill762dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -296,6 +306,7 @@ rule Trojan_Win32_BHO_R_2147616153_0
         $x_1_5 = {00 2f 64 6f 77 6e 6c 6f 61 64 2e 70 68 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +332,7 @@ rule Trojan_Win32_BHO_R_2147616153_1
         $x_1_6 = "exe.sgsmsm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -347,6 +359,7 @@ rule Trojan_Win32_BHO_AB_2147616412_0
         $x_1_3 = {72 62 00 00 77 62 00 00 53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 78 30 30 2e 6c 6e 6b 00 00 00 00 4d 65 64 69 61 00 00 00 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -374,6 +387,7 @@ rule Trojan_Win32_BHO_U_2147616664_0
         $x_1_8 = "MJCore.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -402,6 +416,7 @@ rule Trojan_Win32_BHO_AK_2147620192_0
         $x_1_6 = "InternetSetStatusCallback" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -427,6 +442,7 @@ rule Trojan_Win32_BHO_AL_2147620477_0
         $x_1_6 = {2e 44 4c 4c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -451,6 +467,7 @@ rule Trojan_Win32_BHO_AM_2147620889_0
         $x_3_5 = {6a 40 57 56 ff d5 33 c9 85 ff 76 ?? 8a 04 31 8a d0 f6 d2 32 d0 80 e2 ?? f6 d0 32 d0 88 14 31}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -483,6 +500,7 @@ rule Trojan_Win32_BHO_AN_2147621007_0
         $x_1_7 = "NtQuerySystemInformation" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -505,6 +523,7 @@ rule Trojan_Win32_BHO_AP_2147621388_0
         $x_1_3 = {5c 73 79 73 74 65 6d 33 32 5c 61 64 73 6c 64 70 62 ?? 2e 64 6c 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -528,6 +547,7 @@ rule Trojan_Win32_BHO_AR_2147621651_0
         $x_1_4 = "%s /s /u %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -552,6 +572,7 @@ rule Trojan_Win32_BHO_AS_2147622586_0
         $x_1_5 = "Microsoft Corporation" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -574,6 +595,7 @@ rule Trojan_Win32_BHO_AU_2147624103_0
         $x_1_3 = {68 74 74 70 3a 2f 2f 34 2e 67 75 7a 68 69 6a 69 6a 69 6e 2e 63 6f 6d 2f 62 69 67 64 2f [0-8] 2f 00 00 43 3a 5c 57 49 4e 44 4f 57 53 5c 54 65 6d 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -598,6 +620,7 @@ rule Trojan_Win32_BHO_AV_2147624104_0
         $x_1_5 = {52 61 76 4d 6f 6e 53 00 73 6f 6e 69 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -624,6 +647,7 @@ rule Trojan_Win32_BHO_BA_2147625211_0
         $x_1_4 = "clsid_mymile_01.xml" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -646,6 +670,7 @@ rule Trojan_Win32_BHO_BC_2147625410_0
         $x_1_3 = {99 b9 03 00 00 00 f7 f9 81 fa ?? ?? ?? ?? 75 06 ff 15 05 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -668,6 +693,7 @@ rule Trojan_Win32_BHO_BD_2147625511_0
         $x_1_3 = {6a 32 ff 15 ?? ?? 00 10 8b 45 f4 85 c0 75 05 a1 ?? ?? 00 10 50 ff 75 f8 6a 0c ff 35 ?? ?? 00 10 ff d6 4f 75 db}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -691,6 +717,7 @@ rule Trojan_Win32_BHO_BH_2147626273_0
         $x_10_4 = {47 65 74 48 74 6d 6c 50 77 64 2e 44 4c 4c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -721,6 +748,7 @@ rule Trojan_Win32_BHO_BI_2147626415_0
         $x_1_8 = {73 79 73 74 65 6d 33 32 5c 25 64 00 00 77 77 77 2e 36 36 36 36 2e 38 38 30 30 2e 6f 72 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -744,6 +772,7 @@ rule Trojan_Win32_BHO_BL_2147626724_0
         $x_1_4 = "Microsoft (R) Red ISAM" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -767,6 +796,7 @@ rule Trojan_Win32_BHO_BL_2147626725_0
         $x_1_4 = "974BBDE6-925A-4702-A133-CAFE5C3F5784" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -790,6 +820,7 @@ rule Trojan_Win32_BHO_BP_2147627425_0
         $x_1_4 = {80 7d fe 00 74 30 83 7e 04 00 0f 95 c0 84 d8 74 18 ff 76 10 68 ?? ?? ?? ?? ff 75 f4 8d 45 f4 ba 03 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -812,6 +843,7 @@ rule Trojan_Win32_BHO_BQ_2147627557_0
         $x_1_3 = "<img height=0 width=0 style=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -835,6 +867,7 @@ rule Trojan_Win32_BHO_BR_2147627588_0
         $x_1_4 = "Explorer.MExplorer = s 'MExplorer Class'" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -855,6 +888,7 @@ rule Trojan_Win32_BHO_BS_2147628596_0
         $x_1_1 = {8d 45 fc bf 80 00 00 00 50 8d 85 ?? ?? ff ff 50 57 68 ?? ?? 01 10 e8 ?? ?? 00 00 83 c4 10 85 c0 74 cd 89 75 fc 50 2b c0 85 c0 58 74 02 e8 04 8d 45 fc 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -878,6 +912,7 @@ rule Trojan_Win32_BHO_BT_2147628804_0
         $x_1_4 = {5c 69 65 70 6c 75 67 69 6e 5c 62 68 6f [0-5] 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -904,6 +939,7 @@ rule Trojan_Win32_BHO_LL_2147630040_0
         $x_1_3 = "7957FD21-C584-4476-B26B-4691A7AC4E5D" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -931,6 +967,7 @@ rule Trojan_Win32_BHO_BU_2147630083_0
         $x_1_5 = "\\system32\\dllcache" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -956,6 +993,7 @@ rule Trojan_Win32_BHO_BW_2147630234_0
         $x_1_6 = "flive.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -982,6 +1020,7 @@ rule Trojan_Win32_BHO_BY_2147630935_0
         $x_1_4 = {6a 3c 50 68 08 d0 04 00 ff 75 f8 ff 15 ?? ?? ?? ?? 85 c0 74 45 80 bd ?? ?? ff ff 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1005,6 +1044,7 @@ rule Trojan_Win32_BHO_CF_2147631701_0
         $x_1_4 = "/Start.htm?AreaID=NaN&MediaID=50011&AdNo=%d&OriginalityID=%d&Url=BHO_Start_%d&Mac=%s&Version=%d&ValidateCode=&ParentName=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1028,6 +1068,7 @@ rule Trojan_Win32_BHO_CJ_2147633593_0
         $x_1_4 = {43 4c 53 49 44 5c 25 73 5c 49 6e 70 72 6f 63 53 65 72 76 65 72 33 32 00 4d 69 63 72 6f 73 6f 66 74 [0-2] 28 52 29}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1051,6 +1092,7 @@ rule Trojan_Win32_BHO_CK_2147633600_0
         $x_1_4 = {6b 65 79 00 63 68 61 6e 6e 65 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1074,6 +1116,7 @@ rule Trojan_Win32_BHO_CL_2147633635_0
         $x_1_4 = {6b 65 79 00 63 68 61 6e 6e 65 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1097,6 +1140,7 @@ rule Trojan_Win32_BHO_CM_2147633636_0
         $x_1_4 = {6b 65 79 00 63 68 61 6e 6e 65 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1125,6 +1169,7 @@ rule Trojan_Win32_BHO_CP_2147634583_0
         $x_1_9 = "/Start.htm?AreaID=NaN&MediaID=50011&AdNo=%d&OriginalityID=%d&Url=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -1146,6 +1191,7 @@ rule Trojan_Win32_BHO_LN_2147635920_0
         $x_1_2 = "ieupdate.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1172,6 +1218,7 @@ rule Trojan_Win32_BHO_CQ_2147635926_0
         $x_1_6 = {46 6d 5f 69 65 5f 44 6f 63 75 6d 65 6e 74 43 6f 6d 70 6c 65 74 65 [0-8] 53 74 72 54 6f 48 65 78}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1199,6 +1246,7 @@ rule Trojan_Win32_BHO_CS_2147636218_0
         $x_1_4 = "C:\\WINDOWS\\system32\\drivers\\etc\\service1.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1225,6 +1273,7 @@ rule Trojan_Win32_BHO_CT_2147636880_0
         $x_1_6 = "&p=http%3A//" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1249,6 +1298,7 @@ rule Trojan_Win32_BHO_CV_2147636998_0
         $x_1_5 = "/Start.htm?s1=ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1273,6 +1323,7 @@ rule Trojan_Win32_BHO_CZ_2147637353_0
         $x_1_5 = "toast.duno.kr/ifr_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1302,6 +1353,7 @@ rule Trojan_Win32_BHO_DA_2147637361_0
         $x_1_9 = {5b 2d 25 73 25 73 5d [0-21] 2e 72 65 67 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1326,6 +1378,7 @@ rule Trojan_Win32_BHO_DE_2147637518_0
         $x_1_5 = "Flacdker" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1352,6 +1405,7 @@ rule Trojan_Win32_BHO_DC_2147637523_0
         $x_1_6 = {2f 00 00 00 00 23 78 79 7a 31 30 32 38 71 74 6d 00 [0-8] 74 6f 6e 67 6a 69 2e 00 74 6a 2e 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1375,6 +1429,7 @@ rule Trojan_Win32_BHO_DF_2147637561_0
         $x_1_4 = "{D94DCC35-A105-4A97-A957-FB7D54BB3612}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1399,6 +1454,7 @@ rule Trojan_Win32_BHO_DF_2147637561_1
         $x_1_5 = {38 38 2d 41 46 30 43 2d 39 31 34 39 44 45 37 30 45 31 33 32 7d 00 00 00 74 70 5c 7b 32 31 43 30 46 38 36 42 2d 34 33 34 38 2d 34 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1425,6 +1481,7 @@ rule Trojan_Win32_BHO_DC_2147637797_0
         $x_1_7 = "siteurl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1449,6 +1506,7 @@ rule Trojan_Win32_BHO_DK_2147638748_0
         $x_1_5 = "td\\tao96\\tao96\\Release\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1470,6 +1528,7 @@ rule Trojan_Win32_BHO_DN_2147639532_0
         $x_1_2 = "TjmPwb3_Gfebvow" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1492,6 +1551,7 @@ rule Trojan_Win32_BHO_DO_2147639534_0
         $x_2_3 = "BHOLOCKER.BhoLock.1 = s 'BhoLock Class'" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*))) or
             (all of ($x*))
@@ -1518,6 +1578,7 @@ rule Trojan_Win32_BHO_DG_2147639889_0
         $x_1_3 = {5c ed 94 84 eb a1 9c ec a0 9d ed 8a b8 5c 74 6f 70 67 75 69 64 65 5c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1542,6 +1603,7 @@ rule Trojan_Win32_BHO_DH_2147639890_0
         $x_1_4 = "{7D1AFD44-BEA6-48BD-8872-21940D385C3B}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1566,6 +1628,7 @@ rule Trojan_Win32_BHO_DI_2147640165_0
         $x_2_4 = "{73A7FFA7-AA3A-49E5-A777-713B7DB78E9C}" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1593,6 +1656,7 @@ rule Trojan_Win32_BHO_DQ_2147640751_0
         $x_3_5 = "config_popup_0_show_timeout" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1617,6 +1681,7 @@ rule Trojan_Win32_BHO_DS_2147640846_0
         $x_1_5 = {5c 64 72 69 76 65 72 73 5c 65 74 63 5c 73 65 72 76 69 63 65 [0-6] 2e 69 6e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1641,6 +1706,7 @@ rule Trojan_Win32_BHO_DZ_2147642425_0
         $x_1_2 = {51 00 49 00 42 00 48 00 4f 00 5f 00 46 00 41 00 4b 00 45 00 55 00 52 00 4c 00 5f 00 43 00 4f 00 4f 00 4b 00 49 00 45 00 00 00 00 00 53 00 68 00 65 00 6c 00 6c 00 20 00 44 00 6f 00 63 00 4f 00 62 00 6a 00 65 00 63 00 74 00 20 00 56 00 69 00 65 00 77 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1666,6 +1732,7 @@ rule Trojan_Win32_BHO_KB_2147643448_0
         $x_1_5 = {2f 74 6e 73 2f 74 62 74 6e 73 30 34 30 31 2e 68 74 6d 30 00 68 74 74 70 3a 2f 2f 74 62 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1689,6 +1756,7 @@ rule Trojan_Win32_BHO_KC_2147643449_0
         $x_1_4 = {44 34 36 36 44 7d 00 00 32 46 30 32 38 31 30 42 42 39 00 00 7b 30 31 44 45 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1714,6 +1782,7 @@ rule Trojan_Win32_BHO_KI_2147646224_0
         $x_1_6 = "82DAF06B-3E0D-2F1D-AFA8-959DDD3E8BE3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1735,6 +1804,7 @@ rule Trojan_Win32_BHO_EE_2147646791_0
         $x_2_2 = "FORM1_A_IFRAME" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1762,6 +1832,7 @@ rule Trojan_Win32_BHO_EF_2147646984_0
         $x_1_8 = "%2\\protocol\\StdFileEditing\\server" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1789,6 +1860,7 @@ rule Trojan_Win32_BHO_EH_2147647539_0
         $x_5_2 = "D:\\App\\Delphi7\\Source Code\\Adware\\_IEBrowserHelper.pas" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1811,6 +1883,7 @@ rule Trojan_Win32_BHO_EJ_2147647745_0
         $x_1_3 = "?searchcode=n&isdate=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1833,6 +1906,7 @@ rule Trojan_Win32_BHO_EN_2147650208_0
         $x_4_3 = ".e*,+,^ab*x*,+,^ab*e" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1857,6 +1931,7 @@ rule Trojan_Win32_BHO_EP_2147650922_0
         $x_1_5 = "\\_iebrowserhelper.pas" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1880,6 +1955,7 @@ rule Trojan_Win32_BHO_ES_2147652695_0
         $x_1_4 = "%s?user=%s&pass=%s&" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1906,6 +1982,7 @@ rule Trojan_Win32_BHO_EV_2147659358_0
         $x_1_4 = "\\_IEBrowserHelper.pas" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1928,6 +2005,7 @@ rule Trojan_Win32_BHO_LQ_2147712303_0
         $x_1_2 = "{B69F34DD-F0F9-42DC-9EDD-957187DA688D}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

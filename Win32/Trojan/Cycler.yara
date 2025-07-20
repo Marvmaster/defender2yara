@@ -18,6 +18,7 @@ rule Trojan_Win32_Cycler_MA_2147819717_0
         $x_1_3 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

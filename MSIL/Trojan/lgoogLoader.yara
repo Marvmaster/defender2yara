@@ -17,6 +17,7 @@ rule Trojan_MSIL_lgoogLoader_MBAY_2147840058_0
         $x_1_2 = {4c 00 4d 00 36 00 75 00 64 00 00 05 74 00 37 00 00 07 36 00 55 00 37 00 00 0d 71 00 57 00 57 00 4e 00 56 00 4a 00 00 05 69 00 72 00 00 0b 32 00 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_MSIL_lgoogLoader_MBDV_2147845615_0
         $x_1_3 = "j7KX1bPgJJEUtC8kz8CTPZpx/hDVPE=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_MSIL_lgoogLoader_MBDC_2147847214_0
         $x_1_2 = {57 bf a2 3f 09 0a 00 00 00 fa 01 33 00 16 00 00 01 00 00 00 36 00 00 00 25 00 00 00 a0 00 00 00 35 01 00 00 93 00 00 00 03 00 00 00 6e 00 00 00 16 00 00 00 94 01 00 00 01 00 00 00 01 00 00 00 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

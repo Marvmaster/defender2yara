@@ -16,6 +16,7 @@ rule Backdoor_Win64_MenialHarpoon_A_2147922590_0
         $x_1_1 = {48 89 f1 31 d2 41 b8 0a 00 00 00 e8 ?? ?? ?? ?? 04 0a 48 8b 4d ?? 89 c2 e8 ?? ?? ?? ?? 48 89 f1 e8 ?? ?? ?? ?? 83 c7 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Backdoor_Win64_MenialHarpoon_B_2147922591_0
         $x_1_1 = {44 89 20 41 b8 0a 00 00 00 48 8d 54 24 ?? 48 8b cb ff 15 ?? ?? ?? ?? 44 8b c8 48 3b 5c 24 ?? 0f 84 ?? ?? ?? ?? 41 83 3e 22 0f 84 ?? ?? ?? ?? 41 80 c1 0a 48 8b 4f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

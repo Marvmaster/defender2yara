@@ -19,6 +19,7 @@ rule VirTool_Win64_Reapesez_A_2147892465_0
         $x_1_4 = {45 33 c0 33 d2 48 8b cd ff 15 ?? ?? ?? ?? 3d 20 04 00 00 ?? ?? 48 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

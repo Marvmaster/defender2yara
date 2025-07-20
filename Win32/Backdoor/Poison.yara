@@ -17,6 +17,7 @@ rule Backdoor_Win32_Poison_E_2147573853_0
         $x_1_3 = {8b 75 08 81 e6 00 00 ff ff 66 ad 4e 4e 3d 4d 5a 00 00 74 08 81 ee 00 00 01 00 eb ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Win32_Poison_E_2147573853_1
         $x_1_6 = "SOFTWARE\\Classes\\http\\shell\\open\\commandV" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -77,6 +79,7 @@ rule Backdoor_Win32_Poison_A_2147576657_0
         $x_2_9 = {41 9f f8 97 d0 f8 42 47 43 46 45 9f 51 04 27 c6 86 aa 28 14 14 14 17 61 18}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -105,6 +108,7 @@ rule Backdoor_Win32_Poison_G_2147593553_0
         $x_1_4 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -130,6 +134,7 @@ rule Backdoor_Win32_Poison_G_2147593553_1
         $x_1_3 = {bd 30 fa ff ff 63 6b 73 3d 75 13 c7 85 30 fa ff ff 74 74 ?? 3d c6 86 ef 0a 00 00 02 eb 11 c7 85 30 fa ff ff 63 6b 73 3d c6 86 ef 0a 00 00 01 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -158,6 +163,7 @@ rule Backdoor_Win32_Poison_H_2147597101_0
         $x_1_9 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -183,6 +189,7 @@ rule Backdoor_Win32_Poison_I_2147599678_0
         $x_1_3 = {8b 44 24 04 56 8b 74 24 0c 8a 08 8a 16 88 10 88 0e 5e c2 08 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -205,6 +212,7 @@ rule Backdoor_Win32_Poison_I_2147599678_1
         $x_1_3 = {ff 96 e5 00 00 00 56 fc b9 40 00 00 00 8d b5 ?? ?? ff ff 8d bd ?? ?? ff ff f3 a7 74 0d 5e c7 85 ?? ?? ff ff 30 75 00 00 eb 7f 5e 6a 04 8d 45 f8 50 ff 75 fc 6a 00 56 ff 96 e5 00 00 00 85 c0 74 68 6a 40 68 00 10 00 00 ff 75 f8 6a 00 ff 56 21}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -227,6 +235,7 @@ rule Backdoor_Win32_Poison_J_2147603170_0
         $x_1_3 = {8b f5 bf 0a 00 00 00 ff d3 8b c8 b8 67 66 66 66 f7 e9 c1 fa ?? 8b c2 83 c6 ?? c1 e8 ?? 03 d0 4f 89 56 ?? 75 ?? 8b 44 24 ?? 81 c5 ?? ?? ?? ?? 48 89 44 24 ?? 75 ca}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -248,6 +257,7 @@ rule Backdoor_Win32_Poison_K_2147605156_0
         $x_1_2 = {33 c0 8a 14 30 30 14 01 40 83 f8 10 7c f4 83 c1 10 4f 75 ec ff 15 ?? ?? ?? ?? 8d 4b f0 85 c9 76 12 8b 44 24 18 2b e8 8a 14 28 80 f2 ?? 88 10 40 49 75 f4 5f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -275,6 +285,7 @@ rule Backdoor_Win32_Poison_L_2147605882_0
         $x_1_8 = "127.0.0.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -295,6 +306,7 @@ rule Backdoor_Win32_Poison_M_2147608810_0
         $x_1_1 = {0f 31 92 33 c9 69 c0 05 4b 56 ac 83 c0 01 89 84 8e d9 08 00 00 83 c1 01 83 f9 22 72 e8 d9 e8 db be 61 09 00 00 c7 86 d1 08 00 00 00 00 00 00 c7 86 d5 08 00 00 50 00 00 00 e8 5d ff ff ff 57 bf 1e 00 00 00 e8 52 ff ff ff 83 ef 01 75 f6 5f 64 a1 30 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -319,6 +331,7 @@ rule Backdoor_Win32_Poison_N_2147609621_0
         $x_10_5 = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Svchost" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -346,6 +359,7 @@ rule Backdoor_Win32_Poison_O_2147609654_0
         $x_1_8 = {5d 00 00 00 5b 53 59 53 54 45 4d 33 32 5d 00 00 5c 00 00 00 25 53 79 73 74 65 6d 52 6f 6f 74 25 5c 73 79 73 74 65 6d 33 32 5c 73 76 63 68 6f 73 74 2e 65 78 65 20 2d 6b 20 6e 65 74 73 76 63 73 00 00 00 00 53 59 53 54 45 4d 5c 43 75 72 72 65 6e 74 43 6f 6e 74 72 6f 6c 53 65 74 5c 53 65 72 76 69 63 65 73 5c 00 00 5c 50 61 72 61 6d 65 74 65 72 73 00 53 65 72 76 69 63 65 44 6c 6c 00 00 44 65 73 63 72 69 70 74 69 6f 6e 00 4c 69 6e 6b 4e 61 6d 65 00 00 00 00 63 6d 64 20 2f 63 20 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -370,6 +384,7 @@ rule Backdoor_Win32_Poison_P_2147609664_0
         $x_2_5 = {e8 2e 00 00 00 53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 72 75 6e 00 57 ff 96 [0-4] 80 be [0-4] 01 75 07 b9 02 00 00 80}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -401,6 +416,7 @@ rule Backdoor_Win32_Poison_V_2147610284_0
         $x_2_8 = "TMyCam" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_2_*))) or
             ((2 of ($x_5_*) and 3 of ($x_2_*))) or
@@ -436,6 +452,7 @@ rule Backdoor_Win32_Poison_X_2147611027_0
         $x_1_11 = {b8 68 58 4d 56 bb 65 d4 85 86 b9 0a 00 00 00 66 ba 58 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +478,7 @@ rule Backdoor_Win32_Poison_B_2147611032_0
         $x_1_5 = "ONnECT %s:%i HTTP/1.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -484,6 +502,7 @@ rule Backdoor_Win32_Poison_C_2147611033_0
         $x_1_3 = {00 00 e8 08 00 00 00 61 64 76 70 61 63 6b 00 ff 95 21 f1 ff ff 68 6b 37 04 7e 50 6a 00 e8 5e f5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -507,6 +526,7 @@ rule Backdoor_Win32_Poison_D_2147611034_0
         $x_1_3 = {6f 63 65 73 73 41 00 00 6d 5f 53 74 75 62 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -530,6 +550,7 @@ rule Backdoor_Win32_Poison_E_2147611035_0
         $x_1_3 = {00 00 00 00 06 00 00 00 74 00 6d 00 70 00 00 00 1e 00 00 00 5c 00 59 00 6f 00 75 00 20 00 53 00 65 00 72 00 76 00 65 00 72 00 2e 00 65 00 78 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -556,6 +577,7 @@ rule Backdoor_Win32_Poison_Y_2147617011_0
         $x_1_7 = {5c 5c 2e 5c 50 68 79 73 69 63 61 6c 44 72 69 76 65 30 00 00 [0-5] 2e 5c 53 4d 41 52 54 56 53 44}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -581,6 +603,7 @@ rule Backdoor_Win32_Poison_AC_2147618261_0
         $x_1_2 = "bonibon" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -602,6 +625,7 @@ rule Backdoor_Win32_Poison_AI_2147627101_0
         $x_1_2 = {b8 00 04 40 00 ff d0 6a 00 e8 00 00 00 00 ff 25 00 02 40 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -632,6 +656,7 @@ rule Backdoor_Win32_Poison_Y_2147631176_0
         $x_1_10 = "ServiceMain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -658,6 +683,7 @@ rule Backdoor_Win32_Poison_AP_2147632246_0
         $x_1_4 = {6a 0c 6a 35 6a 2b 6a 0c c7 45 e8 2b 00 00 00 c7 45 e4 35 00 00 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -682,6 +708,7 @@ rule Backdoor_Win32_Poison_AT_2147637391_0
         $x_1_5 = "Svc%c%c%c%c.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -705,6 +732,7 @@ rule Backdoor_Win32_Poison_AU_2147638790_0
         $x_1_4 = {75 13 68 30 75 00 00 ff 95 ?? ?? ?? ?? ff 85 ?? ?? ?? ?? eb c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -729,6 +757,7 @@ rule Backdoor_Win32_Poison_AW_2147638947_0
         $x_1_5 = {c6 44 24 24 43 c6 44 24 27 61 c6 44 24 28 74 c6 44 24 2a 50 c6 44 24 2c 6f c6 44 24 2d 63 88 4c 24 2f 88 4c 24 30 c6 44 24 31 57}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -754,6 +783,7 @@ rule Backdoor_Win32_Poison_AY_2147647726_0
         $x_1_6 = "%s\\%u.xpl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -781,6 +811,7 @@ rule Backdoor_Win32_Poison_AY_2147647726_1
         $x_1_4 = "EXPLORE.lnk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -808,6 +839,7 @@ rule Backdoor_Win32_Poison_AY_2147647726_2
         $x_1_5 = {5c 00 72 00 69 00 73 00 69 00 6e 00 67 00 00 00 61 00 76 00 69 00 72 00 61 00 00 00 33 00 36 00 30 00 53 00 44 00 00 00 61 00 76 00 67 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -830,6 +862,7 @@ rule Backdoor_Win32_Poison_AZ_2147650397_0
         $x_1_3 = {61 6e 74 69 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -855,6 +888,7 @@ rule Backdoor_Win32_Poison_BD_2147650469_0
         $x_2_2 = {5c 5c 2e 5c 4c 50 52 53 00 00 00 00 5c 5c 2e 5c 6d 61 69 6c 73 6c 6f 74 5c 90 02 10 5f 6d 61 69 6c 73 6c 6f 74}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -877,6 +911,7 @@ rule Backdoor_Win32_Poison_BE_2147650471_0
         $x_2_3 = {6a 04 8d 44 24 14 50 6a 06 bb 30 75 00 00 55 89 5c 24 20 ff d6 6a 04 8d 4c 24 14 51 6a 05 55 89 5c 24 20 ff d6 6a 00 6a 00 6a 03 6a 00 6a 00 6a 50 57 55 ff 15}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -901,6 +936,7 @@ rule Backdoor_Win32_Poison_BE_2147650471_1
         $x_1_5 = "VST%d.%d.%d.%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -934,6 +970,7 @@ rule Backdoor_Win32_Poison_BF_2147650948_0
         $x_1_10 = {6f 66 66 65 72 2e 74 78 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -964,6 +1001,7 @@ rule Backdoor_Win32_Poison_BG_2147651604_0
         $x_1_7 = {4f 70 65 6e 20 48 4f 53 54 5f 55 52 4c 20 65 72 72 6f 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -987,6 +1025,7 @@ rule Backdoor_Win32_Poison_BI_2147653146_0
         $x_1_4 = "svchost .exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1009,6 +1048,7 @@ rule Backdoor_Win32_Poison_BL_2147653193_0
         $x_1_3 = {6e 5c 52 75 c7 84 24 ?? 00 00 00 6e 00 00 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1040,6 +1080,7 @@ rule Backdoor_Win32_Poison_BN_2147655074_0
         $x_1_9 = "{PrintScreen}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -1061,6 +1102,7 @@ rule Backdoor_Win32_Poison_BO_2147655199_0
         $x_1_2 = {83 45 fc 02 8d 45 e8 83 c3 04 50 ff d6 39 45 fc 59 72 e9 04 00 66 83 33}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1083,6 +1125,7 @@ rule Backdoor_Win32_Poison_BP_2147655206_0
         $x_2_3 = {88 48 fe 80 c1 02 c0 e1 04 88 0c 3e 8a 50 ff 80 ea 1e 32 d1 88 14 3e 46 3b f3 7c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -1109,6 +1152,7 @@ rule Backdoor_Win32_Poison_BQ_2147661225_0
         $x_1_3 = "\\shell\\open\\command" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1130,6 +1174,7 @@ rule Backdoor_Win32_Poison_BT_2147665885_0
         $x_1_2 = {85 c0 74 12 8b 08 6a 01 49 5e d3 e6 0b d6 89 57 fc 8b 40 04 eb (ea)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1153,6 +1198,7 @@ rule Backdoor_Win32_Poison_BU_2147672236_0
         $x_1_4 = {03 f2 53 50 33 db 33 c0 ac c1 c3 13 03 d8 83 f8 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1179,6 +1225,7 @@ rule Backdoor_Win32_Poison_BV_2147672243_0
         $x_1_4 = {83 c9 ff f2 ae f7 d1 2b f9 6a 03 8b f7 8b d9 8b fa 83 c9 ff f2 ae 8b cb 4f c1 e9 02 f3 a5 8b cb 50 83 e1 03 6a 01 8d [0-6] 68 00 00 00 80 f3 a4 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1203,6 +1250,7 @@ rule Backdoor_Win32_Poison_BX_2147683981_0
         $x_1_5 = {00 73 76 63 68 6f 73 74 20 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1226,6 +1274,7 @@ rule Backdoor_Win32_Poison_BZ_2147686454_0
         $x_1_4 = {a8 2a ac e8 5d 2c a8 1b e8 a1 2e 72 75 77 c8 38 29 c9 25 ab ec d0 a3 f0 a3 d3 00 a3 1a a3 6b 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1252,6 +1301,7 @@ rule Backdoor_Win32_Poison_E_2147692682_0
         $x_1_3 = {b3 33 b1 81 b0 7e b2 3a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1280,6 +1330,7 @@ rule Backdoor_Win32_Poison_CB_2147695276_0
         $x_1_8 = "downexecute" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -1302,6 +1353,7 @@ rule Backdoor_Win32_Poison_CD_2147723378_0
         $x_1_3 = {49 00 6e 00 74 00 65 00 72 00 6e 00 61 00 6c 00 4e 00 61 00 6d 00 65 00 00 00 57 00 49 00 4e 00 44 00 4f 00 57 00 53 00 41 00 63 00 74 00 69 00 76 00 65 00 73 00 2e 00 65 00 78 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1323,6 +1375,7 @@ rule Backdoor_Win32_Poison_CD_2147723378_1
         $x_1_2 = {77 11 8a 98 ?? ?? ?? ?? 32 da 80 eb ?? 88 98 ?? ?? ?? ?? 8d bc 06 ?? ?? ?? ?? 81 ff ?? ?? ?? ?? 77 11 8a 98 ?? ?? ?? ?? 32 d9 80 eb ?? 88 98 ?? ?? ?? ?? 83 c0 ?? 3d ?? ?? ?? ?? 7e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1346,6 +1399,7 @@ rule Backdoor_Win32_Poison_CD_2147723378_2
         $x_1_4 = "advpack" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1367,6 +1421,7 @@ rule Backdoor_Win32_Poison_CE_2147730068_0
         $x_1_2 = {43 81 e3 ff 00 ?? ?? 79 ?? 4b 81 cb ?? ?? ?? ?? 43 8b 44 24 ?? 33 c9 8a 0c 03 8d 3c 03 03 e9 81 e5 ?? ?? ?? ?? 79 ?? 4d 81 cd ?? ?? ?? ?? 45 03 c5 50 57 89 44 24 ?? e8 ?? ?? ?? 00 8b 4c 24 ?? 33 d2 8a 17 33 c0 8a 01 83 c4 ?? 03 d0 81 e2 ff ?? ?? ?? 79 ?? 4a 81 ca 00 ?? ?? ?? 42 8b 44 24 ?? 8a 0c 02 8b 44 24 ?? 8a 14 06 32 d1 88 14 06 8b 44 24 ?? 46 3b f0 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1393,6 +1448,7 @@ rule Backdoor_Win32_Poison_AM_2147819039_0
         $x_1_6 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1417,6 +1473,7 @@ rule Backdoor_Win32_Poison_GTZ_2147942006_0
         $x_1_4 = "k3ylogger.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

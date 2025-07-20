@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Silcon_C_2147720093_0
         $x_1_3 = {89 c3 8b 07 8b 4f 04 89 c7 89 c8 31 d2 f7 f6 97 f7 f6 29 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Silcon_D_2147722706_0
         $x_1_2 = {6a 00 ff d0 50 8f 05 ?? ?? ?? ?? c3 20 00 52 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 6a 40 b9 ?? ?? ?? ?? 51 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule TrojanDownloader_Win32_Silcon_E_2147722712_0
         $x_1_2 = {6a 00 ff d0 50 8f 05 ?? ?? ?? ?? c3 24 00 52 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? be ?? ?? ?? ?? 56 b9 ?? ?? ?? ?? 51 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

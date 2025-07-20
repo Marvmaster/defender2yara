@@ -48,6 +48,7 @@ rule Worm_Win32_Boychi_A_2147656412_0
         $n_100_34 = "AnVir Task Manager" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((20 of ($x_1_*))) or
@@ -79,6 +80,7 @@ rule Worm_Win32_Boychi_A_2147661344_0
         $x_2_4 = {68 6c 61 67 61 bb a0 0f 00 00 53 57 ff d6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

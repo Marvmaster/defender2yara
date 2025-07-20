@@ -20,6 +20,7 @@ rule Ransom_MSIL_Zuquitache_A_2147707813_0
         $x_3_6 = {62 00 74 00 63 00 3d 00 00 0b 26 00 77 00 69 00 64 00 3d 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or

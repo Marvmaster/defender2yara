@@ -18,6 +18,7 @@ rule Backdoor_Win64_Ggey_NI_2147777336_0
         $x_1_3 = {c7 44 24 28 04 00 00 00 48 8d ?? ?? ?? ?? ?? 41 b9 04 00 00 00 48 89 44 24 20 45 33 c0 44 89 ?? ?? ?? ff 15 ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Backdoor_Win64_Ggey_2147777339_0
         $x_1_5 = "Start Service" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

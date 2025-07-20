@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Machime_A_2147627117_0
         $x_1_2 = {3a 73 74 61 72 74 0d 0a 64 65 6c 20 22 25 73 22 0d 0a 69 66 20 65 78 69 73 74 20 22 25 73 22 20 67 6f 74 6f 20 73 74 61 72 74 0d 0a 64 65 6c 20 25 25 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDropper_Win32_Machime_B_2147651810_0
         $x_1_6 = "<%10[^|]|%250[^:]:%u|%100[^|]|%10[^>]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

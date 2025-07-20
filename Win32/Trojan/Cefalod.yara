@@ -20,6 +20,7 @@ rule Trojan_Win32_Cefalod_A_2147710204_0
         $x_1_5 = {44 52 52 00 5c 5c 2e 5c 70 69 70 65 5c 53 57 4e 54 72 61 63 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

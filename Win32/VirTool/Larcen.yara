@@ -17,6 +17,7 @@ rule VirTool_Win32_Larcen_A_2147758911_0
         $x_1_3 = {83 c4 0c 8b 45 fc 8b 48 08 51 8b 55 fc 83 c2 5c 52 8b 45 fc 8b 48 14 51 e8 ?? ?? ?? ?? 83 c4 0c 8b 55 fc 83 7a 18 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule VirTool_Win32_Larcen_A_2147758911_1
         $x_1_3 = {48 8b 44 24 38 8b 40 04 48 8b 4c 24 38 48 83 c1 ?? 44 8b c0 48 8b d1 48 8b 44 24 38 48 8b 48 10 e8 ?? ?? ?? ?? 48 8b 44 24 38 8b 40 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

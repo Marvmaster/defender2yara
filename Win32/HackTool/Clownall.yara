@@ -17,6 +17,7 @@ rule HackTool_Win32_Clownall_2147624432_0
         $x_1_3 = "Dialing" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

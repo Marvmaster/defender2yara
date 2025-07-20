@@ -18,6 +18,7 @@ rule HackTool_Win32_Passview_2147597639_0
         $x_2_4 = "\\Release\\ResourceVerCur.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule HackTool_Win32_Passview_A_2147694232_0
         $x_1_7 = "5e7e8100-9138-11d1-945a-00c04fc308ff" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

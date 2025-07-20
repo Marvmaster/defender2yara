@@ -23,6 +23,7 @@ rule Worm_Win32_Antavmu_A_2147629396_0
         $x_2_8 = {00 5c 62 6c 61 7a 65 77 72 6d 2e 76 6d 78 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

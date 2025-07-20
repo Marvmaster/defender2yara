@@ -20,6 +20,7 @@ rule VirTool_Win32_PeStaple_2147602612_0
         $x_1_4 = {46 72 65 65 4a 6f 69 6e 65 72 20 62 79 20 47 6c 4f 46 46 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

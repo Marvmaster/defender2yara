@@ -19,6 +19,7 @@ rule Trojan_Win64_ClipBanker_Z_2147795870_0
         $x_1_4 = "MicrosoftWindowsStart MenuProgramsStartupupdater.lnk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win64_ClipBanker_DG_2147809231_0
         $x_3_4 = "bitcoincash|bchreg|bchtest" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win64_ClipBanker_DG_2147809231_1
         $x_3_6 = "-foobar" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_Win64_ClipBanker_AHL_2147817574_0
         $x_1_4 = {fe 0f 48 ff c7 ff c9 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +137,7 @@ rule Trojan_Win64_ClipBanker_A_2147829073_0
         $x_1_20 = "\\b(bc(0([ac-hj-np-z02-9]{39}|[ac-hj-np-z02-9]{59})|1[ac-hj-np-z02-9]{8,87}))" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -158,6 +163,7 @@ rule Trojan_Win64_ClipBanker_EB_2147831521_0
         $x_1_5 = "project-umbrella.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -184,6 +190,7 @@ rule Trojan_Win64_ClipBanker_RA_2147831522_0
         $x_1_6 = "cosmos1[0-9a-zA-Z]{38}$)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +213,7 @@ rule Trojan_Win64_ClipBanker_B_2147835156_0
         $x_1_2 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -229,6 +237,7 @@ rule Trojan_Win64_ClipBanker_E_2147836288_0
         $x_1_3 = "0x[a-fA-F0-9]{40}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +260,7 @@ rule Trojan_Win64_ClipBanker_F_2147837509_0
         $x_2_2 = {ff 15 6f 7f 1c 00 ff c0 48 98 48 8b d0 b9 40 00 00 00 ff 15 2d 7f 1c 00 48 89 45 28 48 8b 4d 28 ff 15 37 7f 1c 00 48 89 45 68 48 8b 55 48 48 8b 4d 68 ff 15 35 7f 1c 00 48 8b 4d 28 ff 15 13 7f 1c 00 33 c9 ff 15 3b 83 1c 00 ff 15 45 83 1c 00 48 8b 55 28 b9 01 00 00 00 ff 15 16 83 1c 00 ff 15 18 83 1c 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -280,6 +290,7 @@ rule Trojan_Win64_ClipBanker_G_2147837511_0
         $x_2_9 = "BTCDOGEETCLTCXMRDASHRIPPLEbnbBNBaddr1ADATTRXtZCASHdefault_value_clipper]" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -309,6 +320,7 @@ rule Trojan_Win64_ClipBanker_H_2147837856_0
         $x_2_9 = "bnbaddr1Ttdefault_value_clipper]" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -330,6 +342,7 @@ rule Trojan_Win64_ClipBanker_BI_2147838100_0
         $x_2_1 = {34 22 41 80 f0 22 41 80 f1 22 88 44 24 21 33 db 44 88 44 24 24 b1 4e 44 88 4c 24 25 80 f1 22 88 5c 24 28 b2 4b 88 4c 24 22 80 f2 22 48 8d 44 24 21 41 b2 47 88 54 24 23}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -352,6 +365,7 @@ rule Trojan_Win64_ClipBanker_J_2147839034_0
         $x_2_2 = {48 89 44 24 48 48 89 5c 24 50 48 89 4c 24 58 48 89 7c 24 28 48 89 74 24 30 c6 44 24 27 01 48 8b 54 24 60 48 8b 02}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -374,6 +388,7 @@ rule Trojan_Win64_ClipBanker_K_2147839989_0
         $x_2_2 = "\\stub\\x64\\Release\\stub.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -397,6 +412,7 @@ rule Trojan_Win64_ClipBanker_L_2147840499_0
         $x_2_3 = "\\b(([13]|bc1)[A-HJ-NP-Za-km-z1-9]{27,34})" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -418,6 +434,7 @@ rule Trojan_Win64_ClipBanker_O_2147841132_0
         $x_2_1 = {b8 00 5e d0 b2 e8 f0 cd ce ff 90 e8 6a 2e ef ff 48 89 44 24 40 48 89 5c 24 28 e8 fb 6e ff ff 48 89 c1 48 89 df 48 8b 44 24 40 48 8b 5c 24 28 e8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -442,6 +459,7 @@ rule Trojan_Win64_ClipBanker_RE_2147841708_0
         $x_1_4 = "BitcoinClipboardMalware-1-master\\btcclipboard\\x64\\Release\\avery.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -464,6 +482,7 @@ rule Trojan_Win64_ClipBanker_R_2147841906_0
         $x_1_2 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -485,6 +504,7 @@ rule Trojan_Win64_ClipBanker_S_2147842196_0
         $x_2_1 = {48 8b 5c 24 48 48 8b 4c 24 50 48 c7 44 24 48 00 00 00 00 44 0f 11 7c 24 50 31 c0 e8 6b f1 f6 ff e8 06 87 fc ff 48 89 44 24 40 48 89 5c 24 28 48 8b 4c 24 20 48 39 cb 75 27}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -511,6 +531,7 @@ rule Trojan_Win64_ClipBanker_AJ_2147842229_0
         $x_2_6 = "&& exit" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -532,6 +553,7 @@ rule Trojan_Win64_ClipBanker_I_2147842979_0
         $x_2_1 = {48 89 4c 24 30 4c 89 44 24 48 48 89 7c 24 38 41 0f b6 0c 13 41 31 c9 41 0f b6 d9 31 c0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -554,6 +576,7 @@ rule Trojan_Win64_ClipBanker_C_2147844640_0
         $x_2_2 = "\\Clipez\\x64\\Debug\\Clipez.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -583,6 +606,7 @@ rule Trojan_Win64_ClipBanker_N_2147846841_0
         $x_1_9 = "SetClipboardData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -604,6 +628,7 @@ rule Trojan_Win64_ClipBanker_U_2147846916_0
         $x_2_1 = {48 83 ec 20 48 89 6c 24 18 48 8d 6c 24 18 48 8d 05 65 a2 01 00 0f 1f 44 00 00 e8 ?? ?? f2 ff 48 89 44 24 10 bb 01 00 00 00 e8 ?? ?? f8 ff 31 c0 48 8d 1d 4b 8f 03 00 0f 1f 00 e8 ?? ?? f5 ff 31 c0 48 8d 1d 42 8f 03 00 e8 ?? ?? f5 ff 48 8b 44 24 10 e8 ?? ?? f8 ff 48 8b 6c 24 18 48 83 c4 20}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -626,6 +651,7 @@ rule Trojan_Win64_ClipBanker_AC_2147847635_0
         $x_1_2 = "Nsu2OdiwodOs2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -651,6 +677,7 @@ rule Trojan_Win64_ClipBanker_AC_2147847635_1
         $x_1_5 = "U7HVewhFgAU7MPSD9EqL9641UbAvyhUE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -678,6 +705,7 @@ rule Trojan_Win64_ClipBanker_AC_2147847635_2
         $x_1_7 = "AddClipboardFormatListener" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -699,6 +727,7 @@ rule Trojan_Win64_ClipBanker_RPX_2147848710_0
         $x_1_1 = {88 45 a2 48 63 c3 0f b6 0c 30 0f b6 c1 34 65 02 c1 88 45 a3 8d 53 02 48 63 c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -720,6 +749,7 @@ rule Trojan_Win64_ClipBanker_W_2147851022_0
         $x_2_1 = {48 8b 05 ce 9b 03 00 48 83 f8 2a 72 ?? 48 83 f8 10 48 c7 05 ?? ?? ?? ?? 2a 00 00 00 48 8b de 48 8d 15 ?? ?? ?? ?? 48 0f 43 1d 8f 9b 03 00 41 b8 2a 00 00 00 48 8b cb e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -744,6 +774,7 @@ rule Trojan_Win64_ClipBanker_X_2147851269_0
         $x_2_4 = "Ethereum address detected in clipboard" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -765,6 +796,7 @@ rule Trojan_Win64_ClipBanker_PAAY_2147853148_0
         $x_1_1 = {41 bb 32 c9 bf 4b 49 c1 cb 14 49 f7 d3 8b 4f fc 33 cb 41 8b c3 45 8b c3 c1 c1 02 4f 8d 94 d8 2c 75 30 f8 4c 8d 0c 45 3e 95 2c a9 0f c9 4a 8d 14 95 82 3a 14 9a 49 c1 f0 53 41 50 f7 d9 81 e9 18 a4 35 8f 48 c1 24 24 f6 48 c1 f0 6a 48 01 1c 24 41 81 ca 1c e7 08 b0 f6 da 49 0f c1 c3 31 0c 24 4d 2b ca 5b 49 f7 da 41 f6 db}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -786,6 +818,7 @@ rule Trojan_Win64_ClipBanker_GPAB_2147905961_0
         $x_7_1 = {0f b6 3d 89 a9 20 00 31 fe 40 88 34 18 48 ff c3}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -810,6 +843,7 @@ rule Trojan_Win64_ClipBanker_AZ_2147906965_0
         $x_1_4 = "_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6substrEyy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -836,6 +870,7 @@ rule Trojan_Win64_ClipBanker_AY_2147913349_0
         $x_2_6 = "Silent Miner.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -862,6 +897,7 @@ rule Trojan_Win64_ClipBanker_GTT_2147928253_0
         $x_1_6 = "SetClipboardData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -883,6 +919,7 @@ rule Trojan_Win64_ClipBanker_ACA_2147928356_0
         $x_1_1 = {48 89 55 c0 48 89 45 c8 eb 0b 48 8d 4d 30 e8 ?? ?? ?? ?? eb 38 48 8b 55 c0 48 8b 4d c8 e8 ?? ?? ?? ?? 48 89 55 b0 48 89 45 b8 eb 00 48 8b 55 b0 48 8b 4d b8 31 c0 41 88 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -905,6 +942,7 @@ rule Trojan_Win64_ClipBanker_AUJ_2147932197_0
         $x_1_2 = "ChromiumData.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -929,6 +967,7 @@ rule Trojan_Win64_ClipBanker_WQ_2147940103_0
         $x_1_4 = "[INFO] tor.exe found, skipping download" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -951,6 +990,7 @@ rule Trojan_Win64_ClipBanker_ACL_2147941665_0
         $x_2_2 = {40 53 48 83 ec 40 4c 8d 05 33 9d 01 00 ba 01 00 00 00 33 c9 ff 15 ?? ?? ?? ?? 48 8b d8 48 85 c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -979,6 +1019,7 @@ rule Trojan_Win64_ClipBanker_NJA_2147942816_0
         $x_1_8 = "SetClipboardData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1002,6 +1043,7 @@ rule Trojan_Win64_ClipBanker_NJB_2147942834_0
         $x_1_3 = {4c 8b c3 33 d2 48 8b c6 48 f7 77 ?? 42 8a 04 0a 32 04 31 41 88 04 30 48 ff c6 48 3b 74 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1030,6 +1072,7 @@ rule Trojan_Win64_ClipBanker_NJC_2147942850_0
         $x_1_5 = "\\b4[0-9AB][1-9A-HJ-NP-Za-km-z]{93}\\b" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1053,6 +1096,7 @@ rule Trojan_Win64_ClipBanker_SX_2147943594_0
         $x_5_3 = "drvoptimcxsq" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Nadeomi_A_2147684711_0
         $x_1_4 = "oEnv(\"SEE_MASK_NOZONECHECKS\") = 1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

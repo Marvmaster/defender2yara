@@ -22,6 +22,7 @@ rule Trojan_Win32_OffLoader_RPY_2147846047_0
         $x_1_7 = "TONDOWNLOADPROGRESS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_OffLoader_EM_2147848213_0
         $x_1_2 = "server\\share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_OffLoader_EM_2147848213_1
         $x_1_2 = "server\\share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Win32_OffLoader_EM_2147848213_2
         $x_1_3 = "restart the computer now" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_Win32_OffLoader_EM_2147848213_3
         $x_1_2 = "server\\share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Trojan_Win32_OffLoader_EM_2147848213_4
         $x_1_6 = "*.exe,*.dll,*.chm" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -164,6 +170,7 @@ rule Trojan_Win32_OffLoader_EN_2147850145_0
         $x_1_3 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule Trojan_Win32_OffLoader_EN_2147850145_1
         $x_1_3 = "restart the computer now" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +219,7 @@ rule Trojan_Win32_OffLoader_EN_2147850145_2
         $x_1_4 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +243,7 @@ rule Trojan_Win32_OffLoader_EN_2147850145_3
         $x_1_3 = "server\\share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_9_*) and 1 of ($x_1_*))) or
             ((2 of ($x_9_*))) or
@@ -262,6 +272,7 @@ rule Trojan_Win32_OffLoader_EN_2147850145_4
         $x_1_4 = "install [name] on your computer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -284,6 +295,7 @@ rule Trojan_Win32_OffLoader_EK_2147851026_0
         $x_1_2 = "server\\share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -306,6 +318,7 @@ rule Trojan_Win32_OffLoader_EH_2147851159_0
         $x_1_2 = "server\\share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -328,6 +341,7 @@ rule Trojan_Win32_OffLoader_DAT_2147851226_0
         $x_1_2 = {73 00 65 00 72 00 76 00 65 00 72 00 5c 00 73 00 68 00 61 00 72 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +365,7 @@ rule Trojan_Win32_OffLoader_ASA_2147852850_0
         $x_1_3 = "restart the computer now" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -374,6 +389,7 @@ rule Trojan_Win32_OffLoader_ASB_2147887398_0
         $x_1_3 = "restart the computer now" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -397,6 +413,7 @@ rule Trojan_Win32_OffLoader_ASC_2147888300_0
         $x_1_3 = "restart the computer now" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -420,6 +437,7 @@ rule Trojan_Win32_OffLoader_EB_2147888903_0
         $x_1_3 = "server\\share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -444,6 +462,7 @@ rule Trojan_Win32_OffLoader_ASD_2147889046_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -468,6 +487,7 @@ rule Trojan_Win32_OffLoader_ASE_2147889299_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -492,6 +512,7 @@ rule Trojan_Win32_OffLoader_ASF_2147889300_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -516,6 +537,7 @@ rule Trojan_Win32_OffLoader_ASG_2147889407_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -541,6 +563,7 @@ rule Trojan_Win32_OffLoader_ASH_2147889481_0
         $x_1_5 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -566,6 +589,7 @@ rule Trojan_Win32_OffLoader_ASI_2147890044_0
         $x_1_5 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -593,6 +617,7 @@ rule Trojan_Win32_OffLoader_ASJ_2147890493_0
         $x_1_7 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -617,6 +642,7 @@ rule Trojan_Win32_OffLoader_ASK_2147890499_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -641,6 +667,7 @@ rule Trojan_Win32_OffLoader_ASL_2147891174_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -664,6 +691,7 @@ rule Trojan_Win32_OffLoader_EC_2147891514_0
         $x_1_3 = "server\\share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -688,6 +716,7 @@ rule Trojan_Win32_OffLoader_ASM_2147893003_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -712,6 +741,7 @@ rule Trojan_Win32_OffLoader_ASN_2147893100_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -736,6 +766,7 @@ rule Trojan_Win32_OffLoader_ASO_2147895629_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -760,6 +791,7 @@ rule Trojan_Win32_OffLoader_ASP_2147895856_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -784,6 +816,7 @@ rule Trojan_Win32_OffLoader_ASQ_2147896262_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -808,6 +841,7 @@ rule Trojan_Win32_OffLoader_ASQ_2147896262_1
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -830,6 +864,7 @@ rule Trojan_Win32_OffLoader_RDA_2147897275_0
         $x_1_2 = "server\\share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -852,6 +887,7 @@ rule Trojan_Win32_OffLoader_RDB_2147897284_0
         $x_1_2 = "server\\share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -877,6 +913,7 @@ rule Trojan_Win32_OffLoader_ASR_2147897432_0
         $x_1_5 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -905,6 +942,7 @@ rule Trojan_Win32_OffLoader_AST_2147897825_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -927,6 +965,7 @@ rule Trojan_Win32_OffLoader_RDC_2147897833_0
         $x_1_2 = "server\\share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -949,6 +988,7 @@ rule Trojan_Win32_OffLoader_RDD_2147898334_0
         $x_1_2 = "server\\share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -976,6 +1016,7 @@ rule Trojan_Win32_OffLoader_ASU_2147898607_0
         $x_1_7 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -998,6 +1039,7 @@ rule Trojan_Win32_OffLoader_RDE_2147898785_0
         $x_1_2 = "server\\share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1022,6 +1064,7 @@ rule Trojan_Win32_OffLoader_ASW_2147898815_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1047,6 +1090,7 @@ rule Trojan_Win32_OffLoader_ASX_2147899270_0
         $x_1_5 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1075,6 +1119,7 @@ rule Trojan_Win32_OffLoader_ASY_2147899834_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1099,6 +1144,7 @@ rule Trojan_Win32_OffLoader_AAAT_2147899898_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1123,6 +1169,7 @@ rule Trojan_Win32_OffLoader_AAAW_2147900019_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1148,6 +1195,7 @@ rule Trojan_Win32_OffLoader_ASZ_2147900499_0
         $x_1_5 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1176,6 +1224,7 @@ rule Trojan_Win32_OffLoader_ASAA_2147900649_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1200,6 +1249,7 @@ rule Trojan_Win32_OffLoader_ASAB_2147901289_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1224,6 +1274,7 @@ rule Trojan_Win32_OffLoader_ASAC_2147901371_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1252,6 +1303,7 @@ rule Trojan_Win32_OffLoader_ASAD_2147902010_0
         $x_1_8 = "qn CAMPAIGN=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1280,6 +1332,7 @@ rule Trojan_Win32_OffLoader_ASAE_2147902481_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1304,6 +1357,7 @@ rule Trojan_Win32_OffLoader_GPA_2147902788_0
         $x_2_4 = "sto.farmscene.website" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
             ((2 of ($x_5_*))) or
@@ -1333,6 +1387,7 @@ rule Trojan_Win32_OffLoader_ASAF_2147902897_0
         $x_1_5 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1355,6 +1410,7 @@ rule Trojan_Win32_OffLoader_GPC_2147903252_0
         $x_2_2 = "thoughtmeal.site/tracker/thank_you" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1385,6 +1441,7 @@ rule Trojan_Win32_OffLoader_ASAG_2147903865_0
         $x_1_10 = "SP- /VERYSILENT /SUPPRESSMSGBOXES /INSTALLERSHOWNELSEWHERE /sid" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -1413,6 +1470,7 @@ rule Trojan_Win32_OffLoader_GPD_2147903882_0
         $x_2_2 = "educationcoach.site" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1438,6 +1496,7 @@ rule Trojan_Win32_OffLoader_GDAA_2147903894_0
         $x_1_5 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -1464,6 +1523,7 @@ rule Trojan_Win32_OffLoader_GPE_2147904281_0
         $x_2_2 = "jellyfishtrees.site/tracker/thank_you.php" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1486,6 +1546,7 @@ rule Trojan_Win32_OffLoader_GE_2147904428_0
         $x_1_2 = "glovefire.site/dub.php?fz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1509,6 +1570,7 @@ rule Trojan_Win32_OffLoader_ASAH_2147904474_0
         $x_1_3 = "I want to manually reboot later" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1533,6 +1595,7 @@ rule Trojan_Win32_OffLoader_HNS_2147904570_0
         $x_5_4 = ".php?fz=&d=nsis&msg=&r=offer_execution&rk=yes&o=" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1561,6 +1624,7 @@ rule Trojan_Win32_OffLoader_HNS_2147904570_1
         $x_2_8 = {73 00 74 00 61 00 74 00 65 00 73 00 2e 00 6c 00 6f 00 67 00 0b 12 00 00 00 00 00 15 00 00 60 01 14 00 00 00 66 00 00 00 68 00 74 00 74 00 70 00 3a 00 2f 00 2f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*))) or
@@ -1589,6 +1653,7 @@ rule Trojan_Win32_OffLoader_GF_2147904579_0
         $x_1_3 = "peacesleep.site/dub.php?fz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1611,6 +1676,7 @@ rule Trojan_Win32_OffLoader_SPFL_2147904609_0
         $x_2_2 = "committeecircle.website/tracker/thank_you.php" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1633,6 +1699,7 @@ rule Trojan_Win32_OffLoader_SPGA_2147904664_0
         $x_2_2 = "additionwriting.site/tracker/thank_you.php" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1655,6 +1722,7 @@ rule Trojan_Win32_OffLoader_SPDI_2147904780_0
         $x_2_2 = "planegrain.website/tracker/thank_you.php" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1676,6 +1744,7 @@ rule Trojan_Win32_OffLoader_SPLL_2147904781_0
         $x_2_1 = "numberquince.xyz/li.php" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1698,6 +1767,7 @@ rule Trojan_Win32_OffLoader_SPLL_2147904781_1
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1723,6 +1793,7 @@ rule Trojan_Win32_OffLoader_GK_2147904920_0
         $x_1_5 = "set_0.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1745,6 +1816,7 @@ rule Trojan_Win32_OffLoader_SPJL_2147904927_0
         $x_2_2 = "jewelbasketball.xyz/lica.php" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1767,6 +1839,7 @@ rule Trojan_Win32_OffLoader_GPF_2147905042_0
         $x_2_2 = "skirtrose.site/tracker/thank_you.php" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1791,6 +1864,7 @@ rule Trojan_Win32_OffLoader_ASAI_2147905152_0
         $x_1_4 = {73 00 65 00 72 00 76 00 65 00 72 00 5c 00 73 00 68 00 61 00 72 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1814,6 +1888,7 @@ rule Trojan_Win32_OffLoader_SPAK_2147905551_0
         $x_1_3 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1839,6 +1914,7 @@ rule Trojan_Win32_OffLoader_ASAJ_2147905583_0
         $x_1_5 = "server\\share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1861,6 +1937,7 @@ rule Trojan_Win32_OffLoader_SPUP_2147905975_0
         $x_2_2 = "enginewine.xyz/njk.php" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1887,6 +1964,7 @@ rule Trojan_Win32_OffLoader_ASAK_2147906196_0
         $x_1_6 = "server\\share" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1921,6 +1999,7 @@ rule Trojan_Win32_OffLoader_JMAA_2147906380_0
         $x_1_10 = "/tostackconv" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -1947,6 +2026,7 @@ rule Trojan_Win32_OffLoader_GPG_2147907487_0
         $x_2_2 = "digitalpulsedata.com/tos" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1972,6 +2052,7 @@ rule Trojan_Win32_OffLoader_ADJ_2147911511_0
         $x_1_5 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1996,6 +2077,7 @@ rule Trojan_Win32_OffLoader_SPOD_2147911718_0
         $x_1_4 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2018,6 +2100,7 @@ rule Trojan_Win32_OffLoader_SPMC_2147911876_0
         $x_2_2 = "shakesleep.bond/arpt.php" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2040,6 +2123,7 @@ rule Trojan_Win32_OffLoader_GPH_2147912074_0
         $x_2_2 = "forkcast.website/rlo.php" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2065,6 +2149,7 @@ rule Trojan_Win32_OffLoader_ADI_2147912161_0
         $x_1_5 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2091,6 +2176,7 @@ rule Trojan_Win32_OffLoader_ADK_2147912451_0
         $x_1_6 = "states.log" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2113,6 +2199,7 @@ rule Trojan_Win32_OffLoader_GPI_2147912719_0
         $x_2_2 = "nightauthority.xyz/tracker/thank_you.php" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2140,6 +2227,7 @@ rule Trojan_Win32_OffLoader_PEAA_2147912751_0
         $x_1_7 = "Yes, I would like to view the README file" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2171,6 +2259,7 @@ rule Trojan_Win32_OffLoader_ADL_2147912813_0
         $x_1_6 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2198,6 +2287,7 @@ rule Trojan_Win32_OffLoader_SPBC_2147912881_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2220,6 +2310,7 @@ rule Trojan_Win32_OffLoader_GPJ_2147912978_0
         $x_2_2 = "digitalpulsedata.com/tos" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2245,6 +2336,7 @@ rule Trojan_Win32_OffLoader_ADM_2147913074_0
         $x_1_5 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2272,6 +2364,7 @@ rule Trojan_Win32_OffLoader_ADN_2147913211_0
         $x_1_7 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2300,6 +2393,7 @@ rule Trojan_Win32_OffLoader_SPPC_2147914041_0
         $x_1_3 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2322,6 +2416,7 @@ rule Trojan_Win32_OffLoader_SDRL_2147915674_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2344,6 +2439,7 @@ rule Trojan_Win32_OffLoader_SDJL_2147915832_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2366,6 +2462,7 @@ rule Trojan_Win32_OffLoader_SPWQ_2147915935_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2388,6 +2485,7 @@ rule Trojan_Win32_OffLoader_SPKM_2147916324_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2410,6 +2508,7 @@ rule Trojan_Win32_OffLoader_SCBC_2147917129_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2433,6 +2532,7 @@ rule Trojan_Win32_OffLoader_ADO_2147918023_0
         $x_1_3 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2455,6 +2555,7 @@ rule Trojan_Win32_OffLoader_SSBC_2147918988_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2477,6 +2578,7 @@ rule Trojan_Win32_OffLoader_SDWQ_2147920085_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2500,6 +2602,7 @@ rule Trojan_Win32_OffLoader_ADP_2147920914_0
         $x_1_3 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2524,6 +2627,7 @@ rule Trojan_Win32_OffLoader_ADP_2147920914_1
         $x_1_4 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2546,6 +2650,7 @@ rule Trojan_Win32_OffLoader_SHLQ_2147921747_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2568,6 +2673,7 @@ rule Trojan_Win32_OffLoader_SDQB_2147921751_0
         $x_1_2 = "/silent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2590,6 +2696,7 @@ rule Trojan_Win32_OffLoader_SPHP_2147921753_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2612,6 +2719,7 @@ rule Trojan_Win32_OffLoader_SDDP_2147921754_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2634,6 +2742,7 @@ rule Trojan_Win32_OffLoader_SHSP_2147922125_0
         $x_2_2 = "/silent" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2656,6 +2765,7 @@ rule Trojan_Win32_OffLoader_SSSD_2147922745_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2680,6 +2790,7 @@ rule Trojan_Win32_OffLoader_ADQ_2147923277_0
         $x_1_4 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2702,6 +2813,7 @@ rule Trojan_Win32_OffLoader_SPSJ_2147923470_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2724,6 +2836,7 @@ rule Trojan_Win32_OffLoader_SPZJ_2147924048_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2747,6 +2860,7 @@ rule Trojan_Win32_OffLoader_GPM_2147924201_0
         $x_2_3 = "Internet Explorer\\Quick Launch" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
             ((2 of ($x_5_*))) or
@@ -2773,6 +2887,7 @@ rule Trojan_Win32_OffLoader_SPTJ_2147924624_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2795,6 +2910,7 @@ rule Trojan_Win32_OffLoader_SXTJ_2147924853_0
         $x_2_2 = "/silent" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2819,6 +2935,7 @@ rule Trojan_Win32_OffLoader_ADR_2147925676_0
         $x_1_4 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2841,6 +2958,7 @@ rule Trojan_Win32_OffLoader_SPVJ_2147926175_0
         $x_2_2 = "/silent" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2863,6 +2981,7 @@ rule Trojan_Win32_OffLoader_SVVJ_2147926297_0
         $x_2_2 = "/silent" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2885,6 +3004,7 @@ rule Trojan_Win32_OffLoader_SCVC_2147926676_0
         $x_2_2 = "/silent" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2907,6 +3027,7 @@ rule Trojan_Win32_OffLoader_SCZC_2147926799_0
         $x_2_2 = "/silent" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2929,6 +3050,7 @@ rule Trojan_Win32_OffLoader_SPOC_2147927238_0
         $x_2_2 = "/silent" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2951,6 +3073,7 @@ rule Trojan_Win32_OffLoader_SGLP_2147927403_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2973,6 +3096,7 @@ rule Trojan_Win32_OffLoader_SPYE_2147927682_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2994,6 +3118,7 @@ rule Trojan_Win32_OffLoader_GPP_2147929203_0
         $x_4_1 = {72 44 6c 50 74 53 cd e6 d7 7b 0b 2a 01 00 00 00 ?? ?? ?? 00 ?? ?? ?? 00 00 60 33 00 26 2b 8f 31 3a 46 0e 00 00 e8}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3015,6 +3140,7 @@ rule Trojan_Win32_OffLoader_GPPA_2147929275_0
         $x_4_1 = {72 44 6c 50 74 53 cd e6 d7 7b 0b 2a 01 00 00 00 ?? ?? ?? 00 ?? ?? ?? 00 00 60 33 00 19 c5 9b f4 3a 46 0e 00 00 e8 0c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3037,6 +3163,7 @@ rule Trojan_Win32_OffLoader_AYHA_2147929710_0
         $x_1_2 = "/silent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3058,6 +3185,7 @@ rule Trojan_Win32_OffLoader_GPPB_2147929908_0
         $x_4_1 = {72 44 6c 50 74 53 cd e6 d7 7b 0b 2a 01 00 00 00 ?? ?? ?? 00 ?? ?? ?? 00 00 60 33 00 ef b2 ae 79}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3083,6 +3211,7 @@ rule Trojan_Win32_OffLoader_AEIA_2147929928_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3108,6 +3237,7 @@ rule Trojan_Win32_OffLoader_AKIA_2147930102_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3133,6 +3263,7 @@ rule Trojan_Win32_OffLoader_APIA_2147930698_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3155,6 +3286,7 @@ rule Trojan_Win32_OffLoader_SPIA_2147930970_0
         $x_1_2 = "/silent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3180,6 +3312,7 @@ rule Trojan_Win32_OffLoader_ANJA_2147931538_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3205,6 +3338,7 @@ rule Trojan_Win32_OffLoader_AGJA_2147931896_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3227,6 +3361,7 @@ rule Trojan_Win32_OffLoader_SPVA_2147932703_0
         $x_1_2 = "/silent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3252,6 +3387,7 @@ rule Trojan_Win32_OffLoader_AVKA_2147932945_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3277,6 +3413,7 @@ rule Trojan_Win32_OffLoader_AILA_2147933498_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3302,6 +3439,7 @@ rule Trojan_Win32_OffLoader_ANLA_2147933647_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3324,6 +3462,7 @@ rule Trojan_Win32_OffLoader_SPAC_2147934969_0
         $x_1_2 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3349,6 +3488,7 @@ rule Trojan_Win32_OffLoader_ADNA_2147935296_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3371,6 +3511,7 @@ rule Trojan_Win32_OffLoader_SPLS_2147935355_0
         $x_1_2 = "/silent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3396,6 +3537,7 @@ rule Trojan_Win32_OffLoader_AKNA_2147935399_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3421,6 +3563,7 @@ rule Trojan_Win32_OffLoader_AMNA_2147935548_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3443,6 +3586,7 @@ rule Trojan_Win32_OffLoader_SBLS_2147935934_0
         $x_1_2 = "/silent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3468,6 +3612,7 @@ rule Trojan_Win32_OffLoader_AEOA_2147936191_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3491,6 +3636,7 @@ rule Trojan_Win32_OffLoader_SAA_2147936287_0
         $x_1_3 = "/weaksecurity" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3516,6 +3662,7 @@ rule Trojan_Win32_OffLoader_AMMA_2147936390_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3541,6 +3688,7 @@ rule Trojan_Win32_OffLoader_ANOA_2147936451_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3566,6 +3714,7 @@ rule Trojan_Win32_OffLoader_AVOA_2147936787_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3591,6 +3740,7 @@ rule Trojan_Win32_OffLoader_AEPA_2147937016_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3616,6 +3766,7 @@ rule Trojan_Win32_OffLoader_AVJA_2147937050_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3639,6 +3790,7 @@ rule Trojan_Win32_OffLoader_ANO_2147937059_0
         $x_1_3 = "Yes, I would like to view the README file" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3664,6 +3816,7 @@ rule Trojan_Win32_OffLoader_AMPA_2147937255_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3689,6 +3842,7 @@ rule Trojan_Win32_OffLoader_APPA_2147937366_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3714,6 +3868,7 @@ rule Trojan_Win32_OffLoader_AVPA_2147937711_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3737,6 +3892,7 @@ rule Trojan_Win32_OffLoader_SELS_2147938051_0
         $x_1_3 = "/weaksecurity" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3762,6 +3918,7 @@ rule Trojan_Win32_OffLoader_AIQA_2147938256_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3783,6 +3940,7 @@ rule Trojan_Win32_OffLoader_GPPC_2147938486_0
         $x_4_1 = {72 44 6c 50 74 53 cd e6 d7 7b 0b 2a 01 00 00 00 ?? ?? ?? 00 ?? ?? ?? 00 00 60 33 00 33 a5 c9 0f 3a 46 0e}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3807,6 +3965,7 @@ rule Trojan_Win32_OffLoader_ANP_2147938909_0
         $x_1_4 = "Do you want to reboot now?" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3832,6 +3991,7 @@ rule Trojan_Win32_OffLoader_SKIA_2147939136_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3856,6 +4016,7 @@ rule Trojan_Win32_OffLoader_ANQ_2147939239_0
         $x_1_4 = "Do you want to reboot now?" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3880,6 +4041,7 @@ rule Trojan_Win32_OffLoader_ANS_2147939414_0
         $x_1_4 = "Do you want to reboot now?" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3904,6 +4066,7 @@ rule Trojan_Win32_OffLoader_ANU_2147939534_0
         $x_1_4 = "Do you want to reboot now?" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3929,6 +4092,7 @@ rule Trojan_Win32_OffLoader_ASRA_2147939723_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3953,6 +4117,7 @@ rule Trojan_Win32_OffLoader_ANA_2147939889_0
         $x_1_4 = "Do you want to reboot now?" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3975,6 +4140,7 @@ rule Trojan_Win32_OffLoader_GPPD_2147940234_0
         $x_2_2 = "/VERYSILENT" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4000,6 +4166,7 @@ rule Trojan_Win32_OffLoader_ATSA_2147940629_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4025,6 +4192,7 @@ rule Trojan_Win32_OffLoader_AXSA_2147940762_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4050,6 +4218,7 @@ rule Trojan_Win32_OffLoader_AGTA_2147941046_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4075,6 +4244,7 @@ rule Trojan_Win32_OffLoader_ALTA_2147941134_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4099,6 +4269,7 @@ rule Trojan_Win32_OffLoader_ANTA_2147941146_0
         $x_1_4 = "Do you want to reboot now?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4124,6 +4295,7 @@ rule Trojan_Win32_OffLoader_AQTA_2147941251_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4162,6 +4334,7 @@ rule Trojan_Win32_OffLoader_AZTA_2147941476_0
         $x_1_18 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -4190,6 +4363,7 @@ rule Trojan_Win32_OffLoader_AMUA_2147941782_0
         $x_1_4 = "Do you want to reboot now?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4215,6 +4389,7 @@ rule Trojan_Win32_OffLoader_ZBT_2147942851_0
         $x_1_5 = "/resume" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4261,6 +4436,7 @@ rule Trojan_Win32_OffLoader_AH_2147945057_0
         $x_1_26 = "Do you want to reboot now?" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             ((3 of ($x_3_*))) or
@@ -4288,6 +4464,7 @@ rule Trojan_Win32_OffLoader_SPV_2147945075_0
         $x_1_3 = "/silent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4312,6 +4489,7 @@ rule Trojan_Win32_OffLoader_AHYA_2147945298_0
         $x_1_4 = "Do you want to reboot now?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4333,6 +4511,7 @@ rule Trojan_Win32_OffLoader_GPPK_2147946057_0
         $x_4_1 = {72 44 6c 50 74 53 cd e6 d7 7b 0b 2a 01 00 00 00 ?? ?? ?? 00 ?? ?? ?? 00 00 b2 35 00 80}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4357,6 +4536,7 @@ rule Trojan_Win32_OffLoader_AVZA_2147946657_0
         $x_1_4 = "Do you want to reboot now?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

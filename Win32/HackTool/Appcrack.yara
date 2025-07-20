@@ -18,6 +18,7 @@ rule HackTool_Win32_Appcrack_2147670571_0
         $x_1_4 = "Dig for .appx URLs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule HackTool_Win32_Appcrack_2147670571_1
         $x_1_3 = "faking DsRoleGetPrimaryDomainInformation result" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule HackTool_Win32_Appcrack_2147670571_2
         $x_10_4 = "schtasks /change /disable /TN \"\\Microsoft\\Windows\\WS\\License Validation\"" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

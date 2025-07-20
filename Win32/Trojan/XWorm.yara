@@ -18,6 +18,7 @@ rule Trojan_Win32_XWorm_NWR_2147890114_0
         $x_1_3 = "StartDDos" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +69,7 @@ rule Trojan_Win32_XWorm_FEM_2147920072_0
         $x_1_1 = {55 8b ec 83 c4 f0 b8 00 10 40 00 e8 01 00 00 00 9a 83 c4 10 8b e5 5d e9 43 c7 36 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +91,7 @@ rule Trojan_Win32_XWorm_PAYR_2147929391_0
         $x_6_1 = {8b 55 d8 3b d6 7f 2d 8b 4d e8 8b 59 0c 2b 59 14 8d 0c 13 8b 55 e4 8b 5a 0c 2b 5a 14 8b 55 dc 8a 14 13 30 11 ff 45 dc 39 45 dc 7e 03 89 7d dc ff 45 d8 eb cc}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +115,7 @@ rule Trojan_Win32_XWorm_NW_2147934129_0
         $x_1_3 = "5Qiilccol52Xrrthd2.DAEyor4JDA0iewWKE2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +137,7 @@ rule Trojan_Win32_XWorm_AAG_2147935030_0
         $x_1_1 = {46 0f b6 84 34 ?? ?? ?? ?? 88 84 1c ?? ?? ?? ?? 88 8c 34 ?? ?? ?? ?? 0f b6 84 1c ?? ?? ?? ?? 8b 4c 24 ?? 03 c2 0f b6 c0 89 74 24 ?? 0f b6 84 04 ?? ?? ?? ?? 30 04 0f 47 3b 7c 24 ?? 0f 8c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +160,7 @@ rule Trojan_Win32_XWorm_BSA_2147938306_0
         $x_5_2 = {8b 45 c0 8d 4d c0 6a 14 68 a8 7b 68 00 ff 10 8b 56 0c 8d 4d c0 e8 39 36 fb ff 8b f8 6a 09 68 9c 7b 68 00 8b 0f 8b 11 8b cf ff d2 8b 56 24}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +183,7 @@ rule Trojan_Win32_XWorm_GVB_2147938658_0
         $x_1_2 = {89 f3 83 e3 07 8a 1c 1c 80 f3 4a 88 1c 32 83 c6 01 83 d7 00 39 ce 89 fb 19 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +205,7 @@ rule Trojan_Win32_XWorm_BAA_2147939311_0
         $x_2_1 = {33 d2 8b c7 f7 f6 03 cf 47 8a 44 15 ?? 8b 55 ?? 32 04 11 88 01 8b 4d ?? 3b fb 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -221,6 +229,7 @@ rule Trojan_Win32_XWorm_AHB_2147941647_0
         $x_5_3 = {0b 0b 0b 83 74 74 74 f8 b9 b9 b9 ff 00 73 e1 ff 00 7f f9 ff 00 7f f9 ff 00 49 f7 ff 00 49 f7 ff 00 49 f7 ff 00 49 f7 ff 00 16 f5 ff 00 16 f5 ff 00 04 f3 ff 00 04 f3 ff 00 04 f3 ff 00 00 f2 ff 00 00 f2 ff 00 00 f2 ff 00 00 f0 ff 00 00 f0 ff}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -274,6 +283,7 @@ rule Trojan_Win32_XWorm_GZQ_2147945528_0
         $x_5_2 = {5a b8 6b 00 00 00 66 89 85 50 fd ff ff b9 65 00 00 00 66 89 8d 52 fd ff ff ba 72 00 00 00 66 89 95 54 fd ff ff b8 6e 00 00 00 66 89 85 56 fd ff ff b9 65 00 00 00 66 89 8d 58 fd ff ff ba 6c 00 00 00 66 89 95 5a fd ff ff b8 33 00 00 00 66 89 85 5c fd ff ff b9 32 00 00 00 66 89 8d 5e fd ff ff ba 2e 00 00 00 66 89 95 60 fd ff ff b8 64 00 00 00 66 89 85 62 fd ff ff b9 6c 00 00 00 66 89 8d 64 fd ff ff ba 6c 00 00 00 66 89 95 66 fd ff ff 33 c0 66 89 85 68 fd ff ff c7 85}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

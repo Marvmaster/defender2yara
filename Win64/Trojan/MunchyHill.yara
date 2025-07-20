@@ -20,6 +20,7 @@ rule Trojan_Win64_MunchyHill_A_2147945780_0
         $x_1_5 = "SentinelAgent.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

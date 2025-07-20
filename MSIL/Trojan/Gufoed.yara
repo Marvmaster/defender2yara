@@ -19,6 +19,7 @@ rule Trojan_MSIL_Gufoed_A_2147846914_0
         $x_2_4 = "anticheck" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

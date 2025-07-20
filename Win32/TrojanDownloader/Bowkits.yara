@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Bowkits_A_2147610503_0
         $x_2_3 = {6b 69 77 69 62 6f 74 33 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

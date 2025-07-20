@@ -25,6 +25,7 @@ rule Trojan_MSIL_Dothetuk_B_2147797794_0
         $x_1_10 = "$4fb28d5b-0d8e-4144-b1f7-62dad0f41bb9" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_MSIL_Dothetuk_AD_2147838189_0
         $x_1_1 = {0b 16 0c 07 08 09 16 20 ff 00 00 00 6f ?? ?? ?? 0a b4 9c 08 17 d6 0c 08 20 db ff 00 00 31 e4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_MSIL_Dothetuk_ADH_2147845007_0
         $x_1_1 = {16 13 0e 2b 30 00 00 08 11 0c 11 0e 8f 14 00 00 02 7c 2c 00 00 04 7b 22 00 00 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 00 de 05 26 00 00 de 00 00 11 0e 17 58 13 0e 11 0e 6a 11 07 6e fe 04 13 0f 11 0f 2d c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_MSIL_Dothetuk_ADH_2147845007_1
         $x_1_3 = "BumGConsoleAPP" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_MSIL_Dothetuk_GIC_2147846152_0
         $x_1_2 = "aocgamestudio.xyz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule Trojan_MSIL_Dothetuk_AM_2147900749_0
         $x_1_2 = "SELECT * FROM AntivirusProduct" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +161,7 @@ rule Trojan_MSIL_Dothetuk_NN_2147902270_0
         $x_5_1 = {61 5e d1 0d 11 0e 11 06 5a 11 08 58 20 ?? ?? ?? ?? 5e d1 13 06 11 0b 17 58 13 0b 1f 11 13 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule Trojan_MSIL_Dothetuk_LL_2147902271_0
         $x_5_1 = {59 58 5e d2 61 d2 81 31 ?? ?? ?? 11 0c 11 07 5a 11 08 58}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -199,6 +207,7 @@ rule Trojan_MSIL_Dothetuk_GZZ_2147906552_0
         $x_1_3 = "kMNkwTkm4lUxOdeuJ5QiGA==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

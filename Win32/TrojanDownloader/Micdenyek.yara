@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Micdenyek_A_2147651876_0
         $x_5_3 = "bytes=%1!d!" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

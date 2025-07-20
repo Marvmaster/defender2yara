@@ -23,6 +23,7 @@ rule Backdoor_MSIL_Rurktar_A_2147722875_0
         $x_1_9 = "?recivefile*" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

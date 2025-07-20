@@ -18,6 +18,7 @@ rule Trojan_MacOS_HiddenRevShell_A_2147938037_0
         $x_2_3 = {f4 03 00 aa 01 00 80 52 61 ?? ?? ?? e0 03 14 aa 21 00 80 52 5e ?? ?? ?? e0 03 14 aa 41 00 80 52 5b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MacOS_HiddenRevShell_B_2147942769_0
         $x_2_4 = {89 df 31 f6 e8 ?? ?? ?? ?? 89 df be 01 00 00 00 e8 c7 01 00 00 89}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

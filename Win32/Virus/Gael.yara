@@ -16,6 +16,7 @@ rule Virus_Win32_Gael_C_2147601512_0
         $x_1_2 = "hicumhgaelT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Virus_Win32_Gael_A_2147602885_0
         $x_1_2 = {68 69 63 75 6d 68 67 61 65 6c 54 52 52 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

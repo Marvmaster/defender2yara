@@ -24,6 +24,7 @@ rule Backdoor_Win32_Mozaakai_A_2147767088_0
         $x_5_9 = "net localgroup \"administrator" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 2 of ($x_1_*))) or
             ((5 of ($x_5_*))) or

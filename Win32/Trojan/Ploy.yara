@@ -19,6 +19,7 @@ rule Trojan_Win32_Ploy_B_2147642828_0
         $x_1_5 = "\\UMI.INI" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

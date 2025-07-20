@@ -17,6 +17,7 @@ rule Trojan_WinNT_Percol_A_2147647873_0
         $x_1_3 = {c7 85 30 ff ff ff 74 fa 4c 16 c7 85 34 ff ff ff 4a 0a 47 45 c7 85 38 ff ff ff 0d a5 ed 4f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

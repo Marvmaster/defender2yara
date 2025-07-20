@@ -30,6 +30,7 @@ rule Trojan_Win32_Ursu_NBA_2147927131_0
         $x_1_15 = "washinject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

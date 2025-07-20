@@ -17,6 +17,7 @@ rule Trojan_Win32_Broperk_A_2147647879_0
         $x_1_2 = {51 7d 79 73 23 76 7f 78 3b 73 6f 7d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Systex_AST_2147942814_0
         $x_2_2 = {83 c4 04 e8 ?? ?? ?? ?? 99 b9 1a 00 00 00 f7 f9 6a 14 8b da ff d7 80 c3 61 6a 1e 88 9c 34 c8 00 00 00 ff d7 46}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

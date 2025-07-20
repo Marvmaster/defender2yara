@@ -21,6 +21,7 @@ rule Trojan_Win32_Spamies_A_2147685196_0
         $x_2_7 = "Mozilla/4.0 (compatible; MSIE 6.0b; Windows NT 5.0)" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

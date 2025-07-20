@@ -17,6 +17,7 @@ rule Trojan_Win32_PsiXBot_PA_2147746226_0
         $x_1_2 = {aa cb fb ff 29 ?? 24 83 ec 04 [0-16] aa cb fb ff 29 ?? 24 83 ec 04 [0-16] aa cb fb ff 29 ?? 24 83 ec 04 [0-16] 00 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

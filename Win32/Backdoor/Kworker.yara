@@ -21,6 +21,7 @@ rule Backdoor_Win32_Kworker_S_2147745199_0
         $x_1_6 = "Nzg6QUM6QzA6M0Q6Q0U6MzkKV2luZG93cwppMzg2CjAu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

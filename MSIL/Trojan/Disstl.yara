@@ -20,6 +20,7 @@ rule Trojan_MSIL_Disstl_SA_2147773616_0
         $x_1_5 = "GatonFiles" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_MSIL_Disstl_QF_2147776160_0
         $x_1_5 = "Hog Delivery Service" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Trojan_MSIL_Disstl_A_2147778676_0
         $x_3_10 = "OpenAlgorithmProvider" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule Trojan_MSIL_Disstl_A_2147778676_1
         $x_3_8 = "inject.js" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 3 of ($x_3_*))) or
             ((1 of ($x_5_*) and 1 of ($x_4_*) and 3 of ($x_3_*))) or
@@ -139,6 +143,7 @@ rule Trojan_MSIL_Disstl_CA_2147778973_0
         $x_3_6 = "Software\\Growtopia" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_3_*))) or
             ((1 of ($x_5_*) and 3 of ($x_3_*))) or
@@ -172,6 +177,7 @@ rule Trojan_MSIL_Disstl_AWQ_2147779587_0
         $x_4_5 = "discord_modules" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*))) or
             ((1 of ($x_5_*) and 2 of ($x_4_*))) or
@@ -204,6 +210,7 @@ rule Trojan_MSIL_Disstl_AMD_2147779928_0
         $x_3_6 = "WebHook" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_4_*) and 1 of ($x_3_*))) or
             ((1 of ($x_10_*) and 2 of ($x_4_*) and 1 of ($x_3_*))) or
@@ -241,6 +248,7 @@ rule Trojan_MSIL_Disstl_ACH_2147781171_0
         $x_2_9 = "Discord Token Grabber" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +276,7 @@ rule Trojan_MSIL_Disstl_AT_2147781320_0
         $x_2_7 = "bdlevel\\egarotS lacoL\\yranacdrocsid" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -296,6 +305,7 @@ rule Trojan_MSIL_Disstl_AVF_2147781325_0
         $x_4_8 = "\\d.\\d.\\d{2}(\\d|$)" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -325,6 +335,7 @@ rule Trojan_MSIL_Disstl_DAC_2147781332_0
         $x_4_9 = "MutexName" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -352,6 +363,7 @@ rule Trojan_MSIL_Disstl_FAC_2147781752_0
         $x_4_7 = "BFWA" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 4 of ($x_4_*))) or
             ((3 of ($x_5_*) and 3 of ($x_4_*))) or
@@ -383,6 +395,7 @@ rule Trojan_MSIL_Disstl_AH_2147781934_0
         $x_3_7 = "avatar_url" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -411,6 +424,7 @@ rule Trojan_MSIL_Disstl_W_2147782407_0
         $x_3_8 = "DataGrabButton" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -438,6 +452,7 @@ rule Trojan_MSIL_Disstl_AM_2147783663_0
         $x_3_7 = "PostAsync" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -467,6 +482,7 @@ rule Trojan_MSIL_Disstl_AM_2147783663_1
         $x_1_9 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -496,6 +512,7 @@ rule Trojan_MSIL_Disstl_B_2147784090_0
         $x_3_9 = "avatarUrl" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -523,6 +540,7 @@ rule Trojan_MSIL_Disstl_B_2147784090_1
         $x_3_7 = "RemoveAccessRule" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -550,6 +568,7 @@ rule Trojan_MSIL_Disstl_AKL_2147784688_0
         $x_3_7 = "WebBrowserPassView" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -577,6 +596,7 @@ rule Trojan_MSIL_Disstl_AF_2147785042_0
         $x_3_7 = "SendToken" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -602,6 +622,7 @@ rule Trojan_MSIL_Disstl_VX_2147785244_0
         $x_1_5 = "avatar_url" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -630,6 +651,7 @@ rule Trojan_MSIL_Disstl_ASX_2147786460_0
         $x_3_8 = "PostAsync" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -655,6 +677,7 @@ rule Trojan_MSIL_Disstl_AX_2147786529_0
         $x_3_5 = "requestedAssemblyName" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -682,6 +705,7 @@ rule Trojan_MSIL_Disstl_ASD_2147787519_0
         $x_3_7 = "GetAccessControl" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -709,6 +733,7 @@ rule Trojan_MSIL_Disstl_ANJ_2147787593_0
         $x_3_7 = "DiscordPTB" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -738,6 +763,7 @@ rule Trojan_MSIL_Disstl_EF_2147794112_0
         $x_3_9 = "Replace" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -764,6 +790,7 @@ rule Trojan_MSIL_Disstl_EM_2147794126_0
         $x_3_6 = "isKeyDown" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -791,6 +818,7 @@ rule Trojan_MSIL_Disstl_QW_2147794341_0
         $x_3_7 = "process.env.hook" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -814,6 +842,7 @@ rule Trojan_MSIL_Disstl_TV_2147794360_0
         $x_1_3 = "DiscordCanary" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -841,6 +870,7 @@ rule Trojan_MSIL_Disstl_C_2147794436_0
         $x_3_7 = "drocsid" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -868,6 +898,7 @@ rule Trojan_MSIL_Disstl_QQ_2147795241_0
         $x_3_7 = "btpdrocsid" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -895,6 +926,7 @@ rule Trojan_MSIL_Disstl_QA_2147795335_0
         $x_3_7 = "sendhookfile" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -922,6 +954,7 @@ rule Trojan_MSIL_Disstl_AV_2147796650_0
         $x_3_7 = "GetWinInfo" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -943,6 +976,7 @@ rule Trojan_MSIL_Disstl_AD_2147797736_0
         $x_1_1 = {0a 06 2c 63 00 03 8e 69 d1 0b 07 20 ff 00 00 00 fe 02 0d 09 2c 28 00 07 19 58 8d ?? ?? ?? 01 0c 08 16 16 9c 08 17 07 d2 9c 08 18 07 1e 63 d2 9c 03 16 08 19 07 28 ?? ?? ?? 0a 00 00 2b 1b 00 07 17 58 8d ?? ?? ?? 01 0c 08 16 07 d2 9c 03 16 08 17 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -970,6 +1004,7 @@ rule Trojan_MSIL_Disstl_AD_2147797736_1
         $x_3_7 = "doTheEmergencyThing" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -999,6 +1034,7 @@ rule Trojan_MSIL_Disstl_CB_2147808321_0
         $x_1_9 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1027,6 +1063,7 @@ rule Trojan_MSIL_Disstl_CF_2147808324_0
         $x_1_8 = "growtopia1.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1055,6 +1092,7 @@ rule Trojan_MSIL_Disstl_CL_2147808434_0
         $x_1_8 = "https://discord.com/api/webhooks" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1082,6 +1120,7 @@ rule Trojan_MSIL_Disstl_FB_2147808477_0
         $x_3_7 = "size=512" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1111,6 +1150,7 @@ rule Trojan_MSIL_Disstl_BK_2147809805_0
         $x_1_9 = "encrypted_key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1137,6 +1177,7 @@ rule Trojan_MSIL_Disstl_GLT_2147810915_0
         $x_1_6 = "https://discordapp.com/api/v6/users/@me/relationships" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1167,6 +1208,7 @@ rule Trojan_MSIL_Disstl_AN_2147814343_0
         $x_1_10 = "VMware" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1199,6 +1241,7 @@ rule Trojan_MSIL_Disstl_ABZ_2147827756_0
         $x_1_12 = "GetAllNetworkInterfaces" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1222,6 +1265,7 @@ rule Trojan_MSIL_Disstl_ABJC_2147839121_0
         $x_1_3 = "Timer_Resolution.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1244,6 +1288,7 @@ rule Trojan_MSIL_Disstl_ADL_2147845009_0
         $x_1_2 = "Discord Token Grabber, is a Builder that lets you create payloads to gain Tokens from users" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1266,6 +1311,7 @@ rule Trojan_MSIL_Disstl_ADS_2147847999_0
         $x_1_2 = "Temp\\Mahesh.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1288,6 +1334,7 @@ rule Trojan_MSIL_Disstl_ADS_2147847999_1
         $x_1_2 = "\\adria\\Downloads\\Discord-Grabber-main\\Grabber\\obj\\Debug\\Program.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1310,6 +1357,7 @@ rule Trojan_MSIL_Disstl_ADI_2147849697_0
         $x_1_2 = "\\debug\\source\\repos\\PcCleaner\\PcCleaner\\obj\\Debug\\PcCleaner.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1332,6 +1380,7 @@ rule Trojan_MSIL_Disstl_ADI_2147849697_1
         $x_1_2 = "Fucked.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1355,6 +1404,7 @@ rule Trojan_MSIL_Disstl_ADI_2147849697_2
         $x_1_3 = "DiscordResolver.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_RaStealer_PAE_2147839484_0
         $x_1_2 = {33 c0 80 f9 40 0f 94 c0 83 e1 3f 49 [0-3] 44 2b ?? 41 8b ?? 44 8b ?? c1 e0 06 44 0b ?? 49 83 fb 04 75 ?? 45 33 db 45 85 ?? 74 ?? 41 8b ?? c1 e8 10 88 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

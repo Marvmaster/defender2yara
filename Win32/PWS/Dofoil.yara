@@ -16,6 +16,7 @@ rule PWS_Win32_Dofoil_A_2147647984_0
         $x_1_2 = {f8 50 6a 2f 68 ?? ?? ?? ?? 57 02 00 8b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule PWS_Win32_Dofoil_C_2147650429_0
         $x_1_3 = {8d 45 fc e8 ?? ?? ?? ?? 50 6a 00 6a 00 6a 28 6a 00 e8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 85 c0 74 ?? 8d 45 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule PWS_Win32_Dofoil_E_2147658182_0
         $x_1_4 = "elevated restart" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

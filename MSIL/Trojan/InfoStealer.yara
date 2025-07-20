@@ -23,6 +23,7 @@ rule Trojan_MSIL_InfoStealer_A_2147753778_0
         $x_1_8 = "fuck" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -53,6 +54,7 @@ rule Trojan_MSIL_InfoStealer_AB_2147756482_0
         $x_1_6 = "choice /C Y /N /D Y /T 3 & Del %2" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule Trojan_MSIL_InfoStealer_A_2147759674_0
         $x_1_5 = "mobile-showroom-interiors-500x500" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -106,6 +109,7 @@ rule Trojan_MSIL_InfoStealer_ARA_2147836264_0
         $x_2_5 = "WalletGrabber" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +145,7 @@ rule Trojan_MSIL_InfoStealer_ARA_2147836264_1
         $x_1_15 = "StringFileInfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +171,7 @@ rule Trojan_MSIL_InfoStealer_NITB_2147943275_0
         $x_1_5 = "KillExistingTorProcesses" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

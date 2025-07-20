@@ -31,6 +31,7 @@ rule Worm_Win32_Narcha_A_2147582473_0
         $x_1_17 = "HKEY_LOCAL_MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS\\CURRENTVERSION\\RUNSERVICESONCEEX\\000x\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

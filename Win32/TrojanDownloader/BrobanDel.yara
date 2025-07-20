@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_BrobanDel_A_2147690454_0
         $x_1_5 = "bit.ly/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_BrobanDel_A_2147690454_1
         $x_1_5 = "636F6D6D656E74732E6A73" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

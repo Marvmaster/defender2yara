@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Marinu_B_2147679032_0
         $x_1_3 = "/module/z5.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

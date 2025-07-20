@@ -17,6 +17,7 @@ rule Trojan_Win32_Tarcloin_C_2147679018_0
         $x_1_3 = "1122902581206117710481161114502920602093911430311116311111074038105720369095511171095107505310464051" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Tarcloin_F_2147682165_0
         $x_1_3 = "/658350965/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -64,6 +66,7 @@ rule Trojan_Win32_Tarcloin_G_2147682195_0
         $x_1_3 = {6c 69 62 63 75 72 6c 2e 64 74 61 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -90,6 +93,7 @@ rule Trojan_Win32_Tarcloin_J_2147688081_0
         $x_1_4 = {63 00 6f 00 64 00 65 00 4e 00 61 00 6d 00 65 00 3c 00 70 00 61 00 69 00 72 00 3e 00 3e 00 [0-16] 5f 00 62 00 66 00 67 00 [0-4] 3c 00 73 00 65 00 74 00 3e 00 24 00 73 00 65 00 63 00 73 00 49 00 64 00 6c 00 65 00 3c 00 70 00 61 00 69 00 72 00 3e 00 36 00 30 00 3c 00 73 00 65 00 74 00 3e 00 24 00 6d 00 69 00 6e 00 56 00 69 00 73 00 69 00 62 00 6c 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Win32_Tarcloin_K_2147689919_0
         $x_1_4 = "bsplayer.exe|gom.exe|wmplayer.exe|Wimpy FLV Player.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

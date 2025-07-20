@@ -22,6 +22,7 @@ rule Ransom_MSIL_Aquiyila_A_2147705696_0
         $x_10_8 = "Bassmonster68@safe-mail.net" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

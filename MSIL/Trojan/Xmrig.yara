@@ -18,6 +18,7 @@ rule Trojan_MSIL_Xmrig_NE_2147828120_0
         $x_1_3 = "NewStartUp.lnk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_Xmrig_NEA_2147828314_0
         $x_1_5 = "CAD1094388875" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_MSIL_Xmrig_AJMD_2147832276_0
         $x_1_1 = {06 08 9a 28 ?? ?? ?? 0a 0d 09 18 5d 2d 0e 07 08 09 1f 19 58 28 ?? ?? ?? 0a 9c 2b 0c 07 08 09 1f 0f 59 28 ?? ?? ?? 0a 9c 08 17 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +88,7 @@ rule Trojan_MSIL_Xmrig_NEB_2147833832_0
         $x_5_1 = {7e 03 00 00 04 06 7e 03 00 00 04 06 91 06 61 00 23 00 00 00 00 00 00 00 40 23 00 00 00 00 00 40 55 40 5a 28 19 00 00 0a 61 d2 9c 06 17 58 0a 06 7e 03 00 00 04 8e 69 fe 04}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_MSIL_Xmrig_AHRL_2147835873_0
         $x_2_1 = {11 04 11 0d 9a 6f ?? ?? ?? 0a 11 05 11 0e 9a 28 ?? ?? ?? 0a 13 0f 11 0f 2c 11 00 28 ?? ?? ?? 0a 13 10 11 10 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +134,7 @@ rule Trojan_MSIL_Xmrig_ABHV_2147838444_0
         $x_1_3 = "Uvotnztujclaaja" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule Trojan_MSIL_Xmrig_GCE_2147838670_0
         $x_1_7 = "SHELL.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -182,6 +189,7 @@ rule Trojan_MSIL_Xmrig_NEAC_2147838961_0
         $x_2_6 = "ProcessWindowStyle" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -204,6 +212,7 @@ rule Trojan_MSIL_Xmrig_NEAD_2147839869_0
         $x_5_2 = "https://cdn.discordapp.com/attachments" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +236,7 @@ rule Trojan_MSIL_Xmrig_NEAE_2147839877_0
         $x_2_3 = "newone1" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +261,7 @@ rule Trojan_MSIL_Xmrig_NEAF_2147840317_0
         $x_2_4 = "ZWM2MzJmZDktMTY5NC00ZjRhLTliZmYtZjIwNjAwZTM3OTgx" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +287,7 @@ rule Trojan_MSIL_Xmrig_RDA_2147840609_0
         $x_1_5 = "GOMXrig" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +310,7 @@ rule Trojan_MSIL_Xmrig_NEAG_2147840980_0
         $x_5_2 = "LWindowsFormsApp76oad" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -325,6 +338,7 @@ rule Trojan_MSIL_Xmrig_CBB_2147841052_0
         $x_1_7 = "Rfc2898DeriveBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -346,6 +360,7 @@ rule Trojan_MSIL_Xmrig_CBC_2147841053_0
         $x_10_1 = {28 03 00 00 06 28 02 00 00 06 28 ?? 00 00 0a 72 ?? ?? ?? 70 28 03 00 00 06 6f ?? 00 00 0a 02 1f 18 6f ?? 00 00 0a 14 03 6f ?? 00 00 0a a5 3a 00 00 01 0a de}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -367,6 +382,7 @@ rule Trojan_MSIL_Xmrig_AX_2147842666_0
         $x_1_1 = {0a 14 0b 14 0c 14 0d 28 ?? ?? ?? 0a 1a 33 0e 72 32 0f 00 70 0c 72 7c 0f 00 70 0d 2b 0c 72 98 0f 00 70 0c 72 e2 0f 00 70 0d 06 08 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -390,6 +406,7 @@ rule Trojan_MSIL_Xmrig_AX_2147842666_1
         $x_1_3 = "WindowsFormsApp67" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -413,6 +430,7 @@ rule Trojan_MSIL_Xmrig_NMR_2147842959_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -435,6 +453,7 @@ rule Trojan_MSIL_Xmrig_CZX_2147843351_0
         $x_5_2 = {02 06 91 0c 02 06 02 07 91 9c 02 07 08 9c 06 17 58 0a 07 17 59 0b 06 07 32}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -457,6 +476,7 @@ rule Trojan_MSIL_Xmrig_AXM_2147843424_0
         $x_1_2 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -479,6 +499,7 @@ rule Trojan_MSIL_Xmrig_NEAH_2147843445_0
         $x_5_2 = "ChinhDo.Transactions" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -501,6 +522,7 @@ rule Trojan_MSIL_Xmrig_PSIV_2147844987_0
         $x_1_2 = "JGVudjpQU0V4ZXVjdGlvblBvbGljeVByZWZlcmVybmNlPSJieXBhc3MiDQo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -522,6 +544,7 @@ rule Trojan_MSIL_Xmrig_PSML_2147846444_0
         $x_2_1 = {11 05 11 08 9a 72 ee 00 00 70 6f 1e 00 00 0a 2c 0c 11 05 11 08 72 fe 00 00 70 a2 2b 4b 11 05 11 08 9a 72 2a 01 00 70 6f 1e 00 00 0a 2c 0c 11 05 11 08 72 38 01 00 70}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -543,6 +566,7 @@ rule Trojan_MSIL_Xmrig_PSNL_2147847621_0
         $x_2_1 = {72 d3 6c 00 70 14 28 7e 00 00 06 1c 2d 17 26 28 88 00 00 0a 28 39 02 00 06 74 5b 00 00 1b 6f 89 00 00 0a 2b 07 28 8a 00 00 0a 2b e3 2a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -565,6 +589,7 @@ rule Trojan_MSIL_Xmrig_NG_2147851005_0
         $x_1_2 = "WindowsFormsApp30.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -587,6 +612,7 @@ rule Trojan_MSIL_Xmrig_NMG_2147851877_0
         $x_1_2 = "Craxs Rat Loader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -609,6 +635,7 @@ rule Trojan_MSIL_Xmrig_NIG_2147891687_0
         $x_1_2 = "Windows Defender Module Service" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -632,6 +659,7 @@ rule Trojan_MSIL_Xmrig_ABDX_2147896490_0
         $x_1_3 = "SetupENC.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -660,6 +688,7 @@ rule Trojan_MSIL_Xmrig_PSBL_2147899326_0
         $x_2_8 = "IlKdDrCvOSxSdTCJaKAYypbe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -682,6 +711,7 @@ rule Trojan_MSIL_Xmrig_PSBQ_2147899330_0
         $x_5_2 = {00 8d 44 00 00 01 0b 28 56 00 00 06 0c 7e 18 00 00 04 06 07 28 0e 00 00 06 28 46 00 00 06 28 01 00 00 0a 3a 84 02 00 00 7e 30 00 00 04 28 69 00 00 0a 3a 0f 00 00 00 7e 06 00 00 04 7e 30 00 00 04 28 34 00 00 06 7e 30 00 00 04 73 64 00 00 0a 28 a5 00 00 0a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -703,6 +733,7 @@ rule Trojan_MSIL_Xmrig_PSBZ_2147899333_0
         $x_5_1 = {00 06 02 07 1e 6f 39 ?? ?? ?? 18 28 3a ?? ?? ?? 6f 3b ?? ?? ?? 00 00 07 1e 58 0b 07 02 6f 3c ?? ?? ?? fe 04 0c 08 2d d8 28 3d ?? ?? ?? 06 6f 3e ?? ?? ?? 6f 3f ?? ?? ?? 0d 2b 00 09 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -724,6 +755,7 @@ rule Trojan_MSIL_Xmrig_INAA_2147905685_0
         $x_5_1 = {8e 69 5d 1f 09 58 1f 0c 58 1f 15 59 1b 58 1b 59 91 61 ?? 06 1a 58 4a 20 0e 02 00 00 58 20 0d 02 00 00 59 ?? 8e 69 5d 1f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -752,6 +784,7 @@ rule Trojan_MSIL_Xmrig_WDAA_2147920776_0
         $x_2_8 = "FakeMinerVirusExperiment.Resources" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -774,6 +807,7 @@ rule Trojan_MSIL_Xmrig_AXR_2147925472_0
         $x_1_2 = "password99" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -795,6 +829,7 @@ rule Trojan_MSIL_Xmrig_AXR_2147925472_1
         $x_1_1 = {72 5b 00 00 70 28 ?? 00 00 0a 0b 28 ?? 00 00 0a 0c 08 06 6f ?? 00 00 0a 08 07 6f ?? 00 00 0a 73 05 00 00 0a 0d 09 08 6f ?? 00 00 0a 17 73 07 00 00 0a 13 04 11 04 7e 01 00 00 04 16 7e 01 00 00 04 8e 69 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Smawis_A_2147678932_0
         $x_1_3 = {6a 00 6a 00 ff d7 81 fe 09 04 00 00 74 ?? 81 fe ?? ?? 00 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_Win32_Smawis_D_2147678934_0
         $x_1_5 = {2f 00 73 00 6d 00 6f 00 63 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

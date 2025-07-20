@@ -18,6 +18,7 @@ rule Trojan_Win64_Petwosel_A_2147941672_0
         $x_1_4 = {4d 5a 45 52 e8 00 00 00 00 58 83 e8 09 50 05 ?? ?? ?? ?? ff d0 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Trojan_Win64_Petwosel_B_2147941674_0
         $x_1_8 = {41 81 f0 20 83 b8 ed}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

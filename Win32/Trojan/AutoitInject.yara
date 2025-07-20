@@ -172,6 +172,7 @@ rule Trojan_Win32_AutoitInject_BI_2147742536_0
         $x_10_7 = "ARarHtmlClassName" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -214,6 +215,7 @@ rule Trojan_Win32_AutoitInject_AR_2147742918_0
         $x_20_19 = "adprovider.exe" wide //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -269,6 +271,7 @@ rule Trojan_Win32_AutoitInject_RA_2147744389_0
         $x_1_4 = "\\\\[\\\\nrt]|%%|%[-+ 0#]?([0-9]*|\\*)?(\\.[0-9]*|\\.\\*)?[hlL]?[diouxXeEfgGs]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -404,6 +407,7 @@ rule Trojan_Win32_AutoitInject_AN_2147748089_0
         $x_1_6 = "Really cancel the installation" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -999,6 +1003,7 @@ rule Trojan_Win32_AutoitInject_DE_2147828941_0
         $x_1_8 = "CreateToolhelp32Snapshot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -1105,6 +1110,7 @@ rule Trojan_Win32_AutoitInject_RE_2147888160_0
         $x_1_2 = {97 87 3c b4 33 40 9e 6a 97 71 27 c1 e9 4f fd ae 03 4f 4b 82 88 e1 71 ea a1 3d 7f 5a 80 4c 2e f5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1200,6 +1206,7 @@ rule Trojan_Win32_AutoitInject_GPA_2147892931_0
         $x_2_2 = {64 95 61 e7 b6 4d 74 f8 00 00 e5 1a 58 35 81 34 92 a0 6c ac 25 4b 12 38 cb 35 db 1f 22 fd 40 23 79 e0 20 ce ca ea 1e 0b 89 9f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1525,6 +1532,7 @@ rule Trojan_Win32_AutoitInject_RH_2147901485_0
         $x_1_2 = {fd 71 bc c3 f2 48 c7 9e e8 f2 f8 8d b0 f5 3e f6 5b f0 ed 42 9b f2 7e 1a be 26 aa 35 84 e6 ec 80}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1575,6 +1583,7 @@ rule Trojan_Win32_AutoitInject_KAA_2147902504_0
         $x_1_1 = {85 94 98 79 41 55 33 21 45 41 30 36 4d a8 ff 73 24 a7 3c f6 7a 12 f1 67 ac c1 93 e7 6b 43 ca 52 a6 ad}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1626,6 +1635,7 @@ rule Trojan_Win32_AutoitInject_AMBG_2147902654_0
         $x_1_2 = {79 f8 1d bc 70 ef 9a 68 74 6f 21 44 38 a8 a7 a3 fe fe ca 11 a9 98 3c ba 92 b2 e2 54 b9 da 69 2f e5 aa 92 22 e9 b4 34 43 78 16 0a e6 69 4a 1c 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

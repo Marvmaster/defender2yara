@@ -20,6 +20,7 @@ rule Backdoor_Win64_FreshCam_A_2147925347_0
         $x_1_5 = "src\\commands\\technical_command.rs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Backdoor_Win64_FreshCam_B_2147925348_0
         $x_1_4 = "src\\commands\\send_data.rs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

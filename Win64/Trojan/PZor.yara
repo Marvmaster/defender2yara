@@ -16,6 +16,7 @@ rule Trojan_Win64_PZor_A_2147843176_0
         $x_2_1 = {48 89 ea 4c 01 e2 4d 89 fa 49 c1 ea ?? 4d 89 f3 49 c1 eb 10 49 b8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

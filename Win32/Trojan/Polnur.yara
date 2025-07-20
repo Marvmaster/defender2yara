@@ -18,6 +18,7 @@ rule Trojan_Win32_Polnur_A_2147650727_0
         $x_5_4 = {83 c4 18 4f 8a 47 01 47 84 c0 75 f8 b9 0c 00 00 00 be ?? ?? ?? 00 f3 a5 6a 00 68 80 00 00 00 6a 03 6a 00 6a 01 66 a5 68 00 00 00 80}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -19,6 +19,7 @@ rule Ransom_Win32_WannaCry_PA_2147783716_0
         $x_1_4 = "WannaCry 3.0  @Please_Read_Me@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Win32_WannaCry_ARA_2147919876_0
         $x_2_4 = "DisableTaskMgr" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

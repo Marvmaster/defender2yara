@@ -23,6 +23,7 @@ rule TrojanProxy_Win32_Small_DD_2147597135_0
         $x_100_9 = {b8 01 00 00 00 85 c0 0f 84 8e 00 00 00 6a 00 68 ?? ?? 00 10 ff 15 ?? ?? 00 10 89 45 fc 83 7d fc 00 74 3e 6a 00 68 ?? ?? 00 10 6a 00 8b 4d fc 51 ff 15 ?? ?? 00 10 89 45 f4 6a 00 68 ?? ?? 00 10 6a 00 8b 55 f4 52 ff 15 ?? ?? 00 10 89 45 f4 83 7d f4 00 74 0c 8b 45 f4 50 e8 ?? ?? ff ff 83 c4 04 68 ?? ?? 00 10 68 ?? ?? 00 10 e8 ?? ?? ff ff 83 c4 08 85 c0 75 17 68 ?? ?? 00 10 68 ?? ?? 00 10 68 ?? ?? 00 10 e8 ?? ?? ff ff 83 c4 0c 6a 32 ff 15 ?? ?? 00 10 e9 65 ff ff ff b8 01 00 00 00 8b e5 5d c2 04 00}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -54,6 +55,7 @@ rule TrojanProxy_Win32_Small_DE_2147602528_0
         $x_1_9 = {64 3b 5d 67 78 65 73 77 2f 74 7a 74 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -83,6 +85,7 @@ rule TrojanProxy_Win32_Small_DV_2147603108_0
         $x_1_10 = "\\usbpdaup.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule VirTool_Win32_Streespyer_A_2147628877_0
         $x_1_5 = "TFM_S3C_K14_LOGIN" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

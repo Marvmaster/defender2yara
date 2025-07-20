@@ -32,6 +32,7 @@ rule Worm_Win32_Ambler_A_2147630319_0
         $x_1_18 = "RESETGRABLIMITS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
@@ -68,6 +69,7 @@ rule Worm_Win32_Ambler_B_2147654676_0
         $x_1_4 = "***GRABBED BALANCE****" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

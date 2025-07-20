@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Bewmecky_A_2147626861_0
         $x_1_3 = {83 e8 05 8d 48 a4 83 f9 04 77 03 83 c0 1a 8d 48 c4 83 f9 04 77 03 83 c0 1a 8d 48 d5 83 f9 04 77 03 83 c0 0a ff 45 fc 88 04 37}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

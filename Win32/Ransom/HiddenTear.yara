@@ -47,6 +47,7 @@ rule Ransom_Win32_HiddenTear_2147717148_0
         $x_1_7 = "bytesToBeEncrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -74,6 +75,7 @@ rule Ransom_Win32_HiddenTear_SA_2147740796_0
         $x_1_3 = "\\Sanction Ransomware\\Project Encryptor\\hidden-tear" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +103,7 @@ rule Ransom_Win32_HiddenTear_PA_2147745622_0
         $x_1_7 = "EncryptDirectory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +130,7 @@ rule Ransom_Win32_HiddenTear_GG_2147753784_0
         $x_1_6 = "buy bitcoins" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

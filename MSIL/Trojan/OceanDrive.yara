@@ -30,6 +30,7 @@ rule Trojan_MSIL_OceanDrive_A_2147767195_0
         $x_1_15 = {63 63 74 6f 72 00 67 65 74 00 6c 69 73 74 00 70 6f ?? 74 00 45 78 65 46 72 6f 6d 54 78 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule Trojan_MSIL_OceanDrive_B_2147767196_0
         $x_1_3 = {72 91 05 00 70 06 72 e7 ?? 00 70 28 13 00 00 0a 28 04 00 00 06 72 91 05 00 70 06 28 18 00 00 0a 28 05 00 00 06 [0-16] 6f 28 00 00 0a 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

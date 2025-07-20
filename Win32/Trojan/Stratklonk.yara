@@ -19,6 +19,7 @@ rule Trojan_Win32_Stratklonk_A_2147692363_0
         $x_1_5 = {8b 55 0c 8d 4d b8 0f bf c3 51 50 8b 02 c7 45 c0 01 00 00 00 50 c7 45 b8 02 00 00 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

@@ -21,6 +21,7 @@ rule HackTool_Win32_Donkaykay_I_2147933572_0
         $x_1_6 = {5b 00 2b 00 5d 00 20 00 57 00 61 00 69 00 74 00 69 00 6e 00 67 00 20 00 66 00 6f 00 72 00 20 00 43 00 6f 00 6e 00 6e 00 65 00 63 00 74 00 20 00 43 00 6c 00 69 00 65 00 6e 00 74 00 20 00 6f 00 6e 00 20 00 70 00 6f 00 72 00 74 00 3a 00 25 00 73 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule HackTool_Win32_Donkaykay_J_2147934371_0
         $x_1_4 = {5b 00 53 00 70 00 65 00 63 00 69 00 61 00 6c 00 20 00 63 00 6f 00 6d 00 6d 00 61 00 6e 00 64 00 73 00 5d 00 7b 00 65 00 78 00 69 00 74 00 2c 00 20 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

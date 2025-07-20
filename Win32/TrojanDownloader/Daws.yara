@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Daws_A_2147695851_0
         $x_1_3 = "SpyProject\\Release\\Launcher.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

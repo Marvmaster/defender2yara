@@ -18,6 +18,7 @@ rule Ransom_Win32_Schuhcrypt_A_2147711665_0
         $x_1_4 = "/add.php?prvkey=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

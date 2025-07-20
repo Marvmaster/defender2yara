@@ -25,6 +25,7 @@ rule TrojanDownloader_Win32_Darmapo_2147630352_0
         $x_10_11 = "CreateServiceW" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

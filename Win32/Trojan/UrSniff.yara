@@ -17,6 +17,7 @@ rule Trojan_Win32_UrSniff_RPX_2147830032_0
         $x_1_2 = {8b 4c 24 10 05 0c d7 85 01 89 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

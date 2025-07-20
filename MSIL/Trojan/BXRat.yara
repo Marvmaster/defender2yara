@@ -24,6 +24,7 @@ rule Trojan_MSIL_BXRat_HNB_2147923007_0
         $x_15_9 = {67 65 74 5f 49 56 00 73 65 74 5f 49 56 00 47 65 6e 65 72 61 74 65 49 56 00}  //weight: 15, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

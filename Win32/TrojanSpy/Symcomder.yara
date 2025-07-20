@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Symcomder_D_2147679013_0
         $x_1_4 = {75 6e 5d 20 3e 3e 20 25 54 45 4d 50 25 5c [0-10] 2e 72 65 67 0d 0a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

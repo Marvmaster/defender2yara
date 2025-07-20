@@ -21,6 +21,7 @@ rule Trojan_Win32_Avgesi_B_2147680239_0
         $x_2_7 = {8b 38 ff 57 ?? 8b ce 8b 45 ?? d3 e8 f6 d0 30 45 ?? 8d 55 ?? b9 01 00 00 00 8b 45 ?? 8b 38 ff 57 ?? 46 4b 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

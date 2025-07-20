@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_GhostRAT_A_2147893272_0
         $x_2_1 = {83 7d e8 10 8b 45 d4 73 ?? 8d 45 d4 8b 8c b5 78 fd ff ff 51 50 ff 15 ?? ?? ?? ?? 83 c4 08 85 c0 74 ?? 46 83 fe 02}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_GhostRAT_B_2147893423_0
         $x_2_3 = {f7 f6 8b 45 ?? 01 d0 0f b6 00 31 d8 88 01}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanDownloader_Win32_GhostRAT_C_2147894658_0
         $x_2_7 = {89 c7 6a 01 ff d3 6a 01 ff d3 6a 01 ff d3 6a 01 ff d3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule TrojanDownloader_Win32_GhostRAT_E_2147894662_0
         $x_2_4 = {68 04 01 00 00 8d 85 f8 fe ff ff 50 6a 01 6a 00 68 ?? ?? ?? ?? ff 75 fc ff 15 ?? ?? ?? ?? ff 75 fc ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule TrojanDownloader_Win32_GhostRAT_F_2147895852_0
         $x_2_1 = {8b 44 24 24 50 ff 15 ?? ?? 40 00 8b 4c 24 28 8b ?? 51 66 c7 44 24 14 02 00 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule TrojanDownloader_Win32_GhostRAT_G_2147896129_0
         $x_2_2 = {8b f0 66 a1 64 a1 40 00 50 66 c7 44 24 18 02 00 e8 ?? ?? 00 00 66 89 44 24 16 8b 4e 0c 6a 10 8b 11 8d 4c 24 18 51 8b 02 8b 15 f0 ea 40 00 52 89 44 24 24 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule TrojanDownloader_Win32_GhostRAT_I_2147896724_0
         $x_2_3 = {c6 44 24 14 4b c6 44 24 16 52 c6 44 24 17 4e c6 44 24 19 4c c6 44 24 1a 33 c6 44 24 1b 32 c6 44 24 1c 2e c6 44 24 1d 64}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -178,6 +185,7 @@ rule TrojanDownloader_Win32_GhostRAT_H_2147897138_0
         $x_2_2 = {53 8b f8 66 c7 44 24 14 02 00 ff ?? ?? 78 41 00 66 89 44 24 12 8b ?? 0c 6a 10 8b 08 8d 44 24 14 50 8b 11 8b 4e 08 51 89 54 24 20 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

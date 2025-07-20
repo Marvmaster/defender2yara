@@ -18,6 +18,7 @@ rule HackTool_MSIL_Protoon_A_2147692184_0
         $x_1_4 = "HandleSendCommands" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule HackTool_MSIL_Protoon_A_2147692184_1
         $x_1_4 = "HandleRegistryCommands" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule HackTool_MSIL_Protoon_A_2147692184_2
         $x_1_4 = "set CDAudio door open" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule HackTool_MSIL_Protoon_A_2147692184_3
         $x_1_3 = "{0}\\KB-{1}.{2}.{3}.log" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule HackTool_MSIL_Protoon_A_2147692184_4
         $x_1_4 = "HandleVisitWebsiteHiddenlyCommands" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule HackTool_MSIL_Protoon_A_2147692184_5
         $x_1_5 = "\\Google\\Chrome\\User Data\\Default\\Login Data" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -158,6 +164,7 @@ rule HackTool_MSIL_Protoon_A_2147692184_6
         $x_1_6 = "\\Log.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

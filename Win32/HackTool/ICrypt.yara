@@ -17,6 +17,7 @@ rule HackTool_Win32_ICrypt_A_2147628309_0
         $x_1_3 = {66 00 75 00 6c 00 6c 00 79 00 75 00 6e 00 64 00 65 00 74 00 65 00 63 00 74 00 65 00 64 00 2e 00 63 00 6f 00 6d 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

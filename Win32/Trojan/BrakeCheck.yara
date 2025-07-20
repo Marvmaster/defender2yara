@@ -18,6 +18,7 @@ rule Trojan_Win32_BrakeCheck_A_2147822536_0
         $x_100_3 = {68 d1 71 05 ad 68 36 6a 1f e1 68 59 81 7e ad e8}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

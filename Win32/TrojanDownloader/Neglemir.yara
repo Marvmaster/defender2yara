@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Neglemir_A_2147652291_0
         $x_1_6 = {26 76 65 72 3d ?? ?? ?? ?? ?? 26 6d 61 63 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

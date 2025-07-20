@@ -16,6 +16,7 @@ rule Trojan_WinNT_Kernelpatch_A_2147627779_0
         $x_1_2 = {83 4d fc ff 8b 17 a1 ?? ?? ?? ?? 39 50 08 77 ?? c7 45 e4 0d 00 00 c0 e9 ?? ?? ?? ?? 8b 08 fa 0f 20 c0 25 ff ff fe ff 0f 22 c0 8b 06 89 04 91 0f 20 c0 0d 00 00 01 00 0f 22 c0 fb 83 65 e4 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_WinNT_Kernelpatch_B_2147656880_0
         $x_1_3 = {4e 00 66 c7 85 ?? ff ff ff 54 00 66 c7 85 ?? ff ff ff 5c 00 66 c7 85 ?? ff ff ff 43 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_WinNT_Kernelpatch_C_2147660094_0
         $x_1_2 = {5a 00 66 c7 45 ?? 77 00 66 c7 45 ?? 43 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

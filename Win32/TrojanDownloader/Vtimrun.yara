@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Vtimrun_A_2147624652_0
         $x_1_6 = {49 6e 73 74 61 6c 6c 00 69 74 65 6d 25 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule TrojanDownloader_Win32_Vtimrun_B_2147625165_0
         $x_1_6 = {5f 49 6e 73 74 61 6c 6c 40 ?? ?? 5f 4d 69 73 73 69 6f 6e 42 72 69 65 66 69 6e 67 40 ?? ?? 5f 55 6e 69 6e 73 74 61 6c 6c 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

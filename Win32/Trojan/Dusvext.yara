@@ -20,6 +20,7 @@ rule Trojan_Win32_Dusvext_B_2147648491_0
         $x_1_6 = "getklogs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Backdoor_Linux_Phalanx2_A_2147826658_0
         $x_1_6 = {8b 00 0f b6 00 3c 64 75 0e c7 04 24 ac 0d 0b 08 e8 06 91 00 00 eb 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

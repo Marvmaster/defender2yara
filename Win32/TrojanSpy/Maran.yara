@@ -31,6 +31,7 @@ rule TrojanSpy_Win32_Maran_A_2147582586_0
         $x_1_16 = "\\\\.\\PhysicalDrive0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_10_*) and 3 of ($x_5_*) and 5 of ($x_1_*))) or
             ((3 of ($x_50_*) and 1 of ($x_20_*) and 1 of ($x_10_*) and 4 of ($x_5_*))) or
@@ -67,6 +68,7 @@ rule TrojanSpy_Win32_Maran_B_2147593088_0
         $x_1_11 = "RegisterServiceCtrlHandlerA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +98,7 @@ rule TrojanSpy_Win32_Maran_C_2147593131_0
         $x_1_9 = "ipfilter.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +125,7 @@ rule TrojanSpy_Win32_Maran_D_2147593142_0
         $x_1_6 = "Block Sheep Wall" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +153,7 @@ rule TrojanSpy_Win32_Maran_AT_2147596410_0
         $x_1_8 = {ff ff ff ff 0a 00 00 00 3b ?? ?? ?? ?? 70 61 73 73 3a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -181,6 +186,7 @@ rule TrojanSpy_Win32_Maran_AV_2147599335_0
         $x_1_13 = "VoiceManagerDown" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 7 of ($x_20_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -207,6 +213,7 @@ rule TrojanSpy_Win32_Maran_BC_2147599342_0
         $x_1_4 = {53 65 74 54 69 6d 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -231,6 +238,7 @@ rule TrojanSpy_Win32_Maran_E_2147605461_0
         $x_1_4 = {6d 65 73 73 69 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

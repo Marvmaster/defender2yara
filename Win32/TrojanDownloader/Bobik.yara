@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_Bobik_RP_2147905908_0
         $x_1_9 = "t.ru/do" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_20_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((3 of ($x_20_*) and 2 of ($x_5_*))) or

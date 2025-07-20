@@ -17,6 +17,7 @@ rule Trojan_MacOS_AceDeceiver_A_2147923835_0
         $x_1_2 = {54 cb aa ce 6a d9 c9 52 17 2d 00 22 4a 40 0f 7a 30 60 2e 15 7d ee 14 85 bd 42 c3 55 fe 89 77 df c9 1f 4d 4f 2e c6 5f 9d 9a 3e 47 ba}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

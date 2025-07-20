@@ -20,6 +20,7 @@ rule Worm_Win32_Chiki_A_2147626282_0
         $x_4_6 = {be 18 00 00 00 bb ?? ?? ?? ?? 8b 03 50 e8 ?? ?? ?? ?? 83 f8 02 0f 85 36 01 00 00}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or

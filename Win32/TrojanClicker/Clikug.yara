@@ -18,6 +18,7 @@ rule TrojanClicker_Win32_Clikug_A_2147686054_0
         $x_1_4 = "Click To x: %d y: %d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanClicker_Win32_Clikug_A_2147686054_1
         $x_2_4 = "%s/stat/uid/%s/sid/%d/a/%s/" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanClicker_Win32_Clikug_B_2147686108_0
         $x_2_4 = "%s/stat/uid/%s/sid/%d/a/%s/" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule TrojanClicker_Win32_Clikug_C_2147687018_0
         $x_2_4 = "%s/stat/uid/%s/sid/%d/a/%s/" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule TrojanClicker_Win32_Clikug_D_2147688545_0
         $x_1_4 = "Main PID: %d Handle: 0x%x TID: %d Handle: 0x%x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +152,7 @@ rule TrojanClicker_Win32_Clikug_D_2147688545_1
         $x_1_18 = "\\SvcSupport.exe\" --SendInstLogs \"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -202,6 +208,7 @@ rule TrojanClicker_Win32_Clikug_E_2147689651_0
         $x_1_32 = "VG9CZU9yOverTm90VG9UaLookGlzSXNUaGVRdWVzdGlvbg==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -231,6 +238,7 @@ rule TrojanClicker_Win32_Clikug_F_2147707204_0
         $x_1_10 = "D0E8C4-8D98-B742-BEA7-6B" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -255,6 +263,7 @@ rule TrojanClicker_Win32_Clikug_G_2147707246_0
         $x_1_5 = "We're organization, which utilizes your unused computer power and broadband connection to crawl the web. To do so, we sponsor" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -280,6 +289,7 @@ rule TrojanClicker_Win32_Clikug_H_2147707247_0
         $x_1_6 = "\\Runner.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

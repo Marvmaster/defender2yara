@@ -19,6 +19,7 @@ rule Ransom_Linux_RedAlert_A_2147825993_0
         $x_1_5 = "hwnrtxp:f:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Linux_RedAlert_B_2147846373_0
         $x_1_4 = ".vmdk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_Win64_SmertRansom_YAB_2147917190_0
         $x_1_5 = "--foodsum" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win64_SmertRansom_YAC_2147917406_0
         $x_1_4 = "--foodsum" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Ransom_Win64_SmertRansom_YAD_2147917518_0
         $x_1_5 = "xmb.pythonanywhere.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Ransom_Win64_SmertRansom_YAE_2147917662_0
         $x_1_4 = ".smert" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

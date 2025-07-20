@@ -22,6 +22,7 @@ rule TrojanSpy_Win32_Travnet_A_2147671600_0
         $x_1_8 = {44 4c 4c 2e 64 6c 6c 00 53 65 72 76 69 63 65 4d 61 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanSpy_Win32_Travnet_B_2147671601_0
         $x_1_6 = "enumfs.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule TrojanSpy_Win32_Travnet_C_2147682120_0
         $x_1_9 = "\\stat_t.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_20_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_20_*) and 1 of ($x_5_*))) or

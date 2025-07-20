@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Pelfpoi_L_2147645818_0
         $x_2_5 = {8d 45 fc 50 8d 55 e8 8b 43 30 e8 ?? ?? ff ff 8b 45 e8 89 45 ec c6 45 f0 0b 8d 55 e4 8b 43 30 e8 ?? ?? ff ff 8b 45 e4 89 45 f4 c6 45 f8 0b 8d 45 ec 50}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

@@ -26,6 +26,7 @@ rule HackTool_Win32_Poison_A_2147648245_0
         $x_1_11 = "NtQueryInformationProcess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

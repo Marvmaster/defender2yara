@@ -21,6 +21,7 @@ rule Backdoor_Win32_Buskill_A_2147721443_0
         $x_1_6 = "it changes every day" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

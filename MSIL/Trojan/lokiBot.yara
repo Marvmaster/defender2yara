@@ -16,6 +16,7 @@ rule Trojan_MSIL_lokiBot_CW_2147841267_0
         $x_4_1 = {03 04 08 5d 91 07 04 1f 16 5d 91 61 28 f4 00 00 0a 03 04 17 58 08 5d 91 28 f5 00 00 0a 59 06 58 06 5d d2 0d}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

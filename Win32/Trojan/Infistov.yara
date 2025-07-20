@@ -21,6 +21,7 @@ rule Trojan_Win32_Infistov_2147799670_0
         $x_1_7 = "\\@AppHelpToast.png" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule Trojan_Win32_Infistov_QW_2147805524_0
         $x_3_7 = "pipe\\ExploitPipe" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +82,7 @@ rule Trojan_Win32_Infistov_QQ_2147805945_0
         $x_3_7 = "ImpersonateLoggedOnUser" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

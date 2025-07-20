@@ -15,6 +15,7 @@ rule Rogue_Win32_Rudoct_154222_0
         $x_1_1 = {50 43 44 65 66 65 6e 64 65 72 53 69 6c 65 6e 74 53 65 74 75 70 2e 6d 73 69 22 0d 0a 66 69 6c 65 5f 54 6f 5f 44 6f 6e 77 6c 6f 61 64 20 3d 20 22 22 20 26 20 72 6e 64 53 74 72 20 26 20 22 2e 6d 73 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Rogue_Win32_Rudoct_154222_1
         $x_1_5 = "numberOfThreatsFound" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Rogue_Win32_Rudoct_154222_2
         $x_6_6 = "BSOD.CUR" wide //weight: 6
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Rogue_Win32_Rudoct_154222_3
         $x_1_4 = "_count_buys.vbs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

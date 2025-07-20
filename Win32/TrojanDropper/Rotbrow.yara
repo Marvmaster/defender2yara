@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Rotbrow_A_2147683859_0
         $x_2_6 = "\\Jenkins\\jobs\\babylon-2.7\\workspace\\output\\Release\\protector.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -50,6 +51,7 @@ rule TrojanDropper_Win32_Rotbrow_B_2147683860_0
         $x_1_7 = {42 50 52 4f 54 45 43 54 5f 58 4d 4c 5f 4e 41 4d 45 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -76,6 +78,7 @@ rule TrojanDropper_Win32_Rotbrow_F_2147683864_0
         $x_1_4 = "application/x-vnd.protector.settingstracker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule TrojanDropper_Win32_Rotbrow_G_2147683917_0
         $x_1_5 = {63 00 61 00 6d 00 70 00 61 00 69 00 67 00 6e 00 69 00 64 00 00 00 00 00 73 00 75 00 62 00 69 00 64 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

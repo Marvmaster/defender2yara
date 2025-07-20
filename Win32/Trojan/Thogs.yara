@@ -17,6 +17,7 @@ rule Trojan_Win32_Thogs_A_2147666266_0
         $x_1_3 = {4d 79 48 69 00 21 2d 21 00 21 3d 21 00 21 2b 21 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

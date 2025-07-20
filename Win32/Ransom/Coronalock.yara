@@ -16,6 +16,7 @@ rule Ransom_Win32_Coronalock_DEA_2147755638_0
         $x_1_1 = {03 c3 81 3d ?? ?? ?? ?? 72 05 00 00 31 44 24 10 8b d3 c1 ea 05 03 54 24 2c 89 54 24 24 8b 44 24 24 31 44 24 10 2b 74 24 10 8b 44 24 30 d1 6c 24 18 29 44 24 14 ff 4c 24 1c 0f 85 ?? ?? ?? ?? 8b 44 24 34 5f 89 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Ransom_Win32_Coronalock_AR_2147756350_0
         $x_5_4 = "you are infected of corona virus" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

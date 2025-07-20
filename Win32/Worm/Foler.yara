@@ -19,6 +19,7 @@ rule Worm_Win32_Foler_C_2147679104_0
         $x_1_5 = {5c 44 65 73 6b 74 6f 70 5c 55 73 62 50 [0-32] 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Worm_Win32_Foler_E_2147683997_0
         $x_1_2 = "UsbPropogator\\test\\Release" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

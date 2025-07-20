@@ -17,6 +17,7 @@ rule Ransom_Win32_Wannacrypt_AA_2147746102_0
         $x_1_2 = "WCry\\WCry\\Banner\\WpfApp1\\obj\\Release\\Ransomware Snc.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win32_Wannacrypt_AA_2147751477_0
         $x_1_5 = "You need pay 0,02 BTC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

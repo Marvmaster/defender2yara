@@ -20,6 +20,7 @@ rule Backdoor_Win32_Refpron_A_2147608588_0
         $x_1_6 = ".sys not found!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule Backdoor_Win32_Refpron_B_2147610036_0
         $x_1_5 = "TMy_M_i_niT_C_PC_lient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -77,6 +79,7 @@ rule Backdoor_Win32_Refpron_C_2147610105_0
         $x_1_7 = "TMy_M_i_niT_C_PC_lient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -108,6 +111,7 @@ rule Backdoor_Win32_Refpron_D_2147610281_0
         $x_1_8 = {4f 52 3a 52 5f 55 5f 4e 5f 41 5f 44 5f 53 3a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_7_*) and 3 of ($x_1_*))) or
             ((1 of ($x_7_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -136,6 +140,7 @@ rule Backdoor_Win32_Refpron_E_2147610426_0
         $x_10_4 = "Sexme:" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -162,6 +167,7 @@ rule Backdoor_Win32_Refpron_I_2147616542_0
         $x_1_7 = "&border_color=FFFFFF&newwin=&zs=&width=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -189,6 +195,7 @@ rule Backdoor_Win32_Refpron_K_2147618757_0
         $x_1_4 = {63 00 00 00 02 00 00 00 5c 00 00 00 02 00 00 00 50 00 00 00 02 00 00 00 68 00 00 00 02 00 00 00 79 00 00 00 02 00 00 00 73 00 00 00 02 00 00 00 61 00 00 00 02 00 00 00 6c 00 00 00 02 00 00 00 4d 00 00 00 02 00 00 00 6d 00 00 00 02 00 00 00 6f 00 00 00 02 00 00 00 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -216,6 +223,7 @@ rule Backdoor_Win32_Refpron_M_2147622485_0
         $x_1_5 = "bfkq.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -246,6 +254,7 @@ rule Backdoor_Win32_Refpron_C_2147623163_0
         $x_1_10 = "bfkq.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -278,6 +287,7 @@ rule Backdoor_Win32_Refpron_P_2147627232_0
         $x_1_8 = {6d 00 00 00 ff ff ff ff 01 00 00 00 73 00 00 00 ff ff ff ff 01 00 00 00 2e 00 00 00 ff ff ff ff 01 00 00 00 62 00 00 00 ff ff ff ff 01 00 00 00 69 00 00 00 ff ff ff ff 01 00 00 00 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -301,6 +311,7 @@ rule Backdoor_Win32_Refpron_Q_2147629531_0
         $x_1_4 = "bfkq.com|" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -324,6 +335,7 @@ rule Backdoor_Win32_Refpron_R_2147630761_0
         $x_1_4 = "Portions Copyright (c) 1983,99 Borland" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -15,6 +15,7 @@ rule Trojan_Win32_Nedsym_A_2147605132_0
         $x_1_1 = {ff 57 0c ff 75 94 68 ?? ?? 42 00 ff 75 f0 68 ?? ?? 42 00 8d 45 e8 ba 05 00 00 00 e8 ?? ?? fd ff 46 ff 4d d8 0f 85 ?? fd ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Nedsym_B_2147605133_0
         $x_1_6 = {68 64 70 6f 72 74 2e 73 79 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -68,6 +70,7 @@ rule Trojan_Win32_Nedsym_C_2147607898_0
         $x_1_4 = {73 79 73 72 65 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -99,6 +102,7 @@ rule Trojan_Win32_Nedsym_F_2147632028_0
         $x_1_8 = {00 43 61 6c 63 75 6c 61 74 69 6e 67 20 44 65 6c 69 76 65 72 65 64 20 50 65 72 63 65 6e 74 2e 2e 2e 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Trojan_Win32_Nedsym_G_2147643150_0
         $x_1_3 = {85 c0 75 06 8b 5c ee 6c eb 2e 43 81 fb e7 03 00 00 75 df 57}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule Trojan_Win32_Nedsym_G_2147643150_1
         $x_1_3 = {81 3e 52 4d 5f 51 0f 85 ?? ?? ?? ?? 81 7e 04 50 5f 45 4e 0f 85 ?? ?? ?? ?? 81 7e 08 43 4f 44 45 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_Win32_Nedsym_J_2147671584_0
         $x_1_2 = {6a 00 6a 00 a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? 50 6a 00 e8 ?? ?? ?? ?? 68 e8 03 00 00 e8 ?? ?? ?? ?? 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Linux_Processhider_B_2147829077_0
         $x_1_4 = {48 89 c7 e8 30 fd ff ff 48 85 c0 75 13 48 8b 45 e8 48 89 c7 e8 df fc ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

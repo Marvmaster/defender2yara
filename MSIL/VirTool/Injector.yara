@@ -22,6 +22,7 @@ rule VirTool_MSIL_Injector_A_2147638708_0
         $x_3_7 = "ZwUnmapViewOfSection" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 3 of ($x_1_*))) or
             ((3 of ($x_3_*))) or
@@ -48,6 +49,7 @@ rule VirTool_MSIL_Injector_D_2147640282_0
         $x_1_3 = {11 11 17 58 13 11 11 11 12 02 7b ?? 00 00 04 17 59 31 d9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule VirTool_MSIL_Injector_E_2147640283_0
         $x_1_2 = {11 0e 11 0c 20 00 30 00 00 1f 40 6f ?? 00 00 06 13 0f 7e 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule VirTool_MSIL_Injector_F_2147640292_0
         $x_1_3 = {38 8b 00 00 00 1f 0a 8d ?? 00 00 01 13 12 02 11 04 20 f8 00 00 00 d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule VirTool_MSIL_Injector_J_2147641205_0
         $x_1_5 = "WriteProcessMemory" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -141,6 +146,7 @@ rule VirTool_MSIL_Injector_K_2147642092_0
         $x_1_3 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +171,7 @@ rule VirTool_MSIL_Injector_O_2147644644_0
         $x_1_5 = {10 00 00 0a 07 16 6f 11 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -189,6 +196,7 @@ rule VirTool_MSIL_Injector_B_2147644898_0
         $x_1_4 = {58 49 20 73 73 61 6c 63 20 63 69 6c 62 75 70 0a 0d 3b 74 78 65 54 2e 6d 65 74 73 79 53 20 67 6e 69 73 75 0a 0d 3b 6d 65 74 73 79 53 20 67 6e 69 73 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -213,6 +221,7 @@ rule VirTool_MSIL_Injector_E_2147647437_0
         $x_1_4 = "Configurable_Injector.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -236,6 +245,7 @@ rule VirTool_MSIL_Injector_F_2147647601_0
         $x_1_3 = {49 20 4d 5a 00 00 2e 02 16 2a 11 10 1f 3c d3 58 4a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -258,6 +268,7 @@ rule VirTool_MSIL_Injector_T_2147647766_0
         $x_1_3 = {13 06 1f 28 8d ?? 00 00 01 13 07 20 f8 00 00 00 8d ?? 00 00 01 13 08 1f 40 8d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -281,6 +292,7 @@ rule VirTool_MSIL_Injector_U_2147648199_0
         $x_1_3 = "ef63g8g8-8g53" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -307,6 +319,7 @@ rule VirTool_MSIL_Injector_W_2147648492_0
         $x_2_6 = {02 08 07 6f 08 00 00 0a 13 04 12 04 28 09 00 00 0a 0d 09 2c 0d 06 09 28 0a 00 00 0a 6f 0b 00 00 0a 26 08 17 58 0c 08 02 6f 0c 00 00 0a 32 d1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -335,6 +348,7 @@ rule VirTool_MSIL_Injector_G_2147648809_0
         $x_1_4 = {02 1f 23 1f 65 6f ?? 00 00 0a 10 00 02 6f ?? 00 00 0a 0a 06 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -358,6 +372,7 @@ rule VirTool_MSIL_Injector_H_2147649690_0
         $x_1_3 = {11 0b 12 04 7b ?? 00 00 04 12 05 6f ?? 00 00 06 26 11 0c 12 04 7b ?? 00 00 04 6f ?? 00 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -378,6 +393,7 @@ rule VirTool_MSIL_Injector_AI_2147650418_0
         $x_1_1 = {69 61 6d 66 69 72 73 74 31 00 67 66 68 72 74 75 00 67 65 74 5f 54 72 6f 65 73 74 65 72 00 54 72 6f 65 73 74 65 72 00 76 61 6c 75 65 00 68 64 74 79 68 74 68 74 00 69 6c 6c 75 69 6f 00 63 68 65 63 6b 6d 65 00 4f 75 74 41 74 74 72 69 62 75 74 65 00 66 73 65 64 72 34 65 68 31 00 6c 6b 6c 70 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -401,6 +417,7 @@ rule VirTool_MSIL_Injector_AL_2147652061_0
         $x_1_4 = "ekLxIHqvzkEatrmKOgJg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -427,6 +444,7 @@ rule VirTool_MSIL_Injector_AQ_2147652430_0
         $x_1_7 = {4d 61 69 6e 00 64 65 63 72 79 70 74 00 6d 65 73 73 61 67 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -449,6 +467,7 @@ rule VirTool_MSIL_Injector_I_2147653113_0
         $x_1_2 = {1f 3c 58 e0 4b 58 1f 78 58 e0 4b 58 0a 16 0b 2b 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -471,6 +490,7 @@ rule VirTool_MSIL_Injector_J_2147653994_0
         $x_1_2 = {2c 3d 7e 01 00 00 04 16 9a 19 8d 01 00 00 01 0a 06 16 7e 01 00 00 04 17 9a a2 06 17 7e 01 00 00 04 18 9a a2 06 18 1f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -493,6 +513,7 @@ rule VirTool_MSIL_Injector_BA_2147654204_0
         $x_1_3 = {39 6f 00 66 00 66 00 73 00 65 00 74 00 20 00 2b 00 20 00 63 00 6f 00 75 00 6e 00 74 00 20 00 6f 00 75 00 74 00 20 00 6f 00 66 00 20 00 62 00 75 00 66 00 66 00 65 00 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -516,6 +537,7 @@ rule VirTool_MSIL_Injector_K_2147654290_0
         $x_1_3 = {11 15 11 0e 1f 50 d3 58 4b 20 00 30 00 00 1f 40 6f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -540,6 +562,7 @@ rule VirTool_MSIL_Injector_BS_2147656530_0
         $x_1_5 = "NoYou" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -566,6 +589,7 @@ rule VirTool_MSIL_Injector_N_2147656701_0
         $x_1_3 = {1f 1f 5f 62 09 61 08 58 61 d2 9c 09 17 58 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -590,6 +614,7 @@ rule VirTool_MSIL_Injector_CO_2147658647_0
         $x_1_4 = "DataProtector\\ClassLibrary1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -614,6 +639,7 @@ rule VirTool_MSIL_Injector_CW_2147659368_0
         $x_1_5 = "XOREncryptDecrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -636,6 +662,7 @@ rule VirTool_MSIL_Injector_DP_2147667863_0
         $x_1_3 = "invokmya" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -660,6 +687,7 @@ rule VirTool_MSIL_Injector_DW_2147673743_0
         $x_1_5 = "ExecBytes" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -685,6 +713,7 @@ rule VirTool_MSIL_Injector_EC_2147678710_0
         $x_1_3 = "|1.0.2|" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -708,6 +737,7 @@ rule VirTool_MSIL_Injector_ED_2147678801_0
         $n_300_4 = "-Malwarebytes Scanner-" ascii //weight: -300
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -731,6 +761,7 @@ rule VirTool_MSIL_Injector_Q_2147682873_0
         $x_1_2 = {6e 00 61 00 6c 00 46 00 69 00 6c 00 65 00 6e 00 61 00 6d 00 65 00 00 00 49 00 6e 00 6a 00 65 00 63 00 74 00 6f 00 72 00 20 00 4d 00 73 00 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -753,6 +784,7 @@ rule VirTool_MSIL_Injector_EI_2147683031_0
         $x_1_3 = {00 42 6f 74 6f 6d 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -774,6 +806,7 @@ rule VirTool_MSIL_Injector_EK_2147684322_0
         $x_1_2 = {00 41 00 44 49 00 4b 65 79 62 6f 61 72 64 48 6f 6f 6b 00 44 43 49 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -799,6 +832,7 @@ rule VirTool_MSIL_Injector_EK_2147684322_1
         $x_1_6 = {13 13 02 11 04 20 f8 00 00 00 58 11 12 1f 28 5a 58 11 13 16 1f 28 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -825,6 +859,7 @@ rule VirTool_MSIL_Injector_EM_2147684749_0
         $x_1_7 = {0e 41 64 6f 62 d0 b5 20 52 d0 b5 61 64 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -850,6 +885,7 @@ rule VirTool_MSIL_Injector_EP_2147687108_0
         $x_1_6 = {23 72 00 69 00 74 00 65 00 50 00 72 00 6f 00 63 00 65 00 73 00 73 00 4d 00 65 00 6d 00 6f 00 72 00 79 00 00 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -874,6 +910,7 @@ rule VirTool_MSIL_Injector_EQ_2147687176_0
         $x_1_5 = {2b 19 08 09 16 11 05 6f ?? ?? ?? ?? 00 07 09 16 09 8e b7 6f ?? ?? ?? ?? 13 05 00 11 05 16 30 e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -896,6 +933,7 @@ rule VirTool_MSIL_Injector_ES_2147688127_0
         $x_1_3 = {02 22 00 00 c0 40 22 00 00 50 41 73 ?? 00 00 0a 28 ?? 00 00 0a 00 02 17 28 ?? 00 00 0a 00 02 20 e9 01 00 00 20 c7 00 00 00 73 ?? 00 00 0a 28 ?? 00 00 0a 00 02 72 01 00 00 70 28 ?? 00 00 0a 00 02 72 01 00 00 70 6f ?? 00 00 0a 00 02 02 fe 06 07 00 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -918,6 +956,7 @@ rule VirTool_MSIL_Injector_EV_2147688520_0
         $x_1_3 = {15 53 79 73 74 65 6d 2e 44 72 61 77 69 6e 67 2e 42 69 74 6d 61 70 01 00 00 00 04 44 61 74 61 07 02 02 00 00 00 09 03 00 00 00 0f 03 00 00 00 ?? ?? ?? ?? 02 89 50 4e 47}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -943,6 +982,7 @@ rule VirTool_MSIL_Injector_EW_2147688990_0
         $x_1_6 = ":Zone.Identifier" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -964,6 +1004,7 @@ rule VirTool_MSIL_Injector_FA_2147692357_0
         $x_1_2 = {1f 27 9a 13 ?? 11 ?? 14 17 8d 01 00 00 01 13 ?? 11 ?? 16 11 04 a2 11 ?? 6f ?? 00 00 0a 74 ?? 00 00 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -990,6 +1031,7 @@ rule VirTool_MSIL_Injector_FB_2147692769_0
         $x_1_7 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -1012,6 +1054,7 @@ rule VirTool_MSIL_Injector_FW_2147694459_0
         $x_1_3 = {16 1b 9c 07 17 20 9b 00 00 00 9c 07 18 20 f2 00 00 00 9c 07 19 1f 37 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1037,6 +1080,7 @@ rule VirTool_MSIL_Injector_FX_2147694470_0
         $x_1_3 = {33 2a 16 13 04 2b 06 11 04 17 58 13 04 11 04 09 8e 69 2f 0f 09 11 04 9a 6f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1059,6 +1103,7 @@ rule VirTool_MSIL_Injector_FY_2147694592_0
         $x_1_3 = {32 e6 06 17 58 0a 06 02 50 8e 69 32 d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1082,6 +1127,7 @@ rule VirTool_MSIL_Injector_GA_2147696528_0
         $x_1_4 = {00 72 6f 73 74 61 6d 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1103,6 +1149,7 @@ rule VirTool_MSIL_Injector_GC_2147697269_0
         $x_1_2 = "#4=~q4iBbQ}\\]\\] 3Q`Qm\\[rh\\*?%" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1125,6 +1172,7 @@ rule VirTool_MSIL_Injector_GD_2147697295_0
         $x_1_3 = "Sefule.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1148,6 +1196,7 @@ rule VirTool_MSIL_Injector_GE_2147697359_0
         $x_1_4 = {7e 01 00 00 04 8d 08 00 00 01 0a 16 0b 16 0c 38 bc 00 00 00 16 0d 38 91 00 00 00 00 02 09 08 6f 15 00 00 0a 13 04 16 13 05 2b 63 11 05 13 07 11 07 45 04 00 00 00 02 00 00 00 12 00 00 00 22 00 00 00 32 00 00 00 2b 40 06 07 25 17 58 0b 12 04 28 16 00 00 0a 9c 2b 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1171,6 +1220,7 @@ rule VirTool_MSIL_Injector_GF_2147697360_0
         $x_1_4 = {16 2d 05 19 25 2c 2e 5e 45 03 00 00 00 d9 ff ff ff 02 00 00 00 1f 00 00 00 2b 1d 2b 1f 80 15 00 00 04 16 2d cd 2b 18 20 56 c9 a7 14 25 2c cd 5a 20 c1 18 72 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1199,6 +1249,7 @@ rule VirTool_MSIL_Injector_GH_2147697775_0
         $x_1_6 = "EZISATAD" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1224,6 +1275,7 @@ rule VirTool_MSIL_Injector_GI_2147705650_0
         $x_1_6 = {06 02 17 20 ?? 01 00 00 20 ?? 01 00 00 28 0b 00 00 2b 02 16 20 ?? 00 00 00 20 ?? 00 00 00 28 0c 00 00 2b 02 16 28 ?? 00 00 0a 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1250,6 +1302,7 @@ rule VirTool_MSIL_Injector_GJ_2147705651_0
         $x_1_7 = {44 72 65 6e 61 2e 73 61 6f 70 65 64 72 6f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1274,6 +1327,7 @@ rule VirTool_MSIL_Injector_GJ_2147705651_1
         $x_1_5 = "##$$$OPBRPXXPXPAAPAPAPAa990000x0x0xx" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1299,6 +1353,7 @@ rule VirTool_MSIL_Injector_GL_2147706005_0
         $x_1_6 = {2b 02 26 16 20 06 00 00 00 38 c0 00 00 00 02 20 24 01 00 00 20 0d 01 00 00 73 08 00 00 0a 28 09 00 00 0a 20 04 00 00 00 38 a1 00 00 00 02 28 16 00 00 06 20 03 00 00 00 38 91 00 00 00 02 22 00 00 c0 40 22 00 00 50 41 73 0a 00 00 0a 28 17 00 00 06 28 0a 00 00 06 28 09 00 00 06 39 a3 00 00 00 26 20 01 00 00 00 38 62 00 00 00 02 02 fe 06 04 00 00 06 73 0b 00 00 0a 28 1b 00 00 06 20 00 00 00 00 16 39 45 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -1328,6 +1383,7 @@ rule VirTool_MSIL_Injector_S_2147706053_0
         $x_1_5 = "cloloir.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1355,6 +1411,7 @@ rule VirTool_MSIL_Injector_V_2147706087_0
         $x_1_3 = "GetTypes" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1375,6 +1432,7 @@ rule VirTool_MSIL_Injector_GM_2147706264_0
         $x_1_1 = {16 0a 2b 23 02 06 02 06 91 05 06 04 5d 91 06 1b 58 05 8e 69 58 1f 1f 5f 63 20 ff 00 00 00 5f d2 61 d2 9c 06 17 58 0a 06 02 8e 69 32 d7 02 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1397,6 +1455,7 @@ rule VirTool_MSIL_Injector_GM_2147706264_1
         $x_1_3 = {07 08 07 08 91 02 08 72 ?? 00 00 70 6f ?? 00 00 0a 5d 91 08 1b 58 02 8e 69 58 1f 1f 5f 63 20 ff 00 00 00 5f d2 61 d2 9c 08 17 58 0c 08 07 8e 69 32 ac}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1421,6 +1480,7 @@ rule VirTool_MSIL_Injector_GN_2147706335_0
         $x_1_5 = "azb7IUXz2aQa" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1445,6 +1505,7 @@ rule VirTool_MSIL_Injector_GO_2147706421_0
         $x_1_5 = "4a7db6b1-7b83-46dc-a2f2-ee34a4703530" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1469,6 +1530,7 @@ rule VirTool_MSIL_Injector_X_2147706449_0
         $x_2_4 = "c:\\Users\\Administrator\\Desktop\\Cryptex\\" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1492,6 +1554,7 @@ rule VirTool_MSIL_Injector_GP_2147706527_0
         $x_1_4 = {24 37 61 62 32 64 61 30 66 2d 36 31 34 31 2d 34 39 63 30 2d 38 36 31 61 2d 34 66 63 61 38 62 61 61 66 61 62 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1518,6 +1581,7 @@ rule VirTool_MSIL_Injector_GQ_2147706528_0
         $x_1_4 = {43 6f 6e 74 6f 73 73 61 20 43 6f 72 70 6f 72 61 74 69 6f 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1542,6 +1606,7 @@ rule VirTool_MSIL_Injector_GR_2147706665_0
         $x_1_5 = {64 65 73 65 6e 20 2e 72 65 73 6f 75 72 63 65 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1566,6 +1631,7 @@ rule VirTool_MSIL_Injector_GW_2147706802_0
         $x_1_5 = {70 6c 61 70 75 6d 61 20 2e 72 65 73 6f 75 72 63 65 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1586,6 +1652,7 @@ rule VirTool_MSIL_Injector_GY_2147706878_0
         $x_1_1 = {32 af 7e 1d 00 00 0a 13 06 7e 1d 00 00 0a 08 8e 69 20 00 30 00 00 1f 40 28 0a 00 00 06 13 06 08 16 11 06 08 8e 69 28 20 00 00 0a 11 06 d0 05 00 00 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1608,6 +1675,7 @@ rule VirTool_MSIL_Injector_GX_2147706884_0
         $x_1_3 = {1f 11 91 1f 4d 59 13 05 2b b4 03 04 61 1f 2b 59 06 61 45 01 00 00 00 05 00 00 00 19 13 05 2b 9e 1e 2b f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1632,6 +1700,7 @@ rule VirTool_MSIL_Injector_HA_2147707000_0
         $x_1_5 = {11 05 91 08 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -1656,6 +1725,7 @@ rule VirTool_MSIL_Injector_HB_2147707053_0
         $x_1_5 = "cheltochel" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1679,6 +1749,7 @@ rule VirTool_MSIL_Injector_HD_2147707191_0
         $x_1_4 = {41 7a 75 72 61 4d 61 6e 2e 50 72 6f 70 65 72 74 69 65 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -1700,6 +1771,7 @@ rule VirTool_MSIL_Injector_HG_2147707475_0
         $x_1_2 = "KISSMADICK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1722,6 +1794,7 @@ rule VirTool_MSIL_Injector_HK_2147707682_0
         $x_1_3 = {1f 1f 5f 1f 1f 5f 1f 1f 5f 1f 1f 5f 62 80}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1742,6 +1815,7 @@ rule VirTool_MSIL_Injector_HL_2147707741_0
         $x_1_1 = {20 00 0e 00 00 8d 05 00 00 01 13 06 11 06 16 1f ?? 9c 11 06 17 1f 16 9c 11 06 18 20 d5 00 00 00 9c 11 06 19 1f 54 9c 11 06 1a 1f 6b 9c 11 06 1b 1f 6a 9c 11 06 1c 1f 4a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1773,6 +1847,7 @@ rule VirTool_MSIL_Injector_HL_2147707741_1
         $n_100_12 = "eAgenturNET" ascii //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (3 of ($x*))
 }
@@ -1796,6 +1871,7 @@ rule VirTool_MSIL_Injector_HW_2147707814_0
         $x_1_3 = {53 65 63 6f 6e 64 53 65 6d 65 73 74 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1816,6 +1892,7 @@ rule VirTool_MSIL_Injector_HX_2147707924_0
         $x_1_1 = {58 6e 16 28 ?? ?? ?? ?? 6a 5f 69 95 61}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1840,6 +1917,7 @@ rule VirTool_MSIL_Injector_HY_2147707925_0
         $x_1_5 = "EraseS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1864,6 +1942,7 @@ rule VirTool_MSIL_Injector_IB_2147707980_0
         $x_1_5 = "d0Y0cFtAAwUCNAoIAwAeAw==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1888,6 +1967,7 @@ rule VirTool_MSIL_Injector_IF_2147708068_0
         $x_1_5 = {00 52 65 67 6d 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1909,6 +1989,7 @@ rule VirTool_MSIL_Injector_IG_2147708132_0
         $x_1_2 = "d60e480c-43bd-4ab7-8da0-3ffaa1ad5c24" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1930,6 +2011,7 @@ rule VirTool_MSIL_Injector_IH_2147708133_0
         $x_1_2 = {67 65 74 5f 42 69 73 71 75 65 00 67 65 74 5f 4d 61 67 65 6e 74 61 00 67 65 74 5f 4c 69 6d 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1953,6 +2035,7 @@ rule VirTool_MSIL_Injector_IL_2147708542_0
         $x_1_4 = {13 6c 65 76 65 72 61 67 65 2e 50 72 6f 70 65 72 74 69 65 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1976,6 +2059,7 @@ rule VirTool_MSIL_Injector_IM_2147708611_0
         $x_1_4 = "Adversus solem ne loquitor!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1999,6 +2083,7 @@ rule VirTool_MSIL_Injector_II_2147708717_0
         $x_1_3 = {06 07 02 02 8e 69 17 59 07 59 91 9c 07 17 58 0b 07 06 8e 69 fe 04 0d 09 2d e6 06 0c 2b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2022,6 +2107,7 @@ rule VirTool_MSIL_Injector_IN_2147708847_0
         $x_1_4 = {1e 2c 3d 20 a0 01 00 00 8d 01 00 00 01 25 d0 31 00 00 04 18 2d 2b 26 26 80 32 00 00 04 18 2c 20 20 44 01 00 00 25 2c e0 25 2c dd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -2044,6 +2130,7 @@ rule VirTool_MSIL_Injector_IQ_2147709018_0
         $x_1_3 = {24 24 6d 65 74 68 6f 64 30 78 36 30 30 30 30 31 39 2d 33 00 49 6e 74 33 32 00 43 6f 6c 6f 72 00 67 65 74 5f 42 00 67 65 74 5f 52 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2067,6 +2154,7 @@ rule VirTool_MSIL_Injector_IX_2147710752_0
         $x_1_3 = {2e 64 6c 6c 00 53 74 72 43 6d 70 4c 6f 67 69 63 61 6c 57 00 73 31 00 73 32 00 73 68 6c 77 61 70 69 2e 64 6c 6c 00 5f 41 36 [0-80] 5f 41 37}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2088,6 +2176,7 @@ rule VirTool_MSIL_Injector_IX_2147711077_0
         $x_1_2 = {41 33 64 71 33 64 65 65 35 34 66 2e 72 65 73 6f 75 72 63 65 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2114,6 +2203,7 @@ rule VirTool_MSIL_Injector_IW_2147711337_0
         $x_1_6 = "RW50cnlQb2ludA==" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2139,6 +2229,7 @@ rule VirTool_MSIL_Injector_IY_2147711439_0
         $x_1_2 = {50 6f 77 65 72 65 64 42 79 41 74 74 72 69 62 75 74 65 00 53 6d 61 72 74 41 73 73 65 6d 62 6c 79 2e 41 74 74 72 69 62 75 74 65 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2162,6 +2253,7 @@ rule VirTool_MSIL_Injector_Z_2147712131_0
         $x_2_3 = {53 00 54 79 70 65 00 47 54 00 4b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2188,6 +2280,7 @@ rule VirTool_MSIL_Injector_AA_2147712302_0
         $x_1_3 = "IE.IE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2208,6 +2301,7 @@ rule VirTool_MSIL_Injector_JA_2147712915_0
         $x_1_1 = {06 08 03 07 17 28 ?? 00 00 0a 28 ?? 00 00 0a 61 28 ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 0a 07 17 58 b5 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2230,6 +2324,7 @@ rule VirTool_MSIL_Injector_JA_2147714343_0
         $x_1_2 = {06 d3 08 58 06 d3 08 58 47 07 d3 08 02 7b 04 00 00 04 8e 69 5d 58 47 61 d2 52 08 17 58 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2252,6 +2347,7 @@ rule VirTool_MSIL_Injector_JB_2147716110_0
         $x_1_2 = {00 73 75 63 6b 69 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2274,6 +2370,7 @@ rule VirTool_MSIL_Injector_SI_2147716905_0
         $x_1_2 = {06 1b 58 7e 18 00 00 04 8e 69 58 0b 7e 0e 00 00 04 06 91 0c 7e 18 00 00 04 06 1f 1c 5d 91 07 1f 1f 5f 63 0d 09 28 04 00 00 06 13 04 7e 0e 00 00 04 06 08 11 04 28 06 00 00 06 9c 06 17 58 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2298,6 +2395,7 @@ rule VirTool_MSIL_Injector_SJ_2147717385_0
         $x_1_4 = "cIfHeflW.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2321,6 +2419,7 @@ rule VirTool_MSIL_Injector_SM_2147717430_0
         $x_1_3 = "Vjrw" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2344,6 +2443,7 @@ rule VirTool_MSIL_Injector_SN_2147718754_0
         $x_1_3 = {52 00 65 00 73 00 6f 00 75 00 72 00 63 00 65 00 73 00 [0-32] 2e 00 50 00 6e 00 67 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2372,6 +2472,7 @@ rule VirTool_MSIL_Injector_SO_2147718755_0
         $x_2_8 = {42 00 79 00 70 00 61 00 73 00 73 00 4d 00 65 00 6d 00 6f 00 72 00 79 00 [0-16] 53 00 74 00 61 00 72 00 74 00 42 00 6f 00 74 00 4b 00 69 00 6c 00 6c 00 65 00 72 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2401,6 +2502,7 @@ rule VirTool_MSIL_Injector_SP_2147719005_0
         $x_1_5 = "cmd.exe /k ping 0 & del" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2423,6 +2525,7 @@ rule VirTool_MSIL_Injector_SQ_2147719932_0
         $x_1_2 = {08 07 8e 69 17 59 2e 1e 7e ?? ?? ?? ?? 7e ?? ?? ?? ?? 07 08 91 1f ?? 61 d2 9c 7e ?? ?? ?? ?? 17 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2446,6 +2549,7 @@ rule VirTool_MSIL_Injector_SR_2147720392_0
         $x_1_3 = {50 00 6e 00 67 00 [0-48] 4e 00 61 00 6d 00 65 00 [0-16] 54 00 6f 00 4c 00 6f 00 77 00 65 00 72 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2469,6 +2573,7 @@ rule VirTool_MSIL_Injector_SV_2147732295_0
         $x_1_3 = "_Encrypted$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2492,6 +2597,7 @@ rule VirTool_MSIL_Injector_SV_2147732295_1
         $x_1_3 = {06 08 06 8e b7 5d 91 61 02 08 17 d6 02 8e b7 5d 91 da 20 ?? ?? ?? ?? d6 20 ?? ?? ?? ?? 5d b4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2517,6 +2623,7 @@ rule VirTool_MSIL_Injector_SV_2147732295_2
         $x_1_5 = {03 09 03 8e 69 5d 91 61 02 09 17 d6 02 8e 69 5d 91 da 20 00 01 00 00 d6 20 00 01 00 00 5d b4 9c 09 17 d6 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2539,6 +2646,7 @@ rule VirTool_MSIL_Injector_JM_2147732935_0
         $x_1_3 = "$93e86973-60b7-4837-af92-941899fb3dc0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2563,6 +2671,7 @@ rule VirTool_MSIL_Injector_TF_2147732970_0
         $x_1_4 = {4e 74 52 65 73 75 6d 65 54 68 72 65 61 64 00 4e 74 53 65 74 43 6f 6e 74 65 78 74 54 68 72 65 61 64 00 56 69 72 74 75 61 6c 41 6c 6c 6f 63 45 78 00 4e 74 57 72 69 74 65 56 69 72 74 75 61 6c 4d 65 6d 6f 72 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2587,6 +2696,7 @@ rule VirTool_MSIL_Injector_TI_2147732971_0
         $x_1_4 = "_SelectedValueChanged" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2613,6 +2723,7 @@ rule VirTool_MSIL_Injector_TJ_2147732974_0
         $x_1_3 = {47 65 74 42 79 74 65 73 00 67 65 74 5f 55 54 46 38 00 53 79 73 74 65 6d 2e 49 4f 2e 43 6f 6d 70 72 65 73 73 69 6f 6e 00 44 65 66 6c 61 74 65 53 74 72 65 61 6d 00 53 79 73 74 65 6d 2e 49 4f 00 4d 65 6d 6f 72 79 53 74 72 65 61 6d 00 53 74 72 65 61 6d 00 43 6f 6d 70 72 65 73 73 69 6f 6e 4d 6f 64 65 00 52 65 61 64 00 57 72 69 74 65 00 54 6f 41 72 72 61 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2637,6 +2748,7 @@ rule VirTool_MSIL_Injector_TL_2147732983_0
         $x_1_4 = {2e 00 62 00 69 00 6e 00 [0-32] 2e 00 52 00 65 00 73 00 6f 00 75 00 72 00 63 00 65 00 73 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2660,6 +2772,7 @@ rule VirTool_MSIL_Injector_TM_2147732984_0
         $x_1_3 = {00 47 65 74 44 6f 77 6e 6c 6f 61 64 44 4c 4c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2684,6 +2797,7 @@ rule VirTool_MSIL_Injector_TO_2147732986_0
         $x_1_4 = {47 00 65 00 74 00 50 00 69 00 78 00 65 00 6c 00 ?? ?? 52 00 ?? ?? 47 00 ?? ?? 42 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2711,6 +2825,7 @@ rule VirTool_MSIL_Injector_TQ_2147732988_0
         $x_1_4 = {4e 65 77 4c 61 74 65 42 69 6e 64 69 6e 67 00 4c 61 74 65 47 65 74 00 4c 61 74 65 49 6e 64 65 78 47 65 74 00 53 74 72 69 6e 67 00 43 6f 6e 63 61 74 00 55 49 6e 74 33 32 00 53 75 62 74 72 61 63 74 4f 62 6a 65 63 74 00 54 6f 49 6e 74 65 67 65 72 00 4d 6f 64 4f 62 6a 65 63 74 00 41 64 64 4f 62 6a 65 63 74 00 41 6e 64 4f 62 6a 65 63 74 00 54 6f 55 49 6e 74 65 67 65 72 00 54 6f 42 79 74 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2734,6 +2849,7 @@ rule VirTool_MSIL_Injector_TS_2147732992_0
         $x_1_3 = {53 75 62 74 72 61 63 74 4f 62 6a 65 63 74 00 54 6f 49 6e 74 65 67 65 72 00 4d 6f 64 4f 62 6a 65 63 74 00 41 64 64 4f 62 6a 65 63 74 00 41 6e 64 4f 62 6a 65 63 74 00 54 6f 55 49 6e 74 65 67 65 72 00 58 6f 72 4f 62 6a 65 63 74 00 54 6f 42 79 74 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2759,6 +2875,7 @@ rule VirTool_MSIL_Injector_TT_2147732993_0
         $x_1_5 = {00 47 65 74 50 72 6f 63 65 73 73 42 79 49 64 00 4b 69 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -2783,6 +2900,7 @@ rule VirTool_MSIL_Injector_TY_2147733007_0
         $x_1_4 = {53 79 73 74 65 6d 2e 52 75 6e 74 69 6d 65 2e 43 6f 6d 70 69 6c 65 72 53 65 72 76 69 63 65 73 00 52 75 6e 74 69 6d 65 48 65 6c 70 65 72 73 00 47 65 74 4f 62 6a 65 63 74 56 61 6c 75 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2811,6 +2929,7 @@ rule VirTool_MSIL_Injector_UA_2147733009_0
         $x_1_8 = {49 00 33 00 4a 00 6c 00 63 00 32 00 35 00 68 00 62 00 57 00 55 00 6a 00 [0-48] 49 00 33 00 42 00 68 00 63 00 33 00 4d 00 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2841,6 +2960,7 @@ rule VirTool_MSIL_Injector_UD_2147733010_0
         $x_1_7 = {00 43 6f 6d 70 69 6c 65 41 73 73 65 6d 62 6c 79 46 72 6f 6d 53 6f 75 72 63 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2869,6 +2989,7 @@ rule VirTool_MSIL_Injector_UE_2147733016_0
         $x_1_8 = {00 43 6f 6d 70 69 6c 65 41 73 73 65 6d 62 6c 79 46 72 6f 6d 53 6f 75 72 63 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2892,6 +3013,7 @@ rule VirTool_MSIL_Injector_UF_2147733017_0
         $x_1_3 = {00 62 75 73 6e 65 74 2e 65 78 65 00 3c 4d 6f 64 75 6c 65 3e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2921,6 +3043,7 @@ rule VirTool_MSIL_Injector_UG_2147733018_0
         $x_1_6 = "get_EntryPoint" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2953,6 +3076,7 @@ rule VirTool_MSIL_Injector_UI_2147733019_0
         $x_1_12 = {00 47 65 74 44 6f 6d 61 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 5 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2982,6 +3106,7 @@ rule VirTool_MSIL_Injector_TR_2147733022_0
         $x_1_6 = "schtasks /Create /SC minute /MO" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3010,6 +3135,7 @@ rule VirTool_MSIL_Injector_DT_2147733078_0
         $x_1_8 = "MonitorPackageHost" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -3032,6 +3158,7 @@ rule VirTool_MSIL_Injector_DP_2147733079_0
         $x_1_2 = "r3tri3v3RunP3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3055,6 +3182,7 @@ rule VirTool_MSIL_Injector_DO_2147733080_0
         $x_1_3 = {4c 61 74 65 49 6e 64 65 78 47 65 74 00 41 64 64 4f 62 6a 65 63 74 00 4d 6f 64 4f 62 6a 65 63 74 00 58 6f 72 4f 62 6a 65 63 74 00 54 6f 42 79 74 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3078,6 +3206,7 @@ rule VirTool_MSIL_Injector_TZ_2147733087_0
         $x_1_3 = {00 42 6c 6f 63 6b 43 6f 70 79 00 47 65 74 50 72 6f 63 65 73 73 42 79 49 64 00 4b 69 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3101,6 +3230,7 @@ rule VirTool_MSIL_Injector_SA_2147733088_0
         $x_1_3 = {53 79 73 74 65 6d 2e 52 75 6e 74 69 6d 65 2e 43 6f 6d 70 69 6c 65 72 53 65 72 76 69 63 65 73 00 52 75 6e 74 69 6d 65 48 65 6c 70 65 72 73 00 47 65 74 4f 62 6a 65 63 74 56 61 6c 75 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3124,6 +3254,7 @@ rule VirTool_MSIL_Injector_VA_2147733107_0
         $x_1_3 = {44 65 63 72 79 70 74 00 4c 6f 61 64 69 6e 67 00 4d 61 69 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3151,6 +3282,7 @@ rule VirTool_MSIL_Injector_VB_2147733110_0
         $x_1_7 = {49 6d 61 67 65 00 67 65 74 5f 57 69 64 74 68 00 43 6f 6c 6f 72 00 47 65 74 50 69 78 65 6c 00 54 6f 41 72 67 62}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -3175,6 +3307,7 @@ rule VirTool_MSIL_Injector_VD_2147733112_0
         $x_1_1 = {03 25 4b 04 06 1f 0f 5f 95 61 54 04 06 1f 0f 5f 04 06 1f 0f 5f 95 03 25 1a 58 10 01 4b 61 20 84 e2 03 78 58 9e 06 17 58 0a 07 17 58 0b 07 02 37 cf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3197,6 +3330,7 @@ rule VirTool_MSIL_Injector_VE_2147733113_0
         $x_1_2 = {67 65 74 5f 4c 65 6e 67 74 68 00 67 65 74 5f 45 6e 74 72 79 50 6f 69 6e 74 00 49 6e 76 6f 6b 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3221,6 +3355,7 @@ rule VirTool_MSIL_Injector_VF_2147733114_0
         $x_1_4 = {13 05 11 05 7e ?? 00 00 04 19 94 33 18 ?? ?? 0f 00 28 ?? 00 00 0a 08 d6 28 ?? 00 00 0a 28 ?? 00 00 0a 9c 2b 23 11 05 7e ?? 00 00 04 1f 0f 94 33 17}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3247,6 +3382,7 @@ rule VirTool_MSIL_Injector_VH_2147733121_0
         $x_1_3 = "#nsdffdsp#$$$.exe$$$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3270,6 +3406,7 @@ rule VirTool_MSIL_Injector_VI_2147733122_0
         $x_1_3 = "bibdag.Properties.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3293,6 +3430,7 @@ rule VirTool_MSIL_Injector_VJ_2147733125_0
         $x_1_3 = {00 46 6f 72 4d 65 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3315,6 +3453,7 @@ rule VirTool_MSIL_Injector_VK_2147733126_0
         $x_1_2 = {1f 40 13 0e 7e ?? 00 00 04 11 05 28 ?? 00 00 0a 11 06 18 62 11 0e 12 0e 6f ?? 00 00 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3339,6 +3478,7 @@ rule VirTool_MSIL_Injector_VL_2147733127_0
         $x_1_4 = "SVCHEHE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3362,6 +3502,7 @@ rule VirTool_MSIL_Injector_MD_2147733149_0
         $x_1_3 = {53 79 73 74 65 6d 2e 52 65 66 6c 65 63 74 69 6f 6e 00 4d 65 74 68 6f 64 49 6e 66 6f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3384,6 +3525,7 @@ rule VirTool_MSIL_Injector_VO_2147733152_0
         $x_1_2 = {28 2f 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3406,6 +3548,7 @@ rule VirTool_MSIL_Injector_DS_2147733638_0
         $x_1_2 = {00 06 08 06 8e 69 5d 06 08 06 8e 69 5d 91 07 08 07 8e 69 5d 91 61 06 08 17 58 06 8e 69 5d 91 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 00 08 17 59 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3428,6 +3571,7 @@ rule VirTool_MSIL_Injector_DU_2147733675_0
         $x_1_2 = {20 e8 03 00 00 5a 0a 16 0c 00 73 ?? 00 00 0a 19 1d 6f ?? 00 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3451,6 +3595,7 @@ rule VirTool_MSIL_Injector_DV_2147733711_0
         $x_1_3 = {42 61 73 65 36 34 53 74 72 69 6e 67 00 42 79 74 65 00 41 73 73 65 6d 62 6c 79 00 4c 6f 61 64 00 67 65 74 5f 45 6e 74 72 79 50 6f 69 6e 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3478,6 +3623,7 @@ rule VirTool_MSIL_Injector_YG_2147739879_0
         $x_1_4 = {00 4c 6f 61 64 00 4d 65 74 68 6f 64 49 6e 66 6f 00 67 65 74 5f 45 6e 74 72 79 50 6f 69 6e 74 00 4d 65 74 68 6f 64 42 61 73 65 00 49 6e 76 6f 6b 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3502,6 +3648,7 @@ rule VirTool_MSIL_Injector_AA_2147745501_0
         $x_1_4 = "https://1.top4top.net/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

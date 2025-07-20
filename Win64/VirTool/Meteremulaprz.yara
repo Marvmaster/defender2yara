@@ -20,6 +20,7 @@ rule VirTool_Win64_Meteremulaprz_A_2147844677_0
         $x_1_5 = {48 c7 44 24 28 00 00 00 00 c7 44 24 20 00 00 00 00 45 33 c9 4c 8b 84 24 58 01 00 00 33 d2 33 c9 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

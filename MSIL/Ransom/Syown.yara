@@ -25,6 +25,7 @@ rule Ransom_MSIL_Syown_2147725267_0
         $x_2_11 = "SYSDOWN.exe" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

@@ -33,6 +33,7 @@ rule TrojanProxy_Win32_Wonknod_A_2147688719_0
         $x_1_19 = "Project\\BypassUac\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -59,6 +60,7 @@ rule TrojanProxy_Win32_Wonknod_B_2147688720_0
         $x_1_2 = "\\VC Project\\BypassUac\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +83,7 @@ rule TrojanProxy_Win32_Wonknod_B_2147688720_1
         $x_1_3 = "1on_monitorTimer_timeout()" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +107,7 @@ rule TrojanProxy_Win32_Wonknod_B_2147688720_2
         $x_2_4 = {78 36 34 2e c7 84 24 ?? ?? 00 00 7a 69 70 00 c7 84 24 ?? ?? 00 00 78 36 34 2e c7 84 24 ?? ?? 00 00 65 78 65 00 c7 84 24 ?? ?? 00 00 78 33 32 2e c7 84 24 ?? ?? 00 00 7a 69 70 00 c7 84 24 ?? ?? 00 00 78 33 32 2e c7 84 24 ?? ?? 00 00 65 78 65 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -136,6 +140,7 @@ rule TrojanProxy_Win32_Wonknod_C_2147688721_0
         $x_1_10 = "ct.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 2 of ($x_1_*))) or
             ((2 of ($x_50_*))) or
@@ -164,6 +169,7 @@ rule TrojanProxy_Win32_Wonknod_D_2147693422_0
         $x_1_5 = "winvmx" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -186,6 +192,7 @@ rule TrojanProxy_Win32_Wonknod_D_2147693422_1
         $x_10_3 = {61 00 69 00 c7 ?? ?? 6e 00 7b 00 c7 ?? ?? 30 00 37 00 c7 ?? ?? 36 00 37 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +217,7 @@ rule TrojanProxy_Win32_Wonknod_D_2147693422_2
         $x_1_5 = {65 78 65 63 75 74 65 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +241,7 @@ rule TrojanProxy_Win32_Wonknod_D_2147693422_3
         $x_1_4 = "Provide management service for system." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -258,6 +267,7 @@ rule TrojanProxy_Win32_Wonknod_E_2147727761_0
         $x_1_6 = "SOFTWARE\\Microsoft\\Network\\FileService" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

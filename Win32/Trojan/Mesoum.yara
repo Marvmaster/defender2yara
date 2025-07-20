@@ -18,6 +18,7 @@ rule Trojan_Win32_Mesoum_A_2147607589_0
         $x_1_4 = "DnsMonitor_" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

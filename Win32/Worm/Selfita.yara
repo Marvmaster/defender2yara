@@ -18,6 +18,7 @@ rule Worm_Win32_Selfita_A_2147717191_0
         $x_1_4 = {49 6e 66 65 63 74 5f 44 72 69 76 65 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

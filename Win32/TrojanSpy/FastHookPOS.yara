@@ -23,6 +23,7 @@ rule TrojanSpy_Win32_FastHookPOS_A_2147712571_0
         $x_1_9 = {8b 75 8c 8b 7d 9c 8a 41 ff 83 e9 02 3c 35 7c 45 eb 09 80 39 39 75 08 c6 01 30 49 3b cf 73 f3 3b cf 73 04 41 66 ff 06 fe 01 8b 45 8c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 

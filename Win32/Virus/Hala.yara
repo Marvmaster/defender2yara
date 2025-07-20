@@ -85,6 +85,7 @@ rule Virus_Win32_Hala_C_2147602587_0
         $x_2_71 = "Software\\Google" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_2_*) and 52 of ($x_1_*))) or
             ((1 of ($x_3_*) and 8 of ($x_2_*) and 51 of ($x_1_*))) or

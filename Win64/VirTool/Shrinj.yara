@@ -16,6 +16,7 @@ rule VirTool_Win64_Shrinj_A_2147929111_0
         $x_1_2 = {1b 5b 33 31 6d e2 86 91 e2 86 91 e2 86 91 e2 86 91 e2 86 91 e2 86 91 e2 86 91 e2 86 91 e2 86 91 e2 86 91 e2 86 91 e2 86 91 e2 86 91 e2 86 91 20 20 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

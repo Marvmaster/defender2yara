@@ -18,6 +18,7 @@ rule Trojan_Win32_MokesCrypt_PA_2147775461_0
         $x_1_3 = {5c 74 65 73 74 34 5c 65 39 31 5c [0-16] 5c 65 39 31 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

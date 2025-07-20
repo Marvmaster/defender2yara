@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Aentdwn_A_2147724783_0
         $x_1_3 = "PubgHackTool" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_MSIL_Aentdwn_C_2147725153_0
         $x_1_3 = "DownloadMaster.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

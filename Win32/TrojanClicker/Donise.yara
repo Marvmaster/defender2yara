@@ -50,6 +50,7 @@ rule TrojanClicker_Win32_Donise_A_2147576243_0
         $x_1_36 = "=H=R=a=k=x=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((26 of ($x_1_*))) or
             ((1 of ($x_4_*) and 22 of ($x_1_*))) or

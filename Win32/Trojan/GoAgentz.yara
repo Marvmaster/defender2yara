@@ -26,6 +26,7 @@ rule Trojan_Win32_GoAgentz_Z_2147941848_0
         $x_1_11 = {48 8b 84 24 48 05 00 00 31 c9 87 88 30 05 00 00 90 b9 01 00 00 00 f0 0f c1 88 68 03 00 00 48 8b 84 24 28 05 00 00 48 8b 0d 54 dc 4e 00 48 89 0c 24 48 89 44 24 08 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

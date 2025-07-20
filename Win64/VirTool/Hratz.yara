@@ -19,6 +19,7 @@ rule VirTool_Win64_Hratz_A_2147844683_0
         $x_1_4 = {48 8b 08 48 63 51 04 f6 44 02 10 06 74 8a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

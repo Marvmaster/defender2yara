@@ -16,6 +16,7 @@ rule Trojan_Win32_Warzone_MA_2147846648_0
         $x_5_1 = {48 8d 4f 2c 48 03 c8 8b 51 f8 4d 2b d6 44 8b 01 48 03 d6 44 8b 49 fc 4c 03 c5 4d 85 c9 74 ?? 41 8a 00 4d 03 c6 88 02 49 03 d6 4d 2b ce 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Warzone_MBJB_2147891787_0
         $x_1_1 = {74 0f 8b c1 6a 64 99 5f f7 ff 8a 44 14 18 30 04 29 41 81 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

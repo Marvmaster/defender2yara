@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Nussamoc_A_2147627003_0
         $x_1_7 = "name=\"filename2\"; filename=\"screen.jpg\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or

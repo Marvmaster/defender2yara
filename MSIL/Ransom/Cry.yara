@@ -19,6 +19,7 @@ rule Ransom_MSIL_Cry_DA_2147769061_0
         $x_1_4 = "get_EncryptionKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

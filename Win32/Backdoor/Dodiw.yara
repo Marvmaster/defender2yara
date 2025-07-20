@@ -17,6 +17,7 @@ rule Backdoor_Win32_Dodiw_A_2147696785_0
         $x_1_3 = "Babylon RAT Client" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

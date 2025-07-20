@@ -20,6 +20,7 @@ rule Ransom_MSIL_DutCrypt_PI_2147751960_0
         $x_1_5 = {5c 57 69 6e 64 6f 77 73 44 65 66 65 6e 64 65 72 5c 6f 62 6a 5c [0-16] 5c 41 70 70 6c 69 63 61 74 69 6f 6e 5f 44 65 66 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

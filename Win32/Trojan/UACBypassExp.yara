@@ -55,6 +55,7 @@ rule Trojan_Win32_UACBypassExp_PAGE_2147929633_0
         $x_1_4 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

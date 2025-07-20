@@ -20,6 +20,7 @@ rule TrojanSpy_Win32_AutoHK_AA_2147750334_0
         $x_1_5 = "WindowSpy.ahk" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Ransom_MSIL_FakeRansomware_AFK_2147921666_0
         $x_1_6 = "FakeRansomware1.0" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_MSIL_FakeRansomware_SWI_2147931283_0
         $x_1_4 = "EternalRedIsTheFuture2022$!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

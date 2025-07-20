@@ -19,6 +19,7 @@ rule Trojan_Win32_Squida_A_2147681305_0
         $x_2_5 = {73 6b 79 70 65 00 6c 6f 63 6b 00 62 6f 74 6b 69 6c 6c 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -46,6 +47,7 @@ rule Trojan_Win32_Squida_C_2147681865_0
         $x_1_3 = "bs_fusion_bot" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

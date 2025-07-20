@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_BrobanNet_A_2147706674_0
         $x_1_7 = "Atualizando banco. Aguarde . . ." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

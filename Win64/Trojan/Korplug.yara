@@ -18,6 +18,7 @@ rule Trojan_Win64_Korplug_AT_2147920333_0
         $x_1_3 = {89 de b8 01 00 00 00 89 d9 c1 fe 05 d3 e0 83 e6 0f 23 44 b2 08 0f 95 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

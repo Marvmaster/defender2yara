@@ -18,6 +18,7 @@ rule TrojanSpy_MSIL_Banker_D_2147647148_0
         $x_3_4 = "set_formBarclays" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule TrojanSpy_MSIL_Banker_I_2147656527_0
         $x_5_10 = "personal/logon/login.jsp" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 6 of ($x_5_*))) or
             ((2 of ($x_50_*) and 1 of ($x_10_*) and 4 of ($x_5_*))) or
@@ -76,6 +78,7 @@ rule TrojanSpy_MSIL_Banker_J_2147658255_0
         $x_1_5 = "SanMemo.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             ((2 of ($x_3_*))) or
@@ -103,6 +106,7 @@ rule TrojanSpy_MSIL_Banker_L_2147686945_0
         $x_1_4 = {61 00 76 00 73 00 69 00 6d 00 [0-4] 69 00 6e 00 66 00 65 00 63 00 74 00 65 00 64 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule TrojanSpy_MSIL_Banker_M_2147689982_0
         $x_1_7 = {40 00 6e 00 6f 00 6d 00 65 00 70 00 63 00 [0-6] 40 00 4c 00 6f 00 67 00 69 00 6e 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -156,6 +161,7 @@ rule TrojanSpy_MSIL_Banker_N_2147692458_0
         $x_1_8 = "verdebloqdata" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -190,6 +196,7 @@ rule TrojanSpy_MSIL_Banker_N_2147692458_1
         $x_1_15 = "verdebloqdata" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -222,6 +229,7 @@ rule TrojanSpy_MSIL_Banker_N_2147692458_2
         $x_1_13 = "dbo.loginsdaweb (Logins, Tipo, titulo," wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -255,6 +263,7 @@ rule TrojanSpy_MSIL_Banker_N_2147692458_3
         $x_1_14 = "B.R.A.D.A |" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -278,6 +287,7 @@ rule TrojanSpy_MSIL_Banker_P_2147707677_0
         $x_1_4 = "MARCOS\\Desktop\\PROJETO DIVIDIDO\\PRODUTOS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +309,7 @@ rule TrojanSpy_MSIL_Banker_EAFR_2147936727_0
         $x_5_1 = {20 00 40 01 00 8d 53 00 00 01 0a 2b 09 03 06 16 07 6f a4 00 00 0a 02 06 16 06 8e 69 6f 9b 00 00 0a 25 0b 2d e8}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Fegrat_A_2147770259_0
         $x_1_3 = "RedFlare/sandals/server.readInRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

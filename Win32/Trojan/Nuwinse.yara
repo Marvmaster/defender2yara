@@ -16,6 +16,7 @@ rule Trojan_Win32_Nuwinse_A_2147643567_0
         $x_1_2 = {89 bd 8c c7 ff ff 3b fb 0f ?? ?? ?? ?? ?? c7 85 ?? ?? ?? ff 44 4f 53 20 c7 85 ?? ?? ?? ff 45 52 52 4f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Suborgnex_A_2147650571_0
         $x_2_7 = "3540464265574E31149685393CF909" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or

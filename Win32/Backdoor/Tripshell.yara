@@ -19,6 +19,7 @@ rule Backdoor_Win32_Tripshell_A_2147721182_0
         $x_1_5 = {00 50 72 69 6e 74 46 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

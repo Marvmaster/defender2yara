@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_DinoTrain_2147811384_0
         $x_1_1 = {8b c7 83 c4 ?? 03 da 33 c9 2b c2 74 ?? 8a 44 19 ?? 84 c0 74 ?? 30 04 19 8b 95 ?? ?? ?? ?? 8b c7 41 2b c2 3b c8 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

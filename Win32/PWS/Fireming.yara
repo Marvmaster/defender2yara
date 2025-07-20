@@ -29,6 +29,7 @@ rule PWS_Win32_Fireming_A_2147595828_0
         $x_1_15 = "amazon.co.uk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -55,6 +56,7 @@ rule PWS_Win32_Fireming_A_2147595828_1
         $x_1_7 = "Mozilla/5.0 Gecko/20050212 Firefox/1.5.0.2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

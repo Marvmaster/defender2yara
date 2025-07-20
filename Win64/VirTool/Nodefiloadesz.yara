@@ -18,6 +18,7 @@ rule VirTool_Win64_Nodefiloadesz_A_2147912621_0
         $x_1_3 = {48 89 84 24 a0 01 00 00 41 b8 [0-17] 48 8b 9c 24 88 01 00 00 48 8b cb ?? ?? ?? ?? ?? ?? 48 8b c8 48 85 c0 ?? ?? 88 84 24 a0 01 00 00 48 8b 8c 24 98 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

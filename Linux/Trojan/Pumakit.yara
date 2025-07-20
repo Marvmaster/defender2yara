@@ -25,6 +25,7 @@ rule Trojan_Linux_Pumakit_A_2147932202_0
         $x_1_10 = "LD_PRELOAD=/lib64/libs.so" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -52,6 +53,7 @@ rule Trojan_Linux_Pumakit_B_2147938039_0
         $x_1_2 = {48 89 d9 41 89 c0 31 c0 e8 06 52 02 00 48 89 df e8 8b e1 01 00 bf 54 00 00 00 4c 89 f6 31 c0 e8 08 ff 01 00 85 c0 0f 85 fb 22 00 00 48 8d 3d ee 14 03 00 31 f6 31 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

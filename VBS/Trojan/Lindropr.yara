@@ -17,6 +17,7 @@ rule Trojan_VBS_Lindropr_A_2147735606_0
         $x_3_3 = "Arguments = \"/c _temp.prjx \" & chr(34) & WScript.Arguments(0) & chr(34)" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_Zzinfor_LK_2147845627_0
         $x_1_2 = {8a 06 48 83 c6 01 88 07 48 83 c7 01 49 c7 c1 02 00 00 00 02 d2 75 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_Zzinfor_EC_2147850523_0
         $x_5_1 = {83 e2 7f 03 c2 83 e0 7f 2b c2 8b d0 48 63 4c 24 78 48 8b 44 24 70 88 14 08}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

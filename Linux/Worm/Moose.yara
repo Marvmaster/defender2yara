@@ -21,6 +21,7 @@ rule Worm_Linux_Moose_A_2147695478_0
         $x_4_6 = "GET /xx/rnde.php?p=%d&f=%d&m=%d HTTP/1.1" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_5_*) and 1 of ($x_4_*) and 2 of ($x_3_*))) or
             ((3 of ($x_5_*) and 1 of ($x_3_*))) or

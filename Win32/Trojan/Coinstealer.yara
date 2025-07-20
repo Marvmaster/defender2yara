@@ -17,6 +17,7 @@ rule Trojan_Win32_Coinstealer_BO_2147827261_0
         $x_1_2 = {8a 42 f3 32 c4 88 42 03 8a 42 f4 32 45 fd 88 42 04 8a 42 f5 32 c1 88 42 05 8a 42 f6 32 c5 43 88 42 06 83 c2 04 83 fb 2c 0f 82}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

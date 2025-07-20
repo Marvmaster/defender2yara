@@ -17,6 +17,7 @@ rule Trojan_Win32_Ymacco_YAA_2147905812_0
         $x_10_2 = {80 30 73 8b 04 24 89 c6 66 ad 89 f2 58 ff 70 fb 8f 02 b9 ?? ?? ?? ?? 81 e9 ?? ?? ?? ?? 8d 34 08 b9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Ymacco_NIT_2147928820_0
         $x_2_2 = {42 89 d0 48 8b 0c 85 30 5f 41 00 89 c8 c1 e8 1e 31 c8 69 c0 65 89 07 6c 01 d0 89 04 95 30 5f 41 00 81 fa 6f 02 00 00 7c d7}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

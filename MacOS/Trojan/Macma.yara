@@ -18,6 +18,7 @@ rule Trojan_MacOS_Macma_B_2147799121_0
         $x_1_4 = {41 5e 5d c3 4c 8d ?? ?? ?? ff ff bf 01 00 00 00 31 f6 31 d2 b9 00 0c 00 00 49 89 d9 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Ransom_Win64_FileCrypter_MA_2147764529_0
         $x_1_6 = "unreachableuserenv.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule Ransom_Win64_FileCrypter_NC_2147925077_0
         $x_1_10 = "ransomware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

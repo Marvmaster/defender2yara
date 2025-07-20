@@ -20,6 +20,7 @@ rule Trojan_Win32_PurpleWave_A_2147761178_0
         $x_1_5 = "\\BaseNamedObjects\\Global\\SvcctrlStartEvent_A3752DX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_PurpleWave_B_2147761179_0
         $x_1_1 = {8a ca 02 c9 8a c1 0c 01 84 d2 0f b6 c0 89 ?? ?? 8b d0 0f b6 c1 0f 49 d0 89 ?? ?? 83 eb 01 75 [0-4] [0-21] 88 04 1a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

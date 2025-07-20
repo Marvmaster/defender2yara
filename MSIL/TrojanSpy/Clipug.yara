@@ -20,6 +20,7 @@ rule TrojanSpy_MSIL_Clipug_A_2147686620_0
         $x_5_6 = {67 65 74 5f 43 6c 69 70 62 6f 61 72 64 00 47 65 74 54 65 78 74 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 2 of ($x_1_*))) or
             ((3 of ($x_5_*) and 1 of ($x_2_*))) or

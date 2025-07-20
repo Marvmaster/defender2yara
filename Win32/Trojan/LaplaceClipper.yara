@@ -23,6 +23,7 @@ rule Trojan_Win32_LaplaceClipper_NEAA_2147841215_0
         $x_2_8 = "Date: 03/19/09 22:5" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Mediyes_A_2147627876_0
         $x_1_4 = {8b 45 f4 83 3c c5 ?? ?? ?? ?? 00 74 34 8b 4d f4 83 3c cd ?? ?? ?? ?? 00 74 27 8b 55 08 52 8b 45 f4 8b 0c c5 ?? ?? ?? ?? 51}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Mediyes_B_2147654798_0
         $x_1_4 = {5c 00 00 00 72 00 72 00 00 00 00 00 53 00 79 00 73 00 45 00 76 00 74 00 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Mediyes_C_2147656167_0
         $x_2_4 = {eb 02 8b c5 8a 54 38 ff 30 14 3b 83 c7 01 3b 7e 14 72 ca}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -91,6 +94,7 @@ rule Trojan_Win32_Mediyes_D_2147656580_0
         $x_1_4 = {4d 34 37 3a 3b 3f 15 0b 28 2f 05 09 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Win32_Mediyes_E_2147656981_0
         $x_1_3 = "\\\\.\\Global\\SysEvtC" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule Trojan_Win32_Mediyes_F_2147657569_0
         $x_1_4 = {44 31 05 1c 05 0a 02 15 11 2d 29 0f 0a 08 09 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -162,6 +168,7 @@ rule Trojan_Win32_Mediyes_G_2147721863_0
         $x_1_3 = "SYSTEM\\CurrentControlSet\\services\\lanmanworkstation\\Parameters" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +190,7 @@ rule Trojan_Win32_Mediyes_AZNA_2147936391_0
         $x_5_1 = {8b 45 08 8b 4d 10 8a 0c 0a 03 c6 30 08 8d 42 01 29 d2 f7 75 14 46 3b 75 0c 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win32_Flopa_FSG_2147816719_0
         $x_1_5 = "POTATOES.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

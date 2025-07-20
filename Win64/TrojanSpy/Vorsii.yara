@@ -20,6 +20,7 @@ rule TrojanSpy_Win64_Vorsii_A_2147684660_0
         $x_1_6 = {5c 69 73 6e 37 2e 70 64 62 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

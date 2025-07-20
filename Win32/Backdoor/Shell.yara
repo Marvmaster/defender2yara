@@ -19,6 +19,7 @@ rule Backdoor_Win32_Shell_D_2147651023_0
         $x_1_5 = {73 64 6a 32 62 2e 33 33 32 32 2e 6f 72 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

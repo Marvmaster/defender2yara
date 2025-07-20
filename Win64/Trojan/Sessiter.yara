@@ -17,6 +17,7 @@ rule Trojan_Win64_Sessiter_A_2147825485_0
         $x_1_2 = {c1 e0 14 8b 0c 24 c1 e9 0c 0b c1 89 04 24 48 8b 44 24 ?? 0f be 00 83 f8 61 7c ?? 48 8b 44 24 ?? 0f be 00 83 e8 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_Sessiter_B_2147825486_0
         $x_100_1 = {48 81 ec 08 00 00 00 66 b9 ?? ?? e8 00 00 00 00 66 89 4c 24 08 48 81 ec a8 01 00 00 ba 08 00 00 00 b9 01 00 00 00 e8}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

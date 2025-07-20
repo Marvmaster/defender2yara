@@ -18,6 +18,7 @@ rule VirTool_Win64_Kitez_A_2147838154_0
         $x_1_3 = {48 83 ec 08 48 89 2c 24 48 8d 2c 24 e8 ?? ?? ?? ?? 84 c0 75 27 0f 1f 44 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule VirTool_Win64_Kitez_C_2147838155_0
         $x_1_6 = "cmd/malwareUtil/malwareUtil.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

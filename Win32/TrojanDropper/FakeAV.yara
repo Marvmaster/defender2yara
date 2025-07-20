@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_FakeAV_DG_2147816500_0
         $x_1_3 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

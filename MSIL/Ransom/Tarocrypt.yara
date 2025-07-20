@@ -16,6 +16,7 @@ rule Ransom_MSIL_Tarocrypt_A_2147708526_0
         $x_2_2 = "%APPDATA%\\OdnUqnxVqtAcmfpq4n\\" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Ransom_MSIL_Tarocrypt_A_2147708526_1
         $x_1_4 = {13 44 00 6f 00 6e 00 65 00 4c 00 6f 00 63 00 6b 00 3d 00 00 07 2a 00 2e 00 2a 00 00 17 5e 00 28 00 5b 00 41 00 2d 00 5a 00 5d 00 3a 00 5c 00 5c 00 29}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Ransom_MSIL_Tarocrypt_B_2147708562_0
         $x_1_2 = {67 00 65 00 74 00 3d 00 00 03 3a 00 00 03 26 00 00 09 73 00 65 00 74 00 3d 00 00 13 72 00 65 00 63 00 65 00 69 00 76 00 65 00 64 00 3d 00 00 09 6e 00 75 00 6c 00 6c 00 00 13 31 00 32 00 37 00 2e 00 30 00 2e 00 30 00 2e 00 31}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

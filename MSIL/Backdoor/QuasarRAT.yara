@@ -21,6 +21,7 @@ rule Backdoor_MSIL_QuasarRAT_YA_2147735339_0
         $x_1_6 = "frmBlockScreen" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Backdoor_MSIL_QuasarRAT_A_2147835969_0
         $x_1_5 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Backdoor_MSIL_QuasarRAT_C_2147837519_0
         $x_2_2 = {00 00 01 25 16 1f ?? 9d 6f 05 00 00 04 17 8d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Backdoor_MSIL_QuasarRAT_D_2147837520_0
         $x_1_5 = "GetExportedTypes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -118,6 +122,7 @@ rule Backdoor_MSIL_QuasarRAT_F_2147909822_0
         $x_2_5 = "Domain: {1}{0}Cookie Name: {2}{0}Value: {3}{0}Path: {4}{0}Expired: {5}{0}HttpOnly: {6}{0}Secure: {7}" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

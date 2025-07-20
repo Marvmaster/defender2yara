@@ -19,6 +19,7 @@ rule VirTool_Win32_Reflexon_A_2147818517_0
         $x_1_4 = {33 c9 ba 00 01 00 00 41 b8 00 30 00 00 44 8d ?? ?? ff 15 ?? ?? ?? ?? 48 8b c8 48 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule VirTool_Win32_Reflexon_B_2147818518_0
         $x_1_4 = {8b 59 44 8b 79 34 85 db 0f 84 ?? ?? ?? ?? 33 c9 ba 00 01 00 00 41 b8 00 30 00 00 44 8d ?? ?? ff 15 ?? ?? ?? ?? 4c 8b d0 48 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

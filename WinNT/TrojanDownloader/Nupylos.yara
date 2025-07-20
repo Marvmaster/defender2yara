@@ -25,6 +25,7 @@ rule TrojanDownloader_WinNT_Nupylos_A_2147623093_0
         $x_2_11 = {80 7f 09 32 0f 85 ?? 00 00 00 80 7f 0a 30 0f 85 ?? 00 00 00 80 7f 0b 30}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or

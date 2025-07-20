@@ -21,6 +21,7 @@ rule Backdoor_Win32_Govrat_A_2147709738_0
         $x_1_7 = "dll-loader.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule Backdoor_Win32_Govrat_A_2147709738_1
         $x_8_13 = "c:\\temp\\dll-loader.exe" wide //weight: 8
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_8_*) and 6 of ($x_1_*))) or
             ((4 of ($x_8_*))) or

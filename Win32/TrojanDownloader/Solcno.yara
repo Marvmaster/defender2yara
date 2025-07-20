@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Solcno_A_2147711824_0
         $x_1_3 = {c7 40 08 5c 46 69 72 c7 40 0c 65 66 6f 78 c7 40 10 5c 50 72 6f c7 40 14 66 69 6c 65 66 c7 40 18 73 00 89 5c 24 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

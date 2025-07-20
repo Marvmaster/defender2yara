@@ -19,6 +19,7 @@ rule Trojan_MSIL_GameCheat_J_2147740802_0
         $x_1_4 = "vk.com/arma2oa_hack" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

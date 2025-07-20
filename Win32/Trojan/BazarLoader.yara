@@ -20,6 +20,7 @@ rule Trojan_Win32_BazarLoader_CN_2147768128_0
         $x_1_5 = "nltest /domain_trusts /all_trusts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule Trojan_Win32_BazarLoader_AF_2147783959_0
         $x_10_2 = {81 ec 58 07 00 00 a1 ?? ?? ?? ?? 33 c5 89 45 ec 56 57 50 8d 45 f4 64 a3 00 00 00 00 8b 73 10 8d 85 08 f9 ff ff}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_BazarLoader_AM_2147783960_0
         $x_10_2 = {0f be c0 8d 76 01 83 e8 30 0f af c1 8d 0c 49 c1 e1 02 03 d0 8a 06 84 c0 75 e6 81 f2 00 10 00 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Win32_BazarLoader_DB_2147784174_0
         $x_10_2 = {8b 44 24 10 8b 4c 24 04 89 01 8b 44 24 24 8b 4c 24 20 89 01}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -114,6 +118,7 @@ rule Trojan_Win32_BazarLoader_CR_2147811255_0
         $x_3_5 = "NmmwnludxXjcoaoSvhxobl" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -139,6 +144,7 @@ rule Trojan_Win32_BazarLoader_CM_2147811256_0
         $x_3_5 = "fxaowkhknntagsup" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -161,6 +167,7 @@ rule Trojan_Win32_BazarLoader_LKA_2147845151_0
         $x_1_2 = {78 61 6d 70 70 5c 68 74 64 6f 63 73 [0-240] 4c 6f 61 64 65 72 5c 52 65 6c 65 61 73 65 5c 4c 6f 61 64 65 72 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +190,7 @@ rule Trojan_Win32_BazarLoader_B_2147895587_0
         $x_2_2 = {8b 45 dc 83 c0 ?? 99 b9 ?? ?? ?? ?? f7 f9 89 55}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

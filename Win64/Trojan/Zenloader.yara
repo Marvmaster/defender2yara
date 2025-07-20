@@ -21,6 +21,7 @@ rule Trojan_Win64_Zenloader_DA_2147916895_0
         $x_1_6 = "#5008#" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win64_Zenloader_DB_2147917489_0
         $x_1_4 = "Download and Start" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

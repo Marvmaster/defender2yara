@@ -21,6 +21,7 @@ rule Trojan_MSIL_AntiVm_NA_2147906969_0
         $x_1_6 = "taskkill /f /im HTTPDebugger.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Trojan_MSIL_AntiVm_ND_2147928827_0
         $x_1_11 = "Google\\Chrome\\User Data\\Default\\Local Extension Settings" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

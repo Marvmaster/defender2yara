@@ -18,6 +18,7 @@ rule Backdoor_Win32_Simbot_2147647031_0
         $x_1_4 = "%02X-%02X-%02X-%02X-%02X-%02X" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -54,6 +55,7 @@ rule Backdoor_Win32_Simbot_2147648241_0
         $x_1_14 = "360sd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 2 of ($x_5_*) and 10 of ($x_1_*))) or
             ((1 of ($x_15_*) and 3 of ($x_5_*) and 5 of ($x_1_*))) or

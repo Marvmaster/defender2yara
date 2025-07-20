@@ -17,6 +17,7 @@ rule Trojan_Win32_Yenfhur_A_2147629624_0
         $x_1_3 = {72 65 73 73 69 67 6e 61 6d 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

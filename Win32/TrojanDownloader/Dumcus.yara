@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Dumcus_A_2147624061_0
         $x_1_3 = {73 76 63 68 6f 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

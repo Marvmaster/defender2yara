@@ -22,6 +22,7 @@ rule TrojanDownloader_Win64_VaporRage_D_2147806297_0
         $x_1_7 = {48 31 e6 48 89 ?? ?? ?? ?? 00 00 [0-96] 0f be ?? ?? ?? ?? 00 83 f0 ?? 88 ?? 88 8c ?? ?? ?? 00 00 0f be ?? ?? ?? ?? 00 83 f0 ?? 88 ?? 88 8c ?? ?? ?? 00 00 0f be ?? ?? ?? ?? 00 83 f0 ?? 88 ?? 88 8c ?? ?? ?? 00 00 0f be ?? ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win64_VaporRage_N_2147897444_0
         $x_100_1 = {31 c0 49 89 c9 48 39 d0 74 19 48 89 c1 4d 89 c2 83 e1 07 48 c1 e1 03 49 d3 ea 45 30 14 01 48 ff c0 eb e2 c3}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanDownloader_Win64_VaporRage_H_2147897446_0
         $x_100_1 = {48 8b 45 10 49 b8 82 38 ba 4d f7 57 3c b8 ba ?? ?? ?? ?? 48 89 c1 e8}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

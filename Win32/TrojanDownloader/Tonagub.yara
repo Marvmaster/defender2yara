@@ -24,6 +24,7 @@ rule TrojanDownloader_Win32_Tonagub_A_2147655545_0
         $x_50_10 = "SsyX5NjAXwBU6DEcHwF4JtOXwuYuYO8AWhPBbeEFU+8Klzusc4CJcx4zOxOY0iwB" ascii //weight: 50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 5 of ($x_50_*))) or
             ((3 of ($x_100_*) and 3 of ($x_50_*))) or

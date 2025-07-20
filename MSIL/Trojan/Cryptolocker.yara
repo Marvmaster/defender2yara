@@ -21,6 +21,7 @@ rule Trojan_MSIL_Cryptolocker_AYB_2147926816_0
         $x_1_6 = "RestrictToPermittedSnapins" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

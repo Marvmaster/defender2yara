@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Reflo_CCHT_2147903436_0
         $x_1_1 = {0f 47 85 a0 fd ff ff 6a 00 6a 00 50 68 ?? ?? ?? ?? 6a 00 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

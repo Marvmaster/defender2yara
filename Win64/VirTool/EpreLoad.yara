@@ -17,6 +17,7 @@ rule VirTool_Win64_EpreLoad_A_2147903671_0
         $x_1_3 = {48 0f 45 dd 48 8b d3 48 8b 5c 24 30 48 8b 6c 24 38 48 8b 74 24 40 48 83 c4 20 5f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

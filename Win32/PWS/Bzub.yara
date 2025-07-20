@@ -30,6 +30,7 @@ rule PWS_Win32_Bzub_2147576295_0
         $n_100_16 = {00 73 65 74 5f 77 6e 69 65 5f 66 61 76 6f 72 69 74 65 73 00}  //weight: -100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -100,6 +101,7 @@ rule PWS_Win32_Bzub_2147806865_0
         $x_2_44 = ">e-mail:<" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_2_*) and 20 of ($x_1_*))) or
             ((11 of ($x_2_*) and 18 of ($x_1_*))) or

@@ -17,6 +17,7 @@ rule TrojanDownloader_MacOS_Adload_B_2147822253_0
         $x_1_2 = {66 0f 57 c0 48 8d 7d 90 66 0f 29 07 48 c7 47 10 00 00 00 00 48 89 de 4c 29 fe 48 03 b5 78 ff ff ff 48 2b b5 70 ff ff ff e8 ?? ?? ?? ff 48 8d 7d 90 48 8b 77 08 48 8b 95 70 ff ff ff 48 8b 8d 78 ff ff ff e8 ?? ?? ?? ff 4c 39 fb 74 13 48 8d 7d 90 48 8b 77 08 4c 89 fa 48 89 d9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanDownloader_MacOS_Adload_C_2147827625_0
         $x_1_5 = "_msgSendSuper2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanDownloader_MacOS_Adload_E_2147849297_0
         $x_1_4 = "-nobrowse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule TrojanDownloader_MacOS_Adload_C_2147900252_0
         $x_1_3 = {2e 63 6f 6d 2f 67 2f 75 70 3f 6c 66 3d 00 47 45 54}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule TrojanDownloader_MacOS_Adload_G_2147915881_0
         $x_1_2 = {45 31 ff 45 31 e4 e9 88 01 00 00 90 42 0f b6 74 2b ff 48 8b 5d 98 48 8b 45 a0 48 39 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule TrojanDownloader_MacOS_Adload_F_2147915945_0
         $x_1_2 = {4c 89 d1 48 83 e1 e0 ?? ?? ?? ?? 48 89 fe 48 c1 ee 05 48 ff c6 89 f2 83 e2 03 48 83 ff 60 0f 83 ?? ?? ?? ?? 31 ff 48 85 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule TrojanDownloader_MacOS_Adload_I_2147917789_0
         $x_1_2 = {55 48 89 e5 41 57 41 56 41 54 53 48 83 ec 60 0f 57 c0 0f 29 45 a0 48 c7 45 b0 00 00 00 00 4c ?? ?? ?? 0f 29 45 c0 48 c7 45 d0 00 00 00 00 66 c7 45 c0 02 64 c6 45 c2 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule TrojanDownloader_MacOS_Adload_H_2147918315_0
         $x_1_2 = {41 83 e7 0f 74 ?? 48 89 55 c0 48 89 4d b8 48 89 45 b0 48 8b 1d 42 26 00 00 41 ff cf 41 83 e4 0f 45 31 f6 4b 8b 7c f5 00 48 85 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -198,6 +206,7 @@ rule TrojanDownloader_MacOS_Adload_J_2147918316_0
         $x_1_2 = {ff 15 45 5e 00 00 41 f6 c7 01 49 0f 44 dd 4c 89 f7 48 8b 35 7b 5f 00 00 48 89 da 48 89 c1 ff 15 27 5e 00 00 48 89 c7 e8 3d 3e 00 00 48 89 c3 f6 85 20 ff ff ff 01 0f ?? ?? ?? ?? ?? f6 85 e8 fe ff ff 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -220,6 +229,7 @@ rule TrojanDownloader_MacOS_Adload_K_2147918317_0
         $x_1_2 = {0f b6 03 0f 57 c0 0f 29 85 20 ff ff ff 48 c7 85 30 ff ff ff 00 00 00 00 c6 85 20 ff ff ff 02 41 88 45 00 c6 85 22 ff ff ff 00 ba 01 00 00 00 4c 89 ff 4c 89 ee e8 d4 57 00 00 f6 85 20 ff ff ff 01 74 ?? 48 8b bd 30 ff ff ff e8 d1 57 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -242,6 +252,7 @@ rule TrojanDownloader_MacOS_Adload_L_2147918318_0
         $x_1_2 = {45 31 e4 45 31 ed e9 ?? ?? ?? ?? 0f 1f 84 00 00 00 00 00 4c 39 f1 0f ?? ?? ?? ?? ?? 46 0f b6 7c 37 ff 42 8b 04 37 44 01 c0 41 28 c7 48 8b 9d 08 ff ff ff 48 8b 85 10 ff ff ff 48 39 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -264,6 +275,7 @@ rule TrojanDownloader_MacOS_Adload_M_2147919547_0
         $x_1_2 = {48 83 e7 fc 48 8b 5f 08 8b 13 83 e2 03 83 fa 01 74 ?? 48 89 04 f1 48 ff c6 4c 39 c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -286,6 +298,7 @@ rule TrojanDownloader_MacOS_Adload_Q_2147919548_0
         $x_1_2 = {49 8b 57 08 eb ?? 66 2e 0f 1f 84 00 00 00 00 00 48 d1 ea 4c 89 f6 48 89 df e8 68 92 05 00 0f b6 85 00 ff ff ff a8 01 74 ?? 48 8b 8d 08 ff ff ff 48 85 c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -308,6 +321,7 @@ rule TrojanDownloader_MacOS_Adload_S_2147920005_0
         $x_1_2 = {48 03 5d b8 41 bf 01 00 00 00 45 31 f6 49 c1 e6 04 48 8b 45 80 4a 8b 3c 30 48 89 de e8 d2 1c 00 00 85 c0 74 ?? 45 89 fe 41 ff c7 4d 39 ee}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -330,6 +344,7 @@ rule TrojanDownloader_MacOS_Adload_U_2147920006_0
         $x_1_2 = {49 89 d7 ff 15 c0 24 00 00 41 89 c6 85 c0 74 ?? 45 89 f4 49 c1 e4 03 31 db 49 8b 3c 1f e8 a8 0e 00 00 48 83 c3 08 49 39 dc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -352,6 +367,7 @@ rule TrojanDownloader_MacOS_Adload_T_2147923768_0
         $x_1_2 = {55 48 89 e5 41 55 48 81 ec e8 00 00 00 48 c7 45 e8 00 00 00 00 48 89 75 f0 48 8b 46 f8 48 8b 48 40 48 83 c1 0f 48 83 e1 f0 49 89 e0 49 29 c8 4c 89 c4 48 89 7d e8 48 8b 48 10 48 89 7d a0 4c 89 c7 48 89 75 98 4c 89 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -374,6 +390,7 @@ rule TrojanDownloader_MacOS_Adload_V_2147929993_0
         $x_1_2 = {89 f2 c1 e2 08 0f b6 74 08 ff 09 d6 48 ff c9 7f ef 49 8b 44 24 08 49 3b 44 24 10 4c 89 fb 73 0d 89 30 48 83 c0 04 49 89 44 24 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -396,6 +413,7 @@ rule TrojanDownloader_MacOS_Adload_P_2147938038_0
         $x_1_2 = {4d 8b 6e 60 4b 8b 7c 3d f0 e8 ?? ?? ?? ?? 4b 8b 4c 3d f8 4b 8b 54 3d 00 4c 89 e7 48 89 c6 e8 ?? ?? ?? ?? 48 ff c3 49 63 46 68 49 83 c7 18 48 39 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -418,6 +436,7 @@ rule TrojanDownloader_MacOS_Adload_W_2147943310_0
         $x_1_2 = {55 48 89 e5 53 50 48 89 fb 48 81 f9 00 04 00 00 b8 00 04 00 00 48 0f 42 c1 bf 02 00 00 00 48 89 d6 89 c2 e8 2e 69 00 00 48 83 f8 ff 74 08 48 89 43 08 31 c0 eb 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

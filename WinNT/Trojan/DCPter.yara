@@ -18,6 +18,7 @@ rule Trojan_WinNT_DCPter_A_2147649491_0
         $x_1_3 = {3d 3f 25 73 3f 42 3f 00 48 36 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

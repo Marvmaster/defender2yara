@@ -19,6 +19,7 @@ rule VirTool_Win64_Amkillz_A_2147844671_0
         $x_1_4 = {48 c7 44 24 20 00 00 00 00 41 b9 01 00 00 00 4c 8d ?? ?? ?? ?? ?? 48 8b 95 18 05 00 00 48 8b 4d 78 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule VirTool_Win64_Amkillz_B_2147919851_0
         $x_1_5 = {b8 ff ff ff ff ?? ?? ?? ?? ?? 44 8b 4d 34 ?? ?? ?? ?? ba 00 04 00 00 [0-18] 89 85 d4 04 00 00 81 bd d4 04 00 00 00 04 00 00 ?? ?? b8 ?? 00 00 00 ?? ?? ?? ?? ?? 83 3d 97 32 11 00 00 ?? ?? 48 8b 95 98 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

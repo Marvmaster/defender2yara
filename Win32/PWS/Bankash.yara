@@ -29,6 +29,7 @@ rule PWS_Win32_Bankash_2147574902_0
         $x_1_15 = "Manager\\Accounts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((12 of ($x_1_*))) or
             ((1 of ($x_2_*) and 10 of ($x_1_*))) or

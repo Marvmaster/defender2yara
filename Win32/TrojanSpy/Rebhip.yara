@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Rebhip_C_2147691419_0
         $x_1_5 = "|Spy-Net [RAT]|" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule TrojanSpy_Win32_Rebhip_A_2147691441_0
         $x_1_4 = "XX-XX-XX-XX" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -72,6 +74,7 @@ rule TrojanSpy_Win32_Rebhip_D_2147691468_0
         $x_1_3 = {66 75 6e 63 6f 65 73 2e 64 6c 6c 00 45 6e 76 69 61 72 53 74 72 65 61 6d 00 53 74 61 72 74 48 74 74 70 50 72 6f 78 79 00 53 74 61 72 74 53 6f 63 6b 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -103,6 +106,7 @@ rule TrojanSpy_Win32_Rebhip_C_2147691589_0
         $x_1_8 = {5f 53 41 49 52 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_7_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -129,6 +133,7 @@ rule TrojanSpy_Win32_Rebhip_F_2147705774_0
         $x_1_4 = {f4 f7 f9 e5 e3 ff f0 fd ef ef f9 ef e3 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +158,7 @@ rule TrojanSpy_Win32_Rebhip_G_2147714375_0
         $x_1_5 = {74 68 75 6d 62 6e 61 69 6c 7c 58 58 58 7c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +180,7 @@ rule TrojanSpy_Win32_Rebhip_H_2147716733_0
         $x_1_2 = {0f b7 c6 6b c0 47 8b 53 30 8d 94 82 20 01 00 00 8b 43 30 8d 44 b8 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -200,6 +207,7 @@ rule TrojanSpy_Win32_Rebhip_H_2147716733_1
         $x_1_7 = "XX-XX-XX-XX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -228,6 +236,7 @@ rule TrojanSpy_Win32_Rebhip_I_2147718250_0
         $x_1_5 = {53 70 79 4e 65 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

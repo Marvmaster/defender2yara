@@ -21,6 +21,7 @@ rule Trojan_Win32_Seeav_A_2147678431_0
         $x_1_7 = {4d 44 44 45 46 47 45 47 45 54 47 49 5a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule Trojan_Win32_Seeav_B_2147693619_0
         $x_1_7 = "Microsoft\\Windows\\Desktop.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

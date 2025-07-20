@@ -18,6 +18,7 @@ rule Trojan_Win32_Rifdoor_RA_2147830301_0
         $x_1_3 = "MUTEX394039_4930023" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

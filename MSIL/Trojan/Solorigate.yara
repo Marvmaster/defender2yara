@@ -20,6 +20,7 @@ rule Trojan_MSIL_Solorigate_G_2147771190_0
         $x_1_5 = "App_Web_logoimagehandler.ashx.b6031896.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +107,7 @@ rule Trojan_MSIL_Solorigate_BR_2147771206_0
         $x_10_66 = {4d 00 37 00 55 00 77 00 54 00 6b 00 6d 00 30 00 4e 00 44 00 ?? 00 56 00 4e 00 54 00 4e 00 4b 00 54 00 4e 00 4d 00 31 00 4e 00 45 00 69 00 31 00 30 00 44 00 57 00 78 00 4e 00 44 00 ?? 00 53 00 54 00 62 00 52 00 49 00 4d 00 7a 00 49 00 77 00 54 00 54 00 59 00 33 00 53 00 6a 00 4a 00 4b 00 42 00 51 00 41 00 3d 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

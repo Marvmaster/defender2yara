@@ -21,6 +21,7 @@ rule Trojan_MSIL_Cryptor_A_2147759285_0
         $x_1_6 = "Puzzle_Loader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule Trojan_MSIL_Cryptor_B_2147759686_0
         $x_1_2 = "fdfrf.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

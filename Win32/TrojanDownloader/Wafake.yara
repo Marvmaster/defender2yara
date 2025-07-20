@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Wafake_A_2147916713_0
         $x_1_3 = {4f 00 6c 00 65 00 33 00 32 00 2e 00 64 00 6c 00 6c 00 00 00 4f 00 6c 00 65 00 41 00 75 00 74 00 33 00 32 00 2e 00 64 00 6c 00 6c 00 00 00 00 00 6b 00 65 00 72 00 6e 00 65 00 6c 00 33 00 32 00 2e 00 64 00 6c 00 6c 00 00 00 00 00 53 00 68 00 65 00 6c 00 6c 00 33 00 32 00 2e 00 64 00 6c 00 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

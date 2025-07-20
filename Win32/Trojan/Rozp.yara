@@ -16,6 +16,7 @@ rule Trojan_Win32_Rozp_A_2147658256_0
         $x_1_2 = {8b f9 03 7d 08 8a 07 04 ?? 88 07 41 3b 4d 0c 73 02 eb ed c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

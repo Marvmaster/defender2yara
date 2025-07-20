@@ -16,6 +16,7 @@ rule Trojan_MSIL_Searaph_AMAA_2147852133_0
         $x_1_1 = {09 08 06 1a 58 4a 08 8e 69 5d 91 07 06 1a 58 4a 91 61 d2 6f ?? 00 00 0a 06 1a 58 06 1a 58 4a 17 58 54 06 1a 58 4a 07 8e 69 32 d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

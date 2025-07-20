@@ -20,6 +20,7 @@ rule Ransom_Win32_MauriCrypt_MK_2147785057_0
         $x_10_5 = "Desktop/ransomware/ransomware/cmd/common.go" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -53,6 +54,7 @@ rule Ransom_Win32_MauriCrypt_MAK_2147786744_0
         $x_1_10 = "server finished" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

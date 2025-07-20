@@ -31,6 +31,7 @@ rule PWS_Win32_QQRob_T_2147565093_0
         $x_1_17 = "KPOPMON.EXE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 6 of ($x_5_*) and 7 of ($x_1_*))) or
             ((2 of ($x_100_*) and 7 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -72,6 +73,7 @@ rule PWS_Win32_QQRob_2147566949_0
         $x_1_18 = ".qq.com/cgi-bin/after_logon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -104,6 +106,7 @@ rule PWS_Win32_QQRob_W_2147625116_0
         $x_1_2 = {6a 02 6a 00 6a fc 57 e8 ?? ?? ?? ff 6a 00 8d 45 f0 50 6a 04 53 57 e8 ?? ?? ?? ff 81 33 ?? ?? ?? ?? 6a 00 57 e8 ?? ?? ?? ff 3b 03 0f 86 ?? ?? 00 00 6a 02 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

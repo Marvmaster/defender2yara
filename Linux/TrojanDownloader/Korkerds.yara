@@ -19,6 +19,7 @@ rule TrojanDownloader_Linux_Korkerds_A_2147822866_0
         $x_1_4 = {2f 72 61 77 2f [0-16] 2d 6f 20 2f 62 69 6e 2f 68 74 74 70 64 6e 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

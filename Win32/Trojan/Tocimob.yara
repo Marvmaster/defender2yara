@@ -19,6 +19,7 @@ rule Trojan_Win32_Tocimob_A_2147681651_0
         $x_1_4 = {70 74 68 72 65 61 64 47 43 32 2e 74 78 74 00 68 74 74 70 3a 2f 2f [0-20] 2e 74 78 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

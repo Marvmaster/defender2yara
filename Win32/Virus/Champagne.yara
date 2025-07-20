@@ -18,6 +18,7 @@ rule Virus_Win32_Champagne_A_2147602085_0
         $x_4_4 = {2a 2e 65 78 65 00 2e 2e 00 64 20 4d 20 79 00 54 6f 20 74 68 65 20 77 68 6f 6d 20 49 20 6c 6f 76 65 64 0d 0a 54 6f 20 74 68 65 20 77 68 6f 6d 20 49 20 6e 65 65 64 65 64 0d 0a 59 6f 75 20 77 65 72 65 20 74 68 65 20 6f 6e 6c 79 20 66 6f 74 75 6e 65 20 49 20 65 76 65 72}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

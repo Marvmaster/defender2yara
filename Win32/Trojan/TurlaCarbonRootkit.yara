@@ -18,6 +18,7 @@ rule Trojan_Win32_TurlaCarbonRootkit_2147849793_0
         $x_1_4 = "gusb.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

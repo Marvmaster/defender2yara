@@ -15,6 +15,7 @@ rule Trojan_Win32_Donvba_A_2147718026_0
         $x_1_1 = "GtD2F9xgYLx3D3RGvpekLXJLtCUF0L0o1z1E" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

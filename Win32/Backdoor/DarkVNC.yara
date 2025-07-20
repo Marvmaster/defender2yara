@@ -18,6 +18,7 @@ rule Backdoor_Win32_DarkVNC_A_2147772193_0
         $x_1_3 = "muuuutex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_DarkVNC_GHN_2147845224_0
         $x_10_2 = {8b 4c 24 04 68 07 80 00 00 8b 41 04 8a 40 01 32 01 2c 12 a2}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

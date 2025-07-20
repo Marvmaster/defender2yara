@@ -18,6 +18,7 @@ rule Backdoor_Linux_Prometei_B_2147943339_0
         $x_1_3 = {00 2f 65 74 63 2f 6f 73 2d 72 65 6c 65 61 73 65 00 63 61 74 20 2f 65 74 63 2f 6f 73 2d 72 65 6c 65 61 73 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

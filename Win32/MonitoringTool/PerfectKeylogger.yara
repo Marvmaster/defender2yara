@@ -20,6 +20,7 @@ rule MonitoringTool_Win32_PerfectKeylogger_9644_0
         $x_1_6 = {00 70 6b 2e 62 69 6e 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule MonitoringTool_Win32_PerfectKeylogger_9644_1
         $x_1_8 = "hk.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             ((4 of ($x_10_*))) or
@@ -85,6 +87,7 @@ rule MonitoringTool_Win32_PerfectKeylogger_9644_2
         $x_1_12 = "Software\\Blazing Tools" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_3_*) and 3 of ($x_2_*))) or
@@ -118,6 +121,7 @@ rule MonitoringTool_Win32_PerfectKeylogger_9644_3
         $x_1_7 = "keystrokes.html" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -151,6 +155,7 @@ rule MonitoringTool_Win32_PerfectKeylogger_9644_4
         $x_1_9 = "keylogger's startup" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -178,6 +183,7 @@ rule MonitoringTool_Win32_PerfectKeylogger_9644_5
         $x_1_3 = "Downloading Perfect Keylogger." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +212,7 @@ rule MonitoringTool_Win32_PerfectKeylogger_9644_6
         $x_1_9 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_3_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -236,6 +243,7 @@ rule MonitoringTool_Win32_PerfectKeylogger_9644_7
         $x_1_6 = {25 00 30 00 32 00 64 00 2d 00 25 00 30 00 32 00 64 00 2d 00 25 00 30 00 32 00 64 00 2d 00 25 00 30 00 32 00 64 00 2d 00 25 00 30 00 32 00 64 00 2d 00 25 00 30 00 32 00 64 00 00 00 2f 00 00 00 5c 00 00 00 2f 00 00 00 2f 00 00 00 2e 00 6a 00 70 00 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

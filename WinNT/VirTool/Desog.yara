@@ -16,6 +16,7 @@ rule VirTool_WinNT_Desog_A_2147609750_0
         $x_1_2 = {80 30 8d 8a 18 88 58 fc 40 e2 f5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

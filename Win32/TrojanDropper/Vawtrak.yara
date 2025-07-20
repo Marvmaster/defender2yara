@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Vawtrak_A_2147686682_0
         $x_1_4 = {53 3a 28 4d 4c 3b 3b 4e 57 3b 3b 3b 4c 57 29 00 44 3a 28 41 3b 4f 49 43 49 3b 47 41 3b 3b 3b 57 44 29}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

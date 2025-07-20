@@ -20,6 +20,7 @@ rule Ransom_Win64_Gunra_SACR_2147941718_0
         $x_1_5 = "R3ADM3.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Win64_Gunra_A_2147941953_0
         $x_1_4 = "YOUR ALL DATA HAVE BEEN ENCRYPTED!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -69,6 +71,7 @@ rule Ransom_Win64_Gunra_PA_2147942739_0
         $x_2_3 = "YOUR ALL DATA HAVE BEEN ENCRYPTED!" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

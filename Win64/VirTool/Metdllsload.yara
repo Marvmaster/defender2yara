@@ -16,6 +16,7 @@ rule VirTool_Win64_Metdllsload_A_2147931741_0
         $x_1_2 = {48 c7 44 24 28 00 00 00 00 89 44 24 20 45 33 c9 33 d2 48 c7 c1 ff ff ff ff 41 b8 40 00 00 00 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule VirTool_Win64_Metdllsload_B_2147939550_0
         $x_1_2 = {48 c7 44 24 28 00 00 00 00 89 44 24 20 45 33 c9 33 d2 48 c7 c1 ff ff ff ff 41 b8 40 00 00 00 ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

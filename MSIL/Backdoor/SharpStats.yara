@@ -17,6 +17,7 @@ rule Backdoor_MSIL_SharpStats_A_2147740719_0
         $x_10_3 = "\\GoogleUpdate\\obj\\Release\\GoogleUpdate.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

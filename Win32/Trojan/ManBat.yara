@@ -20,6 +20,7 @@ rule Trojan_Win32_ManBat_AF_2147889318_0
         $x_1_5 = "VOrJ185VOrJ200VOrJ200VOrJ188VOrJ185VOrJ204VOrJ185VOrJ" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

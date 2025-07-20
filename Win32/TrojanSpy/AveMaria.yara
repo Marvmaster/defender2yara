@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_AveMaria_BM_2147741698_0
         $x_1_4 = "SELECT * FROM logins" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanSpy_Win32_AveMaria_G_2147744601_0
         $x_1_1 = {03 ca 8b 45 ?? c7 04 81 ?? ?? ?? ?? eb 23 00 8b 55 ?? 83 c2 ?? 89 55 ?? 83 7d ec ?? 7d ?? 69 45 f4 ?? ?? ?? ?? 8d 8c 05 ?? ?? ?? ?? 8b 55 ?? c1 e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanSpy_Win32_AveMaria_AR_2147753845_0
         $x_1_7 = {0f be 02 8b 8d ?? ?? ?? ?? 0f be 54 0d 8c 33 c2 8b 4d 84 03 8d ?? ?? ?? ?? 88 01 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule TrojanSpy_Win32_AveMaria_STA_2147767132_0
         $x_1_4 = "select signon_realm, origin_url, username_value, password_value from wow_logins" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -114,6 +118,7 @@ rule TrojanSpy_Win32_AveMaria_STB_2147767134_0
         $x_1_3 = {48 65 79 20 49 27 6d 20 41 64 6d 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

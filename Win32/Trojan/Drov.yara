@@ -23,6 +23,7 @@ rule Trojan_Win32_Drov_2147896070_0
         $x_3_7 = "www.shample.ru" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_3_*))) or
             (all of ($x*))

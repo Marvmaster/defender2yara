@@ -22,6 +22,7 @@ rule PWS_MSIL_PWSteal_A_2147726141_0
         $x_1_7 = "Software\\Microsoft\\Windows Messaging Subsystem\\Profile" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

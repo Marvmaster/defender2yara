@@ -35,6 +35,7 @@ rule Ransom_MSIL_Polar_PB_2147754701_0
         $x_4_20 = "\\wana\\Ransomware_ALL_encode\\dir_file\\obj\\x86\\Release\\Encode.pdb" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or

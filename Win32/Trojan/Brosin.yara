@@ -21,6 +21,7 @@ rule Trojan_Win32_Brosin_A_2147798093_0
         $x_2_6 = {8b fd 8d 0c 40 c1 e1 04 2b c8 8d 0c 49 8d 0c 89 8d 0c c9 8d 04 48 83 c9 ff 2b d8 33 c0 42}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule Trojan_Win64_SelfDelf_EM_2147847118_0
         $x_5_1 = {b8 00 00 eb 06 4d 31 d2 4d 31 db 43 8a 04 18 42 30 04 11 49 ff c2 49 ff c3 49 39 d2 74 0d 45 38 cb 74 02}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

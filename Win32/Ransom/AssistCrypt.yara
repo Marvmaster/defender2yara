@@ -21,6 +21,7 @@ rule Ransom_Win32_AssistCrypt_MK_2147775945_0
         $x_10_6 = "FName=ASSIST-README.txt" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

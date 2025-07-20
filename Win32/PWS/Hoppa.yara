@@ -21,6 +21,7 @@ rule PWS_Win32_Hoppa_A_2147694400_0
         $x_8_7 = {c6 80 84 00 00 00 75 c6 80 85 00 00 00 41 c6 80 86 00 00 00 8d c6 80 87 00 00 00 58 c6 80 88 00 00 00 04 c6 80 89 00 00 00 81 c6 80 8a 00 00 00 3b c6 80 8b 00 00 00 4c c6 80 8c 00 00 00 69 c6 80 8d 00 00 00 62 c6 80 8e 00 00 00 72}  //weight: 8, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

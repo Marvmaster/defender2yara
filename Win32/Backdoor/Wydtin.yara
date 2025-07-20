@@ -26,6 +26,7 @@ rule Backdoor_Win32_Wydtin_A_2147697811_0
         $x_1_12 = {43 3a 5c 57 49 4e 44 4f 57 53 5c 63 69 74 79 31 5c 00 2e 6a 70 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +59,7 @@ rule Backdoor_Win32_Wydtin_A_2147697811_1
         $x_1_13 = "GetHttpFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 

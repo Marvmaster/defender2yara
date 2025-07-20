@@ -16,6 +16,7 @@ rule Trojan_Win32_Nymaim_2147688041_0
         $x_1_2 = {6f 64 62 63 63 6f 6e 66 2e 64 6c 6c 00 63 6e 61 61 61 72 6f 5f 65 73 73 5f 5f 6d 6f 72 79 00 63 69 72 74 75 75 6c 41 6c 6c 6f 63 00 64 62 72 6e 65 6c 33 32 2e 64 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Nymaim_SD_2147729935_0
         $x_1_1 = {29 c0 2b 06 f7 d8 83 ee fc 83 e8 2e c1 c8 08 29 f8 83 e8 01 50 5f c1 c7 0a c1 cf 02 c7 03 00 00 00 00 31 03 83 c3 04 83 e9 04 85 c9 75 d2 5b 8b 15 04 f7 49 00 52 89 1d 14 f7 49 00 ff 15 14 f7 49 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Nymaim_VC_2147730484_0
         $x_1_7 = {8b 4e 0c 8b 44 31 24 85 c0 74 02 89 07 8d 56 10 03 54 31 20 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -90,6 +93,7 @@ rule Trojan_Win32_Nymaim_YA_2147734385_0
         $x_1_3 = "pbkilfkyu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_Win32_Nymaim_PB_2147734481_0
         $x_1_2 = {5a 8b 35 bc 4a 4a 00 56 8d 35 46 7c 21 fd 81 c6 4e bb 1e 03 56 52 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -139,6 +144,7 @@ rule Trojan_Win32_Nymaim_PA_2147734570_0
         $x_1_7 = {68 88 06 00 00 5f 8d 08 51 85 ff 74 33 31 db 2b 1e f7 db 83 c6 04 83 c3 dd 01 d3 83 c3 ff 29 d2 29 da f7 da c7 01 00 00 00 00 09 19 83 c1 04 83 c7 fc 8d 1d b3 70 3e 00 81 c3 40 e2 01 00 53 c3 59 8d 05 ?? ?? ?? ?? ff 30 31 c0 68 ?? ?? ?? ?? 51 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -161,6 +167,7 @@ rule Trojan_Win32_Nymaim_2147740108_0
         $x_1_2 = {83 c3 04 83 c7 ?? c1 cf 08 29 d7 83 c7 ff 57 5a c1 c2 ?? c1 ca ?? c7 06 00 00 00 00 01 3e 83 ee fc 83 e8 fc 3d 88 06 00 00 75 ?? 5e 8b 0d ?? ?? ?? 00 51 89 35 ?? ?? ?? 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -182,6 +189,7 @@ rule Trojan_Win32_Nymaim_DEA_2147757616_0
         $x_1_1 = {31 d2 2b 13 f7 da 83 eb fc 83 c2 dd 01 f2 4a 29 f6 01 d6 c6 07 00 01 17}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -210,6 +218,7 @@ rule Trojan_Win32_Nymaim_NEAA_2147835904_0
         $x_1_8 = "Inno Setup Setup Data" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -239,6 +248,7 @@ rule Trojan_Win32_Nymaim_NEAB_2147835906_0
         $x_1_9 = "Inno Setup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -260,6 +270,7 @@ rule Trojan_Win32_Nymaim_RPY_2147898669_0
         $x_1_1 = {89 45 f8 8b 45 f8 8b 48 1c 89 4d f4 ff 75 14 ff 75 10 ff 75 0c ff 75 08 ff 55 f4 89 45 fc 8b 45 fc 8b e5 5d c2 10 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -281,6 +292,7 @@ rule Trojan_Win32_Nymaim_RPZ_2147898670_0
         $x_1_1 = {c6 45 f8 6e c6 45 f9 74 c6 45 fa 64 c6 45 fb 6c c6 45 fc 6c c6 45 fd 00 c6 45 ec 61 c6 45 ed 64 c6 45 ee 76 c6 45 ef 61 c6 45 f0 70 c6 45 f1 69 c6 45 f2 33 c6 45 f3 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -303,6 +315,7 @@ rule Trojan_Win32_Nymaim_GPD_2147902203_0
         $x_5_2 = {73 de c7 8b c8 9a 19 b1 37 65 8a 23 a5 32 94 b9 48 7d 19 ef 79 e2 c4 7b 79 7e 41 8c c3 48 0c a6 2e 04 46 9c d9 3c c9 c7 c0 7a 39 32 f6 a3 4a a9}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -324,6 +337,7 @@ rule Trojan_Win32_Nymaim_GXZ_2147903618_0
         $x_10_1 = {29 c0 13 1d ?? ?? ?? ?? 01 f8 b5 01 00 c5 83 db ?? 18 35 ?? ?? ?? ?? 81 1d ?? ?? ?? ?? b2 00 00 00 29 fb 19 ca 0b 0d ?? ?? ?? ?? 6a 00 81 34 24 ?? ?? ?? ?? 8d 05 ?? ?? ?? ?? 40 50 8d 05 ?? ?? ?? ?? 40 50 ff 15}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -346,6 +360,7 @@ rule Trojan_Win32_Nymaim_NM_2147910277_0
         $x_1_2 = "swank_tool2.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -368,6 +383,7 @@ rule Trojan_Win32_Nymaim_NI_2147911646_0
         $x_3_2 = {0f b7 b4 24 ?? ?? ?? ?? 01 f6 66 89 f7 66 89 bc 24 ?? ?? ?? ?? 89 44 24 54 8b 74 24 50 31 c6}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -389,6 +405,7 @@ rule Trojan_Win32_Nymaim_BAC_2147934269_0
         $x_4_1 = {58 23 02 83 ea ?? f8 83 d0 ?? c1 c8 ?? 29 f8 83 c0 ?? 89 c7 c1 c7 ?? 89 03 f8 83 d3}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -410,6 +427,7 @@ rule Trojan_Win32_Nymaim_BAB_2147934832_0
         $x_3_1 = {8f 45 e4 8b c8 50 8f 45 e8 8a 4d e3 0a 4d ed 80 e1 00 0b c1 8d 00 32 05 ?? ?? ?? ?? 88 45 ef}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -431,6 +449,7 @@ rule Trojan_Win32_Nymaim_BAA_2147935599_0
         $x_5_1 = {5b 23 1f 8d 7f 04 83 eb 2f c1 cb 08 29 cb 4b 53 59 c1 c1 09 d1 c9 89 1a 8d 52 04 83 ee fc 81 fe 88 06 00 00 75}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -452,6 +471,7 @@ rule Trojan_Win32_Nymaim_BAD_2147935604_0
         $x_3_1 = {21 c6 56 ff 32 58 f8 83 d2 04 f8 83 d0 d4 c1 c8 08 29 d8 48 89 c3 c1 c3 08 89 06}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -473,6 +493,7 @@ rule Trojan_Win32_Nymaim_BAE_2147935994_0
         $x_4_1 = {31 c0 33 01 83 e9 fc f8 83 d0 d4 c1 c8 08 29 d8 83 c0 ff 89 c3 c1 c3 08 50 8f 02 8d 52 04 f8 83 d6 fc 85 f6}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -494,6 +515,7 @@ rule Trojan_Win32_Nymaim_BAF_2147937899_0
         $x_2_1 = {50 59 51 29 c0 0b 02 f8 83 d2 04 83 e8 2c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

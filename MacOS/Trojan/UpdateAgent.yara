@@ -17,6 +17,7 @@ rule Trojan_MacOS_UpdateAgent_A_2147796946_0
         $x_1_3 = "xattr -r -d com.apple.quarantine /tmp/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MacOS_UpdateAgent_B_2147798505_0
         $x_1_2 = {3d 24 28 63 75 72 6c 20 2d 2d 63 6f 6e 6e 65 63 74 2d 74 69 6d 65 6f 75 74 20 39 30 30 20 2d 4c 20 22 68 74 74 70 73 3a 2f 2f [0-80] 29 3b 65 76 61 6c 20 22 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MacOS_UpdateAgent_A_2147807682_0
         $x_2_2 = {89 ca 48 8d bd 68 ff ff ff 48 8d b5 60 ff ff ff 48 89 95 f8 fd ff ff e8 d2 06 00 00 48 8d 45 88 48 89 c7 48 89 85 f0 fd ff ff e8 6f 06 00 00 48 89 85 38 ff ff ff 48 8d bd 40 ff ff ff 48 8d b5 38 ff ff ff 48 8b 95 f8 fd ff ff e8 9e 06 00 00 48 8b b5 68 ff ff ff 48 8b 95 40 ff ff ff 48 8b bd f0 fd ff ff e8 94 04 00 00 48 89 85 e8 fd ff ff e9 00 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_MacOS_UpdateAgent_C_2147808788_0
         $x_2_2 = {48 89 e5 48 89 7d f8 40 80 e6 01 40 88 75 f7 48 8b 45 f8 f6 45 f7 01 48 89 45 e8 0f ?? ?? ?? ?? 00 48 8b 45 e8 48 8b 48 08 48 8b 10 48 0b 0a 48 89 0a e9 ?? ?? ?? 00 48 8b 45 e8 48 8b 48 08 48 81 f1 ff ff ff ff 48 8b 10 48 23 0a 48 89 0a 48 8b 45 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

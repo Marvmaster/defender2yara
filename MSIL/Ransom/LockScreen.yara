@@ -23,6 +23,7 @@ rule Ransom_MSIL_LockScreen_A_2147679754_0
         $x_4_9 = "Unlock code:" wide //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_4_*) and 3 of ($x_1_*))) or
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule Ransom_MSIL_LockScreen_D_2147693610_0
         $x_1_5 = "powershell" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -79,6 +81,7 @@ rule Ransom_MSIL_LockScreen_E_2147706594_0
         $x_1_4 = "\\Srv Lock\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -102,6 +105,7 @@ rule Ransom_MSIL_LockScreen_F_2147706606_0
         $x_1_4 = {62 6c 6f 63 6b 5f 46 6f 72 6d 43 6c 6f 73 69 6e 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule Ransom_MSIL_LockScreen_G_2147706774_0
         $x_1_8 = "cryptlocker.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -150,6 +155,7 @@ rule Ransom_MSIL_LockScreen_H_2147713071_0
         $x_1_2 = "Your Product Key is not match" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

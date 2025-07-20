@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Admedia_2147801391_0
         $x_1_8 = {6d 69 63 72 6f 61 70 6d 64 64 74 2e 64 6c 6c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or

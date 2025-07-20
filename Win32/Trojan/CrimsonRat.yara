@@ -35,6 +35,7 @@ rule Trojan_Win32_CrimsonRat_A_2147751826_0
         $x_1_20 = "lookFiles" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

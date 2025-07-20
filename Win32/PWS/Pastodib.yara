@@ -24,6 +24,7 @@ rule PWS_Win32_Pastodib_A_2147696546_0
         $x_1_10 = {6c 6f 67 69 6e 73 2e 6a 73 6f 6e 00 68 6f 73 74 6e 61 6d 65 00 00 00 00 22 00 00 00 65 6e 63 72 79 70 74 65 64 55 73 65 72 6e 61 6d 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

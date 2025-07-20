@@ -18,6 +18,7 @@ rule VirTool_WinNT_Tedroo_A_2147597369_0
         $x_10_4 = {fa 0f 20 c0 89 45 ec 25 ff ff fe ff 0f 22 c0 8b 0d ?? ?? ?? ?? 8b 11 a1 ?? ?? ?? ?? c7 04 82 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 8b 11 a1 ?? ?? ?? ?? c7 04 82 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 8b 11 a1 ?? ?? ?? ?? c7 04 82 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 8b 11 a1 ?? ?? ?? ?? c7 04 82 ?? ?? ?? ?? 8b 45 ec 0f 22 c0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule VirTool_WinNT_Tedroo_A_2147597370_0
         $x_1_3 = {57 8b c6 e8 bb fb ff ff 83 c4 04 84 c0 74 19 e8 6f fc ff ff 84 c0 74 05 e8 e6 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule VirTool_WinNT_Tedroo_B_2147603172_0
         $x_1_1 = {83 fb 05 0f 85 b6 00 00 00 8b df 33 c0 89 45 fc 85 db 0f 84 a7 00 00 00 c6 45 fb 00 6a 01 8d 43 38 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_Win32_Wagcrypt_A_2147719531_0
         $x_2_4 = {b8 ab aa aa 2a f7 ef c1 fa 02 8b fa c1 ef 1f 03 fa}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_MSIL_Samas_A_2147709840_0
         $x_2_6 = {73 00 70 00 69 00 [0-4] 73 00 70 00 66 00 [0-4] 73 00 61 00 76 00 [0-4] 73 00 69 00 6b 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -51,6 +52,7 @@ rule Trojan_MSIL_Samas_B_2147710147_0
         $x_2_8 = {5c 53 41 4d 5c 4f 72 69 67 69 6e 61 6c 5c 64 65 6c 66 69 6c 65 74 79 70 65 5c 64 65 6c 66 69 6c 65 74 79 70 65 5c 6f 62 6a 5c 52 65 6c 65 61 73 65 5c [0-15] 2e 70 64 62}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -81,6 +83,7 @@ rule Trojan_MSIL_Samas_C_2147712017_0
         $x_1_6 = "\\UpgradeWindows" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -112,6 +115,7 @@ rule Trojan_MSIL_Samas_A_2147756884_0
         $x_1_6 = "Pastebin" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

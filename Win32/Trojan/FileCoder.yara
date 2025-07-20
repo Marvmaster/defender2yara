@@ -22,6 +22,7 @@ rule Trojan_Win32_FileCoder_AT_2147754563_0
         $x_1_7 = "****Chiffrement termin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_FileCoder_XY_2147769209_0
         $x_1_2 = {33 f3 2b fe 8b 44 24 74 29 44 24 10 83 6c 24 64 01 0f 85 67 fb ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_FileCoder_XZ_2147769521_0
         $x_1_2 = {8b 44 24 68 8b 54 24 60 89 50 04 eb [0-32] 8b 8c 24 ?? ?? ?? ?? 5f 5e 89 28 5d 5b 33 cc e8 ?? ?? 00 00 81 c4 ?? ?? 00 00 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_FileCoder_YY_2147769522_0
         $x_1_2 = {6a 40 68 00 10 00 00 52 53 40 00 c6 05 ?? ?? ?? ?? 41 c6 05 ?? ?? ?? ?? 6c c6 05 ?? ?? ?? ?? 6c c6 05 ?? ?? ?? ?? 6f c6 05 ?? ?? ?? ?? 63 c6 05 ?? ?? ?? ?? 00 ff 15 ?? ?? ?? ?? 8b 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Win32_FileCoder_XU_2147769690_0
         $x_1_5 = "estore %1 files.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -139,6 +144,7 @@ rule Trojan_Win32_FileCoder_EC_2147850522_0
         $x_1_6 = "mimic.batend" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_Win32_FileCoder_NFC_2147893671_0
         $x_5_1 = {e8 fc 87 ff ff 48 89 c1 48 8d 41 ?? 89 59 0c c7 41 08 ?? ?? ?? ?? 66 85 f6 75 08 48 0f b7 35 ce 0f 18 00 66 89 71 04 66 c7 41 06 ?? ?? 8b cb c1 e9 ?? 03 cb c1 f9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -184,6 +191,7 @@ rule Trojan_Win32_FileCoder_ARAT_2147902430_0
         $x_2_4 = {0d 12 03 28 ?? ?? ?? 0a 0c 08 16 06 1f 10 07 5a 08 8e 69 28 ?? ?? ?? 0a 07 17 58 0b 07 02 32 db}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -206,6 +214,7 @@ rule Trojan_Win32_FileCoder_ARAQ_2147908250_0
         $x_2_2 = "://RansomCrypto_qoia6E1FkoQjefA9ia10.onion" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -231,6 +240,7 @@ rule Trojan_Win32_FileCoder_ARAQ_2147908250_1
         $x_2_5 = "DisableTaskMgr" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -254,6 +264,7 @@ rule Trojan_Win32_FileCoder_NF_2147909824_0
         $x_2_3 = "qQf2kOf" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -276,6 +287,7 @@ rule Trojan_Win32_FileCoder_NF_2147909824_1
         $x_1_2 = "encrypted-not-wall.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -298,6 +310,7 @@ rule Trojan_Win32_FileCoder_NF_2147909824_2
         $x_2_2 = {8b 3d 90 26 43 00 33 d2 f7 f1 8a 4c 37 ff 8a 04 17 88 0c 17 8b 0d 90 26 43 00 88 44 31 ff a1 84 26 43 00 8b 3d 14 26 43 00 8b c8 c1 e9 19 c1 e0 07}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -323,6 +336,7 @@ rule Trojan_Win32_FileCoder_NF_2147909824_3
         $x_1_5 = "Our democracy as been hacked" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -350,6 +364,7 @@ rule Trojan_Win32_FileCoder_NF_2147909824_4
         $x_1_7 = "decrypting message" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -371,6 +386,7 @@ rule Trojan_Win32_FileCoder_ARAX_2147910935_0
         $x_2_1 = {8d 55 e0 03 d0 40 8a 0c 13 32 0a 88 0c 16 3b c7 72 ee}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -392,6 +408,7 @@ rule Trojan_Win32_FileCoder_ARAX_2147910935_1
         $x_2_1 = {8a 14 07 32 10 ff 85 c4 fd ff ff 88 14 01 33 d2 40 3b d6 72 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -415,6 +432,7 @@ rule Trojan_Win32_FileCoder_ARAX_2147910935_2
         $x_2_3 = "\\ZLWP.tmp" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -437,6 +455,7 @@ rule Trojan_Win32_FileCoder_AMDA_2147931008_0
         $x_4_2 = {8d 41 e0 3c 5a 77 [0-10] 99 f7 7d [0-24] 5b [0-10] b9 5b 00 00 00 [0-5] f7 f9 8d 4a 20 88 0c 37 46 [0-10] 84 c9 75}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -459,6 +478,7 @@ rule Trojan_Win32_FileCoder_ARAC_2147933302_0
         $x_2_2 = {8b 55 18 03 95 f4 fb ff ff 8a 0a 32 8c 85 f8 fb ff ff 8b 55 18 03 95 f4 fb ff ff 88 0a e9 2e ff ff ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -480,6 +500,7 @@ rule Trojan_Win32_FileCoder_ARAE_2147933417_0
         $x_2_1 = {8a 04 30 30 04 1f ff 46 40 47 8b 46 40 3b 7d 08 72 dc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

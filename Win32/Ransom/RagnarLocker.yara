@@ -19,6 +19,7 @@ rule Ransom_Win32_RagnarLocker_DH_2147754419_0
         $x_1_4 = "C:\\Mirc\\How_To_Decrypt_My_Files.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Win32_RagnarLocker_MK_2147761027_0
         $x_1_7 = ".ragn@r" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Ransom_Win32_RagnarLocker_MA_2147763121_0
         $x_1_2 = {40 8d 7f 01 0f b6 d0 89 55 14 8a 8c 15 ?? ?? ?? ?? 0f b6 c1 03 c3 0f b6 d8 8a 84 1d 00 88 84 15 00 8b 45 14 0f b6 d1 88 8c 1d 00 0f b6 8c 05 00 03 d1 0f b6 ca 0f b6 8c 0d 00 30 4f ff 83 ee ?? 75 af}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Ransom_Win32_RagnarLocker_B_2147763206_0
         $x_1_3 = {0f b6 d1 88 8c 1d ?? ?? ?? ?? 0f b6 8c 05 ?? ?? ?? ?? 03 d1 0f b6 ca 0f b6 8c 0d ?? ?? ?? ?? 30 4f ff 83 ee 01 75 af}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Ransom_Win32_RagnarLocker_D_2147764221_0
         $x_1_1 = {03 f0 8b 0c 0e 01 8c 05 ?? ?? ?? ?? 8b 94 05 00 8b ca c1 e9 ?? 88 4e ff 8b ca 88 94 05 ?? ?? ?? ?? 83 c0 ?? c1 e9 ?? c1 ea ?? 88 0e 88 56 01 83 f8 ?? 72 bd}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule Ransom_Win32_RagnarLocker_C_2147787717_0
         $x_1_1 = {0f b7 0c 57 42 81 f1 ?? ?? ?? ?? 03 f1 8b c6 c1 c0 ?? 2b f0 3b d3 7c e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule Ransom_Win32_RagnarLocker_C_2147892048_0
         $x_1_4 = "Cooperating with the FBI, CISA and so on" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

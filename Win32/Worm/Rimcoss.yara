@@ -18,6 +18,7 @@ rule Worm_Win32_Rimcoss_A_2147610887_0
         $x_1_4 = {5b 41 75 74 6f 52 75 6e 5d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule TrojanDownloader_Linux_Chacha_A_2147784138_0
         $x_1_5 = {63 61 73 65 20 24 31 20 69 6e [0-3] 73 74 61 72 74 29 [0-5] 25 73 [0-5] [0-5] 73 74 6f 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

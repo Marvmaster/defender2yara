@@ -23,6 +23,7 @@ rule Trojan_Win32_Pazzky_A_2147649424_0
         $x_1_9 = {69 70 6c 6f 63 61 74 69 6f 6e 74 6f 6f 6c 73 2e 63 6f 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))

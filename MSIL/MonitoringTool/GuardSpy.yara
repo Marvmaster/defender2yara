@@ -18,6 +18,7 @@ rule MonitoringTool_MSIL_GuardSpy_213526_0
         $x_1_4 = "Guard___Spy" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

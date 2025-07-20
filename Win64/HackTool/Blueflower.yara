@@ -19,6 +19,7 @@ rule HackTool_Win64_Blueflower_A_2147684489_0
         $x_1_5 = "LsarOpenSecret" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule HackTool_Win64_Blueflower_B_2147684490_0
         $x_1_4 = "-u : specify user whose password is to be retrieved" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

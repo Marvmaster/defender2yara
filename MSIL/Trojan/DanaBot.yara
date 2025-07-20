@@ -16,6 +16,7 @@ rule Trojan_MSIL_DanaBot_PTAD_2147894583_0
         $x_2_1 = {08 28 54 00 00 0a 74 11 00 00 01 13 05 73 55 00 00 0a 13 06 16 0b 2b 21 11 05 07 16 6f 56 00 00 0a 13 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

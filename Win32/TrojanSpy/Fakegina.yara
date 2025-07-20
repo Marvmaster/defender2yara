@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Fakegina_E_2147657049_0
         $x_1_3 = "Domain  = %s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

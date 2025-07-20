@@ -20,6 +20,7 @@ rule Ransom_Linux_HelloKitty_A_2147785360_0
         $x_1_6 = "error encrypt: %s rename back:%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

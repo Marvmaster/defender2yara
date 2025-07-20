@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Doxz_A_2147596332_0
         $x_10_5 = ".php?aff_id=%AFFID&lunch_id=%LUNCHID" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

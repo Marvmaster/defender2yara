@@ -21,6 +21,7 @@ rule Backdoor_Win32_Crugup_A_2147690721_0
         $x_2_7 = {83 ec 04 8d 45 fc ff 00 eb d1 83 3d ?? ?? ?? ?? 06 75 54 c7 45 fc 00 00 00 00 83 7d fc 09 7f 47 8b 45 fc c1 e0 09 05 ?? ?? ?? ?? 89 44 24 08 8b 45 fc c1 e0 09 05 ?? ?? ?? ?? 89 44 24 04 8b 45 fc c1 e0 09 05 ?? ?? ?? ?? 89 04 24 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -48,6 +49,7 @@ rule Backdoor_Win32_Crugup_B_2147717360_0
         $x_5_4 = {51 75 61 6e 74 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

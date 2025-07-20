@@ -28,6 +28,7 @@ rule Worm_Win32_Exvee_A_2147581996_0
         $x_2_14 = "WriteProcessMemory" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 7 of ($x_1_*))) or
             ((5 of ($x_2_*) and 5 of ($x_1_*))) or

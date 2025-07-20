@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Korklic_A_2147617422_0
         $x_1_4 = {00 72 00 00 00 5c 4b 43 50 6f 69 6e 74 5f 49 6e 66 6f 4e 65 77 2e 64 61 74 00 00 00 00 4d 6f 7a 69 6c 6c 61 2f 34 2e 30 20 28 63 6f 6d 70 61 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule TrojanDownloader_Win32_Korklic_B_2147617423_0
         $x_15_14 = "%s\\KCPoint_Info.dat" ascii //weight: 15
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 1 of ($x_1_*))) or
             ((2 of ($x_15_*))) or

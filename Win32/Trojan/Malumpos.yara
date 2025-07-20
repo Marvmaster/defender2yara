@@ -16,6 +16,7 @@ rule Trojan_Win32_Malumpos_A_2147696001_0
         $x_1_2 = {5b 33 2d 39 5d 7b 31 7d 5b 30 2d 39 5d 7b 31 34 2c 31 35 7d 5b 44 3d 5d 28 31 5b 31 2d 39 5d 29 28 28 30 5b 31 2d 39 5d 29 7c 28 31 5b 30 2d 32 5d 29 29 5b 30 2d 39 5d 7b 38 2c 33 30 7d 29 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

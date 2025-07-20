@@ -22,6 +22,7 @@ rule Worm_Win32_Shedewbot_A_2147625524_0
         $x_1_8 = {83 c4 08 89 45 ?? 66 c7 45 ?? 00 80 c6 45 ?? 30 c6 45 ?? 14 8b 45 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

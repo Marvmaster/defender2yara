@@ -22,6 +22,7 @@ rule VirTool_Win32_RefLoad_A_2147940946_0
         $x_1_8 = {54 ca af 91}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))

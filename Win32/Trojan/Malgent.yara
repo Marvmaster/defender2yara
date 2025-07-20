@@ -15,6 +15,7 @@ rule Trojan_Win32_Malgent_B_2147735650_0
         $x_1_1 = {33 c0 3d c4 36 4f 00 75 0c 8b 0d ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 40 3d f2 70 86 00 7c e5 ff 15 ?? ?? ?? ?? 33 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Malgent_D_2147740704_0
         $x_1_3 = "GoldTemp.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -62,6 +64,7 @@ rule Trojan_Win32_Malgent_D_2147740704_1
         $x_1_3 = "tq_tel\"#'qii" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Win32_Malgent_C_2147741596_0
         $x_1_7 = "LiveKernel\\SRPolicySvc.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Win32_Malgent_C_2147741596_1
         $x_1_4 = "TmDbgLog.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -142,6 +147,7 @@ rule Trojan_Win32_Malgent_AG_2147815423_0
         $x_1_9 = "svchost.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule Trojan_Win32_Malgent_CSG_2147815601_0
         $x_1_10 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -198,6 +205,7 @@ rule Trojan_Win32_Malgent_BS_2147829047_0
         $x_1_3 = "RunService" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +227,7 @@ rule Trojan_Win32_Malgent_BD_2147844793_0
         $x_2_1 = {8b 18 33 d1 33 da 81 c1 dc 5e 2c 00 89 18 83 c0 04 8d 1c 06 3b df 76}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +252,7 @@ rule Trojan_Win32_Malgent_RP_2147916496_0
         $x_1_4 = "\"C:\\Windows\\iexplore.exe\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -269,6 +279,7 @@ rule Trojan_Win32_Malgent_RP_2147916496_1
         $x_1_6 = "CmfcView" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -293,6 +304,7 @@ rule Trojan_Win32_Malgent_AYA_2147920017_0
         $x_1_4 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -324,6 +336,7 @@ rule Trojan_Win32_Malgent_PR_2147931153_0
         $x_1_11 = "Sleep" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
@@ -356,6 +369,7 @@ rule Trojan_Win32_Malgent_GA_2147937365_0
         $x_1_7 = "://homestaieu.site/api.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 4 of ($x_1_*))) or
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or

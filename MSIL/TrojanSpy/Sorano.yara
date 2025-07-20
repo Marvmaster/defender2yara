@@ -20,6 +20,7 @@ rule TrojanSpy_MSIL_Sorano_A_2147752337_0
         $x_1_5 = "http://fuckingav.xyz/antivirus.php" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_MSIL_Glimpse_SA_2147902109_0
         $x_1_5 = "\\Debug\\newPanel.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

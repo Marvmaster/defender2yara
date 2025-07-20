@@ -16,6 +16,7 @@ rule Trojan_Win32_Allaple_ALL_2147927741_0
         $x_1_1 = {b9 3e 02 00 00 b8 ?? ?? ?? ?? 50 ba ce 47 6c a0 e8 ?? ?? ?? ?? eb 09 31 10 83 c0 04 49}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

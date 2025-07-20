@@ -17,6 +17,7 @@ rule Worm_Win32_Baluk_2147607421_0
         $x_1_3 = {66 3d b3 00 7c 1c 66 3d fd 00 7f 16 8b 55 d8 52 ff d3 66 2d 83 00 0f 80}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

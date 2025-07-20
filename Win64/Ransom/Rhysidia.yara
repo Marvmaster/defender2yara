@@ -18,6 +18,7 @@ rule Ransom_Win64_Rhysidia_D_2147903965_0
         $x_1_3 = "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\ActiveDesktop\" /v NoChangingWallPaper /t REG_SZ /d 1 /f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

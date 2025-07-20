@@ -18,6 +18,7 @@ rule Worm_Win32_Fropjor_A_2147618407_0
         $x_1_4 = {75 73 72 5c 61 6c 6c 5c 6c 6f 67 69 6e 5f 77 2e 62 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

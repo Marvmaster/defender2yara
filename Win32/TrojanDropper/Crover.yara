@@ -24,6 +24,7 @@ rule TrojanDropper_Win32_Crover_2147599906_0
         $x_5_10 = "H0000SecurityHackers" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 5 of ($x_1_*))) or
             ((3 of ($x_5_*))) or

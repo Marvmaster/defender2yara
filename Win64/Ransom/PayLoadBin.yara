@@ -16,6 +16,7 @@ rule Ransom_Win64_PayLoadBin_A_2147782105_0
         $x_1_2 = "{aa5b6a80-b834-11d0-932f-00a0c90dcaa9}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

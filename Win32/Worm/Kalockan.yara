@@ -19,6 +19,7 @@ rule Worm_Win32_Kalockan_A_2147714799_0
         $x_1_5 = {5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e [0-8] 7c 45 6e 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

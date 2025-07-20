@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_StealC_ASE_2147898574_0
         $x_1_2 = {25 16 07 a2 25 0c 14 14 17 8d 68 00 00 01 25 16 17 9c 25 0d 17 28 70 00 00 0a 26 09 16 91 2d 02 2b 1d 08 16 9a 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_MSIL_StealC_RP_2147925381_0
         $x_10_2 = {7d 03 00 00 04 02 72 ?? ?? 00 70 7d ?? ?? 00 04 02 16 28 ?? ?? 00 0a 7d 05 00 00 04 02 72 ?? ?? 00 70 7d 06 00 00 04 02 28 ?? ?? 00 0a 00 00 02 28 ?? ?? 00 06 00 02 28 ?? ?? 00 06 16 fe 01 0a 06 2c 0b}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

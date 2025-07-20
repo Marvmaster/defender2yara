@@ -19,6 +19,7 @@ rule Backdoor_Win32_Loretsys_A_2147684755_0
         $x_1_5 = {c1 ea 02 4a 83 fa 00 7c 16 8b 18 89 5d fc d1 45 fc 31 08 8b 4d fc 83 c0 04 4a 83 fa ff 75 ea}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

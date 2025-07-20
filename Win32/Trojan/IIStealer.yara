@@ -18,6 +18,7 @@ rule Trojan_Win32_IIStealer_DA_2147920321_0
         $x_1_3 = "String.fromCharCode(" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

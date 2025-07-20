@@ -18,6 +18,7 @@ rule Trojan_Win32_Helpud_A_2147601462_0
         $x_5_4 = {7e 2e c7 45 f8 01 00 00 00 8b 45 fc 8b 55 f8 8a 5c 10 ff 80 c3 80 8d 45 f4 8b d3 e8 ?? ?? ?? ?? 8b 55 f4 8b c7 e8 ?? ?? ?? ?? ff 45 f8 4e 75 d9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_Win32_Helpud_S_2147609186_0
         $x_1_3 = {84 c0 75 34 8d 45 e0 e8 ?? ?? ?? ?? 8b 45 e0 50 a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b d8 8b cb ba a4 43 40 00 b8 0a 00 00 00 e8 ?? ?? ?? ?? 84 c0 74 07 8b c3 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -72,6 +74,7 @@ rule Trojan_Win32_Helpud_BA_2147614292_0
         $x_1_6 = "-953F-4CC8-B68F-D349FF41D677}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -100,6 +103,7 @@ rule Trojan_Win32_Helpud_BA_2147614293_0
         $x_1_5 = {00 79 6d 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

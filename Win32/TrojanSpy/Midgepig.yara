@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Midgepig_A_2147718053_0
         $x_1_3 = {69 6d 67 5c 00 00 00 00 25 73 25 64 2d 25 30 2e 32 64 2d 25 30 2e 32 64 5f 25 30 2e 32 64 2d 25 30 2e 32 64 2d 25 30 2e 32 64 2e 6a 70 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

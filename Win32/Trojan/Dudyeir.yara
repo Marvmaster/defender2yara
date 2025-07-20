@@ -17,6 +17,7 @@ rule Trojan_Win32_Dudyeir_B_2147681367_0
         $x_1_3 = {6e 00 73 00 64 00 69 00 75 00 79 00 65 00 69 00 72 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

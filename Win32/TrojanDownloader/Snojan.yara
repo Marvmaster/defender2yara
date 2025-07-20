@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Snojan_BB_2147822995_0
         $x_1_2 = "wecan.hasthe.technology/upload" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win32_Ransirac_A_2147653621_0
         $x_1_6 = "AHrefGoToYourself" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -50,6 +51,7 @@ rule Trojan_Win32_Ransirac_C_2147654066_0
         $x_1_5 = "7h6kh9l8" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Trojan_Win32_Ransirac_G_2147654449_0
         $x_1_6 = "BUTTON_ENTER_SERIAL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_Win32_Ransirac_A_2147655054_0
         $x_1_1 = {74 31 53 53 6a 4e 57 ff 15 ?? ?? ?? ?? 53 8d 85 ?? ?? ?? ?? 50 6a 08 56 57 ff 15 ?? ?? ?? ?? 57 ff 15 ?? ?? ?? ?? 56 88 5e 08 ff 15 ?? ?? ?? ?? 88 1c 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

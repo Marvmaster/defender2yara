@@ -18,6 +18,7 @@ rule Spoofer_Win32_Arpspoof_A_2147638412_0
         $x_1_4 = "Tatol %d hosts" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

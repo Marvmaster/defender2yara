@@ -22,6 +22,7 @@ rule Trojan_Win32_Danmec_A_2147601621_0
         $x_1_7 = {84 d2 74 09 80 f2 1b 88 14 01 41 eb 0c c6 04 01 0d c6 44 01 01 0a 83 c1 02 46 3b f7 72 df}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Danmec_B_2147603686_0
         $x_1_1 = {3c 0d 74 1f 6a 02 59 49 8a d9 d0 e3 85 c9 88 5c 0d fc 75 f3 3c 0a 75 05 88 0c 3e eb 05 34 1b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Danmec_C_2147608996_0
         $x_1_2 = {3c 0d 74 27 6a 09 33 c9 5b 8a 54 0d f4 49 3a 54 0d e9 75 04 88 54 0d e1 4b 75 ee 3c 0a 75 06 c6 04 3e 00 eb 05 34 1b 88 04 3e 46 8b 4d f8 41 3b 4d 0c 89 4d f8 72 b3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -93,6 +96,7 @@ rule Trojan_Win32_Danmec_D_2147619589_0
         $x_4_8 = {3c 0d 74 0f 3c 0a 75 05 88 0c 1e eb 05 34 1b 88 04 1e 46 ?? 3b [0-3] 72}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -120,6 +124,7 @@ rule Trojan_Win32_Danmec_F_2147628624_0
         $x_1_2 = "Software\\Microsoft\\Sft" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +148,7 @@ rule Trojan_Win32_Danmec_J_2147628720_0
         $x_1_4 = {3c 73 69 64 3e 25 73 3c 2f 73 69 64 3e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_Win32_Danmec_L_2147649964_0
         $x_1_2 = {33 c0 89 45 fc 0f 00 45 fc 33 c9 39 45 fc 0f 95 c1 8b c1 8b e5 5d c3 [0-7] 8b 08 8b 11 81 c2 00 00 00 40 56 89 15 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -208,6 +215,7 @@ rule Trojan_Win32_Danmec_M_2147649968_0
         $x_1_25 = "Outlook Account Manager Passwords" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 1 of ($x_1_*))) or
             ((5 of ($x_100_*))) or
@@ -233,6 +241,7 @@ rule Trojan_Win32_Danmec_N_2147650917_0
         $x_1_2 = {0f b7 46 06 ff 45 fc 83 45 f8 28 39 45 fc 7c ?? 8b 46 28 03 45 08 89 85 ?? ?? ff ff 8d 85 ?? ?? ff ff 50 ff 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Backdoor_MSIL_Warhawk_PAFQ_2147925990_0
         $x_2_1 = {11 05 11 06 8f ?? ?? ?? ?? 25 47 11 04 11 06 1f 10 5d 91 61 d2 52 11 06 17 58 13 06 11 06 11 05 8e 69}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

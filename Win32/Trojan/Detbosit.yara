@@ -19,6 +19,7 @@ rule Trojan_Win32_Detbosit_A_2147740601_0
         $x_1_5 = {77 00 69 00 6e 00 6c 00 6f 00 67 00 6f 00 6e 00 2e 00 65 00 78 00 65 00 [0-16] 50 00 68 00 79 00 73 00 69 00 63 00 61 00 6c 00 44 00 69 00 73 00 6b 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

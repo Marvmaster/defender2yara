@@ -17,6 +17,7 @@ rule Backdoor_Linux_Mayday_A_2147824657_0
         $x_1_2 = {83 ec 04 68 00 04 00 00 8d 85 f0 fb ff ff 50 ff 75 f4 e8 a7 1b 00 00 83 c4 10 89 45 f8 83 7d f8 00 7e 2c 8b 55 f8 8d 45 fc 01 10 8b 45 f8 83 ec 04 50 8d 85 f0 fb ff ff 50 ff 75 f0 e8 9a 51 00 00 83 c4 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

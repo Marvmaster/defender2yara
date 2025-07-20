@@ -17,6 +17,7 @@ rule Trojan_Win32_QBotCrypt_LK_2147846261_0
         $x_1_2 = "Time" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

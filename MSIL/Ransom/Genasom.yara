@@ -28,6 +28,7 @@ rule Ransom_MSIL_Genasom_G_2147682011_0
         $x_1_14 = {0a 20 19 03 00 00 02 28 ?? 00 00 0a 20 00 00 08 00 28 ?? 00 00 0a 28 21 00 00 06 26 de 03 26 de 00 2a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -57,6 +58,7 @@ rule Ransom_MSIL_Genasom_H_2147682846_0
         $x_1_10 = {74 00 61 00 73 00 6b 00 6d 00 67 00 72 00 ?? ?? 63 00 6d 00 64 00 ?? ?? 6d 00 73 00 63 00 6f 00 6e 00 66 00 69 00 67 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +82,7 @@ rule Ransom_MSIL_Genasom_I_2147683598_0
         $x_1_4 = "Unlock Your PC" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +109,7 @@ rule Ransom_MSIL_Genasom_L_2147685479_0
         $x_1_7 = "explorer.exe /n /e c:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -131,6 +135,7 @@ rule Ransom_MSIL_Genasom_M_2147686026_0
         $x_1_6 = "DisableTaskMgr" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +171,7 @@ rule Ransom_MSIL_Genasom_P_2147695643_0
         $x_1_16 = "<payment>k__BackingField" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_2_*) and 6 of ($x_1_*))) or
             ((1 of ($x_4_*) and 4 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -213,6 +219,7 @@ rule Ransom_MSIL_Genasom_2147729286_0
         $x_2_4 = "Ransomware.resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -238,6 +245,7 @@ rule Ransom_MSIL_Genasom_R_2147731305_0
         $x_1_3 = "All your files were fucked forever by FileFuck! You can not stop us, you idiot" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -260,6 +268,7 @@ rule Ransom_MSIL_Genasom_R_2147731305_1
         $x_1_3 = {5c 72 61 6e 73 6f 6d 77 61 72 65 5f 73 61 6d 70 6c 65 5c 6f 62 6a 5c [0-16] 5c 72 61 6e 73 6f 6d 77 61 72 65 5f 73 61 6d 70 6c 65 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -284,6 +293,7 @@ rule Ransom_MSIL_Genasom_Q_2147743460_0
         $x_1_5 = "Your Data Has Been Encrypted" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -310,6 +320,7 @@ rule Ransom_MSIL_Genasom_TA_2147744945_0
         $x_1_6 = "http://4kx812nk2SZ93cKz290.onion" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -337,6 +348,7 @@ rule Ransom_MSIL_Genasom_BS_2147745825_0
         $x_1_3 = "C:\\Users\\mvj\\Music\\mehdi ransomware\\mehdi update" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +375,7 @@ rule Ransom_MSIL_Genasom_R_2147745829_0
         $x_1_6 = "UnauthorizedAccess" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or

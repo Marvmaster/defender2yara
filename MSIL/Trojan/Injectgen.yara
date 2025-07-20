@@ -26,6 +26,7 @@ rule Trojan_MSIL_Injectgen_MA_2147807603_0
         $x_1_11 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +61,7 @@ rule Trojan_MSIL_Injectgen_MB_2147807606_0
         $x_1_14 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +91,7 @@ rule Trojan_MSIL_Injectgen_MC_2147810299_0
         $x_1_9 = "DebuggerHiddenAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

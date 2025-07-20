@@ -22,6 +22,7 @@ rule Trojan_Win32_Bithaw_A_2147601468_0
         $x_1_8 = "lE+046wVJ+kqkyAwSjZrig==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or
             (all of ($x*))

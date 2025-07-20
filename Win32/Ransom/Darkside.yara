@@ -20,6 +20,7 @@ rule Ransom_Win32_Darkside_XR_2147773615_0
         $x_1_5 = "We guarantee to decrypt one file for free. Go to the site and contact us" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

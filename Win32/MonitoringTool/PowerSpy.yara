@@ -17,6 +17,7 @@ rule MonitoringTool_Win32_PowerSpy_147221_0
         $x_1_3 = "eMatrixSoft Power Spy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule MonitoringTool_Win32_PowerSpy_147221_1
         $x_1_2 = {6a 65 8d 45 ?? 50 ff d6 6a 6d 8d ?? ?? ?? ?? ?? 51 ff d6 6a 78 8d ?? ?? ?? ?? ?? 52 ff d6 6a 70 8d ?? ?? ?? ?? ?? 50 ff d6 6a 73 8d ?? ?? ?? ?? ?? 51 ff d6 6a 74 8d ?? ?? ?? ?? ?? 52 ff d6 6a 6d 8d ?? ?? ?? ?? ?? 50 ff d6 6a 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule MonitoringTool_Win32_PowerSpy_147221_2
         $x_1_3 = {63 00 6c 00 64 00 72 00 44 00 61 00 74 00 65 00 3d 00 23 00 [0-32] 5c 00 65 00 6d 00 78 00 70 00 73 00 74 00 6d 00 70 00 66 00 69 00 6c 00 65 00 2e 00 65 00 6d 00 78 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule MonitoringTool_Win32_PowerSpy_147221_3
         $x_3_3 = "the 'Send logs to your emailbox' checkbox and retry it after" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule MonitoringTool_Win32_PowerSpy_147221_4
         $x_1_3 = "Sending Report..." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

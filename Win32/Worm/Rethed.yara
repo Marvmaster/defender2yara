@@ -17,6 +17,7 @@ rule Worm_Win32_Rethed_A_2147689130_0
         $x_1_3 = "TZapCommunicator" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

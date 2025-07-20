@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Badiehi_PPS_2147709673_0
         $x_10_5 = {83 c4 08 85 c0 74 0b 68 40 77 1b 00 ff}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

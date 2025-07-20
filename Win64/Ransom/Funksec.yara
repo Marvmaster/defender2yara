@@ -21,6 +21,7 @@ rule Ransom_Win64_Funksec_GA_2147929878_0
         $x_1_6 = "funkiydk7c6j3vvck5zk2giml2u746fa5irwalw2kjem6tvofji7rwid.onion" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

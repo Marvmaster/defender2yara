@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Dunkerrgo_A_2147632222_0
         $x_1_4 = {6d 6d 6f 6e 20 46 69 6c 65 73 00 31 00 fe a2 31 5c 77 69 6e 74 72 61 72 6f 61 64 5c 77 69 6e 74 72 61 72 6f 61 64 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

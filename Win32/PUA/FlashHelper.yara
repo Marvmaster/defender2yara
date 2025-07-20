@@ -18,6 +18,7 @@ rule PUA_Win32_FlashHelper_288802_0
         $x_1_4 = "next_open_interval" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

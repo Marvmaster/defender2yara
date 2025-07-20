@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Emold_E_2147618308_0
         $x_1_1 = {0f 31 0b c0 74 ?? 33 c0 64 8b 40 30 83 b8 b0 00 00 00 02 [0-6] 50 58 8b e4 6a 00 68 51 4f 68 57 54 b8 ?? ?? ?? ?? 81 c0 ?? ?? ?? ?? ff 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule TrojanDropper_Win32_Emold_E_2147618308_1
         $x_1_3 = {6a 40 68 00 10 00 00 68 00 10 00 00 6a 00 b8 54 ca af 91 8b 75 14 ff d6 8b f8 eb 12 b9 ?? ?? ?? ?? f3 a4 5a 2b 55 14 89 45 14 03 d0 ff e2 e8 ?? ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule TrojanDropper_Win32_Emold_G_2147619081_0
         $x_1_3 = {30 07 2c 04 4f e2 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

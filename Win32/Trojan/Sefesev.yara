@@ -18,6 +18,7 @@ rule Trojan_Win32_Sefesev_A_2147672252_0
         $x_1_4 = {8a 08 40 84 c9 75 f9 56 57 2b c2 bf ?? ?? 40 00 88 88 ?? ?? 40 00 4f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

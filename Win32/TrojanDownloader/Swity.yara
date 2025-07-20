@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Swity_C_2147679086_0
         $x_1_4 = {e9 03 02 00 00 8b 55 0c 8d 4e 58 8b 02 50 51 ff 15 ?? ?? ?? ?? 8b 17 68 ?? ?? ?? ?? 52 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_Swity_E_2147693741_0
         $x_1_7 = "[=Nome da Placa:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

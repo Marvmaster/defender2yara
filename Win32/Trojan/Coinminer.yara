@@ -19,6 +19,7 @@ rule Trojan_Win32_Coinminer_QF_2147726283_0
         $x_1_5 = "/c taskkill /f /pid " wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Coinminer_QQ_2147727625_0
         $x_1_6 = "netsh advfirewall set allprofiles state off" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -77,6 +79,7 @@ rule Trojan_Win32_Coinminer_PA_2147742912_0
         $x_1_10 = "egui.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_4_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((5 of ($x_4_*) and 3 of ($x_1_*))) or
@@ -111,6 +114,7 @@ rule Trojan_Win32_Coinminer_SBR_2147762344_0
         $x_1_8 = "C:\\RECYCLER\\svchostl.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -138,6 +142,7 @@ rule Trojan_Win32_Coinminer_SIB_2147781951_0
         $x_1_7 = {89 c8 8b 8c 24 ?? ?? ?? ?? f7 d0 89 c2 89 d8 8b 9c 24 ?? ?? ?? ?? f7 d0 21 f0 33 84 24 ?? ?? ?? ?? 21 da 89 d7 8b 94 24 00 89 44 24 ?? 89 d8 31 d7 f7 d0 89 7c 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_10_*) and 3 of ($x_1_*))) or
             ((1 of ($x_50_*) and 2 of ($x_10_*))) or
@@ -172,6 +177,7 @@ rule Trojan_Win32_Coinminer_SIB_2147781951_1
         $x_20_10 = {8b f9 8b 87 c8 01 00 00 85 c0 8b 5c 24 ?? 8b 97 8c 01 00 00 8b 04 9a 85 c0 0f 85 ?? ?? ?? ?? 8b 87 64 01 00 00 8b 04 98 89 44 24 ?? 80 38 ?? 8b 8f 50 01 00 00 55 89 44 24 ?? 8b 34 99 56 89 74 24 ?? e8 ?? ?? ?? ?? 83 c4 04 85 c0 bd ?? ?? ?? ?? 8b 55 00 52 ff 15 ?? ?? ?? ?? 8b f0 85 f6 74 ?? 8b 44 24 06 50 56 ff 15 ?? ?? ?? ?? 85 db 7c ?? 8b 8f 94 01 00 00 c1 e9 02 3b d9 7d ?? 8b 97 8c 01 00 00 89 04 9a 8b 87 8c 01 00 00 83 3c 98 00 8b 8f 8c 01 00 00 5d 83 3c 99 00 85 db 7c ?? 8b 87 80 01 00 00 c1 e8 02 3b d8 7d ?? 8b 8f 78 01 00 00 89 34 99}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 8 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -203,6 +209,7 @@ rule Trojan_Win32_Coinminer_MF_2147794628_0
         $x_1_7 = "bitcoincash:qrdeh9fzdt4uu55rp4fs2y89p37fg0jr95z03e4m0w" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -224,6 +231,7 @@ rule Trojan_Win32_Coinminer_STB_2147806244_0
         $x_1_1 = {32 24 4e f7 9f 96 46 50 bf 42 03 18 31 09 ff 2e 21 d8 97 9b 6d d4 c2 b6 cb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -252,6 +260,7 @@ rule Trojan_Win32_Coinminer_RPS_2147838900_0
         $x_1_8 = "AnVir.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -278,6 +287,7 @@ rule Trojan_Win32_Coinminer_MA_2147846017_0
         $x_1_6 = "ROOT\\CIMV2" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -299,6 +309,7 @@ rule Trojan_Win32_Coinminer_RPX_2147846167_0
         $x_1_1 = {01 c9 e8 33 00 00 00 4f 01 f9 31 06 01 ff 81 ef ?? ?? ?? ?? 46 b9 ?? ?? ?? ?? 89 ff 39 de 75 db}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -320,6 +331,7 @@ rule Trojan_Win32_Coinminer_CCJT_2147933108_0
         $x_1_1 = {74 00 61 00 c7 45 ?? 6e 00 74 00 c7 45 ?? 54 00 4e 00 c7 45 ?? 51 00 30 00 c7 45 ?? 4e 00 32 00 c7 45 ?? 54 00 61 00 c7 45 ?? 51 00 75 00 c7 45 ?? 31 00 71 00 c7 45 ?? 54 00 4e 00 c7 45 ?? 51 00 30 00 c7 45 ?? 4e 00 32 00 c7 45 ?? 54 00 61 00 c7 45 ?? 51 00 75 00 c7 45 ?? 31 00 70 00 c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -343,6 +355,7 @@ rule Trojan_Win32_Coinminer_CCJU_2147933253_0
         $x_1_3 = {61 70 70 64 c7 45 ?? 61 74 61 64 c7 45 ?? 2e 69 6e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

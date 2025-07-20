@@ -16,6 +16,7 @@ rule Trojan_Win32_PovStealer_AD_2147892747_0
         $x_1_1 = {88 4d c7 0f b6 55 c7 c1 fa 06 0f b6 45 c7 c1 e0 02 0b d0 88 55 c7 8b 4d c8 8a 55 c7 88 54 0d d8 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Worm_Linux_Pilkah_B_2147818563_0
         $x_1_7 = "/var/run/.lightscan" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (6 of ($x*))
 }
 

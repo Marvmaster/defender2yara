@@ -16,6 +16,7 @@ rule Trojan_Win64_NitrogenLod_A_2147894674_0
         $x_1_2 = {49 ba 4c 6f 61 64 4c 69 62 72 49 bb 69 62 72 61 72 79 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win64_NitrogenLod_B_2147907312_0
         $x_1_2 = {49 ba 4c 6f 61 64 4c 69 62 72 49 bb 69 62 72 61 72 79 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

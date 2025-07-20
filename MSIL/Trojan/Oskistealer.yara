@@ -16,6 +16,7 @@ rule Trojan_MSIL_Oskistealer_AOS_2147901501_0
         $x_1_1 = {06 08 06 08 91 07 08 07 8e 69 5d 91 61 d2 9c 08 28 07 00 00 06 58 0c 08 06 8e 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_MSIL_Oskistealer_AOS_2147901501_1
         $x_1_2 = {0a 2c 26 07 8d ?? 00 00 01 0c 7e ?? 00 00 04 0d 2b 11 02 03 08 09 28 ?? 00 00 06 09 7e ?? 00 00 04 58 0d 09 07 32 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_MSIL_Oskistealer_AIS_2147903156_0
         $x_1_2 = "MonopolySimulator" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

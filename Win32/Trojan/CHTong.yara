@@ -20,6 +20,7 @@ rule Trojan_Win32_CHTong_2147641461_0
         $x_5_6 = "\\tencent\\smm.exe" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_5_*))) or
             (all of ($x*))

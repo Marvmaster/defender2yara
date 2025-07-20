@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Malres_A_2147621371_0
         $x_1_2 = {57 72 69 74 65 50 72 6f 63 65 73 73 4d 65 6d 6f 72 79 00 00 5a 77 55 6e 6d 61 70 56 69 65 77 4f 66 53 65 63 74 69 6f 6e 00 00 00 00 73 76 63 68 6f 73 74 2e 65 78 65 00 61 76 70 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

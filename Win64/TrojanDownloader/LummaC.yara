@@ -19,6 +19,7 @@ rule TrojanDownloader_Win64_LummaC_CCJR_2147937097_0
         $x_5_4 = "https://github.com/diperkla/deljack/raw/refs/heads/main/" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

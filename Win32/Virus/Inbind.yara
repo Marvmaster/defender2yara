@@ -17,6 +17,7 @@ rule Virus_Win32_Inbind_A_2147640463_0
         $x_1_3 = {00 69 6e 66 65 63 74 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

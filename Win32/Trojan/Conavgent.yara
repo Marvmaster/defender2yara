@@ -16,6 +16,7 @@ rule Trojan_Win32_Conavgent_AAZ_2147924539_0
         $x_5_1 = {8b ff 8d 74 24 10 c7 44 24 0c ?? ?? ?? ?? c7 44 24 10 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 44 24 10 83 c0 46 89 44 24 0c 83 6c 24 0c 46 8a 4c 24 0c 30 0c 2f 83 fb 0f 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Kilfno_A_2147620354_0
         $x_1_3 = {74 4d 6a 00 6a 00 6a 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win32_Kilfno_C_2147627597_0
         $x_1_4 = {48 75 1c 72 03 73 01 e8 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

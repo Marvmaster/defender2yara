@@ -19,6 +19,7 @@ rule Trojan_Win32_CrypMIC_AMAX_2147917215_0
         $x_1_4 = ":\\TEMP\\README.TXT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

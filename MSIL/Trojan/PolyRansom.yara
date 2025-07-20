@@ -22,6 +22,7 @@ rule Trojan_MSIL_PolyRansom_DE_2147810618_0
         $x_3_7 = "AppDomain" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

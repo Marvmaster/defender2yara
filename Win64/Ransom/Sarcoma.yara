@@ -22,6 +22,7 @@ rule Ransom_Win64_Sarcoma_BAA_2147938220_0
         $x_1_7 = "powershell -w h -c Start-Sleep -Seconds 5; Remove-Item -Force -Path" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

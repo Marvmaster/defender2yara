@@ -15,6 +15,7 @@ rule Backdoor_MacOS_ReverseShell_A_2147934895_0
         $x_1_1 = {70 69 70 65 00 66 6f 72 6b 00 2f 62 69 6e 2f 73 68 00 73 68 00 65 78 65 63 6c 00 35 31 2e 38 39 2e 32 32 2e 31 34 36}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

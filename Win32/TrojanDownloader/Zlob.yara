@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Zlob_JN_5900_0
         $x_1_2 = {10 75 2b 09 1d ?? ?? ?? 10 83 65 fc 00 8d 45 ?? 50 8d 45 ?? 50 b9 ?? ?? ?? 10 e8 ?? ?? ff ff 68 ?? ?? ?? 10 e8 ?? ?? ?? 00 83 4d fc ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_Zlob_16998_0
         $x_1_3 = "%SystemRoot%\\System32\\dllcache\\explorer.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule TrojanDownloader_Win32_Zlob_16998_1
         $x_1_3 = "/php/loader3/download.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule TrojanDownloader_Win32_Zlob_16998_2
         $x_1_3 = "Software\\Microsoft\\Internet Explorer\\Toolbar" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule TrojanDownloader_Win32_Zlob_16998_3
         $x_1_5 = {47 65 74 46 69 6c 65 56 65 72 73 69 6f 6e 49 6e 66 6f 41 00 47 65 74 46 69 6c 65 56 65 72 73 69 6f 6e 49 6e 66 6f 53 69 7a 65 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule TrojanDownloader_Win32_Zlob_16998_4
         $n_500_9 = "SOFTWARE\\GREATIS\\REGRUN2\\" ascii //weight: -500
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((3 of ($x_100_*) and 2 of ($x_50_*) and 2 of ($x_10_*))) or
@@ -161,6 +167,7 @@ rule TrojanDownloader_Win32_Zlob_16998_5
         $x_2_4 = {8a 08 40 84 c9 75 f9 2b c2 48 78 1c 8a 4c 24 ?? 81 ?? ?? ?? ?? ?? 8a 94 ?? ?? ?? ?? ?? 32 d1 48 88 90 ?? ?? ?? ?? 79 ee}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -187,6 +194,7 @@ rule TrojanDownloader_Win32_Zlob_16998_6
         $x_1_3 = {47 65 74 46 69 6c 65 56 65 72 73 69 6f 6e 49 6e 66 6f 41 00 47 65 74 46 69 6c 65 56 65 72 73 69 6f 6e 49 6e 66 6f 53 69 7a 65 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +224,7 @@ rule TrojanDownloader_Win32_Zlob_16998_7
         $x_1_10 = "infected" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -249,6 +258,7 @@ rule TrojanDownloader_Win32_Zlob_16998_8
         $x_1_11 = "infected" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((6 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -277,6 +287,7 @@ rule TrojanDownloader_Win32_Zlob_16998_9
         $x_1_5 = {59 59 68 04 01 00 00 8d 44 24 14 50 6a ff 68 ?? 00 00 00 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 59 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -307,6 +318,7 @@ rule TrojanDownloader_Win32_Zlob_16998_10
         $x_100_8 = "GetSystemDirectoryW" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -337,6 +349,7 @@ rule TrojanDownloader_Win32_Zlob_16998_11
         $x_10_8 = "software\\products" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -372,6 +385,7 @@ rule TrojanDownloader_Win32_Zlob_16998_12
         $x_100_13 = {80 3e 00 74 05 30 06 46 eb f6 c9 c2 08 00}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_100_*) and 4 of ($x_10_*))) or
             ((6 of ($x_100_*) and 1 of ($x_20_*) and 2 of ($x_10_*))) or
@@ -403,6 +417,7 @@ rule TrojanDownloader_Win32_Zlob_16998_13
         $x_5_7 = "http" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -447,6 +462,7 @@ rule TrojanDownloader_Win32_Zlob_16998_14
         $x_5_22 = "explorer.exe" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 2 of ($x_10_*) and 16 of ($x_1_*))) or
             ((1 of ($x_50_*) and 2 of ($x_10_*) and 1 of ($x_5_*) and 11 of ($x_1_*))) or
@@ -494,6 +510,7 @@ rule TrojanDownloader_Win32_Zlob_16998_15
         $x_10_22 = "IsDebuggerPresent" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 3 of ($x_10_*) and 11 of ($x_1_*))) or
             ((1 of ($x_50_*) and 4 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -521,6 +538,7 @@ rule TrojanDownloader_Win32_Zlob_I_70997_0
         $x_1_4 = "ast!)garbageworldb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -560,6 +578,7 @@ rule TrojanDownloader_Win32_Zlob_88832_0
         $x_1_18 = {50 c6 85 fc fe ff ff 47 c6 85 fd fe ff ff 45 c6 85 fe fe ff ff 54 88 9d ff fe ff ff ff 15 ?? ?? 00 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -588,6 +607,7 @@ rule TrojanDownloader_Win32_Zlob_C_109265_0
         $x_1_8 = {59 59 68 04 01 00 00 8d 44 24 14 50 6a ff 68 ?? 00 00 00 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 59 59}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -616,6 +636,7 @@ rule TrojanDownloader_Win32_Zlob_D_109266_0
         $x_3_3 = {64 69 00 00 72 65 5c 57 65 62 4d 00 53 6f 66 74 77 61 00 00 77 65 72 00 61 56 69 65 00 00 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -640,6 +661,7 @@ rule TrojanDownloader_Win32_Zlob_ZWC_109655_0
         $x_1_5 = "://aguardtool" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -670,6 +692,7 @@ rule TrojanDownloader_Win32_Zlob_L_112050_0
         $x_10_10 = "software\\products" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((3 of ($x_10_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -703,6 +726,7 @@ rule TrojanDownloader_Win32_Zlob_M_112097_0
         $x_10_8 = "GetActiveWindow" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 5 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -750,6 +774,7 @@ rule TrojanDownloader_Win32_Zlob_M_112097_1
         $x_5_24 = "explorer.exe" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 2 of ($x_10_*) and 16 of ($x_1_*))) or
             ((1 of ($x_50_*) and 2 of ($x_10_*) and 1 of ($x_5_*) and 11 of ($x_1_*))) or
@@ -800,6 +825,7 @@ rule TrojanDownloader_Win32_Zlob_M_112097_2
         $x_10_24 = "IsDebuggerPresent" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 3 of ($x_10_*) and 11 of ($x_1_*))) or
             ((1 of ($x_50_*) and 4 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -831,6 +857,7 @@ rule TrojanDownloader_Win32_Zlob_Q_112297_0
         $x_1_7 = "thesafetyfiles.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_5_*))) or
             (all of ($x*))
@@ -862,6 +889,7 @@ rule TrojanDownloader_Win32_Zlob_R_112316_0
         $x_1_8 = "Software\\Microsoft\\Internet Explorer\\Main" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -887,6 +915,7 @@ rule TrojanDownloader_Win32_Zlob_S_112327_0
         $x_1_5 = "Software\\Microsoft\\Internet Explorer\\Main" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -916,6 +945,7 @@ rule TrojanDownloader_Win32_Zlob_T_112639_0
         $x_1_9 = "res://%s\\s%s%s%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((2 of ($x_50_*) and 3 of ($x_10_*))) or
@@ -946,6 +976,7 @@ rule TrojanDownloader_Win32_Zlob_W_112651_0
         $x_1_6 = "MyBITSTrans_new" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -973,6 +1004,7 @@ rule TrojanDownloader_Win32_Zlob_AD_112882_0
         $x_2_4 = {6a 00 6a 01 ff (15|??) [0-4] 8d ?? 24 ?? ?? 68 ?? ?? 00 10 ff 15 ?? (30|40) 00 10 68}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1011,6 +1043,7 @@ rule TrojanDownloader_Win32_Zlob_AC_112883_0
         $x_100_14 = {80 3e 00 74 05 30 06 46 eb f6 c9 c2 08 00}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_100_*) and 4 of ($x_10_*))) or
             ((6 of ($x_100_*) and 1 of ($x_20_*) and 2 of ($x_10_*))) or
@@ -1045,6 +1078,7 @@ rule TrojanDownloader_Win32_Zlob_AB_112884_0
         $x_1_9 = "infected" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -1078,6 +1112,7 @@ rule TrojanDownloader_Win32_Zlob_AB_112884_1
         $x_1_9 = "infected" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((4 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -1107,6 +1142,7 @@ rule TrojanDownloader_Win32_Zlob_AA_112885_0
         $x_10_5 = "explorer.exe" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1132,6 +1168,7 @@ rule TrojanDownloader_Win32_Zlob_AA_112885_1
         $x_10_5 = "explorer.exe" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1157,6 +1194,7 @@ rule TrojanDownloader_Win32_Zlob_AA_112885_2
         $x_10_5 = "explorer.exe" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1183,6 +1221,7 @@ rule TrojanDownloader_Win32_Zlob_AA_112885_3
         $x_10_6 = "writefile" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             ((5 of ($x_10_*))) or
@@ -1218,6 +1257,7 @@ rule TrojanDownloader_Win32_Zlob_AA_112885_4
         $x_10_11 = "writefile" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             ((5 of ($x_10_*))) or
@@ -1250,6 +1290,7 @@ rule TrojanDownloader_Win32_Zlob_Z_112886_0
         $x_5_8 = "http" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1294,6 +1335,7 @@ rule TrojanDownloader_Win32_Zlob_AI_113418_0
         $x_75_21 = " installation information was corrupted, please reinstall " ascii //weight: 75
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1100_*) and 1 of ($x_75_*) and 1 of ($x_50_*) and 1 of ($x_25_*) and 3 of ($x_10_*) and 8 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_1100_*) and 2 of ($x_75_*) and 3 of ($x_10_*) and 8 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -1351,6 +1393,7 @@ rule TrojanDownloader_Win32_Zlob_AH_113419_0
         $x_25_24 = "X Password Generator installation information was corrupted, please reinstall X Password Generator." ascii //weight: 25
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_75_*) and 4 of ($x_25_*) and 3 of ($x_10_*) and 8 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_75_*) and 4 of ($x_25_*) and 4 of ($x_10_*) and 3 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -1445,6 +1488,7 @@ rule TrojanDownloader_Win32_Zlob_AG_113420_0
         $x_25_24 = "PornPass Manager installation information was corrupted, please reinstall PornPass Manager." ascii //weight: 25
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_75_*) and 4 of ($x_25_*) and 3 of ($x_10_*) and 8 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_75_*) and 4 of ($x_25_*) and 4 of ($x_10_*) and 3 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -1528,6 +1572,7 @@ rule TrojanDownloader_Win32_Zlob_IV_113506_0
         $x_1_13 = "Software\\Microsoft\\VideoExtension" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_5_*) and 2 of ($x_3_*) and 3 of ($x_1_*))) or
             ((6 of ($x_5_*) and 3 of ($x_3_*))) or
@@ -1558,6 +1603,7 @@ rule TrojanDownloader_Win32_Zlob_AJ_113604_0
         $x_1_6 = "InternetOpenW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1583,6 +1629,7 @@ rule TrojanDownloader_Win32_Zlob_ZWD_113621_0
         $x_1_6 = "FindFirstUrlCacheEntryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1607,6 +1654,7 @@ rule TrojanDownloader_Win32_Zlob_ZWE_113718_0
         $x_1_5 = "stopper.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -1641,6 +1689,7 @@ rule TrojanDownloader_Win32_Zlob_AK_113728_0
         $x_1_11 = "RegCreateKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1663,6 +1712,7 @@ rule TrojanDownloader_Win32_Zlob_AL_113830_0
         $x_1_2 = {80 44 24 08 64 56 8b 35 ?? ?? ?? ?? 85 f6 57 75 16 68 2c 01 00 00 6a 08 ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 8b f0 8b 7c 24 0c 89 35 ?? ?? ?? ?? 8a 17 84 d2 8b ce 74 10 2b fe 32 54 24 10 88 11 41 8a 14 0f 84 d2 75 f2 5f 8b c6 c6 01 00 5e c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1693,6 +1743,7 @@ rule TrojanDownloader_Win32_Zlob_AMM_114708_0
         $x_1_11 = "Nullsoft Install System" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -1715,6 +1766,7 @@ rule TrojanDownloader_Win32_Zlob_AM_115544_0
         $x_1_2 = {53 54 41 52 54 45 52 2e 64 6c 6c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77 00 44 6c 6c 47 65 74 43 6c 61 73 73 4f 62 6a 65 63 74 00 44 6c 6c 52 65 67 69 73 74 65 72 53 65 72 76 65 72 00 44 6c 6c 55 6e 72 65 67 69 73 74 65 72 53 65 72 76 65 72 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1737,6 +1789,7 @@ rule TrojanDownloader_Win32_Zlob_CCA_115572_0
         $x_1_3 = "explorer.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1761,6 +1814,7 @@ rule TrojanDownloader_Win32_Zlob_ZWO_115786_0
         $x_1_2 = {f5 e9 e9 ed a7 b2 b2 ed f2 ea f8 ef f0 ed f8 fa b3 fe f2 f0 b2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1781,6 +1835,7 @@ rule TrojanDownloader_Win32_Zlob_ZWP_115788_0
         $x_1_1 = {70 61 72 61 6d 3d 25 73 00 00 00 00 25 73 2f 61 63 63 65 73 73 2f 67 6f 2e 70 68 70 00 00 00 00 32 31 36 2e 32 35 35 2e 31 38 37 2e 39 31 00 00 2f 6b 65 79 2f 73 65 63 72 65 74 6b 65 79 2e 69 6e 69}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1803,6 +1858,7 @@ rule TrojanDownloader_Win32_Zlob_ZWR_115835_0
         $x_1_3 = {ff 35 fc 12 42 00 68 78 ad 41 00 8d 4d bc b2 b4 b8 84 ad 41 00 e8 a6 8a ff ff ff 75 bc 8d 45 c0 ba 03 00 00 00 e8 92 9b fe ff 8b 45 c0 e8 c2 d5 ff ff 33 c0 89 45 f8 8b 45 fc 03 c0 83 c0 09 89 45 fc 83 45 fc 7b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1832,6 +1888,7 @@ rule TrojanDownloader_Win32_Zlob_GT_116372_0
         $x_1_9 = {00 00 00 00 63 61 60 0c 64 62 61 2b 6c 6a 69 4c 74 72 71 64 74 72 71 6e 72 70 70 6f 6b 69 69 69 5c 5b 5a 58 54 52 51 43 55 53 52 2a 5a 58 58 13 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 69 67 66 18 81 7f 7e 62 a3 a1 a0 ac bc ba b9 d6 c7 c6 c4 ee cc ca c9 fa ca c8 c7 fb cc cb ca fb ce cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1863,6 +1920,7 @@ rule TrojanDownloader_Win32_Zlob_GS_116377_0
         $x_1_11 = "GetUrlCacheEntryInfoW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1895,6 +1953,7 @@ rule TrojanDownloader_Win32_Zlob_GU_116378_0
         $x_1_12 = {28 00 00 00 20 00 00 00 40 00 00 00 01 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 63 61 60 0c 64 62 61 2b 6c 6a 69 4c 74 72 71 64 74 72 71 6e 72 70 70 6f 6b 69 69 69 5c 5b 5a 58 54 52 51 43 55 53 52 2a 5a 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1921,6 +1980,7 @@ rule TrojanDownloader_Win32_Zlob_KG_117687_0
         $x_1_7 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1946,6 +2006,7 @@ rule TrojanDownloader_Win32_Zlob_ANA_118134_0
         $x_1_6 = "InternetCloseHandle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1969,6 +2030,7 @@ rule TrojanDownloader_Win32_Zlob_AV_118429_0
         $x_1_3 = "Software\\NetProject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1998,6 +2060,7 @@ rule TrojanDownloader_Win32_Zlob_AMP_119455_0
         $x_10_10 = {00 00 83 c4 10 85 c0 74 ?? 6a 01 68 ?? ?? ?? ?? e8 ?? ?? ff ff [0-40] 74 ?? 6a 02 68 ?? ?? ?? ?? e8 ?? ?? ff ff [0-40] 74 ?? 6a 03 68 ?? ?? ?? ?? e8 ?? ?? ff ff}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 1 of ($x_1_*))) or
             ((7 of ($x_10_*) and 1 of ($x_2_*))) or
@@ -2028,6 +2091,7 @@ rule TrojanDownloader_Win32_Zlob_KH_119678_0
         $x_1_7 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2060,6 +2124,7 @@ rule TrojanDownloader_Win32_Zlob_AW_119939_0
         $x_1_12 = {32 ca 88 08 8a 4c 06 01 40 84 c9 75 f3 c6 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2093,6 +2158,7 @@ rule TrojanDownloader_Win32_Zlob_AX_120036_0
         $x_2_8 = {68 6c 65 6f 2e 64 6c 6c 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2123,6 +2189,7 @@ rule TrojanDownloader_Win32_Zlob_AY_120052_0
         $x_1_5 = {8d 85 f8 fd ff ff 68 ?? ?? 00 10 50 e8 ?? ?? 00 00 8d 85 f8 fd ff ff 68 ?? ?? 00 10 50 e8 ?? ?? 00 00 8d 85 f8 fd ff ff 68 ?? ?? 00 10 50 e8 ?? ?? 00 00 8d 85 f8 fd ff ff 68 ?? ?? 00 10 50 e8 ?? ?? 00 00 8d 85 f8 fd ff ff 68 ?? ?? 00 10 50 e8 ?? ?? 00 00 8d 85 f8 fd ff ff 68 ?? ?? 00 10 50 e8 ?? ?? 00 00 83 c4 30 6a 01 8d 85 f8 fd ff ff 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2148,6 +2215,7 @@ rule TrojanDownloader_Win32_Zlob_AZ_121726_0
         $x_1_2 = {39 5d 14 5f 5e 5b 74 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2178,6 +2246,7 @@ rule TrojanDownloader_Win32_Zlob_ANE_122293_0
         $x_1_11 = {79 61 68 6f 6f 2e 00 00 67 6f 6f 67 6c 65 2e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2208,6 +2277,7 @@ rule TrojanDownloader_Win32_Zlob_AMQ_122335_0
         $x_3_11 = {6a 00 c6 44 24 ?? 47 c6 44 24 ?? 45 c6 44 24 ?? 54 c6 44 24 ?? 00}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 2 of ($x_10_*) and 7 of ($x_3_*))) or
             ((1 of ($x_50_*) and 3 of ($x_10_*) and 3 of ($x_3_*))) or
@@ -2240,6 +2310,7 @@ rule TrojanDownloader_Win32_Zlob_ANF_122543_0
         $x_1_9 = "ZwSystemDebugControl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2267,6 +2338,7 @@ rule TrojanDownloader_Win32_Zlob_DO_123126_0
         $x_5_8 = "Low system perfomance" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -2290,6 +2362,7 @@ rule TrojanDownloader_Win32_Zlob_ZWV_123330_0
         $x_1_4 = "SOFTWARE\\Mozilla\\Mozilla Firefox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2320,6 +2393,7 @@ rule TrojanDownloader_Win32_Zlob_IB_123781_0
         $x_1_8 = ".chl\\CLSID" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2347,6 +2421,7 @@ rule TrojanDownloader_Win32_Zlob_IF_124173_0
         $x_1_8 = ".chl\\CLSID" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2374,6 +2449,7 @@ rule TrojanDownloader_Win32_Zlob_II_124297_0
         $x_1_8 = "/media.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -2403,6 +2479,7 @@ rule TrojanDownloader_Win32_Zlob_IK_124384_0
         $x_10_6 = {8b 4c 24 04 f7 c1 03 00 00 00 74 24 8a 01 83 c1 01 84 c0 74 4e f7 c1 03 00 00 00 75 ef 05 00 00 00 00 8d a4 24 00 00 00 00 8d a4 24 00 00 00 00 8b 01 ba ff fe fe 7e 03 d0 83 f0 ff 33 c2 83 c1 04 a9 00 01 01 81 74 e8}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2427,6 +2504,7 @@ rule TrojanDownloader_Win32_Zlob_BB_124788_0
         $x_2_4 = {51 50 c6 85 ?? fe ff ff 47 c6 85 ?? fe ff ff 45 c6 85 ?? fe ff ff 54 88 9d ?? fe ff ff ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -2459,6 +2537,7 @@ rule TrojanDownloader_Win32_Zlob_KA_124845_0
         $x_10_9 = {56 8b 74 24 08 8a 16 84 d2 b8 ?? ?? ?? ?? 8b c8 74 10 2b f0 32 54 24 0c 88 11 41 8a 14 0e 84 d2 75 f2 c6 01 00 5e}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 1 of ($x_2_*))) or
             (all of ($x*))
@@ -2485,6 +2564,7 @@ rule TrojanDownloader_Win32_Zlob_KI_125138_0
         $x_1_4 = "Nullsoft Install System" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2509,6 +2589,7 @@ rule TrojanDownloader_Win32_Zlob_BI_125228_0
         $x_1_4 = "/index.php?b=1&t=%d&q={searchTerms}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2536,6 +2617,7 @@ rule TrojanDownloader_Win32_Zlob_BJ_125354_0
         $x_1_3 = {8d 85 fc fe ff ff 50 68 ?? ?? 40 00 ff 75 08 ff 15 ?? ?? 40 00 83 c4 14 ff 75 08 46 ff 15 ?? ?? 40 00 83 f8 ff 75 d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2562,6 +2644,7 @@ rule TrojanDownloader_Win32_Zlob_ANH_125489_0
         $x_1_4 = {c7 44 24 10 57 61 69 00 4f 8a 47 01 47 84 c0 75 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2587,6 +2670,7 @@ rule TrojanDownloader_Win32_Zlob_ANI_125504_0
         $x_1_3 = {26 00 73 00 72 00 63 00 68 00 3d 00 00 00 00 00 3f 00 4d 00 54 00 3d 00 00 00 00 00 65 00 2e 00 61 00 73 00 70 00 3f 00 4d 00 54 00 3d 00 00 00 70 00 6f 00 6e 00 73 00 00 00 00 00 73 00 6e 00 2e 00 63 00 6f 00 6d 00 2f 00 72 00 65 00 73 00 00 00 00 00 61 00 72 00 63 00 68 00 2e 00 6d 00 00 00 00 00 61 00 75 00 74 00 6f 00 2e 00 73 00 65 00 00 00 68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2609,6 +2693,7 @@ rule TrojanDownloader_Win32_Zlob_ANJ_125505_0
         $x_1_3 = {54 68 69 73 20 77 69 6c 6c 20 69 6e 73 74 61 6c 6c 20 56 63 6f 64 65 63 20 76 65 72 20 33 2e 31 35 2e 20 44 6f 20 79 6f 75 20 77 69 73 68 20 74 6f 20 63 6f 6e 74 69 6e 75 65 3f [0-16] 56 63 6f 64 65 63 20 76 65 72 20 33 2e 31 35}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2639,6 +2724,7 @@ rule TrojanDownloader_Win32_Zlob_KJ_125515_0
         $x_5_11 = "WriteFile" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_5_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((6 of ($x_5_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2669,6 +2755,7 @@ rule TrojanDownloader_Win32_Zlob_NN_125517_0
         $x_5_7 = "WriteFile" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_5_*) and 1 of ($x_1_*))) or
             ((5 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -2695,6 +2782,7 @@ rule TrojanDownloader_Win32_Zlob_ZF_125687_0
         $x_1_3 = {61 77 65 72 25 64 2e 62 61 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2717,6 +2805,7 @@ rule TrojanDownloader_Win32_Zlob_YZ_125688_0
         $x_1_3 = {25 73 5c 7a 66 25 73 25 64 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2742,6 +2831,7 @@ rule TrojanDownloader_Win32_Zlob_YU_125689_0
         $x_4_6 = {00 79 61 68 6f 6f 2e 00 00 67 6f 6f 67 6c 65 2e 00}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_4_*))) or
             ((1 of ($x_5_*) and 4 of ($x_4_*))) or
@@ -2770,6 +2860,7 @@ rule TrojanDownloader_Win32_Zlob_YV_125720_0
         $x_1_5 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_2_*))) or
@@ -2798,6 +2889,7 @@ rule TrojanDownloader_Win32_Zlob_BK_125869_0
         $x_2_4 = {68 6c 65 6f 2e 64 6c 6c 00 44 6c 6c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -2830,6 +2922,7 @@ rule TrojanDownloader_Win32_Zlob_ANK_125899_0
         $x_1_9 = {53 6f 66 74 77 61 72 65 5c 41 70 70 6c 69 63 61 74 69 6f 6e 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((1 of ($x_5_*) and 4 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2860,6 +2953,7 @@ rule TrojanDownloader_Win32_Zlob_ANL_125900_0
         $x_1_7 = "rmdir \"%s\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_4_*) and 1 of ($x_1_*))) or
@@ -2889,6 +2983,7 @@ rule TrojanDownloader_Win32_Zlob_ACA_126013_0
         $x_1_6 = {73 71 76 67 6e 72 70 78 2e 44 4c 4c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2920,6 +3015,7 @@ rule TrojanDownloader_Win32_Zlob_BL_126037_0
         $x_1_8 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\policies\\explorer\\run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 3 of ($x_2_*))) or
@@ -2953,6 +3049,7 @@ rule TrojanDownloader_Win32_Zlob_BL_126037_1
         $x_1_7 = "ect.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -2983,6 +3080,7 @@ rule TrojanDownloader_Win32_Zlob_GZ_126376_0
         $x_1_6 = "iebtm.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -3010,6 +3108,7 @@ rule TrojanDownloader_Win32_Zlob_AEQ_126623_0
         $x_1_4 = {72 d6 eb 52 8b 45 0c 53 53 05 74 ff ff ff 50 ff 75 14 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3036,6 +3135,7 @@ rule TrojanDownloader_Win32_Zlob_VWX_126771_0
         $x_1_4 = {6a 04 83 c7 0c 57 ff 74 24 24 ff 15 ?? ?? ?? ?? 8b 84 24 30 01 00 00 53 8d 4c 24 1c 51 83 c0 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3059,6 +3159,7 @@ rule TrojanDownloader_Win32_Zlob_VWX_126774_0
         $x_1_4 = {25 73 5c 6a 65 65 25 73 25 64 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3083,6 +3184,7 @@ rule TrojanDownloader_Win32_Zlob_AFM_126874_0
         $x_1_5 = "CMVideo.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3109,6 +3211,7 @@ rule TrojanDownloader_Win32_Zlob_AFN_126930_0
         $x_1_7 = "//superseedy.info/" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*))) or
             (all of ($x*))
@@ -3135,6 +3238,7 @@ rule TrojanDownloader_Win32_Zlob_ANM_127079_0
         $x_1_4 = {78 00 65 00 00 00 00 00 2e 00 25 00 73 00 25 00 73 00 00 00 25 00 64 00 00 00 00 00 25 00 73 00 5c 00 25 00 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3159,6 +3263,7 @@ rule TrojanDownloader_Win32_Zlob_BQ_127115_0
         $x_1_4 = "res://%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3182,6 +3287,7 @@ rule TrojanDownloader_Win32_Zlob_AMT_127445_0
         $x_1_4 = {00 2e 6d 69 78 63 72 74 00 45 6e 63 6f 64 65 50 6f 69 6e 74 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -3209,6 +3315,7 @@ rule TrojanDownloader_Win32_Zlob_BS_127547_0
         $x_1_4 = {68 74 74 70 3a 2f 2f [0-15] 2f [0-15] 2e 70 68 70 3f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3235,6 +3342,7 @@ rule TrojanDownloader_Win32_Zlob_BT_127560_0
         $x_1_3 = {77 73 20 4e 54 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 57 69 6e 6c 6f 67 6f 6e 00 00 00 25 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3257,6 +3365,7 @@ rule TrojanDownloader_Win32_Zlob_AON_127586_0
         $x_1_3 = {53 74 61 00 61 6e 6b 00 75 74 3a 62 6c 00 00 00 61 62 6f 00 67 65 00 00 50 61 00 00 20 00 00 00 72 74 00 00 6c 6f 72 65 72 5c 4d 61 69 6e 00 00 6e 65 74 20 45 78 70 00 74 5c 49 6e 74 65 72 00 72 6f 73 6f 66 00 00 00 61 72 65 5c 4d 69 63}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3280,6 +3389,7 @@ rule TrojanDownloader_Win32_Zlob_AON_127586_1
         $x_10_4 = {74 15 8b 77 40 03 f0 eb 09 8b 1e 03 d8 01 03 83 c6 04 83 3e 00 75 f2 8b 74 24 24 8b de 03 f0 b9 01 00 00 00 33 c0 f0 0f b1 4f 30 75 f7 ac}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3310,6 +3420,7 @@ rule TrojanDownloader_Win32_Zlob_CB_127707_0
         $x_1_7 = {00 6d 67 72 74 2e 64 6c 6c 00 63 6f 6f 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
@@ -3338,6 +3449,7 @@ rule TrojanDownloader_Win32_Zlob_BU_127714_0
         $x_1_3 = {2e 61 64 76 00 00 00 00 70 3a 2f 2f 77 77 77 00 4d 65 6e 75 54 65 78 74 00 00 00 00 70 79 77 61 72 65 00 00 6e 74 69 2d 53 00 00 00 49 45 20 41}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3365,6 +3477,7 @@ rule TrojanDownloader_Win32_Zlob_CC_127744_0
         $x_1_7 = {00 6d 67 72 74 2e 64 6c 6c 00 63 6f 6f 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
@@ -3394,6 +3507,7 @@ rule TrojanDownloader_Win32_Zlob_AMU_127752_0
         $x_1_5 = "\\wdsck.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3421,6 +3535,7 @@ rule TrojanDownloader_Win32_Zlob_CE_127943_0
         $x_1_4 = "r%ss://%s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3444,6 +3559,7 @@ rule TrojanDownloader_Win32_Zlob_CF_127984_0
         $x_2_3 = {6d 67 72 74 2e 64 6c 6c 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3469,6 +3585,7 @@ rule TrojanDownloader_Win32_Zlob_ANN_128076_0
         $x_1_3 = {75 18 8d 84 24 ?? ?? 00 00 50 ff 74 24 14 ff 54 24 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3503,6 +3620,7 @@ rule TrojanDownloader_Win32_Zlob_ANP_128228_0
         $x_1_15 = ":1wewt_.b" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3524,6 +3642,7 @@ rule TrojanDownloader_Win32_Zlob_ANQ_128262_0
         $x_1_2 = {c6 84 24 45 01 00 00 45 88 9c 24 47 01 00 00 ff 54 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3551,6 +3670,7 @@ rule TrojanDownloader_Win32_Zlob_ANR_128349_0
         $n_14_8 = {5c 4d 6d 51 54 5f 76 [0-7] 5f 73 76 6e 5c 41 64 62 44 65 76 69 63 65 4a 6f 62 54 68 72 65 61 64 2e 63 70 70}  //weight: -14, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((2 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -3582,6 +3702,7 @@ rule TrojanDownloader_Win32_Zlob_ANS_128363_0
         $x_3_7 = "%saswe%d.ex%s" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             ((3 of ($x_3_*))) or
@@ -3617,6 +3738,7 @@ rule TrojanDownloader_Win32_Zlob_ANS_128363_1
         $x_1_12 = "/files/get.php?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 
@@ -3641,6 +3763,7 @@ rule TrojanDownloader_Win32_Zlob_ANT_128410_0
         $x_1_5 = {00 7a 65 72 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3678,6 +3801,7 @@ rule TrojanDownloader_Win32_Zlob_AMV_128424_0
         $x_1_18 = "_MM_F" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 7 of ($x_1_*))) or
             ((6 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -3724,6 +3848,7 @@ rule TrojanDownloader_Win32_Zlob_ANV_128560_0
         $x_1_1 = {c6 84 24 4e 05 00 00 52 c6 84 24 4d 05 00 00 55 c6 84 24 4f 05 00 00 4c c7 44 24 24 04 01 00 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3747,6 +3872,7 @@ rule TrojanDownloader_Win32_Zlob_ANW_128667_0
         $x_1_4 = {00 6d 6d 6d 00 77 74 66 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3775,6 +3901,7 @@ rule TrojanDownloader_Win32_Zlob_CH_129030_0
         $x_1_5 = {6d 67 72 74 2e 64 6c 6c 00 04 00 01 00 02 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3795,6 +3922,7 @@ rule TrojanDownloader_Win32_Zlob_ZXJ_130076_0
         $x_1_1 = {4e 67 bd 72 fc c9 84 70 56 57 9d da 8d 28 01 ab c4 8e 23 b4 70 00 00 00 80 bf 33 29 36 7b d2 11 b2 0e 00 c0 4f 98 3e 60}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3822,6 +3950,7 @@ rule TrojanDownloader_Win32_Zlob_CI_130778_0
         $x_1_7 = {a2 ae a9 bf a6 e5 ae b3 ae}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3846,6 +3975,7 @@ rule TrojanDownloader_Win32_Zlob_AMZ_131723_0
         $x_1_5 = "kingoftheworld" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3871,6 +4001,7 @@ rule TrojanDownloader_Win32_Zlob_AMZ_131724_0
         $x_1_2 = "theworld" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3898,6 +4029,7 @@ rule TrojanDownloader_Win32_Zlob_CK_131753_0
         $x_3_7 = {8a 04 0a 32 44 24 20 88 01 49 ff 4c 24 10 75 f0}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
@@ -3929,6 +4061,7 @@ rule TrojanDownloader_Win32_Zlob_CL_131767_0
         $x_1_6 = "v - nash" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -3956,6 +4089,7 @@ rule TrojanDownloader_Win32_Zlob_ZXK_132149_0
         $x_1_4 = "VC20XC00" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3985,6 +4119,7 @@ rule TrojanDownloader_Win32_Zlob_DA_132353_0
         $x_1_9 = "{DAED9266-8C28-4C1C-8B58-5C66EFF1D302}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -4022,6 +4157,7 @@ rule TrojanDownloader_Win32_Zlob_BAF_132360_0
         $x_1_15 = "91.203.70.*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 7 of ($x_1_*))) or
             ((5 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -4057,6 +4193,7 @@ rule TrojanDownloader_Win32_Zlob_BAG_132363_0
         $x_1_3 = {65 c6 44 24 ?? 73 88 5c 24 ?? c6 44 24 ?? 72 c6 44 24 ?? 6e c6 44 24 ?? 6c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -4087,6 +4224,7 @@ rule TrojanDownloader_Win32_Zlob_BAH_132640_0
         $x_2_11 = {5a 45 45 44 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
             ((5 of ($x_2_*))) or
@@ -4118,6 +4256,7 @@ rule TrojanDownloader_Win32_Zlob_KDA_132819_0
         $x_1_4 = "lorer." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4142,6 +4281,7 @@ rule TrojanDownloader_Win32_Zlob_AOM_132987_0
         $x_1_5 = "SearchScopes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -4172,6 +4312,7 @@ rule TrojanDownloader_Win32_Zlob_CP_133012_0
         $x_1_4 = {49 45 20 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -4201,6 +4342,7 @@ rule TrojanDownloader_Win32_Zlob_CQ_133061_0
         $x_1_5 = "GOMODRI" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -4228,6 +4370,7 @@ rule TrojanDownloader_Win32_Zlob_CT_133062_0
         $x_1_4 = "__PM_MINI_STO" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -4253,6 +4396,7 @@ rule TrojanDownloader_Win32_Zlob_CU_133165_0
         $x_1_2 = {6a 01 68 00 04 00 00 ff 15 ?? ?? ?? ?? 48 48 f7 d8 1b c0 f7 d0 23 44 24 10 3b ?? 89 44 24 10 75 18 8d 84 24 ?? ?? 00 00 50 ff 74 24 18 ff 54 24 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4282,6 +4426,7 @@ rule TrojanDownloader_Win32_Zlob_AOP_133427_0
         $x_10_10 = {74 15 8b 77 40 03 f0 eb 09 8b 1e 03 d8 01 03 83 c6 04 83 3e 00 75 f2 8b 74 24 24 8b de 03 f0 b9 01 00 00 00 33 c0 f0 0f b1 4f 30 75 f7 ac}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4309,6 +4454,7 @@ rule TrojanDownloader_Win32_Zlob_AOS_134059_0
         $x_1_5 = {00 68 72 6e 25 64 2e 63 6d 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*))) or
@@ -4338,6 +4484,7 @@ rule TrojanDownloader_Win32_Zlob_ANP_134392_0
         $x_1_5 = "mutobronc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4360,6 +4507,7 @@ rule TrojanDownloader_Win32_Zlob_ANQ_134393_0
         $x_1_2 = {6c 75 62 72 69 63 2e 64 6c 6c 00 63 61 6e 74 6f 00 6d 75 74 6f 62 72 6f 6e 63 00 70 65 79 64 65 79 72 61 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4385,6 +4533,7 @@ rule TrojanDownloader_Win32_Zlob_ANO_134506_0
         $x_2_5 = "VirtualProtect" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*))) or
             (all of ($x*))
@@ -4414,6 +4563,7 @@ rule TrojanDownloader_Win32_Zlob_APB_134687_0
         $x_1_7 = "(c) Security software: A third party anti-virus/anti-spyware application." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -4437,6 +4587,7 @@ rule TrojanDownloader_Win32_Zlob_CV_135158_0
         $x_1_3 = {ff 87 00 90 00 6d 79 63 2e 69 63 6f 00 25 73 be fd ff ed 2f 64 6f 0a 70 68 70 3f 74 79 70 65 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4460,6 +4611,7 @@ rule TrojanDownloader_Win32_Zlob_CW_135159_0
         $x_1_3 = {32 34 03 34 45 45 ad 7b a1 dd 0c bf 4e 00 7b 28 93 78 65 63 1b ad e1 f7 ee 68 03 63 74 2e 70 0b 72 65 5b 69 03 6b b1 ed bb 2f 08 70 3a 2f 2f 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4484,6 +4636,7 @@ rule TrojanDownloader_Win32_Zlob_AAA_135635_0
         $x_1_4 = "\\drivers\\svchost" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4508,6 +4661,7 @@ rule TrojanDownloader_Win32_Zlob_AAB_135636_0
         $x_1_4 = "%s?id_num=%d&text=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4532,6 +4686,7 @@ rule TrojanDownloader_Win32_Zlob_AAC_135637_0
         $x_1_4 = "\\ie\\realplayer10\\Hgj.pas" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4556,6 +4711,7 @@ rule TrojanDownloader_Win32_Zlob_APK_138198_0
         $x_1_5 = {62 69 74 73 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -4582,6 +4738,7 @@ rule TrojanDownloader_Win32_Zlob_APK_138198_1
         $x_1_3 = {00 46 57 72 69 74 65 50 72 6f 63 65 73 73 4d 65 6d 6f 72 79 00 00 56 69 72 74 75 61 6c 50 72 6f 74 65 63 74 00 00 53 65 74 54 68 72 65 61 64 43 6f 6e 74 65 78 74 00 00 00 00 47 65 74 54 68 72 65 61 64 43 6f 6e 74 65 78 74 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4607,6 +4764,7 @@ rule TrojanDownloader_Win32_Zlob_APM_139469_0
         $x_1_6 = {69 70 64 6c 6c 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4628,6 +4786,7 @@ rule TrojanDownloader_Win32_Zlob_APN_139480_0
         $x_1_2 = {6a 00 8d 85 ?? fe ff ff 50 ff 75 ?? 6a 04 ff 75 ?? ff 75 ?? ff 75 ?? ff 75 ?? c3 5f 5e 5b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4653,6 +4812,7 @@ rule TrojanDownloader_Win32_Zlob_BBD_142273_0
         $x_1_6 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4676,6 +4836,7 @@ rule TrojanDownloader_Win32_Zlob_APT_146072_0
         $x_1_4 = "www.thenmnetwork.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4698,6 +4859,7 @@ rule TrojanDownloader_Win32_Zlob_ZXP_249573_0
         $x_1_2 = {74 63 c7 04 24 ?? ?? ?? ?? e8 ?? ?? ?? ?? 89 44 24 ?? 8b 45 ?? 89 04 ?? e8 ?? ?? ?? ?? 83 ec 08 89 45 ?? 8b 45 ?? 85 c0 74 2d c7 44 24 ?? 00 00 00 00 c7 44 24 ?? 00 00 00 00 8b 45 0c 89 44 24 ?? 8b 45 08 89 44 24 ?? c7 04 ?? 00 00 00 00 8b 45 ?? ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Backdoor_Win32_Repezor_A_2147684969_0
         $x_1_3 = {01 05 00 00 74 ?? 81 7d ?? 02 05 00 00 74 ?? eb ?? 81 7d ?? 01 06 00 00 74 ?? 81 7d ?? 02 06 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

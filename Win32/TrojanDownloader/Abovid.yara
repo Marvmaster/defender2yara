@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Abovid_A_2147627889_0
         $x_1_2 = {8b 83 04 03 00 00 89 58 74 c7 40 70 ?? ?? ?? ?? 89 58 7c c7 40 78 ?? ?? ?? ?? e8 ?? ?? ?? ?? ba ?? ?? ?? ?? 8b 83 f8 02 00 00 e8 ?? ?? ?? ?? 33 d2 8b 83 f8 02 00 00 8b 08 ff 51 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

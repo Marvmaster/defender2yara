@@ -18,6 +18,7 @@ rule Backdoor_Win32_Wofeksad_A_2147696378_0
         $x_1_3 = {00 5f 75 70 6c 6f 61 64 5f 00 00 00 00 70 3a 2f 2f 00 00 00 00 68 74 74 00 72 62 00 00 31 32 37 2e 30 2e 30 2e 31 00 00 00 3f 2a 2a 3f 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

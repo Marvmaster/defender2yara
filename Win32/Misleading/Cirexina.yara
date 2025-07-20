@@ -18,6 +18,7 @@ rule Misleading_Win32_Cirexina_240828_0
         $x_1_4 = "Global\\MutexWinTurbo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Misleading_Win32_Cirexina_240828_1
         $x_1_4 = "Global\\MutexWinTurbo" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

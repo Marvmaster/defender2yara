@@ -18,6 +18,7 @@ rule HackTool_Win32_Honedol_A_2147683776_0
         $x_10_4 = "IPC$ Password Scanner" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

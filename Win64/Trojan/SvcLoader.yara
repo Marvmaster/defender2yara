@@ -20,6 +20,7 @@ rule Trojan_Win64_SvcLoader_A_2147895786_0
         $x_2_5 = {48 8d 55 f0 48 8b cb ff 15 ?? ?? 00 00 85 c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

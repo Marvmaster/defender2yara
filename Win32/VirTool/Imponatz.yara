@@ -18,6 +18,7 @@ rule VirTool_Win32_Imponatz_A_2147782053_0
         $x_1_4 = {55 8b ec 83 ec 20 a1 04 c0 43 00 33 c5 89 45 f8 53 56 8b f1 33 db 57 39 5e 04 ?? ?? 8d ?? ?? 50 68 7c 81 43 00 53 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule VirTool_Win32_Imponatz_A_2147782053_1
         $x_1_4 = {48 8b 55 c0 48 8d ?? ?? 0f 57 c0 0f 11 45 c8 e8 ?? ?? ?? ?? 48 8d 4d c8 e8 ?? ?? ?? ?? 85 c0 ?? ?? 4c 8d ?? ?? 33 c9 48 8d ?? ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule VirTool_Win32_Imponatz_A_2147782053_2
         $x_1_4 = {83 7d 08 00 b9 00 00 00 08 8b 3d 14 50 40 00 b8 10 02 00 00 0f 44 c1 c7 45 d4 00 00 00 00 8d ?? ?? 89 45 80 8b 45 cc 0f 57 c0 51 6a 00 6a 00 6a 03 66 0f 13 45 e8 50 89 45 84 89 45 e8 ff ?? ff 75 d4 6a 08 ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 8b 4d d4 8b f0 83 c1 fc 89 75 ec b8 ab aa aa aa f7 e1 8d ?? ?? 50 c1 ea 03 89 16 ff 75 d4 56 6a 03 ff 75 84 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

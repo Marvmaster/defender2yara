@@ -22,6 +22,7 @@ rule Worm_MSIL_Wisbipuf_B_2147694962_0
         $x_1_8 = {75 70 64 61 74 65 63 68 65 63 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

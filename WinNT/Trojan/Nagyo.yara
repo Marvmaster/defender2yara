@@ -19,6 +19,7 @@ rule Trojan_WinNT_Nagyo_C_2147622920_0
         $x_1_4 = {ff 75 14 ff 75 10 ff 75 0c ff 75 08 ff 15 ?? ?? 01 00 8b c8 85 c9 89 4d 18 7c 19 8b 45 24 48 74 ?? 48 74 ?? 48 74 ?? 83 e8 09 74 ?? 83 e8 19 74 ?? 48 74 ?? 8b c1 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_WinNT_Nagyo_A_2147639860_0
         $x_1_2 = {8b 48 04 81 79 18 73 45 72 76 75 0b 8b 55 cc 89 15 ?? ?? ?? ?? eb 05 e9 ?? ?? ff ff 83 3d ?? ?? ?? ?? 00 75 10 ff 15 ?? ?? ?? ?? b8 01 00 00 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

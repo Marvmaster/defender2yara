@@ -20,6 +20,7 @@ rule Backdoor_Win32_Sereki_B_2147608870_0
         $x_10_5 = {32 0c 10 48 88 4c 24 13 79 f6 8d 4c 24 13 6a 01 51 53 ff 15 ?? ?? ?? ?? 83 c4 0c 46 3b f5 7c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

@@ -20,6 +20,7 @@ rule TrojanDropper_Win32_Safadrew_A_2147610773_0
         $x_3_6 = {8f 43 fc 80 74 01 ?? ?? ff 73 fc}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_3_*) and 1 of ($x_2_*))) or
             ((1 of ($x_4_*) and 3 of ($x_3_*))) or

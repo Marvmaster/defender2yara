@@ -38,6 +38,7 @@ rule Backdoor_WinNT_PcClient_2147601663_0
         $n_50_24 = "ActiveX Portector Driver" wide //weight: -50
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((3 of ($x_2_*) and 6 of ($x_1_*))) or

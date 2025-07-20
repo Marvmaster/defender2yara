@@ -18,6 +18,7 @@ rule Ransom_MSIL_Yodaware_C_2147788290_0
         $x_1_4 = "\\$SysReset\\Logs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Ransom_MSIL_Yodaware_C_2147788290_1
         $x_1_4 = {53 00 65 00 6e 00 64 00 20 00 24 00 [0-16] 20 00 77 00 6f 00 72 00 74 00 68 00 20 00 6f 00 66 00 20 00 4d 00 6f 00 6e 00 65 00 72 00 6f 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

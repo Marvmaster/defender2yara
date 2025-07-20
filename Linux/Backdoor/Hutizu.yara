@@ -19,6 +19,7 @@ rule Backdoor_Linux_Hutizu_A_2147819515_0
         $x_1_4 = {00 c7 44 24 04 5c 98 0c 08 89 04 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

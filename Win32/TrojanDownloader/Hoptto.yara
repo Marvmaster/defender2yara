@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Hoptto_A_2147664849_0
         $x_1_4 = {70 75 72 65 6e 65 74 2e 68 6f 70 74 6f 2e 6f 72 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_Hoptto_B_2147672244_0
         $x_100_7 = "/37.221.160.56/" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_200_*) and 2 of ($x_100_*) and 2 of ($x_10_*))) or
             ((1 of ($x_200_*) and 3 of ($x_100_*))) or

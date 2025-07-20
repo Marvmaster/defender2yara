@@ -31,6 +31,7 @@ rule TrojanDownloader_Win32_Bloropac_A_2147653536_0
         $x_2_17 = "avalonglobalsolutions.com/tmp/gh.php" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -65,6 +66,7 @@ rule TrojanDownloader_Win32_Bloropac_B_2147653553_0
         $x_2_9 = "187.33.2.14/alcalina.dat" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or

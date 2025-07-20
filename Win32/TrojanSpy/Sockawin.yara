@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Sockawin_A_2147601764_0
         $x_1_5 = {6d 73 77 73 6f 63 6b 2e 64 6c 6c 90 5c 44 6f 77 6e 6c 6f 61 64 65 64 20 50 72 6f 67 72 61 6d 20 46 69 6c 65 73 5c 8b c0 8c 9b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

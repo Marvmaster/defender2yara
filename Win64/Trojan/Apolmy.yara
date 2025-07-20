@@ -17,6 +17,7 @@ rule Trojan_Win64_Apolmy_A_2147688978_0
         $x_1_3 = {b8 fb ff ff ff 48 83 c4 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_Win64_Apolmy_C_2147694857_0
         $x_1_4 = {b8 fb ff ff ff 48 83 c4 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

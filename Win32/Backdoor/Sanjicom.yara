@@ -19,6 +19,7 @@ rule Backdoor_Win32_Sanjicom_2147603130_0
         $x_1_5 = {73 79 73 74 65 6d 33 32 5c 25 73 00 72 64 70 64 72 76 2e 73 79 73 00 00 24 6b 62 00 25 73 5c 25 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Backdoor_Win32_Sanjicom_2147603133_0
         $x_1_9 = "\\REGISTRY\\MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 6 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or

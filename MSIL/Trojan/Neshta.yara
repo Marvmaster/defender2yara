@@ -17,6 +17,7 @@ rule Trojan_MSIL_Neshta_AACX_2147849613_0
         $x_1_2 = "Polling_Project" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

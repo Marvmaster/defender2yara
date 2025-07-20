@@ -24,6 +24,7 @@ rule TrojanDownloader_MSIL_Prardrukat_A_2147696649_0
         $x_1_10 = "ac7aca7c508ce42dbe780db47f570797" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or

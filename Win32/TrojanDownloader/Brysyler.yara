@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Brysyler_A_2147638732_0
         $x_1_4 = "\\winsys32.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

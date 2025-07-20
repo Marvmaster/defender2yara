@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Aentdwn_B_2147725104_0
         $x_1_3 = "Sql.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win32_Aentdwn_G_2147727882_0
         $x_1_2 = {73 00 74 00 61 00 72 00 74 00 [0-47] 50 00 72 00 6f 00 67 00 72 00 61 00 6d 00 44 00 61 00 74 00 61 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

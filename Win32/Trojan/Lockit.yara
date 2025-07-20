@@ -21,6 +21,7 @@ rule Trojan_Win32_Lockit_GA_2147925376_0
         $x_1_6 = "Lockit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))

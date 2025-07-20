@@ -19,6 +19,7 @@ rule VirTool_Win64_Prespofesz_A_2147916127_0
         $x_1_4 = {45 31 c9 45 31 c0 31 c9 c7 84 24 80 00 00 00 70 00 00 00 4c 89 f2 48 89 7c 24 48 4c 89 7c 24 40 48 c7 44 24 38 00 00 00 00 48 c7 44 24 30 00 00 00 00 c7 44 24 28 00 00 08 00 c7 44 24 20 00 00 00 00 ?? ?? ?? ?? ?? ?? 85 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

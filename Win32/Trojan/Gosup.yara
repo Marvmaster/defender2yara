@@ -18,6 +18,7 @@ rule Trojan_Win32_Gosup_A_2147649066_0
         $x_1_4 = {5c 4d 6f 7a 69 6c 6c 61 5c 46 69 72 65 66 6f 78 5c ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 50 72 6f 66 69 6c 65 73 2e 69 6e 69 00 00 00 00 00 00 00 00 50 61 74 68 00 00 00 00 50 72 6f 66 69 6c 65 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Gosup_B_2147650714_0
         $x_1_2 = {8b 75 f4 8b 07 8a 44 18 ff 8b d0 8b 4d f8 8a 4c 31 ff 32 d1 81 e2 ff 00 00 00 8b f2 85 f6 75 ?? 8b f0 81 e6 ff 00 00 00 8b c7 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

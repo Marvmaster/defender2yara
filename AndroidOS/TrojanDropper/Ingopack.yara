@@ -50,6 +50,7 @@ rule TrojanDropper_AndroidOS_Ingopack_E_2147816036_0
         $x_1_6 = "imaging/png/PngMetadataReader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Ransom_MSIL_WannaDieCrypt_PA_2147784001_0
         $x_1_4 = "WannaDie-ID-234153" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

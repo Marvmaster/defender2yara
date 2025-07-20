@@ -24,6 +24,7 @@ rule Trojan_Win32_Filisto_A_2147717647_0
         $x_1_9 = "/?%s=%s&%s=%d&%s=%d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Filisto_DF_2147748463_0
         $x_1_2 = {33 c0 c6 45 ?? ?? c6 45 ?? ?? c6 45 ?? ?? c6 45 ?? ?? c6 45 ?? ?? c6 45 ?? ?? c6 45 ?? ?? c6 45 ?? ?? c6 45 [0-6] c6 45 ?? ?? c6 45 ?? ?? c6 45 ?? ?? c6 45 ?? ?? c6 45 ?? ?? c6 45 ?? ?? c6 45 ?? ?? c6 45 ?? ?? 8d 7d ?? aa 6a ?? 58 8d 4d ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +89,7 @@ rule Trojan_Win32_Filisto_B_2147751733_0
         $x_1_21 = "Cm})2&!j[V&p*njS!EnYqWSBj|WHZFB?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -127,6 +130,7 @@ rule Trojan_Win32_Filisto_H_2147912108_0
         $x_1_20 = "0x3E SLEP-%d m" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -156,6 +160,7 @@ rule Trojan_Win32_Filisto_I_2147912109_0
         $x_1_3 = {89 47 14 c7 47 20 ?? ?? ?? ?? c7 47 24 ?? ?? ?? ?? c7 47 28 ?? ?? ?? ?? c7 47 2c ?? ?? ?? ?? [0-7] 8b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

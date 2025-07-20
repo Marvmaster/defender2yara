@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Obvod_A_2147616235_0
         $x_1_7 = "collect/b.php/%d/%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_6_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or

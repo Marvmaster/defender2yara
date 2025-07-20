@@ -21,6 +21,7 @@ rule Trojan_MSIL_Golbla_B_2147707474_0
         $x_1_7 = {5f 73 74 61 72 74 75 70 50 61 74 68 00 5f 6d 6f 6e 69 74 6f 72 50 61 74 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or
             ((5 of ($x_2_*))) or

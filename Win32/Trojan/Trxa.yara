@@ -25,6 +25,7 @@ rule Trojan_Win32_Trxa_A_2147683176_0
         $x_1_11 = {66 83 78 fc 2e 75 28 66 83 78 fe 45 74 07 66 83 78 fe 65 75 1a 66 83 38 58 74 06 66 83 38 78 75 0e 66 83 78 02 45 74 13 66 83 78 02 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -53,6 +54,7 @@ rule Trojan_Win32_Trxa_B_2147684736_0
         $x_1_4 = {00 46 6f 72 6d 47 72 61 62 62 65 72 44 6c 6c 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

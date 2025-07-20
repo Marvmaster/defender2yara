@@ -25,6 +25,7 @@ rule TrojanSpy_Win32_Infosteal_2147630371_0
         $x_1_11 = "IP Privado:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule TrojanSpy_Win32_Infosteal_A_2147733305_0
         $x_1_5 = ".0/010201101/0.0/1011020/10110111101/0/101//0/1//00/1020.0/00/10///010201/10/0.00//01//1/1/00/1//01/10011001/0//0.0/1020" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

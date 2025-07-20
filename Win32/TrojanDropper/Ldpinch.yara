@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Ldpinch_B_2147606818_0
         $x_1_5 = {ed 28 a5 99 ed 28 a5 99 ed 28 a5 99 ec 28 a5 99 6e 20 f8 99 ee 28 a5 99 ed 28 a4 99 e5 28 a5 99 e8 24 c5 99 e8 28 a5 99 e8 24 f9 99 ec 28 a5 99 e8 24 ff 99 ec 28 a5 99 52 69 63 68 ed 28 a5 99}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -57,6 +57,7 @@ rule Trojan_Win32_GhostFON_A_2147725910_0
         $x_1_42 = {00 6e 65 74 73 74 61 74 65 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_3_*) and 7 of ($x_1_*))) or

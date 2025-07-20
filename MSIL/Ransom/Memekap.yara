@@ -20,6 +20,7 @@ rule Ransom_MSIL_Memekap_A_2147708293_0
         $x_1_6 = ".tax201" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

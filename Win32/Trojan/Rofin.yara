@@ -21,6 +21,7 @@ rule Trojan_Win32_Rofin_A_2147684415_0
         $x_1_7 = "run.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Trojan_Win32_Rofin_A_2147684415_1
         $x_1_8 = "sogou.com/?71017-0001" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Trojan_Win32_Rofin_A_2147684415_2
         $x_1_10 = "log.zzinfor.cn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -104,6 +107,7 @@ rule Trojan_Win32_Rofin_B_2147691135_0
         $x_1_8 = "TOMMAO.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule Trojan_Win32_Rofin_B_2147691135_1
         $x_1_6 = "http://log.soomeng.com/wb/jdq/?mac=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +158,7 @@ rule Trojan_Win32_Rofin_C_2147709389_0
         $x_1_4 = "C:\\Windows\\Env.ini" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))

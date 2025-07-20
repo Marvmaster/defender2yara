@@ -19,6 +19,7 @@ rule Trojan_WinNT_Otlard_A_2147622037_0
         $x_1_5 = {81 7d 08 ad de 01 c0 75 0a b8 ad de 01 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -46,6 +47,7 @@ rule Trojan_WinNT_Otlard_B_2147624214_0
         $x_1_4 = {72 10 e8 04 00 00 00 0f 01 0c 24 5e a5 b8 04 00 00 00 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_WinNT_Otlard_C_2147626503_0
         $x_1_4 = {b8 22 00 00 c0 eb 3a 83 7d fc 00 75 04 33 c0 eb 30 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_WinNT_Otlard_D_2147631225_0
         $x_1_3 = {68 26 c4 31 50 e8 ?? ?? ?? ?? 89 85 ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 50 68 7f 92 2b 7d e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -117,6 +121,7 @@ rule Trojan_WinNT_Otlard_F_2147631471_0
         $x_1_4 = "Gootkit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -142,6 +147,7 @@ rule Trojan_WinNT_Otlard_G_2147632719_0
         $x_1_2 = {b8 2c f1 df ff 8b 00 66 25 01 f0 48 66 81 38 4d 5a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Trojan_WinNT_Otlard_H_2147647624_0
         $x_1_3 = {6a 2e 58 6a 73 66 89 45 f4 58 6a 79 66 89 45 f6 58 66 89 45 f8 6a 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

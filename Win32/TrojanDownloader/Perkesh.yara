@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Perkesh_A_2147616777_0
         $x_3_8 = {40 83 f8 09 72 ef 0b 00 8a 4c 05 ?? 80 f1 ?? 88 4c 05}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -59,6 +60,7 @@ rule TrojanDownloader_Win32_Perkesh_E_2147618455_0
         $x_1_11 = "360Safe.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_5_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((6 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -88,6 +90,7 @@ rule TrojanDownloader_Win32_Perkesh_F_2147627994_0
         $x_1_5 = {5c 64 72 69 76 65 72 73 5c 65 74 63 5c 68 6f 73 74 73 00 00 25 73 25 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -116,6 +119,7 @@ rule TrojanDownloader_Win32_Perkesh_G_2147628593_0
         $x_1_5 = {3d 3d 22 00 00 7d 1c 33 f6 85 c0 7e 27}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

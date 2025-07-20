@@ -19,6 +19,7 @@ rule TrojanProxy_Win32_Frentyks_A_2147652376_0
         $x_1_5 = "4jhnSH8DekS2b35Fb3NhdARN3K7uMHuBO/CcnAY7xgM=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanProxy_Win32_Frentyks_A_2147652376_1
         $x_1_6 = "SystemPropertiesAdvancedViewer.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

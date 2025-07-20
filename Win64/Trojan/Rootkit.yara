@@ -16,6 +16,7 @@ rule Trojan_Win64_Rootkit_ARA_2147910200_0
         $x_2_1 = ":\\Users\\Baat\\Desktop\\GPT 1.6\\x64\\Release\\RWSafe.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_Rootkit_OJAA_2147915225_0
         $x_1_2 = "ReflectiveDllMain" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win64_Rootkit_MBXH_2147915634_0
         $x_1_1 = {0f 85 94 4a 02 00 41 89 49 08 49 f7 c1 06 61 e3 46 45 89 51 04 44 3a dc 41 80 f8 09 e9 23 34 17 00 c1 63 6b 6f 1d 89 b1 df 27 c5 4b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win64_Rootkit_EH_2147920392_0
         $x_1_3 = "Registry\\Machine\\System\\CurrentControlSet\\Services\\MpDriver" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +107,7 @@ rule Trojan_Win64_Rootkit_GZT_2147921675_0
         $x_10_1 = {89 4c 24 08 48 83 ec 38 48 8b 4c 24 40 ff 15 e7 47 01 00 48 89 44 24 20 48 83 7c 24 20 00 74 17 48 8b 54 24}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +129,7 @@ rule Trojan_Win64_Rootkit_CCIM_2147923916_0
         $x_1_1 = {48 8d 44 24 38 41 b9 3f 01 0f 00 45 33 c0 48 89 44 24 20 48 8d 15 5a 33 01 00 48 c7 c1 02 00 00 80 ff 15 2d bc 00 00 85 c0 75 12 48 8b 4c 24 38 48 8d 15 55 33 01 00 ff 15 f7 bb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -145,6 +151,7 @@ rule Trojan_Win64_Rootkit_CCJN_2147925694_0
         $x_5_1 = {48 83 64 24 40 00 48 8d 54 24 40 48 8b c8 ff 15 ?? ?? ?? ?? 8b f8 85 c0 78 ?? 8b 4b 04 48 83 64 24 48 00 48 89 4c 24 50 48 8b 4c 24 40 ff 15 ?? ?? ?? ?? 8b 4b 08 4c 8d 4c 24 50 89 4c 24 28 48 8d 54 24 48 48 83 c9 ff c7 44 24 20 00 30 00 00 45 33 c0 ff 15 ?? ?? ?? ?? ff 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +177,7 @@ rule Trojan_Win64_Rootkit_EM_2147928047_0
         $x_1_5 = ".detour" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

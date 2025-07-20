@@ -17,6 +17,7 @@ rule Ransom_Win32_WannaCrypt_A_2147720966_0
         $x_1_2 = {6d 73 73 65 63 73 76 63 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Ransom_Win32_WannaCrypt_A_2147720966_1
         $x_1_6 = "%08X.res" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Ransom_Win32_WannaCrypt_A_2147720966_2
         $x_100_5 = "qeriuwjhrf" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Ransom_Win32_WannaCrypt_A_2147720966_3
         $x_1_10 = {77 64 00 00 57 00 61 00 6e 00 61 00 43 00 72 00 79 00 70 00 74 00 30 00 72 00 00 00 53 00 6f 00 66 00 74 00 77 00 61 00 72 00 65 00 5c 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -138,6 +142,7 @@ rule Ransom_Win32_WannaCrypt_2147721381_0
         $x_1_21 = "p@ssw0rd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_50_*) and 1 of ($x_10_*) and 15 of ($x_1_*))) or
             ((2 of ($x_50_*) and 2 of ($x_10_*) and 5 of ($x_1_*))) or
@@ -199,6 +204,7 @@ rule Ransom_Win32_WannaCrypt_2147721381_1
         $x_1_38 = ".docx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 2 of ($x_10_*) and 30 of ($x_1_*))) or
             ((2 of ($x_100_*) and 3 of ($x_10_*) and 20 of ($x_1_*))) or
@@ -257,6 +263,7 @@ rule Ransom_Win32_WannaCrypt_B_2147721388_0
         $x_1_35 = ".docx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 25 of ($x_1_*))) or
             (all of ($x*))
@@ -284,6 +291,7 @@ rule Ransom_Win32_WannaCrypt_B_2147721392_0
         $x_1_4 = "WScript.CreateObject(\"WScript.Shell\")> c.vbs" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -313,6 +321,7 @@ rule Ransom_Win32_WannaCrypt_B_2147721392_1
         $x_100_5 = "TaskStart" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -391,6 +400,7 @@ rule Ransom_Win32_WannaCrypt_D_2147721411_0
         $x_1_2 = {6d 5f 25 73 2e 77 6e 72 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +422,7 @@ rule Ransom_Win32_WannaCrypt_E_2147721412_0
         $x_1_2 = ".WNCRYT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -466,6 +477,7 @@ rule Ransom_Win32_WannaCrypt_2147721483_0
         $x_1_4 = "Send $300 worth of bitcoin to this address" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -489,6 +501,7 @@ rule Ransom_Win32_WannaCrypt_F_2147731094_0
         $x_1_3 = "launcher.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -513,6 +526,7 @@ rule Ransom_Win32_WannaCrypt_AT_2147761302_0
         $x_1_4 = ".wnry" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -538,6 +552,7 @@ rule Ransom_Win32_WannaCrypt_DA_2147772309_0
         $x_1_5 = "msg/m_german.wnry" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -563,6 +578,7 @@ rule Ransom_Win32_WannaCrypt_DB_2147773122_0
         $x_1_5 = "CryptDecrypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -591,6 +607,7 @@ rule Ransom_Win32_WannaCrypt_SV_2147818949_0
         $x_1_8 = "RIGHT KEY!!!DECRYPTING!!!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -616,6 +633,7 @@ rule Ransom_Win32_WannaCrypt_CZ_2147827645_0
         $x_1_5 = "PlayGame" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -637,6 +655,7 @@ rule Ransom_Win32_WannaCrypt_AM_2147843597_0
         $x_1_1 = {f7 d8 1b c0 89 7c 94 10 25 44 88 00 00 05 60 40 00 00 8b c8 8b d9 c1 e9 02 f3 a5 8b cb 83 e1 03 f3 a4 8b 74 94 10 03 f0 89 74 94 10 42 83 fa 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -660,6 +679,7 @@ rule Ransom_Win32_WannaCrypt_SG_2147893950_0
         $x_2_3 = {6d 73 67 2f [0-15] 2e 77 6e 72 79}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

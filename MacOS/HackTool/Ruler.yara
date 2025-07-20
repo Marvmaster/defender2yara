@@ -20,6 +20,7 @@ rule HackTool_MacOS_Ruler_B_2147892067_0
         $x_1_5 = "*tls.clientKeyExchangeMsg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (3 of ($x*))
 }
 

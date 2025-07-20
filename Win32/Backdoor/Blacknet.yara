@@ -29,6 +29,7 @@ rule Backdoor_Win32_Blacknet_GA_2147786679_0
         $x_1_14 = "USBSpread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 

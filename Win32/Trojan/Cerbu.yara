@@ -19,6 +19,7 @@ rule Trojan_Win32_Cerbu_SIB_2147812820_0
         $x_1_4 = {8b 4d 08 0f be 11 85 d2 74 ?? 8b 45 ?? c1 e0 05 03 45 01 8b 4d 08 0f be 11 03 c2 89 45 01 eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Cerbu_RPQ_2147830744_0
         $x_1_1 = {f7 75 e4 8b 45 d8 03 34 90 03 75 fc 8b 4d ec 8b 11 2b d6 8b 45 ec 89 10 8b 4d f4 8b 55 ec 8b 02 89 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Cerbu_RPY_2147852903_0
         $x_1_1 = {33 d2 8a d4 89 15 1c f3 45 01 8b c8 81 e1 ff 00 00 00 89 0d 18 f3 45 01 c1 e1 08 03 ca 89 0d 14 f3 45 01 c1 e8 10 a3 10 f3 45 01 33 f6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Trojan_Win32_Cerbu_MBHS_2147852941_0
         $x_1_1 = {33 d2 8a d4 89 15 1c 03 46 01 8b c8 81 e1 ff 00 00 00 89 0d 18 03 46 01 c1 e1 08 03 ca 89 0d 14 03 46 01 c1 e8 10 a3 10 03 46 01 33 f6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -104,6 +108,7 @@ rule Trojan_Win32_Cerbu_NE_2147901008_0
         $x_1_2 = "fuyunxshuo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +131,7 @@ rule Trojan_Win32_Cerbu_PAB_2147923504_0
         $x_2_2 = "bpcgyufr" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +153,7 @@ rule Trojan_Win32_Cerbu_AMDC_2147931938_0
         $x_1_1 = {f6 17 89 d8 88 c0 d9 ff ?? ?? 80 2f ?? 80 07 ?? 89 d8 88 c0 d9 ff ?? ?? 47 e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -169,6 +176,7 @@ rule Trojan_Win32_Cerbu_BAA_2147936693_0
         $x_2_2 = {6b 45 00 28 03 45 60 b9 01 00 00 00 c1 e1 00 8a 14 08 88 55 33 0f be 45 33 83 f8 72 0f 85}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +199,7 @@ rule Trojan_Win32_Cerbu_MBY_2147940963_0
         $x_1_2 = {8d 0c 1a 8d 42 01 42 30 01 81 fa ?? ?? ?? 00 72 ef}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

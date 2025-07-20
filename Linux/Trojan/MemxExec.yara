@@ -19,6 +19,7 @@ rule Trojan_Linux_MemxExec_A_2147917353_0
         $x_1_4 = "src/os/exec.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_MSIL_Stealbit_STA_2147797824_0
         $x_2_6 = "165.22.84.147" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

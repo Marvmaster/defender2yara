@@ -18,6 +18,7 @@ rule Trojan_Win32_Lamer_A_2147710006_0
         $x_1_3 = "XX.CPP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Lamer_RPZ_2147889424_0
         $x_1_1 = {b9 40 00 00 00 33 c0 8d 7c 24 0d c6 44 24 0c 00 f3 ab 66 ab aa 8b fd 83 c9 ff 33 c0 8d 54 24 0c f2 ae f7 d1 2b f9 8b f7 8b fa 8b d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Lamer_KGAA_2147907480_0
         $x_1_6 = {2f 68 6f 6d 65 2f 7a 61 74 6f 2f 65 78 70 2f 00 76 69 73 75 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*))) or
@@ -92,6 +95,7 @@ rule Trojan_Win32_Lamer_C_2147945428_0
         $x_1_3 = "Internet Explorer.lnk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

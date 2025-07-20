@@ -25,6 +25,7 @@ rule TrojanDownloader_Win32_Deyma_DEA_2147760593_0
         $x_1_10 = "IocWVyYrfk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule TrojanDownloader_Win32_Deyma_DEB_2147760804_0
         $x_1_3 = "LVsavBvZsi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -81,6 +83,7 @@ rule TrojanDownloader_Win32_Deyma_DEC_2147761691_0
         $x_1_13 = "zWljbpKWMa" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -110,6 +113,7 @@ rule TrojanDownloader_Win32_Deyma_AU_2147831262_0
         $x_1_5 = "Amadey\\Release\\Amadey.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +136,7 @@ rule TrojanDownloader_Win32_Deyma_SP_2147835404_0
         $x_2_2 = {8b 55 fc 83 c2 01 89 55 fc 83 7d fc 02 73 14 0f b7 45 bc 8b 4d e4 2b c8 81 c1 c0 00 00 00 89 4d cc eb dd}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

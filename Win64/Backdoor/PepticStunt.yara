@@ -18,6 +18,7 @@ rule Backdoor_Win64_PepticStunt_B_2147904114_0
         $x_1_3 = {41 81 39 67 65 74 66 0f 85 60 03 00 00 66 41 81 79 04 69 6c 0f 85 53 03 00 00 41 80 79 06 65 0f 85 48 03 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

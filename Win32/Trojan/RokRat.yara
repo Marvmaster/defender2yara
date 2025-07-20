@@ -16,6 +16,7 @@ rule Trojan_Win32_RokRat_MA_2147847984_0
         $x_10_1 = {8a 1a 2b f1 d1 fe 33 c9 4e 85 f6 7e ?? 83 c2 02 8a 02 8d 52 02 2a c3 88 04 39 41 3b ce 7c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

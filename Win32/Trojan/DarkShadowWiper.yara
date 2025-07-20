@@ -21,6 +21,7 @@ rule Trojan_Win32_DarkShadowWiper_A_2147773770_0
         $x_1_6 = "rundll32.exe advapi32.dll,ProcessIdleTasks" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

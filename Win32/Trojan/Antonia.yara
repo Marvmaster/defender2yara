@@ -18,6 +18,7 @@ rule Trojan_Win32_Antonia_A_2147706054_0
         $x_1_4 = "C:\\Users\\Anton\\Documents\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Antonia_B_2147706440_0
         $x_1_4 = "8d8f9528-24b0-11e5-ad78-3c970e317c6d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Utohoki_A_2147689223_0
         $x_1_4 = "\\CurrentVersion\\Run,Microsoft Text Services,%A_AppData%\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

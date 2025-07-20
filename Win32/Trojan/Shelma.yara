@@ -16,6 +16,7 @@ rule Trojan_Win32_Shelma_RPY_2147824775_0
         $x_1_1 = {8b d1 83 e2 03 8a 54 02 08 32 54 08 14 88 14 31 41 81 f9 0e 01 00 00 76 e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Shelma_NS_2147901793_0
         $x_1_3 = "host unreachable" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_Shelma_NS_2147901793_1
         $x_1_4 = "uuu.run.place" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win32_Shelma_AMX_2147939944_0
         $x_1_1 = {66 85 c0 74 39 66 3b 02 74 29 66 83 f8 61 72 06 66 83 f8 7a 76 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

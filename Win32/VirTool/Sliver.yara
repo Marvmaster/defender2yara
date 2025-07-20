@@ -27,6 +27,7 @@ rule VirTool_Win32_Sliver_C_2147842379_0
         $x_1_13 = ".commonpb.Request" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule VirTool_Win32_Sliver_A_2147842381_0
         $x_1_6 = "sliverpb.NetInterfaces" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule VirTool_Win32_Sliver_A_2147842381_1
         $x_1_4 = {48 89 6c 24 30 48 8d ?? ?? ?? 48 8b 44 24 48 48 89 04 24 48 8b 44 24 40 48 89 44 24 08 e8 ?? ?? ?? ?? 48 8b ?? ?? ?? ?? ?? 48 89 04 24 48 c7 44 24 08 00 00 00 00 48 8b 44 24 40 48 89 44 24 10 48 c7 44 24 18 00 30 00 00 48 c7 44 24 20 04 00 00 00 e8 ?? ?? ?? ?? 48 8b 44 24 28 48 89 44 24 50 48 8b 6c 24 30 48 83 c4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule VirTool_Win32_Sliver_A_2147842381_2
         $x_1_6 = ".sliverpb.WindowsPrivilegeEntryR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -132,6 +136,7 @@ rule VirTool_Win32_Sliver_A_2147842381_3
         $x_1_9 = "*sliverpb.ImpersonateReq" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -161,6 +166,7 @@ rule VirTool_Win32_Sliver_A_2147842381_4
         $x_1_9 = {29 2e 47 65 74 48 6f 73 74 6e 61 6d 65 [0-30] 29 2e 47 65 74 50 6f 72 74 [0-30] 29 2e 47 65 74 43 6f 6d 6d 61 6e 64 [0-30] 29 2e 47 65 74 50 61 73 73 77 6f 72 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +191,7 @@ rule VirTool_Win32_Sliver_B_2147842383_0
         $x_1_4 = {64 8b 05 14 00 00 00 8b 80 00 00 00 00 8b 40 18 8b 0d ?? ?? ?? ?? 8b 80 cc 01 00 00 89 0c 24 89 44 24 04 c7 44 24 08 ff ff ff ff e8 ?? ?? ?? ?? 8b 44 24 0c e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -214,6 +221,7 @@ rule VirTool_Win32_Sliver_D_2147842384_0
         $x_1_9 = ").Port" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +251,7 @@ rule VirTool_Win32_Sliver_E_2147842385_0
         $x_1_9 = "SideloadReq)." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

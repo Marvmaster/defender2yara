@@ -17,6 +17,7 @@ rule Trojan_MacOS_BeaverTail_A_2147917157_0
         $x_1_2 = {48 8d 5d b0 48 89 df 48 8d 35 66 50 00 00 ba 0b 00 00 00 e8 52 3e 00 00 48 8d 7d 98 48 89 de e8 58 3e 00 00 48 8b 7d b0 8b 07 83 f8 ff 74 1c 85 c0 74 09}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

@@ -32,6 +32,7 @@ rule VirTool_Win32_EmpirePy_A_2147836492_0
         $x_1_18 = {54 68 72 65 61 64 53 74 61 72 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

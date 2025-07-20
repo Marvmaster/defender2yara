@@ -20,6 +20,7 @@ rule Trojan_Win32_Shipup_B_2147600994_0
         $x_1_6 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Trojan_Win32_Shipup_C_2147610117_0
         $x_1_5 = "Maybe a Encrypted Flash Disk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -77,6 +79,7 @@ rule Trojan_Win32_Shipup_D_2147611292_0
         $x_1_8 = "MicrosoftShipHaveAck" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_7_*) and 6 of ($x_1_*))) or
             ((1 of ($x_7_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -104,6 +107,7 @@ rule Trojan_Win32_Shipup_J_2147656730_0
         $x_1_4 = {8b 44 24 04 03 c1 8a 10 2a d1 80 f2 ?? 80 ea ?? 41 3b 4c 24 08 88 10 7c e7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -126,6 +130,7 @@ rule Trojan_Win32_Shipup_GJU_2147850648_0
         $x_10_2 = {00 c7 45 c8 35 dc 07 00 8b 55 ec 89 55}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +153,7 @@ rule Trojan_Win32_Shipup_AMAB_2147852134_0
         $x_1_2 = {0f b6 00 8d 7b 01 99 f7 ff 88 45 fc 8a 06 0c 01 0f b6 f8 89 d8 99 f7 ff 0f b6 3e 01 f8 88 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -170,6 +176,7 @@ rule Trojan_Win32_Shipup_AMAB_2147852134_1
         $x_1_2 = {89 c6 89 d7 88 d9 0f b6 00 d3 f8 89 c1 0f b6 02 8d 53 01 89 55 fc 99 f7 7d fc 88 06 88 c8 0c 01 0f b6 f0 89 d8 99 f7 fe 0f b6 c9 01 c8 88 07}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +198,7 @@ rule Trojan_Win32_Shipup_GPA_2147892038_0
         $x_2_1 = {ba 7a dc 1e 86 1d 2e 60 ce e0 02 01 33 73 49 83 72 70 61 0e 71 67 92 b2 80 f5 32 fe ab 62 bf 76 d9 e4 13 ab 73}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

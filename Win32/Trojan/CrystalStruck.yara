@@ -23,6 +23,7 @@ rule Trojan_Win32_CrystalStruck_A_2147724722_0
         $x_10_8 = {77 77 77 2e 68 61 6e 63 6f 2e 63 6f 6d 2e 63 6e 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_5_*))) or
             ((1 of ($x_10_*) and 3 of ($x_5_*))) or

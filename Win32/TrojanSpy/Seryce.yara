@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Seryce_A_2147652972_0
         $x_1_7 = "HostID=%s&Version=%s&OS=%s&ip=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or

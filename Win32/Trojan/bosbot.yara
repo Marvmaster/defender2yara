@@ -24,6 +24,7 @@ rule Trojan_Win32_bosbot_A_2147624766_0
         $x_1_10 = "SYSTEM\\CurrentControlSet\\Control\\SafeBoot\\Network\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_10_*))) or

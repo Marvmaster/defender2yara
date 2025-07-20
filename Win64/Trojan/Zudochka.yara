@@ -16,6 +16,7 @@ rule Trojan_Win64_Zudochka_2147753682_0
         $x_1_1 = {8a 45 c7 30 44 0d c8 49 03 cf 48 83 f9 ?? 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

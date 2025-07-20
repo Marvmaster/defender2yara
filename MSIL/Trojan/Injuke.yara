@@ -27,6 +27,7 @@ rule Trojan_MSIL_Injuke_MB_2147807600_0
         $x_1_12 = "Test-Connection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -55,6 +56,7 @@ rule Trojan_MSIL_Injuke_MC_2147809049_0
         $x_1_8 = "DoFoo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -78,6 +80,7 @@ rule Trojan_MSIL_Injuke_NZA_2147835626_0
         $x_1_3 = "996b-1f0a067aa947" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -99,6 +102,7 @@ rule Trojan_MSIL_Injuke_ABB_2147835895_0
         $x_2_1 = {04 8e 69 5d 91 02 11 02 91 61 d2 6f ?? ?? ?? 0a 38 00 00 00 00 11 02 17 58 13 02}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule Trojan_MSIL_Injuke_SVP_2147836549_0
         $x_5_1 = {11 00 7e 07 00 00 04 11 02 7e 07 00 00 04 8e 69 5d 91 02 11 02 91 61 d2 6f ?? ?? ?? 0a 38 5a 00 00 00 11 02 02 8e 69 3f d4 ff ff ff 20 00 00 00 00 7e 41 00 00 04 7b 46 00 00 04 39 93 ff ff ff 26 20 00 00 00 00 38 88 ff ff ff 38 d2 ff ff ff 20 03 00 00 00 38 79 ff ff ff}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Trojan_MSIL_Injuke_SPPV_2147836553_0
         $x_5_1 = {07 08 08 18 5d 2c 08 07 08 91 1f 09 61 2b 05 07 08 91 1b 61 d2 9c 08 17 58 0c 08 07 8e 69 32 e0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -163,6 +169,7 @@ rule Trojan_MSIL_Injuke_RI_2147836566_0
         $x_1_2 = "$PASSWORD$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -184,6 +191,7 @@ rule Trojan_MSIL_Injuke_AHK_2147837060_0
         $x_1_1 = {11 04 06 09 06 09 8e 69 5d 91 08 06 91 61 d2 9c 06 17 58 0a 15 2c 0a 06 08 8e 69 32 e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -208,6 +216,7 @@ rule Trojan_MSIL_Injuke_ABER_2147837562_0
         $x_1_4 = "GetType" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -229,6 +238,7 @@ rule Trojan_MSIL_Injuke_SPQP_2147837741_0
         $x_5_1 = {72 dc 00 00 70 19 2d 1f 26 28 ?? ?? ?? 0a 11 05 6f ?? ?? ?? 0a 0d 08 8e 69 8d 03 00 00 01 13 04 16 0a 2b 1b 0c 2b d9 13 05 2b de 11 04 06 09 06 09 8e 69 5d 91 08 06 91 61 d2 9c 06 17 58 0a 06 08 8e 69 32 e6}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -250,6 +260,7 @@ rule Trojan_MSIL_Injuke_ANW_2147837824_0
         $x_1_1 = {04 07 91 06 59 d2 9c 00 07 17 58 0b 07 7e ?? ?? ?? 04 8e 69 fe 04 0c 08 2d db}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +283,7 @@ rule Trojan_MSIL_Injuke_SRP_2147838220_0
         $x_2_2 = "/147.182.192.85/common_Jjhlyxld.png" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -293,6 +305,7 @@ rule Trojan_MSIL_Injuke_SRQP_2147838941_0
         $x_5_1 = {9a 2b 4b 06 09 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 08 17 58 16 2d fb 16 2d f8 0c 08 07 8e 69 32 dd 06 2a 73 1f 00 00 0a 38 a3 ff ff ff 28 ?? ?? ?? 06 38 a2 ff ff ff 6f ?? ?? ?? 0a 38 9d ff ff ff 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -314,6 +327,7 @@ rule Trojan_MSIL_Injuke_AIN_2147839130_0
         $x_1_1 = {38 1d 00 00 00 09 6f ?? ?? ?? 0a 13 07 08 11 07 07 02 11 07 18 5a 18 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -343,6 +357,7 @@ rule Trojan_MSIL_Injuke_RD_2147839395_0
         $x_1_9 = {e2 81 ab e2 80 8c e2 81 ac e2 80 8c e2 80 8c e2 81 ac e2 81 ac e2 81 af e2 80 ab e2 80 ad e2 80 aa e2 81 aa e2 81 aa e2 80 ab e2 80 8e e2 81 ac e2 80 8c e2 81 ab e2 80 ab e2 80 8b e2 80 8c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -370,6 +385,7 @@ rule Trojan_MSIL_Injuke_NEAC_2147839973_0
         $x_1_7 = "ProcessStartInfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -393,6 +409,7 @@ rule Trojan_MSIL_Injuke_NIJ_2147840039_0
         $x_1_3 = "Computer Sentinel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -414,6 +431,7 @@ rule Trojan_MSIL_Injuke_AI_2147840098_0
         $x_1_1 = {7e 73 00 00 04 06 7e 73 00 00 04 06 91 20 d6 02 00 00 59 d2 9c 00 06 17 58 0a 06 7e 73 00 00 04 8e 69 fe 04 0b 07 2d d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -435,6 +453,7 @@ rule Trojan_MSIL_Injuke_AI_2147840098_1
         $x_1_1 = {80 24 00 00 04 00 de 0b 06 2c 07 06 6f 2c 00 00 0a 00 dc 16 0c 2b 1b 00 7e 24 00 00 04 08 7e 24 00 00 04 08 91 20 4b 03 00 00 59 d2 9c 00 08 17 58 0c 08 7e 24 00 00 04 8e 69 fe 04 0d 09 2d d7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -456,6 +475,7 @@ rule Trojan_MSIL_Injuke_AI_2147840098_2
         $x_1_1 = {0d 09 16 04 a2 09 17 72 01 00 00 70 a2 09 18 28 ?? ?? ?? 0a a2 09 19 72 01 00 00 70 a2 09 1a 7e 11 00 00 04 a2 09 28 ?? ?? ?? 0a 0b 28 ?? ?? ?? 0a 07 6f ?? ?? ?? 0a 0c 06 08 6f ?? ?? ?? 0a 26 06 18 6f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -477,6 +497,7 @@ rule Trojan_MSIL_Injuke_SPA_2147841202_0
         $x_9_1 = {07 11 04 06 11 04 9a 1f 10 28 ?? ?? ?? 0a d2 9c 11 04 17 58 13 04 11 04 06 8e 69 fe 04 13 05 11 05 2d dd}  //weight: 9, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -499,6 +520,7 @@ rule Trojan_MSIL_Injuke_NIA_2147841233_0
         $x_1_2 = "3RGKh7p" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -522,6 +544,7 @@ rule Trojan_MSIL_Injuke_DB_2147841540_0
         $x_1_3 = "GetBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -548,6 +571,7 @@ rule Trojan_MSIL_Injuke_MA_2147841615_0
         $x_1_6 = "InvokeMember" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -581,6 +605,7 @@ rule Trojan_MSIL_Injuke_MA_2147841615_1
         $x_1_13 = "set_CreateNoWindow" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -606,6 +631,7 @@ rule Trojan_MSIL_Injuke_SRPV_2147842359_0
         $x_1_5 = "$7fb63569-56c5-4285-93ce-a487912b3e98" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -628,6 +654,7 @@ rule Trojan_MSIL_Injuke_SPD_2147842968_0
         $x_1_2 = "Xqsygd.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -651,6 +678,7 @@ rule Trojan_MSIL_Injuke_MBCI_2147843139_0
         $x_1_3 = "Ebvoqhusv" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -673,6 +701,7 @@ rule Trojan_MSIL_Injuke_NEAD_2147843320_0
         $x_2_2 = "$$$_I_n_v_o_k_e_$$$" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -695,6 +724,7 @@ rule Trojan_MSIL_Injuke_SPL_2147843564_0
         $x_1_2 = "onegbcloud.cfd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -717,6 +747,7 @@ rule Trojan_MSIL_Injuke_EAU_2147843656_0
         $x_2_2 = "WindowsFormsApp47.Properties.Resources" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -741,6 +772,7 @@ rule Trojan_MSIL_Injuke_ABPD_2147843710_0
         $x_1_4 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -763,6 +795,7 @@ rule Trojan_MSIL_Injuke_EAM_2147843763_0
         $x_2_2 = "comicmaster.org.uk/img/css/design/fabric/bo/Seqqgdsrh.bmp" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -785,6 +818,7 @@ rule Trojan_MSIL_Injuke_AP_2147843854_0
         $x_2_2 = {cd ef b9 ef ca ef bf ef b8 ef be ef bd ef c9 ef cc ef b8 ef be ef cf ef c9 ef cc ef ce ef be ef c5 ef b9 ef cb ef c5 ef c8 ef ce ef c5 ef c9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -807,6 +841,7 @@ rule Trojan_MSIL_Injuke_AJK_2147843944_0
         $x_1_2 = "JOKAFWAIUFH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -829,6 +864,7 @@ rule Trojan_MSIL_Injuke_EAN_2147844120_0
         $x_2_2 = "paweer.ru/panel/uploads/Bwufxyjt.bmp" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -851,6 +887,7 @@ rule Trojan_MSIL_Injuke_FAR_2147845752_0
         $x_2_2 = "192.3.215.60/uo7/Fbnkrtltw.bmp" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -874,6 +911,7 @@ rule Trojan_MSIL_Injuke_ABSU_2147845761_0
         $x_3_3 = {38 00 30 00 2e 00 36 00 36 00 2e 00 37 00 35 00 2e 00 33 00 37}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -895,6 +933,7 @@ rule Trojan_MSIL_Injuke_FAS_2147845780_0
         $x_5_1 = {61 d1 9d fe ?? 01 00 20 1e 5b 86 0a 65 20 13 dc f0 11 61 66 20 0f 87 76 1b 61 59 25 fe ?? 01 00 20 57 d0 24 27 20 a8 2f db d8 58 66 65 3c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -917,6 +956,7 @@ rule Trojan_MSIL_Injuke_ABQU_2147845861_0
         $x_3_2 = "179.43.175.187/ksjy/Fnavenf.dat" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -938,6 +978,7 @@ rule Trojan_MSIL_Injuke_FAT_2147845928_0
         $x_5_1 = {0b 07 18 5b 8d ?? 00 00 01 0c 16 0d 38 ?? 00 00 00 08 09 18 5b 06 09 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 0a 9c 09 18 58 0d 09 07 32 e4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -959,6 +1000,7 @@ rule Trojan_MSIL_Injuke_PSKX_2147846126_0
         $x_2_1 = {72 2b 00 00 70 28 09 00 00 06 13 00 38 00 00 00 00 28 ?? ?? ?? 0a 11 00 6f ?? ?? ?? 0a 72 75 00 00 70 7e ?? ?? ?? 0a 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 13 01 38 00 00 00 00 dd 10 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -980,6 +1022,7 @@ rule Trojan_MSIL_Injuke_PSLW_2147846179_0
         $x_2_1 = {28 0b 00 00 06 0a 28 ?? ?? ?? 0a 06 6f ?? ?? ?? 0a 28 0c 00 00 06 75 0f 00 00 1b 73 ?? ?? ?? 0a 0b 28 04 00 00 2b 6f ?? ?? ?? 0a 0c 38 0e 00 00 00 08 6f ?? ?? ?? 0a 0d 07 09 6f ?? ?? ?? 0a 08 6f ?? ?? ?? 0a 2d ea}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1003,6 +1046,7 @@ rule Trojan_MSIL_Injuke_ABRZ_2147846496_0
         $x_1_3 = "LagrangePolynomial" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1027,6 +1071,7 @@ rule Trojan_MSIL_Injuke_ABVL_2147846879_0
         $x_1_4 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1048,6 +1093,7 @@ rule Trojan_MSIL_Injuke_PSOU_2147847859_0
         $x_2_1 = {14 0a 38 13 00 00 00 00 02 28 04 00 00 06 0a dd 06 00 00 00 26 dd 00 00 00 00 06 2c ea}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1069,6 +1115,7 @@ rule Trojan_MSIL_Injuke_PSPK_2147848360_0
         $x_2_1 = {7d 28 02 00 04 7e 0e 00 00 04 28 ?? ?? ?? 0a 07 6f ?? ?? ?? 0a 12 02 e0 0f 01 e0 12 03 e0 6f ?? ?? ?? 06 13 04 11 04 16 fe 03 13 05 11 05 2c 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1090,6 +1137,7 @@ rule Trojan_MSIL_Injuke_ABYT_2147848677_0
         $x_4_1 = {2b 11 2b 16 74 ?? 00 00 01 2b 16 74 ?? 00 00 1b 2b 16 2a 28 ?? 00 00 06 2b e8 28 ?? 00 00 06 2b e3 28 ?? 00 00 06 2b e3 28 ?? 00 00 06 2b e3}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1113,6 +1161,7 @@ rule Trojan_MSIL_Injuke_AADI_2147849825_0
         $x_1_3 = "delobiznesa.online/panel/uploads/Pocpzkohrjl.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1136,6 +1185,7 @@ rule Trojan_MSIL_Injuke_MBGO_2147850566_0
         $x_1_3 = "217e08a3" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1158,6 +1208,7 @@ rule Trojan_MSIL_Injuke_NNJ_2147850783_0
         $x_1_2 = "Dwfsgxetfnz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1185,6 +1236,7 @@ rule Trojan_MSIL_Injuke_ASCI_2147851696_0
         $x_1_7 = "96241185180001042071133162164139" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_1_*))) or
@@ -1210,6 +1262,7 @@ rule Trojan_MSIL_Injuke_AMS_2147851792_0
         $x_1_1 = {11 06 11 05 11 1f 9a 1f 10 28 ?? 00 00 0a 86 6f ?? 00 00 0a 00 11 1f 17 d6 13 1f 11 1f 11 1e 31 df}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1231,6 +1284,7 @@ rule Trojan_MSIL_Injuke_PSTL_2147851864_0
         $x_2_1 = {00 72 73 00 00 70 28 ?? 00 00 06 00 07 72 df 00 00 70 28 ?? 00 00 0a 0c 07 0d 73 18 00 00 0a 13 06 00 11 06 72 f1 00 00 70 08 6f ?? 00 00 0a 00 00 de 0d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1252,6 +1306,7 @@ rule Trojan_MSIL_Injuke_ASCL_2147851966_0
         $x_5_1 = {13 06 11 05 8e 69 17 da 13 1e 16 13 1f 2b 1d 11 06 11 1f 11 05 11 1f 9a 1f 10 28 ?? 00 00 0a 86 6f ?? 00 00 0a 00 11 1f 17 d6 13 1f 11 1f 11 1e 31 dd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1274,6 +1329,7 @@ rule Trojan_MSIL_Injuke_ASCS_2147852634_0
         $x_1_2 = "DKJAYHGDKIUH KHJGDAGDJKAH" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1298,6 +1354,7 @@ rule Trojan_MSIL_Injuke_AALU_2147888325_0
         $x_1_4 = "kYMdGCDcfbQyC5F1SO7NYrXfD6qvi39tRT2XiDb2nY8=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1320,6 +1377,7 @@ rule Trojan_MSIL_Injuke_AMAB_2147888631_0
         $x_1_2 = "HttpClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1341,6 +1399,7 @@ rule Trojan_MSIL_Injuke_ASDP_2147889289_0
         $x_1_1 = {11 07 11 10 17 8d ?? 00 00 01 25 16 11 06 11 10 9a 1f 10 28 ?? 00 00 0a 86 9c 6f ?? 00 00 0a 00 11 10 17 d6 13 10 11 10 11 0f 31 d4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1364,6 +1423,7 @@ rule Trojan_MSIL_Injuke_AAOA_2147889503_0
         $x_1_3 = "Lo-ad" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1388,6 +1448,7 @@ rule Trojan_MSIL_Injuke_AMAA_2147890140_0
         $x_1_4 = "Replace" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1410,6 +1471,7 @@ rule Trojan_MSIL_Injuke_AMAC_2147890142_0
         $x_5_2 = {4c 00 6f 00 2d 00 61 00 64 00 20 00 01 03 2d 00 01 11 44 00 65 00 6c 00 65 00 74 00 65 00 4d 00 43}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1431,6 +1493,7 @@ rule Trojan_MSIL_Injuke_AAOR_2147890294_0
         $x_5_1 = {06 11 04 06 11 04 91 20 5d 06 00 00 59 d2 9c 00 11 04 17 58 13 04 11 04 06 8e 69 fe 04 13 05 11 05 3a}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1452,6 +1515,7 @@ rule Trojan_MSIL_Injuke_AAPK_2147891403_0
         $x_5_1 = {11 05 72 df 00 00 70 28 ?? 00 00 0a 28 ?? 00 00 2b 28 ?? 00 00 2b 73 ?? 00 00 0a 72 03 01 00 70 28 ?? 00 00 0a 28 ?? 00 00 2b 28 ?? 00 00 2b 73 ?? 00 00 0a 72 19 01 00 70 28 ?? 00 00 0a 28 ?? 00 00 2b 28 ?? 00 00 2b 73 ?? 00 00 0a 28 ?? 00 00 0a 6f ?? 00 00 0a 0b de 0c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1473,6 +1537,7 @@ rule Trojan_MSIL_Injuke_KAC_2147891726_0
         $x_10_1 = {11 01 11 02 11 00 11 02 91 20 ?? ?? ?? ?? ?? ?? 00 00 06 28 ?? 00 00 06 59 d2 9c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1494,6 +1559,7 @@ rule Trojan_MSIL_Injuke_SSPP_2147891823_0
         $x_5_1 = {0a 06 06 6f ?? 02 00 0a 06 6f ?? 02 00 0a 6f ?? 02 00 0a 13 04 73 ?? 02 00 0a 0b 02 73 ?? 02 00 0a 0c 08 11 04 16 73 ?? 02 00 0a 0d 09 07 6f ?? 02 00 0a 07 6f ?? 02 00 0a 13 05 de 1f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1516,6 +1582,7 @@ rule Trojan_MSIL_Injuke_AAQW_2147892090_0
         $x_1_2 = {11 0b 28 01 00 00 2b 28 02 00 00 2b 28 16 00 00 0a 13 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1539,6 +1606,7 @@ rule Trojan_MSIL_Injuke_KAD_2147892849_0
         $x_1_3 = "wprWzpFIcDFH.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1562,6 +1630,7 @@ rule Trojan_MSIL_Injuke_KAD_2147892849_1
         $x_1_3 = "TripleDESCryptoServiceProvider" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1584,6 +1653,7 @@ rule Trojan_MSIL_Injuke_MBJV_2147892889_0
         $x_1_2 = {7d 00 00 03 7d 00 00 03 30 00 00 0f 20 00 4c 00 6f 00 2d 00 61 00 64 00 20 00 00 03 2d 00 00 11 44 00 65 00 6c 00 65 00 74 00 65 00 4d 00 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1605,6 +1675,7 @@ rule Trojan_MSIL_Injuke_SK_2147892976_0
         $x_2_1 = {00 11 05 11 0d 58 13 05 00 11 0d 17 58 13 0d 11 0d 1f 0a fe 04 13 0e 11 0e 2d e5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1629,6 +1700,7 @@ rule Trojan_MSIL_Injuke_SK_2147892976_1
         $x_1_4 = "{78097044-8808-460d-9f2d-dd7c9a50d292}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1651,6 +1723,7 @@ rule Trojan_MSIL_Injuke_AAST_2147893073_0
         $x_2_2 = {11 11 11 19 11 11 11 19 91 1f 16 61 d2 9c 00 11 19 17 58 13 19 11 19 11 11 8e 69 fe 04 13 1a 11 1a 2d dc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1674,6 +1747,7 @@ rule Trojan_MSIL_Injuke_AASV_2147893087_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1695,6 +1769,7 @@ rule Trojan_MSIL_Injuke_AATK_2147893494_0
         $x_5_1 = {16 13 05 2b 23 09 11 05 16 6f ?? 00 00 0a 13 06 12 06 28 ?? 00 00 0a 13 07 11 04 11 07 6f ?? 00 00 0a 11 05 17 58 13 05 11 05 09 6f ?? 00 00 0a 32 d3 11 04 6f ?? 00 00 0a 13 08 de 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1716,6 +1791,7 @@ rule Trojan_MSIL_Injuke_AATX_2147893845_0
         $x_5_1 = {16 0c 2b 12 00 07 08 06 08 91 02 28 ?? 00 00 06 9c 00 08 17 58 0c 08 06 8e 69 fe 04 0d 09 2d e4}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1737,6 +1813,7 @@ rule Trojan_MSIL_Injuke_AATA_2147893851_0
         $x_5_1 = {16 0d 2b 3a 08 13 04 16 13 05 11 04 12 05 28 ?? 00 00 0a 07 09 18 6f ?? 00 00 0a 06 28 ?? 00 00 0a 13 06 08 09 11 06 6f ?? 00 00 0a de 0c 11 05 2c 07 11 04 28 ?? 00 00 0a dc}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1758,6 +1835,7 @@ rule Trojan_MSIL_Injuke_AMSA_2147894273_0
         $x_5_1 = {0a 0c 16 0d 38 ?? 00 00 00 07 09 16 6f ?? 00 00 0a 13 04 12 04 28 ?? 00 00 0a 13 05 08 11 05 6f ?? 00 00 0a 09 17 58 0d 09 07 6f ?? 00 00 0a 32 d8 08 6f ?? 00 00 0a 13 06 dd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1779,6 +1857,7 @@ rule Trojan_MSIL_Injuke_AMAD_2147894627_0
         $x_5_1 = {11 00 11 01 11 00 11 01 93 20 ?? 00 00 00 61 02 61 d1 9d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1800,6 +1879,7 @@ rule Trojan_MSIL_Injuke_GND_2147894725_0
         $x_10_1 = {11 04 07 16 6f ?? ?? ?? 0a 13 08 12 08 28 ?? ?? ?? 0a 13 06 11 05 7b ?? ?? ?? ?? 11 06 6f ?? ?? ?? 0a 07 17 58 0b 07 11 04 6f ?? ?? ?? 0a 32 d0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1825,6 +1905,7 @@ rule Trojan_MSIL_Injuke_GNE_2147894726_0
         $x_1_5 = "Doebcax" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1846,6 +1927,7 @@ rule Trojan_MSIL_Injuke_GNF_2147894734_0
         $x_10_1 = {11 05 07 16 6f ?? ?? ?? 0a 13 0a 12 0a 28 ?? ?? ?? 0a 13 08 11 06 11 08 6f ?? ?? ?? 0a 07 17 58 0b 07 11 05 6f ?? ?? ?? 0a 32 d5}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1867,6 +1949,7 @@ rule Trojan_MSIL_Injuke_AAWA_2147895756_0
         $x_5_1 = {11 00 11 00 28 ?? 06 00 06 11 00 28 ?? 06 00 06 28 ?? 06 00 06 13 04 20 02 00 00 00 38 ?? ff ff ff 11 00 20 4a dd b5 e4 28 ?? 06 00 06 28 ?? 06 00 06 6f ?? 04 00 0a 20 03 00 00 00 38 ?? ff ff ff 73 ?? 04 00 0a 13 0a 20 00 00 00 00 7e ?? 03 00 04 7b ?? 03 00 04 3a ?? ff ff ff 26}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1892,6 +1975,7 @@ rule Trojan_MSIL_Injuke_ABOR_2147896336_0
         $x_1_5 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1914,6 +1998,7 @@ rule Trojan_MSIL_Injuke_ABPZ_2147896713_0
         $x_1_2 = "Pirates.Resources" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1935,6 +2020,7 @@ rule Trojan_MSIL_Injuke_AAFG_2147896758_0
         $x_5_1 = {0a 06 06 6f ?? 02 00 0a 06 6f ?? 02 00 0a 6f ?? 02 00 0a 13 04 73 ?? 02 00 0a 0b 02 73 ?? 02 00 0a 0c 08 11 04 16 73 ?? 02 00 0a 0d 09 07 6f ?? 02 00 0a 07 6f ?? 02 00 0a 13 05 de 1f 09 6f ?? 00 00 0a dc}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1957,6 +2043,7 @@ rule Trojan_MSIL_Injuke_AAQJ_2147896763_0
         $x_1_2 = "cd1c9355-81e6-4436-950c-6e635735ab85" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1978,6 +2065,7 @@ rule Trojan_MSIL_Injuke_AAWV_2147896907_0
         $x_5_1 = {02 08 02 8e 69 5d 1c 58 1c 59 1d 58 1d 59 02 08 02 8e 69 5d 91 07 08 07 8e 69 5d 1c 58 1c 59 1d 58 1d 59 91 61 28 ?? 00 00 0a 02 08 20 87 10 00 00 58 20 86 10 00 00 59 02 8e 69 5d 91 59 20 fa 00 00 00 58 1c 58 20 00 01 00 00 5d d2 9c 08 17 58 0c 08 6a 02 8e 69 17 59 6a 06 17 58 6e 5a 31 9f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1999,6 +2087,7 @@ rule Trojan_MSIL_Injuke_AAWM_2147896943_0
         $x_5_1 = {16 13 08 2b 34 00 11 04 72 f5 00 00 70 12 08 28 ?? 00 00 0a 28 ?? 00 00 0a 11 05 1f 5a 20 97 00 00 00 6f ?? 00 00 0a 73 ?? 00 00 06 6f ?? 00 00 0a 00 00 11 08 17 58 13 08 11 08 1f 0a fe 04 13 09 11 09 2d c0}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2020,6 +2109,7 @@ rule Trojan_MSIL_Injuke_AAWY_2147897011_0
         $x_5_1 = {01 0b 06 07 16 7e ?? 00 00 04 6f ?? 00 00 0a 26 07 16 28 ?? 00 00 0a 0c 06 16 73 ?? 00 00 0a 0d 08 8d ?? 00 00 01 13 04 09 11 04 16 08 6f ?? 00 00 0a 26 11 04 28 ?? 00 00 2b 28 ?? 00 00 2b 13 05 de 14}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2043,6 +2133,7 @@ rule Trojan_MSIL_Injuke_AAXN_2147897513_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2068,6 +2159,7 @@ rule Trojan_MSIL_Injuke_PSBF_2147899323_0
         $x_1_5 = "GetHashCode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2091,6 +2183,7 @@ rule Trojan_MSIL_Injuke_ARA_2147899456_0
         $x_1_3 = "WebResponse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2114,6 +2207,7 @@ rule Trojan_MSIL_Injuke_SG_2147899853_0
         $x_2_3 = "simpleCAlculatorException_.Properties.Resources" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2135,6 +2229,7 @@ rule Trojan_MSIL_Injuke_SG_2147899853_1
         $x_2_1 = {72 8b 00 00 70 28 1b 00 00 0a 72 95 00 00 70 28 1c 00 00 0a}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2157,6 +2252,7 @@ rule Trojan_MSIL_Injuke_KAE_2147900312_0
         $x_5_2 = {00 11 04 11 05 58 08 11 05 58 47 52 00 11 05 17 58 13 05 11 05 05 fe 04 13 06 11 06 2d e2}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2179,6 +2275,7 @@ rule Trojan_MSIL_Injuke_AMAF_2147900821_0
         $x_1_2 = {02 1f 10 28 ?? 00 00 2b 28 ?? 00 00 2b 0b 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2200,6 +2297,7 @@ rule Trojan_MSIL_Injuke_PTGQ_2147901034_0
         $x_2_1 = {2b f6 09 28 ?? 00 00 0a 28 ?? 01 00 06 74 0a 00 00 1b 0a 06 75 0a 00 00 1b 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2221,6 +2319,7 @@ rule Trojan_MSIL_Injuke_CCHE_2147901772_0
         $x_1_1 = {25 11 04 28 ?? 03 00 06 00 25 17 28 ?? 03 00 06 00 25 18 28 ?? 03 00 06 00 25 07 28 ?? 03 00 06 00 13 08 20 ?? 00 00 00 38 ?? fe ff ff 08 11 04 73 ?? ?? ?? ?? 09 07 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2242,6 +2341,7 @@ rule Trojan_MSIL_Injuke_SPXX_2147902592_0
         $x_4_1 = {06 08 08 28 ?? ?? ?? 0a 9c 07 08 03 08 03 8e 69 5d 91 9c}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2263,6 +2363,7 @@ rule Trojan_MSIL_Injuke_SPDP_2147904142_0
         $x_5_1 = {38 37 00 00 00 11 03 11 01 28 ?? ?? ?? 2b 28 ?? ?? ?? 2b 16 11 01 8e 69}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2285,6 +2386,7 @@ rule Trojan_MSIL_Injuke_GZAA_2147904585_0
         $x_2_2 = {11 08 02 74 ?? 00 00 1b 16 02 14}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2306,6 +2408,7 @@ rule Trojan_MSIL_Injuke_IZAA_2147905993_0
         $x_5_1 = {08 09 07 09 91 20 ab 6f 00 00 28 ?? 08 00 06 28 ?? 00 00 0a 59 d2 9c 09 17 58 0d 09 07 8e 69 32 df}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2327,6 +2430,7 @@ rule Trojan_MSIL_Injuke_JBAA_2147906057_0
         $x_5_1 = {08 09 07 09 91 18 28 ?? 09 00 06 28 ?? 08 00 06 28 ?? 09 00 06 59 d2 9c 09 19 28 ?? 09 00 06 58 0d 09 07 8e 69 32 d9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2350,6 +2454,7 @@ rule Trojan_MSIL_Injuke_JCAA_2147906064_0
         $x_1_3 = "wewfhhidsfwe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2371,6 +2476,7 @@ rule Trojan_MSIL_Injuke_JGAA_2147906218_0
         $x_5_1 = {08 09 07 09 91 20 ?? ?? 00 00 28 ?? 08 00 06 28 ?? 00 00 0a 59 d2 9c 09 17 58 0d 09 07 8e 69 32 df}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2392,6 +2498,7 @@ rule Trojan_MSIL_Injuke_JLAA_2147906355_0
         $x_5_1 = {0d 06 07 09 9c 1d 2c 22 07 16 2d cc 17 25 2c 0e 58 0b 07 02 7b ?? 00 00 04 6f ?? 00 00 0a 16 2d ec 32 bc 02 06 7d ?? 00 00 04 02 7b ?? 00 00 04 25 2d 03 26 2b 05}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2415,6 +2522,7 @@ rule Trojan_MSIL_Injuke_JXAA_2147906790_0
         $x_1_3 = "wewfhhidsfwe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2436,6 +2544,7 @@ rule Trojan_MSIL_Injuke_MBYD_2147908216_0
         $x_1_1 = "4D5A9~3~|04~|FFFF~B8~~~|4" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2458,6 +2567,7 @@ rule Trojan_MSIL_Injuke_LEAA_2147908347_0
         $x_1_2 = "GetPixel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2480,6 +2590,7 @@ rule Trojan_MSIL_Injuke_LNAA_2147908639_0
         $x_1_2 = "GetPixel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2501,6 +2612,7 @@ rule Trojan_MSIL_Injuke_AMAE_2147910626_0
         $x_1_1 = {07 17 58 11 ?? 5d 13 ?? 02 08 07 91 11 ?? 61 08 11 ?? 91 59 28 ?? ?? ?? ?? 13 ?? 08 07 11 ?? 28 ?? ?? ?? ?? d2 9c 07 17 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2522,6 +2634,7 @@ rule Trojan_MSIL_Injuke_NFAA_2147910934_0
         $x_5_1 = {02 06 03 06 58 47 04 06 04 6f ?? 00 00 0a 5d 6f ?? 00 00 0a 61 d2 9c 06 17 58 0a 06 02 8e 69 32 df}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2544,6 +2657,7 @@ rule Trojan_MSIL_Injuke_NNAA_2147911365_0
         $x_2_2 = {11 09 11 03 16 11 03 8e 69 6f ?? 00 00 0a 13 07 38 00 00 00 00 11 07 13 0b}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2566,6 +2680,7 @@ rule Trojan_MSIL_Injuke_NUAA_2147911613_0
         $x_1_2 = "CreateDecryptor" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2589,6 +2704,7 @@ rule Trojan_MSIL_Injuke_MBYN_2147912390_0
         $x_5_3 = "SLL1CyFT97FO0MIitNnxlQ" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2610,6 +2726,7 @@ rule Trojan_MSIL_Injuke_OQAA_2147912391_0
         $x_5_1 = {02 11 09 02 11 09 91 66 d2 9c 02 11 09 8f ?? 00 00 01 25 71 ?? 00 00 01 1f 72 59 d2 81 ?? 00 00 01 02 11 09 8f ?? 00 00 01 25 71 ?? 00 00 01 1f 33 58 d2 81 ?? 00 00 01 00 11 09 17 58 13 09}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2631,6 +2748,7 @@ rule Trojan_MSIL_Injuke_SPLF_2147913475_0
         $x_4_1 = {d1 13 16 11 19 11 09 91 13 28 11 19 11 09 11 20 11 28 61 11 18 19 58 61 11 32 61 d2 9c}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2652,6 +2770,7 @@ rule Trojan_MSIL_Injuke_MBYW_2147913733_0
         $x_1_1 = {4c 00 6f 00 61 00 64 00 00 27 72 00 65 00 73 00 6f 00 75 00 72 00 63 00 65 00 73 00 2f 00 6b 00 69 00 73 00 6f 00 6e 00 69 00 39 00 63 00 6f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2673,6 +2792,7 @@ rule Trojan_MSIL_Injuke_PKAA_2147913758_0
         $x_5_1 = {01 0b 07 72 b9 00 00 70 18 18 8d ?? 00 00 01 25 16 7e ?? 00 00 04 a2 25 17 7e 14 00 00 04 a2 28 ?? 00 00 0a 74 ?? 00 00 01 0d 00 09 02 16 02 8e 69 6f ?? 00 00 0a 13 04 de 0b}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2694,6 +2814,7 @@ rule Trojan_MSIL_Injuke_POAA_2147913868_0
         $x_5_1 = {01 72 f1 00 00 70 18 18 8d 10 00 00 01 25 16 7e ?? 00 00 04 a2 25 17 7e ?? 00 00 04 a2 28 ?? 00 00 0a 74 ?? 00 00 01 0a 06 02 16 02 8e 69 6f ?? 00 00 0a 0b de 0a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2715,6 +2836,7 @@ rule Trojan_MSIL_Injuke_PRAA_2147913959_0
         $x_5_1 = {07 09 18 6f ?? ?? 00 0a 1f 10 28 ?? ?? 00 0a 13 04 11 04 16 3f 08 00 00 00 08 11 04 6f ?? 00 00 0a 09 18 58 0d 09 07 6f ?? 00 00 0a 3f ?? ff ff ff 08 13 05 dd ?? 00 00 00 26 dd}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2736,6 +2858,7 @@ rule Trojan_MSIL_Injuke_AMAI_2147914042_0
         $x_1_1 = {08 09 16 6f ?? 00 00 0a 13 04 12 04 28 ?? 00 00 0a 13 05 06 11 05 6f ?? 00 00 0a 09 17 58 0d 09 08 6f ?? 00 00 0a 32 d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2759,6 +2882,7 @@ rule Trojan_MSIL_Injuke_NJ_2147914183_0
         $x_1_3 = "cryptload.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2781,6 +2905,7 @@ rule Trojan_MSIL_Injuke_NK_2147914185_0
         $x_1_2 = "sagepromostar_instrument2.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2803,6 +2928,7 @@ rule Trojan_MSIL_Injuke_QQAA_2147915050_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2824,6 +2950,7 @@ rule Trojan_MSIL_Injuke_SPZF_2147915072_0
         $x_4_1 = {0a 06 06 6f ?? 00 00 0a 06 6f ?? 00 00 0a 6f ?? 00 00 0a 0b 02 73 50 00 00 0a 0c 08 07 16 73 51 00 00 0a 0d 73 52 00 00 0a 13 04}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2845,6 +2972,7 @@ rule Trojan_MSIL_Injuke_RJAA_2147915864_0
         $x_5_1 = {02 06 02 06 91 66 d2 9c 02 06 8f 22 00 00 01 25 71 22 00 00 01 20 84 00 00 00 59 d2 81 22 00 00 01 02 06 8f 22 00 00 01 25 71 22 00 00 01 1f 67 58 d2 81 22 00 00 01 08}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2868,6 +2996,7 @@ rule Trojan_MSIL_Injuke_STAA_2147917154_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2889,6 +3018,7 @@ rule Trojan_MSIL_Injuke_KAH_2147917508_0
         $x_1_1 = {02 11 04 09 6f ?? 00 00 0a 13 05 12 05 28 ?? 00 00 0a 16 fe 01 13 06 11 06 2c 0b 00 08 6f ?? 00 00 0a 13 07 2b 39 08 12 05 28 ?? 00 00 0a 6f ?? 00 00 0a 00 00 11 04 17 58 13 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2910,6 +3040,7 @@ rule Trojan_MSIL_Injuke_TFAA_2147917673_0
         $x_5_1 = {16 2d e3 16 2d 02 2b 1d 2b 66 07 08 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 0a 6f ?? 00 00 0a 08 18 25 2c 0c 58 0c 08 16 2d d2 07 6f ?? 00 00 0a 15 2c ee 32 d4 06 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2931,6 +3062,7 @@ rule Trojan_MSIL_Injuke_TKAA_2147917936_0
         $x_5_1 = {0a 0b 16 0c 38 19 00 00 00 06 07 08 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 0a 6f ?? 00 00 0a 08 18 58 0c 08 07 6f ?? 00 00 0a 32 de}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2952,6 +3084,7 @@ rule Trojan_MSIL_Injuke_TQAA_2147918294_0
         $x_5_1 = {16 0d 2b 13 00 08 09 08 09 91 20 ?? ?? 00 00 59 d2 9c 00 09 17 58 0d 09 08 8e 69 fe 04 13 04 11 04 2d e1}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2975,6 +3108,7 @@ rule Trojan_MSIL_Injuke_UMAA_2147919644_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2997,6 +3131,7 @@ rule Trojan_MSIL_Injuke_VNAA_2147920342_0
         $x_1_2 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3019,6 +3154,7 @@ rule Trojan_MSIL_Injuke_SEAA_2147920719_0
         $x_3_2 = "V.i.r.t.u.a.l.P.r.o.t.e.c.t" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3040,6 +3176,7 @@ rule Trojan_MSIL_Injuke_KAAE_2147920820_0
         $x_1_1 = {06 11 05 6f ?? 00 00 0a 07 33 1e 09 17 58 0d 09 08 17 58 33 0e 06 11 04 11 05 11 04 59 6f ?? 00 00 0a 2a 11 05 17 58 13 04 11 05 17 58 13 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3061,6 +3198,7 @@ rule Trojan_MSIL_Injuke_KAF_2147924229_0
         $x_1_1 = {07 91 02 07 02 8e 69 5d 91 61 d2 9c 00 07 17 58 0b 07 28 ?? 00 00 06 8e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3082,6 +3220,7 @@ rule Trojan_MSIL_Injuke_SL_2147924506_0
         $x_2_1 = {07 72 01 00 00 70 6f 10 00 00 0a 0a dd 0d 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3104,6 +3243,7 @@ rule Trojan_MSIL_Injuke_SCCF_2147924560_0
         $x_2_2 = "CreateDecryptor" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3125,6 +3265,7 @@ rule Trojan_MSIL_Injuke_AACA_2147924862_0
         $x_5_1 = {02 06 02 06 91 66 d2 9c 02 06 8f ?? 00 00 01 25 71 ?? 00 00 01 1f 58 59 d2 81 ?? 00 00 01 02 06 8f ?? 00 00 01 25 71 ?? 00 00 01 1f 44 59 d2 81 ?? 00 00 01 00 06 17 58 0a 06 02 8e 69 fe 04 13 0b 11 0b 3a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3147,6 +3288,7 @@ rule Trojan_MSIL_Injuke_SCXF_2147924920_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3170,6 +3312,7 @@ rule Trojan_MSIL_Injuke_AKCA_2147925207_0
         $x_1_3 = {02 06 02 06 91 66 d2 9c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3191,6 +3334,7 @@ rule Trojan_MSIL_Injuke_AMX_2147925329_0
         $x_1_1 = {02 06 02 06 91 66 d2 9c [0-255] 02 06 8f ?? 00 00 01 25 71 ?? 00 00 01 1f ?? 59 d2 81}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3214,6 +3358,7 @@ rule Trojan_MSIL_Injuke_ARDA_2147926447_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3238,6 +3383,7 @@ rule Trojan_MSIL_Injuke_ANFA_2147927984_0
         $x_1_4 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3259,6 +3405,7 @@ rule Trojan_MSIL_Injuke_AWGA_2147928715_0
         $x_5_1 = {06 11 08 7e 08 00 00 04 11 08 91 28 ?? 00 00 0a 28 ?? 00 00 06 6f ?? 00 00 0a 11 08 28 ?? 00 00 0a 28 ?? 00 00 06 6f ?? 00 00 0a 8e 69 5d 91 61 d2 9c 00 11 08 17 58 13 08 11 08 7e 08 00 00 04 8e 69 fe 04 13 09 11 09 2d b5}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3280,6 +3427,7 @@ rule Trojan_MSIL_Injuke_SSUB_2147930040_0
         $x_4_1 = {0a 0b 00 07 28 ?? 00 00 0a 03 6f ?? 00 00 0a 6f ?? 00 00 0a 0c 06 08 6f ?? 00 00 0a 00 06 18 6f ?? 00 00 0a 00 06 6f ?? 00 00 0a 0d 09 04 16 04 8e 69 6f ?? 00 00 0a 13 04 de 16}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3301,6 +3449,7 @@ rule Trojan_MSIL_Injuke_SGUD_2147930117_0
         $x_1_1 = {13 05 11 05 09 07 08 6f ?? 00 00 0a 17 73 3f 00 00 0a 13 06 11 06 11 04 16 11 04 8e 69 6f ?? 00 00 0a 11 06 6f ?? 00 00 0a 11 05 6f ?? 00 00 0a 28 ?? 00 00 0a 13 07 de 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3333,6 +3482,7 @@ rule Trojan_MSIL_Injuke_GA_2147931815_0
         $x_1_12 = "$this.SnapToGrid" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3356,6 +3506,7 @@ rule Trojan_MSIL_Injuke_MBWQ_2147931876_0
         $x_1_3 = {6c 00 64 00 72 00 2e 00 65 00 78 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3377,6 +3528,7 @@ rule Trojan_MSIL_Injuke_SWA_2147932324_0
         $x_2_1 = {07 06 08 09 6f 4c 00 00 0a 13 04 08 11 04 58 0c 09 11 04 59 0d 09 16 3d e4 ff ff ff dd 0d 00 00 00 07 39 06 00 00 00 07 6f 8a 00 00 0a dc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3398,6 +3550,7 @@ rule Trojan_MSIL_Injuke_SFUD_2147932394_0
         $x_1_1 = {2b 32 16 2d e4 2b 34 6f ?? 00 00 0a 02 16 02 8e 69 6f ?? 00 00 0a 0b de 38 06 2b cf 28 ?? 00 00 0a 2b cf 6f ?? 00 00 0a 2b ca 06 2b cc 28 ?? 00 00 0a 2b cc 6f ?? 00 00 0a 2b c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3420,6 +3573,7 @@ rule Trojan_MSIL_Injuke_AQKA_2147932791_0
         $x_2_2 = {13 32 11 32 11 2b 11 2e 91 6f ?? 00 00 0a 11 2b 11 2e 11 2b 11 2d 91 9c 11 2b 11 2d 11 32 16 6f ?? 00 00 0a 9c 11 2b 11 2d 91 11 2b 11 2e 91 58 7e ?? 00 00 04 28 ?? 03 00 06 11 2f 7e ?? 00 00 04 28 ?? 03 00 06 7e ?? 00 00 04 28 ?? 03 00 06 7e ?? 00 00 04 28 ?? 03 00 06 5d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3441,6 +3595,7 @@ rule Trojan_MSIL_Injuke_SHLZ_2147933418_0
         $x_2_1 = {03 19 8d 40 00 00 01 25 16 0f 00 28 ?? 00 00 0a 9c 25 17 0f 00 28 ?? 00 00 0a 9c 25 18 0f 00 28 ?? 00 00 0a 9c 6f ?? 00 00 0a 00 2a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3463,6 +3618,7 @@ rule Trojan_MSIL_Injuke_SAS_2147934107_0
         $x_2_2 = {11 01 11 03 11 00 11 03 91 72 61 00 00 70 28 03 00 00 0a 59 d2 9c 20 05 00 00 00 7e 10 00 00 04 7b 52 00 00 04}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3484,6 +3640,7 @@ rule Trojan_MSIL_Injuke_SEA_2147934108_0
         $x_1_1 = {11 0a 1e 7e 66 01 00 04 28 3e 04 00 06 17 8d 22 00 00 01 7e 67 01 00 04 28 42 04 00 06 28 16 00 00 06 7e 56 01 00 04 28 fe 03 00 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3507,6 +3664,7 @@ rule Trojan_MSIL_Injuke_SAT_2147935238_0
         $x_2_3 = "CreateDecryptor" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3528,6 +3686,7 @@ rule Trojan_MSIL_Injuke_AYNA_2147935933_0
         $x_5_1 = {11 05 11 08 18 5b 06 72 61 00 00 70 18 8d 1c 00 00 01 25 16 d0 30 00 00 01 28 ?? 00 00 0a a2 25 17 d0 28 00 00 01 28 ?? 00 00 0a a2 6f ?? 00 00 0a 16 8c 28 00 00 01 18 8d 16 00 00 01 25 16 02 11 08 07 6f ?? 00 00 0a a2 25 17 08 8c 28 00 00 01 a2 6f ?? 00 00 0a a5 31 00 00 01 9c 11 08 18 58 13 08 11 08 11 04 32 97}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3550,6 +3709,7 @@ rule Trojan_MSIL_Injuke_APSA_2147940528_0
         $x_2_2 = {11 04 08 59 02 8e 69 58 02 8e 69 5d 13 05 09 11 05 02 11 04 91 9c 11 04 17 58 13 04 11 04 02 8e 69 32 dd}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

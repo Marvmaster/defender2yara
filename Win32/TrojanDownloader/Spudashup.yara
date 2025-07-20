@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Spudashup_A_2147638883_0
         $x_1_2 = {73 69 6c 65 6e 74 00 00 73 68 6f 77 74 69 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

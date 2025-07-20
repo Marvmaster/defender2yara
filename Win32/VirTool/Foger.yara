@@ -28,6 +28,7 @@ rule VirTool_Win32_Foger_A_2147602261_0
         $x_1_13 = "Asynchronous\"=dword:00000001" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 9 of ($x_1_*))) or
             ((3 of ($x_3_*) and 6 of ($x_1_*))) or

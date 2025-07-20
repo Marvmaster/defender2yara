@@ -20,6 +20,7 @@ rule Trojan_MSIL_Steam_AMQ_2147788368_0
         $x_3_5 = "DebuggerHiddenAttribute" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

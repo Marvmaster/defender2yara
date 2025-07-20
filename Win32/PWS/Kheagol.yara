@@ -20,6 +20,7 @@ rule PWS_Win32_Kheagol_B_2147624364_0
         $x_1_6 = {61 66 87 d2 c6 44 24 ?? 76 [0-3] c6 44 24 ?? 61 [0-2] c6 44 24 ?? 6e [0-2] c6 44 24 ?? 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -55,6 +56,7 @@ rule PWS_Win32_Kheagol_E_2147643637_0
         $x_1_12 = {68 37 bd 4f 84}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 7 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or
@@ -89,6 +91,7 @@ rule PWS_Win32_Kheagol_D_2147643638_0
         $x_1_6 = {68 37 bd 4f 84}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_5_*))) or
@@ -116,6 +119,7 @@ rule PWS_Win32_Kheagol_G_2147649842_0
         $x_1_4 = {68 bd d9 e9 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

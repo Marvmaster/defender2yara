@@ -29,6 +29,7 @@ rule VirTool_Win32_CryptDropper_2147775375_0
         $x_1_14 = "SHELLCODEEXECUTE" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_PoolInject_GA_2147933552_0
         $x_3_2 = {0f b6 c8 48 8b 44 24 38 48 d3 e8 48 25 ff 00 00 00 48 63 4c 24 24 48 8b 54 24 28 48 03 d1 48 8b ca 48 8b 54 24 30 88 04 0a}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_PoolInject_BR_2147935039_0
         $x_1_3 = {45 88 4c 03 ?? 41 88 4c 03 ?? 48 83 c7 08 48 81 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win64_PoolInject_GVA_2147941529_0
         $x_1_1 = {4c 8b 00 41 0f b6 81 ?? ?? ?? ?? 42 0f b6 14 0a 42 32 14 08 43 30 14 10 49 ff c2 48 8b 41 08 4c 3b 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

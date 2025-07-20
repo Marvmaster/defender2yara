@@ -17,6 +17,7 @@ rule Backdoor_Win32_Faitypelf_A_2147621485_0
         $x_1_3 = "[msnbot]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_Faitypelf_B_2147629962_0
         $x_1_4 = {8b 74 a9 04 80 3e 2d 0f 84}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

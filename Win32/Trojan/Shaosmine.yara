@@ -21,6 +21,7 @@ rule Trojan_Win32_Shaosmine_J_2147743090_0
         $x_1_6 = ".Write objHTTP.ResponseBody" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Shaosmine_AA_2147744701_0
         $x_1_4 = "objHTTP.Open \"GET\", strLink, False" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

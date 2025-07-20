@@ -18,6 +18,7 @@ rule HackTool_Win64_KrakenMask_A_2147928580_0
         $x_1_4 = {48 89 85 e8 2e 00 00 48 8b 85 e8 2e 00 00 48 05 00 10 00 00 48 89 85 e8 2e 00 00 41 b8 00 50 00 00 ba 08 00 00 00 48 8b 8d c8 2e 00 00 ff 15 ?? ?? ?? ?? 48 89 85 08 2f 00 00 48 8b 85 08 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

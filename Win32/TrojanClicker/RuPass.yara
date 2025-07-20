@@ -38,6 +38,7 @@ rule TrojanClicker_Win32_RuPass_B_2147605465_0
         $x_100_24 = "{6D7B211A-88EA-490c-BAB9-3600D8D7C503}" ascii //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 6 of ($x_10_*) and 1 of ($x_5_*) and 12 of ($x_1_*))) or
             ((2 of ($x_100_*) and 7 of ($x_10_*) and 7 of ($x_1_*))) or
@@ -70,6 +71,7 @@ rule TrojanClicker_Win32_RuPass_18128_0
         $x_1_8 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -111,6 +113,7 @@ rule TrojanClicker_Win32_RuPass_18128_1
         $x_6_17 = {00 52 75 50 61 73 73 20 25 73 00}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 8 of ($x_1_*))) or
             ((3 of ($x_4_*) and 4 of ($x_1_*))) or
@@ -162,6 +165,7 @@ rule TrojanClicker_Win32_RuPass_18128_2
         $x_10_16 = "Release\\RuPass.pdb" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 10 of ($x_1_*))) or
             ((5 of ($x_10_*))) or

@@ -17,6 +17,7 @@ rule Trojan_MacOS_Nukesped_G_2147830629_0
         $x_1_2 = {35 70 22 6b 8d 06 a5 6c 4b bd 96 06 0a 93 35 0f e4 42 ca c0 60 43 8d 59 35 e8 91 6e 19 18 df 99 5a 4b 19 ca 65 4e 99 91 c7 5d e0 81 73 98 89 e8 47 0c a4 7e ea 5f 19 29 97 46 d3 d1 78 2c 92 5c a3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (1 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MacOS_Nukesped_H_2147850534_0
         $x_1_2 = {35 35 35 35 34 39 34 34 65 34 35 34 36 30 31 33 64 62 30 66 33 35 38 35 62 63 37 30 36 62 65 32 34 35 35 64 30 38 34 65 00 fe 91 3b 84 0b 01 ce 04 da a4 bd 1f e8 61 14 b4 4e 79 d1 92 0c ac d2 4b b0 0e 38 ad 3f 88 54 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (1 of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_MacOS_Nukesped_I_2147919059_0
         $x_1_2 = {8b 4d ec 89 ce c1 ee 02 83 e6 3f 42 8a 34 06 89 c7 40 88 34 3a c1 e1 04 83 e1 30 44 89 ce c1 ee 04 83 e6 0f 48 09 ce 41 8a 0c 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_MacOS_Nukesped_J_2147920164_0
         $x_1_5 = "buy2x.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_MacOS_Nukesped_K_2147923437_0
         $x_1_2 = {48 89 45 f8 75 ?? 48 8b 3d d0 69 00 00 e8 ?? ?? ?? ?? 48 89 c7 e8 ?? ?? ?? ?? 48 89 c1 48 89 c8 48 89 0d f6 6c 00 00 48 89 45 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Trojan_MacOS_Nukesped_L_2147934089_0
         $x_1_2 = {48 89 df 31 f6 4c 89 f2 48 89 c1 e8 46 08 00 00 49 89 c7 49 89 d4 48 89 df 48 8b 75 b0 48 8b 45 b8 ff 50 08 4c 89 e0 48 c1 e8 38}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

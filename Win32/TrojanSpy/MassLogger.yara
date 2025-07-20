@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_MassLogger_MB_2147764056_0
         $x_1_1 = {8a 18 80 f3 ?? 8b fa 03 fe 88 1f 8b da 03 de 80 33 ?? 46 40 49 75 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

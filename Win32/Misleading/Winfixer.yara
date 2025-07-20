@@ -20,6 +20,7 @@ rule Misleading_Win32_Winfixer_199425_0
         $x_1_6 = "deld.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Misleading_Win32_Winfixer_199425_1
         $x_1_6 = "DriveCleanerUpdaterTerminationEvent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Misleading_Win32_Winfixer_199425_2
         $x_1_8 = "Deus Cleaner" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Misleading_Win32_Winfixer_199425_3
         $x_1_5 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Misleading_Win32_Winfixer_199425_4
         $x_1_6 = "profile\\cookies4.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -148,6 +153,7 @@ rule Misleading_Win32_Winfixer_199425_5
         $x_1_8 = "advancedcleaner.com|UADC" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -181,6 +187,7 @@ rule Misleading_Win32_Winfixer_199425_6
         $x_1_11 = "!.lnk+%WBn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -208,6 +215,7 @@ rule Misleading_Win32_Winfixer_199425_7
         $x_1_8 = {68 84 00 00 00 50 8d 4c 24 20 e8 ?? ?? ?? ff 57 68 85 00 00 00 e8 ?? ?? ?? ff 83 c4 08 3b c7 74 0f 68 85 00 00 00 50 8d 4c 24 2c e8 ?? ?? ?? ff 57 68 82 00 00 00 e8 ?? ?? ?? ff 83 c4 08 3b c7 74 0f 68 82 00 00 00 50 8d 4c 24 14 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -234,6 +242,7 @@ rule Misleading_Win32_Winfixer_199425_8
         $x_1_7 = {70 00 72 00 6f 00 66 00 69 00 6c 00 65 00 5c 00 63 00 6f 00 6f 00 6b 00 69 00 65 00 73 00 34 00 2e 00 64 00 61 00 74 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

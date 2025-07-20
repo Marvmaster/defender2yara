@@ -21,6 +21,7 @@ rule Trojan_MSIL_NightingaleStealer_IKAA_2147905625_0
         $x_1_6 = "{9}[14][22][15][11][5]" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

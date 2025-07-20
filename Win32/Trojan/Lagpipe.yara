@@ -18,6 +18,7 @@ rule Trojan_Win32_Lagpipe_B_2147834813_0
         $x_1_3 = "C:\\OneDriveTemp\\Windows\\system32\\DriverStore\\FileRepository\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Suridel_A_2147655174_0
         $x_1_4 = "#VIRUS 2005\\virus rundll32" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_Nufsys_A_2147734002_0
         $x_10_2 = "sysfun" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

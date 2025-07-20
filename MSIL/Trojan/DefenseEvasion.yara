@@ -22,6 +22,7 @@ rule Trojan_MSIL_DefenseEvasion_RK_2147819141_0
         $x_1_7 = "aHR0cDovL2xvY2FsaG9zdC90ZXN0L3BpbmcucGhw" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

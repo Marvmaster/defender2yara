@@ -19,6 +19,7 @@ rule Trojan_Linux_Reptile_A_2147849292_0
         $x_4_5 = {2f 72 65 70 74 69 6c 65 2f 72 65 70 74 69 6c 65 5f 63 6d 64 ?? 66 69 6c 65 2d 74 61 6d 70 65 72 69 6e 67}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -49,6 +50,7 @@ rule Trojan_Linux_Reptile_B_2147849293_0
         $x_1_7 = "#</reptile>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Trojan_Linux_Reptile_C_2147849294_0
         $x_1_7 = "init_module" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_10_*) and 2 of ($x_2_*))) or
@@ -106,6 +109,7 @@ rule Trojan_Linux_Reptile_D_2147849295_0
         $x_1_8 = "[01;31mFailed!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((3 of ($x_5_*) and 2 of ($x_1_*))) or
             ((4 of ($x_5_*))) or

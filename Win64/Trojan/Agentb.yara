@@ -17,6 +17,7 @@ rule Trojan_Win64_Agentb_GDI_2147943974_0
         $x_5_2 = {33 c9 89 5c 24 ?? 83 64 24 ?? 00 ff 15 ?? ?? ?? ?? 85 c0 0f 84 ?? ?? ?? ?? 48 8b 4c 24 ?? 4c 8d 4d ?? 48 8d 95 ?? ?? ?? ?? 45 33 c0 89 5c 24 ?? c7 44 24 ?? 00 30 00 00 ff 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

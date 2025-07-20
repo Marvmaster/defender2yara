@@ -22,6 +22,7 @@ rule Trojan_MSIL_Loksec_A_2147691473_0
         $x_1_8 = "AeLookupSvi\\obj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

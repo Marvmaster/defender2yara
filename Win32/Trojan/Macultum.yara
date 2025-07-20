@@ -19,6 +19,7 @@ rule Trojan_Win32_Macultum_J_2147684701_0
         $x_10_5 = "(socks|http)=([^:]+):(\\d+)" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -47,6 +48,7 @@ rule Trojan_Win32_Macultum_A_2147684930_0
         $x_1_4 = "Mutual install | remove" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -74,6 +76,7 @@ rule Trojan_Win32_Macultum_B_2147684931_0
         $x_1_3 = "wbt_media/mutualpublic" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

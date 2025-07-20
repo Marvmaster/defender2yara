@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Sheloraki_A_2147653637_0
         $x_1_9 = "DD48ED59EF39" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 3 of ($x_1_*))) or
             ((5 of ($x_2_*) and 1 of ($x_1_*))) or

@@ -19,6 +19,7 @@ rule VirTool_Win64_Telzsor_A_2147841302_0
         $x_1_4 = {48 89 45 28 48 8b 95 48 01 00 00 48 8d 0d c8 46 13 00 e8 ?? ?? ?? ?? 48 8b 00 48 89 45 48 48 8b 85 50 01 00 00 48 89 85 18 01 00 00 48 83 bd 18 01 00 00 00 74 31}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

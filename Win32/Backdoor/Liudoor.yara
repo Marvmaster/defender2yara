@@ -25,6 +25,7 @@ rule Backdoor_Win32_Liudoor_A_2147705688_0
         $x_1_10 = {44 69 67 69 74 61 6c 4c 69 73 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -51,6 +52,7 @@ rule Backdoor_Win32_Liudoor_B_2147705689_0
         $x_1_3 = {55 8b ee 81 ed ?? ?? ?? ?? 8a 84 2a ?? ?? ?? ?? 8b fe 34 1f 83 c9 ff 88 82 ?? ?? ?? ?? 33 c0 42 f2 ae f7 d1 49 3b d1 72 e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

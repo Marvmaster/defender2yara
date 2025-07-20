@@ -17,6 +17,7 @@ rule Trojan_WinNT_Seedna_A_2147685293_0
         $x_2_3 = {57 68 44 52 56 4d 50 6a 01}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Backdoor_Win32_Cryshot_A_2147710502_0
         $x_10_3 = ".nn-group.co/req" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

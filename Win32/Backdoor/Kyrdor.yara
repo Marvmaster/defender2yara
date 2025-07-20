@@ -24,6 +24,7 @@ rule Backdoor_Win32_Kyrdor_F_2147595006_0
         $x_1_10 = "rdssrv2.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_5_*) and 4 of ($x_1_*))) or
             ((3 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or

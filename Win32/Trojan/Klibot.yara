@@ -18,6 +18,7 @@ rule Trojan_Win32_Klibot_A_2147662744_0
         $x_1_4 = {8a 04 1e 83 c9 ff 30 04 3a 8b fb 33 c0 46 f2 ae f7 d1 49 3b f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

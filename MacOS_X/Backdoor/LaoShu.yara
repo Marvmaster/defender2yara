@@ -22,6 +22,7 @@ rule Backdoor_MacOS_X_LaoShu_A_2147685132_0
         $x_2_8 = "com.andrew.utility" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (6 of ($x*))
 }
 

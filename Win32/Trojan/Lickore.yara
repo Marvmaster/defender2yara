@@ -20,6 +20,7 @@ rule Trojan_Win32_Lickore_A_2147646071_0
         $x_2_6 = {8d 70 10 83 c4 04 89 74 24 14 c6 84 24 ?? ?? ?? ?? 07 83 7e f4 00 0f 8c 94 12 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -47,6 +48,7 @@ rule Trojan_Win32_Lickore_B_2147655858_0
         $x_1_4 = {6a 61 76 61 73 63 72 69 70 74 3a [0-32] 61 62 6f 75 74 3a 62 6c 61 6e 6b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

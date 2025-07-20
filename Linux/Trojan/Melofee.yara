@@ -22,6 +22,7 @@ rule Trojan_Linux_Melofee_B_2147844327_0
         $x_2_7 = {83 7d e8 00 75 ?? c7 45 ec 03 00 00 00 eb 0e 8b 45 ec 89 c7 e8 ?? ?? ?? ?? 83 45 ec 01 81 7d ec fe 00 00 00 0f 9e c0 84 c0 75 ?? be 00 00 00 00 bf 4a 1d 40 00 e8 ?? ?? ?? ?? bf 01 00 00 00 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Trojan_Linux_Melofee_A_2147844752_0
         $x_1_2 = {5b 22 ce 1f 6b 8a 5d b3 85 ca be ec 23 0a 7e 31 c7 67 42 73 f1 28 bf 34 0f 32 40 55 6e 6b f0 25 8e 6e f7 f4 f9 31 d1 c4 cd df f3 f7 18 bb a0 d2 a6 d9 51 be 28 86 a8 bf 74 f4 58 2c 82 e1 0b ff c3 68 fc 40 33 62 27 65 0d ae 53 15 6b 09 53 ea 0c cd c8 61 51 01 ab 8d 4e 57 3a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

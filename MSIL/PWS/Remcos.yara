@@ -25,6 +25,7 @@ rule PWS_MSIL_Remcos_AA_2147772555_0
         $x_1_10 = "config\\job-list.xml" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

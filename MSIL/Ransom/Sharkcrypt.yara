@@ -19,6 +19,7 @@ rule Ransom_MSIL_Sharkcrypt_B_2147717033_0
         $x_1_5 = "default_price" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -46,6 +47,7 @@ rule Ransom_MSIL_Sharkcrypt_A_2147717034_0
         $x_1_5 = "Decryptor.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or

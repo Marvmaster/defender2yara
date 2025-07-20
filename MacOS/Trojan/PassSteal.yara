@@ -18,6 +18,7 @@ rule Trojan_MacOS_PassSteal_A_2147850517_0
         $x_1_4 = "firefox..modules..data_stealers..DataStealer$GT$13get_passwords" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MacOS_PassSteal_AB_2147897379_0
         $x_1_4 = "dscl /Local/Default -authonly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -66,6 +68,7 @@ rule Trojan_MacOS_PassSteal_A_2147920007_0
         $x_1_2 = {55 48 89 e5 48 83 ec 20 48 89 7d f8 48 83 ff 00 0f 9c c0 a8 01 75 ?? 48 8b 4d f8 31 c0 48 39 c8 7c ?? 48 8b 3d 8f 4d 00 00 e8 ea 34 00 00 48 8b 05 83 4d 00 00 48 89 45 f0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_MacOS_PassSteal_B_2147935647_0
         $x_1_2 = {fd 7b bf a9 fd 03 00 91 ff 83 01 d1 a8 03 1c f8 a0 83 1a f8 a1 03 1d f8 a2 83 1d f8 a3 03 1e f8 a4 83 1e f8 e8 03 01 aa a8 83 1f f8 e8 03 02 aa a8 03 1f f8 00 00 80 d2 ed 22 00 94 a2 03 5d f8 a1 83 5a f8 a0 83 1b f8 08 80 5f f8 08 21 40 f9 08 fd 40 d3 08 3d 00 91 09 ed 7c 92 a9 03 1b f8 50 00 00 f0 10 4a 40 f9 00 02 3f d6 a9 03 5b f8 e8 03 00 91 00 01 09 eb a0 83 1c f8 1f 00 00 91 48 80 5f f8 08 09 40 f9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

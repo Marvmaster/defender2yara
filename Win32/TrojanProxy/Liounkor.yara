@@ -17,6 +17,7 @@ rule TrojanProxy_Win32_Liounkor_A_2147679847_0
         $x_1_3 = {68 b8 22 00 00 e8 ?? ?? ?? ?? 66 89 85 06 ed ff ff 8a 0d ?? ?? ?? ?? 88 8d 00 ff ff ff b9 3f 00 00 00 33 c0 8d bd 01 ff ff ff f3 ab 66 ab aa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

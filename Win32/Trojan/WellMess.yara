@@ -25,6 +25,7 @@ rule Trojan_Win32_WellMess_A_2147760031_0
         $x_3_10 = "Go build ID: \"bb423eb5fe835ec3449adefdb3b66421a0b6f7be" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -56,6 +57,7 @@ rule Trojan_Win32_WellMess_B_2147760032_0
         $x_1_6 = "fakeLocker" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

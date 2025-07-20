@@ -33,6 +33,7 @@ rule Trojan_Win32_Spabot_A_2147604729_0
         $x_5_18 = "Sylpheed version 0.8.2 (GTK+ 1.2.10; i586-alt-linux)" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_50_*) and 10 of ($x_5_*))) or
             ((4 of ($x_50_*))) or

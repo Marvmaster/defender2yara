@@ -22,6 +22,7 @@ rule Trojan_Win64_Cipduk_STA_2147942962_0
         $x_1_8 = {73 80 48 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -53,6 +54,7 @@ rule Trojan_Win64_Cipduk_STB_2147943426_0
         $x_1_7 = {62 34 89 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or

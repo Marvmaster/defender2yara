@@ -26,6 +26,7 @@ rule TrojanSpy_Win64_Logzteca_A_2147690323_0
         $x_1_12 = "GET HTTP://%s:%d/Photos/Query.cgi?loginid=%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or

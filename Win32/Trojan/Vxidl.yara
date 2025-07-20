@@ -21,6 +21,7 @@ rule Trojan_Win32_Vxidl_C_2147595639_0
         $x_2_6 = {23 31 00 00 23 32 00 00 53 4f 46 54 57 41 52 45}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or
@@ -64,6 +65,7 @@ rule Trojan_Win32_Vxidl_D_2147595640_0
         $x_1_18 = "vx.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 10 of ($x_1_*))) or
             ((2 of ($x_2_*) and 8 of ($x_1_*))) or

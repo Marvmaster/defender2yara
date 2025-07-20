@@ -17,6 +17,7 @@ rule Trojan_Win32_ParallaxRat_CCEE_2147896974_0
         $x_1_2 = {30 0e 46 4f 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_ParallaxRat_APA_2147917660_0
         $x_1_2 = {8b ec 83 c4 f0 89 4d f4 89 55 f8 89 45 fc 68 fc 69 40 00 68 10 6a 40 00 e8 02 fa ff ff 89 45 f0 68 18 6a 40 00 e8 65 fc ff ff 8b 55 fc 89 02 68 28 6a 40 00 e8 56 fc ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

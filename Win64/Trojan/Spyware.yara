@@ -19,6 +19,7 @@ rule Trojan_Win64_Spyware_NV_2147920283_0
         $x_1_4 = "[Steelerino 1.0] executed on target:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Trojan_Win64_GoStealer_DB_2147899516_0
         $x_1_5 = "_cgo_dummy_export" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

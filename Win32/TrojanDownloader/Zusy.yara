@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Zusy_SIB_2147817769_0
         $x_1_2 = {83 c0 01 89 45 ?? 8b 4d 00 3b 0d ?? ?? ?? ?? 73 ?? 8b 15 ?? ?? ?? ?? 03 55 00 0f b6 02 33 05 ?? ?? ?? ?? 03 05 ?? ?? ?? ?? 8b 0d 04 03 4d 00 88 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win32_Zusy_HNB_2147928956_0
         $x_2_3 = {00 6d 00 73 00 69 00 65 00 78 00 65 00 63 00 2e 00 65 00 78 00 65 00 00 00 5c 00 70 6f 77 65 72 73 68 65 6c 6c 20 2d 43 6f 6d 6d 61 6e 64 20}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule TrojanDownloader_Win32_Zusy_HNA_2147928997_0
         $x_20_12 = {34 c7 66 02 13 13 f7 55 fe 7d de 55}  //weight: 20, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_10_*) and 7 of ($x_1_*))) or
             ((2 of ($x_20_*))) or
@@ -101,6 +104,7 @@ rule TrojanDownloader_Win32_Zusy_AZS_2147935782_0
         $x_2_5 = "lderd\\Release\\lderd.pdb" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanSpy_MSIL_Mestepy_A_2147724778_0
         $x_1_4 = "https://api.imgur.com/3/upload.xml" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

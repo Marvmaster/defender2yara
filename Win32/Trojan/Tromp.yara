@@ -18,6 +18,7 @@ rule Trojan_Win32_Tromp_A_2147595044_0
         $x_1_4 = {74 00 61 00 73 00 6b 00 64 00 69 00 72 00 00 00 74 00 61 00 73 00 6b 00 64 00 69 00 72 00 00 00 61 64 76}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

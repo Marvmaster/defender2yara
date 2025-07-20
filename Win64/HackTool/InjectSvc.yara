@@ -18,6 +18,7 @@ rule HackTool_Win64_InjectSvc_A_2147740603_0
         $x_1_4 = "opening process" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

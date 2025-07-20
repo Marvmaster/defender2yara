@@ -56,6 +56,7 @@ rule Trojan_Win32_BravePrince_A_2147725912_0
         $x_1_41 = {00 68 74 74 70 3a 2f 2f 6e 69 64 2d 68 65 6c 70 2d 70 63 68 61 6e 67 65 2e 61 74 77 65 62 70 61 67 65 73 2e 63 6f 6d 2f 68 6f 6d 65 2f 77 65 62 2f 64 6f 77 6e 6c 6f 61 64 2e 70 68 70 3f 66 69 6c 65 6e 61 6d 65 3d 25 73 26 6b 65 79 3d 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 21 of ($x_1_*))) or
             ((4 of ($x_3_*) and 18 of ($x_1_*))) or

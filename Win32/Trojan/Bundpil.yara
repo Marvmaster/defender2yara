@@ -17,6 +17,7 @@ rule Trojan_Win32_Bundpil_BQ_2147783318_0
         $x_1_2 = {8b 0d 80 31 00 10 03 4d e4 0f b6 11 33 15 8c 31 00 10 2b 15 84 31 00 10 f7 d2 a1 80 31 00 10 03 45 e4 88 10 eb c6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

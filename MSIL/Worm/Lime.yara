@@ -17,6 +17,7 @@ rule Worm_MSIL_Lime_A_2147727181_0
         $x_1_2 = "Module Nervousness" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

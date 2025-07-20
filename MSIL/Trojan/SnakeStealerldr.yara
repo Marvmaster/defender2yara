@@ -40,6 +40,7 @@ rule Trojan_MSIL_SnakeStealerldr_MK_2147772759_0
         $x_1_25 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

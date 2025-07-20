@@ -17,6 +17,7 @@ rule VirTool_MSIL_CeeInject_C_2147599186_0
         $x_1_2 = {08 11 11 08 58 46 52 08 46 11 14 61 13 0a 08 11 0a 52 11 0a 11 15 61 13 09 08 11 09 52 08 11 09 11 16 61 52 11 04 17 58 13 04 08 17 58 0c 11 04 11 06 20 00 66 06 00 58 4a 37 c5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule VirTool_MSIL_CeeInject_WP_2147725139_0
         $x_1_2 = "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule VirTool_MSIL_CeeInject_DS_2147725404_0
         $x_1_3 = {52 61 00 53 61 6e 70 65 69 00 4f 72 61 63 6c 65 00 56 4e 43}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule VirTool_MSIL_CeeInject_AAO_2147733547_0
         $x_1_8 = "53618e4191a94a52b822ae485784852f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 3 of ($x_1_*))) or
             ((4 of ($x_2_*) and 1 of ($x_1_*))) or

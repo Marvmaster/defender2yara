@@ -18,6 +18,7 @@ rule Trojan_Win32_Sryndort_A_2147708049_0
         $x_1_4 = {8b 44 24 30 c1 e2 08 33 d3 8b 18 33 da 89 18 8b 5c 24 2c 43 83 ff 08 89 5c 24 2c 74 2b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

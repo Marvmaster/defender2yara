@@ -20,6 +20,7 @@ rule Trojan_Win32_Getawa_C_2147777797_0
         $x_1_5 = "del %windir%\\system32\\taskho-8.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

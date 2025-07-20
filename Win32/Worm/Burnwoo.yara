@@ -16,6 +16,7 @@ rule Worm_Win32_Burnwoo_B_2147686432_0
         $x_1_2 = ".%s/w.php?id=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule HackTool_Win64_Mikatz_2147657556_0
         $x_1_5 = "Unable to communicate with the driver mimikatz" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule HackTool_Win64_Mikatz_2147705511_0
         $x_1_5 = "samenumeratedomainsinsamserver" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule HackTool_Win64_Mikatz_2147705511_1
         $x_1_4 = "Raw command (not implemented yet) : %s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule HackTool_Win64_Mikatz_2147705511_2
         $x_1_6 = "mimikatz 2.0 alpha (x64)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -265,6 +269,7 @@ rule HackTool_Win64_Mikatz_SBR_2147773687_0
         $x_1_9 = "gentilkiwi" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 7 of ($x_1_*))) or
             ((2 of ($x_2_*) and 5 of ($x_1_*))) or

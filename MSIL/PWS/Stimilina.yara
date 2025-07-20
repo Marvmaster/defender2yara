@@ -18,6 +18,7 @@ rule PWS_MSIL_Stimilina_A_2147694385_0
         $x_4_4 = "smtp.mail.ru" wide //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_4_*) and 1 of ($x_2_*))) or
             (all of ($x*))
@@ -83,6 +84,7 @@ rule PWS_MSIL_Stimilina_A_2147694385_1
         $x_3_43 = "sadlasdll@mail.ru" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -114,6 +116,7 @@ rule PWS_MSIL_Stimilina_B_2147694649_0
         $x_2_7 = {2f 00 2f 00 73 00 65 00 6e 00 64 00 2d 00 69 00 6d 00 61 00 67 00 65 00 2e 00 75 00 73 00 2f 00 [0-16] 2e 00 70 00 68 00 70 00 3f 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -146,6 +149,7 @@ rule PWS_MSIL_Stimilina_B_2147694649_1
         $x_4_8 = {74 73 65 63 72 65 74 34 36 37 [0-16] 40 67 6d 61 69 6c 2e 63 6f 6d}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -176,6 +180,7 @@ rule PWS_MSIL_Stimilina_C_2147694676_0
         $x_3_4 = "SteamWorker" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +208,7 @@ rule PWS_MSIL_Stimilina_C_2147694676_1
         $x_12_8 = "//files.sellexpo.net/" wide //weight: 12
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_8_*) and 3 of ($x_2_*))) or
             ((1 of ($x_8_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -239,6 +245,7 @@ rule PWS_MSIL_Stimilina_D_2147694726_0
         $x_2_5 = "127.0.0.1 steamcommunity.com" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
@@ -268,6 +275,7 @@ rule PWS_MSIL_Stimilina_D_2147694726_1
         $x_4_6 = {68 00 74 00 74 00 70 00 3a 00 2f 00 2f [0-48] 2f [0-48] 2e 00 70 00 68 00 70 00 02 68 00 74 00 74 00 70 00 3a 00 2f 00 2f 00 2f [0-48] 2f 00 73 00 74 00 65 00 61 00 6d 00 2e 00 65 00 78 00 65}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -297,6 +305,7 @@ rule PWS_MSIL_Stimilina_E_2147694854_0
         $x_5_5 = {8d 07 00 00 01 13 06 11 06 16 1f 2f 9d 11 06 6f 06 00 00 0a 0c 72 ?? ?? 00 70 03 28 07 00 00 0a 0d 08 13 07 16 13 08}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +330,7 @@ rule PWS_MSIL_Stimilina_F_2147697216_0
         $x_2_5 = {2f 00 63 00 70 00 2f 00 6c 00 6f 00 67 00 73 00 5f 00 70 00 72 00 69 00 6e 00 74 00 2e 00 70 00 68 00 70 00 3f 00 73 00 69 00 64 00 3d 00 73 00 74 00 65 00 61 00 6d 00 [0-4] 26 00 6d 00 3d 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -353,6 +363,7 @@ rule PWS_MSIL_Stimilina_G_2147706592_0
         $x_1_9 = "Steam Login" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -378,6 +389,7 @@ rule PWS_MSIL_Stimilina_H_2147706818_0
         $x_1_6 = "\\Opera\\wand.dat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -406,6 +418,7 @@ rule PWS_MSIL_Stimilina_I_2147707030_0
         $x_1_9 = "GrabTxtOnDeskTop" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -434,6 +447,7 @@ rule PWS_MSIL_Stimilina_N_2147707782_0
         $x_1_6 = ": form-data; name=\"{1}\"; filename=\"{2}\";" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -460,6 +474,7 @@ rule PWS_MSIL_Stimilina_O_2147712060_0
         $x_1_6 = "Report.jfl" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -488,6 +503,7 @@ rule PWS_MSIL_Stimilina_Q_2147719008_0
         $x_1_8 = "Yandex\\YandexBrowser\\User Data\\Default\\Login Data" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_3_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -522,6 +538,7 @@ rule PWS_MSIL_Stimilina_P_2147719016_0
         $x_1_10 = "encryptedPassword" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -546,6 +563,7 @@ rule PWS_MSIL_Stimilina_R_2147722624_0
         $x_1_4 = {54 6f 42 61 73 65 36 34 53 74 72 69 6e 67 00 43 72 65 61 74 65 45 6e 63 72 79 70 74 6f 72 00 43 72 65 61 74 65 44 65 63 72 79 70 74 6f 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

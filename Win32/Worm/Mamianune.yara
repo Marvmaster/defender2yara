@@ -20,6 +20,7 @@ rule Worm_Win32_Mamianune_2147584583_0
         $x_1_6 = "Content-Transfer-Encoding: base64" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))

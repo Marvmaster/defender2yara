@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Neobar_225451_0
         $x_1_4 = "Chromium.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule BrowserModifier_Win32_Neobar_225451_1
         $x_1_3 = "\\uninstall.exe\" /exb \"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule BrowserModifier_Win32_Neobar_225451_2
         $x_1_4 = "\\Torrent Search" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule BrowserModifier_Win32_Neobar_225451_3
         $x_1_5 = {54 00 6f 00 72 00 72 00 65 00 6e 00 74 00 20 00 53 00 65 00 61 00 72 00 63 00 68 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -112,6 +116,7 @@ rule BrowserModifier_Win32_Neobar_225451_4
         $x_1_3 = {66 00 69 00 6c 00 65 00 73 00 2e 00 61 00 70 00 70 00 73 00 61 00 70 00 69 00 2e 00 69 00 6e 00 66 00 6f 00 2f 00 75 00 70 00 64 00 61 00 74 00 65 00 73 00 2f 00 2b 03 03 00 2f 00 [0-32] 2f 00 75 00 70 00 64 00 61 00 74 00 65 00 [0-4] 2e 00 65 00 78 00 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +141,7 @@ rule BrowserModifier_Win32_Neobar_225451_5
         $x_1_5 = "{FF20459C-DA6E-41A7-80BC-8F4FEFD9C575}" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -162,6 +168,7 @@ rule BrowserModifier_Win32_Neobar_225451_6
         $x_1_4 = "/SUPPRESSMSGBOXES /NORESTART /S /UPDATE /VERYSILENT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule BrowserModifier_Win32_Neobar_225451_7
         $x_1_6 = "VK OK AdBlock Setup" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -213,6 +221,7 @@ rule BrowserModifier_Win32_Neobar_225451_8
         $x_1_4 = {66 00 69 00 6c 00 65 00 73 00 2e 00 61 00 70 00 70 00 73 00 61 00 70 00 69 00 2e 00 69 00 6e 00 66 00 6f 00 2f 00 75 00 70 00 64 00 61 00 74 00 65 00 73 00 2f 00 2b 03 03 00 2f 00 [0-32] 2f 00 2b 08 08 00 2e 00 74 00 78 00 74 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -240,6 +249,7 @@ rule BrowserModifier_Win32_Neobar_225451_9
         $x_1_8 = "InstallerCab.exe\" \"%s\\install.bat\"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -270,6 +280,7 @@ rule BrowserModifier_Win32_Neobar_225451_10
         $x_1_11 = "FF20459C-DA6E-41A7-80BC-8F4FEFD9C575" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -317,6 +328,7 @@ rule BrowserModifier_Win32_Neobar_225451_11
         $x_1_25 = "::#45(t .r7, i 0, i" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_16_*))) or
             (all of ($x*))

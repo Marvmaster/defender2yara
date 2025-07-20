@@ -18,6 +18,7 @@ rule Ransom_Win32_Cryptscam_2147725256_0
         $x_2_4 = "MZ.......................................................!......." ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

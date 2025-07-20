@@ -18,6 +18,7 @@ rule Trojan_MSIL_SilkStealer_A_2147844268_0
         $x_2_3 = "Nss3CouldNotBeLoaded" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

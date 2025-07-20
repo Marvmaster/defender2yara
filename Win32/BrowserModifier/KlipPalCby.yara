@@ -17,6 +17,7 @@ rule BrowserModifier_Win32_KlipPalCby_208229_0
         $x_1_3 = {6b 00 6d 00 73 00 56 00 65 00 72 00 73 00 69 00 6f 00 6e 00 ?? ?? 69 00 6e 00 73 00 74 00 61 00 6c 00 6c 00 65 00 72 00 41 00 72 00 67 00 75 00 6d 00 65 00 6e 00 74 00 73 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule BrowserModifier_Win32_KlipPalCby_208229_1
         $x_1_5 = "Software\\Microsoft\\Internet Explorer\\ApprovedExtensionsMigration" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

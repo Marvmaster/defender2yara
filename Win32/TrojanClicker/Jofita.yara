@@ -16,6 +16,7 @@ rule TrojanClicker_Win32_Jofita_A_2147611497_0
         $x_1_2 = {3b f7 6a 02 5b 0f 84 e8 00 00 00 83 c6 0c eb 02 03 f3 0f b7 06}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule VirTool_Win64_Inzektor_A_2147836617_0
         $x_1_4 = {41 b8 04 01 00 00 48 8d 4c 24 6c 48 8b d7 ff 15 ?? ?? ?? ?? 85 c0 74 ?? 48 8d ?? ?? ?? 48 8b cb ff 15 ?? ?? ?? ?? 85 c0 75 ?? 33 db}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

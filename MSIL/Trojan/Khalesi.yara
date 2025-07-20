@@ -16,6 +16,7 @@ rule Trojan_MSIL_Khalesi_NA_2147906171_0
         $x_5_1 = {61 60 13 00 ?? ?? 17 58 13 03 11 03 02}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

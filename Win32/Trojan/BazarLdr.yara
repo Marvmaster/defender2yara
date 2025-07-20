@@ -20,6 +20,7 @@ rule Trojan_Win32_BazarLdr_C_2147766864_0
         $x_1_5 = "autorun" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Trojan_Win32_BazarLdr_A_2147766895_0
         $x_1_4 = "&Clear All Events" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +75,7 @@ rule Trojan_Win32_BazarLdr_XA_2147768913_0
         $x_1_6 = "CryptAcquireContextA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

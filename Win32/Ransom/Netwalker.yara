@@ -22,6 +22,7 @@ rule Ransom_Win32_Netwalker_GM_2147756665_0
         $x_5_7 = "File decrypted" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 1 of ($x_2_*))) or
             (all of ($x*))

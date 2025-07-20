@@ -17,6 +17,7 @@ rule Trojan_MacOS_Spynion_A_2147923814_0
         $x_1_2 = {49 83 c4 f3 0f 84 55 01 00 00 48 89 c7 be 20 00 00 00 4c 89 e2 e8 45 c6 01 00 48 85 c0 0f 84 3c 01 00 00 48 8b 08 4c 31 f9 48 8b 50 06 4c 31 f2 48 09 ca 74 14 48 ff c0 49 89 dc 49 29 c4 49 83 fc 0e 7d bc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

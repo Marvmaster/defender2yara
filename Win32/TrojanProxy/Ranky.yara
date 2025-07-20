@@ -20,6 +20,7 @@ rule TrojanProxy_Win32_Ranky_B_2147803478_0
         $x_10_5 = {99 b9 fd fb 00 00 f7 f9 81 c2 01 04 00 00 66 89 15 ?? ?? ?? ?? 68 e8 03 00 00 ff d6 33 d2 66 8b 15 ?? ?? ?? ?? 52 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 83 c4 08 85 c0 75 c4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))
@@ -73,6 +74,7 @@ rule TrojanProxy_Win32_Ranky_2147803767_0
         $x_1_31 = "%s:*:Enabled:%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or

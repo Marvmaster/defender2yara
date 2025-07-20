@@ -21,6 +21,7 @@ rule Trojan_Linux_SideWalk_A_2147841274_0
         $x_1_6 = "SC_INFO_NETWORK_REVERSE_THREAD_BEGIN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 

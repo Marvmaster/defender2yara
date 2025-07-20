@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Pitou_B_2147688349_0
         $x_1_2 = {33 d1 8b 45 0c 88 10 8b 4d 0c 83 c1 01 89 4d 0c 8b 55 f4 83 c2 01 89 55 f4 8b 45 f8 03 45 f0 0f b6 08 d1 e1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

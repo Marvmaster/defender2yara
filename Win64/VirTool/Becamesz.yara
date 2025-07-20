@@ -18,6 +18,7 @@ rule VirTool_Win64_Becamesz_A_2147921770_0
         $x_1_3 = {55 48 89 e5 48 83 ec 30 [0-18] 48 89 45 f8 ?? ?? ?? ?? ?? 48 89 05 86 d4 00 00 ?? ?? ?? ?? 48 89 c2 b9 01 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

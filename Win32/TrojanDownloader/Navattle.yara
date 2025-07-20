@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Navattle_A_2147669247_0
         $x_1_5 = {8a 55 f8 88 11 8b 45 f4 83 c0 01 89 45 f4 8b 4d fc 83 c1 03 89 4d fc eb a2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule TrojanDownloader_Win32_Navattle_B_2147679838_0
         $x_1_5 = {b3 0a f6 eb 02 41 ff f6 eb 02 01 83 c1 03 04 30 88 04 16 8a 41 fe 46 84 c0 75 e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule TrojanSpy_MSIL_Diztakun_SK_2147925364_0
         $x_1_2 = "888\\obj\\Release\\888.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

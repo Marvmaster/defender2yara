@@ -19,6 +19,7 @@ rule Backdoor_Win32_Siaacsia_A_2147720844_0
         $x_1_5 = {63 68 72 6f 6d 61 74 69 6e 67 [0-15] 47 6f 6f 67 6c 65 20 52 65 6d 6f 74 65 20 44 65 73 6b 74 6f 70 20 53 65 72 76 69 63 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_Disdroth_LK_2147845673_0
         $x_1_2 = {4c 8b 05 e2 e3 01 00 ba 40 00 00 00 41 8b c8 83 e1 3f 2b d1 8a ca 48 8b d0 48 d3 ca 49 33 d0 4b 87 94 fe c0 86 05 00 eb 2d 4c 8b 15 b9 e3 01 00 eb b8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_Disdroth_EM_2147848358_0
         $x_5_1 = {ba 40 00 00 00 41 8b c8 83 e1 3f 2b d1 8a ca 48 8b d0 48 d3 ca 49 33 d0 4b 87 94 fe 00 07 05 00 eb 89}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win64_Disdroth_EM_2147848358_1
         $x_1_5 = "\\cmd.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

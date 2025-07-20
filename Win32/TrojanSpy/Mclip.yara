@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Mclip_A_2147727480_0
         $x_1_3 = "L2NyZWF0ZSAvdG4gXE1pY3Jvc29mdFxXaW5kb3dzXE1pY2xp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule VirTool_WinNT_Ghodow_A_2147632195_0
         $x_1_4 = {81 39 1d 00 00 c0 75 15 90 8b 4d 10 8b 91 b8 00 00 00 83 c2 02 89 91 b8 00 00 00 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -43,6 +44,7 @@ rule VirTool_WinNT_Ghodow_B_2147632275_0
         $x_1_2 = {81 39 1d 00 00 c0 75 15 90 8b 4d 10 8b 91 b8 00 00 00 83 c2 02 89 91 b8 00 00 00 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

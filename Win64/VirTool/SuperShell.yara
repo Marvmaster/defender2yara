@@ -19,6 +19,7 @@ rule VirTool_Win64_SuperShell_A_2147903135_0
         $x_1_5 = "winpty_agent_process" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

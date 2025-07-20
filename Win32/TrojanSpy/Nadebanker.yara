@@ -23,6 +23,7 @@ rule TrojanSpy_Win32_Nadebanker_F_2147623609_0
         $x_1_9 = "regsvr32.exe /u /s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or
@@ -56,6 +57,7 @@ rule TrojanSpy_Win32_Nadebanker_G_2147623610_0
         $x_1_7 = "dtw5d\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -86,6 +88,7 @@ rule TrojanSpy_Win32_Nadebanker_G_2147624108_0
         $x_1_7 = "Adobe PDF Reader Link Helper" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

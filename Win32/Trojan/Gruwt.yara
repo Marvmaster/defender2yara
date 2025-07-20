@@ -20,6 +20,7 @@ rule Trojan_Win32_Gruwt_B_2147639778_0
         $x_1_6 = "Passwd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

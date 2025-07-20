@@ -17,6 +17,7 @@ rule Trojan_MSIL_Kugbot_A_2147650389_0
         $x_1_3 = "action=USB Drive explorer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

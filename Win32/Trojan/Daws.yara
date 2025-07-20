@@ -23,6 +23,7 @@ rule Trojan_Win32_Daws_PA_2147741261_0
         $x_1_8 = "WriteMe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -55,6 +56,7 @@ rule Trojan_Win32_Daws_MA_2147842169_0
         $x_1_8 = "closesocket" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +83,7 @@ rule Trojan_Win32_Daws_EC_2147919724_0
         $x_1_6 = "WScript.Shell" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule VirTool_WinNT_Ellhide_A_2147575002_0
         $x_15_9 = {89 45 ec 89 45 f0 89 45 f8 b9 52 01 00 00 5f 03 d1 83 c1 06 5c 78 34 46 75 f8 89 46 0c 89 06 8d 45 f4 50 8d 45 fc ff 76 08 50}  //weight: 15, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

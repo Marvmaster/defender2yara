@@ -23,6 +23,7 @@ rule Trojan_Win32_Pierogi_BM_2147771303_0
         $x_1_8 = "http://www.google.com/bot.html" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 

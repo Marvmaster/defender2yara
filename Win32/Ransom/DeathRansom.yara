@@ -21,6 +21,7 @@ rule Ransom_Win32_DeathRansom_ADT_2147920846_0
         $x_1_6 = "Write back to our e-mail: deathransom@airmail.cc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

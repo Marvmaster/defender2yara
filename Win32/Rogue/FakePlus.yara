@@ -16,6 +16,7 @@ rule Rogue_Win32_FakePlus_134332_0
         $x_1_2 = {a3 34 1d 41 00 8b 45 0c ff 30 e8 28 0a 00 00 33 06 5f 35 d7 d5 e3 e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Rogue_Win32_FakePlus_134332_1
         $x_1_6 = {41 70 70 49 6e 69 74 5f 44 4c 4c 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -68,6 +70,7 @@ rule Rogue_Win32_FakePlus_134332_2
         $x_5_3 = {54 6a 06 68 ?? ?? ?? ?? a1 ?? ?? ?? ?? 50 6a ff e8 ?? ?? ?? ?? c6 05 ?? ?? ?? ?? 68 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c6 05 ?? ?? ?? ?? c3 54 6a 06 68 ?? ?? ?? ?? a1 ?? ?? ?? ?? 50 6a ff e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -96,6 +99,7 @@ rule Rogue_Win32_FakePlus_134332_3
         $x_6_6 = {3f 75 72 6c 3d 00 00 00 ff ff ff ff 04 00 00 00 26 69 64 3d 00}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_5_*) and 2 of ($x_2_*))) or
@@ -127,6 +131,7 @@ rule Rogue_Win32_FakePlus_134332_4
         $x_1_6 = "my-antivirusplus.org" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -167,6 +172,7 @@ rule Rogue_Win32_FakePlus_134332_5
         $x_3_16 = {69 6e 73 74 61 6c 6c 2f 61 76 70 6c 75 73 2e 64 6c 6c 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or

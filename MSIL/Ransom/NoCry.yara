@@ -22,6 +22,7 @@ rule Ransom_MSIL_NoCry_MK_2147773603_0
         $x_1_7 = "@yandex.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_MSIL_NoCry_PAA_2147793739_0
         $x_1_4 = "DetectVirtualMachine" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

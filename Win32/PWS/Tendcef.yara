@@ -18,6 +18,7 @@ rule PWS_Win32_Tendcef_A_2147619585_0
         $x_1_4 = {44 4e 46 70 61 73 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

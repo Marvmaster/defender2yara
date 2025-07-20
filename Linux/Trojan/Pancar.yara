@@ -18,6 +18,7 @@ rule Trojan_Linux_Pancar_A_2147893579_0
         $x_1_3 = {48 83 3d c8 08 20 00 00 74 1e b8 00 00 00 00 48 85 c0 74 14 55 bf 20 0e 60 00 48 89 e5 ff d0 5d e9 7b ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

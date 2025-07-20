@@ -19,6 +19,7 @@ rule Ransom_Linux_GonnaCry_A_2147795814_0
         $x_1_4 = "zip backup" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Linux_GonnaCry_B_2147796723_0
         $x_1_5 = "decrypt all file ,ssid:%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Ransom_Linux_GonnaCry_D_2147931052_0
         $x_1_4 = "your_encrypted_files.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Ransom_Linux_GonnaCry_E_2147932633_0
         $x_1_2 = {48 8b 85 a8 fa ff ff 48 83 c0 01 48 89 85 a8 fa ff ff 48 8b 85 a0 fa ff ff 48 8b 10 48 8b 85 a0 fa ff ff 48 83 e8 08 48 8b 00 48 39 c2 0f 95 c1 48 8b 85 a0 fa ff ff 48 8d 50 f8 0f b6 c1 89 02 48 8b 85 a0 fa ff ff 48 83 e8 08 48 89 85 a0 fa ff ff e9 bf 12 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

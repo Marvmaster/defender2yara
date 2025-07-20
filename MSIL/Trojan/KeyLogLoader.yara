@@ -31,6 +31,7 @@ rule Trojan_MSIL_KeyLogLoader_2147761476_0
         $x_1_16 = "SkipVerification" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

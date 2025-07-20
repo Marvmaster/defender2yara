@@ -16,6 +16,7 @@ rule Trojan_WinNT_Rovnix_A_2147654393_0
         $x_1_2 = {8b 43 04 6a 09 59 bf ?? ?? ?? ?? 8d 70 03 33 d2 f3 a6 c7 45 fc 7b 00 00 c0 0f 85 ?? ?? ?? ?? 8b 75 08 0f b7 50 0b 8b 4e 14 3b d1 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

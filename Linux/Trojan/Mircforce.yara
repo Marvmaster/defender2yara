@@ -20,6 +20,7 @@ rule Trojan_Linux_Mircforce_A_2147819263_0
         $x_1_5 = ".:tHa lEEtf0rCe:." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

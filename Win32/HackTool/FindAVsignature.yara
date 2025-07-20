@@ -19,6 +19,7 @@ rule HackTool_Win32_FindAVsignature_A_2147684123_0
         $n_10_5 = "\\MSTICWefDetections\\Lib\\PowershellParser\\obj\\amd64\\PowershellParser.pdb" ascii //weight: -10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }

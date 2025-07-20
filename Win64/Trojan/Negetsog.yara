@@ -17,6 +17,7 @@ rule Trojan_Win64_Negetsog_UL_2147896570_0
         $x_1_2 = "cfccf3b06e07e1f2e6a317" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

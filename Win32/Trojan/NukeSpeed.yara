@@ -20,6 +20,7 @@ rule Trojan_Win32_NukeSpeed_EC_2147923923_0
         $x_1_5 = "c:\\tmp\\_DMP\\TMPL_%d_%d.tmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

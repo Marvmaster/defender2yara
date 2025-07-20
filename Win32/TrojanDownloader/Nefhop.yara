@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Nefhop_A_2147696258_0
         $x_1_5 = "D:\\dream\\win1.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))

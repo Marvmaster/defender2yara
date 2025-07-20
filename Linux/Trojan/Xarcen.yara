@@ -22,6 +22,7 @@ rule Trojan_Linux_Xarcen_A_2147756255_0
         $x_1_7 = "/etc/crontab && echo '*/3 * * * * root /etc/cron.hourly/gcc.sh' >> /etc/crontab" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (6 of ($x*))
 }
 
@@ -50,6 +51,7 @@ rule Trojan_Linux_Xarcen_B_2147772532_0
         $x_1_8 = "103.25.9.229" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_Linux_Xarcen_C_2147773786_0
         $x_1_4 = {65 78 65 63 20 25 73 0a ?? 2d 63 ?? 6b 70 75 4a 6b 73 63 3d ?? 25 73 ?? 6d 5a 4b 66 6d 5a 48 48 ?? 6b 5a 4f 57 6c 73 63 3d ?? 6e 70 2b 55 67 35 4f 4b 78 77 3d 3d ?? 6e 4a 4f 57 6e 35 53 62 6c 35 2f 48 ?? 69 4a 65 63 6b 35 61 66 78 77 3d 3d ?? 6e 4a 61 62 6e 63 63 3d ?? 6d 35 61 54 6a 4a 2f 48 00 25 64 3a 25 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule Trojan_Linux_Xarcen_B_2147823668_0
         $x_1_3 = {e8 21 02 00 00 c7 44 24 08 24 2d 0b 08 8b 45 fc 89 44 24 04 c7 04 24 83 2c 0b 08 e8 06 02 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

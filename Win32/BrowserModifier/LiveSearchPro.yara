@@ -21,6 +21,7 @@ rule BrowserModifier_Win32_LiveSearchPro_149283_0
         $x_2_7 = {4c 69 76 65 53 65 61 72 63 68 50 72 6f 00 00 00 53 6f 66 74 77 61 72 65 5c 4b 52 41 53 50}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

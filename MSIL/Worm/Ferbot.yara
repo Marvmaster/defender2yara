@@ -19,6 +19,7 @@ rule Worm_MSIL_Ferbot_A_2147639139_0
         $x_1_5 = ":Steal pass error" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

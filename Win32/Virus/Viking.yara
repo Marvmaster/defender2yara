@@ -24,6 +24,7 @@ rule Virus_Win32_Viking_B_2147580900_0
         $x_1_9 = "safeboxTray.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -58,6 +59,7 @@ rule Virus_Win32_Viking_2147580901_0
         $x_1_10 = " /hehe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 6 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -86,6 +88,7 @@ rule Virus_Win32_Viking_JB_2147598552_0
         $x_1_3 = {8b 55 fc e8 ?? ?? ff ff 8b 85 ?? ?? ff ff e8 ?? ?? ff ff 56 57 e8 ?? ?? ff ff 85 c0 75 84 57 e8 ?? ?? ff ff c7 06 16 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -124,6 +127,7 @@ rule Virus_Win32_Viking_JF_2147598553_0
         $x_1_16 = "WNetAddConnection2A" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 11 of ($x_1_*))) or
             ((2 of ($x_2_*) and 9 of ($x_1_*))) or
@@ -169,6 +173,7 @@ rule Virus_Win32_Viking_A_2147602717_0
         $x_1_5 = {d5 d2 cc cd cf ce ae c4 cc cc 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -196,6 +201,7 @@ rule Virus_Win32_Viking_2147642443_0
         $x_1_3 = {52 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 83 c2 44 52 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +226,7 @@ rule Virus_Win32_Viking_SA_2147779444_0
         $x_1_4 = "del \"C:\\TEMP\\$$ab2890.bat\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -242,6 +249,7 @@ rule Virus_Win32_Viking_AVK_2147922892_0
         $x_3_2 = {68 b4 83 40 00 8d 95 44 fd ff ff 33 c0 e8 ?? ?? ?? ?? ff b5 44 fd ff ff 68 cc 83 40 00 68 d8 83 40 00 8d 95 40 fd ff ff 33 c0 e8 ?? ?? ?? ?? ff b5 40 fd ff ff 68 ec 83 40 00 68 f8 83 40 00 68 10 84 40 00 ff 75 ec 68 20 84 40 00 8d 95 38 fd ff ff 33 c0}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

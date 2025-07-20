@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Renos_JH_2147799748_0
         $x_1_2 = {46 00 69 00 6c 00 65 00 44 00 65 00 73 00 63 00 72 00 69 00 70 00 74 00 69 00 6f 00 6e 00 00 00 00 00 43 00 6f 00 6f 00 6b 00 69 00 65 00 20 00 43 00 6f 00 6e 00 76 00 65 00 72 00 74 00 65 00 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDownloader_Win32_Renos_JH_2147799748_1
         $x_2_4 = "a \"..\\%s.rar\" *" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -78,6 +80,7 @@ rule TrojanDownloader_Win32_Renos_ES_2147799792_0
         $x_1_16 = "{ABCDECF0-4B15-11D1-ABED-709549C10000}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -104,6 +107,7 @@ rule TrojanDownloader_Win32_Renos_ES_2147799792_1
         $x_1_7 = {57 61 72 6e 69 6e 67 21 20 50 6f 74 65 6e 74 69 61 6c 20 53 70 79 77 61 72 65 20 4f 70 65 72 61 74 69 6f 6e 21 0a 0a 59 6f 75 72 20 63 6f 6d 70 75 74 65 72 20 69 73 20 6d 61 6b 69 6e 67 20 75 6e 61 75 74 68 6f 72 69 7a 65 64 20 63 6f 70 69 65 73 20 6f 66 20 79 6f 75 72 20 73 79 73 74 65 6d 20 61 6e 64 0a 49 6e 74 65 72 6e 65 74 20 66 69 6c 65 73 2e 20 52 75 6e 20 66 75 6c 6c 20 73 63 61 6e 20 6e 6f 77 20 74 6f 20 70 65 72 76 65 6e 74 20 61 6e 79 20 75 6e 61 74 68 6f 72 69 73 65 64 20 61 63 63 65 73 73 0a 74 6f 20 79 6f 75 72 20 66 69 6c 65 73 21 20 43 6c 69 63 6b 20 [0-4] 20 74 6f 20 64 6f 77 6e 6c 6f 61 64 20 73 70 79 77 61 72 65 20 72 65 6d 6f 76 65 72 20 2e 2e 2e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -128,6 +132,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_0
         $x_1_5 = "?type=main&p" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -155,6 +160,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_1
         $x_1_5 = "ProgID = s 'BhoNew.Bho.1'" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -184,6 +190,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_2
         $x_1_7 = "GetStartupInfoA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_10_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -214,6 +221,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_3
         $x_1_7 = {6e 69 63 68 65 70 61 73 73 00 00 00 77 6e 75 2e 63 6f 6d 00 73 65 67 70 61 79 00 00 76 65 72 69 66 69 65 64 70 61 79 6d 65 6e 74 73 6f 6c 75 74 69 6f 6e 73 6f 6e 6c 69 6e 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -248,6 +256,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_4
         $x_1_15 = {00 64 6f 77 73 5c 73 79 73 74 65 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 8 of ($x_1_*))) or
             ((2 of ($x_100_*) and 1 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -319,6 +328,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_5
         $x_1_44 = "eriff" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((20 of ($x_1_*))) or
             ((1 of ($x_2_*) and 18 of ($x_1_*))) or
@@ -385,6 +395,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_6
         $x_1_3 = {75 06 ff 80 b8 00 00 00 33 c0 c2 10 00 64 ff 35 00 00 00 00 64 89 25 00 00 00 00 cc 64 8f 05 00 00 00 00 5f 8b 3c 24 b9 ?? ?? ?? ?? 81}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -413,6 +424,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_7
         $x_5_9 = "http://www." ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -439,6 +451,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_8
         $x_1_4 = "69.50.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -465,6 +478,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_9
         $x_1_7 = {47 45 54 20 68 74 74 70 3a 2f 2f 64 6f 77 6e 6c 6f 61 64 2e 25 73 2e 63 6f 6d 2f [0-8] 2e 70 68 70 3f 26 61 64 76 69 64 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -489,6 +503,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_10
         $x_1_5 = "69.50.1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -515,6 +530,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_11
         $x_1_7 = "Error Load hDelete" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_100_*) and 1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -549,6 +565,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_12
         $x_3_9 = "DllRegisterServer" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_3_*) and 3 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -582,6 +599,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_13
         $x_5_10 = "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -610,6 +628,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_14
         $x_1_9 = "Windows has detected spyware infection!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -641,6 +660,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_15
         $x_1_8 = {8d 85 02 fe ff ff 50 ff 75 08 e8 ?? ?? ?? ?? 83 f8 01 75 30}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -673,6 +693,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_16
         $x_1_13 = "Your computer is making unauthorized copies of your system and" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_5_*) and 4 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -701,6 +722,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_17
         $x_1_6 = "'TypeLib' = s '{D2436533-33F9-495C-9CD9-DAF21E67FFEB}'" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -735,6 +757,7 @@ rule TrojanDownloader_Win32_Renos_2147799811_18
         $x_4_15 = {8b ec 83 c4 f8 6a 01 6a 00 ff 75 08 8d 05 [0-4] 50 8d 05 [0-4] 50 6a 00 ff 15 [0-4] b8 01 00 00 00 c9}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_3_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -783,6 +806,7 @@ rule TrojanDownloader_Win32_Renos_LT_2147799814_0
         $x_1_5 = {c7 46 0c 76 54 32 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -815,6 +839,7 @@ rule TrojanDownloader_Win32_Renos_KX_2147800831_0
         $n_100_13 = "Magnet.Content.Artifacts.dll" wide //weight: -100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((3 of ($x_1_*))) or
@@ -847,6 +872,7 @@ rule TrojanDownloader_Win32_Renos_HO_2147800857_0
         $x_1_7 = {77 67 65 74 20 33 2e 30 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -870,6 +896,7 @@ rule TrojanDownloader_Win32_Renos_KH_2147800904_0
         $x_1_4 = {04 5a 0f b6 c0 83 c0 03 23 c6 e8 ?? ?? ?? ?? 8b c4 57 50 e8 ?? ?? ?? ?? 8b f8 57 e8 ?? ?? ?? ?? 83 c4 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -896,6 +923,7 @@ rule TrojanDownloader_Win32_Renos_FU_2147800911_0
         $x_1_7 = {25 6c 75 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -920,6 +948,7 @@ rule TrojanDownloader_Win32_Renos_LS_2147800931_0
         $x_1_1 = {05 72 06 00 00 05 df 1a 00 00 35 65 18 00 00 19 c0 11 c0 85 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -946,6 +975,7 @@ rule TrojanDownloader_Win32_Renos_LN_2147800957_0
         $x_1_7 = "</url><url get=\"on\">http://" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -979,6 +1009,7 @@ rule TrojanDownloader_Win32_Renos_JS_2147801020_0
         $x_1_10 = {48 41 5f 25 30 38 78 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 1 of ($x_1_*))) or
             ((3 of ($x_4_*))) or
@@ -1040,6 +1071,7 @@ rule TrojanDownloader_Win32_Renos_JM_2147801022_0
         $x_1_38 = {8d 4d d4 51 33 c9 51 51 51 6a 06 ff d0 8b 45 d4 83 f8 0a 0f 87 ?? ?? 00 00 0f 84 ?? ?? 00 00 48 83 f8 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1062,6 +1094,7 @@ rule TrojanDownloader_Win32_Renos_JE_2147801373_0
         $x_2_3 = {03 00 42 00 49 00 4e 00 c2 d2 9c 7a 90 90 21 eb 83 a9 b1 b5 ad 38 e3 5d a8 4c b6 1f fb 3a 6a 63 ac 25 12 79 5e 44 ca aa 34 d6 35 24 d6 7f 8b 94 4b 88 25 08 c6 38 d4 72 65 33 dd de 1c 21 59 8f e3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -1092,6 +1125,7 @@ rule TrojanDownloader_Win32_Renos_DJ_2147801424_0
         $x_10_7 = "ActiveLoader V" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*))) or
             (all of ($x*))
@@ -1118,6 +1152,7 @@ rule TrojanDownloader_Win32_Renos_GF_2147801426_0
         $x_1_4 = {33 c0 50 0f 01 4c 24 fe 58 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1147,6 +1182,7 @@ rule TrojanDownloader_Win32_Renos_GQ_2147801427_0
         $x_1_7 = {00 62 68 6f 2e 64 6c 6c 00 44 6c 6c 43 61 6e 55 6e 6c 6f 61 64 4e 6f 77}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -1173,6 +1209,7 @@ rule TrojanDownloader_Win32_Renos_PG_2147801471_0
         $x_1_4 = {2e 69 6e 2f 3f 69 6e 69 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -1199,6 +1236,7 @@ rule TrojanDownloader_Win32_Renos_PT_2147801504_0
         $x_2_3 = {fb ff ff f7 ?? 83 ?? 04 c7 ?? 00 00 00 00 83 ?? 04 75 f2 ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1228,6 +1266,7 @@ rule TrojanDownloader_Win32_Renos_X_2147802474_0
         $x_10_7 = "%s&%X.%X.%X.%X.%X" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 1 of ($x_5_*))) or
             (all of ($x*))
@@ -1261,6 +1300,7 @@ rule TrojanDownloader_Win32_Renos_DU_2147802633_0
         $x_1_11 = {73 00 00 00 76 00 00 00 2e 65 00 00 78 00 00 00 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or
@@ -1286,6 +1326,7 @@ rule TrojanDownloader_Win32_Renos_PH_2147802634_0
         $x_1_2 = {6a 00 b8 60 ea 00 00 6a ff 50 50 8d 45 e4 6a 00 50 0f b7 85 6c ff ff ff 50 8d 45 c0 50 8d 45 b0 50 e8 ?? ?? ?? ?? 83 c4 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1309,6 +1350,7 @@ rule TrojanDownloader_Win32_Renos_OE_2147802635_0
         $x_1_4 = {0f b7 40 06 48 85 c0 0f 82 ?? ?? ?? ?? 40 89 45 ec c7 45 f0 00 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1341,6 +1383,7 @@ rule TrojanDownloader_Win32_Renos_DZ_2147803142_0
         $x_1_13 = {ff 45 f4 8b 73 04 83 c3 04 89 07 83 c7 04 ff 45 fc 85 f6 75 ?? 83 45 f8 04 ff 45 fc 81 7d f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1364,6 +1407,7 @@ rule TrojanDownloader_Win32_Renos_KJ_2147803145_0
         $x_1_4 = {10 68 ff ff ?? ?? 68 ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1387,6 +1431,7 @@ rule TrojanDownloader_Win32_Renos_FQ_2147803148_0
         $x_2_4 = {81 fe 00 00 00 d0 (a3|a2) ?? ?? ?? 00 [0-6] 77 08 81 fe 00 00 00 80 73}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
             (all of ($x*))
@@ -1414,6 +1459,7 @@ rule TrojanDownloader_Win32_Renos_AY_2147803149_0
         $x_1_5 = "\\*.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -1441,6 +1487,7 @@ rule TrojanDownloader_Win32_Renos_HB_2147803248_0
         $x_1_4 = "?advid=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1462,6 +1509,7 @@ rule TrojanDownloader_Win32_Renos_GL_2147803310_0
         $x_1_2 = "download.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))
@@ -1491,6 +1539,7 @@ rule TrojanDownloader_Win32_Renos_EI_2147803411_0
         $x_1_7 = {77 67 65 74 20 33 2e 30 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -1521,6 +1570,7 @@ rule TrojanDownloader_Win32_Renos_IS_2147803421_0
         $x_1_4 = {2e 64 6c 6c 00 49 6e 73 74 61 6c 6c 00 55 6e 69 6e 73 74 61 6c 6c 00 57 53 50 53 74 61 72 74 75 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1545,6 +1595,7 @@ rule TrojanDownloader_Win32_Renos_HS_2147803592_0
         $x_1_5 = {6a 0c 50 68 00 14 2d 00 04 00 [0-1] 8d (45|44 24)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -1572,6 +1623,7 @@ rule TrojanDownloader_Win32_Renos_FJ_2147803628_0
         $x_1_8 = {4c 69 6e 65 73 2e 53 74 72 69 6e 67 73 01 06 ?? 68 74 74 70 3a 2f 2f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 5 of ($x_1_*))) or
             ((3 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -1597,6 +1649,7 @@ rule TrojanDownloader_Win32_Renos_JO_2147803723_0
         $x_1_2 = {f7 75 0c 8b 45 08 [0-32] 8a 04 02 02 06 00 45 fe [0-32] 8a 0e 0f b6 45 fe}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1618,6 +1671,7 @@ rule TrojanDownloader_Win32_Renos_PB_2147803737_0
         $x_1_2 = {30 4c 10 ff [0-2] a1 ?? ?? ?? ?? 8b 55 f8 8a 44 10 ff 8b 55 fc 8b 4d f4 88 04 0a ff 45 f4 81 7d f8 ?? ?? ?? ?? 0f 86 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1682,6 +1736,7 @@ rule TrojanDownloader_Win32_Renos_A_2147803769_0
         $x_1_44 = "eriff" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((20 of ($x_1_*))) or
             ((1 of ($x_2_*) and 18 of ($x_1_*))) or
@@ -1755,6 +1810,7 @@ rule TrojanDownloader_Win32_Renos_B_2147803788_0
         $x_3_9 = "System has detected a number of active spyware applications that may impact the performance of your computer." ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_2_*))) or
             ((2 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -1798,6 +1854,7 @@ rule TrojanDownloader_Win32_Renos_BAG_2147803814_0
         $x_1_18 = "C:\\Program Files\\SpywareSoftStop\\SpywareSoftStop.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -1826,6 +1883,7 @@ rule TrojanDownloader_Win32_Renos_AU_2147803841_0
         $x_3_6 = {81 fe 78 21 00 00 7e 0a c6 84 34 ?? ?? ff ff 68 eb 05 c6 44 34 08 63 ff d7 81 fe 97 23 00 00 7d 03 46 eb dc}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -1853,6 +1911,7 @@ rule TrojanDownloader_Win32_Renos_D_2147803843_0
         $x_1_1 = {65 6c 33 32 83 10 00 [0-5] 6b 65 72 6e ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? [0-8] 54 ff 15 ?? ?? ?? ?? 89}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1883,6 +1942,7 @@ rule TrojanDownloader_Win32_Renos_F_2147803845_0
         $x_1_10 = "SYSRES" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -1907,6 +1967,7 @@ rule TrojanDownloader_Win32_Renos_HL_2147803852_0
         $x_1_5 = "PARTNERID" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1940,6 +2001,7 @@ rule TrojanDownloader_Win32_Renos_HL_2147803852_1
         $x_1_14 = {68 74 74 70 3a 2f 2f 64 6c 2e 25 73 2f 67 65 74 2f 3f 70 69 6e 3d 25 73 26 6c 6e 64 3d 25 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -1971,6 +2033,7 @@ rule TrojanDownloader_Win32_Renos_J_2147803857_0
         $x_1_11 = "You need to reboot your computer prior to uninstallation. Reboot now?" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2005,6 +2068,7 @@ rule TrojanDownloader_Win32_Renos_K_2147803859_0
         $x_1_11 = "IEHelper.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -2034,6 +2098,7 @@ rule TrojanDownloader_Win32_Renos_KJ_2147803863_0
         $x_10_6 = "clsSockInet" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2059,6 +2124,7 @@ rule TrojanDownloader_Win32_Renos_AA_2147803864_0
         $x_1_5 = "link:http://dxcodec.com/uninstall/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2084,6 +2150,7 @@ rule TrojanDownloader_Win32_Renos_FZ_2147803883_0
         $x_1_3 = "SnmpUtilOidCpy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2105,6 +2172,7 @@ rule TrojanDownloader_Win32_Renos_IT_2147803902_0
         $x_1_2 = {8b 39 c1 f2 15 66 83 c1 33 83 c0 01 c1 c6 09 8b 08 f7 d2 29 f9 75 ee}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2126,6 +2194,7 @@ rule TrojanDownloader_Win32_Renos_IT_2147803902_1
         $x_1_2 = {68 ff ff 0d ba ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2159,6 +2228,7 @@ rule TrojanDownloader_Win32_Renos_U_2147803919_0
         $x_1_13 = "InternetOpenUrlA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 3 of ($x_5_*) and 5 of ($x_1_*))) or
             ((1 of ($x_50_*) and 4 of ($x_5_*))) or
@@ -2204,6 +2274,7 @@ rule TrojanDownloader_Win32_Renos_T_2147803920_0
         $x_1_21 = "UninstallString" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_100_*) and 2 of ($x_10_*) and 5 of ($x_1_*))) or
             ((4 of ($x_100_*) and 3 of ($x_10_*))) or
@@ -2242,6 +2313,7 @@ rule TrojanDownloader_Win32_Renos_CI_2147803930_0
         $x_1_14 = "ForceActiveDesktopOn" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 10 of ($x_1_*))) or
             (all of ($x*))
@@ -2277,6 +2349,7 @@ rule TrojanDownloader_Win32_Renos_CR_2147803941_0
         $x_1_13 = "@_soft\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 8 of ($x_1_*))) or
             ((3 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -2305,6 +2378,7 @@ rule TrojanDownloader_Win32_Renos_CO_2147803946_0
         $x_1_3 = {61 61 62 00 61 61 6c 00 61 6c 6c 65 72 74 32 00 66 67 6c 6c 65 72 74 00 71 6f 61 64 00 77 69 6e 64 6f 77 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2337,6 +2411,7 @@ rule TrojanDownloader_Win32_Renos_CO_2147803946_1
         $x_1_13 = {61 61 62 00 61 61 6c 00 61 6c 6c 65 72 74 32 00 66 67 6c 6c 65 72 74 00 71 6f 61 64 00 77 69 6e 64 6f 77 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -2364,6 +2439,7 @@ rule TrojanDownloader_Win32_Renos_AY_2147803947_0
         $x_1_3 = {73 1c 8b 45 d8 0f b6 08 0f b6 55 e7 33 ca 8b 45 d8 88 08 8b 4d d8 83 c1 01 89 4d d8 eb d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2391,6 +2467,7 @@ rule TrojanDownloader_Win32_Renos_BAM_2147803948_0
         $x_3_8 = {f3 50 d2 b7 eb 7c 0a eb c3 66 3d f6 50 80 62 85 78 d6 20 e1 0d c1 19 79 16 20 b6 16 8e ef 6d dc}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -2423,6 +2500,7 @@ rule TrojanDownloader_Win32_Renos_BAM_2147803948_1
         $x_2_9 = {81 3e 50 4b 01 02 74 0a b8 f6 ff ff ff e9}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -2456,6 +2534,7 @@ rule TrojanDownloader_Win32_Renos_IL_2147803950_0
         $x_2_9 = {6a 04 52 56 ff 15 ?? ?? ?? ?? 56 ff d3 8b 44 24 1c 50 ff d3 8d 45 f0 c6 44 24 38 01}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2490,6 +2569,7 @@ rule TrojanDownloader_Win32_Renos_Z_2147803956_0
         $x_1_9 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1000_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -2520,6 +2600,7 @@ rule TrojanDownloader_Win32_Renos_BAI_2147803957_0
         $x_2_8 = "install GigaAntiVirus" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 3 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2556,6 +2637,7 @@ rule TrojanDownloader_Win32_Renos_BAK_2147803958_0
         $x_1_6 = "AD031" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1000_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2585,6 +2667,7 @@ rule TrojanDownloader_Win32_Renos_BAO_2147803959_0
         $x_1_7 = "InternetReadFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 4 of ($x_1_*))) or
             ((2 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2616,6 +2699,7 @@ rule TrojanDownloader_Win32_Renos_AZ_2147803966_0
         $x_1_7 = "avxp08.net" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -2643,6 +2727,7 @@ rule TrojanDownloader_Win32_Renos_EJ_2147803967_0
         $x_4_4 = {80 0d d8 bb 40 00 ff 3d 00 00 00 d0 77 07 3d 00 00 00 80 73 06 ff d6 2b c5 eb dc}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 2 of ($x_2_*))) or
             ((2 of ($x_4_*))) or
@@ -2671,6 +2756,7 @@ rule TrojanDownloader_Win32_Renos_EN_2147803968_0
         $x_1_5 = {c7 06 01 23 45 67 0f bf ?? ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -2699,6 +2785,7 @@ rule TrojanDownloader_Win32_Renos_FG_2147803969_0
         $x_2_5 = {83 c7 07 83 c6 07 83 ff 46 (72|0f 82) 12 00 [0-3] 83 c4 18 85 c0 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2729,6 +2816,7 @@ rule TrojanDownloader_Win32_Renos_FL_2147803970_0
         $x_2_8 = {8a 8c 05 d0 fd ff ff 81 f1 ?? ?? ?? ?? 88 0c 30 40 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -2756,6 +2844,7 @@ rule TrojanDownloader_Win32_Renos_FS_2147803971_0
         $x_1_3 = {72 62 00 00 2f 64 6f 77 6e 6c 6f 61 64 2e 70 68 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2784,6 +2873,7 @@ rule TrojanDownloader_Win32_Renos_HP_2147803972_0
         $x_2_9 = {80 34 3a 31 [0-5] 80 2c 3a 0b 42 e2 e2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -2816,6 +2906,7 @@ rule TrojanDownloader_Win32_Renos_IJ_2147803973_0
         $x_1_5 = {68 58 4d 56 c7 85 ?? ?? ff ff 58 56 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -2845,6 +2936,7 @@ rule TrojanDownloader_Win32_Renos_JA_2147803974_0
         $x_1_7 = {68 58 4d 56 c7 85 ?? ?? ff ff 58 56 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -2870,6 +2962,7 @@ rule TrojanDownloader_Win32_Renos_DC_2147803982_0
         $x_1_1 = {ff d7 8a 4c 24 10 8d 44 24 10 84 c9 74 [0-4] 80 f1 ?? 88 08 8a 48 01 40 84 c9 75 f3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2893,6 +2986,7 @@ rule TrojanDownloader_Win32_Renos_DD_2147803985_0
         $x_1_4 = {49 6e 73 74 61 6c 6c 61 74 69 6f 6e 49 44 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -2919,6 +3013,7 @@ rule TrojanDownloader_Win32_Renos_DE_2147803988_0
         $x_1_4 = {73 70 79 77 61 72 65 77 61 72 6e 69 6e 67 32 2e 6d 68 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -2945,6 +3040,7 @@ rule TrojanDownloader_Win32_Renos_DY_2147803990_0
         $x_1_3 = {5c 6d 73 78 6d 6c 37 31 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2970,6 +3066,7 @@ rule TrojanDownloader_Win32_Renos_EE_2147803991_0
         $x_1_6 = {2d de 24 04 80 6c d0 49}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -2994,6 +3091,7 @@ rule TrojanDownloader_Win32_Renos_EF_2147803992_0
         $x_1_5 = {85 c0 74 6f 83 7d ec 04 75 69 a0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -3021,6 +3119,7 @@ rule TrojanDownloader_Win32_Renos_IE_2147803997_0
         $x_1_4 = "WALLP" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -3050,6 +3149,7 @@ rule TrojanDownloader_Win32_Renos_JV_2147804003_0
         $x_1_6 = "</url></config>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3088,6 +3188,7 @@ rule TrojanDownloader_Win32_Renos_IO_2147804028_0
         $x_1_19 = {83 f1 59 83 f9 62 0f 84 ?? ?? ?? ?? 83 f9 75 0f 84 ?? ?? ?? ?? 83 f9 78 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3109,6 +3210,7 @@ rule TrojanDownloader_Win32_Renos_IR_2147804029_0
         $x_1_2 = {81 f8 0d f0 ad de 0f 84}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3135,6 +3237,7 @@ rule TrojanDownloader_Win32_Renos_JF_2147804030_0
         $x_1_7 = {ff 45 f4 8b 73 04 83 c3 04 89 07 83 c7 04 ff 45 fc 85 f6 75 ?? 83 45 f8 04 ff 45 fc 81 7d f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -3162,6 +3265,7 @@ rule TrojanDownloader_Win32_Renos_KA_2147804031_0
         $x_1_3 = {25 ff 00 00 00 8a 4c 04 ?? 8a 04 2a 32 c8 33 c0 88 4d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3186,6 +3290,7 @@ rule TrojanDownloader_Win32_Renos_KN_2147804032_0
         $x_1_5 = {4c 6f 73 41 6c 61 6d 6f 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3210,6 +3315,7 @@ rule TrojanDownloader_Win32_Renos_LE_2147804033_0
         $x_1_5 = "<url crypt=\"on\" post=\"on\">http://" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -3236,6 +3342,7 @@ rule TrojanDownloader_Win32_Renos_NL_2147804034_0
         $x_3_3 = ".php?ver=%VER%&cver=%CVER" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -3261,6 +3368,7 @@ rule TrojanDownloader_Win32_Renos_OD_2147804035_0
         $x_1_2 = {8a 00 20 db 3c 8b 5b 74 ?? eb 3c 55 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3284,6 +3392,7 @@ rule TrojanDownloader_Win32_Renos_IX_2147804040_0
         $x_1_4 = "wininet.dll::HttpOpenRequestA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3304,6 +3413,7 @@ rule TrojanDownloader_Win32_Renos_IX_2147804040_1
         $x_1_1 = {01 85 08 ff ff ff 0f b6 85 64 fc ff ff 0f b7 85 a4 fd ff ff 0f b7 85 54 fe ff ff 0f b6 85 90 fe ff ff e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3329,6 +3439,7 @@ rule TrojanDownloader_Win32_Renos_CX_2147804046_0
         $x_1_5 = "Click here to learn more." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3354,6 +3465,7 @@ rule TrojanDownloader_Win32_Renos_ET_2147804054_0
         $x_1_6 = "notifysb.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -3377,6 +3489,7 @@ rule TrojanDownloader_Win32_Renos_FF_2147804068_0
         $x_1_4 = {64 a1 20 00 00 00 89 45 dc eb 2f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3400,6 +3513,7 @@ rule TrojanDownloader_Win32_Renos_G_2147804069_0
         $x_1_3 = {25 ff 00 00 00 8a 4c 04 18 8d 44 04 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3422,6 +3536,7 @@ rule TrojanDownloader_Win32_Renos_BE_2147804086_0
         $x_1_2 = {74 14 8d 45 ?? 50 e8 ?? ?? 00 00 59 89 7d ?? 59 c6 45 ?? 03 eb 19}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3444,6 +3559,7 @@ rule TrojanDownloader_Win32_Renos_JB_2147804088_0
         $x_1_3 = {68 00 14 2d 00 03 00 6a 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3466,6 +3582,7 @@ rule TrojanDownloader_Win32_Renos_L_2147804101_0
         $x_2_3 = {43 6f 6e 74 69 6e 75 65 00 00 00 00 42 49 54 42 54 4e 31 5f 42 49 54 4d 41 50 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3493,6 +3610,7 @@ rule TrojanDownloader_Win32_Renos_Y_2147804102_0
         $x_1_8 = {6a 0c 50 68 00 14 2d 00 04 00 [0-1] 8d (45|44 24)}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
@@ -3522,6 +3640,7 @@ rule TrojanDownloader_Win32_Renos_FI_2147804105_0
         $x_1_5 = {75 75 07 75 7a 60 6a 6c 29 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -3546,6 +3665,7 @@ rule TrojanDownloader_Win32_Renos_HA_2147804106_0
         $x_1_5 = "Attn! Critical System Warning" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -3572,6 +3692,7 @@ rule TrojanDownloader_Win32_Renos_HC_2147804107_0
         $x_1_7 = "\\\\.\\PhysicalDrive0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -3596,6 +3717,7 @@ rule TrojanDownloader_Win32_Renos_AW_2147804109_0
         $x_1_2 = {72 69 6f 2e 64 6c 6c 00 44 6c 6c 4d 61 69 6e 00 57 4c 45 76 65 6e 74 53 74 61 72 74 53 68 65 6c 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3617,6 +3739,7 @@ rule TrojanDownloader_Win32_Renos_AW_2147804109_1
         $x_1_2 = "hi, botnet Jack here" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3639,6 +3762,7 @@ rule TrojanDownloader_Win32_Renos_EH_2147804110_0
         $x_1_3 = {68 10 27 00 00 ?? ?? ?? ?? ?? 6a 0c ?? 68 00 14 2d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3662,6 +3786,7 @@ rule TrojanDownloader_Win32_Renos_AI_2147804112_0
         $x_1_3 = {7b 4f 55 54 50 55 54 5f 4e 41 4d 45 7d 2e 64 6c 6c 00 69 6e 73 74 61 6c 6c 69 6e 67 00 6c 6f 61 64 69 6e 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -3686,6 +3811,7 @@ rule TrojanDownloader_Win32_Renos_AJ_2147804113_0
         $x_1_4 = {2a 2a 2a 20 53 54 4f 50 3a 20 30 78 30 30 30 30 30 30 38 45 20 28 30 78 43 30 30 00 30 30 30 30 35 2c 30 58 38 30 35 36 45 42 41 34 2c 30 78 46 37 44 44 33 39 39 43 2c 30 78 30 30 30 30 30 30 30 30 29}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3709,6 +3835,7 @@ rule TrojanDownloader_Win32_Renos_AK_2147804114_0
         $x_2_3 = {25 ff 03 00 00 89 45 d8 83 7d d8 07 74 2c 83 7d d8 0a 74 14 83 7d d8 0c 74 56 83 7d d8 10 74 3e 83 7d d8 15 74 26}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -3737,6 +3864,7 @@ rule TrojanDownloader_Win32_Renos_DG_2147804115_0
         $x_1_6 = "rid=0&st=typein&ref=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -3770,6 +3898,7 @@ rule TrojanDownloader_Win32_Renos_DM_2147804116_0
         $x_10_9 = "*** STOP: 0x0000008E (0xC0000005,0X8056EBA4,0xF7DD399C,0x00000000)" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 5 of ($x_2_*))) or
             ((3 of ($x_5_*) and 3 of ($x_2_*))) or
@@ -3809,6 +3938,7 @@ rule TrojanDownloader_Win32_Renos_DN_2147804117_0
         $x_10_13 = {52 45 4d 4f 56 45 20 20 41 4c 4c 20 20 53 50 59 57 41 52 45 20 20 46 52 4f 4d 20 20 59 4f 55 52 20 20 50 43 21 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 8 of ($x_2_*))) or
             ((1 of ($x_10_*) and 8 of ($x_2_*))) or
@@ -3852,6 +3982,7 @@ rule TrojanDownloader_Win32_Renos_DO_2147804118_0
         $x_5_14 = "3BCF8450-D134-427E-AE9C-2A42CE8215CC" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 5 of ($x_2_*) and 3 of ($x_1_*))) or
             ((3 of ($x_5_*) and 6 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -3893,6 +4024,7 @@ rule TrojanDownloader_Win32_Renos_DP_2147804119_0
         $x_5_15 = "09E23F2C-ED1E-43FC-9AA1-1332162A35AE" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 7 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*) and 8 of ($x_2_*))) or
@@ -3928,6 +4060,7 @@ rule TrojanDownloader_Win32_Renos_BD_2147804120_0
         $x_2_6 = {83 f0 62 88 04 3e 46 eb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -3953,6 +4086,7 @@ rule TrojanDownloader_Win32_Renos_IQ_2147804123_0
         $x_1_2 = {63 3a 5c 44 6f 63 75 6d 65 6e 74 73 20 61 6e 64 20 53 65 74 74 69 6e 67 73 5c 46 41 42 5c d0 a0 d0 b0 d0 b1 d0 be d1 87 d0 b8 d0 b9 20 d1 81 d1 82 d0 be d0 bb 5c 4c 4c 4c 5c 52 65 6c 65 61 73 65 5c 31 2e 70 64 62}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3978,6 +4112,7 @@ rule TrojanDownloader_Win32_Renos_JK_2147804124_0
         $x_1_6 = {6a 56 ff 15 ?? ?? ?? ?? 8b d0 8d 8d ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 8b d0 8d 8d ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 50 6a 69 ff 15 ?? ?? ?? ?? 8b d0 8d 8d ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 8b d0 8d 8d ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 50 6a 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -4002,6 +4137,7 @@ rule TrojanDownloader_Win32_Renos_JT_2147804125_0
         $x_1_5 = {77 67 65 74 20 33 2e 30 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -4026,6 +4162,7 @@ rule TrojanDownloader_Win32_Renos_LU_2147804127_0
         $x_1_5 = {75 70 64 61 74 65 2d 32 2e 31 31 2d 65 6e 67 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4049,6 +4186,7 @@ rule TrojanDownloader_Win32_Renos_LM_2147804133_0
         $x_1_4 = {5c 63 72 73 73 63 2e 65 78 65 00 68 74 74 70 3a 2f 2f 6c 6f 77 64 65 63 6b 2e 6e 65 74 2f 6b 74 32 73 69 2f 63 32 73 79 73 74 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4074,6 +4212,7 @@ rule TrojanDownloader_Win32_Renos_EG_2147804134_0
         $x_1_3 = {68 10 27 00 00 ?? ?? ?? ?? ?? 6a 0c ?? 68 00 14 2d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4096,6 +4235,7 @@ rule TrojanDownloader_Win32_Renos_FO_2147804135_0
         $x_1_3 = {ff d7 8b e8 ff d7 2b c5 3d 35 05 00 00 0f 83}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -4126,6 +4266,7 @@ rule TrojanDownloader_Win32_Renos_DV_2147804136_0
         $x_1_8 = {75 00 65 00 73 00 69 00 75 00 71 00 63 00 72 00 2e 00 65 00 78 00 65 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -4152,6 +4293,7 @@ rule TrojanDownloader_Win32_Renos_FW_2147804137_0
         $x_1_3 = {85 c0 74 19 8b 45 fc c7 05 ?? ?? ?? ?? 00 00 0e d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4174,6 +4316,7 @@ rule TrojanDownloader_Win32_Renos_GC_2147804138_0
         $x_1_3 = {35 a5 00 00 00 3d 69 ff ff ff 75}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4199,6 +4342,7 @@ rule TrojanDownloader_Win32_Renos_AC_2147804143_0
         $x_1_6 = {36 36 62 6c 6f 77 6a 6f 62 2e 5f 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -4225,6 +4369,7 @@ rule TrojanDownloader_Win32_Renos_AT_2147804144_0
         $x_1_3 = {8b 75 08 80 3e 00 74 05 30 06 46 eb f6 c9 c2 08 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4252,6 +4397,7 @@ rule TrojanDownloader_Win32_Renos_IF_2147804145_0
         $x_1_8 = "pmutex_%d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -4278,6 +4424,7 @@ rule TrojanDownloader_Win32_Renos_HK_2147804169_0
         $x_1_3 = "GetProcAddress" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4300,6 +4447,7 @@ rule TrojanDownloader_Win32_Renos_KL_2147804174_0
         $x_1_3 = {68 00 14 2d 00 ff 74 24 ?? ff 15 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4321,6 +4469,7 @@ rule TrojanDownloader_Win32_Renos_PL_2147804176_0
         $x_1_2 = {74 07 ff 54 24 1c c2 08 00 8b 45 08 50 8b 45 f4 50 8b 45 f8 50 8b 45 fc 50 [0-2] e8 ?? ?? ?? ?? 89 45 f0 8b 45 f0 8b e5 5d c2 04 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4343,6 +4492,7 @@ rule TrojanDownloader_Win32_Renos_JU_2147804182_0
         $x_1_3 = {c7 45 d4 4c 1d 00 00 01 05 ?? ?? ?? ?? 8d 45 d4 50 6a 02 56 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4364,6 +4514,7 @@ rule TrojanDownloader_Win32_Renos_MC_2147804185_0
         $x_1_2 = {83 f8 ff 0f 85 ?? ?? ?? ?? 53 56 6a 03 53 6a 03 57 8d 85 ?? ?? ff ff 50 8d 85 ?? ?? ff ff 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4388,6 +4539,7 @@ rule TrojanDownloader_Win32_Renos_MO_2147804186_0
         $x_1_5 = {67 6f 6f 67 6c 65 2e 63 6f 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4411,6 +4563,7 @@ rule TrojanDownloader_Win32_Renos_MD_2147804200_0
         $x_1_4 = "User-Agent: Mozilla/6.0 (Windows; wget 3.0)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

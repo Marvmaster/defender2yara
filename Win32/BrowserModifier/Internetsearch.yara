@@ -20,6 +20,7 @@ rule BrowserModifier_Win32_Internetsearch_125769_0
         $x_1_6 = {73 65 61 72 63 68 00 00 69 65 36 2e 68 74 6d 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))

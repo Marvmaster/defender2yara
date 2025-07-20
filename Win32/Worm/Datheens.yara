@@ -28,6 +28,7 @@ rule Worm_Win32_Datheens_A_2147582960_0
         $x_1_14 = "NetShareEnum" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 5 of ($x_2_*) and 6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 6 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -61,6 +62,7 @@ rule Worm_Win32_Datheens_B_2147582961_0
         $x_1_7 = "GetSystemDirectoryA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +93,7 @@ rule Worm_Win32_Datheens_C_2147582966_0
         $x_1_11 = "Toolhelp32ReadProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 4 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -124,6 +127,7 @@ rule Worm_Win32_Datheens_D_2147583249_0
         $x_1_9 = "\\spoolsv.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +156,7 @@ rule Worm_Win32_Datheens_E_2147583250_0
         $x_1_9 = "Toolhelp32ReadProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Alureon_C_2147803842_0
         $x_2_5 = {80 3b 3b 74 0c ff 45 fc 8b 45 fc 80 3c 18 3b 75 f4}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -54,6 +55,7 @@ rule TrojanDownloader_Win32_Alureon_E_2147804128_0
         $x_1_12 = {5c 62 69 74 73 61 64 6d 69 6e 62 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -85,6 +87,7 @@ rule TrojanDownloader_Win32_Alureon_G_2147804167_0
         $x_1_9 = "\\PATHPINGb.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 4 of ($x_1_*))) or
             ((3 of ($x_10_*) and 1 of ($x_4_*))) or

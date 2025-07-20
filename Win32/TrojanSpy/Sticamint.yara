@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Sticamint_A_2147634576_0
         $x_2_5 = "/stat.aspx" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

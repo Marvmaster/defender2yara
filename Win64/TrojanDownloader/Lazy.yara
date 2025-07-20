@@ -21,6 +21,7 @@ rule TrojanDownloader_Win64_Lazy_RDA_2147835630_0
         $x_1_6 = "Fortnite" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win64_Lazy_E_2147926183_0
         $x_1_3 = {3b c8 48 f7 d3 0f 42 c8 49 23 dc 49 8d 44 3d 00 8b f1 48 2b de 48 3b d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

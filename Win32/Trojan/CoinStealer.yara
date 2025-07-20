@@ -19,6 +19,7 @@ rule Trojan_Win32_CoinStealer_BC_2147809809_0
         $x_1_4 = "VirtualAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_CoinStealer_BD_2147810202_0
         $x_1_4 = "eliminar cualquier virus" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_CoinStealer_GNM_2147810545_0
         $x_10_2 = {89 45 20 b9 2c 00 00 00 81 e9 ?? ?? ?? ?? 03 0d ?? ?? ?? ?? 81 e9 ?? ?? ?? ?? 33 0d ?? ?? ?? ?? 2b 4d 1c 89 4d cc 8b c5 59 8b e5 5d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_CoinStealer_CB_2147811825_0
         $x_1_2 = {2a c1 32 c1 32 c1 34 51 2a c1 32 c1 c0 c8 05 32 c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Trojan_Win32_CoinStealer_CD_2147812746_0
         $x_1_3 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_Win32_CoinStealer_CA_2147816189_0
         $x_1_3 = "GetTickCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule Trojan_Win32_CoinStealer_GTF_2147836297_0
         $x_10_1 = {32 c5 88 42 03 8a 42 f4 32 45 fd 88 42 04 8a 42 f5 32 c1 88 42 05 8a 42 f6 32 c4 43 88 42 06 83 c2 ?? 83 fb 2c 0f 82}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

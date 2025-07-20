@@ -18,6 +18,7 @@ rule Virus_Win32_Sirefef_A_2147631617_0
         $x_1_3 = {56 8a 0a 6b c0 21 0f be f1 33 c6 42 84 c9 75 f1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +62,7 @@ rule Virus_Win32_Sirefef_R_2147657890_0
         $x_1_1 = {e8 46 fe ff ff 85 c0 7c 11 8b 45 fc 66 39 70 06 74 08 56 56 56 83 c0 0c ff d0 68 00 80 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

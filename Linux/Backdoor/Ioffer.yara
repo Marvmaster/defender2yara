@@ -21,6 +21,7 @@ rule Backdoor_Linux_Ioffer_A_2147826656_0
         $x_1_6 = "adminpass JhGc7Ls2AOQSg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

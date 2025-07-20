@@ -27,6 +27,7 @@ rule Trojan_Win32_Gewder_A_2147575180_0
         $x_1_13 = "URLDownloadToFileA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 5 of ($x_1_*))) or
             ((6 of ($x_2_*) and 3 of ($x_1_*))) or

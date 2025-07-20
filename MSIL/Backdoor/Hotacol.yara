@@ -18,6 +18,7 @@ rule Backdoor_MSIL_Hotacol_A_2147711703_0
         $x_1_4 = {67 00 65 00 74 00 61 00 6c 00 6c 00 ?? ?? 6a 00 70 00 67 00 ?? ?? 6a 00 70 00 67 00 32 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

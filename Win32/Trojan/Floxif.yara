@@ -16,6 +16,7 @@ rule Trojan_Win32_Floxif_C_2147661097_0
         $x_1_2 = {c6 45 a0 e9 03 fa 8b c7 8b 08 89 4d c8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Floxif_AV_2147799364_0
         $x_3_7 = "os_crypt" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win32_Floxif_AW_2147799365_0
         $x_3_7 = "os_crypt" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win32_Floxif_YBZ_2147914760_0
         $x_1_1 = {8b cf f7 e7 c1 ea 04 6b c2 16 2b c8 2b ce 8a 44 0c 24 32 87 28 49 10 10 88 04 2f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

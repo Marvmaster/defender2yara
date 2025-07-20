@@ -21,6 +21,7 @@ rule Virus_Win32_Chir_2147717323_0
         $x_1_5 = "<html><HEAD></HEAD><body bgColor=3D#ffffff><iframe src=3Dcid:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_0
         $x_1_9 = "RunPE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -58,6 +59,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_1
         $x_1_11 = "encryptedPassword" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -91,6 +93,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_2
         $x_1_10 = "AntivirusProduct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -125,6 +128,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_3
         $x_1_11 = "encryptedPassword" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -160,6 +164,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_4
         $x_1_12 = "Wallet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -197,6 +202,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_5
         $x_1_14 = "*ssfn*" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -234,6 +240,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_6
         $x_1_14 = "Discord" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -269,6 +276,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_7
         $x_1_12 = "SUCK" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_15_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -307,6 +315,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_8
         $x_1_15 = "{0} MB or {1}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -346,6 +355,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_9
         $x_1_16 = "api.ip.sb/ip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -384,6 +394,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_10
         $x_1_15 = "api.ip.sb/ip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -423,6 +434,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_11
         $x_1_16 = "api.ip.sb/ip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -462,6 +474,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_12
         $x_1_16 = "api.ip.sb/ip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 6 of ($x_1_*))) or
             ((1 of ($x_50_*) and 2 of ($x_20_*))) or
@@ -502,6 +515,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_13
         $x_1_16 = "api.ip.sb/ip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -541,6 +555,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_14
         $x_1_16 = "api.ip.sb/ip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_20_*) and 6 of ($x_1_*))) or
             ((1 of ($x_50_*) and 2 of ($x_20_*))) or
@@ -580,6 +595,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_15
         $x_1_15 = "Huflepuff" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -619,6 +635,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_16
         $x_1_16 = "T--ele--gram" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -658,6 +675,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_17
         $x_1_16 = "T--ele--gram" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 7 of ($x_1_*))) or
             (all of ($x*))
@@ -697,6 +715,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_18
         $x_1_16 = "T--ele--gram" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -737,6 +756,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_19
         $x_1_17 = "icanhazip.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -777,6 +797,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_20
         $x_1_17 = "NOTMEPLEASE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -817,6 +838,7 @@ rule PWS_MSIL_RedLine_GG_2147772078_21
         $x_1_17 = "//ipinfo.io/ip%appdata%" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))
@@ -855,6 +877,7 @@ rule PWS_MSIL_RedLine_GA_2147817359_0
         $n_10_15 = "Microsoft." ascii //weight: -10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (
             ((3 of ($x_10_*) and 5 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule TrojanDropper_Win64_BungeeDropper_A_2147940353_0
         $x_1_1 = {48 89 44 24 ?? 48 8b 44 24 ?? 48 05 fc 03 00 00 48 89 44 24 ?? 48 8b 44 24 ?? 48 05 f8 03 00 00 48 89 44 24 ?? 48 8b 44 24 ?? 8b 00 89 44 24 ?? 48 8b 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

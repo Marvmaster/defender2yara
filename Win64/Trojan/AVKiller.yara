@@ -22,6 +22,7 @@ rule Trojan_Win64_AVKiller_EC_2147919990_0
         $x_1_7 = "MainGo/adr.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

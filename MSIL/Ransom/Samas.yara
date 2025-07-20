@@ -17,6 +17,7 @@ rule Ransom_MSIL_Samas_A_2147708380_0
         $x_2_3 = {73 00 70 00 69 00 [0-20] 73 00 70 00 66 00 [0-20] 73 00 61 00 76 00 [0-20] 73 00 69 00 6b 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_MSIL_Samas_A_2147708380_1
         $x_1_9 = "E_N_C_1234" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Ransom_MSIL_Samas_A_2147708380_2
         $x_1_3 = "42006900740063006F0069006E00200050006500720048006F00730074" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -101,6 +104,7 @@ rule Ransom_MSIL_Samas_B_2147709919_0
         $x_1_15 = "\\BackupHomeDir" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -130,6 +134,7 @@ rule Ransom_MSIL_Samas_C_2147710128_0
         $x_1_5 = "</htgneLeliFlanigirO>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +156,7 @@ rule Ransom_MSIL_Samas_D_2147719546_0
         $x_1_2 = {00 09 53 00 41 00 4c 00 54 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +184,7 @@ rule Ransom_MSIL_Samas_D_2147719546_1
         $x_2_8 = "hdfgkhioiugyfyghdseertdfygu" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -209,6 +216,7 @@ rule Ransom_MSIL_Samas_D_2147719546_2
         $x_8_12 = "*.berkshire" wide //weight: 8
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_4_*) and 4 of ($x_2_*))) or

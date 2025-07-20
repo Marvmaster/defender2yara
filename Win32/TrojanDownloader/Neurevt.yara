@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Neurevt_A_2147684718_0
         $x_1_2 = {81 c1 a0 00 00 00 89 4d ?? 8b 55 ?? 8b 45 0c 2b 42 34 89 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

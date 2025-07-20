@@ -19,6 +19,7 @@ rule Trojan_Win32_WhisperGate_A_2147839191_0
         $x_2_4 = {8d 85 f4 f7 ff ff 89 44 24 04 8d 85 ?? b0 ff ff 89 04 24 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_WhisperGate_B_2147894058_0
         $x_2_1 = {8b 45 f4 8b 00 89 45 e8 8b 45 e8 0f b6 c0 c7 44 24 ?? ?? ?? ?? ?? c7 44 24 08 02 00 00 00 c7 44 24 ?? ?? ?? ?? ?? 89 04 24 e8 ?? ?? ?? ?? 83 ec 10}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_WhisperGate_GAN_2147899794_0
         $x_10_1 = {01 c8 0f b6 00 89 c3 8b 45 e4 89 c1 c1 f9 1f 83 e1 03 01 c8 c1 f8 02 01 d8 88 02 8b 45 e8 8d 50 01 8b 45 dc 8d 0c 02 8b 45 e4 99 c1 ea 1e 01 d0 83 e0 03 29 d0 c1 e0 06 88 01 83 45 e8 02}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_WhisperGate_ES_2147899954_0
         $x_1_6 = "Shellcode executed successfully" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -114,6 +118,7 @@ rule Trojan_Win32_WhisperGate_RA_2147899992_0
         $x_1_3 = "Shellcode executed successfully" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Trojan_Win32_WhisperGate_EC_2147903539_0
         $x_1_3 = "shutdown -s -t: 10 -f" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -158,6 +164,7 @@ rule Trojan_Win32_WhisperGate_GNS_2147904429_0
         $x_10_1 = {8b 55 f4 8b 45 08 8d 0c 02 8b 55 f4 8b 45 08 01 d0 0f b6 18 8b 45 f4 99 f7 7d f0 89 d0 89 c2 8b 45 0c 01 d0 0f b6 00 31 d8 88 01 83 45 f4 01 8b 45 f4 3b 45 ec}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -180,6 +187,7 @@ rule Trojan_Win32_WhisperGate_AWH_2147906422_0
         $x_1_2 = {99 f7 7c 24 30 89 44 24 3c 90 8b 44 24 3c 89 04 24 e8 c3 fe ff ff 83 44 24 38 01 8d 54 24 18 8b 44 24 38 01 d0 0f b6 00 84 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Worm_Win32_Ramnit_A_2147636562_0
         $x_1_3 = {b0 e2 88 06 46 ff 75 10 56 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

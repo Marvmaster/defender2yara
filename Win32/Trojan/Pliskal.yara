@@ -19,6 +19,7 @@ rule Trojan_Win32_Pliskal_A_2147725180_0
         $x_1_4 = ":Zone.Identifier" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

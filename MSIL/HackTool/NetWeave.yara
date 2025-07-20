@@ -17,6 +17,7 @@ rule HackTool_MSIL_NetWeave_2147695316_0
         $x_1_3 = "DDoSer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

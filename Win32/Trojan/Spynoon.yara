@@ -17,6 +17,7 @@ rule Trojan_Win32_Spynoon_KMG_2147751716_0
         $x_1_2 = {24 0f 85 c9 75 ?? c0 e0 04 b9 01 00 00 00 88 02 eb ?? 08 02 33 c9 42 46 3b f7 72 0a 00 8a 86 ?? ?? ?? ?? 84 c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Spynoon_PA_2147775126_0
         $x_1_6 = "WriteFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -71,6 +73,7 @@ rule Trojan_Win32_Spynoon_PB_2147776586_0
         $x_1_8 = "S.Credentials.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -94,6 +97,7 @@ rule Trojan_Win32_Spynoon_AV_2147778175_0
         $x_1_3 = {78 61 6d 70 70 5c 68 74 64 6f 63 73 5c 43 72 79 70 74 6f 72 5c ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 5c 4c 6f 61 64 65 72 5c 4c 6f 61 64 65 72 5c 52 65 6c 65 61 73 65 5c ?? ?? ?? ?? ?? ?? ?? ?? ?? 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Trojan_Win32_Spynoon_AV_2147778175_1
         $x_1_3 = {43 3a 5c 78 61 6d 70 70 5c 68 74 64 6f 63 73 5c 43 72 79 70 74 6f 72 5c ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 5c 4c 6f 61 64 65 72 5c 4c 6f 61 64 65 72 5c 52 65 6c 65 61 73 65 5c ?? ?? ?? ?? ?? ?? ?? ?? ?? 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -141,6 +146,7 @@ rule Trojan_Win32_Spynoon_AVM_2147778563_0
         $x_1_4 = "1d1j1p1v1|1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +172,7 @@ rule Trojan_Win32_Spynoon_AVM_2147778563_1
         $x_1_5 = "Hyvkfcorf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -194,6 +201,7 @@ rule Trojan_Win32_Spynoon_AVM_2147778563_2
         $x_1_8 = "NdrFullPointerXlatFree" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +233,7 @@ rule Trojan_Win32_Spynoon_AVM_2147778563_3
         $x_1_11 = "rresvport" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -250,6 +259,7 @@ rule Trojan_Win32_Spynoon_MFP_2147781040_0
         $x_1_5 = "Watchdog module activated" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -273,6 +283,7 @@ rule Trojan_Win32_Spynoon_MFP_2147781040_1
         $x_10_3 = {8b 45 f8 83 c0 ?? 89 45 ?? 8b 4d [0-10] 8b 55 f4 03 55 f8 8a 02 88 45 ?? 0f b6 4d ff [0-10] 83 f2 ?? 88 55 ?? 0f b6 45 ?? 2b 45 [0-10] c1 f9 [0-5] c1 e2 ?? 0b ca 88 4d ?? 0f b6 45 ?? f7 d0 [0-7] 83 e9 [0-8] c1 fa [0-5] c1 e0 ?? 0b d0 [0-10] 88 4d ?? 0f b6 55 ?? f7 da [0-10] 88 45 ?? 0f b6 4d ?? 33 4d ?? 88 4d ?? 0f b6 55 ?? 81 ea [0-4] 88 55 [0-5] c1 f8 [0-5] c1 e1 ?? 0b c1 [0-7] 83 ea [0-8] 83 f0 [0-10] 8a 55}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*))) or
             ((1 of ($x_10_*))) or
@@ -299,6 +310,7 @@ rule Trojan_Win32_Spynoon_RTA_2147811334_0
         $x_1_2 = {81 eb a8 07 00 00 b8 5b 71 00 00 f7 d3 81 fb d2 47 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -328,6 +340,7 @@ rule Trojan_Win32_Spynoon_RTA_2147811334_1
         $x_1_9 = "miaxnjzzg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -349,6 +362,7 @@ rule Trojan_Win32_Spynoon_RTH_2147814079_0
         $x_1_1 = {81 c1 92 ab 00 00 05 25 7f 00 00 48 f7 d3 81 e2 14 0c 01 00 f7 d1 58 b9 14 c4 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -370,6 +384,7 @@ rule Trojan_Win32_Spynoon_RTB_2147814080_0
         $x_1_1 = {81 e3 de d1 00 00 5b 81 ea 19 f5 00 00 41 35 82 18 00 00 43 81 f9 c2 b4 00 00 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -391,6 +406,7 @@ rule Trojan_Win32_Spynoon_RMA_2147814277_0
         $x_1_1 = {81 f6 1d 7e c4 b0 f7 de 81 c6 41 6b 9a 64 3b 73 ?? 0f 95 c1 89 8d ?? ?? ?? ?? 8d b5 ?? ?? ?? ?? 8b 0e 03 4f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -412,6 +428,7 @@ rule Trojan_Win32_Spynoon_RMA_2147814277_1
         $x_1_1 = {0d 00 ff ff ff 40 89 45 ?? 8b 45 ?? 0f b6 84 05 ?? ?? ?? ?? 8b 4d ?? 03 4d ?? 0f b6 09 33 c8 8b 45 ?? 03 45 ?? 88 08 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -433,6 +450,7 @@ rule Trojan_Win32_Spynoon_RM_2147815445_0
         $x_1_1 = {81 e2 4b b6 00 00 43 ba 5f 7a 01 00 42 25 0e 23 01 00 05 09 f2 00 00 81 fa 2f e1 00 00 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -454,6 +472,7 @@ rule Trojan_Win32_Spynoon_RW_2147816372_0
         $x_1_1 = {b8 cd cc cc cc 83 c4 04 f7 e6 8b c6 c1 ea 03 8d 0c 92 03 c9 2b c1 8a 80 ?? ?? ?? ?? 30 04 1e 46 ff 07 3b f5 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -475,6 +494,7 @@ rule Trojan_Win32_Spynoon_RWA_2147816373_0
         $x_1_1 = {83 c4 04 8b 45 ?? 33 d2 b9 0a 00 00 00 f7 f1 0f b6 92 ?? ?? ?? ?? 8b 45 ?? 03 45 ?? 0f b6 08 33 ca 8b 55 ?? 03 55 ?? 88 0a 8b 45 ?? 8b 08 83 c1 01 8b 55 ?? 89 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -496,6 +516,7 @@ rule Trojan_Win32_Spynoon_RFB_2147816522_0
         $x_1_1 = {b8 cd cc cc cc f7 e6 8b c6 c1 ea 03 68 ?? ?? ?? ?? 8d 0c 92 03 c9 2b c1 8a 80 ?? ?? ?? ?? 30 04 3e e8 ?? ?? ?? ?? 46 83 c4 04 3b f3 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -518,6 +539,7 @@ rule Trojan_Win32_Spynoon_DA_2147816637_0
         $x_2_2 = "Hkcoedclxfkckdl" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -541,6 +563,7 @@ rule Trojan_Win32_Spynoon_DB_2147816638_0
         $x_5_3 = "GFHFGHTRYRE" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
             (all of ($x*))
@@ -565,6 +588,7 @@ rule Trojan_Win32_Spynoon_RFA_2147816899_0
         $x_1_1 = {81 e1 0f 00 00 00 81 c1 00 00 00 00 8a 14 08 88 55 ?? 8a 55 ?? 8b 45 ?? 8b 4d ?? 8b 75 ?? 89 34 24 89 4c 24 ?? 89 44 24 ?? 0f b6 c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -587,6 +611,7 @@ rule Trojan_Win32_Spynoon_MBZW_2147907374_0
         $x_1_2 = {49 d8 46 00 6c 16 40 00 10 f0 30 00 00 ff ff ff 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -608,6 +633,7 @@ rule Trojan_Win32_Spynoon_AUFA_2147928078_0
         $x_5_1 = {8b c3 c1 e8 05 89 45 fc 8b 45 e8 01 45 fc 8b cb c1 e1 04 03 4d ec 8d 14 1f 33 ca 33 4d fc 89 4d dc 8b 45 dc 29 45 f8 81 c7 47 86 c8 61 83 6d ?? 01 0f 85}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

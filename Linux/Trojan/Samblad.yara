@@ -21,6 +21,7 @@ rule Trojan_Linux_Samblad_A_2147756834_0
         $x_1_6 = "PAYLOAD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

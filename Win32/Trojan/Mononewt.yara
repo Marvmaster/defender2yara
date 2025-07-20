@@ -20,6 +20,7 @@ rule Trojan_Win32_Mononewt_A_2147814867_0
         $x_1_5 = "\\Microsoft\\Media Player" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Backdoor_Win32_Glacid_D_2147657163_0
         $x_1_6 = "net stop %s & sc delete %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

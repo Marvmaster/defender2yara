@@ -18,6 +18,7 @@ rule Trojan_Win32_Zonsterarch_A_2147680177_0
         $x_1_4 = "[@cid=\"%s\"]/base[@cost=\"%d\"]/price" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_Win32_Zonsterarch_Q_2147680476_0
         $x_1_3 = "Select Folder" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win32_Zonsterarch_T_2147680477_0
         $x_1_8 = "alt_pay_base_url" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -98,6 +101,7 @@ rule Trojan_Win32_Zonsterarch_AF_2147680478_0
         $x_1_6 = "action={ACTION_ID}&" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -122,6 +126,7 @@ rule Trojan_Win32_Zonsterarch_AB_2147680479_0
         $x_1_5 = {73 65 6e 64 6e 75 6d 62 65 72 [0-4] 73 6d 73 76 61 72 31 [0-4] 73 6d 73 76 61 72 32}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -147,6 +152,7 @@ rule Trojan_Win32_Zonsterarch_AC_2147680480_0
         $x_1_6 = "Software\\winsmartzip" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -171,6 +177,7 @@ rule Trojan_Win32_Zonsterarch_P_2147680481_0
         $x_1_5 = "alertpay/?pay=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -193,6 +200,7 @@ rule Trojan_Win32_Zonsterarch_AD_2147680482_0
         $x_1_3 = {3f 04 35 04 48 04 3d 04 3e 04 20 00 43 04 34 04 30 04 3b 04 51 04 3d 04 4b 04 21 00 0a 00 1d 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +227,7 @@ rule Trojan_Win32_Zonsterarch_AG_2147680483_0
         $x_1_7 = "captura.bmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             ((3 of ($x_4_*))) or
@@ -249,6 +258,7 @@ rule Trojan_Win32_Zonsterarch_U_2147680484_0
         $x_1_7 = "//country[@cid=\"%s\"]/base[@cost=\"%s\"]/price[@sub=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -275,6 +285,7 @@ rule Trojan_Win32_Zonsterarch_V_2147680485_0
         $x_1_4 = "zipconnect.in</alt_api_base_url>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -299,6 +310,7 @@ rule Trojan_Win32_Zonsterarch_W_2147680486_0
         $x_1_1 = {81 7d d8 30 04 00 00 0f 83 ab 01 00 00 8b 55 f4 83 c2 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -321,6 +333,7 @@ rule Trojan_Win32_Zonsterarch_X_2147680487_0
         $x_1_3 = {d9 45 ec d8 ?? ?? ?? ?? 00 df e0 9e 77 44 d9 45 ec d8 ?? ?? ?? ?? 00 d9 5d ec d9 45 ec 51 d9 1c 24 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -344,6 +357,7 @@ rule Trojan_Win32_Zonsterarch_Y_2147680488_0
         $x_1_1 = {f7 d2 89 55 e8 eb 2d 8b 45 e8 f7 d0 89 45 e8 8b 0d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -365,6 +379,7 @@ rule Trojan_Win32_Zonsterarch_Z_2147680489_0
         $x_1_2 = "::Swil(t r1, t r3) i.s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -387,6 +402,7 @@ rule Trojan_Win32_Zonsterarch_AA_2147680490_0
         $x_1_3 = "\"zm_country\"" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -414,6 +430,7 @@ rule Trojan_Win32_Zonsterarch_AE_2147680491_0
         $x_1_8 = "TCellOperators" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -434,6 +451,7 @@ rule Trojan_Win32_Zonsterarch_R_2147680492_0
         $x_1_1 = {6b d2 44 81 fa 52 02 00 00 76 11 8b 45 f8 69 c0 87 61 01 00 8b 4d f0 03 c8 89 4d f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -458,6 +476,7 @@ rule Trojan_Win32_Zonsterarch_S_2147680493_0
         $x_1_5 = "\\ZipMonster\\Soft\\Sources\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -483,6 +502,7 @@ rule Trojan_Win32_Zonsterarch_BW_2147705637_0
         $x_1_6 = {61 6c 74 5f 62 61 73 65 5f 75 72 6c 00 00 00 00 ff ff ff ff 10 00 00 00 61 6c 74 5f 61 70 69 5f 62 61 73 65 5f 75 72 6c 00 00 00 00 ff ff ff ff 10 00 00 00 61 6c 74 5f 70 61 79 5f 62 61 73 65 5f 75 72 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

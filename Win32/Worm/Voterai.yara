@@ -26,6 +26,7 @@ rule Worm_Win32_Voterai_A_2147601371_0
         $x_1_12 = "SYMAN" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -52,6 +53,7 @@ rule Worm_Win32_Voterai_D_2147624330_0
         $x_1_4 = "Bogus message code %d" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -79,6 +81,7 @@ rule Worm_Win32_Voterai_H_2147653841_0
         $x_1_5 = "\\autorun.inf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

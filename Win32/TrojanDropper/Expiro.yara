@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Expiro_B_2147645058_0
         $x_1_1 = {31 d0 88 04 3e 80 05 ?? ?? ?? ?? 01 0f b6 05 ?? ?? ?? ?? 3d ff 00 00 00 75 07 c6 05 ?? ?? ?? ?? 00 83 65 ?? 00 eb 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

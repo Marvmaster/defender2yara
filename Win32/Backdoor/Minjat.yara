@@ -20,6 +20,7 @@ rule Backdoor_Win32_Minjat_A_2147660183_0
         $x_1_6 = {8a 04 3e 3c 30 72 0c 3c 39 77 08 0f b6 c8 83 e9 30 eb 16 3c 61 72 0c 3c 7a 77 08 0f b6 c8 83 e9 57 eb 06 0f b6 c8 83 e9 37}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

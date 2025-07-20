@@ -18,6 +18,7 @@ rule TrojanClicker_Win32_NightClick_A_2147716175_0
         $x_2_4 = "%s\\WinStage\\%s" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanClicker_Win32_NightClick_A_2147716175_1
         $x_1_4 = "click to coord - x:%d && y:%d" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_100_*) and 2 of ($x_10_*))) or
@@ -67,6 +69,7 @@ rule TrojanClicker_Win32_NightClick_A_2147716175_2
         $x_1_3 = "\\work\\oas\\updService\\Release\\updservice.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule TrojanClicker_Win32_NightClick_A_2147716175_3
         $x_1_5 = ".proceedcheck.xyz" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule TrojanClicker_Win32_NightClick_A_2147716175_4
         $x_10_6 = "/%s/campaignid/2/userid/%s/siteid/%s/version/%s" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

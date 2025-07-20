@@ -21,6 +21,7 @@ rule Trojan_MSIL_Redcape_RPY_2147847648_0
         $x_1_6 = "HttpClient" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

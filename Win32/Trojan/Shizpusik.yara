@@ -21,6 +21,7 @@ rule Trojan_Win32_Shizpusik_A_2147740707_0
         $x_3_7 = {b2 f8 f0 f0 b2 f9 e4 f9 f8 f3 eb f2 f0 f3 fd f8 b2 eb f5 f2 f8 f3 eb ef e9 ec f8 fd e8 f9 b2 ff}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

@@ -18,6 +18,7 @@ rule Backdoor_MacOS_Empyre_F_2147852240_0
         $x_1_3 = "_Py_Initialize" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Backdoor_MacOS_Empyre_I_2147888109_0
         $x_1_3 = {62 61 73 65 36 34 [0-16] 65 78 65 63}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

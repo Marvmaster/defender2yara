@@ -17,6 +17,7 @@ rule TrojanSpy_Win32_Hanove_B_2147681673_0
         $x_1_3 = {3f 63 64 61 74 61 3d 00 26 64 65 74 61 69 6c 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanSpy_Win32_Hanove_C_2147681677_0
         $x_1_4 = {00 00 53 00 68 00 65 00 6c 00 6c 00 20 00 73 00 74 00 61 00 72 00 74 00 65 00 64 00 20 00 61 00 74 00 3a 00 20 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanSpy_Win32_Hanove_D_2147681678_0
         $x_2_5 = {47 00 6f 00 6f 00 67 00 6c 00 53 00 65 00 72 00 76 00 69 00 63 00 73 00 00 00 [0-32] 00 52 00 2e 00 76 00 62 00 73 00 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -91,6 +94,7 @@ rule TrojanSpy_Win32_Hanove_A_2147681680_0
         $x_1_4 = {53 00 20 00 74 00 20 00 61 00 72 00 74 00 20 00 75 00 20 00 70 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule TrojanSpy_Win32_Hanove_E_2147681699_0
         $x_1_5 = {2e 64 6f 63 00 00 00 00 2e 64 6f 63 78 00 00 00 2e 78 6c 73 00 00 00 00 2e 78 6c 73 78 00 00 00 2e 70 64 66}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -143,6 +148,7 @@ rule TrojanSpy_Win32_Hanove_B_2147681700_0
         $x_2_4 = {48 3d f2 01 00 00 77 17 8a 14 01 80 fa 2f 74 0f 80 fa 5c 74 0a c6 44 01 01 2f c6 44 01 02 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

@@ -24,6 +24,7 @@ rule BrowserModifier_Win32_Heazycrome_234061_0
         $x_1_10 = "tmp.mof" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_20_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -23,6 +23,7 @@ rule Trojan_MSIL_BatLaunch_RPY_2147850593_0
         $x_1_8 = "start /b svc.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

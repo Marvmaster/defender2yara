@@ -16,6 +16,7 @@ rule Worm_Win32_Alomim_A_2147622378_0
         $x_1_2 = {41 69 6d 3a 47 4f 49 4d 3f 73 63 72 65 65 6e 6e 61 6d 65 3d [0-16] 26 6d 65 73 73 61 67 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

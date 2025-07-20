@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_Nekozillot_A_2147725219_0
         $x_1_3 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

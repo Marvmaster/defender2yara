@@ -20,6 +20,7 @@ rule Trojan_Win64_Misfox_A_2147727843_0
         $x_3_5 = {48 63 c3 c6 44 04 38 2e ff c3 48 63 c3 c6 44 04 38 72 ff c3 48 63 c3 c6 44 04 38 75 8d 43 01 48 63 c8 48 83 f9 10 73 33 c6 44 0c 38 00 80 7c 24 38 00 74 12 48 8d 44 24 38 48 83 ce ff 48 ff c6}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

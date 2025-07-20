@@ -19,6 +19,7 @@ rule Ransom_MSIL_Heracles_YAA_2147917339_0
         $x_1_4 = "EncryptFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

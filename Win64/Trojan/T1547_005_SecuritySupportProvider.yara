@@ -21,6 +21,7 @@ rule Trojan_Win64_T1547_005_SecuritySupportProvider_A_2147846086_0
         $x_10_7 = "sekurlsa::ssp" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

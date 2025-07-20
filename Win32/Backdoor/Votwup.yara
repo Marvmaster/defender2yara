@@ -22,6 +22,7 @@ rule Backdoor_Win32_Votwup_A_2147621288_0
         $x_1_8 = {75 70 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -56,6 +57,7 @@ rule Backdoor_Win32_Votwup_B_2147627019_0
         $x_1_8 = {64 64 74 6f 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
@@ -85,6 +87,7 @@ rule Backdoor_Win32_Votwup_D_2147649367_0
         $x_1_5 = {68 74 74 70 3a 2f 2f 00 64 61 72 6b 6e 65 73 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_Staser_DHA_2147752692_0
         $x_1_1 = {7d 60 8b 85 ?? ?? ?? ?? 0f af 85 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 2b c8 89 0d 02 a1 ?? ?? ?? ?? 2b 05 02 a3 ?? ?? ?? ?? 8b 85 01 99 b9 40 42 0f 00 f7 f9 85 d2 75 21 8b 85 ?? ?? ?? ?? 83 c0 03 89 85 ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 03 85 01 89 85 ?? ?? ?? ?? eb 87}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Staser_RTA_2147798844_0
         $x_1_1 = {55 8b ec 83 ec 03 83 e4 f8 83 c4 04 53 83 ec 0c 8b 5d 14 6a 03}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Staser_CD_2147811619_0
         $x_1_4 = "GetTickCount" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +86,7 @@ rule Trojan_Win32_Staser_BB_2147818041_0
         $x_2_2 = {33 4a 01 bb d0 f6 46 00 3b c8 75 24}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_Win32_Staser_PEF_2147826863_0
         $x_1_5 = ".sela" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -135,6 +140,7 @@ rule Trojan_Win32_Staser_HQ_2147827352_0
         $x_1_4 = "AlphaBlend" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Trojan_Win32_Staser_ER_2147828894_0
         $x_1_4 = "CreateILockBytesOnHGlobal" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +198,7 @@ rule Trojan_Win32_Staser_NE_2147831769_0
         $x_2_12 = "GetTickCount" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +220,7 @@ rule Trojan_Win32_Staser_GKU_2147835859_0
         $x_10_1 = {0f b6 00 83 e0 0f 33 c2 0f b6 db 33 c3 83 f8 72 75 ?? 33 c0 5b 5e c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -233,6 +242,7 @@ rule Trojan_Win32_Staser_NEAA_2147835909_0
         $x_10_1 = {5d 89 1c 24 bb 04 00 00 00 01 d8 5b 53 57 ff 74 24 04 5f 8f 04 24 57 ff 0c 24 5f 31 3c 24 33 3c 24 31 3c 24 5b e9 99 ff ff ff}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -254,6 +264,7 @@ rule Trojan_Win32_Staser_EN_2147836949_0
         $x_5_1 = {83 c4 04 56 53 8b 75 14 8d 85 d8 f9 ff ff 0c 01 56 ff 15 ?? ?? ?? ?? 6a 14 6a 40 ff 15 ?? ?? ?? ?? 8b d8 e9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -281,6 +292,7 @@ rule Trojan_Win32_Staser_NEAB_2147836981_0
         $x_1_7 = "WriteProcessMemory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -304,6 +316,7 @@ rule Trojan_Win32_Staser_EH_2147837118_0
         $x_1_3 = "GetKeyboardState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -325,6 +338,7 @@ rule Trojan_Win32_Staser_RB_2147838339_0
         $x_1_1 = {55 8b ec 83 ec 03 83 e4 f8 83 c4 04 6a 03 e8 ?? ?? ?? ?? 59 ff 75 14 ff 15 ?? ?? ?? ?? e8 ?? ?? ?? ?? 31 05 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 59 a3 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b c8 b8 ?? ?? ?? ?? 33 d2 f7 f1 31 05 ?? ?? ?? ?? e8 ?? ?? ?? ?? 33 c0 50 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -346,6 +360,7 @@ rule Trojan_Win32_Staser_RI_2147842345_0
         $x_1_1 = {55 8b ec 6a 29 ff 15 dc 93 65 00 85 c0 a3 e0 ca 65 00 74 0a 8b 45 14 50 ff 15 58 90 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -367,6 +382,7 @@ rule Trojan_Win32_Staser_RJ_2147842346_0
         $x_1_1 = {ff 15 68 95 65 00 a1 e0 ca 65 00 85 c0 74 13 68 a8 bb 45 01 56 ff 15 5c 90 65 00 56 ff 15 58 90 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -388,6 +404,7 @@ rule Trojan_Win32_Staser_RK_2147842544_0
         $x_1_1 = {55 8b ec 83 ec 03 83 e4 f8 83 c4 04 6a 03 b8 01 00 00 00 59 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -409,6 +426,7 @@ rule Trojan_Win32_Staser_RK_2147842544_1
         $x_1_1 = {55 8b ec 83 ec 03 83 e4 f8 83 c4 04 6a 06 58 ff 75 08 57 90 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -430,6 +448,7 @@ rule Trojan_Win32_Staser_RK_2147842544_2
         $x_1_1 = {55 8b ec ff 15 d8 63 65 00 6a ff 6a 00 6a 00 ff 15 c8 66 65 00 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -451,6 +470,7 @@ rule Trojan_Win32_Staser_RK_2147842544_3
         $x_1_1 = {55 8b ec 8b 45 14 50 ff 15 78 66 65 00 6a 00 6a 00 ff 15 9c 66 65 00 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -472,6 +492,7 @@ rule Trojan_Win32_Staser_RK_2147842544_4
         $x_1_1 = {55 8b ec 83 ec 03 83 e4 f8 83 c4 04 f6 c4 01 b8 0c 01 0b 80 ff 35 3c 44 08 01 ff 15 b0 f3 46 00 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -493,6 +514,7 @@ rule Trojan_Win32_Staser_RL_2147842545_0
         $x_1_1 = {55 8b ec 56 8b 75 14 56 ff 15 34 66 65 00 6a 00 6a 00 ff 15 0c 63 65 00 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -514,6 +536,7 @@ rule Trojan_Win32_Staser_RL_2147842545_1
         $x_1_1 = {55 8b ec 83 ec 03 83 e4 f8 83 c4 04 3b 7d 0c a9 00 00 80 00 ff 75 14 e8 ?? 8f 06 00 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -536,6 +559,7 @@ rule Trojan_Win32_Staser_RL_2147842545_2
         $x_1_2 = "ShutdownScheduler.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -557,6 +581,7 @@ rule Trojan_Win32_Staser_RE_2147842688_0
         $x_1_1 = {55 8b ec 83 ec 03 83 e4 f8 83 c4 04 6a 03 33 c0 33 db 90 59 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -578,6 +603,7 @@ rule Trojan_Win32_Staser_RE_2147842688_1
         $x_1_1 = {55 8b ec 83 ec 03 83 e4 f8 83 c4 04 56 56 8b 44 24 10 8b f1 85 c0 6a 14 6a 40 ff 15 ?? ?? 46 00 8b f0 6a 01 56 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -599,6 +625,7 @@ rule Trojan_Win32_Staser_RF_2147842689_0
         $x_1_1 = {55 8b ec 83 ec 03 83 e4 f8 83 c4 04 57 33 ff 3b c7 33 c0 59 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -620,6 +647,7 @@ rule Trojan_Win32_Staser_RG_2147842690_0
         $x_1_1 = {55 8b ec 83 ec 03 83 e4 f8 83 c4 04 0c 01 b8 02 00 00 00 90 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -641,6 +669,7 @@ rule Trojan_Win32_Staser_RH_2147842691_0
         $x_1_1 = {55 8b ec 83 ec 03 83 e4 f8 83 c4 04 3d 02 01 00 00 0c 01 90 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -663,6 +692,7 @@ rule Trojan_Win32_Staser_RM_2147843687_0
         $x_1_2 = "ShutdownScheduler.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -686,6 +716,7 @@ rule Trojan_Win32_Staser_RO_2147843970_0
         $x_1_3 = "Acebyte" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -708,6 +739,7 @@ rule Trojan_Win32_Staser_RP_2147843971_0
         $x_1_2 = "ShutdownScheduler.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -730,6 +762,7 @@ rule Trojan_Win32_Staser_RQ_2147843972_0
         $x_1_2 = "ShutdownScheduler.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -751,6 +784,7 @@ rule Trojan_Win32_Staser_RS_2147844003_0
         $x_5_1 = {55 8b ec 8b 45 14 50 e8 fc 44 04 00 85 c0 74 05 e8 6b d7 00 00 e9}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -772,6 +806,7 @@ rule Trojan_Win32_Staser_ASR_2147845733_0
         $x_1_1 = {8b c7 8b cf c1 f8 05 83 e1 1f 8b 04 85 e0 68 08 01 8d 04 c8 8b 0b 89 08 8a 4d 00 88 48 04 47 45 83 c3 04 3b fe}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -794,6 +829,7 @@ rule Trojan_Win32_Staser_RR_2147846402_0
         $x_1_2 = "ShutdownScheduler.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -815,6 +851,7 @@ rule Trojan_Win32_Staser_ARA_2147846442_0
         $x_2_1 = {8d 64 24 00 8b 96 ?? ?? ?? ?? 8a 14 0a 32 96 ?? ?? ?? ?? 41 88 54 01 ff 3b 8e}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -836,6 +873,7 @@ rule Trojan_Win32_Staser_BW_2147846456_0
         $x_5_1 = {55 8b ec 83 ec 03 83 e4 f8 83 c4 04 57 56 8b 7d 14 3b 7d 0c a9 00 00 80 00 57 e8}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -857,6 +895,7 @@ rule Trojan_Win32_Staser_BX_2147847151_0
         $x_5_1 = {55 8b ec 83 ec 03 83 e4 f8 83 c4 04 56 56 3b 7d 0c a9 00 00 80 00 6a 14 6a 40 ff 15 [0-4] 8b f0 6a 01 56 ff 15 [0-4] e9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -878,6 +917,7 @@ rule Trojan_Win32_Staser_AS_2147847997_0
         $x_1_1 = {8b c5 0f b7 db 83 c4 10 66 f7 d6 5b e9 ?? ?? ?? ?? 33 c2 1b d6 d2 f6 0f ac fa 57 8b 54 24 18 88 04 2a 80 c4 5b 3a cd d2 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -899,6 +939,7 @@ rule Trojan_Win32_Staser_DP_2147850017_0
         $x_10_1 = {55 8b ec 83 ec 03 83 e4 f8 83 c4 04 3b 7d 0c a9 00 00 80 00 ff 15 ?? ?? ?? 00 6a 01 ff 75 14 ff 15 ?? ?? ?? 00 85 c0 74}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

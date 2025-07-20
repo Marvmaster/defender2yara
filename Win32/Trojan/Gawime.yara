@@ -24,6 +24,7 @@ rule Trojan_Win32_Gawime_A_2147653679_0
         $x_1_10 = {5c 70 6f 62 61 6f 5f 64 68 78 79 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((8 of ($x_1_*))) or
             ((1 of ($x_3_*) and 5 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule Trojan_Win32_Petr_GPA_2147892586_0
         $x_4_1 = {53 8a 5c 24 08 32 da 83 f1 ea 03 0d ?? ?? 40 00 83 e1 ?? ?? ?? ?? ?? 40 00 33 ca 6b c1 32}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

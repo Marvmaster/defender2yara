@@ -19,6 +19,7 @@ rule Ransom_Win32_Clown_A_2147749489_0
         $x_1_4 = {5c 54 68 65 44 4d 52 5f 45 6e 63 72 79 70 74 65 72 5c [0-16] 5c 54 68 65 44 4d 52 5f 45 6e 63 72 79 70 74 65 72 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Win32_Clown_AA_2147756632_0
         $x_2_6 = "DecryptAdmin@prtonmail.com" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_2_*))) or
             ((1 of ($x_10_*) and 3 of ($x_5_*))) or

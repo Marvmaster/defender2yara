@@ -24,6 +24,7 @@ rule Trojan_Win32_LegionLoader_ALE_2147835167_0
         $x_1_9 = "zovieoigfw3j98rjh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_LegionLoader_RPQ_2147835587_0
         $x_1_1 = {49 83 c9 fc 41 85 c9 74 12 83 7d d8 00 7e 0c 8b 55 d8 81 c2 ?? ?? ?? ?? 89 55 d8 8b 45 90 8b 4d bc 89 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_LegionLoader_RPR_2147835701_0
         $x_1_1 = {89 4d fc 8b 55 fc 03 55 b0 89 55 fc 8b 45 f4 03 45 f8 89 45 f4 8b 4d fc 2b 4d b0 89 4d fc 8b 55 f8 2b 55 f4 89 55 f8 8b 45 f4 03 45 f8 89 45 f4 8b 8d 58 ff ff ff 8b 55 98 89 11}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_LegionLoader_RPS_2147835702_0
         $x_1_2 = {74 0b 8b 55 d8 83 c2 01 89 55 d8 eb e6 8b 45 a8 2b 45 d8 89 45 a8 8b 4d b8 81 e9 f3 1c 00 00 89 4d b8 8b 95 2c ff ff ff 8b 85 74 ff ff ff 89 02 90 90 90 90 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Win32_LegionLoader_A_2147837870_0
         $x_2_1 = {b8 08 00 00 00 6b c8 00 ba 78 65 63 2e c7 44 0d e8 6d 73 69 65 89 54 0d ec c7 45 e4 eb 16 a3 12 b8 08 00 00 00 c1 e0 00 33 c9 c7 44 05 e8 65 78 65 00 89 4c 05 ec 8d 55 e8 52 8b 45 f8 50 ff 15 30 ?? 04 10 85 c0 74}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule Trojan_Win32_LegionLoader_BL_2147838837_0
         $x_2_5 = "soigfsoieg4jsrhdh" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +161,7 @@ rule Trojan_Win32_LegionLoader_RF_2147840393_0
         $x_1_1 = {8b 45 f4 8b 08 c1 e1 06 8b 55 f4 8b 02 c1 e8 08 33 c8 8b 55 f4 8b 32 03 f1 8b 45 fc 33 d2 f7 75 ec 8b 45 08 03 34 90 03 75 fc 8b 4d f0 8b 11 2b d6 8b 45 f0 89 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +186,7 @@ rule Trojan_Win32_LegionLoader_CPP_2147841034_0
         $x_5_4 = "siosejgf3w8geiojseh" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -204,6 +212,7 @@ rule Trojan_Win32_LegionLoader_AABX_2147849186_0
         $x_1_5 = "UIaiaogfiasdjgasdgj" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -231,6 +240,7 @@ rule Trojan_Win32_LegionLoader_AAGB_2147851079_0
         $x_2_7 = "Upsrgiwosergjwigjadsf" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Worm_Win32_Mira_C_2147734906_0
         $x_1_2 = "Saaaalamm" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Worm_Win32_Mira_A_2147750009_0
         $x_1_3 = {80 bc 28 78 ff ff ff 65 75 4b 0f bf 05 14 20 44 00 80 bc 28 77 ff ff ff 78 75 3a 0f bf 05 14 20 44 00 80 bc 28 76 ff ff ff 65 75 29 0f bf 05 14 20 44 00 80 bc 28 75 ff ff ff 2e 75 18 0f bf 05 14 20 44 00 80 bc 28 74 ff ff ff 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Worm_Win32_Mira_J_2147750129_0
         $x_1_4 = {c7 44 24 1c 00 00 00 00 c7 44 24 18 00 00 00 00 c7 44 24 14 10 00 00 00 c7 44 24 10 00 00 00 00 c7 44 24 0c 00 00 00 00 c7 44 24 08 00 00 00 00 c7 44 24 04 00 00 00 00 c7 04 24 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

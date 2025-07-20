@@ -17,6 +17,7 @@ rule Worm_Win32_Jaakpol_A_2147626917_0
         $x_1_3 = "%StpAV% Automatic Updates >nul & cls" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

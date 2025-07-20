@@ -21,6 +21,7 @@ rule Ransom_MSIL_Conti_STR_2147816511_0
         $x_1_6 = "UwB0AGEAcgB0AC0AUwBsAGUAZQBwACAALQBTAGUAYwBvAG4AZABzACAAMgAwAA==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule Ransom_MSIL_Conti_MA_2147821402_0
         $x_1_12 = "vssadmin.exe delete shadows /all /quiet /?" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

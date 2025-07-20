@@ -17,6 +17,7 @@ rule Trojan_Win32_Qakbotcrypt_GA_2147765312_0
         $x_1_2 = {58 59 c7 45 [0-2] 00 00 00 00 ff 75 [0-2] 01 04 [0-2] 8d 83 [0-50] 31 c9 31 c1 89 8b [0-4] 8b 4d [0-2] 31 c0 8b 04 [0-2] 83 ec fc ff e0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Qakbotcrypt_GB_2147765330_0
         $x_1_2 = {8b d2 8b d2 8b d2 8b d2 8b d2 8b d2 31 0d [0-4] c7 05 [0-4] 00 00 00 00 8b 1d [0-4] 01 1d [0-4] a1 [0-4] 8b 0d [0-4] 89 08 5b 5d c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Qakbotcrypt_GE_2147778106_0
         $x_10_2 = {8b 0d 8b 11 89 15 [0-100] 33 ?? 8b c2 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 89 08 5d c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

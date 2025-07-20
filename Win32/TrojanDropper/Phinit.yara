@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Phinit_B_2147628495_0
         $x_1_4 = {5c 69 65 78 70 6c 6f 72 65 72 2e 65 78 65 22 20 48 45 4c 4c 4f 5f 45 37 38 34 38 46 42 42 2d 38 33 31 45 2d 34 33 61 34 2d 41 45 45 45 2d 37 31 43 30 41 33 43 35 32 45 45 41 5f 53 50 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

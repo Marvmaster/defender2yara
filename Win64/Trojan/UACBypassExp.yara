@@ -22,6 +22,7 @@ rule Trojan_Win64_UACBypassExp_A_2147782176_0
         $x_1_7 = "cmd.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win64_UACBypassExp_PADS_2147904397_0
         $x_2_1 = {b8 1d 38 70 e0 41 f7 e8 41 03 d0 c1 fa 06 8b c2 c1 e8 1f 03 d0 0f be c2 6b c8 49 41 0f b6 c0 2a c1 04 57 41 30 01 41 ff c0 4d 8d 49 01 41 83 f8 11 7c cd}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Trojan_Win64_UACBypassExp_AYA_2147929766_0
         $x_1_6 = "Windows\\System32\\fodhelper.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

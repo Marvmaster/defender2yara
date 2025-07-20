@@ -16,6 +16,7 @@ rule Trojan_Win64_Rhadamanthys_FIA_2147852509_0
         $x_1_1 = {0f b6 00 89 44 24 50 48 8b 44 24 40 48 8b 8c 24 ?? ?? ?? ?? 48 03 c8 48 8b c1 0f b6 00 88 44 24 24 0f b6 44 24 24 33 44 24 50 48 8b 4c 24 40 48 8b 94 24 ?? ?? ?? ?? 48 03 d1 48 8b ca 88 01 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_Rhadamanthys_RAZ_2147894727_0
         $x_1_2 = {4d 8b f1 48 c1 eb 03 bf ?? ?? ?? ?? 4c 2b f6 48 ff c3 48 8b d5 48 8b ce 4c 8b c7 48 2b d6 41 8a 04 0e 32 01 88 04 0a 48 ff c1 49 ff c8 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win64_Rhadamanthys_FIF_2147900901_0
         $x_1_1 = {48 03 d1 48 8b ca 0f b6 09 33 c8 8b c1 48 8b 8d 28 01 00 00 48 8b 95 98 ?? ?? ?? 48 03 d1 48 8b ca 88 01 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -80,6 +83,7 @@ rule Trojan_Win64_Rhadamanthys_GXZ_2147904893_0
         $x_10_1 = {6b c6 44 24 ?? 65 c6 44 24 ?? 72 c6 44 24 ?? 6e c6 44 24 ?? 65 c6 44 24 ?? 6c c6 44 24 ?? 33 c6 44 24 ?? 32 c6 44 24 ?? 2e c6 44 24 ?? 64 c6 44 24 ?? 6c c6 44 24 ?? 6c c6 44 24 ?? 56 c6 44 24 ?? 69 c6 44 24 ?? 72 c6 44 24 ?? 74 c6 44 24 ?? 75 c6 44 24 ?? 61 c6 44 24 ?? 6c c6 44 24 ?? 41 c6 44 24 ?? 6c c6 44 24 ?? 6c c6 44 24 ?? 6f c6 44 24 ?? 63 41 b8 0c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -101,6 +105,7 @@ rule Trojan_Win64_Rhadamanthys_ZKA_2147905474_0
         $x_1_1 = {49 8b cd 41 b8 ?? ?? ?? ?? 48 2b cb 49 8b d0 4c 8b db 42 8a 04 1e 41 32 03 42 88 04 19 49 83 c3 01 48 83 ea 01 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -122,6 +127,7 @@ rule Trojan_Win64_Rhadamanthys_CCHZ_2147905535_0
         $x_1_1 = {42 8a 04 1e 41 32 03 42 88 04 19 49 83 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +149,7 @@ rule Trojan_Win64_Rhadamanthys_MKP_2147932420_0
         $x_5_1 = {ff d0 48 83 c4 20 43 8a 04 3c 4c 8b 7d 70 48 8b 4d ?? 41 02 04 0c 0f b6 c0 41 8a 04 04 48 8b 4d 80 4c 8b 65 e0 42 32 04 21 42 88 04 21 48 b8 51 63 bb ed 3e b6 72 96 48 03 05 2f 0c 13 00 48 83 ec 20}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +171,7 @@ rule Trojan_Win64_Rhadamanthys_IPK_2147933563_0
         $x_1_1 = {66 41 0f 6e 54 05 fc 66 41 0f 6e 5c 05 00 66 0f 60 d6 66 0f 61 d6 66 0f 60 de 66 0f 61 de 66 0f ef ca 66 0f ef c3 48 83 c0 10 66 0f 6f d9 66 0f 6f d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -187,6 +195,7 @@ rule Trojan_Win64_Rhadamanthys_BS_2147935429_0
         $x_1_3 = {6a 09 6b 31 6b 59 6b 81}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -209,6 +218,7 @@ rule Trojan_Win64_Rhadamanthys_A_2147935987_0
         $x_2_2 = {48 c7 44 24 20 0c 00 00 00 41 b8 1b 00 00 00 48 8d 7c 24 50 48 89 f9 48 8d 15 71 8d 06 00 4c 8d ?? ?? ?? ?? ?? e8 ?? ?? ?? ?? 48 8d ?? ?? ?? 48 89 fa e8 ?? ?? ?? ?? 31 c0 48 3b 44 24 30 0f 81 ?? ?? ?? ?? 4c 8b 6c 24 38 48 8b 7c 24 40 31 c9 31 d2 4d 89 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -231,6 +241,7 @@ rule Trojan_Win64_Rhadamanthys_NR_2147937186_0
         $x_1_2 = {74 0f 8b 5d eb 48 8d 4d bf e8 6d 5c fe ff 89 58 20 80 7d f7 00 74 0f 8b 5d f3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -253,6 +264,7 @@ rule Trojan_Win64_Rhadamanthys_NR_2147937186_1
         $x_1_2 = {f6 c2 01 0f 85 82 fd ff ff 48 8b 05 26 3f 0a 00 48 8b 00 48 d1 e0 48 85 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -274,6 +286,7 @@ rule Trojan_Win64_Rhadamanthys_KKL_2147942934_0
         $x_5_1 = {88 10 48 8d 54 24 40 48 8b 44 24 58 44 30 10 49 8b c6 83 e0 0f 48 03 c8 41 0f b6 04 24 32 01 32 85 ?? ?? ?? ?? 88 01 48 8d 4c 24 60 e8 ff f9 ff ff 4c 8b a5 ?? ?? ?? ?? 43 30 04 34 4d 8b f5 49 81 fd 00 fe 07 00 0f 82}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -295,6 +308,7 @@ rule Trojan_Win64_Rhadamanthys_PKV_2147943243_0
         $x_5_1 = {0f b6 44 04 40 30 41 02 49 8d 47 03 48 03 c1 83 e0 0f 0f b6 44 04 ?? 30 41 03 49 8d 47 04 48 03 c1 83 e0 0f 0f b6 44 04 40 30 41 04 48 83 c1 06 48 83 ea 01 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

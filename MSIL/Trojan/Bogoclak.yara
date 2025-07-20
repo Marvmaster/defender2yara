@@ -19,6 +19,7 @@ rule Trojan_MSIL_Bogoclak_A_2147641177_0
         $x_1_5 = "Backdoor>b__" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

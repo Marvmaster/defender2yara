@@ -18,6 +18,7 @@ rule Backdoor_Win32_RDPdoor_A_2147647161_0
         $x_4_4 = "RNGUV@SD]Lhbsnrngu]Vhoenvr]BtssdouWdsrhno]Sto" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

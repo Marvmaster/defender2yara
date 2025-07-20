@@ -21,6 +21,7 @@ rule Ransom_Win32_Criakl_A_2147688295_0
         $x_1_7 = "*.pptx|||{}|||000" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -49,6 +50,7 @@ rule Ransom_Win32_Criakl_D_2147697386_0
         $x_2_5 = {66 64 62 3a 66 62 66 3a 6d 61 78 3a 6d 33 64 3a (64 62 66 3a 6c|6c 64 66 3a 6b 65 79 73 74 6f) 3a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -74,6 +76,7 @@ rule Ransom_Win32_Criakl_F_2147722505_0
         $x_1_1 = {43 81 e3 ff 00 00 80 79 08 4b 81 cb 00 ff ff ff 43 8b 84 9d 00 fc ff ff 03 f0 81 e6 ff 00 00 80 79 08 4e 81 ce 00 ff ff ff 46 8a c8 8b 84 b5 00 fc ff ff 89 84 9d 00 fc ff ff 0f b6 c1 89 84 b5 00 fc ff ff 8b 8c 9d 00 fc ff ff 03 c8 81 e1 ff 00 00 80 79 08 49 81 c9 00 ff ff ff 41 8a 84 8d 00 fc ff ff 8b 4d 10 30 04 0a 42 3b d7 72 91}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

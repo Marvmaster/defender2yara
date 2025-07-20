@@ -19,6 +19,7 @@ rule Trojan_Win32_Calishoo_A_2147648364_0
         $x_2_5 = {53 69 66 72 65 6c 65 72 69 04 00 4d 73 6e 20}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_2_*))) or

@@ -19,6 +19,7 @@ rule Trojan_Win32_Gleishug_A_2147633526_0
         $x_2_5 = "\\Mozilla Firefox\\searchplugins\\google*.xml" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -47,6 +48,7 @@ rule Trojan_Win32_Gleishug_C_2147633527_0
         $x_1_4 = "\\aaaa.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Worm_Win32_Fesber_G_2147679401_0
         $x_1_4 = "\\fsb.tmp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

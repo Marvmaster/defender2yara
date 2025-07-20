@@ -21,6 +21,7 @@ rule Trojan_MacOS_Xcsset_A_2147762225_0
         $x_1_6 = {62 6c 65 20 2d 73 74 72 69 6e 67 [0-16] 42 72 6f 77 73 65 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -50,6 +51,7 @@ rule Trojan_MacOS_Xcsset_A_2147815025_0
         $x_1_5 = "Executed paypal payloads" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Trojan_MacOS_Xcsset_C_2147822823_0
         $x_1_2 = {8a 05 2f 7d 00 00 04 01 88 05 27 7d 00 00 0f b6 0d 20 7d 00 00 89 ca 48 8d 35 25 7d 00 00 8a 04 16 88 45 f3 0f b6 4d f3 0f b6 3d 05 7d 00 00 01 cf 40 88 3d fc 7c 00 00 0f b6 0d f5 7c 00 00 89 ca 8a 04 16 0f b6 0d ea 7c 00 00 89 ca 88 04 16 8a 45 f3 0f b6 0d da 7c 00 00 89 ca 88 04 16 0f b6 0d cf 7c 00 00 89 ca 0f b6 0c 16 44 0f b6 45 f3 41 01 c8 44 88 45 f3 0f b6 4d f3 89 ca 0f b6 0c 16 48 8b 55 e8 44 0f b6 0a 41 31 c9 44 88 0a 48 8b 55 e8 48 81 c2 01 00 00 00 48 89 55 e8 8b 4d f4 83 c1 ff 89 4d f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

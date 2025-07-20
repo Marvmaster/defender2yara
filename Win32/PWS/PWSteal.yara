@@ -17,6 +17,7 @@ rule PWS_Win32_PWSteal_B_2147617851_0
         $x_1_3 = {40 7e 35 66 83 ?? ?? 5a 7f 2e 0f b7 ?? ?? 83 c0 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule PWS_Win32_PWSteal_I_2147626296_0
         $x_1_3 = {50 ff 55 e0 59 85 c0 0f 85 ?? ?? 00 00 ff 55 d8 89 45 bc 83 7d bc 00 0f 84 ?? ?? 00 00 6a 00 6a 01 8b 45 bc 50 ff 55 d4 83 c4 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule PWS_Win32_PWSteal_K_2147627543_0
         $x_1_8 = "&bankpassword=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -94,6 +97,7 @@ rule PWS_Win32_PWSteal_L_2147637551_0
         $x_1_6 = {50 61 73 73 77 6f 72 64 3a [0-5] 25 53}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -125,6 +129,7 @@ rule PWS_Win32_PWSteal_O_2147648400_0
         $x_1_9 = "[DEL]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 4 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -152,6 +157,7 @@ rule PWS_Win32_PWSteal_P_2147656538_0
         $x_1_4 = "PK11SDR_Decrypt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +182,7 @@ rule PWS_Win32_PWSteal_Q_2147725143_0
         $x_1_4 = "HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +210,7 @@ rule PWS_Win32_PWSteal_R_2147725171_0
         $x_2_7 = {46 81 e6 ff 00 00 00 03 84 b5 ?? ?? ?? ?? 25 ff 00 00 00 8a 9c b5 ?? ?? ?? ?? 88 5d ?? 8b 9c 85 ?? ?? ?? ?? 89 9c b5 ?? ?? ?? ?? 33 db 8a 5d ?? 89 9c 85 ?? ?? ?? ?? 8b 9c b5 ?? ?? ?? ?? 03 9c 85 ?? ?? ?? ?? 81 e3 ff 00 00 00 8a 9c 9d ?? ?? ?? ?? 30 19 41 4a 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or

@@ -21,6 +21,7 @@ rule Trojan_Win32_MhztLocker_A_2147842673_0
         $x_2_6 = "start echo This PC Is Locked! If You Want Unlock Contact Owner!" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

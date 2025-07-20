@@ -25,6 +25,7 @@ rule Trojan_MSIL_FileCrypt_GA_2147929713_0
         $x_1_10 = "file:///" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

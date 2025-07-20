@@ -18,6 +18,7 @@ rule Trojan_Linux_HCRootkit_A_2147794501_0
         $x_1_4 = "/tmp/.tmp_XXXXXX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Linux_HCRootkit_B_2147794502_0
         $x_1_5 = "s_hide_tcp4_ports" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

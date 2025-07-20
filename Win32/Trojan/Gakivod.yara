@@ -21,6 +21,7 @@ rule Trojan_Win32_Gakivod_A_2147649355_0
         $x_1_7 = "0105A438-B9CC-4a29-89B1-DA194DFA4B40" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

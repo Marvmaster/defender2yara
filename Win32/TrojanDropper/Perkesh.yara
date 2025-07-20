@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Perkesh_B_2147624291_0
         $x_1_4 = "UpackByDwing@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule TrojanDropper_Win32_Perkesh_C_2147627993_0
         $x_1_8 = {25 73 6f 70 25 78 2e 7a [0-5] 5c 5c 2e 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_2_*))) or

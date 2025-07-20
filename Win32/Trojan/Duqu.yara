@@ -17,6 +17,7 @@ rule Trojan_Win32_Duqu_A_2147650510_0
         $x_1_3 = {8b 44 24 0c 03 c6 30 08 c1 c9 ?? 8b c1 0f af c1 33 d2 bf ?? ?? ?? ?? f7 f7 8b d1 69 d2 ?? ?? ?? ?? 8d 44 10 01 33 c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Duqu_B_2147650511_0
         $x_1_2 = {83 c4 0c 8b 45 0c 0f b7 40 06 ff 45 f8 83 45 fc 28 83 c6 28 39 45 f8 7c ?? 8b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_Duqu_E_2147650972_0
         $x_1_2 = {66 8b 01 ba ?? ?? ?? ?? 66 33 c2 8b 54 24 08 66 89 02 74 16 57 41 41 66 8b 01 42 42 bf ?? ?? ?? ?? 66 33 c7 66 89 02 75 ec}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

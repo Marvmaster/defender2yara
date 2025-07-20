@@ -16,6 +16,7 @@ rule MonitoringTool_Win32_RevealerKeylogger_122375_0
         $x_1_2 = "_LowLevelKeyboardProc@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule MonitoringTool_Win32_RevealerKeylogger_122375_1
         $x_1_6 = "rkfree.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_2_*))) or
             ((1 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

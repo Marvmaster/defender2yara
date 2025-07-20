@@ -18,6 +18,7 @@ rule Trojan_Win32_Fiya_A_2147689033_0
         $x_1_4 = {72 62 00 00 77 62 00 00 6f 70 65 6e 00 00 00 00 72 75 6e 61 73}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_Win32_Fiya_D_2147696011_0
         $x_1_9 = "H%c%sQu%c%sIn%co%c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -82,6 +84,7 @@ rule Trojan_Win32_Fiya_E_2147696413_0
         $x_1_17 = {8a 18 30 19 40 8b d8 2b de 3b 5d ?? 76 02 8b c6 47 41 3b fa 72 ea}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

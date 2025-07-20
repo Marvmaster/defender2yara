@@ -16,6 +16,7 @@ rule Trojan_Win32_TinyADRecon_LKV_2147897210_0
         $x_1_1 = "Users\\rainman\\source\\repos\\ADRecon\\TinyADRecon\\obj\\Release\\TinyADRecon.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

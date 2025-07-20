@@ -25,6 +25,7 @@ rule Backdoor_MSIL_Quasar_GG_2147772079_0
         $x_1_10 = "ReverseProxy" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))
@@ -58,6 +59,7 @@ rule Backdoor_MSIL_Quasar_GG_2147772079_1
         $x_1_10 = "DoClientRestoreDel" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -89,6 +91,7 @@ rule Backdoor_MSIL_Quasar_GG_2147772079_2
         $x_1_11 = "ANTISPYWARE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -120,6 +123,7 @@ rule Backdoor_MSIL_Quasar_GG_2147772079_3
         $x_1_11 = "DoParseSecretKeyFromSExpr" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 6 of ($x_1_*))) or
             (all of ($x*))

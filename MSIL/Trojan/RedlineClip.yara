@@ -24,6 +24,7 @@ rule Trojan_MSIL_RedlineClip_GA_2147773586_0
         $x_1_9 = "SetClipboardViewer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule Trojan_Win32_Sathurbot_A_2147684094_0
         $x_1_8 = "HydraLoader.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_Sathurbot_B_2147684987_0
         $x_1_6 = "HydraLoader.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

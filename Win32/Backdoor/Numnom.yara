@@ -26,6 +26,7 @@ rule Backdoor_Win32_Numnom_A_2147606108_0
         $x_5_12 = {c7 85 64 ff ff ff fa 00 00 00 e8 ?? ?? ff ff 89 85 7c ff ff ff 85 c0 0f 84 ?? ?? 00 00 66 c7 85 6c ff ff ff 02 00 8b 85 7c ff ff ff 89 85 70 ff ff ff 68 e7 14 00 00}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or

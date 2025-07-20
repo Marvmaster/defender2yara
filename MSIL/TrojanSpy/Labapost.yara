@@ -19,6 +19,7 @@ rule TrojanSpy_MSIL_Labapost_B_2147679813_0
         $x_5_5 = "ATS_Labanquepostale_Starter.Resources.resources" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

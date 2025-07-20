@@ -17,6 +17,7 @@ rule Backdoor_Win32_Lostorin_A_2147611301_0
         $x_1_3 = {c7 03 78 56 34 12 c7 43 04 08 00 00 00 c7 43 08 14 00 00 00 c7 43 0c 01 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Win32_Lostorin_B_2147630814_0
         $x_1_6 = "C:\\RECYCLER\\KEY-%d-%d-%d.LOG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

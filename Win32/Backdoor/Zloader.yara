@@ -16,6 +16,7 @@ rule Backdoor_Win32_Zloader_STA_2147766907_0
         $x_1_2 = {81 c1 08 16 00 00 02 d8 8d 42 55 03 c1 88 1d be c9 18 01 69 c0 20 64 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Backdoor_Win32_Zloader_STA_2147766907_1
         $x_1_2 = {2a c2 83 c3 13 8a d0 69 f3 48 04 01 00 c0 e0 03 02 d0 c0 e2 03 80 c2 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Backdoor_Win32_Zloader_STA_2147766907_2
         $x_1_2 = {c7 05 78 47 04 01 11 01 00 00 8d 51 b8 03 d6 69 c2 31 b4 00 00 89 15 08 48 04 01 2b c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -79,6 +82,7 @@ rule Backdoor_Win32_Zloader_STA_2147766907_3
         $x_1_2 = {ba 95 25 00 00 41 2b d1 8b c2 c1 e0 06 2b c2 03 c1 89 15 98 e0 08 10 a3 08 e0 08 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -100,6 +104,7 @@ rule Backdoor_Win32_Zloader_STA_2147766907_4
         $x_1_2 = {69 ff dc d7 00 00 8b d0 2b d7 f6 2d 23 e0 08 10 a2 23 e0 08 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +126,7 @@ rule Backdoor_Win32_Zloader_STA_2147766907_5
         $x_1_2 = {c7 05 78 47 04 01 34 01 00 00 2b cb 39 3d 90 47 04 01 72 24 8d 34 76 81 c6 9e 2f 01 00 8b c6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -142,6 +148,7 @@ rule Backdoor_Win32_Zloader_STA_2147766907_6
         $x_1_2 = {69 c2 a1 d7 00 00 89 54 24 0c 2b c3 8a 3d 85 b9 18 01 8a 1d 83 b9 18 01 83 e8 07 80 ff 08 72 18 69 c8 a3 d7 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -166,6 +173,7 @@ rule Backdoor_Win32_Zloader_STB_2147766908_0
         $x_2_5 = {81 f7 6e 74 65 6c 8b 45 e8 35 69 6e 65 49 89 45 f8 8b 45 e0 35 47 65 6e 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -191,6 +199,7 @@ rule Backdoor_Win32_Zloader_STC_2147766916_0
         $x_1_6 = {41 bf 01 00 00 00 48 8d 4d 48 45 33 c0 33 d2 45 8b cf 89 45 38 ff 15 ?? ?? ?? ?? 85 c0 75 43 48 8d 4d 48 45 8b cf 45 33 c0 33 d2 c7 44 24 20 08 00 00 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or
@@ -401,6 +410,7 @@ rule Backdoor_Win32_Zloader_SD_2147767427_0
         $x_1_3 = {8b 4d 0c 85 c9 0f 84 ?? 00 00 00 a1 ?? ?? ?? ?? 0f be 18 66 33 1e 66 89 19 0f 84 ?? 00 00 00 31 ff e9 ?? 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

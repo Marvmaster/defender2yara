@@ -19,6 +19,7 @@ rule Trojan_Win32_Ddkong_A_2147728416_0
         $x_1_5 = {ff ff 59 59 68 [0-64] 50 c6 45 ?? 4b ff 35 f0 72 00 10 c6 45 ?? 65 c6 45 ?? 72 c6 45 ?? 6e c6 45 ?? 65 c6 45 ?? 6c c6 45 ?? 44 c6 45 ?? 6c c6 45 ?? 6c c6 45 ?? 43 c6 45 ?? 6d c6 45 ?? 64 c6 45 ?? 41 c6 45 ?? 63 c6 45 ?? 74 c6 45 ?? 69 c6 45 ?? 6f c6 45 ?? 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

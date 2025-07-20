@@ -17,6 +17,7 @@ rule Worm_Win32_Kuwawa_A_2147688804_0
         $x_1_3 = "shell\\Open\\command=System_Volume_Information\\_restore{26864C17-18DD-4561-8410}\\driver.exe -o" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

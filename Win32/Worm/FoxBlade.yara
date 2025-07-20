@@ -21,6 +21,7 @@ rule Worm_Win32_FoxBlade_D_2147814023_0
         $x_1_6 = {02 4e 54 20 ?? ?? 04 4c 4d 20 30 ?? ?? 08 2e 31 32 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -47,6 +48,7 @@ rule Worm_Win32_FoxBlade_E_2147814024_0
         $x_1_2 = "c%02X%02X%02X%02X%02X%02X" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

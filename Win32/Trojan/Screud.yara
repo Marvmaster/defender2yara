@@ -22,6 +22,7 @@ rule Trojan_Win32_Screud_A_2147678395_0
         $x_1_8 = "unattend.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 4 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_1_*))) or

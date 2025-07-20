@@ -17,6 +17,7 @@ rule Trojan_Win32_Garrurusty_A_2147645372_0
         $x_1_3 = "DrWatson.cfg" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule Trojan_Win32_Garrurusty_A_2147645372_1
         $x_1_3 = {68 20 bf 02 00 ff d7 83 fe 08 74 27 83 fe 05 74 22 83 fe 06 74 1d 83 fe 07 74 18 83 fe 04 75 e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Garrurusty_A_2147645372_2
         $x_1_4 = "dcoms.dll" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_Garrurusty_A_2147645372_3
         $x_1_4 = "xiangyin.dyndns-web.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))

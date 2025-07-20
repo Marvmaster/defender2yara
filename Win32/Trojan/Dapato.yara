@@ -17,6 +17,7 @@ rule Trojan_Win32_Dapato_DSK_2147741341_0
         $x_1_2 = "2#JNMHXFA@2*EDC1V}JZf3OLKXMtJ|U" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Dapato_PVD_2147750182_0
         $x_2_4 = {8a 03 8a 54 14 18 32 c2 88 03 8b 44 24 10 43 48 89 44 24 10 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -66,6 +68,7 @@ rule Trojan_Win32_Dapato_PVS_2147754412_0
         $x_2_1 = {8a 1c 28 30 1c 31 40 41 3b c7 7c ?? 33 c0 3b ca 7c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_Dapato_BD_2147836924_0
         $x_2_1 = {f3 a5 1b f5 32 24 00 00 94 08 00 f0 00 a2 f3 1d 1b f5 33 24 00 00 94 08 00 f0 00 a2 f3 9d 1b f5 34 24 00 00 94 08 00 f0 00 a2 f3 f9 1a f5 35 24 00 00 94}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Win32_Dapato_GPC_2147903870_0
         $x_4_2 = {6c 00 6d 00 61 00 6f 00 2e 00 65 00 78 00 65}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Trojan_Win32_Dapato_ADA_2147905699_0
         $x_1_1 = {8b d3 03 55 c8 03 c2 8b 55 e4 03 d6 8b cf e8 ?? ?? ?? ?? 01 7d c8 6a 00 e8 ?? ?? ?? ?? 03 c7 01 c6 8b 45 d0 01 c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Trojan_Win32_Dapato_ADA_2147905699_1
         $x_1_2 = {8b ec 51 8d 45 fc 50 68 40 9f 7c 00 68 00 00 00 80 ff 15 74 70 7c 00 f7 d8 1a c0 fe c0 8b e5 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +181,7 @@ rule Trojan_Win32_Dapato_AMME_2147906181_0
         $x_1_2 = "%s\\ytool" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -195,6 +203,7 @@ rule Trojan_Win32_Dapato_MKV_2147930116_0
         $x_5_1 = {8a 80 40 57 46 00 8a 92 40 57 46 00 c0 f8 04 c0 e2 02 24 03 32 c2 8b d7 88 04 13 8b 55 ?? 43 83 fa 10 72}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -216,6 +225,7 @@ rule Trojan_Win32_Dapato_BAA_2147940393_0
         $x_2_1 = {03 fe 81 ef ?? ?? ?? ?? 03 c7 31 03 83 45 ec 04 6a 00 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -238,6 +248,7 @@ rule Trojan_Win32_Dapato_GVA_2147940499_0
         $x_1_2 = {8b 13 03 55 ec 2b d0 89 13 8b 45 d4 03 45 a4 03 45 ec 03 f0 bf 89 15 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -260,6 +271,7 @@ rule Trojan_Win32_Dapato_GVB_2147941183_0
         $x_1_2 = {8b 13 03 55 ec 2b d0 89 13 8b 45 d4 03 45 a4 03 45 ec 03 f0 bf 89 15 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -281,6 +293,7 @@ rule Trojan_Win32_Dapato_BAB_2147944383_0
         $x_2_1 = {8a 00 34 b9 8b 15 ?? ?? ?? ?? 03 13 73 ?? e8 ?? ?? ?? ?? 88 02 ff 03 81 3b ?? ?? ?? ?? 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -302,6 +315,7 @@ rule Trojan_Win32_Dapato_BAD_2147944385_0
         $x_2_1 = {03 fe 81 ef ?? ?? ?? ?? 2b f8 31 3b 83 45 ec 04 83 c3 04 8b 45 ec 3b 45 dc 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Backdoor_Win32_Noobot_A_2147652762_0
         $x_1_5 = {73 79 75 6e 00 00 00 00 2f 69 6d 61 67 65 73 2f 69 63 6f 6e 73 2f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

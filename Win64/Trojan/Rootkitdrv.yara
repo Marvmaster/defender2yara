@@ -18,6 +18,7 @@ rule Trojan_Win64_Rootkitdrv_A_2147651177_0
         $x_1_4 = "C:\\Windows\\system32\\drivers\\beep.sys" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win64_Rootkitdrv_A_2147651177_1
         $x_1_7 = {c7 44 24 28 80 00 00 00 c7 44 24 20 03 00 00 00 ff 15 ?? ?? ?? ?? 48 8b f8 48 85 c0 74 21 4c 8d 4c 24 48 4c 8d 44 24 40 48 8d 54 24 50 48 8b c8 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -77,6 +79,7 @@ rule Trojan_Win64_Rootkitdrv_B_2147750110_0
         $x_1_14 = "PsAcquireProcessExitSynchronization" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*))) or
             ((1 of ($x_1000_*))) or
@@ -107,6 +110,7 @@ rule Trojan_Win64_Rootkitdrv_LKB_2147822411_0
         $x_2_6 = "\\Device\\HiddenGate" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

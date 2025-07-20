@@ -15,6 +15,7 @@ rule TrojanDownloader_Win32_Gratem_A_2147682043_0
         $x_1_1 = {80 f9 eb 75 ?? 0f b6 4a 01 33 c8 80 f9 02 75 ?? 0f b6 4a 02 33 c8 80 f9 cc 75 ?? 0f b6 4a 03 33 c8 80 f9 f1 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

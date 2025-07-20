@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Svelta_A_2147627561_0
         $x_1_5 = "PR_Write" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_1_*))) or
             (all of ($x*))

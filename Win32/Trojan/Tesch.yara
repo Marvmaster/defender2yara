@@ -17,6 +17,7 @@ rule Trojan_Win32_Tesch_A_2147679829_0
         $x_1_3 = {50 c7 06 32 33 0d 0a e8 ?? ?? ?? ?? 83 c4 1c 66 c7 46 27 0d 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule Trojan_Win32_Tesch_B_2147683731_0
         $x_1_3 = {5c 00 3f 00 3f 00 5c 00 25 00 77 00 73 00 5c 00 00 00 00 00 22 00 25 00 73 00 22 00 00 00 00 00 41 00 50 00 50 00 44 00 41 00 54 00 41 00 00 00 5c 00 5c 00 3f 00 5c 00 25 00 77 00 73 00 00 00 25 00 77 00 73 00 00 00 57 00 49 00 4e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

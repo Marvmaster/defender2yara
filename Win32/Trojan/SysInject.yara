@@ -19,6 +19,7 @@ rule Trojan_Win32_SysInject_A_2147744632_0
         $x_1_4 = {6a 00 6a 00 6a 00 6a 00 ff 15 3c 62 48 00 6a 00 6a 00 6a 00 6a 00 ff 15 3c 62 48 00 6a 00 6a 00 6a 00 6a 00 ff 15 3c 62 48 00 6a 00 6a 00 6a 00 6a 00 ff 15 3c 62 48 00 6a 00 6a 00 6a 00 6a 00 ff 15 3c 62 48 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

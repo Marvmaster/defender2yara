@@ -24,6 +24,7 @@ rule Trojan_MSIL_Reline_MR_2147782919_0
         $x_1_9 = "GetManifestResourceStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_17_*))) or
             (all of ($x*))
@@ -58,6 +59,7 @@ rule Trojan_MSIL_Reline_V_2147786249_0
         $x_1_11 = "ScannedCookie" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -83,6 +85,7 @@ rule Trojan_MSIL_Reline_FIOR_2147788493_0
         $x_1_5 = "$42843719-DB4C-46C2-8E7C-64F1816EFD5B" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +114,7 @@ rule Trojan_MSIL_Reline_BZ_2147789435_0
         $x_1_8 = "btnTimeMachine.Image" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -148,6 +152,7 @@ rule Trojan_MSIL_Reline_DGB_2147793001_0
         $x_1_17 = "OpenVPNRule" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +183,7 @@ rule Trojan_MSIL_Reline_OZ_2147793099_0
         $x_1_10 = "DownloadFile.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -215,6 +221,7 @@ rule Trojan_MSIL_Reline_AES_2147793761_0
         $x_1_17 = "ProtonVPNRule" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -251,6 +258,7 @@ rule Trojan_MSIL_Reline_BF_2147796247_0
         $x_1_16 = "kkdhfakdasd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -275,6 +283,7 @@ rule Trojan_MSIL_Reline_RPQ_2147796514_0
         $x_1_4 = {49 00 6e 00 76 00 6f 00 6b 00 65 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -305,6 +314,7 @@ rule Trojan_MSIL_Reline_IYZ_2147796834_0
         $x_1_7 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -336,6 +346,7 @@ rule Trojan_MSIL_Reline_BE_2147797796_0
         $x_1_11 = "asdasod9234oasd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -365,6 +376,7 @@ rule Trojan_MSIL_Reline_EX_2147798772_0
         $x_1_9 = "<c3b68a12-ad3b-47e8-b7cb-2d3768ee0e4d_netmodule>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -390,6 +402,7 @@ rule Trojan_MSIL_Reline_ABZ_2147829259_0
         $x_1_5 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -416,6 +429,7 @@ rule Trojan_MSIL_Reline_ABS_2147829262_0
         $x_1_6 = "GetRuntimeDirectory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -439,6 +453,7 @@ rule Trojan_MSIL_Reline_RDB_2147849150_0
         $x_2_3 = {11 2f 11 37 8f 39 00 00 01 25 4b 11 38 61 54 11 39}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -460,6 +475,7 @@ rule Trojan_MSIL_Reline_SSN_2147920104_0
         $x_1_1 = {02 11 20 02 11 20 91 66 d2 9c 02 11 20 8f 2b 00 00 01 25 71 2b 00 00 01 20 82 00 00 00 58 d2 81 2b 00 00 01 02 11 20 8f 2b 00 00 01 25 71 2b 00 00 01 1f 44 59 d2 81 2b 00 00 01 00 11 20 17 58 13 20 11 20 02 8e 69 fe 04 13 21 11 21 2d b0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -487,6 +503,7 @@ rule Trojan_MSIL_Reline_EC_2147920858_0
         $x_1_7 = "TaskSchedulerAwaiter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -510,6 +527,7 @@ rule Trojan_MSIL_Reline_MBXT_2147921075_0
         $x_1_3 = "Ads_multysave.Resources.resource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -531,6 +549,7 @@ rule Trojan_MSIL_Reline_BAA_2147946314_0
         $x_2_1 = {08 11 04 06 11 04 91 07 11 04 09 5d ?? ?? 00 00 0a 61 d2 9c 11 04 17 58 13 04 11 04 06 8e 69 32 df}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

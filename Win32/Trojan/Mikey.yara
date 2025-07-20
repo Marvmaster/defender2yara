@@ -19,6 +19,7 @@ rule Trojan_Win32_Mikey_BK_2147750350_0
         $x_1_4 = {8a 9c 1c 94 00 00 00 8b 7c 24 68 89 4c 24 64 8b 4c 24 74 32 1c 0f 66 89 b4 24 c8 01 00 00 88 1c 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule Trojan_Win32_Mikey_SIB_2147814259_0
         $x_1_2 = {83 f1 00 89 85 ?? ?? ?? ?? 81 f6 ?? ?? ?? ?? 89 8d ?? ?? ?? ?? 83 f2 00 c7 85 ?? ?? ?? ?? ?? ?? ?? ?? 8b ca c7 85 ?? ?? ?? ?? ?? ?? ?? ?? 8b c6 0f a4 c1 ?? c1 e0 ?? 03 f0 89 b5 ?? ?? ?? ?? 13 d1 89 95 ?? ?? ?? ?? c7 85 ?? ?? ?? ?? ?? ?? ?? ?? c7 85 ?? ?? ?? ?? ?? ?? ?? ?? 8b 95 09 8b b5 0a 8b 85 03 03 d0 8b 8d 05 13 f1 83 c2 ?? 89 95 ?? ?? ?? ?? 83 d6 ?? 89 b5 ?? ?? ?? ?? 8b 85 0b 8b 8d 0d 8b 95 00 8b b5 02 2b d0 89 95 ?? ?? ?? ?? 1b f1 89 b5 ?? ?? ?? ?? 8b b5 1b 8b 95 1c 8b 8d 14 8b 85 16 50 51 52 56 e8 ?? ?? ?? ?? 89 85 ?? ?? ?? ?? 89 95 ?? ?? ?? ?? 8b 8d 22 8b 85 23 8b 45 ?? 30 0c 07 40 89 45 26 3b 45 ?? 73}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Trojan_Win32_Mikey_SPR_2147899899_0
         $x_1_5 = "select * from __timerevent where timerid=\"fuckyoumm2_itimer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win32_Mikey_GZY_2147907437_0
         $x_10_1 = {8b 07 8b d0 c1 c2 0f 8b f0 c1 c6 0d 33 d6 c1 e8 0a 33 d0 8b c1 c1 c0 0e 8b f1 c1 ce 07 33 c6 c1 e9 03 33 c1 03 d0 03 57 c8 03 57 ec 89 57 08 01 6c 24 14 66 8b 4c 24 14 8b 44 24 18 0f bf d1}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -113,6 +117,7 @@ rule Trojan_Win32_Mikey_HNF_2147907539_0
         $x_5_2 = {60 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 30 00 00 34 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2e 74 65 78 74 00 00 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule Trojan_Win32_Mikey_HNB_2147909116_0
         $x_2_1 = {6d 6f 64 65 2e 0d 0d 0a 24 00 00 00 00 00 00 00 65 0d a3 87 21 6c cd d4 21 6c cd d4 21 6c cd d4 af 73 de d4 2b 6c cd d4 21 6c cd d4 20 6c cd d4 52 69 63 68 21 6c cd d4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 50 45 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule Trojan_Win32_Mikey_HNC_2147909119_0
         $x_1_2 = {25 73 25 73 c7 44 24 ?? 25 73 25 73 88 5c 24 04 00 c7 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -177,6 +184,7 @@ rule Trojan_Win32_Mikey_ARA_2147911513_0
         $x_2_1 = {8b 45 08 8a 16 03 c1 30 10 41 3b 4d 0c 7c f1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -198,6 +206,7 @@ rule Trojan_Win32_Mikey_ARA_2147911513_1
         $x_2_1 = {8b 54 24 0c 69 d2 d2 f8 62 7e 89 54 24 0c 8a 10 30 11 41 40 3b cf 75 e8}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -222,6 +231,7 @@ rule Trojan_Win32_Mikey_NG_2147926319_0
         $x_1_4 = "FisgLns4aOYn30LWLEE8HiRhTHMmLC==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +253,7 @@ rule Trojan_Win32_Mikey_PGM_2147939518_0
         $x_5_1 = {51 6a 01 68 c8 71 40 00 56 ?? ?? d0 ab 40 00 6a 00 8d 95 ec ec ff ff 52 6a 01 68 bc 71 40 00 56 ?? ?? d0 ab 40 00 6a 00 8d 85 ec ec ff ff 50 6a 01 68 b8 71 40 00 56}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -264,6 +275,7 @@ rule Trojan_Win32_Mikey_AIV_2147943592_0
         $x_5_1 = {8a 0c 1f 8b 55 e8 8b 5d d4 8a 2c 1a 88 2d 55 8b 26 10 88 0d 56 8b 26 10 30 cd 88 2d 54 8b 26 10 c7 05 ?? ?? ?? ?? 4e 0a 00 00 8b 55 e4 88 2c 1a 81 c3 01 00 00 00 8b 55 f0 39 d3 89 5d c8 75 12}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +298,7 @@ rule Trojan_Win32_Mikey_LMA_2147945892_0
         $x_10_2 = {8b 45 14 8b ce 8b 55 18 83 e1 07 c1 e1 03 e8 ?? ?? ?? ?? 30 04 1e 83 c6 01 83 d7 00 3b 7d 10 72 ?? ?? ?? 3b 75 0c 72 ?? 5f 5e 5b c9 c3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Bylinta_A_2147602777_0
         $x_1_8 = "AngelIE/1.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or

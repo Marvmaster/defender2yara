@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Bocmen_A_2147602125_0
         $x_1_5 = {26 6f 73 3d 4d 61 63 58 50 57 69 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

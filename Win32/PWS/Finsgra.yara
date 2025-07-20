@@ -22,6 +22,7 @@ rule PWS_Win32_Finsgra_A_2147616326_0
         $x_1_8 = "=\\W*([A-Za-z0-9-_\\.]+@[A-Za-z0-9-_\\.]+\\.[A-Za-z]+)\\)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

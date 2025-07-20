@@ -16,6 +16,7 @@ rule Trojan_Win32_Arefty_A_2147710220_0
         $x_1_2 = {3a 00 c7 45 ?? 5c 00 5f 00 c7 45 ?? 52 00 4d 00 c7 45 ?? 5f 00 00 00 85 c9 74 ?? 66 8b 01 6a 00 6a 00 6a 03 6a 00 6a 02 66 89 ?? ec 8d 45 ?? 68 00 00 00 80 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Arefty_B_2147710221_0
         $x_1_2 = {2b ca d1 f9 68 ?? ?? ?? ?? 8d 41 fb 50 8d 46 0a 50 e8 ?? ?? 00 00 8b 44 24 ?? 83 c4 0c 33 c9 56 66 89 48 02 8d 44 24 ?? 68 0d 01 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win32_Arefty_C_2147710238_0
         $x_1_6 = "\\\\.\\J:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

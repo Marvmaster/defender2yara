@@ -17,6 +17,7 @@ rule Trojan_Win32_RemcosRAT_RPC_2147795763_0
         $x_1_2 = {8b 45 ec 83 c0 01 89 45 ec e9 ?? ?? ?? ?? 8d 05 ?? ?? ?? ?? 31 c9 89 04 24 c7 44 24 04 00 00 00 00 89 4d e4 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_RemcosRAT_RPE_2147798310_0
         $x_1_10 = "HttpWebRequest" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_RemcosRAT_RPQ_2147817732_0
         $x_1_1 = {32 f8 03 c0 8b d0 0f b7 f0 35 1b 01 00 00 f7 c2 00 01 00 00 0f b7 c8 8b c6 0f 44 c8 d0 eb 0f b7 c1 75 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Trojan_Win32_RemcosRAT_RPF_2147825427_0
         $x_1_1 = {8b 40 3c 99 03 04 24 13 54 24 04 83 c4 08 89 07 49 89 c2 6a 01 68 00 20 00 00 8b 07 8b 40 50 50 6a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Trojan_Win32_RemcosRAT_SPQ_2147837553_0
         $x_10_1 = {8b 4d fc 0f b6 8c 0d e8 fe ff ff 03 4d f8 8b 45 fc 33 d2 f7 75 0c 8b 45 08 0f b6 14 10 03 ca 8b c1 33 d2 f7 75 f0 89 55 f8 8b 45 fc 8a 8c 05 e8 fe ff ff 88 4d f7 8b 55 fc 8b 45 f8 8a 8c 05 e8 fe ff ff 88 8c 15 e8 fe ff ff 8b 55 f8 8a 45 f7 88 84 15 e8 fe ff ff 33 c9 75 ce}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +164,7 @@ rule Trojan_Win32_RemcosRAT_A_2147840694_1
         $x_2_5 = "cmd /c cmd < Preferences.vsd & ping -n 5 localhost" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +187,7 @@ rule Trojan_Win32_RemcosRAT_B_2147891219_0
         $x_2_2 = {88 45 ff 0f b6 4d ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +210,7 @@ rule Trojan_Win32_RemcosRAT_NRS_2147893377_0
         $x_1_2 = "%homedrive%\\eegv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -224,6 +232,7 @@ rule Trojan_Win32_RemcosRAT_NRR_2147893378_0
         $x_5_1 = {d3 a5 57 5a 03 90 bc 9f bf c9 e1 96 22 48 12 c7 80 b3 f8 fb 9d 8a c7 81 f3 78 89 69 ed 88 60 ca 30 6b bd 00 ce b4 aa ea 91 1b ff}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -245,6 +254,7 @@ rule Trojan_Win32_RemcosRAT_NA_2147893669_0
         $x_5_1 = {e8 a5 d5 01 00 83 c4 ?? 3d ?? ?? ?? ?? 0f 83 ?? ?? ?? ?? 89 c1 83 f8 ?? 77 07 88 4e ?? 89 f7 eb 26 89 cb 83 cb 0f 43 53 89 cf e8}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -268,6 +278,7 @@ rule Trojan_Win32_RemcosRAT_NCA_2147896539_0
         $x_1_3 = "Electrum.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -290,6 +301,7 @@ rule Trojan_Win32_RemcosRAT_NRM_2147897040_0
         $x_1_2 = "*Ghz Canyon Shakira Margin Frontier Gossip" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -312,6 +324,7 @@ rule Trojan_Win32_RemcosRAT_Z_2147929925_0
         $x_1_2 = "%02i:%02i:%02i" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -338,6 +351,7 @@ rule Trojan_Win32_RemcosRAT_Z_2147929925_1
         $x_1_6 = "User Data\\Default\\Cookies" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -364,6 +378,7 @@ rule Trojan_Win32_RemcosRAT_Z_2147929925_2
         $x_1_6 = "%02i:%02i:%02i" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -387,6 +402,7 @@ rule Trojan_Win32_RemcosRAT_ZA_2147929926_0
         $x_1_3 = "Remcos Agent initialized" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -417,6 +433,7 @@ rule Trojan_Win32_RemcosRAT_ZB_2147932429_0
         $x_1_10 = "StartReverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -439,6 +456,7 @@ rule Trojan_Win32_RemcosRAT_BSA_2147940933_0
         $x_1_2 = "AmsiInitialize" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +479,7 @@ rule Trojan_Win32_RemcosRAT_BSA_2147940933_1
         $x_8_2 = {73 00 69 00 66 00 74 00 65 00 72 00 20 00 73 00 6b 00 61 00 6b 00 6b 00 65 00 72 00 6e 00 65 00 73}  //weight: 8, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

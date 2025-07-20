@@ -20,6 +20,7 @@ rule Backdoor_Win32_Wingbird_A_2147723539_0
         $x_2_4 = {03 49 3c 0f ?? ?? ?? 00 00 0f b7 51 14 83 c2 14}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_2_*))) or

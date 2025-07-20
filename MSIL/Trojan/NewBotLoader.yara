@@ -22,6 +22,7 @@ rule Trojan_MSIL_NewBotLoader_CCHT_2147905134_0
         $x_1_7 = "get_InstalledAntiMalware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_NewBotLoader_CCHU_2147905631_0
         $x_1_1 = {20 45 00 00 00 28 ?? 00 00 0a a2 25 20 01 00 00 00 20 72 00 00 00 28 ?? 00 00 0a a2 25 20 02 00 00 00 20 72 00 00 00 28 ?? 00 00 0a a2 25 20 03 00 00 00 20 6f 00 00 00 28 ?? 00 00 0a a2 25 20 04 00 00 00 20 72 00 00 00 28 ?? 00 00 0a a2 28 ?? 00 00 0a fe 09}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

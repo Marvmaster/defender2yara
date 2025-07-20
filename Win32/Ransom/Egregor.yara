@@ -21,6 +21,7 @@ rule Ransom_Win32_Egregor_A_2147764791_0
         $x_1_6 = "Your network was ATTACKED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Win32_Egregor_XZ_2147768914_0
         $x_1_5 = "--loud" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Ransom_Win32_Egregor_YZ_2147768915_0
         $x_5_2 = {8b 4d b8 0f b6 4c 0d bc 31 c8 88 c2 8b 45 10 8b 4d b8 88 14 08 8b 45 b8 83 c0 01}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Ransom_Win32_Egregor_SU_2147770331_0
         $x_5_10 = ":\\defaultlog\\installator\\debug\\dss.pdb" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 6 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
@@ -127,6 +131,7 @@ rule Ransom_Win32_Egregor_SG_2147771167_0
         $x_1_4 = "Deleting failed successfully" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +157,7 @@ rule Ransom_Win32_Egregor_PA_2147771462_0
         $x_1_5 = "--mthfckbtch" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +183,7 @@ rule Ransom_Win32_Egregor_PAA_2147775609_0
         $x_1_5 = ".pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

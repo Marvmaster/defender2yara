@@ -15,6 +15,7 @@ rule VirTool_Win64_Casinj_A_2147927066_0
         $x_1_1 = {48 83 ec 38 33 c0 45 33 c9 48 21 44 24 20 48 ba 88 88 88 88 88 88 88 88 ?? 99 99 99 99 99 99 99 99 49 b8 77 77 77 77 77 77 77 77 ?? ?? ?? ?? 48 b8 66 66 66 66 66 66 66 66 ff d0 33 c0 48 83 c4 38 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

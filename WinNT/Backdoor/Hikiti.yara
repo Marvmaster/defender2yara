@@ -18,6 +18,7 @@ rule Backdoor_WinNT_Hikiti_A_2147693124_0
         $x_2_3 = {2d 2d 2d 68 69 64 65 [0-64] 2e 64 61 74 61}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_WinNT_Hikiti_A_2147693127_0
         $x_1_3 = {3a 5c 53 6f 75 72 63 65 43 6f 64 65 5c 48 69 6b 69 74 5f 6e 65 77 5c 62 69 6e 33 32 5c 77 37 66 77 [0-4] 2e 70 64 62 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Cerewow_A_2147692008_0
         $x_10_9 = "31.184.194.99" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 2 of ($x_1_*))) or
             ((5 of ($x_10_*))) or

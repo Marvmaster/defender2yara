@@ -25,6 +25,7 @@ rule Trojan_Win32_Reder_A_2147648921_0
         $x_1_11 = {21 6b 69 6c 6c 21 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_1_*))) or
             ((1 of ($x_6_*) and 3 of ($x_1_*))) or

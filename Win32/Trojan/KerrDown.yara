@@ -17,6 +17,7 @@ rule Trojan_Win32_KerrDown_B_2147744096_0
         $x_1_2 = {00 44 6c 6c 48 69 6a 61 63 6b 2e 64 6c 6c 00 [0-5] 4d 61 69 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_KerrDown_D_2147744098_0
         $x_1_6 = {52 29 fa 17 c7 [0-6] 1b 74 ee 47}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

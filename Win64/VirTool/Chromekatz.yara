@@ -16,6 +16,7 @@ rule VirTool_Win64_Chromekatz_A_2147921631_0
         $x_1_2 = {48 8b f8 4c 8b cb ?? ?? ?? ?? ?? ?? ?? 4c 8b c7 49 8b d6 48 89 44 24 20 48 8b ce ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule VirTool_Win64_Chromekatz_B_2147928571_0
         $x_1_2 = {8b 4c 24 40 e8 ?? ?? ?? ?? 44 8b 4c 24 40 48 8b d8 48 8b 4c 24 48 ?? ?? ?? ?? ?? 4c 8b c3 48 89 44 24 20 ba 01 00 00 00 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

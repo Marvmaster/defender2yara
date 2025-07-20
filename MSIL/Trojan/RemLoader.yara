@@ -29,6 +29,7 @@ rule Trojan_MSIL_RemLoader_2147760285_0
         $x_1_14 = "GetRuntimeDirectory" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -73,6 +74,7 @@ rule Trojan_MSIL_RemLoader_2147760285_1
         $x_1_24 = "Kill" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +119,7 @@ rule Trojan_MSIL_RemLoader_2147760285_2
         $x_1_24 = "ContainsKey" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -165,6 +168,7 @@ rule Trojan_MSIL_RemLoader_2147760285_3
         $x_30_28 = "INJECT_HERE" wide //weight: 30
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_30_*) and 20 of ($x_1_*))) or
             (all of ($x*))
@@ -221,6 +225,7 @@ rule Trojan_MSIL_RemLoader_2147760285_4
         $x_1_33 = "get_Assembly" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -274,6 +279,7 @@ rule Trojan_MSIL_RemLoader_2147760285_5
         $x_1_33 = "KeyNotFoundException" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +324,7 @@ rule Trojan_MSIL_RemLoader_2147760285_6
         $x_10_24 = "WriteProcessMemory" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((16 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -358,6 +365,7 @@ rule Trojan_MSIL_RemLoader_2147760285_7
         $x_1_17 = "FixedPointy.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((13 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -384,6 +392,7 @@ rule Trojan_MSIL_RemLoader_MBCL_2147843342_0
         $x_1_3 = "aDayAtTheRaces.Properties.Resources.resource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -406,6 +415,7 @@ rule Trojan_MSIL_RemLoader_RPX_2147846025_0
         $x_1_2 = "Defune LS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -427,6 +437,7 @@ rule Trojan_MSIL_RemLoader_MBDF_2147847304_0
         $x_1_1 = {0a 02 06 28 ?? ?? 00 06 72 fa 3d 04 70 72 fe 3d 04 70 6f ?? 00 00 0a 72 02 3e 04 70 72 06 3e 04 70 6f ?? 00 00 0a 0a 06 72 0c 3e 04 70 72 10 3e 04 70 6f ?? 00 00 0a 17 8d ?? 00 00 01 25 16 1f 7e 9d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -449,6 +460,7 @@ rule Trojan_MSIL_RemLoader_NR_2147917176_0
         $x_1_2 = "$877eda90-9a79-4fa2-a8f7-253748c489a2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -477,6 +489,7 @@ rule Trojan_MSIL_RemLoader_CZ_2147919281_0
         $x_1_8 = "qrYEEQ5vCh6dvkNN3nG" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

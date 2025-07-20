@@ -16,6 +16,7 @@ rule DDoS_Win32_Zanich_D_2147691154_0
         $x_1_2 = {52 65 66 6c 57 6f 72 6b 41 73 73 69 73 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

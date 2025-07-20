@@ -17,6 +17,7 @@ rule Trojan_Win32_Crypt_CJ_2147812210_0
         $x_1_2 = {8b 75 ec 02 45 f4 30 04 32 8b 75 fc 85 c9 75 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_Crypt_CK_2147812211_0
         $x_2_1 = {8b 07 35 84 98 c6 f0 33 06 2b c3 2d 0a bc 51 4e 89 02 83 c6 04 41 8b c1 2b 45 18 0f 85}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Crypt_SX_2147945955_0
         $x_2_2 = {0f b7 01 83 f8 41 72 08 83 f8 5a 77 03 83 c0 20 66 89 04 0e 83 e9 02 4a 75 e6}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

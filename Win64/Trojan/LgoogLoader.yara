@@ -17,6 +17,7 @@ rule Trojan_Win64_LgoogLoader_NL_2147898686_0
         $x_5_2 = {48 85 c0 0f 84 ec 36 00 00 48 8b c8 e8 2b 00 00 00 48 85 c0 0f 84 db 36 00 00 b9 ?? ?? ?? ?? 66 39 48 5c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_MSIL_Autorun_J_2147745042_0
         $x_1_4 = "open=KB" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

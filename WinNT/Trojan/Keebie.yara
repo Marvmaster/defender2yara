@@ -16,6 +16,7 @@ rule Trojan_WinNT_Keebie_A_2147646076_0
         $x_1_2 = {99 83 e2 03 03 c2 c1 f8 02 89 85 ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 81 e1 03 00 00 80 79 ?? 49 83 c9 fc 41}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

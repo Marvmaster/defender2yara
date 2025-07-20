@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Fero_GXU_2147912210_0
         $x_10_1 = {48 29 d0 83 f0 ?? 8d 05 ?? ?? ?? ?? 01 20 83 f0 ?? 48 89 d0 4a b9 02 00 00 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

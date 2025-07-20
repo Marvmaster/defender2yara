@@ -21,6 +21,7 @@ rule Backdoor_Win32_Mizzmo_A_2147658378_0
         $x_1_7 = {51 55 49 54 42 44 52 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Backdoor_Win32_Mizzmo_B_2147709007_0
         $x_1_6 = "http://%s/files/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             ((1 of ($x_10_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or

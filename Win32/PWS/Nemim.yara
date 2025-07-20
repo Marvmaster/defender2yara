@@ -19,6 +19,7 @@ rule PWS_Win32_Nemim_A_2147679797_0
         $x_1_5 = {2f 68 74 6d 6c 2f 64 6f 63 75 2e 70 68 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

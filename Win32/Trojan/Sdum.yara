@@ -21,6 +21,7 @@ rule Trojan_Win32_Sdum_EM_2147847282_0
         $x_1_6 = "3fbd04f5-b1ed-4060-99b9-fca7ff59c113" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Win32_Sdum_GMC_2147853356_0
         $x_10_2 = {0f b6 4d dd 0f b6 47 0d 0f b6 55 dc 33 c1 0f b6 4f 0c c1 e0 08 33 ca}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Sdum_RE_2147888277_0
         $x_1_4 = "1230\\smss.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win32_Sdum_DS_2147888638_0
         $x_1_4 = {20 41 22 51 5e b1 47 eb b9 dd 38 4c 21 30 cb 2a f3 55 4c 6d 46 ba 82 09 d9 44 c0 33 15 58 be 56 d3 94 79 69 d1 de 58 c8 2a 57 78 46 0d 6d 21 b4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +116,7 @@ rule Trojan_Win32_Sdum_GMD_2147897363_0
         $x_10_1 = {8b 07 8b d1 83 e2 03 8a 54 3a 0c 03 c1 30 10 41 3b 4f 04}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_Win32_Sdum_GPA_2147902712_0
         $x_4_1 = {8b c1 5e f7 f6 8b 45 08 8a 04 02 30 04 19 41 3b cf 72 e9}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

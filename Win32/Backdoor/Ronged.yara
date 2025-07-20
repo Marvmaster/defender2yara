@@ -20,6 +20,7 @@ rule Backdoor_Win32_Ronged_A_2147678297_0
         $x_1_5 = {51 41 5a 32 77 73 78 33 65 64 63 00 00 00 00 53 41 4c 54 5c 77 65 62 75 73 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

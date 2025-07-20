@@ -19,6 +19,7 @@ rule TrojanDropper_Win32_Tilcun_A_2147603537_0
         $x_1_5 = {7e 74 69 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -46,6 +47,7 @@ rule TrojanDropper_Win32_Tilcun_B_2147605454_0
         $x_1_4 = {68 21 74 9e 22}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

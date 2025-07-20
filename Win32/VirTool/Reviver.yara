@@ -18,6 +18,7 @@ rule VirTool_Win32_Reviver_A_2147755222_0
         $x_1_3 = {48 8d 15 27 ce 01 00 48 8b c8 ff 15 56 4a 01 00 48 85 c0 75 09 48 8d 0d 22 ce 01 00 eb 25}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

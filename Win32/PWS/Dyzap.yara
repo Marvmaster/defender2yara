@@ -19,6 +19,7 @@ rule PWS_Win32_Dyzap_A_2147687905_0
         $x_1_5 = {48 83 ec 20 ff 55 08 48 8b 4d cc 48 8d 64 cc 20 5f 48 89 45 f4 e8 00 00 00 00 c7 44 24 04 23 00 00 00 83 04 24 0d cb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule PWS_Win32_Dyzap_A_2147687905_1
         $x_1_11 = {3d 00 3d 00 47 00 65 00 6e 00 65 00 72 00 61 00 6c 00 3d 00 3d 00 0d 00 0a 00 00 00 3d 00 3d 00 55 00 73 00 65 00 72 00 73 00 3d 00 3d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule PWS_Win32_Dyzap_B_2147687920_0
         $x_1_4 = {64 00 65 00 66 00 63 00 6f 00 6e 00 66 00 69 00 67 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule PWS_Win32_Dyzap_C_2147687922_0
         $x_1_4 = {3c ff 75 0d 80 7f 01 25 75 07 8b 47 02 8b 00 eb 19 3c e9 75 09 8b 4f 01 8d 44 39 05 eb 0c 3c eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule PWS_Win32_Dyzap_D_2147688302_0
         $x_9_13 = {48 83 ec 20 ff 55 08 48 8b 4d cc 48 8d 64 cc 20 5f 48 89 45 f4 e8 00 00 00 00 c7 44 24 04 23 00 00 00 83 04 24 0d cb}  //weight: 9, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((12 of ($x_1_*))) or
             ((1 of ($x_9_*) and 3 of ($x_1_*))) or
@@ -169,6 +174,7 @@ rule PWS_Win32_Dyzap_F_2147689499_0
         $x_1_19 = {81 ff c8 00 00 00 7d 18 8b 8e 00 01 00 00 6a 64 ff d1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -191,6 +197,7 @@ rule PWS_Win32_Dyzap_J_2147689939_0
         $x_1_3 = {0f b6 58 0d 0f b6 40 0c c1 e7 08 0b fb c1 e7 08 0b f8 33 79 0c 8b 45 08 83 c1 10 83 7d 0c 00 89 7d f8 0f 85 ?? ?? ?? ?? 8b 18 d1 fb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -217,6 +224,7 @@ rule PWS_Win32_Dyzap_J_2147689939_1
         $x_1_7 = "http://icanhazip.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -247,6 +255,7 @@ rule PWS_Win32_Dyzap_J_2147689939_2
         $x_1_8 = "http://icanhazip.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -271,6 +280,7 @@ rule PWS_Win32_Dyzap_H_2147689953_0
         $x_1_5 = {83 e4 f8 6a 33 f3 90 e8 00 00 00 00 83 04 24 09 8b ff f3 90 cb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -301,6 +311,7 @@ rule PWS_Win32_Dyzap_M_2147691054_0
         $x_1_8 = {8b 4c 24 04 83 79 64 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -337,6 +348,7 @@ rule PWS_Win32_Dyzap_N_2147691941_0
         $x_1_13 = {eb 0f 50 ff d7 8b 74 24 10 c7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -455,6 +467,7 @@ rule PWS_Win32_Dyzap_Q_2147694112_0
         $x_1_6 = {00 47 6c 6f 62 61 6c 5c 70 65 6e 33 36 33 38 33 32 68 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -481,6 +494,7 @@ rule PWS_Win32_Dyzap_R_2147694672_0
         $x_1_4 = "Update Service" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -504,6 +518,7 @@ rule PWS_Win32_Dyzap_T_2147696961_0
         $x_1_4 = {c6 45 f0 50 ff 15 ?? ?? ?? ?? 50 ff 15 ?? ?? ?? ?? 8b 4d 08 51 6a 00 68 08 04 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -528,6 +543,7 @@ rule PWS_Win32_Dyzap_T_2147696961_1
         $x_1_5 = "\\\\.\\pipe\\g2fabg5713" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -552,6 +568,7 @@ rule PWS_Win32_Dyzap_T_2147696961_2
         $x_1_5 = "\\\\.\\pipe\\g2fabg5713" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -576,6 +593,7 @@ rule PWS_Win32_Dyzap_V_2147706906_0
         $x_1_5 = {5c 00 45 00 78 00 63 00 6c 00 75 00 73 00 69 00 6f 00 6e 00 73 00 5c 00 45 00 78 00 74 00 65 00 6e 00 73 00 69 00 6f 00 6e 00 73 00 00 00 00 00 66 00 69 00 6c 00 65 00 2e 00 64 00 61 00 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -599,6 +617,7 @@ rule PWS_Win32_Dyzap_X_2147717189_0
         $x_1_4 = {31 2c b8 47 3b fa 7c f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

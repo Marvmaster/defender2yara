@@ -17,6 +17,7 @@ rule Trojan_Win32_Liften_B_143056_0
         $x_3_3 = {8b 00 ff d0 8b 03 50 8b 44 24 ?? 8b 84 b8 04 20 00 00 50 8b 44 24 ?? 50 a1 ?? ?? ?? ?? 8b 00 ff d0}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

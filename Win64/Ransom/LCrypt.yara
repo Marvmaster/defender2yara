@@ -20,6 +20,7 @@ rule Ransom_Win64_LCrypt_PAA_2147797868_0
         $x_1_5 = "Your AES key is in LCRY's memory." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

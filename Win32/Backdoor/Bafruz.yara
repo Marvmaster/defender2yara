@@ -20,6 +20,7 @@ rule Backdoor_Win32_Bafruz_B_2147646057_0
         $x_2_6 = {77 69 6e 73 65 74 75 70 61 70 69 2e 6c 6f 67 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 3 of ($x_2_*))) or
             ((2 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -51,6 +52,7 @@ rule Backdoor_Win32_Bafruz_E_2147647945_0
         $x_2_8 = {b8 17 f6 00 00 e8 ?? ?? ?? ?? 68 88 13 00 00 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -81,6 +83,7 @@ rule Backdoor_Win32_Bafruz_I_2147651619_0
         $x_1_6 = {ff 52 14 83 f8 0a 7d ?? 6a 50 68 10 27 00 00 6a 01 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -108,6 +111,7 @@ rule Backdoor_Win32_Bafruz_J_2147656533_0
         $x_2_4 = {b9 40 42 0f 00 ba 3b d9 00 00 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? 84 c0 75 ?? c6 05 ?? ?? ?? ?? 00 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -134,6 +138,7 @@ rule Backdoor_Win32_Bafruz_K_2147657273_0
         $x_2_3 = {73 6f 66 74 5f 6c 69 73 74 00 00 00 ff ff ff ff 02 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 30 7c 44 34 31 44 38 43 44 39 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 64 69 73 74 72 69 62 5f 73 65 72 76}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -160,6 +165,7 @@ rule Backdoor_Win32_Bafruz_L_2147657274_0
         $x_1_3 = "l_rezerv" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -195,6 +201,7 @@ rule Backdoor_Win32_Bafruz_A_2147657752_0
         $x_1_12 = {8b 45 08 8b 00 e8 ?? ?? ?? ?? 3d c2 01 00 00 7d ?? 6a 50 68 10 27 00 00 6a 01 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -222,6 +229,7 @@ rule Backdoor_Win32_Bafruz_N_2147657917_0
         $x_1_4 = "distrib_serv/ip_list.php" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -249,6 +257,7 @@ rule Backdoor_Win32_Bafruz_O_2147657976_0
         $x_1_8 = "127.0.0.1 www.login.vk.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

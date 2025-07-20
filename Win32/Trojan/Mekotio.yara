@@ -19,6 +19,7 @@ rule Trojan_Win32_Mekotio_RS_2147837260_0
         $x_1_4 = "themida" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Trojan_Win32_Mekotio_YAA_2147902522_0
         $x_1_5 = {32 c3 c1 c1 ba 66 0b c9 66 0f a3 c9 d0 c8 66 0f ab c9 fe c1 66 ff c9 32 c1 66 81 e9 92 b2 66 d3 c9 fe c8 2b c9 34 1d c1 e1 92 c0 e1 63 d0 c8 32 d8 66 23 c9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

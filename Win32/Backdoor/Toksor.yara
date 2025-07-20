@@ -26,6 +26,7 @@ rule Backdoor_Win32_Toksor_A_2147777150_0
         $x_1_12 = {21 73 74 61 72 74 70 72 6f 78 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

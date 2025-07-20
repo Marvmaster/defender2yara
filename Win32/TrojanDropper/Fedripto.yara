@@ -16,6 +16,7 @@ rule TrojanDropper_Win32_Fedripto_A_2147650232_0
         $x_1_2 = {46 64 72 31 33 38 69 70 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

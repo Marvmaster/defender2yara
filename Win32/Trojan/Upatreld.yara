@@ -15,6 +15,7 @@ rule Trojan_Win32_Upatreld_2147684687_0
         $x_1_1 = {6c 6f 61 64 65 72 33 32 2e 62 69 6e 00 6c 6f 61 64 65 72 43 6f 6e 66 69 67 53 6f 75 72 63 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

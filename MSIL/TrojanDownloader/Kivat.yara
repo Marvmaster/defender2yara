@@ -19,6 +19,7 @@ rule TrojanDownloader_MSIL_Kivat_A_2147688209_0
         $x_2_5 = "winupdater.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -46,6 +47,7 @@ rule TrojanDownloader_MSIL_Kivat_B_2147688509_0
         $x_1_4 = {47 f6 72 65 76 20 59 f6 6e 65 74 69 63 69 73 69 20 2d 20 47 6f 6f 67 6c 65 20 43 68 72 6f 6d 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

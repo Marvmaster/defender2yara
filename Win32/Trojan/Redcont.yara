@@ -19,6 +19,7 @@ rule Trojan_Win32_Redcont_A_2147707476_0
         $x_1_5 = {5c 4d 69 63 72 6f 73 6f 66 74 5c 64 65 6c [0-1] 2e 74 78 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

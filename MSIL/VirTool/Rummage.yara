@@ -15,6 +15,7 @@ rule VirTool_MSIL_Rummage_2147681502_0
         $x_1_1 = "Rummage is licensed to  (issue 0) for use with ." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -24,6 +24,7 @@ rule Worm_Win32_Sowndegg_B_2147626472_0
         $x_1_10 = {2f 00 2f 00 5c 00 5c 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

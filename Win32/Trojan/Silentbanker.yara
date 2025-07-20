@@ -15,6 +15,7 @@ rule Trojan_Win32_Silentbanker_B_2147603040_0
         $x_10_1 = {55 8b ec 83 ec 54 53 56 57 6a 06 59 be ?? ?? ?? ?? 8d 7d e4 f3 a5 66 a5 a4 6a 06 59 be ?? ?? ?? ?? 8d 7d c8 f3 a5 8b 5d 08 66 a5 a4 6a 06 59 be ?? ?? ?? ?? 8d 7d ac f3 a5 66 a5 8d 45 e4 53 50 a4 e8 ?? ?? ff ff 85 c0 59 59 74 14 8d 4d e4 2b c1 83 c0 ?? 99 6a 1a 59 f7 f9 8a 44 15 e4 eb 4a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_Silentbanker_B_2147603041_0
         $x_10_3 = "%s%x%x.dat" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

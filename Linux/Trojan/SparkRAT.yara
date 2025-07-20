@@ -19,6 +19,7 @@ rule Trojan_Linux_SparkRAT_B_2147921861_0
         $x_1_4 = "Spark/client/common.(*Conn).GetSecretHex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_Linux_SparkRAT_C_2147923438_0
         $x_1_4 = "Spark/client/core.getDesktop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

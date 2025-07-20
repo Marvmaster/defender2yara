@@ -19,6 +19,7 @@ rule Trojan_Win32_Porchanspi_A_2147662936_0
         $x_1_5 = {5c 73 76 63 66 6e 6d 61 69 6e 73 74 76 65 73 74 76 73 5c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -45,6 +46,7 @@ rule Trojan_Win32_Porchanspi_B_2147670475_0
         $x_5_3 = "Your Id #:  Our special service email: security11220@gmail.com" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

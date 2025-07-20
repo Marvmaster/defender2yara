@@ -17,6 +17,7 @@ rule TrojanProxy_Win32_Kabwall_A_2147609257_0
         $x_1_3 = {84 c0 75 29 ff 45 c4 83 7d c4 1e 7e 0d 8b 45 fc e8 ?? ?? ?? ff e9 ?? ?? 00 00 68 88 13 00 00 e8 ?? ?? ?? ff 8b 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

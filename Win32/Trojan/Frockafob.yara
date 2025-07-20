@@ -21,6 +21,7 @@ rule Trojan_Win32_Frockafob_C_2147805717_0
         $x_1_7 = "TrickBot-Implant" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

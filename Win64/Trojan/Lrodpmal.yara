@@ -18,6 +18,7 @@ rule Trojan_Win64_Lrodpmal_A_2147939958_0
         $x_1_4 = "Pluprouldeeg.orlo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

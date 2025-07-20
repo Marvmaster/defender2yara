@@ -18,6 +18,7 @@ rule Backdoor_Win32_Wnpms_A_2147605805_0
         $x_2_4 = {6d 79 20 70 6f 72 74 20 5b 25 69 5d 0a 00 64 65 70 2e 6d 76 6c 30 61 6e 37 2e 63 6f 6d 00 61 75 74 68 6f 72 69 7a 65 64 20 49 50}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

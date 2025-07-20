@@ -21,6 +21,7 @@ rule TrojanDropper_Win32_Fignotok_A_2147647352_0
         $x_1_6 = {43 3a 5c 55 73 65 72 73 5c 73 5c 44 65 73 6b 74 6f 70 5c [0-8] 5c 43 6f 64 65 5c 6d 61 69 6e 5c 64 77 6e 5c 52 65 6c 65 61 73 65 5c 64 77 6e 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

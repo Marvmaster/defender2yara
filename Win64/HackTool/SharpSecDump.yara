@@ -22,6 +22,7 @@ rule HackTool_Win64_SharpSecDump_2147763349_0
         $x_1_7 = "SharpSecDump.exe -target=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

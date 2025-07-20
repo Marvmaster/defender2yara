@@ -22,6 +22,7 @@ rule Trojan_Win32_Pucodex_A_2147631466_0
         $x_1_8 = {6e 65 78 74 63 61 6c 6c 00 00 00 00 74 61 73 6b 5f 69 64 00 74 61 73 6b 5f 74 79 70 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Pucodex_B_2147637480_0
         $x_1_4 = "botid" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

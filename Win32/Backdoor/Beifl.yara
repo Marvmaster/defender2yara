@@ -17,6 +17,7 @@ rule Backdoor_Win32_Beifl_B_2147683054_0
         $x_2_3 = {8a 07 3c 11 76 63 25 ff 00 00 00 83 e8 11 47}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

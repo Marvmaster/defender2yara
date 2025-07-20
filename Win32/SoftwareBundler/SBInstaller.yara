@@ -19,6 +19,7 @@ rule SoftwareBundler_Win32_SBInstaller_223443_0
         $x_1_5 = "CInstallerUtils::" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule SoftwareBundler_Win32_SBInstaller_223443_1
         $x_1_14 = "CInstallerUtils::init" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

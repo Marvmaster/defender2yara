@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Kaiket_A_2147596937_0
         $x_1_6 = "kaiket.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

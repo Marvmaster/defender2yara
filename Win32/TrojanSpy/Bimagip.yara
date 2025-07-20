@@ -21,6 +21,7 @@ rule TrojanSpy_Win32_Bimagip_A_2147689359_0
         $x_1_7 = {64 69 72 5f 77 61 74 63 68 2e 64 6c 6c ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 75 73 65 72 6e 61 6d 65 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule Backdoor_Win64_Tarply_B_2147744089_0
         $x_4_6 = {63 61 6e 27 74 20 6f 70 65 6e 20 66 69 6c 65 20 3a 20 00 00 00 00 00 00 64 6f 77 6e 6c 6f 61 64 24}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*))) or

@@ -23,6 +23,7 @@ rule TrojanDropper_Win32_Duon_2147599592_0
         $x_5_9 = "MainMOD" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 5 of ($x_1_*))) or
             ((3 of ($x_5_*))) or

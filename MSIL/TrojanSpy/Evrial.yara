@@ -19,6 +19,7 @@ rule TrojanSpy_MSIL_Evrial_A_2147725462_0
         $x_1_4 = "ClipboardMonitor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule TrojanSpy_MSIL_Evrial_B_2147727012_0
         $x_1_3 = "ClipboardMonitor" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

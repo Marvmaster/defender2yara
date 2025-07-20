@@ -20,6 +20,7 @@ rule TrojanDownloader_MSIL_Duplerd_A_2147707440_0
         $x_1_6 = "$3f394690-29cb-4c19-b4da-7edd29b7168e" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

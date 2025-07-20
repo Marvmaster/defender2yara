@@ -21,6 +21,7 @@ rule Trojan_Win32_Galeorati_A_2147652106_0
         $x_1_7 = "Larassati" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

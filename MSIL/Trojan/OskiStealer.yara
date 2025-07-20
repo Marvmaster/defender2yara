@@ -16,6 +16,7 @@ rule Trojan_MSIL_OskiStealer_NE_2147828740_0
         $x_1_1 = {72 01 00 00 70 28 29 00 00 0a 73 2a 00 00 0a ?? 72 21 00 00 70 ?? 28 1d 00 00 0a 09 72 5f 00 00 70 6f 2b 00 00 0a 28 2c 00 00 0a ?? ?? ?? 28 2f 00 00 06 6f 1e 00 00 0a ?? 28 1d 00 00 0a ?? ?? 75 00 00 70 6f 2b 00 00 0a 28 2c 00 00 0a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

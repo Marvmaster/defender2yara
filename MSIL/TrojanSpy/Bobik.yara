@@ -17,6 +17,7 @@ rule TrojanSpy_MSIL_Bobik_BIK_2147831378_0
         $x_1_2 = "freegeoip.app/xml" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanSpy_MSIL_Bobik_AFMM_2147837450_0
         $x_1_2 = "Install.Resource" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanSpy_MSIL_Bobik_AB_2147838186_0
         $x_1_5 = "Ts'mBUGzUsnk'oCsd'jds|" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule TrojanSpy_MSIL_Bobik_ABK_2147895579_0
         $x_1_2 = {0a 12 00 28 ?? 00 00 0a 12 00 28 ?? 00 00 0a 73 2c 00 00 0a 0b 07 28 ?? 00 00 0a 0c 00 08 7e 2e 00 00 0a 7e 2e 00 00 0a 12 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule TrojanSpy_MSIL_Bobik_SK_2147901751_0
         $x_2_2 = "\\resourcefilehaha.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule TrojanSpy_MSIL_Bobik_PADT_2147904993_0
         $x_1_3 = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\\\powershell.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

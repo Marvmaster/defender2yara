@@ -18,6 +18,7 @@ rule PWS_Win32_Separ_P_2147730433_0
         $x_1_4 = "adobepdf.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win64_SamScissors_EM_2147844198_0
         $x_5_1 = {41 03 d6 c1 fa 03 8b ca c1 e9 1f 03 d1 6b ca 0f 44 2b f1 41 ff c6 44 89 6c 24 30 4c 89 6c 24 38}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_SamScissors_EM_2147844198_1
         $x_3_2 = {8a 94 04 50 03 00 00 00 d1 02 8c 04 50 04 00 00 44 0f b6 c1 46 8a 8c 04 50 03 00 00 42 88 94 04 50 03}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

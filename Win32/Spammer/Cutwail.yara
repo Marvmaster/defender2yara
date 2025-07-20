@@ -18,6 +18,7 @@ rule Spammer_Win32_Cutwail_B_2147598318_0
         $x_1_3 = {74 07 80 0d ?? ?? ?? 13 04 8b 0d ?? ?? ?? 14 68 ?? ?? ?? ?? 56 68 ?? ?? ?? 13 c7 05 ?? ?? ?? 13 ?? ?? 00 00 e8 ?? ?? 00 00 8b 0d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Spammer_Win32_Cutwail_A_2147598459_0
         $x_1_4 = {6a 17 ff 77 0c e8 ?? ?? ff ff 6a 12 e8 ?? ?? ff ff 89 45 fc 0f b6 05 ?? ?? ?? ?? 50 0f b6 05 ?? ?? ?? ?? 50 a1 ?? ?? ?? ?? 0f b6 cc 51 0f b6 c0 50 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Spammer_Win32_Cutwail_C_2147599379_0
         $x_1_7 = "Fail START RegAcc." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -96,6 +99,7 @@ rule Spammer_Win32_Cutwail_D_2147626700_0
         $x_1_3 = {66 39 46 06 89 45 fc 76 57 8d be 08 01 00 00 8b 0f 85 c9 74 37 80 7d 0f 00 74 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

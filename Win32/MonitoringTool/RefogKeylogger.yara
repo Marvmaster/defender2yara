@@ -22,6 +22,7 @@ rule MonitoringTool_Win32_RefogKeylogger_205589_0
         $x_1_8 = "CloseClipboard" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule MonitoringTool_Win32_RefogKeylogger_205589_1
         $x_1_4 = {6a 00 56 50 6a 04 ff d7 8b 4c 24 14 6a 00 56 99}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule MonitoringTool_Win32_RefogKeylogger_205589_2
         $x_2_2 = "All Chats with this Contact" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -97,6 +100,7 @@ rule MonitoringTool_Win32_RefogKeylogger_205589_3
         $x_1_12 = "WM_GETWNDDLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 8 of ($x_1_*))) or
             ((3 of ($x_2_*) and 6 of ($x_1_*))) or
@@ -129,6 +133,7 @@ rule MonitoringTool_Win32_RefogKeylogger_205589_4
         $x_1_8 = "REFOG Keylogger.lnk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -159,6 +164,7 @@ rule MonitoringTool_Win32_RefogKeylogger_205589_5
         $x_1_11 = "MpkNetInstall.exe - application installer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_5_*) and 5 of ($x_1_*))) or
@@ -187,6 +193,7 @@ rule MonitoringTool_Win32_RefogKeylogger_205589_6
         $x_1_5 = {46 00 69 00 6c 00 65 00 44 00 65 00 73 00 63 00 72 00 69 00 70 00 74 00 69 00 6f 00 6e 00 ?? ?? ?? ?? 52 00 45 00 46 00 4f 00 47 00 20 00 4b 00 65 00 79 00 6c 00 6f 00 67 00 67 00 65 00 72 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -215,6 +222,7 @@ rule MonitoringTool_Win32_RefogKeylogger_205589_7
         $x_1_9 = "logs@vista-keylogger.com" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -245,6 +253,7 @@ rule MonitoringTool_Win32_RefogKeylogger_205589_8
         $x_1_11 = {4d 00 55 00 54 00 45 00 58 00 5f 00 50 00 52 00 4f 00 47 00 52 00 41 00 4d 00 5f 00 52 00 55 00 4e 00 4e 00 49 00 4e 00 47 00 3a 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

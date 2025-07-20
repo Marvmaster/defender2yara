@@ -19,6 +19,7 @@ rule Trojan_Win32_BumbleBee_AB_2147832614_0
         $x_1_4 = "AppStart" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Win32_BumbleBee_AC_2147832615_0
         $x_1_8 = "TsxrdPnhbug" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

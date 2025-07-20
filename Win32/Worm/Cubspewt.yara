@@ -22,6 +22,7 @@ rule Worm_Win32_Cubspewt_A_2147622796_0
         $x_1_8 = "ping 1.2.3.4 -l 65500 -n 1 -w 2500>nul" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_2_*) and 2 of ($x_1_*))) or

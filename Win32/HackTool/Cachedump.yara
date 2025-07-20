@@ -19,6 +19,7 @@ rule HackTool_Win32_Cachedump_2147694234_0
         $x_1_4 = "LSA Cipher Key by RegOpenKeyEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

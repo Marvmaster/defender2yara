@@ -21,6 +21,7 @@ rule Trojan_Win32_Sehijak_A_2147709727_0
         $x_1_7 = {85 f1 fc 3e 9b 4d 62 c4 1d 77 9f f6 73 91 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_1_*))) or

@@ -16,6 +16,7 @@ rule Trojan_Win32_QuasarRAT_A_2147893085_0
         $x_2_1 = {8b 45 f4 8b 44 85 d0 89 45 ec 8b 45 ec 89 04 24 e8 ?? ?? ?? ?? 89 45 e8 8d 45 cc 89 44 24 08 8b 45 e8 89 44 24 04 8b 45 ec 89 04 24 e8 ?? ?? ?? ?? 89 45 e4 83 7d e4}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_QuasarRAT_AYA_2147940213_0
         $x_1_5 = "Injection completed!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_QuasarRAT_DC_2147941678_0
         $x_1_5 = "BQuasar.Client.Extensions." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

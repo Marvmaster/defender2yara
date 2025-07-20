@@ -17,6 +17,7 @@ rule Trojan_Win32_Hosinject_A_2147683074_0
         $x_1_3 = {8b 94 24 c0 00 00 00 8d 44 24 0c 53 8b 1d 28 90 40 00 50 8d 4c 24 18 6a 04 83 c2 08 51 52 56 ff d3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

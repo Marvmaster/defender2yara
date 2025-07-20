@@ -19,6 +19,7 @@ rule Backdoor_MSIL_Minerbot_A_2147725067_0
         $x_1_5 = "/C schtasks /create /tn \\System\\SecurityServiceUpdate /tr %userprofile%\\AppData\\Roaming\\Windows\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

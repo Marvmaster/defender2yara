@@ -20,6 +20,7 @@ rule Ransom_Win32_Finicrypt_A_2147707693_0
         $x_1_6 = ".onion.direct/lending/bot.php?name=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

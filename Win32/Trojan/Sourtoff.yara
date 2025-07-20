@@ -19,6 +19,7 @@ rule Trojan_Win32_Sourtoff_A_2147685619_0
         $x_1_5 = {4d 69 6e 69 44 75 6d 70 57 72 69 74 65 44 75 6d 70 00 00 00 20 32 30 30 20 00 00 00 20 34 34 34 20 00 00 00 20 34 34 35 20 00 00 00 20 34 34 36 20 00 00 00 20 34 34 37 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_16_*) and 1 of ($x_1_*))) or
             (all of ($x*))

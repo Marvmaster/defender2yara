@@ -19,6 +19,7 @@ rule Trojan_MSIL_TaskLoader_AB_2147793605_0
         $x_3_4 = "Host for System Info" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_MSIL_TaskLoader_AA_2147794049_0
         $x_3_6 = "NetworkInfoHost.Properties.Resources" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

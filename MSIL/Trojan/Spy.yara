@@ -23,6 +23,7 @@ rule Trojan_MSIL_Spy_Keylogger_2147779585_0
         $x_3_7 = "get_CapsLock" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_4_*) and 2 of ($x_3_*))) or
             ((2 of ($x_5_*) and 1 of ($x_4_*) and 2 of ($x_3_*))) or
@@ -62,6 +63,7 @@ rule Trojan_MSIL_Spy_Keylogger_2147779590_0
         $x_3_8 = "malware.attack" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_4_*) and 2 of ($x_3_*))) or
             ((1 of ($x_5_*) and 2 of ($x_4_*) and 2 of ($x_3_*))) or
@@ -100,6 +102,7 @@ rule Trojan_MSIL_Spy_Keylogger_2147780657_0
         $x_3_8 = "StreamWriter" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +133,7 @@ rule Trojan_MSIL_Spy_Keylogger_2147781331_0
         $x_3_9 = "GetCurrentProcess" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -155,6 +159,7 @@ rule Trojan_MSIL_Spy_Bulz_2147781757_0
         $x_3_4 = "WriteAllText" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -183,6 +188,7 @@ rule Trojan_MSIL_Spy_LiveSnoop_2147781935_0
         $x_3_7 = "HttpWebRequest" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -217,6 +223,7 @@ rule Trojan_MSIL_Spy_DJN_2147785246_0
         $x_1_14 = "ScanVPN" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +250,7 @@ rule Trojan_MSIL_Spy_CYF_2147786250_0
         $x_1_6 = {fe 0e 06 00 fe 0d 06 00 28 ec 01 00 0a fe 0e 04 00 fe 0c 03 00 20 05 00 00 00 20 40 00 00 00 fe 0d 05 00 28 ?? 04 00 06 26 28 43 00 00 0a 20 04 00 00 00 fe 01 fe 0e 07 00 fe 0c 07 00 39 57 00 00 00 00 fe 0c 03 00 20 00 00 00 00 20 e9 00 00 00 28 ed 01 00 0a 00 fe 0c 03 00 20 01 00 00 00 fe 0d 04 00 28 ee 01 00 0a fe 0d 03 00 28 ee 01 00 0a 59 20 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -265,6 +273,7 @@ rule Trojan_MSIL_Spy_Noon_2147788952_0
         $x_10_1 = {07 02 6f 53 00 00 0a 00 02 18 5d 16 fe 01 0c 08 2c 17 02 6c 23 00 00 00 00 00 00 00 40 5b 28 55 00 00 0a b7 10 00 00 2b 09 00 19 02 d8 17 d6 10 00 00 00 02 17 fe 01 16 fe 01 0d 09 2d c2 07 02 6f 53 00 00 0a 00 07 0a 2b 00 06 2a}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -291,6 +300,7 @@ rule Trojan_MSIL_Spy_SCC_2147798240_0
         $x_1_6 = "Decompress" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -316,6 +326,7 @@ rule Trojan_MSIL_Spy_ABDSA_2147805127_0
         $x_1_5 = "Disposition" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -337,6 +348,7 @@ rule Trojan_MSIL_Spy_FRM_2147809849_0
         $x_10_1 = {73 15 00 00 0a 0a 00 06 1f 10 8d 1f 00 00 01 25 d0 06 00 00 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 06 1f 10 8d 1f 00 00 01 25 d0 05 00 00 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 06 6f ?? ?? ?? 0a 03 16 03 8e 69 6f ?? ?? ?? 0a 0b de 0b 06 2c 07 06 6f ?? ?? ?? 0a 00 dc 07 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -358,6 +370,7 @@ rule Trojan_MSIL_Spy_MEGA_2147810532_0
         $x_10_1 = {17 72 01 00 00 70 12 00 73 08 00 00 0a 26 06 2d 01 2a 17 0b 16 0c 16 0d 16 13 04 16 13 05 72 13 00 00 70 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 72 2d 00 00 70 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 3a ca 00 00 00 72 97 00 00 70 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 72 a9 00 00 70 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 1a 28 ?? ?? ?? 0a 13 07 28 ?? ?? ?? 0a 72 cb 00 00 70 28 ?? ?? ?? 06 6f ?? ?? ?? 0a 13 08 11 07 11 08}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -379,6 +392,7 @@ rule Trojan_MSIL_Spy_KAREGA_2147811639_0
         $x_10_1 = {14 0a 1e 8d 44 00 00 01 25 d0 9d 00 00 04 28 ?? ?? ?? 0a 0b 73 22 00 00 0a 0c 00 73 23 00 00 0a 0d 00 09 20 00 01 00 00 6f ?? ?? ?? 0a 00 09 20 80 00 00 00 6f ?? ?? ?? 0a 00 28 ?? ?? ?? 0a 72 6b 00 00 70}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -400,6 +414,7 @@ rule Trojan_MSIL_Spy_FRSI_2147812171_0
         $x_10_1 = {17 8d 7d 00 00 01 25 16 1f 60 9d 28 ?? ?? ?? 0a 20 00 01 00 00 14 14 17 8d 10 00 00 01 25 16 02 a2 28 ?? ?? ?? 0a 74 39 00 00 01 0a 2b 00 06 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -427,6 +442,7 @@ rule Trojan_MSIL_Spy_JLNG_2147813722_0
         $x_2_7 = "Skidomoney.Money" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -448,6 +464,7 @@ rule Trojan_MSIL_Spy_QYA_2147813724_0
         $x_10_1 = {2b 02 26 16 28 ?? ?? ?? 06 0a 06 28 ?? ?? ?? 06 25 26 03 50 28 ?? ?? ?? 06 25 26 28 ?? ?? ?? 06 25 26 0b 28 ?? ?? ?? 06 25 26 0c 08 07 28 ?? ?? ?? 06 08 28 ?? ?? ?? 06 28 ?? ?? ?? 06 08 28 ?? ?? ?? 06 25 26 02 50 28 ?? ?? ?? 06 25 26 02 50 8e 69 28 ?? ?? ?? 06 25 26 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -469,6 +486,7 @@ rule Trojan_MSIL_Spy_XYA_2147813725_0
         $x_10_1 = {2b 0b 26 20 cc 01 00 00 28 ?? ?? ?? 06 28 ?? ?? ?? 06 25 26 0a 06 28 ?? ?? ?? 06 25 26 03 50 28 ?? ?? ?? 06 25 26 28 ?? ?? ?? 06 25 26 0b 28 ?? ?? ?? 06 25 26 0c 08 07 28 ?? ?? ?? 06 08 28 ?? ?? ?? 06 25 26 28 ?? ?? ?? 06 08 28 ?? ?? ?? 06 25 26 02 50 28 ?? ?? ?? 06 25 26 02 50 8e 69 28 ?? ?? ?? 06 25 26 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -490,6 +508,7 @@ rule Trojan_MSIL_Spy_KMS_2147813727_0
         $x_10_1 = {73 41 00 00 0a 0b 07 1f 10 8d 38 00 00 01 25 d0 0c 00 00 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 07 1f 10 8d 38 00 00 01 25 d0 0d 00 00 04 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 07 6f ?? ?? ?? 0a 03 16 03 8e 69 6f ?? ?? ?? 0a 0a de 0c 00 07 2c 07 07 6f ?? ?? ?? 0a 00 dc 06 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

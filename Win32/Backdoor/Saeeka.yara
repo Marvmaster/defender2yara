@@ -17,6 +17,7 @@ rule Backdoor_Win32_Saeeka_A_2147625065_0
         $x_1_3 = "(hacker85.no-ip.biz)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Backdoor_Win32_Saeeka_B_2147652705_0
         $x_1_4 = "OPENVIRUS" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -21,6 +21,7 @@ rule DoS_Win32_GigaWiper_B_2147944724_0
         $x_1_6 = "Failed to get disk size: %v" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule DoS_Win32_GigaWiper_A_2147944818_0
         $x_1_6 = "Error on rebooting:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

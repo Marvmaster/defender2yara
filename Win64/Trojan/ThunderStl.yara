@@ -19,6 +19,7 @@ rule Trojan_Win64_ThunderStl_C_2147919385_0
         $x_1_5 = "GetComputerNameA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

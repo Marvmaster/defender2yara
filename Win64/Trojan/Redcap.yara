@@ -18,6 +18,7 @@ rule Trojan_Win64_Redcap_SPQ_2147845434_0
         $x_1_3 = "Uioesoigseighsehji" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win64_Redcap_GMK_2147892320_0
         $x_1_7 = "qedis_sock_read_multibulk_multi_reply_loop" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win64_Redcap_ASG_2147894260_0
         $x_2_2 = {48 89 44 24 48 48 8b 44 24 30 8b 40 50 41 b9 40 00 00 00 41 b8 00 30 00 00 8b d0 33 c9 ff 54 24 48}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win64_Redcap_AMBA_2147895925_0
         $x_1_1 = {44 02 d9 44 02 df 41 0f b6 cb 0f b6 44 8d 08 41 30 46 ff 8b 44 8d 08 31 44 95 08 42 8b 44 a5 08 41 8d 0c 00 42 31 4c 95 08 49 ff cf}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Trojan_Win64_Redcap_NR_2147899136_0
         $x_3_2 = {75 e2 48 8b 35 ?? ?? ?? ?? 31 ed 8b 06 83 f8 ?? 0f 84 13 02 00 00 8b 06}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Trojan_Win64_Redcap_NR_2147899136_1
         $x_1_7 = "Hide Registry Key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_Win64_Redcap_APC_2147918689_0
         $x_1_3 = "Payload(%v) active, connecting to" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -185,6 +192,7 @@ rule Trojan_Win64_Redcap_YAA_2147925420_0
         $x_1_5 = "Leveraging DKOM to achieve LPE" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -207,6 +215,7 @@ rule Trojan_Win64_Redcap_KGF_2147925764_0
         $x_1_2 = "D^Gws*f!8wENr9d%I#^RMe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -230,6 +239,7 @@ rule Trojan_Win64_Redcap_MBWB_2147926742_0
         $x_1_3 = "d-Xg8Lhe25ACNP-V9yIO/9g" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -254,6 +264,7 @@ rule Trojan_Win64_Redcap_ARDP_2147933485_0
         $x_1_1 = {48 89 5c 24 38 48 89 44 24 48 48 8b 10 48 89 54 24 40 48 8b 58 08 48 89 5c 24 30 48 8d 0d ?? ?? 1e 00 bf 0b 00 00 00 48 89 d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -275,6 +286,7 @@ rule Trojan_Win64_Redcap_AB_2147945993_0
         $x_1_1 = {31 c9 eb 07 48 81 c1 60 98 00 00 48 81 f9 5f 98 00 00 7c f0 31 c9 eb 07 48 81 c1 30 34 00 00 48 81}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

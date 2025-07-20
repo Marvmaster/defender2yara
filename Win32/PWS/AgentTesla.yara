@@ -19,6 +19,7 @@ rule PWS_Win32_AgentTesla_YA_2147732047_0
         $x_1_4 = "\\Thunderbird\\" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule PWS_Win32_AgentTesla_YB_2147734995_0
         $x_1_2 = "$83018595-3f8a-4e71-94b2-8e41a61ed763" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

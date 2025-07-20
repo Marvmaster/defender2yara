@@ -25,6 +25,7 @@ rule Trojan_Win64_HVNCStealer_RPH_2147834659_0
         $x_1_10 = "key.log" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

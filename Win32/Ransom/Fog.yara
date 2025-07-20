@@ -17,6 +17,7 @@ rule Ransom_Win32_Fog_D_2147911917_0
         $x_1_3 = "[!] All task finished, locker exiting." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Ransom_Win32_Fog_MKV_2147914048_0
         $x_1_1 = {8b c3 99 b9 05 00 00 00 f7 f9 33 74 d5 ac 33 7c d5 ?? 8b 55 fc 8b c2 31 30 8d 40 28 31 78 dc 83 e9 01 75 ?? 83 c2 08 8d 71 05 43 89 55 fc 83 6d f8 01 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -85,6 +87,7 @@ rule Ransom_Win32_Fog_WQ_2147939444_0
         $x_1_1 = {33 d2 f7 75 14 8b 45 10 0f b6 14 10 23 fa 0b f7 0b ce 8b 85 68 ff ff ff 03 45 98 88 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -112,6 +115,7 @@ rule Ransom_Win32_Fog_BA_2147939671_0
         $x_1_7 = "Failed to create sensitive check thread" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

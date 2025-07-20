@@ -15,6 +15,7 @@ rule VirTool_WinNT_Livuto_2147598253_0
         $x_1_1 = {eb 04 80 00 ?? 40 80 38 00 75 f7 b0 01 c2 04 00 8b 44 24 04 eb 06 66 83 00 ?? 40 40 66 83 38 00 75 f4 b0 01 c2 04 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule VirTool_WinNT_Livuto_2147604763_0
         $x_1_5 = {7e 13 8a 0c 02 84 c9 74 0c fe c1 88 0c 02 42 3b 54 24 08 7c ed c2 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_3_*))) or
@@ -68,6 +70,7 @@ rule VirTool_WinNT_Livuto_A_2147607328_0
         $x_2_3 = {61 00 62 00 6f 00 75 00 74 00 2e 00 62 00 6c 00 61 00 6e 00 6b 00 2e 00 6c 00 61 00 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -96,6 +99,7 @@ rule VirTool_WinNT_Livuto_B_2147609842_0
         $x_1_5 = "\\DosDevices\\ClanAvb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

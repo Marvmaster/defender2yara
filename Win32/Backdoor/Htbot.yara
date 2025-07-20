@@ -17,6 +17,7 @@ rule Backdoor_Win32_Htbot_A_2147678671_0
         $x_1_3 = {3f 00 63 00 6f 00 6d 00 6d 00 61 00 6e 00 64 00 3d 00 75 00 70 00 64 00 61 00 74 00 65 00 90 00 02 00 01 00 26 00 69 00 64 00 3d 00 25 00 73 00 26 00 69 00 70 00 3d 00 25 00 73 00 26 00 70 00 6f 00 72 00 74 00 3d 00 25 00 64 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -41,6 +42,7 @@ rule Backdoor_Win32_Htbot_B_2147678895_0
         $x_1_2 = "?command=getbackconnect" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Backdoor_Win32_Htbot_C_2147707966_0
         $x_1_6 = "\\farclen.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

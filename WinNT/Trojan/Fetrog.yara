@@ -19,6 +19,7 @@ rule Trojan_WinNT_Fetrog_A_2147666039_0
         $x_1_5 = "\\DosDevices\\rmpdk0g" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule Trojan_WinNT_Fetrog_B_2147666040_0
         $x_2_3 = {66 41 89 43 04 44 0f b7 5c 24 ?? 44 0f b7 6c 24 ?? 66 41 81 f3 aa 55 66 41 81 f5 55 aa}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))

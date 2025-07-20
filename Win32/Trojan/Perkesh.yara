@@ -20,6 +20,7 @@ rule Trojan_Win32_Perkesh_A_2147616756_0
         $x_1_5 = "callnexthookex" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Perkesh_A_2147616773_0
         $x_1_6 = {bf a8 b0 cd cb b9 bb f9 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -70,6 +72,7 @@ rule Trojan_Win32_Perkesh_A_2147851761_0
         $x_2_1 = {8a 0c 33 8a c3 c0 e0 ?? 2c 1e 8b fe 02 c8 33 c0 88 0c 33 83 c9 ?? 43 f2 ae f7 d1 49 3b d9 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

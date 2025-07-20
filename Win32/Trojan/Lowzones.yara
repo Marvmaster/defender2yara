@@ -18,6 +18,7 @@ rule Trojan_Win32_Lowzones_GT_116820_0
         $x_1_4 = {89 65 e8 c6 45 e7 01 c7 45 fc 00 00 00 00 52 51 53 b8 68 58 4d 56 bb 00 00 00 00 b9 0a 00 00 00 ba 58 56 00 00 ed 81 fb 68 58 4d 56 0f 94 45 e7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win32_Lowzones_GU_122425_0
         $x_1_3 = {6a 00 6a 00 6a 02 6a 01 8b 0d ?? ?? 42 00 8b 09 b2 01 a1 ?? ?? 42 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_Lowzones_F_125888_0
         $x_1_4 = {73 00 79 00 73 00 70 00 72 00 6f 00 74 00 65 00 63 00 74 00 2e 00 63 00 6f 00 6d 00 2f 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -97,6 +100,7 @@ rule Trojan_Win32_Lowzones_DZ_164767_0
         $x_5_11 = "res://SimpleBrowserDemo.exe/#" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_5_*) and 5 of ($x_1_*))) or
             ((4 of ($x_10_*) and 5 of ($x_1_*))) or

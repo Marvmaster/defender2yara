@@ -18,6 +18,7 @@ rule Trojan_Win32_Bokbot_GG_2147745020_0
         $x_1_3 = {25 ff 00 00 00 8b ?? 33 ?? 83 [0-2] 33 ?? ff 15 [0-4] 8b ?? 8b [0-2] 88 [0-2] 8b [0-2] 8b [0-2] 03 [0-7] 8b ?? e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule Trojan_Win32_Spyboy_A_2147848166_0
         $x_1_5 = {48 89 44 24 58 48 89 5c 24 48 48 8b 4c 24 50 48 8b 7c 24 38 48 8b 74 24 40 41 b8 a4 01 00 00 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

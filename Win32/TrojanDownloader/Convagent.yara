@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Convagent_AW_2147834830_0
         $x_5_1 = {89 45 98 8b 45 98 8a 08 88 4d b8 0f be 45 b8 99 33 85 [0-4] 8b 55 98 88 02 e9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Dofoil_B_2147812555_0
         $x_1_1 = {89 85 98 f6 ff ff 89 95 9c f6 ff ff 8b 85 98 f6 ff ff 8b 8d 9c f6 ff ff 89 8d 88 f2 ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Backdoor_Win32_Mdmbot_A_2147601718_0
         $x_1_4 = {6d 64 6d 2e 65 db 6d 0d b4 78 f8 5c b4 b2 64 6f 77 34 58 50 0d 5f bb fd 20 28 53 50 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Backdoor_Win32_Mdmbot_B_2147602747_0
         $x_1_5 = "Software\\Sun\\1.1.2" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -66,6 +68,7 @@ rule Backdoor_Win32_Mdmbot_C_2147630925_0
         $x_1_2 = {52 53 44 53 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 3a 5c [0-32] 41 75 72 6f 72 61 56 4e 43 5c 41 76 63 5c [0-16] 5c 41 56 43 2e 70 64 62}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Backdoor_Win32_Mdmbot_D_2147630926_0
         $x_1_4 = "I am running under mcproxy.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Backdoor_Win32_Mdmbot_F_2147658044_0
         $x_1_7 = "rat_UnInstall" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -138,6 +143,7 @@ rule Backdoor_Win32_Mdmbot_G_2147692129_0
         $x_1_3 = {8d 8c 3e 10 02 00 00 8a 14 3e 8a 1c 01 32 da 88 1c 01 8b 54 3e 04 40 3b c2 72 ec}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -164,6 +170,7 @@ rule Backdoor_Win32_Mdmbot_H_2147707264_0
         $x_1_5 = "http://%ls:%d/l%x" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -190,6 +197,7 @@ rule Backdoor_Win32_Mdmbot_G_2147707265_0
         $x_5_5 = "C:\\Documents and Settings\\Administrator\\Aliapp.exe" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

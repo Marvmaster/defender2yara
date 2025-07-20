@@ -21,6 +21,7 @@ rule Trojan_Win64_Snare_S_2147745631_0
         $x_1_6 = "NetUserGetInfo" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

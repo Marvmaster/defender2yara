@@ -17,6 +17,7 @@ rule Trojan_Win32_Stuxnet_A_2147635799_0
         $x_1_3 = {ff 75 28 ff 75 24 ff 75 20 ff 75 1c ff 75 18 ff 75 14 ff 75 10 ff 75 0c ff 75 08 ff 51 38 5d c2 24 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Stuxnet_B_2147636154_0
         $x_1_3 = {8d 45 fc 50 e8 ?? ?? 00 00 50 ff d6 85 c0 7d 07 b8 ?? ?? ?? ?? eb}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_Stuxnet_E_2147641118_0
         $n_10_3 = {3d 02 06 24 ae 74 07 33 c0 e9}  //weight: -10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (not (any of ($n*))) and
         (all of ($x*))
 }
@@ -85,6 +88,7 @@ rule Trojan_Win32_Stuxnet_F_2147644014_0
         $x_1_4 = {8b 74 24 08 80 7e ?? 00 75 05 8d 46 ?? 5e c3 0f b7 46 ?? 57 50 8d 7e ?? 57 e8 ?? ?? ?? ?? 80 66 ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

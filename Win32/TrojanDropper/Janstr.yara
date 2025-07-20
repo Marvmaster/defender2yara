@@ -18,6 +18,7 @@ rule TrojanDropper_Win32_Janstr_A_2147630202_0
         $x_10_3 = {55 8b ec 81 c4 b8 fe ff ff 53 56 57 33 d2 89 95 c0 fe ff ff 89 95 b8 fe ff ff 89 95 bc fe ff ff 89 95 d0 fe ff ff 89 95 c4 fe ff ff 89 95 cc fe ff ff 89 95 c8 fe ff ff 89 45 fc 8b 45 fc}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

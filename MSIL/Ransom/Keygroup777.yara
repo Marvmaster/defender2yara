@@ -18,6 +18,7 @@ rule Ransom_MSIL_Keygroup777_PA_2147916845_0
         $x_5_3 = "You became victim of the keygroup777 RANSOMWARE!" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

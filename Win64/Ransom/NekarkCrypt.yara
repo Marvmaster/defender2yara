@@ -18,6 +18,7 @@ rule Ransom_Win64_NekarkCrypt_PA_2147918022_0
         $x_4_3 = "Your files have been encrypted" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_Win64_NekarkCrypt_PA_2147918022_1
         $x_1_4 = "Successfully encrypted:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Ransom_Win64_NekarkCrypt_PB_2147918931_0
         $x_3_3 = "\\MrRannyReworked.pdb" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

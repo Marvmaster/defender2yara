@@ -19,6 +19,7 @@ rule Trojan_Win32_Simda_B_2147632782_0
         $x_1_4 = "!config" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -47,6 +48,7 @@ rule Trojan_Win32_Simda_C_2147633716_0
         $x_1_4 = "!config" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -80,6 +82,7 @@ rule Trojan_Win32_Simda_D_2147636663_0
         $x_1_9 = {8b 45 fc 3d 40 1a cd 00 74 ?? 3d 08 c5 bb 6c 74 ?? 3d 82 16 4e 77 74 ?? 3d 3e 87 7f 83 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -112,6 +115,7 @@ rule Trojan_Win32_Simda_E_2147636982_0
         $x_2_12 = {71 77 65 72 [0-4] 71 77 65 72 74 [0-4] 71 77 65 72 74 79}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*) and 4 of ($x_1_*))) or
             ((6 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -138,6 +142,7 @@ rule Trojan_Win32_Simda_R_2147650743_0
         $x_1_2 = {8b 4c 24 08 c6 40 18 f3 89 48 20}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +165,7 @@ rule Trojan_Win32_Simda_S_2147650744_0
         $x_1_3 = "wv=%s&uid=%d&lng=%s&mid=%s&res=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -182,6 +188,7 @@ rule Trojan_Win32_Simda_W_2147656567_0
         $x_1_3 = {69 44 6f 6e 77 45 78 65 63 00 00 00 69 53 74 61 72 50 63 4f 6e 73 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +210,7 @@ rule Trojan_Win32_Simda_RK_2147836568_0
         $x_1_1 = {be 35 24 00 00 6b d6 59 0b 15 ?? ?? ?? ?? 75 05 c1 c2 07 d1 e2 89 15 b7 82 48 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -228,6 +236,7 @@ rule Trojan_Win32_Simda_EC_2147850520_0
         $x_1_5 = "Dwghzfb.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -249,6 +258,7 @@ rule Trojan_Win32_Simda_ASM_2147922891_0
         $x_1_1 = {57 be 00 03 3c 00 81 c6 3f 87 05 00 56 bb a3 23 12 00 8b d3 c7 05 ?? ?? ?? ?? e4 63 2f 00 03 15 ?? ?? ?? ?? 52 b9 ae 00 00 00 8b d1 52 68 00 00 00 00 5a 52 bf 88 70 20 00 8b c7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -270,6 +280,7 @@ rule Trojan_Win32_Simda_SOK_2147923707_0
         $x_1_1 = {ff 15 bc 20 41 00 33 c0 a3 ?? ?? ?? 00 ba 41 0c 00 00 c1 ea 06 03 d3 4a 8b c2 40 81 e8 f0 04 00 00 2b ?? ?? ?? 40 00 c1 c0 07 03 c0 29 05 ?? ?? ?? 00 68 1f a2 40}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -297,6 +308,7 @@ rule Trojan_Win32_Simda_CCIO_2147924541_0
         $x_5_7 = {33 ca 8f 05 61 2a 41 00 89 55 f4 aa 33 db}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -318,6 +330,7 @@ rule Trojan_Win32_Simda_MX_2147928075_0
         $x_1_1 = {8b da d1 e3 ff 13}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

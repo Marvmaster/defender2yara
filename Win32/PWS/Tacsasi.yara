@@ -18,6 +18,7 @@ rule PWS_Win32_Tacsasi_A_2147628874_0
         $x_1_4 = "drowssaP\\CUD\\skrewlatiV\\ERAWTFOS\\ENIHCAM_LACOL_YEKH" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             (all of ($x*))

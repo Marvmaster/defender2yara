@@ -22,6 +22,7 @@ rule Trojan_Win32_Noon_A_2147724283_0
         $x_1_8 = {76 62 63 00 [0-16] 53 65 6c 66 20 49 6e 6a 65 63 74 69 6f 6e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_Noon_QA_2147796261_0
         $x_3_7 = "FtpSetCurrentDirectoryA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -76,6 +78,7 @@ rule Trojan_Win32_Noon_AV_2147805943_0
         $x_3_7 = "miraculous.dll" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -103,6 +106,7 @@ rule Trojan_Win32_Noon_FB_2147808804_0
         $x_3_7 = "hwhoyd" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -125,6 +129,7 @@ rule Trojan_Win32_Noon_SIBA_2147814659_0
         $x_1_2 = {8b 38 ff 57 ?? 8b 45 ?? 8b 16 0f b6 7c 10 ff a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? ba ?? ?? ?? ?? 2b d0 52 a1 ?? ?? ?? ?? e8 ?? ?? ?? ?? 5a 92 8b ca 99 f7 f9 03 fa 8b d7 8d 45 ?? e8 ?? ?? ?? ?? 8b 55 07 b8 ?? ?? ?? ?? e8 ?? ?? ?? ?? ff 06 ff 4d ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -147,6 +152,7 @@ rule Trojan_Win32_Noon_GVA_2147938152_0
         $x_2_2 = {0f 94 c2 08 d1 44 30 c2 44 30 c1 80 f1 01 08 d1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

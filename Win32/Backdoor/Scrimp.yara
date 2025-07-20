@@ -18,6 +18,7 @@ rule Backdoor_Win32_Scrimp_B_2147627323_0
         $x_5_4 = {6d 6f 6e 6b 65 79 2e 64 6c 6c 00 26 31 32}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Backdoor_Win32_Scrimp_C_2147627328_0
         $x_1_4 = {6d 6f 6e 6b 65 79 2e 64 6c 6c 00 26 31 32}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -77,6 +79,7 @@ rule Backdoor_Win32_Scrimp_A_2147627449_0
         $x_1_10 = {6d 73 76 6d 72 65 67 33 32 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_10_*) and 1 of ($x_1_*))) or
             ((1 of ($x_50_*) and 2 of ($x_10_*))) or

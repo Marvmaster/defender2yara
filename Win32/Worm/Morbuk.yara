@@ -20,6 +20,7 @@ rule Worm_Win32_Morbuk_A_2147636404_0
         $x_1_6 = ".php?comp=%s&msg=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

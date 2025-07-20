@@ -20,6 +20,7 @@ rule HackTool_Linux_PortScan_A_2147818626_0
         $x_1_5 = "Invalid IP" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

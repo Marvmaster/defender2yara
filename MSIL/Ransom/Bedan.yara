@@ -17,6 +17,7 @@ rule Ransom_MSIL_Bedan_A_2147719160_0
         $x_1_3 = "unlock your files you need to pay" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

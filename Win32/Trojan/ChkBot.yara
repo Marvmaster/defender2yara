@@ -18,6 +18,7 @@ rule Trojan_Win32_ChkBot_A_2147696159_0
         $x_1_4 = {00 26 76 65 72 3d 03 00 2e 03 00 00 26 6f 73 3d 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

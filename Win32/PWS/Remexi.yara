@@ -19,6 +19,7 @@ rule PWS_Win32_Remexi_YA_2147732049_0
         $x_1_4 = "</*clipboard Image*>" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -16,6 +16,7 @@ rule Trojan_Win32_FareIt_Delf_2147787476_0
         $x_1_1 = {8b 86 bc 00 00 00 8b 8e c0 00 00 00 69 c0 84 00 00 00 8b 95 dc fd ff ff 89 94 08 80 00 00 00 8b 86 bc 00 00 00 69 c0 84 00 00 00 03 86 c0 00 00 00 8d 8d f8 fd ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_FareIt_VGTR_2147794108_0
         $x_1_2 = "IDesignerHook@VA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win32_FareIt_HGFT_2147794612_0
         $x_1_1 = {89 c7 0f ef d3 66 0f fc fe 0f 64 cd 0f fd e3 0f 71 f7 db 66 0f fc f2 f3 a4 66 0f dc cd 0f f9 d4 fc 0f fa e5 66 0f e1 cb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

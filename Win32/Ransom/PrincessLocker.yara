@@ -17,6 +17,7 @@ rule Ransom_Win32_PrincessLocker_A_2147723373_0
         $x_1_3 = {83 c3 1a 83 c0 1a 89 9d ?? ?? ff ff 89 85 ?? ?? ff ff 81 fb 46 9a 00 00 0f 82 ?? ?? ff ff 8b 85 ?? ?? ff ff 83 f8 08 72 13}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

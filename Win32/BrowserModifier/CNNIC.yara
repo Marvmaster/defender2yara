@@ -24,6 +24,7 @@ rule BrowserModifier_Win32_CNNIC_3678_0
         $x_2_10 = "CnsMinKP" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -64,6 +65,7 @@ rule BrowserModifier_Win32_CNNIC_3678_1
         $x_2_6 = "\\cdnprot.dat" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -87,6 +89,7 @@ rule BrowserModifier_Win32_CNNIC_3678_2
         $x_1_4 = {4e 65 74 62 69 6f 73 00 4e 45 54 41 50 49 33 32 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +113,7 @@ rule BrowserModifier_Win32_CNNIC_3678_3
         $x_1_4 = {4e 65 74 62 69 6f 73 00 4e 45 54 41 50 49 33 32 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +139,7 @@ rule BrowserModifier_Win32_CNNIC_3678_4
         $x_2_6 = "9A578C98-3C2F-4630-890B-FC04196EF420" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -164,6 +169,7 @@ rule BrowserModifier_Win32_CNNIC_3678_5
         $x_2_6 = "SOFTWARE\\CNNIC\\CdnClient\\Update" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 3 of ($x_2_*))) or
             (all of ($x*))
@@ -192,6 +198,7 @@ rule BrowserModifier_Win32_CNNIC_3678_6
         $x_1_6 = "Update completed." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((4 of ($x_3_*))) or
@@ -222,6 +229,7 @@ rule BrowserModifier_Win32_CNNIC_3678_7
         $x_2_7 = "SOFTWARE\\CNNIC\\CdnClient\\Common" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*))) or
             ((1 of ($x_3_*) and 3 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -253,6 +261,7 @@ rule BrowserModifier_Win32_CNNIC_3678_8
         $x_2_7 = "Enable Chinese Domain Name Mailing System" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*))) or
             (all of ($x*))
@@ -283,6 +292,7 @@ rule BrowserModifier_Win32_CNNIC_3678_9
         $x_2_8 = "RelayUpdate" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_3_*) and 1 of ($x_2_*))) or
             ((1 of ($x_5_*) and 3 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -314,6 +324,7 @@ rule BrowserModifier_Win32_CNNIC_3678_10
         $x_3_7 = "System\\CurrentControlSet\\Services\\CnsMinKP" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_3_*))) or
             ((1 of ($x_4_*) and 4 of ($x_3_*))) or
@@ -348,6 +359,7 @@ rule BrowserModifier_Win32_CNNIC_3678_11
         $x_1_11 = "cdndet.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or
             ((4 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -376,6 +388,7 @@ rule BrowserModifier_Win32_CNNIC_3678_12
         $x_2_4 = "CA5F136A67C6B50ABB0BE8FAC9A2B4B3C4F15731A5E63E42CAD3193C7FAE0E167133D2B9E174E5A90D7DA2DC4FA5B2F68921AC5725261C2F45D9C25A63204FBC3631798984A3403D6B64A54A6617AD753EE573AFEEB108A72F340546F32BF41469FE9DD10C87DC5DD0F65FAD95182A01EAA8B563588ED78176362ED014CB18" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -409,6 +422,7 @@ rule BrowserModifier_Win32_CNNIC_3678_13
         $x_4_11 = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\cdn" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 6 of ($x_1_*))) or
             ((4 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -445,6 +459,7 @@ rule BrowserModifier_Win32_CNNIC_3678_14
         $x_3_9 = "SOFTWARE\\Microsoft\\Internet Explorer\\AdvancedOptions\\CDNCLIENT" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -475,6 +490,7 @@ rule BrowserModifier_Win32_CNNIC_3678_15
         $x_4_11 = "window.open(\"http://name.cnnic.cn/cn.dll?charset=utf-8&name=\"+qe);" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 6 of ($x_1_*))) or
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
@@ -508,6 +524,7 @@ rule BrowserModifier_Win32_CNNIC_3678_16
         $x_3_9 = "\\BaseNamedObjects\\7EA4D072-3BF7-4acf-BD21-FAF21EF11090" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_3_*) and 4 of ($x_1_*))) or
@@ -542,6 +559,7 @@ rule BrowserModifier_Win32_CNNIC_3678_17
         $x_3_6 = "\\DosDevices\\CDNTRAN" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -582,6 +600,7 @@ rule BrowserModifier_Win32_CNNIC_3678_18
         $x_4_14 = "Do you reboot now?" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_4_*) and 7 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_4_*) and 6 of ($x_1_*))) or
@@ -631,6 +650,7 @@ rule BrowserModifier_Win32_CNNIC_3678_19
         $x_2_14 = "http://name.cnnic." wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_3_*) and 3 of ($x_2_*))) or
             ((5 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -666,6 +686,7 @@ rule BrowserModifier_Win32_CNNIC_DLL_132376_0
         $x_1_11 = {69 6d 61 6f 65 2e 64 6c 6c 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 4 of ($x_1_*))) or
             (all of ($x*))

@@ -17,6 +17,7 @@ rule VirTool_WinNT_Kelzef_B_2147654492_0
         $x_1_3 = {73 76 63 68 6f 73 74 2e 65 78 65 00 69 65 78 70 6c 6f 72 65 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule VirTool_WinNT_Kelzef_A_2147673420_0
         $x_1_4 = {5c 00 64 00 72 00 69 00 76 00 65 00 72 00 73 00 5c 00 65 00 74 00 63 00 5c 00 68 00 6f 00 73 00 74 00 37 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule VirTool_WinNT_Kelzef_C_2147679413_0
         $x_1_5 = {5f 65 77 64 72 69 76 65 72 00 2d 6c 69 6e 6b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))

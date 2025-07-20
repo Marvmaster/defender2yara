@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Partsiosity_A_2147648690_0
         $x_1_5 = {3f 64 6c 3d 31 00 00 00 66 6e 00 00 63 6c 00 00 63 73 00 00 25 6c 64}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

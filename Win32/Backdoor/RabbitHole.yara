@@ -18,6 +18,7 @@ rule Backdoor_Win32_RabbitHole_A_2147645751_0
         $x_5_4 = "RabbitHole" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

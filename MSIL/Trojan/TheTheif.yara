@@ -18,6 +18,7 @@ rule Trojan_MSIL_TheTheif_CSTY_2147847235_0
         $x_1_3 = "drivEn8.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

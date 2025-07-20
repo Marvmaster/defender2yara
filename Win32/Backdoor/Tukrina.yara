@@ -24,6 +24,7 @@ rule Backdoor_Win32_Tukrina_A_2147724967_0
         $x_1_9 = "InstallRoutineW" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -57,6 +58,7 @@ rule Backdoor_Win32_Tukrina_C_2147744092_0
         $x_1_5 = {68 62 62 db 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -89,6 +91,7 @@ rule Backdoor_Win32_Tukrina_D_2147744093_0
         $x_4_12 = {25 00 32 00 31 00 00 00 25 00 32 00 33 00 00 00 25 00 32 00 34 00 00 00 25 00 32 00 36 00 00 00 25 00 32 00 37 00 00 00 25 00 32 00 38 00 00 00}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_2_*))) or
             ((1 of ($x_4_*) and 3 of ($x_2_*))) or

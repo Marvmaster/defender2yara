@@ -22,6 +22,7 @@ rule Virus_Win32_Bakaver_A_2147605540_0
         $x_1_7 = "SfcIsFileProtected" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*))) or

@@ -23,6 +23,7 @@ rule Trojan_Win32_TrickMailSearcher_A_2147753055_0
         $x_1_8 = "waiting command for module handle %i" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

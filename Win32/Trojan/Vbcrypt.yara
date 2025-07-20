@@ -17,6 +17,7 @@ rule Trojan_Win32_Vbcrypt_EA_2147650909_0
         $x_1_3 = {43 61 72 00 66 69 6c 65 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_Python_Crypy_A_2147717786_0
         $x_1_4 = {76 69 63 74 69 6d 28 03 00 00 00 74 03 00 00 00 64 69 72 74 03 00 00 00 65 78 74 74 05 00 00 00 66 69 6c 65 73 28 00 00 00 00 28 00 00 00 00 73 0d 00 00 00 65 6e 63 72 79 70 74 6f 72 2e 70 79}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Ransom_Python_Crypy_A_2147717786_1
         $x_1_12 = "All your files are encrypted by" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

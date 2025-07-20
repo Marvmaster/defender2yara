@@ -27,6 +27,7 @@ rule Ransom_Win32_Lebanacrypt_A_2147726082_0
         $x_1_13 = "PhysicalDrive4" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 6 of ($x_1_*))) or
             ((3 of ($x_2_*) and 4 of ($x_1_*))) or

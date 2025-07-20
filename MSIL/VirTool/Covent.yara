@@ -26,6 +26,7 @@ rule VirTool_MSIL_Covent_F_2147756745_0
         $x_1_12 = "VXNlci1BZ2VudA==" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (11 of ($x*))
 }
 

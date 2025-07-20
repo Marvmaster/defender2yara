@@ -18,6 +18,7 @@ rule Trojan_Win32_Refpron_2147609344_0
         $x_2_4 = "e_r_r_" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule Trojan_Win32_Refpron_A_2147610838_0
         $x_1_7 = {1c 00 00 00 53 65 74 20 20 20 46 69 6c 65 20 20 20 54 69 6d 65 20 20 20 45 72 72 6f 72 21 21 21 00 00 00 00 ff ff ff ff 23 00 00 00 53 65 74 20 20 20 46 69 6c 65 20 20 20 54 69 6d 65 20 20 20 53 75 63 63 65 73 73 66 75 6c 6c 79 21 21 21 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule Trojan_Win32_Refpron_B_2147612328_0
         $x_1_6 = {00 53 65 74 20 04 00 46 69 6c 65 20 04 00 54 69 6d 65 20 04 00 53 75 63 63 65 73 73 66 75 6c 6c 79 21 21 21 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -100,6 +103,7 @@ rule Trojan_Win32_Refpron_C_2147621627_0
         $x_1_2 = {c1 eb 08 32 [0-64] 66 03 ?? ?? 66 69 c0 6d ce 66 05 bf 58 66}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -136,6 +140,7 @@ rule Trojan_Win32_Refpron_E_2147622758_0
         $x_1_17 = "FInstall.sys" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 5 of ($x_5_*) and 5 of ($x_1_*))) or
             ((1 of ($x_100_*) and 1 of ($x_10_*) and 6 of ($x_5_*))) or
@@ -167,6 +172,7 @@ rule Trojan_Win32_Refpron_F_2147627139_0
         $x_1_4 = {2e 64 6c 6c 00 53 65 72 76 69 63 65 4d 61 69 6e 00 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -189,6 +195,7 @@ rule Trojan_Win32_Refpron_H_2147631421_0
         $x_1_3 = {2e 64 6c 6c 00 53 65 72 76 69 63 65 4d 61 69 6e 00 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -212,6 +219,7 @@ rule Trojan_Win32_Refpron_D_2147634433_0
         $x_1_3 = {0f b7 d6 8d 44 10 ff 50 8b c7 8b d5 32 c2 5a 88 02 0f b7 c6 8b 14 24 0f b6 7c 02 ff 0f b7 c3 03 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

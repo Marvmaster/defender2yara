@@ -19,6 +19,7 @@ rule HackTool_Win32_Lsascan_2147696306_0
         $x_1_5 = {45 6e 61 62 6c 65 44 65 62 75 67 50 72 69 76 69 6c 65 67 65 20 66 61 69 6c 20 21 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Fireox_B_2147607523_0
         $x_1_5 = {33 c0 55 68 74 55 40 00 64 ff 30 64 89 20 6a 00 6a 00 6a 00 6a 01 68 84 55 40 00 e8 b7 f7 ff ff 8b d8 6a 00 68 00 00 00 08 6a 01 8b 45 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

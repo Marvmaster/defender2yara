@@ -19,6 +19,7 @@ rule TrojanSpy_Win32_Nocturnal_A_2147727858_0
         $x_1_4 = "Bitcoin\\wallet.dat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

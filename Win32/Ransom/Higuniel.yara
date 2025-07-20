@@ -41,6 +41,7 @@ rule Ransom_Win32_Higuniel_A_2147725777_0
         $x_32_27 = "After payment we will send you the decryption tool that will decrypt all your files." ascii //weight: 32
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_8_*) and 5 of ($x_4_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or
             ((2 of ($x_8_*) and 6 of ($x_4_*) and 2 of ($x_1_*))) or
@@ -116,6 +117,7 @@ rule Ransom_Win32_Higuniel_B_2147725778_0
         $x_2_6 = "vssadmin.exe Delete Shadows /All /Quiet" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

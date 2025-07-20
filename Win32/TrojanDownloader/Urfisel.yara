@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Urfisel_B_2147629929_0
         $x_1_5 = {81 3e 68 74 74 70 75 03 8d 76 07 81 3e 77 77 77 2e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

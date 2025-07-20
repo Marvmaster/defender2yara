@@ -20,6 +20,7 @@ rule TrojanDropper_Linux_Turla_A_2147849903_0
         $x_1_6 = {49 89 c8 41 0f b6 14 ?? 41 83 e0 03 42 32 14 03 80 ea 65 74 09 83 c0 01 88 14 37 48 63 f0 48 83 c1 01 48 83 f9 40 75 d8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

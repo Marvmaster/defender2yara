@@ -16,6 +16,7 @@ rule Rogue_MacOS_X_FakeMacdef_161701_0
         $x_2_2 = "cd /Applications;unzip %@;rm -rf __MACOSX" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Rogue_MacOS_X_FakeMacdef_161701_1
         $x_2_4 = {8b 7d 08 0f b6 75 10 c6 87 ?? ?? 00 00 00 c7 44 24 08 00 00 80 3e 8b 83 ?? ?? ?? ?? 89 44 24 04 89 3c 24 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (2 of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Rogue_MacOS_X_FakeMacdef_161701_2
         $x_2_4 = {8b 75 08 0f b6 5d 10 (c6 86 ?? ?? 00|c6 46 ??) c7 44 24 08 00 00 80 3e a1 ?? ?? ?? ?? 89 44 24 04 89 34 24 e8}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (2 of ($x*))
 }
 

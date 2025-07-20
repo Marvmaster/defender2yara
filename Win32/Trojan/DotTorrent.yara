@@ -17,6 +17,7 @@ rule Trojan_Win32_DotTorrent_149018_0
         $x_1_3 = {2e 74 6f 72 72 65 6e 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_DotTorrent_149018_1
         $x_1_6 = {49 00 2d 00 51 00 20 00 4d 00 61 00 6e 00 61 00 67 00 65 00 72 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             ((2 of ($x_5_*))) or
@@ -77,6 +79,7 @@ rule Trojan_Win32_DotTorrent_149018_2
         $x_1_12 = {4d 61 6e 61 67 65 72 2e 6c 6e 6b 02 00 41}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 7 of ($x_1_*))) or
             ((2 of ($x_5_*) and 2 of ($x_1_*))) or

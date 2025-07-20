@@ -19,6 +19,7 @@ rule Trojan_DOS_MpTest_A_2147646934_0
         $x_1_5 = "c7c0c8e2-e02b-400d-a380-93b2f78372e6" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

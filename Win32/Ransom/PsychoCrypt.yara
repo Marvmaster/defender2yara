@@ -19,6 +19,7 @@ rule Ransom_Win32_PsychoCrypt_PA_2147806023_0
         $x_1_4 = "Your Data Locked" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

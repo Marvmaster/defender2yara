@@ -17,6 +17,7 @@ rule VirTool_Win32_Cryptdru_2147608450_0
         $x_1_1 = {83 c4 24 6a 01 6a 01 ff 15 ?? ?? ?? ?? 83 e8 63 0f 80 ?? 05 00 00 50 8b 55 dc 52 6a 64 ff 15 ?? ?? ?? ?? 6a 01 ff 15 ?? ?? ?? ?? c7 85 ?? ff ff ff ?? ?? ?? ?? c7 85 ?? ff ff ff 08 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

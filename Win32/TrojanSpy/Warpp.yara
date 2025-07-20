@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Warpp_A_2147691808_0
         $x_1_4 = "Qwerty FAILED to retrieve window list." wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

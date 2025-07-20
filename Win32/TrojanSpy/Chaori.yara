@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Chaori_A_2147656482_0
         $x_1_4 = "D:rBI44TD" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

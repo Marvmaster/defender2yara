@@ -26,6 +26,7 @@ rule Ransom_MSIL_CipherLocker_BSA_2147934015_0
         $x_15_11 = "CipherLocker.TelegramNotifier" ascii //weight: 15
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 1 of ($x_15_*) and 1 of ($x_6_*) and 1 of ($x_4_*) and 4 of ($x_2_*))) or
             ((1 of ($x_50_*) and 1 of ($x_15_*) and 1 of ($x_10_*) and 4 of ($x_2_*))) or

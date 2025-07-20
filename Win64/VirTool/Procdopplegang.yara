@@ -17,6 +17,7 @@ rule VirTool_Win64_Procdopplegang_B_2147911229_0
         $x_1_3 = {48 8b 4c 24 60 4c 8b ce 4c 89 74 24 30 45 33 c0 44 89 74 24 28 33 d2 4c 89 74 24 20 ff ?? ?? ?? ?? ?? 48 8b d8 48 85 c0 ?? ?? ff ?? ?? ?? ?? ?? 8b d0 ?? ?? ?? ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

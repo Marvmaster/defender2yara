@@ -19,6 +19,7 @@ rule Ransom_Win32_Cribit_A_2147685908_0
         $x_1_5 = {42 69 74 43 72 79 70 74 2e 62 6d 70 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or
             ((2 of ($x_5_*))) or

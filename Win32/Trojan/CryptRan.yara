@@ -17,6 +17,7 @@ rule Trojan_Win32_CryptRan_SA_2147743087_0
         $x_1_2 = "csrfcyctctccccs.sie" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

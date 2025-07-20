@@ -17,6 +17,7 @@ rule TrojanClicker_Win32_Zeriest_A_2147637742_0
         $x_1_3 = {54 42 46 49 4c 45 53 00 [0-16] 2e 75 72 31 00 [0-16] 49 45 46 49 4c 45 53 00 [0-16] 2e 69 65 00 [0-16] 5c 49 6e 74 65 72 6e 65 74 20 45 78 70 6c 6f 72 65 72 2e 69 65 00 [0-32] 2e 75 72 31 00 [0-32] 2e 31 6e 6b 00 [0-16] 5c 4d 69 63 72 6f 73 6f 66 74 5c 49 6e 74 65 72 6e 65 74 20 45 78 70 6c 6f 72 65 72 5c 51 75 69 63 6b 20 4c 61 75 6e 63 68 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanClicker_Win32_Zeriest_B_2147655215_0
         $x_1_5 = {2e 00 75 00 72 00 31 00 00 [0-42] 5c 00 50 00 72 00 6f 00 67 00 72 00 61 00 6d 00 20 00 46 00 69 00 6c 00 65 00 73 00 5c 00 33 00 36 00 30 00 5c 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

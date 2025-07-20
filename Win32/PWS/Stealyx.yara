@@ -17,6 +17,7 @@ rule PWS_Win32_Stealyx_A_2147650374_0
         $x_1_3 = "WEVkdmIyZHNaVnhEYUhKdmJXVmNWWE5sY2lCRVlYUmhYRVJsWm1GMWJIUmNWMlZpSUVSaGRHRT0=" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

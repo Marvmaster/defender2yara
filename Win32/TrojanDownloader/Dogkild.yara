@@ -20,6 +20,7 @@ rule TrojanDownloader_Win32_Dogkild_E_2147552812_0
         $x_1_6 = "_uok.bat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule TrojanDownloader_Win32_Dogkild_D_2147623986_0
         $x_1_5 = {e9 01 00 00 00 e8 b8 11 06 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule TrojanDownloader_Win32_Dogkild_A_2147624245_0
         $x_1_3 = {6a 08 8d 45 f0 50 68 14 20 22 00 8b 4d f8 51 ff 15 ?? ?? ?? ?? 89 45 fc eb 07 c7 45 fc ff ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule TrojanDownloader_Win32_Dogkild_K_2147625414_0
         $x_1_4 = {5c 5c 2e 5c 4b 49 4c 4c 50 53 5f 44 72 76 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule TrojanDownloader_Win32_Dogkild_N_2147626543_0
         $x_1_2 = {33 db 53 68 80 00 00 00 6a 03 53 53 68 00 00 00 c0 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 83 f8 ff 89 45 fc 74 23}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule TrojanDownloader_Win32_Dogkild_R_2147628795_0
         $x_1_6 = {8b f0 c1 ee 19 c1 e0 07 0b f0 0f be c1 8a 4a 01 33 c6 42 84 c9 75 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule TrojanDownloader_Win32_Dogkild_S_2147629349_0
         $x_1_2 = {75 00 8d 4c 24 0c 6a 00 51 68 80 20 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +185,7 @@ rule TrojanDownloader_Win32_Dogkild_V_2147630833_0
         $x_1_3 = {e9 03 00 00 00 ef 90 90 03 c1 0f b6 c2 8b d0 0f c0 d4 92 69 d0 ae d0 c5 dd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -205,6 +213,7 @@ rule TrojanDownloader_Win32_Dogkild_W_2147644713_0
         $x_1_5 = {68 74 74 70 3a 2f 2f [0-32] 3a ?? ?? ?? ?? 2f [0-8] 2f 72 6b 32 33 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Ransom_MSIL_Invader_MA_2147888125_0
         $x_1_3 = "7738da72-1133-4acf-a6b2-f3512bae9b2a" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

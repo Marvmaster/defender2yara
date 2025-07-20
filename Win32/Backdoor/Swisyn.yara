@@ -18,6 +18,7 @@ rule Backdoor_Win32_Swisyn_A_2147691819_0
         $x_1_3 = {8b 44 24 08 3d 00 00 00 21 74 ?? 3d 00 00 00 23 75 ?? 6a 00 6a 00 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Backdoor_Win32_Swisyn_B_2147696499_0
         $x_1_7 = {2d 74 72 61 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

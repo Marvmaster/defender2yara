@@ -25,6 +25,7 @@ rule TrojanDownloader_Win32_Riprox_A_2147651740_0
         $x_1_11 = {56 00 49 00 7c 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 

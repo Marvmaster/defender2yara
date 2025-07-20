@@ -16,6 +16,7 @@ rule TrojanDownloader_Win64_Hoogbot_A_2147814688_0
         $x_1_2 = {6a 61 76 61 2d 73 64 6b [0-16] 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

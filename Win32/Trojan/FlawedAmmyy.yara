@@ -16,6 +16,7 @@ rule Trojan_Win32_FlawedAmmyy_C_2147741023_0
         $x_1_2 = "Release\\Loader.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -36,6 +37,7 @@ rule Trojan_Win32_FlawedAmmyy_A_2147741091_0
         $x_1_1 = {8b 45 ec 83 c0 01 89 45 ec 8b 4d ec 3b 4d fc 73 26 8b 55 ec 81 f2 ff 00 00 00 83 c2 2d 89 55 e8 8b 45 ec 0f b6 88 ?? ?? ?? ?? 33 4d e8 8b 55 f0 03 55 ec 88 0a eb c9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win32_FlawedAmmyy_D_2147741494_0
         $x_1_3 = "GQAfQA7AA0ACgANAAoA'))))" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

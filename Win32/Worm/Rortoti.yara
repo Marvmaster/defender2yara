@@ -18,6 +18,7 @@ rule Worm_Win32_Rortoti_A_2147689110_0
         $x_1_4 = "{AA890095FF-5876-FFFF-76TH-77897544FF1CE}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

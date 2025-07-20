@@ -34,6 +34,7 @@ rule Backdoor_Linux_Luabot_A_2147717312_0
         $x_1_20 = "lua_script_runner.lua" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (14 of ($x*))
 }
 

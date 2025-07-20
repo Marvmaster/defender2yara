@@ -16,6 +16,7 @@ rule Worm_Win32_Narilam_A_2147650420_0
         $x_1_2 = {6c 73 73 61 73 2e 65 78 65 00 6d 61 6c 69 72 61 6e 2e 65 78 65}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

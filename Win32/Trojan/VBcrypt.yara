@@ -21,6 +21,7 @@ rule Trojan_Win32_VBcrypt_WSG_2147787697_0
         $x_1_6 = "dkzzioxgu" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Trojan_Win32_VBcrypt_EPQ_2147787777_0
         $x_1_8 = "Saplings" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

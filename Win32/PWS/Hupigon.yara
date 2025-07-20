@@ -21,6 +21,7 @@ rule PWS_Win32_Hupigon_2147489243_0
         $x_1_7 = "ImmGetCompositionStringA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -54,6 +55,7 @@ rule PWS_Win32_Hupigon_AAA_2147595514_0
         $x_100_10 = {61 64 76 61 70 69 33 32 2e 64 6c 6c 00 00 00 00 51 75 65 72 79 53 65 72 76 69 63 65 43 6f 6e 66 69 67 32 41 00 00 00 00 51 75 65 72 79 53 65 72 76 69 63 65 43 6f 6e 66 69 67 32 57 00 00 00 00 43 68 61 6e 67 65 53 65 72 76 69 63 65 43 6f 6e 66 69 67 32 41 00 00 00 43 68 61 6e 67 65 53 65 72 76 69 63 65 43 6f 6e 66 69 67 32}  //weight: 100, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (9 of ($x*))
 }
 
@@ -81,6 +83,7 @@ rule PWS_Win32_Hupigon_ADF_2147596360_0
         $x_1_8 = "goto try" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +110,7 @@ rule PWS_Win32_Hupigon_CA_2147596463_0
         $x_1_7 = "software\\microsoft\\windows\\currentversion\\policies\\winoldapp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 4 of ($x_1_*))) or
             (all of ($x*))
@@ -133,6 +137,7 @@ rule PWS_Win32_Hupigon_CB_2147596920_0
         $x_1_4 = "NoRealMode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -177,6 +182,7 @@ rule PWS_Win32_Hupigon_F_2147609476_0
         $x_1_24 = {08 00 4d 00 41 00 49 00 4e 00 49 00 43 00 4f 00 4e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1000_*) and 4 of ($x_100_*) and 5 of ($x_10_*) and 8 of ($x_1_*))) or
             ((1 of ($x_1000_*) and 4 of ($x_100_*) and 6 of ($x_10_*))) or

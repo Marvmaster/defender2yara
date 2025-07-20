@@ -16,6 +16,7 @@ rule TrojanDropper_MSIL_Dapato_AO_2147839140_0
         $x_2_1 = {72 fb 00 00 70 6f ?? ?? ?? 0a 2c 1a 02 72 fb 00 00 70 28 3d 00 00 0a 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

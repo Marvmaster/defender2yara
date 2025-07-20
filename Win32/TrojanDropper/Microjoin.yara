@@ -15,6 +15,7 @@ rule TrojanDropper_Win32_Microjoin_AC_2147567819_0
         $x_1_1 = {68 f4 01 00 00 90 66 57 66 33 ff 66 5f 55 8b 4b 1c 84 d2 74 4f 90 66 57 66 33 ff 66 5f d0 ea 72 33}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDropper_Win32_Microjoin_B_2147574801_0
         $x_1_4 = {8b 73 68 ff 53 54 eb 13 ff 53 20 eb 0e ff 53 14 eb 09 8b ?? ?? 58 5a 50 52 ff d1 80 7d 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -63,6 +65,7 @@ rule TrojanDropper_Win32_Microjoin_M_2147602730_0
         $x_2_2 = {c6 85 00 04 00 00 00 be dd cc bb aa 68 dd cc bb aa 51 ff 53 24 89 43 60 83 ee 04 8b 0e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))
@@ -87,6 +90,7 @@ rule TrojanDropper_Win32_Microjoin_D_2147627357_0
         $x_1_1 = {68 f4 01 00 00 90 [0-4] 55 8b 4b 1c 84 d2 74 ?? [0-4] d0 ea 72 ?? [0-4] d0 ea 72 ?? [0-4] d0 ea 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule TrojanDropper_Win32_Microjoin_E_2147642799_0
         $x_4_2 = {a3 f4 13 40 00 8b 0e 8a c0 8a c0 a1 fc 13 40 00 c0 4c 01 ff 04 e2 f9}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule TrojanDropper_Win32_Microjoin_C_2147803979_0
         $x_1_2 = {b0 5c f2 ae 51 c6 47 ff 00 6a 00 ?? ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

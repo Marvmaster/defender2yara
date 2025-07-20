@@ -41,6 +41,7 @@ rule Trojan_Win32_Adclicker_AH_2147596376_0
         $x_1_27 = {83 c4 f8 c7 04 24 3c 00 00 00 bb 78 15 42 00 8b 35 c4 16 42 00 8b 3d b8 16 42 00 8b 2d 44 17 42 00 a1 d0 16 42 00 89 44 24 04 83 3b 00 74 1e 55 8b 44 24 08 50 8b cf 8b d6 8b 03 e8 50 fe ff ff a1 1c 17 42 00 c7 00 3c 00 00 00 eb 1e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +68,7 @@ rule Trojan_Win32_Adclicker_AI_2147596611_0
         $x_1_7 = "BhoNew.DLL" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +112,7 @@ rule Trojan_Win32_Adclicker_AK_2147596741_0
         $x_1_24 = "searchscout.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_100_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -145,6 +148,7 @@ rule Trojan_Win32_Adclicker_AL_2147596935_0
         $x_1_13 = "HTML Exploits Prevent" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -196,6 +200,7 @@ rule Trojan_Win32_Adclicker_AJ_2147596938_0
         $x_1_32 = "castlecops.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 25 of ($x_1_*))) or
             ((1 of ($x_50_*) and 1 of ($x_10_*) and 15 of ($x_1_*))) or
@@ -239,6 +244,7 @@ rule Trojan_Win32_Adclicker_AN_2147597963_0
         $x_1_19 = "esnaper.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_20_*) and 5 of ($x_1_*))) or
             (all of ($x*))
@@ -269,6 +275,7 @@ rule Trojan_Win32_Adclicker_AO_2147598340_0
         $x_2_8 = {5b 6b 65 79 77 6f 72 64 5d 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 5 of ($x_1_*))) or
             ((1 of ($x_4_*) and 2 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -299,6 +306,7 @@ rule Trojan_Win32_Adclicker_AQ_2147601004_0
         $x_2_7 = "No settings dir" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 5 of ($x_2_*))) or
             ((2 of ($x_5_*) and 2 of ($x_2_*))) or
@@ -327,6 +335,7 @@ rule Trojan_Win32_Adclicker_AR_2147603092_0
         $x_1_5 = {8b c8 49 ba 01 00 00 00 a1 ?? ?? ?? ?? e8 ?? ?? ff ff 8b 55 e8 b8 ?? ?? ?? ?? b9 ?? ?? ?? ?? e8 ?? ?? ff ff eb 0f b8 ?? ?? ?? ?? ba ?? ?? ?? ?? e8 ?? ?? ff ff b8 ?? ?? ?? ?? ba ?? ?? ?? ?? e8 ?? ?? ff ff 8d 45 e4 e8 ?? ?? ff ff 8b 55 e4 b8 ?? ?? ?? ?? b9 ?? ?? ?? ?? e8 ?? ?? ff ff e8 ?? ?? ff ff e8 ?? ?? ff ff 6a 00 b9 ?? ?? ?? ?? b2 01 a1 ?? ?? ?? ?? e8 ?? ?? ff ff 68 10 27 00 00 e8 ?? ?? ff ff e8 ?? ?? ff ff b8 02 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -351,6 +360,7 @@ rule Trojan_Win32_Adclicker_AS_2147603405_0
         $x_1_5 = {6a 01 58 89 83 ?? ?? ?? ?? 8b d8 e9 1b 01 00 00 8d 83 ?? ?? ?? ?? 50 8d 85 e0 fd ff ff 50 e8 ?? ?? ?? ?? 8d 85 e0 fe ff ff 50 8d 85 e0 fd ff ff 50 e8 ?? ?? ?? ?? 83 c4 10 8b cb 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 50 8d 85 e0 fe ff ff 50 e8 ?? ?? ?? ?? 59 59 68 ?? ?? ?? ?? 8b cb e8 ?? ?? ?? ?? 50 8d 85 e0 fd ff ff 50 e8 ?? ?? ?? ?? 59 8d 83 ?? ?? ?? ?? 59 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -375,6 +385,7 @@ rule Trojan_Win32_Adclicker_AU_2147603586_0
         $x_1_5 = {33 c0 50 50 6a 03 50 6a 03 68 00 00 00 40 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? a3 ?? ?? ?? ?? c3 a1 ?? ?? ?? ?? 83 f8 ff 56 8b 35 ?? ?? ?? ?? 74 08 83 f8 fe 74 03 50 ff d6 a1 ?? ?? ?? ?? 83 f8 ff 74 08 83 f8 fe 74 03 50 ff d6 5e c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -403,6 +414,7 @@ rule Trojan_Win32_Adclicker_KR_2147605412_0
         $x_1_9 = "{C9564986-6FCD-4A88-A3FE-BB9BE9C0F166}" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -450,6 +462,7 @@ rule Trojan_Win32_Adclicker_A_2147609043_0
         $x_3_25 = "Referer: http://www.netxboy.com" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 3 of ($x_3_*) and 13 of ($x_1_*))) or
             ((2 of ($x_4_*) and 4 of ($x_3_*) and 10 of ($x_1_*))) or
@@ -545,6 +558,7 @@ rule Trojan_Win32_Adclicker_H_2147617072_0
         $x_1_7 = "report.php?type=click&taskid=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -572,6 +586,7 @@ rule Trojan_Win32_Adclicker_N_2147620394_0
         $x_1_5 = "NdrDllCanUnloadNow" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -594,6 +609,7 @@ rule Trojan_Win32_Adclicker_O_2147625934_0
         $x_1_3 = {56 87 1b 2e 00 00 00 00 ff ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -621,6 +637,7 @@ rule Trojan_Win32_Adclicker_KX_2147631751_0
         $x_1_7 = "zeroauction.co.kr/promotion_new/intro.asp?me_code=M226001" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -656,6 +673,7 @@ rule Trojan_Win32_Adclicker_BB_2147638308_0
         $x_10_16 = "http://playboy.com/search?SearchString=*" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_10_*) and 2 of ($x_5_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
             ((11 of ($x_10_*) and 1 of ($x_3_*) and 1 of ($x_2_*))) or
@@ -689,6 +707,7 @@ rule Trojan_Win32_Adclicker_11044_0
         $x_1_8 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -714,6 +733,7 @@ rule Trojan_Win32_Adclicker_11044_1
         $x_1_6 = "DllRegisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -754,6 +774,7 @@ rule Trojan_Win32_Adclicker_11044_2
         $x_5_21 = "Referer: http://www.netxboy.com/" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((11 of ($x_2_*))) or
             ((1 of ($x_4_*) and 9 of ($x_2_*))) or
@@ -812,6 +833,7 @@ rule Trojan_Win32_Adclicker_11044_3
         $x_2_25 = "/bdun.bsc?tn=" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

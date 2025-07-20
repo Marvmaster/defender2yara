@@ -16,6 +16,7 @@ rule Trojan_MSIL_Darkcloud_AAIZ_2147852445_0
         $x_5_1 = {06 07 06 8e 69 5d 06 07 06 8e 69 5d 91 09 07 1f 16 5d 6f ?? 00 00 0a 61 06 07 17 58 06 8e 69 5d 91 20 00 01 00 00 58 20 00 01 00 00 5d 59 d2 9c 07 15 58 0b 07 16 fe 04 16 fe 01 13 06 11 06 2d bf}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_MSIL_Darkcloud_AAKW_2147853236_0
         $x_1_3 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_MSIL_Darkcloud_AALE_2147888090_0
         $x_5_1 = {11 05 8e 69 17 da 13 0f 16 13 10 2b 25 11 06 11 10 17 8d ?? 00 00 01 25 16 11 05 11 10 9a 1f 10 28 ?? 00 00 0a 9c 6f ?? 00 00 0a 00 11 10 17 d6 13 10 11 10 11 0f 31 d5}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_MSIL_Darkcloud_AANT_2147889400_0
         $x_1_4 = "$$$A$ms$iSc$a$nBu$f$fer$$$" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_MSIL_Darkcloud_AAPC_2147891203_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_MSIL_Darkcloud_AAZA_2147898684_0
         $x_1_5 = "aR3nbf8dQp2feLmk31.lSfgApatkdxsVcGcrktoFd.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +159,7 @@ rule Trojan_MSIL_Darkcloud_AAJA_2147931092_0
         $x_2_2 = {01 25 16 0f 00 20 4a 01 00 00 20 3d 01 00 00 28 ?? 00 00 06 9c 25 17 0f 00 20 8c 03 00 00 20 f4 03 00 00 28 ?? 00 00 06 9c 25 18 0f 00 28 ?? 00 00 0a 9c 0a 17 0c 2b 8f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

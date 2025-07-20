@@ -22,6 +22,7 @@ rule VirTool_Win32_Empire_B_2147779284_0
         $x_1_8 = "%{$J=($J+$S[$_]+$K[$_%$K.Count])%256" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (7 of ($x*))
 }
 
@@ -51,6 +52,7 @@ rule VirTool_Win32_Empire_A_2147815730_0
         $x_1_10 = " -PacketData $TaskData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -82,6 +84,7 @@ rule VirTool_Win32_Empire_A_2147815730_1
         $x_1_12 = "-join[Char[]](& $R $data ($IV+$K))|IEX" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (11 of ($x*))
 }
 
@@ -114,6 +117,7 @@ rule VirTool_Win32_Empire_A_2147815730_2
         $x_1_13 = {2e 55 70 6c 6f 61 64 44 61 74 61 28 24 [0-16] 2b 22 2f [0-64] 2e 70 68 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

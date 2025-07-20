@@ -27,6 +27,7 @@ rule Trojan_MSIL_ZarazaStelaer_CTP_2147843454_0
         $x_1_12 = "encrypted_key\":\"(.*?)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -25,6 +25,7 @@ rule BrowserModifier_Win32_MegaSearch_15989_0
         $x_1_11 = "WritePrivateProfileStringA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_20_*) and 1 of ($x_5_*) and 1 of ($x_2_*) and 7 of ($x_1_*))) or
             ((1 of ($x_20_*) and 2 of ($x_5_*) and 4 of ($x_1_*))) or
@@ -58,6 +59,7 @@ rule BrowserModifier_Win32_MegaSearch_15989_1
         $x_1_9 = "SearchAssistant" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_5_*) and 4 of ($x_1_*))) or
             (all of ($x*))

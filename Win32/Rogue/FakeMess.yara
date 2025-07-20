@@ -20,6 +20,7 @@ rule Rogue_Win32_FakeMess_149554_0
         $x_1_6 = {2f 73 65 63 75 72 69 74 79 5f 65 73 73 65 6e 74 69 61 6c 73 2f 3f 6d 6b 74 3d 72 75 2d 72 75 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

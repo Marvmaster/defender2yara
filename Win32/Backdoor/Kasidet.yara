@@ -20,6 +20,7 @@ rule Backdoor_Win32_Kasidet_C_2147694397_0
         $x_1_6 = {69 f6 60 ea 00 00 85 f6 7f ?? be 60 ea 00 00 eb ?? 81 fe 80 ee 36 00 7e ?? be 80 ee 36 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

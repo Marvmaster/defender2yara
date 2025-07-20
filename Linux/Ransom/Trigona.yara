@@ -21,6 +21,7 @@ rule Ransom_Linux_Trigona_A_2147888249_0
         $x_1_6 = "File in ESXi excluded list" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Linux_Trigona_B_2147888255_0
         $x_1_5 = "ENCRYPTORERASEFILEBYPATH" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Ransom_Linux_Trigona_C_2147902294_0
         $x_1_3 = "Successfully encrypted files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -92,6 +95,7 @@ rule Ransom_Linux_Trigona_D_2147907306_0
         $x_1_3 = "File already encrypted or renamed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

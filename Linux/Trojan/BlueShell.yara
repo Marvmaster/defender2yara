@@ -23,6 +23,7 @@ rule Trojan_Linux_BlueShell_K_2147906329_0
         $x_1_8 = "/home/User/Desktop/client/main.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_10_*) and 1 of ($x_1_*))) or
             ((3 of ($x_10_*))) or

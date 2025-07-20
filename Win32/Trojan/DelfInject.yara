@@ -18,6 +18,7 @@ rule Trojan_Win32_DelfInject_A_2147640164_0
         $x_1_4 = "205.251.140.178" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -43,6 +44,7 @@ rule Trojan_Win32_DelfInject_BS_2147749292_0
         $x_1_2 = {8a 00 88 45 ?? 8b 45 ?? 89 45 ?? 8a 45 ?? 30 45 f7 8b 45 ?? 8a 55 f7 88 10 8b e5 5d c3 06 00 89 45 ?? 8b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_Win32_DelfInject_B_2147755888_0
         $x_1_1 = {83 f9 00 74 11 83 7d fc 04 75 0b c7 45 fc 00 00 00 00 80 34 01 ?? ff 45 fc 41 89 d3 39 d9 90 90 75 de}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_Win32_DelfInject_RR_2147779781_0
         $x_1_2 = {31 d1 89 c8 6a 00 6a 01 a1 [0-5] 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -108,6 +112,7 @@ rule Trojan_Win32_DelfInject_RV_2147779950_0
         $x_2_2 = {89 07 8b 03 8b 17 89 10 83 03 04 8b 03 83 38 00 75 a2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -131,6 +136,7 @@ rule Trojan_Win32_DelfInject_DD_2147780840_0
         $x_1_3 = {a0 a0 9d 45 00 88 83 62 01 00 00 c6 83 63 01 00 00 02 c6 83 64 01 00 00 01 c7 83 68 01 00 00 01 00 00 00 c6 83 50 01 00 00 01 33 c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -160,6 +166,7 @@ rule Trojan_Win32_DelfInject_AF_2147781682_0
         $x_3_9 = "Swarms5" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -182,6 +189,7 @@ rule Trojan_Win32_DelfInject_RF_2147783936_0
         $x_1_2 = {83 c0 02 a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 50 8b 06 50 e8 ?? ?? ?? ?? 89 07 8b 03 8b 17 89 10 83 03 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -204,6 +212,7 @@ rule Trojan_Win32_DelfInject_RF_2147783936_1
         $x_1_2 = {f6 c4 f0 74 ?? 8b 5d ?? 8b 5b ?? 8b 75 ?? 8b 76 ?? 03 1e 66 25 ff 0f 0f b7 c0 03 d8 8b 45 ?? 8b 40 ?? 01 03 83 01 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -225,6 +234,7 @@ rule Trojan_Win32_DelfInject_RT_2147787195_0
         $x_1_1 = {66 8b 08 f6 c5 f0 74 ?? 8b 45 ?? 8b 00 03 05 ?? ?? ?? ?? 66 81 e1 ff 0f 0f b7 c9 03 c1 8b 0d ?? ?? ?? ?? 01 08 83 45 ?? 02 4a 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -246,6 +256,7 @@ rule Trojan_Win32_DelfInject_RT_2147787195_1
         $x_1_1 = {8b d7 2b 50 ?? 8b 45 ?? 8b 00 03 c7 8b 4d ?? 66 8b 09 66 81 e1 ff 0f 0f b7 c9 03 c1 01 10 8b 45 ?? 83 c0 02 89 45 ?? 4b 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -267,6 +278,7 @@ rule Trojan_Win32_DelfInject_RT_2147787195_2
         $x_1_1 = {f6 c4 f9 74 ?? 8b 4d ?? 8b 49 ?? 8b 75 ?? 8b 76 ?? 03 0e 66 25 ff 0f 0f b7 c0 03 c8 8b 45 ?? 8b 40 ?? 01 01 83 03 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -289,6 +301,7 @@ rule Trojan_Win32_DelfInject_RT_2147787195_3
         $x_1_2 = {8b 06 83 c0 04 89 ?? 8b ?? 8b ?? 85 ?? 75 ?? a1 ?? ?? ?? ?? 83 c0 14 a3 ?? ?? ?? ?? a1}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -311,6 +324,7 @@ rule Trojan_Win32_DelfInject_RT_2147787195_4
         $x_1_2 = {f6 c4 f0 74 ?? 8b 5d ?? 8b 5b ?? 8b 75 ?? 8b 76 ?? 03 1e 66 25 ff 0f 0f b7 c0 03 d8 8b 45 ?? 8b 40 ?? 01 03 83 01 02 4a 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -333,6 +347,7 @@ rule Trojan_Win32_DelfInject_RT_2147787195_5
         $x_1_2 = {0f b7 03 c1 e8 0c 83 f8 03 75 ?? 8b 45 ?? 8b d6 2b 50 ?? 8b 45 ?? 8b 00 03 c6 0f b7 0b 66 81 e1 ff 0f 0f b7 c9 03 c1 01 10 83 c3 02 4f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -355,6 +370,7 @@ rule Trojan_Win32_DelfInject_RT_2147787195_6
         $x_1_2 = {66 f7 c6 00 f9 74 ?? 8b 45 ?? 8b 40 ?? 8b 4d ?? 8b 49 ?? 03 01 66 81 e6 ff 0f 0f b7 ce 03 c1 8b 4d ?? 8b 49 ?? 01 08 83 03 02 4a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -376,6 +392,7 @@ rule Trojan_Win32_DelfInject_ME_2147788933_0
         $x_1_1 = {ff 0b 00 00 00 d2 e1 f6 ed ef ee e4 ae}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -398,6 +415,7 @@ rule Trojan_Win32_DelfInject_AG_2147798208_0
         $x_1_2 = {a1 60 ca 8d 00 89 43 08 56 ff 74 24 04 68 00 50 00 00 53 ff d7 a1 7c ca 8d 00 01 d8 03 43 0c 03 1d 7c ca 8d 00 53 ff d0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -424,6 +442,7 @@ rule Trojan_Win32_DelfInject_AG_2147798208_1
         $x_3_6 = "LoadKeyboardLayoutA" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -450,6 +469,7 @@ rule Trojan_Win32_DelfInject_AG_2147798208_2
         $x_3_6 = "WinHttpCrackUrl" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -471,6 +491,7 @@ rule Trojan_Win32_DelfInject_AE_2147798447_0
         $x_1_1 = {8b 45 e0 8b 00 89 45 d4 8b 45 e0 83 c0 04 89 45 e0 8b 45 d8 89 45 dc 8b 45 dc 83 e8 04 89 45 dc 33 c0 89 45 bc 33 c0 89 45 b8 c7 45 cc 6e c3 01 00 33 c0 89 45 c4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -498,6 +519,7 @@ rule Trojan_Win32_DelfInject_DF_2147798520_0
         $x_3_7 = {42 00 42 00 41 00 42 00 4f 00 52 00 54 00 05 00 42 00 42 00 41 00 4c 00 4c}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -525,6 +547,7 @@ rule Trojan_Win32_DelfInject_AQ_2147798739_0
         $x_3_7 = "\\Configuration.ini" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -552,6 +575,7 @@ rule Trojan_Win32_DelfInject_AM_2147798740_0
         $x_3_7 = "ActivateKeyboardLayout" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -579,6 +603,7 @@ rule Trojan_Win32_DelfInject_QW_2147799574_0
         $x_3_7 = "vvvjjjcccaaaaaabbbbbbaaaaaaeeennn" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -606,6 +631,7 @@ rule Trojan_Win32_DelfInject_QE_2147805525_0
         $x_3_7 = "TrackMouseEvent" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -629,6 +655,7 @@ rule Trojan_Win32_DelfInject_QR_2147805526_0
         $x_3_3 = "RTLConsts" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -652,6 +679,7 @@ rule Trojan_Win32_DelfInject_QG_2147805527_0
         $x_3_3 = "synacode" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -679,6 +707,7 @@ rule Trojan_Win32_DelfInject_QA_2147806301_0
         $x_3_7 = "CeaEusYNbrJ" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -706,6 +735,7 @@ rule Trojan_Win32_DelfInject_C_2147814998_0
         $x_3_7 = "SizeofResource" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -733,6 +763,7 @@ rule Trojan_Win32_DelfInject_CA_2147814999_0
         $x_3_7 = "UniversalPass" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -759,6 +790,7 @@ rule Trojan_Win32_DelfInject_CB_2147815091_0
         $x_3_6 = "*.crswrd|*.crswrd" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -786,6 +818,7 @@ rule Trojan_Win32_DelfInject_CB_2147815091_1
         $x_3_7 = "TaskbarCreated" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -813,6 +846,7 @@ rule Trojan_Win32_DelfInject_MA_2147815843_0
         $x_1_7 = "GetKeyState" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -834,6 +868,7 @@ rule Trojan_Win32_DelfInject_RRR_2147816197_0
         $x_1_1 = {69 c0 47 02 00 00 a9 1c 00 00 00 0f af cb 6a 04 68 00 10 00 00 a1 ?? ?? ?? ?? 50 8b 06 8d 04 80 8b 15 ?? ?? ?? ?? 8b 44 c2 ?? 03 05 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? a3 ?? ?? ?? ?? 69 c0 47 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -858,6 +893,7 @@ rule Trojan_Win32_DelfInject_DA_2147819302_0
         $x_1_4 = "DllUnregisterServer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -883,6 +919,7 @@ rule Trojan_Win32_DelfInject_RPU_2147819775_0
         $x_1_1 = {8b 45 08 8b 40 fc 8b 40 04 83 e8 08 d1 e8 8b 55 08 89 42 f0 8b 45 08 8b 40 fc 83 c0 08 89 01 8b 45 08 8b 50 f0 4a 85 d2 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -904,6 +941,7 @@ rule Trojan_Win32_DelfInject_DB_2147834826_0
         $x_1_1 = {8b 45 e8 8b 55 ec 01 02 8b 45 b8 03 45 e8 89 45 b4 [0-15] 8b 55 d8 03 55 b4 03 c2 8b 55 ec 31 02 [0-15] 8b 55 e8 83 c2 04 03 c2 89 45 e8 8b 45 ec 83 c0 04 89 45 ec 8b 45 e8 3b 45 e4 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -928,6 +966,7 @@ rule Trojan_Win32_DelfInject_SSP_2147835405_0
         $x_1_4 = "$8cb56e64-8836-4230-ba31-61ae1b39d16c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*))) or
             (all of ($x*))
@@ -954,6 +993,7 @@ rule Trojan_Win32_DelfInject_MBFE_2147850100_0
         $x_1_3 = {6f 7a 69 6f 00 63 6d 00 00 46 69 65 73 74 61 73 00 00 00 00 f4 01 00 00 b0 54 40 00 00 00 00 00 c0 be 44 00 d0 be 44 00 2c 5e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -975,6 +1015,7 @@ rule Trojan_Win32_DelfInject_AY_2147896933_0
         $x_1_1 = {8a 04 33 32 c4 32 07 88 07 47 4b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -997,6 +1038,7 @@ rule Trojan_Win32_DelfInject_AZ_2147896984_0
         $x_1_2 = {32 07 88 07 47 4b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1019,6 +1061,7 @@ rule Trojan_Win32_DelfInject_AX_2147897099_0
         $x_1_2 = {32 07 88 07 47 4b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1040,6 +1083,7 @@ rule Trojan_Win32_DelfInject_AA_2147898556_0
         $x_1_1 = {8b 45 fc 8b 00 89 85 b4 fe ff ff 8b 85 cc fe ff ff 8b 04 85 6c 26 5f 00 89 85 b8 fe ff ff b8 d8 a5 59 00 89 85 bc fe ff ff 8b 85 cc fe ff ff 8b 04 85 6c 36 5f 00 31 d2 89 85 a8 fe ff ff 89 95 ac fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1061,6 +1105,7 @@ rule Trojan_Win32_DelfInject_AB_2147900133_0
         $x_2_1 = {8b 45 d4 31 18 83 45 ec 04 83 45 d4 04 8b 45 ec}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1083,6 +1128,7 @@ rule Trojan_Win32_DelfInject_ADE_2147928516_0
         $x_1_2 = {88 c3 32 1e c1 e8 08 46 33 04 9d 40 54 41 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

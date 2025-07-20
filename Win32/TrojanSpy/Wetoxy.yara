@@ -18,6 +18,7 @@ rule TrojanSpy_Win32_Wetoxy_A_2147655330_0
         $x_1_4 = {55 c6 44 24 ?? 73 c6 44 24 ?? 72 c6 44 24 ?? 33 c6 44 24 ?? 32 c6 44 24 ?? 2e c6 44 24 ?? 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanSpy_Win32_Wetoxy_B_2147655331_0
         $x_1_3 = {5b 57 69 6e 64 6f 77 73 20 32 30 30 30 2f 58 50 3a 20 58 31 20 6d 6f 75 73 65 20 62 75 74 74 6f 6e 5d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

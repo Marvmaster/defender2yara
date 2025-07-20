@@ -22,6 +22,7 @@ rule PWS_Win32_Perfwef_A_2147599185_0
         $x_5_7 = {8a 13 80 f2 ?? 88 54 38 ff 47 43 4e 75 ea}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_5_*) and 3 of ($x_1_*))) or
             ((2 of ($x_5_*) and 1 of ($x_2_*) and 1 of ($x_1_*))) or

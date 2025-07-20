@@ -24,6 +24,7 @@ rule Backdoor_Win32_Tenpeq_A_2147614200_0
         $x_5_9 = {00 52 55 73 65 72 32 30 30 39 00}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_4_*) and 2 of ($x_3_*) and 2 of ($x_2_*))) or
             ((1 of ($x_5_*) and 2 of ($x_4_*) and 1 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -71,6 +72,7 @@ rule Backdoor_Win32_Tenpeq_D_2147693092_0
         $x_1_7 = {68 01 03 00 80 6a 00 ff 75 f8 68 01 00 00 00 bb 0c 09 00 00 e8 ?? ?? ?? ?? 83 c4 10 89 45 ?? 8b 45 ?? 50 8b 1d ?? ?? ?? ?? 85 db 74 09 53 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 

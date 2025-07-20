@@ -17,6 +17,7 @@ rule Trojan_Win64_ASMHalosGate_PC_2147853385_0
         $x_1_2 = "bcookesHalosGate.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

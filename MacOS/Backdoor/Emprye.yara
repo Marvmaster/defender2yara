@@ -18,6 +18,7 @@ rule Backdoor_MacOS_Emprye_C_2147751601_0
         $x_2_3 = "_activateStager" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((2 of ($x_2_*))) or
             (all of ($x*))

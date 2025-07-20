@@ -20,6 +20,7 @@ rule Trojan_Linux_SutersuRootKit_B_2147795717_0
         $x_1_5 = {2f 72 6f 6f 74 2f 44 65 76 65 6c 2f 50 72 6f 6a 65 63 74 73 2f 72 6f 6f 74 6b 69 74 2f 33 72 64 70 61 72 74 79 2f 70 6f 63 6f 2d [0-16] 2d 61 6c 6c 2f 46 6f 75 6e 64 61 74 69 6f 6e 2f 69 6e 63 6c 75 64 65 2f 50 6f 63 6f 2f [0-24] 2e 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -47,6 +48,7 @@ rule Trojan_Linux_SutersuRootKit_A_2147795718_0
         $x_1_7 = "/suterusu.mod.c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

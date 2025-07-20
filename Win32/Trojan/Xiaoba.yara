@@ -20,6 +20,7 @@ rule Trojan_Win32_Xiaoba_A_2147726888_0
         $x_1_5 = {6a 07 50 6a 00 ff 15 ?? ?? ?? ?? 8b 8c 24 ?? ?? ?? ?? 8d 54 24 ?? 51 52 8d 44 24 ?? 68 ?? ?? ?? ?? 50 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule Trojan_Win32_Xiaoba_GPA_2147900381_0
         $x_4_2 = {eb d3 c3 4d 44 35 b2 e9 bf b4 c6 f7 20 b2 e9 bf b4 cf c2 b3 cc d0 f2 4d 44 35 d3 d0 c4 be d3 d0 b8 c4 b1 e4 00 4d 44 35 a3 ba 00 35 44 4d}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

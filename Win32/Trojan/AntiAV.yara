@@ -17,6 +17,7 @@ rule Trojan_Win32_AntiAV_MR_2147753401_0
         $x_1_2 = {5f 5e 89 68 ?? 5d 89 18 5b 33 cc e8 ?? ?? ?? ?? 81 c4 ?? ?? ?? ?? c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_AntiAV_MS_2147753402_0
         $x_1_2 = {5f 5e 5d 89 ?? ?? ?? 33 cc e8 ?? ?? ?? ?? 81 c4 ?? ?? ?? ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_AntiAV_CA_2147812623_0
         $x_1_4 = "IsDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +94,7 @@ rule Trojan_Win32_AntiAV_BT_2147831373_0
         $x_1_8 = "[enter]" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -115,6 +119,7 @@ rule Trojan_Win32_AntiAV_SP_2147848125_0
         $x_1_4 = "amdk8.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -137,6 +142,7 @@ rule Trojan_Win32_AntiAV_GNO_2147851492_0
         $x_10_2 = {c6 45 f8 6b c6 45 f9 69 c6 45 fa 6c c6 45 fb 6c c6 45 fc 68 c6 45 fd 79}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -158,6 +164,7 @@ rule Trojan_Win32_AntiAV_EAG_2147930127_0
         $x_5_1 = {33 d7 33 d6 c7 05 ?? ?? ?? ?? ff ff ff ff 2b da 8b 44 24 28 29 44 24 10 83 6c 24 14 01}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -179,6 +186,7 @@ rule Trojan_Win32_AntiAV_EAUH_2147932053_0
         $x_5_1 = {33 c2 89 84 24 d0 02 00 00 89 2d ?? ?? ?? ?? 8b 84 24 d0 02 00 00 29 44 24 18 81 3d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

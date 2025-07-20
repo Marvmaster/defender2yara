@@ -20,6 +20,7 @@ rule Ransom_MSIL_DukescamLock_A_2147716862_0
         $x_1_6 = "Your Windows Licence has Expired , Please get a new one by calling on +1-888" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

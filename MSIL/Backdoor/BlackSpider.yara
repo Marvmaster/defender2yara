@@ -22,6 +22,7 @@ rule Backdoor_MSIL_BlackSpider_G_2147742429_0
         $x_1_7 = "ip-api.com/json/" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

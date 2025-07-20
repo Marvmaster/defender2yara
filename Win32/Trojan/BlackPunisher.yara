@@ -19,6 +19,7 @@ rule Trojan_Win32_BlackPunisher_YAA_2147922428_0
         $x_1_4 = ".doc.docx.xls.xlsx.ppt.pptx.pst.ost.msg.eml.vsd.vsdx.txt.csv.rtf.123.wks.wk1.pdf." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

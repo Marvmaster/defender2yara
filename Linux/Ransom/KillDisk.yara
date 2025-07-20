@@ -19,6 +19,7 @@ rule Ransom_Linux_KillDisk_A_2147772495_0
         $x_1_4 = {49 63 c7 48 c1 e0 03 48 89 f9 48 01 c8 48 8b 00 4c 31 e0 49 89 c6 49 63 c7 48 83 c0 01 48 c1 e0 03 48 01 c8 48 8b 00 4c 31 e0 48 89 c3 48 89 da 48 c1 ea 04 48 89 d8 48 c1 e0 1c 48 8d 1c 02 48 89 d8 83 e0 3f 48 83 c0 40 8b 14 85 60 36 40 00 48 89 d8 48 c1 e8 08 83 e0 3f 48 05 c0 00 00 00 8b 04 85 60 36 40 00 09 c2 48 89 d8 48 c1 e8 10 83 e0 3f 48 05 40 01 00 00 8b 04 85 60 36 40 00 09 c2 48 89 d8 48 c1 e8 18 83 e0 3f 48 05 c0 01 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

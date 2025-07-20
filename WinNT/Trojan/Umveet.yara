@@ -16,6 +16,7 @@ rule Trojan_WinNT_Umveet_A_2147629520_0
         $x_1_1 = {88 08 7c e0 68 9d 8f a0 c3 56 07 00 47 81 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

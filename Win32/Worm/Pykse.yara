@@ -27,6 +27,7 @@ rule Worm_Win32_Pykse_A_2147594105_0
         $x_1_13 = "game.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -55,6 +56,7 @@ rule Worm_Win32_Pykse_B_2147596292_0
         $x_3_9 = "MESSAGE %s %s" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_2_*) and 5 of ($x_1_*))) or
             ((2 of ($x_3_*) and 1 of ($x_2_*) and 4 of ($x_1_*))) or

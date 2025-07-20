@@ -16,6 +16,7 @@ rule Trojan_Win32_Coroxy_MR_2147771335_0
         $x_1_1 = {8b 4c 24 0c 30 [0-2] 81 fb [0-4] 47 3b fb 81 fb [0-4] e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_Coroxy_SIB_2147805593_0
         $x_1_3 = {33 db 8b 75 0c 36 8a 94 29 ?? ?? ?? ?? 02 04 3b 02 c2 36 8a b4 28 01 36 88 b4 29 01 36 88 94 28 01 fe c1 fe c3 4e 74 ?? 36 8a 94 29 01 02 04 3b 02 c2 36 8a b4 28 01 36 88 b4 29 01 36 88 94 28 01 fe c1 75 ?? 8b 7d 14 8b 75 10 85 ff 74 ?? 33 c0 33 d2 33 c9 33 db fe c3 36 8a 94 2b 01 02 c2 36 8a 8c 28 01 36 88 8c 2b 01 36 88 94 28 01 02 ca 36 8a 8c 29 01 30 0e 46 4f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -60,6 +62,7 @@ rule Trojan_Win32_Coroxy_DA_2147835692_0
         $x_1_1 = {03 d8 8b 45 d8 89 18 8b 45 cc 03 45 ac 2d ?? ?? ?? ?? 03 45 e8 8b 55 d8 31 02 83 45 e8 04 83 45 d8 04 8b 45 e8 3b 45 d4 0f 82}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -81,6 +84,7 @@ rule Trojan_Win32_Coroxy_DA_2147835692_1
         $x_1_1 = {8b 45 e8 8b 55 ec 01 02 8b 45 d8 03 45 b0 03 45 e8 89 45 b4 ?? ?? ?? ?? ?? ?? ?? 8b d8 03 5d b4 ?? ?? ?? ?? ?? ?? ?? 2b d8 8b 45 ec 31 18 ?? ?? ?? ?? ?? ?? ?? 8b 55 e8 83 c2 04 03 c2 89 45 e8 ?? ?? ?? ?? ?? ?? ?? 83 c0 04 01 45 ec 8b 45 e8 3b 45 e4 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Trojan_Win32_Coroxy_MA_2147839828_0
         $x_2_5 = "socks32.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +134,7 @@ rule Trojan_Win32_Coroxy_BL_2147840747_0
         $x_1_3 = "powershell.exe -windowstyle hidden -Command" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -150,6 +156,7 @@ rule Trojan_Win32_Coroxy_MK_2147841134_0
         $x_1_1 = {40 99 f7 be ?? ?? ?? ?? 89 96 ?? ?? ?? ?? 8b 56 ?? 8b ae ?? ?? ?? ?? 81 c2 ?? ?? ?? ?? 89 96 ?? ?? ?? ?? 69 45 ?? ?? ?? ?? ?? 3b c7 74 ?? 8b 5e ?? 8b 8e ?? ?? ?? ?? 8b 43 ?? 47 05 ?? ?? ?? ?? 33 c8 89 8e ?? ?? ?? ?? 69 45 ?? ?? ?? ?? ?? 3b f8 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -171,6 +178,7 @@ rule Trojan_Win32_Coroxy_MI_2147841135_0
         $x_1_1 = {40 99 f7 be ?? ?? ?? ?? 89 96 ?? ?? ?? ?? ba ?? ?? ?? ?? 8b ae ?? ?? ?? ?? 8b 45 ?? 2d ?? ?? ?? ?? 89 03 8b 9e ?? ?? ?? ?? 69 43 ?? ?? ?? ?? ?? 3b c2 74 ?? 8b be ?? ?? ?? ?? 8b 4e ?? 81 c7 ?? ?? ?? ?? 0f 1f 40 ?? 33 cf 42 89 4e ?? 69 43 ?? ?? ?? ?? ?? 3b d0 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +205,7 @@ rule Trojan_Win32_Coroxy_XY_2147844095_0
         $x_1_6 = {30 0e eb 34}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -219,6 +228,7 @@ rule Trojan_Win32_Coroxy_UU_2147847391_0
         $x_1_2 = {8b d3 c1 ea ?? 03 f3 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 54 24 ?? 8b 44 24 ?? 01 44 24 ?? 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 75 ?? 8d 44 24 ?? 50 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 31 74 24 ?? 8b 44 24 ?? 31 44 24 ?? 2b 7c 24 ?? 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -241,6 +251,7 @@ rule Trojan_Win32_Coroxy_PBI_2147849189_0
         $x_1_2 = {8b 45 d8 89 18 e8 ?? ?? ?? ?? 8b 5d cc 03 5d ac 81 eb ?? ?? ?? ?? 03 5d e8 2b d8 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 31 18 83 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -263,6 +274,7 @@ rule Trojan_Win32_Coroxy_MB_2147851522_0
         $x_5_2 = {c3 6d 48 b7 c5 6c 6c b3 e8 08 00 96 ee 6d 74 db c6 6c 75 b2 cc 40 61 a8 cb 64 65 69 a7 08 00 55 d9 6d 61 8a cc 4e 69 6a cc 49 00 96 a7 08 00 96}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -284,6 +296,7 @@ rule Trojan_Win32_Coroxy_SK_2147852839_0
         $x_1_1 = {2b d0 8b 45 d8 31 10 6a 00 e8 9b 7a f3 ff ba 04 00 00 00 2b d0 01 55 e8 6a 00 e8 8a 7a f3 ff ba 04 00 00 00 2b d0 01 55 d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -305,6 +318,7 @@ rule Trojan_Win32_Coroxy_GPC_2147893442_0
         $x_4_1 = {46 8a 04 3b 30 06 7a 04 7b 02 61 14 46 43 49 3b 5d 0c}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -326,6 +340,7 @@ rule Trojan_Win32_Coroxy_YAA_2147897329_0
         $x_1_1 = {8b 5d cc 03 5d ac 03 5d e8 2b d8 6a 00 e8 ?? ?? ?? ?? 2b d8 8b 45 d8 31 18 83 45 e8 04 83 45 d8 04 8b 45 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -349,6 +364,7 @@ rule Trojan_Win32_Coroxy_XZ_2147903209_0
         $x_1_3 = "powershell.exe -windowstyle hidden -Command" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -370,6 +386,7 @@ rule Trojan_Win32_Coroxy_YAB_2147903487_0
         $x_1_1 = {2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 31 18 83 45 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -391,6 +408,7 @@ rule Trojan_Win32_Coroxy_MKZ_2147919402_0
         $x_5_1 = {fe c3 36 8a 94 2b 00 fc ff ff 02 c2 36 8a 8c 28 00 fc ff ff 36 88 8c 2b 00 fc ff ff 36 88 94 28 00 fc ff ff 02 ca 36 8a 8c 29 00 fc ff ff 30 0e 46 4f 75 cc}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -414,6 +432,7 @@ rule Trojan_Win32_Coroxy_YBN_2147923081_0
         $x_1_3 = {50 68 7e 66 04 80 ff 75 fc e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -435,6 +454,7 @@ rule Trojan_Win32_Coroxy_MKW_2147923893_0
         $x_5_1 = {8a 04 3b 30 06 46 43 49 3b 5d 0c 75 02}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -457,6 +477,7 @@ rule Trojan_Win32_Coroxy_GA_2147924835_0
         $x_1_2 = {02 ca 36 8a 8c 29 00 fc ff ff 30 0e 46 4f 75 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

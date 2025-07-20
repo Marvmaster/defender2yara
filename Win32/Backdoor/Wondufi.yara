@@ -24,6 +24,7 @@ rule Backdoor_Win32_Wondufi_A_2147710660_0
         $x_1_10 = "|vr:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_4_*) and 1 of ($x_1_*))) or
             ((6 of ($x_4_*))) or

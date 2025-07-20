@@ -17,6 +17,7 @@ rule Ransom_Win32_Rapidstop_YAA_2147911612_0
         $x_1_2 = {f7 f9 33 74 d5 ?? 33 7c d5 b0 8b 55 fc 8b c2 31 30 8d 40 28 31 78 dc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

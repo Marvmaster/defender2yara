@@ -20,6 +20,7 @@ rule Virus_Win32_Warmup_2147602578_0
         $x_1_4 = {55 70 2e 77 6f 72 6d 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -51,6 +52,7 @@ rule Virus_Win32_Warmup_A_2147602579_0
         $x_1_8 = {55 6d 78 41 74 74 61 63 68 6d 65 6e 74 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             (all of ($x*))

@@ -19,6 +19,7 @@ rule TrojanDownloader_Win32_Votwup_A_2147627020_0
         $x_1_4 = ":*:Enabled:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -48,6 +49,7 @@ rule TrojanDownloader_Win32_Votwup_D_2147656148_0
         $x_1_7 = {80 7d fb 01 75 ?? 81 fb b8 0b 00 00 76 ?? 6a 01 6a 00 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

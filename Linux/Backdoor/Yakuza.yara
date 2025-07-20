@@ -20,6 +20,7 @@ rule Backdoor_Linux_Yakuza_YA_2147740925_0
         $x_1_5 = "] Failed || IP: %s || Port: 23 || Username: %s || Password: %s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -44,6 +45,7 @@ rule Backdoor_Linux_Yakuza_YB_2147741710_0
         $x_1_1 = {63 64 20 2f 74 6d 70 20 7c 7c 20 63 64 20 2f 76 61 72 2f 72 75 6e 20 7c 7c 20 63 64 20 2f 6d 6e 74 20 7c 7c 20 63 64 20 2f 72 6f 6f 74 20 7c 7c 20 63 64 20 2f 3b 20 77 67 65 74 20 68 74 74 70 [0-2] 3a 2f 2f [0-3] 2e [0-3] 2e [0-3] 2e [0-3] 2f [0-24] 2e 73 68 3b 20 63 68 6d 6f 64 20 37 37 37 20 [0-24] 2e 73 68 3b 20 73 68 20 [0-24] 2e 73 68 3b 20 6b 74 66 74 70 20 [0-3] 2e [0-3] 2e [0-3] 2e [0-3] 20 2d 63 20 67 65 74 20 [0-24] 2e 73 68 3b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -69,6 +71,7 @@ rule Backdoor_Linux_Yakuza_A_2147808540_0
         $x_1_5 = {73 68 20 74 66 74 70 2e 73 68 [0-4] 72 6d 20 2d 72 66 20 2a 2e 73 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

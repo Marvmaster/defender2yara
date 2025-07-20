@@ -33,6 +33,7 @@ rule Backdoor_Win32_Beksnoc_A_2147647254_0
         $x_1_19 = {09 c0 75 31 c6 ?? 45 c6 ?? 01 53 c6 ?? 02 3a c6 ?? 03 53 c6 ?? 04 4d c6 ?? 05 53 c6 ?? 06 53 c6 ?? 07 5f c6 ?? 08 42 c6 ?? 09 55}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -57,6 +58,7 @@ rule Backdoor_Win32_Beksnoc_A_2147658938_0
         $x_1_4 = {45 53 43 4b 3a 25 75 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

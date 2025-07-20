@@ -20,6 +20,7 @@ rule BrowserModifier_Win32_GonnaSearch_14853_0
         $x_1_6 = {2e 66 69 6e 64 77 68 61 74 2e 00 00 4b 65 79 77 6f 72 64 73 3d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

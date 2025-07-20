@@ -18,6 +18,7 @@ rule Trojan_Win64_GoKimSuky_A_2147918854_0
         $x_1_3 = {44 33 cd f9 40 f6 c5 99 41 81 e9 5a 09 8c 46 41 81 f1 f6 1c 36 51 41 0f c9 f5 49 81 fa 90 33 c9 61 41 81 e9 5d 35 be 5d 66 41 3b cc 66 81 fb 7e 15 55 44 31 0c 24 66 0f ba f5 3a 40 80 c5 f8 66 d3 d5 5d 4d 63 c9 40 3a f0 45 84 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

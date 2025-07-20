@@ -17,6 +17,7 @@ rule Trojan_Win32_Ghanarava_MCE_2147944916_0
         $x_1_2 = {4c 61 75 6e 63 68 65 72 20 66 6f 72 20 5a 61 70 72 65 74 00 4c 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

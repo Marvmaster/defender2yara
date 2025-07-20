@@ -19,6 +19,7 @@ rule Backdoor_Linux_Turla_C_2147836888_0
         $x_10_5 = {c7 85 e8 af ff ff 5f 5f 77 65 c7 85 ec af ff ff 5f 61 72 65 c7 85 f0 af ff ff 5f 68 61 70 c7 85 f4 af ff ff 70 79 5f 5f}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_10_*) and 3 of ($x_5_*))) or
             ((2 of ($x_10_*) and 1 of ($x_5_*))) or
@@ -45,6 +46,7 @@ rule Backdoor_Linux_Turla_D_2147836889_0
         $x_10_3 = {8b 02 48 83 c2 04 8d 88 ff fe fe fe f7 d0 21 c1 81 e1 80 80 80 80 74 e8}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Backdoor_Linux_Turla_M_2147843701_0
         $x_5_3 = {25 c0 01 00 00 81 e2 00 02 00 00 01 c0 81 e6 7f 7c 00 00 c1 e2 06}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -89,6 +92,7 @@ rule Backdoor_Linux_Turla_G_2147843702_0
         $x_5_3 = {25 c0 01 00 00 01 c0 81 e1 7f 7c 00 00 09 c1 89 f0 81 e6 00 00 c0 03 25 00 02 00 00 c1 ee 16 c1 e0 06}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule Backdoor_Linux_Turla_O_2147849464_0
         $x_1_8 = {8d 4a 05 32 8a 25 26 0c 08 88 8a 20 f4 0e 08 42 83 fa 08 76 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (2 of ($x*))
 }
 

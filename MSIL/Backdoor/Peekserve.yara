@@ -18,6 +18,7 @@ rule Backdoor_MSIL_Peekserve_B_2147769096_0
         $x_1_3 = "get_Installers" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_3_*))) or

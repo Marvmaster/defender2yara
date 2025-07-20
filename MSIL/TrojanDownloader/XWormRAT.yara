@@ -18,6 +18,7 @@ rule TrojanDownloader_MSIL_XWormRAT_A_2147840034_0
         $x_1_3 = "GetMethods" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule TrojanDownloader_MSIL_XWormRAT_B_2147843975_0
         $x_2_3 = "Qspmqgjmctpbajtke" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanDownloader_MSIL_XWormRAT_E_2147900582_0
         $x_2_2 = {06 09 91 13 ?? 06 09 06 07 09 59 17 59 91 9c 06 07 09 59 17 59 11 ?? 9c 09 17 58}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -30,6 +30,7 @@ rule PWS_Win32_Kegotip_A_2147647810_0
         $x_1_16 = {3c 2f 48 6f 73 74 3e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (12 of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule PWS_Win32_Kegotip_C_2147661122_0
         $x_1_3 = {83 e2 10 74 ?? 0f be 85 ?? ?? ff ff 83 f8 2e 75 22 0f be 8d ?? ?? ff ff 85 c9 74 ?? 0f be 95 ?? ?? ff ff 83 fa 2e 75 0b 0f be 85 ?? ?? ff ff 85 c0 74 ?? 68 04 01 00 00 8b 4d 08 51}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -74,6 +76,7 @@ rule PWS_Win32_Kegotip_D_2147690308_0
         $x_1_3 = {0f b6 51 0c 39 55 fc 0f 83 d6 00 00 00 8b 45 08 8b 08 c1 e9 03 89 4d f4 8b 55 08 8b 02 33 d2 b9 08 00 00 00 f7 f1 89 55 f8 8b 45 fc 33 d2 b9 08 00 00 00 f7 f1 8b 45 08 0f b6 4c 10 10 8b 55 fc c1 ea 03 8b 45 0c 0f b6 14 02 23 ca 88 4d f3 8b 45 fc 33 d2 b9 08 00 00 00 f7 f1 b9 07 00 00 00 2b ca 8a 55 f3 d2 ea 88 55 f3 8b 45 08 8b 50 08 b8 07 00 00 00 2b 45 f8 0f be c8 b8 01 00 00 00 d3 e0 0f b6 c8 f7 d1 8b 45 f4 0f b6 14 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

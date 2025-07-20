@@ -26,6 +26,7 @@ rule TrojanDownloader_Win32_Nomedtl_A_2147697460_0
         $x_1_12 = "Demon.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

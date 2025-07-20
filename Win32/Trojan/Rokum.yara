@@ -18,6 +18,7 @@ rule Trojan_Win32_Rokum_A_2147751736_0
         $x_1_3 = {cd ab dc a3 fe 29 34 b1 08 93 df a1 fa 7d 36 98}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

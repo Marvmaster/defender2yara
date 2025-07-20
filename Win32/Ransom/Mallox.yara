@@ -21,6 +21,7 @@ rule Ransom_Win32_Mallox_AD_2147852013_0
         $x_100_6 = "delete shadows /all /quiet" wide //weight: 100
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 2 of ($x_10_*))) or
             (all of ($x*))
@@ -50,6 +51,7 @@ rule Ransom_Win32_Mallox_DA_2147918847_0
         $x_1_6 = ".mallox" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

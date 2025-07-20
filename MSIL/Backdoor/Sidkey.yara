@@ -17,6 +17,7 @@ rule Backdoor_MSIL_Sidkey_A_2147689369_0
         $x_1_3 = {44 49 53 50 45 4e 53 45 20 4f 50 45 52 41 54 49 4f 4e 20 44 45 4e 49 45 44 2e 20 45 4e 54 45 52 20 53 45 53 53 49 4f 4e 20 4b 45 59 2e 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

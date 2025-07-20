@@ -17,6 +17,7 @@ rule DDoS_Linux_Xorddos_A_2147828999_0
         $x_1_2 = {44 24 04 41 00 00 00 8b 45 08 89 04 24 e8 0d b7 00 00 89 45 f0 c7 45 f4 00 00 00 00 c7 45 f8 00 00 00 00 c7 45 fc 00 00 00 00 83 7d f0 00 0f 8e 87 00 00 00 c7 44 24 08 00 00 00 00 c7 44 24 04 00 00 00 00 8b 45 f0 89 04 24}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

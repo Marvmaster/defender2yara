@@ -23,6 +23,7 @@ rule TrojanDownloader_Win32_Amhathyari_A_2147601334_0
         $x_1_9 = "gethostbyname" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

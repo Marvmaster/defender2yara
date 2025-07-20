@@ -22,6 +22,7 @@ rule BrowserModifier_Win32_Foxiebro_235004_0
         $x_1_8 = {68 74 74 70 3a 2f 2f 69 6e 73 74 61 6c 6c 2e 30 00 2e 63 6f 6d 2f 69 68}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

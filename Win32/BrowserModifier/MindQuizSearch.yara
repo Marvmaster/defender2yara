@@ -16,6 +16,7 @@ rule BrowserModifier_Win32_MindQuizSearch_150044_0
         $x_1_2 = "track.zugo.com/cgi-bin/debug.py?filename=mindquizsetup-silent-i_accept&url=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

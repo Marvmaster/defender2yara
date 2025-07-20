@@ -23,6 +23,7 @@ rule Ransom_Linux_Filecoder_B_2147779611_0
         $x_1_8 = {e8 69 e3 00 00 48 83 c4 10 89 45 cc 83 7d cc 00 0f 85 af 00 00 00 48 8d 3d 12 ac 02 00 e8 0d fc ff ff 48 8b 85 e0 e8 ff ff 48 8b 95 e8 e8 ff ff 48 89 05 38 ae 02 00 48 89 15 39 ae 02 00 48 8b 85 f0 e8 ff ff 48 8b 95 f8 e8 ff ff 48 89 05 2c ae 02 00 48 89 15 2d ae 02 00 48 8b 95 78 ee ff ff 48 8d 85 c0 ef ff ff 48 89 c6 48 8d 3d fd ab 02 00 e8 dd fc ff ff 48 8d 3d b1 ab 02 00 e8 fc fa ff ff c7 45 dc 01 00 00 00 48 8d 85 70 ee ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (3 of ($x*))
 }
 
@@ -49,6 +50,7 @@ rule Ransom_Linux_Filecoder_G_2147788515_0
         $x_1_6 = "GetRansomConfig" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -74,6 +76,7 @@ rule Ransom_Linux_Filecoder_D_2147809996_0
         $x_2_2 = {48 89 c1 ba 50 00 00 00 be 01 00 00 00 48 8d 3d 65 09 00 00 e8 ?? ?? ff ff 48 8b 45 98 48 89 c7 e8 ?? ?? ff ff 48 8d 4d a0 48 8d 55 c0 48 8b 75 ?? ?? 8b 45 88 48 89 c7 e8 ?? ?? 00 00 48 8b 45 88 48 89 c7}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -101,6 +104,7 @@ rule Ransom_Linux_Filecoder_E_2147816007_0
         $x_1_7 = "oLoCOInaFX@onionmail.org" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (6 of ($x*))
 }
 
@@ -125,6 +129,7 @@ rule Ransom_Linux_Filecoder_H_2147817430_0
         $x_1_4 = "/etc/shadow" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -148,6 +153,7 @@ rule Ransom_Linux_Filecoder_J_2147831781_0
         $x_1_3 = "encrypt_file" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -172,6 +178,7 @@ rule Ransom_Linux_Filecoder_K_2147847540_0
         $x_1_4 = "key is:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -200,6 +207,7 @@ rule Ransom_Linux_Filecoder_L_2147847690_0
         $x_1_5 = "doSomeThingElseWithDebugger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -224,6 +232,7 @@ rule Ransom_Linux_Filecoder_P_2147848246_0
         $x_1_4 = ".crypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -248,6 +257,7 @@ rule Ransom_Linux_Filecoder_M_2147848693_0
         $x_1_4 = "encryptor/fileDetection" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -271,6 +281,7 @@ rule Ransom_Linux_Filecoder_N_2147848694_0
         $x_1_3 = ".metencrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -295,6 +306,7 @@ rule Ransom_Linux_Filecoder_S_2147849015_0
         $x_1_4 = "/root/cry/encrypt.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -317,6 +329,7 @@ rule Ransom_Linux_Filecoder_O_2147850528_0
         $x_1_2 = "encryptfile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -339,6 +352,7 @@ rule Ransom_Linux_Filecoder_R_2147850533_0
         $x_1_2 = "encryptDir" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -363,6 +377,7 @@ rule Ransom_Linux_Filecoder_V_2147852393_0
         $x_1_4 = {dd 2e 74 2f 2d 64 65 78 2e 70 68 70 3f 63 30 6d 36 3d ef 01 fb b7 47}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -386,6 +401,7 @@ rule Ransom_Linux_Filecoder_X_2147891314_0
         $x_1_3 = "encrypt_file" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -408,6 +424,7 @@ rule Ransom_Linux_Filecoder_Y_2147906079_0
         $x_1_2 = {44 6f 01 02 44 70 01 02 44 71 01 02 46 64 01 02 47 78 01 02 47 79 01 02 48 69 01 02 49 44 01 02 49 50 01 02 49 64 01 02 49 6e 01 02 49 70 01 02 49 73 01 02 4c 6f 01 02 4f 70 01 02 4f 72 01 02 50 43 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -430,6 +447,7 @@ rule Ransom_Linux_Filecoder_AB_2147927738_0
         $x_1_2 = {0f b6 94 05 20 fd ff ff 83 ea 04 88 94 05 20 fd ff ff 48 83 c0 01 48 83 f8 2a 75 e4 e8 1f 4e 02 00 4c 8b a0 30 01 00 00 41 8b 5c 24 40 45 0f b6 b4 24 90 00 00 00 83 fb 02 0f 8e 31 32 00 00 45 84 f6 0f 85 28 32 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -452,6 +470,7 @@ rule Ransom_Linux_Filecoder_Z_2147928901_0
         $x_1_2 = {48 83 ec 18 48 89 6c 24 10 48 8d 6c 24 10 49 89 e4 49 8b 5e 30 48 8b 8b 28 03 00 00 48 8b 93 20 03 00 00 48 89 0c 24 48 89 54 24 08 48 8d 54 24 20 48 8b 4a f8 48 89 8b 28 03 00 00 48 89 93 20 03 00 00 4c 3b b3 c0 00 00 00 75 07 48 8b 13 48 8b 62 38 48 83 ec 20 48 83 e4 f0 bf 00 00 00 00 48 8d 74 24 10 48 8b 05 74 43 1c 00 48 83 f8 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -475,6 +494,7 @@ rule Ransom_Linux_Filecoder_AA_2147935640_0
         $x_1_3 = "main.hasSuffix" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -501,6 +521,7 @@ rule Ransom_Linux_Filecoder_AC_2147937876_0
         $x_1_6 = "main.remote_init" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -523,6 +544,7 @@ rule Ransom_Linux_Filecoder_AD_2147942311_0
         $x_1_2 = {48 89 fb 48 8b 0f 48 8b 7f 08 48 89 f8 48 29 c8 48 be ab aa aa aa aa aa aa aa 48 f7 e6 48 8d 05 83 6f fc ff 48 89 03 48 89 43 08 4c 8b 7b 10 48 39 cf 74 54 49 89 d6 49 c1 ee 04 49 8b 3f 48 29 f9 48 89 c8 48 f7 e6 48 c1 ea 04 48 8d 04 52 4c 8d 24 c7 49 83 c4 08 4c 8b 2d e9 c7 0b 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

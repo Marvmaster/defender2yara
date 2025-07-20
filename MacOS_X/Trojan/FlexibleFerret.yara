@@ -19,6 +19,7 @@ rule Trojan_MacOS_X_FlexibleFerret_A_2147932986_0
         $x_1_4 = "Failed to upload file. Response:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

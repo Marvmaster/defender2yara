@@ -18,6 +18,7 @@ rule BrowserModifier_Win32_Xider_235408_0
         $x_2_4 = "IeEnabler.exe" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule BrowserModifier_Win32_Xider_235408_1
         $x_2_7 = "Already approved this bho in the past" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 2 of ($x_2_*))) or
             (all of ($x*))
@@ -71,6 +73,7 @@ rule BrowserModifier_Win32_Xider_235408_2
         $x_5_5 = {2f 6d 6f 6e 65 74 69 7a 61 74 69 6f 6e 2e 67 69 66 3f 65 76 65 6e 74 3d [0-2] 26 69 62 69 63 3d ?? ?? ?? 26 76 65 72 69 66 69 65 72 3d ?? ?? ?? 26 63 61 6d 70 61 69 67 6e 3d}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

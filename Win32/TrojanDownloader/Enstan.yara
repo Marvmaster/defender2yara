@@ -17,6 +17,7 @@ rule TrojanDownloader_Win32_Enstan_A_2147654705_0
         $x_1_3 = {68 66 57 38 ef 68 ?? ?? 40 00 e8 ?? ?? ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

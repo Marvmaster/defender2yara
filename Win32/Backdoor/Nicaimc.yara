@@ -18,6 +18,7 @@ rule Backdoor_Win32_Nicaimc_A_2147794248_0
         $x_1_4 = {be 11 00 00 00 f7 fe 0f ?? ?? ?? ?? 33 ca 8b 45 08 03 45 fc 88 08}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

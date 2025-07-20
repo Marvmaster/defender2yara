@@ -19,6 +19,7 @@ rule Trojan_MSIL_Kryptic_QB_2147781705_0
         $x_1_4 = "ToArray" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*))) or
             (all of ($x*))

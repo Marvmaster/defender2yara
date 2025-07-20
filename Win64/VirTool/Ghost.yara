@@ -16,6 +16,7 @@ rule VirTool_Win64_Ghost_B_2147924494_0
         $x_1_2 = {48 8b 94 24 28 03 00 00 4c 8b 84 24 30 03 00 00 4c 8b 8c 24 38 03 00 00 ?? ?? 48 89 c8 4c 89 d9 48 83 e9 04 ?? ?? ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? f3 48 a5 48 89 c1 41 ff e2 48 8b b4 24 08 02 00 00 48 8b bc 24 10 02 00 00 4c 8b a4 24 18 02 00 00 48 81 c4 00 03 00 00 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

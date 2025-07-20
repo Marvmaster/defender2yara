@@ -19,6 +19,7 @@ rule Trojan_Win32_Sidelod_A_2147696376_0
         $x_1_4 = {51 68 19 00 02 00 6a 00 6a 10 68 ?? ?? ?? ?? b3 ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -19,6 +19,7 @@ rule Trojan_MacOS_AtomicSteal_A_2147846262_0
         $x_1_5 = "http://amos-malware.ru/sendlog" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (4 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MacOS_AtomicSteal_B_2147846263_0
         $x_1_4 = "Wallets/Bitcoin" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_MacOS_AtomicSteal_C_2147891593_0
         $x_2_5 = {61 74 6f 6d 69 63 2f 4c 6f 63 61 6c 20 53 74 6f 72 61 67 65 2f 6c 65 76 65 6c 64 62 2f 00 64 65 73 6b 77 61 6c 6c 65 74 73 2f 45 6c 65 63 74 72 75 6d 2f 00 64 65 73 6b 77 61 6c 6c 65 74 73 2f 43 6f 69 6e 6f 6d 69 2f 00 64 65 73 6b 77 61 6c 6c 65 74 73 2f 45 78 6f 64 75 73 2f 00 64 65 73 6b 77 61 6c 6c 65 74 73 2f 41 74 6f 6d 69 63 2f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((3 of ($x_2_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -93,6 +96,7 @@ rule Trojan_MacOS_AtomicSteal_D_2147900430_0
         $x_1_5 = "/Library/Keychains/login.keychain-db" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

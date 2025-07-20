@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Dold_A_2147656676_0
         $x_1_2 = "oJ3FkG0ajooPPlttNTk8F/2Wk+BZmju+yC" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_Dold_C_2147658328_0
         $x_1_3 = {8b 45 fc 80 78 5b 00 74 3d 8b 45 fc 8b 40 44 80 b8 73 02 00 00 01 74 09 80 3d 5c 16 47 00 01 75 1e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 1 of ($x_2_*))) or
             (all of ($x*))

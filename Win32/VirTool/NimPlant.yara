@@ -24,6 +24,7 @@ rule VirTool_Win32_NimPlant_A_2147844172_0
         $x_1_9 = "NimPlant" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

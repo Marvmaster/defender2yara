@@ -19,6 +19,7 @@ rule VirTool_Win64_GMimitz_A_2147838744_0
         $x_1_4 = {46 0f b6 14 08 45 31 c2 45 88 14 01 48 ff c0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

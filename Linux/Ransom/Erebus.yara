@@ -22,6 +22,7 @@ rule Ransom_Linux_Erebus_B_2147772494_0
         $x_1_7 = "EREBUS IS BEST" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

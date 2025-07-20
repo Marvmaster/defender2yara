@@ -18,6 +18,7 @@ rule Ransom_MSIL_FileCryptor_A_2147731393_0
         $x_1_3 = "$282b8d86-f33f-441e-8bb5-95903351be39" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_MSIL_FileCryptor_A_2147731393_1
         $x_1_6 = "It seems like your files have been encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -72,6 +74,7 @@ rule Ransom_MSIL_FileCryptor_A_2147731393_2
         $x_1_8 = "\\WindowsKeyboardDriver.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Ransom_MSIL_FileCryptor_AA_2147748456_0
         $x_1_6 = "Java Embeded Library" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -124,6 +128,7 @@ rule Ransom_MSIL_FileCryptor_B_2147750089_0
         $x_1_6 = "Your personal files are encrypted!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -149,6 +154,7 @@ rule Ransom_MSIL_FileCryptor_D_2147753081_0
         $x_1_5 = "EncryptedFileHeader" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -174,6 +180,7 @@ rule Ransom_MSIL_FileCryptor_E_2147753088_0
         $x_1_5 = "del selfd.bat" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -201,6 +208,7 @@ rule Ransom_MSIL_FileCryptor_DSA_2147761224_0
         $x_1_7 = "all your important files have been encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -230,6 +238,7 @@ rule Ransom_MSIL_FileCryptor_T_2147767058_0
         $x_1_5 = "Ransome" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -256,6 +265,7 @@ rule Ransom_MSIL_FileCryptor_S_2147767245_0
         $x_1_6 = ".pptx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -284,6 +294,7 @@ rule Ransom_MSIL_FileCryptor_PA_2147768398_0
         $x_10_8 = {5c 52 61 73 6f 6d 77 61 72 65 [0-6] 5c [0-16] 5c [0-16] 5c 52 61 73 6f 6d 77 61 72 65 32 2e 30 2e 70 64 62}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 5 of ($x_1_*))) or
             ((2 of ($x_10_*))) or
@@ -314,6 +325,7 @@ rule Ransom_MSIL_FileCryptor_U_2147769160_0
         $x_1_6 = "C:\\r2block_Wallpaper.jpg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -339,6 +351,7 @@ rule Ransom_MSIL_FileCryptor_PD_2147769383_0
         $x_1_5 = "Hello User all your files have been encrypted by Donald J. Trump" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -363,6 +376,7 @@ rule Ransom_MSIL_FileCryptor_PF_2147769479_0
         $x_1_4 = "CRYPT.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -389,6 +403,7 @@ rule Ransom_MSIL_FileCryptor_V_2147770227_0
         $x_1_6 = "EncryptBytes" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -412,6 +427,7 @@ rule Ransom_MSIL_FileCryptor_PH_2147771454_0
         $x_1_3 = "ReadMe.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -435,6 +451,7 @@ rule Ransom_MSIL_FileCryptor_PG_2147771638_0
         $x_1_3 = "Files have been encrypted!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +478,7 @@ rule Ransom_MSIL_FileCryptor_PG_2147771638_1
         $x_1_6 = "Instant Ransomware" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -486,6 +504,7 @@ rule Ransom_MSIL_FileCryptor_PL_2147771824_0
         $x_1_5 = "\\Dotfuscated\\love.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -510,6 +529,7 @@ rule Ransom_MSIL_FileCryptor_PJ_2147771972_0
         $x_1_4 = "UH-OH! YOUR FILES HAVE BEEN TAKEN OVER!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -534,6 +554,7 @@ rule Ransom_MSIL_FileCryptor_PJ_2147771972_1
         $x_1_4 = "\\Neptune_remote.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -571,6 +592,7 @@ rule Ransom_MSIL_FileCryptor_MK_2147780034_0
         $x_10_17 = "Annabelle-tear" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 9 of ($x_2_*) and 2 of ($x_1_*))) or
             ((3 of ($x_10_*) and 10 of ($x_2_*))) or
@@ -605,6 +627,7 @@ rule Ransom_MSIL_FileCryptor_PAD_2147781566_0
         $x_1_7 = "shutdown" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -632,6 +655,7 @@ rule Ransom_MSIL_FileCryptor_MAK_2147796922_0
         $x_1_7 = "Your Files has been encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -658,6 +682,7 @@ rule Ransom_MSIL_FileCryptor_MAK_2147796922_1
         $x_1_6 = "Restore my files" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -682,6 +707,7 @@ rule Ransom_MSIL_FileCryptor_PB_2147799260_0
         $x_1_4 = "\\!!!Recovery File.txt" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -705,6 +731,7 @@ rule Ransom_MSIL_FileCryptor_PC_2147799361_0
         $x_1_3 = "\\RunAsDll.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -729,6 +756,7 @@ rule Ransom_MSIL_FileCryptor_PM_2147810217_0
         $x_1_4 = "\\matshure.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -752,6 +780,7 @@ rule Ransom_MSIL_FileCryptor_PN_2147810297_0
         $x_1_3 = "Ooops, your files have been encrypted!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -775,6 +804,7 @@ rule Ransom_MSIL_FileCryptor_PO_2147810304_0
         $x_1_3 = "\\WD30.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -798,6 +828,7 @@ rule Ransom_MSIL_FileCryptor_PP_2147810617_0
         $x_1_3 = "PollyHjackingGroup" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -822,6 +853,7 @@ rule Ransom_MSIL_FileCryptor_PS_2147817058_0
         $x_1_4 = "I am so sorry ! All your files have been encryptd" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

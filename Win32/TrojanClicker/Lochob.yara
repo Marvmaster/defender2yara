@@ -17,6 +17,7 @@ rule TrojanClicker_Win32_Lochob_A_2147665970_0
         $x_1_3 = "r_bho_mtx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

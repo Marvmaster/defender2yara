@@ -21,6 +21,7 @@ rule Worm_Win32_Amend_A_2147600637_0
         $x_1_7 = "The best important mend of Microsoft ,Please run the mend!!" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -64,6 +65,7 @@ rule Worm_Win32_Amend_A_2147602342_0
         $x_1_24 = "wintray.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 3 of ($x_10_*) and 17 of ($x_1_*))) or
             (all of ($x*))

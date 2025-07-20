@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Lokibot_V_2147740978_0
         $x_1_1 = {b3 02 33 ff [0-6] 8b c7 [0-5] 8a 90 ?? ?? ?? ?? 32 d3 [0-5] a1 ?? ?? ?? ?? 03 c7 [0-4] 8b f0 [0-6] 8b c6 e8 ?? ?? ?? ?? [0-5] 47 81 ff ?? ?? ?? ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Shelm_RA_2147838872_0
         $x_1_3 = "inject" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Shelm_RB_2147844084_0
         $x_1_4 = "Usage : %s IP Port FileName <SaveName> /Upload | / Download" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_Shelm_RK_2147850572_0
         $x_1_3 = "Release\\shellcode" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_Shelm_B_2147851499_0
         $x_2_3 = "baes64 = %s" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Trojan_Win32_Shelm_C_2147852193_0
         $x_2_2 = "PQROXVOPRPOS" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -133,6 +138,7 @@ rule Trojan_Win32_Shelm_GMH_2147889034_0
         $x_1_3 = "QQPCLeakScan.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -154,6 +160,7 @@ rule Trojan_Win32_Shelm_D_2147892442_0
         $x_2_1 = {8a 88 08 21 40 00 80 f1 56 88 8c 05 ?? ?? ff ff 40 3d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule Trojan_Win32_Shelm_GMQ_2147892618_0
         $x_1_2 = "dz3.ddns.net" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +205,7 @@ rule Trojan_Win32_Shelm_GMS_2147893128_0
         $x_10_1 = {8b 54 24 04 8d 4a 01 0f be c0 89 44 24 04 c1 f8 02 89 c7 83 e7 0f 89 f8 08 02 8b 44 24 04 c1 e0 06 88 42 01 e9 ?? ?? ?? ?? 8b 54 24 04 c7 45 ?? ?? ?? ?? ?? 0f b6 02 88 45 04 89 d0 29 f0 e9}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -220,6 +229,7 @@ rule Trojan_Win32_Shelm_E_2147894374_0
         $x_2_3 = {99 8d 76 01 b9 ?? ?? ?? ?? f7 f9 8a 44 33 ?? 32 44 24 ?? fe c2 32 c2 88 46 ff 83 ef}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -241,6 +251,7 @@ rule Trojan_Win32_Shelm_F_2147894744_0
         $x_2_1 = {8b 45 10 2b 45 f4 c7 44 24 0c 00 00 00 00 89 44 24 08 8b 45 f0 89 44 24 04 8b 45 08 89 04 24 a1 ?? ?? ?? ?? ff d0 83 ec 10 89 45 ec 8b 45 ec 01 45 f0 8b 45 ec 01 45 f4 83 7d ec ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -272,6 +283,7 @@ rule Trojan_Win32_Shelm_G_2147899600_0
         $x_2_11 = "AuAE0AZQBtAG8AcgB5AFMAdAByAGUAYQBtAC" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -293,6 +305,7 @@ rule Trojan_Win32_Shelm_M_2147906137_0
         $x_2_1 = {0f b6 c8 88 84 3d ?? ?? ?? ?? 0f b6 84 35 ?? ?? ?? ?? 03 c8 0f b6 c1 8b 8d d8 ?? ?? ?? 0f b6 84 05 ?? ?? ?? ?? 32 44 13 ?? 88 04 0a 42 81 fa}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -316,6 +329,7 @@ rule Trojan_Win32_Shelm_RS_2147910294_0
         $x_1_3 = "( StrLen < Random )" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -337,6 +351,7 @@ rule Trojan_Win32_Shelm_RR_2147913106_0
         $x_1_1 = {88 8c 35 d4 fd ff ff 0f b6 c8 88 84 1d d4 fd ff ff 0f b6 84 35 d4 fd ff ff 03 c8 0f b6 c1 8b 8d e8 fe ff ff 0f b6 84 05 d4 fd ff ff 32 44 3a 08 88 04 11}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

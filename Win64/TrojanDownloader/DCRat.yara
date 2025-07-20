@@ -19,6 +19,7 @@ rule TrojanDownloader_Win64_DCRat_A_2147845487_0
         $x_2_4 = "://free1459.host.od.ua/" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule TrojanDownloader_Win64_DCRat_C_2147847844_0
         $x_2_1 = {48 33 c4 48 89 45 f0 48 8d 15 ?? ?? 00 00 33 c9 ff 15 ?? 1f 00 00 48 8d 0d ?? 21 00 00 ff 15 ?? ?? 00 00 4c 8b f0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule TrojanDownloader_Win64_DCRat_D_2147896976_0
         $x_2_3 = "open" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule TrojanDownloader_Win64_DCRat_E_2147917329_0
         $x_2_1 = {c6 44 24 38 00 48 c7 44 24 20 00 00 00 00 45 33 c9 4c 8d 44 24 30 33 c9 ff 15 ?? ?? 00 00 c7 44 24 28 00 00 00 00 48 c7 44 24 20 00 00 00 00 45 33 c9 4c 8d 05 96 20 00 00 48 8d 15 9b 20 00 00 33 c9 ff 15 ?? ?? 00 00 b9 23 00 00 00 ff 15 ?? ?? 00 00 66 85 c0 75 ?? b9 01 00 00 00 ff 15 ?? ?? 00 00 b9 ?? 00 00 00 ff 15 ?? ?? 00 00 66 85 c0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule TrojanDownloader_Win64_DCRat_F_2147917979_0
         $x_2_3 = {b9 01 00 00 00 ff 15 ?? ?? ?? 00 b9 23 00 00 00 ff 15}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule TrojanDownloader_Win64_DCRat_G_2147918330_0
         $x_2_3 = {0f b6 04 38 42 88 04 01 8b 84 24 ?? ?? ?? ?? ff c0 89 84 24}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -151,6 +157,7 @@ rule TrojanDownloader_Win64_DCRat_H_2147919388_0
         $x_2_1 = {33 d2 8d 4a 02 ff 15 ?? 2b 00 00 48 8b f0 c7 85 c0 01 00 00 38 02 00 00 48 8d 95 c0 01 00 00 48 8b c8 ff 15 ?? 2b 00 00 85 c0 0f ?? ?? ?? ?? ?? 48 8d 85 ec 01 00 00 49 8b cf 66 0f 1f 44 00 00 48 ff c1 66 83 3c 48 00 75 ?? 48 8b c3 48 83 7b 18 08 72 ?? 48 8b 03 4c 8b 43 10 4c 3b c1 75 ?? 48 8d 95 ec 01 00 00 4d 85 c0 74 ?? 0f 1f 40 00 0f b7 0a 66 39 08 75 ?? 48 83 c0 02 48 83 c2 02 49 83 e8 01 75 ea 44 8b 85 c8 01 00 00 33 d2 8d 4a 01 ff 15 ?? 2b 00 00 48 8b f8 48 85 c0 74 ?? 33 d2 48 8b c8 ff 15 ?? 2b 00 00 48 8b cf ff ?? 6c 2b 00 00 48 8d 95 c0 01 00 00 48 8b ce ff 15 ?? 2b 00 00 85 c0 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

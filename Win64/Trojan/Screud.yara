@@ -18,6 +18,7 @@ rule Trojan_Win64_Screud_A_2147678401_0
         $x_1_4 = "\\GLOBALROOT\\ArcName\\multi(0)disk(0)rdisk(0)partition(1)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

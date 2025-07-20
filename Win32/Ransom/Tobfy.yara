@@ -16,6 +16,7 @@ rule Ransom_Win32_Tobfy_A_2147658778_0
         $x_1_2 = {ff d7 6a 00 6a 02 8b f8 ff d3 8b f0 83 fe ff 74 ?? 8d 44 24 ?? 50 56 c7 44 24 ?? 28 01 00 00 ff d5 85 c0 74 ?? 8b 5c 24 ?? 8d 4c 24 ?? 51 56 ff d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Ransom_Win32_Tobfy_B_2147659097_0
         $x_1_2 = {f0 0d cd 27 b1 91 89 82 6d af c6 bb c8 bf 88 64 f0 38 24 19 c6 d6 39 52 6e 09 78 6b c5 08 7f 6d e6 a1 b9 86 d3 38 ec 33 8c 45 ab}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Ransom_Win32_Tobfy_F_2147664042_0
         $x_1_3 = {6a 03 56 56 6a 50 8b f8 68 ?? ?? ?? ?? 57 ff 15 ?? ?? ?? ?? 56 68 00 00 00 04 56 56 56 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 50 89 45 ?? ff 15 ?? ?? ?? ?? ff 75 08 be ?? ?? ?? ?? ff 75 ?? 89 45 ?? 56 ff d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule Ransom_Win32_Tobfy_H_2147666731_0
         $x_1_4 = {6a 01 52 68 c8 00 00 00 68 ?? 01 00 00 6a 00 6a 00 ff 15 ?? ?? ?? ?? 99 2b c2 d1 f8 2d 85 00 00 00 50 68 00 00 00 50 68 ?? ?? ?? ?? ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -106,6 +110,7 @@ rule Ransom_Win32_Tobfy_J_2147668029_0
         $x_1_5 = {8b 54 24 04 33 c0 eb 09 0f be c9 c1 c0 07 33 c1 42 8a 0a 84 c9 75 f1 c3 55 8b ec 8b 45 08 48}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -133,6 +138,7 @@ rule Ransom_Win32_Tobfy_K_2147669164_0
         $x_1_4 = {68 5a fb 7e bf 6a 03 e8 ?? ?? ff ff 59 59 ff 75 ?? ff 75 ?? ff 75 ?? ff 75 ?? ff 75 ?? ff 75 ?? ff 75 ?? ff 75 ?? ff 75 ?? ff 75 ?? ff 75 ?? ff 75 ?? ff d0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule Ransom_Win32_Tobfy_L_2147673908_0
         $x_1_4 = "L-0-ck_ER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -179,6 +186,7 @@ rule Ransom_Win32_Tobfy_N_2147678721_0
         $x_1_4 = "L-0-ck_ER" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -201,6 +209,7 @@ rule Ransom_Win32_Tobfy_O_2147678945_0
         $x_1_3 = {03 55 f8 0f be 02 83 f0 01 8b 4d fc 03 4d f8 88 01 eb af}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -227,6 +236,7 @@ rule Ransom_Win32_Tobfy_Q_2147679185_0
         $x_20_7 = {81 45 f4 36 01 00 00 81 45 f8 62 02 00 00 6a 00 ff 35 ?? ?? ?? 00 6a 00 ff 75 08 6a 0d 6a 0d}  //weight: 20, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 2 of ($x_30_*) and 2 of ($x_25_*) and 1 of ($x_20_*))) or
             ((1 of ($x_100_*) and 1 of ($x_30_*) and 1 of ($x_25_*) and 1 of ($x_20_*))) or
@@ -261,6 +271,7 @@ rule Ransom_Win32_Tobfy_R_2147679286_0
         $x_10_6 = {23 33 32 37 37 30 00 41 32 41 5f 30 33}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -288,6 +299,7 @@ rule Ransom_Win32_Tobfy_S_2147679980_0
         $x_1_5 = {8a 01 3c 61 7c 15 3c 7a 7f 11 0f be c0 83 e8 54 6a 1a 99 5f f7 ff 80 c2 61 eb 17 3c 41 7c 15 3c 5a 7f 11 0f be c0 83 e8 34 6a 1a 99 5f f7 ff 80 c2 41}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -315,6 +327,7 @@ rule Ransom_Win32_Tobfy_S_2147679980_1
         $x_2_8 = {74 72 67 68 61 79 62 70 78 2e 63 75 63 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_2_*) and 4 of ($x_1_*))) or
@@ -341,6 +354,7 @@ rule Ransom_Win32_Tobfy_U_2147680327_0
         $x_1_3 = {05 fc 57 09 00 50 8b 4d 08 03 0d 74 d0 40 00 51 e8 c3 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -362,6 +376,7 @@ rule Ransom_Win32_Tobfy_T_2147680358_0
         $x_1_2 = {50 6a 01 ff 15 ?? ?? ?? ?? 8b f0 85 f6 74 0c 6a ff 56 ff 15 ?? ?? ?? ?? 56 ff d7}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -383,6 +398,7 @@ rule Ransom_Win32_Tobfy_W_2147684627_0
         $x_1_2 = {64 8b 35 30 00 00 00 8b 76 0c 8b 76 1c 8b 56 08 8b 7e 20 8b 36 81 7f 0c 33 00 32 00 75 ef}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

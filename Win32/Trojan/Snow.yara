@@ -22,6 +22,7 @@ rule Trojan_Win32_Snow_A_2147569695_0
         $x_1_8 = "C:\\Program Files\\ActiveState Perl Dev Kit 6.0\\bin\\pdkdebug.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

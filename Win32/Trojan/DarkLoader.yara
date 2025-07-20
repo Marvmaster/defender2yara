@@ -22,6 +22,7 @@ rule Trojan_Win32_DarkLoader_DF_2147798614_0
         $x_3_7 = "darkloader.ru" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

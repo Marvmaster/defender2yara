@@ -16,6 +16,7 @@ rule Trojan_Win32_LummaStealers_OMK_2147929737_0
         $x_1_1 = {57 56 64 8b 3d 30 00 00 00 8b 7f 0c 8b 77 0c 8b 06 8b 00 8b 40 18 a3 70 14 43 00 5e 5f 5d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

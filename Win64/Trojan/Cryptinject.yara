@@ -20,6 +20,7 @@ rule Trojan_Win64_Cryptinject_QC_2147920337_0
         $x_1_5 = "$WshShell.CreateShortcut($shortcutPath)" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win64_Cryptinject_YBA_2147930737_0
         $x_11_1 = {33 45 df 21 c2 8a 55 ec 48 03 5d e8 03 5d c4 48 8b 45 ac 0f b7 d2}  //weight: 11, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_Win64_Cryptinject_YBC_2147930775_0
         $x_11_1 = {48 2b c8 49 0f af cf 0f b6 44 0d 8f 43 32 44 18 fc 41 88 40 fc 41 8d 42 ff 48 63 c8 48 8b c3 48 f7 e1}  //weight: 11, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win64_Cryptinject_YBE_2147932089_0
         $x_1_2 = {48 2b c8 49 0f af cc 0f b6 44 0d ?? 42 32 44 0e fb 41 88 41 fd 41 8d 42 01 48 63 c8 48 8b c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

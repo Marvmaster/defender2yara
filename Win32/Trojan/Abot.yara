@@ -19,6 +19,7 @@ rule Trojan_Win32_Abot_A_2147649025_0
         $x_1_4 = {6f 70 44 44 6f 53 02 00 53 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

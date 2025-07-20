@@ -17,6 +17,7 @@ rule Trojan_Win32_AbaddonPOS_A_2147707606_0
         $x_1_3 = {81 be a0 01 00 00 00 f4 01 00 74 24 81 be a0 01 00 00 00 e8 03 00 74 18 81 be a0 01 00 00 00 dc 05 00 74 0c 81 be a0 01 00 00 00 d6 06 00 75 08 6a 05}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

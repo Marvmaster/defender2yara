@@ -18,6 +18,7 @@ rule Backdoor_Win32_Oecede_A_2147603219_0
         $x_1_4 = {5c 3f 3f 5c 25 73 5c 73 76 63 68 6f 73 74 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or

@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Npbro_A_2147657021_0
         $x_1_4 = {83 c2 01 52 a1 ?? ?? ?? ?? 8b 48 24 ff d1 83 c4 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

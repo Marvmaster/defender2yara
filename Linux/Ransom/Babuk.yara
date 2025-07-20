@@ -20,6 +20,7 @@ rule Ransom_Linux_Babuk_D_2147811833_0
         $x_1_5 = "golang.org/x/crypto/curve25519" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Ransom_Linux_Babuk_E_2147845996_0
         $x_1_5 = "Cylance Ransomware" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -73,6 +75,7 @@ rule Ransom_Linux_Babuk_B_2147846672_0
         $x_1_5 = "Skipped files:" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -98,6 +101,7 @@ rule Ransom_Linux_Babuk_C_2147895099_0
         $x_1_5 = "===[ To Restore Files ]===.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -121,6 +125,7 @@ rule Ransom_Linux_Babuk_F_2147901929_0
         $x_1_3 = {48 8d 05 4a b6 00 00 48 89 c7}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -144,6 +149,7 @@ rule Ransom_Linux_Babuk_G_2147904438_0
         $x_1_3 = "/path/to/be/encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -167,6 +173,7 @@ rule Ransom_Linux_Babuk_M_2147909482_0
         $x_1_4 = "W H I T E  R A B B I T" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -189,6 +196,7 @@ rule Ransom_Linux_Babuk_I_2147911020_0
         $x_1_2 = {55 89 e5 53 83 ec 34 8b 45 08 89 45 e0 8b 45 0c 89 45 e4 b8 14 00 00 00 89 04 24 e8 a2 fd ff ff 89 45 e8 c7 45 f0 00 00 00 00 c7 45 f4 00 00 00 10 c7 45 ec 00 00 00 00 e9 fd 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -211,6 +219,7 @@ rule Ransom_Linux_Babuk_PC_2147916874_0
         $x_1_2 = "/How To Restore Your Files.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -234,6 +243,7 @@ rule Ransom_Linux_Babuk_J_2147919775_0
         $x_1_3 = "hack to mainstream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -256,6 +266,7 @@ rule Ransom_Linux_Babuk_N_2147922771_0
         $x_1_2 = {8b 7c 24 08 48 8b 74 24 10 48 c7 c2 00 00 00 00 49 c7 c2 00 00 00 00 49 c7 c0 00 00 00 00 4c 8b 6c 24 18 4c 8b 4c 24 20 4c 8b 64 24 28 49 83 fd 00 74 18 49 83 f9 00 74 12 4d 8d 85 88 00 00 00 49 83 c0 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -278,6 +289,7 @@ rule Ransom_Linux_Babuk_AB_2147927973_0
         $x_1_2 = {e0 3f 40 b9 1f 00 13 6b 22 fd ff 54 e1 27 40 f9 e0 03 15 2a 23 00 00 8b e0 03 14 2a e1 23 40 f9 20 00 00 8b e2 3f 40 b9 e1 03 00 aa e0 03 03 aa 91 fd ff 97 1f 20 03 d5 f3 53 41 a9 f5 13 40 f9 fd 7b c5 a8 c0 03 5f d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -300,6 +312,7 @@ rule Ransom_Linux_Babuk_O_2147928878_0
         $x_1_2 = {55 48 89 e5 48 83 ec 10 48 8b 7c 24 20 48 8b 74 24 28 48 8b 54 24 30 48 8b 05 f2 3d 13 00 48 89 e3 48 83 e4 f0 ff d0 48 89 dc 89 44 24 38 48 83 c4 10 5d c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -325,6 +338,7 @@ rule Ransom_Linux_Babuk_K_2147928907_0
         $x_1_5 = "]]; then vim-cmd vmsvc/power.off $i; fi; done" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -350,6 +364,7 @@ rule Ransom_Linux_Babuk_L_2147933380_0
         $x_1_5 = "/README_TO_RESTORE.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -374,6 +389,7 @@ rule Ransom_Linux_Babuk_R_2147935129_0
         $x_1_4 = "BadWeather ESXI Encrypter" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -397,6 +413,7 @@ rule Ransom_Linux_Babuk_Q_2147935545_0
         $x_1_3 = "RsWare/nas_2/enc/main.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

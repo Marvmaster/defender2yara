@@ -29,6 +29,7 @@ rule PWS_MSIL_Dbpass_GA_2147793891_0
         $x_1_14 = "SELECT encryptedUsername, encryptedPassword, hostname FROM moz_logins" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 

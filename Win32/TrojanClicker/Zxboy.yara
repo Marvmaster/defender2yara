@@ -23,6 +23,7 @@ rule TrojanClicker_Win32_Zxboy_17731_0
         $x_5_9 = "http://www.zxboy.com#http://" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 5 of ($x_2_*))) or
             ((1 of ($x_5_*) and 5 of ($x_2_*) and 1 of ($x_1_*))) or

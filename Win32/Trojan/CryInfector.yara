@@ -18,6 +18,7 @@ rule Trojan_Win32_CryInfector_MBFH_2147898114_0
         $x_1_3 = {4f 66 66 69 63 65 53 61 66 65 00 4f 66 66 69 63 65 53 61 66 65 00 00 4f 66 66 69 63 65 53 61 66}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

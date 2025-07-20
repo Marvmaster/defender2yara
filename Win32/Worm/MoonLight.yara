@@ -17,6 +17,7 @@ rule Worm_Win32_MoonLight_GZZ_2147905450_0
         $x_5_2 = {33 0e 09 2a 0a d1 89 45 15}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

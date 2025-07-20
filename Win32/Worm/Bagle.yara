@@ -28,6 +28,7 @@ rule Worm_Win32_Bagle_A_2147573939_0
         $x_1_13 = {57 69 6e 64 6f 77 6e 20 [0-8] 20 42 65 74 61 20 4c 65 61 6b 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (6 of ($x*))
 }
 
@@ -63,6 +64,7 @@ rule Worm_Win32_Bagle_B_2147573940_0
         $x_1_15 = "FROM:<%s> SIZE=%l" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((9 of ($x_1_*))) or
             ((1 of ($x_3_*) and 6 of ($x_1_*))) or
@@ -93,6 +95,7 @@ rule Worm_Win32_Bagle_ACA_2147595110_0
         $x_3_6 = {74 69 6f 6e 73 00 55 8b ec 81 c4}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 3 of ($x_1_*))) or
             ((3 of ($x_3_*))) or
@@ -119,6 +122,7 @@ rule Worm_Win32_Bagle_ZHY_2147600928_0
         $x_1_3 = "-S-k-y-N-e-t-" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

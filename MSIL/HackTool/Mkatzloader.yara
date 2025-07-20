@@ -25,6 +25,7 @@ rule HackTool_MSIL_Mkatzloader_MA_2147809053_0
         $x_10_10 = "Executing Mimikatz" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))

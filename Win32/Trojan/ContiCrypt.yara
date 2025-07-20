@@ -17,6 +17,7 @@ rule Trojan_Win32_ContiCrypt_XO_2147812643_0
         $x_1_2 = {0f b7 c0 0f 47 d0 83 c1 02 0f b7 c2 43 33 f0 89 4d f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_ContiCrypt_OO_2147812650_0
         $x_1_2 = {33 14 e4 83 c4 04 81 e7 00 00 00 00 8b 3c e4 83 ec fc 31 f6 0b 34 e4 83 c4 04 31 db 8b 1c e4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Trojan_Win32_ContiCrypt_CMN_2147813318_0
         $x_1_2 = {83 c1 0b f7 e9 03 d1 c1 fa 05 8b c2 c1 e8 1f 03 c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

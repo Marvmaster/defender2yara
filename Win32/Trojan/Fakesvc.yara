@@ -20,6 +20,7 @@ rule Trojan_Win32_Fakesvc_SA_2147777798_0
         $x_1_5 = "\\Win-Secure\\wslogon.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

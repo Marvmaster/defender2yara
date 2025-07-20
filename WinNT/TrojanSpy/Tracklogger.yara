@@ -31,6 +31,7 @@ rule TrojanSpy_WinNT_Tracklogger_A_2147572414_0
         $x_3_16 = {49 c7 44 88 38 ?? ?? 01 00 0b c9 75 f3 c7 40}  //weight: 3, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_3_*) and 2 of ($x_2_*))) or
             ((11 of ($x_3_*) and 1 of ($x_2_*))) or

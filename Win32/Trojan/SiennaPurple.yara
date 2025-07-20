@@ -18,6 +18,7 @@ rule Trojan_Win32_SiennaPurple_A_2147826197_0
         $x_1_3 = {0f be 02 83 e8 30 8b 4d 08 88 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

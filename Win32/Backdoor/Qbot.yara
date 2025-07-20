@@ -15,6 +15,7 @@ rule Backdoor_Win32_Qbot_C_2147731261_0
         $x_1_1 = "d.9S4_Aqum4.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

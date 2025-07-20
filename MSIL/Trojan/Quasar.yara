@@ -17,6 +17,7 @@ rule Trojan_MSIL_Quasar_DHE_2147743350_0
         $x_1_2 = "Invoke" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Trojan_MSIL_Quasar_PA_2147752001_0
         $x_1_9 = "HandleDoUploadAndExecute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Trojan_MSIL_Quasar_PB_2147752004_0
         $x_1_9 = "DoStartupItemAdd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -96,6 +99,7 @@ rule Trojan_MSIL_Quasar_DA_2147787597_0
         $x_10_1 = {06 08 06 8e 69 5d 06 08 06 8e 69 5d 91 07 08 07 8e 69 5d 91 61 28 ?? ?? ?? 0a 06 08 17 58 06 8e 69 5d 91 28 ?? ?? ?? 0a 59 20 00 01 00 00 58 20 00 01 00 00 5d 28 ?? ?? ?? 0a 9c 00 08 15 58 0c 08 16 fe 04 16 fe 01 0d 09 2d b4}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -127,6 +131,7 @@ rule Trojan_MSIL_Quasar_ZA_2147810491_0
         $x_1_11 = "DebuggerNonUserCodeAttribute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +157,7 @@ rule Trojan_MSIL_Quasar_N_2147818869_0
         $x_1_5 = "DeleteFile" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +184,7 @@ rule Trojan_MSIL_Quasar_DC_2147828942_0
         $x_1_6 = "MemoryStream" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -203,6 +210,7 @@ rule Trojan_MSIL_Quasar_SB_2147829236_0
         $x_1_5 = "Invoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -226,6 +234,7 @@ rule Trojan_MSIL_Quasar_ROM_2147832028_0
         $x_1_3 = "filebin.net" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -249,6 +258,7 @@ rule Trojan_MSIL_Quasar_NZQ_2147837478_0
         $x_1_3 = "WindowsFormsApp1.Properties.Resources.resource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -271,6 +281,7 @@ rule Trojan_MSIL_Quasar_MBN_2147838133_0
         $x_1_2 = "$8c102025-8810-407e-9db7-9b131b499880" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -294,6 +305,7 @@ rule Trojan_MSIL_Quasar_NQW_2147838207_0
         $x_1_3 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -319,6 +331,7 @@ rule Trojan_MSIL_Quasar_MA_2147838777_0
         $x_1_5 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -342,6 +355,7 @@ rule Trojan_MSIL_Quasar_NQE_2147840346_0
         $x_1_3 = "NodeType_To_XpathNodeType_Map" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -363,6 +377,7 @@ rule Trojan_MSIL_Quasar_MBBK_2147840355_0
         $x_1_1 = {73 0d 00 00 0a 0a 06 28 ?? 00 00 0a 03 50 6f 0f 00 00 0a 6f 10 00 00 0a 0b 73 11 00 00 0a 0c 08 07 6f 12 00 00 0a 08 18 6f 13 00 00 0a 08 6f 14 00 00 0a 02 50 16 02 50 8e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -385,6 +400,7 @@ rule Trojan_MSIL_Quasar_NQF_2147841370_0
         $x_1_2 = "jSphndkg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -408,6 +424,7 @@ rule Trojan_MSIL_Quasar_MBBI_2147841786_0
         $x_1_3 = {4f 00 76 00 79 00 79 00 76 00 69 00 6d 00 68 00 61 00 6a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -431,6 +448,7 @@ rule Trojan_MSIL_Quasar_RF_2147842061_0
         $x_1_3 = {11 02 11 01 1a 62 11 01 1b 63 61 11 01 58 11 03 11 00 11 03 1f 0b 63 19 5f 94 58 61 59 13 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -454,6 +472,7 @@ rule Trojan_MSIL_Quasar_RF_2147842061_1
         $x_1_3 = "Grasyay.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -480,6 +499,7 @@ rule Trojan_MSIL_Quasar_EC_2147842230_0
         $x_1_6 = "vriusbwvyd" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -502,6 +522,7 @@ rule Trojan_MSIL_Quasar_NQC_2147842248_0
         $x_1_2 = "orthodox.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -524,6 +545,7 @@ rule Trojan_MSIL_Quasar_NQR_2147842251_0
         $x_1_2 = "SiMayService.Loader" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -546,6 +568,7 @@ rule Trojan_MSIL_Quasar_NQS_2147843447_0
         $x_1_2 = "bAZmT" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -569,6 +592,7 @@ rule Trojan_MSIL_Quasar_NAS_2147843448_0
         $x_1_3 = "RxLHX" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -592,6 +616,7 @@ rule Trojan_MSIL_Quasar_NAS_2147843448_1
         $x_1_3 = "DownloadData" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -614,6 +639,7 @@ rule Trojan_MSIL_Quasar_NQP_2147843449_0
         $x_1_2 = "SeroXen_Dropper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -635,6 +661,7 @@ rule Trojan_MSIL_Quasar_MBCO_2147843658_0
         $x_1_1 = {02 72 05 02 00 70 72 01 00 00 70 6f ?? 00 00 0a 10 00 02 6f ?? 00 00 0a 18 5b 8d ?? 00 00 01 0a 16 0b 38 18 00 00 00 06 07 02 07 18 5a 18 6f ?? 00 00 0a 1f 10 28 ?? 00 00 0a 9c 07 17 58 0b 07 06 8e 69 32 e2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -656,6 +683,7 @@ rule Trojan_MSIL_Quasar_AQU_2147843998_0
         $x_1_1 = {0a 00 06 03 6f ?? ?? ?? 0a 0b 07 8e 16 fe 03 0c 08 2c 05 00 07 0d de 0f 14 0d de 0b 06 2c 07 06}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -677,6 +705,7 @@ rule Trojan_MSIL_Quasar_AQU_2147843998_1
         $x_1_1 = {13 0f 11 0f 2c 25 00 72 ?? 05 00 70 11 0e 7b ?? 00 00 04 6f ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 00 17 13 0b ?? ?? ?? ?? ?? 00 de 05 26 00 00 de 00 00 11 0d 17 58}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -699,6 +728,7 @@ rule Trojan_MSIL_Quasar_MBCW_2147844200_0
         $x_1_2 = {51 75 61 73 61 72 20 43 6c 69 65 6e 74 00 00 0a 01 00 05 31 2e 34 2e 30 00 00 09 15 12 84 fd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -721,6 +751,7 @@ rule Trojan_MSIL_Quasar_NAP_2147844510_0
         $x_1_2 = "deon734" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -742,6 +773,7 @@ rule Trojan_MSIL_Quasar_MB_2147844582_0
         $x_1_1 = {0b 06 1a 73 23 00 00 0a 25 07 16 07 8e 69 6f 24 00 00 0a 73 25 00 00 0a 20 00 00 9f 24 20 00 80 48 28 6f 26 00 00 0a 8d 2c 00 00 01 0c 73 25 00 00 0a 08 6f 27 00 00 0a 25 08 16 08 8e 69 6f 24 00 00 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -766,6 +798,7 @@ rule Trojan_MSIL_Quasar_MB_2147844582_1
         $x_1_4 = "server1.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -788,6 +821,7 @@ rule Trojan_MSIL_Quasar_NQD_2147845305_0
         $x_1_2 = "jusched" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -810,6 +844,7 @@ rule Trojan_MSIL_Quasar_NQ_2147845771_0
         $x_1_2 = "brave.g.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -832,6 +867,7 @@ rule Trojan_MSIL_Quasar_NQ_2147845771_1
         $x_1_2 = "WindowsFormsApp95.Properties" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -855,6 +891,7 @@ rule Trojan_MSIL_Quasar_NQ_2147845771_2
         $x_1_3 = "Ziuxvwldnngigg" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -878,6 +915,7 @@ rule Trojan_MSIL_Quasar_NQ_2147845771_3
         $x_1_3 = "Client_built_hvnc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -901,6 +939,7 @@ rule Trojan_MSIL_Quasar_NQ_2147845771_4
         $x_1_3 = "StartProcessWithEncrtpt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -925,6 +964,7 @@ rule Trojan_MSIL_Quasar_ABSF_2147845963_0
         $x_1_4 = "Reverse" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -947,6 +987,7 @@ rule Trojan_MSIL_Quasar_NQQ_2147846350_0
         $x_1_2 = "bycrpfmanhdquerp.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -969,6 +1010,7 @@ rule Trojan_MSIL_Quasar_NQQ_2147846350_1
         $x_1_2 = "Nanysexrfmqfuikpdkhqbnegskvz" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -991,6 +1033,7 @@ rule Trojan_MSIL_Quasar_NQQ_2147846350_2
         $x_1_2 = "Client-built.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1012,6 +1055,7 @@ rule Trojan_MSIL_Quasar_AQ_2147846423_0
         $x_1_1 = {03 8e b7 0b 16 02 8e b7 17 da 0d 0c 2b 10 02 08 02 08 91 03 08 07 5d 91 61 9c 08 17 d6 0c 08 09 31 ec 02 0a 2b 00 06 2a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1033,6 +1077,7 @@ rule Trojan_MSIL_Quasar_AQ_2147846423_1
         $x_1_1 = {0a 16 0b 2b 1b 00 06 02 07 1e 6f 22 00 00 0a 18 28 23 00 00 0a 6f 24 00 00 0a 00 00 07 1e 58 0b 07 02 6f 25 00 00 0a fe 04 0c 08 2d d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1054,6 +1099,7 @@ rule Trojan_MSIL_Quasar_AQ_2147846423_2
         $x_1_1 = {0a 02 8e 69 20 00 30 00 00 1f 40 28 ?? 00 00 06 80 04 00 00 04 02 16 7e ?? 00 00 04 02 8e 69 28 ?? 00 00 0a 7e ?? 00 00 04 d0 05 00 00 02 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1075,6 +1121,7 @@ rule Trojan_MSIL_Quasar_PSMV_2147846449_0
         $x_2_1 = {28 0c 00 00 0a 72 3d 00 00 70 28 ?? ?? ?? 0a 13 05 38 47 00 00 00 73 ?? ?? ?? 0a 25 11 05 6f ?? ?? ?? 0a 25 17 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 26 20 00 00 00 00 7e 10 00 00 04 7b 18 00 00 04 39 aa ff ff ff 26 20 00 00 00 00 38 9f ff ff ff 11 05 11 02 28 ?? ?? ?? 0a 38 b9 ff ff ff 11 04 72 47 00 00 70 6f ?? ?? ?? 0a 13 02 38 df ff ff ff}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1096,6 +1143,7 @@ rule Trojan_MSIL_Quasar_PSNM_2147847079_0
         $x_2_1 = {28 33 00 00 0a 7e 01 00 00 04 02 08 6f 34 00 00 0a 28 35 00 00 0a a5 01 00 00 1b 0b 11 07 20 85 9c 7f 3d 5a 20 4d f2 1c 75 61 38 51 fd ff ff}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1118,6 +1166,7 @@ rule Trojan_MSIL_Quasar_NE_2147847498_0
         $x_1_2 = "Ztgfexus" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1140,6 +1189,7 @@ rule Trojan_MSIL_Quasar_MAAI_2147847821_0
         $x_1_2 = "b212-a41380e73785" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1166,6 +1216,7 @@ rule Trojan_MSIL_Quasar_GIF_2147847942_0
         $x_1_6 = "set_UseShellExecute" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1188,6 +1239,7 @@ rule Trojan_MSIL_Quasar_NAQ_2147848622_0
         $x_1_2 = "alkalurops.sbs" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1210,6 +1262,7 @@ rule Trojan_MSIL_Quasar_NSQ_2147849600_0
         $x_1_2 = "kXFpZBb" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1233,6 +1286,7 @@ rule Trojan_MSIL_Quasar_MBEU_2147850244_0
         $x_1_3 = {70 00 72 00 69 00 76 00 61 00 74 00 65 00 2e 00 52 00 75 00 6e 00 50 00 45 00 00 07 52 00 75 00 6e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1255,6 +1309,7 @@ rule Trojan_MSIL_Quasar_NW_2147850781_0
         $x_1_2 = "gBYEBYEfull" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1277,6 +1332,7 @@ rule Trojan_MSIL_Quasar_NVV_2147851266_0
         $x_1_2 = "UGmbGEN" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1301,6 +1357,7 @@ rule Trojan_MSIL_Quasar_AAGR_2147851423_0
         $x_1_4 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1326,6 +1383,7 @@ rule Trojan_MSIL_Quasar_MBGX_2147851426_0
         $x_1_5 = "ggjfgssfdfh" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1347,6 +1405,7 @@ rule Trojan_MSIL_Quasar_PSTK_2147851863_0
         $x_2_1 = {a2 25 1a 28 09 00 00 0a 08 6f 0a 00 00 0a a2 28 0b 00 00 0a 07 28 0c 00 00 0a 20 e0 0d 00 00 28 03 00 00 0a 1f 2e 8d 03 00 00 01}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1370,6 +1429,7 @@ rule Trojan_MSIL_Quasar_NQU_2147852424_0
         $x_1_3 = "Xtcs.Properties.Resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1391,6 +1451,7 @@ rule Trojan_MSIL_Quasar_AALO_2147888228_0
         $x_5_1 = {06 8e 69 8d ?? 00 00 01 0b 16 0c 2b 1b 07 08 06 08 91 20 d0 71 65 cd 28 ?? 00 00 06 28 ?? 00 00 0a 59 d2 9c 08 17 58 0c 08 06 8e 69 32 df}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1412,6 +1473,7 @@ rule Trojan_MSIL_Quasar_AAMN_2147888795_0
         $x_5_1 = {08 16 07 1f 0f 1f 10 28 ?? 00 00 06 7e ?? 00 00 04 06 07 28 ?? 00 00 06 7e ?? 00 00 04 06 18 28 ?? 00 00 06 7e ?? 00 00 04 06 1b 28 ?? 00 00 06 7e ?? 00 00 04 06 28 ?? 00 00 06 0d 7e ?? 00 00 04 09 05 16 05 8e 69 28 ?? 00 00 06 2a}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1433,6 +1495,7 @@ rule Trojan_MSIL_Quasar_ASFN_2147895161_0
         $x_5_1 = {06 09 06 8e 69 5d 7e ?? 00 00 04 06 09 06 8e 69 5d 91 08 09 08 8e 69 5d 91 61 28 ?? ?? ?? 06 06 09 17 58 06 8e 69 5d 91 59 20 00 01 00 00 58 20 00 01 00 00 5d d2 9c 09 17 58 1e 2d 50 26 09 6a 06 8e 69 17 59 6a 07 17 58 6e 5a 31}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1458,6 +1521,7 @@ rule Trojan_MSIL_Quasar_MBEH_2147895192_0
         $x_1_5 = "RijndaelManaged" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1480,6 +1544,7 @@ rule Trojan_MSIL_Quasar_ABNS_2147896329_0
         $x_1_2 = "AnlfFpnimheea" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1502,6 +1567,7 @@ rule Trojan_MSIL_Quasar_NQA_2147896732_0
         $x_5_2 = {02 7b 45 00 00 04 02 02 7b ?? 00 00 04 03 28 ?? 00 00 06 6f ?? 00 00 0a 02 7b ?? 00 00 04 6f ?? 00 00 0a 17}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1524,6 +1590,7 @@ rule Trojan_MSIL_Quasar_NQA_2147896732_1
         $x_1_2 = "c2vahcfi" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1545,6 +1612,7 @@ rule Trojan_MSIL_Quasar_PSQV_2147897151_0
         $x_2_1 = {7e a6 00 00 04 08 6f ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 7e a6 00 00 04 72 d6 19 00 70 72 de 19 00 70 72 ec 19 00 70 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 00 7e a6 00 00 04 6f 83 00 00 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1566,6 +1634,7 @@ rule Trojan_MSIL_Quasar_MG_2147899607_0
         $x_1_1 = {06 08 8f 26 00 00 01 25 47 07 08 07 8e 69 5d 91 61 d2 52 08 17 58 0c 08 06 8e 69 32 e3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1587,6 +1656,7 @@ rule Trojan_MSIL_Quasar_XZ_2147904065_0
         $x_1_1 = {11 05 11 0a 74 40 00 00 1b 11 0c 11 07 58 11 09 59 93 61 11 0b 74 40 00 00 1b 11 09 11 0c 58 1f 11 58 11 08 5d 93 61}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1609,6 +1679,7 @@ rule Trojan_MSIL_Quasar_ASER_2147906675_0
         $x_2_2 = "C:\\SELF.EXE" wide //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1631,6 +1702,7 @@ rule Trojan_MSIL_Quasar_AQA_2147930874_0
         $x_1_2 = "45.83.244.141" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1656,6 +1728,7 @@ rule Trojan_MSIL_Quasar_BK_2147931309_0
         $x_1_5 = "Cant Rename The Victim" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1677,6 +1750,7 @@ rule Trojan_MSIL_Quasar_SWA_2147935626_0
         $x_2_1 = {02 7b 05 00 00 04 06 8f 03 00 00 02 03 28 10 00 00 06 0d 06 17 62 0a 06 09 58 0a 07 09 08 1f 1f 5f 62 60 0b 08 17 58 0c 08 02 7b 06 00 00 04 32 cf}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1698,6 +1772,7 @@ rule Trojan_MSIL_Quasar_BSA_2147935701_0
         $x_10_1 = {2e 00 64 00 69 00 73 00 63 00 6f 00 72 00 64 00 61 00 70 00 70 00 2e 00 63 00 6f 00 6d 00 2f ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 36 00 2f 00 66 00 69 00 78 00 2d 00 43 00 68 00 65 00 61 00 74 00 5f 00 4c 00 6f 00 61 00 64 00 65 00 72 00 2e 00 62 00 61 00 74}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1719,6 +1794,7 @@ rule Trojan_MSIL_Quasar_PZMZ_2147937212_0
         $x_3_1 = {0b 1e 8d 10 00 00 01 0c 07 28 10 00 00 0a 03 6f 11 00 00 0a 6f 12 00 00 0a 0d 09 16 08 16 1e 28 13 00 00 0a 06 08 6f 14 00 00 0a 06 18 6f 15 00 00 0a 06 18 6f 16 00 00 0a 06 6f 17 00 00 0a 13 04 02 28 18 00 00 0a 13 05 11 04 11 05 16 11 05 8e 69 6f 19 00 00 0a 13 06 28 10 00 00 0a 11 06 6f 1a 00 00 0a 13 07 dd 3a 00 00 00}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1740,6 +1816,7 @@ rule Trojan_MSIL_Quasar_AUQR_2147940001_0
         $x_1_1 = {0b 06 07 28 ?? 02 00 0a 28 ?? 02 00 0a 0c 06 28 ?? 02 00 0a 3a 1a 00 00 00 06 28 ?? 03 00 0a 26 06 73 ?? 03 00 0a 25 6f ?? 04 00 0a 18 60 6f ?? 04 00 0a 08 28 ?? 02 00 0a 3a 0e 00 00 00 07 08 28 ?? 03 00 0a 08 18 28}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1762,6 +1839,7 @@ rule Trojan_MSIL_Quasar_AUQ_2147944516_0
         $x_5_2 = "193.151.108.34" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1783,6 +1861,7 @@ rule Trojan_MSIL_Quasar_AQI_2147944751_0
         $x_1_1 = {13 12 2b 23 11 11 11 12 9a 13 13 00 11 13 28 ?? ?? ?? 0a 13 14 11 14 2c 07 00 07 17 58 0b 2b 0f 00 11 12 17 58 13 12 11 12 11 11 8e 69}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

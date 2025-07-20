@@ -19,6 +19,7 @@ rule Ransom_MSIL_Teardrop_AA_2147895897_0
         $x_1_4 = "Var0Exploit" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

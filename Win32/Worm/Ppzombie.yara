@@ -18,6 +18,7 @@ rule Worm_Win32_Ppzombie_A_2147642695_0
         $x_1_4 = {00 25 73 5c 49 50 43 24 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

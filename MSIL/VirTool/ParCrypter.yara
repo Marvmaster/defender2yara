@@ -19,6 +19,7 @@ rule VirTool_MSIL_ParCrypter_A_2147695691_0
         $x_1_5 = "{1},explorer.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

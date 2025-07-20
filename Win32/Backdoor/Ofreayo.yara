@@ -24,6 +24,7 @@ rule Backdoor_Win32_Ofreayo_A_2147636707_0
         $x_1_10 = "File was Downloaded & Executed!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((6 of ($x_1_*))) or
             ((1 of ($x_5_*) and 1 of ($x_1_*))) or

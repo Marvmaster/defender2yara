@@ -19,6 +19,7 @@ rule Trojan_Win64_Sirefef_A_2147646728_0
         $x_1_5 = "x64\\release\\droper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -65,6 +66,7 @@ rule Trojan_Win64_Sirefef_B_2147646729_0
         $x_1_3 = "x64\\release\\InCSRSS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -112,6 +114,7 @@ rule Trojan_Win64_Sirefef_C_2147651095_0
         $x_3_6 = {74 18 8b 12 81 ea 0b 01 00 00 74 4f 83 fa 01 75 09 48 8b 49 10 e8 5a fe ff ff}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
@@ -167,6 +170,7 @@ rule Trojan_Win64_Sirefef_D_2147651096_0
         $x_2_3 = {68 69 74 3f 74 35 32 2e 36 3b 72 68 74 74 70 3a 2f 2f 25 75 3b 73 25 75 2a 25 75 2a 25 75 3b 75 2f 25 75 3b 30 2e 25 75 25 75 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_1_*))) or
             ((1 of ($x_2_*))) or
@@ -219,6 +223,7 @@ rule Trojan_Win64_Sirefef_E_2147651097_0
         $x_1_3 = {53 00 79 00 73 00 74 00 65 00 6d 00 52 00 6f 00 6f 00 74 00 3d 00 00 00 16 00 18 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -264,6 +269,7 @@ rule Trojan_Win64_Sirefef_F_2147651196_0
         $x_1_4 = "%sU\\%08x.@" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -314,6 +320,7 @@ rule Trojan_Win64_Sirefef_G_2147651448_0
         $x_1_3 = {49 6e 43 53 52 53 53 2e 64 6c 6c 00 43 6f 6e 53}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -361,6 +368,7 @@ rule Trojan_Win64_Sirefef_H_2147651603_0
         $x_1_6 = {81 7b 14 4c 74 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -416,6 +424,7 @@ rule Trojan_Win64_Sirefef_K_2147652163_0
         $x_1_5 = "GET /%u?w=%u&i=%u&v=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_10_*))) or
             (all of ($x*))
@@ -468,6 +477,7 @@ rule Trojan_Win64_Sirefef_L_2147652733_0
         $x_1_3 = {81 7f 54 7f 00 00 01 74}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -520,6 +530,7 @@ rule Trojan_Win64_Sirefef_M_2147653230_0
         $x_2_11 = "IopFailZeroAccessCreate" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or
@@ -580,6 +591,7 @@ rule Trojan_Win64_Sirefef_N_2147653785_0
         $x_1_2 = "%wZ\\Software\\%08x" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -623,6 +635,7 @@ rule Trojan_Win64_Sirefef_O_2147654062_0
         $x_1_3 = {48 8b 16 8b 5f 10 8b 07 48 03 da 48 03 c2 48 8b 08 48 85 c9 0f 84 ?? ?? 00 00 48 bf 00 00 00 00 00 00 00 80 48 85 cf 75 ?? 48 8d 74 0a 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -666,6 +679,7 @@ rule Trojan_Win64_Sirefef_P_2147654466_0
         $x_1_2 = {49 4e 42 52 36 34 2e 64 6c 6c 00 41 63 63 65 70}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -708,6 +722,7 @@ rule Trojan_Win64_Sirefef_Y_2147655285_0
         $x_1_2 = "p2p.64.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -749,6 +764,7 @@ rule Trojan_Win64_Sirefef_V_2147655286_0
         $x_1_1 = {48 03 d8 8b 43 08 0d 20 20 20 00 3d 60 60 60 00 74 21 3d 63 66 67 00 74 0c 3d 67 6f 69 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -791,6 +807,7 @@ rule Trojan_Win64_Sirefef_W_2147655287_0
         $x_1_3 = "81D05F9A-5288-" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -834,6 +851,7 @@ rule Trojan_Win64_Sirefef_X_2147655288_0
         $x_1_2 = "\\systemroot\\assembly\\GAC_32\\Desktop.ini" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -877,6 +895,7 @@ rule Trojan_Win64_Sirefef_AA_2147658112_0
         $x_1_3 = "/za.cer" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -920,6 +939,7 @@ rule Trojan_Win64_Sirefef_AB_2147658655_0
         $x_1_2 = {48 89 04 24 49 c7 c0 00 80 00 00 48 33 d2 48 b9 ?? ?? ?? ?? ?? ?? ?? ?? ff 25}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -962,6 +982,7 @@ rule Trojan_Win64_Sirefef_AG_2147664356_0
         $x_1_2 = {c7 47 30 63 6e 63 74 48 89 47 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1004,6 +1025,7 @@ rule Trojan_Win64_Sirefef_AI_2147680079_0
         $x_1_2 = {33 c0 48 89 07 48 89 47 08 48 89 47 10 48 89 47 18 c7 47 30 63 6e 63 74 48 89 47 28}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1026,6 +1048,7 @@ rule Trojan_Win64_Sirefef_AK_2147682150_0
         $x_10_3 = {89 46 10 b8 47 4e 4f 4c 31 06 d1 c0 [0-4] 83 c2 ff 75}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -1050,6 +1073,7 @@ rule Trojan_Win64_Sirefef_AL_2147682374_0
         $x_1_2 = "800000cb.@" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1071,6 +1095,7 @@ rule Trojan_Win64_Sirefef_AN_2147682773_0
         $x_1_2 = {ba 14 00 00 00 33 c9 ff 15 ?? ?? ?? ?? b9 08 00 00 00 48 8b d8 48 85 c0 74 0f 83 60 08 00 c7 00 01 00 00 00 89 48 04 eb 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1091,6 +1116,7 @@ rule Trojan_Win64_Sirefef_AO_2147683234_0
         $x_1_1 = {0f b7 73 06 44 0f b7 5b 14 41 3b f6 74 23 49 8d 7c 1b 2c 8b 17 8b 4f ?? 44 8b 47 ?? 48 03 55 10 49 03 cd e8 ?? ?? ?? ?? 48 83 c7 28 41 03 f7 75 e2 48 8b bd b0 00 00 00 4c 8d 4d 00 41 b8 05 00 00 00 48 2b 7b 30 b2 01 49 8b cd ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1111,6 +1137,7 @@ rule Trojan_Win64_Sirefef_AP_2147683235_0
         $x_1_1 = {44 0f b7 63 06 44 0f b7 5b 14 45 85 e4 74 24 49 8d 7c 1b 2c 8b 17 8b 4f f8 44 8b 47 fc 48 03 55 00 48 03 ce e8 ?? ?? ?? ?? 48 83 c7 28 41 83 c4 ff 75 e1 48 8b 55 ?? 48 8b ce 48 2b 53 30 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1132,6 +1159,7 @@ rule Trojan_Win64_Sirefef_AQ_2147683626_0
         $x_1_2 = {c7 44 24 28 40 00 00 00 66 89 44 24 68 c7 44 24 60 02 00 10 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

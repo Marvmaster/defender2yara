@@ -22,6 +22,7 @@ rule TrojanDownloader_Win32_Reconyc_BT_2147830941_0
         $x_1_7 = "bind source file is not exited!" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -20,6 +20,7 @@ rule Ransom_Win64_CONTI_DB_2147770353_0
         $x_1_5 = ".onion" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

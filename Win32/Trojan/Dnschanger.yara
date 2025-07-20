@@ -20,6 +20,7 @@ rule Trojan_Win32_Dnschanger_L_2147630737_0
         $x_1_6 = "NET STOP \"%S\"" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_3_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -47,6 +48,7 @@ rule Trojan_Win32_Dnschanger_M_2147649618_0
         $x_4_5 = {59 33 c0 8d bd ?? ?? ?? ff 80 a5 ?? ?? ?? ?? ?? f3 ab 66 ab aa 6a 3f 33 c0 59 8d bd ?? ?? ?? ff f3 ab 8b 35 ?? ?? ?? 00 68 ?? ?? ?? 00 66 ab aa 8b 7d 0c 8d 85 ?? ?? ?? ff 50 89 7d ?? ff ?? 8d 85 ?? ?? ?? ff 50 8d 85 ?? ?? ?? ff 68 ?? ?? ?? 00 50 ff 15}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_4_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -74,6 +76,7 @@ rule Trojan_Win32_Dnschanger_AM_2147650746_0
         $x_1_5 = ".SetDNSServerSearchOrder" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 2 of ($x_2_*))) or
@@ -103,6 +106,7 @@ rule Trojan_Win32_Dnschanger_AN_2147658676_0
         $x_6_6 = "winner!" wide //weight: 6
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_6_*) and 3 of ($x_1_*))) or
             (all of ($x*))

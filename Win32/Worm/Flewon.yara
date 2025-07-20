@@ -23,6 +23,7 @@ rule Worm_Win32_Flewon_B_2147597784_0
         $x_5_9 = "CPQEASYBTTN" wide //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 1 of ($x_11_*) and 6 of ($x_5_*))) or
             ((1 of ($x_100_*) and 1 of ($x_11_*) and 1 of ($x_10_*) and 4 of ($x_5_*))) or

@@ -26,6 +26,7 @@ rule Backdoor_Win32_Nucleroot_A_2147583607_0
         $x_1_11 = "FygTCleaner.exe;Trojanwall.exe;iparmor.exe;mmsk.exe;adam.exe;IceSword.exe;StartUpManager.exe;RmvTrjan.exe;ProcessJudger" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -55,6 +56,7 @@ rule Backdoor_Win32_Nucleroot_D_2147621345_0
         $x_1_4 = {89 4d fc c7 45 f8 ?? ?? ?? ?? c7 45 f4 ?? ?? ?? ?? c7 45 f0 ?? ?? ?? ?? c7 45 ec ?? ?? ?? ?? 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? e8 ?? ?? 00 00 83 c4 08 89 45 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

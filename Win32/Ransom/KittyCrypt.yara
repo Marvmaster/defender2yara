@@ -19,6 +19,7 @@ rule Ransom_Win32_KittyCrypt_CM_2147768891_0
         $x_1_4 = "/C ping 127.0.0.1 & del %s" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_Win32_KittyCrypt_PA_2147774154_0
         $x_3_5 = "All your fileservers, HyperV infrastructure and backups have been encrypted!" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

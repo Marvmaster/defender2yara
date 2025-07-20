@@ -16,6 +16,7 @@ rule Trojan_WinNT_Hesock_A_2147659605_0
         $x_1_2 = {8a 51 04 0f b7 c6 03 c7 30 10 8a 51 04 30 50 01 46 46 66 3b 71 10 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

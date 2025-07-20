@@ -19,6 +19,7 @@ rule Trojan_Win32_Deminnix_A_2147683368_0
         $x_1_4 = "SearchIndexer32.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -45,6 +46,7 @@ rule Trojan_Win32_Deminnix_B_2147683474_0
         $x_1_2 = "-u %USERNAME% -p %PASSWORD%" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -68,6 +70,7 @@ rule Trojan_Win32_Deminnix_A_2147683517_0
         $x_1_4 = "621B613C303F4cac94A15E59887752F0" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

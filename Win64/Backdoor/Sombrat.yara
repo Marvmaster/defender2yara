@@ -15,6 +15,7 @@ rule Backdoor_Win64_Sombrat_B_2147829952_0
         $x_1_1 = {0f af c8 89 d3 80 f3 ae 80 f2 51 f6 c1 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

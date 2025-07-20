@@ -18,6 +18,7 @@ rule Trojan_Win32_KillWin_ARAZ_2147928399_0
         $x_1_3 = "AddAtomA" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_KillWin_NH_2147929306_0
         $x_1_3 = "del %homedrive%\\NTDETECT.COM" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

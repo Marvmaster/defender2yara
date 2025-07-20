@@ -18,6 +18,7 @@ rule PWS_Win32_Blankit_A_2147690173_0
         $x_1_4 = "[Ok] Solicita" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule PWS_Win32_Blankit_B_2147690854_0
         $x_1_6 = "<|Resposta|>Senha:" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

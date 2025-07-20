@@ -16,6 +16,7 @@ rule Trojan_Win32_Convagent_DS_2147782380_0
         $x_1_1 = {b8 56 c4 08 00 01 45 fc 8b 15 24 90 48 00 03 55 08 8b 45 fc 03 45 08 8a 08 88 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_Win32_Convagent_DS_2147782380_1
         $x_1_5 = {18 17 90 9e c5 27 13 03 35 23 4f fd 71 21 c6 01 36 27 00 25 26 0b f0 89 eb 22 04 6b d9 f8 d4 94 df b0 0c 60 a8 e1 4d 82 c2 a9 0e a2 01 9b da 02 3b c4 7d 0e ad 13 4a b8 d7 9d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_Win32_Convagent_CD_2147816736_0
         $x_1_6 = "www.jjj.com" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -88,6 +91,7 @@ rule Trojan_Win32_Convagent_VP_2147819553_0
         $x_10_1 = {85 40 00 58 81 c7 ?? ?? ?? ?? 01 d7 e8 ?? ?? ?? ?? 81 c7 ?? ?? ?? ?? 31 01 01 ff 41 01 d2 39 f1 75 dc 21 fa 4a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -109,6 +113,7 @@ rule Trojan_Win32_Convagent_NV_2147819806_0
         $x_1_1 = {83 ec 04 c7 04 24 ?? ?? ?? ?? 58 89 c9 e8 ?? ?? ?? ?? 31 07 68 ?? ?? ?? ?? 5b 01 c9 81 c7 ?? ?? ?? ?? 01 c9 68 ?? ?? ?? ?? 59 39 f7 75 d2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -130,6 +135,7 @@ rule Trojan_Win32_Convagent_VW_2147819840_0
         $x_10_1 = {8b 45 f8 83 25 24 4d 46 00 00 33 c3 2b f8 89 7d e0 8b 45 d4 29 45 fc ff 4d e4 0f 85 ?? ?? ?? ?? 8b 45 e8 89 3e 5f 89 46 04 5e 5b}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -152,6 +158,7 @@ rule Trojan_Win32_Convagent_AU_2147820071_0
         $x_1_2 = {89 f8 88 44 24 ?? 83 c6 02 83 f6 ?? 89 f0 88 44 24 ?? 83 c3 03 83 f3 ?? 88 5c 24 ?? 83 c1 04 83 f1 ?? 88 4c 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -176,6 +183,7 @@ rule Trojan_Win32_Convagent_AV_2147820311_0
         $x_1_4 = "worms.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -197,6 +205,7 @@ rule Trojan_Win32_Convagent_DD_2147822832_0
         $x_2_1 = {80 3a 00 74 f8 90 ac 32 02 aa 42 e2 f3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -218,6 +227,7 @@ rule Trojan_Win32_Convagent_BD_2147822884_0
         $x_2_1 = {97 08 18 78 64 81 50 07 e8 eb 46 86 d9 01 92 86 1b 31 ac d0 40 a1 0f 90 d0 97 88 1e e0 80 c1 02 2e ac e1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -243,6 +253,7 @@ rule Trojan_Win32_Convagent_BD_2147822884_1
         $x_1_5 = "DLL ERROR" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -264,6 +275,7 @@ rule Trojan_Win32_Convagent_A_2147826892_0
         $x_1_1 = {b8 5d a0 d0 66 f7 a4 24 80 00 00 00 8b 84 24 80 00 00 00 81 ac 24 80 00 00 00 d6 8a cd 68 b8 e2 3f 96 6e f7 a4 24 80 00 00 00 8b 84 24 80 00 00 00 81 84 24 80 00 00 00 86 7c 61 60 8a 84 37 3b 2d 0b 00 88 04 0e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -286,6 +298,7 @@ rule Trojan_Win32_Convagent_XB_2147829361_0
         $x_1_2 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -307,6 +320,7 @@ rule Trojan_Win32_Convagent_EM_2147829595_0
         $x_5_1 = {8a 45 ec 88 02 c7 85 a8 fa ff ff 02 00 00 00 8b 45 ec 33 d2 b9 58 02 00 00 f7 f1 8b 85 38 fd ff ff 03 45 ec 8a 8c 15 64 fd ff ff 88 08}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -332,6 +346,7 @@ rule Trojan_Win32_Convagent_EN_2147829599_0
         $x_1_5 = "WkuxzgsX{t{jgu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -357,6 +372,7 @@ rule Trojan_Win32_Convagent_EN_2147829599_1
         $x_1_5 = "iAT5BikygwI4J7cVKAq0mWdI" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -383,6 +399,7 @@ rule Trojan_Win32_Convagent_DE_2147829954_0
         $x_1_6 = "Downloads\\%s_%s.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_4_*) and 1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -409,6 +426,7 @@ rule Trojan_Win32_Convagent_RPM_2147833024_0
         $x_1_1 = {c1 fa 04 89 c8 c1 f8 1f 29 c2 89 d0 ba 4b 00 00 00 0f af c2 89 c1 8b 55 ec 8b 45 0c 01 d0 31 cb 89 da 88 10 83 45 ec 01 eb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -435,6 +453,7 @@ rule Trojan_Win32_Convagent_AZ_2147833391_0
         $x_1_6 = "fork2.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -461,6 +480,7 @@ rule Trojan_Win32_Convagent_AG_2147833866_0
         $x_1_6 = "fork2.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -482,6 +502,7 @@ rule Trojan_Win32_Convagent_BH_2147837442_0
         $x_2_1 = {8b d0 8d 45 ec 03 c7 0f be 04 78 33 c8 0f be 44 5d ec 33 c8 8b 45 e4 0f be 44 05 ec 33 c8 8b 45 dc 33 d1 8b 4d e8 33 55 e0 31 14 08 83 c1 04 89 4d e8 3b 4d 1c 0f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -504,6 +525,7 @@ rule Trojan_Win32_Convagent_SPQ_2147837554_0
         $x_2_2 = "moyun/Data/ESP_NG.datPK" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -525,6 +547,7 @@ rule Trojan_Win32_Convagent_EC_2147842344_0
         $x_7_1 = {0f be 04 10 6b c0 31 99 b9 24 00 00 00 f7 f9 83 e0 02 8b 55 0c 03 55 fc 0f b6 0a 33 c8 8b 55 0c 03 55 fc 88 0a}  //weight: 7, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -546,6 +569,7 @@ rule Trojan_Win32_Convagent_ACG_2147843053_0
         $x_1_1 = {46 50 57 ff d3 85 c0 75 ?? 83 fe 28 0f 8e ?? ?? ?? ?? 8d 44 24 1c 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -568,6 +592,7 @@ rule Trojan_Win32_Convagent_ACG_2147843053_1
         $x_3_2 = {0f b6 44 1c 28 88 44 34 28 88 4c 1c 28 0f b6 44 34 28 8b 4c 24 0c 03 c2 8b 54 24 10 0f b6 c0 0f b6 44 04 28 32 44 39 08 88 04 0a 41}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -591,6 +616,7 @@ rule Trojan_Win32_Convagent_RPX_2147843544_0
         $x_1_3 = "KAMERsUCKSsKAMERsUCKS" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -613,6 +639,7 @@ rule Trojan_Win32_Convagent_MKV_2147847752_0
         $x_1_2 = {f7 d8 88 45 ?? 0f b6 4d ?? 81 f1 ?? ?? ?? ?? 88 4d df 0f b6 55 ?? 81 c2 ?? ?? ?? ?? 88 55 df 0f b6 45 ?? 83 f0 2b 88 45 ?? 0f b6 4d ?? 83 e9 01 88 4d ?? 8b 55 e0 8a 45 ?? 88 44 15 e4 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -634,6 +661,7 @@ rule Trojan_Win32_Convagent_PA_2147847762_0
         $x_1_1 = {f7 d2 88 95 ?? ?? ?? ?? 0f b6 85 ?? ?? ?? ?? 83 c0 ?? 88 85 ?? ?? ?? ?? 0f b6 8d ?? ?? ?? ?? c1 f9 ?? 0f b6 95 ?? ?? ?? ?? c1 e2 ?? 0b ca 88 8d ?? ?? ?? ?? 0f b6 85 ?? ?? ?? ?? 2b 85 ?? ?? ?? ?? 88 85 ?? ?? ?? ?? 0f b6 8d ?? ?? ?? ?? f7 d1 88 8d ?? ?? ?? ?? 0f b6 95 ?? ?? ?? ?? f7 da 88 95}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -655,6 +683,7 @@ rule Trojan_Win32_Convagent_GJT_2147850300_0
         $x_10_1 = {c6 45 e7 62 c6 45 db 68 c6 45 d4 38 c6 45 e9 67 c6 45 e3 52 c6 45 eb 34 c6 45 e8 48 c6 45 d9 64 c6 45 cf 49 c6 45 d7 67 c6 45 d2 38 c6 45 e5 41 c6 45 d0 34 c6 45 e2 55 c6 45 e4 4b c6 45 ea 31 c6 45 de 76 c6 45 d8 43 c6 45 d3 54 c6 45 ce 79 c6 45 d5 35 c6 45 dd 53 c6 45 cc 52 c6 45 dc 6c}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -682,6 +711,7 @@ rule Trojan_Win32_Convagent_CH_2147851797_0
         $x_1_7 = "ucast.com.cn" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -703,6 +733,7 @@ rule Trojan_Win32_Convagent_GMB_2147853100_0
         $x_10_1 = {83 c4 04 88 18 c6 40 01 00 5b c3 ?? 8b 44 24 04 b9 01 00 00 00 8b 10 83 c0 04 85 d2 7e ?? 56 8b 30 83 c0 04 0f af ce 4a 75 ?? 8b 54 24 0c 5e 89 0a c3 8b 54 24 08 89 0a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -728,6 +759,7 @@ rule Trojan_Win32_Convagent_DX_2147853398_0
         $x_1_5 = ".i816" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -754,6 +786,7 @@ rule Trojan_Win32_Convagent_GMC_2147887403_0
         $x_1_3 = "SteamService.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -776,6 +809,7 @@ rule Trojan_Win32_Convagent_MBIN_2147890022_0
         $x_1_2 = {69 77 69 6d 75 00 00 64 61 76 6f 77 75 66 61 62 6f 79 69 78 69 70 69 6a 6f 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -799,6 +833,7 @@ rule Trojan_Win32_Convagent_RPY_2147890448_0
         $x_1_3 = {8b 44 24 14 33 f3 33 c6 2b e8 89 44 24 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -821,6 +856,7 @@ rule Trojan_Win32_Convagent_AMAB_2147892065_0
         $x_5_2 = {33 cf 31 4c 24 10 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 8b 44 24 10 29 44 24 14}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -843,6 +879,7 @@ rule Trojan_Win32_Convagent_AMAA_2147892236_0
         $x_5_2 = {33 d3 31 54 24 14 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 8b 44 24 14 29 44 24 18}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -864,6 +901,7 @@ rule Trojan_Win32_Convagent_AMBA_2147892859_0
         $x_5_1 = {8d 04 13 d3 ea 89 45 ec c7 05 ?? ?? ?? ?? ee 3d ea f4 03 55 e0 8b 45 ec 31 45 fc 33 55 fc 81 3d ?? ?? ?? ?? 13 02 00 00 89 55 ec 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -895,6 +933,7 @@ rule Trojan_Win32_Convagent_DY_2147895072_0
         $x_1_11 = "134022524324422532435444435" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -917,6 +956,7 @@ rule Trojan_Win32_Convagent_RR_2147895840_0
         $x_1_2 = {50 8b 85 48 fc ff ff 50 e8 ?? ?? ?? ?? 83 f8 01 1b c0 40 88 85 f3 fe ff ff 8b 85 48 fc ff ff 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -938,6 +978,7 @@ rule Trojan_Win32_Convagent_CCEM_2147897345_0
         $x_1_1 = {0f a4 c9 0e 0f b6 82 ?? ?? ?? ?? 33 c1 88 04 14 42 0f be d2 83 fa}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -961,6 +1002,7 @@ rule Trojan_Win32_Convagent_NC_2147897373_0
         $x_1_3 = "LoadResource" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -986,6 +1028,7 @@ rule Trojan_Win32_Convagent_NC_2147897373_1
         $x_1_5 = "Harap Buka Ulang Tools Injection Atau Hubungi Seller !" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1008,6 +1051,7 @@ rule Trojan_Win32_Convagent_GAB_2147898579_0
         $x_10_2 = {00 cd 8b 48 54 0f af 4e 00 00 cd 8b 48 50}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1029,6 +1073,7 @@ rule Trojan_Win32_Convagent_GAC_2147898678_0
         $x_10_1 = {2a 01 00 00 00 43 ef 6d 00 ba ?? ?? ?? ?? be ?? ?? ?? ?? 49 b9 ?? ?? ?? ?? 00 0a 01 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1050,6 +1095,7 @@ rule Trojan_Win32_Convagent_AMAF_2147901599_0
         $x_1_1 = {56 8b 45 0c 50 0f b6 4d 08 51 e8 ?? ?? ?? ?? 83 c4 08 8b f0 8b 55 0c 52 0f b6 45 08 50 e8 ?? ?? ?? ?? 83 c4 08 25 00 00 00 f0 c1 e8 17 33 c6 5e 5d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1074,6 +1120,7 @@ rule Trojan_Win32_Convagent_YA_2147902029_0
         $x_1_4 = {8b 07 3b 45 fc 74 f2 33 c2 8b 55 fc d3 c8 8b c8 89 17 89 45 f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1095,6 +1142,7 @@ rule Trojan_Win32_Convagent_SPXX_2147903231_0
         $x_5_1 = {81 ec 04 08 00 00 a1 ?? ?? ?? ?? 33 c4 89 84 24 00 08 00 00 a1 ?? ?? ?? ?? 69 c0 ?? ?? ?? ?? 81 3d ?? ?? ?? ?? 9e 13 00 00 a3}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1116,6 +1164,7 @@ rule Trojan_Win32_Convagent_ZK_2147905465_0
         $x_1_1 = {8b c3 d3 e8 03 45 d0 89 45 f0 33 45 e4 31 45 fc 8b 45 fc 29 45 f8 81 c7 ?? ?? ?? ?? 89 7d ec 4e 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1137,6 +1186,7 @@ rule Trojan_Win32_Convagent_SPDD_2147908241_0
         $x_5_1 = {69 c9 fd 43 03 00 81 c1 c3 9e 26 00 89 0d ?? ?? ?? ?? 8a 15 ?? ?? ?? ?? 30 14 1e 83 ff 0f 75 29}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1158,6 +1208,7 @@ rule Trojan_Win32_Convagent_FIT_2147909265_0
         $x_1_1 = {83 c0 64 89 44 24 0c 83 6c 24 0c ?? 8a 54 24 0c 8b 44 24 10 30 14 30 83 ff 0f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1180,6 +1231,7 @@ rule Trojan_Win32_Convagent_ASGD_2147911700_0
         $x_1_2 = {46 81 fe cb ed 36 00 0f 8c ?? ?? ff ff 5e c9 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1202,6 +1254,7 @@ rule Trojan_Win32_Convagent_AMMI_2147911935_0
         $x_1_2 = {30 04 37 83 7d 08 0f 75 ?? 6a 2e 8d 45 cc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -1223,6 +1276,7 @@ rule Trojan_Win32_Convagent_AMMI_2147911935_1
         $x_1_1 = {d3 e8 89 44 24 ?? 8b 44 24 ?? 01 44 24 [0-5] 33 44 24 ?? 31 44 24 ?? 8b 44 24 ?? 29 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1244,6 +1298,7 @@ rule Trojan_Win32_Convagent_REV_2147914047_0
         $x_1_1 = {2b f8 8b c7 c1 e8 05 03 d7 89 45 6c 8b 85 ?? ?? ?? ?? 01 45 6c 8b f7 c1 e6 04 03 b5 b0 fd ff ff 33 f2 81 3d ?? ?? ?? ?? 03 0b 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1265,6 +1320,7 @@ rule Trojan_Win32_Convagent_SPON_2147914287_0
         $x_1_1 = {8d 45 f8 50 89 75 f8 e8 ?? ?? ?? ?? 8a 45 f8 30 04 3b 83 7d 08 0f 59 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1286,6 +1342,7 @@ rule Trojan_Win32_Convagent_MGZ_2147914570_0
         $x_1_1 = {8b 54 24 24 8b 4c 24 3c 8b 74 24 30 03 0a 0f b6 06 30 01 8b c2 8b 4c 24 2c 2b ca 83 e1 fc 81 f9 00 10 00 00 72 14}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1307,6 +1364,7 @@ rule Trojan_Win32_Convagent_AMAI_2147914751_0
         $x_1_1 = {8b 0c 86 0f b6 04 07 6a ?? 30 04 11 b9 ?? ?? ?? ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1328,6 +1386,7 @@ rule Trojan_Win32_Convagent_ZT_2147915288_0
         $x_1_1 = {8b c3 c1 e0 04 03 85 ?? ?? ?? ?? 33 c1 89 85 ?? ?? ?? ?? 8b 85 ?? ?? ?? ?? 89 85 ?? ?? ?? ?? 8b 45 ?? 31 85 ?? ?? ?? ?? 2b b5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1349,6 +1408,7 @@ rule Trojan_Win32_Convagent_AMAM_2147915704_0
         $x_1_1 = {8b 34 88 8b 4a ?? 8b 44 24 ?? 8a 04 01 b9 ?? ?? ?? ?? 30 04 2e e8 ?? ?? ?? ?? 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1370,6 +1430,7 @@ rule Trojan_Win32_Convagent_BAO_2147915840_0
         $x_1_1 = {50 89 bd f8 f7 ff ff e8 ?? ?? ?? ?? 8b 85 f4 f7 ff ff 59 8a 8d f8 f7 ff ff 03 c6 30 08 83 fb 0f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1391,6 +1452,7 @@ rule Trojan_Win32_Convagent_AMAN_2147915855_0
         $x_1_1 = {8b 34 88 8b 4a ?? 8b 44 24 ?? 8a 04 01 8b 4c 24 ?? 30 04 0e 8d 4c 24 ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1412,6 +1474,7 @@ rule Trojan_Win32_Convagent_AMAQ_2147916440_0
         $x_1_1 = {03 c6 59 8a 4d ?? 30 08 46 3b f7 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1433,6 +1496,7 @@ rule Trojan_Win32_Convagent_QAA_2147916452_0
         $x_1_1 = {c1 e8 05 89 45 70 8b 45 70 03 85 10 ff ff ff 8d 14 3b 33 c2 33 c1 29 85 1c ff ff ff 83 3d 94 58 0f 02 0c c7 05 ?? ?? ?? ?? ee 3d ea f4 89 45 70 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1454,6 +1518,7 @@ rule Trojan_Win32_Convagent_MMZ_2147919248_0
         $x_5_1 = {8b 45 f8 83 c0 46 89 45 fc 83 6d fc ?? 83 6d fc 3c 8b 45 08 8a 4d fc 03 c7 30 08 47 3b fb 7c}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1475,6 +1540,7 @@ rule Trojan_Win32_Convagent_CZ_2147919511_0
         $x_2_1 = {8b cb c1 e9 ?? 89 4c 24 ?? 8b 44 24 ?? 01 44 24 ?? 8b f3 c1 e6 ?? 03 74 24 ?? 8d 14 1f 33 f2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1497,6 +1563,7 @@ rule Trojan_Win32_Convagent_AGT_2147919895_0
         $x_2_2 = {c1 e1 04 8b 15 ?? ?? ?? 00 23 d1 89 15 ?? ?? ?? 00 33 c0 a0 ?? ?? ?? 00 8b 0d ?? ?? ?? 00 83 e1 08 0f af c1 8b 15 ?? ?? ?? 00 0b d0 89 15 ?? ?? ?? 00 e9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1522,6 +1589,7 @@ rule Trojan_Win32_Convagent_AGH_2147920402_0
         $x_2_5 = {83 ca 02 2b da 8b 15 ?? ?? ?? 00 89 1d ?? ?? ?? 00 33 db 8a 1d ?? ?? ?? 00 83 ca 01 0f af d3 33 ca 68 ?? ?? ?? 00 50 89 0d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((3 of ($x_2_*))) or
@@ -1548,6 +1616,7 @@ rule Trojan_Win32_Convagent_RZ_2147920499_0
         $x_2_1 = {8b c3 c1 e8 05 89 45 ?? 8b 45 ?? 01 45 ?? 8b 4d ?? 03 4d ?? c1 ?? 04 03 5d ?? 33 d9}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1569,6 +1638,7 @@ rule Trojan_Win32_Convagent_AMO_2147923434_0
         $x_1_1 = {03 ca 8b 45 ?? c1 e8 05 89 45 ?? 8b 45 ?? 33 f1 8b 4d ?? 03 c1 33 c6 81 3d ?? ?? ?? ?? 13 02 00 00 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1593,6 +1663,7 @@ rule Trojan_Win32_Convagent_CCJT_2147929903_0
         $x_1_4 = {17 90 f4 58 28 d2 0f 02 13 90 fa 64 90 2d e2 7d 54 03 f1 b6 73 a9 76 a6 ef 73 b6 30 8a 17 ec c1}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1614,6 +1685,7 @@ rule Trojan_Win32_Convagent_ADIA_2147929917_0
         $x_5_1 = {8b d3 c1 ea 05 03 cb 89 55 ?? 8b 45 ?? 01 45 ?? 8b c3 c1 e0 04 03 45 ?? 33 45 ?? 33 c1 2b f8 89 7d ?? 8b 45 ?? 29 45 ?? 83 6d ?? 01 0f 85}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1639,6 +1711,7 @@ rule Trojan_Win32_Convagent_NG_2147931427_0
         $x_1_5 = "Harap Buka Ulang Tools Injection Atau Hubungi Seller" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1660,6 +1733,7 @@ rule Trojan_Win32_Convagent_BAA_2147936776_0
         $x_2_1 = {0f b6 49 0e 2b c1 85 c0 74 ?? a1 ?? ?? ?? ?? 05 88 13 00 00 a3}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1681,6 +1755,7 @@ rule Trojan_Win32_Convagent_BAB_2147940674_0
         $x_2_1 = {b9 07 00 00 00 c1 c0 04 24 0f 04 41 88 06 46 e2}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1703,6 +1778,7 @@ rule Trojan_Win32_Convagent_PGC_2147940786_0
         $x_3_2 = "NYGpuKKiU7?[0kt" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1724,6 +1800,7 @@ rule Trojan_Win32_Convagent_BAC_2147941284_0
         $x_2_1 = {33 d2 8d 0c 1a 8d 42 01 42 30 01 81 fa ?? ?? ?? ?? 72}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1745,6 +1822,7 @@ rule Trojan_Win32_Convagent_EGD_2147942198_0
         $x_2_1 = {8b 4c 24 1c 8b c5 2b cd 8b fe 8a 1c 01 30 18 40 4f}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1766,6 +1844,7 @@ rule Trojan_Win32_Convagent_EGRP_2147943985_0
         $x_2_1 = {03 55 fc 0f be 02 83 f0 34 8b 4d f8 03 4d fc 88 01 ?? ?? ba 01 00 00 00 6b c2 42 8b 4d f8 c6 04 01 00 8b 45 f8 8b e5}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1787,6 +1866,7 @@ rule Trojan_Win32_Convagent_EUHE_2147943988_0
         $x_2_1 = {c1 e9 05 03 4d d4 33 d1 8b 45 e0 2b c2 89 45 e0}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1808,6 +1888,7 @@ rule Trojan_Win32_Convagent_BAD_2147944384_0
         $x_2_1 = {0f b6 45 fe 03 c2 88 45 ?? 0f b6 4d ?? 8b 55 ?? 2b d1 89 55 ?? 0f b6 45 ?? 03 05}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

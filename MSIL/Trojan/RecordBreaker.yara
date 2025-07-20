@@ -21,6 +21,7 @@ rule Trojan_MSIL_RecordBreaker_RDA_2147835124_0
         $x_2_6 = {11 07 07 03 07 91 09 61 d2 9c}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule Trojan_MSIL_RecordBreaker_RDC_2147836250_0
         $x_2_2 = {e0 4a fe 0c 04 00 fe ?? ?? ?? 20 01 00 00 00 59 8f ?? ?? ?? ?? e0 4a 61 54 fe ?? ?? ?? fe ?? ?? ?? 20 02 00 00 00 59 20 00 00 00 00 9c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -67,6 +69,7 @@ rule Trojan_MSIL_RecordBreaker_A_2147838238_0
         $x_2_4 = {20 e8 03 00 00 28 ?? 00 00 0a 06 17 58 0a}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_MSIL_RecordBreaker_RDE_2147842953_0
         $x_1_3 = "GetProcAddress" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -111,6 +115,7 @@ rule Trojan_MSIL_RecordBreaker_RDH_2147896725_0
         $x_2_1 = {e0 4a 61 54 fe 0c 01 00 fe 0c 00 00 20 02 00 00 00 59 20 00 00 00 00 9c fe 0c 00 00 20 01 00 00 00 59 fe 0e 00 00}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -135,6 +140,7 @@ rule Trojan_MSIL_RecordBreaker_TWAA_2147918430_0
         $x_1_4 = "FromBase64String" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +162,7 @@ rule Trojan_MSIL_RecordBreaker_RDM_2147921740_0
         $x_2_1 = {28 32 00 00 0a a2 25 18 18 8c 49 00 00 01 a2 25 19 17 8d 17 00 00 01 25 16}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -178,6 +185,7 @@ rule Trojan_MSIL_RecordBreaker_NIT_2147923669_0
         $x_2_2 = {72 0b 21 01 70 7e 31 00 00 0a 28 ?? 00 00 0a 72 13 21 01 70 72 19 21 01 70 72 1d 21 01 70 28 ?? 00 00 0a 72 21 21 01 70 72 25 21 01 70 6f ?? 00 00 0a 72 29 21 01 70 72 3d 21 01 70 72 4f 21 01 70 28 ?? 00 00 0a 28 ?? 00 00 0a 28 ?? 00 00 0a 13 a1 12 a1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

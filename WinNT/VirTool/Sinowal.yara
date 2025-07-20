@@ -17,6 +17,7 @@ rule VirTool_WinNT_Sinowal_A_2147599875_0
         $x_1_3 = {68 70 53 74 75 ff 74 24 08 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule VirTool_WinNT_Sinowal_C_2147602533_0
         $x_1_3 = {68 70 53 74 75 ff 74 24 08 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule VirTool_WinNT_Sinowal_D_2147606894_0
         $x_1_3 = {68 70 53 74 75 ff 74 24 08 6a 00 ff 15}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -82,6 +85,7 @@ rule VirTool_WinNT_Sinowal_E_2147623421_0
         $x_1_2 = {b8 aa aa aa aa 8d 7d f0 ab 56 ff 75 fc ab}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -107,6 +111,7 @@ rule VirTool_WinNT_Sinowal_F_2147624381_0
         $x_1_6 = {0f 1f 40 00 9d}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -134,6 +139,7 @@ rule VirTool_WinNT_Sinowal_G_2147628675_0
         $x_1_8 = {8b 45 08 89 45 fc 66 c7 45 f0 18 00 66 c7 45 f2 1a 00 c7 45 f4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((7 of ($x_1_*))) or
             ((1 of ($x_6_*) and 1 of ($x_1_*))) or
@@ -161,6 +167,7 @@ rule VirTool_WinNT_Sinowal_H_2147630216_0
         $x_1_4 = {53 5b 2b db 81 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
@@ -188,6 +195,7 @@ rule VirTool_WinNT_Sinowal_I_2147644814_0
         $x_1_4 = {ff 75 0c 58 ff 50 04 ff 75 08 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -210,6 +218,7 @@ rule VirTool_WinNT_Sinowal_J_2147646765_0
         $x_1_3 = {83 7d 08 00 75 07 32 c0 e9 ?? ?? ?? ?? 8b 45 f0 0f b7 00 3d 4d 5a 00 00 74 07 32 c0 e9 ?? ?? ?? ?? 8b 45 f0 8b 4d 08 03 48 3c 89 4d ec 8b 45 ec 81 38 50 45 00 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -232,6 +241,7 @@ rule VirTool_WinNT_Sinowal_K_2147680437_0
         $x_1_3 = {81 38 30 00 68 69 75 02 eb 02}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

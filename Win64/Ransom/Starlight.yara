@@ -20,6 +20,7 @@ rule Ransom_Win64_Starlight_A_2147917227_0
         $x_1_6 = "All the files in your computer has been encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -48,6 +49,7 @@ rule Ransom_Win64_Starlight_DA_2147917249_0
         $x_1_8 = "GetSystemTimeAsFileTime" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_50_*) and 5 of ($x_1_*))) or
             ((2 of ($x_50_*))) or

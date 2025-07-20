@@ -17,6 +17,7 @@ rule Trojan_Win32_Expiro_Z_2147923634_0
         $x_1_2 = {8d 4c 24 04 83 e4 f0 31 c0 ff 71 fc 55 89 e5 57 56 8d 55 a4 53 89 d7 51 b9 11 00 00 00 83 ec 78}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

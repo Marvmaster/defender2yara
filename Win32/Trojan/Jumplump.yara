@@ -21,6 +21,7 @@ rule Trojan_Win32_Jumplump_A_2147788463_0
         $x_1_6 = {41 bf 08 87 1d 60}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Trojan_Win32_Jumplump_F_2147826453_0
         $x_1_4 = {83 fa 01 e9 0f 85 ?? ?? ?? ?? e9 41 54 e9 41 57 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -75,6 +77,7 @@ rule Trojan_Win32_Jumplump_H_2147827823_0
         $x_1_10 = {66 3d 4d 5a e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or

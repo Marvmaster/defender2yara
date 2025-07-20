@@ -17,6 +17,7 @@ rule Worm_Win32_Shup_A_2147688826_0
         $x_1_3 = {53 55 56 57 8d 84 24 1c 01 00 00 33 f6 50 68 00 02 00 00 89 74 24 18 ff 15 3c 40 41 00 85 c0 0f 84 0f 01 00 00 8a 84 24 1c 01 00 00 84 c0 0f 84 00 01 00 00 8d 9c 34 1c 01 00 00 83 c9 ff 8b fb 33 c0 f2 ae f7 d1 49 8b e9 0f be 0b 51 45 e8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

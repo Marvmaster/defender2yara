@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Gewner_A_2147651921_0
         $x_1_4 = {83 ca fe 42 85 d2 75 0e 8a 10 2a 14 31 f6 d2 32 14 31 88 10 eb 0a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

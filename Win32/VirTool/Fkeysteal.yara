@@ -16,6 +16,7 @@ rule VirTool_Win32_Fkeysteal_A_2147627620_0
         $x_10_2 = "Firefox Password Stealer FUD - Coded By: Zack" wide //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

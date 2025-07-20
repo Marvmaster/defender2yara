@@ -18,6 +18,7 @@ rule Trojan_WinNT_GBinHost_A_2147666870_0
         $x_10_4 = {8b 45 0c 48 c6 03 01 89 7b 04 74 3d 48 74 32 48 74 27}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

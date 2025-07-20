@@ -16,6 +16,7 @@ rule TrojanSpy_Win32_Enturp_A_2147650946_0
         $x_1_2 = {43 6f 6d 41 67 74 2e 64 6c 6c 00 55 6e 48 6f 6f 6b 00 69 6e 73 74 61 6c 6c 68 6f 6f 6b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

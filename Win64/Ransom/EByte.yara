@@ -19,6 +19,7 @@ rule Ransom_Win64_EByte_AUJ_2147931956_0
         $x_1_4 = "main.setWallpaper" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

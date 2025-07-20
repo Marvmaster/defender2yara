@@ -17,6 +17,7 @@ rule Trojan_MSIL_Elmb_A_2147723623_0
         $x_1_2 = "TertiaryInvoke" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

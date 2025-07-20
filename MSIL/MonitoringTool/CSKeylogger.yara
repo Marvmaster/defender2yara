@@ -18,6 +18,7 @@ rule MonitoringTool_MSIL_CSKeylogger_205068_0
         $x_1_4 = "Hotkey to return from stealth mode : Ctrl+Alt+Shift + (F12,F11,F10)" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

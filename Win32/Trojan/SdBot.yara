@@ -18,6 +18,7 @@ rule Trojan_Win32_SdBot_ARAA_2147906068_0
         $x_3_3 = "ADgAAAC5laF9mcmFtZQA=" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

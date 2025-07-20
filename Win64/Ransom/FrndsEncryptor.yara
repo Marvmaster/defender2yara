@@ -16,6 +16,7 @@ rule Ransom_Win64_FrndsEncryptor_A_2147913877_0
         $x_1_2 = {4e 6f 72 6d 61 6c 20 46 69 6c 65 3a 20 25 73 ?? 45 52 52 4f 52 3a 20 25 64 20 21 3d 20 25 64}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

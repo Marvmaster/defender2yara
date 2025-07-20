@@ -20,6 +20,7 @@ rule Trojan_MSIL_AgentSt_J_2147742407_0
         $x_1_5 = {07 09 06 08 18 5b 06 6f 18 00 00 0a 5d 6f 19 00 00 0a 61 d1 8c 18 00 00 01 28 1a 00 00 0a 0b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

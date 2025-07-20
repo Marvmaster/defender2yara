@@ -20,6 +20,7 @@ rule Trojan_Win32_Mincese_A_2147658937_0
         $x_1_5 = {77 69 6e 73 79 73 78 2e 6c 6f 67 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

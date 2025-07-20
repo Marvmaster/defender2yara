@@ -17,6 +17,7 @@ rule Trojan_Win64_VibrantPony_A_2147919754_0
         $x_5_2 = {49 63 46 3c 44 0f be 4d af 45 8b c4 42 8b 54 30 50 41 c1 e1 03 33 c9 ff d7}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win64_VibrantPony_C_2147920292_0
         $x_1_2 = {41 8b c5 48 8d ?? ?? 88 01 03 c6 48 03 ce 83 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -59,6 +61,7 @@ rule Trojan_Win64_VibrantPony_B_2147920293_0
         $x_1_2 = {ba 0c 09 3d 00 41 8b}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

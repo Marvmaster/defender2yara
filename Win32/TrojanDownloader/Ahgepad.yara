@@ -30,6 +30,7 @@ rule TrojanDownloader_Win32_Ahgepad_A_2147616241_0
         $x_1_16 = "google.cn/webhp?client=pub-0936066011120520&prog=aff&ie=gb2312&oe=gb2312&hl=zh-cn" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_10_*) and 8 of ($x_1_*))) or
             (all of ($x*))

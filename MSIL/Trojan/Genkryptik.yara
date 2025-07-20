@@ -16,6 +16,7 @@ rule Trojan_MSIL_Genkryptik_UYRE_2147808173_0
         $x_10_1 = {2b 02 26 16 02 73 1b 00 00 0a 0a 06 28 ?? ?? ?? 06 0b dd 0d 00 00 00 06 39 06 00 00 00 06 28 ?? ?? ?? 06 dc 07 2a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win64_GoGetter_Gen_2147814405_0
         $x_100_2 = {c6 44 24 1f 03 48 8b 94 24 ?? 01 00 00 48 8b ?? ff}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -40,6 +41,7 @@ rule Trojan_Win64_GoGetter_B_2147816340_0
         $x_90_3 = {c6 44 24 1f 03 48 8b 94 24 ?? 01 00 00 48 8b ?? ff}  //weight: 90, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_90_*) and 1 of ($x_10_*))) or
             (all of ($x*))
@@ -66,6 +68,7 @@ rule Trojan_Win64_GoGetter_C_2147816341_0
         $x_90_3 = {c6 44 24 3f 03 48 8b 84 24 ?? 00 00 00 48 ?? ?? ?? e8}  //weight: 90, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_90_*) and 1 of ($x_10_*))) or
             (all of ($x*))
@@ -93,6 +96,7 @@ rule Trojan_Win64_GoGetter_D_2147816342_0
         $x_10_4 = "proxy/pkg/client.handleConnection" ascii //weight: 10
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

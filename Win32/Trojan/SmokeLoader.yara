@@ -16,6 +16,7 @@ rule Trojan_Win32_SmokeLoader_PA_2147750067_0
         $x_1_1 = {8b c3 c1 e8 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 08 8b 45 ?? 01 45 ?? 8b c3 c1 e0 04 03 c6 33 45 08 33 45 0c 50 8d 45 f4 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule Trojan_Win32_SmokeLoader_PA_2147750067_1
         $x_1_2 = {6a 40 68 00 30 00 00 68 40 14 00 00 6a 00 ff 15 ?? ?? ?? 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_SmokeLoader_PB_2147757177_0
         $x_1_5 = {6a 00 6a 00 6a 00 6a 00 ff 15 ?? ?? ?? ?? 6a 00 6a 00 8d 44 24 ?? 50 6a 00 6a 00 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win32_SmokeLoader_DX_2147760209_0
         $x_1_1 = {8b d0 d3 e2 8b c8 c1 e9 ?? 03 4d dc 03 55 e0 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 33 d1 8b 4d f4 03 c8 33 d1 8b 0d ?? ?? ?? ?? 2b fa 81 f9 ?? ?? ?? ?? 75 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -129,6 +133,7 @@ rule Trojan_Win32_SmokeLoader_DA_2147768560_0
         $x_5_1 = {01 44 24 24 8b 44 24 24 89 44 24 20 8b 4c 24 1c 8b 54 24 18 d3 ea 8b cd 8d 44 24 28 89 54 24 28 e8 [0-4] 8b 44 24 20 31 44 24 10 81 3d [0-4] 21 01 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -156,6 +161,7 @@ rule Trojan_Win32_SmokeLoader_DA_2147768560_1
         $x_1_7 = {89 44 24 fc 83 ec 04 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +187,7 @@ rule Trojan_Win32_SmokeLoader_HNU_2147809006_0
         $x_2_5 = "Cen lumagocatulesak" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -202,6 +209,7 @@ rule Trojan_Win32_SmokeLoader_RPR_2147812792_0
         $x_1_1 = {6a 00 6a 00 6a 00 e8 1f 14 00 00 68 58 14 40 00 6a 00 e8 f3 0f 00 00 6a 00 e8 9c 0f 00 00 6a 00 6a 00 e8 43 0d 00 00 e8 fe 0b 00 00 6a 00 e8 c7 0b 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -223,6 +231,7 @@ rule Trojan_Win32_SmokeLoader_RPF_2147818987_0
         $x_1_1 = {0f be d3 8d 76 01 80 eb 41 8b c2 83 c8 20 80 fb 19 8a 5e ff 0f 47 c2 33 c7 69 f8 93 01 00 01 84 db 75 dd}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -244,6 +253,7 @@ rule Trojan_Win32_SmokeLoader_DB_2147819552_0
         $x_1_1 = {8b 45 ec 8b 55 e8 01 10 8b 45 d8 03 45 ac 03 45 e8 8b 55 ec 31 02 6a 00 e8 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -274,6 +284,7 @@ rule Trojan_Win32_SmokeLoader_DB_2147819552_1
         $x_1_10 = "Guhilituyagorul pajibuzif nene vogorefituyot" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_2_*) and 4 of ($x_1_*))) or
             ((5 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -299,6 +310,7 @@ rule Trojan_Win32_SmokeLoader_DC_2147819805_0
         $x_1_1 = {8b 45 ec 8b 55 e8 01 10 8b 45 d8 03 45 b0 03 45 e8 8b 55 ec 31 02 6a 00 e8 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 6a 00 e8 ?? ?? ?? ?? 6a 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -326,6 +338,7 @@ rule Trojan_Win32_SmokeLoader_DC_2147819805_1
         $x_1_7 = "zaluloloza\\roba\\jopotih kuxacuza.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -347,6 +360,7 @@ rule Trojan_Win32_SmokeLoader_DD_2147819979_0
         $x_1_1 = {8b d8 8b 45 d8 03 45 ac 03 45 e8 03 d8 6a 00 e8 ?? ?? ?? ?? 2b d8 89 5d b0 8b 45 ec 8b 55 b0 31 10 83 45 e8 04 83 45 ec 04 8b 45 e8 3b 45 e4 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -373,6 +387,7 @@ rule Trojan_Win32_SmokeLoader_DD_2147819979_1
         $x_1_6 = "vevohidawupujucexekuxulahayozezu jasezawupuniyut" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -394,6 +409,7 @@ rule Trojan_Win32_SmokeLoader_DE_2147820029_0
         $x_1_1 = {8b 45 e8 8b 55 ec 01 02 8b 45 d8 03 45 b0 03 45 e8 89 45 b4 8b 45 b4 8b 55 ec 31 02 83 45 e8 04 83 45 ec 04 8b 45 e8 3b 45 e4 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -415,6 +431,7 @@ rule Trojan_Win32_SmokeLoader_DE_2147820029_1
         $x_5_1 = {8b 44 24 14 89 44 24 20 8b 44 24 28 01 44 24 20 8b 4c 24 1c 8b 54 24 14 d3 ea 8b 4c 24 38 8d 44 24 2c c7 05 [0-4] ee 3d ea f4 89 54 24 2c e8 [0-4] 8b 44 24 20 31 44 24 10 81 3d [0-4] e6 09 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -436,6 +453,7 @@ rule Trojan_Win32_SmokeLoader_XV_2147820119_0
         $x_10_1 = {8b 45 ec 89 45 f0 8b 45 e4 8b 4d e8 d3 e8 89 45 f8 8b 45 cc 01 45 f8 8b 7d e4 c1 e7 04 03 7d d8 33 7d f0 81 3d e4 ba 8e 00 ?? ?? ?? ?? 75 09 56 56 56 ff 15 ?? ?? ?? ?? 33 7d f8 89 35 ?? ?? ?? ?? 89 7d c8 8b 45 c8 29 45 f4 8b 45 dc 29 45 fc ff 4d e0 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -457,6 +475,7 @@ rule Trojan_Win32_SmokeLoader_DF_2147820130_0
         $x_1_1 = {8b 45 d8 03 45 b0 03 45 e8 89 45 b4 6a 00 e8 ?? ?? ?? ?? 8b d8 03 5d b4 6a 00 e8 ?? ?? ?? ?? 2b d8 8b 45 ec 31 18 83 45 e8 04 83 45 ec 04 8b 45 e8 3b 45 e4 72}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -483,6 +502,7 @@ rule Trojan_Win32_SmokeLoader_DF_2147820130_1
         $x_1_6 = "dureracobanokituwu tuwehajapug jujaxazubuweceset petecifoduvikilabonoralezobu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -504,6 +524,7 @@ rule Trojan_Win32_SmokeLoader_DG_2147824680_0
         $x_1_1 = {89 18 8b 45 c4 03 45 a4 89 45 a0 8b 45 d8 8b 00 33 45 a0 89 45 a0 6a 00 e8 ?? ?? ?? ?? 8b 5d a0 2b d8 6a 00 e8 ?? ?? ?? ?? 03 d8 8b 45 d8 89 18}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -525,6 +546,7 @@ rule Trojan_Win32_SmokeLoader_DG_2147824680_1
         $x_5_1 = {8d 0c 37 89 4c 24 20 8b 4c 24 1c 8b d6 d3 ea 8b 4c 24 38 8d 44 24 14 c7 05 [0-4] ee 3d ea f4 89 54 24 14 e8 [0-4] 8b 44 24 20 31 44 24 10 81 3d [0-4] e6 09 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -546,6 +568,7 @@ rule Trojan_Win32_SmokeLoader_NE_2147824718_0
         $x_1_1 = {89 45 0c 8b c6 c1 e8 05 89 45 08 8b 45 ec 01 45 08 8b 45 e8 83 25 ?? ?? ?? ?? ?? 03 f8 33 7d 08 33 7d 0c 89 7d 08 8b 45 08 01 05 ?? ?? ?? ?? 8b 45 08 29 45 fc 8b 4d fc c1 e1 04 03 4d f0 8b 45 fc 03 45 f8 89 45 0c 8b 55 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -568,6 +591,7 @@ rule Trojan_Win32_SmokeLoader_D_2147829816_0
         $x_2_2 = {03 ce 8b 45 0c 03 45 ?? 88 08 0f be 4d ?? 8b 55 0c 03 55 ?? 0f b6 02 2b c1 8b 4d 0c 03 4d ?? 88 01 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -591,6 +615,7 @@ rule Trojan_Win32_SmokeLoader_D_2147829816_1
         $x_1_3 = {31 7d fc 8b 45 fc 29 45 f4 81 c3 47 86 c8 61 ff 4d e8 0f 85 ?? fe ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -613,6 +638,7 @@ rule Trojan_Win32_SmokeLoader_D_2147829816_2
         $x_10_2 = {55 8b ec 51 56 be ?? ?? ?? ?? 56 c6 05 ?? ?? ?? ?? 33 c6 05 ?? ?? ?? ?? 32 c6 05 ?? ?? ?? ?? 6c c6 05 ?? ?? ?? ?? 6e c6 05 ?? ?? ?? ?? 6b c6 05 ?? ?? ?? ?? 65 c6 05 ?? ?? ?? ?? 6c c6 05 ?? ?? ?? ?? 65 c6 05 ?? ?? ?? ?? 72 c6 05 ?? ?? ?? ?? 2e c6 05 ?? ?? ?? ?? 64 c6 05 ?? ?? ?? ?? 6c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -634,6 +660,7 @@ rule Trojan_Win32_SmokeLoader_E_2147829905_0
         $x_1_1 = {89 0c 24 b8 d1 05 00 00 01 04 24 8b 14 24 8a 04 32 8b 0d ?? ?? ?? ?? 88 04 31 81 c4 04 08 00 00 c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -656,6 +683,7 @@ rule Trojan_Win32_SmokeLoader_E_2147829905_1
         $x_10_2 = {6a 73 58 6a 6d 66 a3 ?? ?? ?? ?? 58 6a 67 66 a3 ?? ?? ?? ?? 58 6a 69 66 a3 ?? ?? ?? ?? 58 6a 6c 66 a3}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -677,6 +705,7 @@ rule Trojan_Win32_SmokeLoader_N_2147830625_0
         $x_1_1 = {8b 4d f8 8d 04 13 d3 ea 89 45 ec c7 05 ?? ?? ?? ?? ee 3d ea f4 03 55 d8 8b 45 ec 31 45 fc 33 55 fc 81 3d ?? ?? ?? ?? 13 02 00 00 89 55 ec 75 14}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -702,6 +731,7 @@ rule Trojan_Win32_SmokeLoader_R_2147830854_0
         $x_1_5 = "hovocafisavexujegiselano" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_4_*))) or
@@ -727,6 +757,7 @@ rule Trojan_Win32_SmokeLoader_RPA_2147831134_0
         $x_1_1 = {8b 45 f4 ba 00 00 00 00 f7 75 14 8b 45 08 01 d0 0f b6 00 ba 7c 00 00 00 0f af c2 31 c1 8b 55 f4 8b 45 0c 01 d0 89 ca 88 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -748,6 +779,7 @@ rule Trojan_Win32_SmokeLoader_B_2147831165_0
         $x_1_1 = {d3 e8 03 c3 33 c2 31 45 fc 2b 75 fc 8b 45 d4 29 45 f8 ff 4d e8 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -806,6 +838,7 @@ rule Trojan_Win32_SmokeLoader_A_2147831528_1
         $x_1_1 = {01 44 24 24 8b 44 24 24 89 44 24 20 8b 54 24 18 8b 4c 24 1c d3 ea 89 54 24 14 8b 44 24 34 01 44 24 14 8b 44 24 20 31 44 24 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -827,6 +860,7 @@ rule Trojan_Win32_SmokeLoader_A_2147831528_2
         $x_1_1 = {8b 45 dc 01 45 fc 8b 55 f8 8b 4d f4 8b c2 d3 e8 8d 34 17 81 c7 47 86 c8 61 03 45 e4 33 c6 31 45 fc 2b 5d fc ff 4d ec 0f 85 01 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -853,6 +887,7 @@ rule Trojan_Win32_SmokeLoader_A_2147831528_3
         $x_1_6 = "f:\\dd\\vct" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -874,6 +909,7 @@ rule Trojan_Win32_SmokeLoader_FRX_2147831557_0
         $x_1_1 = {7d 1b 75 77 6b c6 25 b5 ad 1b 73 22 f4 82 29 a1 5c f2 2b 20 3b 58 48 75 b9 f4 d4 12 b2 6b db 44 52 e6 61 c0 43 fe 6a 7f ae 2f ef 7b 7d 43 16 cb}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -895,6 +931,7 @@ rule Trojan_Win32_SmokeLoader_RPJ_2147831760_0
         $x_1_1 = {8b 4c 24 28 8b d0 d3 e2 8b 4c 24 10 03 c8 c1 e8 05 03 d5 89 54 24 14 89 4c 24 1c 89 44 24 18 8b 44 24 3c 01 44 24 18}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -917,6 +954,7 @@ rule Trojan_Win32_SmokeLoader_GXW_2147832355_0
         $x_1_2 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -939,6 +977,7 @@ rule Trojan_Win32_SmokeLoader_GTB_2147832469_0
         $x_1_2 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -961,6 +1000,7 @@ rule Trojan_Win32_SmokeLoader_GTE_2147832646_0
         $x_10_2 = {01 45 fc 8b 45 fc 33 45 0c 8b 4d 08 89 01 c9 c2 0c 00 c2 08 00 55 8b ec 8b 4d 08}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -983,6 +1023,7 @@ rule Trojan_Win32_SmokeLoader_GTH_2147832724_0
         $x_10_2 = {ec 8d 0c 07 33 4d 0c 89 35 ?? ?? ?? ?? 33 4d f4 89 4d f4 8b 45 f4 01 05}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1005,6 +1046,7 @@ rule Trojan_Win32_SmokeLoader_GTI_2147832805_0
         $x_10_2 = {8b c3 c1 e8 ?? 03 45 e0 c7 05 ?? ?? ?? ?? 19 36 6b ff 33 45 0c 33 f8 89 7d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1027,6 +1069,7 @@ rule Trojan_Win32_SmokeLoader_MA_2147832891_0
         $x_5_2 = {8b 44 24 10 33 44 24 1c 89 44 24 1c 8b 4c 24 1c 89 4c 24 1c 8b 44 24 1c 29 44 24 14 8b 4c 24 14 8b c1 c1 e0 04 03 c3}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1049,6 +1092,7 @@ rule Trojan_Win32_SmokeLoader_MA_2147832891_1
         $x_5_2 = {6a 73 58 6a 6d 66 a3 ?? ?? ?? ?? 58 6a 67 66 a3 ?? ?? ?? ?? 58 6a 69 66 a3 ?? ?? ?? ?? 58 6a 6c 66 a3 ?? ?? ?? ?? 58 6a 32 66 a3 ?? ?? ?? ?? 58}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1071,6 +1115,7 @@ rule Trojan_Win32_SmokeLoader_GTL_2147832944_0
         $x_10_2 = {8b 45 0c 33 45 10 8b 4d 08 89 01 5d c2 0c 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1092,6 +1137,7 @@ rule Trojan_Win32_SmokeLoader_GTO_2147833007_0
         $x_10_1 = {8b c1 c1 e8 05 03 45 e0 c7 05 ?? ?? ?? ?? 19 36 6b ff 33 45 ?? 33 f8 89 7d f4 8b 45 f4 29 45 fc 89 75 f8 8b 45 d8 01 45 f8 2b 5d f8 ff 4d ec 89 5d e8 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1114,6 +1160,7 @@ rule Trojan_Win32_SmokeLoader_FRY_2147833247_0
         $x_1_2 = {89 7d f0 8b 45 f0 29 45 fc 89 75 f8 8b 45 e4 01 45 f8 2b 5d f8 ff 4d e8 89 5d f0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1135,6 +1182,7 @@ rule Trojan_Win32_SmokeLoader_FRS_2147833313_0
         $x_1_1 = {8b 4c 37 1c 8b 45 fc 0f b7 00 8d 04 81 8b 3c 30 83 65 e4 00 8d 45 d8 50 03 fe}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1156,6 +1204,7 @@ rule Trojan_Win32_SmokeLoader_FRP_2147833314_0
         $x_1_1 = {50 3e 50 31 50 23 50 50 50 08 d9 16 5c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1178,6 +1227,7 @@ rule Trojan_Win32_SmokeLoader_GTZ_2147833336_0
         $x_1_2 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1199,6 +1249,7 @@ rule Trojan_Win32_SmokeLoader_GI_2147833598_0
         $x_10_1 = {8b c3 c1 e8 05 03 45 e0 c7 05 ?? ?? ?? ?? 19 36 6b ff 89 45 ec 8b 45 f8 31 45 0c 8b 45 ec 31 45 0c 8b 45 0c 29 45 fc 89 75 f4 8b 45 d0 01 45 f4 2b 7d f4 ff 4d e4 8b 4d fc 89 7d e8 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1221,6 +1272,7 @@ rule Trojan_Win32_SmokeLoader_GJP_2147833944_0
         $x_1_2 = "VirtualProtect" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1242,6 +1294,7 @@ rule Trojan_Win32_SmokeLoader_FXU_2147834139_0
         $x_1_1 = {8a 84 30 3b 2d 0b 00 8b 0d ?? ?? ?? ?? 88 04 31 81 3d ?? ?? ?? ?? 92 02 00 00 75 16 68 ?? ?? ?? ?? 53 53 ff 15 ?? ?? ?? ?? 53 53 53 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1264,6 +1317,7 @@ rule Trojan_Win32_SmokeLoader_GJQ_2147834158_0
         $x_10_2 = {d3 e8 8b 4d dc c7 05 ?? ?? ?? ?? ee 3d ea f4 89 45 e8 8d 45 e8 e8 ?? ?? ?? ?? 33 7d f0 31 7d e8 83 3d ?? ?? ?? ?? 1f}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1285,6 +1339,7 @@ rule Trojan_Win32_SmokeLoader_GJV_2147834282_0
         $x_10_1 = {03 c6 d3 ee 8b 4c 24 ?? 89 44 24 ?? 8d 44 24 ?? 89 74 24 ?? c7 05 ?? ?? ?? ?? ee 3d ea f4 e8 ?? ?? ?? ?? 8b 44 24 ?? 31 44 24}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1306,6 +1361,7 @@ rule Trojan_Win32_SmokeLoader_GJV_2147834282_1
         $x_10_1 = {d3 ea 8b 4d cc 8d 45 e4 89 5d f4 89 55 e4 e8 ?? ?? ?? ?? 8b 45 e4 33 c3 31 45 e0 89 35 ?? ?? ?? ?? 8b 45 e0 29 45 fc 81 45 ?? 47 86 c8 61 ff 4d dc 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1328,6 +1384,7 @@ rule Trojan_Win32_SmokeLoader_JER_2147834498_0
         $x_1_2 = {d3 e8 8b 4d ?? 89 45 e8 8d 45 e8 e8 ?? ?? ?? ?? 8b 45 e8 33 c3 31 45 f8 89 35 ?? ?? ?? ?? 8b 45 f4 89 45 e0 8b 45 f8 29 45 e0 8b 45 e0 89 45 f4 81 45 e4 ?? ?? ?? ?? ff 4d d8 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1350,6 +1407,7 @@ rule Trojan_Win32_SmokeLoader_BS_2147834527_0
         $x_2_2 = {81 00 e1 34 ef c6 c3 01 08 c3 01 08}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1372,6 +1430,7 @@ rule Trojan_Win32_SmokeLoader_HEQ_2147834591_0
         $x_1_2 = {d3 e8 8b 4d ?? 89 45 ?? 8d 45 ?? e8 ?? ?? ?? ?? 8b 45 ?? 33 c3 31 45 ?? 89 35 ?? ?? ?? ?? 8b 45 ?? 89 45 e4 8b 45 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1393,6 +1452,7 @@ rule Trojan_Win32_SmokeLoader_SA_2147834596_0
         $x_1_1 = {d3 e8 8b 4d ?? 89 45 ?? 8d 45 ?? e8 ?? ?? ?? ?? 8b 45 ?? 33 c3 31 45 ?? 89 35 ?? ?? ?? ?? 8b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1415,6 +1475,7 @@ rule Trojan_Win32_SmokeLoader_GTA_2147834648_0
         $x_1_2 = {d3 e8 8b 4d ?? 89 45 ?? 8d 45 ?? e8 ?? ?? ?? ?? 8b 45 e4 33 c7 31 45 fc 89 35 ?? ?? ?? ?? 8b 45 f4 89 45 e8 8b 45 fc 29 45 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1437,6 +1498,7 @@ rule Trojan_Win32_SmokeLoader_BJ_2147834673_0
         $x_2_2 = {81 00 e1 34 ef c6 c3 29 08 c3 01 08 c3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1458,6 +1520,7 @@ rule Trojan_Win32_SmokeLoader_ARA_2147835015_0
         $x_10_1 = {8a 8c 30 4b 13 01 00 a1 ?? ?? ?? ?? 88 0c 30 81 fa ?? ?? ?? ?? 75 3a}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1480,6 +1543,7 @@ rule Trojan_Win32_SmokeLoader_ARA_2147835015_1
         $x_2_2 = "pagehokizalobusebiyux" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1502,6 +1566,7 @@ rule Trojan_Win32_SmokeLoader_FV_2147835069_0
         $x_1_2 = {50 8d 45 fc 50 8d 45 e4 50 8d 45 ec 50 8d 45 f4 50 53}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1524,6 +1589,7 @@ rule Trojan_Win32_SmokeLoader_FT_2147835070_0
         $x_1_2 = {8a 11 88 10 40 41 4f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1546,6 +1612,7 @@ rule Trojan_Win32_SmokeLoader_BK_2147835111_0
         $x_2_2 = {8d 0c 07 8b d0 c1 ea 05 03 55 e8 c1 e0 04 03 45 e0 89 4d fc 33 d0 33 d1 52}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1568,6 +1635,7 @@ rule Trojan_Win32_SmokeLoader_MIV_2147835237_0
         $x_1_2 = {d3 ea 89 55 f8 8b 45 ?? 01 45 f8 8b 45 f8 33 c7 31 45 fc 89 35 ?? ?? ?? ?? 8b 45 f4 89 45 ?? 8b 45 ?? 29 45 ?? 8b 45 ?? 89 45 ?? 8d 45 ?? e8 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1590,6 +1658,7 @@ rule Trojan_Win32_SmokeLoader_IPH_2147835337_0
         $x_1_2 = {8b c2 d3 e8 89 35 ?? ?? ?? ?? 03 45 ?? 89 45 ?? 33 c7 31 45 f8 8b 45 ?? 89 45 ?? 8b 45 ?? 29 45 ?? 8b 45 ?? 89 45 ?? 81 c3 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1611,6 +1680,7 @@ rule Trojan_Win32_SmokeLoader_SP_2147835406_0
         $x_5_1 = {83 c4 18 31 c0 5b c3 8d 76 00 c7 44 24 04 ff ff ff ff 8b 43 04 89 04 24 ff 15 d4 b1 42 00 83 ec 08 85 c0 74 db}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1633,6 +1703,7 @@ rule Trojan_Win32_SmokeLoader_BL_2147835492_0
         $x_2_2 = {c1 e8 05 c7 05 [0-4] 19 36 6b ff 89 45 08 8b 45 e4 01 45 08 03 f3 33 75 08 8d 45 f4 33 75 0c}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1655,6 +1726,7 @@ rule Trojan_Win32_SmokeLoader_TON_2147835499_0
         $x_1_2 = {d3 e8 89 35 ?? ?? ?? ?? 03 45 ?? 89 45 fc 33 45 ?? 31 45 ?? 8b 45 ?? 89 45 ?? 8b 45 ?? 29 45 ?? 8b 45 ?? 89 45 ?? 8b 45 ?? 29 45 ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1676,6 +1748,7 @@ rule Trojan_Win32_SmokeLoader_RE_2147835533_0
         $x_1_1 = {50 ab 0f 1b 81 6c 24 ?? 8d 1f 25 59 81 ac 24 ?? 00 00 00 e0 02 53 2c 81 ?? 24 [0-4] f0 b0 7d 6d 81 84 24 ?? 00 00 00 40 c1 58 20 81 44 24 ?? f0 98 30 35 b8 8c 6d 49 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1698,6 +1771,7 @@ rule Trojan_Win32_SmokeLoader_RE_2147835533_1
         $x_1_2 = {36 dd 96 53 81 45 ?? 38 dd 96 53 8b 55 ?? 8b 4d ?? 8b c2 d3 e0 [0-64] 8b c2 d3 e8 89 35 ?? ?? ?? ?? 03 45 ?? 89 45 ?? 33 45 ?? 31 45 f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1723,6 +1797,7 @@ rule Trojan_Win32_SmokeLoader_AD_2147835566_0
         $x_100_5 = {e8 00 00 00 00 83 c4 04 8b 74 24 fc 81 ee ?? ?? ?? ?? 01 c6 89 f7}  //weight: 100, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_100_*) and 1 of ($x_1_*))) or
             ((3 of ($x_100_*))) or
@@ -1749,6 +1824,7 @@ rule Trojan_Win32_SmokeLoader_BM_2147835575_0
         $x_2_2 = {81 00 e1 34 ef c6 c3 29 08 c3 01 08 c3}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1771,6 +1847,7 @@ rule Trojan_Win32_SmokeLoader_OGG_2147835720_0
         $x_1_2 = {d3 e8 89 55 ?? 89 3d ?? ?? ?? ?? 03 45 ?? 33 c2 31 45 fc 8b 45 ?? 89 45 e4 8b 45 fc 29 45 ?? 8b 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1793,6 +1870,7 @@ rule Trojan_Win32_SmokeLoader_NEAB_2147835725_0
         $x_10_2 = {89 45 08 8b 45 ec 01 45 08 03 f3 33 75 08 33 75 0c 89 75 e0 8b 45 e0 29 45 fc 81 45 f4 ?? ?? ?? ?? ff 4d f0 8b 45 fc 0f 85 ?? ?? ?? ?? 89 07 89 4f 04}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1815,6 +1893,7 @@ rule Trojan_Win32_SmokeLoader_ONG_2147835769_0
         $x_1_2 = {d3 ea 03 c7 89 45 ?? 03 55 ?? 8b 45 ?? 31 45 ?? 31 55 ?? 89 35 ?? ?? ?? ?? 8b 45 ?? 89 45 e4 8b 45 ?? 29 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1837,6 +1916,7 @@ rule Trojan_Win32_SmokeLoader_RTT_2147835779_0
         $x_1_2 = {c1 e8 05 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 ?? 8b 45 ?? 01 45 08 8b 45 ?? 03 f0 33 75 ?? 8d 45 ?? 33 75 ?? 56 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1858,6 +1938,7 @@ rule Trojan_Win32_SmokeLoader_AL_2147835803_0
         $x_1_1 = {d3 ea 03 c6 89 45 e8 03 55 cc 8b 45 e8 31 45 fc 31 55 fc 89 3d ?? ?? ?? ?? 8b 45 f4 89 45 e4 8b 45 fc 29 45 e4 8b 45 e4 89 45 f4 8b 45 c8 29 45 f8 ff 4d dc 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1880,6 +1961,7 @@ rule Trojan_Win32_SmokeLoader_CME_2147835860_0
         $x_1_2 = {c1 e8 05 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 31 45 ?? ff 75 ?? 8d 45 ?? 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1901,6 +1983,7 @@ rule Trojan_Win32_SmokeLoader_MF_2147836049_0
         $x_1_1 = {8b c7 c1 e8 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 31 45 ?? ff 75 ?? 8d 45 ?? 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1922,6 +2005,7 @@ rule Trojan_Win32_SmokeLoader_MZS_2147836078_0
         $x_1_1 = {d3 ea 03 45 ?? 89 45 ?? 8b 45 ?? 03 55 ?? 03 c7 89 45 ?? 8b 45 ?? 31 45 ?? 31 55 ?? 89 35 ?? ?? ?? ?? 8b 45 ?? 89 45 ?? 8b 45 ?? 29 45 ?? 8b 45 ?? 89 45 ?? 8b 45 ?? 29 45 ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1943,6 +2027,7 @@ rule Trojan_Win32_SmokeLoader_WAS_2147836237_0
         $x_1_1 = {c1 e8 05 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 ?? 8b 45 ?? 01 45 ?? ff 75 ?? 03 f3 33 75 ?? 8d 45 ?? 50 89 75 ?? e8 ?? ?? ?? ?? ff 75 ?? 8d 45 ?? 50 e8 ?? ?? ?? ?? 81 45 f8 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1964,6 +2049,7 @@ rule Trojan_Win32_SmokeLoader_MP_2147836290_0
         $x_1_1 = {55 8b ec 8b 4d 08 8b 01 89 45 08 8b 45 0c 90 01 45 08 8b 45 08 89 01 5d c2 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -1985,6 +2071,7 @@ rule Trojan_Win32_SmokeLoader_MPA_2147836327_0
         $x_1_1 = {89 45 08 8b 45 e8 01 45 08 ff 75 08 8b c3 c1 e0 04 03 c6 33 45 0c 89 45 0c 8d 45 0c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2006,6 +2093,7 @@ rule Trojan_Win32_SmokeLoader_HR_2147836417_0
         $x_1_1 = {c1 e1 04 03 cb 33 4d ?? 33 4d ?? 2b f1 89 4d ?? 89 75 ?? 8b 45 ?? 03 45 ?? 89 45 ?? 83 0d ?? ?? ?? ?? ?? 8b c6 c1 e8 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 ?? 8b 45 ?? 01 45 ?? ff 75 ?? 8b c6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2027,6 +2115,7 @@ rule Trojan_Win32_SmokeLoader_WW_2147836446_0
         $x_1_1 = {d3 ea 03 45 ?? 89 45 ?? 8b 45 ?? 03 55 ?? 03 c7 89 45 ?? 8b 45 ?? 31 45 ?? 31 55 ?? 8b 45 ?? 29 45 ?? 81 45 ec ?? ?? ?? ?? ff 4d ?? 89 35 ?? ?? ?? ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2048,6 +2137,7 @@ rule Trojan_Win32_SmokeLoader_GBC_2147836500_0
         $x_10_1 = {8b c6 d3 e0 8b 4d ?? 8b d6 d3 ea 03 45 ?? 89 45 ?? 8b 45 ?? 03 55 ?? 03 c6 89 45 ?? 8b 45 ?? 31 45 ?? 31 55 ?? 89 3d ?? ?? ?? ?? 8b 45 ?? 29 45 ?? 81 45 ?? 47 86 c8 61 ff 4d ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2070,6 +2160,7 @@ rule Trojan_Win32_SmokeLoader_JK_2147836598_0
         $x_1_2 = {55 8b ec 8b 45 ?? 8b 4d ?? 31 08 5d c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2091,6 +2182,7 @@ rule Trojan_Win32_SmokeLoader_HGK_2147836633_0
         $x_1_1 = {d3 e8 03 45 ?? 89 45 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 31 45 ?? 89 3d ?? ?? ?? ?? 8b 45 ?? 29 45 ?? 81 45 e4 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2112,6 +2204,7 @@ rule Trojan_Win32_SmokeLoader_GBH_2147836713_0
         $x_10_1 = {8b c6 d3 e0 8b 4d ?? 03 45 ?? 89 45 ?? 8b 45 ?? 03 c6 89 45 ?? 8b c6 d3 e8 03 45 ?? 89 45 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 31 45 ?? 89 3d ?? ?? ?? ?? 8b 45 ?? 29 45 ?? 8b 45 ?? 29 45 ?? ff 4d ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2133,6 +2226,7 @@ rule Trojan_Win32_SmokeLoader_GBL_2147836874_0
         $x_10_1 = {2b f0 8b c6 c1 e8 05 c7 05 ?? ?? ?? ?? 19 36 6b ff 89 45 ?? 8b 45 ?? 01 45 ?? 8b c6 c1 e0 ?? 03 45 ?? 8d 0c 32 33 c1 33 45 ?? 50 8d 45 ?? 50 e8 ?? ?? ?? ?? 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 74 ?? 81 c2 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2154,6 +2248,7 @@ rule Trojan_Win32_SmokeLoader_MI_2147837061_0
         $x_1_1 = {8b c6 c1 e8 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 ?? 8b 45 ?? 01 45 ?? 8b c6 c1 e0 ?? 03 45 ?? 8d 0c 33 33 c1 33 45 ?? 50 8d 45 ?? 50 e8 ?? ?? ?? ?? 81 c3 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2176,6 +2271,7 @@ rule Trojan_Win32_SmokeLoader_GBQ_2147837119_0
         $x_10_2 = {b1 6c b0 6d 68 ?? ?? ?? ?? c6 05 ?? ?? ?? ?? 69 c6 05 ?? ?? ?? ?? 32 c6 05 ?? ?? ?? ?? 2e c6 05 ?? ?? ?? ?? 67 88 0d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2197,6 +2293,7 @@ rule Trojan_Win32_SmokeLoader_KWL_2147837144_0
         $x_1_1 = {8b c6 c1 e0 ?? 03 45 ?? 03 de 33 c3 33 45 ?? 50 8d 45 ?? 50 e8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 8d 45 ?? 50 e8 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2218,6 +2315,7 @@ rule Trojan_Win32_SmokeLoader_GBS_2147837191_0
         $x_10_1 = {2b f8 8b c7 c1 e8 05 c7 05 ?? ?? ?? ?? 19 36 6b ff 89 45 ?? 8b 45 ?? 01 45 ?? 8b c7 c1 e0 04 03 45 ?? 8d 0c 3e 33 c1 33 45 ?? 50 8d 45 ?? 50 e8 ?? ?? ?? ?? 83 65 ?? ?? 8b 45 ?? 01 45 ?? 2b 75 ?? ff 4d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2239,6 +2337,7 @@ rule Trojan_Win32_SmokeLoader_KX_2147837205_0
         $x_1_1 = {8b c6 d3 e8 8b 4d ?? 8b de d3 e3 03 45 ?? 89 55 ?? 89 45 ?? 03 5d ?? 33 d8 33 da 89 5d ?? 33 db 89 1d ?? ?? ?? ?? 8b 45 ?? 29 45 ?? 81 45 ?? ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2260,6 +2359,7 @@ rule Trojan_Win32_SmokeLoader_KZ_2147837258_0
         $x_1_1 = {8b d6 d3 ea 8b 4d ?? 8b c6 d3 e0 03 55 ?? 89 7d ?? 89 55 ?? 03 45 ?? 33 c2 33 c7 29 45 ?? ff 4d ?? 89 45 ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2281,6 +2381,7 @@ rule Trojan_Win32_SmokeLoader_FIF_2147837403_0
         $x_1_1 = {8b c6 c1 e8 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 ?? 8b 45 ?? 01 45 ?? 83 65 ?? ?? 8b c6 c1 e0 ?? 03 45 ?? 33 45 ?? 33 c1 2b f8 8b 45 ?? 01 45 ?? 29 45 ?? 4a 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2302,6 +2403,7 @@ rule Trojan_Win32_SmokeLoader_BO_2147837488_0
         $x_2_1 = {d3 e0 8b 4d f0 03 45 d4 89 45 f8 8b 45 e8 03 c6 89 45 f4 8b c6 d3 e8 03 45 d0 89 45 fc 8b 45 f4 31 45 f8 8b 45 f8 33 45 fc 83 25 [0-4] 00 81 45 e8 47 86 c8 61 2b d8 ff 4d e0 89 45 f8 89 5d e4 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2323,6 +2425,7 @@ rule Trojan_Win32_SmokeLoader_KL_2147837489_0
         $x_1_1 = {d3 e8 03 45 d0 89 45 fc 8b 45 f4 31 45 f8 8b 45 f8 33 45 fc 83 25 0c e7 42 00 00 81 45 e8 47 86 c8 61 2b d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2344,6 +2447,7 @@ rule Trojan_Win32_SmokeLoader_FIZ_2147837521_0
         $x_1_1 = {8b c6 c1 e8 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 ?? 8b 45 ?? 01 45 ?? 8b 4d ?? 8b c6 c1 e0 ?? 03 45 ?? 03 ce 33 c1 33 45 ?? 68 ?? ?? ?? ?? 2b f8 8d 45 ?? 50 e8 ?? ?? ?? ?? 4a 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2365,6 +2469,7 @@ rule Trojan_Win32_SmokeLoader_IM_2147837654_0
         $x_1_1 = {8b c6 c1 e8 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 ?? 8b 45 ?? 01 45 ?? 8b 4d ?? 8b c6 c1 e0 ?? 03 45 ?? 03 ce 33 c1 33 45 ?? 68 ?? ?? ?? ?? 2b f8 8d 45 ?? 50 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2386,6 +2491,7 @@ rule Trojan_Win32_SmokeLoader_IJ_2147837664_0
         $x_1_1 = {03 c6 89 45 ?? 8b c6 d3 e8 03 45 ?? 89 45 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 33 45 ?? 83 25 ?? ?? ?? ?? ?? 2b d8 89 45 ?? 89 5d ?? 8b 45 ?? 29 45 ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2407,6 +2513,7 @@ rule Trojan_Win32_SmokeLoader_BP_2147837696_0
         $x_2_1 = {d3 e0 8b 4d ec 03 45 d4 89 45 f4 8b 45 fc 03 c6 89 45 f0 8b c6 d3 e8 03 45 d0 89 45 f8 8b 45 f0 31 45 f4 8b 45 f4 33 45 f8 89 1d [0-4] 29 45 e4 89 45 f4 8b 45 cc 29 45 fc ff 4d e0 0f 85}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2428,6 +2535,7 @@ rule Trojan_Win32_SmokeLoader_IW_2147837810_0
         $x_1_1 = {8b c6 c1 e8 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 ?? 8b 45 ?? 01 45 ?? 83 65 ?? ?? 8b c6 c1 e0 ?? 03 45 ?? 33 45 ?? 33 c1 2b f8 8b 45 ?? 01 45 ?? 29 45 ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2451,6 +2559,7 @@ rule Trojan_Win32_SmokeLoader_RDB_2147837814_0
         $x_1_3 = "LocalAlloc" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2472,6 +2581,7 @@ rule Trojan_Win32_SmokeLoader_XI_2147837860_0
         $x_1_1 = {8b c6 c1 e8 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 ?? 8b 45 ?? 01 45 ?? 8b 4d ?? 81 45 ?? ?? ?? ?? ?? 8b c6 c1 e0 ?? 03 45 ?? 03 ce 33 c1 33 45 ?? 2b f8 ff 4d ?? 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2493,6 +2603,7 @@ rule Trojan_Win32_SmokeLoader_XL_2147837878_0
         $x_1_1 = {8b c6 d3 e8 03 45 ?? 89 45 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 33 45 ?? 83 25 ?? ?? ?? ?? ?? 81 45 ?? ?? ?? ?? ?? 2b d8 ff 4d ?? 89 45 ?? 89 5d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2514,6 +2625,7 @@ rule Trojan_Win32_SmokeLoader_IT_2147837949_0
         $x_1_1 = {8b c6 c1 e8 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 45 ?? 8b 45 ?? 01 45 ?? 8b 4d ?? 8b c6 c1 e0 ?? 03 45 ?? 03 ce 33 c1 33 45 ?? 2b f8 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2535,6 +2647,7 @@ rule Trojan_Win32_SmokeLoader_GCG_2147838005_0
         $x_10_1 = {8b c6 c1 e8 ?? 89 45 08 8d 45 08 50 c7 05 ?? ?? ?? ?? 19 36 6b ff e8 ?? ?? ?? ?? 8b 4d ?? 8b c6 c1 e0 ?? 03 45 e8 03 ce 33 c1 33 45 08 2b f8 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 74 ?? 81 45 ?? 47 86 c8 61 ff 4d f8 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2556,6 +2669,7 @@ rule Trojan_Win32_SmokeLoader_GCJ_2147838065_0
         $x_10_1 = {8b c6 d3 e0 89 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 8b 4d ?? 03 c6 89 45 ?? 8b c6 d3 e8 03 45 ?? 89 45 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 31 45 ?? 89 1d ?? ?? ?? ?? 8b 45 ?? 29 45 ?? 8d 45 ?? e8 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2577,6 +2691,7 @@ rule Trojan_Win32_SmokeLoader_BQ_2147838107_0
         $x_2_1 = {2b f0 8b c6 c1 e8 05 89 45 08 8d 45 08 50 c7 05 [0-4] 19 36 6b ff e8 [0-4] 8b 4d fc 8b c6 c1 e0 04 03 45 e8 03 ce 33 c1 33 45 08 2b f8 81 3d [0-4] 93 00 00 00 74}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2598,6 +2713,7 @@ rule Trojan_Win32_SmokeLoader_BR_2147838122_0
         $x_2_1 = {2b f0 8b 45 fc 8d 14 30 8b c6 c1 e8 05 89 45 08 8d 45 08 50 c7 05 [0-4] 19 36 6b ff e8 [0-4] 83 65 0c 00 8b c6 c1 e0 04 03 45 e4 33 45 08 33 c2 2b f8 8b 45 e0 01 45 0c 29 45 fc ff 4d f4 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2620,6 +2736,7 @@ rule Trojan_Win32_SmokeLoader_XY_2147838163_0
         $x_1_2 = {49 28 a0 44 ?? ?? ?? 11 d9 67 31 31 31 da 39 9d ?? ?? ?? ?? 11 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2642,6 +2759,7 @@ rule Trojan_Win32_SmokeLoader_FR_2147838230_0
         $x_1_2 = "feyicujey-mividefefute-jasi92_domu.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2663,6 +2781,7 @@ rule Trojan_Win32_SmokeLoader_GCP_2147838244_0
         $x_10_1 = {8b c7 c1 e8 ?? 89 45 ?? 8d 45 ?? 50 e8 ?? ?? ?? ?? 52 8d 45 ?? 50 e8 ?? ?? ?? ?? 8b 45 ?? 33 45 ?? 83 65 ?? ?? 2b f0 8b 45 ?? 01 45 ?? 29 45 ?? ff 4d ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2684,6 +2803,7 @@ rule Trojan_Win32_SmokeLoader_IE_2147838249_0
         $x_1_1 = {8b c6 d3 e8 03 45 ?? 89 45 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 31 45 ?? 89 1d ?? ?? ?? ?? 8b 45 ?? 29 45 ?? 81 45 ?? ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2706,6 +2826,7 @@ rule Trojan_Win32_SmokeLoader_IZ_2147838250_0
         $x_1_2 = {52 8d 45 0c 50 e8 ?? ?? ?? ?? 8b 45 ?? 33 45 ?? 83 65 ?? ?? 2b f0 8b 45 ?? 01 45 ?? 29 45 ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2727,6 +2848,7 @@ rule Trojan_Win32_SmokeLoader_BT_2147838292_0
         $x_2_1 = {d3 e0 89 45 fc 8b 45 d4 01 45 fc 8b 45 f8 8b 4d ec 03 c6 89 45 e4 8b c6 d3 e8 03 45 d0 89 45 f4 8b 45 e4 31 45 fc 8b 45 f4 31 45 fc 89 1d [0-4] 8b 45 fc 29 45 f0 8b 45 cc 29 45 f8 ff 4d e0 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2748,6 +2870,7 @@ rule Trojan_Win32_SmokeLoader_MIU_2147838372_0
         $x_1_1 = {8b c6 c1 e8 ?? 89 45 ?? 8d 45 ?? 50 e8 ?? ?? ?? ?? 52 8d 45 ?? 50 e8 ?? ?? ?? ?? 8b 45 ?? 33 45 ?? 83 65 ?? ?? 2b f8 8b 45 ?? 01 45 ?? 29 45 ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2769,6 +2892,7 @@ rule Trojan_Win32_SmokeLoader_GCT_2147838398_0
         $x_10_1 = {8d 14 30 8b c6 c1 e8 05 89 45 ?? 8d 45 ?? 50 e8 ?? ?? ?? ?? 52 8d 45 ?? 50 e8 ?? ?? ?? ?? 8b 45 ?? 33 45 ?? 2b f8 8b 45 ?? 29 45 ?? ff 4d ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2790,6 +2914,7 @@ rule Trojan_Win32_SmokeLoader_BU_2147838423_0
         $x_2_1 = {01 45 ec 8b 45 ec 89 45 e4 8b 4d f0 8b c3 d3 e8 03 45 c8 89 45 f8 8b 45 e4 31 45 fc 8b 45 f8 31 45 fc 89 35 [0-4] 8b 45 fc 29 45 f4 8d 45 e0 e8 [0-4] ff 4d dc 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2811,6 +2936,7 @@ rule Trojan_Win32_SmokeLoader_BV_2147838477_0
         $x_2_1 = {01 45 f0 8b 45 f0 89 45 e8 8b 4d f4 8b c7 d3 e8 03 45 c8 89 45 f8 8b 45 e8 31 45 fc 8b 45 fc 33 45 f8 89 1d [0-4] 29 45 e0 89 45 fc 8d 45 e4 e8 [0-4] ff 4d dc 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2833,6 +2959,7 @@ rule Trojan_Win32_SmokeLoader_XZ_2147838546_0
         $x_1_2 = {33 31 b8 d7 ?? ?? ?? 39 d2 3c ?? d2 cc 31 11 d2 3c 39 0b 55 ?? d4 ?? ff 9c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2854,6 +2981,7 @@ rule Trojan_Win32_SmokeLoader_RR_2147838547_0
         $x_1_1 = {8b c7 d3 e8 03 45 ?? 89 45 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 33 45 ?? 83 25 ?? ?? ?? ?? ?? 2b d8 89 45 ?? 8d 45 ?? 89 5d ?? e8 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2875,6 +3003,7 @@ rule Trojan_Win32_SmokeLoader_MJO_2147838676_0
         $x_1_1 = {8b c6 c1 e0 ?? 03 45 ?? 8d 0c 33 33 c1 33 45 ?? 81 c3 ?? ?? ?? ?? 2b f8 ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2896,6 +3025,7 @@ rule Trojan_Win32_SmokeLoader_CB_2147838698_0
         $x_5_1 = {8b 45 78 8b 4d 7c 31 08 83 c5 70 c9 c2 08 00 55 8b ec 8b 4d 08 8b 01 89 45 08 8b 45 0c 01 45 08}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2918,6 +3048,7 @@ rule Trojan_Win32_SmokeLoader_CB_2147838698_1
         $x_2_2 = {8b 4c 24 20 8b c6 d3 e8 8b 4c 24 1c 31 4c 24 10 03 c3 81 3d [0-4] 21 01 00 00 89 44 24 14 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2939,6 +3070,7 @@ rule Trojan_Win32_SmokeLoader_QQ_2147838791_0
         $x_1_1 = {8b c6 c1 e8 ?? 89 45 ?? 8d 45 ?? 50 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? e8 ?? ?? ?? ?? 8d 04 33 33 45 ?? 81 c3 ?? ?? ?? ?? 31 45 ?? 2b 7d ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2960,6 +3092,7 @@ rule Trojan_Win32_SmokeLoader_BWM_2147838863_0
         $x_1_1 = {8b c7 d3 e8 89 35 ?? ?? ?? ?? 03 45 ?? 89 45 ?? 33 45 ?? 31 45 ?? 8b 45 ?? 29 45 ?? 81 45 e0 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -2981,6 +3114,7 @@ rule Trojan_Win32_SmokeLoader_UY_2147838881_0
         $x_1_1 = {ae 00 c6 c6 c6 ?? 2d ?? ?? ?? ?? 32 d7 2e 20 38 39 39 5f 28 00 e5 ?? a2 ?? ?? ?? ?? 02 c2 2d ?? ?? ?? ?? 34 ?? 2d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3002,6 +3136,7 @@ rule Trojan_Win32_SmokeLoader_GDC_2147838889_0
         $x_10_1 = {8b c7 d3 e0 89 45 ?? 8b 45 ?? 01 45 ?? 89 75 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? ?? 01 45 ?? 8b 45 ?? 89 45 ?? 8b 4d ?? 8b c7 d3 e8 89 35 ?? ?? ?? ?? 03 45 ?? 89 45 ?? 33 45 ?? 31 45 ?? 8b 45 ?? 29 45 ?? 81 45 ?? 47 86 c8 61 ff 4d ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3023,6 +3158,7 @@ rule Trojan_Win32_SmokeLoader_KI_2147838906_0
         $x_1_1 = {8b c7 d3 e8 89 35 ?? ?? ?? ?? 03 45 ?? 89 45 ?? 33 45 ?? 31 45 ?? 8b 45 ?? 29 45 ?? 8b 45 ?? 29 45 ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3044,6 +3180,7 @@ rule Trojan_Win32_SmokeLoader_BW_2147838950_0
         $x_2_1 = {c1 e8 05 03 45 e8 c7 05 [0-4] 19 36 6b ff 89 45 0c 8b 45 fc 03 c6 50 8d 45 08 50 e8 [0-4] 8b 45 08 33 45 0c 68 b9 79 37 9e 2b f8 8d 45 fc 50 e8 [0-4] ff 4d f8 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3065,6 +3202,7 @@ rule Trojan_Win32_SmokeLoader_KY_2147838975_0
         $x_1_1 = {d3 e8 8b 4d ?? 89 35 ?? ?? ?? ?? 03 45 ?? 89 45 ?? 33 45 ?? 31 45 ?? 2b 4d ?? 89 4d ?? 8b 45 ?? 29 45 ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3086,6 +3224,7 @@ rule Trojan_Win32_SmokeLoader_CCM_2147838992_0
         $x_1_1 = {d3 e8 03 45 ?? 89 45 ?? 33 45 ?? 31 45 ?? 2b 5d ?? 89 5d ?? 8b 45 ?? 29 45 ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3108,6 +3247,7 @@ rule Trojan_Win32_SmokeLoader_MMZ_2147839067_0
         $x_10_2 = {43 16 2a c1 1c ?? 1d ?? ?? ?? ?? 55 68 ?? ?? ?? ?? 0e 3c ?? 2b 6c 9c ?? 30 3a e1 1f 00 30 17 2c}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3129,6 +3269,7 @@ rule Trojan_Win32_SmokeLoader_GDK_2147839106_0
         $x_10_1 = {8b c7 d3 e8 89 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 33 45 ?? 83 25 ?? ?? ?? ?? ?? 31 45 ?? 2b 5d ?? 81 45 ?? 47 86 c8 61 ff 4d ?? 89 5d ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3151,6 +3292,7 @@ rule Trojan_Win32_SmokeLoader_GDL_2147839183_0
         $x_10_2 = {8b c7 d3 e8 89 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 33 45 ?? 83 25 ?? ?? ?? ?? 00 31 45 ?? 2b 5d ?? 89 5d ?? 8b 45 ?? 29 45 ?? ff 4d ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -3173,6 +3315,7 @@ rule Trojan_Win32_SmokeLoader_RDC_2147839235_0
         $x_2_2 = {8a 84 30 3b 2d 0b 00 8b 0d ?? ?? ?? ?? 88 04 31 81 3d ?? ?? ?? ?? 92 02 00 00 75 08 57 57}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3195,6 +3338,7 @@ rule Trojan_Win32_SmokeLoader_RDD_2147839236_0
         $x_2_2 = {8b c7 d3 e8 89 45 fc 8b 45 cc 01 45 fc 8b 45 fc 33 45 e8 83 25 ?? ?? ?? ?? 00 31 45 f8 2b 5d f8 81 45 e4 ?? ?? ?? ?? ff 4d dc 89 5d e0}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3217,6 +3361,7 @@ rule Trojan_Win32_SmokeLoader_GDM_2147839255_0
         $x_10_2 = {8b c3 c1 e0 ?? 89 5d ?? 89 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 03 45 ?? 89 45 ?? ff 75 ?? 83 0d ?? ?? ?? ?? ?? 8b c3 c1 e8 ?? 03 45 ?? c7 05 ?? ?? ?? ?? 19 36 6b ff}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3238,6 +3383,7 @@ rule Trojan_Win32_SmokeLoader_WSX_2147839268_0
         $x_1_1 = {8b c6 d3 e8 8b 4d ?? 89 45 ?? 8d 45 ?? e8 ?? ?? ?? ?? 8b 45 ?? 33 45 ?? 89 1d ?? ?? ?? ?? 31 45 ?? 8b 45 ?? 29 45 ?? 81 45 ?? ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3259,6 +3405,7 @@ rule Trojan_Win32_SmokeLoader_BX_2147839321_0
         $x_2_1 = {2b f8 89 45 0c 8b c7 c1 e0 04 89 7d e8 89 45 08 8b 45 e4 01 45 08 8b 45 e8 03 45 fc 89 45 f8 83 0d [0-4] ff 8b c7 c1 e8 05 03 45 e0 c7 05 [0-4] 19 36 6b ff 89 45 0c 33 45 f8 31 45 08 2b 75 08 8b 45 dc 29 45 fc ff 4d f4 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3280,6 +3427,7 @@ rule Trojan_Win32_SmokeLoader_WYV_2147839424_0
         $x_1_1 = {8b c7 d3 e8 8b 4d ?? 89 45 ?? 8d 45 ?? e8 ?? ?? ?? ?? 8b 45 ?? 33 45 ?? 89 1d ?? ?? ?? ?? 31 45 ?? 8b 45 ?? 29 45 ?? 8d 45 ?? e8 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3301,6 +3449,7 @@ rule Trojan_Win32_SmokeLoader_BY_2147839565_0
         $x_2_1 = {2b f8 89 45 0c 8b c7 c1 e0 04 89 7d e8 89 45 08 8b 45 e4 01 45 08 8b 45 e8 03 45 f8 89 45 fc 83 0d [0-4] ff 8b c7 c1 e8 05 03 45 e0 68 b9 79 37 9e 33 45 fc c7 05 [0-4] 19 36 6b ff 31 45 08 2b 75 08 8d 45 f8 50 e8 [0-4] ff 4d f4 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3322,6 +3471,7 @@ rule Trojan_Win32_SmokeLoader_JMT_2147839595_0
         $x_1_1 = {8b c7 d3 e8 8b 4d ?? 89 45 ?? 8d 45 ?? e8 ?? ?? ?? ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 31 45 ?? 89 1d ?? ?? ?? ?? 8b 45 ?? 29 45 ?? 8b 45 ?? 29 45 ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3343,6 +3493,7 @@ rule Trojan_Win32_SmokeLoader_GDT_2147839632_0
         $x_10_1 = {8b c7 c1 e0 ?? 89 7d ?? 89 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 03 45 ?? 89 45 ?? 83 0d ?? ?? ?? ?? ff 81 45 ?? ?? ?? ?? ?? 8b c7 c1 e8 ?? 03 45 ?? c7 05 ?? ?? ?? ?? 19 36 6b ff 33 45 ?? 31 45 ?? 2b 75 ?? ff 4d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3364,6 +3515,7 @@ rule Trojan_Win32_SmokeLoader_CW_2147839714_0
         $x_1_1 = {8b c3 c1 e8 ?? 03 45 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 33 45 ?? 31 45 ?? 2b 75 ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3385,6 +3537,7 @@ rule Trojan_Win32_SmokeLoader_CW_2147839714_1
         $x_5_1 = {8b 44 24 24 01 44 24 10 8b c6 c1 e8 05 c7 05 [0-4] 19 36 6b ff c7 05 [0-4] ff ff ff ff 89 44 24 14 8b 44 24 28 01 44 24 14 8d 0c 33 31 4c 24 10 8b 44 24 14 31 44 24 10 8b 44 24 10 29 44 24 18 81 3d [0-4] 93 00 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3406,6 +3559,7 @@ rule Trojan_Win32_SmokeLoader_NEAC_2147839739_0
         $x_10_1 = {8b 45 0c 33 45 08 83 25 ?? ?? ?? ?? ?? 2b d8 89 45 0c 8b c3 c1 e0 04 89 5d e8 89 45 08 8b 45 e4 01 45 08 8b 45 e8 03 45 fc 89 45 f8 ff 75 f8}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3427,6 +3581,7 @@ rule Trojan_Win32_SmokeLoader_BZ_2147839793_0
         $x_2_1 = {d3 e8 8b 4c 24 40 89 44 24 10 8d 44 24 10 e8 [0-4] 8b 44 24 30 31 44 24 14 8b 4c 24 10 31 4c 24 14 89 3d [0-4] 8b 44 24 1c 89 44 24 2c 8b 44 24 14 29 44 24 2c 8b 44 24 2c 89 44 24 1c 8b 44 24 44 29 44 24 18 83 eb 01 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3448,6 +3603,7 @@ rule Trojan_Win32_SmokeLoader_GCW_2147839896_0
         $x_10_1 = {8b c7 c1 e8 ?? 03 45 ?? 8d 0c 3b 33 c1 31 45 ?? 2b 75 ?? 81 c3 ?? ?? ?? ?? ff 4d ?? c7 05 ?? ?? ?? ?? 19 36 6b ff 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3469,6 +3625,7 @@ rule Trojan_Win32_SmokeLoader_GCX_2147839956_0
         $x_10_1 = {8b c7 c1 e8 ?? 03 45 ?? 68 ?? ?? ?? ?? 33 c3 31 45 ?? 2b 75 ?? 8d 45 ?? 50 c7 05 ?? ?? ?? ?? 19 36 6b ff e8 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3490,6 +3647,7 @@ rule Trojan_Win32_SmokeLoader_GEA_2147840075_0
         $x_10_1 = {8b c6 c1 e8 ?? 03 45 ?? c7 05 ?? ?? ?? ?? 19 36 6b ff 89 45 ?? 33 c7 31 45 ?? 8b 45 ?? 29 45 ?? 68 ?? ?? ?? ?? 8d 45 ?? 50 e8 ?? ?? ?? ?? ff 4d ?? 8b 45}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3511,6 +3669,7 @@ rule Trojan_Win32_SmokeLoader_GED_2147840209_0
         $x_10_1 = {8b c6 c1 e8 ?? 03 45 ?? 8d 0c 37 89 45 ?? 33 c1 31 45 ?? c7 05 ?? ?? ?? ?? 19 36 6b ff 8b 45 ?? 29 45 ?? 8b 45 ?? 81 c7 ?? ?? ?? ?? ff 4d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3532,6 +3691,7 @@ rule Trojan_Win32_SmokeLoader_GEG_2147840387_0
         $x_10_1 = {8b c7 d3 e8 03 45 ?? 89 45 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 89 45 ?? 8b 45 ?? 29 45 ?? 8b 45 ?? 89 45 ?? 8b 45 ?? 29 45 ?? ff 4d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3553,6 +3713,7 @@ rule Trojan_Win32_SmokeLoader_UNI_2147840473_0
         $x_1_1 = {d3 e8 03 45 ?? 89 45 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 89 45 ?? 8b 45 ?? 29 45 ?? 8b 45 ?? 89 45 ?? 8d 45 ?? e8 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3575,6 +3736,7 @@ rule Trojan_Win32_SmokeLoader_GEH_2147840576_0
         $x_10_2 = {db 66 3b 70 8b 45 ?? 8b 4d ?? 31 08}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3596,6 +3758,7 @@ rule Trojan_Win32_SmokeLoader_GEJ_2147840655_0
         $x_10_1 = {8d 0c 07 c1 e8 ?? 89 45 ?? 8b 45 ?? 01 45 ?? 51 8d 45 ?? 50 c7 05 ?? ?? ?? ?? fc 03 cf ff e8 ?? ?? ?? ?? 8b 45 ?? 33 45 ?? 83 25 ?? ?? ?? ?? ?? 2b f0 89 45 ?? 8b c6 c1 e0 ?? 89 45 ?? 8b 45 ?? 01 45 ?? 03 fe 81 3d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3617,6 +3780,7 @@ rule Trojan_Win32_SmokeLoader_GEM_2147840796_0
         $x_10_1 = {8b c6 c1 e8 ?? 03 45 ?? 8d 0c 37 31 4d ?? 50 89 45 ?? 8d 45 ?? 50 c7 05 ?? ?? ?? ?? 19 36 6b ff e8 ?? ?? ?? ?? 8b 45 ?? 29 45 ?? 8b 45 ?? 81 c7 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3638,6 +3802,7 @@ rule Trojan_Win32_SmokeLoader_CA_2147840844_0
         $x_2_1 = {c1 e8 05 03 45 e8 8d 0c 37 31 4d 08 50 89 45 0c 8d 45 08 50 c7 05 [0-4] 19 36 6b ff e8 [0-4] 8b 45 08 29 45 fc 8b 45 fc 81 c7 [0-4] ff 4d f8 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3659,6 +3824,7 @@ rule Trojan_Win32_SmokeLoader_GEN_2147840870_0
         $x_10_1 = {2b f0 8b ce c1 e1 ?? 89 44 24 ?? 89 4c 24 ?? 8b 44 24 ?? 01 44 24 ?? 8b c6 c1 e8 ?? 03 c5 50 89 44 24 ?? 8d 44 24 ?? 8d 14 37 31 54 24 ?? 50 c7 05 ?? ?? ?? ?? 19 36 6b ff}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3680,6 +3846,7 @@ rule Trojan_Win32_SmokeLoader_HIL_2147840905_0
         $x_1_1 = {8b d6 d3 ea 03 d5 89 54 24 ?? 8b 44 24 ?? 31 44 24 ?? 8b 44 24 ?? 8b 4c 24 ?? 50 51 8d 4c 24 ?? e8 ?? ?? ?? ?? 8b 44 24 ?? 89 44 24 ?? 8b 44 24 ?? 29 44 24 ?? 8b 44 24 ?? 89 44 24 ?? 81 44 24 ?? ?? ?? ?? ?? 83 ef ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3701,6 +3868,7 @@ rule Trojan_Win32_SmokeLoader_GER_2147841017_0
         $x_10_1 = {8b c6 c1 e8 ?? 03 c3 50 89 45 ?? 8d 45 ?? 03 ce 31 4d ?? 50 c7 05 ?? ?? ?? ?? 19 36 6b ff e8 ?? ?? ?? ?? 8b 45 ?? 29 45 ?? 8b 45 ?? 29 45 ?? ff 4d ?? 8b 45 ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3722,6 +3890,7 @@ rule Trojan_Win32_SmokeLoader_GES_2147841101_0
         $x_10_1 = {8b c6 d3 e8 03 c5 89 44 24 ?? 33 44 24 ?? 31 44 24 ?? 8b 44 24 ?? 89 44 24 ?? 8b 44 24 ?? 29 44 24 ?? 8b 44 24 ?? 89 44 24 ?? 8b 44 24 ?? 29 44 24 ?? 83 ef ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3743,6 +3912,7 @@ rule Trojan_Win32_SmokeLoader_GEU_2147841183_0
         $x_10_1 = {8b c6 d3 e8 03 c5 89 44 24 ?? 33 44 24 ?? 31 44 24 ?? 8b 44 24 ?? 89 44 24 ?? 8b 44 24 ?? 29 44 24 ?? 8b 44 24 ?? 89 44 24 ?? 81 44 24 ?? 47 86 c8 61 83 ef ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3764,6 +3934,7 @@ rule Trojan_Win32_SmokeLoader_GEV_2147841189_0
         $x_10_1 = {8b c6 c1 e8 ?? 03 45 ?? 8d 0c 37 31 4d ?? 50 89 45 ?? 8d 45 ?? 50 c7 05 ?? ?? ?? ?? 19 36 6b ff e8 ?? ?? ?? ?? 8b 45 ?? 29 45 ?? 81 3d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3785,6 +3956,7 @@ rule Trojan_Win32_SmokeLoader_GEV_2147841189_1
         $x_10_1 = {b7 b8 c4 23 c7 45 ?? ec 1c c1 2a c7 45 ?? ?? ?? ?? ?? c7 85 ?? ?? ?? ?? 46 2e d2 6c c7 45 ?? 3d e7 ce 7f c7 45 ?? 97 34 4d 72 c7 45 ?? 28 8c 70 73 c7 45 ?? a7 75 bc 74 c7 45 ?? 5e 40 4f 66 c7 85 ?? ?? ?? ?? db 81 79 6e c7 45 ?? e4 bf 0e 0d c7 85 ?? ?? ?? ?? 1b 3d 01 4c c7 85 ?? ?? ?? ?? 37 ac b2 42 c7 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3810,6 +3982,7 @@ rule Trojan_Win32_SmokeLoader_CBP_2147841268_0
         $x_1_5 = "rapodogaga" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3831,6 +4004,7 @@ rule Trojan_Win32_SmokeLoader_MQZ_2147841295_0
         $x_1_1 = {8b c6 d3 e8 03 c5 89 44 24 ?? 33 44 24 ?? 31 44 24 ?? 8b 44 24 ?? 89 44 24 ?? 8b 44 24 ?? 29 44 24 ?? 8b 44 24 ?? 89 44 24 ?? 8d 44 24 ?? e8 ?? ?? ?? ?? 83 ef ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3852,6 +4026,7 @@ rule Trojan_Win32_SmokeLoader_GEW_2147841478_0
         $x_10_1 = {8b c6 c1 e8 ?? 03 45 ?? 8d 0c 37 33 c8 31 4d ?? c7 05 ?? ?? ?? ?? 19 36 6b ff 89 45 ?? 8b 45 ?? 29 45 ?? 8b 45 ?? 81 c7 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3873,6 +4048,7 @@ rule Trojan_Win32_SmokeLoader_BMV_2147841510_0
         $x_1_1 = {8b c6 d3 e8 8b 4c 24 ?? 31 4c 24 ?? 03 c3 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 89 44 24 ?? 75 ?? 55 55 55 55 ff 15 ?? ?? ?? ?? 8b 44 24 ?? 31 44 24 ?? 8b 44 24 ?? 89 44 24 ?? 8b 44 24 ?? 29 44 24 ?? 8b 44 24 ?? 89 44 24 ?? 81 44 24 ?? ?? ?? ?? ?? 83 6c 24 ?? ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3894,6 +4070,7 @@ rule Trojan_Win32_SmokeLoader_RMV_2147841568_0
         $x_1_1 = {d3 e8 8b 4c 24 ?? 31 4c 24 ?? 03 c3 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 89 44 24 ?? 75 ?? 55 55 55 55 ff 15 ?? ?? ?? ?? 8b 44 24 ?? 31 44 24 ?? 8b 44 24 ?? 89 44 24 ?? 8b 44 24 ?? 29 44 24 ?? 8b 44 24 ?? 89 44 24 ?? 8b 44 24 ?? 29 44 24 ?? 83 6c 24 ?? ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3915,6 +4092,7 @@ rule Trojan_Win32_SmokeLoader_XII_2147841908_0
         $x_1_1 = {d3 e8 03 c5 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 89 44 24 ?? 75 ?? 57 57 57 57 ff 15 ?? ?? ?? ?? 8b 44 24 ?? 31 44 24 ?? 8b 44 24 ?? 29 44 24 ?? 8d 44 24 ?? e8 ?? ?? ?? ?? 83 6c 24 ?? ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3936,6 +4114,7 @@ rule Trojan_Win32_SmokeLoader_XIM_2147842037_0
         $x_1_1 = {8b c6 c1 e0 ?? 89 45 ?? 8b 45 ?? 01 45 ?? 83 0d ?? ?? ?? ?? ?? 8b c6 c1 e8 ?? 03 45 ?? 03 de 33 d8 31 5d ?? 2b 7d ?? 68 ?? ?? ?? ?? 8d 45 ?? 50 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? e8 ?? ?? ?? ?? ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3957,6 +4136,7 @@ rule Trojan_Win32_SmokeLoader_CC_2147842106_0
         $x_4_1 = {8b 44 24 10 33 44 24 2c c7 05 [0-4] 00 00 00 00 2b d0 8b ca c1 e1 04 89 44 24 10 89 4c 24 2c 8b 44 24 20 01 44 24 2c 8b c2 c1 e8 05 03 c5 03 fa 33 f8 8b 44 24 2c 33 c7 2b f0 68 b9 79 37 9e 8d 44 24 18 50 c7 05 [0-4] 19 36 6b ff c7 05 [0-4] ff ff ff ff e8 [0-4] 4b 0f}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3978,6 +4158,7 @@ rule Trojan_Win32_SmokeLoader_CD_2147842112_0
         $x_4_1 = {8b 44 24 10 33 44 24 30 c7 05 [0-4] 00 00 00 00 2b f0 8b ce c1 e1 04 89 44 24 10 89 4c 24 30 8b 44 24 20 01 44 24 30 8b c6 c1 e8 05 03 44 24 24 03 de 33 d8 8b 44 24 30 68 b9 79 37 9e 33 c3 8d 54 24 18 52 c7 05 [0-4] 19 36 6b ff c7 05 [0-4] ff ff ff ff 2b f8 e8 [0-4] 4d 0f}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -3999,6 +4180,7 @@ rule Trojan_Win32_SmokeLoader_XAA_2147842117_0
         $x_1_1 = {8b c6 c1 e8 ?? 03 44 24 ?? 03 de 33 d8 8b 44 24 ?? 68 ?? ?? ?? ?? 33 c3 8d 54 24 ?? 52 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 2b f8 e8 ?? ?? ?? ?? 4d 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4020,6 +4202,7 @@ rule Trojan_Win32_SmokeLoader_CE_2147842259_0
         $x_4_1 = {8b 44 24 2c 89 44 24 20 8b 44 24 28 01 44 24 20 8b 44 24 2c c1 e8 05 89 44 24 14 8b 4c 24 38 8d 44 24 14 c7 05 [0-4] ee 3d ea f4 e8 [0-4] 8b 44 24 20 31 44 24 10 8b 44 24 10 31 44 24 14 81 3d [0-4] 13 02 00 00 75}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4041,6 +4224,7 @@ rule Trojan_Win32_SmokeLoader_CF_2147842319_0
         $x_4_1 = {8b 44 24 28 89 44 24 20 8b 44 24 24 01 44 24 20 8b 44 24 28 c1 e8 05 89 44 24 14 8b 4c 24 34 8d 44 24 14 c7 05 [0-4] ee 3d ea f4 e8 [0-4] 8b 44 24 20 31 44 24 10 8b 44 24 10 31 44 24 14 81 3d [0-4] 13 02 00 00 75}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4062,6 +4246,7 @@ rule Trojan_Win32_SmokeLoader_CG_2147842387_0
         $x_4_1 = {8b 44 24 10 33 44 24 28 c7 05 [0-4] 00 00 00 00 2b d0 8b ca c1 e1 04 89 44 24 10 89 4c 24 28 8b 44 24 1c 01 44 24 28 8b c2 c1 e8 05 03 c5 8d 0c 17 33 c8 8b 44 24 28 33 c1 2b f0 81 c7 [0-4] 4b c7 05 [0-4] 19 36 6b ff c7 05 [0-4] ff ff ff ff 0f}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4083,6 +4268,7 @@ rule Trojan_Win32_SmokeLoader_GFM_2147842414_0
         $x_10_1 = {8b c7 89 7d ?? e8 ?? ?? ?? ?? 8b 45 ?? 01 45 ?? 33 d2 89 55 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? ?? 01 45 ?? 8b 45 ?? 89 45 ?? 8b 4d ?? 8b c7 d3 e8 03 45 ?? 89 45 ?? 8b 45 ?? 31 45 ?? 81 3d}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4104,6 +4290,7 @@ rule Trojan_Win32_SmokeLoader_RPX_2147842505_0
         $x_1_1 = {8b 45 fc 33 c6 89 45 fc 2b f8 8b 45 cc 29 45 f8 83 6d e0 01 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4125,6 +4312,7 @@ rule Trojan_Win32_SmokeLoader_RPX_2147842505_1
         $x_1_1 = {30 14 33 83 ff 0f 75 4d 6a 00 6a 00 6a 00 ff d5 6a 2e 8d 44 24 10 6a 00 50}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4146,6 +4334,7 @@ rule Trojan_Win32_SmokeLoader_RPX_2147842505_2
         $x_1_1 = {8b 8d f8 fb ff ff 30 04 39 83 fb 0f 75 1f 56 8d 85 fc fb ff ff 50 56 56 56 56}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4167,6 +4356,7 @@ rule Trojan_Win32_SmokeLoader_RPX_2147842505_3
         $x_1_1 = {e8 00 00 00 00 75 05 74 03 e3 1c 2c 8b 1c 24 83 c4 04 eb 0a 08 81 eb dc 32 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4188,6 +4378,7 @@ rule Trojan_Win32_SmokeLoader_RPX_2147842505_4
         $x_1_1 = {6a 00 6a 04 8d 8d 78 ff ff ff 51 8b 8f a4 00 00 00 83 c1 08 51 ff 75 90 ff d0 8b 45 ac 6a 40 68 00 30 00 00 8d 88}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4210,6 +4401,7 @@ rule Trojan_Win32_SmokeLoader_RPX_2147842505_5
         $x_1_2 = {56 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 ff d3 6a 30}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4231,6 +4423,7 @@ rule Trojan_Win32_SmokeLoader_RPX_2147842505_6
         $x_1_1 = {31 45 f0 8b 45 f8 33 45 f0 2b f0 89 45 f8 8b c6 c1 e0 04 89 45 fc 8b 45 d8 01 45 fc 8b 4d f4 8d 04 33 89 45 e8 8b c6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4252,6 +4445,7 @@ rule Trojan_Win32_SmokeLoader_RPX_2147842505_7
         $x_1_1 = {8b 45 f0 83 45 f8 64 29 45 f8 83 6d f8 64 8b 55 f8 c1 e2 04 89 55 fc 8b 45 e4 01 45 fc 8b 4d f8 8b f1 c1 ee 05 03 75 e0}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4273,6 +4467,7 @@ rule Trojan_Win32_SmokeLoader_RPX_2147842505_8
         $x_1_1 = {01 44 24 20 8b 44 24 20 89 44 24 18 8b 4c 24 28 8b c7 d3 e8 89 44 24 14 8b 44 24 ?? 01 44 24 14 8b 44 24 14 33 44 24 18 31 44 24 10 8b 44 24 10}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4294,6 +4489,7 @@ rule Trojan_Win32_SmokeLoader_RPX_2147842505_9
         $x_1_1 = {8b 45 d4 01 45 fc 83 65 f0 00 8b 45 e8 01 45 f0 8b 45 e4 90 01 45 f0 8b 45 f0 89 45 ec 8b 4d f4 8b c7 d3 e8 03 45 d0 89 45 f8 8b 45 ec 31 45 fc 8b 45 fc 33 45 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4315,6 +4511,7 @@ rule Trojan_Win32_SmokeLoader_RPY_2147842506_0
         $x_1_1 = {8b 45 08 8b 40 04 ff 70 09 6a 00 8b 45 08 ff 50 24 89 45 f8 83 65 f4 00 6a 00 8d 45 f4 50 ff 75 f8 8b 45 08}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4336,6 +4533,7 @@ rule Trojan_Win32_SmokeLoader_RPY_2147842506_1
         $x_1_1 = {01 44 24 18 8b 44 24 18 89 44 24 20 8b 4c 24 1c 8b c6 d3 e8 8b 4c 24 10 03 c5 89 44 24 14 33 44 24 20 33 c8 8d 44 24 28 89 4c 24 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4357,6 +4555,7 @@ rule Trojan_Win32_SmokeLoader_RPY_2147842506_2
         $x_1_1 = {8b 45 d4 01 45 fc 89 5d f4 8b 45 e8 01 45 f4 8b 45 d0 90 01 45 f4 8b 45 f4 89 45 ec 8b 4d f0 8b c6 d3 e8 8b 4d ec 31 4d fc 03 45 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4378,6 +4577,7 @@ rule Trojan_Win32_SmokeLoader_RPY_2147842506_3
         $x_1_1 = {c7 84 24 60 02 00 00 ea 13 30 0a c7 84 24 74 02 00 00 0a 4b 19 39 c7 84 24 04 03 00 00 3e 5c d5 18 c7 84 24 c8 01 00 00 e9 d6 86 0e}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4399,6 +4599,7 @@ rule Trojan_Win32_SmokeLoader_RPY_2147842506_4
         $x_1_1 = {50 6a 40 8b 85 58 ff ff ff ff 70 0a ff b5 50 ff ff ff ff 55 d8 89 45 f4 8b 85 50 ff ff ff 89 85 68 ff ff ff 8b 85 58 ff ff ff ff 70 0a 6a 00 ff b5 50 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4420,6 +4621,7 @@ rule Trojan_Win32_SmokeLoader_RPY_2147842506_5
         $x_1_1 = {c6 85 0e fc ff ff 33 c6 85 11 fc ff ff 6e c6 85 06 fc ff ff 54 c6 85 13 fc ff ff 70 c6 85 0f fc ff ff 32 c6 85 01 fc ff ff 72 c6 85 09 fc ff ff 6c c6 85 15 fc ff ff 68 c6 85 14 fc ff ff 73 c6 85 04 fc ff ff 74 c6 85 12 fc ff ff 61 c6 85 10 fc ff ff 53 c6 85 03 fc ff ff 61 c6 85 18 fc ff ff 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4441,6 +4643,7 @@ rule Trojan_Win32_SmokeLoader_CH_2147842508_0
         $x_4_1 = {01 45 f0 8b 45 f0 89 45 ec 8b 4d f4 8b c3 d3 e8 03 45 d0 89 45 f8 8b 45 ec 31 45 fc 8b 45 fc 33 45 f8 29 45 e4 89 45 fc 8d 45 e8 e8 [0-4] ff 4d e0 0f}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4462,6 +4665,7 @@ rule Trojan_Win32_SmokeLoader_CI_2147842723_0
         $x_4_1 = {01 44 24 18 8b 44 24 18 89 44 24 20 8b 4c 24 1c 8b c6 d3 e8 8b 4c 24 10 03 44 24 34 89 44 24 14 33 44 24 20 33 c8 2b f9 8d 44 24 24 89 4c 24 10 89 7c 24 28 e8 [0-4] 83 eb 01 0f}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4483,6 +4687,7 @@ rule Trojan_Win32_SmokeLoader_CJ_2147842724_0
         $x_4_1 = {8b 44 24 28 89 44 24 20 8b 44 24 24 01 44 24 20 8b 44 24 28 c1 e8 05 89 44 24 14 8b 4c 24 30 8d 44 24 14 c7 05 [0-4] ee 3d ea f4 e8 [0-4] 8b 44 24 20 31 44 24 10 8b 4c 24 10 31 4c 24 14 81 3d [0-4] 13 02 00 00 75}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4504,6 +4709,7 @@ rule Trojan_Win32_SmokeLoader_CK_2147842798_0
         $x_4_1 = {8b 44 24 14 33 44 24 10 c7 05 [0-4] 00 00 00 00 2b d0 89 44 24 14 8b c2 c1 e0 04 89 44 24 10 8b 44 24 20 01 44 24 10 8b c2 c1 e8 05 03 c5 8d 0c 17 33 c8 8b 44 24 10 33 c1 2b f0 81 c7 47 86 c8 61 4b c7 05 [0-4] 19 36 6b ff c7 05 [0-4] ff ff ff ff 0f}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4525,6 +4731,7 @@ rule Trojan_Win32_SmokeLoader_CL_2147842810_0
         $x_4_1 = {8b 44 24 14 33 44 24 10 c7 05 [0-4] 00 00 00 00 2b f0 89 44 24 14 8b c6 c1 e0 04 89 44 24 10 8b 44 24 24 01 44 24 10 8b c6 c1 e8 05 03 44 24 28 8d 0c 37 33 c8 8b 44 24 10 33 c1 2b d8 81 c7 47 86 c8 61 ff 4c 24 18 c7 05 [0-4] 19 36 6b ff c7 05 [0-4] ff ff ff ff 0f}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4546,6 +4753,7 @@ rule Trojan_Win32_SmokeLoader_OVM_2147842880_0
         $x_1_1 = {8b c6 c1 e8 ?? 03 c5 89 44 24 ?? 8b 44 24 ?? 31 44 24 ?? 8b 4c 24 ?? 33 4c 24 ?? 8d 44 24 ?? 89 4c 24 ?? e8 ?? ?? ?? ?? 81 44 24 ?? ?? ?? ?? ?? 83 ef ?? 8b 4c 24 ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4567,6 +4775,7 @@ rule Trojan_Win32_SmokeLoader_HKK_2147842996_0
         $x_1_1 = {8b c6 c1 e8 ?? 03 c5 89 44 24 ?? 8b 44 24 ?? 31 44 24 ?? 8b 4c 24 ?? 33 4c 24 ?? 8d 44 24 ?? 89 4c 24 ?? e8 ?? ?? ?? ?? 8b 44 24 ?? 29 44 24 ?? 83 ef ?? 8b 4c 24 ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4588,6 +4797,7 @@ rule Trojan_Win32_SmokeLoader_CM_2147843036_0
         $x_4_1 = {8b 44 24 28 89 44 24 24 8b 44 24 10 01 44 24 24 8b 44 24 28 c1 e8 05 89 44 24 18 8b 4c 24 44 8d 44 24 18 c7 05 [0-4] ee 3d ea f4 e8 [0-4] 8b 44 24 24 31 44 24 14 8b 44 24 14 31 44 24 18 81 3d [0-4] 13 02 00 00 75}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4609,6 +4819,7 @@ rule Trojan_Win32_SmokeLoader_CN_2147843039_0
         $x_4_1 = {8b 44 24 28 89 44 24 20 8b 44 24 14 01 44 24 20 8b 44 24 28 c1 e8 05 89 44 24 18 8b 4c 24 30 8d 44 24 18 c7 05 [0-4] ee 3d ea f4 e8 [0-4] 8b 44 24 20 31 44 24 10 8b 44 24 10 31 44 24 18 81 3d [0-4] 13 02 00 00 75}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4630,6 +4841,7 @@ rule Trojan_Win32_SmokeLoader_KIN_2147843240_0
         $x_1_1 = {8b f7 c1 ee ?? 03 74 24 ?? 8b 44 24 ?? 31 44 24 ?? 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 75 ?? 53 53 8d 4c 24 ?? 51 ff 15 ?? ?? ?? ?? 8b 4c 24 ?? 33 ce 8d 44 24 ?? 89 4c 24 ?? e8 ?? ?? ?? ?? 8b 44 24 ?? 29 44 24 ?? 83 6c 24 ?? ?? 8b 54 24 ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4651,6 +4863,7 @@ rule Trojan_Win32_SmokeLoader_CO_2147843282_0
         $x_4_1 = {8b 44 24 28 89 44 24 20 8b 44 24 14 01 44 24 20 8b 4c 24 1c d3 ea 8b 4c 24 38 8d 44 24 24 c7 05 [0-4] ee 3d ea f4 89 54 24 24 e8 [0-4] 8b 44 24 20 31 44 24 10 8b 74 24 24 33 74 24 10 81 3d [0-4] 13 02 00 00 75}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4672,6 +4885,7 @@ rule Trojan_Win32_SmokeLoader_CPY_2147843333_0
         $x_5_1 = {8b ce c1 e9 ?? 03 4c 24 28 8d 04 33 31 44 24 10 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 4c 24 14 8b 44 24 14 31 44 24 10 2b 7c 24 10 81 c3 ?? ?? ?? ?? ff 4c 24 18 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4693,6 +4907,7 @@ rule Trojan_Win32_SmokeLoader_CPZ_2147843334_0
         $x_5_1 = {8b c6 c1 e8 ?? 03 c5 89 44 24 14 8b 44 24 1c 31 44 24 10 8b 4c 24 10 33 4c 24 14 8d 44 24 28 89 4c 24 10 e8 7d fe ff ff 81 44 ?? ?? ?? ?? ?? ?? 83 ef 01 8b 4c 24 28 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4714,6 +4929,7 @@ rule Trojan_Win32_SmokeLoader_GFX_2147843373_0
         $x_10_1 = {8b f7 c1 ee ?? 03 74 24 ?? 8b 44 24 ?? 31 44 24 ?? 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 75 ?? ff 15 ?? ?? ?? ?? 8b 4c 24 ?? 33 ce 8d 44 24 ?? 89 4c 24 ?? e8 ?? ?? ?? ?? 81 44 24 ?? 47 86 c8 61 83 6c 24 ?? ?? 0f 85}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4735,6 +4951,7 @@ rule Trojan_Win32_SmokeLoader_CP_2147843415_0
         $x_4_1 = {8b 44 24 24 89 44 24 1c 8b 44 24 20 01 44 24 1c 8b 4c 24 10 d3 ee 8b 4c 24 34 8d 44 24 28 c7 05 [0-4] ee 3d ea f4 89 74 24 28 e8 [0-4] 8b 44 24 1c 31 44 24 14 8b 74 24 28 33 74 24 14 81 3d [0-4] 13 02 00 00 75}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4757,6 +4974,7 @@ rule Trojan_Win32_SmokeLoader_CQ_2147843416_0
         $x_2_2 = {8b 4c 24 10 33 ce 8d 44 24 24 89 4c 24 10 e8 [0-4] 81 44 24 20 47 86 c8 61 83 6c 24 2c 01 0f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4779,6 +4997,7 @@ rule Trojan_Win32_SmokeLoader_NEAD_2147843457_0
         $x_5_2 = {b5 02 8a 94 31 d6 38 00 00 88 14 30 81 c4 18 0c 00 00 c3}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4800,6 +5019,7 @@ rule Trojan_Win32_SmokeLoader_CPVV_2147843500_0
         $x_5_1 = {89 44 24 14 8b c6 c1 e0 ?? 89 44 24 10 8b 44 24 28 01 44 24 10 8b 44 24 18 8b d6 c1 ea ?? 03 d5 03 c6 31 44 24 10 c7 05 [0-10] c7 05 [0-10] 89 54 24 14 8b 44 24 14 31 44 24 10 8b 44 24 10 29 44 24 1c 8b 44 24 2c 29 44 24 18 4b 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4821,6 +5041,7 @@ rule Trojan_Win32_SmokeLoader_CST_2147843532_0
         $x_1_1 = {8b d6 c1 ea ?? 03 d5 8d 04 37 31 44 24 ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 54 24 ?? 8b 44 24 ?? 31 44 24 ?? 8b 44 24 ?? 29 44 24 ?? 8b 0d ?? ?? ?? ?? 81 f9 ?? ?? ?? ?? 74 ?? 81 c7 ?? ?? ?? ?? ff 4c 24 ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4842,6 +5063,7 @@ rule Trojan_Win32_SmokeLoader_CR_2147843537_0
         $x_4_1 = {8b 44 24 24 01 44 24 14 8b 44 24 14 33 c3 33 44 24 10 c7 05 [0-4] 00 00 00 00 2b f0 89 44 24 14 8b c6 c1 e0 04 89 44 24 10 8b 44 24 28 01 44 24 10 8b ce c1 e9 05 03 cd 8d 14 37 31 54 24 10 c7 05 [0-4] 19 36 6b ff c7 05 [0-4] ff ff ff ff 89 4c 24 14 8b 44 24 14 31 44 24 10 8b 44 24 10 29 44 24 18}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4863,6 +5085,7 @@ rule Trojan_Win32_SmokeLoader_AXX_2147843677_0
         $x_1_1 = {8b c7 c1 e8 ?? 03 44 24 ?? 33 44 24 ?? 33 c8 51 8b c6 89 4c 24 ?? e8 ?? ?? ?? ?? 8b f0 8d 44 24 ?? 89 74 ?? 24 e8 ?? ?? ?? ?? 83 6c 24 ?? ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4884,6 +5107,7 @@ rule Trojan_Win32_SmokeLoader_CS_2147843745_0
         $x_4_1 = {8b 44 24 24 89 44 24 1c 8b 44 24 20 01 44 24 1c 8b 4c 24 10 8b c3 d3 e8 8b 4c 24 30 c7 05 [0-4] ee 3d ea f4 89 44 24 24 8d 44 24 24 e8 [0-4] 8b 44 24 1c 31 44 24 14 8b 74 24 24 33 74 24 14 81 3d [0-4] 13 02 00 00 75}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4905,6 +5129,7 @@ rule Trojan_Win32_SmokeLoader_AXB_2147843768_0
         $x_1_1 = {8b f7 c1 ee ?? 03 74 24 ?? 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 75 ?? ff 15 ?? ?? ?? ?? 8b 44 24 ?? 33 c6 89 44 24 ?? 50 8b c3 e8 ?? ?? ?? ?? 8b d8 8d 44 24 ?? 89 5c 24 ?? e8 ?? ?? ?? ?? 83 6c 24 ?? ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4926,6 +5151,7 @@ rule Trojan_Win32_SmokeLoader_HGL_2147843922_0
         $x_1_1 = {8b f3 c1 ee ?? 03 74 24 ?? 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 75 ?? 6a ?? ff 15 ?? ?? ?? ?? 8b 44 24 ?? 33 c6 89 44 24 ?? 50 8b c7 e8 ?? ?? ?? ?? 81 44 24 ?? ?? ?? ?? ?? 83 6c 24 ?? ?? 8b f8 89 7c 24 ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4947,6 +5173,7 @@ rule Trojan_Win32_SmokeLoader_C_2147844290_0
         $x_1_1 = {d3 ea 03 c7 03 55 d8 33 d0 31 55 f8 8b 45 f8 29 45 ec 8b 45 e0 29 45 f4 ff 4d e4 0f 85 f2 fe ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4969,6 +5196,7 @@ rule Trojan_Win32_SmokeLoader_C_2147844290_1
         $x_2_2 = {03 ce 8b 55 0c 03 55 ?? 88 0a 0f be 45 ?? 8b 4d 0c 03 4d ?? 0f b6 11 2b d0 8b 45 0c 03 45 ?? 88 10 eb}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -4991,6 +5219,7 @@ rule Trojan_Win32_SmokeLoader_XIG_2147844981_0
         $x_1_2 = {6a 00 ff 15 ?? ?? ?? ?? 31 7c 24 ?? 8b 44 24 ?? 31 44 24 ?? 8b 44 24 ?? 29 44 24 ?? 8b 44 24 ?? 29 44 24 ?? ff 4c 24 ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5012,6 +5241,7 @@ rule Trojan_Win32_SmokeLoader_PAZ_2147845369_0
         $x_1_1 = {8b c6 c1 e0 04 89 45 08 8b 45 e8 01 45 08 83 0d ?? ?? ?? ?? ?? 8b c6 c1 e8 05 03 45 e4 03 fe 31 7d 08 50 89 45 0c 8d 45 08 50 c7 05}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5033,6 +5263,7 @@ rule Trojan_Win32_SmokeLoader_BKK_2147845469_0
         $x_5_1 = {56 eb 03 8d 49 00 8d b5 ?? ?? ff ff c7 85 ?? ?? ff ff 00 00 00 00 e8 ?? ?? ff ff 8a 95 ?? ?? ff ff 8b 85 ?? ?? ff ff 30 14 38 83 fb 0f 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5055,6 +5286,7 @@ rule Trojan_Win32_SmokeLoader_BKK_2147845469_1
         $x_1_2 = {01 44 24 1c 8b 44 24 ?? 89 44 24 ?? 8b 4c 24 ?? 33 4c 24 ?? 8b c7 c1 e8 ?? 51 03 c5 50 8d 54 24 ?? 52 89 4c 24 ?? e8 ?? ?? ?? ?? 2b 74 24 ?? 89 74 24 ?? 8b 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5076,6 +5308,7 @@ rule Trojan_Win32_SmokeLoader_CT_2147845689_0
         $x_4_1 = {01 44 24 20 8b 44 24 20 89 44 24 18 8b 4c 24 10 33 4c 24 18 8b c6 c1 e8 05 51 03 c3 50 8d 54 24 18 52 89 4c 24 1c e8 [0-4] 8b 44 24 10 29 44 24 14 81 44 24 24 47 86 c8 61 83 ed 01 0f}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5097,6 +5330,7 @@ rule Trojan_Win32_SmokeLoader_CU_2147845927_0
         $x_5_1 = {c1 e0 04 89 44 24 10 8b 44 24 28 01 44 24 10 8b ce c1 e9 05 03 cb 8d 14 37 31 54 24 10 c7 05 [0-4] 19 36 6b ff c7 05 [0-4] ff ff ff ff 89 4c 24 14 8b 44 24 14 31 44 24 10 8b 44 24 10 29 44 24 18 81 3d [0-4] 93 00 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5118,6 +5352,7 @@ rule Trojan_Win32_SmokeLoader_CV_2147846214_0
         $x_5_1 = {8b 44 24 2c 01 44 24 0c 8b d7 c1 ea 05 c7 05 [0-4] 19 36 6b ff c7 05 [0-4] ff ff ff ff 89 54 24 10 8b 44 24 24 01 44 24 10 8d 04 3b 31 44 24 0c 8b 44 24 10 31 44 24 0c 8b 44 24 0c 29 44 24 14 81 3d [0-4] 93 00 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5139,6 +5374,7 @@ rule Trojan_Win32_SmokeLoader_CX_2147846369_0
         $x_5_1 = {8b d6 c1 ea 05 03 ce c7 05 [0-4] 19 36 6b ff c7 05 [0-4] ff ff ff ff 89 54 24 14 8b 44 24 2c 01 44 24 14 31 4c 24 0c 8b 44 24 14 31 44 24 0c 8b 44 24 0c 29 44 24 10 81 3d [0-4] 93 00 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5160,6 +5396,7 @@ rule Trojan_Win32_SmokeLoader_CY_2147846371_0
         $x_5_1 = {8b 44 24 24 89 44 24 20 8b 44 24 28 01 44 24 20 8b 4c 24 18 8b c6 d3 e8 8b 4c 24 30 c7 05 [0-4] ee 3d ea f4 89 44 24 24 8d 44 24 24 e8 [0-4] 8b 44 24 20 31 44 24 10 81 3d [0-4] e6 09 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5181,6 +5418,7 @@ rule Trojan_Win32_SmokeLoader_CATZ_2147846463_0
         $x_1_1 = {6a 00 ff 15 88 10 40 00 6a 00 ff ?? ?? ?? ?? ?? 6a 00 6a 00 8d 44 24 48 50 ff ?? ?? ?? ?? ?? 6a 00 8d 8c 24 44 08 00 00 51 ff 15 24 10 40 00 6a 00 ff 15 e4 10 40 00 6a 00 8d 94 24 44 18 00 00 52 68 a0 4b 40 00 ff 15 28 10 40 00 8d 84 24 40 10 00 00 50 6a 00 68 b8 4b 40 00 68 00 4c 40 00 ff 15 14 11 40 00 6a 00 ff 15 c8 10 40 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5202,6 +5440,7 @@ rule Trojan_Win32_SmokeLoader_RDE_2147846605_0
         $x_2_1 = {01 44 24 1c 8b 44 24 1c 89 44 24 20 8b 4c 24 18 8b 54 24 14 d3 ea 8b cb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5223,6 +5462,7 @@ rule Trojan_Win32_SmokeLoader_RLL_2147846726_0
         $x_1_1 = {d3 e8 8b cb 89 44 24 ?? 8d 44 24 ?? e8 ?? ?? ?? ?? 8b 44 24 ?? 31 44 24 ?? 8b 4c 24 ?? 8b 54 24 ?? 51 52 8d 44 24 ?? 50 e8 ?? ?? ?? ?? 8b 44 24 ?? 29 44 24 ?? 8d 44 24 ?? e8 ?? ?? ?? ?? 83 ed ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5244,6 +5484,7 @@ rule Trojan_Win32_SmokeLoader_RDF_2147846730_0
         $x_2_1 = {01 44 24 24 8b 44 24 24 89 44 24 20 8b 4c 24 1c 8b 54 24 18 d3 ea 8b cb}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5266,6 +5507,7 @@ rule Trojan_Win32_SmokeLoader_CREX_2147846741_0
         $x_1_2 = {c7 04 24 00 00 00 00 8b 44 24 48 89 04 24 8b 44 24 44 31 04 24 8b 04 24 8b 4c 24 40 89 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5287,6 +5529,7 @@ rule Trojan_Win32_SmokeLoader_EM_2147847200_0
         $x_6_1 = {99 b9 12 00 00 00 f7 f9 8b 55 0c 03 55 fc 0f b6 0a 33 c8 8b 55 0c 03 55 fc 88 0a}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5308,6 +5551,7 @@ rule Trojan_Win32_SmokeLoader_YX_2147847456_0
         $x_1_1 = {b1 b1 4a 94 a1 ?? ?? ?? ?? 32 0c 46 5a 5a 02 b1 ?? ?? ?? ?? ae b5 ?? 56 05 ?? ?? ?? ?? 30 14 03 b1 5f 28 b4 b1 ?? ?? ?? ?? ac a5 a5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5330,6 +5574,7 @@ rule Trojan_Win32_SmokeLoader_PHR_2147847910_0
         $x_1_2 = {d3 ee 03 74 24 ?? 8b 44 24 ?? 31 44 24 14 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 75 ?? 53 53 53 ff 15 ?? ?? ?? ?? 8b 44 24 14 33 c6 89 44 24 14 2b f8 8d 44 24 ?? e8 ?? ?? ?? ?? 83 6c 24 34 01}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5351,6 +5596,7 @@ rule Trojan_Win32_SmokeLoader_ASE_2147848011_0
         $x_1_1 = {d3 ea 8b 4c 24 ?? 03 c7 89 44 24 ?? 8d 44 24 28 89 54 24 28 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 44 24 24 31 44 24 10 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 75 ?? 68 ?? ?? ?? ?? 53 53 ff 15 ?? ?? ?? ?? 8b 44 24 10 31 44 24 28 8b 44 24 28 83 44 24 18 ?? 29 44 24 18 83 6c 24 18 ?? 8b 44 24 18 8d 4c 24 ?? e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5373,6 +5619,7 @@ rule Trojan_Win32_SmokeLoader_PBA_2147848019_0
         $x_1_2 = {50 68 c4 3f 40 00 ff 15 ?? ?? ?? ?? 8b 4c 24 14 8b 44 24 10 33 cf 33 c1 2b e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5396,6 +5643,7 @@ rule Trojan_Win32_SmokeLoader_PBB_2147848038_0
         $x_1_3 = {8b 54 24 18 8b 44 24 14 33 d6 33 c2 2b d8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5417,6 +5665,7 @@ rule Trojan_Win32_SmokeLoader_VKL_2147848897_0
         $x_1_1 = {8b c7 c1 e8 ?? 8d 34 2f c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 44 24 10 8b 44 24 ?? 01 44 24 10 8b 0d ?? ?? ?? ?? 81 f9 ?? ?? ?? ?? 75 ?? 8d 4c 24 30 51 6a 00 ff 15 ?? ?? ?? ?? 8b 0d cc b7 49 00 8b 54 24 10 8b 44 24 ?? 33 d6 33 c2 2b d8 81 f9 ?? ?? ?? ?? 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5438,6 +5687,7 @@ rule Trojan_Win32_SmokeLoader_DH_2147848949_0
         $x_5_1 = {c1 e2 04 89 54 24 14 8b 44 24 24 01 44 24 14 8b c7 c1 e8 05 8d 34 2f c7 05 [0-4] 19 36 6b ff c7 05 [0-4] ff ff ff ff 89 44 24 10 8b 44 24 20 01 44 24 10 8b 0d [0-4] 81 f9 79 09 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5460,6 +5710,7 @@ rule Trojan_Win32_SmokeLoader_CRIZ_2147849034_0
         $x_1_2 = {33 c7 31 44 24 ?? 8b 44 24 ?? 29 44 24 ?? 8b 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5481,6 +5732,7 @@ rule Trojan_Win32_SmokeLoader_SE_2147849048_0
         $x_1_1 = {c7 04 24 04 00 00 00 8b 44 24 08 83 2c 24 04 01 04 24 8b 04 24 31 01}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5503,6 +5755,7 @@ rule Trojan_Win32_SmokeLoader_H_2147849245_0
         $x_2_2 = {33 c7 33 c1 2b f0 8b ce c1 e1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5524,6 +5777,7 @@ rule Trojan_Win32_SmokeLoader_H_2147849245_1
         $x_1_1 = {8b d6 c1 ea 05 03 54 24 24 c7 05 ?? ?? ?? ?? 19 36 6b ff 33 d7 31 54 24 14 c7 05 ?? ?? ?? ?? ff ff ff ff 8b 44 24 14 29 44 24 18 8b 44 24 28 29 44 24 10 ff 4c 24 1c 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5545,6 +5799,7 @@ rule Trojan_Win32_SmokeLoader_DJ_2147849532_0
         $x_5_1 = {8b 4c 24 1c 8b 44 24 28 8b d7 d3 ea 8b 4c 24 40 03 c7 89 44 24 24 8d 44 24 2c 89 54 24 2c c7 05 [0-4] ee 3d ea f4 e8 [0-4] 8b 44 24 24 31 44 24 14 81 3d [0-4] e6 09 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5566,6 +5821,7 @@ rule Trojan_Win32_SmokeLoader_AYT_2147849566_0
         $x_1_1 = {8b ce c1 e9 ?? 8d 3c 33 c7 05 ?? ?? ?? ?? ?? ?? ?? ?? c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 89 4c 24 18 8b 44 24 28 01 44 24 18 81 3d ?? ?? ?? ?? ?? ?? ?? ?? 75 ?? 8d 54 24 38 52 6a 00 ff 15 ?? ?? ?? ?? 8b 4c 24 18 8b 44 24 14 33 cf 33 c1 2b e8 8d 44 24 ?? e8 73 ?? ?? ?? ?? 4c 24 20 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5587,6 +5843,7 @@ rule Trojan_Win32_SmokeLoader_REE_2147849672_0
         $x_1_1 = {d3 e8 89 44 24 14 8b 44 24 30 01 44 24 14 8b 44 24 24 31 44 24 ?? 8b 4c 24 10 8b 54 24 ?? 51 52 8d 44 24 18 50 e8 ?? ?? ?? ?? 8b 4c 24 10 8d 44 24 2c e8 ?? ?? ?? ?? 81 c7 47 86 c8 61 83 ed 01 89 7c 24 ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5609,6 +5866,7 @@ rule Trojan_Win32_SmokeLoader_DK_2147849733_0
         $x_2_2 = {8b ce c1 e9 05 c7 05 [0-4] 19 36 6b ff c7 05 [0-4] ff ff ff ff 89 4c 24 14 8b 44 24 24 01 44 24 14 81 3d [0-4] 79 09 00 00 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5630,6 +5888,7 @@ rule Trojan_Win32_SmokeLoader_DL_2147849766_0
         $x_5_1 = {8d 0c 37 89 4c 24 24 8b 4c 24 1c d3 ee 8b 4c 24 38 8d 44 24 14 c7 05 [0-4] ee 3d ea f4 89 74 24 14 e8 [0-4] 8b 44 24 24 31 44 24 10 81 3d [0-4] e6 09 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5651,6 +5910,7 @@ rule Trojan_Win32_SmokeLoader_DM_2147850082_0
         $x_5_1 = {8d 0c 37 89 4c 24 20 8b 4c 24 1c d3 ee 8b 4c 24 3c 8d 44 24 14 c7 05 [0-4] ee 3d ea f4 89 74 24 14 e8 [0-4] 8b 44 24 20 31 44 24 10 81 3d [0-4] e6 09 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5672,6 +5932,7 @@ rule Trojan_Win32_SmokeLoader_DN_2147850110_0
         $x_5_1 = {03 ce 89 4c 24 20 8b 4c 24 1c d3 ee 8b 4c 24 3c 8d 44 24 14 c7 05 [0-4] ee 3d ea f4 89 74 24 14 e8 [0-4] 8b 44 24 20 31 44 24 10 81 3d [0-4] e6 09 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5693,6 +5954,7 @@ rule Trojan_Win32_SmokeLoader_DO_2147850176_0
         $x_5_1 = {33 c1 8d 0c 3b 33 c1 2b f0 8b d6 c1 e2 04 89 44 24 14 89 54 24 10 8b 44 24 24 01 44 24 10 81 3d [0-4] be 01 00 00 8d 2c 33 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5714,6 +5976,7 @@ rule Trojan_Win32_SmokeLoader_DP_2147850611_0
         $x_5_1 = {8b c6 c1 e8 05 c7 05 [0-4] 19 36 6b ff c7 05 [0-4] ff ff ff ff 89 44 24 14 8b 44 24 24 01 44 24 14 8b 4c 24 14 8b 44 24 10 33 cb 33 c1 2b f8 8d 44 24 1c e8 [0-4] ff 4c 24 18 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5735,6 +5998,7 @@ rule Trojan_Win32_SmokeLoader_DQ_2147850615_0
         $x_5_1 = {8b c6 c1 e8 05 c7 05 [0-4] 19 36 6b ff c7 05 [0-4] ff ff ff ff 89 44 24 14 8b 44 24 24 01 44 24 14 8b 4c 24 14 8b 44 24 10 33 cd 33 c1 89 44 24 10 2b d8 c7 44 24 18 00 00 00 00 8b 44 24 2c 01 44 24 18 2b 7c 24 18 ff 4c 24 1c 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5756,6 +6020,7 @@ rule Trojan_Win32_SmokeLoader_DR_2147850631_0
         $x_5_1 = {8b 4c 24 18 8d 04 37 d3 ee 8b 4c 24 30 89 44 24 2c 8d 44 24 14 89 74 24 14 c7 05 [0-4] ee 3d ea f4 e8 [0-4] 8b 44 24 2c 31 44 24 10 81 3d [0-4] e6 09 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5777,6 +6042,7 @@ rule Trojan_Win32_SmokeLoader_DS_2147850633_0
         $x_5_1 = {8b 4c 24 18 8d 14 37 d3 ee 8b 4c 24 2c 8d 44 24 1c 89 54 24 28 89 74 24 1c c7 05 [0-4] ee 3d ea f4 e8 [0-4] 8b 44 24 28 31 44 24 10 81 3d [0-4] e6 09 00 00 75}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5798,6 +6064,7 @@ rule Trojan_Win32_SmokeLoader_PMV_2147850778_0
         $x_1_1 = {30 00 36 4a 70 ?? c7 86 01 ff 82 03 7d db 4b 63 88 27 bb 5a 21 68 70 d3 09 6b 89 fe 8c 26 ba 5a 20 68 70 61 9e 2d f7 ea e5 48 e2 ?? 98 8a 8a 01 8e ae 09 4e 8e 61 8f 7e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5820,6 +6087,7 @@ rule Trojan_Win32_SmokeLoader_CBI_2147851247_0
         $x_1_2 = {8b 54 24 14 33 d7 31 54 24 0c 8b 44 24 0c 29 44 24 10 8b 3d ?? ?? ?? ?? 81 ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5841,6 +6109,7 @@ rule Trojan_Win32_SmokeLoader_ZIT_2147851286_0
         $x_1_1 = {8b c6 c1 e8 05 c7 05 ?? ?? ?? ?? 19 36 6b ff c7 05 ?? ?? ?? ?? ff ff ff ff 89 44 24 18 8b 44 24 2c 01 44 24 18 81 3d ?? ?? ?? ?? 79 09 00 00 75 ?? 6a 00 ff 15 ?? ?? ?? ?? 8b 4c 24 18 33 cf 31 4c 24 10 8b 44 24 10 29 44 24 14 8b 3d ?? ?? ?? ?? 81 ff 93 00 00 00 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5862,6 +6131,7 @@ rule Trojan_Win32_SmokeLoader_YBB_2147852421_0
         $x_1_1 = {83 65 fc 00 8b 45 10 89 45 fc 8b 45 0c 31 45 fc 8b 45 fc 8b 4d 08 89 01 c9 c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5884,6 +6154,7 @@ rule Trojan_Win32_SmokeLoader_YBC_2147852442_0
         $x_1_2 = {33 d3 33 c2 89 44 24 10 2b f0 8d 44 24 18 e8 ?? ?? ?? ?? ff 4c 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5905,6 +6176,7 @@ rule Trojan_Win32_SmokeLoader_RB_2147852571_0
         $x_1_1 = {24 a9 2a 6f db ad 44 ad 44 a8 68 ea 53 af af af af 44 a2 9c 90 5a}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5926,6 +6198,7 @@ rule Trojan_Win32_SmokeLoader_RB_2147852571_1
         $x_1_1 = {2c 67 88 2a c7 84 24 ?? ?? ?? ?? 60 c3 73 76 c7 84 24 ?? ?? ?? ?? 41 59 8d 4d c7 84 24 ?? ?? ?? ?? 9f f8 ff 08 c7 84 24 ?? ?? ?? ?? 5f 05 09 1a}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5947,6 +6220,7 @@ rule Trojan_Win32_SmokeLoader_AJ_2147852636_0
         $x_1_1 = {ac a8 ac ac 49 f5 ab ee 34 48 fd 00 47 47 47 ac 42 e4 5d ac b2 88 af}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5969,6 +6243,7 @@ rule Trojan_Win32_SmokeLoader_LKAE_2147852870_0
         $x_1_2 = {6a 40 68 00 10 00 00 ff 35 ?? ?? ?? ?? 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -5990,6 +6265,7 @@ rule Trojan_Win32_SmokeLoader_RD_2147853114_0
         $x_1_1 = {8b d0 c1 ea 05 03 54 24 24 03 c5 33 d1 33 d0 2b fa 8b cf c1 e1 04}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6011,6 +6287,7 @@ rule Trojan_Win32_SmokeLoader_RDH_2147853228_0
         $x_2_1 = {8b d0 c1 ea 05 03 54 24 24 03 c5 33 d1 33 d0 2b fa 8b cf c1 e1 04}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6032,6 +6309,7 @@ rule Trojan_Win32_SmokeLoader_NIV_2147888107_0
         $x_1_1 = {8b c3 8d 4d f8 e8 ?? ?? ?? ?? 8b 45 ?? 01 45 f8 8b 4d f0 8b 45 f4 8b d3 d3 ea 03 c3 03 55 ?? 33 d0 31 55 f8 2b 7d f8 89 7d e8 8b 45 e4 29 45 f4 ff 4d ec 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6053,6 +6331,7 @@ rule Trojan_Win32_SmokeLoader_AEH_2147888119_0
         $x_1_1 = {6a 6c 58 6a 6d 66 a3 ?? ?? ?? ?? 58 6a 69 66 a3 ?? ?? ?? ?? 58 6a 67 66 a3 ?? ?? ?? ?? 58 6a 64 66 a3 ?? ?? ?? ?? 58 6a 33 66 a3 ?? ?? ?? ?? 33 c0 66 a3 ?? ?? ?? ?? 58 6a 73 66}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6074,6 +6353,7 @@ rule Trojan_Win32_SmokeLoader_RDI_2147888238_0
         $x_2_1 = {8b 4d f0 8b 45 f4 8b f3 d3 ee 03 c3 89 45 ec}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6097,6 +6377,7 @@ rule Trojan_Win32_SmokeLoader_AMAB_2147888269_0
         $x_1_3 = "KB_/YB]NXK/YBBJBL/YM@WHZ/YM@W\\I/YM@WB@/YM@WYF/YM@WKF/YF@\\J]//qp" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6118,6 +6399,7 @@ rule Trojan_Win32_SmokeLoader_RDJ_2147888675_0
         $x_2_1 = {03 75 e4 8b 45 d4 31 45 f8 33 75 f8 81 3d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6139,6 +6421,7 @@ rule Trojan_Win32_SmokeLoader_RG_2147888868_0
         $x_1_1 = {12 a9 31 bb be be 19 16 c8 86 c1 7e 41 35 5f 16 17 be d2 e9}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6160,6 +6443,7 @@ rule Trojan_Win32_SmokeLoader_RG_2147888868_1
         $x_1_1 = {8b 45 dc 01 45 fc 8b 4d f8 8b 45 f4 8b fb d3 ef 03 c3 31 45 fc 03 7d d4}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6181,6 +6465,7 @@ rule Trojan_Win32_SmokeLoader_RG_2147888868_2
         $x_1_1 = {8b f7 d3 ee 8d 04 3b 89 45 e0 c7 05 ?? ?? ?? ?? ee 3d ea f4 03 75 e4 8b 45 e0 31 45 fc 33 75 fc}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6202,6 +6487,7 @@ rule Trojan_Win32_SmokeLoader_RG_2147888868_3
         $x_1_1 = {8b cf c1 e9 05 03 4c 24 ?? 8b d7 c1 e2 04 03 54 24 ?? 8d 04 2f 33 ca 33 c8 2b d9 8b cb c1 e1 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6223,6 +6509,7 @@ rule Trojan_Win32_SmokeLoader_RG_2147888868_4
         $x_1_1 = {c1 e0 04 89 45 ?? 8b 45 ?? 01 45 ?? 8b 45 ?? 8b 4d ?? 8d 14 03 d3 e8 03 45 ?? 33 c2 31 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6244,6 +6531,7 @@ rule Trojan_Win32_SmokeLoader_RG_2147888868_5
         $x_1_1 = {c7 85 54 fe ff ff dd 8a 30 3f c7 85 5c fe ff ff 1a a0 a6 15 c7 85 8c fe ff ff cb 2e 4a 32 c7 85 cc fd ff ff 37 5f 18 1f c7 85 d4 fd ff ff 3f 18 79 15 c7 85 14 fe ff ff 42 ac ee 22}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6266,6 +6554,7 @@ rule Trojan_Win32_SmokeLoader_WEE_2147889288_0
         $x_1_2 = {8b 45 dc 01 45 fc 8b 4d f8 8b 45 f4 8b fb d3 ef 03 c3 31 45 fc 03 7d d4 81 3d ?? ?? ?? ?? 21 01 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6287,6 +6576,7 @@ rule Trojan_Win32_SmokeLoader_RDL_2147889319_0
         $x_2_1 = {03 7d d8 8b 45 e4 31 45 fc 33 7d fc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6309,6 +6599,7 @@ rule Trojan_Win32_SmokeLoader_WEF_2147889383_0
         $x_1_2 = {6a 00 ff 15 ?? ?? ?? ?? 8d 4c 24 78 51 6a 00 ff 15 ?? ?? ?? ?? 33 f3 31 74 24 14 8b 44 24 14 29 44 24 18 8d 44 24 1c e8 ?? ?? ?? ?? ff 4c 24 20 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6330,6 +6621,7 @@ rule Trojan_Win32_SmokeLoader_I_2147890060_0
         $x_1_1 = {8b c6 c1 e8 05 03 44 24 24 c7 05 ?? ?? ?? ?? 19 36 6b ff 33 c3 31 44 24 10 c7 05 ?? ?? ?? ?? ff ff ff ff 8b 44 24 10 29 44 24 14 81 c7 47 86 c8 61 4d 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6353,6 +6645,7 @@ rule Trojan_Win32_SmokeLoader_I_2147890060_1
         $x_2_3 = {03 7d e4 8b 45 e0 31 45 fc 33 7d fc 81 3d f4 ec 41 02}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6375,6 +6668,7 @@ rule Trojan_Win32_SmokeLoader_QAC_2147890105_0
         $x_1_2 = {50 6a 00 ff 15 ?? ?? ?? ?? 8d 4c 24 78 51 6a 00 ff 15 ?? ?? ?? ?? 33 f3 31 74 24 10 8b 44 24 10 29 44 24 14 8d 44 24 18 e8 ?? ?? ?? ?? ff 4c 24 1c 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6396,6 +6690,7 @@ rule Trojan_Win32_SmokeLoader_CRI_2147890111_0
         $x_1_1 = {8b d6 d3 ea 03 c6 89 45 e8 03 55 d4 8b 45 e8 31 45 fc 31 55 fc 2b 7d fc 8b 45 ?? 29 45 f8 ff 4d e4 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6417,6 +6712,7 @@ rule Trojan_Win32_SmokeLoader_CRI_2147890111_1
         $x_1_1 = {d3 ee 8b 4d d0 03 c1 33 c2 03 75 d8 81 3d ?? ?? ?? ?? 21 01 00 00 89 45 fc 75 18 53 ff 15 ?? ?? ?? ?? 68 a0 2e 40 00 53 53 53 ff 15 ?? ?? ?? ?? 8b 45 fc 33 c6 29 45 f0 89 45 fc 8d 45 f4 e8 ?? ?? ?? ?? ff 4d e4 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6438,6 +6734,7 @@ rule Trojan_Win32_SmokeLoader_RDM_2147890115_0
         $x_2_1 = {33 f3 31 74 24 10 8b 44 24 10 29 44 24 14 8d 44 24 18}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6459,6 +6756,7 @@ rule Trojan_Win32_SmokeLoader_USS_2147891285_0
         $x_1_1 = {8b c3 8d 4d fc e8 ?? ?? ?? ?? 8b 45 f8 8b 4d f4 8b 7d d8 8d 14 18 8b c3 d3 e8 8b 4d fc 03 cf 03 45 dc 33 c1 33 c2 29 45 f0 89 45 fc 8b 45 e0 29 45 f8 ff 4d e8 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6480,6 +6778,7 @@ rule Trojan_Win32_SmokeLoader_UST_2147891341_0
         $x_1_1 = {8b c1 c1 e0 04 03 44 24 30 8d 34 29 c1 e9 05 89 44 24 14 8b d9 83 fa 1b 75 ?? 6a 00 6a 00 ff 15 ?? ?? ?? ?? 8b 44 24 14 03 5c 24 28 c7 05 ?? ?? ?? ?? 00 00 00 00 33 de 33 d8 2b fb 8b d7 c1 e2 04 89 54 24 14 8b 44 24 20}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6502,6 +6801,7 @@ rule Trojan_Win32_SmokeLoader_HAS_2147891641_0
         $x_1_2 = {8b d6 c1 ea 05 03 54 24 28 c7 05 ?? ?? ?? ?? 19 36 6b ff 33 d3 31 54 24 10 c7 05 ?? ?? ?? ?? ff ff ff ff 8b 44 24 10 29 44 24 14 81 c7 47 86 c8 61 ff 4c 24 18 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6523,6 +6823,7 @@ rule Trojan_Win32_SmokeLoader_J_2147892152_0
         $x_2_1 = {8b c2 d3 e8 8d 34 17 03 45 ?? 33 c6 31 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6544,6 +6845,7 @@ rule Trojan_Win32_SmokeLoader_J_2147892152_1
         $x_1_1 = {8b c6 c1 e8 05 03 44 24 30 c7 05 ?? ?? ?? ?? 19 36 6b ff 33 c3 31 44 24 14 c7 05 ?? ?? ?? ?? ff ff ff ff 8b 44 24 14 29 44 24 18 81 c7 47 86 c8 61 4d 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6565,6 +6867,7 @@ rule Trojan_Win32_SmokeLoader_EC_2147892162_0
         $x_6_1 = {c1 e0 04 89 01 c3 81 00 e1 34 ef c6 c3}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6587,6 +6890,7 @@ rule Trojan_Win32_SmokeLoader_CCCC_2147892318_0
         $x_1_2 = {8b c6 c1 e8 ?? 03 c5 33 c7 31 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6608,6 +6912,7 @@ rule Trojan_Win32_SmokeLoader_KAL_2147892622_0
         $x_1_1 = {8b c6 c1 e8 05 03 44 24 24 c7 05 ?? ?? ?? ?? 19 36 6b ff 33 c3 31 44 24 10 c7 05 34 52 28 02 ff ff ff ff 8b 44 24 10 29 44 24 14 81 c7 47 86 c8 61 4d 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6634,6 +6939,7 @@ rule Trojan_Win32_SmokeLoader_DT_2147892789_0
         $x_1_6 = "cexolenoruzodejesuxarenic popiri bin xujogihulozuwihivofizehunu" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6655,6 +6961,7 @@ rule Trojan_Win32_SmokeLoader_ASM_2147892914_0
         $x_1_1 = {6a 00 6a 00 ff 15 ?? ?? ?? ?? 33 c0 8d 54 24 1c 89 44 24 1c 89 44 24 20 89 44 24 24 89 44 24 28 89 44 24 2c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6676,6 +6983,7 @@ rule Trojan_Win32_SmokeLoader_ASM_2147892914_1
         $x_1_1 = {c6 05 61 b8 42 00 69 c6 05 62 b8 42 00 72 c6 05 67 b8 42 00 50 c6 05 6d b8 42 00 74 c6 05 6e b8 42 00 00 c6 05 63 b8 42 00 74 c6 05 6c b8 42 00 63}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6697,6 +7005,7 @@ rule Trojan_Win32_SmokeLoader_ASM_2147892914_2
         $x_1_1 = {c7 04 24 e8 a5 42 00 57 a3 20 e9 42 00 ff d6 50 e8 ?? ?? ?? ?? c7 04 24 d4 a5 42 00 57 a3 24 e9 42 00 ff d6 50 e8 ?? ?? ?? ?? c7 04 24 b8 a5 42 00 57 a3 28 e9 42 00 ff d6}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6718,6 +7027,7 @@ rule Trojan_Win32_SmokeLoader_K_2147893131_0
         $x_1_1 = {c1 e0 04 89 45 fc 8b 45 d8 01 45 fc 8b 75 f8 8b 4d f4 8d 04 37 31 45 fc d3 ee 03 75 d0 81 3d ?? ?? ?? ?? 21 01 00 00 75 07}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6739,6 +7049,7 @@ rule Trojan_Win32_SmokeLoader_BIR_2147893549_0
         $x_1_1 = {8b d0 8b c8 c1 ea 05 03 54 24 34 c1 e1 04 03 4c 24 28 03 c3 33 d1 33 d0 2b fa 8b cf c1 e1 04 c7 05 ?? ?? ?? ?? 00 00 00 00 89 4c 24 10 8b 44 24 2c 01 44 24 10 81 3d ?? ?? ?? ?? be 01 00 00 8d 2c 3b 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6761,6 +7072,7 @@ rule Trojan_Win32_SmokeLoader_JAH_2147893885_0
         $x_1_2 = {8b f0 d3 ee 03 75 d4 81 3d ?? ?? ?? ?? 21 01 00 00 75 0a 53 ff 15 ?? ?? ?? ?? 8b 45 f8 31 75 fc 8b 4d fc 29 4d e8 81 45 f0 ?? ?? ?? ?? ff 4d e4 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6783,6 +7095,7 @@ rule Trojan_Win32_SmokeLoader_ASF_2147894057_0
         $x_1_2 = {03 c3 33 d1 33 d0 2b fa 8b cf c1 e1 04 c7 05 ?? ?? ?? ?? 00 00 00 00 89 4c 24 10 8b 44 24 2c 01 44 24 10 81 3d ?? ?? ?? ?? be 01 00 00 8d 2c 3b 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6805,6 +7118,7 @@ rule Trojan_Win32_SmokeLoader_AMBB_2147894947_0
         $x_1_2 = {89 74 24 1c 8b 44 24 30 01 44 24 1c 8b 44 24 14 33 44 24 1c 89 44 24 1c 8b 4c 24 1c 89 4c 24 1c 8b 44 24 1c 29 44 24 18 8b 54 24 18 c1 e2 04 89 54 24 14 8b 44 24 34 01 44 24 14 81 3d ?? ?? ?? ?? be 01 00 00 8b 44 24 18 8d 2c 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6827,6 +7141,7 @@ rule Trojan_Win32_SmokeLoader_ASG_2147895159_0
         $x_1_2 = {31 5c 24 10 8b 44 24 18 31 44 24 10 a1 [0-4] 2b 74 24 10 3d}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6848,6 +7163,7 @@ rule Trojan_Win32_SmokeLoader_RDO_2147895249_0
         $x_2_1 = {8b c6 8b d6 c1 e0 04 c1 ea 05 03 54 24 ?? 03 c5 8d 0c 37 33 c1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6869,6 +7185,7 @@ rule Trojan_Win32_SmokeLoader_NF_2147895401_0
         $x_1_1 = {c1 ea 05 03 d5 8b c8 c1 e1 04 89 54 24 1c 03 cb 8d 14 06 33 ca 89 4c 24 10}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6904,6 +7221,7 @@ rule Trojan_Win32_SmokeLoader_ASBM_2147895474_0
         $x_1_15 = "xicihucujihatiwomihazuy wusucehadebiwevizeroxoxelivu" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -6926,6 +7244,7 @@ rule Trojan_Win32_SmokeLoader_MYB_2147895823_0
         $x_1_2 = {d3 e8 03 c7 33 c2 31 45 fc 8b 45 fc 29 45 f4 8d 45 ec e8 ?? ?? ?? ?? ff 4d e4 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6948,6 +7267,7 @@ rule Trojan_Win32_SmokeLoader_GAA_2147896213_0
         $x_1_2 = {33 c6 89 44 24 10 8b 44 24 24 31 44 24 10 8b 44 24 10 29 44 24 1c c7 44 24 20 00 00 00 00 8b 44 24 ?? 01 44 24 20 29 44 24 14 ff 4c 24 2c 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6969,6 +7289,7 @@ rule Trojan_Win32_SmokeLoader_RDA_2147896466_0
         $x_2_1 = {d3 e8 89 7d e8 89 35 ec da 42 00 03 45 c8 33 c7 31 45 fc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -6990,6 +7311,7 @@ rule Trojan_Win32_SmokeLoader_L_2147896609_0
         $x_1_1 = {8b d7 d3 ea 03 c7 89 45 ec c7 05 ?? ?? ?? ?? ee 3d ea f4 03 55 dc 8b 45 ec 31 45 fc 33 55 fc 81 3d ?? ?? ?? ?? 13 02 00 00 89 55 ec 75 0b}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7012,6 +7334,7 @@ rule Trojan_Win32_SmokeLoader_ZZQ_2147896702_0
         $x_1_2 = {33 c7 89 44 24 10 8b 44 24 18 31 44 24 10 8b 44 24 10 29 44 24 1c 81 c6 ?? ?? ?? ?? ff 4c 24 24 0f 85 d5}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7033,6 +7356,7 @@ rule Trojan_Win32_SmokeLoader_M_2147896775_0
         $x_1_1 = {33 c7 89 44 24 10 8b 44 24 18 31 44 24 10 8b 44 24 10 29 44 24 1c 81 c6 ?? ?? ?? ?? ff 4c 24 24 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7054,6 +7378,7 @@ rule Trojan_Win32_SmokeLoader_CHC_2147896889_0
         $x_1_1 = {8b 45 f8 c1 e0 04 89 45 fc 8b 45 dc 01 45 fc 8b 45 f8 8b 4d f4 8b f0 d3 ee 8d 14 07 31 55 fc 03 75 d4 81 3d ?? ?? ?? ?? 21 01 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7075,6 +7400,7 @@ rule Trojan_Win32_SmokeLoader_AMAZ_2147897130_0
         $x_2_1 = {89 45 ec c7 05 ?? ?? ?? ?? ?? ?? ?? ?? 03 55 d8 8b 45 ec 31 45 fc 33 55 fc 81 3d ?? ?? ?? ?? 13 02 00 00}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7096,6 +7422,7 @@ rule Trojan_Win32_SmokeLoader_HDA_2147897780_0
         $x_1_1 = {c1 e0 04 89 45 fc 8b 45 d4 01 45 fc 8b 55 f4 8b 4d f8 8b c2 d3 e8 8d 3c 13 81 c3 ?? ?? ?? ?? 03 45 dc 33 c7 31 45 fc 8b 45 fc 29 45 f0 ff 4d e8 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7117,6 +7444,7 @@ rule Trojan_Win32_SmokeLoader_O_2147898105_0
         $x_1_1 = {89 55 fc 8b 45 d8 01 45 fc 8b 45 f4 8b 4d f8 8d 14 01 8b 4d f0 d3 e8 8b 4d fc 03 c3 33 c2 33 c8 89 4d fc 2b f1 8b 45 e0 29 45 f8 83 ef 01 0f 85}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7139,6 +7467,7 @@ rule Trojan_Win32_SmokeLoader_CHZ_2147898552_0
         $x_1_2 = {33 c6 2b d8 81 c7 ?? ?? ?? ?? 83 6d ec 01 89 45 fc 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7160,6 +7489,7 @@ rule Trojan_Win32_SmokeLoader_P_2147898644_0
         $x_1_1 = {89 44 24 30 89 7c 24 18 8b 44 24 30 01 44 24 18 8b 44 24 10 33 44 24 18 89 44 24 18 8b 4c 24 18 89 4c 24 18 8b 44 24 18 29 44 24 14 8b 4c 24 14 8b c1 c1 e0 04 03 44 24 2c 81 3d ?? ?? ?? ?? be 01 00 00 89 44 24 10 8d 34 29}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7182,6 +7512,7 @@ rule Trojan_Win32_SmokeLoader_AM_2147899160_0
         $x_1_2 = {8b 46 0c 03 86 ?? ?? ?? ?? 35 ?? ?? ?? ?? 0f af 05 ?? ?? ?? ?? 6a ?? a3 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 80 ?? ?? ?? ?? 33 05 ?? ?? ?? ?? 83 f0 ?? 09 86 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 48 ?? 8b 86 ?? ?? ?? ?? 81 c1 ?? ?? ?? ?? 03 c1 31 86}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7203,6 +7534,7 @@ rule Trojan_Win32_SmokeLoader_Q_2147899295_0
         $x_1_1 = {89 4d f0 8b 4d f8 8b f3 d3 ee c7 05 ?? ?? ?? ?? ee 3d ea f4 03 75 dc 8b 45 f0 31 45 fc 81 3d ?? ?? ?? ?? e6 09 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7227,6 +7559,7 @@ rule Trojan_Win32_SmokeLoader_ASBN_2147899501_0
         $x_1_4 = "hDuw rulufamomeke fedivaheti yibibayukege roxasohitis canoxoj milerejeda lojinapabajer yozu denomamexarak" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7249,6 +7582,7 @@ rule Trojan_Win32_SmokeLoader_GLM_2147899640_0
         $x_1_2 = {33 c6 81 c3 47 86 c8 61 2b f8 83 6d e4 ?? 89 45 fc 89 5d e8 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7270,6 +7604,7 @@ rule Trojan_Win32_SmokeLoader_RDS_2147899661_0
         $x_2_1 = {8b 8d f8 f7 ff ff 30 04 39 83 fb 0f 75 1e}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7291,6 +7626,7 @@ rule Trojan_Win32_SmokeLoader_AAAK_2147899689_0
         $x_1_1 = {8b 4c 24 10 30 04 0e 83 ff 0f 75 12 6a 00 6a 00 6a 00 6a 00 6a 00 6a 00 ff 15 ?? ?? ?? ?? 46 3b f7 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7312,6 +7648,7 @@ rule Trojan_Win32_SmokeLoader_NL_2147899706_0
         $x_5_1 = {33 75 fc 89 75 f0 8b 45 f0 83 45 f4 ?? 29 45 f4 83 6d f4 ?? 8b 55 f4 c1 e2 ?? 89 55 fc 8b 45 e4 01 45 fc 8b 55 f4 8b 4d f8 8b f2 d3 ee 8d 04 17 31 45 fc 03 75 e0 81 3d ?? ?? ?? ?? ?? ?? 00 00 75 12}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7339,6 +7676,7 @@ rule Trojan_Win32_SmokeLoader_S_2147899730_0
         $x_1_7 = "Rimavowegal buhaviluzu tesoyaz jicuk" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7364,6 +7702,7 @@ rule Trojan_Win32_SmokeLoader_ASES_2147900234_0
         $x_1_5 = "yetonodivohafotipukoyavir dasacokosevisocu kocedecesikagoyufohibihicazihozo mitud huxeduraxivosuyewac" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7386,6 +7725,7 @@ rule Trojan_Win32_SmokeLoader_CYC_2147900507_0
         $x_1_2 = {8b c2 d3 e8 8b 4d fc 81 c7 47 ?? ?? ?? 89 7d e8 03 45 d0 33 45 ec 33 c8 2b f1 83 eb 01 89 4d fc 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7407,6 +7747,7 @@ rule Trojan_Win32_SmokeLoader_T_2147900584_0
         $x_1_1 = {01 45 f0 8b 45 f0 89 45 ec 8b 55 f8 8b 4d f4 8b c2 d3 e8 8b 4d fc 03 c3 33 45 ec 33 c8 8d 45 e8 89 4d fc 2b f1 e8 ?? ?? ?? ?? 83 ef 01 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7437,6 +7778,7 @@ rule Trojan_Win32_SmokeLoader_ASET_2147900756_0
         $x_1_10 = "morebucoxozivib" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_5_*))) or
@@ -7462,6 +7804,7 @@ rule Trojan_Win32_SmokeLoader_RDT_2147900914_0
         $x_2_1 = {8b 4c 24 0c 30 04 31 83 7d 0c 0f 75 57}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7483,6 +7826,7 @@ rule Trojan_Win32_SmokeLoader_RDT_2147900914_1
         $x_2_1 = {e8 fa fe ff ff 30 04 33 83 ff 0f 75 21}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7504,6 +7848,7 @@ rule Trojan_Win32_SmokeLoader_U_2147900940_0
         $x_1_1 = {8b 45 0c 01 45 fc 8b 45 fc 31 45 08 8b 45 08 8b e5}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7526,6 +7871,7 @@ rule Trojan_Win32_SmokeLoader_HGG_2147901154_0
         $x_1_2 = {33 c6 81 c3 ?? ?? ?? ?? 2b f8 83 6d e0 01 89 45 fc 89 5d e8 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7547,6 +7893,7 @@ rule Trojan_Win32_SmokeLoader_V_2147901413_0
         $x_1_1 = {01 45 f0 8b 45 f0 89 45 ec 8b 55 f8 8b 4d f4 d3 ea 03 55 ?? 8b 45 ?? 31 45 ?? 8b 45 ?? 33 c2 81 c7 ?? ?? ?? ?? 2b f0 83 eb ?? 89 45 ?? 89 7d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7568,6 +7915,7 @@ rule Trojan_Win32_SmokeLoader_W_2147901553_0
         $x_1_1 = {01 45 f0 8b 45 f0 89 45 ec 8b 55 f8 8b 4d f4 d3 ea 03 d3 8b 45 ec 31 45 fc 31 55 fc 2b 7d fc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7589,6 +7937,7 @@ rule Trojan_Win32_SmokeLoader_PADH_2147902151_0
         $x_2_1 = {d3 ea 89 45 ec 8b 45 fc c7 05 ac b3 af 02 ee 3d ea f4 03 55 d4 89 45 e8 89 75 f0 8b 45 ec 01 45 f0 8b 45 f0 31 45 e8 8b 45 e8 33 d0 89 45 fc 89 55 f0 8b 45 f0 83 45 f8 64 29 45 f8 83 6d f8 64 8b 45 f8 c1 e0 04 89 45 fc 8b 45 d8 01 45 fc 8b 45 f8 8d 0c 03 89 4d ec 8b 4d f4 d3 e8 03 45 d0 89 45 f0 8b 45 ec 31 45 fc 81 3d b4 b3 af 02 03 0b 00 00 75 0d}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7610,6 +7959,7 @@ rule Trojan_Win32_SmokeLoader_SHK_2147902411_0
         $x_1_1 = {8b d6 d3 ea 03 c6 89 45 ec 03 55 d4 8b 45 ec 31 45 fc 31 55 fc 2b 7d fc 8b 45 dc 29 45 f8 ff 4d ?? 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7631,6 +7981,7 @@ rule Trojan_Win32_SmokeLoader_PADJ_2147902482_0
         $x_2_1 = {8b d6 03 c6 d3 ea 89 45 e4 8b 45 fc c7 05 ?? ?? ?? ?? ee 3d ea f4 03 55 d4 89 45 f0 89 7d e8 8b 45 e4 01 45 e8 8b 45 e8 31 45 f0 8b 45 f0 33 c2 2b d8 8b c3 c1 e0 04 89 45 fc 8b 45 cc 01 45 fc 8b 4d f4 8b 45 f8 8b f3 d3 ee 03 c3 89 45 e4 03 75 dc 8b 45 e4 31 45 fc 81 3d ?? ?? ?? ?? 03 0b 00 00 75 0d}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7654,6 +8005,7 @@ rule Trojan_Win32_SmokeLoader_PADM_2147902636_0
         $x_1_3 = {ff d7 6a 00 ff d3 6a 00 6a 00 6a 00 ff 15 ?? ?? ?? ?? 81 fe fc 6a 17 00 0f 8f 7d 02 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7675,6 +8027,7 @@ rule Trojan_Win32_SmokeLoader_PADN_2147903011_0
         $x_2_1 = {33 c2 2b f8 8b c7 c1 e0 04 89 45 fc 8b 45 d8 01 45 fc 8b 4d f8 8b 45 f4 8b f7 d3 ee 03 c7 89 45 e8 03 75 d4 8b 45 e8 31 45 fc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7697,6 +8050,7 @@ rule Trojan_Win32_SmokeLoader_PADO_2147903012_0
         $x_1_2 = {7e 20 55 8b 2d ?? ?? ?? ?? 8b ff e8 8b ff ff ff 30 04 1e 83 ff 0f 75 04 6a 00 ff d5 46 3b f7 7c ea 5d 5e}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7718,6 +8072,7 @@ rule Trojan_Win32_SmokeLoader_TOY_2147903768_0
         $x_1_1 = {03 c7 89 45 e4 8b 45 e8 c1 e8 05 89 45 ?? 8b 45 d4 01 45 ?? 8b 45 fc c7 05 ?? ?? ?? ?? ee 3d ea f4 89 45 f0 89 5d ?? 8b 45 e4 01 45 e8 8b 45 e8 31 45 f0 8b 45 f0 31 45 f8 2b 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7739,6 +8094,7 @@ rule Trojan_Win32_SmokeLoader_ASEU_2147905041_0
         $x_5_1 = {d3 e8 03 45 ?? 89 45 f8 8b 45 ?? 31 45 fc 8b 45 fc}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7760,6 +8116,7 @@ rule Trojan_Win32_SmokeLoader_X_2147905496_0
         $x_1_1 = {03 45 d0 89 45 f0 33 45 e4 31 45 fc 8b 45 fc 29 45 f8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7781,6 +8138,7 @@ rule Trojan_Win32_SmokeLoader_X_2147905496_1
         $x_1_1 = {89 45 ec 89 55 f8 8b 45 ?? 01 45 f8 8b 45 f8 31 45 ec 8b 4d f0 8b 45 ec 33 c8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7802,6 +8160,7 @@ rule Trojan_Win32_SmokeLoader_MAT_2147906668_0
         $x_1_1 = {30 0c 30 83 ff 0f 75 1b 00 81 05 ?? ?? ?? ?? c3 9e 26 00 8a 0d 9a ?? ?? ?? 8b 44 24 0c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7824,6 +8183,7 @@ rule Trojan_Win32_SmokeLoader_PADT_2147909799_0
         $x_1_2 = {8b 44 24 18 83 c0 64 89 44 24 10 83 6c 24 10 64 8a 4c 24 10 8b 44 24 14 30 0c 30 83 bc 24 5c 08 00 00 0f 75 5f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7846,6 +8206,7 @@ rule Trojan_Win32_SmokeLoader_ASL_2147910095_0
         $x_2_2 = {01 45 f8 8b 45 f8 33 45 ?? 31 45 fc 8b 45 fc 29 45}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7867,6 +8228,7 @@ rule Trojan_Win32_SmokeLoader_RDX_2147910296_0
         $x_2_1 = {89 45 f0 8b 45 e8 c1 e8 05 89 45 f8 8b 4d fc 33 4d f0 8b 45 f8 03 45 d0 33 c1 89 4d fc}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7888,6 +8250,7 @@ rule Trojan_Win32_SmokeLoader_RXE_2147911204_0
         $x_1_1 = {83 c4 04 8b 85 f8 ?? ?? ?? 83 c0 64 89 85 f4 ?? ?? ?? 83 ad f4 ?? ?? ?? 64 8a 8d f4 ?? ?? ?? 30 0c 33 83 ff 0f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7910,6 +8273,7 @@ rule Trojan_Win32_SmokeLoader_PADZ_2147911396_0
         $x_1_2 = {69 c0 fd 43 03 00 81 3d ?? ?? ?? ?? 9e 13 00 00 a3 f8 21 34 02 75 0f}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7932,6 +8296,7 @@ rule Trojan_Win32_SmokeLoader_ASGE_2147911909_0
         $x_1_2 = "lopeyevecavinoxigilaketet" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7953,6 +8318,7 @@ rule Trojan_Win32_SmokeLoader_RDAA_2147912425_0
         $x_2_1 = {33 44 24 10 2b e8 89 44 24 14 8b c5 c1 e0 04 89 44 24 10 8b 44 24 2c 01 44 24 10 8b c5}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7974,6 +8340,7 @@ rule Trojan_Win32_SmokeLoader_PAEH_2147912586_0
         $x_2_1 = {33 44 24 10 2b d8 89 44 24 14 8b c3 c1 e0 04 89 44 24 10 8b 44 24 28 01 44 24 10 8b c3 c1 e8 05 89 44 24 14 8b 44 24 2c 01 44 24 14 8d 04 2b 33 44 24 14 31 44 24 10 8b 44 24 10 29 44 24 18 8d ad ?? ?? ?? ?? 4e 0f 85}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -7995,6 +8362,7 @@ rule Trojan_Win32_SmokeLoader_PAEJ_2147912686_0
         $x_2_1 = {89 44 24 18 8b c7 c1 e0 04 89 44 24 10 8b 44 24 28 01 44 24 10 8b 4c 24 14 8b c7 c1 e8 05 03 cf 89 44 24 18 8b 44 24 2c 01 44 24 18 8b 44 24 18 33 c1 31 44 24 10 8b 44 24 10 29 44 24 1c 8b 44 24 30 29 44 24 14 4b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8016,6 +8384,7 @@ rule Trojan_Win32_SmokeLoader_PAEO_2147913055_0
         $x_2_1 = {89 44 24 14 8b c3 c1 e0 04 89 44 24 10 8b 44 24 2c 01 44 24 10 8b c3 c1 e8 05 89 44 24 14 8b 44 24 30 01 44 24 14 8d 04 1e 33 44 24 14 31 44 24 10 8b 44 24 10 29 44 24 1c 8d 4c 24 18}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8037,6 +8406,7 @@ rule Trojan_Win32_SmokeLoader_KOF_2147914400_0
         $x_1_1 = {50 89 7d f8 e8 ?? ?? ?? ?? 8a 45 f8 30 04 33 83 7d 08 0f 59 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8058,6 +8428,7 @@ rule Trojan_Win32_SmokeLoader_WRD_2147914718_0
         $x_1_1 = {33 c7 2b f0 8b c6 c1 e8 05 03 ce 89 45 ?? 8b 85 ?? fd ff ff 01 45 ?? 8b c6 c1 e0 04 03 85 ?? fd ff ff 33 45 ?? 33 c1 2b d8 89 9d ?? fd ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8079,6 +8450,7 @@ rule Trojan_Win32_SmokeLoader_TZZ_2147914870_0
         $x_1_1 = {83 a5 f8 f7 ff ff 00 8d 8d f8 f7 ff ff e8 ?? ?? ?? ?? 8a 85 f8 f7 ff ff 30 04 37 83 fb 0f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8100,6 +8472,7 @@ rule Trojan_Win32_SmokeLoader_STE_2147915011_0
         $x_1_1 = {56 33 f6 85 db 7e ?? 83 a5 f8 fb ff ff 00 8d 8d f8 fb ff ff e8 ?? ?? ?? ?? 8a 85 f8 fb ff ff 30 04 37 83 fb 0f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8123,6 +8496,7 @@ rule Trojan_Win32_SmokeLoader_ASGH_2147915035_0
         $x_1_3 = {81 ff 85 ed 8c 05 7f 09 47 81 ff b1 02 65 1f 7c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8144,6 +8518,7 @@ rule Trojan_Win32_SmokeLoader_AXA_2147915320_0
         $x_1_1 = {33 c1 8b 4d 70 33 c7 2b f0 8b c6 c1 e8 05 89 b5 ?? ?? ?? ?? 03 ce 89 45 6c 8b 85 ?? ?? ?? ?? 01 45 6c c1 e6 04 03 b5 68 fe ff ff 33 f1 81 3d ?? ?? ?? ?? 03 0b 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8165,6 +8540,7 @@ rule Trojan_Win32_SmokeLoader_SMZ_2147915609_0
         $x_1_1 = {c1 e8 05 89 45 70 8b 45 70 8b 8d 88 fe ff ff 03 c7 03 cb 33 c1 33 c6 29 85 80 fe ff ff 8b 85 80 fe ff ff c1 e8 05 c7 05 ?? ?? ?? ?? ee 3d ea f4 89 45 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8186,6 +8562,7 @@ rule Trojan_Win32_SmokeLoader_BBX_2147915719_0
         $x_1_1 = {c1 e8 05 c7 05 34 84 82 02 ee 3d ea f4 89 45 70 8b 85 70 fe ff ff 01 45 70 8b b5 78 fe ff ff 8b 8d 80 fe ff ff 03 8d 78 fe ff ff c1 e6 04 03 b5 ?? ?? ?? ?? 33 f1 81 3d ?? ?? ?? ?? 03 0b 00 00 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8207,6 +8584,7 @@ rule Trojan_Win32_SmokeLoader_BBZ_2147915838_0
         $x_1_1 = {c1 e8 05 89 45 70 8b 45 70 8b 95 80 fe ff ff 03 c7 03 d3 33 c2 33 c1 29 85 78 fe ff ff 8b 85 ?? ?? ?? ?? c1 e8 05 c7 05 ?? ?? ?? ?? ee 3d ea f4 89 45 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8228,6 +8606,7 @@ rule Trojan_Win32_SmokeLoader_IIA_2147915930_0
         $x_1_1 = {c1 e8 05 89 45 70 8b 45 70 03 85 10 ff ff ff 8b 95 ?? ?? ?? ?? 03 d7 33 c2 33 c1 2b d8 8b c3 c1 e8 05 c7 05 ?? ?? ?? ?? ee 3d ea f4 89 45 70 8b 85 0c ff ff ff}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8249,6 +8628,7 @@ rule Trojan_Win32_SmokeLoader_ROD_2147916071_0
         $x_1_1 = {c1 e8 05 89 45 70 8b 45 70 03 85 0c ff ff ff 8d 14 3b 33 c2 33 c1 29 85 18 ff ff ff 8b 85 18 ff ff ff c1 e8 05 c7 05 ?? ?? ?? ?? ee 3d ea f4 89 45 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8270,6 +8650,7 @@ rule Trojan_Win32_SmokeLoader_TOE_2147916199_0
         $x_1_1 = {33 f6 3b df 7e 29 8d 4d fc 89 7d fc e8 ?? ?? ?? ?? 8b 45 08 8a 4d fc 03 c6 30 08 83 fb 0f 75}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8291,6 +8672,7 @@ rule Trojan_Win32_SmokeLoader_YYT_2147916577_0
         $x_1_1 = {8b 45 08 8a 4d fc 03 c2 30 08 42 3b d6 7c e5 83 fe 2d 75 11}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8312,6 +8694,7 @@ rule Trojan_Win32_SmokeLoader_YQT_2147916645_0
         $x_1_1 = {8b 45 08 8a 4d fc 03 c6 30 08 83 7d 0c 0f 75 0d 57 ff 75 0c ff d3 57 ff 15 ?? ?? ?? ?? 46 3b 75 0c 7c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8333,6 +8716,7 @@ rule Trojan_Win32_SmokeLoader_AR_2147916761_0
         $x_1_1 = {89 45 fc 8b 45 e8 01 45 fc 8b 4d f8 8b c7 c1 e0 ?? 03 45 ?? 03 cf 33 c1 81 3d ?? ?? ?? ?? 03 0b 00 00 89 45}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8354,6 +8738,7 @@ rule Trojan_Win32_SmokeLoader_KWW_2147917147_0
         $x_5_1 = {50 e8 c9 ff ff ff 8b 45 08 59 8a 4d fc 03 c6 30 08 83 fb 0f 75 ?? 6a 00 ff 75 fc ff 15}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8376,6 +8761,7 @@ rule Trojan_Win32_SmokeLoader_ASGI_2147918380_0
         $x_5_2 = {8b 4d fc 5f 5e 33 cd 5b e8}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8397,6 +8783,7 @@ rule Trojan_Win32_SmokeLoader_RDAC_2147921739_0
         $x_2_1 = {8a 95 dc f3 ff ff 8b 85 d8 f3 ff ff 8b 75 0c 30 14 38 83 fe 0f 75 5b}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8418,6 +8805,7 @@ rule Trojan_Win32_SmokeLoader_SKF_2147926685_0
         $x_1_1 = {8b 4d f0 03 4d f8 8b 45 f0 c1 e8 05 89 45 f4 8b 45 f4 03 45 d8 33 d9 33 c3}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8439,6 +8827,7 @@ rule Trojan_Win32_SmokeLoader_EABZ_2147929475_0
         $x_5_1 = {83 c0 46 89 44 24 0c 83 6c 24 0c 0a 90 83 6c 24 0c 3c 8a 44 24 0c 30 04 3b 83 fd 0f}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8460,6 +8849,7 @@ rule Trojan_Win32_SmokeLoader_EANN_2147929551_0
         $x_5_1 = {f7 a4 24 ec 00 00 00 8b 84 24 ec 00 00 00 81 ac 24 ac 01 00 00 ?? ?? ?? ?? 8a 84 0e 3b 2d 0b 00 88 04 39 41}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8481,6 +8871,7 @@ rule Trojan_Win32_SmokeLoader_BB_2147929616_0
         $x_6_1 = {8b 85 dc fd ff ff 0f b6 b4 05 f8 fe ff ff 8b 45 08 8b 8d e4 fd ff ff 0f b6 14 08 31 f2 88 14 08 8b 85 e4 fd ff ff 83 c0 01 89 85 e4 fd ff ff e9}  //weight: 6, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8502,6 +8893,7 @@ rule Trojan_Win32_SmokeLoader_EAC_2147929663_0
         $x_5_1 = {03 55 ec 8d 04 1f 33 d0 33 55 fc 89 55 dc 8b 45 dc 29 45 f8}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8523,6 +8915,7 @@ rule Trojan_Win32_SmokeLoader_BC_2147930132_0
         $x_3_1 = {01 45 fc 8b 45 f8 8b cb c1 e1 04 03 4d dc 8d 14 18 33 ca 33 4d fc}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8544,6 +8937,7 @@ rule Trojan_Win32_SmokeLoader_BD_2147930134_0
         $x_2_1 = {83 6c 24 04 0a ?? 83 6c 24 04 3c 8a 44 24 04 30 04 37 83 fb 0f 75}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8565,6 +8959,7 @@ rule Trojan_Win32_SmokeLoader_SZXB_2147930971_0
         $x_3_1 = {83 c0 46 89 44 24 14 83 6c 24 14 0a 83 6c 24 14 3c 8a 44 24 14 30 04 1f 47 3b fd 7c}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8588,6 +8983,7 @@ rule Trojan_Win32_SmokeLoader_AMDA_2147930972_0
         $x_1_3 = {33 c0 40 2b 86 ?? 00 00 00 01 46 ?? a1 ?? ?? ?? ?? 03 46 ?? 83 f0 25 01 46 ?? a1 ?? ?? ?? ?? 8b 40 ?? 0f af 46 ?? 89 46 ?? a1 ?? ?? ?? ?? 8b 80 ?? ?? ?? ?? 8b 0c 38 a1 ?? ?? ?? ?? 33 8e ?? 00 00 00 89 0c 07 83 c7 04}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8609,6 +9005,7 @@ rule Trojan_Win32_SmokeLoader_BE_2147931030_0
         $x_3_1 = {89 44 24 14 83 6c 24 14 0a 83 6c 24 14 3c 8a 44 24 14 30 04 1f 47 3b fd 7c}  //weight: 3, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8630,6 +9027,7 @@ rule Trojan_Win32_SmokeLoader_EAQP_2147932052_0
         $x_5_1 = {8b 45 08 8b 0d ?? ?? ?? ?? 8a 8c 01 d6 38 00 00 8b 15 ?? ?? ?? ?? 88 0c 02 c9}  //weight: 5, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8651,6 +9049,7 @@ rule Trojan_Win32_SmokeLoader_BF_2147935993_0
         $x_4_1 = {01 f3 83 ec 04 89 14 24 ba 00 00 00 00 01 da 31 02 5a 5b 53}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8672,6 +9071,7 @@ rule Trojan_Win32_SmokeLoader_EAHT_2147936239_0
         $x_5_1 = {c1 e8 05 03 44 24 28 03 cd 33 c1 8d 0c 3b 33 c1 2b f0}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -8693,6 +9093,7 @@ rule Trojan_Win32_SmokeLoader_RGB_2147941796_0
         $x_5_1 = {6a 00 ff 75 f8 6a 00 6a 00 6a 00 6a 00 68 00 00 00 80 68 00 00 00 80 68 00 00 00 80 68}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

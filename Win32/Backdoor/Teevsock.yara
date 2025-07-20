@@ -17,6 +17,7 @@ rule Backdoor_Win32_Teevsock_A_2147626478_0
         $x_1_3 = {73 71 6c 77 69 64 2e 64 6c 6c 00 00 73 76 63 68 6f 73 74 2e 65 78 65 00 73 71 6c 73 72 76 2e 65 78 65 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Backdoor_Win32_Teevsock_H_2147627841_0
         $x_1_3 = {68 60 ea 00 00 ff 15 ?? ?? ?? 00 33 c9 33 c0 8a d1 80 c2 0d 30 90 ?? ?? ?? 00 83 f9 03 7e 04 33 c9 eb 03}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -61,6 +63,7 @@ rule Backdoor_Win32_Teevsock_J_2147628741_0
         $x_1_3 = {3a 2a 3a 45 6e 61 62 6c 65 64 3a 52 41 53 53 20 53 65 72 76 65 72 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

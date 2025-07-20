@@ -16,6 +16,7 @@ rule Ransom_Win64_Nokonoko_ZA_2147843477_0
         $x_10_2 = {41 0f be 10 4d 8d 40 01 8b c8 c1 e8 ?? 48 33 d1 0f b6 ca 41 33 04 8f 49 83 e9 01 75 e3 f7 d0 3b c6 74 27}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Ransom_Win64_Nokonoko_ZB_2147843479_0
         $x_1_4 = {ba 12 56 e9 cc}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

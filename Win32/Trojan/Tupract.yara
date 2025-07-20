@@ -16,6 +16,7 @@ rule Trojan_Win32_Tupract_A_2147682351_0
         $x_1_2 = {6a 00 56 ff d3 25 ff 00 00 00 c1 e0 10 83 c8 01 50 56 68 00 01 00 00 57 ff d5 68 c8 00 00 00 ff 15 ?? ?? ?? ?? 6a 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -18,6 +18,7 @@ rule Trojan_Win32_Clicker_GPA_2147904539_0
         $x_1_3 = "HGL345" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_Win32_Clicker_RP_2147904790_0
         $x_1_4 = "tgbnhy" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -66,6 +68,7 @@ rule Trojan_Win32_Clicker_PADL_2147913609_0
         $x_1_4 = "BaiduClick" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

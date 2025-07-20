@@ -16,6 +16,7 @@ rule Trojan_Win32_BazekCrypter_A_2147895098_0
         $x_2_1 = {46 8b 44 87 ?? 33 c2 89 01 83 c1}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

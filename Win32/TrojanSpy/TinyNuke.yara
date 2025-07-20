@@ -33,6 +33,7 @@ rule TrojanSpy_Win32_TinyNuke_A_2147765006_0
         $x_1_18 = "injArch96z.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 6 of ($x_2_*) and 9 of ($x_1_*))) or
             ((1 of ($x_5_*) and 7 of ($x_2_*) and 7 of ($x_1_*))) or

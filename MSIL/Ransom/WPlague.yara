@@ -19,6 +19,7 @@ rule Ransom_MSIL_WPlague_DA_2147767268_0
         $x_1_4 = "WannaPlaguE.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -44,6 +45,7 @@ rule Ransom_MSIL_WPlague_DB_2147767459_0
         $x_1_5 = "Now you need to contact bl4ack#1337 on the discord asking for the decrypt key" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -70,6 +72,7 @@ rule Ransom_MSIL_WPlague_DC_2147767472_0
         $x_1_6 = "Ransomware2._0.Properties.Resources.resources" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -95,6 +98,7 @@ rule Ransom_MSIL_WPlague_DD_2147767473_0
         $x_1_5 = "files have been encrypted with special encryption program." ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -120,6 +124,7 @@ rule Ransom_MSIL_WPlague_DE_2147780332_0
         $x_1_5 = "Ransomware2.0" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))
@@ -148,6 +153,7 @@ rule Ransom_MSIL_WPlague_DF_2147780432_0
         $x_1_5 = "CheckRemoteDebuggerPresent" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_5_*) and 1 of ($x_1_*))) or
             (all of ($x*))

@@ -17,6 +17,7 @@ rule TrojanDownloader_MSIL_PureLogsStealer_B_2147913635_0
         $x_2_2 = "AntiAnalysis" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

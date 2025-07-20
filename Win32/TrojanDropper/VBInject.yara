@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_VBInject_B_2147611182_0
         $x_1_3 = {09 00 00 00 6b 65 72 6e 65 6c 33 32 00 00 00 00 0e 00 00 00 52 74 6c 4d 6f 76 65 4d 65 6d 6f 72 79 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanDropper_Win32_VBInject_A_2147652489_0
         $x_1_2 = {c1 e0 04 8b 8d ?? ?? ?? ?? 8b 49 ?? 03 c8 ff 15 ?? ?? ?? ?? 8d 95 ?? ?? ?? ?? 52 a1 ?? ?? ?? ?? 50 8b 0d ?? ?? ?? ?? 51 e8 ?? ?? ?? ?? 8d 95 ?? ?? ?? ?? 52 6a 00 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

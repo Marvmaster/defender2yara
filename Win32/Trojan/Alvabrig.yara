@@ -21,6 +21,7 @@ rule Trojan_Win32_Alvabrig_A_2147623562_0
         $x_1_7 = {4a 8a 07 32 c1 03 c9 fe c1 aa 4a 75 f4 8b 3d ?? ?? ?? ?? 8b cf b0 50}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

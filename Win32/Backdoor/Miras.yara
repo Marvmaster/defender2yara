@@ -17,6 +17,7 @@ rule Backdoor_Win32_Miras_A_2147688805_0
         $x_1_3 = {81 fe 68 01 00 00 0f 8c 83 00 00 00 c6 84 24 80 00 00 00 55 66 c7 84 24 81 00 00 00 07 00 66 8b 94 24 80 00 00 00 8a 84 24 82 00 00 00 88 5c 24 10 88 5c 24 11 88 5c 24 12 c7 44 24 13 71 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

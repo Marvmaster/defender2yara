@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Buerak_G_2147759202_0
         $x_1_3 = {32 c1 e9 0b [0-48] 89 3d [0-48] c7 05 [0-64] 0f b6 42 ?? 8b c3 [0-48] c7 45 [0-48] 03 4c 24 [0-48] 0f b6 41}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

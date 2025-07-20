@@ -32,6 +32,7 @@ rule Ransom_MSIL_FileEncoder_2147789163_0
         $x_1_17 = ".khonsari" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +59,7 @@ rule Ransom_MSIL_FileEncoder_A_2147810231_0
         $x_1_6 = "taskkill /f /im taskmgr.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

@@ -23,6 +23,7 @@ rule Worm_Win32_Hamtacker_A_2147610796_0
         $x_1_9 = "this is not a mark, is a cheat" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

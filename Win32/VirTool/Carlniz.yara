@@ -18,6 +18,7 @@ rule VirTool_Win32_Carlniz_2147781073_0
         $x_1_4 = {48 89 4b 08 49 89 d9 48 89 53 10 ff 15 ?? ?? ?? ?? 85 c0 ?? ?? ff 15 ?? ?? ?? ?? 48 8d ?? ?? ?? ?? ?? 89 c2}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

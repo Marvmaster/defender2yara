@@ -16,6 +16,7 @@ rule Trojan_Win32_InfoStealer_VD_2147752386_0
         $x_1_1 = {f3 0f 10 c9 f3 0f 10 f6 f3 0f 10 f6 f3 0f 10 f6 [0-21] 33 94 85 ?? ?? ?? ?? 88 16 f3 0f 10 d2 f3 0f 10 c0 f3 0f 10 c0 f3 0f 10 ff 46 [0-21] 0f 85}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -37,6 +38,7 @@ rule Trojan_Win32_InfoStealer_VD_2147752386_1
         $x_1_1 = {8b 74 93 10 8b 14 93 d3 c6 8b 4d 08 03 f0 c1 e9 1b d3 c2 8b 4d 08 8b c1 c1 e8 05 03 d0 8b 45 fc 33 f2 8b 55 f8 03 c2 33 f0 03 75 ec 83 6d f4 01 89 4d ec 8b cf 89 75 fc 8b fe 89 4d 08 0f 85 66 ff ff ff}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -58,6 +60,7 @@ rule Trojan_Win32_InfoStealer_2147753775_0
         $x_1_1 = {8d 34 07 0f be 1e 81 c3 ?? ?? ?? ?? e8 ?? ?? ?? ?? fe cb 32 c3 47 3b 7c 24 ?? 88 06 8b 44 24}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -84,6 +87,7 @@ rule Trojan_Win32_InfoStealer_AA_2147753858_0
         $x_1_6 = "ESBAYDILAT" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Trojan_Win32_InfoStealer_E_2147762988_0
         $x_1_6 = "mail_vault" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((2 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -136,6 +141,7 @@ rule Trojan_Win32_InfoStealer_X_2147767286_0
         $x_1_3 = "http://%s/home/?id=%s&act=wbi&ver=%s" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -159,6 +165,7 @@ rule Trojan_Win32_InfoStealer_VZ_2147819897_0
         $x_1_3 = ".pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -181,6 +188,7 @@ rule Trojan_Win32_InfoStealer_VW_2147896106_0
         $x_10_2 = {6a 01 6a 0c 6a 6f 68 1e f4 48 00 6a 55 6a 5b 68 41 f6 48 00}  //weight: 10, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -211,6 +219,7 @@ rule Trojan_Win32_InfoStealer_RP_2147906383_0
         $x_20_10 = "SSUI_HelpDiagram_Animation1" ascii //weight: 20
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_20_*) and 3 of ($x_1_*))) or
             (all of ($x*))

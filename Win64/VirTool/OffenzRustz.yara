@@ -19,6 +19,7 @@ rule VirTool_Win64_OffenzRustz_A_2147838741_0
         $x_1_4 = {48 8b 85 e0 00 00 00 48 8b 8d e8 00 00 00 48 89 8d b8 34 00 00 48 89 85 c0 34 00 00 48 8d ?? ?? ?? ?? ?? 48 89 e0 48 89 48 28 48 c7 40 30 01 00 00 00 48 c7 40 20 01 00 00 00 48 8d ?? ?? ?? ?? ?? 48 8d ?? ?? ?? ?? ?? 41 b8 02 00 00 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -43,6 +44,7 @@ rule VirTool_Win64_OffenzRustz_B_2147839557_0
         $x_1_4 = {48 89 e0 48 89 48 20 4c 8d ?? ?? ?? ?? ?? 48 8d ?? ?? ?? ?? ?? 48 8d ?? ?? ?? ?? ?? 41 b9 0f 00 00 00 e8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

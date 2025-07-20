@@ -17,6 +17,7 @@ rule Ransom_Win32_Ruyk_A_2147767185_0
         $x_1_2 = {8b 45 0c 89 45 ec 8b 4d 0c 83 e9 01 89 4d 0c 83 7d ec 00 74 29 8b 55 08 0f b6 02 33 45 fc 25 ff 00 00 00 8b 4d fc c1 e9 08 33 8c 85 ec fb ff ff 89 4d fc 8b 55 08 83 c2 01 89 55 08 eb c2}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

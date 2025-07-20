@@ -22,6 +22,7 @@ rule Ransom_Linux_ViceSociety_D_2147831034_0
         $x_1_7 = ".crypt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_Linux_ViceSociety_DB_2147832796_0
         $x_1_4 = {48 8b 95 60 ef ff ff 48 8d 85 f0 ef ff ff 48 89 d6 48 89 c7 e8 91 ec ff ff 85 c0 0f 95 c0 84 c0 0f 84 af 00 00 00 48 8b 05 dd 82 20 00 48 85 c0 74 29 48 8b 05 d1 82 20 00 48 8b 8d 60 ef ff ff 48 8d 95 f0 ef ff ff 48 8d 35 a4 4b 00 00 48 89 c7 b8}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

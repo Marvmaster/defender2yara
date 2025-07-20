@@ -18,6 +18,7 @@ rule Trojan_Win32_SamScissors_CO_2147843891_0
         $x_1_4 = {25 00 73 00 20 00 20 00 20 00 3a 00 20 00 20 00 20 00 25 00 73 00 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -42,6 +43,7 @@ rule Trojan_Win32_SamScissors_A_2147844301_0
         $x_2_2 = "D3DCOMPILER_47.dll" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -63,6 +65,7 @@ rule Trojan_Win32_SamScissors_SA_2147844611_0
         $x_1_2 = {0f 11 84 24 ?? ?? ?? ?? 44 8b 06 8b dd bf 15 00 b8 ?? ?? ?? ?? 41 ba}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -87,6 +90,7 @@ rule Trojan_Win32_SamScissors_SB_2147844612_0
         $x_1_5 = {ff d5 48 85 c0 74 ?? 81 7b ?? ca 7d 0f 00 75 ?? 48 8d 54 24 ?? 48 8d 4c 24 ?? ff d0 8b f8 44 8b 44 24 ?? 4c 8d 4c 24 ?? ba 00 10 00 00 48 8b cd ff 15 3b 00 ff 15 ?? ?? ?? ?? 85 c0 74}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_5_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -117,6 +121,7 @@ rule Trojan_Win32_SamScissors_SC_2147844613_0
         $x_2_8 = "\\3CXDesktopApp\\config.json" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

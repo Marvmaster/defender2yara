@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Kradod_B_2147658695_0
         $x_1_4 = "UpExeUrl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

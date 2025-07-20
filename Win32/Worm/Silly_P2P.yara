@@ -31,6 +31,7 @@ rule Worm_Win32_Silly_P2P_E_2147598342_0
         $x_1_17 = "\\Grokster\\My Shared Folder\\" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_100_*) and 2 of ($x_4_*) and 2 of ($x_3_*) and 9 of ($x_1_*))) or
             ((1 of ($x_100_*) and 3 of ($x_4_*) and 1 of ($x_3_*) and 8 of ($x_1_*))) or
@@ -62,6 +63,7 @@ rule Worm_Win32_Silly_P2P_F_2147621246_0
         $x_1_4 = {55 54 20 32 30 30 33 20 4b 65 79 47 65 6e 2e 65 78 65 [0-4] 48 61 6c 66 2d 4c 69 66 65 20 32 20 44 6f 77 6e 6c 6f 61 64 65 72 2e 65 78 65}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -91,6 +93,7 @@ rule Worm_Win32_Silly_P2P_G_2147622768_0
         $x_1_10 = "Software\\eMule" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -118,6 +121,7 @@ rule Worm_Win32_Silly_P2P_K_2147653774_0
         $x_4_5 = "StartSpread" ascii //weight: 4
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +147,7 @@ rule Worm_Win32_Silly_P2P_A_2147681421_0
         $x_1_5 = "kazaa\\my shared folder" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or

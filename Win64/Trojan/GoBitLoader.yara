@@ -18,6 +18,7 @@ rule Trojan_Win64_GoBitLoader_GV_2147920748_0
         $x_3_3 = "main.AesDecode.func1" ascii //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

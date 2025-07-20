@@ -16,6 +16,7 @@ rule Trojan_Win32_DarkKomet_DEA_2147760365_0
         $x_1_1 = {81 e1 ff 00 00 00 8b 45 ?? 69 c0 ?? ?? ?? ?? 99 be ?? ?? ?? ?? f7 fe 33 d2 8a 94 05 ?? ?? ?? ?? 33 ca 8b 45 ?? 69 c0 ?? ?? ?? ?? 99 be ?? ?? ?? ?? f7 fe 8b 55 ?? 88 0c 02}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Trojan_Win32_DarkKomet_RT_2147809234_0
         $x_1_3 = "XzbUDhCmxuSl" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_Win32_DarkKomet_RB_2147833959_0
         $x_1_6 = "8blxx.exe" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -121,6 +124,7 @@ rule Trojan_Win32_DarkKomet_RA_2147838989_0
         $x_1_3 = "Archivos de programa\\NTCore\\Explorer Suite\\Extensions\\CFF Explorer" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -143,6 +147,7 @@ rule Trojan_Win32_DarkKomet_MBHL_2147852451_0
         $x_1_2 = {48 da 41 00 0f f3 32 00 00 ff ff ff 08 00 00 00 01 00 00 00 04 00 04 00 e9 00 00 00 b8 d7 41 00 f4 e2 41 00 60 28 40}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -164,6 +169,7 @@ rule Trojan_Win32_DarkKomet_SA_2147890563_0
         $x_1_1 = {48 89 4c 24 ?? c1 e8 ?? 40 89 44 24 ?? 8d 9b ?? ?? ?? ?? 0f b6 46 ?? 8d 3c 31 32 03 88 07 0f b6 46 ?? 32 43 ?? 88 42}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

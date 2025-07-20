@@ -28,6 +28,7 @@ rule Ransom_Win32_Crybisec_A_2147690269_0
         $x_2_14 = {8b 12 31 c8 83 f7 10 31 ff 01 d0 09 d6 81 45 e4 87 00 00 00 39 da 75}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((10 of ($x_1_*))) or
             ((1 of ($x_2_*) and 8 of ($x_1_*))) or

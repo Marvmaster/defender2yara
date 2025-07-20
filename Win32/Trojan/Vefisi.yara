@@ -27,6 +27,7 @@ rule Trojan_Win32_Vefisi_A_2147597814_0
         $x_1_11 = {5b 56 65 72 73 69 6f 6e 5d 0a 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -53,6 +54,7 @@ rule Trojan_Win32_Vefisi_A_2147597816_0
         $x_1_6 = {2e 6c 6e 6b 00 00 25 73 5c 55}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_2_*) and 2 of ($x_1_*))) or
             ((4 of ($x_2_*))) or

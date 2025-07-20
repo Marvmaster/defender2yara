@@ -17,6 +17,7 @@ rule Trojan_Linux_Sedexp_A_2147926539_0
         $x_1_2 = {31 f6 4c 89 ef e8 ?? ?? ?? ?? 85 c0 74 ?? 48 8d 35 77 3f 02 00 4c 89 ef e8 ?? ?? ?? ?? 48 89 c5 48 85 c0 0f ?? ?? ?? ?? ?? 48 89 c7 48 8d 0d ae 3f 02 00 4c 89 e2 31 c0}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 

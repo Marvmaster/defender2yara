@@ -29,6 +29,7 @@ rule TrojanDropper_MSIL_ISMInject_A_2147727321_0
         $x_1_14 = "Wrong Header Signature" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (8 of ($x*))
 }
 

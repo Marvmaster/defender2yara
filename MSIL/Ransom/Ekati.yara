@@ -22,6 +22,7 @@ rule Ransom_MSIL_Ekati_A_2147786955_0
         $x_1_7 = "ruby" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -46,6 +47,7 @@ rule Ransom_MSIL_Ekati_B_2147786956_0
         $x_1_4 = ".encrypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

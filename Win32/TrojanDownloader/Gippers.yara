@@ -18,6 +18,7 @@ rule TrojanDownloader_Win32_Gippers_VI_2147744666_0
         $x_1_3 = "<<FILES:%d   INJECT:%d>>" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

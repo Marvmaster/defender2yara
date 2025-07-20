@@ -27,6 +27,7 @@ rule Backdoor_MSIL_LimeRat_GA_2147776762_0
         $x_1_12 = "nur\\noisrevtnerruc\\swodniw\\tfosorcim\\erawtfos" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (10 of ($x*))
 }
 
@@ -52,6 +53,7 @@ rule Backdoor_MSIL_LimeRat_AY_2147850254_0
         $x_2_5 = "SymmetricAlgorithm" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

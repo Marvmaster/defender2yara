@@ -20,6 +20,7 @@ rule Worm_Linux_Darlloz_A_2147684398_0
         $x_1_6 = "elseif (is_callable(\"passthru\") and !in_array(\"passthru\",$disablefunc)) {$v = @ob_get_contents(); @ob_clean(); passthru($cmd);" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (5 of ($x*))
 }
 

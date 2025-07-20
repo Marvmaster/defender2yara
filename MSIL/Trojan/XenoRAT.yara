@@ -18,6 +18,7 @@ rule Trojan_MSIL_XenoRAT_MBYF_2147909691_0
         $x_1_3 = {54 00 61 00 73 00 6b 00 20 00 54 00 6f 00 20 00 52 00 75 00 6e 00 00 07 22 00 2c 00 22 00 00 1b 2f 00 64 00 65 00 6c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -41,6 +42,7 @@ rule Trojan_MSIL_XenoRAT_RDA_2147912880_0
         $x_1_3 = "server1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -62,6 +64,7 @@ rule Trojan_MSIL_XenoRAT_SPBF_2147913670_0
         $x_4_1 = {28 04 00 00 0a 0c 00 08 03 6f 05 00 00 0a 00 08 06 6f 06 00 00 0a 00 08 08 6f 07 00 00 0a 08 6f 08 00 00 0a 6f 10 00 00 0a 0d 73 0a 00 00 0a 13 04 00 11 04 09 17 73 0b 00 00 0a 13 05 00 11 05 02 16 02 8e 69 6f 0c 00 00 0a 00 11 05 6f 0d 00 00 0a 00 11 04 6f 0e 00 00 0a 0b 00 de 0d}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -86,6 +89,7 @@ rule Trojan_MSIL_XenoRAT_RDB_2147915350_0
         $x_1_4 = "server1" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -110,6 +114,7 @@ rule Trojan_MSIL_XenoRAT_RDC_2147917710_0
         $x_2_4 = "server1" ascii //weight: 2
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -132,6 +137,7 @@ rule Trojan_MSIL_XenoRAT_B_2147919761_0
         $x_2_2 = {0a 16 11 06 7e ?? 00 00 0a 16 7e ?? 00 00 0a 28 ?? 00 00 06 13 07 28 ?? 00 00 0a 13 08 11 08 6f}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -153,6 +159,7 @@ rule Trojan_MSIL_XenoRAT_PPPH_2147922443_0
         $x_10_1 = {02 06 07 6f ?? 00 00 0a 0c 2b 29 03 12 02 28 ?? 00 00 0a 6f ?? 00 00 0a 03 12 02 28 ?? 00 00 0a 6f ?? 00 00 0a 03 12 02 28 ?? 00 00 0a 6f ?? 00 00 0a 2b 11 03 6f ?? 00 00 0a 19 58 04}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -175,6 +182,7 @@ rule Trojan_MSIL_XenoRAT_ZHJ_2147936674_0
         $x_1_2 = "CreateDecryptor" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

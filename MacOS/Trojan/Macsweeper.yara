@@ -19,6 +19,7 @@ rule Trojan_MacOS_Macsweeper_A_2147745267_0
         $x_1_4 = "iMunizator/Updater" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MacOS_Macsweeper_B_2147748635_0
         $x_1_3 = "com.iMunizator.iMunizatorDaemon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (2 of ($x*))
 }
 
@@ -65,6 +67,7 @@ rule Trojan_MacOS_Macsweeper_C_2147755729_0
         $x_1_3 = "open -a MacSweeperDaemon" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (2 of ($x*))
 }
 
@@ -90,6 +93,7 @@ rule Trojan_MacOS_Macsweeper_D_2147757269_0
         $x_1_5 = {6d 61 63 73 77 65 65 70 65 72 2e [0-3] 2f 62 75 79 2e 70 68 70}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_3_*) and 2 of ($x_1_*))) or
             (all of ($x*))

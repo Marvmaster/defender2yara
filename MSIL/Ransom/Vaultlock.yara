@@ -22,6 +22,7 @@ rule Ransom_MSIL_Vaultlock_A_2147694096_0
         $x_1_8 = {66 72 6d 47 65 74 46 72 65 65 44 65 63 72 79 70 74 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (4 of ($x*))
 }
 

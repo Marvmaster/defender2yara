@@ -18,6 +18,7 @@ rule VirTool_WinNT_Fiteli_A_2147607517_0
         $x_1_4 = {5c 00 44 00 65 00 76 00 69 00 63 00 65 00 5c 00 54 00 48 00 49 00 4e 00 4b 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((1 of ($x_3_*) and 1 of ($x_1_*))) or

@@ -21,6 +21,7 @@ rule Ransom_MSIL_Locky_DSA_2147761632_0
         $x_1_6 = "WE APOLOGIZE BUT YOUR FILES HAVE BEEN ENCRYPTED" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Ransom_MSIL_Locky_SG_2147906457_0
         $x_2_1 = {13 04 7e aa 00 00 04 11 04 7e 70 00 00 04 11 04 28 23 01 00 06 28 13 02 00 06 13 05}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

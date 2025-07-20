@@ -17,6 +17,7 @@ rule TrojanDropper_Win32_Jeshex_A_2147619813_0
         $x_1_3 = {ff 75 18 6a 00 ff 75 28 68}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

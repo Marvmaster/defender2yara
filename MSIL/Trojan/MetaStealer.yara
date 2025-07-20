@@ -21,6 +21,7 @@ rule Trojan_MSIL_MetaStealer_DA_2147816375_0
         $x_3_6 = "{11111-22222-10009-11111}" wide //weight: 3
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule Trojan_MSIL_MetaStealer_NB_2147904135_0
         $x_5_1 = {25 06 93 0b 06 18 58 93 07 61 0b 17 13 0e 2b 80}  //weight: 5, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Trojan_MSIL_MetaStealer_KMAA_2147907630_0
         $x_2_2 = {03 11 17 8f ?? 00 00 01 25 71 ?? 00 00 01 11 05 11 13 6f ?? 00 00 0a a5 ?? 00 00 01 61 d2}  //weight: 2, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

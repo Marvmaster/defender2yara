@@ -19,6 +19,7 @@ rule Backdoor_Win32_Zoxpng_A_2147707241_0
         $x_1_4 = {3d 00 10 06 80 76 ?? 8b 4e 04 56 89 4d f8}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

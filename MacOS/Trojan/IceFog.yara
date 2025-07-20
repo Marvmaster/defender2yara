@@ -19,6 +19,7 @@ rule Trojan_MacOS_IceFog_A_2147745847_0
         $x_1_4 = "UCHostInf" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (
             ((1 of ($x_5_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -45,6 +46,7 @@ rule Trojan_MacOS_IceFog_B_2147755723_0
         $x_1_3 = {48 43 48 6f 73 74 49 6e 66 00 48 43 4e 65 74 00 48 43 55 70 44 6f 77 6e 6c 6f 61 64 00 4b 65 79 4c 6f 67 67 65 72}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (all of ($x*))
 }
 

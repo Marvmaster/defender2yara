@@ -16,6 +16,7 @@ rule TrojanDownloader_Win32_Plingky_A_2147643330_0
         $x_1_2 = {c7 44 24 14 00 00 00 00 c7 44 24 10 00 00 00 00 c7 44 24 0c ?? ?? ?? ?? 89 74 24 08 c7 44 24 04 ?? ?? ?? ?? 89 04 24 e8 ?? ?? ?? ?? 83 ec 18 8d 65 f4}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -38,6 +39,7 @@ rule TrojanDownloader_Win32_Plingky_C_2147654861_0
         $x_1_3 = "wor1,1741:,amo830;01" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

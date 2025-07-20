@@ -20,6 +20,7 @@ rule Virus_Win32_Nidis_A_2147599840_0
         $x_1_6 = {57 53 8a 1f 8a 38 80 fb 41 7c ?? 80 fb 5a 7f ?? 80 c3 20 80 ff 41 7c ?? 80 ff 5a 7f ?? 80 c7 20 38 fb 75 ?? 80 fb 00 74 ?? 47 40 eb ?? b8 01 00 00 00 eb ?? b8 00 00 00 00 5b 5f c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((3 of ($x_1_*))) or
             ((1 of ($x_2_*) and 1 of ($x_1_*))) or

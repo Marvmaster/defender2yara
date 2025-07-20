@@ -18,6 +18,7 @@ rule DoS_Win32_DesertBlade_C_2147814016_0
         $x_1_3 = {e8 a7 0a 00 00 48 8b 04 24 48 89 44 24 60 48 8b 4c}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

@@ -17,6 +17,7 @@ rule Trojan_Win32_OnLineGameHijack_2147743661_0
         $x_1_2 = {ff 15 00 41 0e 10 8b f8 85 ff 74 6b 6a 04 68 00 30 00 00 ff b5 5c f2 ff ff 6a 00 53 ff 15 44 40 0e 10 8b f0 85 f6 74 49 83 bd 60 f2 ff ff 10 8d 8d 4c f2 ff ff 6a 00 ff b5 5c f2 ff ff 0f 43 8d 4c f2 ff ff 51 56 53 ff 15 48 40 0e 10 85 c0 74 20 6a 00 6a 00 56 57 6a 00 6a 00 53 ff 15 4c 40 0e 10 8b 35 ec 40 0e 10 85 c0 74 0b 50 ff d6}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 

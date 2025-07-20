@@ -18,6 +18,7 @@ rule Trojan_Win32_Althums_A_2147679181_0
         $x_10_4 = {44 6f 77 6e 6c 6f 61 64 46 69 6c 65 00 00 00 00 47 (65 63|6f 7a 69 6c) 5f 25 6c 64 2f 25 73 00}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             ((2 of ($x_10_*))) or

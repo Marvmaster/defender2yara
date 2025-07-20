@@ -18,6 +18,7 @@ rule Trojan_MSIL_Zawwi_A_2147706463_0
         $x_1_4 = "wizza.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 

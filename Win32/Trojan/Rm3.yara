@@ -16,6 +16,7 @@ rule Trojan_Win32_Rm3_A_2147898481_0
         $x_2_1 = {66 03 cf 0f b7 c9 0f af c8 66 03 cf 0f b7 c9 0f af c8 66 03 cf 0f b7 c1}  //weight: 2, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

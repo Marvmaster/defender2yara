@@ -19,6 +19,7 @@ rule Ransom_Linux_Cryptor_B_2147761854_0
         $x_1_4 = "All your data has been locked(crypted" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -47,6 +48,7 @@ rule Ransom_Linux_Cryptor_C_2147763660_0
         $x_1_4 = "Start encrypting" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
             ((2 of ($x_2_*))) or
@@ -75,6 +77,7 @@ rule Ransom_Linux_Cryptor_D_2147911822_0
         $x_1_4 = "readme_for_unlock.txt" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (all of ($x*))
 }
 
@@ -100,6 +103,7 @@ rule Ransom_Linux_Cryptor_E_2147942304_0
         $x_1_5 = "/src/rct_cryptor_universal/main.go" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint32(0) == 0x464c457f) and
         (4 of ($x*))
 }
 

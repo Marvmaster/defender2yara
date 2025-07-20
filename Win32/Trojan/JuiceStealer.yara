@@ -18,6 +18,7 @@ rule Trojan_Win32_JuiceStealer_G_2147831117_0
         $x_5_3 = "System.Net.Requests" ascii //weight: 5
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

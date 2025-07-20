@@ -17,6 +17,7 @@ rule PWS_Win32_Sekur_A_2147689701_0
         $x_10_3 = {8d 45 e8 50 8d 45 a4 50 33 c0 50 50 ff 75 08 50 50 50 ff 75 10 50 68 a1 64 e1 01 50 e8 ?? ?? ?? ?? 59 59 ff d0}  //weight: 10, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -42,6 +43,7 @@ rule PWS_Win32_Sekur_B_2147691165_0
         $x_1_6 = "* RootKey  :" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 

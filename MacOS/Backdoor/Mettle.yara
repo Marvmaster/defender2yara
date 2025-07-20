@@ -21,6 +21,7 @@ rule Backdoor_MacOS_Mettle_2147741153_0
         $x_1_7 = "/mettle/mettle/src/service.c" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (5 of ($x*))
 }
 
@@ -45,6 +46,7 @@ rule Backdoor_MacOS_Mettle_A_2147750371_0
         $x_1_4 = "_extension_log_to_mettle" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        ((uint32(0) == 0xfeedfacf) or (uint32(0) == 0xcffaedfe) or (uint32(0) == 0xfeedface) or (uint32(0) == 0xcefaedfe)) and
         (3 of ($x*))
 }
 

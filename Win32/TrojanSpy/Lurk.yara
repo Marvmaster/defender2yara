@@ -15,6 +15,7 @@ rule TrojanSpy_Win32_Lurk_A_2147648844_0
         $x_1_1 = {33 c0 33 c9 68 ?? ?? ?? ?? c3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule TrojanSpy_Win32_Lurk_A_2147648844_1
         $x_1_5 = {83 f8 50 75 05 33 c0 40 5e c3 56 ff 15 ?? ?? ?? ?? ff 74 24 08 ff 15}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule TrojanSpy_Win32_Lurk_E_2147657784_0
         $x_1_6 = {3b de 74 23 8d 45 fc 50 6a 40 ff 75 10 57 ff 15 ?? ?? ?? ?? 85 c0 74 0f ff 75 08 03 df ff d3}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -91,6 +94,7 @@ rule TrojanSpy_Win32_Lurk_A_2147662047_0
         $x_1_3 = {74 16 84 c9 75 21 80 78 fe 65 75 1b 80 78 fd 78 75 15 80 78 fc 65 75 0f}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 
@@ -116,6 +120,7 @@ rule TrojanSpy_Win32_Lurk_H_2147678655_0
         $x_1_6 = "eElevation:Administrator!new:{" wide //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -139,6 +144,7 @@ rule TrojanSpy_Win32_Lurk_I_2147693165_0
         $x_1_4 = "&aq=f&aqi=&aql=&oq=" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (2 of ($x*))
 }
 

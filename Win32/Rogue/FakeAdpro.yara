@@ -16,6 +16,7 @@ rule Rogue_Win32_FakeAdpro_124907_0
         $x_1_2 = "\\Release\\SSEngine.pdb" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -39,6 +40,7 @@ rule Rogue_Win32_FakeAdpro_124907_1
         $x_1_4 = "Engine.dat file does not exist" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -64,6 +66,7 @@ rule Rogue_Win32_FakeAdpro_124907_2
         $x_1_6 = "Repair process has been completed" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 2 of ($x_1_*))) or
             (all of ($x*))
@@ -90,6 +93,7 @@ rule Rogue_Win32_FakeAdpro_124907_3
         $x_1_4 = "Please select the paths for quick scan" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -117,6 +121,7 @@ rule Rogue_Win32_FakeAdpro_124907_4
         $x_1_8 = "latestversion/123.exe" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or
@@ -144,6 +149,7 @@ rule Rogue_Win32_FakeAdpro_124907_5
         $x_1_3 = "CSpywareSignatureArrayEx" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -167,6 +173,7 @@ rule Rogue_Win32_FakeAdpro_124907_6
         $x_1_4 = {41 6e 74 69 2d 56 69 72 75 73 2d 50 72 6f 20 73 75 63 63 65 73 73 66 75 6c 6c 79 20 69 6e 73 74 61 6c 65 64 2e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (3 of ($x*))
 }
 
@@ -187,6 +194,7 @@ rule Rogue_Win32_FakeAdpro_124907_7
         $x_1_1 = {45 6e 67 69 6e 65 41 50 2e 64 6c 6c [0-16] 45 6e 67 69 6e 65 20 66 61 69 6c 65 64 20 74 6f 20 6c 6f 61 64 2e 20 45 72 72 6f 72 3a 25 64 f0 00 53 65 6e 64 4c 6f 67 [0-16] 53 6f 66 74 77 61 72 65 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 52 75 6e [0-80] 47 6c 6f 62 61 6c 5c [0-34] 53 6f 66 74 77 61 72 65 5c}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -208,6 +216,7 @@ rule Rogue_Win32_FakeAdpro_124907_8
         $x_1_2 = {52 53 44 53 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 65 3a 5c 70 72 6f 6a 65 63 74 73 5c 61 64 77 61 72 65 70 72 6f 5c 6e 65 77 65 6e 67 69 6e 65 5c 72 65 62 72 61 6e 64 73 5c [0-32] 5c 62 69 6e 5c (64 65 62|72 65 6c 65 61) 5c [0-32] 2e 70 64 62 00}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (1 of ($x*))
 }
 
@@ -233,6 +242,7 @@ rule Rogue_Win32_FakeAdpro_124907_9
         $x_1_6 = "Engine.dat file does not exist" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -261,6 +271,7 @@ rule Rogue_Win32_FakeAdpro_124907_10
         $x_1_6 = "mehwishcv.rtf) which is a file that" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_10_*) and 3 of ($x_1_*))) or
             (all of ($x*))
@@ -291,6 +302,7 @@ rule Rogue_Win32_FakeAdpro_124907_11
         $x_1_8 = "Global\\K781LO_M" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (5 of ($x*))
 }
 
@@ -317,6 +329,7 @@ rule Rogue_Win32_FakeAdpro_124907_12
         $x_1_7 = "EngineAP.dll" ascii //weight: 1
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((1 of ($x_1000_*) and 2 of ($x_2_*) and 1 of ($x_1_*))) or
             ((1 of ($x_1000_*) and 3 of ($x_2_*))) or
@@ -344,6 +357,7 @@ rule Rogue_Win32_FakeAdpro_124907_13
         $x_1_2 = {53 63 61 6e 20 70 72 6f 63 65 73 73 20 68 61 73 20 62 65 65 6e 20 61 62 6f 72 74 65 64 20 62 79 20 75 73 65 72 2e 00 00 50 43 20 73 63 61 6e 20 68 61 73 20 62 65 65 6e 20 63 6f 6d 70 6c 65 74 65 64 00 00 53 63 61 6e 20 68 61 73 20 62 65 65 6e 20 63 6f 6d 70 6c 65 74 65 64 20 73 75 63 63 65 73 73 66 75 6c 6c 79 2e 00 00 00 53 68 6f 77 20 53 63 61 6e 20 4c 6f 67 00 00 00 53 63 61 6e 6e 69 6e 67}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
@@ -368,6 +382,7 @@ rule Rogue_Win32_FakeAdpro_124907_14
         $x_1_5 = {20 00 63 00 75 00 73 00 74 00 6f 00 6d 00 69 00 7a 00 65 00 20 00 70 00 61 00 74 00 68 00 20 00 66 00 6f 00 72 00 20 00 73 00 63 00 61 00 6e 00 69 00 6e 00 67 00 00 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((4 of ($x_1_*))) or
             ((1 of ($x_2_*) and 2 of ($x_1_*))) or
@@ -415,6 +430,7 @@ rule Rogue_Win32_FakeAdpro_124907_15
         $x_1_24 = {47 6c 6f 62 61 6c 5c 4d 75 74 65 78 50 72 4d 61 41 6e 00}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (
             ((5 of ($x_1_*))) or
             ((1 of ($x_2_*) and 3 of ($x_1_*))) or

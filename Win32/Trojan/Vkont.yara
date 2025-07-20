@@ -17,6 +17,7 @@ rule Trojan_Win32_Vkont_C_2147652518_0
         $x_1_3 = {0f 84 a4 00 00 00 8b ?? ?? 0f ?? ?? ?? ?? 81 fa cc 00 00 00 0f 84 90 00 00 00 8b ?? ?? 8b 88 0c 02 00 00 8b ?? ?? c6 04 11 e9}  //weight: 1, accuracy: Low
     condition:
         (filesize < 20MB) and
+        (uint16(0) == 0x5a4d) and
         (all of ($x*))
 }
 
